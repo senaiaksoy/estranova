@@ -1,4 +1,4 @@
-{
+﻿{
     "name":  "react-example",
     "private":  true,
     "version":  "0.0.0",
@@ -10,7 +10,9 @@
                     "preview":  "astro preview",
                     "astro":  "astro",
                     "lint":  "tsc --noEmit",
-                    "compliance":  "node scripts/compliance-check.mjs"
+                    "compliance":  "node scripts/compliance-check.mjs",
+                    "preview:local":  "set ASTRO_TELEMETRY_DISABLED=1\u0026\u0026astro preview --host 0.0.0.0 --port 4321",
+                    "dev:local":  "set ASTRO_TELEMETRY_DISABLED=1\u0026\u0026astro dev --port 3000 --host 0.0.0.0"
                 },
     "dependencies":  {
                          "@astrojs/react":  "^5.0.3",
