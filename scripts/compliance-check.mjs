@@ -11,6 +11,10 @@ const requiredDocs = [
 
 const auditedFiles = [
   "src/pages/index.astro",
+  "src/pages/about.astro",
+  "src/pages/authors.astro",
+  "src/pages/editorial-policy.astro",
+  "src/pages/medical-disclaimer.astro",
   "src/pages/library.astro",
   "src/pages/symptoms.astro",
   "src/pages/article.astro",
