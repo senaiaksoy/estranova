@@ -14,10 +14,12 @@ const forbidden = [
 const fs = require("fs");
 const path = require("path");
 
+let hasError = false;
+
 function scanDir(dir) {
   const files = fs.readdirSync(dir);
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
 
@@ -26,9 +28,10 @@ function scanDir(dir) {
     } else if (file.endsWith(".md") || file.endsWith(".astro")) {
       const content = fs.readFileSync(fullPath, "utf-8").toLowerCase();
 
-      forbidden.forEach(word => {
+      forbidden.forEach((word) => {
         if (content.includes(word)) {
           console.log(`⚠️ Forbidden word "${word}" in ${fullPath}`);
+          hasError = true;
         }
       });
     }
@@ -36,3 +39,10 @@ function scanDir(dir) {
 }
 
 scanDir("./src");
+
+if (hasError) {
+  console.log("❌ Compliance check failed.");
+  process.exit(1);
+} else {
+  console.log("✅ Compliance check passed.");
+}
