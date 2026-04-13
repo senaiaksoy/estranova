@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Metodoloji - Estranova">
+	<Navbar client:load currentPage="/methodology" />
+	<div class="pt-32 pb-24 px-6">
+		<div class="max-w-4xl mx-auto">
+			<header class="text-center mb-20">
+				<p class="text-secondary font-bold tracking-[0.3em] uppercase mb-6">BİZİM YAKLAŞIMIMIZ</p>
+				<h1 class="text-5xl md:text-7xl font-serif mb-8">Klinik Kürasyon Metodolojisi</h1>
+				<p class="text-charcoal/60 text-lg leading-relaxed">
+					Estranova'da bilgi sadece paylaşılmaz; bilimsel süzgeçlerden geçirilerek, klinik hassasiyetle yapılandırılır.
+				</p>
+			</header>
+
+			<div class="space-y-24">
+				{[
+					{ 
+						step: "01", 
+						title: "Kanıta Dayalı Seçki", 
+						desc: "Sadece hakemli dergilerde yayınlanmış, yüksek impakt faktörüne sahip araştırmalar temel alınır. Spekülatif yaklaşımlar elenir." 
+					},
+					{ 
+						step: "02", 
+						title: "Uzman Paneli İncelemesi", 
+						desc: "Her içerik, ilgili branştan en az iki uzman doktor tarafından tıbbi doğruluk ve güncellik açısından denetlenir." 
+					},
+					{ 
+						step: "03", 
+						title: "Kişiselleştirilmiş Algoritma", 
+						desc: "Semptom analizlerimiz, uluslararası menopoz cemiyetlerinin (NAMS, IMS) belirlediği tanı kriterleri ile uyumlu algoritmalar kullanır." 
+					}
+				].map((m) => (
+					<div class="flex flex-col md:flex-row gap-12 items-start">
+						<div class="text-6xl font-serif text-primary/10 leading-none">{m.step}</div>
+						<div>
+							<h3 class="text-3xl font-serif mb-6">{m.title}</h3>
+							<p class="text-charcoal/70 text-lg leading-relaxed">{m.desc}</p>
+						</div>
+					</div>
+				))}
+			</div>
+
+			<div class="mt-32 p-12 bg-surface-container rounded-[60px] text-center">
+				<h3 class="text-3xl font-serif mb-6">Şeffaflık Taahhüdümüz</h3>
+				<p class="text-charcoal/60 mb-10 max-w-xl mx-auto">
+					Kullandığımız tüm kaynaklar makale sonlarında açıkça belirtilir. Finansal bağımsızlığımız, tarafsız bilgi sunmamızın garantisidir.
+				</p>
+				<button class="text-primary font-bold border-b-2 border-primary pb-1">Bilimsel Kaynaklarımızı İnceleyin</button>
+			</div>
+		</div>
+	</div>
+	<Footer />
+</Layout>

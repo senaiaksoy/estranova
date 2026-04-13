@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+import { AlertCircle, ChevronRight, CheckCircle2 } from 'lucide-react';
+
+const symptoms = [
+  { name: "Sıcak Basmaları", severity: "Yüksek", category: "Vazomotor" },
+  { name: "Beyin Sisi", severity: "Orta", category: "Bilişsel" },
+  { name: "Uyku Bölünmesi", severity: "Yüksek", category: "Fizyolojik" },
+  { name: "Anksiyete", severity: "Orta", category: "Psikolojik" },
+  { name: "Eklem Hassasiyeti", severity: "Düşük", category: "Muskuloskeletal" },
+  { name: "Cilt Kuruluğu", severity: "Düşük", category: "Dermatolojik" },
+];
+---
+
+<Layout title="Semptom Analiz Rehberi - Estranova">
+	<Navbar client:load currentPage="/symptoms" />
+	<div class="pt-32 pb-24 px-6">
+		<div class="max-w-7xl mx-auto">
+			<header class="mb-16">
+				<h1 class="text-5xl font-serif mb-6">Semptom Analiz Rehberi</h1>
+				<p class="text-charcoal/60 max-w-2xl text-lg">
+					Vücudunuzdaki değişimleri takip edin, klinik verilerle karşılaştırın ve yönetim stratejileri geliştirin.
+				</p>
+			</header>
+
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+				<div class="lg:col-span-2 space-y-6">
+					{symptoms.map((s) => (
+						<div class="p-8 rounded-3xl border border-charcoal/5 hover:border-primary/20 transition-all flex items-center justify-between group bg-white">
+							<div class="flex items-center gap-6">
+								<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+									<AlertCircle size={24} />
+								</div>
+								<div>
+									<h3 class="text-xl font-serif">{s.name}</h3>
+									<p class="text-xs text-charcoal/40 font-bold uppercase tracking-widest mt-1">{s.category}</p>
+								</div>
+							</div>
+							<div class="flex items-center gap-8">
+								<div class="hidden md:block text-right">
+									<p class="text-[10px] font-bold text-charcoal/40 uppercase tracking-widest mb-1">Yaygınlık</p>
+									<p class="text-sm font-bold text-secondary">{s.severity}</p>
+								</div>
+								<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-charcoal hover:text-white transition-all">
+									<ChevronRight size={18} />
+								</button>
+							</div>
+						</div>
+					))}
+				</div>
+
+				<div class="lg:col-span-1">
+					<div class="sticky top-32 p-10 bg-primary text-white rounded-[40px] shadow-2xl">
+						<h3 class="text-2xl font-serif mb-6">Semptom Takibi Neden Önemli?</h3>
+						<p class="text-white/70 text-sm leading-relaxed mb-8">
+							Düzenli takip, doktorunuzla yapacağınız görüşmelerde daha net veriler sunmanızı sağlar ve tedavi sürecinin etkinliğini ölçer.
+						</p>
+						<ul class="space-y-4 mb-10">
+							{["Hormonal trendleri belirleyin", "Tetikleyicileri keşfedin", "Tedavi yanıtını ölçün"].map((item) => (
+								<li class="flex items-center gap-3 text-sm font-medium">
+									<CheckCircle2 size={18} class="text-secondary" />
+									{item}
+								</li>
+							))}
+						</ul>
+						<button class="w-full bg-white text-primary py-4 rounded-full font-bold hover:bg-surface transition-all">
+							Takibe Başla
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<Footer />
+</Layout>
