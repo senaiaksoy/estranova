@@ -1,0 +1,70 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = "/" } = Astro.props;
+
+const navLinks = [
+  { name: "Anasayfa", href: "/" },
+  { name: "Kütüphane", href: "/library" },
+  { name: "Semptomlar", href: "/symptoms" },
+  { name: "Metodoloji", href: "/methodology" },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 px-6 py-3">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-8">
+      <a href="/" class="text-2xl font-serif font-bold tracking-tight text-primary flex flex-col leading-none">
+        <span>ESTRANOVA</span>
+        <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">THE CLINICAL CURATOR</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "text-sm font-medium transition-colors hover:text-primary",
+              currentPath === link.href ? "text-primary" : "text-charcoal/60",
+            ]}
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="hidden md:flex items-center gap-2 text-sm font-medium text-charcoal/60">
+      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      Ara
+    </div>
+
+    <details class="md:hidden relative">
+      <summary class="list-none cursor-pointer w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </summary>
+      <div class="absolute top-12 right-0 w-60 bg-surface border border-primary/10 rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
+        {navLinks.map((link) => (
+          <a href={link.href} class="text-base font-serif text-charcoal py-2 border-b last:border-0 border-primary/5">
+            {link.name}
+          </a>
+        ))}
+      </div>
+    </details>
+  </div>
+</nav>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

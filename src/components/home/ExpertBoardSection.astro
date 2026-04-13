@@ -1,0 +1,27 @@
+---
+import { homepageExperts } from '../../data/home';
+---
+
+<section class="py-24 bg-surface-container px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-serif mb-6">Editoryal Danışma Kurulu</h2>
+      <p class="text-charcoal/60 max-w-2xl mx-auto">
+        İçerikler, ilgili alanlarda çalışan uzmanların görüşleri ve güncel bilimsel kaynaklar dikkate alınarak hazırlanır.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {homepageExperts.map((expert) => (
+        <article class="group cursor-pointer">
+          <div class="relative aspect-square rounded-3xl overflow-hidden mb-6 shadow-lg">
+            <img src={expert.img} alt={expert.name} class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" referrerpolicy="no-referrer" />
+            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+          <h3 class="text-xl font-serif mb-1">{expert.name}</h3>
+          <p class="text-sm text-secondary font-bold tracking-wider uppercase">{expert.role}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
