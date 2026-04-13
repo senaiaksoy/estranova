@@ -9,37 +9,38 @@ const requiredDocs = [
   "COMPLIANCE_CHECKLIST.md",
 ];
 
-const auditedFiles = [
-  "src/pages/index.astro",
-  "src/pages/about.astro",
-  "src/pages/authors.astro",
-  "src/pages/editorial-policy.astro",
-  "src/pages/medical-disclaimer.astro",
-  "src/pages/library.astro",
-  "src/pages/symptoms.astro",
-  "src/pages/article.astro",
-  "src/pages/methodology.astro",
-  "src/layouts/SiteLayout.astro",
-  "src/components/home/HomeHero.astro",
-  "src/components/home/ExpertBoardSection.astro",
-  "src/components/home/LifeStagesSection.astro",
-  "src/components/home/FeaturedResearchSection.astro",
-  "src/components/home/SymptomLibrarySection.astro",
-  "src/components/home/HomeEditorialSection.astro",
-  "src/components/site/SiteNavbar.astro",
-  "src/components/site/SiteFooter.astro",
+const requiredRouteFiles = [
+  "src/pages/article/index.astro",
+  "src/pages/article/[slug].astro",
+];
+
+const scannedRootDirs = [
+  "src/pages",
+  "src/components",
+  "src/layouts",
+];
+
+const extraAuditedFiles = [
+  "src/data/articles.ts",
 ];
 
 const bannedPhraseRules = [
   { label: "randevu al", re: /\brandevu\s+al\b/u },
+  { label: "tedaviye basla", re: /\btedaviye\s+basla\b/u },
+  { label: "hemen basla", re: /\bhemen\s+basla\b/u },
   { label: "hemen baslayin", re: /\bhemen\s+baslayin\b/u },
   { label: "ucretsiz muayene", re: /\bucretsiz\s+muayene\b/u },
   { label: "ucretsiz konsultasyon", re: /\bucretsiz\s+konsultasyon\b/u },
   { label: "en iyi", re: /\ben\s+iyi\b/u },
+  { label: "en basarili", re: /\ben\s+basarili\b/u },
+  { label: "garantili", re: /\bgarantili\b/u },
   { label: "garanti", re: /\bgaranti\b/u },
   { label: "kesin cozum", re: /\bkesin\s+cozum\b/u },
   { label: "mucize", re: /\bmucize\b/u },
-  { label: "simdi basla", re: /\bsimdi\s+basla\b/u },
+  { label: "basari orani", re: /\bbasari\s+orani\b/u },
+  { label: "kampanya", re: /\bkampanya\b/u },
+  { label: "indirim", re: /\bindirim\b/u },
+  { label: "paket", re: /\bpaket(lerimiz)?\b/u },
 ];
 
 const bannedLinkRules = [
@@ -80,6 +81,32 @@ function normalizeForScan(text) {
     .toLowerCase();
 }
 
+function collectAstroFiles(relativeDir) {
+  const dir = path.join(root, relativeDir);
+  if (!fs.existsSync(dir)) return [];
+
+  const out = [];
+  const stack = [dir];
+
+  while (stack.length > 0) {
+    const current = stack.pop();
+    const entries = fs.readdirSync(current, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const fullPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        stack.push(fullPath);
+        continue;
+      }
+      if (entry.isFile() && entry.name.endsWith(".astro")) {
+        out.push(path.relative(root, fullPath).replace(/\\/g, "/"));
+      }
+    }
+  }
+
+  return out;
+}
+
 function getHrefValues(text) {
   const hrefs = [];
   const hrefRe = /href\s*=\s*["']([^"']+)["']/giu;
@@ -106,6 +133,23 @@ for (const file of requiredDocs) {
   if (!fs.existsSync(p)) {
     fail(`Missing required policy file: ${file}`);
   }
+}
+
+for (const file of requiredRouteFiles) {
+  const p = path.join(root, file);
+  if (!fs.existsSync(p)) {
+    fail(`Missing required route file: ${file}`);
+  }
+}
+
+const discoveredAstroFiles = scannedRootDirs.flatMap((dir) => collectAstroFiles(dir));
+
+const auditedFiles = Array.from(
+  new Set([...discoveredAstroFiles, ...extraAuditedFiles])
+).sort((a, b) => a.localeCompare(b));
+
+if (auditedFiles.length === 0) {
+  fail("No audited files found. Check scannedRootDirs configuration.");
 }
 
 for (const file of auditedFiles) {
@@ -147,18 +191,20 @@ for (const file of auditedFiles) {
     warn(`TSX import found in ${file}. Prefer .astro unless interactivity is necessary.`);
   }
 
-  const sentences = text
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .split(/[.!?]+/)
-    .map((s) => s.trim())
-    .filter(Boolean);
+  if (file.endsWith(".astro")) {
+    const sentences = text
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .split(/[.!?]+/)
+      .map((s) => s.trim())
+      .filter(Boolean);
 
-  const longSentences = sentences.filter((s) => s.split(/\s+/).length > 26).length;
-  if (longSentences > 6) {
-    warn(
-      `High long-sentence count in ${file} (${longSentences}). Consider simplifying for 8-10th grade readability.`
-    );
+    const longSentences = sentences.filter((s) => s.split(/\s+/).length > 26).length;
+    if (longSentences > 6) {
+      warn(
+        `High long-sentence count in ${file} (${longSentences}). Consider simplifying for 8-10th grade readability.`
+      );
+    }
   }
 }
 
@@ -169,5 +215,5 @@ if (hasError) {
 if (warnCount > 0) {
   console.log(`Compliance check passed with ${warnCount} warning(s).`);
 } else {
-  console.log("Compliance check passed for audited pages.");
+  console.log(`Compliance check passed for ${auditedFiles.length} audited file(s).`);
 }
