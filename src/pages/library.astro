@@ -2,66 +2,11 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
-
-const categories = [
-  {
-    title: 'Perimenopoz',
-    count: '12 baslik',
-    summary: 'Dongu degisiklikleri, sicak basmasi, uyku ve duygudurum konularina giris metinleri.',
-  },
-  {
-    title: 'Menopoza Hazirlik',
-    count: '10 baslik',
-    summary: 'Yas alma ile birlikte izlenebilecek testler, yasam aliskanliklari ve beklenen degisimler.',
-  },
-  {
-    title: 'Menopoz',
-    count: '14 baslik',
-    summary: 'Belirti yorumu, gunluk yasam etkileri ve guncel klinik yaklasimlarin sade ozeti.',
-  },
-  {
-    title: '40+ Saglik',
-    count: '9 baslik',
-    summary: 'Kemik, kalp-damar, metabolizma ve bilissel saglik gibi uzun donem basliklar.',
-  },
-  {
-    title: 'Yasam Bicimi',
-    count: '8 baslik',
-    summary: 'Beslenme, hareket, uyku rutini ve gunluk isleyisi destekleyen rehberler.',
-  },
-  {
-    title: 'Kaynak Okuma',
-    count: '6 baslik',
-    summary: 'Klinik calismalari ve rehberleri hasta gozuyle okumaya yardimci aciklamalar.',
-  },
-] as const;
-
-const featuredArticles = [
-  {
-    category: 'Temel Rehber',
-    title: 'Perimenopoz belirtileri ayni anda neden degismez?',
-    description:
-      'Belirtilerin ayni yogunlukta gitmemesi, hormonal dalgalanmanin herkeste farkli gorunmesinden kaynaklanir. Bu baslik, dalga dalga gelen semptom mantigini aciklar.',
-  },
-  {
-    category: 'Guncel Baslik',
-    title: 'Uyku bozuldugunda once hangi degiskenlere bakmak gerekir?',
-    description:
-      'Gece terlemesi, stres, kafein duzeni ve gun ici hareket miktari gibi temel etkenleri adim adim ayiran bir giris rehberi.',
-  },
-  {
-    category: 'Uzun Donem Saglik',
-    title: 'Kemik ve kas sagligi neden menopozdan once konusulmali?',
-    description:
-      'Menopoz sonrasini beklemeden hangi koruyucu basliklarin ele alinabilecegini anlatan yonlendirici bir okuma rotasi.',
-  },
-] as const;
-
-const readingPath = [
-  'Once ilgi duydugunuz donemi secin: perimenopoz, menopoz veya 40+ saglik.',
-  'Sonra semptom ile genel bilgi arasindaki farki ayiran iceriklere bakin.',
-  'Kavramlar karisiyorsa tibbi terimler yerine temel yorum metinlerinden ilerleyin.',
-];
+import ArticleCard from '../components/ArticleCard.astro';
+import { articles, featuredArticles } from '../data/articles';
+import { perimenopozArticles, menopozArticles, healthArticles } from '../data/articles';
+import { perimenopozArticles, menopozArticles, healthArticles } from '../data/articles';
+import { homepageSymptoms } from '../data/home';
 ---
 
 <SiteLayout

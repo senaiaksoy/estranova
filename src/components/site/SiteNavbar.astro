@@ -6,61 +6,85 @@ interface Props {
 const { currentPath = "/" } = Astro.props;
 
 const navLinks = [
-  { name: "Anasayfa", href: "/" },
-  { name: "Kutuphane", href: "/library" },
-  { name: "Semptomlar", href: "/symptoms" },
-  { name: "Metodoloji", href: "/methodology" },
-  { name: "Hakkimizda", href: "/about" },
+  { name: "Anasayfa", href: "/", label: "Ana sayfaya dön", role: "home" },
+  { name: "Kutuphane", href: "/library", label: "Kütüphane sayfası" },
+  { name: "Semptomlar", href: "/symptoms", label: "Semptom rehberi" },
+  { name: "Metodoloji", href: "/methodology", label: "İçerik metodolojisi" },
+  { name: "Hakkimizda", href: "/about", label: "Platform hakkında" },
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 px-6 py-3">
+<nav
+  aria-label="Ana navigasyon menüsü"
+  role="navigation"
+  class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 px-6 py-3 focus-within:ring-2 focus-within:ring-primary/20"
+>
   <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <div class="flex items-center gap-8">
-      <a href="/" class="text-2xl font-serif font-bold tracking-tight text-primary flex flex-col leading-none">
-        <span>ESTRANOVA</span>
-        <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">THE CLINICAL CURATOR</span>
-      </a>
+    <a
+      href="/"
+      class="text-2xl font-serif font-bold tracking-tight text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded px-2 py-1"
+      aria-label="ESTRANOVA Ana Sayfası"
+    >
+      <span>ESTRANOVA</span>
+      <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">THE CLINICAL CURATOR</span>
+    </a>
 
-      <div class="hidden md:flex items-center gap-8">
-        {navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              "text-sm font-medium transition-colors hover:text-primary",
-              currentPath === link.href ? "text-primary" : "text-charcoal/60",
-            ]}
-          >
-            {link.name}
-          </a>
-        ))}
-      </div>
-    </div>
+    <!-- Desktop Navigation -->
+    <nav aria-label="Ana menü" class="hidden md:flex items-center gap-6">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            "text-sm font-medium transition-colors px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary",
+            currentPath === link.href ? "text-primary font-semibold" : "text-charcoal/60 hover:text-primary",
+          ]}
+          aria-current={currentPath === link.href ? "page" : undefined}
+          title={link.label}
+          aria-label={link.name}
+        >
+          {link.name}
+        </a>
+      ))}
+    </nav>
 
-    <div class="hidden md:flex items-center gap-2 text-sm font-medium text-charcoal/60">
-      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="7"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    <!-- Mobile Menu Toggle -->
+    <button
+      type="button"
+      class="md:hidden text-primary p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary"
+      aria-label="Menüyü aç/kapat"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      onclick="mobileMenu.toggle()"
+    >
+      <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
-      Ara
-    </div>
+    </button>
 
-    <details class="md:hidden relative">
-      <summary class="list-none cursor-pointer w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary">
-        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </summary>
-      <div class="absolute top-12 right-0 w-60 bg-surface border border-primary/10 rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
-        {navLinks.map((link) => (
-          <a href={link.href} class="text-base font-serif text-charcoal py-2 border-b last:border-0 border-primary/5">
-            {link.name}
-          </a>
-        ))}
-      </div>
-    </details>
+    <!-- Mobile Menu Dropdown -->
+    <div
+      id="mobile-menu"
+      class="absolute top-full left-0 right-0 bg-surface border-y border-primary/10 shadow-xl p-4 md:hidden flex flex-col gap-2"
+      role="menu"
+      aria-hidden="true"
+    >
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            "text-base font-serif py-3 px-4 rounded-lg text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary",
+            currentPath === link.href ? "bg-primary/10 text-primary font-semibold" : "text-charcoal hover:bg-primary/5",
+          ]}
+          role="menuitem"
+          aria-current={currentPath === link.href ? "page" : undefined}
+          aria-expanded="false"
+        >
+          {link.name}
+        </a>
+      ))}
+    </div>
   </div>
 </nav>
 

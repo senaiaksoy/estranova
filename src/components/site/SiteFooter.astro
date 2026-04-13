@@ -1,7 +1,16 @@
-<footer class="bg-charcoal text-surface pt-20 pb-10 px-6">
+<footer
+  aria-label="Alt bilgi"
+  role="contentinfo"
+  class="bg-charcoal text-surface pt-20 pb-10 px-6 focus-within:ring-2 focus-within:ring-white/20"
+>
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
     <div>
-      <a href="/" class="text-2xl font-serif font-bold tracking-tight text-white flex flex-col leading-none mb-6 text-left">
+      <a
+        href="/"
+        class="text-2xl font-serif font-bold tracking-tight text-white flex flex-col leading-none mb-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1 inline-block"
+        aria-label="ESTRANOVA Ana Sayfası"
+        title="ESTRANOVA - Ana Sayfasına Dönmek"
+      >
         <span>ESTRANOVA</span>
         <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">THE CLINICAL CURATOR</span>
       </a>
@@ -12,46 +21,66 @@
 
     <div>
       <h4 class="font-serif text-lg mb-6 text-white">Kutuphane</h4>
-      <ul class="space-y-4 text-sm text-surface/60">
-        <li><a href="/library" class="hover:text-secondary transition-colors">Perimenopoz Rehberi</a></li>
-        <li><a href="/library" class="hover:text-secondary transition-colors">Menopoza Hazirlik</a></li>
-        <li><a href="/library" class="hover:text-secondary transition-colors">Menopoz</a></li>
-        <li><a href="/library" class="hover:text-secondary transition-colors">40+ Saglik</a></li>
-      </ul>
+      <nav aria-label="Kütüphane bağlantıları">
+        <ul class="space-y-4 text-sm text-surface/60">
+          <li><a href="/library" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Perimenopoz Rehberi - Detaylı bilgi alın">Perimenopoz Rehberi</a></li>
+          <li><a href="/library" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Menopoza Hazırlık - Geçiş süreci hakkında bilgi">Menopoza Hazirlik</a></li>
+          <li><a href="/library" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Menopoz - Bilgiler ve öneriler">Menopoz</a></li>
+          <li><a href="/library" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="40+ Sağlık - Yaşlanma sürecinde sağlık yönetimi">40+ Saglik</a></li>
+        </ul>
+      </nav>
     </div>
 
     <div>
       <h4 class="font-serif text-lg mb-6 text-white">Editoryal</h4>
-      <ul class="space-y-4 text-sm text-surface/60">
-        <li><a href="/about" class="hover:text-secondary transition-colors">Hakkimizda</a></li>
-        <li><a href="/authors" class="hover:text-secondary transition-colors">Yazarlar</a></li>
-        <li><a href="/methodology" class="hover:text-secondary transition-colors">Metodoloji</a></li>
-        <li><a href="/editorial-policy" class="hover:text-secondary transition-colors">Editoryal Politika</a></li>
-      </ul>
+      <nav aria-label="Editoryal bilgiler">
+        <ul class="space-y-4 text-sm text-surface/60">
+          <li><a href="/about" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Platform hakkındaki bilgiler">Hakkimizda</a></li>
+          <li><a href="/authors" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Yazarlar ve uzman ekibimiz">Yazarlar</a></li>
+          <li><a href="/methodology" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="İçerik geliştirme metodolojisi">Metodoloji</a></li>
+          <li><a href="/editorial-policy" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Yayın ilkeleri ve yayın politikaları">Editoryal Politika</a></li>
+        </ul>
+      </nav>
     </div>
 
     <div>
       <h4 class="font-serif text-lg mb-6 text-white">Yasal</h4>
-      <ul class="space-y-4 text-sm text-surface/60">
-        <li><a href="/medical-disclaimer" class="hover:text-secondary transition-colors">Tibbi Uyari</a></li>
-        <li><a href="/editorial-policy" class="hover:text-secondary transition-colors">Yayin Ilkeleri</a></li>
-      </ul>
+      <nav aria-label="Yasal bilgiler">
+        <ul class="space-y-4 text-sm text-surface/60">
+          <li><a href="/medical-disclaimer" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Tıbbi değerlendirme ve tedavi bilgisi - Bu içerik tıbbi tavsiye yerine geçmez">Tibbi Uyari</a></li>
+          <li><a href="/editorial-policy" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Yayın ilkeleri ve içerik standartları">Yayin Ilkeleri</a></li>
+          <li><a href="/privacy-policy" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Kişisel verilerin nasıl kullanıldığı ve korunması">Gizlilik Politikasi</a></li>
+          <li><a href="/kvkk" class="hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 rounded px-2 py-1" title="Kişisel Verilerin Korunması Kanunu">KVKK</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto mb-10 p-5 rounded-2xl border border-surface/10 bg-surface/5">
+  <div
+    class="max-w-7xl mx-auto mb-10 p-5 rounded-2xl border border-surface/10 bg-surface/5 focus-within:ring-2 focus-within:ring-white/20"
+    role="region"
+    aria-label="Platform yönetimi"
+    tabindex="0"
+  >
     <p class="text-xs text-surface/70 leading-relaxed">
-      Site Yoneticisi: <span class="font-semibold text-white">Berna Aksoy</span> ·
-      Danisman Doktor ve Yazi Denetleyici: <span class="font-semibold text-white">Doc. Dr. Senai Aksoy</span>
+      Site Yöneticisi: <span class="font-semibold text-white">Berna Aksoy</span> ·
+      Danışman Doktor ve Yazı Denetleyici: <span class="font-semibold text-white">Doc. Dr. Senai Aksoy</span>
     </p>
   </div>
 
-  <div class="max-w-7xl mx-auto pt-8 border-t border-surface/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-medium tracking-widest text-surface/40 uppercase">
-    <p>© 2026 ESTRANOVA. TUM HAKLARI SAKLIDIR.</p>
-    <div class="flex gap-8">
-      <a href="/medical-disclaimer" class="hover:text-white transition-colors">TIBBI UYARI</a>
-      <a href="/editorial-policy" class="hover:text-white transition-colors">YAYIN ILKELERI</a>
-      <a href="/about" class="hover:text-white transition-colors">HAKKIMIZDA</a>
-    </div>
+  <div
+    class="max-w-7xl mx-auto pt-8 border-t border-surface/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-medium tracking-widest text-surface/40 uppercase"
+    aria-label="Site telif hakkı"
+  >
+    <p>&copy; 2026 ESTRANOVA. TUM HAKLARI SAKLIDIR.</p>
+    <nav aria-label="Alt bilgi navigasyonu">
+      <div class="flex gap-8 flex-wrap justify-center">
+        <a href="/medical-disclaimer" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Tıbbi değerlendirme ve tedavi bilgisi - Bu içerik tıbbi tavsiye yerine geçmez">TIBBI UYARI</a>
+        <a href="/editorial-policy" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Yayın ilkeleri ve içerik standartları">YAYIN ILKELERI</a>
+        <a href="/privacy-policy" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Kişisel verilerin nasıl kullanıldığı ve korunması">GIZLILIK POLITIKASI</a>
+        <a href="/kvkk" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Kişisel Verilerin Korunması Kanunu">KVKK</a>
+        <a href="/about" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Platform hakkındaki bilgiler">HAKKIMIZDA</a>
+      </div>
+    </nav>
   </div>
 </footer>

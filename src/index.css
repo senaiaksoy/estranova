@@ -4,7 +4,7 @@
 @theme {
   --font-serif: "Newsreader", serif;
   --font-sans: "Manrope", sans-serif;
-  
+
   --color-primary: #4f171c;
   --color-primary-container: #6b2d31;
   --color-secondary: #775a19;
@@ -14,12 +14,151 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-surface text-charcoal font-sans antialiased;
+    /* Accessibility: Sufficient contrast, line-height, and font-size */
+    @apply text-base leading-relaxed;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
   }
-  
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary rounded;
+  }
+
+  /* Remove outline for mouse users, keep for keyboard */
+  :where(a, button, [tabindex]):focus:not(:focus-visible) {
+    outline: 0;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Interactive elements */
+  .interactive:focus-visible {
+    @apply outline-2 outline-offset-[2px] outline-primary rounded-lg;
+  }
+
+  /* Link hover and focus states */
+  a:hover {
+    @apply transition-colors;
+  }
+
+  a:focus-visible {
+    @apply outline-2 outline-offset-[2px] outline-primary rounded;
+  }
+
+  /* Button accessibility */
+  button:focus-visible,
+  .button:focus-visible {
+    @apply outline-2 outline-offset-[2px] outline-primary rounded-lg ring-2 ring-primary/50;
+  }
+
+  /* Skip to main content link */
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    @apply not-sr-only fixed top-4 left-4 z-[100] px-4 py-3 rounded-lg bg-primary text-white shadow-lg ring-2 ring-primary/50;
+  }
+}
+
+@layer utilities {
+  /* Visibility utilities for screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only-focusable:focus,
+  .sr-only-focusable:focus-visible {
+    clip: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    white-space: normal;
+    position: static;
+    margin: 0;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: more) {
+    body {
+      @apply bg-white text-black;
+    }
+
+    a,
+    button {
+      @apply underline decoration-2;
+    }
+  }
+
+  @media (forced-colors: active) {
+    * {
+      forced-color-adjust: auto;
+    }
+
+    .skip-link {
+      @apply sr-only;
+    }
+
+    .skip-link:focus,
+    .skip-link:focus-visible {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      clip: auto;
+      width: auto;
+      height: auto;
+      white-space: normal;
+      border: 2px solid CanvasText;
+      padding: 0.75rem 1rem;
+      background: Canvas;
+      color: CanvasText;
+      z-index: 100;
+    }
+  }
+
+  /* Dark mode support (optional) */
+  @media (prefers-color-scheme: dark) {
+    body[data-theme="dark"] {
+      @apply bg-charcoal text-surface;
+    }
   }
 }
 
