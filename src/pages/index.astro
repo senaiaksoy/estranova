@@ -1,5 +1,7 @@
----
+﻿---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
 import HomeHero from '../components/home/HomeHero.astro';
 import ExpertBoardSection from '../components/home/ExpertBoardSection.astro';
 import LifeStagesSection from '../components/home/LifeStagesSection.astro';
@@ -10,9 +12,18 @@ import HomeEditorialSection from '../components/home/HomeEditorialSection.astro'
 
 <SiteLayout
   title="Estranova - The Clinical Curator"
-  description="Perimenopoz, menopoza hazırlık, menopoz ve 40+ sağlık başlıklarında bilimsel editoryal içerikler."
+  description="Perimenopoz, menopoza hazirlik, menopoz ve 40+ saglik basliklarinda bilimsel editoryal icerikler."
 >
-  <slot name="navbar" />
-  <slot />
-  <slot name="footer" />
+  <SiteNavbar currentPath="/" />
+
+  <main id="main-content" class="pt-24">
+    <HomeHero />
+    <LifeStagesSection />
+    <SymptomLibrarySection />
+    <ExpertBoardSection />
+    <FeaturedResearchSection />
+    <HomeEditorialSection />
+  </main>
+
+  <SiteFooter />
 </SiteLayout>

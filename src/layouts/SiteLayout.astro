@@ -54,22 +54,6 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <nav
-      aria-label="Ana navigasyon"
-      class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/95 backdrop-blur support-[backdrop-filter]:bg-white/60"
-    >
-      <slot name="navbar" />
-    </nav>
-
-    <main id="main-content" tabindex="-1" class="pt-24">
-      <slot />
-    </main>
-
-    <footer
-      aria-label="Alt bilgi"
-      class="border-t border-primary/10 bg-white py-16"
-    >
-      <slot name="footer" />
-    </footer>
+    <slot />
   </body>
 </html>

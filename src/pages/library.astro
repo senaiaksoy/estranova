@@ -85,7 +85,7 @@ const readingPath = [
                     <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-4">{article.category}</p>
                     <h3 class="text-3xl font-serif leading-tight mb-4">{article.title}</h3>
                     <p class="text-charcoal/65 leading-relaxed mb-6">{article.description}</p>
-                    <a href="/article" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
+                    <a href={`/article/${article.slug}`} class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
                       Yaziyi inceleyin
                     </a>
                   </div>

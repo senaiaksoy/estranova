@@ -1,0 +1,111 @@
+﻿---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import { articles, type Article } from '../../data/articles';
+
+interface Props {
+  article: Article;
+}
+
+export function getStaticPaths() {
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props as Props;
+
+const categoryLabelMap: Record<string, string> = {
+  perimenopoz: 'Perimenopoz',
+  menopoz: 'Menopoz',
+  'kadin-sagligi': '40+ Saglik',
+  'kalp-sagligi': 'Kalp Sagligi',
+  bilgi: 'Bilgi',
+};
+
+const categoryLabel = categoryLabelMap[article.category] ?? article.category;
+const publishedDate = new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(article.date));
+
+const relatedPool = articles.filter((item) => item.slug !== article.slug);
+const relatedArticles = [
+  ...relatedPool.filter((item) => item.category === article.category),
+  ...relatedPool,
+]
+  .filter((item, index, list) => list.findIndex((entry) => entry.slug === item.slug) === index)
+  .slice(0, 3);
+---
+
+<SiteLayout title={`${article.title} - Estranova`} description={article.excerpt}>
+  <SiteNavbar />
+
+  <main id="main-content" class="pt-24">
+    <article class="px-6 py-16 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary mb-10">
+          Kutuphaneye don
+        </a>
+
+        <header class="mb-12">
+          <div class="flex flex-wrap items-center gap-4 mb-6">
+            <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-bold tracking-[0.22em] uppercase">
+              {categoryLabel}
+            </span>
+            <time class="text-[11px] font-bold text-charcoal/40 uppercase tracking-[0.22em]">{publishedDate}</time>
+            <span class="text-[11px] font-bold text-charcoal/40 uppercase tracking-[0.22em]">{article.readTime}</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-serif leading-[1.08] text-charcoal mb-6">{article.title}</h1>
+
+          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed max-w-3xl mb-8">{article.excerpt}</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-primary/10 bg-white p-5">
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Yazar</p>
+              <p class="font-semibold text-charcoal">{article.author}</p>
+            </div>
+            <div class="rounded-2xl border border-primary/10 bg-white p-5">
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Tibbi Inceleme</p>
+              <p class="font-semibold text-charcoal">{article.reviewer}</p>
+            </div>
+            <div class="rounded-2xl border border-primary/10 bg-white p-5">
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Son Guncelleme</p>
+              <p class="font-semibold text-charcoal">{publishedDate}</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="rounded-[36px] burgundy-gradient text-white p-10 md:p-12 mb-12">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-white/70 font-bold mb-4">Kisa Ozet</p>
+          <p class="text-xl md:text-2xl font-serif leading-relaxed">{article.excerpt}</p>
+        </div>
+
+        <div class="prose prose-lg max-w-none" set:html={article.content}></div>
+
+        <section class="mt-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Tibbi Sorumluluk Reddi</p>
+          <p class="text-charcoal/75 leading-relaxed">
+            Bu icerik tibbi tani ve tedavi yerine gecmez, mutlaka hekiminize danisiniz.
+          </p>
+        </section>
+
+        {relatedArticles.length > 0 && (
+          <section class="mt-16 pt-10 border-t border-primary/10">
+            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-4">Ilgili Okumalar</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {relatedArticles.map((item) => (
+                <a href={`/article/${item.slug}`} class="rounded-2xl border border-primary/10 bg-white p-5 hover:border-primary/30 transition-colors">
+                  <p class="text-[11px] uppercase tracking-[0.22em] text-charcoal/40 font-bold mb-2">{item.readTime}</p>
+                  <p class="font-serif text-lg leading-tight text-charcoal">{item.title}</p>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </article>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
