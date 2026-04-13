@@ -2,11 +2,32 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
-import ArticleCard from '../components/ArticleCard.astro';
-import { articles, featuredArticles } from '../data/articles';
 import { perimenopozArticles, menopozArticles, healthArticles } from '../data/articles';
-import { perimenopozArticles, menopozArticles, healthArticles } from '../data/articles';
-import { homepageSymptoms } from '../data/home';
+import { featuredArticles } from '../data/articles';
+
+const categories = [
+  {
+    title: 'Perimenopoz',
+    count: `${perimenopozArticles.length} yazi`,
+    summary: 'Hormonal gecis donemindeki belirtiler, guncel yaklasimlar ve gunluk hayata uyarlanan bilgi notlari.',
+  },
+  {
+    title: 'Menopoz',
+    count: `${menopozArticles.length} yazi`,
+    summary: 'Menopoz surecindeki degisiklikleri aciklayan, tibbi dili sade tutan temel okuma rotasi.',
+  },
+  {
+    title: '40+ Saglik',
+    count: `${healthArticles.length} yazi`,
+    summary: 'Kalp sagligi, metabolik denge ve koruyucu yasam aliskanliklari icin uzun vadeli yol haritasi.',
+  },
+];
+
+const readingPath = [
+  'Ilk olarak semptom ve donem bilgisini okuyarak kisisel baglaminizi netlestirin.',
+  'Ardindan secili temel yazilarla ana kavramlari tamamlayin ve not alin.',
+  'Son adimda iliskili basliklara gecerek daha derin okuma planinizi olusturun.',
+];
 ---
 
 <SiteLayout
