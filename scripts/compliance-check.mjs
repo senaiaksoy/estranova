@@ -9,8 +9,13 @@ const requiredDocs = [
   "COMPLIANCE_CHECKLIST.md",
 ];
 
-const homepageFiles = [
+const auditedFiles = [
   "src/pages/index.astro",
+  "src/pages/library.astro",
+  "src/pages/symptoms.astro",
+  "src/pages/article.astro",
+  "src/pages/methodology.astro",
+  "src/layouts/SiteLayout.astro",
   "src/components/home/HomeHero.astro",
   "src/components/home/ExpertBoardSection.astro",
   "src/components/home/LifeStagesSection.astro",
@@ -99,11 +104,11 @@ for (const file of requiredDocs) {
   }
 }
 
-for (const file of homepageFiles) {
+for (const file of auditedFiles) {
   const p = path.join(root, file);
 
   if (!fs.existsSync(p)) {
-    fail(`Missing homepage file: ${file}`);
+    fail(`Missing audited file: ${file}`);
     continue;
   }
 
@@ -160,5 +165,5 @@ if (hasError) {
 if (warnCount > 0) {
   console.log(`Compliance check passed with ${warnCount} warning(s).`);
 } else {
-  console.log("Compliance check passed for homepage.");
+  console.log("Compliance check passed for audited pages.");
 }

@@ -1,103 +1,111 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer.astro';
-import { ArrowLeft, Bookmark, Share2, Info } from 'lucide-react';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
 ---
 
-<Layout title="Östrojenin Nöro-Protektif Etkileri - Estranova">
-	<Navbar client:load currentPage="/article" />
-	<div class="pt-32 pb-24 px-6">
-		<article class="max-w-4xl mx-auto">
-			<header class="mb-16">
-				<a 
-					href="/"
-					class="flex items-center gap-2 text-sm font-bold text-charcoal/40 hover:text-primary transition-colors mb-12 uppercase tracking-widest"
-				>
-					<ArrowLeft size={16} /> Geri Dön
-				</a>
-				
-				<div class="flex items-center gap-4 mb-8">
-					<span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold tracking-widest uppercase">BİLİMSEL ARAŞTIRMA</span>
-					<span class="text-[10px] font-bold text-charcoal/40 uppercase tracking-widest">12 NİSAN 2024</span>
-				</div>
-				
-				<h1 class="text-4xl md:text-6xl font-serif leading-tight mb-8">
-					Östrojenin Nöro-Protektif Etkileri ve Bilişsel Sağlık
-				</h1>
-				
-				<div class="flex flex-wrap items-center justify-between gap-6 py-8 border-y border-charcoal/5">
-					<div class="flex items-center gap-4">
-						<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">EA</div>
-						<div>
-							<p class="text-sm font-bold">Dr. Elif Aydın</p>
-							<p class="text-xs text-charcoal/60">Tıbbi İnceleme: Prof. Dr. Selin Yılmaz</p>
-						</div>
-					</div>
-					<div class="flex gap-3">
-						<button class="w-10 h-10 rounded-full border border-charcoal/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-							<Bookmark size={18} />
-						</button>
-						<button class="w-10 h-10 rounded-full border border-charcoal/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-							<Share2 size={18} />
-						</button>
-					</div>
-				</div>
-			</header>
+<SiteLayout
+  title="Ornek Makale - Estranova"
+  description="Estranova editoryal makale sayfasi icin ornek icerik yerlesimi."
+>
+  <SiteNavbar />
 
-			<div class="aspect-video rounded-[40px] overflow-hidden mb-16 shadow-2xl">
-				<img 
-					src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=1200" 
-					alt="Brain Research" 
-					class="w-full h-full object-cover"
-					referrerpolicy="no-referrer"
-				/>
-			</div>
+  <main id="main-content" class="pt-24">
+    <article class="px-6 py-16 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary mb-10">
+          Kutuphaneye don
+        </a>
 
-			<div class="prose prose-lg max-w-none font-sans text-charcoal/80 leading-relaxed">
-				<p class="text-xl font-serif italic text-charcoal mb-12 leading-relaxed">
-					"Beyin, östrojen reseptörleri açısından en zengin organlardan biridir. Bu hormonun azalması, sadece üreme sistemini değil, bilişsel fonksiyonların temelini de etkiler."
-				</p>
-				
-				<h2 class="text-3xl font-serif text-charcoal mt-16 mb-6">Giriş</h2>
-				<p class="mb-8">
-					Menopoz geçişi sırasında yaşanan hormonal değişimler, kadınların %60'ından fazlasında "beyin sisi" olarak adlandırılan bilişsel zorluklara neden olur. Unutkanlık, odaklanma güçlüğü ve kelime bulmada aksamalar, bu sürecin en yaygın ancak en az konuşulan semptomları arasındadır.
-				</p>
-				
-				<h2 class="text-3xl font-serif text-charcoal mt-16 mb-6">Östrojen ve Nöronal Plastisite</h2>
-				<p class="mb-8">
-					Östrojen, beyinde sinaptik yoğunluğu artırarak nöronlar arasındaki iletişimi güçlendirir. Özellikle hipokampus bölgesinde (hafıza merkezi) yeni bağlantıların oluşumunu destekler. Klinik çalışmalar, östrojenin glikoz metabolizmasını optimize ederek beynin enerji ihtiyacını karşıladığını göstermektedir.
-				</p>
+        <header class="mb-12">
+          <div class="flex flex-wrap items-center gap-4 mb-6">
+            <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-bold tracking-[0.22em] uppercase">
+              Editoryal Makale
+            </span>
+            <time class="text-[11px] font-bold text-charcoal/40 uppercase tracking-[0.22em]">13 Nisan 2026</time>
+          </div>
 
-				<div class="my-16 p-10 bg-surface-container rounded-3xl border-l-4 border-secondary">
-					<h4 class="text-lg font-bold mb-4 flex items-center gap-2">
-						<Info size={20} class="text-secondary" /> Klinik Not
-					</h4>
-					<p class="text-sm italic">
-						HRT (Hormon Replasman Tedavisi) kararı her zaman kişiselleştirilmeli ve risk-fayda analizi uzman bir hekim tarafından yapılmalıdır.
-					</p>
-				</div>
+          <h1 class="text-4xl md:text-6xl font-serif leading-[1.08] text-charcoal mb-6">
+            Perimenopozda bilissel degisiklikler nasil okunmali?
+          </h1>
 
-				<h2 class="text-3xl font-serif text-charcoal mt-16 mb-6">Sonuç ve Öneriler</h2>
-				<p class="mb-8">
-					Bilişsel sağlığı korumak için sadece hormonal destek değil, aynı zamanda anti-inflamatuar beslenme, düzenli fiziksel aktivite ve zihinsel egzersizler de kritik öneme sahiptir. Estranova olarak, bu bütüncül yaklaşımı her zaman ön planda tutuyoruz.
-				</p>
-			</div>
+          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed max-w-3xl mb-8">
+            Unutkanlik, dikkat daginigi veya zihinsel yavaslama hissi tek basina yorumlanmamali.
+            Uyku, stres, vazomotor belirtiler ve gundelik yuk bir arada ele alindiginda daha anlamli bir cerceve ortaya cikar.
+          </p>
 
-			<footer class="mt-20 pt-10 border-t border-charcoal/5">
-				<div class="bg-primary/5 p-10 rounded-[40px] flex flex-col md:flex-row items-center gap-8">
-					<div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-lg">
-						<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Dr. Elif Aydın" referrerpolicy="no-referrer" />
-					</div>
-					<div>
-						<h4 class="text-xl font-serif mb-2">Dr. Elif Aydın Hakkında</h4>
-						<p class="text-sm text-charcoal/60 leading-relaxed">
-							Kadın sağlığı ve endokrinoloji alanında 15 yıllık klinik deneyime sahip olan Dr. Aydın, Estranova'nın tıbbi içerik direktörlüğünü yürütmektedir.
-						</p>
-					</div>
-				</div>
-			</footer>
-		</article>
-	</div>
-	<Footer />
-</Layout>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-primary/10 bg-white p-5">
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Yazar</p>
+              <p class="font-semibold text-charcoal">Alara Baykent</p>
+            </div>
+            <div class="rounded-2xl border border-primary/10 bg-white p-5">
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Yazi Denetimi</p>
+              <p class="font-semibold text-charcoal">Doc. Dr. Senai Aksoy</p>
+            </div>
+            <div class="rounded-2xl border border-primary/10 bg-white p-5">
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Tibbi Cerceve</p>
+              <p class="font-semibold text-charcoal">Editoryal bilgi amaclidir</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="rounded-[36px] burgundy-gradient text-white p-10 md:p-12 mb-12">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-white/70 font-bold mb-4">Kisa Ozet</p>
+          <p class="text-xl md:text-2xl font-serif leading-relaxed">
+            Bilissel degisiklikler menopoz gecisinin tek bir belirtisi gibi degil, diger gunluk degiskenlerle birlikte okundugunda daha iyi anlasilir.
+          </p>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <h2 class="font-serif text-3xl text-charcoal mb-4">Neden tek bir sebep aramak yeterli olmaz?</h2>
+          <p class="text-charcoal/75 leading-relaxed mb-8">
+            Perimenopoz doneminde bilissel zorluklar bazen hormon degisimi ile dogrudan iliskilendirilir.
+            Oysa uyku bolunmesi, gece terlemesi, gerginlik hissi ve gundelik sorumluluk yogunlugu da ayni tabloya esit derecede katkida bulunabilir.
+            Bu nedenle semptomu yalniz degil, baglami ile birlikte degerlendirmek gerekir.
+          </p>
+
+          <h2 class="font-serif text-3xl text-charcoal mb-4">Hangi sorular daha islevseldir?</h2>
+          <p class="text-charcoal/75 leading-relaxed mb-8">
+            Sorulmasi gereken ilk sorular genellikle sudur: Uyku kalitesi son aylarda degisti mi? Gece uyanmalari siklasti mi?
+            Sicak basmasi veya kaygi artisi eslik ediyor mu? Is temposu ya da bakim yukunde artis var mi?
+            Bu sorular, tek bir belirtiye sabitlenmeden daha gercekci bir tablo kurmaya yardimci olur.
+          </p>
+
+          <div class="my-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
+            <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Klinik Not</p>
+            <p class="text-charcoal/75 leading-relaxed">
+              Hormon tedavisi veya tibbi degerlendirme gereksinimi bireysel olarak ele alinmalidir. Bu sayfa tani veya tedavi onerisi sunmaz; sadece konuyu anlamlandirmaya yardimci olur.
+            </p>
+          </div>
+
+          <h2 class="font-serif text-3xl text-charcoal mb-4">Okur icin pratik okuma rotasi</h2>
+          <p class="text-charcoal/75 leading-relaxed mb-8">
+            Ilk adim, semptom gunlugu tutmak degil; semptomun hangi gunluk degiskenlerle birlikte ortaya ciktigini fark etmektir.
+            Daha sonra uyku, vazomotor belirtiler ve duygudurum basliklari birlikte okunabilir.
+            Estranova icerik yapisi da bu nedenle tek bir "cevap" yerine konu agaci mantigi ile ilerler.
+          </p>
+        </div>
+
+        <footer class="mt-16 pt-10 border-t border-primary/10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="rounded-3xl bg-white border border-primary/10 p-6">
+              <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Yazar Ekibi</p>
+              <p class="text-charcoal/75 leading-relaxed">
+                Bu ornek makale yapisi, Estranova'daki yazar ve denetim rollerinin sayfada seffaf bicimde gorunebilmesi icin olusturuldu.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-surface-container border border-primary/10 p-6">
+              <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Devam Okumasi</p>
+              <a href="/symptoms" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
+                Semptom rehberine gecin
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
