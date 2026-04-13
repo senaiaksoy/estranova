@@ -19,4 +19,4 @@ jobs:
           node-version: 18
 
       - name: Run compliance script
-        run: node scripts/compliance-check.js
+       run: node scripts/compliance-check.cjs
