@@ -2,17 +2,44 @@
 import '../index.css';
 import mobileMenuScript from '../components/site/mobile-menu.js?url';
 
+type JsonLdSchema = Record<string, unknown>;
+
 interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  jsonLd?: JsonLdSchema | JsonLdSchema[];
 }
 
 const {
   title,
   description = "Estranova - Perimenopoz, menopoz ve 40+ kadın sağlığı için editoryal bilgi platformu.",
   canonical,
+  jsonLd,
 } = Astro.props;
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://estranova.com').replace(/\/$/, '');
+
+const webSiteSchema: JsonLdSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Estranova',
+  url: siteUrl,
+  inLanguage: 'tr-TR',
+  description,
+};
+
+const organizationSchema: JsonLdSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Estranova',
+  url: siteUrl,
+  logo: `${siteUrl}/favicon.svg`,
+  description: '40+ kadın sağlığına odaklanan bağımsız editoryal sağlık platformu.',
+};
+
+const additionalSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
 ---
 
 <!doctype html>
@@ -35,8 +62,13 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
 
     <title>{title}</title>
+
+    {allSchemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
   </head>
   <body class="bg-surface text-charcoal font-sans antialiased" data-theme="light">
     <!-- Skip to Main Content Link -->

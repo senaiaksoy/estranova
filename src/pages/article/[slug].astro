@@ -32,6 +32,88 @@ const formatDate = (value: string) =>
 const publishedDate = formatDate(article.date);
 const reviewDateLabel = formatDate(article.reviewDate);
 const lastModifiedLabel = formatDate(article.lastModified);
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://estranova.com').replace(/\/$/, '');
+const articleUrl = `${siteUrl}/article/${article.slug}`;
+const articleListUrl = `${siteUrl}/article`;
+
+const articleCitations = article.references.map((ref) => ({
+  '@type': 'CreativeWork',
+  headline: ref.title,
+  author: ref.authors,
+  isPartOf: ref.journal,
+  datePublished: String(ref.year),
+  url: ref.url,
+  ...(ref.doi ? { identifier: `https://doi.org/${ref.doi}` } : {}),
+}));
+
+const medicalWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: article.title,
+  description: article.excerpt,
+  url: articleUrl,
+  inLanguage: 'tr-TR',
+  datePublished: article.date,
+  dateModified: article.lastModified,
+  reviewedBy: {
+    '@type': 'Person',
+    name: article.reviewer,
+    jobTitle: article.medicalReviewerTitle,
+  },
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.title,
+  description: article.excerpt,
+  datePublished: article.date,
+  dateModified: article.lastModified,
+  inLanguage: 'tr-TR',
+  mainEntityOfPage: articleUrl,
+  articleSection: categoryLabel,
+  keywords: article.tags.join(', '),
+  author: {
+    '@type': 'Person',
+    name: article.author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Estranova',
+    url: siteUrl,
+  },
+  reviewedBy: {
+    '@type': 'Person',
+    name: article.reviewer,
+    jobTitle: article.medicalReviewerTitle,
+  },
+  citation: articleCitations,
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Anasayfa',
+      item: siteUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Makaleler',
+      item: articleListUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: article.title,
+      item: articleUrl,
+    },
+  ],
+};
 
 const relatedPool = publishedArticles.filter((item) => item.slug !== article.slug);
 const relatedArticles = [
@@ -42,7 +124,12 @@ const relatedArticles = [
   .slice(0, 3);
 ---
 
-<SiteLayout title={`${article.title} - Estranova`} description={article.excerpt}>
+<SiteLayout
+  title={`${article.title} - Estranova`}
+  description={article.excerpt}
+  canonical={articleUrl}
+  jsonLd={[medicalWebPageSchema, articleSchema, breadcrumbSchema]}
+>
   <SiteNavbar />
 
   <main id="main-content" class="pt-24">
