@@ -6,16 +6,17 @@ interface Props {
 const { currentPath = "/" } = Astro.props;
 
 const navLinks = [
-  { name: "Anasayfa", href: "/", label: "Ana sayfaya dön", role: "home" },
-  { name: "Kutuphane", href: "/library", label: "Kütüphane sayfası" },
+  { name: "Anasayfa", href: "/", label: "Ana sayfaya don", role: "home" },
+  { name: "Kutuphane", href: "/library", label: "Kutuphane sayfasi" },
   { name: "Semptomlar", href: "/symptoms", label: "Semptom rehberi" },
-  { name: "Metodoloji", href: "/methodology", label: "İçerik metodolojisi" },
-  { name: "Hakkimizda", href: "/about", label: "Platform hakkında" },
+  { name: "Metodoloji", href: "/methodology", label: "Icerik metodolojisi" },
+  { name: "Iletisim", href: "/contact", label: "Iletisim ve bilgi sayfasi" },
+  { name: "Hakkimizda", href: "/about", label: "Platform hakkinda" },
 ];
 ---
 
 <nav
-  aria-label="Ana navigasyon menüsü"
+  aria-label="Ana navigasyon menusu"
   role="navigation"
   class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 px-6 py-3 focus-within:ring-2 focus-within:ring-primary/20"
 >
@@ -23,14 +24,13 @@ const navLinks = [
     <a
       href="/"
       class="text-2xl font-serif font-bold tracking-tight text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded px-2 py-1"
-      aria-label="ESTRANOVA Ana Sayfası"
+      aria-label="ESTRANOVA Ana Sayfasi"
     >
       <span>ESTRANOVA</span>
       <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">THE CLINICAL CURATOR</span>
     </a>
 
-    <!-- Desktop Navigation -->
-    <nav aria-label="Ana menü" class="hidden md:flex items-center gap-6">
+    <nav aria-label="Ana menu" class="hidden md:flex items-center gap-6">
       {navLinks.map((link) => (
         <a
           href={link.href}
@@ -47,11 +47,10 @@ const navLinks = [
       ))}
     </nav>
 
-    <!-- Mobile Menu Toggle -->
     <button
       type="button"
       class="md:hidden text-primary p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary"
-      aria-label="Menüyü aç/kapat"
+      aria-label="Menuyu ac/kapat"
       aria-controls="mobile-menu"
       aria-expanded="false"
       onclick="mobileMenu.toggle()"
@@ -63,7 +62,6 @@ const navLinks = [
       </svg>
     </button>
 
-    <!-- Mobile Menu Dropdown -->
     <div
       id="mobile-menu"
       class="absolute top-full left-0 right-0 bg-surface border-y border-primary/10 shadow-xl p-4 md:hidden flex flex-col gap-2"
