@@ -1,6 +1,12 @@
----
+﻿---
 import '../index.css';
 import mobileMenuScript from '../components/site/mobile-menu.js?url';
+import {
+  resolveCanonicalUrl,
+  resolveSiteUrl,
+  resolveSocialImageUrl,
+  type OgType,
+} from '../utils/seo';
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -8,17 +14,27 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  image?: string;
+  ogType?: OgType;
   jsonLd?: JsonLdSchema | JsonLdSchema[];
 }
 
 const {
   title,
-  description = "Estranova - Perimenopoz, menopoz ve 40+ kadın sağlığı için editoryal bilgi platformu.",
+  description = 'Estranova - Perimenopoz, menopoz ve 40+ kadın sağlığı için editoryal bilgi platformu.',
   canonical,
+  image,
+  ogType = 'website',
   jsonLd,
 } = Astro.props;
 
-const siteUrl = (Astro.site ? Astro.site.toString() : 'https://estranova.com').replace(/\/$/, '');
+const siteUrl = resolveSiteUrl(Astro.site);
+const canonicalUrl = resolveCanonicalUrl({
+  siteUrl,
+  pathname: Astro.url.pathname,
+  canonical,
+});
+const socialImageUrl = resolveSocialImageUrl({ siteUrl, image });
 
 const webSiteSchema: JsonLdSchema = {
   '@context': 'https://schema.org',
@@ -50,19 +66,26 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="canonical" href={canonicalUrl} />
 
-    <!-- Accessibility Meta Tags -->
     <meta name="robots" content="follow, index" />
     <meta name="theme-color" content="#7C2D58" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:site_name" content="Estranova" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:url" content={canonicalUrl} />
 
     <title>{title}</title>
 
@@ -71,7 +94,6 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
     ))}
   </head>
   <body class="bg-surface text-charcoal font-sans antialiased" data-theme="light">
-    <!-- Skip to Main Content Link -->
     <a
       href="#main-content"
       class="skip-link"
@@ -80,7 +102,6 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
       İçeriğe doğrudan geç
     </a>
 
-    <!-- Mobile menu script -->
     <script src={mobileMenuScript} defer></script>
 
     <slot />

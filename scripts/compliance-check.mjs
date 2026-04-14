@@ -30,6 +30,11 @@ const extraAuditedFiles = [
   "src/data/articles.ts",
 ];
 
+const articleRouteFile = "src/pages/article/[slug].astro";
+const articleTransparencyComponentFile = "src/components/article/ArticleTransparencyPanel.astro";
+const sponsorMentionPattern = /\b(sponsor|sponsored|partner|partnerli|partnerlik)\b/u;
+const sponsorLabelPattern = /\bsponsorlu\s+icerik\b/u;
+
 let hasError = false;
 let warnCount = 0;
 
@@ -158,6 +163,10 @@ for (const file of auditedFiles) {
     }
   }
 
+  if (sponsorMentionPattern.test(scanText) && !sponsorLabelPattern.test(scanText)) {
+    fail(`Sponsor mention found without "sponsorlu icerik" label in ${file}`);
+  }
+
   if (/\.tsx["']/.test(text)) {
     warn(`TSX import found in ${file}. Prefer .astro unless interactivity is necessary.`);
   }
@@ -176,6 +185,22 @@ for (const file of auditedFiles) {
         `High long-sentence count in ${file} (${longSentences}). Consider simplifying for 8-10th grade readability.`
       );
     }
+  }
+}
+
+if (fs.existsSync(path.join(root, articleRouteFile))) {
+  const articleRouteText = fs.readFileSync(path.join(root, articleRouteFile), "utf8");
+  if (!/ArticleTransparencyPanel[^>]*variant=['"]disclaimer['"]/u.test(articleRouteText)) {
+    fail(`Missing medical disclaimer block usage in ${articleRouteFile}`);
+  }
+}
+
+if (fs.existsSync(path.join(root, articleTransparencyComponentFile))) {
+  const transparencyText = normalizeForScan(
+    fs.readFileSync(path.join(root, articleTransparencyComponentFile), "utf8")
+  );
+  if (!/\btibbi\s+tani\s+ve\s+tedavi\s+yerine\s+gecmez\b/u.test(transparencyText)) {
+    fail(`Medical disclaimer phrase is missing in ${articleTransparencyComponentFile}`);
   }
 }
 

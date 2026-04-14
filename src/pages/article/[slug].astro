@@ -4,6 +4,7 @@ import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import ArticleTransparencyPanel from '../../components/article/ArticleTransparencyPanel.astro';
 import { publishedArticles, type Article } from '../../data/articles';
+import { getRelatedArticles } from '../../utils/relatedArticles';
 
 interface Props {
   article: Article;
@@ -116,18 +117,14 @@ const breadcrumbSchema = {
 };
 
 const relatedPool = publishedArticles.filter((item) => item.slug !== article.slug);
-const relatedArticles = [
-  ...relatedPool.filter((item) => item.category === article.category),
-  ...relatedPool,
-]
-  .filter((item, index, list) => list.findIndex((entry) => entry.slug === item.slug) === index)
-  .slice(0, 3);
+const relatedArticles = getRelatedArticles(article, relatedPool, { limit: 3 });
 ---
 
 <SiteLayout
   title={`${article.title} - Estranova`}
   description={article.excerpt}
   canonical={articleUrl}
+  ogType="article"
   jsonLd={[medicalWebPageSchema, articleSchema, breadcrumbSchema]}
 >
   <SiteNavbar />
