@@ -1,0 +1,88 @@
+﻿---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Kullanım Koşulları - Estranova"
+  description="Estranova kullanım koşulları metni."
+>
+  <SiteNavbar />
+
+  <main id="main-content" class="pt-24">
+    <section class="px-6 py-16 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <header class="max-w-3xl mb-14">
+          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Kullanım Koşulları</p>
+          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Estranova içeriklerinin kullanım çerçevesi</h1>
+          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
+            Bu metin, Estranova platformundaki içeriklerin hangi sınırlar içinde kullanılabileceğini açıklar.
+            Estranova bağımsız bir editoryal sağlık bilgi platformudur; sağlık hizmeti sunucusu değildir.
+          </p>
+        </header>
+
+        <div class="space-y-6">
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">1. Genel</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Estranova, perimenopoz, menopoz ve 40+ kadın sağlığı odağında yayın yapan bağımsız bir editoryal sağlık bilgi platformudur.
+              Platform, tanı koyan veya tedavi sunan bir sağlık kuruluşu değildir. İçerikler yalnızca genel bilgilendirme amacı taşır.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">2. Fikri Mülkiyet</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Estranova'da yer alan metin, görsel, düzen ve editoryal içeriklerin telif hakları Estranova'ya aittir.
+              İçeriklerin izinsiz çoğaltılması, kopyalanması, yayımlanması veya ticari amaçla kullanılması yasaktır.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">3. İçerik Kullanım Sınırları</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Platformdaki içerikler yalnızca kişisel bilgilenme amacıyla kullanılabilir.
+              Bu içerikler tıbbi değerlendirme, tanı veya tedavi kararı yerine geçmez ve bu amaçlarla kullanılamaz.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">4. Sorumluluk Sınırı</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Estranova bilgi sunar, tedavi önermez ve sağlık hizmeti sağlamaz.
+              İçeriklerin kullanımından doğabilecek doğrudan veya dolaylı sonuçlara ilişkin sorumluluk kabul edilmez.
+              Bireysel sağlık kararları mutlaka hekim değerlendirmesi ile verilmelidir.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">5. Dış Bağlantılar</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Estranova, üçüncü taraf sitelere yönlendiren bağlantılar içerebilir.
+              Bu sitelerin içeriklerinden, veri politikalarından veya güncelliğinden Estranova sorumlu değildir.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">6. Değişiklikler</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Kullanım koşulları, editoryal ve hukuki gereklilikler doğrultusunda zaman zaman güncellenebilir.
+              Güncel metin bu sayfada yayımlandığı anda geçerli kabul edilir.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
+            <h2 class="text-3xl font-serif mb-4">7. İletişim</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Kullanım koşullarıyla ilgili sorularınız için:
+              <a href="mailto:bilgi@estranova.com" class="text-primary font-semibold hover:underline">bilgi@estranova.com</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

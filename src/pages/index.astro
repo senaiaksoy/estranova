@@ -1,28 +1,281 @@
----
+﻿---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
-import HomeHero from '../components/home/HomeHero.astro';
-import ExpertBoardSection from '../components/home/ExpertBoardSection.astro';
-import LifeStagesSection from '../components/home/LifeStagesSection.astro';
-import FeaturedResearchSection from '../components/home/FeaturedResearchSection.astro';
-import SymptomLibrarySection from '../components/home/SymptomLibrarySection.astro';
-import HomeEditorialSection from '../components/home/HomeEditorialSection.astro';
 ---
 
 <SiteLayout
-  title="Estranova - The Clinical Curator"
-  description="Perimenopoz, menopoza hazırlık, menopoz ve 40+ sağlık başlıklarında bilimsel editoryal içerikler."
+  title="Estranova - Kadın Sağlığı Editoryal Rehberi"
+  description="Perimenopoz, menopoza hazırlık, menopoz ve 40 sonrası yaşam dönemlerinde güvenilir editoryal içerikler."
 >
   <SiteNavbar currentPath="/" />
 
-  <main id="main-content" class="pt-24">
-    <HomeHero />
-    <LifeStagesSection />
-    <SymptomLibrarySection />
-    <ExpertBoardSection />
-    <FeaturedResearchSection />
-    <HomeEditorialSection />
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <section class="bg-[#FDF8F0] px-6 py-20 md:py-28">
+      <div class="mx-auto max-w-6xl">
+        <div class="max-w-4xl">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-[#6B2D3E]">Estranova</p>
+          <h1 class="mb-8 font-serif text-5xl leading-[1.04] text-[#2D2D2D] md:text-7xl">
+            Hormonal geçişinizi anlamak için güvenilir rehberiniz
+          </h1>
+          <p class="mb-10 max-w-3xl text-lg leading-relaxed text-[#2D2D2D]/80 md:text-2xl">
+            Estranova, 40+ kadınların gündelik sağlık sorularına sade, dengeli ve bilim temelli bir çerçeve sunar.
+            Burada amaç korkutmak değil, anlamayı kolaylaştırmaktır.
+          </p>
+          <a
+            href="/library"
+            class="inline-flex items-center rounded-xl bg-[#6B2D3E] px-7 py-3.5 text-sm font-semibold text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#6B2D3E]/35"
+          >
+            Rehberi Keşfet
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Yolculuk Haritası</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight text-[#2D2D2D] md:text-5xl">Hormonal Geçiş Yolculuk Haritası</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Her dönem farklı sorular getirir. İçerikleri, yaşam evresine göre adım adım takip edebilirsiniz.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <h3 class="mb-3 font-serif text-2xl">Perimenopoz</h3>
+            <p class="mb-4 leading-relaxed text-[#2D2D2D]/75">Döngü düzensizliklerini ve ilk belirtileri anlamak için temel rehber.</p>
+            <a href="/hormonal-gecis/perimenopoz" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <h3 class="mb-3 font-serif text-2xl">Menopoza Hazırlık</h3>
+            <p class="mb-4 leading-relaxed text-[#2D2D2D]/75">Geçiş döneminde yaşam düzeni, takip planı ve koruyucu adımlar.</p>
+            <a href="/hormonal-gecis/menopoza-hazirlik" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <h3 class="mb-3 font-serif text-2xl">Menopoz</h3>
+            <p class="mb-4 leading-relaxed text-[#2D2D2D]/75">Sık görülen belirtileri ve günlük yaşamı kolaylaştıran yaklaşım önerileri.</p>
+            <a href="/hormonal-gecis/menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <h3 class="mb-3 font-serif text-2xl">40 Sonrası</h3>
+            <p class="mb-4 leading-relaxed text-[#2D2D2D]/75">Uzun dönem iyi olma hali için beden, zihin ve koruyucu sağlık başlıkları.</p>
+            <a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F5EDE0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-white p-8 md:p-12">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editoryal Not</p>
+          <h2 class="mb-5 font-serif text-4xl md:text-5xl">Editörün Köşesi</h2>
+          <h3 class="mb-4 font-serif text-2xl text-[#6B2D3E] md:text-3xl">Bu Ay Kadın Dünyasında Ne Konuşuluyor?</h3>
+          <p class="mb-3 text-lg leading-relaxed text-[#2D2D2D]/75">
+            Bu ay, uyku düzeni, kemik sağlığı ve ruh hali dalgalanmaları en çok konuşulan konular arasında yer alıyor.
+            Okurlarımızdan gelen sorular, gündelik yaşamda küçük ama düzenli adımların önemini tekrar gösteriyor.
+          </p>
+          <p class="mb-3 text-lg leading-relaxed text-[#2D2D2D]/75">
+            Biz de bu ayki içerik seçiminde, karmaşık kavramları sade bir dilde açıklayan ve karar sürecini netleştiren
+            yazılara öncelik verdik. Bilgiyi anlaşılır tutmak, editoryal yaklaşımımızın temel parçasıdır.
+          </p>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Editör: <span class="font-semibold text-[#2D2D2D]">Estranova Editoryal Ekibi</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkan İçerik</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Zamansız Yaşam Öne Çıkan İçerik</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Günlük yaşam kalitesini destekleyen, bilimsel çerçevesi güçlü içerikleri bir arada bulabilirsiniz.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Vitaminler</p>
+            <h3 class="mb-3 font-serif text-2xl">D Vitamini ve Kemik Dengesi</h3>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">40 sonrası dönemde D vitamini takibi ve günlük yaşamla ilişkili temel noktalar.</p>
+            <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt Düzeyi: <span class="text-[#6B2D3E]">●●●●○</span></p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Deneysel Yaklaşımlar</p>
+            <h3 class="mb-3 font-serif text-2xl">Yeni Yaklaşımlar Üzerine Ne Biliyoruz?</h3>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Araştırma aşamasındaki yöntemlerin sınırları, beklenti yönetimi ve güvenli okuma notları.</p>
+            <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt Düzeyi: <span class="text-[#6B2D3E]">●●○○○</span></p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Non-İnvaziv</p>
+            <h3 class="mb-3 font-serif text-2xl">Nefes ve Uyku Rutinleri</h3>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Uyku kalitesini destekleyebilecek düşük riskli alışkanlıkların bilimsel çerçevesi.</p>
+            <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt Düzeyi: <span class="text-[#6B2D3E]">●●●○○</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-8 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Belirti Bazlı Navigasyon</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Ne Hissediyorsunuz?</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Belirti başlıklarından başlayarak konuya daha hızlı ulaşabilirsiniz.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Sıcak Basması</a>
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Uyku Bozukluğu</a>
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Ruh Hali Değişimi</a>
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Kilo Artışı</a>
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Eklem Ağrısı</a>
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Hafıza Sorunları</a>
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Cilt Değişimleri</a>
+          <a href="/symptoms" class="rounded-xl border border-[#6B2D3E]/20 bg-white px-4 py-3 text-center font-medium hover:border-[#6B2D3E]/40">Libido Azalması</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-[#F5EDE0] p-8 md:p-12">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Güven Bloğu</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">İçeriklerimiz bilimsel editör denetiminden geçer</h2>
+          <p class="mb-8 max-w-3xl text-lg leading-relaxed text-[#2D2D2D]/75">
+            Her içerik, kaynak kalitesi ve anlatım netliği açısından editoryal incelemeden geçirilir. Kanıt düzeyi sistemi,
+            bilginin gücünü açık bir şekilde görmenizi sağlar.
+          </p>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full border border-[#6B2D3E]/20 bg-white">
+              <thead>
+                <tr class="bg-[#FDF8F0]">
+                  <th class="px-4 py-3 text-left text-sm font-semibold text-[#2D2D2D]">Seviye</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold text-[#2D2D2D]">Gösterim</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold text-[#2D2D2D]">Kısa Açıklama</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm text-[#2D2D2D]/80">
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 5</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●●●●</td>
+                  <td class="px-4 py-3">Yüksek güvenilirlikte, tutarlı kanıt.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 4</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●●●○</td>
+                  <td class="px-4 py-3">Güçlü kanıt, bazı sınırlı belirsizlikler.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 3</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●●○○</td>
+                  <td class="px-4 py-3">Orta düzey kanıt, takip gereken alanlar var.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 2</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●○○○</td>
+                  <td class="px-4 py-3">Sınırlı kanıt, yorumda dikkat gerekir.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 1</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●○○○○</td>
+                  <td class="px-4 py-3">Erken düzey veri, ön bilgi niteliğinde.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Son Yayınlar</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Son Yayınlar</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Farklı başlıklardaki güncel içerikleri tek bakışta inceleyebilirsiniz.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Hormonal Geçiş</p>
+            <h3 class="mb-2 font-serif text-2xl">Perimenopozda Döngü Takibi Nasıl Yapılır?</h3>
+            <p class="mb-3 text-sm text-[#2D2D2D]/60">14 Nisan 2026</p>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Belirti günlüğü, düzenli takip ve günlük yaşam notlarıyla süreç yönetimi için temel adımlar.</p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Beden & Yakınlık</p>
+            <h3 class="mb-2 font-serif text-2xl">Yakınlıkta Konforu Etkileyen Değişimler</h3>
+            <p class="mb-3 text-sm text-[#2D2D2D]/60">11 Nisan 2026</p>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Beden sinyallerini tanımaya ve iletişimi güçlendirmeye odaklanan sade bir içerik özeti.</p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Zihin & Denge</p>
+            <h3 class="mb-2 font-serif text-2xl">Ruh Hali Dalgalanmalarını Anlamak</h3>
+            <p class="mb-3 text-sm text-[#2D2D2D]/60">7 Nisan 2026</p>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Uyku, stres ve günlük rutin ilişkisini sade bir çerçevede ele alan başlangıç rehberi.</p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yaşam Tarzı</p>
+            <h3 class="mb-2 font-serif text-2xl">40 Sonrası Hareket Planı Oluşturmak</h3>
+            <p class="mb-3 text-sm text-[#2D2D2D]/60">2 Nisan 2026</p>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Uygulanabilir hareket önerileri ve sürdürülebilir planlama adımlarıyla pratik bir yol haritası.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F5EDE0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-white p-8 md:p-12">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Koruyucu Sağlık</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">40 Yaşından Sonra Koruyucu Sağlık</h2>
+          <p class="mb-6 max-w-3xl text-lg leading-relaxed text-[#2D2D2D]/75">
+            Düzenli tarama testleri, yaşam alışkanlıkları ve yıllık takip planı; uzun vadeli sağlık için temel adımlardır.
+            Bu bölümde yaş dönemine göre önerilen kontrol başlıklarını sade bir takvim mantığıyla bulabilirsiniz.
+          </p>
+          <a
+            href="/library"
+            class="inline-flex items-center rounded-xl bg-[#6B2D3E] px-7 py-3.5 text-sm font-semibold text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#6B2D3E]/35"
+          >
+            Rehberi Keşfet
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#6B2D3E] px-6 py-20 text-white">
+      <div class="mx-auto max-w-6xl text-center">
+        <h2 class="mb-5 font-serif text-4xl leading-tight md:text-5xl">Hormonal geçiş hakkında daha fazla bilgi mi istiyorsunuz?</h2>
+        <p class="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-white/85 md:text-xl">
+          İçeriklerimizi adım adım inceleyerek süreci daha net anlayabilir, güvenilir kaynaklara tek yerden ulaşabilirsiniz.
+        </p>
+        <a
+          href="/library"
+          class="inline-flex items-center rounded-xl bg-[#C9A96E] px-7 py-3.5 text-sm font-semibold text-[#2D2D2D] transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/40"
+        >
+          İçerikleri Keşfedin
+        </a>
+      </div>
+    </section>
   </main>
 
   <SiteFooter />

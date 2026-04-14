@@ -7,11 +7,12 @@ const { currentPath = "/" } = Astro.props;
 
 const navLinks = [
   { name: "Anasayfa", href: "/", label: "Ana sayfaya dön", role: "home" },
-  { name: "Kütüphane", href: "/library", label: "Kütüphane sayfası" },
-  { name: "Semptomlar", href: "/symptoms", label: "Semptom rehberi" },
-  { name: "Metodoloji", href: "/methodology", label: "İçerik metodolojisi" },
-  { name: "İletişim", href: "/contact", label: "İletişim ve bilgi sayfası" },
-  { name: "Hakkımızda", href: "/about", label: "Platform hakkında" },
+  { name: "Hormonal Geçiş", href: "/hormonal-gecis", label: "Hormonal geçiş rehberi" },
+  { name: "Zamansız Yaşam", href: "/zamansiz-yasam", label: "Zamansız yaşam içerikleri" },
+  { name: "Beden & Yakınlık", href: "/beden-yakinlik", label: "Beden ve yakınlık" },
+  { name: "Zihin & Denge", href: "/zihin-denge", label: "Zihin ve denge" },
+  { name: "Bilimsel Pencere", href: "/bilimsel-pencere", label: "Bilimsel pencere" },
+  { name: "Hakkımızda", href: "/hakkimizda", label: "Platform hakkında" },
 ];
 ---
 
@@ -27,7 +28,7 @@ const navLinks = [
       aria-label="ESTRANOVA Ana Sayfası"
     >
       <span>ESTRANOVA</span>
-      <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">THE CLINICAL CURATOR</span>
+      <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">EDİTORYAL SAĞLIK PLATFORMU</span>
     </a>
 
     <nav aria-label="Ana menü" class="hidden md:flex items-center gap-6">

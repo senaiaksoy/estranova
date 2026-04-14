@@ -1,0 +1,103 @@
+﻿---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Hakkımızda - Estranova"
+  description="Estranova'nın editoryal yaklaşımı, misyonu ve değerleri hakkında bilgi alın."
+>
+  <SiteNavbar />
+
+  <main id="main-content" class="pt-24">
+    <section class="px-6 py-16 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <header class="max-w-3xl mb-14">
+          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Hakkımızda</p>
+          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Hakkımızda</h1>
+          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
+            Estranova, kadın sağlığı alanında güvenilir ve anlaşılır bilgiye ulaşmayı kolaylaştırmak için kuruldu.
+          </p>
+        </header>
+
+        <div class="space-y-6">
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">Platform Hikayesi</h2>
+            <p class="text-charcoal/70 leading-relaxed mb-4">
+              Estranova, 40+ kadınların güvenilir bilgiye erişim ihtiyacından doğdu. Perimenopoz ve menopoz döneminde,
+              internette çok fazla dağınık ve çelişkili içerik bulunuyor. Bu durum, hangi bilginin doğru olduğuna karar vermeyi zorlaştırıyor.
+            </p>
+            <p class="text-charcoal/70 leading-relaxed mb-4">
+              Bu platform, karmaşık sağlık bilgisini sade ve düzenli bir yapıda sunmak için oluşturuldu. İçerikler; gündelik yaşamda
+              karşılaşılan sorulara net bir çerçeve sunmayı, okurun konuyu adım adım anlamasını ve kendi sağlık sürecini daha bilinçli takip etmesini hedefler.
+            </p>
+            <p class="text-charcoal/70 leading-relaxed">
+              Estranova bir klinik tanıtım alanı değildir. Bağımsız bir editoryal yayın platformu olarak, bilgi odaklı ve tarafsız bir
+              yaklaşımı korur.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">Misyon</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Bilimsel bilgiyi herkesin anlayacağı dilde sunmak; kadınların sağlıkla ilgili konularda daha net, daha güvenli ve daha bilinçli
+              karar süreçleri kurmasına destek olmak.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">Vizyon</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Türkiye'nin en güvenilir editoryal kadın sağlığı platformu olmak.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-6">Değerlerimiz</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
+                <h3 class="text-xl font-serif mb-2">Bağımsızlık</h3>
+                <p class="text-charcoal/70 leading-relaxed">İçerik üretiminde ticari baskılardan uzak, editoryal önceliklerle hareket ederiz.</p>
+              </article>
+
+              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
+                <h3 class="text-xl font-serif mb-2">Bilimsel Doğruluk</h3>
+                <p class="text-charcoal/70 leading-relaxed">Bilgiyi güncel bilimsel kaynaklar ve editoryal kontrol ile sunarız.</p>
+              </article>
+
+              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
+                <h3 class="text-xl font-serif mb-2">Tarafsızlık</h3>
+                <p class="text-charcoal/70 leading-relaxed">Yargılayıcı olmayan, yönlendirmeyen ve dengeyi gözeten bir dil kullanırız.</p>
+              </article>
+
+              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
+                <h3 class="text-xl font-serif mb-2">Erişilebilirlik</h3>
+                <p class="text-charcoal/70 leading-relaxed">Tıbbi konuları sade Türkçe ile anlatır, bilgiyi herkes için ulaşılabilir hale getiririz.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">İçerik Yaklaşımımız</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Estranova içerikleri, bilimsel editör denetiminden geçer. Metinlerde kanıt düzeyi sistemi kullanılır ve tıbbi kavramlar sade Türkçe ile açıklanır.
+              Amaç, bilgi karmaşasını azaltmak ve okurun güvenilir içeriğe düzenli bir yapıda ulaşmasını sağlamaktır.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
+            <h2 class="text-3xl font-serif mb-4">Editoryal Politika</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              İçerik üretim ilkelerimizi ve inceleme sürecimizi daha detaylı görmek için
+              <a href="/editorial-policy" class="text-primary font-semibold hover:underline">Editoryal Politika</a>
+              sayfasını inceleyebilirsiniz.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

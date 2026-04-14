@@ -1,0 +1,110 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Hormonal Geçiş - Estranova"
+  description="Perimenopozdan menopoza, hormonal geçiş sürecinizi anlamak için kapsamlı bilgi rehberleri."
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="max-w-4xl mb-12">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.26em] text-[#6B2D3E]">Kategori</p>
+          <h1 class="mb-6 font-serif text-5xl leading-[1.06] md:text-7xl">Hormonal Geçiş</h1>
+          <p class="mb-4 text-lg leading-relaxed text-[#2D2D2D]/80 md:text-xl">
+            Perimenopozdan menopoza, hormonal geçiş sürecinizi anlamak için kapsamlı bilgi rehberleri.
+          </p>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Bu bölümde geçiş dönemlerini adım adım inceleyebilir, her evrenin sık sorulan sorularına sade ve dengeli bir çerçevede ulaşabilirsiniz.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Perimenopoz</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Nedir, ne zaman başlar, belirtileri neler?</p>
+            <a href="/hormonal-gecis/perimenopoz" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Menopoza Hazırlık</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Geçiş sürecine nasıl hazırlanırsınız?</p>
+            <a href="/hormonal-gecis/menopoza-hazirlik" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Menopoz</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Menopoz nedir, vücudunuzda neler değişir?</p>
+            <a href="/hormonal-gecis/menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">40 Sonrası Sağlık</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Koruyucu sağlık, tarama testleri, uzun vadeli planlama</p>
+            <a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Geçiş sürecini daha iyi anlamaya yardımcı olacak örnek içerikleri buradan inceleyebilirsiniz.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Perimenopoz</p>
+            <h3 class="mb-3 font-serif text-2xl">Döngü Değişimlerini Okumak</h3>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">İlk dönemde sık görülen değişimleri sade bir anlatımla ele alan başlangıç içeriği.</p>
+            <a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">Rehberi Keşfet</a>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Menopoza Hazırlık</p>
+            <h3 class="mb-3 font-serif text-2xl">Günlük Rutin Planı</h3>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Uyku, hareket ve beslenme başlıklarını düzenli bir plana dönüştürmek için temel öneriler.</p>
+            <a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">Rehberi Keşfet</a>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Menopoz</p>
+            <h3 class="mb-3 font-serif text-2xl">Sık Sorulan Sorular</h3>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Geçiş dönemine dair temel sorulara kısa ve güvenilir yanıtlar sunan derleme içerik.</p>
+            <a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">Rehberi Keşfet</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F5EDE0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-8 md:p-10">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İlgili Kategoriler</p>
+          <h2 class="mb-6 font-serif text-3xl leading-tight md:text-4xl">Bilgi yollarına devam edin</h2>
+          <div class="flex flex-wrap gap-3">
+            <a href="/zamansiz-yasam" class="rounded-xl border border-[#6B2D3E]/20 bg-[#FDF8F0] px-5 py-3 font-medium text-[#2D2D2D] hover:border-[#6B2D3E]/40">Zamansız Yaşam</a>
+            <a href="/beden-yakinlik" class="rounded-xl border border-[#6B2D3E]/20 bg-[#FDF8F0] px-5 py-3 font-medium text-[#2D2D2D] hover:border-[#6B2D3E]/40">Beden & Yakınlık</a>
+            <a href="/zihin-denge" class="rounded-xl border border-[#6B2D3E]/20 bg-[#FDF8F0] px-5 py-3 font-medium text-[#2D2D2D] hover:border-[#6B2D3E]/40">Zihin & Denge</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
