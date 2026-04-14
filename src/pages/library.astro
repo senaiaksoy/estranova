@@ -2,6 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 import { perimenopozArticles, menopozArticles, healthArticles } from '../data/articles';
 import { featuredArticles } from '../data/articles';
 
@@ -28,6 +29,8 @@ const readingPath = [
   'Ardindan secili temel yazilarla ana kavramlari tamamlayin ve not alin.',
   'Son adimda iliskili basliklara gecerek daha derin okuma planinizi olusturun.',
 ];
+
+const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary', 'secondary', 'charcoal'];
 ---
 
 <SiteLayout
@@ -76,20 +79,12 @@ const readingPath = [
 
             <div class="space-y-6">
               {featuredArticles.map((article, index) => (
-                <article class="rounded-[34px] overflow-hidden border border-primary/10 bg-white">
-                  <div class:list={[
-                    'h-3',
-                    index === 0 ? 'bg-primary' : index === 1 ? 'bg-secondary' : 'bg-charcoal',
-                  ]}></div>
-                  <div class="p-8 md:p-10">
-                    <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-4">{article.category}</p>
-                    <h3 class="text-3xl font-serif leading-tight mb-4">{article.title}</h3>
-                    <p class="text-charcoal/65 leading-relaxed mb-6">{article.description}</p>
-                    <a href={`/article/${article.slug}`} class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
-                      Yaziyi inceleyin
-                    </a>
-                  </div>
-                </article>
+                <ArticleCard
+                  article={article}
+                  href={`/article/${article.slug}`}
+                  variant="featured"
+                  accent={featuredAccents[index % featuredAccents.length]}
+                />
               ))}
             </div>
           </div>

@@ -1,48 +1,64 @@
 ---
 import type { Article } from '../data/articles';
 
-interface Props extends Article {
-  compact?: boolean;
+type Accent = 'primary' | 'secondary' | 'charcoal';
+type Variant = 'default' | 'featured';
+
+interface Props {
+  article: Article;
+  href?: string;
+  variant?: Variant;
+  accent?: Accent;
 }
 
-const { title, excerpt, content, author, reviewer, date, category, readTime, href, tags, compact, featured } = Astro.props as Props;
+const {
+  article,
+  href = `/article/${article.slug}`,
+  variant = 'default',
+  accent = 'primary',
+} = Astro.props as Props;
+
+const categoryLabelMap: Record<string, string> = {
+  perimenopoz: 'Perimenopoz',
+  menopoz: 'Menopoz',
+  'kadin-sagligi': '40+ Saglik',
+  'kalp-sagligi': 'Kalp Sagligi',
+  bilgi: 'Bilgi',
+};
+
+const categoryLabel = categoryLabelMap[article.category] ?? article.category.replace(/-/g, ' ');
+const accentClass = accent === 'secondary' ? 'bg-secondary' : accent === 'charcoal' ? 'bg-charcoal' : 'bg-primary';
 ---
 
-<a href={href} class="group cursor-pointer block">
-  <div class={`relative overflow-hidden rounded-[40px] mb-6 ${compact ? 'aspect-video' : 'aspect-[16/9]'}`}>
-    <img
-      src={`https://images.unsplash.com/photo-${Math.random() > 0.5 ? '1541895635-2f7a111039d5' : '1536244074244-28fdd00c6f57'}?w=800&auto=format&fit=crop&q=60`}
-      alt={title}
-      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-    />
-    ${featured ? `<div class="absolute top-4 left-4 bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.22em]">Öne Çıkan</div>` : ''}
-  </div>
+{
+  variant === 'featured' ? (
+    <article class="rounded-[34px] overflow-hidden border border-primary/10 bg-white">
+      <div class:list={['h-3', accentClass]}></div>
+      <div class="p-8 md:p-10">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-4">{categoryLabel}</p>
+        <h3 class="text-3xl font-serif leading-tight mb-4">{article.title}</h3>
+        <p class="text-charcoal/65 leading-relaxed mb-6">{article.excerpt}</p>
+        <a href={href} class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
+          Yaziyi inceleyin
+        </a>
+      </div>
+    </article>
+  ) : (
+    <article class="rounded-[30px] border border-primary/10 bg-white p-7 editorial-shadow">
+      <div class="flex items-center justify-between gap-4 mb-4">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold">{categoryLabel}</p>
+        <p class="text-[11px] uppercase tracking-[0.24em] text-charcoal/40 font-bold">{article.readTime}</p>
+      </div>
 
-  <div class="flex items-center gap-3 mb-3">
-    <span class="text-[10px] font-bold tracking-[0.22em] text-secondary uppercase">${category.replace(/-/g, ' ')}</span>
-    <span class="text-[10px] font-bold text-charcoal/30 uppercase tracking-[0.22em]">${readTime}</span>
-  </div>
+      <h3 class="text-2xl md:text-3xl font-serif mb-4 leading-tight">{article.title}</h3>
+      <p class="text-charcoal/65 leading-relaxed mb-6">{article.excerpt}</p>
 
-  <h3 class="text-2xl md:text-3xl font-serif mb-3 group-hover:text-primary transition-colors leading-tight">
-    ${title}
-  </h3>
-
-  <p class="text-charcoal/70 leading-relaxed line-clamp-2 ${compact ? 'text-sm' : 'text-base'}">
-    ${excerpt}
-  </p>
-
-  <footer class="mt-4 flex flex-wrap items-center gap-2 text-[10px] font-medium uppercase tracking-widest text-charcoal/40">
-    <span class="flex items-center gap-1">
-      <span class="w-1 h-1 rounded-full bg-charcoal/30"></span>
-      ${author}
-    </span>
-    <span class="flex items-center gap-1">
-      <span class="w-1 h-1 rounded-full bg-charcoal/30"></span>
-      ${date}
-    </span>
-    ${tags ? `<span class="flex items-center gap-1">
-      <span class="w-1 h-1 rounded-full bg-charcoal/30"></span>
-      ${tags.slice(0, 2).join(' • ')}
-    </span>` : ''}
-  </footer>
-</a>
+      <div class="flex items-center justify-between gap-4">
+        <p class="text-[11px] uppercase tracking-[0.22em] text-charcoal/40 font-bold">{article.author}</p>
+        <a href={href} class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
+          Yaziyi inceleyin
+        </a>
+      </div>
+    </article>
+  )
+}
