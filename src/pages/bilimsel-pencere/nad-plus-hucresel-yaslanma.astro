@@ -1,0 +1,144 @@
+﻿---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="NAD+ ve Hücresel Yaşlanma — Gelişmekte Olan Bilim - Estranova"
+  description="NAD+ biyolojisi, yaşlanma ilişkisi ve erken evre insan araştırmalarını kanıt düzeyleriyle açıklayan bilimsel derleme."
+>
+  <SiteNavbar currentPath="/bilimsel-pencere" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <article class="px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+          <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
+              <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
+              <p class="text-[#2D2D2D]/70">Sağlık editörü, bilimsel araştırma özeti yazarı</p>
+              <p class="mt-2 text-sm text-[#2D2D2D]/65">Yayın tarihi: 14 Nisan 2026 · Okuma süresi: 7 dakika</p>
+            </div>
+          </div>
+        </section>
+
+        <header class="mb-10">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bilimsel Pencere · Araştırma Özeti</p>
+          <h1 class="font-serif text-4xl leading-tight md:text-6xl">NAD+ ve Hücresel Yaşlanma — Gelişmekte Olan Bilim</h1>
+        </header>
+
+        <section class="mb-12 rounded-[28px] border border-[#C9A96E]/40 bg-white p-7 md:p-8">
+          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            NAD+ hücresel enerji ve onarımda kritik bir moleküldür. Yaşla birlikte NAD+ seviyeleri azalabilir ve bu değişim yaşlanma biyolojisiyle ilişkilidir.
+            Araştırmalar ilgi çekici olsa da insan uygulamalarında kanıt henüz erken evrededir. Bu yazı, mevcut bilimin bugün nerede durduğunu dengeli biçimde açıklar.
+          </p>
+        </section>
+
+        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80 prose-li:text-[#2D2D2D]/80">
+          <h2>NAD+ Nedir?</h2>
+          <p>
+            NAD+ (Nikotinamid Adenin Dinükleotid), hücre içinde enerji üretimi ve redoks dengesi için gerekli temel bir koenzimdir [●●●●●].
+            Mitokondriyal ATP üretiminden DNA onarımına kadar birçok biyolojik süreçte rol oynar.
+          </p>
+          <p>
+            Sirtuin adı verilen bazı enzimlerin çalışması da NAD+ varlığına bağlıdır [●●●●●]. Bu nedenle NAD+, yalnızca enerji metabolizmasının değil,
+            hücresel dayanıklılık ve yaşlanma biyolojisinin de önemli bir parçası olarak görülür.
+          </p>
+
+          <h2>Yaş ile NAD+ Seviyeleri Nasıl Değişir?</h2>
+          <p>
+            Araştırmalar yaş ilerledikçe çeşitli dokularda NAD+ düzeylerinde azalma olabileceğini göstermektedir [●●●●○].
+            Bu düşüşün düzeyi kişiye, dokuya ve eşlik eden sağlık durumlarına göre farklılık gösterebilir.
+          </p>
+          <p>
+            Olası nedenler arasında artan oksidatif stres, PARP aktivitesinde artış, CD38 ekspresyonundaki değişimler ve metabolik yük bulunur [●●●●○].
+            Bu mekanizmalar umut verici olsa da insanlar üzerindeki uzun dönem etkiler hâlâ netleştirilmektedir.
+          </p>
+
+          <h2>NAD+ Düşüşü ile Yaşlanma Belirtileri Arasındaki Bağlantı</h2>
+          <p>
+            Düşen NAD+ düzeyleri, mitokondri işlevi, DNA onarım kapasitesi ve metabolik esneklikte azalma ile ilişkilendirilmektedir [●●●●○].
+            Bu ilişki özellikle hayvan modellerinde belirgin biçimde gösterilmiştir.
+          </p>
+          <p>
+            İnsan çalışmalarında ise enerji düzeyi, kas performansı, bilişsel süreçler ve metabolik göstergeler üzerinden dolaylı ilişkiler bildirilmektedir.
+            Ancak bu ilişkilerin neden-sonuç düzeyinde yorumlanabilmesi için daha büyük ve uzun süreli çalışmalara ihtiyaç vardır.
+          </p>
+
+          <h2>Araştırma Bulguları: Hayvan Modelleri ve Erken İnsan Çalışmaları</h2>
+          <p>
+            C. elegans, Drosophila ve fare çalışmalarında NAD+ yolaklarını hedefleyen müdahalelerin bazı yaşlanma belirteçlerinde iyileşme sağladığı
+            bildirilmiştir [●●●●○]. Bu bulgular araştırma açısından değerlidir, fakat doğrudan insan sonucu olarak yorumlanamaz.
+          </p>
+          <p>
+            Erken dönem insan çalışmalarında NR ve NMN gibi NAD+ öncüllerinin biyobelirteç düzeylerinde artış sağlayabildiği görülmüştür [●●●●○].
+            Buna rağmen örneklem büyüklükleri sınırlıdır ve klinik sonlanım noktaları açısından sonuçlar henüz heterojendir [●●●○○].
+          </p>
+
+          <h2>NAD+ Artırmaya Yönelik Yaklaşımlar</h2>
+          <p>
+            Çalışmalarda en çok değerlendirilen yollar; NR, NMN ve B3 türevleri gibi öncül takviyeler, ayrıca yaşam tarzı müdahaleleridir.
+            Düzenli egzersiz, uyku kalitesi ve beslenme düzeninin mitokondriyal işlev üzerinde güçlü etkisi olduğu bilinmektedir [●●●●●].
+          </p>
+          <p>
+            Takviye stratejileri için kanıt düzeyi daha çok orta ve gelişen kanıt aralığındadır [●●●○○ - ●●●●○].
+            Yaşam alışkanlığı müdahaleleri ise hem maliyet etkinlik hem güvenlik hem de kanıt gücü açısından halen temel yaklaşım olarak öne çıkar.
+          </p>
+
+          <h2>Ticari NAD+ Takviyelerine Eleştirel Bakış</h2>
+          <p>
+            Ticari içeriklerde NAD+ takviyelerine dair iddialar bazen mevcut bilimsel verinin ötesine geçebilir. Oysa bugünkü tablo,
+            “ilgi çekici ve umut veren, fakat gelişen kanıt” şeklinde özetlenmelidir.
+          </p>
+          <p>
+            Biyoyararlanım, optimum doz, kullanım süresi ve uzun dönem güvenlik gibi temel soruların bir kısmı hâlâ araştırma aşamasındadır.
+            Bu nedenle karar verirken yalnızca pazarlama mesajına değil, kanıt düzeyine ve kişisel sağlık profiline bakmak gerekir.
+          </p>
+
+          <h2>Kanıt-Tabanlı Pratik Yol Haritası</h2>
+          <p>
+            Bilimsel olarak en sağlam adımlar; düzenli hareket, yeterli uyku, dengeli beslenme ve stres yönetimidir [●●●●●].
+            Bunlar hem NAD+ biyolojisiyle ilişkili yolları hem de genel sağlıklı yaşlanma göstergelerini destekler.
+          </p>
+          <p>
+            NAD+ takviyeleri değerlendirilirken hekim görüşü almak, ilaç etkileşimlerini kontrol etmek ve beklentiyi gerçekçi tutmak gerekir.
+            Araştırma ilerledikçe bu alan daha netleşecektir; bugün için en dengeli yaklaşım, güçlü yaşam alışkanlıkları üzerine kurulu bir planla ilerlemektir.
+          </p>
+        </section>
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
+          <ul class="space-y-3">
+            <li><a href="/bilimsel-pencere/mitler" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Mitler ve Gerçekler</a></li>
+            <li><a href="/zamansiz-yasam/hareket" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Hareket ve Yaşam Süresi</a></li>
+            <li><a href="/zamansiz-yasam/beslenme" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Beslenme ve Yaşlanma</a></li>
+            <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku ve Nöral Sağlık</a></li>
+            <li><a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Sonrası Sağlık</a></li>
+          </ul>
+        </section>
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-8 bg-[#F5EDE0] p-7 md:p-8">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Doç. Dr. Senai Aksoy</p>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            NAD+ araştırması hücresel yaşlanma alanına değerli bir perspektif sunmaktadır. Ancak insan sağlığındaki uygulamalar için güvenilir kanıtın
+            önemli bir bölümü hâlâ erken aşamadadır. Takviye kararları sağlık profesyoneli eşliğinde verilmeli, temel yaklaşım olarak düzenli hareket,
+            uyku ve beslenme alışkanlıkları korunmalıdır.
+          </p>
+        </section>
+
+        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+          <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+            Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

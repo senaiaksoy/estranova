@@ -1,0 +1,148 @@
+﻿---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber - Estranova"
+  description="40 yaş sonrası kemik sağlığını desteklemek için tarama, beslenme, hareket ve tıbbi seçenekleri anlatan kapsamlı rehber."
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <article class="px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+          <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
+              <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
+              <p class="text-[#2D2D2D]/70">Sağlık editörü, kadın sağlığı ve koruyucu tıp yazarı</p>
+              <p class="mt-2 text-sm text-[#2D2D2D]/65">Yayın tarihi: 14 Nisan 2026 · Okuma süresi: 6 dakika</p>
+            </div>
+          </div>
+        </section>
+
+        <header class="mb-10">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Zamansız Yaşam · Koruyucu Sağlık</p>
+          <h1 class="font-serif text-4xl leading-tight md:text-6xl">40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber</h1>
+        </header>
+
+        <section class="mb-12 rounded-[28px] border border-[#C9A96E]/40 bg-white p-7 md:p-8">
+          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            Estrojen düşüşü ile kemik yoğunluğu zamanla azalabilir ve 40+ kadınlarda osteoporoz riski artış gösterebilir.
+            Düzenli tarama, beslenme desteği ve planlı hareket kemik kaybını yavaşlatmada önemli rol oynar.
+            Proaktif yaklaşım, ileri yaşta kırık riskini azaltmanın temel adımıdır.
+          </p>
+        </section>
+
+        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80 prose-li:text-[#2D2D2D]/80">
+          <h2>Neden Kemik Sağlığı Önemlidir?</h2>
+          <p>
+            Kemikler yalnızca vücudu ayakta tutan bir iskelet değildir; aynı zamanda hareketin, dengenin ve günlük işlevlerin temel taşıdır.
+            Kalsiyum ve fosfor gibi mineraller için bir depo görevi görürler. Yaşla birlikte kemik yapım-yıkım dengesi değiştiğinde,
+            bu sistem daha kırılgan hale gelebilir.
+          </p>
+          <p>
+            40 yaş sonrası dönemde östrojen düzeylerindeki azalma kemik döngüsünü etkiler. Kemik yıkımı artarken yeni kemik yapımı aynı hızda
+            ilerlemeyebilir. Bu ilişki güçlü kanıtla desteklenmiştir [●●●●●]. Bu nedenle kemik sağlığına erken dönemde yatırım yapmak,
+            yalnızca bugün için değil, ileri yaş hareketliliği için de kritik değerdedir.
+          </p>
+
+          <h2>Osteopeni ve Osteoporoz Arasındaki Fark</h2>
+          <p>
+            Osteopeni, kemik yoğunluğunun normalden düşük ama osteoporoz düzeyine ulaşmadığı ara evreyi ifade eder.
+            Osteoporoz ise kırık riskinin belirgin şekilde arttığı daha ileri kemik kaybı tablosudur.
+          </p>
+          <p>
+            DEXA (DXA) ölçümü bu ayrımı yapmak için en sık kullanılan yöntemdir. T-skoru -1 ile -2.5 arası osteopeni, -2.5 ve altı osteoporoz
+            olarak değerlendirilir. Bu sınıflama tek başına yeterli değildir; yaş, düşme riski, aile öyküsü ve ek hastalıklarla birlikte yorumlanır.
+          </p>
+
+          <h2>Risk Faktörleri Nelerdir?</h2>
+          <p>
+            Menopoz sonrası kadınlarda kemik kaybı riski artar. Aile öyküsü, düşük vücut ağırlığı, hareketsizlik, sigara, yüksek alkol tüketimi,
+            düşük kalsiyum-D vitamini alımı ve uzun süreli kortikosteroid kullanımı önemli risk faktörleri arasındadır [●●●●○ - ●●●●●].
+          </p>
+          <p>
+            Tiroid hastalıkları, bazı bağırsak emilim bozuklukları ve kronik inflamatuvar durumlar da kemik sağlığını etkileyebilir.
+            Bu yüzden risk değerlendirmesi tek başlıktan değil, bütüncül bir sağlık profili üzerinden yapılmalıdır.
+          </p>
+
+          <h2>Kemik Sağlığı Taraması: Ne Zaman, Nasıl?</h2>
+          <p>
+            Kılavuzlar çoğu kadın için 65 yaş sonrası rutin DEXA taramasını önerir [●●●●●]. Ancak risk faktörü olanlarda daha erken tarama
+            planlanabilir. Erken menopoz, aile öyküsü, uzun süreli steroid kullanımı ve düşük travma kırığı öyküsü bu kararı etkileyen başlıklardır.
+          </p>
+          <p>
+            İlk tarama, kişiye özgü bir başlangıç noktası sağlar. Sonraki ölçümler bu baseline değerle karşılaştırılarak izlenir.
+            Bazı durumlarda P1NP ve CTX gibi kemik turnover belirteçleri de klinik karara destek olabilir.
+          </p>
+
+          <h2>Beslenme ile Kemik Desteği</h2>
+          <p>
+            Günlük kalsiyum hedefi çoğu 40+ kadın için 1000-1200 mg aralığındadır [●●●●●]. Süt ürünleri, koyu yeşil yapraklı sebzeler,
+            susam, badem ve kalsiyumla zenginleştirilmiş ürünler bu hedefe katkı sağlayabilir.
+          </p>
+          <p>
+            D vitamini düzeyi kemik sağlığında belirleyicidir. Birçok kişide 1000-2000 IU aralığında destek planı kullanılabilir; ancak doz kararı
+            kan düzeyi ve kişisel risk profiline göre verilmelidir [●●●●●]. Protein alımı da gözden kaçmamalıdır. Kas gücü ile kemik dayanıklılığı
+            birlikte ilerlediği için günlük protein hedefi genellikle 1.0-1.2 g/kg düzeyinde planlanır [●●●●○].
+          </p>
+
+          <h2>Hareket Planı ve Yaşam Alışkanlıkları</h2>
+          <p>
+            Ağırlık taşıyan egzersizler, direnç antrenmanı ve denge çalışmaları kemik korunmasında temel araçlardır [●●●●●].
+            Haftada 3-4 gün planlı egzersiz, yalnızca kemik yoğunluğunu değil düşme riskini de olumlu etkiler.
+          </p>
+          <p>
+            Sigara bırakma, alkolü sınırlama ve uzun süreli hareketsizlikten kaçınma da en az egzersiz kadar önemlidir.
+            Yüksek tuz ve aşırı kafein tüketimi bazı kişilerde kalsiyum dengesini olumsuz etkileyebilir [●●●○○].
+            Burada amaç katı yasaklar değil, sürdürülebilir bir denge kurmaktır.
+          </p>
+
+          <h2>Tıbbi Seçenekler ve Kişiselleştirme</h2>
+          <p>
+            Risk düzeyi yüksek kişilerde hekim değerlendirmesi ile HRT, bifosfonatlar, SERM veya diğer ilaç seçenekleri gündeme gelebilir.
+            Bu tedaviler için kanıt seviyesi güçlüdür [●●●●●], ancak her seçenek tüm kişiler için uygun olmayabilir.
+          </p>
+          <p>
+            Tıbbi planlama yapılırken yaş, kırık öyküsü, eşlik eden hastalıklar, kalp-damar riski ve kişisel öncelikler birlikte değerlendirilir.
+            En sağlıklı yaklaşım, yaşam tarzı desteği ile gerektiğinde tıbbi tedaviyi dengeli biçimde birleştirmektir.
+          </p>
+        </section>
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
+          <ul class="space-y-3">
+            <li><a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / 40 Sonrası Sağlık</a></li>
+            <li><a href="/zamansiz-yasam/vitaminler/d-vitamini-rehberi" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / D Vitamini Rehberi</a></li>
+            <li><a href="/zamansiz-yasam/vitaminler" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Kalsiyum Kaynakları</a></li>
+            <li><a href="/zihin-denge/stres" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Düzenli Hareket ve Stres</a></li>
+            <li><a href="/bilimsel-pencere/arastirma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Osteoporoz Araştırma Özetleri</a></li>
+          </ul>
+        </section>
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-8 bg-[#F5EDE0] p-7 md:p-8">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Doç. Dr. Senai Aksoy</p>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            Kemik sağlığı proaktif planlama gerektiren bir alandır. Beslenme ve hareket, yaşamın her döneminde kemik kalitesini destekleyebilir.
+            Düzenli tarama ve erken müdahale, ileri yaşta kırık riskini anlamlı biçimde azaltır. Planlama mutlaka kişisel risk profili ile birlikte yapılmalıdır.
+          </p>
+        </section>
+
+        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+          <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+            Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
