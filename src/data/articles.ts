@@ -178,6 +178,100 @@ MS tedavisi, hastalığın ilerlemesini yavaşlatmak, belirtileri yönetmek ve y
     readTime: "10 dk",
     tags: ["skleroz multiple", "sinir sistemi", "otoimmün"],
   },
+  {
+    slug: "perimenopozda-dongu-duzensizlikleri",
+    title: "Perimenopozda Döngü Değişiklikleri: Ne Zaman Beklenir, Ne Zaman Değerlendirilir?",
+    excerpt:
+      "Perimenopozda adet döngüsünde kısalma, uzama veya akış değişiklikleri görülebilir. Düzenli izlem, olağan değişimlerle klinik değerlendirme gerektiren durumları ayırt etmeyi kolaylaştırır.",
+    content: `
+<h2 class="font-serif text-3xl text-charcoal mb-4">Döngüde hangi değişiklikler sık görülür?</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Perimenopoz döneminde döngü aralığı birkaç ay boyunca kısalabilir veya uzayabilir.
+Kanama miktarında artış ya da azalma, bazı aylarda lekelenme, bazı aylarda ise gecikme görülebilir.
+Bu değişiklikler tek başına "olağandışı" anlamına gelmez; örüntünün zamana yayılarak değerlendirilmesi daha doğru bir yaklaşım sunar.
+</p>
+
+<h2 class="font-serif text-3xl text-charcoal mb-4">Hangi durumlarda tıbbi değerlendirme düşünülmeli?</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Uzun süren yoğun kanama, döngüler arası belirgin sıklaşma, ilişkili halsizlik veya yaşam kalitesini bozan ağrı gibi bulgular klinik görüşme gerektirebilir.
+Amaç alarm üretmek değil, benzer şikayetlerin farklı nedenlere bağlı olabileceğini hatırlamaktır.
+Bu nedenle "normal mi değil mi?" sorusu yerine "örüntü nasıl değişiyor?" sorusu daha işlevseldir.
+</p>
+
+<h2 class="font-serif text-3xl text-charcoal mb-4">Evde izlem için pratik çerçeve</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Her ay için başlangıç-bitiş tarihini, kanama yoğunluğunu ve eşlik eden semptomları kısa notlarla kaydetmek yeterlidir.
+Uyku kalitesi, stres yükü ve sıcak basması gibi başlıkları aynı dönemde not etmek, tabloyu daha doğru okumaya yardımcı olur.
+Bu bilgiler hekim görüşmesinde daha net bir değerlendirme yapılmasına katkı sağlar.
+</p>
+
+<div class="my-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
+  <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Klinik Not</p>
+  <p class="text-charcoal/75 leading-relaxed">
+    Döngü değişiklikleri bireysel olarak farklılık gösterebilir. Bu içerik bilgilendirme amaçlıdır; tanı veya tedavi önerisi yerine geçmez.
+  </p>
+</div>
+
+<h2 class="font-serif text-3xl text-charcoal mb-4">Hekim görüşmesine nasıl hazırlanılır?</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Son 3-6 ayın döngü notlarını, varsa kullanılan ilaçları ve eşlik eden belirtileri birlikte götürmek görüşmeyi kolaylaştırır.
+Böylece değerlendirme, tek bir günün hissi üzerinden değil zaman içindeki değişim üzerinden yapılabilir.
+</p>
+`,
+    author: "Basak Pelister",
+    reviewer: "Doc. Dr. Senai Aksoy",
+    date: "2026-04-14",
+    category: "perimenopoz",
+    readTime: "7 dk",
+    tags: ["perimenopoz", "adet döngüsü", "semptom izlemi"],
+  },
+  {
+    slug: "menopozda-kemik-sagligi",
+    title: "Menopozda Kemik Sağlığı: Kırık Riskini Azaltmak İçin Temel Yaklaşım",
+    excerpt:
+      "Menopoz sonrasında kemik yoğunluğu değişebilir. Beslenme, direnç egzersizi ve düzenli risk değerlendirmesi birlikte ele alındığında uzun vadeli kemik sağlığı daha güçlü desteklenebilir.",
+    content: `
+<h2 class="font-serif text-3xl text-charcoal mb-4">Kemik sağlığı neden menopozda öne çıkar?</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Östrojen düzeylerindeki değişim, kemik yapım-yıkım dengesini etkileyebilir.
+Bu süreç herkeste aynı hızda ilerlemez; ancak uzun vadede kırık riski açısından izlem gerektiren bir dönem başlatabilir.
+Kemik sağlığı yaklaşımında amaç hızlı sonuç değil, sürdürülebilir koruyucu alışkanlıklar oluşturmaktır.
+</p>
+
+<h2 class="font-serif text-3xl text-charcoal mb-4">Günlük yaşamda hangi başlıklar önceliklidir?</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Direnç egzersizleri, düzenli yürüyüş, dengeli protein alımı ve kalsiyumdan zengin beslenme temel başlıklardır.
+D vitamini düzeyi, güneş maruziyeti ve yaşam tarzı eşlik eden etkenler olarak birlikte değerlendirilmelidir.
+Sigara ve yüksek alkol kullanımı gibi risk artırıcı davranışların azaltılması da koruyucu çerçevede yer alır.
+</p>
+
+<h2 class="font-serif text-3xl text-charcoal mb-4">Risk değerlendirmesi nasıl okunmalı?</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Yaş, aile öyküsü, önceki kırık öyküsü, eşlik eden hastalıklar ve kullanılan ilaçlar birlikte ele alınır.
+Gerektiğinde kemik yoğunluğu ölçümü gibi araçlar klinik kararın parçası olabilir.
+Bu değerlendirme, kişisel risk profilini belirleyerek öncelikli adımları netleştirmeye yardımcı olur.
+</p>
+
+<div class="my-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
+  <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Klinik Not</p>
+  <p class="text-charcoal/75 leading-relaxed">
+    Kemik sağlığı planı bireysel risk düzeyine göre belirlenmelidir. Bu içerik genel bilgilendirme sağlar; kişisel tıbbi karar yerine geçmez.
+  </p>
+</div>
+
+<h2 class="font-serif text-3xl text-charcoal mb-4">Uzun vadeli takip için pratik yaklaşım</h2>
+<p class="text-charcoal/75 leading-relaxed mb-8">
+Aylık hedefler yerine mevsimsel takip daha sürdürülebilir olabilir: hareket düzeyi, beslenme düzeni ve olası risklerin periyodik gözden geçirilmesi.
+Bu yaklaşım, tek bir ölçüm sonucuna odaklanmak yerine genel kemik sağlığı davranışlarını güçlendirmeyi hedefler.
+</p>
+`,
+    author: "Alara Baykent",
+    reviewer: "Doc. Dr. Senai Aksoy",
+    date: "2026-04-14",
+    category: "kadin-sagligi",
+    readTime: "8 dk",
+    tags: ["kemik sağlığı", "menopoz", "koruyucu yaklaşım"],
+  },
 ];
 
 export const featuredArticles = articles.filter((a) => a.featured);

@@ -30,6 +30,27 @@ const readingPath = [
   'Son adımda ilişkili başlıklara geçerek daha derin okuma planınızı oluşturun.',
 ];
 
+const startGuides = [
+  {
+    title: 'Döngüde düzensizlik ve belirsizlik hissi',
+    description: 'Önce perimenopoz içerikleriyle döngü örüntüsünü anlamlandırın, sonra semptom rehberine geçin.',
+    href: '/article/perimenopozda-dongu-duzensizlikleri',
+    cta: 'Döngü rehberini oku',
+  },
+  {
+    title: 'Uyku, sıcak basması ve günlük enerji düşüşü',
+    description: 'Menopozda uyku yönetimi içeriği ile başlayıp ilişkili başlıkları kademeli okuyun.',
+    href: '/article/menopozda-uyku-yonetimi',
+    cta: 'Uyku içeriğine git',
+  },
+  {
+    title: 'Uzun vadeli koruyucu sağlık planı',
+    description: 'Kalp ve kemik sağlığı başlıklarını birlikte okuyarak 40+ dönemi için temel bir çerçeve kurun.',
+    href: '/article/menopozda-kemik-sagligi',
+    cta: 'Kemik sağlığına başla',
+  },
+] as const;
+
 const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary', 'secondary', 'charcoal'];
 ---
 
@@ -64,6 +85,32 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
             </article>
           ))}
         </div>
+
+        <section class="mb-20 rounded-[36px] border border-primary/10 bg-white p-8 md:p-10 editorial-shadow">
+          <div class="max-w-3xl mb-8">
+            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">Nereden Başlamalı?</p>
+            <h2 class="text-3xl md:text-4xl font-serif mb-4">İhtiyaca göre başlangıç rotası</h2>
+            <p class="text-charcoal/65 leading-relaxed">
+              Tek bir makaleye odaklanmak yerine, önce temel soruyu netleştirip uygun içerik sırasıyla ilerlemek daha dengeli bir okuma deneyimi sunar.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {startGuides.map((guide, index) => (
+              <article class="rounded-[28px] border border-primary/10 bg-surface-container p-6">
+                <div class:list={[
+                  'w-10 h-10 rounded-xl mb-5',
+                  index % 3 === 0 ? 'bg-primary/10' : index % 3 === 1 ? 'bg-secondary/10' : 'bg-charcoal/10',
+                ]}></div>
+                <h3 class="text-xl font-serif mb-3 leading-tight">{guide.title}</h3>
+                <p class="text-sm text-charcoal/65 leading-relaxed mb-5">{guide.description}</p>
+                <a href={guide.href} class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
+                  {guide.cta}
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <section class="grid grid-cols-1 lg:grid-cols-[1.6fr_0.9fr] gap-8 items-start">
           <div>
