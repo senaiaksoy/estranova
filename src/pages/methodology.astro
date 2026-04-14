@@ -4,17 +4,17 @@ import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 ---
 
-<SiteLayout title="Metodoloji - Estranova" description="Estranova iceriklerinin nasil hazirlandigini anlatan editoryal metodoloji sayfasi.">
+<SiteLayout title="Metodoloji - Estranova" description="Estranova içeriklerinin nasıl hazırlandığını anlatan editoryal metodoloji sayfası.">
   <SiteNavbar currentPath="/methodology" />
 
   <main id="main-content" class="pt-24">
     <section class="px-6 py-16 md:py-20">
       <div class="max-w-4xl mx-auto">
         <header class="text-center mb-20">
-          <p class="text-secondary font-bold tracking-[0.3em] uppercase mb-6 text-xs">Bizim Yaklasimimiz</p>
+          <p class="text-secondary font-bold tracking-[0.3em] uppercase mb-6 text-xs">Bizim Yaklaşımımız</p>
           <h1 class="text-5xl md:text-7xl font-serif mb-8">Editoryal Metodoloji</h1>
           <p class="text-charcoal/60 text-lg leading-relaxed max-w-3xl mx-auto">
-            Estranova'da icerikler; kaynak tarama, editoryal yazim, tibbi denetim ve yayin onayi adimlariyla hazirlanir.
+            Estranova'da içerikler; kaynak tarama, editoryal yazım, tıbbi denetim ve yayın onayı adımlarıyla hazırlanır.
           </p>
         </header>
 
@@ -22,18 +22,18 @@ import SiteFooter from '../components/site/SiteFooter.astro';
           {[
             {
               step: '01',
-              title: 'Kanita Dayali Secki',
-              desc: 'Hakemli dergilerde yayimlanan ve guncel klinik kilavuzlarla uyumlu calismalar temel alinir. Spekulatif yaklasimlar ayiklanir.',
+              title: 'Kanıta Dayalı Seçki',
+              desc: 'Hakemli dergilerde yayımlanan ve güncel klinik kılavuzlarla uyumlu çalışmalar temel alınır. Spekülatif yaklaşımlar ayıklanır.',
             },
             {
               step: '02',
-              title: 'Yazi ve Tibbi Denetim',
-              desc: 'Yazar ekibinin metinleri once editoryal kontrolden gecer, ardindan danisman doktor tarafindan tibbi dogruluk acisindan denetlenir.',
+              title: 'Yazı ve Tıbbi Denetim',
+              desc: 'Yazar ekibinin metinleri önce editoryal kontrolden geçer, ardından danışman doktor tarafından tıbbi doğruluk açısından denetlenir.',
             },
             {
               step: '03',
-              title: 'Yayin Onayi ve Guncelleme',
-              desc: 'Icerikler periyodik olarak gozden gecirilir; yeni kanitlar ortaya ciktiginda sayfa revizyonu yapilir.',
+              title: 'Yayın Onayı ve Güncelleme',
+              desc: 'İçerikler periyodik olarak gözden geçirilir; yeni kanıtlar ortaya çıktığında sayfa revizyonu yapılır.',
             },
           ].map((item) => (
             <section class="flex flex-col md:flex-row gap-12 items-start">
@@ -47,21 +47,21 @@ import SiteFooter from '../components/site/SiteFooter.astro';
         </div>
 
         <section class="mt-24 p-10 bg-surface-container rounded-[40px]">
-          <h2 class="text-3xl font-serif mb-6">Yonetim Modeli</h2>
+          <h2 class="text-3xl font-serif mb-6">Yönetim Modeli</h2>
           <div class="space-y-4 text-charcoal/70 leading-relaxed">
-            <p><span class="font-semibold text-charcoal">Site Yoneticisi:</span> Berna Aksoy</p>
-            <p><span class="font-semibold text-charcoal">Danisman Doktor ve Yazi Denetleyici:</span> Doc. Dr. Senai Aksoy</p>
+            <p><span class="font-semibold text-charcoal">Site Yöneticisi:</span> Berna Aksoy</p>
+            <p><span class="font-semibold text-charcoal">Danışman Doktor ve Yazı Denetleyici:</span> Doc. Dr. Senai Aksoy</p>
             <p><span class="font-semibold text-charcoal">Yazarlar:</span> Alara Baykent, Basak Pelister</p>
-            <p><span class="font-semibold text-charcoal">Tibbi Kurul:</span> Dr. Metin Alis, Dr. Alp Aslan Eryilmaz</p>
+            <p><span class="font-semibold text-charcoal">Tıbbi Kurul:</span> Dr. Metin Alis, Dr. Alp Aslan Eryilmaz</p>
           </div>
         </section>
 
         <section class="mt-12 p-12 bg-surface-container rounded-[60px] text-center">
-          <h2 class="text-3xl font-serif mb-6">Seffaflik Taahhudu</h2>
+          <h2 class="text-3xl font-serif mb-6">Şeffaflık Taahhüdü</h2>
           <p class="text-charcoal/60 mb-8 max-w-2xl mx-auto">
-            Kullandigimiz kaynaklar makale sonlarinda belirtilir. Yonetim ve denetim rolleri sayfa bazinda acik sekilde sunulur.
+            Kullandığımız kaynaklar makale sonlarında belirtilir. Yönetim ve denetim rolleri sayfa bazında açık şekilde sunulur.
           </p>
-          <a href="/library" class="text-primary font-bold border-b-2 border-primary pb-1">Kaynak iceriklerini inceleyin</a>
+          <a href="/library" class="text-primary font-bold border-b-2 border-primary pb-1">Kaynak içeriklerini inceleyin</a>
         </section>
       </div>
     </section>

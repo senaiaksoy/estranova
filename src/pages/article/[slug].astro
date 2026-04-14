@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -20,8 +20,8 @@ const { article } = Astro.props as Props;
 const categoryLabelMap: Record<string, string> = {
   perimenopoz: 'Perimenopoz',
   menopoz: 'Menopoz',
-  'kadin-sagligi': '40+ Saglik',
-  'kalp-sagligi': 'Kalp Sagligi',
+  'kadin-sagligi': '40+ Sağlık',
+  'kalp-sagligi': 'Kalp Sağlığı',
   bilgi: 'Bilgi',
 };
 
@@ -44,7 +44,7 @@ const relatedArticles = [
     <article class="px-6 py-16 md:py-20">
       <div class="max-w-4xl mx-auto">
         <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary mb-10">
-          Kutuphaneye don
+          Kütüphaneye dön
         </a>
 
         <header class="mb-12">
@@ -66,33 +66,33 @@ const relatedArticles = [
               <p class="font-semibold text-charcoal">{article.author}</p>
             </div>
             <div class="rounded-2xl border border-primary/10 bg-white p-5">
-              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Tibbi Inceleme</p>
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Tıbbi İnceleme</p>
               <p class="font-semibold text-charcoal">{article.reviewer}</p>
             </div>
             <div class="rounded-2xl border border-primary/10 bg-white p-5">
-              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Son Guncelleme</p>
+              <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/40 mb-2">Son Güncelleme</p>
               <p class="font-semibold text-charcoal">{publishedDate}</p>
             </div>
           </div>
         </header>
 
         <div class="rounded-[36px] burgundy-gradient text-white p-10 md:p-12 mb-12">
-          <p class="text-[11px] uppercase tracking-[0.22em] text-white/70 font-bold mb-4">Kisa Ozet</p>
+          <p class="text-[11px] uppercase tracking-[0.22em] text-white/70 font-bold mb-4">Kısa Özet</p>
           <p class="text-xl md:text-2xl font-serif leading-relaxed">{article.excerpt}</p>
         </div>
 
         <div class="prose prose-lg max-w-none" set:html={article.content}></div>
 
         <section class="mt-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
-          <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Tibbi Sorumluluk Reddi</p>
+          <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Tıbbi Sorumluluk Reddi</p>
           <p class="text-charcoal/75 leading-relaxed">
-            Bu icerik tibbi tani ve tedavi yerine gecmez, mutlaka hekiminize danisiniz.
+            Bu içerik tıbbi tanı ve tedavi yerine geçmez, mutlaka hekiminize danışınız.
           </p>
         </section>
 
         {relatedArticles.length > 0 && (
           <section class="mt-16 pt-10 border-t border-primary/10">
-            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-4">Ilgili Okumalar</p>
+            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-4">İlgili Okumalar</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
               {relatedArticles.map((item) => (
                 <a href={`/article/${item.slug}`} class="rounded-2xl border border-primary/10 bg-white p-5 hover:border-primary/30 transition-colors">

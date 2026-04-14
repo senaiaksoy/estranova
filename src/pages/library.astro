@@ -9,33 +9,33 @@ import { featuredArticles } from '../data/articles';
 const categories = [
   {
     title: 'Perimenopoz',
-    count: `${perimenopozArticles.length} yazi`,
-    summary: 'Hormonal gecis donemindeki belirtiler, guncel yaklasimlar ve gunluk hayata uyarlanan bilgi notlari.',
+    count: `${perimenopozArticles.length} yazı`,
+    summary: 'Hormonal geciş dönemindeki belirtiler, güncel yaklaşımlar ve günlük hayata uyarlanan bilgi notları.',
   },
   {
     title: 'Menopoz',
-    count: `${menopozArticles.length} yazi`,
-    summary: 'Menopoz surecindeki degisiklikleri aciklayan, tibbi dili sade tutan temel okuma rotasi.',
+    count: `${menopozArticles.length} yazı`,
+    summary: 'Menopoz sürecindeki değişiklikleri açıklayan, tıbbi dili sade tutan temel okuma rotası.',
   },
   {
-    title: '40+ Saglik',
-    count: `${healthArticles.length} yazi`,
-    summary: 'Kalp sagligi, metabolik denge ve koruyucu yasam aliskanliklari icin uzun vadeli yol haritasi.',
+    title: '40+ Sağlık',
+    count: `${healthArticles.length} yazı`,
+    summary: 'Kalp sağlığı, metabolik denge ve koruyucu yaşam alışkanlıkları için uzun vadeli yol haritası.',
   },
 ];
 
 const readingPath = [
-  'Ilk olarak semptom ve donem bilgisini okuyarak kisisel baglaminizi netlestirin.',
-  'Ardindan secili temel yazilarla ana kavramlari tamamlayin ve not alin.',
-  'Son adimda iliskili basliklara gecerek daha derin okuma planinizi olusturun.',
+  'İlk olarak semptom ve dönem bilgisini okuyarak kişisel bağlamınızı netleştirin.',
+  'Ardından seçili temel yazılarla ana kavramları tamamlayın ve not alın.',
+  'Son adımda ilişkili başlıklara geçerek daha derin okuma planınızı oluşturun.',
 ];
 
 const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary', 'secondary', 'charcoal'];
 ---
 
 <SiteLayout
-  title="Kutuphane - Estranova"
-  description="Perimenopoz, menopoz ve 40+ saglik konularinda editoryal bilgi kutuphanesi."
+  title="Kütüphane - Estranova"
+  description="Perimenopoz, menopoz ve 40+ sağlık konularında editoryal bilgi kütüphanesi."
 >
   <SiteNavbar currentPath="/library" />
 
@@ -43,11 +43,11 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
     <section class="px-6 py-16 md:py-20">
       <div class="max-w-7xl mx-auto">
         <div class="max-w-3xl mb-14">
-          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Editoryal Kutuphane</p>
-          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Konulara gore duzenlenmis bilgi arsivi</h1>
+          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Editoryal Kütüphane</p>
+          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Konulara göre düzenlenmiş bilgi arşivi</h1>
           <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
-            Estranova kutuphanesi, guncel ve temel icerikleri bir arada toplar. Hedef, okuru tek bir cevaba degil,
-            konuyu daha iyi anlamaya goturen acik bir okuma duzenine ulasmak.
+            Estranova kütüphanesi, güncel ve temel içerikleri bir arada toplar. Hedef, okuru tek bir cevaba değil,
+            konuyu daha iyi anlamaya götüren açık bir okuma düzenine ulaşmak.
           </p>
         </div>
 
@@ -69,11 +69,11 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
           <div>
             <div class="flex items-end justify-between gap-6 mb-8">
               <div>
-                <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">Secili Okumalar</p>
-                <h2 class="text-3xl md:text-4xl font-serif">Baslangic icin uc temel okuma</h2>
+                <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">Seçili Okumalar</p>
+                <h2 class="text-3xl md:text-4xl font-serif">Başlangıç için üç temel okuma</h2>
               </div>
               <a href="/methodology" class="hidden md:inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
-                Icerik metodolojisini inceleyin
+                İçerik metodolojisini inceleyin
               </a>
             </div>
 
@@ -90,8 +90,8 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
           </div>
 
           <aside class="rounded-[36px] burgundy-gradient text-white p-8 md:p-10">
-            <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Okuma Rotasi</p>
-            <h2 class="text-3xl font-serif leading-tight mb-6">Bu kutuphane nasil kullanilir?</h2>
+            <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Okuma Rotası</p>
+            <h2 class="text-3xl font-serif leading-tight mb-6">Bu kütüphane nasıl kullanılır?</h2>
             <ul class="space-y-4 mb-8">
               {readingPath.map((item) => (
                 <li class="flex gap-3 text-sm leading-relaxed text-white/80">
@@ -102,7 +102,7 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
             </ul>
             <div class="pt-6 border-t border-white/10">
               <a href="/symptoms" class="inline-flex text-sm font-semibold text-white border-b border-white/30 pb-1 hover:border-white">
-                Semptom rehberine gecin
+                Semptom rehberine geçin
               </a>
             </div>
           </aside>

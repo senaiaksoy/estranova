@@ -5,53 +5,53 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 
 const symptoms = [
   {
-    name: 'Sicak basmasi',
+    name: 'Sıcak basması',
     category: 'Vazomotor',
-    note: 'Gun icindeki ani isi artisi, terleme ve ardindan gelen usume hissi ile tarif edilir.',
+    note: 'Gün içindeki ani ısı artışı, terleme ve ardından gelen üşüme hissi ile tarif edilir.',
   },
   {
     name: 'Beyin sisi',
-    category: 'Bilissel',
-    note: 'Konsantrasyon daginigi, kelime bulmakta zorlanma veya gecici unutkanlik hissi olarak anlatilir.',
+    category: 'Bilişsel',
+    note: 'Konsantrasyon dağınıklığı, kelime bulmakta zorlanma veya geçici unutkanlık hissi olarak anlatılır.',
   },
   {
-    name: 'Uyku bolunmesi',
+    name: 'Uyku bölünmesi',
     category: 'Uyku',
-    note: 'Gece boyunca sik uyanma, sabaha karsi uykuya dalamama veya erken uyanma biciminde gorulebilir.',
+    note: 'Gece boyunca sık uyanma, sabaha karşı uykuya dalamama veya erken uyanma biçiminde görülebilir.',
   },
   {
-    name: 'Kaygi artisi',
+    name: 'Kaygı artışı',
     category: 'Duygudurum',
-    note: 'Hormonal degisim, stres duzeyi ve uyku bozulmasi bir araya geldiginde belirginlesebilir.',
+    note: 'Hormonal değişim, stres düzeyi ve uyku bozulması bir araya geldiğinde belirginleşebilir.',
   },
   {
     name: 'Eklem ve kas hassasiyeti',
     category: 'Kas-iskelet',
-    note: 'Sabah sertligi, hareket baslangicinda zorlanma veya gun sonuna dogru yorgunluk hissi ile fark edilebilir.',
+    note: 'Sabah sertliği, hareket başlangıcında zorlanma veya gün sonuna doğru yorgunluk hissi ile fark edilebilir.',
   },
   {
-    name: 'Cilt ve sac degisiklikleri',
+    name: 'Cilt ve saç değişiklikleri',
     category: 'Dermatolojik',
-    note: 'Kuruluk, hassasiyet veya sac tellerinde incelme gibi daha yavas ilerleyen degisimler seklinde gorulebilir.',
+    note: 'Kuruluk, hassasiyet veya saç tellerinde incelme gibi daha yavaş ilerleyen değişimler şeklinde görülebilir.',
   },
 ] as const;
 
 const howToUse = [
-  'Semptomun ne zaman ortaya ciktigini ve ne kadar surdugunu not edin.',
-  'Tek bir belirtiye degil, birlikte gorulen degisimlerin toplam etkisine bakin.',
-  'Uyku, stres, hareket ve adet duzeni gibi basliklari ayni cercevede degerlendirin.',
+  'Semptomun ne zaman ortaya çıktığını ve ne kadar sürdüğünü not edin.',
+  'Tek bir belirtiye değil, birlikte görülen değişimlerin toplam etkisine bakın.',
+  'Uyku, stres, hareket ve adet düzeni gibi başlıkları aynı çerçevede değerlendirin.',
 ];
 
 const relatedReading = [
-  'Perimenopozda hangi degisimler beklenebilir?',
-  'Uyku bozulmasi ile gece terlemesi nasil ayri okunur?',
-  'Belirti gunlugu tutarken hangi detaylar gereklidir?',
+  'Perimenopozda hangi değişimler beklenebilir?',
+  'Uyku bozulması ile gece terlemesi nasıl ayrı okunur?',
+  'Belirti günlüğü tutarken hangi detaylar gereklidir?',
 ] as const;
 ---
 
 <SiteLayout
   title="Semptom Rehberi - Estranova"
-  description="Perimenopoz ve menopoz surecinde gorulebilen semptomlar icin editoryal rehber."
+  description="Perimenopoz ve menopoz sürecinde görülebilen semptomlar için editoryal rehber."
 >
   <SiteNavbar currentPath="/symptoms" />
 
@@ -60,10 +60,10 @@ const relatedReading = [
       <div class="max-w-7xl mx-auto">
         <div class="max-w-3xl mb-14">
           <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Semptom Rehberi</p>
-          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Degisimleri adlandirmaya yardimci bir okuma alani</h1>
+          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Değişimleri adlandırmaya yardımcı bir okuma alanı</h1>
           <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
-            Bu sayfa tani koymak icin degil, sik gorulen degisimleri anlamlandirmak icin hazirlandi.
-            Semptomlarin hangi baglamda ele alinabilecegini gosterir ve ilgili iceriklere gecis saglar.
+            Bu sayfa tanı koymak için değil, sık görülen değişimleri anlamlandırmak için hazırlandı.
+            Semptomların hangi bağlamda ele alınabileceğini gösterir ve ilgili içeriklere geçiş sağlar.
           </p>
         </div>
 
@@ -85,9 +85,9 @@ const relatedReading = [
                   </div>
 
                   <div class="md:text-right md:min-w-[160px]">
-                    <p class="text-[11px] uppercase tracking-[0.24em] text-charcoal/35 font-bold mb-2">Devam Okumasi</p>
+                    <p class="text-[11px] uppercase tracking-[0.24em] text-charcoal/35 font-bold mb-2">Devam Okuması</p>
                     <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
-                      Ilgili icerikleri inceleyin
+                      İlgili içerikleri inceleyin
                     </a>
                   </div>
                 </div>
@@ -97,8 +97,8 @@ const relatedReading = [
 
           <aside class="space-y-6 lg:sticky lg:top-28">
             <section class="rounded-[36px] burgundy-gradient text-white p-8 md:p-10">
-              <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Kullanim Notu</p>
-              <h2 class="text-3xl font-serif leading-tight mb-6">Bu rehber nasil okunmali?</h2>
+              <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Kullanım Notu</p>
+              <h2 class="text-3xl font-serif leading-tight mb-6">Bu rehber nasıl okunmalı?</h2>
               <ul class="space-y-4">
                 {howToUse.map((item) => (
                   <li class="flex gap-3 text-sm leading-relaxed text-white/80">
@@ -110,14 +110,14 @@ const relatedReading = [
             </section>
 
             <section class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
-              <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-4">Ilgili Basliklar</p>
+              <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-4">İlgili Başlıklar</p>
               <ul class="space-y-4 mb-8">
                 {relatedReading.map((item) => (
                   <li class="text-sm leading-relaxed text-charcoal/70 border-b border-primary/10 pb-4 last:border-b-0 last:pb-0">{item}</li>
                 ))}
               </ul>
               <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
-                Kutuphane sayfasina gecin
+                Kütüphane sayfasına geçin
               </a>
             </section>
           </aside>
