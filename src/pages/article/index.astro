@@ -3,9 +3,9 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { articles } from '../../data/articles';
+import { publishedArticles } from '../../data/articles';
 
-const sortedArticles = [...articles].sort((a, b) => (a.date < b.date ? 1 : -1));
+const sortedArticles = [...publishedArticles].sort((a, b) => (a.date < b.date ? 1 : -1));
 ---
 
 <SiteLayout

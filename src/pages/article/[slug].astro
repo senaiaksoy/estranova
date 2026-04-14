@@ -2,14 +2,14 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
-import { articles, type Article } from '../../data/articles';
+import { publishedArticles, type Article } from '../../data/articles';
 
 interface Props {
   article: Article;
 }
 
 export function getStaticPaths() {
-  return articles.map((article) => ({
+  return publishedArticles.map((article) => ({
     params: { slug: article.slug },
     props: { article },
   }));
@@ -28,7 +28,7 @@ const categoryLabelMap: Record<string, string> = {
 const categoryLabel = categoryLabelMap[article.category] ?? article.category;
 const publishedDate = new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(article.date));
 
-const relatedPool = articles.filter((item) => item.slug !== article.slug);
+const relatedPool = publishedArticles.filter((item) => item.slug !== article.slug);
 const relatedArticles = [
   ...relatedPool.filter((item) => item.category === article.category),
   ...relatedPool,

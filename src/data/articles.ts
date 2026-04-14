@@ -399,7 +399,12 @@ Bu yaklaşım, tek bir ölçüm sonucuna odaklanmak yerine genel kemik sağlığ
   },
 ];
 
-export const featuredArticles = articles.filter((a) => a.featured);
-export const perimenopozArticles = articles.filter((a) => a.category === "perimenopoz");
-export const menopozArticles = articles.filter((a) => a.category === "menopoz");
-export const healthArticles = articles.filter((a) => a.category === "kadin-sagligi" || a.category === "kalp-sagligi");
+export const getPublishedArticles = () => articles.filter((a) => a.status === "published");
+
+export const publishedArticles = getPublishedArticles();
+export const featuredArticles = publishedArticles.filter((a) => a.featured);
+export const perimenopozArticles = publishedArticles.filter((a) => a.category === "perimenopoz");
+export const menopozArticles = publishedArticles.filter((a) => a.category === "menopoz");
+export const healthArticles = publishedArticles.filter(
+  (a) => a.category === "kadin-sagligi" || a.category === "kalp-sagligi"
+);

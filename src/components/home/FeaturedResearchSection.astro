@@ -1,7 +1,7 @@
 ---
-import { articles, featuredArticles } from '../../data/articles';
+import { featuredArticles, publishedArticles } from '../../data/articles';
 
-const featuredArticle = featuredArticles[0] ?? articles[0];
+const featuredArticle = featuredArticles[0] ?? publishedArticles[0];
 const featuredHref = featuredArticle ? `/article/${featuredArticle.slug}` : '/library';
 ---
 
