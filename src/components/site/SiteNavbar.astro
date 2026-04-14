@@ -53,7 +53,7 @@ const navLinks = [
       aria-label="Menüyü aç/kapat"
       aria-controls="mobile-menu"
       aria-expanded="false"
-      onclick="mobileMenu.toggle()"
+      onclick="mobileMenu.toggle(this)"
     >
       <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -64,7 +64,7 @@ const navLinks = [
 
     <div
       id="mobile-menu"
-      class="absolute top-full left-0 right-0 bg-surface border-y border-primary/10 shadow-xl p-4 md:hidden flex flex-col gap-2"
+      class="absolute top-full left-0 right-0 hidden bg-surface border-y border-primary/10 shadow-xl p-4 md:hidden flex-col gap-2"
       role="menu"
       aria-hidden="true"
     >

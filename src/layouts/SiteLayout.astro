@@ -1,5 +1,6 @@
 ---
 import '../index.css';
+import mobileMenuScript from '../components/site/mobile-menu.js?url';
 
 interface Props {
   title: string;
@@ -27,8 +28,8 @@ const {
     <!-- Accessibility Meta Tags -->
     <meta name="robots" content="follow, index" />
     <meta name="theme-color" content="#7C2D58" />
-    <link rel="preload" as="style" href="/fonts/inter-var.css" />
-    <link rel="preload" as="style" href="/fonts/merriweather-var.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
@@ -48,11 +49,7 @@ const {
     </a>
 
     <!-- Mobile menu script -->
-    <script src="/components/site/mobile-menu.js" defer></script>
-
-    <!-- Preload critical fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src={mobileMenuScript} defer></script>
 
     <slot />
   </body>

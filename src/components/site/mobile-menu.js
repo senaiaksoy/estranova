@@ -1,23 +1,21 @@
-// Mobile menu toggle function - attached to window for global access
-const toggleMobileMenu = function() {
-  // Find closest button and menu (multiple menus possible)
-  const button = this;
-  const menu = document.getElementById(this.getAttribute('aria-controls'));
+const toggleMobileMenu = (trigger) => {
+  const button =
+    trigger instanceof HTMLElement
+      ? trigger
+      : document.querySelector('[aria-controls="mobile-menu"]');
 
-  if (!menu || !button) return;
+  if (!button) return;
+
+  const menuId = button.getAttribute('aria-controls');
+  const menu = menuId ? document.getElementById(menuId) : null;
+  if (!menu) return;
 
   const isOpen = menu.getAttribute('aria-hidden') === 'false';
-  menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-  button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  const willOpen = !isOpen;
 
-  // Hamburger icon dönüşümü
-  const icon = button.querySelector('svg');
-  if (isOpen) {
-    icon.innerHTML = '<polyline points="3 18 21 6" />'; // Çarpı
-  } else {
-    icon.innerHTML = '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>'; // Hız
-  }
+  menu.setAttribute('aria-hidden', willOpen ? 'false' : 'true');
+  menu.classList.toggle('hidden', !willOpen);
+  button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
 };
 
-// Attach to window for global access
 window.mobileMenu = { toggle: toggleMobileMenu };
