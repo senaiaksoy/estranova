@@ -1,0 +1,156 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Zamansız Yaşam - Estranova"
+  description="Dinamik ve enerjik yaşlanmak için bilimsel bilgi. Vitaminlerden deneysel yaklaşımlara, kanıt düzeyiyle değerlendirilmiş içerikler."
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-12 max-w-4xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.26em] text-[#6B2D3E]">Kategori</p>
+          <h1 class="mb-6 font-serif text-5xl leading-[1.06] md:text-7xl">Zamansız Yaşam</h1>
+          <p class="mb-4 text-lg leading-relaxed text-[#2D2D2D]/80 md:text-xl">
+            Dinamik ve enerjik yaşlanmak için bilimsel bilgi. Vitaminlerden deneysel yaklaşımlara, kanıt düzeyiyle değerlendirilmiş içerikler.
+          </p>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Bu bölüm, anti-aging ve longevity başlıklarını sade bir çerçevede toplar. İçerikler tedavi önerisi sunmaz;
+            mevcut bilimsel veriyi anlaşılır bir dille açıklamayı hedefler.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Vitaminler & Takviyeler</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">D vitamini, Omega-3, Magnezyum, Kolajen ve daha fazlası</p>
+            <a href="/zamansiz-yasam/vitaminler" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Deneysel Yaklaşımlar</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">NAD+, Peptidler, Ozon tedavisi: bilim ne diyor?</p>
+            <a href="/zamansiz-yasam/deneysel" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Non-İnvaziv Uygulamalar</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Lazer, HIFU, RF, PRP: kanıt düzeyiyle değerlendirme</p>
+            <a href="/zamansiz-yasam/non-invaziv" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Beslenme & Metabolizma</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">İnsülin direnci, gut sağlığı, metabolik denge</p>
+            <a href="/zamansiz-yasam/beslenme" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:col-span-2 md:p-8 xl:col-span-1">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Hareket & Vücut</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Kas kütlesi, esneklik, postür, nefes teknikleri</p>
+            <a href="/zamansiz-yasam/hareket" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-[#F5EDE0] p-8 md:p-12">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Kanıt Düzeyi</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">İçeriklerimiz nasıl değerlendirilir?</h2>
+          <p class="mb-8 max-w-3xl text-lg leading-relaxed text-[#2D2D2D]/75">
+            Bu kategorideki her makale bilimsel editör tarafından değerlendirilir. Kanıt düzeyi işaretleri,
+            bilginin araştırma gücünü hızlıca görmenize yardımcı olur.
+          </p>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full border border-[#6B2D3E]/20 bg-white">
+              <thead>
+                <tr class="bg-[#FDF8F0]">
+                  <th class="px-4 py-3 text-left text-sm font-semibold text-[#2D2D2D]">Seviye</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold text-[#2D2D2D]">Gösterim</th>
+                  <th class="px-4 py-3 text-left text-sm font-semibold text-[#2D2D2D]">Kısa Açıklama</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm text-[#2D2D2D]/80">
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 5</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●●●●</td>
+                  <td class="px-4 py-3">Yüksek düzeyde, tutarlı bilimsel kanıt.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 4</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●●●○</td>
+                  <td class="px-4 py-3">Güçlü kanıt, sınırlı belirsizlikler bulunabilir.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 3</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●●○○</td>
+                  <td class="px-4 py-3">Orta düzey kanıt, yeni verilerle güncellenebilir.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 2</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●●○○○</td>
+                  <td class="px-4 py-3">Sınırlı kanıt, dikkatli yorum gerekir.</td>
+                </tr>
+                <tr class="border-t border-[#6B2D3E]/15">
+                  <td class="px-4 py-3">Seviye 1</td>
+                  <td class="px-4 py-3 text-[#6B2D3E]">●○○○○</td>
+                  <td class="px-4 py-3">Ön bilgi niteliğinde, araştırma erken aşamada.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Bu kategorideki popüler başlıklardan örnek içerikler.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Vitaminler</p>
+            <h3 class="mb-3 font-serif text-2xl">D Vitamini Takibi İçin Temel Notlar</h3>
+            <p class="mb-4 leading-relaxed text-[#2D2D2D]/75">Takviyeleri değerlendirirken günlük yaşam, beslenme ve test takibini birlikte ele alan rehber.</p>
+            <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt Düzeyi: <span class="text-[#6B2D3E]">●●●○○</span></p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Deneysel Yaklaşımlar</p>
+            <h3 class="mb-3 font-serif text-2xl">NAD+ Hakkında Ne Biliyoruz?</h3>
+            <p class="mb-4 leading-relaxed text-[#2D2D2D]/75">Mevcut araştırmaları sadeleştiren ve beklenti yönetimini güçlendiren derleme içerik.</p>
+            <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt Düzeyi: <span class="text-[#6B2D3E]">●●●○○</span></p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Hareket & Vücut</p>
+            <h3 class="mb-3 font-serif text-2xl">Kas Kütlesini Destekleyen Rutin</h3>
+            <p class="mb-4 leading-relaxed text-[#2D2D2D]/75">Yaşla birlikte hareket planını sürdürülebilir biçimde kurmak için pratik bir başlangıç çerçevesi.</p>
+            <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt Düzeyi: <span class="text-[#6B2D3E]">●●●○○</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

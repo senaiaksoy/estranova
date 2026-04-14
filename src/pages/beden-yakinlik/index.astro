@@ -1,0 +1,101 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Beden & Yakınlık - Estranova"
+  description="Menopoz döneminde bedeniniz, cinsel sağlığınız ve yakınlık ilişkileriniz hakkında bilimsel bilgi ve rehberlik."
+>
+  <SiteNavbar currentPath="/beden-yakinlik" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-12 max-w-4xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.26em] text-[#6B2D3E]">Kategori</p>
+          <h1 class="mb-6 font-serif text-5xl leading-[1.06] md:text-7xl">Beden & Yakınlık</h1>
+          <p class="mb-4 text-lg leading-relaxed text-[#2D2D2D]/80 md:text-xl">
+            Menopoz döneminde bedeniniz, cinsel sağlığınız ve yakınlık ilişkileriniz hakkında bilimsel bilgi ve rehberlik.
+          </p>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Bu bölüm, değişen beden deneyimini yargılamadan ele alır. Amaç, kişisel sınırlarınızı ve ihtiyaçlarınızı
+            daha iyi anlamanızı destekleyen açık, dengeli ve güvenilir bir bilgi yolu sunmaktır.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Menopoz ve Cinsel Sağlık</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Yakınlık deneyimindeki değişimleri bilimsel çerçevede anlamaya yardımcı içerikler.</p>
+            <a href="/beden-yakinlik/cinsel-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Vajinal Sağlık ve Değişimler</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Kuruluk, konfor ve doku değişimlerini sade bir dille açıklayan rehberler.</p>
+            <a href="/beden-yakinlik/vajinal-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Libido ve Hormonlar</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">İstek düzeyini etkileyen hormonal, psikolojik ve yaşam tarzı etmenlerine bütüncül bakış.</p>
+            <a href="/beden-yakinlik/libido" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">İlişki Dinamikleri ve İletişim</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Eşler arası iletişim, karşılıklı anlayış ve güvenli ifade yolları üzerine içerikler.</p>
+            <a href="/beden-yakinlik/iliski" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:col-span-2 md:p-8 xl:col-span-1">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Beden Algısı ve Özgüven</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Bedensel değişimlere uyum, öz-şefkat ve güven duygusunu güçlendiren yaklaşımlar.</p>
+            <a href="/beden-yakinlik/beden-algisi" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Beden ve yakınlık temalarını zarif ve bilimsel bir dille ele alan örnek içerikler.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Cinsel Sağlık</p>
+            <h3 class="mb-3 font-serif text-2xl">Menopoz Döneminde Konforu Desteklemek</h3>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Yakınlık sırasında konforu etkileyen değişimleri anlamaya yönelik temel bir rehber.</p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">İlişki</p>
+            <h3 class="mb-3 font-serif text-2xl">İletişimde Güvenli Alan Kurmak</h3>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Duyguları açıkça ifade etmeyi ve karşılıklı anlayışı güçlendirmeyi amaçlayan yaklaşım notları.</p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Beden Algısı</p>
+            <h3 class="mb-3 font-serif text-2xl">Özgüven ve Bedensel Uyum</h3>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Beden algısındaki değişimleri yargılamadan ele alan, destekleyici bir başlangıç içeriği.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -1,0 +1,93 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Bu Ay Kadın Dünyasında Ne Konuşuluyor? - Estranova"
+  description="Nisan 2026 Editörün Köşesi: ilkbaharla birlikte kadın sağlığı gündeminde öne çıkan başlıklar ve bu ay Estranova'da okuyabilecekleriniz."
+>
+  <SiteNavbar />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <article class="px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <header class="mb-12">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Nisan 2026 — Editörün Köşesi</p>
+          <h1 class="font-serif text-4xl leading-tight md:text-6xl">Bu Ay Kadın Dünyasında Ne Konuşuluyor?</h1>
+        </header>
+
+        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+          <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Editör</p>
+              <p class="text-xl font-semibold text-[#2D2D2D]">[Editör Adı]</p>
+              <p class="text-[#2D2D2D]/70">Estranova editoryal ekibi</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80">
+          <p>
+            Nisan ayı ile birlikte hepimizde benzer bir his başlıyor: biraz daha hareket etme, biraz daha açık havada kalma
+            ve günlük düzeni yenileme isteği. Kadın sağlığı gündeminde de bu dönemde enerji yönetimi, uyku kalitesi ve
+            bedensel denge başlıklarının öne çıktığını görüyoruz.
+          </p>
+          <p>
+            Son haftalarda en çok konuşulan konulardan biri, hormon replasman tedavisi (HRT) hakkındaki güncel tartışmalar oldu.
+            Bir yanda olumlu deneyimleri anlatan içerikler, diğer yanda çekinceleri öne çıkaran yorumlar var. Biz bu başlığı ele alırken
+            tek yönlü bir anlatım yerine, kanıt düzeyine göre dengeli değerlendirme yapmayı önceliyoruz.
+          </p>
+          <p>
+            Longevity alanındaki yeni eğilimler de dikkat çekiyor. Özellikle takviyeler ve deneysel yaklaşımlar konusunda merak artıyor.
+            Burada hatırlatmak istediğimiz temel nokta şu: ilgi çekici bir başlık, her zaman güçlü kanıt anlamına gelmiyor.
+            Bu yüzden içeriklerimizi “umut verici, gelişen veya güçlü kanıt” ayrımıyla sınıflandırmaya devam ediyoruz.
+          </p>
+          <p>
+            Estranova’da bu ay, [Hormonal Geçiş](/hormonal-gecis), [Zamansız Yaşam](/zamansiz-yasam),
+            [Beden & Yakınlık](/beden-yakinlik), [Zihin & Denge](/zihin-denge) ve
+            [Bilimsel Pencere](/bilimsel-pencere) bölümlerinde yeni içerikler bulabilirsiniz.
+            Özellikle uyku, kemik sağlığı, metabolik denge ve duygusal iyi olma hali üzerine hazırladığımız rehberleri
+            birlikte okumanızı öneririz.
+          </p>
+          <p>
+            Bu köşede her ay, gündemi sakin bir dille ve bilimsel çerçevede konuşmaya devam edeceğiz.
+            Okurken aklınıza takılan soruları ve görmek istediğiniz konuları bizimle paylaşmanız, içerik yolculuğunu
+            daha güçlü hale getiriyor. Burada birlikte öğreniyoruz.
+          </p>
+        </section>
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
+          <ul class="space-y-3">
+            <li>
+              <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi" class="font-semibold text-[#6B2D3E] hover:underline">
+                NAD+ Takviyesi: Bilim Ne Diyor?
+              </a>
+            </li>
+            <li>
+              <a href="/zamansiz-yasam/vitaminler/d-vitamini-rehberi" class="font-semibold text-[#6B2D3E] hover:underline">
+                D Vitamini: 40 Yaşından Sonra Ne Kadar Almanız Gerekiyor?
+              </a>
+            </li>
+            <li>
+              <a href="/zihin-denge" class="font-semibold text-[#6B2D3E] hover:underline">
+                Zihin & Denge Kategorisi
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+          <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+            Bu içerik yalnızca genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

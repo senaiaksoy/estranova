@@ -1,0 +1,94 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Zihin & Denge - Estranova"
+  description="Hormonal değişimlerin zihinsel ve duygusal etkilerini anlamak, uyku kalitesini artırmak ve ruh halinizi dengelemek için bilimsel rehberlik."
+>
+  <SiteNavbar currentPath="/zihin-denge" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-12 max-w-4xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.26em] text-[#6B2D3E]">Kategori</p>
+          <h1 class="mb-6 font-serif text-5xl leading-[1.06] md:text-7xl">Zihin & Denge</h1>
+          <p class="mb-4 text-lg leading-relaxed text-[#2D2D2D]/80 md:text-xl">
+            Hormonal değişimlerin zihinsel ve duygusal etkilerini anlamak, uyku kalitesini artırmak ve ruh halinizi dengelemek için bilimsel rehberlik.
+          </p>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Bu bölüm, günlük yaşamda karşılaşılan zihinsel ve duygusal dalgalanmaları sade bir çerçevede ele alır.
+            Amaç, süreci daha iyi anlamanıza ve denge kurmanıza yardımcı olmaktır.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Uyku & Dinlenme</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Uyku düzenini destekleyen alışkanlıklar ve dinlenme kalitesi üzerine rehber içerikler.</p>
+            <a href="/zihin-denge/uyku" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Stres Yönetimi</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Gündelik stres yükünü azaltmaya yardımcı bilim temelli yöntemlerin sade özeti.</p>
+            <a href="/zihin-denge/stres" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Beyin Sağlığı & Hafıza</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Odaklanma, unutkanlık ve bilişsel esenlik başlıklarını bütüncül şekilde ele alır.</p>
+            <a href="/zihin-denge/beyin-sagligi" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+
+          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
+            <h2 class="mb-3 font-serif text-3xl">Ruh Hali & Duygusal Dalgalanmalar</h2>
+            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Duygu durum değişimlerini anlamaya ve dengelemeye yardımcı destekleyici içerikler.</p>
+            <a href="/zihin-denge/ruh-hali" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Zihin ve duygusal denge konularına odaklanan örnek içerikler.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Uyku</p>
+            <h3 class="mb-3 font-serif text-2xl">Gece Rutini Oluşturmak</h3>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Uyku kalitesini artırmaya yardımcı, uygulanabilir ve sakin bir akşam planı.</p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Stres</p>
+            <h3 class="mb-3 font-serif text-2xl">Gün İçinde Nefes Araları</h3>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Kısa nefes ve farkındalık molalarıyla zihinsel yükü düzenlemeye yardımcı notlar.</p>
+          </article>
+
+          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Ruh Hali</p>
+            <h3 class="mb-3 font-serif text-2xl">Duygusal Dalgalanmaları İzlemek</h3>
+            <p class="leading-relaxed text-[#2D2D2D]/75">Duygu günlüğüyle tetikleyicileri fark etmeyi kolaylaştıran başlangıç yaklaşımı.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
