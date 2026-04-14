@@ -1,3 +1,14 @@
+export type ArticleStatus = "draft" | "in_review" | "published";
+
+export interface ArticleReference {
+  title: string;
+  authors: string;
+  journal: string;
+  year: number;
+  url: string;
+  doi?: string;
+}
+
 export interface Article {
   slug: string;
   title: string;
@@ -5,12 +16,84 @@ export interface Article {
   content: string;
   author: string;
   reviewer: string;
+  medicalReviewerTitle: string;
+  reviewDate: string;
+  lastModified: string;
+  status: ArticleStatus;
+  disclaimerVersion: string;
+  references: ArticleReference[];
   date: string;
   category: string;
   readTime: string;
   tags: string[];
   featured?: boolean;
 }
+
+const referenceCatalog: Record<string, ArticleReference[]> = {
+  perimenopozCognitive: [
+    {
+      title: "Menopause",
+      authors: "National Institute on Aging",
+      journal: "NIA Health Topics",
+      year: 2025,
+      url: "https://www.nia.nih.gov/health/menopause",
+    },
+  ],
+  menopauseSleep: [
+    {
+      title: "Menopause",
+      authors: "NHS",
+      journal: "NHS Conditions",
+      year: 2025,
+      url: "https://www.nhs.uk/conditions/menopause/",
+    },
+  ],
+  menopauseCardio: [
+    {
+      title: "About Women and Heart Disease",
+      authors: "Centers for Disease Control and Prevention",
+      journal: "CDC Heart Disease",
+      year: 2024,
+      url: "https://www.cdc.gov/heartdisease/women.htm",
+    },
+  ],
+  healthAfter40: [
+    {
+      title: "Ageing and health",
+      authors: "World Health Organization",
+      journal: "WHO Fact Sheets",
+      year: 2024,
+      url: "https://www.who.int/news-room/fact-sheets/detail/ageing-and-health",
+    },
+  ],
+  neuroAutoimmune: [
+    {
+      title: "Multiple Sclerosis",
+      authors: "National Institute of Neurological Disorders and Stroke",
+      journal: "NINDS Disorders",
+      year: 2024,
+      url: "https://www.ninds.nih.gov/health-information/disorders/multiple-sclerosis",
+    },
+  ],
+  cycleTracking: [
+    {
+      title: "Menopause: diagnosis and management",
+      authors: "National Institute for Health and Care Excellence",
+      journal: "NICE Guideline NG23",
+      year: 2024,
+      url: "https://www.nice.org.uk/guidance/ng23",
+    },
+  ],
+  boneHealth: [
+    {
+      title: "Osteoporosis",
+      authors: "National Institute of Arthritis and Musculoskeletal and Skin Diseases",
+      journal: "NIAMS Health Topics",
+      year: 2024,
+      url: "https://www.niams.nih.gov/health-topics/osteoporosis",
+    },
+  ],
+};
 
 export const articles: Article[] = [
   {
@@ -48,6 +131,12 @@ Estranova içerik yapısı da bu nedenle tek bir "cevap" yerine konu ağacı man
 `,
     author: "Alara Baykent",
     reviewer: "Doc. Dr. Senai Aksoy",
+    medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
+    reviewDate: "2026-04-13",
+    lastModified: "2026-04-13",
+    status: "published",
+    disclaimerVersion: "v1.0",
+    references: referenceCatalog.perimenopozCognitive,
     date: "2026-04-13",
     category: "perimenopoz",
     readTime: "5 dk",
@@ -84,6 +173,12 @@ Uyku düzenini iyileştirmek için; uyku saatlerinin düzgün tutulması, uyku o
 `,
     author: "Basak Pelister",
     reviewer: "Doc. Dr. Senai Aksoy",
+    medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
+    reviewDate: "2026-04-12",
+    lastModified: "2026-04-12",
+    status: "published",
+    disclaimerVersion: "v1.0",
+    references: referenceCatalog.menopauseSleep,
     date: "2026-04-12",
     category: "menopoz",
     readTime: "7 dk",
@@ -118,6 +213,12 @@ Kardiyovasküler sağlığı korumak için; düzenli fiziksel aktivite, sağlık
 `,
     author: "Alara Baykent",
     reviewer: "Doc. Dr. Senai Aksoy",
+    medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
+    reviewDate: "2026-04-11",
+    lastModified: "2026-04-11",
+    status: "published",
+    disclaimerVersion: "v1.0",
+    references: referenceCatalog.menopauseCardio,
     date: "2026-04-11",
     category: "kalp-sagligi",
     readTime: "6 dk",
@@ -146,6 +247,12 @@ Proteinli besinler, lifli gıdalar, antioksidan açısından zengin sebze ve mey
 `,
     author: "Basak Pelister",
     reviewer: "Doc. Dr. Senai Aksoy",
+    medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
+    reviewDate: "2026-04-10",
+    lastModified: "2026-04-10",
+    status: "published",
+    disclaimerVersion: "v1.0",
+    references: referenceCatalog.healthAfter40,
     date: "2026-04-10",
     category: "kadin-sagligi",
     readTime: "8 dk",
@@ -173,6 +280,12 @@ MS tedavisi, hastalığın ilerlemesini yavaşlatmak, belirtileri yönetmek ve y
 `,
     author: "Alara Baykent",
     reviewer: "Doc. Dr. Senai Aksoy",
+    medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
+    reviewDate: "2026-04-09",
+    lastModified: "2026-04-09",
+    status: "published",
+    disclaimerVersion: "v1.0",
+    references: referenceCatalog.neuroAutoimmune,
     date: "2026-04-09",
     category: "bilgi",
     readTime: "10 dk",
@@ -220,6 +333,12 @@ Böylece değerlendirme, tek bir günün hissi üzerinden değil zaman içindeki
 `,
     author: "Basak Pelister",
     reviewer: "Doc. Dr. Senai Aksoy",
+    medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
+    reviewDate: "2026-04-14",
+    lastModified: "2026-04-14",
+    status: "published",
+    disclaimerVersion: "v1.0",
+    references: referenceCatalog.cycleTracking,
     date: "2026-04-14",
     category: "perimenopoz",
     readTime: "7 dk",
@@ -267,6 +386,12 @@ Bu yaklaşım, tek bir ölçüm sonucuna odaklanmak yerine genel kemik sağlığ
 `,
     author: "Alara Baykent",
     reviewer: "Doc. Dr. Senai Aksoy",
+    medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
+    reviewDate: "2026-04-14",
+    lastModified: "2026-04-14",
+    status: "published",
+    disclaimerVersion: "v1.0",
+    references: referenceCatalog.boneHealth,
     date: "2026-04-14",
     category: "kadin-sagligi",
     readTime: "8 dk",
