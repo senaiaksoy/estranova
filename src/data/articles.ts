@@ -27,9 +27,9 @@ Bu nedenle semptomu yalnız değil, bağlamı ile birlikte değerlendirmek gerek
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Hangi sorular daha işlevseldir?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-Sorulması gereken ilk sorular genellikle şudur: Uyku kalitesi son aylarda değişti mi? Gece uyanmaları sıklastı mı?
+Sorulması gereken ilk sorular genellikle şunlardır: Uyku kalitesi son aylarda değişti mi? Gece uyanmaları sıklaştı mı?
 Sıcak basması veya kaygı artışı eşlik ediyor mu? İş temposu ya da bakım yükünde artış var mı?
-Bu sorular, tek bir belirtiyeye sabitlenmeden daha gerçekçi bir tablo kurmaya yardımcı olur.
+Bu sorular, tek bir belirtiye sabitlenmeden daha gerçekçi bir tablo kurmaya yardımcı olur.
 </p>
 
 <div class="my-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
@@ -41,7 +41,7 @@ Bu sorular, tek bir belirtiyeye sabitlenmeden daha gerçekçi bir tablo kurmaya 
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Okur için pratik okuma rotası</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-İlk adım, semptom günlük tutmak değil; semptomun hangi günlük değişkenlerle birlikte ortaya çıkığını fark etmektir.
+İlk adım, semptom günlüğü tutmak değil; semptomun hangi günlük değişkenlerle birlikte ortaya çıktığını fark etmektir.
 Daha sonra uyku, vazomotor belirtiler ve duygu durumu başlıkları birlikte okunabilir.
 Estranova içerik yapısı da bu nedenle tek bir "cevap" yerine konu ağacı mantığı ile ilerler.
 </p>
@@ -61,13 +61,13 @@ Estranova içerik yapısı da bu nedenle tek bir "cevap" yerine konu ağacı man
     content: `
 <h2 class="font-serif text-3xl text-charcoal mb-4">Uyku bozuklukları neden sıklıkla görülmektedir?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-Özellikle estrogen seviyelerindeki düşüklük, sinir sistemi dengeleyici mekanizmalarına etki ederek uyku kalitesini etkileyebilir.
+Özellikle östrojen seviyelerindeki düşüklük, sinir sistemi dengeleyici mekanizmalarına etki ederek uyku kalitesini etkileyebilir.
 Gece terlemeleri ve sıcak basmaları ise uykunun bölünmesine ve tekrarlı uyanmalara neden olur.
 </p>
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Kapsamlı uyku yönetimi yaklaşımı</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-Gecelerdeki uyku sorunları sadece sıcak basmalar ile açıklanamaz. Stres, günlük yük, iş yorgunluğu ve uyku düzeninin bozulması da faktör olarak değerlendirmelidir.
+Gece yaşanan uyku sorunları sadece sıcak basmalar ile açıklanamaz. Stres, günlük yük, iş yorgunluğu ve uyku düzeninin bozulması da faktör olarak değerlendirilmelidir.
 </p>
 
 <div class="my-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
