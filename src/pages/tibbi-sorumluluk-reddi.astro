@@ -1,0 +1,51 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Tıbbi Uyarı - Estranova"
+  description="Estranova tıbbi sorumluluk ve bilgilendirme metni."
+>
+  <SiteNavbar />
+
+  <main id="main-content" class="pt-24">
+    <section class="px-6 py-16 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <header class="max-w-3xl mb-14">
+          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Tıbbi Uyarı</p>
+          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Bu site ne için vardır, ne için değildir?</h1>
+          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
+            Estranova'daki bütün içerikler genel bilgilendirme amacıyla hazırlanır. Hekim değerlendirmesinin yerine geçmez.
+          </p>
+        </header>
+
+        <div class="space-y-6">
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">Bilgilendirme sınırı</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Sayfalarda yer alan metinler tanı koymaz, tedavi planlamaz ve kişiye özel tıbbi karar vermez. Sağlıkla ilgili bireysel kararlar doktor-hasta görüşmesi içinde ele alınmalıdır.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
+            <h2 class="text-3xl font-serif mb-4">Belirti yorumu</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Bir semptomun görülmesi, tek başına belirli bir tıbbi sonuca işaret etmez. Benzer belirtiler farklı nedenlerle ortaya çıkabilir; bu nedenle klinik bağlam esastır.
+            </p>
+          </section>
+
+          <section class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
+            <h2 class="text-3xl font-serif mb-4">Editoryal sorumluluk</h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Estranova bir hizmet satış sayfası değildir. İçerik sorumluluğu, yazar, site yönetimi ve tıbbi denetim rolleri ayrılarak sürdürülür; ancak yayınlanan metinler klinik danışmanlık yerine geçmez.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
