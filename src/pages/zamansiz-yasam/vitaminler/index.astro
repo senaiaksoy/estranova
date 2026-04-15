@@ -1,0 +1,46 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/zamansiz-yasam/vitaminler']!;
+---
+
+<SiteLayout
+  title="Vitaminler ve Takviyeler - Estranova"
+  description="D vitamini ve seçilmiş takviye konularında kanıt odaklı zamansız yaşam içerikleri."
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Vitaminler"
+      title="Vitaminler ve Takviyeler"
+      lede="Bu alt bölümde yayımlanan rehberleri tek tek genişleterek güncelliyoruz. Şu an için D vitamini üzerine derinlemesine içerik bulabilirsiniz."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <ul class="space-y-4 text-lg">
+          <li>
+            <a href="/zamansiz-yasam/vitaminler/d-vitamini-rehberi" class="font-semibold text-[#6B2D3E] hover:underline"
+              >D Vitamini Rehberi</a
+            >
+          </li>
+          <li>
+            <a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">Tüm kütüphane içerikleri</a>
+          </li>
+        </ul>
+
+        <p class="mt-10">
+          <a href="/zamansiz-yasam" class="font-semibold text-[#6B2D3E] hover:underline">← Zamansız Yaşam ana sayfa</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

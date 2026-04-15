@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz']!;
+---
+
+<SiteLayout
+  title="Menopoz - Estranova"
+  description="Menopoz dönemini anlamak için temel rehberler ve seçilmiş makale bağlantıları."
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title="Menopoz"
+      lede="Menopoz, östrojen ve progesteron düzenindeki kalıcı değişimle tanımlanır. Belirtiler ve uzun vadeli sağlık başlıkları kişiden kişiye farklılık gösterir; aşağıdaki içerikler ortak sorulara çerçeve sunar."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <ul class="space-y-4 text-lg">
+          <li>
+            <a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Menopoz Nedir?</a>
+          </li>
+          <li>
+            <a href="/article/menopozda-uyku-yonetimi" class="font-semibold text-[#6B2D3E] hover:underline">Menopozda Uyku Yönetimi</a>
+          </li>
+          <li>
+            <a href="/article/menopozda-kemik-sagligi" class="font-semibold text-[#6B2D3E] hover:underline">Menopozda Kemik Sağlığı</a>
+          </li>
+          <li>
+            <a href="/article/menopoz-kalp-sagligi" class="font-semibold text-[#6B2D3E] hover:underline">Menopoz ve Kalp Sağlığı</a>
+          </li>
+        </ul>
+
+        <p class="mt-10">
+          <a href="/hormonal-gecis" class="font-semibold text-[#6B2D3E] hover:underline">← Hormonal Geçiş ana sayfa</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -1,0 +1,52 @@
+---
+/**
+ * Alt menü / kategori sayfaları için tam genişlik hero görseli + başlık.
+ */
+interface Props {
+  eyebrow: string;
+  title: string;
+  lede?: string;
+  imageSrc: string;
+  imageAlt: string;
+  /** Makale sayfalarında daha alçak şerit */
+  compact?: boolean;
+}
+
+const { eyebrow, title, lede, imageSrc, imageAlt, compact = false } = Astro.props;
+---
+
+<section
+  class:list={[
+    'relative isolate w-full overflow-hidden',
+    compact ? 'min-h-[min(38vh,340px)]' : 'min-h-[min(46vh,520px)]',
+  ]}
+  aria-labelledby="submenu-hero-title"
+>
+  <img
+    src={imageSrc}
+    alt={imageAlt}
+    width="1800"
+    height="1000"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/95 via-[#1c1412]/55 to-[#1c1412]/20"></div>
+  <div
+    class:list={[
+      'relative z-10 mx-auto flex max-w-6xl flex-col justify-end px-6 pb-10 md:pb-14',
+      compact ? 'min-h-[min(38vh,340px)] pt-28 md:pt-32' : 'min-h-[min(46vh,520px)] pt-28 md:pb-16 md:pt-36',
+    ]}
+  >
+    <p class="text-xs font-bold uppercase tracking-[0.26em] text-[#F5EDE0]/90">{eyebrow}</p>
+    <h1 id="submenu-hero-title" class="mt-3 max-w-4xl font-serif text-3xl leading-[1.12] text-white md:text-5xl lg:text-[3.25rem]">
+      {title}
+    </h1>
+    {
+      lede && (
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/88 md:text-lg">{lede}</p>
+      )
+    }
+  </div>
+</section>

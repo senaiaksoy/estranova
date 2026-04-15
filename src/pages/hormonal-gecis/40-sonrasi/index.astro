@@ -1,0 +1,54 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi']!;
+---
+
+<SiteLayout
+  title="40 Sonrası Sağlık - Estranova"
+  description="Koruyucu sağlık, kemik sağlığı ve uzun dönem iyi olma hali için hormonal geçiş sonrası rehber bağlantıları."
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · 40 Sonrası"
+      title="40 Sonrası Sağlık"
+      lede="Bu evrede koruyucu adımlar, düzenli izleme ve yaşam tarzı seçimleri uzun vadeli sağlığı destekler. Kişisel risk profili için değerlendirme her zaman hekimle birlikte yapılmalıdır."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <ul class="space-y-4 text-lg">
+          <li>
+            <a href="/hormonal-gecis/40-sonrasi/tarama-testleri" class="font-semibold text-[#6B2D3E] hover:underline"
+              >Tarama ve İzlem: Genel Çerçeve</a
+            >
+          </li>
+          <li>
+            <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline"
+              >40 Yaşından Sonra Kemik Sağlığı</a
+            >
+          </li>
+          <li>
+            <a href="/article/40-ten-baslayan-saglik" class="font-semibold text-[#6B2D3E] hover:underline">40’tan Başlayan Sağlık Stratejileri</a>
+          </li>
+          <li>
+            <a href="/article/menopozda-kemik-sagligi" class="font-semibold text-[#6B2D3E] hover:underline">Menopozda Kemik Sağlığı (Makale)</a>
+          </li>
+        </ul>
+
+        <p class="mt-10">
+          <a href="/hormonal-gecis" class="font-semibold text-[#6B2D3E] hover:underline">← Hormonal Geçiş ana sayfa</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

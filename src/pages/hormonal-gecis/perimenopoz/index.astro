@@ -1,0 +1,244 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/perimenopoz']!;
+
+const articles = [
+  {
+    href: '/article/perimenopozda-dongu-duzensizlikleri',
+    title: 'Perimenopozda Döngü Değişiklikleri',
+    excerpt:
+      'Adet aralığı, akış ve süredeki değişimleri ne zaman “beklenen geçiş”, ne zaman değerlendirme gerektiren bir tablo olarak okumalısınız?',
+    tag: 'Döngü',
+  },
+  {
+    href: '/article/perimenopozda-bilissel-degisiklikler',
+    title: 'Perimenopozda Bilişsel Değişiklikler Nasıl Okunmalı?',
+    excerpt:
+      'Unutkanlık veya dikkat dağınıklığı hissi; uyku, stres ve hormonal dalgalanma ile birlikte düşünüldüğünde daha anlamlı bir resim verir.',
+    tag: 'Bilişsel iyi olma',
+  },
+  {
+    href: '/article/menopozda-uyku-yonetimi',
+    title: 'Menopozda Uyku Yönetimi',
+    excerpt:
+      'Gece terlemesi ve uyku bölünmesi geçiş döneminde sıktır; uyku hijyeni ve ne zaman profesyonel destek düşünülebileceği üzerine yapılandırılmış bir okuma.',
+    tag: 'Uyku',
+  },
+];
+
+const themes = [
+  {
+    title: 'Uyku ve gece terlemesi',
+    text: 'Uyku bölünmesi ve gece terlemesi vasomotor belirtilerle ilişkilendirilebilir; günlük güç ve ruh hali üzerindeki etkileri birlikte ele alınır.',
+    href: '/zihin-denge/uyku-bozuklugu-menopoz',
+  },
+  {
+    title: 'Ruh hali ve kaygı',
+    text: 'Östrojen dalgalanmaları ruh hali üzerinde etkili olabilir; stres ve yaşam yükü de aynı tabloda değerlendirilmelidir.',
+    href: '/zihin-denge/ruh-hali-degisimleri-menopoz',
+  },
+  {
+    title: 'Odak ve bellek',
+    text: '“Beyin sisi” benzeri tanımlar yaygındır; tek başına hormon yerine çok faktörlü bir okuma genelde daha doğrudur.',
+    href: '/zihin-denge/bellek-odaklanma-menopoz',
+  },
+  {
+    title: 'Belirtileri sınıflandırmak',
+    text: 'Sıcak basması, uyku, kilo ve cilt gibi başlıklarda semptom rehberi ile kendi haritanızı çıkarabilirsiniz.',
+    href: '/symptoms',
+  },
+];
+---
+
+<SiteLayout
+  title="Perimenopoz Rehberi — Hormonal Geçiş - Estranova"
+  description="Perimenopoz nedir, döngü ve ruh hali nasıl okunur? Temel rehber, seçilmiş makaleler ve Zihin & Denge bağlantılarıyla hormonal geçişin ilk evresi."
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · İlk evre"
+      title="Perimenopoz: menopoza giden geçiş yolu"
+      lede="Üreme çağından menopoza uzanan bu süreçte hormonlar dalgalanır; burada amaç panik değil, neyin ne zaman normal sınırlarda okunabileceğini netleştirmektir."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-6xl">
+        <nav class="mb-8 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li>
+              <a href="/hormonal-gecis" class="font-medium text-[#6B2D3E] hover:underline">Hormonal Geçiş</a>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li class="font-medium text-[#2D2D2D]">Perimenopoz</li>
+          </ol>
+        </nav>
+
+        <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
+          <div>
+            <p class="mb-5 text-lg leading-relaxed text-[#2D2D2D]/82 md:text-xl">
+              Perimenopoz, üreme çağından menopoza uzanan doğal sürecin adıdır. Hormonlar tek düz bir çizgide düşmez; dalgalanma,
+              döngüde düzensizlik, uyku ve ruh halinde dalgalanmalar sık görülür. Burada amaç panik değil,{' '}
+              <strong class="font-semibold text-[#2D2D2D]">neyin ne zaman normal sınırlarda okunabileceğini</strong> ve hangi başlıklarda bilgi
+              derinleştirmenin işe yarayacağını netleştirmektir.
+            </p>
+            <p class="text-base leading-relaxed text-[#2D2D2D]/72">
+              Aşağıda önce temel rehberi, ardından seçilmiş makaleleri ve günlük yaşam başlıklarına göre yönlendirmeleri bulacaksınız.
+              Tedavi veya ilaç kararı bu sayfada yer almaz; kişisel değerlendirme her zaman hekiminizle yapılır.
+            </p>
+          </div>
+
+          <aside
+            class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-sm md:p-8"
+            aria-labelledby="perimenopoz-ozet-baslik"
+          >
+            <h2 id="perimenopoz-ozet-baslik" class="mb-4 font-serif text-xl text-[#2D2D2D]">Bu evrede sık sorulanlar</h2>
+            <ul class="space-y-4 text-sm leading-relaxed text-[#2D2D2D]/78">
+              <li class="border-b border-[#6B2D3E]/10 pb-4">
+                <span class="block font-semibold text-[#2D2D2D]">Ne kadar sürer?</span>
+                Yaygın olarak birkaç yıl sürebilir; başlangıç yaşı ve belirti şiddeti kişiden kişiye değişir.
+              </li>
+              <li class="border-b border-[#6B2D3E]/10 pb-4">
+                <span class="block font-semibold text-[#2D2D2D]">Tek başına testle tanımlanır mı?</span>
+                Çoğu zaman öykü ve döngü izlemi önemlidir; gerektiğinde hekiminiz ek değerlendirme önerir.
+              </li>
+              <li>
+                <span class="block font-semibold text-[#2D2D2D]">Menopozdan farkı nedir?</span>
+                Perimenopoz geçiş dönemidir; menopoz ise son adetten sonra 12 ayın tamamlanmasıyla geriye dönük tanımlanır.
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured pillar -->
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <a
+          href="/hormonal-gecis/perimenopoz/perimenopoz-nedir"
+          class="group block overflow-hidden rounded-[32px] border border-[#6B2D3E]/18 bg-gradient-to-br from-[#6B2D3E] via-[#5c2640] to-[#4a1f35] p-8 text-white shadow-md transition hover:opacity-[0.98] md:p-12"
+        >
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.26em] text-white/85">Başlangıç rehberi</p>
+          <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Perimenopoz Nedir? — Temel Rehber</h2>
+          <p class="mb-6 max-w-3xl text-base leading-relaxed text-white/88 md:text-lg">
+            Tanım, hormonal arka plan, yaygın belirtiler ve günlük yaşamda yapılandırılmış bilginin önemi; tek sayfada dengeli bir giriş.
+          </p>
+          <span
+            class="inline-flex items-center text-sm font-semibold tracking-wide text-white underline decoration-white/40 underline-offset-4 group-hover:decoration-white"
+          >
+            Rehberi oku
+            <span class="ml-2 transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Articles grid -->
+    <section class="bg-[#F5EDE0]/60 px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Derinlemesine</p>
+          <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Seçilmiş makaleler</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Perimenopoz bağlamında sık tartışılan başlıklar; kanıt düzeyi ve editoryal çerçeve için makale içindeki şeffaflık bloklarına bakabilirsiniz.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {
+            articles.map((a) => (
+              <article class="flex flex-col rounded-[28px] border border-[#6B2D3E]/12 bg-white p-7 shadow-sm">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{a.tag}</p>
+                <h3 class="mb-3 font-serif text-xl leading-snug text-[#2D2D2D]">{a.title}</h3>
+                <p class="mb-6 flex-1 text-sm leading-relaxed text-[#2D2D2D]/72">{a.excerpt}</p>
+                <a href={a.href} class="mt-auto font-semibold text-[#6B2D3E] hover:underline">
+                  Makaleye git
+                </a>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Themes -->
+    <section class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 max-w-3xl">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Konuya göre</p>
+          <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yaşam başlıklarıyla okumak</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Hormonal geçiş yalnızca “kadın hastalıkları” kutusunda değildir; uyku, duygu düzeni ve günlük enerji aynı tablonun parçasıdır.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+          {
+            themes.map((t) => (
+              <a
+                href={t.href}
+                class="group rounded-[26px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm"
+              >
+                <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{t.title}</h3>
+                <p class="text-sm leading-relaxed text-[#2D2D2D]/72">{t.text}</p>
+                <span class="mt-4 inline-block text-sm font-semibold text-[#6B2D3E] group-hover:underline">İçeriği aç</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Neighboring stages -->
+    <section class="border-t border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <p class="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Geçişin devamı</p>
+        <h2 class="mb-8 font-serif text-2xl md:text-3xl">Komşu evreler</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <a
+            href="/hormonal-gecis/menopoza-hazirlik"
+            class="rounded-[28px] border border-[#6B2D3E]/12 bg-white p-8 transition hover:border-[#6B2D3E]/25"
+          >
+            <h3 class="mb-2 font-serif text-xl">Menopoza hazırlık</h3>
+            <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+              Rutin, hareket ve beslenme başlıklarında yapılandırılmış adımlar için içerik özetleri.
+            </p>
+            <span class="mt-4 inline-block font-semibold text-[#6B2D3E]">Sayfaya git →</span>
+          </a>
+          <a
+            href="/hormonal-gecis/menopoz"
+            class="rounded-[28px] border border-[#6B2D3E]/12 bg-white p-8 transition hover:border-[#6B2D3E]/25"
+          >
+            <h3 class="mb-2 font-serif text-xl">Menopoz</h3>
+            <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+              Son adetten sonra tanımlanan dönem ve sık okunan menopoz rehberleri.
+            </p>
+            <span class="mt-4 inline-block font-semibold text-[#6B2D3E]">Sayfaya git →</span>
+          </a>
+        </div>
+
+        <p class="mt-12 text-center">
+          <a href="/hormonal-gecis" class="font-semibold text-[#6B2D3E] hover:underline">← Hormonal Geçiş ana sayfa</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-10">
+      <div class="mx-auto max-w-4xl rounded-[20px] border border-[#6B2D3E]/12 p-6 text-center">
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu sayfa genel bilgilendirme sunar; belirtileriniz için bireysel tıbbi değerlendirme, tanı veya tedavi yerine geçmez.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -7,6 +7,9 @@ import {
   resolveSocialImageUrl,
   type OgType,
 } from '../utils/seo';
+import { isProductionLaunch } from '../utils/launch';
+
+const allowIndexing = isProductionLaunch();
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -68,7 +71,10 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalUrl} />
 
-    <meta name="robots" content="follow, index" />
+    <meta
+      name="robots"
+      content={allowIndexing ? 'index, follow, max-image-preview:large' : 'noindex, nofollow'}
+    />
     <meta name="theme-color" content="#7C2D58" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -101,6 +107,16 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
     >
       İçeriğe doğrudan geç
     </a>
+
+    {!allowIndexing && (
+      <div
+        role="status"
+        aria-live="polite"
+        class="sticky top-0 z-[100] border-b border-[#5a2640] bg-[#6B2D3E] px-4 py-2.5 text-center text-sm font-medium text-white"
+      >
+        Bu site geliştirme aşamasındadır; içerikler önizlemedir ve henüz kamuya yönelik yayın değildir.
+      </div>
+    )}
 
     <script src={mobileMenuScript} defer></script>
 

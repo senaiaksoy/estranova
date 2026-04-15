@@ -1,0 +1,46 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/zamansiz-yasam/non-invaziv']!;
+---
+
+<SiteLayout
+  title="Non-invaziv Uygulamalar - Estranova"
+  description="Cerrahi olmayan estetik ve dermatolojik uygulamalar hakkında bağımsız editoryal içerik planı."
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Non-invaziv"
+      title="Non-invaziv Uygulamalar"
+      lede="Bu alt başlık için ayrıntılı rehberler editoryal takvimde yer alıyor. Şimdilik cilt ve beden başlıklarında mevcut içeriklere aşağıdaki bağlantılardan ulaşabilirsiniz."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <ul class="space-y-4 text-lg">
+          <li>
+            <a href="/beden-yakinlik/menopozda-cilt-degisimleri" class="font-semibold text-[#6B2D3E] hover:underline"
+              >Menopozda Cilt Değişimleri</a
+            >
+          </li>
+          <li>
+            <a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">İçerik kütüphanesi</a>
+          </li>
+        </ul>
+
+        <p class="mt-10">
+          <a href="/zamansiz-yasam" class="font-semibold text-[#6B2D3E] hover:underline">← Zamansız Yaşam ana sayfa</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

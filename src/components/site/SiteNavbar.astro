@@ -1,20 +1,17 @@
 ---
+import { mainNav, isNavActive } from '../../data/navigation';
+
 interface Props {
   currentPath?: string;
 }
 
-const { currentPath = "/" } = Astro.props;
+const { currentPath = '/' } = Astro.props;
 
-const navLinks = [
-  { name: "Anasayfa", href: "/", label: "Ana sayfaya dön", role: "home" },
-  { name: "Hormonal Geçiş", href: "/hormonal-gecis", label: "Hormonal geçiş rehberi" },
-  { name: "Zamansız Yaşam", href: "/zamansiz-yasam", label: "Zamansız yaşam içerikleri" },
-  { name: "Beden & Yakınlık", href: "/beden-yakinlik", label: "Beden ve yakınlık" },
-  { name: "Zihin & Denge", href: "/zihin-denge", label: "Zihin ve denge" },
-  { name: "Bilimsel Pencere", href: "/bilimsel-pencere", label: "Bilimsel pencere" },
-  { name: "Hakkımızda", href: "/hakkimizda", label: "Platform hakkında" },
-  { name: "Yayın Kurulu", href: "/yayin-kurulu", label: "Editoryal ekip ve danışmanlar" },
-];
+const linkBase =
+  'text-sm font-medium transition-colors px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary';
+
+const mobileLinkBase =
+  'text-base font-serif py-2.5 px-4 rounded-lg text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary';
 ---
 
 <nav
@@ -29,24 +26,85 @@ const navLinks = [
       aria-label="ESTRANOVA Ana Sayfası"
     >
       <span>ESTRANOVA</span>
-      <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1">EDİTORYAL SAĞLIK PLATFORMU</span>
+      <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1 block"
+        >EDİTORYAL SAĞLIK PLATFORMU</span
+      >
     </a>
 
-    <nav aria-label="Ana menü" class="hidden md:flex items-center gap-6">
-      {navLinks.map((link) => (
-        <a
-          href={link.href}
-          class:list={[
-            "text-sm font-medium transition-colors px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary",
-            currentPath === link.href ? "text-primary font-semibold" : "text-charcoal/60 hover:text-primary",
-          ]}
-          aria-current={currentPath === link.href ? "page" : undefined}
-          title={link.label}
-          aria-label={link.name}
-        >
-          {link.name}
-        </a>
-      ))}
+    <nav aria-label="Ana menü" class="hidden md:flex items-center gap-1 lg:gap-2">
+      {
+        mainNav.map((item) => {
+          const active = isNavActive(currentPath, item);
+          const activeClass = active ? 'text-primary font-semibold' : 'text-charcoal/60 hover:text-primary';
+
+          if (!item.children) {
+            return (
+              <a
+                href={item.href}
+                class:list={[linkBase, activeClass]}
+                aria-current={active ? 'page' : undefined}
+                title={item.label}
+              >
+                {item.name}
+              </a>
+            );
+          }
+
+          return (
+            <div class="group relative">
+              <span class="flex items-center gap-0.5">
+                <a
+                  href={item.href}
+                  class:list={[linkBase, activeClass]}
+                  aria-current={active ? 'page' : undefined}
+                  title={item.label}
+                >
+                  {item.name}
+                </a>
+                <span
+                  class:list={[
+                    'pointer-events-none inline-flex h-7 w-4 shrink-0 items-center justify-center text-charcoal/45 group-hover:text-primary',
+                    active ? 'text-primary' : '',
+                  ]}
+                  aria-hidden="true"
+                >
+                  <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden="true">
+                    <path d="M1 4l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+                  </svg>
+                </span>
+              </span>
+              <div
+                class="invisible absolute left-0 top-full z-[60] min-w-[13.5rem] pt-2 opacity-0 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+                role="group"
+                aria-label={`${item.name} alt menü`}
+              >
+                <div class="rounded-xl border border-primary/15 bg-surface py-2 shadow-lg">
+                  {
+                    item.children.map((child) => {
+                      const subActive =
+                        currentPath === child.href || currentPath.startsWith(`${child.href}/`);
+                      return (
+                        <a
+                          href={child.href}
+                          class:list={[
+                            'block px-4 py-2.5 text-sm transition-colors',
+                            subActive
+                              ? 'bg-primary/8 font-semibold text-primary'
+                              : 'text-charcoal/85 hover:bg-primary/5 hover:text-primary',
+                          ]}
+                          aria-current={subActive ? 'page' : undefined}
+                        >
+                          {child.name}
+                        </a>
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
     </nav>
 
     <button
@@ -58,39 +116,87 @@ const navLinks = [
       onclick="mobileMenu.toggle(this)"
     >
       <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
       </svg>
     </button>
 
     <div
       id="mobile-menu"
-      class="absolute top-full left-0 right-0 hidden bg-surface border-y border-primary/10 shadow-xl p-4 md:hidden flex-col gap-2"
+      class="absolute top-full left-0 right-0 hidden max-h-[min(80vh,560px)] overflow-y-auto bg-surface border-y border-primary/10 shadow-xl p-3 md:hidden flex-col gap-2"
       role="menu"
       aria-hidden="true"
     >
-      {navLinks.map((link) => (
-        <a
-          href={link.href}
-          class:list={[
-            "text-base font-serif py-3 px-4 rounded-lg text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary",
-            currentPath === link.href ? "bg-primary/10 text-primary font-semibold" : "text-charcoal hover:bg-primary/5",
-          ]}
-          role="menuitem"
-          aria-current={currentPath === link.href ? "page" : undefined}
-          aria-expanded="false"
-        >
-          {link.name}
-        </a>
-      ))}
+      {
+        mainNav.map((item) => {
+          const active = isNavActive(currentPath, item);
+
+          if (!item.children) {
+            return (
+              <a
+                href={item.href}
+                class:list={[
+                  mobileLinkBase,
+                  active ? 'bg-primary/10 text-primary font-semibold' : 'text-charcoal hover:bg-primary/5',
+                ]}
+                role="menuitem"
+                aria-current={active ? 'page' : undefined}
+              >
+                {item.name}
+              </a>
+            );
+          }
+
+          return (
+            <details class="rounded-xl border border-primary/10 overflow-hidden" open={active}>
+              <summary
+                class="cursor-pointer list-none px-4 py-3 font-serif font-medium text-charcoal bg-primary/5 hover:bg-primary/10 [&::-webkit-details-marker]:hidden flex items-center justify-between"
+              >
+                <span>{item.name}</span>
+                <span class="text-charcoal/40 text-xs" aria-hidden="true">
+                  ▼
+                </span>
+              </summary>
+              <div class="flex flex-col border-t border-primary/10 bg-surface py-1" role="group">
+                <a
+                  href={item.href}
+                  class:list={[
+                    'text-sm py-2.5 px-4 border-b border-primary/5',
+                    currentPath === item.href
+                      ? 'font-semibold text-primary bg-primary/5'
+                      : 'text-charcoal/90 hover:bg-primary/5',
+                  ]}
+                  role="menuitem"
+                >
+                  Tümü — {item.name}
+                </a>
+                {
+                  item.children.map((child) => {
+                    const subActive =
+                      currentPath === child.href || currentPath.startsWith(`${child.href}/`);
+                    return (
+                      <a
+                        href={child.href}
+                        class:list={[
+                          'text-sm py-2.5 px-4 pl-6',
+                          subActive
+                            ? 'font-semibold text-primary bg-primary/5'
+                            : 'text-charcoal/85 hover:bg-primary/5',
+                        ]}
+                        role="menuitem"
+                        aria-current={subActive ? 'page' : undefined}
+                      >
+                        {child.name}
+                      </a>
+                    );
+                  })
+                }
+              </div>
+            </details>
+          );
+        })
+      }
     </div>
   </div>
 </nav>
-
-<style>
-  summary::-webkit-details-marker {
-    display: none;
-  }
-</style>
-

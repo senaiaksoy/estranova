@@ -2,6 +2,10 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/bilimsel-pencere']!;
 ---
 
 <SiteLayout
@@ -10,21 +14,16 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 >
   <SiteNavbar currentPath="/bilimsel-pencere" />
 
-  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Kategori"
+      title="Bilimsel Pencere"
+      lede="Uzman görüşleri, güncel araştırma özetleri ve mitlerin bilimle karşılaştırılması. Tıbbi veriyi erişilebilir bir dille sunarız."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
     <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
-        <header class="mb-12 max-w-4xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.26em] text-[#6B2D3E]">Kategori</p>
-          <h1 class="mb-6 font-serif text-5xl leading-[1.06] md:text-7xl">Bilimsel Pencere</h1>
-          <p class="mb-4 text-lg leading-relaxed text-[#2D2D2D]/80 md:text-xl">
-            Uzman görüşleri, güncel araştırma özetleri ve sağlık dünyasının yaygın mitlerinin bilimsel gerçeklerle karşılaştırılması.
-          </p>
-          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Bu bölüm, tıbbi veriyi erişilebilir bir dille sunar. Amaç, bilimsel derinliği korurken okurun konuyu
-            daha açık ve dengeli biçimde değerlendirmesine yardımcı olmaktır.
-          </p>
-        </header>
-
         <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
           <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
             <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
