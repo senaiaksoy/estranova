@@ -38,3 +38,12 @@ Adim 5 - Final:
 - `newsletter.md`
 - `factcheck-report.md`
 - `compliance-report.md`
+
+## Capraz Referans
+
+Bu dosya operasyonel akisi anlatir.
+Mimari cerceve, risk seviyeleri ve Human Review kurallari icin:
+- `docs/orchestrator.md`
+
+Kaynak-dogruluk sorumluluk dagilimi icin:
+- `docs/orchestrator.md` -> "Kaynak dogruluk matrisi"
