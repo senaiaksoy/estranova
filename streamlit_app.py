@@ -10,6 +10,12 @@ import streamlit as st
 from dotenv import load_dotenv
 
 from main import build_graph, ensure_runtime_dependencies
+from reader_guide import (
+    format_recommendations_markdown,
+    list_age_options,
+    list_symptom_options,
+    recommend,
+)
 from state import EstranovaState, initialize_state
 
 
@@ -210,13 +216,57 @@ def render_output_history() -> None:
         st.json({k: v for k, v in selected.items() if not k.startswith("_")})
 
 
+def render_reader_guide_tab() -> None:
+    st.subheader("Okuyucu Rehberi")
+    st.caption("2 kisa soru — kural tabanli oneriler (AI kullanilmaz).")
+
+    st.markdown("**Soru 1:** Hangi yas araliginda okumak istersiniz?")
+    age_keys = [k for k, _ in list_age_options()]
+    age_labels = {k: lab for k, lab in list_age_options()}
+    age_choice = st.radio(
+        "Yas araligi",
+        options=age_keys,
+        format_func=lambda k: age_labels[k],
+        horizontal=True,
+        key="reader_age",
+        label_visibility="collapsed",
+    )
+
+    st.markdown("**Soru 2:** Su aralar en cok hangi konuda icerik okumak istersiniz?")
+    sym_keys = [k for k, _ in list_symptom_options()]
+    sym_labels = {k: lab for k, lab in list_symptom_options()}
+    symptom_choice = st.selectbox(
+        "Semptom / konu",
+        options=sym_keys,
+        format_func=lambda k: sym_labels[k],
+        key="reader_symptom",
+        label_visibility="collapsed",
+    )
+
+    if st.button("Onerileri goster", key="reader_show"):
+        result = recommend(age_choice, symptom_choice)
+        st.markdown("### Sizin için önerilen içerikler")
+        st.info(result["age_note"])
+        for art in result["articles"]:
+            with st.container():
+                st.markdown(f"**{art['title']}** · ~{art['read_minutes']} dk okuma")
+                st.caption(art["summary"])
+        st.download_button(
+            label="Oneri listesini indir (.md)",
+            data=format_recommendations_markdown(result),
+            file_name=f"estranova-okuyucu-rehberi-{age_choice}-{symptom_choice}.md",
+            mime="text/markdown",
+            key="reader_download_md",
+        )
+
+
 def main() -> None:
     st.set_page_config(page_title="Estranova Content Studio", layout="wide")
     st.title("Estranova Icerik Uretim Merkezi")
     st.caption("Konuyu girin, akisi canli izleyin, final makaleyi indirin.")
 
     with st.sidebar:
-        st.subheader("Ayarlar")
+        st.subheader("Icerik uretimi ayarlari")
         audience = st.text_input("Hedef kitle", value="40+ kadinlar")
         content_goal = st.text_input(
             "Icerik hedefi",
@@ -224,55 +274,61 @@ def main() -> None:
         )
         risk_level = st.selectbox("Risk seviyesi", options=["low", "medium", "high"], index=1)
 
-    topic = st.text_input("Konu", placeholder="Orn: Magnezyum ve kadin sagligi")
-    run_button = st.button("Icerik Uret")
+    tab_producer, tab_reader = st.tabs(["Icerik uretimi", "Okuyucu Rehberi"])
 
-    if run_button:
-        if not topic.strip():
-            st.error("Lutfen once bir konu girin.")
-            return
+    with tab_producer:
+        topic = st.text_input("Konu", placeholder="Orn: Magnezyum ve kadin sagligi")
+        run_button = st.button("Icerik Uret")
 
-        logs_box = st.empty()
-        status_box = st.empty()
+        if run_button:
+            if not topic.strip():
+                st.error("Lutfen once bir konu girin.")
+                return
 
-        final_state: dict[str, Any] | None = None
-        try:
-            for message in run_pipeline(topic, audience, content_goal, risk_level):
-                logs = message["logs"]
-                logs_box.code("\n".join(logs[-30:]) or "Akis baslatildi...")
+            logs_box = st.empty()
+            status_box = st.empty()
 
-                if message["type"] == "progress":
-                    status_box.info("Akis calisiyor...")
-                elif message["type"] == "done":
-                    status_box.success("Akis tamamlandi.")
-                    final_state = message["state"]
-        except Exception as exc:
-            st.error(str(exc))
-            return
+            final_state: dict[str, Any] | None = None
+            try:
+                for message in run_pipeline(topic, audience, content_goal, risk_level):
+                    logs = message["logs"]
+                    logs_box.code("\n".join(logs[-30:]) or "Akis baslatildi...")
 
-        if not final_state:
-            st.error("Final state alinamadi.")
-            return
+                    if message["type"] == "progress":
+                        status_box.info("Akis calisiyor...")
+                    elif message["type"] == "done":
+                        status_box.success("Akis tamamlandi.")
+                        final_state = message["state"]
+            except Exception as exc:
+                st.error(str(exc))
+                return
 
-        article = extract_article(final_state)
-        decision = final_state.get("compliance", {}).get("final_decision", "unknown")
-        st.subheader("Final Makale")
-        st.write(f"Final karar: `{decision}`")
-        st.markdown(article)
+            if not final_state:
+                st.error("Final state alinamadi.")
+                return
 
-        filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slugify_topic(topic)}.md"
-        st.download_button(
-            label="Makaleyi Indir (.md)",
-            data=article,
-            file_name=filename,
-            mime="text/markdown",
-        )
+            article = extract_article(final_state)
+            decision = final_state.get("compliance", {}).get("final_decision", "unknown")
+            st.subheader("Final Makale")
+            st.write(f"Final karar: `{decision}`")
+            st.markdown(article)
 
-        with st.expander("Ham cikti (JSON)"):
-            st.json(final_state)
+            filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slugify_topic(topic)}.md"
+            st.download_button(
+                label="Makaleyi Indir (.md)",
+                data=article,
+                file_name=filename,
+                mime="text/markdown",
+            )
 
-    st.divider()
-    render_output_history()
+            with st.expander("Ham cikti (JSON)"):
+                st.json(final_state)
+
+        st.divider()
+        render_output_history()
+
+    with tab_reader:
+        render_reader_guide_tab()
 
 
 if __name__ == "__main__":

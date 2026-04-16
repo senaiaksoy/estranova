@@ -5,6 +5,7 @@ Ornekler:
   py app.py run "konu" --pretty
   py app.py ui
   py app.py dashboard --last 7
+  py app.py guide --age 45-50 --symptom uyku
   py app.py setup
 """
 
@@ -50,6 +51,20 @@ def main() -> None:
 
     sub.add_parser("setup", help="Bagimliliklari yukle (pip install -r requirements.txt)")
 
+    p_guide = sub.add_parser("guide", help="Okuyucu Rehberi onerileri (terminal, kural tabanli)")
+    p_guide.add_argument(
+        "--age",
+        choices=["40-45", "45-50", "50+"],
+        required=True,
+        help="Yas araligi",
+    )
+    p_guide.add_argument(
+        "--symptom",
+        choices=["beyin_sisi", "uyku", "cilt", "kemik"],
+        required=True,
+        help="Semptom / ilgi alani",
+    )
+
     args = parser.parse_args()
 
     py = sys.executable
@@ -89,6 +104,13 @@ def main() -> None:
         else:
             print("[ERR] pip install basarisiz.", file=sys.stderr)
         raise SystemExit(rc)
+
+    if args.command == "guide":
+        from reader_guide import format_recommendations_markdown, recommend
+
+        result = recommend(args.age, args.symptom)
+        print(format_recommendations_markdown(result))
+        raise SystemExit(0)
 
     raise SystemExit(2)
 
