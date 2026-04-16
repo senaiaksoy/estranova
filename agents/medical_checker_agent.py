@@ -1,52 +1,73 @@
 from __future__ import annotations
 
-from state import EstranovaState, FactcheckReport, FlaggedClaim, append_history
+import json
+from typing import Any
+
+from state import EstranovaState, append_history
 
 from .base import PromptBackedAgent
 
 
+def _truncate(text: str, max_chars: int) -> str:
+    if len(text) <= max_chars:
+        return text
+    return text[:max_chars] + "..."
+
+
 class MedicalCheckerAgent(PromptBackedAgent):
     def __init__(self) -> None:
-        super().__init__("medical_checker_prompt.txt")
+        super().__init__("prompts/factcheck-agent.md")
 
     def run(self, state: EstranovaState) -> EstranovaState:
-        flagged: list[FlaggedClaim] = list(state.get("flagged_claims", []))
-        summary: list[dict[str, str]] = []
-        article = state["draft"]["article"].lower()
+        # Prepare compact inputs to reduce token load.
+        article = state["draft"]["article"]
+        social_post = state["draft"]["social_post"]
+        newsletter = state["draft"]["newsletter"]
 
+        approved_sources = state.get("approved_sources", [])
+        key_claims = state.get("key_claims", [])
+        claim_trace = state.get("claim_trace", [])
+        risk_level = state.get("risk_level_current", state.get("risk_level_initial", "medium"))
+
+        user_payload: dict[str, Any] = {
+            "draft_content": {
+                "article": _truncate(article, 8000),
+                "social_post": _truncate(social_post, 3000),
+                "newsletter": _truncate(newsletter, 3000),
+            },
+            "claim_trace": claim_trace,
+            "approved_sources": approved_sources[:8],
+            "key_claims": key_claims[:12],
+            "risk_level": risk_level,
+        }
+
+        try:
+            result = self.call_llm_json(
+                role="checker",
+                user_payload=json.dumps(user_payload, ensure_ascii=False),
+                state_for_logging=state,
+            )
+        except Exception as exc:
+            raise RuntimeError(f"MedicalCheckerAgent LLM call failed: {exc}") from exc
+
+        # Update key claim statuses.
+        by_id = {item["id"]: item for item in result.get("key_claims", [])}
         for claim in state["key_claims"]:
-            status = "supported"
-            if claim["id"] not in {trace["claim_id"] for trace in state["claim_trace"]}:
-                status = "unsupported"
-                flagged.append(
-                    FlaggedClaim(
-                        claim_id=claim["id"],
-                        reason="Claim trace eksik.",
-                        severity="high",
-                        text_ref="draft",
-                    )
-                )
-            claim["status"] = status
-            summary.append({"claim_id": claim["id"], "status": status})
+            if claim["id"] in by_id:
+                claim["status"] = by_id[claim["id"]].get("status", "draft")
 
-        for banned in ["mucize", "kesin cozum", "tamamen tedavi", "hastaligi bitirir"]:
-            if banned in article:
-                flagged.append(
-                    FlaggedClaim(
-                        claim_id="unsupported_from_text",
-                        reason=f"Kanita dayanmayan abartili ifade bulundu: {banned}",
-                        severity="high",
-                        text_ref="article",
-                    )
-                )
+        state["flagged_claims"] = result.get("flagged_claims", [])
 
-        state["flagged_claims"] = flagged
-        state["factcheck_report"] = FactcheckReport(
-            key_claims_summary=summary,
-            notes="Iddia-kanit uyumu kontrol edildi. Abartili veya kaynak disi ifade aranip isaretlendi.",
-        )
-        if any(item["severity"] == "high" for item in flagged):
+        # factcheck_report in state schema expects list+notes.
+        state["factcheck_report"] = {
+            "key_claims_summary": result.get("key_claims", []),
+            "notes": result.get("factcheck_report", ""),
+        }
+
+        human_review_signal = bool(result.get("human_review_required", False))
+        if human_review_signal:
             state["human_review_required"] = True
             state["risk_level_current"] = "high"
-        append_history(state, "validation", f"{len(flagged)} flagged claim bulundu.")
+
+        append_history(state, "validation", "Medical checker LLM raporu alindi.")
         return state

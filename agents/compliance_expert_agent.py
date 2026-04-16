@@ -1,97 +1,82 @@
 from __future__ import annotations
 
+import json
+from typing import Any
+
 from state import ComplianceBlock, EstranovaState, FinalApprover, Violation, append_history, now_iso
 
 from .base import PromptBackedAgent
 
 
-DISCLAIMER_FRAGMENT = "doktorunuza"
-BANNED_TERMS = [
-    "mucize",
-    "kesin cozum",
-    "iyilestirir",
-    "hastaligi bitirir",
-    "garanti eder",
-    "tamamen tedavi eder",
-    "kesin sonuc verir",
-]
-PLAZA_TERMS = ["focuslanmak", "push etmek", "aksiyon almak", "case bazli", "skalalamak", "optimize etmek"]
-
-
 class ComplianceExpertAgent(PromptBackedAgent):
     def __init__(self) -> None:
-        super().__init__("compliance_expert_prompt.txt")
+        super().__init__("prompts/compliance-agent.md")
 
     def run(self, state: EstranovaState) -> EstranovaState:
-        text_blob = " ".join(state["draft"].values()).lower()
+        draft = state["draft"]
+        flagged_claims = state.get("flagged_claims", [])
+        factcheck_report = state.get("factcheck_report", {})
+        risk_level = state.get("risk_level_current", state.get("risk_level_initial", "medium"))
+        disclaimer_needed = bool(state.get("disclaimer_needed", True))
+
+        user_payload: dict[str, Any] = {
+            "risk_level": risk_level,
+            "draft_content": {
+                "article": draft.get("article", ""),
+                "social_post": draft.get("social_post", ""),
+                "newsletter": draft.get("newsletter", ""),
+            },
+            "flagged_claims": flagged_claims,
+            "disclaimer_needed": disclaimer_needed,
+            "factcheck_report": factcheck_report,
+        }
+
+        try:
+            result = self.call_llm_json(
+                role="compliance",
+                user_payload=json.dumps(user_payload, ensure_ascii=False),
+                state_for_logging=state,
+            )
+        except Exception as exc:
+            raise RuntimeError(f"ComplianceExpertAgent LLM call failed: {exc}") from exc
+
+        risk_findings = result.get("risk_findings", [])
         violations: list[Violation] = []
         required_fixes: list[str] = []
-
-        for term in BANNED_TERMS:
-            if term in text_blob:
-                violations.append(
-                    Violation(
-                        type="overpromise",
-                        severity="critical",
-                        text_ref=term,
-                        rule_id="red_flag.overpromise",
-                        fix_suggestion=f"`{term}` ifadesini kaldir ve notr bir cumle kullan.",
-                    )
-                )
-                required_fixes.append(f"`{term}` ifadesini kaldir.")
-
-        if DISCLAIMER_FRAGMENT not in text_blob:
+        for item in risk_findings:
             violations.append(
                 Violation(
-                    type="disclaimer_gap",
-                    severity="critical",
-                    text_ref="disclaimer_missing",
-                    rule_id="red_flag.disclaimer",
-                    fix_suggestion="Metne standart yasal uyari ve 'Doktorunuza danisin' yonlendirmesini ekle.",
+                    type=item.get("type", "regulation_risk"),
+                    severity=item.get("severity", "medium"),
+                    text_ref=item.get("text_ref", ""),
+                    rule_id=f"strict.{item.get('type', 'rule')}",
+                    fix_suggestion=item.get("fix_suggestion", ""),
                 )
             )
-            required_fixes.append("Standart disclaimer ve 'Doktorunuza danisin' ifadesini ekle.")
+            if item.get("fix_suggestion"):
+                required_fixes.append(item["fix_suggestion"])
 
-        for term in PLAZA_TERMS:
-            if term in text_blob:
-                violations.append(
-                    Violation(
-                        type="ad_language",
-                        severity="critical",
-                        text_ref=term,
-                        rule_id="red_flag.plaza",
-                        fix_suggestion=f"`{term}` yerine sade Turkce kullan.",
-                    )
-                )
-                required_fixes.append(f"`{term}` yerine sade Turkce kullan.")
+        required_fixes = result.get("required_fixes", required_fixes)
 
-        for paragraph in state["draft"]["article"].splitlines():
-            if paragraph.count(" ") >= 19:
-                violations.append(
-                    Violation(
-                        type="readability_risk",
-                        severity="medium",
-                        text_ref=paragraph[:80],
-                        rule_id="red_flag.long_sentence",
-                        fix_suggestion="Cumleyi 20 kelimenin altina indirecek sekilde bol.",
-                    )
-                )
-                required_fixes.append("Uzun cumleleri kisalt.")
-                break
+        final_decision_raw = result.get("final_decision", "revizyon_gerekli")
+        if final_decision_raw == "yayina_hazir":
+            final_decision = "ready_to_publish"
+        else:
+            final_decision = "revision_required"
 
-        compliance_score = max(0, 100 - (len(violations) * 18))
-        decision = "ready_to_publish" if not any(v["severity"] == "critical" for v in violations) else "revision_required"
-
-        if decision != "ready_to_publish":
+        human_review_required = bool(result.get("human_review_required", False))
+        if human_review_required:
             state["human_review_required"] = True
             state["risk_level_current"] = "high"
 
         state["violations"] = violations
         state["compliance"] = ComplianceBlock(
-            compliance_score=compliance_score,
+            compliance_score=int(result.get("compliance_score", 0)),
             required_fixes=required_fixes,
-            final_decision=decision,
+            final_decision=final_decision,
             final_approver=FinalApprover(type="agent", name=self.name, timestamp=now_iso()),
         )
-        append_history(state, "compliance", f"Compliance karari: {decision}.")
+        state["disclaimer_needed"] = bool(result.get("disclaimer_needed", disclaimer_needed))
+
+        append_history(state, "compliance", f"Compliance LLM karari: {final_decision}.")
         return state

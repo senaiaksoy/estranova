@@ -88,6 +88,18 @@ def main() -> None:
         "final_decision": result["compliance"]["final_decision"],
         "publisher_output": result.get("publisher_output", {}),
         "state_history": result.get("state_history", []),
+        "llm_calls": result.get("llm_calls", []),
+        "quality_assessment": {
+            "compliance_score": result.get("compliance", {}).get("compliance_score", None),
+            "critical_violations": len(
+                [v for v in result.get("violations", []) if v.get("severity") == "critical"]
+            ),
+            "final_article_quality": (
+                "high"
+                if result["compliance"]["final_decision"] == "ready_to_publish"
+                else "needs_revision"
+            ),
+        },
     }
     if args.pretty:
         print(json.dumps(payload, ensure_ascii=False, indent=2))

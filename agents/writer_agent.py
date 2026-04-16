@@ -1,64 +1,94 @@
 from __future__ import annotations
 
+import json
+
 from state import ClaimTrace, DraftContent, EstranovaState, append_history
 
 from .base import PromptBackedAgent
 
 
-DISCLAIMER = (
-    "Bu icerik yalnizca bilgilendirme amaclidir. Tibbi tavsiye, teshis veya tedavi yerine "
-    "gecmez. Saglik durumunuzla ilgili sorulariniz icin lutfen doktorunuza veya diger "
-    "nitelikli saglik uzmanlarina danisin."
-)
-
-
 class WriterAgent(PromptBackedAgent):
     def __init__(self) -> None:
-        super().__init__("writer_prompt.txt")
+        # Writer system prompt'u repo root /prompts klasoründen okunur.
+        super().__init__("prompts/writer-agent.md")
 
     def run(self, state: EstranovaState) -> EstranovaState:
         topic = state["topic"]
-        claim_one = state["key_claims"][0]["text"]
-        claim_two = state["key_claims"][1]["text"]
-        claim_three = state["key_claims"][2]["text"]
+        audience = state.get("audience", "40+ kadinlar")
+        content_goal = state.get("content_goal", "")
+        disclaimer_needed = bool(state.get("disclaimer_needed", True))
+        risk_level = state.get("risk_level_current", state.get("risk_level_initial", "medium"))
 
-        article = (
-            f"# {topic}\n\n"
-            "## Kisa Ozet\n"
-            "Bu rehber, gece terlemeleri ve odakli rahatlama adimlarini sakin bir dille anlatir. "
-            "Buradaki bilgiler genel yonlendirme icindir.\n\n"
-            "## Destekleyici gunluk adimlar\n"
-            f"{claim_one}\n\n"
-            "## Olasi tetikleyicileri fark etmek\n"
-            f"{claim_two}\n\n"
-            "## Uyku zorlugu surerse neler dusunulebilir?\n"
-            f"{claim_three}\n\n"
-            "## Ne zaman destek almak mantikli olur?\n"
-            "Sikayetler suruyorsa veya gunluk yasami belirgin etkiliyorsa doktorunuza danisin.\n\n"
-            f"**Yasal Uyari:** {DISCLAIMER}"
+        approved_sources = state.get("approved_sources", [])
+        key_claims = state.get("key_claims", [])
+
+        user_payload = {
+            "topic": topic,
+            "audience": audience,
+            "content_goal": content_goal,
+            "risk_level": risk_level,
+            "approved_sources": approved_sources,
+            "key_claims": key_claims,
+            "disclaimer_needed": disclaimer_needed,
+        }
+
+        try:
+            result = self.call_llm_json(
+                role="writer",
+                user_payload=json.dumps(user_payload, ensure_ascii=False),
+                state_for_logging=state,
+            )
+        except Exception as exc:
+            raise RuntimeError(f"WriterAgent LLM call failed: {exc}") from exc
+
+        draft_content = result.get("draft_content", {})
+
+        standard_disclaimer = (
+            "Bu içerik yalnızca bilgilendirme amaçlıdır. Tıbbi tavsiye, teşhis veya tedavi yerine geçmez. "
+            "Sağlık durumunuzla ilgili sorularınız için lütfen doktorunuza veya diğer nitelikli sağlık uzmanlarına danışın."
         )
 
-        social_post = (
-            f"{topic} yasayan kisiler icin serin ortam, tetikleyici farkindaligi ve uyku odakli "
-            "destekler bazen yararli olabilir. Ayrintilar icin rehberi inceleyin.\n\n"
-            "Doktorunuza danisin."
+        def ensure_disclaimer(text: str) -> str:
+            if not text:
+                return standard_disclaimer
+            if "bilgilendirme amaçlıdır" not in text.lower():
+                # Artirilacak metni saga ekle; sosyal/bulten metnini bozmamak icin kisa tut.
+                return text.rstrip() + "\n\n" + standard_disclaimer
+            return text
+
+        article_text = draft_content.get("article", "")
+        social_text = draft_content.get("social_post", "")
+        newsletter_text = draft_content.get("newsletter", "")
+
+        if disclaimer_needed:
+            article_text = ensure_disclaimer(article_text)
+            # Sosyal ve bulten icin de güvenlik cizerini koruyoruz (opsiyonel ama pratik).
+            social_text = ensure_disclaimer(social_text)
+            newsletter_text = ensure_disclaimer(newsletter_text)
+
+            if "doktorunuza" not in article_text.lower():
+                article_text = article_text.rstrip() + " Doktorunuza danışın."
+
+        state["draft"] = DraftContent(
+            article=article_text,
+            social_post=social_text,
+            newsletter=newsletter_text,
         )
 
-        newsletter = (
-            f"Konu: {topic}\n\n"
-            "Merhaba,\n\n"
-            "Bu haftaki icerigimizde gece terlemeleriyle ilgili destekleyici adimlari, tetikleyici "
-            "farkindaligini ve uyku odakli yaklasimlari sade bir dille ele aldik.\n\n"
-            "Icerigi inceleyin.\n\n"
-            "Doktorunuza danisin.\n\n"
-            f"{DISCLAIMER}"
-        )
-
-        state["draft"] = DraftContent(article=article, social_post=social_post, newsletter=newsletter)
+        claim_trace_in = result.get("claim_trace", [])
         state["claim_trace"] = [
-            ClaimTrace(claim_id="claim_1", content_refs=["article:Destekleyici gunluk adimlar"]),
-            ClaimTrace(claim_id="claim_2", content_refs=["article:Olasi tetikleyicileri fark etmek"]),
-            ClaimTrace(claim_id="claim_3", content_refs=["article:Uyku zorlugu surerse neler dusunulebilir?"]),
+            ClaimTrace(
+                claim_id=item["claim_id"],
+                content_refs=item.get("content_refs", []),
+            )
+            for item in claim_trace_in
         ]
-        append_history(state, "writer", "Makale, sosyal medya ve bulten taslaklari uretildi.")
+
+        state["flagged_claims"] = result.get("flagged_claims", [])
+
+        if result.get("human_review_required"):
+            state["human_review_required"] = True
+            state["risk_level_current"] = "high"
+
+        append_history(state, "writer", "Writer LLM ciktilari state'e alindi.")
         return state

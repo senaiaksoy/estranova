@@ -97,6 +97,14 @@ class InternalSource(TypedDict):
     content: str
 
 
+class LLMCall(TypedDict):
+    agent: str
+    role: str
+    provider: str
+    model: str
+    response_length_chars: int
+
+
 class EstranovaState(TypedDict, total=False):
     state_version: str
     run_id: str
@@ -111,6 +119,7 @@ class EstranovaState(TypedDict, total=False):
     human_review_required: bool
     external_search_needed: bool
     internal_sources: list[InternalSource]
+    llm_calls: list[LLMCall]
     approved_sources: list[Source]
     key_claims: list[Claim]
     finding_vs_commentary: list[FindingCommentary]
@@ -149,6 +158,7 @@ def initialize_state(
         human_review_required=(risk_level == "high"),
         external_search_needed=False,
         internal_sources=[],
+        llm_calls=[],
         approved_sources=[],
         key_claims=[],
         finding_vs_commentary=[],
