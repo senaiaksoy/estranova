@@ -150,9 +150,18 @@ def render_output_history() -> None:
     total_pages = max(1, (len(filtered) + page_size - 1) // page_size)
     if "history_page" not in st.session_state:
         st.session_state.history_page = 1
-    st.session_state.history_page = min(max(1, int(st.session_state.history_page)), total_pages)
+    try:
+        st.session_state.history_page = int(st.session_state.history_page)
+    except (TypeError, ValueError):
+        st.session_state.history_page = 1
+    st.session_state.history_page = min(max(1, st.session_state.history_page), total_pages)
     if "history_selected_idx" not in st.session_state:
         st.session_state.history_selected_idx = 0
+    else:
+        try:
+            st.session_state.history_selected_idx = int(st.session_state.history_selected_idx)
+        except (TypeError, ValueError):
+            st.session_state.history_selected_idx = 0
 
     pcol1, pcol2, pcol3 = st.columns([1, 1, 3])
     if pcol1.button("Onceki", disabled=st.session_state.history_page <= 1, key="history_prev_page"):
@@ -201,15 +210,21 @@ def render_output_history() -> None:
         f"{item.get('generated_at', 'unknown')} | {item.get('status', 'unknown')} | {item.get('topic', 'N/A')}"
         for item in page_items
     ]
-    if st.session_state.history_selected_idx >= len(page_items):
+    n_items = len(page_items)
+    try:
+        cur = int(st.session_state.history_selected_idx)
+    except (TypeError, ValueError):
+        cur = 0
+        st.session_state.history_selected_idx = 0
+    if cur >= n_items:
         st.session_state.history_selected_idx = 0
     selected_idx = st.selectbox(
         "Kayit sec",
-        options=range(len(page_items)),
+        options=range(n_items),
         format_func=lambda i: labels[i],
         key="history_selected_idx",
     )
-    selected = page_items[selected_idx]
+    selected = page_items[int(selected_idx)]
 
     c1, c2, c3 = st.columns(3)
     c1.metric("Status", str(selected.get("status", "unknown")))
