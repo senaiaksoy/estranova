@@ -1,0 +1,77 @@
+---
+import type { SubmenuHeroImage } from '../../data/submenu-heroes';
+
+interface Props {
+  hero: SubmenuHeroImage;
+}
+
+const { hero } = Astro.props;
+---
+
+<section class="relative isolate min-h-[min(56vh,640px)] w-full overflow-hidden" aria-labelledby="home-hero-title">
+  <img
+    src={hero.src}
+    alt={hero.alt}
+    width="1800"
+    height="1000"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#1a1210]/96 via-[#1c1412]/78 to-[#2a1815]/35"></div>
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/88 via-transparent to-[#1c1412]/15"></div>
+
+  <div
+    class="relative z-10 mx-auto flex min-h-[min(56vh,640px)] max-w-6xl flex-col justify-end px-6 pb-12 pt-28 md:justify-center md:pb-16 md:pt-32 lg:pb-20"
+  >
+    <div class="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-14">
+      <div class="lg:col-span-7">
+        <p class="text-xs font-bold uppercase tracking-[0.26em] text-[#F5EDE0]/90">Estranova</p>
+        <h1 id="home-hero-title" class="mt-3 font-serif text-4xl leading-[1.08] text-white md:text-6xl lg:text-[3.45rem]">
+          Hormonal geçişinizi anlamak için güvenilir rehberiniz
+        </h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/88 md:text-xl">
+          Estranova, 40+ kadınların gündelik sağlık sorularına sade, dengeli ve bilim temelli bir çerçeve sunar. Burada amaç
+          korkutmak değil, anlamayı kolaylaştırmaktır.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href="/library"
+            class="inline-flex items-center rounded-xl bg-[#C9A96E] px-7 py-3.5 text-sm font-semibold text-[#2D2D2D] shadow-md transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/50"
+          >
+            Kütüphaneyi aç
+          </a>
+          <a
+            href="/symptoms"
+            class="inline-flex items-center rounded-xl border border-white/45 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/18 focus:outline-none focus:ring-2 focus:ring-white/35"
+          >
+            Belirtilere göre bak
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div
+          class="rounded-2xl border border-white/25 bg-white/12 p-6 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)] backdrop-blur-md md:p-8"
+        >
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#F5EDE0]/90">Neden Estranova</p>
+          <ul class="mt-5 space-y-4 text-base leading-snug text-[#FDF8F0]/95">
+            <li class="flex gap-3">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#C9A96E]" aria-hidden="true"></span>
+              <span>Editoryal süreçte kaynak seçimi ve anlatım netliği önceliklidir.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#C9A96E]" aria-hidden="true"></span>
+              <span>Kanıt düzeyi göstergeleriyle bilginin gücünü şeffaf biçimde görürsünüz.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#C9A96E]" aria-hidden="true"></span>
+              <span>İçerikler yaşam evresine göre yapılandırılmış yolculuk haritasıyla sunulur.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

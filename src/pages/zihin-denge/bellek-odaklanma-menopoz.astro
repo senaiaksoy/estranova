@@ -3,6 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
@@ -10,7 +12,7 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
 
 <SiteLayout
   title="Bellek ve Odaklanma — Menopozda Kognitif Değişimler — Estranova"
-  description="Menopozda bellek kaymasi ve odaklanma güçlüğünün nedenleri ve yönetim stratejileri hakkında rehberlik."
+  description="Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim stratejileri hakkında rehberlik."
 >
   <SiteNavbar currentPath="/zihin-denge" />
 
@@ -22,11 +24,10 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
       imageAlt={hero.alt}
       compact
     />
-    <article class="px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-4xl">
-        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+    <SubmenuArticleBody>
+        <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
           <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
-            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
               <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
@@ -36,19 +37,19 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
           </div>
         </section>
 
-        <section class="mb-12 rounded-[28px] border border-[#C9A96E]/40 bg-white p-7 md:p-8">
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Menopozda bellek kaymasi ve odaklanma güçlüğü ("brain fog") yaygındır. Hormon değişiklikleri, uyku bozukluğu ve stres birleşti bu deneyimde rol oynar. Uygulanabilir stratejiler kognitif işlevi desteklemede etkilidir.
+            Menopozda bellek kayması ve odaklanma güçlüğü yaygındır. Hormon değişiklikleri, uyku bozukluğu ve stres birlikte bu deneyimde rol oynar. Uygulanabilir stratejiler bilişsel işlevi desteklemede etkilidir.
           </p>
         </section>
 
-        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80 prose-li:text-[#2D2D2D]/80">
-          <h2>'Brain Fog' Nedir?</h2>
+        <ArticleProsePanel>
+          <h2>Beyin sisi nedir?</h2>
           <p>
-            "Brain fog" (beyin bulanıklığı) menopozda çoğu kadının yaşadığı; fakat sık göz ardı edilen bir olgudur.
-            Bellek kaymasi, odaklanma güçlüğü, kelime bulma zorlukları ("dilim ucunda") ve kavrama hızında yavaşlama gibi belirtileri içerir [●●●●●].
-            Yaklaşık 40-60% menopoz dönemindeki kadın bu tür kognitif değişiklikleri bildirir [●●●●●].
+            Beyin sisi (İngilizce <span lang="en">brain fog</span>), yani düşünmede bulanıklık hissi, menopozda çoğu kadının yaşadığı fakat sık göz ardı edilen bir olgudur.
+            Bellek kayması, odaklanma güçlüğü, kelime bulma zorlukları (dil ucunda kalma) ve kavrama hızında yavaşlama gibi belirtileri içerir [●●●●●].
+            Yaklaşık %40–60 oranında menopoz dönemindeki kadın bu tür bilişsel değişiklikleri bildirir [●●●●●].
           </p>
           <p>
             "Dün sabah ne yedim?" sorusuna cevap vermekte zorluk, önemli bir kişisel numarayı unutma veya
@@ -58,27 +59,27 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
 
           <h2>Hormonun Beyin Sağlığına Rolü</h2>
           <p>
-            Estrojen beyin gelişimi, sinaptik aktivite (sinirler arasında bağlantı) ve bellek konsolidasyonunda önemli bir rol oynar [●●●●●].
-            Menopoza yaklaştıkça estrojen dalgalanmaları, bu sistemleri doğrudan etkiler.
+            Östrojen beyin gelişimi, sinaptik aktivite (sinirler arası bağlantı) ve bellek pekiştirmede önemli bir rol oynar [●●●●●].
+            Menopoza yaklaştıkça östrojen dalgalanmaları bu sistemleri doğrudan etkiler.
             Progesteron metabolitleri, kaygı ve uyku üzerindeki GABA sistemi aracılığıyla çalışır [●●●●●].
           </p>
           <p>
             Nörotransmiterler (serotonin, dopamin, asetilkolin) da hormon değişikliklerinden etkilenir [●●●●●].
-            Asetilkolin özellikle bellek ve odaklanmada kritik; düşüklüğü kognitif kaymasına neden olur.
+            Asetilkolin özellikle bellek ve odaklanmada kritik; düşüklüğü bilişsel kaymaya neden olur.
             Beyindeki inflamasyonun artması, hormonal geçişle bağlantılıdır ve nörotoksik etkiler yaratabilir [●●●●●].
           </p>
 
-          <h2>Menopozda Kognitif Değişimlerin Katmanları</h2>
+          <h2>Menopozda bilişsel değişimlerin katmanları</h2>
           <p>
             Birincil faktör hormonal değişikliktir [●●●●●]. Ancak ikincil faktörler başlıkları derinleştirir.
             Uyku bozukluğu bellek ve odaklanmada kat kat etkiler [●●●●●]; uyku sırasında beyin yoğun bir temizlik (glymphatik sistemi) yapılır.
             Stres ve kaygı nörotransmitleri tüketir ve odaklanmayı dağılmaya yol açar [●●●●●].
           </p>
           <p>
-            Ruh hali değişimleri (depresyon, anksiyete) kognitif işlevi güçleştirir [●●●●●].
-            Sıcak basması ve gece terlemesi dikkat dağılması sebep olabilir [●●●●●].
+            Ruh hali değişimleri (depresyon, anksiyete) bilişsel işlevi zorlaştırabilir [●●●●●].
+            Sıcak basması ve gece terlemesi dikkat dağınıklığına yol açabilir [●●●●●].
             Ayrıca, yaşam stresi (kariyer değişiklikleri, aile sorumlulukları) bilişsel yükü artırır [●●●●○].
-            Tüm bu katmanlar birleşmediğinde "brain fog"un ciddiyeti artar.
+            Tüm bu etkenler bir araya geldiğinde beyin sisinin şiddeti artabilir.
           </p>
 
           <h2>Bellek Türleri ve Menopoz</h2>
@@ -89,7 +90,7 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
             Prosedürel hafıza (bisiklet sürme, bilgisayar kullanma) çoğu zaman korunur [●●●●○].
           </p>
 
-          <h2>Kognitif Yönetim Stratejileri</h2>
+          <h2>Bilişsel yönetim stratejileri</h2>
           <p>
             Uyku optimizasyonu ilk adımdır [●●●●●]. Uyku sayesinde beyin metabolik atığını temizler ve hafıza konsolide edilir.
             Düzenli saatlerde yatıp kalkma, karanlık ve serin uyku ortamı, geç kafein ve ekran kullanmaktan kaçınma temel tekniklerdir.
@@ -98,10 +99,10 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
             Stres yönetimi (meditasyon, yoga) kortisolü azaltır ve sinir sistemini dengeler [●●●●●].
             Fiziksel egzersiz BDNF (beyin kökenli nörotrofik faktör) üretimini artırır ve nörogensiz destekler [●●●●●].
             Bilişsel antrenman (bulmaca, kitap okuma, yeni dil öğrenme) beyin plastisitesini kuvvetlendirir [●●●●●].
-            Sosyal bağlantılar, zihinsel uyarım ve emosyonal destek sağlayarak kognitif fonksiyonu destekler [●●●●●].
+            Sosyal bağlantılar, zihinsel uyarım ve duygusal destek sağlayarak bilişsel işlevi destekler [●●●●●].
           </p>
           <p>
-            Beslenme — omega-3, B vitaminleri, antioksidanlar — beyin sağlığında temel almacadır [●●●●●].
+            Beslenme — omega-3, B vitaminleri, antioksidanlar — beyin sağlığında temel öneme sahiptir [●●●●●].
             Kafein yönetimi ve uyuşturucu sınırlaması (alkol, sigara) da uyku ve odaklanmayı destekler [●●●●○].
           </p>
 
@@ -121,16 +122,16 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
           </p>
           <p>
             Nörotrofik destekleme (BDNF, NGF üretimini artıran yaklaşımlar) araştırılmakta; ancak hala sınırlı kanıt vardır [●●●●○].
-            Antidepresanlar ruh hali ilişkili kognitif sorunlarda yardımcı olabilir [●●●●○].
+            Antidepresanlar ruh haliyle ilişkili bilişsel sorunlarda yardımcı olabilir [●●●●○].
             Bilişsel yön terapisi, olumsuz düşünce döngüsünü kırmaya ve odaklanmayı iyileştirmeye yardımcı olur [●●●●●].
           </p>
 
           <h2>Uzun Vadeli Perspektif: Beyin Sağlığı ve Demans Riski</h2>
           <p>
-            Menopozda yaşanan "brain fog" klinik demans anlamına gelmez; çoğu durumda zamanla iyileşir [●●●●●].
+            Menopozda yaşanan beyin sisi klinik demans anlamına gelmez; çoğu durumda zamanla iyileşir [●●●●●].
             HRT ve demans riski arasındaki ilişki tartışmalıdır ve bireysel faktörlere bağlıdır [●●●●○].
             Ancak kardiyovasküler sağlık beyin sağlığıyla sıkı bağlantılıdır [●●●●●]; kan akışı ve oksijen, bilişsel işlevi destekler.
-            Kognitif rezerv oluşturma (yaşlanırken öğrenmeye devam etme) yaşlılıkta bilişsel değişikliklere karşı koruma sağlar [●●●●●].
+            Bilişsel rezerv oluşturma (yaşlanırken öğrenmeye devam etme) ileri yaşta bilişsel değişikliklere karşı koruma sağlar [●●●●●].
           </p>
 
           <h2>Başlamak İçin İlk Adımlar</h2>
@@ -140,9 +141,9 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
             Yazılı not alma sistemini başlatın. Hafta sonunda gözlemlediğiniz değişiklikleri not edin.
             Hafta hafta yapılacak bu adımlar, kognitif bulanıklığı aydınlatmaya başlayabilir.
           </p>
-        </section>
+        </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
           <ul class="space-y-3">
             <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku Bozukluğu ve Menopoz</a></li>
@@ -153,22 +154,21 @@ const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
           </ul>
         </section>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-8 bg-[#F5EDE0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            "Brain fog" menopozun yaygın ama sık göz ardı edilen bir boyutudur. Mekanizmi anlamak ve tedavi seçeneklerini bilmek, kadınların bu geçiş döneminde kendilerine güven duymasını sağlar. Çoğu durumda kognitif işlev zamanla iyileşir; stratejiler bu süreçte yardımcıdır.
+            Beyin sisi menopozun yaygın ama sık göz ardı edilen bir boyutudur. Mekanizmayı anlamak ve tedavi seçeneklerini bilmek, kadınların bu geçiş döneminde kendilerine güven duymasını sağlar. Çoğu durumda bilişsel işlev zamanla iyileşir; stratejiler bu süreçte yardımcıdır.
           </p>
         </section>
 
-        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
             Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
             kendi hekiminizle birlikte değerlendirme yapınız.
           </p>
         </section>
-      </div>
-    </article>
+    </SubmenuArticleBody>
   </main>
 
   <SiteFooter />

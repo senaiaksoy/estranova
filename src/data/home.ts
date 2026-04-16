@@ -1,4 +1,4 @@
-export const homepageGovernance = [
+﻿export const homepageGovernance = [
   {
     title: "Site Yönetimi",
     people: ["Berna Aksoy"],
@@ -6,7 +6,7 @@ export const homepageGovernance = [
   },
   {
     title: "Danışman Doktor ve Yazı Denetleyici",
-    people: ["Doc. Dr. Senai Aksoy"],
+    people: ["Doç. Dr. Senai Aksoy"],
     note: "İçeriklerin tıbbi tutarlılık ve yazı denetimi açısından son kontrolü.",
   },
   {

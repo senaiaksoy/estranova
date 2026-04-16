@@ -1,0 +1,44 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  excerpt: string;
+  imageSrc: string;
+  imageAlt: string;
+  /** Büyük numara (ör. 01); yoksa gösterilmez */
+  step?: string;
+  cta?: string;
+}
+
+const { href, title, excerpt, imageSrc, imageAlt, step, cta = 'Devamını Oku' } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#6B2D3E]/12 bg-white shadow-sm transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+>
+  <div class="relative h-36 overflow-hidden">
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      width="600"
+      height="225"
+      loading="lazy"
+      decoding="async"
+      class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+    />
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/65 via-[#1c1412]/15 to-transparent" />
+    {
+      step && (
+        <span class="absolute bottom-3 left-4 font-serif text-3xl font-medium tabular-nums text-white/95 md:text-4xl">
+          {step}
+        </span>
+      )
+    }
+  </div>
+  <div class="flex flex-1 flex-col border-t border-[#6B2D3E]/10 p-7 md:p-8">
+    <h2 class="mb-3 font-serif text-2xl md:text-3xl">{title}</h2>
+    <p class="mb-5 flex-1 leading-relaxed text-[#2D2D2D]/75">{excerpt}</p>
+    <span class="font-semibold text-[#6B2D3E] group-hover:underline">{cta}</span>
+  </div>
+</a>

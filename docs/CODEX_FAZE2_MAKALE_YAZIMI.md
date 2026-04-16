@@ -120,7 +120,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
    - Başlangıç yaşı (ortalama 43-45, varyasyon geniş)
 
 2. **Hormonal Değişimler Neler Olur?**
-   - FSH, LH, estrojen, progesteron dalgalanması [●●●●●]
+   - FSH, LH, östrojen, progesteron dalgalanması [●●●●●]
    - Neden "dalgalanma" olur (üregen azalması, hipofiz tepkisi)
    - Döngü değişkenlikleri (ön 2 yıl, arka 2 yıl)
 
@@ -180,14 +180,14 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 **H1:** 40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber  
 **Özet Kutusu:**  
-"Estrojen düşüşü ile kemik yoğunluğu azalır. 40+ kadınlarda osteoporoz riski artış gösterir. Proaktif yaklaşım—test, beslenme, hareket—uzun vadeli kemik sağlığını destekler."
+"Östrojen düşüşü ile kemik yoğunluğu azalır. 40+ kadınlarda osteoporoz riski artış gösterir. Proaktif yaklaşım—test, beslenme, hareket—uzun vadeli kemik sağlığını destekler."
 
 ### Alt Başlıklar & Bölümler
 
 1. **Neden Kemik Sağlığı Önemlidir?**
    - Kemiklerin işlevleri (destek, mobilite, mineral depolaması)
    - 40+ sonrası neden kemik yoğunluğu değişir [●●●●●]
-   - Estrojen ve kemik turnover ilişkisi
+   - Östrojen ve kemik turnover ilişkisi
    - Osteoporoz, kütük fraktur riski
 
 2. **Osteoporoz vs. Osteopenia — Fark Nedir?**
@@ -236,7 +236,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 8. **Tıbbi Seçenekler**
    - HRT (östrojen yerine koyma) [●●●●●]
    - Bifosfonatlar (alenronat, risedronat) [●●●●●]
-   - SERM (selektif estrojen reseptor modülatörleri)
+   - SERM (selektif östrojen reseptor modülatörleri)
    - Hekim ile konuşma: Risk profili, seçenekler
 
 ### Bilimsel Editör Notu
@@ -264,12 +264,12 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 **H1:** Menopozda Cilt Değişimleri — Anlamak ve Bakım Yapmanın Rehberi  
 **Özet Kutusu:**  
-"Estrojen azalması cilt mimarisini değiştirir: kolajen ve elastin üretimi azalır. Cilt daha ince, kuru ve döşemeye başlayabilir. Anlamak ve uygun bakım—topikal, beslenme, yaşam alışkanlığı—bu değişimleri yönetmeye yardımcı olur."
+"Östrojen azalması cilt mimarisini değiştirir: kolajen ve elastin üretimi azalır. Cilt daha ince, kuru ve döşemeye başlayabilir. Anlamak ve uygun bakım—topikal, beslenme, yaşam alışkanlığı—bu değişimleri yönetmeye yardımcı olur."
 
 ### Alt Başlıklar & Bölümler
 
-1. **Estrojen Cilt Yapısına Nasıl Etki Eder?**
-   - Estrojen ve cilt fizyolojisi [●●●●●]
+1. **Östrojen Cilt Yapısına Nasıl Etki Eder?**
+   - Östrojen ve cilt fizyolojisi [●●●●●]
    - Kolajen, elastin, hyaluronik asit üretimi [●●●●●]
    - Cilt bariyeri fonksiyonu (lipidler, nem)
    - Mikro-dolaşım ve cilt iyileşme kapasitesi
@@ -367,7 +367,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 2. **Menopozda Uyku Neden Bozulur?**
    - Vasomotor belirtileri (sıcak basması, gece terlemesi) [●●●●●]
-   - Hormon dalgalanması (estrojen, progesteron) [●●●●●]
+   - Hormon dalgalanması (östrojen, progesteron) [●●●●●]
    - Ruh hali değişimleri (depresyon, anksiyete) [●●●●●]
    - Uyku mimarisinde değişim [●●●●○]
    - Diğer faktörler (apnea riski, restless leg sendromu) [●●●●○]
@@ -402,7 +402,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
    - Uyarı: Suplement etkileşimleri (ilaç konusunda hekim danışma)
 
 6. **Tıbbi Tedavi Seçenekleri**
-   - **HRT** (estrojen ± progesteron) [●●●●●]
+   - **HRT** (östrojen ± progesteron) [●●●●●]
      - Vasomotor belirtileri azaltır
      - Dolaylı olarak uyku kalitesini iyileştirir
    - **Selektif serotonin reuptake inhibitörleri (SSRI)** [●●●●○]

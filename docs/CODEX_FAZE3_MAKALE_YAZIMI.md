@@ -127,7 +127,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 3. **Hormon Değişimleri Bu Evrede**
    - FSH, LH yüksek [●●●●●]
-   - Estrojen ve progesteron düşük [●●●●●]
+   - Östrojen ve progesteron düşük [●●●●●]
    - Yeni hormonal dengeye ulaşma (postmenopozda stabilize) [●●●●●]
    - Hormon ölçümleri ne anlam taşır?
 
@@ -165,7 +165,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 - Hormonal Geçiş / 40 Sonrası Sağlık
 - Zamansız Yaşam / Kemik Sağlığı
 - Zihin & Denge / Ruh Hali Değişimleri
-- Bilimsel Pencere / Estrojen Biyolojisi
+- Bilimsel Pencere / Östrojen Biyolojisi
 
 ---
 
@@ -185,7 +185,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 ### Alt Başlıklar & Bölümler
 
 1. **Hormon Değişiklikleri Ruh Halini Nasıl Etkiler?**
-   - Estrojen ve serotonin ilişkisi [●●●●●]
+   - Östrojen ve serotonin ilişkisi [●●●●●]
    - Progesteron ve GABA [●●●●●]
    - FSH, LH ve nöral etkileri [●●●●○]
    - Perimenopauzda dalgalanma vs. postmenopozda sabitlik [●●●●●]
@@ -250,7 +250,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 - Hormonal Geçiş / Perimenopoz Nedir?
 - Zihin & Denge / Stres Yönetimi
 - Zamansız Yaşam / Hareket ve Sağlık
-- Bilimsel Pencere / Estrojen Biyolojisi
+- Bilimsel Pencere / Östrojen Biyolojisi
 
 ---
 
@@ -265,12 +265,12 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 **H1:** Vajinal Sağlık ve Menopoz — Atrofi, Yakınlık, Bakım Rehberi  
 **Özet Kutusu:**  
-"Vulvovajinal atrofi, menopozun yaygın ancak açıkça konuşulmayan bir sorunudur. Estrojen azalması vajinal dokuyu ince, kuru ve hassas hale getirir. Yakınlık sırasında ağrı veya rahatsızlıktan enfeksiyon riskine kadar etkiler vardır. Ama tedavi seçenekleri mevcut ve etkilidir."
+"Vulvovajinal atrofi, menopozun yaygın ancak açıkça konuşulmayan bir sorunudur. Östrojen azalması vajinal dokuyu ince, kuru ve hassas hale getirir. Yakınlık sırasında ağrı veya rahatsızlıktan enfeksiyon riskine kadar etkiler vardır. Ama tedavi seçenekleri mevcut ve etkilidir."
 
 ### Alt Başlıklar & Bölümler
 
 1. **Vulvovajinal Atrofi Nedir?**
-   - Tanım: Estrojen azalması ile vajinal doku değişimleri [●●●●●]
+   - Tanım: Östrojen azalması ile vajinal doku değişimleri [●●●●●]
    - Prevalans (40-60% postmenopoz kadınlarda) [●●●●●]
    - Neden "atrofi" — doku incelme, elastikiyet kaybı [●●●●●]
    - Ayrıca "genitourinary sendromu" (GUS) olarak adlandırılır
@@ -285,7 +285,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
    - Belirtilerin ilişkilere ve yaşam kalitesine etkisi [●●●●○]
 
 3. **Neden Olur? Mekanizma**
-   - Estrojen ve vajinal dokunun bağlantısı [●●●●●]
+   - Östrojen ve vajinal dokunun bağlantısı [●●●●●]
    - Vaskülarizasyon ve elastin kaybı [●●●●●]
    - pH değişimi (more alkaline) [●●●●●]
    - Enfeksiyon riski artışı (normal flora değişim) [●●●●●]
@@ -303,14 +303,14 @@ Referans: `/docs/KANIT_DUZEYI.md`
      - Doku elastisitesini destekler
 
 5. **Hormon Tedavi Seçenekleri**
-   - **Lokal estrojen (topikal)** [●●●●●]
+   - **Lokal östrojen (topikal)** [●●●●●]
      - Krem (conjugated estrogens)
      - Tablet (vaginal estradiol)
      - Ring (estradiol)
      - Lokal etkili, minimal sistemik emilim
    - **Lokal DHEA (prasterone)** [●●●●●]
      - Seçilmiş olgularda etkili
-     - Hem estrojen hem androjen aktivitesi
+     - Hem östrojen hem androjen aktivitesi
    - **Sistemik HRT** [●●●●●]
      - Genel tedavi amacı değilse, VVA için tek başına sınırlı
      - Ancak HRT alanlar VVA de iyileşme görebilir
@@ -343,7 +343,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 - Beden & Yakınlık / Yakınlık Sırasında Ağrı [yet to be written]
 - Hormonal Geçiş / Menopoz Nedir?
 - Zihin & Denge / Ruh Hali Değişimleri
-- Bilimsel Pencere / Estrojen Biyolojisi
+- Bilimsel Pencere / Östrojen Biyolojisi
 
 ---
 
@@ -445,7 +445,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 ---
 
-## GÖREV 5: Estrojen Biyolojisi ve Sağlık
+## GÖREV 5: Östrojen Biyolojisi ve Sağlık
 
 **Dosya Konumu:** `src/pages/bilimsel-pencere/estrogen-biyolojisi-saglik.astro`  
 **Kanıt Seviyesi:** A (Endokrinoloji, Genomik)  
@@ -454,26 +454,26 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 ### İçerik Yapısı
 
-**H1:** Estrojen Biyolojisi ve Sağlık — Hormonun Vücutta Rolü  
+**H1:** Östrojen Biyolojisi ve Sağlık — Hormonun Vücutta Rolü  
 **Özet Kutusu:**  
-"Estrojen basit bir hormon değil; vücudun pek çok sistemine etki eden güçlü bir sinyal molekülüdür. Kemik, kalp, beyin, cilt, metabolik sistem — hepsi estrojene bağlıdır. Yaşlanmada estrojen azalışının geniş çaplı etkileri vardır. Bu rehber mekanizmayı açıklar."
+"Östrojen basit bir hormon değil; vücudun pek çok sistemine etki eden güçlü bir sinyal molekülüdür. Kemik, kalp, beyin, cilt, metabolik sistem — hepsi östrojene bağlıdır. Yaşlanmada östrojen azalışının geniş çaplı etkileri vardır. Bu rehber mekanizmayı açıklar."
 
 ### Alt Başlıklar & Bölümler
 
-1. **Estrojen Nedir?**
+1. **Östrojen Nedir?**
    - Steroid hormon tanımı [●●●●●]
    - Üç ana form: estradiol (E2), estriol (E3), estrone (E1) [●●●●●]
    - Yumurtalıklar, yağ dokusu, adrenal gland üretim [●●●●●]
    - Üretime erkeklerde de (düşük düzey) [●●●●●]
    - Hücresel mekanizma: reseptörler (ER-α, ER-β, GPER) [●●●●●]
 
-2. **Kemik Sağlığında Estrojen**
+2. **Kemik Sağlığında Östrojen**
    - Osteoblast ve osteoclast düzenlemesi [●●●●●]
-   - Estrojen azalması = kemik kaybı artması [●●●●●]
+   - Östrojen azalması = kemik kaybı artması [●●●●●]
    - Osteoporoz riski → kütük fraktur → mobilite kaybı [●●●●●]
    - HRT ile kemik sağlığı koruması [●●●●●]
 
-3. **Kardiyovasküler Sağlık ve Estrojen**
+3. **Kardiyovasküler Sağlık ve Östrojen**
    - Endotel fonksiyonu [●●●●●]
    - Lipid profili (LDL, HDL) [●●●●●]
    - Kan basıncı ve vazodilatasyon [●●●●●]
@@ -487,7 +487,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
    - Bellek ve öğrenme [●●●●○]
    - Alzheimer riski (HRT koruyucu mu?) [●●●●○]
 
-5. **Cilt Sağlığı ve Estrojen**
+5. **Cilt Sağlığı ve Östrojen**
    - Kolajen ve elastin sentezi [●●●●●]
    - Hyaluronik asit üretimi [●●●●●]
    - Microvascular perfusion [●●●●●]
@@ -501,17 +501,17 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 7. **Bağışıklık Sistemi**
    - Th1/Th2 dengelemesi [●●●●●]
-   - Estrojen ve otoimmun hastalıklar [●●●●●]
+   - Östrojen ve otoimmun hastalıklar [●●●●●]
    - Enfeksiyon savunması [●●●●○]
    - Inflamasyonun düzenlenmesi [●●●●●]
 
-8. **Menopozda Estrojen Azalışının Geniş Çaplı Etkileri**
+8. **Menopozda Östrojen Azalışının Geniş Çaplı Etkileri**
    - **Erken menopoz (40 yaş öncesi)** — daha ağır etkiler [●●●●●]
    - **Cerrahi menopoz (ovaryektomi)** — ani, şiddetli [●●●●●]
    - **Doğal menopoz** — yavaş adaptasyon [●●●●●]
    - Vücut bu değişimlere adapte olabiliyor mu? [●●●●○]
 
-9. **HRT: Estrojen Yerine Koymanın Mekanizmaları**
+9. **HRT: Östrojen Yerine Koymanın Mekanizmaları**
    - Doza ve forma bağlı etkiler [●●●●●]
    - Sistemik (oral, transdermal, implant) farklılıkları [●●●●●]
    - Geziditif (progesterone) kombinasyonu gerekliliği [●●●●●]
@@ -519,13 +519,13 @@ Referans: `/docs/KANIT_DUZEYI.md`
    - Güvenlik profili (kanser riski tartışmaları) [●●●●●]
 
 10. **Alternatif Tedaviler: Mekanizmalar**
-    - Fitoestrojenler (soya, kırmızı üzüm) [●●●○○] — zayıf kanıt
+    - Fitoöstrojenler (soya, kırmızı üzüm) [●●●○○] — zayıf kanıt
     - Isoflavonlar, lignans [●●●○○]
     - Sağlık yönlü çekişmeler vs. mekanizmalı gerçek etkiler [●●●●○]
 
 ### Bilimsel Editör Notu
 
-"Estrojen, yaşlı kadın sağlığının merkezi bir oyuncusudur. Azalışının etkisi sadece sıcak basması değil; kemik, kalp, beyin, metabolik sistem genelinde uzun vadeli değişimlerdir. Menopoz, bu değişimlerin yönetilmesi gereken bir dönemdir. Bireysel seçenekler (HRT, yaşam alışkanlığı, alternatifler) kişiye özel tartışılmalıdır."
+"Östrojen, yaşlı kadın sağlığının merkezi bir oyuncusudur. Azalışının etkisi sadece sıcak basması değil; kemik, kalp, beyin, metabolik sistem genelinde uzun vadeli değişimlerdir. Menopoz, bu değişimlerin yönetilmesi gereken bir dönemdir. Bireysel seçenekler (HRT, yaşam alışkanlığı, alternatifler) kişiye özel tartışılmalıdır."
 
 ### İlgili İçerikler
 

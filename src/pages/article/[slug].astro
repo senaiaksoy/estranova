@@ -3,6 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import ArticleTransparencyPanel from '../../components/article/ArticleTransparencyPanel.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { publishedArticles, type Article } from '../../data/articles';
 import { getRelatedArticles } from '../../utils/relatedArticles';
 
@@ -130,8 +132,7 @@ const relatedArticles = getRelatedArticles(article, relatedPool, { limit: 3 });
   <SiteNavbar />
 
   <main id="main-content" class="pt-24">
-    <article class="px-6 py-16 md:py-20">
-      <div class="max-w-4xl mx-auto">
+    <SubmenuArticleBody>
         <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary mb-10">
           Kütüphaneye dön
         </a>
@@ -164,7 +165,9 @@ const relatedArticles = getRelatedArticles(article, relatedPool, { limit: 3 });
           <p class="text-xl md:text-2xl font-serif leading-relaxed">{article.excerpt}</p>
         </div>
 
-        <div class="prose prose-lg max-w-none" set:html={article.content}></div>
+        <ArticleProsePanel>
+          <div set:html={article.content} />
+        </ArticleProsePanel>
 
         <ArticleTransparencyPanel variant="disclaimer" disclaimerVersion={article.disclaimerVersion} />
 
@@ -181,8 +184,7 @@ const relatedArticles = getRelatedArticles(article, relatedPool, { limit: 3 });
             </div>
           </section>
         )}
-      </div>
-    </article>
+    </SubmenuArticleBody>
   </main>
 
   <SiteFooter />

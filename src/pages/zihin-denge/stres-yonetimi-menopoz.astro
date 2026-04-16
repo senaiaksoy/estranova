@@ -3,6 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
@@ -22,11 +24,10 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
       imageAlt={hero.alt}
       compact
     />
-    <article class="px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-4xl">
-        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+    <SubmenuArticleBody>
+        <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
           <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
-            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
               <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
@@ -36,14 +37,14 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
           </div>
         </section>
 
-        <section class="mb-12 rounded-[28px] border border-[#C9A96E]/40 bg-white p-7 md:p-8">
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Menopoz, yaşamın stresli bir aşamasıdır: kariyer, aile, sağlık endişeleri birleşir. Hormon değişiklikleri stres tepkisini de değiştirir. Kanıt-tabanlı stres yönetimi teknikleri bu dönemde dengeyi yeniden kurmaya yardımcı olur.
           </p>
         </section>
 
-        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80 prose-li:text-[#2D2D2D]/80">
+        <ArticleProsePanel>
           <h2>Menopoz Döneminde Stres Neden Farklı?</h2>
           <p>
             Menopoz, yalnızca hormonal değişim değil; aynı zamanda yaşam aşamasının bir kırılma noktasıdır.
@@ -108,7 +109,7 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
           <p>
             CBT, düşünceler-duygular-davranışlar arasındaki ilişkiye fokus eder [●●●●●].
             Olumsuz otomatik düşünceler ("Her şey başarısız olacak") beden tepkisini tetikler.
-            Bu döngüyü tanımak ve yeniden çerçeveleme yaparak (örneğin, "Bu zorluk geçici, ben bunu başkaisarak kalmıştırabilir") değişim sağlanır [●●●●●].
+            Bu döngüyü tanımak ve düşünceyi yeniden çerçevelemekle (örneğin, “Bu zorluk geçici; ben buna daha önce de dayanmıştım”) değişim sağlanır [●●●●●].
           </p>
           <p>
             Kabul ve Bağlılık Terapisi (ACT) ilkeleri, biraz farklıdır: değiştiremediğimiz düşünceler ve duygularla yaşamayı ve
@@ -142,9 +143,9 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
             Örneğin, egzersiz öncesi anksiyete hissediyorsanız, yoga sırasında derin nefes alınız.
             Kademeli değişiklikler, büyük farklara neden olabilir.
           </p>
-        </section>
+        </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
           <ul class="space-y-3">
             <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri ve Menopoz</a></li>
@@ -155,7 +156,7 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
           </ul>
         </section>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-8 bg-[#F5EDE0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
@@ -163,14 +164,13 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
           </p>
         </section>
 
-        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
             Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
             kendi hekiminizle birlikte değerlendirme yapınız.
           </p>
         </section>
-      </div>
-    </article>
+    </SubmenuArticleBody>
   </main>
 
   <SiteFooter />

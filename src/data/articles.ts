@@ -104,8 +104,8 @@ export const articles: Article[] = [
 <h2 class="font-serif text-3xl text-charcoal mb-4">Neden tek bir sebep aramak yeterli olmaz?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
 Perimenopoz döneminde bilişsel zorluklar bazen hormonal değişiklik ile doğrudan ilişkilendirilir.
-Oysa uyku bozunluğu, gece terlemesi, gerginlik hissi ve günlük sorumluluk yoğunluğu da aynı tabloya eşit derecede katkıda bulunabilir.
-Bu nedenle semptomu yalnız değil, bağlamı ile birlikte değerlendirmek gerekir.
+Oysa uyku bozukluğu, gece terlemesi, gerginlik hissi ve günlük sorumluluk yoğunluğu da aynı tabloya eşit derecede katkıda bulunabilir.
+Bu nedenle yalnızca semptomu değil, bağlamını da birlikte değerlendirmek gerekir.
 </p>
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Hangi sorular daha işlevseldir?</h2>
@@ -130,7 +130,7 @@ Estranova içerik yapısı da bu nedenle tek bir "cevap" yerine konu ağacı man
 </p>
 `,
     author: "Alara Baykent",
-    reviewer: "Doc. Dr. Senai Aksoy",
+    reviewer: "Doç. Dr. Senai Aksoy",
     medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
     reviewDate: "2026-04-13",
     lastModified: "2026-04-13",
@@ -172,7 +172,7 @@ Uyku düzenini iyileştirmek için; uyku saatlerinin düzgün tutulması, uyku o
 </p>
 `,
     author: "Basak Pelister",
-    reviewer: "Doc. Dr. Senai Aksoy",
+    reviewer: "Doç. Dr. Senai Aksoy",
     medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
     reviewDate: "2026-04-12",
     lastModified: "2026-04-12",
@@ -186,8 +186,9 @@ Uyku düzenini iyileştirmek için; uyku saatlerinin düzgün tutulması, uyku o
   },
   {
     slug: "menopoz-kalp-sagligi",
-    title: "Menopoz ve Kalp Sağlığı: Bilmeyenler için Rehber",
-    excerpt: "Menopoz döneminde kalp hastalığı riski artar. Yaşanan hormonal değişimler kalp-damar sağlığına etkileri nelerdir?",
+    title: "Menopoz ve Kalp Sağlığı: Temel Rehber",
+    excerpt:
+      "Menopoz döneminde kalp-damar hastalığı riski artabilir. Hormonal değişimlerin kalp-damar sağlığı üzerindeki etkileri nelerdir?",
     content: `
 <h2 class="font-serif text-3xl text-charcoal mb-4">Neden kalp sağlığı önemlidir?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
@@ -207,12 +208,12 @@ Kardiyovasküler sağlığı korumak için; düzenli fiziksel aktivite, sağlık
 <div class="my-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
   <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Klinik Not</p>
   <p class="text-charcoal/75 leading-relaxed">
-    Kalp sağlığı riskleri kişiden kişiye değişir; tıbbi değerlendirme ve profilaksi, sağlık profesyonelleri ile görüşülerek planlanmalıdır.
+    Kalp sağlığı riskleri kişiden kişiye değişir; tıbbi değerlendirme ve koruyucu önlemler, sağlık profesyonelleri ile görüşülerek planlanmalıdır.
   </p>
 </div>
 `,
     author: "Alara Baykent",
-    reviewer: "Doc. Dr. Senai Aksoy",
+    reviewer: "Doç. Dr. Senai Aksoy",
     medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
     reviewDate: "2026-04-11",
     lastModified: "2026-04-11",
@@ -246,7 +247,7 @@ Proteinli besinler, lifli gıdalar, antioksidan açısından zengin sebze ve mey
 </p>
 `,
     author: "Basak Pelister",
-    reviewer: "Doc. Dr. Senai Aksoy",
+    reviewer: "Doç. Dr. Senai Aksoy",
     medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
     reviewDate: "2026-04-10",
     lastModified: "2026-04-10",
@@ -256,16 +257,17 @@ Proteinli besinler, lifli gıdalar, antioksidan açısından zengin sebze ve mey
     date: "2026-04-10",
     category: "kadin-sagligi",
     readTime: "8 dk",
-    tags: ["40+", "saglik", "preventif"],
+    tags: ["40+", "sağlık", "önleyici"],
   },
   {
     slug: "skleroz-multiple-degisiklikler",
-    title: "Skleroz Multiple'de Değişiklikler: Bilinmesi Gerekenler",
-    excerpt: "Skleroz multiple, sinir sistemindeki iltihaplanma ve hasar sürecidir. Belirtiler, teşhis ve tedavi seçenekleri nelerdir?",
+    title: "Multipl Sklerozda Değişiklikler: Bilinmesi Gerekenler",
+    excerpt:
+      "Multipl skleroz (MS), sinir sisteminde iltihap ve hasar süreciyle ilişkilidir. Belirtiler, tanı ve tedavi seçenekleri nelerdir?",
     content: `
-<h2 class="font-serif text-3xl text-charcoal mb-4">Skleroz multiple nedir?</h2>
+<h2 class="font-serif text-3xl text-charcoal mb-4">Multipl skleroz (MS) nedir?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-Skleroz multiple (multipl skleroz - MS), merkezi sinir sistemini etkileyen kronik bir otoimmün hastalıktır. Sinir hücre zarının koruyucu kaplamasındaki hasar, iletişim bozukluklarına yol açar.
+Multipl skleroz (MS), merkezi sinir sistemini etkileyen kronik bir otoimmün hastalıktır. Sinir liflerini saran miyelin kılıfındaki hasar, ileti bozukluklarına yol açar.
 </p>
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Belirtiler ve erken işaretler</h2>
@@ -275,11 +277,11 @@ MS belirtileri kişiden kişiye değişmekle birlikte; görme sorunları, zayıf
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Tedavi yaklaşımları</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-MS tedavisi, hastalığın ilerlemesini yavaşlatmak, belirtileri yönetmek ve yaşam kalitesini artırmak üzerine kuruludur. İmmünsüpresif ilaçlar, rehabilitasyon ve yaşam tarzı değişiklikleri tedavi planında yer alır.
+MS tedavisi, hastalığın ilerlemesini yavaşlatmak, belirtileri yönetmek ve yaşam kalitesini artırmak üzerine kuruludur. Bağışıklık sistemini hedefleyen ilaçlar, rehabilitasyon ve yaşam tarzı düzenlemeleri tedavi planında yer alır.
 </p>
 `,
     author: "Alara Baykent",
-    reviewer: "Doc. Dr. Senai Aksoy",
+    reviewer: "Doç. Dr. Senai Aksoy",
     medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
     reviewDate: "2026-04-09",
     lastModified: "2026-04-09",
@@ -289,7 +291,7 @@ MS tedavisi, hastalığın ilerlemesini yavaşlatmak, belirtileri yönetmek ve y
     date: "2026-04-09",
     category: "bilgi",
     readTime: "10 dk",
-    tags: ["skleroz multiple", "sinir sistemi", "otoimmün"],
+    tags: ["multipl skleroz", "sinir sistemi", "otoimmün"],
   },
   {
     slug: "perimenopozda-dongu-duzensizlikleri",
@@ -332,7 +334,7 @@ Böylece değerlendirme, tek bir günün hissi üzerinden değil zaman içindeki
 </p>
 `,
     author: "Basak Pelister",
-    reviewer: "Doc. Dr. Senai Aksoy",
+    reviewer: "Doç. Dr. Senai Aksoy",
     medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
     reviewDate: "2026-04-14",
     lastModified: "2026-04-14",
@@ -385,7 +387,7 @@ Bu yaklaşım, tek bir ölçüm sonucuna odaklanmak yerine genel kemik sağlığ
 </p>
 `,
     author: "Alara Baykent",
-    reviewer: "Doc. Dr. Senai Aksoy",
+    reviewer: "Doç. Dr. Senai Aksoy",
     medicalReviewerTitle: "Kadın Hastalıkları ve Doğum Uzmanı",
     reviewDate: "2026-04-14",
     lastModified: "2026-04-14",

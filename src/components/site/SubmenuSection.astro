@@ -1,0 +1,22 @@
+---
+interface Props {
+  variant?: 'cream' | 'white' | 'sand';
+  /** Hero altında ilk bölümde üst çizgi */
+  borderedTop?: boolean;
+  class?: string;
+}
+
+const { variant = 'cream', borderedTop = true, class: className } = Astro.props;
+
+const bg = {
+  cream: 'bg-[#FDF8F0]',
+  white: 'bg-white',
+  sand: 'bg-[#F5EDE0]',
+}[variant];
+---
+
+<section class:list={[borderedTop && 'border-t border-[#6B2D3E]/10', bg, 'px-6 py-16 md:py-20', className]}>
+  <div class="mx-auto max-w-6xl">
+    <slot />
+  </div>
+</section>

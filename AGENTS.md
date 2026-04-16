@@ -122,6 +122,21 @@ Do not introduce service-oriented navigation unless explicitly approved.
 - Related reading
 - Medical disclaimer
 
+### Article page layout (Astro — use for every new static article)
+
+The visual shell is **not** optional for new `.astro` articles under `src/pages/`. Reuse these components so pages match the homepage / hub styling:
+
+1. **`SubmenuHero`** (`compact`) when the URL is registered in `src/data/submenu-heroes.ts` (`submenuHeroByRoute`). If the page uses a plain in-article `<header>` + `pt-24` instead (some informational routes), keep that pattern only where it already exists; new hub-style articles should prefer `SubmenuHero` + hero data.
+2. **`SubmenuArticleBody`** — wraps the column under the hero: gradient background, `max-w-4xl`, spacing. Replace ad-hoc `<article class="px-6 py-16">` + inner wrappers with this.
+3. **Inside the body (typical order):**
+   - Author / meta panel (rounded white card; gradient avatar placeholder pattern as in existing articles).
+   - **Kısa Özet** (or equivalent intro) in the gold-tint summary card class used on current pages.
+   - Main text: **`ArticleProsePanel`** only — do **not** put `prose` on a bare `<section>`; the panel supplies the white card + typography.
+   - Extra prose blocks (e.g. “Kısa Hatırlatma”): second **`ArticleProsePanel`** with `class="mt-10"` (and more if needed).
+   - **İlgili İçerikler** (cream panel), optional **Bilimsel editör notu** (gradient left-border panel), **disclaimer** (dashed border card) — match classes from an updated article such as `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro`.
+4. **Imports:** `../../components/site/...` from `src/pages/<section>/`; add one `../` per extra directory level (e.g. `hormonal-gecis/menopoz/` → `../../../components/site/`).
+5. **CMS / JSON-driven articles** rendered by `src/pages/article/[slug].astro` already use `SubmenuArticleBody` + `ArticleProsePanel` for HTML body; follow the same content blocks in `src/data/articles` (title, excerpt, transparency, disclaimer).
+
 ### Assessment or contact pages
 If creating a symptom-assessment or contact-style page, keep it neutral and informational.
 Do not make it a sales funnel.

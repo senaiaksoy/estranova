@@ -3,6 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
@@ -22,11 +24,10 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
       imageAlt={hero.alt}
       compact
     />
-    <article class="px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-4xl">
-        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+    <SubmenuArticleBody>
+        <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
           <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
-            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
               <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
@@ -36,19 +37,19 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
           </div>
         </section>
 
-        <section class="mb-12 rounded-[28px] border border-[#C9A96E]/40 bg-white p-7 md:p-8">
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Menopoz döneminde estrojen azalması, vajinal dokuda kuruluk ve hassasiyet gibi değişimlere yol açabilir. Bu tablo yaygındır
+            Menopoz döneminde östrojen azalması, vajinal dokuda kuruluk ve hassasiyet gibi değişimlere yol açabilir. Bu tablo yaygındır
             ve yaşam kalitesini etkileyebilir; ancak destek seçenekleri vardır. Doğru bilgi, düzenli bakım ve gerektiğinde tıbbi değerlendirme
             ile yakınlık ve günlük konfor yeniden dengelenebilir.
           </p>
         </section>
 
-        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80 prose-li:text-[#2D2D2D]/80">
+        <ArticleProsePanel>
           <h2>Vulvovajinal Atrofi Nedir?</h2>
           <p>
-            Vulvovajinal atrofi, menopoz sonrası estrojen düzeyinin azalmasına bağlı olarak vajinal ve vulvar dokuda incelme,
+            Vulvovajinal atrofi, menopoz sonrası östrojen düzeyinin azalmasına bağlı olarak vajinal ve vulvar dokuda incelme,
             esneklik kaybı ve nem azalmasıyla ortaya çıkan klinik tablodur [●●●●●]. Güncel literatürde bu durum, üriner bulguları da kapsayan
             daha geniş bir başlıkla "genitoüriner menopoz sendromu" olarak da adlandırılır.
           </p>
@@ -72,7 +73,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
 
           <h2>Neden Olur? Mekanizma</h2>
           <p>
-            Estrojen, vajinal dokunun kalınlığını, damar desteğini ve elastikiyetini korumada temel rol oynar [●●●●●].
+            Östrojen, vajinal dokunun kalınlığını, damar desteğini ve elastikiyetini korumada temel rol oynar [●●●●●].
             Düzey azaldığında epitel tabaka incelir, doku daha kırılgan hale gelir ve doğal nem üretimi düşer. Aynı dönemde vajinal pH daha alkali tarafa kayar,
             bu da lokal mikrobiyotayı ve enfeksiyona karşı koruyucu ortamı etkileyebilir [●●●●●].
           </p>
@@ -95,7 +96,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
 
           <h2>Hormon Temelli Tedavi Seçenekleri</h2>
           <p>
-            Lokal estrojen tedavileri (krem, tablet, halka) vulvovajinal atrofi belirtilerinde güçlü kanıta sahip seçeneklerdir [●●●●●].
+            Lokal östrojen tedavileri (krem, tablet, halka) vulvovajinal atrofi belirtilerinde güçlü kanıta sahip seçeneklerdir [●●●●●].
             Bu tedaviler, çoğu olguda düşük sistemik emilim ile lokal dokuda iyileşme hedefler. Uygulama sıklığı başlangıç ve idame dönemine göre
             değişebilir; kişisel plan hekim değerlendirmesiyle yapılır.
           </p>
@@ -125,9 +126,9 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
             profesyonel destek almak önemlidir. Tedavi seçenekleriyle çoğu kişide belirgin rahatlama sağlanabilir; amaç yalnızca semptomu azaltmak değil,
             yaşam kalitesini ve bedenle güven ilişkisini yeniden kurmaktır.
           </p>
-        </section>
+        </ArticleProsePanel>
 
-        <section class="mt-10 prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80">
+        <ArticleProsePanel class="mt-10">
           <h2>Günlük Bakım Rutini Nasıl Kurulur?</h2>
           <p>
             Vajinal sağlıkta sürdürülebilir sonuçlar çoğu zaman basit ama düzenli bir bakım rutiniyle başlar.
@@ -153,26 +154,26 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
             Gerekli durumlarda pelvik taban fizyoterapisi, danışmanlık desteği veya jinekolojik değerlendirme gibi seçenekler
             çok boyutlu bir iyileşme sağlar. Vajinal sağlık, menopoz döneminde yaşam kalitesinin merkezinde yer alan ve etkili biçimde yönetilebilen bir başlıktır.
           </p>
-        </section>
-        <section class="mt-10 prose prose-lg max-w-none prose-headings:font-serif prose-p:text-[#2D2D2D]/80">
+        </ArticleProsePanel>
+        <ArticleProsePanel class="mt-10">
           <h2>Kısa Hatırlatma</h2>
           <p>
             Vajinal sağlıkta belirtileri ertelemek yaygındır, ancak erken değerlendirme konforu daha hızlı artırır.
             Konu mahrem olsa da tıbbi açıdan tamamen konuşulabilir ve yönetilebilir bir başlıktır. Düzenli takip, doğru bilgi ve nazik bir iletişim dili iyileşme sürecini belirgin biçimde destekler.
           </p>
-        </section>
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+        </ArticleProsePanel>
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
           <ul class="space-y-3">
             <li><a href="/beden-yakinlik/menopozda-cilt-degisimleri" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Menopozda Cilt Değişimleri</a></li>
-            <li><a href="/beden-yakinlik/yakinlik-sirasinda-agri" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Yakınlık Sırasında Ağrı</a></li>
+            <li><a href="/beden-yakinlik/yakinlik-agrisi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Yakınlık Sırasında Ağrı</a></li>
             <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
             <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri</a></li>
-            <li><a href="/bilimsel-pencere/estrogen-biyolojisi-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Estrojen Biyolojisi</a></li>
+            <li><a href="/bilimsel-pencere/estrogen-biyolojisi-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Östrojen Biyolojisi</a></li>
           </ul>
         </section>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-8 bg-[#F5EDE0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
@@ -182,14 +183,13 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
           </p>
         </section>
 
-        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
             Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
             kendi hekiminizle birlikte değerlendirme yapınız.
           </p>
         </section>
-      </div>
-    </article>
+    </SubmenuArticleBody>
   </main>
 
   <SiteFooter />

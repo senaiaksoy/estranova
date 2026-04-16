@@ -3,6 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
@@ -22,11 +24,10 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
       imageAlt={hero.alt}
       compact
     />
-    <article class="px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-4xl">
-        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+    <SubmenuArticleBody>
+        <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
           <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
-            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
               <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
@@ -36,19 +37,19 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
           </div>
         </section>
 
-        <section class="mb-12 rounded-[28px] border border-[#C9A96E]/40 bg-white p-7 md:p-8">
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Estrojen azalması cilt mimarisini değiştirir; kolajen ve elastin üretimi zamanla düşebilir. Cilt daha kuru,
+            Östrojen azalması cilt mimarisini değiştirir; kolajen ve elastin üretimi zamanla düşebilir. Cilt daha kuru,
             daha hassas ve daha ince görünebilir. Uygun bakım, beslenme ve yaşam alışkanlıkları ile bu değişimleri daha dengeli yönetmek mümkündür.
           </p>
         </section>
 
-        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80 prose-li:text-[#2D2D2D]/80">
-          <h2>Estrojen Cilt Yapısına Nasıl Etki Eder?</h2>
+        <ArticleProsePanel>
+          <h2>Östrojen Cilt Yapısına Nasıl Etki Eder?</h2>
           <p>
-            Estrojen cildin nem dengesi, kolajen üretimi ve bariyer bütünlüğü üzerinde etkili bir hormondur [●●●●●].
-            Menopoz döneminde estrojen düzeyleri düştükçe cildin su tutma kapasitesi azalabilir ve toparlanma süresi uzayabilir.
+            Östrojen cildin nem dengesi, kolajen üretimi ve bariyer bütünlüğü üzerinde etkili bir hormondur [●●●●●].
+            Menopoz döneminde östrojen düzeyleri düştükçe cildin su tutma kapasitesi azalabilir ve toparlanma süresi uzayabilir.
           </p>
           <p>
             Bu değişim yalnızca yüz cildi ile sınırlı değildir. Vücudun farklı bölgelerinde kuruluk, hassasiyet artışı ve elastikiyet kaybı
@@ -114,20 +115,20 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
             Menopoz döneminde cilt bakımı tek bir ürüne bağlı değildir; kişiye özgü, düzenli ve gerçekçi bir planla ilerlemek çoğu zaman daha dengeli sonuç verir.
             Buradaki temel hedef kusursuz görünüm değil, konfor ve sağlıklı cilt bariyeridir.
           </p>
-        </section>
+        </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
           <ul class="space-y-3">
             <li><a href="/beden-yakinlik/cinsel-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Yakınlıkta Konfor</a></li>
             <li><a href="/zamansiz-yasam/beslenme-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Beslenme ve Cilt Sağlığı</a></li>
-            <li><a href="/zihin-denge/stres" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Stres ve Cilt İlişkisi</a></li>
+            <li><a href="/zihin-denge/stres-yonetimi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Stres ve Cilt İlişkisi</a></li>
             <li><a href="/bilimsel-pencere/arastirma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Kolajen Araştırma Özetleri</a></li>
-            <li><a href="/hormonal-gecis/menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
+            <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
           </ul>
         </section>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-8 bg-[#F5EDE0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Doç. Dr. Senai Aksoy</p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
@@ -136,13 +137,12 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
           </p>
         </section>
 
-        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
             Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
           </p>
         </section>
-      </div>
-    </article>
+    </SubmenuArticleBody>
   </main>
 
   <SiteFooter />

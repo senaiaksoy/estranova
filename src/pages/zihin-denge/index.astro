@@ -3,9 +3,43 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
+import SubmenuSection from '../../components/site/SubmenuSection.astro';
+import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/zihin-denge']!;
+
+const pillars = [
+  {
+    step: '01',
+    title: 'Uyku & Dinlenme',
+    excerpt: 'Uyku düzenini destekleyen alışkanlıklar ve dinlenme kalitesi üzerine rehber içerikler.',
+    href: '/zihin-denge/uyku-bozuklugu-menopoz',
+    image: submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!,
+  },
+  {
+    step: '02',
+    title: 'Stres Yönetimi',
+    excerpt: 'Gündelik stres yükünü azaltmaya yardımcı bilim temelli yöntemlerin sade özeti.',
+    href: '/zihin-denge/stres-yonetimi-menopoz',
+    image: submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!,
+  },
+  {
+    step: '03',
+    title: 'Beyin Sağlığı & Hafıza',
+    excerpt: 'Odaklanma, unutkanlık ve bilişsel esenlik başlıklarını bütüncül şekilde ele alır.',
+    href: '/zihin-denge/bellek-odaklanma-menopoz',
+    image: submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!,
+  },
+  {
+    step: '04',
+    title: 'Ruh Hali & Duygusal Dalgalanmalar',
+    excerpt: 'Duygu durum değişimlerini anlamaya ve dengelemeye yardımcı destekleyici içerikler.',
+    href: '/zihin-denge/ruh-hali-degisimleri-menopoz',
+    image: submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!,
+  },
+];
 ---
 
 <SiteLayout
@@ -22,71 +56,54 @@ const hero = submenuHeroByRoute['/zihin-denge']!;
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
-    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
-            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
-            <h2 class="mb-3 font-serif text-3xl">Uyku & Dinlenme</h2>
-            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Uyku düzenini destekleyen alışkanlıklar ve dinlenme kalitesi üzerine rehber içerikler.</p>
-            <a href="/zihin-denge/uyku" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
-          </article>
-
-          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
-            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
-            <h2 class="mb-3 font-serif text-3xl">Stres Yönetimi</h2>
-            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Gündelik stres yükünü azaltmaya yardımcı bilim temelli yöntemlerin sade özeti.</p>
-            <a href="/zihin-denge/stres" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
-          </article>
-
-          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
-            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
-            <h2 class="mb-3 font-serif text-3xl">Beyin Sağlığı & Hafıza</h2>
-            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Odaklanma, unutkanlık ve bilişsel esenlik başlıklarını bütüncül şekilde ele alır.</p>
-            <a href="/zihin-denge/beyin-sagligi" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
-          </article>
-
-          <article class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
-            <div class="mb-6 h-44 rounded-2xl bg-gradient-to-br from-[#F5EDE0] via-[#FDF8F0] to-[#C9A96E]/25"></div>
-            <h2 class="mb-3 font-serif text-3xl">Ruh Hali & Duygusal Dalgalanmalar</h2>
-            <p class="mb-5 leading-relaxed text-[#2D2D2D]/75">Duygu durum değişimlerini anlamaya ve dengelemeye yardımcı destekleyici içerikler.</p>
-            <a href="/zihin-denge/ruh-hali" class="font-semibold text-[#6B2D3E] hover:underline">Devamını Oku</a>
-          </article>
-        </div>
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {
+          pillars.map((p) => (
+            <SubmenuLinkCard
+              href={p.href}
+              title={p.title}
+              excerpt={p.excerpt}
+              imageSrc={p.image.src}
+              imageAlt={p.image.alt}
+              step={p.step}
+            />
+          ))
+        }
       </div>
-    </section>
+    </SubmenuSection>
 
-    <section class="bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <header class="mb-10 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
-          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Zihin ve duygusal denge konularına odaklanan örnek içerikler.
-          </p>
-        </header>
+    <SubmenuSection variant="white" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
+        <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
+        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+          Zihin ve duygusal denge konularına odaklanan örnek içerikler.
+        </p>
+      </header>
 
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
-            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Uyku</p>
-            <h3 class="mb-3 font-serif text-2xl">Gece Rutini Oluşturmak</h3>
-            <p class="leading-relaxed text-[#2D2D2D]/75">Uyku kalitesini artırmaya yardımcı, uygulanabilir ve sakin bir akşam planı.</p>
-          </article>
-
-          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
-            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Stres</p>
-            <h3 class="mb-3 font-serif text-2xl">Gün İçinde Nefes Araları</h3>
-            <p class="leading-relaxed text-[#2D2D2D]/75">Kısa nefes ve farkındalık molalarıyla zihinsel yükü düzenlemeye yardımcı notlar.</p>
-          </article>
-
-          <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7">
-            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Ruh Hali</p>
-            <h3 class="mb-3 font-serif text-2xl">Duygusal Dalgalanmaları İzlemek</h3>
-            <p class="leading-relaxed text-[#2D2D2D]/75">Duygu günlüğüyle tetikleyicileri fark etmeyi kolaylaştıran başlangıç yaklaşımı.</p>
-          </article>
-        </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <SubmenuSpotlightCard
+          tag="Uyku"
+          title="Gece Rutini Oluşturmak"
+          body="Uyku kalitesini artırmaya yardımcı, uygulanabilir ve sakin bir akşam planı."
+          href="/zihin-denge/uyku-bozuklugu-menopoz"
+        />
+        <SubmenuSpotlightCard
+          highlight={true}
+          tag="Stres"
+          title="Gün İçinde Nefes Araları"
+          body="Kısa nefes ve farkındalık molalarıyla zihinsel yükü düzenlemeye yardımcı notlar."
+          href="/zihin-denge/stres-yonetimi-menopoz"
+        />
+        <SubmenuSpotlightCard
+          tag="Ruh Hali"
+          title="Duygusal Dalgalanmaları İzlemek"
+          body="Duygu günlüğüyle tetikleyicileri fark etmeyi kolaylaştıran başlangıç yaklaşımı."
+          href="/zihin-denge/ruh-hali-degisimleri-menopoz"
+        />
       </div>
-    </section>
+    </SubmenuSection>
   </main>
 
   <SiteFooter />

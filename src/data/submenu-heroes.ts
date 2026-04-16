@@ -8,7 +8,17 @@ export interface SubmenuHeroImage {
   alt: string;
 }
 
+/** Ana sayfa kahraman görseli (editoryal, sakin ton). */
+export const homePageHero: SubmenuHeroImage = {
+  src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1800&h=1000',
+  alt: 'Sıcak içecek ve sakin iç mekân; öz bakım ve dengeli yaşam teması',
+};
+
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
+  '/hormonal-gecis': {
+    src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1800&h=1000',
+    alt: 'Hormonal geçiş döneminde sakin ve güvenilir bilgi teması; profesyonel ortamda gülümseyen orta yaş kadın portresi',
+  },
   '/hormonal-gecis/perimenopoz': {
     src: 'https://images.unsplash.com/photo-1571019613452-1cb5f31b2fbc?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Hafif egzersiz ve denge çalışması yapan kadın; geçiş döneminde beden farkındalığı teması',

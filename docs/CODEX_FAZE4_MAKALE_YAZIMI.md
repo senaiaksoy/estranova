@@ -294,7 +294,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
    - Yaygınlığı (40-60% menopoz döneminde) [●●●●●]
 
 2. **Hormonun Beyin Sağlığına Rolü**
-   - Estrojen ve beyin plastisitesi [●●●●●]
+   - Östrojen ve beyin plastisitesi [●●●●●]
    - Sinaptik aktivite ve bellek konsolidasyonu [●●●●●]
    - Nörotransmitterler (serotonin, dopamin, asetilkolin) [●●●●●]
    - İnflamasyon ve glial hücreler [●●●●●]
@@ -458,7 +458,7 @@ Referans: `/docs/KANIT_DUZEYI.md`
 
 2. **Fizyolojik Nedenler**
    - **Vajinal kuruluk** (vulvovajinal atrofi) [●●●●●]
-     - Estrojen azalması → doku incelme, kolajen kaybı
+     - Östrojen azalması → doku incelme, kolajen kaybı
      - Yağlayıcı üretimi azalması
    - **Doku elastisitesi kaybı** [●●●●●]
    - **pH değişimi** (mehr alkaline) [●●●●●]

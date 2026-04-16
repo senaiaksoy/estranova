@@ -3,30 +3,31 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!;
 ---
 
 <SiteLayout
-  title="Estrojen Biyolojisi ve Sağlık - Estranova"
-  description="Estrojenin kemik, kalp, beyin ve metabolizma üzerindeki etkilerini bilimsel çerçevede açıklayan rehber."
+  title="Östrojen Biyolojisi ve Sağlık - Estranova"
+  description="Östrojenin kemik, kalp, beyin ve metabolizma üzerindeki etkilerini bilimsel çerçevede açıklayan rehber."
 >
   <SiteNavbar currentPath="/bilimsel-pencere" />
 
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
       eyebrow="Bilimsel Pencere"
-      title="Estrojen Biyolojisi ve Sağlık — Hormonun Vücutta Rolü"
+      title="Östrojen Biyolojisi ve Sağlık — Hormonun Vücutta Rolü"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
-    <article class="px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-4xl">
-        <section class="mb-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+    <SubmenuArticleBody>
+        <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
           <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
-            <div class="h-20 w-20 rounded-full bg-gray-300"></div>
+            <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
               <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
@@ -36,31 +37,31 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
           </div>
         </section>
 
-        <section class="mb-12 rounded-[28px] border border-[#C9A96E]/40 bg-white p-7 md:p-8">
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Estrojen, yalnızca üreme sistemiyle sınırlı bir hormon değildir; kemik, kalp, beyin, cilt ve metabolik dengede geniş etkileri vardır.
+            Östrojen, yalnızca üreme sistemiyle sınırlı bir hormon değildir; kemik, kalp, beyin, cilt ve metabolik dengede geniş etkileri vardır.
             Menopozla birlikte düzeylerin azalması, çoklu sistemlerde yeni bir adaptasyon süreci başlatır. Bu rehber, mekanizmaları sade bir dille
             açıklayarak klinik kararları anlamayı kolaylaştırır.
           </p>
         </section>
 
-        <section class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80 prose-li:text-[#2D2D2D]/80">
-          <h2>Estrojen Nedir?</h2>
+        <ArticleProsePanel>
+          <h2>Östrojen Nedir?</h2>
           <p>
-            Estrojen, steroid hormon sınıfında yer alan ve birçok dokuda sinyal görevi gören bir molekül grubudur [●●●●●].
+            Östrojen, steroid hormon sınıfında yer alan ve birçok dokuda sinyal görevi gören bir molekül grubudur [●●●●●].
             Başlıca formları estradiol (E2), estrone (E1) ve estriol (E3) olarak tanımlanır [●●●●●]. Üreme çağında en etkin form E2'dir;
             menopoz sonrası dönemde E1 görece daha baskın hale gelir.
           </p>
           <p>
             Üretim sadece yumurtalıklarla sınırlı değildir. Yağ dokusu, adrenal kaynaklar ve periferik dönüşüm yolları da katkı sunar [●●●●●].
-            Estrojen reseptörleri (ER-alfa, ER-beta ve GPER) üzerinden gen ifadesini ve hücresel yanıtı etkileyen çok katmanlı bir etki ağına sahiptir [●●●●●].
-            Bu nedenle estrojen azalması tek bir organda değil, bütün sistemde hissedilir.
+            Östrojen reseptörleri (ER-alfa, ER-beta ve GPER) üzerinden gen ifadesini ve hücresel yanıtı etkileyen çok katmanlı bir etki ağına sahiptir [●●●●●].
+            Bu nedenle östrojen azalması tek bir organda değil, bütün sistemde hissedilir.
           </p>
 
-          <h2>Kemik Sağlığında Estrojen</h2>
+          <h2>Kemik Sağlığında Östrojen</h2>
           <p>
-            Kemikte estrojen, yapım-yıkım dengesini düzenleyen ana hormonal etkenlerden biridir [●●●●●]. Osteoblast aktivitesini destekler,
+            Kemikte östrojen, yapım-yıkım dengesini düzenleyen ana hormonal etkenlerden biridir [●●●●●]. Osteoblast aktivitesini destekler,
             osteoklast aracılı yıkımı sınırlar. Menopoz sonrası düşüşle birlikte kemik kaybı hızlanabilir ve kırık riski artabilir [●●●●●].
           </p>
           <p>
@@ -69,9 +70,9 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
             Uygun hastalarda HRT'nin kemik kaybını azaltıcı etkisi gösterilmiştir [●●●●●].
           </p>
 
-          <h2>Kardiyovasküler Sistem ve Estrojen</h2>
+          <h2>Kardiyovasküler Sistem ve Östrojen</h2>
           <p>
-            Estrojen, endotel fonksiyonu ve damar genişleme yanıtı üzerinde düzenleyici etkiye sahiptir [●●●●●]. Lipid profili üzerinde HDL lehine,
+            Östrojen, endotel fonksiyonu ve damar genişleme yanıtı üzerinde düzenleyici etkiye sahiptir [●●●●●]. Lipid profili üzerinde HDL lehine,
             LDL aleyhine bazı etkiler bildirilmiştir [●●●●●]. Menopoz sonrası dönemde yaşla birlikte artan kardiyovasküler risk,
             hormonal değişimlerle birlikte değerlendirilir.
           </p>
@@ -83,7 +84,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
 
           <h2>Beyin, Biliş ve Duygudurum</h2>
           <p>
-            Estrojen; serotonin, dopamin ve diğer nörokimyasal yollarla etkileşir [●●●●●]. Bu etkileşim, ruh hali dalgalanmaları,
+            Östrojen; serotonin, dopamin ve diğer nörokimyasal yollarla etkileşir [●●●●●]. Bu etkileşim, ruh hali dalgalanmaları,
             uyku kalitesi ve stres toleransı üzerinde dolaylı rol oynar. Perimenopoz dönemindeki dalgalanmaların duygudurum üzerinde daha hissedilir olması
             bu biyolojik arka planla ilişkilidir.
           </p>
@@ -94,7 +95,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
 
           <h2>Cilt Sağlığı ve Bağ Dokusu</h2>
           <p>
-            Estrojen kolajen sentezi, dermal kalınlık, elastikiyet ve cilt nemiyle ilişkili süreçlerde rol oynar [●●●●●].
+            Östrojen kolajen sentezi, dermal kalınlık, elastikiyet ve cilt nemiyle ilişkili süreçlerde rol oynar [●●●●●].
             Menopozla birlikte ciltte kuruluk, incelme ve esneklik kaybı daha belirgin olabilir. Bu durum yalnızca estetik değil,
             bariyer fonksiyonu ve konfor açısından da önemlidir.
           </p>
@@ -105,7 +106,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
 
           <h2>Metabolik Denge ve Enerji Yönetimi</h2>
           <p>
-            Estrojen, glukoz homeostazı, yağ dağılımı ve enerji kullanımında etkili mekanizmalara katılır [●●●●●].
+            Östrojen, glukoz homeostazı, yağ dağılımı ve enerji kullanımında etkili mekanizmalara katılır [●●●●●].
             Menopoz sonrası dönemde yağ dokusunun karın çevresinde birikme eğilimi artabilir; bu durum insülin direnci riskini etkileyebilir [●●●●●].
             Ancak yaşam alışkanlıkları bu süreci güçlü biçimde modüle eder.
           </p>
@@ -116,7 +117,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
 
           <h2>Bağışıklık Sistemi ile Etkileşim</h2>
           <p>
-            Estrojenin bağışıklık yanıtı üzerinde düzenleyici etkileri bulunur; Th1/Th2 dengesi, inflamatuvar sinyal yolları ve
+            Östrojenin bağışıklık yanıtı üzerinde düzenleyici etkileri bulunur; Th1/Th2 dengesi, inflamatuvar sinyal yolları ve
             otoimmün yatkınlıkla ilişkili başlıklar bunlar arasındadır [●●●●●]. Menopoz dönemindeki hormonal değişim, inflamatuvar profilde
             farklılaşmalara zemin hazırlayabilir.
           </p>
@@ -125,9 +126,9 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
             bütüncül değerlendirme yaklaşımı daha doğru sonuç verir.
           </p>
 
-          <h2>Menopoz Türlerine Göre Estrojen Azalışı</h2>
+          <h2>Menopoz Türlerine Göre Östrojen Azalışı</h2>
           <p>
-            Doğal menopozda estrojen düşüşü kademeli ilerler ve beden zaman içinde yeni dengeye adapte olur [●●●●●].
+            Doğal menopozda östrojen düşüşü kademeli ilerler ve beden zaman içinde yeni dengeye adapte olur [●●●●●].
             Cerrahi menopozda (örneğin ovaryektomi sonrası) düşüş daha ani olabilir ve belirtiler daha yoğun hissedilebilir [●●●●●].
             Erken menopozda ise uzun dönem kemik ve kardiyometabolik takip daha kritik hale gelir.
           </p>
@@ -138,7 +139,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
 
           <h2>HRT ve Mekanizma Temelli Yaklaşım</h2>
           <p>
-            HRT, estrojen eksikliğine bağlı bazı belirtileri ve belirli risk başlıklarını azaltmak için kullanılan kanıt temelli bir seçenektir [●●●●●].
+            HRT, östrojen eksikliğine bağlı bazı belirtileri ve belirli risk başlıklarını azaltmak için kullanılan kanıt temelli bir seçenektir [●●●●●].
             Oral ve transdermal formlar arasında farmakokinetik farklılıklar bulunur [●●●●●]. Uterusu olan kadınlarda progestojen eklenmesi,
             endometriyal güvenlik açısından önem taşır [●●●●●].
           </p>
@@ -150,19 +151,19 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
 
           <h2>Alternatif Yaklaşımlar ve Kanıt Düzeyi</h2>
           <p>
-            Fitoestrojenler, izoflavonlar ve bazı bitkisel içerikler menopoz döneminde ilgi gören başlıklardır. Bu alandaki kanıtlar çoğunlukla
+            Fitoöstrojenler, izoflavonlar ve bazı bitkisel içerikler menopoz döneminde ilgi gören başlıklardır. Bu alandaki kanıtlar çoğunlukla
             orta-düşük düzeydedir [●●●○○]. Bazı kişilerde hafif semptom desteği bildirilse de sonuçlar tutarlı değildir.
           </p>
           <p>
             En güvenli yaklaşım, güçlü kanıtlı yöntemleri temel almak ve alternatif seçenekleri gerçekçi beklentiyle değerlendirmektir.
-            Sonuç olarak estrojen biyolojisi, menopozu yalnızca semptom listesi olarak değil, çok sistemli bir adaptasyon süreci olarak görmeyi sağlar.
+            Sonuç olarak östrojen biyolojisi, menopozu yalnızca semptom listesi olarak değil, çok sistemli bir adaptasyon süreci olarak görmeyi sağlar.
           </p>
-        </section>
+        </ArticleProsePanel>
 
-        <section class="mt-10 prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#2D2D2D] prose-p:text-[#2D2D2D]/80">
-          <h2>Klinik Kararlarda Estrojen Bilgisini Nasıl Kullanmalı?</h2>
+        <ArticleProsePanel class="mt-10">
+          <h2>Klinik Kararlarda Östrojen Bilgisini Nasıl Kullanmalı?</h2>
           <p>
-            Estrojen biyolojisini anlamak, tedavi kararını otomatikleştirmek için değil, seçenekleri daha bilinçli tartmak için önemlidir.
+            Östrojen biyolojisini anlamak, tedavi kararını otomatikleştirmek için değil, seçenekleri daha bilinçli tartmak için önemlidir.
             Örneğin sıcak basması, uyku bozulması, vajinal kuruluk, kemik kaybı riski ve kardiyometabolik durum aynı anda değerlendirildiğinde
             hangi müdahalenin öncelikli olacağı daha netleşir. Klinik yaklaşımın gücü, tek bir semptoma odaklanmak yerine sistemler arası bağlantıyı görmesinden gelir.
           </p>
@@ -173,7 +174,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
           </p>
           <h2>Gelecek Araştırmalar ve Açık Sorular</h2>
           <p>
-            Estrojen alanında güçlü veri tabanı bulunsa da bazı kritik sorular halen araştırılmaktadır.
+            Östrojen alanında güçlü veri tabanı bulunsa da bazı kritik sorular halen araştırılmaktadır.
             Özellikle farklı HRT formülasyonlarının uzun dönem nörobilişsel sonuçları, erken ve geç başlama zamanlamasının etkileri,
             genetik alt tipler ve metabolik fenotiplerin tedavi yanıtını nasıl değiştirdiği aktif çalışma alanlarıdır.
             Bu çalışmaların amacı, genel önerileri daha rafine ve kişiye uyarlanabilir hale getirmektir.
@@ -181,10 +182,10 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
           <p>
             Bilimsel açıdan en sağlıklı yaklaşım, güçlü kanıta dayanan mevcut bilgiyi uygularken yeni verileri de düzenli takip etmektir.
             Böylece menopoz dönemi, belirsizlik ve kaygıdan çok planlama ve öngörü alanına dönüşebilir.
-            Estrojen biyolojisi bu dönüşümün teorik zemini, kişisel sağlık planı ise pratik karşılığıdır.
+            Östrojen biyolojisi bu dönüşümün teorik zemini, kişisel sağlık planı ise pratik karşılığıdır.
           </p>
-        </section>
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 md:p-8">
+        </ArticleProsePanel>
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
           <ul class="space-y-3">
             <li><a href="/bilimsel-pencere/nad-plus-hucresel-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / NAD+ ve Hücresel Yaşlanma</a></li>
@@ -195,24 +196,23 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
           </ul>
         </section>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-8 bg-[#F5EDE0] p-7 md:p-8">
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Estrojen azalmasının etkisi yalnızca sıcak basmasıyla sınırlı değildir; kemik, kalp, beyin ve metabolik sistemde çoklu değişim yaratır.
+            Östrojen azalmasının etkisi yalnızca sıcak basmasıyla sınırlı değildir; kemik, kalp, beyin ve metabolik sistemde çoklu değişim yaratır.
             Bu nedenle menopoz döneminin yönetimi, semptom tedavisi kadar uzun vadeli sağlık planlamasını da içerir. Kişiye özel yaklaşım,
             doğru zamanlama ve düzenli izlem klinik başarının temelidir.
           </p>
         </section>
 
-        <section class="mt-10 rounded-[20px] border border-[#6B2D3E]/12 bg-white p-6">
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
             Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
             kendi hekiminizle birlikte değerlendirme yapınız.
           </p>
         </section>
-      </div>
-    </article>
+    </SubmenuArticleBody>
   </main>
 
   <SiteFooter />

@@ -1,0 +1,40 @@
+---
+interface Props {
+  href?: string;
+  tag: string;
+  title: string;
+  body: string;
+  /** Örn. kanıt satırı düz metin */
+  footer?: string;
+  highlight?: boolean;
+}
+
+const { href, tag, title, body, footer, highlight = false } = Astro.props;
+
+const shellClass = [
+  'flex h-full flex-col rounded-[28px] border p-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2',
+  highlight
+    ? 'border-[#6B2D3E]/35 bg-[#FDF8F0] ring-2 ring-[#6B2D3E]/15 shadow-md md:-translate-y-1 md:shadow-xl'
+    : 'border-[#6B2D3E]/12 bg-[#FDF8F0] shadow-sm hover:-translate-y-0.5 hover:shadow-md',
+];
+---
+
+{
+  href ? (
+    <a href={href} class:list={['group block h-full', shellClass]}>
+      {highlight && <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">Öne çıkan</p>}
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{tag}</p>
+      <h3 class="mb-3 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">{title}</h3>
+      <p class="mb-4 flex-1 leading-relaxed text-[#2D2D2D]/75">{body}</p>
+      {footer && <p class="text-sm font-medium text-[#2D2D2D]/80">{footer}</p>}
+    </a>
+  ) : (
+    <article class:list={shellClass}>
+      {highlight && <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">Öne çıkan</p>}
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{tag}</p>
+      <h3 class="mb-3 font-serif text-2xl">{title}</h3>
+      <p class="mb-4 flex-1 leading-relaxed text-[#2D2D2D]/75">{body}</p>
+      {footer && <p class="text-sm font-medium text-[#2D2D2D]/80">{footer}</p>}
+    </article>
+  )
+}
