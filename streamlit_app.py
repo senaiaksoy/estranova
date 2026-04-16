@@ -9,7 +9,7 @@ import streamlit as st
 from dotenv import load_dotenv
 
 from main import build_graph, build_save_payload, ensure_runtime_dependencies, save_operational_outputs
-from naming import slugify_topic
+from naming import output_file_basename
 from reader_guide import (
     ARTICLE_KIND_DISPLAY,
     build_user_context,
@@ -368,7 +368,7 @@ def main() -> None:
                     elif message["type"] == "done":
                         final_state = message["state"]
                         halt = str(final_state.get("pipeline_halt_reason", "") or "")
-                        if halt == "max_iteration_reached":
+                        if halt in ("max_iteration_reached", "max_iteration_hard_stop"):
                             status_box.warning(
                                 "max iteration reached → final version kullanıldı"
                             )
@@ -397,16 +397,18 @@ def main() -> None:
             halt = str(final_state.get("pipeline_halt_reason", "") or "")
             st.subheader("Final Makale")
             st.write(f"Final karar: `{decision}`")
-            if halt and halt not in ("max_iteration_reached", "loop prevented"):
+            if halt and halt not in (
+                "max_iteration_reached",
+                "max_iteration_hard_stop",
+                "loop prevented",
+            ):
                 st.warning(
                     f"Akis sonlandirma: `{halt}` (icerik en iyi haliyle uretildi ise manuel kontrol onerilir.)"
                 )
             st.markdown(article)
 
-            stem = str(final_state.get("output_slug") or "") or slugify_topic(
-                str(final_state.get("topic") or topic or "")
-            )
-            filename = f"{datetime.now().strftime('%Y-%m-%d')}-{stem}.md"
+            t = str(final_state.get("topic") or topic or "").strip()
+            filename = f"{output_file_basename(t, datetime.now().strftime('%Y-%m-%d'))}.md"
             st.download_button(
                 label="Makaleyi Indir (.md)",
                 data=article,

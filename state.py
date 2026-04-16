@@ -152,6 +152,7 @@ class EstranovaState(TypedDict, total=False):
     revision_iteration: int
     max_revision_iterations: int
     iteration_count: int
+    current_iteration: int
     compliance_to_writer_routes: int
     revision_feedback: list[str]
     user_context: str
@@ -208,6 +209,7 @@ def initialize_state(
         revision_iteration=0,
         max_revision_iterations=MAX_REVISION_ITERATIONS,
         iteration_count=0,
+        current_iteration=0,
         compliance_to_writer_routes=0,
         revision_feedback=[],
         user_context=user_context,

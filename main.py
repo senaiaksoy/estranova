@@ -7,7 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from naming import slugify_topic
+from naming import output_file_basename, slugify_topic
 from state import EstranovaState, initialize_state
 
 
@@ -179,8 +179,8 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
     is_publish_ready = fd in ("ready_to_publish", "ready_to_publish_best_effort")
 
     today = datetime.now().strftime("%Y-%m-%d")
-    topic_slug = result.get("output_slug") or slugify_topic(str(result.get("topic", "") or "icerik"))
-    base_name = f"{today}-{topic_slug}"
+    topic_raw = str(result.get("topic", "") or "").strip()
+    base_name = output_file_basename(topic_raw, today)
 
     final_article = (
         result.get("publisher_output", {}).get("content", {}).get("body_markdown", "")
@@ -195,7 +195,7 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
     report = {
         "generated_at": datetime.now().isoformat(),
         "topic": result.get("topic"),
-        "output_slug": result.get("output_slug") or topic_slug,
+        "output_slug": slugify_topic(topic_raw),
         "status": _derive_run_status(result),
         "final_decision": result.get("compliance", {}).get("final_decision"),
         "human_review_required": bool(result.get("human_review_required", False)),
@@ -218,6 +218,7 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
         ],
         "revision_iterations": int(result.get("revision_iteration", 0)),
         "iteration_count": int(result.get("iteration_count", 0)),
+        "current_iteration": int(result.get("current_iteration", 0)),
         "agent_issue_counts": _build_agent_issue_counts(result),
         "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
         "best_effort_publish": bool(result.get("best_effort_publish", False)),

@@ -23,3 +23,9 @@ def slugify_topic(topic: str) -> str:
         slug = slug.replace(src, target)
     slug = re.sub(r"[^a-z0-9]+", "-", slug).strip("-")
     return slug or "icerik"
+
+
+def output_file_basename(topic: str, date_str: str) -> str:
+    """output/ .md ve rapor dosya kok adi: {date}-{topic.lower().replace(' ', '-')}."""
+    t = (topic or "").strip().lower().replace(" ", "-") or "icerik"
+    return f"{date_str}-{t}"

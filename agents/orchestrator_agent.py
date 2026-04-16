@@ -1,10 +1,6 @@
 from __future__ import annotations
 
-from config.pipeline_limits import (
-    CIRCUIT_BREAKER_COMPLIANCE_WRITER_REPEATS,
-    COMPLIANCE_SCORE_PUBLISH_OK,
-    MAX_REVISION_ITERATIONS,
-)
+from config.pipeline_limits import COMPLIANCE_SCORE_PUBLISH_OK
 
 from state import EstranovaState, append_history
 
@@ -23,9 +19,7 @@ class OrchestratorAgent(PromptBackedAgent):
         state["best_effort_publish"] = True
         state["human_review_required"] = False
         fixes = list(state.get("compliance", {}).get("required_fixes", []) or [])
-        note = (
-            f"[{reason}] Son turda yayin paketi olusturuldu; manuel kontrol onerilir."
-        )
+        note = f"[{reason}] Son turda yayin paketi olusturuldu; manuel kontrol onerilir."
         fixes.append(note)
         comp = dict(state.get("compliance", {}))
         comp["required_fixes"] = fixes
@@ -35,23 +29,17 @@ class OrchestratorAgent(PromptBackedAgent):
         return "publisher"
 
     def route_after_compliance(self, state: EstranovaState) -> str:
+        state["current_iteration"] = int(state.get("current_iteration", 0)) + 1
+        if state["current_iteration"] >= 2:
+            return self._route_to_publisher_best_effort(state, "max_iteration_hard_stop")
+
         comp = dict(state.get("compliance", {}))
         score = int(comp.get("compliance_score", 0) or 0)
-        iteration_count = int(state.get("iteration_count", 0))
-        cw_routes = int(state.get("compliance_to_writer_routes", 0))
-
-        if cw_routes >= CIRCUIT_BREAKER_COMPLIANCE_WRITER_REPEATS:
-            state["pipeline_halt_reason"] = "loop prevented"
-            append_history(state, "orchestrator", "loop prevented")
-            return self._route_to_publisher_best_effort(state, "loop prevented")
 
         if score >= COMPLIANCE_SCORE_PUBLISH_OK:
             comp["final_decision"] = "ready_to_publish"
             state["compliance"] = comp  # type: ignore[assignment]
             return "publisher"
-
-        if iteration_count >= MAX_REVISION_ITERATIONS:
-            return self._route_to_publisher_best_effort(state, "max_iteration_reached")
 
         std = comp.get("standard_decision") or {}
         raw_dec = std.get("decision")
@@ -66,16 +54,16 @@ class OrchestratorAgent(PromptBackedAgent):
             needs_revision = True
 
         if needs_revision:
-            state["iteration_count"] = iteration_count + 1
+            state["iteration_count"] = int(state.get("iteration_count", 0)) + 1
             state["revision_iteration"] = int(state.get("revision_iteration", 0)) + 1
-            state["compliance_to_writer_routes"] = cw_routes + 1
+            state["compliance_to_writer_routes"] = int(state.get("compliance_to_writer_routes", 0)) + 1
             state["compliance_revision_route_count"] = int(
                 state.get("compliance_revision_route_count", 0)
             ) + 1
             append_history(
                 state,
                 "revision_loop",
-                f"revizyon {state['iteration_count']}/{MAX_REVISION_ITERATIONS}",
+                f"revizyon (current_iteration={state['current_iteration']})",
             )
             return "writer"
 

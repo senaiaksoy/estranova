@@ -145,7 +145,7 @@ Bu, Estranova'nın ÖNE ÇIKAN kategorisidir — anti-aging, longevity, takviyel
 1. Başlık: "Zamansız Yaşam"
 2. Açıklama: "Dinamik ve enerjik yaşlanmak için bilimsel bilgi. Vitaminlerden deneysel yaklaşımlara, kanıt düzeyiyle değerlendirilmiş içerikler." (1-2 paragraf)
 3. 5 alt kategori kartı:
-   - Vitaminler & Takviyeler → /zamansiz-yasam/vitaminler — "D vitamini, Omega-3, Magnezyum, Kolajen ve daha fazlası"
+   - Vitaminler & Takviyeler → /zamansiz-yasam/vitaminler — "D vitamini, Omega-3, mineraller, kolajen ve daha fazlası"
    - Deneysel Yaklaşımlar → /zamansiz-yasam/deneysel — "NAD+, Peptidler, Ozon tedavisi: bilim ne diyor?"
    - Non-İnvaziv Uygulamalar → /zamansiz-yasam/non-invaziv — "Lazer, HIFU, RF, PRP: kanıt düzeyiyle değerlendirme"
    - Beslenme & Metabolizma → /zamansiz-yasam/beslenme — "İnsülin direnci, gut sağlığı, metabolik denge"

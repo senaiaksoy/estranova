@@ -41,7 +41,7 @@ Anasayfa · Hormonal Geçiş · Zamansız Yaşam · Beden & Yakınlık · Zihin 
 | Alt yol (öneri) | Örnek konular |
 |-----------------|---------------|
 | Beslenme & metabolizma | Protein, lif, glisemik yük (sade dil); sıvı alımı |
-| Vitaminler & takviyeler | Magnezyum, B12, omega-3 (kanıt gücü ayrımı); etiket okuma |
+| Vitaminler & takviyeler | Mineraller, B12, omega-3 (kanıt gücü ayrımı); etiket okuma |
 | Hareket & kas | Direnç + yürüyüş; denge ve düşme riski çerçevesi |
 | Deneysel / erken aşama | NAD+ vb. — “umut verici / gelişen / güçlü kanıt” şablonu ile |
 
