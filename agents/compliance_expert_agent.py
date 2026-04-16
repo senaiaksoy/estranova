@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from typing import Any
 
 from state import ComplianceBlock, EstranovaState, FinalApprover, Violation, append_history, now_iso
@@ -58,8 +59,77 @@ class ComplianceExpertAgent(PromptBackedAgent):
 
         required_fixes = result.get("required_fixes", required_fixes)
 
+        # Deterministic zero-risk guardrails that override model output when needed.
+        article = draft.get("article", "")
+        social_post = draft.get("social_post", "")
+        newsletter = draft.get("newsletter", "")
+        all_text = "\n".join([article, social_post, newsletter])
+
+        auto_reject = False
+        score = int(result.get("compliance_score", 0))
+        if score < 80:
+            auto_reject = True
+            required_fixes.append("Uyumluluk skoru 80 altinda oldugu icin icerik otomatik reddedildi.")
+            violations.append(
+                Violation(
+                    type="low_compliance_score",
+                    severity="critical",
+                    text_ref="compliance_score",
+                    rule_id="strict.score_threshold",
+                    fix_suggestion="Skoru en az 80 olacak sekilde metni sade, guvenli ve iddiasiz yeniden yazin.",
+                )
+            )
+
+        disclaimer_signals = ["bilgilendirme amaçlıdır", "bilgilendirme amaclidir", "doktorunuza"]
+        has_disclaimer = any(signal in all_text.lower() for signal in disclaimer_signals)
+        if disclaimer_needed and not has_disclaimer:
+            auto_reject = True
+            required_fixes.append("Yasal uyari metni eksik: disclaimer zorunlu.")
+            violations.append(
+                Violation(
+                    type="disclaimer_gap",
+                    severity="critical",
+                    text_ref="draft_content",
+                    rule_id="strict.disclaimer_required",
+                    fix_suggestion="Metin sonuna standart yasal uyarıyı ekleyin.",
+                )
+            )
+
+        risky_terms = ["destekler", "iyileştirir", "iyilestirir"]
+        lowered = all_text.lower()
+        for term in risky_terms:
+            if term in lowered:
+                violations.append(
+                    Violation(
+                        type="overpromise",
+                        severity="critical",
+                        text_ref=term,
+                        rule_id="strict.risky_claim_words",
+                        fix_suggestion=f"'{term}' yerine 'yardimci olabilir' veya 'iliskili olabilir' kullanin.",
+                    )
+                )
+                required_fixes.append(
+                    f"Riskli ifade bulundu: '{term}'. Yumusatilmis ifade ile degistirin."
+                )
+
+        long_sentences = self._find_long_sentences(all_text, max_words=15)
+        for sentence in long_sentences:
+            violations.append(
+                Violation(
+                    type="style_risk",
+                    severity="medium",
+                    text_ref=sentence[:180],
+                    rule_id="strict.max_sentence_length",
+                    fix_suggestion="Cumleyi 12-15 kelimeyi gecmeyecek sekilde kisaltin.",
+                )
+            )
+        if long_sentences:
+            required_fixes.append("Uzun cumleler bulundu; tum cumleleri 12-15 kelime araligina cekin.")
+
         final_decision_raw = result.get("final_decision", "revizyon_gerekli")
-        if final_decision_raw == "yayina_hazir":
+        if auto_reject or final_decision_raw == "reddedildi":
+            final_decision = "rejected"
+        elif final_decision_raw == "yayina_hazir":
             final_decision = "ready_to_publish"
         else:
             final_decision = "revision_required"
@@ -70,13 +140,28 @@ class ComplianceExpertAgent(PromptBackedAgent):
             state["risk_level_current"] = "high"
 
         state["violations"] = violations
+        deduped_fixes = list(dict.fromkeys(required_fixes))
         state["compliance"] = ComplianceBlock(
-            compliance_score=int(result.get("compliance_score", 0)),
-            required_fixes=required_fixes,
+            compliance_score=score,
+            required_fixes=deduped_fixes,
             final_decision=final_decision,
             final_approver=FinalApprover(type="agent", name=self.name, timestamp=now_iso()),
         )
+        state["revision_feedback"] = deduped_fixes
         state["disclaimer_needed"] = bool(result.get("disclaimer_needed", disclaimer_needed))
 
-        append_history(state, "compliance", f"Compliance LLM karari: {final_decision}.")
+        if final_decision != "ready_to_publish":
+            top_feedback = "; ".join(deduped_fixes[:2]) if deduped_fixes else "duzeltme gerekiyor"
+            append_history(
+                state,
+                "compliance",
+                f"Compliance karari: {final_decision}. Gerekce: {top_feedback}.",
+            )
+        else:
+            append_history(state, "compliance", f"Compliance LLM karari: {final_decision}.")
         return state
+
+    @staticmethod
+    def _find_long_sentences(text: str, max_words: int) -> list[str]:
+        sentences = [s.strip() for s in re.split(r"[.!?]+", text) if s.strip()]
+        return [s for s in sentences if len(re.findall(r"\b\w+\b", s, flags=re.UNICODE)) > max_words]

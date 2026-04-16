@@ -131,6 +131,9 @@ class EstranovaState(TypedDict, total=False):
     compliance: ComplianceBlock
     state_history: list[StateHistoryEntry]
     publisher_output: PublisherOutput
+    revision_iteration: int
+    max_revision_iterations: int
+    revision_feedback: list[str]
 
 
 def now_iso() -> str:
@@ -175,6 +178,9 @@ def initialize_state(
         ),
         state_history=[],
         publisher_output=PublisherOutput(),
+        revision_iteration=0,
+        max_revision_iterations=2,
+        revision_feedback=[],
     )
 
 

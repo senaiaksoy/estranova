@@ -2,7 +2,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
+from datetime import datetime
+from pathlib import Path
 from typing import Any
 
 from state import EstranovaState, initialize_state
@@ -69,7 +72,6 @@ def build_graph() -> Any:
     graph.add_node("writer", writer.run)
     graph.add_node("validation", medical_checker.run)
     graph.add_node("compliance", compliance.run)
-    graph.add_node("human_review", orchestrator.human_review)
     graph.add_node("publisher", publisher.run)
 
     graph.set_entry_point("start")
@@ -84,12 +86,7 @@ def build_graph() -> Any:
     graph.add_conditional_edges(
         "compliance",
         orchestrator.route_after_compliance,
-        {"publisher": "publisher", "human_review": "human_review"},
-    )
-    graph.add_conditional_edges(
-        "human_review",
-        orchestrator.route_after_human_review,
-        {"publisher": "publisher", "end": END},
+        {"publisher": "publisher", "writer": "writer", "end": END},
     )
     graph.add_edge("publisher", END)
     return graph.compile()
@@ -106,6 +103,116 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--risk-level", choices=["low", "medium", "high"], default="medium")
     parser.add_argument("--pretty", action="store_true", help="Pretty print JSON output")
     return parser.parse_args()
+
+
+def _slugify_topic(topic: str) -> str:
+    slug = topic.strip().lower()
+    translit = str.maketrans("çğıöşü", "cgiosu")
+    slug = slug.translate(translit)
+    slug = re.sub(r"[^a-z0-9]+", "-", slug).strip("-")
+    return slug or "icerik"
+
+
+def _estimate_cost_usd(llm_calls: list[dict[str, Any]]) -> float:
+    """
+    Heuristic cost estimate based on response length.
+    Approximation: 1 token ~= 4 chars.
+    """
+    usd_per_1m_output_tokens = {
+        "gpt-4o": 10.0,
+        "claude-3-5-sonnet-latest": 15.0,
+        "gemini-1.5-pro": 7.0,
+        "gemini-2.5-flash": 1.0,
+    }
+    total = 0.0
+    for call in llm_calls:
+        model = str(call.get("model", ""))
+        chars = int(call.get("response_length_chars", 0) or 0)
+        est_tokens = chars / 4
+        per_1m = usd_per_1m_output_tokens.get(model, 8.0)
+        total += (est_tokens / 1_000_000) * per_1m
+    return round(total, 6)
+
+
+def _build_agent_issue_counts(result: EstranovaState) -> dict[str, int]:
+    counts = {
+        "ResearchAgent": len(result.get("flagged_claims", [])),
+        "WriterAgent": 0,
+        "MedicalCheckerAgent": 0,
+        "ComplianceExpertAgent": 0,
+    }
+    for violation in result.get("violations", []):
+        v_type = violation.get("type", "")
+        if v_type in {"style_risk", "overpromise", "disclaimer_gap", "medical_risk", "misleading_claim"}:
+            counts["WriterAgent"] += 1
+        elif v_type in {"low_compliance_score", "regulation_risk"}:
+            counts["ComplianceExpertAgent"] += 1
+        else:
+            counts["MedicalCheckerAgent"] += 1
+    return counts
+
+
+def _derive_run_status(result: EstranovaState) -> str:
+    final_decision = result.get("compliance", {}).get("final_decision")
+    if final_decision == "ready_to_publish":
+        return "published"
+    if result.get("human_review_required"):
+        return "needs_human_review"
+    if final_decision == "rejected":
+        return "rejected"
+    return "needs_revision"
+
+
+def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) -> bool:
+    output_dir = Path("output")
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    is_publish_ready = result.get("compliance", {}).get("final_decision") == "ready_to_publish"
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    topic_slug = _slugify_topic(result.get("topic", "icerik"))
+    base_name = f"{today}-{topic_slug}"
+
+    if is_publish_ready:
+        final_article = (
+            result.get("publisher_output", {})
+            .get("content", {})
+            .get("body_markdown", "")
+            or result.get("draft", {}).get("article", "")
+        )
+        md_path = output_dir / f"{base_name}.md"
+        md_path.write_text(final_article, encoding="utf-8")
+
+    llm_calls = result.get("llm_calls", [])
+    report = {
+        "generated_at": datetime.now().isoformat(),
+        "topic": result.get("topic"),
+        "status": _derive_run_status(result),
+        "final_decision": result.get("compliance", {}).get("final_decision"),
+        "human_review_required": bool(result.get("human_review_required", False)),
+        "quality_assessment": payload.get("quality_assessment", {}),
+        "models_used": [
+            {
+                "agent": call.get("agent"),
+                "provider": call.get("provider"),
+                "model": call.get("model"),
+                "response_length_chars": call.get("response_length_chars", 0),
+            }
+            for call in llm_calls
+        ],
+        "estimated_cost_usd": _estimate_cost_usd(llm_calls),
+        "compliance_score": result.get("compliance", {}).get("compliance_score"),
+        "revision_history": [
+            entry
+            for entry in result.get("state_history", [])
+            if entry.get("stage") in {"revision_loop", "writer", "compliance"}
+        ],
+        "revision_iterations": int(result.get("revision_iteration", 0)),
+        "agent_issue_counts": _build_agent_issue_counts(result),
+    }
+    report_path = output_dir / f"{base_name}-report.json"
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    return is_publish_ready
 
 
 def main() -> None:
@@ -147,6 +254,11 @@ def main() -> None:
         print(json.dumps(payload, ensure_ascii=False, indent=2))
     else:
         print(json.dumps(payload, ensure_ascii=False))
+
+    if save_operational_outputs(result, payload):
+        print("Icerik output/ klasorune kaydedildi. dashboard.py ile raporu gorebilirsiniz.")
+    else:
+        print("Rapor output/ klasorune kaydedildi. Icerik yayina hazir olmadigi icin .md olusturulmadi.")
 
 
 if __name__ == "__main__":

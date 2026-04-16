@@ -21,6 +21,8 @@ class WriterAgent(PromptBackedAgent):
 
         approved_sources = state.get("approved_sources", [])
         key_claims = state.get("key_claims", [])
+        revision_feedback = state.get("revision_feedback", [])
+        revision_iteration = int(state.get("revision_iteration", 0))
 
         user_payload = {
             "topic": topic,
@@ -30,6 +32,8 @@ class WriterAgent(PromptBackedAgent):
             "approved_sources": approved_sources,
             "key_claims": key_claims,
             "disclaimer_needed": disclaimer_needed,
+            "revision_iteration": revision_iteration,
+            "revision_feedback": revision_feedback,
         }
 
         try:
@@ -90,5 +94,12 @@ class WriterAgent(PromptBackedAgent):
             state["human_review_required"] = True
             state["risk_level_current"] = "high"
 
-        append_history(state, "writer", "Writer LLM ciktilari state'e alindi.")
+        if revision_iteration > 0:
+            append_history(
+                state,
+                "writer",
+                f"Writer revizyon turu tamamlandi (iterasyon={revision_iteration}).",
+            )
+        else:
+            append_history(state, "writer", "Writer LLM ciktilari state'e alindi.")
         return state

@@ -22,16 +22,18 @@ Compliance Agent, Estranova iceriginin yasal, editoriyal ve guvenlik sinirlarina
 - Kritik risk varsa `human_review_required = true` veya `risk_level = high` yukselmesi oner.
 
 ## Strict Validation
+- `compliance_score` 80 altindaysa otomatik olarak `final_decision = revizyon_gerekli` degil, fiilen red seviyesinde degerlendir.
 - Asagidaki kelime veya anlam kaliplari gecerse **ASLA onay verme**:
   - `mucize`
   - `kesin cozum`
   - `iyilestirir`
+  - `destekler`
   - `hastaligi bitirir`
   - `garanti eder`
   - `tamamen tedavi eder`
   - `kesin sonuc verir`
-- Metinde `Doktorunuza danisin` veya anlamca esdeger guvenli yonlendirme yoksa icerigi reddet.
-- Bir cumle 20 kelimeden uzunsa `Writer Agent`a revize icin geri gonder.
+- Metinde `Doktorunuza danisin` veya anlamca esdeger guvenli yonlendirme yoksa icerigi direkt fail et.
+- Uzun cumleleri (15+ kelime) violation olarak isaretle ve revizyon iste.
 - Plaza dili tespit edersen sureci durdur ve revizyon iste:
   - `focuslanmak`
   - `push etmek`
@@ -79,7 +81,7 @@ Compliance Agent, Estranova iceriginin yasal, editoriyal ve guvenlik sinirlarina
   "required_fixes": [],
   "disclaimer_needed": true,
   "human_review_required": false,
-  "final_decision": "yayina_hazir | revizyon_gerekli"
+  "final_decision": "yayina_hazir | revizyon_gerekli | reddedildi"
 }
 ```
 

@@ -15,7 +15,17 @@ class OrchestratorAgent(PromptBackedAgent):
     def route_after_compliance(self, state: EstranovaState) -> str:
         if state["compliance"]["final_decision"] == "ready_to_publish" and not state["human_review_required"]:
             return "publisher"
-        return "human_review"
+        current_iteration = int(state.get("revision_iteration", 0))
+        max_iterations = int(state.get("max_revision_iterations", 2))
+        if current_iteration < max_iterations:
+            state["revision_iteration"] = current_iteration + 1
+            append_history(
+                state,
+                "revision_loop",
+                f"Revizyon dongusu basladi ({state['revision_iteration']}/{max_iterations}).",
+            )
+            return "writer"
+        return "end"
 
     def route_after_human_review(self, state: EstranovaState) -> str:
         return "publisher" if state["compliance"]["final_decision"] == "ready_to_publish" else "end"
