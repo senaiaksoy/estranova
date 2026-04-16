@@ -2,22 +2,60 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from typing import Any
 
-from langgraph.graph import END, StateGraph
-
-from agents import (
-    ComplianceExpertAgent,
-    MedicalCheckerAgent,
-    OrchestratorAgent,
-    PublisherAgent,
-    ResearchAgent,
-    WriterAgent,
-)
 from state import EstranovaState, initialize_state
 
 
+REQUIRED_PACKAGES = [
+    "langgraph",
+    "langchain",
+    "langchain-community",
+    "openai",
+    "anthropic",
+    "google-generativeai",
+    "langchain-openai",
+    "langchain-anthropic",
+    "langchain-google-genai",
+    "python-dotenv",
+]
+
+
+def ensure_runtime_dependencies() -> None:
+    """Show actionable install hint if runtime dependencies are missing."""
+    missing_import = None
+    try:
+        import langgraph  # noqa: F401
+        import langchain_openai  # noqa: F401
+        import langchain_anthropic  # noqa: F401
+        import langchain_google_genai  # noqa: F401
+        import agents  # noqa: F401
+    except ModuleNotFoundError as exc:
+        missing_import = exc.name
+
+    if missing_import:
+        install_cmd = f"pip install {' '.join(REQUIRED_PACKAGES)}"
+        print(
+            f"Eksik kutuphane tespit edildi: {missing_import}\n"
+            f"Su komutu calistirin: {install_cmd}",
+            file=sys.stderr,
+        )
+        raise SystemExit(1)
+
+
 def build_graph() -> Any:
+    from langgraph.graph import END, StateGraph
+
+    from agents import (
+        ComplianceExpertAgent,
+        MedicalCheckerAgent,
+        OrchestratorAgent,
+        PublisherAgent,
+        ResearchAgent,
+        WriterAgent,
+    )
+
     orchestrator = OrchestratorAgent()
     research = ResearchAgent()
     writer = WriterAgent()
@@ -71,6 +109,10 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    ensure_runtime_dependencies()
+    from dotenv import load_dotenv
+
+    load_dotenv()
     args = parse_args()
     app = build_graph()
     initial_state = initialize_state(

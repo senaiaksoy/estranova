@@ -20,7 +20,20 @@ class PromptBackedAgent:
 
     def __init__(self, prompt_rel_path_from_repo_root: str) -> None:
         repo_root = Path(__file__).resolve().parents[1]
-        prompt_path = repo_root / prompt_rel_path_from_repo_root
+        prompt_candidates = [
+            repo_root / prompt_rel_path_from_repo_root,
+            repo_root / "agents" / prompt_rel_path_from_repo_root,
+            repo_root / "prompts" / prompt_rel_path_from_repo_root,
+        ]
+
+        prompt_path = next((p for p in prompt_candidates if p.exists()), None)
+        if prompt_path is None:
+            candidate_text = ", ".join(str(p) for p in prompt_candidates)
+            raise FileNotFoundError(
+                f"Prompt dosyasi bulunamadi: {prompt_rel_path_from_repo_root}. "
+                f"Denenen yollar: {candidate_text}"
+            )
+
         self.prompt_path = prompt_path
         self.prompt_text = prompt_path.read_text(encoding="utf-8")
 
@@ -96,8 +109,36 @@ class PromptBackedAgent:
             match = re.search(r"\{.*\}", text, flags=re.DOTALL)
             if match:
                 text = match.group(0)
+        text = PromptBackedAgent._cleanup_json_text(text)
         try:
             return json.loads(text)
         except json.JSONDecodeError as exc:
+            repaired = PromptBackedAgent._repair_common_json_issues(text)
+            if repaired != text:
+                try:
+                    return json.loads(repaired)
+                except json.JSONDecodeError:
+                    pass
             # Provide a helpful error so the caller can fix the prompt.
             raise ValueError(f"LLM output is not valid JSON. Raw output (truncated): {text[:500]}") from exc
+
+    @staticmethod
+    def _cleanup_json_text(text: str) -> str:
+        """Normalize markdown/codefence artifacts before JSON parsing."""
+        cleaned = text.strip()
+        if cleaned.startswith("```"):
+            cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned, flags=re.IGNORECASE)
+            cleaned = re.sub(r"\s*```$", "", cleaned)
+        return cleaned.strip()
+
+    @staticmethod
+    def _repair_common_json_issues(text: str) -> str:
+        """
+        Attempt lightweight recovery for frequent LLM JSON mistakes:
+        - trailing commas before } or ]
+        - smart quotes
+        """
+        repaired = text
+        repaired = repaired.replace("“", '"').replace("”", '"').replace("’", "'")
+        repaired = re.sub(r",\s*([}\]])", r"\1", repaired)
+        return repaired
