@@ -5,7 +5,7 @@ from typing import Final
 
 ORCHESTRATOR: Final[str] = "gpt-4o"
 RESEARCHER: Final[str] = "gemini-1.5-flash"
-WRITER: Final[str] = "claude-3-5-sonnet-20240620"
+WRITER: Final[str] = "gpt-4o"
 CHECKER: Final[str] = "gpt-4o"
 COMPLIANCE: Final[str] = "gpt-4o"
 

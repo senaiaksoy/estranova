@@ -66,8 +66,6 @@ class PromptBackedAgent:
         """
         llm_manager = LLMManager()
         model_name = llm_manager.get_model_name(role)
-        provider = self.detect_provider_from_model(model_name)
-        print(f"{self.name}, {provider}/{model_name} modelini kullanarak çağrı yapıyor...")
 
         build_kwargs: dict[str, Any] = {"temperature": temperature}
         if model_name.startswith("gemini-"):
@@ -88,17 +86,21 @@ class PromptBackedAgent:
 
         parsed = self._parse_json_strict(text)
 
+        resolved_model = getattr(chat, "last_model_used", None) or model_name
+        provider = self.detect_provider_from_model(str(resolved_model))
+
         if state_for_logging is not None:
             state_for_logging.setdefault("llm_calls", []).append(
                 {
                     "agent": self.name,
                     "role": role,
                     "provider": provider,
-                    "model": model_name,
+                    "model": resolved_model,
                     "response_length_chars": len(text),
                 }
             )
 
+        print(f"[OK] {self.name}")
         return parsed
 
     @staticmethod

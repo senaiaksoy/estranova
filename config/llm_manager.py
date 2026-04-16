@@ -29,10 +29,7 @@ class LLMManager:
         try:
             primary_chat = self._build_primary_chat_model(role, model_name, **kwargs)
         except Exception as exc:
-            print(
-                f"[WARN] Primary model hazirlanamadi ({model_name}) role={role}. "
-                f"OpenAI fallback denenecek. Hata: {exc}"
-            )
+            print(f"[ERR] {role}: primary kurulamadi ({model_name}), cagri aninda gpt-4o denenecek: {exc}")
 
         return _FailoverChatModel(
             manager=self,
@@ -67,17 +64,17 @@ class LLMManager:
         openai_kwargs = self._normalize_openai_kwargs(kwargs)
         return ChatOpenAI(model=model_name, api_key=os.getenv("OPENAI_API_KEY"), **openai_kwargs)
 
+    FALLBACK_MODEL: str = "gpt-4o"
+
     def _invoke_openai_fallback(self, role: str, messages: Any, build_kwargs: dict[str, Any]):
-        fallback_chain = ["gpt-4o-mini", "gpt-4o"]
-        last_error: Exception | None = None
-        for fallback_model in fallback_chain:
-            try:
-                print(f"[WARN] {role} icin fallback modele geciliyor: {fallback_model}")
-                chat = self._build_openai_chat(role=role, model_name=fallback_model, **build_kwargs)
-                return chat.invoke(messages)
-            except Exception as exc:
-                last_error = exc
-        raise RuntimeError(f"OpenAI fallback modeli de basarisiz oldu: {last_error}") from last_error
+        """Tek deneme: yalnizca gpt-4o (mini+4o zinciri yok, dongu yok)."""
+        try:
+            chat = self._build_openai_chat(role=role, model_name=self.FALLBACK_MODEL, **build_kwargs)
+            return chat.invoke(messages)
+        except Exception as exc:
+            raise RuntimeError(
+                f"Fallback ({self.FALLBACK_MODEL}) basarisiz role={role}: {exc}"
+            ) from exc
 
     @staticmethod
     def _normalize_openai_kwargs(kwargs: dict[str, Any]) -> dict[str, Any]:
@@ -100,7 +97,7 @@ def get_chat_model(role: str, **kwargs: Any):
 
 
 class _FailoverChatModel:
-    """Chat model wrapper that retries with OpenAI fallback on invoke errors."""
+    """Primary model; invoke hatasinda veya primary yoksa tek seferlik OpenAI fallback."""
 
     def __init__(
         self,
@@ -116,16 +113,24 @@ class _FailoverChatModel:
         self.primary_model_name = primary_model_name
         self.primary_chat = primary_chat
         self.build_kwargs = build_kwargs
+        self.last_model_used: str | None = None
 
     def invoke(self, messages: Any):
         if self.primary_chat is None:
-            return self.manager._invoke_openai_fallback(self.role, messages, self.build_kwargs)
+            print(f"[WARN] {self.role}: primary model yok, tek seferlik {self.manager.FALLBACK_MODEL}")
+            result = self.manager._invoke_openai_fallback(self.role, messages, self.build_kwargs)
+            self.last_model_used = self.manager.FALLBACK_MODEL
+            return result
 
         try:
-            return self.primary_chat.invoke(messages)
+            result = self.primary_chat.invoke(messages)
+            self.last_model_used = self.primary_model_name
+            return result
         except Exception as exc:
-            print(
-                f"[WARN] Primary invoke basarisiz ({self.primary_model_name}) role={self.role}. "
-                f"Fallback denenecek. Hata: {exc}"
-            )
-            return self.manager._invoke_openai_fallback(self.role, messages, self.build_kwargs)
+            if str(self.primary_model_name) == self.manager.FALLBACK_MODEL:
+                print(f"[ERR] {self.role}: {self.primary_model_name} basarisiz (fallback zaten ayni model): {exc}")
+                raise
+            print(f"[WARN] {self.role}: {self.primary_model_name} hata, tek fallback {self.manager.FALLBACK_MODEL}: {exc}")
+            result = self.manager._invoke_openai_fallback(self.role, messages, self.build_kwargs)
+            self.last_model_used = self.manager.FALLBACK_MODEL
+            return result
