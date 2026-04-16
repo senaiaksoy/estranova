@@ -23,6 +23,7 @@ class WriterAgent(PromptBackedAgent):
         key_claims = state.get("key_claims", [])
         revision_feedback = state.get("revision_feedback", [])
         revision_iteration = int(state.get("revision_iteration", 0))
+        user_context = str(state.get("user_context", "") or "").strip()
 
         user_payload = {
             "topic": topic,
@@ -34,6 +35,7 @@ class WriterAgent(PromptBackedAgent):
             "disclaimer_needed": disclaimer_needed,
             "revision_iteration": revision_iteration,
             "revision_feedback": revision_feedback,
+            "user_context": user_context,
         }
 
         try:

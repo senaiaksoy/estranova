@@ -102,6 +102,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--risk-level", choices=["low", "medium", "high"], default="medium")
     parser.add_argument("--pretty", action="store_true", help="Pretty print JSON output")
+    parser.add_argument(
+        "--user-context",
+        default="",
+        help="Okuyucu profili (Writer makale girisinde kullanilir; bos birakilabilir)",
+    )
     return parser.parse_args()
 
 
@@ -227,6 +232,7 @@ def main() -> None:
         audience=args.audience,
         content_goal=args.content_goal,
         risk_level=args.risk_level,
+        user_context=args.user_context or "",
     )
     result: EstranovaState = app.invoke(initial_state)
 

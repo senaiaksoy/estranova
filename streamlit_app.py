@@ -11,10 +11,13 @@ from dotenv import load_dotenv
 
 from main import build_graph, ensure_runtime_dependencies
 from reader_guide import (
+    ARTICLE_KIND_DISPLAY,
+    build_user_context,
     format_recommendations_markdown,
     list_age_options,
     list_symptom_options,
     recommend,
+    suggest_agent_topic,
 )
 from state import EstranovaState, initialize_state
 
@@ -34,7 +37,13 @@ def merge_state(base: dict[str, Any], updates: dict[str, Any]) -> dict[str, Any]
     return base
 
 
-def run_pipeline(topic: str, audience: str, content_goal: str, risk_level: str):
+def run_pipeline(
+    topic: str,
+    audience: str,
+    content_goal: str,
+    risk_level: str,
+    user_context: str = "",
+):
     ensure_runtime_dependencies()
     load_dotenv()
 
@@ -44,6 +53,7 @@ def run_pipeline(topic: str, audience: str, content_goal: str, risk_level: str):
         audience=audience,
         content_goal=content_goal,
         risk_level=risk_level,  # type: ignore[arg-type]
+        user_context=user_context or "",
     )
 
     event_logs: list[str] = []
@@ -216,6 +226,14 @@ def render_output_history() -> None:
         st.json({k: v for k, v in selected.items() if not k.startswith("_")})
 
 
+def _go_to_producer_with_reader_profile(age_key: str, symptom_key: str) -> None:
+    """Okuyucu rehberi secimlerini Writer'a aktar ve uretim ekranina gec."""
+    st.session_state.user_context_input = build_user_context(age_key, symptom_key)
+    st.session_state.pending_producer_topic = suggest_agent_topic(symptom_key)
+    st.session_state.nav_page = "Icerik uretimi"
+    st.rerun()
+
+
 def render_reader_guide_tab() -> None:
     st.subheader("Okuyucu Rehberi")
     st.caption("2 kisa soru — kural tabanli oneriler (AI kullanilmaz).")
@@ -245,25 +263,54 @@ def render_reader_guide_tab() -> None:
 
     if st.button("Onerileri goster", key="reader_show"):
         result = recommend(age_choice, symptom_choice)
+        st.session_state.user_context_input = build_user_context(age_choice, symptom_choice)
+        st.session_state.reader_last_result = result
+        st.session_state.reader_last_age = age_choice
+        st.session_state.reader_last_symptom = symptom_choice
+
+    if st.session_state.get("reader_last_result"):
+        result = st.session_state.reader_last_result
+        age_choice = st.session_state.reader_last_age
+        symptom_choice = st.session_state.reader_last_symptom
+
         st.markdown("### Sizin için önerilen içerikler")
         st.info(result["age_note"])
-        for art in result["articles"]:
-            with st.container():
-                st.markdown(f"**{art['title']}** · ~{art['read_minutes']} dk okuma")
-                st.caption(art["summary"])
-        st.download_button(
-            label="Oneri listesini indir (.md)",
-            data=format_recommendations_markdown(result),
-            file_name=f"estranova-okuyucu-rehberi-{age_choice}-{symptom_choice}.md",
-            mime="text/markdown",
-            key="reader_download_md",
-        )
+        st.caption("Okuyucu baglami Writer icin kenar cubukta guncellendi.")
+
+        if not result["articles"]:
+            st.warning("Henüz bu konuda bir makale önerisi yok.")
+            if st.button("Bu konuyu agent'a yazdır", key="reader_agent_empty"):
+                _go_to_producer_with_reader_profile(age_choice, symptom_choice)
+        else:
+            for art in result["articles"]:
+                icon, kind_label = ARTICLE_KIND_DISPLAY[art["kind"]]
+                with st.container():
+                    st.markdown(
+                        f"{icon} **{kind_label}** · **{art['title']}** · ~{art['read_minutes']} dk okuma"
+                    )
+                    st.caption(art["summary"])
+
+            b1, b2 = st.columns(2)
+            with b1:
+                st.download_button(
+                    label="Oneri listesini indir (.md)",
+                    data=format_recommendations_markdown(result),
+                    file_name=f"estranova-okuyucu-rehberi-{age_choice}-{symptom_choice}.md",
+                    mime="text/markdown",
+                    key="reader_download_md",
+                )
+            with b2:
+                if st.button("Bu profille içerik üret", key="reader_go_producer"):
+                    _go_to_producer_with_reader_profile(age_choice, symptom_choice)
 
 
 def main() -> None:
     st.set_page_config(page_title="Estranova Content Studio", layout="wide")
     st.title("Estranova Icerik Uretim Merkezi")
     st.caption("Konuyu girin, akisi canli izleyin, final makaleyi indirin.")
+
+    if "user_context_input" not in st.session_state:
+        st.session_state.user_context_input = ""
 
     with st.sidebar:
         st.subheader("Icerik uretimi ayarlari")
@@ -273,11 +320,26 @@ def main() -> None:
             value="bilgilendirici makale + sosyal medya + bulten + publisher paketi",
         )
         risk_level = st.selectbox("Risk seviyesi", options=["low", "medium", "high"], index=1)
+        st.text_area(
+            "Okuyucu baglami (Writer)",
+            height=100,
+            key="user_context_input",
+            help="Okuyucu Rehberi secimleriniz buraya yazilir; Writer makalenin girisine uyarlama yapar.",
+        )
+        st.radio(
+            "Bolum",
+            options=["Icerik uretimi", "Okuyucu Rehberi"],
+            key="nav_page",
+        )
 
-    tab_producer, tab_reader = st.tabs(["Icerik uretimi", "Okuyucu Rehberi"])
+    if st.session_state.get("pending_producer_topic"):
+        st.session_state.producer_topic = st.session_state.pop("pending_producer_topic")
 
-    with tab_producer:
-        topic = st.text_input("Konu", placeholder="Orn: Magnezyum ve kadin sagligi")
+    if st.session_state.nav_page == "Icerik uretimi":
+        if "producer_topic" not in st.session_state:
+            st.session_state.producer_topic = ""
+
+        topic = st.text_input("Konu", placeholder="Orn: Magnezyum ve kadin sagligi", key="producer_topic")
         run_button = st.button("Icerik Uret")
 
         if run_button:
@@ -289,8 +351,9 @@ def main() -> None:
             status_box = st.empty()
 
             final_state: dict[str, Any] | None = None
+            uc = str(st.session_state.get("user_context_input", "") or "")
             try:
-                for message in run_pipeline(topic, audience, content_goal, risk_level):
+                for message in run_pipeline(topic, audience, content_goal, risk_level, user_context=uc):
                     logs = message["logs"]
                     logs_box.code("\n".join(logs[-30:]) or "Akis baslatildi...")
 
@@ -327,7 +390,7 @@ def main() -> None:
         st.divider()
         render_output_history()
 
-    with tab_reader:
+    else:
         render_reader_guide_tab()
 
 

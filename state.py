@@ -134,6 +134,7 @@ class EstranovaState(TypedDict, total=False):
     revision_iteration: int
     max_revision_iterations: int
     revision_feedback: list[str]
+    user_context: str
 
 
 def now_iso() -> str:
@@ -145,6 +146,7 @@ def initialize_state(
     audience: str = "40+ kadinlar",
     content_goal: str = "bilgilendirici makale + sosyal medya + bulten + publisher paketi",
     risk_level: RiskLevel = "medium",
+    user_context: str = "",
 ) -> EstranovaState:
     timestamp = now_iso()
     return EstranovaState(
@@ -181,6 +183,7 @@ def initialize_state(
         revision_iteration=0,
         max_revision_iterations=2,
         revision_feedback=[],
+        user_context=user_context,
     )
 
 

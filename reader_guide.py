@@ -4,13 +4,16 @@ Estranova Okuyucu Rehberi — kural tabanli (AI yok) icerik onerileri.
 
 from __future__ import annotations
 
-from typing import Any, Final, TypedDict
+from typing import Final, Literal, TypedDict
+
+ArticleKind = Literal["bilgi", "beslenme", "egzersiz"]
 
 
 class ArticleSuggestion(TypedDict):
     title: str
     summary: str
     read_minutes: int
+    kind: ArticleKind
 
 
 class ReaderGuideResult(TypedDict):
@@ -37,6 +40,15 @@ SYMPTOM_LABELS: Final[dict[str, str]] = {
     "uyku": "Uyku",
     "cilt": "Cilt",
     "kemik": "Kemik / mineral",
+}
+
+# Oneri satirlari: bilgi / beslenme / egzersiz (dongu)
+KIND_ORDER: Final[tuple[ArticleKind, ...]] = ("bilgi", "beslenme", "egzersiz")
+
+ARTICLE_KIND_DISPLAY: Final[dict[ArticleKind, tuple[str, str]]] = {
+    "bilgi": ("💡", "Bilgi"),
+    "beslenme": ("🥗", "Beslenme"),
+    "egzersiz": ("🧘", "Egzersiz"),
 }
 
 # Semptom -> 3–5 makale önerisi (başlık + kısa açıklama + tahmini okuma)
@@ -157,8 +169,17 @@ def recommend(age_range_key: str, symptom_key: str) -> ReaderGuideResult:
         raise ValueError(f"Gecersiz semptom: {symptom_key}")
 
     raw = _BY_SYMPTOM.get(symptom_key, [])
-    # En fazla 5, en az 3 göster (liste her zaman 3+ öğe)
-    articles = raw[:5]
+    articles: list[ArticleSuggestion] = []
+    for i, item in enumerate(raw[:5]):
+        kind = KIND_ORDER[i % len(KIND_ORDER)]
+        articles.append(
+            ArticleSuggestion(
+                title=item["title"],
+                summary=item["summary"],
+                read_minutes=item["read_minutes"],
+                kind=kind,
+            )
+        )
 
     return ReaderGuideResult(
         age_range=age_range_key,
@@ -166,6 +187,21 @@ def recommend(age_range_key: str, symptom_key: str) -> ReaderGuideResult:
         age_note=AGE_NOTES[age_range_key],
         articles=articles,
     )
+
+
+def build_user_context(age_range_key: str, symptom_key: str) -> str:
+    """Writer agent'a iletilecek kisa Turkce okuyucu profili (kural tabanli)."""
+    age = AGE_LABELS[age_range_key]
+    symptom = SYMPTOM_LABELS[symptom_key]
+    return (
+        f"Bu yazı {age} aralığındaki, {symptom.lower()} konusunda içerik arayan "
+        "kadın okuyucu için özelleştirilmiştir."
+    )
+
+
+def suggest_agent_topic(symptom_key: str) -> str:
+    """Icerik uretimi sekmesine aktarilacak ornek konu basligi."""
+    return f"{SYMPTOM_LABELS[symptom_key]}: bilgilendirici rehber makalesi"
 
 
 def format_recommendations_markdown(result: ReaderGuideResult) -> str:
@@ -180,7 +216,8 @@ def format_recommendations_markdown(result: ReaderGuideResult) -> str:
         "",
     ]
     for i, art in enumerate(result["articles"], start=1):
-        lines.append(f"{i}. **{art['title']}** (~{art['read_minutes']} dk)")
+        icon, klab = ARTICLE_KIND_DISPLAY[art["kind"]]
+        lines.append(f"{i}. {icon} **{klab}** — **{art['title']}** (~{art['read_minutes']} dk)")
         lines.append(f"   - {art['summary']}")
         lines.append("")
     return "\n".join(lines).strip()

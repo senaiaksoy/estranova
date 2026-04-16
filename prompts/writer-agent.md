@@ -45,11 +45,17 @@ Writer Agent, sadece onayli kaynak paketine dayanarak icerik uretir.
   "approved_sources": [],
   "disclaimer_needed": true,
   "revision_iteration": 0,
-  "revision_feedback": []
+  "revision_feedback": [],
+  "user_context": ""
 }
 ```
 
 Revizyon turu (`revision_iteration > 0`) ise `revision_feedback` maddelerini oncelikli uygula.
+
+## Okuyucu baglami (`user_context`)
+- `user_context` bos degilse, makale metninin **en basinda** (basliktan hemen sonra, ilk paragrafin ilk cumlesi olarak) bu metni kendi cumlenle kisaca yansit; ardindan konuya gir.
+- Ornek ton: "Bu yazi ... yas araligindaki / ... konuya odaklanan kadın okuyucular icin ozellestirilmistir." (Metni oldugu gibi kopyalama; 12-15 kelimeye sigdir.)
+- `user_context` bos ise ekstra cumle yazma.
 
 ## Cikti formati
 ```json
