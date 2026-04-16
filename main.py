@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from naming import slugify_topic
 from state import EstranovaState, initialize_state
 
 
@@ -110,14 +110,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def _slugify_topic(topic: str) -> str:
-    slug = topic.strip().lower()
-    translit = str.maketrans("çğıöşü", "cgiosu")
-    slug = slug.translate(translit)
-    slug = re.sub(r"[^a-z0-9]+", "-", slug).strip("-")
-    return slug or "icerik"
-
-
 def _estimate_cost_usd(llm_calls: list[dict[str, Any]]) -> float:
     """
     Heuristic cost estimate based on response length.
@@ -187,7 +179,7 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
     is_publish_ready = fd in ("ready_to_publish", "ready_to_publish_best_effort")
 
     today = datetime.now().strftime("%Y-%m-%d")
-    topic_slug = _slugify_topic(result.get("topic", "icerik"))
+    topic_slug = result.get("output_slug") or slugify_topic(str(result.get("topic", "") or "icerik"))
     base_name = f"{today}-{topic_slug}"
 
     final_article = (
@@ -203,6 +195,7 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
     report = {
         "generated_at": datetime.now().isoformat(),
         "topic": result.get("topic"),
+        "output_slug": result.get("output_slug") or topic_slug,
         "status": _derive_run_status(result),
         "final_decision": result.get("compliance", {}).get("final_decision"),
         "human_review_required": bool(result.get("human_review_required", False)),
@@ -234,6 +227,28 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
     return is_publish_ready
 
 
+def build_save_payload(result: EstranovaState) -> dict[str, Any]:
+    """Streamlit ve CLI icin save_operational_outputs rapor yuku."""
+    return {
+        "topic": result.get("topic"),
+        "risk_level_current": result.get("risk_level_current"),
+        "human_review_required": result.get("human_review_required"),
+        "final_decision": result.get("compliance", {}).get("final_decision"),
+        "publisher_output": result.get("publisher_output", {}),
+        "state_history": result.get("state_history", []),
+        "llm_calls": result.get("llm_calls", []),
+        "quality_assessment": {
+            "compliance_score": result.get("compliance", {}).get("compliance_score", None),
+            "critical_violations": len(
+                [v for v in result.get("violations", []) if v.get("severity") == "critical"]
+            ),
+            "final_article_quality": _final_article_quality_label(result),
+        },
+        "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
+        "best_effort_publish": bool(result.get("best_effort_publish", False)),
+    }
+
+
 def main() -> None:
     ensure_runtime_dependencies()
     from dotenv import load_dotenv
@@ -251,24 +266,7 @@ def main() -> None:
     )
     result: EstranovaState = app.invoke(initial_state)
 
-    payload = {
-        "topic": result["topic"],
-        "risk_level_current": result["risk_level_current"],
-        "human_review_required": result["human_review_required"],
-        "final_decision": result["compliance"]["final_decision"],
-        "publisher_output": result.get("publisher_output", {}),
-        "state_history": result.get("state_history", []),
-        "llm_calls": result.get("llm_calls", []),
-        "quality_assessment": {
-            "compliance_score": result.get("compliance", {}).get("compliance_score", None),
-            "critical_violations": len(
-                [v for v in result.get("violations", []) if v.get("severity") == "critical"]
-            ),
-            "final_article_quality": _final_article_quality_label(result),
-        },
-        "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
-        "best_effort_publish": bool(result.get("best_effort_publish", False)),
-    }
+    payload = build_save_payload(result)
     if args.pretty:
         print(json.dumps(payload, ensure_ascii=False, indent=2))
     else:

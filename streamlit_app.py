@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -9,7 +8,8 @@ from typing import Any
 import streamlit as st
 from dotenv import load_dotenv
 
-from main import build_graph, ensure_runtime_dependencies
+from main import build_graph, build_save_payload, ensure_runtime_dependencies, save_operational_outputs
+from naming import slugify_topic
 from reader_guide import (
     ARTICLE_KIND_DISPLAY,
     build_user_context,
@@ -30,12 +30,6 @@ PIPELINE_UI_LINES: dict[str, str] = {
     "compliance": "compliance done",
     "publisher": "final",
 }
-
-
-def slugify_topic(topic: str) -> str:
-    slug = topic.strip().lower()
-    slug = re.sub(r"[^a-z0-9]+", "-", slug).strip("-")
-    return slug or "icerik"
 
 
 def merge_state(base: dict[str, Any], updates: dict[str, Any]) -> dict[str, Any]:
@@ -351,7 +345,7 @@ def main() -> None:
         if "producer_topic" not in st.session_state:
             st.session_state.producer_topic = ""
 
-        topic = st.text_input("Konu", placeholder="Orn: Magnezyum ve kadin sagligi", key="producer_topic")
+        topic = st.text_input("Konu", placeholder="Orn: Ekzozom ve hucre iletisimi", key="producer_topic")
         run_button = st.button("Icerik Uret")
 
         if run_button:
@@ -393,6 +387,11 @@ def main() -> None:
                 st.error("Final state alinamadi.")
                 return
 
+            try:
+                save_operational_outputs(final_state, build_save_payload(final_state))  # type: ignore[arg-type]
+            except Exception as exc:
+                st.warning(f"output/ klasorune yazma uyari: {exc}")
+
             article = extract_article(final_state)
             decision = final_state.get("compliance", {}).get("final_decision", "unknown")
             halt = str(final_state.get("pipeline_halt_reason", "") or "")
@@ -404,7 +403,10 @@ def main() -> None:
                 )
             st.markdown(article)
 
-            filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slugify_topic(topic)}.md"
+            stem = str(final_state.get("output_slug") or "") or slugify_topic(
+                str(final_state.get("topic") or topic or "")
+            )
+            filename = f"{datetime.now().strftime('%Y-%m-%d')}-{stem}.md"
             st.download_button(
                 label="Makaleyi Indir (.md)",
                 data=article,

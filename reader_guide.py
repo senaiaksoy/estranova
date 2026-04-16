@@ -65,7 +65,7 @@ _BY_SYMPTOM: Final[dict[str, list[ArticleSuggestion]]] = {
             "read_minutes": 5,
         },
         {
-            "title": "Magnezyum ve kadın sağlığı: mitler ve gerçekçi beklentiler",
+            "title": "Mineraller ve kadın sağlığı: mitler ve gerçekçi beklentiler",
             "summary": "Beslenme destekleri hakkında abartısız, tıbbi tavsiye yerine geçmeyen bilgilendirici çerçeve.",
             "read_minutes": 7,
         },
@@ -136,7 +136,7 @@ _BY_SYMPTOM: Final[dict[str, list[ArticleSuggestion]]] = {
             "read_minutes": 4,
         },
         {
-            "title": "Magnezyum ve kemik sağlığı: ne biliniyor, ne bilinmiyor?",
+            "title": "Mineraller ve kemik sağlığı: ne biliniyor, ne bilinmiyor?",
             "summary": "Bilimsel kesinlik iddiası olmadan, abartısız beklenti çerçevesi.",
             "read_minutes": 6,
         },

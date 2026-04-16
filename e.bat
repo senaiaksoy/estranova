@@ -30,7 +30,7 @@ if /i "%~1"=="rapor" (
 
 if /i "%~1"=="yaz" (
   if "%~2"=="" (
-    echo [Estranova] Konu eksik. Ornek: e.bat yaz "Magnezyum ve kadin sagligi"
+    echo [Estranova] Konu eksik. Ornek: e.bat yaz "Ekzozom ve hucre iletisimi"
     exit /b 1
   )
   set "ALL=%*"

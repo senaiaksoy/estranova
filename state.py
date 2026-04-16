@@ -5,6 +5,7 @@ from typing import Any, Literal, NotRequired, TypedDict
 from uuid import uuid4
 
 from config.pipeline_limits import MAX_REVISION_ITERATIONS
+from naming import slugify_topic
 
 
 RiskLevel = Literal["low", "medium", "high"]
@@ -127,6 +128,7 @@ class EstranovaState(TypedDict, total=False):
     created_at: str
     updated_at: str
     topic: str
+    output_slug: str
     audience: str
     content_goal: str
     risk_level_initial: RiskLevel
@@ -177,6 +179,7 @@ def initialize_state(
         created_at=timestamp,
         updated_at=timestamp,
         topic=topic,
+        output_slug=slugify_topic(topic),
         audience=audience,
         content_goal=content_goal,
         risk_level_initial=risk_level,

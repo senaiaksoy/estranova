@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import re
 
+from naming import slugify_topic
+
 from state import EstranovaState, PublisherOutput, append_history
 
 from .base import PromptBackedAgent
@@ -12,11 +14,13 @@ class PublisherAgent(PromptBackedAgent):
         super().__init__("writer_prompt.txt")
 
     def run(self, state: EstranovaState) -> EstranovaState:
-        title = state["topic"].strip().capitalize()
-        slug = self._slugify(state["topic"])
+        topic_raw = str(state.get("topic", "") or "").strip()
+        # Dosya ve CMS slug her zaman guncel konu basligindan (state.topic)
+        slug = slugify_topic(topic_raw)
+        title = topic_raw.capitalize() if topic_raw else "Icerik"
         excerpt = self._excerpt_from_article(state["draft"]["article"])
-        title_tag = self._build_title_tag(state["topic"])
-        meta_description = self._build_meta_description(state["topic"])
+        title_tag = self._build_title_tag(topic_raw or "icerik")
+        meta_description = self._build_meta_description(topic_raw or "icerik")
 
         state["publisher_output"] = PublisherOutput(
             cms_format="markdown",
@@ -54,22 +58,6 @@ class PublisherAgent(PromptBackedAgent):
         )
         append_history(state, "publisher", "final")
         return state
-
-    @staticmethod
-    def _slugify(value: str) -> str:
-        lowered = value.lower()
-        replacements = {
-            "ç": "c",
-            "ğ": "g",
-            "ı": "i",
-            "ö": "o",
-            "ş": "s",
-            "ü": "u",
-        }
-        for src, target in replacements.items():
-            lowered = lowered.replace(src, target)
-        lowered = re.sub(r"[^a-z0-9]+", "-", lowered).strip("-")
-        return lowered
 
     @staticmethod
     def _excerpt_from_article(article: str) -> str:
