@@ -5,5 +5,5 @@ Bu liste, Estranova için üretilecek gelecek içeriklerin bir kaydıdır. Her m
 - [x] **Konu:** Gece Terlemeleri ve Uyku Kalitesi: Daha Huzurlu Geceler İçin İpuçları
 - [x] **Konu:** Menopozda Kas ve Kemik Sağlığını Korumak: Güçlü Kalmanın Yolları
 - [x] **Konu:** Cilt Sağlığı ve Kolajen: Menopoz Döneminde Cildinize Nasıl Destek Olursunuz?
-- [ ] **Konu:** Perimenopozda Ruh Hali Dalgalanmaları: Duygusal Dengeni Korumak İçin Neler Yapabilirsin?
-- [ ] **Konu:** Menopoz Sonrası Kalp Sağlığı: Nelere Dikkat Etmeliyiz?
+- [x] **Konu:** Perimenopozda Ruh Hali Dalgalanmaları: Duygusal Dengeni Korumak İçin Neler Yapabilirsin?
+- [x] **Konu:** Menopoz Sonrası Kalp Sağlığı: Nelere Dikkat Etmeliyiz?
