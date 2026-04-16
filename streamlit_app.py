@@ -372,8 +372,11 @@ def main() -> None:
 
             article = extract_article(final_state)
             decision = final_state.get("compliance", {}).get("final_decision", "unknown")
+            halt = str(final_state.get("pipeline_halt_reason", "") or "")
             st.subheader("Final Makale")
             st.write(f"Final karar: `{decision}`")
+            if halt:
+                st.warning(f"Akis sonlandirma: `{halt}` (icerik en iyi haliyle uretildi ise manuel kontrol onerilir.)")
             st.markdown(article)
 
             filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slugify_topic(topic)}.md"

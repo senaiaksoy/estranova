@@ -4,6 +4,8 @@ import json
 import re
 from typing import Any
 
+from config.pipeline_limits import MIN_COMPLIANCE_SCORE_PUBLISH
+
 from state import ComplianceBlock, EstranovaState, FinalApprover, Violation, append_history, now_iso
 
 from .base import PromptBackedAgent
@@ -67,16 +69,22 @@ class ComplianceExpertAgent(PromptBackedAgent):
 
         auto_reject = False
         score = int(result.get("compliance_score", 0))
-        if score < 80:
+        if score < MIN_COMPLIANCE_SCORE_PUBLISH:
             auto_reject = True
-            required_fixes.append("Uyumluluk skoru 80 altinda oldugu icin icerik otomatik reddedildi.")
+            required_fixes.append(
+                f"Uyumluluk skoru hedefin altinda ({score}<{MIN_COMPLIANCE_SCORE_PUBLISH}); "
+                "metni sade, guvenli ve iddiasiz tutarak yeniden duzenleyin (abartili red nedeni yerine net duzeltme)."
+            )
             violations.append(
                 Violation(
                     type="low_compliance_score",
                     severity="critical",
                     text_ref="compliance_score",
                     rule_id="strict.score_threshold",
-                    fix_suggestion="Skoru en az 80 olacak sekilde metni sade, guvenli ve iddiasiz yeniden yazin.",
+                    fix_suggestion=(
+                        f"Skoru en az {MIN_COMPLIANCE_SCORE_PUBLISH} olacak sekilde "
+                        "metni sade, guvenli ve iddiasiz yeniden yazin."
+                    ),
                 )
             )
 
@@ -124,7 +132,10 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 )
             )
         if long_sentences:
-            required_fixes.append("Uzun cumleler bulundu; tum cumleleri 12-15 kelime araligina cekin.")
+            required_fixes.append(
+                f"Uzun cumleler ({len(long_sentences)} adet): cumleleri 12-15 kelimeye indirin; "
+                "once en uzun 1-2 cumleyi bolun."
+            )
 
         final_decision_raw = result.get("final_decision", "revizyon_gerekli")
         if auto_reject or final_decision_raw == "reddedildi":

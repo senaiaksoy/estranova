@@ -22,7 +22,7 @@ Compliance Agent, Estranova iceriginin yasal, editoriyal ve guvenlik sinirlarina
 - Kritik risk varsa `human_review_required = true` veya `risk_level = high` yukselmesi oner.
 
 ## Strict Validation
-- `compliance_score` 80 altindaysa otomatik olarak `final_decision = revizyon_gerekli` degil, fiilen red seviyesinde degerlendir.
+- `compliance_score` **75** altindaysa otomatik olarak `final_decision = revizyon_gerekli` degil, fiilen red seviyesinde degerlendir (gecici esik; kucuk stil uyarisinda abartili red verme).
 - Asagidaki kelime veya anlam kaliplari gecerse **ASLA onay verme**:
   - `mucize`
   - `kesin cozum`

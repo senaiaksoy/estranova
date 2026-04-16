@@ -46,11 +46,16 @@ Writer Agent, sadece onayli kaynak paketine dayanarak icerik uretir.
   "disclaimer_needed": true,
   "revision_iteration": 0,
   "revision_feedback": [],
-  "user_context": ""
+  "user_context": "",
+  "revision_stagnation_warning": ""
 }
 ```
 
 Revizyon turu (`revision_iteration > 0`) ise `revision_feedback` maddelerini oncelikli uygula.
+
+## Revizyon tekrari (`revision_stagnation_warning`)
+- Bu alan bos degilse, onceki turda ayni geri bildirimin tekrarlandigi varsayilir.
+- **Ayni hatayi tekrarlama:** riskli cumleleri tek tek yeniden yaz; sadece ustunku degisiklik yapma; gerekirse paragraf yapısını degistir.
 
 ## Okuyucu baglami (`user_context`)
 - `user_context` bos degilse, makale metninin **en basinda** (basliktan hemen sonra, ilk paragrafin ilk cumlesi olarak) bu metni kendi cumlenle kisaca yansit; ardindan konuya gir.

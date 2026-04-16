@@ -25,6 +25,12 @@ class WriterAgent(PromptBackedAgent):
         revision_iteration = int(state.get("revision_iteration", 0))
         user_context = str(state.get("user_context", "") or "").strip()
 
+        fb_joined = "\n".join(str(x).strip() for x in revision_feedback if str(x).strip())
+        prev_snap = str(state.get("writer_revision_feedback_snapshot", "") or "")
+        stagnation = bool(
+            revision_iteration >= 2 and fb_joined and prev_snap and fb_joined == prev_snap
+        )
+
         user_payload = {
             "topic": topic,
             "audience": audience,
@@ -36,6 +42,13 @@ class WriterAgent(PromptBackedAgent):
             "revision_iteration": revision_iteration,
             "revision_feedback": revision_feedback,
             "user_context": user_context,
+            "revision_stagnation_warning": (
+                "UYARI: Onceki revizyon turunda ayni geri bildirim listesi tekrarlandi. "
+                "Metni kokten sadelestir; onceki turda cozulmeyen sorunlari tekrar etme; "
+                "riskli cumleleri cumle bazinda yeniden yaz."
+                if stagnation
+                else ""
+            ),
         }
 
         try:
@@ -95,6 +108,8 @@ class WriterAgent(PromptBackedAgent):
         if result.get("human_review_required"):
             state["human_review_required"] = True
             state["risk_level_current"] = "high"
+
+        state["writer_revision_feedback_snapshot"] = fb_joined
 
         if revision_iteration > 0:
             append_history(

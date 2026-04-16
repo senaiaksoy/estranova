@@ -48,6 +48,7 @@ def ensure_runtime_dependencies() -> None:
 
 
 def build_graph() -> Any:
+    from config.pipeline_limits import GRAPH_RECURSION_LIMIT
     from langgraph.graph import END, StateGraph
 
     from agents import (
@@ -89,7 +90,7 @@ def build_graph() -> Any:
         {"publisher": "publisher", "writer": "writer", "end": END},
     )
     graph.add_edge("publisher", END)
-    return graph.compile()
+    return graph.compile(recursion_limit=GRAPH_RECURSION_LIMIT)
 
 
 def parse_args() -> argparse.Namespace:
@@ -157,10 +158,21 @@ def _build_agent_issue_counts(result: EstranovaState) -> dict[str, int]:
     return counts
 
 
+def _final_article_quality_label(result: EstranovaState) -> str:
+    fd = result.get("compliance", {}).get("final_decision")
+    if fd == "ready_to_publish":
+        return "high"
+    if fd == "ready_to_publish_best_effort":
+        return "best_effort"
+    return "needs_revision"
+
+
 def _derive_run_status(result: EstranovaState) -> str:
     final_decision = result.get("compliance", {}).get("final_decision")
     if final_decision == "ready_to_publish":
         return "published"
+    if final_decision == "ready_to_publish_best_effort":
+        return "published_best_effort"
     if result.get("human_review_required"):
         return "needs_human_review"
     if final_decision == "rejected":
@@ -172,7 +184,8 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
     output_dir = Path("output")
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    is_publish_ready = result.get("compliance", {}).get("final_decision") == "ready_to_publish"
+    fd = result.get("compliance", {}).get("final_decision")
+    is_publish_ready = fd in ("ready_to_publish", "ready_to_publish_best_effort")
 
     today = datetime.now().strftime("%Y-%m-%d")
     topic_slug = _slugify_topic(result.get("topic", "icerik"))
@@ -214,6 +227,8 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
         ],
         "revision_iterations": int(result.get("revision_iteration", 0)),
         "agent_issue_counts": _build_agent_issue_counts(result),
+        "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
+        "best_effort_publish": bool(result.get("best_effort_publish", False)),
     }
     report_path = output_dir / f"{base_name}-report.json"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -249,12 +264,10 @@ def main() -> None:
             "critical_violations": len(
                 [v for v in result.get("violations", []) if v.get("severity") == "critical"]
             ),
-            "final_article_quality": (
-                "high"
-                if result["compliance"]["final_decision"] == "ready_to_publish"
-                else "needs_revision"
-            ),
+            "final_article_quality": _final_article_quality_label(result),
         },
+        "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
+        "best_effort_publish": bool(result.get("best_effort_publish", False)),
     }
     if args.pretty:
         print(json.dumps(payload, ensure_ascii=False, indent=2))

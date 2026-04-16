@@ -4,10 +4,18 @@ from datetime import datetime, timezone
 from typing import Any, Literal, TypedDict
 from uuid import uuid4
 
+from config.pipeline_limits import MAX_REVISION_ITERATIONS
+
 
 RiskLevel = Literal["low", "medium", "high"]
 ClaimStatus = Literal["draft", "supported", "partial", "unsupported"]
-Decision = Literal["unknown", "ready_to_publish", "revision_required", "rejected"]
+Decision = Literal[
+    "unknown",
+    "ready_to_publish",
+    "ready_to_publish_best_effort",
+    "revision_required",
+    "rejected",
+]
 
 
 class Source(TypedDict):
@@ -135,6 +143,10 @@ class EstranovaState(TypedDict, total=False):
     max_revision_iterations: int
     revision_feedback: list[str]
     user_context: str
+    pipeline_halt_reason: str
+    compliance_revision_route_count: int
+    writer_revision_feedback_snapshot: str
+    best_effort_publish: bool
 
 
 def now_iso() -> str:
@@ -181,9 +193,13 @@ def initialize_state(
         state_history=[],
         publisher_output=PublisherOutput(),
         revision_iteration=0,
-        max_revision_iterations=2,
+        max_revision_iterations=MAX_REVISION_ITERATIONS,
         revision_feedback=[],
         user_context=user_context,
+        pipeline_halt_reason="",
+        compliance_revision_route_count=0,
+        writer_revision_feedback_snapshot="",
+        best_effort_publish=False,
     )
 
 
