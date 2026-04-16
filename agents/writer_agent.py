@@ -111,12 +111,5 @@ class WriterAgent(PromptBackedAgent):
 
         state["writer_revision_feedback_snapshot"] = fb_joined
 
-        if revision_iteration > 0:
-            append_history(
-                state,
-                "writer",
-                f"Writer revizyon turu tamamlandi (iterasyon={revision_iteration}).",
-            )
-        else:
-            append_history(state, "writer", "Writer LLM ciktilari state'e alindi.")
+        append_history(state, "writer", "writer done")
         return state

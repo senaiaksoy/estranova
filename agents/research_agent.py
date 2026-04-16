@@ -69,11 +69,7 @@ class ResearchAgent(PromptBackedAgent):
             # If model claims external isn't needed, keep the explicit internal-based decision.
             state["external_search_needed"] = True
 
-        append_history(
-            state,
-            "research",
-            f"Research tamamlandi (internal_sources={len(internal_sources)}; external_search_needed={state['external_search_needed']}).",
-        )
+        append_history(state, "research", "research done")
         return state
 
     @staticmethod
@@ -127,7 +123,7 @@ class ResearchAgent(PromptBackedAgent):
             metadata = doc.metadata or {}
             internal_sources.append(
                 InternalSource(
-                    source=str(metadata.get("source", "rag/bm25")),
+                    source=str(metadata.get("source", "rag/chroma_openai")),
                     chunk_index=int(metadata.get("chunk_index", -1)),
                     content=doc.page_content,
                 )

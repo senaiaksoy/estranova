@@ -69,5 +69,5 @@ class MedicalCheckerAgent(PromptBackedAgent):
             state["human_review_required"] = True
             state["risk_level_current"] = "high"
 
-        append_history(state, "validation", "Medical checker LLM raporu alindi.")
+        append_history(state, "validation", "validation done")
         return state

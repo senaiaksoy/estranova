@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from typing import Any, Literal, TypedDict
+from typing import Any, Literal, NotRequired, TypedDict
 from uuid import uuid4
 
 from config.pipeline_limits import MAX_REVISION_ITERATIONS
@@ -78,11 +78,19 @@ class FinalApprover(TypedDict):
     timestamp: str
 
 
+class ComplianceStandardDecision(TypedDict):
+    """Zorunlu sozlesme: UI ve orchestrator tek kaynak."""
+
+    decision: Literal["ready_to_publish", "needs_revision"]
+    score: int
+
+
 class ComplianceBlock(TypedDict):
     compliance_score: int
     required_fixes: list[str]
     final_decision: Decision
     final_approver: FinalApprover
+    standard_decision: NotRequired[ComplianceStandardDecision]
 
 
 class StateHistoryEntry(TypedDict):
@@ -141,6 +149,8 @@ class EstranovaState(TypedDict, total=False):
     publisher_output: PublisherOutput
     revision_iteration: int
     max_revision_iterations: int
+    iteration_count: int
+    compliance_to_writer_routes: int
     revision_feedback: list[str]
     user_context: str
     pipeline_halt_reason: str
@@ -194,6 +204,8 @@ def initialize_state(
         publisher_output=PublisherOutput(),
         revision_iteration=0,
         max_revision_iterations=MAX_REVISION_ITERATIONS,
+        iteration_count=0,
+        compliance_to_writer_routes=0,
         revision_feedback=[],
         user_context=user_context,
         pipeline_halt_reason="",

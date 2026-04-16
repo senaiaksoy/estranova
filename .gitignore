@@ -14,3 +14,4 @@ __pycache__/
 output/*.md
 output/*-report.json
 !output/.gitkeep
+rag/chroma_db/

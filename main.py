@@ -48,7 +48,6 @@ def ensure_runtime_dependencies() -> None:
 
 
 def build_graph() -> Any:
-    from config.pipeline_limits import GRAPH_RECURSION_LIMIT
     from langgraph.graph import END, StateGraph
 
     from agents import (
@@ -90,7 +89,7 @@ def build_graph() -> Any:
         {"publisher": "publisher", "writer": "writer", "end": END},
     )
     graph.add_edge("publisher", END)
-    return graph.compile(recursion_limit=GRAPH_RECURSION_LIMIT)
+    return graph.compile()
 
 
 def parse_args() -> argparse.Namespace:
@@ -191,13 +190,12 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
     topic_slug = _slugify_topic(result.get("topic", "icerik"))
     base_name = f"{today}-{topic_slug}"
 
-    if is_publish_ready:
-        final_article = (
-            result.get("publisher_output", {})
-            .get("content", {})
-            .get("body_markdown", "")
-            or result.get("draft", {}).get("article", "")
-        )
+    final_article = (
+        result.get("publisher_output", {}).get("content", {}).get("body_markdown", "")
+        or result.get("draft", {}).get("article", "")
+        or ""
+    )
+    if final_article.strip():
         md_path = output_dir / f"{base_name}.md"
         md_path.write_text(final_article, encoding="utf-8")
 
@@ -226,6 +224,7 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
             if entry.get("stage") in {"revision_loop", "writer", "compliance"}
         ],
         "revision_iterations": int(result.get("revision_iteration", 0)),
+        "iteration_count": int(result.get("iteration_count", 0)),
         "agent_issue_counts": _build_agent_issue_counts(result),
         "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
         "best_effort_publish": bool(result.get("best_effort_publish", False)),
@@ -241,6 +240,7 @@ def main() -> None:
 
     load_dotenv()
     args = parse_args()
+
     app = build_graph()
     initial_state = initialize_state(
         topic=args.topic,

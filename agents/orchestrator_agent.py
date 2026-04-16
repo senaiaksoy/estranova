@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 from config.pipeline_limits import (
-    CIRCUIT_BREAKER_AFTER_REVISION_ROUTES,
+    CIRCUIT_BREAKER_COMPLIANCE_WRITER_REPEATS,
+    COMPLIANCE_SCORE_PUBLISH_OK,
     MAX_REVISION_ITERATIONS,
 )
 
@@ -18,14 +19,12 @@ class OrchestratorAgent(PromptBackedAgent):
         return "validation" if state["risk_level_current"] in {"medium", "high"} else "compliance"
 
     def _route_to_publisher_best_effort(self, state: EstranovaState, reason: str) -> str:
-        """Revizyon limiti veya circuit breaker: mevcut taslagi yayina en iyi hal olarak kapat."""
         state["pipeline_halt_reason"] = reason
         state["best_effort_publish"] = True
         state["human_review_required"] = False
         fixes = list(state.get("compliance", {}).get("required_fixes", []) or [])
         note = (
-            f"[{reason}] Revizyon limiti veya guvenlik kesicisi: icerik mevcut haliyle kaydedildi. "
-            "Manuel editor kontrolu onerilir."
+            f"[{reason}] Son turda yayin paketi olusturuldu; manuel kontrol onerilir."
         )
         fixes.append(note)
         comp = dict(state.get("compliance", {}))
@@ -33,41 +32,63 @@ class OrchestratorAgent(PromptBackedAgent):
         comp["final_decision"] = "ready_to_publish_best_effort"
         comp.setdefault("compliance_score", int(comp.get("compliance_score", 0) or 0))
         state["compliance"] = comp  # type: ignore[assignment]
-        append_history(
-            state,
-            "orchestrator",
-            f"Akis sonlandirildi ({reason}); publisher'a en iyi hal ile yonlendiriliyor.",
-        )
         return "publisher"
 
     def route_after_compliance(self, state: EstranovaState) -> str:
-        if state["compliance"]["final_decision"] == "ready_to_publish" and not state["human_review_required"]:
+        comp = dict(state.get("compliance", {}))
+        score = int(comp.get("compliance_score", 0) or 0)
+        iteration_count = int(state.get("iteration_count", 0))
+        cw_routes = int(state.get("compliance_to_writer_routes", 0))
+
+        if cw_routes >= CIRCUIT_BREAKER_COMPLIANCE_WRITER_REPEATS:
+            state["pipeline_halt_reason"] = "loop prevented"
+            append_history(state, "orchestrator", "loop prevented")
+            return self._route_to_publisher_best_effort(state, "loop prevented")
+
+        if score >= COMPLIANCE_SCORE_PUBLISH_OK:
+            comp["final_decision"] = "ready_to_publish"
+            state["compliance"] = comp  # type: ignore[assignment]
             return "publisher"
 
-        revision_routes = int(state.get("compliance_revision_route_count", 0))
-        if revision_routes >= CIRCUIT_BREAKER_AFTER_REVISION_ROUTES:
-            return self._route_to_publisher_best_effort(state, "circuit_breaker")
+        if iteration_count >= MAX_REVISION_ITERATIONS:
+            return self._route_to_publisher_best_effort(state, "max_iteration_reached")
 
-        current_iteration = int(state.get("revision_iteration", 0))
-        max_iterations = int(state.get("max_revision_iterations", MAX_REVISION_ITERATIONS))
-        if current_iteration < max_iterations:
-            state["revision_iteration"] = current_iteration + 1
-            state["compliance_revision_route_count"] = revision_routes + 1
+        std = comp.get("standard_decision") or {}
+        raw_dec = std.get("decision")
+        if raw_dec is None:
+            raw_dec = "ready_to_publish"
+
+        needs_revision = raw_dec == "needs_revision" or comp.get("final_decision") in (
+            "revision_required",
+            "rejected",
+        )
+        if score < COMPLIANCE_SCORE_PUBLISH_OK:
+            needs_revision = True
+
+        if needs_revision:
+            state["iteration_count"] = iteration_count + 1
+            state["revision_iteration"] = int(state.get("revision_iteration", 0)) + 1
+            state["compliance_to_writer_routes"] = cw_routes + 1
+            state["compliance_revision_route_count"] = int(
+                state.get("compliance_revision_route_count", 0)
+            ) + 1
             append_history(
                 state,
                 "revision_loop",
-                f"Revizyon dongusu basladi ({state['revision_iteration']}/{max_iterations}).",
+                f"revizyon {state['iteration_count']}/{MAX_REVISION_ITERATIONS}",
             )
             return "writer"
 
-        return self._route_to_publisher_best_effort(state, "max_revisions")
+        comp["final_decision"] = "ready_to_publish"
+        state["compliance"] = comp  # type: ignore[assignment]
+        return "publisher"
 
     def route_after_human_review(self, state: EstranovaState) -> str:
         fd = state["compliance"]["final_decision"]
         return "publisher" if fd in ("ready_to_publish", "ready_to_publish_best_effort") else "end"
 
     def mark_start(self, state: EstranovaState) -> EstranovaState:
-        append_history(state, "brief", f"Akis baslatildi. Risk: {state['risk_level_current']}.")
+        append_history(state, "start", "start")
         return state
 
     def human_review(self, state: EstranovaState) -> EstranovaState:
@@ -86,7 +107,6 @@ class OrchestratorAgent(PromptBackedAgent):
             state["compliance"]["required_fixes"] = fixes
             state["compliance"]["final_decision"] = "revision_required"
         else:
-            # Kritik risk yoksa, yayın karari compliance'dan gelir; burada degistirmeyiz.
             state["human_review_required"] = False
-        append_history(state, "human_review", f"Human review sonucu: {state['compliance']['final_decision']}.")
+        append_history(state, "human_review", "human_review")
         return state

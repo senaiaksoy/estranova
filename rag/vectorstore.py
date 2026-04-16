@@ -1,17 +1,19 @@
 from __future__ import annotations
 
 """
-Eski ad korundu: Chroma/torch yerine metin tabanli BM25 indeksi dogrulamasi.
+Chroma + OpenAIEmbeddings (API) ile vektor indeksi.
 
-Gercek indeks `rag.retriever` icinde; bu modul sadece chunk sayisini kontrol etmek icin.
+Yerel torch/transformers yok; OPENAI_API_KEY gerekir.
 """
 
-from rag.loader import build_chunks
+from dotenv import load_dotenv
+
+from rag.retriever import rebuild_chroma_index
 
 
 def build_vectorstore() -> None:
-    chunks = build_chunks()
-    print(f"{len(chunks)} chunk yüklendi (BM25, vektor/embeddings yok)")
+    load_dotenv()
+    rebuild_chroma_index()
 
 
 if __name__ == "__main__":

@@ -52,7 +52,7 @@ class PublisherAgent(PromptBackedAgent):
                 ],
             },
         )
-        append_history(state, "final", "Publisher cikti paketi uretildi.")
+        append_history(state, "publisher", "final")
         return state
 
     @staticmethod

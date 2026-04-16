@@ -21,6 +21,16 @@ from reader_guide import (
 )
 from state import EstranovaState, initialize_state
 
+# LangGraph node adi -> UI'da gosterilecek tek satir (log temizligi)
+PIPELINE_UI_LINES: dict[str, str] = {
+    "start": "start",
+    "research": "research done",
+    "writer": "writer done",
+    "validation": "validation done",
+    "compliance": "compliance done",
+    "publisher": "final",
+}
+
 
 def slugify_topic(topic: str) -> str:
     slug = topic.strip().lower()
@@ -63,7 +73,9 @@ def run_pipeline(
         for event in app.stream(initial_state):
             if isinstance(event, dict):
                 for node_name, node_update in event.items():
-                    event_logs.append(f"{datetime.now().strftime('%H:%M:%S')} - {node_name} tamamlandi")
+                    line = PIPELINE_UI_LINES.get(node_name)
+                    if line:
+                        event_logs.append(line)
                     if isinstance(node_update, dict):
                         current_state = merge_state(current_state, node_update)
             yield {"type": "progress", "logs": list(event_logs), "state": dict(current_state)}
@@ -360,8 +372,19 @@ def main() -> None:
                     if message["type"] == "progress":
                         status_box.info("Akis calisiyor...")
                     elif message["type"] == "done":
-                        status_box.success("Akis tamamlandi.")
                         final_state = message["state"]
+                        halt = str(final_state.get("pipeline_halt_reason", "") or "")
+                        if halt == "max_iteration_reached":
+                            status_box.warning(
+                                "max iteration reached → final version kullanıldı"
+                            )
+                        elif halt == "loop prevented":
+                            status_box.warning(
+                                "loop prevented — akış güvenli şekilde sonlandırıldı"
+                            )
+                        else:
+                            status_box.empty()
+                        st.success("✅ içerik hazır")
             except Exception as exc:
                 st.error(str(exc))
                 return
@@ -375,8 +398,10 @@ def main() -> None:
             halt = str(final_state.get("pipeline_halt_reason", "") or "")
             st.subheader("Final Makale")
             st.write(f"Final karar: `{decision}`")
-            if halt:
-                st.warning(f"Akis sonlandirma: `{halt}` (icerik en iyi haliyle uretildi ise manuel kontrol onerilir.)")
+            if halt and halt not in ("max_iteration_reached", "loop prevented"):
+                st.warning(
+                    f"Akis sonlandirma: `{halt}` (icerik en iyi haliyle uretildi ise manuel kontrol onerilir.)"
+                )
             st.markdown(article)
 
             filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slugify_topic(topic)}.md"
