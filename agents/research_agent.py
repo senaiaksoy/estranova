@@ -127,7 +127,7 @@ class ResearchAgent(PromptBackedAgent):
             metadata = doc.metadata or {}
             internal_sources.append(
                 InternalSource(
-                    source=str(metadata.get("source", "rag/chroma_db")),
+                    source=str(metadata.get("source", "rag/bm25")),
                     chunk_index=int(metadata.get("chunk_index", -1)),
                     content=doc.page_content,
                 )

@@ -1,31 +1,17 @@
 from __future__ import annotations
 
-from pathlib import Path
+"""
+Eski ad korundu: Chroma/torch yerine metin tabanli BM25 indeksi dogrulamasi.
 
-from langchain_community.embeddings import SentenceTransformerEmbeddings
-from langchain_community.vectorstores import Chroma
+Gercek indeks `rag.retriever` icinde; bu modul sadece chunk sayisini kontrol etmek icin.
+"""
 
 from rag.loader import build_chunks
 
 
-EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-PERSIST_DIRECTORY = Path("rag/chroma_db")
-COLLECTION_NAME = "estranova_sources"
-
-
-def build_vectorstore() -> Chroma:
+def build_vectorstore() -> None:
     chunks = build_chunks()
-    embeddings = SentenceTransformerEmbeddings(model_name=EMBEDDING_MODEL)
-
-    vectorstore = Chroma.from_documents(
-        documents=chunks,
-        embedding=embeddings,
-        persist_directory=str(PERSIST_DIRECTORY),
-        collection_name=COLLECTION_NAME,
-    )
-    vectorstore.persist()
-    print(f"{len(chunks)} chunk yüklendi")
-    return vectorstore
+    print(f"{len(chunks)} chunk yüklendi (BM25, vektor/embeddings yok)")
 
 
 if __name__ == "__main__":
