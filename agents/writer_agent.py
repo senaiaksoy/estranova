@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 
+from config.pipeline_limits import WRITER_MAX_OUTPUT_TOKENS
+
 from state import ClaimTrace, DraftContent, EstranovaState, append_history
 
 from .base import PromptBackedAgent
@@ -56,6 +58,7 @@ class WriterAgent(PromptBackedAgent):
                 role="writer",
                 user_payload=json.dumps(user_payload, ensure_ascii=False),
                 state_for_logging=state,
+                max_tokens=WRITER_MAX_OUTPUT_TOKENS,
             )
         except Exception as exc:
             raise RuntimeError(f"WriterAgent LLM call failed: {exc}") from exc

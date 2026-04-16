@@ -4,7 +4,7 @@ import json
 import re
 from typing import Any
 
-from config.pipeline_limits import MIN_COMPLIANCE_SCORE_PUBLISH
+from config.pipeline_limits import COMPLIANCE_LONG_SENTENCE_WORDS, MIN_COMPLIANCE_SCORE_PUBLISH
 
 from state import (
     ComplianceBlock,
@@ -130,7 +130,7 @@ class ComplianceExpertAgent(PromptBackedAgent):
                     f"Riskli ifade bulundu: '{term}'. Yumusatilmis ifade ile degistirin."
                 )
 
-        long_sentences = self._find_long_sentences(all_text, max_words=15)
+        long_sentences = self._find_long_sentences(all_text, max_words=COMPLIANCE_LONG_SENTENCE_WORDS)
         for sentence in long_sentences:
             violations.append(
                 Violation(
@@ -138,12 +138,12 @@ class ComplianceExpertAgent(PromptBackedAgent):
                     severity="medium",
                     text_ref=sentence[:180],
                     rule_id="strict.max_sentence_length",
-                    fix_suggestion="Cumleyi 12-15 kelimeyi gecmeyecek sekilde kisaltin.",
+                    fix_suggestion=f"Cumleyi ~{COMPLIANCE_LONG_SENTENCE_WORDS} kelimeyi asmayacak sekilde bolun veya kisaltin.",
                 )
             )
         if long_sentences:
             required_fixes.append(
-                f"Uzun cumleler ({len(long_sentences)} adet): cumleleri 12-15 kelimeye indirin; "
+                f"Uzun cumleler ({len(long_sentences)} adet): cumleleri makul uzunlukta tutun; "
                 "once en uzun 1-2 cumleyi bolun."
             )
 

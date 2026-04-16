@@ -33,7 +33,7 @@ Compliance Agent, Estranova iceriginin yasal, editoriyal ve guvenlik sinirlarina
   - `tamamen tedavi eder`
   - `kesin sonuc verir`
 - Metinde `Doktorunuza danisin` veya anlamca esdeger guvenli yonlendirme yoksa icerigi direkt fail et.
-- Uzun cumleleri (15+ kelime) violation olarak isaretle ve revizyon iste.
+- Uzun cumleleri (20+ kelime) violation olarak isaretle ve revizyon iste.
 - Plaza dili tespit edersen sureci durdur ve revizyon iste:
   - `focuslanmak`
   - `push etmek`
