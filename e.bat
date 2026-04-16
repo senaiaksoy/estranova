@@ -1,11 +1,12 @@
 @echo off
 REM Estranova kisayolu (proje kokundeki e.bat)
 REM
-REM Sadece "e" yazarak calistirmak icin (opsiyonel):
-REM   1) Bu klasorun tam yolunu Windows PATH ortam degiskenine ekleyin.
-REM      Ornek: E:\git_repo\estranova
-REM   2) Repoda e.cmd, e.bat'i cagirir; PATH bu klasore bakiyorsa "e" ve "e yaz ..." kullanilabilir.
-REM   Zorunlu degil: tam yol veya e.bat surukleyerek de calisir.
+REM PowerShell'de baska klasordeyken sadece "e" yazmak CALISMAZ (PATH'te yoksa).
+REM   - Gecici:  cd /d "%~dp0"   sonra   .\e.cmd   veya   .\e.bat
+REM   - Kalici:  proje kokunde  powershell -ExecutionPolicy Bypass -File .\add-estranova-to-path.ps1
+REM              (Yeni terminal acin; sonra her yerden "e" taninir.)
+REM
+REM CMD'de kalici: bu klasorun yolunu Windows PATH'e ekleyin; e.cmd "e" komutunu bulur.
 REM
 setlocal EnableDelayedExpansion
 cd /d "%~dp0"
