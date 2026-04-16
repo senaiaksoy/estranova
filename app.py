@@ -6,6 +6,7 @@ Ornekler:
   py app.py ui
   py app.py dashboard --last 7
   py app.py guide --age 45-50 --symptom uyku
+  py app.py guide --age 40-45 --symptom cilt --out rehber.md
   py app.py setup
 """
 
@@ -18,6 +19,15 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+
+
+def _ensure_utf8_stdio() -> None:
+    """Windows konsolunda Turkce cikti icin stdout/stderr UTF-8."""
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8")
+        except (AttributeError, OSError, ValueError):
+            pass
 
 
 def _run_in_root(cmd: list[str]) -> int:
@@ -64,6 +74,13 @@ def main() -> None:
         required=True,
         help="Semptom / ilgi alani",
     )
+    p_guide.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        metavar="DOSYA",
+        help="Markdown ciktiyi UTF-8 olarak bu dosyaya da yaz (or. rehber.md)",
+    )
 
     args = parser.parse_args()
 
@@ -106,10 +123,18 @@ def main() -> None:
         raise SystemExit(rc)
 
     if args.command == "guide":
+        _ensure_utf8_stdio()
         from reader_guide import format_recommendations_markdown, recommend
 
         result = recommend(args.age, args.symptom)
-        print(format_recommendations_markdown(result))
+        text = format_recommendations_markdown(result)
+        if args.out is not None:
+            out_path = Path(args.out)
+            if not out_path.is_absolute():
+                out_path = ROOT / out_path
+            out_path.write_text(text, encoding="utf-8")
+            print(f"[OK] UTF-8 dosya: {out_path.resolve()}")
+        print(text)
         raise SystemExit(0)
 
     raise SystemExit(2)
