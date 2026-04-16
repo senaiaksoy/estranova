@@ -91,6 +91,12 @@ class PublisherOutput(TypedDict, total=False):
     media: dict[str, Any]
 
 
+class InternalSource(TypedDict):
+    source: str
+    chunk_index: int
+    content: str
+
+
 class EstranovaState(TypedDict, total=False):
     state_version: str
     run_id: str
@@ -103,6 +109,8 @@ class EstranovaState(TypedDict, total=False):
     risk_level_current: RiskLevel
     disclaimer_needed: bool
     human_review_required: bool
+    external_search_needed: bool
+    internal_sources: list[InternalSource]
     approved_sources: list[Source]
     key_claims: list[Claim]
     finding_vs_commentary: list[FindingCommentary]
@@ -139,6 +147,8 @@ def initialize_state(
         risk_level_current=risk_level,
         disclaimer_needed=True,
         human_review_required=(risk_level == "high"),
+        external_search_needed=False,
+        internal_sources=[],
         approved_sources=[],
         key_claims=[],
         finding_vs_commentary=[],

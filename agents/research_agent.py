@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from state import Claim, EstranovaState, FindingCommentary, Source, append_history
+from state import Claim, EstranovaState, FindingCommentary, InternalSource, Source, append_history
+from rag.retriever import retrieve_relevant_chunks
 
 from .base import PromptBackedAgent
 
@@ -11,6 +12,20 @@ class ResearchAgent(PromptBackedAgent):
 
     def run(self, state: EstranovaState) -> EstranovaState:
         topic = state["topic"]
+        internal_sources = self._retrieve_internal_sources(topic)
+
+        if internal_sources:
+            state["internal_sources"] = internal_sources
+            state["external_search_needed"] = False
+            state["approved_sources"] = self._build_internal_approved_sources(internal_sources)
+            state["key_claims"] = self._build_internal_claims(topic, internal_sources)
+            state["finding_vs_commentary"] = self._build_internal_findings(state["key_claims"], internal_sources)
+            append_history(
+                state,
+                "research",
+                f"{len(internal_sources)} internal chunk bulundu, internal kaynaklar onceliklendirildi.",
+            )
+            return state
 
         sources: list[Source] = [
             Source(
@@ -81,8 +96,77 @@ class ResearchAgent(PromptBackedAgent):
             ),
         ]
 
+        state["internal_sources"] = []
+        state["external_search_needed"] = True
         state["approved_sources"] = sources
         state["key_claims"] = claims
         state["finding_vs_commentary"] = findings
-        append_history(state, "research", f"{len(sources)} kaynak ve {len(claims)} iddia toplandi.")
+        append_history(
+            state,
+            "research",
+            f"Internal kaynak bulunamadi. {len(sources)} fallback kaynak ve {len(claims)} iddia toplandi.",
+        )
         return state
+
+    def _retrieve_internal_sources(self, query: str) -> list[InternalSource]:
+        try:
+            documents = retrieve_relevant_chunks(query)
+        except Exception:
+            return []
+
+        internal_sources: list[InternalSource] = []
+        for doc in documents:
+            metadata = doc.metadata or {}
+            internal_sources.append(
+                InternalSource(
+                    source=str(metadata.get("source", "rag/chroma_db")),
+                    chunk_index=int(metadata.get("chunk_index", -1)),
+                    content=doc.page_content,
+                )
+            )
+        return internal_sources
+
+    def _build_internal_approved_sources(self, internal_sources: list[InternalSource]) -> list[Source]:
+        approved_sources: list[Source] = []
+        for index, item in enumerate(internal_sources, start=1):
+            approved_sources.append(
+                Source(
+                    id=f"internal_src_{index}",
+                    title=f"Estranova internal knowledge chunk {item['chunk_index']}",
+                    publisher="Estranova Internal Knowledge Base",
+                    year=2026,
+                    url=item["source"],
+                    source_type="internal_chunk",
+                    evidence_level="medium",
+                )
+            )
+        return approved_sources
+
+    def _build_internal_claims(self, topic: str, internal_sources: list[InternalSource]) -> list[Claim]:
+        claims: list[Claim] = []
+        for index, item in enumerate(internal_sources[:3], start=1):
+            excerpt = item["content"].replace("\n", " ").strip()
+            excerpt = excerpt[:220].rstrip(" .,;:")
+            claims.append(
+                Claim(
+                    id=f"claim_{index}",
+                    text=f"{topic} konusunda internal bilgi tabaninda su destekleyici bilgi bulundu: {excerpt}.",
+                    source_ids=[f"internal_src_{index}"],
+                    status="draft",
+                )
+            )
+        return claims
+
+    def _build_internal_findings(
+        self, claims: list[Claim], internal_sources: list[InternalSource]
+    ) -> list[FindingCommentary]:
+        findings: list[FindingCommentary] = []
+        for index, claim in enumerate(claims):
+            findings.append(
+                FindingCommentary(
+                    claim_id=claim["id"],
+                    finding=internal_sources[index]["content"][:260].replace("\n", " ").strip(),
+                    commentary="Bu bilgi Estranova'nin internal bilgi tabanindan cekildi; gerekirse sonraki adimda dis kaynakla desteklenebilir.",
+                )
+            )
+        return findings
