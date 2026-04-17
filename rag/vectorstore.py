@@ -12,7 +12,7 @@ from rag.retriever import rebuild_chroma_index
 
 
 def build_vectorstore() -> None:
-    load_dotenv()
+    load_dotenv(override=True)
     rebuild_chroma_index()
 
 

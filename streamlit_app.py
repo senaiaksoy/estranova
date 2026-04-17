@@ -61,7 +61,7 @@ def run_pipeline(
     internal_link_suggestions: str = "",
 ):
     ensure_runtime_dependencies()
-    load_dotenv()
+    load_dotenv(override=True)
 
     app = build_graph()
     initial_state = initialize_state(

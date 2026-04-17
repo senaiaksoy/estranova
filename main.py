@@ -370,7 +370,7 @@ def main() -> None:
     ensure_runtime_dependencies()
     from dotenv import load_dotenv
 
-    load_dotenv()
+    load_dotenv(override=True)
     args = parse_args()
 
     app = build_graph()

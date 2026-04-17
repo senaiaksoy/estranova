@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from config.llm_config import LLM_ROLE_MODELS
 
 
-load_dotenv()
+load_dotenv(override=True)
 
 
 class LLMManager:
