@@ -153,21 +153,29 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 )
             )
 
-        risky_terms = ["destekler", "iyileştirir", "iyilestirir"]
+        # Overpromise risk: sadece 3. şahıs aktif fiil formları ("destekler", "iyileştirir").
+        # "destekleyen", "desteklenen", "destekleyici", "destekleyebilir" gibi
+        # akademik / pasif / yumuşatılmış formlar MEŞRUDUR; word-boundary ile
+        # yalnızca aktif fiil formunu yakalıyoruz (önceki substring match 5/5
+        # makalede yanlış pozitif üretti — bkz. 2026-04-17 editoryal testi).
+        risky_term_patterns: list[tuple[str, str]] = [
+            (r"\bdestekler\b", "destekler"),
+            (r"\biyile(?:ş|s)tirir\b", "iyileştirir"),
+        ]
         lowered = all_text.lower()
-        for term in risky_terms:
-            if term in lowered:
+        for pattern, display in risky_term_patterns:
+            if re.search(pattern, lowered):
                 violations.append(
                     Violation(
                         type="overpromise",
                         severity="critical",
-                        text_ref=term,
+                        text_ref=display,
                         rule_id="strict.risky_claim_words",
-                        fix_suggestion=f"'{term}' yerine 'yardimci olabilir' veya 'iliskili olabilir' kullanin.",
+                        fix_suggestion=f"'{display}' yerine 'yardimci olabilir' veya 'iliskili olabilir' kullanin.",
                     )
                 )
                 required_fixes.append(
-                    f"Riskli ifade bulundu: '{term}'. Yumusatilmis ifade ile degistirin."
+                    f"Riskli ifade bulundu: '{display}'. Yumusatilmis ifade ile degistirin."
                 )
 
         plaza_hits: list[str] = []
