@@ -10,6 +10,7 @@ from config.pipeline_limits import (
     COMPLIANCE_LONG_SENTENCE_WORDS,
     COMPLIANCE_SCORE_PUBLISH_OK,
     COMPLIANCE_SCORE_REJECT_BELOW,
+    MAX_REVISION_ITERATIONS,
     MIN_COMPLIANCE_SCORE_PUBLISH,
 )
 
@@ -302,6 +303,24 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 "revision_loop",
                 f"revizyon (current_iteration={state['current_iteration']})",
             )
+
+        # Hard-stop: max iteration'a ulasildiginda best_effort publish'e hazirla.
+        # Orchestrator route_after_compliance'ta state mutate etmek LangGraph'ta
+        # persist olmuyor — onun icin burada (node icinde) yapiliyor.
+        if state["current_iteration"] >= MAX_REVISION_ITERATIONS:
+            state["pipeline_halt_reason"] = "max_iteration_hard_stop"
+            state["best_effort_publish"] = True
+            state["human_review_required"] = False
+            comp_final = dict(state.get("compliance", {}))
+            comp_final.setdefault("compliance_score", int(comp_final.get("compliance_score", 0) or 0))
+            existing_fixes = list(comp_final.get("required_fixes", []) or [])
+            existing_fixes.append(
+                "[max_iteration_hard_stop] Son turda yayin paketi olusturuldu; "
+                "manuel kontrol onerilir."
+            )
+            comp_final["required_fixes"] = existing_fixes
+            comp_final["final_decision"] = "ready_to_publish_best_effort"
+            state["compliance"] = comp_final  # type: ignore[assignment]
 
         append_history(state, "compliance", "compliance done")
         return state

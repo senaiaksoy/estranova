@@ -14,23 +14,9 @@ class OrchestratorAgent(PromptBackedAgent):
     def route_after_writer(self, state: EstranovaState) -> str:
         return "validation" if state["risk_level_current"] in {"medium", "high"} else "compliance"
 
-    def _route_to_publisher_best_effort(self, state: EstranovaState, reason: str) -> str:
-        state["pipeline_halt_reason"] = reason
-        state["best_effort_publish"] = True
-        state["human_review_required"] = False
-        fixes = list(state.get("compliance", {}).get("required_fixes", []) or [])
-        note = f"[{reason}] Son turda yayin paketi olusturuldu; manuel kontrol onerilir."
-        fixes.append(note)
-        comp = dict(state.get("compliance", {}))
-        comp["required_fixes"] = fixes
-        comp["final_decision"] = "ready_to_publish_best_effort"
-        comp.setdefault("compliance_score", int(comp.get("compliance_score", 0) or 0))
-        state["compliance"] = comp  # type: ignore[assignment]
-        return "publisher"
-
     def route_after_compliance(self, state: EstranovaState) -> str:
-        if state["current_iteration"] >= 2:
-            return self._route_to_publisher_best_effort(state, "max_iteration_hard_stop")
+        if state.get("best_effort_publish"):
+            return "publisher"
 
         comp = dict(state.get("compliance", {}))
         score = int(comp.get("compliance_score", 0) or 0)
