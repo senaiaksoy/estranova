@@ -217,10 +217,13 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 f"Uyumluluk skoru yayin esiginin altinda ({score}<{MIN_COMPLIANCE_SCORE_PUBLISH}); "
                 "estranova-master kriterleri ve guvenli dil ile yeniden duzenleyin."
             )
+            low_score_severity = (
+                "critical" if score < COMPLIANCE_SCORE_REJECT_BELOW else "medium"
+            )
             violations.append(
                 Violation(
                     type="low_compliance_score",
-                    severity="critical",
+                    severity=low_score_severity,
                     text_ref="compliance_score",
                     rule_id="strict.score_threshold",
                     fix_suggestion=(
