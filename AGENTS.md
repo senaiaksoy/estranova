@@ -67,6 +67,8 @@ Detaylı konfigürasyon, eşikler ve debug rehberi için: **[docs/PIPELINE.md](d
 
 Model değişikliği önerirken öncelik: maliyet ≠ kalite. Writer / checker / compliance için Sonnet’ten `gpt-4o`’ya geri dönmeyi düşünmeden önce **docs/PIPELINE.md** içindeki **G1** (double-escape / newline) gotcha’sını oku.
 
+**Stil ve dil kurallarının dosya haritası:** **[docs/style-rules-map.md](docs/style-rules-map.md)**
+
 ---
 
 ## Product / Design Direction

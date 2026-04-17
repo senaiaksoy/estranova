@@ -14,6 +14,7 @@ Semantic versioning + tarih etiketi.
 
 ### Added
 
+- `docs/style-rules-map.md` — stil/dil kurallarının CLAUDE / writer / validator / compliance’taki konum haritası.
 - Writer prompt’a few-shot örnek (açılış + mekanizma + kanıt bölümleri).
 - Writer + Compliance ham çıktı dump’ları (`output/_debug/`).
 - Revizyon turunda (`revision_iteration > 0`) writer yapı doğrulaması başarısızsa graceful çıkış + bayraklar.

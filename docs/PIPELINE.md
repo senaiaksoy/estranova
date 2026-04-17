@@ -2,6 +2,8 @@
 
 Bu belge pipeline’ın **operasyonel gerçeğini** tek yerde toplar: modeller, eşikler, çıktı yolları, bilinen tuzaklar ve hata ayıklama.
 
+**Stil, dil ve kural haritası** (hangi kural hangi dosyada): **[style-rules-map.md](style-rules-map.md)**
+
 ## Model Matrisi
 
 Maliyet sütunu `main.py` içindeki `_estimate_cost_usd` sezgisine dayanır (yaklaşık **çıktı** token başına USD; 1 token ≈ 4 karakter). Ortalama token sayıları konuya ve revizyon turuna göre değişir.
