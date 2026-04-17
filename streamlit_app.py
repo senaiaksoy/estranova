@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import copy
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -20,7 +20,7 @@ from reader_guide import (
     recommend,
     suggest_agent_topic,
 )
-from state import EstranovaState, initialize_state
+from state import EstranovaState, initialize_state, new_editorial_review_record
 
 # LangGraph node adi -> UI'da gosterilecek tek satir (log temizligi)
 PIPELINE_UI_LINES: dict[str, str] = {
@@ -419,7 +419,15 @@ def main() -> None:
 
             st.session_state.pipeline_pending_state = copy.deepcopy(final_state)
             st.session_state.article_editor = extract_article(final_state)
-            st.session_state.publish_flow_topic = str(final_state.get("topic") or topic or "").strip()
+            pub_topic = str(final_state.get("topic") or topic or "").strip()
+            st.session_state.publish_flow_topic = pub_topic
+            eday = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            st.session_state.editorial_run_date = eday
+            st.session_state.editorial_review_record = new_editorial_review_record(
+                pub_topic,
+                extract_article(final_state),
+                date_iso=eday,
+            )
 
         if st.session_state.pop("draft_saved_flash", False):
             st.success("Taslak state'e kaydedildi (henuz dosyaya yazilmadi).")
@@ -452,12 +460,25 @@ def main() -> None:
             b1, b2, b3 = st.columns(3)
             if b1.button("✅ Onayla ve Yayınla", type="primary", key="btn_publish"):
                 body = str(st.session_state.get("article_editor", "") or "")
+                ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()
+                eday = str(st.session_state.get("editorial_run_date") or "")
+                st.session_state.editorial_review_record = new_editorial_review_record(
+                    ttopic,
+                    body,
+                    status="approved",
+                    date_iso=eday or None,
+                )
+                st.session_state.last_editorial_review_record = dict(
+                    st.session_state.editorial_review_record
+                )
                 to_save = inject_article_into_state(st.session_state.pipeline_pending_state, body)
                 try:
                     save_operational_outputs(to_save, build_save_payload(to_save))  # type: ignore[arg-type]
                     st.session_state.pop("pipeline_pending_state", None)
                     st.session_state.pop("publish_flow_topic", None)
                     st.session_state.pop("article_editor", None)
+                    st.session_state.pop("editorial_run_date", None)
+                    st.session_state.pop("editorial_review_record", None)
                     st.session_state.publish_success_flash = True
                     st.rerun()
                 except Exception as exc:
@@ -465,6 +486,14 @@ def main() -> None:
 
             if b2.button("✏️ Düzenle ve Kaydet", key="btn_save_draft"):
                 body = str(st.session_state.get("article_editor", "") or "")
+                ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()
+                eday = str(st.session_state.get("editorial_run_date") or "")
+                st.session_state.editorial_review_record = new_editorial_review_record(
+                    ttopic,
+                    body,
+                    status="draft",
+                    date_iso=eday or None,
+                )
                 st.session_state.pipeline_pending_state = inject_article_into_state(
                     st.session_state.pipeline_pending_state, body
                 )
@@ -473,9 +502,23 @@ def main() -> None:
                 st.rerun()
 
             if b3.button("❌ Reddet", key="btn_reject"):
+                body = str(st.session_state.get("article_editor", "") or "")
+                ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()
+                eday = str(st.session_state.get("editorial_run_date") or "")
+                st.session_state.editorial_review_record = new_editorial_review_record(
+                    ttopic,
+                    body,
+                    status="rejected",
+                    date_iso=eday or None,
+                )
+                st.session_state.last_editorial_review_record = dict(
+                    st.session_state.editorial_review_record
+                )
                 st.session_state.pop("pipeline_pending_state", None)
                 st.session_state.pop("publish_flow_topic", None)
                 st.session_state.pop("article_editor", None)
+                st.session_state.pop("editorial_run_date", None)
+                st.session_state.pop("editorial_review_record", None)
                 st.warning("Icerik reddedildi; `output/` dosyasi olusturulmadi.")
                 st.rerun()
 
@@ -489,6 +532,15 @@ def main() -> None:
                 key="download_draft_md",
             )
 
+            _rec = st.session_state.get("editorial_review_record") or {}
+            _snap = {
+                "status": _rec.get("status", "draft"),
+                "content": str(st.session_state.get("article_editor") or ""),
+                "topic": str(st.session_state.get("publish_flow_topic") or ""),
+                "date": str(st.session_state.get("editorial_run_date") or ""),
+            }
+            with st.expander("Inceleme kaydi (JSON sozlesmesi)"):
+                st.json(_snap)
             with st.expander("Ham cikti (JSON)"):
                 st.json(st.session_state.pipeline_pending_state)
 

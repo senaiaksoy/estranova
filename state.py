@@ -9,6 +9,19 @@ from naming import slugify_topic
 
 
 RiskLevel = Literal["low", "medium", "high"]
+
+EditorialReviewStatus = Literal["draft", "approved", "rejected"]
+
+
+class EditorialReviewRecord(TypedDict):
+    """Streamlit inceleme / yayin adimi icin sabit JSON sozlesmesi."""
+
+    status: EditorialReviewStatus
+    content: str
+    topic: str
+    date: str
+
+
 ClaimStatus = Literal["draft", "supported", "partial", "unsupported"]
 Decision = Literal[
     "unknown",
@@ -164,6 +177,23 @@ class EstranovaState(TypedDict, total=False):
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def new_editorial_review_record(
+    topic: str,
+    content: str,
+    *,
+    status: EditorialReviewStatus = "draft",
+    date_iso: str | None = None,
+) -> EditorialReviewRecord:
+    """Inceleme adimi JSON sozlesmesi; date varsayilan bugun (YYYY-MM-DD, UTC)."""
+    d = date_iso or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return {
+        "status": status,
+        "content": content,
+        "topic": topic.strip(),
+        "date": d,
+    }
 
 
 def initialize_state(
