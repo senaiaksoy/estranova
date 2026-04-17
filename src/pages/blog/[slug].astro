@@ -1,0 +1,84 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props as Props;
+const { Content } = await render(post);
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(
+    new Date(value),
+  );
+const publishedDate = formatDate(post.data.date);
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://estranova.com').replace(/\/$/, '');
+const pageUrl = `${siteUrl}/blog/${post.id}`;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date,
+  inLanguage: 'tr-TR',
+  url: pageUrl,
+};
+---
+
+<SiteLayout
+  title={`${post.data.title} - Estranova`}
+  description={post.data.description}
+  canonical={pageUrl}
+  ogType="article"
+  jsonLd={articleSchema}
+>
+  <SiteNavbar currentPath="/blog" />
+
+  <main id="main-content" class="pt-24">
+    <SubmenuArticleBody>
+      <a
+        href="/blog"
+        class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary mb-10"
+      >
+        Bloga dön
+      </a>
+
+      <header class="mb-12">
+        <time class="text-[11px] font-bold text-charcoal/40 uppercase tracking-[0.22em] block mb-4">
+          {publishedDate}
+        </time>
+        <h1 class="text-4xl md:text-5xl font-serif leading-[1.08] text-charcoal mb-6">{post.data.title}</h1>
+        <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed max-w-3xl">{post.data.description}</p>
+        {post.data.tags && post.data.tags.length > 0 && (
+          <ul class="flex flex-wrap gap-2 mt-6">
+            {post.data.tags.map((tag) => (
+              <li class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">{tag}</li>
+            ))}
+          </ul>
+        )}
+      </header>
+
+      <ArticleProsePanel>
+        <Content />
+      </ArticleProsePanel>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

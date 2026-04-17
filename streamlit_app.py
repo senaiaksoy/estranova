@@ -9,7 +9,15 @@ from typing import Any
 import streamlit as st
 from dotenv import load_dotenv
 
-from main import build_graph, build_save_payload, ensure_runtime_dependencies, save_operational_outputs
+from main import (
+    build_graph,
+    build_save_payload,
+    draft_markdown_path,
+    ensure_runtime_dependencies,
+    save_approved_blog_article,
+    save_draft_to_output_drafts,
+    save_operational_outputs,
+)
 from naming import output_file_basename
 from reader_guide import (
     ARTICLE_KIND_DISPLAY,
@@ -428,19 +436,25 @@ def main() -> None:
                 extract_article(final_state),
                 date_iso=eday,
             )
+            st.session_state.pop("pending_draft_path", None)
 
-        if st.session_state.pop("draft_saved_flash", False):
-            st.success("Taslak state'e kaydedildi (henuz dosyaya yazilmadi).")
-        if st.session_state.pop("publish_success_flash", False):
-            st.success("Yayinlandi: `output/` klasorune yazildi.")
+        if msg := st.session_state.pop("draft_saved_flash", None):
+            st.success(msg)
+        if msg := st.session_state.pop("publish_success_flash", None):
+            st.success(msg)
+        if st.session_state.pop("reject_flash", None):
+            st.warning("İçerik reddedildi.")
 
         if st.session_state.get("pipeline_pending_state"):
             pending = st.session_state.pipeline_pending_state
             decision = pending.get("compliance", {}).get("final_decision", "unknown")
             halt = str(pending.get("pipeline_halt_reason", "") or "")
-            st.subheader("Final makale — incele, duzenle, yayinla")
-            st.caption("Yayin (`output/`) yalnizca **Onayla ve Yayinla** ile yazilir.")
-            st.write(f"Final karar (pipeline): `{decision}`")
+            st.subheader("Onay ekranı")
+            st.caption(
+                "**`src/content/blog/`** yalnızca **Onayla ve Yayınla** ile dolar (Astro blog). "
+                "Taslaklar **`output/drafts/`** altına yazılır; siteye gitmeden önce düzenleyebilirsiniz."
+            )
+            st.write(f"Pipeline kararı: `{decision}`")
             if halt and halt not in (
                 "max_iteration_reached",
                 "max_iteration_hard_stop",
@@ -451,17 +465,19 @@ def main() -> None:
                 )
 
             st.text_area(
-                "Makale metni",
-                height=480,
+                "Üretilen makale",
+                height=560,
                 key="article_editor",
-                help="Metni burada duzenleyin; **Duzenle ve Kaydet** ile state guncellenir.",
+                help="Metni burada düzenleyin. Yayın veya taslak için aşağıdaki düğmeleri kullanın.",
             )
 
             b1, b2, b3 = st.columns(3)
             if b1.button("✅ Onayla ve Yayınla", type="primary", key="btn_publish"):
                 body = str(st.session_state.get("article_editor", "") or "")
                 ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()
-                eday = str(st.session_state.get("editorial_run_date") or "")
+                eday = str(st.session_state.get("editorial_run_date") or "") or datetime.now(
+                    timezone.utc
+                ).strftime("%Y-%m-%d")
                 st.session_state.editorial_review_record = new_editorial_review_record(
                     ttopic,
                     body,
@@ -473,38 +489,55 @@ def main() -> None:
                 )
                 to_save = inject_article_into_state(st.session_state.pipeline_pending_state, body)
                 try:
-                    save_operational_outputs(to_save, build_save_payload(to_save))  # type: ignore[arg-type]
+                    blog_path = save_approved_blog_article(body, ttopic, eday)
+                    draft_markdown_path(ttopic, eday).unlink(missing_ok=True)
+                    save_operational_outputs(
+                        to_save,
+                        build_save_payload(to_save),
+                        write_output_article_md=False,
+                    )  # type: ignore[arg-type]
                     st.session_state.pop("pipeline_pending_state", None)
                     st.session_state.pop("publish_flow_topic", None)
                     st.session_state.pop("article_editor", None)
                     st.session_state.pop("editorial_run_date", None)
                     st.session_state.pop("editorial_review_record", None)
-                    st.session_state.publish_success_flash = True
+                    st.session_state.publish_success_flash = (
+                        f"✅ Yayında: `{blog_path.as_posix()}` (operasyon raporu `output/` altında)."
+                    )
                     st.rerun()
                 except Exception as exc:
                     st.error(f"Yazma hatasi: {exc}")
 
-            if b2.button("✏️ Düzenle ve Kaydet", key="btn_save_draft"):
+            if b2.button("💾 Taslak Olarak Kaydet", key="btn_save_draft"):
                 body = str(st.session_state.get("article_editor", "") or "")
                 ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()
-                eday = str(st.session_state.get("editorial_run_date") or "")
+                eday = str(st.session_state.get("editorial_run_date") or "") or datetime.now(
+                    timezone.utc
+                ).strftime("%Y-%m-%d")
                 st.session_state.editorial_review_record = new_editorial_review_record(
                     ttopic,
                     body,
                     status="draft",
                     date_iso=eday or None,
                 )
-                st.session_state.pipeline_pending_state = inject_article_into_state(
-                    st.session_state.pipeline_pending_state, body
-                )
-                st.session_state.article_editor = body
-                st.session_state.draft_saved_flash = True
-                st.rerun()
+                try:
+                    draft_path = save_draft_to_output_drafts(body, ttopic, eday)
+                    st.session_state.pending_draft_path = draft_path.as_posix()
+                    st.session_state.pipeline_pending_state = inject_article_into_state(
+                        st.session_state.pipeline_pending_state, body
+                    )
+                    st.session_state.article_editor = body
+                    st.session_state.draft_saved_flash = f"💾 Taslak kaydedildi: `{draft_path.as_posix()}`"
+                    st.rerun()
+                except Exception as exc:
+                    st.error(f"Taslak yazılamadı: {exc}")
 
-            if b3.button("❌ Reddet", key="btn_reject"):
-                body = str(st.session_state.get("article_editor", "") or "")
+            if b3.button("❌ Reddet ve Sil", key="btn_reject"):
                 ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()
-                eday = str(st.session_state.get("editorial_run_date") or "")
+                eday = str(st.session_state.get("editorial_run_date") or "") or datetime.now(
+                    timezone.utc
+                ).strftime("%Y-%m-%d")
+                body = str(st.session_state.get("article_editor", "") or "")
                 st.session_state.editorial_review_record = new_editorial_review_record(
                     ttopic,
                     body,
@@ -514,12 +547,14 @@ def main() -> None:
                 st.session_state.last_editorial_review_record = dict(
                     st.session_state.editorial_review_record
                 )
+                draft_markdown_path(ttopic, eday).unlink(missing_ok=True)
                 st.session_state.pop("pipeline_pending_state", None)
                 st.session_state.pop("publish_flow_topic", None)
                 st.session_state.pop("article_editor", None)
                 st.session_state.pop("editorial_run_date", None)
                 st.session_state.pop("editorial_review_record", None)
-                st.warning("Icerik reddedildi; `output/` dosyasi olusturulmadi.")
+                st.session_state.pop("pending_draft_path", None)
+                st.session_state.reject_flash = True
                 st.rerun()
 
             ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()

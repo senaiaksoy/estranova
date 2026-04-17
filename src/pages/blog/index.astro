@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+
+const all = await getCollection('blog');
+const posts = all.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(
+    new Date(value),
+  );
+---
+
+<SiteLayout
+  title="Blog - Estranova"
+  description="Estranova blog: onaylanan içerik üretimi ve editoryal yazılar."
+>
+  <SiteNavbar currentPath="/blog" />
+
+  <main id="main-content" class="pt-24">
+    <section class="px-6 py-16 md:py-20">
+      <div class="max-w-6xl mx-auto">
+        <header class="max-w-3xl mb-14">
+          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Blog</p>
+          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Blog yazıları</h1>
+          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
+            İçerik aracından onaylanan yazılar burada listelenir; yeni yayınlar build sırasında otomatik eklenir.
+          </p>
+        </header>
+
+        {posts.length === 0 ? (
+          <p class="text-charcoal/60">Henüz yayınlanmış blog yazısı yok.</p>
+        ) : (
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {posts.map((post) => (
+              <a
+                href={`/blog/${post.id}`}
+                class="rounded-[30px] border border-primary/10 bg-white p-7 editorial-shadow block hover:border-primary/30 transition-colors"
+              >
+                <time class="text-[11px] uppercase tracking-[0.24em] text-charcoal/40 font-bold block mb-3">
+                  {formatDate(post.data.date)}
+                </time>
+                <h2 class="font-serif text-xl leading-tight text-charcoal mb-3">{post.data.title}</h2>
+                <p class="text-charcoal/65 leading-relaxed text-sm line-clamp-3">{post.data.description}</p>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -171,7 +171,81 @@ def _derive_run_status(result: EstranovaState) -> str:
     return "needs_revision"
 
 
-def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) -> bool:
+def draft_markdown_path(topic: str, date_str: str) -> Path:
+    """output/drafts/{date}-{topic}.md"""
+    base = output_file_basename(topic, date_str)
+    return Path("output") / "drafts" / f"{base}.md"
+
+
+def blog_markdown_path(topic: str, date_str: str) -> Path:
+    """src/content/blog/{date}-{topic}.md — Astro content collection; yalnizca onay sonrasi."""
+    base = output_file_basename(topic, date_str)
+    return Path("src") / "content" / "blog" / f"{base}.md"
+
+
+def _excerpt_from_markdown(md: str, max_len: int = 220) -> str:
+    """Ilk anlamli paragraftan kisa ozet (Astro frontmatter description)."""
+    paragraphs: list[str] = []
+    for block in md.split("\n\n"):
+        line = block.strip()
+        if not line:
+            continue
+        first = line.split("\n", 1)[0].strip()
+        if first.startswith("#"):
+            continue
+        paragraphs.append(first)
+        if len(" ".join(paragraphs)) >= 48:
+            break
+    text = " ".join(paragraphs) if paragraphs else md.strip().replace("\n", " ")
+    text = " ".join(text.split())
+    if len(text) > max_len:
+        cut = text[: max_len - 1].rsplit(" ", 1)[0]
+        text = cut + "…"
+    return text or "—"
+
+
+def _blog_markdown_with_frontmatter(topic: str, body: str, date_str: str) -> str:
+    """Astro blog koleksiyonu icin YAML frontmatter + govde."""
+    title = topic.strip() or "Basliksiz"
+    desc = _excerpt_from_markdown(body)
+    lines = [
+        "---",
+        f"title: {json.dumps(title, ensure_ascii=False)}",
+        f"description: {json.dumps(desc, ensure_ascii=False)}",
+        f"date: {json.dumps(date_str, ensure_ascii=False)}",
+        "---",
+        "",
+        body.strip(),
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def save_approved_blog_article(body: str, topic: str, date_str: str) -> Path:
+    """Onay sonrasi makaleyi Astro src/content/blog/ altina yazar (frontmatter zorunlu)."""
+    path = blog_markdown_path(topic, date_str)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(_blog_markdown_with_frontmatter(topic, body, date_str), encoding="utf-8")
+    return path
+
+
+def save_draft_to_output_drafts(body: str, topic: str, date_str: str) -> Path:
+    """Taslak: output/drafts/ altinda frontmatter ile status: draft."""
+    path = draft_markdown_path(topic, date_str)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    topic_json = json.dumps(topic, ensure_ascii=False)
+    date_json = json.dumps(date_str, ensure_ascii=False)
+    frontmatter = f"---\nstatus: draft\ndate: {date_json}\ntopic: {topic_json}\n---\n\n"
+    path.write_text(frontmatter + body.strip() + "\n", encoding="utf-8")
+    return path
+
+
+def save_operational_outputs(
+    result: EstranovaState,
+    payload: dict[str, Any],
+    *,
+    write_output_article_md: bool = True,
+) -> bool:
     output_dir = Path("output")
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -187,7 +261,7 @@ def save_operational_outputs(result: EstranovaState, payload: dict[str, Any]) ->
         or result.get("draft", {}).get("article", "")
         or ""
     )
-    if final_article.strip():
+    if final_article.strip() and write_output_article_md:
         md_path = output_dir / f"{base_name}.md"
         md_path.write_text(final_article, encoding="utf-8")
 
