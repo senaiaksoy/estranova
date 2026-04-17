@@ -4,7 +4,13 @@ import json
 import re
 from typing import Any
 
-from config.pipeline_limits import COMPLIANCE_LONG_SENTENCE_WORDS, MIN_COMPLIANCE_SCORE_PUBLISH
+from config.pipeline_limits import (
+    COMPLIANCE_LONG_SENTENCE_WORDS,
+    COMPLIANCE_SCORE_REJECT_BELOW,
+    MIN_COMPLIANCE_SCORE_PUBLISH,
+)
+
+from .compliance_master_validation import run_estranova_master_checks
 
 # CLAUDE / AGENTS — plaza ve is Ingilizcesi (deterministik tespit; skor dusurulur).
 PLAZA_LANGUAGE_SUBSTRINGS: tuple[str, ...] = (
@@ -52,7 +58,9 @@ class ComplianceExpertAgent(PromptBackedAgent):
         disclaimer_needed = bool(state.get("disclaimer_needed", True))
 
         user_payload: dict[str, Any] = {
+            "topic": state.get("topic", ""),
             "risk_level": risk_level,
+            "article_outline": state.get("article_outline", []),
             "draft_content": {
                 "article": draft.get("article", ""),
                 "social_post": draft.get("social_post", ""),
@@ -100,24 +108,22 @@ class ComplianceExpertAgent(PromptBackedAgent):
         score = int(result.get("compliance_score", 0))
         if result.get("score") is not None:
             score = int(result["score"])
-        if score < MIN_COMPLIANCE_SCORE_PUBLISH:
-            auto_reject = True
-            required_fixes.append(
-                f"Uyumluluk skoru hedefin altinda ({score}<{MIN_COMPLIANCE_SCORE_PUBLISH}); "
-                "metni sade, guvenli ve iddiasiz tutarak yeniden duzenleyin (abartili red nedeni yerine net duzeltme)."
-            )
+
+        master_violations, master_score_cap = run_estranova_master_checks(article)
+        for mv in master_violations:
             violations.append(
                 Violation(
-                    type="low_compliance_score",
-                    severity="critical",
-                    text_ref="compliance_score",
-                    rule_id="strict.score_threshold",
-                    fix_suggestion=(
-                        f"Skoru en az {MIN_COMPLIANCE_SCORE_PUBLISH} olacak sekilde "
-                        "metni sade, guvenli ve iddiasiz yeniden yazin."
-                    ),
+                    type=mv["type"],
+                    severity=mv["severity"],
+                    text_ref=mv["text_ref"],
+                    rule_id=mv["rule_id"],
+                    fix_suggestion=mv["fix_suggestion"],
                 )
             )
+            required_fixes.append(mv["fix_suggestion"])
+        if master_score_cap is not None:
+            score = min(score, master_score_cap)
+            auto_reject = True
 
         disclaimer_signals = ["bilgilendirme amaçlıdır", "bilgilendirme amaclidir", "doktorunuza"]
         has_disclaimer = any(signal in all_text.lower() for signal in disclaimer_signals)
@@ -193,15 +199,39 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 "once en uzun 1-2 cumleyi bolun."
             )
 
+        if score < MIN_COMPLIANCE_SCORE_PUBLISH:
+            auto_reject = True
+            required_fixes.append(
+                f"Uyumluluk skoru yayin esiginin altinda ({score}<{MIN_COMPLIANCE_SCORE_PUBLISH}); "
+                "estranova-master kriterleri ve guvenli dil ile yeniden duzenleyin."
+            )
+            violations.append(
+                Violation(
+                    type="low_compliance_score",
+                    severity="critical",
+                    text_ref="compliance_score",
+                    rule_id="strict.score_threshold",
+                    fix_suggestion=(
+                        f"Yayin icin skor en az {MIN_COMPLIANCE_SCORE_PUBLISH} olmali "
+                        "(75-89 revize; 90+ yayin)."
+                    ),
+                )
+            )
+
         final_decision_raw = result.get("final_decision", "revizyon_gerekli")
 
         raw_std = result.get("decision")
         if raw_std not in ("ready_to_publish", "needs_revision"):
             raw_std = "ready_to_publish"
 
-        if auto_reject or final_decision_raw == "reddedildi":
+        reject_tier = score < COMPLIANCE_SCORE_REJECT_BELOW
+        if final_decision_raw == "reddedildi" or reject_tier:
             final_decision = "rejected"
-        elif final_decision_raw == "yayina_hazir":
+        elif (
+            final_decision_raw == "yayina_hazir"
+            and not auto_reject
+            and score >= MIN_COMPLIANCE_SCORE_PUBLISH
+        ):
             final_decision = "ready_to_publish"
         else:
             final_decision = "revision_required"

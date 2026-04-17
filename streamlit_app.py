@@ -56,6 +56,9 @@ def run_pipeline(
     content_goal: str,
     risk_level: str,
     user_context: str = "",
+    article_angle: str = "",
+    content_emphasis: list[str] | None = None,
+    internal_link_suggestions: str = "",
 ):
     ensure_runtime_dependencies()
     load_dotenv()
@@ -67,6 +70,9 @@ def run_pipeline(
         content_goal=content_goal,
         risk_level=risk_level,  # type: ignore[arg-type]
         user_context=user_context or "",
+        article_angle=article_angle or "",
+        content_emphasis=content_emphasis,
+        internal_link_suggestions=internal_link_suggestions or "",
     )
 
     event_logs: list[str] = []
@@ -355,6 +361,12 @@ def main() -> None:
 
     if "user_context_input" not in st.session_state:
         st.session_state.user_context_input = ""
+    if "producer_article_angle" not in st.session_state:
+        st.session_state.producer_article_angle = ""
+    if "producer_content_emphasis" not in st.session_state:
+        st.session_state.producer_content_emphasis = []
+    if "producer_internal_links" not in st.session_state:
+        st.session_state.producer_internal_links = ""
 
     with st.sidebar:
         st.subheader("Icerik uretimi ayarlari")
@@ -383,7 +395,48 @@ def main() -> None:
         if "producer_topic" not in st.session_state:
             st.session_state.producer_topic = ""
 
-        topic = st.text_input("Konu", placeholder="Orn: Ekzozom ve hucre iletisimi", key="producer_topic")
+        topic = st.text_input(
+            "Konu başlığı",
+            placeholder="Orn: Magnezyum ve kadin sagligi",
+            key="producer_topic",
+        )
+
+        angle_options: list[str] = ["", "mekanizma", "tedavi", "deneyim"]
+        angle_labels = {
+            "": "Estranova varsayılanı (dengeli)",
+            "mekanizma": "Mekanizma",
+            "tedavi": "Tedavi çerçevesi (nötr; dayatmasız)",
+            "deneyim": "Deneyim / yaşam tarafı",
+        }
+        st.radio(
+            "Makale açısı",
+            options=angle_options,
+            format_func=lambda k: angle_labels[k],
+            horizontal=True,
+            key="producer_article_angle",
+            help="Secim yok sayilirsa standart 8 bolum dengesi uygulanir.",
+        )
+
+        emphasis_choices: list[tuple[str, str]] = [
+            ("turkiye", "Türkiye"),
+            ("bilimsel_calismalar", "Bilimsel çalışmalar"),
+            ("alternatif_yaklasimlar", "Alternatif yaklaşımlar"),
+        ]
+        st.multiselect(
+            "Özel vurgu",
+            options=[k for k, _ in emphasis_choices],
+            format_func=lambda k: dict(emphasis_choices)[k],
+            key="producer_content_emphasis",
+            help="Hic secilmezse ek vurgu uygulanmaz (varsayilan Estranova).",
+        )
+
+        st.text_area(
+            "İç link önerileri (opsiyonel)",
+            height=90,
+            key="producer_internal_links",
+            placeholder="Orn: /blog/menopoz-rehberi — ilgili yazi",
+        )
+
         run_button = st.button("Icerik Uret")
 
         if run_button:
@@ -396,8 +449,20 @@ def main() -> None:
 
             final_state: dict[str, Any] | None = None
             uc = str(st.session_state.get("user_context_input", "") or "")
+            aa = str(st.session_state.get("producer_article_angle") or "")
+            ce = list(st.session_state.get("producer_content_emphasis") or [])
+            iln = str(st.session_state.get("producer_internal_links") or "")
             try:
-                for message in run_pipeline(topic, audience, content_goal, risk_level, user_context=uc):
+                for message in run_pipeline(
+                    topic,
+                    audience,
+                    content_goal,
+                    risk_level,
+                    user_context=uc,
+                    article_angle=aa,
+                    content_emphasis=ce,
+                    internal_link_suggestions=iln,
+                ):
                     logs = message["logs"]
                     logs_box.code("\n".join(logs[-30:]) or "Akis baslatildi...")
 

@@ -3,7 +3,9 @@
 ## Rol
 Writer Agent, sadece onayli kaynak paketine dayanarak icerik uretir.
 
-## SIKI KISIT — CLAUDE.md dil ve üslup (hard constraint)
+## SIKI KISIT — CLAUDE.md (hard constraint)
+Repo kokundeki **`CLAUDE.md`** dosyasindaki **HARD CONSTRAINTS (§1–§6)** tum ajanlar icin ust kurallar; Writer **her üretimde** bunlara uymak zorundadir. Asagidaki alt basliklar o belgenin Writer odakli ozetidir; **cakisirsa CLAUDE.md onceliklidir**.
+
 Asagidaki kurallar **ihlal edilemez**. Uretilen tum metinler (makale, sosyal, bulten) bu cerceveye uymak zorundadir.
 
 ### Editoryal ses (CLAUDE.md — Editorial Voice)
@@ -35,13 +37,41 @@ Asagidaki kurallar **ihlal edilemez**. Uretilen tum metinler (makale, sosyal, bu
 - Her ana iddiayi en az bir `claim_id` ile izlenebilir kil (`claim_trace`).
 - Standart yasal uyariyi metin sonuna ekle (`disclaimer_needed = true` ise zorunlu).
 
+## estranova-master-prompt — 8 bolumluk yapi (ZORUNLU; INVALID OUTPUT)
+
+Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunlari uretmek zorundadir: **(1)** tam `article_outline`, **(2)** tam makale. Outline **once** dusunulur; makale outline’a uygun yazilir.
+
+### Uretim sirasi (tek JSON ciktisinda)
+1. **Once** asagidaki **8 bolum** icin `article_outline` doldur (her biri `section_key`, konuya ozgu `title`, 2-4 `bullets`).
+2. **Sonra** `draft_content.article` icinde **ayni 8 bolumu** `#` ve kisa ozetten sonra **`##` basliklari** ile sirayla yaz; outline’daki `title` ile makaledeki `##` basliklari **eslesmeli** (kucuk duzeltme yapilabilir, anlam ayni kalmali).
+
+### Zorunlu 8 bolum (section_key sabit — sira degismez)
+
+| section_key | Zorunlu icerik |
+|-------------|----------------|
+| `acilis_sahnesi` | **Acilis sahnesi:** Okuyucunun kendini gordugu kisa **sahne / durum** (editoryal giris); soguk ansiklopedi girisi yok. |
+| `konu_cercevesi` | **Konu cercevesi:** Konu ne, kimi ilgilendirir, metin neyi netlestirir? |
+| `mekanizma` | **Mekanizma derinligi:** Vucutta / yasamda **nasil islendigi** (surec, basit mekanizma); abartili teknik jargon yok. |
+| `kanit_seviyesi` | **Kanıt seviyesi aciklamasi:** Kanit ne kadar guclu; **sinirlar** ve belirsizlikler acikca; `approved_sources` ile uyumlu. |
+| `turkiye` | **Turkiye bolumu:** Turkiye baglami (erisim, pratik, yerel kilavuz / kamu sagligi diline **nötr** atif mumkunse); genel dunya metni yerine **yerel okuyucu** icin paragraf. |
+| `karar_cercevesi` | **Karar cercevesi:** Tedavi dayatma yok; **ne zaman destek alinabilecegi**, hangi sorulari dusunebilecegi, risk/belirsizligi dusunme **nötr cerceve**. |
+| `pratik_veya_sss` | **Pratik ozet veya SSS:** Madde isaretleri veya kisa soru-cevap; okunabilir. |
+| `kapanis` | **Kapanis:** Ozet cumleler + guvenli yonlendirme (disclaimer ile uyumlu). |
+
+### Gecerlilik
+- `article_outline` **tam 8 eleman** ve her `section_key` **yukaridaki sira ve isimlerle** ayni olmalidir.
+- `draft_content.article` icinde **en az 8 adet** duzey-2 baslik (`## ` ile baslayan satir) olmali ve yukaridaki bolumleri kapsamali; **Türkiye** bolumu metinde **“Türkiye”** veya **“Turkiye”** gecen en az bir baslik veya belirgin paragraf ile okunur olmali.
+- Mekanizma ve kanit bolumleri **bos veya tek cumle** birakilamaz (anlamli derinlik).
+- Bu kurallardan biri karsilanmiyorsa cikti **gecersizdir:** JSON icinde `"output_status": "INVALID_OUTPUT"` ve `"invalid_reason": "kisaca neden"` don; **normal makale metni uretme** (sadece INVALID). Sistem **INVALID** gordugunde yeniden uretim tetiklenebilir.
+
 ## Uzunluk ve SEO (makale = `draft_content.article`)
 - **Hedef:** Ana makale yaklasik **1200-2000 kelime** (konu siki ise en az **900-1100 kelime**); ince/ kisa metin uretme.
+- **Yayin dili (HARD):** Site **tek dilli Turkcedir**. Makale, sosyal ve bulten metinleri **yalnizca Turkce**; Ingilizce baslik, Ingilizce paragraf veya Ingilizce UI cumlesi yazma (`CLAUDE.md` Dil politikasi).
 - **Estranova SEO — Ust ozet (Teaser / Kisa ozet):** `#` ana basliktan hemen sonra, govdeye gecmeden once **2-3 cumlelik** kisa ozet yer almali: merak uyandirir, konuyla ilgili **anahtar kelimeleri dogal** bicimde icerir. Markdown olarak `> **Kisa ozet:** ...` blockquote icinde veya hemen altinda iki paragraf olarak verebilirsin (blockquote tercih edilir).
 - **Estranova SEO — Dis kaynak (linking):** Makale govdesinde **en az 2** adet harici guvenilir kaynak baglantisi ver: markdown `[aciklama](url)` formatinda. URL’leri **mumkunse yalnizca `approved_sources` icindeki `url` alanindan** al (or. PubMed, Mayo Clinic, WHO, NHS, CDC). Kaynakta URL yoksa yeni URL uydurma; sozlu atif yapma (`approved_sources` listesini Writer oncesi Research ile zenginlestirmeyi hedefle).
 - **Estranova SEO — Baslik hiyerarsisi:** Tek satir `#` konu basligi. Govde icinde **yalnizca `##` (H2) ve `###` (H3)** kullan; `####` ve daha derin baslik **yasak**. H2/H3 basliklari **soru-cevap** tonunda veya **okuyucuya net adim / eylem** hissi veren basliklar olsun (or. "Bu belirti ne zaman degerlendirilmeli?", "Guvenli bilgi icin nelere bakilir?").
 - **Estranova SEO — Markdown vurgulama:** Onemli uyari, kisa ozet veya kritik noktalari mutlaka **blockquote (`>`)** ve/veya **madde isaretli liste (`-`)** ile vurgula; duz paragraf icinde gommeyi azalt.
-- **Yapi (Markdown):** `#` sonrasi kisa ozet; ardindan **en az 4-6 adet `##` bolumu**; gerekiyorsa altinda `###`; alt baslik altinda paragraflar ve listeler.
+- **Yapi (Markdown):** `#` sonrasi kisa ozet; ardindan **tam 8 adet `##` bolumu** (yukaridaki zorunlu yapi); gerekiyorsa altinda `###`; alt baslik altinda paragraflar ve listeler.
 - **Derinlik:** Her alt baslikta en az bir ana fikir + destekleyici cumleler; gereksiz tekrar ve doldurma yapma; icerigi `key_claims` ile hizala.
 - **Sosyal / bulten:** Kisa tut (makale ozeti tonu); asil kelime butcesi makalede.
 
@@ -109,6 +139,15 @@ Revizyon turu (`revision_iteration > 0`) ise `revision_feedback` maddelerini onc
 {
   "topic": "string",
   "risk_level": "low | medium | high",
+  "output_status": "ok | INVALID_OUTPUT",
+  "invalid_reason": "",
+  "article_outline": [
+    {
+      "section_key": "acilis_sahnesi",
+      "title": "H2 basligi olarak kullanilacak baslik",
+      "bullets": ["Bu bolumde ele alinacak nokta 1", "Nokta 2"]
+    }
+  ],
   "draft_content": {
     "article": "markdown_or_text",
     "social_post": "markdown_or_text",

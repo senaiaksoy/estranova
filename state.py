@@ -10,6 +10,9 @@ from naming import slugify_topic
 
 RiskLevel = Literal["low", "medium", "high"]
 
+# UI / Writer: makale acisi (bos = Estranova varsayilan dengeli format)
+ArticleAngle = Literal["", "mekanizma", "tedavi", "deneyim"]
+
 EditorialReviewStatus = Literal["draft", "approved", "rejected"]
 
 
@@ -169,10 +172,14 @@ class EstranovaState(TypedDict, total=False):
     compliance_to_writer_routes: int
     revision_feedback: list[str]
     user_context: str
+    article_angle: str
+    content_emphasis: list[str]
+    internal_link_suggestions: str
     pipeline_halt_reason: str
     compliance_revision_route_count: int
     writer_revision_feedback_snapshot: str
     best_effort_publish: bool
+    article_outline: list[dict[str, Any]]  # estranova-master 8 bolum outline
 
 
 def now_iso() -> str:
@@ -202,8 +209,12 @@ def initialize_state(
     content_goal: str = "bilgilendirici makale + sosyal medya + bulten + publisher paketi",
     risk_level: RiskLevel = "medium",
     user_context: str = "",
+    article_angle: ArticleAngle | str = "",
+    content_emphasis: list[str] | None = None,
+    internal_link_suggestions: str = "",
 ) -> EstranovaState:
     timestamp = now_iso()
+    emphasis = list(content_emphasis) if content_emphasis else []
     return EstranovaState(
         state_version="1.0",
         run_id=str(uuid4()),
@@ -243,6 +254,9 @@ def initialize_state(
         compliance_to_writer_routes=0,
         revision_feedback=[],
         user_context=user_context,
+        article_angle=(article_angle or "").strip(),
+        content_emphasis=emphasis,
+        internal_link_suggestions=(internal_link_suggestions or "").strip(),
         pipeline_halt_reason="",
         compliance_revision_route_count=0,
         writer_revision_feedback_snapshot="",

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from naming import slugify_topic
@@ -110,26 +111,172 @@ def _select_internal_links(topic: str, limit: int = 4) -> list[dict[str, str]]:
     return picked[:limit]
 
 
-def _build_internal_links_markdown(links: list[dict[str, str]]) -> str:
-    lines = ["", "---", "", "## İç Link Önerileri", ""]
+def _build_internal_links_markdown(links: list[dict[str, str]]) -> list[str]:
+    lines: list[str] = []
     for link in links:
         lines.append(f"- [{link['anchor_text']}]({link['href']}) — {link['reason']}")
-    return "\n".join(lines) + "\n"
+    return lines
 
 
-def _insert_internal_links_before_disclaimer(article: str, section_md: str) -> str:
-    """Yasal uyari oncesine ic link bolumunu yerlestirir (yoksa sona ekler)."""
-    markers = (
-        "Bu içerik yalnızca bilgilendirme amaçlıdır",
-        "Bu icerik yalnizca bilgilendirme amaclidir",
-        "bilgilendirme amaçlıdır",
-        "bilgilendirme amaclidir",
+def _parse_user_internal_hints(raw: str) -> list[str]:
+    """Kullanici metninden satir bazli ek ic link onerileri."""
+    out: list[str] = []
+    for line in (raw or "").splitlines():
+        s = line.strip()
+        if not s or s.startswith("#"):
+            continue
+        s = re.sub(r"^[-*]\s*", "", s)
+        out.append(f"- {s}")
+    return out
+
+
+def _first_plain_snippet(article: str, max_chars: int = 280) -> str:
+    """Ilk anlamli paragraftan kisa alinti (FAQ cevabi icin)."""
+    for block in re.split(r"\n\s*\n", article):
+        b = block.strip()
+        if not b or b.startswith("#") or b.startswith(">"):
+            continue
+        plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", b)
+        plain = re.sub(r"[#*_>`]", "", plain)
+        plain = " ".join(plain.split())
+        if len(plain) < 40:
+            continue
+        if len(plain) > max_chars:
+            plain = plain[: max_chars - 1].rsplit(" ", 1)[0] + "…"
+        return plain
+    return ""
+
+
+def _build_seo_block(title_tag: str, meta_description: str, slug: str) -> str:
+    return "\n".join(
+        [
+            "## Yayın metası (SEO)",
+            "",
+            f"- **Title tag:** {title_tag}",
+            f"- **Meta description:** {meta_description}",
+            f"- **Slug:** `{slug}`",
+            "",
+        ]
     )
-    for m in markers:
-        if m in article:
-            i = article.index(m)
-            return article[:i].rstrip() + section_md + "\n" + article[i:]
-    return article.rstrip() + section_md
+
+
+def _build_faq_markdown(topic: str, audience: str, article: str) -> str:
+    """LLM yok; konu + metinden guvenli sablon SSS (5–6 soru)."""
+    t = (topic or "Bu konu").strip()
+    aud = (audience or "okuyucular").strip()
+    snippet = _first_plain_snippet(article) or (
+        "Metin, konuya giris ve temel cerceveyi sade bir dille sunar."
+    )
+    lines = [
+        "## Sık sorulan sorular",
+        "",
+        f"### {t} hakkinda bu metin neyi netlestirir?",
+        "",
+        snippet,
+        "",
+        "### Bu icerik kimler icin?",
+        "",
+        f"Ozellikle **{aud}** icin bilgilendirme amaclidir; kisisel tani veya tedavi yerine gecmez.",
+        "",
+        "### Tibbi karar yerine gecebilir mi?",
+        "",
+        "Hayir. Bilgilendirme amaclidir; semptomlar veya tedavi icin doktorunuza veya nitelikli saglik uzmaniniza danisin.",
+        "",
+        "### Turkiye baglami neden ayri ele aliniyor?",
+        "",
+        "Erisim, duzenleme ve pratik farkliliklar ulkeye gore degisebilecegi icin yerel okuyucu icin ayri bir cerceve sunulur.",
+        "",
+        "### Ne zaman profesyonel destek dusunulmeli?",
+        "",
+        "Belirtiler gunluk islevi etkiliyorsa, hizla kotulesiyorsa veya emin olamadiginiz bir durum varsa degerlendirme icin basvurun.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def _build_sources_markdown(sources: list[dict[str, Any]]) -> str:
+    """5–8 kaynak; Research listesi kisa ise mevcut olanlari listeler."""
+    lines = [
+        "## Kaynaklar",
+        "",
+    ]
+    if not sources:
+        lines.append("*Bu calisma icin Research asamasinda onayli kaynak listesi eklenmedi.*")
+        lines.append("")
+        return "\n".join(lines)
+
+    n = len(sources)
+    cap = min(8, max(5, n)) if n >= 5 else n
+    picked = sources[:cap]
+    for i, s in enumerate(picked, start=1):
+        title = str(s.get("title") or "Kaynak").strip()
+        publisher = str(s.get("publisher") or "").strip()
+        year = s.get("year")
+        yr = f" ({year})" if year else ""
+        url = str(s.get("url") or "").strip()
+        label = f"{title}{yr}"
+        if publisher:
+            label = f"{title} — {publisher}{yr}"
+        if url:
+            lines.append(f"{i}. [{label}]({url})")
+        else:
+            lines.append(f"{i}. {label}")
+    if n < 5:
+        lines.append("")
+        lines.append(
+            f"*Not: Onayli kaynak sayisi {n} adet; ideal aralik 5–8 kaynaktir (Research ile genisletilebilir).*"
+        )
+    lines.append("")
+    return "\n".join(lines)
+
+
+def _build_internal_section(
+    auto_links: list[dict[str, str]],
+    user_hint_lines: list[str],
+) -> str:
+    parts = [
+        "## İç bağlantı önerileri",
+        "",
+        "Otomatik skorlanan site ici oneriler:",
+        "",
+    ]
+    if auto_links:
+        parts.extend(_build_internal_links_markdown(auto_links))
+    else:
+        parts.append("- *(Otomatik oneri uretilemedi.)*")
+    parts.append("")
+    if user_hint_lines:
+        parts.append("Kullanici / editor notlari:")
+        parts.append("")
+        parts.extend(user_hint_lines)
+        parts.append("")
+    return "\n".join(parts)
+
+
+def _append_publisher_bundle(
+    article: str,
+    *,
+    title_tag: str,
+    meta_description: str,
+    slug: str,
+    topic: str,
+    audience: str,
+    approved_sources: list[dict[str, Any]],
+    auto_internal: list[dict[str, str]],
+    user_internal_raw: str,
+) -> str:
+    """Makale govdesinin sonuna SEO, FAQ, ic link ve kaynak ekler."""
+    user_lines = _parse_user_internal_hints(user_internal_raw)
+    blocks = [
+        "",
+        "---",
+        "",
+        _build_seo_block(title_tag, meta_description, slug),
+        _build_faq_markdown(topic, audience, article),
+        _build_internal_section(auto_internal, user_lines),
+        _build_sources_markdown(approved_sources),
+    ]
+    return article.rstrip() + "\n" + "\n".join(blocks)
 
 
 class PublisherAgent:
@@ -140,13 +287,27 @@ class PublisherAgent:
         slug = slugify_topic(topic_raw)
         title = topic_raw.capitalize() if topic_raw else "Icerik"
         article_raw = state["draft"]["article"]
+        audience = str(state.get("audience", "40+ kadinlar") or "okuyucular")
         excerpt = self._excerpt_from_article(article_raw)
         title_tag = self._build_title_tag(topic_raw or "icerik")
-        meta_description = self._build_meta_description(topic_raw or "icerik")
+        meta_description = self._build_meta_description(topic_raw or "icerik", article_raw)
+        user_internal = str(state.get("internal_link_suggestions") or "").strip()
+        approved = state.get("approved_sources") or []
+        if not isinstance(approved, list):
+            approved = []
 
-        recommended = _select_internal_links(topic_raw, limit=4)
-        links_md = _build_internal_links_markdown(recommended)
-        body_markdown = _insert_internal_links_before_disclaimer(article_raw, links_md)
+        recommended = _select_internal_links(topic_raw, limit=6)
+        body_markdown = _append_publisher_bundle(
+            article_raw,
+            title_tag=title_tag,
+            meta_description=meta_description,
+            slug=slug,
+            topic=topic_raw or "Konu",
+            audience=audience,
+            approved_sources=list(approved),
+            auto_internal=recommended,
+            user_internal_raw=user_internal,
+        )
 
         state["publisher_output"] = PublisherOutput(
             cms_format="markdown",
@@ -163,6 +324,7 @@ class PublisherAgent:
             },
             internal_linking={
                 "recommended_links": recommended,
+                "user_suggestions_raw": user_internal,
             },
             media={
                 "hero_alt_text": "Gece yatak odasinda hafif battaniye ile oturan dusunceli orta yasli kadin",
@@ -181,13 +343,18 @@ class PublisherAgent:
 
     @staticmethod
     def _build_title_tag(topic: str) -> str:
-        title = f"{topic} Neden Olur? - Estranova"
-        return title[:60]
+        t = (topic or "Icerik").strip()
+        base = f"{t} | Estranova"
+        return base[:60]
 
     @staticmethod
-    def _build_meta_description(topic: str) -> str:
-        description = (
-            f"{topic} konusunda destekleyici yaklasimlari, tetikleyicileri ve ne zaman destek alinabilecegini "
-            "sade bir dille okuyun."
-        )
-        return description[:160]
+    def _build_meta_description(topic: str, article: str) -> str:
+        snippet = _first_plain_snippet(article, max_chars=120)
+        if snippet:
+            core = f"{topic}: {snippet}"
+        else:
+            core = (
+                f"{topic} konusunda destekleyici cerceve, sinirlar ve ne zaman destek alinabilecegini "
+                "sade bir dille okuyun."
+            )
+        return core[:160]

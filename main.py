@@ -262,8 +262,11 @@ def save_operational_outputs(
         or ""
     )
     if final_article.strip() and write_output_article_md:
-        md_path = output_dir / f"{base_name}.md"
-        md_path.write_text(final_article, encoding="utf-8")
+        if is_publish_ready:
+            md_path = output_dir / f"{base_name}.md"
+            md_path.write_text(final_article, encoding="utf-8")
+        else:
+            save_draft_to_output_drafts(final_article, topic_raw, today)
 
     llm_calls = result.get("llm_calls", [])
     report = {
@@ -296,6 +299,11 @@ def save_operational_outputs(
         "agent_issue_counts": _build_agent_issue_counts(result),
         "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
         "best_effort_publish": bool(result.get("best_effort_publish", False)),
+        "writer_preferences": {
+            "article_angle": result.get("article_angle"),
+            "content_emphasis": result.get("content_emphasis"),
+            "internal_link_suggestions": result.get("internal_link_suggestions"),
+        },
     }
     report_path = output_dir / f"{base_name}-report.json"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -321,6 +329,11 @@ def build_save_payload(result: EstranovaState) -> dict[str, Any]:
         },
         "pipeline_halt_reason": result.get("pipeline_halt_reason", ""),
         "best_effort_publish": bool(result.get("best_effort_publish", False)),
+        "writer_preferences": {
+            "article_angle": result.get("article_angle"),
+            "content_emphasis": result.get("content_emphasis"),
+            "internal_link_suggestions": result.get("internal_link_suggestions"),
+        },
     }
 
 

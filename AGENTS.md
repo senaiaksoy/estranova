@@ -11,6 +11,8 @@ Build and maintain a premium editorial women's health website focused on:
 This project is an editorial health information platform.
 It is not a clinic marketing site, not a treatment funnel, and not a product sales platform.
 
+**Yayın dili:** Estranova web sitesi **yalnızca Türkçe** kullanıcı arayüzü ve içerik diliyle yayınlanır; kullanıcıya dönük metinlerde İngilizce navigasyon veya gövde kullanılmaz. Ayrıntı: **`CLAUDE.md` → Dil politikası (HARD CONSTRAINT)**.
+
 ---
 
 ## Non-Negotiable Rules

@@ -1,95 +1,93 @@
 # CLAUDE.md
 
-## Project Identity
+## Belge amacı ve üst kural statüsü
 
-This project is a premium editorial women's health information platform.
+Bu dosya (**`CLAUDE.md`**) Estranova ekosistemindeki **tüm ajan ve üretim hatları** için **üst kural setidir**: Research, Writer, Medical / Fact-check, Compliance, Publisher, Orchestrator ve repo içi otomasyonlar bu kurallara tabidir.
 
-It is NOT:
-- a clinic website
-- a treatment marketing site
-- a patient acquisition funnel
-- a telemedicine product
-- a subscription health platform
-- a supplement or product sales site
-
-The platform must always feel like:
-- an editorial health publication
-- a medically reviewed information resource
-- a structured guidance platform for women aged 40+
-
-Primary thematic focus:
-- perimenopause
-- preparing for menopause
-- menopause
-- health after 40
-- lifestyle and well-being during hormonal transition
+Aşağıdaki **HARD CONSTRAINT** bölümleri (**§1–§6**) **opsiyonel değildir**. **Her üretimde** uygulanır; **Writer ve tüm metin üreten ajanlar** bunları **ihlal edemez**. Çelişki durumunda önce bu bölümler, sonra genişletilmiş rehber uygulanır.
 
 ---
 
-## Strategic Positioning
+## HARD CONSTRAINTS — Tüm ajanlar (zorunlu)
 
-Always design and write as if this project should remain within the logic of a general editorial publication rather than a medical advertising website.
+### Dil politikası — Site ve yayın dili (HARD CONSTRAINT)
 
-When in doubt, prefer:
-- editorial neutrality over conversion
-- trust over persuasion
-- guidance over promotion
-- education over lead capture
-- structure over hype
+- Estranova **kullanıcıya görünen site yüzü tek dildir: Türkçe.** Menü, başlık, gövde metni, düğme metni, kart metni, meta açıklama, alternatif metin (uygun olduğunda) ve **yayınlanacak makale / içerik gövdesi** Türkçe olmalıdır; **İngilizce arayüz metni, İngilizce başlık veya İngilizce paragraf** kullanılmaz.
+- Şema.org tür adları (`BlogPosting` vb.), teknik alan adları veya URL yolu (`/blog` gibi) teknik istisna sayılır; **okuyucuya sunulan her ifade Türkçedir**.
+- Nadiren gerekli bilimsel/uluslararası öznitelik (ör. hastalık veya kavramın yaygın İngilizce adı) yalnızca **kısa**, **köşeli parantez veya `lang="en"` ile işaretli** ve **Türkçe açıklama eşlikli** olabilir; gövde anlatımı yine Türkçedir.
+- Tüm ajanlar: üretilecek **yayın metni, SEO başlığı ve özet/snippet** Türkçedir.
 
-This platform should inform, orient, and clarify.
-It should not directly market treatment.
+### 1. Sistem Rolü ve Kimlik
+
+- Estranova, **premium editoryal kadın sağlığı bilgi platformudur**: perimenopoz, menopoza hazırlık, menopoz, 40+ sağlık ve hormonal geçiş döneminde yaşam tarzı ile ilgili **yapılandırılmış rehberlik** sunar.
+- **Şunlar değildir:** klinik sitesi; tedavi pazarlaması; hasta edinme hunisi; tele-tıp ürünü; abonelik sağlık platformu; takviye / ürün satış sitesi; başhekim reklamı veya “en iyi uzman” vitrini.
+- Platform her zaman şöyle hissettirmelidir: **edisyon yayını**; **tıbben gözden geçirilmiş bilgi kaynağı**; **40+ kadınlar için sakin, net yönlendirme**.
+- **Tema odağı:** perimenopoz, menopoza hazırlık, menopoz, 40 sonrası sağlık, hormonal geçişte yaşam tarzı ve iyi oluş.
+
+### 2. Hedef Okuyucu
+
+- Birincil okuyucu: **40 yaş ve üzeri**, hormonal geçiş ve kadın sağlığı konularında **güvenilir, nötr bilgi** arayan kadınlar (Türkiye bağlamında Türkçe içerik).
+- Okuyucu **hasta edinme hunisinde değildir**; “hemen randevu / paket / kampanya” ile konumlandırılmaz.
+- İçerik **korku, utandırma veya aşırı aciliyet** ile manipüle etmez; **panik dili** kullanmaz.
+- Dil: **anlaşılır Türkçe**; gerektiğinde teknik terime kısa açıklama; okuryazar ama **akademik şişkinlik ve plaza dili** hedeflenmez (ayrıntı: §3 ve §6).
+
+### 3. Yazar Ses ve Üslup
+
+- **Ton:** tıbbi olarak okuryazar, **sakin**, **kesin**, **güven veren**, **zarif**, **insani**, **sansasyonel olmayan**.
+- **Kaçınılacaklar:** abartı, alarmist ifade, mucize dili, aşırı vaat, influencer tonu, **satış / funnel metni**, uygulama-SaaS panosu dili, “en iyi / garanti / kesin çözüm” hissi.
+- **Tercih edilen çerçeve:** yapılandırılmış rehberlik; bilimsel açıklık; kanıta duyarlılık; okuyucunun anlamasına yardım.
+- **Stratejik tercih (çelişkide):** editoryal nötrlük > dönüşüm; güven > ikna; rehberlik > promosyon; eğitim > lead toplama; yapı > hype.
+- Uzman görünür olabilir; **promosyonel çerçeve** (en iyi doktor, rakipsiz başarı vb.) **yasaktır** (uzman çerçevesi: editoryal katkı, tıbbi inceleme, uzman perspektifi — üstünlük iddiası değil).
+
+### 4. Yasaklı İfadeler ve İçerik Kalıpları
+
+**Dil — örnek yasaklar (tam ve anlamca eşdeğerleri):**  
+Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; Kesin çözüm; Başarı oranlarımız; Paketlerimiz; Kampanya; İndirim; Şimdi satın al; “book now” tarzı sağlık CTA’ları; fiyatlandırma tabloları (tıbbi hizmet satışı için); başarı oranı pazarlama bölümleri; hasta referansı duvarı; “en iyi klinik / en iyi uzman” metni; doğrudan satış hunisi kılığında sağlık rehberliği.
+
+**Tercih edilen nötr CTA örnekleri (uygunsa):** Rehberi keşfet; Belirtileri değerlendir; Bilgi al; İçeriği incele; Daha fazla bilgi; Devamını oku.
+
+**İçerik kalıbı — oluşturma:** before/after bölümleri; tanık hikayesi ile promosyon kanıtı; başarı iddiası; tedavi vaadi; satış karşılaştırması; paket / fiyat bölümleri; agresif dönüşüm hunisi; güçlü satış niyetiyle dönüşüm odaklı tıbbi landing sayfaları.
+
+**Plaza dili / iş İngilizcesi:** “aksiyon almak”, “fokuslanmak”, “set etmek”, “push etmek”, “optimize”, “deadline”, “stakeholder” vb. **sade Türkçe** ile değiştirilmelidir (Writer’da zorunlu eşleştirme listesine uyum).
+
+**Tıbbi sınır:** teşhis, tedavi önerisi, reçete dili, bireysel tıbbi karar dayatma, abartılı tıbbi kesinlik **yasaktır**. İçerik **bilgilendirme amaçlıdır**; bireysel değerlendirme, tanı veya tedavinin yerini almaz (standart uyarı görünür olmalı).
+
+### 5. Estranova DNA
+
+- **Kimlik özü:** genel ilgi sağlık **yayını** mantığında kal; doğrudan tedavi pazarlaması değil.
+- **Güven mimarisi:** Editoryal Politika, Tıbbi Sorumluluk Reddi, Gizlilik, Hakkımızda, İletişim gibi sayfalarla uyumlu, **nötr ve görünür** uyarılar.
+- **Bilgi mimarisi:** hizmet menüleri (“Tedavilerimiz”, “Randevu”, “Paketler”) yerine **bilgi yolları** (perimenopoz, menopoz, 40+ sağlık, yaşam tarzı, uzman içgörüleri).
+- **Öncelik sırası (çelişkide):**  
+  1. Düzenlemeye uygun nötrlük  
+  2. Güven  
+  3. Açıklık  
+  4. Editoryal kalite  
+  5. Dönüşüm  
+  Dönüşüm nötrlikle çelişirse **nötrlik** kazanır.
+
+### 6. Kalite Kontrol Checklist
+
+Aşağıdaki kontroller **her üretimde** (metin, sayfa taslağı, agent JSON çıktısı) doğrulanmalıdır; **tek bir “hayır”** ilgili pipeline’da **düzeltme veya reddetme** gerektirir.
+
+- [ ] **§1 Kimlik:** Çıktı bir klinik / tedavi satışı / huni sitesi gibi sunulmuyor.
+- [ ] **§2 Okuyucu:** 40+ bilgi arayan kadın perspektifi korunuyor; korku / utanç / aşırı aciliyet yok.
+- [ ] **§3 Ses:** Sakin, kesin, güven veren, sansasyonel olmayan ton; influencer ve satış kopyası yok.
+- [ ] **§4 Yasaklar:** §4’teki yasak ifade ve içerik kalıpları ve plaza dili **yok**; nötr CTA kuralları ihlal edilmiyor.
+- [ ] **§5 DNA:** Editoryal yayın çizgisi ve güven / nötrlük önceliği bozulmuyor.
+- [ ] **Tıbbi sınır:** Teşhis, tedavi talimatı, reçete dili yok; bilgilendirme amaçlı çerçeve ve gerekliyse **doktorunuza danışın** tipi güvenli yönlendirme yer alıyor.
+- [ ] **Kanıt zinciri:** İddialar Research onaylı kaynaklar ve izlenebilir iddia izi ile uyumlu (Research / Writer / Fact-check sorumluluklarına göre).
+- [ ] **Okuma düzeyi:** Yaklaşık **10. sınıf ve altı** sade Türkçe hedefi; gereksiz akademik yığın ve iç içe uzun cümle yok (Compliance ile uyumlu).
+- [ ] **Dil politikası:** Kullanıcıya dönük metin ve yayın içeriği **yalnızca Türkçe**; İngilizce UI veya tam İngilizce paragraf yok (bkz. üstte **Dil politikası**).
 
 ---
 
-## Regulatory-Safe Rules
+## Genişletilmiş rehber (tasarım, UX, uygulama)
 
-Avoid any wording, design pattern, or page structure that makes the site look like:
-- a physician promotion site
-- a clinic promotion site
-- a treatment promotion site
-- a medical sales funnel
+Aşağıdaki bölümler **HARD CONSTRAINT §1–§6** ile çelişmedikçe geçerlidir; çelişkide **yukarıdaki HARD CONSTRAINT’ler** önceliklidir.
 
-### Forbidden language patterns
-Never use:
-- "Randevu al"
-- "Tedaviye başla"
-- "Hemen başvur"
-- "En iyi"
-- "En başarılı"
-- "Garantili"
-- "Kesin çözüm"
-- "Başarı oranlarımız"
-- "Paketlerimiz"
-- "Kampanya"
-- "İndirim"
-- "Şimdi satın al"
+### Design System Principles
 
-### Preferred CTA language
-Use only neutral CTA patterns such as:
-- "Rehberi keşfet"
-- "Belirtileri değerlendir"
-- "Bilgi al"
-- "İçeriği incele"
-- "Daha fazla bilgi"
-- "Devamını oku"
-
-### Forbidden content patterns
-Do not create:
-- before/after sections
-- testimonials as promotional proof
-- success claims
-- treatment promises
-- sales comparisons
-- package or pricing sections
-- direct funnel copy
-- conversion-optimized medical landing pages with strong sales intent
-
----
-
-## Design System Principles
-
-### Visual tone
+#### Visual tone
 The site must feel:
 - premium
 - calm
@@ -107,7 +105,7 @@ It must NOT feel like:
 - a supplement store
 - a hospital dashboard
 
-### Color direction
+#### Color direction
 Preferred palette:
 - muted deep burgundy
 - warm cream
@@ -115,12 +113,12 @@ Preferred palette:
 - dark gray text
 - white or warm off-white backgrounds
 
-### Typography
+#### Typography
 Preferred style:
 - elegant serif for headings
 - highly readable sans-serif for body copy
 
-### Layout
+#### Layout
 Use:
 - generous whitespace
 - large type
@@ -136,9 +134,7 @@ Avoid:
 - overly decorative magazine chaos
 - crowded hero sections
 
----
-
-## UX Rules
+### UX Rules
 
 This is a content-driven website, not an application.
 
@@ -150,7 +146,7 @@ Always structure pages as websites with:
 - informational subpages
 - footer with trust architecture
 
-### Homepage must include
+#### Homepage must include
 - Hero section
 - Hormonal transition summary
 - Journey section:
@@ -165,7 +161,7 @@ Always structure pages as websites with:
 - Soft information CTA
 - Footer with policy/disclaimer links
 
-### Article pages must include
+#### Article pages must include
 - clear article title
 - short summary or quick answer box
 - structured subsections
@@ -174,13 +170,11 @@ Always structure pages as websites with:
 - related content links
 - medical disclaimer
 
-### Article layout (implementation)
+#### Article layout (implementation)
 
 For new static Astro articles, follow **AGENTS.md → “Article page layout (Astro)”**: `SubmenuHero` (when in `submenu-heroes`), `SubmenuArticleBody`, `ArticleProsePanel` for body HTML, then related content, optional editor note, disclaimer. Reference `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro`. Dynamic articles use `article/[slug].astro` with the same body components.
 
----
-
-## Content Architecture Rules
+### Content Architecture Rules
 
 The site architecture should be built around knowledge pathways, not services.
 
@@ -203,36 +197,7 @@ Do not use service-oriented menus such as:
 - Packages
 - Pricing
 
----
-
-## Editorial Voice
-
-Tone must be:
-- medically literate
-- calm
-- precise
-- reassuring
-- elegant
-- human
-- non-sensational
-
-Avoid:
-- hype
-- alarmist phrasing
-- miracle language
-- overpromising
-- influencer tone
-- sales copy tone
-
-Preferred voice:
-- "structured guidance"
-- "scientific clarity"
-- "evidence-aware"
-- "helping the reader understand"
-
----
-
-## Expert Positioning
+### Expert Positioning
 
 The expert behind the platform may be visible, but must not be framed in a promotional manner.
 
@@ -248,9 +213,7 @@ Avoid:
 - competitive comparisons
 - reputation marketing
 
----
-
-## Trust Architecture
+### Trust Architecture
 
 Every implementation should support trust with:
 - Editorial Policy
@@ -264,9 +227,7 @@ Medical disclaimer language must always be neutral and visible.
 Suggested principle:
 This content is for general information only and does not replace individual medical evaluation, diagnosis, or treatment.
 
----
-
-## Images and Media
+### Images and Media
 
 Preferred image direction:
 - calm, confident women aged 40–55
@@ -284,9 +245,7 @@ Avoid:
 - sales graphics
 - startup iconography
 
----
-
-## If Asked to Create New Pages
+### If Asked to Create New Pages
 
 Before generating a new page, check:
 1. Does this page feel like editorial information rather than medical advertising?
@@ -299,27 +258,10 @@ If any answer is no, revise before finalizing.
 
 ---
 
-## Hard Stop Rules
+## Agent uygulama notu
 
-Never generate:
-- "book now" style healthcare CTAs
-- pricing tables for medical services
-- success-rate marketing sections
-- patient testimonial walls
-- doctor superiority claims
-- "best clinic" or "top specialist" copy
-- direct sales funnels disguised as health guidance
-
----
-
-## Final Priority Order
-
-When tradeoffs exist, follow this order:
-1. Regulatory-safe neutrality
-2. Trust
-3. Clarity
-4. Editorial quality
-5. Conversion
-
-If conversion conflicts with neutrality, choose neutrality.
-Add CLAUDE project rules
+- **Dil politikası:** Üretilen **yayın metinleri ve kullanıcıya görünür kopyalar** Türkçedir; yukarıdaki **Dil politikası — Site ve yayın dili** bölümüne uyum zorunludur.
+- **Writer** ve metin üreten tüm ajanlar: **`CLAUDE.md` HARD CONSTRAINT §1–§6** ile **prompt içi “hard constraint”** bloklarında hizalanmalıdır; üretim başına checklist (§6) mantığı uygulanmalıdır.
+- **Research / Fact-check:** §6’daki kanıt ve izlenebilirlik maddeleri zorunludur.
+- **Compliance:** §3–§5 ve §6 ile uyum; çelişen çıktı **revizyon veya red** gerektirir.
+- **Publisher / site üretimi:** §1–§2 ve güven / nötr CTA kuralları; içerik gövdesi Writer çıktısına dayanır.

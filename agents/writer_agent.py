@@ -1,12 +1,75 @@
 from __future__ import annotations
 
 import json
+import re
 
 from config.pipeline_limits import WRITER_MAX_OUTPUT_TOKENS
 
 from state import ClaimTrace, DraftContent, EstranovaState, append_history
 
+from .article_markdown import ARTICLE_OUTLINE_KEYS, split_h2_sections
 from .base import PromptBackedAgent
+
+
+def _validate_writer_structure(result: dict[str, object]) -> list[dict[str, object]]:
+    """
+    LLM ciktisi master prompt yapisina uymuyorsa INVALID OUTPUT.
+    Donus: normalize edilmis article_outline listesi.
+    """
+    status = str(result.get("output_status") or "ok").strip()
+    if status == "INVALID_OUTPUT":
+        reason = result.get("invalid_reason", "model bildirdi")
+        raise RuntimeError(f"INVALID OUTPUT: {reason}")
+
+    outline = result.get("article_outline")
+    if not isinstance(outline, list) or len(outline) != len(ARTICLE_OUTLINE_KEYS):
+        raise RuntimeError(
+            f"INVALID OUTPUT: article_outline 8 eleman olmali (geldi: {type(outline).__name__}, "
+            f"len={len(outline) if isinstance(outline, list) else 'n/a'})"
+        )
+
+    normalized: list[dict[str, object]] = []
+    for i, key in enumerate(ARTICLE_OUTLINE_KEYS):
+        item = outline[i]
+        if not isinstance(item, dict):
+            raise RuntimeError(f"INVALID OUTPUT: article_outline[{i}] nesne degil")
+        if item.get("section_key") != key:
+            raise RuntimeError(
+                f"INVALID OUTPUT: article_outline[{i}].section_key beklenen {key!r} "
+                f"geldi {item.get('section_key')!r}"
+            )
+        title = item.get("title")
+        if not (isinstance(title, str) and title.strip()):
+            raise RuntimeError(f"INVALID OUTPUT: article_outline[{i}].title bos")
+        bullets = item.get("bullets")
+        if not isinstance(bullets, list) or len(bullets) < 1:
+            raise RuntimeError(f"INVALID OUTPUT: article_outline[{i}].bullets en az 1 madde olmali")
+        normalized.append(dict(item))
+
+    article = (result.get("draft_content") or {}).get("article", "")
+    if not isinstance(article, str) or not article.strip():
+        raise RuntimeError("INVALID OUTPUT: draft_content.article bos")
+
+    h2_sections = split_h2_sections(article)
+    if len(h2_sections) < 8:
+        raise RuntimeError(
+            f"INVALID OUTPUT: en az 8 adet ## bolumu olmali (sayildi: {len(h2_sections)})"
+        )
+
+    if not re.search(r"t[üu]rkiye", article, re.IGNORECASE):
+        raise RuntimeError("INVALID OUTPUT: Turkiye bolumu metinde 'Turkiye' / 'Türkiye' gecmiyor")
+
+    idx_m = ARTICLE_OUTLINE_KEYS.index("mekanizma")
+    idx_k = ARTICLE_OUTLINE_KEYS.index("kanit_seviyesi")
+    for idx, label in ((idx_m, "mekanizma"), (idx_k, "kanit_seviyesi")):
+        block = h2_sections[idx]
+        wordish = len(re.findall(r"\w+", block, flags=re.UNICODE))
+        if wordish < 40:
+            raise RuntimeError(
+                f"INVALID OUTPUT: {label} bolumu yetersiz derinlik (kelime ~{wordish}, min 40)"
+            )
+
+    return normalized
 
 
 class WriterAgent(PromptBackedAgent):
@@ -25,6 +88,12 @@ class WriterAgent(PromptBackedAgent):
         revision_feedback = state.get("revision_feedback", [])
         revision_iteration = int(state.get("revision_iteration", 0))
         user_context = str(state.get("user_context", "") or "").strip()
+        article_angle = str(state.get("article_angle") or "").strip()
+        raw_emphasis = state.get("content_emphasis") or []
+        content_emphasis: list[str] = (
+            list(raw_emphasis) if isinstance(raw_emphasis, list) else []
+        )
+        internal_link_suggestions = str(state.get("internal_link_suggestions") or "").strip()
 
         fb_joined = "\n".join(str(x).strip() for x in revision_feedback if str(x).strip())
         prev_snap = str(state.get("writer_revision_feedback_snapshot", "") or "")
@@ -43,6 +112,9 @@ class WriterAgent(PromptBackedAgent):
             "revision_iteration": revision_iteration,
             "revision_feedback": revision_feedback,
             "user_context": user_context,
+            "article_angle": article_angle,
+            "content_emphasis": content_emphasis,
+            "internal_link_suggestions": internal_link_suggestions,
             "revision_stagnation_warning": (
                 "UYARI: Onceki revizyon turunda ayni geri bildirim listesi tekrarlandi. "
                 "Metni kokten sadelestir; onceki turda cozulmeyen sorunlari tekrar etme; "
@@ -61,6 +133,9 @@ class WriterAgent(PromptBackedAgent):
             )
         except Exception as exc:
             raise RuntimeError(f"WriterAgent LLM call failed: {exc}") from exc
+
+        validated_outline = _validate_writer_structure(result)
+        state["article_outline"] = validated_outline
 
         draft_content = result.get("draft_content", {})
 
