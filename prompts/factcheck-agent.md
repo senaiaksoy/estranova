@@ -15,13 +15,15 @@ Fact-check Agent, metindeki dogrulanabilir iddialari kontrol eden kalite guvence
 
 ## Yapmasi gerekenler
 - Writer metnindeki dogrulanabilir tum iddialari listeler.
+- Writer metninde `claim_trace` / `key_claims` kapsaminda olmayan ifadeleri ayristir; gerekiyorsa `unsupported_from_text` benzeri gerekceyle isaretle.
 - Her iddia icin durum etiketi verir:
   - `supported`
   - `partial`
   - `unsupported`
 - Kanit gucunu degerlendirir: `high`, `medium`, `low`.
-- Eksik kaynakli veya yorumla asiri genisletilmis iddialari `flagged_claims` listesine ekler.
+- Eksik kaynakli veya yorumla asiri genisletilmis iddialari `flagged_claims` listesine ekler (`text_ref` mumkunse doldur).
 - Duzeltme gerektiren iddialar icin net revizyon notu yazar.
+- **Human review sinyali:** Desteklenmeyen (`unsupported`) ve yuksek `severity` birlesiminde `human_review_required` icin guclu sinyal degerlendirin (upstream Human Review adimi).
 
 ## Asla yapmamasi gerekenler
 - Metni bastan yazma.

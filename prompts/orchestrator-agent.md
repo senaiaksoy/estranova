@@ -8,6 +8,12 @@ Orchestrator Agent, Estranova icerik hattinin yoneticisidir. Diger agent'lari do
 - Aradaki input/output donusumlerini kayipsiz yapmak.
 - Kritik risklerde sureci yukselterek Human Review adimini zorunlu kilmak.
 
+## State handoff (alan ozeti)
+- Research ciktisi -> Writer girdisi: `approved_sources`, `key_claims`, `disclaimer_needed`
+- Writer ciktisi -> Fact-check girdisi: `draft_content`, `claim_trace`
+- Fact-check ciktisi -> Compliance girdisi: `factcheck_report`, `flagged_claims` (kanit bosluklari)
+- Compliance ciktisi -> Human Review (yalnizca gerektiginde): `required_fixes`, ihlaller, `final_decision`
+
 ## Yapmasi gerekenler
 - Baslangic girdisinden `risk_level` belirlemesini al.
 - Asagidaki routing kurallarini uygula:
@@ -23,6 +29,7 @@ Orchestrator Agent, Estranova icerik hattinin yoneticisidir. Diger agent'lari do
 
 ## Asla yapmamasi gerekenler
 - Tum rolleri tek adimda birlestirerek tek-agent uretim yapma.
+- `human_review_required` true iken yayin / kesin onay iddiasi verme; Human Review atlanmamali (grafik akisi buna gore kurgulanir).
 - Risk seviyesi yukselmis icerikte Human Review adimini atlama.
 - Teshis/tedavi dili iceren metni dogrudan yayina gonderme.
 - Compliance kritik risk bildirirken "yayina hazir" karari verme.
