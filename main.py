@@ -256,17 +256,36 @@ def save_operational_outputs(
     topic_raw = str(result.get("topic", "") or "").strip()
     base_name = output_file_basename(topic_raw, today)
 
-    final_article = (
-        result.get("publisher_output", {}).get("content", {}).get("body_markdown", "")
-        or result.get("draft", {}).get("article", "")
-        or ""
-    )
-    if final_article.strip() and write_output_article_md:
+    pub_raw = (result.get("publisher_output") or {}).get("content", {}).get("body_markdown", "")
+    publisher_body = pub_raw if isinstance(pub_raw, str) else ""
+    dr_raw = (result.get("draft") or {}).get("article", "")
+    draft_body = dr_raw if isinstance(dr_raw, str) else ""
+
+    pub_chars = len(publisher_body.strip())
+    draft_chars = len(draft_body.strip())
+
+    root_md_written = False
+    draft_md_written = False
+    draft_fallback_missing_publisher = False
+    root_skip_reason: str | None = None
+
+    if write_output_article_md:
         if is_publish_ready:
-            md_path = output_dir / f"{base_name}.md"
-            md_path.write_text(final_article, encoding="utf-8")
+            if pub_chars:
+                md_path = output_dir / f"{base_name}.md"
+                md_path.write_text(publisher_body, encoding="utf-8")
+                root_md_written = True
+            else:
+                root_skip_reason = "publish_ready_but_publisher_body_markdown_empty"
+                if draft_chars:
+                    save_draft_to_output_drafts(draft_body, topic_raw, today)
+                    draft_md_written = True
+                    draft_fallback_missing_publisher = True
         else:
-            save_draft_to_output_drafts(final_article, topic_raw, today)
+            combined = publisher_body or draft_body
+            if combined.strip():
+                save_draft_to_output_drafts(combined, topic_raw, today)
+                draft_md_written = True
 
     llm_calls = result.get("llm_calls", [])
     report = {
@@ -303,6 +322,14 @@ def save_operational_outputs(
             "article_angle": result.get("article_angle"),
             "content_emphasis": result.get("content_emphasis"),
             "internal_link_suggestions": result.get("internal_link_suggestions"),
+        },
+        "output_file_routing": {
+            "publisher_body_markdown_chars": pub_chars,
+            "draft_article_chars": draft_chars,
+            "root_md_written": root_md_written,
+            "draft_md_written": draft_md_written,
+            "draft_saved_as_fallback_missing_publisher": draft_fallback_missing_publisher,
+            "root_md_skipped_reason": root_skip_reason,
         },
     }
     report_path = output_dir / f"{base_name}-report.json"

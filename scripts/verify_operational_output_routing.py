@@ -87,13 +87,17 @@ def main() -> None:
     draft_md.unlink(missing_ok=True)
     report_json.unlink(missing_ok=True)
 
-    # 2) Publish-ready -> output kok
+    # 2) Publish-ready -> yalnizca publisher_output.body_markdown kokte (draft tek basina yetmez)
+    pub_body = "# Mock\n\nPublish ready body.\n\n---\n\n## Publisher ekleri\n\nPaket.\n"
     st_ok = _minimal_state(
         final_decision="ready_to_publish",
         compliance_score=95,
-        article="# Mock\n\nPublish ready body.",
+        article="# Mock\n\nSadece taslak (kokte kullanilmamali).",
         topic=topic_pub,
     )
+    st_ok["publisher_output"] = {  # type: ignore[assignment]
+        "content": {"body_markdown": pub_body},
+    }
     payload_ok = build_save_payload(st_ok)  # type: ignore[arg-type]
     save_operational_outputs(st_ok, payload_ok)  # type: ignore[arg-type]
 
@@ -107,7 +111,9 @@ def main() -> None:
         raise SystemExit(f"FAIL: yayin kok dosyasi yok: {root_ok}")
     if draft_ok.exists():
         raise SystemExit(f"FAIL: beklenmeyen taslak: {draft_ok}")
-    print(f"OK: yayina hazir -> {root_ok.relative_to(_REPO_ROOT)}")
+    if "Publisher ekleri" not in root_ok.read_text(encoding="utf-8"):
+        raise SystemExit("FAIL: kok dosyasi publisher body_markdown icermiyor (draft'a dusmus olabilir).")
+    print(f"OK: yayina hazir (publisher govdesi) -> {root_ok.relative_to(_REPO_ROOT)}")
 
     root_ok.unlink(missing_ok=True)
     report_ok.unlink(missing_ok=True)
