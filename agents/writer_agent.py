@@ -11,8 +11,7 @@ from .base import PromptBackedAgent
 
 class WriterAgent(PromptBackedAgent):
     def __init__(self) -> None:
-        # Writer system prompt'u repo root /prompts klasoründen okunur.
-        super().__init__("prompts/writer-agent.md")
+        super().__init__("agents/writer_agent.md")
 
     def run(self, state: EstranovaState) -> EstranovaState:
         topic = state["topic"]

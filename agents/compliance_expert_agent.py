@@ -6,6 +6,27 @@ from typing import Any
 
 from config.pipeline_limits import COMPLIANCE_LONG_SENTENCE_WORDS, MIN_COMPLIANCE_SCORE_PUBLISH
 
+# CLAUDE / AGENTS — plaza ve is Ingilizcesi (deterministik tespit; skor dusurulur).
+PLAZA_LANGUAGE_SUBSTRINGS: tuple[str, ...] = (
+    "aksiyon al",
+    "fokuslan",
+    "fokus etmek",
+    "set etmek",
+    "push et",
+    "case bazlı",
+    "case bazli",
+    "optimize et",
+    "optimizasyon",
+    "stakeholder",
+    "deadline",
+    "timeline",
+    "rollout",
+    "align etmek",
+    "workshop",
+    "briefing",
+    "skalala",
+)
+
 from state import (
     ComplianceBlock,
     ComplianceStandardDecision,
@@ -129,6 +150,31 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 required_fixes.append(
                     f"Riskli ifade bulundu: '{term}'. Yumusatilmis ifade ile degistirin."
                 )
+
+        plaza_hits: list[str] = []
+        for frag in PLAZA_LANGUAGE_SUBSTRINGS:
+            if frag in lowered:
+                plaza_hits.append(frag)
+        if plaza_hits:
+            score = min(score, 62)
+            auto_reject = True
+            required_fixes.append(
+                "Plaza dili / is Ingilizcesi tespit edildi (CLAUDE/AGENTS): "
+                + ", ".join(dict.fromkeys(plaza_hits))
+                + " — sade Turkce karsiliklarla degistirin (ornek: aksiyon almak → adim atmak; "
+                "set etmek → belirlemek; fokuslanmak → odaklanmak)."
+            )
+            violations.append(
+                Violation(
+                    type="ad_language",
+                    severity="critical",
+                    text_ref=", ".join(dict.fromkeys(plaza_hits))[:240],
+                    rule_id="strict.plaza_language",
+                    fix_suggestion=(
+                        "Plaza dilini kaldirin; writer promptundaki zorunlu Turkce karsiliklari kullanin."
+                    ),
+                )
+            )
 
         long_sentences = self._find_long_sentences(all_text, max_words=COMPLIANCE_LONG_SENTENCE_WORDS)
         for sentence in long_sentences:
