@@ -98,8 +98,14 @@ def run_pipeline(
 def extract_article(result: dict[str, Any]) -> str:
     publisher_output = result.get("publisher_output", {})
     article = publisher_output.get("content", {}).get("body_markdown", "")
-    if not article:
-        article = result.get("draft", {}).get("article", "")
+    if not str(article).strip():
+        draft_article = result.get("draft", {}).get("article", "")
+        if isinstance(draft_article, str) and draft_article.strip():
+            from agents.publisher_agent import compose_publisher_body_markdown
+
+            article = compose_publisher_body_markdown(result)  # type: ignore[arg-type]
+        else:
+            article = draft_article if isinstance(draft_article, str) else ""
     return article or "Makale olusturulamadi."
 
 

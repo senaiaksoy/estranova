@@ -263,8 +263,14 @@ def save_operational_outputs(
     dr_raw = (result.get("draft") or {}).get("article", "")
     draft_body = dr_raw if isinstance(dr_raw, str) else ""
 
-    pub_chars = len(publisher_body.strip())
     draft_chars = len(draft_body.strip())
+    # publisher dugumu calismadan veya state'te publisher_output bos kaldiginda (or. taslak kaydi)
+    # yalnizca writer govdesi yaziliyordu; Kaynaklar/SEO paketi hic eklenmiyordu.
+    if draft_chars > 0 and not publisher_body.strip():
+        from agents.publisher_agent import compose_publisher_body_markdown
+
+        publisher_body = compose_publisher_body_markdown(result)
+    pub_chars = len(publisher_body.strip())
 
     root_md_written = False
     draft_md_written = False

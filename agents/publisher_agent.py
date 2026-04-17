@@ -283,6 +283,43 @@ def _append_publisher_bundle(
     return article.rstrip() + "\n" + "\n".join(blocks)
 
 
+def _publisher_seo_fields(topic_raw: str, article_raw: str) -> tuple[str, str]:
+    title_tag = PublisherAgent._build_title_tag(topic_raw or "icerik")
+    meta_description = PublisherAgent._build_meta_description(topic_raw or "icerik", article_raw)
+    return title_tag, meta_description
+
+
+def compose_publisher_body_markdown(state: EstranovaState) -> str:
+    """
+    Writer makalesinin sonuna SEO, SSS, ic baglanti ve Kaynaklar ekler.
+    Kayit katmaninda publisher_output bos geldiginde (or. taslak yolu) ayni paketi
+    yeniden uretmek icin de kullanilir.
+    """
+    topic_raw = str(state.get("topic", "") or "").strip()
+    slug = slugify_topic(topic_raw)
+    draft = state.get("draft") or {}
+    article_raw = str(draft.get("article", "") if isinstance(draft, dict) else "")
+    audience = str(state.get("audience", "40+ kadinlar") or "okuyucular")
+    title_tag, meta_description = _publisher_seo_fields(topic_raw, article_raw)
+    user_internal = str(state.get("internal_link_suggestions") or "").strip()
+    approved = state.get("approved_sources") or []
+    if not isinstance(approved, list):
+        approved = []
+
+    recommended = _select_internal_links(topic_raw, limit=6)
+    return _append_publisher_bundle(
+        article_raw,
+        title_tag=title_tag,
+        meta_description=meta_description,
+        slug=slug,
+        topic=topic_raw or "Konu",
+        audience=audience,
+        approved_sources=list(approved),
+        auto_internal=recommended,
+        user_internal_raw=user_internal,
+    )
+
+
 class PublisherAgent:
     """LLM kullanmaz; SEO paketi ve ic link bolumunu makaleye ekler."""
 
@@ -291,27 +328,12 @@ class PublisherAgent:
         slug = slugify_topic(topic_raw)
         title = topic_raw.capitalize() if topic_raw else "Icerik"
         article_raw = state["draft"]["article"]
-        audience = str(state.get("audience", "40+ kadinlar") or "okuyucular")
         excerpt = self._excerpt_from_article(article_raw)
-        title_tag = self._build_title_tag(topic_raw or "icerik")
-        meta_description = self._build_meta_description(topic_raw or "icerik", article_raw)
         user_internal = str(state.get("internal_link_suggestions") or "").strip()
-        approved = state.get("approved_sources") or []
-        if not isinstance(approved, list):
-            approved = []
-
+        title_tag, meta_description = _publisher_seo_fields(topic_raw, article_raw)
         recommended = _select_internal_links(topic_raw, limit=6)
-        body_markdown = _append_publisher_bundle(
-            article_raw,
-            title_tag=title_tag,
-            meta_description=meta_description,
-            slug=slug,
-            topic=topic_raw or "Konu",
-            audience=audience,
-            approved_sources=list(approved),
-            auto_internal=recommended,
-            user_internal_raw=user_internal,
-        )
+
+        body_markdown = compose_publisher_body_markdown(state)
 
         state["publisher_output"] = PublisherOutput(
             cms_format="markdown",
