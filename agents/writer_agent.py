@@ -50,6 +50,17 @@ def _dump_writer_debug_output(
     article_path.write_text(article, encoding="utf-8")
 
 
+def _normalize_article_escapes(article: str) -> str:
+    # Claude bazen hem gercek newline hem literal \n uretiyor.
+    # Literal \n dizilerini gercek newline'a cevir, sonra
+    # birden fazla art arda newline'i iki newline ile sinirla.
+    if not isinstance(article, str):
+        return article
+    normalized = article.replace("\\n", "\n")
+    normalized = re.sub(r"\n{3,}", "\n\n", normalized)
+    return normalized
+
+
 def _validate_writer_structure(result: dict[str, object]) -> list[dict[str, object]]:
     """
     LLM ciktisi master prompt yapisina uymuyorsa INVALID OUTPUT.
@@ -85,7 +96,14 @@ def _validate_writer_structure(result: dict[str, object]) -> list[dict[str, obje
             raise RuntimeError(f"INVALID OUTPUT: article_outline[{i}].bullets en az 1 madde olmali")
         normalized.append(dict(item))
 
-    article = (result.get("draft_content") or {}).get("article", "")
+    draft_content = result.get("draft_content")
+    if isinstance(draft_content, dict):
+        raw_article = draft_content.get("article", "")
+    else:
+        raw_article = ""
+    article = _normalize_article_escapes(raw_article if isinstance(raw_article, str) else "")
+    if isinstance(draft_content, dict):
+        draft_content["article"] = article
     if not isinstance(article, str) or not article.strip():
         raise RuntimeError("INVALID OUTPUT: draft_content.article bos")
 

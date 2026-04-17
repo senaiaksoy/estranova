@@ -148,6 +148,13 @@ Revizyon turu (`revision_iteration > 0`) ise `revision_feedback` maddelerini onc
 - `user_context` bos degilse, teaser’dan sonra bu metni kendi cumlenle kisaca yansit; metni oldugu gibi kopyalama.
 - `user_context` bos ise ekstra cumle yazma.
 
+### JSON format uyarisi (ZORUNLU)
+`draft_content.article` bir JSON string degeri olarak donulur. Bu
+string icinde yalnizca **gercek** newline kullan (JSON-encoded `\n`).
+Metin govdesine **literal** `\n` karakterleri YAZMA. Hicbir paragraf
+sonunda iki kez kirma (bir kez gercek newline, bir kez literal `\n`)
+yapma — yalnizca JSON encoder'in ekleyecegi tek bir newline yeter.
+
 ## Few-shot ornek (referans icin — bu konuyu yazma; SADECE stili kopyala)
 
 ### Ornek konu: "Sicak Basmalari ve Menopoz Gecisi"
