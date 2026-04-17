@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+from datetime import datetime
 import json
+from pathlib import Path
 import re
 from typing import Any
 
@@ -80,6 +82,15 @@ class ComplianceExpertAgent(PromptBackedAgent):
             )
         except Exception as exc:
             raise RuntimeError(f"ComplianceExpertAgent LLM call failed: {exc}") from exc
+
+        _dbg = Path(__file__).resolve().parents[1] / "output" / "_debug"
+        _dbg.mkdir(parents=True, exist_ok=True)
+        _slug = re.sub(r"[^a-z0-9]+", "-", str(state.get("topic", "")).strip().lower()).strip("-") or "topic"
+        _iter = int(state.get("current_iteration", 0))
+        _ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        (_dbg / f"compliance_raw_{_slug}_{_iter}_{_ts}.json").write_text(
+            json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
 
         risk_findings = result.get("risk_findings", [])
         violations: list[Violation] = []

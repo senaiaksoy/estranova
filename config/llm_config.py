@@ -7,7 +7,7 @@ ORCHESTRATOR: Final[str] = "gpt-4o"
 RESEARCHER: Final[str] = "gemini-1.5-flash"
 WRITER: Final[str] = "claude-sonnet-4-6"
 CHECKER: Final[str] = "claude-sonnet-4-6"
-COMPLIANCE: Final[str] = "gpt-4o"
+COMPLIANCE: Final[str] = "claude-sonnet-4-6"
 
 LLM_ROLE_MODELS: Final[dict[str, str]] = {
     "orchestrator": ORCHESTRATOR,
