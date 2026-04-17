@@ -14,5 +14,6 @@ __pycache__/
 *.pyc
 output/*.md
 output/*-report.json
+output/_debug/
 !output/.gitkeep
 rag/chroma_db/

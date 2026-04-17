@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+from datetime import datetime
 import json
+from pathlib import Path
 import re
 
 from config.pipeline_limits import WRITER_MAX_OUTPUT_TOKENS
@@ -9,6 +11,43 @@ from state import ClaimTrace, DraftContent, EstranovaState, append_history
 
 from .article_markdown import ARTICLE_OUTLINE_KEYS, split_h2_sections
 from .base import PromptBackedAgent
+
+
+def _slugify_topic(topic: str) -> str:
+    lowered = topic.strip().lower()
+    slug = re.sub(r"[^a-z0-9]+", "-", lowered)
+    slug = slug.strip("-")
+    return slug or "topic"
+
+
+def _dump_writer_debug_output(
+    *,
+    topic: str,
+    revision_iteration: int,
+    result: dict[str, object],
+) -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    debug_dir = repo_root / "output" / "_debug"
+    debug_dir.mkdir(parents=True, exist_ok=True)
+
+    topic_slug = _slugify_topic(topic)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    base_name = f"{topic_slug}_{revision_iteration}_{timestamp}"
+
+    raw_path = debug_dir / f"writer_raw_{base_name}.json"
+    raw_path.write_text(
+        json.dumps(result, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    article = ""
+    draft_content = result.get("draft_content")
+    if isinstance(draft_content, dict):
+        article_val = draft_content.get("article", "")
+        if isinstance(article_val, str):
+            article = article_val
+    article_path = debug_dir / f"writer_article_{base_name}.md"
+    article_path.write_text(article, encoding="utf-8")
 
 
 def _validate_writer_structure(result: dict[str, object]) -> list[dict[str, object]]:
@@ -134,7 +173,22 @@ class WriterAgent(PromptBackedAgent):
         except Exception as exc:
             raise RuntimeError(f"WriterAgent LLM call failed: {exc}") from exc
 
-        validated_outline = _validate_writer_structure(result)
+        _dump_writer_debug_output(
+            topic=topic,
+            revision_iteration=revision_iteration,
+            result=result,
+        )
+
+        try:
+            validated_outline = _validate_writer_structure(result)
+        except RuntimeError as exc:
+            if revision_iteration > 0:
+                state["revision_validation_failed"] = True
+                state["best_effort_publish"] = True
+                state["pipeline_halt_reason"] = "revision_validation_failed"
+                append_history(state, "writer", f"revision validation failed: {exc}")
+                return state
+            raise
         state["article_outline"] = validated_outline
 
         draft_content = result.get("draft_content", {})
