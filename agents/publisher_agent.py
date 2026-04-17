@@ -209,6 +209,10 @@ def _build_sources_markdown(sources: list[dict[str, Any]]) -> str:
     cap = min(8, max(5, n)) if n >= 5 else n
     picked = sources[:cap]
     for i, s in enumerate(picked, start=1):
+        # Researcher occasionally returns a nested list/string instead of a dict;
+        # skip non-dict entries rather than crashing the publisher.
+        if not isinstance(s, dict):
+            continue
         title = str(s.get("title") or "Kaynak").strip()
         publisher = str(s.get("publisher") or "").strip()
         year = s.get("year")
