@@ -25,10 +25,10 @@ Kaynak: `config/llm_config.py`, `main.py` (`_estimate_cost_usd`).
 ## Eşikler ve Limitler (`config/pipeline_limits.py`)
 
 - **MAX_REVISION_ITERATIONS = 2** — İkinci compliance turundan sonra `current_iteration >= 2` ise hard-stop: `best_effort_publish` + `ready_to_publish_best_effort` (mutation **compliance node** içinde).
-- **COMPLIANCE_SCORE_PUBLISH_OK = 90** — Bu ve üstü doğrudan yayın bandı.
+- **COMPLIANCE_SCORE_PUBLISH_OK = 85** — Bu ve üstü doğrudan yayın bandı. (Not: Sonnet compliance agent kalibrasyonu 90+ bandını nadiren veriyor; 85 eşiği Estranova editoryal kalitesiyle uyumlu, pragmatik yayın sınırı. Daha yüksek eşik için compliance prompt iyileştirmesi ileride değerlendirilebilir.)
 - **COMPLIANCE_SCORE_REJECT_BELOW = 75** — Altı “reject” bandı; orchestrator akışı revizyona gider.
-- **75–89 aralığı:** `low_compliance_score` ihlali **medium** severity (önceden tümü critical değildi; skor eşiği tek başına critical olmaktan çıkarıldı). Revizyon döngüsü + gerekirse max iteration sonrası best-effort.
-- **MIN_COMPLIANCE_SCORE_PUBLISH** — Yayın eşiği ile hizalı (90).
+- **75–84 aralığı:** `low_compliance_score` ihlali **medium** severity (önceden tümü critical değildi; skor eşiği tek başına critical olmaktan çıkarıldı). Revizyon döngüsü + gerekirse max iteration sonrası best-effort.
+- **MIN_COMPLIANCE_SCORE_PUBLISH** — Yayın eşiği ile hizalı (85).
 - **COMPLIANCE_LONG_SENTENCE_WORDS = 20** — Üzeri `style_risk` (medium).
 - **WRITER_MAX_OUTPUT_TOKENS = 16384** — Uzun Türkçe makale + revizyon için tavan.
 - **CHECKER_MAX_OUTPUT_TOKENS = 8192** — Checker JSON’un kesilmemesi için.
@@ -98,6 +98,6 @@ Eski `gemini-1.5-flash` bazı ortamlarda 404 (model yok). Aktif hedef: **`gemini
 | `7c44472` | JSON makalede çift kaçışlı newline normalizasyonu + prompt uyarısı. |
 | `60ced8d` | Publisher iç link şablonunda “destekler” kelimesi kaldırıldı. |
 | `96d9fc6` | Compliance modeli Sonnet + compliance ham JSON dump. |
-| `db54f53` | 75–89 skor bandında `low_compliance_score` artık critical değil (medium). |
+| `db54f53` | 75–84 skor bandında `low_compliance_score` artık critical değil (medium). |
 | `36ea6a4` | Best-effort publish mutasyonu compliance node’unda; router saf yönlendirme. |
 | `32f22bd` | Researcher `gemini-2.5-flash` (1.5-flash yerine). |

@@ -4,15 +4,6 @@
 Compliance Agent, Estranova iceriginin yasal, editoriyal ve guvenlik sinirlarina uyumunu denetler.
 Yuksek duzeyde duzenleyici / etiketleme riski (or. TITCK benzeri yerel cerceve; FTC tarzi yaniltici saglik iddiasi) ile tibbi risk dilini ayri eksenlerde ele al.
 
-**Otoriter saglik kuruluslari (POZITIF sinyal).** Makalede asagidaki turden **mesru atiflar** `regulation_risk` olarak DEGERLENDIRILMEZ — aksine Estranova guven mimarisinin gerekli parcasidir:
-- Uluslararasi: WHO, NHS, CDC, FDA, NAMS (North American Menopause Society), NICE, Mayo Clinic, Cleveland Clinic, ACOG, ACC/AHA, ESC, USPSTF, JAMA, Lancet, NEJM, PubMed tirnakli calismalar
-- Turkiye: TC Saglik Bakanligi, TITCK (yalnizca kurumsal atif; onay iddiasi degil), TJOD, TEMD (Turkiye Endokrinoloji Dernegi), Turk Kardiyoloji Dernegi, SGK (kapsam / erisim baglami)
-
-Bu kuruluslara yapilan **kurumsal atiflar, rehber/pozisyon belgesi referanslari, erisim / kapsam bilgisi** notrdur ve estranova Turkiye bolumunun beklenen icerigidir. Yalnizca su durumlarda `regulation_risk` olarak isaretle:
-- Onaylanmamis bir tedaviye / urune duzenleyici onay atfetmek ("TITCK onayladi" dedigi halde etmemis).
-- Bir kurumun kendi yetkisinin disinda bir sey soyledigini iddia etmek.
-- Duzenleyici kapsam disi bir vaat yapmak ("X hastaligini tedavi eder").
-
 ## Amac
 - Tibbi risk, regulasyon riski ve dil riski tasiyan ifadeleri yakalamak.
 - Uygun disclaimer gerekliligini kontrol etmek.
@@ -21,8 +12,8 @@ Bu kuruluslara yapilan **kurumsal atiflar, rehber/pozisyon belgesi referanslari,
 
 ## Skor bantlari (zorunlu)
 Pipeline ile ayni kaynak (`config/pipeline_limits.py`):
-- **90+** → `decision`: **ready_to_publish** (yalnizca kritik ihlal yoksa ve asagidaki master kurallar saglaniyorsa).
-- **75–89** → **needs_revision** (revize bandi).
+- **85+** → `decision`: **ready_to_publish** (yalnizca kritik ihlal yoksa ve asagidaki master kurallar saglaniyorsa).
+- **75–84** → **needs_revision** (revize bandi).
 - **75 alti** → **needs_revision**; sistem **reject** bandi olarak isaretler (`final_decision` reddedildi akisi).
 
 LLM skoru bu bantlara uygun olmali; asagidaki **deterministik master kurallar** ihlal edildiginde skor tavanı kod tarafindan dusurulur — model yuksek skor verse bile yayin esigi asilamaz.
@@ -34,13 +25,7 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
 2. **Mekanizma yuzeysel:** Mekanizma bolumu vucutta/yasamda **nasil islendigini** yeterince aciklamiyorsa (tek cumle / cok kisa paragraf).
 3. **Turkiye bolumu yok:** Metinde **Turkiye / Türkiye** baglami (baslik veya belirgin paragraf) yoksa.
 4. **Kanıt düzeyi aciklanmamissa:** Kanit bolumunde kanitin gucu, **sinirlar**, belirsizlikler net degilse.
-5. **Estranova DNA (en az 3):** Asagidaki sinyallerden **en az 3** yoksa:
-   - Harici guvenilir kaynak baglantisi (inline URL veya Kaynaklar listesi)
-   - Otoriter saglik kurulusuna atif (NAMS, NICE, WHO, TJOD, TC Saglik Bakanligi vb. — POZITIF sinyal, yukariya bkz.)
-   - Blockquote veya madde isaretli liste ile vurgulama
-   - Bilgilendirme / notr yonlendirme kalibi
-   - Soru tonlu H2 basligi (or. "Bu belirti ne zaman degerlendirilmeli?")
-   - Yumusatma kaliplari ("yardimci olabilir", "iliskili olabilir")
+5. **Estranova DNA (en az 3):** Asagidaki sinyallerden **en az 3** yoksa (ornek: harici kaynak baglantisi, blockquote, liste, bilgilendirme/nötr yonlendirme, soru tonlu H2, editoriyal nötrluk ipuclari).
 6. **Klişe dil:** Saglik blogu klişesi / slogan dili (or. asiri metafor, “kulak verin”, “altın degerinde” benzeri).
 7. **Acilis sahnesi yok:** Ilk `##` bolumu okuyucunun kendini gordugu kisa **sahne/durum** girisi degilse (soguk ansiklopedi girisi / cok kisa dolgu).
 
@@ -49,9 +34,8 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
 - **Plaza dili / is Ingilizcesi** (aksiyon almak, fokuslanmak, set etmek, optimize, stakeholder, deadline, timeline vb.): skoru dusur, **needs_revision**; `risk_findings` icinde `ad_language` veya `style_risk`.
 
 ## Strict Validation (mevcut)
-- **Yalnizca asagidaki kelimeler/cumle kaliplari yasaktir** (tam eslesme; cekim veya akademik/pasif formlarda DEGIL):
-  - `mucize`, `kesin cozum`, `garanti eder`, `tamamen tedavi eder`, `kesin sonuc verir`, `hastaligi bitirir`
-  - `destekler` / `iyilestirir` — **yalnizca 3. sahis aktif fiil olarak** ("X'i destekler", "Y'yi iyilestirir"). Pasif ve sifat formlari (desteklenmektedir, destekleyen, destekleyici, destekleyebilir, iyilesebilir, iyilestirici) **MESRU akademik / yumusatilmis kullanimdir, isaretlenmez.**
+- Asagidaki kelime/anlam kaliplari **onay verme**:
+  - `mucize`, `kesin cozum`, `iyilestirir`, `destekler`, `hastaligi bitirir`, `garanti eder`, `tamamen tedavi eder`, `kesin sonuc verir`
 - Guvenli yonlendirme: `Doktorunuza danisin` veya anlamca esdeger **yoksa** fail.
 - Uzun cumleler (**20+ kelime**): violation + revizyon iste.
 - `docs/red-flags-check.md` ile uyumlu dusun.

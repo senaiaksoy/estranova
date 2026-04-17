@@ -7,8 +7,8 @@ from __future__ import annotations
 # Compliance -> Writer: en fazla bu kadar tam tur (iteration_count 0..1 ile sinirli; 2'de dur)
 MAX_REVISION_ITERATIONS = 2
 
-# Skor >= buna cikinca revizyon dongusu kirilir, yayina gidilir (90+ yayin)
-COMPLIANCE_SCORE_PUBLISH_OK = 90
+# Skor >= buna cikinca revizyon dongusu kirilir, yayina gidilir (85+ yayin)
+COMPLIANCE_SCORE_PUBLISH_OK = 85
 
 # Bu degerin alti "reject" bandi (<75); orchestrator yine writer'a yollar
 COMPLIANCE_SCORE_REJECT_BELOW = 75

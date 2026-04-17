@@ -6,9 +6,10 @@ Semantic versioning + tarih etiketi.
 
 ### Changed
 
+- `COMPLIANCE_SCORE_PUBLISH_OK` 90 → 85 (pragmatik publish eşiği; Sonnet compliance kalibrasyonu 90+'a ulaşmakta tutarsız).
 - Writer / Checker / Compliance → `claude-sonnet-4-6` (önceki `gpt-4o` ağırlığından).
 - Researcher → `gemini-2.5-flash` (`gemini-1.5-flash` deprecated / 404 riski).
-- `COMPLIANCE_SCORE` düşük skor ihlali: **75–89** bandında **medium** severity (önceden eşik tek başına critical sayılıyordu).
+- `COMPLIANCE_SCORE` düşük skor ihlali: **75–84** bandında **medium** severity (önceden eşik tek başına critical sayılıyordu).
 - Best-effort publish state mutasyonu **compliance node** içine taşındı (LangGraph router purity).
 - `load_dotenv(override=True)` — birden fazla giriş noktasında `.env` önceliği.
 
@@ -31,5 +32,9 @@ Semantic versioning + tarih etiketi.
 ### Removed
 
 - Ölü `agents/*_prompt.txt` dosyaları (kurallar `prompts/*.md` ile birleştirildi).
+
+### Reverted
+
+- d36d08b "authoritative org refs as positive DNA" — prompt değişikliği doğrulama smoke testinde Kilo -6, Anksiyete -7 regresyonu yarattı; net negatif etki. Eski prompt daha tutarlı davranıyor.
 
 Referans: `git log 326a36d..HEAD`

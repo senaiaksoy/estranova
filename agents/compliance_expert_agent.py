@@ -237,7 +237,8 @@ class ComplianceExpertAgent(PromptBackedAgent):
                     rule_id="strict.score_threshold",
                     fix_suggestion=(
                         f"Yayin icin skor en az {MIN_COMPLIANCE_SCORE_PUBLISH} olmali "
-                        "(75-89 revize; 90+ yayin)."
+                        f"({COMPLIANCE_SCORE_REJECT_BELOW}-{MIN_COMPLIANCE_SCORE_PUBLISH - 1} revize bandi; "
+                        f"{MIN_COMPLIANCE_SCORE_PUBLISH}+ yayin)."
                     ),
                 )
             )
