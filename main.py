@@ -117,6 +117,8 @@ def _estimate_cost_usd(llm_calls: list[dict[str, Any]]) -> float:
     """
     usd_per_1m_output_tokens = {
         "gpt-4o": 10.0,
+        "claude-sonnet-4-6": 15.0,
+        "claude-opus-4-7": 75.0,
         "claude-3-5-sonnet-latest": 15.0,
         "gemini-1.5-pro": 7.0,
         "gemini-2.5-flash": 1.0,

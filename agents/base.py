@@ -8,6 +8,7 @@ from typing import Any, Optional
 from config.llm_manager import LLMManager
 from config.llm_config import LLM_ROLE_MODELS
 
+import json_repair
 from langchain_core.messages import HumanMessage, SystemMessage
 
 
@@ -121,6 +122,12 @@ class PromptBackedAgent:
                     return json.loads(repaired)
                 except json.JSONDecodeError:
                     pass
+            try:
+                fixed = json_repair.loads(text)
+                if isinstance(fixed, dict):
+                    return fixed
+            except Exception:
+                pass
             # Provide a helpful error so the caller can fix the prompt.
             raise ValueError(f"LLM output is not valid JSON. Raw output (truncated): {text[:500]}") from exc
 

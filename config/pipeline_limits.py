@@ -19,8 +19,11 @@ MIN_COMPLIANCE_SCORE_PUBLISH = COMPLIANCE_SCORE_PUBLISH_OK
 # Ayni dal (compliance -> writer) bu kadar tekrarlanirsa zorla dur
 CIRCUIT_BREAKER_COMPLIANCE_WRITER_REPEATS = 3
 
-# Writer tek LLM cagrisinda (JSON: makale + sosyal + bulten); SEO icin yeterli cikti tavanı
-WRITER_MAX_OUTPUT_TOKENS = 8192
+# Writer tek LLM cagrisinda (JSON: makale + sosyal + bulten); uzun TR metin + revizyon turunda daha yuksek tavan
+WRITER_MAX_OUTPUT_TOKENS = 16384
+
+# Fact-check / medical checker: tam JSON kesilmesin (varsayilan 1200 yetmez)
+CHECKER_MAX_OUTPUT_TOKENS = 8192
 
 # Compliance: bu kelime sayisindan uzun cumleler stil uyarisi (Writer ile hizali)
 COMPLIANCE_LONG_SENTENCE_WORDS = 20

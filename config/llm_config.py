@@ -5,8 +5,8 @@ from typing import Final
 
 ORCHESTRATOR: Final[str] = "gpt-4o"
 RESEARCHER: Final[str] = "gemini-1.5-flash"
-WRITER: Final[str] = "gpt-4o"
-CHECKER: Final[str] = "gpt-4o"
+WRITER: Final[str] = "claude-sonnet-4-6"
+CHECKER: Final[str] = "claude-sonnet-4-6"
 COMPLIANCE: Final[str] = "gpt-4o"
 
 LLM_ROLE_MODELS: Final[dict[str, str]] = {

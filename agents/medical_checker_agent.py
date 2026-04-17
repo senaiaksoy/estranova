@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 from typing import Any
 
+from config.pipeline_limits import CHECKER_MAX_OUTPUT_TOKENS
+
 from state import EstranovaState, append_history
 
 from .base import PromptBackedAgent
@@ -46,6 +48,7 @@ class MedicalCheckerAgent(PromptBackedAgent):
                 role="checker",
                 user_payload=json.dumps(user_payload, ensure_ascii=False),
                 state_for_logging=state,
+                max_tokens=CHECKER_MAX_OUTPUT_TOKENS,
             )
         except Exception as exc:
             raise RuntimeError(f"MedicalCheckerAgent LLM call failed: {exc}") from exc

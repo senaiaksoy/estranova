@@ -14,3 +14,4 @@ langchain-openai>=0.2.14
 langchain-anthropic>=0.3.0
 langchain-google-genai>=2.0.7
 streamlit>=1.44.0
+json-repair>=0.59.0
