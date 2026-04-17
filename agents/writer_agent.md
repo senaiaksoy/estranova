@@ -148,6 +148,40 @@ Revizyon turu (`revision_iteration > 0`) ise `revision_feedback` maddelerini onc
 - `user_context` bos degilse, teaser’dan sonra bu metni kendi cumlenle kisaca yansit; metni oldugu gibi kopyalama.
 - `user_context` bos ise ekstra cumle yazma.
 
+## Few-shot ornek (referans icin — bu konuyu yazma; SADECE stili kopyala)
+
+### Ornek konu: "Sicak Basmalari ve Menopoz Gecisi"
+
+**`acilis_sahnesi` — Sahne dogru acilmis hali:**
+
+> Saatin gece üçü olduğunu bilmek için telefonuna bakman gerekmiyor. Boynunda yayılan o tanıdık ısı, çarşafları üzerinden çekmene neden olan ani sıcaklık, sonrasında gelen hafif terleme. Sıcak basması, menopoz geçişinin en sık konuşulan ama en az anlaşılan deneyimlerinden biri. Bu metin, sıcak basmasının vücudunda neden ve nasıl olduğunu, ne zaman bir uzmanla konuşmanın anlamlı olduğunu ve hangi pratik adımların gece terlemesini hafifletmeye yardımcı olabileceğini sade bir dille açıklar.
+
+(Kac sey dogru: 1) Soguk ansiklopedi degil, sahne. 2) Ikinci tekil sahis dogal. 3) Gereksiz dramatizasyon yok. 4) Konunun cercevesini metin sonunda netlestiriyor.)
+
+---
+
+**`mekanizma` — Derinlik dogru hali (~110 kelime, jargon kontrollu):**
+
+Sicak basmasi rastgele degildir. Beyninin orta kismindaki **hipotalamus** adli bolge, vucut sicakligini cok dar bir aralikta tutmaya calisan bir termostat gibi calisir. Menopoz gecisinde **ostrojen** seviyeleri dalgalanir; bu dalgalanma hipotalamusun "rahat" kabul ettigi sicaklik araligini daraltir. Yani normalde fark etmedigin kucuk bir sicaklik artisi, vucudunca artik "fazla" olarak yorumlanir ve termostat acilir: damarlar genisler, kan akisi cilde yonelir, ter bezleri devreye girer. Bu yuzden sicak basmasi sirasinda yuzunde ve goguste o yayilan sicakligi ve ardindan terlemeyi hissedersin. Etki kisa surer (genellikle 1-5 dakika); sikligi ve siddeti kisiden kisiye degisir.
+
+(Kac sey dogru: 1) ~110 kelime — yeterli derinlik. 2) "Hipotalamus" gibi tek tibbi terim aciklanmis. 3) Mekanizma adim adim — termostat metaforuyla okunur. 4) "Yardimci olabilir" yerine olgu anlatimi; tedavi yonlendirmesi yok.)
+
+---
+
+**`kanit_seviyesi` — Sinir ve belirsizlik dogru hali (~85 kelime):**
+
+Sicak basmasinin altinda yatan hormonal mekanizma, jinekoloji ve endokrinoloji literaturunde **iyi tanimlanmis** bir konudur ([NAMS pozisyon belgesi](https://menopause.org), [NICE rehberi NG23](https://www.nice.org.uk/guidance/ng23)). Ancak hangi kadinin **ne kadar siddetle** yasayacagini onceden tahmin etmek zordur; genetik, vucut kompozisyonu ve yasam tarzinin rolu hala aktif arastirma konusudur. Yasam tarzi yaklasimlarinin (ornegin uyku ve serinleme stratejilerinin) bireysel etkisi degiskendir; bazi kadinlar belirgin fayda gorur, bazilari icin etki sinirlidir. Bu yuzden tek bir cozum reçetesi yoktur; yaklasimlar kisisel olarak degerlendirilir.
+
+(Kac sey dogru: 1) Iki harici otorite linki — `approved_sources` mantigina uygun. 2) "Iyi tanimlanmis" dedikten sonra "ama tahmin zor" diye sinirlari acikça soylüyor. 3) "Reçete yok" cumlesi karar cercevesine kopru atiyor.)
+
+---
+
+### Ornek metin disinda kac sey daha:
+
+- Tum metin boyunca **"yardimci olabilir"** / **"iliskili olabilir"** / **"degisebilir"** yumusatma kaliplari kullaniliyor; "destekler" veya "iyilestirir" hic gecmiyor (compliance hard reject).
+- **"Türkiye"** bolumune ornek vermedik cunku konuya ozgu olmali — ama Türkiye bolumune **mutlaka** yerel baglam (TC Saglik Bakanligi yonergeleri, yerel jinekoloji dernekleri, erisim notlari) yaz.
+- Acilis sahnesinden kapanisa kadar paragraflarin cogu **2-4 cumle**; hicbir cumle 20 kelimeyi gecmiyor.
+
 ## Cikti formati
 ```json
 {
