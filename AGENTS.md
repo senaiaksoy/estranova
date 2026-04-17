@@ -51,6 +51,24 @@ Allowed neutral CTA examples:
 
 ---
 
+## Pipeline Model Matrix (Operasyonel)
+
+Pipeline ajanları ve kullandıkları modeller:
+
+| Ajan | Model | Rol |
+|------|-------|-----|
+| orchestrator | gpt-4o | LangGraph routing |
+| researcher | gemini-2.5-flash | Kaynak derleme, iddia paketi |
+| writer | claude-sonnet-4-6 | Makale üretimi (master prompt + few-shot) |
+| checker | claude-sonnet-4-6 | Medical fact-check |
+| compliance | claude-sonnet-4-6 | CLAUDE.md kural denetimi |
+
+Detaylı konfigürasyon, eşikler ve debug rehberi için: **[docs/PIPELINE.md](docs/PIPELINE.md)**
+
+Model değişikliği önerirken öncelik: maliyet ≠ kalite. Writer / checker / compliance için Sonnet’ten `gpt-4o`’ya geri dönmeyi düşünmeden önce **docs/PIPELINE.md** içindeki **G1** (double-escape / newline) gotcha’sını oku.
+
+---
+
 ## Product / Design Direction
 
 The site should feel like:
