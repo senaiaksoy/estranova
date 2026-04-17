@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import json
 from datetime import datetime
 from pathlib import Path
@@ -86,6 +87,20 @@ def extract_article(result: dict[str, Any]) -> str:
     if not article:
         article = result.get("draft", {}).get("article", "")
     return article or "Makale olusturulamadi."
+
+
+def inject_article_into_state(state: dict[str, Any], body: str) -> dict[str, Any]:
+    """Pipeline state dict'ine duzenlenmis makale govdesini yazar (derin kopya)."""
+    s = copy.deepcopy(state)
+    draft = s.setdefault("draft", {})
+    if isinstance(draft, dict):
+        draft["article"] = body
+    pub = s.setdefault("publisher_output", {})
+    if isinstance(pub, dict):
+        content = pub.setdefault("content", {})
+        if isinstance(content, dict):
+            content["body_markdown"] = body
+    return s
 
 
 def load_output_reports() -> list[dict[str, Any]]:
@@ -402,16 +417,22 @@ def main() -> None:
                 st.error("Final state alinamadi.")
                 return
 
-            try:
-                save_operational_outputs(final_state, build_save_payload(final_state))  # type: ignore[arg-type]
-            except Exception as exc:
-                st.warning(f"output/ klasorune yazma uyari: {exc}")
+            st.session_state.pipeline_pending_state = copy.deepcopy(final_state)
+            st.session_state.article_editor = extract_article(final_state)
+            st.session_state.publish_flow_topic = str(final_state.get("topic") or topic or "").strip()
 
-            article = extract_article(final_state)
-            decision = final_state.get("compliance", {}).get("final_decision", "unknown")
-            halt = str(final_state.get("pipeline_halt_reason", "") or "")
-            st.subheader("Final Makale")
-            st.write(f"Final karar: `{decision}`")
+        if st.session_state.pop("draft_saved_flash", False):
+            st.success("Taslak state'e kaydedildi (henuz dosyaya yazilmadi).")
+        if st.session_state.pop("publish_success_flash", False):
+            st.success("Yayinlandi: `output/` klasorune yazildi.")
+
+        if st.session_state.get("pipeline_pending_state"):
+            pending = st.session_state.pipeline_pending_state
+            decision = pending.get("compliance", {}).get("final_decision", "unknown")
+            halt = str(pending.get("pipeline_halt_reason", "") or "")
+            st.subheader("Final makale — incele, duzenle, yayinla")
+            st.caption("Yayin (`output/`) yalnizca **Onayla ve Yayinla** ile yazilir.")
+            st.write(f"Final karar (pipeline): `{decision}`")
             if halt and halt not in (
                 "max_iteration_reached",
                 "max_iteration_hard_stop",
@@ -420,19 +441,56 @@ def main() -> None:
                 st.warning(
                     f"Akis sonlandirma: `{halt}` (icerik en iyi haliyle uretildi ise manuel kontrol onerilir.)"
                 )
-            st.markdown(article)
 
-            t = str(final_state.get("topic") or topic or "").strip()
-            filename = f"{output_file_basename(t, datetime.now().strftime('%Y-%m-%d'))}.md"
+            st.text_area(
+                "Makale metni",
+                height=480,
+                key="article_editor",
+                help="Metni burada duzenleyin; **Duzenle ve Kaydet** ile state guncellenir.",
+            )
+
+            b1, b2, b3 = st.columns(3)
+            if b1.button("✅ Onayla ve Yayınla", type="primary", key="btn_publish"):
+                body = str(st.session_state.get("article_editor", "") or "")
+                to_save = inject_article_into_state(st.session_state.pipeline_pending_state, body)
+                try:
+                    save_operational_outputs(to_save, build_save_payload(to_save))  # type: ignore[arg-type]
+                    st.session_state.pop("pipeline_pending_state", None)
+                    st.session_state.pop("publish_flow_topic", None)
+                    st.session_state.pop("article_editor", None)
+                    st.session_state.publish_success_flash = True
+                    st.rerun()
+                except Exception as exc:
+                    st.error(f"Yazma hatasi: {exc}")
+
+            if b2.button("✏️ Düzenle ve Kaydet", key="btn_save_draft"):
+                body = str(st.session_state.get("article_editor", "") or "")
+                st.session_state.pipeline_pending_state = inject_article_into_state(
+                    st.session_state.pipeline_pending_state, body
+                )
+                st.session_state.article_editor = body
+                st.session_state.draft_saved_flash = True
+                st.rerun()
+
+            if b3.button("❌ Reddet", key="btn_reject"):
+                st.session_state.pop("pipeline_pending_state", None)
+                st.session_state.pop("publish_flow_topic", None)
+                st.session_state.pop("article_editor", None)
+                st.warning("Icerik reddedildi; `output/` dosyasi olusturulmadi.")
+                st.rerun()
+
+            ttopic = str(st.session_state.get("publish_flow_topic") or "").strip()
+            draft_fn = f"{output_file_basename(ttopic, datetime.now().strftime('%Y-%m-%d'))}.md"
             st.download_button(
-                label="Makaleyi Indir (.md)",
-                data=article,
-                file_name=filename,
+                label="Taslagi indir (.md)",
+                data=str(st.session_state.get("article_editor", "") or ""),
+                file_name=draft_fn,
                 mime="text/markdown",
+                key="download_draft_md",
             )
 
             with st.expander("Ham cikti (JSON)"):
-                st.json(final_state)
+                st.json(st.session_state.pipeline_pending_state)
 
         st.divider()
         render_output_history()
