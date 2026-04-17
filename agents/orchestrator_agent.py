@@ -29,7 +29,6 @@ class OrchestratorAgent(PromptBackedAgent):
         return "publisher"
 
     def route_after_compliance(self, state: EstranovaState) -> str:
-        state["current_iteration"] = int(state.get("current_iteration", 0)) + 1
         if state["current_iteration"] >= 2:
             return self._route_to_publisher_best_effort(state, "max_iteration_hard_stop")
 
@@ -54,17 +53,6 @@ class OrchestratorAgent(PromptBackedAgent):
             needs_revision = True
 
         if needs_revision:
-            state["iteration_count"] = int(state.get("iteration_count", 0)) + 1
-            state["revision_iteration"] = int(state.get("revision_iteration", 0)) + 1
-            state["compliance_to_writer_routes"] = int(state.get("compliance_to_writer_routes", 0)) + 1
-            state["compliance_revision_route_count"] = int(
-                state.get("compliance_revision_route_count", 0)
-            ) + 1
-            append_history(
-                state,
-                "revision_loop",
-                f"revizyon (current_iteration={state['current_iteration']})",
-            )
             return "writer"
 
         comp["final_decision"] = "ready_to_publish"

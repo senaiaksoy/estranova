@@ -6,6 +6,7 @@ from typing import Any
 
 from config.pipeline_limits import (
     COMPLIANCE_LONG_SENTENCE_WORDS,
+    COMPLIANCE_SCORE_PUBLISH_OK,
     COMPLIANCE_SCORE_REJECT_BELOW,
     MIN_COMPLIANCE_SCORE_PUBLISH,
 )
@@ -267,6 +268,26 @@ class ComplianceExpertAgent(PromptBackedAgent):
         )
         state["revision_feedback"] = deduped_fixes
         state["disclaimer_needed"] = bool(result.get("disclaimer_needed", disclaimer_needed))
+        state["current_iteration"] = int(state.get("current_iteration", 0)) + 1
+
+        needs_revision = standard_decision["decision"] == "needs_revision" or final_decision in (
+            "revision_required",
+            "rejected",
+        )
+        if score < COMPLIANCE_SCORE_PUBLISH_OK:
+            needs_revision = True
+        if needs_revision:
+            state["iteration_count"] = int(state.get("iteration_count", 0)) + 1
+            state["revision_iteration"] = int(state.get("revision_iteration", 0)) + 1
+            state["compliance_to_writer_routes"] = int(state.get("compliance_to_writer_routes", 0)) + 1
+            state["compliance_revision_route_count"] = int(
+                state.get("compliance_revision_route_count", 0)
+            ) + 1
+            append_history(
+                state,
+                "revision_loop",
+                f"revizyon (current_iteration={state['current_iteration']})",
+            )
 
         append_history(state, "compliance", "compliance done")
         return state
