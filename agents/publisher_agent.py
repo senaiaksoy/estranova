@@ -31,7 +31,7 @@ _INTERNAL_LINK_CANDIDATES: tuple[dict[str, Any], ...] = (
     {
         "href": "/zihin-denge/uyku-bozuklugu-menopoz",
         "anchor_text": "Menopozda uyku ve gece uyanmalari",
-        "reason": "Uyku, sicak basmasi ve gece rahatsizliklari ile iliskiyi destekler.",
+        "reason": "Uyku, sicak basmasi ve gece rahatsizliklari arasindaki iliskiyi ele alir.",
         "keywords": ("uyku", "gece", "insomnia", "sicak", "terleme", "ruh"),
     },
     {
