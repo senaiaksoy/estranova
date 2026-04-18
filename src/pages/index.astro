@@ -4,6 +4,7 @@ import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import HomeHero from '../components/site/HomeHero.astro';
 import SymptomChipLink from '../components/site/SymptomChipLink.astro';
+import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 
 const journey = [
@@ -37,12 +38,12 @@ const journey = [
   },
 ];
 
-const zamansizFeatured = [
+const editorialPicks = [
   {
     tag: 'Vitaminler',
     title: 'D Vitamini ve Kemik Dengesi',
     body: '40 sonrası dönemde D vitamini takibi ve günlük yaşamla ilişkili temel noktalar.',
-    evidence: '●●●●○',
+    evidenceLabel: 'Güçlü',
     href: '/zamansiz-yasam/vitaminler',
     highlight: false,
   },
@@ -50,7 +51,7 @@ const zamansizFeatured = [
     tag: 'Deneysel Yaklaşımlar',
     title: 'Yeni Yaklaşımlar Üzerine Ne Biliyoruz?',
     body: 'Araştırma aşamasındaki yöntemlerin sınırları, beklenti yönetimi ve güvenli okuma notları.',
-    evidence: '●●○○○',
+    evidenceLabel: 'Gelişen',
     href: '/zamansiz-yasam/deneysel',
     highlight: true,
   },
@@ -58,9 +59,36 @@ const zamansizFeatured = [
     tag: 'Non-İnvaziv',
     title: 'Nefes ve Uyku Rutinleri',
     body: 'Uyku kalitesini destekleyebilecek düşük riskli alışkanlıkların bilimsel çerçevesi.',
-    evidence: '●●●○○',
+    evidenceLabel: 'Orta',
     href: '/zamansiz-yasam/non-invaziv',
     highlight: false,
+  },
+];
+
+const editorialRecent = [
+  {
+    dateLine: '14 NİSAN 2026 · HORMONAL GEÇİŞ',
+    title: 'Perimenopozda Döngü Takibi Nasıl Yapılır?',
+    excerpt: 'Belirti günlüğü, düzenli takip ve günlük yaşam notları.',
+    href: '/library',
+  },
+  {
+    dateLine: '11 NİSAN 2026 · BEDEN & YAKINLIK',
+    title: 'Yakınlıkta Konforu Etkileyen Değişimler',
+    excerpt: 'Beden sinyallerini tanımaya ve iletişimi güçlendirmeye odaklanan sade bir içerik özeti.',
+    href: '/library',
+  },
+  {
+    dateLine: '7 NİSAN 2026 · ZİHİN & DENGE',
+    title: 'Ruh Hali Dalgalanmalarını Anlamak',
+    excerpt: 'Uyku, stres ve günlük rutin ilişkisini sade bir çerçevede ele alan başlangıç rehberi.',
+    href: '/library',
+  },
+  {
+    dateLine: '2 NİSAN 2026 · YAŞAM TARZI',
+    title: '40 Sonrası Hareket Planı Oluşturmak',
+    excerpt: 'Uygulanabilir hareket önerileri ve sürdürülebilir planlama adımlarıyla pratik bir yol haritası.',
+    href: '/library',
   },
 ];
 
@@ -75,7 +103,6 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
   { label: 'Libido Azalması', icon: 'leaf' },
 ];
 
-const evidenceLevels = [5, 4, 3, 2, 1] as const;
 ---
 
 <SiteLayout
@@ -185,16 +212,16 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
     <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <header class="mb-10 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkan İçerik</p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Zamansız Yaşam Öne Çıkan İçerik</h2>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">EDİTÖRYAL SEÇKİ</p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne çıkanlar ve son yayınlar</h2>
           <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Günlük yaşam kalitesini destekleyen, bilimsel çerçevesi güçlü içerikleri bir arada bulabilirsiniz.
+            Editör seçkisi: zamansız yaşamdan üç öne çıkan başlık ve güncel yazıların tipografik dizilimi.
           </p>
         </header>
 
         <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-7">
           {
-            zamansizFeatured.map((z) => (
+            editorialPicks.map((z) => (
               <a
                 href={z.href}
                 class:list={[
@@ -210,12 +237,38 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
                 <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{z.tag}</p>
                 <h3 class="mb-3 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">{z.title}</h3>
                 <p class="mb-5 flex-1 leading-relaxed text-[#2D2D2D]/75">{z.body}</p>
-                <p class="text-sm font-medium text-[#2D2D2D]/80">
-                  Kanıt Düzeyi: <span class="text-[#6B2D3E]">{z.evidence}</span>
-                </p>
+                <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt düzeyi: {z.evidenceLabel}</p>
               </a>
             ))
           }
+        </div>
+
+        <div class="mt-14 md:mt-16">
+          <h3 class="mb-6 font-serif text-2xl text-[#2D2D2D]">Son yayınlar</h3>
+          <div>
+            {
+              editorialRecent.map((item) => (
+                <a
+                  href={item.href}
+                  class="group block border-t border-[#6B2D3E]/15 py-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+                >
+                  <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-[#6B2D3E]">{item.dateLine}</p>
+                  <h4 class="mb-2 font-serif text-2xl text-[#2D2D2D] transition group-hover:underline group-hover:decoration-[#C9A96E] group-hover:decoration-1 group-hover:underline-offset-[6px]">
+                    {item.title}
+                  </h4>
+                  <p class="text-base leading-relaxed text-[#2D2D2D]/70">{item.excerpt}</p>
+                </a>
+              ))
+            }
+          </div>
+          <div class="mt-6 flex justify-end">
+            <a
+              href="/library"
+              class="text-sm font-semibold text-[#6B2D3E] underline decoration-[#6B2D3E]/50 underline-offset-4 transition hover:decoration-[#6B2D3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+            >
+              Tüm yazılar →
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -245,132 +298,38 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
       </div>
     </section>
 
-    <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-[#F5EDE0] p-8 shadow-sm md:p-12">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Güven Bloğu</p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">İçeriklerimiz bilimsel editör denetiminden geçer</h2>
-          <p class="mb-8 max-w-3xl text-lg leading-relaxed text-[#2D2D2D]/75">
-            Her içerik, kaynak kalitesi ve anlatım netliği açısından editoryal incelemeden geçirilir. Kanıt düzeyi sistemi,
-            bilginin gücünü açık bir şekilde görmenizi sağlar.
-          </p>
-
-          <div class="mb-8 space-y-3">
-            {
-              evidenceLevels.map((n) => (
-                <div class="flex items-center gap-4 rounded-2xl bg-white/90 px-4 py-3 ring-1 ring-[#6B2D3E]/12">
-                  <span class="w-24 shrink-0 text-sm font-semibold text-[#2D2D2D]">Seviye {n}</span>
-                  <div class="h-2 flex-1 overflow-hidden rounded-full bg-[#FDF8F0]">
-                    <div class="h-full rounded-full bg-[#6B2D3E]" style={`width: ${n * 20}%`} />
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-
-          <div class="overflow-x-auto rounded-2xl ring-1 ring-[#6B2D3E]/15">
-            <table class="min-w-full border-collapse bg-white text-sm">
-              <thead>
-                <tr class="bg-[#FDF8F0]">
-                  <th class="px-4 py-3 text-left font-semibold text-[#2D2D2D]">Seviye</th>
-                  <th class="px-4 py-3 text-left font-semibold text-[#2D2D2D]">Gösterim</th>
-                  <th class="px-4 py-3 text-left font-semibold text-[#2D2D2D]">Kısa Açıklama</th>
-                </tr>
-              </thead>
-              <tbody class="text-[#2D2D2D]/80">
-                <tr class="border-t border-[#6B2D3E]/15">
-                  <td class="px-4 py-3">Seviye 5</td>
-                  <td class="px-4 py-3 text-[#6B2D3E]">●●●●●</td>
-                  <td class="px-4 py-3">Yüksek güvenilirlikte, tutarlı kanıt.</td>
-                </tr>
-                <tr class="border-t border-[#6B2D3E]/15">
-                  <td class="px-4 py-3">Seviye 4</td>
-                  <td class="px-4 py-3 text-[#6B2D3E]">●●●●○</td>
-                  <td class="px-4 py-3">Güçlü kanıt, bazı sınırlı belirsizlikler.</td>
-                </tr>
-                <tr class="border-t border-[#6B2D3E]/15">
-                  <td class="px-4 py-3">Seviye 3</td>
-                  <td class="px-4 py-3 text-[#6B2D3E]">●●●○○</td>
-                  <td class="px-4 py-3">Orta düzey kanıt, takip gereken alanlar var.</td>
-                </tr>
-                <tr class="border-t border-[#6B2D3E]/15">
-                  <td class="px-4 py-3">Seviye 2</td>
-                  <td class="px-4 py-3 text-[#6B2D3E]">●●○○○</td>
-                  <td class="px-4 py-3">Sınırlı kanıt, yorumda dikkat gerekir.</td>
-                </tr>
-                <tr class="border-t border-[#6B2D3E]/15">
-                  <td class="px-4 py-3">Seviye 1</td>
-                  <td class="px-4 py-3 text-[#6B2D3E]">●○○○○</td>
-                  <td class="px-4 py-3">Erken düzey veri, ön bilgi niteliğinde.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+    <section class="border-t border-b border-[#6B2D3E]/12 bg-white px-6 py-10 md:py-12">
+      <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
+        <p class="font-sans text-sm text-[#2D2D2D]/75">
+          İçeriklerimiz editöryal ve tıbbi incelemeden geçer.{' '}
+          <a
+            href="/editoryal-politika/nasil-arastiriyoruz"
+            class="text-[#2D2D2D] underline decoration-[#C9A96E]/60 underline-offset-4 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+            >Kanıt seviyeleri nasıl belirlenir? →</a>
+        </p>
+        <nav
+          aria-label="Güven ve politikalar"
+          class="flex flex-col items-center gap-2 font-sans sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-1"
+        >
+          <a
+            href="/editoryal-politika"
+            class="text-xs uppercase tracking-[0.24em] text-[#2D2D2D]/65 transition hover:text-[#6B2D3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+            >Editöryal Politika</a>
+          <span class="hidden text-[#C9A96E] sm:inline" aria-hidden="true">·</span>
+          <a
+            href="/tibbi-sorumluluk"
+            class="text-xs uppercase tracking-[0.24em] text-[#2D2D2D]/65 transition hover:text-[#6B2D3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+            >Tıbbi Sorumluluk Reddi</a>
+          <span class="hidden text-[#C9A96E] sm:inline" aria-hidden="true">·</span>
+          <a
+            href="/editoryal-politika/nasil-arastiriyoruz"
+            class="text-xs uppercase tracking-[0.24em] text-[#2D2D2D]/65 transition hover:text-[#6B2D3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+            >Nasıl Araştırıyoruz</a>
+        </nav>
       </div>
     </section>
 
-    <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <header class="mb-10 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Son Yayınlar</p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Son Yayınlar</h2>
-          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Farklı başlıklardaki güncel içerikleri tek bakışta inceleyebilirsiniz.
-          </p>
-        </header>
-
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <a
-            href="/library"
-            class="group block rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
-          >
-            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Hormonal Geçiş</p>
-            <h3 class="mb-2 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">
-              Perimenopozda Döngü Takibi Nasıl Yapılır?
-            </h3>
-            <p class="mb-3 text-sm text-[#2D2D2D]/60">14 Nisan 2026</p>
-            <p class="leading-relaxed text-[#2D2D2D]/75">Belirti günlüğü, düzenli takip ve günlük yaşam notlarıyla süreç yönetimi için temel adımlar.</p>
-          </a>
-
-          <a
-            href="/library"
-            class="group block rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
-          >
-            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Beden & Yakınlık</p>
-            <h3 class="mb-2 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">
-              Yakınlıkta Konforu Etkileyen Değişimler
-            </h3>
-            <p class="mb-3 text-sm text-[#2D2D2D]/60">11 Nisan 2026</p>
-            <p class="leading-relaxed text-[#2D2D2D]/75">Beden sinyallerini tanımaya ve iletişimi güçlendirmeye odaklanan sade bir içerik özeti.</p>
-          </a>
-
-          <a
-            href="/library"
-            class="group block rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
-          >
-            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Zihin & Denge</p>
-            <h3 class="mb-2 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">
-              Ruh Hali Dalgalanmalarını Anlamak
-            </h3>
-            <p class="mb-3 text-sm text-[#2D2D2D]/60">7 Nisan 2026</p>
-            <p class="leading-relaxed text-[#2D2D2D]/75">Uyku, stres ve günlük rutin ilişkisini sade bir çerçevede ele alan başlangıç rehberi.</p>
-          </a>
-
-          <a
-            href="/library"
-            class="group block rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
-          >
-            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yaşam Tarzı</p>
-            <h3 class="mb-2 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">
-              40 Sonrası Hareket Planı Oluşturmak
-            </h3>
-            <p class="mb-3 text-sm text-[#2D2D2D]/60">2 Nisan 2026</p>
-            <p class="leading-relaxed text-[#2D2D2D]/75">Uygulanabilir hareket önerileri ve sürdürülebilir planlama adımlarıyla pratik bir yol haritası.</p>
-          </a>
-        </div>
-      </div>
-    </section>
+    <EditorialDigestStrip />
 
     <section class="border-t border-[#6B2D3E]/10 bg-[#F5EDE0] px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
@@ -392,7 +351,7 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
               href="/hormonal-gecis/40-sonrasi/tarama-testleri"
               class="inline-flex items-center rounded-xl bg-[#6B2D3E] px-7 py-3.5 text-sm font-semibold text-white transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[#6B2D3E]/35"
             >
-              Tarama ve testler
+              Tarama rehberini oku
             </a>
           </div>
         </div>
