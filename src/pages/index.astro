@@ -71,24 +71,32 @@ const editorialRecent = [
     title: 'Perimenopozda Döngü Takibi Nasıl Yapılır?',
     excerpt: 'Belirti günlüğü, düzenli takip ve günlük yaşam notları.',
     href: '/library',
+    thumbnailSrc: submenuHeroByRoute['/hormonal-gecis/perimenopoz'].src,
+    thumbnailAlt: 'Perimenopozda Döngü Takibi Nasıl Yapılır?',
   },
   {
     dateLine: '11 NİSAN 2026 · BEDEN & YAKINLIK',
     title: 'Yakınlıkta Konforu Etkileyen Değişimler',
     excerpt: 'Beden sinyallerini tanımaya ve iletişimi güçlendirmeye odaklanan sade bir içerik özeti.',
     href: '/library',
+    thumbnailSrc: submenuHeroByRoute['/beden-yakinlik'].src,
+    thumbnailAlt: 'Yakınlıkta Konforu Etkileyen Değişimler',
   },
   {
     dateLine: '7 NİSAN 2026 · ZİHİN & DENGE',
     title: 'Ruh Hali Dalgalanmalarını Anlamak',
     excerpt: 'Uyku, stres ve günlük rutin ilişkisini sade bir çerçevede ele alan başlangıç rehberi.',
     href: '/library',
+    thumbnailSrc: submenuHeroByRoute['/zihin-denge'].src,
+    thumbnailAlt: 'Ruh Hali Dalgalanmalarını Anlamak',
   },
   {
     dateLine: '2 NİSAN 2026 · YAŞAM TARZI',
     title: '40 Sonrası Hareket Planı Oluşturmak',
     excerpt: 'Uygulanabilir hareket önerileri ve sürdürülebilir planlama adımlarıyla pratik bir yol haritası.',
     href: '/library',
+    thumbnailSrc: submenuHeroByRoute['/hormonal-gecis/40-sonrasi'].src,
+    thumbnailAlt: '40 Sonrası Hareket Planı Oluşturmak',
   },
 ];
 
@@ -117,7 +125,11 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
     <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <header class="mb-10 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Yolculuk Haritası</p>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">01</span>
+            <span class="mx-2 text-[#C9A96E]">—</span>
+            Yolculuk Haritası
+          </p>
           <h2 class="mb-4 font-serif text-4xl leading-tight text-[#2D2D2D] md:text-5xl">Hormonal Geçiş Yolculuk Haritası</h2>
           <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
             Her dönem farklı sorular getirir. İçerikleri, yaşam evresine göre adım adım takip edebilirsiniz.
@@ -165,7 +177,11 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
         <div
           class="overflow-hidden rounded-[36px] border border-[#6B2D3E]/12 bg-white p-8 shadow-[0_20px_50px_-24px_rgba(44,24,28,0.35)] ring-1 ring-black/5 md:p-12"
         >
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editoryal Not</p>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">02</span>
+            <span class="mx-2 text-[#C9A96E]">—</span>
+            Editoryal Not
+          </p>
           <h2 class="mb-2 font-serif text-4xl md:text-5xl">Sıcacık Köşe</h2>
           <p class="mb-8 text-sm font-medium text-[#2D2D2D]/65">
             Her ay site editörümüz <span class="text-[#2D2D2D]">Berna Aksoy</span> burada yazıyor.
@@ -212,7 +228,11 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
     <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <header class="mb-10 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">EDİTÖRYAL SEÇKİ</p>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">03</span>
+            <span class="mx-2 text-[#C9A96E]">—</span>
+            EDİTÖRYAL SEÇKİ
+          </p>
           <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne çıkanlar ve son yayınlar</h2>
           <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
             Editör seçkisi: zamansız yaşamdan üç öne çıkan başlık ve güncel yazıların tipografik dizilimi.
@@ -250,13 +270,24 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
               editorialRecent.map((item) => (
                 <a
                   href={item.href}
-                  class="group block border-t border-[#6B2D3E]/15 py-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+                  class="group flex items-start gap-4 border-t border-[#6B2D3E]/15 py-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2 md:gap-6"
                 >
-                  <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-[#6B2D3E]">{item.dateLine}</p>
-                  <h4 class="mb-2 font-serif text-2xl text-[#2D2D2D] transition group-hover:underline group-hover:decoration-[#C9A96E] group-hover:decoration-1 group-hover:underline-offset-[6px]">
-                    {item.title}
-                  </h4>
-                  <p class="text-base leading-relaxed text-[#2D2D2D]/70">{item.excerpt}</p>
+                  <img
+                    src={item.thumbnailSrc}
+                    alt={item.thumbnailAlt}
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-12 w-12 shrink-0 rounded-lg object-cover ring-1 ring-[#6B2D3E]/10 md:h-16 md:w-16"
+                  />
+                  <div class="min-w-0 flex-1">
+                    <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-[#6B2D3E]">{item.dateLine}</p>
+                    <h4 class="mb-2 font-serif text-2xl text-[#2D2D2D] transition group-hover:underline group-hover:decoration-[#C9A96E] group-hover:decoration-1 group-hover:underline-offset-[6px]">
+                      {item.title}
+                    </h4>
+                    <p class="text-base leading-relaxed text-[#2D2D2D]/70">{item.excerpt}</p>
+                  </div>
                 </a>
               ))
             }
@@ -276,7 +307,11 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
     <section class="border-t border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <header class="mb-8 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Belirti Bazlı Navigasyon</p>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">04</span>
+            <span class="mx-2 text-[#C9A96E]">—</span>
+            Belirti Bazlı Navigasyon
+          </p>
           <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Ne Hissediyorsunuz?</h2>
           <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
             Belirti başlıklarından başlayarak konuya daha hızlı ulaşabilirsiniz.
@@ -334,7 +369,11 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
     <section class="border-t border-[#6B2D3E]/10 bg-[#F5EDE0] px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-white p-8 shadow-sm md:p-12">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Koruyucu Sağlık</p>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">06</span>
+            <span class="mx-2 text-[#C9A96E]">—</span>
+            Koruyucu Sağlık
+          </p>
           <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">40 Yaşından Sonra Koruyucu Sağlık</h2>
           <p class="mb-8 max-w-3xl text-lg leading-relaxed text-[#2D2D2D]/75">
             Düzenli tarama testleri, yaşam alışkanlıkları ve yıllık takip planı; uzun vadeli sağlık için temel adımlardır.
