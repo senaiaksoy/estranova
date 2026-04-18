@@ -10,8 +10,8 @@ export interface SubmenuHeroImage {
 
 /** Ana sayfa kahraman görseli (editoryal, sakin ton). */
 export const homePageHero: SubmenuHeroImage = {
-  src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1800&h=1000',
-  alt: 'Sıcak içecek ve sakin iç mekân; öz bakım ve dengeli yaşam teması',
+  src: '/images/hero/home-hero.webp',
+  alt: 'Pencere ışığında sakin bir sabah: elinde kitapla dalgın bakışlı orta yaş kadın; editöryal iç mekân',
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {

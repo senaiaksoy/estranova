@@ -1,5 +1,8 @@
 /about /hakkimizda 301
 /contact /iletisim 301
 /editorial-policy /editoryal-politika 301
-/medical-disclaimer /tibbi-sorumluluk-reddi 301
-/privacy-policy /gizlilik-politikasi 301
+/medical-disclaimer /tibbi-sorumluluk 301
+/privacy-policy /kvkk 301
+/tibbi-sorumluluk-reddi /tibbi-sorumluluk 301
+/gizlilik-politikasi /kvkk 301
+/methodology /editoryal-politika/nasil-arastiriyoruz 301

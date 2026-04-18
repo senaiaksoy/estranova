@@ -76,7 +76,7 @@ Anasayfa · Hormonal Geçiş · Zamansız Yaşam · Beden & Yakınlık · Zihin 
 | Alt yol | Not |
 |---------|-----|
 | Editörün köşesi | Aylık gündem (ör. Sıcacık Köşe) |
-| Metodoloji | Mevcut `/methodology` ile uyumlu şablon |
+| Metodoloji | Mevcut `/editoryal-politika/nasil-arastiriyoruz` ile uyumlu şablon |
 | İletişim, KVKK, politikalar | Mevcut sayfalar; içeriklerden çapraz link |
 
 ---
