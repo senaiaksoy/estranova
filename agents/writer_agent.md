@@ -67,7 +67,15 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
 ## Uzunluk ve SEO (makale = `draft_content.article`)
 - **Hedef:** Ana makale yaklasik **1200-2000 kelime** (konu siki ise en az **900-1100 kelime**); ince/ kisa metin uretme.
 - **Yayin dili (HARD):** Site **tek dilli Turkcedir**. Makale, sosyal ve bulten metinleri **yalnizca Turkce**; Ingilizce baslik, Ingilizce paragraf veya Ingilizce UI cumlesi yazma (`CLAUDE.md` Dil politikasi).
-- **Estranova SEO — Ust ozet (Teaser / Kisa ozet):** `#` ana basliktan hemen sonra, govdeye gecmeden once **2-3 cumlelik** kisa ozet yer almali: merak uyandirir, konuyla ilgili **anahtar kelimeleri dogal** bicimde icerir. Markdown olarak `> **Kisa ozet:** ...` blockquote icinde veya hemen altinda iki paragraf olarak verebilirsin (blockquote tercih edilir).
+- **Estranova SEO — Ust ozet (Teaser / Kisa ozet):** `#` ana basliktan hemen sonra, govdeye gecmeden once **2-3 cumlelik** kisa ozet yer almali. Format: `> **Kisa ozet:** ...` blockquote.
+
+  **YASAK (meta-cumle):** "Bu metin X'i aciklar", "Bu yazi Y'yi ele alir", "Su konuyu netlestirmeyi amaclar" gibi metnin kendine atif yapan giris yasak. Bu LLM jenerigidir, okuru tutmaz.
+
+  **ZORUNLU:** Kisa ozet **dogrudan okuyucuyu icine ceken** 2-3 cumledir. Bir merak sorusu, bir sahne devami, bir tanidik durum hatirlatmasi olabilir. **Anahtar kelime SEO icin organik gecmeli** ama "okumak isterim" hissi vermeli.
+
+  Ornekler (stil referansi):
+  - YANLIS: "Sicak basmasi menopoz geciginin sik belirtilerindendir. Bu metin, sicak basmasinin nasil olustugunu sade bir dille acikar."
+  - DOGRU: "Saatin gece ucu olmus. Boyunda yayilan o tanidik isi. Vucut bir sey soyluyor — peki tam olarak ne? Sicak basmasinin arkasindaki gercek mekanizma ve ne zaman uzmanla konusmanin anlamli oldugu."
 - **Estranova SEO — Dis kaynak (linking):** Makale govdesinde **en az 2, tercihen 3–4, en fazla 5** adet harici guvenilir kaynak baglantisi ver: markdown `[aciklama](url)` formatinda. URL’leri **mumkunse yalnizca `approved_sources` icindeki `url` alanindan** al (or. PubMed, Mayo Clinic, WHO, NHS, CDC). Kaynakta URL yoksa yeni URL uydurma; sozlu atif yapma. **Inline linkler govde ici bilgi kaynaklarindir**; metnin sonuna ayrica bir "## Kaynaklar" listesi **yazma** — bu liste Publisher tarafindan otomatik eklenir.
 - **Estranova SEO — Baslik hiyerarsisi:** Tek satir `#` konu basligi. Govde icinde **yalnizca `##` (H2) ve `###` (H3)** kullan; `####` ve daha derin baslik **yasak**. H2/H3 basliklari **soru-cevap** tonunda veya **okuyucuya net adim / eylem** hissi veren basliklar olsun (or. "Bu belirti ne zaman degerlendirilmeli?", "Guvenli bilgi icin nelere bakilir?").
 - **Estranova SEO — Markdown vurgulama:** Onemli uyari, kisa ozet veya kritik noktalari mutlaka **blockquote (`>`)** ve/veya **madde isaretli liste (`-`)** ile vurgula; duz paragraf icinde gommeyi azalt.
@@ -157,21 +165,43 @@ yapma — yalnizca JSON encoder'in ekleyecegi tek bir newline yeter.
 
 ## Few-shot ornek (referans icin — bu konuyu yazma; SADECE stili kopyala)
 
+### Ses surekliligi (ZORUNLU — tum 8 bolum)
+
+`acilis_sahnesi` bolumunde kurulan **sen-tonlu, samimi, sahneli ses TUM 8 BOLUMDE KORUNMALI**. Yaygin LLM hatasi: acilis sicak yazilir, sonraki bolumler "kadinlarin yuzde 70'inde gorulur" tarzi anonim klinik anlatima kayar. **Bu yasaktir.**
+
+Her bolum acilisla **DEVAM EDEN BIR KONUSMA** gibi olmali:
+- "Sen" baglacini koru: "vucudun yapiyor", "fark etmedin", "hissettigin"
+- Akademik kalibi yumusatilmis konusma haline cevir:
+  - YANLIS: "Vucut sicakligi termostatik mekanizmayla duzenlenir."
+  - DOGRU: "Vucudun, sicakligini cok dar bir aralikta tutmaya calisir — bir termostat gibi."
+- Klinik istatistik vermek gerekiyorsa, **once sahne** sonra rakam:
+  - YANLIS: "Kadinlarin yuzde 70-80'inde gorulur."
+  - DOGRU: "Yalniz degilsin — bu donemden gecen kadinlarin buyuk cogunlugu (yaklasik yuzde 70-80) bir noktada bunu yasiyor."
+- Mekanizma anlatirken **sen-bagli** kal:
+  - YANLIS: "Damarlar genisler; kan akisi cilde yonelir."
+  - DOGRU: "Damarlarin genisliyor, kan cildine yoneliyor — yuzunde ve gogsunde hissettigin o ani sicaklik tam da bu."
+
+Test: Makaleyi yazdiktan sonra **her ## bolumunde en az bir** `sen` / `sana` / `senin` / `senle` / `seni` / `vucudun` / `hissettigin` / `fark ettigin` benzeri 2. tekil sahis bagi olmali. Yoksa o bolum **tekrar yazilmali**.
+
 ### Ornek konu: "Sicak Basmalari ve Menopoz Gecisi"
 
 **`acilis_sahnesi` — Sahne dogru acilmis hali:**
 
-> Saatin gece üçü olduğunu bilmek için telefonuna bakman gerekmiyor. Boynunda yayılan o tanıdık ısı, çarşafları üzerinden çekmene neden olan ani sıcaklık, sonrasında gelen hafif terleme. Sıcak basması, menopoz geçişinin en sık konuşulan ama en az anlaşılan deneyimlerinden biri. Bu metin, sıcak basmasının vücudunda neden ve nasıl olduğunu, ne zaman bir uzmanla konuşmanın anlamlı olduğunu ve hangi pratik adımların gece terlemesini hafifletmeye yardımcı olabileceğini sade bir dille açıklar.
+> Saatin gece üçü olduğunu bilmek için telefonuna bakman gerekmiyor. Boynunda yayılan o tanıdık ısı, çarşafları üzerinden çekmene neden olan ani sıcaklık, sonrasında gelen hafif terleme. Sıcak basması, menopoz geçişinin en sık konuşulan ama en az anlaşılan deneyimlerinden biri. Peki vücudunda tam olarak ne oluyor — ve ne zaman bir uzmanla konuşmak anlamlı?
 
-(Kac sey dogru: 1) Soguk ansiklopedi degil, sahne. 2) Ikinci tekil sahis dogal. 3) Gereksiz dramatizasyon yok. 4) Konunun cercevesini metin sonunda netlestiriyor.)
+(Kac sey dogru: 1) Soguk ansiklopedi degil, sahne. 2) Ikinci tekil sahis dogal. 3) Gereksiz dramatizasyon yok. 4) "Bu metin aciklar" meta cumlesi yok; merak sorusuyla sonraki bolumlere kopru.)
 
 ---
 
-**`mekanizma` — Derinlik dogru hali (~110 kelime, jargon kontrollu):**
+**`mekanizma` — Sen-tonunda derinlik (~115 kelime, sahne devami):**
 
-Sicak basmasi rastgele degildir. Beyninin orta kismindaki **hipotalamus** adli bolge, vucut sicakligini cok dar bir aralikta tutmaya calisan bir termostat gibi calisir. Menopoz gecisinde **ostrojen** seviyeleri dalgalanir; bu dalgalanma hipotalamusun "rahat" kabul ettigi sicaklik araligini daraltir. Yani normalde fark etmedigin kucuk bir sicaklik artisi, vucudunca artik "fazla" olarak yorumlanir ve termostat acilir: damarlar genisler, kan akisi cilde yonelir, ter bezleri devreye girer. Bu yuzden sicak basmasi sirasinda yuzunde ve goguste o yayilan sicakligi ve ardindan terlemeyi hissedersin. Etki kisa surer (genellikle 1-5 dakika); sikligi ve siddeti kisiden kisiye degisir.
+Sicak basmasi rastgele degil. Beynin orta bolumundeki **hipotalamus**, vucut sicakligini cok dar bir aralikta tutmaya calisan bir termostat gibi. Sen normalde bunu fark etmezsin; termostat sessizce calisir.
 
-(Kac sey dogru: 1) ~110 kelime — yeterli derinlik. 2) "Hipotalamus" gibi tek tibbi terim aciklanmis. 3) Mekanizma adim adim — termostat metaforuyla okunur. 4) "Yardimci olabilir" yerine olgu anlatimi; tedavi yonlendirmesi yok.)
+Menopoz gecisinde **ostrojen** seviyelerin dalgalanir. Bu dalgalanma hipotalamusun "rahat" kabul ettigi sicaklik araligini daraltir. Yani normalde gormezden geldigin kucuk bir isi artisi, vucudun icin artik "fazla" oluyor. Iste tam o anda termostat acil mudahale moduna gecer: damarlarin genisler, kan cildine yonelir, ter bezlerin devreye girer.
+
+Yuzunde ve gogsunde hissettigin o ani sicaklik, vucudunun kendini sogutmaya calismasindan baska bir sey degil. Genellikle 1 ila 5 dakika surer; sonra gecer.
+
+(Kac sey dogru: 1) "Sen normalde bunu fark etmezsin" — sahne devami. 2) "Damarlarin genisler, hissettigin o ani sicaklik" — sen-bagli somut. 3) Termostat metaforu korunmus. 4) Sayisal bilgi var ama anlatimin icine dokulmus, kuru istatistik degil.)
 
 ---
 
