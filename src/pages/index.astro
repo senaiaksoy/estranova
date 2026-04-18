@@ -7,6 +7,8 @@ import SymptomChipLink from '../components/site/SymptomChipLink.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 
+const medicalReviewer = 'Doç. Dr. Senai Aksoy';
+
 const journey = [
   {
     step: '01',
@@ -46,6 +48,7 @@ const editorialPicks = [
     evidenceLabel: 'Güçlü',
     href: '/zamansiz-yasam/vitaminler',
     highlight: false,
+    author: 'Berna Aksoy',
   },
   {
     tag: 'Deneysel Yaklaşımlar',
@@ -54,6 +57,7 @@ const editorialPicks = [
     evidenceLabel: 'Gelişen',
     href: '/zamansiz-yasam/deneysel',
     highlight: true,
+    author: 'Berna Aksoy',
   },
   {
     tag: 'Non-İnvaziv',
@@ -62,6 +66,7 @@ const editorialPicks = [
     evidenceLabel: 'Orta',
     href: '/zamansiz-yasam/non-invaziv',
     highlight: false,
+    author: 'Berna Aksoy',
   },
 ];
 
@@ -73,6 +78,7 @@ const editorialRecent = [
     href: '/library',
     thumbnailSrc: submenuHeroByRoute['/hormonal-gecis/perimenopoz'].src,
     thumbnailAlt: 'Perimenopozda Döngü Takibi Nasıl Yapılır?',
+    author: 'Berna Aksoy',
   },
   {
     dateLine: '11 NİSAN 2026 · BEDEN & YAKINLIK',
@@ -81,6 +87,7 @@ const editorialRecent = [
     href: '/library',
     thumbnailSrc: submenuHeroByRoute['/beden-yakinlik'].src,
     thumbnailAlt: 'Yakınlıkta Konforu Etkileyen Değişimler',
+    author: 'Berna Aksoy',
   },
   {
     dateLine: '7 NİSAN 2026 · ZİHİN & DENGE',
@@ -89,6 +96,7 @@ const editorialRecent = [
     href: '/library',
     thumbnailSrc: submenuHeroByRoute['/zihin-denge'].src,
     thumbnailAlt: 'Ruh Hali Dalgalanmalarını Anlamak',
+    author: 'Berna Aksoy',
   },
   {
     dateLine: '2 NİSAN 2026 · YAŞAM TARZI',
@@ -97,6 +105,7 @@ const editorialRecent = [
     href: '/library',
     thumbnailSrc: submenuHeroByRoute['/hormonal-gecis/40-sonrasi'].src,
     thumbnailAlt: '40 Sonrası Hareket Planı Oluşturmak',
+    author: 'Alara Baykent',
   },
 ];
 
@@ -200,18 +209,23 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
               />
             </div>
             <div class="min-w-0 flex-1">
-              <h3 class="mb-4 font-serif text-2xl text-[#6B2D3E] md:text-3xl">Bu Ay Kadın Dünyasında Ne Konuşuluyor?</h3>
+              <h3 class="mb-4 font-serif text-2xl text-[#6B2D3E] md:text-3xl">Bu Ay Ne Konuşuyoruz?</h3>
               <p class="mb-3 text-lg leading-relaxed text-[#2D2D2D]/75">
-                Nisan’da gündemde yine uyku, kemik sağlığı ve ruh hali; ayrıca menopoz ve perimenopoz çevresindeki yoğun
-                pazarlama ve ürün çeşitliliği üzerine eleştirel okuma ihtiyacı öne çıkıyor. Hormon tedavisine ilişkin mesleki
-                tartışmalar da bağlama göre yeniden okunuyor.
+                Nisan'da masalarımızda iki başlık var: uyku ve kemik. İkisi de kendi başına yeterince sessiz konular — ama bir
+                araya gelince, perimenopozun nasıl bir sabırla okunması gerektiğini hatırlatıyor. Bu ay daha çok dinlemek, daha az
+                karar almak üzerine yazıyorum.
               </p>
               <p class="mb-6 text-lg leading-relaxed text-[#2D2D2D]/75">
-                Bu ayın seçiminde, karmaşık başlıkları sade bir dilde açıklayan ve karar sürecini netleştiren içeriklere öncelik verdik.
-                Bilgiyi anlaşılır tutmak, editoryal yaklaşımımızın temel parçasıdır.
+                Bu dönemde yoğun bir pazarlama dalgası var — yeni yaklaşımlar, yeni isimler, yeni tartışmalar. Okurken karar değil,
+                bağlam arıyorum. Bu ayın seçkisini de bu gözle hazırladım: karmaşık olanı sadeleştirecek, aceleye düşmeyecek içerikler.
               </p>
-              <p class="mb-6 text-lg leading-relaxed text-[#2D2D2D]/75">
-                Editör: <span class="font-semibold text-[#2D2D2D]">Berna Aksoy</span>
+              <p class="mb-4 font-serif text-base italic text-[#2D2D2D]/70">— Berna Aksoy</p>
+              <p class="mb-6 text-xs uppercase tracking-[0.2em] text-[#2D2D2D]/55">
+                <span>Editöryal inceleme: Berna Aksoy</span>
+                <span class="mx-2 text-[#C9A96E]">·</span>
+                <span>Tıbbi inceleme: Doç. Dr. Senai Aksoy</span>
+                <span class="mx-2 text-[#C9A96E]">·</span>
+                <span>Son güncelleme: 14 Nisan 2026</span>
               </p>
               <a
                 href="/editorun-kosesi/nisan-2026"
@@ -258,6 +272,9 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
                 <h3 class="mb-3 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">{z.title}</h3>
                 <p class="mb-5 flex-1 leading-relaxed text-[#2D2D2D]/75">{z.body}</p>
                 <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt düzeyi: {z.evidenceLabel}</p>
+                <p class="mt-2 font-serif text-xs italic text-[#2D2D2D]/55">
+                  Yazan: <span class="text-[#2D2D2D]/75">{z.author}</span>
+                </p>
               </a>
             ))
           }
@@ -287,6 +304,11 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
                       {item.title}
                     </h4>
                     <p class="text-base leading-relaxed text-[#2D2D2D]/70">{item.excerpt}</p>
+                    <p class="mt-3 font-serif text-xs italic text-[#2D2D2D]/55">
+                      Yazan: <span class="text-[#2D2D2D]/75">{item.author}</span>
+                      <span class="mx-1.5 text-[#C9A96E]">·</span>
+                      Tıbbi inceleme: <span class="text-[#2D2D2D]/75">{medicalReviewer}</span>
+                    </p>
                   </div>
                 </a>
               ))
