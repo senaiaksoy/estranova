@@ -205,8 +205,8 @@ Yasal ve editoriyal uyumu denetlemek; saglik icerigi risklerini puanlayip karar 
   - `risk_level`
 - Kural setleri:
   - `AGENTS.md`
-  - `CLAUDE.md`
-  - `compliance-rules.md`
+  - `CLAUDE.md` (§4)
+  - `prompts/compliance-agent.md`
 
 ### Ne uretir (output)
 - `compliance_report`

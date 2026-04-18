@@ -8,7 +8,20 @@ Satır numaraları referans içindir; dosya değişince kayabilir — önce **b�
 
 - **`CLAUDE.md` §1–§6** — Editoryal kimlik, ton, yasak ifadeler, tıbbi sınır, Türkçe yayın dili, okuma düzeyi (HARD CONSTRAINTS).
 - **`CLAUDE.md` §3 — *Yazar persona'sı*** — Tıp dışı 40+ kadın **akran** sesi; Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor blogu / dergi-atıf dili yasak.
-- **`AGENTS.md`** — Site genelinde forbidden examples, allowed neutral CTA örnekleri, ton tarifi.
+- **`AGENTS.md`** — Site genelinde forbidden examples, allowed neutral CTA örnekleri, ton tarifi; **Persona ve Dış Referans** özeti (`CLAUDE.md` HARD CONSTRAINT ile hizalı).
+
+### Oturum kuralları — tek satır harita
+
+| Kural | Lokasyon |
+|-------|----------|
+| Yazar persona (akran, Vogue/Elle) | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Few-shot ornek” |
+| Dış URL link yasağı | `CLAUDE.md` §4; `agents/writer_agent.md` (~L79 civarı inline URL yasağı); `prompts/compliance-agent.md` “Strict Validation” |
+| Kuruluş adı yerleştirme yasağı | `CLAUDE.md` §4; `prompts/compliance-agent.md` “Strict Validation” |
+| Humanize zorunluluğu | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Humanize” |
+| Ses sürekliliği (8 bölüm) | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Ses surekliligi” |
+| FAQ disiplini (3–5 soru, jenerik yasak) | `agents/writer_agent.py` validator; `prompts/compliance-agent.md` madde 8 |
+| Word-boundary `risky_term_patterns` | `agents/compliance_expert_agent.py` `risky_term_patterns` |
+| Compliance threshold 85 | `config/pipeline_limits.py` `COMPLIANCE_SCORE_PUBLISH_OK` |
 
 ## Writer prompt’a gömülü (üretim aşamasında uygulanır)
 
@@ -30,15 +43,15 @@ Dosya: **`agents/writer_agent.md`**
 | Yapı doğrulama (8 outline, 8×`##`, Türkiye, mekanizma/kanıt ≥40 kelime, `_normalize_article_escapes`) | `agents/writer_agent.py` — `_validate_writer_structure` (~L64–129) |
 | FAQ disiplini (3-5 soru, jenerik kalip yasagi) | `agents/writer_agent.py` — `_validate_writer_structure` (`pratik_veya_sss` blogu); `prompts/compliance-agent.md` madde 8 |
 | Plaza substring listesi | `agents/compliance_expert_agent.py` — `PLAZA_LANGUAGE_SUBSTRINGS` (~L18–36) |
-| Riskli kelimeler (`destekler`, `iyileştirir`, …) | `agents/compliance_expert_agent.py` — `risky_terms` döngüsü (~L155–170) |
+| Riskli kelimeler (`destekler`, `iyileştirir`, …) | `agents/compliance_expert_agent.py` — `risky_term_patterns` word-boundary döngüsü |
 | Uzun cümle `style_risk` | `agents/compliance_expert_agent.py` — `_find_long_sentences` + ihlal ekleme (~L197–220) |
-| Eşikler ve token tavanları | `config/pipeline_limits.py` — `COMPLIANCE_LONG_SENTENCE_WORDS`, `WRITER_MAX_OUTPUT_TOKENS`, skor sabitleri |
+| Eşikler ve token tavanları | `config/pipeline_limits.py` — `COMPLIANCE_SCORE_PUBLISH_OK` (85), `COMPLIANCE_LONG_SENTENCE_WORDS`, `WRITER_MAX_OUTPUT_TOKENS`, skor sabitleri |
 | Akran tonu: harici markdown URL + adlı kuruluş | `agents/compliance_expert_agent.py` — `FORBIDDEN_SRC_ORG_MARKERS` + `strict.no_external_markdown_links` |
 | DNA sinyal sayımı (master) | `agents/compliance_master_validation.py` — `_dna_signal_count` |
 
 ## Nerede NE eklenir?
 
-- **Yeni yasak ifade** → `CLAUDE.md` §4 + gerekiyorsa `compliance_expert_agent.py` içinde `risky_terms` veya `PLAZA_LANGUAGE_SUBSTRINGS`.
+- **Yeni yasak ifade** → `CLAUDE.md` §4 + gerekiyorsa `compliance_expert_agent.py` içinde `risky_term_patterns` veya `PLAZA_LANGUAGE_SUBSTRINGS`.
 - **Yeni ton / ses kuralı** → `CLAUDE.md` §3.
 - **Yeni yapısal şart** (ör. bölüm sayısı) → `agents/writer_agent.md` (master 8 bölüm bölümü) + `agents/writer_agent.py` validator.
 - **Yeni SEO / format kuralı** → `agents/writer_agent.md` → `## Uzunluk ve SEO`.
@@ -46,7 +59,7 @@ Dosya: **`agents/writer_agent.md`**
 
 ## Debug: “Niye bu skor düştü?”
 
-- **Skor &lt; 75** veya deterministik **critical** tetikleyiciler (risky_terms, plaza, disclaimer gap, vb.) → `agents/compliance_expert_agent.py` içindeki guardrail blokları (~L102–230 civarı).
+- **Skor &lt; 75** veya deterministik **critical** tetikleyiciler (`risky_term_patterns`, plaza, disclaimer gap, vb.) → `agents/compliance_expert_agent.py` içindeki guardrail blokları (~L102–230 civarı).
 - **LLM yorumu** (risk_findings) → `output/_debug/compliance_raw_*.json` ham çıktısı.
 
 Bu harita + `compliance_raw` dump = “neden 72 aldı?” sorusuna cevap.

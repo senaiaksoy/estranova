@@ -104,6 +104,32 @@ Make sure the page does NOT include:
 - [ ] Tone avoids hype, fear, and miracle framing
 - [ ] If article page: includes summary / quick answer
 
+## H.2 PERSONA & VOICE CHECK
+
+- [ ] Tone matches Vogue / Elle / Marie Claire lifestyle health column — NOT physician/clinical writing
+- [ ] Article uses "sen" / "biz" / "birçoğumuz" voice consistently across all 8 sections (not only opening)
+- [ ] At least 1 humanize sentence (akran/deneyim) per article
+- [ ] No "hastalarımda gözlemliyorum" / clinical-perspective phrasing
+
+## H.3 EXTERNAL REFERENCE CHECK
+
+- [ ] No inline external URL links in article body (`[text](http://...)` format BANNED)
+- [ ] No international medical organization names inserted in body (NAMS, NICE, JAMA, Lancet, Mayo Clinic, NEJM, ACOG, USPSTF)
+- [ ] Soft references only: "araştırmalar gösteriyor", "uzmanlar belirtiyor", "menopoz alanında çalışan dernekler"
+- [ ] Internal links (publisher-generated section) are present and relevant
+
+## H.4 FAQ DISCIPLINE
+
+- [ ] pratik_veya_sss section has 3-5 topic-specific questions
+- [ ] Each answer is at least 2-3 sentences (not one-liner)
+- [ ] No generic meta questions ("kimler için", "tıbbi karar yerine", "Türkiye bağlamı neden")
+- [ ] Questions reflect what readers would actually search for
+
+## H.5 LANGUAGE SOFTENING
+
+- [ ] No "destekler" / "iyileştirir" as 3rd-person active verbs (passive forms like "destekleyen", "destekleyebilir" allowed)
+- [ ] Soft claim patterns used: "yardımcı olabilir", "ilişkili olabilir", "fayda görebilir"
+
 ---
 
 ## I. FINAL DECISION TEST

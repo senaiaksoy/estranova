@@ -38,9 +38,23 @@ Aşağıdaki **HARD CONSTRAINT** bölümleri (**§1–§6**) **opsiyonel değild
 - **Yazar profili:** Estranova yazıları; tıp/sağlık dışı bir meslekte başarılı, 40+ yaşında, kendi hormonal geçişini yaşamış veya yaşamakta olan, **konuyu kişisel deneyimle ve geniş okuma ile** anlamış bir kadın gibi seslenir. Yazar **bir hekim ya da klinisyen değildir**; ama konuyu derinlemesine merak etmiş ve okumuş bir akrandır.
 - **Karşılaştırma referansları:** Vogue Türkiye, Elle Türkiye, Marie Claire Türkiye, Harper's Bazaar Türkiye sağlık-yaşam köşeleri. **YASAK:** medical journal yorumu, klinik rehber özeti, doktor blogu tonu.
 - **"Ben de sizden biriyim" zorunluluğu:** Her makalede yazar, okuyucu ile **akran olarak** konuşur. "Sen", "biz", "bu dönemden geçen birçoğumuz" gibi bağlar zorunludur. "Hastalarımda gözlemliyorum" / "klinik deneyimimde" / "tıbbi olarak şunu söyleyebilirim" tarzı uzman-perspektif **YASAK**.
-- **Kanıt sunum tarzı:** Yazar bilime saygılıdır ama akademik atıf yapmaz. "Araştırmalar gösteriyor", "uzmanlar belirtiyor", "son dönemde yapılan çalışmalar şunu öneriyor" gibi **yumuşak referans** kullanır. **Hiçbir şekilde NAMS, NICE, JAMA, Lancet, NEJM gibi yayın/kuruluş adlarını URL ile birlikte cümleye gömmez.**
+- **Kanıt sunum tarzı:** Yazar bilime saygılıdır; yumuşak referans ile kuruluş adı / URL yasağı **§4 Yasak referans biçimleri** ile hizalıdır.
 - **Tıbbi inceleme katmanı arka planda:** Estranova'nın "tıbben gözden geçirilmiş" güven mimarisi (CLAUDE.md §5) **görünmez ama vardır**: editöryal politika sayfasında medical reviewer ismi geçer, makale gövdesinde geçmez. Makale gövdesi tamamen yazar-okur diyalogudur.
-- **Humanize zorunluluğu:** Her makalede en az 1-2 cümlelik **akran deneyim öğesi** olmalı: "Bu dönemden geçen biri olarak", "Bir arkadaşımın yaşadıkları gibi", "Hepimizin tanıdığı bir his" benzeri bağlar. Klinik anonimlikle (örnek: "kadınlarda görülür") değil, **biz-tonlu** ifadelerle.
+
+#### Editöryal ses sürekliliği (HARD CONSTRAINT)
+
+- `acilis_sahnesi` bölümünde kurulan **sen-tonlu, samimi sahne** tüm **8 ana bölüm** boyunca korunur; ders kitabı / anonim klinik ansiklopedi diline kayma **yasaktır**.
+- Her `##` bölümünde en az bir **akran bağı** olmalı: "sen", "biz", "birçoğumuz", "vücudun", "hissettiğin", "fark etmedin" vb. (yalnızca açılışta sıcak ton, sonrası soğuk anlatım = ihlal).
+
+#### Humanize zorunluluğu (HARD CONSTRAINT)
+
+- Her makalede en az **1** (tercihen 1–2) **akran / deneyim** cümlesi: "Bu dönemden geçen biri olarak", "Bir arkadaşımın anlattığı gibi", "Belki sen de yaşıyorsundur", "Hepimizin tanıdığı bir his" benzeri.
+- **Yasak:** yalnızca anonim klinik özet ("kadınlarda görülür", "hastalarda yaygındır") **biz-tonlu** karşılık olmadan kullanılamaz; mümkünse "birçoğumuzun bildiği gibi" gibi bağlaştır.
+
+#### FAQ disiplini (HARD CONSTRAINT)
+
+- `pratik_veya_sss` bölümü **3–5** adet **konuya özgü**, long-tail niteliğinde gerçek soru içerir; her yanıt **en az 2–3 cümle** derinlikte olmalıdır.
+- **Yasak:** jenerik meta sorular ("bu içerik kimler için", "tıbbi karar yerine geçer mi", "Türkiye bağlamı neden ayrı", "bu metin neyi netleştirir") — SEO şablonu / FAQ stuffing sinyali. Ayrıntı: `agents/writer_agent.md` + `agents/writer_agent.py` doğrulaması.
 
 - **Ton:** tıbbi olarak okuryazar, **sakin**, **kesin**, **güven veren**, **zarif**, **insani**, **sansasyonel olmayan**.
 - **Kaçınılacaklar:** abartı, alarmist ifade, mucize dili, aşırı vaat, influencer tonu, **satış / funnel metni**, uygulama-SaaS panosu dili, “en iyi / garanti / kesin çözüm” hissi.
@@ -61,6 +75,18 @@ Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; K
 
 **Tıbbi sınır:** teşhis, tedavi önerisi, reçete dili, bireysel tıbbi karar dayatma, abartılı tıbbi kesinlik **yasaktır**. İçerik **bilgilendirme amaçlıdır**; bireysel değerlendirme, tanı veya tedavinin yerini almaz (standart uyarı görünür olmalı).
 
+#### Yasak referans biçimleri (HARD CONSTRAINT)
+
+- **Inline harici URL yasak:** Makale, sosyal veya bülten gövdesinde markdown `[metin](http://...)` veya `https://...` ile okura tıklanır dış kaynak bağlantısı **yok** (pipeline’da deterministik `regulation_risk`).
+- **Uluslararası kuruluş / yayın adı yasak:** Metin gövdesinde **NAMS, NICE, JAMA, Lancet, NEJM, Mayo Clinic, ACOG, Cleveland Clinic, USPSTF, WHO, NHS, CDC, FDA, PubMed** vb. adları cümle içine yerleştirmek **yasaktır** (aynı liste `compliance_expert_agent.py` ile denetlenir).
+- **Serbest:** anonim yumuşak referans — örn. "araştırmalar gösteriyor", "uzmanlar genellikle belirtiyor", "menopoz alanında çalışan dernekler öneriyor".
+- **İç bağlantı:** Site içi öneri listesi **yalnızca Publisher** paketinde otomatik eklenir; **Writer makale gövdesine iç link blokları veya URL önerisi yerleştirmez** (`agents/writer_agent.md` ile uyumlu).
+
+#### Yazar dilinde yumuşatma (HARD CONSTRAINT)
+
+- **"Destekler" / "iyileştirir"** yalnızca **3. şahıs aktif fiil** anlamında yasaktır ("X'i destekler", "Y'yi iyileştirir"); **pasif ve sıfat formları** (destekleyen, destekleyici, desteklenmektedir, destekleyebilir, iyileştirici, iyileşebilir) **meşru** akademik / yumuşatılmış kullanımdır (`compliance_expert_agent.py` word-boundary eşlemesi).
+- **Tercih edilen kalıplar:** "yardımcı olabilir", "ilişkili olabilir", "fayda görebilir", "herkeste aynı olmayabilir".
+
 ### 5. Estranova DNA
 
 - **Kimlik özü:** genel ilgi sağlık **yayını** mantığında kal; doğrudan tedavi pazarlaması değil.
@@ -73,6 +99,11 @@ Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; K
   4. Editoryal kalite  
   5. Dönüşüm  
   Dönüşüm nötrlikle çelişirse **nötrlik** kazanır.
+
+#### Pipeline operasyonel parametreleri (referans)
+
+- **Yayın eşiği:** `compliance_score` **≥ 85** iken yayın bandına girilebilir (`COMPLIANCE_SCORE_PUBLISH_OK`; altı revizyon / best-effort akışı). Tam sayı ve model matrisi: **`docs/PIPELINE.md`**.
+- **Best-effort:** En fazla **2** revizyon turundan sonra zorunlu durdurma ve `ready_to_publish_best_effort` — ayrıntı aynı belgede ve `agents/compliance_expert_agent.py`.
 
 ### 6. Kalite Kontrol Checklist
 
@@ -87,6 +118,11 @@ Aşağıdaki kontroller **her üretimde** (metin, sayfa taslağı, agent JSON ç
 - [ ] **Kanıt zinciri:** İddialar Research onaylı kaynaklar ve izlenebilir iddia izi ile uyumlu (Research / Writer / Fact-check sorumluluklarına göre).
 - [ ] **Okuma düzeyi:** Yaklaşık **10. sınıf ve altı** sade Türkçe hedefi; gereksiz akademik yığın ve iç içe uzun cümle yok (Compliance ile uyumlu).
 - [ ] **Dil politikası:** Kullanıcıya dönük metin ve yayın içeriği **yalnızca Türkçe**; İngilizce UI veya tam İngilizce paragraf yok (bkz. üstte **Dil politikası**).
+- [ ] **Yazar tonu:** Akran / lifestyle dergi çizgisi (§3); **hekim veya klinisyen personası yok**; "hastalarımda gözlemliyorum" vb. yok.
+- [ ] **Harici URL:** Makale gövdesinde inline harici markdown link **yok** (§4).
+- [ ] **Kuruluş adı:** Uluslararası medikal kuruluş / yayın adı gövdeye gömülmemiş (§4).
+- [ ] **Humanize:** En az bir akran / deneyim cümlesi var (§3).
+- [ ] **FAQ:** `pratik_veya_sss` 3–5 konuya özgü soru; jenerik meta soru yok (§3 + Writer doğrulaması).
 
 ---
 

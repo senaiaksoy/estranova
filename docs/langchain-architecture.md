@@ -103,7 +103,7 @@ Ayrim: Sadece sorumluluk bazli chain’ler.
 
 **Girdi:**
 - Writer/Validation state’i: `draft_content`, `flagged_claims`, `risk_level`
-- Kural setleri: `AGENTS.md`, `CLAUDE.md`, `compliance-rules.md`
+- Kural setleri: `AGENTS.md`, `CLAUDE.md` (§4), `prompts/compliance-agent.md`
 
 **Hard constraints:**
 - Teshis/tedavi/recete/prescription dili yakalanirsa kritik -> `final_decision = revizyon_gerekli`

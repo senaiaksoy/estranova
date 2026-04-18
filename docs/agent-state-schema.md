@@ -310,7 +310,7 @@ Hatirlamali:
   - "En iyi", "En basarili", "Garantili", "Kesin cozum", "Basari oranlarimiz"
   - "Paketlerimiz", "Kampanya", "Indirim", "Simdi satin al"
 - **Standart saglik uyari/disclaimer**
-  - compliance-rules'deki standart disclaimer metni (her zaman en sona)
+  - `CLAUDE.md` (§4) + `prompts/compliance-agent.md` ile hizali standart disclaimer metni (her zaman en sona)
 - **Icerik yapisi**
   - Makale: H1, Kisa Ozet, duzenli basliklar, ilgili icerikler (repo kullanimina gore)
   - Sosyal/bulten: CTA'nin notr olmasi ("icerigi inceleyin", "rehberi kesfedin")

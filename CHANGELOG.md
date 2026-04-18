@@ -39,6 +39,17 @@ Semantic versioning + tarih etiketi.
 
 - Publisher sablon **`_build_faq_markdown`** (her makaleye ayni 5 jenerik soru — HCU FAQ-stuffing riski). FAQ tek kaynak: Writer `pratik_veya_sss`.
 - Ölü `agents/*_prompt.txt` dosyaları (kurallar `prompts/*.md` ile birleştirildi).
+- `system-prompt.md` (eski "Strateji Uzmanı" persona — akran personayla çelişiyordu, kullanılmıyordu).
+- `editorial-playbook.md` (eski tıp-açıklama ton örnekleri — Vogue/Elle ile çelişiyordu, kullanılmıyordu).
+- `tasks.md` (geçici görev listesi).
+
+### Changed (BREAKING — site kuralları konsolidasyonu)
+
+- `CLAUDE.md`: eksik tüm kurallar (dış link yasağı kanonik versiyonu, yazar yumuşatma kuralları, ses sürekliliği, humanize, FAQ disiplini, pipeline parametre referansı) eklendi / netleştirildi.
+- `AGENTS.md` "Persona ve Dış Referans" bölümüyle pekiştirildi.
+- `COMPLIANCE_CHECKLIST.md`'ye 4 yeni bölüm eklendi (H.2 Persona, H.3 External Reference, H.4 FAQ, H.5 Language Softening).
+- `compliance-rules.md` artık DEPRECATED — kanonik dosyalara yönlendirme stub.
+- `docs/agent-io-spec.md` ve `docs/langchain-architecture.md` içindeki `compliance-rules.md` atıfları `CLAUDE.md` + `prompts/compliance-agent.md` ile değiştirildi; `docs/agent-state-schema.md` disclaimer satırı aynı hizaya çekildi.
 
 ### Reverted
 

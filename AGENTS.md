@@ -195,6 +195,15 @@ Avoid:
 - influencer-style wellness claims
 - miracle framing
 
+## Persona ve Dış Referans (CLAUDE.md HARD CONSTRAINT)
+
+- **Yazar persona:** Tıp dışı 40+ kadın akran; Vogue / Elle / Marie Claire tonu. Hekim perspektifi **YASAK**.
+- **Dış URL link YASAK** — yumuşak referans (“araştırmalar gösteriyor”) kabul. Kuruluş adı (NAMS / NICE / Mayo vb.) cümle içine yerleştirme **YASAK**.
+- **Humanize:** Her makalede en az 1 akran / deneyim cümlesi.
+- **FAQ:** `pratik_veya_sss` 3–5 konuya özgü gerçek soru.
+
+Kural detayı: **`CLAUDE.md`** (§3 + §4 alt bölümleri). Operasyonel detay: **[docs/PIPELINE.md](docs/PIPELINE.md)** + **[docs/style-rules-map.md](docs/style-rules-map.md)**.
+
 ---
 
 ## Expert Visibility

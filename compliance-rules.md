@@ -1,20 +1,13 @@
-# Estranova Uyum Kuralları
+# Estranova Uyum Kuralları (DEPRECATED)
 
-Estranova platformunda yayınlanan tüm içerikler, aşağıdaki kurallara eksiksiz uymak zorundadır. Bu kurallar, yasal sorumlulukları sınırlamak ve okuyucu güvenini en üst düzeyde tutmak için tasarlanmıştır.
+> ⚠️ **Bu dosya artık kanonik kaynak değildir.** Estranova uyum kuralları aşağıdaki dosyalara taşındı. Bu dosya geriye dönük referans uyumluluğu için bırakılmıştır.
 
----
+## Kanonik kaynaklar
 
-## ASLA (Yapılmaması Gerekenler)
-
-- **ASLA tıbbi teşhis koyma:** "Bu belirtiler X hastalığına işaret ediyor" gibi ifadeler kullanma.
-- **ASLA tedavi veya ilaç önerme:** "Y ilacını kullanmalısınız" veya "Z tedavisini deneyin" gibi tavsiyelerde bulunma.
-- **ASLA kişisel tıbbi danışmanlık yapma:** Her durumun kişiye özel olduğunu ve bir uzmana danışılması gerektiğini unutma.
-- **ASLA kanıtlanmamış veya bilimsel dayanağı olmayan iddialarda bulunma:** "Mucizevi çözüm", "kesin tedavi" gibi ifadelerden kaçın.
-
----
-
-## HER ZAMAN (Yapılması Gerekenler)
-
-- **HER ZAMAN içeriğin sonunda standart yasal uyarıyı (disclaimer) ekle:** "Bu içerik yalnızca bilgilendirme amaçlıdır. Tıbbi tavsiye, teşhis veya tedavi yerine geçmez. Sağlık durumunuzla ilgili sorularınız için lütfen doktorunuza veya diğer nitelikli sağlık uzmanlarına danışın."
-- **HER ZAMAN bilgilerin bilimsel ve güvenilir kaynaklara dayandığından emin ol:** Mümkün olduğunda PubMed, Cochrane Library, saygın tıp dergileri gibi kaynakları referans göster.
-- **HER ZAMAN okuyucuyu bir sağlık profesyoneline yönlendir:** Özellikle belirti veya durum analizinden bahsediyorsan, "doktorunuza danışın" ifadesini mutlaka kullan.
+- **CLAUDE.md** — HARD CONSTRAINT §1–§6 (persona, ton, yasaklı ifadeler, dış link yasağı, humanize, FAQ disiplini, kalite checklist).
+- **AGENTS.md** — Pipeline / agent / persona kuralları.
+- **COMPLIANCE_CHECKLIST.md** — Pre-publish checklist (sayfa, CTA, dil, yapı, görsel, güven, uzman, içerik, persona, dış referans, FAQ).
+- **prompts/compliance-agent.md** — Compliance LLM agent için zorunlu kural seti.
+- **agents/writer_agent.md** — Writer LLM agent için zorunlu kural seti.
+- **docs/PIPELINE.md** — Operasyonel parametreler (eşikler, iterasyon, model matrisi).
+- **docs/style-rules-map.md** — Hangi kural hangi dosyada haritası.
