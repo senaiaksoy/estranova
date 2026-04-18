@@ -27,3 +27,8 @@ CHECKER_MAX_OUTPUT_TOKENS = 8192
 
 # Compliance: bu kelime sayisindan uzun cumleler stil uyarisi (Writer ile hizali)
 COMPLIANCE_LONG_SENTENCE_WORDS = 20
+
+# --- Scaffold dokumantasyonu ile es adlar (ayni degerler) ---
+PUBLISH_OK = COMPLIANCE_SCORE_PUBLISH_OK
+REJECT_BELOW = COMPLIANCE_SCORE_REJECT_BELOW
+LONG_SENTENCE_WORDS = COMPLIANCE_LONG_SENTENCE_WORDS

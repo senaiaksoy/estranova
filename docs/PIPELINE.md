@@ -2,6 +2,8 @@
 
 Bu belge pipeline’ın **operasyonel gerçeğini** tek yerde toplar: modeller, eşikler, çıktı yolları, bilinen tuzaklar ve hata ayıklama.
 
+**Genel agentic iskelet / fork sablonu:** **[AGENTIC_PIPELINE_SCAFFOLD.md](AGENTIC_PIPELINE_SCAFFOLD.md)** · bos domain sablonu: **`config/domain_placeholders.py`** (uretimde kullanilmaz; Estranova kurallari `CLAUDE.md` + agent dosyalari).
+
 **Stil, dil ve kural haritası** (hangi kural hangi dosyada): **[style-rules-map.md](style-rules-map.md)**
 
 ## Model Matrisi

@@ -1,5 +1,7 @@
 # Writer Agent Prompt
 
+> **Estranova:** Tam master prompt ve 8 bolum sozlesmesi **`agents/writer_agent.md`** dosyasinda; bu dosya kisa/ozet veya fork sablonu icin kullanilabilir.
+
 ## Rol
 Writer Agent, sadece onayli kaynak paketine dayanarak icerik uretir.
 

@@ -20,6 +20,8 @@ Semantic versioning + tarih etiketi.
 
 ### Added
 
+- **Agentic scaffold dokümantasyonu:** `docs/AGENTIC_PIPELINE_SCAFFOLD.md`, `config/domain_placeholders.py` (fork için boş sablon; üretimde Estranova kuralları agent dosyalarında), `agents/orchestrator.py` re-export, `prompts/checker-agent.md` / `prompts/publisher-agent.md` iskelet, `output/README.md`.
+- CLI: `python main.py --topic "..."` veya pozisyon argümanı (`resolved_topic`).
 - Writer çıktısı `category` alanı (9 sabit değerden biri); `writer_agent.py` validator zorunlu; state’te `target_category`.
 - `save_approved_article_with_routing` — markdown (`src/content/blog/`) + kategori altında `src/pages/{category}/…/{slug}.astro` üretimi.
 - Streamlit onay ekranı: yayın öncesi kategori gösterimi + override `selectbox`.

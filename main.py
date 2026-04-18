@@ -97,7 +97,21 @@ def build_graph() -> Any:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Estranova LangGraph multi-agent simulation")
-    parser.add_argument("topic", help="Content topic to process")
+    parser.add_argument(
+        "topic",
+        nargs="?",
+        default=None,
+        metavar="TOPIC",
+        help="İçerik konusu (alternatif: --topic / -t)",
+    )
+    parser.add_argument(
+        "-t",
+        "--topic",
+        dest="topic_flag",
+        default=None,
+        metavar="STRING",
+        help="Konu metni (pozisyon argümanı yerine veya birlikte)",
+    )
     parser.add_argument("--audience", default="40+ kadinlar")
     parser.add_argument(
         "--content-goal",
@@ -117,6 +131,16 @@ def parse_args() -> argparse.Namespace:
         help="Yayın kategorisi override (yoksa writer önerisi kullanılır)",
     )
     return parser.parse_args()
+
+
+def resolved_topic(args: argparse.Namespace) -> str:
+    """Pozisyon veya --topic; en az biri zorunlu."""
+    t = (args.topic_flag or args.topic or "").strip()
+    if not t:
+        raise SystemExit(
+            "Konu gerekli: ör. python main.py \"Menopozda uyku\" veya python main.py --topic \"...\""
+        )
+    return t
 
 
 def _estimate_cost_usd(llm_calls: list[dict[str, Any]]) -> float:
@@ -572,10 +596,11 @@ def main() -> None:
 
     load_dotenv(override=True)
     args = parse_args()
+    topic = resolved_topic(args)
 
     app = build_graph()
     initial_state = initialize_state(
-        topic=args.topic,
+        topic=topic,
         audience=args.audience,
         content_goal=args.content_goal,
         risk_level=args.risk_level,
