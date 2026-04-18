@@ -180,6 +180,7 @@ class EstranovaState(TypedDict, total=False):
     writer_revision_feedback_snapshot: str
     best_effort_publish: bool
     article_outline: list[dict[str, Any]]  # estranova-master 8 bolum outline
+    target_category: NotRequired[str]
 
 
 def now_iso() -> str:

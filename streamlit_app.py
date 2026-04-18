@@ -9,12 +9,14 @@ from typing import Any
 import streamlit as st
 from dotenv import load_dotenv
 
+from agents.writer_agent import ALLOWED_CATEGORIES
+
 from main import (
     build_graph,
     build_save_payload,
     draft_markdown_path,
     ensure_runtime_dependencies,
-    save_approved_blog_article,
+    save_approved_article_with_routing,
     save_draft_to_output_drafts,
     save_operational_outputs,
 )
@@ -535,6 +537,20 @@ def main() -> None:
                     f"Akis sonlandirma: `{halt}` (icerik en iyi haliyle uretildi ise manuel kontrol onerilir.)"
                 )
 
+            detected_category = pending.get("target_category") or "beden-yakinlik"
+            cat_list = list(ALLOWED_CATEGORIES)
+            try:
+                cat_index = cat_list.index(detected_category) if detected_category in cat_list else 0
+            except ValueError:
+                cat_index = 0
+            st.selectbox(
+                "Yayın kategorisi",
+                options=cat_list,
+                index=cat_index,
+                help="Writer'ın önerdiği kategori. Manuel override edebilirsin.",
+                key="publish_category_override",
+            )
+
             st.text_area(
                 "Üretilen makale",
                 height=560,
@@ -560,7 +576,15 @@ def main() -> None:
                 )
                 to_save = inject_article_into_state(st.session_state.pipeline_pending_state, body)
                 try:
-                    blog_path = save_approved_blog_article(body, ttopic, eday)
+                    pub_cat = st.session_state.get(
+                        "publish_category_override", detected_category
+                    )
+                    if not isinstance(pub_cat, str) or pub_cat not in ALLOWED_CATEGORIES:
+                        pub_cat = "beden-yakinlik"
+                    to_save["target_category"] = pub_cat
+                    md_path, astro_path = save_approved_article_with_routing(
+                        body, ttopic, eday, pub_cat
+                    )
                     draft_markdown_path(ttopic, eday).unlink(missing_ok=True)
                     save_operational_outputs(
                         to_save,
@@ -572,8 +596,12 @@ def main() -> None:
                     st.session_state.pop("article_editor", None)
                     st.session_state.pop("editorial_run_date", None)
                     st.session_state.pop("editorial_review_record", None)
+                    st.session_state.pop("publish_category_override", None)
                     st.session_state.publish_success_flash = (
-                        f"✅ Yayında: `{blog_path.as_posix()}` (operasyon raporu `output/` altında)."
+                        f"✅ Yayında:\n"
+                        f"  Markdown: `{md_path.as_posix()}`\n"
+                        f"  Astro page: `{astro_path.as_posix()}`\n"
+                        f"⚠️ submenu-heroes.ts ve navigation.ts'a manuel ekleme gerekir."
                     )
                     st.rerun()
                 except Exception as exc:

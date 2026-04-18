@@ -43,6 +43,22 @@ Kaynak: `config/llm_config.py`, `main.py` (`_estimate_cost_usd`).
 - **`output/_debug/compliance_raw_*.json`** — Her Compliance ham LLM JSON çıktısı.
 - **`output/_baseline/`** — Elle oluşturulan referans artefaktlar (varsa).
 
+### Konu → Kategori Yönlendirmesi (Routing)
+
+Writer her makale için bir `category` alanı üretir; izin verilen 9 değerden biri olmalı (`agents/writer_agent.py` → `ALLOWED_CATEGORIES`, `_validate_writer_structure`). State’te `target_category` olarak tutulur; Streamlit onay ekranında override edilebilir; CLI’da `--category` ile sonuç üzerine yazılabilir.
+
+Yayınlama akışında (onay sonrası):
+
+1. Markdown → `src/content/blog/{date}-{slug}.md` (içerik kaynağı; `save_approved_blog_article` / routing fonksiyonunun ilk adımı).
+2. Astro sayfa → `src/pages/{category}/…/{slug}.astro` (`save_approved_article_with_routing` — kategori `hormonal-gecis/menopoz` gibi alt yolları klasör yapısına yansıtır).
+
+**Manuel adım (her yeni yazıdan sonra):**
+
+- `src/data/submenu-heroes.ts` — route anahtarına hero görseli (ör. Unsplash editöryal).
+- `src/data/navigation.ts` — ilgili kategorinin `children` listesine yeni alt madde.
+
+Otomatik düzenleme yapılmaz (editöryal karar). Onay sonrası Streamlit başarı mesajı bu iki dosyayı hatırlatır.
+
 ## Gelecek calismalar (planli iyilestirmeler)
 
 ### EEAT + Schema Markup (Astro tarafi)

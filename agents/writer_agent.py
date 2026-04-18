@@ -12,6 +12,18 @@ from state import ClaimTrace, DraftContent, EstranovaState, append_history
 from .article_markdown import ARTICLE_OUTLINE_KEYS, split_h2_sections
 from .base import PromptBackedAgent
 
+ALLOWED_CATEGORIES: tuple[str, ...] = (
+    "hormonal-gecis/perimenopoz",
+    "hormonal-gecis/menopoza-hazirlik",
+    "hormonal-gecis/menopoz",
+    "hormonal-gecis/40-sonrasi",
+    "beden-yakinlik",
+    "zamansiz-yasam",
+    "zihin-denge",
+    "bilimsel-pencere",
+    "editorun-kosesi",
+)
+
 
 def _slugify_topic(topic: str) -> str:
     lowered = topic.strip().lower()
@@ -61,10 +73,10 @@ def _normalize_article_escapes(article: str) -> str:
     return normalized
 
 
-def _validate_writer_structure(result: dict[str, object]) -> list[dict[str, object]]:
+def _validate_writer_structure(result: dict[str, object]) -> tuple[list[dict[str, object]], str]:
     """
     LLM ciktisi master prompt yapisina uymuyorsa INVALID OUTPUT.
-    Donus: normalize edilmis article_outline listesi.
+    Donus: (normalize edilmis article_outline listesi, category).
     """
     status = str(result.get("output_status") or "ok").strip()
     if status == "INVALID_OUTPUT":
@@ -155,7 +167,14 @@ def _validate_writer_structure(result: dict[str, object]) -> list[dict[str, obje
                     f"(her makalede tekrarlanan SEO-stuffing): '{q[:80]}'"
                 )
 
-    return normalized
+    category = result.get("category")
+    if not isinstance(category, str) or category not in ALLOWED_CATEGORIES:
+        raise RuntimeError(
+            "INVALID OUTPUT: category alanı zorunlu, izin verilen değer "
+            f"olmalı (geldi: {category!r})"
+        )
+
+    return normalized, category
 
 
 class WriterAgent(PromptBackedAgent):
@@ -227,7 +246,7 @@ class WriterAgent(PromptBackedAgent):
         )
 
         try:
-            validated_outline = _validate_writer_structure(result)
+            validated_outline, category = _validate_writer_structure(result)
         except RuntimeError as exc:
             if revision_iteration > 0:
                 state["revision_validation_failed"] = True
@@ -237,6 +256,7 @@ class WriterAgent(PromptBackedAgent):
                 return state
             raise
         state["article_outline"] = validated_outline
+        state["target_category"] = category
 
         draft_content = result.get("draft_content", {})
 

@@ -237,11 +237,37 @@ Sicak basmasinin altinda hormonal bir mekanizma oldugu, son yillarda yapilan ara
 - **"Türkiye"** bolumune ornek vermedik cunku konuya ozgu olmali — ama Türkiye bolumune **mutlaka** yerel erisim, kamu bilgilendirme diline notr atif ve pratik notlar yaz (kurulus adi / URL zorunlu degil; anonim ve yumusak tercih et).
 - Acilis sahnesinden kapanisa kadar paragraflarin cogu **2-4 cumle**; hicbir cumle 20 kelimeyi gecmiyor.
 
+## Yayın kategorisi (`category` — ZORUNLU)
+
+Her makale icin **tam olarak bir** `category` degeri sec; cikti JSON'unun kokunde **string** olarak don (validator sabit liste ile kontrol eder).
+
+**Izın verilen degerler (sabit — birebir eslesme):**
+1. `hormonal-gecis/perimenopoz`
+2. `hormonal-gecis/menopoza-hazirlik`
+3. `hormonal-gecis/menopoz`
+4. `hormonal-gecis/40-sonrasi`
+5. `beden-yakinlik`
+6. `zamansiz-yasam`
+7. `zihin-denge`
+8. `bilimsel-pencere`
+9. `editorun-kosesi`
+
+**Secim rehberi (ozet):**
+- Hormonal dongu / faz / menopoz gecisi **mekanizmasi** agirlikli → `hormonal-gecis/` altindan uygun faz (`perimenopoz`, `menopoza-hazirlik`, `menopoz`, `40-sonrasi`).
+- Cilt, vajinal saglik, intim, idrar, pelvik taban, yakinlik → `beden-yakinlik`.
+- Vitamin, beslenme, hareket, non-invaziv yasam tarzi onerileri → `zamansiz-yasam`.
+- Uyku, ruh hali, stres, anksiyete, zihinsel denge → `zihin-denge`.
+- Ostrojen biyolojisi, yaslanma bilimi, mekanizma derinlestirme (bilim agirlikli) → `bilimsel-pencere`.
+- Aylik editor yorumu, sezonluk sec / meta-nitelikli kose → `editorun-kosesi`.
+
+**Not:** Ic baglanti URL'leri Writer govdesine yazilmaz; `category` yalnizca site bilgi mimarisi yonlendirmesi icindir.
+
 ## Cikti formati
 ```json
 {
   "topic": "string",
   "risk_level": "low | medium | high",
+  "category": "beden-yakinlik",
   "output_status": "ok | INVALID_OUTPUT",
   "invalid_reason": "",
   "article_outline": [

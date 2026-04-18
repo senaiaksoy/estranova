@@ -2,10 +2,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+from agents.writer_agent import ALLOWED_CATEGORIES
 
 from naming import output_file_basename, slugify_topic
 from state import EstranovaState, initialize_state
@@ -107,6 +110,12 @@ def parse_args() -> argparse.Namespace:
         default="",
         help="Okuyucu profili (Writer makale girisinde kullanilir; bos birakilabilir)",
     )
+    parser.add_argument(
+        "--category",
+        choices=list(ALLOWED_CATEGORIES),
+        default=None,
+        help="Yayın kategorisi override (yoksa writer önerisi kullanılır)",
+    )
     return parser.parse_args()
 
 
@@ -185,17 +194,48 @@ def blog_markdown_path(topic: str, date_str: str) -> Path:
     return Path("src") / "content" / "blog" / f"{base}.md"
 
 
+def _strip_markdown_inline(text: str) -> str:
+    """Inline markdown sözdizimini sıyır (bold/italic/code/link)."""
+    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)  # **bold** → bold
+    text = re.sub(r"\*([^*]+)\*", r"\1", text)  # *italic* → italic
+    text = re.sub(r"`([^`]+)`", r"\1", text)  # `code` → code
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)  # [text](url) → text
+    return text
+
+
 def _excerpt_from_markdown(md: str, max_len: int = 220) -> str:
-    """Ilk anlamli paragraftan kisa ozet (Astro frontmatter description)."""
+    """Ilk anlamli paragraftan kisa ozet (Astro frontmatter description).
+
+    Heading'leri atlar; blockquote (> ) ile baslayan ozet bloklarini icerige
+    cevirir; markdown sözdizimini (bold, italic, link, code) plain text'e siyirir;
+    "Kisa ozet:" gibi label prefixlerini de temizler.
+    """
     paragraphs: list[str] = []
     for block in md.split("\n\n"):
         line = block.strip()
         if not line:
             continue
-        first = line.split("\n", 1)[0].strip()
-        if first.startswith("#"):
+        first_line = line.split("\n", 1)[0].strip()
+        if first_line.startswith("#"):
             continue
-        paragraphs.append(first)
+        # Blockquote: tüm satırların başındaki "> " markerini kaldır,
+        # çok satırlı blockquote'u tek paragrafa çevir.
+        if first_line.startswith(">"):
+            cleaned = " ".join(
+                re.sub(r"^>\s*", "", l).strip() for l in line.splitlines()
+            ).strip()
+        else:
+            cleaned = first_line
+        cleaned = _strip_markdown_inline(cleaned)
+        # "Kisa ozet:" gibi label prefixini kaldir.
+        cleaned = re.sub(
+            r"^[Kk][ıiİI]sa\s+[öoÖO]zet\s*:\s*",
+            "",
+            cleaned,
+        ).strip()
+        if not cleaned:
+            continue
+        paragraphs.append(cleaned)
         if len(" ".join(paragraphs)) >= 48:
             break
     text = " ".join(paragraphs) if paragraphs else md.strip().replace("\n", " ")
@@ -229,6 +269,158 @@ def save_approved_blog_article(body: str, topic: str, date_str: str) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(_blog_markdown_with_frontmatter(topic, body, date_str), encoding="utf-8")
     return path
+
+
+def _render_category_article_astro(
+    *, topic: str, slug: str, category: str, blog_entry_id: str
+) -> str:
+    """src/pages/{category...}/{slug}.astro — blog koleksiyonundan markdown render."""
+    _ = topic  # reserved for future hero / title overrides
+    category_eyebrows: dict[str, str] = {
+        "hormonal-gecis/perimenopoz": "Hormonal Geçiş · Perimenopoz",
+        "hormonal-gecis/menopoza-hazirlik": "Hormonal Geçiş · Menopoza Hazırlık",
+        "hormonal-gecis/menopoz": "Hormonal Geçiş · Menopoz",
+        "hormonal-gecis/40-sonrasi": "Hormonal Geçiş · 40 Sonrası",
+        "beden-yakinlik": "Beden & Yakınlık · Kadın sağlığı",
+        "zamansiz-yasam": "Zamansız Yaşam · Yaşam tarzı",
+        "zihin-denge": "Zihin & Denge · Ruhsal sağlık",
+        "bilimsel-pencere": "Bilimsel Pencere · Derin bilim",
+        "editorun-kosesi": "Editörün Köşesi · Yorum",
+    }
+    cat_parts = [p for p in category.strip("/").split("/") if p]
+    category_route = "/" + "/".join(cat_parts + [slug])
+    category_root = f"/{cat_parts[0]}"
+    eyebrow = category_eyebrows.get(category, category)
+    depth = category.count("/")
+    rel = "../" * (depth + 2)
+    hero_src = (
+        "https://images.unsplash.com/photo-1518611012118-696072aa579a"
+        "?auto=format&fit=crop&q=80&w=1800&h=1000"
+    )
+    hero_alt = (
+        "Estranova editöryal görsel placeholder — submenu-heroes.ts altına özel görsel ekleyin."
+    )
+    eyebrow_js = json.dumps(eyebrow, ensure_ascii=False)
+    hero_alt_json = json.dumps(hero_alt, ensure_ascii=False)
+
+    raw = """---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '__REL__layouts/SiteLayout.astro';
+import SiteNavbar from '__REL__components/site/SiteNavbar.astro';
+import SiteFooter from '__REL__components/site/SiteFooter.astro';
+import SubmenuHero from '__REL__components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '__REL__components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '__REL__components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '__REL__data/submenu-heroes';
+
+const route = '__CATEGORY_ROUTE__';
+const hero = submenuHeroByRoute[route] ?? {
+  src: '__HERO_SRC__',
+  alt: __HERO_ALT_JSON__,
+};
+
+const posts = await getCollection('blog');
+const post = posts.find((p) => p.id === '__BLOG_ENTRY_ID__');
+if (!post) {
+  throw new Error('Blog girdisi bulunamadi: __BLOG_ENTRY_ID__');
+}
+const { Content } = await render(post);
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value));
+const publishedDate = formatDate(post.data.date);
+---
+
+<SiteLayout
+  title={`${post.data.title} - Estranova`}
+  description={post.data.description}
+>
+  <SiteNavbar currentPath="__CATEGORY_ROOT__" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow=__EYEBROW_JS__
+      title={post.data.title}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Estranova Editör Ekibi</p>
+            <p class="text-xl font-semibold text-[#2D2D2D]">Tıbbi inceleme: Doç. Dr. Senai Aksoy</p>
+            <p class="text-[#2D2D2D]/70">40+ kadın sağlığı odaklı editöryal içerik</p>
+            <p class="mt-2 text-sm text-[#2D2D2D]/65">Yayın tarihi: {publishedDate}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-[#2D2D2D]/80">{post.data.description}</p>
+      </section>
+
+      <ArticleProsePanel>
+        <Content />
+      </ArticleProsePanel>
+
+      <section class="mt-14 rounded-[28px] border border-dashed border-[#6B2D3E]/30 bg-white/60 p-6 text-sm text-[#2D2D2D]/70 ring-1 ring-[#6B2D3E]/10 md:p-8">
+        <p>
+          <strong>Önemli not:</strong> Bu içerik yalnızca genel bilgilendirme amacıyla hazırlanmıştır.
+          Tıbbi tavsiye, tanı veya tedavi yerine geçmez. Sağlık durumunuzla ilgili kararlar için lütfen
+          bir sağlık profesyoneliyle görüşün.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
+"""
+    return (
+        raw.replace("__REL__", rel)
+        .replace("__CATEGORY_ROUTE__", category_route)
+        .replace("__HERO_SRC__", hero_src)
+        .replace("__HERO_ALT_JSON__", hero_alt_json)
+        .replace("__BLOG_ENTRY_ID__", blog_entry_id)
+        .replace("__CATEGORY_ROOT__", category_root)
+        .replace("__EYEBROW_JS__", eyebrow_js)
+    )
+
+
+def save_approved_article_with_routing(
+    body: str,
+    topic: str,
+    date_str: str,
+    category: str,
+    slug_override: str | None = None,
+) -> tuple[Path, Path]:
+    """
+    Markdown'ı src/content/blog/ altına yazar (içerik kaynağı),
+    ayrıca src/pages/{category}/.../{slug}.astro üretir (gezilebilir sayfa).
+    Returns: (markdown_path, astro_page_path)
+    """
+    if category not in ALLOWED_CATEGORIES:
+        raise ValueError(f"category izin listesinde degil: {category!r}")
+
+    md_path = save_approved_blog_article(body, topic, date_str)
+    base = output_file_basename(topic, date_str)
+    slug = slug_override or base.replace(f"{date_str}-", "", 1)
+    astro_dir = Path("src/pages").joinpath(*category.split("/"))
+    astro_dir.mkdir(parents=True, exist_ok=True)
+    astro_path = astro_dir / f"{slug}.astro"
+    astro_content = _render_category_article_astro(
+        topic=topic,
+        slug=slug,
+        category=category,
+        blog_entry_id=md_path.stem,
+    )
+    astro_path.write_text(astro_content, encoding="utf-8")
+    return md_path, astro_path
 
 
 def save_draft_to_output_drafts(body: str, topic: str, date_str: str) -> Path:
@@ -331,6 +523,7 @@ def save_operational_outputs(
             "content_emphasis": result.get("content_emphasis"),
             "internal_link_suggestions": result.get("internal_link_suggestions"),
         },
+        "target_category": result.get("target_category"),
         "output_file_routing": {
             "publisher_body_markdown_chars": pub_chars,
             "draft_article_chars": draft_chars,
@@ -369,6 +562,7 @@ def build_save_payload(result: EstranovaState) -> dict[str, Any]:
             "content_emphasis": result.get("content_emphasis"),
             "internal_link_suggestions": result.get("internal_link_suggestions"),
         },
+        "target_category": result.get("target_category"),
     }
 
 
@@ -388,6 +582,8 @@ def main() -> None:
         user_context=args.user_context or "",
     )
     result: EstranovaState = app.invoke(initial_state)
+    if args.category is not None:
+        result["target_category"] = args.category
 
     payload = build_save_payload(result)
     if args.pretty:
