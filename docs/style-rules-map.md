@@ -28,6 +28,7 @@ Dosya: **`agents/writer_agent.md`**
 | Konu | Dosya ve konum |
 |------|----------------|
 | Yapı doğrulama (8 outline, 8×`##`, Türkiye, mekanizma/kanıt ≥40 kelime, `_normalize_article_escapes`) | `agents/writer_agent.py` — `_validate_writer_structure` (~L64–129) |
+| FAQ disiplini (3-5 soru, jenerik kalip yasagi) | `agents/writer_agent.py` — `_validate_writer_structure` (`pratik_veya_sss` blogu); `prompts/compliance-agent.md` madde 8 |
 | Plaza substring listesi | `agents/compliance_expert_agent.py` — `PLAZA_LANGUAGE_SUBSTRINGS` (~L18–36) |
 | Riskli kelimeler (`destekler`, `iyileştirir`, …) | `agents/compliance_expert_agent.py` — `risky_terms` döngüsü (~L155–170) |
 | Uzun cümle `style_risk` | `agents/compliance_expert_agent.py` — `_find_long_sentences` + ihlal ekleme (~L197–220) |

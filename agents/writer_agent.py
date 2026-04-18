@@ -126,6 +126,35 @@ def _validate_writer_structure(result: dict[str, object]) -> list[dict[str, obje
                 f"INVALID OUTPUT: {label} bolumu yetersiz derinlik (kelime ~{wordish}, min 40)"
             )
 
+    idx_faq = ARTICLE_OUTLINE_KEYS.index("pratik_veya_sss")
+    faq_block = h2_sections[idx_faq]
+
+    question_lines = re.findall(
+        r"(?m)^(?:### .+\?|\*\*[^*]+\?\*\*)",
+        faq_block,
+    )
+    n_questions = len(question_lines)
+    if not (3 <= n_questions <= 5):
+        raise RuntimeError(
+            f"INVALID OUTPUT: pratik_veya_sss 3-5 soru icermeli (sayildi: {n_questions})"
+        )
+
+    generic_faq_patterns = [
+        r"kimler\s+i[cç]in",
+        r"t[ıi]bbi\s+karar\s+yerine\s+ge[cç]",
+        r"t[üu]rkiye\s+ba[gğ]lam[ıi]\s+neden",
+        r"bu\s+metin\s+neyi\s+netle[sş]tirir",
+        r"bu\s+i[cç]erik\s+kimler",
+    ]
+    for q in question_lines:
+        qlow = q.lower()
+        for pat in generic_faq_patterns:
+            if re.search(pat, qlow):
+                raise RuntimeError(
+                    "INVALID OUTPUT: jenerik FAQ kalibi tespit edildi "
+                    f"(her makalede tekrarlanan SEO-stuffing): '{q[:80]}'"
+                )
+
     return normalized
 
 

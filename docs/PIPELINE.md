@@ -37,11 +37,24 @@ Kaynak: `config/llm_config.py`, `main.py` (`_estimate_cost_usd`).
 
 - **`output/{date}-{slug}.md`** — Yayına hazır kök makale (raporda `root_md_written=True`).
   - Koşul: `final_decision` ∈ (`ready_to_publish`, `ready_to_publish_best_effort`).
-  - İçerik kaynağı: `publisher_output.content.body_markdown` (ham `draft_content.article` değil). Publisher paketi: SEO meta + SSS + **iç bağlantı önerileri**; **`## Kaynaklar` numaralı URL listesi yok** (akran tonu; araştırma `approved_sources` arka planda kalır).
+  - İçerik kaynağı: `publisher_output.content.body_markdown` (ham `draft_content.article` değil). Publisher paketi: **yayın metası (SEO)** + **iç bağlantı önerileri**; sablon FAQ yok (SSS yalnızca Writer `pratik_veya_sss` içinde). **`## Kaynaklar` numaralı URL listesi yok** (akran tonu; araştırma `approved_sources` arka planda kalır).
 - **`output/drafts/{date}-{slug}.md`** — Henüz “yayın hazır” kararı olmayan veya fallback taslaklar.
 - **`output/_debug/writer_raw_*.json`** + **`writer_article_*.md`** — Her Writer `call_llm_json` sonrası ham JSON + makale metni.
 - **`output/_debug/compliance_raw_*.json`** — Her Compliance ham LLM JSON çıktısı.
 - **`output/_baseline/`** — Elle oluşturulan referans artefaktlar (varsa).
+
+## Gelecek calismalar (planli iyilestirmeler)
+
+### EEAT + Schema Markup (Astro tarafi)
+
+Google YMYL kategorisinde yer alan estranova icerigi icin asagidaki katmanlar **planlanmistir** ama henuz uygulanmamistir:
+
+1. **FAQPage JSON-LD schema markup** — Astro layout'unda her makale icin `pratik_veya_sss` bolumunu structured data olarak render et (rich snippet sansi 2023'ten beri sinirli ama Google'in icerigi anlamasina yardimci olur).
+2. **Author bio + medical reviewer signature** — Her makalenin altinda yazar profili + "Last reviewed by Dr. X" imzasi (EEAT sinyali).
+3. **Last updated date** — frontmatter'a `updated` alani; Astro'da "Son guncelleme: tarih" goster (Google saglik icerigi icin guncellige onem verir).
+4. **Article schema markup (NewsArticle / MedicalWebPage)** — makale tipini structured data ile bildirme.
+
+Bu maddeler ileride bir gelistirme oturumunda ele alinir.
 
 ## Gotcha’lar (ileride düşmemek için)
 

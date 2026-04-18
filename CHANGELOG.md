@@ -6,6 +6,7 @@ Semantic versioning + tarih etiketi.
 
 ### Changed
 
+- FAQ disiplini: `pratik_veya_sss` zorunlu olarak **3-5** soru; jenerik meta sorular ("kimler icin", "tibbi karar yerine gecer" vb.) `writer_agent.py` validator'da **INVALID**.
 - **BREAKING — editöryal yön:** Yazar persona **akran** olarak netleştirildi (`CLAUDE.md` HARD CONSTRAINT yeni alt bölüm). Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor perspektifi yasak.
 - Inline harici URL (`[metin](http...)`) ve uluslararası medikal kuruluş/yayın adı (NAMS, NICE, JAMA vb.) makale gövdesinde **yasak**; yumuşak “araştırmalar gösteriyor” referansı kabul.
 - Publisher **`## Kaynaklar`** numaralı URL listesi **kaldırıldı** (iç bağlantı önerileri bölümü duruyor).
@@ -36,6 +37,7 @@ Semantic versioning + tarih etiketi.
 
 ### Removed
 
+- Publisher sablon **`_build_faq_markdown`** (her makaleye ayni 5 jenerik soru — HCU FAQ-stuffing riski). FAQ tek kaynak: Writer `pratik_veya_sss`.
 - Ölü `agents/*_prompt.txt` dosyaları (kurallar `prompts/*.md` ile birleştirildi).
 
 ### Reverted

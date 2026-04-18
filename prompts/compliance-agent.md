@@ -35,6 +35,7 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
    - **Yumusak bilim referansi** ("arastirmalar gosteriyor", "uzmanlar belirtiyor" — kurulus adi/URL olmadan)
 6. **Klişe dil:** Saglik blogu klişesi / slogan dili (or. asiri metafor, “kulak verin”, “altın degerinde” benzeri).
 7. **Acilis sahnesi yok:** Ilk `##` bolumu okuyucunun kendini gordugu kisa **sahne/durum** girisi degilse (soguk ansiklopedi girisi / cok kisa dolgu).
+8. **FAQ disiplini:** `pratik_veya_sss` bolumu en az 3 / en fazla 5 soru icermeli; her cevap en az 2 cumle. Tek-cumle yuzeysel cevaplar veya jenerik meta sorular ("bu icerik kimler icin", "tibbi karar yerine gecer mi" gibi) varsa needs_revision.
 
 ## Diger yuksek oncelik kontrolleri
 - **Okuma duzeyi:** Yaklasik 10. sinif ve alti; asiri akademik yogunluk **compliance_score** dusurur, **needs_revision**.

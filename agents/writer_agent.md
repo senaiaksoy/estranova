@@ -55,13 +55,15 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
 | `kanit_seviyesi` | **Bilimin nereye kadar kesin oldugu:** Bilim ne soyluyor / nerede bitiyor / hangi sorular hala acik — **akran tonunda**, "arastirmalar gosteriyor ki..." gibi yumusak ifadelerle. **Kurulus adi, calisma adi, URL atfi YASAK.** Ornek: "Sicak basmasinin altinda hormonal bir mekanizma oldugu artik iyi anlasilmis. Ama hangi kadinda ne kadar siddetli olacagini onceden tahmin etmek hala zor." |
 | `turkiye` | **Turkiye bolumu:** Turkiye baglami (erisim, pratik, yerel kilavuz / kamu sagligi diline **nötr** atif mumkunse); genel dunya metni yerine **yerel okuyucu** icin paragraf. |
 | `karar_cercevesi` | **Karar cercevesi:** Tedavi dayatma yok; **ne zaman destek alinabilecegi**, hangi sorulari dusunebilecegi, risk/belirsizligi dusunme **nötr cerceve**. |
-| `pratik_veya_sss` | **Pratik ozet veya SSS:** Madde isaretleri veya kisa soru-cevap; okunabilir. |
+| `pratik_veya_sss` | **Pratik ozet veya SSS (konuya ozgu, NON-template):** **3 ila 5** arasi gercek soru — okuyucunun bu konuyla ilgili **arama yaptiginda yazacagi tip soru** (long-tail). Her sorunun cevabi **en az 2-3 cumle**, derinlikli. **YASAK kaliplar**: "Bu icerik kimler icin?", "Tibbi karar yerine gecer mi?", "Turkiye baglami neden ayri?" gibi **meta sorular** (her makalede tekrarlanan jenerik template) — bunlar SEO-stuffing sinyali. Sorular dogrudan **konunun ozune** dair olmali. |
 | `kapanis` | **Kapanis:** Ozet cumleler + guvenli yonlendirme (disclaimer ile uyumlu). |
 
 ### Gecerlilik
 - `article_outline` **tam 8 eleman** ve her `section_key` **yukaridaki sira ve isimlerle** ayni olmalidir.
 - `draft_content.article` icinde **en az 8 adet** duzey-2 baslik (`## ` ile baslayan satir) olmali ve yukaridaki bolumleri kapsamali; **Türkiye** bolumu metinde **“Türkiye”** veya **“Turkiye”** gecen en az bir baslik veya belirgin paragraf ile okunur olmali.
 - Mekanizma ve kanit bolumleri **bos veya tek cumle** birakilamaz (anlamli derinlik).
+- `pratik_veya_sss` bolumu **3 ila 5** arasi soru icermeli (`### ` ile baslayan ve satir sonunda `?` olan basliklar, veya satir basinda `**...?**` bold soru formati). 3'ten az veya 5'ten fazla = **INVALID** (validator sayar).
+- Hicbir soru su jenerik kaliplardan olmamali (case-insensitive; bunlardan biri gecerse **INVALID**): `kimler icin`, `tibbi karar yerine gecer`, `turkiye baglami neden`, `bu metin neyi netlestirir`, `bu icerik kimler`.
 - Bu kurallardan biri karsilanmiyorsa cikti **gecersizdir:** JSON icinde `"output_status": "INVALID_OUTPUT"` ve `"invalid_reason": "kisaca neden"` don; **normal makale metni uretme** (sadece INVALID). Sistem **INVALID** gordugunde yeniden uretim tetiklenebilir.
 
 ## Uzunluk ve SEO (makale = `draft_content.article`)
