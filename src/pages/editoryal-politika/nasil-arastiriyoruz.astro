@@ -1,0 +1,69 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+---
+
+<SiteLayout
+  title="Nasıl Araştırıyoruz - Estranova"
+  description="Estranova içeriklerinde kaynak değerlendirmesi, kanıt düzeyi ve editoryal süreç özeti."
+>
+  <SiteNavbar currentPath="/editoryal-politika/nasil-arastiriyoruz" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <div class="bg-[#FFF8E1] px-6 py-3 text-center text-sm leading-snug text-[#2D2D2D]/90">
+      Bu sayfa hazırlanıyor. İçerik yakında güncellenecek.
+    </div>
+
+    <div class="mx-auto max-w-3xl px-6 py-16 md:py-20">
+      <header class="mb-12">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">EDİTÖRYAL SÜREÇ</p>
+        <h1 class="mb-6 font-serif text-4xl leading-tight md:text-5xl">Nasıl Araştırıyoruz</h1>
+        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+          Her içerik, kaynak değerlendirmesi ve editöryal incelemeden geçerek yayınlanır. Kanıt düzeyi işaretleri bu sürecin
+          okura görünen özetidir.
+        </p>
+      </header>
+
+      <div class="space-y-10">
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Kaynak seçimi</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/75">
+            Metinler; güncel rehber özetleri, hakemli çalışmalar ve içerik türüne uygun güvenilir kaynaklar üzerinden
+            yapılandırılır. Zayıf veya çelişkili kanıt alanlarında bu durum metin içinde veya düzey işaretinde
+            yansıtılacaktır.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Kanıt düzeyi nasıl belirlenir</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/75">
+            Düzenli olarak kullanılan bir ölçüt setiyle, her başlık için kanıtın gücü özetlenir ve okuyucuya sade bir
+            görünürlük sağlanır. Bu özet, tıbbi karar yerine geçmez; bilgiyi tarayıcıda konumlandırmanıza yardımcı olur.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Güncelleme döngüsü</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/75">
+            İçerikler belirli aralıklarla gözden geçirilir; güncellenen bilim veya düzeltme gerektiren noktalar
+            editoryal takvimde yer alır. Yayın tarihi ve revizyon notları ilgili sayfalarda izlenebilir olacaktır.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Anonim yumuşak referans ilkesi</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/75">
+            Makale gövdelerinde, okuma akışını kesmeyecek şekilde kuruluş veya dergi adlarını köşeli parantez içinde
+            tıklanabilir bağlantı olarak sunmuyoruz; bu, düzenleyici risk ve okunabilirlik politikasıyla uyumludur. Kaynak
+            tonu, metin içinde genel ifadelerle (örneğin “uluslararası rehber özetleri”, “hakemli derlemeler”) ve
+            editoryal doğrulama katmanıyla desteklenir; ayrıntılı kaynak listesi ve metodoloji sayfalarında
+            genişletilecektir.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
