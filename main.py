@@ -265,7 +265,7 @@ def save_operational_outputs(
 
     draft_chars = len(draft_body.strip())
     # publisher dugumu calismadan veya state'te publisher_output bos kaldiginda (or. taslak kaydi)
-    # yalnizca writer govdesi yaziliyordu; Kaynaklar/SEO paketi hic eklenmiyordu.
+    # yalnizca writer govdesi yaziliyordu; publisher SEO/SSS/ic baglanti paketi hic eklenmiyordu.
     if draft_chars > 0 and not publisher_body.strip():
         from agents.publisher_agent import compose_publisher_body_markdown
 

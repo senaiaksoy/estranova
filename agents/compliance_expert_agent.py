@@ -16,6 +16,24 @@ from config.pipeline_limits import (
 
 from .compliance_master_validation import run_estranova_master_checks
 
+# Akran tonu: uluslararasi medikal kurulus/yayin adi (inline atif; deterministik).
+FORBIDDEN_SRC_ORG_MARKERS: tuple[tuple[str, str], ...] = (
+    (r"\bNAMS\b", "NAMS"),
+    (r"\bNICE\b", "NICE"),
+    (r"\bJAMA\b", "JAMA"),
+    (r"\bNEJM\b", "NEJM"),
+    (r"\bUSPSTF\b", "USPSTF"),
+    (r"\bACOG\b", "ACOG"),
+    (r"\bLancet\b", "Lancet"),
+    (r"\bWHO\b", "WHO"),
+    (r"\bNHS\b", "NHS"),
+    (r"\bCDC\b", "CDC"),
+    (r"\bFDA\b", "FDA"),
+    (r"\bPubMed\b", "PubMed"),
+    (r"\bMayo\s+Clinic\b", "Mayo Clinic"),
+    (r"Cleveland\s+Clinic", "Cleveland Clinic"),
+)
+
 # CLAUDE / AGENTS — plaza ve is Ingilizcesi (deterministik tespit; skor dusurulur).
 PLAZA_LANGUAGE_SUBSTRINGS: tuple[str, ...] = (
     "aksiyon al",
@@ -121,6 +139,44 @@ class ComplianceExpertAgent(PromptBackedAgent):
         score = int(result.get("compliance_score", 0))
         if result.get("score") is not None:
             score = int(result["score"])
+
+        if re.search(r"\[[^\]]+\]\(https?://", all_text, flags=re.IGNORECASE):
+            auto_reject = True
+            score = min(score, 65)
+            violations.append(
+                Violation(
+                    type="regulation_risk",
+                    severity="critical",
+                    text_ref="inline_external_url",
+                    rule_id="strict.no_external_markdown_links",
+                    fix_suggestion=(
+                        "Makale/sosyal/bultende harici `[metin](http...)` markdown linki yasak; "
+                        "yumusak referans ('arastirmalar gosteriyor', 'uzmanlar belirtiyor') kullanin."
+                    ),
+                )
+            )
+            required_fixes.append(
+                "Harici URL markdown linki kaldirilmali (akran tonu; hekim atif sistemi yok)."
+            )
+
+        org_hits = [lab for pat, lab in FORBIDDEN_SRC_ORG_MARKERS if re.search(pat, all_text, flags=re.IGNORECASE)]
+        if org_hits:
+            auto_reject = True
+            score = min(score, 65)
+            uniq = ", ".join(dict.fromkeys(org_hits))
+            violations.append(
+                Violation(
+                    type="regulation_risk",
+                    severity="critical",
+                    text_ref=uniq[:240],
+                    rule_id="strict.no_named_medical_org_in_body",
+                    fix_suggestion=(
+                        "Kurulus/yayin adi (NAMS, NICE, JAMA vb.) cumle icinde yasak; "
+                        "'menopoz alaninda calisan dernekler' gibi anonim yumusak referans kullanin."
+                    ),
+                )
+            )
+            required_fixes.append(f"Kaldirilmali / anonimlestirilmeli: {uniq}")
 
         master_violations, master_score_cap = run_estranova_master_checks(article)
         for mv in master_violations:

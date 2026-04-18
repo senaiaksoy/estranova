@@ -194,44 +194,12 @@ def _build_faq_markdown(topic: str, audience: str, article: str) -> str:
     return "\n".join(lines)
 
 
-def _build_sources_markdown(sources: list[dict[str, Any]]) -> str:
-    """5–8 kaynak; Research listesi kisa ise mevcut olanlari listeler."""
-    lines = [
-        "## Kaynaklar",
-        "",
-    ]
-    if not sources:
-        lines.append("*Bu calisma icin Research asamasinda onayli kaynak listesi eklenmedi.*")
-        lines.append("")
-        return "\n".join(lines)
-
-    n = len(sources)
-    cap = min(8, max(5, n)) if n >= 5 else n
-    picked = sources[:cap]
-    for i, s in enumerate(picked, start=1):
-        # Researcher occasionally returns a nested list/string instead of a dict;
-        # skip non-dict entries rather than crashing the publisher.
-        if not isinstance(s, dict):
-            continue
-        title = str(s.get("title") or "Kaynak").strip()
-        publisher = str(s.get("publisher") or "").strip()
-        year = s.get("year")
-        yr = f" ({year})" if year else ""
-        url = str(s.get("url") or "").strip()
-        label = f"{title}{yr}"
-        if publisher:
-            label = f"{title} — {publisher}{yr}"
-        if url:
-            lines.append(f"{i}. [{label}]({url})")
-        else:
-            lines.append(f"{i}. {label}")
-    if n < 5:
-        lines.append("")
-        lines.append(
-            f"*Not: Onayli kaynak sayisi {n} adet; ideal aralik 5–8 kaynaktir (Research ile genisletilebilir).*"
-        )
-    lines.append("")
-    return "\n".join(lines)
+def _build_sources_markdown(_sources: list[dict[str, Any]]) -> str:
+    """
+    Kaynak listesi makale sonunda kullanilmaz (akran tonu; klinik 'Kaynaklar'
+    sinyali yaratmamak). Research `approved_sources` arka planda kalir.
+    """
+    return ""
 
 
 def _build_internal_section(
@@ -269,7 +237,7 @@ def _append_publisher_bundle(
     auto_internal: list[dict[str, str]],
     user_internal_raw: str,
 ) -> str:
-    """Makale govdesinin sonuna SEO, FAQ, ic link ve kaynak ekler."""
+    """Makale govdesinin sonuna SEO, FAQ ve ic baglanti onerileri ekler (harici Kaynaklar listesi yok)."""
     user_lines = _parse_user_internal_hints(user_internal_raw)
     blocks = [
         "",
@@ -291,7 +259,7 @@ def _publisher_seo_fields(topic_raw: str, article_raw: str) -> tuple[str, str]:
 
 def compose_publisher_body_markdown(state: EstranovaState) -> str:
     """
-    Writer makalesinin sonuna SEO, SSS, ic baglanti ve Kaynaklar ekler.
+    Writer makalesinin sonuna SEO, SSS ve ic baglanti onerileri ekler.
     Kayit katmaninda publisher_output bos geldiginde (or. taslak yolu) ayni paketi
     yeniden uretmek icin de kullanilir.
     """

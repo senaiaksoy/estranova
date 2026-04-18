@@ -7,6 +7,7 @@ Satır numaraları referans içindir; dosya değişince kayabilir — önce **b�
 ## Brand-level (değişmez üst kurallar)
 
 - **`CLAUDE.md` §1–§6** — Editoryal kimlik, ton, yasak ifadeler, tıbbi sınır, Türkçe yayın dili, okuma düzeyi (HARD CONSTRAINTS).
+- **`CLAUDE.md` §3 — *Yazar persona'sı*** — Tıp dışı 40+ kadın **akran** sesi; Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor blogu / dergi-atıf dili yasak.
 - **`AGENTS.md`** — Site genelinde forbidden examples, allowed neutral CTA örnekleri, ton tarifi.
 
 ## Writer prompt’a gömülü (üretim aşamasında uygulanır)
@@ -20,7 +21,7 @@ Dosya: **`agents/writer_agent.md`**
 | JSON / newline | `### JSON format uyarisi (ZORUNLU)` (~L151) | Double-escape önlemi; yalnızca gerçek newline |
 | Few-shot | `## Few-shot ornek` (~L158–191) | Örnek: sıcak basmaları — açılış + mekanizma + kanıt |
 | Yumuşatma | `## Dil ve uslup` (~L223–231) | “yardımcı olabilir”, “ilişkili olabilir”, vb. |
-| SEO / uzunluk | `## Uzunluk ve SEO` (~L67+) | Kelime hedefi, H2/H3, harici link |
+| SEO / uzunluk | `## Uzunluk ve SEO` (~L67+) | Kelime hedefi, H2/H3; **harici URL yok** (yumusak referans) |
 
 ## Validator / Compliance (otomatik kontrol)
 
@@ -31,6 +32,8 @@ Dosya: **`agents/writer_agent.md`**
 | Riskli kelimeler (`destekler`, `iyileştirir`, …) | `agents/compliance_expert_agent.py` — `risky_terms` döngüsü (~L155–170) |
 | Uzun cümle `style_risk` | `agents/compliance_expert_agent.py` — `_find_long_sentences` + ihlal ekleme (~L197–220) |
 | Eşikler ve token tavanları | `config/pipeline_limits.py` — `COMPLIANCE_LONG_SENTENCE_WORDS`, `WRITER_MAX_OUTPUT_TOKENS`, skor sabitleri |
+| Akran tonu: harici markdown URL + adlı kuruluş | `agents/compliance_expert_agent.py` — `FORBIDDEN_SRC_ORG_MARKERS` + `strict.no_external_markdown_links` |
+| DNA sinyal sayımı (master) | `agents/compliance_master_validation.py` — `_dna_signal_count` |
 
 ## Nerede NE eklenir?
 
@@ -49,4 +52,8 @@ Bu harita + `compliance_raw` dump = “neden 72 aldı?” sorusuna cevap.
 
 ## İlgili operasyon belgesi
 
-Pipeline geneli için: **[PIPELINE.md](PIPELINE.md)**
+Pipeline geneli için: **[PIPELINE.md](PIPELINE.md)** — persona / LLM klinik ton kayması için **G6** (aynı dosyada Gotcha’lar).
+
+## Persona (G6 özeti)
+
+LLM’in varsayılan “doktor yazısı” eğilimine karşı **akran** tonu: `CLAUDE.md` §3 *Yazar persona'sı*, `agents/writer_agent.md` (Humanize + linking yasağı), `compliance_expert_agent.py` (inline URL + adlı kuruluş yakalama).

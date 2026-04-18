@@ -178,6 +178,8 @@ Not allowed:
 
 ## Content Tone
 
+**Writer persona** (aligned with `CLAUDE.md` HARD CONSTRAINT — §3 *Yazar persona'sı*): Articles should read like **Vogue Türkiye / Elle Türkiye / Marie Claire Türkiye** lifestyle-health sections. The implied author is **not a physician** — a successful **40+ woman** in a **non-clinical** career who researches deeply and speaks as a peer. The reader should feel **“you’re one of us”** warmth. **No** academic citation stack, **no** named international society/journal plugs, **no** inline external URLs in the body; **soft** phrasing (“research suggests”, “experts often note”) is acceptable.
+
 Write in a tone that is:
 - calm
 - precise

@@ -25,7 +25,14 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
 2. **Mekanizma yuzeysel:** Mekanizma bolumu vucutta/yasamda **nasil islendigini** yeterince aciklamiyorsa (tek cumle / cok kisa paragraf).
 3. **Turkiye bolumu yok:** Metinde **Turkiye / Türkiye** baglami (baslik veya belirgin paragraf) yoksa.
 4. **Kanıt düzeyi aciklanmamissa:** Kanit bolumunde kanitin gucu, **sinirlar**, belirsizlikler net degilse.
-5. **Estranova DNA (en az 3):** Asagidaki sinyallerden **en az 3** yoksa (ornek: harici kaynak baglantisi, blockquote, liste, bilgilendirme/nötr yonlendirme, soru tonlu H2, editoriyal nötrluk ipuclari).
+5. **Estranova DNA (en az 3):** Asagidaki sinyallerden **en az 3** yoksa:
+   - **Akran-ses bagi** ("sen", "biz", "bircogumuz" gibi 2. tekil veya 1. cogul kisi anlatimi en az 3 paragrafta)
+   - **Humanize cumlesi** (en az 1: "bu donemden gecen biri olarak", "bir arkadas anlatti gibi", "belki sen de yasiyorsundur" benzeri akran/deneyim ifadesi)
+   - Blockquote veya madde isaretli liste ile vurgulama
+   - Bilgilendirme / notr yonlendirme kalibi
+   - Soru tonlu H2 basligi
+   - Yumusatma kaliplari ("yardimci olabilir", "iliskili olabilir")
+   - **Yumusak bilim referansi** ("arastirmalar gosteriyor", "uzmanlar belirtiyor" — kurulus adi/URL olmadan)
 6. **Klişe dil:** Saglik blogu klişesi / slogan dili (or. asiri metafor, “kulak verin”, “altın degerinde” benzeri).
 7. **Acilis sahnesi yok:** Ilk `##` bolumu okuyucunun kendini gordugu kisa **sahne/durum** girisi degilse (soguk ansiklopedi girisi / cok kisa dolgu).
 
@@ -36,6 +43,8 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
 ## Strict Validation (mevcut)
 - Asagidaki kelime/anlam kaliplari **onay verme**:
   - `mucize`, `kesin cozum`, `iyilestirir`, `destekler`, `hastaligi bitirir`, `garanti eder`, `tamamen tedavi eder`, `kesin sonuc verir`
+- **Inline harici URL link YASAK:** Makale govdesinde `[metin](http...)` formatinda harici link varsa **critical regulation_risk + needs_revision**. Yazar persona "akran" — hekim atif sistemi kullanmaz.
+- **Kurulus adi inline atifi YASAK:** "NAMS", "NICE", "JAMA", "Lancet", "Mayo Clinic", "ACOG", "Cleveland Clinic", "USPSTF" gibi uluslararasi medikal kurulus/yayin adi cumle icine yerlestirilmis ise **critical regulation_risk + needs_revision**. Anonim "menopoz alaninda calisan dernekler" gibi referans serbest.
 - Guvenli yonlendirme: `Doktorunuza danisin` veya anlamca esdeger **yoksa** fail.
 - Uzun cumleler (**20+ kelime**): violation + revizyon iste.
 - `docs/red-flags-check.md` ile uyumlu dusun.

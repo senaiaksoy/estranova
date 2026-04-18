@@ -37,7 +37,7 @@ Kaynak: `config/llm_config.py`, `main.py` (`_estimate_cost_usd`).
 
 - **`output/{date}-{slug}.md`** — Yayına hazır kök makale (raporda `root_md_written=True`).
   - Koşul: `final_decision` ∈ (`ready_to_publish`, `ready_to_publish_best_effort`).
-  - İçerik kaynağı: `publisher_output.content.body_markdown` (ham `draft_content.article` değil).
+  - İçerik kaynağı: `publisher_output.content.body_markdown` (ham `draft_content.article` değil). Publisher paketi: SEO meta + SSS + **iç bağlantı önerileri**; **`## Kaynaklar` numaralı URL listesi yok** (akran tonu; araştırma `approved_sources` arka planda kalır).
 - **`output/drafts/{date}-{slug}.md`** — Henüz “yayın hazır” kararı olmayan veya fallback taslaklar.
 - **`output/_debug/writer_raw_*.json`** + **`writer_article_*.md`** — Her Writer `call_llm_json` sonrası ham JSON + makale metni.
 - **`output/_debug/compliance_raw_*.json`** — Her Compliance ham LLM JSON çıktısı.
@@ -68,6 +68,10 @@ Conditional edge fonksiyonlarında (`orchestrator.route_*`) **state mutate etmek
 ### G5: Gemini 404 / 429
 
 Eski `gemini-1.5-flash` bazı ortamlarda 404 (model yok). Aktif hedef: **`gemini-2.5-flash`** (`config/llm_config.py`). Google tarafında kota / faturalama kısıtı olursa 429 veya benzeri hatalarda `LLMManager` tek seferlik `gpt-4o` fallback yapabilir — log’da `WARN` görülür.
+
+### G6: Persona kayması
+
+LLM’ler varsayılan olarak akademik/klinik tonda yazma eğilimi gösterir. Estranova prompt’u **akran** tonunu zorunlu kılar (`CLAUDE.md` §3 *Yazar persona'sı*). Makale gövdesinde **inline harici `[metin](http...)` linki** ve **NAMS / NICE / JAMA** vb. adlı kuruluş atıfları `compliance_expert_agent.py` içinde deterministik **critical `regulation_risk`** ile yakalanır.
 
 ## Debug rehberi
 

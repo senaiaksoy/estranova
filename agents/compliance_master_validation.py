@@ -65,10 +65,49 @@ def _word_count(block: str) -> int:
 
 
 def _dna_signal_count(article: str) -> int:
-    """CLAUDE §5 DNA proxy: ayri sinyaller; en az 3 gerekli."""
+    """Estranova DNA proxy: ayri sinyaller; en az 3 gerekli (akran tonu; harici URL sayilmaz)."""
     signals = 0
     lowered = article.lower()
-    if re.search(r"\[[^\]]+\]\(https?://", article):
+    # Akran-ses: 2. tekil / 1. cogul baglac (kelime sinirli, kabaca)
+    akran_hits = len(
+        re.findall(
+            r"\b(sen|sana|senden|senin|seni|senle|siz|siza|sizin|biz|bize|bizim|"
+            r"vucudun|vücudun|hissettigin|hissettiğin|fark\s+ettigin|fark\s+ettiğin)\b",
+            lowered,
+            flags=re.UNICODE,
+        )
+    )
+    if akran_hits >= 5:
+        signals += 1
+    if any(
+        x in lowered
+        for x in (
+            "bu donemden",
+            "bu dönemden",
+            "bir arkadas",
+            "bir arkadaş",
+            "belki sen",
+            "hepimizin",
+            "birçoğumuz",
+            "bir cogumuz",
+            "birçoğumuzun",
+        )
+    ):
+        signals += 1
+    if any(
+        x in lowered
+        for x in (
+            "arastirmalar",
+            "araştırmalar",
+            "arastirma",
+            "gosteriyor",
+            "gösteriyor",
+            "uzmanlar",
+            "genellikle",
+            "calismalar",
+            "çalışmalar",
+        )
+    ):
         signals += 1
     if re.search(r"^>\s*\S", article, re.MULTILINE):
         signals += 1
@@ -229,8 +268,8 @@ def run_estranova_master_checks(article: str) -> tuple[list[MasterViolationDict]
                 text_ref=f"dna_sinyal={dna_n}",
                 rule_id="master.dna_elements",
                 fix_suggestion=(
-                    "Estranova DNA: bilgi yolu, guven/nötrluk, kanita duyarlilik, editoriyal ton — "
-                    "blockquote, kaynak baglantisi, liste, nötr yonlendirme vb. en az 3 sinyal guclendirilmeli."
+                    "Estranova DNA: akran-ses (sen/biz), humanize cumlesi, yumusak bilim referansi, "
+                    "blockquote, liste, soru tonlu H2, nötr yonlendirme — en az 3 sinyal guclendirilmeli."
                 ),
             )
         )
