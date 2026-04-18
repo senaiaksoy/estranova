@@ -75,6 +75,14 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: 'https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Çift yan yana oturuyor; iletişim ve yakınlık teması',
   },
+  '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban': {
+    src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
+    alt: 'Yoga matı üzerinde sakin nefes alan kadın; pelvik taban farkındalığı ve beden bağı teması',
+  },
+  '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz': {
+    src: 'https://images.unsplash.com/photo-1518310383802-640c2de933d2?auto=format&fit=crop&q=80&w=1800&h=1000',
+    alt: 'Direnç bandıyla egzersiz yapan kadın; kemik gücü ve hareket teması',
+  },
   '/zihin-denge': {
     src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Göl kenarında sakin manzara; zihinsel dinginlik teması',

@@ -50,6 +50,7 @@ export const mainNav: NavLink[] = [
       { name: 'Menopozda cilt değişimleri', href: '/beden-yakinlik/menopozda-cilt-degisimleri' },
       { name: 'Vajinal sağlık', href: '/beden-yakinlik/vajinal-saglik-menopoz' },
       { name: 'Yakınlık ve ağrı', href: '/beden-yakinlik/yakinlik-agrisi-menopoz' },
+      { name: 'İdrar kontrolü ve pelvik taban', href: '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban' },
     ],
   },
   {
