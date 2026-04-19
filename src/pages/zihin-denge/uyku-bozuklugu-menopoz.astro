@@ -4,10 +4,22 @@ import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
+
+const tocEntries = [
+  { id: 'uyku-mimarisi', label: 'Uyku Mimarisi' },
+  { id: 'neden-bozulur', label: 'Menopozda Uyku Neden Bozulur' },
+  { id: 'yaygin-sorunlar', label: 'Yaygın Uyku Sorunları' },
+  { id: 'uyku-hijyeni', label: 'Uyku Hijyeni' },
+  { id: 'dogal-destekler', label: 'Doğal Destekler ve Takviyeler' },
+  { id: 'tibbi-tedavi', label: 'Tıbbi Tedavi Seçenekleri' },
+  { id: 'uzman-ne-zaman', label: 'Ne Zaman Uzmana Başvurmalı' },
+];
 ---
 
 <SiteLayout
@@ -25,23 +37,8 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
       compact
     />
     <SubmenuArticleBody>
-      <section
-        class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8"
-      >
-        <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
-          <div
-            class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10"
-            aria-hidden="true"
-          >
-          </div>
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Yazar</p>
-            <p class="text-xl font-semibold text-[#2D2D2D]">[Yazar Adı]</p>
-            <p class="text-[#2D2D2D]/70">Sağlık editörü, uyku sağlığı ve kadın sağlığı yazarı</p>
-            <p class="mt-2 text-sm text-[#2D2D2D]/65">Yayın tarihi: 14 Nisan 2026 · Okuma süresi: 7 dakika</p>
-          </div>
-        </div>
-      </section>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
       <section
         class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8"
@@ -55,7 +52,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
       </section>
 
       <ArticleProsePanel>
-        <h2>Uyku Mimarisi Nedir?</h2>
+        <h2 id="uyku-mimarisi">Uyku Mimarisi Nedir?</h2>
         <p>
           Uyku, gecede bir kez gerçekleşen tek bir faz değil; NREM ve REM döngülerinin tekrarlandığı dinamik bir süreçtir.
           NREM evrelerinde fiziksel onarım ve enerji dengelenmesi öne çıkarken, REM evresinde duygu düzenleme ve bellek işleme
@@ -66,7 +63,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
           özellikle derin uyku kısmı kısalabilir. Sonuç olarak toplam uyku süresi benzer kalsa bile sabah dinlenmemiş uyanma sıklaşabilir.
         </p>
 
-        <h2>Menopozda Uyku Neden Bozulur?</h2>
+        <h2 id="neden-bozulur">Menopozda Uyku Neden Bozulur?</h2>
         <p>
           En sık nedenlerden biri gece ortaya çıkan vasomotor belirtilerdir: sıcak basması ve terleme [●●●●●].
           Vücut ısısındaki ani değişimler uyku bütünlüğünü bozarak sık uyanmalara yol açabilir.
@@ -76,7 +73,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
           değişim de tabloyu etkileyebilir [●●●●○]. Yani sorun çoğu zaman tek nedene bağlı değildir; birden fazla faktör aynı anda rol oynar.
         </p>
 
-        <h2>Yaygın Uyku Sorunları</h2>
+        <h2 id="yaygin-sorunlar">Yaygın Uyku Sorunları</h2>
         <p>
           Menopoz döneminde en sık görülen paternler; uykuya dalmada güçlük, gece içinde sık uyanma ve erken saatte uyanıp yeniden uyuyamama şeklindedir.
           Bu tabloların tümü için kanıt düzeyi güçlüdür [●●●●●].
@@ -86,7 +83,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
           ilişkiler ve duygusal dayanıklılık üzerinde de etkili olur. Bu nedenle uyku problemini “normal, geçer” yaklaşımıyla ertelememek önemlidir.
         </p>
 
-        <h2>Uyku Hijyeni: Günlük Temel Adımlar</h2>
+        <h2 id="uyku-hijyeni">Uyku Hijyeni: Günlük Temel Adımlar</h2>
         <p>
           Uyku hijyeninde en etkili adım, sabit saatlerdir [●●●●●]. Hafta içi ve hafta sonu arasında büyük saat farkları olmadan uyuyup uyanmak,
           biyolojik saatin dengelenmesine yardımcı olur.
@@ -96,7 +93,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
           yatmadan 2-3 saat önce ağır yemekten kaçınmak, ekran ışığını azaltmak ve kısa bir rahatlama rutini oluşturmak da etkili adımlardır.
         </p>
 
-        <h2>Doğal Destekler ve Takviyeler</h2>
+        <h2 id="dogal-destekler">Doğal Destekler ve Takviyeler</h2>
         <p>
           Melatonin, bazı kişilerde uykuya geçiş süresini kısaltabilir [●●●●○]. Mineral takviyeleri ve hafif bitkisel destekler de belirli gruplarda yarar sağlayabilir,
           ancak etki düzeyi kişisel farklılık gösterir [●●●○○ - ●●●●○].
@@ -106,7 +103,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
           önce hekim görüşü almak güvenlik açısından gerekir.
         </p>
 
-        <h2>Tıbbi Tedavi Seçenekleri</h2>
+        <h2 id="tibbi-tedavi">Tıbbi Tedavi Seçenekleri</h2>
         <p>
           Yaşam tarzı adımları yetersiz kaldığında HRT, kısa süreli uyku ilaçları, gabapentin veya duygu durum eşlik ediyorsa uygun psikiyatrik destek
           seçenekleri gündeme gelebilir. Ayrıca bilişsel davranışçı terapi (CBT-I), uzun dönem uyku iyileşmesinde güçlü kanıta sahiptir [●●●●●].
@@ -116,7 +113,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
           diğerinde kaygı yönetimi öne çıkabilir. Bu nedenle plan, semptom şiddeti ve yaşam düzeniyle birlikte şekillendirilmelidir.
         </p>
 
-        <h2>Ne Zaman Uyku Uzmanına Başvurmalısınız?</h2>
+        <h2 id="uzman-ne-zaman">Ne Zaman Uyku Uzmanına Başvurmalısınız?</h2>
         <p>
           Şiddetli horlama, nefes durması şüphesi, bacaklarda huzursuzluk hissi, gündüz aşırı uyku hali ve 3 aydan uzun süren uyku bozukluğu durumunda
           uyku tıbbı değerlendirmesi gereklidir. Gerektiğinde polisomnografi gibi testler ile uyku mimarisi ayrıntılı incelenebilir.

@@ -1,13 +1,30 @@
 ---
 /**
  * Alt menü / makale gövdesi: hero altında gradient arka plan, okunabilir iç sütun.
+ * İsteğe bağlı `slot="toc"` ile lg+ iki sütun (sticky TOC).
  */
+const hasTOC = Astro.slots.has('toc');
 ---
 
 <article
   class="border-t border-[#6B2D3E]/10 bg-gradient-to-b from-[#FDF8F0] via-[#FFFCF9] to-white text-[#2D2D2D]"
 >
-  <div class="mx-auto max-w-4xl space-y-10 px-6 py-14 md:space-y-12 md:py-20">
-    <slot />
-  </div>
+  {
+    hasTOC ? (
+      <div class="mx-auto max-w-5xl px-6 py-14 md:py-20 lg:grid lg:grid-cols-[12rem_1fr] lg:gap-12">
+        <aside class="hidden lg:block">
+          <div class="sticky top-24">
+            <slot name="toc" />
+          </div>
+        </aside>
+        <div class="min-w-0 space-y-10 md:space-y-12">
+          <slot />
+        </div>
+      </div>
+    ) : (
+      <div class="mx-auto max-w-4xl space-y-10 px-6 py-14 md:space-y-12 md:py-20">
+        <slot />
+      </div>
+    )
+  }
 </article>

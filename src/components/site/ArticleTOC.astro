@@ -1,0 +1,29 @@
+---
+export interface TOCEntry {
+  id: string;
+  label: string;
+}
+interface Props {
+  entries: TOCEntry[];
+}
+const { entries } = Astro.props;
+---
+
+<nav aria-label="İçindekiler" class="font-sans">
+  <p class="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçindekiler</p>
+  <ol class="space-y-3 text-sm leading-snug">
+    {
+      entries.map((entry, i) => (
+        <li>
+          <a
+            href={`#${entry.id}`}
+            class="group block text-[#2D2D2D]/70 transition hover:text-[#6B2D3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+          >
+            <span class="mr-2 font-serif tabular-nums text-[#C9A96E]">{String(i + 1).padStart(2, '0')}</span>
+            <span class="group-hover:underline decoration-[#6B2D3E]/40 underline-offset-2">{entry.label}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>
