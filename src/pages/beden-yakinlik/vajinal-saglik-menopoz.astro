@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
 
@@ -24,11 +26,28 @@ const tocEntries = [
   { id: 'yakinlik-iletisim', label: 'Yakınlıkta İletişim' },
   { id: 'kisa-hatirlatma', label: 'Kısa Hatırlatma' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Vajinal Sağlık ve Menopoz';
+const articleDescription = 'Menopozda vajinal kuruluk, hassasiyet ve bakım seçeneklerini bilimsel çerçevede anlatan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/beden-yakinlik/vajinal-saglik-menopoz',
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik',
+  keywords: ['vajinal atrofi', 'menopoz', 'östrojen', 'nem', 'intim sağlık'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Vajinal Sağlık ve Menopoz - Estranova"
-  description="Menopozda vajinal kuruluk, hassasiyet ve bakım seçeneklerini bilimsel çerçevede anlatan rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/beden-yakinlik" />
 

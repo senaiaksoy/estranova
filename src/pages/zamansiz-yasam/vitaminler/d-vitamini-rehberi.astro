@@ -7,6 +7,8 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
 const tocEntries = [
   { id: 'd-vitamini-nedir', label: 'D Vitamini Nedir' },
@@ -15,11 +17,28 @@ const tocEntries = [
   { id: 'ne-kadar-almali', label: 'Ne Kadar Almalı' },
   { id: 'dogal-kaynaklar', label: 'Doğal Kaynaklar' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'D Vitamini: 40 Yaşından Sonra Ne Kadar Almanız Gerekiyor?';
+const articleDescription = '40 yaş sonrası dönemde D vitamini ihtiyacını, eksiklik belirtilerini, doz aralıklarını ve doğal kaynakları bilimsel bir çerçevede ele alan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'rima-erdemir',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zamansiz-yasam/vitaminler/d-vitamini-rehberi',
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['D vitamini', 'dozaj', '40 yaş sonrası', 'eksiklik', 'takviye', 'doğal kaynaklar'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="D Vitamini: 40 Yaşından Sonra Ne Kadar Almanız Gerekiyor? - Estranova"
-  description="40 yaş sonrası dönemde D vitamini ihtiyacını, eksiklik belirtilerini, doz aralıklarını ve doğal kaynakları bilimsel bir çerçevede ele alan rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar />
 

@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam/beslenme-yaslanma']!;
 
@@ -23,11 +25,28 @@ const tocEntries = [
   { id: 'ek-takviyeler', label: 'Ek Takviyeler' },
   { id: 'kisisellestirme', label: 'Kişiselleştirilmiş Yaklaşım' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi';
+const articleDescription = 'Menopoz döneminde metabolik değişiklikleri desteklemek için protein, vitaminler ve antioksidanlar hakkında rehberlik.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'gamze-cizreli',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zamansiz-yasam/beslenme-yaslanma',
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'anti-inflamatuar'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi — Estranova"
-  description="Menopoz döneminde metabolik değişiklikleri desteklemek için protein, vitaminler ve antioksidanlar hakkında rehberlik."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zamansiz-yasam" />
 

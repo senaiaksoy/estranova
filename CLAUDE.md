@@ -137,6 +137,7 @@ Aşağıdaki kontroller **her üretimde** (metin, sayfa taslağı, agent JSON ç
 - [ ] **Humanize:** En az bir akran / deneyim cümlesi var (§3).
 - [ ] **FAQ:** `pratik_veya_sss` 3–5 konuya özgü soru; jenerik meta soru yok (§3 + Writer doğrulaması).
 - [ ] **Editöryal tipografi:** Makale gövdesi `ArticleProsePanel` + `prose-estranova` ile yayınlanıyor; H2 sonrası ilk paragraf bölümün lede'sini kuracak 1-2 cümlelik editöryal açılış (veri yığını, bullet list veya uzun tanımla başlamıyor).
+- [ ] **Yapılandırılmış veri (JSON-LD):** Her yayın makalesinde `MedicalWebPage` + `Article` + `BreadcrumbList` schema'sı var; `author.Person` writers.ts'ten geliyor, `reviewedBy.Person` tıbbi editör (Doç. Dr. Senai Aksoy), `articleSection` + `sectionPath` kategoriye uygun. Helper: `src/utils/article-schema.ts → buildArticleSchemas()`.
 
 ---
 

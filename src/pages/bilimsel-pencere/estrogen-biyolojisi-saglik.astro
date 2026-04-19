@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!;
 
@@ -26,11 +28,28 @@ const tocEntries = [
   { id: 'klinik-karar', label: 'Klinik Kararlar' },
   { id: 'gelecek', label: 'Gelecek Araştırmalar' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Östrojen Biyolojisi ve Sağlık';
+const articleDescription = 'Östrojenin kemik, kalp, beyin ve metabolizma üzerindeki etkilerini bilimsel çerçevede açıklayan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'rima-erdemir',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/bilimsel-pencere/estrogen-biyolojisi-saglik',
+  articleSection: 'Bilimsel Pencere',
+  sectionPath: '/bilimsel-pencere',
+  keywords: ['östrojen', 'menopoz', 'hormon', 'reseptör', 'kemik', 'kardiyovasküler'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Östrojen Biyolojisi ve Sağlık - Estranova"
-  description="Östrojenin kemik, kalp, beyin ve metabolizma üzerindeki etkilerini bilimsel çerçevede açıklayan rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/bilimsel-pencere" />
 

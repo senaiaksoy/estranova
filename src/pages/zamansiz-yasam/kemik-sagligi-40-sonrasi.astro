@@ -7,6 +7,8 @@ import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const tocEntries = [
   { id: 'neden-onemli', label: 'Neden Önemli' },
@@ -17,11 +19,28 @@ const tocEntries = [
   { id: 'hareket-plani', label: 'Hareket Planı' },
   { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = '40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber';
+const articleDescription = '40 yaş sonrası kemik sağlığını desteklemek için tarama, beslenme, hareket ve tıbbi seçenekleri anlatan kapsamlı rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'gamze-cizreli',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['kemik sağlığı', 'osteoporoz', 'menopoz', 'kalsiyum', 'direnç egzersizi', 'D vitamini'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber - Estranova"
-  description="40 yaş sonrası kemik sağlığını desteklemek için tarama, beslenme, hareket ve tıbbi seçenekleri anlatan kapsamlı rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zamansiz-yasam" />
 

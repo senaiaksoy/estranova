@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
 
@@ -23,11 +25,28 @@ const tocEntries = [
   { id: 'izleme-kayit', label: 'İzleme ve Kayıt' },
   { id: 'cevresel-faktorler', label: 'Çevresel Faktörler' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Ruh Hali Değişimleri ve Menopoz — Depresyon, Anksiyete, Duygudurum';
+const articleDescription = 'Menopozda depresyon, anksiyete ve duygudurum dalgalanmalarını bilimsel çerçevede ele alan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zihin-denge/ruh-hali-degisimleri-menopoz',
+  articleSection: 'Zihin & Denge',
+  sectionPath: '/zihin-denge',
+  keywords: ['menopoz', 'perimenopoz', 'depresyon', 'anksiyete', 'duygudurum', 'ruh hali'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Ruh Hali Değişimleri ve Menopoz - Estranova"
-  description="Menopozda depresyon, anksiyete ve duygudurum dalgalanmalarını bilimsel çerçevede ele alan rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zihin-denge" />
 

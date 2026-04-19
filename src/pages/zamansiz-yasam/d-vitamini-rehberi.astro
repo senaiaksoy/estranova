@@ -7,6 +7,8 @@ import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const tocEntries = [
   { id: 'd-vitamini-nedir', label: 'D Vitamini Nedir' },
@@ -20,11 +22,28 @@ const tocEntries = [
   { id: 'sik-hatalar', label: 'Sık Yapılan Hatalar' },
   { id: 'takip-cercevesi', label: 'Takip Çerçevesi' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'D Vitamini Rehberi';
+const articleDescription = 'D vitamini taraması, beslenme, güneş maruziyeti ve takviye planını dengeli biçimde ele alan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'rima-erdemir',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zamansiz-yasam/d-vitamini-rehberi',
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['D vitamini', 'menopoz', 'kemik sağlığı', 'güneş', 'takviye', 'tarama'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="D Vitamini Rehberi - Estranova"
-  description="D vitamini taraması, beslenme, güneş maruziyeti ve takviye planını dengeli biçimde ele alan rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zamansiz-yasam" />
 

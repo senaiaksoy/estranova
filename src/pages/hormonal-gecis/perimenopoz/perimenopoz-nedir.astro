@@ -7,6 +7,8 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
 const tocEntries = [
   { id: 'perimenopoz-nedir', label: 'Perimenopoz Nedir' },
@@ -16,11 +18,28 @@ const tocEntries = [
   { id: 'doktor-ne-zaman', label: 'Ne Zaman Doktor' },
   { id: 'oz-bakim', label: 'Kendinize Bakım' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Perimenopoz Nedir? — Temel Rehber';
+const articleDescription = 'Perimenopoz sürecinin belirtilerini, evrelerini ve günlük yaşamda uygulanabilir destek adımlarını anlatan kapsamlı rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: ['perimenopoz', 'geçiş dönemi', 'hormon dalgalanması', 'düzensiz döngü', 'menopoz', 'östrojen'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Perimenopoz Nedir? — Temel Rehber - Estranova"
-  description="Perimenopoz sürecinin belirtilerini, evrelerini ve günlük yaşamda uygulanabilir destek adımlarını anlatan kapsamlı rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
 

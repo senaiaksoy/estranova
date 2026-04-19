@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam/hareket-saglik-menopoz']!;
 
@@ -22,11 +24,28 @@ const tocEntries = [
   { id: 'profesyonel-rehberlik', label: 'Profesyonel Rehberlik' },
   { id: 'ilk-adimlar', label: 'İlk Adımlar' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Hareket ve Sağlık — Menopozda Egzersiz Rehberi';
+const articleDescription = 'Menopozda hareketin belirtileri hafifletme, kemik sağlığını koruma ve kardiyovasküler sağlığı destekleme yolları.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'alara-baykent',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zamansiz-yasam/hareket-saglik-menopoz',
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['menopoz', 'hareket', 'egzersiz', 'direnç antrenmanı', 'kardiyovasküler', 'kemik sağlığı'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Hareket ve Sağlık — Menopozda Egzersiz Rehberi — Estranova"
-  description="Menopozda hareketin belirtileri hafifletme, kemik sağlığını koruma ve kardiyovasküler sağlığı destekleme yolları."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zamansiz-yasam" />
 

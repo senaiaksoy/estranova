@@ -7,6 +7,8 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
 const tocEntries = [
   { id: 'nad-nedir', label: 'NAD+ Nedir?' },
@@ -16,11 +18,28 @@ const tocEntries = [
   { id: 'guvenlik', label: 'Güvenlik ve Yan Etkiler' },
   { id: 'sonuc', label: 'Sonuç: Bilim Nerede?' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'NAD+ Takviyesi: Bilim Ne Diyor?';
+const articleDescription = 'NAD+ takviyeleri hakkında güncel bilimsel verileri, olası faydaları, sınırlılıkları ve güvenlik başlıklarını sade bir dille ele alan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'basak-pelister',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
+  articleSection: 'Zamansız Yaşam · Deneysel',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['NMN', 'NR', 'NAD+', 'takviye', 'menopoz', 'güvenlik'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="NAD+ Takviyesi: Bilim Ne Diyor? - Estranova"
-  description="NAD+ takviyeleri hakkında güncel bilimsel verileri, olası faydaları, sınırlılıkları ve güvenlik başlıklarını sade bir dille ele alan rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar />
 

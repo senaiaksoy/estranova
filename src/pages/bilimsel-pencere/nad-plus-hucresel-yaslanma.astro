@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/bilimsel-pencere/nad-plus-hucresel-yaslanma']!;
 
@@ -21,11 +23,28 @@ const tocEntries = [
   { id: 'ticari-takviyeler', label: 'Ticari Takviyeler' },
   { id: 'pratik-yol-haritasi', label: 'Pratik Yol Haritası' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'NAD+ ve Hücresel Yaşlanma — Gelişmekte Olan Bilim';
+const articleDescription = 'NAD+ biyolojisi, yaşlanma ilişkisi ve erken evre insan araştırmalarını kanıt düzeyleriyle açıklayan bilimsel derleme.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'basak-pelister',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/bilimsel-pencere/nad-plus-hucresel-yaslanma',
+  articleSection: 'Bilimsel Pencere',
+  sectionPath: '/bilimsel-pencere',
+  keywords: ['NAD+', 'hücresel yaşlanma', 'sirtuin', 'biohacking', 'menopoz'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="NAD+ ve Hücresel Yaşlanma — Gelişmekte Olan Bilim - Estranova"
-  description="NAD+ biyolojisi, yaşlanma ilişkisi ve erken evre insan araştırmalarını kanıt düzeyleriyle açıklayan bilimsel derleme."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/bilimsel-pencere" />
 

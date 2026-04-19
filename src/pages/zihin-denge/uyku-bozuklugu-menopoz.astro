@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
 
@@ -21,11 +23,28 @@ const tocEntries = [
   { id: 'tibbi-tedavi', label: 'Tıbbi Tedavi Seçenekleri' },
   { id: 'uzman-ne-zaman', label: 'Ne Zaman Uzmana Başvurmalı' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Uyku Bozukluğu ve Menopoz — Dinlenmeyi Yeniden Kazanma Rehberi';
+const articleDescription = 'Menopoz döneminde uyku bozukluklarını anlamak ve kanıt temelli adımlarla uyku kalitesini desteklemek için kapsamlı rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zihin-denge/uyku-bozuklugu-menopoz',
+  articleSection: 'Zihin & Denge',
+  sectionPath: '/zihin-denge',
+  keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Uyku Bozukluğu ve Menopoz — Dinlenmeyi Yeniden Kazanma Rehberi - Estranova"
-  description="Menopoz döneminde uyku bozukluklarını anlamak ve kanıt temelli adımlarla uyku kalitesini desteklemek için kapsamlı rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zihin-denge" />
 

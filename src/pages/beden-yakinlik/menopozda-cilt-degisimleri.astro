@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
 
@@ -21,11 +23,28 @@ const tocEntries = [
   { id: 'yasam-aliskanliklari', label: 'Yaşam Alışkanlıkları' },
   { id: 'profesyonel-destek', label: 'Profesyonel Destek' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Menopozda Cilt Değişimleri — Anlamak ve Bakım Rehberi';
+const articleDescription = 'Menopoz döneminde ciltte görülen değişimleri, kanıt düzeyleriyle bakım seçeneklerini ve günlük destek adımlarını açıklayan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/beden-yakinlik/menopozda-cilt-degisimleri',
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik',
+  keywords: ['menopoz', 'cilt', 'kolajen', 'östrojen', 'yaşlanma', 'topikal'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Menopozda Cilt Değişimleri — Anlamak ve Bakım Rehberi - Estranova"
-  description="Menopoz döneminde ciltte görülen değişimleri, kanıt düzeyleriyle bakım seçeneklerini ve günlük destek adımlarını açıklayan rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/beden-yakinlik" />
 

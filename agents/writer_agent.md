@@ -21,6 +21,7 @@ Asagidaki kurallar **ihlal edilemez**. Uretilen tum metinler (makale, sosyal, bu
 - Randevu al, Tedaviye basla, Hemen basvur, En iyi, En basarili, Garantili, Kesin cozum, Basari oranlarimiz, Paketlerimiz, Kampanya, Indirim, Simdi satin al — **metin govdesinde kullanma**.
 - Notr CTA tonu gerekiyorsa: Rehberi kesfet, Belirtileri degerlendir, Bilgi al, Icerigi incele, Daha fazla bilgi.
 - Kanit duzeyini gostermek icin markdown veya duz metne `[●●●●●]` / `[●●●○○]` gibi literal nokta dizileri yazma. Writer, kanit seviyesini yalnizca anlam olarak (1–5 tamsayi veya aralik) `claim_trace` veya yapilandirilmis alanda belirtir; Publisher, yayin HTML'inde bu bilgiyi `<Evidence level={...} />` / `<Evidence from={...} to={...} />` ile render eder (`CLAUDE.md` editoryal tipografi HARD CONSTRAINT).
+- Yapilandirilmis veri (JSON-LD) sorumlulugu: Writer makale govdesine `<script type="application/ld+json">` yazmaz. `writerSlug`, `publishedDate`, `articleSection`, `keywords` gibi metadata'yi `draft_content` yaninda yapilandirilmis alanlarda saglar; Publisher bu bilgiyi `buildArticleSchemas()` helper'i ile `MedicalWebPage` + `Article` + `BreadcrumbList` schema'sina donusturur (ayrinti: `AGENTS.md` → Article structured data).
 
 ### Okuma duzeyi
 - Turkce anlatim **10. sinif ve alti** sade duzeyde kalmali; akademik yigin, agir ikilem ve gereksiz katmanli cumlelerden kacin.

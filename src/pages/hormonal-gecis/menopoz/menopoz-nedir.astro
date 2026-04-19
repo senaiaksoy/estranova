@@ -7,6 +7,8 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
 const tocEntries = [
   { id: 'menopoz-nedir', label: 'Menopoz Nedir' },
@@ -19,11 +21,28 @@ const tocEntries = [
   { id: 'yol-haritasi', label: 'İlk 12 Ay' },
   { id: 'iyi-olus', label: 'İyi Oluş Alışkanlıkları' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Menopoz Nedir? - Temel Rehber';
+const articleDescription = 'Menopozun tanımını, evrelerini, belirtilerini ve uzun vadeli sağlık gündemini ele alan sade rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/hormonal-gecis/menopoz/menopoz-nedir',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: ['menopoz', 'klimakterik', 'FSH', 'östrojen', 'postmenopoz', 'hormonal geçiş'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Menopoz Nedir? - Temel Rehber - Estranova"
-  description="Menopozun tanımını, evrelerini, belirtilerini ve uzun vadeli sağlık gündemini ele alan sade rehber."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
 

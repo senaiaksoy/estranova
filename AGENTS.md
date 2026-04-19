@@ -197,6 +197,61 @@ Under the hood: `<section class="rounded-[32px] …"><div class="prose prose-lg 
 
 **Reference live examples:** `src/pages/bilimsel-pencere/estrogen-biyolojisi-saglik.astro` (12 H2), `src/pages/zihin-denge/ruh-hali-degisimleri-menopoz.astro` (9 H2), `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro` (7 H2).
 
+### Article structured data — JSON-LD (MANDATORY)
+
+Every published article ships with schema.org JSON-LD so search engines and assistive tooling can resolve the editorial and medical-review trust chain (EEAT). The helper lives at `src/utils/article-schema.ts` and is non-optional for new static `.astro` articles.
+
+**Usage (in article frontmatter):**
+```astro
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Makale Başlığı';
+const articleDescription = 'Kısa 1-2 cümle SEO meta açıklama.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',          // must exist in src/data/writers.ts
+  publishedDate: '14 Nisan 2026',     // TR long form OR ISO — helper normalises
+  pathname: '/zihin-denge/slug',      // leading slash, no siteUrl concatenation
+  articleSection: 'Zihin & Denge',    // human label
+  sectionPath: '/zihin-denge',        // hub URL path
+  keywords: ['menopoz', 'uyku', '…'],
+  siteUrl,
+});
+```
+Then pass to `SiteLayout`:
+```astro
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+```
+
+**What the helper emits (3 schemas, appended to SiteLayout's default WebSite + Organization):**
+- **`MedicalWebPage`** — `name`, `description`, `url`, `inLanguage: 'tr-TR'`, `datePublished`/`dateModified` (ISO), `reviewedBy: Person` (Doç. Dr. Senai Aksoy default).
+- **`Article`** — `headline`, `description`, ISO dates, `mainEntityOfPage`, `articleSection`, `keywords`, `author: Person` (resolved from `writers.ts` — includes `name`, `jobTitle`, `description`, `image`, `url: /yayin-kurulu`), `publisher: Organization` (with logo), `reviewedBy: Person`.
+- **`BreadcrumbList`** — Anasayfa → (optional) articleSection → Article title.
+
+**Category ↔ path map:**
+- `/zihin-denge/…` → `articleSection: 'Zihin & Denge'`, `sectionPath: '/zihin-denge'`
+- `/hormonal-gecis/…` → `'Hormonal Geçiş'`, `/hormonal-gecis`
+- `/zamansiz-yasam/…` → `'Zamansız Yaşam'`, `/zamansiz-yasam`
+- `/zamansiz-yasam/deneysel/…` → `'Zamansız Yaşam · Deneysel'`, `/zamansiz-yasam`
+- `/bilimsel-pencere/…` → `'Bilimsel Pencere'`, `/bilimsel-pencere`
+- `/beden-yakinlik/…` → `'Beden & Yakınlık'`, `/beden-yakinlik`
+
+**Do not:**
+- Hand-roll `<script type="application/ld+json">` in article pages — use the helper.
+- Pass absolute URLs in `pathname` — the helper prepends `siteUrl` and handles double-slash prevention.
+- Override `medicalReviewer`/`medicalReviewerTitle` unless the article is genuinely reviewed by a different person (editorial coordination first).
+- Omit `writerSlug` — every article has a named author resolved from `writers.ts`.
+
+**Dynamic articles** rendered via `src/pages/article/[slug].astro` keep their existing inline schema (richer: citations, reviewer roles). The helper is for the 17 static hub-style articles.
+
 ### Assessment or contact pages
 If creating a symptom-assessment or contact-style page, keep it neutral and informational.
 Do not make it a sales funnel.

@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
 
@@ -23,11 +25,28 @@ const tocEntries = [
   { id: 'uzun-vadeli', label: 'Uzun Vadeli Perspektif' },
   { id: 'ilk-adimlar', label: 'İlk Adımlar' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Bellek ve Odaklanma — Menopozda Kognitif Değişimler';
+const articleDescription = 'Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim stratejileri hakkında rehberlik.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'rima-erdemir',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/zihin-denge/bellek-odaklanma-menopoz',
+  articleSection: 'Zihin & Denge',
+  sectionPath: '/zihin-denge',
+  keywords: ['menopoz', 'bellek', 'odaklanma', 'beyin sisi', 'kognitif değişim', 'perimenopoz'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Bellek ve Odaklanma — Menopozda Kognitif Değişimler — Estranova"
-  description="Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim stratejileri hakkında rehberlik."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zihin-denge" />
 

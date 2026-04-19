@@ -9,6 +9,8 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/yakinlik-agrisi-menopoz']!;
 
@@ -23,11 +25,28 @@ const tocEntries = [
   { id: 'uzun-vadeli', label: 'Uzun Vadeli Bakış' },
   { id: 'ilk-adimlar', label: 'İlk Adımlar' },
 ];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Yakınlık Sırasında Ağrı — Menopozda Dispareuniya Rehberi';
+const articleDescription = 'Menopozda yakınlık sırasında ağrı veya rahatsızlığın nedenleri ve tedavi seçenekleri hakkında kapsamlı rehberlik.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '14 Nisan 2026',
+  pathname: '/beden-yakinlik/yakinlik-agrisi-menopoz',
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik',
+  keywords: ['disparoni', 'menopoz', 'yakınlık', 'vajinal kuruluk', 'hormon'],
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Yakınlık Sırasında Ağrı — Menopozda Dispareuniya Rehberi — Estranova"
-  description="Menopozda yakınlık sırasında ağrı veya rahatsızlığın nedenleri ve tedavi seçenekleri hakkında kapsamlı rehberlik."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/beden-yakinlik" />
 
