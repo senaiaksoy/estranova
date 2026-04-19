@@ -4,8 +4,8 @@
 
 - Makale gövdesi: `ArticleProsePanel` → `prose prose-lg prose-estranova max-w-none` (tek sistem).
 - Stil kaynağı: `src/index.css` içinde `@utility prose-estranova` (`@tailwindcss/typography` ile).
-- **Kanıt düzeyi (Evidence):** `src/components/site/Evidence.astro` — inline gold/burgundy sparkline segmentleri; `title` + `aria-label` ile “Kanıt düzeyi: … (N/5)”; aralık için `from` / `to`. **Literal `[●●●●●]` vb. nokta dizileri yasak** (yalnızca bileşen).
-- Sparkline stilleri: `prose-estranova` altında `& .evidence*`; aynı kurallar `ArticleProsePanel` dışındaki hub tablo/kartlar için `@layer components` içinde tekrarlanır.
+- **Kanıt düzeyi (Evidence):** `src/components/site/Evidence.astro` — parantez içi italic Türkçe etiket (`(güçlü kanıt)` · `(iyi kanıt)` · `(orta kanıt)` · `(sınırlı kanıt)` · `(zayıf kanıt)`); aralık `from` / `to` ile `(orta–iyi kanıt)` birleşir. Level 5 burgundy, level 4 gold-bronze, level 1-3 gold; italic Newsreader, 0.85em. `title` + `aria-label` "Kanıt düzeyi: … (N/5)" magnitude'u korur. **Literal `[●●●●●]` vb. nokta dizileri yasak** (yalnızca bileşen).
+- Evidence stilleri: `prose-estranova` altında `& .evidence*`; aynı kurallar `ArticleProsePanel` dışındaki hub tablo/kartlar için `@layer components` içinde tekrarlanır.
 
 ## Bakım
 
