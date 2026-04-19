@@ -1,171 +1,197 @@
 # Yarın Nereden Başlamalıyım
 
-> **Tarih:** 2026-04-18 oturum kapanışı
-> **Durum:** Sistem **production-ready** — pipeline uçtan uca çalışıyor, persona oturmuş, routing aktif
-> **Maliyet/makale:** ~$0.20 · **Süre:** ~3 dk LLM + 5 dk polish
+> **Tarih:** 2026-04-19 oturum kapanışı
+> **Durum:** Anasayfa + makale altyapısı **editöryal yayın seviyesinde**; yazar kadrosu 5 kişilik, data-driven; aesthetic pass tamamlandı
+> **Son commit:** `7dab824` (origin/main senkron)
 
 ---
 
-## TL;DR — 30 saniyelik özet
+## TL;DR — 30 saniye
 
-Estranova içerik fabrikası tamamen çalışır halde. Yarın yapacağın:
-1. PowerShell aç → `cd E:\git_repo\estranova` → `streamlit run streamlit_app.py`
-2. Tarayıcıda konu yaz → "Icerik Uret" → 3 dk bekle → metni oku → kategori seç → "Onayla ve Yayınla"
-3. (Opsiyonel polish) `src/data/submenu-heroes.ts` ve ilgili kategori `index.astro` dosyasına 1-2 satır manuel ekle
-4. `npm run dev` ile lokal preview
-
-Hepsi bu kadar. Aşağısı detay.
+Anasayfa sıfırdan yayın kimliğine dönüştü: editöryal portre hero, 7 numaralı bölüm, burgundy pull quote spread, cream gradient progression, fleuron ornament. Yazar altyapısı kuruldu: `src/data/writers.ts` tek kaynak, 5 yazar (Berna/Alara/Başak/Rima/Gamze), anasayfa "Bu sayıda yazanlar" bloğu, 17 makalede `<ArticleAuthorBlock>` yazar atfı. Placeholder "[Yazar Adı]" sıfır.
 
 ---
 
-## 1. Sistemi Çalıştırma
+## Bu Oturumda (2026-04-18 → 2026-04-19) Ne Yapıldı?
 
-### Streamlit (içerik üretim merkezi)
-```powershell
-cd E:\git_repo\estranova
-streamlit run streamlit_app.py
-```
-Tarayıcı: `http://localhost:8501`
+### Phase A — Anasayfa yapısal refactor
+- HomeHero: full-bleed editöryal portre (kadın, kitap okuyan) + koyu gradient + cream typography + 2 CTA ("Kütüphaneyi aç" + "Belirtilere göre bak"). Magazine-cover denemesi başarısız, rollback ile klasik overlay hero.
+- Glass bullet kartı kaldırıldı, sol text alanı genişledi
+- Bölüm numaralama sistemi (01–07, gold serif tabular-nums)
+- Kanıt tablosu → ince trust şerit (3 link: Editöryal Politika · Tıbbi Sorumluluk · Nasıl Araştırıyoruz)
+- Newsletter "Aylık Editöryal Özet" (pop-up yok, "Özeti al" nötr CTA, 3-col grid + still-life foto)
+- Editöryal Seçki: 3 kart + magazine-index tipografik liste (4 satır, 48-64px thumbnail)
+- Son burgundy CTA → ince cream kapanış şeridi (9 CTA'dan 8'e indi)
+- Navbar + Footer: max-w-7xl → max-w-6xl (body ile hizalı)
+- Policy sayfaları: kanonik path'lerde tekilleşti; `/tibbi-sorumluluk-reddi`, `/gizlilik-politikasi`, `/methodology` silindi, 301 redirect'ler
 
-### Astro preview (lokal site)
+### Phase B — Yazar altyapısı
+- `src/data/writers.ts` — 5 yazar, `Writer` interface (slug, displayName, role, ageBand, publicBio, signaturePhrase, portrait, focusAreas, isEditor)
+- 5 yazar profili markdown olarak (`writers/*.md`): Berna + Alara + Başak + Rima + Gamze (Berna template, 11 bölüm)
+- 4 yazar portresi indirilip 400×400 WebP optimize edildi (placeholder, yayın öncesi gerçek foto gerek)
+- `yayin-kurulu.astro` data-driven (hardcoded array kaldırıldı)
+- Anasayfa "Bu sayıda yazanlar" bloğu — 5 yazar, circular portrait, typographic initial fallback
+- `ArticleAuthorBlock` component — writers.ts'den çekiyor (portre + rol + medical reviewer + tarih + okuma)
+- `ArticleTOC` component — narrow sticky sidebar, numaralı section index, hidden on mobile
+- `SubmenuArticleBody` — TOC slot varsa 2-col grid, yoksa tek sütun (backward compatible)
+- **17/17 makale rollout:** tüm makaleler `ArticleAuthorBlock` kullanıyor; 16 makaleye yazar ataması yapıldı mapping'e göre
+
+### Ritim/estetik pass
+- Pull quote #1 kaldırıldı, #2 full-bleed burgundy spread (`bg-[#6B2D3E] py-24/32`, cream serif 4xl→6xl italic, sol gold çizgi)
+- Cream 3-tone gradient progression: Sıcacık Köşe, Belirti, Koruyucu (ısınan sıcaklık)
+- Fleuron ❦ ornament: 01 Yolculuk ile 02 Sıcacık Köşe arasında (gold rule + ❦ + gold rule)
+- Global `::selection` burgundy/15 (src/index.css)
+- Kanıt düzeyi etiketi kaldırıldı (5-katman kart → 3-katman)
+- Medical reviewer magazine-index'te tekrardan silindi (CLAUDE.md §3 uyum)
+- Drop cap Koruyucu Sağlık'ta (first-letter utility)
+- Yazar Kadrosu bölümü 03 → 05 (masthead konumu, portre-triplet cluster dağıldı)
+
+### Performans
+- **Berna portresi 6.94 MB JPG → 14 KB WebP** (99.8% küçülme, en büyük tek kazanç)
+- Hero foto AI-generated → 316 KB WebP 2400w `object-[center_30%]`
+- Writer portraits ~60 KB toplam
+- Newsletter still-life 2048² PNG → 121 KB WebP 1200×1200
+
+---
+
+## Kritik Dosyalar
+
+### Yazar altyapısı (yeni)
+- `src/data/writers.ts` — tek kaynak; 5 yazar; editors + guestWriters helpers
+- `src/components/site/ArticleAuthorBlock.astro` — makale başında yazar atfı
+- `src/components/site/ArticleTOC.astro` — narrow sticky TOC sidebar
+- `src/components/site/SubmenuArticleBody.astro` — conditional grid (TOC slot)
+
+### Anasayfa
+- `src/pages/index.astro` — 7 numaralı bölüm + burgundy pull quote + gradient zemin
+- `src/components/site/HomeHero.astro` — classic overlay hero
+- `src/components/site/EditorialDigestStrip.astro` — newsletter 3-col + still-life
+- `src/components/site/SiteNavbar.astro` + `SiteFooter.astro` — max-w-6xl
+
+### Görsel varlıklar (yeni)
+- `public/images/hero/home-hero.webp` (316 KB, AI-generated, yayında gerçek foto gerek)
+- `public/images/newsletter/newsletter-ritual.webp` (121 KB, still-life)
+- `public/images/writers/{alara,basak,gamze,rima}.webp` (placeholder — yayın öncesi izinli foto)
+- `public/images/editor/berna-aksoy.webp` (14 KB, optimize edildi)
+
+### Yazar profilleri (editöryal referans)
+- `writers/berna-aksoy.md` · `writers/alara-baykent.md` · `writers/basak-pelister.md` · `writers/rima-erdemir.md` · `writers/gamze-cizreli.md`
+
+### Preview (dev denetim)
+- `.claude/launch.json` — Claude Preview server config (port 4322)
+
+---
+
+## Kalan İşler (Öncelik Sırası)
+
+### Yayın öncesi kritik
+1. **Yazar portreleri** — mevcutlar web'den alınan placeholder. Her yazardan izinli profesyonel foto al
+2. **Başak portresi kalite düşük** — öncelikli değişim
+3. **Hero foto AI-generated** — gerçek editöryal foto veya custom shoot
+
+### Devam eden editöryal işler
+4. **TOC rollout** — 16 makale ArticleAuthorBlock'a bağlandı ama TOC sadece uyku-bozuklugu-menopoz'da. Her makaleye ArticleTOC + H2 id'leri ekle
+5. **ArticleAuthorBlock default values check** — Cursor rollout'ta bazı makalelerde default tarih/süre kullandı mı kontrol et; grep ile "publishedDate=\"14 Nisan 2026\"" say
+
+### Aesthetic polish (isteğe bağlı)
+6. **Paket B kompozisyon:** Koruyucu Sağlık split-screen (`text-9xl "40+"`) + Yazar Kadrosu dalga offset
+7. **Paket C tipografi:** Oversize 9xl italic kapak numarası (1-2 bölüm arkasında), italic-roman heading
+8. **Kart hover polish:** gold alt-çizgi büyümesi + border ısınması
+
+### Performans pass 4
+9. Google Fonts `@import` → preload (`src/index.css:1` — render-blocking)
+10. Hero `<link rel="preload" as="image">` ekle (LCP ~200ms)
+11. Submenu-heroes Unsplash URL'leri responsive (`srcset` veya w=600 variant — Yolculuk kartları + Son yayınlar thumbnail'de 1800w indiriyor)
+
+### Yeni özellikler
+12. **"Okur Soruyor" köşesi** — NYT Well "Ask Well" tarzı; okur sorusu + yazar rotasyonlu yanıt
+13. **Article schema markup (JSON-LD)** — FAQPage, NewsArticle, Person (author), MedicalReviewedBy — EEAT için
+14. **Sitemap + RSS feed** — SEO temeli
+15. **Cloudflare Pages deploy** — henüz lokal preview
+
+---
+
+## Hızlı Kontroller / Komutlar
+
+### Dev server (port 4322)
 ```powershell
 cd E:\git_repo\estranova
 npm run dev
 ```
-Tarayıcı: `http://localhost:3000`
+`http://localhost:4322`
 
-> **Not:** İki terminal aç, ikisini birden çalıştırabilirsin. Streamlit makale üretir, Astro hot reload ile otomatik gösterir.
-
----
-
-## 2. Yeni Makale Üretim Akışı (Streamlit'ten)
-
-| Adım | Ne yapacaksın |
-|------|---------------|
-| 1 | "Konu başlığı" kutusuna konuyu yaz |
-| 2 | Makale açısı: varsayılan bırak (mekanizma/tedavi/deneyim varyasyonları yan etki yapabilir) |
-| 3 | "Icerik Uret" → 3 dakika bekle |
-| 4 | "Onay ekranı" açılınca metni oku |
-| 5 | Kategori dropdown'unda writer'ın seçimini gör (yanlışsa override et) |
-| 6 | Düzenleme istersen text-area'da yaz, sonra **"✅ Onayla ve Yayınla"** |
-| 7 | Çıkan başarı mesajında 2 yol gösterir: markdown ve Astro page |
-
-**Sonra (5 dk polish):**
-- `src/data/submenu-heroes.ts`'a kategori-route eşleşmesi için Unsplash hero ekle
-- İlgili `src/pages/{kategori}/index.astro` dosyasına makale linkini liste maddesi olarak ekle (zaten manuel örnek var: `hormonal-gecis/menopoz/index.astro`)
-
----
-
-## 3. Bilinmesi Gereken Kritik Dosyalar
-
-### Site kuralları (kanonik — değişiklik öncesi oku)
-- **`CLAUDE.md`** — marka, persona, dil, FAQ disiplini, dış link yasağı (HARD CONSTRAINT §1-§6)
-- **`AGENTS.md`** — pipeline ajan kuralları + model matrix one-liner
-- **`COMPLIANCE_CHECKLIST.md`** — pre-publish denetim listesi (skill `create-article` kullanır)
-
-### Operasyonel referans
-- **`docs/PIPELINE.md`** — model matrix, eşikler, gotcha'lar (G1-G6), routing semantiği
-- **`docs/style-rules-map.md`** — hangi kural hangi dosyada haritası
-- **`docs/okuyucu-kaynaklari-referans-listesi.md`** — yazılarda referans verebileceğin medya kaynakları (Vogue, Elle, NYT Well vb.) — manuel kullanım, sisteme entegre değil
-- **`CHANGELOG.md`** — bu oturumda yapılan tüm değişiklikler
-
-### Pipeline kalbi
-- `agents/writer_agent.md` — writer prompt (en önemli dosya)
-- `agents/writer_agent.py` — validator (8 bölüm + FAQ disiplini + category)
-- `agents/compliance_expert_agent.py` — deterministic checks
-- `prompts/compliance-agent.md` — compliance LLM prompt
-- `config/pipeline_limits.py` — eşikler (publish ≥85, max 2 iter)
-- `config/llm_config.py` — model atamaları (writer/checker/compliance: claude-sonnet-4-6; researcher: gemini-2.5-flash; orchestrator: gpt-4o)
-- `main.py` `save_approved_article_with_routing` — yayın fonksiyonu (markdown + Astro page)
-
-### Site mimarisi
-- `src/data/navigation.ts` — header menü
-- `src/data/submenu-heroes.ts` — kategori sayfası ve makale hero görselleri
-- `src/pages/{kategori}/{slug}.astro` — yayınlanmış makale sayfaları
-- `src/content/blog/{date}-{slug}.md` — markdown içerik kaynağı
-
----
-
-## 4. Bekleyen İşler (Opsiyonel İyileştirmeler — Önceliğe Göre)
-
-### Yüksek değer / düşük efor
-1. **Hero görsel galerisi** — `submenu-heroes.ts`'a önceden 10-15 tematik Unsplash görseli ekle, makale yayınlandığında kategoriye göre otomatik atansın
-2. **Eski 14 makaleyi yeni persona ile yenile** — `output/2026-04-1{6,7}-*.md` dosyaları eski persona ile üretildi (doktor tonu, dış link). Yeni Vogue/Elle persona ile tekrar üretip eski sürümleri arşivle. Maliyet: ~$3, süre: 30 dk
-3. **Streamlit kategori dropdown'u test et** — bu oturumda ekledim ama UI testi yapmadım, ilk sefer kullanırken görsel kontrol gerekebilir
-
-### Orta değer / orta efor
-4. **3-seviye navigation hierarchy** — şu an Hormonal Geçiş → Menopoz düz link, alt makaleler dropdown'da görünmüyor. Yeni makaleler için Menopoz → Kemik erimesi gibi alt-alt menü eklemek istersen `src/data/navigation.ts` tip tanımı + `SiteNavbar.astro` render değişikliği gerekir
-5. **Compliance kalibrasyon** — Sonnet compliance LLM 70-85 bandında takılıyor, 90+ nadiren. Best-effort akışı çalışıyor ama "tutarlı 90+" için compliance prompt'una farklı kalibrasyon denemeleri yapılabilir
-6. **Description bug daha temizlenebilir** — bugün düzelttim ama tek satırlık description bazı makalelerde fazla teknik kalabilir; özet cümlesi seçim mantığı geliştirilebilir
-
-### Düşük değer / yüksek efor
-7. **EEAT + Schema Markup** — `docs/PIPELINE.md` "Gelecek çalışmalar" bölümünde detaylı: FAQPage JSON-LD, author bio + medical reviewer signature, last updated, NewsArticle schema. Astro tarafında SEO ileri seviye iş
-8. **Researcher kaynak tutarsızlığı** — Gemini 2.5-flash bazen `approved_sources` boş döndürüyor (bug fix var ama temel sebep researcher prompt). Kaliteli source paketi için researcher iyileştirmesi
-9. **Skill mimarisi** — agent'lara LangChain tools ekleme. Bu oturum sonunda tartıştık, şimdilik gereksiz overengineering kararı verdik
-
-### İçerik stratejisi (kod değil)
-10. **Editöryal takvim** — haftada 2-3 makale tempo planı, hangi pillar'larda hangi sırada
-11. **Author profili sayfası** — `src/pages/yayin-kurulu.astro` veya `authors.astro` zaten var, gerçek persona/imza eklenebilir
-12. **İlk gerçek yayın (Cloudflare Pages)** — şu an lokal preview; deploy henüz tetiklenmedi
-
----
-
-## 5. Bu Oturumda (2026-04-17/18) Ne Yapıldı?
-
-35+ commit, en önemli mihenk taşları:
-
-| Mihenk | Etki |
-|--------|------|
-| Sonnet 4.6 upgrade (writer/checker/compliance) | Kalite tavanı yükseldi |
-| Akran persona (Vogue/Elle tonu) | "Doktor yazısı" hissi gitti, lifestyle dergisi tonu |
-| Dış URL link yasağı | Akran tonu güçlendi, NAMS/NICE atfı kalktı |
-| Humanize zorunluluğu | Her makalede biz-tonu, akran cümlesi |
-| FAQ disiplini (3-5 konuya özgü) | Publisher hardcoded jenerik FAQ silindi |
-| Category routing | Yayın artık doğru kategori klasörüne otomatik düşüyor |
-| Site kuralları konsolidasyonu | CLAUDE/AGENTS/COMPLIANCE_CHECKLIST tek kaynak; 3 stale dosya silindi |
-| Threshold 85 + best-effort yayın | Sonnet varyansı best_effort ile bypass ediliyor |
-
-Detay: `git log b6d06f2..HEAD` veya `CHANGELOG.md`.
-
----
-
-## 6. Yeni Claude Code Oturumu İçin Priming Prompt
-
-Yeni bir oturum açtığında, Claude'a şunu yapıştır:
-
+### Build test
+```powershell
+cd E:\git_repo\estranova
+npm run build
 ```
-Estranova içerik fabrikası üzerinde çalışıyoruz. Sistem üretime
-hazır — geçmiş oturumda kuruldu. Bağlam dosyaları:
+56 sayfa üretilmeli.
 
-- docs/YARIN-NEREDEN-BASLAMALIYIM.md (bu oturumun handoff notu)
-- CLAUDE.md (marka + persona kuralları, HARD CONSTRAINT)
-- docs/PIPELINE.md (operasyonel detay)
-- CHANGELOG.md (geçmiş oturumun ne yaptığı)
-
-Önce bu dört dosyayı oku, sonra bana ne yapmak istediğimi sor.
-Yapabileceğim üç şey var:
-1. Yeni makale üret (Streamlit'ten veya CLI)
-2. Beklemde olan iyileştirmelerden birini uygula (handoff notunda
-   "Bekleyen İşler" listesi var)
-3. Spesifik bir konu/sorun üzerinde çalış (söyleyeceğim)
+### Streamlit (içerik üretim — Phase A öncesinden, değişmedi)
+```powershell
+cd E:\git_repo\estranova
+streamlit run streamlit_app.py
 ```
 
-Bu prompt seni hızla bağlama oturtur. Claude bağlamı okur, hangi yöne gideceğini sana sorar.
+### Browser preview ile denetim (Claude Preview MCP)
+`.claude/launch.json` → preview_start → screenshot/eval.
 
 ---
 
-## 7. Acil Sorun Olursa
+## Acil Sorun Olursa
 
 | Belirti | Yapılacak |
-|---------|-----------|
-| Streamlit "No module" hatası | `pip install -r requirements.txt` |
-| API key hatası | `.env` dosyasında ANTHROPIC/OPENAI/GOOGLE key dolu mu? |
-| Pipeline takılıyor | `output/_debug/` altındaki son writer/compliance dump'a bak |
-| Astro page görünmüyor | `npm run dev` aktif mi? Hot reload bazen elle restart ister |
-| Yayın klasör hatalı | `category` writer'dan ne geldi? CLI'da `--category` ile override |
-| Yeni Cursor branch'e düştün | `git checkout main` ile geri dön (bu oturumda bir kere oldu) |
+|---|---|
+| Placeholder "[Yazar Adı]" görüldü | `grep -rn "\[Yazar Adı\]" src/pages` — sıfır olmalı |
+| Makale TOC çalışmıyor | H2 id'leri eşleşiyor mu? tocEntries array ile ArticleTOC arasında slug match |
+| Writer portrait broken image | `src/data/writers.ts`'de `portrait` path doğru mu? Component initials fallback yapıyor |
+| Dev server port çakışması | `astro.config.mjs` + `package.json` scripts port 4322 |
+| Worktree'de eski state | main repo'da çalış (memory note); `E:/git_repo/estranova` direkt |
 
 ---
 
-İyi geceler Dr. Aksoy 🌿
-Yarın görüşürüz.
+## Yeni Oturum Priming Prompt
+
+Yeni bir oturum açtığında Claude'a şunu yapıştır:
+
+```
+Estranova anasayfa + makale altyapısı premium editöryal seviyesinde.
+Bağlam dosyaları sırayla oku:
+
+- docs/YARIN-NEREDEN-BASLAMALIYIM.md (bu handoff)
+- CLAUDE.md (marka + persona HARD CONSTRAINT)
+- src/data/writers.ts (5 yazar, tek kaynak)
+- src/pages/index.astro (7 numaralı bölüm)
+- writers/*.md (yazar detay profilleri)
+
+Sonra bana ne yapmak istediğimi sor. Olasılıklar:
+1. Yazar portrelerini gerçek/izinli foto ile değiştir (yayın öncesi kritik)
+2. TOC rollout kalan 16 makaleye
+3. Performans pass 4 (Google Fonts preload, hero srcset)
+4. Aesthetic Paket B veya C
+5. "Okur Soruyor" köşesi
+6. Article schema markup (JSON-LD, EEAT)
+7. Spesifik bir konu/sorun (söyleyeceğim)
+```
+
+---
+
+## Bu Oturumda Commit Zinciri
+
+- `7dab824` feat(articles): Phase B step 3 rollout — 16 articles wired to ArticleAuthorBlock
+- `8d81208` feat(article): Phase B step 3 — writer attribution + sticky TOC sidebar
+- `b266a9f` feat(home): editorial aesthetic pass — burgundy spread, cream progression
+- `e5a16a9` refactor(home): editorial rhythm pass — declutter and repace
+- `2799a87` perf(home): compress Berna editor portrait 6.94MB to 14KB WebP
+- `ee10922` feat(home): Phase B step 2 — writer roster block "Bu sayıda yazanlar"
+- `c0a9c2e` feat(writers): add 4 guest writer portraits (placeholder)
+- `17fae89` feat(home): Phase B step 1 — writer data layer + editorial attribution
+- `4a771ad` feat(home): newsletter still-life — 3-column ritual image
+- `c24037c` refactor(home): Phase A — hero portrait, container alignment, path cleanup
+
+Detay: `git log 0136235..HEAD` veya `git log --oneline -15`.
+
+---
+
+İyi geceler Dr. Aksoy.
+Yarın görüşürüz — yayın günü yaklaşıyor 🌿
