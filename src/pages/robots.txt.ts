@@ -10,7 +10,13 @@ export const GET: APIRoute = ({ site }) => {
     });
   }
 
-  const lines = ['User-agent: *', 'Allow: /', '', `# Sitemap: ${base}/sitemap-index.xml`];
+  const lines = [
+    'User-agent: *',
+    'Allow: /',
+    '',
+    `Sitemap: ${base}/sitemap-index.xml`,
+    `# RSS: ${base}/rss.xml`,
+  ];
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },
   });
