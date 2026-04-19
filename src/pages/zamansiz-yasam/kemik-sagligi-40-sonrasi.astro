@@ -4,7 +4,19 @@ import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../components/site/Evidence.astro';
+
+const tocEntries = [
+  { id: 'neden-onemli', label: 'Neden Önemli' },
+  { id: 'osteopeni-osteoporoz', label: 'Osteopeni ve Osteoporoz' },
+  { id: 'risk-faktorleri', label: 'Risk Faktörleri' },
+  { id: 'kemik-taramasi', label: 'Kemik Taraması' },
+  { id: 'beslenme-destegi', label: 'Beslenme Desteği' },
+  { id: 'hareket-plani', label: 'Hareket Planı' },
+  { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
+];
 ---
 
 <SiteLayout
@@ -15,6 +27,7 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 
   <main id="main-content" class="pt-24 text-[#2D2D2D]">
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="gamze-cizreli" publishedDate="14 Nisan 2026" readingMinutes={6} />
 
         <header class="mb-10">
@@ -32,7 +45,7 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
         </section>
 
         <ArticleProsePanel>
-          <h2>Neden Kemik Sağlığı Önemlidir?</h2>
+          <h2 id="neden-onemli">Neden Kemik Sağlığı Önemlidir?</h2>
           <p>
             Kemikler yalnızca vücudu ayakta tutan bir iskelet değildir; aynı zamanda hareketin, dengenin ve günlük işlevlerin temel taşıdır.
             Kalsiyum ve fosfor gibi mineraller için bir depo görevi görürler. Yaşla birlikte kemik yapım-yıkım dengesi değiştiğinde,
@@ -40,11 +53,11 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
           </p>
           <p>
             40 yaş sonrası dönemde östrojen düzeylerindeki azalma kemik döngüsünü etkiler. Kemik yıkımı artarken yeni kemik yapımı aynı hızda
-            ilerlemeyebilir. Bu ilişki güçlü kanıtla desteklenmiştir [●●●●●]. Bu nedenle kemik sağlığına erken dönemde yatırım yapmak,
+            ilerlemeyebilir. Bu ilişki güçlü kanıtla desteklenmiştir <Evidence level={5} />. Bu nedenle kemik sağlığına erken dönemde yatırım yapmak,
             yalnızca bugün için değil, ileri yaş hareketliliği için de kritik değerdedir.
           </p>
 
-          <h2>Osteopeni ve Osteoporoz Arasındaki Fark</h2>
+          <h2 id="osteopeni-osteoporoz">Osteopeni ve Osteoporoz Arasındaki Fark</h2>
           <p>
             Osteopeni, kemik yoğunluğunun normalden düşük ama osteoporoz düzeyine ulaşmadığı ara evreyi ifade eder.
             Osteoporoz ise kırık riskinin belirgin şekilde arttığı daha ileri kemik kaybı tablosudur.
@@ -54,19 +67,19 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
             olarak değerlendirilir. Bu sınıflama tek başına yeterli değildir; yaş, düşme riski, aile öyküsü ve ek hastalıklarla birlikte yorumlanır.
           </p>
 
-          <h2>Risk Faktörleri Nelerdir?</h2>
+          <h2 id="risk-faktorleri">Risk Faktörleri Nelerdir?</h2>
           <p>
             Menopoz sonrası kadınlarda kemik kaybı riski artar. Aile öyküsü, düşük vücut ağırlığı, hareketsizlik, sigara, yüksek alkol tüketimi,
-            düşük kalsiyum-D vitamini alımı ve uzun süreli kortikosteroid kullanımı önemli risk faktörleri arasındadır [●●●●○ - ●●●●●].
+            düşük kalsiyum-D vitamini alımı ve uzun süreli kortikosteroid kullanımı önemli risk faktörleri arasındadır <Evidence from={4} to={5} />.
           </p>
           <p>
             Tiroid hastalıkları, bazı bağırsak emilim bozuklukları ve kronik inflamatuvar durumlar da kemik sağlığını etkileyebilir.
             Bu yüzden risk değerlendirmesi tek başlıktan değil, bütüncül bir sağlık profili üzerinden yapılmalıdır.
           </p>
 
-          <h2>Kemik Sağlığı Taraması: Ne Zaman, Nasıl?</h2>
+          <h2 id="kemik-taramasi">Kemik Sağlığı Taraması: Ne Zaman, Nasıl?</h2>
           <p>
-            Kılavuzlar çoğu kadın için 65 yaş sonrası rutin DEXA taramasını önerir [●●●●●]. Ancak risk faktörü olanlarda daha erken tarama
+            Kılavuzlar çoğu kadın için 65 yaş sonrası rutin DEXA taramasını önerir <Evidence level={5} />. Ancak risk faktörü olanlarda daha erken tarama
             planlanabilir. Erken menopoz, aile öyküsü, uzun süreli steroid kullanımı ve düşük travma kırığı öyküsü bu kararı etkileyen başlıklardır.
           </p>
           <p>
@@ -74,32 +87,32 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
             Bazı durumlarda P1NP ve CTX gibi kemik turnover belirteçleri de klinik karara destek olabilir.
           </p>
 
-          <h2>Beslenme ile Kemik Desteği</h2>
+          <h2 id="beslenme-destegi">Beslenme ile Kemik Desteği</h2>
           <p>
-            Günlük kalsiyum hedefi çoğu 40+ kadın için 1000-1200 mg aralığındadır [●●●●●]. Süt ürünleri, koyu yeşil yapraklı sebzeler,
+            Günlük kalsiyum hedefi çoğu 40+ kadın için 1000-1200 mg aralığındadır <Evidence level={5} />. Süt ürünleri, koyu yeşil yapraklı sebzeler,
             susam, badem ve kalsiyumla zenginleştirilmiş ürünler bu hedefe katkı sağlayabilir.
           </p>
           <p>
             D vitamini düzeyi kemik sağlığında belirleyicidir. Birçok kişide 1000-2000 IU aralığında destek planı kullanılabilir; ancak doz kararı
-            kan düzeyi ve kişisel risk profiline göre verilmelidir [●●●●●]. Protein alımı da gözden kaçmamalıdır. Kas gücü ile kemik dayanıklılığı
-            birlikte ilerlediği için günlük protein hedefi genellikle 1.0-1.2 g/kg düzeyinde planlanır [●●●●○].
+            kan düzeyi ve kişisel risk profiline göre verilmelidir <Evidence level={5} />. Protein alımı da gözden kaçmamalıdır. Kas gücü ile kemik dayanıklılığı
+            birlikte ilerlediği için günlük protein hedefi genellikle 1.0-1.2 g/kg düzeyinde planlanır <Evidence level={4} />.
           </p>
 
-          <h2>Hareket Planı ve Yaşam Alışkanlıkları</h2>
+          <h2 id="hareket-plani">Hareket Planı ve Yaşam Alışkanlıkları</h2>
           <p>
-            Ağırlık taşıyan egzersizler, direnç antrenmanı ve denge çalışmaları kemik korunmasında temel araçlardır [●●●●●].
+            Ağırlık taşıyan egzersizler, direnç antrenmanı ve denge çalışmaları kemik korunmasında temel araçlardır <Evidence level={5} />.
             Haftada 3-4 gün planlı egzersiz, yalnızca kemik yoğunluğunu değil düşme riskini de olumlu etkiler.
           </p>
           <p>
             Sigara bırakma, alkolü sınırlama ve uzun süreli hareketsizlikten kaçınma da en az egzersiz kadar önemlidir.
-            Yüksek tuz ve aşırı kafein tüketimi bazı kişilerde kalsiyum dengesini olumsuz etkileyebilir [●●●○○].
+            Yüksek tuz ve aşırı kafein tüketimi bazı kişilerde kalsiyum dengesini olumsuz etkileyebilir <Evidence level={3} />.
             Burada amaç katı yasaklar değil, sürdürülebilir bir denge kurmaktır.
           </p>
 
-          <h2>Tıbbi Seçenekler ve Kişiselleştirme</h2>
+          <h2 id="tibbi-secenekler">Tıbbi Seçenekler ve Kişiselleştirme</h2>
           <p>
             Risk düzeyi yüksek kişilerde hekim değerlendirmesi ile HRT, bifosfonatlar, SERM veya diğer ilaç seçenekleri gündeme gelebilir.
-            Bu tedaviler için kanıt seviyesi güçlüdür [●●●●●], ancak her seçenek tüm kişiler için uygun olmayabilir.
+            Bu tedaviler için kanıt seviyesi güçlüdür <Evidence level={5} />, ancak her seçenek tüm kişiler için uygun olmayabilir.
           </p>
           <p>
             Tıbbi planlama yapılırken yaş, kırık öyküsü, eşlik eden hastalıklar, kalp-damar riski ve kişisel öncelikler birlikte değerlendirilir.

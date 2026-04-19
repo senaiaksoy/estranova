@@ -5,10 +5,22 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
+
+const tocEntries = [
+  { id: 'ostrojen-etki', label: 'Östrojenin Etkisi' },
+  { id: 'yaygin-degisimler', label: 'Yaygın Değişimler' },
+  { id: 'vulvovajinal', label: 'Vulvovajinal Doku' },
+  { id: 'topikal-yaklasimlar', label: 'Topikal Bakım' },
+  { id: 'oral-destekler', label: 'Oral Destekler' },
+  { id: 'yasam-aliskanliklari', label: 'Yaşam Alışkanlıkları' },
+  { id: 'profesyonel-destek', label: 'Profesyonel Destek' },
+];
 ---
 
 <SiteLayout
@@ -26,6 +38,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
       compact
     />
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
@@ -37,9 +50,9 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
         </section>
 
         <ArticleProsePanel>
-          <h2>Östrojen Cilt Yapısına Nasıl Etki Eder?</h2>
+          <h2 id="ostrojen-etki">Östrojen Cilt Yapısına Nasıl Etki Eder?</h2>
           <p>
-            Östrojen cildin nem dengesi, kolajen üretimi ve bariyer bütünlüğü üzerinde etkili bir hormondur [●●●●●].
+            Östrojen cildin nem dengesi, kolajen üretimi ve bariyer bütünlüğü üzerinde etkili bir hormondur <Evidence level={5} />.
             Menopoz döneminde östrojen düzeyleri düştükçe cildin su tutma kapasitesi azalabilir ve toparlanma süresi uzayabilir.
           </p>
           <p>
@@ -47,19 +60,19 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
             görülebilir. Ciltte gözlenen değişimleri kişisel başarısızlık gibi değil, hormon geçişinin doğal bir parçası olarak görmek önemlidir.
           </p>
 
-          <h2>Yaygın Cilt Değişimleri Nelerdir?</h2>
+          <h2 id="yaygin-degisimler">Yaygın Cilt Değişimleri Nelerdir?</h2>
           <p>
             Menopoz döneminde sık görülen başlıca değişimler: kuruluk, ince çizgilerde artış, elastikiyet kaybı, ton farklılıkları ve dönemsel
-            hassasiyet olarak özetlenebilir. Kuruluk ve ince çizgiler için kanıt seviyesi güçlüdür [●●●●●].
+            hassasiyet olarak özetlenebilir. Kuruluk ve ince çizgiler için kanıt seviyesi güçlüdür <Evidence level={5} />.
           </p>
           <p>
             Bazı kişilerde cilt daha reaktif hale gelir. Daha önce sorun yaratmayan ürünler bu dönemde tahriş oluşturabilir.
             Bu nedenle bakım planında ürün çeşitliliğini artırmak yerine, sade ama düzenli bir rutin kurmak çoğu zaman daha iyi sonuç verir.
           </p>
 
-          <h2>Vulvovajinal Doku Değişimleri</h2>
+          <h2 id="vulvovajinal">Vulvovajinal Doku Değişimleri</h2>
           <p>
-            Menopozla birlikte vajinal ve vulvar dokuda incelme, kuruluk ve hassasiyet gelişebilir [●●●●●]. Bu durum günlük konforu,
+            Menopozla birlikte vajinal ve vulvar dokuda incelme, kuruluk ve hassasiyet gelişebilir <Evidence level={5} />. Bu durum günlük konforu,
             yakınlık deneyimini ve bazen idrar yolu şikayetlerini etkileyebilir.
           </p>
           <p>
@@ -67,37 +80,37 @@ const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
             ile yönetilebilir. Kalıcı rahatsızlık durumunda geç kalmadan destek almak yaşam kalitesini belirgin biçimde artırır.
           </p>
 
-          <h2>Yüz Cildi İçin Topikal Yaklaşımlar</h2>
+          <h2 id="topikal-yaklasimlar">Yüz Cildi İçin Topikal Yaklaşımlar</h2>
           <p>
-            Nemlendiriciler (hyaluronik asit, gliserin, seramid içeren formüller) bariyer desteğinde temel rol oynar [●●●●●].
-            Retinoid içeren ürünler kolajen dönüşümüne katkı sağlayabilir [●●●●●], ancak düşük dozla başlayıp yavaş ilerlemek gerekir.
+            Nemlendiriciler (hyaluronik asit, gliserin, seramid içeren formüller) bariyer desteğinde temel rol oynar <Evidence level={5} />.
+            Retinoid içeren ürünler kolajen dönüşümüne katkı sağlayabilir <Evidence level={5} />, ancak düşük dozla başlayıp yavaş ilerlemek gerekir.
           </p>
           <p>
-            C vitamini gibi antioksidanlar cilt tonunu destekleyebilir [●●●●○]. Güneş koruması ise bu dönemde vazgeçilmezdir [●●●●●].
+            C vitamini gibi antioksidanlar cilt tonunu destekleyebilir <Evidence level={4} />. Güneş koruması ise bu dönemde vazgeçilmezdir <Evidence level={5} />.
             SPF 30 ve üzeri ürünlerin düzenli kullanımı, pigment değişimleri ve erken foto-yaşlanma riskini azaltmada en güçlü adımlardan biridir.
           </p>
 
-          <h2>Oral Destekler ve Takviyeler</h2>
+          <h2 id="oral-destekler">Oral Destekler ve Takviyeler</h2>
           <p>
             Kolajen hidrolizatı, hyaluronik asit, omega-3 ve bazı antioksidan takviyeler cilt kalitesi için sık konuşulan seçeneklerdir.
-            Bu başlıkların kanıt düzeyi genellikle orta veya gelişen kanıt aralığındadır [●●●○○ - ●●●●○].
+            Bu başlıkların kanıt düzeyi genellikle orta veya gelişen kanıt aralığındadır <Evidence from={3} to={4} />.
           </p>
           <p>
             Takviyeler tek başına güçlü bir bakım planı oluşturmaz. Beslenme düzeni, uyku, stres düzeyi ve güneş koruması ile birlikte değerlendirilmelidir.
             Takviye seçimi yapılacaksa doz, içerik ve ilaç etkileşimleri açısından sağlık profesyoneli görüşü almak en güvenli yaklaşımdır.
           </p>
 
-          <h2>Yaşam Alışkanlıkları: Sessiz ama Güçlü Etki</h2>
+          <h2 id="yasam-aliskanliklari">Yaşam Alışkanlıkları: Sessiz ama Güçlü Etki</h2>
           <p>
-            Düzenli uyku, yeterli su tüketimi, protein ve sağlıklı yağdan dengeli beslenme cilt yenilenmesini destekler [●●●●○].
-            Stres düzeyinin yüksek kalması ise kortizol yoluyla ciltte hassasiyet ve iyileşme gecikmesiyle ilişkili olabilir [●●●●○].
+            Düzenli uyku, yeterli su tüketimi, protein ve sağlıklı yağdan dengeli beslenme cilt yenilenmesini destekler <Evidence level={4} />.
+            Stres düzeyinin yüksek kalması ise kortizol yoluyla ciltte hassasiyet ve iyileşme gecikmesiyle ilişkili olabilir <Evidence level={4} />.
           </p>
           <p>
-            Sigara bırakma ve alkolü sınırlama cilt sağlığı için doğrudan olumlu katkı sağlar [●●●●●]. Günlük 20-30 dakikalık yürüyüş gibi
+            Sigara bırakma ve alkolü sınırlama cilt sağlığı için doğrudan olumlu katkı sağlar <Evidence level={5} />. Günlük 20-30 dakikalık yürüyüş gibi
             sürdürülebilir hareket planı da dolaşımı destekleyerek cilt kalitesine dolaylı katkı sunar.
           </p>
 
-          <h2>Ne Zaman Profesyonel Destek Almalısınız?</h2>
+          <h2 id="profesyonel-destek">Ne Zaman Profesyonel Destek Almalısınız?</h2>
           <p>
             Ciltte kalıcı tahriş, ani pigment değişimi, geçmeyen kuruluk veya yakınlık sırasında belirgin rahatsızlık varsa dermatolog ve/veya jinekolog
             değerlendirmesi gerekir. Özellikle günlük yaşamı etkileyen şikayetlerde gecikmeden destek almak önemlidir.

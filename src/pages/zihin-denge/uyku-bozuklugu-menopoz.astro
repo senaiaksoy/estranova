@@ -8,6 +8,7 @@ import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
 
 const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
 
@@ -56,7 +57,7 @@ const tocEntries = [
         <p>
           Uyku, gecede bir kez gerçekleşen tek bir faz değil; NREM ve REM döngülerinin tekrarlandığı dinamik bir süreçtir.
           NREM evrelerinde fiziksel onarım ve enerji dengelenmesi öne çıkarken, REM evresinde duygu düzenleme ve bellek işleme
-          süreçleri daha aktiftir [●●●●●].
+          süreçleri daha aktiftir <Evidence level={5} />.
         </p>
         <p>
           Ortalama bir uyku döngüsü yaklaşık 90 dakika sürer ve gece boyunca birkaç kez tekrar eder. Menopoz döneminde bu döngünün
@@ -65,18 +66,18 @@ const tocEntries = [
 
         <h2 id="neden-bozulur">Menopozda Uyku Neden Bozulur?</h2>
         <p>
-          En sık nedenlerden biri gece ortaya çıkan vasomotor belirtilerdir: sıcak basması ve terleme [●●●●●].
+          En sık nedenlerden biri gece ortaya çıkan vasomotor belirtilerdir: sıcak basması ve terleme <Evidence level={5} />.
           Vücut ısısındaki ani değişimler uyku bütünlüğünü bozarak sık uyanmalara yol açabilir.
         </p>
         <p>
           Buna ek olarak östrojen ve progesteron dalgalanmaları, ruh hali değişimleri, kaygı düzeyindeki artış, horlama ve uyku apnesi riskindeki
-          değişim de tabloyu etkileyebilir [●●●●○]. Yani sorun çoğu zaman tek nedene bağlı değildir; birden fazla faktör aynı anda rol oynar.
+          değişim de tabloyu etkileyebilir <Evidence level={4} />. Yani sorun çoğu zaman tek nedene bağlı değildir; birden fazla faktör aynı anda rol oynar.
         </p>
 
         <h2 id="yaygin-sorunlar">Yaygın Uyku Sorunları</h2>
         <p>
           Menopoz döneminde en sık görülen paternler; uykuya dalmada güçlük, gece içinde sık uyanma ve erken saatte uyanıp yeniden uyuyamama şeklindedir.
-          Bu tabloların tümü için kanıt düzeyi güçlüdür [●●●●●].
+          Bu tabloların tümü için kanıt düzeyi güçlüdür <Evidence level={5} />.
         </p>
         <p>
           Bu sorunlara gündüz yorgunluk, dikkat dağınıklığı, sinirlilik ve düşük motivasyon eşlik edebilir. Dinlenmemiş hissetmek, yalnızca performansı değil,
@@ -85,18 +86,18 @@ const tocEntries = [
 
         <h2 id="uyku-hijyeni">Uyku Hijyeni: Günlük Temel Adımlar</h2>
         <p>
-          Uyku hijyeninde en etkili adım, sabit saatlerdir [●●●●●]. Hafta içi ve hafta sonu arasında büyük saat farkları olmadan uyuyup uyanmak,
+          Uyku hijyeninde en etkili adım, sabit saatlerdir <Evidence level={5} />. Hafta içi ve hafta sonu arasında büyük saat farkları olmadan uyuyup uyanmak,
           biyolojik saatin dengelenmesine yardımcı olur.
         </p>
         <p>
-          Yatak odasını serin (yaklaşık 16-19°C), karanlık ve sessiz tutmak gece uyanmalarını azaltır [●●●●●]. Akşam saatlerinde kafeini sınırlamak,
+          Yatak odasını serin (yaklaşık 16-19°C), karanlık ve sessiz tutmak gece uyanmalarını azaltır <Evidence level={5} />. Akşam saatlerinde kafeini sınırlamak,
           yatmadan 2-3 saat önce ağır yemekten kaçınmak, ekran ışığını azaltmak ve kısa bir rahatlama rutini oluşturmak da etkili adımlardır.
         </p>
 
         <h2 id="dogal-destekler">Doğal Destekler ve Takviyeler</h2>
         <p>
-          Melatonin, bazı kişilerde uykuya geçiş süresini kısaltabilir [●●●●○]. Mineral takviyeleri ve hafif bitkisel destekler de belirli gruplarda yarar sağlayabilir,
-          ancak etki düzeyi kişisel farklılık gösterir [●●●○○ - ●●●●○].
+          Melatonin, bazı kişilerde uykuya geçiş süresini kısaltabilir <Evidence level={4} />. Mineral takviyeleri ve hafif bitkisel destekler de belirli gruplarda yarar sağlayabilir,
+          ancak etki düzeyi kişisel farklılık gösterir <Evidence from={3} to={4} />.
         </p>
         <p>
           Takviyeler için en önemli nokta, düzenli ilaçlarla etkileşimi değerlendirmektir. Özellikle kronik hastalık varlığında, takviye kullanımına başlamadan
@@ -106,7 +107,7 @@ const tocEntries = [
         <h2 id="tibbi-tedavi">Tıbbi Tedavi Seçenekleri</h2>
         <p>
           Yaşam tarzı adımları yetersiz kaldığında HRT, kısa süreli uyku ilaçları, gabapentin veya duygu durum eşlik ediyorsa uygun psikiyatrik destek
-          seçenekleri gündeme gelebilir. Ayrıca bilişsel davranışçı terapi (CBT-I), uzun dönem uyku iyileşmesinde güçlü kanıta sahiptir [●●●●●].
+          seçenekleri gündeme gelebilir. Ayrıca bilişsel davranışçı terapi (CBT-I), uzun dönem uyku iyileşmesinde güçlü kanıta sahiptir <Evidence level={5} />.
         </p>
         <p>
           Tedavi seçimi kişiye özgü olmalıdır. Aynı belirtiye sahip iki kişi için bile hedef farklı olabilir: birinde gece uyanmaları azaltmak,

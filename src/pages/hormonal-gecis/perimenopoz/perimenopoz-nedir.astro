@@ -4,7 +4,18 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+
+const tocEntries = [
+  { id: 'perimenopoz-nedir', label: 'Perimenopoz Nedir' },
+  { id: 'hormonal-degisim', label: 'Hormonal Değişimler' },
+  { id: 'yaygin-belirtiler', label: 'Yaygın Belirtiler' },
+  { id: 'evreler', label: 'Evreler' },
+  { id: 'doktor-ne-zaman', label: 'Ne Zaman Doktor' },
+  { id: 'oz-bakim', label: 'Kendinize Bakım' },
+];
 ---
 
 <SiteLayout
@@ -15,6 +26,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 
   <main id="main-content" class="pt-24 text-[#2D2D2D]">
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="14 Nisan 2026" readingMinutes={6} />
 
         <header class="mb-10">
@@ -32,7 +44,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
         </section>
 
         <ArticleProsePanel>
-          <h2>Perimenopoz Nedir?</h2>
+          <h2 id="perimenopoz-nedir">Perimenopoz Nedir?</h2>
           <p>
             Perimenopoz, kadınlarda üreme döneminden menopoz dönemine geçişi ifade eden doğal bir süreçtir. Bu dönem genellikle
             son adetten birkaç yıl önce başlar ve ortalama 4-10 yıl sürebilir. Menopoz ise son adet kanamasının üzerinden 12 ay geçmesiyle
@@ -44,11 +56,11 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             durumları ile ilişkili olabilir. Bu nedenle tek bir yaş aralığına takılmak yerine, bedenin verdiği sinyalleri takip etmek daha anlamlıdır.
           </p>
 
-          <h2>Hormonal Değişimler Neler Olur?</h2>
+          <h2 id="hormonal-degisim">Hormonal Değişimler Neler Olur?</h2>
           <p>
             Perimenopozun merkezinde hormonal dalgalanma yer alır. FSH ve LH gibi hipofiz hormonları, yumurtalıkların yanıtı azaldıkça
             daha değişken hale gelir. Östrojen ve progesteron düzeyleri de ay içinde daha keskin iniş çıkışlar gösterebilir.
-            Bu dalgalanmalar güçlü bilimsel kanıtla desteklenmiştir [●●●●●].
+            Bu dalgalanmalar güçlü bilimsel kanıtla desteklenmiştir <Evidence level={5} />.
           </p>
           <p>
             Bu dönemde önemli nokta, hormonların yalnızca düşmesi değil; düzensiz biçimde değişmesidir. Bir ay yüksek östrojen etkisi görülürken,
@@ -56,11 +68,11 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             Döngü düzeninin önce hafif bozulması, sonra daha belirgin düzensizleşmesi bu biyolojik sürecin doğal bir parçasıdır.
           </p>
 
-          <h2>Yaygın Belirtiler Nelerdir?</h2>
+          <h2 id="yaygin-belirtiler">Yaygın Belirtiler Nelerdir?</h2>
           <p>
             Perimenopoz belirtileri geniş bir yelpazede görülebilir. En sık bildirilen bulgular arasında döngü düzensizliği, sıcak basması,
             gece terlemesi, uyku kesintileri ve ruh hali dalgalanmaları bulunur. Sıcak basması ve vasomotor belirtiler için kanıt seviyesi
-            güçlüdür [●●●●●].
+            güçlüdür <Evidence level={5} />.
           </p>
           <p>
             Bunun yanında ciltte kuruluk, enerji düşüşü, odaklanma güçlüğü, kilo dağılımında değişim ve kas-eklem yakınmaları da yaşanabilir.
@@ -69,13 +81,13 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
           </p>
           <ul>
             <li><strong>Döngü değişiklikleri:</strong> Araların açılması, sıklaşması veya kanama miktarında değişim</li>
-            <li><strong>Vasomotor belirtiler [●●●●●]:</strong> Sıcak basması, gece terlemesi</li>
+            <li><strong>Vasomotor belirtiler <Evidence level={5} />:</strong> Sıcak basması, gece terlemesi</li>
             <li><strong>Uyku etkilenmesi:</strong> Gece uyanmaları, sabah dinlenmemiş uyanma</li>
             <li><strong>Duygusal dalgalanma:</strong> Tahammül eşiğinde düşme, kaygı veya içe çekilme</li>
             <li><strong>Bedensel değişimler:</strong> Cilt kuruluğu, enerji azalması, kilo düzeninde kayma</li>
           </ul>
 
-          <h2>Perimenopozun Evreleri</h2>
+          <h2 id="evreler">Perimenopozun Evreleri</h2>
           <p>
             Perimenopozu kabaca erken ve geç evre olarak düşünmek mümkündür. Erken evrede döngü çoğunlukla sürer ancak hormon dalgalanmaları
             başlar. Geç evrede ise döngü araları daha belirgin uzar, kanama düzeni daha öngörülemez hale gelir. Son adet tarihi geriye dönük
@@ -87,7 +99,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             yönetimi değil, uzun dönem sağlık planlaması açısından da önemlidir.
           </p>
 
-          <h2>Ne Zaman Doktor Görmeliyim?</h2>
+          <h2 id="doktor-ne-zaman">Ne Zaman Doktor Görmeliyim?</h2>
           <p>
             Belirtiler yaşam kalitesini düşürüyor, iş ve sosyal yaşamı etkiliyorsa profesyonel değerlendirme almak gerekir. Özellikle yoğun veya uzun
             süren kanamalar, ani ve belirgin döngü değişimleri, dirençli uykusuzluk, yoğun kaygı hali veya beklenmedik ağrı durumlarında gecikmeden
@@ -99,11 +111,11 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             Amaç, kişiye özgü bir yol haritası oluşturmaktır.
           </p>
 
-          <h2>Bu Dönemde Kendinize Nasıl Bakabilirsiniz?</h2>
+          <h2 id="oz-bakim">Bu Dönemde Kendinize Nasıl Bakabilirsiniz?</h2>
           <p>
             Perimenopoz döneminde destek adımları küçük ama düzenli alışkanlıklarla başlar. Haftalık planlı hareket, dengeli beslenme,
             uyku saatlerini sabitleme ve stres yönetimi teknikleri birçok kadında belirgin rahatlama sağlar. Bu öneriler için kanıt düzeyi
-            orta-yüksek aralıktadır [●●●●○ - ●●●●●].
+            orta-yüksek aralıktadır <Evidence from={4} to={5} />.
           </p>
           <p>
             Beslenmede protein, lif, kalsiyum ve D vitamini dengesi öne çıkar. Şeker dalgalanmasını azaltmak için gün içine yayılan düzenli öğünler

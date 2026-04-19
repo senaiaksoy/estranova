@@ -5,10 +5,27 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
 
 const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!;
+
+const tocEntries = [
+  { id: 'ostrojen-nedir', label: 'Östrojen Nedir' },
+  { id: 'kemik', label: 'Kemik Sağlığı' },
+  { id: 'kardiyovaskuler', label: 'Kardiyovasküler' },
+  { id: 'beyin', label: 'Beyin ve Biliş' },
+  { id: 'cilt', label: 'Cilt ve Bağ Dokusu' },
+  { id: 'metabolik', label: 'Metabolik Denge' },
+  { id: 'bagisiklik', label: 'Bağışıklık' },
+  { id: 'menopoz-turleri', label: 'Menopoz Türleri' },
+  { id: 'hrt', label: 'HRT Yaklaşımı' },
+  { id: 'alternatifler', label: 'Alternatifler' },
+  { id: 'klinik-karar', label: 'Klinik Kararlar' },
+  { id: 'gelecek', label: 'Gelecek Araştırmalar' },
+];
 ---
 
 <SiteLayout
@@ -26,6 +43,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
       compact
     />
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="rima-erdemir" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
@@ -38,55 +56,55 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
         </section>
 
         <ArticleProsePanel>
-          <h2>Östrojen Nedir?</h2>
+          <h2 id="ostrojen-nedir">Östrojen Nedir?</h2>
           <p>
-            Östrojen, steroid hormon sınıfında yer alan ve birçok dokuda sinyal görevi gören bir molekül grubudur [●●●●●].
-            Başlıca formları estradiol (E2), estrone (E1) ve estriol (E3) olarak tanımlanır [●●●●●]. Üreme çağında en etkin form E2'dir;
+            Östrojen, steroid hormon sınıfında yer alan ve birçok dokuda sinyal görevi gören bir molekül grubudur <Evidence level={5} />.
+            Başlıca formları estradiol (E2), estrone (E1) ve estriol (E3) olarak tanımlanır <Evidence level={5} />. Üreme çağında en etkin form E2'dir;
             menopoz sonrası dönemde E1 görece daha baskın hale gelir.
           </p>
           <p>
-            Üretim sadece yumurtalıklarla sınırlı değildir. Yağ dokusu, adrenal kaynaklar ve periferik dönüşüm yolları da katkı sunar [●●●●●].
-            Östrojen reseptörleri (ER-alfa, ER-beta ve GPER) üzerinden gen ifadesini ve hücresel yanıtı etkileyen çok katmanlı bir etki ağına sahiptir [●●●●●].
+            Üretim sadece yumurtalıklarla sınırlı değildir. Yağ dokusu, adrenal kaynaklar ve periferik dönüşüm yolları da katkı sunar <Evidence level={5} />.
+            Östrojen reseptörleri (ER-alfa, ER-beta ve GPER) üzerinden gen ifadesini ve hücresel yanıtı etkileyen çok katmanlı bir etki ağına sahiptir <Evidence level={5} />.
             Bu nedenle östrojen azalması tek bir organda değil, bütün sistemde hissedilir.
           </p>
 
-          <h2>Kemik Sağlığında Östrojen</h2>
+          <h2 id="kemik">Kemik Sağlığında Östrojen</h2>
           <p>
-            Kemikte östrojen, yapım-yıkım dengesini düzenleyen ana hormonal etkenlerden biridir [●●●●●]. Osteoblast aktivitesini destekler,
-            osteoklast aracılı yıkımı sınırlar. Menopoz sonrası düşüşle birlikte kemik kaybı hızlanabilir ve kırık riski artabilir [●●●●●].
+            Kemikte östrojen, yapım-yıkım dengesini düzenleyen ana hormonal etkenlerden biridir <Evidence level={5} />. Osteoblast aktivitesini destekler,
+            osteoklast aracılı yıkımı sınırlar. Menopoz sonrası düşüşle birlikte kemik kaybı hızlanabilir ve kırık riski artabilir <Evidence level={5} />.
           </p>
           <p>
             Bu yüzden menopoz yılları, kemik sağlığını koruma açısından kritik bir pencere olarak kabul edilir.
             Direnç egzersizi, yeterli protein, D vitamini-kalsiyum dengesi ve riskli gruplarda kemik yoğunluğu takibi birlikte planlanmalıdır.
-            Uygun hastalarda HRT'nin kemik kaybını azaltıcı etkisi gösterilmiştir [●●●●●].
+            Uygun hastalarda HRT'nin kemik kaybını azaltıcı etkisi gösterilmiştir <Evidence level={5} />.
           </p>
 
-          <h2>Kardiyovasküler Sistem ve Östrojen</h2>
+          <h2 id="kardiyovaskuler">Kardiyovasküler Sistem ve Östrojen</h2>
           <p>
-            Östrojen, endotel fonksiyonu ve damar genişleme yanıtı üzerinde düzenleyici etkiye sahiptir [●●●●●]. Lipid profili üzerinde HDL lehine,
-            LDL aleyhine bazı etkiler bildirilmiştir [●●●●●]. Menopoz sonrası dönemde yaşla birlikte artan kardiyovasküler risk,
+            Östrojen, endotel fonksiyonu ve damar genişleme yanıtı üzerinde düzenleyici etkiye sahiptir <Evidence level={5} />. Lipid profili üzerinde HDL lehine,
+            LDL aleyhine bazı etkiler bildirilmiştir <Evidence level={5} />. Menopoz sonrası dönemde yaşla birlikte artan kardiyovasküler risk,
             hormonal değişimlerle birlikte değerlendirilir.
           </p>
           <p>
-            HRT ve kardiyovasküler sonuçlar konusu ise zamanlama, formülasyon ve kişisel risk faktörlerine bağlı olarak karmaşık bir alandır [●●●●○].
+            HRT ve kardiyovasküler sonuçlar konusu ise zamanlama, formülasyon ve kişisel risk faktörlerine bağlı olarak karmaşık bir alandır <Evidence level={4} />.
             Bu nedenle kararlar genelleme yerine bireysel risk analiziyle verilir. Kan basıncı, glukoz dengesi, bel çevresi ve lipid izlemi,
             menopoz sonrası dönemde temel koruyucu başlıklardır.
           </p>
 
-          <h2>Beyin, Biliş ve Duygudurum</h2>
+          <h2 id="beyin">Beyin, Biliş ve Duygudurum</h2>
           <p>
-            Östrojen; serotonin, dopamin ve diğer nörokimyasal yollarla etkileşir [●●●●●]. Bu etkileşim, ruh hali dalgalanmaları,
+            Östrojen; serotonin, dopamin ve diğer nörokimyasal yollarla etkileşir <Evidence level={5} />. Bu etkileşim, ruh hali dalgalanmaları,
             uyku kalitesi ve stres toleransı üzerinde dolaylı rol oynar. Perimenopoz dönemindeki dalgalanmaların duygudurum üzerinde daha hissedilir olması
             bu biyolojik arka planla ilişkilidir.
           </p>
           <p>
-            Bellek, dikkat ve bilişsel performans başlıklarında ise bulgular orta güçtedir [●●●●○]. Kimi çalışmalarda erken dönemde destekleyici etkiler
+            Bellek, dikkat ve bilişsel performans başlıklarında ise bulgular orta güçtedir <Evidence level={4} />. Kimi çalışmalarda erken dönemde destekleyici etkiler
             bildirilse de sonuçlar tüm popülasyonlarda aynı değildir. Nörodejeneratif hastalıklar açısından koruyuculuk konusu da araştırılmaya devam etmektedir.
           </p>
 
-          <h2>Cilt Sağlığı ve Bağ Dokusu</h2>
+          <h2 id="cilt">Cilt Sağlığı ve Bağ Dokusu</h2>
           <p>
-            Östrojen kolajen sentezi, dermal kalınlık, elastikiyet ve cilt nemiyle ilişkili süreçlerde rol oynar [●●●●●].
+            Östrojen kolajen sentezi, dermal kalınlık, elastikiyet ve cilt nemiyle ilişkili süreçlerde rol oynar <Evidence level={5} />.
             Menopozla birlikte ciltte kuruluk, incelme ve esneklik kaybı daha belirgin olabilir. Bu durum yalnızca estetik değil,
             bariyer fonksiyonu ve konfor açısından da önemlidir.
           </p>
@@ -95,10 +113,10 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
             Hormon temelli veya non-invaziv yaklaşımlar bireysel ihtiyaçlara göre değerlendirilebilir; kanıt düzeyi yönteme göre değişir.
           </p>
 
-          <h2>Metabolik Denge ve Enerji Yönetimi</h2>
+          <h2 id="metabolik">Metabolik Denge ve Enerji Yönetimi</h2>
           <p>
-            Östrojen, glukoz homeostazı, yağ dağılımı ve enerji kullanımında etkili mekanizmalara katılır [●●●●●].
-            Menopoz sonrası dönemde yağ dokusunun karın çevresinde birikme eğilimi artabilir; bu durum insülin direnci riskini etkileyebilir [●●●●●].
+            Östrojen, glukoz homeostazı, yağ dağılımı ve enerji kullanımında etkili mekanizmalara katılır <Evidence level={5} />.
+            Menopoz sonrası dönemde yağ dokusunun karın çevresinde birikme eğilimi artabilir; bu durum insülin direnci riskini etkileyebilir <Evidence level={5} />.
             Ancak yaşam alışkanlıkları bu süreci güçlü biçimde modüle eder.
           </p>
           <p>
@@ -106,10 +124,10 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
             Hormon biyolojisini bilmek, bu alışkanlıkların neden etkili olduğunu anlamayı kolaylaştırır.
           </p>
 
-          <h2>Bağışıklık Sistemi ile Etkileşim</h2>
+          <h2 id="bagisiklik">Bağışıklık Sistemi ile Etkileşim</h2>
           <p>
             Östrojenin bağışıklık yanıtı üzerinde düzenleyici etkileri bulunur; Th1/Th2 dengesi, inflamatuvar sinyal yolları ve
-            otoimmün yatkınlıkla ilişkili başlıklar bunlar arasındadır [●●●●●]. Menopoz dönemindeki hormonal değişim, inflamatuvar profilde
+            otoimmün yatkınlıkla ilişkili başlıklar bunlar arasındadır <Evidence level={5} />. Menopoz dönemindeki hormonal değişim, inflamatuvar profilde
             farklılaşmalara zemin hazırlayabilir.
           </p>
           <p>
@@ -117,33 +135,33 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
             bütüncül değerlendirme yaklaşımı daha doğru sonuç verir.
           </p>
 
-          <h2>Menopoz Türlerine Göre Östrojen Azalışı</h2>
+          <h2 id="menopoz-turleri">Menopoz Türlerine Göre Östrojen Azalışı</h2>
           <p>
-            Doğal menopozda östrojen düşüşü kademeli ilerler ve beden zaman içinde yeni dengeye adapte olur [●●●●●].
-            Cerrahi menopozda (örneğin ovaryektomi sonrası) düşüş daha ani olabilir ve belirtiler daha yoğun hissedilebilir [●●●●●].
+            Doğal menopozda östrojen düşüşü kademeli ilerler ve beden zaman içinde yeni dengeye adapte olur <Evidence level={5} />.
+            Cerrahi menopozda (örneğin ovaryektomi sonrası) düşüş daha ani olabilir ve belirtiler daha yoğun hissedilebilir <Evidence level={5} />.
             Erken menopozda ise uzun dönem kemik ve kardiyometabolik takip daha kritik hale gelir.
           </p>
           <p>
-            Adaptasyon kapasitesi yüksektir; ancak bu süreç kişisel farklılık gösterir [●●●●○]. Dolayısıyla bakım planı yaş, belirtiler,
+            Adaptasyon kapasitesi yüksektir; ancak bu süreç kişisel farklılık gösterir <Evidence level={4} />. Dolayısıyla bakım planı yaş, belirtiler,
             eşlik eden hastalıklar ve yaşam hedeflerine göre düzenlenmelidir.
           </p>
 
-          <h2>HRT ve Mekanizma Temelli Yaklaşım</h2>
+          <h2 id="hrt">HRT ve Mekanizma Temelli Yaklaşım</h2>
           <p>
-            HRT, östrojen eksikliğine bağlı bazı belirtileri ve belirli risk başlıklarını azaltmak için kullanılan kanıt temelli bir seçenektir [●●●●●].
-            Oral ve transdermal formlar arasında farmakokinetik farklılıklar bulunur [●●●●●]. Uterusu olan kadınlarda progestojen eklenmesi,
-            endometriyal güvenlik açısından önem taşır [●●●●●].
+            HRT, östrojen eksikliğine bağlı bazı belirtileri ve belirli risk başlıklarını azaltmak için kullanılan kanıt temelli bir seçenektir <Evidence level={5} />.
+            Oral ve transdermal formlar arasında farmakokinetik farklılıklar bulunur <Evidence level={5} />. Uterusu olan kadınlarda progestojen eklenmesi,
+            endometriyal güvenlik açısından önem taşır <Evidence level={5} />.
           </p>
           <p>
-            "Zaman penceresi" yaklaşımı, tedaviye menopoz geçişine yakın dönemde başlamanın bazı sonuçlarda avantaj sağlayabileceğini öne sürer [●●●●○].
+            "Zaman penceresi" yaklaşımı, tedaviye menopoz geçişine yakın dönemde başlamanın bazı sonuçlarda avantaj sağlayabileceğini öne sürer <Evidence level={4} />.
             Buna karşılık uygunluk değerlendirmesi kişisel risk profili olmadan yapılamaz. HRT kararı, yarar ve olası risklerin dengeli biçimde
             konuşulduğu bireysel bir klinik karardır.
           </p>
 
-          <h2>Alternatif Yaklaşımlar ve Kanıt Düzeyi</h2>
+          <h2 id="alternatifler">Alternatif Yaklaşımlar ve Kanıt Düzeyi</h2>
           <p>
             Fitoöstrojenler, izoflavonlar ve bazı bitkisel içerikler menopoz döneminde ilgi gören başlıklardır. Bu alandaki kanıtlar çoğunlukla
-            orta-düşük düzeydedir [●●●○○]. Bazı kişilerde hafif semptom desteği bildirilse de sonuçlar tutarlı değildir.
+            orta-düşük düzeydedir <Evidence level={3} />. Bazı kişilerde hafif semptom desteği bildirilse de sonuçlar tutarlı değildir.
           </p>
           <p>
             En güvenli yaklaşım, güçlü kanıtlı yöntemleri temel almak ve alternatif seçenekleri gerçekçi beklentiyle değerlendirmektir.
@@ -152,7 +170,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
         </ArticleProsePanel>
 
         <ArticleProsePanel class="mt-10">
-          <h2>Klinik Kararlarda Östrojen Bilgisini Nasıl Kullanmalı?</h2>
+          <h2 id="klinik-karar">Klinik Kararlarda Östrojen Bilgisini Nasıl Kullanmalı?</h2>
           <p>
             Östrojen biyolojisini anlamak, tedavi kararını otomatikleştirmek için değil, seçenekleri daha bilinçli tartmak için önemlidir.
             Örneğin sıcak basması, uyku bozulması, vajinal kuruluk, kemik kaybı riski ve kardiyometabolik durum aynı anda değerlendirildiğinde
@@ -163,7 +181,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
             Kimileri için yaşam alışkanlığı düzeni ve yakın izlem yeterli olurken, kimilerinde hormon temelli veya ek tıbbi seçenekler gerekli olabilir.
             Karar sürecinin merkezinde bireyin risk profili, yaşam kalitesi hedefleri ve tedaviye ilişkin tercihleri yer alır.
           </p>
-          <h2>Gelecek Araştırmalar ve Açık Sorular</h2>
+          <h2 id="gelecek">Gelecek Araştırmalar ve Açık Sorular</h2>
           <p>
             Östrojen alanında güçlü veri tabanı bulunsa da bazı kritik sorular halen araştırılmaktadır.
             Özellikle farklı HRT formülasyonlarının uzun dönem nörobilişsel sonuçları, erken ve geç başlama zamanlamasının etkileri,
@@ -189,7 +207,7 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Östrojen azalmasının etkisi yalnızca sıcak basmasıyla sınırlı değildir; kemik, kalp, beyin ve metabolik sistemde çoklu değişim yaratır.
             Bu nedenle menopoz döneminin yönetimi, semptom tedavisi kadar uzun vadeli sağlık planlamasını da içerir. Kişiye özel yaklaşım,

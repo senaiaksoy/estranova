@@ -5,10 +5,25 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
+
+const tocEntries = [
+  { id: 'atrofi-nedir', label: 'Atrofi Nedir?' },
+  { id: 'belirtiler', label: 'Belirtiler' },
+  { id: 'mekanizma', label: 'Neden Olur?' },
+  { id: 'non-hormonal-destek', label: 'Non-Hormonal Destek' },
+  { id: 'hormon-tedavi', label: 'Hormon Tedavisi' },
+  { id: 'diger-yaklasimlar', label: 'Diğer Yaklaşımlar' },
+  { id: 'uriner-belirtiler', label: 'Üriner Belirtiler' },
+  { id: 'gunluk-bakim', label: 'Günlük Bakım Rutini' },
+  { id: 'yakinlik-iletisim', label: 'Yakınlıkta İletişim' },
+  { id: 'kisa-hatirlatma', label: 'Kısa Hatırlatma' },
+];
 ---
 
 <SiteLayout
@@ -26,6 +41,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
       compact
     />
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
@@ -38,79 +54,79 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
         </section>
 
         <ArticleProsePanel>
-          <h2>Vulvovajinal Atrofi Nedir?</h2>
+          <h2 id="atrofi-nedir">Vulvovajinal Atrofi Nedir?</h2>
           <p>
             Vulvovajinal atrofi, menopoz sonrası östrojen düzeyinin azalmasına bağlı olarak vajinal ve vulvar dokuda incelme,
-            esneklik kaybı ve nem azalmasıyla ortaya çıkan klinik tablodur [●●●●●]. Güncel literatürde bu durum, üriner bulguları da kapsayan
+            esneklik kaybı ve nem azalmasıyla ortaya çıkan klinik tablodur <Evidence level={5} />. Güncel literatürde bu durum, üriner bulguları da kapsayan
             daha geniş bir başlıkla "genitoüriner menopoz sendromu" olarak da adlandırılır.
           </p>
           <p>
-            Postmenopoz kadınlarda yaygınlık oranı yüksektir ve farklı çalışmalarda yaklaşık yüzde 40-60 aralığında bildirilir [●●●●●].
+            Postmenopoz kadınlarda yaygınlık oranı yüksektir ve farklı çalışmalarda yaklaşık yüzde 40-60 aralığında bildirilir <Evidence level={5} />.
             Buna rağmen birçok kadın bu belirtileri yaşlanmanın kaçınılmaz ve konuşulmaması gereken bir parçası gibi değerlendirebilir.
             Oysa klinik açıdan bakıldığında tanınabilir ve yönetilebilir bir sağlık konusudur.
           </p>
 
-          <h2>Belirtiler Nelerdir?</h2>
+          <h2 id="belirtiler">Belirtiler Nelerdir?</h2>
           <p>
-            En sık belirtiler vajinal kuruluk, yanma hissi, kaşıntı, dokunmaya hassasiyet ve yakınlık sırasında ağrıdır [●●●●●].
+            En sık belirtiler vajinal kuruluk, yanma hissi, kaşıntı, dokunmaya hassasiyet ve yakınlık sırasında ağrıdır <Evidence level={5} />.
             Bazı kadınlarda vajinal akıntı karakterinde değişim, hafif tahriş veya küçük travmalara yatkınlık görülebilir.
             Belirtiler zaman içinde yavaş ilerleyebilir; bu nedenle erken dönemde fark edilmesi her zaman kolay olmayabilir.
           </p>
           <p>
             Üriner sistem bulguları da tabloya eşlik edebilir. Sık idrara çıkma, idrar yaparken yanma hissi, tekrarlayan idrar yolu enfeksiyonu eğilimi
-            veya ani sıkışma şikayeti menopoz sonrası dönemde daha görünür hale gelebilir [●●●●●].
+            veya ani sıkışma şikayeti menopoz sonrası dönemde daha görünür hale gelebilir <Evidence level={5} />.
             Bu belirtilerin bir arada olması, değerlendirmeyi yalnızca tek bir semptoma odaklamadan yapmayı gerektirir.
           </p>
 
-          <h2>Neden Olur? Mekanizma</h2>
+          <h2 id="mekanizma">Neden Olur? Mekanizma</h2>
           <p>
-            Östrojen, vajinal dokunun kalınlığını, damar desteğini ve elastikiyetini korumada temel rol oynar [●●●●●].
+            Östrojen, vajinal dokunun kalınlığını, damar desteğini ve elastikiyetini korumada temel rol oynar <Evidence level={5} />.
             Düzey azaldığında epitel tabaka incelir, doku daha kırılgan hale gelir ve doğal nem üretimi düşer. Aynı dönemde vajinal pH daha alkali tarafa kayar,
-            bu da lokal mikrobiyotayı ve enfeksiyona karşı koruyucu ortamı etkileyebilir [●●●●●].
+            bu da lokal mikrobiyotayı ve enfeksiyona karşı koruyucu ortamı etkileyebilir <Evidence level={5} />.
           </p>
           <p>
             Mekanizmanın bilinmesi önemlidir çünkü belirtileri "kişisel yetersizlik" olarak değil, biyolojik değişimin sonucu olarak anlamayı sağlar.
             Bu yaklaşım hem iletişimi kolaylaştırır hem de tedavi seçeneklerinin daha erken konuşulmasına zemin hazırlar.
           </p>
 
-          <h2>Non-Hormonal Destek Seçenekleri</h2>
+          <h2 id="non-hormonal-destek">Non-Hormonal Destek Seçenekleri</h2>
           <p>
-            İlk basamakta non-hormonal nemlendiriciler ve yağlayıcılar yaygın kullanılır [●●●●●]. Nemlendiriciler günlük veya düzenli aralıklarla,
+            İlk basamakta non-hormonal nemlendiriciler ve yağlayıcılar yaygın kullanılır <Evidence level={5} />. Nemlendiriciler günlük veya düzenli aralıklarla,
             yağlayıcılar ise yakınlık öncesinde kullanılır. Su bazlı ve silikon bazlı formlar kişisel konfora göre farklılık gösterebilir.
             Düzenli kullanım çoğu kişide tahriş ve sürtünme kaynaklı rahatsızlığı azaltır.
           </p>
           <p>
             Yakınlıkta ağrı yaşayan kişilerde iletişim, ritim ve hazırlık süresi de sonuçları etkiler. Daha uzun hazırlık, uygun ürün seçimi,
             konforu gözeten tempo ve partnerle açık konuşma, fiziksel rahatsızlığı azaltmada yardımcı olabilir.
-            Bazı çalışmalarda düzenli yakınlığın doku dolaşımını desteklediği ve semptom yönetimine katkı sağladığı bildirilmiştir [●●●●○].
+            Bazı çalışmalarda düzenli yakınlığın doku dolaşımını desteklediği ve semptom yönetimine katkı sağladığı bildirilmiştir <Evidence level={4} />.
           </p>
 
-          <h2>Hormon Temelli Tedavi Seçenekleri</h2>
+          <h2 id="hormon-tedavi">Hormon Temelli Tedavi Seçenekleri</h2>
           <p>
-            Lokal östrojen tedavileri (krem, tablet, halka) vulvovajinal atrofi belirtilerinde güçlü kanıta sahip seçeneklerdir [●●●●●].
+            Lokal östrojen tedavileri (krem, tablet, halka) vulvovajinal atrofi belirtilerinde güçlü kanıta sahip seçeneklerdir <Evidence level={5} />.
             Bu tedaviler, çoğu olguda düşük sistemik emilim ile lokal dokuda iyileşme hedefler. Uygulama sıklığı başlangıç ve idame dönemine göre
             değişebilir; kişisel plan hekim değerlendirmesiyle yapılır.
           </p>
           <p>
-            Seçilmiş olgularda lokal DHEA veya sistemik yaklaşım gerektiren durumlar da değerlendirilebilir [●●●●● - ●●●●○].
-            Oral SERM grubu tedaviler bazı hastalarda seçenek olabilir [●●●●○]. Burada temel ilke, tek bir yöntemi herkes için standart görmek yerine,
+            Seçilmiş olgularda lokal DHEA veya sistemik yaklaşım gerektiren durumlar da değerlendirilebilir <Evidence from={5} to={4} />.
+            Oral SERM grubu tedaviler bazı hastalarda seçenek olabilir <Evidence level={4} />. Burada temel ilke, tek bir yöntemi herkes için standart görmek yerine,
             belirtiler, eşlik eden hastalıklar ve kişisel tercihleri birlikte ele almaktır.
           </p>
 
-          <h2>Diğer Yaklaşımlar ve Kanıt Durumu</h2>
+          <h2 id="diger-yaklasimlar">Diğer Yaklaşımlar ve Kanıt Durumu</h2>
           <p>
             Lazer veya radyofrekans gibi enerji temelli uygulamalar son yıllarda ilgi görmektedir; ancak uzun dönem ve geniş örneklemli veriler
-            halen gelişme aşamasındadır [●●○○○]. Bu nedenle bu başlıklar kesinleşmiş standart yaklaşım yerine, kanıt seviyesi sınırlı seçenekler olarak ele alınmalıdır.
+            halen gelişme aşamasındadır <Evidence level={2} />. Bu nedenle bu başlıklar kesinleşmiş standart yaklaşım yerine, kanıt seviyesi sınırlı seçenekler olarak ele alınmalıdır.
           </p>
           <p>
             Klinik pratikte en güvenli yol, güçlü kanıtlı yöntemleri temel almak ve yeni seçenekleri kişisel risk-fayda değerlendirmesiyle tartışmaktır.
             Bilimsel belirsizlik olan alanlarda beklentiyi dengede tutmak önemlidir.
           </p>
 
-          <h2>Üriner Belirtiler ve Ne Zaman Destek Alınmalı?</h2>
+          <h2 id="uriner-belirtiler">Üriner Belirtiler ve Ne Zaman Destek Alınmalı?</h2>
           <p>
             İdrar yolu enfeksiyonlarının sıklaşması, yanma şikayetinin tekrarlaması, kaçırma yakınmaları veya yaşam kalitesini bozan sıkışma hissi
-            varsa jinekoloji veya üroloji değerlendirmesi yararlıdır [●●●●●]. Erken değerlendirme, benzer belirtilere yol açabilecek diğer nedenleri ayırmayı sağlar.
+            varsa jinekoloji veya üroloji değerlendirmesi yararlıdır <Evidence level={5} />. Erken değerlendirme, benzer belirtilere yol açabilecek diğer nedenleri ayırmayı sağlar.
           </p>
           <p>
             Yakınlık sırasında ağrı kalıcı hale gelmişse, günlük konfor belirgin azalmışsa veya ilişkide kaçınma davranışı gelişmişse
@@ -120,7 +136,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
         </ArticleProsePanel>
 
         <ArticleProsePanel class="mt-10">
-          <h2>Günlük Bakım Rutini Nasıl Kurulur?</h2>
+          <h2 id="gunluk-bakim">Günlük Bakım Rutini Nasıl Kurulur?</h2>
           <p>
             Vajinal sağlıkta sürdürülebilir sonuçlar çoğu zaman basit ama düzenli bir bakım rutiniyle başlar.
             Tahriş edici ürünlerden kaçınmak, kokulu temizlik ürünleri yerine nazik ve pH uyumlu seçenekler kullanmak,
@@ -133,7 +149,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
             Düzenli kullanımın etkisi genellikle birkaç hafta içinde görünür hale gelir; bu nedenle kısa sürede sonuç alamadığınızda umutsuzluğa kapılmadan
             planı gözden geçirmek ve gerekirse sağlık profesyoneliyle yeniden düzenlemek gerekir.
           </p>
-          <h2>Yakınlıkta İletişim ve Psikolojik Konfor</h2>
+          <h2 id="yakinlik-iletisim">Yakınlıkta İletişim ve Psikolojik Konfor</h2>
           <p>
             Menopoz dönemindeki bedensel değişimler, yalnızca fiziksel değil duygusal bir uyum süreci de gerektirir.
             Yakınlık sırasında ağrı veya çekinme yaşandığında bunun konuşulabilir bir sağlık başlığı olduğunu bilmek önemlidir.
@@ -147,7 +163,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
           </p>
         </ArticleProsePanel>
         <ArticleProsePanel class="mt-10">
-          <h2>Kısa Hatırlatma</h2>
+          <h2 id="kisa-hatirlatma">Kısa Hatırlatma</h2>
           <p>
             Vajinal sağlıkta belirtileri ertelemek yaygındır, ancak erken değerlendirme konforu daha hızlı artırır.
             Konu mahrem olsa da tıbbi açıdan tamamen konuşulabilir ve yönetilebilir bir başlıktır. Düzenli takip, doğru bilgi ve nazik bir iletişim dili iyileşme sürecini belirgin biçimde destekler.
@@ -166,7 +182,7 @@ const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Vulvovajinal değişimler menopoz döneminde sık görülür ve çoğu zaman etkili biçimde yönetilebilir. Bu başlıkta erken konuşma,
             doğru ürün seçimi ve gerekirse lokal tedavi planı yaşam kalitesini belirgin artırabilir. Amaç, yakınlık ve günlük konforu

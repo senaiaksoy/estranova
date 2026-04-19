@@ -4,12 +4,13 @@ interface Props {
   tag: string;
   title: string;
   body: string;
-  /** Örn. kanıt satırı düz metin */
+  /** Örn. kanıt satırı düz metin; `footer` slotu verilmişse kullanılmaz */
   footer?: string;
   highlight?: boolean;
 }
 
 const { href, tag, title, body, footer, highlight = false } = Astro.props;
+const hasFooterSlot = Astro.slots.has('footer');
 
 const shellClass = [
   'flex h-full flex-col rounded-[28px] border p-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2',
@@ -26,7 +27,13 @@ const shellClass = [
       <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{tag}</p>
       <h3 class="mb-3 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">{title}</h3>
       <p class="mb-4 flex-1 leading-relaxed text-[#2D2D2D]/75">{body}</p>
-      {footer && <p class="text-sm font-medium text-[#2D2D2D]/80">{footer}</p>}
+      {hasFooterSlot ? (
+        <div class="text-sm font-medium text-[#2D2D2D]/80">
+          <slot name="footer" />
+        </div>
+      ) : (
+        footer && <p class="text-sm font-medium text-[#2D2D2D]/80">{footer}</p>
+      )}
     </a>
   ) : (
     <article class:list={shellClass}>
@@ -34,7 +41,13 @@ const shellClass = [
       <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{tag}</p>
       <h3 class="mb-3 font-serif text-2xl">{title}</h3>
       <p class="mb-4 flex-1 leading-relaxed text-[#2D2D2D]/75">{body}</p>
-      {footer && <p class="text-sm font-medium text-[#2D2D2D]/80">{footer}</p>}
+      {hasFooterSlot ? (
+        <div class="text-sm font-medium text-[#2D2D2D]/80">
+          <slot name="footer" />
+        </div>
+      ) : (
+        footer && <p class="text-sm font-medium text-[#2D2D2D]/80">{footer}</p>
+      )}
     </article>
   )
 }

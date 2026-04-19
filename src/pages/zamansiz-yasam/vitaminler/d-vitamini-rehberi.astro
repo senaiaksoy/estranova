@@ -4,7 +4,17 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+
+const tocEntries = [
+  { id: 'd-vitamini-nedir', label: 'D Vitamini Nedir' },
+  { id: 'ihtiyac-neden-artar', label: 'İhtiyaç Neden Artar' },
+  { id: 'eksiklik-belirtileri', label: 'Eksiklik Belirtileri' },
+  { id: 'ne-kadar-almali', label: 'Ne Kadar Almalı' },
+  { id: 'dogal-kaynaklar', label: 'Doğal Kaynaklar' },
+];
 ---
 
 <SiteLayout
@@ -15,6 +25,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 
   <main id="main-content" class="pt-24 text-[#2D2D2D]">
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="rima-erdemir" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
         <header class="mb-10">
@@ -35,7 +46,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
         </section>
 
         <ArticleProsePanel>
-          <h2>D Vitamini Nedir ve Neden Önemlidir?</h2>
+          <h2 id="d-vitamini-nedir">D Vitamini Nedir ve Neden Önemlidir?</h2>
           <p>
             D vitamini, kemik ve kas sağlığında temel rol oynayan bir vitamindir. Vücutta kalsiyum ve fosfor dengesine
             katkı sağlar. Bu denge, yalnızca kemik yoğunluğu için değil, günlük hareket kapasitesi için de önemlidir.
@@ -46,7 +57,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             bütüncül sağlık planının bir parçası olarak değerlendirmek daha doğru olur.
           </p>
 
-          <h2>40 Yaşından Sonra D Vitamini İhtiyacı Neden Artar?</h2>
+          <h2 id="ihtiyac-neden-artar">40 Yaşından Sonra D Vitamini İhtiyacı Neden Artar?</h2>
           <p>
             Yaş ilerledikçe ciltte D vitamini sentezi azalabilir. Güneşe çıkma süresinin düşmesi, kapalı ortamda geçirilen
             zamanın artması ve beslenme düzenindeki değişimler de bu tabloya eklenir. Menopoz geçişinde kemik döngüsü hızlandığı
@@ -57,7 +68,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             fiziksel aktivite ve genel sağlık durumu ile birlikte değerlendirilmesi gerekir.
           </p>
 
-          <h2>Eksiklik Belirtileri Nelerdir?</h2>
+          <h2 id="eksiklik-belirtileri">Eksiklik Belirtileri Nelerdir?</h2>
           <p>
             D vitamini eksikliği her zaman belirgin bulgu vermez. Bununla birlikte uzun süren yorgunluk, kas güçsüzlüğü,
             yaygın kemik veya kas ağrısı, sık düşme eğilimi ve iyileşmesi geciken halsizlik hissi bazı kişilerde görülebilir.
@@ -67,7 +78,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             hekim değerlendirmesi ve uygun görülen kan testleriyle birlikte ilerlemek en güvenli yaklaşımdır.
           </p>
 
-          <h2>Ne Kadar Almanız Gerekiyor? (Dozaj Bilgisi — Tarafsız)</h2>
+          <h2 id="ne-kadar-almali">Ne Kadar Almanız Gerekiyor? (Dozaj Bilgisi — Tarafsız)</h2>
           <p>
             Genel kılavuzlarda yetişkinler için günlük D vitamini gereksinimi çoğunlukla 600–800 IU aralığında verilir.
             Menopoz sonrası dönemde, bireysel risk durumuna göre bu aralık hekim tarafından yeniden düzenlenebilir.
@@ -78,7 +89,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             4000 IU/gün olarak belirtilir. Kişisel doz kararı, kan düzeyi ve tıbbi öyküye göre verilmelidir.
           </p>
 
-          <h2>Doğal Kaynaklar ve Takviye Seçimi</h2>
+          <h2 id="dogal-kaynaklar">Doğal Kaynaklar ve Takviye Seçimi</h2>
           <p>
             D vitamini için en temel doğal kaynak güneş ışığıdır. Bunun yanında yağlı balıklar, yumurta sarısı ve D vitamini ile
             zenginleştirilmiş gıdalar beslenmeye katkı sağlar. Ancak yalnızca besinle hedef düzeye ulaşmak her zaman mümkün olmayabilir.
@@ -111,7 +122,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             D vitamini takviyesinin kemik sağlığı üzerindeki olumlu etkisi çok sayıda randomize kontrollü çalışma ve meta-analiz ile desteklenmektedir.
             Uluslararası kılavuzlar menopoz sonrası kadınlarda D vitamini takviyesini önermektedir.

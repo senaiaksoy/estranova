@@ -5,10 +5,24 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
 
 const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
+
+const tocEntries = [
+  { id: 'hormon-etkisi', label: 'Hormon Etkisi' },
+  { id: 'yaygin-sorunlar', label: 'Yaygın Sorunlar' },
+  { id: 'risk-faktorleri', label: 'Risk Faktörleri' },
+  { id: 'yasam-aliskanliklari', label: 'Yaşam Alışkanlıkları' },
+  { id: 'tibbi-tedavi', label: 'Tıbbi Tedavi' },
+  { id: 'ne-zaman-destek', label: 'Ne Zaman Destek Alınmalı' },
+  { id: 'travma-duygusal-yuk', label: 'Travma ve Duygusal Yük' },
+  { id: 'izleme-kayit', label: 'İzleme ve Kayıt' },
+  { id: 'cevresel-faktorler', label: 'Çevresel Faktörler' },
+];
 ---
 
 <SiteLayout
@@ -26,6 +40,7 @@ const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
       compact
     />
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
@@ -38,35 +53,35 @@ const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
         </section>
 
         <ArticleProsePanel>
-          <h2>Hormon Değişiklikleri Ruh Halini Nasıl Etkiler?</h2>
+          <h2 id="hormon-etkisi">Hormon Değişiklikleri Ruh Halini Nasıl Etkiler?</h2>
           <p>
             Menopoz geçişinde östrojen düzeyindeki dalgalanma, beyindeki nörotransmiter sistemleriyle yakın ilişki içindedir.
-            Serotonin üzerinde düzenleyici etkiler, duygudurum istikrarı açısından önem taşır [●●●●●]. Progesteron metabolitlerinin GABA sistemiyle
-            ilişkisi de sakinlik, uykuya geçiş ve kaygı eşiği üzerinde etkili olabilir [●●●●●].
+            Serotonin üzerinde düzenleyici etkiler, duygudurum istikrarı açısından önem taşır <Evidence level={5} />. Progesteron metabolitlerinin GABA sistemiyle
+            ilişkisi de sakinlik, uykuya geçiş ve kaygı eşiği üzerinde etkili olabilir <Evidence level={5} />.
           </p>
           <p>
-            FSH ve LH artışı doğrudan ruh halini tek başına belirlemez; ancak hormonal çevrenin değiştiğini gösteren biyolojik işaretlerdir [●●●●○].
-            Perimenopozda dalgalanma daha belirginken, postmenopozda hormon düzeyleri görece sabit bir düzleme gelir [●●●●●].
+            FSH ve LH artışı doğrudan ruh halini tek başına belirlemez; ancak hormonal çevrenin değiştiğini gösteren biyolojik işaretlerdir <Evidence level={4} />.
+            Perimenopozda dalgalanma daha belirginken, postmenopozda hormon düzeyleri görece sabit bir düzleme gelir <Evidence level={5} />.
             Bu geçişin ritmini anlamak, "neden böyle hissediyorum" sorusuna daha açık bir yanıt verir.
           </p>
 
-          <h2>Yaygın Ruh Hali Sorunları</h2>
+          <h2 id="yaygin-sorunlar">Yaygın Ruh Hali Sorunları</h2>
           <p>
             Bu dönemde en sık karşılaşılan başlıklar depresif belirtiler, anksiyete, duygusal hassasiyet ve ani dalgalanmalardır.
-            Depresyon riski, özellikle daha önce duygu durum bozukluğu öyküsü olan kişilerde perimenopozda artabilir [●●●●●].
+            Depresyon riski, özellikle daha önce duygu durum bozukluğu öyküsü olan kişilerde perimenopozda artabilir <Evidence level={5} />.
             Sürekli isteksizlik, ilgi kaybı, umutsuzluk hissi, uyku ve iştah değişimi gibi belirtiler iki haftadan uzun sürüyorsa değerlendirme gerekir.
           </p>
           <p>
-            Anksiyete tarafında çarpıntı, huzursuzluk, kaygı düşüncelerinin artması ve bedensel gerginlik öne çıkabilir [●●●●●].
+            Anksiyete tarafında çarpıntı, huzursuzluk, kaygı düşüncelerinin artması ve bedensel gerginlik öne çıkabilir <Evidence level={5} />.
             Bazı kadınlar panik benzeri ataklar yaşayabilir. Duygusal dalgalanma ise tek başına bir hastalık göstergesi değildir;
             fakat günlük işlevi belirgin biçimde etkiliyorsa destek almak önemlidir.
           </p>
 
-          <h2>Risk Faktörleri</h2>
+          <h2 id="risk-faktorleri">Risk Faktörleri</h2>
           <p>
-            Ailede depresyon veya anksiyete öyküsü, kişisel psikiyatrik geçmiş, yüksek yaşam stresi ve sosyal yalnızlık riski artırabilir [●●●●●].
-            Uyku bozukluğu bu tablonun hem nedeni hem sonucu olabilir [●●●●●]. Sıcak basması, kronik ağrı veya yorgunluk gibi somatik belirtiler
-            ruhsal yükü artırarak döngüyü derinleştirebilir [●●●●○].
+            Ailede depresyon veya anksiyete öyküsü, kişisel psikiyatrik geçmiş, yüksek yaşam stresi ve sosyal yalnızlık riski artırabilir <Evidence level={5} />.
+            Uyku bozukluğu bu tablonun hem nedeni hem sonucu olabilir <Evidence level={5} />. Sıcak basması, kronik ağrı veya yorgunluk gibi somatik belirtiler
+            ruhsal yükü artırarak döngüyü derinleştirebilir <Evidence level={4} />.
           </p>
           <p>
             Bu nedenle değerlendirme yalnızca "moral" başlığında yapılmaz. Uyku düzeni, iş yükü, bakım sorumlulukları,
@@ -74,35 +89,35 @@ const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
             Çok katmanlı bakış, kişiye uygun desteği seçmeyi kolaylaştırır.
           </p>
 
-          <h2>Ruh Halini Destekleyen Yaşam Alışkanlıkları</h2>
+          <h2 id="yasam-aliskanliklari">Ruh Halini Destekleyen Yaşam Alışkanlıkları</h2>
           <p>
-            Düzenli hareket, menopoz döneminde ruh hali için en güçlü desteklerden biridir [●●●●●]. Haftada en az 150 dakika orta şiddette
+            Düzenli hareket, menopoz döneminde ruh hali için en güçlü desteklerden biridir <Evidence level={5} />. Haftada en az 150 dakika orta şiddette
             aerobik aktivite ve haftada 2 gün direnç egzersizi; uyku kalitesini, enerji düzeyini ve duygusal dengeyi birlikte destekler.
             Egzersizin etkisi tek günde değil, süreklilikle belirginleşir.
           </p>
           <p>
-            Uyku hijyeni ikinci temel alandır [●●●●●]. Her gün benzer saatlerde yatıp kalkmak, geç saatte ekran maruziyetini azaltmak,
+            Uyku hijyeni ikinci temel alandır <Evidence level={5} />. Her gün benzer saatlerde yatıp kalkmak, geç saatte ekran maruziyetini azaltmak,
             akşam kafeinini sınırlamak ve serin bir uyku ortamı hazırlamak gece uyanmalarını azaltabilir. Beslenmede düzenli protein alımı,
-            omega-3, B grubu vitaminler ve yeterli lif desteği de ruhsal dengeyle ilişkilidir [●●●●○].
+            omega-3, B grubu vitaminler ve yeterli lif desteği de ruhsal dengeyle ilişkilidir <Evidence level={4} />.
           </p>
           <p>
             Sosyal bağlar ve stres düzenleme teknikleri üçüncü ayaktır. Yakın çevreyle düzenli temas, nefes egzersizleri,
-            kısa farkındalık uygulamaları ve gerekirse yapılandırılmış psikolojik destek, kaygı döngüsünü kırmada yardımcı olur [●●●●○ - ●●●●●].
-            Sabah gün ışığına çıkmak da sirkadiyen ritmi destekleyerek duygu durum üzerinde olumlu etki yaratabilir [●●●●○].
+            kısa farkındalık uygulamaları ve gerekirse yapılandırılmış psikolojik destek, kaygı döngüsünü kırmada yardımcı olur <Evidence from={4} to={5} />.
+            Sabah gün ışığına çıkmak da sirkadiyen ritmi destekleyerek duygu durum üzerinde olumlu etki yaratabilir <Evidence level={4} />.
           </p>
 
-          <h2>Tıbbi Tedavi Seçenekleri</h2>
+          <h2 id="tibbi-tedavi">Tıbbi Tedavi Seçenekleri</h2>
           <p>
             Belirtiler belirginse tıbbi seçenekler gündeme gelir. HRT, uygun kişilerde hem vasomotor belirtileri hem de ilişkili ruh hali şikayetlerini
-            hafifletebilir [●●●●●]. Bu etkinlik özellikle perimenopoz döneminde daha görünür olabilir. Karar, kişisel risk profili ve öyküye göre verilir.
+            hafifletebilir <Evidence level={5} />. Bu etkinlik özellikle perimenopoz döneminde daha görünür olabilir. Karar, kişisel risk profili ve öyküye göre verilir.
           </p>
           <p>
-            SSRI/SNRI grubu ilaçlar menopoz dönemindeki depresyon ve anksiyete belirtilerinde etkili seçeneklerdir [●●●●●].
-            Psikoterapi, özellikle bilişsel davranışçı yaklaşımlar, uzun dönem dayanıklılığı artırır [●●●●●].
-            Birçok durumda yaşam alışkanlığı düzenlemeleri ile psikoterapi ve gerekirse ilaç tedavisi birlikte planlandığında daha iyi sonuç alınır [●●●●●].
+            SSRI/SNRI grubu ilaçlar menopoz dönemindeki depresyon ve anksiyete belirtilerinde etkili seçeneklerdir <Evidence level={5} />.
+            Psikoterapi, özellikle bilişsel davranışçı yaklaşımlar, uzun dönem dayanıklılığı artırır <Evidence level={5} />.
+            Birçok durumda yaşam alışkanlığı düzenlemeleri ile psikoterapi ve gerekirse ilaç tedavisi birlikte planlandığında daha iyi sonuç alınır <Evidence level={5} />.
           </p>
 
-          <h2>Ne Zaman Profesyonel Destek Alınmalı?</h2>
+          <h2 id="ne-zaman-destek">Ne Zaman Profesyonel Destek Alınmalı?</h2>
           <p>
             Belirtiler iki haftadan uzun sürüyorsa, uyku-iştah-günlük işlev belirgin etkileniyorsa veya ilişki ve iş yaşamında zorlanma artıyorsa
             profesyonel değerlendirme önerilir. Kendi başınıza denediğiniz yöntemlerle iyileşme olmaması da destek arama için önemli bir işarettir.
@@ -112,7 +127,7 @@ const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
             Bu noktada yardım istemek güçsüzlük değil, güvenliği önceliklendiren bir sağlık adımıdır.
           </p>
 
-          <h2>Travma ve Derinleşen Duygusal Yük</h2>
+          <h2 id="travma-duygusal-yuk">Travma ve Derinleşen Duygusal Yük</h2>
           <p>
             Geçmiş travma öyküsü olan kişilerde menopoz geçişi bazı belirtileri daha yoğun hissettirebilir.
             Özellikle PTSD, kronik kaygı bozukluğu veya obsesif belirtiler eşlik ediyorsa tedavi planı daha kişiselleştirilmelidir.
@@ -125,7 +140,7 @@ const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
         </ArticleProsePanel>
 
         <ArticleProsePanel class="mt-10">
-          <h2>Ruh Halini İzlemek İçin Basit Bir Kayıt Sistemi</h2>
+          <h2 id="izleme-kayit">Ruh Halini İzlemek İçin Basit Bir Kayıt Sistemi</h2>
           <p>
             Menopoz geçişinde belirtiler dalgalı seyrettiği için günlük veya haftalık kısa bir kayıt sistemi oldukça yardımcı olabilir.
             Uyku süresi, gün içi enerji, kaygı düzeyi, sıcak basması sıklığı, hareket miktarı ve sosyal temas düzeyi gibi göstergeleri
@@ -137,7 +152,7 @@ const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
             Oysa yapılandırılmış kayıt, iyi günlerin de var olduğunu ve iyileşmenin küçük adımlarla ilerlediğini gösterir.
             Hekim veya terapist görüşmelerinde bu veriler, tedavi planının kişiye özgü ayarlanmasını kolaylaştırır.
           </p>
-          <h2>Destek Planında Çevresel Faktörlerin Rolü</h2>
+          <h2 id="cevresel-faktorler">Destek Planında Çevresel Faktörlerin Rolü</h2>
           <p>
             Ruh hali yalnızca biyolojiyle değil, günlük çevreyle de yakından ilişkilidir. Aşırı iş yükü, bakım sorumluluğu, yalnızlık,
             belirsizlik ve çatışmalı ilişkiler hormonal dalgalanmaların etkisini daha yoğun hissettirebilir.
@@ -170,7 +185,7 @@ const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Ruh hali değişimleri menopoz döneminde sık görülür ve çoğu zaman yönetilebilir bir çerçeveye sahiptir. Depresyon ve anksiyete,
             erken fark edildiğinde etkili biçimde tedavi edilebilen klinik durumlardır. Yaşam alışkanlıkları, psikolojik destek ve gerekli durumlarda

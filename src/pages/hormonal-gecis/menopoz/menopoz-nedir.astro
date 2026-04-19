@@ -4,7 +4,21 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+
+const tocEntries = [
+  { id: 'menopoz-nedir', label: 'Menopoz Nedir' },
+  { id: 'evreler', label: 'Evreler' },
+  { id: 'hormon-degisim', label: 'Hormon Değişimleri' },
+  { id: 'belirtiler', label: 'Belirtiler' },
+  { id: 'postmenopoz', label: 'Postmenopoz' },
+  { id: 'yasam-kalitesi', label: 'Yaşam Kalitesi' },
+  { id: 'uzun-vadeli', label: 'Uzun Vadeli Gündem' },
+  { id: 'yol-haritasi', label: 'İlk 12 Ay' },
+  { id: 'iyi-olus', label: 'İyi Oluş Alışkanlıkları' },
+];
 ---
 
 <SiteLayout
@@ -15,6 +29,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 
   <main id="main-content" class="pt-24 text-[#2D2D2D]">
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="14 Nisan 2026" readingMinutes={6} />
 
         <header class="mb-10">
@@ -31,7 +46,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
         </section>
 
         <ArticleProsePanel>
-          <h2>Menopoz Nedir?</h2>
+          <h2 id="menopoz-nedir">Menopoz Nedir?</h2>
           <p>
             Menopoz, tıbbi olarak son adet kanamasının üzerinden 12 ay geçmesiyle konulan doğal bir yaşam dönemi tanımıdır.
             Bu nedenle menopoz aniden bir günde başlayan tek bir olay değil, geriye dönük olarak netleşen bir eşiği temsil eder.
@@ -43,7 +58,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             Genetik yapı, sigara kullanımı, bazı tedaviler ve yaşam koşulları bu zamanı öne veya arkaya çekebilir.
           </p>
 
-          <h2>Menopozun Evreleri</h2>
+          <h2 id="evreler">Menopozun Evreleri</h2>
           <p>
             Süreci üç ana başlıkta okumak işleri sadeleştirir. Perimenopoz, hormon dalgalanmalarının belirgin olduğu geçiş dönemidir.
             Menopoz, son adet tarihinden sonra 12 ay tamamlandığında tanımlanan eşiktir. Postmenopoz ise bu eşiğin ardından yaşamın geri kalanını kapsar.
@@ -54,10 +69,10 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             Bu farkı bilmek, sağlık planını dönemlere göre düzenlemeyi kolaylaştırır.
           </p>
 
-          <h2>Hormon Değişimleri Bu Evrede</h2>
+          <h2 id="hormon-degisim">Hormon Değişimleri Bu Evrede</h2>
           <p>
-            Menopoz döneminde FSH ve LH düzeylerinin yükselmesi, yumurtalık yanıtının azalmasına bağlı klasik bir bulgudur [●●●●●].
-            Östrojen ve progesteron düzeylerinde kalıcı düşüş gözlenir [●●●●●]. Hormonlardaki bu yeni denge postmenopozda daha stabil hale gelir [●●●●●].
+            Menopoz döneminde FSH ve LH düzeylerinin yükselmesi, yumurtalık yanıtının azalmasına bağlı klasik bir bulgudur <Evidence level={5} />.
+            Östrojen ve progesteron düzeylerinde kalıcı düşüş gözlenir <Evidence level={5} />. Hormonlardaki bu yeni denge postmenopozda daha stabil hale gelir <Evidence level={5} />.
             Stabilite, her semptomun tamamen bittiği anlamına gelmez; ancak dalgalanmanın azalması birçok kişide rahatlama yaratır.
           </p>
           <p>
@@ -65,11 +80,11 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             yorumlandığında anlam kazanır. Özellikle düzensiz geçiş döneminde tek bir test sonucuna dayanarak genel bir yargıya varmak yanıltıcı olabilir.
           </p>
 
-          <h2>Belirtiler Bu Evrede Nasıl Değişir?</h2>
+          <h2 id="belirtiler">Belirtiler Bu Evrede Nasıl Değişir?</h2>
           <p>
-            Menopoz eşiğine gelindiğinde sıcak basması ve gece terlemesi gibi vasomotor belirtiler birçok kişide zamanla azalır [●●●●●].
+            Menopoz eşiğine gelindiğinde sıcak basması ve gece terlemesi gibi vasomotor belirtiler birçok kişide zamanla azalır <Evidence level={5} />.
             Buna rağmen uyku kalitesinde bozulma, cilt ve mukozalarda kuruluk, libido değişimi veya odaklanma güçlüğü bazı kadınlarda sürebilir.
-            Belirti süresi ve şiddeti kişiden kişiye farklıdır; ortalama eğilim hafifleme yönünde olsa da bireysel dağılım geniştir [●●●●○].
+            Belirti süresi ve şiddeti kişiden kişiye farklıdır; ortalama eğilim hafifleme yönünde olsa da bireysel dağılım geniştir <Evidence level={4} />.
           </p>
           <p>
             Bu dönemde yeni dikkat başlıkları da gündeme gelir. Metabolik hızdaki değişim, yağ dağılımının karın çevresine kayması,
@@ -77,18 +92,18 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             uzun vadeli koruyucu sağlık yaklaşımı da önemlidir.
           </p>
 
-          <h2>Postmenopoz Dönemi: İlk Yıllar Neden Kritik?</h2>
+          <h2 id="postmenopoz">Postmenopoz Dönemi: İlk Yıllar Neden Kritik?</h2>
           <p>
-            Postmenopozun ilk 5-8 yılında kemik kaybı görece hızlanabilir [●●●●●]. Bu nedenle düzenli hareket, yeterli protein ve
+            Postmenopozun ilk 5-8 yılında kemik kaybı görece hızlanabilir <Evidence level={5} />. Bu nedenle düzenli hareket, yeterli protein ve
             kalsiyum-D vitamini dengesinin izlenmesi önem taşır. Gerekli kişilerde kemik mineral yoğunluğu ölçümleriyle kişisel risk değerlendirmesi yapılır.
           </p>
           <p>
-            Kardiyovasküler risk göstergelerinde yaşa bağlı artış postmenopozda daha belirgin hale gelebilir [●●●●●].
+            Kardiyovasküler risk göstergelerinde yaşa bağlı artış postmenopozda daha belirgin hale gelebilir <Evidence level={5} />.
             Kan basıncı, lipid profili, glukoz dengesi ve bel çevresi gibi verilerin birlikte izlenmesi, erken dönemde düzenleme fırsatı sağlar.
             Amaç, hastalık korkusu üretmek değil; uzun vadeli sağlığı planlı biçimde korumaktır.
           </p>
 
-          <h2>Yaşam Kalitesi ve Günlük Hayat</h2>
+          <h2 id="yasam-kalitesi">Yaşam Kalitesi ve Günlük Hayat</h2>
           <p>
             Menopoz sonrası dönem birçok kadın için yalnızca kayıp değil, yeniden düzenleme alanı da sunar. Döngü belirsizliğinin sona ermesi,
             zaman ve enerji yönetimini kolaylaştırabilir. Bazı kişilerde sıcak basmalarının azalması uyku ve günlük performansta toparlanma sağlar.
@@ -99,7 +114,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             yaşam kalitesini artırmada birlikte çalışan temel unsurlardır.
           </p>
 
-          <h2>Uzun Vadeli Sağlık Gündemi</h2>
+          <h2 id="uzun-vadeli">Uzun Vadeli Sağlık Gündemi</h2>
           <p>
             Menopozdan sonra sağlık gündemi üç ana eksende düşünülür: kemik sağlığı, kardiyometabolik denge ve zihinsel iyi oluş.
             Tarama testlerinin düzenli takibi, yaşam alışkanlıklarının kişiye göre yapılandırılması ve gerektiğinde tıbbi destek bu çerçevenin temelidir.
@@ -113,7 +128,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
         </ArticleProsePanel>
 
         <ArticleProsePanel class="mt-10">
-          <h2>Pratik Yol Haritası: İlk 12 Ayı Nasıl Planlayabilirsiniz?</h2>
+          <h2 id="yol-haritasi">Pratik Yol Haritası: İlk 12 Ayı Nasıl Planlayabilirsiniz?</h2>
           <p>
             Menopoz eşiği netleştikten sonra ilk bir yıl, yeni sağlık ritmini kurmak için değerli bir dönemdir.
             Bu aşamada tek seferde büyük değişim yerine, izlenebilir küçük adımlar seçmek sürdürülebilirliği artırır.
@@ -126,7 +141,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             izlendiğinde uzun vadeli riskler daha erken fark edilir. Bu yaklaşım, günlük yaşamı tıbbi terimlerle zorlaştırmak için değil,
             veri temelli ve sakin bir öz bakım planı kurmak için kullanılır.
           </p>
-          <h2>Menopoz Sonrasında İyi Oluşu Destekleyen Günlük Alışkanlıklar</h2>
+          <h2 id="iyi-olus">Menopoz Sonrasında İyi Oluşu Destekleyen Günlük Alışkanlıklar</h2>
           <p>
             Gün içinde düzenli hareket, özellikle kas kütlesini koruyan egzersizler, menopoz sonrası dönemde bağımsız yaşam kapasitesi için güçlü bir yatırımdır.
             Direnç egzersizi ile yürüyüş veya tempolu aktivitenin birlikte planlanması, kemik ve metabolik dengeye eş zamanlı katkı sağlar.
@@ -159,7 +174,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Menopoz bir hastalık değil, yaşam döngüsünün doğal bir evresidir. Bu evrede proaktif sağlık yaklaşımı,
             özellikle kalp-damar sağlığı, kemik yoğunluğu ve metabolik denge için belirleyici olur. Kişisel izlem planı ile

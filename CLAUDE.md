@@ -105,6 +105,19 @@ Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; K
 - **Yayın eşiği:** `compliance_score` **≥ 85** iken yayın bandına girilebilir (`COMPLIANCE_SCORE_PUBLISH_OK`; altı revizyon / best-effort akışı). Tam sayı ve model matrisi: **`docs/PIPELINE.md`**.
 - **Best-effort:** En fazla **2** revizyon turundan sonra zorunlu durdurma ve `ready_to_publish_best_effort` — ayrıntı aynı belgede ve `agents/compliance_expert_agent.py`.
 
+#### Editöryal gövde tipografisi — makale sayfaları (HARD CONSTRAINT)
+
+Makale gövdeleri (Astro veya dinamik) **tek bir editöryal tipografi sistemi** ile yayınlanır. Bu sistem Estranova'nın "Vogue TR / Elle TR" editöryal hissini doğuran yegâne mekanizmadır; farklı bir `prose` veya custom wrapper kullanılamaz.
+
+- **Wrapper zorunluluğu:** Makale ana metni her zaman `ArticleProsePanel` içinde yayınlanır. İçerideki div: `class="prose prose-lg prose-estranova max-w-none"`. Bu üç class birlikte zorunludur; değiştirilemez, kaldırılamaz.
+- **Otomatik bölüm numarası (chapter counter):** `prose-estranova` her `<h2>`'nin üstüne gold renkte `01`, `02` … numarası basar (`counter-increment: estranova-chapter`). Sidebar TOC'deki numaralarla **görsel olarak kenetlenir** — TOC ve chapter numaralarının eşleşmesi için ArticleProsePanel dışında manuel `<h2>` kullanma.
+- **Altın ayraç:** Her H2'den sonra 2.5rem genişlikte gold çizgi (`::after`) otomatik basılır. Bu çizgiyi manuel `<hr>` ile taklit etme; kart içinde çift çizgi doğar.
+- **İtalik lede zorunluluğu:** Her H2'den **sonraki ilk `<p>`** otomatik olarak **italic serif burgundy** render edilir (`h2 + p` selector). Bu paragraf bölümün "lede"sidir — 1-2 cümlede bölümün kanısını/sorusunu/durumunu kurar. **Bullet list, ağır veri, veya uzun tanım ile başlayan bölüm yasaktır**; yazar, publisher ve her metin üreten ajan bunu üretim sırasında hesaba katar.
+- **Gizli mekanizma:** CSS editoryal katmanı görünür. Yazar markdown/HTML'de sadece `<h2>başlık</h2><p>gövde</p>` yazar; numara, çizgi ve italic lede görsel katmandan gelir. Yazar manuel olarak "01." yazmaz, italic tag atmaz.
+- **Değiştirme kuralı:** `src/index.css` içindeki `@utility prose-estranova` bloğuna yapılan değişiklikler tüm makaleleri etkiler. Renk tokenları (`--tw-prose-*`) ve palet değerleri (#6B2D3E, #C9A96E, #4f171c, #2D2D2D) marka paletinde sabittir; "premium editöryal his" tanımlı bu paletle korunur.
+- **Teknik kaynak:** Uygulama detayı + kod snippet'leri **AGENTS.md → "Article page layout (Astro)"** bölümünde. Kurulum: `@tailwindcss/typography` devDependency, `src/index.css` içinde `@plugin "@tailwindcss/typography"`.
+- **Kanıt düzeyi rozeti:** Yayında kanıt gücü yalnızca `<Evidence level={N} />` (`N` = 1–5) veya aralık için `<Evidence from={A} to={B} />` ile gösterilir. `[●●●●●]`, `[●●●●○]` vb. **literal nokta / daire dizileri yasaktır**; Writer ve Publisher bu kalıpları metne yazmaz, Publisher Astro gövdesinde `Evidence` bileşenini kullanır.
+
 ### 6. Kalite Kontrol Checklist
 
 Aşağıdaki kontroller **her üretimde** (metin, sayfa taslağı, agent JSON çıktısı) doğrulanmalıdır; **tek bir “hayır”** ilgili pipeline’da **düzeltme veya reddetme** gerektirir.
@@ -123,6 +136,7 @@ Aşağıdaki kontroller **her üretimde** (metin, sayfa taslağı, agent JSON ç
 - [ ] **Kuruluş adı:** Uluslararası medikal kuruluş / yayın adı gövdeye gömülmemiş (§4).
 - [ ] **Humanize:** En az bir akran / deneyim cümlesi var (§3).
 - [ ] **FAQ:** `pratik_veya_sss` 3–5 konuya özgü soru; jenerik meta soru yok (§3 + Writer doğrulaması).
+- [ ] **Editöryal tipografi:** Makale gövdesi `ArticleProsePanel` + `prose-estranova` ile yayınlanıyor; H2 sonrası ilk paragraf bölümün lede'sini kuracak 1-2 cümlelik editöryal açılış (veri yığını, bullet list veya uzun tanımla başlamıyor).
 
 ---
 

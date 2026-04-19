@@ -5,10 +5,24 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
 
 const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
+
+const tocEntries = [
+  { id: 'neden-farkli', label: 'Neden Farklı' },
+  { id: 'fizyolojik-etki', label: 'Fizyolojik Etkiler' },
+  { id: 'belirtileri-tanima', label: 'Belirtileri Tanıma' },
+  { id: 'meditasyon', label: 'Meditasyon' },
+  { id: 'yoga', label: 'Yoga' },
+  { id: 'cbt', label: 'CBT İlkeleri' },
+  { id: 'gunluk-yonetim', label: 'Günlük Yönetim' },
+  { id: 'profesyonel-yardim', label: 'Profesyonel Yardım' },
+  { id: 'ilk-adimlar', label: 'İlk Adımlar' },
+];
 ---
 
 <SiteLayout
@@ -26,6 +40,7 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
       compact
     />
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="gamze-cizreli" publishedDate="14 Nisan 2026" readingMinutes={6} />
 
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
@@ -36,98 +51,98 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
         </section>
 
         <ArticleProsePanel>
-          <h2>Menopoz Döneminde Stres Neden Farklı?</h2>
+          <h2 id="neden-farkli">Menopoz Döneminde Stres Neden Farklı?</h2>
           <p>
             Menopoz, yalnızca hormonal değişim değil; aynı zamanda yaşam aşamasının bir kırılma noktasıdır.
             Kariyer zirvesinde kalmak veya devam etme soruları, genç yetişkin çocuklara bağlantı, yaşlanan ebeveynlerin bakımı gibi sorunlar bu döneme denk gelebilir.
-            Bu bağlamda stres çok yaygındır [●●●●●].
+            Bu bağlamda stres çok yaygındır <Evidence level={5} />.
           </p>
           <p>
-            Ancak hormonal değişiklik, stres tepkisini de değiştirir. Kortisol (stres hormonu) ve östrojen arasında karşılıklı etkileşim vardır [●●●●●].
-            Hormon dalgalanması, uyku bozukluğu ve stres bir döngü oluşturur; birisi diğerini kötüleştirir [●●●●●].
-            Ruh hali değişimleri stres toleransını düşürür; her sorun daha ağır hissedilir [●●●●●].
-            Vasomotor belirtiler (sıcak basması) dikkat dağılması ve uyuz hali sebebi olabilir [●●●●●].
+            Ancak hormonal değişiklik, stres tepkisini de değiştirir. Kortisol (stres hormonu) ve östrojen arasında karşılıklı etkileşim vardır <Evidence level={5} />.
+            Hormon dalgalanması, uyku bozukluğu ve stres bir döngü oluşturur; birisi diğerini kötüleştirir <Evidence level={5} />.
+            Ruh hali değişimleri stres toleransını düşürür; her sorun daha ağır hissedilir <Evidence level={5} />.
+            Vasomotor belirtiler (sıcak basması) dikkat dağılması ve uyuz hali sebebi olabilir <Evidence level={5} />.
           </p>
 
-          <h2>Stresin Fizyolojik Etkileri</h2>
+          <h2 id="fizyolojik-etki">Stresin Fizyolojik Etkileri</h2>
           <p>
-            Akut stres (kısa süreli, belirli bir sebebi olan) vücudu mobilize eder; uygun dozu "iyi stres"tir [●●●●●].
+            Akut stres (kısa süreli, belirli bir sebebi olan) vücudu mobilize eder; uygun dozu "iyi stres"tir <Evidence level={5} />.
             Kronik stres (uzun süreli, kesintisiz) ise zararlıdır. Davar aktifleştiğinde kortisol ve adrenalin yükselmesi,
-            artık gerekli olmayan durumda sürekli yüksek kalırsa bağışıklık sistemi baskılanır [●●●●●].
+            artık gerekli olmayan durumda sürekli yüksek kalırsa bağışıklık sistemi baskılanır <Evidence level={5} />.
           </p>
           <p>
-            Inflamasyonun artması kronik hastalık riskini artırır [●●●●●].
-            Kalp atış hızı, kan basıncı, metabolik sorunlar (kan şekeri yükselmesi) görülür [●●●●●].
+            Inflamasyonun artması kronik hastalık riskini artırır <Evidence level={5} />.
+            Kalp atış hızı, kan basıncı, metabolik sorunlar (kan şekeri yükselmesi) görülür <Evidence level={5} />.
             Kas gerginliği, uyku bozukluğu, sindirim sorunları (IBS benzeri semptomlar) somatik belirtiler olarak ortaya çıkar.
           </p>
 
-          <h2>Stres Belirtileri Tanıma</h2>
+          <h2 id="belirtileri-tanima">Stres Belirtileri Tanıma</h2>
           <p>
-            Bedensel belirtiler arasında baş ağrısı, boyun ve omuz gerginliği, mide sorunları, hızlı nefes almak yer alır [●●●●●].
-            Duygusal düzeyde kaygı, sinirlilik, ani öfke patlamaları, tüketilmiş hissetme yaygındır [●●●●●].
-            Bilişsel etki, odaklanma güçlüğü, bellek kayması, kararlar vermede zorluk [●●●●●].
-            Davranışsal değişlikler (uyku artışı veya azalması, yemek alışkanlığı değişimi, sosyal çekilme) gözlemlenir [●●●●●].
+            Bedensel belirtiler arasında baş ağrısı, boyun ve omuz gerginliği, mide sorunları, hızlı nefes almak yer alır <Evidence level={5} />.
+            Duygusal düzeyde kaygı, sinirlilik, ani öfke patlamaları, tüketilmiş hissetme yaygındır <Evidence level={5} />.
+            Bilişsel etki, odaklanma güçlüğü, bellek kayması, kararlar vermede zorluk <Evidence level={5} />.
+            Davranışsal değişlikler (uyku artışı veya azalması, yemek alışkanlığı değişimi, sosyal çekilme) gözlemlenir <Evidence level={5} />.
           </p>
           <p>
             Menopoz döneminde belirtileri çoğu zaman "yaş" olarak nitelendirir; ancak çoğu zaman stres ve hormon etkileşimidir.
             Belirtileri tanımlamak ve ismini koymak, kontrolü geri almaya yardımcı olur.
           </p>
 
-          <h2>Meditasyon ve Mindfulness (Farkındalık)</h2>
+          <h2 id="meditasyon">Meditasyon ve Mindfulness (Farkındalık)</h2>
           <p>
-            Meditasyon, bilinçli bir şekilde anın farkında olmayı ve yargısız gözlemlemedir [●●●●●].
-            Kısa oturumlar (5-10 dakika) ile başlanabilir; düzenli yapılınca etkisi belirginleşir [●●●●●].
+            Meditasyon, bilinçli bir şekilde anın farkında olmayı ve yargısız gözlemlemedir <Evidence level={5} />.
+            Kısa oturumlar (5-10 dakika) ile başlanabilir; düzenli yapılınca etkisi belirginleşir <Evidence level={5} />.
             Çeşitli uygulamalar vardır: oturularak meditasyon, kılavuzlu ses, tarama meditasyonu (vücut taraması).
           </p>
           <p>
-            Fizyolojik etkileri kanıtlanmıştır [●●●●●]: kortisol azalır, kalp atış hızı normalleşir, kan basıncı düşer, sinir sistemi sakinleşir.
+            Fizyolojik etkileri kanıtlanmıştır <Evidence level={5} />: kortisol azalır, kalp atış hızı normalleşir, kan basıncı düşer, sinir sistemi sakinleşir.
             HPA ekseni (stres ekseninin beyin-glantlar kısmı) iyileşir. Başta yapay veya zor gelebilirse endişelenmeyin;
             beyin bu yeni aktiviteye uyum sağlar.
           </p>
 
-          <h2>Yoga ve Somato-Motor Uygulamalar</h2>
+          <h2 id="yoga">Yoga ve Somato-Motor Uygulamalar</h2>
           <p>
-            Yoga, hareket, solunum ve meditasyonun birleşimidir. Vinyasa (dinamik, akan hareket), Hatha (durağan duruşlar), Yin (pasif, uzun tutma) gibi çeşitleri vardır [●●●●○].
-            Menopoza uygun modifikasyonlar (kuvvetli ters döndürmelerden kaçınma, kemik sağlığı odağı) önerilir [●●●●○].
+            Yoga, hareket, solunum ve meditasyonun birleşimidir. Vinyasa (dinamik, akan hareket), Hatha (durağan duruşlar), Yin (pasif, uzun tutma) gibi çeşitleri vardır <Evidence level={4} />.
+            Menopoza uygun modifikasyonlar (kuvvetli ters döndürmelerden kaçınma, kemik sağlığı odağı) önerilir <Evidence level={4} />.
           </p>
           <p>
-            Faydaları esneklik, denge, kas kuvveti ve stres azaltmayı içerir [●●●●●].
-            Pranayama (solunum teknikleri), özellikle yavaş ve derin nefes, otonomik sinir sistemini sakinleştirir [●●●●●].
+            Faydaları esneklik, denge, kas kuvveti ve stres azaltmayı içerir <Evidence level={5} />.
+            Pranayama (solunum teknikleri), özellikle yavaş ve derin nefes, otonomik sinir sistemini sakinleştirir <Evidence level={5} />.
             Haftada 2-3 seans yeterli; evde yapılabilecek basit diziler YouTube'da bulunur.
           </p>
 
-          <h2>Bilişsel Davranış Terapisi (CBT) İlkeleri</h2>
+          <h2 id="cbt">Bilişsel Davranış Terapisi (CBT) İlkeleri</h2>
           <p>
-            CBT, düşünceler-duygular-davranışlar arasındaki ilişkiye fokus eder [●●●●●].
+            CBT, düşünceler-duygular-davranışlar arasındaki ilişkiye fokus eder <Evidence level={5} />.
             Olumsuz otomatik düşünceler ("Her şey başarısız olacak") beden tepkisini tetikler.
-            Bu döngüyü tanımak ve düşünceyi yeniden çerçevelemekle (örneğin, “Bu zorluk geçici; ben buna daha önce de dayanmıştım”) değişim sağlanır [●●●●●].
+            Bu döngüyü tanımak ve düşünceyi yeniden çerçevelemekle (örneğin, “Bu zorluk geçici; ben buna daha önce de dayanmıştım”) değişim sağlanır <Evidence level={5} />.
           </p>
           <p>
             Kabul ve Bağlılık Terapisi (ACT) ilkeleri, biraz farklıdır: değiştiremediğimiz düşünceler ve duygularla yaşamayı ve
-            değerlerimize bağlı kalarak hareket etmeyi öğretir [●●●●●]. Bu her ikisi de etkilidir; kişisel tercih ve terapeut desteğiyle uygun olansa başlanabilir.
+            değerlerimize bağlı kalarak hareket etmeyi öğretir <Evidence level={5} />. Bu her ikisi de etkilidir; kişisel tercih ve terapeut desteğiyle uygun olansa başlanabilir.
           </p>
 
-          <h2>Günlük Yaşamda Stres Yönetimi</h2>
+          <h2 id="gunluk-yonetim">Günlük Yaşamda Stres Yönetimi</h2>
           <p>
-            Zaman yönetimi ve önceliklendirme, "hayır" söylemeyi ve sınırlar koymayı içerir [●●●●●].
-            Tüm istekleri yerine getiremeyeceğinizi kabul etmek önemli bir adımdır. Sosyal destek ağını kuvvetlendirmek [●●●●●];
+            Zaman yönetimi ve önceliklendirme, "hayır" söylemeyi ve sınırlar koymayı içerir <Evidence level={5} />.
+            Tüm istekleri yerine getiremeyeceğinizi kabul etmek önemli bir adımdır. Sosyal destek ağını kuvvetlendirmek <Evidence level={5} />;
             yakın dostlarla düzenli temas, grup aktiviteleri, aile zamını saflaştırma.
           </p>
           <p>
-            Hobi ve keyif faaliyetleri (okuma, sanat, bahçecilik, müzik) stres antidotu görevi görür [●●●●●].
-            Uyku ve hareket temel altyapıdır [●●●●●]; bunlar eksik olursa diğer teknikler daha az etkilidir.
+            Hobi ve keyif faaliyetleri (okuma, sanat, bahçecilik, müzik) stres antidotu görevi görür <Evidence level={5} />.
+            Uyku ve hareket temel altyapıdır <Evidence level={5} />; bunlar eksik olursa diğer teknikler daha az etkilidir.
             Sabah gün ışığına çıkış, sirkadiyen ritmi destekler ve ruh halini iyileştirir.
           </p>
 
-          <h2>Profesyonel Yardım Ne Zaman?</h2>
+          <h2 id="profesyonel-yardim">Profesyonel Yardım Ne Zaman?</h2>
           <p>
-            Depresyon veya anksiyete tanısı varsa profesyonel destek önerilir [●●●●●].
-            Kendi başınız denediğiniz tekniklere rağmen iyileşme olmazsa danışman veya psikoterapi faydalı olabilir [●●●●●].
-            Terapist veya danışman (psikolog, danışman, psikiyatrist) seçimi kişisel uyuma bağlıdır [●●●●●].
-            Grup desteği ve menopoz toplulukları, seçmeldiğiniz hissetmediğiniz bilme yardımcı olur [●●●●○].
+            Depresyon veya anksiyete tanısı varsa profesyonel destek önerilir <Evidence level={5} />.
+            Kendi başınız denediğiniz tekniklere rağmen iyileşme olmazsa danışman veya psikoterapi faydalı olabilir <Evidence level={5} />.
+            Terapist veya danışman (psikolog, danışman, psikiyatrist) seçimi kişisel uyuma bağlıdır <Evidence level={5} />.
+            Grup desteği ve menopoz toplulukları, seçmeldiğiniz hissetmediğiniz bilme yardımcı olur <Evidence level={4} />.
           </p>
 
-          <h2>Başlamak İçin İlk Adımlar</h2>
+          <h2 id="ilk-adimlar">Başlamak İçin İlk Adımlar</h2>
           <p>
             Bu hafta, meditasyon veya yoga uygulamalarından birini seçin. İnternet üzerinde 5 dakikalık bir seans bulun ve deneyin.
             Sonra, stres belirtilerinizden en rahatsız edici olanı belirleyin. Haftada bir kez o belirtiye hedeflenen bir teknik uygulayın.
@@ -149,7 +164,7 @@ const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Stres yönetimi menopozda sadece "iyi hissetmek" için değil, fiziksel ve duygusal sağlığı korumak için medikasyonlar kadar önemlidir. Uygulanabilir, kanıt-tabanlı teknikler bu dönemde dirençliliği inşa etmeye yardımcı olur.
           </p>

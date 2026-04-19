@@ -149,15 +149,53 @@ Do not introduce service-oriented navigation unless explicitly approved.
 The visual shell is **not** optional for new `.astro` articles under `src/pages/`. Reuse these components so pages match the homepage / hub styling:
 
 1. **`SubmenuHero`** (`compact`) when the URL is registered in `src/data/submenu-heroes.ts` (`submenuHeroByRoute`). If the page uses a plain in-article `<header>` + `pt-24` instead (some informational routes), keep that pattern only where it already exists; new hub-style articles should prefer `SubmenuHero` + hero data.
-2. **`SubmenuArticleBody`** — wraps the column under the hero: gradient background, `max-w-4xl`, spacing. Replace ad-hoc `<article class="px-6 py-16">` + inner wrappers with this.
+2. **`SubmenuArticleBody`** — wraps the column under the hero: gradient background, responsive grid (sticky TOC on `lg+` if `slot="toc"` present), spacing. Replace ad-hoc `<article class="px-6 py-16">` + inner wrappers with this.
 3. **Inside the body (typical order):**
-   - Author / meta panel (rounded white card; gradient avatar placeholder pattern as in existing articles).
+   - **`ArticleTOC`** (optional, recommended for articles with 5+ H2's) — `<ArticleTOC slot="toc" entries={tocEntries} />` right after `<SubmenuArticleBody>` open. Renders as narrow sticky sidebar with two-digit numbered index (`01`, `02`…). Entries must match H2 `id` attributes in the body.
+   - **`ArticleAuthorBlock`** — `authorSlug` (from `src/data/writers.ts`) + `publishedDate` + `readingMinutes`. Resolves writer portrait, role and medical reviewer line.
    - **Kısa Özet** (or equivalent intro) in the gold-tint summary card class used on current pages.
    - Main text: **`ArticleProsePanel`** only — do **not** put `prose` on a bare `<section>`; the panel supplies the white card + typography.
    - Extra prose blocks (e.g. “Kısa Hatırlatma”): second **`ArticleProsePanel`** with `class="mt-10"` (and more if needed).
    - **İlgili İçerikler** (cream panel), optional **Bilimsel editör notu** (gradient left-border panel), **disclaimer** (dashed border card) — match classes from an updated article such as `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro`.
 4. **Imports:** `../../components/site/...` from `src/pages/<section>/`; add one `../` per extra directory level (e.g. `hormonal-gecis/menopoz/` → `../../../components/site/`).
 5. **CMS / JSON-driven articles** rendered by `src/pages/article/[slug].astro` already use `SubmenuArticleBody` + `ArticleProsePanel` for HTML body; follow the same content blocks in `src/data/articles` (title, excerpt, transparency, disclaimer).
+
+### Article body typography — `prose-estranova` (MANDATORY)
+
+Article body inside `ArticleProsePanel` is rendered via a single editorial typography system. This is the mechanism that gives Estranova its "Vogue TR / Elle TR long-read" feel. **No other `prose` variant, custom wrapper, or manual heading styling is allowed in article bodies.** The contract is enforced by `CLAUDE.md` HARD CONSTRAINT → "Editöryal gövde tipografisi".
+
+**Wrapper (fixed):**
+```astro
+<ArticleProsePanel>
+  <h2 id="slug">Section Title</h2>
+  <p>Opening 1–2 sentences — renders as italic burgundy serif lede.</p>
+  <p>Regular body paragraph in sans-serif …</p>
+</ArticleProsePanel>
+```
+Under the hood: `<section class="rounded-[32px] …"><div class="prose prose-lg prose-estranova max-w-none"><slot/></div></section>`.
+
+**Behavior baked into `prose-estranova` (see `src/index.css` `@utility prose-estranova` block):**
+- **Chapter counter:** every `<h2>` is preceded by a gold two-digit number (`01`, `02` …) via CSS counter. These numbers must match the `ArticleTOC` sidebar — so the TOC and chapter numbers read as one numbered sequence.
+- **Gold rule after H2:** auto-inserted 2.5rem gold line (`::after`). Do **not** add a manual `<hr>` beneath H2's; you'll get a double rule.
+- **Italic serif lede:** `h2 + p` selector styles the first paragraph after each H2 as italic burgundy serif, ~1.2rem, `max-width: 58ch`. Writers must author the first paragraph after every H2 as an editorial opener (1–2 sentences framing the section), not a bulleted list, data dump, or long definition.
+- **H3 rhythm:** `h3` scaled at 1.5rem serif with its own top margin — sub-section structure works out of the box.
+- **Palette tokens:** `--tw-prose-body: #2D2D2D`, `--tw-prose-headings: #2D2D2D`, `--tw-prose-links: #6B2D3E`, `--tw-prose-bullets: #C9A96E`, `--tw-prose-quotes: #4f171c`, `--tw-prose-quote-borders: #C9A96E`. Do not override per-article.
+- **Blockquote:** renders as italic serif pull-quote with left gold border — use for editorial emphasis sparingly.
+- **Links:** thin burgundy underline (solid on hover). Inline external URLs in article bodies are still forbidden by HARD CONSTRAINT §4.
+- **Evidence sparkline (mandatory in published article HTML):** Inline evidence strength uses `src/components/site/Evidence.astro` inside `ArticleProsePanel` prose flow. **Single level:** `<Evidence level={N} />` with `N` in `1 | 2 | 3 | 4 | 5` — maps to labels zayıf → güçlü (see component tooltips). **Range:** `<Evidence from={A} to={B} />` when evidence spans a band (two mini-bars + en-dash). Styling lives under `prose-estranova` in `src/index.css` and duplicated in `@layer components` for hub tables/cards outside the prose wrapper. **Forbidden:** literal bracket/dot strings like `[●●●●●]` in shipped pages (CLAUDE.md HARD CONSTRAINT).
+
+**Setup (one-time, already landed):**
+- `package.json` devDependency: `@tailwindcss/typography`.
+- `src/index.css` prelude: `@import "tailwindcss"; @plugin "@tailwindcss/typography"; @utility prose-estranova { … }`.
+- `ArticleProsePanel.astro` inner div: `class="prose prose-lg prose-estranova max-w-none"`.
+
+**Do not:**
+- Add `prose-headings:…` or other Tailwind typography modifiers to the inner div — `prose-estranova` covers all of them.
+- Style H2 / H3 / first-paragraph manually inside article pages with `class="text-3xl …"`. The editorial system must drive the hierarchy, otherwise articles drift apart visually.
+- Introduce a second prose wrapper (`prose-slate`, `prose-sm`, etc.) — keep the one-system invariant.
+- Write H2 headings that already contain a leading number (e.g. `"01. Hormonal Değişim"`); the counter supplies the number.
+
+**Reference live examples:** `src/pages/bilimsel-pencere/estrogen-biyolojisi-saglik.astro` (12 H2), `src/pages/zihin-denge/ruh-hali-degisimleri-menopoz.astro` (9 H2), `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro` (7 H2).
 
 ### Assessment or contact pages
 If creating a symptom-assessment or contact-style page, keep it neutral and informational.

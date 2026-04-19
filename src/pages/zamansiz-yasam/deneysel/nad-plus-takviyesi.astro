@@ -4,7 +4,18 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+
+const tocEntries = [
+  { id: 'nad-nedir', label: 'NAD+ Nedir?' },
+  { id: 'neden-duser', label: 'Yaşla Neden Düşer' },
+  { id: 'nmn-nr-arastirmalari', label: 'NMN ve NR Araştırmaları' },
+  { id: 'fayda-sinirlar', label: 'Fayda ve Sınırlılıklar' },
+  { id: 'guvenlik', label: 'Güvenlik ve Yan Etkiler' },
+  { id: 'sonuc', label: 'Sonuç: Bilim Nerede?' },
+];
 ---
 
 <SiteLayout
@@ -15,6 +26,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 
   <main id="main-content" class="pt-24 text-[#2D2D2D]">
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="basak-pelister" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
         <header class="mb-10">
@@ -33,7 +45,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
         </section>
 
         <ArticleProsePanel>
-          <h2>NAD+ Nedir?</h2>
+          <h2 id="nad-nedir">NAD+ Nedir?</h2>
           <p>
             NAD+ (nikotinamid adenin dinükleotid), hücrelerin enerji üretiminde görev alan temel bir koenzimdir.
             Mitokondride gerçekleşen enerji döngüsünde rol oynar ve birçok enzimatik sürecin çalışmasına katkı sağlar.
@@ -43,7 +55,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             uzun süredir araştırılmaktadır. Bu nedenle son yıllarda takviye formunda NAD+ öncülleri daha görünür hale gelmiştir.
           </p>
 
-          <h2>Yaşla Birlikte NAD+ Düzeyi Neden Düşer?</h2>
+          <h2 id="neden-duser">Yaşla Birlikte NAD+ Düzeyi Neden Düşer?</h2>
           <p>
             Yaş ilerledikçe hücre içi metabolik süreçlerde değişim olur. Kronik düşük düzeyli inflamasyon, oksidatif stres
             ve enerji üretim zincirindeki yavaşlama NAD+ havuzunu etkileyebilir. Bu düşüş, yaşlanma biyolojisi araştırmalarında
@@ -54,7 +66,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             ve eşlik eden sağlık durumları bu süreci birlikte şekillendirir.
           </p>
 
-          <h2>NAD+ Takviyesi Araştırmaları (NMN, NR)</h2>
+          <h2 id="nmn-nr-arastirmalari">NAD+ Takviyesi Araştırmaları (NMN, NR)</h2>
           <p>
             NAD+ doğrudan takviye edilmekten çok, çoğunlukla öncül bileşikler üzerinden desteklenmeye çalışılır.
             Bu alanda en sık çalışılan iki bileşik NMN (nikotinamid mononükleotid) ve NR (nikotinamid ribozid) olarak öne çıkar.
@@ -65,7 +77,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             aynı yönde olmaması nedeniyle net bir klinik sonuçtan söz etmek için henüz erkendir.
           </p>
 
-          <h2>Olası Faydalar ve Sınırlılıklar</h2>
+          <h2 id="fayda-sinirlar">Olası Faydalar ve Sınırlılıklar</h2>
           <p>
             Olası faydalar arasında enerji metabolizmasına katkı, bazı yorgunluk parametrelerinde iyileşme ve metabolik
             işaretleyicilerde sınırlı olumlu değişimler sayılmaktadır. Bu bulgular ilgi çekicidir ve araştırma alanını canlı tutmaktadır.
@@ -75,7 +87,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             NAD+ takviyelerini net ve değişmez bir sonuç olarak değerlendirmek bilimsel açıdan doğru değildir.
           </p>
 
-          <h2>Güvenlik ve Yan Etkiler</h2>
+          <h2 id="guvenlik">Güvenlik ve Yan Etkiler</h2>
           <p>
             Kısa süreli çalışmalarda NMN ve NR genellikle iyi tolere edilmiştir. Bazı kişilerde hafif mide-bağırsak şikayetleri,
             baş ağrısı veya geçici rahatsızlık hissi bildirilebilir.
@@ -85,7 +97,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
             kullananlar için hekim görüşü almadan başlanması uygun değildir. Deneysel alanlarda kişisel risk-fayda değerlendirmesi önemlidir.
           </p>
 
-          <h2>Sonuç: Bilim Henüz Nerede?</h2>
+          <h2 id="sonuc">Sonuç: Bilim Henüz Nerede?</h2>
           <p>
             NAD+ takviyeleri için mevcut tablo “umut verici ama henüz kesin değil” şeklinde özetlenebilir. Laboratuvar ve erken dönem
             klinik veriler araştırmayı desteklerken, uzun vadeli klinik sonuçlar için daha güçlü çalışmalara ihtiyaç vardır.
@@ -119,7 +131,7 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: C — Gelişen Kanıt ●●●○○</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: C — Gelişen Kanıt <Evidence level={3} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             NAD+ takviyesinin hücresel yaşlanma üzerindeki etkisini inceleyen 12 klinik çalışma bulunmaktadır. Sonuçlar laboratuvar ortamında umut verici olsa da, insanlarda uzun vadeli etkinlik ve güvenlik verileri henüz yeterli değildir. Bu konuda araştırmalar devam etmektedir.
           </p>

@@ -5,10 +5,23 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam/hareket-saglik-menopoz']!;
+
+const tocEntries = [
+  { id: 'hareketin-etkileri', label: 'Hareketin Etkileri' },
+  { id: 'hareket-turleri', label: 'Hareket Türleri' },
+  { id: 'baslama-rehberi', label: 'Başlama Rehberi' },
+  { id: 'yas-spesifik', label: 'Yaş Spesifik Hususlar' },
+  { id: 'guvenlik', label: 'Güvenlik ve Prevansiyon' },
+  { id: 'motivasyon', label: 'Motivasyon ve Tutarlılık' },
+  { id: 'profesyonel-rehberlik', label: 'Profesyonel Rehberlik' },
+  { id: 'ilk-adimlar', label: 'İlk Adımlar' },
+];
 ---
 
 <SiteLayout
@@ -26,6 +39,7 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/hareket-saglik-menopoz']!;
       compact
     />
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="alara-baykent" publishedDate="14 Nisan 2026" readingMinutes={6} />
 
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
@@ -36,42 +50,42 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/hareket-saglik-menopoz']!;
         </section>
 
         <ArticleProsePanel>
-          <h2>Hareketin Menopoza Etkileri</h2>
+          <h2 id="hareketin-etkileri">Hareketin Menopoza Etkileri</h2>
           <p>
             Menopoz döneminde vücudun ihtiyaçları değişir. Hareket, bu değişimlere karşı en güçlü koruma araçlarından biridir.
-            Düzenli egzersiz, sıcak basması ve gece terlemesi gibi vasomotor belirtileri önemli ölçüde hafifletebilir [●●●●●].
+            Düzenli egzersiz, sıcak basması ve gece terlemesi gibi vasomotor belirtileri önemli ölçüde hafifletebilir <Evidence level={5} />.
             Bu etkinin temelinde, hareketin vücut sıcaklığını düzenleyen mekanizmaları iyileştirmesi ve hormonal dengeyi desteklemesi yatmaktadır.
           </p>
           <p>
-            Ruh hali ve uyku kalitesi açısından da hareket çok önemlidir [●●●●●]. Aerobik aktivite serotonin ve dopamin üretimini arttırırken,
+            Ruh hali ve uyku kalitesi açısından da hareket çok önemlidir <Evidence level={5} />. Aerobik aktivite serotonin ve dopamin üretimini arttırırken,
             düzenli hareket uyku mimarisini iyileştirerek gece uyanmalarını azaltır. Kemik sağlığı özellikle menopoz sonrası dönemde kritiktir.
-            Hormon düşüşüne bağlı kemik kaybını yavaşlatmada yük taşıyan egzersizlerin (yürüyüş, koşu) ve dirençli antrenmanın etkisi kanıtlanmıştır [●●●●●].
+            Hormon düşüşüne bağlı kemik kaybını yavaşlatmada yük taşıyan egzersizlerin (yürüyüş, koşu) ve dirençli antrenmanın etkisi kanıtlanmıştır <Evidence level={5} />.
           </p>
           <p>
-            Kardiyovasküler sistem açısından ise menopoz sonrası kalp hastalığı riski artar [●●●●●]. Düzenli aerobik egzersiz kan basıncını azaltır,
-            kan şekeri kontrolünü iyileştirir ve lipid profilini olumlu yönde etkiler. Metabolik sağlık ve kilo yönetimi de hareketle sıkı bağlantılıdır [●●●●●].
+            Kardiyovasküler sistem açısından ise menopoz sonrası kalp hastalığı riski artar <Evidence level={5} />. Düzenli aerobik egzersiz kan basıncını azaltır,
+            kan şekeri kontrolünü iyileştirir ve lipid profilini olumlu yönde etkiler. Metabolik sağlık ve kilo yönetimi de hareketle sıkı bağlantılıdır <Evidence level={5} />.
           </p>
 
-          <h2>Hareket Türleri ve Faydaları</h2>
+          <h2 id="hareket-turleri">Hareket Türleri ve Faydaları</h2>
           <p>
             Optimal sonuç için farklı hareket türlerinin birleştirilmesi önerilir. Aerobik egzersiz (yürüyüş, koşu, bisiklet, yüzme) haftada en az 150 dakika,
-            orta yoğunlukta yapılmalıdır [●●●●●]. Bu, kalp atış hızını rahat biçimde konuşamayana kadar artıran aktiviteleri içerir.
+            orta yoğunlukta yapılmalıdır <Evidence level={5} />. Bu, kalp atış hızını rahat biçimde konuşamayana kadar artıran aktiviteleri içerir.
             Faydaları arasında kalp sağlığı, enerji düzeyi ve ruh hali iyileşmesi yer alır.
           </p>
           <p>
-            Dirençli antrenman (ağırlık, elastik bant, vücut ağırlığı) haftada 2-3 gün, tüm kas grupları çalışılarak yapılmalıdır [●●●●●].
+            Dirençli antrenman (ağırlık, elastik bant, vücut ağırlığı) haftada 2-3 gün, tüm kas grupları çalışılarak yapılmalıdır <Evidence level={5} />.
             Kas kütlesi menopozda doğal olarak azalırken, dirençli antrenman bu kaybı yavaşlatır ve metabolizmayı hızlandırır.
             Kemik yoğunluğu koruma özelliği, osteoporoz riskini azaltmada kritiktir.
           </p>
           <p>
-            Esnek antrenman (yoga, pilates, stretching) haftada 2-3 gün, 10-15 dakika yapıldığında mobilite ve yaralanma prevansiyonunu artırır [●●●●●].
-            Denge antrenmaları (tai chi, tek bacak durma) özellikle 50+ yaşında düşüş riskini önemli ölçüde azaltır [●●●●●].
+            Esnek antrenman (yoga, pilates, stretching) haftada 2-3 gün, 10-15 dakika yapıldığında mobilite ve yaralanma prevansiyonunu artırır <Evidence level={5} />.
+            Denge antrenmaları (tai chi, tek bacak durma) özellikle 50+ yaşında düşüş riskini önemli ölçüde azaltır <Evidence level={5} />.
           </p>
 
-          <h2>Başlama Rehberi: Fitness Seviyenize Göre</h2>
+          <h2 id="baslama-rehberi">Başlama Rehberi: Fitness Seviyenize Göre</h2>
           <p>
             Hareketsiz yaşayan veya yeni başlamak isteyen kadınlar için ideal başlangıç, haftada 3 gün, 20-30 dakika yürüyüştür.
-            Hafif bir hızda başlamak, vücudun uyum süreci için önemlidir [●●●●●]. Haftalık artış %10'u geçmemeli; bu kural yaralanmaları önler.
+            Hafif bir hızda başlamak, vücudun uyum süreci için önemlidir <Evidence level={5} />. Haftalık artış %10'u geçmemeli; bu kural yaralanmaları önler.
             Orta aktivite düzeyindekiler haftada 3-4 gün hareket edebilir; aerobik ve dirençli antrenmanları kombinleyebilirler.
           </p>
           <p>
@@ -79,47 +93,47 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/hareket-saglik-menopoz']!;
             Ancak tüm seviyelerde önemli olan tutarlılıktır. Kısa süreli yoğun antrenmanlardan çok, haftanın çoğu günü az da olsa yapılan hareket daha etkilidir.
           </p>
 
-          <h2>Yaş Spesifik Hususlar</h2>
+          <h2 id="yas-spesifik">Yaş Spesifik Hususlar</h2>
           <p>
-             40-50 yaş aralığında perimenopoz döneminde kemik sağlığına odaklanmak akıllıcadır [●●●●●].
+             40-50 yaş aralığında perimenopoz döneminde kemik sağlığına odaklanmak akıllıcadır <Evidence level={5} />.
             Bu dönemde yük taşıyan egzersizler yapılmaya başlanırsa, ileri yaşlarda kemik kaybı daha hafif olur.
-            50+ yaştan sonra ise denge ve fonksiyonel hareket (merdivenler, yürüyüş, günlük görevler) daha merkezi hale gelir [●●●●●].
+            50+ yaştan sonra ise denge ve fonksiyonel hareket (merdivenler, yürüyüş, günlük görevler) daha merkezi hale gelir <Evidence level={5} />.
           </p>
           <p>
-            Mevcut sağlık durumları (artrit, hipertansiyon, diyabet) göz önüne alınmalıdır [●●●●●].
+            Mevcut sağlık durumları (artrit, hipertansiyon, diyabet) göz önüne alınmalıdır <Evidence level={5} />.
             Kronik hastalığı olanlar başlamadan önce hekimle danışmalı; ancak çoğu durumda uygun egzersiz tedavi edici etkiye sahiptir.
           </p>
 
-          <h2>Güvenlik ve Yaralanma Prevansiyonu</h2>
+          <h2 id="guvenlik">Güvenlik ve Yaralanma Prevansiyonu</h2>
           <p>
-            Güvenli hareket, iyi ısınma (5-10 dakika hafif aktivite) ve soğuma ile başlar [●●●●●].
-            Doğru form ve teknik özel önem taşır; ilk kez başlamak isteyenler bir antrenör veya fizyoterapistten rehberlik alabilir [●●●●●].
+            Güvenli hareket, iyi ısınma (5-10 dakika hafif aktivite) ve soğuma ile başlar <Evidence level={5} />.
+            Doğru form ve teknik özel önem taşır; ilk kez başlamak isteyenler bir antrenör veya fizyoterapistten rehberlik alabilir <Evidence level={5} />.
             Aşamalı artış ve pürüzlü geçişler (bir hafta aynı seviye, sonra kademeli artış) yaralanmaları önler.
           </p>
           <p>
-            Ağrı (eklem, kas), şiddetli nefes darlığı veya göğüs rahatsızlığı antrenmanı durdurmak için işaretlerdir [●●●●●].
+            Ağrı (eklem, kas), şiddetli nefes darlığı veya göğüs rahatsızlığı antrenmanı durdurmak için işaretlerdir <Evidence level={5} />.
             Hafif yorgunluk normal; ağrı ve çok fazla bitkinlik değildir. Vücudu dinlemek, tutarlı hareketin anahtarıdır.
           </p>
 
-          <h2>Motivasyon ve Tutarlılık</h2>
+          <h2 id="motivasyon">Motivasyon ve Tutarlılık</h2>
           <p>
-            Sosyal destek hareketin tutarlılığını artırır [●●●●○]. Arkadaş, grup veya aile üyeleriyle hareket etmek zorunluluğu hafifletir.
-            Net ve ölçülebilir hedefler (haftada 5 gün 30 dakika) vague amaçlardan daha etkilidir [●●●●●].
-            Aynı anda çeşitlilik (haftanın farklı günleri farklı aktiviteler) sıkıntıdan kurtarır [●●●●○].
+            Sosyal destek hareketin tutarlılığını artırır <Evidence level={4} />. Arkadaş, grup veya aile üyeleriyle hareket etmek zorunluluğu hafifletir.
+            Net ve ölçülebilir hedefler (haftada 5 gün 30 dakika) vague amaçlardan daha etkilidir <Evidence level={5} />.
+            Aynı anda çeşitlilik (haftanın farklı günleri farklı aktiviteler) sıkıntıdan kurtarır <Evidence level={4} />.
           </p>
           <p>
             Rutin oluşturma (sabah yürüyüş, öğleden sonra yoga) aktiviteyi düzenli hale dönüştürür.
             Başlarda zorlanabilir; ancak 3-4 hafta sonra vücut rutine alışır ve hareket daha doğal hale gelir.
           </p>
 
-          <h2>Profesyonel Rehberlik Ne Zaman Gerekli?</h2>
+          <h2 id="profesyonel-rehberlik">Profesyonel Rehberlik Ne Zaman Gerekli?</h2>
           <p>
-            İlk defa başlamakta olanlar, doğru form ve kişiye uygun bir program tasarlamak için fizyoterapist veya antrenör danışması alabilir [●●●●○].
-            Yaralanma geçmişi, kronik hastalık veya belirli amaçlar (kemik sağlığı, kalp sağlığı) hedefleniyorsa profesyonel rehberlik değerlidir [●●●●●].
+            İlk defa başlamakta olanlar, doğru form ve kişiye uygun bir program tasarlamak için fizyoterapist veya antrenör danışması alabilir <Evidence level={4} />.
+            Yaralanma geçmişi, kronik hastalık veya belirli amaçlar (kemik sağlığı, kalp sağlığı) hedefleniyorsa profesyonel rehberlik değerlidir <Evidence level={5} />.
             Sağlık durumunuz değişirse (yeni tanı, operasyon) hareket planı güncellenmelidir.
           </p>
 
-          <h2>Başlamak İçin İlk Adımlar</h2>
+          <h2 id="ilk-adimlar">Başlamak İçin İlk Adımlar</h2>
           <p>
             Harekete başlamak asla geç değildir. Hatta 60+ yaşındaki kadınlar düzenli egzersize başladıklarında belirgin iyileşme gösterirler.
             Bu hafta başını seçerek bir aktivite belirleyin: yürüyüş, yüzme, pilates veya yoga. 20 dakika ile başlayın.
@@ -140,7 +154,7 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/hareket-saglik-menopoz']!;
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Hareket, menopozun belirtilerini yönetmenin ve uzun vadeli sağlığı korumunun en kanıt-tabanlı araçlarından biridir.
             Doğru form, uygun başlangıç hızı ve tutarlılık sağlandığında, çoğu kadında etkisi belirgin biçimde ortaya çıkar.

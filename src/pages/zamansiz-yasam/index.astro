@@ -6,6 +6,7 @@ import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
 import SubmenuSection from '../../components/site/SubmenuSection.astro';
 import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
+import Evidence from '../../components/site/Evidence.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam/vitaminler']!;
@@ -117,27 +118,27 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
             <tbody class="text-[#2D2D2D]/80">
               <tr class="border-t border-[#6B2D3E]/15">
                 <td class="px-4 py-3">Seviye 5</td>
-                <td class="px-4 py-3 text-[#6B2D3E]">●●●●●</td>
+                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={5} /></td>
                 <td class="px-4 py-3">Yüksek düzeyde, tutarlı bilimsel kanıt.</td>
               </tr>
               <tr class="border-t border-[#6B2D3E]/15">
                 <td class="px-4 py-3">Seviye 4</td>
-                <td class="px-4 py-3 text-[#6B2D3E]">●●●●○</td>
+                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={4} /></td>
                 <td class="px-4 py-3">Güçlü kanıt, sınırlı belirsizlikler bulunabilir.</td>
               </tr>
               <tr class="border-t border-[#6B2D3E]/15">
                 <td class="px-4 py-3">Seviye 3</td>
-                <td class="px-4 py-3 text-[#6B2D3E]">●●●○○</td>
+                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={3} /></td>
                 <td class="px-4 py-3">Orta düzey kanıt, yeni verilerle güncellenebilir.</td>
               </tr>
               <tr class="border-t border-[#6B2D3E]/15">
                 <td class="px-4 py-3">Seviye 2</td>
-                <td class="px-4 py-3 text-[#6B2D3E]">●●○○○</td>
+                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={2} /></td>
                 <td class="px-4 py-3">Sınırlı kanıt, dikkatli yorum gerekir.</td>
               </tr>
               <tr class="border-t border-[#6B2D3E]/15">
                 <td class="px-4 py-3">Seviye 1</td>
-                <td class="px-4 py-3 text-[#6B2D3E]">●○○○○</td>
+                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={1} /></td>
                 <td class="px-4 py-3">Ön bilgi niteliğinde, araştırma erken aşamada.</td>
               </tr>
             </tbody>
@@ -160,24 +161,27 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
           tag="Vitaminler"
           title="D Vitamini Takibi İçin Temel Notlar"
           body="Takviyeleri değerlendirirken günlük yaşam, beslenme ve test takibini birlikte ele alan rehber."
-          footer={'Kanıt Düzeyi: ●●●○○'}
           href="/zamansiz-yasam/vitaminler/d-vitamini-rehberi"
-        />
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           highlight={true}
           tag="Deneysel Yaklaşımlar"
           title="NAD+ Hakkında Ne Biliyoruz?"
           body="Mevcut araştırmaları sadeleştiren ve beklenti yönetimini güçlendiren derleme içerik."
-          footer={'Kanıt Düzeyi: ●●●○○'}
           href="/zamansiz-yasam/deneysel/nad-plus-takviyesi"
-        />
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           tag="Hareket & Vücut"
           title="Kas Kütlesini Destekleyen Rutin"
           body="Yaşla birlikte hareket planını sürdürülebilir biçimde kurmak için pratik bir başlangıç çerçevesi."
-          footer={'Kanıt Düzeyi: ●●●○○'}
           href="/zamansiz-yasam/hareket-saglik-menopoz"
-        />
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
+        </SubmenuSpotlightCard>
       </div>
     </SubmenuSection>
   </main>

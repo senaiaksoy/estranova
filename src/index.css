@@ -1,6 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap');
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
+@utility prose-estranova {
+  --tw-prose-body: #2D2D2D;
+  --tw-prose-headings: #2D2D2D;
+  --tw-prose-links: #6B2D3E;
+  --tw-prose-bullets: #C9A96E;
+  --tw-prose-quotes: #4f171c;
+  --tw-prose-quote-borders: #C9A96E;
+
+  counter-reset: estranova-chapter;
+
+  & h2 {
+    counter-increment: estranova-chapter;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-top: 4rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+  & h2::before {
+    content: counter(estranova-chapter, decimal-leading-zero);
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    color: #C9A96E;
+    margin-bottom: 0.75rem;
+    font-feature-settings: "tnum";
+  }
+  & h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    background: #C9A96E;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  & h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  & p {
+    font-size: 17px;
+    line-height: 1.75;
+    max-width: 64ch;
+  }
+  & h2 + p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: #4f171c;
+    max-width: 58ch;
+  }
+  & blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    border-left: 3px solid #C9A96E;
+    padding-left: 1.5rem;
+  }
+  & .evidence {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    margin: 0 0.2em;
+    vertical-align: 0.1em;
+    line-height: 1;
+    cursor: help;
+  }
+  & .evidence-bar {
+    display: inline-flex;
+    gap: 1px;
+  }
+  & .evidence-seg {
+    width: 3px;
+    height: 10px;
+    background: rgba(201, 169, 110, 0.22);
+    border-radius: 1px;
+    display: inline-block;
+  }
+  & .evidence-seg.is-filled {
+    background: #C9A96E;
+  }
+  & .evidence[data-level="5"] .evidence-seg.is-filled {
+    background: #6B2D3E;
+  }
+  & .evidence[data-level="1"] {
+    opacity: 0.75;
+  }
+  & .evidence-sep {
+    font-family: var(--font-serif);
+    font-size: 0.85em;
+    color: rgba(201, 169, 110, 0.7);
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+  & a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(107, 45, 62, 0.35);
+  }
+  & a:hover {
+    border-bottom-color: #6B2D3E;
+  }
+}
+
 @theme {
   --font-serif: "Newsreader", serif;
   --font-sans: "Manrope", sans-serif;
@@ -47,6 +161,47 @@
 }
 
 @layer components {
+  /*
+   * Evidence sparkline: mirrors prose-estranova & .evidence so <Evidence /> renders
+   * on hub tables and cards outside ArticleProsePanel.
+   */
+  .evidence {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    margin: 0 0.2em;
+    vertical-align: 0.1em;
+    line-height: 1;
+    cursor: help;
+  }
+  .evidence-bar {
+    display: inline-flex;
+    gap: 1px;
+  }
+  .evidence-seg {
+    width: 3px;
+    height: 10px;
+    background: rgba(201, 169, 110, 0.22);
+    border-radius: 1px;
+    display: inline-block;
+  }
+  .evidence-seg.is-filled {
+    background: #c9a96e;
+  }
+  .evidence[data-level='5'] .evidence-seg.is-filled {
+    background: #6b2d3e;
+  }
+  .evidence[data-level='1'] {
+    opacity: 0.75;
+  }
+  .evidence-sep {
+    font-family: var(--font-serif);
+    font-size: 0.85em;
+    color: rgba(201, 169, 110, 0.7);
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
   /* Interactive elements */
   .interactive:focus-visible {
     @apply outline-2 outline-offset-[2px] outline-primary rounded-lg;

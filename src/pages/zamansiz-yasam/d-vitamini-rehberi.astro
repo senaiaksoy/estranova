@@ -4,7 +4,22 @@ import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../components/site/Evidence.astro';
+
+const tocEntries = [
+  { id: 'd-vitamini-nedir', label: 'D Vitamini Nedir' },
+  { id: 'seviye-yorumu', label: 'Seviye Yorumu' },
+  { id: 'tarama', label: 'Tarama' },
+  { id: 'beslenme-ile-alim', label: 'Beslenme ile Alım' },
+  { id: 'gunes-maruziyeti', label: 'Güneş Maruziyeti' },
+  { id: 'takviye-kullanimi', label: 'Takviye Kullanımı' },
+  { id: 'kalsiyum-k2', label: 'Kalsiyum ve K2' },
+  { id: 'ozel-durumlar', label: 'Özel Durumlar' },
+  { id: 'sik-hatalar', label: 'Sık Yapılan Hatalar' },
+  { id: 'takip-cercevesi', label: 'Takip Çerçevesi' },
+];
 ---
 
 <SiteLayout
@@ -15,6 +30,7 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 
   <main id="main-content" class="pt-24 text-[#2D2D2D]">
     <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="rima-erdemir" publishedDate="14 Nisan 2026" readingMinutes={7} />
 
         <header class="mb-10">
@@ -32,41 +48,41 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
         </section>
 
         <ArticleProsePanel>
-          <h2>D Vitamini Nedir ve Neden Önemlidir?</h2>
+          <h2 id="d-vitamini-nedir">D Vitamini Nedir ve Neden Önemlidir?</h2>
           <p>
             D vitamini, klasik anlamda bir vitamin olmasının yanında hormon benzeri etkiler gösteren bir moleküldür.
-            Kalsiyum ve fosfor dengesini düzenleyerek kemik mineralizasyonuna katkı sağlar [●●●●●]. Kas fonksiyonu,
-            düşme riski ve hareket kapasitesiyle ilişkisi de güçlü biçimde gösterilmiştir [●●●●●].
+            Kalsiyum ve fosfor dengesini düzenleyerek kemik mineralizasyonuna katkı sağlar <Evidence level={5} />. Kas fonksiyonu,
+            düşme riski ve hareket kapasitesiyle ilişkisi de güçlü biçimde gösterilmiştir <Evidence level={5} />.
           </p>
           <p>
-            Son yıllarda bağışıklık sistemi, inflamasyon düzeni ve metabolik süreçlerle bağlantısı daha fazla araştırılmaktadır [●●●●●].
-            Beyin sağlığı ve ruh haliyle ilişkili bulgular ise umut verici olmakla birlikte her başlıkta aynı güçte değildir [●●●●○].
+            Son yıllarda bağışıklık sistemi, inflamasyon düzeni ve metabolik süreçlerle bağlantısı daha fazla araştırılmaktadır <Evidence level={5} />.
+            Beyin sağlığı ve ruh haliyle ilişkili bulgular ise umut verici olmakla birlikte her başlıkta aynı güçte değildir <Evidence level={4} />.
             Bu nedenle D vitamini, tek başına çözüm gibi değil, bütüncül sağlık planının bir parçası olarak ele alınmalıdır.
           </p>
 
-          <h2>Seviyeleri Nasıl Yorumlanır?</h2>
+          <h2 id="seviye-yorumu">Seviyeleri Nasıl Yorumlanır?</h2>
           <p>
-            Klinik pratikte en yaygın ölçüm 25-hidroksivitamin D düzeyidir [●●●●●]. Sonuçlar ng/mL veya nmol/L birimiyle raporlanır.
-            Çoğu kılavuzda 30-50 ng/mL aralığı yeterli kabul edilir [●●●●●]. 20 ng/mL altı yetersizlik, 12 ng/mL altı belirgin eksiklik olarak değerlendirilir [●●●●●].
+            Klinik pratikte en yaygın ölçüm 25-hidroksivitamin D düzeyidir <Evidence level={5} />. Sonuçlar ng/mL veya nmol/L birimiyle raporlanır.
+            Çoğu kılavuzda 30-50 ng/mL aralığı yeterli kabul edilir <Evidence level={5} />. 20 ng/mL altı yetersizlik, 12 ng/mL altı belirgin eksiklik olarak değerlendirilir <Evidence level={5} />.
           </p>
           <p>
-            100 ng/mL üzerindeki değerlerde toksisite riski artabileceği için kontrolsüz yüksek doz kullanım önerilmez [●●●●○].
+            100 ng/mL üzerindeki değerlerde toksisite riski artabileceği için kontrolsüz yüksek doz kullanım önerilmez <Evidence level={4} />.
             Sonuç yorumunda laboratuvar değeri tek başına yeterli değildir; yaş, eşlik eden hastalık, ilaçlar, beslenme düzeni ve güneş maruziyeti birlikte ele alınır.
           </p>
 
-          <h2>Tarama: Ne Zaman Yapılmalı?</h2>
+          <h2 id="tarama">Tarama: Ne Zaman Yapılmalı?</h2>
           <p>
             D vitamini taraması özellikle risk gruplarında anlamlıdır. Kapalı ortamda çalışanlar, güneşten sınırlı yararlananlar,
-            koyu cilt tipine sahip kişiler, ileri yaş grubu, obezite, emilim bozukluğu veya kronik böbrek-karaciğer hastalığı olanlarda yetersizlik daha sık görülür [●●●●●].
+            koyu cilt tipine sahip kişiler, ileri yaş grubu, obezite, emilim bozukluğu veya kronik böbrek-karaciğer hastalığı olanlarda yetersizlik daha sık görülür <Evidence level={5} />.
           </p>
           <p>
             40 yaş sonrası dönemde kişisel risk profiline göre periyodik ölçüm planı yapılabilir. Birçok klinik yaklaşımda 1-3 yıl arası takip aralığı,
-            bireysel duruma göre düzenlenir [●●●●○]. Daha önce eksiklik saptandıysa veya tedavi başlandıysa kontrol sıklığı daha kısa tutulabilir.
+            bireysel duruma göre düzenlenir <Evidence level={4} />. Daha önce eksiklik saptandıysa veya tedavi başlandıysa kontrol sıklığı daha kısa tutulabilir.
           </p>
 
-          <h2>Beslenme ile D Vitamini Alımı</h2>
+          <h2 id="beslenme-ile-alim">Beslenme ile D Vitamini Alımı</h2>
           <p>
-            Besinlerle alınan D vitamini miktarı çoğu zaman sınırlıdır [●●●●●]. Yağlı balıklar (somon, uskumru, sardalya), yumurta sarısı ve
+            Besinlerle alınan D vitamini miktarı çoğu zaman sınırlıdır <Evidence level={5} />. Yağlı balıklar (somon, uskumru, sardalya), yumurta sarısı ve
             zenginleştirilmiş süt ürünleri önemli kaynaklar arasındadır. Mantar türlerinde içerik, yetiştirme koşullarına göre değişebilir.
           </p>
           <p>
@@ -74,33 +90,33 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
             Sadece beslenme ile hedef seviyeye ulaşmak herkes için kolay olmayabilir; yine de kaliteli beslenme takviye planının temelini oluşturur.
           </p>
 
-          <h2>Güneş Maruziyeti ve Denge</h2>
+          <h2 id="gunes-maruziyeti">Güneş Maruziyeti ve Denge</h2>
           <p>
-            Cilt, uygun koşullarda D vitamini sentezleyebilir [●●●●●]. Ancak enlem, mevsim, günün saati, hava kirliliği, cilt tipi, yaş ve giyim alışkanlıkları
-            sentez miktarını belirgin biçimde etkiler [●●●●●]. Bu nedenle "şu kadar dakika herkes için yeterlidir" gibi tek bir süre önermek doğru değildir.
+            Cilt, uygun koşullarda D vitamini sentezleyebilir <Evidence level={5} />. Ancak enlem, mevsim, günün saati, hava kirliliği, cilt tipi, yaş ve giyim alışkanlıkları
+            sentez miktarını belirgin biçimde etkiler <Evidence level={5} />. Bu nedenle "şu kadar dakika herkes için yeterlidir" gibi tek bir süre önermek doğru değildir.
           </p>
           <p>
             D vitamini hedefi ile cilt sağlığı arasında denge kurulmalıdır. Uzun ve kontrolsüz UV maruziyeti cilt hasarı riskini artırır.
             Planlı kısa maruziyet, günlük yaşam düzeni ve gerekiyorsa takviye birlikte düşünüldüğünde daha güvenli bir yaklaşım elde edilir.
           </p>
 
-          <h2>Takviye Kullanımı: Doz ve Form Seçimi</h2>
+          <h2 id="takviye-kullanimi">Takviye Kullanımı: Doz ve Form Seçimi</h2>
           <p>
-            Genel yetişkin rehberlerinde günlük 600-800 IU temel gereksinim olarak yer alır [●●●●●]. Uygulamada birçok klinisyen,
+            Genel yetişkin rehberlerinde günlük 600-800 IU temel gereksinim olarak yer alır <Evidence level={5} />. Uygulamada birçok klinisyen,
             düşük düzeyli kişilerde 1000-2000 IU aralığını tercih edebilir. Belirgin eksiklikte kısa dönem daha yüksek dozlar planlanabilir;
             bu karar kontrol testleriyle birlikte verilmelidir.
           </p>
           <p>
-            D3 (kolekalsiferol), D2'ye kıyasla serum düzeyini sürdürmede daha avantajlı kabul edilir [●●●●●]. Kapsül, tablet veya sıvı form seçimi,
+            D3 (kolekalsiferol), D2'ye kıyasla serum düzeyini sürdürmede daha avantajlı kabul edilir <Evidence level={5} />. Kapsül, tablet veya sıvı form seçimi,
             düzenli kullanımı kolaylaştıracak şekilde yapılmalıdır. Yağla birlikte alım, emilimi destekleyebilir. Uzun dönem yüksek doz planlarında
-            kalsiyum ve böbrek fonksiyonları gibi başlıkların izlenmesi güvenlik açısından önemlidir [●●●●●].
+            kalsiyum ve böbrek fonksiyonları gibi başlıkların izlenmesi güvenlik açısından önemlidir <Evidence level={5} />.
           </p>
 
-          <h2>D Vitamini, Kalsiyum ve K2 İlişkisi</h2>
+          <h2 id="kalsiyum-k2">D Vitamini, Kalsiyum ve K2 İlişkisi</h2>
           <p>
-            D vitamini kalsiyum emiliminde anahtar rol oynar [●●●●●]. Bu nedenle kemik sağlığında çoğu zaman tek başına değil,
+            D vitamini kalsiyum emiliminde anahtar rol oynar <Evidence level={5} />. Bu nedenle kemik sağlığında çoğu zaman tek başına değil,
             yeterli kalsiyum ve protein alımıyla birlikte değerlendirilir. K2 vitamini hakkında veriler gelişmektedir; kemik-mineral dengesine
-            katkı olasılığı bildirilse de kanıt düzeyi D vitamini kadar güçlü değildir [●●●●○].
+            katkı olasılığı bildirilse de kanıt düzeyi D vitamini kadar güçlü değildir <Evidence level={4} />.
           </p>
           <p>
             Kombinasyon yaklaşımında hedef, gereksiz yüksek dozlardan kaçınarak dengeli destek kurmaktır.
@@ -108,9 +124,9 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
             kemik sağlığında en az takviye kadar belirleyicidir.
           </p>
 
-          <h2>Özel Durumlar</h2>
+          <h2 id="ozel-durumlar">Özel Durumlar</h2>
           <p>
-            Emilim bozukluğu olan kişilerde, bariatrik cerrahi sonrası dönemde veya kronik böbrek hastalığında daha yakından izlem gerekebilir [●●●●●].
+            Emilim bozukluğu olan kişilerde, bariatrik cerrahi sonrası dönemde veya kronik böbrek hastalığında daha yakından izlem gerekebilir <Evidence level={5} />.
             Hiperkalsemi öyküsü veya bazı ilaç etkileşimleri olan kişilerde takviye kararları mutlaka kişiselleştirilmelidir.
             Bu gruplarda "standart doz" yerine düzenli kontrol sonuçlarına göre esnek planlama yapılır.
           </p>
@@ -121,7 +137,7 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
         </ArticleProsePanel>
 
         <ArticleProsePanel class="mt-10">
-          <h2>Uygulamada Sık Yapılan Hatalar</h2>
+          <h2 id="sik-hatalar">Uygulamada Sık Yapılan Hatalar</h2>
           <p>
             D vitamini yönetiminde en sık hatalardan biri, test sonucu olmadan rastgele yüksek doz kullanmaktır.
             Sosyal medya önerileri veya arkadaş deneyimleri kişisel tıbbi geçmişi yansıtmaz. Her bireyin başlangıç düzeyi, emilim kapasitesi,
@@ -134,7 +150,7 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
             Ayrıca takviye formunu sık değiştirmek veya düzensiz kullanmak da hedefe ulaşmayı zorlaştırır.
             Pratikte küçük ama istikrarlı adımlar, büyük ve sürdürülemeyen planlardan daha etkilidir.
           </p>
-          <h2>40 Yaş Sonrası İçin Örnek Takip Çerçevesi</h2>
+          <h2 id="takip-cercevesi">40 Yaş Sonrası İçin Örnek Takip Çerçevesi</h2>
           <p>
             Koruyucu sağlık perspektifinde 40 yaş sonrası dönemde D vitamini, kemik ve metabolik sağlıkla birlikte ele alınmalıdır.
             Örnek bir çerçevede başlangıç ölçümü yapıldıktan sonra risk durumuna göre 3-12 ay içinde kontrol planlanabilir.
@@ -160,7 +176,7 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
-          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt ●●●●●</p>
+          <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             D vitamini kemik, bağışıklık ve metabolik denge açısından temel bir biyolojik başlıktır. Yetersizlik yaygın olsa da yönetim basittir:
             düzenli ölçüm, kişisel risk değerlendirmesi ve gerektiğinde kontrollü destek. Beslenme ve yaşam alışkanlığı düzeni, takviyenin her zaman temel tamamlayıcısıdır.

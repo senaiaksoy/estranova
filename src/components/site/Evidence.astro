@@ -1,0 +1,53 @@
+---
+export type EvidenceLevel = 1 | 2 | 3 | 4 | 5;
+
+interface Props {
+  level?: EvidenceLevel;
+  from?: EvidenceLevel;
+  to?: EvidenceLevel;
+}
+
+const { level, from, to } = Astro.props;
+
+const LABELS: Record<EvidenceLevel, string> = {
+  5: 'güçlü',
+  4: 'iyi',
+  3: 'orta',
+  2: 'sınırlı',
+  1: 'zayıf',
+};
+
+const isRange = from !== undefined && to !== undefined;
+const tooltip = isRange
+  ? `Kanıt düzeyi: ${LABELS[from!]}–${LABELS[to!]} (${from}–${to}/5)`
+  : `Kanıt düzeyi: ${LABELS[level!]} (${level}/5)`;
+const displayLevel = isRange ? to! : level!;
+
+const segments = (n: number) => [1, 2, 3, 4, 5].map((i) => i <= n);
+---
+
+{
+  isRange ? (
+    <span class="evidence" data-level={displayLevel} title={tooltip} aria-label={tooltip}>
+      <span class="evidence-bar" aria-hidden="true">
+        {segments(from!).map((filled) => (
+          <span class:list={['evidence-seg', filled && 'is-filled']}></span>
+        ))}
+      </span>
+      <span class="evidence-sep" aria-hidden="true">–</span>
+      <span class="evidence-bar" aria-hidden="true">
+        {segments(to!).map((filled) => (
+          <span class:list={['evidence-seg', filled && 'is-filled']}></span>
+        ))}
+      </span>
+    </span>
+  ) : (
+    <span class="evidence" data-level={displayLevel} title={tooltip} aria-label={tooltip}>
+      <span class="evidence-bar" aria-hidden="true">
+        {segments(level!).map((filled) => (
+          <span class:list={['evidence-seg', filled && 'is-filled']}></span>
+        ))}
+      </span>
+    </span>
+  )
+}
