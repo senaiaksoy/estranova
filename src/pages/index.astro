@@ -242,68 +242,9 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
 
     <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
-        <header class="mb-12 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
-            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">03</span>
-            <span class="mx-2 text-[#C9A96E]">—</span>
-            Yazar Kadrosu
-          </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bu sayıda yazanlar</h2>
-          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden beş ses. Her yazar, kendi bakış açısıyla
-            katkı sunuyor.
-          </p>
-        </header>
-
-        <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
-          {
-            writers.map((w) => (
-              <li class="flex flex-col items-center text-center">
-                {w.portrait ? (
-                  <img
-                    src={w.portrait}
-                    alt={`${w.displayName} portresi`}
-                    width="192"
-                    height="192"
-                    loading="lazy"
-                    decoding="async"
-                    class="h-24 w-24 rounded-full object-cover ring-2 ring-[#6B2D3E]/15 md:h-28 md:w-28"
-                  />
-                ) : (
-                  <div class="flex h-24 w-24 items-center justify-center rounded-full bg-[#F5EDE0] font-serif text-3xl text-[#6B2D3E] ring-2 ring-[#6B2D3E]/15 md:h-28 md:w-28 md:text-4xl">
-                    {w.displayName
-                      .split(/\s+/)
-                      .filter((part) => part.length > 0)
-                      .map((n) => n[0])
-                      .join('')}
-                  </div>
-                )}
-                <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">
-                  {w.role.split('/')[0].trim()}
-                </p>
-                <h3 class="mt-2 font-serif text-xl text-[#2D2D2D]">{w.displayName}</h3>
-                <p class="mt-3 font-serif text-sm italic leading-relaxed text-[#2D2D2D]/70">{w.signaturePhrase}</p>
-              </li>
-            ))
-          }
-        </ul>
-
-        <div class="mt-10 flex justify-center">
-          <a
-            href="/yayin-kurulu"
-            class="text-sm font-semibold text-[#6B2D3E] underline decoration-[#6B2D3E]/40 underline-offset-4 transition hover:decoration-[#6B2D3E]"
-          >
-            Tüm yayın kurulu →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
         <header class="mb-10 max-w-3xl">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
-            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">04</span>
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">03</span>
             <span class="mx-2 text-[#C9A96E]">—</span>
             EDİTÖRYAL SEÇKİ
           </p>
@@ -325,13 +266,9 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
                     : 'border-[#6B2D3E]/12 hover:-translate-y-0.5 hover:shadow-md',
                 ]}
               >
-                {z.highlight && (
-                  <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">Öne çıkan</p>
-                )}
                 <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{z.tag}</p>
                 <h3 class="mb-3 font-serif text-2xl group-hover:underline group-hover:decoration-[#6B2D3E]/35">{z.title}</h3>
                 <p class="mb-5 flex-1 leading-relaxed text-[#2D2D2D]/75">{z.body}</p>
-                <p class="text-sm font-medium text-[#2D2D2D]/80">Kanıt düzeyi: {z.evidenceLabel}</p>
                 <p class="mt-2 font-serif text-xs italic text-[#2D2D2D]/55">
                   Yazan: <span class="text-[#2D2D2D]/75">{z.author}</span>
                 </p>
@@ -366,8 +303,6 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
                     <p class="text-base leading-relaxed text-[#2D2D2D]/70">{item.excerpt}</p>
                     <p class="mt-3 font-serif text-xs italic text-[#2D2D2D]/55">
                       Yazan: <span class="text-[#2D2D2D]/75">{item.author}</span>
-                      <span class="mx-1.5 text-[#C9A96E]">·</span>
-                      Tıbbi inceleme: <span class="text-[#2D2D2D]/75">{medicalReviewer}</span>
                     </p>
                   </div>
                 </a>
@@ -386,22 +321,11 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
       </div>
     </section>
 
-    <section class="border-t border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-20 md:py-28">
-      <div class="mx-auto max-w-3xl">
-        <blockquote class="relative pl-8 md:pl-10">
-          <span aria-hidden="true" class="absolute left-0 top-0 h-full w-[2px] bg-[#C9A96E]"></span>
-          <p class="font-serif text-3xl italic leading-snug text-[#2D2D2D] md:text-4xl md:leading-[1.15]">
-            Bir dönemden geçerken başka bir kadının da aynı soruyu sorduğunu duymak, çoğu zaman yanıttan daha iyi gelir.
-          </p>
-        </blockquote>
-      </div>
-    </section>
-
     <section class="border-t border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <header class="mb-8 max-w-3xl">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
-            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">05</span>
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">04</span>
             <span class="mx-2 text-[#C9A96E]">—</span>
             Belirti Bazlı Navigasyon
           </p>
@@ -457,6 +381,65 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
       </div>
     </section>
 
+    <section class="border-t border-[#6B2D3E]/10 bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-12 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
+            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">05</span>
+            <span class="mx-2 text-[#C9A96E]">—</span>
+            Yazar Kadrosu
+          </p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bu sayıda yazanlar</h2>
+          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+            Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden beş ses. Her yazar, kendi bakış açısıyla
+            katkı sunuyor.
+          </p>
+        </header>
+
+        <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+          {
+            writers.map((w) => (
+              <li class="flex flex-col items-center text-center">
+                {w.portrait ? (
+                  <img
+                    src={w.portrait}
+                    alt={`${w.displayName} portresi`}
+                    width="192"
+                    height="192"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-24 w-24 rounded-full object-cover ring-2 ring-[#6B2D3E]/15 md:h-28 md:w-28"
+                  />
+                ) : (
+                  <div class="flex h-24 w-24 items-center justify-center rounded-full bg-[#F5EDE0] font-serif text-3xl text-[#6B2D3E] ring-2 ring-[#6B2D3E]/15 md:h-28 md:w-28 md:text-4xl">
+                    {w.displayName
+                      .split(/\s+/)
+                      .filter((part) => part.length > 0)
+                      .map((n) => n[0])
+                      .join('')}
+                  </div>
+                )}
+                <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">
+                  {w.role.split('/')[0].trim()}
+                </p>
+                <h3 class="mt-2 font-serif text-xl text-[#2D2D2D]">{w.displayName}</h3>
+                <p class="mt-3 font-serif text-sm italic leading-relaxed text-[#2D2D2D]/70">{w.signaturePhrase}</p>
+              </li>
+            ))
+          }
+        </ul>
+
+        <div class="mt-10 flex justify-center">
+          <a
+            href="/yayin-kurulu"
+            class="text-sm font-semibold text-[#6B2D3E] underline decoration-[#6B2D3E]/40 underline-offset-4 transition hover:decoration-[#6B2D3E]"
+          >
+            Tüm yayın kurulu →
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="border-t border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-20 md:py-28">
       <div class="mx-auto max-w-3xl">
         <blockquote class="relative pl-8 md:pl-10">
@@ -506,17 +489,19 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
       </div>
     </section>
 
-    <section class="border-t border-white/10 bg-[#6B2D3E] px-6 py-20 text-white">
-      <div class="mx-auto max-w-6xl text-center">
-        <h2 class="mb-5 font-serif text-4xl leading-tight md:text-5xl">Hormonal geçiş hakkında daha fazla bilgi mi istiyorsunuz?</h2>
-        <p class="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-white/85 md:text-xl">
-          İçeriklerimizi adım adım inceleyerek süreci daha net anlayabilir, güvenilir kaynaklara tek yerden ulaşabilirsiniz.
+    <section class="border-t border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-14 md:py-16">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]/70">
+          Kütüphane
+        </p>
+        <p class="mb-6 font-serif text-xl italic leading-relaxed text-[#2D2D2D]/75 md:text-2xl">
+          Bu sayfada henüz değinmediğimiz başlıkları ve tüm arşivi kütüphanede bulabilirsin.
         </p>
         <a
           href="/library"
-          class="inline-flex items-center rounded-xl bg-[#C9A96E] px-7 py-3.5 text-sm font-semibold text-[#2D2D2D] shadow-md transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/45"
+          class="text-sm font-semibold text-[#6B2D3E] underline decoration-[#6B2D3E]/40 underline-offset-4 transition hover:decoration-[#6B2D3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
         >
-          Kütüphaneye göz at
+          Kütüphaneye göz at →
         </a>
       </div>
     </section>
