@@ -71,40 +71,26 @@
     padding-left: 1.5rem;
   }
   & .evidence {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3em;
-    margin: 0 0.2em;
-    vertical-align: 0.1em;
-    line-height: 1;
+    display: inline;
+    margin: 0 0.15em;
+    color: #775a19;
+    font-size: 0.85em;
     cursor: help;
+    white-space: nowrap;
   }
-  & .evidence-bar {
-    display: inline-flex;
-    gap: 1px;
+  & .evidence-label {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: #C9A96E;
   }
-  & .evidence-seg {
-    width: 3px;
-    height: 10px;
-    background: rgba(201, 169, 110, 0.22);
-    border-radius: 1px;
-    display: inline-block;
+  & .evidence[data-level="5"] .evidence-label {
+    color: #6B2D3E;
   }
-  & .evidence-seg.is-filled {
-    background: #C9A96E;
-  }
-  & .evidence[data-level="5"] .evidence-seg.is-filled {
-    background: #6B2D3E;
+  & .evidence[data-level="4"] .evidence-label {
+    color: #8a6a2e;
   }
   & .evidence[data-level="1"] {
-    opacity: 0.75;
-  }
-  & .evidence-sep {
-    font-family: var(--font-serif);
-    font-size: 0.85em;
-    color: rgba(201, 169, 110, 0.7);
-    line-height: 1;
-    transform: translateY(-1px);
+    opacity: 0.8;
   }
   & a {
     text-decoration: none;
@@ -162,44 +148,30 @@
 
 @layer components {
   /*
-   * Evidence sparkline: mirrors prose-estranova & .evidence so <Evidence /> renders
+   * Evidence label: mirrors prose-estranova & .evidence so <Evidence /> renders
    * on hub tables and cards outside ArticleProsePanel.
    */
   .evidence {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3em;
-    margin: 0 0.2em;
-    vertical-align: 0.1em;
-    line-height: 1;
+    display: inline;
+    margin: 0 0.15em;
+    color: #775a19;
+    font-size: 0.85em;
     cursor: help;
+    white-space: nowrap;
   }
-  .evidence-bar {
-    display: inline-flex;
-    gap: 1px;
+  .evidence-label {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: #c9a96e;
   }
-  .evidence-seg {
-    width: 3px;
-    height: 10px;
-    background: rgba(201, 169, 110, 0.22);
-    border-radius: 1px;
-    display: inline-block;
+  .evidence[data-level='5'] .evidence-label {
+    color: #6b2d3e;
   }
-  .evidence-seg.is-filled {
-    background: #c9a96e;
-  }
-  .evidence[data-level='5'] .evidence-seg.is-filled {
-    background: #6b2d3e;
+  .evidence[data-level='4'] .evidence-label {
+    color: #8a6a2e;
   }
   .evidence[data-level='1'] {
-    opacity: 0.75;
-  }
-  .evidence-sep {
-    font-family: var(--font-serif);
-    font-size: 0.85em;
-    color: rgba(201, 169, 110, 0.7);
-    line-height: 1;
-    transform: translateY(-1px);
+    opacity: 0.8;
   }
 
   /* Interactive elements */
