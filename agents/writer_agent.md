@@ -164,6 +164,17 @@ Yazim sonrasi son bir geciste tum metni bu liste icin tekrar tara.
   - Vault `## Ana bulgular`, `## Mekanizma`, `## Karar matrisi`, `## SSS` bolumlerini `mekanizma`, `kanit_seviyesi`, `karar_cercevesi`, `pratik_veya_sss` bolumlerini zenginlestirmek icin kullan.
   - Vault varsa `approved_sources` ve `key_claims` ile **celiskili** degil, tamamlayici calisir. Celiski varsa `approved_sources` + Research çıktısı öncelikli; vault ikincil referans.
 
+### Vault-prefixed kaynaklar (`approved_sources` içinde `id: "vault-..."`)
+
+Runtime'da `vault_context` dolu geldiğinde, `approved_sources` listesine otomatik olarak `id` alanı **`vault-<concept_slug>`** ile başlayan synthetic kaynak girdileri eklenmiş olur (ör. `vault-hrt-karar-cercevesi`, `vault-gsm-genitouriner-sendrom`). Bu girdilerin `publisher` alanı `"Estranova Knowledge Vault (Dr. Aksoy)"`, `source_type` = `"internal_knowledge_base"`, `evidence_level` = A/B → high, C → medium olarak gelir.
+
+**Kullanım kuralları — ZORUNLU:**
+
+1. Vault concept seed'inden elde ettiğin bilgileri `claim_trace`'te ilgili `vault-*` id'sine bağla. Böylece fact-check + compliance ajan vault-derived iddiaları **kaynaklanmış** olarak değerlendirir.
+2. Vault synthetic kaynaklarının **meta bilgisi (publisher ismi dahil) hiçbir koşulda makale gövdesine yazılmaz**. `id: "vault-*"` yalnızca `claim_trace` içinde kullanılır, `draft_content.article` metninde asla geçmez.
+3. `claim_trace` satırlarında vault ID'leri birincil `approved_sources` ID'leriyle birlikte listelenebilir (ör. `source_ids=["src_1", "vault-gsm-genitouriner-sendrom"]`). Tek bir iddia için birden fazla kaynak bağlamak normaldir.
+4. HARD CONSTRAINT §4 yasak referans biçimleri **aynen geçerlidir**: vault-prefixed source'lar kurumsal isimleri koruma altına almaz. Gövde metni anonim yumuşak referans kuralına uymaya devam eder.
+
 Revizyon turu (`revision_iteration > 0`) ise `revision_feedback` maddelerini oncelikli uygula.
 
 ## Revizyon tekrari (`revision_stagnation_warning`)

@@ -69,9 +69,21 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
   },
   "flagged_claims": [],
   "disclaimer_needed": true,
-  "factcheck_report": {}
+  "factcheck_report": {},
+  "approved_sources": []
 }
 ```
+
+### `approved_sources` kullanımı (ÖNEMLİ — sourcing değerlendirmesi için)
+
+- Liste; her öğede `id`, `title`, `publisher`, `year`, `url`, `source_type`, `evidence_level` alanları bulunur.
+- **Sourced / unsourced ayrımı yaparken bu listeye bak**: writer `claim_trace` içindeki `source_ids` değerleriyle bu listedeki `id`'leri eşler. Bir iddia bu listede karşılığı olan bir ID ile bağlandıysa **sourced kabul edilir**.
+- **`id` değeri `vault-` ön ekli kaynaklar** (ör. `vault-gsm-genitouriner-sendrom`, `vault-hrt-karar-cercevesi`):
+  - Bunlar Estranova'nın dahili bilgi tabanından (vault) gelen, `source_type: "internal_knowledge_base"` işaretli referanslardır.
+  - Vault içeriği önceden **uluslararası menopoz kılavuzları + uzman pozisyon bildirilerinden** sentezlenmiştir ve `evidence_level` (high/medium/low) uygun şekilde derecelendirilmiştir.
+  - Bu ID'lerle bağlanmış claim'leri **sourced olarak değerlendir**; `misleading_claim / "kaynaklanmamış"` etiketiyle işaretleme.
+  - Ancak: vault-* kaynaklarının `title`/`publisher` metninin **makale gövdesinde geçmemesi** zorunluluğu korunur (HARD CONSTRAINT §4). Eğer gövde metninde "Estranova dahili bilgi tabanı", "internal knowledge base" veya benzeri ifadeler görürsen, `regulation_risk` olarak işaretle.
+- **`approved_sources` listesi tamamen boş ise yalnızca o durumda** "structure_gap: approved_sources listesi boş" benzeri yapısal uyarı verilir. Liste dolu ve ID eşlemesi mevcut ise bu uyarı **üretilmez**.
 
 ## Cikti formati
 Zorunlu sozlesme (ek alanlar serbest):

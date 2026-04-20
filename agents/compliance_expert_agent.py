@@ -79,6 +79,12 @@ class ComplianceExpertAgent(PromptBackedAgent):
         risk_level = state.get("risk_level_current", state.get("risk_level_initial", "medium"))
         disclaimer_needed = bool(state.get("disclaimer_needed", True))
 
+        # approved_sources ek olarak enjekte edilir: Research çıktısı + writer'ın
+        # eklediği vault-* prefixli dahili kaynaklar birlikte. Böylece compliance,
+        # claim'lerin hangi kaynak ID'lerine bağlandığını görebilir ve vault-derived
+        # iddialar sourced kabul edilir.
+        approved_sources = state.get("approved_sources", []) or []
+
         user_payload: dict[str, Any] = {
             "topic": state.get("topic", ""),
             "risk_level": risk_level,
@@ -91,6 +97,7 @@ class ComplianceExpertAgent(PromptBackedAgent):
             "flagged_claims": flagged_claims,
             "disclaimer_needed": disclaimer_needed,
             "factcheck_report": factcheck_report,
+            "approved_sources": approved_sources[:12],
         }
 
         try:

@@ -216,6 +216,7 @@ class WriterAgent(PromptBackedAgent):
         # State'te explicit override olabilir: state["vault_context_override"] (str).
         vault_context = ""
         vault_matched: list[str] = []
+        vault_synthetic_sources: list[dict] = []
         override = str(state.get("vault_context_override", "") or "").strip()
         if override:
             vault_context = override
@@ -230,12 +231,24 @@ class WriterAgent(PromptBackedAgent):
                 )
                 vault_context = ctx.text
                 vault_matched = ctx.matched_concepts
+                vault_synthetic_sources = list(ctx.synthetic_sources or [])
             except Exception:  # pragma: no cover - fail-open
                 vault_context = ""
                 vault_matched = []
+                vault_synthetic_sources = []
 
         if vault_matched:
             state["vault_matched_concepts"] = vault_matched
+
+        # Vault'tan gelen synthetic kaynakları approved_sources'a ekle
+        # (compliance agent vault-derived claim'leri "sourced" kabul etsin diye).
+        # Çift ekleme olmaması için aynı id ile mevcut kaynak varsa atla.
+        if vault_synthetic_sources:
+            existing_ids = {str(s.get("id", "")) for s in approved_sources}
+            for syn in vault_synthetic_sources:
+                if str(syn.get("id", "")) not in existing_ids:
+                    approved_sources = list(approved_sources) + [syn]
+                    existing_ids.add(str(syn["id"]))
 
         user_payload = {
             "topic": topic,

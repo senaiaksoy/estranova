@@ -161,9 +161,88 @@ class VaultContext:
     text: str
     matched_concepts: list[str]
     char_count: int
+    #: Her eşleşen concept için synthetic Source meta'sı — writer agent
+    #: bunları `approved_sources`'a ekleyip `claim_trace` içinde referansı
+    #: olarak kullanabilir. Böylece compliance agent vault-derived claim'leri
+    #: "sourced" kabul eder.
+    synthetic_sources: list[dict] = None  # type: ignore[assignment]
+
+    def __post_init__(self) -> None:
+        if self.synthetic_sources is None:
+            self.synthetic_sources = []
 
     def is_empty(self) -> bool:
         return not self.text.strip()
+
+
+def _extract_concept_title(content: str, fallback: str) -> str:
+    """YAML frontmatter 'name:' alanından human-readable başlık."""
+    m = re.match(r"^---\s*\n(.*?)\n---\s*\n", content, re.DOTALL)
+    if not m:
+        return fallback
+    for line in m.group(1).splitlines():
+        line = line.strip()
+        if line.startswith("name:"):
+            return line.split(":", 1)[1].strip().strip('"').strip("'")
+    return fallback
+
+
+def _extract_concept_grade(content: str) -> str:
+    """Frontmatter 'grade:' → compliance için evidence_level mapping."""
+    m = re.match(r"^---\s*\n(.*?)\n---\s*\n", content, re.DOTALL)
+    if not m:
+        return "medium"
+    for line in m.group(1).splitlines():
+        line = line.strip().lower()
+        if line.startswith("grade:"):
+            val = line.split(":", 1)[1].strip().strip('"').strip("'").lower()
+            # A/B → high; C → medium; D/E veya diğer → low
+            if val.startswith("a") or val.startswith("b"):
+                return "high"
+            if val.startswith("c"):
+                return "medium"
+            if val.startswith("d") or val.startswith("e"):
+                return "low"
+    return "medium"
+
+
+# Kurum adlarını synthetic title'dan elemek için — writer'ın bu meta alanları
+# echo etme riskini düşürür. HARD CONSTRAINT §4 ile uyumlu çift güvenlik.
+_ORG_STRIP_RE = re.compile(
+    r"\b(NAMS|IMS|NICE|ESHRE|ASRM|ACOG|FIGO|WHO|EMAS|BMS|HFEA|Cochrane|RCOG|FSRH|"
+    r"IGENOMIX|Vitrolife|Lundin|Melbourne)\b",
+    re.IGNORECASE,
+)
+
+
+def _neutralize_title(raw_title: str) -> str:
+    """Concept başlığından kurum isimlerini çıkarıp nötr format ver."""
+    cleaned = _ORG_STRIP_RE.sub("", raw_title)
+    # Çoklu boşluk + " — " artıklarını temizle
+    cleaned = re.sub(r"\s*[—–-]\s*[—–-]\s*", " — ", cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned)
+    cleaned = cleaned.strip(" —–-·,.:")
+    return cleaned or "konu kavramı"
+
+
+def _build_synthetic_source(concept_slug: str, content: str) -> dict:
+    """Bir concept seed için writer'ın approved_sources'a ekleyebileceği
+    Source-şeması uyumlu synthetic kaynak dict'i üret.
+
+    Format state.Source TypedDict ile uyumlu: id/title/publisher/year/url/
+    source_type/evidence_level. Title'dan kurum isimleri temizlenir.
+    """
+    raw_title = _extract_concept_title(content, fallback=concept_slug)
+    neutral_title = _neutralize_title(raw_title)
+    return {
+        "id": f"vault-{concept_slug}",
+        "title": f"Dahili bilgi tabanı — {neutral_title}",
+        "publisher": "Estranova dahili bilgi tabanı",
+        "year": 2026,
+        "url": "internal://vault",
+        "source_type": "internal_knowledge_base",
+        "evidence_level": _extract_concept_grade(content),
+    }
 
 
 def fetch_vault_context(
@@ -209,6 +288,7 @@ def fetch_vault_context(
     # 2) Topic-matched concept seeds
     concept_dir = root / CONCEPT_DIR
     matched: list[str] = []
+    synthetic_sources: list[dict] = []
     if concept_dir.is_dir():
         scored: list[tuple[int, Path, str]] = []
         for md in concept_dir.glob("*.md"):
@@ -225,6 +305,7 @@ def fetch_vault_context(
             sections.append(
                 f"\n### {CONCEPT_DIR}/{md.name}\n\n{_trim_section(content, concept_budget)}"
             )
+            synthetic_sources.append(_build_synthetic_source(md.stem, content))
 
     # 3) Toplam karakter kontrolü (güvenlik)
     combined = "\n\n---\n".join(sections).strip()
@@ -242,6 +323,7 @@ def fetch_vault_context(
         text=body,
         matched_concepts=matched,
         char_count=len(body),
+        synthetic_sources=synthetic_sources,
     )
 
 
