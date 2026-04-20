@@ -6,11 +6,17 @@ from pathlib import Path
 import re
 
 from config.pipeline_limits import WRITER_MAX_OUTPUT_TOKENS
+from config import vault_config
 
 from state import ClaimTrace, DraftContent, EstranovaState, append_history
 
 from .article_markdown import ARTICLE_OUTLINE_KEYS, split_h2_sections
 from .base import PromptBackedAgent
+
+try:
+    from rag.vault_retriever import fetch_vault_context
+except ImportError:  # pragma: no cover - fail-open if retriever missing
+    fetch_vault_context = None  # type: ignore[assignment]
 
 ALLOWED_CATEGORIES: tuple[str, ...] = (
     "hormonal-gecis/perimenopoz",
@@ -206,6 +212,31 @@ class WriterAgent(PromptBackedAgent):
             revision_iteration >= 2 and fb_joined and prev_snap and fb_joined == prev_snap
         )
 
+        # Vault context injection — yalnızca vault erişilebilirse.
+        # State'te explicit override olabilir: state["vault_context_override"] (str).
+        vault_context = ""
+        vault_matched: list[str] = []
+        override = str(state.get("vault_context_override", "") or "").strip()
+        if override:
+            vault_context = override
+        elif fetch_vault_context is not None and vault_config.is_available():
+            try:
+                ctx = fetch_vault_context(
+                    topic,
+                    vault_path=vault_config.VAULT_PATH,
+                    max_chars=vault_config.VAULT_MAX_CONTEXT_CHARS,
+                    max_concepts=vault_config.VAULT_MAX_CONCEPTS,
+                    site_scope="estranova",
+                )
+                vault_context = ctx.text
+                vault_matched = ctx.matched_concepts
+            except Exception:  # pragma: no cover - fail-open
+                vault_context = ""
+                vault_matched = []
+
+        if vault_matched:
+            state["vault_matched_concepts"] = vault_matched
+
         user_payload = {
             "topic": topic,
             "audience": audience,
@@ -220,6 +251,7 @@ class WriterAgent(PromptBackedAgent):
             "article_angle": article_angle,
             "content_emphasis": content_emphasis,
             "internal_link_suggestions": internal_link_suggestions,
+            "vault_context": vault_context,
             "revision_stagnation_warning": (
                 "UYARI: Onceki revizyon turunda ayni geri bildirim listesi tekrarlandi. "
                 "Metni kokten sadelestir; onceki turda cozulmeyen sorunlari tekrar etme; "

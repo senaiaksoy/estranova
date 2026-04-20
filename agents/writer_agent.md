@@ -141,6 +141,7 @@ Yazim sonrasi son bir geciste tum metni bu liste icin tekrar tara.
   "article_angle": "",
   "content_emphasis": [],
   "internal_link_suggestions": "",
+  "vault_context": "",
   "revision_stagnation_warning": ""
 }
 ```
@@ -155,6 +156,13 @@ Yazim sonrasi son bir geciste tum metni bu liste icin tekrar tara.
   - `bilimsel_calismalar` — Kanit seviyesi bolumunu ve `approved_sources` ile uyumlu kanit anlatimini guclendir.
   - `alternatif_yaklasimlar` — (Yasal sinirlar icinde) tartisma / alternatif bakis aclarina kisa, notr yer ver; iddia uydurma.
 - **`internal_link_suggestions`:** Bos ise yok say. Dolu ise yalnizca Publisher icin **editor notu / oneri listesi** olarak kalir; yazar makale govdesine ic baglanti veya URL **yerlestirmez**.
+- **`vault_context`:** Bos ise yok say; normal akisla calis. Dolu ise **arka plan bilgisi** olarak kullan:
+  - Vault context, editöryal ses kurallari + hedef kitle profili + konu-uyumlu kavram ozetlerini icerir.
+  - **Kaynak adi / URL / kurum adi (NAMS, IMS, NICE, ESHRE gibi) gövde metnine KOPYALANMAZ** — §4 yasak referans biçimleri degismez kalir; anonim yumuşak referans kurali (`"alanında çalışan dernekler", "uluslararası menopoz kılavuzları", "araştırmalar"`) uygulanmaya devam eder.
+  - Vault'taki `<Evidence level=N />` etiketleri **dogrudan korunarak** makaleye tasinabilir.
+  - Vault'taki `## Dr. Aksoy pratik yorum` veya `## Estranova için editöryal mesaj` gibi hazir akran-tonu cümleleri **stil referansi** olarak kullanabilirsin; aynen kopyalama.
+  - Vault `## Ana bulgular`, `## Mekanizma`, `## Karar matrisi`, `## SSS` bolumlerini `mekanizma`, `kanit_seviyesi`, `karar_cercevesi`, `pratik_veya_sss` bolumlerini zenginlestirmek icin kullan.
+  - Vault varsa `approved_sources` ve `key_claims` ile **celiskili** degil, tamamlayici calisir. Celiski varsa `approved_sources` + Research çıktısı öncelikli; vault ikincil referans.
 
 Revizyon turu (`revision_iteration > 0`) ise `revision_feedback` maddelerini oncelikli uygula.
 
