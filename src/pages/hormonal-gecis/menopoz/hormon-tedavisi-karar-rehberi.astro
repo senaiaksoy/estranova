@@ -1,0 +1,298 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi']!;
+
+const tocEntries = [
+  { id: 'neden-soru', label: 'Neden Bu Soru Bu Kadar Zor?' },
+  { id: 'hormon-tedavisi-nedir', label: 'Hormon Tedavisi Nedir?' },
+  { id: 'vucutta-ne-oluyor', label: 'Vücutta Ne Oluyor?' },
+  { id: 'bilim-ne-diyor', label: 'Bilim Ne Diyor?' },
+  { id: 'turkiye-baglamı', label: 'Türkiye Bağlamı' },
+  { id: 'karar-cercevesi', label: 'Karar Çerçevesi' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?';
+const articleDescription =
+  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye bağlamı ve doktorunuzla konuşurken sorabileceğiniz sorular.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '20 Nisan 2026',
+  pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/menopoz',
+  keywords: [
+    'hormon tedavisi',
+    'HRT',
+    'MHT',
+    'menopoz',
+    'östrojen',
+    'progesteron',
+    'sıcak basması',
+    'karar verme',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title="Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="20 Nisan 2026" readingMinutes={7} />
+
+      <section
+        class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Hormon tedavisi — ya da sıkça duyduğunuz adıyla HRT — menopozal belirtiler için en etkili seçeneklerden biri.
+          Ancak "almalı mıyım, almamalı mıyım" sorusunun tek bir doğru cevabı yok. Yaşınız, son adetinizden bu yana geçen süre,
+          hangi belirtilerin hayatınızı zorladığı, kişisel sağlık geçmişiniz — hepsi birlikte değerlendirilir.
+          Bu yazı size doğrudan bir öneri vermez; karar sürecinde neye baktığımızı, doktorunuzla hangi soruları
+          konuşmak istediğinizi biraz daha netleştirmeye çalışır.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="neden-soru">Neden Bu Soru Bu Kadar Zor?</h2>
+        <p>
+          Bir arkadaşla oturduğumuzda konu sık sık aynı yere geliyor. "Doktor bana hormon önerdi; ama internette okuduklarım
+          beni korkuttu." Başka biri, "Annem bu ilaçtan dolayı kanser oldu diye hiç almamam söylendi" diyor. Üçüncüsü, "Sıcak basmaları
+          beni mahvediyor ama ben 'doğal' gitmek istiyorum" diye ekliyor.
+        </p>
+        <p>
+          Bir noktada şunu fark ettim: aslında hepimiz aynı soruyu soruyoruz. "Bu karar benim için doğru mu?"
+          Ve bu sorunun zorluğu, cevabın tek kelime olmamasından. Hormon tedavisi kimi kadın için rahatlatıcı bir seçim;
+          kimi için gerekmiyor; kimi için de güvenlik açısından uygun değil. Bu yazıda karar sürecine bir çerçeve koymaya çalışacağız —
+          yönlendirme yapmadan, seçenekleri birlikte düşünerek.
+        </p>
+
+        <h2 id="hormon-tedavisi-nedir">Hormon Tedavisi Nedir?</h2>
+        <p>
+          Hormon tedavisi, menopoz sürecinde azalan östrojen ve gereğinde progesteronu dışarıdan ilaç olarak almayı ifade ediyor.
+          Günümüzde daha çok "menopozal hormon tedavisi" — yani MHT — olarak adlandırılıyor; ama hasta dilinde HRT ismi hâlâ
+          yaygın. İkisi aynı şey.
+        </p>
+        <p>
+          Tedavi birden fazla biçimde geliyor: oral hap, deriden uygulanan bant ya da jel, vajinal krem veya tablet,
+          hatta hormonlu spiral. Östrojen tek başına kullanılabildiği gibi — çoğunlukla rahmi alınmış kadınlarda — rahmi olan
+          kadınlarda östrojenin yanına mutlaka bir progestin ekleniyor. Bu, rahim iç tabakasının korunması için gerekli.
+          Sadece vajinal yakınmalar için kullanılan düşük doz vajinal östrojen ise sistemik tedaviden farklı değerlendiriliyor —
+          genellikle çok daha güvenli bir kategori olarak görülüyor <Evidence level={5} />.
+        </p>
+
+        <h2 id="vucutta-ne-oluyor">Vücutta Ne Oluyor?</h2>
+        <p>
+          Menopozla birlikte yumurtalıkların ürettiği östrojen belirgin biçimde azalıyor. Bu düşüş sıcak basmalarını, gece
+          terlemelerini, uyku bölünmesini, ruh halindeki iniş çıkışları, kemik kaybının hızlanmasını ve vajinal dokunun
+          incelmesini tetikleyebiliyor. Her kadın bu değişimi aynı yoğunlukta yaşamıyor — bazıları hemen hiç fark etmiyor,
+          bazıları yıllarca etkileniyor.
+        </p>
+        <p>
+          Hormon tedavisi, vücuda eksilen östrojeni dışarıdan sağlayarak bu belirtilerin çoğunu yumuşatıyor. Özellikle sıcak
+          basmaları ve gece terlemeleri üzerindeki etkisi güçlü: ortalama olarak hafta içindeki belirti sıklığını üçte ikisinden
+          fazla azaltabiliyor <Evidence level={5} />. Kemik koruması ve vajinal dokunun canlanması da belgelenmiş faydaları
+          arasında <Evidence level={5} />. Yani tedavi "her şeyi çözen sihir" değil — ama belirli bir grubu net biçimde
+          rahatlatıyor.
+        </p>
+
+        <h2 id="bilim-ne-diyor">Bilim Ne Diyor?</h2>
+        <p>
+          Kanıt durumu son yirmi yılda belirgin biçimde netleşti. Uluslararası menopoz dernekleri, bugün temelde
+          şu çerçeveyi kullanıyor: 60 yaş altındaki ve menopozdan sonraki ilk on yıl içinde olan, belirti yaşayan ve
+          tıbbi engeli bulunmayan kadınlarda fayda-risk dengesi hormon tedavisi lehine duruyor <Evidence level={5} />.
+          Bu zaman aralığı bazı kaynaklarda "fırsat penceresi" olarak anılıyor.
+        </p>
+        <p>
+          Bu pencerenin dışında — yani 60 yaşın üstünde veya menopozdan on yıldan fazla zaman geçtikten sonra yeni başlatmada —
+          denkleme yeni riskler ekleniyor: damar tıkanıklığı, inme ve bazı durumlarda bilişsel yan etkiler. Bu yüzden yaş ve
+          zaman önemli <Evidence level={4} />. Meme kanseri riski konusunda tartışmalar hâlâ sürüyor; ancak araştırmaların
+          ortaya koyduğu mutlak risk — yani binlerce kadında yılda kaç ek vakaya yol açtığı — pek çok kadının sandığından
+          daha düşük. Yani risk yok demiyoruz; daha hassas bir terazide tartıyoruz <Evidence from={4} to={5} />.
+        </p>
+        <p>
+          Progestin tipi, östrojenin alınma yolu (ağız mı cilt mi), doz ve süre — bu ince ayrıntıların hepsi güvenlik
+          profilini değiştirebiliyor. Bu nedenle "hormon tedavisi" tek bir şey değil. İki farklı hastaya aynı adı verdiğimiz
+          ama farklı profilli rejimler yazılabiliyor.
+        </p>
+
+        <h2 id="turkiye-baglamı">Türkiye Bağlamı</h2>
+        <p>
+          Türkiye'de hormon tedavisine erişim, reçeteyle yapılıyor ve birçok formun ülke piyasasında karşılığı var. Fakat
+          pratikte iki gerçekle karşılaşıyoruz: birincisi, pek çok kadın bu seçeneği doktoruyla konuşmadan kendiliğinden
+          eliyor — çoğunlukla eski haber başlıklarının gölgesinde. İkincisi, bazı kliniklerin "kişiye özel karışım hormon"
+          diye sattığı, düzenleyici onayı olmayan formülasyonlar yavaş yavaş yaygınlaşıyor.
+        </p>
+        <p>
+          Bu noktada iki şeyi ayırt etmek gerekiyor. Bir tarafta uluslararası düzenleyicilerin onayladığı, yıllardır çalışılmış,
+          standart dozlu hormon preparatları var — bu grup için ciddi bir bilgi birikimi mevcut. Öbür tarafta, eczacı tarafından
+          karıştırılmış, standart olmayan kombinasyonlar ve tükürük testlerine dayandırılan "özel doz" vaatleri var.
+          Menopoz alanında çalışan derneklerin büyük çoğunluğu, bu ikinci grubun güvenlik ve etkinlik verisinin yetersiz
+          olduğunu vurguluyor <Evidence level={5} />.
+        </p>
+        <p>
+          Yani Türkiye'de yaşıyorsanız: doktorunuzla önce onaylı seçenekleri konuşmak, sonra size uygun olanı birlikte
+          seçmek en sağlam yol. "Tükürüğünü alalım, formülünü biz belirleyelim" diyen bir yaklaşımla karşılaştığınızda, soru
+          sorma hakkınızı kullanmanız doğal ve gerekli.
+        </p>
+
+        <h2 id="karar-cercevesi">Karar Çerçevesi</h2>
+        <p>
+          "Ben uygun muyum?" sorusunun cevabı birkaç basamak halinde oluşuyor. Doktorunuzla yapacağınız konuşmada şu
+          başlıkların hepsi tek tek gündeme geliyor — ve bu yüzden sürenin biraz uzun olması normal.
+        </p>
+        <p>
+          İlk basamak şu: yeterince rahatsızlık veren bir belirti var mı? Sıcak basmaları ya da gece terlemeleri uykunuzu
+          bölüyor mu, işinizde veya ilişkilerinizde zorluk yaratıyor mu? Yalnızca vajinal kuruluk yaşıyorsanız, belki
+          sistemik bir tedaviye gerek olmayabilir — düşük doz lokal bir seçenek yeterli olabilir <Evidence level={5} />.
+        </p>
+        <p>
+          İkinci basamak kontrendikasyonlar. Geçmişte meme kanseri, aktif damar tıkanıklığı öyküsü, tanı konmamış vajinal
+          kanama ya da aktif karaciğer hastalığı varsa, sistemik hormon tedavisi genelde uygun görülmüyor. Bunların dışında
+          migreniniz, kan basıncınız, aile öykünüz, kilo durumunuz — hepsi rejim seçimini etkiliyor ama otomatik olarak
+          kapıyı kapatmıyor.
+        </p>
+        <p>
+          Üçüncü basamak yaş ve zamanlama. Yaşınız ve menopozdan bu yana geçen süre, daha önce de bahsettiğimiz fırsat
+          penceresini belirliyor. Dördüncü basamak rejim ve rota — hangi östrojen, hangi progestin, ağızdan mı yoksa
+          ciltten mi. Beşinci ve son basamak doz ve süre: en düşük etkili doz genelde tercih ediliyor, süre ise belirtilerinize
+          ve kişisel risk profilinize göre yılda bir yeniden değerlendiriliyor.
+        </p>
+        <p>
+          Kararın özetini iki cümlede toplayabiliriz: belirtiler ne kadar rahatsızlık veriyor, ne kadar risk kabul
+          edilebilir — bu ikisinin kesiştiği yer sizin kararınız. "Çevremdekiler ne yapıyor" değil; "benim için dengeli olan ne"
+          sorusu. Hormon almayan kadınların da başka kanıtlı seçenekleri var: yaşam tarzı, bilişsel davranışçı terapi,
+          hormonsuz yeni ilaçlar <Evidence level={4} />. Yani "evet" dememek bir seçenek kaybı değil.
+        </p>
+
+        <h2 id="sss">Sıkça Sorulan Sorular</h2>
+        <p>
+          Aynı bağlamda karşımıza en sık çıkan sorulardan birkaçını burada bir araya getirdim. Her biri kısa; ayrıntısını
+          doktorunuzla konuşabilirsiniz.
+        </p>
+        <p>
+          <strong>HRT kesinlikle meme kanseri yapar mı?</strong> Hayır, "kesinlikle" diyebileceğimiz bir durum değil. Kullanılan
+          rejime, süreye, başlangıç yaşına ve kişisel risk profiline göre değişiyor. Rahmi olan kadında kombin tedavide,
+          uzun süreyle kullanımda rölatif risk hafifçe artıyor; östrojen-tek kullanımda ise daha yakın zamanlı büyük
+          çalışmalar hafif bir azalma bile gösterebiliyor. Konu "kırmızı çizgi" değil, "kişiselleştirilmiş denge"
+          <Evidence level={5} />.
+        </p>
+        <p>
+          <strong>HRT aldığımda kilo alır mıyım?</strong> Yaygın bir endişe ama mevcut çalışmalar doğrudan bir bağlantı
+          göstermiyor. Menopoz döneminde kilo artışı ve özellikle bel çevresindeki değişim, hormonal tedaviden bağımsız
+          olarak sıkça yaşanıyor. Kimi kadında tedavi başladıktan sonra ilk haftalarda su tutma, göğüs hassasiyeti veya
+          hafif şişkinlik olabiliyor; bunlar genellikle zamanla dengeleniyor <Evidence level={4} />.
+        </p>
+        <p>
+          <strong>Ne kadar süre kullanabilirim?</strong> Eskiden "en kısa süre, en düşük dozda, sonra mutlaka kesin"
+          yaklaşımı yaygındı. Güncel çerçeve daha esnek: belirtileriniz devam ediyor, yaşam kaliteniz tedaviden anlamlı
+          fayda görüyor ve yeni bir kontrendikasyon çıkmadıysa, devam etmek bir seçenek. Yıllık olarak fayda ve riski
+          yeniden tartmak ise her zaman geçerli.
+        </p>
+        <p>
+          <strong>"Doğal" seçenekler aynı işi görür mü?</strong> Bazı kadınlarda bitkisel destekler veya yaşam tarzı
+          değişiklikleri hafif-orta düzeyde belirtileri yumuşatıyor olabilir. Ancak etki tutarsız ve preparatların
+          standardı değişken. Ayrıca "doğal" etiketi taşıyan bazı ürünler, kullandığınız başka ilaçlarla — tamoksifen,
+          kan sulandırıcılar gibi — ciddi şekilde etkileşebiliyor. Bu yüzden "aldığım her takviye aslında bir ilaç" diye
+          düşünüp doktorunuzla paylaşmak güvenli bir tutum.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Okudukça şunu anladım: hormon tedavisi kararı, bir sınav değil, bir konuşma. Doktorunuzla yapacağınız konuşmanın
+          içine kendi belirtilerinizi, kendi değerlerinizi ve kendi risk toleransınızı taşıyorsunuz. Hiçbir dernek,
+          hiçbir makale — bu yazı dahil — sizin yerinize karar veremez. Ama bu konuşmaya iyi hazırlanmak, kararı
+          kolaylaştırır.
+        </p>
+        <p>
+          Hazırlık için önerim sade: birkaç gün belirtilerinizi gözlemleyin, en çok hangi anlarda zorlandığınızı not
+          edin, ailede meme kanseri ya da damar tıkanıklığı öyküsü varsa hatırlayın, kullandığınız tüm ilaç ve takviyeleri
+          yazın. Bu notlarla muayeneye gitmek, hem sizin hem doktorunuzun işini kolaylaştırır. Gerisi — hangi rejim,
+          hangi doz, hangi süre — kişisel ve zaman içinde ayarlanabilir bir plan. Panik yapacak bir şey yok; sadece
+          sakin bir şekilde bakılması gereken bir soru.
+        </p>
+      </ArticleProsePanel>
+
+      <section
+        class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
+      >
+        <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="/hormonal-gecis/perimenopoz/perimenopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">
+              Hormonal Geçiş / Perimenopoz Nedir?
+            </a>
+          </li>
+          <li>
+            <a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">
+              Zihin & Denge / Uyku Bozukluğu ve Menopoz
+            </a>
+          </li>
+          <li>
+            <a href="/beden-yakinlik/vajinal-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">
+              Beden & Yakınlık / Vajinal Sağlık ve Menopoz
+            </a>
+          </li>
+          <li>
+            <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">
+              Zamansız Yaşam / 40 Sonrası Kemik Sağlığı
+            </a>
+          </li>
+          <li><a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">Kütüphane / Menopoz ve hormon içerikleri</a></li>
+        </ul>
+      </section>
+
+      <section
+        class="rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+        <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Doç. Dr. Senai Aksoy</p>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Hormon tedavisi kararı, yaş, belirti şiddeti, kişisel ve ailesel risk profili ile birlikte şekillenen bir süreçtir.
+          Onaylı rejimlerle kanıt temeli sağlam; düzenleyici dışı formülasyonların güvenlik verisi ise yetersizdir. Kişiye
+          uygun tedavi için hekiminizle detaylı bir değerlendirme en sağlıklı yoldur; rejim seçimi ve süresi yıllık olarak
+          birlikte yeniden gözden geçirilebilir.
+        </p>
+      </section>
+
+      <section class="rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

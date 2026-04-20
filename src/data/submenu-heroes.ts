@@ -31,6 +31,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Profesyonel ortamda gülümseyen orta yaş kadın portresi',
   },
+  '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
+    src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1800&h=1000',
+    alt: 'Sağlık profesyoneli ile sakin görüşme ortamı; bilgilendirilmiş karar ve birlikte değerlendirme teması',
+  },
   '/hormonal-gecis/40-sonrasi': {
     src: 'https://images.unsplash.com/photo-1473968510529-3a5b0f64e9ab?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Doğada yürüyüş; uzun vadeli sağlık ve hareket teması',
