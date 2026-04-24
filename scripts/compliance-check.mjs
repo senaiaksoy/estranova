@@ -32,7 +32,7 @@ const extraAuditedFiles = [
 
 const articleRouteFile = "src/pages/article/[slug].astro";
 const articleTransparencyComponentFile = "src/components/article/ArticleTransparencyPanel.astro";
-const sponsorMentionPattern = /\b(sponsor|sponsored|partner|partnerli|partnerlik)\b/u;
+const sponsorMentionPattern = /\b(sponsor|sponsored|sponsorluk|reklam\s+ortagi|tanitim\s+ortagi)\b/u;
 const sponsorLabelPattern = /\bsponsorlu\s+icerik\b/u;
 
 let hasError = false;
