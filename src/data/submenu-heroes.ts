@@ -64,8 +64,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Egzersiz minderinde esneme; hareket ve kas sağlığı teması',
   },
   '/zamansiz-yasam/non-invaziv': {
-    src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Sakin spa ve bakım ortamı; invaziv olmayan uygulamalar teması',
+    src: '/images/library/editorial/zy-non-invaziv.webp',
+    alt: 'Ahşap masada keten örtü üzerinde cam sürahi, açık pembe çiçek, seramik kasede pürüzsüz taş ve katlı pamuklu havlu; bordo arka plan — pürüzsüzlük, yenilenme ve zaman metaforu',
   },
   '/beden-yakinlik': {
     src: '/images/heroes/beden-yakinlik.webp',
