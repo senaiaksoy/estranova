@@ -88,8 +88,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Direnç bandıyla egzersiz yapan kadın; kemik gücü ve hareket teması',
   },
   '/zihin-denge': {
-    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Göl kenarında sakin manzara; zihinsel dinginlik teması',
+    src: '/images/heroes/zihin-denge.webp',
+    alt: 'Zihinsel dinginlik ve öz-düzenleme teması — sakin editöryal ortam',
   },
   '/zihin-denge/uyku-bozuklugu-menopoz': {
     src: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&q=80&w=1800&h=1000',
