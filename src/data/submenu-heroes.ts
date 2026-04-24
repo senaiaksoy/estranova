@@ -43,6 +43,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Sağlık profesyoneli ile sakin görüşme ortamı; koruyucu sağlık teması',
   },
+  '/zamansiz-yasam': {
+    src: '/images/heroes/zamansiz-yasam.webp',
+    alt: 'Ege kıyısında altın saat ışığında kitap okuyan olgun kadın; zamansız yaşam ve dinginlik teması',
+  },
   '/zamansiz-yasam/vitaminler': {
     src: 'https://images.unsplash.com/photo-1490645935967-10de6a1baa6a?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Renkli taze sebzeler; beslenme ve vitamin kaynakları teması',
