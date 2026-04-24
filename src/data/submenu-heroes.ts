@@ -72,8 +72,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Pencere ışığında kendi omzuna nazikçe dokunan 40+ kadın; bedenle bağlantı ve öz-şefkat teması',
   },
   '/beden-yakinlik/menopozda-cilt-degisimleri': {
-    src: 'https://images.unsplash.com/photo-1556228578-8c409e429251?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Cilt bakım ürünleri ve doğal ışık; cilt sağlığı teması',
+    src: '/images/library/editorial/by-cilt-degisimleri.webp',
+    alt: 'Pencere ışığında kendi cildiyle tanışık duran 52 yaş kadın; doğal cilt dokusu, ince çizgiler, retuşsuz editöryal yaklaşım',
   },
   '/beden-yakinlik/vajinal-saglik-menopoz': {
     src: 'https://images.unsplash.com/photo-1490750969638-12578b25a3da?auto=format&fit=crop&q=80&w=1800&h=1000',
