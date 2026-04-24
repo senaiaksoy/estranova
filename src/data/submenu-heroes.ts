@@ -52,8 +52,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Ahşap tahta üzerinde sabah ışığında yumurtalar, portakal dilimleri, çiğ badem ve ceviz, etiketsiz zeytinyağı; vitamin kaynakları gerçek besinlerle temalandırılmış',
   },
   '/zamansiz-yasam/deneysel': {
-    src: 'https://images.unsplash.com/photo-1532094349884-543bc4b61249?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Laboratuvar ortamında bilimsel araştırma; deneysel yaklaşımlar teması',
+    src: '/images/library/editorial/zy-deneysel.webp',
+    alt: 'Akşam çalışma odasında açık ciltli kitap üzerine eğilmiş 50 yaş kadın, pirinç masa lambası sıcak ışık, ciltli kitap rafları bokeh; deneysel yaklaşımlara sakin bilimsel merakla yaklaşma teması',
   },
   '/zamansiz-yasam/beslenme-yaslanma': {
     src: 'https://images.unsplash.com/photo-1490818356740-c47b7c5f4c1b?auto=format&fit=crop&q=80&w=1800&h=1000',
