@@ -185,7 +185,7 @@ export const staticArticles: StaticArticleEntry[] = [
     writerSlug: 'berna-aksoy',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
-    keywords: ['perimenopoz', 'geçiş dönemi', 'hormon dalgalanması', 'düzensiz döngü', 'menopoz', 'östrojen'],
+    keywords: ['perimenopoz', 'geçiş dönemi', 'hormon dalgalanması', 'düzensiz adet', 'menopoz', 'östrojen'],
   },
 ];
 

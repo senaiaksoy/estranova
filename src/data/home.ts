@@ -37,7 +37,7 @@ export const homepageStages = [
   },
   {
     title: "Menopoz",
-    desc: "Adet döngüsünün 12 ay boyunca kesintisiz olarak durduğu biyolojik nokta.",
+    desc: "Adetlerin 12 ay boyunca kesintisiz olarak durduğu biyolojik nokta.",
     color: "bg-secondary/5",
   },
   {

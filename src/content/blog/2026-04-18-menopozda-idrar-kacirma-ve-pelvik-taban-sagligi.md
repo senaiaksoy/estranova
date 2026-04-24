@@ -20,7 +20,7 @@ Burada yargısız, sade bir dille konuşmak istiyoruz. Vücudunda ne oluyor, ned
 
 Pelvik taban, leğen kemiğinin alt kısmını destekleyen bir kas ve bağ dokusu ağı. Mesaneyi, rahim ve bağırsağı yerinde tutan bu yapı, idrar kontrolünde de kritik bir rol oynuyor.
 
-Menopoz geçişi, vücudundaki östrojen düzeyinin kalıcı olarak azaldığı bir dönem. Bu değişim yalnızca adet döngüsünü değil, pelvik taban dokularını da etkiliyor. Östrojen, bu bölgedeki kasların ve bağ dokularının sağlıklı kalmasına katkıda bulunan bir hormon. Azaldığında, bu dokularda değişimler başlayabiliyor.
+Menopoz geçişi, vücudundaki östrojen düzeyinin kalıcı olarak azaldığı bir dönem. Bu değişim yalnızca adetlerini değil, pelvik taban dokularını da etkiliyor. Östrojen, bu bölgedeki kasların ve bağ dokularının sağlıklı kalmasına katkıda bulunan bir hormon. Azaldığında, bu dokularda değişimler başlayabiliyor.
 
 Sonuç olarak bazı kadınlar bu dönemde idrar kontrolünde farklılıklar fark ediyor. Bu, yaşlılığın kaçınılmaz bir parçası değil — hormonal ve yapısal bir değişimin yansıması.
 

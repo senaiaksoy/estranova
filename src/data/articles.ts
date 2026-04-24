@@ -295,20 +295,20 @@ MS tedavisi, hastalığın ilerlemesini yavaşlatmak, belirtileri yönetmek ve y
   },
   {
     slug: "perimenopozda-dongu-duzensizlikleri",
-    title: "Perimenopozda Döngü Değişiklikleri: Ne Zaman Beklenir, Ne Zaman Değerlendirilir?",
+    title: "Perimenopozda Adet Değişiklikleri: Ne Zaman Beklenir, Ne Zaman Değerlendirilir?",
     excerpt:
-      "Perimenopozda adet döngüsünde kısalma, uzama veya akış değişiklikleri görülebilir. Düzenli izlem, olağan değişimlerle klinik değerlendirme gerektiren durumları ayırt etmeyi kolaylaştırır.",
+      "Perimenopozda adet düzeninde kısalma, uzama veya akış değişiklikleri görülebilir. Düzenli izlem, olağan değişimlerle klinik değerlendirme gerektiren durumları ayırt etmeyi kolaylaştırır.",
     content: `
-<h2 class="font-serif text-3xl text-charcoal mb-4">Döngüde hangi değişiklikler sık görülür?</h2>
+<h2 class="font-serif text-3xl text-charcoal mb-4">Adette hangi değişiklikler sık görülür?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-Perimenopoz döneminde döngü aralığı birkaç ay boyunca kısalabilir veya uzayabilir.
+Perimenopoz döneminde adet aralığı birkaç ay boyunca kısalabilir veya uzayabilir.
 Kanama miktarında artış ya da azalma, bazı aylarda lekelenme, bazı aylarda ise gecikme görülebilir.
 Bu değişiklikler tek başına "olağandışı" anlamına gelmez; örüntünün zamana yayılarak değerlendirilmesi daha doğru bir yaklaşım sunar.
 </p>
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Hangi durumlarda tıbbi değerlendirme düşünülmeli?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-Uzun süren yoğun kanama, döngüler arası belirgin sıklaşma, ilişkili halsizlik veya yaşam kalitesini bozan ağrı gibi bulgular klinik görüşme gerektirebilir.
+Uzun süren yoğun kanama, adetler arası belirgin sıklaşma, ilişkili halsizlik veya yaşam kalitesini bozan ağrı gibi bulgular klinik görüşme gerektirebilir.
 Amaç alarm üretmek değil, benzer şikayetlerin farklı nedenlere bağlı olabileceğini hatırlamaktır.
 Bu nedenle "normal mi değil mi?" sorusu yerine "örüntü nasıl değişiyor?" sorusu daha işlevseldir.
 </p>
@@ -323,13 +323,13 @@ Bu bilgiler hekim görüşmesinde daha net bir değerlendirme yapılmasına katk
 <div class="my-12 rounded-[28px] border-l-4 border-secondary bg-surface-container p-8">
   <p class="text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Klinik Not</p>
   <p class="text-charcoal/75 leading-relaxed">
-    Döngü değişiklikleri bireysel olarak farklılık gösterebilir. Bu içerik bilgilendirme amaçlıdır; tanı veya tedavi önerisi yerine geçmez.
+    Adet değişiklikleri bireysel olarak farklılık gösterebilir. Bu içerik bilgilendirme amaçlıdır; tanı veya tedavi önerisi yerine geçmez.
   </p>
 </div>
 
 <h2 class="font-serif text-3xl text-charcoal mb-4">Hekim görüşmesine nasıl hazırlanılır?</h2>
 <p class="text-charcoal/75 leading-relaxed mb-8">
-Son 3-6 ayın döngü notlarını, varsa kullanılan ilaçları ve eşlik eden belirtileri birlikte götürmek görüşmeyi kolaylaştırır.
+Son 3-6 ayın adet notlarını, varsa kullanılan ilaçları ve eşlik eden belirtileri birlikte götürmek görüşmeyi kolaylaştırır.
 Böylece değerlendirme, tek bir günün hissi üzerinden değil zaman içindeki değişim üzerinden yapılabilir.
 </p>
 `,
@@ -344,7 +344,7 @@ Böylece değerlendirme, tek bir günün hissi üzerinden değil zaman içindeki
     date: "2026-04-14",
     category: "perimenopoz",
     readTime: "7 dk",
-    tags: ["perimenopoz", "adet döngüsü", "semptom izlemi"],
+    tags: ["perimenopoz", "adet düzeni", "semptom izlemi"],
   },
   {
     slug: "menopozda-kemik-sagligi",
