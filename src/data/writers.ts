@@ -106,6 +106,8 @@ export const writers: Writer[] = [
 
 // Editör her zaman ilk: Berna; diğerleri: displayName alfabetik
 export const editors = writers.filter((w) => w.isEditor);
+// Yazar Kadromuz listesi — editörler dahil tüm yazarlar alfabetik
+// (editörler hem "Editörler" hem "Yazar Kadromuz" bölümünde görünür)
 export const guestWriters = writers
-  .filter((w) => !w.isEditor)
+  .slice()
   .sort((a, b) => a.displayName.localeCompare(b.displayName, 'tr'));
