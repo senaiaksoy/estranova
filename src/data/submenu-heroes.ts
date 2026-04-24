@@ -92,20 +92,20 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Zihinsel dinginlik ve öz-düzenleme teması — sakin editöryal ortam',
   },
   '/zihin-denge/uyku-bozuklugu-menopoz': {
-    src: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Yatak ve yastıklar; uyku ve dinlenme teması',
+    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
+    alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku ve dinlenme teması',
   },
   '/zihin-denge/ruh-hali-degisimleri-menopoz': {
-    src: 'https://images.unsplash.com/photo-1474418397603-7d97b69d2efe?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Pencere önünde düşünceli oturan kadın; ruh hali ve iç gözlem teması',
+    src: '/images/library/editorial/morning-window-reader-ai.webp',
+    alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve iç gözlem teması',
   },
   '/zihin-denge/bellek-odaklanma-menopoz': {
-    src: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Kitaplık ve okuma; bellek ve odaklanma teması',
+    src: '/images/library/editorial/zd-bellek-odaklanma.webp',
+    alt: 'Çalışma masasında kitap okuyan kadın; kitaplık ve sabah ışığı — bellek ve odaklanma teması',
   },
   '/zihin-denge/stres-yonetimi-menopoz': {
-    src: 'https://images.unsplash.com/photo-1441974231531-c6227bb76e94?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Orman yolu ve güneş ışığı; stres azaltma ve doğa teması',
+    src: '/images/library/editorial/zd-stres-yonetimi.webp',
+    alt: 'Bahçede taş oturağında sakin bir an, gözleri kapalı kadın; stres azaltma ve dinginlik teması',
   },
   '/bilimsel-pencere': {
     src: 'https://images.unsplash.com/photo-1532187863488-abdaa0d1c8d2?auto=format&fit=crop&q=80&w=1800&h=1000',
