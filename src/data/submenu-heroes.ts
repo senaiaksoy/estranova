@@ -76,8 +76,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Pencere ışığında kendi cildiyle tanışık duran 52 yaş kadın; doğal cilt dokusu, ince çizgiler, retuşsuz editöryal yaklaşım',
   },
   '/beden-yakinlik/vajinal-saglik-menopoz': {
-    src: 'https://images.unsplash.com/photo-1490750969638-12578b25a3da?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Yumuşak ışıkta çiçekler; kadın sağlığı ve konfor teması',
+    src: '/images/library/editorial/by-vajinal-saglik.webp',
+    alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su, katlı pamuklu bez ve açık bir defter; günlük özenli bakım teması',
   },
   '/beden-yakinlik/yakinlik-agrisi-menopoz': {
     src: '/images/library/editorial/introspective-burgundy-accent.webp',
