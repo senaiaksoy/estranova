@@ -48,8 +48,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Ege kıyısında altın saat ışığında kitap okuyan olgun kadın; zamansız yaşam ve dinginlik teması',
   },
   '/zamansiz-yasam/vitaminler': {
-    src: 'https://images.unsplash.com/photo-1490645935967-10de6a1baa6a?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Renkli taze sebzeler; beslenme ve vitamin kaynakları teması',
+    src: '/images/library/editorial/zy-vitaminler.webp',
+    alt: 'Ahşap tahta üzerinde sabah ışığında yumurtalar, portakal dilimleri, çiğ badem ve ceviz, etiketsiz zeytinyağı; vitamin kaynakları gerçek besinlerle temalandırılmış',
   },
   '/zamansiz-yasam/deneysel': {
     src: 'https://images.unsplash.com/photo-1532094349884-543bc4b61249?auto=format&fit=crop&q=80&w=1800&h=1000',
