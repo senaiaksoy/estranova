@@ -68,8 +68,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Sakin spa ve bakım ortamı; invaziv olmayan uygulamalar teması',
   },
   '/beden-yakinlik': {
-    src: 'https://images.unsplash.com/photo-1516589170181-79d155b0cf3e?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Birbirine dokunan eller; yakınlık ve güven teması',
+    src: '/images/heroes/beden-yakinlik.webp',
+    alt: 'Pencere ışığında kendi omzuna nazikçe dokunan 40+ kadın; bedenle bağlantı ve öz-şefkat teması',
   },
   '/beden-yakinlik/menopozda-cilt-degisimleri': {
     src: 'https://images.unsplash.com/photo-1556228578-8c409e429251?auto=format&fit=crop&q=80&w=1800&h=1000',
