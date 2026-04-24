@@ -80,8 +80,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Yumuşak ışıkta çiçekler; kadın sağlığı ve konfor teması',
   },
   '/beden-yakinlik/yakinlik-agrisi-menopoz': {
-    src: 'https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Çift yan yana oturuyor; iletişim ve yakınlık teması',
+    src: '/images/library/editorial/introspective-burgundy-accent.webp',
+    alt: 'Cream keten gömlekli 40+ kadın, eli boğazında nazik öz-tutuş; bordo vazo arka planda; güvende hissetme ve bedenle iletişim teması',
   },
   '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban': {
     src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
