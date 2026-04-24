@@ -108,16 +108,16 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Bahçede taş oturağında sakin bir an, gözleri kapalı kadın; stres azaltma ve dinginlik teması',
   },
   '/bilimsel-pencere': {
-    src: 'https://images.unsplash.com/photo-1532187863488-abdaa0d1c8d2?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Laboratuvar camının arkasında yumuşak odak; bilimsel inceleme teması',
+    src: '/images/heroes/bilimsel-pencere.webp',
+    alt: 'Sıcak akademik çalışma odasında bilimsel kitap üzerine eğilmiş kadın; bilimsel inceleme teması',
   },
   '/bilimsel-pencere/estrogen-biyolojisi-saglik': {
-    src: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'DNA çift sarmalı soyut görsel; hormon biyolojisi teması',
+    src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
+    alt: 'Mermer masada botanik doğa öğeleri ve pencere ışığında düşünceli kadın; hormon biyolojisinin doğal çerçevesi',
   },
   '/bilimsel-pencere/nad-plus-hucresel-yaslanma': {
-    src: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Laboratuvar ortamında mikroskop; hücresel yaşlanma ve araştırma teması',
+    src: '/images/library/editorial/bp-nad-plus.webp',
+    alt: 'Altın saat pencere ışığında iç mekan yeşilliği önünde kadın portresi; hücresel yaşlanma ve uzun vadeli sağlık teması',
   },
 };
 
