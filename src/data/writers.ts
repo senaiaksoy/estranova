@@ -64,16 +64,29 @@ export const writers: Writer[] = [
     isEditor: false,
   },
   {
+    slug: 'ozlem-denizmen',
+    displayName: 'Özlem Denizmen',
+    role: 'Finansal Sağlık & Yaşam Yazarı / Konuk Katkı',
+    ageBand: '55',
+    publicBio:
+      "Cornell Üniversitesi Endüstri İşletmeciliği mezunu; MIT Sloan MBA sahibi; Stanford ve Harvard Business School yönetim programlarını tamamladı. Merrill Lynch ve Garanti Yatırım'ın ardından Doğuş Grubu'nda Bütçe Planlama ve Strateji Bölüm Başkanlığı yaptı. 2010'da Türkiye'nin ilk finansal okuryazarlık hareketi Para Durumu'nu ve FODER'i kurdu; 2011'de Dünya Ekonomik Forumu tarafından Genç Küresel Liderler listesine seçildi. Kadın sağlığı ve 40 sonrası dayanıklılık konularına finansal okuryazarlık perspektifi katıyor.",
+    signaturePhrase:
+      'Finansal dayanıklılığı kadın sağlığı diline taşıyan, 40 sonrası hayatı meraklı bir akran bakışıyla okuyan bir ses.',
+    portrait: '/images/writers/ozlem-denizmen.webp',
+    focusAreas: ['Finansal Sağlık', '40 Sonrası Dayanıklılık', 'Profesyonel Kadın'],
+    isEditor: false,
+  },
+  {
     slug: 'rima-erdemir',
     displayName: 'Rima Erdemir',
-    role: 'Araştırma Yazarı / Konuk Katkı',
+    role: 'Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı',
     ageBand: '55-56',
     publicBio:
-      "İstanbul Üniversitesi İşletme Fakültesi mezunu. Medya kariyerini Milliyet'te reklam grup yöneticiliğinden başlatıp MedyaNet Genel Müdürlüğü ve Demirören Medya Holding Reklam Grubu Başkanlığı ile sürdürdü. IAB Türkiye ve MMA Türkiye yönetim kurullarında görev aldı; halen Sparkle Medya'da ortak. Teknoloji ve yeniliği bilimsel bir okurun titizliğiyle takip eden araştırmacı yazar.",
+      "İstanbul Üniversitesi İşletme Fakültesi mezunu. Medya kariyerini Milliyet'te reklam grup yöneticiliğinden başlatıp MedyaNet Genel Müdürlüğü ve Demirören Medya Holding Reklam Grubu Başkanlığı ile sürdürdü. IAB Türkiye ve MMA Türkiye yönetim kurullarında görev aldı; halen Sparkle Medya'da ortak. Teknoloji ve yeniliği bilimsel bir okurun titizliğiyle takip eder; Estranova'da aynı zamanda editöryal süreç danışmanlığı yaparak kaynak doğrulama ve yayın akışına katkı verir.",
     signaturePhrase:
-      'Bilimi ve teknolojiyi meraklı bir araştırmacı titizliğiyle takip eden, güncel gündemi akran tonunda süzen bir ses.',
+      'Bilimi ve teknolojiyi meraklı bir araştırmacı titizliğiyle takip eden, editöryal süreç akışına da göz kulak olan bir ses.',
     portrait: '/images/writers/rima-erdemir.webp',
-    focusAreas: ['Bilimsel Pencere', 'Teknoloji & Sağlık', '40 Sonrası'],
+    focusAreas: ['Bilimsel Pencere', 'Teknoloji & Sağlık', 'Editöryal Süreç'],
     isEditor: false,
   },
   {

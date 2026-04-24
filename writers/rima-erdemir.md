@@ -1,7 +1,7 @@
 # Yazar Profili — Rima Erdemir
 
-> **Rol:** Konuk / sürekli katkı yazarı — teknoloji, yenilik ve araştırmacı-akran perspektifi
-> **Statü:** Medya dünyasının deneyimli ismi; yeniliği ve bilimsel gelişmeleri titizlikle takip eden, 50+ kadın bakışıyla "bir adım önde" okuma yapan yazar.
+> **Rol:** Konuk / sürekli katkı yazarı + **Editöryal Süreç Danışmanı** — teknoloji, yenilik ve araştırmacı-akran perspektifi; kaynak doğrulama ve yayın akışı danışmanlığı
+> **Statü:** Medya dünyasının deneyimli ismi; yeniliği ve bilimsel gelişmeleri titizlikle takip eden, 50+ kadın bakışıyla "bir adım önde" okuma yapan yazar. Aynı zamanda Estranova'nın editöryal süreç danışmanı.
 > **Gizlilik:** Bölüm 5b ve 5c yayınlanmaz, writer agent prompt'una enjekte edilir.
 
 ---
@@ -12,7 +12,7 @@ Rima Erdemir, medya ve dijital teknoloji dünyasının İstanbul merkezli deneyi
 
 ## 2a) Yayınlanan Biyografi (yayin-kurulu.astro için kısa versiyon)
 
-İstanbul Üniversitesi İşletme Fakültesi mezunu. Medya kariyerini Milliyet gazetesinde reklam grup yöneticiliğinden başlatıp Türkiye'nin lider dijital reklam platformu MedyaNet'in uzun dönem Genel Müdürlüğü ve Demirören Medya Holding Reklam Grubu Başkanlığı ile sürdürdü. IAB Türkiye ve MMA Türkiye yönetim kurullarında görev aldı; halen Sparkle Medya'da ortak. Teknoloji ve yeniliği bilimsel bir okurun titizliğiyle takip eden araştırmacı yazar olarak, kadın sağlığı gündemindeki gelişmeleri Estranova okurlarıyla paylaşıyor.
+İstanbul Üniversitesi İşletme Fakültesi mezunu. Medya kariyerini Milliyet gazetesinde reklam grup yöneticiliğinden başlatıp Türkiye'nin lider dijital reklam platformu MedyaNet'in uzun dönem Genel Müdürlüğü ve Demirören Medya Holding Reklam Grubu Başkanlığı ile sürdürdü. IAB Türkiye ve MMA Türkiye yönetim kurullarında görev aldı; halen Sparkle Medya'da ortak. Teknoloji ve yeniliği bilimsel bir okurun titizliğiyle takip eden araştırmacı yazar olarak, kadın sağlığı gündemindeki gelişmeleri Estranova okurlarıyla paylaşıyor; aynı zamanda editöryal süreç danışmanı olarak kaynak doğrulama ve yayın akışına katkı veriyor.
 
 ## 2b) Geçmişi ve Birikimi (editöryal referans)
 
@@ -160,7 +160,7 @@ Rima Erdemir, medya ve dijital teknoloji dünyasının İstanbul merkezli deneyi
 ```yaml
 slug: rima-erdemir
 display_name: "Rima Erdemir"
-role: "Araştırma Yazarı / Konuk Katkı — Teknoloji ve Yenilik Perspektifi"
+role: "Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı — Teknoloji ve Yenilik Perspektifi"
 public_bio: >
   İstanbul Üniversitesi İşletme Fakültesi mezunu. Medya kariyerini Milliyet
   gazetesinde reklam grup yöneticiliğinden başlatıp Türkiye'nin lider dijital
