@@ -51,6 +51,19 @@ export const writers: Writer[] = [
     isEditor: false,
   },
   {
+    slug: 'duygu-karaosmanoglu',
+    displayName: 'Dt. Duygu Karaosmanoğlu',
+    role: 'Yaşam & Estetik Yazarı / Konuk Katkı',
+    ageBand: '55',
+    publicBio:
+      "Diş hekimliği eğitimi almış, 55 yaşında bir anne ve yazar. Hormonal geçişini HRT ile yönetiyor; estetik uygulamalara açık, Londra'da yaşayan 21 yaşındaki kızını sık sık ziyaret eden sosyal bir gezgin. Kendi bedeninde yaşadığı deneyimi akran tonuyla paylaşıyor — uzman sesi değil, aynı yoldan geçen bir arkadaş perspektifi.",
+    signaturePhrase:
+      'HRT ile geçişini canlı tutan, estetiği deneyerek öğrenen, Londra-İstanbul arasında gezinen neşeli bir akran.',
+    portrait: '/images/writers/duygu-karaosmanoglu.webp',
+    focusAreas: ['HRT Deneyimi', 'Estetik & Bakım', 'Seyahat & Sosyal Yaşam'],
+    isEditor: false,
+  },
+  {
     slug: 'rima-erdemir',
     displayName: 'Rima Erdemir',
     role: 'Araştırma Yazarı / Konuk Katkı',
