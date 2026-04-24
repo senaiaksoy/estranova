@@ -84,8 +84,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Cream keten gömlekli 40+ kadın, eli boğazında nazik öz-tutuş; bordo vazo arka planda; güvende hissetme ve bedenle iletişim teması',
   },
   '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban': {
-    src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Yoga matı üzerinde sakin nefes alan kadın; pelvik taban farkındalığı ve beden bağı teması',
+    src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
+    alt: 'Pencere ışığında ayakta duran 46 yaş kadın, eli karın-alt bölgesinde nazik farkındalık jesti; pelvik taban farkındalığı teması',
   },
   '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz': {
     src: 'https://images.unsplash.com/photo-1518310383802-640c2de933d2?auto=format&fit=crop&q=80&w=1800&h=1000',
