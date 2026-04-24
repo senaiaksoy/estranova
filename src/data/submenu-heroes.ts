@@ -20,24 +20,24 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Hormonal geçiş döneminde sakin ve güvenilir bilgi teması; editöryal iç mekânda orta yaş kadın',
   },
   '/hormonal-gecis/perimenopoz': {
-    src: 'https://images.unsplash.com/photo-1571019613452-1cb5f31b2fbc?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Hafif egzersiz ve denge çalışması yapan kadın; geçiş döneminde beden farkındalığı teması',
+    src: '/images/library/editorial/journey-perimenopoz.webp',
+    alt: 'Sabah ışığında not defterine düşüncelerini yazan 40+ kadın; erken farkındalık ve kendini dinleme teması',
   },
   '/hormonal-gecis/menopoza-hazirlik': {
-    src: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Düzenli yaşam ve planlama; günlük rutin ve öz bakım teması',
+    src: '/images/library/editorial/journey-menopoza-hazirlik.webp',
+    alt: 'Kitaplık önünde elinde kitapla sakin duruşlu kadın; planlama ve hazırlık dönemi teması',
   },
   '/hormonal-gecis/menopoz': {
-    src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Profesyonel ortamda gülümseyen orta yaş kadın portresi',
+    src: '/images/library/editorial/journey-menopoz.webp',
+    alt: 'Doğal pencere ışığında gri saçlı kadın portresi; sakin ve kendinden emin bakış',
   },
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
     src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1800&h=1000',
     alt: 'Sağlık profesyoneli ile sakin görüşme ortamı; bilgilendirilmiş karar ve birlikte değerlendirme teması',
   },
   '/hormonal-gecis/40-sonrasi': {
-    src: 'https://images.unsplash.com/photo-1473968510529-3a5b0f64e9ab?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Doğada yürüyüş; uzun vadeli sağlık ve hareket teması',
+    src: '/images/library/editorial/journey-40-sonrasi.webp',
+    alt: 'Sonbahar ormanında sakin yürüyen kadın; uzun vadeli sağlık ve hareket teması',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri': {
     src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1800&h=1000',
