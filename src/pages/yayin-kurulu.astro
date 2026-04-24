@@ -75,9 +75,10 @@ const consultants = [
     detail: 'Okuyucu dili, içerik tonu ve etik iletişim standartları konusunda rehberlik sağlar.',
   },
   {
-    name: '[Danışman Adı]',
-    title: 'Editoryal Süreç Danışmanı',
-    detail: 'Kaynak doğrulama, güncelleme planı ve yayın süreçlerinin sürekliliğine katkı verir.',
+    name: 'Rima Erdemir',
+    title: 'Editöryal Süreç Danışmanı',
+    detail:
+      'Medya ve dijital yayın yöneticiliği deneyimiyle kaynak doğrulama, güncelleme planı ve yayın süreçlerinin sürekliliğine katkı verir.',
   },
   {
     name: 'Anıl Yalmaz',
@@ -151,6 +152,16 @@ const consultants = [
                   id={w.slug}
                   class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5 shadow-sm"
                 >
+                  {w.portrait && (
+                    <img
+                      src={w.portrait}
+                      alt={w.displayName}
+                      class="mb-4 h-28 w-28 rounded-xl border border-[#6B2D3E]/15 object-cover shadow-sm"
+                      loading="lazy"
+                      width="112"
+                      height="112"
+                    />
+                  )}
                   <a
                     href={`/yayin-kurulu#${w.slug}`}
                     class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
@@ -190,6 +201,16 @@ const consultants = [
             {
               guestWriters.map((w) => (
                 <article id={w.slug} class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5 shadow-sm">
+                  {w.portrait && (
+                    <img
+                      src={w.portrait}
+                      alt={w.displayName}
+                      class="mb-4 h-28 w-28 rounded-xl border border-[#6B2D3E]/15 object-cover shadow-sm"
+                      loading="lazy"
+                      width="112"
+                      height="112"
+                    />
+                  )}
                   <a
                     href={`/yayin-kurulu#${w.slug}`}
                     class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
