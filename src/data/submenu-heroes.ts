@@ -16,8 +16,8 @@ export const homePageHero: SubmenuHeroImage = {
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/hormonal-gecis': {
-    src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Hormonal geçiş döneminde sakin ve güvenilir bilgi teması; profesyonel ortamda gülümseyen orta yaş kadın portresi',
+    src: '/images/heroes/hormonal-gecis.webp',
+    alt: 'Hormonal geçiş döneminde sakin ve güvenilir bilgi teması; editöryal iç mekânda orta yaş kadın',
   },
   '/hormonal-gecis/perimenopoz': {
     src: 'https://images.unsplash.com/photo-1571019613452-1cb5f31b2fbc?auto=format&fit=crop&q=80&w=1800&h=1000',
