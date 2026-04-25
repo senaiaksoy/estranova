@@ -12,7 +12,7 @@ interface SocialImageOptions {
 }
 
 const DEFAULT_SITE_URL = 'https://estranova.com';
-const DEFAULT_SOCIAL_IMAGE_PATH = '/favicon.svg';
+const DEFAULT_SOCIAL_IMAGE_PATH = '/images/hero/home-hero.webp';
 
 function normalizeUrl(value: string): string {
   const url = new URL(value);
