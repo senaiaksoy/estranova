@@ -1,0 +1,296 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const tocEntries = [
+  { id: 'neden-kayit', label: 'Neden Bu Evrede Kayıt?' },
+  { id: 'vital-gostergeler', label: 'Vital Göstergeler' },
+  { id: 'lab-markerlari', label: 'Lab Markerları' },
+  { id: 'semptom-gunlugu', label: 'Semptom Günlüğü' },
+  { id: 'aile-oykusu', label: 'Aile Öyküsü' },
+  { id: 'tarama-cercevesi', label: 'Tarama Çerçevesi' },
+  { id: 'hekimle-paylasim', label: 'Hekimle Paylaşım' },
+  { id: 'baslangic-30-gun', label: 'İlk 30 Gün' },
+  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?';
+const articleDescription =
+  'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo ve semptom takibinin neden önemli olduğunu, hangi göstergeleri ne sıklıkta izleyebileceğinizi ele alan sade rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '25 Nisan 2026',
+  pathname: '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: [
+    'menopoza hazırlık',
+    'koruyucu sağlık',
+    'sağlık kayıtları',
+    'semptom günlüğü',
+    'tarama testleri',
+    'vital göstergeler',
+    'aile öyküsü',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="25 Nisan 2026" readingMinutes={6} />
+
+      <header class="mb-10">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Hormonal Geçiş · Menopoza Hazırlık</p>
+        <h1 class="font-serif text-4xl leading-tight md:text-6xl">{articleTitle}</h1>
+      </header>
+
+      <section
+        class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Menopoza hazırlık dönemi, vücudunda büyük değişimler kapıda olduğu hâlde göstergelerin hâlâ ölçülebilir
+          olduğu bir aralık. Bu evrede tansiyon, kilo, lipid profili gibi temel ölçümleri düzenli kaydetmek; ileride
+          neyin “yeni” neyin “kişisel normal” olduğunu ayırt etmeyi kolaylaştırır. Amaç hastalık aramak değil,
+          kişisel bir referans hattı kurmaktır.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="neden-kayit">Neden Bu Evrede Kayıt?</h2>
+        <p>
+          Pek çoğumuz için sağlık kontrolü demek; bir şikâyet olunca hekime gitmek demek. Oysa menopoza hazırlık dönemi
+          farklı bir mantık öneriyor: belirti yokken bile küçük bir kişisel veri seti kurmak.
+        </p>
+        <p>
+          Bu evrede vücudunda olan değişimlerin bir kısmı yıllara yayılı; bazıları ise kısa sürede beliriyor. Eğer
+          “normal sınırın” ne olduğuna dair kendi göstergelerin yoksa, sonradan gelen bir bulguyu yorumlamak zorlaşıyor.
+          Tansiyon hep böyle miydi, kolesterol son iki yılda mı yükseldi, kilo nereden başlayıp nereye geldi —
+          bu soruların cevabı, geriye dönük baktığında elinde kayıtlar varsa daha sağlam oluyor.
+        </p>
+        <p>
+          Bu nedenle koruyucu sağlık kayıtlarını “hastalık dosyası” olarak değil, kişisel bir referans hattı olarak
+          düşünmek yardımcı oluyor. Hekimle yapılan değerlendirmenin niteliği, bu hattın olup olmamasıyla doğrudan
+          ilişkili.
+        </p>
+
+        <h2 id="vital-gostergeler">Hangi Vital Göstergeleri İzlemek?</h2>
+        <p>
+          Bu başlıkta evde kolayca takip edilebilecek temel göstergeleri konuşuyoruz; klinik olmadan, sade ölçümlerle.
+        </p>
+        <p>
+          Düzenli tansiyon ölçümü, hazırlık döneminin en değerli alışkanlıklarından biridir. Östrojendeki değişimler
+          kardiyovasküler riski etkileyen bir tablonun parçası olabilir <Evidence level={4} />; bu nedenle yıllık
+          ortalamaların kaydedilmesi, ileride bir trend okumayı kolaylaştırır. Aynı şekilde kilo, bel çevresi ve
+          istirahat nabzı da evde izlenebilen göstergeler arasında.
+        </p>
+        <p>
+          Önemli olan tek bir ölçümün değeri değil; aynı koşullarda alınan ölçümlerin zaman içindeki seyri. Sabah aç
+          karnına, aynı koldan, oturarak yapılan tansiyon ölçümleri haftada bir not edildiğinde, üç ay sonra
+          okunabilir bir resim ortaya çıkar. Bu ritme, klinik bir disiplin değil; küçük bir hafta sonu rutini gibi
+          bakmak işi sürdürülebilir kılar.
+        </p>
+
+        <h2 id="lab-markerlari">Hangi Lab Markerları Bu Dönemde Önemli?</h2>
+        <p>
+          Lab değerleri konusunda kişiye özel bir liste hekiminizin yönlendirmesiyle netleşir; ama hazırlık döneminde
+          sık gündeme gelen bir çekirdek küme var.
+        </p>
+        <p>
+          Lipid profili (toplam kolesterol, LDL, HDL, trigliserid), açlık glukozu ve HbA1c, tiroid fonksiyonları
+          (TSH), tam kan sayımı ve D vitamini düzeyi en sık izlenen başlıklardandır. Karaciğer fonksiyonları, ferritin
+          ve B12 de bireysel risk profiline göre değerlendirilir <Evidence level={4} />. FSH ve östradiol gibi
+          hormon ölçümleri tek başına “menopoz tanı testi” değildir; klinik tablo ve adet öyküsüyle birlikte
+          yorumlanır.
+        </p>
+        <p>
+          Bu değerleri tek seferlik bir “check-up” olarak değil, yıllık veya iki yıllık aralıklarla tekrarlanan bir
+          referans hattı olarak düşünmek çok daha bilgilendiricidir. Tek noktalar yerine eğri çiziyorsun gibi.
+        </p>
+
+        <h2 id="semptom-gunlugu">Semptom Günlüğü Tutmak: Neden ve Nasıl?</h2>
+        <p>
+          Belirti günlüğü, hazırlık döneminin en çok küçümsenen ama en değerli aracı.
+        </p>
+        <p>
+          Adet düzeni, sıcak basması sıklığı, uyku kalitesi, ruh hali ve enerji düzeyi gibi başlıkları haftalık olarak
+          kısa notlarla kaydetmek, geçişin hangi aşamasında olduğuna dair değerli bir resim oluşturur. Adet
+          döngüsündeki düzensizleşme, perimenopoz başlangıcının erken ipuçlarından biridir <Evidence level={5} />;
+          ama bunu fark etmek ancak takip varsa mümkün oluyor.
+        </p>
+        <p>
+          Günlüğün karmaşık olması gerekmiyor. Telefonun takvim uygulamasında küçük etiketler, kâğıt bir ajanda ya da
+          özel bir uygulama; hangisi senin için sürdürülebilirse o doğru araç. Önemli olan tutarlı tekrar; her gün
+          uzun yazmak değil, haftada bir-iki dakika geriye bakmak.
+        </p>
+
+        <h2 id="aile-oykusu">Aile Öyküsünü Yazıya Dökmek</h2>
+        <p>
+          Çoğumuz aile öyküsünü kafamızda biliriz; ama bir hekim sorduğunda anlık olarak doğru hatırlamak zor olabiliyor.
+        </p>
+        <p>
+          Anne, anneanne, babaanne, teyze ve halaların menopoz yaşı; ailede kalp-damar hastalığı, meme veya yumurtalık
+          kanseri, osteoporoz ve diyabet öyküsü; bu bilgilerin tek bir notta toplanması ileride hekim
+          değerlendirmelerinde belirleyici oluyor. Erken menopoz öyküsü olan ailelerde geçişin daha erken yaşlarda
+          başlama eğilimi olabilir <Evidence level={4} />.
+        </p>
+        <p>
+          Bu öyküyü bir kez derli toplu yazmak ve yıllık olarak güncellemek, hekimle yapılan ilk konuşmanın çerçevesini
+          de zenginleştiriyor. Aile öyküsü, kişisel risk profilinin temel taşlarından biri.
+        </p>
+
+        <h2 id="tarama-cercevesi">Tarama Testleri: Genel Çerçeve</h2>
+        <p>
+          Tarama testleri, belirti yokken yapılan kontroller demektir. Hazırlık döneminde bu çerçeve daha sistematik
+          hâle geliyor.
+        </p>
+        <p>
+          Meme görüntüleme, jinekolojik kontrol, kemik mineral yoğunluğu (gerektiğinde), kolon taraması ve
+          kardiyovasküler risk değerlendirmesi en sık konuşulan başlıklardır. Hangi taramanın hangi yaşta ne sıklıkta
+          önerildiği kişisel risk profiline ve ulusal rehberlere göre değişir; bu nedenle hekiminizle birlikte
+          kişiselleştirilmiş bir takvim oluşturmak en doğrusu.
+        </p>
+        <p>
+          “Tarama” ile “tanı” arasındaki farkı hatırlamak da değerli: tarama bir bulgu görse bile sonraki adım her
+          zaman tanı koymak değil, ek değerlendirmedir. Bu nedenle tarama sonuçlarını okurken acele yorum yerine
+          hekimle birlikte değerlendirmek temel ilke.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleProsePanel class="mt-10">
+        <h2 id="hekimle-paylasim">Kayıtları Hekimle Paylaşmak</h2>
+        <p>
+          Topladığın veri ne kadar düzenli olursa, hekimle yapılan değerlendirme o kadar verimli oluyor.
+        </p>
+        <p>
+          Yıllık kontrole giderken son bir yılın tansiyon ortalamasını, kilo seyrini, semptom günlüğünden birkaç anahtar
+          notu ve aile öyküsünün güncel hâlini yanında götürmek; konuşmayı “şimdi neyiniz var” ekseninden çıkarıp “son
+          dönemdeki seyriniz nasıl” eksenine taşıyor. Bu fark, koruyucu sağlık yaklaşımının özü.
+        </p>
+        <p>
+          Verilerini bir tek kâğıda özetlemek veya telefonda küçük bir not şablonu hazırlamak işi kolaylaştırır.
+          Detayların tamamını anlatmak yerine eğilimleri ve kişisel sorularını paylaşmak, kısa randevuda en çok yer
+          tutan yaklaşım.
+        </p>
+
+        <h2 id="baslangic-30-gun">İlk 30 Gün: Pratik Başlangıç</h2>
+        <p>
+          Bu kadar başlık bir arada gelince “nereden başlamalı” sorusu doğal. Aşağıdaki çerçeve, ilk ay için sade bir
+          öneri.
+        </p>
+        <p>
+          İlk hafta yalnızca tansiyon ölçümünü düzenli yapmak ve haftalık ortalamayı bir nota geçmek için yeterli. İkinci
+          hafta semptom günlüğüne başlamak; üç-dört kısa kategori (uyku, enerji, ruh hali, adet) ile sınırlı tutmak. Üçüncü
+          hafta aile öyküsünü tek bir nota toplamak. Dördüncü hafta önümüzdeki bir yıl için lab testleri ve tarama
+          takvimini hekiminle planlamak.
+        </p>
+        <p>
+          Otuz günün sonunda elinde dört şey oluyor: tansiyon eğrisi başlangıcı, semptom referansı, aile öyküsü tek
+          sayfa ve önümüzdeki yıl için bir takvim. Bu dört şey, sonraki on yıl boyunca güncellenecek temel iskelet.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleProsePanel class="mt-10">
+        <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
+        <h3>Belirtim yok, yine de bu kadar şey takip etmem gerekir mi?</h3>
+        <p>
+          Belirti olmaması, takip için ideal başlangıç noktasıdır. Çünkü kişisel “normal” aralığını ancak belirti yokken
+          tanımlayabiliyorsun. Sonradan değişiklik olduğunda karşılaştırma yapılacak referans noktan oluyor.
+        </p>
+        <h3>Hangi sıklıkta lab testi yaptırmalıyım?</h3>
+        <p>
+          Genel olarak yıllık ya da iki yıllık aralıklar yaygın bir yaklaşım; ama kişisel risk profiline göre bu sıklık
+          değişir. Lipid profili veya glukoz takibinde değişim varsa hekiminiz daha sık önerebilir. Tek bir “doğru
+          sıklık” yok; hekiminizle birlikte kararlaştırılır.
+        </p>
+        <h3>Ev tipi tansiyon aleti güvenilir mi?</h3>
+        <p>
+          Üst koldan ölçen, klinik onayı olan modeller güvenilir bir takip sağlar. Bilek tipi cihazlar daha fazla
+          değişkenlik gösterebilir. Cihazınızı ilk kullanımda hekim muayenesinde karşılaştırarak doğrulamak iyi bir
+          başlangıç adımı.
+        </p>
+        <h3>Semptom günlüğüne ne kadar zaman ayırmalıyım?</h3>
+        <p>
+          Günde bir-iki dakika ve haftada bir kez geriye bakış yeterli. Detaylı yazmak yerine kategoriler ve kısa
+          işaretler kullanmak sürdürülebilirliği artırıyor.
+        </p>
+      </ArticleProsePanel>
+
+      <section
+        class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
+      >
+        <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="/hormonal-gecis/perimenopoz/perimenopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline"
+              >Hormonal Geçiş / Perimenopoz Nedir?</a
+            >
+          </li>
+          <li>
+            <a href="/hormonal-gecis/40-sonrasi/tarama-testleri" class="font-semibold text-[#6B2D3E] hover:underline"
+              >Hormonal Geçiş / Tarama ve İzlem</a
+            >
+          </li>
+          <li>
+            <a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline"
+              >Hormonal Geçiş / Menopoz Nedir?</a
+            >
+          </li>
+          <li>
+            <a href="/zamansiz-yasam/beslenme-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline"
+              >Zamansız Yaşam / Beslenme ve Yaşlanma</a
+            >
+          </li>
+          <li>
+            <a href="/zamansiz-yasam/hareket-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline"
+              >Zamansız Yaşam / Hareket ve Sağlık</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+        <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: B–A — İyi ile Güçlü Kanıt <Evidence from={4} to={5} /></p>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Menopoza hazırlık döneminde koruyucu sağlık kayıtlarının düzenli tutulması; klinik takibin niteliğini ve
+          uzun vadeli sağlık planlamasını belirgin biçimde güçlendirir. Vital göstergeler ve temel lab değerlerinin
+          yıllık eğrilerinin izlenmesi, bireysel risk profilinin daha erken fark edilmesini sağlar. Kişisel ölçüm ve
+          değerlendirme planı her zaman hekiminizle birlikte oluşturulmalıdır.
+        </p>
+      </section>
+
+      <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık
+          kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -43,6 +43,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/hg-tarama-testleri.webp',
     alt: 'Sabah ışığında ahşap masada açık takvim sayfası, çay fincanı, açık not defteri, cam vazoda pembe gül ve bordo ciltli ajanda; kişisel düzenli sağlık takibi teması',
   },
+  '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari': {
+    src: '/images/library/editorial/introspective-clasped-hands.webp',
+    alt: 'Sabah ışığında ahşap masada birleşmiş eller ve açık not defteri; sakin, planlı bir sağlık takip rutini teması',
+  },
   '/zamansiz-yasam': {
     src: '/images/heroes/zamansiz-yasam.webp',
     alt: 'Ege kıyısında altın saat ışığında kitap okuyan olgun kadın; zamansız yaşam ve dinginlik teması',
@@ -66,6 +70,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/zamansiz-yasam/non-invaziv': {
     src: '/images/library/editorial/zy-non-invaziv.webp',
     alt: 'Ahşap masada keten örtü üzerinde cam sürahi, açık pembe çiçek, seramik kasede pürüzsüz taş ve katlı pamuklu havlu; bordo arka plan — pürüzsüzlük, yenilenme ve zaman metaforu',
+  },
+  '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve': {
+    src: '/images/library/editorial/mindful-self-attention-profile.webp',
+    alt: 'Doğal pencere ışığında kendi yanağına nazikçe dokunan 50 yaş kadın profil portresi; cilt bakımı ve öz-şefkat teması',
   },
   '/beden-yakinlik': {
     src: '/images/heroes/beden-yakinlik.webp',

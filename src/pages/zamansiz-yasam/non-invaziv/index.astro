@@ -11,6 +11,13 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/non-invaziv']!;
 
 const articles = [
   {
+    href: '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve',
+    title: 'Non-invaziv Cilt Bakımı: Genel Çerçeve',
+    excerpt:
+      'Menopoz sonrasında non-invaziv cilt yaklaşımları nedir, ne işe yarar, neyin sınırı vardır? Marka veya satış önerisi olmadan editöryal bir okuma çerçevesi.',
+    image: submenuHeroByRoute['/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve']!,
+  },
+  {
     href: '/beden-yakinlik/menopozda-cilt-degisimleri',
     title: 'Menopozda Cilt Değişimleri',
     excerpt:
@@ -55,7 +62,7 @@ const neighbors = [
     <SubmenuHero
       eyebrow="Zamansız Yaşam · Non-invaziv"
       title="Non-invaziv Uygulamalar"
-      lede="Bu alt başlık altında ameliyat veya enjeksiyon gerektirmeyen yaklaşımları editöryal bir çerçevede ele alıyoruz. Yeni rehberler editöryal takvimde; şimdilik en yakın başlıklara aşağıdaki bağlantılardan ulaşabilirsiniz."
+      lede="Bu alt başlık altında ameliyat veya enjeksiyon gerektirmeyen yaklaşımları editöryal bir çerçevede ele alıyoruz. Genel çerçeve rehberi yayında; başka başlıklar editöryal takvimde."
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
@@ -80,8 +87,8 @@ const neighbors = [
               karşılaştırma; bu alana sakin ve bilgili bir gözle bakmak.
             </p>
             <p class="text-base leading-relaxed text-[#2D2D2D]/72">
-              Aşağıda şimdilik cilt ve beden başlıklarındaki en yakın editöryal rehberleri toparladık. Yeni içerikler
-              hazırlandıkça bu sayfa genişleyecek.
+              Şu an yayında olan genel çerçeve rehberinin yanında cilt ve beden başlıklarındaki komşu okumaları
+              toparladık. Yeni içerikler hazırlandıkça bu sayfa genişleyecek.
             </p>
           </div>
 
@@ -111,15 +118,15 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İlgili rehberler</p>
-        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Şimdilik en yakın başlıklar</h2>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
+        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yayında olan rehberler</h2>
         <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-          Cilt değişimleri ve vajinal sağlık gibi başlıklar bu alana yakın editöryal okumalardır.
-          Doğrudan non-invaziv başlıkları için yeni içerikler hazırlanıyor.
+          Şu an için non-invaziv yaklaşımlara genel bir editöryal çerçeve ve cilt değişimleri / vajinal sağlık gibi
+          komşu başlıklar mevcut. Yeni rehberler editöryal takvimde.
         </p>
       </header>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         {
           articles.map((a) => (
             <SubmenuLinkCard
