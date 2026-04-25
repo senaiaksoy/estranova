@@ -40,8 +40,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Sonbahar ormanında sakin yürüyen kadın; uzun vadeli sağlık ve hareket teması',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri': {
-    src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Sağlık profesyoneli ile sakin görüşme ortamı; koruyucu sağlık teması',
+    src: '/images/library/editorial/hg-tarama-testleri.webp',
+    alt: 'Sabah ışığında ahşap masada açık takvim sayfası, çay fincanı, açık not defteri, cam vazoda pembe gül ve bordo ciltli ajanda; kişisel düzenli sağlık takibi teması',
   },
   '/zamansiz-yasam': {
     src: '/images/heroes/zamansiz-yasam.webp',
