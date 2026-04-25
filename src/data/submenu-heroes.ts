@@ -60,8 +60,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Sabah ışığında krem keten üzerinde yumurtalar, ceviz, portakal dilimleri, maydanoz ve etiketsiz zeytinyağı; beslenme ve metabolik denge teması',
   },
   '/zamansiz-yasam/hareket-saglik-menopoz': {
-    src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9b69b?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Egzersiz minderinde esneme; hareket ve kas sağlığı teması',
+    src: '/images/library/editorial/zy-hareket-saglik.webp',
+    alt: 'Sabah park yolunda yürüyüş molasında kadın; arkadan editöryal kadraj, krem keten pantolon, sonbahar bordo yaprak ipucu; günlük hareket ritmi teması',
   },
   '/zamansiz-yasam/non-invaziv': {
     src: '/images/library/editorial/zy-non-invaziv.webp',
