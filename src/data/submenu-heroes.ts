@@ -32,8 +32,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Doğal pencere ışığında gri saçlı kadın portresi; sakin ve kendinden emin bakış',
   },
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
-    src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Sağlık profesyoneli ile sakin görüşme ortamı; bilgilendirilmiş karar ve birlikte değerlendirme teması',
+    src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
+    alt: 'Sakin sabah ışığında ahşap masada açık not defterine yazan 52 yaş kadın, çay fincanı ve bordo aksanlı iç mekân; bilgilendirilmiş karar ve iç tartışma teması',
   },
   '/hormonal-gecis/40-sonrasi': {
     src: '/images/library/editorial/journey-40-sonrasi.webp',
