@@ -88,8 +88,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Pencere ışığında ayakta duran 46 yaş kadın, eli karın-alt bölgesinde nazik farkındalık jesti; pelvik taban farkındalığı teması',
   },
   '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz': {
-    src: 'https://images.unsplash.com/photo-1518310383802-640c2de933d2?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Direnç bandıyla egzersiz yapan kadın; kemik gücü ve hareket teması',
+    src: '/images/library/editorial/hg-kemik-erimesi-egzersiz.webp',
+    alt: 'Güneş dolu salonda hafif dumbbell ile omuz hizasında yan uzatma yapan 48 yaş kadın, ahşap zemin, iki bordo vazo; evde günlük direnç çalışması teması',
   },
   '/zihin-denge': {
     src: '/images/heroes/zihin-denge.webp',
