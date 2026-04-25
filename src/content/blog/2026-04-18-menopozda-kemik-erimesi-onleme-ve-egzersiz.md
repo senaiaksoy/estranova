@@ -26,7 +26,7 @@ Bu dönemde kemik sağlığına dikkat etmek, yalnızca "yaşlılık için" bir 
 
 Kemikler cansız bir yapı değil. Sürekli yenilenen, dinamik bir doku. Vücudun iki farklı hücre tipi bu yenilenmeden sorumlu: biri eski kemiği yıkıyor, diğeri yeni kemik dokusu oluşturuyor. Sağlıklı bir döngüde bu ikisi dengede.
 
-Östrojen, bu dengeyi koruyan önemli bir düzenleyici. Kemik yıkımını baskılıyor, yenilenmesini destekliyor. Menopoz geçişinde östrojen seviyelerin dalgalandığında ve sonunda düştüğünde, bu denge bozuluyor. Yıkım, yapımın önüne geçiyor.
+Östrojen, bu dengeyi koruyan önemli bir düzenleyici. Kemik yıkımını baskılıyor, yenilenmesinde düzenleyici bir rol oynuyor. Menopoz geçişinde östrojen seviyelerin dalgalandığında ve sonunda düştüğünde, bu denge bozuluyor. Yıkım, yapımın önüne geçiyor.
 
 Sonuç: kemik yoğunluğun yavaş ama sürekli azalıyor. Bu süreç menopozdan yıllar önce, perimenopoz döneminde bile başlayabiliyor. Hissetmiyorsun — ama vücudun içinde bir şeyler değişiyor.
 
@@ -63,12 +63,12 @@ Yerel pratik bir not: Türkiye'de menopoz dönemine yönelik kadın sağlığı 
 
 Her kadının kemik sağlığı hikâyesi farklı. Ama bazı durumlar, bir uzmanla konuşmayı daha anlamlı kılıyor:
 
-- Ailenizde osteoporoz veya kalça kırığı öyküsü varsa
-- Erken menopoz yaşadıysanız (45 yaş öncesi)
-- Uzun süre kortikosteroid ilaç kullandıysanız
-- Sigara kullanıyorsanız veya alkol tüketiminiz yüksekse
-- Daha önce düşük enerjili bir travmayla kırık geçirdiyseniz
-- Vücut ağırlığınız düşükse
+- Ailende osteoporoz veya kalça kırığı öyküsü varsa
+- Erken menopoz yaşadıysan (45 yaş öncesi)
+- Uzun süre kortikosteroid ilaç kullandıysan
+- Sigara kullanıyorsan veya alkol tüketimin yüksekse
+- Daha önce düşük enerjili bir travmayla kırık geçirdiysen
+- Vücut ağırlığın düşükse
 
 Bu faktörler, kemik kaybı riskini artırabilecek durumlar arasında sayılıyor. Listede birden fazlası sende varsa, bir değerlendirme düşünmek mantıklı olabilir.
 
@@ -82,7 +82,7 @@ Yük bindiren ve direnç içeren egzersizler, kemik yoğunluğuyla en çok iliş
 
 ### Kemik erimesi başladıktan sonra egzersiz hâlâ işe yarar mı?
 
-Evet, yarayabilir. Osteoporoz tanısı almış olmak, egzersizi bırakmak için bir neden değil. Aksine, düzenli hareket denge ve kas gücünü destekliyor — bu da düşme riskini azaltmaya yardımcı olabiliyor. Ama egzersiz programının kişiye özel planlanması önemli; yüksek darbeli hareketler bazı durumlarda uygun olmayabiliyor. Bir fizyoterapist veya spor hekimiyle konuşmak, doğru programı bulmayı kolaylaştırır.
+Evet, yarayabilir. Osteoporoz tanısı almış olmak, egzersizi bırakmak için bir neden değil. Aksine, düzenli hareket denge ve kas gücüne katkı sağlıyor — bu da düşme riskini azaltmaya yardımcı olabiliyor. Ama egzersiz programının kişiye özel planlanması önemli; yüksek darbeli hareketler bazı durumlarda uygun olmayabiliyor. Bir fizyoterapist veya spor hekimiyle konuşmak, doğru programı bulmayı kolaylaştırır.
 
 ### D vitamini ve kalsiyum takviyesi ne zaman düşünülmeli?
 
