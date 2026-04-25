@@ -20,7 +20,7 @@ export const writers: Writer[] = [
       'Robert College ve Boğaziçi Üniversitesi İşletme mezunu. Uzun yıllar kurumsal bankacılıkta çalıştıktan sonra kendi işini kurarak yüz kişiyi aşan bir ekibi yönetti. Hormonal geçiş döneminde önleyici sağlık, araştırmaya dayalı karar ve yaşam tarzı dengesi üzerine içerik üretiyor.',
     signaturePhrase:
       'Hormonal geçişi sakin bir araştırmacı gözüyle okuyor; kontrolü kaybetmeden anlamayı kolaylaştırıyor.',
-    portrait: '/images/editor/berna-aksoy.webp',
+    portrait: '/images/writers/berna-aksoy.webp',
     focusAreas: ['Hormonal Geçiş', '40 Sonrası', 'Yaşam Tarzı'],
     isEditor: true,
   },
