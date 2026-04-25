@@ -2,6 +2,7 @@
 title: "Menopozda Kemik Erimesi Önleme ve Egzersiz"
 description: "Kemikler sessizce çalışır — ta ki bir şeyler değişene kadar. Menopoz geçişiyle birlikte bu sessiz süreç hız kazanabiliyor. Peki egzersiz gerçekten fark yaratır mı, ve nereden başlamak mantıklı?"
 date: "2026-04-18"
+writerSlug: "alara-baykent"
 ---
 
 # Menopozda Kemik Erimesi: Egzersizle Neler Değişebilir?

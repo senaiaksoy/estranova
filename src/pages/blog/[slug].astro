@@ -6,6 +6,9 @@ import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import type { Writer } from '../../data/writers';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -30,15 +33,26 @@ const publishedDate = formatDate(post.data.date);
 const siteUrl = (Astro.site ? Astro.site.toString() : 'https://estranova.com').replace(/\/$/, '');
 const pageUrl = `${siteUrl}/blog/${post.id}`;
 
-const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: post.data.title,
-  description: post.data.description,
-  datePublished: post.data.date,
-  inLanguage: 'tr-TR',
-  url: pageUrl,
-};
+const writerSlug = post.data.writerSlug as Writer['slug'] | undefined;
+
+const jsonLd = writerSlug
+  ? buildArticleSchemas({
+      title: post.data.title,
+      description: post.data.description,
+      writerSlug,
+      publishedDate: post.data.date,
+      pathname: `/blog/${post.id}`,
+      siteUrl,
+    })
+  : {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.data.title,
+      description: post.data.description,
+      datePublished: post.data.date,
+      inLanguage: 'tr-TR',
+      url: pageUrl,
+    };
 ---
 
 <SiteLayout
@@ -46,7 +60,7 @@ const articleSchema = {
   description={post.data.description}
   canonical={pageUrl}
   ogType="article"
-  jsonLd={articleSchema}
+  jsonLd={jsonLd}
 >
   <SiteNavbar currentPath="/blog" />
 
@@ -73,6 +87,12 @@ const articleSchema = {
           </ul>
         )}
       </header>
+
+      {writerSlug && (
+        <div class="mb-10">
+          <ArticleAuthorBlock authorSlug={writerSlug} publishedDate={publishedDate} readingMinutes={5} />
+        </div>
+      )}
 
       <ArticleProsePanel>
         <Content />
