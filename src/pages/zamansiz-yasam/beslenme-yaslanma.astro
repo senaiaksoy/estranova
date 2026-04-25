@@ -16,8 +16,8 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/beslenme-yaslanma']!;
 
 const tocEntries = [
   { id: 'neden-degisir', label: 'Neden Değişir' },
-  { id: 'makronutrientler', label: 'Makronutrientler' },
-  { id: 'mikronutrientler', label: 'Mikronutrientler' },
+  { id: 'makronutrientler', label: 'Makro Besinler' },
+  { id: 'mikronutrientler', label: 'Mikro Besinler' },
   { id: 'antioksidanlar', label: 'Antioksidanlar' },
   { id: 'ogun-modeli', label: 'Öğün Modeli' },
   { id: 'beslenme-sekilleri', label: 'Beslenme Şekilleri' },
@@ -65,106 +65,106 @@ const articleSchemas = buildArticleSchemas({
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Menopoz döneminde metabolik değişiklikler beslenme ihtiyaçlarını değiştirir. Protein, B vitaminleri, omega-3 yağlar ve antioksidanlar, yaşlanma sürecini desteklemede kritik rol oynar. Bilgili seçimler sağlık yıllarını uzatmaya yardımcı olur.
+            Menopoz döneminde metabolik değişiklikler beslenme ihtiyaçlarını değiştirir. Protein, B vitaminleri, omega-3 yağlar ve antioksidanlar, yaş alma sürecini desteklemede önemli rol oynar. Bilgili seçimler, tabağını daha bilinçli ve sürdürülebilir kurmana yardımcı olur.
           </p>
         </section>
 
         <ArticleProsePanel>
           <h2 id="neden-degisir">40+ Yaşta Beslenme Neden Değişir?</h2>
           <p>
-            40 yaşından sonra vücut ihtiyaçları belirgin biçimde değişir. Temel metabolik hız (bazal metabolizma) yavaşlar,
+            40 yaşından sonra aynı alışkanlıkların aynı sonucu vermemesi çoğumuz için şaşırtıcıdır; vücut ihtiyaçları belirgin biçimde değişir. Temel metabolik hız (bazal metabolizma) yavaşlar,
             kas kütlesinin doğal kaybı hızlanır ve hormon üretimi dalgalanmaya başlar <Evidence level={5} />.
             Bu değişikliklerin yanında sindirim sistemi de yaşlanmaya başlar; bazı kadınlar laktoz intoleransı veya B12 emilimi sorunları yaşayabilir <Evidence level={4} />.
           </p>
           <p>
             Menopoz döneminde hormon değişiklikleri, vücudun yağ depoladığı yerler, enerji harcaması ve besin tercihlerini etkiler <Evidence level={5} />.
-            Aktivite seviyesi sık düşer; hatta aynı yer almasa bile kalori ihtiyacı azalır <Evidence level={5} />.
+            Aktivite seviyesi sık düşer; aynı kiloda kalsan bile kalori ihtiyacı azalabilir <Evidence level={5} />.
             Bu nedenle daha önceki beslenme alışkanlıkları artık yetmeyebilir; seçimlerin daha bilinçli olması gerekir.
           </p>
 
-          <h2 id="makronutrientler">Makronutrientler: Protein, Yağ, Karbohidrat</h2>
+          <h2 id="makronutrientler">Makro Besinler: Protein, Yağ, Karbonhidrat</h2>
           <p>
-            Protein, bu dönemde beslenmenin en kritik elemanı haline gelir. İhtiyaç miktarı 1.0-1.2 gram/kilogram vücut ağırlığıdır <Evidence level={5} />.
-            Kas kaybı (sarcopenia), tişeli sağlık, kemik bütünlüğü ve metabolik işlevler protein bağlıdır.
-            60 kiloluk bir kadının günde 60-70 gram protein alması gerekir. Et, balık, yumurta, legüm ve süt ürünleri iyi kaynaklar arasında yer alır.
+            Protein, bu dönemde tabağında daha bilinçli yer açmak isteyeceğin besinlerden biridir. İhtiyaç miktarı çoğu kişide 1.0-1.2 gram/kilogram vücut ağırlığı aralığında düşünülür <Evidence level={5} />.
+            Kas kaybı, doku sağlığı, kemik bütünlüğü ve metabolik işlevler yeterli protein alımıyla yakından ilişkilidir.
+            60 kiloluk bir kadın için günlük 60-70 gram protein hedefi yol gösterici olabilir. Et, balık, yumurta, baklagiller ve süt ürünleri iyi kaynaklar arasında yer alır.
           </p>
           <p>
-            Yağlara gelince, doymuş ve doymuş olmayan yağ dengesesi önemlidir <Evidence level={5} />.
-            Omega-3 yağ asitleri (balık, chia tohumu, ceviz, keten tohumu) inflamasyonu azaltır ve beyin sağlığını destekler.
-            Karbohidrat seçimi kaliteli olmalı: tam tahıllar, sebzeler ve meyveler tercih edilir; şeker ve beyaz tahıl kısıtlanır <Evidence level={5} />.
+            Yağlara gelince, doymuş ve doymamış yağ dengesi önemlidir <Evidence level={5} />.
+            Omega-3 yağ asitleri (balık, chia tohumu, ceviz, keten tohumu) iltihabi yükü azaltmaya ve beyin sağlığını desteklemeye yardımcı olabilir.
+            Karbonhidrat seçimi kaliteli olmalı: tam tahıllar, sebzeler ve meyveler tercih edilir; şeker ve beyaz tahıl sınırlanır <Evidence level={5} />.
             Lif, sindirim sağlığı ve doygunluk açısından kritiktir.
           </p>
 
-          <h2 id="mikronutrientler">Kritik Mikronutrientler</h2>
+          <h2 id="mikronutrientler">Kritik Mikro Besinler</h2>
           <p>
-            B vitamines (B6, B12, folat) enerji üretimi, beyin sağlığı ve hücre bölünmesi açısından önemlidir <Evidence level={5} />.
+            Yorgunluk, unutkanlık veya çabuk tükenme hissi yaşıyorsan, bazı mikro besinleri gözden geçirmek anlamlı olabilir. B vitaminleri (B6, B12, folat) enerji üretimi, beyin sağlığı ve hücre bölünmesi açısından önemlidir <Evidence level={5} />.
             B12, özellikle 50+ yaştan sonra emilim sıkıntısı nedeniyle dikkat edilmelidir; yumurta, et, tavuk ve yeşil yapraklı sebzeler iyi kaynaklardır.
-            Demir, özellikle postmenopoz dönemde ihtiyaç azalırken (aylık kanama durdu), yine de önemli bir mineralddir <Evidence level={5} />.
+            Demir ihtiyacı postmenopoz dönemde aylık kanama durduğu için azalabilir; yine de önemli bir mineraldir <Evidence level={5} />.
           </p>
           <p>
             Çinko bağışıklık sistemi ve cilt sağlığı açısından değerlidir <Evidence level={5} />.
-            Magnesium uyku, kas esnekliği ve kemik sağlığı için kritiktir <Evidence level={5} />.
+            Magnezyum uyku, kas esnekliği ve kemik sağlığı için önemlidir <Evidence level={5} />.
             Yeşil yapraklı sebzeler (ıspanak, pazı), kuru yemişler ve tam tahıllar iyi kaynaklardır.
-            Kalsiyum ve D vitamini, kemik kaybını yavaşlatmada vazgeçilmezdir; süt ürünleri, başak balıkları, fortifiye bitkisel sütler ve güneş ışığı temel kaynaklar arasında yer alır.
+            Kalsiyum ve D vitamini, kemik kaybını yavaşlatmada vazgeçilmezdir; süt ürünleri, küçük yağlı balıklar, zenginleştirilmiş bitkisel sütler ve güneş ışığı temel kaynaklar arasında yer alır.
           </p>
 
-          <h2 id="antioksidanlar">Antioksidanlar ve Fitonutrientler</h2>
+          <h2 id="antioksidanlar">Antioksidanlar ve Bitkisel Besin Bileşenleri</h2>
           <p>
-            Renklü sebzeler (sarı, kırmızı, yeşil, mor) farklı antioksidanlar içerir ve enflamasyon karşıtı özellikleri vardır <Evidence level={5} />.
-            Meyveler (özellikle mirtil, çilek) hücre hasarına karşı koruma sağlar <Evidence level={5} />.
-            Yeşil ve siyah çay, epigalovkatekini gibi bileşiklerle antiyaşlanma özellikleri taşır <Evidence level={5} />.
-            Zerdeçal gibi baharatlar, kurkumin içeriğiyle inflamasyonu azaltır <Evidence level={4} />.
+            Tabağa renk eklemek yalnızca görsel bir tercih değil; vücuduna farklı koruyucu bileşenler sunmanın pratik bir yoludur. Renkli sebzeler (sarı, kırmızı, yeşil, mor) farklı antioksidanlar içerir ve iltihabi yükü dengelemeye yardımcı olabilir <Evidence level={5} />.
+            Meyveler (özellikle yaban mersini, çilek) hücre hasarına karşı koruyucu bileşenler sağlar <Evidence level={5} />.
+            Yeşil ve siyah çay, polifenoller gibi bileşiklerle sağlıklı yaş alma sürecini destekleyebilir <Evidence level={5} />.
+            Zerdeçal gibi baharatlar, kurkumin içeriğiyle iltihabi yanıtı azaltmaya yardımcı olabilir <Evidence level={4} />.
           </p>
 
           <h2 id="ogun-modeli">Beslenme Alışkanlıkları ve Öğün Modeli</h2>
           <p>
-            Düzenli öğünler (her 3-4 saatte) kan şekeri ve enerji seviyesini stabilize eder <Evidence level={5} />.
-            Sabit uyku-uyanış saat ve beslenme senkronizasyonu biyolojik ritimleri destekler <Evidence level={4} />.
-            Su tüketimi minimum 2-3 litre/gün olmalı; yaşlanmayla tıkınma hissi azaldığı için bilinçli su içme gerekir <Evidence level={5} />.
+            Gün içinde enerjinin hızla düşüp yükselmesi çok tanıdık bir his olabilir; düzenli öğünler kan şekeri ve enerji seviyesini dengelemeye yardımcı olur <Evidence level={5} />.
+            Sabit uyku-uyanış saati ve beslenme ritmi biyolojik ritimleri destekler <Evidence level={4} />.
+            Su tüketimi kişisel ihtiyaca göre planlanmalı; yaşla birlikte susama hissi azalabildiği için bilinçli su içme önem kazanır <Evidence level={5} />.
           </p>
           <p>
-            Porsyon kontrolü önemlidir; hatta aynı kaloriyi alsa bile daha büyük porsiyonlar saç kaybı veya aşırı yemesine yol açabilir <Evidence level={5} />.
-            Ultra-işlenmiş gıdalar (paketli atıştırmalıklar, hazır yemekler, şeker içecekler) kısıtlanmalıdır <Evidence level={5} />.
-            Evde pişen, basit ve tanıyabildiklerimiz optimal tercihlerdir.
+            Porsiyon kontrolü önemlidir; daha büyük porsiyonlar fark etmeden enerji alımını artırabilir ve tokluk sinyallerini zorlayabilir <Evidence level={5} />.
+            Ultra-işlenmiş gıdalar (paketli atıştırmalıklar, hazır yemekler, şekerli içecekler) kısıtlanmalıdır <Evidence level={5} />.
+            Evde pişen, basit ve içeriğini tanıyabildiğimiz yemekler çoğu zaman daha iyi tercihlerdir.
           </p>
 
           <h2 id="beslenme-sekilleri">Beslenme Şekilleri: Hangisi Uygun?</h2>
           <p>
-            Akdeniz Diyeti, menopoz döneminde en çok kanıt-tabanlı yaklaşımdır <Evidence level={5} />.
+            Beslenme modeli seçerken amaç kendini sıkıştırmak değil, sürdürebileceğin bir ritim bulmaktır. Akdeniz tipi beslenme, menopoz döneminde güçlü kanıta sahip yaklaşımlardan biridir <Evidence level={5} />.
             Balık, zeytinyağı, sebzeler ve tam tahıl ağırlıklı olan bu diyetin kalp ve beyin sağlığı yararları geniş çalışmalarla gösterilmiştir.
           </p>
           <p>
             DASH Diyeti hipertansiyon ve kardiyovasküler sağlık için tasarlanmış; menopoz döneminde de etkilidir <Evidence level={5} />.
             Vejetaryen ve vegan yaklaşımlar mümkündür ancak dikkatli planlama gerekir (B12, demir, protein kaynakları) <Evidence level={4} />.
-            Düşük karbohidrat diyetleri bazı kadınlara uyarken, başkalarında enerji veya ruh hali sorunlarına neden olabilir <Evidence level={4} />.
-            Intermittent fasting menopoza özgü çalışma sayısı sınırlıdır; bireysel danışma önerilir <Evidence level={3} />.
+            Düşük karbonhidrat diyetleri bazı kadınlara uyarken, başkalarında enerji veya ruh hali sorunlarına neden olabilir <Evidence level={4} />.
+            Aralıklı oruç konusunda menopoza özgü çalışma sayısı sınırlıdır; bireysel danışma önerilir <Evidence level={3} />.
           </p>
 
           <h2 id="tercih-sinirla">Yiyecekler: Tercih Et, Sınırla</h2>
           <p>
-            Tercih ettiğimiz gıdalar: tam tahıllar, balık, tavuk, yumurta, legüm, yeşil yapraklı sebzeler, meyveler, nüts ve tohumlar.
-            Sınırlandırmaya değer gıdalar: işlenmiş et, şeker içi içecekler, ultra-işlenmiş ürünler, aşırı tuz.
+            Alışveriş sepetini sadeleştirmek iyi bir başlangıçtır. Tercih ettiğimiz gıdalar: tam tahıllar, balık, tavuk, yumurta, baklagiller, yeşil yapraklı sebzeler, meyveler, kuruyemişler ve tohumlar.
+            Sınırlandırmaya değer gıdalar: işlenmiş et, şekerli içecekler, ultra-işlenmiş ürünler ve aşırı tuz.
           </p>
           <p>
             Kafein ve alkol özel dikkat gerektirir. Kafein uyku kalitesini bozabilir (öğleden sonra saat 2'den sonra sınırla).
-            Alkol, sıcak basması ve uyku bozukluğunu artırabilir; haftada bir veya iki kadeh sınırlamak akıllıcadır <Evidence level={5} />.
+            Alkol, sıcak basması ve uyku bozukluğunu artırabilir; miktarı sınırlamak birçok kişi için daha güvenli bir yaklaşımdır <Evidence level={5} />.
           </p>
 
           <h2 id="ek-takviyeler">Ek Takviyeler: Gerekli mi?</h2>
           <p>
-            D vitamini, özellikle kış aylarında veya kapalı ortamlarda yaşayanlara ihtiyaç duyan bir takviyedir <Evidence level={5} />.
+            Takviye rafı kalabalık görünebilir; bu yüzden önce gerçekten neye ihtiyacın olduğunu anlamak gerekir. D vitamini, özellikle kış aylarında veya kapalı ortamlarda yaşayan kişilerde gündeme gelebilen bir destektir <Evidence level={5} />.
             Kan testleriyle durum kontrol edildikten sonra karar alınır.
           </p>
           <p>
-            Kalsiyum, takviye ile birlikte beslenme de gözönüne alınmalı <Evidence level={5} />.
-            Omega-3 (balık yağı) kaynakları yeterli değilse takviye faydalıdır <Evidence level={4} />.
-            50+ yaşındaki tüm kadınlara B12 (beslenme veya takviye) önerilir <Evidence level={5} />.
-            Multivitamin takviyesi, dengeli bir diyet alınanlar için çoğu zaman gerekli değildir <Evidence level={4} />.
+            Kalsiyum değerlendirilirken takviye ile birlikte beslenme de göz önüne alınmalıdır <Evidence level={5} />.
+            Omega-3 kaynakları yeterli değilse takviye bazı kişilerde faydalı olabilir <Evidence level={4} />.
+            50+ yaşta B12 alımı beslenme veya takviye yoluyla ayrıca değerlendirilebilir <Evidence level={5} />.
+            Multivitamin takviyesi, dengeli beslenen kişiler için çoğu zaman gerekli değildir <Evidence level={4} />.
           </p>
 
           <h2 id="kisisellestirme">Kişiselleştirilmiş Yaklaşım</h2>
           <p>
-            Beslenme ihtiyaçları kişi kişi değişir. Kronik hastalık (diyabet, hipertansiyon), ilaçlar, sindirim sorunu veya
+            Son olarak, senin tabağın başkasının planıyla bire bir aynı olmak zorunda değil. Beslenme ihtiyaçları kişi kişi değişir. Kronik hastalık (diyabet, hipertansiyon), ilaçlar, sindirim sorunu veya
             belirli beslenme kısıtlamaları (alerji, intolerans) danışmanın kapsamını değiştirir.
             Diyetisyen veya beslenme danışmanından tavsiye almak, kişiye uygun bir plan oluşturmaya yardımcı olur.
           </p>
@@ -182,7 +182,7 @@ const articleSchemas = buildArticleSchemas({
         </section>
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu · Doç. Dr. Senai Aksoy</p>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Beslenme, yaşlanmanın hızı ve kalitesi üzerinde güçlü kontrol sağlar. Menopoz döneminde bilgili, planlı seçimler belirtileri yönetmeye ve uzun vadeli sağlık risklerini azaltmaya katkı sağlar. Kişiselleştirilmiş rehberlik için diyetisyen danışması değerlidir.

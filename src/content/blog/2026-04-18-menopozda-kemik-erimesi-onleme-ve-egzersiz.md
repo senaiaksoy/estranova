@@ -1,5 +1,5 @@
 ---
-title: "Menopozda Kemik Erimesi Onleme ve Egzersiz"
+title: "Menopozda Kemik Erimesi Önleme ve Egzersiz"
 description: "Kemikler sessizce çalışır — ta ki bir şeyler değişene kadar. Menopoz geçişiyle birlikte bu sessiz süreç hız kazanabiliyor. Peki egzersiz gerçekten fark yaratır mı, ve nereden başlamak mantıklı?"
 date: "2026-04-18"
 ---
@@ -102,20 +102,4 @@ Belki bugün yapabileceğin en somut şey, yarın on dakika yürümek. Ya da ail
 
 ---
 
-> **Önemli not:** Bu içerik yalnızca genel bilgilendirme amaçlıdır. Tıbbi tanı, tedavi önerisi veya kişisel sağlık kararı yerine geçmez. Kemik sağlığınıza ilişkin sorularınız için bir sağlık profesyoneliyle görüşmeniz önerilir. Doktorunuza danışın.
-
----
-
-## Yayın metası (SEO)
-
-- **Title tag:** Menopozda Kemik Erimesi Onleme ve Egzersiz | Estranova
-- **Meta description:** Menopozda Kemik Erimesi Onleme ve Egzersiz: Belki bir gün sırtında hafif bir ağrı fark ettin. Ya da annenin ya da bir arkadaşının düşüp kırık geçirdiğini duydun
-- **Slug:** `menopozda-kemik-erimesi-onleme-ve-egzersiz`
-
-## İç bağlantı önerileri
-
-Otomatik skorlanan site ici oneriler:
-
-- [Hareket ve kas sagligi](/zamansiz-yasam/hareket-saglik-menopoz) — Aktivite, kemik ve kas sagligi baglamini tamamlar.
-- [Menopoz nedir?](/hormonal-gecis/menopoz/menopoz-nedir) — Menopoz tanimi ve temel bilgiler.
-- [Perimenopozda beslenme ve yaslanma](/zamansiz-yasam/beslenme-yaslanma) — Beslenme ve hormonal gecis baglamini tamamlar.
+> **Önemli not:** Bu içerik yalnızca genel bilgilendirme amaçlıdır. Tıbbi tanı, tedavi önerisi veya kişisel sağlık kararı yerine geçmez. Kemik sağlığınıza ilişkin sorularınız için bir sağlık profesyoneliyle görüşmeniz önerilir.
