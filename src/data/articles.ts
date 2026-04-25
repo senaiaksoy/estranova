@@ -401,7 +401,11 @@ Bu yaklaşım, tek bir ölçüm sonucuna odaklanmak yerine genel kemik sağlığ
   },
 ];
 
-export const getPublishedArticles = () => articles.filter((a) => a.status === "published");
+// Aşama 1 (CLAUDE.md uyum geçişi): eski /article/ rotası canlıdan çekildi.
+// articles.ts içeriği §4 (kuruluş adı, inline URL) ve §3 (yazar tonu) ihlalleri
+// içerdiği için publishedArticles boş döndürülüyor — Aşama 3'te dosya silinecek,
+// site içi /article/... linkleri Aşama 2'de yeni hedeflere yönlendirilecek.
+export const getPublishedArticles = (): Article[] => [];
 
 export const publishedArticles = getPublishedArticles();
 export const featuredArticles = publishedArticles.filter((a) => a.featured);
