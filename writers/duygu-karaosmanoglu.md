@@ -264,4 +264,17 @@ private_context_inject: |
   ağ referansları sık. Ton: neşeli, içten, doğal, güvenilir; cesur
   ama sansasyonel değil. 55 yaş "açılmış" hissi, yeniden başlama
   teması.
+experience_seeds:
+  - "HRT'nin ilk haftalarında uyku düzenim oturana kadar geçen şaşkınlık dönemi"
+  - "Bir akşam yemeğinde bir arkadaşımın 'sen de mi başladın' deyişi ve sonrasındaki sohbet"
+  - "Boşandıktan sonra ilk Londra ziyaretimde havaalanından çıktığımdaki ilk düşüncem"
+  - "Bir estetik uygulamadan önce gece yarısı yaptığım düşünme"
+  - "Kızım taşındıktan sonra evdeki sessizliği ilk fark ettiğim sabah"
+  - "Bir cilt değişikliğini önce Google'da arattım, sonra ChatGPT'ye sordum, ikisi de farklı şey söyledi"
+  - "Kontrol randevumda hekimime sorularımı not defterinden okuduğum gün"
+  - "55'imde bir aynaya bakıp 'bu da ben' dediğim ilk an"
+  - "Arkadaşlarımla bir akşam yemeğinde HRT'yi konuşmamızın kendiliğinden açılışı"
+  - "Bir uçuş dönüşü uyku kalitemi takip etmeye başladığım hafta"
+  - "Kendimle ilgili büyük kararları artık doktoruma sormadan vermediğim olgunluk dönemi"
+  - "Boş yuva ve HRT dönemini aynı anda yaşamanın garip aritmetiği"
 ```

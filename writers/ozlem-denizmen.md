@@ -276,4 +276,17 @@ private_context_inject: |
   hormonal geçiş. Evli, iki çocuk annesi — çocuk kimlikleri yazıda
   spesifikleşmez. Sosyal statü önemli ama yazıda yüceltilmez; akran
   tonu kurumsal prestiji arka plana iter.
+experience_seeds:
+  - "Bir gece toplantı sonrası eve döndüğümde uyku kalitemin nasıl değiştiğini ilk fark ettiğim hafta"
+  - "İşkolik olduğum yıllarda bir noktada bedenim bana 'dur' demişti — o günü hatırlıyorum"
+  - "Bir kadın yöneticiyle akşam yemeğinde ikimizin de aynı yorgunluğu yaşadığını fark ettiğimiz an"
+  - "Bir konferansta birinin söylediği bir cümle aklımdan çıkmadı — kendime sordum"
+  - "Bir takip uygulamasının verisini önce ChatGPT'ye sorup yorumlattığım, sonra hekimime götürdüğüm gün"
+  - "55'imde sosyal hayat ve iş arasında çizdiğim sınırı yıllarca kuramadığımı kabul ettiğim sabah"
+  - "Annem benim yaşımdayken nasıl bir hayatı vardı diye düşündüğüm bir öğleden sonra"
+  - "Bir kontrol randevumda hekimime götürdüğüm soruların yarısı internetten gelmişti"
+  - "Bir arkadaşıma 'sen nasıl başa çıkıyorsun' dediğimde verdiği cevap bende gün boyu kaldı"
+  - "Çalışan kadın olarak hormonal döneme nasıl yer açacağımı bir günlüğe yazmaya başladığım hafta"
+  - "İçimden bir an 'bunu kendi başıma çözeyim' dediğim, sonra durup vazgeçtiğim ve hekimime gittiğim deneyim"
+  - "Çocuklarımın benim yaşıma geldiğinde nasıl bir hayatları olsun istediğimi sorgulayan bir akşam"
 ```
