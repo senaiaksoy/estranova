@@ -3,14 +3,58 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuSection from '../../../components/site/SubmenuSection.astro';
+import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz']!;
+
+const articles = [
+  {
+    href: '/hormonal-gecis/menopoz/menopoz-nedir',
+    title: 'Menopoz Nedir? — Temel Rehber',
+    excerpt:
+      'Tanım, evreler, hormon değişimleri ve uzun vadeli sağlık gündemi; menopoza dair sık sorulan başlıkları sade bir çerçevede toplayan başlangıç rehberi.',
+    image: submenuHeroByRoute['/hormonal-gecis/menopoz']!,
+  },
+  {
+    href: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+    title: 'Hormon Tedavisi: Karar Rehberi',
+    excerpt:
+      'HRT ne zaman gündeme gelir, kim için uygundur, neye dikkat edilir? Bilgilendirilmiş karar için yapılandırılmış bir okuma.',
+    image: submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi']!,
+  },
+  {
+    href: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
+    title: 'Kemik Erimesi: Önleme ve Egzersiz',
+    excerpt:
+      'Menopoz sonrası kemik kaybını yavaşlatan günlük direnç çalışmaları, beslenme ve izleme başlıklarını birlikte ele alan rehber.',
+    image: submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz']!,
+  },
+];
+
+const neighbors = [
+  {
+    href: '/hormonal-gecis/perimenopoz',
+    title: 'Perimenopoz',
+    excerpt: 'Geçişin ilk evresi: hormonların dalgalandığı, adet düzeninin değiştiği yıllar.',
+  },
+  {
+    href: '/hormonal-gecis/menopoza-hazirlik',
+    title: 'Menopoza Hazırlık',
+    excerpt: 'Uyku, hareket ve beslenme başlıklarını birlikte düşünmek için hazırlık çerçevesi.',
+  },
+  {
+    href: '/hormonal-gecis/40-sonrasi',
+    title: '40 Sonrası Sağlık',
+    excerpt: 'Koruyucu adımlar, tarama testleri ve uzun vadeli sağlık planlaması.',
+  },
+];
 ---
 
 <SiteLayout
   title="Menopoz - Estranova"
-  description="Menopoz dönemini anlamak için temel rehberler ve seçilmiş makale bağlantıları."
+  description="Menopoz dönemini anlamak için temel rehberler: tanım, hormon tedavisi kararı ve kemik sağlığı gibi sık okunan başlıklar."
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
 
@@ -18,26 +62,109 @@ const hero = submenuHeroByRoute['/hormonal-gecis/menopoz']!;
     <SubmenuHero
       eyebrow="Hormonal Geçiş · Menopoz"
       title="Menopoz"
-      lede="Menopoz, östrojen ve progesteron düzenindeki kalıcı değişimle tanımlanır. Belirtiler ve uzun vadeli sağlık başlıkları kişiden kişiye farklılık gösterir; aşağıdaki içerikler ortak sorulara çerçeve sunar."
+      lede="Menopoz, son adetten sonra geriye dönük tanımlanan bir dönemdir; östrojen ve progesteron düzeninde kalıcı bir değişim yaşanır. Burada bulacağınız içerikler bu dönemi anlamayı, kendi sorularınıza çerçeve bulmayı kolaylaştırmak içindir."
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
-    <section class="bg-[#FDF8F0] px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-4xl">
-        <ul class="space-y-4 text-lg">
-          <li>
-            <a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Menopoz Nedir?</a>
-          </li>
-          <li>
-            <a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Menopozda Uyku Bozukluğu</a>
-          </li>
-          <li>
-            <a href="/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz" class="font-semibold text-[#6B2D3E] hover:underline">Kemik Erimesi: Önleme ve Egzersiz</a>
-          </li>
-        </ul>
 
-        <p class="mt-10">
-          <a href="/hormonal-gecis" class="font-semibold text-[#6B2D3E] hover:underline">← Hormonal Geçiş ana sayfa</a>
+    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-6xl">
+        <nav class="mb-8 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li>
+              <a href="/hormonal-gecis" class="font-medium text-[#6B2D3E] hover:underline">Hormonal Geçiş</a>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li class="font-medium text-[#2D2D2D]">Menopoz</li>
+          </ol>
+        </nav>
+
+        <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
+          <div>
+            <p class="mb-5 text-lg leading-relaxed text-[#2D2D2D]/82 md:text-xl">
+              Menopoz pek çoğumuz için “gün gelip biten bir şey” değil, fark ettiğimiz an geriye dönük adlandırdığımız
+              bir geçiş. Hormonal değişim sürse de günlük yaşamı yönetmenin yolları; kendi haritanızı çıkarmak ise her
+              zamankinden mümkün.
+            </p>
+            <p class="text-base leading-relaxed text-[#2D2D2D]/72">
+              Bu sayfa; menopozun tanımı, hormon tedavisi kararı ve uzun vadeli sağlık başlıklarına dair seçilmiş
+              rehberleri bir araya getirir. Bireysel değerlendirme ve tedavi kararı her zaman hekiminizle yapılır.
+            </p>
+          </div>
+
+          <aside
+            class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-sm md:p-8"
+            aria-labelledby="menopoz-ozet-baslik"
+          >
+            <h2 id="menopoz-ozet-baslik" class="mb-4 font-serif text-xl text-[#2D2D2D]">Bu evrede sık sorulanlar</h2>
+            <ul class="space-y-4 text-sm leading-relaxed text-[#2D2D2D]/78">
+              <li class="border-b border-[#6B2D3E]/10 pb-4">
+                <span class="block font-semibold text-[#2D2D2D]">Menopoz ne zaman tanımlanır?</span>
+                Son adetten sonra 12 ay geçtiğinde geriye dönük olarak; ortalama 45-55 yaş aralığında.
+              </li>
+              <li class="border-b border-[#6B2D3E]/10 pb-4">
+                <span class="block font-semibold text-[#2D2D2D]">Hormon tedavisi herkese uygun mu?</span>
+                Hayır; yaş, geçmiş öykü ve kişisel risk profiline göre değerlendirilir. Karar hekiminizle birlikte alınır.
+              </li>
+              <li>
+                <span class="block font-semibold text-[#2D2D2D]">Belirtiler ne kadar sürer?</span>
+                Kişiden kişiye değişir; bazıları için birkaç yıl, bazıları için daha uzun bir geçiş söz konusu olabilir.
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <SubmenuSection variant="white" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
+        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Menopoza dair seçilmiş rehberler</h2>
+        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+          Tanımdan tedavi kararına, kemik sağlığından günlük rutine; bu evreye dair sık sorulan başlıklar üzerine
+          yapılandırılmış okumalar.
+        </p>
+      </header>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {
+          articles.map((a) => (
+            <SubmenuLinkCard
+              href={a.href}
+              title={a.title}
+              excerpt={a.excerpt}
+              imageSrc={a.image.src}
+              imageAlt={a.image.alt}
+              cta="Rehberi oku"
+            />
+          ))
+        }
+      </div>
+    </SubmenuSection>
+
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Geçişin devamı</p>
+      <h2 class="mb-8 font-serif text-2xl md:text-3xl">Komşu evreler</h2>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {
+          neighbors.map((n) => (
+            <a
+              href={n.href}
+              class="group rounded-[26px] border border-[#6B2D3E]/12 bg-white p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm"
+            >
+              <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{n.title}</h3>
+              <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/72">{n.excerpt}</p>
+              <span class="text-sm font-semibold text-[#6B2D3E] group-hover:underline">Sayfaya git →</span>
+            </a>
+          ))
+        }
+      </div>
+    </SubmenuSection>
+
+    <section class="bg-white px-6 py-10">
+      <div class="mx-auto max-w-4xl rounded-[20px] border border-[#6B2D3E]/12 p-6 text-center">
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu sayfa genel bilgilendirme sunar; belirtileriniz için bireysel tıbbi değerlendirme, tanı veya tedavi yerine geçmez.
         </p>
       </div>
     </section>
