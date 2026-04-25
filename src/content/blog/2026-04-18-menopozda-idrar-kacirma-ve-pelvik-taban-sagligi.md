@@ -1,5 +1,5 @@
 ---
-title: "Menopozda Idrar Kacirma ve Pelvik Taban Sagligi"
+title: "Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı"
 description: "Gülerken, hapşırırken ya da merdiven inerken yaşanan o anlık kontrol kaybı — pek çoğumuz bunu kimseye söylemeden taşır. Menopoz geçişinde idrar kontrolündeki değişiklikler oldukça yaygın, ama nedenleri ve ne…"
 date: "2026-04-18"
 ---
@@ -97,21 +97,3 @@ Eğer bu belirtiler günlük yaşamını etkiliyor ya da aklında sorular biriki
 ---
 
 > **Önemli not:** Bu içerik yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Tıbbi tanı, tedavi önerisi ya da kişisel sağlık kararı yerine geçmez. Belirtilerinizle ilgili değerlendirme için bir sağlık profesyoneliyle görüşmeniz önerilir.
-
-Bu içerik yalnızca bilgilendirme amaçlıdır. Tıbbi tavsiye, teşhis veya tedavi yerine geçmez. Sağlık durumunuzla ilgili sorularınız için lütfen doktorunuza veya diğer nitelikli sağlık uzmanlarına danışın.
-
----
-
-## Yayın metası (SEO)
-
-- **Title tag:** Menopozda Idrar Kacirma ve Pelvik Taban Sagligi | Estranova
-- **Meta description:** Menopozda Idrar Kacirma ve Pelvik Taban Sagligi: Belki bir kahkaha sırasında fark ettin. Belki koşarken ya da ani bir öksürükte. Küçük, geçici, "önemli değil" d
-- **Slug:** `menopozda-idrar-kacirma-ve-pelvik-taban-sagligi`
-
-## İç bağlantı önerileri
-
-Otomatik skorlanan site ici oneriler:
-
-- [Menopoz nedir?](/hormonal-gecis/menopoz/menopoz-nedir) — Menopoz tanimi ve temel bilgiler.
-- [Tum makale arsivi](/article) — Benzer konularda derinlesmek icin genel giris.
-- [Perimenopozda beslenme ve yaslanma](/zamansiz-yasam/beslenme-yaslanma) — Beslenme ve hormonal gecis baglamini tamamlar.
