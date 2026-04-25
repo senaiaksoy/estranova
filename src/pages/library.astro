@@ -2,25 +2,22 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
-import ArticleCard from '../components/ArticleCard.astro';
-import { perimenopozArticles, menopozArticles, healthArticles } from '../data/articles';
-import { featuredArticles } from '../data/articles';
 
 const categories = [
   {
     title: 'Perimenopoz',
-    count: `${perimenopozArticles.length} yazı`,
-    summary: 'Hormonal geciş dönemindeki belirtiler, güncel yaklaşımlar ve günlük hayata uyarlanan bilgi notları.',
+    summary: 'Hormonal geçiş dönemindeki belirtiler, güncel yaklaşımlar ve günlük hayata uyarlanan bilgi notları.',
+    href: '/hormonal-gecis/perimenopoz',
   },
   {
     title: 'Menopoz',
-    count: `${menopozArticles.length} yazı`,
     summary: 'Menopoz sürecindeki değişiklikleri açıklayan, tıbbi dili sade tutan temel okuma rotası.',
+    href: '/hormonal-gecis/menopoz',
   },
   {
     title: '40+ Sağlık',
-    count: `${healthArticles.length} yazı`,
     summary: 'Kalp sağlığı, metabolik denge ve koruyucu yaşam alışkanlıkları için uzun vadeli yol haritası.',
+    href: '/hormonal-gecis/40-sonrasi',
   },
 ];
 
@@ -34,24 +31,22 @@ const startGuides = [
   {
     title: 'Adette düzensizlik ve belirsizlik hissi',
     description: 'Önce perimenopoz içerikleriyle adet örüntüsünü anlamlandırın, sonra semptom rehberine geçin.',
-    href: '/article/perimenopozda-dongu-duzensizlikleri',
-    cta: 'Adet rehberini oku',
+    href: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+    cta: 'Perimenopozu anla',
   },
   {
     title: 'Uyku, sıcak basması ve günlük enerji düşüşü',
     description: 'Menopozda uyku yönetimi içeriği ile başlayıp ilişkili başlıkları kademeli okuyun.',
-    href: '/article/menopozda-uyku-yonetimi',
+    href: '/zihin-denge/uyku-bozuklugu-menopoz',
     cta: 'Uyku içeriğine git',
   },
   {
     title: 'Uzun vadeli koruyucu sağlık planı',
-    description: 'Kalp ve kemik sağlığı başlıklarını birlikte okuyarak 40+ dönemi için temel bir çerçeve kurun.',
-    href: '/article/menopozda-kemik-sagligi',
+    description: 'Kemik sağlığı başlığını okuyarak 40+ dönemi için temel bir çerçeve kurun.',
+    href: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
     cta: 'Kemik sağlığına başla',
   },
 ] as const;
-
-const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary', 'secondary', 'charcoal'];
 ---
 
 <SiteLayout
@@ -73,16 +68,15 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-20">
-          {categories.map((category, index) => (
-            <article class="rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow">
-              <div class:list={[
-                'w-12 h-12 rounded-2xl mb-6',
-                index % 3 === 0 ? 'bg-primary/10' : index % 3 === 1 ? 'bg-secondary/10' : 'bg-charcoal/5',
-              ]}></div>
-              <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-3">{category.count}</p>
+          {categories.map((category) => (
+            <a
+              href={category.href}
+              class="block rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow transition hover:border-primary/30"
+            >
               <h2 class="text-3xl font-serif mb-4 leading-tight">{category.title}</h2>
-              <p class="text-charcoal/65 leading-relaxed text-sm">{category.summary}</p>
-            </article>
+              <p class="text-charcoal/65 leading-relaxed text-sm mb-5">{category.summary}</p>
+              <span class="text-sm font-semibold text-primary border-b border-primary/30 pb-1">Bölüme git</span>
+            </a>
           ))}
         </div>
 
@@ -96,12 +90,8 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {startGuides.map((guide, index) => (
+            {startGuides.map((guide) => (
               <article class="rounded-[28px] border border-primary/10 bg-surface-container p-6">
-                <div class:list={[
-                  'w-10 h-10 rounded-xl mb-5',
-                  index % 3 === 0 ? 'bg-primary/10' : index % 3 === 1 ? 'bg-secondary/10' : 'bg-charcoal/10',
-                ]}></div>
                 <h3 class="text-xl font-serif mb-3 leading-tight">{guide.title}</h3>
                 <p class="text-sm text-charcoal/65 leading-relaxed mb-5">{guide.description}</p>
                 <a href={guide.href} class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
@@ -112,48 +102,23 @@ const featuredAccents: Array<'primary' | 'secondary' | 'charcoal'> = ['primary',
           </div>
         </section>
 
-        <section class="grid grid-cols-1 lg:grid-cols-[1.6fr_0.9fr] gap-8 items-start">
-          <div>
-            <div class="flex items-end justify-between gap-6 mb-8">
-              <div>
-                <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">Seçili Okumalar</p>
-                <h2 class="text-3xl md:text-4xl font-serif">Başlangıç için üç temel okuma</h2>
-              </div>
-              <a href="/editoryal-politika/nasil-arastiriyoruz" class="hidden md:inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
-                İçerik metodolojisini inceleyin
-              </a>
-            </div>
-
-            <div class="space-y-6">
-              {featuredArticles.map((article, index) => (
-                <ArticleCard
-                  article={article}
-                  href={`/article/${article.slug}`}
-                  variant="featured"
-                  accent={featuredAccents[index % featuredAccents.length]}
-                />
-              ))}
-            </div>
+        <aside class="rounded-[36px] burgundy-gradient text-white p-8 md:p-10">
+          <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Okuma Rotası</p>
+          <h2 class="text-3xl md:text-4xl font-serif leading-tight mb-6">Bu kütüphane nasıl kullanılır?</h2>
+          <ul class="space-y-4 mb-8 max-w-3xl">
+            {readingPath.map((item) => (
+              <li class="flex gap-3 text-base leading-relaxed text-white/85">
+                <span class="mt-2 w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="pt-6 border-t border-white/15">
+            <a href="/symptoms" class="inline-flex text-sm font-semibold text-white border-b border-white/30 pb-1 hover:border-white">
+              Semptom rehberine geçin
+            </a>
           </div>
-
-          <aside class="rounded-[36px] burgundy-gradient text-white p-8 md:p-10">
-            <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Okuma Rotası</p>
-            <h2 class="text-3xl font-serif leading-tight mb-6">Bu kütüphane nasıl kullanılır?</h2>
-            <ul class="space-y-4 mb-8">
-              {readingPath.map((item) => (
-                <li class="flex gap-3 text-sm leading-relaxed text-white/80">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div class="pt-6 border-t border-white/10">
-              <a href="/symptoms" class="inline-flex text-sm font-semibold text-white border-b border-white/30 pb-1 hover:border-white">
-                Semptom rehberine geçin
-              </a>
-            </div>
-          </aside>
-        </section>
+        </aside>
       </div>
     </section>
   </main>
