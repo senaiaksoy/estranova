@@ -46,7 +46,6 @@ const editorialPicks = [
     tag: 'Vitaminler',
     title: 'D Vitamini ve Kemik Dengesi',
     body: '40 sonrası dönemde D vitamini takibi ve günlük yaşamla ilişkili temel noktalar.',
-    evidenceLabel: 'Güçlü',
     href: '/zamansiz-yasam/vitaminler',
     highlight: false,
     author: 'Berna Aksoy',
@@ -55,7 +54,6 @@ const editorialPicks = [
     tag: 'Deneysel Yaklaşımlar',
     title: 'Yeni Yaklaşımlar Üzerine Ne Biliyoruz?',
     body: 'Araştırma aşamasındaki yöntemlerin sınırları, beklenti yönetimi ve güvenli okuma notları.',
-    evidenceLabel: 'Gelişen',
     href: '/zamansiz-yasam/deneysel',
     highlight: true,
     author: 'Berna Aksoy',
@@ -64,7 +62,6 @@ const editorialPicks = [
     tag: 'Non-İnvaziv',
     title: 'Nefes ve Uyku Rutinleri',
     body: 'Uyku kalitesini destekleyebilecek düşük riskli alışkanlıkların bilimsel çerçevesi.',
-    evidenceLabel: 'Orta',
     href: '/zamansiz-yasam/non-invaziv',
     highlight: false,
     author: 'Berna Aksoy',
@@ -256,7 +253,7 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
           </p>
           <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne çıkanlar ve son yayınlar</h2>
           <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Editör seçkisi: zamansız yaşamdan üç öne çıkan başlık ve güncel yazıların tipografik dizilimi.
+            Editör seçkisi: zamansız yaşamdan üç öne çıkan başlık ve son yayınlar.
           </p>
         </header>
 
@@ -397,12 +394,12 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
           </p>
           <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bu sayıda yazanlar</h2>
           <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden beş ses. Her yazar, kendi bakış açısıyla
+            Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden yedi ses. Her yazar, kendi bakış açısıyla
             katkı sunuyor.
           </p>
         </header>
 
-        <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+        <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
           {
             writers.map((w) => (
               <li class="flex flex-col items-center text-center">
