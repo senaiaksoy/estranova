@@ -56,8 +56,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Akşam çalışma odasında açık ciltli kitap üzerine eğilmiş 50 yaş kadın, pirinç masa lambası sıcak ışık, ciltli kitap rafları bokeh; deneysel yaklaşımlara sakin bilimsel merakla yaklaşma teması',
   },
   '/zamansiz-yasam/beslenme-yaslanma': {
-    src: 'https://images.unsplash.com/photo-1490818356740-c47b7c5f4c1b?auto=format&fit=crop&q=80&w=1800&h=1000',
-    alt: 'Sağlıklı kahvalı tabağı; beslenme ve yaşlanma teması',
+    src: '/images/library/editorial/still-life-eggs-oil-walnuts.webp',
+    alt: 'Sabah ışığında krem keten üzerinde yumurtalar, ceviz, portakal dilimleri, maydanoz ve etiketsiz zeytinyağı; beslenme ve metabolik denge teması',
   },
   '/zamansiz-yasam/hareket-saglik-menopoz': {
     src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9b69b?auto=format&fit=crop&q=80&w=1800&h=1000',
