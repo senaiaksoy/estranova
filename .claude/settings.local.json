@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Read(//d/A-klasör/Estranova/**)",
+      "Bash(npx astro *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git mv *)",
+      "Bash(curl -s -o /dev/null -w \"perimenopozda-dongu: %{http_code}\\\\n\" http://localhost:4322/article/perimenopozda-dongu-duzensizlikleri)",
+      "Bash(curl -s -o /dev/null -w \"uyku-yonetimi: %{http_code}\\\\n\" http://localhost:4322/article/menopozda-uyku-yonetimi)",
+      "Bash(curl -s -o /dev/null -w \"kemik-sagligi: %{http_code}\\\\n\" http://localhost:4322/article/menopozda-kemik-sagligi)",
+      "Bash(git rm *)"
+    ]
+  }
+}
