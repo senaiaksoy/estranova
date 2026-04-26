@@ -1,18 +1,19 @@
 ﻿---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!;
+const hero = submenuHeroByRoute['/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz']!;
 
 const tocEntries = [
   { id: 'hormon-etkisi', label: 'Hormon Etkisi' },
@@ -34,7 +35,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'duygu-karaosmanoglu',
   publishedDate: '16 Mart 2026',
-  pathname: '/zihin-denge/ruh-hali-degisimleri-menopoz',
+  pathname: '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
   keywords: ['menopoz', 'perimenopoz', 'depresyon', 'anksiyete', 'duygudurum', 'ruh hali'],
@@ -80,7 +81,7 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             FSH ve LH artışı doğrudan ruh halini tek başına belirlemez; ancak hormonal çevrenin değiştiğini gösteren biyolojik işaretlerdir <Evidence level={4} />.
-            Perimenopozda dalgalanma daha belirginken, postmenopozda hormon düzeyleri görece sabit bir düzleme gelir <Evidence level={5} />.
+            Perimenopozda dalgalanma daha belirginken, menopoz sonrası dönemde hormon düzeyleri görece daha sabit bir düzleme gelir <Evidence level={5} />.
             Bu geçişin ritmini anlamak, "neden böyle hissediyorum" sorusuna daha açık bir yanıt verir.
           </p>
 
@@ -121,13 +122,13 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             Sosyal bağlar ve stres düzenleme teknikleri üçüncü ayaktır. Yakın çevreyle düzenli temas, nefes egzersizleri,
-            kısa farkındalık uygulamaları ve gerekirse yapılandırılmış psikolojik destek, kaygı döngüsünü kırmada yardımcı olur <Evidence from={4} to={5} />.
+            kısa farkındalık uygulamaları ve gerekirse planlı psikolojik destek, kaygı sarmalını kırmada yardımcı olur <Evidence from={4} to={5} />.
             Sabah gün ışığına çıkmak da sirkadiyen ritmi destekleyerek duygu durum üzerinde olumlu etki yaratabilir <Evidence level={4} />.
           </p>
 
           <h2 id="tibbi-tedavi">Tıbbi Tedavi Seçenekleri</h2>
           <p>
-            Belirtiler belirginse bunu yalnızca “benim karakterim değişti” diye yorumlamak zorunda değilsin; tıbbi seçenekler gündeme gelebilir. HRT, uygun kişilerde hem vazomotor belirtileri hem de ilişkili ruh hali şikayetlerini
+            Belirtiler belirginse bunu yalnızca “benim karakterim değişti” diye yorumlamak zorunda değilsin; tıbbi seçenekler gündeme gelebilir. HRT, uygun kişilerde hem sıcak basması-gece terlemesi belirtilerini hem de ilişkili ruh hali şikayetlerini
             hafifletebilir <Evidence level={5} />. Bu etkinlik özellikle perimenopoz döneminde daha görünür olabilir. Karar, kişisel risk profili ve öyküye göre verilir.
           </p>
           <p>
@@ -163,12 +164,12 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Menopoz geçişinde belirtiler dalgalı seyrettiği için günlük veya haftalık kısa bir kayıt sistemi oldukça yardımcı olabilir.
             Uyku süresi, gün içi enerji, kaygı düzeyi, sıcak basması sıklığı, hareket miktarı ve sosyal temas düzeyi gibi göstergeleri
-            birkaç dakikada not etmek, görünmeyen örüntüleri görünür hale getirir. Bu kayıtlar zamanla hangi günlerde daha zorlandığınızı,
+            birkaç dakikada not etmek, görünmeyen tekrarları görünür hale getirir. Bu kayıtlar zamanla hangi günlerde daha zorlandığınızı,
             hangi alışkanlıkların rahatlama sağladığını ve profesyonel destek gerektiğinde hangi başlıkların öncelikli olduğunu netleştirir.
           </p>
           <p>
             Özellikle duygusal yük yüksek olduğunda kişi çoğu zaman "her gün kötü" hissine kapılabilir.
-            Oysa yapılandırılmış kayıt, iyi günlerin de var olduğunu ve iyileşmenin küçük adımlarla ilerlediğini gösterir.
+            Oysa planlı kayıt, iyi günlerin de var olduğunu ve iyileşmenin küçük adımlarla ilerlediğini gösterir.
             Hekim veya terapist görüşmelerinde bu veriler, tedavi planının kişiye özgü ayarlanmasını kolaylaştırır.
           </p>
           <h2 id="cevresel-faktorler">Destek Planında Çevresel Faktörlerin Rolü</h2>
@@ -188,19 +189,19 @@ const articleSchemas = buildArticleSchemas({
           <h2>Kısa Hatırlatma</h2>
           <p>
             Duygusal zorlanma yaşandığında destek istemek süreci ağırlaştırmaz, aksine toparlanma süresini kısaltabilir.
-            Erken ve yapılandırılmış yaklaşım, işlev kaybını azaltır ve yaşam kalitesini korur.
+            Erken ve planlı yaklaşım, işlev kaybını azaltır ve yaşam kalitesini korur.
           </p>
         </ArticleProsePanel>
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku Bozukluğu ve Menopoz</a></li>
-            <li><a href="/hormonal-gecis/perimenopoz/perimenopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Perimenopoz Nedir?</a></li>
-            <li><a href="/zihin-denge/stres-yonetimi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Stres Yönetimi</a></li>
-            <li><a href="/zamansiz-yasam/hareket-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Hareket ve Sağlık</a></li>
-            <li><a href="/bilimsel-pencere/estrogen-biyolojisi-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Östrojen Biyolojisi</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+            '/zamansiz-yasam/hareket-saglik-menopoz',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

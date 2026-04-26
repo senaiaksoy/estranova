@@ -1,0 +1,77 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+
+const route = '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz';
+const hero = submenuHeroByRoute[route] ?? {
+  src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
+  alt: "Estranova editöryal görsel placeholder — submenu-heroes.ts altına özel görsel ekleyin.",
+};
+
+const posts = await getCollection('blog');
+const post = posts.find((p) => p.id === '2026-04-25-b12-vitamini-ve-menopoz');
+if (!post) {
+  throw new Error('Blog girdisi bulunamadi: 2026-04-25-b12-vitamini-ve-menopoz');
+}
+const { Content } = await render(post);
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value));
+const publishedDate = formatDate(post.data.date);
+---
+
+<SiteLayout
+  title={`${post.data.title} - Estranova`}
+  description={post.data.description}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title={post.data.title}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Estranova Editör Ekibi</p>
+            <p class="text-xl font-semibold text-[#2D2D2D]">Tıbbi inceleme: Doç. Dr. Senai Aksoy</p>
+            <p class="text-[#2D2D2D]/70">40+ kadın sağlığı odaklı editöryal içerik</p>
+            <p class="mt-2 text-sm text-[#2D2D2D]/65">Yayın tarihi: {publishedDate}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-[#2D2D2D]/80">{post.data.description}</p>
+      </section>
+
+      <ArticleProsePanel>
+        <Content />
+      </ArticleProsePanel>
+
+      <section class="mt-14 rounded-[28px] border border-dashed border-[#6B2D3E]/30 bg-white/60 p-6 text-sm text-[#2D2D2D]/70 ring-1 ring-[#6B2D3E]/10 md:p-8">
+        <p>
+          <strong>Önemli not:</strong> Bu içerik yalnızca genel bilgilendirme amacıyla hazırlanmıştır.
+          Tıbbi tavsiye, tanı veya tedavi yerine geçmez. Sağlık durumunuzla ilgili kararlar için lütfen
+          bir sağlık profesyoneliyle görüşün.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

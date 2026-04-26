@@ -6,38 +6,39 @@ import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
 import SubmenuSection from '../../components/site/SubmenuSection.astro';
 import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
+import CategoryRelatedLinks from '../../components/site/CategoryRelatedLinks.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/zihin-denge']!;
+const __hubPath = '/zihin-denge';
+const epigraph = subHubEpigraphs[__hubPath];
 
 const pillars = [
   {
     step: '01',
     title: 'Uyku & Dinlenme',
-    excerpt: 'Uyku düzenini destekleyen alışkanlıklar ve dinlenme kalitesi üzerine rehber içerikler.',
-    href: '/zihin-denge/uyku-bozuklugu-menopoz',
-    image: submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!,
+    excerpt: 'Gece terlemesi, uyku bölünmesi ve uyku kalitesi — menopozda uykunun neden zorlaştığı ve nasıl desteklenebileceği üzerine sade rehberler.',
+    href: '/zihin-denge/uyku-dinlenme',
+    image: submenuHeroByRoute['/zihin-denge/uyku-dinlenme']!,
   },
   {
     step: '02',
-    title: 'Stres Yönetimi',
-    excerpt: 'Gündelik stres yükünü azaltmaya yardımcı bilim temelli yöntemlerin sade özeti.',
-    href: '/zihin-denge/stres-yonetimi-menopoz',
-    image: submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!,
+    title: 'Duygusal Denge',
+    excerpt: 'Ruh halinde dalgalanma, kaygı, ani sinirlenme — menopoz hormonlarının beyin kimyasıyla konuştuğu yerde mekanizma ve günlük stratejiler.',
+    href: '/zihin-denge/duygusal-denge',
+    image: submenuHeroByRoute['/zihin-denge/duygusal-denge']!,
   },
   {
     step: '03',
-    title: 'Beyin Sağlığı & Hafıza',
-    excerpt: 'Odaklanma, unutkanlık ve bilişsel esenlik başlıklarını bütüncül şekilde ele alır.',
-    href: '/zihin-denge/bellek-odaklanma-menopoz',
-    image: submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!,
-  },
-  {
-    step: '04',
-    title: 'Ruh Hali & Duygusal Dalgalanmalar',
-    excerpt: 'Duygu durum değişimlerini anlamaya ve dengelemeye yardımcı destekleyici içerikler.',
-    href: '/zihin-denge/ruh-hali-degisimleri-menopoz',
-    image: submenuHeroByRoute['/zihin-denge/ruh-hali-degisimleri-menopoz']!,
+    title: 'Bilişsel Sağlık',
+    excerpt: 'Beyin sisi, unutkanlık ve dikkat dağılması; ne kadarı menopozun normal seyri, ne kadarı izlenmeyi gerektirir?',
+    href: '/zihin-denge/bilissel-saglik',
+    image: submenuHeroByRoute['/zihin-denge/bilissel-saglik']!,
   },
 ];
 ---
@@ -48,6 +49,8 @@ const pillars = [
 >
   <SiteNavbar currentPath="/zihin-denge" />
 
+  <ChapterMasthead variant="section" chapter="Zihin & Denge" />
+
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
       eyebrow="Kategori"
@@ -57,7 +60,7 @@ const pillars = [
       imageAlt={hero.alt}
     />
     <SubmenuSection variant="cream" borderedTop={true}>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {
           pillars.map((p) => (
             <SubmenuLinkCard
@@ -73,6 +76,8 @@ const pillars = [
       </div>
     </SubmenuSection>
 
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
@@ -87,23 +92,35 @@ const pillars = [
           tag="Uyku"
           title="Gece Rutini Oluşturmak"
           body="Uyku kalitesini artırmaya yardımcı, uygulanabilir ve sakin bir akşam planı."
-          href="/zihin-denge/uyku-bozuklugu-menopoz"
-        />
+          href="/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           highlight={true}
           tag="Stres"
           title="Gün İçinde Nefes Araları"
           body="Kısa nefes ve farkındalık molalarıyla zihinsel yükü düzenlemeye yardımcı notlar."
-          href="/zihin-denge/stres-yonetimi-menopoz"
-        />
+          href="/zihin-denge/duygusal-denge/stres-yonetimi-menopoz"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           tag="Ruh Hali"
           title="Duygusal Dalgalanmaları İzlemek"
           body="Duygu günlüğüyle tetikleyicileri fark etmeyi kolaylaştıran başlangıç yaklaşımı."
-          href="/zihin-denge/ruh-hali-degisimleri-menopoz"
-        />
+          href="/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
+        </SubmenuSpotlightCard>
       </div>
     </SubmenuSection>
+
+    <SubmenuSection variant="sand" borderedTop={true}>
+      <CategoryRelatedLinks exclude="/zihin-denge" />
+    </SubmenuSection>
+
+    <ChapterCompass nextHref="/zihin-denge/uyku-dinlenme" nextNumber="01" nextChapter="Uyku & Dinlenme" nextParent="Zihin & Denge" />
   </main>
 
   <SiteFooter />

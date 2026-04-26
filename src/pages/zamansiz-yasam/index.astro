@@ -6,10 +6,17 @@ import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
 import SubmenuSection from '../../components/site/SubmenuSection.astro';
 import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
+import CategoryRelatedLinks from '../../components/site/CategoryRelatedLinks.astro';
 import Evidence from '../../components/site/Evidence.astro';
+import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam']!;
+const __hubPath = '/zamansiz-yasam';
+const epigraph = subHubEpigraphs[__hubPath];
 
 const pillars = [
   {
@@ -58,6 +65,8 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
 >
   <SiteNavbar currentPath="/zamansiz-yasam" />
 
+  <ChapterMasthead variant="section" chapter="Zamansız Yaşam" />
+
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
       eyebrow="Kategori"
@@ -83,6 +92,8 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
         }
       </div>
     </SubmenuSection>
+
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={true}>
       <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-[#F5EDE0] p-8 shadow-sm ring-1 ring-black/5 md:p-12">
@@ -184,6 +195,12 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
         </SubmenuSpotlightCard>
       </div>
     </SubmenuSection>
+
+    <SubmenuSection variant="sand" borderedTop={true}>
+      <CategoryRelatedLinks exclude="/zamansiz-yasam" />
+    </SubmenuSection>
+
+    <ChapterCompass nextHref="/zamansiz-yasam/vitaminler" nextNumber="01" nextChapter="Vitaminler" nextParent="Zamansız Yaşam" />
   </main>
 
   <SiteFooter />

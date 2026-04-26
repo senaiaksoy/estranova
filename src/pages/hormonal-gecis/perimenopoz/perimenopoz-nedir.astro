@@ -7,6 +7,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
@@ -57,7 +58,7 @@ const articleSchemas = buildArticleSchemas({
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Perimenopoz, menopoza giden 4-10 yıllık geçiş dönemidir. Hormon dalgalanmaları adet düzensizliğine,
-            sıcak basması ve ruh hali değişimlerine neden olabilir. Erken farkındalık ve yapılandırılmış bilgi,
+            sıcak basması ve ruh hali değişimlerine neden olabilir. Erken farkındalık ve planlı bilgi,
             bu süreçte kendinizi daha güvende hissetmenize yardımcı olur.
           </p>
         </section>
@@ -90,7 +91,7 @@ const articleSchemas = buildArticleSchemas({
           <h2 id="yaygin-belirtiler">Yaygın Belirtiler Nelerdir?</h2>
           <p>
             Perimenopoz belirtileri geniş bir yelpazede görülebilir; senin yaşadığın şey bir arkadaşınınkinden çok farklı olabilir. En sık bildirilen bulgular arasında adet düzensizliği, sıcak basması,
-            gece terlemesi, uyku kesintileri ve ruh hali dalgalanmaları bulunur. Sıcak basması ve vazomotor belirtiler için kanıt seviyesi
+            gece terlemesi, uyku kesintileri ve ruh hali dalgalanmaları bulunur. Sıcak basması-gece terlemesi belirtileri için kanıt seviyesi
             güçlüdür <Evidence level={5} />.
           </p>
           <p>
@@ -113,8 +114,8 @@ const articleSchemas = buildArticleSchemas({
             olarak menopoz tanımını belirler.
           </p>
           <p>
-            Son adetten sonraki ilk 12 ay tamamlandığında postmenopoz dönemine geçilir. Bu aşamada bazı belirtiler hafiflerken bazı başlıklar
-            (örneğin kemik sağlığı, kardiyometabolik risk, vajinal kuruluk) daha planlı takip gerektirebilir. Bu nedenle geçiş yalnızca semptom
+            Son adetten sonraki ilk 12 ay tamamlandığında menopoz sonrası döneme geçilir. Bu aşamada bazı belirtiler hafiflerken bazı başlıklar
+            (örneğin kemik sağlığı, kalp ve metabolizma riski, vajinal kuruluk) daha planlı takip gerektirebilir. Bu nedenle geçiş yalnızca semptom
             yönetimi değil, uzun dönem sağlık planlaması açısından da önemlidir.
           </p>
 
@@ -147,16 +148,16 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/hormonal-gecis/menopoza-hazirlik" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoza Hazırlık</a></li>
-            <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz</a></li>
-            <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri ve Menopoz</a></li>
-            <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku Bozukluğu</a></li>
-            <li><a href="/beden-yakinlik/menopozda-cilt-degisimleri" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Cilt Değişimleri</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/menopoza-hazirlik',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

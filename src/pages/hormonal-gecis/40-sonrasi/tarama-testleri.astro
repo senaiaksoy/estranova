@@ -5,6 +5,7 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tarama-testleri']!;
@@ -42,19 +43,13 @@ const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tarama-testleri']!;
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-12 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-4 font-serif text-2xl">İlgili İçerikler</h2>
-          <ul class="space-y-3 text-lg">
-            <li>
-              <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline"
-                >40 Yaşından Sonra Kemik Sağlığı</a
-              >
-            </li>
-            <li>
-              <a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">40 Sonrası bölüm özeti</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/hormonal-gecis/40-sonrasi',
+          ]}
+        />
 
         <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">

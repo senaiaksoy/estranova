@@ -1,0 +1,287 @@
+---
+/**
+ * SymptomNavigation — anasayfa "Belirti Bazlı Navigasyon" bölümü.
+ *
+ * Bento grid (12 sütun): 2 büyük öne çıkan kart (col-span 6) +
+ * 6 küçük kart (col-span 4). Her kart: editöryel still-life
+ * fotoğraf bleed + italic serif başlık + sans açıklama +
+ * italic serif caption + kanıt chip'i + makale sayısı.
+ *
+ * Fotoğraflar: public/images/symptoms/*.webp
+ */
+
+interface Symptom {
+  slug: string;
+  image: string;
+  alt: string;
+  title: string;
+  desc: string;
+  caption: string;
+  evidence: string;
+  articleCount: number;
+  href: string;
+  featured?: boolean;
+}
+
+const symptoms: Symptom[] = [
+  {
+    slug: 'sicak-basmasi',
+    image: '/images/symptoms/sicak-basmasi.webp',
+    alt: 'Sade ahşap zeminde buruşmuş krem keten çarşaf, üstünde küçük bir pirinç termometre, pencereden gelen yumuşak ışık.',
+    title: 'Sıcak basması',
+    desc: 'Aniden yükselen ısı, terleme ve kalp atışı — gece ya da gündüz, dakikalar içinde gelip geçen kısa dalgalar.',
+    caption: 'Geceyi ısı haritasıyla okumak.',
+    evidence: 'Kanıt 4–5',
+    articleCount: 8,
+    href: '/symptoms?q=sicak-basmasi',
+    featured: true,
+  },
+  {
+    slug: 'uyku-bozuklugu',
+    image: '/images/symptoms/uyku-bozuklugu.webp',
+    alt: 'Ahşap masada krem yastık ve buğulu pirinç çalar saat, arka planda pencere.',
+    title: 'Uyku bozukluğu',
+    desc: 'Uykuya dalmakta zorlanmak, gece sık uyanmak ve sabah yorgun kalkmak — ısı dalgalarıyla iç içe ya da kendi başına.',
+    caption: 'Tutulmuş ay, parçalı geceler.',
+    evidence: 'Kanıt 4',
+    articleCount: 6,
+    href: '/symptoms?q=uyku-bozuklugu',
+    featured: true,
+  },
+  {
+    slug: 'ruh-hali',
+    image: '/images/symptoms/ruh-hali.webp',
+    alt: 'Eski pencere kenarında yarısı içilmiş porselen çay fincanı, perde gölgesi.',
+    title: 'Ruh hali değişimi',
+    desc: 'Hormonal dalgalanmaların ruh halini, sabrı ve günlük tepkilerini sessizce yeniden ayarladığı bir dönem.',
+    caption: 'Östrojen yankıyı kaybedince.',
+    evidence: 'Kanıt 3–4',
+    articleCount: 5,
+    href: '/symptoms?q=ruh-hali',
+  },
+  {
+    slug: 'hafiza',
+    image: '/images/symptoms/hafiza.webp',
+    alt: 'Sararmış mektup kağıdı üstünde preslenmiş kuru menekşe çiçeği.',
+    title: 'Hafıza sorunları',
+    desc: 'Sözcüklerin ucundan kayması, isim hatırlama güçlüğü ve dikkatin sık dağılması.',
+    caption: 'Sözcüklerin çıktığı eşikler.',
+    evidence: 'Kanıt 3',
+    articleCount: 4,
+    href: '/symptoms?q=hafiza',
+  },
+  {
+    slug: 'cilt',
+    image: '/images/symptoms/cilt.webp',
+    alt: 'Kıvrımlı krem satin kumaş yakın çekim, ışık-gölge oyunu.',
+    title: 'Cilt değişimleri',
+    desc: 'Kuruluk, incelme ve elastikiyet kaybı — kolajen ile östrojen arasındaki sessiz ilişki.',
+    caption: 'Kıvrımın hafızası.',
+    evidence: 'Kanıt 4',
+    articleCount: 5,
+    href: '/symptoms?q=cilt',
+  },
+  {
+    slug: 'eklem',
+    image: '/images/symptoms/eklem.webp',
+    alt: 'Eski meşe ağacında koyu bir budak, halkalı doku.',
+    title: 'Eklem ağrısı',
+    desc: 'Sabah tutukluğu, parmak ve diz eklemlerinde hassasiyet — vücudun yaydığı küçük bir haber.',
+    caption: 'Eklemden yayılan haber.',
+    evidence: 'Kanıt 3',
+    articleCount: 3,
+    href: '/symptoms?q=eklem',
+  },
+  {
+    slug: 'kilo',
+    image: '/images/symptoms/kilo.webp',
+    alt: 'Soğuk mermer yüzeyde kısmen açılmış olgun bir nar.',
+    title: 'Kilo artışı',
+    desc: 'Aynı yaşam, değişen tartı — metabolizma, uyku ve bileşim arasındaki üçlü bağ.',
+    caption: 'Terazi yeniden ayar arıyor.',
+    evidence: 'Kanıt 3–4',
+    articleCount: 4,
+    href: '/symptoms?q=kilo',
+  },
+  {
+    slug: 'libido',
+    image: '/images/symptoms/libido.webp',
+    alt: 'Eski ahşap masada iki uzun krem mum: biri yanmış ve tütüyor, diğeri yanmamış.',
+    title: 'Libido azalması',
+    desc: 'Arzunun ritmi değişebilir — beden, duygu ve ilişki arasındaki ince denge.',
+    caption: 'Aynı odada iki ayrı alev.',
+    evidence: 'Karma kanıt',
+    articleCount: 3,
+    href: '/symptoms?q=libido',
+  },
+];
+
+const featured = symptoms.filter((s) => s.featured);
+const rest = symptoms.filter((s) => !s.featured);
+---
+
+<!--
+  Duotone SVG filter — bordo (#4f171c) shadow → altın (#C9A96E) highlight.
+  Gerçek duotone: önce luminance-preserving grayscale, sonra renk eğrisi.
+  RGB normalizasyonu: 79/255=0.31  23/255=0.09  28/255=0.11   →  201/255=0.79  169/255=0.66  110/255=0.43
+-->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
+  <defs>
+    <filter id="duotone-estranova" color-interpolation-filters="sRGB">
+      <feColorMatrix
+        type="matrix"
+        values="0.299 0.587 0.114 0 0
+                0.299 0.587 0.114 0 0
+                0.299 0.587 0.114 0 0
+                0     0     0     1 0"
+      ></feColorMatrix>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.31 0.79"></feFuncR>
+        <feFuncG type="table" tableValues="0.09 0.66"></feFuncG>
+        <feFuncB type="table" tableValues="0.11 0.43"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+
+<section class="border-t border-[#6B2D3E]/10 bg-gradient-to-b from-[#FDF8F0] to-[#F8EED8] px-6 py-16 md:py-20">
+  <div class="mx-auto max-w-6xl">
+    <!-- Section header -->
+    <header class="mb-10 max-w-3xl">
+      <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
+        <span class="font-serif font-normal tabular-nums text-[#C9A96E]">04</span>
+        <span class="mx-2 text-[#C9A96E]">—</span>
+        Belirti Bazlı Navigasyon
+      </p>
+      <h2 class="mb-4 font-serif text-4xl italic leading-tight text-[#4f171c] md:text-5xl">
+        Bugün ne hissediyorsun?
+      </h2>
+      <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+        Bir belirtiden başlayıp oradan ilerlemek çoğumuz için en doğal yol.
+        Vücudunun en çok hangisiyle konuştuğunu seç, biz oradan devam edelim.
+      </p>
+    </header>
+
+    <!-- "Tüm belirtiler" pill, sağa hizalı filtre konumu -->
+    <div class="mb-8 flex justify-end">
+      <a
+        href="/symptoms"
+        class="inline-flex items-center gap-2 rounded-full border border-[#6B2D3E]/25 bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-[#6B2D3E] shadow-sm transition hover:bg-[#6B2D3E]/5 focus:outline-none focus:ring-2 focus:ring-[#6B2D3E]/30"
+      >
+        <span>Tüm belirtiler</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- Bento grid: 2 large + 6 small -->
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-12 md:gap-6">
+      {featured.map((s) => (
+        <a
+          href={s.href}
+          class="group relative col-span-1 flex flex-col overflow-hidden rounded-[24px] bg-white shadow-[0_12px_32px_-20px_rgba(44,22,28,0.18)] ring-1 ring-[#6B2D3E]/8 transition hover:shadow-[0_20px_44px_-22px_rgba(44,22,28,0.28)] hover:ring-[#6B2D3E]/18 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/40 md:col-span-6"
+          aria-label={`${s.title} — ${s.articleCount} makale`}
+        >
+          <div class="relative aspect-[3/2] overflow-hidden">
+            <img
+              src={s.image}
+              alt={s.alt}
+              loading="lazy"
+              decoding="async"
+              class="symptom-photo h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+            />
+            <span class="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-[#C9A96E]/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#3a1216] shadow-sm">
+              <span class="inline-block h-1.5 w-1.5 rounded-full bg-[#3a1216]"></span>
+              {s.evidence}
+            </span>
+          </div>
+          <div class="flex flex-1 flex-col p-6 md:p-7">
+            <h3 class="mb-2 font-serif text-2xl italic leading-tight text-[#4f171c] md:text-3xl">
+              {s.title}
+            </h3>
+            <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/80 md:text-base">
+              {s.desc}
+            </p>
+            <p class="mb-5 border-t border-dashed border-[#C9A96E]/45 pt-3 font-serif text-xs italic text-[#775a19] md:text-sm">
+              {s.caption}
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#6B2D3E]/80">
+                <span class="font-serif text-base italic tabular-nums text-[#C9A96E]">{s.articleCount}</span>
+                <span class="ml-1.5">makale</span>
+              </span>
+              <span
+                class="text-[#C9A96E] transition group-hover:translate-x-1"
+                aria-hidden="true"
+              >→</span>
+            </div>
+          </div>
+        </a>
+      ))}
+
+      {rest.map((s) => (
+        <a
+          href={s.href}
+          class="group relative col-span-1 flex flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_8px_24px_-16px_rgba(44,22,28,0.16)] ring-1 ring-[#6B2D3E]/8 transition hover:shadow-[0_14px_32px_-18px_rgba(44,22,28,0.24)] hover:ring-[#6B2D3E]/18 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/40 md:col-span-4"
+          aria-label={`${s.title} — ${s.articleCount} makale`}
+        >
+          <div class="relative aspect-[3/2] overflow-hidden">
+            <img
+              src={s.image}
+              alt={s.alt}
+              loading="lazy"
+              decoding="async"
+              class="symptom-photo h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+            />
+            <span class="absolute right-2.5 top-2.5 inline-flex items-center gap-1.5 rounded-full bg-[#C9A96E]/95 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.16em] text-[#3a1216] shadow-sm">
+              <span class="inline-block h-1 w-1 rounded-full bg-[#3a1216]"></span>
+              {s.evidence}
+            </span>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="mb-2 font-serif text-xl italic leading-tight text-[#4f171c]">
+              {s.title}
+            </h3>
+            <p class="mb-3 text-sm leading-relaxed text-[#2D2D2D]/80">
+              {s.desc}
+            </p>
+            <p class="mb-4 border-t border-dashed border-[#C9A96E]/45 pt-2.5 font-serif text-[11px] italic text-[#775a19]">
+              {s.caption}
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+              <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-[#6B2D3E]/80">
+                <span class="font-serif text-sm italic tabular-nums text-[#C9A96E]">{s.articleCount}</span>
+                <span class="ml-1.5">makale</span>
+              </span>
+              <span
+                class="text-[#C9A96E] transition group-hover:translate-x-1"
+                aria-hidden="true"
+              >→</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .symptom-photo {
+    filter: url('#duotone-estranova');
+    transition:
+      filter 600ms ease,
+      transform 700ms ease;
+  }
+
+  /* Hover'da fotoğraf orijinal renklerine döner — kart "canlanır" */
+  .group:hover .symptom-photo,
+  .group:focus-visible .symptom-photo {
+    filter: none;
+  }
+
+  /* Reduced motion — geçişleri kapat */
+  @media (prefers-reduced-motion: reduce) {
+    .symptom-photo {
+      transition: none;
+    }
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+/**
+ * Marginalia rayının tek bir notu.
+ * label: küçük üst etiket (Manrope tracked, mustard)
+ * value: standart metin
+ * emphasized: italic Newsreader bordo (istatistik, vurgu için)
+ */
+interface Props {
+  label: string;
+  value?: string;
+  emphasized?: string;
+}
+
+const { label, value, emphasized } = Astro.props;
+---
+
+<div>
+  <p class="mb-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-[#775a19]">{label}</p>
+  {emphasized && (
+    <p class="font-serif italic text-xl leading-snug text-[#4f171c] md:text-[1.4rem]">
+      {emphasized}
+    </p>
+  )}
+  {value && (
+    <p class="text-sm leading-relaxed text-[#2D2D2D]/75">{value}</p>
+  )}
+  <slot />
+</div>

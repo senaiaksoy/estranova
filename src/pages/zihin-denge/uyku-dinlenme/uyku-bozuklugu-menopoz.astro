@@ -1,18 +1,19 @@
 ﻿---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/uyku-bozuklugu-menopoz']!;
+const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz']!;
 
 const tocEntries = [
   { id: 'uyku-mimarisi', label: 'Uyku Mimarisi' },
@@ -32,7 +33,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '12 Mart 2026',
-  pathname: '/zihin-denge/uyku-bozuklugu-menopoz',
+  pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
   keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],
@@ -85,7 +86,7 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="neden-bozulur">Menopozda Uyku Neden Bozulur?</h2>
         <p>
-          Gece ansızın sıcak basmasıyla uyanıyorsan, yalnız değilsin; en sık nedenlerden biri gece ortaya çıkan vazomotor belirtilerdir: sıcak basması ve terleme <Evidence level={5} />.
+          Gece ansızın sıcak basmasıyla uyanıyorsan, yalnız değilsin; en sık nedenlerden biri gece ortaya çıkan sıcak basması-terleme belirtileridir <Evidence level={5} />.
           Vücut ısısındaki ani değişimler uyku bütünlüğünü bozarak sık uyanmalara yol açabilir.
         </p>
         <p>
@@ -143,34 +144,16 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <section
-        class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
-      >
-        <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-        <ul class="space-y-3">
-          <li>
-            <a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline"
-              >Zihin & Denge / Ruh Hali Değişimleri</a
-            >
-          </li>
-          <li>
-            <a href="/hormonal-gecis/perimenopoz/perimenopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline"
-              >Hormonal Geçiş / Perimenopoz Nedir?</a
-            >
-          </li>
-          <li>
-            <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline"
-              >Zamansız Yaşam / 40 Sonrası Kemik Sağlığı</a
-            >
-          </li>
-          <li>
-            <a href="/beden-yakinlik/menopozda-cilt-degisimleri" class="font-semibold text-[#6B2D3E] hover:underline"
-              >Beden & Yakınlık / Menopozda Cilt Değişimleri</a
-            >
-          </li>
-          <li><a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">Kütüphane / Uyku ve menopoz içerikleri</a></li>
-        </ul>
-      </section>
+      <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+            '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+            '/library',
+          ]}
+        />
 
       <section
         class="rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"

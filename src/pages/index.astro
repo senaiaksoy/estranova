@@ -3,7 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import HomeHero from '../components/site/HomeHero.astro';
-import SymptomChipLink from '../components/site/SymptomChipLink.astro';
+import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 import { writers } from '../data/writers';
@@ -78,11 +78,11 @@ const editorialRecent = [
   },
   {
     dateLine: '11 NİSAN 2026 · BEDEN & YAKINLIK',
-    title: 'Yakınlıkta Konforu Etkileyen Değişimler',
+    title: 'Cinsellikte Konforu Etkileyen Değişimler',
     excerpt: 'Beden sinyallerini tanımaya ve iletişimi güçlendirmeye odaklanan sade bir içerik özeti.',
     href: '/library',
     thumbnailSrc: submenuHeroByRoute['/beden-yakinlik'].src,
-    thumbnailAlt: 'Yakınlıkta Konforu Etkileyen Değişimler',
+    thumbnailAlt: 'Cinsellikte Konforu Etkileyen Değişimler',
     author: 'Berna Aksoy',
   },
   {
@@ -103,17 +103,6 @@ const editorialRecent = [
     thumbnailAlt: '40 Sonrası Hareket Planı Oluşturmak',
     author: 'Alara Baykent',
   },
-];
-
-const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'bone' | 'brain' | 'sparkles' | 'leaf' }[] = [
-  { label: 'Sıcak Basması', icon: 'flame' },
-  { label: 'Uyku Bozukluğu', icon: 'moon' },
-  { label: 'Ruh Hali Değişimi', icon: 'heart' },
-  { label: 'Kilo Artışı', icon: 'scale' },
-  { label: 'Eklem Ağrısı', icon: 'bone' },
-  { label: 'Hafıza Sorunları', icon: 'brain' },
-  { label: 'Cilt Değişimleri', icon: 'sparkles' },
-  { label: 'Libido Azalması', icon: 'leaf' },
 ];
 
 ---
@@ -322,34 +311,7 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
       </div>
     </section>
 
-    <section class="border-t border-[#6B2D3E]/10 bg-gradient-to-b from-[#FDF8F0] to-[#F8EED8] px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <header class="mb-8 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">
-            <span class="font-serif font-normal tabular-nums text-[#C9A96E]">04</span>
-            <span class="mx-2 text-[#C9A96E]">—</span>
-            Belirti Bazlı Navigasyon
-          </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bugün Ne Hissediyorsun?</h2>
-          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Bir belirtiden başlayıp oradan ilerlemek çoğumuz için en doğal yol. Vücudunun en çok hangisiyle konuştuğunu seç, biz oradan devam edelim.
-          </p>
-        </header>
-
-        <div class="mb-6 flex flex-wrap gap-3">
-          <a
-            href="/symptoms"
-            class="inline-flex items-center rounded-full border border-[#6B2D3E]/25 bg-white px-5 py-2.5 text-sm font-semibold text-[#6B2D3E] shadow-sm transition hover:bg-[#6B2D3E]/5 focus:outline-none focus:ring-2 focus:ring-[#6B2D3E]/30"
-          >
-            Tüm belirtiler
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {symptoms.map((s) => <SymptomChipLink href="/symptoms" label={s.label} icon={s.icon} />)}
-        </div>
-      </div>
-    </section>
+    <SymptomNavigation />
 
     <section class="border-t border-b border-[#6B2D3E]/12 bg-white px-6 py-10 md:py-12">
       <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
@@ -394,6 +356,14 @@ const symptoms: { label: string; icon: 'flame' | 'moon' | 'heart' | 'scale' | 'b
           <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
             Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden yedi ses. Her yazar, kendi bakış açısıyla
             katkı sunuyor.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-[#2D2D2D]/75">
+            Estranova bir “kişisel vitrin” ya da “influencer alanı” değil. Burada yazmak; deneyimi parlatmak değil, anlamlandırmak demek.
+            <a
+              href="/yayin-kurulu#neden-yaziyorlar"
+              class="ml-1 font-semibold text-[#6B2D3E] underline decoration-[#6B2D3E]/40 underline-offset-4 transition hover:decoration-[#6B2D3E]"
+              >Neden burada yazıyorlar? →</a
+            >
           </p>
         </header>
 

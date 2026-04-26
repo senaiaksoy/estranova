@@ -15,6 +15,10 @@ export const homePageHero: SubmenuHeroImage = {
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
+  '/manifesto': {
+    src: '/images/library/editorial/introspective-clasped-hands.webp',
+    alt: 'Sabah ışığında ahşap masada birleşmiş eller ve açık not defteri; ortak masa, sessiz konuşma ve paylaşılmış deneyim teması',
+  },
   '/hormonal-gecis': {
     src: '/images/heroes/hormonal-gecis.webp',
     alt: 'Hormonal geçiş döneminde sakin ve güvenilir bilgi teması; editöryal iç mekânda orta yaş kadın',
@@ -30,6 +34,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/hormonal-gecis/menopoz': {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Doğal pencere ışığında gri saçlı kadın portresi; sakin ve kendinden emin bakış',
+  },
+  '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi': {
+    src: '/images/library/editorial/journey-menopoz.webp',
+    alt: 'Akşam saatlerinde sakin bir iç mekânda elinde ince bir şal tutan 50+ kadın; ısı dalgalanmalarıyla baş etme ve konfor arayışı teması',
   },
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
     src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
@@ -79,19 +87,31 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/heroes/beden-yakinlik.webp',
     alt: 'Pencere ışığında kendi omzuna nazikçe dokunan 40+ kadın; bedenle bağlantı ve öz-şefkat teması',
   },
-  '/beden-yakinlik/menopozda-cilt-degisimleri': {
+  '/beden-yakinlik/cilt-gorunum': {
+    src: '/images/library/editorial/by-cilt-degisimleri.webp',
+    alt: 'Doğal cilt dokusu, ince çizgiler, retuşsuz editöryal yaklaşım — cilt ve görünüm teması',
+  },
+  '/beden-yakinlik/cinsel-saglik': {
+    src: '/images/library/editorial/by-vajinal-saglik.webp',
+    alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su ve katlı pamuklu bez; cinsel sağlık ve özenli bakım teması',
+  },
+  '/beden-yakinlik/pelvik-taban': {
+    src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
+    alt: 'Pencere ışığında ayakta duran 46 yaş kadın, eli karın-alt bölgesinde nazik farkındalık jesti; pelvik taban farkındalığı teması',
+  },
+  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
     alt: 'Pencere ışığında kendi cildiyle tanışık duran 52 yaş kadın; doğal cilt dokusu, ince çizgiler, retuşsuz editöryal yaklaşım',
   },
-  '/beden-yakinlik/vajinal-saglik-menopoz': {
+  '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
     alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su, katlı pamuklu bez ve açık bir defter; günlük özenli bakım teması',
   },
-  '/beden-yakinlik/yakinlik-agrisi-menopoz': {
+  '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz': {
     src: '/images/library/editorial/introspective-burgundy-accent.webp',
     alt: 'Cream keten gömlekli 40+ kadın, eli boğazında nazik öz-tutuş; bordo vazo arka planda; güvende hissetme ve bedenle iletişim teması',
   },
-  '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban': {
+  '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
     alt: 'Pencere ışığında ayakta duran 46 yaş kadın, eli karın-alt bölgesinde nazik farkındalık jesti; pelvik taban farkındalığı teması',
   },
@@ -103,19 +123,31 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/heroes/zihin-denge.webp',
     alt: 'Zihinsel dinginlik ve öz-düzenleme teması — sakin editöryal ortam',
   },
-  '/zihin-denge/uyku-bozuklugu-menopoz': {
+  '/zihin-denge/uyku-dinlenme': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
     alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku ve dinlenme teması',
   },
-  '/zihin-denge/ruh-hali-degisimleri-menopoz': {
+  '/zihin-denge/duygusal-denge': {
+    src: '/images/library/editorial/morning-window-reader-ai.webp',
+    alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve duygusal denge teması',
+  },
+  '/zihin-denge/bilissel-saglik': {
+    src: '/images/library/editorial/zd-bellek-odaklanma.webp',
+    alt: 'Çalışma masasında kitap okuyan kadın; kitaplık ve sabah ışığı — bilişsel sağlık teması',
+  },
+  '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz': {
+    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
+    alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku ve dinlenme teması',
+  },
+  '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
     alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve iç gözlem teması',
   },
-  '/zihin-denge/bellek-odaklanma-menopoz': {
+  '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz': {
     src: '/images/library/editorial/zd-bellek-odaklanma.webp',
     alt: 'Çalışma masasında kitap okuyan kadın; kitaplık ve sabah ışığı — bellek ve odaklanma teması',
   },
-  '/zihin-denge/stres-yonetimi-menopoz': {
+  '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz': {
     src: '/images/library/editorial/zd-stres-yonetimi.webp',
     alt: 'Bahçede taş oturağında sakin bir an, gözleri kapalı kadın; stres azaltma ve dinginlik teması',
   },
@@ -123,11 +155,23 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/heroes/bilimsel-pencere.webp',
     alt: 'Sıcak akademik çalışma odasında bilimsel kitap üzerine eğilmiş kadın; bilimsel inceleme teması',
   },
-  '/bilimsel-pencere/estrogen-biyolojisi-saglik': {
+  '/bilimsel-pencere/hormonlarin-bilimi': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
-    alt: 'Mermer masada botanik doğa öğeleri ve pencere ışığında düşünceli kadın; hormon biyolojisinin doğal çerçevesi',
+    alt: 'Mermer masada botanik doğa öğeleri ve pencere ışığında düşünceli kadın; hormon biyolojisi teması',
   },
-  '/bilimsel-pencere/nad-plus-hucresel-yaslanma': {
+  '/bilimsel-pencere/hucreler-ve-yaslanma': {
+    src: '/images/library/editorial/bp-nad-plus.webp',
+    alt: 'Altın saat pencere ışığında iç mekan yeşilliği önünde kadın portresi; hücresel yaşlanma teması',
+  },
+  '/bilimsel-pencere/yeni-arastirmalar': {
+    src: '/images/heroes/bilimsel-pencere.webp',
+    alt: 'Akademik çalışma odasında bilimsel kitap üzerine eğilmiş kadın; yeni araştırma derlemeleri teması',
+  },
+  '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik': {
+    src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
+    alt: 'Mermer masada botanik doğa öğeleri ve pencere ışığında düşünceli kadın; hormon biyolojisinin doğal resmi',
+  },
+  '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma': {
     src: '/images/library/editorial/bp-nad-plus.webp',
     alt: 'Altın saat pencere ışığında iç mekan yeşilliği önünde kadın portresi; hücresel yaşlanma ve uzun vadeli sağlık teması',
   },

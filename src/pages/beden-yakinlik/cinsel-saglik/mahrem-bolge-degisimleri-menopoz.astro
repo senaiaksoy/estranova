@@ -1,18 +1,19 @@
 ﻿---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz']!;
 
 const tocEntries = [
   { id: 'atrofi-nedir', label: 'Atrofi Nedir?' },
@@ -23,22 +24,22 @@ const tocEntries = [
   { id: 'diger-yaklasimlar', label: 'Diğer Yaklaşımlar' },
   { id: 'uriner-belirtiler', label: 'Üriner Belirtiler' },
   { id: 'gunluk-bakim', label: 'Günlük Bakım Rutini' },
-  { id: 'yakinlik-iletisim', label: 'Yakınlıkta İletişim' },
+  { id: 'yakinlik-iletisim', label: 'Cinsellikte İletişim' },
   { id: 'kisa-hatirlatma', label: 'Kısa Hatırlatma' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Vajinal Sağlık ve Menopoz';
-const articleDescription = 'Menopozda vajinal kuruluk, hassasiyet ve bakım seçeneklerini bilimsel çerçevede anlatan rehber.';
+const articleTitle = 'Menopozda Mahrem Bölge Değişimleri';
+const articleDescription = 'Menopozda mahrem bölgede yaşanan kuruluk, hassasiyet ve doku değişimlerini (vulvovajinal atrofi); günlük konfor ve bakım seçeneklerini sade bir dille anlatan rehber.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '31 Mart 2026',
-  pathname: '/beden-yakinlik/vajinal-saglik-menopoz',
+  pathname: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik',
-  keywords: ['vajinal atrofi', 'menopoz', 'östrojen', 'nem', 'intim sağlık'],
+  keywords: ['mahrem bölge', 'vajinal atrofi', 'vulvovajinal atrofi', 'vajinal kuruluk', 'menopoz', 'östrojen', 'nem', 'cinsel sağlık'],
   siteUrl,
 });
 ---
@@ -53,8 +54,8 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
-      eyebrow="Beden & Yakınlık · Kadın sağlığı"
-      title="Vajinal Sağlık ve Menopoz — Atrofi, Yakınlık, Bakım Rehberi"
+      eyebrow="Beden & Yakınlık · Cinsel Sağlık"
+      title="Menopozda Mahrem Bölge Değişimleri — Doku, Konfor ve Bakım Rehberi"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -68,7 +69,7 @@ const articleSchemas = buildArticleSchemas({
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Menopoz döneminde östrojen azalması, vajinal dokuda kuruluk ve hassasiyet gibi değişimlere yol açabilir. Bu tablo yaygındır
             ve yaşam kalitesini etkileyebilir; ancak destek seçenekleri vardır. Doğru bilgi, düzenli bakım ve gerektiğinde tıbbi değerlendirme
-            ile yakınlık ve günlük konfor yeniden dengelenebilir.
+            ile cinsel yaşam ve günlük konfor yeniden dengelenebilir.
           </p>
         </section>
 
@@ -87,7 +88,7 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="belirtiler">Belirtiler Nelerdir?</h2>
           <p>
-            Belirti bazen yalnızca “rahatsızlık” gibi başlar; en sık belirtiler vajinal kuruluk, yanma hissi, kaşıntı, dokunmaya hassasiyet ve yakınlık sırasında ağrıdır <Evidence level={5} />.
+            Belirti bazen yalnızca “rahatsızlık” gibi başlar; en sık belirtiler vajinal kuruluk, yanma hissi, kaşıntı, dokunmaya hassasiyet ve cinsellikte ağrıdır <Evidence level={5} />.
             Bazı kadınlarda vajinal akıntı karakterinde değişim, hafif tahriş veya küçük travmalara yatkınlık görülebilir.
             Belirtiler zaman içinde yavaş ilerleyebilir; bu nedenle erken dönemde fark edilmesi her zaman kolay olmayabilir.
           </p>
@@ -111,13 +112,13 @@ const articleSchemas = buildArticleSchemas({
           <h2 id="non-hormonal-destek">Hormon Dışı Destek Seçenekleri</h2>
           <p>
             İlk adım çoğu zaman basit ve gündelik ürünlerle başlar; hormon dışı nemlendiriciler ve yağlayıcılar yaygın kullanılır <Evidence level={5} />. Nemlendiriciler günlük veya düzenli aralıklarla,
-            yağlayıcılar ise yakınlık öncesinde kullanılır. Su bazlı ve silikon bazlı formlar kişisel konfora göre farklılık gösterebilir.
+            yağlayıcılar ise ilişki öncesinde kullanılır. Su bazlı ve silikon bazlı formlar kişisel konfora göre farklılık gösterebilir.
             Düzenli kullanım çoğu kişide tahriş ve sürtünme kaynaklı rahatsızlığı azaltır.
           </p>
           <p>
-            Yakınlıkta ağrı yaşayan kişilerde iletişim, ritim ve hazırlık süresi de sonuçları etkiler. Daha uzun hazırlık, uygun ürün seçimi,
+            Cinsellikte ağrı yaşayan kişilerde iletişim, ritim ve hazırlık süresi de sonuçları etkiler. Daha uzun hazırlık, uygun ürün seçimi,
             konforu gözeten tempo ve partnerle açık konuşma, fiziksel rahatsızlığı azaltmada yardımcı olabilir.
-            Bazı çalışmalarda düzenli yakınlığın doku dolaşımını desteklediği ve semptom yönetimine katkı sağladığı bildirilmiştir <Evidence level={4} />.
+            Bazı çalışmalarda düzenli cinsel yaşamın doku dolaşımını desteklediği ve semptom yönetimine katkı sağladığı bildirilmiştir <Evidence level={4} />.
           </p>
 
           <h2 id="hormon-tedavi">Hormon Temelli Tedavi Seçenekleri</h2>
@@ -148,7 +149,7 @@ const articleSchemas = buildArticleSchemas({
             varsa jinekoloji veya üroloji değerlendirmesi yararlıdır <Evidence level={5} />. Erken değerlendirme, benzer belirtilere yol açabilecek diğer nedenleri ayırmayı sağlar.
           </p>
           <p>
-            Yakınlık sırasında ağrı kalıcı hale gelmişse, günlük konfor belirgin azalmışsa veya ilişkide kaçınma davranışı gelişmişse
+            Cinsel ilişki sırasında ağrı kalıcı hale gelmişse, günlük konfor belirgin azalmışsa veya ilişkide kaçınma davranışı gelişmişse
             profesyonel destek almak önemlidir. Tedavi seçenekleriyle çoğu kişide belirgin rahatlama sağlanabilir; amaç yalnızca semptomu azaltmak değil,
             yaşam kalitesini ve bedenle güven ilişkisini yeniden kurmaktır.
           </p>
@@ -168,10 +169,10 @@ const articleSchemas = buildArticleSchemas({
             Düzenli kullanımın etkisi genellikle birkaç hafta içinde görünür hale gelir; bu nedenle kısa sürede sonuç alamadığınızda umutsuzluğa kapılmadan
             planı gözden geçirmek ve gerekirse sağlık profesyoneliyle yeniden düzenlemek gerekir.
           </p>
-          <h2 id="yakinlik-iletisim">Yakınlıkta İletişim ve Psikolojik Konfor</h2>
+          <h2 id="yakinlik-iletisim">Cinsellikte İletişim ve Psikolojik Konfor</h2>
           <p>
-            Yakınlıkta konfor değiştiğinde bunu yalnızca fiziksel bir mesele gibi taşımak ağır gelebilir; menopoz dönemindeki bedensel değişimler duygusal bir uyum süreci de gerektirir.
-            Yakınlık sırasında ağrı veya çekinme yaşandığında bunun konuşulabilir bir sağlık başlığı olduğunu bilmek önemlidir.
+            Cinsellikte konfor değiştiğinde bunu yalnızca fiziksel bir mesele gibi taşımak ağır gelebilir; menopoz dönemindeki bedensel değişimler duygusal bir uyum süreci de gerektirir.
+            Cinsel ilişki sırasında ağrı veya çekinme yaşandığında bunun konuşulabilir bir sağlık başlığı olduğunu bilmek önemlidir.
             Partnerle açık iletişim kurmak, beklentileri ve sınırları birlikte belirlemek, aceleci olmayan bir ritim planlamak
             çoğu çiftte güven ve konforu artırır.
           </p>
@@ -188,23 +189,23 @@ const articleSchemas = buildArticleSchemas({
             Konu mahrem olsa da tıbbi açıdan tamamen konuşulabilir ve yönetilebilir bir başlıktır. Düzenli takip, doğru bilgi ve nazik bir iletişim dili iyileşme sürecine belirgin biçimde katkı sağlar.
           </p>
         </ArticleProsePanel>
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/beden-yakinlik/menopozda-cilt-degisimleri" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Menopozda Cilt Değişimleri</a></li>
-            <li><a href="/beden-yakinlik/yakinlik-agrisi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Yakınlık Sırasında Ağrı</a></li>
-            <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
-            <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri</a></li>
-            <li><a href="/bilimsel-pencere/estrogen-biyolojisi-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Östrojen Biyolojisi</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+            '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
             Vulvovajinal değişimler menopoz döneminde sık görülür ve çoğu zaman etkili biçimde yönetilebilir. Bu başlıkta erken konuşma,
-            doğru ürün seçimi ve gerekirse lokal tedavi planı yaşam kalitesini belirgin artırabilir. Amaç, yakınlık ve günlük konforu
+            doğru ürün seçimi ve gerekirse lokal tedavi planı yaşam kalitesini belirgin artırabilir. Amaç, cinsel yaşam ve günlük konforu
             güvenli bir çerçevede yeniden desteklemektir.
           </p>
         </section>

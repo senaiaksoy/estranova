@@ -1,18 +1,19 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/stres-yonetimi-menopoz']!;
+const hero = submenuHeroByRoute['/zihin-denge/duygusal-denge/stres-yonetimi-menopoz']!;
 
 const tocEntries = [
   { id: 'neden-farkli', label: 'Neden Farklı' },
@@ -34,7 +35,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'gamze-cizreli',
   publishedDate: '20 Mart 2026',
-  pathname: '/zihin-denge/stres-yonetimi-menopoz',
+  pathname: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
   keywords: ['menopoz', 'perimenopoz', 'stres', 'anksiyete', 'kortizol', 'rahatlama'],
@@ -170,16 +171,16 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri ve Menopoz</a></li>
-            <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku Bozukluğu ve Menopoz</a></li>
-            <li><a href="/zamansiz-yasam/hareket-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Hareket ve Sağlık</a></li>
-            <li><a href="/zamansiz-yasam/beslenme-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Beslenme ve Yaşlanma</a></li>
-            <li><a href="/beden-yakinlik/yakinlik-agrisi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Yakınlık Sırasında Ağrı</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/zamansiz-yasam/hareket-saglik-menopoz',
+            '/zamansiz-yasam/beslenme-yaslanma',
+            '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

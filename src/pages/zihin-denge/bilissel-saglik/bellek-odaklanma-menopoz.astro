@@ -1,25 +1,26 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/bellek-odaklanma-menopoz']!;
+const hero = submenuHeroByRoute['/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz']!;
 
 const tocEntries = [
   { id: 'beyin-sisi', label: 'Beyin Sisi Nedir' },
   { id: 'hormon-beyin', label: 'Hormonun Rolü' },
   { id: 'katmanlar', label: 'Katmanlar' },
   { id: 'bellek-turleri', label: 'Bellek Türleri' },
-  { id: 'yonetim-stratejileri', label: 'Yönetim Stratejileri' },
+  { id: 'yonetim-yontemleri', label: 'Yönetim Yöntemleri' },
   { id: 'organizasyon', label: 'Organizasyon Araçları' },
   { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
   { id: 'uzun-vadeli', label: 'Uzun Vadeli Perspektif' },
@@ -28,13 +29,13 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Bellek ve Odaklanma — Menopozda Kognitif Değişimler';
-const articleDescription = 'Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim stratejileri hakkında rehberlik.';
+const articleDescription = 'Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim yöntemleri hakkında rehberlik.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'rima-erdemir',
   publishedDate: '24 Mart 2026',
-  pathname: '/zihin-denge/bellek-odaklanma-menopoz',
+  pathname: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
   keywords: ['menopoz', 'bellek', 'odaklanma', 'beyin sisi', 'bilişsel değişim', 'perimenopoz'],
@@ -65,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Menopozda bellek kayması ve odaklanma güçlüğü yaygındır. Hormon değişiklikleri, uyku bozukluğu ve stres birlikte bu deneyimde rol oynar. Uygulanabilir stratejiler bilişsel işlevi desteklemede etkilidir.
+            Menopozda bellek kayması ve odaklanma güçlüğü yaygındır. Hormon değişiklikleri, uyku bozukluğu ve stres birlikte bu deneyimde rol oynar. Uygulanabilir yöntemler bilişsel işlevi desteklemede etkilidir.
           </p>
         </section>
 
@@ -115,7 +116,7 @@ const articleSchemas = buildArticleSchemas({
             Prosedürel hafıza (bisiklet sürme, bilgisayar kullanma) çoğu zaman korunur <Evidence level={4} />.
           </p>
 
-          <h2 id="yonetim-stratejileri">Bilişsel yönetim stratejileri</h2>
+          <h2 id="yonetim-yontemleri">Bilişsel yönetim yöntemleri</h2>
           <p>
             İlk adım çoğu zaman en temel yerden başlar: uyku düzeni <Evidence level={5} />. Uyku sayesinde beyin metabolik atıkları temizler ve hafıza pekiştirilir.
             Düzenli saatlerde yatıp kalkma, karanlık ve serin uyku ortamı, geç kafein ve ekran kullanmaktan kaçınma temel tekniklerdir.
@@ -135,7 +136,7 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Not almak “unutkanlığı kabul etmek” değil, zihnine yükü daha adil dağıtmaktır; yazılı not alma (kağıt veya dijital uygulamalar) belleği desteklemede etkilidir <Evidence level={5} />.
             Kişisel takvim, hatırlatıcı uyarıları ve görev listeleri, yoğun düşünme yükünü azaltır <Evidence level={5} />.
-            Rutin ve ritüeller (sabah rutini, akşam hazırlık) beyine yapılandırılmış bir çerçeve sunar <Evidence level={5} />.
+            Rutin ve ritüeller (sabah rutini, akşam hazırlık) beyine planlı bir düzen sunar <Evidence level={5} />.
             Bilgileri segmentlere ayırma (yapılacakları kategorize etme) daha kolay işlem sağlar <Evidence level={5} />.
           </p>
 
@@ -168,22 +169,22 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku Bozukluğu ve Menopoz</a></li>
-            <li><a href="/zihin-denge/stres-yonetimi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Stres Yönetimi</a></li>
-            <li><a href="/zamansiz-yasam/hareket-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Hareket ve Sağlık</a></li>
-            <li><a href="/zamansiz-yasam/beslenme-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Beslenme ve Yaşlanma</a></li>
-            <li><a href="/bilimsel-pencere/nad-hucrelesel-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / NAD+ ve Hücresel Yaşlanma</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+            '/zamansiz-yasam/hareket-saglik-menopoz',
+            '/zamansiz-yasam/beslenme-yaslanma',
+            '/bilimsel-pencere/nad-hucrelesel-yaslanma',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Beyin sisi menopozun yaygın ama sık göz ardı edilen bir boyutudur. Mekanizmayı anlamak ve destek seçeneklerini bilmek, bu geçiş döneminde kendine güven duymayı kolaylaştırır. Çoğu durumda bilişsel işlev zamanla iyileşir; küçük stratejiler bu süreçte yardımcıdır.
+            Beyin sisi menopozun yaygın ama sık göz ardı edilen bir boyutudur. Mekanizmayı anlamak ve destek seçeneklerini bilmek, bu geçiş döneminde kendine güven duymayı kolaylaştırır. Çoğu durumda bilişsel işlev zamanla iyileşir; küçük yöntemler bu süreçte yardımcıdır.
           </p>
         </section>
 

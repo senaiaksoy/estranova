@@ -1,0 +1,178 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi']!;
+
+const tocEntries = [
+  { id: 'nedir', label: 'Vazomotor Belirtiler Nedir' },
+  { id: 'neden-olur', label: 'Neden Olur' },
+  { id: 'ne-kadar-surer', label: 'Ne Kadar Sürer' },
+  { id: 'tetikleyiciler', label: 'Tetikleyiciler' },
+  { id: 'gunluk-adimlar', label: 'Günlük Adımlar' },
+  { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
+  { id: 'ne-zaman-degerlendirme', label: 'Ne Zaman Değerlendirme Gerekir' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi';
+const articleDescription =
+  'Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '25 Nisan 2026',
+  pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: ['sıcak basması', 'gece terlemesi', 'menopoz', 'perimenopoz', 'uyku', 'tetikleyiciler'],
+  siteUrl,
+});
+---
+
+<SiteLayout title={`${articleTitle} - Estranova`} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title="Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="25 Nisan 2026" readingMinutes={4} />
+
+      <section
+        class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Sıcak basması ve gece terlemesi menopoz geçişinin en sık görülen belirtilerindendir ve çoğu zaman uyku kalitesini, enerji düzeyini ve
+          günlük konforu etkiler. Bu belirtiler “yalnızca stres” değildir; ısı düzenleme sistemi ile hormon dalgalanmasının birlikte etkilediği
+          biyolojik bir süreçtir. Kanıt temelli günlük adımlar ve kişiye uygun tıbbi seçenekler ile şiddet ve sıklık çoğu kişide azaltılabilir.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="nedir">Vazomotor Belirtiler Nedir?</h2>
+        <p>
+          “Bir anda ısınıp kızarmak, ardından üşümek” tarifinin tıptaki karşılığı sıcak basması-gece terlemesi belirtileridir; bu iki yakınma aynı başlık altında
+          değerlendirilir <Evidence level={5} />.
+        </p>
+        <p>
+          Sıcak basması genellikle yüz, boyun ve göğüs bölgesinde ani ısı artışı ve terlemeyle başlar; birkaç dakika içinde dalga gibi geçebilir.
+          Gece terlemesi ise uykuyu bölen terleme atakları şeklinde yaşanır ve yeniden uykuya dalmayı zorlaştırabilir.
+        </p>
+
+        <h2 id="neden-olur">Menopozda Sıcak Basması Neden Olur?</h2>
+        <p>
+          Menopoz geçişinde östrojen dalgalanması, beynin ısı düzenleme merkezinin (termostat gibi çalışan sistemin) hassasiyetini etkileyebilir
+          <Evidence level={5} />. Bu hassasiyet arttığında, küçük ısı değişimleri bile “vücut ısınıyor” alarmını tetikleyebilir.
+        </p>
+        <p>
+          Bu süreç tek bir hormona indirgenmez; uyku eksikliği, stres tepkisi, beden ağırlığı, sigara kullanımı gibi faktörler şiddeti
+          etkileyebilir <Evidence level={4} />. Yani belirtiler biyolojiktir ama seyri yaşam koşullarıyla birlikte şekillenir.
+        </p>
+
+        <h2 id="ne-kadar-surer">Ne Kadar Sürer, Ne Zaman Hafifler?</h2>
+        <p>
+          Vazomotor belirtiler birçok kişide perimenopozda başlar; menopoz sonrası yıllarda sıklık ve şiddet azalabilir <Evidence level={5} />.
+          Ancak sürenin kişiden kişiye farklılaştığını bilmek önemlidir: bazı kişilerde kısa bir dönemde hafiflerken, bazılarında daha uzun
+          süre devam edebilir <Evidence level={4} />.
+        </p>
+        <p>
+          Belirtilerin süresi ve şiddeti çoğu zaman dalgalıdır. Bu nedenle “bugün daha kötü” günleri tek başına kötüye gidiş göstergesi olarak
+          değil, tekrar eden gidişatın bir parçası olarak izlemek daha gerçekçidir.
+        </p>
+
+        <h2 id="tetikleyiciler">Yaygın Tetikleyiciler</h2>
+        <p>
+          Tetikleyiciler herkes için aynı değildir; yine de bazı başlıklar daha sık rapor edilir: alkol, baharatlı yiyecekler, sıcak ortam,
+          aşırı katmanlı giyinme, geç saatte ağır yemek, yoğun stres ve uyku eksikliği <Evidence level={4} />.
+        </p>
+        <p>
+          Buradaki hedef “yasak listesi” oluşturmak değil, kendi bedeninin ritmini yakalamaktır. 2-3 haftalık basit bir kayıt,
+          hangi günlerde ve hangi koşullarda arttığını görmeyi kolaylaştırabilir.
+        </p>
+
+        <h2 id="gunluk-adimlar">Günlük Hayatta Ne İşe Yarar?</h2>
+        <p>
+          En güçlü günlük adımlardan biri, uyku ortamını serin tutmaktır; gece terlemesi yaşayan birçok kişide ısı yönetimi uyanmaları azaltmaya
+          yardımcı olur <Evidence level={4} />. Nefes egzersizleri ve düzenli gevşeme pratikleri de stres-ısı döngüsünü yatıştırabilir
+          <Evidence from={3} to={4} />.
+        </p>
+        <p>
+          Düzenli hareket, sağlıklı kilo aralığına yaklaşma ve sigarayı bırakma gibi yaşam adımları; hem genel sağlık hem de sıcak basması-gece terlemesi belirtilerinin
+          şiddeti açısından destekleyicidir <Evidence level={4} />. Etki çoğu zaman tek bir hamleyle değil, tutarlı bir kombinasyonla belirginleşir.
+        </p>
+
+        <h2 id="tibbi-secenekler">Tıbbi Seçenekler Nasıl Çerçevelenir?</h2>
+        <p>
+          Belirtiler yaşam kalitesini belirgin etkiliyorsa tıbbi seçenekler değerlendirilebilir. Hormon tedavisi (HRT), uygun kişilerde
+          bu belirtileri azaltmada en etkili seçeneklerden biridir <Evidence level={5} />.
+        </p>
+        <p>
+          HRT herkes için uygun değildir; kişisel risk-fayda dengesi, yaş, menopoz süresi ve eşlik eden sağlık durumlarıyla birlikte ele alınır.
+          Hormon dışı seçenekler (belirli antidepresan grupları, gabapentin gibi) bazı kişilerde yarar sağlayabilir <Evidence level={4} />.
+        </p>
+
+        <h2 id="ne-zaman-degerlendirme">Ne Zaman Değerlendirme Gerekir?</h2>
+        <p>
+          Sıcak basması “normal” kabul edilse bile her zaman yalnızca menopoza bağlanmamalıdır. Gece terlemesi ile birlikte açıklanamayan kilo
+          kaybı, ateş, sürekli çarpıntı, belirgin tiroid belirtileri veya yeni başlayan şiddetli yakınmalar varsa tıbbi değerlendirme gerekir.
+        </p>
+        <p>
+          Ayrıca uykusuzluk, gündüz işlev kaybı, yoğun anksiyete veya belirgin depresif belirtiler eşlik ediyorsa destek planını genişletmek
+          yaşam kalitesi açısından önemlidir.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+          ]}
+        />
+
+      <section
+        class="rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Vazomotor belirtiler şiddetli olduğunda “katlanılması gereken bir kader” gibi hissedilebilir. Oysa çoğu kişi için belirtilerin seyrini
+          hafifletecek birden fazla yol vardır: ısı yönetimi, uyku planı, stres düzenleme ve gerektiğinde tıbbi seçenekleri birlikte ele almak.
+          Sağlam bir yaklaşım, kişisel tetikleyicileri ve sağlık geçmişini hesaba katan, sakin ve sürdürülebilir bir plan kurmaktır.
+        </p>
+      </section>
+
+      <section class="rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi
+          hekiminizle birlikte değerlendirme yapınız.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

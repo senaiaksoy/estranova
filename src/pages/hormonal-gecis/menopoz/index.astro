@@ -5,9 +5,18 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuSection from '../../../components/site/SubmenuSection.astro';
 import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
+import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { chapterMap, getNextChapter } from '../../../data/chapter-map';
+import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz']!;
+const __path = '/hormonal-gecis/menopoz';
+const chapter = chapterMap[__path]!;
+const epigraph = subHubEpigraphs[__path];
+const next = getNextChapter(__path);
 
 const articles = [
   {
@@ -21,7 +30,7 @@ const articles = [
     href: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
     title: 'Hormon Tedavisi: Karar Rehberi',
     excerpt:
-      'HRT ne zaman gündeme gelir, kim için uygundur, neye dikkat edilir? Bilgilendirilmiş karar için yapılandırılmış bir okuma.',
+      'HRT ne zaman gündeme gelir, kim için uygundur, neye dikkat edilir? Bilgilendirilmiş karar için planlı bir okuma.',
     image: submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi']!,
   },
   {
@@ -57,6 +66,7 @@ const neighbors = [
   description="Menopoz dönemini anlamak için temel rehberler: tanım, hormon tedavisi kararı ve kemik sağlığı gibi sık okunan başlıklar."
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
+  <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
 
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
@@ -116,13 +126,15 @@ const neighbors = [
       </div>
     </section>
 
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
         <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Menopoza dair seçilmiş rehberler</h2>
         <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
           Tanımdan tedavi kararına, kemik sağlığından günlük rutine; bu evreye dair sık sorulan başlıklar üzerine
-          yapılandırılmış okumalar.
+          planlı okumalar.
         </p>
       </header>
 
@@ -161,13 +173,7 @@ const neighbors = [
       </div>
     </SubmenuSection>
 
-    <section class="bg-white px-6 py-10">
-      <div class="mx-auto max-w-4xl rounded-[20px] border border-[#6B2D3E]/12 p-6 text-center">
-        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
-          Bu sayfa genel bilgilendirme sunar; belirtileriniz için bireysel tıbbi değerlendirme, tanı veya tedavi yerine geçmez.
-        </p>
-      </div>
-    </section>
+    <ChapterCompass nextHref={next?.href} nextNumber={next?.number} nextChapter={next?.chapter} nextParent={next?.parent} />
   </main>
 
   <SiteFooter />

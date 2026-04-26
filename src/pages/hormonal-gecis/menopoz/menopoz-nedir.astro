@@ -7,6 +7,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
@@ -15,7 +16,7 @@ const tocEntries = [
   { id: 'evreler', label: 'Evreler' },
   { id: 'hormon-degisim', label: 'Hormon Değişimleri' },
   { id: 'belirtiler', label: 'Belirtiler' },
-  { id: 'postmenopoz', label: 'Postmenopoz' },
+  { id: 'menopoz-sonrasi-donem', label: 'Menopoz Sonrası Dönem' },
   { id: 'yasam-kalitesi', label: 'Yaşam Kalitesi' },
   { id: 'uzun-vadeli', label: 'Uzun Vadeli Gündem' },
   { id: 'yol-haritasi', label: 'İlk 12 Ay' },
@@ -33,7 +34,7 @@ const articleSchemas = buildArticleSchemas({
   pathname: '/hormonal-gecis/menopoz/menopoz-nedir',
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis',
-  keywords: ['menopoz', 'klimakterik', 'FSH', 'östrojen', 'postmenopoz', 'hormonal geçiş'],
+  keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
   siteUrl,
 });
 ---
@@ -69,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Menopoz, tıbbi olarak son adet kanamasının üzerinden 12 ay geçmesiyle konulan doğal bir yaşam dönemi tanımıdır.
             Birçoğumuz bunu tek bir gün gibi hayal etsek de menopoz aniden başlayan bir olay değil, geriye dönük olarak netleşen bir eşiği temsil eder.
-            Perimenopoz bu eşiğe kadar uzanan geçiş sürecidir; postmenopoz ise menopoz sonrasındaki yılları kapsar.
+            Perimenopoz bu eşiğe kadar uzanan geçiş sürecidir; menopoz sonrası dönem ise sonraki yılları kapsar.
           </p>
           <p>
             Günlük kullanımda menopoz bazen tüm geçiş dönemi için kullanılsa da bilimsel çerçevede perimenopoz ve menopoz ayrı başlıklardır.
@@ -83,15 +84,15 @@ const articleSchemas = buildArticleSchemas({
             Menopoz, son adet tarihinden sonra 12 ay tamamlandığında tanımlanan eşiktir. Postmenopoz ise bu eşiğin ardından yaşamın geri kalanını kapsar.
           </p>
           <p>
-            Her evrede öncelikler farklılaşır. Perimenopozda düzensiz adet ve vazomotor belirtiler öne çıkarken,
-            postmenopozda kemik yoğunluğu, kardiyometabolik denge ve ürogenital sağlık daha sistematik bir izlem gerektirir.
+            Her evrede öncelikler farklılaşır. Perimenopozda düzensiz adet ve sıcak basması-gece terlemesi belirtileri öne çıkarken,
+            menopoz sonrası dönemde kemik yoğunluğu, kalp-metabolizma dengesi ve ürogenital sağlık daha sistematik bir izlem gerektirir.
             Bu farkı bilmek, sağlık planını dönemlere göre düzenlemeyi kolaylaştırır.
           </p>
 
           <h2 id="hormon-degisim">Hormon Değişimleri Bu Evrede</h2>
           <p>
             Menopoz döneminde FSH ve LH düzeylerinin yükselmesi, yumurtalık yanıtının azalmasına bağlı klasik bir bulgudur <Evidence level={5} />.
-            Östrojen ve progesteron düzeylerinde kalıcı düşüş gözlenir <Evidence level={5} />. Hormonlardaki bu yeni denge postmenopozda daha stabil hale gelir <Evidence level={5} />.
+            Östrojen ve progesteron düzeylerinde kalıcı düşüş gözlenir <Evidence level={5} />. Hormonlardaki bu yeni denge menopoz sonrası dönemde daha stabil hale gelir <Evidence level={5} />.
             Bu dengeyi kendi bedeninde daha az dalgalanma gibi hissedebilirsin; yine de stabilite, her semptomun tamamen bittiği anlamına gelmez.
           </p>
           <p>
@@ -111,20 +112,20 @@ const articleSchemas = buildArticleSchemas({
             uzun vadeli koruyucu sağlık yaklaşımı da önemlidir.
           </p>
 
-          <h2 id="postmenopoz">Postmenopoz Dönemi: İlk Yıllar Neden Kritik?</h2>
+          <h2 id="menopoz-sonrasi-donem">Menopoz Sonrası Dönem: İlk Yıllar Neden Kritik?</h2>
           <p>
             Postmenopozun ilk yılları, “artık bitti” diye kenara bırakılacak bir dönem değildir; vücudun yeni dengeye alışırken kemik kaybı görece hızlanabilir <Evidence level={5} />. Bu nedenle düzenli hareket, yeterli protein ve
             kalsiyum-D vitamini dengesinin izlenmesi önem taşır. Gerekli kişilerde kemik mineral yoğunluğu ölçümleriyle kişisel risk değerlendirmesi yapılır.
           </p>
           <p>
-            Kardiyovasküler risk göstergelerinde yaşa bağlı artış postmenopozda daha belirgin hale gelebilir <Evidence level={5} />.
+            Kardiyovasküler risk göstergelerinde yaşa bağlı artış menopoz sonrası dönemde daha belirgin hale gelebilir <Evidence level={5} />.
             Kan basıncı, lipid profili, glukoz dengesi ve bel çevresi gibi verilerin birlikte izlenmesi, erken dönemde düzenleme fırsatı sağlar.
             Amaç, hastalık korkusu üretmek değil; uzun vadeli sağlığı planlı biçimde korumaktır.
           </p>
 
           <h2 id="yasam-kalitesi">Yaşam Kalitesi ve Günlük Hayat</h2>
           <p>
-            Menopoz sonrası dönem, çoğumuz için yalnızca kayıp değil, yeniden düzenleme alanı da sunar. Döngü belirsizliğinin sona ermesi,
+            Menopoz sonrası dönem, çoğumuz için yalnızca kayıp değil, yeniden düzenleme alanı da sunar. Adet belirsizliğinin sona ermesi,
             zaman ve enerji yönetimini kolaylaştırabilir. Bazı kişilerde sıcak basmalarının azalması uyku ve günlük performansta toparlanma sağlar.
           </p>
           <p>
@@ -135,7 +136,7 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="uzun-vadeli">Uzun Vadeli Sağlık Gündemi</h2>
           <p>
-            Menopozdan sonra sağlık gündemini tek seferde çözmen gerekmez; birlikte üç ana eksende düşünebiliriz: kemik sağlığı, kardiyometabolik denge ve zihinsel iyi oluş.
+            Menopozdan sonra sağlık gündemini tek seferde çözmen gerekmez; birlikte üç ana eksende düşünebiliriz: kemik sağlığı, kalp-metabolizma dengesi ve zihinsel iyi oluş.
             Tarama testlerinin düzenli takibi, yaşam alışkanlıklarının kişiye göre yapılandırılması ve gerektiğinde tıbbi destek bu çerçevenin temelidir.
             HRT veya diğer seçenekler ise herkes için aynı olmayan, kişisel risk-fayda dengesiyle değerlendirilen kararlardır.
           </p>
@@ -180,16 +181,16 @@ const articleSchemas = buildArticleSchemas({
             Düzenli takip ve sürdürülebilir günlük alışkanlıklar, ileri yaşlarda bağımsız yaşam kalitesine doğrudan katkı sağlar.
           </p>
         </ArticleProsePanel>
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/hormonal-gecis/perimenopoz/perimenopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Perimenopoz Nedir?</a></li>
-            <li><a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / 40 Sonrası Sağlık</a></li>
-            <li><a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Kemik Sağlığı</a></li>
-            <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri</a></li>
-            <li><a href="/bilimsel-pencere/estrogen-biyolojisi-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Östrojen Biyolojisi</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+            '/hormonal-gecis/40-sonrasi',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

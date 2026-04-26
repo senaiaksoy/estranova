@@ -1,18 +1,19 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/yakinlik-agrisi-menopoz']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz']!;
 
 const tocEntries = [
   { id: 'tanim-yayginlik', label: 'Tanım ve Yaygınlık' },
@@ -27,17 +28,17 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Yakınlık Sırasında Ağrı — Menopozda Dispareuniya Rehberi';
-const articleDescription = 'Menopozda yakınlık sırasında ağrı veya rahatsızlığın nedenleri ve tedavi seçenekleri hakkında kapsamlı rehberlik.';
+const articleTitle = 'Cinsellikte Ağrı — Menopozda Dispareuniya Rehberi';
+const articleDescription = 'Menopozda cinsellikte ağrı veya rahatsızlığın nedenleri ve tedavi seçenekleri hakkında kapsamlı rehberlik.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '3 Nisan 2026',
-  pathname: '/beden-yakinlik/yakinlik-agrisi-menopoz',
+  pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik',
-  keywords: ['disparoni', 'menopoz', 'yakınlık', 'vajinal kuruluk', 'hormon'],
+  keywords: ['cinsellikte ağrı', 'cinsel ilişkide ağrı', 'disparoni', 'dispareuni', 'menopoz', 'mahrem bölge', 'vajinal kuruluk', 'hormon'],
   siteUrl,
 });
 ---
@@ -52,8 +53,8 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
-      eyebrow="Beden & Yakınlık · Yakınlık sağlığı"
-      title="Yakınlık Sırasında Ağrı — Menopozda Dispareuniya Rehberi"
+      eyebrow="Beden & Yakınlık · Cinsel Sağlık"
+      title="Cinsellikte Ağrı — Menopozda Dispareuniya Rehberi"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -65,14 +66,14 @@ const articleSchemas = buildArticleSchemas({
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Menopozda yakınlık sırasında ağrı veya rahatsızlık yaygındır ve çoğunlukla tedavi edilebilir. Vajinal kuruluk, doku esnekliğinde kayıp ve psikolojik faktörler birleşir. Bilgilendirme ve tedavi seçenekleri yakınlık deneyimini yeniden mümkün kılar.
+            Menopozda cinsellikte ağrı veya rahatsızlık yaygındır ve çoğunlukla tedavi edilebilir. Vajinal kuruluk, doku esnekliğinde kayıp ve psikolojik faktörler birleşir. Bilgilendirme ve tedavi seçenekleri cinsel yaşam deneyimini yeniden mümkün kılar.
           </p>
         </section>
 
         <ArticleProsePanel>
           <h2 id="tanim-yayginlik">Dispareuniya Tanımı ve Yaygınlığı</h2>
           <p>
-            Dispareuniya, yakınlık sırasında hissedilen ağrı veya rahatsızlıktır; çok yaygındır <Evidence level={5} />.
+            Dispareuniya, cinsel ilişki sırasında hissedilen ağrı veya rahatsızlıktır; çok yaygındır <Evidence level={5} />.
             Postmenopoz kadınlarının 20-40%'ı bu sorunu yaşar <Evidence level={5} />. Ağrı yüzeysel (giriş bölgesinde) veya derininde (iç bölgede) oluşabilir <Evidence level={5} />.
             Fiziksel ağrının ötesinde psikolojik etkiler vardır: kaygı ("ağrı olacağından endişe"), depresyon, ilişkilerde çatışma ve kendine güven kaybı <Evidence level={4} />.
           </p>
@@ -97,9 +98,9 @@ const articleSchemas = buildArticleSchemas({
           <h2 id="psikolojik-faktorler">Psikolojik Faktörler</h2>
           <p>
             Beden imajında değişiklik ve özgüven azalması menopozda yaygındır <Evidence level={4} />.
-            Yakınlık sırasında kaygı ve performans baskısı ağrıyı artırabilir <Evidence level={5} />.
+            Cinsel ilişki sırasında kaygı ve performans baskısı ağrıyı artırabilir <Evidence level={5} />.
             Partnerle iletişim sorunları veya ilişki dinamikleri stresi artırabilir <Evidence level={4} />.
-            Geçmiş travma, cinsel istismar veya olumsuz yakınlık deneyimleri menopozda belirtileri şiddetlendirebilir <Evidence level={4} />.
+            Geçmiş travma, cinsel istismar veya olumsuz cinsel deneyimleri menopozda belirtileri şiddetlendirebilir <Evidence level={4} />.
             Stres ve yaşamsal yük vücut gerginliğini artırır, kas spazması tetikler ve ağrı döngüsünü derinleştirir <Evidence level={5} />.
           </p>
 
@@ -109,14 +110,14 @@ const articleSchemas = buildArticleSchemas({
             performans baskısının yoğunluğunu azaltma önemlidir. Belirsizlik ve utanç, durumu daha da zorlaştırır.
           </p>
           <p>
-            Su bazlı veya silikon bazlı yağlayıcılar faydalıdır <Evidence level={5} />. Yakınlık öncesi veya düzenli kullanım (haftada 2-3 kez) doku nemine katkı sağlayabilir.
+            Su bazlı veya silikon bazlı yağlayıcılar faydalıdır <Evidence level={5} />. İlişki öncesi veya düzenli kullanım (haftada 2-3 kez) doku nemine katkı sağlayabilir.
             Nemlendirici krem (örneğin hyaluronik asit) uzun vadeli iyileşmeye yardımcı olabilir <Evidence level={5} />.
           </p>
           <p>
-            Düzenli yakınlık, kan akışını artırır ve doku iyileşmesine yardımcı olabilir <Evidence level={5} />.
+            Düzenli cinsel yaşam, kan akışını artırır ve doku iyileşmesine yardımcı olabilir <Evidence level={5} />.
             Ön sevişmeye ve acele etmemeye alan açmak doğal yağlanmayı teşvik eder <Evidence level={5} />.
             Farkındalıklı yaklaşım, beden farkındalığı ve rahatsızlığın normalleştirilmesi de önemlidir <Evidence level={4} />.
-            İlişkide iletişimi iyileştirmek, stres azaltmak ve alternatif yakınlık biçimlerini keşfetmek daha fazla esneklik sağlar.
+            İlişkide iletişimi iyileştirmek, stres azaltmak ve alternatif cinsel yaşam biçimlerini keşfetmek daha fazla esneklik sağlar.
           </p>
 
           <h2 id="tibbi-tedavi">Tıbbi Tedavi Seçenekleri</h2>
@@ -137,9 +138,9 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="partner-katilimi">Partner Katılımı</h2>
           <p>
-            Partner eğitimi menopozun etkileri, yakınlık fizyolojisi ve değişen ihtiyaçlar açısından önemlidir <Evidence level={5} />.
+            Partner eğitimi menopozun etkileri, cinsellik fizyolojisi ve değişen ihtiyaçlar açısından önemlidir <Evidence level={5} />.
             Tedavi planına katılma (örneğin, yağlayıcı kullanmanın doğal ve normal olduğunu anlamak) uyumu artırır <Evidence level={5} />.
-            Alternatif yakınlık formlarını (çok penetratif olmayan yakınlık biçimleri) keşfetmek alanı genişletir <Evidence level={5} />.
+            Alternatif yakınlık formlarını (çok penetratif olmayan cinsellik biçimleri) keşfetmek alanı genişletir <Evidence level={5} />.
             Duygusal destek, sabır ve anlaşma, iyileşmenin temelini oluşturur <Evidence level={5} />.
           </p>
 
@@ -153,8 +154,8 @@ const articleSchemas = buildArticleSchemas({
           <h2 id="uzun-vadeli">Uzun Vadeli Perspektif</h2>
           <p>
             Bu ağrı, normal bir sağlık durumu değildir; tedavi edilebilir bir sorun olarak ele alınmalıdır <Evidence level={5} />.
-            Yakınlık, yaşlılıkta da desteklenerek kalitatif ve doyurucu kalabilir <Evidence level={5} />.
-            Yaşlılıkta sağlıklı yakınlık, kardiyovasküler sağlık, hormonal denge ve ruh hali için de destekleyici olabilir.
+            Cinsel yaşam, yaşlılıkta da desteklenerek kalitatif ve doyurucu kalabilir <Evidence level={5} />.
+            Yaşlılıkta sağlıklı cinsel yaşam, kardiyovasküler sağlık, hormonal denge ve ruh hali için de destekleyici olabilir.
           </p>
 
           <h2 id="ilk-adimlar">Başlamak İçin İlk Adımlar</h2>
@@ -163,28 +164,28 @@ const articleSchemas = buildArticleSchemas({
             Belirtilerini açıkça anlatabilmek — utanç duymadan — büyük bir rahatlama getirir; basit bir fiziksel muayene çoğunlukla yeterli olur.
           </p>
           <p>
-            Aynı dönemde su bazlı bir yağlayıcı edinmek ve yakınlık öncesi kullanmak da küçük ama gerçek bir fark yaratabilir.
+            Aynı dönemde su bazlı bir yağlayıcı edinmek ve ilişki öncesi kullanmak da küçük ama gerçek bir fark yaratabilir.
             Partnerinle duygu ve ihtiyaçlarını açık konuşmak, çözüme birlikte yaklaşmak yükü hafifletir.
-            Tıbbi destek ve iletişim birlikte, yakınlık deneyimini yeniden güvenli ve doyurucu kılabilir.
+            Tıbbi destek ve iletişim birlikte, cinsel yaşam deneyimini yeniden güvenli ve doyurucu kılabilir.
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/beden-yakinlik/vajinal-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Vajinal Sağlık ve Menopoz</a></li>
-            <li><a href="/zihin-denge/stres-yonetimi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Stres Yönetimi</a></li>
-            <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri</a></li>
-            <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
-            <li><a href="/beden-yakinlik/menopozda-cilt-degisimleri" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Cilt Değişimleri</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+            '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
           <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: A — Güçlü Kanıt <Evidence level={5} /></p>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Dispareuniya menopozun tabu konularından biridir ancak yaygındır ve tedavi edilebilir. Açık iletişim, basit müdahaleler ve gerekirse tıbbi tedavi, kadınların yakınlık deneyimini yeniden mümkün kılar. Bu makale, konuşmasını ve çözüm aranmasını normalleştirmeyi amaçlar.
+            Dispareuniya menopozun tabu konularından biridir ancak yaygındır ve tedavi edilebilir. Açık iletişim, basit müdahaleler ve gerekirse tıbbi tedavi, kadınların cinsel yaşam deneyimini yeniden mümkün kılar. Bu makale, konuşmasını ve çözüm aranmasını normalleştirmeyi amaçlar.
           </p>
         </section>
 

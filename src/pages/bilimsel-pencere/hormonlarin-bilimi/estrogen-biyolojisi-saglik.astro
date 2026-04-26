@@ -1,18 +1,19 @@
 ﻿---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!;
+const hero = submenuHeroByRoute['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik']!;
 
 const tocEntries = [
   { id: 'ostrojen-nedir', label: 'Östrojen Nedir' },
@@ -37,7 +38,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'rima-erdemir',
   publishedDate: '25 Şubat 2026',
-  pathname: '/bilimsel-pencere/estrogen-biyolojisi-saglik',
+  pathname: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere',
   keywords: ['östrojen', 'menopoz', 'hormon', 'reseptör', 'kemik', 'kardiyovasküler'],
@@ -77,7 +78,7 @@ const articleSchemas = buildArticleSchemas({
         <ArticleProsePanel>
           <h2 id="ostrojen-nedir">Östrojen Nedir?</h2>
           <p>
-            Östrojen adını çoğumuz önce adet döngüsüyle duyarız; oysa steroid hormon sınıfında yer alan ve birçok dokuda sinyal görevi gören bir molekül grubudur <Evidence level={5} />.
+            Östrojen adını çoğumuz önce adet düzeniyle ilgili konuşmalarda duyarız; oysa steroid hormon sınıfında yer alan ve birçok dokuda sinyal görevi gören bir molekül grubudur <Evidence level={5} />.
             Başlıca formları estradiol (E2), estrone (E1) ve estriol (E3) olarak tanımlanır <Evidence level={5} />. Üreme çağında en etkin form E2'dir;
             menopoz sonrası dönemde E1 görece daha baskın hale gelir.
           </p>
@@ -139,7 +140,7 @@ const articleSchemas = buildArticleSchemas({
             Ancak yaşam alışkanlıkları bu süreci güçlü biçimde modüle eder.
           </p>
           <p>
-            Düzenli kas güçlendirme egzersizi, yeterli protein, liften zengin beslenme ve uyku dengesi metabolik riskleri azaltmada temel stratejilerdir.
+            Düzenli kas güçlendirme egzersizi, yeterli protein, liften zengin beslenme ve uyku dengesi metabolik riskleri azaltmada temel yöntemlerdir.
             Hormon biyolojisini bilmek, bu alışkanlıkların neden etkili olduğunu anlamayı kolaylaştırır.
           </p>
 
@@ -158,7 +159,7 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Menopoz herkes için aynı hızda gelmez; doğal menopozda östrojen düşüşü kademeli ilerler ve beden zaman içinde yeni dengeye adapte olur <Evidence level={5} />.
             Cerrahi menopozda (örneğin ovaryektomi sonrası) düşüş daha ani olabilir ve belirtiler daha yoğun hissedilebilir <Evidence level={5} />.
-            Erken menopozda ise uzun dönem kemik ve kardiyometabolik takip daha kritik hale gelir.
+            Erken menopozda ise uzun dönem kemik ile kalp-metabolizma takibi daha kritik hale gelir.
           </p>
           <p>
             Adaptasyon kapasitesi yüksektir; ancak bu süreç kişisel farklılık gösterir <Evidence level={4} />. Dolayısıyla bakım planı yaş, belirtiler,
@@ -192,7 +193,7 @@ const articleSchemas = buildArticleSchemas({
           <h2 id="klinik-karar">Sağlık Kararlarında Östrojen Bilgisini Nasıl Kullanmalı?</h2>
           <p>
             Östrojen biyolojisini anlamak, senin yerine karar vermek için değil, seçenekleri daha bilinçli tartmak için önemlidir.
-            Örneğin sıcak basması, uyku bozulması, vajinal kuruluk, kemik kaybı riski ve kardiyometabolik durum aynı anda değerlendirildiğinde
+            Örneğin sıcak basması, uyku bozulması, vajinal kuruluk, kemik kaybı riski ve kalp-metabolizma durumu aynı anda değerlendirildiğinde
             hangi müdahalenin öncelikli olacağı daha netleşir. Sağlık yaklaşımının gücü, tek bir semptoma odaklanmak yerine sistemler arası bağlantıyı görmesinden gelir.
           </p>
           <p>
@@ -213,16 +214,16 @@ const articleSchemas = buildArticleSchemas({
             Östrojen biyolojisi bu dönüşümün teorik zemini, kişisel sağlık planı ise pratik karşılığıdır.
           </p>
         </ArticleProsePanel>
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/bilimsel-pencere/nad-plus-hucresel-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / NAD+ ve Hücresel Yaşlanma</a></li>
-            <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
-            <li><a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Kemik Sağlığı ve Koruma</a></li>
-            <li><a href="/zihin-denge/ruh-hali-degisimleri-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Ruh Hali Değişimleri</a></li>
-            <li><a href="/beden-yakinlik/menopozda-cilt-degisimleri" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Menopozda Cilt Değişimleri</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+            '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

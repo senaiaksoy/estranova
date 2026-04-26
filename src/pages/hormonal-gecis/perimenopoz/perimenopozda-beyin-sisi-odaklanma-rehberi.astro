@@ -1,0 +1,220 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const tocEntries = [
+  { id: 'konu-cercevesi', label: 'Beyin Sisi Nasıl Görünür?' },
+  { id: 'mekanizma', label: 'Neden Bu Dönemde Artar?' },
+  { id: 'kanit', label: 'Kanıt Düzeyi: Ne Kadar Netiz?' },
+  { id: 'turkiye', label: 'Türkiye Bağlamı' },
+  { id: 'yol-haritasi', label: 'Odak İçin Yol Haritası' },
+  { id: 'sss', label: 'Pratik / SSS' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Perimenopozda Beyin Sisi: Günlük Hayatta Odaklanmayı Geri Kazanma Rehberi';
+const articleDescription =
+  'Perimenopozda beyin sisi (odaklanma güçlüğü, unutkanlık, kelime bulma zorlanması) neden artar? Uyku, stres ve günlük yaşam düzeni üzerinden daha net bir yol haritası sunan rehber.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'isik-selin-kuyumcu',
+  publishedDate: '26 Nisan 2026',
+  pathname: '/hormonal-gecis/perimenopoz/perimenopozda-beyin-sisi-odaklanma-rehberi',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: ['perimenopoz', 'beyin sisi', 'odaklanma', 'unutkanlık', 'uyku', 'stres', 'zihinsel yorgunluk'],
+  siteUrl,
+});
+---
+
+<SiteLayout title={`${articleTitle} - Estranova`} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="isik-selin-kuyumcu" publishedDate="26 Nisan 2026" readingMinutes={6} />
+
+      <header class="mb-10">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Hormonal Geçiş · Perimenopoz</p>
+        <h1 class="font-serif text-4xl leading-tight md:text-6xl">Perimenopozda Beyin Sisi: Günlük Hayatta Odaklanmayı Geri Kazanma Rehberi</h1>
+      </header>
+
+      <section
+        class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Geçen yıl bir gün, prova sonrası kuliste oturuyorum. Metni yıllardır söyleyen ben, bir anda bir cümleyi bulamadım. Hani unutursun da
+          sonra gelir ya… Gelmedi. İçimde küçük bir panik: “Benim zihnim mi gidiyor?” Aynı hafta evde anahtarı buzdolabına koyduğumu fark ettim.
+          Bir arkadaşım aradı; “Ben de aynıyım, sanki kafamın içinde ince bir sis var” dedi. O an rahatladım: tek başıma değildim.
+        </p>
+        <p class="mt-4 leading-relaxed text-[#2D2D2D]/80">
+          Perimenopozda “beyin sisi” çoğu zaman tembellik ya da yetersizlik değil; uykunun bölünmesi, stres yükü ve hormon dalgalanmasının birlikte
+          oluşturduğu hassas bir dönem işaretidir <Evidence from={4} to={5} />. Bu rehber, sisli günleri büyütmeden; daha güvenli ve uygulanabilir
+          adımlarla odaklanmayı yeniden kurmana yardım edecek bir yol haritası sunuyor.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="konu-cercevesi">Beyin Sisi Nasıl Görünür?</h2>
+        <p>
+          “Beyin sisi” tek bir belirti gibi dursa da, günlük hayatta farklı maskeler takar; çoğumuz bunu önce küçük aksilikler gibi yaşarız.
+        </p>
+        <p>
+          Bende ve çevremde en sık gördüğüm haller şunlar: kelimeyi bulamamak, aynı paragrafı iki kez okumak, bir işe başlayıp başka bir işe
+          kaymak, gün sonunda “zihnim tükendi” hissi. Buradaki önemli ayrım şu: bu dalgalanma çoğu zaman inişli çıkışlıdır; bazı günler daha
+          net, bazı günler daha sisli olabilir <Evidence level={4} />.
+        </p>
+
+        <h2 id="mekanizma">Neden Bu Dönemde Artar?</h2>
+        <p>
+          Perimenopozu yalnızca “adet düzeni değişti” diye konuşmak kolay; ama zihin tarafı daha sessiz yaşanır. Oysa bedenin ritmi değişirken,
+          beyin de bu ritme uyum sağlamaya çalışır.
+        </p>
+        <p>
+          Beyin sisi çoğu kadında birkaç kanalın birleşmesiyle belirginleşir: gece uykusunun bölünmesi (özellikle sıcak basması ve terleme ile),
+          stres yükünün artması ve ruh hali dalgalanmaları <Evidence level={5} />. Bazen de demir eksikliği, tiroid dengesizliği gibi eşlikçiler
+          tabloyu ağırlaştırabilir <Evidence level={4} />.
+        </p>
+
+        <h2 id="kanit">Kanıt Düzeyi: Ne Kadar Netiz?</h2>
+        <p>
+          Bu konuda “kesin budur” diye konuşmak çoğu zaman iyi gelmiyor; çünkü perimenopoz kişiden kişiye farklı yaşanıyor. Yine de şunu güvenle
+          söyleyebiliriz: bilişsel yakınmaların (odaklanma, unutkanlık, kelime bulma zorlanması) bu dönemde daha sık rapor edildiğine dair güçlü bir
+          genel resim var <Evidence level={4} />.
+        </p>
+        <p>
+          En tutarlı ilişki çoğu zaman uyku ve stres ekseninde görülüyor. Yani sisin “tek nedeni” olmayabilir; ama sisin kalınlaştığı günleri anlamak
+          için uyku bölünmesi ve zihinsel yük iyi bir başlangıç haritası sunar <Evidence from={4} to={5} />.
+        </p>
+
+        <h2 id="turkiye">Türkiye Bağlamı: Bu Sis Neden Bizde Daha Çabuk “Kendini Suçlama”ya Dönüyor?</h2>
+        <p>
+          Bizde “yetişmek” çoğu zaman sessiz bir görev gibi taşınır. Bir yanda iş temposu, diğer yanda evin ritmi, bakım yükü, aile düzeni… ve tüm
+          bunların içinde “ben iyi olmalıyım” baskısı.
+        </p>
+        <p>
+          Bu yüzden beyin sisi, sadece biyolojik bir dalgalanma değil; kültürel olarak da “ben yetersizim” hikâyesine dönüşebiliyor. Oysa çoğu zaman
+          soru şu: “Benim ritmim değişti mi?” Ritmin değişmesi, değerin değişmesi değildir.
+        </p>
+
+        <h2 id="yol-haritasi">Odaklanmayı Yeniden Kurmak İçin Bizden, Uygulanabilir Bir Yol</h2>
+        <p>
+          Benim işime yarayan şey büyük planlar değil, küçük ama tutarlı düzenler oldu. Sanki sahnede ışığı bir kademe açmak gibi: her gün az,
+          ama aynı yönde.
+        </p>
+        <h3>Önce zemin: uyku ve temel kontroller</h3>
+        <p>
+          Eğer sis belirginleştiyse önce zemine bakmak iyi gelebilir: uyku bölünmesi var mı, kansızlık/demir eksikliği olasılığı var mı, tiroid
+          tarafında dalgalanma olabilir mi? Bu bir korku listesi değil; sık görülen ve düzeltilebilir olasılıkları dışlamak için sakin bir başlangıç.
+        </p>
+        <h3>Gün içinde tek bir “temiz odak” saati</h3>
+        <p>
+          Her gün 60 dakika: tek iş, tek hedef, bildirim yok. Bu, her şeyi çözmez ama “ben hâlâ odak kurabiliyorum” duygusunu geri getirir.
+          Birçok kadında odaklanma, daha çok zorlayarak değil daha az şey taşıyarak kolaylaşır <Evidence level={4} />.
+        </p>
+        <h3>Zihinsel yükü dışarı al: tek bir not sistemi</h3>
+        <p>
+          Beyin, unutmamak için arka planda sürekli enerji harcar. Tek bir defter ya da tek bir not uygulaması seçmek; günün 3 önceliği ve “sonra”
+          listesi yapmak zihni hafifletir. Amaç mükemmel sistem değil; yükü bölmek.
+        </p>
+        <h3>Çoklu görev yerine sırayla çalışma</h3>
+        <p>
+          Bazı günler sekme değiştirmek daha yorucu olabilir. 25 dakika tek iş + 5 dakika ara ritmi, özellikle yoğun günlerde zihni toparlamaya yardımcı
+          olabilir <Evidence level={3} />.
+        </p>
+        <h3>Küçük hareket: kısa yürüyüş</h3>
+        <p>
+          Bazen odak için en doğru hamle masadan kalkıp 10–15 dakika yürümektir. Büyük spor planları değil, kısa hareket; çünkü zihin bedenden çok etkilenir.
+        </p>
+        <h3>Kırmızı bayraklarda bekleme</h3>
+        <p>
+          İç sesin “bu farklı” diyorsa küçümseme: belirtiler hızla artıyorsa, günlük işlev belirgin bozuluyorsa, yoğun uykusuzlukla birlikte çökme hali
+          varsa veya yeni ve alışılmadık nörolojik belirtiler eşlik ediyorsa değerlendirme almak daha güvenli olur.
+        </p>
+
+        <h2 id="sss">Pratik / SSS</h2>
+        <p>
+          Bu dönemde aynı sorular dönüp dolaşıp geliyor; senin de aklından geçenleri kısa ve net cevaplayalım.
+        </p>
+        <h3>Bu sis geçecek mi?</h3>
+        <p>
+          Birçok kadında dalgalı seyreder: artar, azalır, tekrar artar. Çoğu zaman “tamamen kaybolma” değil, “yönetilebilir hale gelme” hedefi daha
+          gerçekçidir. Sis hangi günlerde arttığını yakaladığında kontrol duygusu da artar.
+        </p>
+        <h3>Kelime bulamamak beni korkutuyor. Normal mi?</h3>
+        <p>
+          Birçok kadının anlattığı bir deneyim bu; yalnız değilsin. Yine de hızlı kötüleşme, belirgin işlev kaybı veya başka belirtiler eşlik ediyorsa
+          değerlendirme almak iyi olabilir. Bazen “olasılıkları dışlamak”, zihni en çok rahatlatan şey oluyor.
+        </p>
+        <h3>İş günlerinde en hızlı ne yardımcı olabilir?</h3>
+        <p>
+          En gerçekçi ikili çoğu zaman şu: günün bir saatini tek işe ayırmak ve zihinsel yükü tek bir not sistemine boşaltmak. Odaklanmayı daha çok
+          zorlayarak değil, daha az şey taşıyarak geri almak mümkün olabilir.
+        </p>
+        <h3>Evde her şey üst üste geliyor. Nereden başlayayım?</h3>
+        <p>
+          Önce kendine şunu söyle: “Benim sorunum karakter değil, yük.” Sonra tek bir küçük düzen seç: örneğin sabah 15 dakikayı günün 3 önceliğine
+          ayırmak. Ev yükü bitmeyebilir ama zihin “kontrol bende” sinyalini tekrar alır.
+        </p>
+        <h3>Ne zaman profesyonel destek düşünmeliyim?</h3>
+        <p>
+          Eğer bu durum 2–3 ay boyunca belirginse, uykun bozulduysa, kaygı/çökme artıyorsa ya da “ben kendimi tanıyamıyorum” hissi güçleniyorsa destek
+          almak iyi bir eşik olabilir. Bu, büyütmek değil; süreci hafifletmek için zamanında adım atmak.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Perimenopozda beyin sisi, kendine güveni sessizce kemirebilir. Ama bu dönem, “bitti” dediğin bir yer olmak zorunda değil; yeniden ayar çektiğin
+          bir yer.
+        </p>
+        <p>
+          Bugün tek bir adım seçelim: yarın için 60 dakikalık bir odak saati belirle. Tek iş, tek hedef. Akşam da bir cümle yaz: “Bugün sis ne zaman
+          arttı?” Küçük iki hareket, zamanla büyük bir haritaya dönüşebilir.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+          '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
+          '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
+          '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
+        ]}
+      />
+
+      <section
+        class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Perimenopoz döneminde bilişsel yakınmalar çoğunlukla uyku, stres yükü ve eşlik eden sağlık başlıklarıyla birlikte değerlendirilmelidir.
+          Bu rehber tanı koymaz; şikâyetlerin belirginleşmesi veya günlük yaşamı etkilemesi durumunda kişisel değerlendirme için sağlık
+          profesyoneli görüşü uygun olur.
+        </p>
+      </section>
+
+      <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Kişisel sağlık kararlarınız için kendi
+          hekim değerlendirmelerinizi esas alın.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -67,3 +67,29 @@ Yayından önce üç onay gerekir:
 1. Editoryal ton ve yapı kontrolü
 2. Tıbbi doğruluk kontrolü
 3. Uyum ve yasak dil kontrolü
+
+## 9) Yazar Üslup Kartı — B. Selin (Işık Selin Günçe)
+Bu kart, `src/data/writers.ts` içindeki `writingStyle` alanı ile birlikte uygulanır.
+
+- **Ses:** Sahici, sıcak, akran tonu yüksek; panik değil yön duygusu veren anlatım.
+- **Ritim:** Kısa-orta cümle dengesi; sahne geçişi gibi akıcı ve nefesli kurgu.
+- **Çerçeve:** Önce deneyimi adlandır, sonra mekanizmayı sadeleştir, en sonda güvenli adım ver.
+
+### Zorunlu Uygulamalar
+- Duyguyu normalize eden bir giriş kullan (`yalnız değilsiniz`, `bu sık görülebilir` çerçevesi).
+- Tıbbi terimi sade Türkçe karşılığıyla birlikte ver.
+- Belirsizlikte kesinlik değil olasılık dili kullan (`yardımcı olabilir`, `ilişkili olabilir`).
+- Kırmızı bayrakları kısa, net ve maddeli ver.
+
+### Kaçınılacaklar
+- Buyurgan/didaktik doktor tonu
+- Korku yükselten dramatik ifadeler
+- Kanıttan bağımsız kesin yargılar
+
+## 10) Terim Tercihi (Dil Standardı)
+- Kadın sağlığı içeriklerinde genel dilde `döngü` yerine öncelikli terim `adet` kullanılır.
+- Tercih edilen kullanımlar:
+  - `adet düzeni`
+  - `adet aralığı`
+  - `adet kaydı`
+- `Döngü` terimi yalnızca teknik bağlamda (ör. `hormonal döngü`) gerçekten gerekli olduğunda kullanılır.

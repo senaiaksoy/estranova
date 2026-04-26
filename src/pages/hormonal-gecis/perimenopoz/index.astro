@@ -3,23 +3,39 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { chapterMap, getNextChapter } from '../../../data/chapter-map';
+import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/perimenopoz']!;
+const __path = '/hormonal-gecis/perimenopoz';
+const chapter = chapterMap[__path]!;
+const epigraph = subHubEpigraphs[__path];
+const next = getNextChapter(__path);
 
 const articles = [
   {
-    href: '/zihin-denge/bellek-odaklanma-menopoz',
+    href: '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
+    title: 'Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?',
+    excerpt:
+      'Adet düzenindeki değişimleri normal sınırlar içinde okumak, kırmızı bayrakları ayırt etmek ve doğru zamanda kadın doğuma başvurmak için pratik rehber.',
+    tag: 'Adet düzeni',
+  },
+  {
+    href: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
     title: 'Bellek ve Odaklanma',
     excerpt:
       'Unutkanlık veya dikkat dağınıklığı hissi; uyku, stres ve hormonal dalgalanma ile birlikte düşünüldüğünde daha anlamlı bir resim verir.',
     tag: 'Bilişsel iyi olma',
   },
   {
-    href: '/zihin-denge/uyku-bozuklugu-menopoz',
+    href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
     title: 'Menopozda Uyku Bozukluğu',
     excerpt:
-      'Gece terlemesi ve uyku bölünmesi geçiş döneminde sıktır; uyku hijyeni ve ne zaman profesyonel destek düşünülebileceği üzerine yapılandırılmış bir okuma.',
+      'Gece terlemesi ve uyku bölünmesi geçiş döneminde sıktır; uyku hijyeni ve ne zaman profesyonel destek düşünülebileceği üzerine planlı bir okuma.',
     tag: 'Uyku',
   },
 ];
@@ -28,17 +44,17 @@ const themes = [
   {
     title: 'Uyku ve gece terlemesi',
     text: 'Uyku bölünmesi ve gece terlemesi vasomotor belirtilerle ilişkilendirilebilir; günlük güç ve ruh hali üzerindeki etkileri birlikte ele alınır.',
-    href: '/zihin-denge/uyku-bozuklugu-menopoz',
+    href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
   },
   {
     title: 'Ruh hali ve kaygı',
     text: 'Östrojen dalgalanmaları ruh hali üzerinde etkili olabilir; stres ve yaşam yükü de aynı tabloda değerlendirilmelidir.',
-    href: '/zihin-denge/ruh-hali-degisimleri-menopoz',
+    href: '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
   },
   {
     title: 'Odak ve bellek',
     text: '“Beyin sisi” benzeri tanımlar yaygındır; tek başına hormon yerine çok faktörlü bir okuma genelde daha doğrudur.',
-    href: '/zihin-denge/bellek-odaklanma-menopoz',
+    href: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
   },
   {
     title: 'Belirtileri sınıflandırmak',
@@ -53,6 +69,7 @@ const themes = [
   description="Perimenopoz nedir, adet ve ruh hali nasıl okunur? Temel rehber, seçilmiş makaleler ve Zihin & Denge bağlantılarıyla hormonal geçişin ilk evresi."
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
+  <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
 
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
@@ -112,6 +129,8 @@ const themes = [
       </div>
     </section>
 
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
     <!-- Featured pillar -->
     <section class="bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
@@ -122,7 +141,7 @@ const themes = [
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.26em] text-white/85">Başlangıç rehberi</p>
           <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Perimenopoz Nedir? — Temel Rehber</h2>
           <p class="mb-6 max-w-3xl text-base leading-relaxed text-white/88 md:text-lg">
-            Tanım, hormonal arka plan, yaygın belirtiler ve günlük yaşamda yapılandırılmış bilginin önemi; tek sayfada dengeli bir giriş.
+            Tanım, hormonal arka plan, yaygın belirtiler ve günlük yaşamda planlı bilginin önemi; tek sayfada dengeli bir giriş.
           </p>
           <span
             class="inline-flex items-center text-sm font-semibold tracking-wide text-white underline decoration-white/40 underline-offset-4 group-hover:decoration-white"
@@ -202,7 +221,7 @@ const themes = [
           >
             <h3 class="mb-2 font-serif text-xl">Menopoza hazırlık</h3>
             <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
-              Rutin, hareket ve beslenme başlıklarında yapılandırılmış adımlar için içerik özetleri.
+              Rutin, hareket ve beslenme başlıklarında planlı adımlar için içerik özetleri.
             </p>
             <span class="mt-4 inline-block font-semibold text-[#6B2D3E]">Sayfaya git →</span>
           </a>
@@ -224,13 +243,7 @@ const themes = [
       </div>
     </section>
 
-    <section class="bg-white px-6 py-10">
-      <div class="mx-auto max-w-4xl rounded-[20px] border border-[#6B2D3E]/12 p-6 text-center">
-        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
-          Bu sayfa genel bilgilendirme sunar; belirtileriniz için bireysel tıbbi değerlendirme, tanı veya tedavi yerine geçmez.
-        </p>
-      </div>
-    </section>
+    <ChapterCompass nextHref={next?.href} nextNumber={next?.number} nextChapter={next?.chapter} nextParent={next?.parent} />
   </main>
 
   <SiteFooter />

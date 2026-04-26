@@ -7,6 +7,7 @@ import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
 import { resolveSiteUrl } from '../../utils/seo';
 
@@ -182,16 +183,16 @@ const articleSchemas = buildArticleSchemas({
             Bu bakış, gereksiz takviyeyi azaltırken gerçekten ihtiyaç duyan kişilere doğru zamanda destek sağlar.
           </p>
         </ArticleProsePanel>
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / 40 Yaşından Sonra Kemik Sağlığı</a></li>
-            <li><a href="/zamansiz-yasam/beslenme-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Beslenme ve Yaşlanma</a></li>
-            <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
-            <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku Bozukluğu ve Menopoz</a></li>
-            <li><a href="/bilimsel-pencere/nad-plus-hucresel-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / NAD+ ve Hücresel Yaşlanma</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/zamansiz-yasam/beslenme-yaslanma',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

@@ -6,33 +6,39 @@ import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
 import SubmenuSection from '../../components/site/SubmenuSection.astro';
 import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
+import CategoryRelatedLinks from '../../components/site/CategoryRelatedLinks.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/bilimsel-pencere']!;
-const imgEst = submenuHeroByRoute['/bilimsel-pencere/estrogen-biyolojisi-saglik']!;
-const imgNad = submenuHeroByRoute['/bilimsel-pencere/nad-plus-hucresel-yaslanma']!;
+const __hubPath = '/bilimsel-pencere';
+const epigraph = subHubEpigraphs[__hubPath];
 
 const pillars = [
   {
     step: '01',
-    title: 'Uzman Görüşleri',
-    excerpt: 'Editoryal danışman hekimlerin perspektifleri.',
-    href: '/bilimsel-pencere/uzman-gorusleri',
-    image: hero,
+    title: 'Hormonların Bilimi',
+    excerpt: 'Östrojen, progesteron ve testosteronun kemik, kalp, beyin ve metabolizmadaki temel mekanizmaları.',
+    href: '/bilimsel-pencere/hormonlarin-bilimi',
+    image: submenuHeroByRoute['/bilimsel-pencere/hormonlarin-bilimi']!,
   },
   {
     step: '02',
-    title: 'Araştırma Özetleri',
-    excerpt: 'Güncel bilimsel literatürün anlaşılır özetleri.',
-    href: '/bilimsel-pencere/nad-plus-hucresel-yaslanma',
-    image: imgNad,
+    title: 'Hücreler ve Yaşlanma',
+    excerpt: 'NAD+, mitokondri, senesans, telomer — yaşlanma biyolojisinin son 20 yılda fişeklenen alanı için derlemeler.',
+    href: '/bilimsel-pencere/hucreler-ve-yaslanma',
+    image: submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma']!,
   },
   {
     step: '03',
-    title: 'Mitler vs. Gerçekler',
-    excerpt: 'Yaygın sağlık inançlarının bilimsel değerlendirmesi.',
-    href: '/bilimsel-pencere/estrogen-biyolojisi-saglik',
-    image: imgEst,
+    title: 'Yeni Araştırmalar',
+    excerpt: 'Editöryal kuruldaki yeni çalışma derlemeleri ve meta-analizler için ayrılmış alan; ilk yayınlar yakında.',
+    href: '/bilimsel-pencere/yeni-arastirmalar',
+    image: submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar']!,
   },
 ];
 ---
@@ -43,6 +49,8 @@ const pillars = [
 >
   <SiteNavbar currentPath="/bilimsel-pencere" />
 
+  <ChapterMasthead variant="section" chapter="Bilimsel Pencere" />
+
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
       eyebrow="Kategori"
@@ -52,7 +60,7 @@ const pillars = [
       imageAlt={hero.alt}
     />
     <SubmenuSection variant="cream" borderedTop={true}>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {
           pillars.map((p) => (
             <SubmenuLinkCard
@@ -68,6 +76,8 @@ const pillars = [
       </div>
     </SubmenuSection>
 
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Güncel Bilim</p>
@@ -80,25 +90,37 @@ const pillars = [
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         <SubmenuSpotlightCard
           tag="Araştırma Özeti"
-          title="Uyku Kalitesi ve Hormonal Denge"
-          body="Son yayınlarda uyku düzeni ile hormon dalgalanmaları arasındaki ilişkinin nasıl ele alındığına dair kısa bir çerçeve."
-          href="/zihin-denge/uyku-bozuklugu-menopoz"
-        />
+          title="Östrojen Biyolojisi ve Sağlık"
+          body="Östrojenin kemik, kalp, beyin ve metabolizmadaki rollerini kanıt düzeyiyle açıklayan derleme."
+          href="/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={5} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           highlight={true}
           tag="Araştırma Özeti"
-          title="Fiziksel Aktivite ve Ruh Hali"
-          body="Düzenli hareketin duygusal denge üzerindeki etkisini inceleyen yeni çalışmaların anlaşılır özeti."
-          href="/zihin-denge/stres-yonetimi-menopoz"
-        />
+          title="NAD+ ve Hücresel Yaşlanma"
+          body="NAD+ biyolojisi, yaşlanma ilişkisi ve erken evre insan araştırmalarını kanıt düzeyleriyle açıklayan derleme."
+          href="/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
-          tag="Araştırma Özeti"
-          title="Beslenme Kalıpları ve Metabolik Sağlık"
-          body="Metabolik dengeyi destekleyen beslenme yaklaşımlarına dair güncel verilerin kısa değerlendirmesi."
-          href="/zamansiz-yasam/beslenme-yaslanma"
-        />
+          tag="Karar Notu"
+          title="Hormon Tedavisi: Kanıtın Değerlendirmesi"
+          body="Hormon tedavisi seçeneklerini fayda-risk dengesinde değerlendiren karar çerçevesi."
+          href="/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
       </div>
     </SubmenuSection>
+
+    <SubmenuSection variant="sand" borderedTop={true}>
+      <CategoryRelatedLinks exclude="/bilimsel-pencere" />
+    </SubmenuSection>
+
+    <ChapterCompass nextHref="/bilimsel-pencere/hormonlarin-bilimi" nextNumber="01" nextChapter="Hormonların Bilimi" nextParent="Bilimsel Pencere" />
   </main>
 
   <SiteFooter />

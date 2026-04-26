@@ -7,6 +7,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
@@ -127,26 +128,14 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li>
-              <a href="/zamansiz-yasam/deneysel/ozon-terapisi-inceleme" class="font-semibold text-[#6B2D3E] hover:underline">
-                Ozon Tedavisi: Kanıtlar Ne Söylüyor?
-              </a>
-            </li>
-            <li>
-              <a href="/zamansiz-yasam/non-invaziv/hifu-ve-rf-karsilastirma" class="font-semibold text-[#6B2D3E] hover:underline">
-                HIFU ve RF Uygulamaları: Temel Farklar
-              </a>
-            </li>
-            <li>
-              <a href="/zamansiz-yasam/vitaminler/d-vitamini-rehberi" class="font-semibold text-[#6B2D3E] hover:underline">
-                D Vitamini: 40 Yaşından Sonra Ne Kadar Almanız Gerekiyor?
-              </a>
-            </li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zamansiz-yasam/deneysel/ozon-terapisi-inceleme',
+            '/zamansiz-yasam/non-invaziv/hifu-ve-rf-karsilastirma',
+            '/zamansiz-yasam/vitaminler/d-vitamini-rehberi',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

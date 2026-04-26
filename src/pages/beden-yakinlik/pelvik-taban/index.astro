@@ -1,0 +1,146 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuSection from '../../../components/site/SubmenuSection.astro';
+import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
+import MarginaliaRail from '../../../components/site/MarginaliaRail.astro';
+import MarginaliaItem from '../../../components/site/MarginaliaItem.astro';
+import Asterism from '../../../components/site/Asterism.astro';
+import ChapterCompass from '../../../components/site/ChapterCompass.astro';
+import ArticleMetaSigil from '../../../components/site/ArticleMetaSigil.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { chapterMap, getNextChapter } from '../../../data/chapter-map';
+import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
+
+const path = '/beden-yakinlik/pelvik-taban';
+const hero = submenuHeroByRoute[path]!;
+const chapter = chapterMap[path]!;
+const epigraph = subHubEpigraphs[path];
+const next = getNextChapter(path);
+
+const leadArticle = {
+  href: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
+  title: 'İdrar Kontrolü ve Pelvik Taban',
+  excerpt: 'Pelvik taban kaslarını destekleyen pratikler ve kontinans değişimlerine kanıt-temelli yaklaşım; egzersiz, davranış ve klinik destek.',
+  image: submenuHeroByRoute['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban']!,
+  readingMinutes: 7,
+  evidence: 'Güçlü' as const,
+  updated: 'Nisan 2026',
+};
+
+const neighbors = [
+  { href: '/beden-yakinlik/cilt-gorunum', title: 'Cilt & Görünüm', excerpt: 'Cildin hormonal yaşlanması; günlük bakım ve klinik destek seçenekleri.' },
+  { href: '/beden-yakinlik/cinsel-saglik', title: 'Cinsel Sağlık', excerpt: 'Vajinal kuruluk, cinsellikte ağrı ve libido değişimleri.' },
+];
+---
+
+<SiteLayout
+  title="Pelvik Taban — Beden & Yakınlık - Estranova"
+  description="İdrar kontrolü, duruş ve pelvik kasların menopozda değişimi; egzersiz, davranışsal stratejiler ve gerektiğinde tıbbi destek."
+>
+  <SiteNavbar currentPath="/beden-yakinlik" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
+
+    <SubmenuHero
+      eyebrow="Sessiz çalışan kaslar"
+      title="Pelvik Taban"
+      lede="İdrar kontrolünde değişimler menopozda yaygın ama sessizce yaşanır. Pelvik taban; cinsel yaşam, duruş ve günlük rahatlık aynı sistemden geçer."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+
+    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <nav class="mb-10 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a href="/beden-yakinlik" class="font-medium text-[#6B2D3E] hover:underline">Beden & Yakınlık</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="font-medium text-[#2D2D2D]">Pelvik Taban</li>
+          </ol>
+        </nav>
+
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14">
+          <div class="lg:col-span-8">
+            <p class="editorial-dropcap mb-7 text-lg leading-relaxed text-[#2D2D2D]/85 md:text-xl">
+              Östrojen düşüşü pelvik dokuların gerginliğini ve kan akımını etkiler. Öksürürken,
+              gülerken ya da egzersizde istemsiz kaçaklar; <strong class="font-semibold text-[#2D2D2D]">yaşlanmanın kaderi değildir</strong>,
+              çoğu zaman geriletilebilir. Aynı sistemde pelvik organ desteği, mahrem his ve
+              duruş; üçü birden uzun yıllarca sessizce çalışıp, dengelendiği gün konuşur.
+            </p>
+            <p class="text-base leading-relaxed text-[#2D2D2D]/72 md:text-lg">
+              Doğru egzersiz protokolü, davranışsal stratejiler ve gerektiğinde tıbbi destek;
+              bu üçü birlikte planlandığında günlük yaşam kalitesi belirgin biçimde artar.
+              Önce bilgi, sonra plan.
+            </p>
+          </div>
+
+          <div class="lg:col-span-4 lg:pt-1">
+            <MarginaliaRail>
+              <MarginaliaItem label="Yayın" value="Nisan 2026 · Düzenli güncellenir" />
+              <MarginaliaItem label="Yaygınlık" emphasized="50+ kadınların yarısı en az bir form idrar kaçağı yaşar." />
+              <MarginaliaItem label="Sık sorulanlar">
+                <ul class="mt-2 space-y-3 text-sm leading-snug text-[#2D2D2D]/78">
+                  <li><span class="block font-semibold text-[#2D2D2D]">Kegel egzersizi yeterli mi?</span>Çoğu zaman temel adımdır; doğru tekniğe ihtiyaç vardır.</li>
+                  <li><span class="block font-semibold text-[#2D2D2D]">Gerçekten geri dönüyor mu?</span>Çoğu vakada belirgin iyileşme mümkündür.</li>
+                  <li><span class="block font-semibold text-[#2D2D2D]">Ameliyat tek seçenek mi?</span>Hayır; cerrahi son aşamadır, önce konservatif yaklaşımlar.</li>
+                </ul>
+              </MarginaliaItem>
+            </MarginaliaRail>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
+    <SubmenuSection variant="white" borderedTop={false}>
+      <header class="mb-12 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
+        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yayında olan rehberler</h2>
+      </header>
+
+      <article class="group grid gap-8 overflow-hidden rounded-[32px] border border-[#6B2D3E]/15 bg-white shadow-sm transition hover:shadow-lg md:grid-cols-12 md:gap-0">
+        <a href={leadArticle.href} class="relative md:col-span-7 md:min-h-[340px]">
+          <img src={leadArticle.image.src} alt={leadArticle.image.alt} width="900" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#1c1412]/30 via-transparent to-transparent" />
+        </a>
+        <div class="flex flex-col justify-center p-7 md:col-span-5 md:p-10">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#775a19]">Öne Çıkan Rehber</p>
+          <h3 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">
+            <a href={leadArticle.href} class="hover:text-[#6B2D3E]">{leadArticle.title}</a>
+          </h3>
+          <p class="mb-6 leading-relaxed text-[#2D2D2D]/75">{leadArticle.excerpt}</p>
+          <div class="mb-4">
+            <ArticleMetaSigil readingMinutes={leadArticle.readingMinutes} evidence={leadArticle.evidence} updated={leadArticle.updated} />
+          </div>
+          <a href={leadArticle.href} class="font-semibold text-[#6B2D3E] hover:underline">Rehberi oku →</a>
+        </div>
+      </article>
+    </SubmenuSection>
+
+    <Asterism />
+
+    <SubmenuSection variant="cream" borderedTop={false}>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Aynı kategoride</p>
+      <h2 class="mb-8 font-serif text-2xl md:text-3xl">İlgili alt başlıklar</h2>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {neighbors.map((n) => (
+          <a href={n.href} class="group rounded-[26px] border border-[#6B2D3E]/12 bg-white p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm">
+            <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{n.title}</h3>
+            <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/72">{n.excerpt}</p>
+            <span class="text-sm font-semibold text-[#6B2D3E] group-hover:underline">Sayfaya git →</span>
+          </a>
+        ))}
+      </div>
+    </SubmenuSection>
+
+    <ChapterCompass nextHref={next?.href} nextNumber={next?.number} nextChapter={next?.chapter} nextParent={next?.parent} />
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

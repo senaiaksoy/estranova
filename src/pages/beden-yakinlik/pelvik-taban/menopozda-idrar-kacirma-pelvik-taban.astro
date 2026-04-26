@@ -1,14 +1,15 @@
 ---
 import { getCollection, render } from 'astro:content';
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 
-const route = '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban';
+const route = '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban';
 const hero = submenuHeroByRoute[route]!;
 
 // Yazıyı blog koleksiyonundan çek (Streamlit / pipeline buraya yazıyor).
@@ -63,15 +64,15 @@ const publishedDate = formatDate(post.data.date);
         <Content />
       </ArticleProsePanel>
 
-      <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-        <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-        <ul class="space-y-3">
-          <li><a href="/beden-yakinlik/vajinal-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Vajinal Sağlık ve Menopoz</a></li>
-          <li><a href="/beden-yakinlik/yakinlik-agrisi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Yakınlık Sırasında Ağrı</a></li>
-          <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
-          <li><a href="/zamansiz-yasam/hareket-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Hareket ve Sağlık</a></li>
-        </ul>
-      </section>
+      <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
+            '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zamansiz-yasam/hareket-saglik-menopoz',
+          ]}
+        />
 
       <section class="mt-14 rounded-[28px] border border-dashed border-[#6B2D3E]/30 bg-white/60 p-6 text-sm text-[#2D2D2D]/70 ring-1 ring-[#6B2D3E]/10 md:p-8">
         <p>

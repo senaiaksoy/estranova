@@ -1,0 +1,34 @@
+---
+/**
+ * Hassas konu makalelerinde (cinsel sağlık, idrar kaçırma, libido vs.)
+ * yazı başında gösterilen küçük editör notu rozeti. "Senai Aksoy" geçici
+ * yazar personası kullanıldığında devreye giriyor.
+ *
+ * Kullanım örneği:
+ *   <EditorNote initials="S.A." />
+ *   <EditorNote text="Bu yazıyı yazmak için kimse gönüllü olmadı..." initials="S.A." />
+ */
+
+interface Props {
+  /** Rozet metni; varsayılanı esprili kurucusu notu */
+  text?: string;
+  /** İmza inisyalleri (sağ alt) */
+  initials?: string;
+}
+
+const {
+  text = 'Bu yazıyı yazmak için kimse gönüllü olmadı, ben yazdım.',
+  initials = 'S.A.',
+} = Astro.props;
+---
+
+<aside
+  class="my-8 rounded-[20px] border border-[#C9A96E]/30 border-l-[4px] border-l-[#C9A96E] bg-[#FDF8F0] p-5 ring-1 ring-[#6B2D3E]/8 md:p-6"
+  aria-label="Editör notu"
+>
+  <p class="mb-1 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Editör notu</p>
+  <p class="text-sm leading-relaxed text-[#2D2D2D]/82 md:text-base">
+    <em class="font-serif italic">{text}</em>
+    <span class="ml-1 whitespace-nowrap text-[#775a19]">— {initials}</span>
+  </p>
+</aside>

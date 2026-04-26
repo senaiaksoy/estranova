@@ -4,6 +4,7 @@ import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
 ---
 
 <SiteLayout
@@ -74,31 +75,15 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li>
-              <a href="/hormonal-gecis/perimenopoz/perimenopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">
-                Perimenopoz Nedir?
-              </a>
-            </li>
-            <li>
-              <a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">
-                Menopozda Uyku Bozukluğu
-              </a>
-            </li>
-            <li>
-              <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi" class="font-semibold text-[#6B2D3E] hover:underline">
-                NAD+ Takviyesi: Bilim Ne Diyor?
-              </a>
-            </li>
-            <li>
-              <a href="/editoryal-politika/nasil-arastiriyoruz" class="font-semibold text-[#6B2D3E] hover:underline">
-                Yayın Yaklaşımı ve Kanıt Düzeyleri
-              </a>
-            </li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
+            '/editoryal-politika/nasil-arastiriyoruz',
+          ]}
+        />
 
         <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
