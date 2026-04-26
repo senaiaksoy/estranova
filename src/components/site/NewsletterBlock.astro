@@ -1,0 +1,126 @@
+---
+/**
+ * NewsletterBlock — kompakt haftalık bülten abonelik bloğu.
+ *
+ * EditorialDigestStrip'ten (aylık, geniş yatay strip) farklıdır:
+ * - Haftalık ritim
+ * - Makale-içi veya sidebar gibi dar konteynerlerde çalışır
+ * - İki varyant: inline (geniş, form yatay) | compact (dar, form dikey)
+ */
+
+import { randomUUID } from 'node:crypto';
+
+interface Props {
+  variant?: 'inline' | 'compact';
+  heading?: string;
+  description?: string;
+  ctaLabel?: string;
+  /** Çoklu instance için benzersiz ID; verilmezse otomatik üretilir. */
+  formId?: string;
+  class?: string;
+}
+
+const {
+  variant = 'inline',
+  heading = 'Haftalık bilim özeti',
+  description = 'Perimenopoz ve menopoz üzerine kanıt-temelli bir okuma seçkisi, her cuma sabahı. Satış yok, promosyon yok.',
+  ctaLabel = 'Abone ol',
+  formId = `newsletter-${randomUUID().slice(0, 8)}`,
+  class: className,
+} = Astro.props;
+
+const isCompact = variant === 'compact';
+---
+
+<section
+  class:list={[
+    'rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] ring-1 ring-[#6B2D3E]/8 shadow-[0_12px_32px_-20px_rgba(44,22,28,0.18)]',
+    isCompact ? 'p-6 md:p-7' : 'p-7 md:p-10',
+    className,
+  ]}
+  aria-labelledby={`${formId}-heading`}
+>
+  <!-- Eyebrow with brand spark -->
+  <p class="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#C9A96E]">
+    <svg class="h-3 w-3 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
+      <polygon
+        fill="#C9A96E"
+        points="100,10 111.31,88.69 190,100 111.31,111.31 100,190 88.69,111.31 10,100 88.69,88.69"
+      ></polygon>
+    </svg>
+    <span>BÜLTEN · HAFTALIK</span>
+  </p>
+
+  <h3
+    id={`${formId}-heading`}
+    class:list={[
+      'font-serif italic leading-tight text-[#4f171c]',
+      isCompact ? 'mb-3 text-2xl' : 'mb-4 text-3xl md:text-4xl',
+    ]}
+  >
+    {heading}
+  </h3>
+
+  <p
+    class:list={[
+      'leading-relaxed text-[#2D2D2D]/80',
+      isCompact ? 'mb-5 text-sm' : 'mb-6 max-w-[52ch] text-base',
+    ]}
+  >
+    {description}
+  </p>
+
+  <!-- TODO: form action — backend (Mailchimp/Substack/Beehiiv) bağlandığında endpoint ile değiştir -->
+  <form
+    method="post"
+    action="#"
+    name={formId}
+    aria-describedby={`${formId}-kvkk`}
+    class:list={[
+      'flex gap-3',
+      isCompact ? 'flex-col' : 'flex-col sm:flex-row sm:items-stretch',
+    ]}
+  >
+    <label for={`${formId}-email`} class="sr-only">E-posta</label>
+    <input
+      id={`${formId}-email`}
+      name="email"
+      type="email"
+      inputmode="email"
+      autocomplete="email"
+      required
+      placeholder="ornek@eposta.com"
+      class="min-h-[48px] w-full min-w-0 flex-1 rounded-xl border border-[#C9A96E]/45 bg-white px-4 text-sm text-[#2D2D2D] outline-none transition placeholder:text-[#2D2D2D]/40 focus:border-[#6B2D3E]/55 focus:ring-2 focus:ring-[#C9A96E]/35"
+    />
+    <button
+      type="submit"
+      class="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-xl bg-[#4f171c] px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-[#6B2D3E] focus:outline-none focus:ring-2 focus:ring-[#6B2D3E]/40"
+    >
+      {ctaLabel}
+    </button>
+  </form>
+
+  <!-- Trust line + KVKK -->
+  <p
+    id={`${formId}-kvkk`}
+    class:list={[
+      'mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-[#C9A96E]/30 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#775a19]/85',
+      isCompact ? 'text-[10px]' : 'text-[10px] sm:text-[11px]',
+    ]}
+  >
+    <svg class="h-2.5 w-2.5 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
+      <polygon
+        fill="#C9A96E"
+        points="100,10 111.31,88.69 190,100 111.31,111.31 100,190 88.69,111.31 10,100 88.69,88.69"
+      ></polygon>
+    </svg>
+    <span>SPAM YOK · İSTEDİĞİN AN AYRILIRSIN</span>
+    <span class="text-[#C9A96E]">·</span>
+    <a
+      href="/kvkk"
+      class="underline decoration-[#775a19]/30 underline-offset-2 transition hover:text-[#4f171c] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+    >
+      KVKK
+    </a>
+  </p>
+</section>

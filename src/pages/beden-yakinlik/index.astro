@@ -6,65 +6,56 @@ import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
 import SubmenuSection from '../../components/site/SubmenuSection.astro';
 import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
+import CategoryRelatedLinks from '../../components/site/CategoryRelatedLinks.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/beden-yakinlik']!;
-const img = {
-  yakin: submenuHeroByRoute['/beden-yakinlik/yakinlik-agrisi-menopoz']!,
-  vajinal: submenuHeroByRoute['/beden-yakinlik/vajinal-saglik-menopoz']!,
-  cilt: submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!,
-};
+const __hubPath = '/beden-yakinlik';
+const epigraph = subHubEpigraphs[__hubPath];
 
 const pillars = [
   {
     step: '01',
-    title: 'Menopoz ve Cinsel Sağlık',
-    excerpt: 'Yakınlık deneyimindeki değişimleri bilimsel çerçevede anlamaya yardımcı içerikler.',
-    href: '/beden-yakinlik/yakinlik-agrisi-menopoz',
-    image: img.yakin,
+    title: 'Cilt & Görünüm',
+    excerpt: 'Kollajen, nem ve cilt bariyerindeki hormonal değişimler; günlük bakım ve klinik destekler için sade bir okuma çerçevesi.',
+    href: '/beden-yakinlik/cilt-gorunum',
+    image: submenuHeroByRoute['/beden-yakinlik/cilt-gorunum']!,
   },
   {
     step: '02',
-    title: 'Vajinal Sağlık ve Değişimler',
-    excerpt: 'Kuruluk, konfor ve doku değişimlerini sade bir dille açıklayan rehberler.',
-    href: '/beden-yakinlik/vajinal-saglik-menopoz',
-    image: img.vajinal,
+    title: 'Cinsel Sağlık',
+    excerpt: 'Vajinal kuruluk, cinsellikte ağrı ve libido değişimleri — en az konuşulan ama en sık yaşanan başlıklara mahremiyetinizi yargılamayan bir yaklaşım.',
+    href: '/beden-yakinlik/cinsel-saglik',
+    image: submenuHeroByRoute['/beden-yakinlik/cinsel-saglik']!,
   },
   {
     step: '03',
-    title: 'Libido ve Hormonlar',
-    excerpt: 'İstek düzeyini etkileyen hormonal, psikolojik ve yaşam tarzı etmenlerine bütüncül bakış.',
-    href: '/beden-yakinlik/vajinal-saglik-menopoz',
-    image: img.vajinal,
-  },
-  {
-    step: '04',
-    title: 'İlişki Dinamikleri ve İletişim',
-    excerpt: 'Eşler arası iletişim, karşılıklı anlayış ve güvenli ifade yolları üzerine içerikler.',
-    href: '/beden-yakinlik/yakinlik-agrisi-menopoz',
-    image: hero,
-  },
-  {
-    step: '05',
-    title: 'Beden Algısı ve Özgüven',
-    excerpt: 'Bedensel değişimlere uyum, öz-şefkat ve güven duygusunu güçlendiren yaklaşımlar.',
-    href: '/beden-yakinlik/menopozda-cilt-degisimleri',
-    image: img.cilt,
+    title: 'Pelvik Taban',
+    excerpt: 'İdrar kontrolü, duruş ve pelvik kasların menopozdaki değişimi; egzersiz ve davranışsal stratejiler için pratik rehberler.',
+    href: '/beden-yakinlik/pelvik-taban',
+    image: submenuHeroByRoute['/beden-yakinlik/pelvik-taban']!,
   },
 ];
 ---
 
 <SiteLayout
   title="Beden & Yakınlık - Estranova"
-  description="Menopoz döneminde bedeniniz, cinsel sağlığınız ve yakınlık ilişkileriniz hakkında bilimsel bilgi ve rehberlik."
+  description="Menopoz döneminde bedeniniz, cinsel sağlığınız ve cinsel yaşamniz hakkında bilimsel bilgi ve rehberlik."
 >
   <SiteNavbar currentPath="/beden-yakinlik" />
+
+  <ChapterMasthead variant="section" chapter="Beden & Yakınlık" />
 
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
       eyebrow="Kategori"
       title="Beden & Yakınlık"
-      lede="Menopoz döneminde bedeniniz, cinsel sağlığınız ve yakınlık ilişkileriniz hakkında bilimsel bilgi ve rehberlik. Bu bölüm, değişen beden deneyimini yargılamadan ele alır."
+      lede="Menopoz döneminde bedeniniz, cinsel sağlığınız ve cinsel yaşamniz hakkında bilimsel bilgi ve rehberlik. Bu bölüm, değişen beden deneyimini yargılamadan ele alır."
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
@@ -85,6 +76,8 @@ const pillars = [
       </div>
     </SubmenuSection>
 
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
@@ -97,25 +90,37 @@ const pillars = [
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         <SubmenuSpotlightCard
           tag="Cinsel Sağlık"
-          title="Menopoz Döneminde Konforu Desteklemek"
-          body="Yakınlık sırasında konforu etkileyen değişimleri anlamaya yönelik temel bir rehber."
-          href="/beden-yakinlik/yakinlik-agrisi-menopoz"
-        />
+          title="Menopozda Cinsellikte Ağrı"
+          body="Cinsel ilişki sırasında konforu etkileyen değişimleri ve destekleyici yaklaşımları ele alan rehber."
+          href="/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           highlight={true}
-          tag="İlişki"
-          title="İletişimde Güvenli Alan Kurmak"
-          body="Duyguları açıkça ifade etmeyi ve karşılıklı anlayışı güçlendirmeyi amaçlayan yaklaşım notları."
-          href="/beden-yakinlik/yakinlik-agrisi-menopoz"
-        />
+          tag="Pelvik Taban"
+          title="İdrar Kontrolü ve Pelvik Taban"
+          body="Pelvik taban kaslarını destekleyen pratikler ve kontinans değişimlerine kanıt-temelli yaklaşım."
+          href="/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
-          tag="Beden Algısı"
-          title="Özgüven ve Bedensel Uyum"
-          body="Beden algısındaki değişimleri yargılamadan ele alan, destekleyici bir başlangıç içeriği."
-          href="/beden-yakinlik/menopozda-cilt-degisimleri"
-        />
+          tag="Cilt"
+          title="Menopozda Cilt Değişimleri"
+          body="Kollajen kaybı, kuruluk ve elastikiyet değişimlerini bilimsel çerçevede ele alan başlangıç rehberi."
+          href="/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
       </div>
     </SubmenuSection>
+
+    <SubmenuSection variant="sand" borderedTop={true}>
+      <CategoryRelatedLinks exclude="/beden-yakinlik" />
+    </SubmenuSection>
+
+    <ChapterCompass nextHref="/beden-yakinlik/cilt-gorunum" nextNumber="01" nextChapter="Cilt & Görünüm" nextParent="Beden & Yakınlık" />
   </main>
 
   <SiteFooter />

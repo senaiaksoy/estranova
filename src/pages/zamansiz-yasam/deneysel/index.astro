@@ -5,9 +5,18 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuSection from '../../../components/site/SubmenuSection.astro';
 import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
+import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { chapterMap, getNextChapter } from '../../../data/chapter-map';
+import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel']!;
+const __path = '/zamansiz-yasam/deneysel';
+const chapter = chapterMap[__path]!;
+const epigraph = subHubEpigraphs[__path];
+const next = getNextChapter(__path);
 
 const articles = [
   {
@@ -18,11 +27,11 @@ const articles = [
     image: submenuHeroByRoute['/zamansiz-yasam/deneysel']!,
   },
   {
-    href: '/bilimsel-pencere/nad-plus-hucresel-yaslanma',
+    href: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
     title: 'Bilimsel Pencere: NAD+ ve Hücresel Yaşlanma',
     excerpt:
       'Hücresel yaşlanma teorisinde NAD+ neden konuşuluyor? Mekanizmayı ve laboratuvardan kliniğe yolun neden uzun olduğunu anlatan derinlemesine okuma.',
-    image: submenuHeroByRoute['/bilimsel-pencere/nad-plus-hucresel-yaslanma']!,
+    image: submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma']!,
   },
 ];
 
@@ -50,6 +59,7 @@ const neighbors = [
   description="Araştırma aşamasındaki yaklaşımlar hakkında kanıt düzeyiyle değerlendirilmiş zamansız yaşam içerikleri."
 >
   <SiteNavbar currentPath="/zamansiz-yasam" />
+  <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
 
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
@@ -109,6 +119,8 @@ const neighbors = [
       </div>
     </section>
 
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
@@ -154,13 +166,7 @@ const neighbors = [
       </div>
     </SubmenuSection>
 
-    <section class="bg-white px-6 py-10">
-      <div class="mx-auto max-w-4xl rounded-[20px] border border-[#6B2D3E]/12 p-6 text-center">
-        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
-          Bu sayfa genel bilgilendirme sunar; deneysel yaklaşımlara dair bireysel kararlar her zaman hekim değerlendirmesiyle alınmalıdır.
-        </p>
-      </div>
-    </section>
+    <ChapterCompass nextHref={next?.href} nextNumber={next?.number} nextChapter={next?.chapter} nextParent={next?.parent} />
   </main>
 
   <SiteFooter />

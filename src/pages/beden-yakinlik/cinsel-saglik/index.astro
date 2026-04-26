@@ -1,0 +1,137 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuSection from '../../../components/site/SubmenuSection.astro';
+import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik']!;
+
+const articles = [
+  {
+    href: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
+    title: 'Vajinal Sağlık ve Menopoz',
+    excerpt:
+      'Vulvovajinal atrofi, kuruluk ve hassasiyet; günlük konfor ve hormonal/non-hormonal destek seçeneklerine sakin bir bakış.',
+    image: submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz']!,
+  },
+  {
+    href: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
+    title: 'Cinsellikte Ağrı',
+    excerpt:
+      'Menopozda dispareuninin nedenleri ve tedavi seçenekleri; çözümsüz olduğunu düşünmenize gerek yok.',
+    image: submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz']!,
+  },
+];
+
+const neighbors = [
+  {
+    href: '/beden-yakinlik/cilt-gorunum',
+    title: 'Cilt & Görünüm',
+    excerpt: 'Cildin hormonal değişimi; kollajen, nem ve bariyer için sade bir bakım çerçevesi.',
+  },
+  {
+    href: '/beden-yakinlik/pelvik-taban',
+    title: 'Pelvik Taban',
+    excerpt: 'İdrar kontrolü ve pelvik kasların menopozda değişimi; pratik egzersiz rehberleri.',
+  },
+];
+---
+
+<SiteLayout
+  title="Cinsel Sağlık — Beden & Yakınlık - Estranova"
+  description="Vajinal kuruluk, cinsellikte ağrı ve libido değişimleri; menopozda en sessiz yaşanan başlıklara mahremiyetinizi yargılamayan bir okuma çerçevesi."
+>
+  <SiteNavbar currentPath="/beden-yakinlik" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Cinsel Sağlık"
+      title="Cinsel Sağlık"
+      lede="Vajinal kuruluk, cinsellikte ağrı, libido değişimleri — menopozda en az konuşulan ama en sık aranan başlıklar. Konuşulmaması, çözümsüz olması anlamına gelmez."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+
+    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-6xl">
+        <nav class="mb-8 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a href="/beden-yakinlik" class="font-medium text-[#6B2D3E] hover:underline">Beden & Yakınlık</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="font-medium text-[#2D2D2D]">Cinsel Sağlık</li>
+          </ol>
+        </nav>
+
+        <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
+          <div>
+            <p class="mb-5 text-lg leading-relaxed text-[#2D2D2D]/82 md:text-xl">
+              Vajinal dokuda incelme, doğal nemde azalma, cinsel ilişki sırasında konfor kaybı — menopozda yaygındır ve
+              <strong class="font-semibold text-[#2D2D2D]">utanılacak değil, çözülebilir</strong> bir başlıktır.
+            </p>
+            <p class="text-base leading-relaxed text-[#2D2D2D]/72">
+              Bu sayfa hekim dilinden çok, "bu konular hakkında bilgili biri" tonunda yazıldı. Tedavi kararları kişiseldir;
+              burada amaç seçenekleri görmenizi ve doğru zamanda destek almak için cesareti bulmanızı sağlamak.
+            </p>
+          </div>
+
+          <aside class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-sm md:p-8" aria-labelledby="intim-ozet">
+            <h2 id="intim-ozet" class="mb-4 font-serif text-xl text-[#2D2D2D]">Sık sorulanlar</h2>
+            <ul class="space-y-4 text-sm leading-relaxed text-[#2D2D2D]/78">
+              <li class="border-b border-[#6B2D3E]/10 pb-4">
+                <span class="block font-semibold text-[#2D2D2D]">Yaygın mı, yoksa benim sorunum mu?</span>
+                Menopoz sonrası kadınların büyük çoğunluğu en az bir başlıkta yaşar; istatistik avantajınızda.
+              </li>
+              <li class="border-b border-[#6B2D3E]/10 pb-4">
+                <span class="block font-semibold text-[#2D2D2D]">Tek seçenek hormon mu?</span>
+                Hayır; nemlendiriciler, lokal düşük doz östrojen, davranışsal yaklaşımlar dahil çeşitli yollar var.
+              </li>
+              <li>
+                <span class="block font-semibold text-[#2D2D2D]">Ne zaman hekime gitmeli?</span>
+                Günlük konforu etkilediğinde — ertelemenin tek yararlı tarafı yoktur.
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <SubmenuSection variant="white" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
+        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yayında olan rehberler</h2>
+      </header>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {articles.map((a) => (
+          <SubmenuLinkCard href={a.href} title={a.title} excerpt={a.excerpt} imageSrc={a.image.src} imageAlt={a.image.alt} cta="Rehberi oku" />
+        ))}
+      </div>
+    </SubmenuSection>
+
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Aynı kategoride</p>
+      <h2 class="mb-8 font-serif text-2xl md:text-3xl">İlgili alt başlıklar</h2>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {neighbors.map((n) => (
+          <a href={n.href} class="group rounded-[26px] border border-[#6B2D3E]/12 bg-white p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm">
+            <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{n.title}</h3>
+            <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/72">{n.excerpt}</p>
+            <span class="text-sm font-semibold text-[#6B2D3E] group-hover:underline">Sayfaya git →</span>
+          </a>
+        ))}
+      </div>
+    </SubmenuSection>
+
+    <section class="bg-white px-6 py-10">
+      <div class="mx-auto max-w-4xl rounded-[20px] border border-[#6B2D3E]/12 p-6 text-center">
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu sayfa genel bilgilendirme sunar; bireysel uygulama veya tedavi kararları için tıbbi değerlendirme yerine geçmez.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

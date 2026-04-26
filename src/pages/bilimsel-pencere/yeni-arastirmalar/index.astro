@@ -1,0 +1,107 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuSection from '../../../components/site/SubmenuSection.astro';
+import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
+import MarginaliaRail from '../../../components/site/MarginaliaRail.astro';
+import MarginaliaItem from '../../../components/site/MarginaliaItem.astro';
+import Asterism from '../../../components/site/Asterism.astro';
+import ChapterCompass from '../../../components/site/ChapterCompass.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { chapterMap, getNextChapter } from '../../../data/chapter-map';
+import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
+
+const path = '/bilimsel-pencere/yeni-arastirmalar';
+const hero = submenuHeroByRoute[path]!;
+const chapter = chapterMap[path]!;
+const epigraph = subHubEpigraphs[path];
+const next = getNextChapter(path);
+
+const neighbors = [
+  { href: '/bilimsel-pencere/hormonlarin-bilimi', title: 'Hormonların Bilimi', excerpt: 'Östrojen, progesteron ve testosteronun sistemler arası etkileri.' },
+  { href: '/bilimsel-pencere/hucreler-ve-yaslanma', title: 'Hücreler ve Yaşlanma', excerpt: 'NAD+, mitokondri, senesans — yaşlanma biyolojisinin son 20 yılı.' },
+];
+---
+
+<SiteLayout
+  title="Yeni Araştırmalar — Bilimsel Pencere - Estranova"
+  description="Editöryal kuruldaki yeni çalışma derlemeleri ve meta-analizler için ayrılmış alan; menopoz ve 40+ kadın sağlığı literatüründen seçilmiş özetler."
+>
+  <SiteNavbar currentPath="/bilimsel-pencere" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
+
+    <SubmenuHero
+      eyebrow="Daha iyi sorular"
+      title="Yeni Araştırmalar"
+      lede="Editöryal kuruldaki yeni çalışma derlemeleri ve meta-analizler için ayrılmış alan. Bilim, yanıt biriktirir; ama önce daha iyi sorular geliştirir."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+
+    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <nav class="mb-10 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a href="/bilimsel-pencere" class="font-medium text-[#6B2D3E] hover:underline">Bilimsel Pencere</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="font-medium text-[#2D2D2D]">Yeni Araştırmalar</li>
+          </ol>
+        </nav>
+
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14">
+          <div class="lg:col-span-8">
+            <p class="editorial-dropcap mb-7 text-lg leading-relaxed text-[#2D2D2D]/85 md:text-xl">
+              Bu alan, menopoz ve 40+ kadın sağlığı literatüründen seçilmiş yeni yayın özetleri
+              için ayrılmıştır. Editöryal kurul; <strong class="font-semibold text-[#2D2D2D]">kanıt düzeyi, çalışma kalitesi ve klinik
+              geçerlilik</strong> üçgeninde yeni gelişmeleri derleyerek paylaşacak.
+            </p>
+            <p class="text-base leading-relaxed text-[#2D2D2D]/72 md:text-lg">
+              İlk yayınlar editöryal takvimde. Bu sayfa içerik geldikçe genişleyecek.
+            </p>
+          </div>
+
+          <div class="lg:col-span-4 lg:pt-1">
+            <MarginaliaRail>
+              <MarginaliaItem label="Durum" value="Hazırlık aşamasında · İlk yayın yakında" />
+              <MarginaliaItem label="Kapsam" emphasized="RCT'ler, meta-analizler ve klavuz güncellemeleri." />
+              <MarginaliaItem label="Bu bölümde olacak">
+                <ul class="mt-2 space-y-3 text-sm leading-snug text-[#2D2D2D]/78">
+                  <li><span class="block font-semibold text-[#2D2D2D]">Klinik araştırma derlemeleri</span>RCT'ler, kohortlar, sistematik incelemeler.</li>
+                  <li><span class="block font-semibold text-[#2D2D2D]">Meta-analizler</span>Birden fazla çalışmanın havuzlanmış sonuçları.</li>
+                  <li><span class="block font-semibold text-[#2D2D2D]">Klavuz güncellemeleri</span>Uluslararası dernek kılavuzlarındaki değişiklikler.</li>
+                </ul>
+              </MarginaliaItem>
+            </MarginaliaRail>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
+    <Asterism />
+
+    <SubmenuSection variant="cream" borderedTop={false}>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Aynı kategoride</p>
+      <h2 class="mb-8 font-serif text-2xl md:text-3xl">İlgili alt başlıklar</h2>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {neighbors.map((n) => (
+          <a href={n.href} class="group rounded-[26px] border border-[#6B2D3E]/12 bg-white p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm">
+            <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{n.title}</h3>
+            <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/72">{n.excerpt}</p>
+            <span class="text-sm font-semibold text-[#6B2D3E] group-hover:underline">Sayfaya git →</span>
+          </a>
+        ))}
+      </div>
+    </SubmenuSection>
+
+    <ChapterCompass nextHref={next?.href} nextNumber={next?.number} nextChapter={next?.chapter} nextParent={next?.parent} />
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

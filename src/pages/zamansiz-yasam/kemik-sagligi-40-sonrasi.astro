@@ -7,6 +7,7 @@ import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
 import { resolveSiteUrl } from '../../utils/seo';
 
@@ -139,16 +140,16 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / 40 Sonrası Sağlık</a></li>
-            <li><a href="/zamansiz-yasam/vitaminler/d-vitamini-rehberi" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / D Vitamini Rehberi</a></li>
-            <li><a href="/zamansiz-yasam/vitaminler" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Kalsiyum Kaynakları</a></li>
-            <li><a href="/zihin-denge/stres-yonetimi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Düzenli Hareket ve Stres</a></li>
-            <li><a href="/bilimsel-pencere/arastirma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Osteoporoz Araştırma Özetleri</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/40-sonrasi',
+            '/zamansiz-yasam/vitaminler/d-vitamini-rehberi',
+            '/zamansiz-yasam/vitaminler',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+            '/bilimsel-pencere/arastirma',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

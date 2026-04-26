@@ -1,18 +1,19 @@
 ﻿---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/menopozda-cilt-degisimleri']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri']!;
 
 const tocEntries = [
   { id: 'ostrojen-etki', label: 'Östrojenin Etkisi' },
@@ -32,7 +33,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '27 Mart 2026',
-  pathname: '/beden-yakinlik/menopozda-cilt-degisimleri',
+  pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik',
   keywords: ['menopoz', 'cilt', 'kolajen', 'östrojen', 'yaşlanma', 'topikal'],
@@ -92,7 +93,7 @@ const articleSchemas = buildArticleSchemas({
           <h2 id="vulvovajinal">Vulvovajinal Doku Değişimleri</h2>
           <p>
             Cilt değişiminden söz ederken mahrem dokuları da dışarıda bırakmamak gerekir; menopozla birlikte vajinal ve vulvar dokuda incelme, kuruluk ve hassasiyet gelişebilir <Evidence level={5} />. Bu durum günlük konforu,
-            yakınlık deneyimini ve bazen idrar yolu şikayetlerini etkileyebilir.
+            cinsel yaşam deneyimini ve bazen idrar yolu şikayetlerini etkileyebilir.
           </p>
           <p>
             Bu belirtiler yaygındır ve utanılacak bir durum değildir. Uygun nemlendirici ürünler, lokal tedavi seçenekleri ve hekim değerlendirmesi
@@ -131,7 +132,7 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="profesyonel-destek">Ne Zaman Profesyonel Destek Almalısınız?</h2>
           <p>
-            Bazen iyi bir rutin yetmez ve bu da senin hatan değildir; ciltte kalıcı tahriş, ani pigment değişimi, geçmeyen kuruluk veya yakınlık sırasında belirgin rahatsızlık varsa dermatolog ve/veya jinekolog
+            Bazen iyi bir rutin yetmez ve bu da senin hatan değildir; ciltte kalıcı tahriş, ani pigment değişimi, geçmeyen kuruluk veya cinsel ilişki sırasında belirgin rahatsızlık varsa dermatolog ve/veya jinekolog
             değerlendirmesi gerekir. Özellikle günlük yaşamı etkileyen şikayetlerde gecikmeden destek almak önemlidir.
           </p>
           <p>
@@ -140,16 +141,16 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/beden-yakinlik/cinsel-saglik" class="font-semibold text-[#6B2D3E] hover:underline">Beden & Yakınlık / Yakınlıkta Konfor</a></li>
-            <li><a href="/zamansiz-yasam/beslenme-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Beslenme ve Cilt Sağlığı</a></li>
-            <li><a href="/zihin-denge/stres-yonetimi-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Stres ve Cilt İlişkisi</a></li>
-            <li><a href="/bilimsel-pencere/arastirma" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Kolajen Araştırma Özetleri</a></li>
-            <li><a href="/hormonal-gecis/menopoz/menopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Nedir?</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/beden-yakinlik/cinsel-saglik',
+            '/zamansiz-yasam/beslenme-yaslanma',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+            '/bilimsel-pencere/arastirma',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>

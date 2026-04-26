@@ -1,0 +1,17 @@
+---
+/**
+ * Asimetrik intro grid'in sağındaki kenar boşluğu rayı.
+ * SSS card'ının yerine geçer — kutusuz, sınırsız, sadece ince sol gold çizgi.
+ * İçeriği slot ile sayfa sağlar.
+ *
+ * Kullanım örneği:
+ *   <MarginaliaRail>
+ *     <MarginaliaItem label="Yayın" value="Nisan 2026 · Düzenli güncellenir" />
+ *     <MarginaliaItem label="İstatistik" emphasized="200+ doku tipinde reseptör" />
+ *   </MarginaliaRail>
+ */
+---
+
+<aside class="space-y-8 border-l border-[#C9A96E]/35 pl-6 md:pl-8 md:pt-2" aria-label="Kenar notları">
+  <slot />
+</aside>

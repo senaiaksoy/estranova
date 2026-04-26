@@ -1,6 +1,10 @@
 /**
- * Ana navigasyon + IA dokümanıyla uyumlu alt yollar (docs/IA_ALT_MENU_VE_MAKALE_ONERILERI.md).
- * href'ler mevcut sayfa yapısıyla eşleşir.
+ * Ana navigasyon — tek mimari kuralı (tutarlılık için zorunlu):
+ *
+ *   Tüm hub'lar TİP A — alt-hub kategorileri.
+ *   Alt menüde YALNIZ alt-hub sayfaları olur. Doğrudan makale linki yok.
+ *   Önce alt-hub'a inilir; çerçeveleyici metin okunur, sonra makaleye geçilir.
+ *   Bu mimari okuyucu dostu çerçeveleme için seçilmiştir.
  */
 
 export interface NavChildLink {
@@ -36,8 +40,6 @@ export const mainNav: NavLink[] = [
     children: [
       { name: 'Vitaminler', href: '/zamansiz-yasam/vitaminler' },
       { name: 'Deneysel yaklaşımlar', href: '/zamansiz-yasam/deneysel' },
-      { name: 'Beslenme ve yaşlanma', href: '/zamansiz-yasam/beslenme-yaslanma' },
-      { name: 'Hareket ve sağlık', href: '/zamansiz-yasam/hareket-saglik-menopoz' },
       { name: 'Non-invaziv', href: '/zamansiz-yasam/non-invaziv' },
     ],
   },
@@ -46,11 +48,9 @@ export const mainNav: NavLink[] = [
     href: '/beden-yakinlik',
     label: 'Beden ve yakınlık',
     children: [
-      { name: 'Kategori ana sayfa', href: '/beden-yakinlik' },
-      { name: 'Menopozda cilt değişimleri', href: '/beden-yakinlik/menopozda-cilt-degisimleri' },
-      { name: 'Vajinal sağlık', href: '/beden-yakinlik/vajinal-saglik-menopoz' },
-      { name: 'Yakınlık ve ağrı', href: '/beden-yakinlik/yakinlik-agrisi-menopoz' },
-      { name: 'İdrar kontrolü ve pelvik taban', href: '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban' },
+      { name: 'Cilt & Görünüm', href: '/beden-yakinlik/cilt-gorunum' },
+      { name: 'Cinsel Sağlık', href: '/beden-yakinlik/cinsel-saglik' },
+      { name: 'Pelvik Taban', href: '/beden-yakinlik/pelvik-taban' },
     ],
   },
   {
@@ -58,11 +58,9 @@ export const mainNav: NavLink[] = [
     href: '/zihin-denge',
     label: 'Zihin ve denge',
     children: [
-      { name: 'Kategori ana sayfa', href: '/zihin-denge' },
-      { name: 'Uyku', href: '/zihin-denge/uyku-bozuklugu-menopoz' },
-      { name: 'Ruh hali', href: '/zihin-denge/ruh-hali-degisimleri-menopoz' },
-      { name: 'Bellek ve odak', href: '/zihin-denge/bellek-odaklanma-menopoz' },
-      { name: 'Stres yönetimi', href: '/zihin-denge/stres-yonetimi-menopoz' },
+      { name: 'Uyku & Dinlenme', href: '/zihin-denge/uyku-dinlenme' },
+      { name: 'Duygusal Denge', href: '/zihin-denge/duygusal-denge' },
+      { name: 'Bilişsel Sağlık', href: '/zihin-denge/bilissel-saglik' },
     ],
   },
   {
@@ -70,9 +68,9 @@ export const mainNav: NavLink[] = [
     href: '/bilimsel-pencere',
     label: 'Bilimsel pencere',
     children: [
-      { name: 'Kategori ana sayfa', href: '/bilimsel-pencere' },
-      { name: 'Östrojen ve biyoloji', href: '/bilimsel-pencere/estrogen-biyolojisi-saglik' },
-      { name: 'NAD+ ve hücresel yaşlanma', href: '/bilimsel-pencere/nad-plus-hucresel-yaslanma' },
+      { name: 'Hormonların Bilimi', href: '/bilimsel-pencere/hormonlarin-bilimi' },
+      { name: 'Hücreler ve Yaşlanma', href: '/bilimsel-pencere/hucreler-ve-yaslanma' },
+      { name: 'Yeni Araştırmalar', href: '/bilimsel-pencere/yeni-arastirmalar' },
     ],
   },
   { name: 'Hakkımızda', href: '/hakkimizda', label: 'Platform hakkında' },

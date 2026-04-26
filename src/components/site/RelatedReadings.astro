@@ -1,0 +1,108 @@
+---
+/**
+ * RelatedReadings — makale altı "İlgili Okumalar" bloğu.
+ *
+ * Caller sadece path listesi verir; title/section/description merkezi
+ * manifest'ten (data/static-articles.ts) otomatik çekilir. Manifest'te
+ * olmayan makaleler için path'tan humanize fallback üretilir.
+ *
+ * Mevcut elle yazılmış 25 "İlgili İçerikler" section'u kademeli olarak
+ * bu component ile değiştirilecek.
+ */
+
+import { staticArticles, type StaticArticleEntry } from '../../data/static-articles';
+
+interface Props {
+  paths: string[];
+  heading?: string;
+  eyebrow?: string;
+  class?: string;
+}
+
+const {
+  paths,
+  heading = 'Sırada okunabilir',
+  eyebrow = 'İLGİLİ OKUMALAR',
+  class: className,
+} = Astro.props;
+
+interface Item {
+  href: string;
+  title: string;
+  section: string;
+}
+
+function humanize(slug: string): string {
+  return slug
+    .replace(/-/g, ' ')
+    .replace(/\b\p{L}/gu, (c) => c.toLocaleUpperCase('tr-TR'));
+}
+
+function fallbackFromPath(path: string): { title: string; section: string } {
+  const segments = path.split('/').filter(Boolean);
+  const sectionSlug = segments[0] ?? '';
+  const slug = segments[segments.length - 1] ?? '';
+  return {
+    title: humanize(slug),
+    section: humanize(sectionSlug),
+  };
+}
+
+const items: Item[] = paths.map((path): Item => {
+  const entry: StaticArticleEntry | undefined = staticArticles.find((a) => a.path === path);
+  if (entry) {
+    return { href: entry.path, title: entry.title, section: entry.section };
+  }
+  const fb = fallbackFromPath(path);
+  return { href: path, title: fb.title, section: fb.section };
+});
+---
+
+<aside
+  class:list={[
+    'rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 ring-1 ring-[#6B2D3E]/8 md:p-9',
+    className,
+  ]}
+  aria-labelledby="related-readings-heading"
+>
+  <p class="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#C9A96E]">
+    <svg class="h-3 w-3 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
+      <polygon
+        fill="#C9A96E"
+        points="100,10 111.31,88.69 190,100 111.31,111.31 100,190 88.69,111.31 10,100 88.69,88.69"
+      ></polygon>
+    </svg>
+    <span>{eyebrow}</span>
+  </p>
+
+  <h2
+    id="related-readings-heading"
+    class="mb-7 font-serif text-3xl italic leading-tight text-[#4f171c] md:text-4xl"
+  >
+    {heading}
+  </h2>
+
+  <ol class="divide-y divide-[#C9A96E]/25">
+    {items.map((item, idx) => (
+      <li class="group">
+        <a
+          href={item.href}
+          class="grid grid-cols-[2.5rem_1fr] items-baseline gap-x-4 gap-y-1.5 py-5 outline-none transition first:pt-0 last:pb-0 focus-visible:rounded-md focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+        >
+          <span
+            class="row-span-2 font-serif text-xl italic tabular-nums text-[#C9A96E]"
+            aria-hidden="true"
+          >
+            {String(idx + 1).padStart(2, '0')}
+          </span>
+          <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#775a19]/85">
+            {item.section}
+          </span>
+          <span class="font-serif text-lg italic leading-snug text-[#4f171c] decoration-[#C9A96E] decoration-2 underline-offset-[6px] transition group-hover:underline">
+            {item.title}
+          </span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</aside>

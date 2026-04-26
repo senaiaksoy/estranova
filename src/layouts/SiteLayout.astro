@@ -69,13 +69,17 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href={canonicalUrl} />
 
     <meta
       name="robots"
       content={allowIndexing ? 'index, follow, max-image-preview:large' : 'noindex, nofollow'}
     />
-    <meta name="theme-color" content="#7C2D58" />
+    <meta name="theme-color" content="#4f171c" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="alternate" type="application/rss+xml" title="Estranova — Editöryal Yayın" href="/rss.xml" />

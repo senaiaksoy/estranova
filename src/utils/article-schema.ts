@@ -7,7 +7,7 @@ export interface BuildArticleSchemaOptions {
   description: string;
   writerSlug: Writer['slug'];
   publishedDate: string; // "14 Nisan 2026" veya ISO
-  pathname: string; // örn. "/zihin-denge/ruh-hali-degisimleri-menopoz" (leading slash)
+  pathname: string; // örn. "/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz" (leading slash)
   articleSection?: string; // breadcrumb + schema.articleSection ("Zihin & Denge")
   sectionPath?: string; // örn. "/zihin-denge"
   image?: string; // absolute, OG image

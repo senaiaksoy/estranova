@@ -8,6 +8,13 @@ export interface Writer {
   portrait?: string; // /images/writers/{slug}.jpg (yoksa undefined)
   focusAreas: string[]; // 2-3 çekirdek kategori etiketi
   isEditor: boolean; // Berna true, diğerleri false
+  writingStyle?: {
+    voice: string;
+    rhythm: string;
+    framing: string;
+    dos: string[];
+    donts: string[];
+  };
 }
 
 export const writers: Writer[] = [
@@ -23,6 +30,22 @@ export const writers: Writer[] = [
     portrait: '/images/writers/berna-aksoy.webp',
     focusAreas: ['Hormonal Geçiş', '40 Sonrası', 'Yaşam Tarzı'],
     isEditor: true,
+    writingStyle: {
+      voice: 'Sakin, güven veren ve düzen kuran editör tonu.',
+      rhythm: 'Orta uzunlukta cümleler; net geçişler ve toparlayıcı ara cümleler.',
+      framing: 'Önce resmi sadeleştirir, sonra seçenekleri dengeler, en sonda uygulanabilir ilk adımı verir.',
+      dos: [
+        'Karmaşık konuyu önce üç başlıkta toparla.',
+        'Belirsizlikte kesin hüküm yerine dengeli olasılık dili kullan.',
+        'Okuru acele karardan uzaklaştırıp planlı takibe yönlendir.',
+        'Kırmızı bayrakları kısa ve açık maddelerle ver.',
+      ],
+      donts: [
+        'Panik duygusu yükselten başlık ve cümle kurma.',
+        'Tek bir yöntemi herkes için doğru gibi sunma.',
+        'Gereksiz teknik terimi açıklamasız bırakma.',
+      ],
+    },
   },
   {
     slug: 'alara-baykent',
@@ -36,6 +59,22 @@ export const writers: Writer[] = [
     portrait: '/images/writers/alara-baykent.webp',
     focusAreas: ['Spor & Hareket', 'Anti-aging', 'Doğa & Hayvan'],
     isEditor: false,
+    writingStyle: {
+      voice: 'Canlı, motive edici ve beden farkındalığı yüksek akran tonu.',
+      rhythm: 'Kısa ve enerjik cümleler; akışı bozmadan pratik öneriye bağlanan yapı.',
+      framing: 'Gündelik bir durumla açar, hareket-beden ilişkisini kurar, sürdürülebilir mini adımla kapatır.',
+      dos: [
+        'Hareket önerilerini günlük hayata uyarlanabilir tut.',
+        'Performans baskısı değil sürdürülebilirlik vurgusu yap.',
+        'Okura küçük ve uygulanabilir başlangıç seçenekleri sun.',
+        'Beden sinyallerini fark etmeyi merkeze al.',
+      ],
+      donts: [
+        'Disiplin suçluluğu yaratan buyurgan dil kullanma.',
+        'Kısa vadede büyük dönüşüm vaadi verme.',
+        'Tek tip egzersizi herkes için zorunlu gibi anlatma.',
+      ],
+    },
   },
   {
     slug: 'basak-pelister',
@@ -43,12 +82,28 @@ export const writers: Writer[] = [
     role: 'Araştırma Yazarı / Konuk Katkı',
     ageBand: '55-62',
     publicBio:
-      "Fransız liseli, Amerika'da Otel & Restoran Yönetimi ve Reklamcılık eğitimi aldı. 20 yıl uluslararası şirketlerde pazarlama ve marka yönetiminde çalıştı; halen Artthink Story Telling Agency'de marka stratejisi ve kimlik konularında danışmanlık veriyor. 50+ yaşam döngüsünü zamanı geriye sarma ve biohacking eksenlerinde okuyan araştırmacı yazar.",
+      "Fransız liseli, Amerika'da Otel & Restoran Yönetimi ve Reklamcılık eğitimi aldı. 20 yıl uluslararası şirketlerde pazarlama ve marka yönetiminde çalıştı; halen Artthink Story Telling Agency'de marka yönü ve kimlik konularında danışmanlık veriyor. 50+ yaşam döngüsünü zamanı geriye sarma ve biohacking eksenlerinde okuyan araştırmacı yazar.",
     signaturePhrase:
       'Dokuz yıllık menopoz deneyimini rafine bir hikâye anlatıcılığıyla harmanlayan gezgin bir tastemaker.',
     portrait: '/images/writers/basak-pelister.webp',
     focusAreas: ['Menopoz', 'Biohacking', 'Seyahat & Estetik'],
     isEditor: false,
+    writingStyle: {
+      voice: 'Meraklı, rafine ve araştırmacı ama okur dostu bir anlatım.',
+      rhythm: 'Orta-uzun cümle dengesi; her teknik bölümden sonra sade özet.',
+      framing: 'Yeni yaklaşımı tanıtır, kanıt sınırını netleştirir, beklentiyi gerçekçi yere çeker.',
+      dos: [
+        'Deneysel konularda ne bilindiği-ne bilinmediği ayrımını açık ver.',
+        'Risk ve belirsizlikleri görünür kıl.',
+        'Kaynak gücünü cümle içinde kısaça hissettir.',
+        'Kararı erteletmeyen ama aceleye de itmeyen bir ton kur.',
+      ],
+      donts: [
+        'Trend olduğu için yöntemi güvenli ilan etme.',
+        'Bilimsel boşluğu görmezden gelen iddialı dil kullanma.',
+        'Pazarlama kokan heyecan cümlelerine kayma.',
+      ],
+    },
   },
   {
     slug: 'duygu-karaosmanoglu',
@@ -62,6 +117,22 @@ export const writers: Writer[] = [
     portrait: '/images/writers/duygu-karaosmanoglu.webp',
     focusAreas: ['HRT Deneyimi', 'Estetik & Bakım', 'Seyahat & Sosyal Yaşam'],
     isEditor: false,
+    writingStyle: {
+      voice: 'Samimi, arkadaşça ve deneyim paylaşımı güçlü bir akran sesi.',
+      rhythm: 'Kısa-orta cümleler; anlatıdan pratik notlara akan sıcak bir tempo.',
+      framing: 'Kişisel deneyimle açar, işe yarayanları sadeleştirir, hekim görüşü sınırını net tutar.',
+      dos: [
+        'Okuru yargılamadan duyguyu normalize et.',
+        'Bakım-estetik başlıklarında gerçekçi beklenti kur.',
+        'Kendi deneyimini genellemeden aktar.',
+        'HRT ve tıbbi adımlarda mutlaka hekim değerlendirmesi hatırlat.',
+      ],
+      donts: [
+        'Estetik uygulamaları zorunlu ihtiyaç gibi gösterme.',
+        'Kişisel sonucu evrensel kural gibi sunma.',
+        'Hızlı çözüm dili kullanma.',
+      ],
+    },
   },
   {
     slug: 'ozlem-denizmen',
@@ -75,6 +146,22 @@ export const writers: Writer[] = [
     portrait: '/images/writers/ozlem-denizmen.webp',
     focusAreas: ['Finansal Sağlık', '40 Sonrası Dayanıklılık', 'Profesyonel Kadın'],
     isEditor: false,
+    writingStyle: {
+      voice: 'Net, düzenli ve karar kalitesini artıran öğretici akran tonu.',
+      rhythm: 'Maddelemeyi seven, kısa paragrafla ilerleyen planlı akış.',
+      framing: 'Sorunu tanımlar, öncelikleri sıralar, uygulanabilir karar adımlarına böler.',
+      dos: [
+        'Sağlık kararlarını zaman, bütçe ve sürdürülebilirlik boyutuyla birlikte ele al.',
+        'Okura önceliklendirme mantığı ver.',
+        'Uzun vadeli dayanıklılık dilini korkutmadan kur.',
+        'Karar yorgunluğunu azaltan sade kontrol listeleri kullan.',
+      ],
+      donts: [
+        'Finansal dili teknik terime boğma.',
+        'Okuru yetersiz hissettiren başarı kıyası yapma.',
+        'Tek doğru plan varmış gibi yazma.',
+      ],
+    },
   },
   {
     slug: 'rima-erdemir',
@@ -88,6 +175,22 @@ export const writers: Writer[] = [
     portrait: '/images/writers/rima-erdemir.webp',
     focusAreas: ['Bilimsel Pencere', 'Teknoloji & Sağlık', 'Editöryal Süreç'],
     isEditor: false,
+    writingStyle: {
+      voice: 'Titiz, analitik ve kaynak disiplini yüksek bir araştırmacı tonu.',
+      rhythm: 'Orta uzunlukta açıklayıcı cümleler; her bölüm sonunda kısa sonuç cümlesi.',
+      framing: 'Veriyi ortaya koyar, güven sınırını belirtir, okur için anlaşılır çıkarım üretir.',
+      dos: [
+        'Kanıt gücünü ve sınırlılığı aynı paragrafta dengele.',
+        'Teknoloji başlıklarında beklentiyi gerçekçi tut.',
+        'Terimi ilk geçtiği yerde sade karşılıkla açıkla.',
+        'Okura bilgi kirlığını ayıklayan bir yol sun.',
+      ],
+      donts: [
+        'Kaynağı zayıf bilgiyi kesin dille verme.',
+        'Gereksiz akademik jargonla metni ağırlaştırma.',
+        'Erken araştırmaları sonuçlanmış gerçek gibi anlatma.',
+      ],
+    },
   },
   {
     slug: 'gamze-cizreli',
@@ -101,6 +204,115 @@ export const writers: Writer[] = [
     portrait: '/images/writers/gamze-cizreli.webp',
     focusAreas: ['Beslenme & Mutfak', 'Sürdürülebilirlik', 'Sabah Rutini'],
     isEditor: false,
+    writingStyle: {
+      voice: 'Sıcak, sofraya yakın ve günlük yaşama temas eden yalın bir ses.',
+      rhythm: 'Kısa paragraflar; örnekli ve akıcı anlatım.',
+      framing: 'Gündelik mutfak sahnesiyle açar, bilimsel noktayı sadeleştirir, uygulanabilir alışkanlıkla kapatır.',
+      dos: [
+        'Beslenme önerilerini mutfakta uygulanabilir hale getir.',
+        'Küçük ama sürdürülebilir alışkanlık vurgusu yap.',
+        'Yasak dili yerine denge dili kullan.',
+        'Mevsimsel ve kültürel bağlama yer ver.',
+      ],
+      donts: [
+        'Katı diyet ve keskin yasak listesi sunma.',
+        'Kilo odaklı baskı dili kurma.',
+        'Tek bir besini mucize çözüm gibi anlatma.',
+      ],
+    },
+  },
+  {
+    slug: 'isik-selin-kuyumcu',
+    displayName: 'Işık Selin Günçe',
+    role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
+    ageBand: 'Belirtilmedi',
+    publicBio:
+      'Işık Selin Günçe, tiyatro sanatçısı kimliğini kadın sağlığı içerik üretimiyle birleştiren bir yazardır. Hormonal geçiş dönemi ve iyi yaşam başlıklarında hazırladığı metinlerde anlaşılır dili, sahne disipliniyle gelen güçlü anlatımı ve okurla sıcak temas kuran üslubu öne çıkar. İçeriklerinde okuyucunun doğru zamanda uzman desteğine yönelmesini desteklemeyi amaçlar.',
+    signaturePhrase:
+      'Tiyatro sanatçısı duyarlılığıyla perimenopoz ve menopoz başlıklarını sadeleştiren, okura sahici bir eşlik duygusu veren bir ses.',
+    portrait: '/images/writers/isik-selin-kuyumcu.jpg',
+    focusAreas: ['Perimenopoz', 'Menopoz', 'Tiyatro ve Anlatı'],
+    isEditor: false,
+    writingStyle: {
+      voice: 'Sahici, sıcak, akran tonu yüksek; panik değil yön duygusu veren anlatım.',
+      rhythm: 'Kısa-orta cümle dengesi; sahne geçişi gibi akıcı, duraklı ve nefesli akış.',
+      framing: 'Önce deneyimi adlandırır, sonra biyolojik resmi sadeleştirir, en sonda güvenli bir adım önerir.',
+      dos: [
+        'Okurun duygusunu önce normalize et, ardından bilimsel bağlam kur.',
+        'Tıbbi terimleri tek cümlede sadeleştir ve gündelik karşılık ver.',
+        'Belirsizliklerde kesinlik dili yerine olasılık dili kullan (olabilir, ilişkili olabilir).',
+        'Kırmızı bayrakları net, kısa ve eyleme dönük maddeleyerek ver.',
+      ],
+      donts: [
+        'Didaktik doktor tonu veya buyurgan anlatım kullanma.',
+        'Dramatik korku dili, felaket çağrışımı ve kesin sonuç iddiaları kurma.',
+        'Uzun paragrafta birden fazla teknik kavramı açıklamasız yığma.',
+      ],
+    },
+  },
+  {
+    // "Geçici yazar" personası — hassas konularda (vajinal sağlık, idrar
+    // kaçırma, libido, cinsellikte ağrı) yazarlar geri çekildiğinde devreye
+    // giriyor. "Doç. Dr." öneki bilinçli olarak düşürüldü: klinik otorite
+    // değil, "bu işi bilen biri" sesi. Aynı kişi makale tıbbi inceleyici
+    // olarak Doç. Dr. Senai Aksoy adıyla görev alıyor (article-schema.ts
+    // medicalReviewer default'u). Bu iki rol bilinçli olarak ayrı tutuldu.
+    slug: 'senai-aksoy',
+    displayName: 'Senai Aksoy',
+    role: 'Geçici Yazar / Estranova Kurucusu',
+    ageBand: '50+',
+    publicBio:
+      'Estranova\'nın kurucusu. Bu yazıyı yazmak için kimse gönüllü olmayınca masaya kendisi oturdu. Burada hekim kimliğinden çok, yıllardır kadın sağlığının içinde olmuş ve bu konuların önemini öğrenmiş biri olarak yazıyor — tıbbi jargon değil, incitmeyen bir dil ve uygulanabilir öneriler.',
+    signaturePhrase:
+      'Konuşulması zor ama bilinmesi gereken konuları, jargon değil komşu sıcaklığıyla anlatan geçici yazar.',
+    focusAreas: ['Mahrem Sağlık', 'Hassas Konular', 'Editör Notu'],
+    isEditor: false,
+    writingStyle: {
+      voice: 'Sakin, zarif, jargonsuz; "bilen biri" sesi — klinik otorite değil.',
+      rhythm: 'Kısa-orta cümle; mahremiyeti yargılamayan zarif tempo.',
+      framing: 'Konuyu önce normalize et, çözüm seçeneklerini açıkça say, en sonda profesyonel desteği hatırlat.',
+      dos: [
+        'Mahrem konuları utandırmadan, doğal bir dille anlat.',
+        'Bilimsel bilgiyi günlük dile çevir.',
+        'Okuru "yalnız değilsin, yaygındır" duygusuyla buluştur.',
+        'Çözüm seçeneklerini açıkça say; gizleme.',
+        'Editör notunu kısa ve esprili tut — "kimse gönüllü olmadı, ben yazdım".',
+      ],
+      donts: [
+        'Tıbbi otorite tonuna kayma — "Dr." öneki bu yazılarda yok.',
+        'Mahremiyeti pohpohlama veya melodrama çekme.',
+        'Yargılayıcı veya dışlayıcı dil kullanma.',
+        'Reçete önerme; hekim değerlendirmesini her yazıda hatırlat.',
+      ],
+    },
+  },
+  {
+    slug: 'demet-kizilkaya',
+    displayName: 'Demet Kızılkaya',
+    role: 'Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı',
+    ageBand: '58',
+    publicBio:
+      'Demet Kızılkaya, Japon kültürüne uzun yıllardır ilgi duyan; Japon Kültür Derneği\'nde uzun süre görev almış bir yazardır. 58 yaşında menopoz döneminde ve HRT kullanımıyla geçiş sürecini deneyimleyen bir akran sesi olarak, aile odağını ve gündelik yaşam dengesini önceleyen içerikler üretir. Seyahat sevgisini kültürel gözlemlerle birleştirerek okuyucuya sıcak, uygulanabilir bir perspektif sunar.',
+    signaturePhrase:
+      'Japon kültürü merakını, aile sıcaklığını ve seyahat ruhunu menopoz deneyimiyle birleştiren candan bir akran sesi.',
+    focusAreas: ['Menopoz Deneyimi', 'Japon Kültürü', 'Seyahat & Yaşam Tarzı'],
+    isEditor: false,
+    writingStyle: {
+      voice: 'Nazik, içten ve kültürel dokunuşu güçlü bir sohbet tonu.',
+      rhythm: 'Sade ve akıcı cümleler; kısa hikaye geçişleriyle ilerleyen yumuşak tempo.',
+      framing: 'Günlük yaşam gözlemiyle başlar, deneyimden öğrenileni paylaşır, aile ve rutin odağında uygulanabilir notlarla bitirir.',
+      dos: [
+        'Kültürel örnekleri abartmadan, gündelik hayata bağlayarak kullan.',
+        'Aile ve yakın çevre desteğini görünür kıl.',
+        'HRT deneyimini kişisel sınırlarıyla anlat.',
+        'Okura küçük, nazik ve sürdürülebilir adımlar öner.',
+      ],
+      donts: [
+        'Kültürel referansları dışlayıcı bir dile çevirme.',
+        'Kendi deneyimini tek doğru yol gibi sunma.',
+        'Melodramatik veya aşırı nostaljik tona kaçma.',
+      ],
+    },
   },
 ];
 
@@ -108,6 +320,13 @@ export const writers: Writer[] = [
 export const editors = writers.filter((w) => w.isEditor);
 // Yazar Kadromuz listesi — editörler dahil tüm yazarlar alfabetik
 // (editörler hem "Editörler" hem "Yazar Kadromuz" bölümünde görünür)
+//
+// Senai Aksoy "geçici yazar" personası listede gösterilmez: aynı kişi
+// yayin-kurulu'nda zaten "Doç. Dr. Senai Aksoy / Bilimsel Editör" olarak
+// görünüyor; ikinci kez "Senai Aksoy" olarak listelemek okuyucuyu şaşırtır.
+// Yazar entry'si yine de byline (article-schema, ArticleAuthorBlock) için
+// gerekli — sadece kadro listelemeden filtreleniyor.
 export const guestWriters = writers
   .slice()
+  .filter((w) => w.slug !== 'senai-aksoy')
   .sort((a, b) => a.displayName.localeCompare(b.displayName, 'tr'));

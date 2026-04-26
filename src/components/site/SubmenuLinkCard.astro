@@ -1,4 +1,6 @@
 ---
+import ArticleMetaSigil from './ArticleMetaSigil.astro';
+
 interface Props {
   href: string;
   title: string;
@@ -8,9 +10,26 @@ interface Props {
   /** Büyük numara (ör. 01); yoksa gösterilmez */
   step?: string;
   cta?: string;
+  /** Okuma süresi (dk) — verildiğinde alt meta sigili gösterilir */
+  readingMinutes?: number;
+  /** Kanıt düzeyi (Sınırlı | Orta | Güçlü) */
+  evidence?: 'Sınırlı' | 'Orta' | 'Güçlü';
+  /** Son güncelleme tarihi (ör. "Şub 2026") */
+  updated?: string;
 }
 
-const { href, title, excerpt, imageSrc, imageAlt, step, cta = 'Devamını Oku' } = Astro.props;
+const {
+  href,
+  title,
+  excerpt,
+  imageSrc,
+  imageAlt,
+  step,
+  cta = 'Devamını Oku',
+  readingMinutes,
+  evidence,
+  updated,
+} = Astro.props;
 ---
 
 <a
@@ -39,6 +58,11 @@ const { href, title, excerpt, imageSrc, imageAlt, step, cta = 'Devamını Oku' }
   <div class="flex flex-1 flex-col border-t border-[#6B2D3E]/10 p-7 md:p-8">
     <h2 class="mb-3 font-serif text-2xl md:text-3xl">{title}</h2>
     <p class="mb-5 flex-1 leading-relaxed text-[#2D2D2D]/75">{excerpt}</p>
+    {readingMinutes && (
+      <div class="mb-3">
+        <ArticleMetaSigil readingMinutes={readingMinutes} evidence={evidence} updated={updated} />
+      </div>
+    )}
     <span class="font-semibold text-[#6B2D3E] group-hover:underline">{cta}</span>
   </div>
 </a>

@@ -1,0 +1,26 @@
+---
+/**
+ * Bölüm içi geçişlerde "* * *" ayraç.
+ * Üç bordo asterisk, italic Newsreader; sayfa içi yumuşak ritim ayracı.
+ */
+interface Props {
+  spacing?: 'compact' | 'normal' | 'wide';
+}
+
+const { spacing = 'normal' } = Astro.props;
+
+const verticalPad = {
+  compact: 'my-8',
+  normal: 'my-12 md:my-16',
+  wide: 'my-16 md:my-24',
+}[spacing];
+---
+
+<div
+  class:list={['flex items-center justify-center gap-5', verticalPad]}
+  aria-hidden="true"
+>
+  <span class="select-none font-serif text-2xl italic text-[#4f171c]/55">∗</span>
+  <span class="select-none font-serif text-2xl italic text-[#4f171c]/55">∗</span>
+  <span class="select-none font-serif text-2xl italic text-[#4f171c]/55">∗</span>
+</div>

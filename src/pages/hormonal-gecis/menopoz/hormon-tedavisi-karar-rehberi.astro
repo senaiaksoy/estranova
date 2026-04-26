@@ -9,6 +9,7 @@ import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
@@ -244,34 +245,16 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <section
-        class="rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
-      >
-        <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-        <ul class="space-y-3">
-          <li>
-            <a href="/hormonal-gecis/perimenopoz/perimenopoz-nedir" class="font-semibold text-[#6B2D3E] hover:underline">
-              Hormonal Geçiş / Perimenopoz Nedir?
-            </a>
-          </li>
-          <li>
-            <a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">
-              Zihin & Denge / Uyku Bozukluğu ve Menopoz
-            </a>
-          </li>
-          <li>
-            <a href="/beden-yakinlik/vajinal-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">
-              Beden & Yakınlık / Vajinal Sağlık ve Menopoz
-            </a>
-          </li>
-          <li>
-            <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">
-              Zamansız Yaşam / 40 Sonrası Kemik Sağlığı
-            </a>
-          </li>
-          <li><a href="/library" class="font-semibold text-[#6B2D3E] hover:underline">Kütüphane / Menopoz ve hormon içerikleri</a></li>
-        </ul>
-      </section>
+      <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/library',
+          ]}
+        />
 
       <section
         class="rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"

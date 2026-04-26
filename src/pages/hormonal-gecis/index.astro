@@ -6,9 +6,17 @@ import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
 import SubmenuSection from '../../components/site/SubmenuSection.astro';
 import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
+import CategoryRelatedLinks from '../../components/site/CategoryRelatedLinks.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
+import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 
 const hero = submenuHeroByRoute['/hormonal-gecis']!;
+const __hubPath = '/hormonal-gecis';
+const epigraph = subHubEpigraphs[__hubPath];
 
 const pillars = [
   {
@@ -48,6 +56,8 @@ const pillars = [
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
 
+  <ChapterMasthead variant="section" chapter="Hormonal Geçiş" />
+
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
       eyebrow="Kategori"
@@ -58,7 +68,7 @@ const pillars = [
     />
 
     <SubmenuSection variant="cream" borderedTop={true}>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {
           pillars.map((p) => (
             <SubmenuLinkCard
@@ -73,6 +83,8 @@ const pillars = [
         }
       </div>
     </SubmenuSection>
+
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
@@ -89,46 +101,34 @@ const pillars = [
           title="Perimenopozu Anlamak"
           body="İlk dönemde sık görülen değişimleri sade bir anlatımla ele alan başlangıç rehberi."
           href="/hormonal-gecis/perimenopoz/perimenopoz-nedir"
-        />
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           highlight={true}
-          tag="Menopoza Hazırlık"
-          title="Günlük Rutin Planı"
-          body="Uyku, hareket ve beslenme başlıklarını düzenli bir plana dönüştürmek için temel öneriler."
-          href="/library"
-        />
+          tag="Menopoz · Karar"
+          title="Hormon Tedavisi Karar Rehberi"
+          body="Hormon tedavisi seçeneklerini fayda-risk dengesi içinde sade bir karar çerçevesinde ele alan rehber."
+          href="/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi"
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
           tag="Menopoz"
           title="Sık Sorulan Sorular"
           body="Geçiş dönemine dair temel sorulara kısa ve güvenilir yanıtlar sunan derleme içerik."
           href="/hormonal-gecis/menopoz"
-        />
+        >
+          <span slot="footer">Kanıt Düzeyi: <Evidence level={4} /></span>
+        </SubmenuSpotlightCard>
       </div>
     </SubmenuSection>
 
     <SubmenuSection variant="sand" borderedTop={true}>
-      <div class="rounded-[32px] border border-[#6B2D3E]/12 bg-white p-8 shadow-sm ring-1 ring-black/5 md:p-10">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İlgili Kategoriler</p>
-        <h2 class="mb-6 font-serif text-3xl leading-tight md:text-4xl">Bilgi yollarına devam edin</h2>
-        <div class="flex flex-wrap gap-3">
-          <a
-            href="/zamansiz-yasam"
-            class="rounded-xl border border-[#6B2D3E]/20 bg-[#FDF8F0] px-5 py-3 font-medium text-[#2D2D2D] transition hover:border-[#6B2D3E]/40"
-            >Zamansız Yaşam</a
-          >
-          <a
-            href="/beden-yakinlik"
-            class="rounded-xl border border-[#6B2D3E]/20 bg-[#FDF8F0] px-5 py-3 font-medium text-[#2D2D2D] transition hover:border-[#6B2D3E]/40"
-            >Beden & Yakınlık</a
-          >
-          <a
-            href="/zihin-denge"
-            class="rounded-xl border border-[#6B2D3E]/20 bg-[#FDF8F0] px-5 py-3 font-medium text-[#2D2D2D] transition hover:border-[#6B2D3E]/40"
-            >Zihin & Denge</a
-          >
-        </div>
-      </div>
+      <CategoryRelatedLinks exclude="/hormonal-gecis" />
     </SubmenuSection>
+
+    <ChapterCompass nextHref="/hormonal-gecis/perimenopoz" nextNumber="01" nextChapter="Perimenopoz" nextParent="Hormonal Geçiş" />
   </main>
 
   <SiteFooter />

@@ -1,0 +1,59 @@
+---
+/**
+ * Sayfa kapanış bandı — bordo gradient zemin.
+ * "Bir sonraki bölüm: ... →" + altında küçük disclaimer.
+ * Disclaimer card'ının yerine geçer — sayfayı dead-end değil okuma davetine çevirir.
+ */
+interface Props {
+  nextHref?: string;
+  nextNumber?: string;
+  nextChapter?: string;
+  nextParent?: string;
+  /** Son bölümse veya next yoksa sadece disclaimer gösterilir */
+  disclaimer?: string;
+}
+
+const {
+  nextHref,
+  nextNumber,
+  nextChapter,
+  nextParent,
+  disclaimer = 'Bu sayfa genel bilgilendirme sunar; bireysel uygulama veya tedavi kararları için tıbbi değerlendirme yerine geçmez.',
+} = Astro.props;
+
+const hasNext = nextHref && nextChapter;
+---
+
+<section
+  class="bg-gradient-to-br from-[#4f171c] to-[#2a0c0f] px-6 py-14 text-[#fcf9f4] md:py-16"
+  aria-label="Sayfa kapanışı"
+>
+  <div class="mx-auto max-w-5xl">
+    {hasNext ? (
+      <a
+        href={nextHref}
+        class="group block border-b border-[#C9A96E]/35 pb-10 transition hover:border-[#C9A96E]"
+      >
+        <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C9A96E] md:text-xs">
+          Bir sonraki bölüm
+          {nextNumber && (
+            <>
+              <span class="mx-2 opacity-50">·</span>
+              <span class="opacity-80">Bölüm {nextNumber}</span>
+            </>
+          )}
+        </p>
+        <p class="font-serif text-3xl italic leading-snug md:text-[2.4rem]">
+          {nextChapter}
+          <span class="ml-3 inline-block transition-transform group-hover:translate-x-1">→</span>
+        </p>
+        {nextParent && (
+          <p class="mt-2 text-sm tracking-wide text-[#fcf9f4]/65">{nextParent}</p>
+        )}
+      </a>
+    ) : null}
+    <p class:list={[hasNext ? 'mt-8' : '', 'max-w-3xl text-xs leading-relaxed text-[#fcf9f4]/65']}>
+      {disclaimer}
+    </p>
+  </div>
+</section>

@@ -1,18 +1,20 @@
 ﻿---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
-import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import Evidence from '../../components/site/Evidence.astro';
-import { buildArticleSchemas } from '../../utils/article-schema';
-import { resolveSiteUrl } from '../../utils/seo';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import NewsletterBlock from '../../../components/site/NewsletterBlock.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/bilimsel-pencere/nad-plus-hucresel-yaslanma']!;
+const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma']!;
 
 const tocEntries = [
   { id: 'nad-nedir', label: 'NAD+ Nedir?' },
@@ -32,7 +34,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'basak-pelister',
   publishedDate: '14 Nisan 2026',
-  pathname: '/bilimsel-pencere/nad-plus-hucresel-yaslanma',
+  pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere',
   keywords: ['NAD+', 'hücresel yaşlanma', 'sirtuin', 'biohacking', 'menopoz'],
@@ -115,7 +117,7 @@ const articleSchemas = buildArticleSchemas({
             Düzenli egzersiz, uyku kalitesi ve beslenme düzeninin mitokondriyal işlev üzerinde güçlü etkisi olduğu bilinmektedir <Evidence level={5} />.
           </p>
           <p>
-            Takviye stratejileri için kanıt düzeyi daha çok orta ve gelişen kanıt aralığındadır <Evidence from={3} to={4} />.
+            Takviye yaklaşımları için kanıt düzeyi daha çok orta ve gelişen kanıt aralığındadır <Evidence from={3} to={4} />.
             Yaşam alışkanlığı müdahaleleri ise hem maliyet etkinlik hem güvenlik hem de kanıt gücü açısından halen temel yaklaşım olarak öne çıkar.
           </p>
 
@@ -140,16 +142,15 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
-          <h2 class="mb-5 font-serif text-3xl">İlgili İçerikler</h2>
-          <ul class="space-y-3">
-            <li><a href="/bilimsel-pencere/mitler" class="font-semibold text-[#6B2D3E] hover:underline">Bilimsel Pencere / Mitler ve Gerçekler</a></li>
-            <li><a href="/zamansiz-yasam/hareket-saglik-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Hareket ve Yaşam Süresi</a></li>
-            <li><a href="/zamansiz-yasam/beslenme-yaslanma" class="font-semibold text-[#6B2D3E] hover:underline">Zamansız Yaşam / Beslenme ve Yaşlanma</a></li>
-            <li><a href="/zihin-denge/uyku-bozuklugu-menopoz" class="font-semibold text-[#6B2D3E] hover:underline">Zihin & Denge / Uyku ve Nöral Sağlık</a></li>
-            <li><a href="/hormonal-gecis/40-sonrasi" class="font-semibold text-[#6B2D3E] hover:underline">Hormonal Geçiş / Menopoz Sonrası Sağlık</a></li>
-          </ul>
-        </section>
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/zamansiz-yasam/hareket-saglik-menopoz',
+            '/zamansiz-yasam/beslenme-yaslanma',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+            '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
+          ]}
+        />
 
         <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
@@ -159,6 +160,8 @@ const articleSchemas = buildArticleSchemas({
             uyku ve beslenme alışkanlıkları korunmalıdır.
           </p>
         </section>
+
+        <NewsletterBlock class="mt-14" />
 
         <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
           <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
