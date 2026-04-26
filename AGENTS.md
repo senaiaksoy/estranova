@@ -327,7 +327,7 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 |---|---|
 | Berna Aksoy | Sabah Instagram tarama ritüelleri; hekim danışma kararları; antrenman/Apple Watch gözlemleri |
 | Alara Baykent | Mevsimsel saha (yaz: surf / kış: at); jim akran sahneleri; geniş aile (anne/baba/anneanne/teyze) |
-| Başak Pelister | 9 yıllık menopoz + yeni HRT yolculuğu; anne+kız üçgeni; seyahat/sahne/kıyafet ritüelleri |
+| Başak Pelister | Plume + Mahmure imzası: soru-cevap tekniği yoğun (her bölümde 1+ okurla diyalog sorusu), soru başlıklı H2'ler, üç nokta (…) ritmi, samimi itiraflar, "Aslında her şey…" akran açılışı, gündelik anglizm (self-care/ghosting/longevity); 9 yıllık menopoz + yeni HRT yolculuğu; anne+kız üçgeni; seyahat/sahne/kıyafet ritüelleri. YASAK: marka jargonu (Aşk Marka, vizyon mimarı), lüks marka adı (LVMH/Dior), kendine ad-koyma ("Başak Pelister olarak…"), ünlem yoğunluğu (max 1/makale), ilişki/kadın-erkek ekseni |
 | Dt. Duygu Karaosmanoğlu | Londra-İstanbul gel-git (kızı); klinik dekoru (otorite değil); yeni şey deneme |
 | Özlem Denizmen | Para Durumu sahneleri; üst düzey iş çevresi sokratik soru; finansal karar çerçevesi (analoji) |
 | Rima Erdemir | Sabah araştırma okuma; HRT karar süreci iç tartışması; teknoloji-sağlık gözlemi |
