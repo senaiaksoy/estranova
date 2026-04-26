@@ -1,5 +1,6 @@
 ---
 import { mainNav, isNavActive } from '../../data/navigation';
+import SearchOverlay from './SearchOverlay.astro';
 
 interface Props {
   currentPath?: string;
@@ -105,22 +106,52 @@ const mobileLinkBase =
           );
         })
       }
+
+      <!-- Desktop search trigger (nav'ın sağ ucu) -->
+      <button
+        type="button"
+        data-search-trigger
+        class="ml-3 hidden items-center gap-2 rounded-xl border border-primary/12 px-3 py-1.5 text-xs font-medium text-charcoal/55 transition-colors hover:border-primary/30 hover:text-primary md:flex"
+        aria-label="Sitede ara (Ctrl+K)"
+      >
+        <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <span>Ara</span>
+        <kbd class="rounded border border-charcoal/12 px-1.5 py-0.5 text-[9px] font-bold tracking-wider text-charcoal/30">⌘K</kbd>
+      </button>
     </nav>
 
-    <button
-      type="button"
-      class="md:hidden text-primary p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary"
-      aria-label="Menüyü aç/kapat"
-      aria-controls="mobile-menu"
-      aria-expanded="false"
-      onclick="mobileMenu.toggle(this)"
-    >
-      <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <line x1="3" y1="12" x2="21" y2="12" />
-        <line x1="3" y1="18" x2="21" y2="18" />
-      </svg>
-    </button>
+    <div class="flex items-center gap-2 md:hidden">
+      <!-- Mobile search trigger -->
+      <button
+        type="button"
+        data-search-trigger
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/15 text-primary/65 transition-colors hover:border-primary/35 hover:text-primary"
+        aria-label="Sitede ara"
+      >
+        <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        class="text-primary p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary"
+        aria-label="Menüyü aç/kapat"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        onclick="mobileMenu.toggle(this)"
+      >
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
 
     <div
       id="mobile-menu"
@@ -200,3 +231,5 @@ const mobileLinkBase =
     </div>
   </div>
 </nav>
+
+<SearchOverlay />
