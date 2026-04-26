@@ -39,6 +39,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Akşam saatlerinde sakin bir iç mekânda elinde ince bir şal tutan 50+ kadın; ısı dalgalanmalarıyla baş etme ve konfor arayışı teması',
   },
+  '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi': {
+    src: '/images/library/editorial/scholar-portrait-direct-gaze.webp',
+    alt: 'Pencere ışığında dümdüz bakan araştırmacı kadın portresi; bilgi okuryazarlığı ve eleştirel okuma teması',
+  },
   '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak': {
     src: '/images/library/editorial/portrait-burgundy-velvet.webp',
     alt: 'Bordo kadife arka planda olgun kadın portresi; uzun bir bekleyişin ardından yeni bir karara açılan iç sessizlik teması',
@@ -78,6 +82,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/zamansiz-yasam/beslenme-yaslanma': {
     src: '/images/library/editorial/still-life-eggs-oil-walnuts.webp',
     alt: 'Sabah ışığında krem keten üzerinde yumurtalar, ceviz, portakal dilimleri, maydanoz ve etiketsiz zeytinyağı; beslenme ve metabolik denge teması',
+  },
+  '/zamansiz-yasam/mevsimle-yemek-yemek': {
+    src: '/images/library/editorial/zy-vitaminler.webp',
+    alt: 'Sabah ışığında ahşap kesim tahtası üzerinde yumurtalar, portakal dilimleri, çiğ badem ve ceviz, taze maydanoz ve etiketsiz zeytinyağı; mevsiminde Anadolu sofrası ve topraktan sofraya beslenme teması',
   },
   '/zamansiz-yasam/hareket-saglik-menopoz': {
     src: '/images/library/editorial/zy-hareket-saglik.webp',

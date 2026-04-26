@@ -18,6 +18,35 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi',
+    title: 'Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?',
+    description:
+      'Feed\'inizden geçen menopoz içeriği güvenilir mi? Yıllarca medyanın içinden geçmiş bir editörün, sosyal medya bilgisini değerlendirirken aklında tuttuğu dört sinyal. Bilgi okuryazarlığı için pratik bir çerçeve.',
+    publishedDate: '26 Nisan 2026',
+    writerSlug: 'rima-erdemir',
+    section: 'Bilimsel Pencere',
+    sectionPath: '/bilimsel-pencere',
+    keywords: ['sosyal medya', 'bilgi okuryazarlığı', 'menopoz bilgisi', 'sağlık bilgisi', 'kaynak doğrulama', 'editöryel filtre', 'medya okuryazarlığı', 'kanıt'],
+  },
+  {
+    path: '/zamansiz-yasam/mevsimle-yemek-yemek',
+    title: 'Mevsimle Yemek Yemek — Anadolu Sofrasının 40 Sonrası Sağlık Diline Çevirisi',
+    description:
+      'Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan akran tonlu rehber.',
+    publishedDate: '26 Nisan 2026',
+    writerSlug: 'gamze-cizreli',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam',
+    keywords: [
+      'mevsimlik beslenme',
+      'Anadolu mutfağı',
+      'Akdeniz beslenme',
+      '40 sonrası beslenme',
+      'menopoz',
+      'sürdürülebilir sofra',
+    ],
+  },
+  {
     path: '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
     title: 'HRT\'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk',
     description:
