@@ -106,6 +106,19 @@ def parse_article(text):
     if em:
         editor = html_to_text(em.group(1))
 
+    closing = None
+    cm = re.search(
+        r'>\s*(Bir\s+Soru[^<]*)\s*</p>\s*<p[^>]*>(.+?)</p>\s*<p[^>]*>(.+?)</p>',
+        text,
+        re.DOTALL,
+    )
+    if cm:
+        closing = {
+            'label': html_to_text(cm.group(1)),
+            'bridge': html_to_text(cm.group(2)),
+            'question': html_to_text(cm.group(3)),
+        }
+
     return {
         'title': title,
         'description': desc.strip(),
@@ -114,6 +127,7 @@ def parse_article(text):
         'summary': summary,
         'sections': sections,
         'editor_note': editor,
+        'closing': closing,
     }
 
 
@@ -216,6 +230,28 @@ def build_docx(article, writer_name, out_path):
                     p = doc.add_paragraph(style='List Bullet')
                     p.paragraph_format.space_after = Pt(6)
                     add_formatted(p, item)
+
+    if article.get('closing'):
+        c = article['closing']
+        hp = doc.add_paragraph()
+        hp.paragraph_format.space_before = Pt(28)
+        hr = hp.add_run(c['label'].upper())
+        hr.font.name = 'Calibri'
+        hr.font.size = Pt(8)
+        hr.font.color.rgb = MUSTARD
+        hr.bold = True
+
+        bp = doc.add_paragraph()
+        bp.paragraph_format.space_after = Pt(8)
+        br = bp.add_run(c['bridge'])
+        br.font.name = 'Georgia'
+        br.font.size = Pt(13)
+        br.font.color.rgb = BORDO
+        br.italic = True
+
+        qp = doc.add_paragraph()
+        qp.paragraph_format.space_after = Pt(20)
+        add_formatted(qp, c['question'])
 
     if article['editor_note']:
         hp = doc.add_paragraph()
