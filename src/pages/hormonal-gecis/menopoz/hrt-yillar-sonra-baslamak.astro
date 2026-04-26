@@ -1,0 +1,263 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak']!;
+
+const tocEntries = [
+  { id: 'dokuz-yilin-defteri', label: 'Dokuz Yılın Sessiz Sayım Defteri' },
+  { id: 'beklemenin-sebepleri', label: 'Beklemenin Kendi Sebepleri' },
+  { id: 'konusma-degisti', label: 'Konuşmanın Yeri Değiştiğinde' },
+  { id: 'simdi-mi', label: '"Şimdi mi?" Bana da Geldi' },
+  { id: 'ilk-haftalar', label: 'İlk Haftalar' },
+  { id: 'anne-kiz-ben', label: 'Anne, Kız, Ben' },
+  { id: 'gec-degil-bireysel', label: 'Geç Olmaz, Bireysel Olur' },
+  { id: 'yolculuk-notu', label: 'Bir Yolculuk Notu' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'HRT\'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk';
+const articleDescription =
+  'Dokuz yıl önce HRT olmadan başlayan menopoz yolculuğu; klinik kılavuzların değişimine tanıklık; ve sonunda hekimle birlikte yeni bir adıma karar verme süreci. Kişisel bir kayıt.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'basak-pelister',
+  publishedDate: '26 Nisan 2026',
+  pathname: '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: [
+    'HRT', 'hormon tedavisi', 'menopoz', 'erken menopoz', 'geç başlamak',
+    'klinik kılavuzlar', 'bireysel takip', 'kemik sağlığı', 'osteoporoz',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title="HRT'ye Yıllar Sonra Başlamak"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
+        <ArticleAuthorBlock authorSlug="basak-pelister" publishedDate="26 Nisan 2026" readingMinutes={7} />
+
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
+          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            Dokuz yıl önce göreli erken bir menopoza girdim; o dönemin klinik yaklaşımı bana HRT önermemişti.
+            Yıllar içinde uluslararası kılavuzlar değişti, perspektif kaydı, sorular daha kişiselleşti — ben de
+            kendi sorularımla birlikte yaşadım. Sonra bir gün hekimimle birlikte yeni bir adıma karar verdik.
+            Bu yazı, bu kararın iç sesini ve <em>"geç mi?"</em> sorusuyla yıllarca yaşamış bir kadının
+            yumuşak günlüğünü taşır.
+          </p>
+        </section>
+
+        <ArticleProsePanel>
+          <h2 id="dokuz-yilin-defteri">Dokuz Yılın Sessiz Sayım Defteri</h2>
+          <p>
+            Annem yıllar boyu bir HRT seçeneği kullandı. İlaç kutusunu mutfak çekmecesinde gördüğümü
+            hatırlıyorum, sorularını duydum, doktor randevularına eşlik ettim. Yine de bir gün kontrolde
+            <em>"kemik tarama sonucu kaygı verici"</em> cümlesi geldi. O cümle benim için bir kapı oldu:
+            HRT bir <strong>çözüm</strong> değil, <strong>bir denklem</strong>. Bireysel takip, doğru zamanlama,
+            uygun seçim — üçü birden tutmadan koruma sağlamayabilir <Evidence level={4} />.
+          </p>
+          <p>
+            Kendi menopozum, annemin değil, başka bir hızla geldi. Kırklı yaşların ortasında, çoğu kadın için
+            beklenenden biraz erken. O dönemin klinik yaklaşımları — yirmi yıl önceki büyük araştırma sonrası
+            şekillenen ihtiyatlı yaklaşım — bana HRT önermemişti <Evidence level={5} />. Bu kararın doğruluğu
+            ya da yanlışlığı üzerine konuşmaya geldiğimde söyleyebileceğim sınırlı; ama o dönemin <em>"yapma"</em>
+            cümlesini duyup geri çekildiğimi söyleyebilirim.
+          </p>
+          <p>
+            Sonraki dokuz yıl bir tür sessiz sayım defteri oldu. Belirtileri kaydettim, kendi başıma okudum,
+            yöntemleri denedim, yeni alanları takip ettim. Tek başına yapılan bir gözlem yıllar içinde derinleşti
+            — ama bu derinliğin altında her zaman bir soru duruyordu: <em>"Acaba?"</em>
+          </p>
+
+          <h2 id="beklemenin-sebepleri">Beklemenin Kendi Sebepleri</h2>
+          <p>
+            HRT konusu yirmi yıl boyunca çelişkili işaretler verdi. Büyük çaplı bir araştırma sonrası bütün dünyada
+            ihtiyat öne geçti; pek çok kadın için reçete edilmedi <Evidence level={5} />. Sonraki yıllarda alt
+            grup analizleri, başlama yaşı ve menopozdan bu yana geçen süre — yeni bir resim ortaya çıkardı:
+            <strong>kararın kalitesi neyin yapıldığından çok kim için, ne zaman ve hangi ürünle yapıldığına bağlı</strong>
+            <Evidence level={4} />.
+          </p>
+          <p>
+            Annemin uzun süreli kullanımına rağmen kemik kaybı yaşaması da o yıllarda bana sessizce şunu öğretti:
+            HRT'nin koruma rolü mutlak değil, koşullu — uygun seçim, uygun doz, doğru takip ve kişiye uygun
+            zamanlama gerektiriyor <Evidence level={4} />. Bu öğrenmeyle bekleme süresi farklı bir hâl aldı:
+            <em>"karar verememek"</em> değil, <em>"henüz uygun çerçeve bulunmamış olabilir"</em>.
+          </p>
+
+          <h2 id="konusma-degisti">Konuşmanın Yeri Değiştiğinde</h2>
+          <p>
+            Son birkaç yılda hormon tedavisi konusu yeniden şekillendi. Uluslararası kılavuzlarda
+            <strong>kişiselleştirme</strong>, <strong>başlama penceresi</strong>, <strong>uzun vadeli izlem</strong> daha belirgin başlıklar oldu
+            <Evidence level={4} />. Anti-aging ve well-being ekseninde konuşmanın da etkisiyle sorular farklılaştı:
+            <em>"verilir mi?"</em> sorusu yerini <em>"kim için, ne zaman, nasıl?"</em> sorusuna bıraktı.
+          </p>
+          <p>
+            Ben bu değişimi içinde yaşayan bir kadın olarak okurken bir yandan da kendi kendime şunu sormuştum
+            yıllarca: <em>"Neden bu konuşmalar daha önce olmadı? Şimdi geldikleri yerden bana bakıldığında, dokuz
+            yıl geçti — artık başlamak için çok mu geç?"</em> Bu soru yıllarca sesimin altında kayıt olarak duruyordu.
+          </p>
+          <p>
+            <em>"Geç mi?"</em> sorusunun mutlak bir cevabı yok; bireysel risk, son adetten bu yana geçen süre,
+            hangi belirtilerin yönettiği ve hangi koruma hedeflendiği gibi pek çok değişkenle birlikte
+            değerlendirilir <Evidence level={4} />. Ama soru gerçek bir sorudur, susturulmaması gerekir.
+          </p>
+
+          <h2 id="simdi-mi">"Şimdi mi?" Bana da Geldi</h2>
+          <p>
+            Bir kontrol randevusunda hekimimle bu soruyu açtım. Yıllar boyu yaptığım okumaları, gözlemlediklerimi,
+            soracağım soruları yanıma alarak gittim. Sözleri açtığım ilk cümleyi hâlâ hatırlıyorum: <em>"Dokuz
+            yıldır bu kapıda duruyorum; benim için anlamlı bir başlangıç penceresi var mı, yoksa kaçırdım mı?"</em>
+          </p>
+          <p>
+            Konuşma, beklediğimden daha sakin geçti. Bireysel risk profilim, son adetten bu yana geçen yıllar,
+            kemik durumum, kalp damar göstergelerim, aile öyküsü — hepsi tek tek masaya yatırıldı. Kararın bana
+            ait kısmı vardı: ne istediğimi, hangi belirtileri öncelediğimi, neyi kabul edebileceğimi söylemek.
+          </p>
+          <p>
+            Bir noktada hekimim <em>"senin için uygun bir başlangıç çerçevesi var, birlikte deneyelim"</em> dedi.
+            O cümleyi <strong>sevinç ve rahatlamayla</strong> dinledim. Sevinç beklediğim için değil — yıllarca
+            <em>"benim için bir şey yok"</em> hissettiğim bir kapının ilk kez aralanmasıydı. Rahatlama ise
+            <em>"yalnız değilmişim"</em> duygusundan: bilim de, klinik de, ben de aynı masada konuşuyordu.
+          </p>
+
+          <h2 id="ilk-haftalar">İlk Haftalar</h2>
+          <p>
+            HRT'yi yeni başladım, deneyimim şu satırları yazdığımda birkaç haftalık. <strong>Doz, marka veya
+            spesifik şema bu yazının dışında</strong> — kişisel ve hekimimle birlikte değerlendirilen bir alan.
+            Söyleyebileceğim şey gözlemden ibaret: ilk hafta beklemediğim bir his oldu — uyku biraz daha
+            toparlanmış gibi geldi, akşam saatlerindeki bir tür "gerginlik bandı" daha yumuşak geçti
+            <Evidence level={3} />.
+          </p>
+          <p>
+            Ama ben bunu bir <em>"sonuç"</em> olarak değil, <em>"bir başlangıcın işareti"</em> olarak okuyorum.
+            HRT'nin bireysel etkileri kişiden kişiye değişir; ilk haftalarda fark edilen şeyler kalıcı
+            değişimleri yansıtmayabilir <Evidence level={4} />. O yüzden kendimi günlüğe yazıyorum, hekimimle
+            takvimi konuşuyorum, ölçümleri sıraya koyuyorum.
+          </p>
+          <p>
+            Bu yazıyı yazma cesaretini bulduğum yer de tam burası: deneyimimi tarif etmek bir tavsiye vermek
+            değil. Sadece <em>"yıllar boyu beklemiş bir kadın yeni bir adım attığında neler olabilir"</em>
+            sorusuna küçük bir not bırakmak. Sizin yolunuz benim yolumdan farklı olabilir, ve bu farklılık
+            zenginliktir.
+          </p>
+
+          <h2 id="anne-kiz-ben">Anne, Kız, Ben</h2>
+          <p>
+            Annemle bunu konuşmak ayrı bir an oldu. <em>"Sen başlıyorsun"</em> dedi sessizce. Yıllar önce kendi
+            kullanımına başladığında ona söyleyen kimsenin <em>"bireysel takip + doğru zamanlama + doğru ürün"</em>
+            denkleminden bahsetmemiş olduğunu ikimiz de biliyorduk. Onu yargılamak haksızlık olur — o zamanın
+            yaklaşımı oydu. Ama <em>"şimdi farklı bir döneme bakıyoruz"</em> cümlesini birlikte sahiplenebilirdik.
+          </p>
+          <p>
+            Kızımla ise farklı bir konuşma oldu. Genç kuşak <em>"neden bu konular daha açık konuşulmuyor"</em>
+            diye soran bir kuşak. Ona söylediğim şuydu: bu konuşmalar yeni yeni açılıyor, biz de açan
+            kuşaklardanız. Onun bilgisinin benimkinden farklı olacağı kesin — bu da iyi bir şey, çünkü bilginin
+            akışı tek yönlü değil, kuşaklar arasında karşılıklı.
+          </p>
+          <p>
+            Üç kuşağın aynı masaya geldiği bir an: annem yıllar önceki klinik anlayışın taşıyıcısı, ben şimdiki
+            geçişin tanığı, kızım önümüzdeki kuşağın sorularını hazırlıyor. <strong>Bilgi bir reçete değil, bir
+            konuşma</strong> — bu yazının taşıdığı temel cümlelerden biri budur.
+          </p>
+
+          <h2 id="gec-degil-bireysel">Geç Olmaz, Bireysel Olur</h2>
+          <p>
+            <em>"Geç mi?"</em> sorusunun aslında daha doğru biçimi: <em>"Benim için ne uygundur?"</em>. Hormon
+            tedavisinin bireysel risk-fayda dengesi başlama yaşına, son adetten bu yana geçen süreye, mevcut
+            sağlık durumuna ve hangi belirtilerin / risklerin yönetildiğine göre değişir <Evidence level={4} />.
+          </p>
+          <p>
+            Bu çerçeve içinde "<strong>geç</strong>" kelimesi mutlak bir yere oturmaz. Birinin için on yıl geç,
+            ötekinin için tam zamanı olabilir; biri için hiç olmayabilir. Önemli olan kararı bir kişi-mesele-zaman
+            üçgeninde alabilmek — kararın <em>kim tarafından</em>, <em>hangi göstergelerle</em>, <em>hangi takiple</em>
+            verildiği.
+          </p>
+          <p>
+            Bunu söylerken hâlâ kendi kararımdan bahsediyorum, sizin kararınızdan değil. Sizin yolunuz farklı
+            olabilir; gerekirse hekiminizle bu yazıyı bir başlangıç olarak konuşabilirsiniz. Cevap yine de
+            sizden gelir.
+          </p>
+
+          <h2 id="yolculuk-notu">Bir Yolculuk Notu</h2>
+          <p>
+            Dokuz yıl önce HRT yoktu hayatımda. Şimdi var. Aradaki dokuz yılı bir kayıp gibi okumuyorum;
+            bilim ve klinik yaklaşım o dokuz yılda da değişti, ben de bu değişime hazır bir okur olarak girdim.
+            Yıllarca beklemenin <strong>karşılığı</strong> bu kararı bilinçli verebilmek oldu.
+          </p>
+          <p>
+            Önümdeki yıllar takvimle, ölçümle, gözlemle ve hekimimle birlikte ilerleyecek. Bir reçete bir kez
+            yazıldı diye iş bitmedi — bireysel HRT bir izlem ilişkisidir. Ben bu ilişkiye yeni başlıyorum;
+            paylaşmak istediğim şu: <em>belki yıllarca beklediniz, belki hâlâ tartışıyorsunuz</em> — bu sürecin
+            kendisi bir kayıp değil, kendi kararınızı sahiplenmenin yolu olabilir.
+          </p>
+          <p>
+            Bu yazıyı bir öneri değil, bir kayıt olarak bırakıyorum. Aynı kapıda durduysanız, ya da yıllar önce
+            o kapıyı kapatıp şimdi yeniden bakıyorsanız: yalnız değilsiniz. Ve <em>"şimdi mi?"</em> sorusu — kim
+            ya da ne zaman olursa olsun — meşru bir sorudur. Cevabını hekiminizle birlikte arayın; ben de öyle
+            yaptım.
+          </p>
+        </ArticleProsePanel>
+
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu',
+          ]}
+        />
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            Hormon tedavisinde başlama yaşı, son adetten bu yana geçen süre ve bireysel risk profili kararı
+            doğrudan etkiler; bu alandaki klinik kılavuzlar son yıllarda kişiselleştirme yönünde belirgin bir
+            kayma gösterdi. HRT'nin kemik koruması mutlak değildir — uygun seçim, doz ve düzenli takip
+            gerektirir; aksi halde uzun süreli kullanıma rağmen kemik kaybı yaşanabilir. Bu yazı bireysel bir
+            deneyimi paylaşır; hangi kadın için uygun olduğu, hangi şemanın kullanılacağı her zaman hekim
+            değerlendirmesine bağlıdır.
+          </p>
+        </section>
+
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
+          <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+            Bu içerik genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini
+            almaz. Hormon tedavisi kararı her zaman hekiminizle birlikte verilir.
+          </p>
+        </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

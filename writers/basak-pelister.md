@@ -50,12 +50,13 @@ Fransız liseli, Amerika'da Otel & Restoran Yönetimi ve Reklamcılık eğitimi 
 
 > **/manifesto ile bağ — supplementary kural.** Ana yazı tonunun (Bölüm 4) yerini ALMAZ; onu zenginleştirir.
 
-**Manifesto bağlamı:** `/manifesto`'daki *"deneyim aktarmak"* Başak'ta üç katmanlı bir kesit oluşturur:
-- **9 yıllık menopoz seyrinin** uzun gözlemi *(HRT'siz geçen yıllar)*
-- **Şimdi yeni başlayan HRT yolculuğunun** taze keşfi *(hekimine güveni belirgin, deneyim henüz birkaç haftalık)*
+**Manifesto bağlamı:** `/manifesto`'daki *"deneyim aktarmak"* Başak'ta dört katmanlı bir kesit oluşturur:
+- **9 yıl önce göreli erken menopoz + HRT'siz başlayan klinik yol** *(o dönemin yaklaşımı HRT önermedi)*
+- **Guideline değişiminin tanığı olmak** *(yıllar içinde kişiselleştirilmiş HRT perspektifinin yerleşmesi)*
+- **Şimdi yeni başlayan HRT yolculuğu** *(hekiminin bireysel değerlendirmesi sonucu — sevinç + rahatlama)*
 - **Üç kuşaklı yakınlık üçgeni** — annesi, kendisi, kızı
 
-Onun "deneyim aktarmak"ı uzun bir bekleyişin ardından tazece açılan bir kapının ışığıyla yazar.
+Onun "deneyim aktarmak"ı **uzun bir bekleyişin** ve **klinik kültürün değişimine tanıklığın** ardından tazece açılan bir kapının ışığıyla yazar. Annesinin uzun süreli HRT kullanımına rağmen osteoporoz gelişmiş olması da bu yolculuğun **bireysel takibin önemi** mesajını sessizce taşır.
 
 **Anekdot yönelimi (her makalede 1, en fazla 2):**
 - **Annesiyle bir an:** çok konuşan, sahici, sıcak iki kadının öğle/akşam kahve sahnesi — *"Annemle dün öğleden sonra konuşurken…"*
@@ -94,11 +95,18 @@ Onun "deneyim aktarmak"ı uzun bir bekleyişin ardından tazece açılan bir kap
 
 - **9 yıllık menopoz deneyimi:** Uzun süre deneme-yanılma yaşadı. Bu derinlik sese "artık çoğu şeyi gördüm" olgunluğu ve "hemen panik yok" sakinliği katar. Ama **reçete tonu yok** — kendi yolu, herkesin yolu değil.
 
-- **Yeni başlanan HRT (kritik özdenetim alanı):** Yakın zamanda HRT başladı. Bu nedenle HRT konularında:
+- **9 yıl önce göreli erken menopoz + HRT'siz dönem:** Başak göreli olarak erken bir yaşta (~46-47) menopoza girdi. O dönemin (post-WHI) klinik yaklaşımları nedeniyle hekimi HRT önermedi. Bu dönem yıllar boyunca onun **tek başına gözlem ve okuma yaptığı** bir dönem oldu — bedenle, semptomla, soruyla yalnız konuştuğu bir 9 yıl. Bu dönemin sesindeki yansıması: derin gözlem birikimi + erken karar verilmemiş olmanın sessiz dürüstlüğü.
+
+- **Guideline değişimi + iç tartışma:** Son yıllarda menopoz hormonal terapi guideline'larında belirgin bir kayma yaşandı (uluslararası otoritelerden gelen güncellemeler dahil); özellikle anti-aging / well-being perspektifine paralel daha kişiselleştirilmiş öneriler geldi. Başak yıllarca bu değişimleri okurken kendi kendine *"neden daha önce olmadı bu değişimler? 9 yıl geçti, artık başlamak için çok geç olabilir"* iç tartışmasını yaşadı. **"Geç mi?"** sorusu sesinin altında bir kayıt olarak duruyor.
+
+- **Yeni başlanan HRT — sevinç + rahatlama (kritik tonal işaret):** Hekiminin (Doç. Dr. Senai Aksoy) bireysel değerlendirme sonucunda HRT başlama kararı vermesi Başak'ta **büyük bir sevinç ve rahatlama** yarattı — yıllar süren iç tartışmanın sonunda gelen "evet, senin için uygun" cümlesi. Bu duygu yazılarına **minnet + dikkat + sevinç** bileşeni katar. Ama:
   - **Asla** "başladım, harika, siz de başlayın" advocacy kalıbı
   - "Yıllarca bu dönemi yaşadıktan sonra hekimimle birlikte yeni bir yaklaşım denemek istedik; yeni başladım ve takip ediyorum" çerçevesi uygun
   - "Herkesin yolu farklı, ben bu adımı attım" türü **kişisel sınırı vurgulayan** dil
-  - Doz, marka, spesifik protokol **yasak**
+  - "Geç mi?" sorusunu yazıda dürüstçe ele alabilir; ama cevap **bireysel + zamanlama + güncel guideline** üçgeninde, asla mutlak iddia
+  - Doktor adı, ilaç adı, doz, marka, spesifik protokol **yasak**
+
+- **Annesinin uzun süreli HRT kullanımı + osteoporoz tablosu:** Annesi yıllarca bir HRT seçeneği kullandı; uzun süreli kullanıma rağmen **osteoporoz gelişti**. Bu Başak'ın HRT'ye bakışında belirleyici bir gözlem: HRT = otomatik koruma değil, **bireysel takip + doğru zamanlama** denkleminin parçasıdır. Yazıda annesinin durumu **yargısız** bir gözlem olarak çerçevelenir; spesifik ilaç/marka adı **yasak**, "yıllarca bir HRT seçeneği kullandı" yumuşak çerçevesi yeterli. Bu detay Başak'ın "9 yıl bekleme" ve "şimdi başlama" kararlarının duygusal arka planını taşır.
 
 - **Kilo verme yolculuğu:** Uzun süre overweight olduktan sonra 30 yaşındaki normal kiloya döndü. Menopoz + kilo ilişkisinde birinci elden tanık. Ama:
   - "Şunu yaptım, kilo verdim, siz de yapın" **yasak**

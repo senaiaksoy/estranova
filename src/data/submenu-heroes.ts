@@ -39,6 +39,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Akşam saatlerinde sakin bir iç mekânda elinde ince bir şal tutan 50+ kadın; ısı dalgalanmalarıyla baş etme ve konfor arayışı teması',
   },
+  '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak': {
+    src: '/images/library/editorial/portrait-burgundy-velvet.webp',
+    alt: 'Bordo kadife arka planda olgun kadın portresi; uzun bir bekleyişin ardından yeni bir karara açılan iç sessizlik teması',
+  },
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
     src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
     alt: 'Sakin sabah ışığında ahşap masada açık not defterine yazan 52 yaş kadın, çay fincanı ve bordo aksanlı iç mekân; bilgilendirilmiş karar ve iç tartışma teması',
