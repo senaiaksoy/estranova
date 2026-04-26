@@ -17,3 +17,5 @@ output/*-report.json
 output/_debug/
 !output/.gitkeep
 rag/chroma_db/
+# Yazara redline icin uretilen Word taslaklari (yayinlanmamis icerik; repoya girmesin)
+article-drafts/

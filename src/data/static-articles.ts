@@ -18,6 +18,17 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
+    title: 'HRT\'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk',
+    description:
+      'Dokuz yıl önce HRT olmadan başlayan menopoz yolculuğu; klinik kılavuzların değişimine tanıklık; ve sonunda hekimle birlikte yeni bir adıma karar verme süreci. Kişisel bir kayıt.',
+    publishedDate: '26 Nisan 2026',
+    writerSlug: 'basak-pelister',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: ['HRT', 'hormon tedavisi', 'menopoz', 'erken menopoz', 'geç başlamak', 'klinik kılavuzlar', 'bireysel takip', 'kemik sağlığı', 'osteoporoz'],
+  },
+  {
     path: '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
     title: 'Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?',
     description:

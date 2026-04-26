@@ -1,0 +1,239 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu']!;
+
+const tocEntries = [
+  { id: 'karar-yorgunlugu', label: 'Karar Yorgunluğu Çağında Sağlık' },
+  { id: 'simdi-mi-sorusu', label: '"Şimdi mi?" Sorusu' },
+  { id: 'bedenim', label: 'Bedenim Ne Diyor?' },
+  { id: 'kanit', label: 'Kanıt Ne Diyor?' },
+  { id: 'hayatim', label: 'Hayatım Ne Diyor?' },
+  { id: 'seytanin-avukati', label: 'Şeytanın Avukatlığı' },
+  { id: 'ertelemenin-anlami', label: 'Karar Vermemek de Bir Karardır' },
+  { id: 'birlestirmek', label: 'Üç Soruyu Aynı Anda Sormak' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Sağlık Kararlarında "Şimdi mi?" Sorusu — 40 Sonrası İçin Üç Adımlık Çerçeve';
+const articleDescription =
+  'Karar yorgunluğunun en yüksek olduğu çağda 40 sonrası sağlık kararlarını verirken bedeni, kanıtı ve hayatı aynı anda dinlemek. Üç soruluk sade bir çerçeve.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'ozlem-denizmen',
+  publishedDate: '26 Nisan 2026',
+  pathname: '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: [
+    '40 sonrası', 'sağlık kararı', 'karar yorgunluğu', 'menopoz', 'karar verme',
+    'koruyucu sağlık', 'sağlıklı yaşlanma', 'karar çerçevesi',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · 40 Sonrası"
+      title="Sağlık Kararlarında 'Şimdi mi?' Sorusu"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
+        <ArticleAuthorBlock authorSlug="ozlem-denizmen" publishedDate="26 Nisan 2026" readingMinutes={6} />
+
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
+          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            40 sonrası sağlık kararları her zaman acil değil; ama her zaman ertelenebilir de değil. Bu yazı tek bir
+            soruyu üç farklı açıdan dinlemenizi öneriyor: <em>Bedenim ne diyor? Kanıt ne diyor? Hayatım ne diyor?</em>
+            Cevapları üst üste koyduğunuzda kendi yolunuz görünür hale geliyor.
+          </p>
+        </section>
+
+        <ArticleProsePanel>
+          <h2 id="karar-yorgunlugu">Karar Yorgunluğu Çağında Sağlık</h2>
+          <p>
+            Geçen ay Para Durumu için bir konuşma hazırlarken bir soruda takıldım: ortalama bir kadın günde kaç tane
+            küçük karar veriyor? Beslenme, alışveriş, çocuklar, iş, evcil hayvan, fatura, mesaj, randevu… Yanıt akademik değil,
+            ama gözlemsel olarak çok yüksek <Evidence level={3} />. Sağlık kararlarına geldiğinizde zihin çoğu zaman
+            bu yorgunluğun en derininde oluyor.
+          </p>
+          <p>
+            Karar yorgunluğu yalnızca popüler bir terim değil; art arda karar verdikçe yargımızın zamanla yorulduğunu
+            gösteren araştırmalar var <Evidence level={4} />. Yani günün sonunda bir hekimin önerdiği bir tetkiki
+            ertelemenizin sebebi tembellik değil; kararın "şimdi" dosyasına eklenmiş olması ve dosyanın çoktan dolu olması.
+          </p>
+          <p>
+            40 sonrası bu yükü iki katına çıkarır: bir yandan kendi sağlığınız hakkında daha fazla seçenek önünüzdedir,
+            diğer yandan ailedeki diğer kuşakların — anne-baba, çocuklar — kararları da masaya gelir. "Bir gün bu konuya bakacağım"
+            cümlesi, çoğu zaman bir kararın kendine zaman bulamadığı için kaybolduğu raf.
+          </p>
+
+          <h2 id="simdi-mi-sorusu">"Şimdi mi?" Sorusu</h2>
+          <p>
+            Bir bütçe planı yaparken yıllar içinde kullandığım üç sorudan oluşan bir çerçeve var. Geçen hafta bir sağlık
+            kararını verirken aynı çerçeveyi denedim; bedenle, bilgiyle ve hayatla aynı sorunun üç ayrı dilde
+            sorulduğunu fark ettim. Buradaki amaç bir formül üretmek değil; karar verme yorgunluğu altında bir kadının
+            kendi yolunu nasıl aydınlatabileceğine dair bir öneri.
+          </p>
+          <p>
+            "Şimdi mi?" sorusu üç boyutlu bir sorudur. Her boyut başka bir kaynaktan beslenir; üçü birden cevap
+            verdiğinde sadece tek tek değil, <strong>aralarındaki uyum</strong> da görünür hale gelir.
+          </p>
+
+          <h2 id="bedenim">Bedenim Ne Diyor?</h2>
+          <p>
+            Bu sorunun cevabı en sade gibi görünür ama çoğu zaman en geç duyulanıdır. Bedenle ilgili işaretler — uyku
+            kalitesinde belirgin değişim, kalıcı yorgunluk, ağrının yeni bir biçimi, adetin değişmesi — hekime
+            başvurmanın başlangıç noktasıdır <Evidence level={5} />.
+          </p>
+          <p>
+            Soruyu kendinize bu şekilde sorabilirsiniz: <em>"Bedenim son üç ayda bana sürekli aynı şeyi mi söylüyor,
+            yoksa bir defalık bir his mi yaşadım?"</em> Sürekli sinyal kararı yakına çeker; bir defalık his ise zaman tanımayı
+            destekleyebilir. Ama bu bir genellemedir, mutlak değil.
+          </p>
+          <p>
+            Burada özellikle dikkat: hiçbir his "umursanmaz" olarak okunmamalı; bedenle ilgili belirgin bir değişiklik
+            varsa hekim değerlendirmesi her zaman bir sonraki adım olabilir <Evidence level={5} />. Bu yazının amacı bir
+            uyarıyı ertelemenize destek olmak değil; ertelemediğiniz halde verdiğiniz "şimdi mi?" sorusunu
+            netleştirmenize yardım etmek.
+          </p>
+
+          <h2 id="kanit">Kanıt Ne Diyor?</h2>
+          <p>
+            "Kanıt" sözcüğü kulağa biraz ağır gelebilir, ama burada işe yarar: bir konunun bilimsel olarak nerede
+            durduğunu sormak. Bir tetkik için "biraz daha beklesem olur mu?" sorusunun yanıtı yaş gruplarına ve risk
+            faktörlerine göre çok farklılaşır <Evidence level={4} />.
+          </p>
+          <p>
+            Burada üç alt soru yardımcı olur:
+          </p>
+          <ul>
+            <li>Kanıtlar bu konuda <strong>net mi, tartışmalı mı?</strong> Net olduğu yerde "şimdi" cevabı ağır basar.</li>
+            <li>Tartışmalıysa, <strong>nedeni ne?</strong> Yeterli araştırma mı yok, herkeste farklı mı sonuç veriyor?</li>
+            <li>Kendi durumumun riskleri nerede duruyor? <strong>Genel kanıt benim için ne kadar geçerli?</strong></li>
+          </ul>
+          <p>
+            Bu sorular bir kadının kendi sağlık konularını araştırmacı gibi taramasını gerektirmez. Bir hekimin önerisini
+            dinlerken zihninizde sessizce tutabileceğiniz bir filtre yeterlidir.
+          </p>
+
+          <h2 id="hayatim">Hayatım Ne Diyor?</h2>
+          <p>
+            Üçüncü soru en çok unutulan sorudur. Bedeniniz ve kanıt aynı yöne işaret ediyor olabilir, ama hayatınızın
+            bu kararı bugün kaldıracak hali var mı? Yoğun bir iş dönemi, taşınma, ailedeki bir başka süreç — bunlar
+            kararın kalitesini doğrudan etkileyen bağlam <Evidence level={3} />.
+          </p>
+          <p>
+            Burada işlerlik şudur: <em>"Bu kararı sağlam şekilde alabilmem için önümüzdeki sekiz hafta uygun mu? Değilse
+            kararı küçültebilir miyim — bir tetkik, bir randevu, bir okuma — yoksa bütünüyle ileri bir tarihe almam mı
+            doğru?"</em> Hayatın "ne diyor" sorusunu sormak ertelemek değildir; doğru anı bulmaktır.
+          </p>
+          <p>
+            Bu sorunun yanıtı bazen sürpriz olabilir. Hayat çoğu zaman "şimdi olmaz" değil, "şimdi de mümkün, ama küçük
+            bir adımla" der. Üç sayfalık bir karar değil, bir telefon araması bile o anda yeter.
+          </p>
+
+          <h2 id="seytanin-avukati">Şeytanın Avukatlığı</h2>
+          <p>
+            Geçen pazar bir akşam yemeğinde dört arkadaşımla aynı konuyu konuşuyorduk; hepimiz "şimdi sırası değil"
+            tarafına yatkındık. Bir noktada durdum, kendi kendime sordum: <em>"Ya tersi doğruysa? Ya bu kararı şimdi
+            vermemenin sessiz bir maliyeti varsa?"</em> Masa bir an sustu. Sonra herkes biraz daha açık konuşmaya başladı.
+          </p>
+          <p>
+            Şeytanın avukatlığı bir kararı tek başına çözmez; ama görmediğiniz bir açıyı görünür kılar. 40 sonrası sağlık
+            kararlarında bu özellikle önemlidir, çünkü <strong>kararsızlık çoğu zaman kendiliğinden bir karara dönüşür</strong> —
+            ve kendiliğinden oluşan karar her zaman size uygun olan değildir.
+          </p>
+          <p>
+            Bunu yapmanın kibarı şudur: kararınızın iki tarafına bir çay arası tanıyın. Bir taraf "şimdi" desin, diğer
+            taraf "biraz daha" desin. Tartışmayı bitirmek için değil, tartışmayı görünür kılmak için. Çoğu zaman doğru
+            yön ortaya çıkar.
+          </p>
+
+          <h2 id="ertelemenin-anlami">Karar Vermemek de Bir Karardır</h2>
+          <p>
+            "Henüz karar vermedim" cümlesi bir şey söylemiyor gibi görünür; oysa söylüyor. Karar vermemek de bir karardır
+            ve günler birbirine eklendikçe netleşir <Evidence level={3} />. Önemli olan ertelemenin <strong>bilinçli mi
+            yoksa kazara mı</strong> yapıldığını ayırt etmektir.
+          </p>
+          <p>
+            Bilinçli erteleme: "Önümüzdeki sekiz hafta yoğun, sonra bakacağım. Şu tarihte bu konuya yeniden döneceğim."
+            Kazara erteleme: "Bu konuya bir gün bakmam lazım." İlki bir karar, ikincisi bir kayma. Aralarındaki tek fark
+            tarih ve kayıt — basit ama belirleyici.
+          </p>
+
+          <h2 id="birlestirmek">Üç Soruyu Aynı Anda Sormak</h2>
+          <p>
+            Bedenim, kanıt, hayatım — bu üç soruyu üst üste koyduğunuzda ilginç bir şey olur. Bazen üçü aynı yöne işaret
+            eder; o zaman karar net. Bazen ikisi bir, biri başka yöne işaret eder; o zaman bir konuşmaya ihtiyaç vardır
+            — kendinizle, hekiminizle veya yakın bir arkadaşınızla. Bazen üçü de farklı yere işaret eder; o zaman karar
+            zaten "şimdi" değil, "henüz değil" demektir.
+          </p>
+          <p>
+            Bu çerçevenin içinde kestirme yok; sadece kendi sürecinizi sahiplenmenin bir yolu. Kararı doğru kılmaktan çok,
+            <strong>kararı sizin yapmanın</strong> ona kalitesini eklediği yer.
+          </p>
+          <p>
+            "Şimdi mi?" sorusunun en güzel tarafı şu: cevap ne olursa olsun bir sonraki "şimdi"de yine sorabilirsiniz.
+            Sağlık tek seferlik bir hesap değil, her gün yeniden açılan bir konuşma. 40 sonrası bu konuşmanın hem
+            zorlaştığı hem de netleştiği bir dönem.
+          </p>
+        </ArticleProsePanel>
+
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/40-sonrasi/tarama-testleri',
+            '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+            '/hormonal-gecis/40-sonrasi',
+          ]}
+        />
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            Karar yorgunluğu psikolojisi alanında orta düzey kanıt birikimi vardır; bireysel sağlık kararlarına doğrudan
+            uygulanan randomize çalışma sayısı sınırlıdır. Bu yazıdaki üç soruluk çerçeve klinik bir karar destek aracı
+            değil; bireyin kendi düşünme sürecini netleştirmesine yardımcı olan editöryel bir araçtır. Bedensel
+            belirtiler söz konusu olduğunda hekim değerlendirmesi her zaman önceliklidir.
+          </p>
+        </section>
+
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
+          <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+            Bu içerik genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+            Sağlık kararları için hekiminizle birlikte değerlendirme yapınız.
+          </p>
+        </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

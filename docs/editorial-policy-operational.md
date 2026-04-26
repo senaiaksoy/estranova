@@ -93,3 +93,49 @@ Bu kart, `src/data/writers.ts` içindeki `writingStyle` alanı ile birlikte uygu
   - `adet aralığı`
   - `adet kaydı`
 - `Döngü` terimi yalnızca teknik bağlamda (ör. `hormonal döngü`) gerçekten gerekli olduğunda kullanılır.
+
+## 11) Manifesto-Aligned Mahrem Ton Eki (Supplementary)
+
+Bu bölüm `/manifesto` sayfasındaki *"deneyim aktarmak"* sözüne bağlı **ek** kuralları belgeler. **Bölüm 9'daki yazar üslup kartlarının ve `AGENTS.md` Content Tone'un yerini ALMAZ**; onları manifesto ile uyumlu kılar.
+
+### 11.1) İlke
+
+Estranova yazıları "akıllı, samimi ve güvenilir bir not defteri" iddiasını her makalede görünür kılmalıdır. Bu, makalenin ortasında veya bir bölüm geçişinde **kısa bir kişisel sahne** ile gerçekleşir — yazar kendi günlük hayatından (veya yakın çevresindeki kadınların gözleminden) bir an açar.
+
+### 11.2) Operasyonel Kurallar
+
+- **Sayı:** Her makalede **1, en fazla 2** anekdot. Daha fazlası karikatür, daha azı manifesto-aligned değil.
+- **Şekil:** Birinci tekil şahıs, kısa sahne (genelde 2-4 cümle), somut detay — soyut his değil.
+- **Denge cümlesi:** Anekdotun ardından *"ama bu benim yolum, sizinki farklı olabilir"* tipi yumuşatıcı bir cümle **zorunlu**.
+- **Kişiselleştirme:** Tek-elden hissi vermesin. Her yazarın kendi anekdot ekseni `writers/<slug>.md` **Bölüm 4b**'de tanımlıdır; writer agent buna sadık kalır.
+
+### 11.3) Yazar-Bazlı Eksenler (Özet)
+
+| Yazar | Eksen | Yıllık makale başı anekdot ana kaynak |
+|---|---|---|
+| Berna | Instagram tarama, hekim danışma, antrenman gözlemi | Feed/post + bedeniyle iletişim |
+| Alara | Mevsimsel saha, jim, geniş aile | Surf/at/jim antrenman + anne-anneanne-teyze |
+| Başak | 9 yıllık geçiş + yeni HRT + anne-kız üçgeni | Aile sahnesi + HRT yolculuğu + seyahat |
+| Duygu | Yeni şey deneme + Londra-İstanbul + yargısız dinleyici | Kızıyla telefon + kliniğin dekoru + akran sohbeti |
+| Özlem | Sokratik soru + üst düzey iş çevresi | Para Durumu sahnesi + soru-eksenli sahne |
+| Rima | HRT karar süreci + araştırmacı titizlik | Sabah araştırma okuma + iç tartışma |
+| Gamze | Mutfak köşesi + HRT iç sorgulaması | Sabah mutfağı + kuşak aktarımı + bedeniyle konuşma |
+| Senai *(geçici yazar)* | Kendi geçişi + akran + editöryel masa | Hassas konularda; klinik gözlem **mutlak yasak** |
+
+### 11.4) Hassas Sınırlar
+
+Bazı yazarların anekdot havuzunda **araç haline getirilemeyecek** kişi/durum vardır. Detay her yazarın `writers/<slug>.md` Bölüm 4b sonundaki "Hassas Sınır" alt bölümünde (Alara için otizmli üvey kardeşi; Duygu için hasta detayları; Senai için klinik gözlem) yer alır. Bu sınırlar **mutlaktır**, yazılarda hiçbir koşulda aşılmaz.
+
+### 11.5) Yasak Yapılar
+
+- "Bende işe yaradı, siz de yapın" — manifesto'nun *"yol açmak"* eksenine ters
+- "Şu uygulamayı/markayı denedim, çok memnun kaldım" tarzı endorsement
+- Aynı anekdotu birden fazla makalede tekrarlama (havuz tükenmesi)
+- Yer/marka/restoran/otel listeleme — biyografi süsü olarak
+- Mahrem aile detaylarını araç haline getirme (özellikle çocuklar, sağlık koşulu olan akrabalar)
+
+### 11.6) Bağlantı
+
+- Manifesto sayfası: `/manifesto`
+- Üst kural seti: `AGENTS.md` → "Content Tone" + "Manifesto-Aligned Anekdot Ekseni"
+- Yazar üslup kartları: Bölüm 9 + her yazarın `writers/<slug>.md` Bölüm 4b
