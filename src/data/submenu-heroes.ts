@@ -47,6 +47,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/journey-40-sonrasi.webp',
     alt: 'Sonbahar ormanında sakin yürüyen kadın; uzun vadeli sağlık ve hareket teması',
   },
+  '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu': {
+    src: '/images/library/editorial/portrait-silver-strands-window.webp',
+    alt: 'Pencere kenarında düşünceli sessiz bir an; gri saçlı kadın portresi — sağlık kararları üzerine iç tartışma teması',
+  },
   '/hormonal-gecis/40-sonrasi/tarama-testleri': {
     src: '/images/library/editorial/hg-tarama-testleri.webp',
     alt: 'Sabah ışığında ahşap masada açık takvim sayfası, çay fincanı, açık not defteri, cam vazoda pembe gül ve bordo ciltli ajanda; kişisel düzenli sağlık takibi teması',
