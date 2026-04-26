@@ -1,0 +1,242 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi']!;
+
+const tocEntries = [
+  { id: 'sabah-feed', label: 'Sabah Feed\'i, Sabah Sorusu' },
+  { id: 'yararli-yer', label: 'Sosyal Medya Bir Klinik Değildir, Ama' },
+  { id: 'birinci-sinyal', label: 'Birinci Sinyal: Kaynağa Götürür mü?' },
+  { id: 'ikinci-sinyal', label: 'İkinci Sinyal: Kesinlik mi, Olasılık mı?' },
+  { id: 'ucuncu-sinyal', label: 'Üçüncü Sinyal: Bir Şey Satıyor mu?' },
+  { id: 'dorduncu-sinyal', label: 'Dördüncü Sinyal: Tek Doğru mu?' },
+  { id: 'editor-filtresi', label: 'Bir Editörün Filtresi' },
+  { id: 'olmadan-olmaz', label: 'Yine de Onsuz Olmaz' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?';
+const articleDescription =
+  'Feed\'inizden geçen menopoz içeriği güvenilir mi? Yıllarca medyanın içinden geçmiş bir editörün, sosyal medya bilgisini değerlendirirken aklında tuttuğu dört sinyal. Bilgi okuryazarlığı için pratik bir çerçeve.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'rima-erdemir',
+  publishedDate: '26 Nisan 2026',
+  pathname: '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi',
+  articleSection: 'Bilimsel Pencere',
+  sectionPath: '/bilimsel-pencere',
+  keywords: [
+    'sosyal medya', 'bilgi okuryazarlığı', 'menopoz bilgisi', 'sağlık bilgisi',
+    'kaynak doğrulama', 'editöryel filtre', 'medya okuryazarlığı', 'kanıt',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/bilimsel-pencere" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Bilimsel Pencere · Yeni Araştırmalar"
+      title="Sosyal Medyada Menopoz Bilgisi"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+        <ArticleTOC slot="toc" entries={tocEntries} />
+        <ArticleAuthorBlock authorSlug="rima-erdemir" publishedDate="26 Nisan 2026" readingMinutes={6} />
+
+        <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
+          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            Sosyal medya menopoz hakkında konuşmanın en yaygın yeri oldu — bu hem iyi bir haber hem dikkat
+            gerektiren bir durum. Yıllarca medyanın içinden geçmiş bir editör olarak feed'imden bir paylaşım
+            geçtiğinde aklımdan dört kısa soru geçer: <em>Kaynağa götürüyor mu? Kesinlik mi, olasılık mı?
+            Bir şey satıyor mu? Tek doğru olduğunu mu söylüyor?</em> Bu yazı o dört sinyalin yumuşak bir haritası.
+          </p>
+        </section>
+
+        <ArticleProsePanel>
+          <h2 id="sabah-feed">Sabah Feed'i, Sabah Sorusu</h2>
+          <p>
+            Sabahları uyandığımda yaptığım ilk şey kahve değil, telefon. Bu aslında pek kimsenin gurur duymadığı
+            bir alışkanlık ama dürüst olalım. Geçen sabah feed'imden bir menopoz paylaşımı geçti: ışık iyi,
+            grafik temiz, başlık iddialı — *"Bu bitki menopoz semptomlarını üç haftada yarı yarıya azaltıyor."*
+            Bir an durdum. Yıllarca veri okumakla geçen bir kariyerin verdiği refleksle önce kaynağa baktım:
+            yoktu. Sonra paylaşana baktım: bir hesap, çok takipçi, bir ürün satıyor.
+          </p>
+          <p>
+            Paylaşımı geçtim. Ama soruyu geçemedim: <em>"Bunu okuyan, kaynağı sorgulamayan biri ne yapacak?"</em>
+            Bu yazı o sorudan doğdu. Sosyal medya bizim ortak bilgi köyümüz — ama köyün herkese aynı şeyi söylemediğini
+            de biliyoruz <Evidence level={4} />.
+          </p>
+
+          <h2 id="yararli-yer">Sosyal Medya Bir Klinik Değildir, Ama</h2>
+          <p>
+            En başta hakkını verelim: sosyal medya menopozu konuşulabilir kıldı. Yıllarca tabu olan, anneanne ile
+            anne arasında bile yarı sessiz geçen bir geçişin kelimeleri orada bulundu. Bir kadın gece terlemesini
+            anlattığında diğeri <em>"ben de yaşıyorum"</em> diye yazdığında, klinik dilin yapamadığı bir şey
+            oluyor: <strong>yalnızlığın azalması</strong> <Evidence level={3} />.
+          </p>
+          <p>
+            Bu değerli. Ama bu değerli oluş, sosyal medya içeriğinin <em>klinik bir kaynak</em> haline geldiği
+            anlamına gelmez. Yararlı olduğu yer ile aldatıcı olduğu yer çok yakın komşular. Bu yazıda dört kısa
+            sinyal üzerinde duracağım — sosyal medyayı bırakın değil, sosyal medyayı <strong>okuyabilin</strong> diye.
+          </p>
+
+          <h2 id="birinci-sinyal">Birinci Sinyal: Kaynağa Götürür mü?</h2>
+          <p>
+            En sade ve en güçlü sinyal bu. Bir bilgi paylaşılıyor, ardında bir araştırma, bir kılavuz, bir
+            uzman görüşü olduğu söyleniyor. Soru: <strong>kaynak görünüyor mu?</strong>
+          </p>
+          <p>
+            Görünmüyorsa — yani video sadece <em>"araştırmalar gösteriyor ki..."</em> diyor ve devam ediyorsa —
+            kırmızı bayrak. Kaynak verilmemiş bilgi, kontrolü size geçirmeyen bir bilgidir. Doğru olabilir, yanlış
+            olabilir; ama <strong>doğrulayamayacağınız</strong> bir bilgidir <Evidence level={4} />.
+          </p>
+          <p>
+            Bir kaynak görünüyorsa: ona bakın. Bir araştırma adı, yıl, dergi varsa — küçük bir arama yapın.
+            Çoğu zaman ya araştırma yok, ya başka bir şey diyor, ya da çok eski. Bunu yapmak zor değil; sadece
+            on saniye. Ama o on saniye sosyal medya bilgisini <em>"belki"</em>den <em>"sahiden"</em>e çevirir.
+          </p>
+
+          <h2 id="ikinci-sinyal">İkinci Sinyal: Kesinlik mi, Olasılık mı?</h2>
+          <p>
+            İkinci sinyali dilden okursunuz. Bir paylaşım <em>"bu kesinlikle çalışır"</em>, <em>"yüzde yüz
+            etkilidir"</em>, <em>"hepimizde işe yarar"</em> diyorsa — ihtiyatlı olun. Sağlık bilgisi nadiren
+            mutlaktır; bireyler arasında değişir, çoğu zaman <em>"bazı kadınlarda işe yarayabilir, bazılarında
+            yaramayabilir"</em> şeklinde olur <Evidence level={5} />.
+          </p>
+          <p>
+            Güvenilir kaynaklar bu nedenle sıkça <em>"araştırmalar şunu öneriyor"</em>, <em>"erken kanıtlar şunu
+            gösteriyor ama henüz kesin değil"</em>, <em>"bu çalışmanın sınırları şunlar"</em> gibi cümleler kurar.
+            Bu cümleler kulağa az heyecan verici gelir — ama sahidir.
+          </p>
+          <p>
+            <strong>Pratik filtre:</strong> bir paylaşım dinlerken/okurken kelimeleri saymadan dilin <em>tonunu</em>
+            dinleyin. Kesinlik ne kadar yüksekse, gerçek bilgi ihtimali genelde o kadar düşük. Bu paradoks
+            değil — sağlık dünyası gerçekten çoğu zaman belirsizdir <Evidence level={4} />.
+          </p>
+
+          <h2 id="ucuncu-sinyal">Üçüncü Sinyal: Bir Şey Satıyor mu?</h2>
+          <p>
+            Bu sinyal en az fark edileni ama çoğu zaman en belirleyicisi. Bir paylaşımın arkasında bir ürün, bir
+            program, bir paid-class varsa — bilginin kendisi <strong>nötr olamaz</strong>. Anlatan kişi iyi
+            niyetli olabilir, ama anlatım yapısı satışa dönük olduğunda bilgi ister istemez seçilir <Evidence level={4} />.
+          </p>
+          <p>
+            Burada söylediğim şey değil: <em>"satıcılar yalan söylüyor."</em> Söylediğim: <em>satış olduğunda
+            bilgi tarafsız değildir.</em> Bir takviye satan biri o takviyenin işe yaradığı çalışmaları öne çıkarır,
+            yaramadığı çalışmaları geri plana atar. Bu insan doğası — ahlak meselesi değil.
+          </p>
+          <p>
+            <strong>Pratik filtre:</strong> bir paylaşımı izlerken — açıklamada bir link var mı, hesap profilinde
+            bir mağaza, bir kurs, bir randevu sistemi var mı — bakın. Olması her zaman kötü değil; ama
+            <em>bilginin tarafsızlığını okurken bunu hesaba katın</em>. Çoğu zaman sat-bilgi karışımı olduğunu
+            anlamak için yeterli.
+          </p>
+
+          <h2 id="dorduncu-sinyal">Dördüncü Sinyal: Tek Doğru mu?</h2>
+          <p>
+            Dördüncü sinyal felsefi gibi görünür ama çok pratiktir: paylaşım <strong>tek bir doğru olduğunu</strong>
+            mı söylüyor, yoksa <strong>seçenekler arasında bir denge</strong> mi sunuyor?
+          </p>
+          <p>
+            Sağlıkla ilgili bilginin gerçek kalitesi çoğu zaman ikincide yatar. <em>"Hormon tedavisi tek çözüm"</em>
+            ya da <em>"hormon tedavisi tehlikeli, asla almayın"</em> tipi paylaşımlar — her ikisi de aynı kapıdan
+            çıkar: <strong>tekçilik</strong>. Oysa bireysel sağlık kararları çoğul, koşullu, kişiseldir <Evidence level={4} />.
+          </p>
+          <p>
+            Güvenilir bir bilgi paylaşıcı genellikle şöyle konuşur: <em>"Bu yöntem bazı kadınlar için iyi olabilir,
+            şu durumlarda uygun değildir, hekiminizle konuşun."</em> Bu cümle uzun, klişe gibi görünür — ama
+            cümlenin yapısı doğru bilginin yapısıdır. Dünyada <strong>tek doğru</strong> nadirdir.
+          </p>
+
+          <h2 id="editor-filtresi">Bir Editörün Filtresi</h2>
+          <p>
+            Yıllarca veri ve içerik akışlarının ortasında çalıştığım için bu dört sinyal benim için artık otomatik
+            işliyor — saniyelerle ölçülen bir ön-filtre. Ama bunu paylaşırken eklemem gereken bir şey var:
+            <strong>filtre mükemmel değil</strong>. Bazen iyi bilgiyi kötü ambalajda görürsünüz; bazen kötü bilgiyi
+            iyi ambalajda. Filtreyi geçen her şey doğru değil; takılan her şey de yanlış değil.
+          </p>
+          <p>
+            Filtre bana yardımcı olan şey ne yapar: <strong>reflekslerimi yavaşlatır</strong>. Bir cümleyi okur okumaz
+            paylaşmamamı, bir başlığa hemen inanmamamı sağlar. Sosyal medyanın hızı bilgi kalitesinin tek başına
+            düşmanı olmasa bile, kuvvetli bir düşmanıdır <Evidence level={3} />. Yavaşlamak bir savunmadır.
+          </p>
+          <p>
+            Bu, bir araştırma okurken benim de yapmaya çalıştığım şey: paylaşmak yerine bir kahveyi bekleyip
+            <em>"bunu nereden biliyor bu kişi?"</em> sorusunu açıkça sormak. Cevap iyi geldiğinde paylaşırım;
+            yoksa kendime saklarım. Bu refleksin sosyal medyaya yansımış sade bir versiyonu.
+          </p>
+
+          <h2 id="olmadan-olmaz">Yine de Onsuz Olmaz</h2>
+          <p>
+            Bu yazı sosyal medyaya kapımızı kapatmamızı önermez. Ben de oradayım, sizler de. Tabuların
+            kırılması, deneyimlerin paylaşılması, doğru hesapların bulunması — bunlar kıymetli kazanımlar.
+            Sadece bu kazanımları <strong>aldatıcı içerikten ayırmak</strong> kendimize sağlamamız gereken bir
+            beceri.
+          </p>
+          <p>
+            Dört sinyal: kaynağa götürüyor mu, dilin tonu kesinlik mi olasılık mı, satış var mı, tek doğru mu
+            söyleniyor. Beraber kullanılınca güçlü bir filtre. Tek tek bile yardımcı.
+          </p>
+          <p>
+            Ve şu son söz: filtre <em>başkalarına</em> uygulamak için değil, <em>kendinize</em>. Sosyal medyada
+            kimse kazanmıyor, herkes okuyor. Filtre kendi okumanızı koruyor. Kararı zaten siz veriyorsunuz —
+            soru sadece kararı verirken arkanızda nasıl bir bilgi havuzu olduğu.
+          </p>
+        </ArticleProsePanel>
+
+        <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/bilimsel-pencere',
+            '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu',
+            '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
+            '/editoryal-politika',
+          ]}
+        />
+
+        <section class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+          <p class="leading-relaxed text-[#2D2D2D]/80">
+            Sağlıkla ilgili sosyal medya içeriğinin bilgi kalitesi geniş bir aralıkta dağılır; yapılan
+            içerik analizi çalışmaları, popüler sağlık paylaşımlarının önemli bir bölümünün desteksiz veya
+            yanlış olduğuna işaret eder. Bu yazıda önerilen dört sinyal akademik bir doğrulama yöntemi değildir;
+            okurun günlük akışta hızla uygulayabileceği pratik bir çerçevedir. Önemli sağlık kararlarında
+            sosyal medya bilgisi tek başına yeterli değildir; hekiminizle birlikte değerlendirme yapınız.
+          </p>
+        </section>
+
+        <section class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10">
+          <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+            Bu içerik genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini
+            almaz. Sağlık kararları için hekiminizle birlikte değerlendirme yapınız.
+          </p>
+        </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

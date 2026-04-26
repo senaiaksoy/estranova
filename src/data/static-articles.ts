@@ -18,6 +18,35 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi',
+    title: 'Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?',
+    description:
+      'Feed\'inizden geçen menopoz içeriği güvenilir mi? Yıllarca medyanın içinden geçmiş bir editörün, sosyal medya bilgisini değerlendirirken aklında tuttuğu dört sinyal. Bilgi okuryazarlığı için pratik bir çerçeve.',
+    publishedDate: '26 Nisan 2026',
+    writerSlug: 'rima-erdemir',
+    section: 'Bilimsel Pencere',
+    sectionPath: '/bilimsel-pencere',
+    keywords: ['sosyal medya', 'bilgi okuryazarlığı', 'menopoz bilgisi', 'sağlık bilgisi', 'kaynak doğrulama', 'editöryel filtre', 'medya okuryazarlığı', 'kanıt'],
+  },
+  {
+    path: '/zamansiz-yasam/mevsimle-yemek-yemek',
+    title: 'Mevsimle Yemek Yemek — Anadolu Sofrasının 40 Sonrası Sağlık Diline Çevirisi',
+    description:
+      'Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan akran tonlu rehber.',
+    publishedDate: '26 Nisan 2026',
+    writerSlug: 'gamze-cizreli',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam',
+    keywords: [
+      'mevsimlik beslenme',
+      'Anadolu mutfağı',
+      'Akdeniz beslenme',
+      '40 sonrası beslenme',
+      'menopoz',
+      'sürdürülebilir sofra',
+    ],
+  },
+  {
     path: '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
     title: 'HRT\'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk',
     description:
@@ -106,7 +135,7 @@ export const staticArticles: StaticArticleEntry[] = [
     title: 'Cinsellikte Ağrı — Menopozda Dispareuniya Rehberi',
     description: 'Menopozda cinsellikte ağrı veya rahatsızlığın nedenleri ve tedavi seçenekleri hakkında kapsamlı rehberlik.',
     publishedDate: '3 Nisan 2026',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'duygu-karaosmanoglu',
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik',
     keywords: ['cinsellikte ağrı', 'cinsel ilişkide ağrı', 'disparoni', 'dispareuni', 'menopoz', 'mahrem bölge', 'vajinal kuruluk', 'hormon'],
@@ -116,7 +145,7 @@ export const staticArticles: StaticArticleEntry[] = [
     title: 'Menopozda Mahrem Bölge Değişimleri',
     description: 'Menopozda mahrem bölgede yaşanan kuruluk, hassasiyet ve doku değişimlerini (vulvovajinal atrofi); günlük konfor ve bakım seçeneklerini sade bir dille anlatan rehber.',
     publishedDate: '31 Mart 2026',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'duygu-karaosmanoglu',
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik',
     keywords: ['mahrem bölge', 'vajinal atrofi', 'vulvovajinal atrofi', 'vajinal kuruluk', 'menopoz', 'östrojen', 'nem', 'cinsel sağlık'],
