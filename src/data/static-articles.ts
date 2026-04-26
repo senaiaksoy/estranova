@@ -29,6 +29,17 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['perimenopoz', 'adet düzensizliği', 'kanama', 'menopoz geçişi', 'doktor başvurusu', 'alarm belirtileri'],
   },
   {
+    path: '/hormonal-gecis/perimenopoz/perimenopozda-beyin-sisi-odaklanma-rehberi',
+    title: 'Perimenopozda Beyin Sisi: Günlük Hayatta Odaklanmayı Geri Kazanma Rehberi',
+    description:
+      'Perimenopozda beyin sisi (odaklanma güçlüğü, unutkanlık, kelime bulma zorlanması) neden artar? Uyku, stres ve günlük yaşam düzeni üzerinden daha net bir yol haritası sunan rehber.',
+    publishedDate: '26 Nisan 2026',
+    writerSlug: 'isik-selin-kuyumcu',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: ['perimenopoz', 'beyin sisi', 'odaklanma', 'unutkanlık', 'uyku', 'stres', 'zihinsel yorgunluk'],
+  },
+  {
     path: '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
     title: 'NAD+ Takviyesi: Bilim Ne Diyor?',
     description: 'NAD+ takviyeleri hakkında güncel bilimsel verileri, olası faydaları, sınırlılıkları ve güvenlik başlıklarını sade bir dille ele alan rehber.',
