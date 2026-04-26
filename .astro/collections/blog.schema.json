@@ -17,6 +17,9 @@
         "type": "string"
       }
     },
+    "writerSlug": {
+      "type": "string"
+    },
     "$schema": {
       "type": "string"
     }
