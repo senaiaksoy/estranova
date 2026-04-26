@@ -1,0 +1,171 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+import SubmenuHero from '../components/site/SubmenuHero.astro';
+import SubmenuSection from '../components/site/SubmenuSection.astro';
+import ChapterMasthead from '../components/site/ChapterMasthead.astro';
+import EditorialEpigraph from '../components/site/EditorialEpigraph.astro';
+import Asterism from '../components/site/Asterism.astro';
+import ChapterCompass from '../components/site/ChapterCompass.astro';
+import { submenuHeroByRoute } from '../data/submenu-heroes';
+
+const hero = submenuHeroByRoute['/manifesto']!;
+---
+
+<SiteLayout
+  title="Bu Masada Neden Varız — Estranova Manifestosu"
+  description="Estranova'da yazan kadınlar; ün, etki veya marka için değil, deneyim aktarmak için yazıyor. Bu sayfa neyi seçtiğimizi, neyi seçmediğimizi anlatır."
+>
+  <SiteNavbar currentPath="/manifesto" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <ChapterMasthead variant="section" chapter="Manifesto" />
+
+    <SubmenuHero
+      eyebrow="Açılış sözleri"
+      title="Bu Masada Neden Varız"
+      lede="Estranova'da yazan kadınlar; hayatlarının farklı alanlarında üretmiş, yönetmiş, kurmuş, büyütmüş, dönüşmüş kadınlardır. Bu sayfa onların neden burada yazdıklarını — ve bu masada neyin paylaşıldığını — anlatır."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+
+    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-16 md:py-24">
+      <div class="mx-auto max-w-3xl">
+        <p class="editorial-dropcap mb-7 text-lg leading-relaxed text-[#2D2D2D]/85 md:text-xl">
+          Bir kitap yayımlanırken kapağa çıkan bilgi yazarın özgeçmişidir. Bir editöryel
+          platformda ise daha derin bir soru beklenir: <strong class="font-semibold text-[#2D2D2D]">bu insanlar
+          neden burada yazıyor?</strong> Estranova'nın yazar kadrosu kendisini tanıtmaya ihtiyacı
+          olmayan kadınlardan oluşur. Burada bulunmaları yeni bir unvan edinmek için değildir.
+        </p>
+        <p class="text-base leading-relaxed text-[#2D2D2D]/72 md:text-lg">
+          Yıllar içinde biriktirdikleri deneyimi, sezgiyi, bilgiyi ve hataları daha genç ya da
+          aynı yol ayrımındaki kadınlarla paylaşmak için yazıyorlar. Çünkü bazı bilgiler
+          kitaplarda değil, yaşanmış hayatta saklıdır.
+        </p>
+      </div>
+    </section>
+
+    <EditorialEpigraph quote="Bazı bilgiler kitaplarda değil, yaşanmış hayatta saklıdır." />
+
+    <SubmenuSection variant="white" borderedTop={false}>
+      <header class="mb-12 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Üç Cümle</p>
+        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Neden buradalar</h2>
+      </header>
+
+      <div class="space-y-10">
+        <div class="grid gap-4 md:grid-cols-12 md:gap-10">
+          <p class="font-serif text-3xl italic leading-snug text-[#6B2D3E] md:col-span-5 md:text-[2.2rem]">
+            Ün kazanmak için değil — deneyim aktarmak için.
+          </p>
+          <p class="leading-relaxed text-[#2D2D2D]/72 md:col-span-7 md:pt-3">
+            Çünkü kazanılacak ün yok; var olan zaten yeterli. Estranova'da yazmak, daha önce
+            başarmış olmanın tekrarı değil; başarmış olan birinin geriye dönüp arkasındaki
+            yolu temizlemesi.
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-12 md:gap-10">
+          <p class="font-serif text-3xl italic leading-snug text-[#6B2D3E] md:col-span-5 md:text-[2.2rem]">
+            Influencer olmak için değil — birikim paylaşmak için.
+          </p>
+          <p class="leading-relaxed text-[#2D2D2D]/72 md:col-span-7 md:pt-3">
+            Burada satılacak bir ürün yok; sadece konuşulacak bir konu var. Reklam,
+            sponsorluk, marka iş birliği — yok. İçerik, yazarın deneyimi ve editöryal
+            denetim içinde durur, bunun dışında bir niyet taşımaz.
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-12 md:gap-10">
+          <p class="font-serif text-3xl italic leading-snug text-[#6B2D3E] md:col-span-5 md:text-[2.2rem]">
+            Reklam yapmak için değil — başka kadınlara yol açmak için.
+          </p>
+          <p class="leading-relaxed text-[#2D2D2D]/72 md:col-span-7 md:pt-3">
+            Yol biliniyor; sadece arkalarındakilerle paylaşmak gerekiyor. Aynı dönemden
+            geçmiş bir kadının küçük bir notu, kimi zaman bir kütüphane dolusu uzman
+            metninden daha hızlı yer eder.
+          </p>
+        </div>
+      </div>
+    </SubmenuSection>
+
+    <Asterism />
+
+    <SubmenuSection variant="cream" borderedTop={false}>
+      <header class="mb-12 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Çerçeve</p>
+        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Estranova nedir, ne değildir</h2>
+      </header>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.26em] text-[#775a19]">Değildir</p>
+          <h3 class="mb-3 font-serif text-2xl leading-snug">Vitrin</h3>
+          <p class="leading-relaxed text-[#2D2D2D]/72">
+            Başarılı kadınların "başarı hikâyesi" anlattığı bir sahne değil. Burada başkasına
+            başarmaktan değil, bir döneme dair konuşmaktan söz ediliyor.
+          </p>
+        </article>
+
+        <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.26em] text-[#775a19]">Değildir</p>
+          <h3 class="mb-3 font-serif text-2xl leading-snug">Influencer platformu</h3>
+          <p class="leading-relaxed text-[#2D2D2D]/72">
+            Reklam, sponsorluk veya marka iş birliği yok. Yazıların arkasında editöryal
+            denetim ve kanıt düzeyi sistemi var; sponsorlu içerik veya tavsiye değil.
+          </p>
+        </article>
+
+        <article class="rounded-[28px] border border-[#6B2D3E]/12 bg-white p-7 md:p-8">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.26em] text-[#775a19]">Değildir</p>
+          <h3 class="mb-3 font-serif text-2xl leading-snug">Wellness sayfası</h3>
+          <p class="leading-relaxed text-[#2D2D2D]/72">
+            Klişe motivasyon, "kendinize iyi davranın" buyrukları, hap çözümler yok. Konular
+            saygın bir biçimde — ne abartılarak ne de küçümsenerek — ele alınır.
+          </p>
+        </article>
+
+        <article class="rounded-[28px] border-2 border-[#6B2D3E]/30 bg-gradient-to-br from-white to-[#FDF8F0] p-7 ring-1 ring-[#C9A96E]/20 md:p-8">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.26em] text-[#6B2D3E]">Bir şey ise</p>
+          <h3 class="mb-3 font-serif text-2xl italic leading-snug text-[#4f171c]">Ortak bir masadır</h3>
+          <p class="leading-relaxed text-[#2D2D2D]/82">
+            Yaş, beden, iş, ilişki, sağlık, para, görünürlük ve anlam üzerine — kadınların
+            daha dürüst konuşabildiği bir yer. Cevap üretmekten çok daha iyi sorular
+            sormaya ayarlı.
+          </p>
+        </article>
+      </div>
+    </SubmenuSection>
+
+    <Asterism />
+
+    <SubmenuSection variant="white" borderedTop={false}>
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Sonuç</p>
+        <h2 class="mb-8 font-serif text-3xl leading-tight md:text-4xl">Bu masada konuşulanlar</h2>
+        <p class="mb-7 text-lg leading-relaxed text-[#2D2D2D]/82 md:text-xl">
+          Bu masada konuşulanlar her zaman cevap değil; çoğu zaman sadece daha iyi
+          sorular. Ama deneyim, en kıt bilgi türü olduğu için, paylaşılması başlı
+          başına bir değer.
+        </p>
+        <a
+          href="/yayin-kurulu"
+          class="inline-flex items-center gap-2 font-serif text-xl italic text-[#6B2D3E] underline decoration-[#C9A96E]/50 decoration-2 underline-offset-8 hover:decoration-[#6B2D3E]"
+        >
+          Bu masadakiler
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </SubmenuSection>
+
+    <ChapterCompass
+      nextHref="/yayin-kurulu"
+      nextChapter="Yayın Kurulu"
+      nextParent="Estranova"
+      disclaimer="Bu sayfa Estranova'nın editöryel duruşunu açıklar. Sağlık konularında bireysel tıbbi değerlendirme her zaman hekimle yapılır."
+    />
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -15,10 +15,10 @@ const requiredDocs = [
   "docs/editorial-policy-operational.md",
 ];
 
-const requiredRouteFiles = [
-  "src/pages/article/index.astro",
-  "src/pages/article/[slug].astro",
-];
+// Eski /article/[slug] dinamik rotası 2026-04-25 (commit cedc51c) kaldırıldı;
+// içerik artık /<hub>/<alt-hub>/<slug>.astro statik dosyaları olarak yaşıyor.
+// Compliance bu nedenle artık zorunlu rota kontrolü yapmıyor.
+const requiredRouteFiles = [];
 
 const scannedRootDirs = [
   "src/pages",
@@ -26,10 +26,14 @@ const scannedRootDirs = [
   "src/layouts",
 ];
 
-const extraAuditedFiles = [
-  "src/data/articles.ts",
-];
+// articles.ts manifest'i de aynı refactor'da silindi — yerine
+// src/data/static-articles.ts kullanılıyor (ayrı denetim gerektirmez,
+// scannedRootDirs taraması zaten hub içeriğini kapsıyor).
+const extraAuditedFiles = [];
 
+// Eski article disclaimer rotası ve bileşeni — varsa kontrol et, yoksa
+// sessizce skip (refactor sonrası dosyalar mevcut değil; existsSync guard'ı
+// aşağıda bunu zaten temizce karşılıyor).
 const articleRouteFile = "src/pages/article/[slug].astro";
 const articleTransparencyComponentFile = "src/components/article/ArticleTransparencyPanel.astro";
 const sponsorMentionPattern = /\b(sponsor|sponsored|sponsorluk|reklam\s+ortagi|tanitim\s+ortagi)\b/u;

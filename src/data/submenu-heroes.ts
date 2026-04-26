@@ -15,6 +15,10 @@ export const homePageHero: SubmenuHeroImage = {
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
+  '/manifesto': {
+    src: '/images/library/editorial/introspective-clasped-hands.webp',
+    alt: 'Sabah ışığında ahşap masada birleşmiş eller ve açık not defteri; ortak masa, sessiz konuşma ve paylaşılmış deneyim teması',
+  },
   '/hormonal-gecis': {
     src: '/images/heroes/hormonal-gecis.webp',
     alt: 'Hormonal geçiş döneminde sakin ve güvenilir bilgi teması; editöryal iç mekânda orta yaş kadın',
