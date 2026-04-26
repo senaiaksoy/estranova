@@ -79,14 +79,14 @@ export const writers: Writer[] = [
   {
     slug: 'basak-pelister',
     displayName: 'Başak Pelister',
-    role: 'Araştırma Yazarı / Konuk Katkı',
-    ageBand: '55-62',
+    role: 'Araştırma Yazarı / Konuk Katkı — Üç Kuşaklı Tanıklık',
+    ageBand: '55-57',
     publicBio:
-      "Fransız liseli, Amerika'da Otel & Restoran Yönetimi ve Reklamcılık eğitimi aldı. 20 yıl uluslararası şirketlerde pazarlama ve marka yönetiminde çalıştı; halen Artthink Story Telling Agency'de marka yönü ve kimlik konularında danışmanlık veriyor. Plume Magazine ve Mahmure'de yayınlanmış yazıları var; 50+ yaşam döngüsünü zamanı geriye sarma ve biohacking eksenlerinde okuyan araştırmacı yazar.",
+      "Fransız liseli, Amerika'da Otel & Restoran Yönetimi ve Reklamcılık eğitimi aldı. 20 yıl uluslararası şirketlerde pazarlama ve marka yönetiminde çalıştı; halen Artthink Story Telling Agency'de marka stratejisi, deneyim ve kimlik konularında danışmanlık veriyor. Plume Magazine ve Mahmure'de yayınlanmış yazıları var. İstanbul'da 16 yaşındaki kızıyla yaşıyor; uzun menopoz deneyimini yakın dönemde başlanan HRT yolculuğuyla birleştiriyor. 50+ yaşam döngüsünü zamanı geriye sarma (time reverse) ve biohacking eksenlerinde okuyan; modern bilim ile rafine estetik anlayışını bir araya getiren bir araştırmacı yazar. Üç kuşaklı kadın bağının sıcak gözlemcisi.",
     signaturePhrase:
-      'Dokuz yıllık menopoz deneyimini soru-cevap akrandiyaloğuyla harmanlayan; üç nokta ve samimi itiraflarla yazan gezgin bir araştırmacı.',
+      'Dokuz yıllık menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını soru-cevap akrandiyaloğu, üç nokta ve samimi itiraflarla harmanlayan gezgin bir araştırmacı.',
     portrait: '/images/writers/basak-pelister.webp',
-    focusAreas: ['Menopoz', 'Biohacking', 'Seyahat & Estetik'],
+    focusAreas: ['Menopoz', 'HRT yolculuğu', 'Üç kuşaklı bağ', 'Biohacking', 'Seyahat & Estetik'],
     isEditor: false,
     writingStyle: {
       voice: 'Meraklı, rafine, araştırmacı; okurla sürekli soru-cevap kuran samimi bir akran sesi.',
