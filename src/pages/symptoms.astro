@@ -58,7 +58,7 @@ const relatedReading = [
   <main id="main-content" class="pt-24">
     <section class="px-6 py-16 md:py-20">
       <div class="max-w-7xl mx-auto">
-        <div class="max-w-3xl mb-14">
+        <div class="max-w-3xl mb-14" data-reveal="up">
           <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Semptom Rehberi</p>
           <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Degisimleri adlandirmaya yardimci bir okuma alani</h1>
           <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
@@ -68,9 +68,9 @@ const relatedReading = [
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-[1.65fr_0.95fr] gap-8 items-start">
-          <div class="space-y-5">
+          <div class="space-y-5" data-reveal-stagger>
             {symptoms.map((symptom, index) => (
-              <article class="rounded-[32px] border border-primary/10 bg-white p-7 md:p-8 editorial-shadow">
+              <article class="rounded-[32px] border border-primary/10 bg-card p-7 md:p-8 editorial-shadow card-hover" data-reveal="up">
                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
                   <div class="max-w-2xl">
                     <div class="flex items-center gap-3 mb-3">

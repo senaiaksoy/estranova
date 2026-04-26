@@ -73,7 +73,7 @@ const readingPath = [
   <main id="main-content" class="pt-24">
     <section class="px-6 py-16 md:py-20">
       <div class="max-w-7xl mx-auto">
-        <div class="max-w-3xl mb-14">
+        <div class="max-w-3xl mb-14" data-reveal="up">
           <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Editoryal Kutuphane</p>
           <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Konulara gore duzenlenmis bilgi arsivi</h1>
           <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
@@ -82,9 +82,9 @@ const readingPath = [
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-20" data-reveal-stagger>
           {categories.map((category, index) => (
-            <article class="rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow">
+            <article class="rounded-[32px] border border-primary/10 bg-card p-7 editorial-shadow card-hover" data-reveal="scale-up">
               <div class:list={[
                 'w-12 h-12 rounded-2xl mb-6',
                 index % 3 === 0 ? 'bg-primary/10' : index % 3 === 1 ? 'bg-secondary/10' : 'bg-charcoal/5',
@@ -96,7 +96,7 @@ const readingPath = [
           ))}
         </div>
 
-        <section class="grid grid-cols-1 lg:grid-cols-[1.6fr_0.9fr] gap-8 items-start">
+        <section class="grid grid-cols-1 lg:grid-cols-[1.6fr_0.9fr] gap-8 items-start" data-reveal="up">
           <div>
             <div class="flex items-end justify-between gap-6 mb-8">
               <div>
@@ -110,7 +110,7 @@ const readingPath = [
 
             <div class="space-y-6">
               {featuredArticles.map((article, index) => (
-                <article class="rounded-[34px] overflow-hidden border border-primary/10 bg-white">
+                <article class="rounded-[34px] overflow-hidden border border-primary/10 bg-card">
                   <div class:list={[
                     'h-3',
                     index === 0 ? 'bg-primary' : index === 1 ? 'bg-secondary' : 'bg-charcoal',

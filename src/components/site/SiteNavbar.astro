@@ -1,4 +1,6 @@
 ---
+import SearchOverlay from './SearchOverlay.astro';
+
 interface Props {
   currentPath?: string;
 }
@@ -37,32 +39,86 @@ const navLinks = [
       </div>
     </div>
 
-    <div class="hidden md:flex items-center gap-2 text-sm font-medium text-charcoal/60">
-      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="7"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-      Ara
-    </div>
-
-    <details class="md:hidden relative">
-      <summary class="list-none cursor-pointer w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary">
-        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
+    <div class="flex items-center gap-3">
+      <!-- Theme toggle -->
+      <button
+        id="theme-toggle"
+        class="w-9 h-9 rounded-full border border-primary/10 flex items-center justify-center text-charcoal/50 hover:text-primary hover:border-primary/25 transition-colors cursor-pointer"
+        aria-label="Tema degistir"
+      >
+        <!-- Sun icon (visible in dark mode) -->
+        <svg class="w-4 h-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-      </summary>
-      <div class="absolute top-12 right-0 w-60 bg-surface border border-primary/10 rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
-        {navLinks.map((link) => (
-          <a href={link.href} class="text-base font-serif text-charcoal py-2 border-b last:border-0 border-primary/5">
-            {link.name}
-          </a>
-        ))}
-      </div>
-    </details>
+        <!-- Moon icon (visible in light mode) -->
+        <svg class="w-4 h-4 block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <!-- Search trigger (desktop) -->
+      <button
+        data-search-trigger
+        class="hidden md:flex items-center gap-2 text-sm font-medium text-charcoal/50 hover:text-primary transition-colors cursor-pointer rounded-xl border border-primary/10 px-3.5 py-2 hover:border-primary/25"
+        aria-label="Arama ac (Ctrl+K)"
+      >
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>Ara</span>
+        <kbd class="ml-2 text-[10px] font-bold text-charcoal/20 tracking-wider border border-charcoal/8 rounded px-1.5 py-0.5">Ctrl K</kbd>
+      </button>
+
+      <!-- Search trigger (mobile) -->
+      <button
+        data-search-trigger
+        class="md:hidden w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary/60 hover:text-primary transition-colors cursor-pointer"
+        aria-label="Arama ac"
+      >
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+
+      <!-- Mobile menu -->
+      <details class="md:hidden relative">
+        <summary class="list-none cursor-pointer w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </summary>
+        <div class="absolute top-12 right-0 w-60 bg-surface border border-primary/10 rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
+          {navLinks.map((link) => (
+            <a href={link.href} class="text-base font-serif text-charcoal py-2 border-b last:border-0 border-primary/5">
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </details>
+    </div>
   </div>
 </nav>
+
+<SearchOverlay />
+
+<script is:inline>
+  document.getElementById('theme-toggle').addEventListener('click', function() {
+    var isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
 
 <style>
   summary::-webkit-details-marker {
