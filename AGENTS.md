@@ -309,6 +309,40 @@ Avoid:
 - influencer-style wellness claims
 - miracle framing
 
+### Manifesto-Aligned Anekdot Ekseni (Supplementary, /manifesto)
+
+**Bu kural ana ton kurallarının yerini ALMAZ; onları zenginleştirir.**
+
+Estranova'nın `/manifesto` sayfasındaki *"deneyim aktarmak"* sözüne bağlı olarak yazılar **mahrem ama ölçülü bir kişisel anekdot katmanı** taşır: yazar, makalenin ortasında veya bir bölüm geçişinde **birinci tekil şahıs** ile, kendi günlük hayatından (veya yakın çevresindeki kadınların gözleminden) **kısa bir sahne** açar. Amaç:
+
+- Konuyu **deneyimle çerçevelemek** (bilgi aktarımının ötesinde)
+- Okuru **"yalnız değilsin"** duygusuyla buluşturmak
+- Manifesto'nun *"akıllı, samimi ve güvenilir bir not defteri"* iddiasını her yazıda **görünür** kılmak
+
+**Kişiselleştirme zorunlu — tek-elden hissi yasak:**
+
+Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.md` Bölüm 4b**'ye bakarak o yazara özel kaynak havuzunu kullanır:
+
+| Yazar | Anekdot ekseni özet |
+|---|---|
+| Berna Aksoy | Sabah Instagram tarama ritüelleri; hekim danışma kararları; antrenman/Apple Watch gözlemleri |
+| Alara Baykent | Mevsimsel saha (yaz: surf / kış: at); jim akran sahneleri; geniş aile (anne/baba/anneanne/teyze) |
+| Başak Pelister | 9 yıllık menopoz + yeni HRT yolculuğu; anne+kız üçgeni; seyahat/sahne/kıyafet ritüelleri |
+| Dt. Duygu Karaosmanoğlu | Londra-İstanbul gel-git (kızı); klinik dekoru (otorite değil); yeni şey deneme |
+| Özlem Denizmen | Para Durumu sahneleri; üst düzey iş çevresi sokratik soru; finansal karar çerçevesi (analoji) |
+| Rima Erdemir | Sabah araştırma okuma; HRT karar süreci iç tartışması; teknoloji-sağlık gözlemi |
+| Gamze Cizreli | Sabah mutfak ritüelleri; pazar/küçük üretici; HRT iç sorgulaması (henüz başlamamış) |
+| Senai Aksoy *(geçici yazar)* | Kendi geçişi; akran çevresi; editöryel masa; mahrem konularda gizlilik mutlak |
+
+**Operasyonel kural:**
+- **Her makalede 1, en fazla 2 anekdot.** Daha fazlası karikatür, daha azı manifesto-aligned değil.
+- Anekdotun **ardından dengeleyici bir cümle** ("ama bu benim yolum, sizinki farklı") şarttır.
+- "Bende işe yaradı, siz de yapın" yapısı **kesinlikle yasak** (zaten HARD CONSTRAINT).
+- Marka, ürün, ilaç, doz, klinik, doktor adı **yasak** (zaten HARD CONSTRAINT).
+- Hassas sınır taşıyan yazarlar (Alara'nın otizmli üvey kardeşi, Duygu'nun hasta detayları, Senai'nin klinik gözlemi) için ilgili `writers/*.md` 4b bölümündeki açık yasakları izle.
+
+**Detay:** [`docs/editorial-policy-operational.md`](docs/editorial-policy-operational.md) §11 + her yazarın `writers/<slug>.md` Bölüm 4b.
+
 ## Persona ve Dış Referans (CLAUDE.md HARD CONSTRAINT)
 
 - **Yazar persona:** Tıp dışı 40+ kadın akran; Vogue / Elle / Marie Claire tonu. Hekim perspektifi **YASAK**.
