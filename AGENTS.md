@@ -273,6 +273,36 @@ After creating `src/pages/<section>/<slug>.astro` with `buildArticleSchemas()`, 
 - Re-order `staticArticles` manually for sort order — RSS endpoint consumes the array as-is; keep newest-first convention aligned with `publishedDate` descending.
 - Rely on author field in RSS for legal identity — it uses `editorial@estranova.com` + writer display name for email-like format; real editor contact is the `managingEditor` / `webMaster` channel tags.
 
+### Yayın Kurulu kişi kartı şablonu — `KuruluCard.astro`
+
+Tüm yayın kurulu bölümlerinde (Editörler, Yazarlar, Tıbbi Danışmanlar, Danışmanlar) tek bileşen kullanılır: `src/components/site/KuruluCard.astro`.
+
+**Sabit alan sırası (tüm gruplar aynı):**
+
+| Alan | Tip | Kural |
+|---|---|---|
+| `portrait` | string? | Opsiyonel; varsa 112×112 rounded-xl |
+| `name` | string | font-serif text-2xl |
+| `role` | string | text-xs uppercase burgundy |
+| `bio` | string | **max 2-3 cümle** — text-sm; tüm gruplar aynı boyut |
+| `tags` | string[]? | Opsiyonel; varsa rounded-full chip'ler |
+| `anchor` | string? | Kartın `id` attribute'u + `#anchor` link |
+| `<slot />` | — | Opsiyonel ek içerik (örn. çift-rol açıklama notu) |
+
+**Bio uzunluk kuralı:** Tıbbi danışman tam CV paragrafları (450+ kelime) kabul edilmez. Her bio **2-3 cümle**, ~150-250 karakter hedefi. Alan + kurum + uzmanlık yeterli.
+
+**Gruba göre veri kaynağı:**
+- Editörler → `src/data/writers.ts` `editors` export'u (publicBio + focusAreas otomatik)
+- Yazarlar → `src/data/writers.ts` `guestWriters` export'u (aynı)
+- Tıbbi Danışmanlar → `src/pages/yayin-kurulu.astro` `medicalAdvisors` array'i (inline, normalize edilmiş)
+- Danışmanlar → `src/pages/yayin-kurulu.astro` `consultants` array'i (inline)
+
+**Yeni kişi eklenirken:**
+1. Biyografiyi 2-3 cümleye indir
+2. `tags` dizisini ekle (2-4 etiket)
+3. `portrait` varsa `/images/writers/<slug>.webp` yolunu ver
+4. İlgili array'e ekle; hiçbir gruba özel HTML yazma — `KuruluCard` kullan
+
 ### Assessment or contact pages
 If creating a symptom-assessment or contact-style page, keep it neutral and informational.
 Do not make it a sales funnel.

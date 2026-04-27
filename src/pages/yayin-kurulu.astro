@@ -2,79 +2,85 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
+import KuruluCard from '../components/site/KuruluCard.astro';
 import { editors, guestWriters, guestWriterEnAlt } from '../data/writers';
 
-// Medical reviewer ayrı (writer değil, tıbbi editör)
+// ─── Bilimsel editör ────────────────────────────────────────────────────────
 const medicalReviewer = {
-  slug: 'senai-aksoy',
+  anchor: 'senai-aksoy',
   name: 'Doç. Dr. Senai Aksoy',
-  title: 'Bilimsel Editör',
-  detail: 'Kadın sağlığı ve hormonal geçiş başlıklarında editoryal tıbbi denetim sağlar.',
+  role: 'Bilimsel Editör',
+  bio: 'Kadın sağlığı ve hormonal geçiş başlıklarında editoryal tıbbi denetim sağlar. Makalelerin bilimsel doğruluk, kanıt düzeyi ve terminoloji tutarlılığı bu incelemeden geçer.',
+  portrait: '/images/writers/senai-aksoy.webp',
+  tags: ['Tıbbi Denetim', 'Hormonal Geçiş', 'Kanıt Değerlendirmesi'],
 };
 
+// ─── Tıbbi danışmanlar ───────────────────────────────────────────────────────
+// Biyografiler: 2-3 cümle (kurumsal sıkıştırma + alan etiketleri)
 const medicalAdvisors = [
   {
     name: 'Dr. Metin Alış',
-    title: 'Kurul Üyesi',
-    detail:
-      'Endokrinoloji, Diyabet ve Metabolizma Hastalıkları Uzmanıdır. GATA Tıp Fakültesi mezunudur (1995). İç hastalıkları uzmanlık eğitimini GATA Ankara İç Hastalıkları Bölümü’nde (1998-2002), endokrinoloji uzmanlık eğitimini ise GATA Haydarpaşa Eğitim Araştırma Hastanesi Endokrinoloji Servisi’nde (2009-2012) tamamlamıştır. 2014 yılında Mayo School of Continuous Professional Development 17th Annual Mayo Clinic Endocrine Update Postgraduate Course programına katılmıştır. 2017’den bu yana Amerikan Hastanesi Endokrinoloji Bölümü’nde görev yapmaktadır. Tiroid hastalıkları, diyabet, obezite, osteoporoz, hipofiz ve adrenal-gonad hastalıkları alanlarında klinik deneyime sahiptir; ayrıca Türkiye Endokrinoloji ve Metabolizma Derneği’nde İleri Tiroid Ultrasonografi Kursu almıştır.',
+    role: 'Tıbbi Danışman · Endokrinoloji',
+    bio: 'Endokrinoloji, Diyabet ve Metabolizma Hastalıkları Uzmanı; GATA Tıp Fakültesi mezunu. Endokrinoloji uzmanlığını GATA Haydarpaşa Eğitim Araştırma Hastanesi\'nde tamamlamış, 2017\'den bu yana Amerikan Hastanesi Endokrinoloji Bölümü\'nde görev yapmaktadır.',
+    tags: ['Endokrinoloji', 'Diyabet', 'Osteoporoz', 'Tiroid'],
   },
   {
     name: 'Dr. Alp Aslan Eryılmaz',
-    title: 'Kurul Üyesi',
-    detail:
-      'Kardiyoloji Uzmanı, Girişimsel Kardiyoloji alanında çalışmaktadır. Akdeniz Üniversitesi Tıp Fakültesi mezunudur. Kardiyoloji uzmanlığını İstanbul Üniversitesi İstanbul Tıp Fakültesi (Çapa) Kardiyoloji Bölümü’nde tamamlamıştır (2001). 2001-2003 yıllarında İstanbul ve Gebze’de kardiyoloji uzmanı olarak çalışmış; 2003-2005 döneminde Amerikan Hastanesi’nde girişimsel ve klinik kardiyolog olarak görev yapmıştır. 2005-2006 yıllarında İstanbul GATA Hastanesi’nde uzun dönem asteğmen tabip olarak hizmet vermiş, 2006’dan bu yana Amerikan Hastanesi’nde çalışmaya devam etmektedir. Klinik çalışma alanları ateroskleroz ilişkili damar hastalıkları, hipertansiyon, hiperkolesterolemi, insülin direnci/şeker hastalığına bağlı kardiyovasküler risk yönetimi, koroner girişimler (balon-stent, primer PTCA) ve renal denervasyon uygulamalarıdır. Türkiye’de ilk kez uygulanan TAVİ (2009) ve MitraClip (2010) işlemlerinde ekip içinde yer almıştır.',
+    role: 'Tıbbi Danışman · Kardiyoloji',
+    bio: 'Kardiyoloji Uzmanı; Girişimsel Kardiyoloji alanında çalışmaktadır. İstanbul Üniversitesi İstanbul Tıp Fakültesi\'nde (Çapa) kardiyoloji uzmanlığını tamamlamış, 2006\'dan bu yana Amerikan Hastanesi\'nde görev yapmaktadır. Koroner girişimler, ateroskleroz ve kardiyovasküler risk yönetimi alanlarında uzmanlaşmıştır.',
+    tags: ['Kardiyoloji', 'Girişimsel Kardiyoloji', 'Kardiyovasküler Risk'],
   },
   {
     name: 'Dr. Çağrı Sade',
-    title: 'Plastik Cerrah',
-    detail:
-      '1972 yılında Görele’de doğdu. 1994 yılında Ankara Üniversitesi Tıp Fakültesi’nden mezun oldu. Şişli Etfal Eğitim ve Araştırma Hastanesi’nden 2001 yılında Plastik ve Rekonstrüktif Cerrahi uzmanlığını aldı. Uzmanlık sonrasında pek çok önemli isimle çalışarak deneyim kazandı. 2002 yılında Dr. Sherrell J. Aston’ın observership programına katıldı. 2002 yılından itibaren Amerikan Hastanesi’nde görev yapmaktadır. Aynı zamanda Nişantaşı Abdi İpekçi Caddesi’ndeki muayenehanesinde hastalarını görmektedir.',
+    role: 'Tıbbi Danışman · Plastik Cerrahi',
+    bio: 'Plastik ve Rekonstrüktif Cerrahi Uzmanı; Ankara Üniversitesi Tıp Fakültesi mezunu. Şişli Etfal Eğitim ve Araştırma Hastanesi\'nde uzmanlığını tamamlamış, 2002\'den bu yana Amerikan Hastanesi\'nde görev yapmaktadır.',
+    tags: ['Plastik Cerrahi', 'Rekonstrüktif Cerrahi', 'Estetik Cerrahi'],
   },
   {
     name: 'Prof. Dr. Gonca Gökdemir',
-    title: 'Dermatolog',
-    detail:
-      'Prof. Dr. Gonca Gökdemir yaklaşık 25 yılı aşkın süredir medikal ve kozmetik dermatoloji konularında çalışmaktadır. Bahçeşehir Üniversitesi Tıp Fakültesi, Liv Hospital, Şişli Etfal Eğitim ve Araştırma Hastanesi, Okmeydanı Eğitim ve Araştırma Hastanesi, İstanbul Tıp Fakültesi Dermatoloji Kliniği gibi önemli sağlık kuruluşlarında hizmet etmiştir. Prof. Dr. Gonca Gökdemir’in yerli ve yabancı dergilerde yayınlanmış yaklaşık 150’e yakın makalesi vardır. Katıldığı çok sayıda kongre, sempozyum ve toplantılarda sunumları bulunmaktadır. Estetik dermatoloji ile ilgili kurslarda eğitici olarak görev almaktadır. Medikal kozmetik markalarında danışmanlık yapmaktadır.',
+    role: 'Tıbbi Danışman · Dermatoloji',
+    bio: 'Dermatoloji Profesörü; 25 yılı aşkın süredir medikal ve kozmetik dermatoloji alanında çalışmaktadır. Bahçeşehir Üniversitesi ve Liv Hospital başta olmak üzere pek çok sağlık kuruluşunda hizmet etmiş; estetik dermatoloji kurslarında eğitici, kozmetik markalarda danışman olarak görev yapmaktadır.',
+    tags: ['Dermatoloji', 'Estetik Dermatoloji', 'Kozmetik'],
   },
   {
     name: 'Dt. Duygu Karaosmanoğlu',
-    title: 'Diş Hekimi',
-    detail:
-      '1994 yılında Ege Üniversitesi Diş Hekimliği Fakültesi’nden mezun oldu. 1994-95 yıllarında International Hospital Diş Kliniği’nde, 1995-2000 yılları arasında Dentis Ağız ve Diş Sağlığı Kliniği’nde Dr. Galip Gürel ile birlikte çalıştı. 2001 yılında Creadenta diş kliniğini ortağı Elif Özcan ile birlikte kurdu. Günümüze değin bu klinikte hem yönetici hem diş hekimi olarak çalışmaktadır. 1994 yılından beri estetik diş hekimliği ve özellikle porselen laminalar üzerine çalışmalarını sürdürmektedir. Estetik Diş Hekimliği Akademisi Derneği (EDAD) yönetim kurulu üyesi, Dental Klinik İşletmecileri Derneği (DEKİD) aktif üyesidir. 2003 yılından bu yana porselen laminalar konusunda seminer ve hands-on kurslar vermektedir. Protez, estetik ve dijital diş hekimliği konusunda Siena Üniversitesi’nden master derecesini almıştır. Trigemy online eğitim platformu eğitimcilerindendir.',
+    role: 'Tıbbi Danışman · Diş Hekimliği',
+    bio: 'Ege Üniversitesi Diş Hekimliği Fakültesi mezunu; 1994\'ten bu yana estetik diş hekimliği ve porselen laminalar alanında uzman. 2001\'de Creadenta diş kliniğini kurmuş; Siena Üniversitesi\'nden protez, estetik ve dijital diş hekimliğinde master derecesine sahiptir.',
+    tags: ['Estetik Diş Hekimliği', 'Porselen Laminalar', 'Dijital Diş Hekimliği'],
   },
   {
     name: 'Dt. Elif Özcan Dulundu',
-    title: 'Diş Hekimi',
-    detail:
-      '1986 yılında İzmit Lisesi’ni tamamladı, 1991 yılında İstanbul Üniversitesi Diş Hekimliği Fakültesi’nden mezun oldu. 1992-2001 yılları arasında Dr. Galip Gürel ile Dentis diş kliniğinde çalıştı. 2001 yılında Creadenta diş kliniğini ortağıyla birlikte kurdu. Günümüze kadar bu klinikte hem yönetici hem diş hekimi olarak çalışmaktadır. 30 yılı aşkın süredir estetik diş hekimliği ve özellikle porselen laminalar üzerine çalışmalarını sürdürmekte; 2003 yılından bu yana porselen laminalar konusunda seminer ve hands-on kurslar vermektedir. Estetik Diş Hekimliği Akademisi Derneği (EDAD) genel sekreteri ve Dental Klinik İşletmecileri Derneği (DEKİD) yönetim kurulu üyesidir. Protez, estetik ve dijital diş hekimliği konusunda Siena Üniversitesi’nden master derecesine sahiptir. Trigemy online eğitim platformu eğitimcilerindendir.',
+    role: 'Tıbbi Danışman · Diş Hekimliği',
+    bio: 'İstanbul Üniversitesi Diş Hekimliği Fakültesi mezunu; 30 yılı aşkın süredir porselen laminalar ve estetik diş hekimliği alanında uzman. 2001\'de Creadenta diş kliniğini kurmuş; Siena Üniversitesi\'nden protez, estetik ve dijital diş hekimliğinde master derecesine sahiptir.',
+    tags: ['Estetik Diş Hekimliği', 'Porselen Laminalar', 'Dijital Diş Hekimliği'],
   },
   {
     name: 'Fzt. Ersin Saraç',
-    title: 'Kurul Üyesi',
-    detail:
-      'Fizyoterapist, Kas-İskelet Rehabilitasyonu ve Kadın Sağlığı alanında çalışmaktadır. Karabük Üniversitesi Fizyoterapi ve Rehabilitasyon Bölümü mezunudur (2018). 2017-2018 yılları arasında Fenerbahçe Erkek Basketbol A Takımı’nda stajyer fizyoterapist, 2018-2021 yılları arasında Meclisi Kas-İskelet Ağrıları ve Spor Hekimliği Kliniği’nde fizyoterapist olarak görev yapmıştır. 2019 yılında Nazmi Bari Cup ve TED ITF World Tennis Tour turnuvalarında saha fizyoterapisti olarak yer almıştır. IKOMT (Klinik Odaklı Multiboyutlu Terapi Eğitim Enstitüsü) kas-iskelet ve sinir ağrıları terapisi eğitimini tamamlamıştır (2019-2020). Halen Nişantaşı’ndaki özel kliniğinde hasta kabul etmektedir. Doğum öncesi/sonrası rehabilitasyon, ameliyat öncesi/sonrası rehabilitasyon, spor sakatlanmaları tedavisi, bel-boyun fıtığı, omurga ve eklem ağrıları, kronik ağrı sendromu, postür bozuklukları ve klinik egzersiz uygulamaları konularında uzmanlaşmıştır. Sitede yayımlanan içeriklerde infertilite tedavisi sürecinde kadın sağlığı fizyoterapisi, doğum öncesi/sonrası rehabilitasyon ve egzersiz konularındaki doğruluğa katkı sağlamaktadır.',
+    role: 'Tıbbi Danışman · Fizyoterapi',
+    bio: 'Fizyoterapist; Kas-İskelet Rehabilitasyonu ve Kadın Sağlığı alanında çalışmaktadır. Karabük Üniversitesi Fizyoterapi ve Rehabilitasyon Bölümü mezunu; doğum öncesi/sonrası rehabilitasyon, kronik ağrı ve spor sakatlanmaları konularında uzmanlaşmıştır.',
+    tags: ['Fizyoterapi', 'Kadın Sağlığı Fizyoterapisi', 'Rehabilitasyon', 'Doğum Sonrası'],
   },
   {
     name: 'Prof. Dr. Bülent Aksoy',
-    title: 'Ortopedi ve Travmatoloji Uzmanı',
-    detail:
-      '1962 yılında Eskişehir’de doğdu. İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi mezunudur (1985). Ortopedi ve Travmatoloji uzmanlık eğitimini Şişli Etfal Hastanesi’nde (1987-1991) tamamlamış, 1998 yılında doçent unvanını almıştır. 1991-1999 yılları arasında Vakıf Gureba Hastanesi’nde, 1999-2007 yılları arasında Şişli Etfal Hastanesi’nde, 2007-2009 yılları arasında International Hospital’da ve 2009-2016 yılları arasında Memorial Şişli Hastanesi’nde Ortopedi ve Travmatoloji Uzmanı olarak görev yapmıştır. El tümörleri, kalça yaralanmaları, tendon-ligaman yaralanmaları, pediatrik ortopedi cerrahisi ve artroplasti alanlarında klinik deneyime sahiptir. Efes Pilsen Spor Kulübü (1994-2007) ve Galatasaray Spor Kulübü (2010-2012) takım doktorluğu görevlerinde bulunmuştur.',
+    role: 'Tıbbi Danışman · Ortopedi',
+    bio: 'Ortopedi ve Travmatoloji Uzmanı; İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi mezunu. Şişli Etfal, Vakıf Gureba ve Memorial Şişli başta olmak üzere pek çok kurumda görev yapmış; el tümörleri, kalça yaralanmaları ve artroplasti alanlarında uzmanlaşmıştır.',
+    tags: ['Ortopedi', 'Travmatoloji', 'Artroplasti', 'Spor Hekimliği'],
   },
 ];
 
+// ─── Danışmanlar ─────────────────────────────────────────────────────────────
 const consultants = [
   {
     name: 'Rima Erdemir',
-    title: 'Editöryal Süreç Danışmanı',
-    detail:
-      'Medya ve dijital yayın yöneticiliği deneyimiyle kaynak doğrulama, güncelleme planı ve yayın süreçlerinin sürekliliğine katkı verir.',
+    role: 'Editöryal Süreç Danışmanı',
+    bio: 'Medya ve dijital yayın yöneticiliği deneyimiyle kaynak doğrulama, güncelleme planı ve yayın süreçlerinin sürekliliğine katkı sağlar.',
+    tags: ['Editöryal Süreç', 'Kaynak Doğrulama', 'Dijital Yayıncılık'],
   },
   {
     name: 'Anıl Yalmaz',
-    title: 'Hareket ve Egzersiz Danışmanı',
-    detail:
-      'İstanbul Üniversitesi Spor Bilimleri mezunu olan Anıl Yalmaz; Türkiye Vücut Geliştirme ve Fitness Federasyonu 2. Kademe, Pilates 2. Kademe, UMFDEK Akademi Medikal Fitness ve Team Exos Exercise Specialist eğitimlerine sahiptir. Ek olarak farklı alanlarda tamamladığı yan eğitimlerle bilgi ve uygulama yetkinliğini sürekli güncellemektedir. Estranova’da hareket, güçlenme ve sürdürülebilir egzersiz rutinleri başlıklarında danışmanlık sağlar.',
+    role: 'Hareket ve Egzersiz Danışmanı',
+    bio: 'İstanbul Üniversitesi Spor Bilimleri mezunu; Vücut Geliştirme, Pilates (2. Kademe) ve Medikal Fitness eğitimlerine sahip. Estranova\'da hareket, güçlenme ve sürdürülebilir egzersiz rutinleri başlıklarında danışmanlık sağlar.',
+    tags: ['Hareket & Egzersiz', 'Pilates', 'Medikal Fitness'],
   },
 ];
 ---
@@ -88,6 +94,7 @@ const consultants = [
   <main id="main-content" class="pt-24">
     <section class="px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
+
         <header class="mb-14 max-w-3xl">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-[#6B2D3E]">Yayın Kurulu</p>
           <h1 class="mb-6 font-serif text-5xl leading-[1.05] text-[#2D2D2D] md:text-7xl">Editoryal ekip ve danışman kadro</h1>
@@ -105,11 +112,10 @@ const consultants = [
           <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.28em] text-[#6B2D3E]">Önce burayı okumanız tavsiye edilir</p>
           <h2 class="mb-3 font-serif text-3xl italic leading-snug text-[#4f171c] md:text-4xl">Bu Masada Neden Varız</h2>
           <p class="mb-2 leading-relaxed text-[#2D2D2D]/75">
-            Estranova'da yazan kadınlar; ün, etki veya marka için değil, deneyim aktarmak için
-            yazıyor. Burada bulunmalarının nedeni yeni bir unvan eklemek değil; 40 yaş sonrasının
-            bedensel ve zihinsel geçişlerini daha saygın, daha gerçekçi ve daha iyi bilgiyle
-            konuşulabilir kılmak. Estranova bir vitrin değil; kadınların birbirine iyi düşünülmüş,
-            sakin ve güvenilir notlar bıraktığı ortak bir masa.
+            Estranova'da yazan kadınlar; ün, etki veya marka için değil, deneyim aktarmak için yazıyor. Burada bulunmalarının
+            nedeni yeni bir unvan eklemek değil; 40 yaş sonrasının bedensel ve zihinsel geçişlerini daha saygın, daha
+            gerçekçi ve daha iyi bilgiyle konuşulabilir kılmak. Estranova bir vitrin değil; kadınların birbirine iyi
+            düşünülmüş, sakin ve güvenilir notlar bıraktığı ortak bir masa.
           </p>
           <span class="mt-3 inline-flex items-center gap-2 font-semibold text-[#6B2D3E] group-hover:underline">
             Manifestonun tamamını oku
@@ -118,7 +124,7 @@ const consultants = [
         </a>
 
         <section class="mb-10 rounded-[32px] border border-[#6B2D3E]/10 bg-[#FDF8F0] p-8">
-          <h2 class="mb-4 font-serif text-3xl text-[#2D2D2D]">Yayın modeli</h2>
+          <h2 class="mb-4 font-serif text-2xl text-[#2D2D2D]">Yayın modeli</h2>
           <p class="leading-relaxed text-[#2D2D2D]/70">
             Estranova, bağımsız bir editoryal sağlık bilgi platformudur. Bu sayfadaki ekip yapısı, klinik tanıtımı için değil,
             içerik üretim ve doğrulama süreçlerinin şeffaf biçimde paylaşılması amacıyla sunulmaktadır.
@@ -130,7 +136,7 @@ const consultants = [
           </p>
         </section>
 
-        <!-- 1. Editörler: bilimsel editör + yönetici editör -->
+        <!-- 1. Editörler -->
         <section class="mb-10 rounded-[32px] border border-[#6B2D3E]/12 bg-white p-8 shadow-sm">
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-[#2D2D2D]">Editörler</h2>
@@ -139,53 +145,24 @@ const consultants = [
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            <article
-              id={medicalReviewer.slug}
-              class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5 shadow-sm"
-            >
-              <a
-                href={`/yayin-kurulu#${medicalReviewer.slug}`}
-                class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
-              >
-                <h3
-                  class="mb-2 font-serif text-2xl text-[#2D2D2D] transition group-hover:underline group-hover:decoration-[#C9A96E]/60 group-hover:underline-offset-4"
-                >
-                  {medicalReviewer.name}
-                </h3>
-              </a>
-              <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">{medicalReviewer.title}</p>
-              <p class="text-base leading-relaxed text-[#2D2D2D]/70">{medicalReviewer.detail}</p>
-            </article>
-            {
-              editors.map((w) => (
-                <article
-                  id={`editor-${w.slug}`}
-                  class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5 shadow-sm"
-                >
-                  <a
-                    href={`/yayin-kurulu#${w.slug}`}
-                    class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
-                  >
-                    <h3
-                      class="mb-2 font-serif text-2xl text-[#2D2D2D] transition group-hover:underline group-hover:decoration-[#C9A96E]/60 group-hover:underline-offset-4"
-                    >
-                      {w.displayName}
-                    </h3>
-                  </a>
-                  <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">{w.role}</p>
-                  <p class="mb-4 text-base leading-relaxed text-[#2D2D2D]/70">{w.publicBio}</p>
-                  <ul class="flex flex-wrap gap-2" aria-label="Odak alanları">
-                    {w.focusAreas.map((tag) => (
-                      <li>
-                        <span class="inline-block rounded-full border border-[#6B2D3E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#6B2D3E]/85">
-                          {tag}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))
-            }
+            <KuruluCard
+              anchor={medicalReviewer.anchor}
+              name={medicalReviewer.name}
+              role={medicalReviewer.role}
+              bio={medicalReviewer.bio}
+              portrait={medicalReviewer.portrait}
+              tags={medicalReviewer.tags}
+            />
+            {editors.map((w) => (
+              <KuruluCard
+                anchor={`editor-${w.slug}`}
+                name={w.displayName}
+                role={w.role}
+                bio={w.publicBio}
+                portrait={w.portrait}
+                tags={w.focusAreas}
+              />
+            ))}
           </div>
         </section>
 
@@ -198,55 +175,35 @@ const consultants = [
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {
-              [...guestWriters, guestWriterEnAlt].map((w) => (
-                <article id={w.slug} class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5 shadow-sm">
-                  {w.portrait && (
-                    <img
-                      src={w.portrait}
-                      alt={w.displayName}
-                      class="mb-4 h-28 w-28 rounded-xl border border-[#6B2D3E]/15 object-cover shadow-sm"
-                      loading="lazy"
-                      width="112"
-                      height="112"
-                    />
-                  )}
-                  <a
-                    href={`/yayin-kurulu#${w.slug}`}
-                    class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
-                  >
-                    <h3
-                      class="mb-2 font-serif text-2xl text-[#2D2D2D] transition group-hover:underline group-hover:decoration-[#C9A96E]/60 group-hover:underline-offset-4"
-                    >
-                      {w.displayName}
-                    </h3>
-                  </a>
-                  <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">{w.role}</p>
-                  <p class="mb-4 text-base leading-relaxed text-[#2D2D2D]/70">{w.publicBio}</p>
-                  <ul class="flex flex-wrap gap-2" aria-label="Odak alanları">
-                    {w.focusAreas.map((tag) => (
-                      <li>
-                        <span class="inline-block rounded-full border border-[#6B2D3E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#6B2D3E]/85">
-                          {tag}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  {w.slug === 'senai-aksoy' && (
-                    <p class="mt-4 rounded-xl border-l-2 border-[#C9A96E] bg-white/60 px-4 py-3 text-sm italic leading-relaxed text-[#2D2D2D]/72">
-                      Yukarıdaki <a href="#senai-aksoy" class="font-semibold text-[#6B2D3E] no-underline hover:underline">Bilimsel Editör Doç. Dr. Senai Aksoy</a> ile
-                      aynı kişi. Mahrem ya da hassas başlıklarda kimse yazmaya gönüllü olmadığında, hekim kimliğini bir
-                      kenara koyarak — komşu sıcaklığıyla, jargonsuz — masaya kendisi oturuyor. Bu kart o "geçici yazar"
-                      rolünün izi.
-                    </p>
-                  )}
-                </article>
-              ))
-            }
+            {guestWriters.map((w) => (
+              <KuruluCard
+                anchor={w.slug}
+                name={w.displayName}
+                role={w.role}
+                bio={w.publicBio}
+                portrait={w.portrait}
+                tags={w.focusAreas}
+              />
+            ))}
+            <KuruluCard
+              anchor={guestWriterEnAlt.slug}
+              name={guestWriterEnAlt.displayName}
+              role={guestWriterEnAlt.role}
+              bio={guestWriterEnAlt.publicBio}
+              portrait={guestWriterEnAlt.portrait}
+              tags={guestWriterEnAlt.focusAreas}
+            >
+              <p class="mt-4 rounded-xl border-l-2 border-[#C9A96E] bg-white/60 px-4 py-3 text-sm italic leading-relaxed text-[#2D2D2D]/72">
+                Yukarıdaki <a href="#senai-aksoy" class="font-semibold text-[#6B2D3E] no-underline hover:underline">Bilimsel Editör Doç. Dr. Senai Aksoy</a> ile
+                aynı kişi. Mahrem ya da hassas başlıklarda kimse yazmaya gönüllü olmadığında, hekim kimliğini bir
+                kenara koyarak — komşu sıcaklığıyla, jargonsuz — masaya kendisi oturuyor. Bu kart o "geçici yazar"
+                rolünün izi.
+              </p>
+            </KuruluCard>
           </div>
         </section>
 
-        <!-- 3. Kısa editöryal süreç -->
+        <!-- 3. Editöryal süreç -->
         <section class="mb-10 rounded-[32px] border border-[#6B2D3E]/10 bg-[#FDF8F0] p-8">
           <h2 class="mb-3 font-serif text-2xl text-[#2D2D2D]">Editöryal süreç</h2>
           <p class="leading-relaxed text-[#2D2D2D]/70">
@@ -256,7 +213,7 @@ const consultants = [
           </p>
         </section>
 
-        <!-- Tıbbi danışmanlar -->
+        <!-- 4. Tıbbi danışmanlar -->
         <section class="mb-10 rounded-[32px] border border-[#6B2D3E]/12 bg-white p-8 shadow-sm">
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-[#2D2D2D]">Tıbbi Danışmanlar</h2>
@@ -265,37 +222,34 @@ const consultants = [
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {
-              medicalAdvisors.map((member) => (
-                <article class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5">
-                  <h3 class="mb-2 font-serif text-2xl text-[#2D2D2D]">{member.name}</h3>
-                  <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">{member.title}</p>
-                  <p class="text-sm leading-relaxed text-[#2D2D2D]/70">{member.detail}</p>
-                </article>
-              ))
-            }
+            {medicalAdvisors.map((m) => (
+              <KuruluCard
+                name={m.name}
+                role={m.role}
+                bio={m.bio}
+                tags={m.tags}
+              />
+            ))}
           </div>
         </section>
 
-        <!-- Danışmanlar -->
+        <!-- 5. Danışmanlar -->
         <section class="mb-10 rounded-[32px] border border-[#6B2D3E]/12 bg-white p-8 shadow-sm">
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-[#2D2D2D]">Danışmanlar</h2>
             <p class="leading-relaxed text-[#2D2D2D]/70">
-              İçerik erişilebilirliği, okuyucu deneyimi, yayın standardı ve yaşam tarzı perspektifi tarafında destek veren danışman
-              ekip.
+              İçerik erişilebilirliği, okuyucu deneyimi, yayın standardı ve yaşam tarzı perspektifi tarafında destek veren danışman ekip.
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {
-              consultants.map((member) => (
-                <article class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5">
-                  <h3 class="mb-2 font-serif text-2xl text-[#2D2D2D]">{member.name}</h3>
-                  <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">{member.title}</p>
-                  <p class="text-sm leading-relaxed text-[#2D2D2D]/70">{member.detail}</p>
-                </article>
-              ))
-            }
+            {consultants.map((m) => (
+              <KuruluCard
+                name={m.name}
+                role={m.role}
+                bio={m.bio}
+                tags={m.tags}
+              />
+            ))}
           </div>
         </section>
 
@@ -303,14 +257,11 @@ const consultants = [
           <h2 class="mb-4 font-serif text-3xl text-[#2D2D2D]">İletişim ve düzeltme talepleri</h2>
           <p class="leading-relaxed text-[#2D2D2D]/70">
             Yayın kurulu, içerik doğruluğu ve güncelliğiyle ilgili geri bildirimleri değerlendirir. Düzeltme veya görüş iletmek için
-            <a
-              href="mailto:editoral@estranova.com"
-              class="font-semibold text-[#6B2D3E] hover:underline"
-              >editoral@estranova.com</a
-            >
+            <a href="mailto:editoral@estranova.com" class="font-semibold text-[#6B2D3E] hover:underline">editoral@estranova.com</a>
             adresine yazabilirsiniz.
           </p>
         </section>
+
       </div>
     </section>
   </main>

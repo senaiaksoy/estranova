@@ -1,0 +1,71 @@
+---
+/**
+ * KuruluCard — Yayın Kurulu sayfasındaki tüm kişi kartları için ortak şablon.
+ *
+ * Sabit sıra:
+ *   [Portrait 112×112]   opsiyonel — portrait prop varsa gösterilir
+ *   İsim                 font-serif text-2xl, anchor prop varsa #link'li
+ *   UNVAN                text-xs uppercase burgundy
+ *   Bio (max 2-3 cümle)  text-sm — tüm gruplarda aynı boyut
+ *   [Etiketler]          opsiyonel — tags prop varsa gösterilir
+ *   <slot />             opsiyonel özel içerik (örn. çift-rol açıklama notu)
+ */
+
+interface Props {
+  name: string;
+  role: string;
+  bio: string;
+  portrait?: string;
+  tags?: string[];
+  anchor?: string;
+}
+
+const { name, role, bio, portrait, tags, anchor } = Astro.props;
+---
+
+<article
+  id={anchor}
+  class="flex flex-col rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5 shadow-sm"
+>
+  {portrait && (
+    <img
+      src={portrait}
+      alt={name}
+      class="mb-4 h-28 w-28 rounded-xl border border-[#6B2D3E]/15 object-cover shadow-sm"
+      loading="lazy"
+      width="112"
+      height="112"
+    />
+  )}
+
+  {anchor ? (
+    <a
+      href={`/yayin-kurulu#${anchor}`}
+      class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+    >
+      <h3 class="mb-2 font-serif text-2xl text-[#2D2D2D] transition group-hover:underline group-hover:decoration-[#C9A96E]/60 group-hover:underline-offset-4">
+        {name}
+      </h3>
+    </a>
+  ) : (
+    <h3 class="mb-2 font-serif text-2xl text-[#2D2D2D]">{name}</h3>
+  )}
+
+  <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#6B2D3E]">{role}</p>
+
+  <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/70">{bio}</p>
+
+  {tags && tags.length > 0 && (
+    <ul class="mt-auto flex flex-wrap gap-2" aria-label="Uzmanlık alanları">
+      {tags.map((tag) => (
+        <li>
+          <span class="inline-block rounded-full border border-[#6B2D3E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#6B2D3E]/85">
+            {tag}
+          </span>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <slot />
+</article>
