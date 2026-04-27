@@ -4,7 +4,8 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuSection from '../../../components/site/SubmenuSection.astro';
-import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
+import EditorPickCard from '../../../components/site/EditorPickCard.astro';
+import MagazineTOC from '../../../components/site/MagazineTOC.astro';
 import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../../components/site/ChapterCompass.astro';
@@ -18,27 +19,29 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const articles = [
-  {
-    href: '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve',
-    title: 'Non-invaziv Cilt Bakımı: Genel Çerçeve',
-    excerpt:
-      'Menopoz sonrasında non-invaziv cilt yaklaşımları nedir, ne işe yarar, neyin sınırı vardır? Marka veya satış önerisi olmadan editöryal bir okuma çerçevesi.',
-    image: submenuHeroByRoute['/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve']!,
-  },
+const editorPick = {
+  href: '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve',
+  title: 'Non-invaziv Cilt Bakımı — Genel Çerçeve',
+  lede: 'Marka kıyaslaması değil çerçeve: hangi sorun için hangi yaklaşım anlamlı, neyi atlamak güvenli.',
+  writerSlug: 'duygu-karaosmanoglu',
+  readingMinutes: 7,
+  image: submenuHeroByRoute['/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve']!,
+};
+
+const tocArticles = [
   {
     href: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
     title: 'Menopozda Cilt Değişimleri',
-    excerpt:
-      'Menopoz döneminde ciltte yaşanan elastikiyet, nem ve incelik değişimleri; günlük bakım ve klinik yaklaşımlara sade bir bakış.',
-    image: submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri']!,
+    excerpt: 'Menopoz döneminde ciltte yaşanan elastikiyet, nem ve incelik değişimleri; günlük bakım ve klinik yaklaşımlara sade bir bakış.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 7,
   },
   {
     href: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
     title: 'Vajinal Sağlık ve Menopoz',
-    excerpt:
-      'Vulvovajinal atrofi, atrofik etkilerin günlük konfora yansıması ve non-hormonal destek seçenekleri üzerine planlı rehber.',
-    image: submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz']!,
+    excerpt: 'Vulvovajinal atrofi, atrofik etkilerin günlük konfora yansıması ve non-hormonal destek seçenekleri üzerine planlı rehber.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 8,
   },
 ];
 
@@ -130,28 +133,28 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
-        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yayında olan rehberler</h2>
-        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-          Şu an için non-invaziv yaklaşımlara genel bir editöryal çerçeve ve cilt değişimleri / vajinal sağlık gibi
-          komşu başlıklar mevcut. Yeni rehberler editöryal takvimde.
-        </p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {
-          articles.map((a) => (
-            <SubmenuLinkCard
-              href={a.href}
-              title={a.title}
-              excerpt={a.excerpt}
-              imageSrc={a.image.src}
-              imageAlt={a.image.alt}
-              cta="Rehberi oku"
-            />
-          ))
-        }
-      </div>
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
+    </SubmenuSection>
+
+    <SubmenuSection variant="white" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      </header>
+
+      <MagazineTOC items={tocArticles} />
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>

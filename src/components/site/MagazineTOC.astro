@@ -1,0 +1,54 @@
+---
+import { writers } from '../../data/writers';
+
+export interface MagazineTOCItem {
+  href: string;
+  title: string;
+  excerpt: string;
+  writerSlug: string;
+  readingMinutes: number;
+}
+
+interface Props {
+  items: MagazineTOCItem[];
+  /** Numaralamayı X'ten başlat (örn. Editor's Pick varsa 02'den başla). Default: 1 */
+  startAt?: number;
+}
+
+const { items, startAt = 1 } = Astro.props;
+
+const enriched = items.map((it, i) => ({
+  ...it,
+  num: String(startAt + i).padStart(2, '0'),
+  writer: writers.find((w) => w.slug === it.writerSlug),
+}));
+---
+
+<ol class="divide-y divide-[#6B2D3E]/15 border-y border-[#6B2D3E]/15" role="list">
+  {
+    enriched.map((a) => (
+      <li>
+        <a
+          href={a.href}
+          class="group grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 py-7 transition md:grid-cols-[auto_1fr_auto] md:items-baseline md:gap-x-8 md:py-8"
+        >
+          <span class="font-serif text-2xl text-[#C9A96E] md:text-3xl" aria-hidden="true">
+            {a.num}
+          </span>
+          <div class="min-w-0">
+            <h3 class="mb-2 font-serif text-xl leading-tight text-[#2D2D2D] group-hover:text-[#6B2D3E] md:text-2xl">
+              {a.title}
+            </h3>
+            <p class="font-serif text-base italic leading-relaxed text-[#2D2D2D]/72 md:text-lg">
+              {a.excerpt}
+            </p>
+          </div>
+          <div class="col-start-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs uppercase tracking-[0.14em] text-[#2D2D2D]/55 md:col-start-3 md:flex-col md:items-end md:gap-y-1 md:text-right md:tracking-[0.16em]">
+            {a.writer && <span class="font-semibold text-[#6B2D3E]">{a.writer.displayName}</span>}
+            <span>{a.readingMinutes} dk okuma</span>
+          </div>
+        </a>
+      </li>
+    ))
+  }
+</ol>

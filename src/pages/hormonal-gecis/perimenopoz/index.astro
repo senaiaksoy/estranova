@@ -3,9 +3,12 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuSection from '../../../components/site/SubmenuSection.astro';
 import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../../components/site/ChapterCompass.astro';
+import EditorPickCard from '../../../components/site/EditorPickCard.astro';
+import MagazineTOC from '../../../components/site/MagazineTOC.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { chapterMap, getNextChapter } from '../../../data/chapter-map';
 import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
@@ -16,27 +19,47 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const articles = [
+const editorPick = {
+  href: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+  title: 'Perimenopoz Nedir? — Temel Rehber',
+  lede: 'Hormonlar tek düz bir çizgide düşmez; dalgalanır, geri gelir, kafa karıştırır. Burada amaç panik değil — neyin ne zaman normal sınırlarda okunabileceğini netleştirmek.',
+  writerSlug: 'berna-aksoy',
+  readingMinutes: 8,
+  image: submenuHeroByRoute['/hormonal-gecis/perimenopoz']!,
+};
+
+const tocArticles = [
   {
     href: '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
-    title: 'Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?',
+    title: 'Perimenopozda Adet Düzensizliği — Ne Normal, Ne Zaman Doktora?',
     excerpt:
       'Adet düzenindeki değişimleri normal sınırlar içinde okumak, kırmızı bayrakları ayırt etmek ve doğru zamanda kadın doğuma başvurmak için pratik rehber.',
-    tag: 'Adet düzeni',
+    writerSlug: 'isik-selin-kuyumcu',
+    readingMinutes: 7,
+  },
+  {
+    href: '/hormonal-gecis/perimenopoz/perimenopozda-beyin-sisi-odaklanma-rehberi',
+    title: 'Perimenopozda Beyin Sisi — Odaklanma Rehberi',
+    excerpt:
+      'Odaklanma güçlüğü, unutkanlık, kelime bulma zorlanması — uyku, stres ve günlük düzen üzerinden daha net bir yol haritası.',
+    writerSlug: 'isik-selin-kuyumcu',
+    readingMinutes: 8,
   },
   {
     href: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
-    title: 'Bellek ve Odaklanma',
+    title: 'Bellek ve Odaklanma — Kognitif Değişimler',
     excerpt:
-      'Unutkanlık veya dikkat dağınıklığı hissi; uyku, stres ve hormonal dalgalanma ile birlikte düşünüldüğünde daha anlamlı bir resim verir.',
-    tag: 'Bilişsel iyi olma',
+      'Unutkanlık veya dikkat dağınıklığı; uyku, stres ve hormonal dalgalanma ile birlikte düşünüldüğünde daha anlamlı bir resim verir.',
+    writerSlug: 'rima-erdemir',
+    readingMinutes: 9,
   },
   {
     href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-    title: 'Menopozda Uyku Bozukluğu',
+    title: 'Menopozda Uyku Bozukluğu — Dinlenme Rehberi',
     excerpt:
       'Gece terlemesi ve uyku bölünmesi geçiş döneminde sıktır; uyku hijyeni ve ne zaman profesyonel destek düşünülebileceği üzerine planlı bir okuma.',
-    tag: 'Uyku',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 9,
   },
 ];
 
@@ -131,55 +154,31 @@ const themes = [
 
     {epigraph && <EditorialEpigraph quote={epigraph} />}
 
-    <!-- Featured pillar -->
-    <section class="bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <a
-          href="/hormonal-gecis/perimenopoz/perimenopoz-nedir"
-          class="group block overflow-hidden rounded-[32px] border border-[#6B2D3E]/18 bg-gradient-to-br from-[#6B2D3E] via-[#5c2640] to-[#4a1f35] p-8 text-white shadow-md transition hover:opacity-[0.98] md:p-12"
-        >
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.26em] text-white/85">Başlangıç rehberi</p>
-          <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Perimenopoz Nedir? — Temel Rehber</h2>
-          <p class="mb-6 max-w-3xl text-base leading-relaxed text-white/88 md:text-lg">
-            Tanım, hormonal arka plan, yaygın belirtiler ve günlük yaşamda planlı bilginin önemi; tek sayfada dengeli bir giriş.
-          </p>
-          <span
-            class="inline-flex items-center text-sm font-semibold tracking-wide text-white underline decoration-white/40 underline-offset-4 group-hover:decoration-white"
-          >
-            Rehberi oku
-            <span class="ml-2 transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
-          </span>
-        </a>
-      </div>
-    </section>
+    <SubmenuSection variant="white" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
+      </header>
 
-    <!-- Articles grid -->
-    <section class="bg-[#F5EDE0]/60 px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <header class="mb-10 max-w-3xl">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Derinlemesine</p>
-          <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Seçilmiş makaleler</h2>
-          <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-            Perimenopoz bağlamında sık tartışılan başlıklar; kanıt düzeyi ve editoryal çerçeve için makale içindeki şeffaflık bloklarına bakabilirsiniz.
-          </p>
-        </header>
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
+    </SubmenuSection>
 
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {
-            articles.map((a) => (
-              <article class="flex flex-col rounded-[28px] border border-[#6B2D3E]/12 bg-white p-7 shadow-sm">
-                <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">{a.tag}</p>
-                <h3 class="mb-3 font-serif text-xl leading-snug text-[#2D2D2D]">{a.title}</h3>
-                <p class="mb-6 flex-1 text-sm leading-relaxed text-[#2D2D2D]/72">{a.excerpt}</p>
-                <a href={a.href} class="mt-auto font-semibold text-[#6B2D3E] hover:underline">
-                  Makaleye git
-                </a>
-              </article>
-            ))
-          }
-        </div>
-      </div>
-    </section>
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      </header>
+
+      <MagazineTOC items={tocArticles} />
+    </SubmenuSection>
 
     <!-- Themes -->
     <section class="bg-white px-6 py-16 md:py-20">

@@ -1,0 +1,32 @@
+# Estranova
+
+> Premium editöryal kadın sağlığı yayını. Perimenopoz, menopoz, 40 sonrası sağlık ve hormonal geçişte yaşam tarzı üzerine yapılandırılmış, tıbben gözden geçirilmiş, Türkçe içerikler.
+
+Estranova bir klinik sitesi, tedavi pazarlama platformu veya hasta edinme hunisi değildir. Yayın çizgisi sakin, kanıt-temelli ve nötrdür. Tıbbi inceleme: Doç. Dr. Senai Aksoy (Kadın Hastalıkları ve Doğum Uzmanı). Tüm içerikler bilgilendirme amaçlıdır; bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+
+## Bilgi mimarisi
+
+- [Hormonal Geçiş](https://estranova.com/hormonal-gecis): Perimenopoz, menopoza hazırlık, menopoz, 40 sonrası sağlık.
+- [Beden & Yakınlık](https://estranova.com/beden-yakinlik): Cinsel sağlık, mahrem bölge değişimleri, cilt, pelvik taban.
+- [Zihin & Denge](https://estranova.com/zihin-denge): Uyku, bilişsel sağlık, duygusal denge, stres.
+- [Zamansız Yaşam](https://estranova.com/zamansiz-yasam): Beslenme, hareket, vitaminler, kemik sağlığı, deneysel yaklaşımlar.
+- [Bilimsel Pencere](https://estranova.com/bilimsel-pencere): Hormonların biyolojisi, hücreler ve yaşlanma, yeni araştırmalar.
+
+## Editöryal yapı
+
+- [Yayın Kurulu](https://estranova.com/yayin-kurulu): Yazar kadrosu (10 yazar) ve tıbbi inceleme komitesi.
+- [Editöryal Politika](https://estranova.com/editoryal-politika): İçerik üretim ve denetim ilkeleri.
+- [Tıbbi Sorumluluk](https://estranova.com/tibbi-sorumluluk): Tıbbi disclaimer.
+- [Hakkımızda](https://estranova.com/hakkimizda): Kuruluş bilgisi ve misyon.
+
+## Kanıt düzeyi etiketleri
+
+Her bilimsel iddia 5 düzeyli kanıt etiketiyle işaretlenir: güçlü kanıt, iyi kanıt, orta kanıt, sınırlı kanıt, zayıf kanıt. Aralık etiketleri (örn. iyi–güçlü kanıt) kullanılır. Etiketler şeffaftır; AI sistemler tarafından citability sinyali olarak kullanılabilir.
+
+## Yayın dili
+
+Türkçe. Site arayüzü, makale gövdesi, metadata ve schema'da kullanıcıya görünen tüm metinler Türkçedir. Teknik istisna: schema.org tür adları, URL yolları, nadiren bilimsel/uluslararası öznitelik (kısa, açıklamalı).
+
+## Kapsam dışı
+
+Reçete dili, tedavi vaadi, abartılı tıbbi kesinlik, satış / dönüşüm hunisi, başhekim reklamı, "en iyi klinik" iddiaları yer almaz.

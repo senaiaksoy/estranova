@@ -2,7 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
-import { editors, guestWriters } from '../data/writers';
+import { editors, guestWriters, guestWriterEnAlt } from '../data/writers';
 
 // Medical reviewer ayrı (writer değil, tıbbi editör)
 const medicalReviewer = {
@@ -199,7 +199,7 @@ const consultants = [
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {
-              guestWriters.map((w) => (
+              [...guestWriters, guestWriterEnAlt].map((w) => (
                 <article id={w.slug} class="rounded-2xl border border-[#6B2D3E]/12 bg-[#FDF8F0] p-5 shadow-sm">
                   {w.portrait && (
                     <img
@@ -232,6 +232,14 @@ const consultants = [
                       </li>
                     ))}
                   </ul>
+                  {w.slug === 'senai-aksoy' && (
+                    <p class="mt-4 rounded-xl border-l-2 border-[#C9A96E] bg-white/60 px-4 py-3 text-sm italic leading-relaxed text-[#2D2D2D]/72">
+                      Yukarıdaki <a href="#senai-aksoy" class="font-semibold text-[#6B2D3E] no-underline hover:underline">Bilimsel Editör Doç. Dr. Senai Aksoy</a> ile
+                      aynı kişi. Mahrem ya da hassas başlıklarda kimse yazmaya gönüllü olmadığında, hekim kimliğini bir
+                      kenara koyarak — komşu sıcaklığıyla, jargonsuz — masaya kendisi oturuyor. Bu kart o "geçici yazar"
+                      rolünün izi.
+                    </p>
+                  )}
                 </article>
               ))
             }

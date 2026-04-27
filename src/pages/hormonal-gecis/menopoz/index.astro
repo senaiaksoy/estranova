@@ -4,10 +4,11 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuSection from '../../../components/site/SubmenuSection.astro';
-import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
 import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../../components/site/ChapterCompass.astro';
+import EditorPickCard from '../../../components/site/EditorPickCard.astro';
+import MagazineTOC from '../../../components/site/MagazineTOC.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { chapterMap, getNextChapter } from '../../../data/chapter-map';
 import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
@@ -18,29 +19,93 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const articles = [
+interface ArticleEntry {
+  href: string;
+  title: string;
+  excerpt: string;
+  lede: string;
+  writerSlug: string;
+  readingMinutes: number;
+  image: { src: string; alt: string };
+}
+
+const articles: ArticleEntry[] = [
   {
     href: '/hormonal-gecis/menopoz/menopoz-nedir',
     title: 'Menopoz Nedir? — Temel Rehber',
     excerpt:
-      'Tanım, evreler, hormon değişimleri ve uzun vadeli sağlık gündemi; menopoza dair sık sorulan başlıkları sade bir çerçevede toplayan başlangıç rehberi.',
+      'Tanım, evreler, hormon değişimleri ve uzun vadeli sağlık gündemi.',
+    lede: 'Menopoz pek çoğumuz için "gün gelip biten bir şey" değil; fark ettiğimiz an geriye dönük adlandırdığımız bir geçiş.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 8,
     image: submenuHeroByRoute['/hormonal-gecis/menopoz']!,
   },
   {
     href: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
     title: 'Hormon Tedavisi: Karar Rehberi',
     excerpt:
-      'HRT ne zaman gündeme gelir, kim için uygundur, neye dikkat edilir? Bilgilendirilmiş karar için planlı bir okuma.',
+      'HRT ne zaman gündeme gelir, kim için uygundur, neye dikkat edilir.',
+    lede: 'Bilgilendirilmiş karar; aceleye getirilmiş bir tercih değil, planlı bir okumayla başlayan bir süreç.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 10,
     image: submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi']!,
+  },
+  {
+    href: '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
+    title: "HRT'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk",
+    excerpt:
+      'Dokuz yıl HRT olmadan geçen menopoz yolculuğu, klinik kılavuzların değişimi ve hekimle birlikte yeni bir adıma karar verme süreci.',
+    lede: 'Annem hiç düşünmedi… ben dokuz yıl bekledim… kızım ise bu kararı çok daha erken alabilecek. Üç kuşağın aynı eşikte üç farklı duruşu.',
+    writerSlug: 'basak-pelister',
+    readingMinutes: 9,
+    image: submenuHeroByRoute['/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak']!,
+  },
+  {
+    href: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
+    title: "HRT'nin İlk Altı Ayı — Bir Akran Hikayesi",
+    excerpt:
+      'HRT başlayan 58 yaşında bir kadının ilk altı aylık deneyimi: karar süreci, ilk haftalar, üç–dört ay, beş–altı ay ve aile bağı.',
+    lede: 'Altı aydır küçük bir merhem ve bir hap mutfak tezgâhımın bir köşesinde sessizce duruyor… İşte tam o yerde duruyorum, sıcağı sıcağına anlatabilirim.',
+    writerSlug: 'demet-kizilkaya',
+    readingMinutes: 9,
+    image: submenuHeroByRoute['/hormonal-gecis/menopoz/hrt-ilk-alti-ay'] ?? submenuHeroByRoute['/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak']!,
+  },
+  {
+    href: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
+    title: 'Sıcak Basması ve Gece Terlemesi',
+    excerpt:
+      'Vazomotor belirtilerin nedenleri, tetikleyicileri ve kanıt-temelli destek seçenekleri.',
+    lede: 'Gece yarısı uyandıran o ısı dalgası rastgele değil; bedenin termostat ayarının ince bir düzenleme istemesi.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 7,
+    image: submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi']!,
+  },
+  {
+    href: '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz',
+    title: 'B12 Vitamini ve Menopoz: Sessiz Eksikliği Tanımak',
+    excerpt:
+      'Yorgunluk, unutkanlık, ellerde uyuşma — yaşa bağlamadan önce B12 ile menopozun nerede kesiştiğine bakan rehber.',
+    lede: 'Belirtiler benziyor; mekanizmalar farklı. Tabloyu çözmek için önce ikisini birbirinden ayırt edebilmek gerekiyor.',
+    writerSlug: 'rima-erdemir',
+    readingMinutes: 9,
+    image: submenuHeroByRoute['/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz']!,
   },
   {
     href: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
     title: 'Kemik Erimesi: Önleme ve Egzersiz',
     excerpt:
       'Menopoz sonrası kemik kaybını yavaşlatan günlük direnç çalışmaları, beslenme ve izleme başlıklarını birlikte ele alan rehber.',
+    lede: 'Kaslarım düşünmeden yanımda olsun istiyorum — kemikler sessiz çalışır, ama biz onları sessiz bırakmak zorunda değiliz.',
+    writerSlug: 'alara-baykent',
+    readingMinutes: 8,
     image: submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz']!,
   },
 ];
+
+// Editor's Pick — bu sub-hub için manuel atama (Magazine kapağı mantığı)
+const featuredSlug = '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak';
+const editorPick = articles.find((a) => a.href === featuredSlug)!;
+const tocArticles = articles.filter((a) => a.href !== featuredSlug);
 
 const neighbors = [
   {
@@ -130,28 +195,28 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
-        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Menopoza dair seçilmiş rehberler</h2>
-        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-          Tanımdan tedavi kararına, kemik sağlığından günlük rutine; bu evreye dair sık sorulan başlıklar üzerine
-          planlı okumalar.
-        </p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {
-          articles.map((a) => (
-            <SubmenuLinkCard
-              href={a.href}
-              title={a.title}
-              excerpt={a.excerpt}
-              imageSrc={a.image.src}
-              imageAlt={a.image.alt}
-              cta="Rehberi oku"
-            />
-          ))
-        }
-      </div>
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
+    </SubmenuSection>
+
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      </header>
+
+      <MagazineTOC items={tocArticles} />
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>

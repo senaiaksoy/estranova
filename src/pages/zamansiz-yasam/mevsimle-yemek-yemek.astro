@@ -27,7 +27,7 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Mevsimle Yemek Yemek — Anadolu Sofrasının 40 Sonrası Sağlık Diline Çevirisi';
+const articleTitle = 'Mevsimle Yemek Yemek — Anadolu Sofrası 40 Sonrası';
 const articleDescription = 'Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan akran tonlu rehber.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -67,7 +67,7 @@ const articleSchemas = buildArticleSchemas({
     />
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="gamze-cizreli" publishedDate="26 Nisan 2026" readingMinutes={5} />
+      <ArticleAuthorBlock authorSlug="gamze-cizreli" publishedDate="26 Nisan 2026" readingMinutes={6} />
 
       <section
         class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8"
@@ -75,42 +75,49 @@ const articleSchemas = buildArticleSchemas({
         <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
         <p class="leading-relaxed text-[#2D2D2D]/80">
           Mevsiminde yetişen, kısa yoldan sofraya gelen ve sade pişen yemekler 40 sonrası bedenle daha kolay anlaşır.
-          Akdeniz-Anadolu çizgisinde bir sofra; protein, lif, sağlıklı yağlar ve renkli bitkisel bileşenler için doğal
-          bir çerçeve sunar. Amaç katı bir program değil, kendi haftalık ritmine yerleşen, sürdürülebilir bir alışkanlık.
+          Akdeniz–Anadolu çizgisinde bir sofra; protein, lif, sağlıklı yağlar ve renkli bitkisel bileşenler için doğal
+          bir çerçeve sunar. Amaç katı bir program değil… kendi haftalık ritmine yerleşen, sürdürülebilir bir alışkanlık.
         </p>
       </section>
 
       <ArticleProsePanel>
         <h2 id="mevsim-neden-onemli">Mevsim Neden Bedenle Konuşur?</h2>
         <p>
-          Sabah ışığı sofrayı aydınlatmadan önce mutfakta dururken bazen düşünürüm: domatesin tadı yıl boyunca aynı
-          olmuyorsa, bedenimizin de aynı şeyi her ay aynı yoğunlukta istemesi neden beklensin?
+          Geçen perşembe sabahı tezgâha yeni gelen taze enginarlara bakarken aklıma takıldı: domatesin tadı yıl boyunca
+          aynı olmuyorsa, bedenimizin de her ay aynı şeyi aynı yoğunlukta istemesi neden beklensin?
         </p>
         <p>
-          Mevsimle yemek yemek aslında çok eski bir alışkanlık; biz onu modern dünyada unutmuşuz. Toprak ve iklim,
-          o ay hangi sebzenin tam olgunlaştığını, hangi meyvenin en yoğun bileşenlere ulaştığını belirler. Mevsiminde
-          toplanan ürün hem besin yoğunluğu açısından daha güçlüdür, hem de tarladan sofraya kısa yoldan geldiği için
-          tazeliği büyük oranda korur <Evidence from={3} to={4} />.
+          Mevsimle yemek yemek aslında çok eski bir alışkanlık; biz onu modern dünyada bir yerlerde unutmuşuz. Toprak
+          ve iklim, o ay hangi sebzenin tam olgunlaştığını, hangi meyvenin en yoğun bileşenlere ulaştığını söyler.
+          Mevsiminde toplanan ürün hem besin yoğunluğu açısından daha güçlüdür hem de tarladan sofraya kısa yoldan
+          geldiği için tazeliğini büyük oranda korur <Evidence from={3} to={4} />.
         </p>
         <p>
           40 sonrası bedeni için bu mesele yalnızca lezzet değil. Hormonal geçişte enerji ihtiyacı, sindirim, uyku ve
           ruh hali belirgin biçimde değişebilir; yıl içinde aldığımız besinlerin çeşitliliği ve niteliği bu dalgalı
-          tabloyla daha iyi konuşur. Aralık ayında bedenin istediği ile temmuz ayında istediği aynı değildir; mutfağı
+          tabloyla daha iyi konuşur. Aralık ayında bedenin istediği ile temmuz ayında istediği aynı değildir… mutfağı
           mevsime açtığında, bedenle aynı dili konuşmaya başlarsın.
         </p>
 
         <h2 id="topraktan-sofraya">Topraktan Sofraya: Anadolu Çerçevesi</h2>
         <p>
-          Bir kültürün mutfağı, o coğrafyanın bedeniyle yıllar içinde anlaştığı yerdir. Anadolu mutfağı,
-          geniş bir Akdeniz çizgisinin içinde sade bir kız kardeş gibi durur. Tabağın çevresinde
+          Bir kültürün mutfağı, o coğrafyanın bedeniyle yıllar içinde anlaştığı yerdir.
+        </p>
+        <p>
+          Anadolu mutfağı, geniş bir Akdeniz çizgisinin içinde sade bir kız kardeş gibi durur. Tabağın çevresinde
           zeytinyağı, mevsim sebzeleri, baklagiller, taze otlar ve tam tahıllar bulunur; haftada birkaç kez balık
           veya yumurta yer alır. Bu çizginin 40 sonrası kadın sağlığına yararları, geniş çalışmalarda gösterilmiştir
           <Evidence level={5} />.
           Et burada her gün masada değildir; daha çok bir tat, bir konuk gibidir.
         </p>
         <p>
-          Bu çerçevenin gücü tek tek bir besinden değil, bütünden gelir. Sofraya ne koyduğun kadar neyi sınırladığın da
-          önem taşır: ultra-işlenmiş ürünler, paketli atıştırmalıklar ve şekerli içecekler bu çizgide kenara çekilir
+          Yıllar önce okuduğum bir denemede Carlo Petrini’nin Slow Food hareketine dair üç sözcüğünü bir kenara
+          almıştım: <em>iyi, temiz, adil</em>. Yiyeceğin yalnızca lezzeti değil, geldiği yol da önemlidir, derdi.
+          Anadolu sofrasının yıllar içinde sessizce zaten bildiği bir cümle…
+        </p>
+        <p>
+          Bu çerçevenin gücü tek tek bir besinden değil, bütünden gelir. Sofraya ne koyduğun kadar neyi sınırladığın
+          da önem taşır: ultra-işlenmiş ürünler, paketli atıştırmalıklar ve şekerli içecekler bu çizgide kenara çekilir
           <Evidence level={5} />.
           Geriye kalan boşluğu mevsim doldurur — şubatta sade bir mercimek çorbası, mayısta enginar, ağustosta domates,
           ekimde kabak, ocakta lahana. Aynı sofra, ama yıl içinde yeniden yeniden açılan bir kapı.
@@ -118,8 +125,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="bahar-yaz">Bahar ve Yaz: Hafifleyen Bedeni Dinlemek</h2>
         <p>
-          Havalar ısındıkça bir şey değişir; ağır yemekler ağırdan alınmak istenir, taze otlar ve sulu sebzeler
-          kendiliğinden cazip gelir.
+          Havalar ısındıkça mutfakta bir şey değişir; ağır yemekler ağırdan alınmak istenir, taze otlar ve sulu
+          sebzeler kendiliğinden cazip gelir.
         </p>
         <p>
           Bahar mutfağı bedeni hafifletir: enginar, taze bakla, taze fasulye, semizotu, ıspanak, taze soğan, dereotu,
@@ -137,10 +144,13 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="sonbahar-kis">Sonbahar ve Kış: Sıcaklığı, Demiri, Lifi Toplamak</h2>
         <p>
-          Havalar serinleyince mutfakta bir şey değişir: tencereye dönülür, çorbalar uzun pişer, tahıllar
-          masada daha sık görünür olur. Bu mevsimde kabak, kestane, ayva, nar, pırasa, lahana, karnabahar, mantar, mevsim ortasında turunçgiller
-          masaya gelir. Kuru baklagiller — mercimek, nohut, kuru fasulye — sade ve doyurucu bir omurga kurar.
-          Lif, bitkisel protein ve mineral kaynağı olarak 40 sonrası beslenmede kıymetli yer tutarlar
+          Havalar serinleyince mutfakta bir şey değişir: tencereye dönülür, çorbalar uzun pişer, tahıllar masada daha
+          sık görünür olur.
+        </p>
+        <p>
+          Bu mevsimde kabak, kestane, ayva, nar, pırasa, lahana, karnabahar, mantar, mevsim ortasında turunçgiller
+          masaya gelir. Kuru baklagiller — mercimek, nohut, kuru fasulye — sade ve doyurucu bir omurga kurar. Lif,
+          bitkisel protein ve mineral kaynağı olarak 40 sonrası beslenmede kıymetli yer tutarlar
           <Evidence from={4} to={5} />.
           Tam tahıllar, az işlenmiş bulgur, mevsime göre tarhana ve uzun pişen çorbalar bu çizgiyi tamamlar.
         </p>
@@ -158,15 +168,16 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Kuşaklar boyu pişirilen yemekler bize sade dersler bırakır: taze sebzeyi az pişirmek, zeytinyağını cömert
-          ama gösterişsiz kullanmak, baklagilleri haftada bir gün masaya almak, otları kurutarak kışa hazırlamak.
-          Bu pratiklerin mekanizmasını her zaman bilemesek de, bütüne baktığımızda iltihaplanma yükünü
-          (yani bedenin sürekli kısık ateş gibi yorulmasını) azalttığı düşünülen bir tablo çıkar <Evidence level={4} />.
+          ama gösterişsiz kullanmak, baklagilleri haftada bir gün masaya almak, otları kurutarak kışa hazırlamak. Bu
+          pratiklerin mekanizmasını her zaman bilemesek de, bütüne baktığımızda iltihaplanma yükünü (yani bedenin
+          sürekli kısık ateş gibi yorulmasını) azalttığı düşünülen bir tablo çıkar <Evidence level={4} />.
           Bilim son yıllarda bu sezginin pek çok yerine sessizce hak veriyor.
         </p>
         <p>
-          Tabii bu bilgeliği bir otorite gibi kullanmak doğru olmaz; “büyüklerimiz biliyordu” cümlesi hem fazla
-          basitleştirir hem de bireysel farkları görmezden gelir. Ben kuşak bilgeliğine başlangıç noktası olarak
-          bakıyorum: bir cümle kuruyor, sonra her birimiz onu kendi bedenimize göre yeniden yazıyoruz.
+          Niye olduğunu hâlâ bilmiyorum, ama bir şey öğrendim bu yıllar içinde: kuşak bilgeliğini bir otorite gibi
+          kullanmak doğru olmaz. “Büyüklerimiz biliyordu” cümlesi hem fazla basitleştirir hem de bireysel farkları
+          görmezden gelir. Ben bu bilgeliği bir başlangıç noktası olarak görüyorum… bir cümle kuruyor, sonra her
+          birimiz onu kendi bedenimize göre yeniden yazıyoruz.
         </p>
 
         <h2 id="kirk-sonrasi-uyarlamalar">40 Sonrası Küçük Uyarlamalar</h2>
@@ -187,34 +198,33 @@ const articleSchemas = buildArticleSchemas({
           kalp damar sağlığı açısından önemli yer tutar <Evidence level={5} />.
           Dördüncüsü iltihabi yükü dengelemek: zeytinyağı, yağlı küçük balıklar, ceviz, keten tohumu, taze otlar bu
           çerçevenin sade taşları olabilir <Evidence level={4} />.
-          Son olarak kafein ve alkol: ikisinin de uyku ve sıcak basmaları üzerinde etkisi olabildiği bilinir.
-          Miktarı ve saati gözden geçirmek bazı kadınlar için anlamlı bir uyarlama olur <Evidence level={5} />.
+          Son olarak kafein ve alkol: ikisinin de uyku ve sıcak basmaları üzerinde etkisi olabildiği bilinir. Miktarı
+          ve saati gözden geçirmek, bazı kadınlar için anlamlı bir uyarlama olur <Evidence level={5} />.
         </p>
 
         <h2 id="haftalik-ritim">Sade Bir Haftalık Ritim</h2>
         <p>
-          Reçete vermek istemiyorum; ama mevsime açık bir hafta nasıl görünebilir, kabaca paylaşabilirim. Sen kendi
+          Reçete vermek istemiyorum… ama mevsime açık bir hafta nasıl görünebilir, kabaca paylaşabilirim. Sen kendi
           ritmine göre yeniden yazarsın.
         </p>
         <p>
           Pazara — ya da o haftaki yerel sebzecine — mevsim sebzelerini sormakla başlamak güzel bir başlangıç olabilir.
-          Tezgâh başında bir kadının “bu hafta enginar tam zamanı” demesi, market raflarındaki paketli salatadan çok
-          farklı bir bilgi taşır. Haftanın bir akşamı baklagil — mercimek, nohut, kuru fasulye — masada yer alabilir.
+          Tezgâh başında bir kadının “bu hafta enginar tam zamanı” demesi… market raflarındaki paketli salatadan
+          başka bir bilgi taşır. Haftanın bir akşamı baklagil — mercimek, nohut, kuru fasulye — masada yer alabilir.
           Bir gün balık, bir gün yumurta ağırlıklı sade bir tabak iyi gider; bir öğün yeşil yapraklı sebzeyi öne
           çıkarmak da yarar sağlar.
         </p>
         <p>
           Sabah ritmi ayrı bir alan: ılık su, sonra mevsim meyvesiyle sade bir kahvaltı, yumurta veya beyaz peynir,
-          taze otlar, az tuzlu zeytin ve tam tahıl ekmek. Çayı veya kahveyi keyifle ama miktarına dikkat ederek
-          alabilirsin. Akşamlar bedenle ilişkinin ayrı bir bölümü; misafir günleri dışında ağır yemeklerden
-          uzaklaşmak, çoğu kadında uyku kalitesi ve ertesi sabahın enerjisi için yararlı olabilir
-          <Evidence level={4} />.
+          taze otlar, az tuzlu zeytin ve tam tahıl ekmek. Bir sonbahar sabahı: çay, ekmek, peynir, mevsimin ilk narı.
+          Çayı veya kahveyi keyifle ama miktarına dikkat ederek alabilirsin. Akşamlar bedenle ilişkinin ayrı bir
+          bölümü; misafir günleri dışında ağır yemeklerden uzaklaşmak, çoğu kadında uyku kalitesi ve ertesi sabahın
+          enerjisi için yararlı olabilir <Evidence level={4} />.
           Hafta sonu mutfakta uzun bir öğleden sonra ayırmak, ertesi haftanın yarısını kurtarır.
         </p>
         <p>
-          Bir küçük not: kronik bir durumun ya da düzenli bir ilacın varsa, kendi haftalık ritmine geçmeden
-          önce hekiminle birlikte düşünmek en güvenli adımdır. Sade bir çerçeve dahi bireysel takiple birlikte
-          işe yarar.
+          Bir küçük not: kronik bir durumun ya da düzenli bir ilacın varsa, kendi haftalık ritmine geçmeden önce
+          hekiminle birlikte düşünmek en güvenli adımdır. Sade bir çerçeve dahi bireysel takiple birlikte işe yarar.
         </p>
 
         <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
@@ -222,8 +232,9 @@ const articleSchemas = buildArticleSchemas({
         <h3>Mevsiminde olmayan sebze ve meyvelerden tamamen vazgeçmek mi gerekir?</h3>
         <p>
           Hayır, böyle keskin bir kural yok ve hayatta sürdürülebilir de değil. Önemli olan tabağın çoğunluğunu
-          mevsiminde, yerel ve sade hazırlanmış ürünlere yer açmak. Kışın bir kase taze meyveli yoğurt yemek istediğin
-          gün ithal bir meyveye uzanmak, dengeyi bozmaz. Çerçevenin omurgası mevsimle, esnekliği seninle ilgili.
+          mevsiminde, yerel ve sade hazırlanmış ürünlere yer açmak. Kışın bir kase taze meyveli yoğurt yemek
+          istediğin gün ithal bir meyveye uzanmak, dengeyi bozmaz. Çerçevenin omurgası mevsimle, esnekliği seninle
+          ilgili.
         </p>
 
         <h3>Akdeniz tipi beslenme menopoz döneminde gerçekten farklı bir şey sunuyor mu?</h3>
@@ -233,15 +244,15 @@ const articleSchemas = buildArticleSchemas({
           Menopoz döneminde de bu yararlar geçerli kalır; sıcak basmaları gibi bazı belirtilerin yoğunluğunda
           değişiklik bildiren çalışmalar da bulunur, ancak bireysel cevap farklılık gösterir
           <Evidence from={3} to={4} />.
-          Yani şifa garantisi değil, ama 40 sonrası için sağlam bir başlangıç çerçevesidir.
+          Yani şifa garantisi değil… 40 sonrası için sağlam bir başlangıç çerçevesidir.
         </p>
 
         <h3>Et yemeyi tamamen bırakmalı mıyım?</h3>
         <p>
-          Bu kişisel bir tercih ve bedenle, yaşam tarzıyla, değerlerle ilgili bir karar. Anadolu mutfağı zaten eti her
-          gün masada görmez; haftada birkaç kez kaliteli kaynaklardan dengeli porsiyonlarda yer almasını öneren bir
-          çerçeve oturmuş bir alışkanlık. İşlenmiş et ürünlerinin (sucuk, sosis, salam) ise sınırlı tutulmasının daha
-          temkinli bir tercih olduğu bilinir <Evidence level={5} />.
+          Bu kişisel bir tercih ve bedenle, yaşam tarzıyla, değerlerle ilgili bir karar. Anadolu mutfağı zaten eti
+          her gün masada görmez; haftada birkaç kez kaliteli kaynaklardan dengeli porsiyonlarda yer almasını öneren
+          bir çerçeve oturmuş bir alışkanlık. İşlenmiş et ürünlerinin (sucuk, sosis, salam) ise sınırlı tutulmasının
+          daha temkinli bir tercih olduğu bilinir <Evidence level={5} />.
           Tamamen bitkisel beslenme tercihinde B12, demir ve protein kaynaklarını planlamak gerekir; bu noktada
           diyetisyen desteği değerli olur.
         </p>
@@ -271,7 +282,7 @@ const articleSchemas = buildArticleSchemas({
       >
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
         <p class="leading-relaxed text-[#2D2D2D]/80">
-          Akdeniz-Anadolu çizgisinde, mevsime açık bir sofranın 40 sonrası kadın sağlığına sade ve sürdürülebilir bir
+          Akdeniz–Anadolu çizgisinde, mevsime açık bir sofranın 40 sonrası kadın sağlığına sade ve sürdürülebilir bir
           çerçeve sunduğu, geniş gözlemsel çalışmalarda tutarlı biçimde görülmektedir. Bireysel ihtiyaçlar ise yaş,
           aktivite, ilaç kullanımı ve eşlik eden durumlarla şekillenir; bu nedenle gerektiğinde diyetisyen ve hekim
           değerlendirmesi anlamlı olur.

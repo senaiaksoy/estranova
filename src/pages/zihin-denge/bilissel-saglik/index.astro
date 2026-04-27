@@ -10,7 +10,7 @@ import MarginaliaRail from '../../../components/site/MarginaliaRail.astro';
 import MarginaliaItem from '../../../components/site/MarginaliaItem.astro';
 import Asterism from '../../../components/site/Asterism.astro';
 import ChapterCompass from '../../../components/site/ChapterCompass.astro';
-import ArticleMetaSigil from '../../../components/site/ArticleMetaSigil.astro';
+import EditorPickCard from '../../../components/site/EditorPickCard.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { chapterMap, getNextChapter } from '../../../data/chapter-map';
 import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
@@ -21,14 +21,13 @@ const chapter = chapterMap[path]!;
 const epigraph = subHubEpigraphs[path];
 const next = getNextChapter(path);
 
-const leadArticle = {
+const editorPick = {
   href: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
-  title: 'Bellek ve Odaklanma',
-  excerpt: 'Beyin sisi, kelime aramada güçlük ve dikkat dağılması; menopozda kognitif değişimlerin gerçekçi okuması.',
+  title: 'Bellek ve Odaklanma — Kognitif Değişimler',
+  lede: 'Beyin sisi tek başına anlamlı değil; uyku, stres ve hormonal dalgalanma birlikte düşünüldüğünde resim netleşir.',
+  writerSlug: 'rima-erdemir',
+  readingMinutes: 9,
   image: submenuHeroByRoute['/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz']!,
-  readingMinutes: 6,
-  evidence: 'Orta' as const,
-  updated: 'Mart 2026',
 };
 
 const neighbors = [
@@ -99,28 +98,20 @@ const neighbors = [
     {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={false}>
-      <header class="mb-12 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
-        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yayında olan rehberler</h2>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <article class="group grid gap-8 overflow-hidden rounded-[32px] border border-[#6B2D3E]/15 bg-white shadow-sm transition hover:shadow-lg md:grid-cols-12 md:gap-0">
-        <a href={leadArticle.href} class="relative md:col-span-7 md:min-h-[340px]">
-          <img src={leadArticle.image.src} alt={leadArticle.image.alt} width="900" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#1c1412]/30 via-transparent to-transparent" />
-        </a>
-        <div class="flex flex-col justify-center p-7 md:col-span-5 md:p-10">
-          <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#775a19]">Öne Çıkan Rehber</p>
-          <h3 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">
-            <a href={leadArticle.href} class="hover:text-[#6B2D3E]">{leadArticle.title}</a>
-          </h3>
-          <p class="mb-6 leading-relaxed text-[#2D2D2D]/75">{leadArticle.excerpt}</p>
-          <div class="mb-4">
-            <ArticleMetaSigil readingMinutes={leadArticle.readingMinutes} evidence={leadArticle.evidence} updated={leadArticle.updated} />
-          </div>
-          <a href={leadArticle.href} class="font-semibold text-[#6B2D3E] hover:underline">Rehberi oku →</a>
-        </div>
-      </article>
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
     </SubmenuSection>
 
     <Asterism />

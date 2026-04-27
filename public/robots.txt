@@ -1,0 +1,41 @@
+# Estranova — premium editöryal kadın sağlığı yayını
+# Site: https://estranova.com
+# İçerik: Türkçe; perimenopoz, menopoz, 40+ kadın sağlığı
+
+User-agent: *
+Allow: /
+
+# AI crawler erişimi (AI Overviews, ChatGPT, Perplexity, Claude vb.)
+# CLAUDE.md §1: bilgi platformudur — aramada görünmek istenir.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap (production'da @astrojs/sitemap tarafından üretilir)
+Sitemap: https://estranova.com/sitemap-index.xml

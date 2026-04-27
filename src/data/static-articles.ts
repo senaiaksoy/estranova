@@ -18,6 +18,39 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
+    title: 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi',
+    description:
+      'Menopozda cinsel istek nasıl değişir, neden tek bir nedene bağlanamaz, hangi seçenekler vardır? Yargısız, jargonsuz ve çözüm odaklı bir okuma.',
+    publishedDate: '27 Nisan 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik',
+    keywords: ['libido', 'cinsel istek', 'menopoz', 'GSM', 'lokal östrojen', 'testosteron', 'cinsel sağlık', '40+ kadın', 'mahrem sağlık'],
+  },
+  {
+    path: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
+    title: "HRT'nin İlk Altı Ayı — Bir Akran Hikayesi",
+    description:
+      "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk altı aylık deneyimi: karar süreci, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.",
+    publishedDate: '27 Nisan 2026',
+    writerSlug: 'demet-kizilkaya',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: ['HRT', 'hormon replasman tedavisi', 'menopoz', '58 yaş', 'akran hikayesi', 'kişisel deneyim', 'ilk 6 ay'],
+  },
+  {
+    path: '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz',
+    title: 'B12 Vitamini ve Menopoz: Sessiz Eksikliği Tanımak',
+    description:
+      'Gün ortasında çöken enerji, aklında tutamadığın şeyler, ellerde hafif bir uyuşma — bunları yaşa ya da menopoz geçişine bağlamak kolay. Ama bazen tablonun içinde B12 eksikliği de oluyor. İki konu nerede kesişiyor, bilim hangi noktada net konuşuyor, hangi adım anlamlı?',
+    publishedDate: '25 Nisan 2026',
+    writerSlug: 'rima-erdemir',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: ['B12', 'vitamin B12', 'kobalamin', 'menopoz', '40+ sağlık', 'eksiklik', 'PPI', 'metformin', 'takviye'],
+  },
+  {
     path: '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi',
     title: 'Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?',
     description:
@@ -109,16 +142,6 @@ export const staticArticles: StaticArticleEntry[] = [
     section: 'Bilimsel Pencere',
     sectionPath: '/bilimsel-pencere',
     keywords: ['NAD+', 'hücresel yaşlanma', 'sirtuin', 'biohacking', 'menopoz'],
-  },
-  {
-    path: '/zamansiz-yasam/vitaminler/d-vitamini-rehberi',
-    title: 'D Vitamini: 40 Yaşından Sonra Ne Kadar Almanız Gerekiyor?',
-    description: '40 yaş sonrası dönemde D vitamini ihtiyacını, eksiklik belirtilerini, doz aralıklarını ve doğal kaynakları bilimsel bir dille ele alan rehber.',
-    publishedDate: '10 Nisan 2026',
-    writerSlug: 'rima-erdemir',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam',
-    keywords: ['D vitamini', 'dozaj', '40 yaş sonrası', 'eksiklik', 'takviye', 'doğal kaynaklar'],
   },
   {
     path: '/zamansiz-yasam/d-vitamini-rehberi',

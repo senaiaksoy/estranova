@@ -77,6 +77,34 @@ export const writers: Writer[] = [
     },
   },
   {
+    slug: 'bahar-ozeray',
+    displayName: 'Bahar Özeray',
+    role: 'Hukuk ve Yaşam Tarzı Yazarı / Konuk Katkı',
+    ageBand: '47',
+    publicBio:
+      "Galatasaray Lisesi'nin ardından Galatasaray Üniversitesi Hukuk Fakültesi'nden 2003'te mezun oldu. İstanbul Barosu'na kayıtlı avukat ve sicilli arabulucu; aile bürosu Özeray Hukuk'ta yerli ve yabancı şirketlere danışmanlık veriyor. 2018'den bu yana Alarko Carrier Yönetim Kurulu'nda bağımsız üye; Denetim Komitesi ile Kurumsal Yönetim Komitesi'nin başkanlığını yürütüyor. Mesleki çizgisi belirgin: işi sonuna kadar takip eden, alanı dışındaki konularda uzmanına danışmaktan çekinmeyen, uyuşmazlıkta uzlaşmayı önceleyen titiz bir hat. İstanbul'da 2016 doğumlu oğluyla yaşıyor. Özel hayatında neşeli; iyi yemek, iyi giyim ve seçici bir estetik bilinciyle 40 sonrası yaşam gustosunu gündelik akışın merkezine alıyor. Estranova için hak, sınır, karar ve gündelik yaşam dengesi başlıklarında — gerektiğinde hukukçu kimliğini de devreye sokarak — akran perspektifiyle yazıyor.",
+    signaturePhrase:
+      'Uzlaşmayı önceleyen titiz bir avukat-arabulucu; 40 sonrası yaşam gustosunu seçici estetik ve gündelik neşeyle yazan akran sesi.',
+    focusAreas: ['Hak & Sınır', 'Karar & Uzlaşma', 'Yaşam Tarzı', 'Estetik & Gusto'],
+    isEditor: false,
+    writingStyle: {
+      voice: 'Ölçülü, kararlı ve uzlaşmacı; özel hayata dair notlarda neşeli ve zarif.',
+      rhythm: 'Sade ve kararlı cümleler; karar veren ama dayatmayan ton; sonda küçük bir yaşamsal dokunuş.',
+      framing: 'Önce tabloyu netleştirir, sonra hak/sınır boyutunu kurar, en sona uygulanabilir bir adım veya gündelik bir mikrosahne yerleştirir.',
+      dos: [
+        'Hukuki dili gündelik karşılığıyla sadeleştir.',
+        'Uyuşmazlıkta tek tarafa savrulmadan, uzlaşma seçeneğini görünür kıl.',
+        'Estetik / yaşam tarzı dokunuşunu ölçülü ve seçici tut — vitrin değil, his.',
+        '"Uzmanına danış" çağrısını dayatmadan, doğal bir refleks olarak yerleştir.',
+      ],
+      donts: [
+        'Hukuki tavsiye veya bireysel hak yönlendirmesi verme — yalnızca bilgilendirme.',
+        'Lüks / marka pornografisine kayma; "trend takip" değil "seçici göz" üslubu.',
+        'Uyuşmazlığı dramatize eden, taraflaştıran dile düşme.',
+      ],
+    },
+  },
+  {
     slug: 'basak-pelister',
     displayName: 'Başak Pelister',
     role: 'Araştırma Yazarı / Konuk Katkı — Üç Kuşaklı Tanıklık',
@@ -283,12 +311,13 @@ export const writers: Writer[] = [
     // medicalReviewer default'u). Bu iki rol bilinçli olarak ayrı tutuldu.
     slug: 'senai-aksoy',
     displayName: 'Senai Aksoy',
-    role: 'Geçici Yazar / Estranova Kurucusu',
+    role: 'Kimsenin Yazmak İstemediği Konu Yazarı',
     ageBand: '50+',
     publicBio:
-      'Estranova\'nın kurucusu. Bu yazıyı yazmak için kimse gönüllü olmayınca masaya kendisi oturdu. Burada hekim kimliğinden çok, yıllardır kadın sağlığının içinde olmuş ve bu konuların önemini öğrenmiş biri olarak yazıyor — tıbbi jargon değil, incitmeyen bir dil ve uygulanabilir öneriler.',
+      'Estranova\'nın bilimsel editörü. Bu yazıyı yazmak için kimse gönüllü olmayınca masaya kendisi oturdu. Burada hekim kimliğinden çok, yıllardır kadın sağlığının içinde olmuş ve bu konuların önemini öğrenmiş biri olarak yazıyor — tıbbi jargon değil, incitmeyen bir dil ve uygulanabilir öneriler.',
     signaturePhrase:
-      'Konuşulması zor ama bilinmesi gereken konuları, jargon değil komşu sıcaklığıyla anlatan geçici yazar.',
+      'Konuşulması zor ama bilinmesi gereken konuları, jargon değil komşu sıcaklığıyla anlatan yazar.',
+    portrait: '/images/writers/senai-aksoy.webp',
     focusAreas: ['Mahrem Sağlık', 'Hassas Konular', 'Editör Notu'],
     isEditor: false,
     writingStyle: {
@@ -316,9 +345,10 @@ export const writers: Writer[] = [
     role: 'Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı',
     ageBand: '58',
     publicBio:
-      'Demet Kızılkaya, Japon kültürüne uzun yıllardır ilgi duyan; Japon Kültür Derneği\'nde uzun süre görev almış bir yazardır. 58 yaşında menopoz döneminde ve HRT kullanımıyla geçiş sürecini deneyimleyen bir akran sesi olarak, aile odağını ve gündelik yaşam dengesini önceleyen içerikler üretir. Seyahat sevgisini kültürel gözlemlerle birleştirerek okuyucuya sıcak, uygulanabilir bir perspektif sunar.',
+      "1968 İstanbul doğumlu. Beşiktaş Kız Lisesi'nin ardından Marmara Üniversitesi İngilizce Öğretmenliği'nden mezun oldu; üniversite yıllarında öğrenmeye başladığı Japonca'da 1992'de Japon hükümetinin dünya genelinde düzenlediği Yeterlilik Sınavı'nda Türkiye birincisi oldu. 1989-1991 arasında İstanbul Japon Okulu'nda İngilizce öğretmenliği yaptı; 1991-2014 arasında Japonya Dış Ticaret Teşkilatı'nın (JETRO) İstanbul Ofisi'nde çalışarak iki kültür arasındaki kurumsal hattı uzun yıllar yakından izledi. Bugün Türk-Japon Kadınları Dostluk ve Kültür Derneği'ndeki sosyal projelerde yer alıyor; İstanbul'da yaşayan yabancılara Türkçe dersleri veriyor. Evli ve bir kız annesi. 58 yaşında, menopoz döneminde ve HRT kullanımıyla geçişi deneyimleyen bir akran sesi olarak; iki kültürün sakin gözlemini aile dengesi ve gündelik nezaketle harmanlayan içerikler üretir.",
     signaturePhrase:
-      'Japon kültürü merakını, aile sıcaklığını ve seyahat ruhunu menopoz deneyimiyle birleştiren candan bir akran sesi.',
+      'Türkiye-Japonya hattında uzun yıllar çalışmış; menopoz geçişini iki kültürün sakinliği, aile sıcaklığı ve gündelik nezaketle yazan candan bir akran sesi.',
+    portrait: '/images/writers/demet-kizilkaya.webp',
     focusAreas: ['Menopoz Deneyimi', 'Japon Kültürü', 'Seyahat & Yaşam Tarzı'],
     isEditor: false,
     writingStyle: {
@@ -342,15 +372,16 @@ export const writers: Writer[] = [
 
 // Editör her zaman ilk: Berna; diğerleri: displayName alfabetik
 export const editors = writers.filter((w) => w.isEditor);
-// Yazar Kadromuz listesi — editörler dahil tüm yazarlar alfabetik
-// (editörler hem "Editörler" hem "Yazar Kadromuz" bölümünde görünür)
-//
-// Senai Aksoy "geçici yazar" personası listede gösterilmez: aynı kişi
-// yayin-kurulu'nda zaten "Doç. Dr. Senai Aksoy / Bilimsel Editör" olarak
-// görünüyor; ikinci kez "Senai Aksoy" olarak listelemek okuyucuyu şaşırtır.
-// Yazar entry'si yine de byline (article-schema, ArticleAuthorBlock) için
-// gerekli — sadece kadro listelemeden filtreleniyor.
+// Yazar Kadromuz listesi — alfabetik sıralama (Senai hariç).
+// Senai Aksoy ayrı export ile listenin EN ALTINDA özel pozisyonda
+// render edilir; aynı kişi "Editörler" bölümünde "Doç. Dr." kimliğiyle
+// de görünür — iki rol farklı kimlik (yazar kartı "Dr." öneki kullanmaz).
 export const guestWriters = writers
   .slice()
   .filter((w) => w.slug !== 'senai-aksoy')
   .sort((a, b) => a.displayName.localeCompare(b.displayName, 'tr'));
+
+// Senai Aksoy yazar kartı için ayrı export — yayin-kurulu listesinin
+// EN ALTINDA özel pozisyonda render edilir ("Kimsenin Yazmak İstemediği
+// Konu Yazarı" rolüyle).
+export const guestWriterEnAlt = writers.find((w) => w.slug === 'senai-aksoy')!;

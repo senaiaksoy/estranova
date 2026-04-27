@@ -6,6 +6,8 @@ import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuLinkCard from '../../components/site/SubmenuLinkCard.astro';
 import SubmenuSection from '../../components/site/SubmenuSection.astro';
 import SubmenuSpotlightCard from '../../components/site/SubmenuSpotlightCard.astro';
+import EditorPickCard from '../../components/site/EditorPickCard.astro';
+import MagazineTOC from '../../components/site/MagazineTOC.astro';
 import CategoryRelatedLinks from '../../components/site/CategoryRelatedLinks.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
@@ -57,6 +59,32 @@ const pillars = [
 ];
 
 const evidenceLevels = [5, 4, 3, 2, 1] as const;
+
+const editorPick = {
+  href: '/zamansiz-yasam/mevsimle-yemek-yemek',
+  title: 'Mevsimle Yemek Yemek — Anadolu Sofrası 40 Sonrası',
+  lede: 'Geçen perşembe sabahı tezgâha yeni gelen taze enginarlara bakarken aklıma takıldı: bedenimizin de her ay aynı şeyi aynı yoğunlukta istemesi neden beklensin?',
+  writerSlug: 'gamze-cizreli',
+  readingMinutes: 6,
+  image: submenuHeroByRoute['/zamansiz-yasam/mevsimle-yemek-yemek']!,
+};
+
+const tocArticles = [
+  {
+    href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+    title: '40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber',
+    excerpt: 'D vitamini, kalsiyum, hareket ve düzenli izlem; kemik sağlığını uzun vadede korumak için günlük çerçeveler.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 9,
+  },
+  {
+    href: '/zamansiz-yasam/d-vitamini-rehberi',
+    title: 'D Vitamini Rehberi — Tarama, Beslenme, Takviye',
+    excerpt: 'D vitamini taraması, beslenme, güneş maruziyeti ve takviye planını dengeli biçimde ele alan kapsamlı rehber.',
+    writerSlug: 'rima-erdemir',
+    readingMinutes: 9,
+  },
+];
 ---
 
 <SiteLayout
@@ -91,6 +119,32 @@ const evidenceLevels = [5, 4, 3, 2, 1] as const;
           ))
         }
       </div>
+    </SubmenuSection>
+
+    <SubmenuSection variant="white" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu kategoriden bir okuma</h2>
+      </header>
+
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
+    </SubmenuSection>
+
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Kategoride Okumalar</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      </header>
+
+      <MagazineTOC items={tocArticles} />
     </SubmenuSection>
 
     {epigraph && <EditorialEpigraph quote={epigraph} />}

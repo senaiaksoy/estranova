@@ -4,25 +4,37 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuSection from '../../../components/site/SubmenuSection.astro';
-import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
+import EditorPickCard from '../../../components/site/EditorPickCard.astro';
+import MagazineTOC from '../../../components/site/MagazineTOC.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik']!;
 
-const articles = [
+const editorPick = {
+  href: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
+  title: 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi',
+  lede: 'Bu yazıyı yazmak için kimse gönüllü olmadı… Mahrem konuları yazmak çoğumuz için zor. Masaya ben oturdum — komşu sıcaklığıyla, jargonsuz.',
+  writerSlug: 'senai-aksoy',
+  readingMinutes: 10,
+  image: submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz'] ?? submenuHeroByRoute['/beden-yakinlik/cinsel-saglik']!,
+};
+
+const tocArticles = [
   {
     href: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
-    title: 'Vajinal Sağlık ve Menopoz',
+    title: 'Menopozda Mahrem Bölge Değişimleri',
     excerpt:
       'Vulvovajinal atrofi, kuruluk ve hassasiyet; günlük konfor ve hormonal/non-hormonal destek seçeneklerine sakin bir bakış.',
-    image: submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz']!,
+    writerSlug: 'duygu-karaosmanoglu',
+    readingMinutes: 7,
   },
   {
     href: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
-    title: 'Cinsellikte Ağrı',
+    title: 'Cinsellikte Ağrı — Menopozda Dispareuniya',
     excerpt:
-      'Menopozda dispareuninin nedenleri ve tedavi seçenekleri; çözümsüz olduğunu düşünmenize gerek yok.',
-    image: submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz']!,
+      'Menopozda dispareuninin nedenleri ve tedavi seçenekleri; çözümsüz olduğunu düşünmene gerek yok.',
+    writerSlug: 'duygu-karaosmanoglu',
+    readingMinutes: 6,
   },
 ];
 
@@ -100,14 +112,28 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
-        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yayında olan rehberler</h2>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {articles.map((a) => (
-          <SubmenuLinkCard href={a.href} title={a.title} excerpt={a.excerpt} imageSrc={a.image.src} imageAlt={a.image.alt} cta="Rehberi oku" />
-        ))}
-      </div>
+
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
+    </SubmenuSection>
+
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      </header>
+
+      <MagazineTOC items={tocArticles} />
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>

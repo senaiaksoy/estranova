@@ -4,7 +4,8 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuSection from '../../../components/site/SubmenuSection.astro';
-import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
+import EditorPickCard from '../../../components/site/EditorPickCard.astro';
+import MagazineTOC from '../../../components/site/MagazineTOC.astro';
 import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../../components/site/ChapterCompass.astro';
@@ -18,20 +19,22 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const articles = [
-  {
-    href: '/zamansiz-yasam/vitaminler/d-vitamini-rehberi',
-    title: 'D Vitamini Rehberi',
-    excerpt:
-      'D vitamininin kemik sağlığı, kas işlevi ve genel iyi oluşla ilişkisi; günlük ihtiyaç, kaynaklar ve takviye konusunda dengeli bir okuma.',
-    image: submenuHeroByRoute['/zamansiz-yasam/vitaminler']!,
-  },
+const editorPick = {
+  href: '/zamansiz-yasam/d-vitamini-rehberi',
+  title: 'D Vitamini Rehberi — Tarama, Beslenme, Takviye',
+  lede: 'Tabağını iyi kuruyor olsan bile, güneş ve emilim olmadan D vitamini gerçekten "alınmış" sayılmaz.',
+  writerSlug: 'rima-erdemir',
+  readingMinutes: 9,
+  image: submenuHeroByRoute['/zamansiz-yasam/d-vitamini-rehberi'] ?? submenuHeroByRoute['/zamansiz-yasam/vitaminler']!,
+};
+
+const tocArticles = [
   {
     href: '/zamansiz-yasam/beslenme-yaslanma',
     title: 'Beslenme ve Yaşlanma',
-    excerpt:
-      'Mikro besinleri tek başına değil, beslenme bütünü içinde okumak için temel bir çerçeve; protein, lif ve mineral dengesinin neden önemli olduğunu ele alıyoruz.',
-    image: submenuHeroByRoute['/zamansiz-yasam/beslenme-yaslanma']!,
+    excerpt: 'Mikro besinleri tek başına değil, beslenme bütünü içinde okumak için temel bir çerçeve; protein, lif ve mineral dengesinin neden önemli olduğunu ele alıyoruz.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 8,
   },
 ];
 
@@ -123,28 +126,28 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
-        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yayında olan rehberler</h2>
-        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-          Şu an için D vitamini üzerine derinlemesine bir rehber ile beslenme bütününe dair temel bir okuma
-          mevcut. Yeni başlıklar editöryal takvimde.
-        </p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {
-          articles.map((a) => (
-            <SubmenuLinkCard
-              href={a.href}
-              title={a.title}
-              excerpt={a.excerpt}
-              imageSrc={a.image.src}
-              imageAlt={a.image.alt}
-              cta="Rehberi oku"
-            />
-          ))
-        }
-      </div>
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
+    </SubmenuSection>
+
+    <SubmenuSection variant="white" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      </header>
+
+      <MagazineTOC items={tocArticles} />
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>

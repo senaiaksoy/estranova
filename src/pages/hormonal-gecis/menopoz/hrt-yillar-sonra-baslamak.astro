@@ -27,9 +27,9 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'HRT\'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk';
+const articleTitle = 'HRT\'ye Yıllar Sonra Başlamak: Bir Yolculuk';
 const articleDescription =
-  'Dokuz yıl önce HRT olmadan başlayan menopoz yolculuğu; klinik kılavuzların değişimine tanıklık; ve sonunda hekimle birlikte yeni bir adıma karar verme süreci. Kişisel bir kayıt.';
+  'Dokuz yıl HRT olmadan geçen menopoz yolculuğu, klinik kılavuzların değişimi ve hekimle birlikte yeni bir adıma karar verme süreci — kişisel bir kayıt.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -231,6 +231,7 @@ const articleSchemas = buildArticleSchemas({
         <RelatedReadings
           class="mt-14"
           paths={[
+            '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
             '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
             '/hormonal-gecis/menopoz/menopoz-nedir',
             '/zamansiz-yasam/kemik-sagligi-40-sonrasi',

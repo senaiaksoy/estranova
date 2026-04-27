@@ -39,6 +39,18 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Akşam saatlerinde sakin bir iç mekânda elinde ince bir şal tutan 50+ kadın; ısı dalgalanmalarıyla baş etme ve konfor arayışı teması',
   },
+  '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz': {
+    src: '/images/library/editorial/hg-b12-vitamini-menopoz.webp',
+    alt: 'Sabah ışığında ahşap mutfak masasında elinde sade yoğurt kâsesi tutan 50 yaş kadın, masada doğal B12 kaynakları (yumurta, koyu yeşil yapraklı sebze, tam tahıllı ekmek), bordo keten kaçak; sessiz farkındalık ve bedeni dinleme teması',
+  },
+  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay': {
+    src: '/images/library/editorial/hg-hrt-ilk-alti-ay.webp',
+    alt: 'Sabah ışığında ahşap mutfak tezgahı önünde elinde sade çay fincanı tutan 58 yaş kadın, cream keten gömlek, içe dönük dingin bakış; küçük tabakta zarif amber kutu, cam vazoda Japon esinli taze çiçek, bordo keten kaçak; HRT yolculuğunda altıncı ay ve "ma" aralığı teması',
+  },
+  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': {
+    src: '/images/library/editorial/by-libido-degisimi.webp',
+    alt: 'Geç ikindi ışığında sanat-dolu evinde sessiz bir okuma köşesinde oturan 51 yaş kadın, bordo ipek bluz, içe dönük dingin bakış pencereye yönelik; kucağında açık kitap, yan masada defter, dolma kalem, çay fincanı ve sade kuru çiçek düzeni; kendiyle yeniden tanışma teması',
+  },
   '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi': {
     src: '/images/library/editorial/scholar-portrait-direct-gaze.webp',
     alt: 'Pencere ışığında dümdüz bakan araştırmacı kadın portresi; bilgi okuryazarlığı ve eleştirel okuma teması',

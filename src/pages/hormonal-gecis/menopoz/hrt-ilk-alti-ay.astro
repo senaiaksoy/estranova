@@ -1,0 +1,306 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const route = '/hormonal-gecis/menopoz/hrt-ilk-alti-ay';
+const hero = submenuHeroByRoute[route] ?? {
+  src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
+  alt: "Estranova editöryal görsel placeholder — submenu-heroes.ts altına özel görsel ekleyin.",
+};
+
+const tocEntries = [
+  { id: 'acilis', label: 'Sabah Sahnesi' },
+  { id: 'neden-karar', label: 'Neden Karar Verdim' },
+  { id: 'ilk-iki-ay', label: 'İlk İki Ay — Beklenti ve Gerçek' },
+  { id: 'uc-dort-ay', label: 'Üç–Dört Ay — Bedendeki Değişim' },
+  { id: 'bes-alti-ay', label: 'Beş–Altı Ay — Yerleşen Denge' },
+  { id: 'aile-bagi', label: 'Aile, Eş, Kız — Görünmeyen Etki' },
+  { id: 'henuz-acik', label: 'Hâlâ Açık Olan Sorular' },
+  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = "HRT'nin İlk Altı Ayı — Bir Akran Hikayesi";
+const articleDescription =
+  "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk altı aylık deneyimi: karar süreci, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.";
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'demet-kizilkaya',
+  publishedDate: '27 Nisan 2026',
+  pathname: route,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: ['HRT', 'hormon replasman tedavisi', 'menopoz', '58 yaş', 'akran hikayesi', 'kişisel deneyim', 'ilk 6 ay'],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz · Akran Hikayesi"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="demet-kizilkaya" publishedDate="27 Nisan 2026" readingMinutes={9} />
+
+      <section
+        class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Altı ay önce, hekimimle uzun bir konuşmadan sonra hormon replasman tedavisine başladım. Bu yazı kararı
+          değil; karardan sonraki yarım yılı anlatıyor. Ne tıbbi tavsiye, ne de bir başkasının yolunu çizen bir
+          rehber — sadece bu eşikte duran bir akrandan bir başkasına samimi bir not.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="acilis">Sabah Sahnesi</h2>
+        <p>
+          Geçen pazartesi sabahı çayımı demlerken aklıma geldi: altı aydır küçük bir merhem ve bir hap, mutfak
+          tezgâhımın bir köşesinde sessizce duruyor.
+        </p>
+        <p>
+          Bu yazıyı yazmaya karar vermem de o andan başladı. Çünkü altı ay önce, başlamadan önce, en çok aradığım
+          şey bu küçük rutinin <em>nasıl bir hisle</em> taşındığıydı. Klinik bilgi vardı, kararı destekleyen rehberler
+          vardı; ama "altı ayın sonunda neresinde duruyor olacaksın?" sorusunun cevabını bulmak güçtü. İşte ben
+          şimdi tam o yerde duruyorum — ve sıcağı sıcağına anlatabilirim.
+        </p>
+
+        <h2 id="neden-karar">Neden Karar Verdim</h2>
+        <p>
+          Menopoz benim için bir noktada başladı, bir başka noktada bedenimi çağırmaya başladı. İkisi aynı şey değildi.
+        </p>
+        <p>
+          İlk yıllarda dalgalı geçti — uyku zaman zaman bölünüyordu, gün ortasında bir yorgunluk biniyordu, eski
+          yıllarımdan tanıdığım canlılığın bir kısmı sessizce çekilmişti. Önce bunları "yaşımın doğal akışı" diye
+          okudum. Bir süre öyle yaşadım. Sonra bir noktada — eşimle bir akşam yemeğinde, kızımın yoğun bir
+          haftasında, kendi annemin bakım rutininde — sürekli kısık ateşte yanan bir yorgunluğun altında olduğumu
+          fark ettim. O kararı bedenim verdi; ben yalnızca dinledim.
+        </p>
+        <p>
+          Hekimimle uzun bir konuşma yaptık. Risk profilimi, geçmiş öykümü, aile öyküsünü konuştuk. Hormon
+          replasman tedavisinin kişisel risk ve fayda dengesi her kadında farklıdır <Evidence level={5} /> ve
+          bu denge yıllarca güncellenir. Birlikte kararladık: deneyelim, üç ayda bir tekrar konuşalım.
+        </p>
+        <p class="rounded-[18px] bg-[#FDF8F0] p-5 text-[#4f171c] md:p-6">
+          <strong>Kısa not:</strong> Bu kararın benim için doğru olması, başkası için doğru olduğu anlamına gelmez.
+          HRT bireyselleştirilmiş bir karardır; bu yazı yalnızca <em>karardan sonrasını</em> anlatır.
+        </p>
+
+        <h2 id="ilk-iki-ay">İlk İki Ay — Beklenti ve Gerçek</h2>
+        <p>
+          İlk hafta şaşırtıcı derecede sakin geçti. "Şimdi her şey değişecek mi?" diye beklerken, çoğunlukla bir
+          şey olmadı.
+        </p>
+        <p>
+          İkinci haftada hafif bir baş ağrısı oldu — birkaç gün sürdü, sonra geçti. Üçüncü haftada uyku biraz
+          daha derin gibiydi; ama bu kadar erken bir değişimi tedaviye bağlamak için kanıtım yoktu, belki rastlantıydı.
+          Çünkü beklenti etkisi gerçek bir şey: yeni bir şeye başladığımızda iyi hissetmek istediğimiz için iyi
+          hissedebiliyoruz <Evidence level={4} />. Bunu kendime hatırlattım.
+        </p>
+        <p>
+          Birinci ayın sonunda hekimimle kısa bir görüşme yaptık. "Nasılsın?" sorusuna sade bir cevap verdim:
+          "Şu an aynı, kötü değil." O da şöyle dedi: "İlk iki ay genellikle bir alıştırma dönemidir; vücut hormon
+          dengesini yeniden kurar." İçim rahatladı. Çoğu zaman ihtiyacımız olan, "bu normal" cümlesi.
+        </p>
+        <p>
+          İki aylık dönüm noktasında ilk somut değişim geldi: gece terlemeleri belirgin şekilde azaldı. Hafta
+          başına üç-dört kez gece kalkmıyordum artık; belki bir kez, belki hiç. Bu, üzerimden bir yük kalktığını
+          hissettiren ilk net işaretti.
+        </p>
+
+        <h2 id="uc-dort-ay">Üç–Dört Ay — Bedendeki Değişim</h2>
+        <p>
+          Üçüncü ayda hekimimle tekrar oturduk. Doz ufak bir ayar gördü, başka bir şey değişmedi.
+        </p>
+        <p>
+          O dönemde fark ettiğim üç şey vardı: birincisi gün ortası yorgunluğun yumuşaması; ikincisi cildimde —
+          yıllarca dikkatimi çekmeyen bir kuruluk vardı — yumuşak bir nem dönüşü; üçüncüsü, ki bu en şaşırtıcısıydı,
+          küçük bir <em>iç sessizlik</em>. Sürekli alarmda olan bir şeyin biraz dinlendiğini hissediyordum.
+        </p>
+        <p>
+          Bu değişimlerin tamamı HRT'ye mi bağlıydı? Bilmiyorum. Aynı dönemde sabah yürüyüşlerimi düzene oturtmuştum,
+          akşam çayımı saatten önce kesmeye başlamıştım. Hayatın küçük çapaları aynı anda topladığında, hangisinin
+          ne kadar pay aldığını ayırmak güç. Geniş çalışmalarda menopoza bağlı belirtilerin HRT ile belirgin azalma
+          gösterdiği biliniyor <Evidence level={5} />, ama bireysel deneyimde "şu yüzde HRT, şu yüzde hareket"
+          ayrımını yapmak gerçekçi değil. Bütüne bakıyorum.
+        </p>
+        <p class="rounded-[18px] bg-[#FDF8F0] p-5 text-[#4f171c] md:p-6">
+          <strong>Kısa not:</strong> Bedenin verdiği sinyaller tek bir nedene bağlanamayabilir. Bütüne bakmak,
+          tek değişkene odaklanmaktan çoğu zaman daha doğru bir okuma sunar.
+        </p>
+
+        <h2 id="bes-alti-ay">Beş–Altı Ay — Yerleşen Denge</h2>
+        <p>
+          Beşinci ayın bir akşamı, kızıma bir şey anlatırken cümlemin ortasında kelimeyi kaybetmedim. Küçük ama
+          tanıdık bir an.
+        </p>
+        <p>
+          Yıl başında bunu sık yaşıyordum; bir kelimeyi ararken kafamda boşluk açılıyordu, geri gelmesi için cümleyi
+          başka türlü kuruyordum. Geçen ay fark ettim ki bu durmuş. Yine olur mu? Belki olur. Ama altı ayın
+          sonunda dönüp baktığımda, en çok bunu seviyorum: kafamın eski hızıyla çalıştığı küçük anlar.
+        </p>
+        <p>
+          Diğer kazanımlar daha sade: uykunun belirgin biçimde toparlanması, sıcak basmalarının seyrekleşmesi,
+          eklemlerimde sabah sertliğinin azalması. Hiçbiri "mucize" hissi vermedi — ki vermesi de doğru olmazdı.
+          Hormonal denge tek bir hapla "kurulan" bir şey değil; <strong>yeniden müzakere</strong> edilen bir şey.
+          Vücudumla beraber yeni bir denge bulmaya çalışıyoruz, altı ay bu müzakerenin başlangıcıydı.
+        </p>
+        <p>
+          Yan etki tarafında: ilk iki ay haricinde belirgin bir şey yaşamadım. Hekimimle aramızda bir anlaşma
+          var: tek bir alarm belirtisi olduğunda — beklenmedik bir kanama, göğüste hassasiyet, baş ağrısının
+          değişen karakteri — hemen randevulaşıyoruz. Bu güvenlik ağı kararı taşımayı kolaylaştırıyor
+          <Evidence level={5} />.
+        </p>
+
+        <h2 id="aile-bagi">Aile, Eş, Kız — Görünmeyen Etki</h2>
+        <p>
+          Bir tedavi sadece tedavi alan kişiyi etkilemiyor. Çevresindeki halkayı da yumuşatıyor.
+        </p>
+        <p>
+          Eşim ilk başta sessiz bir endişe içindeydi — "doğru karar mı?" sorusu gözlerinden okunuyordu. Üç ayın
+          sonunda o endişe yerini sade bir gözleme bıraktı: "Daha az yorgunsun." Bu cümle, çoğu klinik raporun
+          veremeyeceği kadar değerli bir geri bildirim. Çünkü onun ölçtüğü şey, benim her sabah aynaya bakarken
+          ölçemediğim şeydi.
+        </p>
+        <p>
+          Kızım — şimdi yirmili yaşlarında — beni daha sakin gördüğünü söyledi. Annemin kuşağı bu konuları
+          neredeyse hiç konuşmadan geçirmişti; benim kuşağım yarı sessiz, yarı utangaç bir şekilde adım atıyor;
+          kızımın kuşağı çok daha açık konuşacak. Üç kuşağın aynı eşikte üç farklı duruşu… ve bu, hem teselli
+          hem de küçük bir gurur veriyor.
+        </p>
+        <p>
+          Japon kültüründe bir kavram var: <em>ma</em>. Tam çevirisi "boşluk" değil, ama "iki şey arasındaki anlamlı
+          aralık." Müzikte iki nota arasındaki sessizlik, bir bahçede iki taş arasındaki yer, bir cümle arasındaki
+          küçük durak. Bu altı ayda en çok bunu öğrendim sanırım: bedenin hormonal denge bulması bir <em>ma</em>
+          dönemi. Doldurulması gereken bir boşluk değil; içine yerleşilmesi gereken bir aralık.
+        </p>
+
+        <h2 id="henuz-acik">Hâlâ Açık Olan Sorular</h2>
+        <p>
+          Bu yazıyı bitirmeden önce dürüst olmam gerek: altı ay az bir süre. Çok şey hâlâ açık.
+        </p>
+        <p>
+          Uzun vadeli güvenlik nasıl olacak? Hekimimle düzenli görüşmelerle takip ediyoruz; mamografi, kemik
+          yoğunluğu ve kan tetkikleri yıllık takvimde. Ne kadar süre kullanacağım? Bu sorunun cevabı önümüzdeki
+          yıllarda hekimimle birlikte yeniden değerlendirilecek; sabit bir "süre" yok. Aile öyküsünden gelen
+          riskler nasıl yönetilecek? Bu da düzenli izlemle açıklığa kavuşacak — tek bir karar değil, sürekli
+          güncellenen bir konuşma <Evidence level={5} />.
+        </p>
+        <p>
+          Bilmediğim çok şey var. Bildiğim şu: bu altı ay, bedenle bir kez daha tanışmak için yeterince zamandı.
+          Önümüzdeki altı ay başka şeyler öğretecek; o zaman tekrar yazarım belki.
+        </p>
+        <p class="rounded-[18px] bg-[#FDF8F0] p-5 text-[#4f171c] md:p-6">
+          <strong>Kısa not:</strong> Akran hikayeleri rehber değildir; bir başlangıç noktasıdır. Senin yolun
+          benimkinden farklı olabilir — ve farklı olması doğaldır.
+        </p>
+
+        <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
+
+        <h3>HRT'nin etkisi ne kadar sürede başlar?</h3>
+        <p>
+          Bireysel deneyim büyük ölçüde değişir. Bazı kadınlarda ilk iki–dört hafta içinde hafif değişimler
+          görülebilir; ancak gerçek dengelenmenin oturması genellikle iki–üç ay sürer
+          <Evidence from={3} to={4} />. İlk hafta hiçbir şey hissetmemek de tamamen normal; sabırla beklemek
+          ve hekimle düzenli iletişim genellikle daha iyi bir yol haritası verir.
+        </p>
+
+        <h3>İlk aylarda yan etki yaşamak yaygın mı?</h3>
+        <p>
+          Evet, hafif yan etkiler ilk iki–üç ayda görülebilir: hafif baş ağrısı, hassasiyet, hafif şişkinlik
+          gibi <Evidence level={5} />. Bunların büyük kısmı vücut alıştıkça geriler. Şiddetli veya beklenmedik
+          bir belirti — örneğin yoğun baş ağrısı, beklenmedik kanama, göğüste belirgin hassasiyet — yaşanırsa
+          hekime başvurmak gerekir.
+        </p>
+
+        <h3>HRT kullanırken günlük yaşam alışkanlıkları neden hâlâ önemli?</h3>
+        <p>
+          Hormon tedavisi tek bir müdahaledir; ancak hareket, beslenme, uyku ve stres yönetimi gibi yaşam
+          alışkanlıkları da menopoz dönemindeki bedensel ve zihinsel iyi oluş için kritik kalır
+          <Evidence level={5} />. HRT bir köprü kurar; günlük alışkanlıklar bu köprünün dayandığı zemini
+          oluşturur. İkisi birbirinin yerine değil, tamamlayıcısıdır.
+        </p>
+
+        <h3>Hekimle ne sıklıkta görüşmek anlamlı?</h3>
+        <p>
+          İlk yıl genellikle 3 aylık aralıklarla, sonrasında klinik duruma göre 6 ay–yıllık aralıklarla. Yıllık
+          mamografi, kan tetkikleri ve kemik yoğunluğu takibi (klinik karara göre) standart izlem çerçevesinin
+          parçasıdır <Evidence level={5} />. Beklenmedik bir belirti olduğunda planlı zamandan önce başvurmak
+          her zaman güvenli tercihtir.
+        </p>
+
+        <h3>Akran hikayeleri okumak neden değerli olabilir?</h3>
+        <p>
+          Klinik bilgi karar verme aşamasında çok değerli; ama "kararı vermek nasıl bir hisle taşınır?" sorusunun
+          cevabı çoğunlukla başka bir kadından gelir. Akran hikayeleri tıbbi tavsiye değildir; ancak sürecin
+          duygusal dokusunu görünür kılar. Bu görünürlük, kendi yolunda yalnız hissetmemek için bir küçük çapa
+          işlevi görür.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+          '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
+          '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
+          '/hormonal-gecis/menopoz/menopoz-nedir',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+        ]}
+      />
+
+      <section
+        class="mt-14 rounded-[28px] border border-[#6B2D3E]/15 border-l-[6px] border-l-[#C9A96E] bg-gradient-to-r from-[#F5EDE0] to-[#FDF8F0] p-7 shadow-sm ring-1 ring-[#6B2D3E]/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
+        <p class="leading-relaxed text-[#2D2D2D]/80">
+          Hormon replasman tedavisi (HRT) menopoz döneminde uygun adaylarda etkili ve büyük ölçüde güvenli bir
+          seçenek olabilir; ancak risk-fayda dengesi bireyseldir ve yıllar içinde yeniden değerlendirilir.
+          Bu yazı bir akranın altı aylık deneyimini paylaşmaktadır; tıbbi tavsiye, tanı veya tedavi yerine geçmez.
+          Tedavi başlama, doz ayarlama, izlem ve sonlandırma kararları her zaman bireysel klinik değerlendirme
+          sonrasında, jinekoloji uzmanı veya tıbbi sorumlusu olan hekim ile birlikte alınmalıdır. Beklenmedik
+          belirtiler veya uzun vadeli planlama için düzenli takip kritik önemdedir.
+        </p>
+      </section>
+
+      <section
+        class="mt-10 rounded-[24px] border border-dashed border-[#6B2D3E]/25 bg-white/95 p-6 ring-1 ring-[#6B2D3E]/10"
+      >
+        <p class="text-sm leading-relaxed text-[#2D2D2D]/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+          Hormon replasman tedavisi başlama, doz ayarlama veya sonlandırma kararları için kendi hekiminle
+          birlikte değerlendirme yapman önemlidir.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

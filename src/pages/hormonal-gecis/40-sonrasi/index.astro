@@ -4,10 +4,11 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuSection from '../../../components/site/SubmenuSection.astro';
-import SubmenuLinkCard from '../../../components/site/SubmenuLinkCard.astro';
 import ChapterMasthead from '../../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../../components/site/ChapterCompass.astro';
+import EditorPickCard from '../../../components/site/EditorPickCard.astro';
+import MagazineTOC from '../../../components/site/MagazineTOC.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { chapterMap, getNextChapter } from '../../../data/chapter-map';
 import { subHubEpigraphs } from '../../../data/sub-hub-epigraphs';
@@ -18,30 +19,39 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const articles = [
+const editorPick = {
+  href: '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu',
+  title: '40 Sonrası Sağlık Kararı: İstek mi, İhtiyaç mı, Yatırım mı?',
+  lede: 'Sağlık kararını "şimdi mi, sonra mı?" sorusu üzerinden okumak, finansal okuryazarlığın yıllar önce öğrettiği bir disiplin… aynı disiplini bedenimize uygulayabilir miyiz?',
+  writerSlug: 'ozlem-denizmen',
+  readingMinutes: 8,
+  image: submenuHeroByRoute['/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu']!,
+};
+
+const tocArticles = [
   {
     href: '/hormonal-gecis/40-sonrasi/tarama-testleri',
     title: 'Tarama ve İzlem: Genel Çerçeve',
     excerpt:
       '40 sonrası dönemde hangi taramaların ne sıklıkta önemli olduğu, kişisel risk profiline göre nasıl planlanabileceği üzerine bütüncül bir bakış.',
-    image: submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tarama-testleri']!,
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 6,
   },
   {
     href: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
     title: 'Kemik Erimesi: Önleme ve Egzersiz',
     excerpt:
       'Menopoz sonrası kemik kaybını yavaşlatan günlük direnç çalışmaları, beslenme ve izleme başlıklarını birlikte ele alan rehber.',
-    image: submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz']!,
+    writerSlug: 'alara-baykent',
+    readingMinutes: 8,
   },
   {
     href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
     title: '40 Yaşından Sonra Kemik Sağlığı',
     excerpt:
       'D vitamini, kalsiyum, hareket ve düzenli izlem; kemik sağlığını uzun vadede korumak için günlük çerçeveler.',
-    image: {
-      src: '/images/library/editorial/journey-40-sonrasi.webp',
-      alt: 'Sonbahar ormanında sakin yürüyen kadın; uzun vadeli sağlık ve hareket teması',
-    },
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 9,
   },
 ];
 
@@ -133,28 +143,28 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">İçerikler</p>
-        <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">40 sonrası seçilmiş rehberler</h2>
-        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
-          Tarama planlaması, kemik sağlığı ve günlük koruyucu adımlar; bu evrede sık karşılaşılan başlıklar üzerine
-          planlı okumalar.
-        </p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {
-          articles.map((a) => (
-            <SubmenuLinkCard
-              href={a.href}
-              title={a.title}
-              excerpt={a.excerpt}
-              imageSrc={a.image.src}
-              imageAlt={a.image.alt}
-              cta="Rehberi oku"
-            />
-          ))
-        }
-      </div>
+      <EditorPickCard
+        href={editorPick.href}
+        title={editorPick.title}
+        lede={editorPick.lede}
+        writerSlug={editorPick.writerSlug}
+        readingMinutes={editorPick.readingMinutes}
+        imageSrc={editorPick.image.src}
+        imageAlt={editorPick.image.alt}
+      />
+    </SubmenuSection>
+
+    <SubmenuSection variant="cream" borderedTop={true}>
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      </header>
+
+      <MagazineTOC items={tocArticles} />
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>

@@ -1,4 +1,5 @@
 import { writers, type Writer } from '../data/writers';
+import { submenuHeroByRoute } from '../data/submenu-heroes';
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -76,6 +77,15 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
   const url = joinUrl(siteUrl, pathname);
   const sectionUrl = sectionPath ? joinUrl(siteUrl, sectionPath) : undefined;
 
+  // Image fallback: explicit `image` opt > submenu hero (auto absolute URL).
+  // Article rich results (Google) require an `image` field. This fallback ensures
+  // every article schema gets an image without requiring per-article wiring.
+  const heroEntry = submenuHeroByRoute[pathname];
+  const heroAbsolute = heroEntry
+    ? (heroEntry.src.startsWith('http') ? heroEntry.src : joinUrl(siteUrl, heroEntry.src))
+    : undefined;
+  const resolvedImage = image ?? heroAbsolute;
+
   const writer = getWriter(writerSlug);
   const isoDate = toISODate(publishedDate);
   const authorPerson: JsonLdSchema = {
@@ -103,7 +113,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     datePublished: isoDate,
     dateModified: isoDate,
     reviewedBy: reviewerPerson,
-    ...(image ? { image } : {}),
+    ...(resolvedImage ? { image: resolvedImage } : {}),
   };
 
   const articleSchema: JsonLdSchema = {
@@ -125,7 +135,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
       logo: { '@type': 'ImageObject', url: joinUrl(siteUrl, '/favicon.svg') },
     },
     reviewedBy: reviewerPerson,
-    ...(image ? { image } : {}),
+    ...(resolvedImage ? { image: resolvedImage } : {}),
   };
 
   const breadcrumbItems: JsonLdSchema[] = [
