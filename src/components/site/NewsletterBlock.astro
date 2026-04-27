@@ -34,14 +34,14 @@ const isCompact = variant === 'compact';
 
 <section
   class:list={[
-    'rounded-[28px] border border-[#6B2D3E]/12 bg-[#FDF8F0] ring-1 ring-[#6B2D3E]/8 shadow-[0_12px_32px_-20px_rgba(44,22,28,0.18)]',
+    'rounded-[28px] border border-burgundy/12 bg-cream-soft ring-1 ring-burgundy/8 shadow-[0_12px_32px_-20px_rgba(44,22,28,0.18)]',
     isCompact ? 'p-6 md:p-7' : 'p-7 md:p-10',
     className,
   ]}
   aria-labelledby={`${formId}-heading`}
 >
   <!-- Eyebrow with brand spark -->
-  <p class="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#C9A96E]">
+  <p class="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-gold">
     <svg class="h-3 w-3 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
       <polygon
         fill="#C9A96E"
@@ -54,7 +54,7 @@ const isCompact = variant === 'compact';
   <h3
     id={`${formId}-heading`}
     class:list={[
-      'font-serif italic leading-tight text-[#4f171c]',
+      'font-serif italic leading-tight text-burgundy-deep',
       isCompact ? 'mb-3 text-2xl' : 'mb-4 text-3xl md:text-4xl',
     ]}
   >
@@ -63,7 +63,7 @@ const isCompact = variant === 'compact';
 
   <p
     class:list={[
-      'leading-relaxed text-[#2D2D2D]/80',
+      'leading-relaxed text-ink/80',
       isCompact ? 'mb-5 text-sm' : 'mb-6 max-w-[52ch] text-base',
     ]}
   >
@@ -90,11 +90,11 @@ const isCompact = variant === 'compact';
       autocomplete="email"
       required
       placeholder="ornek@eposta.com"
-      class="min-h-[48px] w-full min-w-0 flex-1 rounded-xl border border-[#C9A96E]/45 bg-white px-4 text-sm text-[#2D2D2D] outline-none transition placeholder:text-[#2D2D2D]/40 focus:border-[#6B2D3E]/55 focus:ring-2 focus:ring-[#C9A96E]/35"
+      class="min-h-[48px] w-full min-w-0 flex-1 rounded-xl border border-gold/45 bg-white px-4 text-sm text-ink outline-none transition placeholder:text-ink/40 focus:border-burgundy/55 focus:ring-2 focus:ring-gold/35"
     />
     <button
       type="submit"
-      class="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-xl bg-[#4f171c] px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-[#6B2D3E] focus:outline-none focus:ring-2 focus:ring-[#6B2D3E]/40"
+      class="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-xl bg-burgundy-deep px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-burgundy focus:outline-none focus:ring-2 focus:ring-burgundy/40"
     >
       {ctaLabel}
     </button>
@@ -104,7 +104,7 @@ const isCompact = variant === 'compact';
   <p
     id={`${formId}-kvkk`}
     class:list={[
-      'mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-[#C9A96E]/30 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#775a19]/85',
+      'mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-gold/30 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-gold-bronze/85',
       isCompact ? 'text-[10px]' : 'text-[10px] sm:text-[11px]',
     ]}
   >
@@ -115,10 +115,10 @@ const isCompact = variant === 'compact';
       ></polygon>
     </svg>
     <span>SPAM YOK · İSTEDİĞİN AN AYRILIRSIN</span>
-    <span class="text-[#C9A96E]">·</span>
+    <span class="text-gold">·</span>
     <a
       href="/kvkk"
-      class="underline decoration-[#775a19]/30 underline-offset-2 transition hover:text-[#4f171c] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B2D3E]/35 focus-visible:ring-offset-2"
+      class="underline decoration-gold-bronze/30 underline-offset-2 transition hover:text-burgundy-deep focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
     >
       KVKK
     </a>

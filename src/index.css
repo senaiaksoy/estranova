@@ -111,6 +111,17 @@
   --color-surface: #fcf9f4;
   --color-surface-container: #f5f4ef;
   --color-charcoal: #1c1c19;
+
+  /* Editöryal palet — CLAUDE.md §5 marka kilitli renkleri.
+     Component'lerin halihazırda kullandığı arbitrary hex'leri (bg-[#6B2D3E] vb.)
+     semantic utility'lere taşımak için: bg-burgundy, text-ink, bg-cream-soft … */
+  --color-burgundy: #6b2d3e;
+  --color-burgundy-deep: #4f171c;
+  --color-ink: #2d2d2d;
+  --color-gold: #c9a96e;
+  --color-gold-bronze: #775a19;
+  --color-cream-soft: #fdf8f0;
+  --color-cream-warm: #f5ede0;
 }
 
 @layer base {

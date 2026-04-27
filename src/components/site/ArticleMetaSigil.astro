@@ -13,17 +13,17 @@ interface Props {
 const { readingMinutes, evidence, updated } = Astro.props;
 ---
 
-<p class="font-sans text-[10.5px] font-medium uppercase tracking-[0.18em] text-[#2D2D2D]/55 md:text-[11px]">
+<p class="font-sans text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink/55 md:text-[11px]">
   <span class="tabular-nums">{readingMinutes} dk okuma</span>
   {evidence && (
     <>
-      <span class="mx-2 text-[#C9A96E]">·</span>
-      <span>Kanıt: <span class="text-[#6B2D3E]">{evidence}</span></span>
+      <span class="mx-2 text-gold">·</span>
+      <span>Kanıt: <span class="text-burgundy">{evidence}</span></span>
     </>
   )}
   {updated && (
     <>
-      <span class="mx-2 text-[#C9A96E]">·</span>
+      <span class="mx-2 text-gold">·</span>
       <span>Güncel: {updated}</span>
     </>
   )}

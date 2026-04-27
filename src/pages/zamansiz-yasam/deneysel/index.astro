@@ -64,7 +64,7 @@ const neighbors = [
   <SiteNavbar currentPath="/zamansiz-yasam" />
   <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
 
-  <main id="main-content" class="text-[#2D2D2D]">
+  <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Zamansız Yaşam · Deneysel"
       title="Deneysel Yaklaşımlar"
@@ -73,47 +73,47 @@ const neighbors = [
       imageAlt={hero.alt}
     />
 
-    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-12 md:py-16">
+    <section class="border-b border-burgundy/10 bg-cream-soft px-6 py-12 md:py-16">
       <div class="mx-auto max-w-6xl">
-        <nav class="mb-8 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+        <nav class="mb-8 text-sm text-ink/60" aria-label="İçerik yolu">
           <ol class="flex flex-wrap items-center gap-2">
             <li>
-              <a href="/zamansiz-yasam" class="font-medium text-[#6B2D3E] hover:underline">Zamansız Yaşam</a>
+              <a href="/zamansiz-yasam" class="font-medium text-burgundy hover:underline">Zamansız Yaşam</a>
             </li>
             <li aria-hidden="true">/</li>
-            <li class="font-medium text-[#2D2D2D]">Deneysel</li>
+            <li class="font-medium text-ink">Deneysel</li>
           </ol>
         </nav>
 
         <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
           <div>
-            <p class="mb-5 text-lg leading-relaxed text-[#2D2D2D]/82 md:text-xl">
+            <p class="mb-5 text-lg leading-relaxed text-ink/82 md:text-xl">
               Yaşlanma ve uzun ömür alanında çok hızlı bir konuşma var; her hafta yeni bir “çığır açıcı” vaat duyuyoruz.
               Bu sayfanın amacı heyecanı yatıştırmak değil, kanıtın hangi adımda olduğunu görünür kılmak —
               umut da, ihtiyat da bu çerçeveyle daha sağlam oturuyor.
             </p>
-            <p class="text-base leading-relaxed text-[#2D2D2D]/72">
+            <p class="text-base leading-relaxed text-ink/72">
               Aşağıdaki içeriklerde ürün önerisi yapılmaz; mekanizma, mevcut çalışmaların sınırı ve hâlâ açık olan
               sorular sade bir dille aktarılır. Kişisel kullanım kararı her zaman hekiminizle değerlendirilmelidir.
             </p>
           </div>
 
           <aside
-            class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-sm md:p-8"
+            class="rounded-[28px] border border-burgundy/15 bg-white p-7 shadow-sm md:p-8"
             aria-labelledby="deneysel-ozet-baslik"
           >
-            <h2 id="deneysel-ozet-baslik" class="mb-4 font-serif text-xl text-[#2D2D2D]">Bu konuda sık sorulanlar</h2>
-            <ul class="space-y-4 text-sm leading-relaxed text-[#2D2D2D]/78">
-              <li class="border-b border-[#6B2D3E]/10 pb-4">
-                <span class="block font-semibold text-[#2D2D2D]">“Deneysel” ne anlama gelir?</span>
+            <h2 id="deneysel-ozet-baslik" class="mb-4 font-serif text-xl text-ink">Bu konuda sık sorulanlar</h2>
+            <ul class="space-y-4 text-sm leading-relaxed text-ink/78">
+              <li class="border-b border-burgundy/10 pb-4">
+                <span class="block font-semibold text-ink">“Deneysel” ne anlama gelir?</span>
                 Yaklaşımın henüz herkes için standart öneri olmadığını, kanıt gücünün sınırlı olduğunu gösterir.
               </li>
-              <li class="border-b border-[#6B2D3E]/10 pb-4">
-                <span class="block font-semibold text-[#2D2D2D]">Güçlü kanıt nasıl ayırt edilir?</span>
+              <li class="border-b border-burgundy/10 pb-4">
+                <span class="block font-semibold text-ink">Güçlü kanıt nasıl ayırt edilir?</span>
                 Randomize klinik çalışma, geniş örneklem ve tekrarlanabilir sonuç temel güvenilirlik göstergeleridir.
               </li>
               <li>
-                <span class="block font-semibold text-[#2D2D2D]">Bu içerikler ürün reklamı mı?</span>
+                <span class="block font-semibold text-ink">Bu içerikler ürün reklamı mı?</span>
                 Hayır; marka veya satış önerisi yapılmaz. Yalnızca kanıt çerçevesi ve mekanizma açıklanır.
               </li>
             </ul>
@@ -126,7 +126,7 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
@@ -143,7 +143,7 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bu Evrede Okumalar</p>
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
       </header>
 
@@ -151,18 +151,18 @@ const neighbors = [
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Aynı kategoride</p>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Aynı kategoride</p>
       <h2 class="mb-8 font-serif text-2xl md:text-3xl">İlgili alt başlıklar</h2>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         {
           neighbors.map((n) => (
             <a
               href={n.href}
-              class="group rounded-[26px] border border-[#6B2D3E]/12 bg-white p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm"
+              class="group rounded-[26px] border border-burgundy/12 bg-white p-7 transition hover:border-burgundy/28 hover:shadow-sm"
             >
-              <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{n.title}</h3>
-              <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/72">{n.excerpt}</p>
-              <span class="text-sm font-semibold text-[#6B2D3E] group-hover:underline">Sayfaya git →</span>
+              <h3 class="mb-2 font-serif text-xl text-ink group-hover:text-burgundy">{n.title}</h3>
+              <p class="mb-4 text-sm leading-relaxed text-ink/72">{n.excerpt}</p>
+              <span class="text-sm font-semibold text-burgundy group-hover:underline">Sayfaya git →</span>
             </a>
           ))
         }

@@ -25,16 +25,16 @@ const hasNext = nextHref && nextChapter;
 ---
 
 <section
-  class="bg-gradient-to-br from-[#4f171c] to-[#2a0c0f] px-6 py-14 text-[#fcf9f4] md:py-16"
+  class="bg-gradient-to-br from-burgundy-deep to-[#2a0c0f] px-6 py-14 text-surface md:py-16"
   aria-label="Sayfa kapanışı"
 >
   <div class="mx-auto max-w-5xl">
     {hasNext ? (
       <a
         href={nextHref}
-        class="group block border-b border-[#C9A96E]/35 pb-10 transition hover:border-[#C9A96E]"
+        class="group block border-b border-gold/35 pb-10 transition hover:border-gold"
       >
-        <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C9A96E] md:text-xs">
+        <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-gold md:text-xs">
           Bir sonraki bölüm
           {nextNumber && (
             <>
@@ -48,11 +48,11 @@ const hasNext = nextHref && nextChapter;
           <span class="ml-3 inline-block transition-transform group-hover:translate-x-1">→</span>
         </p>
         {nextParent && (
-          <p class="mt-2 text-sm tracking-wide text-[#fcf9f4]/65">{nextParent}</p>
+          <p class="mt-2 text-sm tracking-wide text-surface/65">{nextParent}</p>
         )}
       </a>
     ) : null}
-    <p class:list={[hasNext ? 'mt-8' : '', 'max-w-3xl text-xs leading-relaxed text-[#fcf9f4]/65']}>
+    <p class:list={[hasNext ? 'mt-8' : '', 'max-w-3xl text-xs leading-relaxed text-surface/65']}>
       {disclaimer}
     </p>
   </div>

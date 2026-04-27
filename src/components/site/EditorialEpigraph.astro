@@ -17,13 +17,13 @@ const { quote, attribution, variant = 'cream' } = Astro.props;
   class:list={[
     'relative w-full px-6 py-16 md:py-24',
     variant === 'bordo'
-      ? 'bg-gradient-to-br from-[#4f171c] to-[#2a0c0f] text-[#fcf9f4]'
-      : 'bg-[#FDF8F0] text-[#4f171c]',
+      ? 'bg-gradient-to-br from-burgundy-deep to-[#2a0c0f] text-surface'
+      : 'bg-cream-soft text-burgundy-deep',
   ]}
   aria-label="Editöryel epigraf"
 >
-  <div class="absolute top-0 left-1/2 h-px w-[min(82%,52rem)] -translate-x-1/2 bg-[#C9A96E]/45"></div>
-  <div class="absolute bottom-0 left-1/2 h-px w-[min(82%,52rem)] -translate-x-1/2 bg-[#C9A96E]/45"></div>
+  <div class="absolute top-0 left-1/2 h-px w-[min(82%,52rem)] -translate-x-1/2 bg-gold/45"></div>
+  <div class="absolute bottom-0 left-1/2 h-px w-[min(82%,52rem)] -translate-x-1/2 bg-gold/45"></div>
   <blockquote class="mx-auto max-w-3xl text-center">
     <p class="font-serif text-2xl italic leading-snug md:text-3xl lg:text-[2.4rem] lg:leading-[1.2]">
       &ldquo;{quote}&rdquo;

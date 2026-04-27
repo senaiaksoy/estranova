@@ -64,7 +64,7 @@ const neighbors = [
   <SiteNavbar currentPath="/zamansiz-yasam" />
   <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
 
-  <main id="main-content" class="text-[#2D2D2D]">
+  <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Zamansız Yaşam · Vitaminler"
       title="Vitaminler ve Takviyeler"
@@ -73,47 +73,47 @@ const neighbors = [
       imageAlt={hero.alt}
     />
 
-    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-12 md:py-16">
+    <section class="border-b border-burgundy/10 bg-cream-soft px-6 py-12 md:py-16">
       <div class="mx-auto max-w-6xl">
-        <nav class="mb-8 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+        <nav class="mb-8 text-sm text-ink/60" aria-label="İçerik yolu">
           <ol class="flex flex-wrap items-center gap-2">
             <li>
-              <a href="/zamansiz-yasam" class="font-medium text-[#6B2D3E] hover:underline">Zamansız Yaşam</a>
+              <a href="/zamansiz-yasam" class="font-medium text-burgundy hover:underline">Zamansız Yaşam</a>
             </li>
             <li aria-hidden="true">/</li>
-            <li class="font-medium text-[#2D2D2D]">Vitaminler</li>
+            <li class="font-medium text-ink">Vitaminler</li>
           </ol>
         </nav>
 
         <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
           <div>
-            <p class="mb-5 text-lg leading-relaxed text-[#2D2D2D]/82 md:text-xl">
+            <p class="mb-5 text-lg leading-relaxed text-ink/82 md:text-xl">
               Vitamin denildiğinde aklımıza ilk olarak bir kutu hap geliyor; oysa pek çoğumuz için asıl soru,
               günlük yemek tabağımızın bizi nasıl beslediği. Bu bölüm vitaminleri o bütün içinde okumaya
               davet ediyor: ne zaman gerçekten takviye gerek, ne zaman beslenme yeter?
             </p>
-            <p class="text-base leading-relaxed text-[#2D2D2D]/72">
+            <p class="text-base leading-relaxed text-ink/72">
               Aşağıdaki rehberler kanıt düzeyini görünür kılarak yazılır. Bireysel takviye kararı her zaman
               hekiminizle veya bir diyetisyenle birlikte verilmelidir.
             </p>
           </div>
 
           <aside
-            class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-sm md:p-8"
+            class="rounded-[28px] border border-burgundy/15 bg-white p-7 shadow-sm md:p-8"
             aria-labelledby="vitaminler-ozet-baslik"
           >
-            <h2 id="vitaminler-ozet-baslik" class="mb-4 font-serif text-xl text-[#2D2D2D]">Bu konuda sık sorulanlar</h2>
-            <ul class="space-y-4 text-sm leading-relaxed text-[#2D2D2D]/78">
-              <li class="border-b border-[#6B2D3E]/10 pb-4">
-                <span class="block font-semibold text-[#2D2D2D]">Takviye ne zaman gerekir?</span>
+            <h2 id="vitaminler-ozet-baslik" class="mb-4 font-serif text-xl text-ink">Bu konuda sık sorulanlar</h2>
+            <ul class="space-y-4 text-sm leading-relaxed text-ink/78">
+              <li class="border-b border-burgundy/10 pb-4">
+                <span class="block font-semibold text-ink">Takviye ne zaman gerekir?</span>
                 Beslenmeyle yetersiz alındığında veya hekim önerirse; gelişigüzel kullanım önerilmez.
               </li>
-              <li class="border-b border-[#6B2D3E]/10 pb-4">
-                <span class="block font-semibold text-[#2D2D2D]">Tek başına D vitamini yeterli mi?</span>
+              <li class="border-b border-burgundy/10 pb-4">
+                <span class="block font-semibold text-ink">Tek başına D vitamini yeterli mi?</span>
                 Kemik sağlığı için yeterli değil; kalsiyum, hareket ve dengeli beslenmeyle birlikte değerlendirilir.
               </li>
               <li>
-                <span class="block font-semibold text-[#2D2D2D]">Kanıt düzeyi nasıl okunmalı?</span>
+                <span class="block font-semibold text-ink">Kanıt düzeyi nasıl okunmalı?</span>
                 Rehberlerimizde güçlü ve sınırlı kanıt etiketleriyle gösterilir; karar bu çerçevede şekillenir.
               </li>
             </ul>
@@ -126,7 +126,7 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
@@ -143,7 +143,7 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Evrede Okumalar</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bu Evrede Okumalar</p>
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
       </header>
 
@@ -151,18 +151,18 @@ const neighbors = [
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Aynı kategoride</p>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Aynı kategoride</p>
       <h2 class="mb-8 font-serif text-2xl md:text-3xl">İlgili alt başlıklar</h2>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         {
           neighbors.map((n) => (
             <a
               href={n.href}
-              class="group rounded-[26px] border border-[#6B2D3E]/12 bg-white p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm"
+              class="group rounded-[26px] border border-burgundy/12 bg-white p-7 transition hover:border-burgundy/28 hover:shadow-sm"
             >
-              <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{n.title}</h3>
-              <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/72">{n.excerpt}</p>
-              <span class="text-sm font-semibold text-[#6B2D3E] group-hover:underline">Sayfaya git →</span>
+              <h3 class="mb-2 font-serif text-xl text-ink group-hover:text-burgundy">{n.title}</h3>
+              <p class="mb-4 text-sm leading-relaxed text-ink/72">{n.excerpt}</p>
+              <span class="text-sm font-semibold text-burgundy group-hover:underline">Sayfaya git →</span>
             </a>
           ))
         }

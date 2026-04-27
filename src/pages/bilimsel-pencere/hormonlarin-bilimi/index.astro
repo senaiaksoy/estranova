@@ -42,7 +42,7 @@ const neighbors = [
 >
   <SiteNavbar currentPath="/bilimsel-pencere" />
 
-  <main id="main-content" class="text-[#2D2D2D]">
+  <main id="main-content" class="text-ink">
     <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
 
     <SubmenuHero
@@ -53,26 +53,26 @@ const neighbors = [
       imageAlt={hero.alt}
     />
 
-    <section class="border-b border-[#6B2D3E]/10 bg-[#FDF8F0] px-6 py-16 md:py-20">
+    <section class="border-b border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
-        <nav class="mb-10 text-sm text-[#2D2D2D]/60" aria-label="İçerik yolu">
+        <nav class="mb-10 text-sm text-ink/60" aria-label="İçerik yolu">
           <ol class="flex flex-wrap items-center gap-2">
-            <li><a href="/bilimsel-pencere" class="font-medium text-[#6B2D3E] hover:underline">Bilimsel Pencere</a></li>
+            <li><a href="/bilimsel-pencere" class="font-medium text-burgundy hover:underline">Bilimsel Pencere</a></li>
             <li aria-hidden="true">/</li>
-            <li class="font-medium text-[#2D2D2D]">Hormonların Bilimi</li>
+            <li class="font-medium text-ink">Hormonların Bilimi</li>
           </ol>
         </nav>
 
         <div class="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14">
           <div class="lg:col-span-8">
-            <p class="editorial-dropcap mb-7 text-lg leading-relaxed text-[#2D2D2D]/85 md:text-xl">
+            <p class="editorial-dropcap mb-7 text-lg leading-relaxed text-ink/85 md:text-xl">
               Östrojen, progesteron ve testosteron; reseptörleri neredeyse her dokuda bulunan
               üç moleküldür. Beyindeki sinaptik plastisiteyi, damar endotelinin esnekliğini,
-              kemik döngüsündeki <strong class="font-semibold text-[#2D2D2D]">osteoklast-osteoblast dengesini</strong>, ciltteki kolajen
+              kemik döngüsündeki <strong class="font-semibold text-ink">osteoklast-osteoblast dengesini</strong>, ciltteki kolajen
               sentezini hep birlikte düzenlerler. Menopozda yaşanan şey bu nedenle bir
               "eksiklik" değil; çok merkezli bir yeniden ayarlanmadır.
             </p>
-            <p class="text-base leading-relaxed text-[#2D2D2D]/72 md:text-lg">
+            <p class="text-base leading-relaxed text-ink/72 md:text-lg">
               Bu yeniden ayarlanmanın iyi anlaşılması, hem hormon tedavisi kararlarının hem de
               yaşam tarzı müdahalelerinin kalitesini doğrudan değiştiriyor. Buradaki yazılar;
               mekanizmayı, kanıtı ve tartışmalı alanları üçünü birden masaya yatırıyor.
@@ -84,10 +84,10 @@ const neighbors = [
               <MarginaliaItem label="Yayın" value="Şubat 2026 · Düzenli güncellenir" />
               <MarginaliaItem label="Mekanizma" emphasized="200+ doku tipinde östrojen reseptörü ifadesi belgelenmiş." />
               <MarginaliaItem label="Sık sorulanlar">
-                <ul class="mt-2 space-y-3 text-sm leading-snug text-[#2D2D2D]/78">
-                  <li><span class="block font-semibold text-[#2D2D2D]">Östrojen yalnızca üreme sistemini mi etkiler?</span>Hayır; reseptörleri beyin, damar, kemik, deri, hatta bağırsak mukozasında bulunur.</li>
-                  <li><span class="block font-semibold text-[#2D2D2D]">Progesteron sadece dengeleyici mi?</span>Çok daha fazlası — GABA-erjik etkiyle uyku ve anksiyete üzerinde bağımsız rolü vardır.</li>
-                  <li><span class="block font-semibold text-[#2D2D2D]">Testosteron kadın hormonu mu?</span>Evet — libido, kas kütlesi, bilişsel keskinlik üzerinde etkilidir.</li>
+                <ul class="mt-2 space-y-3 text-sm leading-snug text-ink/78">
+                  <li><span class="block font-semibold text-ink">Östrojen yalnızca üreme sistemini mi etkiler?</span>Hayır; reseptörleri beyin, damar, kemik, deri, hatta bağırsak mukozasında bulunur.</li>
+                  <li><span class="block font-semibold text-ink">Progesteron sadece dengeleyici mi?</span>Çok daha fazlası — GABA-erjik etkiyle uyku ve anksiyete üzerinde bağımsız rolü vardır.</li>
+                  <li><span class="block font-semibold text-ink">Testosteron kadın hormonu mu?</span>Evet — libido, kas kütlesi, bilişsel keskinlik üzerinde etkilidir.</li>
                 </ul>
               </MarginaliaItem>
             </MarginaliaRail>
@@ -100,7 +100,7 @@ const neighbors = [
 
     <SubmenuSection variant="white" borderedTop={false}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
@@ -118,14 +118,14 @@ const neighbors = [
     <Asterism />
 
     <SubmenuSection variant="cream" borderedTop={false}>
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Aynı kategoride</p>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Aynı kategoride</p>
       <h2 class="mb-8 font-serif text-2xl md:text-3xl">İlgili alt başlıklar</h2>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         {neighbors.map((n) => (
-          <a href={n.href} class="group rounded-[26px] border border-[#6B2D3E]/12 bg-white p-7 transition hover:border-[#6B2D3E]/28 hover:shadow-sm">
-            <h3 class="mb-2 font-serif text-xl text-[#2D2D2D] group-hover:text-[#6B2D3E]">{n.title}</h3>
-            <p class="mb-4 text-sm leading-relaxed text-[#2D2D2D]/72">{n.excerpt}</p>
-            <span class="text-sm font-semibold text-[#6B2D3E] group-hover:underline">Sayfaya git →</span>
+          <a href={n.href} class="group rounded-[26px] border border-burgundy/12 bg-white p-7 transition hover:border-burgundy/28 hover:shadow-sm">
+            <h3 class="mb-2 font-serif text-xl text-ink group-hover:text-burgundy">{n.title}</h3>
+            <p class="mb-4 text-sm leading-relaxed text-ink/72">{n.excerpt}</p>
+            <span class="text-sm font-semibold text-burgundy group-hover:underline">Sayfaya git →</span>
           </a>
         ))}
       </div>

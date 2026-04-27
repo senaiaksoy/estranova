@@ -9,13 +9,13 @@ interface Props {
 const { variant = 'cream', borderedTop = true, class: className } = Astro.props;
 
 const bg = {
-  cream: 'bg-[#FDF8F0]',
+  cream: 'bg-cream-soft',
   white: 'bg-white',
-  sand: 'bg-[#F5EDE0]',
+  sand: 'bg-cream-warm',
 }[variant];
 ---
 
-<section class:list={[borderedTop && 'border-t border-[#6B2D3E]/10', bg, 'px-6 py-16 md:py-20', className]}>
+<section class:list={[borderedTop && 'border-t border-burgundy/10', bg, 'px-6 py-16 md:py-20', className]}>
   <div class="mx-auto max-w-6xl">
     <slot />
   </div>

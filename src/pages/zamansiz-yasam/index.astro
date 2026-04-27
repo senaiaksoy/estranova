@@ -103,7 +103,7 @@ const tocArticles = [
 
   <ChapterMasthead variant="section" chapter="Zamansız Yaşam" />
 
-  <main id="main-content" class="text-[#2D2D2D]">
+  <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Kategori"
       title="Zamansız Yaşam"
@@ -131,7 +131,7 @@ const tocArticles = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Editör'ün Seçimi</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu kategoriden bir okuma</h2>
       </header>
 
@@ -148,7 +148,7 @@ const tocArticles = [
 
     <SubmenuSection variant="cream" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Bu Kategoride Okumalar</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bu Kategoride Okumalar</p>
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
       </header>
 
@@ -158,10 +158,10 @@ const tocArticles = [
     {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={true}>
-      <div class="rounded-[36px] border border-[#6B2D3E]/12 bg-[#F5EDE0] p-8 shadow-sm ring-1 ring-black/5 md:p-12">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Kanıt Düzeyi</p>
+      <div class="rounded-[36px] border border-burgundy/12 bg-cream-warm p-8 shadow-sm ring-1 ring-black/5 md:p-12">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Kanıt Düzeyi</p>
         <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">İçeriklerimiz nasıl değerlendirilir?</h2>
-        <p class="mb-8 max-w-3xl text-lg leading-relaxed text-[#2D2D2D]/75">
+        <p class="mb-8 max-w-3xl text-lg leading-relaxed text-ink/75">
           Bu kategorideki her makale bilimsel editör tarafından değerlendirilir. Kanıt düzeyi işaretleri, bilginin araştırma gücünü
           hızlıca görmenize yardımcı olur.
         </p>
@@ -169,49 +169,49 @@ const tocArticles = [
         <div class="mb-8 space-y-3">
           {
             evidenceLevels.map((n) => (
-              <div class="flex items-center gap-4 rounded-2xl bg-white/90 px-4 py-3 ring-1 ring-[#6B2D3E]/12">
-                <span class="w-24 shrink-0 text-sm font-semibold text-[#2D2D2D]">Seviye {n}</span>
-                <div class="h-2 flex-1 overflow-hidden rounded-full bg-[#FDF8F0]">
-                  <div class="h-full rounded-full bg-[#6B2D3E]" style={`width: ${n * 20}%`} />
+              <div class="flex items-center gap-4 rounded-2xl bg-white/90 px-4 py-3 ring-1 ring-burgundy/12">
+                <span class="w-24 shrink-0 text-sm font-semibold text-ink">Seviye {n}</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-full bg-cream-soft">
+                  <div class="h-full rounded-full bg-burgundy" style={`width: ${n * 20}%`} />
                 </div>
               </div>
             ))
           }
         </div>
 
-        <div class="overflow-x-auto rounded-2xl ring-1 ring-[#6B2D3E]/15">
+        <div class="overflow-x-auto rounded-2xl ring-1 ring-burgundy/15">
           <table class="min-w-full border-collapse bg-white text-sm">
             <thead>
-              <tr class="bg-[#FDF8F0]">
-                <th class="px-4 py-3 text-left font-semibold text-[#2D2D2D]">Seviye</th>
-                <th class="px-4 py-3 text-left font-semibold text-[#2D2D2D]">Gösterim</th>
-                <th class="px-4 py-3 text-left font-semibold text-[#2D2D2D]">Kısa Açıklama</th>
+              <tr class="bg-cream-soft">
+                <th class="px-4 py-3 text-left font-semibold text-ink">Seviye</th>
+                <th class="px-4 py-3 text-left font-semibold text-ink">Gösterim</th>
+                <th class="px-4 py-3 text-left font-semibold text-ink">Kısa Açıklama</th>
               </tr>
             </thead>
-            <tbody class="text-[#2D2D2D]/80">
-              <tr class="border-t border-[#6B2D3E]/15">
+            <tbody class="text-ink/80">
+              <tr class="border-t border-burgundy/15">
                 <td class="px-4 py-3">Seviye 5</td>
-                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={5} /></td>
+                <td class="px-4 py-3 text-burgundy"><Evidence level={5} /></td>
                 <td class="px-4 py-3">Yüksek düzeyde, tutarlı bilimsel kanıt.</td>
               </tr>
-              <tr class="border-t border-[#6B2D3E]/15">
+              <tr class="border-t border-burgundy/15">
                 <td class="px-4 py-3">Seviye 4</td>
-                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={4} /></td>
+                <td class="px-4 py-3 text-burgundy"><Evidence level={4} /></td>
                 <td class="px-4 py-3">Güçlü kanıt, sınırlı belirsizlikler bulunabilir.</td>
               </tr>
-              <tr class="border-t border-[#6B2D3E]/15">
+              <tr class="border-t border-burgundy/15">
                 <td class="px-4 py-3">Seviye 3</td>
-                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={3} /></td>
+                <td class="px-4 py-3 text-burgundy"><Evidence level={3} /></td>
                 <td class="px-4 py-3">Orta düzey kanıt, yeni verilerle güncellenebilir.</td>
               </tr>
-              <tr class="border-t border-[#6B2D3E]/15">
+              <tr class="border-t border-burgundy/15">
                 <td class="px-4 py-3">Seviye 2</td>
-                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={2} /></td>
+                <td class="px-4 py-3 text-burgundy"><Evidence level={2} /></td>
                 <td class="px-4 py-3">Sınırlı kanıt, dikkatli yorum gerekir.</td>
               </tr>
-              <tr class="border-t border-[#6B2D3E]/15">
+              <tr class="border-t border-burgundy/15">
                 <td class="px-4 py-3">Seviye 1</td>
-                <td class="px-4 py-3 text-[#6B2D3E]"><Evidence level={1} /></td>
+                <td class="px-4 py-3 text-burgundy"><Evidence level={1} /></td>
                 <td class="px-4 py-3">Ön bilgi niteliğinde, araştırma erken aşamada.</td>
               </tr>
             </tbody>
@@ -222,9 +222,9 @@ const tocArticles = [
 
     <SubmenuSection variant="white" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Öne Çıkanlar</p>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Öne Çıkanlar</p>
         <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
-        <p class="text-lg leading-relaxed text-[#2D2D2D]/75">
+        <p class="text-lg leading-relaxed text-ink/75">
           Bu kategorideki popüler başlıklardan örnek içerikler.
         </p>
       </header>
