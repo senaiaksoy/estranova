@@ -24,7 +24,7 @@ export const writers: Writer[] = [
     role: 'Yönetici Editör / Ana Yazar',
     ageBand: '55-56',
     publicBio:
-      'Robert College ve Boğaziçi Üniversitesi İşletme mezunu. Uzun yıllar kurumsal bankacılıkta çalıştıktan sonra kendi işini kurarak yüz kişiyi aşan bir ekibi yönetti. Hormonal geçiş döneminde önleyici sağlık, araştırmaya dayalı karar ve yaşam tarzı dengesi üzerine içerik üretiyor.',
+      'Uzun yıllar kurumsal bankacılıkta çalıştıktan sonra kendi işini kuran bir iş insanı; yüz kişiyi aşkın bir ekibi yönetti. Estranova\'da yayın çizgisini, içerik önceliklerini ve önleyici sağlık başlıklarını şekillendiriyor. Telaşı sevmeyen, kararı veriye konuşturarak veren bir akran.',
     signaturePhrase:
       'Hormonal geçişi sakin bir araştırmacı gözüyle okuyor; kontrolü kaybetmeden anlamayı kolaylaştırıyor.',
     portrait: '/images/writers/berna-aksoy.webp',
@@ -53,7 +53,7 @@ export const writers: Writer[] = [
     role: 'Sağlık Yazarı / Konuk Katkı',
     ageBand: '30-31',
     publicBio:
-      'Eski profesyonel windsurfer; adolesan döneminde voleybol alt yapısında oynadı, ardından profesyonel seviyede windsurfing yaptı. Atlar, köpekler ve kuşlarla çevrili bir yaşam sürüyor. Cumhuriyet Pazar Eki\'nde haftalık yazıyor, anti-aging ve well-being konularına yakın bir sporcu/yazar.',
+      'Eski profesyonel windsurfer; sporun içinde geçen uzun yıllar bedeni okuma alışkanlığını kalıcı kıldı. Estranova\'da hareket, anti-aging ve sürdürülebilir egzersiz başlıklarında sporcu beden okumasıyla yazıyor. Atlar, köpekler ve kuşlarla iç içe yaşayan, anne kuşağını sevgiyle gözlemleyen genç bir akran.',
     signaturePhrase:
       'Anne kuşağını gözlemleyen, sporcu beden okumasıyla erken hazırlık yazıları yazan genç bir akran.',
     portrait: '/images/writers/alara-baykent.webp',
@@ -82,7 +82,7 @@ export const writers: Writer[] = [
     role: 'Hukuk ve Yaşam Tarzı Yazarı / Konuk Katkı',
     ageBand: '47',
     publicBio:
-      "Galatasaray Lisesi'nin ardından Galatasaray Üniversitesi Hukuk Fakültesi'nden 2003'te mezun oldu. İstanbul Barosu'na kayıtlı avukat ve sicilli arabulucu; aile bürosu Özeray Hukuk'ta yerli ve yabancı şirketlere danışmanlık veriyor. 2018'den bu yana Alarko Carrier Yönetim Kurulu'nda bağımsız üye; Denetim Komitesi ile Kurumsal Yönetim Komitesi'nin başkanlığını yürütüyor. Mesleki çizgisi belirgin: işi sonuna kadar takip eden, alanı dışındaki konularda uzmanına danışmaktan çekinmeyen, uyuşmazlıkta uzlaşmayı önceleyen titiz bir hat. İstanbul'da 2016 doğumlu oğluyla yaşıyor. Özel hayatında neşeli; iyi yemek, iyi giyim ve seçici bir estetik bilinciyle 40 sonrası yaşam gustosunu gündelik akışın merkezine alıyor. Estranova için hak, sınır, karar ve gündelik yaşam dengesi başlıklarında — gerektiğinde hukukçu kimliğini de devreye sokarak — akran perspektifiyle yazıyor.",
+      "İstanbul Barosu'na kayıtlı avukat ve sicilli arabulucu; aile bürosunda yerli ve yabancı şirketlere danışmanlık veriyor. Estranova'da hak, sınır, karar ve gündelik yaşam dengesi başlıklarında akran perspektifiyle yazıyor. Uzlaşmayı önemseyen titiz bir hukukçu; iyi yemek ve seçici bir estetik gözle gündelik neşesini koruyan bir akran.",
     signaturePhrase:
       'Uzlaşmayı önceleyen titiz bir avukat-arabulucu; 40 sonrası yaşam gustosunu seçici estetik ve gündelik neşeyle yazan akran sesi.',
     focusAreas: ['Hak & Sınır', 'Karar & Uzlaşma', 'Yaşam Tarzı', 'Estetik & Gusto'],
@@ -110,7 +110,7 @@ export const writers: Writer[] = [
     role: 'Araştırma Yazarı / Konuk Katkı — Üç Kuşaklı Tanıklık',
     ageBand: '55-57',
     publicBio:
-      "Fransız liseli, Amerika'da Otel & Restoran Yönetimi ve Reklamcılık eğitimi aldı. 20 yıl uluslararası şirketlerde pazarlama ve marka yönetiminde çalıştı; halen Artthink Story Telling Agency'de marka stratejisi, deneyim ve kimlik konularında danışmanlık veriyor. Plume Magazine ve Mahmure'de yayınlanmış yazıları var. İstanbul'da 16 yaşındaki kızıyla yaşıyor; uzun menopoz deneyimini yakın dönemde başlanan HRT yolculuğuyla birleştiriyor. 50+ yaşam döngüsünü zamanı geriye sarma (time reverse) ve biohacking eksenlerinde okuyan; modern bilim ile rafine estetik anlayışını bir araya getiren bir araştırmacı yazar. Üç kuşaklı kadın bağının sıcak gözlemcisi.",
+      "Marka stratejisi ve deneyim danışmanı; Plume Magazine ve Mahmure'de yazıları yayımlandı. Estranova'da uzun menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını araştırmacı bir gözle yazıyor. Soruyu seven, yarım bırakmayı bilen, samimi itiraflarıyla okurun yanına oturan meraklı bir gezgin.",
     signaturePhrase:
       'Dokuz yıllık menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını soru-cevap akrandiyaloğu, üç nokta ve samimi itiraflarla harmanlayan gezgin bir araştırmacı.',
     portrait: '/images/writers/basak-pelister.webp',
@@ -153,7 +153,7 @@ export const writers: Writer[] = [
     role: 'Yaşam & Estetik Yazarı / Konuk Katkı',
     ageBand: '55',
     publicBio:
-      "Diş hekimliği eğitimi almış, 55 yaşında bir anne ve yazar. Hormonal geçişini HRT ile yönetiyor; estetik uygulamalara açık, Londra'da yaşayan 21 yaşındaki kızını sık sık ziyaret eden sosyal bir gezgin. Kendi bedeninde yaşadığı deneyimi akran tonuyla paylaşıyor — uzman sesi değil, aynı yoldan geçen bir arkadaş perspektifi.",
+      "Diş hekimliği eğitimi almış bir anne ve yazar; hormonal geçişini HRT ile yönetiyor. Estranova'da HRT deneyimi, estetik bakım ve seyahat-sosyal yaşam başlıklarında kendi bedeninde yaşadıklarını akran tonuyla paylaşıyor. Londra-İstanbul arasında gezinen, deneyerek öğrenen, neşesini düşürmeyen bir akran.",
     signaturePhrase:
       'HRT ile geçişini canlı tutan, estetiği deneyerek öğrenen, Londra-İstanbul arasında gezinen neşeli bir akran.',
     portrait: '/images/writers/duygu-karaosmanoglu.webp',
@@ -182,7 +182,7 @@ export const writers: Writer[] = [
     role: 'Finansal Sağlık & Yaşam Yazarı / Konuk Katkı',
     ageBand: '55',
     publicBio:
-      "Cornell Üniversitesi Endüstri İşletmeciliği mezunu; MIT Sloan MBA sahibi; Stanford ve Harvard Business School yönetim programlarını tamamladı. Merrill Lynch ve Garanti Yatırım'ın ardından Doğuş Grubu'nda Bütçe Planlama ve Strateji Bölüm Başkanlığı yaptı. 2010'da Türkiye'nin ilk finansal okuryazarlık hareketi Para Durumu'nu ve FODER'i kurdu; 2011'de Dünya Ekonomik Forumu tarafından Genç Küresel Liderler listesine seçildi. Kadın sağlığı ve 40 sonrası dayanıklılık konularına finansal okuryazarlık perspektifi katıyor.",
+      "MIT Sloan MBA'lı bir finans profesyoneli; Türkiye'nin ilk finansal okuryazarlık hareketi Para Durumu'nun kurucusu. Estranova'da finansal sağlık, dayanıklılık ve 40 sonrası karar perspektifi başlıklarında yazıyor. Karmaşık seçenekleri sade kontrol listelerine indirgeyen, okuru telaşa düşürmeden yön gösteren bir akran.",
     signaturePhrase:
       'Finansal dayanıklılığı kadın sağlığı diline taşıyan, 40 sonrası hayatı meraklı bir akran bakışıyla okuyan bir ses.',
     portrait: '/images/writers/ozlem-denizmen.webp',
@@ -211,7 +211,7 @@ export const writers: Writer[] = [
     role: 'Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı',
     ageBand: '55-56',
     publicBio:
-      "İstanbul Üniversitesi İşletme Fakültesi mezunu. Medya kariyerini Milliyet'te reklam grup yöneticiliğinden başlatıp MedyaNet Genel Müdürlüğü ve Demirören Medya Holding Reklam Grubu Başkanlığı ile sürdürdü. IAB Türkiye ve MMA Türkiye yönetim kurullarında görev aldı; halen Sparkle Medya'da ortak. Teknoloji ve yeniliği bilimsel bir okurun titizliğiyle takip eder; Estranova'da aynı zamanda editöryal süreç danışmanlığı yaparak kaynak doğrulama ve yayın akışına katkı verir.",
+      "Medya ve dijital yayıncılıkta yıllarca yöneticilik yaptı; halen Sparkle Medya'da ortak. Estranova'da bilim ve teknoloji başlıklarını araştırmacı titizliğiyle yazıyor; aynı zamanda kaynak doğrulama ve yayın akışına editöryal danışmanlık veriyor. Bilgi kirliliğini ayıklamayı seven; \"kaynak nereden?\" sorusunu sormaktan çekinmeyen biri.",
     signaturePhrase:
       'Bilimi ve teknolojiyi meraklı bir araştırmacı titizliğiyle takip eden, editöryal süreç akışına da göz kulak olan bir ses.',
     portrait: '/images/writers/rima-erdemir.webp',
@@ -240,7 +240,7 @@ export const writers: Writer[] = [
     role: 'Gastronomi ve Sürdürülebilirlik Yazarı / Konuk Katkı',
     ageBand: '57-58',
     publicBio:
-      "ODTÜ İşletme mezunu. Ankara'da savunma sanayinde başladığı iş hayatını 1994'te kurduğu ilk kafe markası ile gastronomi dünyasına taşıdı; Türkiye'de kafe ve modern Anadolu mutfağı kültürünün öncülerinden biri oldu. Uluslararası sürdürülebilirlik gündeminde kadının ekonomik katılımı üzerine çalışmalar yürüttü; Birleşmiş Milletler Genel Kurulu'nda Türkiye'de kadının statüsü üzerine konuştu. 2012-2023 arasında Hürriyet'te lifestyle, kültür-sanat ve gastronomi köşesi yazdı.",
+      "Türkiye'de modern Anadolu mutfağı kültürünün öncülerinden bir girişimci; uzun yıllar Hürriyet'te lifestyle ve gastronomi köşesi yazdı. Estranova'da beslenme, sürdürülebilirlik ve sabah rutinleri başlıklarını sofra sıcaklığıyla yazıyor. Kültürel referansı bir mevsim sebzesi gibi gündelik hayata sokan, üç noktayı seven bir akran.",
     signaturePhrase:
       'Anadolu mutfak bilgeliğini sürdürülebilir yaşamla birleştiren; kişisel bir hafta anısıyla başlayıp kültürel-edebi bir köprüden geçen, sabah sesli bir rehber.',
     portrait: '/images/writers/gamze-cizreli.webp',
@@ -279,7 +279,7 @@ export const writers: Writer[] = [
     role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
     ageBand: 'Belirtilmedi',
     publicBio:
-      'Işık Selin Günçe, tiyatro sanatçısı kimliğini kadın sağlığı içerik üretimiyle birleştiren bir yazardır. Hormonal geçiş dönemi ve iyi yaşam başlıklarında hazırladığı metinlerde anlaşılır dili, sahne disipliniyle gelen güçlü anlatımı ve okurla sıcak temas kuran üslubu öne çıkar. İçeriklerinde okuyucunun doğru zamanda uzman desteğine yönelmesini desteklemeyi amaçlar.',
+      'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı içerik üretimine taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurla sıcak temas kuran bir üslupla yazıyor. Panik değil yön duygusu veren, okurun hissini önce normalize eden bir akran.',
     signaturePhrase:
       'Tiyatro sanatçısı duyarlılığıyla perimenopoz ve menopoz başlıklarını sadeleştiren, okura sahici bir eşlik duygusu veren bir ses.',
     portrait: '/images/writers/isik-selin-kuyumcu.jpg',
@@ -314,7 +314,7 @@ export const writers: Writer[] = [
     role: 'Kimsenin Yazmak İstemediği Konu Yazarı',
     ageBand: '50+',
     publicBio:
-      'Estranova\'nın bilimsel editörü. Bu yazıyı yazmak için kimse gönüllü olmayınca masaya kendisi oturdu. Burada hekim kimliğinden çok, yıllardır kadın sağlığının içinde olmuş ve bu konuların önemini öğrenmiş biri olarak yazıyor — tıbbi jargon değil, incitmeyen bir dil ve uygulanabilir öneriler.',
+      'Estranova\'nın bilimsel editörü; ama bu kartta hekim kimliğini değil, yıllardır kadın sağlığının içinde olmuş birinin sesini taşıyor. Vajinal sağlık, idrar kaçırma ya da libido gibi konularda kimse yazmaya gönüllü olmadığında masaya kendisi oturuyor. Tıbbi jargon değil, komşu sıcaklığıyla konuşan; soruyu küçümsemeyen biri.',
     signaturePhrase:
       'Konuşulması zor ama bilinmesi gereken konuları, jargon değil komşu sıcaklığıyla anlatan yazar.',
     portrait: '/images/writers/senai-aksoy.webp',
@@ -345,7 +345,7 @@ export const writers: Writer[] = [
     role: 'Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı',
     ageBand: '58',
     publicBio:
-      "1968 İstanbul doğumlu. Beşiktaş Kız Lisesi'nin ardından Marmara Üniversitesi İngilizce Öğretmenliği'nden mezun oldu; üniversite yıllarında öğrenmeye başladığı Japonca'da 1992'de Japon hükümetinin dünya genelinde düzenlediği Yeterlilik Sınavı'nda Türkiye birincisi oldu. 1989-1991 arasında İstanbul Japon Okulu'nda İngilizce öğretmenliği yaptı; 1991-2014 arasında Japonya Dış Ticaret Teşkilatı'nın (JETRO) İstanbul Ofisi'nde çalışarak iki kültür arasındaki kurumsal hattı uzun yıllar yakından izledi. Bugün Türk-Japon Kadınları Dostluk ve Kültür Derneği'ndeki sosyal projelerde yer alıyor; İstanbul'da yaşayan yabancılara Türkçe dersleri veriyor. Evli ve bir kız annesi. 58 yaşında, menopoz döneminde ve HRT kullanımıyla geçişi deneyimleyen bir akran sesi olarak; iki kültürün sakin gözlemini aile dengesi ve gündelik nezaketle harmanlayan içerikler üretir.",
+      "İngilizce öğretmenliği mezunu; uzun yıllar Japonya Dış Ticaret Teşkilatı'nın İstanbul ofisinde çalışarak iki kültürü yakından izledi. Estranova'da menopoz deneyimi, Japon kültürü ve gündelik nezaket başlıklarında HRT yolunu paylaşan bir akran tonuyla yazıyor. Aile sıcaklığını ve sakin gözlemi her satıra taşıyan candan bir ses.",
     signaturePhrase:
       'Türkiye-Japonya hattında uzun yıllar çalışmış; menopoz geçişini iki kültürün sakinliği, aile sıcaklığı ve gündelik nezaketle yazan candan bir akran sesi.',
     portrait: '/images/writers/demet-kizilkaya.webp',
