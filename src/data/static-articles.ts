@@ -228,7 +228,7 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
-    title: 'Bellek ve Odaklanma — Menopozda Kognitif Değişimler',
+    title: 'Bellek ve Odaklanma — Menopozda Bilişsel Değişimler',
     description: 'Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim yöntemleri hakkında rehberlik.',
     publishedDate: '24 Mart 2026',
     writerSlug: 'rima-erdemir',

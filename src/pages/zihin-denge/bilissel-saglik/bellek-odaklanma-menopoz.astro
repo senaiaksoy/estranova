@@ -17,19 +17,19 @@ const hero = submenuHeroByRoute['/zihin-denge/bilissel-saglik/bellek-odaklanma-m
 
 const tocEntries = [
   { id: 'beyin-sisi', label: 'Beyin Sisi Nedir' },
-  { id: 'hormon-beyin', label: 'Hormonun Rolü' },
-  { id: 'katmanlar', label: 'Katmanlar' },
-  { id: 'bellek-turleri', label: 'Bellek Türleri' },
-  { id: 'yonetim-yontemleri', label: 'Yönetim Yöntemleri' },
-  { id: 'organizasyon', label: 'Organizasyon Araçları' },
-  { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
-  { id: 'uzun-vadeli', label: 'Uzun Vadeli Perspektif' },
-  { id: 'ilk-adimlar', label: 'İlk Adımlar' },
+  { id: 'hormon-beyin', label: 'Hormonun Yeri — Ne Biliyoruz' },
+  { id: 'katmanlar', label: 'Birbirine Geçen Katmanlar' },
+  { id: 'bellek-turleri', label: 'Hangi Bellek Etkilenir' },
+  { id: 'yonetim-yontemleri', label: 'Gündelikte Neyi Deneyebiliriz' },
+  { id: 'organizasyon', label: 'Yapı Kurmak — Zihni Boşaltmak' },
+  { id: 'tibbi-secenekler', label: 'Tıbbi Destek — Tartışılan Alan' },
+  { id: 'uzun-vadeli', label: 'Uzun Vadede ve Bu Haftadan' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Bellek ve Odaklanma — Menopozda Kognitif Değişimler';
-const articleDescription = 'Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim yöntemleri hakkında rehberlik.';
+const articleTitle = 'Bellek ve Odaklanma — Menopozda Bilişsel Değişimler';
+const articleDescription =
+  'Menopozda "beyin sisi" deneyimini araştırma okuyan bir akran gözüyle aktaran rehber: ne biliyoruz, ne hâlâ belirsiz, gündelik hayatta neyi deneyebiliriz.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -54,7 +54,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-[#2D2D2D]">
     <SubmenuHero
       eyebrow="Zihin & Denge · Bellek ve odak"
-      title="Bellek ve Odaklanma — Menopozda Kognitif Değişimler"
+      title="Bellek ve Odaklanma — Menopozda Bilişsel Değişimler"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -66,106 +66,162 @@ const articleSchemas = buildArticleSchemas({
         <section class="rounded-[28px] border border-[#C9A96E]/35 bg-gradient-to-br from-white to-[#FDF8F0]/90 p-7 shadow-sm ring-1 ring-[#C9A96E]/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-[#2D2D2D]/80">
-            Menopozda bellek kayması ve odaklanma güçlüğü yaygındır. Hormon değişiklikleri, uyku bozukluğu ve stres birlikte bu deneyimde rol oynar. Uygulanabilir yöntemler bilişsel işlevi desteklemede etkilidir.
+            Menopozda "beyin sisi" denen düşünme bulanıklığı çoğumuzun konuştuğu ama az anladığı bir konu. Uzun süredir
+            bu alanı takip ediyorum; şunu biliyoruz: hormon değişimi, uyku bozukluğu ve stres birlikte rol oynuyor.
+            Şu hâlâ belirsiz: hangi katkının ne kadar büyük olduğu kişiden kişiye değişiyor. Bu yazı, araştırmaları
+            okuyan bir akran gözüyle bugünün resmini ve evde deneyebileceklerimizi toparlıyor.
           </p>
         </section>
 
         <ArticleProsePanel>
-          <h2 id="beyin-sisi">Beyin sisi nedir?</h2>
+          <h2 id="beyin-sisi">Beyin Sisi Nedir? — Tanıdık Bir His</h2>
           <p>
-            Beyin sisi (İngilizce <span lang="en">brain fog</span>), yani düşünmede bulanıklık hissi, menopozda çoğu kadının yaşadığı fakat sık göz ardı edilen bir olgudur.
-            Bellek kayması, odaklanma güçlüğü, kelime bulma zorlukları (dil ucunda kalma) ve kavrama hızında yavaşlama gibi belirtileri içerir <Evidence level={5} />.
-            Yaklaşık %40–60 oranında menopoz dönemindeki kadın bu tür bilişsel değişiklikleri bildirir <Evidence level={5} />.
+            Geçen sabah kahveyle bir araştırma özetini okurken bir cümlede durdum: "kelimeyi dilimin ucunda
+            tutamamak"… Birçoğumuzun konuşmadan tanıyıp da bir araştırmada okuyunca rahatlayan o his.
           </p>
           <p>
-            "Dün sabah ne yedim?" sorusuna cevap vermekte zorluk, önemli bir kişisel numarayı unutma veya
-            başladığınız konuşmanın ortasında cümleyi tamamlamakta hayal kırıklığı yaşama gibi deneyimler çok yaygındır.
-            Bunlar yaşlılığın başlangıcı değil; hormonla ilgili geçici bilişsel değişimlerdir <Evidence level={5} />.
-          </p>
-
-          <h2 id="hormon-beyin">Hormonun Beyin Sağlığına Rolü</h2>
-          <p>
-            Beyin sisini yaşarken “yaşlanıyor muyum?” diye korkmak çok anlaşılır; östrojen beyin gelişimi, sinaptik aktivite (sinirler arası bağlantı) ve bellek pekiştirmede önemli bir rol oynar <Evidence level={5} />.
-            Menopoza yaklaştıkça östrojen dalgalanmaları bu sistemleri doğrudan etkiler.
-            Progesteron metabolitleri, kaygı ve uyku üzerindeki GABA sistemi aracılığıyla çalışır <Evidence level={5} />.
+            Beyin sisi (İngilizce <span lang="en">brain fog</span>), düşünmede bulanıklık duygusunu tarif eder.
+            Bellek kayması, odaklanma güçlüğü, kelime bulma zorlanması ve kavrama hızında yavaşlama gibi belirtileri
+            kapsar <Evidence level={5} />. Menopoz dönemindeki kadınların önemli bir kısmı bu tür bilişsel
+            değişiklikleri bildiriyor <Evidence level={5} />.
           </p>
           <p>
-            Nörotransmiterler (serotonin, dopamin, asetilkolin) da hormon değişikliklerinden etkilenir <Evidence level={5} />.
-            Asetilkolin özellikle bellek ve odaklanmada önemlidir; düşüklüğü bilişsel kaymaya katkıda bulunabilir.
-            Beyindeki iltihabi yanıtın artması, hormonal geçişle bağlantılı olabilir ve sinir sistemi üzerinde zorlayıcı etkiler yaratabilir <Evidence level={5} />.
+            "Dün sabah ne yedim?", "Söze başladım, nereden bağlayacağımı unuttum"… Bunlar bir akşam yemeğinde
+            kadın arkadaş çevresinde sık duyduğum cümleler. Yaşlılığın başlangıcı değil; hormonla ilişkili
+            geçici bilişsel değişimler olarak okunuyor <Evidence level={5} />.
           </p>
 
-          <h2 id="katmanlar">Menopozda bilişsel değişimlerin katmanları</h2>
+          <h2 id="hormon-beyin">Hormonun Beyin Sağlığında Yeri — Ne Biliyoruz, Ne Belirsiz</h2>
           <p>
-            Bilişsel dalgalanmalar genellikle tek bir nedenden doğmaz; birincil faktör hormonal değişikliktir <Evidence level={5} />, ancak ikincil faktörler tabloyu derinleştirir.
-            Uyku bozukluğu bellek ve odaklanmayı katman katman etkiler <Evidence level={5} />; uyku sırasında beyin atık temizliği ve bellek düzenleme süreçlerini yürütür.
-            Stres ve kaygı nörotransmiter dengesini zorlayabilir ve odaklanmayı dağıtabilir <Evidence level={5} />.
+            Bu konuda kafa karıştıran şey, biyolojinin bir cümleye sığmaması. Şunu biliyoruz: östrojen beyin
+            sinyalleri, sinaptik bağlantı ve bellek pekiştirme süreçlerinde rol oynuyor; menopoza yaklaştıkça
+            östrojendeki dalgalanma bu sistemleri etkiliyor.
           </p>
           <p>
-            Ruh hali değişimleri (depresyon, anksiyete) bilişsel işlevi zorlaştırabilir <Evidence level={5} />.
-            Sıcak basması ve gece terlemesi dikkat dağınıklığına yol açabilir <Evidence level={5} />.
-            Ayrıca, yaşam stresi (kariyer değişiklikleri, aile sorumlulukları) bilişsel yükü artırır <Evidence level={4} />.
-            Tüm bu etkenler bir araya geldiğinde beyin sisinin şiddeti artabilir.
+            Östrojen ve progesteronun beyin işlevine etkileri için kanıt seviyesi güçlü <Evidence level={5} />.
+            Serotonin, dopamin, asetilkolin gibi nörotransmiterlerin de hormonal değişimlerden etkilendiği biliniyor
+            <Evidence level={5} />. Şu hâlâ tartışmalı: hangi belirti hangi hormonal kayma ile ne kadar doğrudan
+            ilişkili — buradaki resim tek değişkenli değil, çok değişkenli ve kişiden kişiye nüanslı.
           </p>
-
-          <h2 id="bellek-turleri">Bellek Türleri ve Menopoz</h2>
           <p>
-            Her unutkanlık aynı anlama gelmez; kısa dönem hafıza genellikle uyum gösterir ve birkaç rakamı unutmak tek başına yaşla ilişkili değildir <Evidence level={4} />.
-            Ancak çalışan hafıza (aynı anda birden fazla görev yapma kapasitesi) orta düzeyde etkilenebilir <Evidence level={5} />.
-            Uzun dönem hafıza kodlamada (yeni bilgi öğrenme) zorluk oluşabilir <Evidence level={5} />.
-            Prosedürel hafıza (bisiklet sürme, bilgisayar kullanma) çoğu zaman korunur <Evidence level={4} />.
+            Bunu okurken kendi bedenimi hatırladığım anlardan biri şu oldu: bir hafta uyku düzenim oturmadığında
+            sözcüklerle aram bozuluyor; düzen kurulduğunda işler yumuşuyor. Demek ki "beyin sisi" tek başına
+            hormonun değil, bütün resmin bir göstergesi.
           </p>
 
-          <h2 id="yonetim-yontemleri">Bilişsel yönetim yöntemleri</h2>
+          <h2 id="katmanlar">Tek Nedene Bağlanmıyor — Birbirine Geçen Katmanlar</h2>
           <p>
-            İlk adım çoğu zaman en temel yerden başlar: uyku düzeni <Evidence level={5} />. Uyku sayesinde beyin metabolik atıkları temizler ve hafıza pekiştirilir.
-            Düzenli saatlerde yatıp kalkma, karanlık ve serin uyku ortamı, geç kafein ve ekran kullanmaktan kaçınma temel tekniklerdir.
+            Beyin sisi çoğu zaman tek bir nedenle değil, üst üste binen birkaç etkenle ortaya çıkıyor. Bu yüzden
+            "şu işe yaradı, sebep buydu" demek genelde aceleci bir sonuç oluyor.
           </p>
           <p>
-            Stres yönetimi (meditasyon, yoga) kortizolü azaltır ve sinir sistemini dengeler <Evidence level={5} />.
-            Fiziksel egzersiz BDNF (beyin kökenli nörotrofik faktör) üretimini artırır ve sinir hücresi esnekliğine katkı sağlar <Evidence level={5} />.
-            Bilişsel antrenman (bulmaca, kitap okuma, yeni dil öğrenme) beyin plastisitesini kuvvetlendirir <Evidence level={5} />.
-            Sosyal bağlantılar, zihinsel uyarım ve duygusal destek sağlayarak bilişsel işleve katkı sağlar <Evidence level={5} />.
+            Uyku bozukluğu belleği ve odaklanmayı katman katman etkiliyor <Evidence level={5} />; uyku sırasında
+            beyin gün boyu biriken işleri temizleyip yenileniyor. Stres ve kaygı nörotransmiter dengesini zorluyor
+            ve dikkati dağıtıyor <Evidence level={5} />. Sıcak basması, gece terlemesi ve ruh hali değişimleri
+            de aynı tabloya katılıyor <Evidence level={5} />.
           </p>
           <p>
-            Beslenme — omega-3, B vitaminleri, antioksidanlar — beyin sağlığında temel öneme sahiptir <Evidence level={5} />.
-            Kafein yönetimi, alkolü sınırlama ve sigaradan uzak durma da uyku ve odaklanma için destekleyici olabilir <Evidence level={4} />.
-          </p>
-
-          <h2 id="organizasyon">Organizasyonel Araçlar: Yapı Kurmak</h2>
-          <p>
-            Not almak “unutkanlığı kabul etmek” değil, zihnine yükü daha adil dağıtmaktır; yazılı not alma (kağıt veya dijital uygulamalar) belleği desteklemede etkilidir <Evidence level={5} />.
-            Kişisel takvim, hatırlatıcı uyarıları ve görev listeleri, yoğun düşünme yükünü azaltır <Evidence level={5} />.
-            Rutin ve ritüeller (sabah rutini, akşam hazırlık) beyine planlı bir düzen sunar <Evidence level={5} />.
-            Bilgileri segmentlere ayırma (yapılacakları kategorize etme) daha kolay işlem sağlar <Evidence level={5} />.
+            Buna 50'lerin yaşam yükünü de ekliyoruz: iş ritmi, yaşlanan ebeveyn, evden ayrılan çocuk, yeni
+            sorumluluklar <Evidence level={4} />. Tek başına çalışmıyor hiçbiri; bir araya gelince beyin sisi
+            koyulaşıyor. Birbirine geçen bu katmanları görünür kılmak, "neyi değiştirebilirim" sorusunu daha
+            sade soran bir yerden başlıyor.
           </p>
 
-          <h2 id="tibbi-secenekler">Tıbbi Seçenekler</h2>
+          <h2 id="bellek-turleri">Hangi Bellek Etkilenir, Hangisi Korunur?</h2>
           <p>
-            Belirtiler günlük yaşamını belirgin etkiliyorsa tıbbi seçenekleri konuşmak makul bir adımdır; HRT bazı kadınlarda bellek ve odaklanma sorunlarını hafifletebilir <Evidence level={5} />;
-            özellikle perimenopoz döneminde (hormonal dalgalanmanın en yoğun olduğu sırada) etkili olabilir <Evidence level={5} />.
-            Karar kişisel risk profili ve tıbbi geçmişine göre verilir.
+            Her unutkanlık aynı şeyi söylemiyor — bunu bilmek bence en çok rahatlatan bilgilerden biri.
           </p>
           <p>
-            Nörotrofik destekleme (BDNF, NGF üretimini artıran yaklaşımlar) araştırılmakta; ancak hala sınırlı kanıt vardır <Evidence level={4} />.
-            Antidepresanlar ruh haliyle ilişkili bilişsel sorunlarda yardımcı olabilir <Evidence level={4} />.
-            Bilişsel yön terapisi, olumsuz düşünce döngüsünü kırmaya ve odaklanmayı iyileştirmeye yardımcı olur <Evidence level={5} />.
+            Kısa dönem belleğin gündelik dalgalanmaları çoğunlukla yaşla doğrudan ilişkili değil
+            <Evidence level={4} />. Çalışma belleği, yani aynı anda birden çok görevi tutma kapasitesi, bu dönemde
+            orta düzeyde etkilenebiliyor <Evidence level={5} />. Yeni bilgiyi kodlama (ders, isim, plan) zaman zaman
+            zorlanabilir <Evidence level={5} />. Prosedürel bellek — bisiklet sürme, daktilo gibi otomatikleşmiş
+            beceriler — büyük ölçüde korunuyor <Evidence level={4} />.
           </p>
-
-          <h2 id="uzun-vadeli">Uzun Vadeli Perspektif: Beyin Sağlığı ve Demans Riski</h2>
           <p>
-            Beyin sisi yaşarken en korkutucu soru “bu kalıcı mı?” olabilir; menopozda yaşanan beyin sisi demans anlamına gelmez ve çoğu durumda zamanla iyileşir <Evidence level={5} />.
-            HRT ve demans riski arasındaki ilişki tartışmalıdır ve bireysel faktörlere bağlıdır <Evidence level={4} />.
-            Ancak kardiyovasküler sağlık beyin sağlığıyla sıkı bağlantılıdır <Evidence level={5} />; kan akışı ve oksijen, bilişsel işlev için destekleyicidir.
-            Bilişsel rezerv oluşturma (yaşlanırken öğrenmeye devam etme) ileri yaşta bilişsel değişikliklere karşı koruma sağlar <Evidence level={5} />.
+            Yani aynada beceriksiz hisseden biriyle göz göze geldiğinde, kendine bunu hatırlatabilirsin: birkaç
+            beceri zorlanabilir, ama yıllardır kazanılmış olanlar yerinde duruyor. Bu fark, gündelik kaygıyı
+            sade bir resme dönüştürüyor.
           </p>
 
-          <h2 id="ilk-adimlar">Başlamak İçin İlk Adımlar</h2>
+          <h2 id="yonetim-yontemleri">Gündelik Hayatta Neyi Deneyebiliriz?</h2>
           <p>
-            Bu hafta, uyku rutinini değerlendirmek iyi bir başlangıç olabilir. Düzenli uyku saatleri sende küçük bir iyileşme yaratıyor mu?
-            Stres yönetim tekniklerinden birini seç: beş dakikalık meditasyon ya da kısa bir yürüyüş yeterli olabilir.
-            Yazılı not alma sistemini başlat ve hafta sonunda gözlemlediğin değişiklikleri not et.
-            Hafta hafta yapılacak bu adımlar, bilişsel bulanıklığı yavaş yavaş aydınlatmaya başlayabilir.
+            Bu bölümde "bende işe yaradı, sen de uygula" demeyeceğim. Şunu söyleyebilirim: araştırmaların ortak
+            işaret ettiği birkaç nokta var ve bunları kendi haftana sığdırmak nispeten ucuz bir başlangıç.
+          </p>
+          <p>
+            En temel adım uyku düzeni: uyku sayesinde beyin biriken atıkları temizliyor ve belleği pekiştiriyor
+            <Evidence level={5} />. Sabit yatış-kalkış saatleri, serin ve karanlık oda, akşam kafein ve ekran
+            ışığını sınırlamak — kanıt düzeyi yüksek bir grup adım.
+          </p>
+          <p>
+            Stres yönetimi (kısa nefes egzersizi, hafif yoga, kısa meditasyon) sinir sistemini dengelemeye
+            yardımcı olabiliyor <Evidence level={5} />. Düzenli hareket, BDNF denilen "beyin kökenli nörotrofik
+            faktör" üretimini destekliyor; bu da sinir hücresi esnekliğine katkıda bulunabiliyor
+            <Evidence level={5} />. Bilişsel antrenman (yeni bir dil, bulmaca, kitap), beyin esnekliğini
+            sürdürmede işe yarayabiliyor <Evidence level={5} />.
+          </p>
+          <p>
+            Beslenme tarafında omega-3, B vitaminleri ve antioksidanlardan zengin bir tablo öne çıkıyor
+            <Evidence level={5} />; Akdeniz mutfak kültüründe büyürken doğal olarak öğrendiğimiz birçok şey
+            zaten bu çerçeveyle örtüşüyor. Sosyal bağlar — bir kahve sohbeti, bir telefon — duygusal destekle
+            birlikte zihinsel uyarım sağlıyor <Evidence level={5} />.
+          </p>
+
+          <h2 id="organizasyon">Yapı Kurmak — Zihne Yükü Adil Dağıtmak</h2>
+          <p>
+            Not almak "unutkanlığı kabul etmek" değil. Tam tersine: zihne yüklenen işin bir kısmını sayfaya
+            devretmek, hatırlamak için ona yer açmak.
+          </p>
+          <p>
+            Yazılı not (kağıt ya da basit bir dijital liste), takvim hatırlatıcısı ve gün sonunda kısa bir
+            "yarın" listesi yapmak; bu basit alışkanlıkların belleği desteklediğini biliyoruz <Evidence level={5} />.
+            Sabah ve akşam rutinleri beyne öngörülebilir bir çerçeve sunuyor; bilgileri kategorilere ayırmak —
+            örneğin "ev", "iş", "sağlık" — gün içi karışıklığı azaltıyor.
+          </p>
+          <p>
+            Birçoğumuzun ortak tecrübesi: yatmadan önce ertesi günün üç önemli işini yazmak, sabahki ilk
+            yarım saati şaşkınlıktan çıkarıyor. Sade bir araç, ama tutarlılığında etkisi var.
+          </p>
+
+          <h2 id="tibbi-secenekler">Tıbbi Destek Seçenekleri — Tartışılan Alan</h2>
+          <p>
+            Belirtiler günlük yaşamı belirgin biçimde etkilemeye başladığında, "bu konuyu kendi hekimimle
+            konuşmalıyım" diye işaretlemek yerinde oluyor. Bu yazı bir tedavi rehberi değil; aynı sayfada
+            duran, "şunu biliyoruz, şu hâlâ tartışılıyor" diyen bir akran notu.
+          </p>
+          <p>
+            HRT'nin bazı kadınlarda bellek ve odaklanma yakınmalarını hafiflettiği rapor ediliyor; özellikle
+            perimenopoz döneminde değerlendirildiğinde olumlu etki gösterilebiliyor <Evidence level={5} />.
+            Ama HRT bir kapı değil bir karar süreci; kişisel risk profili, geçmiş ve hekim değerlendirmesi
+            birlikte konuşulduğunda anlamlı oluyor. Ben kendi adıma bu konuyu hâlâ takip ediyorum, henüz
+            karar vermedim — bunu da bir duruş olarak paylaşıyorum.
+          </p>
+          <p>
+            Ruh hali ile iç içe geçen bilişsel zorlanmalarda uygun psikiyatrik destek seçenekleri yardımcı
+            olabilir <Evidence level={4} />. Bilişsel davranışçı terapi, olumsuz düşünce döngülerini açma
+            ve odaklanmayı toparlamada güçlü kanıta sahip <Evidence level={5} />. Yeni nesil nörotrofik
+            yaklaşımlar erken araştırma aşamasında; merakla izliyorum, ama henüz "evet" diyebileceğim bir
+            kanıt seviyesi yok <Evidence level={3} />.
+          </p>
+
+          <h2 id="uzun-vadeli">Uzun Vadede ve Bu Haftadan Başlamak</h2>
+          <p>
+            En çok karşılaştığım soru şu: "Bu kalıcı mı, demansa mı gidiyor?" Şunu biliyoruz: menopozda yaşanan
+            beyin sisi demans anlamına gelmiyor ve çoğu durumda zamanla iyileşiyor <Evidence level={5} />.
+          </p>
+          <p>
+            HRT ile uzun vadeli demans riski ilişkisi hâlâ tartışmalı bir alan; bireysel faktörlere bağlı
+            <Evidence level={4} />. Buna karşılık kardiyovasküler sağlık ile beyin sağlığı arasındaki bağ
+            net: kan akışı ve oksijen, bilişsel işlev için destekleyici <Evidence level={5} />. "Bilişsel rezerv"
+            denen kavram da güçlü kanıta sahip — yaşam boyu öğrenmeye devam etmek, ileri yaşta zihinsel
+            koruma yaratabiliyor <Evidence level={5} />.
+          </p>
+          <p>
+            Bu haftadan bir başlangıç önereceksem, basit tutarım: önce uyku saatini sabitle, gün içine kısa
+            bir yürüyüş yerleştir, yarın için üç maddelik bir liste yaz. Bir sonraki ay aynı listeye bir
+            satır daha eklemek için yer açtığını fark edersen, bu yeterince anlamlı bir başlangıç. Gerisini
+            zaman ve hekiminle kuracağın diyalog şekillendirir.
           </p>
         </ArticleProsePanel>
 
