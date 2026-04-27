@@ -103,6 +103,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zy-vitaminler.webp',
     alt: 'Sabah ışığında ahşap kesim tahtası üzerinde yumurtalar, portakal dilimleri, çiğ badem ve ceviz, taze maydanoz ve etiketsiz zeytinyağı; mevsiminde Anadolu sofrası ve topraktan sofraya beslenme teması',
   },
+  '/zamansiz-yasam/seyahat-menopoz': {
+    src: '/images/library/editorial/aegean-terrace-reader.webp',
+    alt: 'Altın saat ışığında bir terasta sade bir kitapla oturmuş 50+ kadın, yanında çay fincanı, ardında uzak deniz manzarası; seyahatte sakin bir an ve bedene saygılı dinlenme teması',
+  },
   '/zamansiz-yasam/hareket-saglik-menopoz': {
     src: '/images/library/editorial/zy-hareket-saglik.webp',
     alt: 'Sabah park yolunda yürüyüş molasında kadın; arkadan editöryal kadraj, krem keten pantolon, sonbahar bordo yaprak ipucu; günlük hareket ritmi teması',

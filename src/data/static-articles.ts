@@ -18,6 +18,28 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/seyahat-menopoz',
+    title: 'Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları',
+    description:
+      'Uzun uçuşlar, jet lag, sıcak basması ve yeni mutfak ritmi menopoz geçişinde seyahati nasıl şekillendirir? Bir akran perspektifinden sakin bir rehber.',
+    publishedDate: '27 Nisan 2026',
+    writerSlug: 'duygu-karaosmanoglu',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam',
+    keywords: [
+      'seyahat',
+      'menopoz',
+      'uzun uçuş',
+      'jet lag',
+      'zaman farkı',
+      'sıcak basması',
+      'uyku',
+      'HRT',
+      '40+ kadın',
+      'sosyal yaşam',
+    ],
+  },
+  {
     path: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
     title: 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi',
     description:
@@ -297,9 +319,10 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
     title: 'Perimenopoz Nedir? — Temel Rehber',
-    description: 'Perimenopoz sürecinin belirtilerini, evrelerini ve günlük yaşamda uygulanabilir destek adımlarını anlatan kapsamlı rehber.',
-    publishedDate: '17 Şubat 2026',
-    writerSlug: 'berna-aksoy',
+    description:
+      'Perimenopoz nedir, ne zaman başlar, hangi belirtileri getirir? Sahne arkasında ve günlük hayatta birçoğumuzun konuştuğu bir geçişin sade ve sıcak tarifi.',
+    publishedDate: '27 Nisan 2026',
+    writerSlug: 'isik-selin-kuyumcu',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
     keywords: ['perimenopoz', 'geçiş dönemi', 'hormon dalgalanması', 'düzensiz adet', 'menopoz', 'östrojen'],
