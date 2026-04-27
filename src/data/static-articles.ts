@@ -52,9 +52,9 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
-    title: "HRT'nin İlk Altı Ayı — Bir Akran Hikayesi",
+    title: "HRT'nin İlk Ayları — Bir Akran Hikayesi",
     description:
-      "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk altı aylık deneyimi: karar süreci, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.",
+      "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk aylarından bir yazı: karar süreci, üç ayın muhasebesi, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.",
     publishedDate: '27 Nisan 2026',
     writerSlug: 'demet-kizilkaya',
     section: 'Hormonal Geçiş',

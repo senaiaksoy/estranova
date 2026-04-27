@@ -24,16 +24,16 @@ const tocEntries = [
   { id: 'neden-karar', label: 'Neden Karar Verdim' },
   { id: 'ilk-iki-ay', label: 'İlk İki Ay — Beklenti ve Gerçek' },
   { id: 'uc-dort-ay', label: 'Üç–Dört Ay — Bedendeki Değişim' },
-  { id: 'bes-alti-ay', label: 'Beş–Altı Ay — Yerleşen Denge' },
+  { id: 'bes-alti-ay', label: 'Şu Ana Kadar — Yerleşen Denge' },
   { id: 'aile-bagi', label: 'Aile, Eş, Kız — Görünmeyen Etki' },
   { id: 'henuz-acik', label: 'Hâlâ Açık Olan Sorular' },
   { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = "HRT'nin İlk Altı Ayı — Bir Akran Hikayesi";
+const articleTitle = "HRT'nin İlk Ayları — Bir Akran Hikayesi";
 const articleDescription =
-  "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk altı aylık deneyimi: karar süreci, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.";
+  "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk aylarından bir yazı: karar süreci, üç ayın muhasebesi, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.";
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -73,23 +73,24 @@ const articleSchemas = buildArticleSchemas({
       >
         <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
         <p class="leading-relaxed text-[#2D2D2D]/80">
-          Altı ay önce, hekimimle uzun bir konuşmadan sonra hormon replasman tedavisine başladım. Bu yazı kararı
-          değil; karardan sonraki yarım yılı anlatıyor. Ne tıbbi tavsiye, ne de bir başkasının yolunu çizen bir
-          rehber — sadece bu eşikte duran bir akrandan bir başkasına samimi bir not.
+          Yaklaşık dört ay önce, hekimimle uzun bir konuşmadan sonra hormon replasman tedavisine başladım.
+          Üç aylık muhasebemiz yeni yapıldı; altı aylık planlanan ilk dönemin yarısındayım. Bu yazı kararı değil,
+          karardan sonraki ilk ayları anlatıyor. Ne tıbbi tavsiye, ne de bir başkasının yolunu çizen bir rehber —
+          sadece bu eşikte duran bir akrandan bir başkasına samimi bir not.
         </p>
       </section>
 
       <ArticleProsePanel>
         <h2 id="acilis">Sabah Sahnesi</h2>
         <p>
-          Geçen pazartesi sabahı çayımı demlerken aklıma geldi: altı aydır küçük bir merhem ve bir hap, mutfak
-          tezgâhımın bir köşesinde sessizce duruyor.
+          Geçen pazartesi sabahı çayımı demlerken aklıma geldi: dört aydır küçük bir jel ve akşam alınan bir
+          kapsül, mutfak tezgâhımın bir köşesinde sessizce duruyor.
         </p>
         <p>
-          Bu yazıyı yazmaya karar vermem de o andan başladı. Çünkü altı ay önce, başlamadan önce, en çok aradığım
-          şey bu küçük rutinin <em>nasıl bir hisle</em> taşındığıydı. Klinik bilgi vardı, kararı destekleyen rehberler
-          vardı; ama "altı ayın sonunda neresinde duruyor olacaksın?" sorusunun cevabını bulmak güçtü. İşte ben
-          şimdi tam o yerde duruyorum — ve sıcağı sıcağına anlatabilirim.
+          Bu yazıyı yazmaya karar vermem de o andan başladı. Çünkü başlamadan önce, en çok aradığım şey bu küçük
+          rutinin <em>nasıl bir hisle</em> taşındığıydı. Klinik bilgi vardı, kararı destekleyen rehberler vardı;
+          ama "üç ayın, dördüncü ayın sonunda neresinde duruyor olacaksın?" sorusunun cevabını bulmak güçtü.
+          İşte ben şimdi tam o yerde duruyorum — ve sıcağı sıcağına anlatabilirim.
         </p>
 
         <h2 id="neden-karar">Neden Karar Verdim</h2>
@@ -104,9 +105,18 @@ const articleSchemas = buildArticleSchemas({
           fark ettim. O kararı bedenim verdi; ben yalnızca dinledim.
         </p>
         <p>
-          Hekimimle uzun bir konuşma yaptık. Risk profilimi, geçmiş öykümü, aile öyküsünü konuştuk. Hormon
-          replasman tedavisinin kişisel risk ve fayda dengesi her kadında farklıdır <Evidence level={5} /> ve
-          bu denge yıllarca güncellenir. Birlikte kararladık: deneyelim, üç ayda bir tekrar konuşalım.
+          Hekimim bana yıllarca "henüz değil" demişti, hatırlıyorum. 2002'de yayımlanan büyük bir çalışmadan
+          sonra dünyada HRT'ye karşı temkinli bir hava esmişti; doktorum o havayla beraber gitmişti. Son birkaç
+          yılda o çalışmanın yeniden ve yeniden incelenmesiyle birlikte tablo değişti: o zaman algılanan
+          risklerin abartıldığı, faydanın sanılandan daha büyük olduğu netleşti. Bugün önde gelen uluslararası
+          kadın sağlığı kuruluşları ve düzenleyici merciler güncel rehberlerinde aynı dilde konuşuyor: doğru
+          hastada, doğru yolla, doğru takiple HRT artık yalnızca güvenli değil, aktif olarak düşünülen bir seçenek
+          <Evidence level={5} />.
+        </p>
+        <p>
+          Risk profilimi, geçmiş öykümü, aile öyküsünü uzun uzun konuştuk. Tedavinin kişisel risk ve fayda dengesi
+          her kadında farklıdır <Evidence level={5} /> ve bu denge yıllarca güncellenir. Birlikte kararladık:
+          deneyelim, üç ayda bir tekrar konuşalım.
         </p>
         <p class="rounded-[18px] bg-[#FDF8F0] p-5 text-[#4f171c] md:p-6">
           <strong>Kısa not:</strong> Bu kararın benim için doğru olması, başkası için doğru olduğu anlamına gelmez.
@@ -137,46 +147,78 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="uc-dort-ay">Üç–Dört Ay — Bedendeki Değişim</h2>
         <p>
-          Üçüncü ayda hekimimle tekrar oturduk. Doz ufak bir ayar gördü, başka bir şey değişmedi.
+          Üçüncü ayın sonunda hekimimle uzun bir kontrol yaptık — "muhasebe" kelimesini özellikle kullandı.
+          Semptom envanterini birlikte doldururken fark ettim: maddeleri tek tek okurken neredeyse her satırda
+          "ya bu da geçmiş aslında" diyordum.
         </p>
         <p>
-          O dönemde fark ettiğim üç şey vardı: birincisi gün ortası yorgunluğun yumuşaması; ikincisi cildimde —
-          yıllarca dikkatimi çekmeyen bir kuruluk vardı — yumuşak bir nem dönüşü; üçüncüsü, ki bu en şaşırtıcısıydı,
-          küçük bir <em>iç sessizlik</em>. Sürekli alarmda olan bir şeyin biraz dinlendiğini hissediyordum.
+          O dönemde fark ettiğim değişimler şunlardı: gün ortası yorgunluğun yumuşaması; cildimde — yıllarca
+          dikkatimi çekmeyen bir kuruluk vardı — yumuşak bir nem dönüşü; mahrem konforun yıllar önceki rahatlığa
+          benzer bir hâl alması; eskiden zaman zaman canımı sıkan miyom kaynaklı kasık ağrılarının sessizce
+          geçmiş olması; ve en şaşırtıcısı, küçük bir <em>iç sessizlik</em>. Sürekli alarmda olan bir şeyin
+          biraz dinlendiğini hissediyordum. Üç aylık bir tedavide bu kadar geniş ve dengeli bir yanıt almak
+          her zaman olmuyormuş; doktorum bunu hem doğru tedavi seçiminin hem de "doz atlamadın" disiplinimin
+          birlikte sonucu olarak çerçeveledi.
+        </p>
+        <p>
+          Bu kontrolde tek somut değişiklik progesteron tarafında oldu: jel formdan akşam yatarken alınan oral
+          bir kapsüle geçtik. Hekimim bu formun uyumunun daha kolay, kanıt düzeyinin daha sağlam olduğunu, üstüne
+          hafif bir uyku desteği de getirdiğini söyledi. Östrojen jeline aynen devam ettik — yıllar içinde
+          kanıtlanmış, bana uygun bir formülmüş. Bir de rahim içi kalınlığını ultrasonla kontrol etti; ince ve
+          düzgün olduğunu görmek "rahatladığı parametrelerden biri" olarak kayıt etmesinin nedeniymiş.
         </p>
         <p>
           Bu değişimlerin tamamı HRT'ye mi bağlıydı? Bilmiyorum. Aynı dönemde sabah yürüyüşlerimi düzene oturtmuştum,
-          akşam çayımı saatten önce kesmeye başlamıştım. Hayatın küçük çapaları aynı anda topladığında, hangisinin
-          ne kadar pay aldığını ayırmak güç. Geniş çalışmalarda menopoza bağlı belirtilerin HRT ile belirgin azalma
-          gösterdiği biliniyor <Evidence level={5} />, ama bireysel deneyimde "şu yüzde HRT, şu yüzde hareket"
-          ayrımını yapmak gerçekçi değil. Bütüne bakıyorum.
+          akşam çayımı saatten önce kesmeye başlamıştım, magnezyum desteğine alışmıştım. Hayatın küçük çapaları
+          aynı anda toplandığında, hangisinin ne kadar pay aldığını ayırmak güç. Geniş çalışmalarda menopoza
+          bağlı belirtilerin HRT ile belirgin azalma gösterdiği biliniyor <Evidence level={5} />, ama bireysel
+          deneyimde "şu yüzde HRT, şu yüzde hareket" ayrımını yapmak gerçekçi değil. Bütüne bakıyorum.
         </p>
         <p class="rounded-[18px] bg-[#FDF8F0] p-5 text-[#4f171c] md:p-6">
           <strong>Kısa not:</strong> Bedenin verdiği sinyaller tek bir nedene bağlanamayabilir. Bütüne bakmak,
           tek değişkene odaklanmaktan çoğu zaman daha doğru bir okuma sunar.
         </p>
 
-        <h2 id="bes-alti-ay">Beş–Altı Ay — Yerleşen Denge</h2>
+        <h2 id="bes-alti-ay">Şu Ana Kadar — Yerleşen Denge</h2>
         <p>
-          Beşinci ayın bir akşamı, kızıma bir şey anlatırken cümlemin ortasında kelimeyi kaybetmedim. Küçük ama
-          tanıdık bir an.
+          Üçüncü ay muhasebesinden sonraki haftalarda, bedenimle aramızdaki ses biraz daha yumuşadı. Geçen
+          akşam kızıma bir şey anlatırken cümlemin ortasında kelimeyi kaybetmedim. Küçük ama tanıdık bir an.
         </p>
         <p>
-          Yıl başında bunu sık yaşıyordum; bir kelimeyi ararken kafamda boşluk açılıyordu, geri gelmesi için cümleyi
-          başka türlü kuruyordum. Geçen ay fark ettim ki bu durmuş. Yine olur mu? Belki olur. Ama altı ayın
-          sonunda dönüp baktığımda, en çok bunu seviyorum: kafamın eski hızıyla çalıştığı küçük anlar.
+          Yıl başında bunu sık yaşıyordum; bir kelimeyi ararken kafamda boşluk açılıyordu, geri gelmesi için
+          cümleyi başka türlü kuruyordum. Son haftalarda fark ettim ki bu durmuş. Yine olur mu? Belki olur. Ama
+          dört ayın sonunda dönüp baktığımda, en çok bunu seviyorum: kafamın eski hızıyla çalıştığı küçük anlar.
         </p>
         <p>
           Diğer kazanımlar daha sade: uykunun belirgin biçimde toparlanması, sıcak basmalarının seyrekleşmesi,
-          eklemlerimde sabah sertliğinin azalması. Hiçbiri sihirli bir dönüşüm hissi vermedi — ki vermesi de doğru olmazdı.
-          Hormonal denge tek bir hapla "kurulan" bir şey değil; <strong>yeniden müzakere</strong> edilen bir şey.
-          Vücudumla beraber yeni bir denge bulmaya çalışıyoruz, altı ay bu müzakerenin başlangıcıydı.
+          eklemlerimde sabah sertliğinin azalması. Hiçbiri sihirli bir dönüşüm hissi vermedi — ki vermesi de
+          doğru olmazdı. Hormonal denge tek bir hapla "kurulan" bir şey değil; <strong>yeniden müzakere</strong>
+          edilen bir şey. Vücudumla beraber yeni bir denge bulmaya çalışıyoruz; bu ilk dört ay o müzakerenin
+          başlangıcı oldu.
+        </p>
+        <p>
+          Bu süreçte yaşam tarzı tarafına da küçük bir ekleme yaptım. Günlük 10–12.000 adımlık yürüyüşüm ve yeniden
+          başladığım pilates zaten yerinde duruyordu; doktorum buna haftada bir-iki kez küçük ağırlıklarla yapılacak
+          direnç egzersizini ekledi — ufak dambıllar, lastik bantlar yetiyor. Sebep sade: kas kütlesi 50'li
+          yaşlardan itibaren yıldan yıla eriyor; ileri yaşlarda yaşanan düşme ve kırıkların asıl nedeni de bu
+          eriyiş <Evidence level={5} />. Beslenme tarafında bir küçük ayar daha vardı: turpgilleri (brokoli,
+          karnabahar, brüksel lahanası, turp) tabağıma daha sık koymam önerildi. Japon mutfağında zaten sıkça
+          karşılaştığım bu sebzelerin östrojen metabolizmasına nazik bir destek olduğunu öğrendim
+          <Evidence level={4} />.
         </p>
         <p>
           Yan etki tarafında: ilk iki ay haricinde belirgin bir şey yaşamadım. Hekimimle aramızda bir anlaşma
           var: tek bir alarm belirtisi olduğunda — beklenmedik bir kanama, göğüste hassasiyet, baş ağrısının
           değişen karakteri — hemen randevulaşıyoruz. Bu güvenlik ağı kararı taşımayı kolaylaştırıyor
           <Evidence level={5} />.
+        </p>
+        <p>
+          Jel uygulamasıyla ilgili doktorumun her seferinde tekrarladığı üç küçük nokta var — paylaşmadan olmaz:
+          süründükten sonra cildin kuruması için en az beş dakika beklemek; sürdüğüm bölgeyi en az bir saat
+          yıkamamak; eli yıkamadan en az yarım saat boyunca eşime dokunmamaya özen göstermek. Bu üçüncüsünün
+          sebebi şu: hormon parmaklarda da kalıyor, uzun süre tekrarlandığında erkek partnerde göğüs gelişimine
+          (jinekomasti) yol açabiliyor. İlk duyduğumda biraz tuhaf gelmişti; ama gündelik bir alışkanlık hâline
+          gelince fark edilmez oldu.
         </p>
 
         <h2 id="aile-bagi">Aile, Eş, Kız — Görünmeyen Etki</h2>
@@ -188,6 +230,16 @@ const articleSchemas = buildArticleSchemas({
           sonunda o endişe yerini sade bir gözleme bıraktı: "Daha az yorgunsun." Bu cümle, çoğu klinik raporun
           veremeyeceği kadar değerli bir geri bildirim. Çünkü onun ölçtüğü şey, benim her sabah aynaya bakarken
           ölçemediğim şeydi.
+        </p>
+        <p>
+          Bahar başında uzun zamandır planladığımız bir Japonya seyahatindeydik. Komşumuzdaki acı bir yangın
+          haberini aldığımız akşam kalbim hızla çarpmaya başladı; o gece kısa bir hastane sahnesi yaşadım. İlk
+          düşüncem oldukça insani bir şeydi: "Bu tedaviyle ilgili olabilir mi?" Türkiye'ye dönüşte hekimimle uzun
+          uzun konuştuk. Şokun ve eski yıllardan tanıdığım bir kalp hassasiyetinin üst üste binmesinin yarattığı
+          bir an olduğunu, kullandığım jel formunun teknik özelliği nedeniyle bu tür risklerle ilişkilenmediğini
+          öğrendim — cilt yoluyla emilen östrojen karaciğerden ilk geçişe uğramıyor, pıhtılaşma faktörlerini
+          aktive etmiyormuş. İçim rahatladı, ama korkuyu paylaşmak da önemliydi. Akran hikayelerinin bir kısmı
+          böyle telaşı paylaşmaktan geçiyor.
         </p>
         <p>
           Kızım — şimdi yirmili yaşlarında — beni daha sakin gördüğünü söyledi. Annemin kuşağı bu konuları
@@ -204,18 +256,25 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="henuz-acik">Hâlâ Açık Olan Sorular</h2>
         <p>
-          Bu yazıyı bitirmeden önce dürüst olmam gerek: altı ay az bir süre. Çok şey hâlâ açık.
+          Bu yazıyı bitirmeden önce dürüst olmam gerek: dört ay az bir süre. Çok şey hâlâ açık.
         </p>
         <p>
-          Uzun vadeli güvenlik nasıl olacak? Hekimimle düzenli görüşmelerle takip ediyoruz; mamografi, kemik
-          yoğunluğu ve kan tetkikleri yıllık takvimde. Ne kadar süre kullanacağım? Bu sorunun cevabı önümüzdeki
-          yıllarda hekimimle birlikte yeniden değerlendirilecek; sabit bir "süre" yok. Aile öyküsünden gelen
-          riskler nasıl yönetilecek? Bu da düzenli izlemle açıklığa kavuşacak — tek bir karar değil, sürekli
-          güncellenen bir konuşma <Evidence level={5} />.
+          Uzun vadeli güvenlik nasıl olacak? Hekimimle düzenli görüşmelerle takip ediyoruz; D vitamini ve B12
+          panelleri, magnezyum-kalsiyum dengesi, kemik yoğunluğu ölçümü ve mamografi yıllık takvimde. Ne kadar
+          süre kullanacağım? Sabit bir cevap yok; mevcut yanıt bu kadar iyi olduğu sürece, hekimim "istediğin
+          kadar kullanabilirsin" çerçevesini koyuyor. Bir gün "yeter, biraz ara vermek istiyorum" dersem, planı
+          birlikte kuracağız. Tek bir karar değil, sürekli güncellenen bir konuşma <Evidence level={5} />.
         </p>
         <p>
-          Bilmediğim çok şey var. Bildiğim şu: bu altı ay, bedenle bir kez daha tanışmak için yeterince zamandı.
-          Önümüzdeki altı ay başka şeyler öğretecek; o zaman tekrar yazarım belki.
+          Doktorumun bana son kontrol mektubunda yazdığı bir cümle var, paylaşmadan olmaz: <em>"Hedefimiz
+          maksimum fayda, sıfır zarar."</em> Bu cümleyi okuduğumda hem rahatlamış hem ciddiyetimi bulmuş hissettim.
+          Tedavinin keskin bir bıçak olduğunu, faydasının da risklerinin de gerçek olduğunu, bu yüzden altı ayda
+          bir buluşmanın pazarlık edilemez olduğunu hatırlattı. Mevcut iyilik hissim, bu disiplinin bir sonucu.
+        </p>
+        <p>
+          Bilmediğim çok şey var. Bildiğim şu: bu ilk dört ay, bedenle bir kez daha tanışmak için yeterince
+          zamandı. Önümüzdeki aylar başka şeyler öğretecek; altıncı ayın sonunda nereye varacağımı şimdiden
+          söylemek zor — o zaman tekrar yazarım belki.
         </p>
         <p class="rounded-[18px] bg-[#FDF8F0] p-5 text-[#4f171c] md:p-6">
           <strong>Kısa not:</strong> Akran hikayeleri rehber değildir; bir başlangıç noktasıdır. Senin yolun
@@ -282,11 +341,23 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
         <p class="leading-relaxed text-[#2D2D2D]/80">
           Hormon replasman tedavisi (HRT) menopoz döneminde uygun adaylarda etkili ve büyük ölçüde güvenli bir
-          seçenek olabilir; ancak risk-fayda dengesi bireyseldir ve yıllar içinde yeniden değerlendirilir.
-          Bu yazı bir akranın altı aylık deneyimini paylaşmaktadır; tıbbi tavsiye, tanı veya tedavi yerine geçmez.
-          Tedavi başlama, doz ayarlama, izlem ve sonlandırma kararları her zaman bireysel klinik değerlendirme
-          sonrasında, jinekoloji uzmanı veya tıbbi sorumlusu olan hekim ile birlikte alınmalıdır. Beklenmedik
-          belirtiler veya uzun vadeli planlama için düzenli takip kritik önemdedir.
+          seçenek olabilir; ancak risk-fayda dengesi bireyseldir ve yıllar içinde yeniden değerlendirilir. Bu yazı
+          bir akranın ilk aylardaki deneyimini paylaşmaktadır; tıbbi tavsiye, tanı veya tedavi yerine geçmez.
+        </p>
+        <p class="mt-4 leading-relaxed text-[#2D2D2D]/80">
+          Güncel uluslararası rehberlerde tedavinin <strong>ilk yılında takipler genellikle daha sık tutulur</strong>:
+          başlangıçtan sonra üç ay ve altı ay aralıklarındaki değerlendirmeler yaygın bir çerçevedir. Tedavi
+          oturduktan sonra kontroller çoğunlukla <strong>yıllık rutine</strong> döner; mamografi, kemik mineral
+          yoğunluğu ve temel kan tetkikleri bu rutinin parçasıdır. Endometrium izlemi, kullanılan progesteron
+          formülasyonuna ve klinik tabloya göre planlanır.
+        </p>
+        <p class="mt-4 leading-relaxed text-[#2D2D2D]/80">
+          Bu aralıklar sabit bir kural değildir; <strong>semptom seyri, kullanılan formülasyon, eşlik eden sağlık
+          durumu ve kişisel risk profiline göre hekim tarafından bireyselleştirilir</strong>. Tedavi başlama, doz
+          ayarlama, izlem sıklığı ve sonlandırma kararları her zaman bireysel klinik değerlendirme sonrasında,
+          jinekoloji uzmanı veya tıbbi sorumlusu olan hekim ile birlikte alınmalıdır. Beklenmedik belirtiler
+          (örneğin yoğun baş ağrısı, beklenmedik kanama, göğüste belirgin hassasiyet, nefes darlığı, bacakta
+          şişlik) için planlı zamandan önce başvurmak her zaman güvenli tercihtir.
         </p>
       </section>
 
