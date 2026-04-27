@@ -40,7 +40,7 @@ export const mainNav: NavLink[] = [
     children: [
       { name: 'Vitaminler', href: '/zamansiz-yasam/vitaminler' },
       { name: 'Deneysel yaklaşımlar', href: '/zamansiz-yasam/deneysel' },
-      { name: 'Non-invaziv', href: '/zamansiz-yasam/non-invaziv' },
+      { name: 'Ameliyatsız', href: '/zamansiz-yasam/non-invaziv' },
     ],
   },
   {

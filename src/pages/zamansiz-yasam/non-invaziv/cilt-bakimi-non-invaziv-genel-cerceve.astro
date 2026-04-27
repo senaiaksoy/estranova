@@ -14,7 +14,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const tocEntries = [
   { id: 'baslik-ne', label: 'Bu Başlık Ne, Ne Değil' },
   { id: 'cildi-anlamak', label: 'Menopozda Cildi Anlamak' },
-  { id: 'non-invaziv-tanim', label: 'Non-invaziv Ne Demek?' },
+  { id: 'ameliyatsiz-tanim', label: 'Ameliyatsız Ne Demek?' },
   { id: 'kategoriler', label: 'Yaklaşım Kategorileri' },
   { id: 'cihaz-tabanli', label: 'Cihaz Tabanlı Yaklaşımlar' },
   { id: 'ev-vs-klinik', label: 'Ev ile Klinik Arasındaki Çizgi' },
@@ -24,9 +24,9 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Non-invaziv Cilt Bakımı: Menopoz Sonrasında Genel Çerçeve';
+const articleTitle = 'Ameliyatsız Cilt Bakımı: Menopoz Sonrasında Genel Çerçeve';
 const articleDescription =
-  'Menopoz sonrasında non-invaziv cilt yaklaşımları nedir, ne işe yarar, neyin sınırı vardır? Marka veya satış önerisi olmadan, akran tonunda editoryal bir çerçeve.';
+  'Menopoz sonrasında ameliyatsız cilt yaklaşımları nedir, ne işe yarar, neyin sınırı vardır? Marka veya satış önerisi olmadan, akran tonunda editoryal bir çerçeve.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -36,7 +36,7 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam',
   keywords: [
-    'non-invaziv',
+    'ameliyatsız',
     'cilt bakımı',
     'menopoz cildi',
     'cilt yaşlanması',
@@ -62,7 +62,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="25 Nisan 2026" readingMinutes={6} />
 
       <header class="mb-10">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Zamansız Yaşam · Non-invaziv</p>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Zamansız Yaşam · Ameliyatsız</p>
         <h1 class="font-serif text-4xl leading-tight md:text-6xl">{articleTitle}</h1>
       </header>
 
@@ -72,7 +72,7 @@ const articleSchemas = buildArticleSchemas({
         <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
         <p class="leading-relaxed text-[#2D2D2D]/80">
           Menopoz sonrasında ciltte gözlenen incelme, kuruluk ve elastikiyet kaybı; östrojen düzeyinin düşmesiyle
-          ilişkilendirilen bir tablonun parçası. Non-invaziv yaklaşımlar — yani ameliyat veya enjeksiyon
+          ilişkilendirilen bir tablonun parçası. Ameliyatsız yaklaşımlar — yani ameliyat veya enjeksiyon
           gerektirmeyen uygulamalar — bu tabloya farklı katmanlarda dokunabiliyor. Bu rehber, herhangi bir markaya
           veya kliniğe yönlendirme yapmadan; ne, neden, hangi sınırla işe yarar sorularına bir akran çerçevesi sunmak
           için yazıldı.
@@ -82,7 +82,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="baslik-ne">Bu Başlık Ne, Ne Değil</h2>
         <p>
-          Bu yazı bir uygulama önerisi değil; menopoz sonrasında non-invaziv cilt yaklaşımlarına bakarken işine
+          Bu yazı bir uygulama önerisi değil; menopoz sonrasında ameliyatsız cilt yaklaşımlarına bakarken işine
           yarayacak bir okuma çerçevesi.
         </p>
         <p>
@@ -93,7 +93,7 @@ const articleSchemas = buildArticleSchemas({
           olduğunu sade bir dille toparlamaya çalışıyoruz.
         </p>
         <p>
-          “Non-invaziv” kelimesi de bu nedenle önemli; çünkü cilde bütün “güzelleşme” müdahalelerini aynı kefeye
+          “Ameliyatsız” kelimesi de bu nedenle önemli; çünkü cilde bütün “güzelleşme” müdahalelerini aynı kefeye
           koymak yanıltıcı oluyor. Aynı raftaki bir krem ile bir lazer cihazını ya da bir mezoterapi seansı ile bir
           radyofrekans uygulamasını farklı çerçevelerde değerlendirmek gerekiyor.
         </p>
@@ -115,9 +115,9 @@ const articleSchemas = buildArticleSchemas({
           gösteriyor. Etkili olduğu söylenen yaklaşımlar genelde belirli bir katmanda, belirli bir sınırla çalışıyor.
         </p>
 
-        <h2 id="non-invaziv-tanim">Non-invaziv Ne Demek, Ne Demek Değil?</h2>
+        <h2 id="ameliyatsiz-tanim">Ameliyatsız Ne Demek, Ne Demek Değil?</h2>
         <p>
-          Non-invaziv terimi, cildin bütünlüğünü kalıcı olarak bozmayan; kesi veya enjeksiyon gerektirmeyen
+          Ameliyatsız terimi, cildin bütünlüğünü kalıcı olarak bozmayan; kesi veya enjeksiyon gerektirmeyen
           uygulamalar için kullanılır.
         </p>
         <p>
@@ -127,14 +127,14 @@ const articleSchemas = buildArticleSchemas({
           onlar “minimal invaziv” başlığında değerlendirilir <Evidence level={4} />.
         </p>
         <p>
-          “Non-invaziv = risksiz” diye okumak doğru değil. Yan etki profili daha sınırlı olabilir; ama her cihaz veya
+          “Ameliyatsız = risksiz” diye okumak doğru değil. Yan etki profili daha sınırlı olabilir; ama her cihaz veya
           uygulamanın kendine özgü uygunluk ve güvenlik koşulları var. Bu nedenle başlangıçta bir profesyonel
           değerlendirme her zaman ilk adım.
         </p>
 
         <h2 id="kategoriler">Yaklaşım Kategorileri</h2>
         <p>
-          Non-invaziv başlığını üç ana katmanda düşünmek, çerçeveyi sadeleştiriyor: günlük topikal bakım, profesyonel
+          Ameliyatsız başlığını üç ana katmanda düşünmek, çerçeveyi sadeleştiriyor: günlük topikal bakım, profesyonel
           topikal uygulamalar ve enerji-temelli cihazlar.
         </p>
         <p>
@@ -221,9 +221,9 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleProsePanel class="mt-10">
         <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
-        <h3>Non-invaziv uygulamalar gerçekten kalıcı sonuç verir mi?</h3>
+        <h3>Ameliyatsız uygulamalar gerçekten kalıcı sonuç verir mi?</h3>
         <p>
-          Çoğu non-invaziv uygulamanın etkisi düzenli sürdürüldüğünde belirginleşir; tek seansta kalıcı bir sonuç
+          Çoğu ameliyatsız uygulamanın etkisi düzenli sürdürüldüğünde belirginleşir; tek seansta kalıcı bir sonuç
           beklemek gerçekçi değil. Etki süresi uygulamaya, kişisel cilt yanıtına ve günlük bakım rutinine bağlıdır.
         </p>
         <h3>Cihaz uygulamaları sırasında ağrı olur mu?</h3>
@@ -233,7 +233,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <h3>HRT kullanıyorum, bu uygulamaları yapabilir miyim?</h3>
         <p>
-          HRT kullanımı pek çok non-invaziv uygulamayla birlikte değerlendirilebilir; ama her uygulamanın kişisel
+          HRT kullanımı pek çok ameliyatsız uygulamayla birlikte değerlendirilebilir; ama her uygulamanın kişisel
           öyküye göre değerlendirilmesi gerekir. Bu konuyu hekiminizle netleştirmek en doğrusu.
         </p>
         <h3>Sosyal medyada gördüğüm cihazlar hakkında nasıl karar veririm?</h3>
@@ -261,7 +261,7 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#6B2D3E]">Bilimsel Editör Notu</p>
         <p class="mb-4 text-lg font-semibold text-[#2D2D2D]">Kanıt Düzeyi: B — İyi Kanıt <Evidence level={4} /></p>
         <p class="leading-relaxed text-[#2D2D2D]/80">
-          Menopoz sonrası ciltte gözlenen değişimler çok faktörlü bir tablodur; non-invaziv yaklaşımların etkinliği
+          Menopoz sonrası ciltte gözlenen değişimler çok faktörlü bir tablodur; ameliyatsız yaklaşımların etkinliği
           uygulama tipine, kişisel cilt yanıtına ve düzenli bakım rutinine bağlı olarak değişir. Cilt değerlendirmesi
           bir dermatolog veya konuya hâkim bir hekim tarafından yapılmalı; uygulama kararları kişisel risk-fayda
           dengesi gözetilerek alınmalıdır.

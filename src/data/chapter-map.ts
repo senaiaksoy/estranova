@@ -70,7 +70,7 @@ export const chapterMap: Record<string, ChapterEntry> = {
   '/zamansiz-yasam/non-invaziv': {
     number: '03',
     parent: 'Zamansız Yaşam',
-    chapter: 'Non-invaziv Uygulamalar',
+    chapter: 'Ameliyatsız Uygulamalar',
     href: '/zamansiz-yasam/non-invaziv',
     next: '/beden-yakinlik/cilt-gorunum',
   },
