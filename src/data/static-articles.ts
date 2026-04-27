@@ -18,6 +18,28 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
+    title: 'Menopozda Kemik Erimesi: Egzersizle Neler Değişebilir?',
+    description:
+      'Kemikler sessizce çalışır — ta ki bir şeyler değişene kadar. Menopoz geçişiyle birlikte bu sessiz süreç hızlanabiliyor. Egzersiz nasıl bir uyarı veriyor, nereden başlamak işe yarıyor?',
+    publishedDate: '18 Nisan 2026',
+    writerSlug: 'alara-baykent',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: [
+      'kemik erimesi',
+      'osteoporoz',
+      'menopoz',
+      'egzersiz',
+      'kemik yoğunluğu',
+      'D vitamini',
+      'kalsiyum',
+      'DEXA',
+      'östrojen',
+      '40+ kadın',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/seyahat-menopoz',
     title: 'Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları',
     description:
