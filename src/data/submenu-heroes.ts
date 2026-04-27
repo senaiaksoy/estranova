@@ -47,6 +47,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/hg-hrt-ilk-alti-ay.webp',
     alt: 'Sabah ışığında ahşap mutfak tezgahı önünde elinde sade çay fincanı tutan 58 yaş kadın, cream keten gömlek, içe dönük dingin bakış; küçük tabakta zarif amber kutu, cam vazoda Japon esinli taze çiçek, bordo keten kaçak; HRT yolculuğunda altıncı ay ve "ma" aralığı teması',
   },
+  '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme': {
+    src: '/images/library/editorial/introspective-clasped-hands.webp',
+    alt: '46 yaş kadın portresi: çene altında kenetlenmiş eller, cream keten gömlek, arka planda yumuşak bordo vazo bokeh; sakin dikkat ve kendi bedenini izleme teması — HRT ilk aylarında izleme defteri çerçevesi.',
+  },
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': {
     src: '/images/library/editorial/by-libido-degisimi.webp',
     alt: 'Geç ikindi ışığında sanat-dolu evinde sessiz bir okuma köşesinde oturan 51 yaş kadın, bordo ipek bluz, içe dönük dingin bakış pencereye yönelik; kucağında açık kitap, yan masada defter, dolma kalem, çay fincanı ve sade kuru çiçek düzeni; kendiyle yeniden tanışma teması',

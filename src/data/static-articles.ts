@@ -40,6 +40,27 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['HRT', 'hormon replasman tedavisi', 'menopoz', '58 yaş', 'akran hikayesi', 'kişisel deneyim', 'ilk 6 ay'],
   },
   {
+    path: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
+    title: 'HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?',
+    description:
+      'Hormon tedavisinin ilk haftalarında ve aylarında karşılaşılabilecek yumuşak yan etkiler, ne zaman geçici sayıldıkları, hekimle birlikte kurulan izleme takvimi ve hangi belirtilerin gecikmeden değerlendirilmesi gerektiği üzerine sakin bir rehber.',
+    publishedDate: '27 Nisan 2026',
+    writerSlug: 'berna-aksoy',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: [
+      'HRT',
+      'hormon tedavisi yan etkileri',
+      'meme hassasiyeti',
+      'baş ağrısı',
+      'kanama düzensizliği',
+      'menopoz',
+      'izleme takvimi',
+      '3 aylık kontrol',
+      'alarm belirtileri',
+    ],
+  },
+  {
     path: '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz',
     title: 'B12 Vitamini ve Menopoz: Sessiz Eksikliği Tanımak',
     description:
