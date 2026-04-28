@@ -7,114 +7,13 @@
  * fotoğraf bleed + italic serif başlık + sans açıklama +
  * italic serif caption + kanıt chip'i + makale sayısı.
  *
+ * Veri kaynağı: src/data/symptoms.ts (anasayfa bento ve /symptoms
+ * rehber sayfası için tek kaynak).
+ *
  * Fotoğraflar: public/images/symptoms/*.webp
  */
 
-interface Symptom {
-  slug: string;
-  image: string;
-  alt: string;
-  title: string;
-  desc: string;
-  caption: string;
-  evidence: string;
-  articleCount: number;
-  href: string;
-  featured?: boolean;
-}
-
-const symptoms: Symptom[] = [
-  {
-    slug: 'sicak-basmasi',
-    image: '/images/symptoms/sicak-basmasi.webp',
-    alt: 'Sade ahşap zeminde buruşmuş krem keten çarşaf, üstünde küçük bir pirinç termometre, pencereden gelen yumuşak ışık.',
-    title: 'Sıcak basması',
-    desc: 'Aniden yükselen ısı, terleme ve kalp atışı — gece ya da gündüz, dakikalar içinde gelip geçen kısa dalgalar.',
-    caption: 'Geceyi ısı haritasıyla okumak.',
-    evidence: 'Kanıt 4–5',
-    articleCount: 8,
-    href: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
-    featured: true,
-  },
-  {
-    slug: 'uyku-bozuklugu',
-    image: '/images/symptoms/uyku-bozuklugu.webp',
-    alt: 'Ahşap masada krem yastık ve buğulu pirinç çalar saat, arka planda pencere.',
-    title: 'Uyku bozukluğu',
-    desc: 'Uykuya dalmakta zorlanmak, gece sık uyanmak ve sabah yorgun kalkmak — ısı dalgalarıyla iç içe ya da kendi başına.',
-    caption: 'Tutulmuş ay, parçalı geceler.',
-    evidence: 'Kanıt 4',
-    articleCount: 6,
-    href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-    featured: true,
-  },
-  {
-    slug: 'ruh-hali',
-    image: '/images/symptoms/ruh-hali.webp',
-    alt: 'Eski pencere kenarında yarısı içilmiş porselen çay fincanı, perde gölgesi.',
-    title: 'Ruh hali değişimi',
-    desc: 'Hormonal dalgalanmaların ruh halini, sabrı ve günlük tepkilerini sessizce yeniden ayarladığı bir dönem.',
-    caption: 'Östrojen yankıyı kaybedince.',
-    evidence: 'Kanıt 3–4',
-    articleCount: 5,
-    href: '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
-  },
-  {
-    slug: 'hafiza',
-    image: '/images/symptoms/hafiza.webp',
-    alt: 'Sararmış mektup kağıdı üstünde preslenmiş kuru menekşe çiçeği.',
-    title: 'Hafıza sorunları',
-    desc: 'Sözcüklerin ucundan kayması, isim hatırlama güçlüğü ve dikkatin sık dağılması.',
-    caption: 'Sözcüklerin çıktığı eşikler.',
-    evidence: 'Kanıt 3',
-    articleCount: 4,
-    href: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
-  },
-  {
-    slug: 'cilt',
-    image: '/images/symptoms/cilt.webp',
-    alt: 'Kıvrımlı krem satin kumaş yakın çekim, ışık-gölge oyunu.',
-    title: 'Cilt değişimleri',
-    desc: 'Kuruluk, incelme ve elastikiyet kaybı — kolajen ile östrojen arasındaki sessiz ilişki.',
-    caption: 'Kıvrımın hafızası.',
-    evidence: 'Kanıt 4',
-    articleCount: 5,
-    href: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
-  },
-  {
-    slug: 'eklem',
-    image: '/images/symptoms/eklem.webp',
-    alt: 'Eski meşe ağacında koyu bir budak, halkalı doku.',
-    title: 'Eklem ağrısı',
-    desc: 'Sabah tutukluğu, parmak ve diz eklemlerinde hassasiyet — vücudun yaydığı küçük bir haber.',
-    caption: 'Eklemden yayılan haber.',
-    evidence: 'Kanıt 3',
-    articleCount: 3,
-    href: '/zamansiz-yasam/eklem-agrisi-menopoz',
-  },
-  {
-    slug: 'kilo',
-    image: '/images/symptoms/kilo.webp',
-    alt: 'Soğuk mermer yüzeyde kısmen açılmış olgun bir nar.',
-    title: 'Kilo artışı',
-    desc: 'Aynı yaşam, değişen tartı — östrojen, kas kütlesi ve uyku arasındaki üçlü bağ.',
-    caption: 'Terazi yeniden ayar arıyor.',
-    evidence: 'Kanıt 4',
-    articleCount: 4,
-    href: '/zamansiz-yasam/kilo-artisi-menopoz',
-  },
-  {
-    slug: 'libido',
-    image: '/images/symptoms/libido.webp',
-    alt: 'Eski ahşap masada iki uzun krem mum: biri yanmış ve tütüyor, diğeri yanmamış.',
-    title: 'Libido azalması',
-    desc: 'Arzunun ritmi değişebilir — beden, duygu ve ilişki arasındaki ince denge.',
-    caption: 'Aynı odada iki ayrı alev.',
-    evidence: 'Karma kanıt',
-    articleCount: 3,
-    href: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
-  },
-];
+import { symptoms } from '../../data/symptoms';
 
 const featured = symptoms.filter((s) => s.featured);
 const rest = symptoms.filter((s) => !s.featured);

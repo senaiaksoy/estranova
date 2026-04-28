@@ -2,39 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
-
-const symptoms = [
-  {
-    name: 'Sıcak basması',
-    category: 'Vazomotor',
-    note: 'Gün içindeki ani ısı artışı, terleme ve ardından gelen üşüme hissi ile tarif edilir.',
-  },
-  {
-    name: 'Beyin sisi',
-    category: 'Bilişsel',
-    note: 'Konsantrasyon dağınıklığı, kelime bulmakta zorlanma veya geçici unutkanlık hissi olarak anlatılır.',
-  },
-  {
-    name: 'Uyku bölünmesi',
-    category: 'Uyku',
-    note: 'Gece boyunca sık uyanma, sabaha karşı uykuya dalamama veya erken uyanma biçiminde görülebilir.',
-  },
-  {
-    name: 'Kaygı artışı',
-    category: 'Duygudurum',
-    note: 'Hormonal değişim, stres düzeyi ve uyku bozulması bir araya geldiğinde belirginleşebilir.',
-  },
-  {
-    name: 'Eklem ve kas hassasiyeti',
-    category: 'Kas-iskelet',
-    note: 'Sabah sertliği, hareket başlangıcında zorlanma veya gün sonuna doğru yorgunluk hissi ile fark edilebilir.',
-  },
-  {
-    name: 'Cilt ve saç değişiklikleri',
-    category: 'Dermatolojik',
-    note: 'Kuruluk, hassasiyet veya saç tellerinde incelme gibi daha yavaş ilerleyen değişimler şeklinde görülebilir.',
-  },
-] as const;
+import { symptoms } from '../data/symptoms';
 
 const howToUse = [
   'Semptomun ne zaman ortaya çıktığını ve ne kadar sürdüğünü not edin.',
@@ -64,9 +32,32 @@ const reviewSignals = [
 
 <SiteLayout
   title="Semptom Rehberi - Estranova"
-  description="Perimenopoz ve menopoz sürecinde görülebilen semptomlar için editoryal rehber."
+  description="Perimenopoz ve menopoz sürecinde görülebilen sekiz ana belirti için editoryal rehber: sıcak basması, uyku bozukluğu, ruh hali, hafıza, cilt, eklem, kilo ve libido."
 >
   <SiteNavbar currentPath="/symptoms" />
+
+  <!--
+    Duotone SVG filter — anasayfa SymptomNavigation ile aynı.
+    Bordo (#4f171c) shadow → altın (#C9A96E) highlight.
+  -->
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
+    <defs>
+      <filter id="duotone-estranova" color-interpolation-filters="sRGB">
+        <feColorMatrix
+          type="matrix"
+          values="0.299 0.587 0.114 0 0
+                  0.299 0.587 0.114 0 0
+                  0.299 0.587 0.114 0 0
+                  0     0     0     1 0"
+        ></feColorMatrix>
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.31 0.79"></feFuncR>
+          <feFuncG type="table" tableValues="0.09 0.66"></feFuncG>
+          <feFuncB type="table" tableValues="0.11 0.43"></feFuncB>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
 
   <main id="main-content" class="pt-24">
     <section class="px-6 py-16 md:py-20">
@@ -75,36 +66,58 @@ const reviewSignals = [
           <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Semptom Rehberi</p>
           <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Değişimleri adlandırmaya yardımcı bir okuma alanı</h1>
           <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
-            Bu sayfa tanı koymak için değil, sık görülen değişimleri anlamlandırmak için hazırlandı.
-            Semptomların hangi bağlamda ele alınabileceğini gösterir ve ilgili içeriklere geçiş sağlar.
+            Bu sayfa tanı koymak için değil, sık görülen sekiz değişimi anlamlandırmak için hazırlandı.
+            Her başlık kendi rehber sayfasına bağlanır; oradan ilgili içeriklere geçebilirsin.
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-[1.65fr_0.95fr] gap-8 items-start">
           <div class="space-y-5">
             {symptoms.map((symptom, index) => (
-              <article class="rounded-[32px] border border-primary/10 bg-white p-7 md:p-8 editorial-shadow">
-                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
-                  <div class="max-w-2xl">
-                    <div class="flex items-center gap-3 mb-3">
-                      <span class:list={[
-                        'w-3 h-3 rounded-full shrink-0',
-                        index % 3 === 0 ? 'bg-primary' : index % 3 === 1 ? 'bg-secondary' : 'bg-charcoal/60',
-                      ]}></span>
-                      <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold">{symptom.category}</p>
-                    </div>
-                    <h2 class="text-2xl md:text-3xl font-serif mb-3 leading-tight">{symptom.name}</h2>
-                    <p class="text-charcoal/65 leading-relaxed">{symptom.note}</p>
+              <a
+                href={symptom.href}
+                class="group block rounded-[32px] border border-primary/10 bg-white editorial-shadow overflow-hidden transition hover:border-primary/25 hover:shadow-[0_20px_44px_-22px_rgba(44,22,28,0.28)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                aria-label={`${symptom.title} — ${symptom.articleCount} makale`}
+              >
+                <article class="flex flex-col md:flex-row gap-0 md:gap-6">
+                  <div class="relative md:w-[220px] md:shrink-0 aspect-[3/2] md:aspect-auto md:self-stretch overflow-hidden">
+                    <img
+                      src={symptom.image}
+                      alt={symptom.alt}
+                      loading="lazy"
+                      decoding="async"
+                      class="symptom-photo h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                    />
+                    <span class="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-secondary/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#3a1216] shadow-sm">
+                      <span class="inline-block h-1.5 w-1.5 rounded-full bg-[#3a1216]"></span>
+                      {symptom.evidence}
+                    </span>
                   </div>
 
-                  <div class="md:text-right md:min-w-[160px]">
-                    <p class="text-[11px] uppercase tracking-[0.24em] text-charcoal/35 font-bold mb-2">Devam Okuması</p>
-                    <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
-                      İlgili içerikleri inceleyin
-                    </a>
+                  <div class="flex-1 p-7 md:p-8 md:pl-0 flex flex-col md:flex-row md:items-start md:justify-between gap-5">
+                    <div class="max-w-2xl">
+                      <div class="flex items-center gap-3 mb-3">
+                        <span class:list={[
+                          'w-3 h-3 rounded-full shrink-0',
+                          index % 3 === 0 ? 'bg-primary' : index % 3 === 1 ? 'bg-secondary' : 'bg-charcoal/60',
+                        ]}></span>
+                        <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold">{symptom.category}</p>
+                      </div>
+                      <h2 class="text-2xl md:text-3xl font-serif italic mb-3 leading-tight text-burgundy-deep">{symptom.title}</h2>
+                      <p class="text-charcoal/70 leading-relaxed">{symptom.longDesc}</p>
+                    </div>
+
+                    <div class="md:text-right md:min-w-[160px] md:pt-1">
+                      <p class="text-[11px] uppercase tracking-[0.24em] text-charcoal/35 font-bold mb-2">Devam Okuması</p>
+                      <span class="inline-flex items-center gap-2 text-sm font-semibold text-primary border-b border-primary/30 pb-1 group-hover:border-primary">
+                        <span class="font-serif italic tabular-nums text-secondary">{symptom.articleCount}</span>
+                        <span>makale</span>
+                        <span aria-hidden="true" class="text-secondary transition group-hover:translate-x-0.5">→</span>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </a>
             ))}
           </div>
 
@@ -178,3 +191,23 @@ const reviewSignals = [
 
   <SiteFooter />
 </SiteLayout>
+
+<style>
+  .symptom-photo {
+    filter: url('#duotone-estranova');
+    transition:
+      filter 600ms ease,
+      transform 700ms ease;
+  }
+
+  .group:hover .symptom-photo,
+  .group:focus-visible .symptom-photo {
+    filter: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .symptom-photo {
+      transition: none;
+    }
+  }
+</style>
