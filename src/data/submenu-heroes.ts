@@ -115,6 +115,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/hg-kemik-erimesi-egzersiz.webp',
     alt: 'Güneş dolu salonda hafif dambılla omuz hizasında kontrollü direnç çalışması yapan 48 yaş kadın, ahşap zemin, iki bordo vazo; eklem etrafı kası güçlendirme ve düşük etkili direnç teması',
   },
+  '/zamansiz-yasam/kilo-artisi-menopoz': {
+    src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
+    alt: '46 yaş kadın yarı gövde, kalın krem speckled kazak, iki el cepte, arkasında yemek masası ve pampas grass bokeh; günlük yaşam içinde sakin duruş — diyet kültüründen uzak, beden değişimini panik dili olmadan değerlendirme teması',
+  },
   '/zamansiz-yasam/non-invaziv': {
     src: '/images/library/editorial/zy-non-invaziv.webp',
     alt: 'Ahşap masada keten örtü üzerinde cam sürahi, açık pembe çiçek, seramik kasede pürüzsüz taş ve katlı pamuklu havlu; bordo arka plan — pürüzsüzlük, yenilenme ve zaman metaforu',
