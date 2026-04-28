@@ -23,6 +23,7 @@ const tocEntries = [
   { id: 'dogal-destekler', label: 'Doğal Destekler ve Takviyeler' },
   { id: 'tibbi-tedavi', label: 'Tıbbi Tedavi Seçenekleri' },
   { id: 'uzman-ne-zaman', label: 'Ne Zaman Uzmana Başvurmalı' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -194,6 +195,49 @@ const articleSchemas = buildArticleSchemas({
           Düzenli bir planla ilerleyen birçoğumuzda uyku kalitesi belirgin biçimde iyileşiyor. Küçük ama tutarlı
           adımlar, bu dönemde gerçekten en kıymetli yaklaşım. Eğer bu yazıdan tek bir not alacaksan: önce sabit
           saat, sonra serin oda, sonra hekiminle bir sohbet — diğer her şey bu üçünün üstüne sakince oturuyor.
+        </p>
+
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <h3>Melatonin menopozda güvenli mi, ne kadar süre kullanılır?</h3>
+        <p>
+          Düşük doz melatonin (0,5–3 mg, yatmadan 30–60 dakika önce) kısa vadede uyku başlangıcını öne çekmeye
+          yardımcı olabilir; menopozdaki uyku bozulmasında etki kişiden kişiye değişir <Evidence level={3} />.
+          Birçoğumuzun bilmediği şu: yüksek doz daha iyi sonuç vermiyor, hatta sabah ağırlığını artırabiliyor.
+          Birkaç hafta sonra fark hissetmiyorsan büyük olasılıkla senin için işlemiyor demektir; sürekli kullanmak
+          yerine uyku hijyeni ve sıcak basması yönetimi gibi temele dönmek daha kalıcı bir kazanım.
+        </p>
+        <h3>HRT uykuyu kaç haftada düzeltebilir?</h3>
+        <p>
+          Sıcak basması ve gece terlemesi uykunu bölüyorsa HRT'nin etkisi çoğu kadında 4–8 hafta içinde belirgin
+          hale gelir; bazı kadınlarda daha erken, bazılarında biraz daha geç <Evidence level={4} />. Ben kendi
+          adıma da bu pencerede iyileşmeyi yaşadım; ama HRT yalnızca uyku için verilen bir tedavi değil, genel
+          tablo üzerinden hekiminle birlikte değerlendirilmesi gereken bir karar. Sıcak basması yoksa ve sorun
+          tek başına insomnia ise HRT'nin doğrudan etkisi sınırlı kalabilir.
+        </p>
+        <h3>Apne şüphesi varsa hangi belirtilerle uyku tıbbına başvurmalı?</h3>
+        <p>
+          Şiddetli horlama, gece nefes durması (genellikle eşin fark eder), sabah baş ağrısı, gündüz belirgin
+          uyku hali ve uyandığında dinlenmemiş hissi birlikte görülüyorsa uyku tıbbı değerlendirmesi gerekli
+          <Evidence level={5} />. Menopozla apne riski artıyor; özellikle bel çevresi ve boyun çevresi değişen
+          kadınlarda bu tablo gözden kaçabiliyor. Polisomnografi tetkiki korkutucu değil, bilgilendirici bir
+          adım — gerekirse CPAP gibi seçenekler hem uykuyu hem kalp sağlığını birlikte koruyor.
+        </p>
+        <h3>Sabaha karşı erken uyanmalar normal mi, ne yapmalı?</h3>
+        <p>
+          Saat 04:00–05:00 civarı uyanıp tekrar uykuya dönememek menopoz döneminde sıklıkla görülen bir tablo;
+          kortizol ritmi ve düşen östrojenin birlikte etkisiyle ilişkili <Evidence level={4} />. Yatmadan üç-dört
+          saat önce ağır yemek, alkol ve yoğun ekran kullanımını sınırlamak bu tabloyu yumuşatabilir. Yatağa
+          tekrar girip 20 dakika içinde uyuyamıyorsan kalkıp loş ışıkta kısa bir okuma yapmak — telefon değil —
+          uyku basıncını yeniden inşa eden bir taktik.
+        </p>
+        <h3>Magnezyum, ashwagandha ve kediotu — hangisi gerçekten kanıtlı?</h3>
+        <p>
+          Magnezyum (özellikle glisinat formu) gece kas gevşemesi ve hafif uyku desteği için en tutarlı
+          kanıta sahip; menopozdaki kadınlarda küçük ama anlamlı fark görülebiliyor <Evidence level={3} />.
+          Ashwagandha kortizol modülasyonu üzerinden anksiyete ve uyku kalitesinde bazı çalışmalarda yardımcı
+          bulunmuş, kanıt henüz erken ve sınırlı <Evidence level={2} />. Kediotu için literatür karışık —
+          plasebo-üstü etki tutarlı değil. Kullanmaya karar verirsen tek bir destekle başla, dört-altı hafta
+          değerlendir; aynı anda üç takviyeyi denemek hem etkiyi hem yan etkiyi okumayı zorlaştırıyor.
         </p>
       </ArticleProsePanel>
 

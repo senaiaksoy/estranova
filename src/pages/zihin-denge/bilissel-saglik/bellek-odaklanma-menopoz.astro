@@ -24,6 +24,7 @@ const tocEntries = [
   { id: 'organizasyon', label: 'Yapı Kurmak — Zihni Boşaltmak' },
   { id: 'tibbi-secenekler', label: 'Tıbbi Destek — Tartışılan Alan' },
   { id: 'uzun-vadeli', label: 'Uzun Vadede ve Bu Haftadan' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -222,6 +223,51 @@ const articleSchemas = buildArticleSchemas({
             bir yürüyüş yerleştir, yarın için üç maddelik bir liste yaz. Bir sonraki ay aynı listeye bir
             satır daha eklemek için yer açtığını fark edersen, bu yeterince anlamlı bir başlangıç. Gerisini
             zaman ve hekiminle kuracağın diyalog şekillendirir.
+          </p>
+
+          <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+          <h3>Beyin sisi demansa dönüşür mü?</h3>
+          <p>
+            Mevcut araştırmalar menopoza bağlı beyin sisinin büyük çoğunlukta geçici olduğunu, kalıcı bilişsel
+            bozulmaya dönüşmediğini gösteriyor <Evidence level={4} />. Hormonal dalgalanma stabilize olduktan
+            sonra dikkat ve sözcük bulma performansı çoğu kadında postmenopozda yeniden toparlanıyor. Endişe
+            verici olan tablo farklı: yakın bellekte aşamalı kötüleşme, tanıdık bir yolda kaybolma, günlük rutini
+            sürdürememe gibi belirtilerle birlikte gelen değişim. Bu belirtiler birleşiyorsa nöroloji
+            değerlendirmesi anlamlı; menopoz tek başına bu tabloyu açıklamıyor.
+          </p>
+          <h3>HRT bilişsel işlevi düzeltir mi, hangi yaşta başlanırsa anlamlı?</h3>
+          <p>
+            HRT'nin bilişsel etkisi başlama yaşına ve süresine bağlı; menopoza yakın yıllarda (60 yaş öncesi
+            veya menopozun ilk 10 yılı içinde) başlandığında bazı kadınlarda dikkat ve hafıza performansında
+            iyileşme görülmüş <Evidence level={3} />. Geç başlangıçta (60 sonrası) aynı fayda gözlenmiyor,
+            hatta tartışmalı. Bu da "kritik pencere hipotezi" denen kavramın temeli; ancak bilişsel koruma
+            tek başına HRT için bir endikasyon değil, kararı vazomotor belirti, kemik sağlığı ve bireysel
+            risk-fayda tablosu birlikte şekillendiriyor.
+          </p>
+          <h3>Hangi takviye gerçekten bilimsel kanıta sahip?</h3>
+          <p>
+            Omega-3 (EPA/DHA) ve B12 — özellikle vejetaryen beslenenlerde — bilişsel sağlık için tutarlı kanıta
+            sahip iki başlık <Evidence level={4} />. D vitamini eksikliği gidermek de zihinsel berraklığa
+            dolaylı katkı sağlayabiliyor. Buna karşılık ginkgo biloba, fosfatidilserin ve "beyin geliştirici"
+            etiketli karışık takviyelerin etkisi sınırlı veya tutarsız <Evidence level={2} />. Genel kural
+            şu: kan tahliliyle saptanan bir eksikliği kapatmak, kanıtsız bir takviyeyi denemekten her zaman
+            daha anlamlı.
+          </p>
+          <h3>Aynı anda birden fazla iş yapmak gerçekten zarar veriyor mu?</h3>
+          <p>
+            Multitasking aslında bilişsel olarak hızlı görev değiştirmedir; her geçişte zihin kısa bir
+            "yeniden yükleme" yapar ve bu işlem menopoz döneminde daha çok efor isteyebilir <Evidence level={3} />.
+            Hata oranı artar, bellek pekiştirmesi zayıflar, gün sonunda yorgunluk daha derin hissedilir.
+            Pratik bir öneri: 25–45 dakikalık tek odak blokları, ardından kısa molalar — bu yapı dikkat
+            kapasitesini gün boyu daha iyi koruyor.
+          </p>
+          <h3>Beyin sisi için ne zaman hekime başvurmalı?</h3>
+          <p>
+            Üç aydan uzun süren ve günlük işlevini belirgin bozan unutkanlık, iş veya araç kullanırken güvenliği
+            etkileyen dikkat dağılması, eşlik eden depresyon belirtileri veya ailede erken başlangıçlı demans
+            öyküsü varlığında değerlendirme gerekli <Evidence level={5} />. Hekim önce tiroid, B12, D vitamini
+            ve uyku apnesi gibi düzeltilebilir başlıkları taramak isteyebilir; bunlar çoğu zaman tablonun
+            sandığımızdan büyük bir bölümünü açıklıyor.
           </p>
         </ArticleProsePanel>
 
