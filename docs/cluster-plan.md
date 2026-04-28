@@ -72,9 +72,10 @@ Estranova mevcut yapısı 5 ana kategori (Hormonal Geçiş / Beden & Yakınlık 
 
 ---
 
-### Cluster 6 — Bilişsel & Duygusal  ★★★★☆ (Güçlü — 4 makale)
+### Cluster 6 — Bilişsel & Duygusal  ★★★☆☆ (Orta — 3 makale)
 **Pillar:** `bellek-odaklanma-menopoz` (Rima)
-**Mevcut spokes:** `perimenopozda-beyin-sisi-odaklanma-rehberi` (Işık Selin), `ruh-hali-degisimleri-menopoz` (Berna), `stres-yonetimi-menopoz` (Berna)
+**Mevcut spokes:** `ruh-hali-degisimleri-menopoz` (Berna), `stres-yonetimi-menopoz` (Berna)
+**Not:** 2026-04-28 — Işık Selin'in `perimenopozda-beyin-sisi-odaklanma-rehberi` makalesi cannibalisation temizliği ile silindi; 301 redirect ile Rima canonical'ına yönlendirildi. SEO otoritesi tek yerde toplandı.
 **Eksik:**
 1. **"Menopoz ve Anksiyete — Spesifik Bir Bakış"** (mevcut "ruh hali" geniş; ayrı detay) — Berna
 2. **"Menopoz, Östrojen ve Alzheimer Riski — Güncel Bilim"** — Rima

@@ -27,6 +27,13 @@ export default defineConfig({
     // D Vitamini DUPLICATE temizliği — vitaminler/ altındaki sığ versiyon
     // top-level otorite makaleye yönlendirildi (2026-04-27, audit kararı).
     '/zamansiz-yasam/vitaminler/d-vitamini-rehberi': '/zamansiz-yasam/d-vitamini-rehberi',
+    // Beyin sisi DUPLICATE temizliği — perimenopoz hub'daki Işık Selin makalesi
+    // zihin-denge/bilissel-saglik altındaki Rima Erdemir canonical'ına
+    // yönlendirildi (2026-04-28). Canonical seçim gerekçesi: kısa SEO-iyi slug,
+    // SubmenuHero ile hizalı yeni editöryal pattern, daha derin bilişsel
+    // kapsam (bellek türleri / BDNF / bilişsel rezerv), araştırmacı yazar tonu.
+    '/hormonal-gecis/perimenopoz/perimenopozda-beyin-sisi-odaklanma-rehberi':
+      '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
   },
   integrations: [
     react(),
