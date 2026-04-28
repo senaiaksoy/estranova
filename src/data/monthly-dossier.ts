@@ -110,7 +110,8 @@ export const dossiers: MonthlyDossier[] = [
         excerpt:
           'Uyku takip cihazları ne ölçer, ne ölçmez? Hangi araştırma sonuçlarına güvenebiliriz, hangi iddialar henüz erken? Kanıt gücü disipliniyle sade bir harita.',
         writerSlug: 'rima-erdemir',
-        status: 'planned',
+        status: 'published',
+        href: '/zihin-denge/uyku-dinlenme/uyku-biliminin-siniri',
         readingMinutes: 8,
       },
     ],

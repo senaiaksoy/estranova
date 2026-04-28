@@ -199,6 +199,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
     alt: 'Yumuşak ışıkta yatak kenarı ve katlanmış pamuklu çarşaflar; gece terlemesi ve mahrem uyku deneyimi teması',
   },
+  '/zihin-denge/uyku-dinlenme/uyku-biliminin-siniri': {
+    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
+    alt: 'Sabah ışığında açık not defteri ve akıllı saat; uyku bilimi, kanıt gücü ve takip cihazları teması',
+  },
   '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
     alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve iç gözlem teması',
