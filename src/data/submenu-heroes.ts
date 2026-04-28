@@ -195,6 +195,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
     alt: 'Gecenin koyu mavisinde tavana bakan kadın silüeti; sabah üçte uyanmak ve dokuz yılın menopoz deneyimi teması',
   },
+  '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz': {
+    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
+    alt: 'Yumuşak ışıkta yatak kenarı ve katlanmış pamuklu çarşaflar; gece terlemesi ve mahrem uyku deneyimi teması',
+  },
   '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
     alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve iç gözlem teması',

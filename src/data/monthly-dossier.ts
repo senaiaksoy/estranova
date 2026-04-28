@@ -101,7 +101,8 @@ export const dossiers: MonthlyDossier[] = [
         excerpt:
           'Konuşulması zor ama herkesin yaşadığı bir an: gece yarısı uyanma, çarşafı değiştirme, sessizce yeniden uyumayı deneme. Mahrem yan, jargonsuz.',
         writerSlug: 'senai-aksoy',
-        status: 'planned',
+        status: 'published',
+        href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
         readingMinutes: 6,
       },
       {
