@@ -5,8 +5,10 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 import HomeHero from '../components/site/HomeHero.astro';
 import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
+import MonthlyDossierSection from '../components/site/MonthlyDossierSection.astro';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 import { writers } from '../data/writers';
+import { currentDossier } from '../data/monthly-dossier';
 
 const journey = [
   {
@@ -230,11 +232,13 @@ const editorialRecent = [
       </div>
     </section>
 
+    <MonthlyDossierSection dossier={currentDossier} sectionNumber="03" />
+
     <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <header class="mb-10 max-w-3xl">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">03</span>
+            <span class="font-serif font-normal tabular-nums text-gold">04</span>
             <span class="mx-2 text-gold">—</span>
             EDİTÖRYAL SEÇKİ
           </p>

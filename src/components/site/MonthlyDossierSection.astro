@@ -1,0 +1,176 @@
+---
+/**
+ * Anasayfa "Bu Ayın Dosyası" bölümü.
+ *
+ * Aylık tematik dosyayı kapak görseli + küratör imzası + lede + 4-6
+ * yan yazılık küme olarak tanıtır. Tıklama dosyanın kalıcı sayfasına
+ * (`/dosya/{slug}`) gider.
+ */
+
+import type { MonthlyDossier } from '../../data/monthly-dossier';
+import { getTotalReadingMinutes } from '../../data/monthly-dossier';
+import { writers } from '../../data/writers';
+
+interface Props {
+  dossier: MonthlyDossier;
+  /** Bölüm numarası — anasayfa numaralanmasında kullanılır (örn. "03") */
+  sectionNumber?: string;
+}
+
+const { dossier, sectionNumber = '03' } = Astro.props;
+
+const curator = writers.find((w) => w.slug === dossier.curatorSlug);
+const totalMinutes = getTotalReadingMinutes(dossier);
+const articleCount = dossier.articles.length;
+const dossierHref = `/dosya/${dossier.slug}`;
+
+// Yan yazıların yazar isimlerini çöz
+const articlesWithAuthors = dossier.articles.map((a) => {
+  const writer = writers.find((w) => w.slug === a.writerSlug);
+  return {
+    ...a,
+    authorName: writer?.displayName ?? 'Estranova',
+  };
+});
+---
+
+<section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-soft to-cream-warm px-6 py-16 md:py-20">
+  <div class="mx-auto max-w-6xl">
+    <header class="mb-10 max-w-3xl">
+      <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
+        <span class="mx-2 text-gold">—</span>
+        Bu Ayın Dosyası
+      </p>
+      <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+        {dossier.kicker}
+      </p>
+      <h2 class="mb-4 font-serif text-4xl leading-tight text-burgundy md:text-5xl">
+        {dossier.title}
+      </h2>
+      {dossier.subtitle && (
+        <p class="mb-4 font-serif text-xl italic text-ink/70 md:text-2xl">
+          {dossier.subtitle}
+        </p>
+      )}
+      <p class="text-lg leading-relaxed text-ink/75">{dossier.lede}</p>
+    </header>
+
+    {/* Kapak kartı: hero görseli + dosya meta */}
+    <a
+      href={dossierHref}
+      class="group mb-10 flex flex-col overflow-hidden rounded-[32px] border border-burgundy/15 bg-white shadow-[0_20px_50px_-24px_rgba(44,24,28,0.35)] ring-1 ring-black/5 transition hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:flex-row md:items-stretch"
+    >
+      <div class="relative h-64 w-full shrink-0 overflow-hidden md:h-auto md:w-[44%]">
+        <img
+          src={dossier.heroImage.src}
+          alt={dossier.heroImage.alt}
+          width="800"
+          height="600"
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+        />
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/55 via-[#1c1412]/10 to-transparent" />
+      </div>
+      <div class="flex min-w-0 flex-1 flex-col justify-between p-7 md:p-10">
+        <div>
+          {curator && (
+            <div class="mb-5 flex items-center gap-3">
+              {curator.portrait && (
+                <img
+                  src={curator.portrait}
+                  alt={`${curator.displayName} portresi`}
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                  decoding="async"
+                  class="h-12 w-12 rounded-full object-cover ring-1 ring-burgundy/15"
+                />
+              )}
+              <div class="min-w-0">
+                <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+                  Küratör
+                </p>
+                <p class="font-serif text-lg italic text-ink">{curator.displayName}</p>
+              </div>
+            </div>
+          )}
+          <p class="mb-4 font-serif text-base italic leading-relaxed text-ink/75 md:text-lg">
+            {dossier.editorNote.split('\n\n')[0]}
+          </p>
+          <p class="text-xs uppercase tracking-[0.2em] text-ink/55">
+            <span>{articleCount} yazı</span>
+            {totalMinutes > 0 && (
+              <>
+                <span class="mx-2 text-gold">·</span>
+                <span>~{totalMinutes} dk okuma</span>
+              </>
+            )}
+          </p>
+        </div>
+        <div class="mt-6">
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy">
+            Dosyayı keşfet
+            <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    {/* Yan yazılar mini grid */}
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        articlesWithAuthors.map((article) => {
+          const isPlanned = article.status === 'planned';
+          const ArticleTag = !isPlanned && article.href ? 'a' : 'div';
+          const articleProps = !isPlanned && article.href ? { href: article.href } : {};
+          return (
+            <ArticleTag
+              {...articleProps}
+              class:list={[
+                'group flex h-full flex-col rounded-[20px] border border-burgundy/12 bg-white p-6 shadow-sm transition',
+                !isPlanned && article.href
+                  ? 'hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2'
+                  : 'opacity-95',
+              ]}
+            >
+              {isPlanned && (
+                <p class="mb-3 inline-flex w-fit items-center rounded-full border border-gold/40 bg-cream-warm px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-burgundy/75">
+                  Yakında
+                </p>
+              )}
+              <h3
+                class:list={[
+                  'mb-3 font-serif text-xl leading-snug text-ink',
+                  !isPlanned && article.href && 'group-hover:underline group-hover:decoration-burgundy/35',
+                ]}
+              >
+                {article.title}
+              </h3>
+              <p class="mb-4 flex-1 text-sm leading-relaxed text-ink/70">{article.excerpt}</p>
+              <p class="font-serif text-xs italic text-ink/55">
+                Yazan: <span class="text-ink/75">{article.authorName}</span>
+                {article.readingMinutes && (
+                  <>
+                    <span class="mx-1.5 text-gold">·</span>
+                    <span>{article.readingMinutes} dk</span>
+                  </>
+                )}
+              </p>
+            </ArticleTag>
+          );
+        })
+      }
+    </div>
+
+    <div class="mt-8 flex justify-end">
+      <a
+        href="/dosya"
+        class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+      >
+        Tüm dosya arşivi →
+      </a>
+    </div>
+  </div>
+</section>

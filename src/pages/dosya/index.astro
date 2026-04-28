@@ -1,0 +1,162 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import { dossiers, currentDossier, getTotalReadingMinutes } from '../../data/monthly-dossier';
+import { writers } from '../../data/writers';
+
+const archived = dossiers
+  .filter((d) => d.slug !== currentDossier.slug)
+  .sort((a, b) => b.monthYearISO.localeCompare(a.monthYearISO));
+
+const currentCurator = writers.find((w) => w.slug === currentDossier.curatorSlug);
+const currentTotalMinutes = getTotalReadingMinutes(currentDossier);
+const currentHref = `/dosya/${currentDossier.slug}`;
+---
+
+<SiteLayout
+  title="Dosya Arşivi — Estranova"
+  description="Estranova'nın aylık tematik dosyaları: bir küratörün yan yana getirdiği yazı kümeleri."
+>
+  <SiteNavbar currentPath="/dosya" />
+
+  <main id="main-content" class="text-ink">
+    {/* Hero */}
+    <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Dosya</p>
+        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
+          Aylık Dosyalar
+        </h1>
+        <p class="mx-auto max-w-2xl text-lg leading-relaxed text-ink/80 md:text-xl">
+          Her ay bir küratör, bir tema etrafında yan yana getirilmiş yazı kümeleri. Hızlı tüketim
+          değil, durup bakmak için.
+        </p>
+      </div>
+    </section>
+
+    {/* Bu ayın dosyası — büyük kart */}
+    <section class="bg-white px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-5xl">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+          Bu Ayın Dosyası
+        </p>
+        <a
+          href={currentHref}
+          class="group flex flex-col overflow-hidden rounded-[32px] border border-burgundy/15 bg-cream-soft shadow-[0_20px_50px_-24px_rgba(44,24,28,0.35)] ring-1 ring-black/5 transition hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:flex-row md:items-stretch"
+        >
+          <div class="relative h-64 w-full shrink-0 overflow-hidden md:h-auto md:w-[48%]">
+            <img
+              src={currentDossier.heroImage.src}
+              alt={currentDossier.heroImage.alt}
+              width="900"
+              height="600"
+              loading="eager"
+              decoding="async"
+              class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
+          <div class="flex min-w-0 flex-1 flex-col justify-between p-7 md:p-10">
+            <div>
+              <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+                {currentDossier.kicker}
+              </p>
+              <h2 class="mb-3 font-serif text-3xl leading-tight text-burgundy md:text-4xl">
+                {currentDossier.title}
+              </h2>
+              {currentDossier.subtitle && (
+                <p class="mb-4 font-serif text-lg italic text-ink/70 md:text-xl">
+                  {currentDossier.subtitle}
+                </p>
+              )}
+              <p class="mb-5 leading-relaxed text-ink/75">{currentDossier.lede}</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-ink/55">
+                {currentCurator && (
+                  <>
+                    <span>Küratör: <span class="text-ink">{currentCurator.displayName}</span></span>
+                    <span class="mx-2 text-gold">·</span>
+                  </>
+                )}
+                <span>{currentDossier.articles.length} yazı</span>
+                {currentTotalMinutes > 0 && (
+                  <>
+                    <span class="mx-2 text-gold">·</span>
+                    <span>~{currentTotalMinutes} dk</span>
+                  </>
+                )}
+              </p>
+            </div>
+            <div class="mt-6">
+              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy">
+                Dosyayı keşfet
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    {/* Arşiv */}
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-5xl">
+        <header class="mb-10 max-w-2xl">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Arşiv</p>
+          <h2 class="font-serif text-3xl leading-tight text-ink md:text-4xl">
+            Önceki dosyalar
+          </h2>
+        </header>
+
+        {archived.length === 0 ? (
+          <div class="rounded-[24px] border border-dashed border-burgundy/25 bg-white px-6 py-12 text-center">
+            <p class="font-serif text-lg italic text-ink/60">
+              İlk dosya henüz yayında. Yeni sayılar burada birikecek.
+            </p>
+          </div>
+        ) : (
+          <ul class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {
+              archived.map((dossier) => {
+                const curator = writers.find((w) => w.slug === dossier.curatorSlug);
+                return (
+                  <li>
+                    <a
+                      href={`/dosya/${dossier.slug}`}
+                      class="group flex h-full flex-col overflow-hidden rounded-[24px] border border-burgundy/12 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                    >
+                      <div class="relative h-44 overflow-hidden">
+                        <img
+                          src={dossier.heroImage.src}
+                          alt={dossier.heroImage.alt}
+                          width="600"
+                          height="300"
+                          loading="lazy"
+                          decoding="async"
+                          class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                        />
+                      </div>
+                      <div class="flex flex-1 flex-col p-6">
+                        <p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+                          {dossier.kicker}
+                        </p>
+                        <h3 class="mb-3 font-serif text-2xl text-burgundy group-hover:underline group-hover:decoration-burgundy/35">
+                          {dossier.title}
+                        </h3>
+                        <p class="mb-4 flex-1 leading-relaxed text-ink/75">{dossier.lede}</p>
+                        <p class="font-serif text-xs italic text-ink/55">
+                          {curator && <>Küratör: <span class="text-ink/75">{curator.displayName}</span></>}
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        )}
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
