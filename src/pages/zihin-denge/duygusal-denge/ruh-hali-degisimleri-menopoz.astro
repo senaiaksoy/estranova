@@ -16,29 +16,30 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz']!;
 
 const tocEntries = [
-  { id: 'hormon-etkisi', label: 'Hormon Etkisi' },
-  { id: 'yaygin-sorunlar', label: 'Yaygın Sorunlar' },
-  { id: 'risk-faktorleri', label: 'Risk Faktörleri' },
-  { id: 'yasam-aliskanliklari', label: 'Yaşam Alışkanlıkları' },
-  { id: 'tibbi-tedavi', label: 'Tıbbi Tedavi' },
-  { id: 'ne-zaman-destek', label: 'Ne Zaman Destek Alınmalı' },
-  { id: 'travma-duygusal-yuk', label: 'Travma ve Duygusal Yük' },
-  { id: 'izleme-kayit', label: 'İzleme ve Kayıt' },
-  { id: 'cevresel-faktorler', label: 'Çevresel Faktörler' },
+  { id: 'aslinda-bildigimiz-an', label: 'Aslında Hepimizin Bildiği Bir An…' },
+  { id: 'hormon-yasam-ben', label: 'Hormon mu, Yaşam mı, Ben mi?' },
+  { id: 'dalga-mi-baska-mi', label: 'Bu Bir Dalga mı, Yoksa Bir Şey Daha mı?' },
+  { id: 'risk-haritasi', label: 'Niye Birimiz Daha Çok Zorlanıyor?' },
+  { id: 'gunluk-temeller', label: 'Günlük Temeller — Hangileri Gerçekten Konuşur?' },
+  { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler — HRT, SSRI, Terapi: Hangisi Nereye?' },
+  { id: 'travma-omuz', label: 'Travma ve Geçmişin Omuzları' },
+  { id: 'uzman-kapisi', label: 'Ne Zaman Bir Uzmana Bakmalı?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Ruh Hali Değişimleri ve Menopoz — Depresyon, Anksiyete, Duygudurum';
-const articleDescription = 'Menopozda depresyon, anksiyete ve duygudurum dalgalanmalarını bilimsel çerçevede ele alan rehber.';
+const articleTitle = 'Menopozda Ruh Hali Değişimleri — Bir Dalga, Bir Soru, Bir Eşik';
+const articleDescription =
+  'Menopoz geçişinde duygudurum dalgalanmalarını, depresyon ve anksiyete sınırını, HRT–SSRI–terapi seçeneklerini ve "bu hâlâ ben miyim?" sorusunu akran tonuyla ele alan rehber.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'duygu-karaosmanoglu',
-  publishedDate: '16 Mart 2026',
+  writerSlug: 'basak-pelister',
+  publishedDate: '28 Nisan 2026',
   pathname: '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
-  keywords: ['menopoz', 'perimenopoz', 'depresyon', 'anksiyete', 'duygudurum', 'ruh hali'],
+  keywords: ['menopoz', 'perimenopoz', 'depresyon', 'anksiyete', 'duygudurum', 'ruh hali', 'HRT', 'SSRI', 'psikoterapi'],
   siteUrl,
 });
 ---
@@ -53,143 +54,227 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zihin & Denge · Ruh hali"
-      title="Ruh Hali Değişimleri ve Menopoz — Depresyon, Anksiyete, Duygudurum"
+      eyebrow="Zihin & Denge · Duygusal Denge"
+      title="Menopozda Ruh Hali Değişimleri — Bir Dalga, Bir Soru, Bir Eşik"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
         <ArticleTOC slot="toc" entries={tocEntries} />
-        <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="16 Mart 2026" readingMinutes={5} />
+        <ArticleAuthorBlock authorSlug="basak-pelister" publishedDate="28 Nisan 2026" readingMinutes={9} />
 
         <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-ink/80">
-            Menopoz geçişi, ruh hali dalgalanmalarının daha sık görülebildiği bir dönemdir. Hormon değişimleri, uyku kesintisi ve yaşam
-            yükleri bir araya geldiğinde depresyon ve anksiyete riski artabilir. Mekanizmayı anlamak ve destek seçeneklerini bilmek,
-            duygusal sağlığı korumada güçlü bir başlangıç sağlar.
+            Bir sabah uyandın, gözlerini açtın, içinde tarif edemediğin bir ağırlık vardı… Belki ağladın, belki birden öfkelendin,
+            belki sebepsizce daraldın. Sizce de tanıdık değil mi? Bu yazı, menopoz geçişinde "bu hâlâ ben miyim?" sorusunu birlikte
+            açmak için yazıldı. Hormonun ne kadar konuştuğunu, hayatın yükünün nereye bindiğini, hangi seçeneklerin (HRT, SSRI,
+            terapi, hareket, uyku) hangi sahnede gerçekten işe yaradığını — ne biliniyor, ne hâlâ bilinmiyor — ayırarak konuşacağız.
+            Çoğumuzun yaşadığı bir geçiş; ama "yalnız sen değilsin" demekle bitmiyor… seçenekleri bilmek de işin yarısı.
           </p>
         </section>
 
         <ArticleProsePanel>
-          <h2 id="hormon-etkisi">Hormon Değişiklikleri Ruh Halini Nasıl Etkiler?</h2>
+          <h2 id="aslinda-bildigimiz-an">Aslında Hepimizin Bildiği Bir An…</h2>
           <p>
-            “Ben neden böyle hissediyorum?” sorusu bu dönemde çoğumuzun içinden geçer; menopoz geçişinde östrojen düzeyindeki dalgalanma, beyindeki nörotransmiter sistemleriyle yakın ilişki içindedir.
-            Serotonin üzerinde düzenleyici etkiler, duygudurum istikrarı açısından önem taşır <Evidence level={5} />. Progesteron metabolitlerinin GABA sistemiyle
-            ilişkisi de sakinlik, uykuya geçiş ve kaygı eşiği üzerinde etkili olabilir <Evidence level={5} />.
+            Bende öyle bir an oldu ki — pazar sabahıydı, kahvemi koymuştum, hiçbir şey olmamıştı; içimde sebepsiz bir mahzunluk vardı.
+            Niye olduğunu hâlâ tam bilmiyorum… ama o an yıllar içinde defalarca tekrar etti. Sizinkinde nasıl başladı? Belki bir
+            müzikte, belki bir konuşmanın ortasında, belki hiçbir şey yokken bir trafik ışığında.
           </p>
           <p>
-            FSH ve LH artışı doğrudan ruh halini tek başına belirlemez; ancak hormonal çevrenin değiştiğini gösteren biyolojik işaretlerdir <Evidence level={4} />.
-            Perimenopozda dalgalanma daha belirginken, menopoz sonrası dönemde hormon düzeyleri görece daha sabit bir düzleme gelir <Evidence level={5} />.
-            Bu geçişin ritmini anlamak, "neden böyle hissediyorum" sorusuna daha açık bir yanıt verir.
-          </p>
-
-          <h2 id="yaygin-sorunlar">Yaygın Ruh Hali Sorunları</h2>
-          <p>
-            Bu dönemde “eskisi kadar dayanıklı değilim” hissi çok tanıdık olabilir; en sık karşılaşılan başlıklar depresif belirtiler, anksiyete, duygusal hassasiyet ve ani dalgalanmalardır.
-            Depresyon riski, özellikle daha önce duygu durum bozukluğu öyküsü olan kişilerde perimenopozda artabilir <Evidence level={5} />.
-            Sürekli isteksizlik, ilgi kaybı, umutsuzluk hissi, uyku ve iştah değişimi gibi belirtiler iki haftadan uzun sürüyorsa değerlendirme gerekir.
+            Menopoz geçişinde "ruh hali değişimi" denen şey çoğu zaman böyle başlıyor — büyük bir kriz olarak değil, bir tonun ince
+            ince kayması olarak. Ne biliyoruz: perimenopozda duygudurum dalgalanmaları ve depresif belirti riski artıyor; özellikle
+            daha önce duygudurum öyküsü olanlarda bu ihtimal belirginleşiyor <Evidence level={5} />. Ne hâlâ bilmiyoruz: bu
+            değişimin tam olarak ne kadarı hormonal, ne kadarı yaşamsal. Birçoğumuzda ikisi birlikte konuşuyor.
           </p>
           <p>
-            Anksiyete tarafında çarpıntı, huzursuzluk, kaygı düşüncelerinin artması ve bedensel gerginlik öne çıkabilir <Evidence level={5} />.
-            Bazı kadınlar panik benzeri ataklar yaşayabilir. Duygusal dalgalanma ise tek başına bir hastalık göstergesi değildir;
-            fakat günlük işlevi belirgin biçimde etkiliyorsa destek almak önemlidir.
+            Bunu söylemek size de tanıdık geliyor mu: "Ben hiç böyle değildim, eskiden bu kadar dayanıksız mıydım?" Hayır,
+            dayanıksız değildin. Sadece içerideki bir koreografi değişti.
           </p>
 
-          <h2 id="risk-faktorleri">Risk Faktörleri</h2>
+          <h2 id="hormon-yasam-ben">Hormon mu, Yaşam mı, Ben mi?</h2>
           <p>
-            Risk faktörlerini bilmek kendini etiketlemek için değil, yükün nereden ağırlaştığını görmek içindir. Ailede depresyon veya anksiyete öyküsü, kişisel psikiyatrik geçmiş, yüksek yaşam stresi ve sosyal yalnızlık riski artırabilir <Evidence level={5} />.
-            Uyku bozukluğu bu tablonun hem nedeni hem sonucu olabilir <Evidence level={5} />. Sıcak basması, kronik ağrı veya yorgunluk gibi somatik belirtiler
-            ruhsal yükü artırarak döngüyü derinleştirebilir <Evidence level={4} />.
+            En çok sorulan, en az net cevap verilebilen soru bu. Aslında üçü birden — ama oranlar her birimizde farklı.
           </p>
           <p>
-            Bu nedenle değerlendirme yalnızca "moral" başlığında yapılmaz. Uyku düzeni, iş yükü, bakım sorumlulukları,
-            ilişki dinamikleri ve bedensel belirtiler birlikte ele alındığında daha doğru bir harita oluşur.
-            Çok katmanlı bakış, kişiye uygun desteği seçmeyi kolaylaştırır.
-          </p>
-
-          <h2 id="yasam-aliskanliklari">Ruh Halini Destekleyen Yaşam Alışkanlıkları</h2>
-          <p>
-            Ruh halini desteklemek büyük ve kusursuz bir plan gerektirmez; düzenli hareket, menopoz döneminde değerli desteklerden biridir <Evidence level={5} />. Haftada en az 150 dakika orta şiddette
-            aerobik aktivite ve haftada 2 gün direnç egzersizi; uyku kalitesini, enerji düzeyini ve duygusal dengeyi birlikte destekleyebilir.
-            Egzersizin etkisi tek günde değil, süreklilikle belirginleşir.
+            Hormonal taraf gerçek: östrojen dalgalanması, beynin serotonin sistemiyle yakın ilişkili; düşüş döneminde duygudurum
+            istikrarını etkileyebiliyor <Evidence level={5} />. Progesteronun metabolitleri ise GABA (sakinleştirici nörotransmiter)
+            sistemine bağlanır — yani sakinlik, uykuya geçiş, kaygı eşiği bu hormonun ritmiyle birlikte konuşur <Evidence level={5} />.
+            Perimenopozda hormon eğrisi düz değil, dişli — bu yüzden bazı haftalar daha çalkantılı, bazı haftalar daha sakin
+            geçebiliyor.
           </p>
           <p>
-            Uyku hijyeni ikinci temel alandır <Evidence level={5} />. Her gün benzer saatlerde yatıp kalkmak, geç saatte ekran maruziyetini azaltmak,
-            akşam kafeinini sınırlamak ve serin bir uyku ortamı hazırlamak gece uyanmalarını azaltabilir. Beslenmede düzenli protein alımı,
-            omega-3, B grubu vitaminler ve yeterli lif desteği de ruhsal dengeyle ilişkilidir <Evidence level={4} />.
+            Ama hormonu tek başına suçlamak da haksızlık olur… Çünkü 40-50'li yaşlar genellikle başka şeylerin de
+            yığıldığı yıllar: ergen çocuk, yaşlanan ebeveyn, kariyer eşiği, ilişki gözden geçirmesi, bazen bir kayıp. Burnout dediğimiz
+            tablo bu yüzden bu dönemde sık görünür hale geliyor. Hormon bu yükü taşıma kapasiteni etkiliyor; yük de hormonun yarattığı
+            dalgayı büyütüyor. Bir döngü… hangisinin önce başladığını söylemek çoğu zaman mümkün değil.
           </p>
           <p>
-            Sosyal bağlar ve stres düzenleme teknikleri üçüncü ayaktır. Yakın çevreyle düzenli temas, nefes egzersizleri,
-            kısa farkındalık uygulamaları ve gerekirse planlı psikolojik destek, kaygı sarmalını kırmada yardımcı olur <Evidence from={4} to={5} />.
-            Sabah gün ışığına çıkmak da sirkadiyen ritmi destekleyerek duygu durum üzerinde olumlu etki yaratabilir <Evidence level={4} />.
+            Peki "ben mi?" sorusunun cevabı? Bence şöyle: kişiliğin değişmiyor — sadece o kişiliği taşıdığın bedenin iç dengesi
+            yeniden kuruluyor. "Eski ben" olarak hissetmemek bir başarısızlık değil; bir geçişin doğal evresi.
           </p>
 
-          <h2 id="tibbi-tedavi">Tıbbi Tedavi Seçenekleri</h2>
+          <h2 id="dalga-mi-baska-mi">Bu Bir Dalga mı, Yoksa Bir Şey Daha mı?</h2>
           <p>
-            Belirtiler belirginse bunu yalnızca “benim karakterim değişti” diye yorumlamak zorunda değilsin; tıbbi seçenekler gündeme gelebilir. HRT, uygun kişilerde hem sıcak basması-gece terlemesi belirtilerini hem de ilişkili ruh hali şikayetlerini
-            hafifletebilir <Evidence level={5} />. Bu etkinlik özellikle perimenopoz döneminde daha görünür olabilir. Karar, kişisel risk profili ve öyküye göre verilir.
+            Hiç düşündünüz mü: ruh hali dalgalanmasıyla depresyon ya da klinik anksiyete arasındaki sınır nerede? Bu sınır gerçek;
+            ve bilmek bana kişisel olarak çok kıymetli geldi.
           </p>
           <p>
-            SSRI/SNRI grubu ilaçlar menopoz dönemindeki depresyon ve anksiyete belirtilerinde etkili seçeneklerdir <Evidence level={5} />.
-            Psikoterapi, özellikle bilişsel davranışçı yaklaşımlar, uzun dönem dayanıklılığı artırır <Evidence level={5} />.
-            Birçok durumda yaşam alışkanlığı düzenlemeleri ile psikoterapi ve gerekirse ilaç tedavisi birlikte planlandığında daha iyi sonuç alınır <Evidence level={5} />.
+            Dalgalanma genellikle kısa, geçici ve günlük yaşamı yıkmıyor — bir gün yıpratıyor, ertesi gün dağılıyor. Klinik tablolar
+            farklı bir doku taşıyor: iki haftadan uzun süren çökkün ruh hali, ilgi-istek kaybı, sürekli umutsuzluk, uyku ve iştahta
+            belirgin değişim, dikkat-konsantrasyon kaybı; ya da inatçı kaygı, çarpıntı, tetikte hissetme ve panik benzeri ataklar
+            <Evidence level={5} />. Bu belirtiler günlük işlevini, ilişkilerini ya da işini bozmaya başladığında "geçer" cümlesi
+            yetersiz kalıyor.
+          </p>
+          <p>
+            Ben kendi adıma şu kuralı işe yarar buluyorum: iki hafta + işlev kaybı = artık tek başına izleme dönemi değil. Kayıt
+            tutmak burada büyük yardımcı; aşağıda buna kısa bir yer ayırdım. Sizce de ayrımı bilmek, "abartıyor muyum?"
+            iç sesini susturuyor mu?
+          </p>
+          <p class="rounded-[18px] bg-cream-soft p-5 text-burgundy-deep md:p-6">
+            <strong>Küçük bir not:</strong> Sürekli ağlama isteği, sebepsiz öfke patlamaları ya da sabahları belirgin daha kötü
+            hissetme — bunlar tek başına tanı koymuyor; ama bir uzmanla konuşma davetiyesi olarak okunabilir.
           </p>
 
-          <h2 id="ne-zaman-destek">Ne Zaman Profesyonel Destek Alınmalı?</h2>
+          <h2 id="risk-haritasi">Niye Birimiz Daha Çok Zorlanıyor?</h2>
           <p>
-            Belirtiler iki haftadan uzun sürüyorsa, uyku-iştah-günlük işlev belirgin etkileniyorsa veya ilişki ve iş yaşamında zorlanma artıyorsa
-            profesyonel değerlendirme önerilir. Kendi başınıza denediğiniz yöntemlerle iyileşme olmaması da destek arama için önemli bir işarettir.
+            Bu sorunun tek bir cevabı yok; ama bazı işaretler tutarlı biçimde tekrarlıyor.
           </p>
           <p>
-            Kendine zarar düşüncesi, yoğun umutsuzluk veya güvenlik riski hissedilen durumlarda acil destek gerekir.
-            Bu noktada yardım istemek güçsüzlük değil, güvenliği önceliklendiren bir sağlık adımıdır.
+            Ailede depresyon ya da anksiyete öyküsü, daha önce yaşanmış bir duygudurum dönemi, doğum sonrası depresyon geçmişi,
+            yüksek yaşam stresi, sosyal yalnızlık ve uyku bozukluğu — bunlar perimenopozda riski belirgin artıran başlıklar
+            <Evidence level={5} />. Sıcak basması ve gece terlemeleri uyku bütünlüğünü bozarak ruhsal yükü ikiye katlayabiliyor; bu
+            ikisi birlikte gittiğinde tablo daha hızlı ağırlaşıyor <Evidence level={4} />.
+          </p>
+          <p>
+            Bunu bilmenin amacı kendini "risk grubu" diye damgalamak değil — yükün nereden geldiğini görmek. Çünkü gördüğünde plan
+            başka türlü kuruluyor: uykuyu önceliklendiriyorsun, sosyal teması koruyorsun, eski tetikleyicileri bilerek ihtiyatlı
+            olabiliyorsun. Bence kendine bir tür şefkatli haritacı olmak, bu dönemin en gizli self-care biçimi.
           </p>
 
-          <h2 id="travma-duygusal-yuk">Travma ve Derinleşen Duygusal Yük</h2>
+          <h2 id="gunluk-temeller">Günlük Temeller — Hangileri Gerçekten Konuşur?</h2>
           <p>
-            Bazı yükler bu geçiş döneminde daha görünür hale gelebilir; geçmiş travma öyküsü olan kişilerde menopoz geçişi bazı belirtileri daha yoğun hissettirebilir.
-            Özellikle PTSD, kronik kaygı bozukluğu veya obsesif belirtiler eşlik ediyorsa tedavi planı daha kişiselleştirilmelidir.
-            Travma bilgili psikoterapi yaklaşımları bu grupta değerli bir destek sağlar.
+            Aslında hepimiz biliyoruz: hareket, uyku, beslenme, sosyal bağ. Klişe gibi… ama klişe olduğu için değil, gerçek olduğu
+            için tekrar edilir. Sorulması gereken farklı: hangileri ruh hali tarafında ölçülebilir bir fark yaratıyor?
           </p>
           <p>
-            Sonuç olarak ruh hali değişimleri menopozun sık ve anlaşılır bir parçasıdır. Ancak uzun süren depresyon ve anksiyete
-            desteklenebilir sağlık durumlarıdır. Bilimsel çerçevede erken destek, yaşam kalitesinde belirgin iyileşme sağlar.
+            Düzenli aerobik hareket — haftada 150 dakika orta tempo + iki gün direnç çalışması — perimenopozda depresif belirtilerin
+            azalması üzerinde tutarlı kanıta sahip <Evidence level={5} />. Etki bir günde değil, dört-altı haftada belirginleşiyor;
+            "denedim, olmadı" cümlesi çoğu zaman süre yetersizliğinden geliyor.
           </p>
-        </ArticleProsePanel>
+          <p>
+            Uyku ikinci güçlü ayak. Sabit uyku-uyanma saati, geç saatte ekran ışığını sınırlama, kafeini öğleden sonraya ötelememe ve
+            serin bir oda — bu kombinasyon gece bütünlüğünü ve ertesi gün ruhsal toleransı belirgin biçimde değiştiriyor
+            <Evidence level={5} />. Sabah ışığına 10-15 dakika çıkmak sirkadiyen ritmi sıfırlıyor; bu küçük adımın etkisi şaşırtıcı
+            <Evidence level={4} />.
+          </p>
+          <p>
+            Beslenme tarafında protein, omega-3 ve B grubu vitaminler ruh hali ile ilişkili; ama "tek bir besin her şeyi çözer"
+            iddiası kanıtlı değil <Evidence level={4} />. Sosyal bağ üçüncü ayak — yakın bir arkadaşla haftada bir gerçek temas, "iyiyim"
+            cevabının ötesine geçen bir konuşma; bu bence en az ilaç kadar etkili bir destek. Sizce de öyle değil mi?
+          </p>
 
-        <ArticleProsePanel class="mt-10">
-          <h2 id="izleme-kayit">Ruh Halini İzlemek İçin Basit Bir Kayıt Sistemi</h2>
+          <h2 id="tibbi-secenekler">Tıbbi Seçenekler — HRT, SSRI, Terapi: Hangisi Nereye?</h2>
           <p>
-            Menopoz geçişinde belirtiler dalgalı seyrettiği için günlük veya haftalık kısa bir kayıt sistemi oldukça yardımcı olabilir.
-            Uyku süresi, gün içi enerji, kaygı düzeyi, sıcak basması sıklığı, hareket miktarı ve sosyal temas düzeyi gibi göstergeleri
-            birkaç dakikada not etmek, görünmeyen tekrarları görünür hale getirir. Bu kayıtlar zamanla hangi günlerde daha zorlandığınızı,
-            hangi alışkanlıkların rahatlama sağladığını ve profesyonel destek gerektiğinde hangi başlıkların öncelikli olduğunu netleştirir.
+            Burada en çok kafa karışıyor: hormon mu, antidepresan mı, terapi mi? Doğru cevap "ikisi-üçü birden olabilir" — ama
+            sahneye göre değişiyor. Net olanı söyleyeyim:
           </p>
           <p>
-            Özellikle duygusal yük yüksek olduğunda kişi çoğu zaman "her gün kötü" hissine kapılabilir.
-            Oysa planlı kayıt, iyi günlerin de var olduğunu ve iyileşmenin küçük adımlarla ilerlediğini gösterir.
-            Hekim veya terapist görüşmelerinde bu veriler, tedavi planının kişiye özgü ayarlanmasını kolaylaştırır.
-          </p>
-          <h2 id="cevresel-faktorler">Destek Planında Çevresel Faktörlerin Rolü</h2>
-          <p>
-            Ruh hali yalnızca biyolojiyle değil, günlük çevreyle de yakından ilişkilidir. Aşırı iş yükü, bakım sorumluluğu, yalnızlık,
-            belirsizlik ve çatışmalı ilişkiler hormonal dalgalanmaların etkisini daha yoğun hissettirebilir.
-            Bu nedenle destek planı yapılırken yalnızca semptomu azaltmayı hedeflemek yerine çevresel yükü yeniden düzenlemek önemlidir:
-            görev paylaşımı, dinlenme alanı oluşturma, sınır koyma ve gerektiğinde yakın çevreden yardım isteme gibi adımlar profesyonel destek kadar değerlidir.
+            <strong>HRT</strong> özellikle perimenopozda, vazomotor belirtilerin (sıcak basması, gece terlemesi) eşlik ettiği
+            duygudurum dalgalanmalarında ruh hali tarafında belirgin yarar gösterebiliyor <Evidence level={5} />. Etkisi çoğu zaman
+            doğrudan değil, ısı düzeni ve uyku iyileşmesi üzerinden dolaylı; ama bu da bir iyileşme. Postmenopoz tablolu klinik
+            depresyonda HRT'nin tek başına etkisi sınırlı; ama yaşam kalitesi tarafından bakınca yine yer alabiliyor. Bence kişisel
+            bir karar — hekiminle birlikte, kendi öyküne ve risk profiline göre verilen.
           </p>
           <p>
-            Birçok kadın için iyileşme, tek bir müdahaleden değil, küçük ama düzenli bir kombinasyondan gelir:
-            planlı hareket, uyku hijyeni, psikoterapi, gerekiyorsa ilaç desteği ve sosyal bağları güçlendirme.
-            Bu yaklaşım, menopoz dönemini kriz yerine yönetilebilir bir geçiş olarak yaşamayı kolaylaştırır.
+            <strong>SSRI/SNRI grubu antidepresanlar</strong> menopoz dönemindeki klinik depresyon ve anksiyete tablolarında etkili
+            <Evidence level={5} />. Düşük doz başlangıç, yavaş titrasyon ve dört-altı haftalık değerlendirme penceresi standart
+            yaklaşım; bir aydan önce "etkisi yok" demek erken bir karar. Yan etkiler (libido, gastrointestinal, başlangıç haftasında
+            kaygı artışı) konuşulmadan kalan başlıklar — sormaktan çekinme.
           </p>
-        </ArticleProsePanel>
-        <ArticleProsePanel class="mt-10">
-          <h2>Kısa Hatırlatma</h2>
           <p>
-            Duygusal zorlanma yaşandığında destek istemek süreci ağırlaştırmaz, aksine toparlanma süresini kısaltabilir.
-            Erken ve planlı yaklaşım, işlev kaybını azaltır ve yaşam kalitesini korur.
+            <strong>Psikoterapi</strong> — özellikle bilişsel davranışçı yaklaşımlar — uzun dönem dayanıklılık inşa ediyor
+            <Evidence level={5} />. İlaç bir bandaj gibi anlık yarayı kapatabilir; terapi bandajın altındaki dokuyu onarır. İdeal
+            olanı çoğu zaman ikisinin birlikte planlanması. "Terapiye gitmek" gibi cümleler hâlâ bazı çevrelerde stigma taşıyor;
+            oysa bu yıllarda bedenle yeniden tanışmanın en kıymetli aracı bence.
+          </p>
+
+          <h2 id="travma-omuz">Travma ve Geçmişin Omuzları</h2>
+          <p>
+            Bazı kapılar bu yıllarda ilk defa açılmıyor — ama eskisi kadar sıkı kapalı durmuyor. Yıllarca yan odada kalmış bir yük,
+            bir gün salonda buluyor seni.
+          </p>
+          <p>
+            Geçmiş travma öyküsü olan kadınlarda perimenopoz ve menopoz geçişi bazı belirtileri yeniden uyandırabiliyor; PTSD,
+            kronik kaygı bozukluğu ya da çocukluk travması arka planı varsa hormonal dalgalanma bu dokulara fazladan dokunuyor.
+            Bunu bilmek bir kabul değil — bir hazırlık. Travma bilgili psikoterapi yaklaşımları (EMDR, şema terapi, beden temelli
+            yaklaşımlar) bu grupta kıymetli bir destek katmanı oluşturabiliyor.
+          </p>
+          <p>
+            Bir başka şey daha: bu yıllarda annelik, kız kardeşlik, kızlık rolleri yer değiştiriyor… kimimiz annesini kaybediyor,
+            kimimiz kızını yetişkin olarak izlemeye başlıyor. Üç kuşaklı kadın bağı bu eşikte sessizce yeniden çiziliyor; ruh hali
+            bazen o yeniden çizimin sesi. Sizinki nasıl konuşuyor?
+          </p>
+
+          <h2 id="uzman-kapisi">Ne Zaman Bir Uzmana Bakmalı?</h2>
+          <p>
+            Bu sorunun cevabı için bir liste vereceğim — ama önce bir cümle: "uzmana gitmek için yeterince kötü olmak" gerekmiyor.
+            Erken konuşmak, yangın büyümeden suyu hazır tutmak.
+          </p>
+          <p>
+            Şu işaretler uzman kapısı: iki haftadan uzun süren çökkün ruh hali; ilgi-istek kaybının günlük işlevini bozması;
+            sürekli uyku-iştah değişimi; sosyal geri çekilme; iş ya da ilişki tarafında belirgin zorlanma; sebepsiz hissedilen
+            yoğun kaygı, panik atak ya da bedensel gerginlik; eskiden işe yarayan başetme yöntemlerinin artık yetmemesi
+            <Evidence level={5} />. Kendine zarar düşüncesi, yoğun umutsuzluk ya da güvenlik riski hissedilen durumlarda
+            <strong>acil destek</strong> — bu ertelenecek bir kategori değil.
+          </p>
+          <p>
+            Türkiye'de menopoz konusunda deneyimli kadın hastalıkları uzmanı + psikiyatr + gerekirse psikoterapist üçlüsü ideal bir
+            ekip kuruyor; çoğu zaman bir kapıdan giriliyor, diğerlerine yönlendirme oluyor. Yardım istemek bir güç hareketi —
+            bedenini ciddiye almanın açık imzası.
+          </p>
+
+          <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+          <h3>Eskiden hiç kaygılanmazdım, şimdi neden hiç durmadan kaygılıyım?</h3>
+          <p>
+            Bu cümleyi bu yıllarda çok sık duyuyorum — ben de yaşadım. Östrojen düşüşü, beyindeki kaygı eşiğini düzenleyen sistemleri
+            etkileyebiliyor; özellikle progesteron metabolitlerinin GABA sistemine bağlanma azalınca "doğal sakinleştirici" katmanın
+            inceliyor <Evidence level={4} />. Bu biyolojik; ama tek başına açıklamıyor — yaşamın yükü, uyku bütünlüğü ve geçmiş kaygı
+            örüntüsü de katkıda bulunuyor. İyi haber: kaygı hem yaşam tarzı adımlarına (düzenli hareket, sabah ışığı, kafein
+            sınırlama, nefes pratiği) hem de gerekirse SSRI ya da terapiye iyi yanıt veriyor. Eski kaygısız hâlin geri gelmiyorsa
+            bunu bir "yenilik" olarak değil bir "değişim" olarak okumak işe yarayabilir.
+          </p>
+          <h3>HRT ruh halimi gerçekten düzeltir mi, yoksa antidepresan mı gerek?</h3>
+          <p>
+            Cevap "hangi tablo" sorusuna bağlı. Perimenopozda dalgalanma + sıcak basması + uyku bölünmesi varsa HRT ruh halinde
+            belirgin yarar gösterebiliyor; çünkü kök sebebe (hormonal dalgalanma + uyku bozulması) dokunuyor <Evidence level={5} />.
+            Ama klinik depresyon eşiğinde (iki hafta + işlev kaybı + umutsuzluk) tek başına HRT yetmiyor; SSRI/SNRI eklenmesi ya da
+            ana tedavi olarak öncelenmesi gerekebiliyor <Evidence level={5} />. Hekiminle "bende hangisi baskın?" sorusunu açık
+            konuşmak en doğru yol — çoğu zaman ikisi birlikte planlanabiliyor.
+          </p>
+          <h3>Sürekli ağlama isteği menopoz mu, depresyon mu — nasıl ayırırım?</h3>
+          <p>
+            Bence en pratik ayrım şu: ağlama isteği geçici, bağlama bağlı (bir film, bir konuşma, bir hatıra) ve gün içinde
+            dağılıyorsa duygusal hassasiyet kategorisinde — menopoz geçişinde sık. Ama sebepsiz, sabahları belirgin, iki haftadan
+            uzun süren ve günlük işlevini etkileyen bir ağlama isteği klinik depresyon işareti olabilir <Evidence level={4} />. Yanına
+            ilgi kaybı, umutsuzluk, uyku-iştah değişimi ekleniyorsa "bekleme dönemi" değil "konuşma zamanı". Tek başına ayırmak zor —
+            iki hafta bir kayıt tutmak ve sonrasında bir uzmanla paylaşmak en sağlam yol.
+          </p>
+          <h3>Sabahları neden daha kötü hissediyorum, gün ilerledikçe geçiyor — bu normal mi?</h3>
+          <p>
+            "Sabah kötülüğü" depresif tablolarda klasik bir örüntü — kortizol ritmi (gün içinde sabah en yüksek, akşam düşer) ile
+            ilişkili olabiliyor <Evidence level={4} />. Menopoz döneminde uyku bölünmesi ve östrojen düşüşü bu sahneyi
+            keskinleştirebiliyor. Eğer bu örüntü iki haftadan uzun ve gündelik enerjini bozuyorsa hekimle konuşmak için yeterli bir
+            işaret. Geçici bir sabah halsizliği yaşamayan yok; ama "her sabah ağır" bir kategori değişimi.
+          </p>
+          <h3>Doğal yöntemlerle (hareket, omega-3, ışık terapisi) gerçekten anlamlı bir fark olur mu?</h3>
+          <p>
+            Evet — ama beklentiyi doğru kurmak şartıyla. Düzenli aerobik hareket perimenopoz depresif belirtilerinde tutarlı kanıta
+            sahip <Evidence level={5} />; etkisi 4-6 hafta sonra belirginleşir. Omega-3 hafif-orta düzeyde depresif belirtilerde
+            küçük ama anlamlı katkı sağlayabiliyor <Evidence level={3} />. Sabah ışığı (özellikle kış aylarında) sirkadiyen ritmi
+            destekliyor <Evidence level={4} />. Ama bu yöntemler klinik depresyonun tek tedavisi değil — orta-ağır tabloda ilaç ve
+            terapinin yerini tutmuyor. Hafif dalgalanmada kıymetli bir başlangıç katmanı; ağırlaşan tabloda destekleyici bir zemin.
           </p>
         </ArticleProsePanel>
         <RelatedReadings
