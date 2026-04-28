@@ -1,0 +1,271 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin']!;
+
+const tocEntries = [
+  { id: 'yaygin-yanilgi', label: 'Akşam Yürüyüşü Mitini Aç' },
+  { id: 'vucut-isisi', label: 'Vücut Isısı Eğrisi' },
+  { id: 'melatonin-pencere', label: 'Melatonin Penceresi' },
+  { id: 'zamanlama-siddet', label: 'Zamanlama × Şiddet' },
+  { id: '40-sonrasi', label: '40 Sonrasında Beden' },
+  { id: 'mini-plan', label: 'Üç Senaryo' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Akşam Hareketinin Uykuya Etkisi: Melatonin ve Serin Vücut';
+const articleDescription =
+  'Akşam yürüyüşü her zaman uyku getirir mi? Vücut ısısı eğrisi, melatonin penceresi ve 40 sonrasında değişen termoregülasyon — sporcu beden okumasıyla sürdürülebilir bir akşam ritmi.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'alara-baykent',
+  publishedDate: '28 Nisan 2026',
+  pathname: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
+  articleSection: 'Zihin & Denge',
+  sectionPath: '/zihin-denge',
+  keywords: ['akşam hareketi', 'uyku', 'melatonin', 'vücut ısısı', 'egzersiz zamanlaması', 'perimenopoz', 'termoregülasyon'],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zihin-denge" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zihin & Denge · Uyku · Mayıs Dosyası"
+      title="Akşam Hareketinin Uykuya Etkisi: Melatonin ve Serin Vücut"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="alara-baykent" publishedDate="28 Nisan 2026" readingMinutes={7} />
+
+      <section
+        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-ink/80">
+          Akşam yürüyüşünün her zaman uyku getirdiği söylenir; oysa bedenin kendi termostatı ve melatonin
+          penceresi düşünülmediğinde aynı yürüyüş seni geceye uyanık taşıyabilir. Vücut ısısının yatmadan önce
+          yumuşakça düşmesi, uykuya geçişin sessiz tetikleyicisidir. Bu yazıda hareketin saatini, şiddetini ve 40
+          sonrasında değişen ısı düzenini birlikte okuyacağız. Amaç disiplin değil, bedenin sinyallerini fark eden
+          sürdürülebilir bir ritim kurmak.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="yaygin-yanilgi">"Akşam Yürüyüşü Uyku Getirir" — Tam Olarak Doğru mu?</h2>
+        <p>
+          Çoğu zaman "akşam biraz yürürsem daha iyi uyurum" deriz, oysa hareketin uykuya etkisi tek başına süreyle
+          değil; saat, şiddet ve bedenin o anki ısı düzeniyle birlikte belirleniyor. Yürüyüş elbette dostumuz, ama
+          hangi pencerede yaptığın aynı yürüyüşü uyku getiren bir ritüele de, geceyi kısaltan bir uyarana da
+          çevirebiliyor.
+        </p>
+        <p>
+          Sporun içinde geçen yıllar bana şunu öğretti: beden, sandığımızdan çok daha sadık bir kayıt tutuyor.
+          Akşam saat dokuzda hızlı tempolu çıktığımız bir yürüyüş, gece yarısı uyanmaya kadar sürebilen bir
+          uyarılma zinciri başlatabiliyor <Evidence level={4} />. Bu yazıda meseleyi suçluluk diliyle değil, bir
+          tür "beden okuma" alıştırması olarak ele alacağız; çünkü doğru zamanlama, ekstra disiplinden çok daha
+          etkili.
+        </p>
+
+        <h2 id="vucut-isisi">Vücut Isısı Eğrisi — Bedenin Gizli Termostatı</h2>
+        <p>
+          Uykuya geçişin görünmez tetiği aslında ısıdır. Akşam saatlerinde çekirdek vücut ısın (iç organ ısısı)
+          hafifçe düşer ve bu düşüş, beyne "şimdi kapanma zamanı" mesajını veren en güçlü sinyallerden biridir.
+        </p>
+        <p>
+          Egzersiz yaptığında çekirdek ısın yükselir; düşük tempolu bir yürüyüşte birkaç onda derece, daha yoğun
+          bir tempoda bir-iki tam derece kadar. Bu ısının tekrar inişe geçmesi yaklaşık 90 ila 180 dakika alır
+          <Evidence level={5} />. Yani yatmadan bir saat önce hızlı tempolu çıktığın yürüyüşten döndüğünde, beden
+          hâlâ "soğuma" işini bitirmemiş oluyor; melatonin (karanlık hormonu) salgılanmaya hazırken termostat tam
+          tersi yönde çalışıyor.
+        </p>
+        <p>
+          Birçoğumuzun yaşadığı o tanıdık his — yorgun olduğunu hissetmene rağmen yatakta gözlerin açık kalması —
+          çoğu zaman bu termoregülasyon (vücut ısı düzeni) gecikmesinin sessiz işareti.
+        </p>
+
+        <h2 id="melatonin-pencere">Melatonin Pencereyi Açar, Egzersiz Onu Erteleyebilir</h2>
+        <p>
+          Melatonin, akşam karanlığıyla birlikte yavaş yavaş yükselen ve bedeni uyku moduna hazırlayan hormonun
+          adı. Onun yükseliş eğrisi bir kapı gibi düşün; sen o kapıdan geçtiğinde uyku derinleşiyor, kapı
+          kapanmadan içeri girmek istiyorsun.
+        </p>
+        <p>
+          Çoğu zaman "akşam egzersizi yorar, uyutur" sanırız, oysa yoğun egzersiz hem ışıklı bir ortamda
+          yapıldığında hem de adrenalin ve kortizol (uyanıklık hormonu) yükselttiği için melatoninin o yumuşak
+          tırmanışını saatlerce geciktirebiliyor <Evidence from={4} to={5} />. Endorfin hoş bir his bırakır, ama
+          biyokimyasal olarak melatoninle aynı yöne çalışmaz; tam tersine, uyanıklık devresini tazeler.
+        </p>
+        <p>
+          Bu yüzden akşam hareketini, melatonin penceresini kapatan değil; aralayan bir biçimde tasarlamak en
+          sağlıklısı. Düşük tempolu, ışığı kısılmış bir esneme akşamın geç saatlerinde sorun çıkarmazken, terleten
+          bir interval seansı aynı saatte tam tersi etki bırakabiliyor.
+        </p>
+
+        <h2 id="zamanlama-siddet">Zamanlama × Şiddet: Üçlü Pencere</h2>
+        <p>
+          Hareketi ne zaman yaptığın kadar nasıl yaptığın da önemli. Pratikte günü üç pencereye bölmek işe
+          yarıyor: sabah, öğleden sonra ve akşam.
+        </p>
+        <p>
+          Sabah erken saatlerde — özellikle gün ışığıyla birlikte — yapılan orta tempolu hareket, sirkadiyen
+          ritmin (24 saatlik iç saat) gün doğumuna kalibre olmasına yardımcı olabilir; bu da geceleri melatoninin
+          daha düzenli yükselmesiyle ilişkilidir <Evidence level={4} />. Öğleden sonra geç saatler ise vücut
+          ısısının doğal olarak en yüksek olduğu dilim; performans için elverişli, ama o ısının gece yumuşamaya
+          zamanı oluyor.
+        </p>
+        <p>
+          Akşamı ise şiddete göre düşünmek gerek. Düşük tempolu yürüyüş, hafif esneme, yoga akışları çoğu kişide
+          sorun çıkarmazken; nabzı belirgin yükselten koşu, HIIT, yüksek dirençli ağırlık çalışması yatmadan
+          önceki son üç saate denk geldiğinde uyku başlangıcını geciktirebiliyor <Evidence level={4} />. Akran
+          kuşağımdan sıkça duyduğum "spor sonrası dünyalar benim oluyor ama gece üçte uyanıyorum" cümlesi, çoğu
+          zaman bu denklemin işareti.
+        </p>
+
+        <h2 id="40-sonrasi">40 Sonrasında Beden Ne Diyor</h2>
+        <p>
+          Kendi yaşımdan ileride bakan biri olarak şunu söyleyebilirim: 40 sonrasında ısı düzeni daha dar bir
+          pencerede çalışmaya başlıyor. Annemle akşam yürüyüşlerimizden gözlemim de bu yönde — onun "biraz
+          hızlandık galiba" dediği tempo, on yıl öncesine göre daha çabuk terletiyor, daha geç soğutuyor.
+        </p>
+        <p>
+          Perimenopoz döneminde östrojendeki dalgalanma, vücudun ısı toleransını daraltıyor; bu durum
+          termoregülasyon penceresinin küçülmesi olarak adlandırılıyor <Evidence from={3} to={4} />. Yani aynı
+          tempodaki yürüyüş, gençken iki onda derece yükseltirken bu dönemde belirgin daha fazla yükselip daha
+          yavaş düşebiliyor. Bunun pratik karşılığı: akşam egzersizinden döndüğünde "soğuma süresi" daha uzun bir
+          tampon istiyor.
+        </p>
+        <p>
+          Bu fark senin bedeninde bir kusur değil; sadece yeni bir kalibrasyon. Eskiden saat dokuzda biten bir
+          yürüyüş seni rahat uyutuyorsa, şimdi aynı duyguyu yakalamak için yedi-yedi buçukta bitirmek gerekebilir.
+          Beden dilini değiştirmiyor; sadece daha net konuşuyor.
+        </p>
+
+        <h2 id="mini-plan">Sürdürülebilir Mini Plan — Üç Senaryo</h2>
+        <p>
+          Tek tip bir reçete kimseye uymaz; herkesin işi, çocukları, kromotipi (sabah-akşam eğilimi) farklı. O
+          yüzden katı bir plan yerine üç esnek senaryo öneriyorum; hangisi hayatına oturuyorsa onunla
+          başlayabilirsin.
+        </p>
+        <p>
+          <strong>Sabah erkenci senaryo:</strong> Uyandıktan sonraki ilk iki saat içinde, mümkünse gün ışığında
+          20-30 dakikalık orta tempolu yürüyüş. Bu, hem sirkadiyen ritmi sabitlemeye yardımcı olabilir hem de
+          akşamın uyku hazırlığını rahatlatır. Yoğun antrenmanı da bu pencereye taşımak, gece için en güvenli
+          seçenek.
+        </p>
+        <p>
+          <strong>Öğle arası senaryo:</strong> 12.00-15.00 arasında 25-40 dakikalık orta-yüksek tempolu hareket.
+          Vücut ısısı doğal olarak yüksekken çalışmak performansı kolaylaştırır, akşama kadar da soğuma için bol
+          zamanın kalır. Yoğun çalışmak istediğin günleri buraya yerleştirmek hem uykuyla hem enerjiyle barışık
+          bir denge kuruyor.
+        </p>
+        <p>
+          <strong>Akşam erkenci senaryo:</strong> Yatmadan en az üç saat önce bitecek bir hareket. Düşük-orta
+          tempolu yürüyüş, hafif yoga, esneme akışları çoğu akşam için elverişli olabilir. Yoğun seansları yatma
+          saatine üç saatten yakın koymamaya çalış; bedenin ısı eğrisi bu tampona ihtiyaç duyuyor.
+        </p>
+        <p>
+          Hangi senaryoyu seçersen seç, ölçü tek bir şey: bir hafta sonra uyku kalitenle ilişkisini kendi bedeninde
+          fark edebiliyor musun? Çünkü bu yazıdaki her satırdan daha güvenilir bir referansın var — kendi
+          sabahların.
+        </p>
+
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+
+        <h3>Yatmadan kaç saat önce egzersizi bitirmek gerek?</h3>
+        <p>
+          Genel bir çerçeve olarak yoğun egzersizin yatma saatinden en az üç saat önce bitmesi, bedenin ısı
+          eğrisinin yumuşakça düşmesine ve melatoninin kendi penceresinde yükselmesine alan bırakabilir
+          <Evidence level={4} />. Düşük tempolu yürüyüş veya hafif esnemede bu süre çoğu kişide bir-iki saate
+          inebiliyor. Yine de en doğru ölçü kişisel; bir hafta boyunca farklı saatleri deneyip uyku başlangıç
+          süreni gözlemlemek, herhangi bir genel kuraldan daha güvenilir bir kılavuz sunabilir.
+        </p>
+
+        <h3>Yoga ve nefes egzersizi de aynı kuralı takip eder mi?</h3>
+        <p>
+          Hayır, çoğunda tam tersi. Yumuşak akışlı yoga, restoratif pozlar ve uzun nefes pratikleri parasempatik
+          sistemi (dinlenme moduna geçiren sinir kolu) çalıştırır; vücut ısısını belirgin yükseltmeden gevşeme
+          tepkisi başlatabilir <Evidence level={4} />. Bu tür hareketleri yatmadan 30-60 dakika önceye yerleştirmek
+          çoğu kadında uyku başlangıcını kısaltmaya yardımcı olabiliyor. Power yoga gibi nabzı yükselten
+          varyasyonlar bu kategoriye girmez; onları "yoğun egzersiz" gibi değerlendirmek daha doğru.
+        </p>
+
+        <h3>Sıcak basması yaşıyorsam akşam egzersizi tetikler mi?</h3>
+        <p>
+          Termoregülasyon penceresi daralmış bir bedende akşam egzersizi, ısı düşüşünü geciktirerek gece sıcak
+          basmalarını sıklaştırabiliyor <Evidence from={3} to={4} />. Bu durum herkeste aynı olmayabilir; ancak
+          sıcak basması yaşadığın dönemlerde yoğun seansları sabaha veya öğle arasına çekmek bedenin işini
+          kolaylaştırabilir. Akşam için düşük tempolu, serin ortamda yapılan kısa yürüyüşleri tercih etmek ve duşu
+          ılık tarafa kaydırmak da yardımcı olabilir; sıkıntın sürüyorsa hekiminle birlikte değerlendirmek en
+          sağlıklısı.
+        </p>
+
+        <h3>Sabah erkenci miyim, akşamcı mıyım — kromotipim önemli mi?</h3>
+        <p>
+          Evet, kromotip (kişinin doğal sabah-akşam eğilimi) bireysel olarak fark yaratabilir; bazı kadınlar akşam
+          saatlerinde daha verimli, bazıları sabah daha enerjik <Evidence level={3} />. Yine de ısı eğrisi ve
+          melatonin penceresi gibi temel mekanizmalar herkeste benzer çalıştığı için, "akşamcıyım" demek yatmadan
+          iki saat önce yoğun antrenman yapmayı güvenli kılmıyor. Kromotipini dikkate alıp ona uygun saatler
+          seçebilirsin; ancak yatma saatine yakın yoğun egzersiz konusunda üç saatlik tampon eğilimi büyük ölçüde
+          ortak.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+          '/zamansiz-yasam/hareket-saglik-menopoz',
+          '/dosya/2026-05-uyuyamadigimiz-geceler',
+          '/library',
+        ]}
+      />
+
+      <section
+        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="leading-relaxed text-ink/80">
+          Akşam egzersizinin uykuya etkisi, vücut ısısı eğrisi ve melatonin sekresyonunun zamanlamasıyla yakından
+          ilişkilidir. Şiddet ve saat birlikte düşünüldüğünde, çoğu kadın için uyku kalitesini koruyan
+          sürdürülebilir bir hareket düzeni mümkün; perimenopoz döneminde termoregülasyon penceresinin daralması
+          bu zamanlamayı daha da önemli kılıyor.
+        </p>
+      </section>
+
+      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
+        <p class="text-sm leading-relaxed text-ink/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları
+          için sağlık profesyoneline başvurunuz.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

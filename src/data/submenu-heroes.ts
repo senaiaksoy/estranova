@@ -187,6 +187,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
     alt: 'Şafak ışığında pencereye bakan kadın; perimenopozda uykunun değişen yanı, hormonal dalga ve uyku evreleri teması',
   },
+  '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin': {
+    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
+    alt: 'Akşam ışığında dingin bir mekân; akşam hareketinin uykuya etkisi, melatonin ve vücut ısısı teması',
+  },
   '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
     alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve iç gözlem teması',

@@ -83,7 +83,8 @@ export const dossiers: MonthlyDossier[] = [
         excerpt:
           'Çoğu zaman "akşam yürüyüşü uyku getirir" deriz, oysa zamanlama ve şiddet birlikte düşünülmediğinde tam tersi çalışıyor. Sporcu beden okumasıyla gece-gündüz dengesi.',
         writerSlug: 'alara-baykent',
-        status: 'planned',
+        status: 'published',
+        href: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
         readingMinutes: 7,
       },
       {
