@@ -191,6 +191,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
     alt: 'Akşam ışığında dingin bir mekân; akşam hareketinin uykuya etkisi, melatonin ve vücut ısısı teması',
   },
+  '/zihin-denge/uyku-dinlenme/sabah-ucte-uyanmak-dokuz-yil': {
+    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
+    alt: 'Gecenin koyu mavisinde tavana bakan kadın silüeti; sabah üçte uyanmak ve dokuz yılın menopoz deneyimi teması',
+  },
   '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
     alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve iç gözlem teması',

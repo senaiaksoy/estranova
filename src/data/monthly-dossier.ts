@@ -92,7 +92,8 @@ export const dossiers: MonthlyDossier[] = [
         excerpt:
           'HRT öncesinde ve sonrasında ne değişti, ne aynı kaldı? Üç farklı dönemden samimi bir kişisel okuma — kanaat değil, gözlem.',
         writerSlug: 'basak-pelister',
-        status: 'planned',
+        status: 'published',
+        href: '/zihin-denge/uyku-dinlenme/sabah-ucte-uyanmak-dokuz-yil',
         readingMinutes: 9,
       },
       {
