@@ -16,27 +16,30 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri']!;
 
 const tocEntries = [
-  { id: 'ostrojen-etki', label: 'Östrojenin Etkisi' },
-  { id: 'yaygin-degisimler', label: 'Yaygın Değişimler' },
-  { id: 'vulvovajinal', label: 'Vulvovajinal Doku' },
-  { id: 'topikal-yaklasimlar', label: 'Topikal Bakım' },
-  { id: 'oral-destekler', label: 'Oral Destekler' },
-  { id: 'yasam-aliskanliklari', label: 'Yaşam Alışkanlıkları' },
-  { id: 'profesyonel-destek', label: 'Profesyonel Destek' },
+  { id: 'aynada-fark', label: 'Bir Sabah Aynada Şunu Fark Ettim…' },
+  { id: 'ostrojen-etki', label: 'Östrojen Cildimle Konuşurken Ne Yapıyor?' },
+  { id: 'yaygin-degisimler', label: 'Ne Değişiyor — Sadece Yüz mü?' },
+  { id: 'vulvovajinal', label: 'Vulvovajinal Doku — Az Konuşulan Yarı' },
+  { id: 'topikal-yaklasimlar', label: 'Topikal Bakım — Çoğunu Denedim, Şunu Öğrendim' },
+  { id: 'oral-destekler', label: 'Oral Destekler — Kolajen, Hyaluronik, Omega-3' },
+  { id: 'yasam-aliskanliklari', label: 'Yaşam Alışkanlıkları — Aynanın Arkasında Ne Var?' },
+  { id: 'profesyonel-destek', label: 'Profesyonel Destek — Ne Zaman?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Menopozda Cilt Değişimleri — Anlamak ve Bakım Rehberi';
-const articleDescription = 'Menopoz döneminde ciltte görülen değişimleri, kanıt düzeyleriyle bakım seçeneklerini ve günlük destek adımlarını açıklayan rehber.';
+const articleTitle = 'Menopozda Cilt Değişimleri — Aynaya Sakince Bakmak ve Bakım Rehberi';
+const articleDescription =
+  'Menopozda cilt neden ve nasıl değişir, hangi bakım adımları gerçekten fark yaratır, hangileri pahalı umut? HRT yolculuğunu yaşayan bir akranın deneyim notlarıyla.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'duygu-karaosmanoglu',
-  publishedDate: '27 Mart 2026',
+  publishedDate: '28 Nisan 2026',
   pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik',
-  keywords: ['menopoz', 'cilt', 'kolajen', 'östrojen', 'yaşlanma', 'topikal'],
+  keywords: ['menopoz', 'cilt', 'kolajen', 'östrojen', 'retinoid', 'hyaluronik asit', 'HRT cilt', 'cilt bakım rutini', '40+ kadın', 'vulvovajinal'],
   siteUrl,
 });
 ---
@@ -51,98 +54,231 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Beden & Yakınlık · Cilt sağlığı"
-      title="Menopozda Cilt Değişimleri — Anlamak ve Bakım Yapmanın Rehberi"
+      eyebrow="Beden & Yakınlık · Cilt & Görünüm"
+      title="Menopozda Cilt Değişimleri — Aynaya Sakince Bakmak ve Bakım Rehberi"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
         <ArticleTOC slot="toc" entries={tocEntries} />
-        <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="27 Mart 2026" readingMinutes={3} />
+        <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="28 Nisan 2026" readingMinutes={8} />
 
         <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-ink/80">
-            Östrojen azalması cilt mimarisini değiştirir; kolajen ve elastin üretimi zamanla düşebilir. Cilt daha kuru,
-            daha hassas ve daha ince görünebilir. Uygun bakım, beslenme ve yaşam alışkanlıkları ile bu değişimleri daha dengeli yönetmek mümkündür.
+            Cildin bir gün sana yabancı geliyorsa — yalnız değilsin, ben de o sabahlardan birinden geçtim. Östrojen azalmasıyla
+            birlikte cilt daha kuru, daha ince, bazen daha hassas hale gelebiliyor; bu kişisel bakım başarısızlığı değil, doğal
+            bir geçişin görünür yüzü. Bu rehberde kendi denediklerimden, işe yarayanlardan, "denedim ama olmadı" dediklerimden
+            ve gerçekten kanıtı olan adımlardan bahsediyorum. HRT yolculuğum boyunca öğrendiğim bir şey var: kusursuz görünüm
+            değil, sade ama tutarlı bir konfor planı bu dönemin gerçek hediyesi.
           </p>
         </section>
 
         <ArticleProsePanel>
-          <h2 id="ostrojen-etki">Östrojen Cilt Yapısına Nasıl Etki Eder?</h2>
+          <h2 id="aynada-fark">Bir Sabah Aynada Şunu Fark Ettim…</h2>
           <p>
-            Aynaya baktığında cildinin bir anda daha kuru ya da hassas göründüğünü fark etmek şaşırtıcı olabilir; östrojen cildin nem dengesi, kolajen üretimi ve bariyer bütünlüğü üzerinde etkili bir hormondur <Evidence level={5} />.
-            Menopoz döneminde östrojen düzeyleri düştükçe cildin su tutma kapasitesi azalabilir ve toparlanma süresi uzayabilir.
+            Bende öyle bir gün oldu — sıradan bir sabah, kahvemi koymuş, makyaj çantasını açmıştım. Aynaya baktığımda cildim
+            bana yabancı geldi. Bir gece önce uykusuz mu kalmıştım, kuruluk mu vardı, ışık mı garipti, çözemedim. Sonra
+            anladım: bu artık tek bir gecenin hikayesi değil; cildim bir yerden başka bir yere geçiyordu.
           </p>
           <p>
-            Bu değişim yalnızca yüz cildi ile sınırlı değildir. Vücudun farklı bölgelerinde kuruluk, hassasiyet artışı ve elastikiyet kaybı
-            görülebilir. Ciltte gözlenen değişimleri kişisel başarısızlık gibi değil, hormon geçişinin doğal bir parçası olarak görmek önemlidir.
-          </p>
-
-          <h2 id="yaygin-degisimler">Yaygın Cilt Değişimleri Nelerdir?</h2>
-          <p>
-            Bu değişimleri fark etmek kişisel bakımda başarısız olduğun anlamına gelmez; menopoz döneminde sık görülen başlıca değişimler kuruluk, ince çizgilerde artış, elastikiyet kaybı, ton farklılıkları ve dönemsel
-            hassasiyet olarak özetlenebilir. Kuruluk ve ince çizgiler için kanıt seviyesi güçlüdür <Evidence level={5} />.
-          </p>
-          <p>
-            Bazı kişilerde cilt daha reaktif hale gelir. Daha önce sorun yaratmayan ürünler bu dönemde tahriş oluşturabilir.
-            Bu nedenle bakım planında ürün çeşitliliğini artırmak yerine, sade ama düzenli bir rutin kurmak çoğu zaman daha iyi sonuç verir.
+            Bu yazıyı yazma fikri o sabahlardan çıktı. Sana hekim olarak değil — Londra ile İstanbul arasında gidip gelen,
+            HRT yolculuğunu yaşayan, denediği ürünleri unuttuğunda kendine "bu kadarı yetti, bir sayfaya yazsam" diyen bir
+            akran olarak yazıyorum. Bende işe yarayan her şeyin sende de yarayacağını söylemiyorum; ama dönem aynı, dert
+            aynı, sorular birbirine benziyor.
           </p>
 
-          <h2 id="vulvovajinal">Vulvovajinal Doku Değişimleri</h2>
+          <h2 id="ostrojen-etki">Östrojen Cildimle Konuşurken Ne Yapıyor?</h2>
           <p>
-            Cilt değişiminden söz ederken mahrem dokuları da dışarıda bırakmamak gerekir; menopozla birlikte vajinal ve vulvar dokuda incelme, kuruluk ve hassasiyet gelişebilir <Evidence level={5} />. Bu durum günlük konforu,
-            cinsel yaşam deneyimini ve bazen idrar yolu şikayetlerini etkileyebilir.
+            Cildin "neden böyle" sorusunun cevabı çoğunlukla bir tek hormonun adına dayanıyor: östrojen. Yıllarca sessizce
+            cildimizin nem dengesini, kolajen üretimini ve bariyer bütünlüğünü destekleyen bu hormon, menopoz geçişinde
+            sahneden ağır ağır çekiliyor <Evidence level={5} />.
           </p>
           <p>
-            Bu belirtiler yaygındır ve utanılacak bir durum değildir. Uygun nemlendirici ürünler, lokal tedavi seçenekleri ve hekim değerlendirmesi
-            ile yönetilebilir. Kalıcı rahatsızlık durumunda geç kalmadan destek almak yaşam kalitesini belirgin biçimde artırır.
+            Östrojen düştükçe cildin su tutma kapasitesi azalabiliyor; bariyer (cildin dış savunma katmanı) zayıflıyor;
+            kolajen ve elastin (cildi taşıyan iki temel protein) üretimi ilk beş yılda belirgin şekilde geriliyor — ve bu
+            geriye düşüş daha sonra yavaşlayarak devam ediyor <Evidence level={5} />. Yani aynada gördüğün değişim küçük
+            bir bakım hatası değil; arka planda işleyen sessiz bir biyolojik süreç.
+          </p>
+          <p>
+            Bunu bilmek bana iki açıdan iyi geldi: önce kendimi suçlamayı bıraktım. Sonra "her şeyi düzelteyim" dürtüsünü
+            yumuşattım — çünkü hormonun kapısını ürünle kapatamıyorsun. Yapabileceğin şey bariyeri korumak, cildi
+            beslemek ve gerçekten kanıtı olan adımları sade bir rutin halinde sürdürmek.
           </p>
 
-          <h2 id="topikal-yaklasimlar">Yüz Cildi İçin Topikal Yaklaşımlar</h2>
+          <h2 id="yaygin-degisimler">Ne Değişiyor — Sadece Yüz mü?</h2>
           <p>
-            Bakım rutini kalabalık olmak zorunda değildir; nemlendiriciler (hyaluronik asit, gliserin, seramid içeren formüller) bariyer desteğinde temel rol oynar <Evidence level={5} />.
-            Retinoid içeren ürünler kolajen dönüşümüne katkı sağlayabilir <Evidence level={5} />, ancak düşük dozla başlayıp yavaş ilerlemek gerekir.
+            Cildi yüzle eşitlemek bir alışkanlık. Oysa bu dönemde cilt bütününde konuşur. Yüzdeki kuruluk ve ince
+            çizgilerin yanına ellerde, dirseklerde, bacaklarda incelme; saçlı deride yağlanma azalması; bazılarımızda
+            artmış pigment lekeleri ekleniyor <Evidence level={5} />.
           </p>
           <p>
-            C vitamini gibi antioksidanlar cilt tonunu destekleyebilir <Evidence level={4} />. Güneş koruması ise bu dönemde vazgeçilmezdir <Evidence level={5} />.
-            SPF 30 ve üzeri ürünlerin düzenli kullanımı, pigment değişimleri ve erken foto-yaşlanma riskini azaltmada en etkili adımlardan biridir.
+            Bende en şaşırtıcı değişiklik şu oldu: yıllarca sorun yaratmayan bir nemlendirici birden batmaya başladı.
+            Cilt reaktivitesi (tahriş eşiğinin düşmesi) bu dönemde sık. O yüzden ürün çeşitliliğini artırmak yerine
+            azaltmak, sade bir rutin kurmak çoğunlukla daha iyi sonuç veriyor. Üç-dört temel ürün, çok büyük bir vitrin
+            kadar etkili — bazen daha etkili.
+          </p>
+          <p>
+            Bir de bedenin "konfor öncelikleri" değişiyor: tırnaklar daha kolay kırılabiliyor, saçların yapısı
+            inceliyor, gözler kuruyor. Bunlar tek başına panik göstergesi değil; cildin "ben de bu geçişin
+            içindeyim" dediği kanallar.
+          </p>
+
+          <h2 id="vulvovajinal">Vulvovajinal Doku — Az Konuşulan Yarı</h2>
+          <p>
+            Cilt deyince yüzü düşünüyoruz, yüz dışındaki cildi unutuyoruz; menopozun en az konuştuğumuz cilt başlığı
+            vulvar ve vajinal doku. Hâlbuki bu doku da östrojenin sahneden çekilmesinden çok belirgin etkileniyor.
+          </p>
+          <p>
+            Vulva ve vajinal mukozada incelme, kuruluk, hassasiyet ve elastikiyet kaybı bu dönemin sık tablosu
+            <Evidence level={5} />. Bu değişim günlük konforu, cinsel yaşam kalitesini, bazen idrar yolu sağlığını
+            doğrudan etkileyebiliyor; "yaşımdan, geçer" diye bekleyenlerin çoğu sonra "keşke daha önce konuşsaydım"
+            diyor.
+          </p>
+          <p>
+            Bu konuda ben kendi adıma erken davrandım: vajinal nemlendiriciler ve düşük doz lokal östrojen seçenekleri
+            jinekoloğumla konuşulduğunda fark gerçekten belirgin <Evidence level={5} />. Lokal östrojen sistemik
+            HRT'den ayrı bir başlık — emilim çok düşük, çoğu kadın için güvenli bir seçenek olarak değerlendiriliyor.
+            Ama karar her zaman hekimle birlikte; özellikle meme kanseri öyküsü gibi özel başlıklar varsa
+            kişiselleştirilmesi gerekiyor.
+          </p>
+
+          <h2 id="topikal-yaklasimlar">Topikal Bakım — Çoğunu Denedim, Şunu Öğrendim</h2>
+          <p>
+            Açık konuşacağım: yıllar içinde çok ürün denedim. Reklamla geleni de, dermatologdan duyduğumu da, arkadaş
+            tavsiyesiyle aldığımı da. Sonunda elimde kalan rutin sandığımdan çok daha sade. Üç sütun var: nemlendirme,
+            retinoid, güneş koruması.
+          </p>
+          <p>
+            Nemlendiriciler bariyer desteği için bu dönemde temel başlık <Evidence level={5} />. Hyaluronik asit
+            (cildin doğal nem tutma molekülü), gliserin ve özellikle seramid (bariyerin yapı taşı yağ) içeren formüller
+            bende tutarlı çalıştı. Pahalı olması gerekmiyor; etiketteki içerikler önemli, marka değil.
+          </p>
+          <p>
+            Retinoidler (A vitamini türevleri) kolajen dönüşümünü destekleyen, kanıtı en güçlü topikal aktif
+            <Evidence level={5} />. Ama bu dönemde başlamak için bir kural var: yavaş gir. Düşük dozla, haftada
+            iki gece, sadece nemlendirici üzerine uygulayarak başlamak tahriş riskini azaltıyor. Ben bu
+            kuralı atladığımda bir hafta kıpkırmızı yürüdüm — kendi deneyimimden söylüyorum, sabırlı başla.
+          </p>
+          <p>
+            C vitamini gibi antioksidanlar cilt tonunu destekleyebiliyor <Evidence level={4} />. Ama topikal aktif
+            seçimi her cildin yanıtına göre değişir — benim cildimde C vitamini sabah rutinine güzel oturuyor; başka
+            bir cildi tahriş edebiliyor. SPF 30+ güneş koruması ise tartışmasız <Evidence level={5} />: pigment
+            değişimi, foto-yaşlanma ve cilt kanseri riskini azaltan tek tutarlı adım.
           </p>
           <p class="rounded-2xl border border-gold/30 bg-cream-soft/60 px-5 py-4 text-sm italic text-ink/75">
-            Günlük cilt bakım rutinini (temizlik, nemlendirme, SPF, aktif içerikler) detaylı çerçeveleyen ayrı bir
-            rehber: <a class="font-semibold text-burgundy underline-offset-2 hover:underline" href="/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve">Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve</a>.
+            Günlük cilt bakım rutinini (temizlik, nemlendirme, SPF, aktif içerikler) ve ameliyatsız uygulamaları
+            (lazer, mezoterapi, IPL) detaylı çerçeveleyen ayrı bir rehber:
+            <a class="font-semibold text-burgundy underline-offset-2 hover:underline" href="/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve">Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve</a>.
             Bu sayfa daha çok mekanizmayı (östrojenin etkisi, vulvovajinal doku, oral destekler) ele alıyor.
           </p>
 
-          <h2 id="oral-destekler">Oral Destekler ve Takviyeler</h2>
+          <h2 id="oral-destekler">Oral Destekler — Kolajen, Hyaluronik, Omega-3</h2>
           <p>
-            Takviyeler cilt konusunda çok sık karşımıza çıkar; kolajen hidrolizatı, hyaluronik asit, omega-3 ve bazı antioksidan takviyeler cilt kalitesi için sık konuşulan seçeneklerdir.
-            Bu başlıkların kanıt düzeyi genellikle orta veya gelişen kanıt aralığındadır <Evidence from={3} to={4} />.
+            Takviye rafları gerçekten kafa karıştırıyor. Kolajen tozu, hyaluronik asit kapsülü, omega-3, biotin,
+            antioksidan kompleksleri… Sosyal medyada her ay yeni bir "her şeyi çözen molekül" çıkıyor. Açıkça söyleyeyim:
+            tek başına cilt değiştiren bir takviye yok.
           </p>
           <p>
-            Takviyeler tek başına güçlü bir bakım planı oluşturmaz. Beslenme düzeni, uyku, stres düzeyi ve güneş koruması ile birlikte değerlendirilmelidir.
-            Takviye seçimi yapılacaksa doz, içerik ve ilaç etkileşimleri açısından sağlık profesyoneli görüşü almak en güvenli yaklaşımdır.
+            Kolajen hidrolizatı (parçalanmış peptit formu) ve hyaluronik asit oral takviyelerinin cilt nem ve
+            elastikiyeti üzerinde küçük ama anlamlı etkisi olabileceğini gösteren çalışmalar var; kanıt orta düzeyde
+            ve etki kişiye göre değişiyor <Evidence from={3} to={4} />. Omega-3 yağ asitleri inflamasyonu yumuşatarak
+            dolaylı destek sağlayabiliyor <Evidence level={4} />. Bende üç-dört aylık tutarlı kullanım sonrası küçük
+            bir fark hissettim; ama "fark hissetmek" ile "ölçülebilir değişim" aynı şey değil.
+          </p>
+          <p>
+            Bir kuralım var: tek seferde birden fazla takviyeye başlamıyorum. Yan etkileri ve faydayı ayırt etmek
+            mümkün olmuyor. Doz, içerik kalitesi ve mevcut ilaçlarla etkileşim için hekiminle ya da klinik beslenme
+            uzmanı ile konuşmak takviye planını gerçekten kişiselleştiriyor. Kahvenin yanına atılan rastgele
+            kapsül değil; planlı, sade, geri çekilmesi de bilinçli bir tercih.
           </p>
 
-          <h2 id="yasam-aliskanliklari">Yaşam Alışkanlıkları: Sessiz ama Güçlü Etki</h2>
+          <h2 id="yasam-aliskanliklari">Yaşam Alışkanlıkları — Aynanın Arkasında Ne Var?</h2>
           <p>
-            Cilt çoğu zaman içerideki ritmi de gösterir; düzenli uyku, yeterli su tüketimi, protein ve sağlıklı yağdan dengeli beslenme cilt yenilenmesine katkı sağlayabilir <Evidence level={4} />.
-            Stres düzeyinin yüksek kalması ise kortizol yoluyla ciltte hassasiyet ve iyileşme gecikmesiyle ilişkili olabilir <Evidence level={4} />.
+            Bunu yıllar içinde kabul etmek zorunda kaldım: cilt çoğu zaman gece olanı sabah söylüyor. Uyku, stres,
+            beslenme, hidrasyon — aynaya yansıyan şey aslında bunların toplamı.
           </p>
           <p>
-            Sigara bırakma ve alkolü sınırlama cilt sağlığı için doğrudan olumlu katkı sağlar <Evidence level={5} />. Günlük 20-30 dakikalık yürüyüş gibi
-            sürdürülebilir hareket planı da dolaşımı destekleyerek cilt kalitesine dolaylı katkı sunar.
+            Düzenli uyku (yedi-sekiz saat hedefi), yeterli su tüketimi, protein dengeli beslenme ve sağlıklı yağ alımı
+            cilt yenilenmesine destek <Evidence level={4} />. Sıcak basması veya gece terlemesi uykunu bölüyorsa cilt
+            tarafında da fatura var; bu yüzden uyku temasını cilt rutinin parçası olarak görmek bence daha gerçekçi.
+            Yüksek stresin sürekli olması kortizol üzerinden bariyer onarımını yavaşlatabiliyor <Evidence level={4} />.
+          </p>
+          <p>
+            Sigara bırakma ve alkolü sınırlama cilt için doğrudan kanıtı olan adımlar <Evidence level={5} />. Sigara
+            cildin oksijen ve besin akışını bozuyor; alkol dehidratasyon ve uyku bölünmesi üzerinden ikinci günü
+            etkiliyor. Günde 20-30 dakikalık yürüyüş dolaşım üzerinden dolaylı bir destek; ben kendi adıma sabah
+            yürüyüşünü "yüz losyonum" gibi düşünüyorum.
           </p>
 
-          <h2 id="profesyonel-destek">Ne Zaman Profesyonel Destek Almalısınız?</h2>
+          <h2 id="profesyonel-destek">Profesyonel Destek — Ne Zaman?</h2>
           <p>
-            Bazen iyi bir rutin yetmez ve bu da senin hatan değildir; ciltte kalıcı tahriş, ani pigment değişimi, geçmeyen kuruluk veya cinsel ilişki sırasında belirgin rahatsızlık varsa dermatolog ve/veya jinekolog
-            değerlendirmesi gerekir. Özellikle günlük yaşamı etkileyen şikayetlerde gecikmeden destek almak önemlidir.
+            Bakım rutinin senin için çalıştığı sürece kendi planında ilerleyebilirsin. Ama bazı işaretlerde kapıya
+            erken vurmak yarar.
           </p>
           <p>
-            Menopoz döneminde cilt bakımı tek bir ürüne bağlı değildir; kişiye özgü, düzenli ve gerçekçi bir planla ilerlemek çoğu zaman daha dengeli sonuç verir.
-            Buradaki temel hedef kusursuz görünüm değil, konfor ve sağlıklı cilt bariyeridir.
+            Geçmeyen kuruluk ve tahriş, ani pigment değişimi, ben şekli/rengi değişimi, kalıcı kızarıklık, alerjik
+            görünümlü reaksiyonlar dermatolog değerlendirmesi anı. Cinsel ilişkide belirgin ağrı, vulvar bölgede
+            yanma veya idrar yolu yakınmalarının tekrarı jinekolog kapısı. Eğer yüz cildinde belirgin ve hızlı bir
+            kayıp yaşıyorsan ve bu seni günlük yaşamda zorluyorsa, dermatologla mevcut rutinini gözden geçirmek
+            çoğu zaman küçük bir ayarlama ile büyük bir fark yaratıyor.
+          </p>
+          <p>
+            Son bir not — kendi adıma da kendime sık hatırlattığım bir şey: bu dönemde "kusursuz cilt" hedefi
+            yorucu bir hedef. Sade bir konfor, sağlıklı bir bariyer, kendi yansımanla sakince barışmak — bence asıl
+            kazanım bu. Aynayla ilişkimiz bu yıllarda yeniden kuruluyor; ürün listesi kadar bu ilişki de bakımın
+            parçası.
+          </p>
+
+          <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+          <h3>Kolajen takviyesi gerçekten cilt için işe yarar mı, yoksa pahalı bir umut mu?</h3>
+          <p>
+            Bu soruyu kendime de defalarca sordum. Kolajen hidrolizatı (parçalanmış, küçük peptit formu) için cilt
+            nem ve elastikiyeti üzerinde küçük ama anlamlı katkı gösteren çalışmalar var; kanıt orta düzeyde, etki
+            tutarlı değil <Evidence level={3} />. Bende üç-dört aylık kullanım sonrası küçük bir fark hissettim;
+            ama bunun ne kadarı kolajenden, ne kadarı aynı dönemde uyku-protein-su artışından, ayrıştırmak güç.
+            Pahalı olanı gerek yok; hidrolize formda olması ve günlük 8-10 gram doz aralığı genel öneri. Tek
+            başına bir bakım planı değil; sade rutinin küçük bir destekçisi.
+          </p>
+          <h3>HRT yüz cildimi belirgin değiştirir mi, ne kadar sürede?</h3>
+          <p>
+            HRT'nin cilt üzerindeki olumlu etkisini destekleyen çalışmalar var: nem dengesi, kolajen yoğunluğu ve
+            elastikiyette küçük-orta ölçekli iyileşme <Evidence from={3} to={4} />. Etki çoğu zaman üç-altı ay
+            içinde belirginleşiyor; "ertesi sabah" değişen bir şey değil. Ama HRT bir cilt tedavisi değil — kararı
+            sıcak basması, gece terlemesi, kemik sağlığı ve genel risk-fayda profili üzerinden hekimle birlikte
+            verilen bir başlık. Cilt etkisi olası bir yan kazanım. Ben kendi HRT yolculuğumda cildimde yumuşak bir
+            iyileşme hissettim; ama bunu HRT'nin "cilt tedavisi" olarak almıyorum.
+          </p>
+          <h3>Retinoid kullanmaya başlamak için yaş geç mi, nasıl başlamalı?</h3>
+          <p>
+            Yaş için "geç" diye bir kavram yok — ama cilt artık daha hassas, o yüzden başlangıç farklı. Düşük dozla
+            (örn. retinol %0,1 veya retinaldehit gibi nazik formlar), haftada iki gece, sadece nemlendirici üzerine
+            uygulayarak başlamak tahriş riskini azaltıyor <Evidence level={5} />. İlk altı haftada cilt biraz
+            kuruyabilir, soyulabilir — bu uyum süreci. SPF 30+ güneş koruması retinoid kullanırken zorunlu; çünkü
+            cilt güneşe daha duyarlı hale geliyor. Üç-altı ay sonra fark hissetmeye başlıyorsun; sabırla. Reçeteli
+            tretinoin daha güçlü ama önce dermatologla konuşmak şart.
+          </p>
+          <h3>Eskiden kullandığım ürün şimdi neden batıyor — ciltim alerjik mi oldu?</h3>
+          <p>
+            Bu cümle bana çok tanıdık — ben de yıllarca aynı kremi kullanmıştım, sonra birden tahriş etmeye başladı.
+            Cevap genellikle alerji değil, cilt reaktivitesi. Östrojen düşüşüyle bariyer zayıflayınca daha önce sorun
+            yaratmayan kokulu ürünler, alkol içerenler, güçlü asit (yüksek doz salisilik, glikolik) içeren formüller
+            yakmaya başlayabiliyor <Evidence level={4} />. Çözüm: kokusuz, alkolsüz, sade içerikli formüllere geçmek;
+            aktiflere ara verip iki-üç hafta sadece nemlendirici + SPF kullanmak; bariyer toparlandıktan sonra
+            aktifleri yavaş geri eklemek. Eğer kızarıklık ve şişlik ısrarlı ise dermatolog değerlendirmesi gerekiyor —
+            gerçek alerjik reaksiyonlar da bu dönemde görülebiliyor.
+          </p>
+          <h3>Mezoterapi, IPL, dermapen gibi ameliyatsız uygulamalar bu yaşta gerçekten fark yaratır mı?</h3>
+          <p>
+            Bu uygulamalar gerçek bir yer tutuyor — ama beklentinin doğru kurulması şart. IPL pigment lekeleri ve
+            ten eşitliği için kanıtı en sağlam başlıklardan <Evidence level={4} />; mezoterapi (vitamin-mineral
+            kokteyli) cilt nemini geçici desteklemekte yardımcı, kalıcı yapısal değişim sağlamıyor; mikroiğneleme
+            (dermapen / SkinPen) kolajen dönüşümünü uyararak ince çizgi ve dokuda iyileşme gösterebiliyor
+            <Evidence from={3} to={4} />. Hiçbiri tek seansla "gençleşmiyor"; üç-altı seans + bakım rutini birlikte
+            işliyor. Ben kendi adıma birkaç başlığı denedim — ameliyatsız uygulama detaylarını ve seçim kriterlerini
+            yukarıda bahsettiğim "Cilt Bakımı — Genel Çerçeve" rehberinde daha geniş ele aldık. Kararı dermatologla
+            birlikte vermek, hem maliyeti hem güvenliği yerli yerine oturtuyor.
           </p>
         </ArticleProsePanel>
 
