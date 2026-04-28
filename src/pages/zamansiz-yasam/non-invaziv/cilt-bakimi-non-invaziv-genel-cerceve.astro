@@ -14,6 +14,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const tocEntries = [
   { id: 'baslik-ne', label: 'Bu Başlık Ne, Ne Değil' },
   { id: 'cildi-anlamak', label: 'Menopozda Cildi Anlamak' },
+  { id: 'gunluk-rutin', label: 'Günlük Cilt Bakım Rutini' },
   { id: 'ameliyatsiz-tanim', label: 'Ameliyatsız Ne Demek?' },
   { id: 'kategoriler', label: 'Yaklaşım Kategorileri' },
   { id: 'cihaz-tabanli', label: 'Cihaz Tabanlı Yaklaşımlar' },
@@ -24,9 +25,9 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Ameliyatsız Cilt Bakımı: Menopoz Sonrasında Genel Çerçeve';
+const articleTitle = 'Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve';
 const articleDescription =
-  'Menopoz sonrasında ameliyatsız cilt yaklaşımları nedir, ne işe yarar, neyin sınırı vardır? Marka veya satış önerisi olmadan, akran tonunda editoryal bir çerçeve.';
+  'Menopozda cilt bakımı için günlük rutin (yıka-nemlendir-koru-aktifler) ile ameliyatsız profesyonel yaklaşımları (radyofrekans, ultrason, peeling) tek bir akran çerçevesinde toplayan rehber. Marka veya satış önerisi olmadan, kanıt düzeyiyle.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -36,13 +37,18 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam',
   keywords: [
+    'menopoz cilt bakımı',
+    'günlük cilt rutini',
     'ameliyatsız',
-    'cilt bakımı',
     'menopoz cildi',
-    'cilt yaşlanması',
+    'hyaluronik asit',
+    'seramid',
+    'niasinamid',
+    'retinol',
+    'SPF',
     'kollajen',
     'topikal bakım',
-    'editöryal çerçeve',
+    'cilt yaşlanması',
   ],
   siteUrl,
 });
@@ -62,7 +68,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="25 Nisan 2026" readingMinutes={6} />
 
       <header class="mb-10">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Zamansız Yaşam · Ameliyatsız</p>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Zamansız Yaşam · Cilt Bakımı</p>
         <h1 class="font-serif text-4xl leading-tight md:text-6xl">{articleTitle}</h1>
       </header>
 
@@ -71,11 +77,11 @@ const articleSchemas = buildArticleSchemas({
       >
         <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
         <p class="leading-relaxed text-ink/80">
-          Menopoz sonrasında ciltte gözlenen incelme, kuruluk ve elastikiyet kaybı; östrojen düzeyinin düşmesiyle
-          ilişkilendirilen bir tablonun parçası. Ameliyatsız yaklaşımlar — yani ameliyat veya enjeksiyon
-          gerektirmeyen uygulamalar — bu tabloya farklı katmanlarda dokunabiliyor. Bu rehber, herhangi bir markaya
-          veya kliniğe yönlendirme yapmadan; ne, neden, hangi sınırla işe yarar sorularına bir akran çerçevesi sunmak
-          için yazıldı.
+          Menopozda cilt bakımı iki katmanda konuşur: günlük ev rutini (temizlik, nem, güneş koruması, doğru aktif
+          içerikler) ve gerektiğinde profesyonel ameliyatsız yaklaşımlar (radyofrekans, odaklanmış ultrason, yüzeysel
+          peeling). Çoğu zaman birinin etkisi diğeri olmadan sınırlı kalır. Bu rehber, herhangi bir markaya veya
+          kliniğe yönlendirme yapmadan; ne, neden ve hangi sınırla işe yarar sorularına kanıt düzeyiyle bir akran
+          çerçevesi sunmak için yazıldı.
         </p>
       </section>
 
@@ -113,6 +119,52 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Bu çok faktörlülük, tek bir uygulamanın “cildi gençleştireceği” iddiasının neden gerçekçi olmadığını da
           gösteriyor. Etkili olduğu söylenen yaklaşımlar genelde belirli bir katmanda, belirli bir sınırla çalışıyor.
+        </p>
+
+        <h2 id="gunluk-rutin">Günlük Cilt Bakım Rutini — Sade Bir Mimari</h2>
+        <p>
+          Profesyonel uygulamalar konuşulurken çoğu zaman gözden kaçan şey, günlük rutinin tek başına ne kadar
+          belirleyici olabildiği. Klinikte yapılan en iyi seansın bile etkisi, evdeki günlük bakımla
+          birleştirilmediğinde sınırlı kalıyor.
+        </p>
+        <p>
+          <strong>Temizlik.</strong> Köpüren sabunlar ve sülfat içeren temizleyiciler menopoz sonrası ciltte zaten
+          azalan bariyer fonksiyonunu daha çok zorluyor; bu yüzden krem veya losyon formunda, pH dengeli, nazik
+          temizleyiciler tercih ediliyor <Evidence level={5} />. Sabah hafif bir su veya yumuşak temizleyici çoğu
+          ciltte yeterli; akşam, gün boyu birikmiş güneş kremi ve kirin temizlenmesi için biraz daha dolu bir adım
+          mantıklı. Sıcak su yerine ılık su, peeling fırçaları yerine eller — bariyer tamiri için sade ipuçları.
+        </p>
+        <p>
+          <strong>Nemlendirme ve bariyer onarımı.</strong> Hyaluronik asit (cildin doğal nem çekici molekülü)
+          yüzeyde nem tutuyor; seramid (cilt bariyerinin yapı taşlarından biri) bariyer onarımına katkı sağlıyor;
+          gliserin sade bir nem destekçisi <Evidence level={5} />. Bu üçünün herhangi bir kombinasyonunu içeren bir
+          nemlendirici sabah ve akşam — menopoz sonrası kuruluk için en tutarlı kanıta sahip topikal başlık. Nem
+          krem yağ değil; daha çok günde 2 sürme gerekenleri gece kremine ekleyerek konfor artıyor.
+        </p>
+        <p>
+          <strong>Güneş koruması.</strong> Menopoz sonrasında cilt UV hasarına daha savunmasız hale geliyor; aynı
+          zamanda yıllar boyu birikmiş güneş hasarı (fotostarlanma) bu dönemde daha görünür hale geliyor
+          <Evidence level={5} />. Geniş spektrumlu (UVA + UVB) SPF 30 ve üzeri güneş koruyucu, hava bulutlu olsa
+          bile her sabah; yeniden uygulama uzun açık hava maruziyetinde ya da ter sonrası. Bu tek başına en yüksek
+          kanıt düzeyine sahip anti-aging adımı; krem veya cihaz seçiminden çok daha belirleyici
+          <Evidence level={5} />.
+        </p>
+        <p>
+          <strong>Aktif içerikler.</strong> Antioksidanlar serbest radikal hasarını yumuşatma potansiyeline sahip;
+          C vitamini sabah serumu olarak en sık çalışılan başlık <Evidence level={4} />. Niasinamid (B3 vitamini
+          formu) cilt tonu eşitliği ve bariyer desteği için yumuşak ama kanıt düzeyi sağlam bir aktif
+          <Evidence level={5} />. Retinol (A vitamini türevi) cilt yenilenmesini ve kollajen sentezini destekleyen
+          başlıkta topikal aktif içerikler arasında en güçlü kanıta sahip; ancak menopoz sonrasında zaten incelmiş
+          ciltte düşük konsantrasyondan başlayıp yavaşça artırmak ve gece kullanımı ile sınırlı tutmak akıllıca
+          <Evidence level={5} />. Peptitler kollajen sinyali yoluyla daha hafif bir destek sağlayabiliyor
+          <Evidence level={3} />. AHA/BHA gibi kimyasal peelinglerle haftada 1-2 kez yumuşak yenilenme makul; her
+          gün uygulama bariyeri zorluyor.
+        </p>
+        <p>
+          <strong>Beslenme ve yaşam tarzı.</strong> Cilt rafa konulmuş bir uzuv değil, vücudun en büyük organı.
+          Yeterli su, omega-3 yağ asitleri (yağlı balık, ceviz, keten) ve antioksidan açısından zengin renkli
+          sebze-meyveler kollajen yapısını destekliyor; uyku, alkol ve sigara cilt regenerasyonunu doğrudan
+          etkiliyor <Evidence level={4} />. Bu zemin olmadan en pahalı serum bile sınırlı bir şey söyleyebiliyor.
         </p>
 
         <h2 id="ameliyatsiz-tanim">Ameliyatsız Ne Demek, Ne Demek Değil?</h2>
