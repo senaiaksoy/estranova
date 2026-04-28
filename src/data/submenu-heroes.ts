@@ -111,6 +111,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zy-hareket-saglik.webp',
     alt: 'Sabah park yolunda yürüyüş molasında kadın; arkadan editöryal kadraj, krem keten pantolon, sonbahar bordo yaprak ipucu; günlük hareket ritmi teması',
   },
+  '/zamansiz-yasam/eklem-agrisi-menopoz': {
+    src: '/images/library/editorial/hg-kemik-erimesi-egzersiz.webp',
+    alt: 'Güneş dolu salonda hafif dambılla omuz hizasında kontrollü direnç çalışması yapan 48 yaş kadın, ahşap zemin, iki bordo vazo; eklem etrafı kası güçlendirme ve düşük etkili direnç teması',
+  },
   '/zamansiz-yasam/non-invaziv': {
     src: '/images/library/editorial/zy-non-invaziv.webp',
     alt: 'Ahşap masada keten örtü üzerinde cam sürahi, açık pembe çiçek, seramik kasede pürüzsüz taş ve katlı pamuklu havlu; bordo arka plan — pürüzsüzlük, yenilenme ve zaman metaforu',
