@@ -74,7 +74,8 @@ export const dossiers: MonthlyDossier[] = [
         excerpt:
           'Genel resim: hangi hormonal dalga uykunun hangi evresine dokunuyor, ve hangi değişimler "geçici", hangileri kalıcı bir düzen kuruyor.',
         writerSlug: 'berna-aksoy',
-        status: 'planned',
+        status: 'published',
+        href: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
         readingMinutes: 8,
       },
       {
