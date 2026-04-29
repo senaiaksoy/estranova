@@ -277,15 +277,15 @@ export const writers: Writer[] = [
     },
   },
   {
-    slug: 'isik-selin-kuyumcu',
-    displayName: 'Işık Selin Günçe',
+    slug: 'isik-selin-gunce',
+    displayName: 'Işık Selin Günce',
     role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
     ageBand: 'Belirtilmedi',
     publicBio:
       'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı içerik üretimine taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurla sıcak temas kuran bir üslupla yazıyor. Panik değil yön duygusu veren, okurun hissini önce normalize eden bir akran.',
     signaturePhrase:
       'Tiyatro sanatçısı duyarlılığıyla perimenopoz ve menopoz başlıklarını sadeleştiren, okura sahici bir eşlik duygusu veren bir ses.',
-    portrait: '/images/writers/isik-selin-kuyumcu.jpg',
+    portrait: '/images/writers/isik-selin-gunce.jpg',
     focusAreas: ['Perimenopoz', 'Menopoz', 'Tiyatro ve Anlatı'],
     isEditor: false,
     writingStyle: {

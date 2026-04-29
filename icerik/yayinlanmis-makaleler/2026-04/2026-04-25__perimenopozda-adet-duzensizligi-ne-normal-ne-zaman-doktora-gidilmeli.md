@@ -1,7 +1,7 @@
 ---
 title: "Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?"
 description: "Perimenopozda adet düzenindeki değişimleri, normal kabul edilen durumları, alarm belirtilerini ve doktora ne zaman başvurulması gerektiğini anlatan rehber."
-writer: isik-selin-kuyumcu
+writer: isik-selin-gunce
 publishedDate: "25 Nisan 2026"
 publishedDateIso: 2026-04-25
 url: /hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli

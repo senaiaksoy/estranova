@@ -161,7 +161,7 @@ export const staticArticles: StaticArticleEntry[] = [
     description:
       'Perimenopozda adet düzenindeki değişimleri, normal kabul edilen durumları, alarm belirtilerini ve doktora ne zaman başvurulması gerektiğini anlatan rehber.',
     publishedDate: '25 Nisan 2026',
-    writerSlug: 'isik-selin-kuyumcu',
+    writerSlug: 'isik-selin-gunce',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
     keywords: ['perimenopoz', 'adet düzensizliği', 'kanama', 'menopoz geçişi', 'doktor başvurusu', 'alarm belirtileri'],
@@ -404,7 +404,7 @@ export const staticArticles: StaticArticleEntry[] = [
     description:
       'Perimenopoz nedir, ne zaman başlar, hangi belirtileri getirir? Sahne arkasında ve günlük hayatta birçoğumuzun konuştuğu bir geçişin sade ve sıcak tarifi.',
     publishedDate: '27 Nisan 2026',
-    writerSlug: 'isik-selin-kuyumcu',
+    writerSlug: 'isik-selin-gunce',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
     keywords: ['perimenopoz', 'geçiş dönemi', 'hormon dalgalanması', 'düzensiz adet', 'menopoz', 'östrojen'],

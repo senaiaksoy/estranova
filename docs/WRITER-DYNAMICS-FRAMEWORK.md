@@ -256,7 +256,7 @@ dynamics:
 | Berna Aksoy | 1969 | true | Araştırmacı-rasyonel; "önceki bir düşüncemde değinmiştim" doğal |
 | Duygu Karaosmanoğlu | 1971 | true | Klinik-yumuşak |
 | Gamze Cizreli | 1968 | true | Doğal jesti var ("geçen ay yazmıştım") |
-| Işık Selin Günçe | 1976 | true | Mahrem alanda, kapsamlı |
+| Işık Selin Günce | 1976 | true | Mahrem alanda, kapsamlı |
 | Özlem Denizmen | 1971 | true | Finansal köprü, soru-açılış |
 | Rima Erdemir | 1971 | true | Teknoloji/wearable, yenilik |
 

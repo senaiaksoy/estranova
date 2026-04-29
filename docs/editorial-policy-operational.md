@@ -68,7 +68,7 @@ Yayından önce üç onay gerekir:
 2. Tıbbi doğruluk kontrolü
 3. Uyum ve yasak dil kontrolü
 
-## 9) Yazar Üslup Kartı — B. Selin (Işık Selin Günçe)
+## 9) Yazar Üslup Kartı — B. Selin (Işık Selin Günce)
 Bu kart, `src/data/writers.ts` içindeki `writingStyle` alanı ile birlikte uygulanır.
 
 - **Ses:** Sahici, sıcak, akran tonu yüksek; panik değil yön duygusu veren anlatım.

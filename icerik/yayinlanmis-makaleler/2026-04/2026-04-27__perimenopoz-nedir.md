@@ -1,7 +1,7 @@
 ---
 title: "Perimenopoz Nedir? — Temel Rehber"
 description: "Perimenopoz nedir, ne zaman başlar, hangi belirtileri getirir? Sahne arkasında ve günlük hayatta birçoğumuzun konuştuğu bir geçişin sade ve sıcak tarifi."
-writer: isik-selin-kuyumcu
+writer: isik-selin-gunce
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
 url: /hormonal-gecis/perimenopoz/perimenopoz-nedir

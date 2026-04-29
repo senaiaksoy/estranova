@@ -45,7 +45,7 @@ npm run articles:export # markdown'a dök
 | 2026-04-27 | senai-aksoy | [Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi](2026-04/2026-04-27__libido-degisimi-menopoz.md) | Beden & Yakınlık |
 | 2026-04-27 | demet-kizilkaya | [HRT](2026-04/2026-04-27__hrt-ilk-alti-ay.md) | Hormonal Geçiş |
 | 2026-04-27 | berna-aksoy | [HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?](2026-04/2026-04-27__hrt-yan-etkileri-ve-izleme.md) | Hormonal Geçiş |
-| 2026-04-27 | isik-selin-kuyumcu | [Perimenopoz Nedir? — Temel Rehber](2026-04/2026-04-27__perimenopoz-nedir.md) | Hormonal Geçiş |
+| 2026-04-27 | isik-selin-gunce | [Perimenopoz Nedir? — Temel Rehber](2026-04/2026-04-27__perimenopoz-nedir.md) | Hormonal Geçiş |
 | 2026-04-27 | alara-baykent | [Menopozda Eklem Ağrısı — Sabah Tutukluğundan Hareketin Yatışına](2026-04/2026-04-27__eklem-agrisi-menopoz.md) | Zamansız Yaşam |
 | 2026-04-27 | duygu-karaosmanoglu | [Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları](2026-04/2026-04-27__seyahat-menopoz.md) | Zamansız Yaşam |
 | 2026-04-26 | rima-erdemir | [Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?](2026-04/2026-04-26__sosyal-medyada-menopoz-bilgisi.md) | Bilimsel Pencere |
@@ -55,7 +55,7 @@ npm run articles:export # markdown'a dök
 | 2026-04-25 | rima-erdemir | [B12 Vitamini ve Menopoz: Sessiz Eksikliği Tanımak](2026-04/2026-04-25__b12-vitamini-ve-menopoz.md) | Hormonal Geçiş |
 | 2026-04-25 | berna-aksoy | [Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi](2026-04/2026-04-25__sicak-basmasi-gece-terlemesi.md) | Hormonal Geçiş |
 | 2026-04-25 | berna-aksoy | [Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?](2026-04/2026-04-25__koruyucu-saglik-kayitlari.md) | Hormonal Geçiş |
-| 2026-04-25 | isik-selin-kuyumcu | [Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?](2026-04/2026-04-25__perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli.md) | Hormonal Geçiş |
+| 2026-04-25 | isik-selin-gunce | [Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?](2026-04/2026-04-25__perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli.md) | Hormonal Geçiş |
 | 2026-04-25 | duygu-karaosmanoglu | [Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve](2026-04/2026-04-25__cilt-bakimi-non-invaziv-genel-cerceve.md) | Zamansız Yaşam |
 | 2026-04-20 | berna-aksoy | [Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?](2026-04/2026-04-20__hormon-tedavisi-karar-rehberi.md) | Hormonal Geçiş |
 | 2026-04-18 | alara-baykent | [Menopozda Kemik Erimesi: Egzersizle Neler Değişebilir?](2026-04/2026-04-18__menopozda-kemik-erimesi-onleme-ve-egzersiz.md) | Hormonal Geçiş |

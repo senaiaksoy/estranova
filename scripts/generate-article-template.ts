@@ -48,7 +48,7 @@ function usage(): string {
     '  npm run article:template -- --writer <writer-slug> --title "<Baslik>" [--section perimenopoz] [--date "25 Nisan 2026"] [--out "src/pages/.../yeni-yazi.astro"]',
     '',
     'Example:',
-    '  npm run article:template -- --writer isik-selin-kuyumcu --title "Perimenopozda..." --section perimenopoz',
+    '  npm run article:template -- --writer isik-selin-gunce --title "Perimenopozda..." --section perimenopoz',
   ].join('\n');
 }
 

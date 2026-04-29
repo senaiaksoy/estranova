@@ -1,7 +1,7 @@
-# Işık Selin Günçe — Article Log
+# Işık Selin Günce — Article Log
 
 > **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
-> **DNA referansı:** [`isik-selin-kuyumcu.md`](./isik-selin-kuyumcu.md)
+> **DNA referansı:** [`isik-selin-gunce.md`](./isik-selin-gunce.md)
 > **Log başlangıcı:** 2026-04-29
 
 ## Schema
@@ -31,7 +31,7 @@
 
 ## Retrofit özet (pre-framework yayınlar — 2026-04-29 öncesi)
 
-Işık Selin Günçe'ye atanmış yayınlanmış makaleler:
+Işık Selin Günce'ye atanmış yayınlanmış makaleler:
 
 - `hormonal-gecis/perimenopoz/perimenopoz-nedir.astro`
 - `hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli.astro`

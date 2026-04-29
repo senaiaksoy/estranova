@@ -61,7 +61,7 @@ export const dossiers: MonthlyDossier[] = [
     title: 'Uyuyamadığımız Geceler',
     subtitle: 'Perimenopozda uykunun değişen yanı',
     lede: 'Perimenopozun en sessiz belirtisi belki de uyku. Bu ay beş yazı, uykunun neden değiştiğini ve geri kazanılabilen yanlarını yan yana koyuyor.',
-    curatorSlug: 'isik-selin-kuyumcu',
+    curatorSlug: 'isik-selin-gunce',
     editorNote:
       'Bir gece bir saat erken yatıyoruz, ertesi sabah daha yorgun kalkıyoruz. Saat üçte gözümüzü açıyoruz, sonra uyumayı beceremiyoruz. Bu dosyayı hazırlarken hep aynı cümleyi duydum: "Eskiden böyle değildi." Doğru — eskiden değildi. Şimdi başka bir şey oluyor; ama panik yapmadan, adım adım bakılabilir bir şey.\n\nBeş yazı boyunca uykuyu farklı kapılardan açıyoruz: bedenin kimyası, akşamın ritmi, yıllar içinde değişen kişisel deneyim, mahrem yan ve bilimin sınırı. Hiçbiri tek başına çözüm değil; ama beş tanesi yan yana getirildiğinde bir gece bir adımı denemek kolaylaşıyor.',
     heroImage: {
