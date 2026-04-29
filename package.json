@@ -13,6 +13,7 @@
     "lint": "tsc --noEmit",
     "compliance": "node scripts/compliance-check.mjs",
     "article:template": "tsx scripts/generate-article-template.ts",
+    "articles:export": "node scripts/export-published-articles.mjs",
     "encoding:check": "node scripts/check-encoding.mjs",
     "tokens:check": "node scripts/check-color-tokens.mjs",
     "preview:local": "set ASTRO_TELEMETRY_DISABLED=1&&astro preview --host 0.0.0.0 --port 4322",
