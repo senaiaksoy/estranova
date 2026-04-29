@@ -48,6 +48,8 @@ jinekoloji ve menopoz literatüründe paydaş karar verme (shared decision-makin
 Ama aynı zamanda bir tükenmişlik de var. Çok fazla bilgi var, kanaat kalabalığı içinde "doğru" cümleyi
 bulmak zor. Sosyal medyada bir akşam okuduğum yarım düzine içerik birbiriyle çelişebiliyor. Bu yüzden
 modern kadın hekiminden tek bir şey beklemiyor — ama eskinin "söyle ben uygulayayım" tutumundan da uzakta.
+Telefonumun arama geçmişine bakarsam aynı hafta içinde hem "goji berry yararı" hem "goji berry zararı"
+aramışım; kanaat kalabalığı dediğimiz şey aslında biraz da kendi içimizden geliyor.
 
 Bir okurun yorumunda gördüm geçenlerde: "Hekimimden hem söyleyen hem dinleyen olmasını istiyorum, ama bu
 çok mu fazla?" diyordu. Hayır, fazla değil — aslında modern bir ilişkinin temel beklentisi. Sadece bunu
@@ -118,7 +120,8 @@ anlattıklarını çok dinliyorum. Onların deneyimi benim öğretmenim oluyor; 
 Bir de etik soru var: hekim eşinizse, ona "ikinci görüş alacağım" demek zor olmaz mı? Olmadı, çünkü zaten o
 ben olmadığım için bu soru baştan tartışmadan dışındaydı. İkinci görüş, asıl hekimimin meslektaşlarından
 biri olabilir; ev sofrasından bağımsız bir karar. Bu sınırı baştan çekmiş olmak ilişkiyi koruyor — her
-ikisini de.
+ikisini de. Akşam yemeğinde "bugün hekimine ne sordun" sorusuna hâlâ kendiliğinden cevap vermiyorum;
+bu hem küçük bir özerklik hem de evde bir aile şakasına dönüştü.
 
 ## Annemin Paradoksu — İki Ses Arasında
 
