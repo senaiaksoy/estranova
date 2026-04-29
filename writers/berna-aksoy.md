@@ -509,7 +509,7 @@ dynamics:
   birth_year: 1969
   cooldown_overrides: {}
   cooldown_exempt: []
-  allow_inter_article_crosslinks: false          # Berna sade-rasyonel; cross-link tonunu boğar
+  allow_inter_article_crosslinks: true
   evolution_review_threshold: 10
   evolution_review_time_threshold_months: 6
 ```

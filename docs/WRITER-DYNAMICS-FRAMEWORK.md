@@ -253,12 +253,14 @@ dynamics:
 |---|---|---|---|
 | Alara Baykent | 1995 | true | Sporcu eksen, dar |
 | Başak Pelister | 1970 | true | Soru-cevap imzası, üç nokta yoğun |
-| Berna Aksoy | 1969 | false | Sade-rasyonel; cross-link tonunu boğar |
+| Berna Aksoy | 1969 | true | Araştırmacı-rasyonel; "önceki bir düşüncemde değinmiştim" doğal |
 | Duygu Karaosmanoğlu | 1971 | true | Klinik-yumuşak |
 | Gamze Cizreli | 1968 | true | Doğal jesti var ("geçen ay yazmıştım") |
 | Işık Selin Günçe | 1976 | true | Mahrem alanda, kapsamlı |
 | Özlem Denizmen | 1971 | true | Finansal köprü, soru-açılış |
 | Rima Erdemir | 1971 | true | Teknoloji/wearable, yenilik |
+
+> **Default policy:** Tüm yazarlar için `allow_inter_article_crosslinks: true` varsayılan. Pratikte bir yazarın sesinde cross-link uymadığı görülürse Faz 1.5'te bilinçli override edilir; ama yargısal varsayım yapılmaz.
 
 ---
 

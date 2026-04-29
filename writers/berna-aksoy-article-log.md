@@ -22,7 +22,6 @@
 
 ## Cooldown durumu (canlı)
 
-> Berna profile YAML: `allow_inter_article_crosslinks: false` (sade-rasyonel ses; cross-link tonunu boğar)
 > Şu an log boş — cooldown filtresi 2026-04-29 sonrası ilk gerçek yayından itibaren tam çalışacak.
 
 ## Evolution review
