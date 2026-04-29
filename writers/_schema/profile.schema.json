@@ -1,0 +1,276 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://estranova.com/schemas/writer-profile.json",
+  "title": "Estranova Writer Profile",
+  "description": "Modüler yazar profili şeması. profile.yaml dosyası bu şemaya uygun olmalı. file_layout dosyaları ve section_index aynı klasördeki Markdown'larda yer alır. Detay: docs/ARTICLE-PRODUCTION-SPEC.md Faz 2 + docs/WRITER-DYNAMICS-FRAMEWORK.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "writer_version",
+    "slug",
+    "display_name",
+    "role",
+    "public_bio",
+    "is_default_writer",
+    "file_layout",
+    "section_index",
+    "voice_traits",
+    "blacklist_words",
+    "category_scores",
+    "dynamics"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+
+    "writer_version": {
+      "type": "string",
+      "pattern": "^v\\d+\\.\\d+$",
+      "description": "Yazar profili semantic versiyonu (örn. v3.2)"
+    },
+    "writer_protocol_version": {
+      "type": "string",
+      "enum": ["v2", "v2.1", "v3.1", "v3.2"],
+      "description": "Yürütme protokolü versiyonu (§0.5). v3.2 = AI agent için 12 adımlı icra rehberi mevcut."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "writers.ts ile aynı slug; klasör adı."
+    },
+    "display_name": { "type": "string" },
+    "role": { "type": "string" },
+    "public_bio": {
+      "type": "string",
+      "description": "yayin-kurulu.astro için kısa bio"
+    },
+    "is_default_writer": { "type": "boolean" },
+    "age_band_2026": { "type": "string" },
+    "cultural_origin": { "type": "string" },
+
+    "file_layout": {
+      "type": "object",
+      "description": "Modüler yazar profili dosya yolları (göreli, profile.yaml'a göre).",
+      "additionalProperties": false,
+      "required": ["hot", "warm", "cold"],
+      "properties": {
+        "hot": { "type": "string", "description": "Her makalede AI'nın yüklediği zorunlu çekirdek (§0.5 protokol + §4 ses + §13 self-check)." },
+        "warm": { "type": "string", "description": "Konu-tetikli yüklenen stil/şablon katmanları (§4a-§4f)." },
+        "cold": { "type": "string", "description": "Yalnız audit/evrim review (§1-§3 biyografi + §6-§10 + §12 + changelog)." },
+        "hidden": { "type": "string", "description": "private_context_inject — §5b + §5c-ek + §5d. Yayınlanmaz; yalnız writer agent prompt'una enjekte edilir." },
+        "readme": { "type": "string", "description": "Klasör navigasyonu (5-10 satır)." },
+        "corpus": { "type": "string", "description": "Tam alıntı korpusu (örn. gamze-cizreli-alintilar.md)." },
+        "aphorism_pool": { "type": "string", "description": "Distile aforizma havuzu (örn. gamze-cizreli-aphorism-pool.md)." },
+        "article_log": { "type": "string", "description": "Akümülatif makale logu (Writer Dynamics Framework Katman B)." },
+        "citations_dir": { "type": "string", "description": "Atıf çerçevesi klasörü (canonical-sources.md, extended.md, pending.md)." }
+      }
+    },
+
+    "section_index": {
+      "type": "object",
+      "description": "Bölüm anchor → dosya eşlemesi. AI bir bölüm aradığında buradan hangi dosyada olduğunu görür. Anahtarlar §-numaralı ID'ler (ör. §0.5, §4a, §11).",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["file", "anchor"],
+        "properties": {
+          "file": {
+            "type": "string",
+            "enum": ["hot", "warm", "cold", "hidden", "profile.yaml"]
+          },
+          "anchor": {
+            "type": "string",
+            "description": "Markdown header slug (örn. yurutme-protokolu) veya YAML key path."
+          },
+          "title": { "type": "string" }
+        }
+      }
+    },
+
+    "topic_sections": {
+      "type": "object",
+      "description": "Konu eksen → makale yazarken yüklenecek warm/hidden bölümleri (Faz 1.5 lazy-load tetikleyici). Anahtarlar konu kelimeleri (uyku, beslenme, sabah, kuşak, kariyer vb.).",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "signature_topics": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "mercek_imzasi": { "type": "string" },
+    "signature_phrases_acilis": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "signature_phrases_anahtar": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "title_style": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "prefer": { "type": "array", "items": { "type": "string" } },
+        "avoid": { "type": "array", "items": { "type": "string" } },
+        "h2_style": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "voice_traits": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 3
+    },
+    "editorial_track_record": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "micro_style_rules": {
+      "type": "object",
+      "description": "Cümle uzunluğu, üç nokta, ünlem disiplini gibi mikro stil parametreleri."
+    },
+
+    "blacklist_words": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "frequency_limited_words": { "type": "object" },
+    "forbidden_address_forms": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "avoid": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "thematic_axes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "category_scores": {
+      "type": "object",
+      "description": "Estranova kategori → uygunluk skoru (0-5).",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 5
+      }
+    },
+
+    "selection_criteria_include": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "selection_criteria_exclude": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "private_context_inject": {
+      "type": "string",
+      "description": "Yayınlanmaz; yalnız writer agent prompt'una enjekte edilir. Hidden context'in serbest-form özetlemesi."
+    },
+    "experience_seeds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "closing_pattern": {
+      "type": "object",
+      "description": "Kapanış mimarisi (örn. 3-parçalı: deneyim → ışık aralığı → aforizma)."
+    },
+    "corpus_reference": {
+      "type": "object",
+      "description": "Korpus dosyası meta-veri (boyut, alıntı sayısı, etiket sistemi, frekans kuralı)."
+    },
+    "attribution_style": {
+      "type": "object",
+      "description": "Atıf üslubu kalıbı (örn. Cizreli'de 'Milliyet+Meslek+İsim')."
+    },
+    "manifesto_templates": {
+      "type": "object",
+      "description": "Manifesto kalıpları (varsa). Her kalıp id, page, structure, use_case."
+    },
+    "mevlana_spine": {
+      "type": "object",
+      "description": "Tasavvuf/spiritüel omurga yapısı (Cizreli özel)."
+    },
+
+    "dual_role_warning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["active"],
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "Çift Rol Uyarısı bu yazar için aktif mi (örn. Gamze: editör Senai Aksoy onun gerçek hekimi)."
+        },
+        "description": { "type": "string" },
+        "hard_constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "dynamics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["log_path", "birth_year", "allow_inter_article_crosslinks"],
+      "properties": {
+        "log_path": { "type": "string" },
+        "birth_year": { "type": "integer", "minimum": 1900, "maximum": 2100 },
+        "cooldown_overrides": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "cooldown_exempt": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "allow_inter_article_crosslinks": { "type": "boolean" },
+        "evolution_review_threshold": { "type": "integer", "minimum": 1 },
+        "evolution_review_time_threshold_months": { "type": "integer", "minimum": 1 }
+      }
+    },
+
+    "quick_reference": {
+      "type": "object",
+      "description": "AI agent için 3-bloklu hızlı özet: must_not / must_include / conditional.",
+      "additionalProperties": false,
+      "properties": {
+        "description": { "type": "string" },
+        "must_not": { "type": "array", "items": { "type": "string" } },
+        "must_include": { "type": "array", "items": { "type": "string" } },
+        "conditional": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "citations": {
+      "type": "object",
+      "description": "Atıf çerçevesi (Hybrid Whitelist + Editorial Gate). Korpus dışı atıflar canonical_sources.md'deki yazar+kaynak whitelist'inden geçer; pending.md editör onay kuyruğu; extended.md onaylı genişleme havuzu.",
+      "additionalProperties": false,
+      "properties": {
+        "canonical_sources": { "type": "string" },
+        "extended": { "type": "string" },
+        "pending": { "type": "string" },
+        "frequency_rule": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "direct_quote_per_article_max": { "type": "integer", "minimum": 0 },
+            "metaphor_per_article_max": { "type": "integer", "minimum": 0 },
+            "manifesto_template_per_article_max": { "type": "integer", "minimum": 0 },
+            "total_borrowed_per_article_max": { "type": "integer", "minimum": 0 },
+            "cultural_reference_per_article_max": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    }
+  }
+}
