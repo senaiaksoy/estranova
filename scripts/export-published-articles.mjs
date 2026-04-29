@@ -10,8 +10,8 @@
  *   npm run articles:export
  *
  * Çıktı:
- *   1. arsiv/yayinlanmis-makaleler/YYYY-MM/<YYYY-MM-DD>__<slug>.md  (repo)
- *   2. <VAULT_DIR>/articles/YYYY-MM/<YYYY-MM-DD>__<slug>.md          (vault)
+ *   1. icerik/yayinlanmis-makaleler/YYYY-MM/<YYYY-MM-DD>__<slug>.md  (repo)
+ *   2. <VAULT_DIR>/articles/YYYY-MM/<YYYY-MM-DD>__<slug>.md           (vault)
  *
  * Vault yolu env ile özelleştirilebilir:
  *   ESTRANOVA_VAULT_ARTICLES_DIR=/path/to/vault/articles npm run articles:export
@@ -25,7 +25,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const PAGES_DIR = path.join(ROOT, 'src/pages');
 const DIST_DIR = path.join(ROOT, 'dist');
-const ARSIV_DIR = path.join(ROOT, 'arsiv/yayinlanmis-makaleler');
+const ARSIV_DIR = path.join(ROOT, 'icerik/yayinlanmis-makaleler');
 const VAULT_DIR =
   process.env.ESTRANOVA_VAULT_ARTICLES_DIR ||
   'D:/A-klasör/obsidian-vaults/draksoyivf-knowledge/wiki/sites/estranova/articles';
@@ -345,7 +345,7 @@ function generateReadme(exported) {
     '## Klasör yapısı',
     '',
     '```',
-    'arsiv/yayinlanmis-makaleler/',
+    'icerik/yayinlanmis-makaleler/',
     '├── 2026-04/',
     '│   ├── 2026-04-29__menopozda-hekim-hasta-iliskisi.md',
     '│   └── ...',

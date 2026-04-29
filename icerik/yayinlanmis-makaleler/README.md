@@ -8,7 +8,7 @@ Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik
 ## Klasör yapısı
 
 ```
-arsiv/yayinlanmis-makaleler/
+icerik/yayinlanmis-makaleler/
 ├── 2026-04/
 │   ├── 2026-04-29__menopozda-hekim-hasta-iliskisi.md
 │   └── ...
