@@ -325,3 +325,15 @@ If any answer is no, revise before finalizing.
 - **Research / Fact-check:** §6’daki kanıt ve izlenebilirlik maddeleri zorunludur.
 - **Compliance:** §3–§5 ve §6 ile uyum; çelişen çıktı **revizyon veya red** gerektirir.
 - **Publisher / site üretimi:** §1–§2 ve güven / nötr CTA kuralları; içerik gövdesi Writer çıktısına dayanır.
+
+---
+
+## Makale üretimi — uçtan uca spec
+
+Yeni bir makale üretirken (yazar ataması, Astro scaffolding, Evidence/BEN yerleşimi, hub linkage, JSON-LD, 17 maddelik pre-publish checklist) **tek kanonik referans:**
+
+> **[`docs/ARTICLE-PRODUCTION-SPEC.md`](docs/ARTICLE-PRODUCTION-SPEC.md)**
+
+AI/yazar ajan her makale öncesi bu dosyayı okur. Mevcut belgeleri (CLAUDE.md HARD CONSTRAINTS, AGENTS.md Astro layout, writers/<yazar>.md §0.5 yazar protokolleri) **tekrarlamaz, bağlar.** Faz 1-6 + Pre-publish Checklist içerir; **13-17 herhangi 'hayır' = otomatik büyük revizyon, yayın engellenir.**
+
+**Çift Rol Uyarısı** (Doç. Dr. Senai Aksoy = Gamze Cizreli'nin gerçek jinekoloğu) bu spec'in Faz 1.3 + Faz 4.3'te kritik sınır olarak işaretli; Gamze adına yazılan tüm makaleler için zorunlu kontrol.
