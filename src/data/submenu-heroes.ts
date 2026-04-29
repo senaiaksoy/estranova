@@ -35,6 +35,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Doğal pencere ışığında gri saçlı kadın portresi; sakin ve kendinden emin bakış',
   },
+  '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi': {
+    src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
+    alt: 'Sakin sabah ışığında ahşap masada açık not defterine yazan 52 yaş kadın, çay fincanı ve bordo aksanlı iç mekân; hekim seçimi, soru hazırlığı ve uzun süreli bağ teması (geçici hero — vault\'ta hekim-hasta ilişkisi temalı görsel henüz yok)',
+  },
   '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi': {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Akşam saatlerinde sakin bir iç mekânda elinde ince bir şal tutan 50+ kadın; ısı dalgalanmalarıyla baş etme ve konfor arayışı teması',

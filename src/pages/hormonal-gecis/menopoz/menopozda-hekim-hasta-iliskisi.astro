@@ -1,0 +1,311 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi']!;
+
+const tocEntries = [
+  { id: 'eski-resim', label: 'Eskinin Hekim-Hasta Resmi' },
+  { id: 'modern-arayis', label: 'Modern Kadın Bilgi Seli İçinde' },
+  { id: 'dort-profil', label: 'Çevremdeki Dört Hekim Profili' },
+  { id: 'esim-hekim', label: 'Eşim Hekim ama Hekimim Değil' },
+  { id: 'annenin-paradoksu', label: 'Annenin Paradoksu' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor';
+const articleDescription =
+  'Hekim-hasta ilişkisinin yıllar içinde nasıl olgunlaştığına dair kişisel notlar. Modern kadının menopoz takibinde dört doktor profili karşısındaki arayışı, paydaş karar verme ve etik bir mesafenin önemi.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '29 Nisan 2026',
+  pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/menopoz',
+  keywords: [
+    'menopoz',
+    'hekim seçimi',
+    'hekim-hasta ilişkisi',
+    'HRT',
+    'paydaş karar verme',
+    'shared decision making',
+    'menopoz takibi',
+    'hormon tedavisi',
+    'jinekolog',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title="Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="29 Nisan 2026" readingMinutes={10} />
+
+      <section
+        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-ink/80">
+          Bu yazıyı yazmak benim için kolay değil. Eşim jinekolog ama beni takip eden hekim o değil — yakınlarını
+          takip etmenin doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına devretti. Üstelik bu
+          meslektaş aynı zamanda arkadaş çevremizden biri; bu yüzden ben bekleme salonunda da beklemiyorum. Bu çift
+          ayrıcalık (eş hekim + arkadaş hekim) bana sıradan bir hastanın deneyimini içeriden bilmek imkânı bırakmıyor.
+          O yüzden bu yazı bir cevap değil, kendime sorduğum bir soru: modern kadın menopoz takibinde hekiminden ne
+          arıyor? Çevremdeki kadınların anlattıkları, dört farklı doktor profili ve üç kuşağın eşiği arasında durmaya
+          çalışıyorum.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="eski-resim">Eskinin Hekim-Hasta Resmi — Otoritenin Tek Sesi</h2>
+        <p>
+          Anne ve büyük teyzelerimin kuşağında hekim "söz sahibi olan", hasta "dinleyen ve takip eden"di. Bu resim
+          sade ama tek başına yeterli değildi.
+        </p>
+        <p>
+          Annemin ve onun kuşağındaki çoğu kadının hekim ilişkisi büyük ölçüde tek yönlüydü. Hekim söylerdi, hasta
+          uygulardı. Soru sorulurdu ama az; hekimin söylediği genellikle son sözdü. Bedenle ilgili karmaşık bir şey
+          yaşandığında "geçer" ya da "dayanılır"dı; daha ileri gidilmezdi. Bu form bir kuşağa yetti — ama aynı kuşağın
+          bazı kadınları için iç sıkıntısının ana kaynağı oldu.
+        </p>
+        <p>
+          Annem kendi hormonal geçişini sessiz geçirdi. Kendi bedeniyle ilgili sormadığı çok şey vardı. Bu sessizlik
+          onun zayıflığı değildi, kuşağının ortak bir kalıbıydı. Hekime "ben şunu hissediyorum, sebebi ne olabilir"
+          demek bizden iki kuşak öncesinde yaygın bir alışkanlık değildi.
+        </p>
+        <p>
+          Bu sessiz form bizim kuşağımıza miras kalmadı — ama eski reflekslerin izi hâlâ var. Çoğumuz bir hekim
+          karşısında oturduğumuzda hâlâ otomatikman "ona güvenmem gerekir, çok soru sormak ayıp olur" düşüncesinin
+          geç yansımalarını yaşıyoruz.
+        </p>
+
+        <h2 id="modern-arayis">Modern Kadın Bilgi Seli İçinde Ne Arıyor</h2>
+        <p>
+          Bugün hasta sandalyesinde oturan kadın çoğu zaman hekimden önce kendi araştırmasını yapmış oluyor. Bu hem
+          güç veriyor hem de yorgunluk.
+        </p>
+        <p>
+          Bizim kuşağımız farklı bir konuma geldi. Bir görüşmeye gitmeden önce çevrimiçi forumları okumuş, sosyal
+          medyada kıyaslamalar yapmış, yapay zekâya soru sormuş, arkadaşlarıyla konuşmuş bir kadın oturuyor masanın
+          karşısında. Hekimine "ben şunu okudum, sen ne diyorsun" diyebiliyor. Bu, kuşağımızın belki en büyük
+          başarısı. Üstelik son yıllarda hekim-hasta paylaşımının klinik karar süreçlerinde aktif rol oynaması,
+          jinekoloji ve menopoz literatüründe paydaş karar verme (shared decision-making) modeli olarak tartışılıyor
+          <Evidence level={4} />.
+        </p>
+        <p>
+          Ama aynı zamanda bir tükenmişlik de var. Çok fazla bilgi var, kanaat kalabalığı içinde "doğru" cümleyi
+          bulmak zor. Sosyal medyada bir akşam okuduğum yarım düzine içerik birbiriyle çelişebiliyor. Bu yüzden
+          modern kadın hekiminden tek bir şey beklemiyor — ama eskinin "söyle ben uygulayayım" tutumundan da uzakta.
+        </p>
+        <p>
+          Bir okurun yorumunda gördüm geçenlerde: "Hekimimden hem söyleyen hem dinleyen olmasını istiyorum, ama bu
+          çok mu fazla?" diyordu. Hayır, fazla değil — aslında modern bir ilişkinin temel beklentisi. Sadece bunu
+          açıkça talep etmeyi henüz öğreniyoruz.
+        </p>
+
+        <h2 id="dort-profil">Çevremdeki Dört Hekim Profili</h2>
+        <p>
+          Yakın çevremdeki kadınların anlattıklarını bir kâğıda yazsam, hekim profilleri dört temel konuma ayrılıyor.
+          Hiçbiri tek başına doğru ya da yanlış değil; her birinin uyduğu bir kadın profili var.
+        </p>
+        <p>
+          <strong>Klasik otorite.</strong> "Yaşın bu, normal bu, başka bir şey gerek yok." Hızlı, kararlı, tartışmaya
+          pek açık olmayan. Bazı kadınlar için bu tutum <em>rahatlatıcı</em>: kararı hekim versin, ben uygulayayım.
+          Bazıları için ise <em>kapatıcı</em>: sorularımın yarısı söylenmeden kalkıp gidiyorum, sonra evde uyku
+          tutmuyor. Aynı hekim profili, iki kadın için iki ayrı sonuç doğuruyor.
+        </p>
+        <p>
+          <strong>"Her şey normal" diyen temkinli.</strong> Tahliller iyiyse müdahale önermeyen, "izleyelim" diyen.
+          Bu bazen gerçek bilgelik, bazen tedirginliği bastırma. Bir arkadaşım anlattı: hekimi her seferinde "normal
+          aralıkta" diyordu; o ise kendi bedeninde başka bir şey hissediyordu. İki kavram arasında köprü
+          kurulmamıştı — aralarındaki boşluk arkadaşımı bir başka hekime yönlendirdi sonunda.
+        </p>
+        <p>
+          <strong>Bilgi yığan.</strong> Her seçeneği uzun uzun anlatan, broşür veren, "kararı sen ver" diyen. Eğitici
+          ve şeffaf — ama bilginin altında zaten yorgun bir kadın için ezici. Çünkü ev hayatından bunalmış birinin
+          sandalyesine oturup "sen seç" denmesi, bağımsızlık değil yalnızlık verebiliyor.
+        </p>
+        <p>
+          <strong>Paydaş, birlikte düşünen.</strong> "Şu seçenekler var, sen ne hissediyorsun, neyi denemek
+          istiyorsun?" Hem otoritesi var hem dinliyor; karar verirken hastayı yanına alıyor. Çoğumuzun aradığı bu —
+          ama bulması zor, ve bulduktan sonra korumak da çaba ister. Çünkü aynı hekim her gün aynı sabırla aynı
+          paydaşlık tonunu sürdürebilmek zorunda.
+        </p>
+        <p>
+          Bu dört profilin hiçbiri tek başına "iyi" ya da "kötü" değil. Bir kadına klasik otorite uyabilir; başka
+          birine paydaş hekim daha doğru gelebilir. Önemli olan kadının kendi pozisyonunu ve neyle rahat ettiğini
+          önce kendine sorabilmesi.
+        </p>
+
+        <h2 id="esim-hekim">Eşim Hekim ama Hekimim Değil — Etik Bir Sınırın İçinden Bakmak</h2>
+        <p>
+          Eşim jinekolog ama beni takip eden hekim o değil. Bu, etik bir tercih — ve onun da, benim de saygı
+          duyduğumuz bir sınır.
+        </p>
+        <p>
+          Benim durumum biraz özel, bunu en başta söylemem gerek. Eşim jinekolog. Ama jinekolog takibimi o yapmıyor —
+          kendisi yakınlarını takip etmenin doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına
+          devretmiştir. Bu prensibe içtenlikle saygı duyuyorum. Çünkü iki ilişki (bir eş ile bir hekim ile)
+          birbirini bozmadan yan yana var olacaksa, aralarına etik bir mesafe konması gerek — tıp etiği literatüründe
+          yakın aile bireylerinin tedavi edilmemesi yaygın bir meslek normu olarak kabul edilir <Evidence level={5} />.
+          Bu mesafe ilişkiyi soğutmuyor; aksine, ikisinin de kendi sınırlarında kalmasını sağlıyor.
+        </p>
+        <p>
+          Bu durum bana <em>iki katmanlı</em> bir konum yarattı — ama her iki katman da, açıkça söyleyeyim, sıra dışı
+          koşullarda akıyor. Birinci katman klinik: asıl hekimim hem eşimin meslektaşı hem de arkadaş çevremizden.
+          Bu nedenle ben kontrole gittiğimde bekleme salonunda beklemiyorum, sıramı kuyrukta tutmuyorum, sohbet
+          havasında karşılanıyorum. Bu durum bana sıradan bir hastanın deneyimini içeriden anlama imkânı bırakmıyor —
+          aksine. İkinci katman ev içi: eşim jinekolog olduğu için tıbbi bir konu evde gündeme gelmeden geçen gün az.
+          Akşam yemeğinde bir cümle açılıyor; bir başka açıdan bakmama yardımcı oluyor. Ama bu paylaşım,
+          konsültasyon değil. Karar her zaman benim ile asıl hekimim arasında kurulur.
+        </p>
+        <p>
+          Bu çift ayrıcalığın (eş hekim + arkadaş hekim) bir kazanımı var, kabul ediyorum. Tıbbi perspektif eve
+          sızıyor; sözcükler, sorular, soru sorma alışkanlığı evimin içinde olgunlaşıyor. Çevremdeki çoğu kadın bu
+          pozisyona araştırarak, okuyarak, kendine yer açarak ulaşıyor; ben kısmen daha kolay yere geldim. Bunun
+          farkındayım — ve bu farkındalık beni sıradan bir hastanın deneyimini kendi sözüm gibi anlatmaktan
+          alıkoyuyor.
+        </p>
+        <p>
+          Bir körlük de var, hatta tam tersini söyleyeyim: körlüğüm önde geliyor, ayrıcalığım onun ardından. Çünkü
+          çevremdeki kadınların yaşadığı bekleme odası tedirginliğini, "doktor ne diyecek" gerginliğini, dönüş
+          yolunda aklın bin parçaya bölünmesini ben içeriden bilmiyorum. Bu yüzden çevremdeki kadınların
+          anlattıklarını çok dinliyorum. Onların deneyimi benim öğretmenim oluyor; bu yazıyı yazma sebebim de büyük
+          ölçüde bu.
+        </p>
+        <p>
+          Bir de etik soru var: hekim eşinizse, ona "ikinci görüş alacağım" demek zor olmaz mı? Olmadı, çünkü zaten o
+          ben olmadığım için bu soru baştan tartışmadan dışındaydı. İkinci görüş, asıl hekimimin meslektaşlarından
+          biri olabilir; ev sofrasından bağımsız bir karar. Bu sınırı baştan çekmiş olmak ilişkiyi koruyor — her
+          ikisini de.
+        </p>
+
+        <h2 id="annenin-paradoksu">Annemin Paradoksu — İki Ses Arasında</h2>
+        <p>
+          Annem kendi bedeninde sessiz, başkalarının bedeninde sesli bir kadındı. Bu paradoksu uzun yıllar
+          anlamadım; sonra anladım ki bu da kuşağına ait bir şey.
+        </p>
+        <p>
+          Annem bir taraftan kendi menopozunu hiç sormadan geçiriyordu. Bir taraftan da yakınlarımızdan birinin
+          muayenesinde en çok soran o olabilirdi. Yıllarca bu paradoksu tutarsızlık zannettim. Sonra şunu fark
+          ettim: annem kendi bedeniyle ilgili sormaya <em>izinli hissetmiyordu</em>, ama başkasının bedeni adına
+          soru sormak ona doğal geliyordu. Bu, kuşağının kalıbıydı — kadının kendisi için değil, başkası için ses
+          çıkarması.
+        </p>
+        <p>
+          Bizim kuşağımız bu kalıbı kırmaya çalışıyor. Kendimiz için de soruyoruz; ama hâlâ rahat değiliz. Kızımın
+          kuşağı belki bizden daha kolay yapacak. Üç kuşak arasında bir geçiş halindeyiz — ve bu geçişin yorgunluğu
+          da, güzelliği de bize ait.
+        </p>
+
+        <h2 id="sss">Sıkça Sorulan Sorular</h2>
+        <p>
+          Aşağıdaki sorular bana farklı arkadaşlarımdan ve okurlardan geldi; her birinin cevabı kendi yolumdaki
+          notum.
+        </p>
+        <p>
+          <strong>Hekim seçerken neye bakmalıyım?</strong> İlk olarak ilişkinin sürekli olabilirliğine — yıllarla
+          derinleşecek bir bağ olup olamayacağına. İkincisi, hekimin sorularımı kabaca cevaplama eğiliminde olup
+          olmadığı; "bu yaşta bu normal" demek yerine "haydi birlikte bakalım" diyen bir tutum aradım kendim için.
+          Üçüncüsü, ikinci görüş almama açık olması — gerçekten güçlü bir hekim, başka bir hekime danışmaktan
+          rahatsız olmaz.
+        </p>
+        <p>
+          <strong>Dört profil arasından nasıl seçim yapmalıyım?</strong> Önce kendi pozisyonunu tanı: kararı senin
+          için verilmesini mi istiyorsun, yoksa karara katılmak mı? Bilgi seli içinde rahat etmiyor musun, yoksa çok
+          bilgi sana güç mü veriyor? Bu soruların cevabı senin için doğru hekim profilini gösteriyor. Tek bir doğru
+          profil yok; sana uygun olan var. Zaman içinde değişebilir de — gençken klasik otorite işine yarayan biri
+          kırk beş yaşında paydaş hekim arıyor olabilir.
+        </p>
+        <p>
+          <strong>Hekimim "her şey normal" diyor ama ben kendimi iyi hissetmiyorsam?</strong> Bu durumda iki şey
+          yapılabilir: hekiminle "normal aralık" cümlesinin altında ne anladığını konuşmak — <em>senin</em> için
+          neyin normal olduğunu birlikte tanımlamak. İkincisi, ne hissettiğini daha somut anlatmaya çalışmak: hangi
+          saatlerde, hangi durumlarda, ne sıklıkta. Tahliller bir şey söyler, sözlerin başka bir şey söyler. İki
+          anlatı birleştiğinde tablo netleşir. Bu çabaya açık olmayan bir hekimle uzun yola çıkmak zor olur.
+        </p>
+        <p>
+          <strong>HRT konusunda hekimimden tam olarak ne beklemeliyim?</strong> Kararın yükünü tek başına taşımanı
+          değil, seninle birlikte düşünmesini. "Şu ilacı kullan" cümlesinden çok "şu seçenekler var, sen ne
+          hissediyorsun?" cümlesini duymak istiyorsan, bu beklenti seni yalnız bırakacak bir hekim değil — paydaş
+          bir hekim arıyorsun demektir. Bu beklentinin altını çizmek senin hakkın; ifade etmek de senin
+          sorumluluğun.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Cevabı bulmak değil, doğru soruyu sormaya alışmak — son birkaç yıl bana bunu öğretti. Modern kadın menopoz
+          takibinde tek bir şey aramıyor; hekim de tek bir şey olamıyor. Önemli olan kadının kendi pozisyonunu
+          tanıması, ve bu pozisyona uyacak hekimle uzun bir bağ kurabilmesi. Senin yolun başka olacak — ve olmalı
+          da.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+          class="mt-14"
+          paths={[
+            '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+            '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
+            '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
+            '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu',
+            '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+          ]}
+        />
+
+      <section
+        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="leading-relaxed text-ink/80">
+          Modern menopoz takibinde hekim-hasta ilişkisinin niteliği ve sürekliliği, klinik karar verme süreçlerinde
+          belirleyici bir faktör olarak öne çıkmaktadır. Paydaş karar verme (shared decision-making) modeli, özellikle
+          uzun süreli hormonal takipte hasta katılımını ve tedaviye uyumu artıran bir yaklaşım olarak güncel jinekoloji
+          literatüründe tartışılmaktadır. Yine de hekim seçimi ve takip stratejisi her bireyin sağlık geçmişine,
+          kişisel beklentilerine ve yaşam koşullarına göre kişiselleştirilmelidir. Yakın aile bireylerinin tedavi
+          edilmemesi de yaygın bir meslek normu olup, hekim-hasta ve aile-eş ilişkilerinin sınırlarını korumaya yönelik
+          bir uygulamadır. Bu yazıdaki gözlemler genel bilgilendirme amacındadır; hormonal geçiş ve hormon replasman
+          tedavisi (HRT) kararları konusunda kendi hekiminizle birlikte değerlendirme yapmanız önerilir.
+        </p>
+      </section>
+
+      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
+        <p class="text-sm leading-relaxed text-ink/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
