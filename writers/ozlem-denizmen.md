@@ -894,6 +894,16 @@ closing_pattern:
     - "Kendi gözleminin sınırlandırılması (bu benim deneyimim)"
     - "Okura bir mikro-soru (mobilizasyon değil, soru)"
     - "Yarım bırakma (üç nokta veya açık-uçlu cümle)"
+
+dynamics:
+  # Writer Dynamics Framework — bkz. docs/WRITER-DYNAMICS-FRAMEWORK.md
+  log_path: "./ozlem-denizmen-article-log.md"
+  birth_year: 1971
+  cooldown_overrides: {}
+  cooldown_exempt: []
+  allow_inter_article_crosslinks: true
+  evolution_review_threshold: 10
+  evolution_review_time_threshold_months: 6
 ```
 
 ---

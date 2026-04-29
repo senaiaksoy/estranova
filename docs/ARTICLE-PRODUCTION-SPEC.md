@@ -47,6 +47,58 @@ Doç. Dr. Senai Aksoy aynı zamanda **Gamze Cizreli'nin gerçek hayatta jinekolo
 
 ---
 
+## Faz 1.5 — Article Log Review + Temporal Context
+
+> **Framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](WRITER-DYNAMICS-FRAMEWORK.md). Bu faz framework'ün B + C katmanlarını uygular.
+
+### 1.5.1 Article log'u oku
+
+`writers/<yazar-slug>-article-log.md` dosyasını oku. Log boşsa (yazarın ilk makalesi) bu adım atlanır, doğrudan 1.5.3'e geç.
+
+### 1.5.2 Cooldown filtreleri uygula
+
+Yazar profile YAML'daki `dynamics.cooldown_overrides`'a (varsa) bak; yoksa framework varsayılanı:
+
+| Eleman | Cooldown | Filtreleme |
+|---|---|---|
+| Aforizma | 6 makale | Son 6 satırda kullanılan aforizmalar bu makalede YASAK |
+| Manifesto kalıbı | 4 makale | Son 4 satırda kullanılanlar YASAK |
+| Mevlana metaforu (varsa) | 5 makale | Son 5 satırda kullanılanlar YASAK |
+| Başlık tipi | 3 makale | Son 3 satırda kullanılanlar YASAK |
+| Açılış kalıbı | 4 makale | Son 4 satırda kullanılanlar YASAK |
+| Mevsim açılışı | 4 makale | Son 4 satırda aynı mevsim açılışı ise farklı seç |
+| Anekdot türü kombinasyonu | 2 makale | Son 2 satırda aynı kombo (örn. T1+T4) ise farklı seç |
+
+`dynamics.cooldown_exempt` listesindeki imza-cümleler/metaforlar (örn. Gamze "kanonik soru s.89") cooldown'dan muaftır.
+
+### 1.5.3 Temporal context hesapla
+
+| Parametre | Hesap |
+|---|---|
+| Yazarın yaşı | `dynamics.birth_year` + bugün → güncel yaş |
+| Mevsim | Bugün → ilkbahar/yaz/sonbahar/kış (Türkiye takvimi) |
+| Önceki makale uzaklığı | Log son satırından bugüne (gün/hafta/ay) |
+| Yakın dönem teması | Log son 3 satırın kategori + eksen analizi |
+
+### 1.5.4 Tema sıçrama kontrolü
+
+Yakın dönem teması analizinden:
+- Aynı kategoride 3 makale üst üste varsa: kategori değişikliği öner
+- Aynı imza eksen 3 makale üst üste varsa: farklı eksen öner
+
+### 1.5.5 Cross-link kararı (E katmanı)
+
+`dynamics.allow_inter_article_crosslinks: true` ise:
+- Log'da benzer tema (yakın 5 makale) varsa: 1 doğal cross-link mümkün
+- "Geçen ay yazmıştım..." / "Bir başka yere not düşmüştüm..." tonunda
+- Max 1-2 cross-link/makale; SEO-style "bkz." YASAK
+
+### 1.5.6 Filtrelenmiş havuzu Faz 2'ye geçir
+
+Faz 2 (yazar §0.5 yürütme protokolü) bu filtrelenmiş havuzdan seçim yapar.
+
+---
+
 ## Faz 2 — Yazar-Özel Yürütme Protokolü
 
 Atanan yazarın profiline gir, varsa **§0.5 Yürütme Protokolü**'nü uygula:
@@ -261,21 +313,60 @@ Zorunlu yapı:
 
 ---
 
+## Faz 7 — Post-publish Journal Entry
+
+> **Framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](WRITER-DYNAMICS-FRAMEWORK.md) Katman B (akümülatif log) + Katman D (evrim trigger).
+
+### 7.1 Log'a yeni satır ekle
+
+`writers/<yazar-slug>-article-log.md` dosyasının tablosuna yeni satır append. Sütunlar:
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+
+Örnek:
+```
+| 12 | 2026-04-29 | Sade sofra disiplini | zamansiz-yasam | v3.2 | s.218 | s.132 | T1+T4+T7 | Yıllar önce... | Tireli | ilkbahar | — |
+```
+
+### 7.2 Evolution review tetikleyici kontrolü
+
+Yazar profile YAML'daki `dynamics.evolution_review_threshold` (default 10) ve `dynamics.evolution_review_time_threshold_months` (default 6):
+
+- **Makale-bazlı:** Log'daki yeni satır sayısı ≥ threshold mi?
+- **Zaman-bazlı:** Son evrim review'dan ≥ N ay geçti mi?
+
+Hangisi önce gelirse → editöre **evrim review tetikleyicisi bildirimi** (manuel veya hook ile).
+
+### 7.3 Evrim review (eğer tetiklendiyse)
+
+Detaylı prosedür: Framework Katman D.
+
+**Özet adımlar:**
+1. AI pass: son N makale gövdesi taranır → yeni signature_phrases / anekdot türleri / iç çelişkiler / drift
+2. İnsan editör onayı (Doç. Dr. Senai Aksoy + ilgili yazar onayı)
+3. Profile minor version bump (örn. v3.2 → v3.3)
+4. Profile changelog'una evrim kaydı
+
+---
+
 ## Hızlı Başlangıç (cheat sheet)
 
 ```
 1. Konu → CLAUDE.md HARD CONSTRAINTS uyumu? Yazar atama (§9 + §10).
 2. Çift Rol kontrol (Gamze ise).
-3. Yazar §0.5 protokolü uygula (v3.2'de yazılı; v2/v2.1'de §3 + §4).
-4. Astro file → kategori klasörü → AGENTS.md "Article page layout" şablonu.
-5. ArticleProsePanel içinde 6-8 H2 + italic lede.
-6. Evidence 2-3 yumuşatılmış. Yasak: literal nokta dizisi.
-7. Bilimsel Editör Notu 5-katmanlı (150-250 kelime, Senai Aksoy imza).
-8. ArticleAuthorBlock + RelatedReadings 3-5 + Hero (vault).
-9. JSON-LD: buildArticleSchemas().
-10. Pre-publish checklist 17 madde — 13-17 must-pass.
-11. Hub linkage. Compliance ≥85.
-12. Push → Cloudflare auto-deploy.
+3. Article log review (Faz 1.5): cooldown filtre + temporal context + cross-link kararı.
+4. Yazar §0.5 protokolü uygula (v3.2'de yazılı; v2/v2.1'de §3 + §4) — filtrelenmiş havuzdan.
+5. Astro file → kategori klasörü → AGENTS.md "Article page layout" şablonu.
+6. ArticleProsePanel içinde 6-8 H2 + italic lede.
+7. Evidence 2-3 yumuşatılmış. Yasak: literal nokta dizisi.
+8. Bilimsel Editör Notu 5-katmanlı (150-250 kelime, Senai Aksoy imza).
+9. ArticleAuthorBlock + RelatedReadings 3-5 + Hero (vault).
+10. JSON-LD: buildArticleSchemas().
+11. Pre-publish checklist 17 madde — 13-17 must-pass.
+12. Hub linkage. Compliance ≥85.
+13. Push → Cloudflare auto-deploy.
+14. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.
 ```
 
 ---
@@ -284,6 +375,8 @@ Zorunlu yapı:
 
 - **CLAUDE.md** — HARD CONSTRAINTS §1-§6 (kimlik, ses, yasaklar, dil, editöryal tipografi)
 - **AGENTS.md** — line 147 "Article page layout (Astro)", Evidence component, JSON-LD pattern
+- **docs/WRITER-DYNAMICS-FRAMEWORK.md** — yazar dinamizm mimarisi (5 katman: DNA / log / temporal / evrim / cross-link)
+- **writers/<yazar>-article-log.md** — per-writer akümülatif log (Katman B)
 - **writers/gamze-cizreli.md** — yazar-özel v3.2 protokol (§0.5 + §12 gold-standard + §13 self-check)
 - **docs/PIPELINE.md** — compliance score eşikleri, best-effort akışı
 - **Memory:** `feedback_article_writing_checklist.md`, `feedback_article_hub_linking_rule.md`, `feedback_dual_role_senai_gamze.md`, `reference_writer_profile_v32_pattern.md`, `reference_vault_media_catalog.md`, `reference_archetype_framework.md`

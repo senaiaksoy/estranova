@@ -292,4 +292,14 @@ experience_seeds:
   - "Henüz yaşamıyorum ama kuşağımın bir gün buraya geleceğini bildiğim için çoktan defter tutuyorum"
   - "Bir spor takviyesini denemeden önce kendi hekimime sormayı 30'larımda öğrendiğim için minnettarım"
   - "Yarış sonrası dinlenme günlerimde annemin neslinin neden bedenini bu kadar geç dinlediğini sorguladım"
+
+dynamics:
+  # Writer Dynamics Framework — bkz. docs/WRITER-DYNAMICS-FRAMEWORK.md
+  log_path: "./alara-baykent-article-log.md"
+  birth_year: 1995
+  cooldown_overrides: {}                         # default'a uy
+  cooldown_exempt: []                            # imza-cümle/metafor (henüz yok)
+  allow_inter_article_crosslinks: true
+  evolution_review_threshold: 10                 # makale sayısı
+  evolution_review_time_threshold_months: 6
 ```

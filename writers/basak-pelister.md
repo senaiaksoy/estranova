@@ -587,4 +587,14 @@ experience_seeds:
   - "Bekar olarak menopozu yaşamak: kendi başıma kalmak değil, kendi başıma yetişmek"
   - "Hobi yok diye uzun bir liste önerirken kendime durdum: belki de hobim hayatın kendisi"
   - "Yıllar boyu denediklerim sonunda küçük bir günlük ritüele dönüştü"
+
+dynamics:
+  # Writer Dynamics Framework — bkz. docs/WRITER-DYNAMICS-FRAMEWORK.md
+  log_path: "./basak-pelister-article-log.md"
+  birth_year: 1970
+  cooldown_overrides: {}
+  cooldown_exempt: []
+  allow_inter_article_crosslinks: true
+  evolution_review_threshold: 10
+  evolution_review_time_threshold_months: 6
 ```

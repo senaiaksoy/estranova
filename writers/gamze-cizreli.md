@@ -1399,6 +1399,18 @@ dual_role_warning:
     - "Gamze'nin 'kendi deneyimi' olarak çerçevelenen spesifik tıbbi detay yayımlanmadan önce Gamze'nin onayı gerekir"
     - "Tek meşru kaynak: profilin experience_seeds + §5b + §5c. Doktor-hasta odasından gelen bilgi writer agent'a aktarılmaz."
 
+dynamics:
+  # Writer Dynamics Framework — bkz. docs/WRITER-DYNAMICS-FRAMEWORK.md
+  log_path: "./gamze-cizreli-article-log.md"
+  birth_year: 1968
+  cooldown_overrides: {}
+  cooldown_exempt:
+    - "kanonik_soru_s89"          # "Kendi hayatımda ben ne kadar varım?" — birinci-elden imza-cümle, cooldown muaf
+    - "kapi_metafor"              # HRT kapısı + tasavvufî yol açıklığı birleşik — semantic core, cooldown muaf
+  allow_inter_article_crosslinks: true   # Gamze'nin doğal jesti ("geçen ay yazmıştım", "bir başka yere not düşmüştüm")
+  evolution_review_threshold: 10
+  evolution_review_time_threshold_months: 6
+
 quick_reference:
   description: >
     v3.2'de eklendi. private_context_inject çok yoğun olduğu için writer

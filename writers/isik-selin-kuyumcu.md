@@ -344,4 +344,14 @@ experience_seeds:
   - "Bir oyuncu arkadaşımla yıllar sonra oynadığımız bir sahnede beden hafızamızın aynı yerde durduğunu fark ettiğim"
   - "Ailem İstanbul'da kalırken benim Bodrum'da yeni bir ritim kurmamın garip dengesi"
   - "Soyunma odasında makyajımı silerken aynada gördüğüm yüzün artık benim için ne ifade ettiği"
+
+dynamics:
+  # Writer Dynamics Framework — bkz. docs/WRITER-DYNAMICS-FRAMEWORK.md
+  log_path: "./isik-selin-kuyumcu-article-log.md"
+  birth_year: 1976
+  cooldown_overrides: {}
+  cooldown_exempt: []
+  allow_inter_article_crosslinks: true
+  evolution_review_threshold: 10
+  evolution_review_time_threshold_months: 6
 ```

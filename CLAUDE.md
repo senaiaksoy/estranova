@@ -332,8 +332,10 @@ If any answer is no, revise before finalizing.
 
 Yeni bir makale üretirken (yazar ataması, Astro scaffolding, Evidence/BEN yerleşimi, hub linkage, JSON-LD, 17 maddelik pre-publish checklist) **tek kanonik referans:**
 
-> **[`docs/ARTICLE-PRODUCTION-SPEC.md`](docs/ARTICLE-PRODUCTION-SPEC.md)**
+> **[`docs/ARTICLE-PRODUCTION-SPEC.md`](docs/ARTICLE-PRODUCTION-SPEC.md)** + **[`docs/WRITER-DYNAMICS-FRAMEWORK.md`](docs/WRITER-DYNAMICS-FRAMEWORK.md)**
 
-AI/yazar ajan her makale öncesi bu dosyayı okur. Mevcut belgeleri (CLAUDE.md HARD CONSTRAINTS, AGENTS.md Astro layout, writers/<yazar>.md §0.5 yazar protokolleri) **tekrarlamaz, bağlar.** Faz 1-6 + Pre-publish Checklist içerir; **13-17 herhangi 'hayır' = otomatik büyük revizyon, yayın engellenir.**
+AI/yazar ajan her makale öncesi bu dosyaları okur. Mevcut belgeleri (CLAUDE.md HARD CONSTRAINTS, AGENTS.md Astro layout, writers/<yazar>.md §0.5 yazar protokolleri) **tekrarlamaz, bağlar.** Faz 1-7 + Pre-publish Checklist içerir; **13-17 herhangi 'hayır' = otomatik büyük revizyon, yayın engellenir.**
 
-**Çift Rol Uyarısı** (Doç. Dr. Senai Aksoy = Gamze Cizreli'nin gerçek jinekoloğu) bu spec'in Faz 1.3 + Faz 4.3'te kritik sınır olarak işaretli; Gamze adına yazılan tüm makaleler için zorunlu kontrol.
+**Yazar dinamizm mimarisi (Writer Dynamics Framework — 2026-04-29):** Her yazar 5 katmanlı sistemle modellenir — Statik DNA (yazar profili) + Akümülatif log (`writers/<yazar>-article-log.md`) + Temporal context (yaş/mevsim/önceki makale uzaklığı runtime'da) + Periyodik evrim review (10 makale veya 6 ay) + Inter-article continuity (yazar overrideları ile). Cooldown parametreleri (aforizma 6, manifesto 4, başlık 3, açılış 4, mevsim 4) yazar profili `dynamics:` bloğunda override edilebilir. Spec Faz 1.5 (article log review) + Faz 7 (post-publish journal) bu framework'ü uygular.
+
+**Çift Rol Uyarısı** (Doç. Dr. Senai Aksoy = Gamze Cizreli'nin gerçek jinekoloğu) spec'in Faz 1.3 + Faz 4.3'te kritik sınır olarak işaretli; Gamze adına yazılan tüm makaleler için zorunlu kontrol. Gamze log'unun "Notlar" sütununa muayene odası bilgisi (HRT/ilaç/doz/lab/tanı) **ima bile** yazılmaz.

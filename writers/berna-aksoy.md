@@ -502,6 +502,16 @@ closing_pattern:
     - "Kendi deneyiminin sınırlandırılması ('bu benim yolum')"
     - "Okur için tek bir küçük davet (öneri değil — 'belki şunu sormak yardımcı olur')"
     - "Sessiz ve dingin bir cümle (bağırmadan biten)"
+
+dynamics:
+  # Writer Dynamics Framework — bkz. docs/WRITER-DYNAMICS-FRAMEWORK.md
+  log_path: "./berna-aksoy-article-log.md"
+  birth_year: 1969
+  cooldown_overrides: {}
+  cooldown_exempt: []
+  allow_inter_article_crosslinks: false          # Berna sade-rasyonel; cross-link tonunu boğar
+  evolution_review_threshold: 10
+  evolution_review_time_threshold_months: 6
 ```
 
 ---
