@@ -41,9 +41,10 @@
 
 Doç. Dr. Senai Aksoy aynı zamanda **Gamze Cizreli'nin gerçek hayatta jinekoloğudur**. Gamze adına yazılan makalelerde:
 - Muayene odası bilgisi (HRT/ilaç/doz/lab/tanı/kontrol notu) yazıya **sızmaz**
-- Tek meşru kaynak: `writers/gamze-cizreli.md` §5b/§5c kamuya açık çerçeve + experience_seeds
+- Tek meşru kaynak: `writers/gamze-cizreli/cold.md §5a/§5b` kamuya açık çerçeve + `profile.yaml` `experience_seeds`
 - Bilimsel Editör Notu Gamze sesinin DIŞINDA, sadece genel-popülasyon klinik perspektifi
-- Detay: `writers/gamze-cizreli.md` §5c-ek + YAML `dual_role_warning`
+- Detay: `writers/gamze-cizreli/hidden.md §5c-ek` + `profile.yaml dual_role_warning`
+- Pre-script (`article-context-build.mjs`, Faz 2.1) `dual_role_warning.active=true` olan yazarlarda hidden.md'yi otomatik yüklenecek dosya listesine ekler
 
 ---
 
@@ -101,15 +102,81 @@ Faz 2 (yazar §0.5 yürütme protokolü) bu filtrelenmiş havuzdan seçim yapar.
 
 ## Faz 2 — Yazar-Özel Yürütme Protokolü
 
+### 2.0 Profil yapısı: modüler vs legacy
+
+Estranova yazarları iki formattan birinde tutulur. AI agent her makale öncesi yazarın hangi formatta olduğunu kontrol eder ve uygun yükleme akışını seçer.
+
+**Modüler format** (yeni — Aşama 1 pilot Gamze Cizreli'de uygulandı):
+
+```
+writers/<slug>/
+  profile.yaml      machine-readable index (her makalede zorunlu yüklenir)
+  hot.md            §0.5 protokolü + §4 ses + §5c tıbbi sınır + §13 self-check (her makalede zorunlu)
+  warm.md           §4a-§4f stil/şablon katmanları (konu-tetikli lazy-load)
+  cold.md           §0 + §1-§3 + §5a + §6-§10 + §12 gold-standard + changelog (audit-only)
+  hidden.md         §5b gizli gözlemler + §5c-ek Çift Rol + §5d iç çelişkiler (yayınlanmaz; dual_role_warning aktifse zorunlu)
+  README.md         klasör navigasyonu
+  citations/
+    canonical-sources.md   yazara özel atıf whitelist'i
+    extended.md            editör onaylı genişleme
+    pending.md             editör onay kuyruğu (RAG ön-eleme + insan geçidi)
+```
+
+**Legacy format** (mevcut çoğunluk):
+
+```
+writers/<slug>.md   tek dosya, tüm bölümler (§0 + §3 + §4 + §0.5 [v3.2 varsa] + §13 [v3.2 varsa])
+```
+
+**Yan dosyalar** (her iki formatta da klasör dışı, paylaşılan):
+
+```
+writers/<slug>-article-log.md       akümülatif log (Writer Dynamics Framework Katman B)
+writers/<slug>-alintilar.md         korpus (varsa)
+writers/<slug>-aphorism-pool.md     aforizma havuzu (varsa)
+```
+
+**Şu an modüler formatta:** `gamze-cizreli` (pilot, v3.2).
+**Şu an legacy formatta:** `berna-aksoy`, `basak-pelister`, `duygu-karaosmanoglu`, `ozlem-denizmen`, `alara-baykent`, `isik-selin-gunce`, `rima-erdemir` (Aşama 2 rollout bekliyor).
+
+**Backward compatibility:** AI agent legacy yazarlar için tek-dosya okumaya devam eder; modüler yazarlar paralel çalışır. Aşama 2 rollout'u tamamlanana kadar hibrit dönem sürer.
+
+### 2.1 Bağlam üretimi — pre-script
+
+**Modüler yazarlar için zorunlu:**
+
+```bash
+node scripts/article-context-build.mjs --writer <slug> --topic <konu> --json
+```
+
+Pre-script şunları yapar:
+1. `profile.yaml`'ı oku (`section_index`, `topic_sections`, `dynamics`, `dual_role_warning`, `citations`)
+2. Konuyu `topic_sections`'a eşle (exact ya da fallback)
+3. Yüklenecek dosya listesini üret: hot.md (zorunlu) + ilgili warm/cold/hidden bölümleri
+4. `<slug>-article-log.md`'den cooldown listesi çıkar (Faz 1.5.2 ile uyumlu)
+5. `dual_role_warning.active=true` ise hidden.md'yi listeye ekle ve uyarı bayrağını çıkar
+6. Atıf çerçevesi referanslarını ekle (canonical/extended/pending path'leri + frekans kuralı)
+7. Çelişki çözüm zincirini sırasıyla yazdır
+
+**Çıktı modları:**
+- Default (`--writer X --topic Y`): markdown (insan-okur, AI prompt'a manuel kopya)
+- `--json`: yapısal JSON (programatik enjekte için)
+
+**Legacy yazarlar için:** Pre-script yok; AI agent doğrudan `writers/<slug>.md`'i + `<slug>-article-log.md`'i okur, cooldown'u Faz 1.5.2 kurallarına göre kendi çıkarır.
+
+**Drift kontrolü:** `npm run writers:lint` (modüler yazarlar) — `profile.yaml ↔ markdown anchor` doğrulaması, `file_layout` dosya varlığı, `dual_role+hidden` tutarlılığı. CI'a bağlanma planı: Aşama 3.
+
+### 2.2 Yazar protokolü uygulanması
+
 Atanan yazarın profiline gir, varsa **§0.5 Yürütme Protokolü**'nü uygula:
 
-| Yazar | Protokol versiyonu |
-|---|---|
-| Gamze Cizreli | **v3.2 ✅** — `writers/gamze-cizreli.md` §0.5 (12 adımlı, korpus + manifesto kalıpları + Mevlana mimarisi + Erken/Olgun sentezi) |
-| Berna, Özlem | v2.1 — §3 ses + §4 stil; §0.5 yok (v3.2'ye taşıma sırası bekliyor) |
-| Duygu, Başak, Alara, Rima, Işık | v2 |
+| Yazar | Format | Protokol versiyonu | §0.5 konumu |
+|---|---|---|---|
+| Gamze Cizreli | **modüler** | **v3.2 ✅** (12 adım, korpus + manifesto kalıpları + Mevlana mimarisi + Erken/Olgun sentezi) | `writers/gamze-cizreli/hot.md §0.5` |
+| Berna, Özlem | legacy | v2.1 — §3 ses + §4 stil; §0.5 yok (v3.2'ye taşıma sırası bekliyor) | — |
+| Duygu, Başak, Alara, Rima, Işık | legacy | v2 | — |
 
-**v3.2 yazar protokolü 12 adım özet** (referans: `writers/gamze-cizreli.md` §0.5):
+**v3.2 yazar protokolü 12 adım özet** (referans: modüler yazarlarda `<slug>/hot.md §0.5`, legacy v3.2 yazarlarda `<slug>.md §0.5`):
 1. Konu kabul kontrolü
 2. İmza eksen eşleme
 3. Aforizma seçimi (varsa korpus)
@@ -247,7 +314,7 @@ Zorunlu yapı:
 - Sadece **genel popülasyon** klinik perspektifi
 - "Sn. Cizreli'nin yolu kendi yolu" formülü
 - Kullandığı/kullanmadığı HRT, ilaç, doz, lab değerlerine **ima bile** girmez
-- Detay: `writers/gamze-cizreli.md` §5c-ek + dual_role_warning
+- Detay: `writers/gamze-cizreli/hidden.md §5c-ek` + `profile.yaml dual_role_warning`
 
 ### 4.4 ArticleAuthorBlock
 
@@ -376,8 +443,12 @@ Detaylı prosedür: Framework Katman D.
 - **CLAUDE.md** — HARD CONSTRAINTS §1-§6 (kimlik, ses, yasaklar, dil, editöryal tipografi)
 - **AGENTS.md** — line 147 "Article page layout (Astro)", Evidence component, JSON-LD pattern
 - **docs/WRITER-DYNAMICS-FRAMEWORK.md** — yazar dinamizm mimarisi (5 katman: DNA / log / temporal / evrim / cross-link)
+- **docs/HANDOFF-modular-writer-profiles.md** — modüler profil mimari geçişi (Aşama 1-3 rollout planı)
+- **writers/_schema/profile.schema.json** — modüler `profile.yaml` JSON Schema (zorunlu alanlar + section_index + citations)
 - **writers/<yazar>-article-log.md** — per-writer akümülatif log (Katman B)
-- **writers/gamze-cizreli.md** — yazar-özel v3.2 protokol (§0.5 + §12 gold-standard + §13 self-check)
+- **writers/gamze-cizreli/** — modüler v3.2 protokol (`profile.yaml` + `hot.md §0.5/§4/§5c/§13` + `warm.md` + `cold.md §12 gold-standard` + `hidden.md §5c-ek`)
+- **scripts/article-context-build.mjs** — pre-script: konu+yazar → yüklenecek dosya listesi + cooldown + Çift Rol bayrağı + atıf çerçevesi
+- **scripts/check-writer-profile-consistency.mjs** — drift CI (`npm run writers:lint`)
 - **docs/PIPELINE.md** — compliance score eşikleri, best-effort akışı
 - **Memory:** `feedback_article_writing_checklist.md`, `feedback_article_hub_linking_rule.md`, `feedback_dual_role_senai_gamze.md`, `reference_writer_profile_v32_pattern.md`, `reference_vault_media_catalog.md`, `reference_archetype_framework.md`
 - **Vault:** `wiki/sites/estranova/writers-profile-architecture.md`, `editorial-rules.md`, `voice-rules-hassas-terimler.md`, `senai-aksoy-gecici-yazar.md`
@@ -386,4 +457,5 @@ Detaylı prosedür: Framework Katman D.
 
 ## Versiyon
 
+- **v1.1** (2026-04-29) — Faz 2 modüler profil yapısına bağlandı: §2.0 (modüler vs legacy), §2.1 (pre-script `article-context-build.mjs` + drift lint), §2.2 (yazar protokolü uygulanması). §1.3 Çift Rol referansları modüler path'lere taşındı (`hidden.md §5c-ek`). "Bağlantılı belgeler"'e schema + handoff + iki yeni script eklendi. Backward compatibility: legacy yazarlar tek-dosya akışında devam eder.
 - **v1.0** (2026-04-29) — İlk yayım. v3.2 Gamze protokolü kanıtlandıktan sonra Faz 1-6 + 17 maddelik pre-publish checklist + Evidence/BEN şablonu yapısallaştırıldı. Çift Rol Uyarısı kritik sınır olarak işaretlendi.
