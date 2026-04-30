@@ -35,6 +35,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Doğal pencere ışığında gri saçlı kadın portresi; sakin ve kendinden emin bakış',
   },
+  '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu': {
+    src: '/images/library/editorial/portrait-silver-strands-window.webp',
+    alt: 'Pencere kenarında krem kazak içinde gri tutamlı saçlı 52 yaş kadın, el yanağa dayanmış, ışığa bakan içe dönük dingin profil; tartı sayısı yatışınca vücut kompozisyonunun sessiz kayışını sakin gözlemle okuma teması',
+  },
   '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi': {
     src: '/images/library/editorial/hg-menopozda-hekim-hasta-iliskisi.webp',
     alt: 'Sakin sabah ışığında pencere kenarında ahşap masada elinde küçük deri kapaklı not defteri ve dolma kalemiyle düşünceli oturan 50+ Türk kadın; cream keten gömlek, ince altın kolye, omuzlarına dökülen koyu kestane saçlar; defterde sorularını olgunlaştıran bir liste, sade çini desenli porselen çay fincanı, küçük cam vazoda kuru bir bitki, bordo keten peçete; arka planda yumuşak odaklanmamış kitaplık ve manzara çerçevesi; hekimle yapılacak konuşmaya sakin hazırlık ve soruları olgunlaştırma teması',

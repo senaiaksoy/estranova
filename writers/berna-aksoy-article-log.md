@@ -8,6 +8,7 @@
 
 | # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2026-04-30 | Vücut kompozisyonu kayışı (kas-yağ oranı, östrojen düşüşü) | hormonal-gecis/menopoz | v2.2 | — | — | İçsel-retrospektif (tartı kaldırma) + Diyalog (kız mutfak) + Yanlış adım (her tahlili her ay) + Kuşak (annem-kızım üçgeni) | "Bir noktada şunu fark ettim..." | Tireli iki bölümlü (gözlem) | ilkbahar | Aşama 3 modüler mimari pilot — ilk gerçek log entry. Çift Rol standart kurallar (eşin jinekolog olduğu söylenmedi, muayene odası bilgisi sızmadı). 2 humor cümlesi (Apple Watch ironisi + tartı kaldırma kabulü). 3 sınır vurgusu uygulandı. Evidence 4 (3 inline + 1 BEN içinde). FAQ 5 konuya özgü. 3-parçalı kapanış. |
 
 ## Sütun anahtarı
 
