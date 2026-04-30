@@ -238,7 +238,11 @@ const result = {
   dual_role_warning: {
     active: dualRoleActive,
     notice: dualRoleActive
-      ? `KRİTİK SINIR: Editör ${writerSlug === 'gamze-cizreli' ? 'Senai Aksoy' : 'editör'} bu yazarın gerçek hekimidir/yakınıdır. Muayene odası bilgisi taslağa SIZMAZ. hidden.md §5c-ek detayı.`
+      ? `KRİTİK SINIR: ${
+          profile.dual_role_warning?.description
+            ? profile.dual_role_warning.description.trim().replace(/\s+/g, ' ')
+            : 'Editör bu yazarın gerçek hekimidir/yakınıdır.'
+        } Muayene odası bilgisi taslağa SIZMAZ. hidden.md §5c-ek detayı.`
       : null,
   },
   citations,
@@ -251,8 +255,8 @@ const result = {
     `writers/${writerSlug}/warm.md (konu-tetikli)`,
     `writers/${writerSlug}/hidden.md (Çift Rol aktifse)`,
     `writers/${writerSlug}-article-log.md (cooldown)`,
-    `writers/${writerSlug}-aphorism-pool.md (alıntı havuzu)`,
-    `writers/${writerSlug}/citations/canonical-sources.md (atıf whitelist)`,
+    ...(aphorismPoolPath ? [`${path.relative(REPO_ROOT, aphorismPoolPath).replace(/\\/g, '/')} (aforizma havuzu)`] : []),
+    `writers/${writerSlug}/citations/canonical-sources.md (atıf çerçevesi)`,
   ],
 };
 
