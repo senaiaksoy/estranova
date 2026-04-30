@@ -21,7 +21,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
-from reportlab.platypus.flowables import HRFlowable, KeepTogether
+from reportlab.platypus.flowables import HRFlowable, KeepTogether, Flowable
 from reportlab.pdfgen import canvas
 
 FONTS = "C:/Windows/Fonts"
@@ -294,6 +294,185 @@ def acik_uclu_alan(satir_sayisi=4):
             spaceBefore=12, spaceAfter=0
         ))
     return items
+
+
+# ============================================================
+# INTERAKTİF FORM HELPERS — ReportLab AcroForm (tıklanabilir)
+# ============================================================
+
+class InteractiveLikert(Flowable):
+    """5 noktalı tıklanabilir likert (radio button group — tek seçim)."""
+    def __init__(self, name, options=None):
+        Flowable.__init__(self)
+        self.name = name
+        self.options = options or [
+            ("1", "1 — Hiç katılmıyorum"),
+            ("2", "2"),
+            ("3", "3"),
+            ("4", "4"),
+            ("5", "5 — Tam katılıyorum"),
+        ]
+        self.height = 22
+        self.width = 16*cm
+
+    def wrap(self, available_width, available_height):
+        return self.width, self.height
+
+    def draw(self):
+        c = self.canv
+        col_width = 3.1 * cm
+        for i, (val, label) in enumerate(self.options):
+            x = i * col_width
+            c.acroForm.radio(
+                name=self.name,
+                value=val,
+                selected=False,
+                x=x, y=4,
+                size=11,
+                buttonStyle='circle',
+                borderColor=burgundy,
+                fillColor=HexColor('#ffffff'),
+                textColor=deep_burgundy,
+                borderWidth=0.7,
+                forceBorder=True,
+                tooltip=label,
+            )
+            c.setFont('Calibri', 9)
+            c.setFillColor(dark_gray)
+            c.drawString(x + 16, 7, label)
+
+
+class InteractiveTriple(Flowable):
+    """3 seçenekli tıklanabilir radio: Evet / Yumuşat / Hayır."""
+    def __init__(self, name):
+        Flowable.__init__(self)
+        self.name = name
+        self.options = [
+            ("evet", "Evet — bana ait"),
+            ("yumusat", "Yumuşat / değiştir"),
+            ("hayir", "Hayır — kaldır"),
+        ]
+        self.height = 22
+        self.width = 16*cm
+
+    def wrap(self, available_width, available_height):
+        return self.width, self.height
+
+    def draw(self):
+        c = self.canv
+        col_width = 5.2 * cm
+        for i, (val, label) in enumerate(self.options):
+            x = i * col_width
+            c.acroForm.radio(
+                name=self.name,
+                value=val,
+                selected=False,
+                x=x, y=4,
+                size=11,
+                buttonStyle='circle',
+                borderColor=burgundy,
+                fillColor=HexColor('#ffffff'),
+                textColor=deep_burgundy,
+                borderWidth=0.7,
+                forceBorder=True,
+                tooltip=label,
+            )
+            c.setFont('Calibri', 9.5)
+            c.setFillColor(dark_gray)
+            c.drawString(x + 16, 7, label)
+
+
+class InteractiveDouble(Flowable):
+    """2 seçenekli tıklanabilir radio: Doğru / Yanlış."""
+    def __init__(self, name):
+        Flowable.__init__(self)
+        self.name = name
+        self.options = [
+            ("dogru", "Doğru / kabul"),
+            ("yanlis", "Yanlış / değiştir"),
+        ]
+        self.height = 22
+        self.width = 16*cm
+
+    def wrap(self, available_width, available_height):
+        return self.width, self.height
+
+    def draw(self):
+        c = self.canv
+        col_width = 7.7 * cm
+        for i, (val, label) in enumerate(self.options):
+            x = i * col_width
+            c.acroForm.radio(
+                name=self.name,
+                value=val,
+                selected=False,
+                x=x, y=4,
+                size=11,
+                buttonStyle='circle',
+                borderColor=burgundy,
+                fillColor=HexColor('#ffffff'),
+                textColor=deep_burgundy,
+                borderWidth=0.7,
+                forceBorder=True,
+                tooltip=label,
+            )
+            c.setFont('Calibri', 9.5)
+            c.setFillColor(dark_gray)
+            c.drawString(x + 16, 7, label)
+
+
+class InteractiveTextArea(Flowable):
+    """Multiline tıklanabilir text alanı — yazılabilir."""
+    def __init__(self, name, line_count=4, label=None):
+        Flowable.__init__(self)
+        self.name = name
+        self.line_count = line_count
+        self.label = label
+        # Her satır ~14pt; padding ekle
+        self.height = 14 * line_count + 12
+        self.width = 16*cm
+
+    def wrap(self, available_width, available_height):
+        return self.width, self.height
+
+    def draw(self):
+        c = self.canv
+        c.acroForm.textfield(
+            name=self.name,
+            tooltip=self.label or "Yanıtınızı buraya yazın",
+            x=0, y=2,
+            width=15.5 * cm,
+            height=self.height - 6,
+            borderStyle='solid',
+            borderColor=very_light_gray,
+            fillColor=HexColor('#FAFAF8'),
+            textColor=dark_gray,
+            borderWidth=0.5,
+            forceBorder=True,
+            fontName='Helvetica',  # multiline için en güvenli
+            fontSize=10,
+            fieldFlags='multiline',
+        )
+
+
+def interaktif_likert(name):
+    """Tıklanabilir likert flowable yaratır."""
+    return InteractiveLikert(name)
+
+
+def interaktif_uclu(name):
+    """Tıklanabilir 3-seçenekli flowable yaratır (Evet/Yumuşat/Hayır)."""
+    return InteractiveTriple(name)
+
+
+def interaktif_ikili(name):
+    """Tıklanabilir 2-seçenekli flowable yaratır (Doğru/Yanlış)."""
+    return InteractiveDouble(name)
+
+
+def interaktif_acik_uclu(name, satir_sayisi=4, label=None):
+    """Tıklanabilir multiline text alanı flowable yaratır."""
+    return InteractiveTextArea(name, line_count=satir_sayisi, label=label)
 
 
 # ============================================================
@@ -789,6 +968,267 @@ def build_dogrulama_formu():
 
 
 # ============================================================
+# PDF 3 — INTERAKTİF YAZAR DOĞRULAMA FORMU (tıklanabilir)
+# ============================================================
+
+def build_interaktif_dogrulama_formu():
+    """Tıklanabilir radio button + multiline text field içeren interaktif PDF formu.
+    Yazar PDF reader'da (Adobe Reader, Edge, Chrome) doğrudan üzerinde işaretler ve yazar."""
+    story = []
+
+    story.append(Paragraph(
+        "Sevgili Rima &nbsp;·&nbsp; Estranova editöryal stil doğrulama formu (interaktif) &nbsp;·&nbsp; 29 Nisan 2026",
+        byline_style
+    ))
+
+    story.append(Paragraph(
+        "Yazar Stil Doğrulama Formu — Tıklanabilir Versiyon",
+        form_title_style
+    ))
+    story.append(HRFlowable(
+        width=3.2*cm, thickness=2, color=gold,
+        hAlign='LEFT', spaceBefore=8, spaceAfter=6
+    ))
+
+    story.append(Paragraph(
+        "Bu form Estranova için kuracağımız <i>Rima Erdemir</i> editöryal sesinin sana ait hissedip "
+        "hissetmediğini doğrulamak için. 8 bölüm var; her bölüm ayrı bir katmanı sorguluyor &mdash; "
+        "karakter izi, manifesto kalıpları, yasak filtreler, konu eksenleri, hassas alanlar, test makalesi "
+        "değerlendirmesi, Kanal A açıklığı ve açık uçlu eklemen.",
+        form_intro_style
+    ))
+    story.append(Paragraph(
+        "<b>Bu PDF tıklanabilir.</b> Adobe Reader, Edge, Chrome ya da herhangi bir modern PDF okuyucuda "
+        "yuvarlak işaretleri tıklayarak seçim yapabilir, açık uçlu alanlara doğrudan yazabilir, sonra dosyayı "
+        "kaydederek geri gönderebilirsin. Birlikte aldığın <i>rima-test-makale.pdf</i>'yi okuduktan sonra bu "
+        "forma dönmek en pratik akış olacak.",
+        form_intro_style
+    ))
+
+    # === Bölüm 1: Karakter izi onayı ===
+    story.append(Paragraph("1. Karakter izi cümleleri", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Aşağıdaki cümleler senin sesini ne kadar yakalıyor? Her birini 1-5 arası işaretle "
+        "(1: hiç bana ait değil, 5: tam bana ait). Tıkla, seç.",
+        form_section_lede_style
+    ))
+
+    karakter_cumleleri = [
+        "Bilim hızlı ilerliyor; şunu biliyoruz, şu hâlâ belirsiz.",
+        "Henüz karar vermedim — bu da bir duruş.",
+        "Bir wearable verisinde garip bir örüntü gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı.",
+        "Geçen sabah kahveyle bir araştırma özetini okurken bir cümlede durdum — kendi bedenimi hatırladım.",
+        "ChatGPT'ye sorduğumu sabah hekimime yazdım — kendi başıma karar vermek artık tek başıma yapacağım bir iş değil.",
+        "Akdeniz mutfağında büyürken yenilenler hakkında okuduğum bir araştırmayı kendi mutfağımda test ettiğim hafta...",
+        "Bu dönemden geçen biri olarak söyleyebilirim ki: araştırmayı okurken kendi bedenini hatırlamayı öğrenmek zaman alıyor.",
+        "Yeni nesil bir takviyeyi okuduğumda kanıt seviyesi bana 'henüz değil' dedi — bu disiplini medyadan öğrendim, sağlığa taşıdım.",
+    ]
+    for i, c in enumerate(karakter_cumleleri, 1):
+        story.append(Paragraph(f'&ldquo;{c}&rdquo;', form_question_quote_style))
+        story.append(interaktif_likert(f"karakter_{i}"))
+
+    # === Bölüm 2: Manifesto kalıpları ===
+    story.append(Paragraph("2. Manifesto kalıpları onayı", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Profile §4e'de senin için 6 manifesto kalıbı tanımladım. Her biri Estranova'da bir makalede en fazla 1 kez "
+        "kullanılır. Aşağıdaki kalıplar imzan olarak doğru mu, yumuşatılmalı mı, kaldırılmalı mı?",
+        form_section_lede_style
+    ))
+
+    manifesto_kaliplari = [
+        ("Kalıp 1 — Bilim hızlı ilerliyor; biliyoruz/belirsiz",
+         "Yeni araştırma / rehber değişikliği / kanıt düzeyi tartışması yazılarında."),
+        ("Kalıp 2 — Henüz karar vermedim (HRT-muğlak imza)",
+         "HRT karar süreci / 'henüz değil' duruşu / araştırma-takip-eden ses. Birinci elden, yılda 2-3 makalede."),
+        ("Kalıp 3 — Akdeniz mutfağında büyürken",
+         "Gastronomi + sağlık / Akdeniz beslenme + menopoz / kültürler arası bakış."),
+        ("Kalıp 4 — Bir wearable verisi → hekim",
+         "Wearable / digital health / AI asistan / dijital takip yazılarında."),
+        ("Kalıp 5 — Bir cümlede durdum (sabah okuma)",
+         "Yenilik takibi / araştırma okuma / kendi bedeniyle araştırmayı birleştirme."),
+        ("Kalıp 6 — ChatGPT'ye sorduğumu hekimime yazdım",
+         "AI asistan / sağlık bilgisi okuryazarlığı / 'kim sorulur' yazılarında. Spesifik AI ürün adı YASAK — 'bir AI asistanı' yumuşak çerçeve."),
+    ]
+    for i, (baslik, aciklama) in enumerate(manifesto_kaliplari, 1):
+        story.append(Paragraph(f"<b>{baslik}</b>", form_question_style))
+        story.append(Paragraph(aciklama, form_options_style))
+        story.append(interaktif_uclu(f"manifesto_{i}"))
+
+    # === Bölüm 3: Yasak filtreleri ===
+    story.append(Paragraph("3. Yasak filtreleri onayı", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Profile §13'te &lsquo;asla yazıda geçmemesi gereken&rsquo; 12 filtre var. Aşağıdaki yasaklar makul mü, "
+        "esnetilmeli mi?",
+        form_section_lede_style
+    ))
+
+    yasaklar = [
+        "Doktor / klinisyen perspektifi (\"hastalarımda gözlemliyorum\", \"tıbben söyleyebilirim\", \"klinik tecrübemde\") — kullanmıyorum, profile yasak.",
+        "Marka / şirket / cihaz / uygulama spesifik adı (Apple Watch, Fitbit, Oura, Whoop, ChatGPT, supplement markası, ilaç markası) — yazıya girmez.",
+        "Demirören / Milliyet / MedyaNet / IAB / MMA / Sparkle Medya / ajans adları — kariyer biyografi süsü olarak yazıda yer almaz.",
+        "Medya/reklam jargonu (DSP, programatik, CPM, GRP, brief, deck) — sağlık dilinde anılmaz.",
+        "Spesifik HRT / ilaç / doz / marka / supplement ürün adı — kişisel deneyim Kanal A açık ama bu kalıplar yasak.",
+        "Lider talimat tonu (\"şunu yapmalısınız\", \"şunu yapın\") — yumuşatılır; davet, paylaşım.",
+        "Trend öncüsü / teknoloji kraliçesi influencer konumlandırması — yasak.",
+        "Lüks gastronomi / destinasyon / şef adı — Akdeniz mutfağı anonim çerçeve, spesifik isim yasak.",
+        "Uluslararası kuruluş/yayın adı (NAMS, Lancet, NEJM, ESHRE, IMS, WHO, JAMA, Mayo, ACOG) — gövdede yasak.",
+        "Erken-heyecanlanmama imzası — \"yeni bir mucize keşif\" tonu YASAK; \"kanıt seviyesi henüz yeterli değil\" tonu sürer.",
+    ]
+    for i, y in enumerate(yasaklar, 1):
+        story.append(Paragraph(y, form_question_style))
+        story.append(interaktif_ikili(f"yasak_{i}"))
+
+    # === Bölüm 4: Konu eksenleri ağırlık ===
+    story.append(Paragraph("4. Konu eksenleri ağırlığı", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Profile §0.5 Adım 1'de senin için 6 imza eksen tanımladım. Her birinin senin sesini ne kadar tanımladığını "
+        "1-5 arası işaretle.",
+        form_section_lede_style
+    ))
+
+    eksenler = [
+        "Yenilik takibi / araştırma okuma / rehber değişimi (çekirdek)",
+        "Teknoloji + sağlık kesişimi — wearable, AI, digital health (çekirdek)",
+        "Akdeniz / Lübnan kültürel zenginlik (çekirdek)",
+        "Post-menopoz akran sesi (Kanal A açık — birinci elden belirti/uyku/wearable deneyimi)",
+        "Medya okuryazarlığı + sağlık kesişimi (ikincil)",
+        "HRT-muğlak / araştırma-takip-eden (ikincil)",
+    ]
+    for i, e in enumerate(eksenler, 1):
+        story.append(Paragraph(f"<b>{e}</b>", form_question_style))
+        story.append(interaktif_likert(f"eksen_{i}"))
+
+    # === Bölüm 5: Hassas alanlar ===
+    story.append(Paragraph("5. Hassas alanlar onayı", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Aşağıdaki bilgiler profile'da kayıtlı; gerçek hayatınla ne kadar uyumlu?",
+        form_section_lede_style
+    ))
+
+    hassas_alanlar = [
+        "Doğum: 1970, İstanbul (2026'da 55-56 yaş bandı).",
+        "Lübnan kökenli — Akdeniz mutfağı, kültürler arası gözlem.",
+        "İÜ İşletme Fakültesi (1991), kariyer Milliyet → MedyaNet → Demirören → Sparkle Medya.",
+        "Çok yönlü anne; gastronomi, seyahat, teknoloji takibi, kendine özen.",
+        "Post-menopoz dönemde — kişisel belirti / uyku / wearable deneyimi yazıya birinci elden girebilir.",
+        "HRT konusunda kararsızlık; \"henüz değil\" duruşu birinci elden anlatılabilir.",
+        "Estranova'da konuk yazar + editöryal süreç danışmanı (kaynak doğrulama + yayın akışı katkısı).",
+    ]
+    for i, h in enumerate(hassas_alanlar, 1):
+        story.append(Paragraph(h, form_question_style))
+        story.append(interaktif_ikili(f"hassas_{i}"))
+
+    # === Bölüm 6: Test makalesi değerlendirmesi ===
+    story.append(Paragraph("6. Test makalesi değerlendirmesi", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Birlikte aldığın <i>rima-test-makale.pdf</i> &mdash; başlığı &ldquo;AI'ya Sorduğum Bir Soru, Hekime Yazdığım "
+        "Bir Not — Sağlık Bilgisinin Üçlü Dengesi&rdquo; &mdash; senin sesinde mi yazılmış? Aşağıdaki 5 katmanı "
+        "değerlendir.",
+        form_section_lede_style
+    ))
+
+    makale_degerlendirme = [
+        "<b>Açılış:</b> &ldquo;Bilgi artık tek bir ağızdan gelmiyor; ama çok ağızdan gelen bilgiyi nasıl dengeleyeceğimi öğrenmek bana yıllar aldı.&rdquo; &mdash; lede senin tonun mu?",
+        "<b>Yapı:</b> 4 ana bölüm + FAQ + 3-parçalı kapanış &mdash; Estranova'da işine yarıyor mu?",
+        "<b>Ses imzası:</b> Belirsizlik dili (\"şu hâlâ belirsiz\", \"henüz net değil\"), bilim okuryazarlığı, kuru humor (\"hâlâ bir gazeteci gibi haber takip ediyorum, sadece konum değişti\") &mdash; bu üçlü doğru mu?",
+        "<b>Yasaklar:</b> Marka/şirket/cihaz adı yok, hekim PERSONA yok, lider tonu yok &mdash; her şey yerinde mi?",
+        "<b>Kapanış:</b> 3-parçalı (sandalye-kahve-üç soru / senin yolun başka olacak / aforistik son) &mdash; bana ait hissettiriyor mu?",
+    ]
+    for i, m in enumerate(makale_degerlendirme, 1):
+        story.append(Paragraph(m, form_question_style))
+        story.append(interaktif_uclu(f"makale_{i}"))
+
+    # === Bölüm 7: Yaşam tarzı + Kanal A ===
+    story.append(Paragraph("7. Kanal A &mdash; kişisel deneyim açıklığı", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Profile §5b'de &ldquo;Kanal A açık&rdquo; deniyor: post-menopoz dönemde olduğun için kişisel belirti / uyku / "
+        "wearable deneyimleri akran tonunda paylaşılabilir. Aşağıdaki spesifik kategorilerde rahat mısın?",
+        form_section_lede_style
+    ))
+
+    kanal_a = [
+        "Sıcak basmaları / gece terlemesi belirti deneyimi (birinci elden anlatım).",
+        "Uyku düzeni değişimi (wearable verisiyle birlikte).",
+        "Ruh hali / enerji dalgalanmaları.",
+        "AI asistanlarına sağlık sorusu sorma deneyimi.",
+        "Bir bilim haberini kendi bedeninde test etme.",
+        "HRT konusunda tartışmaya açık duruş — \"henüz değil\".",
+        "Akdeniz / Lübnan mutfak deneyimi (anekdot bağlamında).",
+        "Aile bağı (\"çok yönlü anne\" çerçevesinde sıcak referans).",
+    ]
+    for i, k in enumerate(kanal_a, 1):
+        story.append(Paragraph(k, form_question_style))
+        story.append(interaktif_uclu(f"kanal_{i}"))
+
+    # === Bölüm 8: Açık uçlu (multiline text fields) ===
+    story.append(Paragraph("8. Eklemek / çıkarmak istediklerin", form_section_style))
+    story.append(HRFlowable(width=2.5*cm, thickness=1.5, color=gold,
+                            hAlign='LEFT', spaceBefore=2, spaceAfter=10))
+    story.append(Paragraph(
+        "Profile'da eksik kalan, yanlış vurgulanan, ya da tamamen kaldırılması gereken bir şey var mı? "
+        "Aşağıdaki kutulara <b>doğrudan yazabilirsin</b> — cümle, anekdot, kalıp, yasak, tema fark etmez.",
+        form_section_lede_style
+    ))
+
+    story.append(Paragraph("Eklemek istediğin imza cümle / anekdot / kalıp:", form_open_label_style))
+    story.append(interaktif_acik_uclu("acik_ekleme", satir_sayisi=4, label="Eklemek istediğiniz imza cümle / anekdot / kalıp"))
+
+    story.append(Paragraph("Çıkarmak / yumuşatmak istediğin tonu, eksen, yasak:", form_open_label_style))
+    story.append(interaktif_acik_uclu("acik_cikarma", satir_sayisi=4, label="Çıkarmak / yumuşatmak istediğiniz unsur"))
+
+    story.append(Paragraph("Estranova'da Rima Erdemir sesinin oturmuş olması için en kritik dokunuş ne?", form_open_label_style))
+    story.append(interaktif_acik_uclu("acik_kritik", satir_sayisi=4, label="En kritik dokunuş"))
+
+    story.append(Paragraph("Diğer notların (özgür alan):", form_open_label_style))
+    story.append(interaktif_acik_uclu("acik_diger", satir_sayisi=6, label="Diğer notlar / özgür alan"))
+
+    # Footer note
+    story.append(Spacer(1, 0.6*cm))
+    story.append(HRFlowable(
+        width=16*cm, thickness=0.4, color=very_light_gray,
+        spaceBefore=8, spaceAfter=8
+    ))
+    story.append(Paragraph(
+        "<i>Form doldurulduğunda &ldquo;Kaydet&rdquo; ile geri gönderilir; cevaplar profile §0–§13 yenilenmesinde "
+        "kullanılır. Senin imzan v2.1'e taşınır. Cevaplar Estranova'nın yayın kalitesi için içeriden veridir, "
+        "dışarıyla paylaşılmaz.</i>",
+        inline_disclaimer_style
+    ))
+
+    output_path = r"C:\Users\KC3\Downloads\rima-yazar-dogrulama-formu-interaktif.pdf"
+    doc = SimpleDocTemplate(
+        output_path,
+        pagesize=A4,
+        leftMargin=2.5*cm, rightMargin=2.5*cm,
+        topMargin=2*cm, bottomMargin=2.5*cm,
+        title="Yazar Stil Doğrulama Formu (interaktif) — Rima Erdemir",
+        author="Estranova editöryal pipeline",
+        subject="Rima Erdemir profili v2.0 → v2.1 stil doğrulama (tıklanabilir form)",
+        creator="Estranova editöryal pipeline",
+    )
+
+    def make_canvas(*args, **kwargs):
+        return FooterCanvas(*args, footer_text="Estranova editöryal stil doğrulama formu (interaktif) — Rima Erdemir", **kwargs)
+
+    doc.build(story, canvasmaker=make_canvas)
+    return output_path
+
+
+# ============================================================
 if __name__ == "__main__":
     import os
 
@@ -801,7 +1241,11 @@ if __name__ == "__main__":
 
     p2 = build_dogrulama_formu()
     s2 = os.path.getsize(p2) / 1024
-    print(f"[OK] Dogrulama formu : {p2}  ({s2:.1f} KB)")
+    print(f"[OK] Dogrulama formu (statik)     : {p2}  ({s2:.1f} KB)")
+
+    p3 = build_interaktif_dogrulama_formu()
+    s3 = os.path.getsize(p3) / 1024
+    print(f"[OK] Dogrulama formu (interaktif) : {p3}  ({s3:.1f} KB)")
 
     print()
     print("İkisi birlikte yazara gönderildiğinde Rima'nın stilini doğrulamak için kullanılır.")
