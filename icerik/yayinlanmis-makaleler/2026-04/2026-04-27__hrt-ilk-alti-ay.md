@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/hrt-ilk-alti-ay
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["HRT", "hormon replasman tedavisi", "menopoz", "58 yaş", "akran hikayesi", "kişisel deneyim", "ilk 6 ay"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # HRT

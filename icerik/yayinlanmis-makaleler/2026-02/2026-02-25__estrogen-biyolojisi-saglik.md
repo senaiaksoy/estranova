@@ -8,7 +8,7 @@ url: /bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["östrojen", "menopoz", "hormon", "reseptör", "kemik", "kardiyovasküler"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Östrojen Biyolojisi ve Sağlık

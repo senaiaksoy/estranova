@@ -8,7 +8,7 @@ url: /hormonal-gecis/perimenopoz/perimenopoz-nedir
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["perimenopoz", "geçiş dönemi", "hormon dalgalanması", "düzensiz adet", "menopoz", "östrojen"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Perimenopoz Nedir? — Temel Rehber

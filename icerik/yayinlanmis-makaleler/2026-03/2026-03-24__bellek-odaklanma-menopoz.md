@@ -8,7 +8,7 @@ url: /zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "bellek", "odaklanma", "beyin sisi", "bilişsel değişim", "perimenopoz"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Bellek ve Odaklanma — Menopozda Bilişsel Değişimler

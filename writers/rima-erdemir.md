@@ -37,7 +37,7 @@ Doğrulanmış sağlık-yazısı korpusu olmadığı için, profile §3 karakter
 
 10. **[RE-T bilim okuryazarlığı]** — *"Bilim bu alanda hızlı ilerliyor; şunu biliyoruz, şu hâlâ belirsiz."* (profile §4 signature'tan zaten var, omurga manifesto kalıbı)
 11. **[RE-T HRT-muğlak]** — *"HRT konusu son birkaç yılda gündemimde; iki haftada bir aklımdan geçen bir soru: 'şimdi mi?'… ama her seferinde durup şu makalede ne yazıyor diye okuyorum."* (profile §4b'den)
-12. **[RE-T teknoloji-sağlık köprüsü]** — *"Bir wearable verisinde garip bir örüntü gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı."*
+12. **[RE-T teknoloji-sağlık köprüsü]** — *"Bir wearable verisinde garip bir kalıp gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı."*
 13. **[RE-T Akdeniz mutfağı]** — *"Akdeniz mutfağında büyürken yenilenler hakkında okuduğum bir araştırmayı kendi mutfağımda test ettiğim hafta..."*
 14. **[RE-T sabah okuma rutini]** — *"Geçen sabah kahveyle bir araştırma özetini okurken bir cümlede durdum — kendi bedenimi hatırladım."*
 15. **[RE-T AI-hekim köprüsü]** — *"ChatGPT'ye bir gece sıcak basması nedenini sorduğumda verdiği cevabı sabah hekimime yazdım — kendi başıma karar vermek artık tek başıma yapacağım bir iş değil."*
@@ -342,11 +342,11 @@ Rima Erdemir, medya ve dijital teknoloji dünyasının İstanbul merkezli deneyi
 
 ### Kalıp 4 — Bir wearable verisi → hekim ([RE-T] teknoloji-sağlık köprüsü)
 
-> *"Bir wearable verisinde garip bir örüntü gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı."* [RE-T]
+> *"Bir wearable verisinde garip bir kalıp gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı."* [RE-T]
 
 - **Yapı:** Veri gözlem + yeniden değerlendirme + hekim köprüsü
 - **Estranova kullanımı:** Wearable / digital health / AI asistan / dijital takip yazılarında
-- **Paraframe:** *"Telefonumun uyku verisi geçen ay birkaç gece üst üste 'hafif uyku' uyarısı verdi. Önce göz ardı ettim — sonra bu örüntünün anlamı olabileceğini düşündüm, hekimimle bir kontrolde bunu da masaya getirdim. Cihaz tek başına cevap değil; ama doğru soruyu sormaya yardım ediyor."*
+- **Paraframe:** *"Telefonumun uyku verisi geçen ay birkaç gece üst üste 'hafif uyku' uyarısı verdi. Önce göz ardı ettim — sonra bu kalıbının anlamı olabileceğini düşündüm, hekimimle bir kontrolde bunu da masaya getirdim. Cihaz tek başına cevap değil; ama doğru soruyu sormaya yardım ediyor."*
 
 ### Kalıp 5 — Bir cümlede durdum ([RE-T] sabah okuma)
 
@@ -661,7 +661,7 @@ experience_seeds:
   - "Akdeniz mutfağında büyürken yenilenler hakkında okuduğum bir araştırmayı kendi mutfağımda test ettiğim hafta"
   - "Bir bilim haberini okuyup heyecanlandıktan sonra 'önce hekime sor' refleksimi devreye soktuğum gün"
   - "Bir Lübnan tarifini büyüklerimden öğrenirken 'bu bedeni nasıl beslemiş yıllar boyu' diye düşündüğüm öğleden sonra"
-  - "Bir wearable verisinde garip bir örüntü gördüğümde kendimi alıp doktora götürdüğüm hafta"
+  - "Bir wearable verisinde garip bir kalıp gördüğümde kendimi alıp doktora götürdüğüm hafta"
   - "Yeni nesil bir takviyeyi okuduğumda kanıt seviyesi bana 'henüz değil' dedirten bir araştırma"
   - "Sabah okuyan bir kadın olarak menopoz dönemindeki ilk 'farklı bir okuma' anım"
   - "Gece terlemesiyle uyandığım ilk gece telefondan ne aradığımı, sonra ne yaptığımı net hatırlıyorum"
@@ -746,7 +746,7 @@ quick_reference:
 
 > *Teknolojinin ne dediğini anlamak için bedeni de dinlemek gerekiyor; bunu son birkaç yılda kendi yatağımda öğrendim.*
 
-Araştırmayı okurken bir noktada durdum. Geçen sabah, kahveyle birlikte bir bilim haberini açtım — uyku düzeninin menopozda ne kadar değişebildiğine dair yeni bir gözlem çalışmasıydı. Bir cümlede asıldı kalıdım: "post-menopoz dönemde uyku evrelerinin değişen örüntüsü". O sabah benim son üç haftada yaşadıklarımı tarif ediyordu.
+Araştırmayı okurken bir noktada durdum. Geçen sabah, kahveyle birlikte bir bilim haberini açtım — uyku düzeninin menopozda ne kadar değişebildiğine dair yeni bir gözlem çalışmasıydı. Bir cümlede asıldı kalıdım: "post-menopoz dönemde uyku evrelerinin değişen kalıbı". O sabah benim son üç haftada yaşadıklarımı tarif ediyordu.
 
 55 yaşımda menopozun içinden geçtim ve şimdi başka bir tarafta duruyorum. Belirtiler eskisi kadar yoğun değil; ama uyku verim — her gece izleyen küçük bir cihazın anlattığı uyku verim — başka bir şey söylüyor.
 
@@ -754,7 +754,7 @@ Araştırmayı okurken bir noktada durdum. Geçen sabah, kahveyle birlikte bir b
 
 > *Bir wearable verisi başlangıç noktasıdır, cevap değil — bunu öğrenmek bana zaman aldı.*
 
-Bir wearable verisinde garip bir örüntü gördüğümde, kendimi alıp doktora götürdüm. Cihaz bana "hafif uyku" uyarısı vermişti birkaç gece üst üste. Önce göz ardı ettim, "bir cihazdan ne öğrenebilirim ki" dedim — sonra fark ettim: aslında önemli olan cihazın tek başına ne dediği değil, **hangi soruya köprü kurduğu**.
+Bir wearable verisinde garip bir kalıp gördüğümde, kendimi alıp doktora götürdüm. Cihaz bana "hafif uyku" uyarısı vermişti birkaç gece üst üste. Önce göz ardı ettim, "bir cihazdan ne öğrenebilirim ki" dedim — sonra fark ettim: aslında önemli olan cihazın tek başına ne dediği değil, **hangi soruya köprü kurduğu**.
 
 Ertesi hafta hekimimle bir kontroldeydim. Telefondaki veriyi göstermek zorunda değildim aslında, ama gösterdim — "şu üç hafta uyku evrelerimde bir değişim var, fark ettiniz mi?" dedim. Birlikte değerlendirdik. Cihaz cevap vermedi, hekimim de tek başına cevap vermedi; ikisi birden yeni bir soru açtı: belki melatonin ritmim de değişiyordu.
 
@@ -786,7 +786,7 @@ Senin yolun başka olacak — belki uyku için cihaz kullanmıyorsun, belki baş
 |---|---|---|---|
 | **Açılış** | Signature açılış (Adım 4) | "Araştırmayı okurken bir noktada durdum..." | ✅ |
 | **Açılış** | Italic lede (Adım 6) | İlk paragraf öncesi | ✅ |
-| **Manifesto** | Kalıp 4 birinci-elden (§4e) | "Bir wearable verisinde garip bir örüntü gördüğümde, kendimi alıp doktora götürdüm" | ✅ |
+| **Manifesto** | Kalıp 4 birinci-elden (§4e) | "Bir wearable verisinde garip bir kalıp gördüğümde, kendimi alıp doktora götürdüm" | ✅ |
 | **Dörtgen** | Teknoloji-sağlık direği (§4f) | Tüm makale ana eksen | ✅ |
 | **Dörtgen** | Bilim okuryazarlığı direği (§4f) | Bölüm 2 (sabah okuma + kanıt düzeyi) | ✅ |
 | **Anekdot** | Wearable verisi → hekim (Adım 3) | Bölüm 1 (cihaz uyarısı + hekim kontrolü) | ✅ |

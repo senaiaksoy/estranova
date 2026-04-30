@@ -8,7 +8,7 @@ url: /hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["40 sonrası", "sağlık kararı", "karar yorgunluğu", "menopoz", "karar verme", "koruyucu sağlık", "sağlıklı yaşlanma", "karar çerçevesi"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # 40 Sonrası Sağlık Kararı: İstek mi, İhtiyaç mı, Yatırım mı?

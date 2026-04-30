@@ -94,6 +94,29 @@ Bu kart, `src/data/writers.ts` içindeki `writingStyle` alanı ile birlikte uygu
   - `adet kaydı`
 - `Döngü` terimi yalnızca teknik bağlamda (ör. `hormonal döngü`) gerçekten gerekli olduğunda kullanılır.
 
+### 10.1) Akademik / eski Türkçe yumuşatması (HARD CONSTRAINT — 2026-04-30)
+
+Estranova akran sesi (CLAUDE.md §3) için günlük konuşma dilinde nadir kullanılan akademik/eski Türkçe kelimeler **makale gövdesinde yasaktır**; muadiliyle değiştirilir. Profile/editöryal sınıflandırma terimi olarak istisna kalabilir (yazıya sızmaz).
+
+| Yasak (akademik) | Önerilen muadil | Bağlam notu |
+|---|---|---|
+| `örüntü` | **kalıp**, düzen, biçim | "uyku örüntüsü" → "uyku kalıbı"; tüm Türkçe iyelik/durum ekleri sed ile dönüştürülür |
+| `muğlak` | **belirsiz**, net olmayan | İSTİSNA: profile içi "HRT-muğlak imza" gibi editöryal sınıflandırma terimi makaleye sızmaz |
+| `yeti` | **beceri**, kapasite | "yerlendirme yetisi" → "yerlendirme becerisi" |
+| `edinim` | kazanım, öğrenme | — |
+| `temayül` | eğilim, yönelim | — |
+| `ivedi` | acil, hemen | — |
+| `müktesebat` | birikim | — |
+| `ikircik(li)` | kararsızlık (kararsız) | — |
+| `müphem` | belirsiz, anlaşılmaz | — |
+| `istinaen` | dayanarak, göre | — |
+| `salt` | yalnız, sadece | İSTİSNA: korpus alıntıları (Gamze) |
+| `durağan` | sabit, hareketsiz | İSTİSNA: yoga teknik terimi *Hatha (durağan duruşlar)* |
+
+**Korunan teknik bağlamlar:** *uyku döngüsü, adet/regl döngüsü, kemik döngüsü, yaşam döngüsü, hormonal döngü, NREM/REM döngüleri* — yerleşmiş tıbbi terimler.
+
+**Detay + sed komutu + yan-etki uyarısı:** `memory/feedback_akademik_kelime_yumusatma_2026_04_30.md`
+
 ## 11) Manifesto-Aligned Mahrem Ton Eki (Supplementary)
 
 Bu bölüm `/manifesto` sayfasındaki *"deneyim aktarmak"* sözüne bağlı **ek** kuralları belgeler. **Bölüm 9'daki yazar üslup kartlarının ve `AGENTS.md` Content Tone'un yerini ALMAZ**; onları manifesto ile uyumlu kılar.

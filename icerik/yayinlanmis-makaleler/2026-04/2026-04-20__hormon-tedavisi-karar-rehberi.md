@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["hormon tedavisi", "HRT", "MHT", "menopoz", "östrojen", "progesteron", "sıcak basması", "karar verme"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?

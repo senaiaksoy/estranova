@@ -8,7 +8,7 @@ url: /hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-za
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["perimenopoz", "adet düzensizliği", "kanama", "menopoz geçişi", "doktor başvurusu", "alarm belirtileri"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?

@@ -8,7 +8,7 @@ url: /zamansiz-yasam/deneysel/nad-plus-takviyesi
 section: "Zamansız Yaşam · Deneysel"
 sectionPath: /zamansiz-yasam
 keywords: ["NMN", "NR", "NAD+", "takviye", "menopoz", "güvenlik"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # NAD+ Takviyesi: Bilim Ne Diyor?

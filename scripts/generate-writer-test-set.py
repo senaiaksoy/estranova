@@ -553,13 +553,13 @@ def build_test_makale():
         "Cihazın anlattığı bedeni",
         "Wearable verisi başlangıç noktasıdır, cevap değil &mdash; bu da bir sınır.",
         [
-            "Telefonumdaki uyku takip uygulaması son üç haftada bir örüntü göstermişti: hafif uyku evresinin uzaması, "
+            "Telefonumdaki uyku takip uygulaması son üç haftada bir kalıp göstermişti: hafif uyku evresinin uzaması, "
             "derin uyku evresinin kısalması. Önce göz ardı ettim; cihaz hata yapıyordur, dedim. Sonra fark ettim ki "
             "aynı dönemde gece sıcak basmaları da artmıştı. İki veri yan yana durdu birden.",
 
             f"Cihaz tek başına teşhis koymaz {evidence('orta kanıt')}. Wearable'ların uyku evresi sınıflandırması "
             "klinik altın standardın altında kalır &mdash; bunu biliyoruz. Ama gözlem aracı olarak işe yarar: bir "
-            "örüntüyü fark etmenize yardım eder, hekimle konuşmanızda bir görsel referans olur.",
+            "kalıpyü fark etmenize yardım eder, hekimle konuşmanızda bir görsel referans olur.",
 
             "Ben hekimimle bir kontrolde bu veriyi göstermek zorunda değildim. Ama gösterdim. &ldquo;Şu üç hafta uyku "
             "evrelerimde bir değişim var, fark ettiniz mi?&rdquo; dedim. Birlikte değerlendirdik. Cihaz cevap "
@@ -634,8 +634,8 @@ def build_test_makale():
         ),
         (
             "Wearable verisini hekimime götürmeye değer mi?",
-            "Evet, ama nasıl götürdüğüne bağlı. Cihaz verisi tek başına teşhis aracı değil; ama bir örüntü göstermişse, "
-            "hekiminle ortak bir görsel referans oluyor. Ben &ldquo;şuna baktım, şu üç hafta şu örüntü var&rdquo; "
+            "Evet, ama nasıl götürdüğüne bağlı. Cihaz verisi tek başına teşhis aracı değil; ama bir kalıp göstermişse, "
+            "hekiminle ortak bir görsel referans oluyor. Ben &ldquo;şuna baktım, şu üç hafta şu kalıp var&rdquo; "
             "şeklinde gösteriyorum &mdash; cihaz sözcüğümü taşıyor sanki."
         ),
         (
@@ -758,7 +758,7 @@ def build_dogrulama_formu():
     karakter_cumleleri = [
         "Bilim hızlı ilerliyor; şunu biliyoruz, şu hâlâ belirsiz.",
         "Henüz karar vermedim — bu da bir duruş.",
-        "Bir wearable verisinde garip bir örüntü gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı.",
+        "Bir wearable verisinde garip bir kalıp gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı.",
         "Geçen sabah kahveyle bir araştırma özetini okurken bir cümlede durdum — kendi bedenimi hatırladım.",
         "ChatGPT'ye sorduğumu sabah hekimime yazdım — kendi başıma karar vermek artık tek başıma yapacağım bir iş değil.",
         "Akdeniz mutfağında büyürken yenilenler hakkında okuduğum bir araştırmayı kendi mutfağımda test ettiğim hafta...",
@@ -1018,7 +1018,7 @@ def build_interaktif_dogrulama_formu():
     karakter_cumleleri = [
         "Bilim hızlı ilerliyor; şunu biliyoruz, şu hâlâ belirsiz.",
         "Henüz karar vermedim — bu da bir duruş.",
-        "Bir wearable verisinde garip bir örüntü gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı.",
+        "Bir wearable verisinde garip bir kalıp gördüğümde, kendimi alıp doktora götürdüm — teknoloji bana kendi bedenimi yeniden hatırlattı.",
         "Geçen sabah kahveyle bir araştırma özetini okurken bir cümlede durdum — kendi bedenimi hatırladım.",
         "ChatGPT'ye sorduğumu sabah hekimime yazdım — kendi başıma karar vermek artık tek başıma yapacağım bir iş değil.",
         "Akdeniz mutfağında büyürken yenilenler hakkında okuduğum bir araştırmayı kendi mutfağımda test ettiğim hafta...",

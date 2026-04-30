@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["perimenopoz", "uyku", "uyku evresi", "östrojen", "progesteron", "REM", "NREM", "menopoz uyku"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Perimenopozda Uykunun Gerçekten Değişen Yanı
@@ -88,11 +88,11 @@ evrede yaşanan uykusuzluk dönemleri çoğu kadında geçici, ama kalıcı bir 
 
 Menopoza ve sonrasına geçildiğinde tablo değişiyor. Östrojen düşük ve nispeten sabit bir bantta
 yerleştiğinde, beden yeni bir baz çizgisine alışıyor; bazı kadınlar bu evrede uykunun "oturduğunu"
-söylüyor, bazıları için ise daha hafif ve daha kolay bölünen bir uyku örüntüsü kalıcı hâle geliyor. Yani
+söylüyor, bazıları için ise daha hafif ve daha kolay bölünen bir uyku kalıbı kalıcı hâle geliyor. Yani
 değişimin bir kısmı geçici dalga, bir kısmı ise yeni bir düzen.
 (orta–iyi kanıt)
 
-Bunun pratik anlamı: bu yıl yaşadığın uyku örüntüsünün üç yıl sonraki örüntün olacağını varsaymak
+Bunun pratik anlamı: bu yıl yaşadığın uyku kalıbının üç yıl sonraki kalıbın olacağını varsaymak
 gerekmiyor. Aynı şekilde, "geçer, beklerim" demek de her zaman doğru bir strateji değil — özellikle
 gündüz işlevini bozan, aylarca süren uyku şikâyetleri için. Acele bir karar yerine planlı bir takip, bu
 noktada en sağlıklısı.
@@ -160,7 +160,7 @@ dinlenmen son birkaç yıldır farklı geliyorsa, bu dönemin işareti olabilir.
 Akıllı saatler ve yüzükler, hareket ve nabız üzerinden uykunun kabaca süresini, kesintilerini ve genel
 ritmini gösterebiliyor; bu da haftalık eğilimi görmek için faydalı. Ancak derin uyku ve REM evrelerini
 kesin biçimde ayırt edemiyorlar — bunun için tıbbi uyku çalışması gerekiyor. Cihazın "derin uyku %12"
-dediği gece tedirginleşmek yerine, iki-üç haftalık genel örüntüye, kalkış hissine ve gündüz enerjine
+dediği gece tedirginleşmek yerine, iki-üç haftalık genel kalıba, kalkış hissine ve gündüz enerjine
 bakmak daha gerçekçi bir okuma.
 
 ### HRT'siz dönemde ne kadar uyku iyileşmesi mümkün?

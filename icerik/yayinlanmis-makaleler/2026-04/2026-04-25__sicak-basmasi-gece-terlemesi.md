@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["sıcak basması", "gece terlemesi", "menopoz", "perimenopoz", "uyku", "tetikleyiciler"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi
@@ -75,7 +75,7 @@ uyku
 . Bunların ortak noktası şu: hepsi vücut ısısını ya da damar tepkisini doğrudan etkiliyor.
 
 Buradaki hedef "yasak listesi" çıkarmak değil — kendi bedeninin ritmini yakalamak. Ben iki haftalık küçük bir not tuttum:
-ne yedim, ne içtim, kaçta yattım, ertesi gün kaç dalga geldi. Üçüncü haftada örüntü kendiliğinden çıktı; öğle yemeğindeki
+ne yedim, ne içtim, kaçta yattım, ertesi gün kaç dalga geldi. Üçüncü haftada kalıp kendiliğinden çıktı; öğle yemeğindeki
 tek kadeh şarap akşam saatlerime ne yapıyormuş, gözle görülür oldu. Sen de iki üç haftalık küçük bir kayıt deneyebilirsin;
 büyük bir günlük tutmana gerek yok, telefonun notlarına yazılan üç-dört kelime yeter.
 

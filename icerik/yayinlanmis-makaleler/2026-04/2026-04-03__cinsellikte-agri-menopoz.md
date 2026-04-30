@@ -8,7 +8,7 @@ url: /beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["cinsellikte ağrı", "cinsel ilişkide ağrı", "disparoni", "dispareuni", "menopoz", "mahrem bölge", "vajinal kuruluk", "hormon"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Cinsellikte Ağrı — Menopozda Dispareuniya Rehberi
@@ -63,7 +63,7 @@ Partnerle iletişim sorunları veya ilişki dinamikleri stresi artırabilir
 Geçmiş travma, cinsel istismar veya olumsuz cinsel deneyimleri menopozda belirtileri şiddetlendirebilir
 (iyi kanıt)
 .
-Stres ve yaşamsal yük vücut gerginliğini artırır, kas spazması tetikler ve ağrı döngüsünü derinleştirir
+Stres ve yaşamsal yük vücut gerginliğini artırır, kas spazması tetikler ve ağrıyı süreklileştirir
 (güçlü kanıt)
 .
 

@@ -8,7 +8,7 @@ url: /zamansiz-yasam/hareket-saglik-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "hareket", "egzersiz", "direnç antrenmanı", "kardiyovasküler", "kemik sağlığı"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Hareket ve Sağlık — Menopozda Egzersiz Rehberi
@@ -79,7 +79,7 @@ geçişler) özellikle 50 sonrasında düşme riskini belirgin ölçüde azaltab
 (güçlü kanıt)
 .
 Düşme — yaşlandıkça en sık karşılaşılan ortopedik kırılma nedeni — birçoğumuz için "yaşa bağlı kaza"
-gibi okunur; oysa proprioseptif sistem (bedenin kendisini boşlukta yerlendirme yetisi) çalıştırıldıkça
+gibi okunur; oysa proprioseptif sistem (bedenin kendisini boşlukta yerlendirme becerisi) çalıştırıldıkça
 keskinleşiyor. Bu üç katman birbirinin yerini tutmuyor; birbirini tamamlıyor.
 
 ## Başlama Rehberi — Kendi Hızında
@@ -149,7 +149,7 @@ Sosyal destek hareketin sürekliliğine katkı sağlıyor
 (iyi kanıt)
 . Bir arkadaş, küçük bir
 grup veya aile üyesiyle birlikte hareket etmek "yapacak mıyım" sorusunu kendiliğinden cevaplıyor.
-Net ve ölçülebilir hedefler (haftada beş gün, otuzar dakika), muğlak amaçlardan daha çok takip
+Net ve ölçülebilir hedefler (haftada beş gün, otuzar dakika), belirsiz hedeflerden daha çok takip
 edilebiliyor
 (güçlü kanıt)
 . Çeşitlilik (farklı günde farklı hareket) tek tipliğin yarattığı

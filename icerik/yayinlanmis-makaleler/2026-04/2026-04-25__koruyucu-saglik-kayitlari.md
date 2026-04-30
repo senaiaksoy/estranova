@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["menopoza hazırlık", "koruyucu sağlık", "sağlık kayıtları", "semptom günlüğü", "tarama testleri", "vital göstergeler", "aile öyküsü"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?

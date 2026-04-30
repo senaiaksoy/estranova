@@ -8,7 +8,7 @@ url: /zamansiz-yasam/kilo-artisi-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "kilo artışı", "östrojen", "visseral yağ", "bel çevresi", "sarkopeni", "kas kütlesi", "metabolizma", "insülin direnci", "protein", "direnç egzersizi", "40+ kadın"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet
@@ -64,7 +64,7 @@ diyet" başlatmak. Bu refleks bir şey öğretmiş bir kuşağa ait — ama bu d
 Belirgin kalori kısıtlaması metabolizmayı önce hızla yavaşlatır, kas kaybını hızlandırır ve sonra
 küçük bir kayma sonrası eski kiloyu geri çağırır
 (iyi kanıt)
-. Yo-yo örüntüsü dediğimiz
+. Yo-yo kalıbı dediğimiz
 bu döngü, kadınların önemli bir kısmının onlarca yıllık deneyiminde yer ediniyor. Üstelik her
 tekrarında kas kütlesi azalıyor, yağ kütlesi göreli olarak artıyor; sayı tartıda eskisine yakın
 görünse de bedenin kompozisyonu eskisinden farklı bir yere taşınıyor.
@@ -134,7 +134,7 @@ insülin yanıtı belirgin destek görüyor
 . Sağlıklı yağlar — zeytinyağı, ceviz,
 balık omega-3'leri, avokado — tokluğu uzatıyor ve hücre membranını besliyor. Akdeniz tarzı sade
 bir çerçeve — sebze, meyve, tam tahıl, balık, zeytinyağı, baklagiller — bu dönem için en tutarlı
-okuyan beslenme örüntülerinden biri
+okuyan beslenme kalıplarınden biri
 (güçlü kanıt)
 .
 

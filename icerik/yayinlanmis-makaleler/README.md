@@ -1,7 +1,7 @@
 # Estranova Yayınlanmış Makale Arşivi
 
 Toplam makale: **43**
-Son export: 2026-04-29
+Son export: 2026-04-30
 
 Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik üretilir. `src/pages/` altındaki Astro source'tan metadata, `dist/` altındaki build HTML'den gövde markdown'ına dönüştürülür. Aynı içerik aynı anda obsidian vault'a (`<VAULT>/articles/`) da yazılır.
 
@@ -29,10 +29,10 @@ npm run articles:export # markdown'a dök
 
 | Tarih | Yazar | Başlık | Bölüm |
 |---|---|---|---|
-| 2026-04-29 | - | [Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı](2026-04/2026-04-29__menopozda-idrar-kacirma-pelvik-taban.md) | Beden & Yakınlık |
-| 2026-04-29 | - | [Sıcacık Köşe — Bu Ay Kadın Dünyasında Ne Konuşuluyor?](2026-04/2026-04-29__nisan-2026.md) | editorun-kosesi |
-| 2026-04-29 | - | [Nasıl Araştırıyoruz](2026-04/2026-04-29__nasil-arastiriyoruz.md) | editoryal-politika |
-| 2026-04-29 | - | [Tarama ve İzlem: Genel Çerçeve](2026-04/2026-04-29__tarama-testleri.md) | Hormonal Geçiş |
+| 2026-04-30 | - | [Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı](2026-04/2026-04-30__menopozda-idrar-kacirma-pelvik-taban.md) | Beden & Yakınlık |
+| 2026-04-30 | - | [Sıcacık Köşe — Bu Ay Kadın Dünyasında Ne Konuşuluyor?](2026-04/2026-04-30__nisan-2026.md) | editorun-kosesi |
+| 2026-04-30 | - | [Nasıl Araştırıyoruz](2026-04/2026-04-30__nasil-arastiriyoruz.md) | editoryal-politika |
+| 2026-04-30 | - | [Tarama ve İzlem: Genel Çerçeve](2026-04/2026-04-30__tarama-testleri.md) | Hormonal Geçiş |
 | 2026-04-29 | berna-aksoy | [Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor](2026-04/2026-04-29__menopozda-hekim-hasta-iliskisi.md) | Hormonal Geçiş |
 | 2026-04-28 | duygu-karaosmanoglu | [Menopozda Cilt Değişimleri — Aynaya Sakince Bakmak ve Bakım Rehberi](2026-04/2026-04-28__menopozda-cilt-degisimleri.md) | Beden & Yakınlık |
 | 2026-04-28 | berna-aksoy | [Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet](2026-04/2026-04-28__kilo-artisi-menopoz.md) | Zamansız Yaşam |

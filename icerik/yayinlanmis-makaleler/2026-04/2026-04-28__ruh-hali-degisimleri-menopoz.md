@@ -8,7 +8,7 @@ url: /zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "perimenopoz", "depresyon", "anksiyete", "duygudurum", "ruh hali", "HRT", "SSRI", "psikoterapi"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Menopozda Ruh Hali Değişimleri — Bir Dalga, Bir Soru, Bir Eşik
@@ -181,7 +181,7 @@ etkileyebiliyor; özellikle progesteron metabolitlerinin GABA sistemine bağlanm
 inceliyor
 (iyi kanıt)
 . Bu biyolojik; ama tek başına açıklamıyor — yaşamın yükü, uyku bütünlüğü ve geçmiş kaygı
-örüntüsü de katkıda bulunuyor. İyi haber: kaygı hem yaşam tarzı adımlarına (düzenli hareket, sabah ışığı, kafein
+kalıbı de katkıda bulunuyor. İyi haber: kaygı hem yaşam tarzı adımlarına (düzenli hareket, sabah ışığı, kafein
 sınırlama, nefes pratiği) hem de gerekirse SSRI ya da terapiye iyi yanıt veriyor. Eski kaygısız hâlin geri gelmiyorsa
 bunu bir "yenilik" olarak değil bir "değişim" olarak okumak işe yarayabilir.
 
@@ -209,11 +209,11 @@ iki hafta bir kayıt tutmak ve sonrasında bir uzmanla paylaşmak en sağlam yol
 
 ### Sabahları neden daha kötü hissediyorum, gün ilerledikçe geçiyor — bu normal mi?
 
-"Sabah kötülüğü" depresif tablolarda klasik bir örüntü — kortizol ritmi (gün içinde sabah en yüksek, akşam düşer) ile
+"Sabah kötülüğü" depresif tablolarda klasik bir kalıp — kortizol ritmi (gün içinde sabah en yüksek, akşam düşer) ile
 ilişkili olabiliyor
 (iyi kanıt)
 . Menopoz döneminde uyku bölünmesi ve östrojen düşüşü bu sahneyi
-keskinleştirebiliyor. Eğer bu örüntü iki haftadan uzun ve gündelik enerjini bozuyorsa hekimle konuşmak için yeterli bir
+keskinleştirebiliyor. Eğer bu kalıp iki haftadan uzun ve gündelik enerjini bozuyorsa hekimle konuşmak için yeterli bir
 işaret. Geçici bir sabah halsizliği yaşamayan yok; ama "her sabah ağır" bir kategori değişimi.
 
 ### Doğal yöntemlerle (hareket, omega-3, ışık terapisi) gerçekten anlamlı bir fark olur mu?

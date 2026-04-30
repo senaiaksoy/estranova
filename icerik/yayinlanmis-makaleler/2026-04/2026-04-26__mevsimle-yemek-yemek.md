@@ -8,7 +8,7 @@ url: /zamansiz-yasam/mevsimle-yemek-yemek
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["mevsimlik beslenme", "Anadolu mutfağı", "Akdeniz beslenme", "40 sonrası beslenme", "menopoz", "sürdürülebilir sofra"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Mevsimle Yemek Yemek — Anadolu Sofrası 40 Sonrası

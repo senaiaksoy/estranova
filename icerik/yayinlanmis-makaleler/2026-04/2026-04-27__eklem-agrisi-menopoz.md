@@ -8,7 +8,7 @@ url: /zamansiz-yasam/eklem-agrisi-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "eklem ağrısı", "sabah tutukluğu", "östrojen", "kıkırdak", "sarkopeni", "direnç egzersizi", "omega-3", "D vitamini", "kollajen", "40+ kadın"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Menopozda Eklem Ağrısı — Sabah Tutukluğundan Hareketin Yatışına

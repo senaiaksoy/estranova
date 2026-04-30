@@ -8,7 +8,7 @@ url: /zihin-denge/duygusal-denge/stres-yonetimi-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "perimenopoz", "stres", "anksiyete", "kortizol", "rahatlama"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Stres Yönetimi — Menopozda Stres ve Adaptasyon

@@ -8,7 +8,7 @@ url: /beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["libido", "cinsel istek", "menopoz", "GSM", "lokal östrojen", "testosteron", "cinsel sağlık", "40+ kadın", "mahrem sağlık"]
-exportedAt: 2026-04-29
+exportedAt: 2026-04-30
 ---
 
 # Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi
