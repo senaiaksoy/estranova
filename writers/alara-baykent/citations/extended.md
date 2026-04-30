@@ -10,7 +10,7 @@
 > - Atıf etiketi: [AB ↦ Kaynak]
 > - Editör onayı: [tarih]
 > - CLAUDE.md §4 filtresi: [kuruluş adı sızıntısı yok]
-> - Hassas Sınır filtresi: [otizmli üvey kardeş / babasının yeni eşi sızıntısı yok]
+> - Aile Rızalı Görünürlük + sınır filtresi: [otistik üvey kardeş / babasının yeni eşi yazılabilir AMA 5 sınır MUTLAK — ergen kimliği / klinik tanı / araç-haline-getirme / genelleme / yakının iç dünyası varsayım temsili sızıntısı yok]
 > - Atçılık teknik filtresi: [yarış/dressage/jumping detayı yok]
 > ```
 

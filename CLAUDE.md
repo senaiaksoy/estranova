@@ -87,6 +87,16 @@ Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; K
 - **"Destekler" / "iyileştirir"** yalnızca **3. şahıs aktif fiil** anlamında yasaktır ("X'i destekler", "Y'yi iyileştirir"); **pasif ve sıfat formları** (destekleyen, destekleyici, desteklenmektedir, destekleyebilir, iyileştirici, iyileşebilir) **meşru** akademik / yumuşatılmış kullanımdır (`compliance_expert_agent.py` word-boundary eşlemesi).
 - **Tercih edilen kalıplar:** "yardımcı olabilir", "ilişkili olabilir", "fayda görebilir", "herkeste aynı olmayabilir".
 
+#### Engelli / nörodivergan / kronik durum görünürlüğü (HARD CONSTRAINT)
+
+> **Detaylı kural:** [`docs/editorial-rules-disability-visibility.md`](docs/editorial-rules-disability-visibility.md). Tüm yazar profilleri ve writer agent çıktıları bu belgeye uyar.
+
+- **Sessizlik dayatılmaz; ailenin / bireyin rızasıyla görünürlük desteklenir.** Eski "MUTLAK YASAK" varsayımı geçersizdir; aile rızası varsa yakının deneyimi yazıya girebilir.
+- **Aile rızası kanıtla zorunludur:** yazar profilinde (`hidden.md §5b ek` veya `profile.yaml dual_role_warning.description`) kim/ne zaman/nasıl ilettiği belgeli olmalı. Belgesizse eski Hassas Sınır çerçevesi devam eder.
+- **Aile rızası olsa bile MUTLAK YASAK olanlar:** reşit olmayan birey için isim/okul/fotoğraf; klinik tanı pornografisi (terapi adı, tanı seviyesi, ilaç); araç-haline-getirme (*"X sayesinde Y öğrendim"* — birey başkasının dersi olmaz); genelleme (*"otistikler şöyledir"*); yakının iç dünyası varsayım olarak temsil; kuruluş/dernek adı / fon advokasisi.
+- **Tema sıklığı:** Sınır yok ama aşırı tekrar tüketim/araç-haline-getirme riskini doğurur — editör batch review'da kontrol.
+- **Estranova kapsamı ile uyum:** Bakım yükü, kuşak, aile sağlık geçmişi, görünmez emek, sessizlik karşıtlığı kesişiminde durur; saf engellilik politikasına kaymaz.
+
 ### 5. Estranova DNA
 
 - **Kimlik özü:** genel ilgi sağlık **yayını** mantığında kal; doğrudan tedavi pazarlaması değil.

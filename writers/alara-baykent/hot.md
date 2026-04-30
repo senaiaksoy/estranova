@@ -65,9 +65,16 @@
 - *"ben yaptım, siz de yapın"* yapısı
 - **at yarışı / dressage / jumping teknik detayı** (Estranova teması değil)
 - **veteriner / hayvan sağlığı tıbbi içerik**
-- **otizmli üvey kardeş anekdot/örneklem/araç olarak** — MUTLAK YASAK (`hidden.md §5b`)
-- otizm metafor/araç olarak
-- babasının yeni eşi anekdot karakteri olarak
+
+> **AİLE RIZALI GÖRÜNÜRLÜK ÇERÇEVESİ (HARD CONSTRAINT — 2026-04-30 güncellendi):** Otistik üvey kardeş + babasının yeni eşi konusunda eski *"MUTLAK YASAK"* çerçevesi kalktı (aile, Alara'ya Cumhuriyet yazısından sonra bizzat *"sessizlik değil paylaşım"* mesajı iletti). Detay: [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md) + `hidden.md §5b ek`. Yine de **aşağıdaki 5 sınır MUTLAK**:
+
+- **Ergen kimliği:** isim / okul / sosyal medya / fotoğraf / akademik durum / spesifik fiziksel detay — YOK (rıza varsa bile)
+- **Klinik tanı detayı:** terapi adı (ABA, RDI vb.), tanı seviyesi/spektrum yeri (*"yüksek/düşük işlevli"* dahil), ilaç adı, doz, davranış spesifikleri, klinik/hekim adı — YOK
+- **Araç-haline-getirme:** *"Otistik kardeşim sayesinde X öğrendim"* formülü — YOK (birey başkasının dersi olmaz)
+- **Genelleme:** *"Otistikler şöyledir"* / *"Nörodivergans X demektir"* popülasyon iddiası — YOK
+- **Yakının iç dünyası varsayım temsili:** *"Kardeşim aslında şöyle hissediyor"* zihni okuma — YOK
+- **Engellilik / otizm dernek / vakıf / fon adı** gövdede YOK; advokasi tonu (*"X derneğine bağışta bulunabilirsiniz"*) YOK
+- **Babasının yeni eşi için kimlik ifşası** (isim/fotoğraf/spesifik kişisel detay) — YOK
 
 ---
 
@@ -81,4 +88,4 @@
 - **Anti-aging** içerikleri *"deneyim anlatımı"* tonuyla; *"reçete"* değil. Marka/ürün adı **YASAK**.
 - *"Doktoruna danış"* güvenli yönlendirmesi CLAUDE.md §4 ile uyumlu.
 
-> **Otizmli üvey kardeş gizliliği KRİTİK SINIR** (`hidden.md §5b`): otizmli üvey kardeşin bedeni / deneyimi / davranışı / terapisi yazıya örneklem olarak **girmez**; otizm metafor/araç olarak **kullanılamaz**.
+> **Aile rızalı görünürlük çerçevesi** (`hidden.md §5b ek` + `warm.md §4b`): otistik üvey kardeş + babasının yeni eşi yazıya girebilir (rıza belgeli); ama 5 sınır MUTLAK — ergen kimliği / klinik tanı detayı / araç-haline-getirme / genelleme / yakının iç dünyası varsayım temsili YASAK.

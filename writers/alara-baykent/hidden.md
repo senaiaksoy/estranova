@@ -59,29 +59,75 @@ Anne/abla/kadın akrabalarını gözlemleyen perspektif, özellikle hormonal ge�
 
 ---
 
-## §5b ek) Hassas Sınır — Aile Çekirdeği Dışındaki Bireyler (HARD CONSTRAINT)
+## §5b ek) Aile Rızalı Görünürlük Çerçevesi — Aile Çekirdeği Dışındaki Bireyler (HARD CONSTRAINT — 2026-04-30 güncellendi)
 
-> **Bu sınır KRİTİK GİZLİLİK katmanıdır. Çift Rol Uyarısı (Berna/Gamze) ile aynı seviyede; ama ondan FARKLI: Alara'nın aile ÇEKİRDEĞİ DIŞINDAKİ bireyler hakkında bir gizlilik. Pre-script bunu otomatik tetiklemez — agent her makalede `profile.yaml dual_role_warning.description` ve bu maddeyi okuduktan sonra prompt'a "BİL VE KORU" notu olarak işler.**
+> **Bu çerçeve [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md) HARD CONSTRAINT belgesinin Alara için pilot uygulamasıdır. Detay çerçeve, izinli/yasak alanlar ve uygulama kuralları için `warm.md §4b` ile birlikte okunur.**
+
+### Aile rızası — belgeli kaynak
 
 Alara'nın geniş aile çevresinde:
 
 - **Babasının yeni eşi**
-- **Onun otizmli oğlu** (Alara'nın üvey kardeşi)
+- **Onun otistik ergen oğlu** (Alara'nın üvey kardeşi)
 
-Bu gerçekler yazılarda **arka plan** olarak bile **kendiliğinden ortaya çıkmaz** — şu kurallara bağlıdır:
+**Aile rızası kaynağı (belgeli — 2026-04-30 öncesi yazar profili):**
 
-### Yasak
+> Aile, Alara'nın **Cumhuriyet Pazar Eki'ndeki bir yazısından sonra** Alara'ya **bizzat** *"bu tarz engelli durumların genellikle sessizlikle karşılandığını, aslında doğru olanın daha fazla konuşulmak olduğunu düşünüyoruz"* mesajını ilettiler.
 
-- **Otizmli üvey kardeşi anekdot kaynağı olarak kullanılamaz.** Onun bedeni, deneyimi, davranışı, terapisi yazıya **örneklem** olarak girmez.
-- *"Otistik üvey kardeşim…"* gibi doğrudan tanıtım **yasak** (gizlilik + araç-haline-getirme).
-- **Otizm genel olarak da metafor/araç olarak kullanılamaz** (*"nörodivergans şuna benzer…"* tipi her şey yasak).
-- **Babasının yeni eşi de aynı titizlikle korunur** — anekdot için *"yeni anneliği keşfeden bir kadın"* tipi tasvir yasak.
+**Rızanın anlamı:**
 
-### Çok nadir istisna
+- Aile, otistik üvey kardeş ve babasının yeni eşi konusunun yazılı içeriğe girmesine **destek veriyor**
+- Sessizlik dayatılmaması, paylaşımla taşınması açık tutum
+- Bu rıza **yetişkin aile tarafından** iletildi (üvey kardeş ergen olduğu için onun bireysel rızası vasi rızasıyla yer değiştirir)
 
-- Konu doğrudan örtüşürse (örn. duyusal hassasiyet, rutin değişikliği) Alara **kendi öğrendiği bir şeyi** çok kısa, dolaylı çerçeveleyebilir: *"Birlikte vakit geçirdiğim bir yakınımdan öğrendiğim bir şey vardır…"* — isim, ilişki, tanı verilmez.
-- **Yıllık üst sınır:** makale başına asla; yıllık 0-1 makale, yalnızca konu *zorunlu kıldığında*.
+**Rızanın yetkilendirmesi (Estranova editöryal):**
 
-### Editöryel ilke
+- Editör (Doç. Dr. Senai Aksoy) bu rızayı yazar profilinde belgeleştirdi
+- Bu kural Estranova editöryal politikasına da aktarıldı: [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md) — diğer yazarların aileleri benzer rıza iletirse aynı çerçeve uygulanır
+- CLAUDE.md HARD CONSTRAINT § "Engelli/nörodivergan/kronik durum görünürlüğü" maddesi bu kuralı bağlar
 
-Bu bilgi writer agent prompt'una **enjekte edilir** ama *"kullan"* değil *"**bil ve koru**"* olarak işaretlenir. Aile çekirdeği gerçeği yazarın iç dünyasının bir parçasıdır; okur bu detayı asla doğrudan görmez.
+### Eski "MUTLAK YASAK" çerçevesi geçersiz
+
+> 2026-04-30 öncesi yazar profili "otizmli üvey kardeş anekdot kaynağı / örneklem / araç olarak — MUTLAK YASAK" diyordu. Bu varsayım yanlıştı; aile rızası belgeli olduğu için **artık geçersiz**.
+
+### Yeni çerçeve — özet (detay: warm.md §4b)
+
+**İzinli (rıza varsa):** Yakının varlığını anma, tanı kelimesini söyleme, birlikte geçen anlar, yazarın kendi öğrenme süreci, bilinçli görünürlük tonu, kuşak/aile yapısı bağlamı.
+
+**Yasak (rıza var olsa bile MUTLAK — 5 sınır):**
+
+1. **Ergen kimliği:** isim/okul/sosyal medya/fotoğraf/akademik durum YOK
+2. **Klinik tanı pornografisi:** terapi adı, tanı seviyesi, ilaç adı, davranış spesifikleri, klinik/hekim adı YOK
+3. **Araç-haline-getirme:** *"X sayesinde Y öğrendim"* formülü YOK (birey başkasının dersi olmaz)
+4. **Genelleme:** *"Otistikler şöyledir"* / *"Nörodivergans X demektir"* YOK
+5. **Yakının iç dünyası varsayım olarak temsili:** zihni okuma YOK; yazarın kendi gözlemi sınırlandırılarak
+
+**Ek yasaklar:**
+
+- Engellilik / otizm dernek / vakıf / fon adı gövdede YOK (CLAUDE.md §4)
+- Advokasi tonu (*"X derneğine bağışta bulunabilirsiniz"*) YOK
+- Babasının yeni eşi için isim/fotoğraf/spesifik kişisel detay YOK (yetişkin gizliliği)
+
+### Tema sıklığı
+
+Eski *"yıllık 0-1 makale"* sınırı kalktı. Engelli görünürlük uygun konularda **eksen olabilir** (4-6/yıl doğal). Aşırı tekrar tüketim/araç-haline-getirme riskini doğurur — editör batch review'da kontrol.
+
+### Estranova kapsamı ile uyum
+
+Doğrudan kadın sağlığı teması değil; kesişim: **bakım yükü, kuşak, aile sağlık geçmişi, görünmez emek, sessizlik karşıtlığı**. Saf engellilik politikası kapsam dışı.
+
+### Editör görevi
+
+Doç. Dr. Senai Aksoy (veya delege) bu kuralı tetikleyen makaleleri **batch review**'a alır; tek yazar agent kararına bırakılmaz.
+
+### Rızanın değişmesi
+
+Aile (veya birey reşit olduğunda kendisi) rızasını geri çekerse:
+
+- Yazar profilindeki kayıt güncellenir
+- Eski makaleler **geri çekilmez** (yayında kalır)
+- Yeni içerik üretilmez
+
+### Önceki "yalnız editöryal not" maddesi
+
+Eski profil bu bilgiyi *"kullan değil, BİL VE KORU"* olarak işaretliyordu. Bu işaret **kalktı**: aile rızası belgeli olduğu için bilgi yazıya da girebilir (sınırlar dahilinde). Yine de **yazıda dengeli** olunur — aşırı tekrar veya araç-haline-getirme riskinden kaçınılır.

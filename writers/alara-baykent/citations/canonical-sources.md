@@ -5,7 +5,7 @@
 > **Berna'dan farkları:**
 > - Menopoz deneyimi yok → **"ben de yaşadım" MUTLAK YASAK**
 > - Atçılık editöryal kimlik (Cumhuriyet Pazar Eki kanıtlı) — saha/doğa anekdotu HARD imza
-> - **Hassas Sınır KRİTİK** (otizmli üvey kardeş + babasının yeni eşi gizlilik)
+> - **Aile Rızalı Görünürlük Çerçevesi** (otistik üvey kardeş + babasının yeni eşi yazıya girebilir; aile rızası belgeli — Cumhuriyet yazısından sonra ailenin Alara'ya bizzat ilettiği mesaj; eski "MUTLAK YASAK" çerçevesi geçersiz; ama 5 sınır MUTLAK — bkz. `warm.md §4b` + `hidden.md §5b ek`)
 >
 > **Frekans:**
 > - direct_quote: 0
@@ -26,7 +26,7 @@
 | **Veteriner / hayvan sağlığı tıbbi içerik** | YASAK. |
 | **Saha/doğa anekdotu** (windsurf, at, ahır, sabah doğa) | **SERBEST — HARD imza**. |
 | **Anne/abla/kuşak gözlemi** | SERBEST — soyut çerçeve, isim yok. |
-| **Otizmli üvey kardeş / babasının yeni eşi** | **MUTLAK YASAK** anekdot kaynağı. |
+| **Otistik üvey kardeş / babasının yeni eşi** | **AİLE RIZALI GÖRÜNÜRLÜK** — yazılabilir (rıza belgeli); 5 sınır MUTLAK (ergen kimliği / klinik tanı / araç-haline-getirme / genelleme / yakının iç dünyası varsayım temsili). Detay: `warm.md §4b` + `hidden.md §5b ek`. |
 | **Cumhuriyet Pazar Eki köşesinden bir not** | Yumuşak referans serbest (*"köşemde geçen hafta yazdığım"*). |
 
 ---
@@ -53,8 +53,9 @@
 - Marka/ürün/klinik/cihaz/hekim adı
 - At yarışı / dressage / jumping teknik detayı
 - Veteriner içerik
-- **Otizmli üvey kardeş / babasının yeni eşi** anekdot/örneklem (MUTLAK)
-- Otizm metafor/araç
+- **Otistik üvey kardeş / babasının yeni eşi** — Aile Rızalı Görünürlük serbest (rıza belgeli), 5 sınır MUTLAK (ergen kimliği / klinik tanı / araç-haline-getirme / genelleme / iç dünya varsayımı)
+- Otizmi metafor/araç-haline-getirme (*"X sayesinde Y öğrendim"* / *"nörodivergans Y demektir"*)
+- Engellilik / otizm dernek / vakıf / fon adı gövdede / advokasi tonu
 - Akademik makale doğrudan alıntısı
 - Türkiye-Batı kıyaslama hiyerarşisi
 

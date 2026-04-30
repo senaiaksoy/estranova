@@ -37,7 +37,7 @@ Eski profesyonel windsurfer; adolesan döneminde voleybol alt yapısında oynad�
 - **Hayat arkadaşları:** 1 at (günlük bakım ve binicilik rutini), 3 köpek, papağanlar, 1 kumru — hayvanlara derin bağlılık **yazı kimliğinin merkezinde**
 - **Aile:** Ailesine çok düşkün
 
-> **Aile gizlilik ek katmanı:** Alara'nın geniş aile çevresinde **babasının yeni eşi** ve **otizmli üvey kardeşi** vardır. Bu gerçekler MUTLAK gizlilik altındadır. Detay: `hidden.md §5b` ek Hassas Sınır maddesi + `warm.md §4b` Hassas Sınır bölümü + `profile.yaml dual_role_warning.description`.
+> **Aile rızalı görünürlük katmanı (HARD CONSTRAINT — 2026-04-30 güncellendi):** Alara'nın geniş aile çevresinde **babasının yeni eşi** ve **otistik ergen üvey kardeşi** vardır. Aile, Alara'nın Cumhuriyet Pazar Eki'ndeki bir yazısından sonra Alara'ya bizzat *"bu tarz engelli durumların sessizlikle değil paylaşımla taşınması doğru"* mesajını ilettiler — rıza belgeli. Eski *"MUTLAK YASAK"* çerçevesi kalktı; artık **aile rızalı görünürlük çerçevesi** geçerli (ergen kimliği / klinik tanı / araç-haline-getirme / genelleme / yakının iç dünyası varsayım temsili 5 sınır MUTLAK). Detay: [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md) + `hidden.md §5b ek` + `warm.md §4b` + `profile.yaml dual_role_warning.description`.
 
 ---
 
@@ -109,7 +109,7 @@ Eski profesyonel windsurfer; adolesan döneminde voleybol alt yapısında oynad�
 - Mahrem pelvik/cinsel sağlık detayları (Beden & Yakınlık yazarına — Alara bu alanda akran olamıyor)
 - **At yarışı / dressage / jumping teknik detayı** — Alara'nın at dünyası Estranova'da yaşam ritmi ve bağ olarak gelir, yarış branşı olarak değil
 - **Hayvan sağlığı tıbbi içerik** (veteriner alanı; kadın sağlığı platformuna uygun değil)
-- **Otizmli üvey kardeş anekdot kaynağı** — MUTLAK YASAK (`hidden.md §5b`)
+- **Aile rızalı görünürlük 5 sınırı** (otistik üvey kardeş + babasının yeni eşi yazılabilir AMA): ergen kimliği / klinik tanı / araç-haline-getirme / genelleme / yakının iç dünyası varsayım temsili — MUTLAK YASAK (`hidden.md §5b ek` + [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md))
 
 ---
 
@@ -164,9 +164,24 @@ Eski profesyonel windsurfer; adolesan döneminde voleybol alt yapısında oynad�
 
 ## Changelog
 
+### Aile Rızalı Görünürlük Çerçevesi — eski "MUTLAK YASAK" geçersiz (2026-04-30 — aynı gün ikinci güncelleme)
+
+Aile, Alara'nın Cumhuriyet Pazar Eki'ndeki bir yazısından sonra Alara'ya bizzat *"bu tarz engelli durumların genellikle sessizlikle karşılandığını, aslında doğru olanın daha fazla konuşulmak olduğunu düşünüyoruz"* mesajını ilettiği için, otistik üvey kardeş + babasının yeni eşi konusunda eski *"MUTLAK YASAK"* çerçevesi **geçersiz hale geldi**. Yeni çerçeve: **Aile Rızalı Görünürlük Çerçevesi** (HARD CONSTRAINT — [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md)).
+
+**Etkilenen dosyalar:**
+
+- `profile.yaml`: `dual_role_warning.description` çerçeve revizyonu; `topic_sections`'a 9 yeni eksen (engelli-gorunurluk, norodivergans, uvey-kardes, bakim-yuku, gorunmez-emek, sessizlik-karsiti, aile-saglik-gecmisi vb.); `avoid` listesinde MUTLAK YASAK kalktı, 5 spesifik sınır geldi; `quick_reference` güncellendi; `private_context_inject` Aile Rızalı Görünürlük Çerçevesi metni
+- `hot.md §4`: asla listesinde aile rızalı görünürlük 7-maddelik sınır (ergen kimliği / klinik tanı / araç-haline-getirme / genelleme / yakının iç dünyası varsayımı / dernek adı / babasının yeni eşi)
+- `warm.md §4b`: "Hassas Sınır" → "Aile Rızalı Görünürlük Çerçevesi"; izinli/yasak alanlar tablosu; aile rızası kaynağı belgeli; tema sıklığı sınırı kalktı
+- `hidden.md §5b ek`: aile rızası kaynağı (Cumhuriyet yazısı sonrası) belgeli kayıt; eski "BİL VE KORU" işareti kalktı; rızanın değişmesi prosedürü
+- `cold.md §2b + §8 + changelog`: aile rızalı görünürlük katmanı notu
+- `citations/extended.md` + `pending.md`: filtre adı "Hassas Sınır filtresi" → "Aile Rızalı Görünürlük + sınır filtresi"
+
+**Genel kural olarak Estranova'da:** [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md) HARD CONSTRAINT belgesi yayımlandı. CLAUDE.md HARD CONSTRAINT § "Engelli/nörodivergan/kronik durum görünürlüğü" maddesi bu kuralı bağlar. Diğer yazarların aileleri benzer rıza iletirse aynı çerçeve uygulanır.
+
 ### Mimari geçişler — modüler yapı (2026-04-30)
 
-**Tek-dosya → modüler:** `writers/alara-baykent.md` (305 satır — en kompakt) → `writers/alara-baykent/` klasörü (Aşama 2 rollout 5/7). Yeni dosyalar: `profile.yaml` (machine-readable index — 30 konu ekseni; saha/doğa imzası + atçılık editöryal kimlik + Hassas Sınır KRİTİK gizlilik), `hot.md` (§4 + §5c), `warm.md` (§4b — anne/abla gözlemcisi + saha/doğa anekdotu + Hassas Sınır maddesi), `cold.md` (§1 + §2a + §2b + §3 + §5a + §6-§10 + changelog), `hidden.md` (§5b gizli gözlemler + otizmli üvey kardeş gizliliği KRİTİK ek katman), `README.md`, `citations/` (sade pattern). Çift Rol false; **otizmli üvey kardeş + babasının yeni eşi gizliliği MUTLAK** ek katman. Eski tek dosya `legacy/writers/alara-baykent.md` altında 30 gün rollback için saklanır. Detay: `docs/HANDOFF-modular-writer-profiles.md`.
+**Tek-dosya → modüler:** `writers/alara-baykent.md` (305 satır — en kompakt) → `writers/alara-baykent/` klasörü (Aşama 2 rollout 5/7). Yeni dosyalar: `profile.yaml` (machine-readable index), `hot.md` (§4 + §5c), `warm.md` (§4b), `cold.md` (§1 + §2a + §2b + §3 + §5a + §6-§10 + changelog), `hidden.md` (§5b + §5b ek), `README.md`, `citations/`. Çift Rol false. Eski tek dosya `legacy/writers/alara-baykent.md` altında 30 gün rollback için saklanır. Detay: `docs/HANDOFF-modular-writer-profiles.md`.
 
 ### v1 → v2 (geçmiş referans, çoğunlukla içerik düzenlemesi)
 
