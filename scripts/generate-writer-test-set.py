@@ -301,16 +301,21 @@ def acik_uclu_alan(satir_sayisi=4):
 # ============================================================
 
 class InteractiveLikert(Flowable):
-    """5 noktalı tıklanabilir likert (radio button group — tek seçim)."""
+    """5 noktalı tıklanabilir likert (radio button group — tek seçim).
+
+    drawOn() override edilmiştir: ReportLab AcroForm widget'ları canvas
+    transformation matrix'ini DİKKATE ALMAZ — page-absolute koordinat ister.
+    Bu yüzden translate olmadan x, y'yi doğrudan kullanırız.
+    """
     def __init__(self, name, options=None):
         Flowable.__init__(self)
         self.name = name
         self.options = options or [
-            ("1", "1 — Hiç katılmıyorum"),
+            ("1", "1 (hiç)"),
             ("2", "2"),
             ("3", "3"),
             ("4", "4"),
-            ("5", "5 — Tam katılıyorum"),
+            ("5", "5 (tam)"),
         ]
         self.height = 22
         self.width = 16*cm
@@ -318,16 +323,16 @@ class InteractiveLikert(Flowable):
     def wrap(self, available_width, available_height):
         return self.width, self.height
 
-    def draw(self):
-        c = self.canv
+    def drawOn(self, canvas, x, y, _sW=0):
         col_width = 3.1 * cm
         for i, (val, label) in enumerate(self.options):
-            x = i * col_width
-            c.acroForm.radio(
+            ax = x + i * col_width
+            ay = y + 4
+            canvas.acroForm.radio(
                 name=self.name,
                 value=val,
                 selected=False,
-                x=x, y=4,
+                x=ax, y=ay,
                 size=11,
                 buttonStyle='circle',
                 borderColor=burgundy,
@@ -337,13 +342,16 @@ class InteractiveLikert(Flowable):
                 forceBorder=True,
                 tooltip=label,
             )
-            c.setFont('Calibri', 9)
-            c.setFillColor(dark_gray)
-            c.drawString(x + 16, 7, label)
+            canvas.setFont('Calibri', 9)
+            canvas.setFillColor(dark_gray)
+            canvas.drawString(ax + 16, ay + 3, label)
 
 
 class InteractiveTriple(Flowable):
-    """3 seçenekli tıklanabilir radio: Evet / Yumuşat / Hayır."""
+    """3 seçenekli tıklanabilir radio: Evet / Yumuşat / Hayır.
+
+    drawOn() override edilmiştir (page-absolute koordinat için).
+    """
     def __init__(self, name):
         Flowable.__init__(self)
         self.name = name
@@ -358,16 +366,16 @@ class InteractiveTriple(Flowable):
     def wrap(self, available_width, available_height):
         return self.width, self.height
 
-    def draw(self):
-        c = self.canv
+    def drawOn(self, canvas, x, y, _sW=0):
         col_width = 5.2 * cm
         for i, (val, label) in enumerate(self.options):
-            x = i * col_width
-            c.acroForm.radio(
+            ax = x + i * col_width
+            ay = y + 4
+            canvas.acroForm.radio(
                 name=self.name,
                 value=val,
                 selected=False,
-                x=x, y=4,
+                x=ax, y=ay,
                 size=11,
                 buttonStyle='circle',
                 borderColor=burgundy,
@@ -377,13 +385,16 @@ class InteractiveTriple(Flowable):
                 forceBorder=True,
                 tooltip=label,
             )
-            c.setFont('Calibri', 9.5)
-            c.setFillColor(dark_gray)
-            c.drawString(x + 16, 7, label)
+            canvas.setFont('Calibri', 9.5)
+            canvas.setFillColor(dark_gray)
+            canvas.drawString(ax + 16, ay + 3, label)
 
 
 class InteractiveDouble(Flowable):
-    """2 seçenekli tıklanabilir radio: Doğru / Yanlış."""
+    """2 seçenekli tıklanabilir radio: Doğru / Yanlış.
+
+    drawOn() override edilmiştir (page-absolute koordinat için).
+    """
     def __init__(self, name):
         Flowable.__init__(self)
         self.name = name
@@ -397,16 +408,16 @@ class InteractiveDouble(Flowable):
     def wrap(self, available_width, available_height):
         return self.width, self.height
 
-    def draw(self):
-        c = self.canv
+    def drawOn(self, canvas, x, y, _sW=0):
         col_width = 7.7 * cm
         for i, (val, label) in enumerate(self.options):
-            x = i * col_width
-            c.acroForm.radio(
+            ax = x + i * col_width
+            ay = y + 4
+            canvas.acroForm.radio(
                 name=self.name,
                 value=val,
                 selected=False,
-                x=x, y=4,
+                x=ax, y=ay,
                 size=11,
                 buttonStyle='circle',
                 borderColor=burgundy,
@@ -416,13 +427,16 @@ class InteractiveDouble(Flowable):
                 forceBorder=True,
                 tooltip=label,
             )
-            c.setFont('Calibri', 9.5)
-            c.setFillColor(dark_gray)
-            c.drawString(x + 16, 7, label)
+            canvas.setFont('Calibri', 9.5)
+            canvas.setFillColor(dark_gray)
+            canvas.drawString(ax + 16, ay + 3, label)
 
 
 class InteractiveTextArea(Flowable):
-    """Multiline tıklanabilir text alanı — yazılabilir."""
+    """Multiline tıklanabilir text alanı — yazılabilir.
+
+    drawOn() override edilmiştir (page-absolute koordinat için).
+    """
     def __init__(self, name, line_count=4, label=None):
         Flowable.__init__(self)
         self.name = name
@@ -435,12 +449,11 @@ class InteractiveTextArea(Flowable):
     def wrap(self, available_width, available_height):
         return self.width, self.height
 
-    def draw(self):
-        c = self.canv
-        c.acroForm.textfield(
+    def drawOn(self, canvas, x, y, _sW=0):
+        canvas.acroForm.textfield(
             name=self.name,
             tooltip=self.label or "Yanıtınızı buraya yazın",
-            x=0, y=2,
+            x=x, y=y + 2,
             width=15.5 * cm,
             height=self.height - 6,
             borderStyle='solid',
