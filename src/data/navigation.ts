@@ -74,7 +74,6 @@ export const mainNav: NavLink[] = [
     ],
   },
   { name: 'Sayılar', href: '/sayi', label: 'Eşik dergisi sayıları ve arşivi' },
-  { name: 'Dosya', href: '/dosya', label: 'Bu ayın kapak dosyası' },
   { name: 'Hakkımızda', href: '/hakkimizda', label: 'Platform hakkında' },
   { name: 'Yayın Kurulu', href: '/yayin-kurulu', label: 'Editoryal ekip ve danışmanlar' },
 ];
