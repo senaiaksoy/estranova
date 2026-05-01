@@ -10,12 +10,15 @@
 import { mainNav } from './navigation';
 import { chapterMap } from './chapter-map';
 import { staticArticles } from './static-articles';
+import { issues, formatIssuePad } from './issues';
+import { writers } from './writers';
+import { magazineConfig } from './magazine-config';
 
 export interface SearchItem {
   title: string;
   description: string;
   href: string;
-  category: 'Sayfa' | 'Kategori' | 'Makale' | 'Semptom';
+  category: 'Sayfa' | 'Kategori' | 'Makale' | 'Semptom' | 'Sayı' | 'Yazar';
 }
 
 const staticPages: SearchItem[] = [
@@ -107,9 +110,37 @@ const articleEntries: SearchItem[] = staticArticles.map((a) => ({
   category: 'Makale' as const,
 }));
 
+// Eşik dergi sayıları — numerik sayılar (Sayı 0 = arşiv, Sonra Oku gibi
+// özel sayfalardan ulaşılır; arama sonuçlarında ana hedef yayınlanmış
+// sayılar)
+const issueEntries: SearchItem[] = issues
+  .filter((issue) => issue.number > 0)
+  .map((issue) => ({
+    title: `${magazineConfig.name} · Sayı ${formatIssuePad(issue.number)} — ${issue.theme}`,
+    description: `${issue.monthYear} sayısı: ${issue.lede}`,
+    href: `/sayi/${issue.slug}`,
+    category: 'Sayı' as const,
+  }));
+
+// Yazar profilleri — 11 yazar; bilimsel editör (senai-aksoy) için
+// "Doç. Dr." önekiyle birlikte ayrı eklenmiyor (zaten writers.ts'te var
+// ama görünür ad farklı). Senai için arama sonucunda "Doç. Dr. Senai
+// Aksoy" gözüksün.
+const writerEntries: SearchItem[] = writers.map((w) => {
+  const displayName = w.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : w.displayName;
+  return {
+    title: displayName,
+    description: w.signaturePhrase,
+    href: `/yazarlar/${w.slug}`,
+    category: 'Yazar' as const,
+  };
+});
+
 export const searchIndex: SearchItem[] = [
   ...staticPages,
   ...hubEntries,
   ...subHubEntries,
+  ...issueEntries,
+  ...writerEntries,
   ...articleEntries,
 ];
