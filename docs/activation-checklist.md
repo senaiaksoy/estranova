@@ -231,7 +231,7 @@ manuel karar Senai Aksoy + Berna Aksoy'un.
 1. **`docs/paywall-policy.md` revizyonu** — bu fazda hangi içerikler
    premium işaretli, hangileri her zaman açık (zaten yazılı, gözden geçir).
 2. **Premium içerik üretim planı:**
-   - Aylık sayının "Akran Köşesi" + "Okur Sayfası" + "Arka Sayfa" parçaları
+   - Aylık sayının "Yaşıt Köşesi" + "Okur Sayfası" + "Arka Sayfa" parçaları
      (issue-sections.ts'deki 3 sabit slot) premium işaretlenir.
    - Editör mektubu + kapak dosyası ana yazılar **her zaman açık**.
 

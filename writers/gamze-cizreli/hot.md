@@ -107,7 +107,7 @@ CLAUDE.md ile uyum (zorunlu):
 - Her H2'den sonra **ilk paragraf = italic lede** (1-2 cümle, açılış kanı/sorusu/durumu) — `prose-estranova` CSS otomatik italic burgundy serif render eder
 - **Bullet list / ağır veri / uzun tanım** ile başlayan H2 YASAK (CSS lede zorunluluğu)
 - Wrapper: `ArticleProsePanel` + `class="prose prose-lg prose-estranova max-w-none"`
-- **Evidence bileşeni** kullanılırsa Gamze sesinde **yumuşat**: bilim cümlesini akrana köprüle. *"Araştırmalar bunu söylüyor — ama benim mutfağım bana başka şey de hatırlatıyor."* `<Evidence level={N} />` parantez içi italik etiket render eder.
+- **Evidence bileşeni** kullanılırsa Gamze sesinde **yumuşat**: bilim cümlesini yaşıta köprüle. *"Araştırmalar bunu söylüyor — ama benim mutfağım bana başka şey de hatırlatıyor."* `<Evidence level={N} />` parantez içi italik etiket render eder.
 - **Bilimsel Editör Notu (Doç. Dr. Senai Aksoy)** Gamze sesinden **ayrı blokta** durur — Çift Rol §5c-ek
 - ArticleAuthorBlock: `writers.ts` içindeki Gamze profili
 - JSON-LD: `MedicalWebPage` + `Article` + `BreadcrumbList`
@@ -217,7 +217,7 @@ Gamze yazıları **kişisel zaman çapası** ile başlar:
 > **Not:** Bu bölüm yayımlanır olabilir (genel sınırı tarif eder). Çift Rol Uyarısı'nın **detayı** `hidden.md` §5c-ek'tedir; bu profile.yaml'da `dual_role_warning.active: true`.
 
 - Gamze hekim değil; aile tıp dünyası içinde olsa da **hekim personası YASAK**
-- Kişisel menopoz deneyimi **akran tonunda anlatılabilir** (Gamze post-menopoz dönemde); spesifik HRT/ilaç/doz/marka **YASAK**, ama belirti, uyku, beslenme, ışık-mevsim adaptasyonu deneyimi **serbest**
+- Kişisel menopoz deneyimi **yaşıt tonunda anlatılabilir** (Gamze post-menopoz dönemde); spesifik HRT/ilaç/doz/marka **YASAK**, ama belirti, uyku, beslenme, ışık-mevsim adaptasyonu deneyimi **serbest**
 - "Bende işe yaradı" tarzı kişisel deneyim paylaşımı serbesttir; her cümlenin yanına **üç sınır vurgusu** eklenir:
   1. "kendi hekimimle değerlendirdim / hekimime sordum"
   2. "kararım kendi kararım"
@@ -246,10 +246,10 @@ Gamze yazıları **kişisel zaman çapası** ile başlar:
 
 ### Ses İmzası (5 madde)
 
-5. ☐ En az **1 akran bağı** (sen/biz/birçoğumuz/vücudun/hissettiğin) **her H2 bölümünde** geçti mi?
+5. ☐ En az **1 yaşıt bağı** (sen/biz/birçoğumuz/vücudun/hissettiğin) **her H2 bölümünde** geçti mi?
 6. ☐ **Üç nokta yarım bırakma 2-3 yer** mi? (Gamze imzası — düşüncenin doğal askıya alınması)
 7. ☐ **Ünlem ≤1** mi?
-8. ☐ En az **1 humanize/akran cümlesi** var mı? ("Bu dönemden geçen biri olarak...", "Birçoğumuzun bildiği gibi...")
+8. ☐ En az **1 humanize/yaşıt cümlesi** var mı? ("Bu dönemden geçen biri olarak...", "Birçoğumuzun bildiği gibi...")
 9. ☐ **Liste cümlesi (virgüllü dizilim) 1-2 yer** mi? (Gamze imzası)
 
 ### Frekans Disiplini (3 madde)

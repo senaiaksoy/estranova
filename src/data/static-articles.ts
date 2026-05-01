@@ -43,7 +43,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/seyahat-menopoz',
     title: 'Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları',
     description:
-      'Uzun uçuşlar, jet lag, sıcak basması ve yeni mutfak ritmi menopoz geçişinde seyahati nasıl şekillendirir? Bir akran perspektifinden sakin bir rehber.',
+      'Uzun uçuşlar, jet lag, sıcak basması ve yeni mutfak ritmi menopoz geçişinde seyahati nasıl şekillendirir? Bir yaşıt perspektifinden sakin bir rehber.',
     publishedDate: '27 Nisan 2026',
     writerSlug: 'duygu-karaosmanoglu',
     section: 'Zamansız Yaşam',
@@ -74,14 +74,14 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
-    title: "HRT'nin İlk Ayları — Bir Akran Hikayesi",
+    title: "HRT'nin İlk Ayları — Bir Yaşıt Hikayesi",
     description:
       "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk aylarından bir yazı: karar süreci, üç ayın muhasebesi, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.",
     publishedDate: '27 Nisan 2026',
     writerSlug: 'demet-kizilkaya',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
-    keywords: ['HRT', 'hormon replasman tedavisi', 'menopoz', '58 yaş', 'akran hikayesi', 'kişisel deneyim', 'ilk 6 ay'],
+    keywords: ['HRT', 'hormon replasman tedavisi', 'menopoz', '58 yaş', 'yaşıt hikayesi', 'kişisel deneyim', 'ilk 6 ay'],
   },
   {
     path: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
@@ -130,7 +130,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/mevsimle-yemek-yemek',
     title: 'Mevsimle Yemek Yemek — Anadolu Sofrasının 40 Sonrası Sağlık Diline Çevirisi',
     description:
-      'Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan akran tonlu rehber.',
+      'Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan yaşıt tonlu rehber.',
     publishedDate: '26 Nisan 2026',
     writerSlug: 'gamze-cizreli',
     section: 'Zamansız Yaşam',
@@ -242,7 +242,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve',
     title: 'Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve',
     description:
-      'Menopozda cilt bakımı için günlük rutin (yıka-nemlendir-koru-aktifler) ile ameliyatsız profesyonel yaklaşımları (radyofrekans, odaklanmış ultrason, yüzeysel peeling) tek bir akran çerçevesinde toplayan rehber. Marka veya satış önerisi olmadan, kanıt düzeyiyle.',
+      'Menopozda cilt bakımı için günlük rutin (yıka-nemlendir-koru-aktifler) ile ameliyatsız profesyonel yaklaşımları (radyofrekans, odaklanmış ultrason, yüzeysel peeling) tek bir yaşıt çerçevesinde toplayan rehber. Marka veya satış önerisi olmadan, kanıt düzeyiyle.',
     publishedDate: '25 Nisan 2026',
     writerSlug: 'duygu-karaosmanoglu',
     section: 'Zamansız Yaşam',
@@ -325,7 +325,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/eklem-agrisi-menopoz',
     title: 'Menopozda Eklem Ağrısı — Sabah Tutukluğundan Hareketin Yatışına',
     description:
-      'Menopozda eklem ağrısının arkasındaki östrojen-kıkırdak ilişkisini, hareketin neden istirahatten daha çok iyileştirdiğini ve günlük olarak uygulanabilir küçük adımları akran tonuyla anlatan rehber.',
+      'Menopozda eklem ağrısının arkasındaki östrojen-kıkırdak ilişkisini, hareketin neden istirahatten daha çok iyileştirdiğini ve günlük olarak uygulanabilir küçük adımları yaşıt tonuyla anlatan rehber.',
     publishedDate: '27 Nisan 2026',
     writerSlug: 'alara-baykent',
     section: 'Zamansız Yaşam',
@@ -348,7 +348,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/kilo-artisi-menopoz',
     title: 'Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet',
     description:
-      'Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları akran tonuyla anlatan rehber.',
+      'Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları yaşıt tonuyla anlatan rehber.',
     publishedDate: '28 Nisan 2026',
     writerSlug: 'berna-aksoy',
     section: 'Zamansız Yaşam',

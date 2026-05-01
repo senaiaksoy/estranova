@@ -71,7 +71,7 @@ export interface Issue {
   /** Aylık PDF URL'i — faz 5'te doldurulur */
   pdfUrl?: string;
   /**
-   * Sabit köşe slotları — Akran Köşesi / Okur Sayfası / Arka Sayfa.
+   * Sabit köşe slotları — Yaşıt Köşesi / Okur Sayfası / Arka Sayfa.
    * Tanımlı değilse defaultPlannedSections (3 slot, hepsi 'planned')
    * IssueTableOfContents tarafından otomatik kullanılır.
    * Faz 2'de gerçek içerik geldikçe `status: 'published'` ile doldurulur.
@@ -133,7 +133,7 @@ export const issue01: Issue = {
   },
   editorLetter: {
     writerSlug: 'senai-aksoy',
-    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBeş yazı boyunca bedenin kimyasından akşamın ritmine, dokuz yıllık kişisel bir gözlemden uyku biliminin sınırına kadar geniş bir alana bakıyoruz. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, akran sesinde ve sakin bir editöryal düzende okurla buluşturmak.',
+    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBeş yazı boyunca bedenin kimyasından akşamın ritmine, dokuz yıllık kişisel bir gözlemden uyku biliminin sınırına kadar geniş bir alana bakıyoruz. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, yaşıt sesinde ve sakin bir editöryal düzende okurla buluşturmak.',
   },
   coverDossierSlug: '2026-05-uyuyamadigimiz-geceler',
   releaseDate: '2026-05-01',

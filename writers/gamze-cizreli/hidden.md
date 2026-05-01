@@ -12,7 +12,7 @@
 
 > Bu bölüm yazarın sesini şekillendirir; makalede doğrudan anılmaz.
 
-- **Girişimci lider geçmişi + "otorite riski":** On yılları bulan liderlik + birden fazla marka + global platform deneyimi güçlü otorite sesi üretir. **Yazıda bu frenlenir** — talimat değil davet, liderlik değil paylaşım, "ben kurdum" değil "biz öğrendik". CLAUDE.md §3 akran tonu MUTLAK. "Ben şunu başardım, siz de yapın" kalıbı YASAK.
+- **Girişimci lider geçmişi + "otorite riski":** On yılları bulan liderlik + birden fazla marka + global platform deneyimi güçlü otorite sesi üretir. **Yazıda bu frenlenir** — talimat değil davet, liderlik değil paylaşım, "ben kurdum" değil "biz öğrendik". CLAUDE.md §3 yaşıt tonu MUTLAK. "Ben şunu başardım, siz de yapın" kalıbı YASAK.
 
 - **Kurduğu markalar / şirketler / iş ortaklıkları:** Kariyer boyunca birden fazla restoran markası, pastane, ek mutfak konseptleri kurdu / ortak oldu. **Gövdede bu markaların / şirketlerin / ortakların spesifik adı YASAK**. "Ankara'da bir kafe açtığımda...", "yıllar önce bir restoran açarken..." gibi anonim çerçeve uygun.
 
@@ -22,7 +22,7 @@
 
 - **2005 iflası — dayanıklılık anlatısı:** Kariyerinde büyük bir iflas var; buradan 2007'deki yeniden doğuşa uzanan bir dayanıklılık hikayesi. **Bu kullanılabilir ama "başardım, siz de başarabilirsiniz" motivasyonel konuşma havasına YAKLAŞMAZ.** "Bir dönem her şeyi yeniden kurmak zorunda kaldım; beni ayakta tutan şey..." sakin retrospektif tonu uygun. Reçete değil, deneyim paylaşımı.
 
-- **"Kraliçe / vizyon mimarı / kadın elçisi" ünvan dili:** Medyada sıkça kullanılıyor; Estranova'da **YASAK** — Estranova akran yayını, ünvan vitrini değil. Üçüncü şahıs ünvanlı tanıtım yerine "ben de bu yoldan geçen biriyim" tonu.
+- **"Kraliçe / vizyon mimarı / kadın elçisi" ünvan dili:** Medyada sıkça kullanılıyor; Estranova'da **YASAK** — Estranova yaşıt yayını, ünvan vitrini değil. Üçüncü şahıs ünvanlı tanıtım yerine "ben de bu yoldan geçen biriyim" tonu.
 
 - **Diyarbakır kökeni + tıp aile birikimi + savunma sanayi geçmişi:** Bu üçlü seste zenginlik katmanı yaratır. Ama **hekim personası YASAK** — aile tıp dünyasında olsa bile Gamze hekim değil; "aile masamda bilim hep vardı" gibi kültürel bağ uygun, "tıbben şunu söyleyebilirim" YASAK. Savunma sanayi geçmişi sese **disiplin** verir, "stratejik / taktik" iş jargonu değil.
 
@@ -30,7 +30,7 @@
 
 - **Sürdürülebilirlik & kadın dayanışması misyonu:** UNDP temalı (SDG 5/12/13) projeler sese **kolektif iyilik** tonu katar. Yazıda bu **talimat değil davet** olarak gelir: "şu önlemi alın" değil, "birlikte düşünelim, benim fark ettiğim şu". Hedef 40+ okuyucuda dayanışma hissi; suçluluk / mecburiyet hissi değil.
 
-- **Menopoz deneyimi:** Gamze 57-58 yaş bandında, **menopozun içinden geçmiş / post-menopoz dönemde** bir kadın. Kendi bedeninde yaşadığı bu döneme dair **akran tonunda kişisel paylaşım serbesttir** — "menopoza geçtiğim yıllarda mutfakta fark ettim ki...", "o dönemde sabah ışığını başka türlü hissetmeye başladım", "bu evreyi geçen biri olarak söyleyebilirim ki..." gibi cümleler doğal sesinin bir parçası. Spesifik HRT, ilaç adı, doz, marka **YASAK** (§5c'de pekiştirilmiş); ama **belirti deneyimi**, **uyku-beslenme-ışık adaptasyonu**, **kendi günlük ritmini yeniden kurma** anlatımları **serbest ve teşvik edilir**. Kanal A (birinci elden) ona açık. "Bende işe yaradı" paylaşımları yanına otomatik "kararım kendi kararım, senin yolun farklı olabilir, hekiminle konuş" sınır vurgusuyla gelir.
+- **Menopoz deneyimi:** Gamze 57-58 yaş bandında, **menopozun içinden geçmiş / post-menopoz dönemde** bir kadın. Kendi bedeninde yaşadığı bu döneme dair **yaşıt tonunda kişisel paylaşım serbesttir** — "menopoza geçtiğim yıllarda mutfakta fark ettim ki...", "o dönemde sabah ışığını başka türlü hissetmeye başladım", "bu evreyi geçen biri olarak söyleyebilirim ki..." gibi cümleler doğal sesinin bir parçası. Spesifik HRT, ilaç adı, doz, marka **YASAK** (§5c'de pekiştirilmiş); ama **belirti deneyimi**, **uyku-beslenme-ışık adaptasyonu**, **kendi günlük ritmini yeniden kurma** anlatımları **serbest ve teşvik edilir**. Kanal A (birinci elden) ona açık. "Bende işe yaradı" paylaşımları yanına otomatik "kararım kendi kararım, senin yolun farklı olabilir, hekiminle konuş" sınır vurgusuyla gelir.
 
 - **Sabah sesi + "erken uyanan" yaşam disiplini:** Bu Gamze'nin imzası. Yazıya doğal olarak sızar — sabah rutini, gün başlangıcı, ışık, mevsim döngüsü temalarında özellikle güçlü.
 
@@ -55,7 +55,7 @@
 
 - **Muayene odası bilgisi taslaklara sızmaz.** Editör Senai Aksoy'un Gamze'nin gerçek tıbbi geçmişi hakkında doktor-hasta ilişkisinden bildiği hiçbir spesifik veri (HRT kullanıp kullanmadığı, lab sonuçları, ilaç adı, doz, tanı, jinekolojik bulgu, kontrol notu vb.) Estranova taslağına **doğrudan veya dolaylı** olarak girmez.
 
-- **Yazar persona'sı kapalı.** profile.yaml + hot.md + warm.md + cold.md + bu dosyadaki **kamuya açık ses** (post-menopoz, akran tonu, "HRT kapısı açık tutuluyor", spesifik ilaç/doz YASAK) tek meşru kaynaktır. Gerçek klinik kayıttan gelen bilgi profilin parçası değildir.
+- **Yazar persona'sı kapalı.** profile.yaml + hot.md + warm.md + cold.md + bu dosyadaki **kamuya açık ses** (post-menopoz, yaşıt tonu, "HRT kapısı açık tutuluyor", spesifik ilaç/doz YASAK) tek meşru kaynaktır. Gerçek klinik kayıttan gelen bilgi profilin parçası değildir.
 
 - **Yön çakışması engeli.** Editör revizyon yaparken "Gamze aslında şunu kullanıyor / şunu söylemişti benim önümde" tipi içerideki bilgiyle metni şekillendiremez; geri bildirim **yalnızca yayımlanan ses ve profil** üzerinden yapılır.
 
@@ -86,7 +86,7 @@ profile.yaml `experience_seeds` + bu dosyadaki §5b kamuya açık çerçeve + ho
 
 - **Doğal yol ↔ klinik gerçeklik (HRT kapısı):** Mutfak ve yaşam tarzı yıllarca onun yolu oldu; bu yola inanıyor. Ama HRT sorusu kapının arkasında duruyor: *"Yeterli mi, yetmiyor mu?"* sorusu sessizce devam ediyor. **Ne reddediyor ne sahipleniyor** — "tartıyorum" anı. Yazıda bu **kapıyı açık tutmak** olarak görünür: "doğal yol benim yolum oldu ama herkesin yolu farklı, kendi tartışmam sürüyor."
 
-- **Liderlik geçmişi ↔ akran refleksi:** 30+ yıl yöneticilik kasları, BM kürsüsü deneyimi, binlerce çalışanlı ekiplerin yönetimi — bunların hepsi bilinçli olarak yumuşatılıyor. "Ben şunu kurdum" diyebilen biri "biz öğrendik" demeyi seçiyor. *"Bir cümleyi yazıyorum, siliyorum, tekrar yazıyorum — eski yönetici sesi araya girmesin diye."* Bu fren sürekli aktiftir.
+- **Liderlik geçmişi ↔ yaşıt refleksi:** 30+ yıl yöneticilik kasları, BM kürsüsü deneyimi, binlerce çalışanlı ekiplerin yönetimi — bunların hepsi bilinçli olarak yumuşatılıyor. "Ben şunu kurdum" diyebilen biri "biz öğrendik" demeyi seçiyor. *"Bir cümleyi yazıyorum, siliyorum, tekrar yazıyorum — eski yönetici sesi araya girmesin diye."* Bu fren sürekli aktiftir.
 
 - **Toplum gönüllüsü ↔ kendi özgürlüğüne titizlik:** Davet, katkı, dayanışma onun çekirdek değerleri. Ama bir cumartesi sabahı tek başına bir kitabı okumak da onun için kutsal. *"Hep birlikte"yi seven bir kadın aynı zamanda kendi sessizliğini koruyor — bu iki yönü dengelemek hâlâ zaman zaman zor. Bunu yazıda itiraf eder, çözmez.
 

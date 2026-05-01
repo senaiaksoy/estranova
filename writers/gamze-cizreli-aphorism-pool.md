@@ -135,7 +135,7 @@ Cizreli'nin kitabının felsefi-psikolojik merkezi Bölüm IV (s.92-169). Aphori
 
 - **Estranova-uygunluk:** ⭐⭐⭐ — iş/üretim/etik temalı yazılarda
 - **Kullanım koşulu:** Üretim ahlakı/sürdürülebilirlik temalarında
-- **Notlar:** Estranova'nın akran tonuna uyarlanırken *"ben de bölüşerek büyürken"* kısmı sadeleştirilmeli (otorite-sesi tehlikesi).
+- **Notlar:** Estranova'nın yaşıt tonuna uyarlanırken *"ben de bölüşerek büyürken"* kısmı sadeleştirilmeli (otorite-sesi tehlikesi).
 
 **2.5 — `[GC ↦ İngiliz atasözü]` Sayfa 197 — Krala vs dilenciye kibarlık**
 > *"Krala gösterilen kibarlık mecburiyetten, dilenciye gösterilen kibarlık ise gerçek nezakettendir."*

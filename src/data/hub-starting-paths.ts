@@ -87,7 +87,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Beslenme çerçevesi',
         title: 'Beslenme & Yaşlanma — Sürdürülebilir Bir Tabak',
         excerpt:
-          'Diyet kültürünün uzağında, 40 sonrası bedeni destekleyen besin örüntülerini akran tonuyla anlatan açılış rehberi.',
+          'Diyet kültürünün uzağında, 40 sonrası bedeni destekleyen besin örüntülerini yaşıt tonuyla anlatan açılış rehberi.',
         href: '/zamansiz-yasam/beslenme-yaslanma',
         readingMinutes: 8,
       },
@@ -159,7 +159,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'En sık fark edilen',
         title: 'Menopozda Uyku Bozukluğu',
         excerpt:
-          'Uyku neden değişir, ne deneyebiliriz? Hormonal geçişin içinden geçen bir akran perspektifinden uyku rehberi.',
+          'Uyku neden değişir, ne deneyebiliriz? Hormonal geçişin içinden geçen bir yaşıt perspektifinden uyku rehberi.',
         href: '/zihin-denge/uyku-bozuklugu-menopoz',
         readingMinutes: 6,
       },

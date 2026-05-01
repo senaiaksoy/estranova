@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["menopoza hazırlık", "koruyucu sağlık", "sağlık kayıtları", "semptom günlüğü", "tarama testleri", "vital göstergeler", "aile öyküsü"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?
@@ -66,7 +66,7 @@ eğri çiziyorsun gibi.
 ## Semptom Günlüğü Tutmak: Neden ve Nasıl?
 
 Belirti günlüğü, hazırlık döneminin en çok küçümsenen ama en değerli aracı. Geçen gün Instagram'da bir
-akran hesabın paylaşımı dikkatimi çekti: "Adetin değişmeden önce uykumun değişmiş olduğunu, ancak günlüğüme
+yaşıt hesabın paylaşımı dikkatimi çekti: "Adetin değişmeden önce uykumun değişmiş olduğunu, ancak günlüğüme
 geri baktığımda fark ettim." Aynı sahne benim de tanıdığım bir sahne.
 
 Adet düzeni, sıcak basması sıklığı, uyku kalitesi, ruh hali ve enerji düzeyi gibi başlıkları haftalık kısa

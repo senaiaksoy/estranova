@@ -170,7 +170,7 @@ Bu kuralı tetikleyen yazar profilleri için:
 
 ## Bağlantılı belgeler
 
-- **CLAUDE.md** — HARD CONSTRAINT §4 (yasak referans biçimleri); §1 editöryal nötrlük; §3 akran tonu
+- **CLAUDE.md** — HARD CONSTRAINT §4 (yasak referans biçimleri); §1 editöryal nötrlük; §3 yaşıt tonu
 - **docs/ARTICLE-PRODUCTION-SPEC.md** — Faz 5 pre-publish checklist
 - **docs/HANDOFF-modular-writer-profiles.md** — modüler yazar profili mimarisi
 - **writers/alara-baykent/** — pilot uygulama (otistik üvey kardeş + babasının yeni eşi aile rızalı görünürlük)

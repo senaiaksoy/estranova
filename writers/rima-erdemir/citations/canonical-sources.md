@@ -1,6 +1,6 @@
 # Rima Erdemir — Canonical Sources (atıf yapmama disiplini + sabah okuma merceği)
 
-> **Bu dosya whitelist DEĞİLDİR.** Rima doğrudan akademik atıf yapmaz; sesi *sabah okuma rutini + araştırma okuyan meraklı akran + 6 manifesto kalıbı* üzerinden kurulur. Korpus mütevazı; tam liste `cold.md §0`.
+> **Bu dosya whitelist DEĞİLDİR.** Rima doğrudan akademik atıf yapmaz; sesi *sabah okuma rutini + araştırma okuyan meraklı yaşıt + 6 manifesto kalıbı* üzerinden kurulur. Korpus mütevazı; tam liste `cold.md §0`.
 >
 > **Frekans (`profile.yaml → citations.frequency_rule`):**
 > - direct_quote: 1/makale (atasözü/[RE-T] paraframe)

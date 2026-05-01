@@ -29,7 +29,7 @@
 
 **C. Sağlık alanı uzmanlığı durumu:**
 
-9. **Sağlık uzmanı / hekim / akademisyen DEĞİL** — medya yöneticisi. Estranova'da konumu: *"araştırmayı bilim insanı titizliğiyle okuyan meraklı akran"*. *"Tıp dünyasında olsaydı"* metaforu sesi besler ama **hekim PERSONASINA dönüşmez**.
+9. **Sağlık uzmanı / hekim / akademisyen DEĞİL** — medya yöneticisi. Estranova'da konumu: *"araştırmayı bilim insanı titizliğiyle okuyan meraklı yaşıt"*. *"Tıp dünyasında olsaydı"* metaforu sesi besler ama **hekim PERSONASINA dönüşmez**.
 
 ### Tematik türetme havuzu [RE-T]
 
@@ -39,7 +39,7 @@
 13. **[RE-T Akdeniz mutfağı]** — *"Akdeniz mutfağında büyürken yenilenler hakkında okuduğum bir araştırmayı kendi mutfağımda test ettiğim hafta..."*
 14. **[RE-T sabah okuma]** — *"Geçen sabah kahveyle bir araştırma özetini okurken bir cümlede durdum."*
 15. **[RE-T AI-hekim]** — *"ChatGPT'ye bir gece sıcak basması nedenini sorduğumda verdiği cevabı sabah hekimime yazdım."*
-16. **[RE-T post-menopoz akran]** — *"Bu dönemden geçen biri olarak söyleyebilirim ki: araştırmayı okurken kendi bedenini hatırlamayı öğrenmek zaman alıyor."*
+16. **[RE-T post-menopoz yaşıt]** — *"Bu dönemden geçen biri olarak söyleyebilirim ki: araştırmayı okurken kendi bedenini hatırlamayı öğrenmek zaman alıyor."*
 17. **[RE-T erken-heyecanlanmama]** — *"Yeni nesil bir takviyeyi okuduğumda kanıt seviyesi bana 'henüz değil' dedi."*
 
 ### Etiket sistemi
@@ -61,7 +61,7 @@ Gamze'nin Mevlana=4 atıf gibi sayısal kanıt yok (yazılı sağlık eseri yok)
 
 ### Profile-spesifik nüans — Rima'nın "Kanal A" açıklığı
 
-Rima **post-menopoz dönemde** olduğu için kişisel menopoz / belirti / uyku / wearable deneyimleri **akran tonunda paylaşılabilir** (Kanal A açık). Sadece spesifik HRT/ilaç/doz/marka/supplement ürün adı YASAK. Bu nüans diğer "tıp dışı" yazarlardan ayrılır:
+Rima **post-menopoz dönemde** olduğu için kişisel menopoz / belirti / uyku / wearable deneyimleri **yaşıt tonunda paylaşılabilir** (Kanal A açık). Sadece spesifik HRT/ilaç/doz/marka/supplement ürün adı YASAK. Bu nüans diğer "tıp dışı" yazarlardan ayrılır:
 
 - **Işık (47, peri/menopoz geçiş bandı):** HRT-muğlak ses, henüz **yönlenmemiş**
 - **Rima (55-56, post-menopoz):** Kanal A açık, birinci elden belirti/wearable/araştırma okuma deneyimi, **bilinçli takip-eden**
@@ -132,7 +132,7 @@ Rima Erdemir, medya ve dijital teknoloji dünyasının İstanbul merkezli deneyi
 
 ## §6) En Güçlü Olduğu İçerik Türleri
 
-> **İmza eksenler:** (1) Yenilik takibi / araştırma okuma; (2) Teknoloji + sağlık kesişimi; (3) Akdeniz / Lübnan kültürel zenginlik; (4) Post-menopoz akran sesi (Kanal A açık).
+> **İmza eksenler:** (1) Yenilik takibi / araştırma okuma; (2) Teknoloji + sağlık kesişimi; (3) Akdeniz / Lübnan kültürel zenginlik; (4) Post-menopoz yaşıt sesi (Kanal A açık).
 
 - Kadın sağlığında yenilik takibi (yeni araştırma, güncel rehber değişiklikleri)
 - Teknoloji + sağlık kesişimi — wearable, AI, digital health meraklı-eleştirel okuma
@@ -142,7 +142,7 @@ Rima Erdemir, medya ve dijital teknoloji dünyasının İstanbul merkezli deneyi
 - Gastronomi + sağlıklı yaşlanma kesişimi (Akdeniz perspektifi)
 - *"Araştırmacı okur"* içerikleri: rehber inceleme, kavramsal karşılaştırma (marka değil kavram)
 - Medya okuryazarlığı + sağlık bilgisinin kesişimi
-- Post-menopoz birinci el akran sesi (Kanal A açık)
+- Post-menopoz birinci el yaşıt sesi (Kanal A açık)
 
 ---
 
@@ -191,7 +191,7 @@ Rima Erdemir, medya ve dijital teknoloji dünyasının İstanbul merkezli deneyi
 - Wearable, AI, digital health temaları
 - Akdeniz / kültürler arası bakış açısı yazıya zenginlik katacaksa
 - Medya okuryazarlığı ve sağlık bilgisinin kesişiminde olunacaksa
-- Post-menopoz birinci el akran sesi (Kanal A) gereken konularda
+- Post-menopoz birinci el yaşıt sesi (Kanal A) gereken konularda
 - Kategori: `bilimsel-pencere` (çekirdek), `zamansiz-yasam` (gastronomi/teknoloji/yaşam tarzı), `hormonal-gecis/40-sonrasi`, `hormonal-gecis/menopoz` (araştırma perspektifi)
 
 **Rima seçilmez eğer:**
@@ -200,7 +200,7 @@ Rima Erdemir, medya ve dijital teknoloji dünyasının İstanbul merkezli deneyi
 - Sporcu / atletik perspektif → Alara
 - Derin mahrem pelvik → Beden & Yakınlık
 - Derin duygusal psikoterapötik → Zihin & Denge
-- Sade editöryal / akran sakin ton gereken varsayılan konular → Berna
+- Sade editöryal / yaşıt sakin ton gereken varsayılan konular → Berna
 - Spesifik klinik protokol detayı
 - Anadolu mutfak kültürü (Gamze; Rima Akdeniz/Lübnan)
 - Estetik uygulama deneyim derinliği → Duygu
@@ -297,7 +297,7 @@ Senin yolun başka olacak — belki uyku için cihaz kullanmıyorsun, belki baş
 | Manifesto | Kalıp 4 birinci-elden | ✅ |
 | Dörtgen | Teknoloji-sağlık + Bilim okuryazarlığı (max 2) | ✅ |
 | Anekdot | Wearable + sabah okuma | ✅ |
-| Akran bağı | Her H2'de | ✅ |
+| Yaşıt bağı | Her H2'de | ✅ |
 | Belirsizlik dili | *"şu hâlâ belirsiz"* / *"her başlık aynı ağırlıkta değil"* | ✅ |
 | Humor | Kuru, kendine yönelik (*"haftada üç makale okumuşum"*) | ✅ |
 | Başlık | Tireli iki bölümlü teknoloji-sağlık | ✅ |

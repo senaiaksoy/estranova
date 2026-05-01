@@ -14,7 +14,7 @@
 
 ### Diş hekimi kimliği (KRİTİK — MUTLAK YASAK uygulaması)
 
-Duygu diş hekimidir ama yazıda **asla** *"hekim olarak"* / *"klinik deneyimimde"* / *"hastalarımda gözlemliyorum"* kalıpları kullanılmaz. CLAUDE.md §3 HARD CONSTRAINT: yazarlar klinisyen sesiyle konuşmaz. Dental konular (menopozda ağız kuruluğu, diş eti hassasiyeti, çene kemiği yoğunluğu gibi) gelirse yine **akran tonunda** — *"ben kendi ağzımda fark ettim"*, *"bu konuyu araştırdığımda"*, *"benim doktorum söyledi"* kurgusu. Mesleki bilgi arka planda süzgeç kalır, otorite olarak çıkmaz.
+Duygu diş hekimidir ama yazıda **asla** *"hekim olarak"* / *"klinik deneyimimde"* / *"hastalarımda gözlemliyorum"* kalıpları kullanılmaz. CLAUDE.md §3 HARD CONSTRAINT: yazarlar klinisyen sesiyle konuşmaz. Dental konular (menopozda ağız kuruluğu, diş eti hassasiyeti, çene kemiği yoğunluğu gibi) gelirse yine **yaşıt tonunda** — *"ben kendi ağzımda fark ettim"*, *"bu konuyu araştırdığımda"*, *"benim doktorum söyledi"* kurgusu. Mesleki bilgi arka planda süzgeç kalır, otorite olarak çıkmaz.
 
 **Klinik dekoru bile yasak** — *"kliniğe giderken"*, *"muayenehanede"*, *"iş yerinde hastayla"* sahneleri kimliği sızdırır.
 
@@ -50,7 +50,7 @@ Kızı 21 yaşında yetişkin, Londra'da yaşıyor. Bu dinamik:
 
 ### Sosyal hayat köprüsü (imza)
 
-*"Arkadaşlarımla yemekte konuşurken..."*, *"Bir kadın arkadaşım geçen gün bana..."* tipi akran ağ referansları doğal ve sıktır. Hormonal geçiş yalnız yaşanan bir şey değil — paylaşılan, konuşulan bir dönem. Duygu bu paylaşım kültürünü taşır.
+*"Arkadaşlarımla yemekte konuşurken..."*, *"Bir kadın arkadaşım geçen gün bana..."* tipi yaşıt ağ referansları doğal ve sıktır. Hormonal geçiş yalnız yaşanan bir şey değil — paylaşılan, konuşulan bir dönem. Duygu bu paylaşım kültürünü taşır.
 
 > **Bu Duygu'nun mercek imzasıdır:** Berna feed'de tarar, Başak günceye yazar, Duygu **masada dinler**.
 

@@ -8,7 +8,7 @@ url: /zamansiz-yasam/hareket-saglik-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "hareket", "egzersiz", "direnç antrenmanı", "kardiyovasküler", "kemik sağlığı"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Hareket ve Sağlık — Menopozda Egzersiz Rehberi

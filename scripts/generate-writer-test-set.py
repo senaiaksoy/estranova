@@ -851,7 +851,7 @@ def build_dogrulama_formu():
         "Yenilik takibi / araştırma okuma / rehber değişimi (çekirdek)",
         "Teknoloji + sağlık kesişimi — wearable, AI, digital health (çekirdek)",
         "Akdeniz / Lübnan kültürel zenginlik (çekirdek)",
-        "Post-menopoz akran sesi (Kanal A açık — birinci elden belirti/uyku/wearable deneyimi)",
+        "Post-menopoz yaşıt sesi (Kanal A açık — birinci elden belirti/uyku/wearable deneyimi)",
         "Medya okuryazarlığı + sağlık kesişimi (ikincil)",
         "HRT-muğlak / araştırma-takip-eden (ikincil)",
     ]
@@ -909,7 +909,7 @@ def build_dogrulama_formu():
                             hAlign='LEFT', spaceBefore=2, spaceAfter=10))
     story.append(Paragraph(
         "Profile §5b'de &ldquo;Kanal A açık&rdquo; deniyor: post-menopoz dönemde olduğun için kişisel belirti / uyku / "
-        "wearable deneyimleri akran tonunda paylaşılabilir. Aşağıdaki spesifik kategorilerde rahat mısın?",
+        "wearable deneyimleri yaşıt tonunda paylaşılabilir. Aşağıdaki spesifik kategorilerde rahat mısın?",
         form_section_lede_style
     ))
 
@@ -1111,7 +1111,7 @@ def build_interaktif_dogrulama_formu():
         "Yenilik takibi / araştırma okuma / rehber değişimi (çekirdek)",
         "Teknoloji + sağlık kesişimi — wearable, AI, digital health (çekirdek)",
         "Akdeniz / Lübnan kültürel zenginlik (çekirdek)",
-        "Post-menopoz akran sesi (Kanal A açık — birinci elden belirti/uyku/wearable deneyimi)",
+        "Post-menopoz yaşıt sesi (Kanal A açık — birinci elden belirti/uyku/wearable deneyimi)",
         "Medya okuryazarlığı + sağlık kesişimi (ikincil)",
         "HRT-muğlak / araştırma-takip-eden (ikincil)",
     ]
@@ -1169,7 +1169,7 @@ def build_interaktif_dogrulama_formu():
                             hAlign='LEFT', spaceBefore=2, spaceAfter=10))
     story.append(Paragraph(
         "Profile §5b'de &ldquo;Kanal A açık&rdquo; deniyor: post-menopoz dönemde olduğun için kişisel belirti / uyku / "
-        "wearable deneyimleri akran tonunda paylaşılabilir. Aşağıdaki spesifik kategorilerde rahat mısın?",
+        "wearable deneyimleri yaşıt tonunda paylaşılabilir. Aşağıdaki spesifik kategorilerde rahat mısın?",
         form_section_lede_style
     ))
 

@@ -29,7 +29,7 @@
 - "Erkek kardeşim her zaman pratik bakar; geçen gün dedi ki..."
 - "Akdeniz sofrası benim için yıllar içinde döndüğüm bir yer..."
 
-### Akran açılışı / soru-cevap kalıpları (orta cümlede — Plume + Mahmure imzası)
+### Yaşıt açılışı / soru-cevap kalıpları (orta cümlede — Plume + Mahmure imzası)
 
 - "Aslında her şey çok masum başlıyor..."
 - "Hepimizin yaşadığı bir an..."
@@ -87,8 +87,8 @@ Doktor adı **YASAK** (CLAUDE.md HARD CONSTRAINT). Anonim çerçeve **anılır**
 - Mahmure ilişki / kadın-erkek psikolojisi temaları
 - ünlem (max 1/makale)
 - emoji
-- üçüncü-tekil ad refleksi ("Başak Pelister olarak..." — akran tonunda 'ben' yeterli)
-- "kanaatindeyim" / "inanıyorum" (akran tonu için 'Bence' / 'Bana göre' / 'Gözlemim şu' tercih)
+- üçüncü-tekil ad refleksi ("Başak Pelister olarak..." — yaşıt tonunda 'ben' yeterli)
+- "kanaatindeyim" / "inanıyorum" (yaşıt tonu için 'Bence' / 'Bana göre' / 'Gözlemim şu' tercih)
 - hashtag formatı (#X tarzı)
 - akademik makale doğrudan alıntısı
 - uluslararası kuruluş/yayın adı (NAMS, NICE, JAMA, Lancet, NEJM, Mayo, ACOG, WHO, CDC, FDA, PubMed)

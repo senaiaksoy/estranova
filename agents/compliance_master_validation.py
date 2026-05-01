@@ -65,11 +65,11 @@ def _word_count(block: str) -> int:
 
 
 def _dna_signal_count(article: str) -> int:
-    """Estranova DNA proxy: ayri sinyaller; en az 3 gerekli (akran tonu; harici URL sayilmaz)."""
+    """Estranova DNA proxy: ayri sinyaller; en az 3 gerekli (yaşıt tonu; harici URL sayilmaz)."""
     signals = 0
     lowered = article.lower()
-    # Akran-ses: 2. tekil / 1. cogul baglac (kelime sinirli, kabaca)
-    akran_hits = len(
+    # Yaşıt-ses: 2. tekil / 1. cogul baglac (kelime sinirli, kabaca)
+    yaşıt_hits = len(
         re.findall(
             r"\b(sen|sana|senden|senin|seni|senle|siz|siza|sizin|biz|bize|bizim|"
             r"vucudun|vücudun|hissettigin|hissettiğin|fark\s+ettigin|fark\s+ettiğin)\b",
@@ -77,7 +77,7 @@ def _dna_signal_count(article: str) -> int:
             flags=re.UNICODE,
         )
     )
-    if akran_hits >= 5:
+    if yaşıt_hits >= 5:
         signals += 1
     if any(
         x in lowered
@@ -268,7 +268,7 @@ def run_estranova_master_checks(article: str) -> tuple[list[MasterViolationDict]
                 text_ref=f"dna_sinyal={dna_n}",
                 rule_id="master.dna_elements",
                 fix_suggestion=(
-                    "Estranova DNA: akran-ses (sen/biz), humanize cumlesi, yumusak bilim referansi, "
+                    "Estranova DNA: yaşıt-ses (sen/biz), humanize cumlesi, yumusak bilim referansi, "
                     "blockquote, liste, soru tonlu H2, nötr yonlendirme — en az 3 sinyal guclendirilmeli."
                 ),
             )

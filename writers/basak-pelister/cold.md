@@ -220,7 +220,7 @@ Fransız liseli, Amerika'da Otel & Restoran Yönetimi ve Reklamcılık eğitimi 
 
 ### v2.1 (önceki) — Plume + Mahmure stil imzası
 
-§4a Stil İmzası eklenmesi: Plume Magazine + Mahmure'den gelen 12 HARD kural — soru-cevap tekniği yoğun, üç nokta sık, soru başlıklı bölümler, modern anglizm disiplinli, kendine ad-koyma yumuşatıldı, ünlem max 1, samimi itiraflar koru, akran açılışı koru, lüks marka referansları yasak güçlendirildi, ilişki/kadın-erkek temaları eksen dışı, hashtag yasak.
+§4a Stil İmzası eklenmesi: Plume Magazine + Mahmure'den gelen 12 HARD kural — soru-cevap tekniği yoğun, üç nokta sık, soru başlıklı bölümler, modern anglizm disiplinli, kendine ad-koyma yumuşatıldı, ünlem max 1, samimi itiraflar koru, yaşıt açılışı koru, lüks marka referansları yasak güçlendirildi, ilişki/kadın-erkek temaları eksen dışı, hashtag yasak.
 
 ### v2 (geçmiş referans)
 

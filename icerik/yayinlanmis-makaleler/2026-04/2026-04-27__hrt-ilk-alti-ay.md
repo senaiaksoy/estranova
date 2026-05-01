@@ -7,8 +7,8 @@ publishedDateIso: 2026-04-27
 url: /hormonal-gecis/menopoz/hrt-ilk-alti-ay
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
-keywords: ["HRT", "hormon replasman tedavisi", "menopoz", "58 yaş", "akran hikayesi", "kişisel deneyim", "ilk 6 ay"]
-exportedAt: 2026-04-30
+keywords: ["HRT", "hormon replasman tedavisi", "menopoz", "58 yaş", "yaşıt hikayesi", "kişisel deneyim", "ilk 6 ay"]
+exportedAt: 2026-05-01
 ---
 
 # HRT
@@ -160,7 +160,7 @@ düşüncem oldukça insani bir şeydi: "Bu tedaviyle ilgili olabilir mi?" Türk
 uzun konuştuk. Şokun ve eski yıllardan tanıdığım bir kalp hassasiyetinin üst üste binmesinin yarattığı
 bir an olduğunu, kullandığım jel formunun teknik özelliği nedeniyle bu tür risklerle ilişkilenmediğini
 öğrendim — cilt yoluyla emilen östrojen karaciğerden ilk geçişe uğramıyor, pıhtılaşma faktörlerini
-aktive etmiyormuş. İçim rahatladı, ama korkuyu paylaşmak da önemliydi. Akran hikayelerinin bir kısmı
+aktive etmiyormuş. İçim rahatladı, ama korkuyu paylaşmak da önemliydi. Yaşıt hikayelerinin bir kısmı
 böyle telaşı paylaşmaktan geçiyor.
 
 Kızım — şimdi yirmili yaşlarında — beni daha sakin gördüğünü söyledi. Annemin kuşağı bu konuları
@@ -194,7 +194,7 @@ Bilmediğim çok şey var. Bildiğim şu: bu ilk dört ay, bedenle bir kez daha 
 zamandı. Önümüzdeki aylar başka şeyler öğretecek; altıncı ayın sonunda nereye varacağımı şimdiden
 söylemek zor — o zaman tekrar yazarım belki.
 
-**Kısa not:** Akran hikayeleri rehber değildir; bir başlangıç noktasıdır. Senin yolun
+**Kısa not:** Yaşıt hikayeleri rehber değildir; bir başlangıç noktasıdır. Senin yolun
 benimkinden farklı olabilir — ve farklı olması doğaldır.
 
 ## Sık Sorulanlar
@@ -235,9 +235,9 @@ parçasıdır
 . Beklenmedik bir belirti olduğunda planlı zamandan önce başvurmak
 her zaman güvenli tercihtir.
 
-### Akran hikayeleri okumak neden değerli olabilir?
+### Yaşıt hikayeleri okumak neden değerli olabilir?
 
 Klinik bilgi karar verme aşamasında çok değerli; ama "kararı vermek nasıl bir hisle taşınır?" sorusunun
-cevabı çoğunlukla başka bir kadından gelir. Akran hikayeleri tıbbi tavsiye değildir; ancak sürecin
+cevabı çoğunlukla başka bir kadından gelir. Yaşıt hikayeleri tıbbi tavsiye değildir; ancak sürecin
 duygusal dokusunu görünür kılar. Bu görünürlük, kendi yolunda yalnız hissetmemek için bir küçük çapa
 işlevi görür.

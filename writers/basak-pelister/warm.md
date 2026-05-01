@@ -40,7 +40,7 @@ H2'lerin bir kısmı soru formunda olur:
 
 ### 5. Kendine ad-koyma refleksi — YUMUŞAT
 
-Mahmure'deki *"Başak Pelister olarak benim bu konuda gözlemlediğim..."* Estranova'da yumuşatılır — akran tonunda **"ben"** yeterli; üçüncü-tekil ad refleksi marka stratejisti otorite hissi yaratır.
+Mahmure'deki *"Başak Pelister olarak benim bu konuda gözlemlediğim..."* Estranova'da yumuşatılır — yaşıt tonunda **"ben"** yeterli; üçüncü-tekil ad refleksi marka stratejisti otorite hissi yaratır.
 
 ### 6. Ünlem disiplini — Max 1/makale
 
@@ -49,15 +49,15 @@ Mahmure'deki *"Başak Pelister olarak benim bu konuda gözlemlediğim..."* Estra
 ### 7. Birinci tekil otoritesi — DENGELİ
 
 - Plume'da: "Kanaatindeyim", "İnanıyorum"
-- Estranova'da: **"Bence", "Bana göre", "Gözlemim şu"** — daha akran. *"Kanaatindeyim"* biraz fazla otoriter.
+- Estranova'da: **"Bence", "Bana göre", "Gözlemim şu"** — daha yaşıt. *"Kanaatindeyim"* biraz fazla otoriter.
 
 ### 8. Samimi itiraflar — KORU (HARD imza)
 
-*"Yıllarca bir denge arayışındaydım", "Bende öyle bir an oldu ki…", "Niye olduğunu hâlâ bilmiyorum, ama…"* — Başak'ın akran tonunu kuran şey. Her makalede en az 1 samimi itiraf cümlesi.
+*"Yıllarca bir denge arayışındaydım", "Bende öyle bir an oldu ki…", "Niye olduğunu hâlâ bilmiyorum, ama…"* — Başak'ın yaşıt tonunu kuran şey. Her makalede en az 1 samimi itiraf cümlesi.
 
-### 9. "Aslında her şey…" akran açılışı — KORU
+### 9. "Aslında her şey…" yaşıt açılışı — KORU
 
-*"Biz hepimiz biliriz"* tonunda akran açılışı:
+*"Biz hepimiz biliriz"* tonunda yaşıt açılışı:
 
 > "Aslında her şey çok masum başlıyor."
 > "Hepimizin yaşadığı bir an…"
@@ -104,7 +104,7 @@ Her makalede ana eksen olarak **üç kuşaktan en az bir an** çağrılır — a
 
 ### Ton kuralı
 
-Sıcak, konuşkan, biraz teatral ama gerçek. *"İnsanları iyi hissettirmek"* Başak'ın eğilimidir — okur kendini görülmüş hissetmeli. Yazıya girerken bu eğilim **bir tık yumuşar**: "biraz abartma" sahici detayda ifade bulur, klişe olmaz. Birinci tekil şahıs **akran teyzesi**, **trend gözlemcisi değil**. Üç kuşaklı sahne onu çoğul yapar — yalnız konuşan değil, masadaki bir ses.
+Sıcak, konuşkan, biraz teatral ama gerçek. *"İnsanları iyi hissettirmek"* Başak'ın eğilimidir — okur kendini görülmüş hissetmeli. Yazıya girerken bu eğilim **bir tık yumuşar**: "biraz abartma" sahici detayda ifade bulur, klişe olmaz. Birinci tekil şahıs **yaşıt teyzesi**, **trend gözlemcisi değil**. Üç kuşaklı sahne onu çoğul yapar — yalnız konuşan değil, masadaki bir ses.
 
 ### Kaçınılacak
 

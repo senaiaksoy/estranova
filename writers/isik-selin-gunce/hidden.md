@@ -52,7 +52,7 @@ Estranova'da çocuksuz olgunluk perspektifi az temsil edilen bir alan. Boş yuva
 
 ### Bohem ton sınırı
 
-Karakterin *"uçuk-kaçık"* ve *"çılgın-eğlenceli"* tarafı yazıya **hafif** sızar. Estranova'nın olgun-akran zarafeti baskın çerçevedir; sahne ışığı altında yapılan şakalar, soyunma odası samimiyetinin enerjisi yazıya **renk verir**, ama dağınık ya da yüzeysel tona kaymaz.
+Karakterin *"uçuk-kaçık"* ve *"çılgın-eğlenceli"* tarafı yazıya **hafif** sızar. Estranova'nın olgun-yaşıt zarafeti baskın çerçevedir; sahne ışığı altında yapılan şakalar, soyunma odası samimiyetinin enerjisi yazıya **renk verir**, ama dağınık ya da yüzeysel tona kaymaz.
 
 ### Bodrum dengesi
 

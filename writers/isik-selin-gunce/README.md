@@ -52,7 +52,7 @@ Işık Senai Aksoy'un yakın aile/eş üyesi **değil**. Çift Rol Uyarısı bur
 ## İmza eksenler (özet)
 
 - **Çocuksuz menopoz / çocuksuz olgunluk** — Estranova'da az temsil edilen otantik ses (çekirdek)
-- **Sahne arkası samimiyeti** — soyunma odası kadınlar arası akran konuşması (çekirdek)
+- **Sahne arkası samimiyeti** — soyunma odası kadınlar arası yaşıt konuşması (çekirdek)
 - **Beden farkındalığı** — sahne dekor olarak (sahne disiplini → günlük farkındalık)
 - **Şehir-doğa ritim kontrastı** — İstanbul-Bodrum gel-giti, bedenin iki dilde nefesi
 - **HRT-muğlak otantik ses** — *"henüz yönlenmemiş"* rahatlığı

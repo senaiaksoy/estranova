@@ -8,7 +8,7 @@ Semantic versioning + tarih etiketi.
 
 - Onaylı yayın: `src/content/blog/` + `src/pages/{category}/{slug}.astro` ikilisi (Streamlit). Yalnızca blog koleksiyonu yazan `save_approved_blog_article` geriye dönük korunur.
 - FAQ disiplini: `pratik_veya_sss` zorunlu olarak **3-5** soru; jenerik meta sorular ("kimler icin", "tibbi karar yerine gecer" vb.) `writer_agent.py` validator'da **INVALID**.
-- **BREAKING — editöryal yön:** Yazar persona **akran** olarak netleştirildi (`CLAUDE.md` HARD CONSTRAINT yeni alt bölüm). Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor perspektifi yasak.
+- **BREAKING — editöryal yön:** Yazar persona **yaşıt** olarak netleştirildi (`CLAUDE.md` HARD CONSTRAINT yeni alt bölüm). Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor perspektifi yasak.
 - Inline harici URL (`[metin](http...)`) ve uluslararası medikal kuruluş/yayın adı (NAMS, NICE, JAMA vb.) makale gövdesinde **yasak**; yumuşak “araştırmalar gösteriyor” referansı kabul.
 - Publisher **`## Kaynaklar`** numaralı URL listesi **kaldırıldı** (iç bağlantı önerileri bölümü duruyor).
 - `COMPLIANCE_SCORE_PUBLISH_OK` 90 → 85 (pragmatik publish eşiği; Sonnet compliance kalibrasyonu 90+'a ulaşmakta tutarsız).
@@ -27,7 +27,7 @@ Semantic versioning + tarih etiketi.
 - Streamlit onay ekranı: yayın öncesi kategori gösterimi + override `selectbox`.
 - `main.py` CLI: `--category` (writer önerisinin üzerine yazılır).
 - `docs/PIPELINE.md`: "Konu → Kategori Yönlendirmesi (Routing)" alt bölümü.
-- Compliance DNA deterministik proxy: akran-ses, humanize, yumusak bilim sinyalleri (`compliance_master_validation._dna_signal_count`); harici URL sinyali kaldırıldı.
+- Compliance DNA deterministik proxy: yaşıt-ses, humanize, yumusak bilim sinyalleri (`compliance_master_validation._dna_signal_count`); harici URL sinyali kaldırıldı.
 - Compliance: inline harici URL ve adlı kuruluş atıfları için deterministik **critical `regulation_risk`** (`compliance_expert_agent.FORBIDDEN_SRC_ORG_MARKERS`).
 - `docs/style-rules-map.md` — stil/dil kurallarının CLAUDE / writer / validator / compliance’taki konum haritası.
 - Writer prompt’a few-shot örnek (açılış + mekanizma + kanıt bölümleri).
@@ -47,7 +47,7 @@ Semantic versioning + tarih etiketi.
 
 - Publisher sablon **`_build_faq_markdown`** (her makaleye ayni 5 jenerik soru — HCU FAQ-stuffing riski). FAQ tek kaynak: Writer `pratik_veya_sss`.
 - Ölü `agents/*_prompt.txt` dosyaları (kurallar `prompts/*.md` ile birleştirildi).
-- `system-prompt.md` (eski "Strateji Uzmanı" persona — akran personayla çelişiyordu, kullanılmıyordu).
+- `system-prompt.md` (eski "Strateji Uzmanı" persona — yaşıt personayla çelişiyordu, kullanılmıyordu).
 - `editorial-playbook.md` (eski tıp-açıklama ton örnekleri — Vogue/Elle ile çelişiyordu, kullanılmıyordu).
 - `tasks.md` (geçici görev listesi).
 

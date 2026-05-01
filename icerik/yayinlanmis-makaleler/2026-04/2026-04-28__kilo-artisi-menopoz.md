@@ -1,6 +1,6 @@
 ---
 title: "Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet"
-description: "Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları akran tonuyla anlatan rehber."
+description: "Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları yaşıt tonuyla anlatan rehber."
 writer: berna-aksoy
 publishedDate: "28 Nisan 2026"
 publishedDateIso: 2026-04-28
@@ -8,16 +8,17 @@ url: /zamansiz-yasam/kilo-artisi-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "kilo artışı", "östrojen", "visseral yağ", "bel çevresi", "sarkopeni", "kas kütlesi", "metabolizma", "insülin direnci", "protein", "direnç egzersizi", "40+ kadın"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet
 
 ## Neden Aynı Yaşamda Tartı Konuşmaya Başladı?
 
-Birçoğumuzun aynı sahnesi var: yıllarca aynı tabakla, aynı yürüyüş ritmiyle, aynı uyku saatiyle
-yaşadık. Bir gün tartıya çıktığımızda rakam sessizce iki, üç, beş kilo yukarı taşındı. Yaşamımızda
-büyük bir şey değişmedi; ama beden farklı bir denklem kuruyor.
+Bir arkadaşımın geçen ay anlattığı sahne kafamda kaldı. Yıllarca aynı tabakla, aynı yürüyüş
+ritmiyle, aynı uyku saatiyle yaşamış; bir sabah tartıya çıktığında rakam sessizce iki, üç, beş
+kilo yukarı taşınmış. Hayatında büyük bir şey değişmemiş — ama beden farklı bir denklem
+kurmuş.
 
 Menopoz geçişi yıllarında ortalama kilo artışı bir kadında yaklaşık iki ile beş kilo aralığında
 seyrediyor; ama dağılımı genellikle daha çarpıcı: aynı kilo bile farklı bir coğrafyada duruyor
@@ -27,15 +28,16 @@ seyrediyor; ama dağılımı genellikle daha çarpıcı: aynı kilo bile farklı
 metabolizma yavaşlaması ve uyku kalitesindeki dalgalanma birlikte konuşuyor. Tek bir suçlu yok;
 birkaç katmanın aynı anda devreye girdiği bir tablo var.
 
-Sen de fark etmişsindir: pantolonun bel kısmı önce dar gelmeye başlıyor, kollarda ya da bacaklarda
-o ölçüde belirgin bir değişim yokken bel ve karın bölgesi öne çıkıyor. Bu rastlantı değil; bedenin
-yağ depolama haritası sessizce yeniden çiziliyor. Önce bunu anlamakta fayda var; tabağa bakmadan
-önce manzaraya bakmak, ilk hafta için en sağlam adım olabiliyor.
+Bedenin sessiz değişimleri çoğu kadında benzer bir patika izliyor: pantolonun bel kısmı önce dar
+gelmeye başlıyor, kollarda ya da bacaklarda o ölçüde belirgin bir değişim yokken bel ve karın
+bölgesi öne çıkıyor. Bu rastlantı değil; bedenin yağ depolama haritası sessizce yeniden
+çiziliyor. Önce bunu anlamakta fayda var; tabağa bakmadan önce manzaraya bakmak, ilk hafta
+için en sağlam adım olabiliyor.
 
 ## Östrojen ve Bel Çevresi: Yağ Coğrafyası Değişiyor
 
-Östrojen yıllarca sessiz bir koreograftı: yağı kalça ve uyluk gibi alt bölgeye yönlendirdi, bel
-çevresini görece korudu. Geçişle birlikte bu koreografi değişiyor.
+Yıllarca östrojen yağı kalça ve uyluk gibi alt bölgeye yöneltiyordu; bel çevresini görece
+koruyordu. Geçişle birlikte bu denge değişiyor.
 
 Östrojen düşüşüyle birlikte yağ dokusu yerleşim biçimi değişir; subkutan (cilt altı) yağdan
 visseral (iç organ etrafı) yağa doğru bir kayma görülür
@@ -57,9 +59,9 @@ tartı bu farkı göstermiyor.
 
 ## Çoğu Zaman "Daha Az Yiyeyim" Diyerek Başlarız, Oysa…
 
-Tartıyı görünce hepimizin ilk refleksi benziyor: porsiyonu küçültmek, öğün atlamak, "kararlı bir
-diyet" başlatmak. Bu refleks bir şey öğretmiş bir kuşağa ait — ama bu dönemde aynı şekilde
-çalışmıyor.
+Tartı yukarı kaydığında ilk refleks çoğu zaman benziyor: porsiyonu küçültmek, öğün atlamak,
+"kararlı bir diyet" başlatmak. Bu yaklaşım uzun yıllar standart kabul görmüş — ama bu dönemde
+aynı şekilde çalışmıyor.
 
 Belirgin kalori kısıtlaması metabolizmayı önce hızla yavaşlatır, kas kaybını hızlandırır ve sonra
 küçük bir kayma sonrası eski kiloyu geri çağırır
@@ -116,8 +118,9 @@ süre ihmal edilince diğer ikisi de zorlanmaya başlar.
 
 ## Tabağın Yapısı: Kalori Sayma Değil, Doyum Mimarisi
 
-Kalori sayma kuşağında büyüdük; oysa bu dönemde tabağın "ne kadar" boyutundan çok "nasıl
-kurulduğu" boyutu daha belirleyici. Doyum, kalori sayısından önce gelen bir mimari mesele.
+Kalori sayma uzun yıllar standart yöntem olarak öğretildi; oysa bu dönemde tabağın "ne kadar"
+boyutundan çok "nasıl kurulduğu" boyutu daha belirleyici. Doyum, kalori sayısından önce gelen
+bir mimari mesele.
 
 Protein ilk dayanak. Bu dönemde günlük 1.0-1.2 gram/kilogram aralığında protein alımı sağlam bir
 referans
@@ -145,8 +148,8 @@ kapatıyor.
 
 ## Hareket Çerçevesi: Kardiyo Değil, Yük Taşıma
 
-Kuşağımız "kilo verecekseniz daha çok kardiyo" cümlesiyle büyüdü. Bu cümle bütün hayat için doğru
-değil; menopoz dönemi için ise dengeyi yeniden kurmayı gerektiriyor.
+"Kilo verecekseniz daha çok kardiyo" cümlesi uzun yıllar standart öğüt olarak dolaştı. Bu cümle
+bütün hayat için doğru değil; menopoz dönemi için ise dengeyi yeniden kurmayı gerektiriyor.
 
 Düşük etkili aerobik hareket — yürüyüş, yüzme, sabit bisiklet — kalp-damar sağlığı için elbette
 önemli. Ama kilo dağılımı ve metabolik denge için bu dönemde belirleyici olan direnç çalışması.

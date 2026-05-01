@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["HRT", "hormon tedavisi", "menopoz", "erken menopoz", "geç başlamak", "klinik kılavuzlar", "bireysel takip", "kemik sağlığı", "osteoporoz"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # HRT\

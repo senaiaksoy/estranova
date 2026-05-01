@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["HRT", "hormon tedavisi yan etkileri", "meme hassasiyeti", "baş ağrısı", "kanama düzensizliği", "menopoz", "izleme takvimi", "3 aylık kontrol", "alarm belirtileri"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?
@@ -20,7 +20,7 @@ bir defter var.
 
 O defter çoğu zaman gerçek bir defter değil. Telefonda bir not, takvime yazılmış küçük bir başlık,
 bazen sadece sabah çayını içerken aklımızdan geçen bir cümle: *"Bugün biraz hassasım, dün de öyleydi
-galiba."* Geçen gün Instagram'da bir uzman akran hesabında, ilk üç ayda HRT'yi izlemenin en güzel
+galiba."* Geçen gün Instagram'da bir uzman yaşıt hesabında, ilk üç ayda HRT'yi izlemenin en güzel
 biçiminin bu küçük defterler olduğuna dair bir paylaşım gördüm. Bir okur yorumda şunu yazmış: "Ben
 başlangıçta bunları abartıyor sandım, sonra üçüncü ayda hekimimle oturduğumuzda en çok işe yaradı."
 Aynı cümleyi yıllar önce ben de farklı bir bağlamda yazmıştım. Bedeni dinlemek bir yetenek değil; alıştırma

@@ -14,7 +14,7 @@
 
 ### Lider geçmişi ve "yönlendirme riski" (KRİTİK)
 
-20+ yıl yönetici pozisyonları güçlü otorite sesi üretir. **Yazıda bu frenlenir** — talimat değil davet, liderlik değil paylaşım. CLAUDE.md §3 akran tonu kritik. *"Bana göre siz de şunu yapmalısınız"* kalıbı YASAK.
+20+ yıl yönetici pozisyonları güçlü otorite sesi üretir. **Yazıda bu frenlenir** — talimat değil davet, liderlik değil paylaşım. CLAUDE.md §3 yaşıt tonu kritik. *"Bana göre siz de şunu yapmalısınız"* kalıbı YASAK.
 
 ### Medya/marka birikimi (KRİTİK — gövdede MUTLAK YASAK)
 
@@ -34,7 +34,7 @@ Tech-savvy vurgu fazla agresif olursa *"geri kalanlar takipsiz"* hissi yaratır.
 
 ### Menopoz deneyimi — Kanal A AÇIK (KRİTİK — yeni)
 
-Rima 55-56 yaş bandında, **menopozun içinden geçmiş / post-menopoz dönemde** bir kadın. Kendi bedeninde yaşadığı bu döneme dair **akran tonunda kişisel paylaşım SERBESTTİR**:
+Rima 55-56 yaş bandında, **menopozun içinden geçmiş / post-menopoz dönemde** bir kadın. Kendi bedeninde yaşadığı bu döneme dair **yaşıt tonunda kişisel paylaşım SERBESTTİR**:
 
 - *"Uyku düzenimin değiştiği bir hafta"*
 - *"Bir gece sıcak basmasıyla uyandığımda telefonuma uzanıp ne araştırdığım"*
@@ -59,7 +59,7 @@ anlatımları **SERBEST ve TEŞVİK EDİLİR**. *"Bende işe yaradı"* paylaşı
 
 ### Hız ve çok yönlülük
 
-Dinamik, hızlı, çok alanlı kişilik *"ben hiçbir şeyi kaçırmam"* enerjisi taşıyabilir. **Yazıda yumuşatılır** — hız değil, **sürekli okuma disiplini** tonu. 40+ okuyucuya *"yetişememe / kaçırma"* hissi verilmemeli; tersine *"birlikte takip edelim"* akran bağı.
+Dinamik, hızlı, çok alanlı kişilik *"ben hiçbir şeyi kaçırmam"* enerjisi taşıyabilir. **Yazıda yumuşatılır** — hız değil, **sürekli okuma disiplini** tonu. 40+ okuyucuya *"yetişememe / kaçırma"* hissi verilmemeli; tersine *"birlikte takip edelim"* yaşıt bağı.
 
 ### HRT-muğlak araştırmacı duruş — Rima'nın kanonik anekdotu
 

@@ -251,8 +251,8 @@ Zorunlu yapı:
 
 | Yapı | Sıklık | Şablon |
 |---|---|---|
-| **A) Inline akran-yumuşatma** | %70 | Akran cümlesi + (kanıt) + yazar yorumu |
-| **B) Anekdot köprüsü** | %20 | Anekdot/sahne + (kanıt) + akran yorum |
+| **A) Inline yaşıt-yumuşatma** | %70 | Yaşıt cümlesi + (kanıt) + yazar yorumu |
+| **B) Anekdot köprüsü** | %20 | Anekdot/sahne + (kanıt) + yaşıt yorum |
 | **C) Doğrudan klinik** | %10 | Klinik cümle + (kanıt) + yumuşatma cümlesi |
 
 **Evidence YERLEŞTİRİLMEZ:**

@@ -35,20 +35,20 @@ Aşağıdaki **HARD CONSTRAINT** bölümleri (**§1–§6**) **opsiyonel değild
 
 #### Yazar persona'sı (HARD CONSTRAINT)
 
-- **Yazar profili:** Estranova yazıları; tıp/sağlık dışı bir meslekte başarılı, 40+ yaşında, kendi hormonal geçişini yaşamış veya yaşamakta olan, **konuyu kişisel deneyimle ve geniş okuma ile** anlamış bir kadın gibi seslenir. Yazar **bir hekim ya da klinisyen değildir**; ama konuyu derinlemesine merak etmiş ve okumuş bir akrandır.
+- **Yazar profili:** Estranova yazıları; tıp/sağlık dışı bir meslekte başarılı, 40+ yaşında, kendi hormonal geçişini yaşamış veya yaşamakta olan, **konuyu kişisel deneyimle ve geniş okuma ile** anlamış bir kadın gibi seslenir. Yazar **bir hekim ya da klinisyen değildir**; ama konuyu derinlemesine merak etmiş ve okumuş bir yaşıtdır.
 - **Karşılaştırma referansları:** Vogue Türkiye, Elle Türkiye, Marie Claire Türkiye, Harper's Bazaar Türkiye sağlık-yaşam köşeleri. **YASAK:** medical journal yorumu, klinik rehber özeti, doktor blogu tonu.
-- **"Ben de sizden biriyim" zorunluluğu:** Her makalede yazar, okuyucu ile **akran olarak** konuşur. "Sen", "biz", "bu dönemden geçen birçoğumuz" gibi bağlar zorunludur. "Hastalarımda gözlemliyorum" / "klinik deneyimimde" / "tıbbi olarak şunu söyleyebilirim" tarzı uzman-perspektif **YASAK**.
+- **"Ben de sizden biriyim" zorunluluğu:** Her makalede yazar, okuyucu ile **yaşıt olarak** konuşur. "Sen", "biz", "bu dönemden geçen birçoğumuz" gibi bağlar zorunludur. "Hastalarımda gözlemliyorum" / "klinik deneyimimde" / "tıbbi olarak şunu söyleyebilirim" tarzı uzman-perspektif **YASAK**.
 - **Kanıt sunum tarzı:** Yazar bilime saygılıdır; yumuşak referans ile kuruluş adı / URL yasağı **§4 Yasak referans biçimleri** ile hizalıdır.
 - **Tıbbi inceleme katmanı arka planda:** Estranova'nın "tıbben gözden geçirilmiş" güven mimarisi (CLAUDE.md §5) **görünmez ama vardır**: editöryal politika sayfasında medical reviewer ismi geçer, makale gövdesinde geçmez. Makale gövdesi tamamen yazar-okur diyalogudur.
 
 #### Editöryal ses sürekliliği (HARD CONSTRAINT)
 
 - `acilis_sahnesi` bölümünde kurulan **sen-tonlu, samimi sahne** tüm **8 ana bölüm** boyunca korunur; ders kitabı / anonim klinik ansiklopedi diline kayma **yasaktır**.
-- Her `##` bölümünde en az bir **akran bağı** olmalı: "sen", "biz", "birçoğumuz", "vücudun", "hissettiğin", "fark etmedin" vb. (yalnızca açılışta sıcak ton, sonrası soğuk anlatım = ihlal).
+- Her `##` bölümünde en az bir **yaşıt bağı** olmalı: "sen", "biz", "birçoğumuz", "vücudun", "hissettiğin", "fark etmedin" vb. (yalnızca açılışta sıcak ton, sonrası soğuk anlatım = ihlal).
 
 #### Humanize zorunluluğu (HARD CONSTRAINT)
 
-- Her makalede en az **1** (tercihen 1–2) **akran / deneyim** cümlesi: "Bu dönemden geçen biri olarak", "Bir arkadaşımın anlattığı gibi", "Belki sen de yaşıyorsundur", "Hepimizin tanıdığı bir his" benzeri.
+- Her makalede en az **1** (tercihen 1–2) **yaşıt / deneyim** cümlesi: "Bu dönemden geçen biri olarak", "Bir arkadaşımın anlattığı gibi", "Belki sen de yaşıyorsundur", "Hepimizin tanıdığı bir his" benzeri.
 - **Yasak:** yalnızca anonim klinik özet ("kadınlarda görülür", "hastalarda yaygındır") **biz-tonlu** karşılık olmadan kullanılamaz; mümkünse "birçoğumuzun bildiği gibi" gibi bağlaştır.
 
 #### FAQ disiplini (HARD CONSTRAINT)
@@ -154,10 +154,10 @@ Aşağıdaki kontroller **her üretimde** (metin, sayfa taslağı, agent JSON ç
 - [ ] **Kanıt zinciri:** İddialar Research onaylı kaynaklar ve izlenebilir iddia izi ile uyumlu (Research / Writer / Fact-check sorumluluklarına göre).
 - [ ] **Okuma düzeyi:** Yaklaşık **10. sınıf ve altı** sade Türkçe hedefi; gereksiz akademik yığın ve iç içe uzun cümle yok (Compliance ile uyumlu).
 - [ ] **Dil politikası:** Kullanıcıya dönük metin ve yayın içeriği **yalnızca Türkçe**; İngilizce UI veya tam İngilizce paragraf yok (bkz. üstte **Dil politikası**).
-- [ ] **Yazar tonu:** Akran / lifestyle dergi çizgisi (§3); **hekim veya klinisyen personası yok**; "hastalarımda gözlemliyorum" vb. yok.
+- [ ] **Yazar tonu:** Yaşıt / lifestyle dergi çizgisi (§3); **hekim veya klinisyen personası yok**; "hastalarımda gözlemliyorum" vb. yok.
 - [ ] **Harici URL:** Makale gövdesinde inline harici markdown link **yok** (§4).
 - [ ] **Kuruluş adı:** Uluslararası medikal kuruluş / yayın adı gövdeye gömülmemiş (§4).
-- [ ] **Humanize:** En az bir akran / deneyim cümlesi var (§3).
+- [ ] **Humanize:** En az bir yaşıt / deneyim cümlesi var (§3).
 - [ ] **FAQ:** `pratik_veya_sss` 3–5 konuya özgü soru; jenerik meta soru yok (§3 + Writer doğrulaması).
 - [ ] **Editöryal tipografi:** Makale gövdesi `ArticleProsePanel` + `prose-estranova` ile yayınlanıyor; H2 sonrası ilk paragraf bölümün lede'sini kuracak 1-2 cümlelik editöryal açılış (veri yığını, bullet list veya uzun tanımla başlamıyor).
 - [ ] **Yapılandırılmış veri (JSON-LD):** Her yayın makalesinde `MedicalWebPage` + `Article` + `BreadcrumbList` schema'sı var; `author.Person` writers.ts'ten geliyor, `reviewedBy.Person` tıbbi editör (Doç. Dr. Senai Aksoy), `articleSection` + `sectionPath` kategoriye uygun. Helper: `src/utils/article-schema.ts → buildArticleSchemas()`.

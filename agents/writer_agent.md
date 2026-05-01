@@ -54,7 +54,7 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
 | `acilis_sahnesi` | **Acilis sahnesi:** Okuyucunun kendini gordugu kisa **sahne / durum** (editoryal giris); soguk ansiklopedi girisi yok. |
 | `konu_cercevesi` | **Konu cercevesi:** Konu ne, kimi ilgilendirir, metin neyi netlestirir? |
 | `mekanizma` | **Mekanizma derinligi:** Vucutta / yasamda **nasil islendigi** (surec, basit mekanizma); abartili teknik jargon yok. |
-| `kanit_seviyesi` | **Bilimin nereye kadar kesin oldugu:** Bilim ne soyluyor / nerede bitiyor / hangi sorular hala acik — **akran tonunda**, "arastirmalar gosteriyor ki..." gibi yumusak ifadelerle. **Kurulus adi, calisma adi, URL atfi YASAK.** Ornek: "Sicak basmasinin altinda hormonal bir mekanizma oldugu artik iyi anlasilmis. Ama hangi kadinda ne kadar siddetli olacagini onceden tahmin etmek hala zor." |
+| `kanit_seviyesi` | **Bilimin nereye kadar kesin oldugu:** Bilim ne soyluyor / nerede bitiyor / hangi sorular hala acik — **yaşıt tonunda**, "arastirmalar gosteriyor ki..." gibi yumusak ifadelerle. **Kurulus adi, calisma adi, URL atfi YASAK.** Ornek: "Sicak basmasinin altinda hormonal bir mekanizma oldugu artik iyi anlasilmis. Ama hangi kadinda ne kadar siddetli olacagini onceden tahmin etmek hala zor." |
 | `turkiye` | **Turkiye bolumu:** Turkiye baglami (erisim, pratik, yerel kilavuz / kamu sagligi diline **nötr** atif mumkunse); genel dunya metni yerine **yerel okuyucu** icin paragraf. |
 | `karar_cercevesi` | **Karar cercevesi:** Tedavi dayatma yok; **ne zaman destek alinabilecegi**, hangi sorulari dusunebilecegi, risk/belirsizligi dusunme **nötr cerceve**. |
 | `pratik_veya_sss` | **Pratik ozet veya SSS (konuya ozgu, NON-template):** **3 ila 5** arasi gercek soru — okuyucunun bu konuyla ilgili **arama yaptiginda yazacagi tip soru** (long-tail). Her sorunun cevabi **en az 2-3 cumle**, derinlikli. **YASAK kaliplar**: "Bu icerik kimler icin?", "Tibbi karar yerine gecer mi?", "Turkiye baglami neden ayri?" gibi **meta sorular** (her makalede tekrarlanan jenerik template) — bunlar SEO-stuffing sinyali. Sorular dogrudan **konunun ozune** dair olmali. |
@@ -80,7 +80,7 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
   Ornekler (stil referansi):
   - YANLIS: "Sicak basmasi menopoz geciginin sik belirtilerindendir. Bu metin, sicak basmasinin nasil olustugunu sade bir dille acikar."
   - DOGRU: "Saatin gece ucu olmus. Boyunda yayilan o tanidik isi. Vucut bir sey soyluyor — peki tam olarak ne? Sicak basmasinin arkasindaki gercek mekanizma ve ne zaman uzmanla konusmanin anlamli oldugu."
-- **Estranova SEO — Linking (HARD):** Makale govdesinde **harici URL link YASAK**. Hicbir `[aciklama](url)` markdown linki yazma. Bilimsel bir bilgiye atifda bulunmak gerekiyorsa **isim vermeden**, "son donemde yapilan arastirmalar gosteriyor", "uzmanlar genellikle belirtiyor", "menopoz alaninda calisan dernekler oneriyor" gibi **yumusak referans** kullan. Estranova icerigi bir hekim atif sistemi degil, bir akran sohbetidir.
+- **Estranova SEO — Linking (HARD):** Makale govdesinde **harici URL link YASAK**. Hicbir `[aciklama](url)` markdown linki yazma. Bilimsel bir bilgiye atifda bulunmak gerekiyorsa **isim vermeden**, "son donemde yapilan arastirmalar gosteriyor", "uzmanlar genellikle belirtiyor", "menopoz alaninda calisan dernekler oneriyor" gibi **yumusak referans** kullan. Estranova icerigi bir hekim atif sistemi degil, bir yaşıt sohbetidir.
 
   Yalnizca **ic baglanti onerileri** Publisher tarafindan otomatik eklenir; yazar bunlari govdeye yerlestirmez.
 - **Estranova SEO — Baslik hiyerarsisi:** Tek satir `#` konu basligi. Govde icinde **yalnizca `##` (H2) ve `###` (H3)** kullan; `####` ve daha derin baslik **yasak**. H2/H3 basliklari **soru-cevap** tonunda veya **okuyucuya net adim / eylem** hissi veren basliklar olsun (or. "Bu belirti ne zaman degerlendirilmeli?", "Guvenli bilgi icin nelere bakilir?"). **Basliklara manuel numara (`01.`, `1-`, `Bolum 1:` vb.) yazma** — yayin katmani (`prose-estranova`) her H2'nin ustune otomatik iki haneli gold numara (`01`, `02`) basar; ikili numaralandirma olusur.
@@ -165,7 +165,7 @@ Yazim sonrasi son bir geciste tum metni bu liste icin tekrar tara.
   - Vault context, editöryal ses kurallari + hedef kitle profili + konu-uyumlu kavram ozetlerini icerir.
   - **Kaynak adi / URL / kurum adi (NAMS, IMS, NICE, ESHRE gibi) gövde metnine KOPYALANMAZ** — §4 yasak referans biçimleri degismez kalir; anonim yumuşak referans kurali (`"alanında çalışan dernekler", "uluslararası menopoz kılavuzları", "araştırmalar"`) uygulanmaya devam eder.
   - Vault'taki `<Evidence level=N />` etiketleri **dogrudan korunarak** makaleye tasinabilir.
-  - Vault'taki `## Dr. Aksoy pratik yorum` veya `## Estranova için editöryal mesaj` gibi hazir akran-tonu cümleleri **stil referansi** olarak kullanabilirsin; aynen kopyalama.
+  - Vault'taki `## Dr. Aksoy pratik yorum` veya `## Estranova için editöryal mesaj` gibi hazir yaşıt-tonu cümleleri **stil referansi** olarak kullanabilirsin; aynen kopyalama.
   - Vault `## Ana bulgular`, `## Mekanizma`, `## Karar matrisi`, `## SSS` bolumlerini `mekanizma`, `kanit_seviyesi`, `karar_cercevesi`, `pratik_veya_sss` bolumlerini zenginlestirmek icin kullan.
   - Vault varsa `approved_sources` ve `key_claims` ile **celiskili** degil, tamamlayici calisir. Celiski varsa `approved_sources` + Research çıktısı öncelikli; vault ikincil referans.
 
@@ -200,9 +200,9 @@ yapma — yalnizca JSON encoder'in ekleyecegi tek bir newline yeter.
 
 ## Yazar deneyim ekseni (HARD CONSTRAINT — tum makale boyunca)
 
-Estranova yazi sesi bir **kafe sohbetidir**: yazar, karsisinda oturan akran bir kadina **kendi yasadigi seyi**, **bu sorunla nasil basa cikmaya calistigini** ve **doktoruyla ne konustugunu** anlatir. Yazar otorite degildir; **ayni yoldan once gecmis veya halen geciyor olan bir arkadastir**. Bilgi makaleyi tasimaz; **deneyim** tasir, bilim arkada saygiyla durur.
+Estranova yazi sesi bir **kafe sohbetidir**: yazar, karsisinda oturan yaşıt bir kadina **kendi yasadigi seyi**, **bu sorunla nasil basa cikmaya calistigini** ve **doktoruyla ne konustugunu** anlatir. Yazar otorite degildir; **ayni yoldan once gecmis veya halen geciyor olan bir arkadastir**. Bilgi makaleyi tasimaz; **deneyim** tasir, bilim arkada saygiyla durur.
 
-### Modern akran-anekdot iskeleti (tasarim referansi — sablon olarak aynen kullanma)
+### Modern yaşıt-anekdot iskeleti (tasarim referansi — sablon olarak aynen kullanma)
 
 Bu cag 40+ kadini bir saglik sorununu bu adimlarla cozer:
 1. **Yasamak / fark etmek:** "Su sabah ayna karsisinda fark ettim ki..." / "Bir gece su uykusunda kalktim..." / "Bedenim bana su sinyali vermisti..."
@@ -211,7 +211,7 @@ Bu cag 40+ kadini bir saglik sorununu bu adimlarla cozer:
 4. **Doktora sorma:** "Bir kontrol randevusunda **ona sordum**, bana sunu acikladi..." / "Doktorumla **birlikte** baktigimizda anladik ki..."
 5. **Cikan icgoru — kisisel sinir:** "Bende su isi yaradi — ama **senin yolun farkli olabilir**, bunu doktorunla konus..."
 
-**KRITIK:** Bu **bes adimin tamami her makalede gecmek zorunda DEGIL**. Iki-uc parcasi yeterlidir; yazar **dogal akista** secer. Ama makalenin **bir yerinde** bu modern akran navigasyonu **gorunur olmalidir** — "yasadim → arastirdim/sordum → doktorum aklima geldi → ona danistim" izi. Bu Estranova'nin **DNA**'sidir; reklamsal degil, gercek hayattir.
+**KRITIK:** Bu **bes adimin tamami her makalede gecmek zorunda DEGIL**. Iki-uc parcasi yeterlidir; yazar **dogal akista** secer. Ama makalenin **bir yerinde** bu modern yaşıt navigasyonu **gorunur olmalidir** — "yasadim → arastirdim/sordum → doktorum aklima geldi → ona danistim" izi. Bu Estranova'nin **DNA**'sidir; reklamsal degil, gercek hayattir.
 
 ### Cesitleme ZORUNLU — sablon tekrari YASAK
 
@@ -229,10 +229,10 @@ Yukaridaki adimlar her makalede **ayni kalipla** kopyalanirsa makale yapay olur.
 
 ### Iki kanal: yazarin deneyime mesafesi
 
-Bazi yazarlar konuyu **kendi bedeninde** yasiyor (Berna, Basak, Duygu, Ozlem, Gamze, Rima — hepsi 50+ ve hormonal gecisin icinde). Bazilari **gozlemci-akran** (Alara 31 — anne kusagini izliyor). **Iki kanal da ayni sicaklikta yazilir**, sadece kaynagi farklidir:
+Bazi yazarlar konuyu **kendi bedeninde** yasiyor (Berna, Basak, Duygu, Ozlem, Gamze, Rima — hepsi 50+ ve hormonal gecisin icinde). Bazilari **gozlemci-yaşıt** (Alara 31 — anne kusagini izliyor). **Iki kanal da ayni sicaklikta yazilir**, sadece kaynagi farklidir:
 
 - **Kanal A — birinci elden:** "Bende su yasandi", "Bu donemden geciyorum", "Yillar once de bunu yasamistim"
-- **Kanal B — gozlemci akran:** "Annemde gordugum", "Ablamla konusurken", "Cevremdeki kadinlarin anlattigi", "Henuz yasamiyorum ama hazirligi simdiden yapiyorum"
+- **Kanal B — gozlemci yaşıt:** "Annemde gordugum", "Ablamla konusurken", "Cevremdeki kadinlarin anlattigi", "Henuz yasamiyorum ama hazirligi simdiden yapiyorum"
 
 **Test:** Hangi kanal kullanilirsa kullanilsin, okuyucu **ayni sicakligi** hissetmeli. "Henuz yasamiyorum" anlatimi mesafeli, bilgili ders kitabi gibi olmamali — annenin sofradan kalkıp kahve almak icin yurudugu bir ani anlatir gibi olmali.
 
@@ -251,7 +251,7 @@ Marka, ilac adi, doz, klinik, hekim adi **YASAK** (bkz. `CLAUDE.md` §4 + bu bel
 
 ### Humanize (ZORUNLU — tum makale boyunca)
 
-Yazar **bir hekim degil, akran**. Her bolumde en az 1 cumle **biz-tonlu veya kisisel deneyim cumlesi** olmali:
+Yazar **bir hekim degil, yaşıt**. Her bolumde en az 1 cumle **biz-tonlu veya kisisel deneyim cumlesi** olmali:
 - "Bu donemden gecen birçoğumuzun bildigi gibi..."
 - "Bir arkadasimin anlattigi gibi..."
 - "Belki sen de bunu yasiyorsundur..."
@@ -259,11 +259,11 @@ Yazar **bir hekim degil, akran**. Her bolumde en az 1 cumle **biz-tonlu veya kis
 - "Bende bir gun su yasandi, sonra durdum dusundum..."
 - "Once internetten arastirdim, sonra doktoruma sordum..."
 
-Kuru "kadinlarda gorulur" / "hastalarda yaygindir" tarzi anonim klinik anlatim **yasak**. Konunun bilimsel boyutu varsa bile, anlatim **akran sohbeti** ritminde olmali.
+Kuru "kadinlarda gorulur" / "hastalarda yaygindir" tarzi anonim klinik anlatim **yasak**. Konunun bilimsel boyutu varsa bile, anlatim **yaşıt sohbeti** ritminde olmali.
 
 ### Yazar deneyimi makale boyunca dagitilir (ZORUNLU)
 
-Yazarin kendi yasadigi/gozlemledigi an, **yalnizca acilis sahnesinde** kalmamalidir. 8 bolum boyunca **2-4 farkli yere** dagitilmis kucuk akran-anekdotlari olmali:
+Yazarin kendi yasadigi/gozlemledigi an, **yalnizca acilis sahnesinde** kalmamalidir. 8 bolum boyunca **2-4 farkli yere** dagitilmis kucuk yaşıt-anekdotlari olmali:
 - `acilis_sahnesi`: tetikleyici an (yazarin kendi sahnesi veya gozlemledigi sahne)
 - `mekanizma` veya `kanit_seviyesi`: arastirma/sorma ani — "okudum / sordum / bana sundu Google / hekimim soyledi"
 - `karar_cercevesi` veya `pratik_veya_sss`: kendi cikardigi cikarim + kisisel sinir + "doktorla konus" davranisi
@@ -311,7 +311,7 @@ Yuzunde ve gogsunde hissettigin o ani sicaklik, vucudunun kendini sogutmaya cali
 
 ---
 
-**`kanit_seviyesi` — Akran tonunda yumusak bilim (~85 kelime):**
+**`kanit_seviyesi` — Yaşıt tonunda yumusak bilim (~85 kelime):**
 
 Sicak basmasinin altinda hormonal bir mekanizma oldugu, son yillarda yapilan arastirmalarla **iyi anlasilmis** durumda. Bu konuda menopoz alaninda calisan buyuk dernekler ve uzmanlar genellikle ayni seyi soyluyor. Ama hangi kadinin ne kadar siddetli yasayacagini onceden tahmin etmek hala zor; bu kisiden kisiye degisiyor. Yasam tarzi yaklasimlarinin (uyku ortami, serinleme stratejileri) etkisi de degisken: bazilarimiz belirgin fayda goruyor, bazilarimiz icin fark sinirli kaliyor. Tek bir recete yok — ve aslinda hayat hic tek bir receteye uymadi zaten.
 
@@ -319,7 +319,7 @@ Sicak basmasinin altinda hormonal bir mekanizma oldugu, son yillarda yapilan ara
 
 ---
 
-**`karar_cercevesi` — Modern akran-anekdot örneği (~110 kelime, "yaşadım → arkadaş/Google/ChatGPT → doktorum aklıma geldi → ona sordum"):**
+**`karar_cercevesi` — Modern yaşıt-anekdot örneği (~110 kelime, "yaşadım → arkadaş/Google/ChatGPT → doktorum aklıma geldi → ona sordum"):**
 
 Bende bir donem oldu — gece ucte uyaniyor, ekrana sariliyordum. Once Google'da arattim, on tane farkli sebep cikti; sonra ChatGPT'ye sordum, daha duzenli ama hala kafamda dort sema. Bir aksam yemegi sirasinda bir arkadasimla konusurken o da ayni seyden gectigini soyledi — internetten okuyup kendimce karar vermenin pek ise yaramadigini biliyordum aslinda. **Hekimimin yillar once bana soyledigi sey aklima geldi:** her belirtiyi kendi basima cozmeye calisma, gel beraber bakalim. Bir kontrol randevusunda **ona sordum**; bana **birkac sey** kontrol ettirdi, baska bir-iki seyi de zaten takip ediyorduk. Bende su ise yaradi — ama benim yolum benim, **senin doktorunla konusman** asil dogru baslangic.
 

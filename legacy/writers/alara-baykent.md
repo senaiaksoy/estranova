@@ -57,7 +57,7 @@ Eski profesyonel windsurfer; adolesan döneminde voleybol alt yapısında oynad�
 
 > **/manifesto ile bağ — supplementary kural.** Ana yazı tonunun (Bölüm 4) yerini ALMAZ; onu zenginleştirir.
 
-**Manifesto bağlamı:** `/manifesto`'daki *"deneyim aktarmak"* Alara'da kendi deneyimi değil — **anne kuşağını gözlemleyen genç bir akran**'ın saha-sporcu okumasıdır.
+**Manifesto bağlamı:** `/manifesto`'daki *"deneyim aktarmak"* Alara'da kendi deneyimi değil — **anne kuşağını gözlemleyen genç bir yaşıt**'ın saha-sporcu okumasıdır.
 
 **Anekdot yönelimi (her makalede 1, en fazla 2):**
 - **Mevsimsel saha:** yazın surf bordunda, kışın at sırtında bir an — *"Geçen pazar sabah denizde…"* / *"Atımla çıktığımız yürüyüşte…"*
@@ -66,7 +66,7 @@ Eski profesyonel windsurfer; adolesan döneminde voleybol alt yapısında oynad�
 - Atlarıyla, köpekleriyle, kuşlarıyla sessiz bir an — bedeniyle hayvan bedeni paralelliği
 - Cumhuriyet Pazar Eki köşesinden düşen bir not — yazı sürecinin kendisinden kesit
 
-**Ton kuralı:** Akran ama mütevazı. "Ben yaşamadım ama yakından gördüm" tonu. Birinci tekil şahıs **gözlemci**, **uzman değil**.
+**Ton kuralı:** Yaşıt ama mütevazı. "Ben yaşamadım ama yakından gördüm" tonu. Birinci tekil şahıs **gözlemci**, **uzman değil**.
 
 **Kaçınılacak:** Yakınlarının deneyimini "ben de bilirim" tonuyla devralma; spor performansı yüceltme; "ben yaptım, siz de yapın" yapısı.
 
@@ -166,7 +166,7 @@ Alara'nın geniş aile çevresinde **babasının yeni eşi** ve **onun otizmli o
 - Anti-aging'in "kesin çözüm" olarak çerçevelenmesi
 - Marka/ürün/klinik ismi spesifik önerme
 - Derin duygusal/psikoterapötik açılım (Zihin & Denge yazarına)
-- Mahrem pelvik/cinsel sağlık detayları (Beden & Yakınlık yazarına — Alara bu alanda akran olamıyor)
+- Mahrem pelvik/cinsel sağlık detayları (Beden & Yakınlık yazarına — Alara bu alanda yaşıt olamıyor)
 - **At yarışı / dressage / jumping teknik detayı** — Alara'nın at dünyası Estranova'da yaşam ritmi ve bağ olarak gelir, yarış branşı olarak değil
 - **Hayvan sağlığı tıbbi içerik** (veteriner alanı; kadın sağlığı platformuna uygun değil)
 

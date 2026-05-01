@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["menopoz", "hekim seçimi", "hekim-hasta ilişkisi", "HRT", "paydaş karar verme", "shared decision making", "menopoz takibi", "hormon tedavisi", "jinekolog"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor

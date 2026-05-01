@@ -1,6 +1,6 @@
 ---
 title: "Menopozda Eklem Ağrısı — Sabah Tutukluğundan Hareketin Yatışına"
-description: "Menopozda eklem ağrısının arkasındaki östrojen-kıkırdak ilişkisini, hareketin neden istirahatten daha çok iyileştirdiğini ve günlük olarak uygulanabilir küçük adımları akran tonuyla anlatan rehber."
+description: "Menopozda eklem ağrısının arkasındaki östrojen-kıkırdak ilişkisini, hareketin neden istirahatten daha çok iyileştirdiğini ve günlük olarak uygulanabilir küçük adımları yaşıt tonuyla anlatan rehber."
 writer: alara-baykent
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
@@ -8,7 +8,7 @@ url: /zamansiz-yasam/eklem-agrisi-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "eklem ağrısı", "sabah tutukluğu", "östrojen", "kıkırdak", "sarkopeni", "direnç egzersizi", "omega-3", "D vitamini", "kollajen", "40+ kadın"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Menopozda Eklem Ağrısı — Sabah Tutukluğundan Hareketin Yatışına

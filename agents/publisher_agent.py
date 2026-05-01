@@ -162,7 +162,7 @@ def _build_seo_block(title_tag: str, meta_description: str, slug: str) -> str:
 
 def _build_sources_markdown(_sources: list[dict[str, Any]]) -> str:
     """
-    Kaynak listesi makale sonunda kullanilmaz (akran tonu; klinik 'Kaynaklar'
+    Kaynak listesi makale sonunda kullanilmaz (yaşıt tonu; klinik 'Kaynaklar'
     sinyali yaratmamak). Research `approved_sources` arka planda kalir.
     """
     return ""

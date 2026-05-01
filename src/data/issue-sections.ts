@@ -30,7 +30,7 @@ export interface IssueSection {
   writerSlug?: string;
   /** Slot başlığı (yazarın belirli ay için verdiği başlık) — published'da zorunlu */
   title?: string;
-  /** Slot URL'i (örn. /sayi/01-mayis-2026-geceler#akran-kosesi) — published'da zorunlu */
+  /** Slot URL'i (örn. /sayi/01-mayis-2026-geceler#yasit-kosesi) — published'da zorunlu */
   href?: string;
   /** Tahmini okuma süresi (dk) */
   readingMinutes?: number;
@@ -44,7 +44,7 @@ export interface IssueSection {
 export const defaultPlannedSections: IssueSection[] = [
   {
     slot: 'peer-column',
-    label: 'Akran Köşesi',
+    label: 'Yaşıt Köşesi',
     description: 'Sayının yazarlarından biri kendi defterinden bir nota imza atar',
     status: 'planned',
   },
@@ -68,7 +68,7 @@ export const defaultPlannedSections: IssueSection[] = [
  */
 export const slotDefaults: Record<IssueSectionSlot, { label: string; description: string }> = {
   'peer-column': {
-    label: 'Akran Köşesi',
+    label: 'Yaşıt Köşesi',
     description: 'Sayının yazarlarından biri kendi defterinden bir nota imza atar',
   },
   'reader-page': {

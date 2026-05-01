@@ -57,7 +57,7 @@ Estranova mevcut yapısı 5 ana kategori (Hormonal Geçiş / Beden & Yakınlık 
 1. **"Menopozda Libido Değişimi — Hormon mu, Yaşam mı?"** (Duygu — kişisel deneyim ekseni güçlü)
 2. **"Lokal Östrojen Tedavisi — Vajinal Krem ve Halka"** (Berna; teknik detay)
 3. **"Vajinal Lazer (Mona Lisa, FemiLift) — Bilim Ne Diyor?"** (Rima; deneysel + temkinli)
-4. **"Partnerle İletişim — Mahrem Konuları Konuşmak"** (Duygu; akran tonlu)
+4. **"Partnerle İletişim — Mahrem Konuları Konuşmak"** (Duygu; yaşıt tonlu)
 
 ---
 
@@ -104,7 +104,7 @@ Estranova mevcut yapısı 5 ana kategori (Hormonal Geçiş / Beden & Yakınlık 
 3. **"Fitoestrojenler — Soya, Keten, Kırmızı Yonca"** (popüler yanlış bilgi yoğun) — Rima
 4. **"Kalsiyum, K2 ve D Vitamini Üçlüsü"** — Berna (kemik cluster ile cross-link)
 5. **"Alkol ve Menopoz — Risk Tablosu"** — Berna
-6. **"Kafein ve Menopoz Belirtileri"** — Gamze (sade akran tonu)
+6. **"Kafein ve Menopoz Belirtileri"** — Gamze (sade yaşıt tonu)
 
 ---
 

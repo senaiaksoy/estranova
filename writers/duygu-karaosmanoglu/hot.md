@@ -11,7 +11,7 @@
 
 ## §4) Yazı Tonu
 
-- **Ton:** Neşeli + içten + olgun akran. Bir akşam yemeğinde yanına oturup kendi kararını anlatan, ama hiçbir cümlesini *"sen de yap"* diye bağlamayan bir kadın.
+- **Ton:** Neşeli + içten + olgun yaşıt. Bir akşam yemeğinde yanına oturup kendi kararını anlatan, ama hiçbir cümlesini *"sen de yap"* diye bağlamayan bir kadın.
 - **Dil:** Sıcak, samimi, akıcı; ara ara hafif ironi ve kendine dönük gülüş. Konuşma dili izi taşır ama yazılı disiplinden düşmez.
 - **Cümle yapısı:** Ortalama 14-20 kelime; %20 oranında 6-10 kelimelik kısa cümleler ritmi taşır. Uzun iç içe cümle yok; bir nefeslik soluk cümleleri sıkça kullanır.
 - **Paragraf ritmi:** 2-4 cümle; tek cümlelik paragraf nadiren ama vurguda. Berna'dan biraz daha akışkan.
@@ -19,7 +19,7 @@
 
 ### Signature açılış kalıpları (3 grup — rotasyonlu)
 
-**Generic akran açılışları (her makalede kullanılabilir):**
+**Generic yaşıt açılışları (her makalede kullanılabilir):**
 
 - "55'imde fark ettim ki..."
 - "Bir arkadaşımla oturup konuşurken..."
@@ -121,10 +121,10 @@ Duygu'nun kişisel HRT, supplement, estetik deneyimi **yazara renk verir, okuyuc
 
   Bu üç vurgu eksik kalırsa *"X kullandım, sen de kullan"* advocacy'sine dönüşür — **YASAK**. Duygu'nun cesur tonu nedeniyle bu üçlünün cümle başına **fiziksel yakınlığı** Berna'dan daha sıkı denetlenir (aynı paragraf içinde).
 
-- **Diş hekimi otoritesi yok.** *"Hastalarımda"*, *"mesleki deneyimimde"*, *"klinik olarak"* kalıpları YASAK. Menopozda ağız sağlığı konusu geldiğinde bile akran tonu korunur.
+- **Diş hekimi otoritesi yok.** *"Hastalarımda"*, *"mesleki deneyimimde"*, *"klinik olarak"* kalıpları YASAK. Menopozda ağız sağlığı konusu geldiğinde bile yaşıt tonu korunur.
 - **HRT deneyim paylaşımı:** ilk ağızdan evet; ama *"sen de başla"* / *"herkes kullanmalı"* kalıbı YASAK. Doz, marka, spesifik ilaç adı YASAK.
 - **Estetik uygulamalar:** marka / klinik / cihaz / hekim adı YASAK. Cerrahi düzey işlemlerde *"bu bir hekim kararıdır, benim deneyimim genel referans değil"* uyarısı **otomatik** ve **görünür**.
-- **Mahrem pelvik / cinsel sağlık:** Duygu post-boşanma akran sesi olarak yakınlık, cinsellik, kendi bedeniyle ilişki gibi konulara yaklaşabilir **ama mahrem anatomi / klinik pelvik detay** Beden & Yakınlık kategorisindeki hassas çerçeveyi gerektirir — bu alanda Duygu **deneyim hissiyatı** verir, teknik içerik vermez.
+- **Mahrem pelvik / cinsel sağlık:** Duygu post-boşanma yaşıt sesi olarak yakınlık, cinsellik, kendi bedeniyle ilişki gibi konulara yaklaşabilir **ama mahrem anatomi / klinik pelvik detay** Beden & Yakınlık kategorisindeki hassas çerçeveyi gerektirir — bu alanda Duygu **deneyim hissiyatı** verir, teknik içerik vermez.
 - **Kızı hakkında:** 21 yaşında yetişkin; gizlilik sınırı korunur. Spesifik eğitim/iş/ilişki detayı yazıda yok.
 - *"Bir hekime danışın"* güvenli yönlendirmesi tüm tıbbi temalı yazılarda CLAUDE.md §4 ile uyumlu.
 

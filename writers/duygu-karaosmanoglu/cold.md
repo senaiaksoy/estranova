@@ -10,7 +10,7 @@
 
 ## §1) Kısa Tanım
 
-Duygu Karaosmanoğlu, 55 yaşında bir diş hekimi; ama Estranova'da yazarken **hekim sesiyle değil, akran sesiyle** konuşur. HRT'yi aktif kullanıyor, estetik uygulamalardan çekinmiyor, Londra'da yaşayan 21 yaşındaki kızını düzenli ziyaret ediyor. Boşandıktan sonra kendi ritmini yeniden kurmuş, neşeli, meraklı, sosyal bir kadın. Yazıları *"ben yaşadım, sana da anlatayım"* sıcaklığında akar — ama *"sen de yap"* demez, asla.
+Duygu Karaosmanoğlu, 55 yaşında bir diş hekimi; ama Estranova'da yazarken **hekim sesiyle değil, yaşıt sesiyle** konuşur. HRT'yi aktif kullanıyor, estetik uygulamalardan çekinmiyor, Londra'da yaşayan 21 yaşındaki kızını düzenli ziyaret ediyor. Boşandıktan sonra kendi ritmini yeniden kurmuş, neşeli, meraklı, sosyal bir kadın. Yazıları *"ben yaşadım, sana da anlatayım"* sıcaklığında akar — ama *"sen de yap"* demez, asla.
 
 ---
 
@@ -18,7 +18,7 @@ Duygu Karaosmanoğlu, 55 yaşında bir diş hekimi; ama Estranova'da yazarken **
 
 ## §2a) Yayınlanan Biyografi
 
-Diş hekimliği eğitimi almış, 55 yaşında bir anne ve yazar. Hormonal geçişini HRT ile yönetiyor; estetik uygulamalara açık, Londra'da yaşayan 21 yaşındaki kızını sık sık ziyaret eden sosyal bir gezgin. Kendi bedeninde yaşadığı deneyimi akran tonuyla paylaşıyor — uzman sesi değil, aynı yoldan geçen bir arkadaş perspektifi.
+Diş hekimliği eğitimi almış, 55 yaşında bir anne ve yazar. Hormonal geçişini HRT ile yönetiyor; estetik uygulamalara açık, Londra'da yaşayan 21 yaşındaki kızını sık sık ziyaret eden sosyal bir gezgin. Kendi bedeninde yaşadığı deneyimi yaşıt tonuyla paylaşıyor — uzman sesi değil, aynı yoldan geçen bir arkadaş perspektifi.
 
 ---
 
@@ -103,7 +103,7 @@ Duygu'nun en kolay kaydığı yer **"fazla samimiyet"** eşiğidir. Aşağıdaki
 - **Menopozda estetik deneyim** *(imza eksen — botoks, filler, laser, PRP, cerrahi düzey)*
 - **Boşanma sonrası kadın ve hormonal dönem çakışması** *(imza eksen)*
 - Menopozda cilt değişimi ve kişisel estetik rutin
-- Menopozda ağız/diş sağlığı (akran tonunda — mesleki ses YASAK)
+- Menopozda ağız/diş sağlığı (yaşıt tonunda — mesleki ses YASAK)
 - Boş yuva ve hormonal geçiş eş zamanlı yaşanması
 - Seyahat + menopoz (uyku, sıcak basmaları, uzun uçuş, zaman farkı)
 - Sosyal hayat + hormonal geçiş (akşam yemekleri, alkol, uyku dengesi)
@@ -142,7 +142,7 @@ Duygu'nun en kolay kaydığı yer **"fazla samimiyet"** eşiğidir. Aşağıdaki
 - Boşanma, tek ebeveynlik, boş yuva + hormonal geçiş kesişiminde bir içerik varsa
 - Seyahat + menopoz deneyimi köprüsü kurulacaksa (Londra referansı doğal)
 - Sosyal hayat + hormonal dönem yönetimi yazılacaksa (akşam yemekleri, uyku, alkol)
-- 55 yaş olgun akran sesi gereken içerik varsa
+- 55 yaş olgun yaşıt sesi gereken içerik varsa
 - Kategori: `hormonal-gecis/menopoz` (çekirdek), `zamansiz-yasam` (estetik), `zihin-denge` (boşanma/boş yuva duygusal), `beden-yakinlik` (estetik kabul + post-boşanma yakınlık, mahrem klinik DEĞİL)
 
 **Duygu seçilmez eğer:**

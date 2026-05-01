@@ -71,7 +71,7 @@ Yayından önce üç onay gerekir:
 ## 9) Yazar Üslup Kartı — B. Selin (Işık Selin Günce)
 Bu kart, `src/data/writers.ts` içindeki `writingStyle` alanı ile birlikte uygulanır.
 
-- **Ses:** Sahici, sıcak, akran tonu yüksek; panik değil yön duygusu veren anlatım.
+- **Ses:** Sahici, sıcak, yaşıt tonu yüksek; panik değil yön duygusu veren anlatım.
 - **Ritim:** Kısa-orta cümle dengesi; sahne geçişi gibi akıcı ve nefesli kurgu.
 - **Çerçeve:** Önce deneyimi adlandır, sonra mekanizmayı sadeleştir, en sonda güvenli adım ver.
 
@@ -96,7 +96,7 @@ Bu kart, `src/data/writers.ts` içindeki `writingStyle` alanı ile birlikte uygu
 
 ### 10.1) Akademik / eski Türkçe yumuşatması (HARD CONSTRAINT — 2026-04-30)
 
-Estranova akran sesi (CLAUDE.md §3) için günlük konuşma dilinde nadir kullanılan akademik/eski Türkçe kelimeler **makale gövdesinde yasaktır**; muadiliyle değiştirilir. Profile/editöryal sınıflandırma terimi olarak istisna kalabilir (yazıya sızmaz).
+Estranova yaşıt sesi (CLAUDE.md §3) için günlük konuşma dilinde nadir kullanılan akademik/eski Türkçe kelimeler **makale gövdesinde yasaktır**; muadiliyle değiştirilir. Profile/editöryal sınıflandırma terimi olarak istisna kalabilir (yazıya sızmaz).
 
 | Yasak (akademik) | Önerilen muadil | Bağlam notu |
 |---|---|---|
@@ -139,11 +139,11 @@ Estranova yazıları "akıllı, samimi ve güvenilir bir not defteri" iddiasın�
 | Berna | Instagram tarama, hekim danışma, antrenman gözlemi | Feed/post + bedeniyle iletişim |
 | Alara | Mevsimsel saha, jim, geniş aile | Surf/at/jim antrenman + anne-anneanne-teyze |
 | Başak | 9 yıllık geçiş + yeni HRT + anne-kız üçgeni | Aile sahnesi + HRT yolculuğu + seyahat |
-| Duygu | Yeni şey deneme + Londra-İstanbul + yargısız dinleyici | Kızıyla telefon + kliniğin dekoru + akran sohbeti |
+| Duygu | Yeni şey deneme + Londra-İstanbul + yargısız dinleyici | Kızıyla telefon + kliniğin dekoru + yaşıt sohbeti |
 | Özlem | Sokratik soru + üst düzey iş çevresi | Para Durumu sahnesi + soru-eksenli sahne |
 | Rima | HRT karar süreci + araştırmacı titizlik | Sabah araştırma okuma + iç tartışma |
 | Gamze | Mutfak köşesi + HRT iç sorgulaması | Sabah mutfağı + kuşak aktarımı + bedeniyle konuşma |
-| Senai *(geçici yazar)* | Kendi geçişi + akran + editöryel masa | Hassas konularda; klinik gözlem **mutlak yasak** |
+| Senai *(geçici yazar)* | Kendi geçişi + yaşıt + editöryel masa | Hassas konularda; klinik gözlem **mutlak yasak** |
 
 ### 11.4) Hassas Sınırlar
 

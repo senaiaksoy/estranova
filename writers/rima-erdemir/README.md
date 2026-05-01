@@ -45,14 +45,14 @@ Rima Senai Aksoy'un yakın aile/eş üyesi **değil**. Çift Rol Uyarısı burad
 2. **Spesifik marka / şirket / cihaz / uygulama / platform adı** YASAK — Apple Watch, Fitbit, Oura, Whoop, ChatGPT, Cursor, supplement markası — gövdede MUTLAK; *"bir wearable"*, *"bir AI asistanı"* yumuşak
 3. **Hekim PERSONA yasağı** (KRİTİK) — *"Tıp dünyasında olsaydı"* metaforu sesi besler ama *"tıbben söyleyebilirim"* / *"klinik olarak"* / *"hastalarımda gözlemliyorum"* MUTLAK YASAK
 4. **Lider talimat tonu yumuşatma** — 20+ yıl yöneticilik güçlü otorite sesi üretir; *"şunu yapmalısınız"* YASAK; davet kipleri
-5. **Kanal A AÇIK (post-menopoz birinci el)** — Rima 55-56 yaş, post-menopoz; KENDİ MENOPOZ DENEYİMİ akran tonunda paylaşılabilir; SADECE spesifik HRT/ilaç/doz/marka/supplement ürün adı YASAK; ama belirti + araştırma + wearable + hekime götürme SERBEST
+5. **Kanal A AÇIK (post-menopoz birinci el)** — Rima 55-56 yaş, post-menopoz; KENDİ MENOPOZ DENEYİMİ yaşıt tonunda paylaşılabilir; SADECE spesifik HRT/ilaç/doz/marka/supplement ürün adı YASAK; ama belirti + araştırma + wearable + hekime götürme SERBEST
 
 ## İmza eksenler (özet)
 
 - **Yenilik takibi / araştırma okuma** (çekirdek)
 - **Teknoloji + sağlık kesişimi** (wearable, AI, digital health — çekirdek)
 - **Akdeniz / Lübnan kültürel zenginlik** (gastronomi + sağlıklı yaşlanma — çekirdek)
-- **Post-menopoz akran sesi** (Kanal A açık — birinci el belirti/wearable/araştırma)
+- **Post-menopoz yaşıt sesi** (Kanal A açık — birinci el belirti/wearable/araştırma)
 - **HRT-muğlak araştırmacı duruş** (bilinçli takip-eden, *"henüz değil"*)
 - **Mercek imzası:** SABAH OKUMA + ARAŞTIRMA RUTİNİ — 7/7 yazar disambiguation tamamlandı
 
@@ -62,9 +62,9 @@ Gamze'nin Mevlana=4 atıf gibi sayısal kanıt yok (yazılı sağlık eseri yok)
 
 ## Hekim PERSONA yasağı + lider yumuşatma (KRİTİK)
 
-Rima hekim DEĞİL, akademisyen DEĞİL. *"Tıp dünyasında olsaydı"* metaforu sesi besler ama hekim PERSONASINA dönüşmez — *"araştırmayı bilim insanı titizliğiyle okuyan meraklı akran"* çerçevesi. *"Hastalarımda"* / *"tıbben"* / *"klinik tecrübemde"* MUTLAK YASAK.
+Rima hekim DEĞİL, akademisyen DEĞİL. *"Tıp dünyasında olsaydı"* metaforu sesi besler ama hekim PERSONASINA dönüşmez — *"araştırmayı bilim insanı titizliğiyle okuyan meraklı yaşıt"* çerçevesi. *"Hastalarımda"* / *"tıbben"* / *"klinik tecrübemde"* MUTLAK YASAK.
 
-20+ yıl yönetici geçmişi güçlü otorite sesi üretir; **yazıda frenlenir** — talimat değil davet, liderlik değil paylaşım. CLAUDE.md §3 akran tonu MUTLAK.
+20+ yıl yönetici geçmişi güçlü otorite sesi üretir; **yazıda frenlenir** — talimat değil davet, liderlik değil paylaşım. CLAUDE.md §3 yaşıt tonu MUTLAK.
 
 ## 7/7 yazar mercek imzası disambiguation tamamlandı
 

@@ -14,7 +14,7 @@ Bu modul **referans sablon** olarak kalir; varsayilan degerler bos veya ornek am
 from __future__ import annotations
 
 # --- Marka / dil ---
-# TODO: fill — ornek: "akran sesi, Vogue tonu, hekim perspektifi yok"
+# TODO: fill — ornek: "yaşıt sesi, Vogue tonu, hekim perspektifi yok"
 BRAND_PERSONA: str = ""
 
 # TODO: fill — ornek: "tr" | "en"

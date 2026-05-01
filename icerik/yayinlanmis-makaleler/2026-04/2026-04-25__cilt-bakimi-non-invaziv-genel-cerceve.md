@@ -1,6 +1,6 @@
 ---
 title: "Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve"
-description: "Menopozda cilt bakımı için günlük rutin (yıka-nemlendir-koru-aktifler) ile ameliyatsız profesyonel yaklaşımları (radyofrekans, ultrason, peeling) tek bir akran çerçevesinde toplayan rehber. Marka veya satış önerisi olmadan, kanıt düzeyiyle."
+description: "Menopozda cilt bakımı için günlük rutin (yıka-nemlendir-koru-aktifler) ile ameliyatsız profesyonel yaklaşımları (radyofrekans, ultrason, peeling) tek bir yaşıt çerçevesinde toplayan rehber. Marka veya satış önerisi olmadan, kanıt düzeyiyle."
 writer: duygu-karaosmanoglu
 publishedDate: "25 Nisan 2026"
 publishedDateIso: 2026-04-25
@@ -8,7 +8,7 @@ url: /zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz cilt bakımı", "günlük cilt rutini", "ameliyatsız", "menopoz cildi", "hyaluronik asit", "seramid", "niasinamid", "retinol", "SPF", "kollajen", "topikal bakım", "cilt yaşlanması"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve

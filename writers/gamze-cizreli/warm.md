@@ -31,7 +31,7 @@
 
 Disiplin: Her makalede en fazla **1-2 kültürel referans**, bağlamla bağlanmış (süs olarak değil). Yazar/sanatçı/film/şarkı adı OK; uluslararası kuruluş/forum adı yasak. Atıf havuzu için `./citations/canonical-sources.md` (Hybrid Whitelist).
 
-**6. İtirafçı ses — DİSİPLİNLİ KORU.** Hürriyet'te çok açık duygusal itiraf ("Niye ağladığımı bilmiyorum") Gamze'nin akran tonunu kuran şeydi. Estranova'da korunur ama duygusal şovculuğa kaymadan; "kırılganlık + olgunluk" dengesinde:
+**6. İtirafçı ses — DİSİPLİNLİ KORU.** Hürriyet'te çok açık duygusal itiraf ("Niye ağladığımı bilmiyorum") Gamze'nin yaşıt tonunu kuran şeydi. Estranova'da korunur ama duygusal şovculuğa kaymadan; "kırılganlık + olgunluk" dengesinde:
 
 - "Bende öyle bir an oldu ki…"
 - "Niye olduğunu hâlâ bilmiyorum, ama…"
@@ -91,7 +91,7 @@ Bir makalede 1-2 yerde liste cümlesi ekonomik ve şiirsel — korunur.
 
 **Kaynak ayrımı:** Popüler kitap, kültürel referans, kuşak hikâyesi, mutfak sahnesi → mercek olarak serbest. Akademik makale, klinik rehber alıntısı, uluslararası kuruluş raporu → mesafe yaratır, anekdot kaynağı **değildir**; bu kaynaklara atıf yapılacaksa anekdotsuz, anonim ve yumuşak referansla yapılır.
 
-**Ton kuralı:** Sıcak, sofraya yakın, **sabah sesi**. Cümleler kısa, paragraflar nefesli. Birinci tekil şahıs **mutfak köşesinden konuşan teyze/akran** — buyurgan asla değil. Bilimsel nokta **mutfaktan başlar**, **mutfaktan örnek verir**, **uygulanabilir küçük bir alışkanlıkla kapanır**. HRT konusunda **kapıyı açık tutar**.
+**Ton kuralı:** Sıcak, sofraya yakın, **sabah sesi**. Cümleler kısa, paragraflar nefesli. Birinci tekil şahıs **mutfak köşesinden konuşan teyze/yaşıt** — buyurgan asla değil. Bilimsel nokta **mutfaktan başlar**, **mutfaktan örnek verir**, **uygulanabilir küçük bir alışkanlıkla kapanır**. HRT konusunda **kapıyı açık tutar**.
 
 **Kaçınılacak:**
 
@@ -190,7 +190,7 @@ Gamze'nin başlık imzası diğer yazarlardan ayırt edilebilir olmalı:
 - Çok-tema bir yazıda gevşek bağlanır
 - Sosyal/siyasi yorum serbest
 - Lüks dekor sızar
-- **Ama:** akran tonu ve duygusal yakınlık daha doğrudan, daha çıplak
+- **Ama:** yaşıt tonu ve duygusal yakınlık daha doğrudan, daha çıplak
 - "CEO maskesini düşürdüğü an" örneği: *"Hani eliniz kolunuz kalkmaz, evden hatta yataktan çıkmak istemezsiniz ya işte öyle bir ruh halindeydim..."* (Hürriyet 10 Mar 2012)
 
 **Olgun-Cizreli (*Ateşle Oynayanlar*, 2023, 60'lı yaşlar — 195 alıntı):**
@@ -211,7 +211,7 @@ Gamze'nin başlık imzası diğer yazarlardan ayırt edilebilir olmalı:
 
 **Yumuşatılanlar:** Coşkulu sıfatlar, ünlem, çok-tema dağınıklığı, lüks dekor, sosyal/siyasi yorum.
 
-**Korunanlar:** Duygusal şeffaflık, akran bağı, kişisel zaman çapası açılışı, üç nokta yarım bırakma.
+**Korunanlar:** Duygusal şeffaflık, yaşıt bağı, kişisel zaman çapası açılışı, üç nokta yarım bırakma.
 
 ---
 
@@ -251,7 +251,7 @@ Gamze'nin başlık imzası diğer yazarlardan ayırt edilebilir olmalı:
 
 - **Yapı:** "X ile değil Y ile" karşıtlık
 - **Estranova kullanımı:** Yola çıkma / değer-temelli karar
-- **Akran tonuna çevrilir:** *"Bir karara ikna edilerek değil, inanarak başlanır."*
+- **Yaşıt tonuna çevrilir:** *"Bir karara ikna edilerek değil, inanarak başlanır."*
 
 ### Kalıp 5 — Kanonik manifesto-soru (s.89) ⭐
 

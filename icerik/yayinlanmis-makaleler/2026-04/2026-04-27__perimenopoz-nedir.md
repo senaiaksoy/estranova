@@ -8,7 +8,7 @@ url: /hormonal-gecis/perimenopoz/perimenopoz-nedir
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["perimenopoz", "geçiş dönemi", "hormon dalgalanması", "düzensiz adet", "menopoz", "östrojen"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Perimenopoz Nedir? — Temel Rehber
@@ -86,7 +86,7 @@ zamanı.
 ## Hekimle Ne Zaman Konuşmalı?
 
 Belirtiler yaşam kalitemizi düşürmeye başladığında, "bu yaşta normal" deyip taşımak zorunda değiliz.
-Bunu söylerken bir hekim sesi olarak değil, bir akran olarak konuşuyorum.
+Bunu söylerken bir hekim sesi olarak değil, bir yaşıt olarak konuşuyorum.
 
 Yoğun ya da uzun süren kanamalar, ani ve belirgin adet değişimleri, dirençli uykusuzluk, yoğun kaygı hali
 veya beklenmedik ağrı varsa gecikmeden bir hekimle konuşmak gerekiyor. Sahnede bir replik unutursak hemen

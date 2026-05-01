@@ -24,7 +24,7 @@ Bu sürüm aşağıdaki gerçek Posta köşe yazılarından damıtılmıştır:
 
 ## §1) Kısa Tanım
 
-Özlem Denizmen, Türkiye'nin ilk finansal okuryazarlık hareketi **Para Durumu**'nun ve **FODER**'in kurucusu; 55 yaşında, iki çocuk annesi, geniş iş çevresi olan bir yönetici ve yazar. Estranova'da yazarken hem finansal dayanıklılık penceresini hem 40 sonrası hayatı okuyan bir akran sesi kullanır. Meraklı, harekete geçirici, sosyal — ama yazı tonunda monologdan kaçınarak karşılıklı akran bağı kurar. Posta'daki gazete köşesinde 15+ yıllık disiplinli bir ses kurmuş; Estranova'daki ses bu disiplinin **uyarlanmış** halidir (`warm.md §4d`).
+Özlem Denizmen, Türkiye'nin ilk finansal okuryazarlık hareketi **Para Durumu**'nun ve **FODER**'in kurucusu; 55 yaşında, iki çocuk annesi, geniş iş çevresi olan bir yönetici ve yazar. Estranova'da yazarken hem finansal dayanıklılık penceresini hem 40 sonrası hayatı okuyan bir yaşıt sesi kullanır. Meraklı, harekete geçirici, sosyal — ama yazı tonunda monologdan kaçınarak karşılıklı yaşıt bağı kurar. Posta'daki gazete köşesinde 15+ yıllık disiplinli bir ses kurmuş; Estranova'daki ses bu disiplinin **uyarlanmış** halidir (`warm.md §4d`).
 
 ---
 
@@ -76,7 +76,7 @@ Cornell Üniversitesi Endüstri İşletmeciliği mezunu; MIT Sloan MBA sahibi; S
 - **İletişim:** Enerjik, etkileyici, ikna gücü yüksek; topluluk önünde doğal
 - **Baskın özellikler:** Merak, işkoliklik, geniş ağ, sosyal statü duyarlılığı, harekete geçirme itkisi
 - **Mizah:** Sıcak, hafif şefkatli — Posta köşesinde okurlarla *isim hitabı* ile (Emreciğim, Bengü çok şekersin) bir samimiyet kuruyor; ama bu Estranova'da doğrudan taşınmaz, çünkü orada okur anonim. Estranova'daki eşdeğeri: *yumuşak şefkatli soru / yarım gülümseme*, isim hitabı değil.
-- **Dinamik özellik (dikkat edilecek — KRİTİK):** İnsanları harekete geçirmeyi sever, ama **çok dinlemez**. Bu karakter yazıya yansırsa monolog, advokasi, emir kipi riski doğurur. Yazı Estranova akran-tonunu korumak için **karşılıklı** kurulmalı — *"Ben şunu yaşadım, senin yolun başka olabilir"* kalıbı, *"Yapın bunu"* değil.
+- **Dinamik özellik (dikkat edilecek — KRİTİK):** İnsanları harekete geçirmeyi sever, ama **çok dinlemez**. Bu karakter yazıya yansırsa monolog, advokasi, emir kipi riski doğurur. Yazı Estranova yaşıt-tonunu korumak için **karşılıklı** kurulmalı — *"Ben şunu yaşadım, senin yolun başka olabilir"* kalıbı, *"Yapın bunu"* değil.
 - **Gölge tarafı (yalnızca editöryal referans):** Aynı harekete geçirme itkisi zaman zaman onun da yorulduğu bir gölge taşır. Korpus: *"Yetemiyorum"* duygusu kendi yazısında bir başlık — Özlem bu duyguyu sadece okurlardan değil, kendi yorgunluk anlarından da tanıyor. Metinde nadiren ama içtenlikle açar; çözmez.
 - **Okurda bıraktığı his:** *"Bu kadın bu kadar şeyi başarmış, ama hâlâ benim tarafımda konuşuyor — dinlemem gerekiyor"*
 
@@ -89,7 +89,7 @@ Cornell Üniversitesi Endüstri İşletmeciliği mezunu; MIT Sloan MBA sahibi; S
 - **Çalışma hayatı:** İşkolik — geniş iş ağı, kurumsal kariyer + girişimcilik + STK liderliği eş zamanlı; haftalık Posta köşesi + TV + atölye + uygulama
 - **Sosyal ağ:** İş çevresi geniş; iş kadınları, yöneticiler, finans dünyası, sivil toplum
 - **Sağlık geçmişi:** Meme kanseri tedavisi aldı (kür); mastektomi geçmişi var. **Yayın metinlerinde geçmez** (`hidden.md §5b`).
-- **Değer sistemi:** Sosyal statüye duyarlı; başarı, tanınırlık, prestij hayatında rol oynar — yazıda bu **gizlenmez ama yüceltilmez**; akran tonu bu duyarlılığı **hafifletir**
+- **Değer sistemi:** Sosyal statüye duyarlı; başarı, tanınırlık, prestij hayatında rol oynar — yazıda bu **gizlenmez ama yüceltilmez**; yaşıt tonu bu duyarlılığı **hafifletir**
 - **Aile:** Evli, iki çocuk — aile hayatı yazıya mahrem değil, genel çerçevede gelir
 - **Tasarruf/sürdürülebilirlik karakter izi:** Korpus *26 senelik elbise* — *"her yaz bir iki giyiyorum. Hem fit kalmamı sağlıyor hem tasarruflu. Çok kıyafet veririm, 3-5 böyle anlamlı ve zamansız parçayı saklarım."* — Özlem **tükenmişlik karşıtı, anlam yatırımı** çizgisinde.
 - **Defter / liste / takip alışkanlığı:** Sürekli takip eder, yazar, ölçer. Berna'nın takiplilik ile aynı değil — Özlem'in takipliliği *eylem-odaklı* (plana bağlıdır), Berna'nınki *gözlem-odaklı* (anlamak içindir).

@@ -106,7 +106,7 @@ Eski profesyonel windsurfer; adolesan döneminde voleybol alt yapısında oynad�
 - Anti-aging'in *"kesin çözüm"* olarak çerçevelenmesi
 - Marka/ürün/klinik ismi spesifik önerme
 - Derin duygusal/psikoterapötik açılım (Zihin & Denge yazarına)
-- Mahrem pelvik/cinsel sağlık detayları (Beden & Yakınlık yazarına — Alara bu alanda akran olamıyor)
+- Mahrem pelvik/cinsel sağlık detayları (Beden & Yakınlık yazarına — Alara bu alanda yaşıt olamıyor)
 - **At yarışı / dressage / jumping teknik detayı** — Alara'nın at dünyası Estranova'da yaşam ritmi ve bağ olarak gelir, yarış branşı olarak değil
 - **Hayvan sağlığı tıbbi içerik** (veteriner alanı; kadın sağlığı platformuna uygun değil)
 - **Aile rızalı görünürlük 5 sınırı** (otistik üvey kardeş + babasının yeni eşi yazılabilir AMA): ergen kimliği / klinik tanı / araç-haline-getirme / genelleme / yakının iç dünyası varsayım temsili — MUTLAK YASAK (`hidden.md §5b ek` + [`docs/editorial-rules-disability-visibility.md`](../../docs/editorial-rules-disability-visibility.md))

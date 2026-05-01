@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["gece terlemesi", "menopoz", "uyku", "sıcak basması", "mahrem sağlık", "çarşaf", "yatak takımı"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Gece Terlemesi ve Uyku: Utançsız Bir Bakış

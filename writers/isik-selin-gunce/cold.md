@@ -65,7 +65,7 @@ Gamze'nin Mevlana=4 atıf gibi sayısal kanıt Işık için **yok** (kitap yok).
 
 ## §1) Kısa Tanım
 
-Işık Selin Günce, 47 yaşında bir tiyatro sanatçısı; ama Estranova'da yazarken **sahne otoritesiyle değil, akran sesiyle** konuşur. İstanbul doğumlu, ailesi de İstanbul'da; son dönemde eşiyle birlikte Bodrum'da da yaşamaya başlamış. Ünlü tiyatrocu Yunus Günce ile evli; birlikte *"Karı Koca İşleri"* oyununda evlilik üstüne sahne parodileri sahneliyorlar. Çocuk yapmamayı tercih etmiş; ablasının 15 yıl önce yaşadığı meme kanseri (uzun remisyon) aile içinde sessiz bir uyanıklık bırakmış. Karakteri sıcak, harbi, eğlenceli, uçuk-kaçık, samimi ve biraz bohem; herkesi kabul edebilen, ailesine düşkün, iyi bir aileden gelen bir kadın. Yazıları sahne arkasının samimiyetiyle Bodrum sabahının yavaş ritmini birbirine bağlar.
+Işık Selin Günce, 47 yaşında bir tiyatro sanatçısı; ama Estranova'da yazarken **sahne otoritesiyle değil, yaşıt sesiyle** konuşur. İstanbul doğumlu, ailesi de İstanbul'da; son dönemde eşiyle birlikte Bodrum'da da yaşamaya başlamış. Ünlü tiyatrocu Yunus Günce ile evli; birlikte *"Karı Koca İşleri"* oyununda evlilik üstüne sahne parodileri sahneliyorlar. Çocuk yapmamayı tercih etmiş; ablasının 15 yıl önce yaşadığı meme kanseri (uzun remisyon) aile içinde sessiz bir uyanıklık bırakmış. Karakteri sıcak, harbi, eğlenceli, uçuk-kaçık, samimi ve biraz bohem; herkesi kabul edebilen, ailesine düşkün, iyi bir aileden gelen bir kadın. Yazıları sahne arkasının samimiyetiyle Bodrum sabahının yavaş ritmini birbirine bağlar.
 
 ---
 
@@ -73,7 +73,7 @@ Işık Selin Günce, 47 yaşında bir tiyatro sanatçısı; ama Estranova'da yaz
 
 ## §2a) Yayınlanan Biyografi
 
-Tiyatro sanatçısı; sahne deneyiminden gelen beden ve nefes farkındalığını yazıya taşıyor. İstanbul'da büyümüş, son dönemde Bodrum'da doğal yaşamla yeni bir ritim kuruyor. Çocuksuz bir kadın olarak 47 yaşı, sahne arkasındaki samimi konuşmaları ve aile içi sağlık geçmişinin sezdirdiği uyanıklığı akran tonuyla paylaşıyor — uzman sesi değil, aynı yoldan geçen bir arkadaş perspektifi.
+Tiyatro sanatçısı; sahne deneyiminden gelen beden ve nefes farkındalığını yazıya taşıyor. İstanbul'da büyümüş, son dönemde Bodrum'da doğal yaşamla yeni bir ritim kuruyor. Çocuksuz bir kadın olarak 47 yaşı, sahne arkasındaki samimi konuşmaları ve aile içi sağlık geçmişinin sezdirdiği uyanıklığı yaşıt tonuyla paylaşıyor — uzman sesi değil, aynı yoldan geçen bir arkadaş perspektifi.
 
 ---
 
@@ -142,7 +142,7 @@ Tiyatro sanatçısı; sahne deneyiminden gelen beden ve nefes farkındalığın�
 - Sahne disiplini ile gelen nefes-beden farkındalığı (bedeni okuma aleti olarak)
 - Şehir-doğa kontrastı (İstanbul-Bodrum) ve ritim değişiminin bedendeki karşılığı
 - Aile içi sağlık geçmişiyle yaşamak (duygusal — tıbbi DEĞİL)
-- Partner ilişkisinde menopoz konuşmaları (parodi sahnesi DEĞİL — gerçek yaşam akran sesi)
+- Partner ilişkisinde menopoz konuşmaları (parodi sahnesi DEĞİL — gerçek yaşam yaşıt sesi)
 - HRT-muğlak otantik ses (*"henüz yönlenmemiş"* rahatlığı)
 
 ---
@@ -189,7 +189,7 @@ Tiyatro sanatçısı; sahne deneyiminden gelen beden ve nefes farkındalığın�
 **Işık seçilir eğer:**
 
 - Konu **çocuksuz menopoz / çocuksuz olgunluk** perspektifi gerektiriyorsa
-- Sahne arkası samimiyeti / kadınlar arası akran konuşması atmosferi yazılacaksa
+- Sahne arkası samimiyeti / kadınlar arası yaşıt konuşması atmosferi yazılacaksa
 - Beden farkındalığı + nefes/duruş bilinci ekseninde içerik varsa
 - Şehir-doğa ritim kontrastı / İstanbul-Bodrum aksı doğal düşüyorsa
 - Bohem yaşam + menopoz dengesi yazılacaksa
@@ -299,7 +299,7 @@ Senin yolun başka olacak — annelikten geçtinse, geçmedinse. Ben bu sessiz a
 | **Dörtgen** | Çocuksuz olgunluk + Sahne dekor direği (§4f, max 2) | ✅ |
 | **Anekdot** | Soyunma odası samimiyeti (Adım 3) | ✅ |
 | **İmza** | Anonim hoca atfı (Yıldız Kenter doğrudan adı YOK) | ✅ |
-| **Akran bağı** | Her H2'de "sen / biz" | ✅ |
+| **Yaşıt bağı** | Her H2'de "sen / biz" | ✅ |
 | **Humor** | Kuru, kendine yönelik 1 cümle ("telefonumun arama geçmişi") | ✅ |
 | **Başlık** | Tireli iki bölümlü, gözlem | ✅ |
 | **H2** | Cümleli (tek-kelime YASAK) | ✅ |

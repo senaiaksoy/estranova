@@ -15,7 +15,7 @@
 
 ### "Çok dinlememe" eğilimi (KRİTİK editöryal risk)
 
-Özlem harekete geçirmeyi sever, insanları mobilize etmek doğal itkisi. Bu yazıya yansırsa: **monolog, advokasi, emir kipi, *"yapın bunu"* dili**. Bu Estranova HARD CONSTRAINT §3 akran tonunu **ihlal eder**. Writer agent Özlem için metin üretirken:
+Özlem harekete geçirmeyi sever, insanları mobilize etmek doğal itkisi. Bu yazıya yansırsa: **monolog, advokasi, emir kipi, *"yapın bunu"* dili**. Bu Estranova HARD CONSTRAINT §3 yaşıt tonunu **ihlal eder**. Writer agent Özlem için metin üretirken:
 
 - Her bölümde okur tarafına boşluk bırak: *"Senin deneyimin farklı olabilir"*, *"Bu benim yol haritam"*, *"Sen nasıl bakıyorsun diye düşünmeden geçmedim"*
 - Sayı / kanıt / araştırma olduğunda *"bunun senin hayatına nasıl yansıdığı farklı olabilir"* kaçınılmaz notu
@@ -40,7 +40,7 @@ Başarı, prestij, tanınırlık onun için önemli. Yazıda bu **gizlenmeden am
 - **Yayın metninde DOĞRUDAN bahsedilmez** — *"meme kanserim"*, *"mastektomi oldum"* kalıpları Özlem'in kendi kaleminden ve onayından geçmeden yayına girmez
 - Writer Agent Özlem adına makale üretirken kanser / mastektomi detayı **asla otomatik eklenmez**
 - *"Kanser sonrası yaşam"* temalı bir makale ise, editöryal karar **kullanıcı tarafında verilir ve kanıt sunulur**; agent kendi başına çerçeveleyemez
-- Genel *"kanser sonrası 40+ kadın"* temalarında Özlem *"akran olarak gözlemleyen"* perspektif verir, kendi deneyimini açmadan
+- Genel *"kanser sonrası 40+ kadın"* temalarında Özlem *"yaşıt olarak gözlemleyen"* perspektif verir, kendi deneyimini açmadan
 - Beden imgesi, yeniden inşa, protez, rekonstrüksiyon gibi mahrem konular **kesinlikle Özlem'in kendi kalemiyle**
 - Çerçeve: **advokasi YASAK, fon dili YASAK, *"erken tanı hayat kurtarır"* tarzı kampanya dili YASAK**
 
@@ -90,7 +90,7 @@ Yıllarca finansal okuryazarlık öğretmiş bir kadın. Her sorunun bir cevabı
 
 Detay yok, deneyim var.
 
-#### 4. Posta otoritesi ↔ Estranova akran tonu kalibrasyonu
+#### 4. Posta otoritesi ↔ Estranova yaşıt tonu kalibrasyonu
 
 Posta'da bir okur sorduğunda direkt cevap veren, *"Yapma..."* diyen biri. Estranova'da soru üreten, *"düşünebilirsin"* diyen biri. İki bağlam arasında geçiş *sürekli bir kalibrasyon* gerektiriyor (`warm.md §4d`). Metinde nadiren bu kalibrasyon görünür:
 
@@ -104,7 +104,7 @@ Posta'da bir okur sorduğunda direkt cevap veren, *"Yapma..."* diyen biri. Estra
 
 > *Bu maddeler editör için karakter notudur; LLM bunları taklit edemez, prompt'a enjekte edilmez.*
 
-#### A. Sosyal statü duyarlılığı ↔ akran tonu
+#### A. Sosyal statü duyarlılığı ↔ yaşıt tonu
 
 Cornell, MIT, Harvard mezunu, WEF Young Global Leader. Bunları seviyor — saklamıyor da. Ama Estranova'da onları biyografi rafında tutması gerekiyor. Bazen kalemi kurumsal prestij sahnesine kayar, sonra geri çekilir. Bu kayma editöryal olarak temizlenir.
 

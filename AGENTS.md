@@ -356,13 +356,13 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 | Yazar | Anekdot ekseni özet |
 |---|---|
 | Berna Aksoy | Sabah Instagram tarama ritüelleri; hekim danışma kararları; antrenman/Apple Watch gözlemleri |
-| Alara Baykent | Mevsimsel saha (yaz: surf / kış: at); jim akran sahneleri; geniş aile (anne/baba/anneanne/teyze) |
-| Başak Pelister | Plume + Mahmure imzası: soru-cevap tekniği yoğun (her bölümde 1+ okurla diyalog sorusu), soru başlıklı H2'ler, üç nokta (…) ritmi, samimi itiraflar, "Aslında her şey…" akran açılışı, gündelik anglizm (self-care/ghosting/longevity); 9 yıllık menopoz + yeni HRT yolculuğu; anne+kız üçgeni; seyahat/sahne/kıyafet ritüelleri. YASAK: marka jargonu (Aşk Marka, vizyon mimarı), lüks marka adı (LVMH/Dior), kendine ad-koyma ("Başak Pelister olarak…"), ünlem yoğunluğu (max 1/makale), ilişki/kadın-erkek ekseni |
+| Alara Baykent | Mevsimsel saha (yaz: surf / kış: at); jim yaşıt sahneleri; geniş aile (anne/baba/anneanne/teyze) |
+| Başak Pelister | Plume + Mahmure imzası: soru-cevap tekniği yoğun (her bölümde 1+ okurla diyalog sorusu), soru başlıklı H2'ler, üç nokta (…) ritmi, samimi itiraflar, "Aslında her şey…" yaşıt açılışı, gündelik anglizm (self-care/ghosting/longevity); 9 yıllık menopoz + yeni HRT yolculuğu; anne+kız üçgeni; seyahat/sahne/kıyafet ritüelleri. YASAK: marka jargonu (Aşk Marka, vizyon mimarı), lüks marka adı (LVMH/Dior), kendine ad-koyma ("Başak Pelister olarak…"), ünlem yoğunluğu (max 1/makale), ilişki/kadın-erkek ekseni |
 | Dt. Duygu Karaosmanoğlu | Londra-İstanbul gel-git (kızı); klinik dekoru (otorite değil); yeni şey deneme |
 | Özlem Denizmen | Para Durumu sahneleri; üst düzey iş çevresi sokratik soru; finansal karar çerçevesi (analoji) |
 | Rima Erdemir | Sabah araştırma okuma; HRT karar süreci iç tartışması; teknoloji-sağlık gözlemi |
 | Gamze Cizreli | Hürriyet köşe imzası (2012-2023): kişisel zaman çapası açılışı ("Geçen hafta…"), kültürel-edebi referans köprüsü (kitap/film/şarkı), üç nokta (…) yarım bırakma, itirafçı kırılganlık, liste cümleleri; sabah mutfak ritüelleri; pazar/küçük üretici; HRT iç sorgulaması (henüz başlamamış). YASAK: lüks dekor, çok-tema dağınıklık, ünlem yoğunluğu, sosyal/siyasi yorum |
-| Senai Aksoy *(geçici yazar)* | Kendi geçişi; akran çevresi; editöryel masa; mahrem konularda gizlilik mutlak |
+| Senai Aksoy *(geçici yazar)* | Kendi geçişi; yaşıt çevresi; editöryel masa; mahrem konularda gizlilik mutlak |
 
 **Operasyonel kural:**
 - **Her makalede 1, en fazla 2 anekdot.** Daha fazlası karikatür, daha azı manifesto-aligned değil.
@@ -375,9 +375,9 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 
 ## Persona ve Dış Referans (CLAUDE.md HARD CONSTRAINT)
 
-- **Yazar persona:** Tıp dışı 40+ kadın akran; Vogue / Elle / Marie Claire tonu. Hekim perspektifi **YASAK**.
+- **Yazar persona:** Tıp dışı 40+ kadın yaşıt; Vogue / Elle / Marie Claire tonu. Hekim perspektifi **YASAK**.
 - **Dış URL link YASAK** — yumuşak referans (“araştırmalar gösteriyor”) kabul. Kuruluş adı (NAMS / NICE / Mayo vb.) cümle içine yerleştirme **YASAK**.
-- **Humanize:** Her makalede en az 1 akran / deneyim cümlesi.
+- **Humanize:** Her makalede en az 1 yaşıt / deneyim cümlesi.
 - **FAQ:** `pratik_veya_sss` 3–5 konuya özgü gerçek soru.
 
 Kural detayı: **`CLAUDE.md`** (§3 + §4 alt bölümleri). Operasyonel detay: **[docs/PIPELINE.md](docs/PIPELINE.md)** + **[docs/style-rules-map.md](docs/style-rules-map.md)**.

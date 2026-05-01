@@ -1,6 +1,6 @@
 ---
 title: "Menopozda Cilt Değişimleri — Aynaya Sakince Bakmak ve Bakım Rehberi"
-description: "Menopozda cilt neden ve nasıl değişir, hangi bakım adımları gerçekten fark yaratır, hangileri pahalı umut? HRT yolculuğunu yaşayan bir akranın deneyim notlarıyla."
+description: "Menopozda cilt neden ve nasıl değişir, hangi bakım adımları gerçekten fark yaratır, hangileri pahalı umut? HRT yolculuğunu yaşayan bir yaşıtın deneyim notlarıyla."
 writer: duygu-karaosmanoglu
 publishedDate: "28 Nisan 2026"
 publishedDateIso: 2026-04-28
@@ -8,7 +8,7 @@ url: /beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["menopoz", "cilt", "kolajen", "östrojen", "retinoid", "hyaluronik asit", "HRT cilt", "cilt bakım rutini", "40+ kadın", "vulvovajinal"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Menopozda Cilt Değişimleri — Aynaya Sakince Bakmak ve Bakım Rehberi
@@ -21,7 +21,7 @@ anladım: bu artık tek bir gecenin hikayesi değil; cildim bir yerden başka bi
 
 Bu yazıyı yazma fikri o sabahlardan çıktı. Sana hekim olarak değil — Londra ile İstanbul arasında gidip gelen,
 HRT yolculuğunu yaşayan, denediği ürünleri unuttuğunda kendine "bu kadarı yetti, bir sayfaya yazsam" diyen bir
-akran olarak yazıyorum. Bende işe yarayan her şeyin sende de yarayacağını söylemiyorum; ama dönem aynı, dert
+yaşıt olarak yazıyorum. Bende işe yarayan her şeyin sende de yarayacağını söylemiyorum; ama dönem aynı, dert
 aynı, sorular birbirine benziyor.
 
 ## Östrojen Cildimle Konuşurken Ne Yapıyor?

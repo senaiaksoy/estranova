@@ -1,6 +1,6 @@
 ---
 title: "Menopozda Ruh Hali Değişimleri — Bir Dalga, Bir Soru, Bir Eşik"
-description: "Menopoz geçişinde duygudurum dalgalanmalarını, depresyon ve anksiyete sınırını, HRT–SSRI–terapi seçeneklerini ve \"bu hâlâ ben miyim?\" sorusunu akran tonuyla ele alan rehber."
+description: "Menopoz geçişinde duygudurum dalgalanmalarını, depresyon ve anksiyete sınırını, HRT–SSRI–terapi seçeneklerini ve \"bu hâlâ ben miyim?\" sorusunu yaşıt tonuyla ele alan rehber."
 writer: basak-pelister
 publishedDate: "28 Nisan 2026"
 publishedDateIso: 2026-04-28
@@ -8,7 +8,7 @@ url: /zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "perimenopoz", "depresyon", "anksiyete", "duygudurum", "ruh hali", "HRT", "SSRI", "psikoterapi"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Menopozda Ruh Hali Değişimleri — Bir Dalga, Bir Soru, Bir Eşik

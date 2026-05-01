@@ -1,7 +1,7 @@
 # Estranova Yayınlanmış Makale Arşivi
 
-Toplam makale: **43**
-Son export: 2026-04-30
+Toplam makale: **44**
+Son export: 2026-05-01
 
 Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik üretilir. `src/pages/` altındaki Astro source'tan metadata, `dist/` altındaki build HTML'den gövde markdown'ına dönüştürülür. Aynı içerik aynı anda obsidian vault'a (`<VAULT>/articles/`) da yazılır.
 
@@ -25,19 +25,25 @@ npm run articles:export # markdown'a dök
 
 ## İçindekiler (yeniden eskiye)
 
+### 2026-05
+
+| Tarih | Yazar | Başlık | Bölüm |
+|---|---|---|---|
+| 2026-05-01 | - | [Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı](2026-05/2026-05-01__menopozda-idrar-kacirma-pelvik-taban.md) | Beden & Yakınlık |
+| 2026-05-01 | - | [Sıcacık Köşe — Bu Ay Kadın Dünyasında Ne Konuşuluyor?](2026-05/2026-05-01__nisan-2026.md) | editorun-kosesi |
+| 2026-05-01 | - | [Nasıl Araştırıyoruz](2026-05/2026-05-01__nasil-arastiriyoruz.md) | editoryal-politika |
+| 2026-05-01 | - | [Tarama ve İzlem: Genel Çerçeve](2026-05/2026-05-01__tarama-testleri.md) | Hormonal Geçiş |
+
 ### 2026-04
 
 | Tarih | Yazar | Başlık | Bölüm |
 |---|---|---|---|
-| 2026-04-30 | - | [Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı](2026-04/2026-04-30__menopozda-idrar-kacirma-pelvik-taban.md) | Beden & Yakınlık |
-| 2026-04-30 | - | [Sıcacık Köşe — Bu Ay Kadın Dünyasında Ne Konuşuluyor?](2026-04/2026-04-30__nisan-2026.md) | editorun-kosesi |
-| 2026-04-30 | - | [Nasıl Araştırıyoruz](2026-04/2026-04-30__nasil-arastiriyoruz.md) | editoryal-politika |
-| 2026-04-30 | - | [Tarama ve İzlem: Genel Çerçeve](2026-04/2026-04-30__tarama-testleri.md) | Hormonal Geçiş |
+| 2026-04-30 | berna-aksoy | [Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması](2026-04/2026-04-30__tarti-yatisinca-vucut-kompozisyonu.md) | Hormonal Geçiş |
+| 2026-04-30 | alara-baykent | [Akşam Hareketinin Uykuya Etkisi: Melatonin ve Serin Vücut](2026-04/2026-04-30__aksam-hareketi-uyku-melatonin.md) | Zihin & Denge |
 | 2026-04-29 | berna-aksoy | [Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor](2026-04/2026-04-29__menopozda-hekim-hasta-iliskisi.md) | Hormonal Geçiş |
 | 2026-04-28 | duygu-karaosmanoglu | [Menopozda Cilt Değişimleri — Aynaya Sakince Bakmak ve Bakım Rehberi](2026-04/2026-04-28__menopozda-cilt-degisimleri.md) | Beden & Yakınlık |
 | 2026-04-28 | berna-aksoy | [Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet](2026-04/2026-04-28__kilo-artisi-menopoz.md) | Zamansız Yaşam |
 | 2026-04-28 | basak-pelister | [Menopozda Ruh Hali Değişimleri — Bir Dalga, Bir Soru, Bir Eşik](2026-04/2026-04-28__ruh-hali-degisimleri-menopoz.md) | Zihin & Denge |
-| 2026-04-28 | alara-baykent | [Akşam Hareketinin Uykuya Etkisi: Melatonin ve Serin Vücut](2026-04/2026-04-28__aksam-hareketi-uyku-melatonin.md) | Zihin & Denge |
 | 2026-04-28 | senai-aksoy | [Gece Terlemesi ve Uyku: Utançsız Bir Bakış](2026-04/2026-04-28__gece-terlemesi-uyku-utancsiz.md) | Zihin & Denge |
 | 2026-04-28 | berna-aksoy | [Perimenopozda Uykunun Gerçekten Değişen Yanı](2026-04/2026-04-28__perimenopoz-uyku-degisen-yan.md) | Zihin & Denge |
 | 2026-04-28 | basak-pelister | [Sabah Üçte Uyanmak: Dokuz Yılın Notları](2026-04/2026-04-28__sabah-ucte-uyanmak-dokuz-yil.md) | Zihin & Denge |

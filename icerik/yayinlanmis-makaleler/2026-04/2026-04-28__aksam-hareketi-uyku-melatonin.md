@@ -78,7 +78,7 @@ Akşamı ise şiddete göre düşünmek gerek. Düşük tempolu yürüyüş, haf
 sorun çıkarmazken; nabzı belirgin yükselten koşu, HIIT, yüksek dirençli ağırlık çalışması yatmadan
 önceki son üç saate denk geldiğinde uyku başlangıcını geciktirebiliyor
 (iyi kanıt)
-. Akran
+. Yaşıt
 kuşağımdan sıkça duyduğum "spor sonrası dünyalar benim oluyor ama gece üçte uyanıyorum" cümlesi, çoğu
 zaman bu denklemin işareti.
 

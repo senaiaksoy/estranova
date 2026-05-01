@@ -16,7 +16,7 @@ from config.pipeline_limits import (
 
 from .compliance_master_validation import run_estranova_master_checks
 
-# Akran tonu: uluslararasi medikal kurulus/yayin adi (inline atif; deterministik).
+# Yaşıt tonu: uluslararasi medikal kurulus/yayin adi (inline atif; deterministik).
 FORBIDDEN_SRC_ORG_MARKERS: tuple[tuple[str, str], ...] = (
     (r"\bNAMS\b", "NAMS"),
     (r"\bNICE\b", "NICE"),
@@ -163,7 +163,7 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 )
             )
             required_fixes.append(
-                "Harici URL markdown linki kaldirilmali (akran tonu; hekim atif sistemi yok)."
+                "Harici URL markdown linki kaldirilmali (yaşıt tonu; hekim atif sistemi yok)."
             )
 
         org_hits = [lab for pat, lab in FORBIDDEN_SRC_ORG_MARKERS if re.search(pat, all_text, flags=re.IGNORECASE)]

@@ -26,8 +26,8 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
 3. **Turkiye bolumu yok:** Metinde **Turkiye / Türkiye** baglami (baslik veya belirgin paragraf) yoksa.
 4. **Kanıt düzeyi aciklanmamissa:** Kanit bolumunde kanitin gucu, **sinirlar**, belirsizlikler net degilse.
 5. **Estranova DNA (en az 3):** Asagidaki sinyallerden **en az 3** yoksa:
-   - **Akran-ses bagi** ("sen", "biz", "bircogumuz" gibi 2. tekil veya 1. cogul kisi anlatimi en az 3 paragrafta)
-   - **Humanize cumlesi** (en az 1: "bu donemden gecen biri olarak", "bir arkadas anlatti gibi", "belki sen de yasiyorsundur" benzeri akran/deneyim ifadesi)
+   - **Yaşıt-ses bagi** ("sen", "biz", "bircogumuz" gibi 2. tekil veya 1. cogul kisi anlatimi en az 3 paragrafta)
+   - **Humanize cumlesi** (en az 1: "bu donemden gecen biri olarak", "bir arkadas anlatti gibi", "belki sen de yasiyorsundur" benzeri yaşıt/deneyim ifadesi)
    - Blockquote veya madde isaretli liste ile vurgulama
    - Bilgilendirme / notr yonlendirme kalibi
    - Soru tonlu H2 basligi
@@ -44,7 +44,7 @@ Asagidakilerden **biri** bile varsa `decision`: **needs_revision** don (risk_fin
 ## Strict Validation (mevcut)
 - Asagidaki kelime/anlam kaliplari **onay verme**:
   - `mucize`, `kesin cozum`, `iyilestirir`, `destekler`, `hastaligi bitirir`, `garanti eder`, `tamamen tedavi eder`, `kesin sonuc verir`
-- **Inline harici URL link YASAK:** Makale govdesinde `[metin](http...)` formatinda harici link varsa **critical regulation_risk + needs_revision**. Yazar persona "akran" — hekim atif sistemi kullanmaz.
+- **Inline harici URL link YASAK:** Makale govdesinde `[metin](http...)` formatinda harici link varsa **critical regulation_risk + needs_revision**. Yazar persona "yaşıt" — hekim atif sistemi kullanmaz.
 - **Kurulus adi inline atifi YASAK:** "NAMS", "NICE", "JAMA", "Lancet", "Mayo Clinic", "ACOG", "Cleveland Clinic", "USPSTF" gibi uluslararasi medikal kurulus/yayin adi cumle icine yerlestirilmis ise **critical regulation_risk + needs_revision**. Anonim "menopoz alaninda calisan dernekler" gibi referans serbest.
 - Guvenli yonlendirme: `Doktorunuza danisin` veya anlamca esdeger **yoksa** fail.
 - Uzun cumleler (**20+ kelime**): violation + revizyon iste.

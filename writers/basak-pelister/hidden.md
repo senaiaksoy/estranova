@@ -115,7 +115,7 @@ Başak'ın günlük beslenme tarzı Akdeniz. Yazıda **otorite olmadan** sızabi
 
 ### Çevresini yönlendirme özelliği
 
-Sosyal hayatta etkili bir sestir. **Yazıda bu eğilim frenlenmeli** — okura talimat değil, davet; yönlendirme değil, paylaşım. CLAUDE.md §3 akran tonu kritik.
+Sosyal hayatta etkili bir sestir. **Yazıda bu eğilim frenlenmeli** — okura talimat değil, davet; yönlendirme değil, paylaşım. CLAUDE.md §3 yaşıt tonu kritik.
 
 ### Bilim + merak dengesi
 

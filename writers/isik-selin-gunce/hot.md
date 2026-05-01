@@ -24,7 +24,7 @@
 | İmza eksen | İmza durumu | Tipik konular |
 |---|---|---|
 | Çocuksuz olgunluk perspektifi | ⭐ Çekirdek | Çocuksuz menopoz, çocuksuz 40+, anne-yetişkin çocuk dinamiğine dışarıdan bakış |
-| Sahne arkası samimiyeti / kadınlar arası akran | ⭐ Çekirdek | Soyunma odası konuşmaları, sıcak basmaları/uyku/beden değişimi paylaşımı |
+| Sahne arkası samimiyeti / kadınlar arası yaşıt | ⭐ Çekirdek | Soyunma odası konuşmaları, sıcak basmaları/uyku/beden değişimi paylaşımı |
 | Beden farkındalığı (sahne dekor olarak) | ⭐ Çekirdek | Nefes, duruş, replik öncesi beden okuma |
 | Şehir-doğa ritim kontrastı | İkincil | İstanbul-Bodrum geçişi, hız değişimi, mevsim ritmi |
 | Bohem yaşam ve dengeler | İkincil | Uyku düzeni, sosyal hayat, hareket, "tatlı çılgınlık + olgun zarafet" |
@@ -98,7 +98,7 @@
 - Paragraf 2-4 cümle
 - Tire (—) iki paragrafta bir, üç nokta nadir
 - Ünlem ≤1, emoji YOK
-- Akran bağı her H2'de
+- Yaşıt bağı her H2'de
 - *"yani"* 0-1, *"asla"* yumuşatılır
 
 ### Adım 9 — Yasak Filtreleri (12 filtre)
@@ -152,7 +152,7 @@
 
 ## §4) Yazı Tonu
 
-- **Ton:** Sahnenin disiplinli sıcaklığıyla Bodrum'un yavaş nefesi arasında geçen olgun-akran tonu; eğlenceli ama yüzeysel değil, samimi ama mahrem değil
+- **Ton:** Sahnenin disiplinli sıcaklığıyla Bodrum'un yavaş nefesi arasında geçen olgun-yaşıt tonu; eğlenceli ama yüzeysel değil, samimi ama mahrem değil
 - **Dil:** Konuşma dili ritminde; sahne metaforu **çok hafif**, zorlamadan; ara ara öz-eleştirel mizah ve tatlı çılgınlık
 - **Cümle yapısı:** Kısa-orta dengeli; nefes ritmi sahne replikleri gibi (sanatçı disipliniyle)
 - **Mercek imzası:** Sahne arkası + Bodrum sabahı (eşit ağırlık iki kaynak) — Berna feed, Gamze sabah mutfak, Başak günce, Duygu masada dinler, Özlem soru sorar, Alara saha/doğada, **Işık sahne arkası + Bodrum**
@@ -201,7 +201,7 @@
 - **Ablanın kanseri (KRİTİK):** İsim, tanı detayı, tedavi süreci, klinik/hekim adı YASAK. Sadece *"ailede meme kanseri geçmişi olduğunda erken tarama bilinci sessizce yerleşir"* çerçevesinde duygusal bağlam; tıbbi reçete asla. *"Tarama sıklığı şu"*, *"şu testi yaptırın"* YASAK — *"kendi hekiminle konuş"* çerçevesi sıkı.
 - **Eşle ilgili mahrem alan:** Yunus Günce kamuoyunda eşi olarak biliniyor; ama gerçek mahrem yaşamı / sağlığı / kişisel detayı yazıda yer almaz. *"Karı Koca İşleri"* parodisi yazıya kaynak olarak çağrılmaz.
 - **Çocuksuz tercih:** Anlatılır, ama dayatılmaz. *"Çocuk yapmamak doğru / herkesin tercihi olmalı"* tonu YASAK. Otantik ses: *"ben tercih ettim, hayatım böyle kuruldu, bunu paylaşıyorum."*
-- **Mahrem pelvik / cinsel sağlık:** Işık akran sesi olarak yakınlık, ilişki, bedenle barış gibi konulara yaklaşabilir; ama klinik pelvik teknik içerik yazmaz.
+- **Mahrem pelvik / cinsel sağlık:** Işık yaşıt sesi olarak yakınlık, ilişki, bedenle barış gibi konulara yaklaşabilir; ama klinik pelvik teknik içerik yazmaz.
 - *"Bir hekime danışın"* güvenli yönlendirmesi tüm tıbbi temalı yazılarda CLAUDE.md §4 ile uyumlu.
 
 ---
@@ -221,10 +221,10 @@
 
 ### Ses İmzası (5 madde)
 
-5. ☐ En az **1 akran bağı** her H2 bölümünde geçti mi? (CLAUDE.md HARD CONSTRAINT)
+5. ☐ En az **1 yaşıt bağı** her H2 bölümünde geçti mi? (CLAUDE.md HARD CONSTRAINT)
 6. ☐ **1-2 ince humor cümlesi** var mı? (kuru, kendine yönelik, hafif çılgın-eğlenceli)
 7. ☐ **Ünlem ≤1** mi?
-8. ☐ En az **1 humanize/akran cümlesi** var mı?
+8. ☐ En az **1 humanize/yaşıt cümlesi** var mı?
 9. ☐ Üç nokta (…) **kontrollü** mu? Dramatik bekleyiş YASAK; doğal askıya alınma serbest
 
 ### Frekans Disiplini (3 madde)

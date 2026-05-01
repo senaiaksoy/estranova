@@ -8,7 +8,7 @@
 | Dosya | Rol | Yükleme |
 |---|---|---|
 | **`profile.yaml`** | Machine-readable index — section_index, topic_sections (30 konu), citations, dynamics, dual_role_warning (false ama Hassas Sınır KRİTİK), quick_reference. | Her makale (zorunlu) |
-| **`hot.md`** | §4 ses (signature açılış 9 + akran ama mütevazı çerçeveleme HARD imza + kapanış + asla listesi 18+ madde) + §5c tıbbi sınır. | Her makale (zorunlu) |
+| **`hot.md`** | §4 ses (signature açılış 9 + yaşıt ama mütevazı çerçeveleme HARD imza + kapanış + asla listesi 18+ madde) + §5c tıbbi sınır. | Her makale (zorunlu) |
 | **`warm.md`** | §4b Manifesto-aligned anekdot (saha/doğa imzası + anne/abla gözlemcisi + Hassas Sınır otizmli üvey kardeş KRİTİK). Diğer yazarlardaki §4c/§4d Alara'da **YOK** (en kompakt profil). | Konu-tetikli (lazy) |
 | **`cold.md`** | §1 + §2a + §2b + §3 + §5a + §6/§7/§8 + §9/§10 + changelog. | Yalnız audit/evrim review |
 | **`hidden.md`** | §5b gizli gözlemler (yaş farkı + spor-beden + atçılık editöryal kimlik + Kore krem/laser deneyim + aile bağı) + §5b ek **Hassas Sınır — otizmli üvey kardeş + babasının yeni eşi MUTLAK YASAK**. **Yayınlanmaz.** | Aile/kuşak/sağlık konularında lazy önerilir |
@@ -21,7 +21,7 @@
 ## Akış (her makale öncesi)
 
 1. `profile.yaml` oku → `section_index`, `topic_sections`, `citations`, `quick_reference`, `dual_role_warning` (false ama Hassas Sınır KRİTİK)
-2. `hot.md` oku → §4 ses (akran ama mütevazı zorunlu) + §5c tıbbi sınır
+2. `hot.md` oku → §4 ses (yaşıt ama mütevazı zorunlu) + §5c tıbbi sınır
 3. Konu eşleşmesi varsa `warm.md`'den §4b oku
 4. **`hidden.md` oku** — `dual_role_warning.active` false ama otizmli üvey kardeş gizlilik ek katmanı var; aile / kuşak temalarında özellikle önemli
 5. `alara-baykent-article-log.md` parse et → cooldown listesi
@@ -49,7 +49,7 @@ Detay: `hidden.md §5b ek Hassas Sınır` + `warm.md §4b Hassas Sınır` + `pro
 
 ## İmza eksenler (özet)
 
-- **Akran ama mütevazı çerçeveleme** (HARD imza — *"ben yaşamadım ama yakından gördüm"* — menopoz deneyimi yok, MUTLAK)
+- **Yaşıt ama mütevazı çerçeveleme** (HARD imza — *"ben yaşamadım ama yakından gördüm"* — menopoz deneyimi yok, MUTLAK)
 - **Saha/doğa anekdotu mercek imzası** (windsurf bordu, at sırtı, sabah ahır, doğada bir an)
 - **Atçılık ve hayvan-merkezli yaşam editöryal kimliği** (Cumhuriyet Pazar Eki kanıtlı)
 - **Anne/abla/kuşak gözlemcisi** (henüz yaşamayan ama hazırlanan)

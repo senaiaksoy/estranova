@@ -1,6 +1,6 @@
 ---
 title: "Bellek ve Odaklanma — Menopozda Bilişsel Değişimler"
-description: "Menopozda \"beyin sisi\" deneyimini araştırma okuyan bir akran gözüyle aktaran rehber: ne biliyoruz, ne hâlâ belirsiz, gündelik hayatta neyi deneyebiliriz."
+description: "Menopozda \"beyin sisi\" deneyimini araştırma okuyan bir yaşıt gözüyle aktaran rehber: ne biliyoruz, ne hâlâ belirsiz, gündelik hayatta neyi deneyebiliriz."
 writer: rima-erdemir
 publishedDate: "24 Mart 2026"
 publishedDateIso: 2026-03-24
@@ -8,7 +8,7 @@ url: /zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "bellek", "odaklanma", "beyin sisi", "bilişsel değişim", "perimenopoz"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Bellek ve Odaklanma — Menopozda Bilişsel Değişimler
@@ -148,7 +148,7 @@ yarım saati şaşkınlıktan çıkarıyor. Sade bir araç, ama tutarlılığın
 
 Belirtiler günlük yaşamı belirgin biçimde etkilemeye başladığında, "bu konuyu kendi hekimimle
 konuşmalıyım" diye işaretlemek yerinde oluyor. Bu yazı bir tedavi rehberi değil; aynı sayfada
-duran, "şunu biliyoruz, şu hâlâ tartışılıyor" diyen bir akran notu.
+duran, "şunu biliyoruz, şu hâlâ tartışılıyor" diyen bir yaşıt notu.
 
 HRT'nin bazı kadınlarda bellek ve odaklanma yakınmalarını hafiflettiği rapor ediliyor; özellikle
 perimenopoz döneminde değerlendirildiğinde olumlu etki gösterilebiliyor

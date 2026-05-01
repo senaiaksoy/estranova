@@ -108,7 +108,7 @@ Make sure the page does NOT include:
 
 - [ ] Tone matches Vogue / Elle / Marie Claire lifestyle health column — NOT physician/clinical writing
 - [ ] Article uses "sen" / "biz" / "birçoğumuz" voice consistently across all 8 sections (not only opening)
-- [ ] At least 1 humanize sentence (akran/deneyim) per article
+- [ ] At least 1 humanize sentence (yaşıt/deneyim) per article
 - [ ] No "hastalarımda gözlemliyorum" / clinical-perspective phrasing
 
 ## H.3 EXTERNAL REFERENCE CHECK

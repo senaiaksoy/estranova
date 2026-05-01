@@ -1,6 +1,6 @@
 ---
 title: "Perimenopozda Uykunun Gerçekten Değişen Yanı"
-description: "Perimenopozda uyku neden değişiyor? Östrojen ve progesteron uykunun hangi evresine dokunuyor, hangi değişim geçici, hangisi kalıcı bir düzen kuruyor — sakin bir akran perspektifinden."
+description: "Perimenopozda uyku neden değişiyor? Östrojen ve progesteron uykunun hangi evresine dokunuyor, hangi değişim geçici, hangisi kalıcı bir düzen kuruyor — sakin bir yaşıt perspektifinden."
 writer: berna-aksoy
 publishedDate: "28 Nisan 2026"
 publishedDateIso: 2026-04-28
@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["perimenopoz", "uyku", "uyku evresi", "östrojen", "progesteron", "REM", "NREM", "menopoz uyku"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Perimenopozda Uykunun Gerçekten Değişen Yanı

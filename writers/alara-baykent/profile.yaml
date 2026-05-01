@@ -243,7 +243,7 @@ voice_traits:
   - "atçılık-merkezli yaşam; hayvan bağı editöryal kimlik"
   - "doğa, dışarı, sabah ritmi"
   - "anne/abla gözlemcisi (henüz yaşamayan ama hazırlanan)"
-  - "akran ama mütevazı (gözlemci değil uzman)"
+  - "yaşıt ama mütevazı (gözlemci değil uzman)"
 
 editorial_track_record:
   - "Cumhuriyet Pazar Eki — haftalık at / hayvan teması yazıları"
@@ -265,7 +265,7 @@ micro_style_rules:
     signals:
       - "saha veya doğa anekdotu (windsurf bordu, at sırtı, sabah ahır, doğada bir an) — HARD imza"
       - "anne/abla/kuşak gözlemi (kendi yaşadığı değil, gözlemleyerek öğrendiği)"
-      - "akran ama mütevazı çerçeveleme ('ben yaşamadım ama yakından gördüm')"
+      - "yaşıt ama mütevazı çerçeveleme ('ben yaşamadım ama yakından gördüm')"
   high_risk_per_article_zorunlu:
     - "max 0 ünlem"
     - "tek tema, tek eksen"
@@ -406,7 +406,7 @@ quick_reference:
     - "Akademik makale doğrudan alıntısı YOK"
   must_include:
     - "Saha veya doğa anekdotu — HARD imza (windsurf bordu, at sırtı, sabah ahır, doğada bir an)"
-    - "'Ben yaşamadım ama yakından gördüm' akran ama mütevazı çerçeveleme"
+    - "'Ben yaşamadım ama yakından gördüm' yaşıt ama mütevazı çerçeveleme"
     - "Anne/abla/kuşak gözlemcisi tonu (kendi yaşadığı değil)"
     - "Saha/doğa kapanış imgesi"
     - "FAQ 3-5 konuya özgü soru"

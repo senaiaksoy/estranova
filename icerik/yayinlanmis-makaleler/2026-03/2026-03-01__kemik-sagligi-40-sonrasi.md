@@ -8,7 +8,7 @@ url: /zamansiz-yasam/kemik-sagligi-40-sonrasi
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["kemik sağlığı", "osteoporoz", "menopoz", "kalsiyum", "direnç egzersizi", "D vitamini"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # 40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber

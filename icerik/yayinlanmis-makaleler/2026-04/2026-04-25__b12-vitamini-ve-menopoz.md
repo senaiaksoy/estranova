@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/b12-vitamini-ve-menopoz
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["B12", "vitamin B12", "kobalamin", "menopoz", "40+ sağlık", "eksiklik", "PPI", "metformin", "takviye"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # B12 Vitamini ve Menopoz: Sessiz Eksikliği Tanımak

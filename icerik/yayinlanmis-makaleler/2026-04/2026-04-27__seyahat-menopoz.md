@@ -1,6 +1,6 @@
 ---
 title: "Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları"
-description: "Uzun uçuşlar, jet lag, sıcak basması ve yeni mutfak ritmi menopoz geçişinde seyahati nasıl şekillendirir? Bir akran perspektifinden sakin bir rehber."
+description: "Uzun uçuşlar, jet lag, sıcak basması ve yeni mutfak ritmi menopoz geçişinde seyahati nasıl şekillendirir? Bir yaşıt perspektifinden sakin bir rehber."
 writer: duygu-karaosmanoglu
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
@@ -8,7 +8,7 @@ url: /zamansiz-yasam/seyahat-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["seyahat", "menopoz", "uzun uçuş", "jet lag", "zaman farkı", "sıcak basması", "uyku", "HRT", "40+ kadın", "sosyal yaşam"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları
@@ -66,7 +66,7 @@ Benim yaptıklarım çok basit: saatte bir kalkıp koridorda kısa bir tur atıy
 döndürüyorum, baldır kaslarımı sıkıp gevşetiyorum
 (iyi kanıt)
 . Su şişesini kabin görevlisinden
-istemekten çekinmiyorum — biri uzun uçuşlardan dönmüş bir akrana sorduğunda hep şunu söylüyorum: "su,
+istemekten çekinmiyorum — biri uzun uçuşlardan dönmüş bir yaşıta sorduğunda hep şunu söylüyorum: "su,
 adım, katman; üçü yeter". Eğer hekiminle daha önce kompresyon çorabı konuştuysan, uzun bir uçuşta onu
 unutmamak iyi fikir; yeni başlayacaksan bu kararı kişisel risk profilinle birlikte hekimle değerlendirmek
 gerekir.

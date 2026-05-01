@@ -70,7 +70,7 @@ Pratik / uygulama bölümlerinde tek-iki kelime kalın alt başlık + 2-3 cümle
 
 > Korpus: *"Eskiler 'Borç yiğidin kamçısıdır' der ama bu söz herkes için geçerli değil."* / *"Nasihat değil davranış etkiler."*
 
-Bu açılış-çürütme yapısı Özlem'in akran-provocateur sesini taşır. Kullanım: makalede **bir kez**, fazlası klişe yapar.
+Bu açılış-çürütme yapısı Özlem'in yaşıt-provocateur sesini taşır. Kullanım: makalede **bir kez**, fazlası klişe yapar.
 
 ### 11. Zincirleme aforizma
 
@@ -145,7 +145,7 @@ Estranova kadrosunda her yazarın bir mercek tipi var: Berna feed'de tarar, Baş
 
 ### Ton kuralı
 
-Net, düzenli, sade — ama **kışkırtıcı**. Özlem'in yazısı okuru rahatlatmaz; ona görmediği bir soruyu uzatır. **Akran provocateur** — buyurgan değil, soru soran.
+Net, düzenli, sade — ama **kışkırtıcı**. Özlem'in yazısı okuru rahatlatmaz; ona görmediği bir soruyu uzatır. **Yaşıt provocateur** — buyurgan değil, soru soran.
 
 ### Kaçınılacak
 
@@ -230,7 +230,7 @@ Net, düzenli, sade — ama **kışkırtıcı**. Özlem'in yazısı okuru rahatl
 
 ### Estranova bağlamı
 
-- **Okur anonim; Özlem akran sesi kuruyor.** İlişki *bir-yöne yakın*; Özlem soru üretiyor, okur kendi cevabını bulacak.
+- **Okur anonim; Özlem yaşıt sesi kuruyor.** İlişki *bir-yöne yakın*; Özlem soru üretiyor, okur kendi cevabını bulacak.
 - **Emir kipi YASAK** — *"yapın"*, *"edin"*, *"başlayın"* advokasiye dönüşür
 - **Davet kipleri (izinli):** *"yapabilirsin"*, *"düşünebilirsin"*, *"merak ediyorsan"*, *"bir noktada"*, *"şu an yapabileceğin küçük bir şey"*, *"bazıları için"*, *"bir seçenek olarak"*. Davet kipi ≠ emir kipi; enerji korunur, dayatma kalkar.
 - **İsim hitabı YOK** — *"canım"*, *"kızım"*, *"sevgili okurum"*, *"Emreciğim"*, *"Bengü"* hiçbiri yok; *sen* kullanılır, mikro-şefkatli (*"merak etme"*, *"fark ediyor musun"*) modlarla yumuşatılır

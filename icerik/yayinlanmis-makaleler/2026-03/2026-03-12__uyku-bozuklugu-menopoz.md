@@ -1,6 +1,6 @@
 ---
 title: "Menopozda Uyku Bozukluğu — Dinlenme Rehberi"
-description: "Menopoz uykusu neden bozulur, ne hissederiz, ne deneyebiliriz? Hormonal geçişin içinden geçen bir akran perspektifinden, sakin bir uyku rehberi."
+description: "Menopoz uykusu neden bozulur, ne hissederiz, ne deneyebiliriz? Hormonal geçişin içinden geçen bir yaşıt perspektifinden, sakin bir uyku rehberi."
 writer: berna-aksoy
 publishedDate: "12 Mart 2026"
 publishedDateIso: 2026-03-12
@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "uyku", "uyku bozukluğu", "insomnia", "sıcak basması", "uyku hijyeni"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Menopozda Uyku Bozukluğu — Dinlenme Rehberi
@@ -98,7 +98,7 @@ bulmak" daha gerçekçi bir hedef.
 
 Düzenli ilaç kullanan biri için en önemli nokta etkileşim. Özellikle kronik hastalık varsa, bir takviyeye
 başlamadan önce hekim görüşü almak güvenlik açısından gerekiyor. Bunu söylerken bir uzman olarak değil;
-bu yolu kendi adıma defalarca tekrar etmiş bir akran olarak söylüyorum.
+bu yolu kendi adıma defalarca tekrar etmiş bir yaşıt olarak söylüyorum.
 
 ## Tıbbi Destek Seçenekleri — Karar Süreci
 
@@ -126,6 +126,22 @@ bazı işaretler var ve onları erken fark etmek hem konforu hem güvenliği kor
 üç aydan uzun süren uyku bozukluğu durumunda uyku tıbbı değerlendirmesi gerekli. Gerektiğinde
 polisomnografi gibi testlerle uyku mimarisi ayrıntılı incelenebilir; bu yöntem korkutucu değil, bilgilendirici
 bir adım.
+
+<p class="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-gold">
+Dikkat çekmek istediğimiz
+
+###  Hekiminize danışmanın anlamlı olduğu durumlar
+
+Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğin durumlardır.
+
+-   Yakının fark ettiği uyku sırasında nefes kesilmesi ya da yoğun horlama
+-   Gündüz boyunca dayanılması güç bir uyku hali — toplantıda, direksiyonda, yemek başında uyuklama
+-   Bacaklarda uykuya geçmeyi engelleyen bir kıpırdama ihtiyacı (gece huzursuzluğu)
+-   Üç aydan uzun süren ve günlük yaşamı belirgin etkileyen uyku düzensizliği
+-   Uyku sorununa eşlik eden derin duygu çöküntüsü ya da umutsuzluk hissi
+-   Reçetesiz uyku ürünlerine ihtiyaç duyma sıklığında artış
+
+Bu liste teşhis amaçlı değil; bir hekimle konuşmaya değer kabul edilen durumların hatırlatıcısıdır.
 
 Düzenli bir planla ilerleyen birçoğumuzda uyku kalitesi belirgin biçimde iyileşiyor. Küçük ama tutarlı
 adımlar, bu dönemde gerçekten en kıymetli yaklaşım. Eğer bu yazıdan tek bir not alacaksan: önce sabit

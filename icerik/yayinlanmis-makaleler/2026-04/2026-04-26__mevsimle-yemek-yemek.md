@@ -1,6 +1,6 @@
 ---
 title: "Mevsimle Yemek Yemek — Anadolu Sofrası 40 Sonrası"
-description: "Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan akran tonlu rehber."
+description: "Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan yaşıt tonlu rehber."
 writer: gamze-cizreli
 publishedDate: "26 Nisan 2026"
 publishedDateIso: 2026-04-26
@@ -8,7 +8,7 @@ url: /zamansiz-yasam/mevsimle-yemek-yemek
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["mevsimlik beslenme", "Anadolu mutfağı", "Akdeniz beslenme", "40 sonrası beslenme", "menopoz", "sürdürülebilir sofra"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Mevsimle Yemek Yemek — Anadolu Sofrası 40 Sonrası

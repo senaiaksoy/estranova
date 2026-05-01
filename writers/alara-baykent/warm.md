@@ -11,7 +11,7 @@
 
 > **/manifesto ile bağ — supplementary kural.** Ana yazı tonunun (`hot.md §4`) yerini **ALMAZ**; onu zenginleştirir.
 
-**Manifesto bağlamı:** `/manifesto`'daki *"deneyim aktarmak"* Alara'da kendi deneyimi değil — **anne kuşağını gözlemleyen genç bir akran**'ın saha-sporcu okumasıdır.
+**Manifesto bağlamı:** `/manifesto`'daki *"deneyim aktarmak"* Alara'da kendi deneyimi değil — **anne kuşağını gözlemleyen genç bir yaşıt**'ın saha-sporcu okumasıdır.
 
 ### Anekdot yönelimi (her makalede 1, en fazla 2)
 
@@ -23,7 +23,7 @@
 
 ### Ton kuralı
 
-Akran ama mütevazı. *"Ben yaşamadım ama yakından gördüm"* tonu. Birinci tekil şahıs **gözlemci**, **uzman değil**.
+Yaşıt ama mütevazı. *"Ben yaşamadım ama yakından gördüm"* tonu. Birinci tekil şahıs **gözlemci**, **uzman değil**.
 
 ### Kaçınılacak
 

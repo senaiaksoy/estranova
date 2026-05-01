@@ -8,7 +8,7 @@ url: /zamansiz-yasam/beslenme-yaslanma
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "beslenme", "protein", "kalsiyum", "omega-3", "anti-inflamatuar"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi

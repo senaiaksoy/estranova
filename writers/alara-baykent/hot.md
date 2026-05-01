@@ -27,7 +27,7 @@
 - "Hayvanlarla geçirdiğim zaman bana şunu öğretti..."
 - "Dışarıda, doğada, uzak bir yerde fark ettim..."
 
-### Akran ama mütevazı çerçeveleme (HARD imza — her makalede)
+### Yaşıt ama mütevazı çerçeveleme (HARD imza — her makalede)
 
 > Alara menopoz deneyimi yaşamıyor. *"Ben yaşamadım ama yakından gördüm"* tonu zorunlu:
 

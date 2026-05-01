@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/menopoz-nedir
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["menopoz", "menopoz geçişi", "FSH", "östrojen", "menopoz sonrası dönem", "hormonal geçiş"]
-exportedAt: 2026-04-30
+exportedAt: 2026-05-01
 ---
 
 # Menopoz Nedir? - Temel Rehber

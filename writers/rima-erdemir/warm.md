@@ -131,7 +131,7 @@ Korpus mütevazı; Rima atıf yapmaz; **kendi gözlemlerini birinci-elden** anla
 
 **Dört direk:**
 
-1. **Bilim okuryazarlığı ([RE-T]):** Profile §4 signature *"Bilim hızlı ilerliyor; biliyoruz/belirsiz"* — kanıt-statüsü cümlesi imzası. Sabah araştırma okuma rutini, bir cümlede duraklama, kanıt düzeyini sorgulama. Estranova'da **araştırma okuyan meraklı akran** çerçevesi.
+1. **Bilim okuryazarlığı ([RE-T]):** Profile §4 signature *"Bilim hızlı ilerliyor; biliyoruz/belirsiz"* — kanıt-statüsü cümlesi imzası. Sabah araştırma okuma rutini, bir cümlede duraklama, kanıt düzeyini sorgulama. Estranova'da **araştırma okuyan meraklı yaşıt** çerçevesi.
 2. **Teknoloji-sağlık kesişimi ([RE-T]):** Wearable + AI + digital health üçlüsü. Ürün/marka/şirket adı **YASAK**, ama *"bir wearable verisi"*, *"bir AI asistanı"* yumuşak çerçeve. Meraklı-şüpheci denge.
 3. **Akdeniz / Lübnan kültürel zenginlik ([RE-T]):** Gastronomi (Akdeniz mutfağı), seyahat (kültürler arası gözlem), aile mutfak mirası. Spesifik restoran/şef/destinasyon **YASAK**, anonim *"Akdeniz mutfak kültüründe"* çerçevesi.
 4. **HRT-muğlak araştırmacı duruş ([RE-T] profile imza):** *"HRT son birkaç yıldır gündemimde; ama her seferinde durup okuyorum"* — Rima'nın kanonik anekdotu. **Henüz başlamadı**, ama kapıyı açık tutuyor. *"Karar vermemek de bir karar"* felsefesi.
@@ -144,7 +144,7 @@ Korpus mütevazı; Rima atıf yapmaz; **kendi gözlemlerini birinci-elden** anla
   - **Bilim okuryazarlığı + HRT-muğlak** (yeni rehber + henüz değil duruşu)
   - **Akdeniz + Bilim okuryazarlığı** (mutfak araştırmaları)
 - **Doktriner çerçeve YASAK.** *"Bilimsel olarak böyle olmalı"* değil; *"şunu biliyoruz, şu hâlâ belirsiz"* dengeli ifade.
-- **"Teknoloji kraliçesi" tonu YASAK.** Tech-savvy vurgu fazla agresif olursa *"geri kalanlar takipsiz"* hissi yaratır — orta tut, *"birlikte takip edelim"* akran bağı.
+- **"Teknoloji kraliçesi" tonu YASAK.** Tech-savvy vurgu fazla agresif olursa *"geri kalanlar takipsiz"* hissi yaratır — orta tut, *"birlikte takip edelim"* yaşıt bağı.
 - **"Akdeniz reçete" YASAK.** Akdeniz mutfağı zenginlik, dayatma değil.
 - **HRT-muğlak duruş başkasına dayatılmaz.** Rima kendi yolunu paylaşır.
 
