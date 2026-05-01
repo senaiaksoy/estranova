@@ -33,7 +33,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/menopoz': {
     src: '/images/library/editorial/journey-menopoz.webp',
-    alt: 'Doğal pencere ışığında gri saçlı kadın portresi; sakin ve kendinden emin bakış',
+    alt: 'Yaz akşamı İstanbul terasında üç yaşıt kadın (50-55) dolu bir sohbet anında; biri ipek yelpazeyi hafifçe açmış, diğerleri kadeh ve çay fincanı tutuyor; bakımlı boyalı saçlar (kestane chignon, dalgalı auburn, mahogany), ivory + dusty-rose + bordo paleti, jasmine ve wisteria sarmalı pergola, golden hour Boğaz silueti boke; menopoz döneminin canlı yaşandığı arkadaşlık ve dolu bir akşam teması',
   },
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu': {
     src: '/images/library/editorial/pair-window-cafe-reflection.webp',
@@ -45,7 +45,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi': {
     src: '/images/library/editorial/journey-menopoz.webp',
-    alt: 'Akşam saatlerinde sakin bir iç mekânda elinde ince bir şal tutan 50+ kadın; ısı dalgalanmalarıyla baş etme ve konfor arayışı teması',
+    alt: 'Yaz akşamı İstanbul terasında üç yaşıt kadın sohbeti; ortadaki kadın ipek yelpazeyi hafifçe açmış (sıcak basma referansı subtle), gülen yüzler ve dingin omuz duruşu; bakımlı boyalı saçlar, ivory + dusty-rose + bordo paleti, golden hour ve Boğaz boke; sıcak basmasıyla yalıtılmış değil sosyal bir akşamın doğal parçası — konforu birlikte yaşama teması',
   },
   '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz': {
     src: '/images/library/editorial/hg-b12-vitamini-menopoz.webp',
