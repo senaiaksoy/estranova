@@ -21,6 +21,7 @@ const tocEntries = [
   { id: 'hekimle-paylasim', label: 'Hekimle Paylaşım' },
   { id: 'baslangic-30-gun', label: 'İlk 30 Gün' },
   { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -71,10 +72,10 @@ const articleSchemas = buildArticleSchemas({
       >
         <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
         <p class="leading-relaxed text-ink/80">
-          Menopoza hazırlık dönemi bence en değerli aralıklardan biri: vücudumuzda büyük değişimler kapıda olsa da
-          göstergeler hâlâ ölçülebilir. Okudukça şunu anladım — tansiyon, kilo, lipid profili gibi temel ölçümleri
-          bugünden düzenli kaydetmek; ileride neyin "yeni" neyin "kişisel normalim" olduğunu ayırt etmeyi
-          kolaylaştırıyor. Amaç hastalık aramak değil; kendi referans hattını kurmak.
+          Menopoza hazırlık dönemi bence en değerli aralıklardan biri: kadının bedeninde büyük değişimler
+          kapıda olsa da göstergeler hâlâ ölçülebilir. Okudukça şunu anladım — tansiyon, kilo, lipid profili
+          gibi temel ölçümleri bugünden düzenli kaydetmek; ileride neyin "yeni" neyin "kişisel normalim"
+          olduğunu ayırt etmeyi kolaylaştırıyor. Amaç hastalık aramak değil; kendi referans hattını kurmak.
         </p>
       </section>
 
@@ -85,10 +86,11 @@ const articleSchemas = buildArticleSchemas({
           sorusuna ne hekim ne ben net bir cevap verebildik. O an karar verdim, kendi referans dosyamı kurmaya başladım.
         </p>
         <p>
-          Pek çoğumuz için sağlık kontrolü, bir şikâyet olunca hekime gitmek demek. Oysa menopoza hazırlık dönemi
-          farklı bir mantık öneriyor: belirti yokken bile küçük bir kişisel veri seti kurmak. Bu evrede vücutta olan
-          değişimlerin bir kısmı yıllara yayılı; bazıları kısa sürede beliriyor. "Normal sınırının" ne olduğuna dair
-          kendi göstergelerin yoksa, sonradan gelen bir bulguyu yorumlamak zorlaşıyor.
+          Çoğu kadın için sağlık kontrolü, bir şikâyet olunca hekime gitmek demek. Oysa menopoza hazırlık
+          dönemi farklı bir mantık öneriyor: belirti yokken bile küçük bir kişisel veri seti kurmak. Bu evrede
+          bedende olan değişimlerin bir kısmı yıllara yayılı; bazıları kısa sürede beliriyor. "Normal
+          sınırının" ne olduğuna dair kendi göstergelerin yoksa, sonradan gelen bir bulguyu yorumlamak
+          zorlaşıyor.
         </p>
         <p>
           Tansiyonun hep böyle miydi, kolesterol son iki yılda mı yükseldi, kilo nereden başlayıp nereye geldi —
@@ -109,11 +111,11 @@ const articleSchemas = buildArticleSchemas({
           istirahat nabzı da evde izlenebilen göstergeler arasında.
         </p>
         <p>
-          Önemli olan tek bir ölçümün değeri değil; aynı koşullarda alınan ölçümlerin zaman içindeki seyri. Bir gün
-          Apple Watch'ımın istirahat nabzı verisine geri baktığımda, son altı ayda küçük ama tutarlı bir değişim
-          olduğunu fark ettim. Bunu hekimimle bir kontrolde paylaştığımda, "iyi ki kayıt etmişsin" dedi. O hafta
-          benim için sürpriz olan şey: kâğıt veya saat fark etmiyor, sadece tutarlılık önemli. Sabah aç karnına, aynı
-          koldan, oturarak ölçtüğün tansiyonu haftada bir not edersen, üç ay sonra okunabilir bir resim çıkıyor.
+          Önemli olan tek bir ölçümün değeri değil; aynı koşullarda alınan ölçümlerin zaman içindeki seyri. Bir
+          arkadaşım anlatmıştı: yıllık kontrolüne giderken son altı ayın küçük tansiyon notlarını yanına almış,
+          hekimi "iyi ki kayıt etmişsin" demiş. O sahne kafamda kaldı — kâğıt ya da uygulama fark etmiyor,
+          sadece tutarlılık önemli. Sabah aç karnına, aynı koldan, oturarak ölçülen tansiyonu haftada bir not
+          etmek; üç ay sonra okunabilir bir resim ortaya çıkarıyor.
         </p>
 
         <h2 id="lab-markerlari">Hangi Lab Markerları Bu Dönemde Önemli?</h2>
@@ -136,9 +138,10 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="semptom-gunlugu">Semptom Günlüğü Tutmak: Neden ve Nasıl?</h2>
         <p>
-          Belirti günlüğü, hazırlık döneminin en çok küçümsenen ama en değerli aracı. Geçen gün Instagram'da bir
-          yaşıt hesabın paylaşımı dikkatimi çekti: "Adetin değişmeden önce uykumun değişmiş olduğunu, ancak günlüğüme
-          geri baktığımda fark ettim." Aynı sahne benim de tanıdığım bir sahne.
+          Belirti günlüğü, hazırlık döneminin en çok küçümsenen ama en değerli aracı. Feed'de kaydırırken aynı
+          uzmanın aynı cümlesine üçüncü kez denk geldim — algoritma beni benden iyi tanıyor olabilir; ama bu
+          tekrarın altındaki cümle gerçekten kayda değerdi: "Adetin değişmeden önce uykunun değiştiğini, ancak
+          günlüğüne geri baktığında fark edersin." Aynı sahne çevremdeki birçok kadının da tanıdığı bir sahne.
         </p>
         <p>
           Adet düzeni, sıcak basması sıklığı, uyku kalitesi, ruh hali ve enerji düzeyi gibi başlıkları haftalık kısa
@@ -155,9 +158,9 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="aile-oykusu">Aile Öyküsünü Yazıya Dökmek</h2>
         <p>
-          Çoğumuz aile öyküsünü kafamızda biliriz; ama bir hekim sorduğunda anlık olarak doğru hatırlamak zor
-          olabiliyor. Bunu yıllar önce annemle bir akşam masada oturup yazıya geçirmiştim ve sonradan defalarca işime
-          yaradı.
+          Çoğu kadın aile öyküsünü kafasında bilir; ama bir hekim sorduğunda anlık olarak doğru hatırlamak zor
+          olabiliyor. Bunu yıllar önce annemle bir akşam masada oturup yazıya geçirmiştim ve sonradan defalarca
+          işime yaradı.
         </p>
         <p>
           Anne, anneanne, babaanne, teyze ve halaların menopoz yaşı; ailede kalp-damar hastalığı, meme veya yumurtalık
@@ -230,25 +233,43 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
         <h3>Belirtim yok, yine de bu kadar şey takip etmem gerekir mi?</h3>
         <p>
-          Belirti olmaması, takip için ideal başlangıç noktasıdır. Çünkü kişisel “normal” aralığını ancak belirti yokken
-          tanımlayabiliyorsun. Sonradan değişiklik olduğunda karşılaştırma yapılacak referans noktan oluyor.
+          Belirti olmaması, takip için ideal başlangıç noktasıdır. Çünkü kişisel "normal" aralığını ancak
+          belirti yokken tanımlayabilirsin. Sonradan değişiklik olduğunda karşılaştırma yapılacak referans
+          noktan oluyor.
         </p>
         <h3>Hangi sıklıkta lab testi yaptırmalıyım?</h3>
         <p>
-          Genel olarak yıllık ya da iki yıllık aralıklar yaygın bir yaklaşım; ama kişisel risk profiline göre bu sıklık
-          değişir. Lipid profili veya glukoz takibinde değişim varsa hekiminiz daha sık önerebilir. Tek bir “doğru
-          sıklık” yok; hekiminizle birlikte kararlaştırılır.
+          Genel olarak yıllık ya da iki yıllık aralıklar yaygın bir yaklaşım; ama kişisel risk profiline göre
+          bu sıklık değişir. Lipid profili veya glukoz takibinde değişim varsa hekiminiz daha sık önerebilir.
+          Tek bir "doğru sıklık" yok; hekiminle birlikte kararlaştırılır.
         </p>
         <h3>Ev tipi tansiyon aleti güvenilir mi?</h3>
         <p>
-          Üst koldan ölçen, klinik onayı olan modeller güvenilir bir takip sağlar. Bilek tipi cihazlar daha fazla
-          değişkenlik gösterebilir. Cihazınızı ilk kullanımda hekim muayenesinde karşılaştırarak doğrulamak iyi bir
-          başlangıç adımı.
+          Üst koldan ölçen, klinik onayı olan modeller güvenilir bir takip sağlar. Bilek tipi cihazlar daha
+          fazla değişkenlik gösterebilir. Cihazını ilk kullanımda hekim muayenesinde karşılaştırarak
+          doğrulamak iyi bir başlangıç adımı.
         </p>
         <h3>Semptom günlüğüne ne kadar zaman ayırmalıyım?</h3>
         <p>
-          Günde bir-iki dakika ve haftada bir kez geriye bakış yeterli. Detaylı yazmak yerine kategoriler ve kısa
-          işaretler kullanmak sürdürülebilirliği artırıyor.
+          Günde bir-iki dakika ve haftada bir kez geriye bakış yeterli. Detaylı yazmak yerine kategoriler ve
+          kısa işaretler kullanmak sürdürülebilirliği artırıyor.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Koruyucu sağlık kayıtları bir hastalık dosyası değil; bedenin yıllar içinde takip edebileceğin sade
+          bir takvimi.
+        </p>
+        <p>
+          Tek bir ölçüm bir günlük resim verir; aynı ölçümün üç yıllık seyri ise bir hikâye. Yıllık tansiyon
+          ortalaması, lab eğrisi, semptom günlüğü ve aile öyküsü — bu dört çapayı bir takvime yerleştirmek,
+          "her şeyi takip edemem" kaygısının yerine sade bir ritim koyuyor. Bu benim yolum oldu, yıllar içinde
+          olgunlaşarak; senin yolun başka olabilir — ve olmalı da.
+        </p>
+        <p>
+          Belki şu soru yardımcı olur: bu yıl takvime hangi tek göstergeyi yargılamadan, sadece gözlemlemek
+          niyetiyle yerleştirebilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle
+          söylemişti; sen onu kendi takvimine yazıyorsun.
         </p>
       </ArticleProsePanel>
 
@@ -267,11 +288,32 @@ const articleSchemas = buildArticleSchemas({
         class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="leading-relaxed text-ink/80">
-          Menopoza hazırlık döneminde koruyucu sağlık kayıtlarının düzenli tutulması, klinik takibin niteliğini ve
-          uzun vadeli sağlık planlamasını belirgin biçimde güçlendirir. Vital göstergeler ve temel lab değerlerinin
-          yıllık eğrilerinin izlenmesi, bireysel risk profilinin daha erken fark edilmesine yardımcı olur. Kişisel
-          ölçüm ve değerlendirme planı her zaman hekiminizle birlikte oluşturulmalıdır.
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Menopoza hazırlık dönemi (perimenopoz öncesi 40+ yaşları), koruyucu sağlık çerçevesinin sistematik
+          biçimde kurulması için klinik açıdan değerli bir aralıktır. Östrojen düşüşü öncesinde bireysel
+          referans değerlerinin kayıt altına alınması, geçiş ve sonrası dönemde gözlenen değişikliklerin
+          patolojik mi yoksa fizyolojik mi olduğunu ayırt etmeyi kolaylaştırır.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Düzenli olarak izlenmesi önerilen başlıca parametreler arasında kan basıncı, kilo ve bel çevresi,
+          lipid profili (toplam kolesterol, LDL, HDL, trigliserid), açlık glukozu ve HbA1c, tiroid fonksiyonları
+          (TSH), tam kan sayımı ile D vitamini düzeyi yer alır. Karaciğer fonksiyonları, ferritin ve B12 ise
+          klinik tabloya göre değerlendirilir.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Tek bir ölçüm değerinden çok, aynı koşullarda alınan ölçümlerin zaman içindeki seyri (eğri) klinik
+          olarak bilgilendiricidir. Vital göstergelerin yıllık ortalamalarının ve lab değerlerinin
+          longitudinal trendlerinin izlenmesi, bireysel kardiyovasküler ve metabolik risk profilinin daha
+          erken fark edilmesini sağlar.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Ölçüm sıklığı, izlenecek parametre seti ve tarama testleri (mamografi, jinekolojik kontrol, kemik
+          mineral yoğunluğu, kolon taraması) bireyin yaşı, aile öyküsü, mevcut sağlık durumu ve ulusal
+          rehberlere göre kişiselleştirilmelidir. Bu yazıdaki gözlemler genel bir bilgilendirme amacı taşır;
+          kişisel ölçüm ve değerlendirme planı her zaman hekimle birlikte oluşturulur.
+        </p>
+        <p class="text-sm italic text-burgundy">
+          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
         </p>
       </section>
 

@@ -18,10 +18,11 @@ exportedAt: 2026-05-01
 Benim için dönüm noktası şu oldu: bir gün hekime gittiğimde, "Geçen yıl ne çıkmıştı, hatırlıyor musunuz?"
 sorusuna ne hekim ne ben net bir cevap verebildik. O an karar verdim, kendi referans dosyamı kurmaya başladım.
 
-Pek çoğumuz için sağlık kontrolü, bir şikâyet olunca hekime gitmek demek. Oysa menopoza hazırlık dönemi
-farklı bir mantık öneriyor: belirti yokken bile küçük bir kişisel veri seti kurmak. Bu evrede vücutta olan
-değişimlerin bir kısmı yıllara yayılı; bazıları kısa sürede beliriyor. "Normal sınırının" ne olduğuna dair
-kendi göstergelerin yoksa, sonradan gelen bir bulguyu yorumlamak zorlaşıyor.
+Çoğu kadın için sağlık kontrolü, bir şikâyet olunca hekime gitmek demek. Oysa menopoza hazırlık
+dönemi farklı bir mantık öneriyor: belirti yokken bile küçük bir kişisel veri seti kurmak. Bu evrede
+bedende olan değişimlerin bir kısmı yıllara yayılı; bazıları kısa sürede beliriyor. "Normal
+sınırının" ne olduğuna dair kendi göstergelerin yoksa, sonradan gelen bir bulguyu yorumlamak
+zorlaşıyor.
 
 Tansiyonun hep böyle miydi, kolesterol son iki yılda mı yükseldi, kilo nereden başlayıp nereye geldi —
 bu soruların cevabı geriye dönük baktığında elinde kayıtlar varsa daha sağlam oluyor. Bu nedenle koruyucu
@@ -40,11 +41,11 @@ kardiyovasküler riski etkileyen bir tablonun parçası olabilir
 ortalamaların kaydedilmesi ileride bir trend okumayı kolaylaştırıyor. Aynı şekilde kilo, bel çevresi ve
 istirahat nabzı da evde izlenebilen göstergeler arasında.
 
-Önemli olan tek bir ölçümün değeri değil; aynı koşullarda alınan ölçümlerin zaman içindeki seyri. Bir gün
-Apple Watch'ımın istirahat nabzı verisine geri baktığımda, son altı ayda küçük ama tutarlı bir değişim
-olduğunu fark ettim. Bunu hekimimle bir kontrolde paylaştığımda, "iyi ki kayıt etmişsin" dedi. O hafta
-benim için sürpriz olan şey: kâğıt veya saat fark etmiyor, sadece tutarlılık önemli. Sabah aç karnına, aynı
-koldan, oturarak ölçtüğün tansiyonu haftada bir not edersen, üç ay sonra okunabilir bir resim çıkıyor.
+Önemli olan tek bir ölçümün değeri değil; aynı koşullarda alınan ölçümlerin zaman içindeki seyri. Bir
+arkadaşım anlatmıştı: yıllık kontrolüne giderken son altı ayın küçük tansiyon notlarını yanına almış,
+hekimi "iyi ki kayıt etmişsin" demiş. O sahne kafamda kaldı — kâğıt ya da uygulama fark etmiyor,
+sadece tutarlılık önemli. Sabah aç karnına, aynı koldan, oturarak ölçülen tansiyonu haftada bir not
+etmek; üç ay sonra okunabilir bir resim ortaya çıkarıyor.
 
 ## Hangi Lab Markerları Bu Dönemde Önemli?
 
@@ -65,9 +66,10 @@ eğri çiziyorsun gibi.
 
 ## Semptom Günlüğü Tutmak: Neden ve Nasıl?
 
-Belirti günlüğü, hazırlık döneminin en çok küçümsenen ama en değerli aracı. Geçen gün Instagram'da bir
-yaşıt hesabın paylaşımı dikkatimi çekti: "Adetin değişmeden önce uykumun değişmiş olduğunu, ancak günlüğüme
-geri baktığımda fark ettim." Aynı sahne benim de tanıdığım bir sahne.
+Belirti günlüğü, hazırlık döneminin en çok küçümsenen ama en değerli aracı. Feed'de kaydırırken aynı
+uzmanın aynı cümlesine üçüncü kez denk geldim — algoritma beni benden iyi tanıyor olabilir; ama bu
+tekrarın altındaki cümle gerçekten kayda değerdi: "Adetin değişmeden önce uykunun değiştiğini, ancak
+günlüğüne geri baktığında fark edersin." Aynı sahne çevremdeki birçok kadının da tanıdığı bir sahne.
 
 Adet düzeni, sıcak basması sıklığı, uyku kalitesi, ruh hali ve enerji düzeyi gibi başlıkları haftalık kısa
 notlarla kaydetmek; geçişin hangi aşamasında olduğuna dair değerli bir resim çiziyor. Adet düzenindeki
@@ -83,9 +85,9 @@ gün uzun yazmak değil; haftada bir-iki dakika geriye bakmak.
 
 ## Aile Öyküsünü Yazıya Dökmek
 
-Çoğumuz aile öyküsünü kafamızda biliriz; ama bir hekim sorduğunda anlık olarak doğru hatırlamak zor
-olabiliyor. Bunu yıllar önce annemle bir akşam masada oturup yazıya geçirmiştim ve sonradan defalarca işime
-yaradı.
+Çoğu kadın aile öyküsünü kafasında bilir; ama bir hekim sorduğunda anlık olarak doğru hatırlamak zor
+olabiliyor. Bunu yıllar önce annemle bir akşam masada oturup yazıya geçirmiştim ve sonradan defalarca
+işime yaradı.
 
 Anne, anneanne, babaanne, teyze ve halaların menopoz yaşı; ailede kalp-damar hastalığı, meme veya yumurtalık
 kanseri, osteoporoz ve diyabet öyküsü — bu bilgilerin tek bir notta toplanması ileride hekim
