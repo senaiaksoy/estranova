@@ -59,6 +59,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-01',
     note: 'Berna v2.4 kısa doğrulama formu (ikinci kullanım, ≤5 dakika) — final onayı: Evet. Çift Rol ifşası İzleme Takvimi bölümünde + "bilmiyorum" anı Ruh Hali bölümünde + defter metaforu kapanışı (bedenle yazışma varyasyonu) + 5-katmanlı BEN doğrulandı. Üçüncü onaylı Estranova makalesi, HRT ekseninde ikinci.',
   },
+  {
+    pathname: '/zamansiz-yasam/beslenme-yaslanma',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-05-01',
+    note: 'Berna doğrudan onayı (form üretmeden) — Kanal A KAPALI ihlali düzeltildi (Apple Watch + uyku verisi → dolaylı ses), "bilmiyorum" anı Beslenme Şekilleri bölümünde, tabak metaforu kapanışı (bedenle yazışma serisi: mektup → defter → tabak), 5-katmanlı BEN. Dördüncü onaylı Estranova makalesi, beslenme imza ekseninde ilk.',
+  },
 ];
 
 /**
