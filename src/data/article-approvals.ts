@@ -47,6 +47,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-04-30',
     note: 'Berna v2.4 ikinci tur doğrulama formu sonrası — %85 net onay + 3 yumuşatma + 1 red sonrası revize. İlk onaylı Estranova makalesi.',
   },
+  {
+    pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-05-01',
+    note: 'Berna v2.4 kısa doğrulama formu (≤5 dakika, 7 alan) — Bölüm 3 final onayı: Evet. Çift Rol ifşası + "bilmiyorum" anı + 3-parçalı kapanış + 5-katmanlı Bilimsel Editör Notu doğrulandı. İkinci onaylı Estranova makalesi.',
+  },
 ];
 
 /**
