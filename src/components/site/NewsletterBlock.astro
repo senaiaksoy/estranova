@@ -70,12 +70,14 @@ const isCompact = variant === 'compact';
     {description}
   </p>
 
-  <!-- TODO: form action — backend (Mailchimp/Substack/Beehiiv) bağlandığında endpoint ile değiştir -->
+  <!-- Faz 2 öncesi: localStorage tabanlı bekleme listesi. Resend/Mailchimp
+       bağlandığında newsletter-signup.ts script'i endpoint çağrısına geçer. -->
   <form
     method="post"
     action="#"
     name={formId}
     aria-describedby={`${formId}-kvkk`}
+    data-newsletter-form="weekly"
     class:list={[
       'flex gap-3',
       isCompact ? 'flex-col' : 'flex-col sm:flex-row sm:items-stretch',
@@ -99,6 +101,21 @@ const isCompact = variant === 'compact';
       {ctaLabel}
     </button>
   </form>
+
+  <div
+    data-newsletter-success
+    hidden
+    role="status"
+    aria-live="polite"
+    class="rounded-xl border border-gold/40 bg-white px-5 py-4 text-sm leading-relaxed text-ink/80"
+  >
+    <p class="mb-1 font-serif text-base italic text-burgundy-deep">Liste hazır.</p>
+    <p>
+      Estranova Mektubu yola çıkmaya hazırlanırken adresini sakin bir şekilde
+      kaydettik. İlk mektup yayına girdiğinde gelen kutuna düşecek; istediğin an
+      ayrılabilirsin.
+    </p>
+  </div>
 
   <!-- Trust line + KVKK -->
   <p
