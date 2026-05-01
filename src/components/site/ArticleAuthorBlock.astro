@@ -6,6 +6,8 @@ interface Props {
   publishedDate: string; // ör. "14 Nisan 2026"
   lastUpdated?: string; // opsiyonel; yoksa gösterilmez
   readingMinutes: number; // ör. 7
+  /** Bilimsel inceleme imzası — varsayılan Doç. Dr. Senai Aksoy */
+  medicalReviewer?: string;
 }
 
 const {
@@ -13,6 +15,7 @@ const {
   publishedDate,
   lastUpdated,
   readingMinutes,
+  medicalReviewer = 'Doç. Dr. Senai Aksoy',
 } = Astro.props;
 
 const writer = writers.find((w) => w.slug === authorSlug);
@@ -52,25 +55,25 @@ const initials = writer.displayName
       )
     }
     <div class="min-w-0 flex-1">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-burgundy">Yazar</p>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-burgundy">Yazan</p>
       <p class="mt-1 font-serif text-xl text-ink">{writer.displayName}</p>
       <p class="text-sm text-ink/70">{writer.role.split('/')[0].trim()}</p>
 
-      <p class="mt-3 text-xs uppercase tracking-[0.18em] text-ink/55">
-        <span>Tıbben gözden geçirilmiş editöryal içerik</span>
+      <p class="mt-3 text-xs text-ink/65">
+        Bilimsel inceleme: <span class="text-ink/85">{medicalReviewer}</span>
       </p>
       <p class="mt-1 text-xs text-ink/55">
-        Yayın: {publishedDate}
+        Yayımlandı: {publishedDate}
         {
           lastUpdated && (
             <>
               <span class="mx-1.5 text-gold">·</span>
-              <span>Güncelleme: {lastUpdated}</span>
+              <span>Son güncelleme: {lastUpdated}</span>
             </>
           )
         }
         <span class="mx-1.5 text-gold">·</span>
-        <span>{readingMinutes} dk okuma</span>
+        <span>{readingMinutes} dakikalık okuma</span>
       </p>
     </div>
   </div>

@@ -103,9 +103,32 @@ const archiveIssue = issues.find((i) => i.number === 0);
         <h3 class="mb-3 font-serif text-2xl leading-snug text-ink md:text-3xl">
           Eşik dergi serisi açılmadan önce yer alan rehberler
         </h3>
-        <p class="mb-5 max-w-2xl text-base leading-relaxed text-ink/75">
+        <p class="mb-6 max-w-2xl text-base leading-relaxed text-ink/75">
           {archiveIssue.lede}
         </p>
+
+        <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+          Bölümlere göre gez
+        </p>
+        <ul class="mb-7 flex flex-wrap gap-2">
+          {[
+            { label: 'Hormonal Geçiş', href: '/hormonal-gecis' },
+            { label: 'Zamansız Yaşam', href: '/zamansiz-yasam' },
+            { label: 'Beden & Yakınlık', href: '/beden-yakinlik' },
+            { label: 'Zihin & Denge', href: '/zihin-denge' },
+            { label: 'Bilimsel Pencere', href: '/bilimsel-pencere' },
+          ].map((hub) => (
+            <li>
+              <a
+                href={hub.href}
+                class="inline-flex items-center rounded-full border border-burgundy/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-burgundy/85 transition hover:border-burgundy/45 hover:bg-cream-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+              >
+                {hub.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
         <a
           href="/library"
           class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"

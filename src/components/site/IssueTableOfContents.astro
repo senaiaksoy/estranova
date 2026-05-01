@@ -1,0 +1,144 @@
+---
+/**
+ * Sayı sayfasının üstünde "Bu Sayıda İçindekiler" bileşeni.
+ *
+ * Lapham's Quarterly + Atlantic TocFeaturedSection mantığı: kapağın
+ * hemen ardından, editör mektubundan ÖNCE okurun "bu sayıda neler
+ * var?" sorusunu yanıtlayan kompakt liste. Tek bakışta sayının tüm
+ * yapısı: Editör Mektubu + Kapak Dosyası + sabit köşe yer-tutucuları.
+ *
+ * Sabit köşeler (Akran Köşesi / Okur Sayfası / Arka Sayfa) Faz 2'de
+ * doldurulacak — şu an "Yakında" etiketi taşıyor; mimari Lapham's
+ * "Voices in Time / Conversations / Miscellany" izinde.
+ */
+
+import type { Issue } from '../../data/issues';
+import { resolveCoverDossier, formatIssuePad } from '../../data/issues';
+import { writers } from '../../data/writers';
+
+interface Props {
+  issue: Issue;
+}
+
+const { issue } = Astro.props;
+const coverDossier = resolveCoverDossier(issue);
+const issuePad = formatIssuePad(issue.number);
+
+// Editör mektubu görünür ad — Senai Aksoy için "Doç. Dr." ön ek
+const editorWriter = writers.find((w) => w.slug === issue.editorLetter.writerSlug);
+const editorDisplayName =
+  editorWriter?.slug === 'senai-aksoy'
+    ? 'Doç. Dr. Senai Aksoy'
+    : editorWriter?.displayName ?? 'Estranova';
+
+// Sabit köşe slotları (Faz 2'de doldurulacak)
+const fixedSections = [
+  {
+    label: 'Akran Köşesi',
+    desc: 'Sayının yazarlarından biri kendi defterinden bir nota imza atar',
+  },
+  {
+    label: 'Okur Sayfası',
+    desc: 'Gelen okur sorularına bilimsel editör tarafından yazılı yanıt',
+  },
+  {
+    label: 'Arka Sayfa',
+    desc: 'Sayı temasını kapatan kısa, atmosferik bir deneme',
+  },
+];
+---
+
+<section class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-16">
+  <div class="mx-auto max-w-4xl">
+    <header class="mb-8">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        Bu Sayıda
+      </p>
+      <h2 class="font-serif text-3xl leading-tight text-ink md:text-4xl">
+        Sayı {issuePad} içindekiler
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink/65">
+        Editör mektubu, kapak dosyasındaki yazılar ve sayının kalan parçaları.
+      </p>
+    </header>
+
+    <ul class="border-t border-burgundy/15">
+      <li class="border-b border-burgundy/15 py-5">
+        <a href="#bilimsel-editor-mektubu" class="group flex items-baseline gap-5">
+          <span class="shrink-0 font-serif text-lg tabular-nums text-gold">—</span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+              Bilimsel Editör Mektubu
+            </p>
+            <p class="mt-1 font-serif text-lg leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35 md:text-xl">
+              {editorDisplayName}'in açılışı
+            </p>
+          </div>
+          <span class="shrink-0 text-xs uppercase tracking-[0.18em] text-ink/55">
+            ~3 dk
+          </span>
+        </a>
+      </li>
+
+      {coverDossier && coverDossier.articles.map((article, idx) => {
+        const writer = writers.find((w) => w.slug === article.writerSlug);
+        const writerName = writer?.displayName ?? 'Estranova';
+        const isPlanned = article.status === 'planned';
+        const Tag = !isPlanned && article.href ? 'a' : 'div';
+        const tagProps = !isPlanned && article.href ? { href: article.href } : {};
+        return (
+          <li class="border-b border-burgundy/15 py-5">
+            <Tag
+              {...tagProps}
+              class:list={[
+                'group flex items-baseline gap-5',
+                !isPlanned && article.href
+                  ? 'cursor-pointer'
+                  : 'opacity-80',
+              ]}
+            >
+              <span class="shrink-0 font-serif text-lg tabular-nums text-gold">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+              <div class="min-w-0 flex-1">
+                <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+                  Kapak Dosyası · Yazan {writerName}
+                </p>
+                <p
+                  class:list={[
+                    'mt-1 font-serif text-lg leading-snug text-ink md:text-xl',
+                    !isPlanned && article.href && 'group-hover:underline group-hover:decoration-burgundy/35',
+                  ]}
+                >
+                  {article.title}
+                </p>
+              </div>
+              <span class="shrink-0 text-xs uppercase tracking-[0.18em] text-ink/55">
+                {isPlanned ? 'Yakında' : `~${article.readingMinutes ?? 7} dk`}
+              </span>
+            </Tag>
+          </li>
+        );
+      })}
+
+      {fixedSections.map((slot) => (
+        <li class="border-b border-burgundy/15 py-5 opacity-55">
+          <div class="flex items-baseline gap-5">
+            <span class="shrink-0 font-serif text-lg tabular-nums text-gold/70">·</span>
+            <div class="min-w-0 flex-1">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/55">
+                {slot.label}
+              </p>
+              <p class="mt-1 font-serif text-lg leading-snug text-ink/55 md:text-xl">
+                {slot.desc}
+              </p>
+            </div>
+            <span class="shrink-0 text-[10px] uppercase tracking-[0.2em] text-ink/45">
+              Yakında
+            </span>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

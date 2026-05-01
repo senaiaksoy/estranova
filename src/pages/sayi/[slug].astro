@@ -3,7 +3,9 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import IssueCover from '../../components/site/IssueCover.astro';
+import IssueTableOfContents from '../../components/site/IssueTableOfContents.astro';
 import EditorLetter from '../../components/site/EditorLetter.astro';
+import IssueRelatedNav from '../../components/site/IssueRelatedNav.astro';
 import { issues, resolveCoverDossier, formatIssuePad } from '../../data/issues';
 import type { Issue } from '../../data/issues';
 import { writers } from '../../data/writers';
@@ -47,6 +49,8 @@ const pageDescription = issue.lede;
 
   <main id="main-content" class="text-ink">
     <IssueCover issue={issue} />
+
+    <IssueTableOfContents issue={issue} />
 
     <EditorLetter letter={issue.editorLetter} />
 
@@ -183,17 +187,16 @@ const pageDescription = issue.lede;
       </>
     )}
 
+    <IssueRelatedNav currentIssue={issue} />
+
     {/* Sayı arşivine geri dönüş */}
     <section class="border-t border-burgundy/10 bg-cream-warm px-6 py-10">
       <div class="mx-auto max-w-3xl text-center">
-        <p class="mb-4 font-serif text-lg italic leading-relaxed text-ink/70">
-          Eşik dergisinin tüm sayılarına göz atmak ister misin?
-        </p>
         <a
           href="/sayi"
           class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
         >
-          Tüm sayılar
+          Sayı arşivinin tamamı
           <span aria-hidden="true">→</span>
         </a>
       </div>
