@@ -1,26 +1,63 @@
 ---
+/**
+ * Makale içi sticky TOC (içindekiler) — Aeon ve Atlantic uzun-form
+ * okuma deneyiminin Estranova uyarlaması.
+ *
+ * Üç katmanlı:
+ * 1. Scroll progress — sayfa yüzdesi gold ince çubuk olarak.
+ * 2. Sticky liste — SubmenuArticleBody içinde `<aside class="sticky">`
+ *    wrapping ile zaten sticky.
+ * 3. Active section highlight — IntersectionObserver ile makale H2'leri
+ *    izlenir, viewport ortasındaki bölümün link'i burgundy ve kalın
+ *    olarak işaretlenir.
+ *
+ * Client-side davranış: src/scripts/article-toc.ts (SiteLayout'ta
+ * tüm sayfalarda yüklü; data-toc varsa devreye girer).
+ */
+
 export interface TOCEntry {
   id: string;
   label: string;
 }
+
 interface Props {
   entries: TOCEntry[];
 }
+
 const { entries } = Astro.props;
 ---
 
-<nav aria-label="İçindekiler" class="font-sans">
-  <p class="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">İçindekiler</p>
+<nav data-toc aria-label="İçindekiler" class="font-sans">
+  <div
+    data-toc-progress
+    aria-hidden="true"
+    class="mb-5 h-0.5 w-full overflow-hidden rounded-full bg-burgundy/10"
+  >
+    <div
+      data-toc-progress-bar
+      class="h-full w-0 bg-gold transition-[width] duration-150 ease-out"
+    ></div>
+  </div>
+
+  <p class="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+    İçindekiler
+  </p>
+
   <ol class="space-y-3 text-sm leading-snug">
     {
       entries.map((entry, i) => (
         <li>
           <a
             href={`#${entry.id}`}
-            class="group block text-ink/70 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            data-toc-link={entry.id}
+            class="group block text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 hover:text-burgundy data-[active=true]:font-semibold data-[active=true]:text-burgundy"
           >
-            <span class="mr-2 font-serif tabular-nums text-gold">{String(i + 1).padStart(2, '0')}</span>
-            <span class="group-hover:underline decoration-burgundy/40 underline-offset-2">{entry.label}</span>
+            <span class="mr-2 font-serif tabular-nums text-gold transition group-data-[active=true]:text-burgundy">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <span class="group-hover:underline group-hover:decoration-burgundy/40 group-hover:underline-offset-2 group-data-[active=true]:underline group-data-[active=true]:decoration-burgundy/60 group-data-[active=true]:underline-offset-4">
+              {entry.label}
+            </span>
           </a>
         </li>
       ))
