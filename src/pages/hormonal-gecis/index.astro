@@ -12,42 +12,9 @@ import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import HubStartingPath from '../../components/site/HubStartingPath.astro';
+import { hubStartingPaths } from '../../data/hub-starting-paths';
 
-const startingPath = {
-  kicker: 'Hormonal geçişe yeni misin?',
-  title: 'Bu hub\'da nereden başlamalıyım?',
-  intro:
-    'Üç adımlık bir okuma yolu — önce genel çerçeve, sonra en sık karşılaşılan konu, sonunda karar verme. İstediğin zaman alt-bölümlere dağılabilirsin; bu yol seni acele ettirmez.',
-  steps: [
-    {
-      step: '01',
-      label: 'Genel çerçeve',
-      title: 'Perimenopoz Nedir?',
-      excerpt:
-        'Hormonal geçişin ilk aşamasının ne olduğunu, ne zaman başladığını ve neden hemen "menopoz" demediğimizi anlatır.',
-      href: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
-      readingMinutes: 7,
-    },
-    {
-      step: '02',
-      label: 'Sık karşılaşılan konu',
-      title: 'Adet Düzensizliği — Ne Normal, Ne Zaman Doktora?',
-      excerpt:
-        'Perimenopozda en sık fark edilen değişim. Düzensizliğin hangi yanı doğal, hangi yanı bir hekim değerlendirmesini hak ediyor?',
-      href: '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
-      readingMinutes: 8,
-    },
-    {
-      step: '03',
-      label: 'Karar verme',
-      title: 'Hormon Tedavisi Karar Rehberi',
-      excerpt:
-        'HRT seçeneklerine adım adım, abartısız bir bakış. Ne soruyu sormak gerekir, hekiminle hangi noktaları birlikte değerlendirirsin?',
-      href: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
-      readingMinutes: 10,
-    },
-  ],
-};
+const startingPath = hubStartingPaths['/hormonal-gecis'];
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 

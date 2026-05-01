@@ -11,12 +11,15 @@ import Evidence from '../../components/site/Evidence.astro';
 import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../components/site/ChapterCompass.astro';
+import HubStartingPath from '../../components/site/HubStartingPath.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
+import { hubStartingPaths } from '../../data/hub-starting-paths';
 
 const hero = submenuHeroByRoute['/bilimsel-pencere']!;
 const __hubPath = '/bilimsel-pencere';
 const epigraph = subHubEpigraphs[__hubPath];
+const startingPath = hubStartingPaths['/bilimsel-pencere'];
 
 const pillars = [
   {
@@ -59,6 +62,15 @@ const pillars = [
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
+    {startingPath && (
+      <HubStartingPath
+        kicker={startingPath.kicker}
+        title={startingPath.title}
+        intro={startingPath.intro}
+        steps={startingPath.steps}
+      />
+    )}
+
     <SubmenuSection variant="cream" borderedTop={true}>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {
