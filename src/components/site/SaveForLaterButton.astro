@@ -1,0 +1,65 @@
+---
+/**
+ * "Sonra Oku" — yazıyı kayıtsız ve üyeliksiz olarak kişisel okuma
+ * listesine ekleyen buton. localStorage tabanlı; e-posta/parola yok.
+ *
+ * Estranova ücretsiz okur değer önerisinin Faz 2 öncesi başlangıcı:
+ * okuyucu makaleyi sonraya saklayabilir, /sonra-oku sayfasından
+ * tekrar erişebilir. Hiçbir kişisel veri toplanmaz.
+ *
+ * Üyelik (Faz 2) geldiğinde aynı liste Supabase'e taşınabilir;
+ * localStorage backup olarak kalır.
+ *
+ * Kullanım (makale sayfasında):
+ *   <SaveForLaterButton
+ *     slug="/hormonal-gecis/perimenopoz/perimenopoz-nedir"
+ *     title="Perimenopoz Nedir?"
+ *   />
+ */
+
+interface Props {
+  /** Makale URL'i (kanonik path) */
+  slug: string;
+  /** Makale başlığı */
+  title: string;
+  /** Görsel varyant (default: full) */
+  variant?: 'full' | 'compact';
+}
+
+const { slug, title, variant = 'full' } = Astro.props;
+---
+
+<button
+  type="button"
+  data-save-button
+  data-slug={slug}
+  data-title={title}
+  class:list={[
+    'group inline-flex items-center gap-2 rounded-full border bg-white text-xs font-semibold uppercase tracking-[0.18em] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35',
+    variant === 'compact'
+      ? 'border-burgundy/20 px-3 py-1.5 text-[10px]'
+      : 'border-burgundy/25 px-4 py-2',
+    'text-burgundy hover:border-burgundy/45 hover:bg-cream-soft',
+    'data-[saved=true]:border-burgundy data-[saved=true]:bg-burgundy data-[saved=true]:text-cream-soft',
+  ]}
+  aria-label="Bu yazıyı sonra oku listesine ekle"
+  aria-pressed="false"
+>
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    aria-hidden="true"
+    class="shrink-0"
+  >
+    <path
+      d="M3.5 1.5h7a1 1 0 0 1 1 1v10l-4.5-3-4.5 3v-10a1 1 0 0 1 1-1z"
+      stroke="currentColor"
+      stroke-width="1.3"
+      stroke-linejoin="round"
+      class="group-data-[saved=true]:fill-current"
+    />
+  </svg>
+  <span data-save-label>Sonra Oku</span>
+</button>

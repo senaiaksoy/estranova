@@ -1,0 +1,94 @@
+---
+/**
+ * Hub sayfasında "Bu konuda nereden başlamalıyım?" 3-adımlı giriş
+ * rehberi.
+ *
+ * Versalie'nin "Getting Started" 3-adımlı sequence'ı — Estranova
+ * için altın editöryal mimari öğesi: hub'a yeni gelen okurun "okuma
+ * yolu"nu görsel olarak çizer. Pillar grid'i (alt-hub'lar) ile
+ * çakışmaz; pillar'lar yapısal dağılım, bu rehber okur yolu önerisi.
+ *
+ * Pilot: hormonal-gecis hub'ı (Faz 1.8). Diğer 4 hub Faz 1.9'a
+ * bırakıldı; bileşen 5 hub için hazır.
+ */
+
+interface PathStep {
+  /** Sıra numarası (görsel — "01"/"02"/"03") */
+  step: string;
+  /** Adımın editöryal etiketi (örn. "Genel çerçeve", "Sık karşılaşılan", "Karar") */
+  label: string;
+  /** Önerilen makale başlığı */
+  title: string;
+  /** Tek cümlelik özet — neden bu adım */
+  excerpt: string;
+  /** Makale URL'i */
+  href: string;
+  /** Tahmini okuma süresi (dakika) */
+  readingMinutes?: number;
+}
+
+interface Props {
+  /** Bant açılış başlığı — "Hormonal geçişe yeni misin?" */
+  kicker?: string;
+  /** Ana başlık */
+  title: string;
+  /** 1-2 cümle açıklama */
+  intro: string;
+  /** 3-4 adımlı yol */
+  steps: PathStep[];
+}
+
+const {
+  kicker = 'Önerilen okuma yolu',
+  title,
+  intro,
+  steps,
+} = Astro.props;
+---
+
+<section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-18">
+  <div class="mx-auto max-w-6xl">
+    <header class="mb-10 max-w-3xl">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        {kicker}
+      </p>
+      <h2 class="mb-4 font-serif text-3xl leading-tight text-ink md:text-4xl">
+        {title}
+      </h2>
+      <p class="text-base leading-relaxed text-ink/75 md:text-lg">{intro}</p>
+    </header>
+
+    <ol class="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+      {steps.map((step) => (
+        <li>
+          <a
+            href={step.href}
+            class="group flex h-full flex-col rounded-[24px] border border-burgundy/15 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:p-7"
+          >
+            <div class="mb-4 flex items-center gap-3">
+              <span class="font-serif text-3xl tabular-nums text-gold md:text-4xl">
+                {step.step}
+              </span>
+              <span class="h-px flex-1 bg-gold/35"></span>
+            </div>
+            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+              {step.label}
+            </p>
+            <h3 class="mb-3 font-serif text-xl leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35 md:text-2xl">
+              {step.title}
+            </h3>
+            <p class="mb-5 flex-1 text-sm leading-relaxed text-ink/70">{step.excerpt}</p>
+            <div class="flex items-center justify-between text-[11px] uppercase tracking-[0.18em] text-ink/55">
+              {step.readingMinutes && (
+                <span class="tabular-nums">~{step.readingMinutes} dk</span>
+              )}
+              <span class="font-semibold text-burgundy group-hover:underline">
+                Yazıyı aç →
+              </span>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

@@ -5,6 +5,7 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
@@ -62,6 +63,13 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="12 Mart 2026" readingMinutes={6} />
+
+      <div class="flex justify-end">
+        <SaveForLaterButton
+          slug="/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz"
+          title={articleTitle}
+        />
+      </div>
 
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
