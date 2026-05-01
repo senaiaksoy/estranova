@@ -14,6 +14,7 @@
     "compliance": "node scripts/compliance-check.mjs",
     "article:template": "tsx scripts/generate-article-template.ts",
     "articles:export": "node scripts/export-published-articles.mjs",
+    "articles:status": "node scripts/list-article-approvals.mjs",
     "article:context": "node scripts/article-context-build.mjs",
     "writers:lint": "node scripts/check-writer-profile-consistency.mjs",
     "encoding:check": "node scripts/check-encoding.mjs",

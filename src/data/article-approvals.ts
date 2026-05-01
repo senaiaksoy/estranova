@@ -1,0 +1,67 @@
+/**
+ * Estranova makale yazar onayı kayıtları.
+ *
+ * Kullanım:
+ *   import { isArticleApproved, approvedArticles } from '../data/article-approvals';
+ *   const approval = isArticleApproved('/zamansiz-yasam/kilo-artisi-menopoz');
+ *   if (approval) { console.log(approval.approvedAt); }
+ *
+ * Bu modül **iç envanter** içindir — site UI'da hiçbir görsel yansıması YOK.
+ * Yalnızca yönetim aracı (`npm run articles:status`) tarafından okunur.
+ *
+ * Default davranış: bir makale bu listede DEĞİLSE "onaysız" sayılır. Üretim
+ * sürecinde her makale yazar revizyonu sonrası buraya eklenir.
+ *
+ * Estranova üretim notu (memory: project_existing_articles_temporary.md):
+ * Mevcut ~45 makale yazar onayı alınmamış taslaktır; üretim turunda
+ * yazarın doğrulama formu sonrası onaylanır. Berna kilo-artisi-menopoz
+ * 2026-04-30'da v2.4 doğrulama formu turunun ardından ilk onaylanan
+ * makaledir.
+ */
+
+export interface ArticleApproval {
+  /** Site içi yol (Astro page pathname). Örn: '/zamansiz-yasam/kilo-artisi-menopoz' */
+  pathname: string;
+  /** Yazar slug (writers.ts ile eşleşir) */
+  writerSlug: string;
+  /** Onay tarihi — ISO format YYYY-MM-DD */
+  approvedAt: string;
+  /** Onayın kısa bağlamı — hangi süreçten geçti, hangi tur */
+  note: string;
+}
+
+/**
+ * Yazar tarafından onaylanmış makaleler.
+ *
+ * **Listede olmayan tüm makaleler "onaysız" sayılır** (default false).
+ *
+ * Yeni onay eklerken:
+ *   1. Bu listeye yeni `ArticleApproval` objesi ekle
+ *   2. `note` alanına onay turunun bağlamını yaz (form referansı, versiyon)
+ *   3. `npm run articles:status` ile rapor doğrula
+ */
+export const approvedArticles: ArticleApproval[] = [
+  {
+    pathname: '/zamansiz-yasam/kilo-artisi-menopoz',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-04-30',
+    note: 'Berna v2.4 ikinci tur doğrulama formu sonrası — %85 net onay + 3 yumuşatma + 1 red sonrası revize. İlk onaylı Estranova makalesi.',
+  },
+];
+
+/**
+ * Verilen makale yolunun yazar onayından geçip geçmediğini döner.
+ *
+ * @param pathname Site içi yol (örn: '/zamansiz-yasam/kilo-artisi-menopoz')
+ * @returns Onaylıysa ArticleApproval objesi, değilse undefined
+ */
+export function isArticleApproved(pathname: string): ArticleApproval | undefined {
+  return approvedArticles.find((a) => a.pathname === pathname);
+}
+
+/**
+ * Tüm onaylı makale yollarının Set'i (hızlı lookup için).
+ */
+export const approvedPathnames: Set<string> = new Set(
+  approvedArticles.map((a) => a.pathname),
+);
