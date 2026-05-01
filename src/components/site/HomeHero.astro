@@ -8,7 +8,7 @@ interface Props {
 const { hero } = Astro.props;
 ---
 
-<section class="relative isolate min-h-[min(56vh,640px)] w-full overflow-hidden" aria-labelledby="home-hero-title">
+<section class="relative isolate min-h-[min(56vh,640px)] md:min-h-[min(60vh,780px)] w-full overflow-hidden" aria-labelledby="home-hero-title">
   <img
     src={hero.src}
     alt={hero.alt}
@@ -19,11 +19,11 @@ const { hero } = Astro.props;
     fetchpriority="high"
     class="absolute inset-0 h-full w-full object-cover object-[center_30%]"
   />
-  <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#1a1210]/96 via-[#1c1412]/78 to-[#2a1815]/35"></div>
-  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/88 via-transparent to-[#1c1412]/15"></div>
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#1c1412]/60 via-[#1c1412]/22 to-transparent"></div>
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/45 via-transparent to-transparent"></div>
 
   <div
-    class="relative z-10 mx-auto flex min-h-[min(56vh,640px)] max-w-6xl flex-col justify-end px-6 pb-12 pt-28 md:justify-center md:pb-16 md:pt-32 lg:pb-20"
+    class="relative z-10 mx-auto flex min-h-[min(56vh,640px)] md:min-h-[min(60vh,780px)] max-w-6xl flex-col justify-end px-6 pb-12 pt-28 md:justify-center md:pb-16 md:pt-32 lg:pb-20"
   >
     <div class="max-w-2xl">
       <p class="text-xs font-bold uppercase tracking-[0.26em] text-cream-warm/90">Estranova</p>
