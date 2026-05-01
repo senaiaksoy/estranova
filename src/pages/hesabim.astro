@@ -1,0 +1,253 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+
+const pageTitle = 'Okuma Panelin — Estranova';
+const pageDescription =
+  'Sonra Oku listene, Estranova Mektubu kaydına ve okuma tercihlerine buradan erişebilirsin. Hiçbir bilgi sunucuda saklanmaz; tüm veri tarayıcında durur.';
+---
+
+<SiteLayout title={pageTitle} description={pageDescription}>
+  <SiteNavbar currentPath="/hesabim" />
+
+  <main id="main-content" class="text-ink">
+    <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
+          <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+          <span class="mx-2 text-gold">·</span>
+          <span class="text-burgundy">Okuma Panelin</span>
+        </nav>
+
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+          Senin Köşen
+        </p>
+        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
+          Okuma Panelin
+        </h1>
+        <p class="max-w-3xl text-lg leading-relaxed text-ink/80 md:text-xl">
+          Sonra okumak için kaydettiklerin, Estranova Mektubu kaydın ve okuma tercihlerin tek bir
+          yerde. Hiçbir bilgi sunucuda saklanmaz; tüm veri yalnızca senin tarayıcında durur.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {/* Sonra Oku panel */}
+          <article
+            data-panel="sonra-oku"
+            class="flex flex-col rounded-[24px] border border-burgundy/15 bg-cream-soft p-6 shadow-sm md:p-7"
+          >
+            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+              Sonra Oku
+            </p>
+            <h2 class="mb-3 font-serif text-2xl leading-snug text-ink">
+              Listendeki yazılar
+            </h2>
+            <p
+              data-panel-summary="sonra-oku"
+              class="mb-5 flex-1 text-base leading-relaxed text-ink/75"
+            >
+              Henüz kaydedilmiş yazı yok. Bir yazıyı okurken sağ üstteki Sonra Oku düğmesine basarak
+              listeye ekleyebilirsin.
+            </p>
+            <a
+              href="/sonra-oku"
+              class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+            >
+              <span>Listeye git</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          {/* Estranova Mektubu panel */}
+          <article
+            data-panel="mektup"
+            class="flex flex-col rounded-[24px] border border-burgundy/15 bg-cream-soft p-6 shadow-sm md:p-7"
+          >
+            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+              Estranova Mektubu
+            </p>
+            <h2 class="mb-3 font-serif text-2xl leading-snug text-ink">
+              Mektup kaydın
+            </h2>
+            <p
+              data-panel-summary="mektup"
+              class="mb-5 flex-1 text-base leading-relaxed text-ink/75"
+            >
+              Mektup üyeliğin henüz başlamadı. İlk sayı yayına girdiğinde mektup yola çıkar; istersen
+              hemen kaydolabilirsin.
+            </p>
+            <a
+              href="/mektup"
+              class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+            >
+              <span>Mektup hakkında</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          {/* Okuma tercihi panel */}
+          <article
+            data-panel="okuma-tercihi"
+            class="flex flex-col rounded-[24px] border border-burgundy/15 bg-cream-soft p-6 shadow-sm md:p-7"
+          >
+            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+              Okuma Tercihi
+            </p>
+            <h2 class="mb-3 font-serif text-2xl leading-snug text-ink">
+              Yazı boyutu
+            </h2>
+            <p
+              data-panel-summary="okuma-tercihi"
+              class="mb-5 flex-1 text-base leading-relaxed text-ink/75"
+            >
+              Şu anki tercihin: <span data-reader-scale-label class="font-semibold text-burgundy">varsayılan</span>.
+              Bir makaleye girdiğinde sağ üstteki <span class="font-semibold">A− / A / A+</span> butonlarıyla
+              değiştirebilirsin; tercih bu tarayıcıda saklanır.
+            </p>
+            <button
+              type="button"
+              data-reader-reset
+              class="inline-flex w-fit items-center gap-1.5 rounded-full border border-burgundy/25 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-burgundy transition hover:border-burgundy/45 hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+            >
+              Varsayılana dön
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-14">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-4 font-serif text-2xl leading-snug text-ink md:text-3xl">
+          Verilerin nerede duruyor?
+        </h2>
+        <p class="mb-3 text-base leading-relaxed text-ink/75">
+          Bu paneldeki tüm bilgiler — kayıtlı yazılar, mektup kaydın, okuma boyutun — yalnızca senin
+          tarayıcının yerel deposunda durur. Estranova sunucularında bu bilgilerin hiçbir kopyası yok.
+        </p>
+        <p class="text-base leading-relaxed text-ink/75">
+          Tarayıcı verisini sildiğinde bu liste de kaybolur. Yeni bir cihazda devam etmek için
+          tekrar Sonra Oku ya da Mektup kaydını başlatabilirsin.
+        </p>
+      </div>
+    </section>
+
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm leading-relaxed text-ink/65">
+          KVKK ve veri politikamız için <a href="/kvkk" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsin.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
+
+<script>
+  /**
+   * /hesabim panel doldurucu — localStorage'tan veri okuyup özetler.
+   * Hiçbir veri sunucuya gönderilmez; sayfa tamamen client-side.
+   */
+  (() => {
+    const SAVED_KEY = 'estranova:save-for-later';
+    const NEWSLETTER_KEY = 'estranova:mektup-bekleyenler';
+    const READER_KEY = 'estranova:reader-scale';
+
+    const SCALE_LABELS: Record<string, string> = {
+      '0.9': 'küçük',
+      '1': 'varsayılan',
+      '1.15': 'büyük',
+      '1.3': 'en büyük',
+    };
+
+    function safeRead<T>(key: string, fallback: T): T {
+      try {
+        const raw = localStorage.getItem(key);
+        if (!raw) return fallback;
+        return JSON.parse(raw) as T;
+      } catch {
+        return fallback;
+      }
+    }
+
+    function readScale(): string {
+      try {
+        return localStorage.getItem(READER_KEY) ?? '1';
+      } catch {
+        return '1';
+      }
+    }
+
+    // Sonra Oku özet
+    const savedItems = safeRead<Array<{ slug: string; title: string }>>(SAVED_KEY, []);
+    const sonraOkuSummary = document.querySelector<HTMLElement>(
+      '[data-panel-summary="sonra-oku"]',
+    );
+    if (sonraOkuSummary && savedItems.length > 0) {
+      const count = savedItems.length;
+      const latestTitle = savedItems[0]?.title ?? '';
+      const latestEscaped = latestTitle
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+      sonraOkuSummary.innerHTML =
+        `Listende ${count} ${count === 1 ? 'yazı' : 'yazı'} var. ` +
+        (latestEscaped ? `Son eklenen: <em class="font-serif italic text-ink/85">"${latestEscaped}"</em>.` : '');
+    }
+
+    // Mektup özet
+    const pendingList = safeRead<Array<{ email: string; formType: string }>>(NEWSLETTER_KEY, []);
+    const mektupSummary = document.querySelector<HTMLElement>(
+      '[data-panel-summary="mektup"]',
+    );
+    if (mektupSummary && pendingList.length > 0) {
+      const latest = pendingList[0];
+      const emailEscaped = latest.email
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+      mektupSummary.innerHTML =
+        `Mektup için <strong class="font-semibold text-burgundy">${emailEscaped}</strong> adresini kaydettik. ` +
+        'Estranova Mektubu yayına girdiğinde gelen kutuna düşecek; istediğin an ayrılabilirsin.';
+    }
+
+    // Okuma tercihi etiketi
+    const scale = readScale();
+    const scaleLabel = SCALE_LABELS[scale] ?? 'varsayılan';
+    document.querySelectorAll<HTMLElement>('[data-reader-scale-label]').forEach((el) => {
+      el.textContent = scaleLabel;
+    });
+
+    // "Varsayılana dön" butonu
+    const resetButton = document.querySelector<HTMLButtonElement>('[data-reader-reset]');
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        try {
+          localStorage.setItem(READER_KEY, '1');
+        } catch {
+          /* empty */
+        }
+        document.documentElement.style.setProperty('--reader-scale', '1');
+        document.querySelectorAll<HTMLElement>('[data-reader-scale-label]').forEach((el) => {
+          el.textContent = SCALE_LABELS['1'];
+        });
+        // Eğer bir makaledeyse ReadingControls butonlarını da güncelle
+        document.querySelectorAll<HTMLButtonElement>('[data-reading-scale]').forEach((btn) => {
+          if (btn.dataset.readingScale === '1') {
+            btn.dataset.active = 'true';
+            btn.setAttribute('aria-pressed', 'true');
+          } else {
+            delete btn.dataset.active;
+            btn.setAttribute('aria-pressed', 'false');
+          }
+        });
+      });
+    }
+  })();
+</script>
