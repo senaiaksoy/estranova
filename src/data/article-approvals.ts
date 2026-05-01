@@ -65,6 +65,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-01',
     note: 'Berna doğrudan onayı (form üretmeden) — Kanal A KAPALI ihlali düzeltildi (Apple Watch + uyku verisi → dolaylı ses), "bilmiyorum" anı Beslenme Şekilleri bölümünde, tabak metaforu kapanışı (bedenle yazışma serisi: mektup → defter → tabak), 5-katmanlı BEN. Dördüncü onaylı Estranova makalesi, beslenme imza ekseninde ilk.',
   },
+  {
+    pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-05-01',
+    note: 'Berna doğrudan onayı (form üretmeden) — Çift Rol ifşası ana konu, kuşak göndermeleri 3 yerde yumuşatıldı, "bilmiyorum" anı Bölüm 04 esim-hekim sonunda (çift ayrıcalık olmasa hangi profil arardım sorusu), masa varyasyonu kapanışı (bedenle yazışma serisi: mektup → soru → defter → tabak → masa), 5-katmanlı BEN. Beşinci onaylı Estranova makalesi, Çift Rol ekseninde merkez yazı.',
+  },
 ];
 
 /**
