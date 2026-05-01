@@ -17,7 +17,7 @@ const route = '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme';
 const hero = submenuHeroByRoute[route]!;
 
 const tocEntries = [
-  { id: 'acilis', label: 'Açılış: Tezgâhın Köşesindeki Defter' },
+  { id: 'acilis', label: 'Tezgâhın Köşesindeki Defter' },
   { id: 'ilk-haftalar', label: 'İlk Haftaların Hisleri' },
   { id: 'yumusak-yan-etkiler', label: 'Yumuşak ve Geçici Olan' },
   { id: 'kanama-duzeni', label: 'Kanama Düzenindeki Değişimler' },
@@ -25,6 +25,7 @@ const tocEntries = [
   { id: 'izleme-takvimi', label: 'İzleme Takvimi: 3, 6, 12 Ay' },
   { id: 'ne-zaman-hekime', label: 'Ne Zaman Hekime Başvurmak Anlamlı?' },
   { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -89,7 +90,7 @@ const articleSchemas = buildArticleSchemas({
       </section>
 
       <ArticleProsePanel>
-        <h2 id="acilis">Açılış: Tezgâhın Köşesindeki Defter</h2>
+        <h2 id="acilis">Tezgâhın Köşesindeki Defter</h2>
         <p>
           Bir noktada şunu fark ettim: HRT'ye başlayan hemen herkesin mutfak tezgâhının bir köşesinde, görünmez
           bir defter var.
@@ -97,11 +98,11 @@ const articleSchemas = buildArticleSchemas({
         <p>
           O defter çoğu zaman gerçek bir defter değil. Telefonda bir not, takvime yazılmış küçük bir başlık,
           bazen sadece sabah çayını içerken aklımızdan geçen bir cümle: <em>"Bugün biraz hassasım, dün de öyleydi
-          galiba."</em> Geçen gün Instagram'da bir uzman yaşıt hesabında, ilk üç ayda HRT'yi izlemenin en güzel
-          biçiminin bu küçük defterler olduğuna dair bir paylaşım gördüm. Bir okur yorumda şunu yazmış: "Ben
-          başlangıçta bunları abartıyor sandım, sonra üçüncü ayda hekimimle oturduğumuzda en çok işe yaradı."
-          Aynı cümleyi yıllar önce ben de farklı bir bağlamda yazmıştım. Bedeni dinlemek bir yetenek değil; alıştırma
-          ile gelişen bir alışkanlık.
+          galiba."</em> Geçen gün Instagram'da bir uzman hesapta, ilk üç ayda HRT'yi izlemenin en güzel biçiminin
+          bu küçük defterler olduğuna dair bir paylaşım gördüm. Bir okur yorumda şunu yazmış: "Ben başlangıçta
+          bunları abartıyor sandım, sonra üçüncü ayda hekimimle oturduğumuzda en çok işe yaradı." Aynı cümleyi
+          yıllar önce ben de farklı bir bağlamda yazmıştım. Bedeni dinlemek bir beceri değil; alıştırma ile
+          gelişen bir alışkanlık.
         </p>
         <p>
           Bu yazı, HRT'nin ilk haftalarında ve aylarında neyle karşılaşmanın yaygın olduğunu, hangi belirtinin
@@ -205,15 +206,33 @@ const articleSchemas = buildArticleSchemas({
           geri ilerler. Uyku-stres-vazomotor üçgeni birbirine sıkı bağlıdır; bir köşedeki yumuşama, diğerlerini
           de yumuşatır.
         </p>
+        <p>
+          Burada açık tuttuğum bir soru var: ilk üç ayda yaşanan duygusal yorgunluğun ne kadarı tedaviye, ne
+          kadarı genel hayatın ritmine ait — bunu net ayırt etmek bende her zaman mümkün olmuyor. Klinik tablo
+          çoğu kadında ikinci–üçüncü ayda dengeleniyor; ama bireysel deneyim sayıların dışında bazen alışılmış
+          kalıbın ötesinde kalabiliyor. Bilmediğim bir kısım hâlâ var — kendi yolumda da, başkalarınınkinde de.
+          Buradaki en sade tutum, yargılamadan gözlemlemek.
+        </p>
 
         <h2 id="izleme-takvimi">İzleme Takvimi: 3, 6, 12 Ay</h2>
         <p>
           Bir tedaviyi taşımak, onu yalnız taşımamak demek değil — düzenli kontroller en sade güvenlik ağıdır.
         </p>
         <p>
+          Bu yazıda kendi konumumu en başta dürüstçe söylemek istiyorum; çünkü izleme takvimi bana çoğu kadına
+          gelene göre biraz farklı geliyor. Eşim jinekolog; ama beni takip eden o değil — yakınlarını takip
+          etmenin etik açıdan doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına devretti. Asıl
+          hekimim aynı zamanda yakın çevremizden biri; bu nedenle bekleme odasında oturup sıramı beklemiyorum,
+          dönüş yolunda aklın bin parçaya bölünmesini içeriden bilmiyorum. Üç aylık değerlendirme bende çoğu
+          zaman bir randevu yerine bir akşam masasında açılan bir konuşmayla tamamlanıyor. Bu ayrıcalığın
+          farkındayım; bu yüzden takvimin "standart hâlini" kendi deneyimimden değil, çevremdeki kadınların
+          anlattıklarından ve klinik çerçeveden örüyorum.
+        </p>
+        <p>
           Çoğu klinik çerçevede HRT başlandıktan sonra ilk yıl, üç aylık aralıklarla bir izleme önerilir. Üçüncü
-          ayda genellikle iki temel soru oturur: belirtiler beklediğin gibi yumuşadı mı, ve ortaya çıkan herhangi
-          bir yan etki var mı? Bu görüşmede dozun ya da formun ufak ayarlanması gündeme gelebilir <Evidence level={5} />.
+          ayda genellikle iki temel soru oturur: belirtiler beklendiği gibi yumuşadı mı, ve ortaya çıkan
+          herhangi bir yan etki var mı? Bu görüşmede dozun ya da formun ufak ayarlanması gündeme gelebilir
+          <Evidence level={5} />.
         </p>
         <p>
           Altıncı ayda dengenin oturup oturmadığı, kanama düzeninin yerleşip yerleşmediği, ruh hali ve uyku
@@ -273,9 +292,9 @@ const articleSchemas = buildArticleSchemas({
         </ul>
         <p>
           Bunların hiçbiri "panik" listesi değil — dikkat listesi. Çoğu kadında HRT yıllarca sakin geçer;
-          önemli olan bu çizgiyi bilmek ve gerektiğinde gecikmeden iletişime geçmek. Hekimle aranızdaki bu sade
-          anlaşma — "şu olursa hemen aramayı bilirim" — kararı taşımayı görünmez biçimde kolaylaştırır
-          <Evidence level={5} />.
+          önemli olan bu çizgiyi bilmek ve gerektiğinde gecikmeden iletişime geçmek. Hekimimle bir konuşmamızda
+          bu listeyi birlikte yorumlamıştık; "şu olursa hemen ararım" anlaşması, kararı taşımayı görünmez
+          biçimde kolaylaştırıyor <Evidence level={5} />. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
         </p>
 
         <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
@@ -324,6 +343,22 @@ const articleSchemas = buildArticleSchemas({
           Bazen aynı etken maddenin farklı bir formu, tamamen farklı bir konfor sağlar. Tedavi tek bir karar değil;
           birlikte güncellenen bir konuşma.
         </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Tezgâhın köşesindeki defter, aslında bedeniyle kurulan sade bir yazışmanın aracı.
+        </p>
+        <p>
+          Ben kendi defterimi yıllardır tutuyorum; mükemmel değil, çoğu hafta birkaç cümle. Ama üç ay sonra
+          hekimimle oturduğumuzda en çok bu kısa notlar işe yaradı. Yan etkilerin kategorize edilmesi, dozun
+          ayarlanması, gerektiğinde formun değiştirilmesi — bunlar büyük kararlar gibi görünüyor; ama temelinde
+          küçük bir alışkanlık var: haftada bir cümle.
+        </p>
+        <p>
+          Belki şu soru yardımcı olur: bu hafta hangi belirtiyi yargılamadan, sadece kayıt etmek niyetiyle
+          yazabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen onu
+          deftere geçiriyorsun.
+        </p>
       </ArticleProsePanel>
 
       <RelatedReadings
@@ -341,15 +376,30 @@ const articleSchemas = buildArticleSchemas({
         class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="leading-relaxed text-ink/80">
-          Hormon tedavisinde ilk haftalarda görülen yumuşak yan etkilerin (meme hassasiyeti, hafif ödem, baş
-          ağrısı, kanama düzensizliği) büyük kısmı vücudun yeni hormonal dengeye yerleşme sürecinin parçasıdır
-          ve ilk üç–altı ay içinde gerilemektedir. Bu yazı genel bilgi paylaşır; bireysel doz, form ve izlem
-          kararları her zaman ilgili hekim tarafından klinik duruma göre verilir. Bacakta tek taraflı şişlik,
-          göğüste yoğun ağrı, ani görme bozukluğu, karakteri değişen şiddetli baş ağrısı, postmenopoz döneminde
-          açıklanamayan kanama, memede yeni kitle ya da şiddetli karın ağrısı gibi belirtiler gecikmeden
-          değerlendirilmelidir. Düzenli izlem (ilk yıl üç aylık, sonraki yıllarda klinik tabloya göre) HRT
-          kullanımının temel güvenlik çerçevesidir.
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Menopozal hormon tedavisinin ilk haftalarında görülen yumuşak yan etkiler (meme hassasiyeti, hafif
+          ödem, gerilim tipi baş ağrısı, kanama düzensizliği) büyük çoğunlukla bedenin yeni hormonal dengeye
+          yerleşme sürecinin parçasıdır. Endometrial uyum, sıvı dengesi ve vasküler tonus üzerindeki erken
+          etkiler ilk üç–altı ayda dengelenmeye eğilimlidir.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Klinik kanıt yumuşak yan etkilerin büyük kısmının üçüncü aya kadar belirgin biçimde gerilediğini,
+          altıncı aya kadar kanama düzeninin yerleşmesinin beklendiğini ortaya koymaktadır. Bu süreçte
+          tedavinin yargılanması yerine düzenli gözlem önerilir.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Bireysel doz, form (oral / transdermal / vajinal) ve izlem kararları her zaman ilgili hekim
+          tarafından klinik duruma göre verilir. İlk yıl üç aylık aralıklarla görüşme; sonraki yıllarda klinik
+          tabloya göre altı ay–yıllık görüşme ve yıllık mamografi standart izlem çerçevesinin parçasıdır.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Bacakta tek taraflı şişlik veya ısrarlı baldır ağrısı, göğüste yoğun ağrı, açıklanamayan nefes
+          darlığı, ani görme bozukluğu, aurayla başlayan veya karakteri değişen şiddetli baş ağrısı,
+          postmenopoz döneminde açıklanamayan kanama, memede yeni kitle ya da şiddetli karın ağrısı / sarılık
+          tablosu gecikmeden değerlendirilmelidir.
+        </p>
+        <p class="text-sm italic text-burgundy">
+          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
         </p>
       </section>
 

@@ -13,18 +13,18 @@ exportedAt: 2026-05-01
 
 # HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?
 
-## Açılış: Tezgâhın Köşesindeki Defter
+## Tezgâhın Köşesindeki Defter
 
 Bir noktada şunu fark ettim: HRT'ye başlayan hemen herkesin mutfak tezgâhının bir köşesinde, görünmez
 bir defter var.
 
 O defter çoğu zaman gerçek bir defter değil. Telefonda bir not, takvime yazılmış küçük bir başlık,
 bazen sadece sabah çayını içerken aklımızdan geçen bir cümle: *"Bugün biraz hassasım, dün de öyleydi
-galiba."* Geçen gün Instagram'da bir uzman yaşıt hesabında, ilk üç ayda HRT'yi izlemenin en güzel
-biçiminin bu küçük defterler olduğuna dair bir paylaşım gördüm. Bir okur yorumda şunu yazmış: "Ben
-başlangıçta bunları abartıyor sandım, sonra üçüncü ayda hekimimle oturduğumuzda en çok işe yaradı."
-Aynı cümleyi yıllar önce ben de farklı bir bağlamda yazmıştım. Bedeni dinlemek bir yetenek değil; alıştırma
-ile gelişen bir alışkanlık.
+galiba."* Geçen gün Instagram'da bir uzman hesapta, ilk üç ayda HRT'yi izlemenin en güzel biçiminin
+bu küçük defterler olduğuna dair bir paylaşım gördüm. Bir okur yorumda şunu yazmış: "Ben başlangıçta
+bunları abartıyor sandım, sonra üçüncü ayda hekimimle oturduğumuzda en çok işe yaradı." Aynı cümleyi
+yıllar önce ben de farklı bir bağlamda yazmıştım. Bedeni dinlemek bir beceri değil; alıştırma ile
+gelişen bir alışkanlık.
 
 Bu yazı, HRT'nin ilk haftalarında ve aylarında neyle karşılaşmanın yaygın olduğunu, hangi belirtinin
 büyük ihtimalle geçici sayıldığını, hangisinin gecikmeden değerlendirilmesi gerektiğini ve hekimle
@@ -129,13 +129,29 @@ değişimlerden biridir. Ama uyku iyileşmesi her zaman lineer değil — bazen 
 geri ilerler. Uyku-stres-vazomotor üçgeni birbirine sıkı bağlıdır; bir köşedeki yumuşama, diğerlerini
 de yumuşatır.
 
+Burada açık tuttuğum bir soru var: ilk üç ayda yaşanan duygusal yorgunluğun ne kadarı tedaviye, ne
+kadarı genel hayatın ritmine ait — bunu net ayırt etmek bende her zaman mümkün olmuyor. Klinik tablo
+çoğu kadında ikinci–üçüncü ayda dengeleniyor; ama bireysel deneyim sayıların dışında bazen alışılmış
+kalıbın ötesinde kalabiliyor. Bilmediğim bir kısım hâlâ var — kendi yolumda da, başkalarınınkinde de.
+Buradaki en sade tutum, yargılamadan gözlemlemek.
+
 ## İzleme Takvimi: 3, 6, 12 Ay
 
 Bir tedaviyi taşımak, onu yalnız taşımamak demek değil — düzenli kontroller en sade güvenlik ağıdır.
 
+Bu yazıda kendi konumumu en başta dürüstçe söylemek istiyorum; çünkü izleme takvimi bana çoğu kadına
+gelene göre biraz farklı geliyor. Eşim jinekolog; ama beni takip eden o değil — yakınlarını takip
+etmenin etik açıdan doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına devretti. Asıl
+hekimim aynı zamanda yakın çevremizden biri; bu nedenle bekleme odasında oturup sıramı beklemiyorum,
+dönüş yolunda aklın bin parçaya bölünmesini içeriden bilmiyorum. Üç aylık değerlendirme bende çoğu
+zaman bir randevu yerine bir akşam masasında açılan bir konuşmayla tamamlanıyor. Bu ayrıcalığın
+farkındayım; bu yüzden takvimin "standart hâlini" kendi deneyimimden değil, çevremdeki kadınların
+anlattıklarından ve klinik çerçeveden örüyorum.
+
 Çoğu klinik çerçevede HRT başlandıktan sonra ilk yıl, üç aylık aralıklarla bir izleme önerilir. Üçüncü
-ayda genellikle iki temel soru oturur: belirtiler beklediğin gibi yumuşadı mı, ve ortaya çıkan herhangi
-bir yan etki var mı? Bu görüşmede dozun ya da formun ufak ayarlanması gündeme gelebilir
+ayda genellikle iki temel soru oturur: belirtiler beklendiği gibi yumuşadı mı, ve ortaya çıkan
+herhangi bir yan etki var mı? Bu görüşmede dozun ya da formun ufak ayarlanması gündeme gelebilir
+
 (güçlü kanıt)
 .
 
@@ -188,11 +204,11 @@ takviminden bağımsız olarak değerlendirilir.
 fonksiyonlarının kontrol edilmesi gerekebilir.
 
 Bunların hiçbiri "panik" listesi değil — dikkat listesi. Çoğu kadında HRT yıllarca sakin geçer;
-önemli olan bu çizgiyi bilmek ve gerektiğinde gecikmeden iletişime geçmek. Hekimle aranızdaki bu sade
-anlaşma — "şu olursa hemen aramayı bilirim" — kararı taşımayı görünmez biçimde kolaylaştırır
-
+önemli olan bu çizgiyi bilmek ve gerektiğinde gecikmeden iletişime geçmek. Hekimimle bir konuşmamızda
+bu listeyi birlikte yorumlamıştık; "şu olursa hemen ararım" anlaşması, kararı taşımayı görünmez
+biçimde kolaylaştırıyor
 (güçlü kanıt)
-.
+. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
 
 ## Sık Sorulanlar
 
@@ -245,3 +261,16 @@ birlikte doz veya form (oral, transdermal jel, bant) değişikliği gündeme gel
 .
 Bazen aynı etken maddenin farklı bir formu, tamamen farklı bir konfor sağlar. Tedavi tek bir karar değil;
 birlikte güncellenen bir konuşma.
+
+## Kapanış
+
+Tezgâhın köşesindeki defter, aslında bedeniyle kurulan sade bir yazışmanın aracı.
+
+Ben kendi defterimi yıllardır tutuyorum; mükemmel değil, çoğu hafta birkaç cümle. Ama üç ay sonra
+hekimimle oturduğumuzda en çok bu kısa notlar işe yaradı. Yan etkilerin kategorize edilmesi, dozun
+ayarlanması, gerektiğinde formun değiştirilmesi — bunlar büyük kararlar gibi görünüyor; ama temelinde
+küçük bir alışkanlık var: haftada bir cümle.
+
+Belki şu soru yardımcı olur: bu hafta hangi belirtiyi yargılamadan, sadece kayıt etmek niyetiyle
+yazabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen onu
+deftere geçiriyorsun.
