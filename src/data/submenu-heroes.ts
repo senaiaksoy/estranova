@@ -36,8 +36,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Doğal pencere ışığında gri saçlı kadın portresi; sakin ve kendinden emin bakış',
   },
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu': {
-    src: '/images/library/editorial/portrait-silver-strands-window.webp',
-    alt: 'Pencere kenarında krem kazak içinde gri tutamlı saçlı 52 yaş kadın, el yanağa dayanmış, ışığa bakan içe dönük dingin profil; tartı sayısı yatışınca vücut kompozisyonunun sessiz kayışını sakin gözlemle okuma teması',
+    src: '/images/library/editorial/pair-window-cafe-reflection.webp',
+    alt: 'Aydınlık bir kafenin pencere kenarında karşılıklı oturan iki yaşıt kadın; birinin elinde çay fincanı, diğerinin önünde açık not defteri ve dolma kalem; bakımlı boyalı saçlar, ivory kazak ve bordo ipek bluz, mermer masada espresso ve tek dahlia; arkada ağaçlı sokak boke; tartı sayılarının ötesinde vücut kompozisyonunu yakın bir arkadaşla sakin konuşarak anlamlandırma teması',
   },
   '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi': {
     src: '/images/library/editorial/hg-menopozda-hekim-hasta-iliskisi.webp',
@@ -80,8 +80,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Sonbahar ormanında sakin yürüyen kadın; uzun vadeli sağlık ve hareket teması',
   },
   '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu': {
-    src: '/images/library/editorial/portrait-silver-strands-window.webp',
-    alt: 'Pencere kenarında düşünceli sessiz bir an; gri saçlı kadın portresi — sağlık kararları üzerine iç tartışma teması',
+    src: '/images/library/editorial/pair-window-cafe-reflection.webp',
+    alt: 'Aydınlık bir kafenin pencere kenarında karşılıklı oturan iki yaşıt kadın; sakin ama dolu bir konuşma anı; ivory kazak ve bordo ipek bluz, mermer masada espresso fincanları, açık deri kapaklı not defteri ve dolma kalem; bakımlı boyalı saçlar, doğal makyaj; sağlık kararlarında "şimdi mi yoksa beklemeli mi" sorusunu yakın bir arkadaşla birlikte düşünen iki olgun kadın teması',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri': {
     src: '/images/library/editorial/hg-tarama-testleri.webp',
