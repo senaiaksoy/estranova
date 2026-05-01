@@ -19,11 +19,12 @@ const tocEntries = [
   { id: 'nedir', label: 'Vazomotor Belirtiler Aslında Ne?' },
   { id: 'neden-olur', label: 'Menopozda Neden Birden Başlıyor?' },
   { id: 'ne-kadar-surer', label: 'Ne Kadar Sürer, Ne Zaman Hafifler?' },
-  { id: 'tetikleyiciler', label: 'Çoğumuzun Yaşadığı Tetikleyiciler' },
+  { id: 'tetikleyiciler', label: 'Sık Karşılaşılan Tetikleyiciler' },
   { id: 'gunluk-adimlar', label: 'Günlük Hayatta Ne İşe Yarıyor?' },
   { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler — Karar Süreci' },
   { id: 'ne-zaman-degerlendirme', label: 'Ne Zaman Hekime Sormalı?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -64,10 +65,11 @@ const articleSchemas = buildArticleSchemas({
       >
         <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
         <p class="leading-relaxed text-ink/80">
-          Sıcak basması ve gece terlemesi bu dönemin belki de en sık konuştuğumuz başlığı. "Birden ısınıyorum, sonra üşüyorum" cümlesini
-          yakın çevremde defalarca duydum, zaman geldi kendim de söyledim. Burada okudukça anladığım şu: bu belirtiler "yalnızca stres"
-          değil; bedenin ısı düzenleme sistemi ile hormon dalgalanmasının birlikte yazdığı biyolojik bir denklem. İyi haber şu — birkaç
-          sade adım ve gerektiğinde kişiye uygun tıbbi seçeneklerle çoğumuzda şiddet ve sıklık belirgin biçimde yumuşayabiliyor.
+          Sıcak basması ve gece terlemesi bu dönemin en çok duyulan başlıklarından biri. "Birden ısınıyorum,
+          sonra üşüyorum" cümlesini çevremdeki kadınlardan defalarca duydum. Okudukça anladığım şu: bu belirtiler
+          "yalnızca stres" değil; bedenin ısı düzenleme sistemi ile hormon dalgalanmasının birlikte yazdığı
+          biyolojik bir denklem. İyi haber şu — birkaç sade adım ve gerektiğinde kişiye uygun tıbbi seçeneklerle
+          çoğu kadında şiddet ve sıklık belirgin biçimde yumuşayabiliyor.
         </p>
       </section>
 
@@ -84,14 +86,15 @@ const articleSchemas = buildArticleSchemas({
           terlemesi ise aynı sahnenin uyku saatindeki versiyonu — terleyerek uyanmak ve ardından yeniden uykuya dalmakta zorlanmak.
         </p>
         <p>
-          Birçoğumuzun yıllarca "stres", "havalar nedeniyle" diye geçiştirdiği bu belirti aslında menopoz geçişinin en görünür
-          biyolojik imzalarından biri. Önce adlandırmak; sonrasını konuşmayı kolaylaştırıyor.
+          Çoğu kadının yıllarca "stres", "havalar nedeniyle" diye geçiştirdiği bu belirti aslında menopoz
+          geçişinin en görünür biyolojik imzalarından biri. Önce adlandırmak; sonrasını konuşmayı
+          kolaylaştırıyor.
         </p>
 
         <h2 id="neden-olur">Menopozda Neden Birden Başlıyor?</h2>
         <p>
-          Bir noktada şunu fark ettim: yıllarca aynı odada, aynı yorganla, aynı gecelikle uyumuştum. Sonra aynı odada birden fazla
-          oluyor. Değişen oda değil — bedenin ısı algısı.
+          Tanıdığım bir kadın anlatmıştı: yıllarca aynı odada, aynı yorganla, aynı gecelikle uyumuş; sonra
+          aynı odada birden fazla olmaya başlamış. Değişen oda değil — bedenin ısı algısı.
         </p>
         <p>
           Menopoz geçişinde östrojen dalgalanması, beynin ısı düzenleme merkezinin (hipotalamus — vücudun termostatı gibi çalışan
@@ -100,48 +103,53 @@ const articleSchemas = buildArticleSchemas({
           terleme refleksini başlatıyor. Sahne dışarıdan ani görünür; içeride aslında biyolojik bir refleks.
         </p>
         <p>
-          Bu süreç tek bir hormona indirgenmez. Uyku eksikliği, stres yükü, beden ağırlığı ve sigara kullanımı şiddeti
-          etkileyebiliyor <Evidence level={4} />. Yani belirtiler biyolojik; ama seyri yaşam koşullarımızla birlikte şekilleniyor.
-          Bunu bilmek bana bir şeyi netleştirdi: tetikleyenleri tek başına suçlamak yerine, hangilerinin bende daha güçlü konuştuğunu
-          fark etmek daha işe yarıyor.
+          Bu süreç tek bir hormona indirgenmez. Uyku eksikliği, stres yükü, beden ağırlığı ve sigara kullanımı
+          şiddeti etkileyebiliyor <Evidence level={4} />. Yani belirtiler biyolojik; ama seyri yaşam koşullarıyla
+          birlikte şekilleniyor. Tetikleyenleri tek başına suçlamak yerine, hangisinin kişide daha güçlü
+          konuştuğunu fark etmek daha işe yarıyor.
         </p>
 
         <h2 id="ne-kadar-surer">Ne Kadar Sürer, Ne Zaman Hafifler?</h2>
         <p>
-          Hepimizin sorduğu ilk sorulardan biri: "Bu ne zaman geçecek?" Doğru cevap, çoğu cevap gibi, kişiden kişiye değişiyor.
+          En sık duyulan sorulardan biri: "Bu ne zaman geçecek?" Doğru cevap, çoğu cevap gibi, kişiden kişiye
+          değişiyor.
         </p>
         <p>
-          Vazomotor belirtiler birçoğumuzda perimenopozda başlar; menopoz sonrası yıllarda sıklık ve şiddet genellikle azalır
-          <Evidence level={5} />. Sürenin kişiden kişiye değiştiğini bilmek burada anahtar: bazı kadınlarda birkaç yıl içinde
-          hafifliyor, bazılarında on yılı bulan bir seyir izleyebiliyor <Evidence level={4} />.
+          Vazomotor belirtiler çoğu kadında perimenopozda başlar; menopoz sonrası yıllarda sıklık ve şiddet
+          genellikle azalır <Evidence level={5} />. Sürenin kişiden kişiye değiştiğini bilmek burada anahtar:
+          bazı kadınlarda birkaç yıl içinde hafifliyor, bazılarında on yılı bulan bir seyir izleyebiliyor
+          <Evidence level={4} />.
         </p>
         <p>
-          Belirtilerin gidişatı çoğu zaman dalgalı. Bu yüzden "bugün daha kötü" günlerini tek başına kötüye gidiş işareti olarak
-          okumak yanıltıcı; tekrar eden bir grafiğin bir noktası olarak izlemek daha gerçekçi. Ben kendi adıma ay grafiği gibi
-          düşünmeye başladım — bazı haftalar yoğun, bazıları sessiz.
+          Belirtilerin gidişatı çoğu zaman dalgalı. Bu yüzden "bugün daha kötü" günlerini tek başına kötüye
+          gidiş işareti olarak okumak yanıltıcı; tekrar eden bir grafiğin bir noktası olarak izlemek daha
+          gerçekçi. Tanıdığım bir kadın bunu bir ay grafiği gibi düşünmeye başladığını anlatmıştı — bazı
+          haftalar yoğun, bazıları sessiz.
         </p>
 
-        <h2 id="tetikleyiciler">Çoğumuzun Yaşadığı Tetikleyiciler</h2>
+        <h2 id="tetikleyiciler">Sık Karşılaşılan Tetikleyiciler</h2>
         <p>
-          Sen de fark etmişsindir: bazı günler hiç olmuyor, bazı günler arka arkaya geliyor. Tesadüf gibi görünen şey çoğu zaman
+          Bazı günler hiç olmuyor, bazı günler arka arkaya geliyor — tesadüf gibi görünen şey çoğu zaman
           tesadüf değil.
         </p>
         <p>
-          Tetikleyiciler herkes için aynı değil; ama bazı başlıklar tutarlı biçimde daha sık rapor ediliyor: alkol (özellikle akşam
-          kırmızı şarap), baharatlı yiyecekler, sıcak ortam, kalın katmanlı giyinme, geç saatte ağır yemek, yoğun stres ve eksik
-          uyku <Evidence level={4} />. Bunların ortak noktası şu: hepsi vücut ısısını ya da damar tepkisini doğrudan etkiliyor.
+          Tetikleyiciler herkes için aynı değil; ama bazı başlıklar tutarlı biçimde daha sık rapor ediliyor:
+          alkol (özellikle akşam kırmızı şarap), baharatlı yiyecekler, sıcak ortam, kalın katmanlı giyinme, geç
+          saatte ağır yemek, yoğun stres ve eksik uyku <Evidence level={4} />. Bunların ortak noktası şu: hepsi
+          vücut ısısını ya da damar tepkisini doğrudan etkiliyor.
         </p>
         <p>
-          Buradaki hedef "yasak listesi" çıkarmak değil — kendi bedeninin ritmini yakalamak. Ben iki haftalık küçük bir not tuttum:
-          ne yedim, ne içtim, kaçta yattım, ertesi gün kaç dalga geldi. Üçüncü haftada kalıp kendiliğinden çıktı; öğle yemeğindeki
-          tek kadeh şarap akşam saatlerime ne yapıyormuş, gözle görülür oldu. Sen de iki üç haftalık küçük bir kayıt deneyebilirsin;
-          büyük bir günlük tutmana gerek yok, telefonun notlarına yazılan üç-dört kelime yeter.
+          Buradaki hedef "yasak listesi" çıkarmak değil — bedeninin ritmini yakalamak. Bir arkadaşım iki
+          haftalık küçük bir not tuttuğunu anlatmıştı: ne yedim, ne içtim, kaçta yattım, ertesi gün kaç dalga
+          geldi. Üçüncü haftada kalıp kendiliğinden çıkmış; öğle yemeğindeki tek kadeh şarabın akşam saatlerine
+          ne yaptığı gözle görülür hâle gelmiş. Birkaç haftalık küçük bir kayıt çoğu kadın için işe yarıyor;
+          büyük bir günlük tutmaya gerek yok, telefon notlarına yazılan üç-dört kelime yeter.
         </p>
 
         <h2 id="gunluk-adimlar">Günlük Hayatta Ne İşe Yarıyor?</h2>
         <p>
-          Birçoğumuzun ilk refleksi büyük bir değişiklik kurmak — yeni bir diyet, yeni bir program. Oysa bu dönemde işe yarayan
-          adımlar genellikle daha sade ve kulağa daha sıradan geliyor.
+          İlk refleks çoğu zaman büyük bir değişiklik kurmak — yeni bir diyet, yeni bir program. Oysa bu
+          dönemde işe yarayan adımlar genellikle daha sade ve kulağa daha sıradan geliyor.
         </p>
         <p>
           En güçlü adımlardan biri uyku ortamını serin tutmak. Yatak odasını yaklaşık 16-19°C aralığında tutmak, ince katmanlı bir
@@ -149,10 +157,11 @@ const articleSchemas = buildArticleSchemas({
           başına bir bardak suyun ve bir el yelpazesi kadar küçük bir araç bile sahneyi yumuşatıyor.
         </p>
         <p>
-          Nefes egzersizleri ve düzenli gevşeme pratikleri de stres-ısı döngüsünü yatıştırabiliyor <Evidence from={3} to={4} />.
-          Burada güçlü bir cümle var, üzerinde durmak istiyorum: dakikada altı nefes ritmi (yaklaşık 5 saniye al, 5 saniye ver) bir
-          dalga başlangıcında uygulandığında bende süreyi kısaltıyor. Bunu sihirli bir çözüm olarak değil; kıymetli ama küçük bir
-          taktik olarak ele almakta fayda var.
+          Nefes egzersizleri ve düzenli gevşeme pratikleri stres-ısı döngüsünü yatıştırabiliyor
+          <Evidence from={3} to={4} />. Üzerinde durmak istediğim güçlü bir cümle var: dakikada altı nefes
+          ritmi (yaklaşık 5 saniye al, 5 saniye ver) bir dalga başlangıcında uygulandığında çoğu kadında süreyi
+          kısaltabiliyor. Bunu sihirli bir çözüm olarak değil; kıymetli ama küçük bir taktik olarak ele almakta
+          fayda var.
         </p>
         <p>
           Düzenli hareket, sağlıklı kilo aralığına yaklaşma ve sigarayı bırakma adımları hem genel sağlık hem de vazomotor
@@ -173,10 +182,12 @@ const articleSchemas = buildArticleSchemas({
           birlikte değerlendiriliyor. Aynı belirtinin iki kadında çok farklı bir karara yol açabileceğini görmek bana güven verdi.
         </p>
         <p>
-          HRT herkes için uygun değil. Hormon dışı seçenekler — belirli düşük doz antidepresan grupları (paroksetin, venlafaksin
-          gibi), gabapentin ya da yeni nesil bazı moleküller — bazı kadınlarda yarar sağlayabiliyor <Evidence level={4} />. Bu
-          seçeneklerin her birinin kendi yan etki profili var; kararı kişisel öyküyü bilen bir hekimle birlikte vermek bu yüzden
-          önemli. Senin yolun benimkine benzemek zorunda değil — kendi hekiminle konuşman bu kararın temeli.
+          HRT herkes için uygun değil. Hormon dışı seçenekler — belirli düşük doz antidepresan grupları
+          (paroksetin, venlafaksin gibi), gabapentin ya da yeni nesil bazı moleküller — bazı kadınlarda yarar
+          sağlayabiliyor <Evidence level={4} />. Burada açık tuttuğum bir soru var: hangi kadına hangi seçeneğin
+          uyacağını önceden kestirmek bende mümkün değil. Bu seçeneklerin her birinin kendi yan etki profili
+          var; kararı kişisel öyküyü bilen bir hekimle birlikte vermek bu yüzden önemli. Senin yolun benimkine
+          benzemek zorunda değil — kendi hekiminle konuşman bu kararın temeli.
         </p>
 
         <h2 id="ne-zaman-degerlendirme">Ne Zaman Hekime Sormalı?</h2>
@@ -202,9 +213,9 @@ const articleSchemas = buildArticleSchemas({
           Vücut ısısı gün içinde dalgalanır; akşamüstü hafif yükselir, gece uykunun ilk saatlerinde düşmeye başlar. Menopoz
           döneminde bu düşüş hareketi sırasında termostatın daralan toleransı tetiklenebiliyor; ısı algısı kayıyor ve refleks
           terlemeyle vücut hızlı serinlemeye çalışıyor <Evidence level={4} />. Yatak başında kalın yorgan, kalın gecelik ya da
-          akşam yenen ağır yemek bu sahneyi büyütüyor. Birçoğumuzda ince katmanlı bir gecelik (terlediğinde çıkarabileceğin),
-          nefes alabilen pamuk-keten nevresim ve yatak başına serinletici küçük bir el yelpazesi ya da sprey gece sahnesini
-          belirgin biçimde yumuşatıyor.
+          akşam yenen ağır yemek bu sahneyi büyütüyor. Çoğu kadında ince katmanlı bir gecelik (terlediğinde
+          çıkarabileceğin), nefes alabilen pamuk-keten nevresim ve yatak başına serinletici küçük bir el
+          yelpazesi ya da sprey gece sahnesini belirgin biçimde yumuşatıyor.
         </p>
         <h3>HRT dışında paroksetin veya gabapentin gerçekten işe yarıyor mu?</h3>
         <p>
@@ -227,22 +238,40 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <h3>Sıcak basması yıllar sonra hâlâ varsa ne yapmalıyım?</h3>
         <p>
-          Birçoğumuzda menopoz sonrası birkaç yıl içinde sahne yumuşar; ancak kadınların yaklaşık yüzde onunda belirtiler on yılı
-          aşan bir seyir izleyebiliyor <Evidence level={4} />. "Geçer" cümlesi herkes için aynı zamanda gerçekleşmiyor. Yıllar
-          sonra hâlâ yaşam kalitesini bozan belirtiler varsa bunu "katlanılması gereken bir tablo" olarak değil yeniden
-          değerlendirme anı olarak okumakta fayda var; HRT geç başlama penceresinin dışındaysa bile hormon dışı seçenekler ve
-          yaşam tarzı planı güncellenebilir. Bu konuda kendi hekiminle yeniden bir kontrol planlamak — eğer beş-on yıl önce
-          konuştuysan tekrar konuşmak — kıymetli.
+          Çoğu kadında menopoz sonrası birkaç yıl içinde sahne yumuşar; ancak kadınların yaklaşık yüzde onunda
+          belirtiler on yılı aşan bir seyir izleyebiliyor <Evidence level={4} />. "Geçer" cümlesi herkes için
+          aynı zamanda gerçekleşmiyor. Yıllar sonra hâlâ yaşam kalitesini bozan belirtiler varsa bunu
+          "katlanılması gereken bir tablo" olarak değil yeniden değerlendirme anı olarak okumakta fayda var;
+          HRT geç başlama penceresinin dışındaysa bile hormon dışı seçenekler ve yaşam tarzı planı
+          güncellenebilir. Kendi hekiminle yeniden bir kontrol planlamak — eğer beş-on yıl önce konuştuysan
+          tekrar konuşmak — kıymetli.
         </p>
         <h3>Pratik gece protokolü nasıl kurulur?</h3>
         <p>
-          Ben kendi adıma şu sade çerçeveyi kurdum, çoğu kadın için işe yaradığını duyuyorum: yatak odasını 16-19°C aralığına çek,
-          pencereyi mümkünse aralık bırak; ince pamuk gecelik (terlediğinde çıkarabileceğin), nefes alabilen yorgan; yatak başına
-          bir bardak ılık su, ince bir havlu ve serinletici sprey; akşam yemeğini yatmadan üç saat önce bitir, alkolü mümkünse
-          akşamdan akşama değil seyrek hale getir; yatmadan önce 5-10 dakika dakikada altı nefes ritmi (5 saniye al, 5 saniye
-          ver). Bu protokol gece terlemesi yaşayan kadınlarda toplam uyanma sayısını anlamlı düzeyde azaltabiliyor
-          <Evidence level={4} />. Üç-dört hafta tutarlı uygulamadan sonuç beklemek gerçekçi; bir hafta deneyip "olmadı" demek
-          erken bir karar.
+          Hekimimle bir konuşmamızda gündeme gelen sade çerçeve şuydu — sahası geniş ama uygulaması sade:
+          yatak odasını 16-19°C aralığına çek, pencereyi mümkünse aralık bırak; ince pamuk gecelik
+          (terlediğinde çıkarabileceğin), nefes alabilen yorgan; yatak başına bir bardak ılık su, ince bir
+          havlu ve serinletici sprey; akşam yemeğini yatmadan üç saat önce bitir, alkolü mümkünse akşamdan
+          akşama değil seyrek hale getir; yatmadan önce 5-10 dakika dakikada altı nefes ritmi (5 saniye al,
+          5 saniye ver). Bu protokol gece terlemesi yaşayan kadınlarda toplam uyanma sayısını anlamlı düzeyde
+          azaltabiliyor <Evidence level={4} />. Üç-dört hafta tutarlı uygulamadan sonuç beklemek gerçekçi;
+          bir hafta deneyip "olmadı" demek erken bir karar.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Sıcak basması bir alarm değil; bedenin yeni bir ısı dengesine geçerken yazdığı sade bir cümle.
+        </p>
+        <p>
+          Tetikleyenleri anlamak, gece sahnesini yumuşatmak, gerektiğinde tıbbi seçenekleri masaya koymak —
+          bunlar büyük adımlar değil, üst üste binen küçük çapalar. Bir kadının yolu üç ayda netleşebilir,
+          başka bir kadın için iki yıl sürebilir; ortalama eğilim yumuşama yönünde olsa da bireysel dağılım
+          geniş.
+        </p>
+        <p>
+          Belki şu soru yardımcı olur: bu hafta gecemde yargılamadan, sadece kayıt etmek niyetiyle hangi tek
+          değişikliği yapabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti;
+          sen onu gecenin içinde dinliyorsun.
         </p>
       </ArticleProsePanel>
 
@@ -261,10 +290,33 @@ const articleSchemas = buildArticleSchemas({
         class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="leading-relaxed text-ink/80">
-          Vazomotor belirtiler şiddetli olduğunda “katlanılması gereken bir kader” gibi hissedilebilir. Oysa çoğu kişi için belirtilerin seyrini
-          hafifletecek birden fazla yol vardır: ısı yönetimi, uyku planı, stres düzenleme ve gerektiğinde tıbbi seçenekleri birlikte ele almak.
-          Sağlam bir yaklaşım, kişisel tetikleyicileri ve sağlık geçmişini hesaba katan, sakin ve sürdürülebilir bir plan kurmaktır.
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Vazomotor belirtiler (sıcak basması ve gece terlemesi) menopoz geçişinin en sık karşılaşılan biyolojik
+          imzasıdır. Östrojen dalgalanması beynin termoregülasyon merkezindeki (hipotalamik termal nötr zon)
+          duyarlılığı değiştirir; vücut küçük ısı değişimlerini "fazla ısı" olarak okuyarak vazodilatasyon ve
+          terleme refleksiyle hızlı serinlemeye geçer.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Klinik kanıt vazomotor belirtilerin perimenopozda başlayıp menopoz sonrası yıllarda hafiflediğini
+          ortaya koyuyor; ancak süre kişiden kişiye geniş bir yelpazeye yayılıyor — bazı kadınlarda birkaç yıl,
+          bazılarında on yılı aşan bir seyir mümkün.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Yaşam tarzı stratejileri (uyku ortamı serinliği, ince katmanlı giyim, alkol-baharat-sıcak tetikleyici
+          farkındalığı, dakikada altı nefes ritmi, düzenli hareket, sigaranın bırakılması) belirti şiddetinde
+          ölçülebilir azalma sağlayabilir; etki çoğu zaman tek bir hamleden değil, sade adımların tutarlı
+          kombinasyonundan gelir.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Tıbbi seçenekler kişiselleştirilir: HRT uygun adaylarda en etkili seçenek olarak öne çıkar; hormon
+          dışı yollar (düşük doz paroksetin, venlafaksin, gabapentin, yeni nesil moleküller) HRT alamayan ya da
+          almak istemeyen kadınlarda anlamlı yarar sağlayabilir. Yıllar sonra hâlâ yaşam kalitesini bozan
+          belirtiler "katlanılan bir tablo" değil, yeniden değerlendirme anıdır. Açıklanamayan kilo kaybı,
+          ateş, çarpıntı veya tiroid bulgu birlikteliği menopoz çerçevesinin dışına işaret eder ve gecikmeden
+          değerlendirilmelidir.
+        </p>
+        <p class="text-sm italic text-burgundy">
+          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
         </p>
       </section>
 
