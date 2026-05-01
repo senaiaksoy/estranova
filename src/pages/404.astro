@@ -2,6 +2,10 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
+import { currentIssue, formatIssuePad } from '../data/issues';
+import { magazineConfig } from '../data/magazine-config';
+
+const issuePad = formatIssuePad(currentIssue.number);
 
 const hubs = [
   {
@@ -62,11 +66,47 @@ const hubs = [
               <h2 class="mb-2 font-serif text-2xl text-burgundy-deep">{hub.label}</h2>
               <p class="mb-3 text-sm leading-relaxed text-charcoal/68">{hub.description}</p>
               <span class="inline-flex items-center gap-2 text-sm font-semibold text-burgundy group-hover:underline">
-                İncele
+                Bölüme git
                 <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
               </span>
             </a>
           ))}
+        </div>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <a
+            href={`/sayi/${currentIssue.slug}`}
+            class="group rounded-[20px] border border-gold/35 bg-cream-soft px-5 py-4 transition hover:border-gold/55 hover:bg-cream-warm"
+          >
+            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">
+              {magazineConfig.name} · Sayı {issuePad}
+            </p>
+            <p class="mt-1 font-serif text-base leading-snug text-burgundy-deep group-hover:underline">
+              {currentIssue.theme}
+            </p>
+          </a>
+          <a
+            href="/sayi"
+            class="group rounded-[20px] border border-burgundy/15 bg-cream-soft px-5 py-4 transition hover:border-burgundy/35"
+          >
+            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+              Sayı arşivi
+            </p>
+            <p class="mt-1 font-serif text-base leading-snug text-ink group-hover:underline">
+              Tüm Eşik sayıları
+            </p>
+          </a>
+          <a
+            href="/hesabim"
+            class="group rounded-[20px] border border-burgundy/15 bg-cream-soft px-5 py-4 transition hover:border-burgundy/35"
+          >
+            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+              Senin Köşen
+            </p>
+            <p class="mt-1 font-serif text-base leading-snug text-ink group-hover:underline">
+              Okuma Panelin
+            </p>
+          </a>
         </div>
 
         <p class="mt-12 text-sm leading-relaxed text-charcoal/60">
