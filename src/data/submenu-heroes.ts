@@ -173,7 +173,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge': {
     src: '/images/heroes/zihin-denge.webp',
-    alt: 'Zihinsel dinginlik ve öz-düzenleme teması — sakin editöryal ortam',
+    alt: 'Sabah pilates sınıfı sonrası zarif bir İstanbul stüdyosunda üç yaşıt Türk kadın (48-54) post-flow dinginlikte sakin sohbet; solda mat üstünde bağdaş kurmuş cam su şişesiyle, ortada pilates Wunda chair yanında pink yoga block elinde, sağda matını topluyor; bakımlı boyalı saçlar (kestane / auburn topknot / auburn high ponytail), sage green + dusty rose + soft black + taupe paleti, pale oak zemin, pampas + areca palm + sheer linen perdeler; zihin-beden bütünlüğü ve sosyal sakin bir an teması',
   },
   '/zihin-denge/uyku-dinlenme': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
