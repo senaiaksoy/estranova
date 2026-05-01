@@ -7,6 +7,7 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
 import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
@@ -201,6 +202,18 @@ const articleSchemas = buildArticleSchemas({
           polisomnografi gibi testlerle uyku mimarisi ayrıntılı incelenebilir; bu yöntem korkutucu değil, bilgilendirici
           bir adım.
         </p>
+
+        <RedFlagBox
+          markers={[
+            'Yakının fark ettiği uyku sırasında nefes kesilmesi ya da yoğun horlama',
+            'Gündüz boyunca dayanılması güç bir uyku hali — toplantıda, direksiyonda, yemek başında uyuklama',
+            'Bacaklarda uykuya geçmeyi engelleyen bir kıpırdama ihtiyacı (gece huzursuzluğu)',
+            'Üç aydan uzun süren ve günlük yaşamı belirgin etkileyen uyku düzensizliği',
+            'Uyku sorununa eşlik eden derin duygu çöküntüsü ya da umutsuzluk hissi',
+            'Reçetesiz uyku ürünlerine ihtiyaç duyma sıklığında artış',
+          ]}
+          footnote="Bu liste teşhis amaçlı değil; bir hekimle konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
+        />
         <p>
           Düzenli bir planla ilerleyen birçoğumuzda uyku kalitesi belirgin biçimde iyileşiyor. Küçük ama tutarlı
           adımlar, bu dönemde gerçekten en kıymetli yaklaşım. Eğer bu yazıdan tek bir not alacaksan: önce sabit
