@@ -36,11 +36,12 @@ geç yansımalarını yaşıyoruz.
 Bugün hasta sandalyesinde oturan kadın çoğu zaman hekimden önce kendi araştırmasını yapmış oluyor. Bu hem
 güç veriyor hem de yorgunluk.
 
-Bizim kuşağımız farklı bir konuma geldi. Bir görüşmeye gitmeden önce çevrimiçi forumları okumuş, sosyal
-medyada kıyaslamalar yapmış, yapay zekâya soru sormuş, arkadaşlarıyla konuşmuş bir kadın oturuyor masanın
-karşısında. Hekimine "ben şunu okudum, sen ne diyorsun" diyebiliyor. Bu, kuşağımızın belki en büyük
-başarısı. Üstelik son yıllarda hekim-hasta paylaşımının klinik karar süreçlerinde aktif rol oynaması,
-jinekoloji ve menopoz literatüründe paydaş karar verme (shared decision-making) modeli olarak tartışılıyor
+Yıllar içinde kadınların hekim sandalyesindeki konumu farklılaştı. Bir görüşmeye gitmeden önce
+çevrimiçi forumları okumuş, sosyal medyada kıyaslamalar yapmış, yapay zekâya soru sormuş,
+arkadaşlarıyla konuşmuş bir kadın oturuyor masanın karşısında. Hekimine "ben şunu okudum, sen ne
+diyorsun" diyebiliyor. Bu sade değişim son yıllarda kayda değer bir konum farkı yarattı. Üstelik
+hekim-hasta paylaşımının klinik karar süreçlerinde aktif rol oynaması, jinekoloji ve menopoz
+literatüründe paydaş karar verme (shared decision-making) modeli olarak tartışılıyor
 
 (iyi kanıt)
 .
@@ -75,9 +76,9 @@ ve şeffaf — ama bilginin altında zaten yorgun bir kadın için ezici. Çünk
 sandalyesine oturup "sen seç" denmesi, bağımsızlık değil yalnızlık verebiliyor.
 
 **Paydaş, birlikte düşünen.** "Şu seçenekler var, sen ne hissediyorsun, neyi denemek
-istiyorsun?" Hem otoritesi var hem dinliyor; karar verirken hastayı yanına alıyor. Çoğumuzun aradığı bu —
-ama bulması zor, ve bulduktan sonra korumak da çaba ister. Çünkü aynı hekim her gün aynı sabırla aynı
-paydaşlık tonunu sürdürebilmek zorunda.
+istiyorsun?" Hem otoritesi var hem dinliyor; karar verirken hastayı yanına alıyor. Çevremdeki
+kadınların büyük çoğunluğunun aradığı tablo bu — ama bulması zor, ve bulduktan sonra korumak da çaba
+ister. Çünkü aynı hekimin her gün aynı sabırla aynı paydaşlık tonunu sürdürmesi gerekiyor.
 
 Bu dört profilin hiçbiri tek başına "iyi" ya da "kötü" değil. Bir kadına klasik otorite uyabilir; başka
 birine paydaş hekim daha doğru gelebilir. Önemli olan kadının kendi pozisyonunu ve neyle rahat ettiğini
@@ -117,6 +118,11 @@ yolunda aklın bin parçaya bölünmesini ben içeriden bilmiyorum. Bu yüzden �
 anlattıklarını çok dinliyorum. Onların deneyimi benim öğretmenim oluyor; bu yazıyı yazma sebebim de büyük
 ölçüde bu.
 
+Burada açık tuttuğum bir soru var: bu çift ayrıcalığım olmasaydı kendi hekimimi seçerken hangi profili
+arar olurdum? Bunun cevabını net veremem. İhtimal güçlü bir paydaş hekim arıyor olurdum; ama
+arayışın yorgunluğunu ve sonuçta kim olursa olsun "ona güvenmem gerekir" düşüncesinin ardında
+gizlenen tedirginliği tam ölçemiyorum. Bilmediğim bir kısım hâlâ var.
+
 Bir de etik soru var: hekim eşinizse, ona "ikinci görüş alacağım" demek zor olmaz mı? Olmadı, çünkü zaten o
 ben olmadığım için bu soru baştan tartışmadan dışındaydı. İkinci görüş, asıl hekimimin meslektaşlarından
 biri olabilir; ev sofrasından bağımsız bir karar. Bu sınırı baştan çekmiş olmak ilişkiyi koruyor — her
@@ -134,9 +140,9 @@ ettim: annem kendi bedeniyle ilgili sormaya *izinli hissetmiyordu*, ama başkas�
 soru sormak ona doğal geliyordu. Bu, kuşağının kalıbıydı — kadının kendisi için değil, başkası için ses
 çıkarması.
 
-Bizim kuşağımız bu kalıbı kırmaya çalışıyor. Kendimiz için de soruyoruz; ama hâlâ rahat değiliz. Kızımın
-kuşağı belki bizden daha kolay yapacak. Üç kuşak arasında bir geçiş halindeyiz — ve bu geçişin yorgunluğu
-da, güzelliği de bize ait.
+Bugün kadınların önemli bir kısmı bu kalıbı kırmaya çalışıyor. Kendimiz için de soruyoruz; ama hâlâ
+rahat değiliz. Kızımın çağı belki daha kolay yapacak. Üç kuşak arasında durduğum yer, hem yorgun
+hem güzel — ve bu yorgun yer aslında çoğu kadının zaten içinden geçtiği bir eşik.
 
 ## Sıkça Sorulan Sorular
 
@@ -169,7 +175,12 @@ sorumluluğun.
 
 ## Kapanış
 
-Cevabı bulmak değil, doğru soruyu sormaya alışmak — son birkaç yıl bana bunu öğretti. Modern kadın menopoz
-takibinde tek bir şey aramıyor; hekim de tek bir şey olamıyor. Önemli olan kadının kendi pozisyonunu
-tanıması, ve bu pozisyona uyacak hekimle uzun bir bağ kurabilmesi. Senin yolun başka olacak — ve olmalı
-da.
+Hekimle aranızdaki masa, aslında bir konuşmanın açıldığı sade bir yer.
+
+Cevabı bulmak değil, doğru soruyu sormaya alışmak — son birkaç yıl bana bunu öğretti. Hekim de tek bir
+şey olamıyor; modern kadın da hekiminden tek bir şey aramıyor. Önemli olan kadının kendi pozisyonunu
+tanıması, ve bu pozisyona uyacak hekimle yıllar içinde olgunlaşacak bir bağ kurabilmesi.
+
+Belki şu soru yardımcı olur: bu hekimle bir yıl sonra hâlâ konuşmaya değer bulduğum bir şey kalır mı?
+Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen onu hekiminle masada
+açıyorsun.
