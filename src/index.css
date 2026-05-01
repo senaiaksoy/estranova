@@ -50,7 +50,7 @@
     margin-bottom: 0.75rem;
   }
   & p {
-    font-size: 17px;
+    font-size: calc(17px * var(--reader-scale, 1));
     line-height: 1.75;
     max-width: 64ch;
   }

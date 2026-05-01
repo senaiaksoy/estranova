@@ -1,0 +1,65 @@
+---
+/**
+ * "A− / A / A+" yazı boyutu kontrolü — uzun-form makalelerde
+ * okuyucuya gövde tipografisini ölçeklendirme imkanı veren küçük
+ * bir araç çubuğu.
+ *
+ * 40+ okuyucu için göz konforu kazanımı (Aeon, premium uzun-form
+ * yayınların standart erişilebilirlik öğesi). CSS custom property
+ * `--reader-scale` üzerinden çalışır; `prose-estranova` body
+ * paragraflarının font-size'ı bu değerle çarpılır:
+ *   font-size: calc(17px * var(--reader-scale, 1))
+ *
+ * Tercih localStorage'da saklanır; sayfalar arası ve sekmeler
+ * arası kalıcıdır. Hiçbir kişisel veri sunucuya gönderilmez.
+ *
+ * CLAUDE.md HARD CONSTRAINT: "Premium / Abone ol / Üye" yasağı —
+ * bu öğe tamamen UX kazanımı, satış/abonelik dilinden bağımsız.
+ */
+---
+
+<div
+  data-reading-controls
+  class="inline-flex items-center gap-1.5 rounded-full border border-burgundy/15 bg-cream-soft px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-ink/65"
+  role="group"
+  aria-label="Yazı boyutu"
+>
+  <span class="text-burgundy/65" aria-hidden="true">Aa</span>
+  <button
+    type="button"
+    data-reading-scale="0.9"
+    class="flex h-6 w-6 items-center justify-center rounded-full text-[11px] tabular-nums transition hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 data-[active=true]:bg-burgundy data-[active=true]:text-cream-soft"
+    aria-label="Yazı boyutunu küçült"
+    aria-pressed="false"
+  >
+    A−
+  </button>
+  <button
+    type="button"
+    data-reading-scale="1"
+    class="flex h-6 w-6 items-center justify-center rounded-full text-[11px] tabular-nums transition hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 data-[active=true]:bg-burgundy data-[active=true]:text-cream-soft"
+    aria-label="Yazı boyutunu varsayılana getir"
+    aria-pressed="true"
+    data-active="true"
+  >
+    A
+  </button>
+  <button
+    type="button"
+    data-reading-scale="1.15"
+    class="flex h-6 w-6 items-center justify-center rounded-full text-[12px] tabular-nums transition hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 data-[active=true]:bg-burgundy data-[active=true]:text-cream-soft"
+    aria-label="Yazı boyutunu büyüt"
+    aria-pressed="false"
+  >
+    A+
+  </button>
+  <button
+    type="button"
+    data-reading-scale="1.3"
+    class="flex h-6 w-6 items-center justify-center rounded-full text-[13px] tabular-nums transition hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 data-[active=true]:bg-burgundy data-[active=true]:text-cream-soft"
+    aria-label="Yazı boyutunu en büyüğe getir"
+    aria-pressed="false"
+  >
+    A
+  </button>
+</div>
