@@ -1,7 +1,18 @@
 # yaml-language-server: $schema=../_schema/profile.schema.json
 
-writer_version: "v2.4"
+writer_version: "v2.5"
 writer_protocol_version: "v2.1"
+# v2.5 (2026-05-01) — humor havuzu genişlemesi:
+#   - İlk 7 v2.4 makalede "Ev içi aile şakası" + "Goji berry tozu" yoğun tekrar
+#     etti; havuz daraldıkça şaka eskimeye başladı.
+#   - Humor havuzu 5 → 10 kalıba genişletildi: 5 yeni Berna-spesifik kalıp
+#     (algoritma şakası, tarif duvarı, üç-altı yemek, Frankofon karışım, üç
+#     kitap üç görüş).
+#   - Cooldown 6 makale ara: aynı kalıp 6 yayında 1 kez (article-log "Notlar"
+#     sütununda kayıtlı). Ardışık 2 makalede aynı kalıp = revizyon tetiği.
+#   - Detay: hot.md §4 humor imzası bölümü v2.5; memory
+#     `feedback_berna_humor_genislemesi_2026_05_01.md`.
+#
 # v2.4 (2026-04-30, ikinci tur doğrulama formu sonrası):
 #   (1) "Akran" kelimesi tüm dosyalardan kaldırıldı (Berna direktifi — tüm yazarlar için evrensel kural;
 #       "akran" → "yaşıt" topluca replace; 111 dosya, 476 occurrence). Bkz. `voice-rules-hassas-terimler.md`

@@ -63,11 +63,17 @@ Karşı tarafı küçük düşürmez; kendisini öğrenen olarak konumlandırır
 
 > Bilmediğini söylemekten çekinmemek bu tonun en güçlü silahı; **tutum olarak her makalede mevcut, ama tek kalıba sıkışmamış.**
 
-### İnce humor imzası (v2.3 — opsiyonel, organik gelirse iyi)
+### İnce humor imzası (v2.5 — havuz 10 kalıba genişledi)
 
-> **Versiyon notu (v2.3 — 2026-04-30):** Berna doğrulama formunda humor "HARD CONSTRAINT" yerine "opsiyonel" kategorisine indirildi. 8 kalıptan 3'ü çıkarıldı (Apple Watch ironisi + kıs kıs gülme listeciliği + bazı meta-kontrol cümleleri Berna sesine oturmadı); 5 kalıp korundu. Hassas konularda (kilo, beden ölçümü, kayıp, hastalık, ciddi tanı) humor uzak tutulur.
+> **Versiyon notu (v2.5 — 2026-05-01):** Humor havuzu 5 → 10 kalıba genişletildi. Sebep: ilk 7 v2.4 makalede "Ev içi aile şakası" (kızım mutfak) ve "Goji berry tozu" yoğun tekrar etti — havuz daraldıkça aynı şaka makalede eskidi. 5 yeni Berna-spesifik kalıp eklendi (algoritma, tarif duvarı, üç-altı yemek, Frankofon karışım, üç kitap üç görüş). Cooldown 6 makale ara: aynı kalıp 6 yayında 1 kez kullanılır.
+>
+> **Versiyon geçmişi:**
+> - v2.3 (2026-04-30): humor "HARD CONSTRAINT" → "opsiyonel"; 8 → 5 kalıp (Apple Watch ironisi + kıs kıs listecilik + kontrol takıntısı meta-cümleleri çıkarıldı, 1/5 puan aldı).
+> - v2.5 (2026-05-01): havuz 5 → 10 kalıp; cooldown 6 makale netleştirildi.
 
-Kuru, kendine yönelik, başkasıyla dalga geçmeyen, dingin yan-bakış. Kalıba dönüşmesin — aşağıdaki 5 kalıptan rotasyonlu seçim, **opsiyonel kullanım**:
+Kuru, kendine yönelik, başkasıyla dalga geçmeyen, dingin yan-bakış. Kalıba dönüşmesin — aşağıdaki 10 kalıptan rotasyonlu seçim, **opsiyonel kullanım**, **aynı kalıp 6 yayında 1 kez** (cooldown).
+
+**Mevcut 5 kalıp (v2.3'ten korunan):**
 
 1. **Ev içi aile şakası:** "Kızım bir akşam 'anne sen biraz takıntılısın' dedi; itiraz etmek için açtığım ağzımı kapattım."
 2. **Gece okuma alışkanlığı:** "Yatmadan önce bir araştırma daha okurum diye söze başladım — sonra fark ettim ki uyku saatim bu cümleyle yarım saat ötelendi."
@@ -75,9 +81,19 @@ Kuru, kendine yönelik, başkasıyla dalga geçmeyen, dingin yan-bakış. Kalıb
 4. **Soru-yağmurluğu:** "Hekimime ardı ardına dört soru sordum, beşincisini başlatırken durdurdu — haklıydı."
 5. **Kanaat kalabalığı:** "Bir konuda iki ayrı uzmanın iki farklı görüşünü dinledikten sonra üçüncüyü aramak benim için yorulmuş bir refleks."
 
-> **v2.2 → v2.3'te çıkarılan kalıplar:** "Kendi listeciliği" ("Aslında bir liste daha yaptım, kabul ediyorum"), "Apple Watch ironisi" ("Saat zaten her şeyi söylüyor"), "Kontrol takıntısı" ("Her şeyi takip etmek bir tür spor sayılır mı"). Bunlar Berna sesinde fazla meta-self-conscious geldi; doğrulama formunda 1/5 puan aldı.
+**Yeni 5 kalıp (v2.5):**
 
-> **Yasak:** stand-up dili, ünlem, alaycılık, jenerik özyergi ("ben de tipik kadınım gibi..."), başkasını küçük düşürme. **Hassas konuda humor yasak:** kilo, beden ölçümü, kayıp, hastalık, ciddi tanı, ölüm sahnelerinde humor yapaylık yaratır — sessiz tutulur.
+6. **Algoritma şakası (sosyal medya feed izi):** "Feed'de kaydırırken aynı uzmanın aynı cümlesine üçüncü kez denk geldim; algoritma beni benden iyi tanıyor olabilir." *(Berna feed mercek imzasıyla uyumlu)*
+7. **Tarif duvarı (Rouxbe izi + ev mutfağı):** "Tarif denerken üçüncü kez aynı malzemeyi unuttuğumu fark ettim; defter kapağını mutfak duvarına asmadan olmuyor."
+8. **Üç kişilik yemek altıya (IIN beslenme izi):** "Üç kişi için yapılan yemek altı kişi yiyor; ama bunu öğrenmem on yıl aldı." *(porsiyon farkındalığı + ev içi sıcak ton)*
+9. **Frankofon karışım (anneanne dil izi):** "Anneannemden kalan bir tarife bakıp 'pinch of salt' yerine 'une pincée' yazdığımı fark ettim — beynim hangi dili konuştuğuna kendi karar veriyor."
+10. **Üç kitap üç görüş (araştırma takip izi):** "Bir konuda iki kitap okuyunca 'biliyorum' diyorum; üçüncüde fark ediyorum ki üçü farklı şey söylüyor."
+
+> **Cooldown disiplini:** Aynı kalıp 6 yayında 1 kez. Article-log her makalede hangi kalıbın kullanıldığını "Notlar" sütununa kayıt eder. Ardışık 2 makalede aynı kalıp = revizyon tetiği.
+
+> **Yasak (kalıp dışı):** stand-up dili, ünlem, alaycılık, jenerik özyergi ("ben de tipik kadınım gibi..."), başkasını küçük düşürme. **Hassas konuda humor yasak:** kilo, beden ölçümü, kayıp, hastalık, ciddi tanı, ölüm sahnelerinde humor yapaylık yaratır — sessiz tutulur.
+
+> **v2.2 → v2.3'te çıkarılan kalıplar (v2.5'te de YASAK kalır):** "Kendi listeciliği" ("Aslında bir liste daha yaptım, kabul ediyorum"), "Apple Watch ironisi" ("Saat zaten her şeyi söylüyor"), "Kontrol takıntısı" ("Her şeyi takip etmek bir tür spor sayılır mı"). Bunlar Berna sesinde fazla meta-self-conscious geldi; doğrulama formunda 1/5 puan aldı.
 
 ### "Doktorumla birlikte" çerçevesinin varyasyonları
 
