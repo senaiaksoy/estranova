@@ -8,10 +8,10 @@ export interface SubmenuHeroImage {
   alt: string;
 }
 
-/** Ana sayfa kahraman görseli (editoryal, sakin ton). */
+/** Ana sayfa kahraman görseli (editoryal, canlı topluluk tonu — 2026-05-01 V2 brief). */
 export const homePageHero: SubmenuHeroImage = {
   src: '/images/hero/home-hero.webp',
-  alt: 'Pencere ışığında sakin bir sabah: elinde kitapla dalgın bakışlı orta yaş kadın; editöryal iç mekân',
+  alt: 'Boğaziçi sahil terasında altın saatte çay sohbeti yapan üç orta yaş Türk kadın; arkada Boğaziçi Köprüsü ve Ortaköy Camii — hormonal geçiş döneminde birlikte yaşamı, neşeyi ve topluluğu yansıtan editöryal sahne',
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {

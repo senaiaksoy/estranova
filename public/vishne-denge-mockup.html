@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estranova · Vişne Paleti (Denge) — Mock-up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ─── DENGE PALETİ ────────────────────────────────────────── */
+  :root {
+    /* YENİ — vişne ekseni */
+    --vishne:        #8B2238;
+    --vishne-deep:   #6B1828;
+    /* YENİ — olgun pembe accent */
+    --pembe:         #D4859A;
+    --pembe-deep:    #C97084;
+    /* KORUNAN */
+    --gold:          #C9A96E;
+    --gold-bronze:   #775A19;
+    --cream-soft:    #FDF8F0;
+    --cream-warm:    #FAF4E8;
+    --ink:           #2D2D2D;
+    /* ESKİ — yalnızca karşılaştırma için */
+    --old-burgundy:      #6B2D3E;
+    --old-burgundy-deep: #4F171C;
+  }
+
+  body {
+    font-family: 'Albert Sans', sans-serif;
+    background: var(--cream-soft);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .serif { font-family: 'Newsreader', serif; }
+
+  /* ─── TOPBAR ──────────────────────────────────────────────── */
+  .topbar {
+    background: var(--vishne);
+    color: white;
+    padding: 0.85rem 2rem;
+    font-size: 0.85rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  .topbar em {
+    font-family: 'Newsreader', serif;
+    color: var(--cream-soft);
+    font-style: italic;
+  }
+
+  /* ─── SECTION SCAFFOLD ────────────────────────────────────── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+  .section-eyebrow {
+    font-family: 'Newsreader', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    color: var(--gold-bronze);
+    text-transform: uppercase;
+  }
+  .section-rule {
+    width: 2.5rem; height: 1px;
+    background: var(--gold);
+    margin: 0.85rem 0 1.75rem;
+  }
+  .section-h {
+    font-family: 'Newsreader', serif;
+    font-size: 2.25rem;
+    color: var(--ink);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+  .section-h em { color: var(--vishne); font-style: italic; }
+
+  /* ─── PALETTE GRID ────────────────────────────────────────── */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .swatch {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px -2px rgba(107, 24, 40, 0.08);
+  }
+  .swatch-color { height: 90px; }
+  .swatch-info {
+    padding: 0.75rem 1rem;
+    background: white;
+    font-size: 0.85rem;
+  }
+  .swatch-name {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    color: var(--ink);
+  }
+  .swatch-hex {
+    font-family: 'Albert Sans', monospace;
+    color: var(--gold-bronze);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+  .swatch-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    padding: 1px 6px;
+    margin-left: 4px;
+    border-radius: 3px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .swatch-tag.new { background: var(--vishne); color: white; }
+  .swatch-tag.kept { background: var(--cream-warm); color: var(--gold-bronze); }
+
+  /* ─── BEFORE / AFTER ──────────────────────────────────────── */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .compare-item h4 {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+  }
+  .compare-bar {
+    display: flex;
+    height: 56px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .compare-bar > div {
+    flex: 1;
+    display: flex;
+    align-items: end;
+    padding: 6px 8px;
+    color: white;
+    font-size: 0.7rem;
+    font-family: 'Albert Sans', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── HERO ────────────────────────────────────────────────── */
+  .hero {
+    background: var(--cream-warm);
+    padding: 6rem 2rem 5rem;
+    text-align: center;
+    border-top: 1px solid rgba(201, 169, 110, 0.25);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+  }
+  .hero-eyebrow {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    color: var(--vishne);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-family: 'Newsreader', serif;
+    font-size: 3.5rem;
+    line-height: 1.05;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    font-weight: 400;
+  }
+  .hero h1 em {
+    color: var(--vishne);
+    font-style: italic;
+  }
+  .hero-rule {
+    width: 60px; height: 1px;
+    background: var(--gold);
+    margin: 1.75rem auto;
+  }
+  .hero-dek {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--vishne-deep);
+    max-width: 600px;
+    margin: 0 auto 2.25rem;
+    line-height: 1.55;
+  }
+
+  /* ─── BUTTONS ─────────────────────────────────────────────── */
+  .btn {
+    display: inline-block;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 500;
+    padding: 0.85rem 2rem;
+    border-radius: 3px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    transition: all 0.18s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--vishne);
+    color: white;
+    border-color: var(--vishne);
+  }
+  .btn-primary:hover {
+    background: var(--vishne-deep);
+    border-color: var(--vishne-deep);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--vishne);
+    border-color: var(--vishne);
+    margin-left: 0.75rem;
+  }
+  .btn-secondary:hover {
+    background: var(--vishne);
+    color: white;
+  }
+  .btn-pembe {
+    background: var(--pembe-deep);
+    color: white;
+    border-color: var(--pembe-deep);
+  }
+  .btn-pembe:hover {
+    background: var(--pembe);
+  }
+
+  /* ─── ARTICLE BODY ────────────────────────────────────────── */
+  .article-frame {
+    background: white;
+    padding: 4rem 4rem 5rem;
+    border-radius: 4px;
+    max-width: 760px;
+    margin: 0 auto;
+    box-shadow: 0 4px 30px -4px rgba(107, 24, 40, 0.08);
+    counter-reset: chapter;
+  }
+  @media (max-width: 720px) {
+    .article-frame { padding: 2.5rem 1.5rem 3rem; }
+  }
+  .article-h2 {
+    font-family: 'Newsreader', serif;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-top: 3rem;
+    counter-increment: chapter;
+    font-weight: 400;
+    position: relative;
+  }
+  .article-h2:first-of-type { margin-top: 0; }
+  .article-h2::before {
+    content: counter(chapter, decimal-leading-zero);
+    display: block;
+    font-family: 'Newsreader', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-feature-settings: "tnum";
+  }
+  .article-h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem; height: 1px;
+    background: var(--gold);
+    margin-top: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Italic lede — H2 sonrası ilk paragraf */
+  .lede {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--vishne-deep);
+    max-width: 58ch;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-frame p {
+    font-size: 17px;
+    line-height: 1.78;
+    margin-bottom: 1.25rem;
+    max-width: 64ch;
+  }
+
+  .article-frame a {
+    color: var(--vishne);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139, 34, 56, 0.35);
+    transition: border-color 0.18s;
+  }
+  .article-frame a:hover {
+    border-bottom-color: var(--vishne);
+  }
+
+  /* Drop cap */
+  .dropcap::first-letter {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 0.85;
+    color: var(--vishne-deep);
+    float: left;
+    margin: 0.4rem 0.6rem -0.2rem 0;
+  }
+
+  /* Evidence inline */
+  .evidence {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 0.85em;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .evidence.strong { color: var(--vishne); }
+  .evidence.deep   { color: var(--gold-bronze); }
+
+  /* Blockquote */
+  .article-frame blockquote {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem;
+    color: var(--vishne-deep);
+    margin: 2.25rem 0;
+  }
+
+  /* Pull-quote — olgun pembe accent showcase */
+  .pull-quote {
+    background: linear-gradient(135deg, var(--pembe) 0%, var(--pembe-deep) 100%);
+    color: white;
+    padding: 2.25rem 2.5rem;
+    margin: 2.5rem -1rem;
+    border-radius: 4px;
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.45;
+    position: relative;
+    box-shadow: 0 8px 28px -8px rgba(201, 112, 132, 0.5);
+  }
+  .pull-quote::before {
+    content: "";
+    display: block;
+    width: 2.5rem; height: 1px;
+    background: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+  }
+  .pull-quote-attr {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    font-style: normal;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.88;
+    font-family: 'Albert Sans', sans-serif;
+  }
+
+  /* BEN — Bilimsel Editör Notu */
+  .ben-box {
+    background: var(--cream-warm);
+    border-left: 4px solid var(--gold);
+    padding: 1.85rem 2rem;
+    margin: 2.5rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .ben-label {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    color: var(--gold-bronze);
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+  }
+  .ben-title {
+    font-family: 'Newsreader', serif;
+    font-size: 1.18rem;
+    color: var(--vishne-deep);
+    margin-bottom: 0.65rem;
+    line-height: 1.35;
+  }
+  .ben-body { font-size: 0.95rem; line-height: 1.7; }
+  .ben-attr {
+    font-size: 0.72rem;
+    color: var(--gold-bronze);
+    margin-top: 1.1rem;
+    font-style: italic;
+    font-family: 'Newsreader', serif;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── COMPONENT GRID ──────────────────────────────────────── */
+  .subsection {
+    background: var(--cream-warm);
+    padding: 5rem 2rem;
+  }
+  .component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .component-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 18px -4px rgba(107, 24, 40, 0.07);
+  }
+  .component-label {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    color: var(--gold-bronze);
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    padding: 0.32rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 500;
+    margin: 0 0.4rem 0.5rem 0;
+  }
+  .badge-vishne { background: var(--vishne); color: white; }
+  .badge-pembe  { background: var(--pembe); color: white; }
+  .badge-gold   { background: var(--gold); color: var(--ink); }
+  .badge-outline {
+    background: transparent;
+    color: var(--vishne);
+    border: 1px solid var(--vishne);
+  }
+
+  /* Feature card with vişne top accent */
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    border-top: 3px solid var(--vishne);
+    box-shadow: 0 4px 18px -4px rgba(107, 24, 40, 0.07);
+  }
+  .feature-card.pembe { border-top-color: var(--pembe-deep); }
+  .feature-card .card-eyebrow {
+    color: var(--vishne);
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+  }
+  .feature-card.pembe .card-eyebrow { color: var(--pembe-deep); }
+  .feature-card h4 {
+    font-family: 'Newsreader', serif;
+    font-size: 1.45rem;
+    color: var(--ink);
+    margin-bottom: 0.65rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .feature-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #555;
+  }
+
+  /* Evidence label sample row */
+  .evidence-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--cream-warm);
+    border-radius: 4px;
+  }
+  .evidence-sample {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+  }
+
+  /* ─── FOOTER ──────────────────────────────────────────────── */
+  .footer-note {
+    text-align: center;
+    color: var(--gold-bronze);
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    padding: 3rem 1rem;
+    border-top: 1px solid rgba(201, 169, 110, 0.2);
+  }
+  .footer-note .dot {
+    color: var(--gold);
+    margin: 0 0.5rem;
+  }
+
+  /* ─── PRINT (PDF) ─────────────────────────────────────────── */
+  @page {
+    size: A4 portrait;
+    margin: 14mm 12mm;
+  }
+  @media print {
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      background: white;
+      font-size: 13.5px;
+    }
+    .topbar {
+      padding: 0.45rem 1rem;
+      font-size: 0.72rem;
+    }
+    .container {
+      padding: 2rem 0.25rem;
+      max-width: 100%;
+    }
+    .section-h { font-size: 1.85rem; }
+    .palette-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.6rem;
+    }
+    .swatch-color { height: 70px; }
+    .swatch { page-break-inside: avoid; }
+    .compare { page-break-inside: avoid; }
+
+    /* Hero on its own page */
+    .hero {
+      padding: 3rem 1rem 2.5rem;
+      page-break-before: always;
+      page-break-inside: avoid;
+    }
+    .hero h1 { font-size: 2.4rem; }
+    .hero-dek { font-size: 1.05rem; }
+
+    /* Article body — start on a new page, allow flow */
+    section.container:nth-of-type(2) { page-break-before: always; }
+    .article-frame {
+      box-shadow: none;
+      padding: 2rem 1.5rem 2.5rem;
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      max-width: 100%;
+    }
+    .article-h2 {
+      page-break-after: avoid;
+      font-size: 1.85rem;
+      margin-top: 1.75rem;
+    }
+    .article-h2:first-of-type { margin-top: 0; }
+    .lede {
+      page-break-before: avoid;
+      font-size: 1.1rem;
+    }
+    .pull-quote,
+    .ben-box,
+    .article-frame blockquote { page-break-inside: avoid; }
+    .pull-quote {
+      box-shadow: none;
+      margin: 1.75rem 0;
+      padding: 1.5rem 1.85rem;
+    }
+
+    /* Components on their own page */
+    .subsection {
+      padding: 2.5rem 0.25rem;
+      page-break-before: always;
+    }
+    .component-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .component-card,
+    .feature-card { page-break-inside: avoid; }
+
+    .footer-note {
+      padding: 1.25rem 1rem;
+      page-break-before: avoid;
+    }
+
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  Estranova · <em>Vişne Paleti — Denge v2</em> · #8B2238 + olgun pembe · Newsreader + Albert Sans (Los Feliz proxy) · Cream-warm açıldı
+</div>
+
+<!-- ────────────  1 · PALETTE  ──────────── -->
+<section class="container">
+  <div class="section-eyebrow">01 · Yeni palet</div>
+  <div class="section-rule"></div>
+  <h2 class="section-h serif">Renk tokenları</h2>
+
+  <div class="palette-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background:#8B2238;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">vişne <span class="swatch-tag new">yeni</span></div>
+        <div class="swatch-hex">#8B2238</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#6B1828;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">vişne-deep <span class="swatch-tag new">yeni</span></div>
+        <div class="swatch-hex">#6B1828</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#D4859A;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">olgun pembe <span class="swatch-tag new">yeni</span></div>
+        <div class="swatch-hex">#D4859A</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#C97084;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">olgun pembe-deep <span class="swatch-tag new">yeni</span></div>
+        <div class="swatch-hex">#C97084</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#C9A96E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">gold <span class="swatch-tag kept">korundu</span></div>
+        <div class="swatch-hex">#C9A96E</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#775A19;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">gold-bronze <span class="swatch-tag kept">korundu</span></div>
+        <div class="swatch-hex">#775A19</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#FDF8F0; border-bottom:1px solid rgba(0,0,0,0.04);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">cream-soft <span class="swatch-tag kept">korundu</span></div>
+        <div class="swatch-hex">#FDF8F0</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#F5EDE0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">cream-warm <span class="swatch-tag kept">korundu</span></div>
+        <div class="swatch-hex">#F5EDE0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="compare-item">
+      <h4>Mevcut burgundy</h4>
+      <div class="compare-bar">
+        <div style="background:#6B2D3E;">#6B2D3E</div>
+        <div style="background:#4F171C;">#4F171C</div>
+      </div>
+    </div>
+    <div class="compare-item">
+      <h4>Yeni vişne (Denge)</h4>
+      <div class="compare-bar">
+        <div style="background:#8B2238;">#8B2238</div>
+        <div style="background:#6B1828;">#6B1828</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────  2 · HERO  ──────────── -->
+<div class="hero">
+  <div class="hero-eyebrow">Estranova · Bu hafta</div>
+  <h1>Hormonal geçiş, <em>yorgunluk değil</em><br>bir dönüşüm zamanıdır.</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-dek">40 sonrası kadın sağlığında sakin, doğru ve güvenilir rehberlik — perimenopozdan menopoza, vücudunla yeniden tanışmanın yolculuğu.</p>
+  <div>
+    <a href="#" class="btn btn-primary">Yayını Keşfet</a>
+    <a href="#" class="btn btn-secondary">Belirti Rehberini Aç</a>
+  </div>
+</div>
+
+<!-- ────────────  3 · ARTICLE BODY  ──────────── -->
+<section class="container">
+  <div class="section-eyebrow">02 · Makale gövdesi · prose-estranova</div>
+  <div class="section-rule"></div>
+  <h2 class="section-h serif">Editöryal tipografi yeni paletle</h2>
+
+  <div class="article-frame">
+    <h2 class="article-h2">Kemikler sessizce konuşur</h2>
+    <p class="lede">Menopozun belirtileri arasında en sessiz olanı belki kemiklerden gelir; gözle görülmez, hissedilmez, ama içeride hızla değişen bir denge vardır.</p>
+    <p class="dropcap">Östrojen düşüşü, kemik yapım–yıkım dengesini yıkım yönüne çevirir. Bu, kadınların geçişin ilk beş yılında kemik yoğunluğunun belirgin biçimde azalmasının başlıca nedenidir <span class="evidence strong">(güçlü kanıt)</span>. Bu dönemde alınacak küçük adımlar — hareket, beslenme, gerektiğinde tıbbi destek — uzun vadede büyük fark yaratır.</p>
+    <p>Bu dönemden geçen birçoğumuzun bildiği gibi, vücudumuz artık bizden farklı bir dikkat ister. Eskisi gibi <em>"ihmal et, geçer"</em> demek bu sefer biraz daha pahalıya mal olur. Ama bu, korkutucu değil — sadece dürüst bir konuşma.</p>
+
+    <div class="pull-quote">
+      Kemiklerimiz, yıllarca sessizce taşıdıkları yükü bize hatırlatmadan önce dinlemeyi öğrenmek <em>en olgun yatırımdır</em>.
+      <span class="pull-quote-attr">— bölüm açılışı · olgun pembe accent</span>
+    </div>
+
+    <p>Hareket, buradaki en güçlü ortağımız <span class="evidence">(iyi kanıt)</span>. Direnç egzersizleri, yürüyüş, denge çalışmaları — bunların hepsi kemiklere "burada olduğumuzu" hatırlatır. Tek başına yapılan bir şey değil; arkadaşlarla, grup derslerinde, hatta bahçede bile devam edebilen bir alışkanlık. Belki sen de fark ettin — bu döneme birlikte adım atmak, tek başına yürümekten her zaman daha iyi hissettiriyor.</p>
+
+    <h2 class="article-h2">Beslenmenin tek değişkeni kalsiyum değildir</h2>
+    <p class="lede">Kemik dostu beslenme dendiğinde aklımıza ilk kalsiyum gelir; oysa D vitamini, magnezyum, K2 ve protein de aynı tabloda yer tutar.</p>
+    <p>Bu maddelerin hiçbiri tek başına "mucize" değildir; hep birlikte çalıştıklarında işe yararlar <span class="evidence deep">(orta–iyi kanıt)</span>. Bu da bana her zaman şu hissi veriyor: vücudumuz hiçbir şeyi tek katmanlı düşünmüyor. Biz de düşünmemeliyiz.</p>
+
+    <div class="ben-box">
+      <div class="ben-label">Bilimsel Editör Notu</div>
+      <div class="ben-title">Kemik sağlığı bireyseldir; toplu ortalamalar bireysel risk düzeyini göstermez.</div>
+      <p class="ben-body">Kemik mineral yoğunluğu (DXA) ölçümü, peri ve postmenopoz dönemde tek seferlik bir test değil; takip edilmesi gereken bir çizgidir. Bireysel risk faktörleri (genetik, vücut kompozisyonu, ilaç kullanımı) değerlendirme yapılmadan bir öneri evrensel hâle gelemez.</p>
+      <div class="ben-attr">— Doç. Dr. Senai Aksoy · Tıbbi Editör</div>
+    </div>
+
+    <blockquote>"Geçiş döneminde kemikleri korumak, kendine olan saygının fiziksel hâlidir."</blockquote>
+
+    <p>Bu nedenle Estranova'nın diğer kemik sağlığı yazılarına göz atmanı öneririm: <a href="#">D vitamini ve menopoz</a>, <a href="#">direnç egzersizleri rehberi</a>, <a href="#">kemik dostu mutfak</a>.</p>
+  </div>
+</section>
+
+<!-- ────────────  4 · COMPONENTS  ──────────── -->
+<div class="subsection">
+  <div class="container" style="padding-top:0; padding-bottom:0;">
+    <div class="section-eyebrow">03 · Bileşenler</div>
+    <div class="section-rule"></div>
+    <h2 class="section-h serif">Buton, badge, kart ve <em>Evidence</em></h2>
+
+    <div class="component-grid">
+      <div class="component-card">
+        <div class="component-label">Butonlar</div>
+        <div style="display:flex; flex-direction:column; gap:0.85rem; align-items:flex-start;">
+          <a href="#" class="btn btn-primary">Yayını Keşfet</a>
+          <a href="#" class="btn btn-secondary" style="margin-left:0;">Belirti Rehberini Aç</a>
+          <a href="#" class="btn btn-pembe" style="margin-left:0;">Estranova okuru ol</a>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <div class="component-label">Badge / etiket</div>
+        <span class="badge badge-vishne">Yeni Sayı</span>
+        <span class="badge badge-pembe">Estranova Mektubu</span>
+        <span class="badge badge-gold">İncelendi</span>
+        <span class="badge badge-outline">Editör Seçimi</span>
+
+        <div class="component-label" style="margin-top:1.5rem;">Evidence etiketleri</div>
+        <div class="evidence-row">
+          <span class="evidence-sample" style="color: var(--vishne);">(güçlü kanıt)</span>
+          <span class="evidence-sample" style="color: var(--gold-bronze);">(iyi kanıt)</span>
+          <span class="evidence-sample" style="color: var(--gold);">(orta kanıt)</span>
+          <span class="evidence-sample" style="color: var(--gold); opacity:0.8;">(sınırlı kanıt)</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-eyebrow">Bu hafta</div>
+        <h4>Perimenopozda uyku bölünmeleri</h4>
+        <p>Gece terlemeleri, erken uyanmalar ve yeniden uykuya dönmek için sakin bir kılavuz. Tıbben gözden geçirilmiş.</p>
+      </div>
+
+      <div class="feature-card pembe">
+        <div class="card-eyebrow">Aylık sayı</div>
+        <h4>Estranova Mektubu</h4>
+        <p>Aylık sayıyı doğrudan al; tıbben gözden geçirilmiş, sakin ve yapılandırılmış rehberlik.</p>
+        <div style="margin-top:1.25rem;">
+          <a href="#" class="btn btn-pembe">Yayını izle</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-note">
+  Estranova <span class="dot">·</span> Vişne Denge Paleti Mock-up <span class="dot">·</span> 2026-05-01
+</div>
+
+</body>
+</html>

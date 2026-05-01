@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
@@ -6,9 +6,9 @@
 @utility prose-estranova {
   --tw-prose-body: #2D2D2D;
   --tw-prose-headings: #2D2D2D;
-  --tw-prose-links: #6B2D3E;
+  --tw-prose-links: #8B2238;
   --tw-prose-bullets: #C9A96E;
-  --tw-prose-quotes: #4f171c;
+  --tw-prose-quotes: #6B1828;
   --tw-prose-quote-borders: #C9A96E;
 
   counter-reset: estranova-chapter;
@@ -59,7 +59,7 @@
     font-style: italic;
     font-size: 1.2rem;
     line-height: 1.55;
-    color: #4f171c;
+    color: #6B1828;
     max-width: 58ch;
   }
   & blockquote {
@@ -84,7 +84,7 @@
     color: #C9A96E;
   }
   & .evidence[data-level="5"] .evidence-label {
-    color: #6B2D3E;
+    color: #8B2238;
   }
   & .evidence[data-level="4"] .evidence-label {
     color: #8a6a2e;
@@ -94,34 +94,38 @@
   }
   & a {
     text-decoration: none;
-    border-bottom: 1px solid rgba(107, 45, 62, 0.35);
+    border-bottom: 1px solid rgba(139, 34, 56, 0.35);
   }
   & a:hover {
-    border-bottom-color: #6B2D3E;
+    border-bottom-color: #8B2238;
   }
 }
 
 @theme {
   --font-serif: "Newsreader", serif;
-  --font-sans: "Manrope", sans-serif;
+  --font-sans: "Albert Sans", sans-serif;
 
-  --color-primary: #4f171c;
-  --color-primary-container: #6b2d31;
+  --color-primary: #6B1828;
+  --color-primary-container: #8B2238;
   --color-secondary: #775a19;
   --color-surface: #fcf9f4;
   --color-surface-container: #f5f4ef;
   --color-charcoal: #1c1c19;
 
   /* Editöryal palet — CLAUDE.md §5 marka kilitli renkleri.
-     Component'lerin halihazırda kullandığı arbitrary hex'leri (bg-[#6B2D3E] vb.)
+     Component'lerin halihazırda kullandığı arbitrary hex'leri (bg-[#8B2238] vb.)
      semantic utility'lere taşımak için: bg-burgundy, text-ink, bg-cream-soft … */
-  --color-burgundy: #6b2d3e;
-  --color-burgundy-deep: #4f171c;
+  --color-burgundy: #8B2238;
+  --color-burgundy-deep: #6B1828;
   --color-ink: #2d2d2d;
   --color-gold: #c9a96e;
   --color-gold-bronze: #775a19;
   --color-cream-soft: #fdf8f0;
-  --color-cream-warm: #f5ede0;
+  --color-cream-warm: #FAF4E8;
+
+  /* Olgun pembe accent (vişne paletinin tamamlayıcısı, 2026-05-01) */
+  --color-pembe: #D4859A;
+  --color-pembe-deep: #C97084;
 }
 
 @layer base {
@@ -152,7 +156,7 @@
   }
 
   ::selection {
-    background: rgba(107, 45, 62, 0.15);
+    background: rgba(139, 34, 56, 0.15);
     color: #2D2D2D;
   }
 }
@@ -176,7 +180,7 @@
     color: #c9a96e;
   }
   .evidence[data-level='5'] .evidence-label {
-    color: #6b2d3e;
+    color: #8B2238;
   }
   .evidence[data-level='4'] .evidence-label {
     color: #8a6a2e;
@@ -306,7 +310,7 @@
 }
 
 .editorial-shadow {
-  box-shadow: 0 4px 20px -2px rgba(79, 23, 28, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(107, 24, 40, 0.08);
 }
 
 /* Magazine drop-cap — applied to a paragraph; first letter floats in italic Newsreader */
@@ -316,7 +320,7 @@
   font-weight: 500;
   font-size: 5rem;
   line-height: 0.85;
-  color: #4f171c;
+  color: #6B1828;
   float: left;
   margin: 0.4rem 0.6rem -0.2rem 0;
   padding: 0;
@@ -333,5 +337,5 @@
 }
 
 .burgundy-gradient {
-  background: linear-gradient(135deg, #4f171c 0%, #2a0c0f 100%);
+  background: linear-gradient(135deg, #6B1828 0%, #3D0F18 100%);
 }
