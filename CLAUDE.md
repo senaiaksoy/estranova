@@ -118,6 +118,8 @@ Estranova "Eşik" adıyla aylık dijital dergi formatına geçiş aşamasındad�
 
 - **Detay kural:** [`docs/paywall-policy.md`](docs/paywall-policy.md) — abonelik öncesi/sonrası tüm kararlar bu belgeye uyar.
 - **Konfigürasyon:** dergi adı, sayı isimlendirme, yayın ritmi tek noktadan: [`src/data/magazine-config.ts`](src/data/magazine-config.ts).
+- **Feature flag toggle:** [`src/utils/feature-flags.ts`](src/utils/feature-flags.ts) — Faz 2 (hesap kaydı), Faz 3 (abonelik), Faz 4 (paywall), Faz 5 (PDF/audio) sistemleri kapalı. Site canlıya alındıktan sonra eşiklere ulaşılınca **sırayla** aktif edilir.
+- **Aktivasyon rehberi:** [`docs/activation-checklist.md`](docs/activation-checklist.md) — her faz için ön hazırlık (Resend/Supabase/iyzico hesabı, env vars, KVKK güncellemesi), kod tarafı adımları, doğrulama checklist'i ve geri-alma planı. Aktivasyon hedefi: tek-dokunuş feature flag toggle + env vars.
 - **Yasak dil (arayüz):** "Premium", "Abone ol", "Üye ol", "Kilitli içerik", "Bedava deneme", "Kampanya / Paket / İndirim", "Webinar". Tercih: "Yayını izle", "Aylık sayıyı oku", "Estranova okuru ol", "Estranova Mektubu".
 - **Asla paywall'a alınmayanlar:** mevcut tüm makaleler, hub sayfaları, kapak dosyasındaki ana yazılar, yazar profilleri, tıbbi sorumluluk reddi, editöryal politika, kanıt seviyesi açıklamaları.
 
