@@ -77,6 +77,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-01',
     note: 'Berna doğrudan onayı (form üretmeden) — Geniş giriş/tanım yazısı; Berna açılışı ("Bir noktada şunu fark ettim"), kollektif "biz" 4 yerde düzeltildi, dolaylı ses ("Tanıdığım bir kadın... yeniden kazanılan sessizlik"), "bilmiyorum" anı + hekim konuşma rotasyonu Bölüm 07\'de, harita varyasyonu kapanışı (bedenle yazışma serisi 6 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita), 5-katmanlı BEN. Altıncı onaylı Estranova makalesi.',
   },
+  {
+    pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-05-01',
+    note: 'Berna doğrudan onayı (form üretmeden) — En zorlu Kanal A KAPALI revizyonu: 5 birinci elden anekdot ("Ben iki haftalık not tuttum", "bende süreyi kısaltıyor", "Ben kendi adıma protokol kurdum" vb.) dolaylı sese çevrildi, 7 kollektif "biz" + 1 sahne kuruluşu ("Sen de fark etmişsindir") düzeltildi. "Bilmiyorum" anı HRT bağlamında, gece varyasyonu kapanışı (bedenle yazışma serisi 7 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece), 5-katmanlı BEN (hipotalamik termal nötr zon mekanizması). Yedinci onaylı Estranova makalesi.',
+  },
 ];
 
 /**
