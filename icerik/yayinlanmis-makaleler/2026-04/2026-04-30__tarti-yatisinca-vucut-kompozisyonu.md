@@ -13,24 +13,24 @@ exportedAt: 2026-05-01
 
 # Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması
 
-## Tartıyı kaldırdığım gün — bir sayının yerine başka bir hikâye geçiyor
+## Tartının yatıştığı yer — bir sayının yerine başka bir hikâye geçiyor
 
-Bir aralar her sabah tartılıyordum; rakam günümün rengini belirliyordu. Bunu fark ettiğim gün tartıyı banyo
-dolabının üst rafına kaldırdım.
+Tanıdığım bir kadının yıllarca anlattığı bir sahne vardı — sonra bir gün tartıyı banyo dolabının üst
+rafına kaldırdı. O sahne kafamda kaldı; çevremde duyduğum benzer hikâyelerin merkezine yerleşti.
 
-Yıllarca tartı bir kontrol aracıydı — sabahın ilk on saniyesinde gördüğüm sayı, bütün güne bir his
-yerleştiriyordu. Sayı düşükse rahatlıyordum, yüksekse içimde küçük bir gerilim açılıyordu. Bir noktada
-fark ettim ki ben aslında sayıyı değil, sayının altındaki şu duyguyu izliyordum: "iyi miyim, değil miyim".
-Tartı bu soruyu cevaplamıyordu; sadece geçici bir teselli ya da tedirginlik veriyordu.
+Çoğu kadında tartı yıllarca bir kontrol aracı olur — sabahın ilk on saniyesinde görülen sayı bütün güne
+bir his yerleştirir. Sayı düşükse rahatlama, yüksekse küçük bir gerilim. Bir noktada şunu fark ettim:
+asıl izlenen sayı değil, sayının altındaki şu duygu — "iyi miyim, değil miyim". Tartı bu soruyu
+cevaplamıyor; sadece geçici bir teselli ya da tedirginlik veriyor.
 
-Tartıyı kaldırdığım gün başka bir şey beklemiştim — büyük bir özgürleşme falan. Olmadı. Sadece sabahları on
-saniye boşaldı, ve o on saniyede pencereden bakmayı öğrendim. Bedenle ilişkim, bir sayıdan bir gözleme
-kaydı. Üstelik tartıyı kaldırdığım hâlâ bir disiplin biçimiydi — kontrolün başka bir hâli, kabul ediyorum.
+Tartıyı kaldırmak büyük bir özgürleşme yaratmıyor genelde. Yalnızca sabahları on saniye boşalıyor, o on
+saniyede başka bir şeye bakmaya yer açılıyor. Bedenle ilişki bir sayıdan bir gözleme kayıyor. Yine de
+tartıyı kaldırmak hâlâ bir disiplin biçimi — kontrolün başka bir hâli; kabul ediyorum.
 
-O günden sonra fark ettiğim şuydu: tartı sayısı uzun zamandır pek değişmiyordu, ama bedenim değişmeye
-devam ediyordu. Pantolonun belden oturuşu farklılaşmıştı; kollar başka bir tonda durmaya başlamıştı; aynı
-kilodaki ben üç yıl öncekinden başka bir bedendi. Tartı yatışmıştı, ama altında sessiz bir aritmetik
-işliyordu.
+Çevremde gözlemlediğim şu: tartı sayısı uzun zamandır pek değişmeyen birçok kadında bedenin değişmeye
+devam ettiği bir an geliyor. Pantolonun belden oturuşu farklılaşıyor; kollar başka bir tonda durmaya
+başlıyor; aynı kilodaki kadın üç yıl öncekinden başka bir bedende oluyor. Tartı yatışmıştır, ama
+altında sessiz bir aritmetik işlemektedir.
 
 ## Tartının söylediği — ve söylemediği
 
@@ -38,23 +38,23 @@ Tartı sayısı bir tek şey söyler: senin toplam kütlen. Bu sayının altınd
 okudukça anladım.
 
 Beden ağırlığı, üç ana bileşenin toplamı: kas, yağ ve geri kalan (kemik, su, organlar, doku). Tartı bu
-üçünü tek bir sayıda toplar; aralarındaki dengeyi göstermez. Bu yüzden iki kadın aynı kiloda olabilir ama
-tamamen farklı bedenlerde duruyor olabilirler — birinin kas kütlesi yüksek, yağ oranı düşüktür; diğerinde
-tersi. Vücut kütle endeksi (BMI) de aynı sınırlılığı taşır; uzun dönemli kohort çalışmaları, kompozisyon
-farkını dikkate almayan ölçümlerin menopoz dönemindeki sağlık riskini olduğundan eksik gösterebileceğini
-ortaya koyuyor
+üçünü tek bir sayıda toplar; aralarındaki dengeyi göstermez. Bu yüzden iki kadın aynı kiloda olabilir
+ama tamamen farklı bedenlerde duruyor olabilirler — birinin kas kütlesi yüksek, yağ oranı düşüktür;
+diğerinde tersi. Vücut kütle endeksi (BMI) de aynı sınırlılığı taşır; uzun dönemli kohort çalışmaları,
+kompozisyon farkını dikkate almayan ölçümlerin menopoz dönemindeki sağlık riskini olduğundan eksik
+gösterebileceğini ortaya koyuyor
 (iyi kanıt)
-. Bunu okuduğumda bir cümlede durdum, çünkü kendi gözlemim de aynı
-şeyi söylüyordu — sayı sabit, beden hareket halinde.
+. Bunu okuduğumda bir cümlede durdum, çünkü
+çevremde duyduklarım da aynı şeyi söylüyordu — sayı sabit, beden hareket halinde.
 
 Bana bunun en somut anlatımını bir hekimimle bir konuşmamızda duyduğum şu cümle vermişti: "Tartı sayısı
 tarihin başlığıdır; gövdesini başka yerde okuman gerekir." Cümle aklımdan çıkmadı. Çünkü bedenle ilişkim
 tam da o gün başka bir yere kaydı: sayıdan oranlara, anlık ölçümden zaman içindeki eğriye.
 
-Söylemekten çekinmeyeyim, ben de bilmediğim çok şey vardı. Başlangıçta "kompozisyon" sözcüğü bile bana
-biraz teknik geliyordu — sanki bir laboratuvar terimiydi. Sonra fark ettim ki bedenle ilgili gündelik
-konuşmaların tam ortasında duruyor. Aynaya baktığında "bedenim değişti" demek aslında kompozisyondan
-bahsetmektir; sadece adını koymamışızdır.
+Söylemekten çekinmeyeyim, bilmediğim çok şey vardı. Başlangıçta "kompozisyon" sözcüğü bile biraz teknik
+geliyordu — sanki bir laboratuvar terimiydi. Sonra fark ettim ki bedenle ilgili gündelik konuşmaların
+tam ortasında duruyor. "Bedenim değişti" demek aslında kompozisyondan bahsetmek; sadece adını
+koymamışız.
 
 ## Östrojen yatışınca beden ne yapıyor — sessiz bir aritmetik
 
@@ -95,29 +95,29 @@ biraz takıntılısın" demişti; itiraz etmek için açtığım ağzımı kapat
 başka takıntısı var: her ölçüm, her sayı, her eğri. İkimiz aynı maddenin iki ayrı uçundayız.
 
 Ben ortadayım. Bu ortada olmak yorucu — annenin sessizliğine de yakın değilim, kızımın sürekli ölçüm
-alışkanlığına da. Ama bir öğreticiliği var: ben kompozisyon kelimesini öğrendim, ama yine de aynaya
-bakarken bir sayı aramıyorum; aynaya bakarken ne hissettiğime bakıyorum. Üç kuşak arasında orta kuşağın
-işi galiba bu — köprü olmak, ama köprünün bir tarafına yapışıp kalmamak.
+alışkanlığına da. Ama bir öğreticiliği var: kompozisyon kelimesini öğrendim, ama yine de bedenle
+ilişkide bir sayı aramıyorum; ne hissettiğime bakıyorum. Üç kuşak arasında orta kuşağın işi galiba
+bu — köprü olmak, ama köprünün bir tarafına yapışıp kalmamak.
 
 ## Her şeyi takip etmek — bir yere kadar
 
-Bedeni ölçmek bir yere kadar yardımcı; ondan sonrası, izlemenin de bir tür kaygı yönetimine dönüştüğü yer.
-Bu çizgiyi yıllar içinde öğrendim.
+Bedeni ölçmek bir yere kadar yardımcı; ondan sonrası, izlemenin de bir tür kaygı yönetimine dönüştüğü
+yer. Bu çizgiyi yıllar içinde öğrendim.
 
-Apple Watch beni izliyor, ben de onu izliyorum — hangimizin daha titiz olduğu hâlâ belli değil. Bir
-aralar her tahlili her ay yaptırıyordum; bir gün hekimim bana çok dingin bir ses tonuyla "bu bilgi seni
-rahatlatıyor mu, yoruyor mu" diye sormuştu. O cümle aklımdan günlerce çıkmadı. Çünkü "rahatlıyorum"
-diyemedim; "tedirginliği erteliyor" demek daha doğruydu. Ölçüm, bazen bir cevap değil, bir oyalanma
-oluyor.
+Hekimimle bir konuşmamızda "bu bilgi seni rahatlatıyor mu, yoruyor mu" demişti çok dingin bir ses
+tonuyla — bir tahlilin sonucu üzerine konuşurken. O cümle aklımdan günlerce çıkmadı. Çünkü
+"rahatlatıyor" diyemedim; "tedirginliği erteliyor" demek daha doğruydu. Ölçüm bazen bir cevap değil,
+bir oyalanma oluyor.
 
-O günden sonra ölçüm sıklığını ben kendi başıma azalttım — hekimimle birlikte değerlendirdik, beraber
-yorumladık. Şimdi yıl içinde belirli aralıklarla bakıyorum, geri kalan zamanı bedenim ne anlatıyor diye
-dinleyerek geçiriyorum. Bu, ölçümü reddetmek değil — ölçümü kendi yerine oturtmak. Sayı bir not, gözlem
-gövde, his de işte tam orada bir yerlerde. Üçü birbirine eşitlendiğinde tablo netleşiyor.
+O günden sonra hekimimle birlikte ölçüm ritmini yeniden değerlendirdik, beraber yorumladık. Yıl
+içinde belirli aralıklarla bakmak, geri kalan zamanı bedenin ne anlattığını dinleyerek geçirmek —
+ölçümü reddetmek değil; ölçümü kendi yerine oturtmak. Sayı bir not, gözlem gövde, his de işte tam
+orada bir yerlerde. Üçü birbirine eşitlendiğinde tablo netleşiyor.
 
 Bunun cevabını ben de tam bilmiyorum aslında: bedeni ölçmenin en doğru sıklığı nedir, izlemek nerede
-hasta yapar, hangi ölçüm bilgi verir hangisi sadece kaygıyı erteler. Burası benim için hâlâ açık bir soru.
-Sadece şu kadarını söyleyebilirim: izlemek istediğim her şeyin bir cevabı olmasını beklemiyorum artık.
+hasta yapar, hangi ölçüm bilgi verir hangisi sadece kaygıyı erteler. Burası benim için hâlâ açık bir
+soru. Sadece şu kadarını söyleyebilirim: izlemek istediğim her şeyin bir cevabı olmasını beklemiyorum
+artık.
 
 ## Hekimimle birlikte vardığımız üç küçük not
 
@@ -125,23 +125,25 @@ Bunlar reçete değil; benim kendi sürecimde hekimimle birlikte yararlı buldu�
 farklı olabilir; kendi hekiminle konuşmak ilk adımdır.
 
 **Bir.** Direnç antrenmanı kompozisyonu kasla destekleyen en somut araçlardan biri.
-Menopozdaki kadınlarda düzenli direnç antrenmanının kas kütlesi koruması üzerinde anlamlı etkisi olduğunu
-gösteren çalışmalar artıyor
+Menopozdaki kadınlarda düzenli direnç antrenmanının kas kütlesi koruması üzerinde anlamlı etkisi
+olduğunu gösteren çalışmalar artıyor
 (iyi kanıt)
-. Ama bu cümlede dikkat ettiğim şey "düzenli" sözcüğü
-oldu — ayda iki kere değil, hafta içine yerleşmiş bir ritim. Pilates ve yürüyüşü zaten yapıyordum; haftada
-bir gün ağırlık eklediğimde aradaki farkı zamanla hissettim. Bir hamlede değil, zamanla yerleşen bir fark.
+. Ama burada dikkat çekici sözcük
+"düzenli" — ayda iki kere değil, hafta içine yerleşmiş bir ritim. Pilates ve yürüyüş yıllardır
+devam eden çapalardı; haftada bir gün ağırlık eklemek farkı zamanla yerleşen bir biçimde getiriyor.
+Bir hamlede değil, ritimde yerleşen bir değişim.
 
-**İki.** Protein, menopoz döneminde yeniden konuşulan bir konu. Yaş aldıkça vücudun proteini
-işleme yeteneği biraz değişiyor; bu nedenle yeterli protein almak kompozisyon açısından genç yaşlardakine
-göre biraz daha bilinçli bir tercih hâline geliyor. Bunun da bir miktar/marka tablosu var — ama o
-benim yazımda yer almaz; hekiminle birlikte konuşacağın bir konu. Bende işe yarayan basit bir prensip
-oldu: ana öğünlerde proteinin tabakta görünür yer alması.
+**İki.** Protein, menopoz döneminde yeniden konuşulan bir konu. Yaş aldıkça vücudun
+proteini işleme yeteneği biraz değişiyor; bu nedenle yeterli protein almak kompozisyon açısından genç
+yaşlardakine göre biraz daha bilinçli bir tercih hâline geliyor. Bunun da bir miktar/marka tablosu
+var — ama o yazıda yer almaz; hekiminle birlikte konuşacağın bir konu. Hekimimle bir konuşmamızda
+ortaya çıkan basit prensip şuydu: ana öğünlerde proteinin tabakta görünür yer alması. Sayıdan çok bir
+alışkanlık konusu.
 
 **Üç.** Kompozisyonu zaman zaman ölçmek — ama her gün değil. Vücut kompozisyonu analizi
-(örneğin DEXA taraması ya da uygun bir bioimpedans ölçümü) yılda bir-iki kez bir referans noktası verir;
-sayıdan değil eğriden bakmaya yardımcı olur. Bunu da kendi başıma değil, hekimimle birlikte bir karar
-olarak yıllık takvime yerleştirdim. Kararım kendi kararım, ama yalnız aldığım bir karar değil.
+(örneğin DEXA taraması ya da uygun bir bioimpedans ölçümü) yılda bir-iki kez bir referans noktası
+verir; sayıdan değil eğriden bakmaya yardımcı olur. Bu da hekimimle birlikte bir karar olarak yıllık
+takvime yerleşti. Kararım kendi kararım, ama yalnız aldığım bir karar değil.
 
 Bu üç notun da arkasında aynı tutum var: bedeni izlemek değil, bedenle bir konuşma kurmak. Kararı her
 seferinde hekimimle birlikte değerlendirdik; her seferinde "bu benim yolum" çerçevesinde tuttum. Senin
@@ -183,13 +185,13 @@ yerleşince, hesap yapmadan da çalışıyor.
 
 ## Kapanış
 
-Tartıyı kaldırdığım gün bir özgürleşme yaşamadım — ama yıllar içinde başka bir şey öğrendim. Sayı
-yatışınca geriye kalan, bedenle kurulan farklı bir konuşma oluyor. Ölçü değil, gözlem. Karar değil,
-eğrinin yönü. Bu benim yolum oldu, yıllar içinde olgunlaşarak.
+Tartı bir başlangıç noktası — ama bedenin söylediğinin tamamı değil.
 
-Belki şu sorudan başlamak yardımcı olur: "son altı ayda tartı dışında neyi fark ettim?" Bu soruya verilen
-cevaplar bazen hiç beklemediğim yerlere açılıyor — bir pantolonun düşüşü, bir merdivenin sonunda nefesin
-tonu, sabah kalkarken belin nasıl açıldığı. Sayıların söylemediği o küçük gözlemler, kompozisyonun
-kendi dilinde konuşması.
+Sayı yatışınca geriye kalan, bedenle kurulan farklı bir konuşma oluyor. Ölçü değil, gözlem. Karar
+değil, eğrinin yönü. Bu benim yolum oldu, yıllar içinde olgunlaşarak; senin yolun başka olabilir —
+ve olmalı da.
 
-Ben bunu böyle yaşadım. Sizinki başka bir hikâye olacak — ve olmalı da.
+Belki şu soru yardımcı olur: bu altı ayda tartı dışında neyi yargılamadan, sadece fark etmek
+niyetiyle gözlemleyebilirim? Bir pantolonun düşüşü, bir merdivenin sonunda nefesin tonu, sabah
+kalkarken belin nasıl açıldığı. Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle
+söylemişti; sen onu kendi duruşundan okuyorsun.
