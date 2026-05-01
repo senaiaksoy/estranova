@@ -154,8 +154,12 @@ ruh hali dalgalanmasına yol açabiliyor
 . Aralıklı oruç konusunda menopoza özgü
 çalışma sayısı sınırlı; bireysel danışma önerilir
 (orta kanıt)
-. Hangi çerçevenin sana uyacağı
-kişisel bir konu — ve birkaç hafta deneyince bedenin sana cevap veriyor.
+.
+
+Burada açık tuttuğum bir soru var: hangi çerçevenin kime uyacağını kestirmek bende her zaman mümkün
+olmuyor. Bir arkadaşıma yıllarca uymuş bir model, bir başka tanıdığımda ilk üç haftada yorgunluk
+yarattı. Bu çerçeveler birer plandan çok birer rota; rotanın doğru olup olmadığı yola çıktıktan
+sonra netleşiyor. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
 
 ## Yiyecekler: Tercih Et, Sınırla
 
@@ -192,16 +196,31 @@ takviyesi dengeli beslenen kişiler için çoğu zaman gerekli olmayabiliyor
 (iyi kanıt)
 .
 
-Apple Watch'ım gece uyku verisini izlerken bir hafta magnezyum düzenli aldığımda fark ettiğim küçük bir
-iyileşme olmuştu — bunu hekimimle paylaştığımda "kayıt etmen iyi olmuş, devam edebilirsin" dedi. Kararım
-kendi kararım; senin yolun farklı olabilir, kendi hekiminle konuşman bu kararın temeli.
+Hekimimle bir konuşmamızda magnezyum gündeme gelmişti; "ihtiyacının ne olduğunu önce kayıttan görelim,
+sonra tabakla karşılayabiliyor muyuz bakalım" demişti. Tanıdığım bir kadın bana benzer bir gözlemi
+anlatmıştı — yıllar boyu "uyku için magnezyum" diye duymuş, sonunda hekimle konuştuğunda kan
+tetkikleriyle birlikte planlamak farklı bir konfor sağlamış. Karar kendi kararım; senin yolun farklı
+olabilir, kendi hekiminle konuşman bu kararın temeli.
 
 ## Kişiselleştirilmiş Yaklaşım
 
-Son olarak, senin tabağın başkasının planıyla bire bir aynı olmak zorunda değil. Beslenme ihtiyaçları
-kişiden kişiye değişir; kronik hastalık (diyabet, hipertansiyon), ilaçlar, sindirim başlıkları veya
-belirli kısıtlamalar (alerji, intolerans) çerçeveyi şekillendiriyor.
+Senin tabağın başkasının planıyla bire bir aynı olmak zorunda değil.
 
-Bir noktada şunu fark ettim: dengeli beslenmenin sırrı katı bir plan değil, küçük tutarlılıklar. Bir
-diyetisyen veya beslenme danışmanından tavsiye almak — özellikle kronik hastalık varsa — kişiye uygun
-bir plan oluşturmayı kolaylaştırıyor. Geri kalanı zamanın ve bedenin sana verdiği geri bildirimin işi.
+Beslenme ihtiyaçları kişiden kişiye değişir; kronik hastalık (diyabet, hipertansiyon), ilaçlar,
+sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) çerçeveyi şekillendiriyor. Bir
+diyetisyen veya beslenme danışmanından tavsiye almak — özellikle kronik hastalık varsa — kişiye
+uygun bir plan oluşturmayı kolaylaştırıyor. Geri kalanı zamanın ve bedenin sana verdiği geri
+bildirimin işi.
+
+## Kapanış
+
+Tabak, küçük tutarlılıkların aynası — büyük dönüşümün değil.
+
+Yıllar içinde benim için ortaya çıkan en sade gerçek şu: dengeli beslenmenin sırrı katı bir plan
+değil, haftaya yayılan küçük tutarlılıklar. Bir akşam zeytinyağıyla pişmiş sebze, ertesi sabah
+yumurta-yoğurt-tam tahıl üçlüsü, gün içinde bir avuç kuruyemiş, akşam masasına oturduğunda
+telefonu uzaklaştırmak. Bunların hiçbiri kahramanlık değil; kendine ayrılmış küçük zaman dilimleri.
+
+Belki şu soru yardımcı olur: bu hafta tabağa hangi rengi yargılamadan, sadece ekleme niyetiyle
+koyabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen
+tabağa o cümlenin cevabını koyuyorsun.

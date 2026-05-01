@@ -25,6 +25,7 @@ const tocEntries = [
   { id: 'tercih-sinirla', label: 'Tercih ve Sınırlama' },
   { id: 'ek-takviyeler', label: 'Ek Takviyeler' },
   { id: 'kisisellestirme', label: 'Kişiselleştirilmiş Yaklaşım' },
+  { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -66,10 +67,11 @@ const articleSchemas = buildArticleSchemas({
         <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-ink/80">
-            40 sonrasında ve menopoz geçişinde, eski beslenme alışkanlıklarının aynı sonucu vermediğini birçoğumuz
-            yaşıyor. Okudukça şunu anladım: amaç katı bir plan değil, vücudun yeni ritmini sade ve bilinçli
-            seçimlerle desteklemek. Protein, B vitaminleri, omega-3 yağlar ve antioksidanlar bu dönemde tabakta
-            biraz daha bilinçli yer açtığım başlıklar oldu.
+            40 sonrasında ve menopoz geçişinde, eski beslenme alışkanlıklarının aynı sonucu vermediğini çoğu
+            kadın yaşıyor; bunu çevremde de, kendi mutfağımda da farklı biçimlerde duyuyorum. Okudukça şunu
+            anladım: amaç katı bir plan değil, vücudun yeni ritmini sade ve bilinçli seçimlerle desteklemek.
+            Protein, B vitaminleri, omega-3 yağlar ve antioksidanlar bu dönemde tabakta biraz daha bilinçli yer
+            açtığım başlıklar oldu.
           </p>
         </section>
 
@@ -180,8 +182,13 @@ const articleSchemas = buildArticleSchemas({
             Vejetaryen ve vegan yaklaşımlar mümkün ama dikkatli planlama gerekiyor (B12, demir, protein kaynakları)
             <Evidence level={4} />. Düşük karbonhidrat planları bazı kadınlara uyarken, başkalarında enerji veya
             ruh hali dalgalanmasına yol açabiliyor <Evidence level={4} />. Aralıklı oruç konusunda menopoza özgü
-            çalışma sayısı sınırlı; bireysel danışma önerilir <Evidence level={3} />. Hangi çerçevenin sana uyacağı
-            kişisel bir konu — ve birkaç hafta deneyince bedenin sana cevap veriyor.
+            çalışma sayısı sınırlı; bireysel danışma önerilir <Evidence level={3} />.
+          </p>
+          <p>
+            Burada açık tuttuğum bir soru var: hangi çerçevenin kime uyacağını kestirmek bende her zaman mümkün
+            olmuyor. Bir arkadaşıma yıllarca uymuş bir model, bir başka tanıdığımda ilk üç haftada yorgunluk
+            yarattı. Bu çerçeveler birer plandan çok birer rota; rotanın doğru olup olmadığı yola çıktıktan
+            sonra netleşiyor. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
           </p>
 
           <h2 id="tercih-sinirla">Yiyecekler: Tercih Et, Sınırla</h2>
@@ -211,21 +218,39 @@ const articleSchemas = buildArticleSchemas({
             takviyesi dengeli beslenen kişiler için çoğu zaman gerekli olmayabiliyor <Evidence level={4} />.
           </p>
           <p>
-            Apple Watch'ım gece uyku verisini izlerken bir hafta magnezyum düzenli aldığımda fark ettiğim küçük bir
-            iyileşme olmuştu — bunu hekimimle paylaştığımda "kayıt etmen iyi olmuş, devam edebilirsin" dedi. Kararım
-            kendi kararım; senin yolun farklı olabilir, kendi hekiminle konuşman bu kararın temeli.
+            Hekimimle bir konuşmamızda magnezyum gündeme gelmişti; "ihtiyacının ne olduğunu önce kayıttan görelim,
+            sonra tabakla karşılayabiliyor muyuz bakalım" demişti. Tanıdığım bir kadın bana benzer bir gözlemi
+            anlatmıştı — yıllar boyu "uyku için magnezyum" diye duymuş, sonunda hekimle konuştuğunda kan
+            tetkikleriyle birlikte planlamak farklı bir konfor sağlamış. Karar kendi kararım; senin yolun farklı
+            olabilir, kendi hekiminle konuşman bu kararın temeli.
           </p>
 
           <h2 id="kisisellestirme">Kişiselleştirilmiş Yaklaşım</h2>
           <p>
-            Son olarak, senin tabağın başkasının planıyla bire bir aynı olmak zorunda değil. Beslenme ihtiyaçları
-            kişiden kişiye değişir; kronik hastalık (diyabet, hipertansiyon), ilaçlar, sindirim başlıkları veya
-            belirli kısıtlamalar (alerji, intolerans) çerçeveyi şekillendiriyor.
+            Senin tabağın başkasının planıyla bire bir aynı olmak zorunda değil.
           </p>
           <p>
-            Bir noktada şunu fark ettim: dengeli beslenmenin sırrı katı bir plan değil, küçük tutarlılıklar. Bir
-            diyetisyen veya beslenme danışmanından tavsiye almak — özellikle kronik hastalık varsa — kişiye uygun
-            bir plan oluşturmayı kolaylaştırıyor. Geri kalanı zamanın ve bedenin sana verdiği geri bildirimin işi.
+            Beslenme ihtiyaçları kişiden kişiye değişir; kronik hastalık (diyabet, hipertansiyon), ilaçlar,
+            sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) çerçeveyi şekillendiriyor. Bir
+            diyetisyen veya beslenme danışmanından tavsiye almak — özellikle kronik hastalık varsa — kişiye
+            uygun bir plan oluşturmayı kolaylaştırıyor. Geri kalanı zamanın ve bedenin sana verdiği geri
+            bildirimin işi.
+          </p>
+
+          <h2 id="kapanis">Kapanış</h2>
+          <p>
+            Tabak, küçük tutarlılıkların aynası — büyük dönüşümün değil.
+          </p>
+          <p>
+            Yıllar içinde benim için ortaya çıkan en sade gerçek şu: dengeli beslenmenin sırrı katı bir plan
+            değil, haftaya yayılan küçük tutarlılıklar. Bir akşam zeytinyağıyla pişmiş sebze, ertesi sabah
+            yumurta-yoğurt-tam tahıl üçlüsü, gün içinde bir avuç kuruyemiş, akşam masasına oturduğunda
+            telefonu uzaklaştırmak. Bunların hiçbiri kahramanlık değil; kendine ayrılmış küçük zaman dilimleri.
+          </p>
+          <p>
+            Belki şu soru yardımcı olur: bu hafta tabağa hangi rengi yargılamadan, sadece ekleme niyetiyle
+            koyabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen
+            tabağa o cümlenin cevabını koyuyorsun.
           </p>
         </ArticleProsePanel>
 
@@ -244,12 +269,30 @@ const articleSchemas = buildArticleSchemas({
 
         <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-          <p class="leading-relaxed text-ink/80">
-            Beslenme, menopoz dönemindeki belirtileri yönetmenin ve uzun vadeli sağlığı korumanın temel
-            başlıklarından biri. Akdeniz tipi çerçeve, yeterli protein, mikro besin dengesi (özellikle D vitamini,
-            B12, kalsiyum, magnezyum) ve ultra-işlenmiş gıdaların sınırlanması en tutarlı kanıta sahip yaklaşımlar
-            arasında. Kronik hastalık, ilaç kullanımı veya beslenme kısıtlamaları olan kadınlarda planın bir
-            diyetisyen veya hekim eşliğinde kişiselleştirilmesi en güvenilir yoldur.
+          <p class="mb-3 leading-relaxed text-ink/80">
+            40 sonrası ve menopoz geçişindeki beslenme stratejisi, bazal metabolizma yavaşlaması, sarkopenik
+            eğilim, östrojen düşüşüne bağlı yağ dağılımı kayması ve mikro besin emilim dinamiklerindeki
+            değişimler birlikte değerlendirilerek kurulur. Tek bir diyet modeli evrensel doğru değildir;
+            mekanizma çoklu eksenlidir.
+          </p>
+          <p class="mb-3 leading-relaxed text-ink/80">
+            Akdeniz tipi çerçeve, kardiyovasküler sağlık, kemik koruma ve nörobilişsel parametreler üzerinde en
+            tutarlı kanıt seviyesine sahip yaklaşımdır. Yeterli protein alımı (1.0-1.2 g/kg/gün), kaliteli yağ
+            asidi profili (omega-3 dengesi), tam tahıl ve sebze ağırlıklı lif tüketimi temel sütunlardır.
+          </p>
+          <p class="mb-3 leading-relaxed text-ink/80">
+            D vitamini, B12 (50+ yaş emilim azalması nedeniyle), kalsiyum ve magnezyum öncelikli mikro besin
+            başlıkları arasındadır. Takviye kararı kan tetkikleri ve klinik tabloya göre kişiselleştirilir;
+            "raf alışkanlığı" yerine eksiklik temelli destek tercih edilmelidir.
+          </p>
+          <p class="mb-3 leading-relaxed text-ink/80">
+            Kronik hastalık (tip 2 diyabet, hipertansiyon, hipotiroidi vb.), ilaç etkileşimleri, sindirim
+            sistemi başlıkları ve gıda intoleransları olan kadınlarda planın bir hekim ve/veya diyetisyen
+            eşliğinde kişiselleştirilmesi en güvenli yoldur. Aralıklı oruç gibi popüler yaklaşımların menopoz
+            spesifik kanıt seviyesi sınırlıdır; bireysel değerlendirme önerilir.
+          </p>
+          <p class="text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
           </p>
         </section>
 
