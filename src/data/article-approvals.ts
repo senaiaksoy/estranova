@@ -53,6 +53,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-01',
     note: 'Berna v2.4 kısa doğrulama formu (≤5 dakika, 7 alan) — Bölüm 3 final onayı: Evet. Çift Rol ifşası + "bilmiyorum" anı + 3-parçalı kapanış + 5-katmanlı Bilimsel Editör Notu doğrulandı. İkinci onaylı Estranova makalesi.',
   },
+  {
+    pathname: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-05-01',
+    note: 'Berna v2.4 kısa doğrulama formu (ikinci kullanım, ≤5 dakika) — final onayı: Evet. Çift Rol ifşası İzleme Takvimi bölümünde + "bilmiyorum" anı Ruh Hali bölümünde + defter metaforu kapanışı (bedenle yazışma varyasyonu) + 5-katmanlı BEN doğrulandı. Üçüncü onaylı Estranova makalesi, HRT ekseninde ikinci.',
+  },
 ];
 
 /**
