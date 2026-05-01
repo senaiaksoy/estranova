@@ -13,7 +13,7 @@
  */
 
 import type { Issue } from '../../data/issues';
-import { resolveCoverDossier, formatIssuePad } from '../../data/issues';
+import { resolveCoverDossier, formatIssuePad, resolveIssueSections } from '../../data/issues';
 import { writers } from '../../data/writers';
 
 interface Props {
@@ -31,21 +31,9 @@ const editorDisplayName =
     ? 'Doç. Dr. Senai Aksoy'
     : editorWriter?.displayName ?? 'Estranova';
 
-// Sabit köşe slotları (Faz 2'de doldurulacak)
-const fixedSections = [
-  {
-    label: 'Akran Köşesi',
-    desc: 'Sayının yazarlarından biri kendi defterinden bir nota imza atar',
-  },
-  {
-    label: 'Okur Sayfası',
-    desc: 'Gelen okur sorularına bilimsel editör tarafından yazılı yanıt',
-  },
-  {
-    label: 'Arka Sayfa',
-    desc: 'Sayı temasını kapatan kısa, atmosferik bir deneme',
-  },
-];
+// Sabit köşe slotları — issue.sections varsa onlardan, yoksa default
+// 'planned' yer-tutucu setinden gelir (issue-sections.ts).
+const sectionSlots = resolveIssueSections(issue);
 ---
 
 <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-16">
@@ -121,24 +109,62 @@ const fixedSections = [
         );
       })}
 
-      {fixedSections.map((slot) => (
-        <li class="border-b border-burgundy/15 py-5 opacity-55">
-          <div class="flex items-baseline gap-5">
-            <span class="shrink-0 font-serif text-lg tabular-nums text-gold/70">·</span>
-            <div class="min-w-0 flex-1">
-              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/55">
-                {slot.label}
-              </p>
-              <p class="mt-1 font-serif text-lg leading-snug text-ink/55 md:text-xl">
-                {slot.desc}
-              </p>
-            </div>
-            <span class="shrink-0 text-[10px] uppercase tracking-[0.2em] text-ink/45">
-              Yakında
-            </span>
-          </div>
-        </li>
-      ))}
+      {sectionSlots.map((slot) => {
+        const isPublished = slot.status === 'published';
+        const slotWriter = slot.writerSlug
+          ? writers.find((w) => w.slug === slot.writerSlug)
+          : undefined;
+        const slotWriterName = slotWriter?.displayName ?? '';
+        const Tag = isPublished && slot.href ? 'a' : 'div';
+        const tagProps = isPublished && slot.href ? { href: slot.href } : {};
+        return (
+          <li class:list={['border-b border-burgundy/15 py-5', !isPublished && 'opacity-55']}>
+            <Tag
+              {...tagProps}
+              class:list={[
+                'group flex items-baseline gap-5',
+                isPublished && slot.href ? 'cursor-pointer' : '',
+              ]}
+            >
+              <span
+                class:list={[
+                  'shrink-0 font-serif text-lg tabular-nums',
+                  isPublished ? 'text-gold' : 'text-gold/70',
+                ]}
+              >
+                ·
+              </span>
+              <div class="min-w-0 flex-1">
+                <p
+                  class:list={[
+                    'text-[10px] font-semibold uppercase tracking-[0.22em]',
+                    isPublished ? 'text-burgundy/75' : 'text-burgundy/55',
+                  ]}
+                >
+                  {slot.label}{isPublished && slotWriterName ? ` · Yazan ${slotWriterName}` : ''}
+                </p>
+                <p
+                  class:list={[
+                    'mt-1 font-serif text-lg leading-snug md:text-xl',
+                    isPublished ? 'text-ink' : 'text-ink/55',
+                    isPublished && slot.href && 'group-hover:underline group-hover:decoration-burgundy/35',
+                  ]}
+                >
+                  {isPublished && slot.title ? slot.title : slot.description}
+                </p>
+              </div>
+              <span
+                class:list={[
+                  'shrink-0 text-[10px] uppercase tracking-[0.2em]',
+                  isPublished ? 'text-ink/55' : 'text-ink/45',
+                ]}
+              >
+                {isPublished ? `~${slot.readingMinutes ?? 5} dk` : 'Yakında'}
+              </span>
+            </Tag>
+          </li>
+        );
+      })}
     </ul>
   </div>
 </section>

@@ -22,6 +22,8 @@
 import type { SubmenuHeroImage } from './submenu-heroes';
 import { dossiers, getTotalReadingMinutes } from './monthly-dossier';
 import type { MonthlyDossier } from './monthly-dossier';
+import type { IssueSection } from './issue-sections';
+import { defaultPlannedSections } from './issue-sections';
 
 export type IssueStatus = 'current' | 'archived' | 'upcoming';
 
@@ -68,6 +70,18 @@ export interface Issue {
   isPremiumIssue?: boolean;
   /** Aylık PDF URL'i — faz 5'te doldurulur */
   pdfUrl?: string;
+  /**
+   * Sabit köşe slotları — Akran Köşesi / Okur Sayfası / Arka Sayfa.
+   * Tanımlı değilse defaultPlannedSections (3 slot, hepsi 'planned')
+   * IssueTableOfContents tarafından otomatik kullanılır.
+   * Faz 2'de gerçek içerik geldikçe `status: 'published'` ile doldurulur.
+   */
+  sections?: IssueSection[];
+}
+
+/** Sayının sabit köşe slotlarını çöz — yoksa default 'planned' set */
+export function resolveIssueSections(issue: Issue): IssueSection[] {
+  return issue.sections ?? defaultPlannedSections;
 }
 
 /**

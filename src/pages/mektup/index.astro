@@ -1,0 +1,111 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import { magazineConfig } from '../../data/magazine-config';
+
+const pageTitle = 'Estranova Mektubu — Eşik dergisinden ayda bir not';
+const pageDescription =
+  'Estranova Mektubu, Eşik dergisinin her ayki sayısı yayına girdiğinde okura ulaşan kısa bir editöryal not. Mektup arşivi yakında.';
+---
+
+<SiteLayout title={pageTitle} description={pageDescription}>
+  <SiteNavbar currentPath="/mektup" />
+
+  <main id="main-content" class="text-ink">
+    <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
+          <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+          <span class="mx-2 text-gold">·</span>
+          <span class="text-burgundy">Mektup</span>
+        </nav>
+
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+          Estranova Mektubu
+        </p>
+        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
+          Ayda bir, posta kutuna düşen kısa bir not
+        </h1>
+        <p class="max-w-3xl text-lg leading-relaxed text-ink/80 md:text-xl">
+          {magazineConfig.name} dergisinin her sayısı yayına girdiğinde — bilimsel editör mektubunun bir özeti, kapak
+          dosyasındaki yazıların listesi ve ay boyunca dikkatimizi çeken bir-iki okuma. Sade, sakin, satışsız.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-3xl">
+        <div class="rounded-[28px] border border-gold/35 bg-cream-soft/60 p-8 md:p-10">
+          <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+            Mektup Arşivi
+          </p>
+          <h2 class="mb-3 font-serif text-2xl leading-snug text-ink md:text-3xl">
+            İlk mektup henüz yola çıkmadı
+          </h2>
+          <p class="mb-6 text-base leading-relaxed text-ink/75">
+            Eşik dergisinin ilk sayısı yayına girdiğinde Estranova Mektubu'nun ilk yazısı buraya
+            düşer. O güne kadar bu sayfa boş kalır — okurla kurulan bağ acele edilen bir şey değil.
+          </p>
+          <p class="text-sm leading-relaxed text-ink/60">
+            Mektup gelir gelmez seninle paylaşmak istersen, anasayfanın altındaki kayıt formunu kullanabilirsin.
+            Hiçbir kişisel veri üçüncü taraflarla paylaşılmaz; istediğin zaman kayıttan ayrılabilirsin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-16">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-6 font-serif text-2xl leading-snug text-ink md:text-3xl">
+          Mektupta neler olur?
+        </h2>
+        <ul class="space-y-5 border-t border-burgundy/12">
+          <li class="flex items-start gap-5 border-b border-burgundy/12 py-5">
+            <span class="shrink-0 font-serif text-2xl tabular-nums text-gold">01</span>
+            <div class="min-w-0 flex-1">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+                Bilimsel editör açılışı
+              </p>
+              <p class="mt-1 font-serif text-lg leading-snug text-ink md:text-xl">
+                Doç. Dr. Senai Aksoy'un sayı için yazdığı kısa açılışın özeti
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start gap-5 border-b border-burgundy/12 py-5">
+            <span class="shrink-0 font-serif text-2xl tabular-nums text-gold">02</span>
+            <div class="min-w-0 flex-1">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+                Sayının kapak dosyası
+              </p>
+              <p class="mt-1 font-serif text-lg leading-snug text-ink md:text-xl">
+                Bu ayın temasını farklı kapılardan açan dört-beş yazının listesi
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start gap-5 border-b border-burgundy/12 py-5">
+            <span class="shrink-0 font-serif text-2xl tabular-nums text-gold">03</span>
+            <div class="min-w-0 flex-1">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+                Editör seçkisi
+              </p>
+              <p class="mt-1 font-serif text-lg leading-snug text-ink md:text-xl">
+                Ay boyunca okuduğumuz, dikkatimizi çeken bir-iki başka yazı
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm leading-relaxed text-ink/65">
+          Mektup üyeliği üyelik veya hesap gerektirmez; e-postanın saklanması ve dağıtımı için <a href="/kvkk" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsin.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
