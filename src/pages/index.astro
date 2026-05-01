@@ -8,7 +8,62 @@ import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro'
 import IssueHero from '../components/site/IssueHero.astro';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 import { writers } from '../data/writers';
-import { currentIssue } from '../data/issues';
+import { currentIssue, resolveCoverDossier, formatIssuePad } from '../data/issues';
+import { magazineConfig } from '../data/magazine-config';
+
+const coverDossier = resolveCoverDossier(currentIssue);
+const issuePad = formatIssuePad(currentIssue.number);
+
+// Hub adı eşlemesi — makale URL'sinden bölüm adını çıkar
+const hubLabels: Record<string, string> = {
+  '/hormonal-gecis': 'Hormonal Geçiş',
+  '/zamansiz-yasam': 'Zamansız Yaşam',
+  '/beden-yakinlik': 'Beden & Yakınlık',
+  '/zihin-denge': 'Zihin & Denge',
+  '/bilimsel-pencere': 'Bilimsel Pencere',
+};
+
+function getHubLabel(href?: string): string {
+  if (!href) return magazineConfig.name;
+  const hub = '/' + href.split('/')[1];
+  return hubLabels[hub] ?? magazineConfig.name;
+}
+
+function getHubThumbnail(href?: string): string {
+  if (!href) return submenuHeroByRoute['/hormonal-gecis'].src;
+  const hub = '/' + href.split('/')[1];
+  const hero = submenuHeroByRoute[hub as keyof typeof submenuHeroByRoute];
+  return hero?.src ?? submenuHeroByRoute['/hormonal-gecis'].src;
+}
+
+// Mevcut sayının kapak dosyasından öne çıkan 3 yazı (idx 0-2)
+const editorialPicks = (coverDossier?.articles ?? []).slice(0, 3).map((article, idx) => {
+  const writer = writers.find((w) => w.slug === article.writerSlug);
+  return {
+    tag: getHubLabel(article.href),
+    title: article.title,
+    body: article.excerpt,
+    href: article.href ?? `/sayi/${currentIssue.slug}`,
+    highlight: idx === 1,
+    author: writer?.displayName ?? 'Estranova',
+    isPlanned: article.status === 'planned',
+  };
+});
+
+// Aynı sayının kalan yazıları (idx 3+) — son yayınlar listesi
+const editorialRecent = (coverDossier?.articles ?? []).slice(3).map((article) => {
+  const writer = writers.find((w) => w.slug === article.writerSlug);
+  return {
+    dateLine: `${currentIssue.monthYear.toLocaleUpperCase('tr-TR')} · ${getHubLabel(article.href).toLocaleUpperCase('tr-TR')}`,
+    title: article.title,
+    excerpt: article.excerpt,
+    href: article.href ?? `/sayi/${currentIssue.slug}`,
+    thumbnailSrc: getHubThumbnail(article.href),
+    thumbnailAlt: article.title,
+    author: writer?.displayName ?? 'Estranova',
+    isPlanned: article.status === 'planned',
+  };
+});
 
 const journey = [
   {
@@ -38,72 +93,6 @@ const journey = [
     excerpt: 'Bedenini, zihnini ve uzun vadeli iyi olma halini bir bütün olarak düşündüğümüz, koruyucu sağlığı birlikte planladığımız geniş bir bölüm.',
     href: '/hormonal-gecis/40-sonrasi',
     imageKey: '/hormonal-gecis/40-sonrasi' as const,
-  },
-];
-
-const editorialPicks = [
-  {
-    tag: 'Vitaminler',
-    title: 'D Vitamini ve Kemik Dengesi',
-    body: '40 sonrası dönemde D vitamini takibi ve günlük yaşamla ilişkili temel noktalar.',
-    href: '/zamansiz-yasam/vitaminler',
-    highlight: false,
-    author: 'Berna Aksoy',
-  },
-  {
-    tag: 'Deneysel Yaklaşımlar',
-    title: 'Yeni Yaklaşımlar Üzerine Ne Biliyoruz?',
-    body: 'Araştırma aşamasındaki yöntemlerin sınırları, beklenti yönetimi ve güvenli okuma notları.',
-    href: '/zamansiz-yasam/deneysel',
-    highlight: true,
-    author: 'Berna Aksoy',
-  },
-  {
-    tag: 'Ameliyatsız',
-    title: 'Nefes ve Uyku Rutinleri',
-    body: 'Uyku kalitesini destekleyebilecek düşük riskli alışkanlıkların bilimsel çerçevesi.',
-    href: '/zamansiz-yasam/non-invaziv',
-    highlight: false,
-    author: 'Berna Aksoy',
-  },
-];
-
-const editorialRecent = [
-  {
-    dateLine: '14 NİSAN 2026 · HORMONAL GEÇİŞ',
-    title: 'Perimenopozda Adet Takibi Nasıl Yapılır?',
-    excerpt: 'Belirti günlüğü, düzenli takip ve günlük yaşam notları.',
-    href: '/library',
-    thumbnailSrc: submenuHeroByRoute['/hormonal-gecis/perimenopoz'].src,
-    thumbnailAlt: 'Perimenopozda Adet Takibi Nasıl Yapılır?',
-    author: 'Berna Aksoy',
-  },
-  {
-    dateLine: '11 NİSAN 2026 · BEDEN & YAKINLIK',
-    title: 'Cinsellikte Konforu Etkileyen Değişimler',
-    excerpt: 'Beden sinyallerini tanımaya ve iletişimi güçlendirmeye odaklanan sade bir içerik özeti.',
-    href: '/library',
-    thumbnailSrc: submenuHeroByRoute['/beden-yakinlik'].src,
-    thumbnailAlt: 'Cinsellikte Konforu Etkileyen Değişimler',
-    author: 'Berna Aksoy',
-  },
-  {
-    dateLine: '7 NİSAN 2026 · ZİHİN & DENGE',
-    title: 'Ruh Hali Dalgalanmalarını Anlamak',
-    excerpt: 'Uyku, stres ve günlük rutin ilişkisini sade bir çerçevede ele alan başlangıç rehberi.',
-    href: '/library',
-    thumbnailSrc: submenuHeroByRoute['/zihin-denge'].src,
-    thumbnailAlt: 'Ruh Hali Dalgalanmalarını Anlamak',
-    author: 'Berna Aksoy',
-  },
-  {
-    dateLine: '2 NİSAN 2026 · YAŞAM TARZI',
-    title: '40 Sonrası Hareket Planı Oluşturmak',
-    excerpt: 'Uygulanabilir hareket önerileri ve sürdürülebilir planlama adımlarıyla pratik bir yol haritası.',
-    href: '/library',
-    thumbnailSrc: submenuHeroByRoute['/hormonal-gecis/40-sonrasi'].src,
-    thumbnailAlt: '40 Sonrası Hareket Planı Oluşturmak',
-    author: 'Alara Baykent',
   },
 ];
 
@@ -184,9 +173,9 @@ const editorialRecent = [
             <span class="mx-2 text-gold">—</span>
             EDİTÖRYAL SEÇKİ
           </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne çıkanlar ve son yayınlar</h2>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bu sayıdan öne çıkanlar</h2>
           <p class="text-lg leading-relaxed text-ink/75">
-            Editör seçkisi: zamansız yaşamdan üç öne çıkan başlık ve son yayınlar.
+            {magazineConfig.name} · Sayı {issuePad} kapak dosyasından üç öne çıkan yazı, ardından sayının kalan parçaları.
           </p>
         </header>
 
@@ -247,10 +236,10 @@ const editorialRecent = [
           </div>
           <div class="mt-6 flex justify-end">
             <a
-              href="/library"
+              href={`/sayi/${currentIssue.slug}`}
               class="text-sm font-semibold text-burgundy underline decoration-burgundy/50 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
             >
-              Tüm yazılar →
+              Sayının tamamı →
             </a>
           </div>
         </div>
