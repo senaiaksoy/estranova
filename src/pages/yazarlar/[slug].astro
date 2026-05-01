@@ -1,0 +1,48 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import WriterArchive from '../../components/site/WriterArchive.astro';
+import { writers } from '../../data/writers';
+import type { Writer } from '../../data/writers';
+
+export async function getStaticPaths() {
+  return writers.map((writer) => ({
+    params: { slug: writer.slug },
+    props: { writer },
+  }));
+}
+
+interface Props {
+  writer: Writer;
+}
+
+const { writer } = Astro.props;
+const currentPath = `/yazarlar/${writer.slug}`;
+
+const displayWithTitle =
+  writer.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : writer.displayName;
+
+const pageTitle = `${displayWithTitle} — ${writer.role.split('/')[0].trim()} | Estranova`;
+const pageDescription = writer.publicBio;
+---
+
+<SiteLayout title={pageTitle} description={pageDescription}>
+  <SiteNavbar currentPath={currentPath} />
+
+  <main id="main-content" class="text-ink">
+    <WriterArchive writer={writer} />
+
+    {/* Tıbbi sorumluluk reddi */}
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm leading-relaxed text-ink/70">
+          Yazılar genel bilgilendirme amaçlıdır; bireysel tıbbi değerlendirme, tanı veya tedavinin
+          yerine geçmez. Kişisel sağlık kararları için doktorunuza danışınız.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

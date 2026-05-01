@@ -110,6 +110,17 @@ Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; K
   5. Dönüşüm  
   Dönüşüm nötrlikle çelişirse **nötrlik** kazanır.
 
+#### Eşik dergisi + abonelik etiği (HARD CONSTRAINT)
+
+Estranova "Eşik" adıyla aylık dijital dergi formatına geçiş aşamasındadır (Faz 1 — UI/dergi görünümü; abonelik altyapısı Faz 3'te aktive olur). **Tek cümlelik etik kural:**
+
+> **Estranova kanıt-temelli temel sağlık bilgisini her zaman herkese açık tutar; abonelik yalnızca aylık sayıların kendine özgü editöryal parçalarını kapsar.**
+
+- **Detay kural:** [`docs/paywall-policy.md`](docs/paywall-policy.md) — abonelik öncesi/sonrası tüm kararlar bu belgeye uyar.
+- **Konfigürasyon:** dergi adı, sayı isimlendirme, yayın ritmi tek noktadan: [`src/data/magazine-config.ts`](src/data/magazine-config.ts).
+- **Yasak dil (arayüz):** "Premium", "Abone ol", "Üye ol", "Kilitli içerik", "Bedava deneme", "Kampanya / Paket / İndirim", "Webinar". Tercih: "Yayını izle", "Aylık sayıyı oku", "Estranova okuru ol", "Estranova Mektubu".
+- **Asla paywall'a alınmayanlar:** mevcut tüm makaleler, hub sayfaları, kapak dosyasındaki ana yazılar, yazar profilleri, tıbbi sorumluluk reddi, editöryal politika, kanıt seviyesi açıklamaları.
+
 #### Pipeline operasyonel parametreleri (referans)
 
 - **Yayın eşiği:** `compliance_score` **≥ 85** iken yayın bandına girilebilir (`COMPLIANCE_SCORE_PUBLISH_OK`; altı revizyon / best-effort akışı). Tam sayı ve model matrisi: **`docs/PIPELINE.md`**.

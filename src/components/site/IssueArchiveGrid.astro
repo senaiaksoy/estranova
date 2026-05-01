@@ -1,0 +1,119 @@
+---
+/**
+ * /sayi sayfası — sayı arşivi kapak grid'i.
+ *
+ * Geçmiş ve mevcut sayıları "kapak grid" olarak gösterir. Her kart:
+ *   - kapak görseli (4:5 dikey orantı, dergi rafı hissi)
+ *   - sayı no + tarih
+ *   - tema (büyük tipografi)
+ *   - kısa lede
+ *
+ * Sayı 0 (Arşiv) kart sonunda ayrı yerleşim: "Önceki tüm yazılar
+ * kütüphanede ve hub sayfalarında okunmaya devam eder."
+ */
+
+import type { Issue } from '../../data/issues';
+import { formatIssuePad } from '../../data/issues';
+import { magazineConfig } from '../../data/magazine-config';
+
+interface Props {
+  issues: Issue[];
+  /** "current" sayıyı vurgulayalım mı? */
+  highlightCurrent?: boolean;
+}
+
+const { issues, highlightCurrent = true } = Astro.props;
+
+// Numerik sayılar (1+) önce, arşiv (0) ayrı
+const numberedIssues = issues
+  .filter((i) => i.number > 0)
+  .sort((a, b) => b.monthYearISO.localeCompare(a.monthYearISO));
+
+const archiveIssue = issues.find((i) => i.number === 0);
+---
+
+<section class="bg-white px-6 py-12 md:py-16">
+  <div class="mx-auto max-w-6xl">
+    <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+      {
+        numberedIssues.map((issue) => {
+          const issuePad = formatIssuePad(issue.number);
+          const isCurrent = issue.status === 'current';
+          return (
+            <li>
+              <a
+                href={`/sayi/${issue.slug}`}
+                class:list={[
+                  'group flex h-full flex-col overflow-hidden rounded-[28px] border bg-white shadow-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
+                  highlightCurrent && isCurrent
+                    ? 'border-burgundy/35 ring-2 ring-burgundy/20 hover:-translate-y-0.5 hover:shadow-xl'
+                    : 'border-burgundy/12 hover:-translate-y-0.5 hover:shadow-md',
+                ]}
+              >
+                <div class="relative aspect-[4/5] w-full overflow-hidden">
+                  <img
+                    src={issue.coverImage.src}
+                    alt={issue.coverImage.alt}
+                    width="600"
+                    height="750"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"
+                  />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/55 via-[#1c1412]/15 to-transparent"></div>
+                  <div class="absolute bottom-5 left-5 right-5 text-cream-soft">
+                    <p class="text-[9px] font-semibold uppercase tracking-[0.32em] text-gold/95">
+                      {magazineConfig.subtitle}
+                    </p>
+                    <p class="mt-1 font-serif text-4xl leading-none">{magazineConfig.name}</p>
+                    <p class="mt-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-cream-soft/85">
+                      Sayı {issuePad} · {issue.monthYear}
+                    </p>
+                  </div>
+                  {isCurrent && (
+                    <span class="absolute right-4 top-4 rounded-full bg-burgundy/95 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-cream-soft">
+                      Yeni sayı
+                    </span>
+                  )}
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">
+                    {issue.theme}
+                  </p>
+                  <h3 class="mb-3 font-serif text-2xl leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35">
+                    {issue.coverHeadline}
+                  </h3>
+                  <p class="mb-5 flex-1 text-sm leading-relaxed text-ink/70">{issue.lede}</p>
+                  <span class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy">
+                    Sayıyı oku →
+                  </span>
+                </div>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    {archiveIssue && (
+      <div class="mt-12 rounded-[28px] border border-gold/30 bg-cream-warm/60 p-8 md:p-10">
+        <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+          Sayı 0 · Arşiv
+        </p>
+        <h3 class="mb-3 font-serif text-2xl leading-snug text-ink md:text-3xl">
+          Eşik dergi serisi açılmadan önce yer alan rehberler
+        </h3>
+        <p class="mb-5 max-w-2xl text-base leading-relaxed text-ink/75">
+          {archiveIssue.lede}
+        </p>
+        <a
+          href="/library"
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
+        >
+          Kütüphaneye git
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    )}
+  </div>
+</section>

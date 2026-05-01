@@ -73,7 +73,8 @@ export const mainNav: NavLink[] = [
       { name: 'Yeni Araştırmalar', href: '/bilimsel-pencere/yeni-arastirmalar' },
     ],
   },
-  { name: 'Dosya', href: '/dosya', label: 'Bu ayın dosyası ve arşiv' },
+  { name: 'Sayılar', href: '/sayi', label: 'Eşik dergisi sayıları ve arşivi' },
+  { name: 'Dosya', href: '/dosya', label: 'Bu ayın kapak dosyası' },
   { name: 'Hakkımızda', href: '/hakkimizda', label: 'Platform hakkında' },
   { name: 'Yayın Kurulu', href: '/yayin-kurulu', label: 'Editoryal ekip ve danışmanlar' },
 ];

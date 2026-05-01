@@ -1,0 +1,59 @@
+---
+/**
+ * /sayi/[slug] sayfasında üst-kapak bölümü.
+ *
+ * Dergi sayısının kendi sayfasında ilk gördüğü editöryal kapak —
+ * büyük tipografi, sayı numarası, tarih, tema, lede.
+ * Aşağıda EditorLetter + kapak dosyası listesi gelir.
+ */
+
+import type { Issue } from '../../data/issues';
+import { formatIssuePad } from '../../data/issues';
+import { magazineConfig } from '../../data/magazine-config';
+
+interface Props {
+  issue: Issue;
+}
+
+const { issue } = Astro.props;
+const issuePad = formatIssuePad(issue.number);
+---
+
+<section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+  <div class="mx-auto max-w-5xl">
+    <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
+      <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+      <span class="mx-2 text-gold">·</span>
+      <a href="/sayi" class="text-ink/65 hover:text-burgundy">Sayılar</a>
+      <span class="mx-2 text-gold">·</span>
+      <span class="text-burgundy">{issue.monthYear}</span>
+    </nav>
+
+    <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-gold">
+      {magazineConfig.name} · {magazineConfig.subtitle}
+    </p>
+    <p class="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-burgundy">
+      Sayı {issuePad} · {issue.monthYear}
+    </p>
+    <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl lg:text-7xl">
+      {issue.theme}
+    </h1>
+    <p class="max-w-3xl text-lg leading-relaxed text-ink/80 md:text-xl">{issue.lede}</p>
+  </div>
+</section>
+
+<section class="bg-white px-6 pt-2 pb-10">
+  <div class="mx-auto max-w-5xl">
+    <figure class="overflow-hidden rounded-[28px] border border-burgundy/10 shadow-[0_20px_50px_-28px_rgba(44,24,28,0.35)]">
+      <img
+        src={issue.coverImage.src}
+        alt={issue.coverImage.alt}
+        width="1600"
+        height="900"
+        loading="eager"
+        decoding="async"
+        class="h-auto w-full object-cover"
+      />
+    </figure>
+  </div>
+</section>

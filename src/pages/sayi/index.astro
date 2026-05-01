@@ -1,0 +1,51 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import IssueArchiveGrid from '../../components/site/IssueArchiveGrid.astro';
+import { issues } from '../../data/issues';
+import { magazineConfig } from '../../data/magazine-config';
+
+const pageTitle = `${magazineConfig.name} · Sayı arşivi | Estranova`;
+const pageDescription = `${magazineConfig.name} dergisinin geçmiş ve mevcut sayıları, kapak konuları ve editöryal arşivi.`;
+---
+
+<SiteLayout title={pageTitle} description={pageDescription}>
+  <SiteNavbar currentPath="/sayi" />
+
+  <main id="main-content" class="text-ink">
+    <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-5xl">
+        <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
+          <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+          <span class="mx-2 text-gold">·</span>
+          <span class="text-burgundy">Sayılar</span>
+        </nav>
+
+        <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-gold">
+          {magazineConfig.name} · {magazineConfig.subtitle}
+        </p>
+        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
+          Sayı arşivi
+        </h1>
+        <p class="max-w-3xl text-lg leading-relaxed text-ink/80 md:text-xl">
+          {magazineConfig.tagline} Aşağıda her sayının kapak temasını, editör mektubunu ve kapak dosyasındaki yazıları bulabilirsin. Eski rehberler ve uzun-form yazılar Sayı 0 — Arşiv'de.
+        </p>
+      </div>
+    </section>
+
+    <IssueArchiveGrid issues={issues} />
+
+    {/* Tıbbi sorumluluk reddi */}
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm leading-relaxed text-ink/70">
+          Bu içerik genel bilgilendirme amaçlıdır; bireysel tıbbi değerlendirme, tanı veya tedavinin
+          yerine geçmez. Kişisel sağlık kararları için doktorunuza danışınız.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

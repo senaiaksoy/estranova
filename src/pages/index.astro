@@ -5,10 +5,10 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 import HomeHero from '../components/site/HomeHero.astro';
 import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
-import MonthlyDossierSection from '../components/site/MonthlyDossierSection.astro';
+import IssueHero from '../components/site/IssueHero.astro';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 import { writers } from '../data/writers';
-import { currentDossier } from '../data/monthly-dossier';
+import { currentIssue } from '../data/issues';
 
 const journey = [
   {
@@ -232,7 +232,7 @@ const editorialRecent = [
       </div>
     </section>
 
-    <MonthlyDossierSection dossier={currentDossier} sectionNumber="03" />
+    <IssueHero issue={currentIssue} sectionNumber="03" />
 
     <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
@@ -374,31 +374,38 @@ const editorialRecent = [
         <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
           {
             writers.map((w) => (
-              <li class="flex flex-col items-center text-center">
-                {w.portrait ? (
-                  <img
-                    src={w.portrait}
-                    alt={`${w.displayName} portresi`}
-                    width="192"
-                    height="192"
-                    loading="lazy"
-                    decoding="async"
-                    class="h-24 w-24 rounded-full object-cover ring-2 ring-burgundy/15 md:h-28 md:w-28"
-                  />
-                ) : (
-                  <div class="flex h-24 w-24 items-center justify-center rounded-full bg-cream-warm font-serif text-3xl text-burgundy ring-2 ring-burgundy/15 md:h-28 md:w-28 md:text-4xl">
-                    {w.displayName
-                      .split(/\s+/)
-                      .filter((part) => part.length > 0)
-                      .map((n) => n[0])
-                      .join('')}
-                  </div>
-                )}
-                <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy">
-                  {w.role.split('/')[0].trim()}
-                </p>
-                <h3 class="mt-2 font-serif text-xl text-ink">{w.displayName}</h3>
-                <p class="mt-3 font-serif text-sm italic leading-relaxed text-ink/70">{w.signaturePhrase}</p>
+              <li>
+                <a
+                  href={`/yazarlar/${w.slug}`}
+                  class="group flex h-full flex-col items-center text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                >
+                  {w.portrait ? (
+                    <img
+                      src={w.portrait}
+                      alt={`${w.displayName} portresi`}
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
+                      class="h-24 w-24 rounded-full object-cover ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/40 md:h-28 md:w-28"
+                    />
+                  ) : (
+                    <div class="flex h-24 w-24 items-center justify-center rounded-full bg-cream-warm font-serif text-3xl text-burgundy ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/40 md:h-28 md:w-28 md:text-4xl">
+                      {w.displayName
+                        .split(/\s+/)
+                        .filter((part) => part.length > 0)
+                        .map((n) => n[0])
+                        .join('')}
+                    </div>
+                  )}
+                  <p class="mt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy">
+                    {w.role.split('/')[0].trim()}
+                  </p>
+                  <h3 class="mt-2 font-serif text-xl text-ink group-hover:underline group-hover:decoration-burgundy/35">
+                    {w.displayName}
+                  </h3>
+                  <p class="mt-3 font-serif text-sm italic leading-relaxed text-ink/70">{w.signaturePhrase}</p>
+                </a>
               </li>
             ))
           }

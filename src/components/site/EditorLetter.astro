@@ -1,0 +1,66 @@
+---
+/**
+ * Sayı içinde "Bilimsel Editör Mektubu" — Doç. Dr. Senai Aksoy imzalı.
+ *
+ * Eşik dergisinin her sayısında, kapak dosyasının üzerinde duran
+ * sade bir bilimsel açılış. Makale değil, sayfayı çerçeveleyen kısa
+ * bir editöryal not. Akran tonunda; klinik vitrini DEĞİL.
+ *
+ * Burada yazar slug'ı `senai-aksoy` (writers.ts'de "Doç. Dr." öneksiz
+ * "Konu Yazarı" personası). Bu alanda görünür isim "Doç. Dr. Senai Aksoy"
+ * olarak tıbbi editör kimliğiyle gösterilir — gövde ses tonu yine akran.
+ */
+
+import type { IssueEditorLetter } from '../../data/issues';
+import { writers } from '../../data/writers';
+
+interface Props {
+  letter: IssueEditorLetter;
+}
+
+const { letter } = Astro.props;
+const writer = writers.find((w) => w.slug === letter.writerSlug);
+
+// Bilimsel editör için "Doç. Dr." önekli görünür ad
+const editorDisplayName =
+  writer?.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : writer?.displayName ?? 'Estranova';
+
+const paragraphs = letter.body.split('\n\n').filter((p) => p.trim().length > 0);
+---
+
+<section class="bg-white px-6 py-12 md:py-16">
+  <div class="mx-auto max-w-3xl">
+    <header class="mb-8 border-b border-burgundy/12 pb-6">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        Bilimsel Editör Mektubu
+      </p>
+      <div class="flex items-center gap-4">
+        {writer?.portrait && (
+          <img
+            src={writer.portrait}
+            alt={`${editorDisplayName} portresi`}
+            width="80"
+            height="80"
+            loading="lazy"
+            decoding="async"
+            class="h-16 w-16 rounded-full object-cover ring-2 ring-gold/30"
+          />
+        )}
+        <div>
+          <h2 class="font-serif text-2xl text-ink">{editorDisplayName}</h2>
+          <p class="mt-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            Estranova bilimsel editörü
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <div class="space-y-5">
+      {paragraphs.map((paragraph) => (
+        <p class="font-serif text-lg leading-relaxed text-ink/80 md:text-xl">{paragraph}</p>
+      ))}
+    </div>
+
+    <p class="mt-8 font-serif text-base italic text-ink/65">— {editorDisplayName}</p>
+  </div>
+</section>

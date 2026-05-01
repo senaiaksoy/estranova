@@ -200,6 +200,7 @@ const consultants = [
               bio={medicalReviewer.bio}
               portrait={medicalReviewer.portrait}
               tags={medicalReviewer.tags}
+              profileHref="/yazarlar/senai-aksoy"
             />
             {editors.map((w) => (
               <KuruluCard
@@ -209,6 +210,7 @@ const consultants = [
                 bio={w.publicBio}
                 portrait={w.portrait}
                 tags={w.focusAreas}
+                profileHref={`/yazarlar/${w.slug}`}
               />
             ))}
           </div>
@@ -231,6 +233,7 @@ const consultants = [
                 bio={w.publicBio}
                 portrait={w.portrait}
                 tags={w.focusAreas}
+                profileHref={`/yazarlar/${w.slug}`}
               />
             ))}
             <KuruluCard
@@ -240,6 +243,7 @@ const consultants = [
               bio={guestWriterEnAlt.publicBio}
               portrait={guestWriterEnAlt.portrait}
               tags={guestWriterEnAlt.focusAreas}
+              profileHref="/yazarlar/senai-aksoy"
             >
               <p class="mt-4 rounded-xl border-l-2 border-gold bg-white/60 px-4 py-3 text-sm italic leading-relaxed text-ink/72">
                 Yukarıdaki <a href="#senai-aksoy" class="font-semibold text-burgundy no-underline hover:underline">Bilimsel Editör Doç. Dr. Senai Aksoy</a> ile
