@@ -21,7 +21,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis': {
     src: '/images/heroes/hormonal-gecis.webp',
-    alt: 'Hormonal geçiş döneminde sakin ve güvenilir bilgi teması; editöryal iç mekânda orta yaş kadın',
+    alt: 'Sabah ışığında bir İstanbul mutfak adası etrafında üç kuşak Türk kadın (38, 48, 58) kahve sohbeti; biri açık sağlık defterine notlar tutuyor, ortadaki kahve fincanını iki elle tutarken paylaşıyor, en olgun olan espresso ve sıcak gülümseme ile dinliyor; bakımlı boyalı saçlar (kestane düz / auburn chignon / mahogany dalga), ivory + bordo + brass paleti, mermer ada üstünde incir-ceviz tabağı + bal kavanozu + lavanta + açık dergi; hormonal geçişin kuşaklar arası paylaşımı ve bilgi köprüsü teması',
   },
   '/hormonal-gecis/perimenopoz': {
     src: '/images/library/editorial/journey-perimenopoz.webp',
