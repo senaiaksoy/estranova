@@ -2,36 +2,47 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/nad-plus-takviyesi']!;
+
 const tocEntries = [
-  { id: 'nad-nedir', label: 'NAD+ Nedir?' },
-  { id: 'neden-duser', label: 'Yaşla Neden Düşer' },
-  { id: 'nmn-nr-arastirmalari', label: 'NMN ve NR Araştırmaları' },
-  { id: 'fayda-sinirlar', label: 'Fayda ve Sınırlılıklar' },
-  { id: 'guvenlik', label: 'Güvenlik ve Yan Etkiler' },
-  { id: 'sonuc', label: 'Sonuç: Bilim Nerede?' },
+  { id: 'isim-koymak', label: 'Reklam Vaadi ile Bilim Arası' },
+  { id: 'mekanizma', label: 'NAD+ Hücrede Ne İşe Yarar?' },
+  { id: 'yasla-dusus', label: 'Yaşla Düşüş — Ne Kadar, Hangi Hızda?' },
+  { id: 'kanit-durumu', label: 'İnsan Çalışmalarının Bugünkü Durumu' },
+  { id: 'olasi-fayda', label: 'Olası Fayda — Sınırını Bilerek' },
+  { id: 'guvenlik', label: 'Güvenlik: Kısa Vade vs Uzun Vade' },
+  { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'NAD+ Takviyesi: Bilim Ne Diyor?';
-const articleDescription = 'NAD+ takviyeleri hakkında güncel bilimsel verileri, olası faydaları, sınırlılıkları ve güvenlik başlıklarını sade bir dille ele alan rehber.';
+const articleTitle = 'NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı';
+const articleDescription =
+  'Anti-aging takviyeleri arasında NAD+ öncüleri (NMN, NR) yoğun pazarlanıyor. Kanıt seviyesi nerede duruyor, kim için anlamlı, kim için erken? Mekanizma + insan çalışmalarının bugünkü durumu + güvenlik + doktora hangi soruları sormak gerektiği — promosyon değil, dürüst yorumlama.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'basak-pelister',
-  publishedDate: '17 Nisan 2026',
+  writerSlug: 'senai-aksoy',
+  publishedDate: '2 Mayıs 2026',
   pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
-  articleSection: 'Zamansız Yaşam · Deneysel',
+  articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam',
-  keywords: ['NMN', 'NR', 'NAD+', 'takviye', 'menopoz', 'güvenlik'],
+  keywords: ['NAD+', 'NMN', 'NR', 'nikotinamid mononükleotid', 'nikotinamid ribozid', 'anti-aging', 'takviye', 'kanıt seviyesi', 'menopoz'],
   siteUrl,
 });
 ---
@@ -42,115 +53,336 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar />
+  <SiteNavbar currentPath="/zamansiz-yasam" />
 
-  <main id="main-content" class="pt-24 text-ink">
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Deneysel Yaklaşımlar"
+      title="NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
     <SubmenuArticleBody>
-        <ArticleTOC slot="toc" entries={tocEntries} />
-        <ArticleAuthorBlock authorSlug="basak-pelister" publishedDate="17 Nisan 2026" readingMinutes={3} />
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="2 Mayıs 2026" readingMinutes={8} />
 
-        <header class="mb-10">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Zamansız Yaşam · Deneysel Yaklaşımlar</p>
-          <h1 class="font-serif text-4xl leading-tight md:text-6xl">NAD+ Takviyesi: Bilim Ne Diyor?</h1>
-        </header>
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton
+          slug="/zamansiz-yasam/deneysel/nad-plus-takviyesi"
+          title={articleTitle}
+        />
+      </div>
 
-        <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
-          <h2 class="mb-4 font-serif text-3xl">Bu yazıda öğrenecekleriniz</h2>
-          <ul class="mb-5 list-disc space-y-2 pl-5 leading-relaxed text-ink/80">
-            <li>NAD+ molekülünün hücresel enerji üretimindeki temel rolü</li>
-            <li>NMN ve NR takviyeleriyle ilgili insan çalışmalarının bugün geldiği nokta</li>
-            <li>Olası faydalar, güvenlik verileri ve belirsiz kalan alanlar</li>
-          </ul>
-          <p class="text-sm font-medium text-ink/70">Okuma süresi: 7 dakika</p>
-        </section>
+      <section
+        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-ink/80">
+          Hastalarımın bir kısmı son aylarda NAD+ takviyesini muayenehane gündemine getiriyor;
+          sosyal medyada vaatler yoğun, bilen birinin dürüst yorumu az. NAD+ hücresel enerji
+          metabolizmasında temel bir koenzim — bunda mutabakat var. Ama takviye olarak
+          (NMN, NR) insan çalışmalarının bugünkü kanıt seviyesi <em>sınırlı</em>; pazarlama
+          mesajları çoğu zaman bu sınırı atlıyor. Bu yazı mekanizmayı netleştiriyor, kanıtı
+          dürüstçe yorumluyor, güvenlik verilerini ayırıyor ve doktorunuza ne sormanız
+          gerektiğine yer veriyor — umut etiketi yerine bilgi.
+        </p>
+      </section>
 
-        <ArticleProsePanel>
-          <h2 id="nad-nedir">NAD+ Nedir?</h2>
-          <p>
-            NAD+ kulağa laboratuvar dili gibi gelebilir, ama merak ettiğimiz şey çok tanıdık: enerji, toparlanma ve yaş alma ritmi. NAD+ (nikotinamid adenin dinükleotid), hücrelerin enerji üretiminde görev alan temel bir koenzimdir.
-            Mitokondride gerçekleşen enerji döngüsünde rol oynar ve birçok enzimatik sürecin çalışmasına katkı sağlar.
-          </p>
-          <p>
-            Hücresel onarım, oksidatif stres yanıtı ve metabolik denge gibi başlıklarda NAD+ ile ilişkili mekanizmalar
-            uzun süredir araştırılmaktadır. Bu nedenle son yıllarda takviye formunda NAD+ öncülleri daha görünür hale gelmiştir.
-          </p>
+      <ArticleProsePanel>
+        <h2 id="isim-koymak">Reklam Vaadi ile Bilim Arası — Önce İsim Koymak</h2>
+        <p>
+          Bu konuda kimsenin yazmaması bence asıl sorun değil; <em>kimsenin sınırı dürüstçe
+          söylememesi</em> asıl sorun. Sosyal medyada NAD+ takviyeleri "hücresel gençleşme",
+          "yaşı geri çevirme", "enerji patlaması" gibi vaatlerle pazarlanıyor; oysa bilim
+          bambaşka bir hızda ilerliyor. İlk işimiz konuya isim koymak: NAD+ <em>hücredeki
+          temel bir koenzim</em>; takviye olarak satılan ürünler ise <em>NAD+ öncülleri</em>
+          (öncesinde alınan ve hücrede NAD+'ya dönüşmesi beklenen bileşikler). En sık geçen
+          iki isim: <strong>NMN</strong> (nikotinamid mononükleotid) ve <strong>NR</strong>
+          (nikotinamid ribozid).
+        </p>
+        <p>
+          Bu ayrımı bilmek önemli çünkü "NAD+ takviyesi alıyorum" diyen biri aslında doğrudan
+          NAD+ değil, bir öncül molekülü alıyor. Vücut içindeki dönüşüm verimi, bireysel
+          metabolizma, yaş ve doku tipine göre değişebiliyor <Evidence level={4} />. Yani
+          aynı dozda iki kişide aynı NAD+ artışı görülmeyebiliyor. Bu sıradan bir ayrıntı
+          gibi görünüyor; ama "umut etiketi vs kanıt" tartışmasının kökünde bu var.
+        </p>
 
-          <h2 id="neden-duser">Yaşla Birlikte NAD+ Düzeyi Neden Düşer?</h2>
-          <p>
-            40 sonrası “eskisi kadar çabuk toparlanmıyorum” hissi çoğumuz için tanıdıktır; yaş ilerledikçe hücre içi metabolik süreçlerde değişim olur. Kronik düşük düzeyli iltihabi yük, oksidatif stres
-            ve enerji üretim zincirindeki yavaşlama NAD+ havuzunu etkileyebilir. Bu düşüş, yaşlanma biyolojisi araştırmalarında
-            sık incelenen bir başlıktır.
-          </p>
-          <p>
-            Ancak NAD+ düzeyindeki değişim her kişide aynı hızda olmaz. Genetik yapı, yaşam biçimi, uyku düzeni, beslenme
-            ve eşlik eden sağlık durumları bu süreci birlikte şekillendirir.
-          </p>
+        <h2 id="mekanizma">NAD+ Hücrede Ne İşe Yarar? (Kısa Mekanizma)</h2>
+        <p>
+          NAD+ — açık adıyla nikotinamid adenin dinükleotid — hemen her hücrede bulunan ve
+          enerji metabolizmasının merkezinde duran bir koenzim <Evidence level={5} />.
+          Mitokondrideki enerji üretim zincirinde elektron taşıyıcısı olarak görev alıyor;
+          ATP üretimi büyük ölçüde NAD+/NADH dengesine bağlı. Buna ek olarak hücresel
+          onarım yolaklarında, oksidatif stres yanıtında ve genetik bilgi okuma süreçlerinde
+          rol oynayan birkaç enzim ailesi (sirtuinler, PARP'lar) NAD+'ı doğrudan kullanıyor.
+        </p>
+        <p>
+          Bu yüzden hücre biyolojisi açısından NAD+'ın <em>"yaşam molekülü"</em> olarak
+          tanımlanması yanlış değil — ama bu mekanik tanım <em>"takviye al, yaşı geri al"</em>
+          anlamına gelmiyor. Aradaki köprü çok daha karmaşık ve büyük kısmı henüz açık.
+          Mekanizma açıklığa kavuşmuş demek <em>insanlarda klinik fayda kanıtlanmış</em>
+          demek değildir.
+        </p>
 
-          <h2 id="nmn-nr-arastirmalari">NAD+ Takviyesi Araştırmaları (NMN, NR)</h2>
-          <p>
-            Bu alanda ürün iddiaları hızlı ilerliyor; bu yüzden önce bilimin ne söylediğini sakin okumak gerekir. NAD+ doğrudan takviye edilmekten çok, çoğunlukla öncül bileşikler üzerinden desteklenmeye çalışılır.
-            Bu alanda en sık çalışılan iki bileşik NMN (nikotinamid mononükleotid) ve NR (nikotinamid ribozid) olarak öne çıkar.
-          </p>
-          <p>
-            İnsan çalışmalarında bazı biyobelirteçlerde iyileşme ve enerji metabolizmasına dair olumlu sinyaller bildirilmiştir.
-            Buna karşılık çalışma sürelerinin kısa olması, örneklem sayılarının sınırlı kalması ve sonuçların her araştırmada
-            aynı yönde olmaması nedeniyle net bir sağlık sonucu vaat etmek için henüz erkendir.
-          </p>
+        <h2 id="yasla-dusus">Yaşla Düşüş — Ne Kadar, Hangi Hızda?</h2>
+        <p>
+          40 sonrası kadınların önemli bir kısmı <em>"eskisi kadar çabuk toparlanmıyorum"</em>
+          hissini paylaşıyor; bu his bir yere kadar gerçek bir biyolojiye dayanıyor. Çeşitli
+          dokularda NAD+ düzeylerinin yaşla birlikte azaldığı hayvan ve insan dokusu
+          çalışmalarında bildirilmiş <Evidence level={4} />. Düşüşü açıklayan birkaç
+          mekanizma öneriliyor: NAD+ tüketen enzimlerin (özellikle PARP ve CD38) yaşla artan
+          aktivitesi, kronik düşük düzeyli iltihabi yük, mitokondri sayısındaki azalma.
+        </p>
+        <p>
+          Ama "düşüyor" demek "tamamlamak gerekir" demek değil. Düşüş hızı kişiden kişiye
+          değişiyor — genetik, yaşam biçimi, uyku, beslenme, eşlik eden tıbbi durumlar bu
+          süreci birlikte şekillendiriyor. Önemli bir nokta var: NAD+ düşüşünü yaşlanmanın
+          <em>sebebi</em> mi, yoksa <em>sonucu</em> mu olduğu hâlâ tartışmalı. İkisi farklı
+          tedavi stratejisi anlamına gelir; bu yüzden takviye reklamlarındaki "yaşı geri
+          çevirir" iddiası neden temkinli okunmalı.
+        </p>
 
-          <h2 id="fayda-sinirlar">Olası Faydalar ve Sınırlılıklar</h2>
-          <p>
-            Eğer bu takviyeyi düşünüyorsan, olası faydayı da sınırı da aynı anda görmek iyi olur. Olası faydalar arasında enerji metabolizmasına katkı, bazı yorgunluk parametrelerinde iyileşme ve metabolik
-            işaretleyicilerde sınırlı olumlu değişimler sayılmaktadır. Bu bulgular ilgi çekicidir ve araştırma alanını canlı tutmaktadır.
-          </p>
-          <p>
-            Ancak bu sonuçlar, her kullanıcıda aynı etkiyi garantilemez. Uzun dönem etkinlik verileri sınırlı olduğu için
-            NAD+ takviyelerini net ve değişmez bir sonuç olarak değerlendirmek bilimsel açıdan doğru değildir.
-          </p>
+        <h2 id="kanit-durumu">İnsan Çalışmalarının Bugünkü Durumu</h2>
+        <p>
+          Burada söylenmesi gereken dürüst cümle şu: NMN ve NR takviyeleri için <em>insan
+          çalışmaları arttı, ama henüz erken</em>. Mevcut çalışmaların büyük çoğunluğu küçük
+          örneklemli (genelde 20-100 kişi), kısa süreli (4-12 hafta), biyobelirteç odaklı
+          (kandaki NAD+ artışı, bazı metabolik markerler). Bu çalışmaların bir kısmında
+          NAD+'da artış gerçekten gösterilmiş; bazılarında kas işlevi, kan basıncı veya
+          insülin duyarlılığında küçük iyileşmeler bildirilmiş <Evidence from={2} to={3} />.
+        </p>
+        <p>
+          Ama <strong>uzun dönem klinik sonuç</strong> (yaşam süresi, kalp-damar olayları,
+          kanser, demans) için kontrollü ve geniş örneklemli insan verisi <em>henüz yok</em>.
+          Hayvan çalışmalarında bazı umut verici sonuçlar var — ama farelerden insanlara
+          geçiş bu alanda hep zor olmuştur. Bazı uluslararası uzman dernekleri NAD+ öncülleri
+          için <em>"araştırma çerçevesinde değerlendirilmeli, standart önerilemez"</em>
+          uyarısında bulunuyor.
+        </p>
+        <p>
+          Menopoz sonrası kadınlara <em>özel</em> NMN/NR çalışması ise çok daha az; bu konuda
+          kanıt seviyesi belirgin biçimde sınırlı <Evidence level={2} />. Yani 50 yaş üstü
+          bir kadın için "size faydalı" demenin elimizdeki kanıtı çok zayıf.
+        </p>
 
-          <h2 id="guvenlik">Güvenlik ve Yan Etkiler</h2>
-          <p>
-            “Doğal” ya da “hücresel” diye sunulan bir destek de güvenlik sorusundan muaf değildir. Kısa süreli çalışmalarda NMN ve NR genellikle iyi tolere edilmiştir. Bazı kişilerde hafif mide-bağırsak şikayetleri,
-            baş ağrısı veya geçici rahatsızlık hissi bildirilebilir.
-          </p>
-          <p>
-            Uzun süreli kullanımda güvenlik verileri henüz sınırlı olduğundan, özellikle kronik hastalığı olanlar veya düzenli ilaç
-            kullananlar için hekim görüşü almadan başlanması uygun değildir. Deneysel alanlarda kişisel risk-fayda değerlendirmesi önemlidir.
-          </p>
+        <h2 id="olasi-fayda">Olası Fayda — Sınırını Bilerek</h2>
+        <p>
+          Reklam vaatlerinden ayıklayınca, NMN/NR takviyeleri için bugün söylenebileceklerin
+          gerçekçi listesi şudur: bazı kişilerde <em>kandaki NAD+ düzeyi yükseliyor</em>
+          (biyobelirteç değişikliği) <Evidence level={3} />. Bazı küçük çalışmalarda kas
+          gücünde, yorgunluk ölçeklerinde veya metabolik parametrelerde sınırlı iyileşme
+          bildirilmiş <Evidence from={2} to={3} />. Bunlar <em>ilgi çekici</em> sinyaller
+          ama <em>"hayatınızı değiştirir"</em> sonuçları değil.
+        </p>
+        <p>
+          Şunu da söylemek gerek: aynı dozda iki kişide aynı klinik sonuç görülmüyor. Bazı
+          kişilerde subjektif enerji artışı, bazılarında hiçbir fark yok, bazılarında plasebo
+          etkisi belirleyici. Bu değişkenliğin nedenleri tam çözülmüş değil — başlangıçtaki
+          NAD+ düzeyi, bağırsak mikrobiyotası, NAD+ tüketen enzim aktivitesi gibi faktörler
+          rol oynuyor olabilir. Yani bir takviyenin sizde işe yarayıp yaramayacağını önceden
+          bilemiyoruz.
+        </p>
 
-          <h2 id="sonuc">Sonuç: Bilim Henüz Nerede?</h2>
-          <p>
-            Bugün için en dürüst cümle şu: NAD+ takviyeleri umut verici ama henüz kesin değil. Laboratuvar ve erken dönem
-            insan verileri araştırmayı desteklerken, uzun vadeli sağlık sonuçları için daha güçlü çalışmalara ihtiyaç vardır.
-          </p>
-          <p>
-            Bu nedenle NAD+ takviyelerini değerlendirirken beklentiyi gerçekçi tutmak, güncel kanıt düzeyini takip etmek
-            ve kişisel sağlık durumuna göre profesyonel görüş almak en dengeli yaklaşımdır.
-          </p>
-        </ArticleProsePanel>
+        <h2 id="guvenlik">Güvenlik: Kısa Vade vs Uzun Vade</h2>
+        <p>
+          Kısa süreli (genelde 4-12 hafta) çalışmalarda NMN ve NR <em>genellikle iyi tolere
+          ediliyor</em> <Evidence level={4} />. Bildirilen yan etkiler hafif: bulantı, ishal,
+          baş ağrısı, geçici yorgunluk artışı. Yüksek dozlarda (günde 1000 mg üzeri) şikâyet
+          oranı artıyor; bu yüzden "daha fazla daha iyi" yaklaşımı bu alanda doğru değil.
+        </p>
+        <p>
+          Uzun vadeli güvenlik (yıllar boyu kullanım) konusu farklı: <em>elimizde yeterli
+          veri yok</em>. NAD+ tüketen yolakları (özellikle PARP) düzenli besleyen bir takviyenin
+          DNA hasar yanıtı veya potansiyel kanser hücrelerinde nasıl etki ettiği teorik
+          tartışmaların konusu. Pratik anlamı: aktif kanseri olan, immünsüpresif tedavi alan
+          veya kanser öyküsü olan hastalarda NMN/NR kullanımı için <em>net güvenlik verisi
+          yok</em>; bu durumda hekim değerlendirmesi olmadan başlamak doğru değil.
+        </p>
+        <p>
+          Düzenli ilaç kullananlar (özellikle kanser tedavileri, immünsüpresanlar, bazı
+          metabolik tedaviler) için ilaç-takviye etkileşimi konusunda yeterli çalışma yok.
+          Bu, "olmayacağı kesin" değil <em>"bilinmediği kesin"</em> anlamına geliyor.
+        </p>
 
-        <RelatedReadings
+        <RedFlagBox
+          markers={[
+            'Aktif kanser, kanser öyküsü veya immünsüpresif tedavi — NMN/NR için net güvenlik verisi yok; mutlaka onkolog/hekim değerlendirmesi',
+            'Düzenli reçeteli ilaç kullanımı — etkileşim verileri sınırlı; hekim onayı olmadan başlamak güvenli değil',
+            'Hamilelik veya emzirme — bu dönemler için güvenlik verisi yok',
+            'Yüksek doz iddiaları (günde 1000-2000 mg) — yan etki oranı artar, ek fayda kanıtlanmamış',
+            '"Hücresel gençleşme garantili" tarzı pazarlama mesajları — bilimsel temeli yok',
+            'Takviyeye başladıktan sonra yeni ortaya çıkan belirgin yorgunluk, döküntü, bulantı — kullanımı durdurup hekime başvurun',
+          ]}
+          footnote="Bu liste teşhis amaçlı değil; bir hekimle vakit kaybetmeden konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
+        />
+
+        <h2 id="iletisim">Doktora Hangi Soruları Sormalı?</h2>
+        <p>
+          NAD+ takviyesini düşünüyorsanız hekim odasına üç soruyla gidin: <strong>Birincisi</strong>
+          — <em>"Benim sağlık tablomda — eşlik eden tıbbi durumlar, kullandığım ilaçlar, kanser
+          öyküsü dahil — bu takviyeyi denememin güvenliği nedir?"</em> Bu, kişiselleştirme
+          zeminini açar. <strong>İkincisi</strong> — <em>"Faydayı ne ile ölçeceğiz, hangi sürede
+          değerlendireceğiz?"</em> Bu, bir takvim öneriyor (örneğin 8-12 hafta + tekrar
+          değerlendirme); subjektif "iyi hissetme" tek başına yetmez. <strong>Üçüncüsü</strong>
+          — <em>"Kanıt seviyesi sınırlı bu alanda, denerken nelere dikkat etmeliyim, nelerden
+          uzak durmalıyım?"</em> Bu, dürüst bir çerçeve kurar; hekim de pazarlama mesajı yerine
+          bilgi paylaşır.
+        </p>
+        <p>
+          Bütçe boyutunu da konuşmak gerek. NAD+ öncüleri pahalı takviyeler; aylık 100-300 USD
+          civarı maliyet sıradan değil. Aynı bütçeyle daha güçlü kanıtlı seçenekler (uyku,
+          beslenme düzeni, düzenli hareket, hekim onaylı vitamin/mineral takviyeleri)
+          bulunduğunda, takviyeyi denemek <em>"ek bir adım"</em> olarak — değişmez bir
+          gereklilik değil — değerlendirilmelidir.
+        </p>
+
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+
+        <h3>NMN ve NR'den hangisi daha etkili?</h3>
+        <p>
+          Şu an elimizdeki insan çalışmalarına göre <em>net bir üstünlük gösterilememiş</em>
+          <Evidence level={2} />. Hayvan çalışmalarında her iki bileşik de NAD+ düzeyini
+          artırıyor; insan çalışmalarında biyobelirteç değişikliği benzer. NR çalışmaları
+          biraz daha eski ve sayıca fazla; NMN son yıllarda hızla artan ilgi alıyor. Bir
+          tercih için somut klinik kanıt yok — pazarlama mesajları arasındaki "NMN daha
+          üstün" tartışması büyük ölçüde reklam dilidir.
+        </p>
+
+        <h3>Doz ne olmalı, ne kadar süre kullanılmalı?</h3>
+        <p>
+          Çalışmalarda kullanılan tipik dozlar NMN için 250-500 mg/gün, NR için 250-1000 mg/gün
+          aralığında. Çoğu çalışma 4-12 hafta süreli <Evidence level={3} />. Daha yüksek dozlar
+          (günde 1000 mg üzeri) ek fayda göstermemiş, yan etki oranını artırmış. Süre konusunda
+          uzun dönem (yıllar) güvenlik verisi yok — sürekli kullanım için elimizde yeterli kanıt
+          bulunmuyor. Pratik bir yaklaşım: hekim onayıyla 8-12 hafta dene, biyobelirteç ve
+          subjektif değişiklikleri değerlendir, sonra devam edip etmemeye karar ver.
+        </p>
+
+        <h3>NAD+ takviyesi menopoz belirtilerine yardımcı olur mu?</h3>
+        <p>
+          Bu konuda <em>doğrudan menopoz çalışması yok denecek kadar az</em> <Evidence level={2} />.
+          Sıcak basması, gece terlemesi, uyku bozulması, kemik sağlığı gibi tipik menopoz
+          başlıklarında NMN/NR için kanıt seviyesi pratikte yok denilebilir. Bu belirtiler için
+          kanıtlı seçenekler (HRT, lokal östrojen, CBT-I, kemik için kalsiyum-D vitamini-egzersiz
+          paketi) önceliklidir; NAD+ takviyesini bu kanıtlı seçeneklerin <em>yerine</em> değil,
+          en fazla <em>yanına</em> ek bir merak adımı olarak düşünmek gerek.
+        </p>
+
+        <h3>Doğal yollarla NAD+ artırabilir miyim?</h3>
+        <p>
+          NAD+ üretimi B3 vitamini ailesi (niasin, niasinamid) gerektiriyor; sağlıklı bir
+          beslenme zaten yeterli prekürsörü sağlar. Düzenli aerobik ve direnç egzersizi NAD+/NADH
+          oranını ve mitokondri fonksiyonunu olumlu etkilediği gösterilmiş <Evidence level={4} />.
+          Düzenli uyku, kalori alımının makul tutulması ve aralıklı oruç gibi metabolik
+          stratejiler de NAD+ ve sirtuin yolaklarını dolaylı destekleyebilir. Bunlar bir
+          takviyenin yerine değil, <em>temeli</em> oluşturuyor.
+        </p>
+
+        <h3>"Hücresel gençleşme" iddiaları ne kadar gerçek?</h3>
+        <p>
+          Pazarlama mesajlarındaki <em>"yaşı geri çevirme"</em>, <em>"DNA tamiri",</em>
+          <em>"hücresel gençlik"</em> tarzı vaatler bilimsel temellerden çok ötede konuşuyor.
+          Hayvan çalışmalarında belirli yolaklarda etki gösterilmiş, ama insanda <em>klinik
+          olarak ölçülen bir gençleşme</em> yok. Bu cümleyi hayal kırıklığı yaratmak için değil,
+          beklentinin gerçekçi tutulması için söylüyorum: kanıt sınırını bilince hem bütçe
+          kararı hem ruhsal beklenti yönetimi sağlıklı oluyor.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          NAD+ takviyeleri (NMN, NR) deneysel bir alan; mekanizması mantıklı, hayvan verileri
+          umut verici, ama insan kanıt seviyesi bugün hâlâ <em>sınırlı</em>. Pazarlama
+          mesajlarının arasında dürüst yorum az; ama bilen birinin söyleyebileceği şu: bu
+          takviyeler kanıtlı standart tedavilerin yerine değil, hekim onayıyla denenebilen
+          ek bir adımdır. Bilgi belirsizliğin panzehiridir — bu konuda da öyle. Sınırını
+          bilmek, hem cüzdanı hem ruhsal beklentiyi koruyor.
+        </p>
+        <p>
+          Doktorunuza üç soruyla gidin: <em>"Benim profilim için güvenli mi?"</em>, <em>"Faydayı
+          neyle ölçeceğiz?"</em>, <em>"Kanıt seviyesi sınırlı bu alanda dikkat etmem gereken
+          ne?"</em>. Sorunun kendisi cevabın yarısıdır; bu yarısını siz koyduğunuzda, kalanı
+          klinik diyalogun parçası oluyor.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/deneysel/ozon-terapisi-inceleme',
-            '/zamansiz-yasam/non-invaziv/hifu-ve-rf-karsilastirma',
             '/zamansiz-yasam/vitaminler/d-vitamini-rehberi',
+            '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/hormonal-gecis/menopoz/menopoz-nedir',
           ]}
         />
 
-        <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-          <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence level={3} /></p>
-          <p class="leading-relaxed text-ink/80">
-            NAD+ takviyesinin hücresel yaşlanma üzerindeki etkisini inceleyen insan çalışmaları artmaktadır. Sonuçlar laboratuvar ortamında umut verici olsa da, insanlarda uzun vadeli etkinlik ve güvenlik verileri henüz yeterli değildir. Bu konuda araştırmalar devam etmektedir.
+      <section
+        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={3} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Yazının başında değinmeden geçtiğim birkaç klinik ayrıntıyı, bu kez uzman tarafımdan
+            eklemek istiyorum.
           </p>
-          <p class="mt-4 text-sm text-ink/65">Son güncelleme: Nisan 2026</p>
-        </section>
+          <p>
+            <strong class="text-burgundy">Klinik bağlam:</strong> NAD+ öncülleri (NMN, NR) son
+            yıllarda kliniğimde de en sık sorulan anti-aging takviyeleri arasına girdi —
+            pazarlama her yerde, dürüst yorum az. Hücresel mekanizma sağlam temellere oturuyor;
+            ama klinik fayda kanıtı bambaşka bir yerde. Hayvan çalışmalarındaki olumlu sinyaller
+            insan dönüşümünde çoğu zaman kaybolmuştur — bu alanın klasik öyküsüdür.
+          </p>
+          <p>
+            <strong class="text-burgundy">Mekanik çerçeve:</strong> NAD+ mitokondriyal
+            elektron taşıma zincirinde, oksidatif stres yanıtında (NADP+/NADPH üzerinden) ve
+            sirtuin/PARP/CD38 enzimlerinin substratı olarak çalışır. Yaşla NAD+ düzeyleri çeşitli
+            dokularda azalır; bunun bir nedeni NAD+ tüketen enzimlerin (özellikle CD38, PARP)
+            yaşla artan aktivitesidir. Öncül takviyeler (NMN/NR) hücreye girip salvage yolakları
+            üzerinden NAD+'ya dönüşür; ancak doku-spesifik biyoyararlanım ve dönüşüm verimi
+            insanda tam haritalanmamıştır.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong> Aktif malignite,
+            immünsüpresif tedavi veya kanser öyküsü — NAD+ tüketen yolakların DNA hasar
+            yanıtındaki rolü nedeniyle teorik risk; net güvenlik verisi yok. Düzenli reçeteli
+            ilaç kullanımı (özellikle onkolojik tedaviler ve immünmodülatörler) — etkileşim
+            verisi yetersiz. Hamilelik/laktasyon — güvenlik verisi yok. Yüksek doz iddiaları
+            (>1000 mg/gün) — yan etki oranı artar, ek fayda kanıtlanmamış. Pazarlama mesajındaki
+            "hücresel gençleşme garantili" tarzı vaatler — bilimsel temeli yok.
+          </p>
+          <p>
+            <strong class="text-burgundy">Pratik bütünleşim:</strong> Yıllar içindeki klinik
+            yaklaşımım şu basamakları izler: (1) temel — uyku, beslenme, düzenli aerobik+direnç
+            egzersizi (NAD+/sirtuin yolaklarını doğal destekler, kanıt güçlü); (2) hekim
+            değerlendirmesi sonrası eksiklik varsa hedefli vitamin/mineral takviyesi
+            (D vitamini, B12, demir, magnezyum gibi); (3) bu temel oturduktan sonra denemek
+            isteyen hastalar için NMN veya NR'yi 8-12 haftalık deneme + biyobelirteç +
+            subjektif değişiklik takibi çerçevesinde değerlendirmek — kanıtlı seçeneklerin
+            yerine değil yanına. (4) Aktif kanseri, immünsüpresyonu olan veya kanser öyküsü
+            taşıyan hastalarda NMN/NR önermem; çünkü teorik risk-fayda dengesi pozitif değil.
+          </p>
+          <p>
+            <strong class="text-burgundy">Bireysellik vurgusu:</strong> Yukarıda paylaştıklarım
+            — hem yazıda hem bu notta — genel popülasyon çerçevesidir; sizin tablonuzdaki sağlık
+            öyküsü, kullandığınız ilaçlar, kanser öyküsü ve mevcut takviyeleriniz tedavi
+            seçimine yön verir. Burada okuduğunuz bir başlangıç çerçevesidir, karar değil;
+            sizin için uygun adımları kendi hekiminizle birebir değerlendirmeniz önemlidir —
+            özellikle bu kadar erken kanıtlı bir alanda.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </section>
 
-        <section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-          <p class="text-sm leading-relaxed text-ink/75">
-            Bu içerik yalnızca genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
-          </p>
-        </section>
+      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
+        <p class="text-sm leading-relaxed text-ink/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </section>
     </SubmenuArticleBody>
   </main>
 

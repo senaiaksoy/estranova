@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../_schema/profile.schema.json
 
-writer_version: "v1.0"
+writer_version: "v1.1"
 writer_protocol_version: "v3.2"
 
 slug: senai-aksoy
@@ -152,6 +152,18 @@ topic_sections:
   ne-sormali:           ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
   bilimsel-pencere:     ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
   editor-kosesi:        ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  # v1.1 (2026-05-02) — zamansız-yasam teknik kanat
+  nad-plus:             ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  nmn:                  ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  nr:                   ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  deneysel-takviye:     ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  antiaging-takviye:    ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  d-vitamini:           ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  vitamin-mineral:      ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  kemik-sagligi:        ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  osteoporoz:           ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  eklem-agrisi:         ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
+  non-invaziv-klinik:   ["§4", "§4b", "§4e", "§4f", "§5b", "§5c", "§13"]
 
 citations:
   canonical_sources: "./citations/canonical-sources.md"
@@ -224,6 +236,12 @@ signature_topics:
   - "Endometriyoz, miyom, adenomyozis — 40+ kontekstinde"
   - "40+ STD farkındalığı"
   - "Hekim-hasta iletişimi / 'Doktora ne sorulmalı' rehberi"
+  # v1.1 (2026-05-02) — zamansız-yasam teknik kanat genişlemesi
+  - "Deneysel takviye / anti-aging takviye kanıt yorumlama (NAD+, NMN, NR; pazarlama vs gerçek klinik kanıt — 'umut etiketi vs kanıt sınırı' imza çerçevesi)"
+  - "Vitaminler / mineraller (D vitamini, B12, kalsiyum, magnezyum) — klinik dozaj/karar/eksiklik değerlendirme"
+  - "Kemik sağlığı 40 sonrası — KMD, osteoporoz, fraktür riski klinik değerlendirme"
+  - "Eklem ağrısı menopozda — klinik ayırıcı tanı (osteoartrit / inflamatuvar / postmenopozal)"
+  - "Non-invaziv klinik prosedürler — fonksiyonel zemin + kanıt seviyesi yorumlama"
 
 mercek_imzasi: >
   Senai muayenehane sıcaklığı + bilim ön cephesi + tabu açma
@@ -374,7 +392,7 @@ category_scores:
   hormonal-gecis/menopoz: 4
   hormonal-gecis/40-sonrasi: 4
   beden-yakinlik: 5
-  zamansiz-yasam: 1
+  zamansiz-yasam: 3  # v1.1 (2026-05-02): teknik kanat (deneysel takviye kanıt yorumlama, vitaminler, kemik, eklem, non-invaziv klinik) — Senai uygun; lifestyle kanat (beslenme/hareket/seyahat/kilo) Senai dışı (Gamze/Alara/Berna/Duygu)
   zihin-denge: 2
   bilimsel-pencere: 5
   editorun-kosesi: 5
