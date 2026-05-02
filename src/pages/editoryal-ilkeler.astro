@@ -1,0 +1,195 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+
+const lastUpdated = '1 Mayıs 2026';
+
+const productionSteps = [
+  {
+    title: 'Konu önerisi',
+    body: 'Editör ekibimiz, okuyucu ihtiyaçları, güncel bilimsel literatür ve toplum sağlığı öncelikleri temelinde her yazım dönemi öncesi yazarımıza en az beş konu başlığı sunar.',
+  },
+  {
+    title: 'Konu seçimi',
+    body: 'Yazar, sunulan listeden bir konu seçebilir veya kendi konu önerisini getirebilir. Yazarın kendi önerdiği konuların yayın çizgisine uygunluğu editör ekibimizce değerlendirilir.',
+  },
+  {
+    title: 'Yazar stili profili ile taslak hazırlama',
+    body: 'Yapay zekâ destekli sistemimiz, yalnızca ilgili yazarın kendi geçmiş eserlerinden çıkarılmış üslup profili çerçevesinde bir taslak hazırlar.',
+  },
+  {
+    title: 'Birinci bilimsel denetim',
+    body: 'Bilimsel/tıbbi editörümüz taslağı klinik doğruluk, güncel literatüre uygunluk ve mevzuata uygunluk açısından inceler.',
+  },
+  {
+    title: 'Yazar editöryal kontrolü',
+    body: 'Yazar taslağı bağımsız biçimde değerlendirir, gerekli gördüğü tüm düzeltmeleri talep eder; kendi onayı vermeden süreç ilerlemez.',
+  },
+  {
+    title: 'İkinci bilimsel denetim',
+    body: 'Yayın öncesi son bir tıbbi/bilimsel kontrol uygulanır.',
+  },
+  {
+    title: 'Yayın',
+    body: 'Onayların ardından makale, yazar imzasıyla okuyucuya sunulur; yayın tarihi ve kanıt düzeyi etiketleri metinde görünür biçimde yer alır.',
+  },
+];
+
+const aiUses = [
+  'Yazarın kendi stil profili çerçevesinde taslak metin üretiminde yardımcı olarak.',
+  'Çok dilli yayında çeviri desteği için.',
+];
+
+const aiLimits = [
+  'Konu seçimi yapmaz — konuyu editör ve yazar belirler.',
+  'Klinik karar vermez.',
+  'Tıbbi tavsiye sunmaz.',
+  'İnsan denetimi olmadan yayımlanmaz.',
+  'Yazar adını imza olarak kullanmaz.',
+];
+---
+
+<SiteLayout
+  title="Editöryal İlkelerimiz - Estranova"
+  description="Estranova'nın yayın felsefesi, üretim süreci, eser sahipliği yaklaşımı ve yapay zekâ kullanım sınırları."
+>
+  <SiteNavbar currentPath="/editoryal-ilkeler" />
+
+  <main id="main-content" class="pt-24">
+    <section class="px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl">
+
+        <header class="mb-14 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-burgundy">Editöryal İlkelerimiz</p>
+          <h1 class="mb-6 font-serif text-5xl leading-[1.05] text-ink md:text-7xl">Yayın felsefemiz</h1>
+          <p class="text-lg leading-relaxed text-ink/65 md:text-xl">
+            Estranova'da yayımlanan tüm tıbbi içerikler, alanında uzman hekimlerin bilgi birikimi ve klinik deneyimi temelinde hazırlanır.
+            Bilgi üretiminde modern teknolojilerden faydalanırken bilimsel doğruluk, etik bütünlük ve şeffaflık ilkelerinden taviz vermeyiz.
+          </p>
+        </header>
+
+        <div class="space-y-6">
+
+          <!-- 1. Üretim sürecimiz -->
+          <section class="rounded-[32px] border border-burgundy/10 bg-white p-8 editorial-shadow">
+            <h2 class="mb-3 font-serif text-3xl text-ink">Üretim sürecimiz</h2>
+            <p class="mb-7 leading-relaxed text-ink/70">
+              Her makale, aşağıdaki çok katmanlı süreçten geçer.
+            </p>
+            <ol class="space-y-5">
+              {productionSteps.map((step, index) => (
+                <li class="flex gap-5">
+                  <span
+                    aria-hidden="true"
+                    class="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-burgundy/25 bg-cream-soft font-serif text-base italic text-burgundy"
+                  >
+                    {String(index + 1).padStart(2, '0').slice(-2)}
+                  </span>
+                  <div class="leading-relaxed text-ink/75">
+                    <strong class="font-semibold text-ink">{step.title}.</strong>{' '}
+                    {step.body}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <!-- 2. Eser sahipliği -->
+          <section class="rounded-[32px] border border-burgundy/10 bg-cream-soft p-8">
+            <h2 class="mb-3 font-serif text-3xl text-ink">Eser sahipliği</h2>
+            <p class="mb-5 leading-relaxed text-ink/70">
+              Her makalenin eser sahibi, makalenin altında adı geçen yazardır. Yapay zekâ yalnızca taslak üretim aracı olarak kullanılır;
+              eser sahibi olarak kabul edilmez. Bu yaklaşım:
+            </p>
+            <ul class="mb-5 space-y-3 leading-relaxed text-ink/70">
+              <li class="flex gap-3">
+                <span aria-hidden="true" class="mt-2.5 h-1 w-2.5 flex-shrink-0 bg-gold"></span>
+                <span>5846 sayılı Fikir ve Sanat Eserleri Kanunu md. 1/B'deki "hususiyet" koşuluna,</span>
+              </li>
+              <li class="flex gap-3">
+                <span aria-hidden="true" class="mt-2.5 h-1 w-2.5 flex-shrink-0 bg-gold"></span>
+                <span>ABD Telif Hakkı Ofisi'nin "human authorship" doktrinine,</span>
+              </li>
+              <li class="flex gap-3">
+                <span aria-hidden="true" class="mt-2.5 h-1 w-2.5 flex-shrink-0 bg-gold"></span>
+                <span>Avrupa Birliği Yapay Zekâ Yönetmeliği'nin (AB Yönetmeliği 2024/1689) şeffaflık ilkelerine,</span>
+              </li>
+              <li class="flex gap-3">
+                <span aria-hidden="true" class="mt-2.5 h-1 w-2.5 flex-shrink-0 bg-gold"></span>
+                <span>Reuters Trust Principles ve Associated Press üretken yapay zekâ standartlarına</span>
+              </li>
+            </ul>
+            <p class="leading-relaxed text-ink/70">
+              uygundur ve dünya genelinde gazetecilik ve bilimsel yayıncılıkta kabul gören şeffaflık standartlarını yansıtır.
+            </p>
+          </section>
+
+          <!-- 3. Tıbbi sorumluluk -->
+          <section class="rounded-[32px] border border-burgundy/10 bg-white p-8 editorial-shadow">
+            <h2 class="mb-3 font-serif text-3xl text-ink">Tıbbi sorumluluk</h2>
+            <p class="leading-relaxed text-ink/70">
+              İçeriklerin tıbbi ve bilimsel doğruluğundan bilimsel editörümüz
+              <a href="/yayin-kurulu#senai-aksoy" class="font-semibold text-burgundy hover:underline">Doç. Dr. Senai Aksoy</a>
+              birinci derecede sorumludur. Tüm içerikler T.C. Sağlık Bakanlığı mevzuatı ve Türk Tabipleri Birliği etik ilkeleri
+              çerçevesinde hazırlanır.
+            </p>
+          </section>
+
+          <!-- 4. Yapay zekâ kullanımının sınırları -->
+          <section class="rounded-[32px] border border-burgundy/10 bg-cream-soft p-8">
+            <h2 class="mb-3 font-serif text-3xl text-ink">Yapay zekâ kullanımının sınırları</h2>
+            <p class="mb-7 leading-relaxed text-ink/70">
+              Estranova'da yapay zekânın hangi işlerde yardımcı olduğunu ve hangi sınırların dışına çıkmadığını şeffaf biçimde paylaşıyoruz.
+            </p>
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <div class="rounded-2xl border border-gold/30 bg-white p-6">
+                <p class="mb-4 font-serif text-xs font-bold uppercase tracking-[0.22em] text-gold-bronze">Kullanılır</p>
+                <ul class="space-y-3 text-sm leading-relaxed text-ink/75">
+                  {aiUses.map((item) => (
+                    <li class="flex gap-3">
+                      <span aria-hidden="true" class="mt-1 flex-shrink-0 font-serif text-gold">+</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-burgundy/25 bg-white p-6">
+                <p class="mb-4 font-serif text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Kullanılmaz</p>
+                <ul class="space-y-3 text-sm leading-relaxed text-ink/75">
+                  {aiLimits.map((item) => (
+                    <li class="flex gap-3">
+                      <span aria-hidden="true" class="mt-1 flex-shrink-0 font-serif text-burgundy">−</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Yanlışlık bildirimi -->
+          <section class="rounded-[32px] border border-burgundy/10 bg-white p-8 editorial-shadow">
+            <h2 class="mb-3 font-serif text-3xl text-ink">Yanlışlık bildirimi</h2>
+            <p class="leading-relaxed text-ink/70">
+              İçeriklerimizde tespit ettiğiniz herhangi bir yanlışlığı
+              <a href="mailto:editoral@estranova.com" class="font-semibold text-burgundy hover:underline">editoral@estranova.com</a>
+              adresine bildirebilirsiniz. Bilimsel editörümüz tarafından yedi iş günü içinde değerlendirilir; düzeltme gerekirse
+              şeffaf biçimde yapılır ve sayfada belirtilir.
+            </p>
+          </section>
+
+          <!-- Son güncelleme -->
+          <p class="pt-4 text-center text-sm italic text-ink/50">
+            Bu sayfa son güncelleme tarihi: {lastUpdated}.
+          </p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
