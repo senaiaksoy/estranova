@@ -8,6 +8,8 @@
 
 | # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2026-05-02 | 40 sonrası idrar kaçırma | beden-yakinlik/pelvik-taban | v1.0 | — | Kalıp 1 (Bilgi belirsizliğin panzehiri) + Kalıp 4 (Biz ne yapıyoruz?) | T1 (Hastalarımın çoğu — anonim genelleme) + T2 (Sokakta her on kadından dördü — epidemiyolojik) | "Hastalarımın çok büyük bir kısmı yıllardır söyleyemediği şeyi sonunda söylediğinde..." | Tabu açan dürüst | ilkbahar | İlk yayın (REWRITE — eski MD-based yapıdan modern Astro Senai sesine). Hub editorPick güncellendi (berna→senai). 6 Evidence + 5-katman BEN. Dörtgen direkleri: bilgi-belirsizlik + hekim-hasta diyalogu (max 2). |
+| 2 | 2026-05-02 | Vajinal kuruluk / GSM | beden-yakinlik/cinsel-saglik | v1.0 | — | Kalıp 1 (Bilgi belirsizliğin panzehiri) + Kalıp 6 (Haute couture bireyselleştirme) | T1 (Hastalarımın çoğu — anonim genelleme) + T3 (Bir kadın bana 'utanıyorum sormaya' dedi — anonim hekim-hasta) | "Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Hastalarımın çoğu yıllarca 'yaşlanma işte' deyip geçtiği..." | Yeniden çerçeveleyen | ilkbahar | İlk yayın (REWRITE — Duygu sesinden Senai sesine). cinsel-saglik index tocArticles güncellendi (duygu→senai). 9 Evidence + 5-katman BEN. Dörtgen direkleri: bilgi-belirsizlik + kişiselleştirme (max 2). Lokal vs sistemik HRT netleştirme imzası uygulandı. |
 
 ## Sütun anahtarı
 

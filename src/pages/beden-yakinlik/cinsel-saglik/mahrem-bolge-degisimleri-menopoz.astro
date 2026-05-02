@@ -1,10 +1,13 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
@@ -16,30 +19,30 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz']!;
 
 const tocEntries = [
-  { id: 'atrofi-nedir', label: 'Atrofi Nedir?' },
-  { id: 'belirtiler', label: 'Belirtiler' },
-  { id: 'mekanizma', label: 'Neden Olur?' },
-  { id: 'non-hormonal-destek', label: 'Non-Hormonal Destek' },
-  { id: 'hormon-tedavi', label: 'Hormon Tedavisi' },
-  { id: 'diger-yaklasimlar', label: 'Diğer Yaklaşımlar' },
-  { id: 'uriner-belirtiler', label: 'Üriner Belirtiler' },
-  { id: 'gunluk-bakim', label: 'Günlük Bakım Rutini' },
-  { id: 'yakinlik-iletisim', label: 'Cinsellikte İletişim' },
-  { id: 'kisa-hatirlatma', label: 'Kısa Hatırlatma' },
+  { id: 'isim-koymak', label: 'GSM — İsim Koymakla Başlar' },
+  { id: 'belirtiler', label: 'Belirti Manzarası: Vajinal + Üriner' },
+  { id: 'mekanizma', label: 'Mekanizma — Östrojenin Yansıması' },
+  { id: 'lokal-sistemik', label: 'Lokal vs Sistemik — Aynı Kelime, Farklı Şey' },
+  { id: 'umut-vs-kanit', label: 'Yerel Lazer ve RF — Umut Etiketi vs Kanıt' },
+  { id: 'gunluk-bakim', label: 'Günlük Bakım: Sade ve Tutarlı' },
+  { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Menopozda Mahrem Bölge Değişimleri';
-const articleDescription = 'Menopozda mahrem bölgede yaşanan kuruluk, hassasiyet ve doku değişimlerini (vulvovajinal atrofi); günlük konfor ve bakım seçeneklerini sade bir dille anlatan rehber.';
+const articleTitle = 'Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM';
+const articleDescription =
+  'Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma, hassasiyet ve üriner şikâyet yaşıyor — bir tablonun adı var: genitoüriner menopoz sendromu (GSM). Lokal östrojen, yerel uygulama kanıt sınırı, günlük bakım ve doktora ne sorulmalı — sade bir klinik bakış.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'duygu-karaosmanoglu',
-  publishedDate: '31 Mart 2026',
+  writerSlug: 'senai-aksoy',
+  publishedDate: '2 Mayıs 2026',
   pathname: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik',
-  keywords: ['mahrem bölge', 'vajinal atrofi', 'vulvovajinal atrofi', 'vajinal kuruluk', 'menopoz', 'östrojen', 'nem', 'cinsel sağlık'],
+  keywords: ['vajinal kuruluk', 'GSM', 'genitoüriner menopoz sendromu', 'vulvovajinal atrofi', 'lokal östrojen', 'menopoz', 'cinsel sağlık', 'mahrem bölge'],
   siteUrl,
 });
 ---
@@ -55,172 +58,335 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Beden & Yakınlık · Cinsel Sağlık"
-      title="Menopozda Mahrem Bölge Değişimleri — Doku, Konfor ve Bakım Rehberi"
+      title="Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
-        <ArticleTOC slot="toc" entries={tocEntries} />
-        <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="31 Mart 2026" readingMinutes={4} />
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="2 Mayıs 2026" readingMinutes={7} />
 
-        <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
-          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
-          <p class="leading-relaxed text-ink/80">
-            Menopoz döneminde östrojen azalması, vajinal dokuda kuruluk ve hassasiyet gibi değişimlere yol açabilir. Bu tablo yaygındır
-            ve yaşam kalitesini etkileyebilir; ancak destek seçenekleri vardır. Doğru bilgi, düzenli bakım ve gerektiğinde tıbbi değerlendirme
-            ile cinsel yaşam ve günlük konfor yeniden dengelenebilir.
-          </p>
-        </section>
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton
+          slug="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz"
+          title={articleTitle}
+        />
+      </div>
 
-        <ArticleProsePanel>
-          <h2 id="atrofi-nedir">Vulvovajinal Atrofi Nedir?</h2>
-          <p>
-            Bu başlık mahrem olduğu için çoğumuz konuşmayı erteleriz; vulvovajinal atrofi, menopoz sonrası östrojen düzeyinin azalmasına bağlı olarak vajinal ve vulvar dokuda incelme,
-            esneklik kaybı ve nem azalmasıyla ortaya çıkan bir değişim tablosudur <Evidence level={5} />. Güncel literatürde bu durum, üriner bulguları da kapsayan
-            daha geniş bir başlıkla "genitoüriner menopoz sendromu" olarak da adlandırılır.
-          </p>
-          <p>
-            Postmenopoz kadınlarda yaygınlık oranı yüksektir ve farklı çalışmalarda yaklaşık yüzde 40-60 aralığında bildirilir <Evidence level={5} />.
-            Buna rağmen birçok kadın bu belirtileri yaşlanmanın kaçınılmaz ve konuşulmaması gereken bir parçası gibi değerlendirebilir.
-            Oysa sağlık açısından bakıldığında tanınabilir ve yönetilebilir bir konudur.
-          </p>
+      <section
+        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-ink/80">
+          Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma hissi, hassasiyet ve üriner
+          şikâyet yaşıyor — ama çoğu konuya bir isim koyamadığı için sessiz kalıyor. Tablonun adı var:
+          <strong>genitoüriner menopoz sendromu (GSM)</strong>. Bu yazı belirtileri ve mekanizmayı net
+          dille açıyor; lokal östrojen ile sistemik HRT arasındaki farkı (aynı kelime, başka şey)
+          netleştiriyor; yerel lazer/RF uygulamalarının kanıt sınırını dürüstçe söylüyor; günlük bakım
+          ve doktora ne sormak gerektiği konusunda yol gösteriyor — promosyon değil, eğitim.
+        </p>
+      </section>
 
-          <h2 id="belirtiler">Belirtiler Nelerdir?</h2>
-          <p>
-            Belirti bazen yalnızca “rahatsızlık” gibi başlar; en sık belirtiler vajinal kuruluk, yanma hissi, kaşıntı, dokunmaya hassasiyet ve cinsellikte ağrıdır <Evidence level={5} />.
-            Bazı kadınlarda vajinal akıntı karakterinde değişim, hafif tahriş veya küçük travmalara yatkınlık görülebilir.
-            Belirtiler zaman içinde yavaş ilerleyebilir; bu nedenle erken dönemde fark edilmesi her zaman kolay olmayabilir.
-          </p>
-          <p>
-            Üriner sistem bulguları da tabloya eşlik edebilir. Sık idrara çıkma, idrar yaparken yanma hissi, tekrarlayan idrar yolu enfeksiyonu eğilimi
-            veya ani sıkışma şikayeti menopoz sonrası dönemde daha görünür hale gelebilir <Evidence level={5} />.
-            Bu belirtilerin bir arada olması, değerlendirmeyi yalnızca tek bir semptoma odaklamadan yapmayı gerektirir.
-          </p>
+      <ArticleProsePanel>
+        <h2 id="isim-koymak">GSM — İsim Koymakla Başlar</h2>
+        <p>
+          Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Hastalarımın çoğu yıllarca <em>"yaşlanma
+          işte"</em> deyip geçtiği bu tabloyu sonunda söylediğinde, ilk söyledikleri <em>"bunu kimseye
+          anlatamadım"</em> oluyor. Oysa söz konusu olan tıbbi bir sendrom: <strong>genitoüriner menopoz
+          sendromu</strong>, kısaca GSM <Evidence level={5} />. Eskiden <em>"vulvovajinal atrofi"</em> deniyordu;
+          ama bu eski isim üriner şikâyetleri kapsamıyordu — yeni isim, vajinal değişikliklerin idrar
+          yoluyla bağını da görünür kılıyor.
+        </p>
+        <p>
+          Postmenopozal kadınların yaklaşık yüzde 40-60'ında bu tablo görülüyor <Evidence level={5} />.
+          Buna rağmen büyük çoğunluğu hekimine söylemiyor; çoğu <em>"yaşlanmanın doğal sonucu"</em> zannediyor.
+          Oysa GSM ne kaçınılmaz, ne de konuşulmaması gereken bir mesele — tanınabilir, isim konabilir
+          ve etkili biçimde yönetilebilir bir tıbbi durum.
+        </p>
 
-          <h2 id="mekanizma">Neden Olur? Mekanizma</h2>
-          <p>
-            Bunu kişisel bir eksiklik gibi değil, bedenin hormon değişimine verdiği yanıt gibi okumak rahatlatıcı olabilir. Östrojen, vajinal dokunun kalınlığını, damar desteğini ve elastikiyetini korumada temel rol oynar <Evidence level={5} />.
-            Düzey azaldığında epitel tabaka incelir, doku daha kırılgan hale gelir ve doğal nem üretimi düşer. Aynı dönemde vajinal pH daha alkali tarafa kayar,
-            bu da lokal mikrobiyotayı ve enfeksiyona karşı koruyucu ortamı etkileyebilir <Evidence level={5} />.
-          </p>
-          <p>
-            Mekanizmanın bilinmesi önemlidir çünkü belirtileri "kişisel yetersizlik" olarak değil, biyolojik değişimin sonucu olarak anlamayı sağlar.
-            Bu yaklaşım hem iletişimi kolaylaştırır hem de tedavi seçeneklerinin daha erken konuşulmasına zemin hazırlar.
-          </p>
+        <h2 id="belirtiler">Belirti Manzarası: Vajinal + Üriner</h2>
+        <p>
+          GSM'in iki kanadı var: vajinal ve üriner. İkisi birlikte değerlendirildiği için <em>"genito-üriner"</em>
+          ön adını almış. Belirtileri tek başına okumak yanıltıcı olabiliyor — birlikte düşünmek önemli.
+        </p>
+        <p>
+          <strong>Vajinal kanat:</strong> kuruluk, yanma hissi, kaşıntı, dokunmaya hassasiyet, cinsel
+          ilişkide ağrı (disparoni), ufak çatlaklara yatkınlık, vajinal akıntı karakterinde değişim
+          <Evidence level={5} />. Bunlar genellikle yavaş ilerliyor; bu yüzden başlangıcı fark etmek
+          her zaman kolay olmuyor.
+        </p>
+        <p>
+          <strong>Üriner kanat:</strong> sık idrara çıkma, idrar yaparken yanma hissi, tekrarlayan idrar
+          yolu enfeksiyonu eğilimi, ani sıkışma şikâyeti <Evidence level={5} />. Postmenopozal kadında
+          tekrarlayan üriner şikâyet varsa, GSM ayırıcı tanıda öncelikli düşünülmeli — çünkü antibiyotik
+          tedavisi semptomu geçici olarak hafifletse de altta yatan doku değişikliğine dokunmuyor.
+        </p>
+        <p>
+          İki kanadın aynı anda olması, değerlendirmeyi yalnızca tek bir semptoma odaklamadan yapmayı
+          gerektiriyor. <em>"Sadece kuruluğum var"</em> diyen bir kadın da, <em>"sadece sık idrara çıkıyorum"</em> diyen
+          bir kadın da aslında aynı sendromun farklı tarafından konuşuyor olabilir.
+        </p>
 
-          <h2 id="non-hormonal-destek">Hormon Dışı Destek Seçenekleri</h2>
-          <p>
-            İlk adım çoğu zaman basit ve gündelik ürünlerle başlar; hormon dışı nemlendiriciler ve yağlayıcılar yaygın kullanılır <Evidence level={5} />. Nemlendiriciler günlük veya düzenli aralıklarla,
-            yağlayıcılar ise ilişki öncesinde kullanılır. Su bazlı ve silikon bazlı formlar kişisel konfora göre farklılık gösterebilir.
-            Düzenli kullanım çoğu kişide tahriş ve sürtünme kaynaklı rahatsızlığı azaltır.
-          </p>
-          <p>
-            Cinsellikte ağrı yaşayan kişilerde iletişim, ritim ve hazırlık süresi de sonuçları etkiler. Daha uzun hazırlık, uygun ürün seçimi,
-            konforu gözeten tempo ve partnerle açık konuşma, fiziksel rahatsızlığı azaltmada yardımcı olabilir.
-            Bazı çalışmalarda düzenli cinsel yaşamın doku dolaşımını desteklediği ve semptom yönetimine katkı sağladığı bildirilmiştir <Evidence level={4} />.
-          </p>
+        <h2 id="mekanizma">Mekanizma — Östrojenin Yansıması</h2>
+        <p>
+          Bunu kişisel bir eksiklik gibi değil, bedenin hormon değişimine verdiği yanıt gibi okumak
+          rahatlatıcı olabiliyor. Östrojen vajinal dokunun kalınlığını, damar desteğini ve elastikiyetini
+          korumada temel rol oynuyor <Evidence level={5} />.
+        </p>
+        <p>
+          Postmenopozal dönemde östrojen düştüğünde epitel tabaka inceliyor, kollajen ve elastin azalıyor,
+          doğal nem üretimi düşüyor. Aynı dönemde vajinal pH alkali tarafa kayıyor — bu lokal mikrobiyotayı
+          değiştiriyor; <em>"iyi bakteriler"</em> (laktobasiller) zemin kaybediyor, idrar yolu enfeksiyonuna
+          karşı koruyucu ortam zayıflıyor <Evidence level={5} />. Bu yüzden GSM'de tekrarlayan idrar yolu
+          enfeksiyonu sık görülen bir tablo.
+        </p>
+        <p>
+          Mekanizmayı bilmek tedavi seçeneklerinin neden farklı şekilde çalıştığını anlamayı kolaylaştırıyor:
+          nemlendirici-yağlayıcı yüzeysel konfor sağlıyor, ama doku yapısını değiştirmiyor. Lokal östrojen
+          ise dokunun kendisini yeniden besliyor — yani belirtiyi değil, altta yatan değişikliği hedef
+          alıyor.
+        </p>
 
-          <h2 id="hormon-tedavi">Hormon Temelli Tedavi Seçenekleri</h2>
-          <p>
-            Belirtiler günlük konforunu belirgin etkiliyorsa, hormon temelli seçenekleri konuşmak normal ve meşru bir adımdır. Doğrudan mahrem bölgeye uygulanan düşük doz hormon seçenekleri — farklı formlarda, krem, tablet veya halka şeklinde — bu belirtilerde güçlü kanıta sahip yaklaşımlardır <Evidence level={5} />.
-            Bu seçenekler, çoğu olguda sistemik etkiyi düşük tutarken lokal dokuda iyileşme hedefler. Uygulama sıklığı başlangıç ve idame dönemine göre
-            değişebilir; kişisel plan hekim değerlendirmesiyle yapılır.
-          </p>
-          <p>
-            Seçilmiş durumlarda hormonun başka türevleriyle geliştirilmiş yeni seçenekler veya sistemik yaklaşım gerektiren başlıklar da değerlendirilebilir <Evidence from={5} to={4} />.
-            Ağız yoluyla alınan, östrojen reseptörü üzerinden etki gösteren reçeteli tedavi seçenekleri bazı kişilerde gündeme gelebilir <Evidence level={4} />. Burada temel ilke, tek bir yöntemi herkes için standart görmek yerine,
-            belirtiler, eşlik eden hastalıklar ve kişisel tercihleri birlikte ele almaktır.
-          </p>
+        <h2 id="lokal-sistemik">Lokal vs Sistemik — Aynı Kelime, Farklı Şey</h2>
+        <p>
+          GSM'de en yaygın yanlış anlama burada. <em>"Hormon kullanmam, yan etkilerinden korkuyorum"</em> diyen
+          birçok kadın aslında sistemik HRT'yi düşünüyor — ama lokal vajinal östrojen tamamen farklı bir
+          uygulama biçimi. Aynı kelime başka şey demek olabiliyor.
+        </p>
+        <p>
+          <strong>Sistemik HRT</strong> — ağız yoluyla, deri yamasıyla, jel veya sprey biçiminde
+          uygulanır; tüm bedeni etkiler; sıcak basması, gece terlemesi, kemik koruması gibi sistemik
+          belirtilerde kullanılır. Karar verirken eşlik eden tıbbi durumlar, kanser öyküsü, kardiyovasküler
+          risk gibi alanlar değerlendirilir.
+        </p>
+        <p>
+          <strong>Lokal vajinal östrojen</strong> — vajinaya direkt uygulanan krem, halka veya tablet
+          biçiminde düşük doz östrojen <Evidence level={5} />. Sistemik dolaşıma geçen miktar düşüktür;
+          bu yüzden sistemik HRT'nin kontrendike olduğu birçok kadında bile değerlendirilebilir. GSM
+          için en güçlü kanıt tabanına sahip tedavi seçeneği — vajinal-üriner doku yapısını besliyor,
+          pH'ı dengeliyor, mikrobiyotayı destekliyor.
+        </p>
+        <p>
+          Karar bireysel. Meme kanseri öyküsü gibi belirli durumlarda lokal östrojen kararı bile onkolog
+          ve jinekoloğun ortak değerlendirmesini gerektiriyor; bu <em>"hayır"</em> anlamına gelmiyor — <em>"birlikte
+          tartışılması gereken"</em> anlamına geliyor. Standart protokol değil, sizin hikâyeniz.
+        </p>
 
-          <h2 id="diger-yaklasimlar">Diğer Yaklaşımlar ve Kanıt Durumu</h2>
-          <p>
-            Yeni uygulamalar umut verici görünebilir, ama bu alanda temkinli olmak güven verir. Enerji temelli yeni uygulamalar son yıllarda ilgi görmektedir; ancak uzun dönem ve geniş örneklemli veriler
-            halen gelişme aşamasındadır <Evidence level={2} />. Bu nedenle bu başlıklar kesinleşmiş standart yaklaşım yerine, kanıt seviyesi sınırlı seçenekler olarak ele alınmalıdır.
-          </p>
-          <p>
-            Günlük sağlık kararında en güvenli yol, güçlü kanıtlı yöntemleri temel almak ve yeni seçenekleri kişisel risk-fayda değerlendirmesiyle tartışmaktır.
-            Bilimsel belirsizlik olan alanlarda beklentiyi dengede tutmak önemlidir.
-          </p>
+        <h2 id="umut-vs-kanit">Yerel Lazer ve RF — Umut Etiketi vs Kanıt</h2>
+        <p>
+          Son yıllarda fraksiyonel CO2 lazer, erbium-YAG ve radyofrekans uygulamaları GSM için pazarlanan
+          seçenekler arasında yer alıyor. Burada söylenmesi gereken dürüst cümle şu: bu uygulamaların
+          kanıt seviyesi sınırlı; uzun dönem ve kontrollü karşılaştırmalı veriler henüz yeterli değil
+          <Evidence level={2} />.
+        </p>
+        <p>
+          Bazı çalışmalar kısa vadeli iyileşme bildirmiş; ama sahte (sham) işlemle karşılaştırıldığında
+          farkın sanıldığı kadar büyük olmadığı görülüyor. Hangi hasta grubunda, kaç seans, ne kadar
+          süre, hangi belgeli tedaviye alternatif olarak gibi temel sorular hâlâ açık. Bazı uluslararası
+          uzman dernekleri lazer uygulamaları için <em>"araştırma çerçevesinde değerlendirilmeli"</em> uyarısında
+          bulunuyor.
+        </p>
+        <p>
+          Bu cümleyi <em>"umut etiketi"</em> yerine bilen birinin gerçek yorumu olarak okumak daha doğru: lokal
+          östrojen denenmeden veya değerlendirilmeden, doğrudan yerel cihaz uygulamalarına geçmek çoğu
+          zaman beklenen sonucu vermiyor. Bütçe, beklenti ve zaman birlikte yorulduğunda hayal kırıklığı
+          doğuyor. Sıralama önemli — önce kanıtlı seçenekler.
+        </p>
 
-          <h2 id="uriner-belirtiler">Üriner Belirtiler ve Ne Zaman Destek Alınmalı?</h2>
-          <p>
-            İdrar şikayetlerini “böyle geldi böyle gider” diye geçiştirmek zorunda değilsin; idrar yolu enfeksiyonlarının sıklaşması, yanma şikayetinin tekrarlaması, kaçırma yakınmaları veya yaşam kalitesini bozan sıkışma hissi
-            varsa jinekoloji veya üroloji değerlendirmesi yararlıdır <Evidence level={5} />. Erken değerlendirme, benzer belirtilere yol açabilecek diğer nedenleri ayırmayı sağlar.
-          </p>
-          <p>
-            Cinsel ilişki sırasında ağrı kalıcı hale gelmişse, günlük konfor belirgin azalmışsa veya ilişkide kaçınma davranışı gelişmişse
-            profesyonel destek almak önemlidir. Tedavi seçenekleriyle çoğu kişide belirgin rahatlama sağlanabilir; amaç yalnızca semptomu azaltmak değil,
-            yaşam kalitesini ve bedenle güven ilişkisini yeniden kurmaktır.
-          </p>
-        </ArticleProsePanel>
+        <h2 id="gunluk-bakim">Günlük Bakım: Sade ve Tutarlı</h2>
+        <p>
+          Tedavi planının yanına eklenen günlük bakım rutinleri konforu belirgin artırabiliyor. Burada
+          amaç bedenle kavga etmek değil, ona daha nazik davranmak.
+        </p>
+        <p>
+          <strong>Hormon dışı destek:</strong> nemlendiriciler (düzenli, gün-aşırı veya günlük kullanım)
+          ve yağlayıcılar (ihtiyaç anında, ilişki öncesinde) yüzeysel konforu artırıyor <Evidence level={5} />.
+          Su bazlı, silikon bazlı veya hibrit formlar var; kişisel toleransa göre seçim. Parfümlü, alkollü
+          veya tahriş edici ürünlerden uzak durmak; hava geçirgen pamuklu iç çamaşırı tercih etmek;
+          yıkamada nazik, pH uyumlu ürünler kullanmak — bu dört adım tek başına bile fark yaratıyor.
+        </p>
+        <p>
+          Düzenli cinsel yaşam ve manuel uyarı doku dolaşımını destekliyor; bazı çalışmalarda semptom
+          yönetimine dolaylı katkı bildirilmiş <Evidence level={4} />. Bu <em>"zorunlu reçete"</em> değil — sadece
+          fizyolojik bir bilgi. Konfor önce gelmeli; cinsellikte ağrı sürüyorsa bu bir sinyal, irade
+          meselesi değil. Tedaviyle yaklaşılması gereken bir tablo.
+        </p>
 
-        <ArticleProsePanel class="mt-10">
-          <h2 id="gunluk-bakim">Günlük Bakım Rutini Nasıl Kurulur?</h2>
-          <p>
-            Vajinal sağlıkta sürdürülebilir sonuçlar çoğu zaman basit ama düzenli bir bakım rutiniyle başlar; burada amaç bedenle kavga etmek değil, ona daha nazik davranmaktır.
-            Tahriş edici ürünlerden kaçınmak, kokulu temizlik ürünleri yerine nazik ve pH uyumlu seçenekler kullanmak,
-            günlük iç çamaşırı tercihinde hava geçirgen kumaşlara yönelmek ve uzun süre nemli kalmaktan kaçınmak bu rutinin temel adımlarıdır.
-            Ayrıca yeterli su tüketimi ve düzenli hareket, genel doku sağlığını destekleyen dolaylı katkılar sağlar.
-          </p>
-          <p>
-            Nemlendirici ve yağlayıcı seçimi yapılırken iddialı ürünler yerine, kişisel toleransı yüksek ve düzenli kullanılabilir seçeneklere yönelmek daha doğrudur.
-            Ciltte yanma veya tahriş hissi oluşturan ürünlerde ısrar edilmemeli, farklı formülasyonlar denenmelidir.
-            Düzenli kullanımın etkisi genellikle birkaç hafta içinde görünür hale gelir; bu nedenle kısa sürede sonuç alamadığınızda umutsuzluğa kapılmadan
-            planı gözden geçirmek ve gerekirse sağlık profesyoneliyle yeniden düzenlemek gerekir.
-          </p>
-          <h2 id="yakinlik-iletisim">Cinsellikte İletişim ve Psikolojik Konfor</h2>
-          <p>
-            Cinsellikte konfor değiştiğinde bunu yalnızca fiziksel bir mesele gibi taşımak ağır gelebilir; menopoz dönemindeki bedensel değişimler duygusal bir uyum süreci de gerektirir.
-            Cinsel ilişki sırasında ağrı veya çekinme yaşandığında bunun konuşulabilir bir sağlık başlığı olduğunu bilmek önemlidir.
-            Partnerle açık iletişim kurmak, beklentileri ve sınırları birlikte belirlemek, aceleci olmayan bir ritim planlamak
-            çoğu çiftte güven ve konforu artırır.
-          </p>
-          <p>
-            Bu süreçte amaç performans değil, karşılıklı rahatlık ve iyi oluşa odaklanmaktır.
-            Gerekli durumlarda pelvik taban fizyoterapisi, danışmanlık desteği veya jinekolojik değerlendirme gibi seçenekler
-            çok boyutlu bir iyileşme sağlar. Vajinal sağlık, menopoz döneminde yaşam kalitesinin merkezinde yer alan ve etkili biçimde yönetilebilen bir başlıktır.
-          </p>
-        </ArticleProsePanel>
-        <ArticleProsePanel class="mt-10">
-          <h2 id="kisa-hatirlatma">Kısa Hatırlatma</h2>
-          <p>
-            Vajinal sağlıkta belirtileri ertelemek yaygındır, ancak erken değerlendirme konforu daha hızlı artırır.
-            Konu mahrem olsa da tıbbi açıdan tamamen konuşulabilir ve yönetilebilir bir başlıktır. Düzenli takip, doğru bilgi ve nazik bir iletişim dili iyileşme sürecine belirgin biçimde katkı sağlar.
-          </p>
-        </ArticleProsePanel>
-        <RelatedReadings
+        <h2 id="iletisim">Doktora Hangi Soruları Sormalı?</h2>
+        <p>
+          Bir kadın bana geçen gün <em>"utanıyorum sormaya"</em> dedi. Oysa sorunun kendisi cevabın yarısı.
+          GSM hakkında doktorunuzla konuşurken hazırlıklı gitmek görüşmenin niteliğini doğrudan etkiliyor.
+        </p>
+        <p>
+          Üç soruyu hazırlayın: <strong>Birincisi</strong> — <em>"Belirtilerim GSM tablosuyla uyumlu mu,
+          muayenede neye bakacağız?"</em> Bu, tanı zeminini netleştiriyor; vajinal muayene + pH ölçümü
+          + gerekiyorsa idrar tetkiki temel değerlendirme. <strong>İkincisi</strong> — <em>"Lokal östrojen
+          benim için uygun mu, hangi formda ve ne sıklıkla?"</em> Bu, tedavi planını kişiselleştirmeyi
+          başlatıyor; başlangıç dönemi (genelde 2 hafta günlük), sonra idame (haftada iki gün) gibi
+          bir takvim. <strong>Üçüncüsü</strong> — <em>"Yan etkiler ve kontrol sıklığı nasıl olacak,
+          tekrarlayan idrar yolu enfeksiyonum varsa bu da değişir mi?"</em> Bu, takip planını ve eşlik eden
+          tabloları konuşmayı sağlıyor.
+        </p>
+
+        <RedFlagBox
+          markers={[
+            'Vajinal kanama (özellikle postmenopozal dönemde — herhangi bir miktarda kanama mutlaka değerlendirilmeli)',
+            'Cinsel ilişki sonrası belirgin ve tekrarlayan kanama',
+            'Kaşıntı veya rahatsızlığa eşlik eden cilt değişiklikleri (kalınlaşma, beyaz lekeler, çatlaklar)',
+            'Yüksek ateş veya yan ağrısıyla birlikte üriner şikâyet (üst idrar yolu enfeksiyonu şüphesi)',
+            'Belirtilere rağmen lokal nemlendirici / lokal östrojen tedavisine 8-12 hafta içinde yanıt alınmaması',
+            'Pelvik bölgede sarkma hissi, dolgunluk, ağırlık duygusu (organ prolapsusu)',
+          ]}
+          footnote="Bu liste teşhis amaçlı değil; bir hekimle vakit kaybetmeden konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
+        />
+
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+
+        <h3>Lokal vajinal östrojen ne kadar sürede etki gösterir?</h3>
+        <p>
+          Lokal östrojenin tipik kullanım rejimi başlangıçta 2 hafta günlük, sonra haftada 2 gün idame;
+          belirgin iyileşme genellikle 4-12 hafta içinde fark ediliyor <Evidence level={5} />. Bazı
+          kadınlarda ilk değişiklik daha erken hissedilir (kuruluk azalması), tam doku iyileşmesi
+          birkaç ayı bulabilir. Tedavi GSM için sürdürülen bir plandır; bırakıldığında belirtiler 1-3
+          ay içinde geri dönebilir. Bu <em>"sürekli kullanım"</em> korkutucu değil — düşük doz lokal etki,
+          sistemik dolaşıma geçiş düşük; uzun vadeli güvenlik profili olumlu.
+        </p>
+
+        <h3>Meme kanseri öykülü kadında lokal östrojen kullanılabilir mi?</h3>
+        <p>
+          Bu belki en sık karşılaştığım sorulardan biri. Genel kural: meme kanseri öyküsü olan kadında
+          lokal östrojen kararı onkolog + jinekolog ortak değerlendirmesi gerektirir <Evidence level={4} />.
+          Hormon reseptörü durumu, kanser tedavisi öyküsü, eşlik eden ilaçlar (özellikle aromataz
+          inhibitörü) hesaba katılır. Bazı durumlarda hormon dışı seçenekler (düzenli nemlendirici,
+          yağlayıcı, vajinal hyaluronik asit) öncelik kazanır; bazı durumlarda düşük doz lokal östrojen
+          uygun bulunabilir. <em>"Hayır"</em> anlamına gelmiyor — <em>"birlikte tartışılması gereken"</em> anlamına
+          geliyor.
+        </p>
+
+        <h3>Tekrarlayan idrar yolu enfeksiyonum var, GSM ile bağı ne?</h3>
+        <p>
+          Postmenopozal kadında tekrarlayan idrar yolu enfeksiyonu sıklıkla GSM'in üriner kanadıyla
+          ilişkili; vajinal pH yükselmesi ve mikrobiyota değişimi koruyucu zemini zayıflatıyor
+          <Evidence level={5} />. Sadece antibiyotik tedavisi semptomu geçici olarak hafifletse de
+          altta yatan zemine dokunmuyor. Lokal östrojen bu zemini değiştiriyor ve bazı kadınlarda
+          enfeksiyon sıklığını belirgin azaltıyor. Profilaktik antibiyotik veya idrar asitlendirici
+          gibi seçeneklerin yeri bireysel değerlendirme ile konuşulur.
+        </p>
+
+        <h3>Hyaluronik asit, polikarbofil veya doğal içerikli vajinal ürünler işe yarar mı?</h3>
+        <p>
+          Hormon dışı vajinal nemlendiriciler (hyaluronik asit veya polikarbofil bazlı) günlük konforu
+          artırabiliyor; bazı kadınlarda lokal östrojene yakın etki gösteren çalışmalar var
+          <Evidence from={3} to={4} />. Ürün seçiminde içeriğin uygun olması (parfümsüz, glikolsuz,
+          pH uyumlu) ve düzenli kullanım önemli. Bu seçenekler özellikle hormon kullanmayı tercih
+          etmeyen veya tıbbi nedenlerle kullanamayan kadınlarda ilk basamak olabilir. <em>"Mucize ürün"</em>
+          beklemek yerine 4-6 hafta düzenli kullanıp etkiyi değerlendirmek daha gerçekçi.
+        </p>
+
+        <h3>Cinsel ilişkide ağrı sürekli; ne kadar süre denemeden hekime başvurmalı?</h3>
+        <p>
+          Cinsel ilişkide ağrı (disparoni) GSM'de yaygın ve etkili biçimde tedavi edilebilen bir başlık
+          <Evidence level={5} />. Lokal nemlendirici ve yağlayıcı kullanımıyla 4-6 hafta içinde belirgin
+          fark gözlenmiyorsa, jinekolog değerlendirmesi gerekli; lokal östrojen veya gerekirse pelvik
+          taban fizyoterapisi gibi seçenekler gündeme geliyor. Ağrıyı <em>"alışırım"</em> deyip taşımak ne
+          fizyolojik ne psikolojik olarak sürdürülebilir; ilişkide kaçınma davranışı geliştiğinde
+          partnerle iletişim de zorlaşıyor. Erken değerlendirme hem fiziksel konforu hem ilişki
+          dinamiğini koruyor.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          GSM postmenopozal kadınların yarısına yakınında görülen, tanınabilir ve etkili biçimde yönetilebilen
+          bir tıbbi sendrom. Bilgi belirsizliğin panzehiridir — bu konuda da öyle. Önce konuya isim koymak
+          (genitoüriner menopoz sendromu); sonra belirti manzarasını vajinal + üriner birlikte değerlendirmek;
+          mekanizmayı kişisel eksiklik değil, hormon değişiminin yansıması olarak okumak. Lokal vajinal
+          östrojen GSM için en güçlü kanıtlı tedavi — sistemik HRT ile aynı kelime ama başka şey. Yerel
+          lazer ve RF gibi cihaz uygulamalarında kanıt sınırı dürüstçe söylenmeli. Günlük bakım sade ve
+          tutarlı; cinsellikte ağrı bir sinyal, alışılması gereken bir şey değil.
+        </p>
+        <p>
+          Bir yandan bilmemek gereken şeyleri söyleyebilirim: <em>"şu sizde işe yarar"</em> diyebilen tek bir
+          reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı seçenek doğru olabilir; bedeniniz,
+          geçmişiniz, eşlik eden tıbbi durumlar hepsi hesaba katılır. Doktorunuza üç soruyla gidin —
+          tablonun GSM ile uyumu, lokal östrojen size uygun mu, takip planı nasıl olacak. Sorunun kendisi
+          cevabın yarısıdır.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
           class="mt-14"
           paths={[
             '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
             '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
+            '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
             '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
             '/hormonal-gecis/menopoz/menopoz-nedir',
-            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
           ]}
         />
 
-        <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-          <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence level={5} /></p>
-          <p class="leading-relaxed text-ink/80">
-            Vulvovajinal değişimler menopoz döneminde sık görülür ve çoğu zaman etkili biçimde yönetilebilir. Bu başlıkta erken konuşma,
-            doğru ürün seçimi ve gerekirse lokal tedavi planı yaşam kalitesini belirgin artırabilir. Amaç, cinsel yaşam ve günlük konforu
-            güvenli bir çerçevede yeniden desteklemektir.
+      <section
+        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence level={5} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p>
+            <strong class="text-burgundy">Klinik bağlam:</strong> Genitoüriner menopoz sendromu (GSM)
+            postmenopozal kadınların yaklaşık %40-60'ında görülen yaygın ve genellikle ilerleyici bir
+            tablo. Eski terminoloji (vulvovajinal atrofi) sadece vajinal değişiklikleri kapsadığı için
+            yeni terminoloji (GSM, 2014 ISSWSH-NAMS uzlaşı bildirimi) tercih ediliyor; bu üriner
+            şikâyetlerin de aynı sendromun parçası olduğunu görünür kılıyor. Tanı klinik; vajinal
+            muayene (epitel atrofisi, pH > 5.0 değişikliği) ve öykü temel değerlendirme aracı.
           </p>
-        </section>
+          <p>
+            <strong class="text-burgundy">Mekanik çerçeve:</strong> Östrojen reseptörleri vajinal,
+            vulvar ve alt üriner sistem epitelinde yüksek yoğunlukta bulunur. Östrojen düşüşüyle epitel
+            tabaka inceliyor, kollajen ve elastin yapısı bozuluyor, glikojen üretimi azalıyor. Glikojen
+            azalması laktobasil kolonizasyonunu etkiliyor; vajinal pH alkali tarafa kayıyor (3.5-4.5'tan
+            5.0+). Bu mikrobiyota değişimi tekrarlayan idrar yolu enfeksiyonu zemini oluşturuyor.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong> Postmenopozal vajinal
+            kanama (herhangi bir miktarda — endometrium kanseri ekartasyonu zorunlu); cinsel ilişki
+            sonrası tekrarlayan kanama; kaşıntıya eşlik eden cilt değişiklikleri (liken sklerozus
+            ayırıcı tanısı); ateş veya yan ağrısıyla birlikte üriner şikâyet (üst üriner sistem
+            enfeksiyonu); 8-12 hafta lokal tedaviye yanıtsızlık. Bu tablolar GSM yorumuyla geçiştirilemez.
+          </p>
+          <p>
+            <strong class="text-burgundy">Pratik bütünleşim:</strong> Tedavi planı bireyselleştirilir.
+            (1) Hormon dışı seçenekler — düzenli vajinal nemlendiriciler ve yağlayıcılar — her hastada
+            ilk basamakta yer alabilir. (2) Lokal vajinal östrojen — GSM için en güçlü kanıtlı tedavi
+            (Düzey 1); krem, halka veya tablet formlarında sistemik dolaşıma geçen miktar düşük.
+            Başlangıç 2 hafta günlük, idame haftada 2 gün; uzun süreli kullanım gerektirebilir.
+            (3) Diğer seçenekler — DHEA (prasterone) intravajinal, ospemifen oral SERM, testosteron
+            (seçilmiş olgular) — bireysel değerlendirme. (4) Yerel enerji uygulamaları (lazer/RF) —
+            kanıt seviyesi sınırlı (Düzey 2-3); standart tedavi öncesi alternatif olarak değil, seçilmiş
+            olgularda araştırma çerçevesinde değerlendirilmeli.
+          </p>
+          <p>
+            <strong class="text-burgundy">Bireysellik vurgusu:</strong> Sn. Aksoy'un yazısında paylaştığı
+            klinik bakış genel popülasyon çerçevesindedir; sizin için uygun adımları kendi hekiminizle
+            değerlendirmek önemlidir. Hormon reseptörü pozitif meme kanseri öyküsü olan kadınlarda
+            lokal östrojen kararı multidisipliner (onkolog + jinekolog) değerlendirme gerektirir;
+            aromataz inhibitörü kullanan hastalarda öncelik hormon dışı seçeneklerdir. Eşlik eden
+            tablolar (liken sklerozus, lokal enfeksiyonlar, vulvodini, pelvik taban disfonksiyonu)
+            mutlaka ayırıcı tanı içinde değerlendirilmelidir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </section>
 
-        <section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-          <p class="text-sm leading-relaxed text-ink/75">
-            Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
-            kendi hekiminizle birlikte değerlendirme yapınız.
-          </p>
-        </section>
+      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
+        <p class="text-sm leading-relaxed text-ink/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </section>
     </SubmenuArticleBody>
   </main>
 
   <SiteFooter />
 </SiteLayout>
-
-
-
