@@ -181,7 +181,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge/duygusal-denge': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
-    alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve duygusal denge teması',
+    alt: 'Sıcak bir İstanbul evinin oturma odasında sabah ışığında iki yaşıt kadın (47-52) duygusal sohbet anında; soldaki cream cashmere kazak ve camel pant içinde divanda kucağında açık ciltli kitap, ruh halinden bahsediyor; sağdaki dusty rose ipek bluz ve cream pant içinde tan deri koltukta eli saç altında empatik dinliyor; bakımlı boyalı saçlar (koyu kestane dalga ve warm chestnut bob), mahogany yan masada klasik Türk çay bardağı altın tabakta, porselen espresso fincan, peony pembe vazoda, açık deri not defteri ve dolma kalem; brass-burnished abajur warm light, walnut kitaplık bokesi, sheer keten perde; ruh hali sohbeti ve duygusal denge teması',
   },
   '/zihin-denge/bilissel-saglik': {
     src: '/images/library/editorial/zd-bellek-odaklanma.webp',
@@ -213,7 +213,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
-    alt: 'Pencere önünde sakin bir sabah, elinde kitapla dalgın bakışlı kadın; ruh hali ve iç gözlem teması',
+    alt: 'Sıcak bir İstanbul evinin oturma odasında sabah ışığında iki yaşıt kadın (47-52) duygusal sohbet anında; soldaki cream cashmere kazak ve camel pant içinde divanda kucağında açık ciltli kitap, ruh halinden bahsediyor; sağdaki dusty rose ipek bluz ve cream pant içinde tan deri koltukta eli saç altında empatik dinliyor; bakımlı boyalı saçlar (koyu kestane dalga ve warm chestnut bob), mahogany yan masada klasik Türk çay bardağı altın tabakta, porselen espresso fincan, peony pembe vazoda, açık deri not defteri ve dolma kalem; brass-burnished abajur warm light, walnut kitaplık bokesi, sheer keten perde; menopoz döneminde ruh hali değişimlerini bir arkadaşla yargısız konuşma teması',
   },
   '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz': {
     src: '/images/library/editorial/zd-bellek-odaklanma.webp',
