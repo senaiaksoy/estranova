@@ -18,50 +18,6 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
-    path: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
-    title: 'Menopozda Kemik Erimesi: Egzersizle Neler Değişebilir?',
-    description:
-      'Kemikler sessizce çalışır — ta ki bir şeyler değişene kadar. Menopoz geçişiyle birlikte bu sessiz süreç hızlanabiliyor. Egzersiz nasıl bir uyarı veriyor, nereden başlamak işe yarıyor?',
-    publishedDate: '18 Nisan 2026',
-    writerSlug: 'alara-baykent',
-    section: 'Hormonal Geçiş',
-    sectionPath: '/hormonal-gecis',
-    keywords: [
-      'kemik erimesi',
-      'osteoporoz',
-      'menopoz',
-      'egzersiz',
-      'kemik yoğunluğu',
-      'D vitamini',
-      'kalsiyum',
-      'DEXA',
-      'östrojen',
-      '40+ kadın',
-    ],
-  },
-  {
-    path: '/zamansiz-yasam/seyahat-menopoz',
-    title: 'Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları',
-    description:
-      'Uzun uçuşlar, jet lag, sıcak basması ve yeni mutfak ritmi menopoz geçişinde seyahati nasıl şekillendirir? Bir yaşıt perspektifinden sakin bir rehber.',
-    publishedDate: '27 Nisan 2026',
-    writerSlug: 'duygu-karaosmanoglu',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam',
-    keywords: [
-      'seyahat',
-      'menopoz',
-      'uzun uçuş',
-      'jet lag',
-      'zaman farkı',
-      'sıcak basması',
-      'uyku',
-      'HRT',
-      '40+ kadın',
-      'sosyal yaşam',
-    ],
-  },
-  {
     path: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
     title: 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi',
     description:
@@ -71,17 +27,6 @@ export const staticArticles: StaticArticleEntry[] = [
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik',
     keywords: ['libido', 'cinsel istek', 'menopoz', 'GSM', 'lokal östrojen', 'testosteron', 'cinsel sağlık', '40+ kadın', 'mahrem sağlık'],
-  },
-  {
-    path: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
-    title: "HRT'nin İlk Ayları — Bir Yaşıt Hikayesi",
-    description:
-      "Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk aylarından bir yazı: karar süreci, üç ayın muhasebesi, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.",
-    publishedDate: '27 Nisan 2026',
-    writerSlug: 'demet-kizilkaya',
-    section: 'Hormonal Geçiş',
-    sectionPath: '/hormonal-gecis',
-    keywords: ['HRT', 'hormon replasman tedavisi', 'menopoz', '58 yaş', 'yaşıt hikayesi', 'kişisel deneyim', 'ilk 6 ay'],
   },
   {
     path: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
@@ -103,68 +48,6 @@ export const staticArticles: StaticArticleEntry[] = [
       '3 aylık kontrol',
       'alarm belirtileri',
     ],
-  },
-  {
-    path: '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz',
-    title: 'B12 Vitamini ve Menopoz: Sessiz Eksikliği Tanımak',
-    description:
-      'Gün ortasında çöken enerji, aklında tutamadığın şeyler, ellerde hafif bir uyuşma — bunları yaşa ya da menopoz geçişine bağlamak kolay. Ama bazen tablonun içinde B12 eksikliği de oluyor. İki konu nerede kesişiyor, bilim hangi noktada net konuşuyor, hangi adım anlamlı?',
-    publishedDate: '25 Nisan 2026',
-    writerSlug: 'rima-erdemir',
-    section: 'Hormonal Geçiş',
-    sectionPath: '/hormonal-gecis',
-    keywords: ['B12', 'vitamin B12', 'kobalamin', 'menopoz', '40+ sağlık', 'eksiklik', 'PPI', 'metformin', 'takviye'],
-  },
-  {
-    path: '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi',
-    title: 'Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?',
-    description:
-      'Feed\'inizden geçen menopoz içeriği güvenilir mi? Yıllarca medyanın içinden geçmiş bir editörün, sosyal medya bilgisini değerlendirirken aklında tuttuğu dört sinyal. Bilgi okuryazarlığı için pratik bir çerçeve.',
-    publishedDate: '26 Nisan 2026',
-    writerSlug: 'rima-erdemir',
-    section: 'Bilimsel Pencere',
-    sectionPath: '/bilimsel-pencere',
-    keywords: ['sosyal medya', 'bilgi okuryazarlığı', 'menopoz bilgisi', 'sağlık bilgisi', 'kaynak doğrulama', 'editöryel filtre', 'medya okuryazarlığı', 'kanıt'],
-  },
-  {
-    path: '/zamansiz-yasam/mevsimle-yemek-yemek',
-    title: 'Mevsimle Yemek Yemek — Anadolu Sofrasının 40 Sonrası Sağlık Diline Çevirisi',
-    description:
-      'Mevsiminde, yerel ve sade bir Anadolu sofrasının 40 sonrası kadın sağlığına nasıl tercüme olduğunu mutfaktan anlatan yaşıt tonlu rehber.',
-    publishedDate: '26 Nisan 2026',
-    writerSlug: 'gamze-cizreli',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam',
-    keywords: [
-      'mevsimlik beslenme',
-      'Anadolu mutfağı',
-      'Akdeniz beslenme',
-      '40 sonrası beslenme',
-      'menopoz',
-      'sürdürülebilir sofra',
-    ],
-  },
-  {
-    path: '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
-    title: 'HRT\'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk',
-    description:
-      'Dokuz yıl önce HRT olmadan başlayan menopoz yolculuğu; klinik kılavuzların değişimine tanıklık; ve sonunda hekimle birlikte yeni bir adıma karar verme süreci. Kişisel bir kayıt.',
-    publishedDate: '26 Nisan 2026',
-    writerSlug: 'basak-pelister',
-    section: 'Hormonal Geçiş',
-    sectionPath: '/hormonal-gecis',
-    keywords: ['HRT', 'hormon tedavisi', 'menopoz', 'erken menopoz', 'geç başlamak', 'klinik kılavuzlar', 'bireysel takip', 'kemik sağlığı', 'osteoporoz'],
-  },
-  {
-    path: '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
-    title: 'Perimenopozda Adet Düzensizliği: Ne Normal, Ne Zaman Doktora Gidilmeli?',
-    description:
-      'Perimenopozda adet düzenindeki değişimleri, normal kabul edilen durumları, alarm belirtilerini ve doktora ne zaman başvurulması gerektiğini anlatan rehber.',
-    publishedDate: '25 Nisan 2026',
-    writerSlug: 'isik-selin-gunce',
-    section: 'Hormonal Geçiş',
-    sectionPath: '/hormonal-gecis',
-    keywords: ['perimenopoz', 'adet düzensizliği', 'kanama', 'menopoz geçişi', 'doktor başvurusu', 'alarm belirtileri'],
   },
   {
     path: '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
@@ -228,50 +111,6 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['mahrem bölge', 'vajinal atrofi', 'vulvovajinal atrofi', 'vajinal kuruluk', 'menopoz', 'östrojen', 'nem', 'cinsel sağlık'],
   },
   {
-    path: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
-    title: 'Menopozda Cilt Değişimleri — Anlamak ve Bakım Rehberi',
-    description:
-      'Menopozda ciltte görülen değişimleri östrojen-kolajen-bariyer ekseninde anlatan mekanizma rehberi: yaygın değişimler, vulvovajinal doku, topikal ve oral destekler. Günlük bakım rutini ve ameliyatsız yaklaşımlar ayrı sayfada.',
-    publishedDate: '27 Mart 2026',
-    writerSlug: 'duygu-karaosmanoglu',
-    section: 'Beden & Yakınlık',
-    sectionPath: '/beden-yakinlik',
-    keywords: ['menopoz cilt değişiklikleri', 'östrojen', 'kolajen', 'cilt yaşlanması', 'vulvovajinal', 'cilt bariyeri'],
-  },
-  {
-    path: '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve',
-    title: 'Menopozda Cilt Bakımı — Günlük Rutinden Ameliyatsız Yaklaşımlara Genel Çerçeve',
-    description:
-      'Menopozda cilt bakımı için günlük rutin (yıka-nemlendir-koru-aktifler) ile ameliyatsız profesyonel yaklaşımları (radyofrekans, odaklanmış ultrason, yüzeysel peeling) tek bir yaşıt çerçevesinde toplayan rehber. Marka veya satış önerisi olmadan, kanıt düzeyiyle.',
-    publishedDate: '25 Nisan 2026',
-    writerSlug: 'duygu-karaosmanoglu',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam',
-    keywords: [
-      'menopoz cilt bakımı',
-      'günlük cilt rutini',
-      'ameliyatsız',
-      'menopoz cildi',
-      'hyaluronik asit',
-      'seramid',
-      'niasinamid',
-      'retinol',
-      'SPF',
-      'kollajen',
-      'topikal bakım',
-    ],
-  },
-  {
-    path: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
-    title: 'Bellek ve Odaklanma — Menopozda Bilişsel Değişimler',
-    description: 'Menopozda bellek kayması ve odaklanma güçlüğünün nedenleri ile yönetim yöntemleri hakkında rehberlik.',
-    publishedDate: '24 Mart 2026',
-    writerSlug: 'rima-erdemir',
-    section: 'Zihin & Denge',
-    sectionPath: '/zihin-denge',
-    keywords: ['menopoz', 'bellek', 'odaklanma', 'beyin sisi', 'zihinsel değişim', 'perimenopoz'],
-  },
-  {
     path: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
     title: 'Stres Yönetimi — Menopozda Stres ve Adaptasyon',
     description: 'Menopozda stres yönetimi teknikleri ve hormon değişikliklerinin stres tepkisine etkisi hakkında rehberlik.',
@@ -280,16 +119,6 @@ export const staticArticles: StaticArticleEntry[] = [
     section: 'Zihin & Denge',
     sectionPath: '/zihin-denge',
     keywords: ['menopoz', 'perimenopoz', 'stres', 'anksiyete', 'kortizol', 'rahatlama'],
-  },
-  {
-    path: '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
-    title: 'Ruh Hali Değişimleri ve Menopoz — Depresyon, Anksiyete, Duygudurum',
-    description: 'Menopozda depresyon, anksiyete ve duygudurum dalgalanmalarını bilimsel bir dille ele alan rehber.',
-    publishedDate: '16 Mart 2026',
-    writerSlug: 'berna-aksoy',
-    section: 'Zihin & Denge',
-    sectionPath: '/zihin-denge',
-    keywords: ['menopoz', 'perimenopoz', 'depresyon', 'anksiyete', 'duygudurum', 'ruh hali'],
   },
   {
     path: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
@@ -310,39 +139,6 @@ export const staticArticles: StaticArticleEntry[] = [
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam',
     keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'anti-inflamatuar'],
-  },
-  {
-    path: '/zamansiz-yasam/hareket-saglik-menopoz',
-    title: 'Hareket ve Sağlık — Menopozda Egzersiz Rehberi',
-    description: 'Menopozda hareketin belirtileri hafifletme, kemik sağlığını koruma ve kardiyovasküler sağlığı destekleme yolları.',
-    publishedDate: '5 Mart 2026',
-    writerSlug: 'alara-baykent',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam',
-    keywords: ['menopoz', 'hareket', 'egzersiz', 'direnç antrenmanı', 'kardiyovasküler', 'kemik sağlığı'],
-  },
-  {
-    path: '/zamansiz-yasam/eklem-agrisi-menopoz',
-    title: 'Menopozda Eklem Ağrısı — Sabah Tutukluğundan Hareketin Yatışına',
-    description:
-      'Menopozda eklem ağrısının arkasındaki östrojen-kıkırdak ilişkisini, hareketin neden istirahatten daha çok iyileştirdiğini ve günlük olarak uygulanabilir küçük adımları yaşıt tonuyla anlatan rehber.',
-    publishedDate: '27 Nisan 2026',
-    writerSlug: 'alara-baykent',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam',
-    keywords: [
-      'menopoz',
-      'eklem ağrısı',
-      'sabah tutukluğu',
-      'östrojen',
-      'kıkırdak',
-      'sarkopeni',
-      'direnç egzersizi',
-      'omega-3',
-      'D vitamini',
-      'kollajen',
-      '40+ kadın',
-    ],
   },
   {
     path: '/zamansiz-yasam/kilo-artisi-menopoz',
@@ -398,18 +194,7 @@ export const staticArticles: StaticArticleEntry[] = [
     sectionPath: '/hormonal-gecis',
     keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
   },
-  {
-    path: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
-    title: 'Perimenopoz Nedir? — Temel Rehber',
-    description:
-      'Perimenopoz nedir, ne zaman başlar, hangi belirtileri getirir? Sahne arkasında ve günlük hayatta birçoğumuzun konuştuğu bir geçişin sade ve sıcak tarifi.',
-    publishedDate: '27 Nisan 2026',
-    writerSlug: 'isik-selin-gunce',
-    section: 'Hormonal Geçiş',
-    sectionPath: '/hormonal-gecis',
-    keywords: ['perimenopoz', 'geçiş dönemi', 'hormon dalgalanması', 'düzensiz adet', 'menopoz', 'östrojen'],
-  },
-];
+  ];
 
 export function getStaticArticleAuthor(slug: string) {
   const entry = staticArticles.find((a) => a.path === slug);

@@ -79,24 +79,6 @@ export const dossiers: MonthlyDossier[] = [
         readingMinutes: 8,
       },
       {
-        title: 'Akşam hareketinin uykuya etkisi: melatonin ve serin vücut',
-        excerpt:
-          'Çoğu zaman "akşam yürüyüşü uyku getirir" deriz, oysa zamanlama ve şiddet birlikte düşünülmediğinde tam tersi çalışıyor. Sporcu beden okumasıyla gece-gündüz dengesi.',
-        writerSlug: 'alara-baykent',
-        status: 'published',
-        href: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
-        readingMinutes: 7,
-      },
-      {
-        title: 'Sabah üçte uyanmak: dokuz yılın notları',
-        excerpt:
-          'HRT öncesinde ve sonrasında ne değişti, ne aynı kaldı? Üç farklı dönemden samimi bir kişisel okuma — kanaat değil, gözlem.',
-        writerSlug: 'basak-pelister',
-        status: 'published',
-        href: '/zihin-denge/uyku-dinlenme/sabah-ucte-uyanmak-dokuz-yil',
-        readingMinutes: 9,
-      },
-      {
         title: 'Gece terlemesi ve uyku: utançsız bakış',
         excerpt:
           'Konuşulması zor ama herkesin yaşadığı bir an: gece yarısı uyanma, çarşafı değiştirme, sessizce yeniden uyumayı deneme. Mahrem yan, jargonsuz.',
@@ -105,16 +87,7 @@ export const dossiers: MonthlyDossier[] = [
         href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
         readingMinutes: 6,
       },
-      {
-        title: 'Uyku biliminin sınırı: ne biliniyor, ne bilinmiyor',
-        excerpt:
-          'Uyku takip cihazları ne ölçer, ne ölçmez? Hangi araştırma sonuçlarına güvenebiliriz, hangi iddialar henüz erken? Kanıt gücü disipliniyle sade bir harita.',
-        writerSlug: 'rima-erdemir',
-        status: 'published',
-        href: '/zihin-denge/uyku-dinlenme/uyku-biliminin-siniri',
-        readingMinutes: 8,
-      },
-    ],
+      ],
     status: 'current',
   },
 ];

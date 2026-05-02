@@ -19,23 +19,9 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const editorPick = {
-  href: '/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve',
-  title: 'Ameliyatsız Cilt Bakımı — Genel Çerçeve',
-  lede: 'Marka kıyaslaması değil çerçeve: hangi sorun için hangi yaklaşım anlamlı, neyi atlamak güvenli.',
-  writerSlug: 'duygu-karaosmanoglu',
-  readingMinutes: 7,
-  image: submenuHeroByRoute['/zamansiz-yasam/non-invaziv/cilt-bakimi-non-invaziv-genel-cerceve']!,
-};
+const editorPick: any = null;
 
 const tocArticles = [
-  {
-    href: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
-    title: 'Menopozda Cilt Değişimleri',
-    excerpt: 'Menopoz döneminde ciltte yaşanan elastikiyet, nem ve incelik değişimleri; günlük bakım ve klinik yaklaşımlara sade bir bakış.',
-    writerSlug: 'berna-aksoy',
-    readingMinutes: 7,
-  },
   {
     href: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
     title: 'Vajinal Sağlık ve Menopoz',
@@ -137,7 +123,7 @@ const neighbors = [
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <EditorPickCard
+      {editorPick && (<EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -145,7 +131,7 @@ const neighbors = [
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />
+      />)}
     </SubmenuSection>
 
     <SubmenuSection variant="white" borderedTop={true}>

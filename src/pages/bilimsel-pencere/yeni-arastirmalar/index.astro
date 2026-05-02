@@ -26,14 +26,7 @@ const neighbors = [
   { href: '/bilimsel-pencere/hucreler-ve-yaslanma', title: 'Hücreler ve Yaşlanma', excerpt: 'NAD+, mitokondri, senesans — yaşlanma biyolojisinin son 20 yılı.' },
 ];
 
-const editorPick = {
-  href: '/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi',
-  title: 'Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?',
-  lede: "Feed'inizden geçen menopoz içeriği güvenilir mi? Yıllarca medyanın içinden geçmiş bir editörün dört sinyali.",
-  writerSlug: 'rima-erdemir',
-  readingMinutes: 8,
-  image: submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi']!,
-};
+const editorPick: any = null;
 ---
 
 <SiteLayout
@@ -100,7 +93,7 @@ const editorPick = {
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu kategoriden bir okuma</h2>
       </header>
 
-      <EditorPickCard
+      {editorPick && (<EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -108,7 +101,7 @@ const editorPick = {
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />
+      />)}
     </SubmenuSection>
 
     <Asterism />

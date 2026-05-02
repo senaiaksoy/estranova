@@ -52,35 +52,13 @@ const pillars = [
     href: '/zamansiz-yasam/beslenme-yaslanma',
     image: submenuHeroByRoute['/zamansiz-yasam/beslenme-yaslanma']!,
   },
-  {
-    step: '05',
-    title: 'Hareket & Vücut',
-    excerpt: 'Kas kütlesi, esneklik, postür, nefes teknikleri.',
-    href: '/zamansiz-yasam/hareket-saglik-menopoz',
-    image: submenuHeroByRoute['/zamansiz-yasam/hareket-saglik-menopoz']!,
-  },
-];
+  ];
 
 const evidenceLevels = [5, 4, 3, 2, 1] as const;
 
-const editorPick = {
-  href: '/zamansiz-yasam/mevsimle-yemek-yemek',
-  title: 'Mevsimle Yemek Yemek — Anadolu Sofrası 40 Sonrası',
-  lede: 'Geçen perşembe sabahı tezgâha yeni gelen taze enginarlara bakarken aklıma takıldı: bedenimizin de her ay aynı şeyi aynı yoğunlukta istemesi neden beklensin?',
-  writerSlug: 'gamze-cizreli',
-  readingMinutes: 6,
-  image: submenuHeroByRoute['/zamansiz-yasam/mevsimle-yemek-yemek']!,
-};
+const editorPick: any = null;
 
 const tocArticles = [
-  {
-    href: '/zamansiz-yasam/eklem-agrisi-menopoz',
-    title: 'Menopozda Eklem Ağrısı — Sabah Tutukluğundan Hareketin Yatışına',
-    excerpt:
-      'Menopoz geçişinde sıkça görülen eklem ağrısının arkasındaki östrojen-kıkırdak ilişkisini, hareketin neden istirahatten daha çok iyileştirdiğini ve bu hafta denenebilecek sade adımları konuşan yaşıt tonlu rehber.',
-    writerSlug: 'alara-baykent',
-    readingMinutes: 7,
-  },
   {
     href: '/zamansiz-yasam/kilo-artisi-menopoz',
     title: 'Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet',
@@ -88,14 +66,6 @@ const tocArticles = [
       'Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları konuşan yaşıt tonlu rehber.',
     writerSlug: 'berna-aksoy',
     readingMinutes: 9,
-  },
-  {
-    href: '/zamansiz-yasam/seyahat-menopoz',
-    title: 'Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları',
-    excerpt:
-      'Uzun uçuşlar, jet lag, sıcak basması ve yeni mutfak ritmi menopoz geçişinde seyahati nasıl şekillendirir? Bir yaşıt perspektifinden sakin notlar.',
-    writerSlug: 'duygu-karaosmanoglu',
-    readingMinutes: 7,
   },
   {
     href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
@@ -163,7 +133,7 @@ const tocArticles = [
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu kategoriden bir okuma</h2>
       </header>
 
-      <EditorPickCard
+      {editorPick && (<EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -171,7 +141,7 @@ const tocArticles = [
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />
+      />)}
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>
@@ -276,12 +246,12 @@ const tocArticles = [
           <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
         </SubmenuSpotlightCard>
         <SubmenuSpotlightCard
-          tag="Hareket & Vücut"
-          title="Kas Kütlesini Destekleyen Rutin"
-          body="Yaşla birlikte hareket planını sürdürülebilir biçimde kurmak için pratik bir başlangıç çerçevesi."
-          href="/zamansiz-yasam/hareket-saglik-menopoz"
+          tag="Vitaminler"
+          title="D Vitamini Rehberi"
+          body="'Vitamin' adı yanıltıcı — biyolojik olarak hormon. Tarama, dozaj ve bireysel karar çerçevesi."
+          href="/zamansiz-yasam/d-vitamini-rehberi"
         >
-          <span slot="footer">Kanıt Düzeyi: <Evidence level={3} /></span>
+          <span slot="footer">Kanıt Düzeyi: <Evidence from={4} to={5} /></span>
         </SubmenuSpotlightCard>
       </div>
     </SubmenuSection>

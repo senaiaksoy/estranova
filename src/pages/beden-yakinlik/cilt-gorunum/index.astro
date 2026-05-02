@@ -21,14 +21,7 @@ const chapter = chapterMap[path]!;
 const epigraph = subHubEpigraphs[path];
 const next = getNextChapter(path);
 
-const editorPick = {
-  href: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
-  title: 'Menopozda Cilt Değişimleri',
-  lede: 'Cildin görünür değişimleri yalnızca bir "yaşlanma estetiği" meselesi değil; aynı zamanda bedenin yazdığı bir hormon mektubu.',
-  writerSlug: 'berna-aksoy',
-  readingMinutes: 8,
-  image: submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri']!,
-};
+const editorPick: any = null;
 
 const neighbors = [
   { href: '/beden-yakinlik/cinsel-saglik', title: 'Cinsel Sağlık', excerpt: 'Vajinal kuruluk, cinsellikte ağrı ve libido değişimleri; mahremiyetinizi yargılamayan bir çerçeve.' },
@@ -103,7 +96,7 @@ const neighbors = [
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <EditorPickCard
+      {editorPick && (<EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -111,7 +104,7 @@ const neighbors = [
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />
+      />)}
     </SubmenuSection>
 
     <Asterism />

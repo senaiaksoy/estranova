@@ -51,26 +51,6 @@ const articles: ArticleEntry[] = [
     image: submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi']!,
   },
   {
-    href: '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak',
-    title: "HRT'ye Yıllar Sonra Başlamak: Bir Karar, Bir Yolculuk",
-    excerpt:
-      'Dokuz yıl HRT olmadan geçen menopoz yolculuğu, klinik kılavuzların değişimi ve hekimle birlikte yeni bir adıma karar verme süreci.',
-    lede: 'Annem hiç düşünmedi… ben dokuz yıl bekledim… kızım ise bu kararı çok daha erken alabilecek. Üç kuşağın aynı eşikte üç farklı duruşu.',
-    writerSlug: 'basak-pelister',
-    readingMinutes: 9,
-    image: submenuHeroByRoute['/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak']!,
-  },
-  {
-    href: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
-    title: "HRT'nin İlk Ayları — Bir Yaşıt Hikayesi",
-    excerpt:
-      'HRT başlayan 58 yaşında bir kadının ilk aylarından bir yazı: karar süreci, ilk haftalar, üç ayın muhasebesi ve aile bağı.',
-    lede: 'Dört aydır küçük bir jel ve akşam alınan bir kapsül, mutfak tezgâhımın bir köşesinde sessizce duruyor… İşte tam o yerde duruyorum, sıcağı sıcağına anlatabilirim.',
-    writerSlug: 'demet-kizilkaya',
-    readingMinutes: 9,
-    image: submenuHeroByRoute['/hormonal-gecis/menopoz/hrt-ilk-alti-ay'] ?? submenuHeroByRoute['/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak']!,
-  },
-  {
     href: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
     title: 'HRT Yan Etkileri ve İzleme — İlk Aylar',
     excerpt:
@@ -101,26 +81,6 @@ const articles: ArticleEntry[] = [
     image: submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi']!,
   },
   {
-    href: '/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz',
-    title: 'B12 Vitamini ve Menopoz: Sessiz Eksikliği Tanımak',
-    excerpt:
-      'Yorgunluk, unutkanlık, ellerde uyuşma — yaşa bağlamadan önce B12 ile menopozun nerede kesiştiğine bakan rehber.',
-    lede: 'Belirtiler benziyor; mekanizmalar farklı. Tabloyu çözmek için önce ikisini birbirinden ayırt edebilmek gerekiyor.',
-    writerSlug: 'rima-erdemir',
-    readingMinutes: 9,
-    image: submenuHeroByRoute['/hormonal-gecis/menopoz/b12-vitamini-ve-menopoz']!,
-  },
-  {
-    href: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
-    title: 'Kemik Erimesi: Önleme ve Egzersiz',
-    excerpt:
-      'Çoğu zaman kemikleri bedenin değişmeyen iskeleti gibi düşünürüz; oysa her gün yıkılıp yeniden yapılan canlı bir doku. Egzersiz ona en doğrudan ulaşan dillerden biri.',
-    lede: 'Çoğu zaman kemikleri bedenin değişmeyen iskeleti gibi düşünürüz; oysa onlar canlı, dinamik bir doku — ve bedeni çağırdığımızda cevap veriyorlar.',
-    writerSlug: 'alara-baykent',
-    readingMinutes: 8,
-    image: submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz']!,
-  },
-  {
     href: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu',
     title: 'Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması',
     excerpt:
@@ -133,7 +93,7 @@ const articles: ArticleEntry[] = [
 ];
 
 // Editor's Pick — bu sub-hub için manuel atama (Magazine kapağı mantığı)
-const featuredSlug = '/hormonal-gecis/menopoz/hrt-yillar-sonra-baslamak';
+const featuredSlug = '/hormonal-gecis/menopoz/menopoz-nedir';
 const editorPick = articles.find((a) => a.href === featuredSlug)!;
 const tocArticles = articles.filter((a) => a.href !== featuredSlug);
 

@@ -9,7 +9,7 @@
  * Üretim turunda makaleler güncellendiğinde linkler buradan tek
  * noktadan değiştirilir; her hub sayfası ilgili kaydı import eder.
  *
- * 5 hub için 3'er adım (Faz 1.8): "Genel çerçeve → Sık karşılaşılan
+ * 5 hub için 3'er adım: "Genel çerçeve → Sık karşılaşılan
  * konu / mahrem konu → Pratik / karar / derin bakış".
  */
 
@@ -49,19 +49,19 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
       {
         step: '01',
         label: 'Genel çerçeve',
-        title: 'Perimenopoz Nedir?',
+        title: 'Menopoz Nedir',
         excerpt:
-          'Hormonal geçişin ilk aşamasının ne olduğunu, ne zaman başladığını ve neden hemen "menopoz" demediğimizi anlatır.',
-        href: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
+          'Menopozun klinik tanımı, geçiş aşamaları ve sürecin temel özellikleri — sakin bir giriş.',
+        href: '/hormonal-gecis/menopoz/menopoz-nedir',
         readingMinutes: 7,
       },
       {
         step: '02',
-        label: 'Sık karşılaşılan konu',
-        title: 'Adet Düzensizliği — Ne Normal, Ne Zaman Doktora?',
+        label: 'En sık konuşulan',
+        title: 'Sıcak Basması ve Gece Terlemesi',
         excerpt:
-          'Perimenopozda en sık fark edilen değişim. Düzensizliğin hangi yanı doğal, hangi yanı bir hekim değerlendirmesini hak ediyor?',
-        href: '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
+          'Vazomotor belirtilerin nedenleri ve kanıt temelli destek seçenekleri.',
+        href: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
         readingMinutes: 8,
       },
       {
@@ -69,7 +69,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Karar verme',
         title: 'Hormon Tedavisi Karar Rehberi',
         excerpt:
-          'HRT seçeneklerine adım adım, abartısız bir bakış. Ne soruyu sormak gerekir, hekiminle hangi noktaları birlikte değerlendirirsin?',
+          'HRT seçeneklerine adım adım, abartısız bir bakış. Hekiminle hangi noktaları birlikte değerlendirirsin?',
         href: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
         readingMinutes: 10,
       },
@@ -80,7 +80,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
     kicker: 'Yaşam tarzına nereden başlayalım?',
     title: '40 sonrası sürdürülebilir bir yön',
     intro:
-      'Zamansız yaşam, panik diyetten ya da mucize formülden değil, küçük ve sürdürülebilir alışkanlıklardan kuruluyor. Üç adımlık okuma — beslenme, kemik, hareket — sade bir başlangıç çizer.',
+      'Zamansız yaşam, panik diyetten ya da mucize formülden değil, küçük ve sürdürülebilir alışkanlıklardan kuruluyor. Üç adımlık okuma — beslenme, kemik, takviye — sade bir başlangıç çizer.',
     steps: [
       {
         step: '01',
@@ -102,12 +102,12 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
       },
       {
         step: '03',
-        label: 'Pratik',
-        title: 'Hareket ve Sağlık — Menopoz Geçişinde Beden',
+        label: 'Klinik takviye',
+        title: 'D Vitamini Rehberi',
         excerpt:
-          'Performans baskısı yerine sürdürülebilir hareket. Hangi tür egzersiz menopoz dönemine uygun, neden direnç çalışmaları öne çıkar?',
-        href: '/zamansiz-yasam/hareket-saglik-menopoz',
-        readingMinutes: 7,
+          '"Vitamin" adı yanıltıcı — biyolojik olarak hormon. Tarama, dozaj ve bireysel karar çerçevesi.',
+        href: '/zamansiz-yasam/d-vitamini-rehberi',
+        readingMinutes: 9,
       },
     ],
   },
@@ -116,33 +116,33 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
     kicker: 'Beden ve mahremiyet konularını okumak için',
     title: 'Bu konularda nereden başlamalıyım?',
     intro:
-      'Çoğu zaman konuşulması zor olan ama yaygın yaşanan değişimler. Üç adımlık yol — cilt, vajinal sağlık, yakınlık — utandırmadan ve dramatize etmeden anlatılan başlangıç.',
+      'Çoğu zaman konuşulması zor olan ama yaygın yaşanan değişimler. Üç adımlık yol — vajinal sağlık, yakınlık, pelvik taban — utandırmadan ve dramatize etmeden anlatılan başlangıç.',
     steps: [
       {
         step: '01',
-        label: 'Genel çerçeve',
-        title: 'Menopozda Cilt Değişimleri',
+        label: 'En sık konuşulan',
+        title: 'Vajinal Kuruluk — GSM',
         excerpt:
-          'Östrojen düşüşünün ciltte yarattığı değişimler ve gerçekçi beklentilerle bakım disiplini.',
-        href: '/beden-yakinlik/menopozda-cilt-degisimleri',
+          'Postmenopozal kadınların yarısına yakını yaşıyor; isim koymakla başlar. Lokal vs sistemik, kanıt sınırı, günlük bakım.',
+        href: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
         readingMinutes: 7,
       },
       {
         step: '02',
-        label: 'Mahrem konu',
-        title: 'Menopozda Vajinal Sağlık',
+        label: 'Yakınlık',
+        title: 'Cinsellikte Ağrı — Tedavi Haritası',
         excerpt:
-          'Vajinal kuruluk, hassasiyet ve genitoüriner sendrom — utanmadan, jargonsuz, somut çözümlerle.',
-        href: '/beden-yakinlik/vajinal-saglik-menopoz',
+          'Disparoni tek bir tablo değil — yüzeysel, derin, postmenopozal, vajinismus alt-tipleri ve üç kapılı tedavi haritası.',
+        href: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
         readingMinutes: 8,
       },
       {
         step: '03',
-        label: 'Yakınlık',
-        title: 'Yakınlıkta Ağrı — Anlamak ve Yumuşatmak',
+        label: 'Sessiz konu',
+        title: '40 Sonrası İdrar Kaçırma',
         excerpt:
-          'Cinsellikte konforu etkileyen değişimler. Beden sinyallerini tanımak ve iletişimi güçlendirmek için sade bir çerçeve.',
-        href: '/beden-yakinlik/yakinlik-agrisi-menopoz',
+          'Sokakta her on kadından dördü yaşıyor ama çoğu kimseye söylemiyor. İki tip ayrımı + üç kapılı tedavi haritası.',
+        href: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
         readingMinutes: 7,
       },
     ],
@@ -152,7 +152,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
     kicker: 'Zihinle ilgili değişimleri anlamak için',
     title: 'Hormonal geçişin zihne dokunan yanı',
     intro:
-      'Uyku, duygu durumu ve bilişsel dalgalanmalar hormonal geçişin en sık konuşulan ama en az anlaşılan başlıkları. Üç adımlık yol — uyku, ruh hali, stres — sakin bir başlangıç noktası.',
+      'Uyku, gece terlemesi ve stres hormonal geçişin en sık konuşulan ama en az anlaşılan başlıkları. Üç adımlık yol — uyku, gece terlemesi, stres — sakin bir başlangıç noktası.',
     steps: [
       {
         step: '01',
@@ -160,17 +160,17 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         title: 'Menopozda Uyku Bozukluğu',
         excerpt:
           'Uyku neden değişir, ne deneyebiliriz? Hormonal geçişin içinden geçen bir yaşıt perspektifinden uyku rehberi.',
-        href: '/zihin-denge/uyku-bozuklugu-menopoz',
+        href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
         readingMinutes: 6,
       },
       {
         step: '02',
-        label: 'Duygusal denge',
-        title: 'Menopozda Ruh Hali Değişimleri',
+        label: 'Gece terlemesi',
+        title: 'Gece Terlemesi — Utancsız',
         excerpt:
-          'Duygu dalgalanmalarının arkasındaki hormonal zemini anlamak ve gündelik hayatla baş etmenin sade yolları.',
-        href: '/zihin-denge/ruh-hali-degisimleri-menopoz',
-        readingMinutes: 7,
+          'Gece terlemesinin uykuya etkisi ve nazik bir gece düzeni — yargısız bir yaklaşım.',
+        href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
+        readingMinutes: 6,
       },
       {
         step: '03',
@@ -178,7 +178,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         title: 'Menopozda Stres Yönetimi',
         excerpt:
           'Stresle başa çıkmanın menopoz geçişine özgü pratik yolları — nefes, hareket, sınır koyma.',
-        href: '/zihin-denge/stres-yonetimi-menopoz',
+        href: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
         readingMinutes: 6,
       },
     ],
@@ -188,33 +188,25 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
     kicker: 'Bilimsel zemini merak ediyorsan',
     title: 'Hormonal geçişe bilimin penceresinden bakmak',
     intro:
-      'Hormonların biyolojisinden hücresel yaşlanmaya, bilimin bugün ne biliyor — ne henüz bilmiyor. Üç adımlık yol — temel biyoloji, hücresel mekanizma, yeni araştırmalar — kanıt disipliniyle başlayan bir okuma.',
+      'Hormonların biyolojisinden hücresel yaşlanmaya, bilimin bugün ne biliyor — ne henüz bilmiyor. İki adımlık yol — temel biyoloji, hücresel mekanizma — kanıt disipliniyle başlayan bir okuma.',
     steps: [
       {
         step: '01',
         label: 'Temel biyoloji',
         title: 'Östrojen Biyolojisi ve Sağlık',
         excerpt:
-          'Östrojenin yalnızca üreme hormonu olmadığını, beden sistemleri arasındaki ağdaki rolünü açıklayan giriş.',
-        href: '/bilimsel-pencere/estrogen-biyolojisi-saglik',
-        readingMinutes: 9,
+          'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler, ER-α/ER-β reseptörleri ve HRT çerçevesi.',
+        href: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+        readingMinutes: 10,
       },
       {
         step: '02',
         label: 'Hücresel mekanizma',
         title: 'NAD+ ve Hücresel Yaşlanma',
         excerpt:
-          'NAD+ molekülünün hücresel yaşlanmadaki yeri, takviyelerin nereye işaret ettiği ve kanıtın hangi sınırda durduğu.',
-        href: '/bilimsel-pencere/nad-plus-hucresel-yaslanma',
-        readingMinutes: 10,
-      },
-      {
-        step: '03',
-        label: 'Güncel ufuk',
-        title: 'Yeni Araştırmalar',
-        excerpt:
-          'Hormonal geçiş ve 40+ sağlık alanında yeni çalışmalar — kanıt gücüyle birlikte sade bir derleme.',
-        href: '/bilimsel-pencere/yeni-arastirmalar',
+          'NAD+ molekülünün hücresel yaşlanmadaki yeri, sirtuin/PARP/CD38 yolakları, "sebep mi sonuç mu?" tartışması.',
+        href: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
+        readingMinutes: 9,
       },
     ],
   },

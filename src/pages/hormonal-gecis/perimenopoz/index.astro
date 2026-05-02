@@ -19,32 +19,9 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const editorPick = {
-  href: '/hormonal-gecis/perimenopoz/perimenopoz-nedir',
-  title: 'Perimenopoz Nedir? — Temel Rehber',
-  lede: 'Çoğumuzun adını sonradan koyduğu bir geçiş: önce uyku biraz tuhaflaşır, sonra adet aralıkları kayar, bir gün aynada bir başkasıyla göz göze geldik gibi hissederiz. Sahne arkasında ve bir kahve eşliğinde defalarca konuştuğumuz bu sürecin sade bir tarifi.',
-  writerSlug: 'isik-selin-gunce',
-  readingMinutes: 5,
-  image: submenuHeroByRoute['/hormonal-gecis/perimenopoz']!,
-};
+const editorPick: any = null;
 
 const tocArticles = [
-  {
-    href: '/hormonal-gecis/perimenopoz/perimenopozda-adet-duzensizligi-ne-normal-ne-zaman-doktora-gidilmeli',
-    title: 'Perimenopozda Adet Düzensizliği — Ne Normal, Ne Zaman Doktora?',
-    excerpt:
-      'Adet düzenindeki değişimleri normal sınırlar içinde okumak, kırmızı bayrakları ayırt etmek ve doğru zamanda kadın doğuma başvurmak için pratik rehber.',
-    writerSlug: 'isik-selin-gunce',
-    readingMinutes: 7,
-  },
-  {
-    href: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
-    title: 'Bellek ve Odaklanma — Bilişsel Değişimler',
-    excerpt:
-      'Unutkanlık veya dikkat dağınıklığı; uyku, stres ve hormonal dalgalanma ile birlikte düşünüldüğünde daha anlamlı bir resim verir.',
-    writerSlug: 'rima-erdemir',
-    readingMinutes: 9,
-  },
   {
     href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
     title: 'Menopozda Uyku Bozukluğu — Dinlenme Rehberi',
@@ -60,16 +37,6 @@ const themes = [
     title: 'Uyku ve gece terlemesi',
     text: 'Uyku bölünmesi ve gece terlemesi vasomotor belirtilerle ilişkilendirilebilir; günlük güç ve ruh hali üzerindeki etkileri birlikte ele alınır.',
     href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-  },
-  {
-    title: 'Ruh hali ve kaygı',
-    text: 'Östrojen dalgalanmaları ruh hali üzerinde etkili olabilir; stres ve yaşam yükü de aynı tabloda değerlendirilmelidir.',
-    href: '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
-  },
-  {
-    title: 'Odak ve bellek',
-    text: '“Beyin sisi” benzeri tanımlar yaygındır; tek başına hormon yerine çok faktörlü bir okuma genelde daha doğrudur.',
-    href: '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
   },
   {
     title: 'Belirtileri sınıflandırmak',
@@ -152,7 +119,7 @@ const themes = [
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <EditorPickCard
+      {editorPick && (<EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -160,7 +127,7 @@ const themes = [
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />
+      />)}
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>

@@ -19,14 +19,7 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const editorPick = {
-  href: '/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu',
-  title: '40 Sonrası Sağlık Kararı: İstek mi, İhtiyaç mı, Yatırım mı?',
-  lede: 'Sağlık kararını "şimdi mi, sonra mı?" sorusu üzerinden okumak, finansal okuryazarlığın yıllar önce öğrettiği bir disiplin… aynı disiplini bedenimize uygulayabilir miyiz?',
-  writerSlug: 'ozlem-denizmen',
-  readingMinutes: 8,
-  image: submenuHeroByRoute['/hormonal-gecis/40-sonrasi/saglik-kararlarinda-simdi-mi-sorusu']!,
-};
+const editorPick: any = null;
 
 const tocArticles = [
   {
@@ -36,14 +29,6 @@ const tocArticles = [
       '40 sonrası dönemde hangi taramaların ne sıklıkta önemli olduğu, kişisel risk profiline göre nasıl planlanabileceği üzerine bütüncül bir bakış.',
     writerSlug: 'berna-aksoy',
     readingMinutes: 6,
-  },
-  {
-    href: '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz',
-    title: 'Kemik Erimesi: Önleme ve Egzersiz',
-    excerpt:
-      'Çoğu zaman kemikleri bedenin değişmeyen iskeleti gibi düşünürüz; oysa her gün yıkılıp yeniden yapılan canlı bir doku. Egzersiz ona en doğrudan ulaşan dillerden biri.',
-    writerSlug: 'alara-baykent',
-    readingMinutes: 8,
   },
   {
     href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
@@ -147,7 +132,7 @@ const neighbors = [
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <EditorPickCard
+      {editorPick && (<EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -155,7 +140,7 @@ const neighbors = [
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />
+      />)}
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>

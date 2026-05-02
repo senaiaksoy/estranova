@@ -22,14 +22,7 @@ const chapter = chapterMap[path]!;
 const epigraph = subHubEpigraphs[path];
 const next = getNextChapter(path);
 
-const editorPick = {
-  href: '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
-  title: 'Ruh Hali Değişimleri ve Menopoz',
-  lede: 'Östrojen serotoninle, dopaminle, GABA ile doğrudan konuşur. "Abartmıyorum" demek zorunda değilsin — bilim bu değişimleri zaten kabul ediyor.',
-  writerSlug: 'berna-aksoy',
-  readingMinutes: 7,
-  image: submenuHeroByRoute['/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz']!,
-};
+const editorPick: any = null;
 
 const tocArticles = [
   {
@@ -114,7 +107,7 @@ const neighbors = [
         <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
       </header>
 
-      <EditorPickCard
+      {editorPick && (<EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -122,7 +115,7 @@ const neighbors = [
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />
+      />)}
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>
