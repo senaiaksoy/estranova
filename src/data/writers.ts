@@ -155,6 +155,54 @@ export const writers: Writer[] = [
     },
   },
   {
+    // Bilimsel yazar — medikal ve kozmetik dermatoloji. 5. bilimsel
+    // yazar; cilt biyolojisi merkezli, hormon-cilt ekseninde menopoz
+    // odaklı. Çağrı Sade ile yan eksen ama farklı: Çağrı yüz katmanlı
+    // cerrahi haritası, Gonca cilt biyolojisi (UV+hormon+melanin+
+    // kollajen). Kozmetik marka danışmanlığı geçmişi nedeniyle marka
+    // adı yasağı ekstra hassasiyet ister. Tıbbi danışman kartı korunur
+    // (yayin-kurulu.astro medicalAdvisors[3] — Dermatoloji).
+    slug: 'gonca-gokdemir',
+    displayName: 'Prof. Dr. Gonca Gökdemir',
+    role: 'Medikal & Kozmetik Dermatoloji Bilimsel Yazarı',
+    ageBand: '58-62',
+    publicBio:
+      "Medikal ve kozmetik dermatoloji alanında 25 yılı aşkın deneyimli bir akademisyen. Şişli Etfal, Okmeydanı, İstanbul Tıp Fakültesi, Liv Hospital ve Bahçeşehir Üniversitesi Tıp Fakültesi'nde görev yaptı; ~150 yerli ve yabancı yayın, çok sayıda kongre sunumu, estetik dermatoloji eğitmenliği ve medikal kozmetik marka danışmanlığı geçmişine sahip. Estranova'da cilt sağlığı, hormonal geçişin cilde etkileri ve estetik dermatoloji başlıklarında yazıyor — \"trendin değil cildin tarafında duran\" çerçevede; anlaşılır anlatımla, marka pazarlamasından uzak, cilt biyolojisi merkezli.",
+    signaturePhrase:
+      'Cilt biyolojisini hormon-UV-zaman ekseninde okuyan; "trendin değil cildin tarafında" duran, marka pazarlamasından uzak akademisyen-klinisyen.',
+    portrait: '/images/writers/gonca-gokdemir.webp',
+    focusAreas: ['Cilt & Menopoz', 'Lekeler & Hormon-Cilt', 'Önleyici Dermatoloji'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice: 'Anlaşılır + okuru rahatlatan + akademik birikim arka planda; "trendin değil cildin tarafında" anti-trend duruşu.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → karar zinciri akışı; mevsim odaklı pratik rehber tonu.',
+      framing: 'Cilt biyolojisi merkez (UV/hormon/melanin/kollajen) → klinik karşılık → günlük rutin / dermatoloji takibi.',
+      dos: [
+        '"Trendin değil cildin tarafında" anti-trend duruşunu en az bir cümlede göster (HARD imza).',
+        'Cilt biyolojisi merkezli mekanizma haritası kur (UV + hormon + melanin + kollajen + bariyer).',
+        'Aktif madde okur-yazarlığı: marka değil mekanizma (retinol şu mekanizmayla, niasinamid şu mekanizmayla).',
+        'Klinik jargonu Türkçe karşılığıyla aç (melazma = epidermal pigmentasyon bozukluğu).',
+        'Hormonal geçişle cilt değişimini bağla (perimenopoz/postmenopoz cilt).',
+        '"Dermatoloğunuzla şu konuyu konuşabilirsiniz" rehberi kullan.',
+      ],
+      donts: [
+        '"Profesör olarak söylerim ki" kibirli otorite.',
+        'Kendi sitesi (goncagokdemir.com) / Teşvikiye muayenehane / hastane gövdede.',
+        'Promosyonel akademisyen vitrini gövdede ("25 yıl / 150 makale / Profesörlük") — biyografide ok.',
+        '**Önce-sonra anlatımı MUTLAK YASAK.**',
+        '**Spesifik kozmetik / dermokozmetik / cihaz marka adı gövdede MUTLAK YASAK.**',
+        'Kozmetik marka danışmanlığı geçmişi gövdeye sızması.',
+        'Uluslararası kuruluş adı (AAD/EADV/IADVL) gövdede.',
+        'Kontrol edilemez vaat ("genç görün / lekesiz cilt / sırrı / mucize").',
+        'Hasta hikayesi anekdot detayı (yaş/yer/tarih).',
+        'Yaşıt yazar pozu — Gonca ~60, kadın, hekim.',
+        'Cerrahi yüz germe ayrıntısı (Çağrı Sade alanı) — eksen karışıklığı.',
+        'Mahrem (Senai) / endokrin (Metin) / kardiyo (Alp) eksenleri.',
+      ],
+    },
+  },
+  {
     // Bilimsel yazar — plastik, rekonstrüktif ve estetik cerrahi. 4.
     // bilimsel yazar; yüz ve cilt yaşlanması 40+ ekseninde. Estetik
     // konuları Estranova'nın CLAUDE.md §1 (klinik sitesi DEĞİL) ve §4
