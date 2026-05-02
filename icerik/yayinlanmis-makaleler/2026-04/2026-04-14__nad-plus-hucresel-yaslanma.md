@@ -8,7 +8,7 @@ url: /bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["NAD+", "hücresel yaşlanma", "sirtuin", "biohacking", "menopoz"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # NAD+ ve Hücresel Yaşlanma — Gelişmekte Olan Bilim

@@ -8,7 +8,7 @@ url: /bilimsel-pencere/yeni-arastirmalar/sosyal-medyada-menopoz-bilgisi
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["sosyal medya", "bilgi okuryazarlığı", "menopoz bilgisi", "sağlık bilgisi", "kaynak doğrulama", "editöryel filtre", "medya okuryazarlığı", "kanıt"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Sosyal Medyada Menopoz Bilgisi — Hangi Sinyaller Güvenilir?

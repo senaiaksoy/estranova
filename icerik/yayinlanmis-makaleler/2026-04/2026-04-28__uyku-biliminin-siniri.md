@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/uyku-biliminin-siniri
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["uyku bilimi", "kanıt gücü", "uyku takip cihazı", "polisomnografi", "melatonin", "BDT-İ", "menopoz uyku"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Uyku Biliminin Sınırı: Ne Biliniyor, Ne Bilinmiyor

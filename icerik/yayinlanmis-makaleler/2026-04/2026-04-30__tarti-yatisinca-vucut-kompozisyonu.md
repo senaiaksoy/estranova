@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["menopoz", "vücut kompozisyonu", "kas kaybı", "viseral yağ", "tartı", "BMI sınırlılığı", "menopozda kilo", "kompozisyon değişimi", "östrojen düşüşü", "direnç antrenmanı", "protein"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması

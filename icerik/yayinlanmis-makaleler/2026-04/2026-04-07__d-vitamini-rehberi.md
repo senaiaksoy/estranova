@@ -8,7 +8,7 @@ url: /zamansiz-yasam/d-vitamini-rehberi
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["D vitamini", "menopoz", "kemik sağlığı", "güneş", "takviye", "tarama"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # D Vitamini Rehberi

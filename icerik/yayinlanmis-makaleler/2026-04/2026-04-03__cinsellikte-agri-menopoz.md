@@ -8,7 +8,7 @@ url: /beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["cinsellikte ağrı", "cinsel ilişkide ağrı", "disparoni", "dispareuni", "menopoz", "mahrem bölge", "vajinal kuruluk", "hormon"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Cinsellikte Ağrı — Menopozda Dispareuniya Rehberi

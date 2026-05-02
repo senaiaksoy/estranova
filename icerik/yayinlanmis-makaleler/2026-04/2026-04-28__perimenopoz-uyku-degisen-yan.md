@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["perimenopoz", "uyku", "uyku evresi", "östrojen", "progesteron", "REM", "NREM", "menopoz uyku"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Perimenopozda Uykunun Gerçekten Değişen Yanı

@@ -8,7 +8,7 @@ url: /beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["menopoz", "cilt", "kolajen", "östrojen", "retinoid", "hyaluronik asit", "HRT cilt", "cilt bakım rutini", "40+ kadın", "vulvovajinal"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Menopozda Cilt Değişimleri — Aynaya Sakince Bakmak ve Bakım Rehberi

@@ -8,7 +8,7 @@ url: /zamansiz-yasam/kilo-artisi-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "kilo artışı", "östrojen", "visseral yağ", "bel çevresi", "sarkopeni", "kas kütlesi", "metabolizma", "insülin direnci", "protein", "direnç egzersizi", "40+ kadın"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet

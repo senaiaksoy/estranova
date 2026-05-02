@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["kemik erimesi", "osteoporoz", "menopoz", "egzersiz", "kemik yoğunluğu", "D vitamini", "kalsiyum", "DEXA", "östrojen", "40+ kadın"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Menopozda Kemik Erimesi: Egzersizle Neler Değişebilir?

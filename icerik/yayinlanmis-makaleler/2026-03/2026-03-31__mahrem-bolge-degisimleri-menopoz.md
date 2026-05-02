@@ -8,7 +8,7 @@ url: /beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["mahrem bölge", "vajinal atrofi", "vulvovajinal atrofi", "vajinal kuruluk", "menopoz", "östrojen", "nem", "cinsel sağlık"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Menopozda Mahrem Bölge Değişimleri

@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/sabah-ucte-uyanmak-dokuz-yil
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "uyku", "sabah uyanmak", "HRT", "dokuz yıl", "kişisel öykü", "üç kuşaklı bağ"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Sabah Üçte Uyanmak: Dokuz Yılın Notları

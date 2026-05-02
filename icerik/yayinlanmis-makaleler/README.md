@@ -1,7 +1,7 @@
 # Estranova Yayınlanmış Makale Arşivi
 
 Toplam makale: **44**
-Son export: 2026-05-01
+Son export: 2026-05-02
 
 Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik üretilir. `src/pages/` altındaki Astro source'tan metadata, `dist/` altındaki build HTML'den gövde markdown'ına dönüştürülür. Aynı içerik aynı anda obsidian vault'a (`<VAULT>/articles/`) da yazılır.
 
@@ -29,10 +29,10 @@ npm run articles:export # markdown'a dök
 
 | Tarih | Yazar | Başlık | Bölüm |
 |---|---|---|---|
-| 2026-05-01 | - | [Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı](2026-05/2026-05-01__menopozda-idrar-kacirma-pelvik-taban.md) | Beden & Yakınlık |
-| 2026-05-01 | - | [Sıcacık Köşe — Bu Ay Kadın Dünyasında Ne Konuşuluyor?](2026-05/2026-05-01__nisan-2026.md) | editorun-kosesi |
-| 2026-05-01 | - | [Nasıl Araştırıyoruz](2026-05/2026-05-01__nasil-arastiriyoruz.md) | editoryal-politika |
-| 2026-05-01 | - | [Tarama ve İzlem: Genel Çerçeve](2026-05/2026-05-01__tarama-testleri.md) | Hormonal Geçiş |
+| 2026-05-02 | - | [Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı](2026-05/2026-05-02__menopozda-idrar-kacirma-pelvik-taban.md) | Beden & Yakınlık |
+| 2026-05-02 | - | [Sıcacık Köşe — Bu Ay Kadın Dünyasında Ne Konuşuluyor?](2026-05/2026-05-02__nisan-2026.md) | editorun-kosesi |
+| 2026-05-02 | - | [Nasıl Araştırıyoruz](2026-05/2026-05-02__nasil-arastiriyoruz.md) | editoryal-politika |
+| 2026-05-02 | - | [Tarama ve İzlem: Genel Çerçeve](2026-05/2026-05-02__tarama-testleri.md) | Hormonal Geçiş |
 
 ### 2026-04
 

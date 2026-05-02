@@ -8,7 +8,7 @@ url: /zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "perimenopoz", "depresyon", "anksiyete", "duygudurum", "ruh hali", "HRT", "SSRI", "psikoterapi"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Menopozda Ruh Hali Değişimleri — Bir Dalga, Bir Soru, Bir Eşik

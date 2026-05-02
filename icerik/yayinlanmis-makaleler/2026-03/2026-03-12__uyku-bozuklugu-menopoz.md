@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "uyku", "uyku bozukluğu", "insomnia", "sıcak basması", "uyku hijyeni"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Menopozda Uyku Bozukluğu — Dinlenme Rehberi

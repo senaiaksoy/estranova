@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["akşam hareketi", "uyku", "melatonin", "vücut ısısı", "egzersiz zamanlaması", "perimenopoz", "termoregülasyon", "sirkadiyen ritim"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Akşam Hareketinin Uykuya Etkisi: Melatonin ve Serin Vücut

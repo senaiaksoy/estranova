@@ -8,7 +8,7 @@ url: /zamansiz-yasam/seyahat-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["seyahat", "menopoz", "uzun uçuş", "jet lag", "zaman farkı", "sıcak basması", "uyku", "HRT", "40+ kadın", "sosyal yaşam"]
-exportedAt: 2026-05-01
+exportedAt: 2026-05-02
 ---
 
 # Seyahatte Menopoz — Uçuş, Zaman Farkı ve Otel Odası Notları

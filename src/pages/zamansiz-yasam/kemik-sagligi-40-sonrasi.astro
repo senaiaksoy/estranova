@@ -19,6 +19,7 @@ const tocEntries = [
   { id: 'beslenme-destegi', label: 'Beslenme Desteği' },
   { id: 'hareket-plani', label: 'Hareket Planı' },
   { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
+  { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -67,14 +68,20 @@ const articleSchemas = buildArticleSchemas({
         <ArticleProsePanel>
           <h2 id="neden-onemli">Neden Kemik Sağlığı Önemlidir?</h2>
           <p>
-            Kemik sağlığını çoğumuz ancak bir ağrı, düşme ya da ailede kırık hikayesi duyunca düşünürüz; oysa kemikler yalnızca vücudu ayakta tutan bir iskelet değildir, hareketin, dengenin ve günlük işlevlerin temel taşıdır.
-            Kalsiyum ve fosfor gibi mineraller için bir depo görevi görürler. Yaşla birlikte kemik yapım-yıkım dengesi değiştiğinde,
-            bu sistem daha kırılgan hale gelebilir.
+            Bir noktada şunu fark ettim: kemik sağlığı çoğu zaman ancak bir ağrı, düşme ya da ailede kırık
+            hikâyesi duyulduğunda gündeme geliyor. Oysa o ana kadar sessizce işleyen bir yapı var.
           </p>
           <p>
-            40 yaş sonrası dönemde östrojen düzeylerindeki azalma kemik döngüsünü etkiler. Kemik yıkımı artarken yeni kemik yapımı aynı hızda
-            ilerlemeyebilir. Bu ilişki güçlü kanıtla desteklenmiştir <Evidence level={5} />. Bu nedenle kemik sağlığına erken dönemde yatırım yapmak,
-            yalnızca bugün için değil, ileri yaş hareketliliği için de kritik değerdedir.
+            Kemikler yalnızca vücudu ayakta tutan bir iskelet değil; hareketin, dengenin ve günlük işlevlerin
+            temel taşı. Kalsiyum ve fosfor gibi mineraller için bir depo görevi de görürler. Yaşla birlikte
+            kemik yapım-yıkım dengesi değiştiğinde, bu sistem daha kırılgan hâle gelebilir.
+          </p>
+          <p>
+            40 yaş sonrası dönemde östrojen düzeylerindeki azalma kemik döngüsünü etkiler. Kemik yıkımı artarken
+            yeni kemik yapımı aynı hızda ilerlemeyebilir <Evidence level={5} />. Bu nedenle kemik sağlığına
+            erken dönemde yatırım yapmak, yalnızca bugün için değil, ileri yaş hareketliliği için de kritik
+            değerdedir. Tanıdığım bir kadın bunu şöyle ifade etmişti: "Kemiğin değişmek için izin istemiyor —
+            zaten değişiyor. Önemli olan ne kadar erken fark ettiğin."
           </p>
 
           <h2 id="osteopeni-osteoporoz">Osteopeni ve Osteoporoz Arasındaki Fark</h2>
@@ -99,44 +106,91 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="kemik-taramasi">Kemik Sağlığı Taraması: Ne Zaman, Nasıl?</h2>
           <p>
-            Tarama yaşı konusunda tek bir cevaba sıkışmak yerine, senin risk öyküne bakmak daha doğru olur. Kılavuzlar çoğu kadın için 65 yaş sonrası rutin DEXA taramasını önerir <Evidence level={5} />. Ancak risk faktörü olanlarda daha erken tarama
-            planlanabilir. Erken menopoz, aile öyküsü, uzun süreli steroid kullanımı ve düşük travma kırığı öyküsü bu kararı etkileyen başlıklardır.
+            Tarama yaşı konusunda tek bir cevaba sıkışmak yerine, kişisel risk öyküsüne bakmak daha doğru.
           </p>
           <p>
-            İlk tarama, kişiye özgü bir başlangıç noktası sağlar. Sonraki ölçümler bu başlangıç değeriyle karşılaştırılarak izlenir.
-            Bazı durumlarda P1NP ve CTX gibi kemik döngüsü belirteçleri de sağlık kararına destek olabilir.
+            Kılavuzlar çoğu kadın için 65 yaş sonrası rutin DEXA taramasını önerir <Evidence level={5} />. Ancak
+            risk faktörü olanlarda daha erken tarama planlanabilir. Erken menopoz, aile öyküsü, uzun süreli
+            steroid kullanımı ve düşük travma kırığı öyküsü bu kararı etkileyen başlıklardır. Hekimimle bir
+            konuşmamızda "tarama yaşı bir kural değil bir kişisel karar" demişti — kuralın tek başına yeterli
+            olmadığı bir alan.
+          </p>
+          <p>
+            İlk tarama, kişiye özgü bir başlangıç noktası sağlar. Sonraki ölçümler bu başlangıç değeriyle
+            karşılaştırılarak izlenir. Bazı durumlarda P1NP ve CTX gibi kemik döngüsü belirteçleri de sağlık
+            kararına destek olabilir.
           </p>
 
           <h2 id="beslenme-destegi">Beslenme ile Kemik Desteği</h2>
           <p>
-            Kemik sağlığı tabağında da başlar; günlük kalsiyum hedefi çoğu 40+ kadın için 1000-1200 mg aralığındadır <Evidence level={5} />. Süt ürünleri, koyu yeşil yapraklı sebzeler,
-            susam, badem ve kalsiyumla zenginleştirilmiş ürünler bu hedefe katkı sağlayabilir.
+            Kemik sağlığı tabakta başlar — ama tabaktaki sayı kişiden kişiye değişiyor.
           </p>
           <p>
-            D vitamini düzeyi kemik sağlığında belirleyicidir. Birçok kişide 1000-2000 IU aralığında destek planı kullanılabilir; ancak doz kararı
-            kan düzeyi ve kişisel risk profiline göre verilmelidir <Evidence level={5} />. Protein alımı da gözden kaçmamalıdır. Kas gücü ile kemik dayanıklılığı
-            birlikte ilerlediği için günlük protein hedefi genellikle 1.0-1.2 g/kg düzeyinde planlanır <Evidence level={4} />.
+            Günlük kalsiyum hedefi çoğu 40+ kadın için 1000-1200 mg aralığındadır <Evidence level={5} />. Süt
+            ürünleri, koyu yeşil yapraklı sebzeler, susam, badem ve kalsiyumla zenginleştirilmiş ürünler bu
+            hedefe katkı sağlayabilir.
+          </p>
+          <p>
+            D vitamini düzeyi kemik sağlığında belirleyici. Birçok kişide 1000-2000 IU aralığında destek planı
+            kullanılabilir; ancak doz kararı kan düzeyi ve kişisel risk profiline göre verilmelidir
+            <Evidence level={5} />. Protein alımı da gözden kaçmamalı. Kas gücü ile kemik dayanıklılığı birlikte
+            ilerlediği için günlük protein hedefi genellikle 1.0-1.2 g/kg düzeyinde planlanır
+            <Evidence level={4} />.
+          </p>
+          <p>
+            Bir konuda iki kitap okuyunca "biliyorum" diyorum; üçüncüde fark ediyorum ki üçü farklı şey
+            söylüyor. Kalsiyum konusu da bunlardan biri — kaynaklara göre günlük hedef 800 mg'a iniyor, başka
+            kaynaklarda 1500 mg'a çıkıyor. Buradaki en sade tutum şu olabilir: kendi hekiminin önerdiği aralığı
+            referans almak; bunun üzerine ekstra "biliyorum" eklemeye çalışmamak.
           </p>
 
           <h2 id="hareket-plani">Hareket Planı ve Yaşam Alışkanlıkları</h2>
           <p>
-            Hareket planı, sporcu gibi yaşamak zorunda olduğun anlamına gelmez; ağırlık taşıyan egzersizler, direnç antrenmanı ve denge çalışmaları kemik korunmasında temel araçlardır <Evidence level={5} />.
-            Haftada 3-4 gün planlı egzersiz, yalnızca kemik yoğunluğunu değil düşme riskini de olumlu etkiler.
+            Hareket planı, sporcu gibi yaşamak zorunda olduğun anlamına gelmez — sade bir ritim çoğu zaman
+            yetiyor.
           </p>
           <p>
-            Sigara bırakma, alkolü sınırlama ve uzun süreli hareketsizlikten kaçınma da en az egzersiz kadar önemlidir.
-            Yüksek tuz ve aşırı kafein tüketimi bazı kişilerde kalsiyum dengesini olumsuz etkileyebilir <Evidence level={3} />.
-            Burada amaç katı yasaklar değil, sürdürülebilir bir denge kurmaktır.
+            Ağırlık taşıyan egzersizler, direnç antrenmanı ve denge çalışmaları kemik korunmasında temel
+            araçlardır <Evidence level={5} />. Haftada 3-4 gün planlı egzersiz, yalnızca kemik yoğunluğunu değil
+            düşme riskini de olumlu etkiler. Tanıdığım bir kadın bunu şöyle anlatmıştı: "Pilates+yürüyüş çapamdı;
+            haftada bir gün ağırlık eklediğimde aradaki farkı zamanla hissettim — bir hamlede değil, ritimde
+            yerleşen bir biçimde."
+          </p>
+          <p>
+            Sigara bırakma, alkolü sınırlama ve uzun süreli hareketsizlikten kaçınma da en az egzersiz kadar
+            önemli. Yüksek tuz ve aşırı kafein tüketimi bazı kişilerde kalsiyum dengesini olumsuz etkileyebilir
+            <Evidence level={3} />. Burada açık tuttuğum bir soru var: hangi yaşam tarzı değişikliğinin kemik
+            kütlesinde ne kadar fark yarattığını bireysel ölçekte kestirmek bende mümkün değil. Bilmediğim bir
+            kısım hâlâ var; bu yüzden yargılamadan birden fazla çapayı yan yana koymak en sade yol.
           </p>
 
           <h2 id="tibbi-secenekler">Tıbbi Seçenekler ve Kişiselleştirme</h2>
           <p>
-            Bazı durumlarda yaşam alışkanlıkları tek başına yeterli olmayabilir; risk düzeyi yüksek kişilerde hekim değerlendirmesi ile HRT, bifosfonatlar, SERM veya diğer ilaç seçenekleri gündeme gelebilir.
-            Bu tedaviler için kanıt seviyesi güçlüdür <Evidence level={5} />, ancak her seçenek tüm kişiler için uygun olmayabilir.
+            Bazı durumlarda yaşam alışkanlıkları tek başına yeterli olmayabilir; risk düzeyi yüksek kişilerde
+            hekim değerlendirmesi ile HRT, bifosfonatlar, SERM veya diğer ilaç seçenekleri gündeme gelebilir. Bu
+            tedaviler için kanıt seviyesi güçlü <Evidence level={5} />; ancak her seçenek tüm kişiler için uygun
+            olmayabilir.
           </p>
           <p>
-            Tıbbi planlama yapılırken yaş, kırık öyküsü, eşlik eden hastalıklar, kalp-damar riski ve kişisel öncelikler birlikte değerlendirilir.
-            En sağlıklı yaklaşım, yaşam tarzı desteği ile gerektiğinde tıbbi tedaviyi dengeli biçimde birleştirmektir.
+            Tıbbi planlama yapılırken yaş, kırık öyküsü, eşlik eden hastalıklar, kalp-damar riski ve kişisel
+            öncelikler birlikte değerlendirilir. En sağlıklı yaklaşım, yaşam tarzı desteği ile gerektiğinde
+            tıbbi tedaviyi dengeli biçimde birleştirmek. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
+          </p>
+
+          <h2 id="kapanis">Kapanış</h2>
+          <p>
+            Kemik bir hastalık başlığı değil; yıllar içinde sade biçimde desteklenen bir yapı.
+          </p>
+          <p>
+            Kalsiyum, D vitamini, protein, ağırlık taşıyan hareket, denge çalışması, sigarayı bırakma,
+            alkolü ölçülü tutma — bu altı çapa üst üste binerek yapıyı koruyor. Tek bir hamle değil; yıllara
+            yayılan bir ritim. Erken bir tarama bireysel başlangıç noktasını verir, sonraki yıllar bu noktanın
+            etrafında kişiselleşir.
+          </p>
+          <p>
+            Belki şu soru yardımcı olur: bu yıl yapımı destekleyecek hangi tek alışkanlığı yargılamadan, sadece
+            yerleştirmek niyetiyle ekleyebilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir
+            cümle söylemişti; sen onu kendi yapına yazıyorsun.
           </p>
         </ArticleProsePanel>
 
@@ -154,9 +208,32 @@ const articleSchemas = buildArticleSchemas({
 
         <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-          <p class="leading-relaxed text-ink/80">
-            Kemik sağlığı erken planlama gerektiren bir alandır. Beslenme ve hareket, yaşamın her döneminde kemik kalitesini destekleyebilir.
-            Düzenli tarama ve erken müdahale, ileri yaşta kırık riskini anlamlı biçimde azaltır. Planlama mutlaka kişisel risk profili ile birlikte yapılmalıdır.
+          <p class="mb-3 leading-relaxed text-ink/80">
+            Kemik sağlığı, östrojen düşüşünün hızlandırdığı bir kayıp eğrisi üzerinden okunan, 40 sonrası
+            kadınlar için klinik olarak öncelikli bir alandır. Yaşa bağlı kemik döngüsündeki yıkım-yapım
+            dengesizliği menopoz geçişinde belirginleşir; postmenopozun ilk 5-10 yılında kayıp eğrisi en
+            dik seyrini izleyebilir.
+          </p>
+          <p class="mb-3 leading-relaxed text-ink/80">
+            DEXA (DXA) ölçümü, kemik mineral yoğunluğunun tanı çerçevesinde standart yöntemidir; T-skoru
+            -1 ile -2.5 arası osteopeni, -2.5 ve altı osteoporoz olarak sınıflandırılır. Tarama zamanlaması
+            ulusal kılavuzlarda 65 yaş sonrası rutin önerilirken, erken menopoz, aile öyküsü, uzun süreli
+            kortikosteroid kullanımı ve düşük travma kırığı öyküsü daha erken tarama gerektirebilir.
+          </p>
+          <p class="mb-3 leading-relaxed text-ink/80">
+            Beslenme desteğinde günlük kalsiyum hedefi 1000-1200 mg, D vitamini düzeyi serum 25(OH)D ölçümü
+            ile bireyselleştirilir; protein alımı 1.0-1.2 g/kg düzeyinde planlanır. Ağırlık taşıyan
+            egzersizler, direnç antrenmanı ve denge çalışmaları kemik koruması ile düşme riski azaltımında
+            birlikte etki sağlar.
+          </p>
+          <p class="mb-3 leading-relaxed text-ink/80">
+            Tıbbi seçenekler (HRT, bifosfonatlar, SERM, denosumab gibi anti-rezorptif ajanlar) yaş, kırık
+            öyküsü, kemik mineral yoğunluğu, eşlik eden hastalıklar ve kişisel risk-fayda dengesinde
+            değerlendirilir. Bu yazıdaki bilgiler genel bir bilgilendirme amacı taşır; tarama zamanlaması,
+            takviye dozajı ve tedavi kararı kişisel sağlık geçmişi ile birlikte hekim tarafından verilmelidir.
+          </p>
+          <p class="text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
           </p>
         </section>
 
