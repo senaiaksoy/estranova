@@ -382,6 +382,67 @@ Bilgi, belirsizliğin panzehiridir — bu konuda da öyle. Yarısı yaşıyor am
 
 > **NOT:** Bu makale **Evidence + Bilimsel Editör Notu (Doç. Dr. Senai Aksoy imzalı, ayrı blok) + ArticleAuthorBlock + JSON-LD + RelatedReadings** olmadan eksiktir; gerçek yayın versiyonunda Adım 10 zorunlu yapısal ögeler eklenir.
 
+### Bilimsel Editör Notu (1. şahıs istisna örneği)
+
+> **Önemli:** Senai-yazıyor-Senai-inceleyiyor durumu için **standart 5-katmanlı BEN şablonu yerine 1. şahıs istisnası** uygulanır. Detay: [`docs/ARTICLE-PRODUCTION-SPEC.md`](../../docs/ARTICLE-PRODUCTION-SPEC.md) §4.3-ek + [`hot.md §5c`](./hot.md#tibbi-sinir).
+
+```
+**Kanıt Düzeyi:** orta–iyi kanıt (4-5)
+
+*Bu yazıda klinik tarafı bilinçle kısa tuttum; aynı konuyu — yazar değil, kadın
+hastalıkları uzmanı olarak — burada biraz daha açayım.*
+
+**Klinik bağlam:** Üriner inkontinans postmenopozal kadınlarda kliniğimde de
+en sık karşılaştığım — ama en az dile getirilen — tablolardan biri. Yaklaşık
+%30-50 yaygınlık literatürde geçer; utanma kaynaklı bildirim eksikliği nedeniyle
+gerçek sıklığı muhtemelen daha yüksek. Tip ayrımı (stres / urge / mixed) tedavi
+yolunu belirler; karmaşık olgularda ürodinami altın standart değerlendirme aracı.
+
+**Mekanik çerçeve:** Stres tipinde uretra-pelvik taban destek mekanizmasının
+yetersizliği; urge tipinde detrüsör kasının erken/aşırı aktivitesi söz konusu.
+Östrojen düşüşü vajinal-üriner epitel atrofisine yol açıyor; bu hem urge hem
+tekrarlayan idrar yolu enfeksiyonu zemini oluşturuyor. Doğum sayısı ve şekli,
+kronik öksürük, obezite, kabızlık ve ağır kaldırma kümülatif risk faktörleri.
+
+**Klinik kırmızı bayraklar:** Hematüri, ateşle birlikte idrar yakınmaları, ani
+başlangıçlı şiddetli inkontinans, eşlik eden nörolojik defisit, pelvik organ
+prolapsusu bulguları — tabloyu menopoz yorumuyla geçiştirilemez. Erken
+ürolojik/jinekolojik değerlendirme ayırıcı tanıda esastır.
+
+**Pratik bütünleşim:** Tedavi planı bir hiyerarşi izler ve bu sıralamayı
+klinikte titizlikle koruduğum bir disiplin olarak söyleyebilirim: (1) tip
+ayrımı + öykü + temel idrar tetkikleri; (2) davranışsal-fiziksel basamak
+(pelvik taban kas eğitimi, mesane eğitimi, yük faktörü düzenlemesi, lokal
+vajinal östrojen); (3) medikal tedavi (urge tipinde antimuskariniks/beta-3
+agonist gibi seçenekler bireysel değerlendirilir); (4) cerrahi (mid-uretral
+sling stres tipinde altın standart). Yerel lazer/RF uygulamalarının kanıt
+seviyesi sınırlı (Düzey 2-3); standart tedavi öncesi alternatif olarak değil,
+seçilmiş olgularda araştırma çerçevesinde değerlendirilebilir.
+
+**Bireysellik vurgusu:** Yukarıda paylaştıklarım — hem yazıda hem bu notta —
+genel popülasyon çerçevesidir; sizin tablonuzdaki tip ayrımı, eşlik eden
+tıbbi durumlar (kalp yetersizliği, diyabet, nörolojik tablolar), kullandığınız
+ilaçlar, doğum öyküsü ve laboratuvar değerleri tedavi seçimine yön verir.
+Burada okuduğunuz bir başlangıç çerçevesidir, karar değil; sizin için uygun
+adımları kendi hekiminizle birebir değerlendirmeniz önemlidir.
+
+— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+```
+
+**1. şahıs istisnası — yapısal kontrol:**
+
+| Katman | Kural | Bu örnekte |
+|---|---|---|
+| Üst geçiş cümlesi | Italic, varyant havuzundan (3+); Şablon Kırma cooldown 4 makale | ✅ Varyant 1 |
+| Klinik bağlam | İlk veya ikinci cümlede tek "ben" çapası | ✅ "kliniğimde de en sık karşılaştığım" |
+| Mekanik çerçeve | Kompakt klinik özet, "ben" YOK | ✅ |
+| Klinik kırmızı bayraklar | Klinik standart, "ben" YOK | ✅ |
+| Pratik bütünleşim | Tedavi sıralamasında tek "ben" çapası | ✅ "klinikte titizlikle koruduğum disiplin" |
+| Bireysellik vurgusu | *"Sn. Aksoy"* YASAK; *"Yukarıda paylaştıklarım — hem yazıda hem bu notta"* + *"başlangıç çerçevesidir, karar değil"* | ✅ |
+| İmza | Değişmez — *"— Doç. Dr. Senai Aksoy..."* | ✅ |
+| Toplam "ben" çapası | Max 3 (üst geçiş + Klinik bağlam + Pratik bütünleşim) | ✅ 3/3 |
+| Diğer yazarlar için BEN | 3. şahıs *"Sn. [Yazar]"* korunur — bu istisna SADECE Senai-yazıyor durumda | — |
+
 ---
 
 ## Changelog

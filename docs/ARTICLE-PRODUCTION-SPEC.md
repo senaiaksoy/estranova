@@ -344,6 +344,53 @@ Zorunlu yapı:
 - Kullandığı/kullanmadığı HRT, ilaç, doz, lab değerlerine **ima bile** girmez
 - Detay: `writers/gamze-cizreli/hidden.md §5c-ek` + `profile.yaml dual_role_warning`
 
+### 4.3-ek) Senai-yazıyor-Senai-inceleyiyor durumu — 1. şahıs istisnası
+
+> **Bağlam:** Senai Aksoy hem Estranova bilimsel editörü hem de yazar (mahrem klinik konularda — idrar kaçırma, GSM, vajinoplasti, lokal HRT vb.). Yazar imzası "Senai Aksoy" Dr. öneksiz / inceleyici imzası "Doç. Dr. Senai Aksoy" — bilinçli iki ayrı kart, aynı kişi (writers.ts:308-344 yorumu + article-schema.ts:71). **Diğer 8 yazarın makalelerinde** standart 5-katmanlı şablon (3. şahıs *"Sn. [Yazar]'nın yazısında..."*) korunur; **Senai kendi yazılarında** 3. şahıs yapay durduğu için **1. şahıs istisnası** uygulanır.
+
+**Tetikleyici koşul:** `writerSlug === 'senai-aksoy'` olduğunda bu istisna devreye girer. Diğer yazarlarda Faz 4.3 standart şablonu geçerli.
+
+**Senai-için-Senai BEN şablonu (5 katman + üst geçiş + iki "ben" çapası):**
+
+1. **Üst geçiş cümlesi (italic, BEN gövdesinin ilk paragrafı):**
+   - **Varyant 1:** *"Bu yazıda klinik tarafı bilinçle kısa tuttum; aynı konuyu — yazar değil, kadın hastalıkları uzmanı olarak — burada biraz daha açayım."*
+   - **Varyant 2:** *"Yazıyı yazar olarak yazdım; bu notu Estranova'nın bilimsel editörü olarak yazıyorum — aynı konunun klinik disiplin tarafı için."*
+   - **Varyant 3:** *"Yazının başında değinmeden geçtiğim birkaç klinik ayrıntıyı, bu kez uzman tarafımdan eklemek istiyorum."*
+   - **Şablon Kırma Disiplini:** Aynı varyant **2 ardışık makalede yasak**, **havuz cooldown 4 makale**. Article-log "Notlar" sütununda varyant kaydı zorunlu.
+
+2. **Klinik bağlam:** İlk veya ikinci cümlede **tek bir "ben" çapası**:
+   - *"... kliniğimde de en sık karşılaştığım — ama en az dile getirilen — tablolardan biri."*
+   - *"... kliniğimde her hafta birden çok kadında konuştuğum — ama yıllarca sessiz kalmış — bir tablo."*
+   - Sonrası klinik özet (3. şahıs, evrensel referans).
+
+3. **Mekanik çerçeve:** Kompakt klinik özet — fizyoloji. **"Ben" YOK**, evrensel referans.
+
+4. **Klinik kırmızı bayraklar:** Kompakt uyarı listesi. **"Ben" YOK**, klinik standart.
+
+5. **Pratik bütünleşim:** Tedavi hiyerarşisi — **bir cümle kişisel klinik disiplin olarak çerçevelenir**, gerisi standart sıralama:
+   - *"... bu sıralamayı klinikte titizlikle koruduğum bir disiplin olarak söyleyebilirim:"*
+   - *"... klinikte uyguladığım sıralama şu hiyerarşiyi izler:"*
+
+6. **Bireysellik vurgusu:** *"Sn. Aksoy"* formülü YASAK. Yeni formül:
+   > *"Yukarıda paylaştıklarım — hem yazıda hem bu notta — genel popülasyon çerçevesidir; sizin tablonuzdaki [konuya özel: tip ayrımı / anatomik bulgular / eşlik eden tıbbi durumlar / ayırıcı tanılar] tedavi seçimine yön verir. Burada okuduğunuz bir başlangıç çerçevesidir, karar değil; sizin için uygun adımları kendi hekiminizle birebir değerlendirmeniz önemlidir."*
+
+7. **İmza (değişmez):**
+   > *— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü*
+
+**HARD CONSTRAINT (1. şahıs istisnası):**
+- **"Ben" sadece 3 yerde**: (a) üst geçiş cümlesi, (b) Klinik bağlam'da tek cümle, (c) Pratik bütünleşim'de tek cümle. Toplam **max 3 "ben" çapası**.
+- **Yoğun "ben" YASAK** — her paragrafta 1. şahıs ders veren tona kayar; CLAUDE.md §1 *"başhekim vitrini"* yasağına yaklaşır.
+- **"Doçent olarak söylerim ki"** kibirli kalıbı YASAK (mevcut HARD CONSTRAINT korunur).
+- **Tıbbi otorite + sıcak hocalık dengesi** — BEN tonu klinik-eğitici, Senai'nin yazar tonu (komşu sıcaklığı) BEN'e taşınmaz.
+- **İki kart bilinçli ayrımı** — yazar imzası "Senai Aksoy" / inceleyici imzası "Doç. Dr. Senai Aksoy" BEN içinde bulanıklaşmaz.
+- **Bireysellik vurgusu** *"Sn. Aksoy"* yerine *"Yukarıda paylaştıklarım"* — kişiselleştirme + hekim çağrısı + *"başlangıç çerçevesidir, karar değil"* sınırı.
+
+**Uygulama kanıtı (2026-05-02 commit'leri):**
+- [/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban](src/pages/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban.astro) — Varyant 1 üst geçiş
+- [/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz](src/pages/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz.astro) — Varyant 2 üst geçiş
+
+**Premium yayın referansı:** NYT *"Personal Health"* (Jane Brody) ve The Atlantic *"Health"* (James Hamblin) — gazeteci + tıp eğitimli yazarlar; *"As a physician..."* tek cümlelik açık geçiş işareti, sonra metin akar. Estranova'da Türkçe karşılık: yazar/uzman geçişi italic kısa cümle ile işaretlenir, sonra klinik özet kompakt akar.
+
 ### 4.4 ArticleAuthorBlock
 
 `src/data/writers.ts` içindeki yazar profilinden çekilir. Manuel girme; sadece `slug` ile referans. Component otomatik render eder (display name, bio, avatar, link).
