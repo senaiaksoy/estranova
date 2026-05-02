@@ -161,7 +161,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz': {
     src: '/images/library/editorial/zd-stres-yonetimi.webp',
-    alt: 'Bahçede taş oturağında sakin bir an, gözleri kapalı kadın; stres azaltma ve dinginlik teması',
+    alt: 'Sun-lit İstanbul evinin botanik dolu sıcak conservatory köşesinde sabah ışığında yan yana cream-cushioned wicker armchair lerde oturan iki yaşıt kadın (47-52); soldaki warm chestnut tied-back low ponytail, soft cream cashmere oversize kazak ve warm taupe linen wide-leg pant içinde eli kucağında composed peaceful presence ile dingin gülümseme arkadaşına; sağdaki chestnut shoulder dalgalı saç, dusty sage ipek bluz, cream linen pant ve slim brass-gold pendant kolye ile elinde klasik Türk çay bardağı altın detaylı tabakta buharlı, warm gülümseme arkadaşına; bakımlı boyalı saçlar (gri/silver YOK), modest tam kapalı yaka, mature graceful natural cilt; aralarında küçük walnut yan masa üstünde küçük seramik vazoda fresh white peony ve lavanta dalı, açık deri kapaklı not defteri ve dolma kalem, kapalı yeşil cilt sade kapaklı kitap, porselen Türk kahvesi fincan ve seramik tabakta sade lokum ile nar tanesi; arkada peace lily, palm yaprakları ve fiddle leaf fig yeşilliği soft bokeh, sheer keten perde sabah ışığı, brass-burnished floor lamp warm subtle light köşeden; arkadaşla birlikte sakin nefes ve stres azaltma rituali teması',
   },
   '/bilimsel-pencere': {
     src: '/images/heroes/bilimsel-pencere.webp',
