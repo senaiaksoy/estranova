@@ -3,7 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import KuruluCard from '../components/site/KuruluCard.astro';
-import { editors, guestWriters, guestWriterEnAlt } from '../data/writers';
+import { editors, guestWriters, scientificWriters } from '../data/writers';
 
 // ─── Bilimsel editör ────────────────────────────────────────────────────────
 const medicalReviewer = {
@@ -226,7 +226,9 @@ const consultants = [
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Yazar Kadromuz</h2>
             <p class="leading-relaxed text-ink/70">
-              Bilimsel kaynakları sade Türkçe ile yapılandıran konuk yazarlar; odak alanlarına göre alfabetik sıralanmıştır.
+              40+ kadın hayatının köşe yazarları; kendi uzmanlık alanları ile menopoz, perimenopoz ve hormonal geçiş
+              başlıklarının kesişiminde günlük gözlem, soru ve açmazları magazinsel bir tonla aktarıyorlar. Yazılar tıbbi
+              tavsiye değil; deneyim ve bağlam paylaşımıdır. Alfabetik sıralı.
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -241,22 +243,39 @@ const consultants = [
                 profileHref={`/yazarlar/${w.slug}`}
               />
             ))}
-            <KuruluCard
-              anchor={guestWriterEnAlt.slug}
-              name={guestWriterEnAlt.displayName}
-              role={guestWriterEnAlt.role}
-              bio={guestWriterEnAlt.publicBio}
-              portrait={guestWriterEnAlt.portrait}
-              tags={guestWriterEnAlt.focusAreas}
-              profileHref="/yazarlar/senai-aksoy"
-            >
-              <p class="mt-4 rounded-xl border-l-2 border-gold bg-white/60 px-4 py-3 text-sm italic leading-relaxed text-ink/72">
-                Yukarıdaki <a href="#senai-aksoy" class="font-semibold text-burgundy no-underline hover:underline">Bilimsel Editör Doç. Dr. Senai Aksoy</a> ile
-                aynı kişi. Mahrem ya da hassas başlıklarda kimse yazmaya gönüllü olmadığında, hekim kimliğini bir
-                kenara koyarak — komşu sıcaklığıyla, jargonsuz — masaya kendisi oturuyor. Bu kart o "geçici yazar"
-                rolünün izi.
-              </p>
-            </KuruluCard>
+          </div>
+        </section>
+
+        <!-- 3. Bilimsel yazarlar -->
+        <section class="mb-10 rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm">
+          <div class="mb-7 max-w-3xl">
+            <h2 class="mb-3 font-serif text-3xl text-ink">Bilimsel Yazarlar</h2>
+            <p class="leading-relaxed text-ink/70">
+              Hekim ve klinik uzmanlardan oluşan bu kadro, kendi uzmanlık alanında bilimsel doğruluğu öne çıkaran
+              metinler kaleme alır. Konunun gerektirdiği kanıt düzeyi etiketlemesi ve terminoloji denetimi bu yazılarda
+              özellikle takip edilir. Alfabetik sıralı.
+            </p>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {scientificWriters.map((w) => (
+              <KuruluCard
+                anchor={w.slug}
+                name={w.displayName}
+                role={w.role}
+                bio={w.publicBio}
+                portrait={w.portrait}
+                tags={w.focusAreas}
+                profileHref={`/yazarlar/${w.slug}`}
+              >
+                {w.slug === 'senai-aksoy' && (
+                  <p class="mt-4 rounded-xl border-l-2 border-gold bg-white/60 px-4 py-3 text-sm italic leading-relaxed text-ink/72">
+                    Yukarıdaki <a href="#senai-aksoy" class="font-semibold text-burgundy no-underline hover:underline">Bilimsel Editör Doç. Dr. Senai Aksoy</a> ile
+                    aynı kişi. Mahrem ya da hassas başlıklarda — vajinal sağlık, idrar kaçırma, libido — masaya kendisi
+                    oturuyor; jargonu bir kenara bırakıp komşu sıcaklığıyla anlatıyor.
+                  </p>
+                )}
+              </KuruluCard>
+            ))}
           </div>
         </section>
 

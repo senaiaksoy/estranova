@@ -8,6 +8,10 @@ export interface Writer {
   portrait?: string; // /images/writers/{slug}.jpg (yoksa undefined)
   focusAreas: string[]; // 2-3 çekirdek kategori etiketi
   isEditor: boolean; // Berna true, diğerleri false
+  // 'lifestyle' = magazinsel yaşıt sesi (doktor değil, kendi uzmanlığı + 40+
+  // kadın sağlığı kesişimi); 'scientific' = doktor / klinik uzman, kendi
+  // alanında bilimsel anlatım. Default 'lifestyle'.
+  category?: 'lifestyle' | 'scientific';
   writingStyle?: {
     voice: string;
     rhythm: string;
@@ -162,6 +166,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/duygu-karaosmanoglu.webp',
     focusAreas: ['HRT Deneyimi', 'Estetik & Bakım', 'Seyahat & Sosyal Yaşam'],
     isEditor: false,
+    category: 'scientific',
     writingStyle: {
       voice: 'Samimi, arkadaşça ve deneyim paylaşımı güçlü bir yaşıt sesi.',
       rhythm: 'Kısa-orta cümleler; anlatıdan pratik notlara akan sıcak bir tempo.',
@@ -323,6 +328,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/senai-aksoy.webp',
     focusAreas: ['Mahrem Sağlık', 'Hassas Konular', 'Editör Notu'],
     isEditor: false,
+    category: 'scientific',
     writingStyle: {
       voice: 'Sakin, zarif, jargonsuz; "bilen biri" sesi — klinik otorite değil.',
       rhythm: 'Kısa-orta cümle; mahremiyeti yargılamayan zarif tempo.',
@@ -375,16 +381,25 @@ export const writers: Writer[] = [
 
 // Editör her zaman ilk: Berna; diğerleri: displayName alfabetik
 export const editors = writers.filter((w) => w.isEditor);
-// Yazar Kadromuz listesi — alfabetik sıralama (Senai hariç).
-// Senai Aksoy ayrı export ile listenin EN ALTINDA özel pozisyonda
-// render edilir; aynı kişi "Editörler" bölümünde "Doç. Dr." kimliğiyle
-// de görünür — iki rol farklı kimlik (yazar kartı "Dr." öneki kullanmaz).
+
+// Magazinsel yaşıt sesi yazarlar — doktor değil; kendi uzmanlık alanı +
+// 40+ kadın sağlığı kesişiminde günlük gözlem ve magazinsel makaleler.
+// Editör (Berna) ve bilimsel yazarlar (Duygu, Senai) bu listede yer almaz.
 export const guestWriters = writers
   .slice()
-  .filter((w) => w.slug !== 'senai-aksoy')
+  .filter((w) => !w.isEditor && (w.category ?? 'lifestyle') === 'lifestyle')
   .sort((a, b) => a.displayName.localeCompare(b.displayName, 'tr'));
 
-// Senai Aksoy yazar kartı için ayrı export — yayin-kurulu listesinin
-// EN ALTINDA özel pozisyonda render edilir ("Kimsenin Yazmak İstemediği
-// Konu Yazarı" rolüyle).
+// Bilimsel yazarlar — doktor / klinik uzman; kendi uzmanlık alanında
+// bilimsel anlatımla yazıyor. Bilim kurulu (tıbbi danışmanlar) içinden
+// yazıya geçen kadro burada listelenir.
+export const scientificWriters = writers
+  .slice()
+  .filter((w) => w.category === 'scientific')
+  .sort((a, b) => a.displayName.localeCompare(b.displayName, 'tr'));
+
+// Geri-uyumluluk için korunuyor — Senai Aksoy ayrı kart referansı.
+// Yeni yapıda bu kart `scientificWriters` listesinin parçası olarak
+// render edilir; bu export başka veri dosyaları (search-index vb.)
+// referans verirse kırılmasın diye duruyor.
 export const guestWriterEnAlt = writers.find((w) => w.slug === 'senai-aksoy')!;
