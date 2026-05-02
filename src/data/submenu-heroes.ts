@@ -99,6 +99,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zy-vitaminler.webp',
     alt: 'Ahşap tahta üzerinde sabah ışığında yumurtalar, portakal dilimleri, çiğ badem ve ceviz, etiketsiz zeytinyağı; vitamin kaynakları gerçek besinlerle temalandırılmış',
   },
+  '/zamansiz-yasam/d-vitamini-rehberi': {
+    src: '/images/library/editorial/zy-vitaminler.webp',
+    alt: 'Sabah ışığında ahşap masada yumurtalar, portakal dilimleri, çiğ ceviz ve mavi-yeşil yapraklı sebze; etiketsiz zeytinyağı yanında; D vitamini için besin + güneş + takviye üçgenini sade ve dürüst sunan klinik çerçeve teması',
+  },
   '/zamansiz-yasam/deneysel': {
     src: '/images/library/editorial/zy-deneysel.webp',
     alt: 'Akşam çalışma odasında açık ciltli kitap üzerine eğilmiş 50 yaş kadın, pirinç masa lambası sıcak ışık, ciltli kitap rafları bokeh; deneysel yaklaşımlara sakin bilimsel merakla yaklaşma teması',
