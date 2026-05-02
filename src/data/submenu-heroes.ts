@@ -229,7 +229,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/hormonlarin-bilimi': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
-    alt: 'Mermer masada botanik doğa öğeleri ve pencere ışığında düşünceli kadın; hormon biyolojisi teması',
+    alt: 'Akademisyen ev çalışma odasında pencere kenarında sıcak cream damarlı mermer masada saf natürmort (kişi yok); ortada açık leather-bound akademik not defteri üzerinde elle çizilmiş soyut biyolojik akış diyagramı (organik eğriler ve daireler, etiketsiz) ve dolma kalem, solda açık ciltli akademik kitap ve seramik vazoda peony ile magnolia dalı (botanik aksan), sağda buharlı klasik Türk çay bardağı altın tabakta, brass-rimmed okuma gözlüğü, brass orb paperweight; bordo kadife perde edge, sheer keten perde, dışarıda yumuşak yeşil bokeh, brass yeşil camlı banker abajur warm focused light; biyoloji ile doğal güzelliğin kesişiminde hormonların bilimi teması',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma': {
     src: '/images/library/editorial/bp-nad-plus.webp',
@@ -241,7 +241,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
-    alt: 'Mermer masada botanik doğa öğeleri ve pencere ışığında düşünceli kadın; hormon biyolojisinin doğal resmi',
+    alt: 'Akademisyen ev çalışma odasında pencere kenarında sıcak cream damarlı mermer masada saf natürmort (kişi yok); ortada açık leather-bound akademik not defteri üzerinde elle çizilmiş soyut biyolojik akış diyagramı (organik eğriler ve daireler, etiketsiz) ve dolma kalem, solda açık ciltli akademik kitap ve seramik vazoda peony ile magnolia dalı (botanik aksan), sağda buharlı klasik Türk çay bardağı altın tabakta, brass-rimmed okuma gözlüğü, brass orb paperweight; bordo kadife perde edge, sheer keten perde, dışarıda yumuşak yeşil bokeh, brass yeşil camlı banker abajur warm focused light; estrogen biyolojisinin sağlıkla ilişkisini doğal-akademik bir pencereden okumak teması',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma': {
     src: '/images/library/editorial/bp-nad-plus.webp',
