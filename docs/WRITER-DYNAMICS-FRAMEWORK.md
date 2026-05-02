@@ -193,15 +193,23 @@ dynamics:
 
 Çeşitlilik garantisi için **drift guard:**
 
-| Eleman | Cooldown |
-|---|---|
-| Aforizma (alıntı) | **6 makale** |
-| Manifesto kalıbı | **4 makale** |
-| Mevlana metaforu (yazara özgü; örn. Gamze: mum) | **5 makale** |
-| Başlık tipi | **3 makale** |
-| Açılış kalıbı | **4 makale** |
-| Mevsim açılışı (sonbahar/kış vb.) | **4 makale** |
-| Anekdot türü kombinasyonu (örn. T1+T4) | **2 makale** |
+| Eleman | Cooldown | Min. havuz |
+|---|---|---|
+| Aforizma (alıntı) | **6 makale** | yazara göre |
+| Manifesto kalıbı | **4 makale** | yazara göre |
+| Mevlana metaforu (yazara özgü; örn. Gamze: mum) | **5 makale** | — |
+| Başlık tipi | **3 makale** | 4 tip |
+| Mevsim açılışı (sonbahar/kış vb.) | **4 makale** | — |
+| Anekdot türü kombinasyonu (örn. T1+T4) | **2 makale** | — |
+| **(v2.6)** Açılış cümlesi (`opening_pattern`) | **6 makale** + ardışık 2 yasak | **10+ varyant** |
+| **(v2.6)** Kapanış formatı (`closing_pattern`) | **4 makale** + ardışık 2 yasak | **10+ format** |
+| **(v2.6)** Dengeleyici cümle (`balance_phrase`) | **4 makale** + ardışık 2 yasak | **10+ varyant + atlama** |
+| **(v2.6)** "Bilmiyorum" anı (`not_knowing_phrase`) | **4 makale** + ardışık 2 yasak | **10+ varyant** |
+| **(v2.6)** Hekim/uzman çerçevesi (`clinician_frame`) | **4 makale** + ardışık 2 yasak | **10+ varyant** |
+| **(v2.6)** Anekdot kapısı (`anecdote_door`) | **4 makale** + ardışık 2 yasak | **10+ varyant** |
+| **(v2.6)** İmza kapanış cümlesi yapısı (`signature_closing_template`) | **4 makale** + ardışık 2 yasak | **6+ varyant + atlama** |
+| **(v2.6)** Bilimsel Editör Notu 5 başlık dizilimi (`editor_note_layer_titles`) | **6 makale** (3 ardışık birebir yasak) | başlık havuzu rotasyonu |
+| Humor / mizah kalıbı (yazar varsa) | **6 makale** | **8-10 kalıp** |
 
 ### Override mekanizması
 
@@ -340,12 +348,15 @@ Bu framework yayın tarihinde (2026-04-29) zaten yayınlanmış makaleler var. R
 ## Versiyon
 
 - **v1.0** (2026-04-29) — İlk yayım. 5 katmanlı mimari (DNA / log / temporal / evrim / cross-link) + cooldown parametreleri + per-writer YAML schema + Faz 1.5 + Faz 7 entegrasyonu + cross-writer audit altyapısı.
+- **v1.1** (2026-05-02) — **Şablon Kırma Disiplini eklendi** (Berna 13 makale post-mortem'i sonrası, 9 kalıbın 6-10 makalede birebir tekrarı tespit edildi). 7 yeni cooldown alanı standart havuz listesine eklendi: `opening_pattern`, `closing_pattern`, `balance_phrase`, `not_knowing_phrase`, `clinician_frame`, `anecdote_door`, `signature_closing_template`, `editor_note_layer_titles`. Her havuz **minimum 10 varyant**, ardışık 2 makalede aynı varyant yasak. Detay: **`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`** (v2.6 evrensel kuralları).
 
 ## Bağlantılı belgeler
 
-- **CLAUDE.md** — HARD CONSTRAINTS §1-§6
+- **CLAUDE.md** — HARD CONSTRAINTS §1-§6 (Şablon Kırma Disiplini §6 checklist'inde)
 - **docs/ARTICLE-PRODUCTION-SPEC.md** — makale üretimi 6-fazlı spec; Faz 1.5 + Faz 7 framework'e bağlanır
+- **docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md** — v2.6 evrensel şablon kırma kuralları (8 imza kalıbı + cooldown standartları + yapısal tekrar yasakları)
 - **writers/<yazar>.md** — DNA katmanı (Statik A)
 - **writers/<yazar>-article-log.md** — akümülatif log (Katman B)
 - **vault wiki/sites/estranova/writers-profile-architecture.md** — yazar profil mimarisi notu
 - **memory/reference_writer_dynamics_framework.md** — bu framework'e referans memory entry
+- **memory/feedback_template_breaking_universal_2026_05_02.md** — Şablon Kırma Disiplini evrensel kuralı memory entry

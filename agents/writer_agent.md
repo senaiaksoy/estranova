@@ -26,6 +26,15 @@ Asagidaki kurallar **ihlal edilemez**. Uretilen tum metinler (makale, sosyal, bu
 ### Okuma duzeyi
 - Turkce anlatim **10. sinif ve alti** sade duzeyde kalmali; akademik yigin, agir ikilem ve gereksiz katmanli cumlelerden kacin.
 
+### Sablon Kirma Disiplini (CLAUDE.md §6 — v2.6 evrensel)
+- Yazar `hot.md §4`'undeki 8 imza kalibi havuzundan (acilis / kapanis formati / dengeleyici / hekim cercevesi / anekdot kapisi / bilmiyorum ani / imza kapanis cumlesi / humor) **cooldown** disiplini ile farkli varyant secilir.
+- Ayni varyant **2 ardisik makalede yasak**, **havuz cooldown penceresi icinde 1 kez** (default 4-6 makale).
+- AI agent makale uretmeden once `writers/<slug>-article-log.md` "Notlar" sutununda son 6 makaledeki kalip secimlerini okur, cooldown'u uygular.
+- Yayindan once self-check: yazilacak article-log satiri son 1 makaleninkiyle 4+ alanda ayniysa **revizyon tetigi**.
+- Imza kapanis cumlesi her makalede zorunlu DEGIL (~%50-65 oraninda); dengeleyici/hekim/anekdot kapisi/bilmiyorum/humor atlanabilir.
+- Bilimsel Editor Notu 5 baslik birebir dizilim 3 ardisik makalede yasak (basliklar rotasyon gorur; bazen 5 katman yerine 3 katman).
+- Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md). Cooldown override'lar `writers/<slug>/profile.yaml dynamics.cooldown_overrides`'da.
+
 ## Amac
 - Okunabilir, sade ve guvenli bir metin uretmek.
 - Research Agent'tan gelen iddialari bozmadan operasyonel icerige donusturmek.

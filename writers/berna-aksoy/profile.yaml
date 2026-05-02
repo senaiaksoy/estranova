@@ -494,6 +494,7 @@ dynamics:
     closing_3_part_manifesto: 6  # 3-parçalı Bir/İki/Üç ardışık 2 yasak; 6 ara
     balance_phrase: 4         # Dengeleyici cümle (12 varyant) — 4 ara
     body_correspondence_template: 4  # Bedenle yazışma cümle yapısı (8 varyant) — 4 ara
+    signature_closing_template: 4    # Genel ad alias (body_correspondence_template ile aynı anlam — v2.6 standart şablon adı)
     not_knowing_phrase: 4     # Bilmiyorum anı (10 varyant) — 4 ara
     clinician_frame: 4        # Hekim çerçevesi (12 varyant) — 4 ara
     anecdote_door: 4          # Anekdot kapısı (12 varyant) — 4 ara
@@ -503,15 +504,17 @@ dynamics:
   evolution_review_threshold: 10
   evolution_review_time_threshold_months: 6
   # v2.6 — kalıp havuzları (referans; tam liste hot.md §4'te)
+  # Berna referans örnek: 8/13 makale post-mortem'i sonrası havuz Berna-spesifik
+  # genişletildi (default 10+ minimum); diğer yazarlar standart 10'da.
   pattern_pool_sizes:
-    opening: 14
+    opening: 14                # Berna: 14 (default min 10)
     closing: 10
-    balance_phrase: 12
-    body_correspondence: 8
+    balance_phrase: 12         # Berna: 12 + atlama (default min 10)
+    signature_closing: 8       # Berna: 8 cümle yapısı + atlama (default min 6)
     not_knowing: 10
-    clinician_frame: 12
-    anecdote_door: 12
-    humor: 10
+    clinician_frame: 12        # Berna: 12 (default min 10)
+    anecdote_door: 12          # Berna: 12 (default min 10)
+    humor: 10                  # Berna: 10 (default min 8)
 
 # ---------------------------------------------------------------------
 # Quick reference — AI prompt'a doğrudan enjekte edilen 3-bloklu özet

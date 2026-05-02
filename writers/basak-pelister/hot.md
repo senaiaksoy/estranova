@@ -3,6 +3,7 @@
 > **Bu dosya:** Başak sesinin **olmazsa olmaz çekirdeği**. AI agent her makalede `profile.yaml` ile birlikte bunu yükler.
 > **Kapsam:** §4 Yazı Tonu (signature açılış / yumuşatma / kapanış kalıpları + asla listesi) + §5c Tıbbi Sınır Uyarısı.
 > **Başak v2.1 notu:** §0.5 Yürütme Protokolü ve §13 Self-check Checklist henüz yazılı değildir (Gamze v3.2'ye özel). Evrim review iş paketinde eklenecek; o zamana kadar AI agent CLAUDE.md HARD CONSTRAINTS + ARTICLE-PRODUCTION-SPEC.md Faz 2.2 v2.1 yönergesini takip eder. **§4a Plume + Mahmure 12 HARD kural** `warm.md`'de — her makalede uygulanır (HARD imza).
+> **v2.6 (2026-05-02) — Şablon Kırma Disiplini (evrensel):** Başak'ın ilk makale üretiminde §4 havuzları (açılış/dengeleyici/kapanış/hekim çerçevesi/anekdot kapısı/bilmiyorum/imza kapanış) **10+ varyant**'a genişletilir. Aynı varyant **2 ardışık makalede yasak**, **6 yayında 1 kez**. Soru-cevap tekniği (HARD imza) `cooldown_exempt`'a alınabilir. Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md).
 
 ---
 

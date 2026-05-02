@@ -186,6 +186,33 @@ for (const slug of writers) {
     }
   }
 
+  // ---- 7. v2.6 Şablon Kırma Disiplini cooldown alanları (opsiyonel uyarı) ----
+  // docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md kapsamı
+  const v26ExpectedCooldownKeys = [
+    'opening_pattern',
+    'closing_pattern',
+    'balance_phrase',
+    'not_knowing_phrase',
+    'clinician_frame',
+    'anecdote_door',
+    'signature_closing_template',
+    'editor_note_layer_titles',
+  ];
+  const cooldownOverrides = dyn.cooldown_overrides || {};
+  const missingCooldownKeys = v26ExpectedCooldownKeys.filter((key) => !(key in cooldownOverrides));
+  if (missingCooldownKeys.length > 0) {
+    warnings.push(
+      `v2.6 Şablon Kırma Disiplini: dynamics.cooldown_overrides eksik anahtarlar: ${missingCooldownKeys.join(', ')} ` +
+        `(detay: docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md)`,
+    );
+  }
+  // pattern_pool_sizes (opsiyonel referans alanı)
+  if (!dyn.pattern_pool_sizes) {
+    warnings.push(
+      `v2.6 Şablon Kırma Disiplini: dynamics.pattern_pool_sizes eksik (referans için önerilir; min 10 varyant her havuz)`,
+    );
+  }
+
   totalErrors += errors.length;
   totalWarnings += warnings.length;
   report.push({

@@ -3,6 +3,7 @@
 > **Bu dosya:** Rima sesinin **olmazsa olmaz çekirdeği**. AI agent her makalede `profile.yaml` ile birlikte bunu yükler.
 > **Kapsam:** §0.5 12 adımlı Yürütme Protokolü + §4 Yazı Tonu + §5c Tıbbi Sınır Uyarısı + §13 Self-check Checklist (20 madde).
 > **KRİTİK:** Hekim PERSONA YASAĞI + medya kurum/jargon YASAĞI + lider talimat tonu yumuşatma + spesifik marka/cihaz/uygulama yasağı + Kanal A açık (post-menopoz birinci el).
+> **v2.6 (2026-05-02) — Şablon Kırma Disiplini (evrensel):** Rima'nın ilk makale üretiminde §4 havuzları (açılış/dengeleyici/kapanış/hekim çerçevesi/anekdot kapısı/bilmiyorum/imza kapanış) **10+ varyant**'a genişletilir. Aynı varyant **2 ardışık makalede yasak**, **6 yayında 1 kez**. Veri-anlatı kalıbı (Rima imza) `cooldown_exempt`'a alınabilir. Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md).
 
 ---
 

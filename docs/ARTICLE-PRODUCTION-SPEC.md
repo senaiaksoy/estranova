@@ -66,11 +66,20 @@ Yazar profile YAML'daki `dynamics.cooldown_overrides`'a (varsa) bak; yoksa frame
 | Manifesto kalıbı | 4 makale | Son 4 satırda kullanılanlar YASAK |
 | Mevlana metaforu (varsa) | 5 makale | Son 5 satırda kullanılanlar YASAK |
 | Başlık tipi | 3 makale | Son 3 satırda kullanılanlar YASAK |
-| Açılış kalıbı | 4 makale | Son 4 satırda kullanılanlar YASAK |
 | Mevsim açılışı | 4 makale | Son 4 satırda aynı mevsim açılışı ise farklı seç |
 | Anekdot türü kombinasyonu | 2 makale | Son 2 satırda aynı kombo (örn. T1+T4) ise farklı seç |
+| **(v2.6)** Açılış cümlesi (`opening_pattern`) | 6 makale + ardışık 2 yasak | Son 6'da kullanılan ve son 1'de aynı varyant YASAK |
+| **(v2.6)** Kapanış formatı (`closing_pattern`) | 4 + ardışık 2 yasak | 10 format havuzundan rotasyon |
+| **(v2.6)** Dengeleyici cümle (`balance_phrase`) | 4 + ardışık 2 yasak | Atlama opsiyonu (her makalede zorunlu değil) |
+| **(v2.6)** "Bilmiyorum" anı (`not_knowing_phrase`) | 4 + ardışık 2 yasak | Atlama opsiyonu (tutum yeter, cümle yok) |
+| **(v2.6)** Hekim/uzman çerçevesi (`clinician_frame`) | 4 + ardışık 2 yasak | Atlama opsiyonu (her makalede gerekmez) |
+| **(v2.6)** Anekdot kapısı (`anecdote_door`) | 4 + ardışık 2 yasak | "Tanıdığım bir kadın" tek kapı olamaz; havuzdan farklı seç |
+| **(v2.6)** İmza kapanış cümlesi (`signature_closing_template`) | 4 + ardışık 2 yasak | Atlama opsiyonu (~%50-65 oranında geçer) |
+| **(v2.6)** Bilimsel Editör Notu 5 başlık dizilimi (`editor_note_layer_titles`) | 6 (3 ardışık birebir yasak) | Başlık havuzundan rotasyon; bazı makalelerde 5 katman yerine 3 katman |
 
-`dynamics.cooldown_exempt` listesindeki imza-cümleler/metaforlar (örn. Gamze "kanonik soru s.89") cooldown'dan muaftır.
+`dynamics.cooldown_exempt` listesindeki imza-cümleler/metaforlar (örn. Gamze "kanonik soru s.89", Berna "bedenle yazışma" cümle yapısı imza ama 13/13 olamaz, Başak "soru-cevap tekniği") cooldown'dan muaftır.
+
+> **Şablon Kırma Disiplini (v2.6 — tüm yazarlar evrensel):** Her yazarın `hot.md §4`'ünde 8 imza kalıbı havuzu **minimum 10 varyant** olmalıdır. Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](WRITER-TEMPLATE-BREAKING-DISCIPLINE.md).
 
 ### 1.5.3 Temporal context hesapla
 

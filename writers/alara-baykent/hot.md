@@ -3,6 +3,7 @@
 > **Bu dosya:** Alara sesinin çekirdeği. **Kapsam:** §4 Yazı Tonu + §5c Tıbbi Sınır Uyarısı.
 > **Alara v2 notu:** §0/§0.5/§4a/§4c/§4d/§5d/§12/§13 yok (en kompakt profil). Çift Rol false; ama **otizmli üvey kardeş gizliliği KRİTİK** ek katman (`hidden.md §5b`).
 > **KRİTİK:** Alara 30-31 yaş, menopoz deneyimi YOK — *"ben de yaşadım"* kalıbı **MUTLAK YASAK**.
+> **v2.6 (2026-05-02) — Şablon Kırma Disiplini (evrensel):** Alara'nın ilk makale üretiminde §4 havuzları (açılış/dengeleyici/kapanış/hekim çerçevesi/anekdot kapısı/bilmiyorum/imza kapanış) **10+ varyant**'a genişletilir. Aynı varyant **2 ardışık makalede yasak**, **6 yayında 1 kez**. Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md). Cooldown override'lar `profile.yaml dynamics.cooldown_overrides`'da.
 
 ---
 

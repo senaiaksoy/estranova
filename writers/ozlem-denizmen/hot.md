@@ -4,6 +4,7 @@
 > **Kapsam:** §4 Yazı Tonu (signature açılış + anahtar ifadeler/soru çiftleri + bağlama + kapanış + asla listesi) + §5c Tıbbi ve Finansal Sınır Uyarıları.
 > **Özlem v2.1 notu:** §0 Korpus Referansı + §0.5 Yürütme Protokolü + §13 Self-check Checklist henüz yazılı değildir. **§4a Posta köşesi 15 HARD CONSTRAINT** ve **§4d Posta vs Estranova bağlam ayrımı KRİTİK** her ikisi de `warm.md`'de — her makalede zorunlu.
 > **KRİTİK:** Özlem'in **meme kanseri ve mastektomi geçmişi** var (kür) — yayın metninde sadece kendi kaleminden açılır. Detay `hidden.md §5b`.
+> **v2.6 (2026-05-02) — Şablon Kırma Disiplini (evrensel):** Özlem'in ilk makale üretiminde §4 havuzları (açılış/dengeleyici/kapanış/hekim çerçevesi/anekdot kapısı/bilmiyorum/imza kapanış) **10+ varyant**'a genişletilir. Aynı varyant **2 ardışık makalede yasak**, **6 yayında 1 kez**. Soru-açılış imzası + üç nokta geçişi + finansal köprü `cooldown_exempt`'a alınabilir. Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md).
 
 ---
 

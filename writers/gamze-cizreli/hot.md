@@ -3,6 +3,7 @@
 > **Dosya rolü:** Writer agent **her makalede zorunlu olarak yükler**. §0.5 yürütme protokolü, §4 ses imzası, §5c tıbbi sınır, §13 self-check.
 > **Profile.yaml referansı:** `./profile.yaml` (machine-readable; section_index, topic_sections, citations, quick_reference)
 > **Genişletilmiş katmanlar:** `./warm.md` (§4a-§4f stil/şablon, lazy-load) · `./cold.md` (biyografi/audit) · `./hidden.md` (gizli gözlemler — yayınlanmaz)
+> **v2.6 (2026-05-02) — Şablon Kırma Disiplini (evrensel):** Gamze'nin §4 havuzları (açılış/dengeleyici/kapanış/hekim çerçevesi/anekdot kapısı/bilmiyorum/imza kapanış) **10+ varyant**'a genişletilir. Aynı varyant **2 ardışık makalede yasak**, **6 yayında 1 kez**. **Kanonik soru s.89** ve **kapı metaforu** semantic core olarak `cooldown_exempt`'tedir (ardışık tekrar serbest). Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md).
 
 ---
 

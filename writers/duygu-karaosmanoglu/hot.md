@@ -4,6 +4,7 @@
 > **Kapsam:** §4 Yazı Tonu (signature açılış 3-grup + bağlama + kapanış arkadaş bağı + asla listesi) + §5c Tıbbi Sınır Uyarısı (3 vurgu + cesur ton ek sıkılık).
 > **Duygu v2 notu:** §0.5 Yürütme Protokolü ve §13 Self-check Checklist henüz yazılı değildir (Gamze v3.2'ye özel). Evrim review iş paketinde eklenecek.
 > **KRİTİK:** Duygu **diş hekimi** ama yazıda **klinisyen sesi MUTLAK YASAK** — detay `hidden.md §5b`.
+> **v2.6 (2026-05-02) — Şablon Kırma Disiplini (evrensel):** Duygu'nun ilk makale üretiminde §4 havuzları (açılış/dengeleyici/kapanış/hekim çerçevesi/anekdot kapısı/bilmiyorum/imza kapanış) **10+ varyant**'a genişletilir. Aynı varyant **2 ardışık makalede yasak**, **6 yayında 1 kez**. Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md).
 
 ---
 
