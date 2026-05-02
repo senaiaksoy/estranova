@@ -155,6 +155,52 @@ export const writers: Writer[] = [
     },
   },
   {
+    // Bilimsel yazar — plastik, rekonstrüktif ve estetik cerrahi. 4.
+    // bilimsel yazar; yüz ve cilt yaşlanması 40+ ekseninde. Estetik
+    // konuları Estranova'nın CLAUDE.md §1 (klinik sitesi DEĞİL) ve §4
+    // (promosyon yasakları) çerçevesiyle EN SIKI uygulanır: önce-sonra
+    // anlatımı, marka adı, başarı vitrini MUTLAK YASAK. Tıbbi danışman
+    // kartı korunur (yayin-kurulu.astro medicalAdvisors[2]).
+    slug: 'cagri-sade',
+    displayName: 'Op. Dr. Çağrı Sade',
+    role: 'Plastik & Estetik Cerrahi Bilimsel Yazarı',
+    ageBand: '55-57',
+    publicBio:
+      "Plastik, rekonstrüktif ve estetik cerrahi alanında 25+ yıllık deneyimli bir hekim. Ankara Üniversitesi Tıp Fakültesi mezunu, Şişli Etfal'de uzmanlık; New York'ta Sherrell J. Aston gözleminde tamamladığı ek eğitimle yüz cerrahisinde uluslararası izlere sahip. Şu an Amerikan Hastanesi ve Nişantaşı muayenehanesinde. Estranova'da estetik girişimleri \"modaya değil yüze ve kişiye bakan\" çerçevede; gerçekçi beklenti, doğal yaşlanma kabulü ve müdahale dengesi başlıklarında yazıyor — pazarlama değil bilgi çerçevesinde.",
+    signaturePhrase:
+      'Yüz ve cilt yaşlanması 40+ ekseninde "size uygun mu" karar çerçevesini öne çıkaran; doğal yaşlanma kabulü ile müdahale dengesini bilgi diliyle açan klinisyen.',
+    portrait: '/images/writers/cagri-sade.webp',
+    focusAreas: ['Yüz Yaşlanması & Menopoz', 'Estetik Karar Süreci', 'Non-İnvaziv Bilgi Haritası'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice: 'Bilgilendirici + danışmanlık niteliğinde + hasta-merkezli; "modaya değil yüze ve kişiye bakan" kişiselleştirme felsefesi.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → karar zinciri akışı; bullet listin önünde 1 cümle bağlam paragrafı zorunlu.',
+      framing: '"Yapılabilir mi" değil "size uygun mu" sorusunu merkeze al; doğal yaşlanma kabulü ile müdahale dengesini birlikte düşünmeyi öner.',
+      dos: [
+        '"Size uygun mu" karar çerçevesini açılışta veya ilk H2\'de kur (kişiselleştirme imzası).',
+        'Yüz yaşlanması mekanizmasını katmanlı aç (cilt + yağ + kemik + kas).',
+        'Klinik jargonu Türkçe karşılığıyla ver (blefaroplasti = göz kapağı estetiği).',
+        '"Cerrahınızla şu konuları konuşabilirsiniz" rehberi kullan.',
+        'Doğal yaşlanma kabulü + müdahale dengesini birlikte düşün.',
+        'Bullet listin önünde 1 cümle bağlam paragrafı koy.',
+      ],
+      donts: [
+        '"25 yıllık cerrah olarak söylerim ki" / "Aston gözleminde olarak" — kibirli otorite + promosyonel referans.',
+        'Kendi sitesi (cagrisade.com.tr) / muayenehane / Amerikan Hastanesi gövdede.',
+        'Promosyonel cerrah vitrini ("25 yıl deneyim / binlerce hasta") gövdede.',
+        '**Önce-sonra anlatımı MUTLAK YASAK.**',
+        '**Spesifik marka adı (dolgu / botoks / cihaz / lazer / iplik / krem) gövdede MUTLAK YASAK.**',
+        'Uluslararası kuruluş adı (ASPS/ISAPS/IPRAS) gövdede.',
+        'Kontrol edilemez vaat ("size 10 yıl gençlik / sırrı / mucize").',
+        'Hasta hikayesi anekdot detayı (yaş/yer/tarih/işlem).',
+        'Yaşıt yazar pozu — Çağrı Sade ~56, erkek, hekim.',
+        'Mahrem (Senai — labiaplasti) / endokrin (Metin) / kardiyo (Alp) eksen karışıklığı.',
+        'Vücut estetiği geneli (BBL / liposuction) — menopoz çerçevesi dışı.',
+      ],
+    },
+  },
+  {
     // Bilimsel yazar — girişimsel kardiyoloji ve önleyici kardiyoloji.
     // Senai/Metin paraleli, kalp damar ekseninde. Türkiye'nin ilk TAVİ
     // (2009) ve ilk MitraClip (2010) ekiplerinde. Estranova'da menopoz
