@@ -1,7 +1,29 @@
 # yaml-language-server: $schema=../_schema/profile.schema.json
 
-writer_version: "v2.5"
+writer_version: "v2.6"
 writer_protocol_version: "v2.1"
+# v2.6 (2026-05-02) — Şablon Kırma Disiplini (post-mortem sonrası):
+#   - 13 onaylı makale post-mortem'inde 9 kalıbın 6-10 makalede birebir cümle olarak
+#     tekrar ettiği, son 3 makalenin (stres / perimenopoz-uyku / uyku-bozukluğu)
+#     kapanışlarının özdeş şablona düştüğü tespit edildi.
+#   - Kalıp havuzları 10+ varyant'a genişletildi:
+#     * Açılış havuzu: 10 → 14 varyant
+#     * Dengeleyici cümle havuzu: 4 → 12 varyant (atlama opsiyonu eklendi)
+#     * Kapanış varyant havuzu: 3 → 10 format (3-parçalı manifesto cooldown 6'ya alındı)
+#     * Bedenle yazışma cümle yapısı: 1 → 8 varyant + atlama opsiyonu
+#     * Bilmiyorum havuzu: 3 → 10 varyant
+#     * Hekim çerçevesi havuzu: 9 → 12 varyant
+#     * Anekdot kapısı havuzu: 1 → 12 varyant (Berna sosyal haritasından)
+#   - Sıkı cooldown: aynı varyant ardışık 2 makalede yasak (revizyon tetiği).
+#     Ardışık tekrar = §-Şablon Kırma Disiplini ihlali.
+#   - Article-log "Notlar" sütununda her kalıp seçimi kayıt edilir; AI agent yeni
+#     makaleden önce son 6 makaledeki seçimleri okuyup farklı varyant seçer.
+#   - Bilimsel Editör Notu 5 katman başlıkları rotasyon görür; 13/13 birebir
+#     "Klinik bağlam / Mekanik / Kırmızı bayraklar / Pratik / Bireysellik" yasak.
+#   - Bedenle yazışma cümlesi 13/13 değil ~6-8/13 olmalı (her makalede zorunlu değil).
+#   - Detay: hot.md §4 "Şablon Kırma Disiplini" + memory
+#     `feedback_berna_v26_kalip_cooldown_2026_05_02.md`.
+#
 # v2.5 (2026-05-01) — humor havuzu genişlemesi:
 #   - İlk 7 v2.4 makalede "Ev içi aile şakası" + "Goji berry tozu" yoğun tekrar
 #     etti; havuz daraldıkça şaka eskimeye başladı.
@@ -462,11 +484,34 @@ closing_pattern:
 dynamics:
   log_path: "../berna-aksoy-article-log.md"
   birth_year: 1969
-  cooldown_overrides: {}
+  # v2.6 — Şablon Kırma Disiplini cooldown'ları (post-mortem sonrası).
+  # Framework default'u 6 makale ara (humor için); aşağıdaki override'lar
+  # Berna-spesifik kalıplara sıkı cooldown atar. Ardışık 2 makalede aynı
+  # varyant yasak (revizyon tetiği).
+  cooldown_overrides:
+    opening_pattern: 6        # Açılış havuzu (14 varyant) — aynı varyant 6 ara
+    closing_pattern: 4        # Kapanış varyantı (10 format) — 4 ara
+    closing_3_part_manifesto: 6  # 3-parçalı Bir/İki/Üç ardışık 2 yasak; 6 ara
+    balance_phrase: 4         # Dengeleyici cümle (12 varyant) — 4 ara
+    body_correspondence_template: 4  # Bedenle yazışma cümle yapısı (8 varyant) — 4 ara
+    not_knowing_phrase: 4     # Bilmiyorum anı (10 varyant) — 4 ara
+    clinician_frame: 4        # Hekim çerçevesi (12 varyant) — 4 ara
+    anecdote_door: 4          # Anekdot kapısı (12 varyant) — 4 ara
+    editor_note_layer_titles: 6  # 5-katmanlı BEN başlıkları rotasyonu — 6 ara
   cooldown_exempt: []
   allow_inter_article_crosslinks: true
   evolution_review_threshold: 10
   evolution_review_time_threshold_months: 6
+  # v2.6 — kalıp havuzları (referans; tam liste hot.md §4'te)
+  pattern_pool_sizes:
+    opening: 14
+    closing: 10
+    balance_phrase: 12
+    body_correspondence: 8
+    not_knowing: 10
+    clinician_frame: 12
+    anecdote_door: 12
+    humor: 10
 
 # ---------------------------------------------------------------------
 # Quick reference — AI prompt'a doğrudan enjekte edilen 3-bloklu özet
