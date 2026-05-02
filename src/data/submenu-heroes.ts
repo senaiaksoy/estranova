@@ -185,7 +185,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge/bilissel-saglik': {
     src: '/images/library/editorial/zd-bellek-odaklanma.webp',
-    alt: 'Çalışma masasında kitap okuyan kadın; kitaplık ve sabah ışığı — bilişsel sağlık teması',
+    alt: 'Sıcak bir İstanbul evinin küçük kütüphanesinde walnut masada birlikte çalışan iki yaşıt kadın (49-52); soldaki oatmeal cashmere kazak ve camel pant içinde açık ciltli kitap üzerine işaret parmağıyla bir kelimeyi gösteriyor, sağdaki cream ipek bluz ve bordo eşarp boyunda ahşap yan kollu sandalyede dolma kalemle açık deri kapaklı not defterine yazıyor; bakımlı boyalı saçlar (koyu kestane dalga ve koyu kestane bob), masada klasik Türk çay bardağı altın tabakta, porselen espresso fincan, seramik vazoda tek dahlia, sade lokum tabakta; brass yeşil camlı reading lamp warm focused light, walnut floor-to-ceiling kitaplıklar bokesi, sheer keten perde geç-sabah ışığı; aktif birlikte öğrenme ve bilişsel sağlık teması',
   },
   '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
@@ -217,7 +217,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz': {
     src: '/images/library/editorial/zd-bellek-odaklanma.webp',
-    alt: 'Çalışma masasında kitap okuyan kadın; kitaplık ve sabah ışığı — bellek ve odaklanma teması',
+    alt: 'Sıcak bir İstanbul evinin küçük kütüphanesinde walnut masada birlikte çalışan iki yaşıt kadın (49-52); soldaki oatmeal cashmere kazak ve camel pant içinde açık ciltli kitap üzerine işaret parmağıyla bir kelimeyi gösteriyor, sağdaki cream ipek bluz ve bordo eşarp boyunda ahşap yan kollu sandalyede dolma kalemle açık deri kapaklı not defterine yazıyor; bakımlı boyalı saçlar (koyu kestane dalga ve koyu kestane bob), masada klasik Türk çay bardağı altın tabakta, porselen espresso fincan, seramik vazoda tek dahlia, sade lokum tabakta; brass yeşil camlı reading lamp warm focused light, walnut floor-to-ceiling kitaplıklar bokesi, sheer keten perde geç-sabah ışığı; menopoz döneminde bellek ve odaklanmayı bir arkadaşla aktif tutma teması',
   },
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz': {
     src: '/images/library/editorial/zd-stres-yonetimi.webp',
