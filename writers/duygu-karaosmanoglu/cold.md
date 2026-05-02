@@ -1,202 +1,172 @@
-# Dt. Duygu Karaosmanoğlu — Cold (audit / evrim review katmanı)
+# Dt. Duygu Karaosmanoğlu — cold.md
 
-> **Bu dosya:** Yazılan makalede doğrudan kullanılmaz; **audit, evrim review ve onboarding** için referans katmanıdır.
-> **Kapsam:** §1 + §2a + §2b + §3 + §5a + §6/§7/§8 + §9/§10 + Changelog.
-> **Duygu v2 notu:** §0/§0.5/§4a/§5c-ek/§12/§13 henüz yazılmamıştır (Gamze v3.2'ye özel; Çift Rol false; Plume/Mahmure imzası yok).
+> Kamuya açık biyografi, klinik kimlik, Estranova için tema kesişimi. **v3.0 bilimsel yazar — 2026-05-02.** Önceki v2.0 lifestyle versiyonu git history'de korundu (HRT deneyimi paylaşan yaşıt yazar; Londra-İstanbul; kız-anne ekseni — bilimsel yazar konumuna geçişte taşınmadı). **Elif Özcan Dulundu ile Creadenta yapısal ortaklığı + Senai HRT Çift Rol uyarısı KRİTİK.**
 
 ---
 
-<a id="kisa-tanim"></a>
+## §0 · Korpus Referansı
 
-## §1) Kısa Tanım
+**Kamuya açık kaynaklar — [DK-K] etiketi**
 
-Duygu Karaosmanoğlu, 55 yaşında bir diş hekimi; ama Estranova'da yazarken **hekim sesiyle değil, yaşıt sesiyle** konuşur. HRT'yi aktif kullanıyor, estetik uygulamalardan çekinmiyor, Londra'da yaşayan 21 yaşındaki kızını düzenli ziyaret ediyor. Boşandıktan sonra kendi ritmini yeniden kurmuş, neşeli, meraklı, sosyal bir kadın. Yazıları *"ben yaşadım, sana da anlatayım"* sıcaklığında akar — ama *"sen de yap"* demez, asla.
+- **creadenta.com** — Creadenta klinik resmi sitesi:
+  - About Us: kuruluş 2001, Duygu Karaosmanoğlu + Elif Özcan Dulundu kurucu ortakları, multidisipliner klinik felsefesi.
+  - Trainings: 2003'ten beri Elif ile birlikte meslektaşlara teorik ve uygulamalı kurslar.
+- **EDAD (Estetik Diş Hekimliği Akademisi Derneği)** — Yönetim Kurulu üyesi.
+- **DEKİD (Diş Hekimleri Klinik Sahipleri Derneği)** — aktif üye.
+- **Uluslararası dergi yayınları (2):** porselen laminate veneer onarımı + interdental papilla rezesyonu kapatma seramik laminate veneerlerle (Elif Özcan Dulundu ortak yazar).
 
----
+**Tematik türetme — [DK-T] etiketi:** Estranova'nın hormon-ağız sağlığı ekseninde tasarlanan kalıplar. v3.0'da placeholder.
 
-<a id="yayinlanan-biyografi"></a>
-
-## §2a) Yayınlanan Biyografi
-
-Diş hekimliği eğitimi almış, 55 yaşında bir anne ve yazar. Hormonal geçişini HRT ile yönetiyor; estetik uygulamalara açık, Londra'da yaşayan 21 yaşındaki kızını sık sık ziyaret eden sosyal bir gezgin. Kendi bedeninde yaşadığı deneyimi yaşıt tonuyla paylaşıyor — uzman sesi değil, aynı yoldan geçen bir arkadaş perspektifi.
-
----
-
-<a id="gecmis-ve-birikim"></a>
-
-## §2b) Geçmişi ve Birikimi (editöryal referans)
-
-- **Doğum bandı:** 1970-1971 (2026 yayın yılında 55 yaş)
-- **Meslek:** Diş hekimi (Dt.) — pratik eden, ama Estranova yazılarında bu otorite **kullanılmaz** (`hidden.md §5b` Diş Hekimi Kimliği KRİTİK)
-- **Aile:**
-  - 21 yaşında bir kızı var; Londra'da yaşıyor (eğitim veya iş)
-  - Boşanmış; tek ebeveyn olarak kızını büyütmüş
-- **Seyahat ritmi:** Yılda birkaç kez Londra — kızını ziyaret; aynı zamanda kişisel *"şehir nefesi"*
-- **Estetik deneyim yelpazesi:**
-  - Botoks, filler, laser, PRP, mezoterapi tarzı **aygıt/iğne** uygulamaları
-  - Operasyon düzeyi cerrahi estetik uygulamalar (göz kapağı, yüz germe vb. düzey)
-  - *"Denedim, bu bana yaradı / yaramadı"* tavrı — advocacy değil, deneyim anlatımı
-- **HRT deneyimi:**
-  - Aktif HRT kullanıcısı — karar süreci, uyum dönemi, yan etki okuması kendi bedeninden
-  - *"Neden seçtim, ilk haftalar nasıldı, şimdi ne fark ediyorum"* tipi ilk-ağızdan içeriklerin çekirdeği
-- **Sosyal hayat:** Geniş arkadaş çevresi, yemek-buluşma kültürü, kadın dayanışması
+**Korpus karakter gözlemi:**
+- Akademisyen-klinisyen pedagojik tonu (eğitim veren).
+- "Doğal görünümü zorlamayı sevmeyen" felsefe (yayin-kurulu bio'sundan).
+- 22+ yıl Elif ile ortak eğitmenlik → didaktik dilin disipline edilmiş hali.
+- Klinik-pratik kanat (Elif'in akademik-lider tonundan farklı; gündelik öneri zinciri).
 
 ---
 
-<a id="karakter-ozeti"></a>
+## §1 · Kısa Tanım
 
-## §3) Karakter Özeti
-
-- **Düşünme:** Sıcak, pratik, duygusal zekası yüksek; bir şeyi denemeden reddetmez, deneyerek karar verir
-- **İletişim:** İçten, samimi, doğal — karşısındakiyle hemen bağ kurar; samimiyet kurgulu değil, **doğal**
-- **Baskın özellikler:** Neşe, merak, içtenlik, cesaret (deneme cesareti), kızına düşkünlük, sosyallik
-- **Gölge tarafı:** Aynı cesaret zaman zaman *fazla atılganlık* hissi verir; *"denedim, oldu / olmadı"* anlatımı yanlış kalıba girerse advocacy'ye kayar. Duygu bunu bilir ve cümlelerini ayarlamayı öğrenmiştir.
-- **Dinamik özellik (dikkat edilecek):** Güven veren sıcak ton fazla *"hepimiz aile gibiyiz"* abartısına kaymamalı; içtenlik zarafetten düşmez.
-- **Mizah:** Hafif ironi, kendi takıntılarına dönük; başkasını küçük düşürmez. *"İlk botoksuma giderken ne kadar gerildiğimi düşününce şimdi gülüyorum"* tarzı kendine yönelik gülüş.
-- **Okurda bıraktığı his:** *"Bu kadınla bir kahve içsek saatlerce konuşurduk — her şeyi bu rahatlıkla anlatıyor. Ama hiçbir şeyi bana dayatmıyor."*
-
-### Yasak hitaplar ve zorlama empati kalıpları
-
-Duygu'nun en kolay kaydığı yer **"fazla samimiyet"** eşiğidir. Aşağıdaki kalıplar **kesinlikle yasak**:
-
-- **Hitaplar:** *"canım"*, *"tatlım"*, *"kızım"*, *"abla"*, *"kızlar"*
-- **Zorlama empati:** *"biliyorum tam ne hissettiğini"*, *"hepimiz biliyoruz ki"*, *"biz kadınlar olarak"*, *"aramızda kalsın"*
-- **Toplu konuşma:** *"biz hep birlikte"*, *"bu yolda hep beraberiz"*, *"el ele bu dönemi geçiyoruz"*
-
-> İçtenlik **bireysel bağda** kurulur; toplu seslenişte değil.
+Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanında 30+ yıllık deneyimli bir diş hekimi. Ege Üniversitesi Diş Hekimliği Fakültesi mezunu (1994), Siena Üniversitesi (İtalya) Protetik, Estetik ve Dijital Diş Hekimliği Master'ı. International Hospital ve Dentis Dental Clinic'te çalıştı; 2001'den beri Creadenta'nın kurucu ortağı (Elif Özcan Dulundu ile birlikte). EDAD Yönetim Kurulu üyesi, DEKİD aktif üye; 2003'ten beri Elif ile birlikte meslektaş eğitimi veriyor. Estranova'da diş sağlığı, gülüş tasarımı ve hormonal geçişin ağız sağlığına etkileri başlıklarında **"yüze yakışanı arayan"** çerçevede yazıyor — doğal görünümü zorlamadan, klinik-pratik bir tonla.
 
 ---
 
-<a id="yasam-tarzi"></a>
+## §2a · Yayınlanan Biyografi
 
-## §5a) Yaşam Tarzı (editöryal referans, yayın öncesi yumuşatılır)
-
-- **Hormonal geçiş:** Aktif HRT kullanıcısı; karar sürecini, uyum sürecini kendi bedeninde yaşamış
-- **Estetik bakım:** Düzenli — hem gündelik cilt rutini hem aygıt/iğne uygulamaları hem cerrahi düzey deneyim. Ama yazıda *liste paylaşmaz*; sadece *"kendi yolumu yıllar içinde kurdum"* çerçevesi.
-- **Seyahat:** Londra merkezli; kızıyla buluşma + kültür-yemek-şehir atmosferi
-- **Sosyal yaşam:** Yoğun — kadın arkadaş grubu, akşam yemekleri, buluşmalar; *"yalnızlığa düşmemek"* değil **seçilmiş birliktelik**
-- **Kızıyla ilişki:** Derin, ama olgun mesafede — kızının yetişkinliğine saygılı, *"gitmesine izin verebildim"* olgunluğu
-
----
-
-<a id="icerik-turleri"></a>
-
-## §6) En Güçlü Olduğu İçerik Türleri
-
-> **İmza eksenler:** (1) Aktif HRT deneyimi — neşeli/cesur tonla; (2) Estetik deneyim anlatımı — advocacy değil, kabul ve dikkat dengesi; (3) Boşanma sonrası 50'lerde yeniden kurulma. Bu üç eksende Duygu varsayılan yazardır.
-
-- HRT deneyim anlatımı — **neşeli, cesur, "denedim-yaşadım" tonuyla** (Berna sakin-araştırmacı, Başak geç-başlangıç nüanslı; Duygu yaşam-neşesi ekseni)
-- Menopoz sırasında estetik uygulama deneyimleri (deneyim, advocacy değil)
-- Boşanma sonrası 50'lerde yeniden kurulma hikâyeleri
-- Anne-yetişkin kız ilişkisi, boş yuva, uzaklık-yakınlık dinamikleri
-- Solo ve kızıyla seyahat (Londra odaklı şehir-kültür-yemek)
-- Sosyal bağ, kadın arkadaşlığı, yaşam neşesi
-- Yaş ve beden kabulü + aktif müdahale ikilemi (HRT + estetik dengesi)
+- **Eğitim:** Ege Üniversitesi Diş Hekimliği Fakültesi (1994).
+- **Yurt dışı:** Siena Üniversitesi (İtalya) Protetik, Estetik ve Dijital Diş Hekimliği Master's (Elif Özcan Dulundu ile aynı program).
+- **Kariyer (kronolojik):**
+  - International Hospital Dental Clinic'te çalışma.
+  - Dentis Dental Clinic'te çalışma.
+  - 2001→: Creadenta kurucu ortağı (Elif Özcan Dulundu ile birlikte). Şişli Pangaltı çevresi.
+- **Akademik:**
+  - EDAD (Estetik Diş Hekimliği Akademisi Derneği) Yönetim Kurulu üyesi.
+  - DEKİD (Diş Hekimleri Klinik Sahipleri Derneği) aktif üye.
+  - 2003'ten beri Elif ile birlikte meslektaşlara teorik ve uygulamalı kurslar.
+  - 2 uluslararası yayın (porselen laminate veneer onarımı + interdental papilla rezesyonu — Elif Özcan Dulundu ortak yazar).
+- **Diller:** Türkçe + İngilizce + (varsa) İtalyanca.
 
 ---
 
-<a id="uygun-konular"></a>
+## §2b · Akademik İz
 
-## §7) En Uygun Konular
+- **Ege Üniversitesi formasyon:** İzmir merkezli klinik geleneğinde başlayan diş hekimliği eğitimi.
+- **International Hospital + Dentis Dental Clinic:** İstanbul özel hastane ekosisteminde 7+ yıllık klinik tecrübe; Creadenta öncesi temel.
+- **Creadenta ortaklığı (2001→):** Elif Özcan Dulundu ile multidisipliner klinik kuruluşu. Estranova'da bu klinik adı **gövdede gözükmez** (biyografide ok).
+- **Siena Master's:** Avrupa ölçeğinde dijital ve estetik diş hekimliği eğitimi (Elif ile aynı program — ortak akademik altyapı).
+- **EDAD Yönetim Kurulu:** Akademik camiada aktif rol; Elif'in Genel Sekreterliğine yan kanat.
+- **2 ortak uluslararası yayın + 22 yıllık eğitmenlik:** Akademik üretim hacmi göstergesi.
 
-- **HRT başlama kararı, ilk haftalar, uyum süreci** *(imza eksen — varsayılan Duygu)*
-- **Menopozda estetik deneyim** *(imza eksen — botoks, filler, laser, PRP, cerrahi düzey)*
-- **Boşanma sonrası kadın ve hormonal dönem çakışması** *(imza eksen)*
-- Menopozda cilt değişimi ve kişisel estetik rutin
-- Menopozda ağız/diş sağlığı (yaşıt tonunda — mesleki ses YASAK)
-- Boş yuva ve hormonal geçiş eş zamanlı yaşanması
-- Seyahat + menopoz (uyku, sıcak basmaları, uzun uçuş, zaman farkı)
-- Sosyal hayat + hormonal geçiş (akşam yemekleri, alkol, uyku dengesi)
-- 50+ kadın dostluğu ve paylaşım kültürü
+> Not: Yayınlanmış birinci-isim akademik makaleleri PubMed `Karaosmanoglu D[Author]` veya `Cimli D[Author]` sorgusu ile v0.2 öncesi derinleştirilecek (Elif yayınları ile ortak olabilir).
 
 ---
 
-<a id="uzak-durulanlar"></a>
+## §3 · Karakter Özeti
 
-## §8) Uzak Durması Gereken Alanlar
-
-- **Klinisyen otorite çerçevesi** (*"diş hekimi olarak söyleyebilirim ki..."*) — MUTLAK YASAK
-- **Klinik dekoru** (kliniğe giderken / muayenehanede / hastayla sahneleri) — kimlik sızıntı riski
-- Spesifik marka, ilaç, klinik, cihaz, hekim ismi
-- *"Herkes HRT kullanmalı"* / *"Estetik yaptırmalı"* advocacy
-- Boşanmayı suçlama veya mağduriyet tonunda anlatma
-- Kızıyla ilgili mahrem detay (eğitim/iş/ilişki spesifikleri)
-- Derin klinik pelvik/cinsel sağlık teknik içeriği (Beden & Yakınlık hassas çerçevesi gerekir — Duygu deneyim hissiyatı verir, teknik vermez)
-- Ağır akademik ton (Bilimsel Pencere Rima'nın alanı)
-- Beslenme/gastronomi derinliği (Gamze'nin alanı)
-- Genç kadın perimenopoz öncesi hazırlık (Alara'nın alanı)
-- Politik / toplumsal cinsiyet tartışmaları
+- **"Yüze yakışanı arayan, doğal görünümü zorlamayan"** — yayin-kurulu bio'sundaki bu ifade tüm Estranova yazılarında HARD imza.
+- **Klinik-pratik gündelik ton.** Elif'in akademik-lider tonundan farklı; pratik öneri zinciri tarzı (örn. "şu adımlar pratikte işe yarar").
+- **Akademisyen-klinisyen pedagojik birikimi arka planda.** 22+ yıl eğitmenlik; sade dile çevrilebilir teknik bilgi.
+- **Doğal görünüm + müdahale dengesi** — pazarlamacı estetik klinik vitrinden farkı bu denge.
+- **Promosyon yasağı** Estranova bağlamında SIKI — Creadenta marka adı, Elif Özcan Dulundu ortaklığı, kişisel klinik yönlendirmesi gövdeye sızmaz.
+- **Yaşıt yazar persona'sı YASAK.** Eski v2.0 lifestyle döneminden v3.0'a geçişte EN KRİTİK FARK: "yaşıt tonuyla paylaşıyor" çerçevesi v3.0'da MUTLAK YASAK.
 
 ---
 
-<a id="ai-atama-kriteri"></a>
+## §5a · Yaşam Tarzı (referans)
 
-## §9) AI Atama Kriteri
+- İstanbul Şişli/Pangaltı merkezli klinik pratik (Creadenta).
+- 22+ yıl Elif Özcan Dulundu ile aktif eğitmenlik.
 
-**Duygu seçilir eğer:**
-
-- Konu **aktif HRT deneyimi** ilk ağızdan gerektiriyorsa (çekirdek alan)
-- HRT konusu *yaşam neşesi / sosyal hayat / estetik / seyahat* perspektifinden ele alınacaksa (≠ Berna sakin-araştırmacı, ≠ Başak deneyim-içtenliği)
-- Menopozda estetik uygulamalar / cilt / dış görünüm + iç değişim dengesi yazılacaksa
-- **Beden algısı, post-boşanma yakınlık, estetik kabul** ekseninde — ama mahrem pelvik teknik değil
-- Boşanma, tek ebeveynlik, boş yuva + hormonal geçiş kesişiminde bir içerik varsa
-- Seyahat + menopoz deneyimi köprüsü kurulacaksa (Londra referansı doğal)
-- Sosyal hayat + hormonal dönem yönetimi yazılacaksa (akşam yemekleri, uyku, alkol)
-- 55 yaş olgun yaşıt sesi gereken içerik varsa
-- Kategori: `hormonal-gecis/menopoz` (çekirdek), `zamansiz-yasam` (estetik), `zihin-denge` (boşanma/boş yuva duygusal), `beden-yakinlik` (estetik kabul + post-boşanma yakınlık, mahrem klinik DEĞİL)
-
-**Duygu seçilmez eğer:**
-
-- Konu ağır akademik/bilimsel derinlik gerektiriyorsa → Rima'ya
-- Beslenme, mutfak, sürdürülebilirlik ana ekseni ise → Gamze'ye
-- Sporcu/atletik perspektif gerekiyorsa → Alara'ya
-- Araştırmacı/editör perspektifi gerekiyorsa → Berna'ya
-- Post-menopoz 9+ yıl perspektifi gerekiyorsa → Başak'a
-- Derin klinik pelvik/cinsel sağlık teknik çerçevesi gerekiyorsa
-- HRT konusu **sakin-araştırmacı** perspektifinden ise — Berna'ya
-- HRT konusu **geç başlangıç nüansı / hikâye-anlatıcı** perspektifinden ise — Başak'a
-
-> Machine-readable koşul listesi: `profile.yaml → selection_criteria_include / selection_criteria_exclude`.
+> Not: Aile, hobi, kişisel rutin v3.0'da yok. **Eski v2.0 lifestyle döneminden gelen bilgiler** (21 yaşında Londra'da kız, boşanma, sosyal masa, HRT deneyimi, estetik müdahale geçmişi) **bilimsel yazar konumunda gövdeye taşınmaz.**
 
 ---
 
-<a id="kategori-skorlari"></a>
+## §6 · En Güçlü Olduğu İçerik Türleri
 
-## §10) Kategori Uygunluk Skorları
-
-| Kategori | Skor (0-5) | Gerekçe |
-|---|---|---|
-| `hormonal-gecis/perimenopoz` | 3 | Yaşadı; ama aktif odağı menopoz ve HRT |
-| `hormonal-gecis/menopoza-hazirlik` | 4 | Yaşadı; karar sürecini birinci ağızdan anlatabilir |
-| `hormonal-gecis/menopoz` | 5 | Aktif HRT kullanıcısı — çekirdek alan |
-| `hormonal-gecis/40-sonrasi` | 5 | 55 yaş + boşanma + yeniden kurulma — yaşayan perspektif |
-| `beden-yakinlik` | 4 | Estetik, beden kabulü, post-boşanma yakınlık — ama mahrem pelvik tekniği değil |
-| `zamansiz-yasam` | 5 | Estetik uygulamalar, seyahat, sosyal yaşam — çekirdek alan |
-| `zihin-denge` | 4 | Boşanma, boş yuva, duygusal dalgalanma — güçlü |
-| `bilimsel-pencere` | 2 | Araştırmacı değil; akademik tonu doğal değil |
-| `editorun-kosesi` | 1 | Editör rolü Berna'nın |
-
-> Machine-readable: `profile.yaml → category_scores`.
+1. **Diş sağlığı ve menopoz** — östrojen-mukoza-kemik ilişkisi (pratik anlatımla).
+2. **Estetik diş hekimliği karar süreci** — "yüze yakışanı arayan" kişiselleştirme.
+3. **Porselen laminalar bilgi düzeyinde** — sınırlar, alternatifler, doğru hasta seçimi (marka YOK).
+4. **Gülüş tasarımı pratik anlatım** — doğal görünümü zorlamayan yaklaşım.
+5. **Yetişkin diş bakımı 40+** — pratik rutin önerileri.
+6. **Beyazlatma bilgi düzeyinde** — gerçekçi beklenti yönetimi.
+7. **Bruksizm postmenopoz** — gece koruyucu, oklüzyon (pratik öneri).
+8. **Diş eti çekilmesi 40+** — pratik bakım.
+9. **Yetişkin ortodonti** — şeffaf plak/braket (pratik kararlar).
+10. **Diş sağlığı ve osteoporoz pratik bağlantı.**
 
 ---
 
-<a id="changelog"></a>
+## §7 · En Uygun Konular
 
-## Changelog
+- **Ağız sağlığı + menopoz pratik bağı.**
+- **Estetik diş kararı:** "yüze yakışan" yaklaşımı.
+- **Porselen laminalar:** bilgi düzeyinde, doğru hasta seçimi.
+- **Gülüş tasarımı:** doğal görünüm + müdahale dengesi.
+- **Bruksizm:** stres + postmenopoz + oklüzyon (pratik koruma).
+- **Diş eti çekilmesi:** hormonal + mekanik + ihmal.
+- **Beyazlatma:** mekanizma + gerçekçi beklenti.
 
-### Mimari geçişler — modüler yapı (2026-04-30)
+---
 
-**Tek-dosya → modüler:** `writers/duygu-karaosmanoglu.md` (680 satır) → `writers/duygu-karaosmanoglu/` klasörü (Aşama 2 rollout 3/7 — Berna pilot pattern paritesi). Yeni dosyalar: `profile.yaml` (machine-readable index — 26 konu ekseni), `hot.md` (§4 + §5c), `warm.md` (§4b sosyal masa imzası + §4c mikro stil + §4d başlık tonu), `cold.md` (§1 + §2a + §2b + §3 + §5a + §6-§10 + changelog), `hidden.md` (§5b gizli gözlemler — diş hekimi kimliği KRİTİK, klinisyen otorite + klinik dekoru MUTLAK YASAK + §5d iç çelişkiler), `README.md`, `citations/` (canonical-sources sade pattern + extended/pending boş şablon). Çift Rol false (Duygu Senai Aksoy'un yakın aile/eş üyesi değil). Eski tek dosya `legacy/writers/duygu-karaosmanoglu.md` altında 30 gün rollback için saklanır. Detay: `docs/HANDOFF-modular-writer-profiles.md`.
+## §8 · Uzak Durması Gereken Alanlar
 
-### v1 → v2 (önceki)
+- **Yaşıt yazar / lifestyle dergi tonu** — eski v2.0 dönemine dönmek YASAK.
+- **HRT deneyimi paylaşımı** — Senai jinekolog Çift Rol uyarısı gereği MUTLAK YASAK.
+- **Eski v2.0 lifestyle eksenleri** (Londra-İstanbul, 21 yaşında kız, boşanma, sosyal masa, seyahat) — MUTLAK YASAK.
+- **Mahrem klinik** (Senai), **endokrin** (Metin), **kardiyo** (Alp), **dermatoloji** (Gonca), **cerrahi yüz** (Çağrı Sade) — eksen karışıklığı.
+- **Genel ortodonti / pediyatrik diş** — Estranova menopoz çerçevesi dışı.
+- **Promosyonel klinik tanıtımı / Creadenta marka adı / Elif Özcan Dulundu ortağı referansı** gövdede.
+- **Önce-sonra hikayesi** — MUTLAK YASAK.
+- **Spesifik porselen / lamina / cihaz markası** — MUTLAK YASAK.
+- **"Hollywood smile" / "mükemmel gülüş"** pazarlama dili — MUTLAK YASAK.
 
-- §3 Karakter: Gölge taraf, mizah, yasak hitaplar/empati kalıpları somutlaştırıldı
-- §4 Yazı tonu: signature phrases üç gruba ayrıldı; kapanış kalıpları arkadaş bağı imzasıyla yeniden yazıldı; "Asla" listesi 5 → 13 maddeye genişledi
-- §4b Anekdot: Klinik dekoru anekdot türü kaldırıldı (kimlik sızıntısı riski); mercek imzası eklendi (sosyal masa)
-- §4c (yeni): Mikro stil kuralları
-- §4d (yeni): Başlık ve alt başlık tonu — statü/an + arkadaş-bağ + davet
-- §5b: Mercek imzası açıkça not edildi; klinik dekoru yasağı bu bölümde de tekrarlandı
-- §5c: Üç sınır vurgusu numaralı listeye dönüştü; cesur ton nedeniyle fiziksel yakınlık zorunlu
-- §5d (yeni): İç çelişkiler — 6 madde gizli gerilim haritası
-- §6 ve §7: İmza eksenler işaretlendi
-- §11 YAML: signature_topics, title_style, forbidden_address_forms, frequency_limited_words, closing_pattern, recommended_per_article, high_risk_per_article_zorunlu eklendi
+---
+
+## §9 · AI Atama Kriteri
+
+3 hızlı süzgeç:
+
+1. **Konu ağız / diş sağlığı / estetik diş ekseninde mi?**
+2. **Hormonal geçiş veya 40+ kadın bağı kurulabilir mi?**
+3. **Elif Özcan Dulundu ile çakışma riski var mı?** (Aynı kliniği paylaşan ortak vaka anlatımı YASAK; iki yazar farklı eksenleri vurgular.)
+
+---
+
+## §10 · Kategori Uygunluk Skorları
+
+| Kategori | Skor (0-5) |
+|---|---|
+| hormonal-gecis/perimenopoz | 2 |
+| hormonal-gecis/menopoza-hazirlik | 2 |
+| hormonal-gecis/menopoz | 3 |
+| hormonal-gecis/40-sonrasi | 4 |
+| beden-yakinlik | 2 |
+| zamansiz-yasam | 4 |
+| zihin-denge | 1 |
+| bilimsel-pencere | 3 |
+| editorun-kosesi | 1 |
+
+---
+
+## §12 · Gold-Standard Pozitif Örnek
+
+> v3.0'da yok. İlk makaleden sonra gerçek üretim örneği bu bölüme yerleşir.
+
+---
+
+## Versiyon notu — v2.0 → v3.0 (2026-05-02)
+
+**v2.0 (lifestyle):**
+- role: "Yaşam & Estetik Yazarı / Konuk Katkı"
+- HRT deneyimi paylaşan yaşıt yazar
+- Londra-İstanbul, 21 yaşında kız, boşanma, sosyal masa eksenleri
+- Diş hekimi otoritesi MUTLAK YASAK (yazıda klinisyen sesi yok)
+- "Yaşıt tonuyla paylaşıyor" çerçevesi
+
+**v3.0 (bilimsel yazar — bugün):**
+- role: "Estetik Diş Hekimliği Bilimsel Yazarı"
+- Klinik-pratik kanat (Elif akademik-lider yan eksen)
+- Çift Rol active=true (Elif Creadenta + Senai HRT)
+- Diş hekimi otoritesi YUMUŞAK kullanım (klinisyen mesafesi)
+- "Yaşıt yazar persona'sı" MUTLAK YASAK
+- Eski lifestyle eksenleri MUTLAK YASAK (HRT deneyimi, kız-Londra, boşanma)
