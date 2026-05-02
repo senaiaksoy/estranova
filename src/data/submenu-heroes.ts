@@ -53,7 +53,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': {
     src: '/images/library/editorial/by-libido-degisimi.webp',
-    alt: 'Geç ikindi ışığında sanat-dolu evinde sessiz bir okuma köşesinde oturan 51 yaş kadın, bordo ipek bluz, içe dönük dingin bakış pencereye yönelik; kucağında açık kitap, yan masada defter, dolma kalem, çay fincanı ve sade kuru çiçek düzeni; kendiyle yeniden tanışma teması',
+    alt: 'İstanbul evinin küçük bahçe terasında geç öğleden sonra altın saat ışığında yan yana yumuşak rattan-wicker sandalyelerde oturan iki yaşıt kadın (48-52); soldaki warm chestnut shoulder dalgalı saç, cream ipek loungewear bluz, camel pant ve cream cashmere şal omuza dökülmüş, kucağında açık hardcover şiir kitabı bir el sayfada, gentle gülümseme arkadaşına; sağdaki koyu kestane medium dalgalı saç, dusty rose ipek bluz, cream linen wide-leg pant ve slim brass-gold pendant kolye, klasik Türk çay bardağı altın detaylı tabakta elinde, leaning slightly toward arkadaşı warm gülümseme; bakımlı boyalı saçlar, modest tam kapalı yaka, mature graceful natural cilt; aralarında walnut yan masa üstünde küçük seramik vazoda fresh blush peony, açık deri kapaklı not defteri ve dolma kalem, kapalı şiir kitabı sade kapak, porselen espresso fincan, sade lokum tabakta; pergola wisteria-jasmine deep bokeh, golden hour bahçe silüet, pale wooden teras zemini ve Persian rug kenarı, brass-burnished outdoor abajur warm subtle light; menopoz döneminde libido değişimi ve kendiyle yeniden tanışmayı yargısız samimi sohbetle paylaşma teması',
   },
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
     src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
