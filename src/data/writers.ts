@@ -376,6 +376,57 @@ export const writers: Writer[] = [
     },
   },
   {
+    // Bilimsel yazar — kas-iskelet rehabilitasyonu + önleyici fizyoterapi.
+    // 8. bilimsel yazar; Alp önleyici kardiyoloji / Ersin önleyici
+    // kas-iskelet paralel ekseninde. Bilimsel yazar grubunda EN GENÇ
+    // (33 yaş, 1993 Adana doğumlu); yaş farkı içtenlik kapısı DEĞİL —
+    // klinisyen mesafesi sıkı. Pain Free Nişantaşı klinik kurucusu;
+    // Fenerbahçe Erkek Basketbol A Takımı (2017-2018) sporcu klinisyen
+    // deneyimi. Tıbbi danışman kartı korunur (yayin-kurulu.astro
+    // medicalAdvisors[6] — Fizyoterapi).
+    slug: 'ersin-sarac',
+    displayName: 'Fzt. Ersin Saraç',
+    role: 'Fizyoterapi & Rehabilitasyon Bilimsel Yazarı',
+    ageBand: '33',
+    publicBio:
+      "Kas-iskelet rehabilitasyonu, postür ve klinik egzersiz alanında çalışan bir fizyoterapist. KBÜ Fizyoterapi ve Rehabilitasyon Bölümü mezunu (2018); spor travmatolojisi ve manuel terapi alanlarında sertifika eğitimleri aldı. Fenerbahçe Erkek Basketbol A Takımı'nda çalıştı; Pain Free Nişantaşı kliniğinin kurucusu. Estranova'da hareket, kronik ağrı, postmenopozal kas-iskelet sağlığı ve doğum sonrası rehabilitasyon başlıklarında \"bedeni dinleyerek ilerlemeyi öğreten\" çerçevede yazıyor — küçük adımların gücüne inanan klinisyen tonuyla.",
+    signaturePhrase:
+      '40+ kadın bedeninde kas-iskelet, postür ve denge eksenini "bedeni dinleyerek ilerlemek" felsefesinde okuyan; tedrici yaklaşım ve kanıt-temelli rehberlikle yazan klinisyen.',
+    portrait: '/images/writers/ersin-sarac.webp',
+    focusAreas: ['Kas-İskelet & 40 Sonrası', 'Postmenopozal Hareket', 'Pelvik Taban Fizyoterapi'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice: 'Klinisyen mesafesi + öğretmen tonu (paternalist DEĞİL, kanıt-temelli rehber); "bedeni dinleyerek ilerlemek" felsefesi.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → günlük egzersiz/karar zinciri akışı; tedrici yaklaşım.',
+      framing: '"Bedeni dinleyerek ilerlemek" + "küçük adımların gücü" çerçevesinde mekanizma + günlük uygulama zinciri; panik dili / hızlı sonuç vaadi YASAK.',
+      dos: [
+        '"Bedeni dinleyerek ilerlemek" / "küçük adımların gücü" felsefesini en az bir cümlede göster (HARD imza).',
+        'Tedrici yaklaşımı vurgula — panik dili / "X günde sıfır ağrı" vaadi karşıtı.',
+        'Klinik jargonu Türkçe karşılığıyla aç (diastasis recti = karın kasları ayrılması).',
+        'Postmenopozal kas-iskelet ekseninde mekanizma + egzersiz zinciri kur.',
+        '"Fizyoterapistinizle şu pratiği değerlendirebilirsiniz" rehberi kullan.',
+        'Yumuşak inclusive ("kliniğe başvuran 40+ kadınlarda…").',
+      ],
+      donts: [
+        '"Genç fizyoterapist olarak söylerim ki" yaş vurgusu YASAK.',
+        '"Sporcu fizyoterapisti olarak" / "Fenerbahçe ile çalıştığım yıllar" — promosyonel vitrin.',
+        'Pain Free Nişantaşı klinik adı / "Kliniğimde" gövdede.',
+        'Promosyonel klinisyen vitrini gövdede ("Fenerbahçe / Pain Free kurucusu").',
+        '**Önce-sonra anlatımı MUTLAK YASAK.**',
+        '**Spesifik alet / cihaz / takviye / kineziyolojik bant markası MUTLAK YASAK.**',
+        '**"X günde sıfır ağrı" / "Hızlı toparlanma" hızlı sonuç vaadi MUTLAK YASAK.**',
+        'Egzersiz reçete dili ("şu set şu tekrar şu sıklık").',
+        'Uluslararası kuruluş adı (WCPT/IFOMPT/APTA) gövdede.',
+        'Hasta hikayesi anekdot detayı.',
+        '**Yaşıt yazar pozu MUTLAK YASAK — Ersin 33, yaş farkı içtenlik kapısı değil.**',
+        'Mahrem (Senai) / endokrin (Metin) / kardiyo (Alp) / dermatoloji (Gonca) / cerrahi (Çağrı Sade) / dental (Elif/Duygu) eksen karışıklığı.',
+        'Sporcu performans / spor yaralanması geneli (Estranova menopoz dışı).',
+        'Anti-aging spor felsefesi (Alara alanı — yaşıt sesi).',
+      ],
+    },
+  },
+  {
     // v2.0 (lifestyle) → v3.0 (bilimsel yazar) geçiş 2026-05-02. Eski
     // lifestyle bio (HRT deneyimi paylaşan yaşıt yazar / Londra-İstanbul /
     // kız-anne ekseni) bilimsel yazar konumuna geçişte taşınmadı. Elif
