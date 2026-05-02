@@ -169,26 +169,81 @@ dynamics:
 
 ## Geçiş Stratejisi (mevcut yazarlar için)
 
-### Aşama 1 — Profile.yaml standardizasyonu (2026-05-02)
+### Aşama 1 — Profile.yaml standardizasyonu (2026-05-02 ✓ tamamlandı)
 
-8 yazar profile.yaml'ına v2.6 cooldown_overrides bloğu eklenir. **DNA korunur** (writer_version bump opsiyonel — işlevsel değişiklik yoksa minor versiyon notu yeter).
+8 yazar profile.yaml'ına v2.6 cooldown_overrides bloğu eklendi. **DNA korunur** (writer_version bump opsiyonel — işlevsel değişiklik yoksa minor versiyon notu yeter).
 
-### Aşama 2 — Hot.md havuz genişlemesi (yazar bazında)
+### Aşama 2 — Lazy havuz aktivasyonu (yeni makale ile genişlet)
 
-Bir yazarın ilk makalesi yazılırken **veya** doğrulama formu turunda:
+> **Karar (2026-05-02):** Havuzlar **boilerplate olarak proaktif doldurulmaz**; her yazar için **ilk makale üretimi sırasında** yazarın o anki sesinden türetilir. Yapay 10 varyant havuzu ezberden gelir; gerçek üretim ihtiyacında türetilen havuz yazarla konuşur.
 
-- Açılış havuzu < 10 varyant ise → en az 10'a genişlet
-- Anekdot kapısı havuzu yoksa → o yazarın sosyal haritasından 10 kapı türet
-- Dengeleyici cümle havuzu yoksa → 10 varyant öner
-- vb.
+**Trigger noktası — yeni yazar makalesi üretim akışı (AI agent zorunlu kontrol):**
 
-Berna **v2.6'yı tamamen tamamladı** — referans örnek olarak kullanılabilir (`writers/berna-aksoy/hot.md` §4).
+1. AI agent yazarın hot.md §4'ünü okur
+2. **Şu kontrol yapılır:** "Şablon Kırma Disiplini havuzu" bölümü var mı?
+   - **Yok** veya **eksik** ise → AI agent **havuz aktivasyon adımını** tetikler (aşağıda)
+   - **Var** ise → AI agent normal cooldown disiplini ile makaleyi yazar
+3. Havuz aktivasyon adımı: AI agent o yazarın **sosyal haritasından, mesleki arka planından, ses imzasından, mevcut makale arşivinden** türeterek 10+ varyant havuzu önerir; kullanıcıya sunar; onay sonrası hot.md'ye yazılır
+4. Sonrasında makale yazımı normal akışta devam eder (cooldown disiplini uygulanır)
+
+**Hangi havuzlar aktive edilir (yazara göre):**
+
+- **Açılış havuzu** (signature opening): minimum 10 varyant — yazarın "düşünce kapısı" tarzına uygun
+- **Anekdot kapısı havuzu** (dolaylı ses girişi): minimum 10 varyant — yazarın sosyal haritasından (yakın çevre, aile, eski iş, kuşaklar)
+- **Dengeleyici cümle havuzu** (yumuşatma): minimum 10 varyant — yazarın "ben sınırı" diline uygun
+- **"Bilmiyorum" anı havuzu**: minimum 10 varyant — yazarın alçakgönüllülük tonuna uygun
+- **Hekim/uzman çerçevesi havuzu**: minimum 10 varyant — yazarın klinik temas biçimine uygun
+- **Kapanış formatı havuzu**: minimum 10 format — 3-parçalı manifesto / tek paragraf editöryal / soru-cevap / metafor / kendine not / vb.
+- **İmza kapanış cümlesi varyantları** (yazar imzası varsa): minimum 6 cümle yapısı + atlama opsiyonu
+- **Humor havuzu** (yazar humor yapan biriyse): 8-10 kalıp + cooldown + hassas konuda 0
+
+**Aktivasyon yapılacak yazarlar (2026-05-02 itibarıyla, Berna hariç):**
+Alara, Başak, Duygu, Gamze, Işık, Özlem, Rima — her biri için **ilk makale üretiminde** havuz aktive edilir.
+
+Berna **v2.6'yı tamamen tamamladı** — referans örnek olarak kullanılabilir (`writers/berna-aksoy/hot.md` §4 v2.6 bölümleri).
 
 ### Aşama 3 — Article-log retroaktif kayıt (opsiyonel)
 
 Mevcut onaylı makaleler için article-log "Notlar" sütununa retroaktif kalıp seçimleri yazılabilir. Berna 13 onaylı makale için bu yapıldı (2026-05-02).
 
 Diğer yazarlar için retroaktif kayıt **opsiyonel**: yeni makale üretimi için zorunlu değildir; sadece audit kolaylığı sağlar.
+
+---
+
+## Lazy Aktivasyon Workflow (AI agent için somut adımlar)
+
+Yeni bir Alara/Başak/Duygu/Gamze/Işık/Özlem/Rima makalesi yazılacaksa:
+
+### Adım 0 — Pre-flight kontrol (article-context-build sırasında veya öncesinde)
+
+```
+profile.yaml.dynamics.cooldown_overrides ✓ (varsa standart blok)
+hot.md §4 → "Şablon Kırma Disiplini havuzu" bölümü?
+  ✓ var (10+ varyant her havuzda) → Adım 1'e geç
+  ✗ yok veya eksik → Adım 0a'ya in
+```
+
+### Adım 0a — Havuz aktivasyon önerisi (yazar bazlı)
+
+AI agent şunları kullanarak havuz önerir:
+
+1. **Yazarın profil dosyaları** — `cold.md` (biyografi/birikim), `warm.md` (manifesto/üslup), `hidden.md` (gözlemler), `hot.md` (mevcut çekirdek imzalar)
+2. **Yazarın sosyal haritası** — yakın çevre, mesleki bağlar, aile arka planı, kuşak referansları
+3. **Yazarın mevcut makale arşivi** (varsa) — gerçekten kullandığı kalıpları gözle
+4. **Yazarın imza humor havuzu** (varsa) — Berna'nın 10 kalıbı gibi yazara özel
+5. **Yazarın profile.yaml `cooldown_exempt`** — semantic core (cooldown'a tabi DEĞİL) cümleler/metaforlar
+
+AI agent **kullanıcıya sunar**: "Şu yazar için Şablon Kırma havuzu önerim: [...]" — kullanıcı onay verirse AI hot.md'ye §4 bölümünde "Şablon Kırma Disiplini havuzu" başlığı altında yazar.
+
+### Adım 1 — Normal makale üretim akışı
+
+Havuz hazır olduktan sonra ARTICLE-PRODUCTION-SPEC.md Faz 1-7 akışı işler; cooldown disiplini her makalede uygulanır.
+
+### Adım 2 — Yayın sonrası kayıt
+
+Article-log "Notlar" sütununa kalıp seçim özeti yazılır (havuz oluşturulurken kullanılan varyant numaraları kayıt edilir).
+
+> **AI agent zorunluluğu:** Yeni yazar makalesi üretiminde Adım 0 atlanamaz. Havuz **boilerplate** olarak değil, **canlı yazar dokümantasyonundan türetilir**. Yapay 10 varyant havuzu (alfabetik sıralı, jenerik) yazardan kopuk olur — bu yapılmamalıdır.
 
 ---
 

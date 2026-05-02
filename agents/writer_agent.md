@@ -27,7 +27,20 @@ Asagidaki kurallar **ihlal edilemez**. Uretilen tum metinler (makale, sosyal, bu
 - Turkce anlatim **10. sinif ve alti** sade duzeyde kalmali; akademik yigin, agir ikilem ve gereksiz katmanli cumlelerden kacin.
 
 ### Sablon Kirma Disiplini (CLAUDE.md §6 — v2.6 evrensel)
-- Yazar `hot.md §4`'undeki 8 imza kalibi havuzundan (acilis / kapanis formati / dengeleyici / hekim cercevesi / anekdot kapisi / bilmiyorum ani / imza kapanis cumlesi / humor) **cooldown** disiplini ile farkli varyant secilir.
+
+**Pre-flight kontrolu (zorunlu — her yeni yazar makalesi oncesi):**
+1. `writers/<slug>/hot.md §4`'te "Sablon Kirma Disiplini havuzu" var mi?
+   - **Var** (8 imza kalibi her biri 10+ varyant) → makaleyi yaz
+   - **Yok** veya **eksik** → **havuz aktivasyon adimi** tetikle:
+     - Yazarin `cold.md / warm.md / hot.md / hidden.md`'i oku
+     - Sosyal haritasindan + meslek/birikim'den + (varsa) makale arsivinden 10+ varyant tureterek havuz oner
+     - Kullaniciya sun → onay sonrasi `hot.md §4`'e yaz (writer_version minor bump)
+     - Sonrasinda makaleyi yaz
+2. **Yapay boilerplate yasak:** havuz alfabetik/jenerik degil, yazarin **canli dokumantasyonundan** turetilir.
+3. Berna referans ornek: `writers/berna-aksoy/hot.md §4` v2.6 bolumleri tam.
+
+**Yazim suresince:**
+- 8 imza kalibi havuzundan (acilis / kapanis formati / dengeleyici / hekim cercevesi / anekdot kapisi / bilmiyorum ani / imza kapanis cumlesi / humor) **cooldown** disiplini ile farkli varyant secilir.
 - Ayni varyant **2 ardisik makalede yasak**, **havuz cooldown penceresi icinde 1 kez** (default 4-6 makale).
 - AI agent makale uretmeden once `writers/<slug>-article-log.md` "Notlar" sutununda son 6 makaledeki kalip secimlerini okur, cooldown'u uygular.
 - Yayindan once self-check: yazilacak article-log satiri son 1 makaleninkiyle 4+ alanda ayniysa **revizyon tetigi**.

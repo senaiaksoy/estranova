@@ -52,6 +52,25 @@ Doç. Dr. Senai Aksoy aynı zamanda **Gamze Cizreli'nin gerçek hayatta jinekolo
 
 > **Framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](WRITER-DYNAMICS-FRAMEWORK.md). Bu faz framework'ün B + C katmanlarını uygular.
 
+### 1.5.0 Şablon Kırma havuz aktivasyon kontrolü (v2.6 — yeni yazar makalesi öncesi)
+
+> **Detay:** [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](WRITER-TEMPLATE-BREAKING-DISCIPLINE.md) — Lazy Aktivasyon Workflow.
+
+Yazarın `hot.md §4`'üne bak:
+
+- **Şablon Kırma Disiplini havuzu var mı?** (8 imza kalıbı için 10+ varyant her birinde)
+  - **Var** → 1.5.1'e geç (normal akış)
+  - **Yok** veya **eksik** → **Havuz aktivasyon adımı** tetiklenir:
+    1. AI agent yazarın `cold.md / warm.md / hot.md / hidden.md` profillerini okur
+    2. Yazarın sosyal haritasından, mesleki arka planından, ses imzasından, mevcut makale arşivinden (varsa) türeterek **8 imza kalıbı için minimum havuz boyutu** önerir (açılış 10, anekdot kapısı 10, dengeleyici 10, bilmiyorum 10, hekim çerçevesi 10, kapanış formatı 10, imza kapanış 6+atlama, humor 8-10)
+    3. **Kullanıcıya sunar**: "Şu yazar için Şablon Kırma havuzu önerim: [...]"
+    4. Onay sonrası AI agent havuzu yazarın `hot.md §4`'üne yazar (`writer_version` minor bump)
+    5. Sonra 1.5.1'e geçilir
+
+> **Yapay boilerplate yasak:** Havuz alfabetik sıralı/jenerik üretilemez. Yazarın **canlı dokümantasyonundan** türetilir; yapay üretim yazardan kopuk olur.
+
+> **Berna referans örnek:** `writers/berna-aksoy/hot.md §4` v2.6 bölümleri tam tamamlanmış havuzlardır; yapısal şablon olarak kullanılabilir, ama içerik per-writer üretilir.
+
 ### 1.5.1 Article log'u oku
 
 `writers/<yazar-slug>-article-log.md` dosyasını oku. Log boşsa (yazarın ilk makalesi) bu adım atlanır, doğrudan 1.5.3'e geç.
