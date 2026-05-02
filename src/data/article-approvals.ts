@@ -95,6 +95,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-01',
     note: 'Berna doğrudan onayı (form üretmeden) — Önleyici sağlık ekseni + v2.5 humor havuzundan ilk yeni kalıp uygulaması (algoritma şakası #6). Apple Watch + istirahat nabzı Kanal A KAPALI ihlal düzeltildi (dolaylı tansiyon notu çerçevesine), 3 kollektif "biz" düzeltildi, "yaşıt hesabın" yumuşatma artifact algoritma şakasıyla değiştirildi. Takvim varyasyonu kapanışı (bedenle yazışma serisi 9 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim), 5-katmanlı BEN (klinik bağlam + parametre seti + longitudinal trend). Dokuzuncu onaylı Estranova makalesi.',
   },
+  {
+    pathname: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-05-02',
+    note: 'Berna doğrudan onayı (form üretmeden) — Önleyici sağlık ekseninde ikinci makale + v2.5 humor havuzundan ikinci yeni kalıp uygulaması (üç kitap üç görüş #10, Bölüm 05 Beslenme). Berna açılışı ("Bir noktada şunu fark ettim: kemik sağlığı çoğu zaman ancak bir ağrı, düşme ya da ailede kırık hikâyesi duyulduğunda gündeme geliyor"), kollektif "biz" Bölüm 01\'de düzeltildi, dolaylı ses anekdotu ("Tanıdığım bir kadın bunu şöyle ifade etmişti: \'Kemiğin değişmek için izin istemiyor — zaten değişiyor.\'"), hekim çerçeve rotasyonu Bölüm 04 ("Hekimimle bir konuşmamızda \'tarama yaşı bir kural değil bir kişisel karar\' demişti"), "bilmiyorum" anı Bölüm 06\'da (hangi yaşam tarzı değişikliğinin kemik kütlesinde ne kadar fark yarattığı). Yapı varyasyonu kapanışı (bedenle yazışma serisi 10 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim → yapı), 5-katmanlı BEN (kemik birim metabolik organ + remodelasyon eşiği + trabeküler yapı). Onuncu onaylı Estranova makalesi.',
+  },
 ];
 
 /**
