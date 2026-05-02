@@ -145,7 +145,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/cilt-gorunum': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
-    alt: 'Doğal cilt dokusu, ince çizgiler, retuşsuz editöryal yaklaşım — cilt ve görünüm teması',
+    alt: 'Sun-lit İstanbul evi vanity sahnesinde iki yaşıt kadın (48-52); soldaki koyu kestane chin-length bob ile cream ipek kimono robe içinde vanity stool yanında oturmuş, parmak uçları sağ yanağında nazik öz-dokunuş; sağdaki warm mahogany shoulder dalgalı saç ile cream-tan ipek kimono robe içinde aynanın yanında ayakta saç düzeltiyor, sıcak gülümseme; bakımlı boyalı saçlar (gri/silver YOK), mature graceful natural cilt dokusu (smoothed değil), kimono robe omuza kadar tam kapalı; mermer cream-veined vanity counter üzerinde küçük seramik kasede gül suyu, etiketsiz amber zeytinyağı şişesi, beyaz peony vazoda, açık deri kapaklı not defteri ve dolma kalem, klasik Türk çay bardağı altın tabakta buharlı; brass yeşil camlı vanity abajur warm focused light, sheer keten perde sabah ışığı; cilt değişimleriyle barışık olgun bakım rituali teması',
   },
   '/beden-yakinlik/cinsel-saglik': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
@@ -157,7 +157,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
-    alt: 'Pencere ışığında kendi cildiyle tanışık duran 52 yaş kadın; doğal cilt dokusu, ince çizgiler, retuşsuz editöryal yaklaşım',
+    alt: 'Sun-lit İstanbul evi vanity sahnesinde iki yaşıt kadın (48-52); soldaki koyu kestane chin-length bob ile cream ipek kimono robe içinde vanity stool yanında oturmuş, parmak uçları sağ yanağında nazik öz-dokunuş; sağdaki warm mahogany shoulder dalgalı saç ile cream-tan ipek kimono robe içinde aynanın yanında ayakta saç düzeltiyor, sıcak gülümseme; bakımlı boyalı saçlar (gri/silver YOK), mature graceful natural cilt dokusu (smoothed değil), kimono robe omuza kadar tam kapalı; mermer cream-veined vanity counter üzerinde küçük seramik kasede gül suyu, etiketsiz amber zeytinyağı şişesi, beyaz peony vazoda, açık deri kapaklı not defteri ve dolma kalem, klasik Türk çay bardağı altın tabakta buharlı; brass yeşil camlı vanity abajur warm focused light, sheer keten perde sabah ışığı; menopoz döneminde cilt değişimleri ile barışık olgun bakım rituali ve doğal mature graceful cilt teması',
   },
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
