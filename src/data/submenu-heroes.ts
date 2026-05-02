@@ -57,7 +57,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
     src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
-    alt: 'Sakin sabah ışığında ahşap masada açık not defterine yazan 52 yaş kadın, çay fincanı ve bordo aksanlı iç mekân; bilgilendirilmiş karar ve iç tartışma teması',
+    alt: 'İstanbul Boğaz sahil promenadında geç öğleden sonra altın saat ışığında yan yana yürüyen iki yaşıt kadın (50-54); soldaki warm dark mahogany shoulder dalgalı saç, modest cream cashmere V-neck kazak ve warm camel keten-pamuk wide-leg pant ile bordo ipek shawl-scarf gevşek omuza dökülmüş, slim leather tote elinde, mid-conversation thoughtful sharing arkadaşına; sağdaki warm chestnut polished saç, navy keten button-down ve cream tailored pant ile soft cream cashmere kazak boyna sarılmış casual, küçük katlı dergi elinde, leaning slightly toward dinleyen küçük composed gülümseme; bakımlı boyalı saçlar, modest tam kapalı yaka, mature graceful natural cilt; arka planda Boğaz mavi-yeşil su bokeh + uzakta yelkenli + İstanbul silüeti haze + sahil bench partially visible, sağda oleander hedge soft bokeh; warm cream stone sahil pavement; HRT bilgilendirilmiş karar sürecini iki olgun arkadaşla yürüyerek düşünme teması',
   },
   '/hormonal-gecis/40-sonrasi': {
     src: '/images/library/editorial/journey-40-sonrasi.webp',
