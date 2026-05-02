@@ -153,7 +153,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/pelvik-taban': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Pencere ışığında ayakta duran 46 yaş kadın, eli karın-alt bölgesinde nazik farkındalık jesti; pelvik taban farkındalığı teması',
+    alt: 'Sun-lit İstanbul evi yoga köşesinde pale oak yer üzerinde yan yana yoga matlarında oturmuş iki yaşıt kadın (48-52); soldaki warm honey-chestnut shoulder dalgalı saç ile soft sage-green long-sleeve activewear ve camel full-length leggings içinde knees-up cross-legged easy pose, bir el karın-alt bölgesinde nazik mindful öz-farkındalık jesti, eyes softly closed dingin ifade; sağdaki koyu kestane medium ponytail ile dusty rose long-sleeve top ve cream full-length leggings içinde kendi mat üzerinde yan yana cross-legged, bir el dizinde küçük composed gülümseme arkadaşına yan bakış; bakımlı boyalı saçlar (gri/silver YOK), modest tam kapalı activewear, mature graceful natural cilt; mat yanında cam su bardağı, walnut yan masada küçük seramik vazoda lavanta dalı, açık deri kapaklı not defteri ve dolma kalem; large monstera ve peace lily yeşilliği soft bokeh, sheer keten perde sabah ışığı, brass-burnished floor lamp warm subtle light köşeden; ev içinde arkadaşla birlikte yargısız sakin pelvik taban farkındalığı rituali teması',
   },
   '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
@@ -169,7 +169,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Pencere ışığında ayakta duran 46 yaş kadın, eli karın-alt bölgesinde nazik farkındalık jesti; pelvik taban farkındalığı teması',
+    alt: 'Sun-lit İstanbul evi yoga köşesinde pale oak yer üzerinde yan yana yoga matlarında oturmuş iki yaşıt kadın (48-52); soldaki warm honey-chestnut shoulder dalgalı saç ile soft sage-green long-sleeve activewear ve camel full-length leggings içinde knees-up cross-legged easy pose, bir el karın-alt bölgesinde nazik mindful öz-farkındalık jesti, eyes softly closed dingin ifade; sağdaki koyu kestane medium ponytail ile dusty rose long-sleeve top ve cream full-length leggings içinde kendi mat üzerinde yan yana cross-legged, bir el dizinde küçük composed gülümseme arkadaşına yan bakış; bakımlı boyalı saçlar (gri/silver YOK), modest tam kapalı activewear, mature graceful natural cilt; mat yanında cam su bardağı, walnut yan masada küçük seramik vazoda lavanta dalı, açık deri kapaklı not defteri ve dolma kalem; large monstera ve peace lily yeşilliği soft bokeh, sheer keten perde sabah ışığı, brass-burnished floor lamp warm subtle light köşeden; menopoz döneminde idrar kaçırma ve pelvik taban farkındalığını arkadaşla birlikte yargısız bedeni dinleme teması',
   },
   '/hormonal-gecis/menopoz/menopozda-kemik-erimesi-onleme-ve-egzersiz': {
     src: '/images/library/editorial/hg-kemik-erimesi-egzersiz.webp',
