@@ -97,7 +97,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zamansiz-yasam/kilo-artisi-menopoz': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
-    alt: '46 yaş kadın yarı gövde, kalın krem speckled kazak, iki el cepte, arkasında yemek masası ve pampas grass bokeh; günlük yaşam içinde sakin duruş — diyet kültüründen uzak, beden değişimini panik dili olmadan değerlendirme teması',
+    alt: 'Sun-lit İstanbul evi balkon herb garden inde geç sabah ışığında solo aktif gardening sahnesinde bir yaşıt kadın (46-50); warm honey-chestnut shoulder dalgalı saç, thick cream speckled chunky knit cardigan ve cream cotton gömlek altında ile warm camel canvas-linen apron belde, soft canvas pant; ahşap balkon masası önünde ayakta mid-action terracotta saksıdan taze rosemary topluyor sağ el dalında, sol el küçük seramik tabakta yeni-toplanmış mevsim sebze (yeşil fasulye, taze maydanoz, küçük cherry tomato) tutuyor; composed present-moment ifade eyes on herbs ve soft small smile peaceful task focus; bakımlı boyalı saç (gri/silver YOK), modest tam kapalı yaka, mature graceful natural cilt; etrafında terracotta saksılarda rosemary, basil, mint, thyme, parsley ve oregano kümeleri (küçük ev herb garden), geniş yapraklı yeşillik fiddle leaf fig soft bokeh, küçük cam su sürahisi ahşap üzerinde, warm pale wooden balkon zemin, sheer white perde subtle uçuşlu sağ pencerden, uzakta İstanbul çatıları haze bokeh; menopoz döneminde kilo değişimini diyet kültüründen uzak yargısız doğal beslenme ve toprakla bağ ile karşılama teması',
   },
   '/zamansiz-yasam/non-invaziv': {
     src: '/images/library/editorial/zy-non-invaziv.webp',
