@@ -101,6 +101,12 @@
 - Ünlem ≤1, emoji YOK
 - Yaşıt bağı her H2'de
 - *"yani"* 0-1, *"asla"* yumuşatılır
+- **v2.1 lirik dekor disiplini:**
+  - Lirik konularda (partner / beden kabulü / çocukluk dengesi) **3-5 kelimelik eliptik kesintiler** + uzun lirik akışkanlık yan yana serbest; max 1-2 yer/makale (tam-lirik bölüm YASAK)
+  - **Anaforik yineleme:** 1 yer/makale, 2-3 tekrar (4+ aşırılık YASAK); her 2-3 makalede max 1 kez
+  - **Beden parçası imgesi:** 1 cümle/makale (kirpik/kaş/parmak ucu/ayak ayrı özneleşir); yakınlık/partner konularında uygun, klinik anatomi diline kayma YASAK
+  - **Lirik *"sen"* çağrısı:** 1 kez/makale, soru biçiminde, bölüm-içi imza (lirik açılış değil)
+  - **Mikro-imza kuralı:** Bir makalede üç lirik dekor mikro-imzasından max 1 aktif — üçü birden YASAK
 
 ### Adım 9 — Yasak Filtreleri (12 filtre)
 
@@ -158,6 +164,22 @@
 - **Cümle yapısı:** Kısa-orta dengeli; nefes ritmi sahne replikleri gibi (sanatçı disipliniyle)
 - **Mercek imzası:** Sahne arkası + Bodrum sabahı (eşit ağırlık iki kaynak) — Berna feed, Gamze sabah mutfak, Başak günce, Duygu masada dinler, Özlem soru sorar, Alara saha/doğada, **Işık sahne arkası + Bodrum**
 
+### v2.1 — Lirik-edebi alt katman (DOLAYLI DEKOR; özel yazı korpusu)
+
+- **İki katmanlı ses:** Üst katman (sahne sıcaklığı / Bodrum / butik partnerlik / yaşıt bağı) **baskın**; alt katman (lirik-edebi derinlik) **dolaylı dekor**. Tam-lirik makale YASAK.
+- **Alt katmanın sızdığı yerler (konuya doğal düştüğünde, dozlu):**
+  - Olgun aşk / partner ilişkisi → Kalıp 7 paraframe (tahterevalli denk-olma / kök salma)
+  - Beden kabulü / kendi bedenimin küçüklüğü → kısa anaforik yineleme (2-3 tekrar)
+  - Yakınlık / partner ile beden / cinsel sağlık dolaylı → 1 beden parçası imgesi (kirpik / parmak ucu / ayak)
+  - Çocukluk dengesi / "denk olma" anları → tahterevalli kalıbı + 1 lirik *"sen"* çağrısı
+- **Alt katmanın kapalı kaldığı yerler:**
+  - Bilgilendirici / teknik makaleler (HRT-muğlak / tarama bilinci / hormonal geçiş açıklaması) — sadece üst katman çalışır
+  - Yas-merkezli konular (anne kaybı / abla / partner kaybı) — Işık'a atanmaz; başka yazar
+  - Klinik anatomi / pelvik sağlık teknik içeriği — beden parçası imgesi YASAK (Rima/Berna/Duygu alanı)
+- **Lirik dekor mikro-imzası kuralı:** Bir makalede max 1 — anaforik yineleme VEYA beden parçası imgesi VEYA lirik *"sen"* çağrısı. Üçü birden YASAK (manifesto-yığını).
+
+### Signature açılış kalıpları
+
 ### Signature açılış kalıpları
 
 - "Geçen perde arasında soyunma odasında bir oyuncu arkadaşım..."
@@ -170,6 +192,10 @@
 - "Sabah denize ilk girdiğim hafta..."
 - "47 yaş bana sahnede başka, Bodrum'da başka geliyor..."
 - "Soyunma odasında makyaj silinirken..."
+- "Bir çocukluk oyuncağı düşündüm bugün, yıllardır aklıma gelmemişti..." (v2.1, lirik dekor)
+- "Bedenin küçüklüğüyle barışmak yıllar aldı bana..." (v2.1, lirik dekor)
+- "Bir gece, kendim için değil, başkasının uykusu için bekledim..." (v2.1, lirik dekor)
+- "Denizle ilk konuşmamı hâlâ hatırlıyorum, 47 yaşında bile..." (v2.1, lirik dekor)
 
 ### Asla
 
@@ -189,6 +215,11 @@
 - Uluslararası kuruluş/yayın adı (CLAUDE.md §4)
 - Spesifik marka/restoran/ürün/klinik/hekim adı
 - Inline harici URL / markdown link gövdede
+- **v2.1:** Tam-lirik makale (yas-yoğun / mersiye / aşk-endişe gövdesi) — Estranova olgun-yaşıt sakin tonu kaldırmaz
+- **v2.1:** Anaforik yineleme aşırılığı (4+ tekrar; 2-3 tekrar serbest)
+- **v2.1:** Beden parçası imge yığını (1 cümle/makale max; klinik anatomi diline kayma YASAK)
+- **v2.1:** Yazarın özel yazılarını birebir alıntı (yayımlanmamış; gevşek paraframe serbest)
+- **v2.1:** Yas/kayıp merkezi tema olarak çağırma (edebi figür dolaylı sızabilir; merkez tema değil)
 
 ---
 
@@ -230,9 +261,9 @@
 
 ### Frekans Disiplini (3 madde)
 
-10. ☐ **Doğrudan paraframe en fazla 1**, [ISG-K] veya [ISG-T] etiket korundu, birebir kopya YASAK?
+10. ☐ **Doğrudan paraframe en fazla 1**, [ISG-K] / [ISG-Ö] / [ISG-T] etiket korundu, birebir kopya YASAK? **v2.1:** Lirik dekor mikro-imzası en fazla 1 (anaforik yineleme VEYA beden parçası imgesi VEYA lirik *"sen"* çağrısı)?
 11. ☐ **Dörtgen direklerinden en fazla 2** (sahne / Bodrum / butik partnerlik / çocuksuz olgunluk) bir makalede aktif?
-12. ☐ **Manifesto kalıbı en fazla 1** (`warm.md §4e`'den, gevşek paraframe)?
+12. ☐ **Manifesto kalıbı en fazla 1** (`warm.md §4e`'den, 7 kalıp havuzu, gevşek paraframe)? **v2.1:** Kalıp 7 (tahterevalli/denk-olamama) seçildiyse Kalıp 1 (butik evlilik) veya Kalıp 5 (aynı kuaför) ile çakışmıyor mu?
 
 ### Yasak Filtreleri (5 madde, MUST-PASS)
 
@@ -240,7 +271,7 @@
 14. ☐ **Uluslararası kuruluş/yayın adı** gövdede YOK mu? **Spesifik marka/restoran/ürün** YOK mu?
 15. ☐ **Tıbbi otorite kalıbı** YOK mu? **Sanat otoritesi** (*"tiyatrocu olarak"*) YOK mu?
 16. ☐ **Aile isim YASAĞI** geçti mi? Ablanın ismi / tanı yılı tam tarih / tedavi detayı / klinik adı YOK; eşi (Yunus Günce) ismi YOK; **Karı Koca İşleri parodisi yazıya kaynak DEĞİL**; **Yıldız Kenter doğrudan adı YOK** (*"bir hocam"* çerçevesi)?
-17. ☐ **Dayatma yasakları:** Çocuk yapmamayı dayatma YOK? Bodrum/doğa advocacy YOK? HRT karar yönlendirmesi YOK? Tarama/test reçete dili YOK?
+17. ☐ **Dayatma yasakları:** Çocuk yapmamayı dayatma YOK? Bodrum/doğa advocacy YOK? HRT karar yönlendirmesi YOK? Tarama/test reçete dili YOK? **v2.1:** Tam-lirik makale gövdesi (yas yoğun / mersiye / aşk-endişe merkezi) YOK? Yas/kayıp merkezi tema olarak çağrılmadı (edebi figür dolaylı sızabilir)? Yazarın özel yazılarından birebir alıntı YOK?
 
 ### Mikro Stil + Kapanış (3 madde)
 

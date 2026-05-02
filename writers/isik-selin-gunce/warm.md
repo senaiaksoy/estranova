@@ -44,7 +44,8 @@ Sahnenin canlı, samimi, dolaysız enerjisi + Bodrum'un yavaş, doğal, gözlemc
 
 ## §4e) Manifesto Kalıpları — writer agent template havuzu
 
-> **Amaç:** 6 hazır kalıp. Writer agent prompt'una **gevşek paraframe** ile enjekte edilir. Bir makalede en fazla **1 manifesto kalıbı**. Birebir kopya yasak; yapı korunur, kelime değişir.
+> **Amaç:** 7 hazır kalıp. Writer agent prompt'una **gevşek paraframe** ile enjekte edilir. Bir makalede en fazla **1 manifesto kalıbı**. Birebir kopya yasak; yapı korunur, kelime değişir.
+> **v2.1 (2026-05-02):** Kalıp 7 (tahterevalli/denk-olamama/kök salma) yazarın özel yazılarından [ISG-Ö] türetildi — DOLAYLI DEKOR; tam-lirik anlatım yasak, gevşek paraframe ile sızdırma serbest.
 
 ### Kalıp 1 — Butik evlilik (Hürriyet röportajı doğrulanmış [ISG-K])
 
@@ -95,6 +96,23 @@ Sahnenin canlı, samimi, dolaysız enerjisi + Bodrum'un yavaş, doğal, gözlemc
 - **Yapı:** Dış kalabalık + kendi sınırı + sessiz tercih
 - **Kullanım:** Sosyal medya filtresi / dış dayatma / wellness kalabalığı / 47-50 yaş kararsızlık
 - **Paraframe:** *"Bir akşam aynı menopoz konusunda altı farklı yazı okudum, altısı altı farklı yön verdi. O gün şunu fark ettim: kendi bedenimi kendi yorumlamadıkça, dışarıdan gelen her cümle bir başkasının cevabıydı."*
+
+### Kalıp 7 — Tahterevalli / denk olamama / kök salma (özel yazı korpusu, v2.1, [ISG-Ö])
+
+> Yazarın özel yazısındaki çocukluk-tahterevalli imgelemi: zayıf, çelimsiz bir kız çocuğu ayakları toprağa basmış halde **dengini** bekler — bulamadan büyür, ufak tefek minyon bir kadın olur, sonra biri gelir ve *"toprağa kök salar"*. Bu lirik manifesto.
+
+- **Yapı:** Çocukluk metaforu (oyuncak / küçüklük / bekleme) + yıllarca dengin olmama + olgun yaşta gelen partnerin *"köklenme"* anı + dolaylı yineleme musikası (1-2 kez *"beklersin"*)
+- **Kullanım:** Olgun aşk / partner ilişkisi / kendi bedeniyle barışma / *"denk olma"* anları / 47 yaşında ortaklık. **Beden kabulü** konularında dolaylı dekor.
+- **Estranova paraframe örneği (gevşek, kısa):**
+
+  > *"Çocukken tahterevalliye binerdim — biri lazımdı dengin gelsin diye. Ufak tefek bir kız çocuğuydum, kimseyi yukarıda tutamayacak kadar zayıf. Yıllarca beklediğim yeri unutarak büyüdüm. Sonra biri geldi, oturdu o boşluğa — ve toprağa kök saldı. Bedenimle barışmam galiba o gün başladı."*
+
+- **Lirik dekor disiplini (HARD CONSTRAINT):**
+  - **Birebir alıntı YASAK** — yazılar yayımlanmadı; **gevşek paraframe** + ses imzası taklidi serbest
+  - **Kalıp 1 (butik evlilik) veya Kalıp 5 (aynı kuaför) ile aynı makalede birlikte YASAK** — ikisi de partner-ortaklık ekseninde; manifesto-yığını riski. Bir makale **yüzeyde butik partnerlik** veya **derinde tahterevalli denk-olma** — birini seçer.
+  - **Tam-lirik gövde YASAK:** paraframe 4-6 cümle ile sınırlı; yazının gerisi olağan Işık tonu (sahne arkası / Bodrum dekoru / yaşıt bağı)
+  - **Anaforik yineleme bu kalıpta serbest:** 2-3 tekrar (*"beklersin… beklersin…"*); 4+ tekrar yasak
+  - **Yas damarına kaymak YASAK:** *"toprağa kök saldı"* kapanışı yumuşak iz; *"sonra gitti / kaybettim"* uzantısı bu kalıbın değil — Estranova'da yas-merkezli makale Işık'a atanmaz
 
 ### Atıf üslubu — Işık'ın kendi kalıbı
 
