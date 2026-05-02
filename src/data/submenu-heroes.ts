@@ -177,7 +177,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge/uyku-dinlenme': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku ve dinlenme teması',
+    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; uyku ve dinlenme bütününe sakin natürmort yaklaşım teması',
   },
   '/zihin-denge/duygusal-denge': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
@@ -189,27 +189,27 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku ve dinlenme teması',
+    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; menopoz döneminde uyku düzenini yeniden kurma sabah ritüeli teması',
   },
   '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Şafak ışığında pencereye bakan kadın; perimenopozda uykunun değişen yanı, hormonal dalga ve uyku evreleri teması',
+    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; perimenopozda uykunun değişen yanı, hormonal dalga ve uyku evreleri kaydı teması',
   },
   '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Akşam ışığında dingin bir mekân; akşam hareketinin uykuya etkisi, melatonin ve vücut ısısı teması',
+    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; akşam hareketinin uykuya etkisi, melatonin ve vücut ısısı ritmi teması',
   },
   '/zihin-denge/uyku-dinlenme/sabah-ucte-uyanmak-dokuz-yil': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Gecenin koyu mavisinde tavana bakan kadın silüeti; sabah üçte uyanmak ve dokuz yılın menopoz deneyimi teması',
+    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; sabah üçte uyanmak ve dokuz yıllık menopoz deneyimini kâğıda dökme teması',
   },
   '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Yumuşak ışıkta yatak kenarı ve katlanmış pamuklu çarşaflar; gece terlemesi ve mahrem uyku deneyimi teması',
+    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; gece terlemesi sonrası sakin dengelenme ve mahrem uyku deneyiminin yargısız kaydı teması',
   },
   '/zihin-denge/uyku-dinlenme/uyku-biliminin-siniri': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Sabah ışığında açık not defteri ve akıllı saat; uyku bilimi, kanıt gücü ve takip cihazları teması',
+    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; uyku takip cihazları, kanıt gücü ve günlüğün kişisel yorumu arasında dengeli yaklaşım teması',
   },
   '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
