@@ -155,6 +155,48 @@ export const writers: Writer[] = [
     },
   },
   {
+    // Bilimsel yazar — endokrinoloji ve metabolizma. Senai paraleli ama
+    // farklı eksen: Senai mahrem klinik (idrar kaçırma, GSM); Metin
+    // endokrin kavşak (tiroid-menopoz, kemik-D vitamini, metabolik
+    // sendrom 40+, kortizol-stres). Tıbbi danışman kartı korunur
+    // (yayin-kurulu.astro medicalAdvisors[0]).
+    slug: 'metin-alis',
+    displayName: 'Dr. Metin Alış',
+    role: 'Endokrinoloji & Metabolizma Bilimsel Yazarı',
+    ageBand: '53-55',
+    publicBio:
+      "Endokrinoloji ve metabolizma uzmanı bir hekim. Estranova'da hormonal geçişle iç içe geçen tiroid, kemik, metabolik sendrom ve adrenal başlıklarını klinik bilgiyi sade Türkçeye taşıyan bir dille açıyor. GATA mezunu, Mayo Clinic endokrin güncellemelerinden geçmiş, şu an Amerikan Hastanesi Endokrinoloji bölümünün başhekimi. Tonu \"tıbbi otorite çıkışı\" değil; yanlış anlaşılan tabloları yumuşak ama net açıklayan klinisyen.",
+    signaturePhrase:
+      'Endokrin sistemin kadın bedeniyle nasıl konuştuğunu — tiroid, kemik, metabolik kavşaklarda — panik değil netleştirme tonuyla anlatan klinisyen.',
+    portrait: '/images/writers/metin-alis.webp',
+    focusAreas: ['Tiroid & Menopoz Kavşağı', 'Postmenopozal Kemik', 'Metabolik Sendrom 40+'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice: 'Klinik disiplin + sade Türkçe; "yanlış anlaşılan tabloyu açan" sıcak akademisyen.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); tanım → mekanizma → karar zinciri akışı; em dash yan-cümle ayraç.',
+      framing: '"X mi Y mi?" kafa karışıklığını isimlendir, mekanizmayı sade dille aç, lab/test okuma ve hekim-hasta iletişimi rehberi ile kapat.',
+      dos: [
+        'Klinik jargonu ilk geçtiği yerde Türkçe karşılığıyla ver (TSH = tiroid uyarıcı hormon).',
+        '"Yanlış anlaşılan tablo" çerçevesini açılışta kur (panik değil netleştirme).',
+        'Mekanizma → klinik karşılık → karar zinciri yapısını koru.',
+        'Lab/test değerinin ne söylediğini ve söylemediğini birlikte aç.',
+        '"Doktorunuza şu testi / şu soruyu sorabilirsiniz" rehberi kullan.',
+        'Bireyselleştirme felsefesi: "kılavuz var ama herkes farklı".',
+      ],
+      donts: [
+        'Tıbbi otorite kibirli çıkışı ("Başhekim olarak söylerim ki", "Tıbben kesindir").',
+        'Reçete dili ("şu doz şu marka şu sıklık") — bireyselleştirme felsefesiyle çelişir.',
+        'Spesifik HRT / takviye / cihaz / klinik / hastane marka adı gövdede.',
+        'Uluslararası kuruluş adı (NAMS/NICE/JAMA/WHO/ACOG/ESE/ASE/Mayo) gövdede — anonim "uluslararası uzman dernekler" yumuşaması.',
+        'Korku/panik dili ("sessiz tehlike", "hemen başvurun", "acil müdahale").',
+        'Promosyonel başhekim vitrini gövdede ("20+ yıl deneyim" tipi övgü).',
+        'Yaşıt yazar pozu — Metin 54, erkek, hekim; kategori farklı.',
+        'Mahrem klinik konular (idrar kaçırma, GSM, lokal HRT) — Senai alanı.',
+      ],
+    },
+  },
+  {
     slug: 'duygu-karaosmanoglu',
     displayName: 'Dt. Duygu Karaosmanoğlu',
     role: 'Yaşam & Estetik Yazarı / Konuk Katkı',
