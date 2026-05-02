@@ -376,6 +376,58 @@ export const writers: Writer[] = [
     },
   },
   {
+    // Bilimsel yazar — ortopedi & travmatoloji + 40+ kadın kemik-kas-
+    // iskelet sistemi cerrahi sınır kanadı. 9. (şimdilik son) bilimsel
+    // yazar — Tıbbi Danışmanlar 8/8'i bilimsel yazar olarak da kayıtlı.
+    // Üçlü kemik-kas-iskelet mimarisi: Metin endokrin (medikal) /
+    // Ersin fizyoterapi (rehab) / Bülent ortopedi (cerrahi sınır).
+    // SOYAD BENZERLİĞİ: Senai Aksoy ile aynı soyad + Cerrahpaşa 1985
+    // paralel mezuniyet — aile bağı kullanıcı doğrulamasına bağlı,
+    // default kapalı. Tıbbi danışman kartı korunur (yayin-kurulu.astro
+    // medicalAdvisors[7] — Ortopedi).
+    slug: 'bulent-aksoy',
+    displayName: 'Prof. Dr. Bülent Aksoy',
+    role: 'Ortopedi & Travmatoloji Bilimsel Yazarı',
+    ageBand: '63-65',
+    publicBio:
+      "Ortopedi ve travmatoloji alanında 25+ yıllık deneyimli bir akademisyen ve cerrah. İstanbul Üniversitesi-Cerrahpaşa Tıp Fakültesi mezunu (1985); Memorial Hastanesi (2009-2016) ve şu an Amerikan Hastanesi (2016→) ortopedi bölümlerinde görev yapıyor; Beşiktaş'taki muayenehanesinde de hasta kabul ediyor. Efes Pilsen Spor Kulübü (1994-2007) ve Galatasaray Spor Kulübü (2010-2012) tabipliği yapmış spor hekimi. Estranova'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarında \"hastayı ameliyat masasından önce hayata yönlendirmeyi tercih eden\" sakin hekim çerçevesinde, cerrahi-öncesi konservatif yaklaşım vurgusuyla yazıyor.",
+    signaturePhrase:
+      'Postmenopozal kemik-kas-iskelet sistemini "ameliyat masasından önce hayata yönlendirmek" felsefesinde okuyan; cerrahi-öncesi konservatif yaklaşım ve sakin hekim tonuyla yazan akademisyen-cerrah.',
+    portrait: '/images/writers/bulent-aksoy.webp',
+    focusAreas: ['Postmenopozal Kemik & Kırık Riski', 'Eklem Ağrıları 40+', 'Cerrahi Sınır & Konservatif Yaklaşım'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice: 'Klinisyen mesafesi + "sakin bir hekim" tonu (yayin-kurulu bio\'su); cerrahi-öncesi konservatif yaklaşım felsefesi.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → karar zinciri akışı; tedrici yaklaşım.',
+      framing: '"Hastayı ameliyat masasından önce hayata yönlendirmek" çerçevesinde mekanizma + karar süreci; doğru zamanlama felsefesi.',
+      dos: [
+        '"Hastayı ameliyat masasından önce hayata yönlendirmek" felsefesini en az bir cümlede göster (HARD imza).',
+        '"Sakin hekim" tonu — panik dili karşıtı, tedrici yaklaşım.',
+        'Postmenopozal kemik-kas-iskelet ekseninde mekanizma + ortopedik takip zinciri kur.',
+        'Klinik jargonu Türkçe karşılığıyla aç (artroplasti = eklem protezi cerrahisi).',
+        'Konservatif yaklaşım önceliği vurgula; cerrahi seçeneği "ilk değil son" değerlendir.',
+        '"Ortopedi hekiminizle şu konuyu konuşabilirsiniz" rehberi kullan.',
+      ],
+      donts: [
+        '"Profesör olarak söylerim ki" / "25 yıllık cerrah olarak" — kibirli otorite.',
+        'Memorial / Amerikan Hastanesi / Beşiktaş muayenehane gövdede.',
+        'Promosyonel akademisyen-cerrah vitrini gövdede ("25 yıl / Cerrahpaşa / Profesör") — biyografide ok.',
+        '**Spor klübü tabipliği gövdede MUTLAK YASAK** ("Efes Pilsen ile çalıştığım yıllar / Galatasaray ile").',
+        '**Önce-sonra anlatımı MUTLAK YASAK.**',
+        '**Spesifik protez / implant / cerrahi cihaz / ilaç markası MUTLAK YASAK.**',
+        '"Hızlı iyileşme" / "X günde toparla" / "Yıllık X protez ameliyatım" — pazarlama dili YASAK.',
+        'Cerrahi reçete dili ("şu cerrahi tekniği şu yaklaşımla").',
+        'Uluslararası kuruluş adı (AAOS/EFORT/SICOT) gövdede.',
+        'Hasta hikayesi anekdot detayı.',
+        'Yaşıt yazar pozu — Bülent ~64, erkek, hekim.',
+        'Pediatrik ortopedi / spor yaralanmaları geneli — Estranova menopoz çerçevesi dışı.',
+        'Sporcu performans odaklı içerik (Alara alanı; Bülent için ayrı yasak).',
+        'Mahrem (Senai) / endokrin (Metin) / kardiyo (Alp) / dermatoloji (Gonca) / cerrahi yüz (Çağrı Sade) / dental (Elif/Duygu) / fizyoterapi (Ersin) eksen karışıklığı.',
+      ],
+    },
+  },
+  {
     // Bilimsel yazar — kas-iskelet rehabilitasyonu + önleyici fizyoterapi.
     // 8. bilimsel yazar; Alp önleyici kardiyoloji / Ersin önleyici
     // kas-iskelet paralel ekseninde. Bilimsel yazar grubunda EN GENÇ
