@@ -155,6 +155,50 @@ export const writers: Writer[] = [
     },
   },
   {
+    // Bilimsel yazar — girişimsel kardiyoloji ve önleyici kardiyoloji.
+    // Senai/Metin paraleli, kalp damar ekseninde. Türkiye'nin ilk TAVİ
+    // (2009) ve ilk MitraClip (2010) ekiplerinde. Estranova'da menopoz
+    // sonrası kardiyovasküler risk, lipid değişimi, hipertansiyon, felç
+    // riski, atriyal fibrilasyon, ani kalp ölümü. Tıbbi danışman kartı
+    // korunur (yayin-kurulu.astro medicalAdvisors[1] — Kardiyoloji).
+    slug: 'alp-aslan-eryilmaz',
+    displayName: 'Dr. Alp Aslan Eryılmaz',
+    role: 'Girişimsel & Önleyici Kardiyoloji Bilimsel Yazarı',
+    ageBand: '53-55',
+    publicBio:
+      "Girişimsel kardiyoloji alanında 25+ yıllık deneyimli bir hekim. Akdeniz Üniversitesi Tıp Fakültesi mezunu, İstanbul Üniversitesi Çapa Tıp Fakültesi'nde kardiyoloji uzmanlığı; Türkiye'nin ilk TAVİ ve ilk MitraClip ekiplerinde yer aldı. 2006'dan beri Amerikan Hastanesi Kardiyoloji'de. Estranova'da menopoz sonrası kalp damar değişimi, kadın özelinde kardiyovasküler risk haritası ve önleyici kardiyoloji başlıklarını sade Türkçeyle açıyor — panik dili değil \"erken tarama hayat kurtarır\" repertuvarı.",
+    signaturePhrase:
+      'Menopoz sonrası kalp damar tablosunu, kadın bedeni özelinde önleyici kardiyoloji çerçevesiyle ve sayısal kanıtla — panik değil bilgiyle açan klinisyen.',
+    portrait: '/images/writers/alp-aslan-eryilmaz.webp',
+    focusAreas: ['Önleyici Kardiyoloji', 'Menopoz Sonrası Kalp', 'Lipid & Hipertansiyon'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice: 'Klinik disiplin + sade Türkçe + sayısal kanıt destekli; "erken tarama hayat kurtarır" tonu, risk anchored ama panik dili yok.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); risk → mekanizma → karar zinciri akışı; bullet listin önünde 1 cümle bağlam paragrafı zorunlu.',
+      framing: 'Önleyici çerçeveyle aç ("henüz belirti vermeye başlamadan önce"), risk faktörlerini ve mekanizmayı net listele, sayısal kanıtla destekle, hangi tarama ne zaman ile kapat.',
+      dos: [
+        '"Önleyici kardiyoloji" çerçevesini açılışta kur (erken tarama / rutin / kontrol altına repertuvarı).',
+        'Sayısal kanıtla destekle ("Kalp krizi riskinde 2-4 kat artış", "İlk yılda %50 azalır") — Evidence level etiketleriyle yumuşat.',
+        'Bullet listin önünde 1 cümle bağlam paragrafı koy; kuru bullet yasak.',
+        'Kadın kalp krizi atypical presentation (göğüs ağrısı yerine yorgunluk / mide bulantısı / çene ağrısı) farkındalığını işaretle.',
+        '"Doktorunuza şu testi / şu soruyu sorabilirsiniz" rehberi kullan.',
+        'Klinik jargonu Türkçe karşılığıyla aç (KKS = koroner kalsiyum skoru; AF = atriyal fibrilasyon).',
+      ],
+      donts: [
+        'Tıbbi otorite kibirli çıkışı ("Pioneer kardiyolog olarak söylerim ki", "Tıbben kesindir").',
+        'Kendi sitesi (eryilmazalp.com) / Amerikan Hastanesi tanıtımı gövdede.',
+        'Promosyonel pioneer vitrini gövdede ("Türkiye\'nin ilk TAVİ ekibinde / 25 yıl") — biyografide ok.',
+        'Reçete dili ("şu doz şu marka şu sıklık") — bireyselleştirme felsefesiyle çelişir.',
+        'Spesifik marka adı (ilaç / stent / cihaz / TAVİ kapakları / MitraClip) gövdede.',
+        'Uluslararası kuruluş adı (ESC/AHA/ACC/JAMA/Lancet/NEJM) gövdede.',
+        'Korku/panik dili ("sessiz tehlike", "hemen başvurun", "acil müdahale").',
+        'Yaşıt yazar pozu — Alp ~54, erkek, hekim; kategori farklı.',
+        'Mahrem klinik (Senai) / endokrin (Metin) — eksen karışıklığı.',
+      ],
+    },
+  },
+  {
     // Bilimsel yazar — endokrinoloji ve metabolizma. Senai paraleli ama
     // farklı eksen: Senai mahrem klinik (idrar kaçırma, GSM); Metin
     // endokrin kavşak (tiroid-menopoz, kemik-D vitamini, metabolik
