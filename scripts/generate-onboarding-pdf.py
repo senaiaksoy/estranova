@@ -543,8 +543,10 @@ story += bullets([
 ])
 story.append(Spacer(1, 0.2*cm))
 story.append(p(
-    'İlk profilinizi oluştururken sizden 30-60 dakikalık bir <b>profil görüşmesi</b> '
-    'rica ederiz; daha sonra siz revize etmek istemediğiniz sürece sabit kalır.'))
+    'İlk profilinizi web üzerinden ulaşılabilen kaynaklardan (CV, kamuya açık yazılar, '
+    'varsa röportajlar) oluştururuz; ek metinler paylaşırsanız profil zenginleşir. '
+    'Süreç içinde size gönderilen formlarla profiliniz <b>giderek size yaklaşır</b> '
+    '(detay: Bölüm 9).'))
 
 story.append(section_h3('Faz 3 — AI Destekli Taslak'))
 story.append(p(
@@ -921,25 +923,23 @@ story.append(PageBreak())
 # --- 10. Sıradaki Adım + İletişim ---
 story += section_h2(10, 'Sıradaki Adım: Sizden Beklediğimiz')
 
-story.append(p('Bu belgeyi okuduktan sonra üç olası yol vardır:'))
+story.append(p('Bu belgeyi okuduktan sonra iki olası yol vardır:'))
 
-story.append(section_h3('Yol A — Profil görüşmesi randevusu'))
-story.append(p(
-    '30-60 dakikalık bir görüşmede sizin profilinizi (cold/warm/hot dosyaları) '
-    'birlikte oluştururuz; ses imzanızı, uzmanlık alanlarınızı, konu önerilerinizi '
-    'konuşuruz. Bu görüşme sonrası ilk taslak makale çıkarılabilir.'))
-
-story.append(section_h3('Yol B — Hazır taslak inceleme'))
+story.append(section_h3('Yol A — Hazır taslak inceleme'))
 story.append(p(
     'Sizin uzmanlık alanınızda bir konu için (örneğin postmenopozal cilt + topikal '
     'retinoidler, ya da postmenopozal osteoporoz tedavi sıralaması) <b>hazırlanmış '
-    'bir taslak</b> önce sizinle paylaşılır; profil görüşmesi yerine doğrudan onay '
-    'formundan geçmesi denenir.'))
+    'bir taslak</b> sizinle paylaşılır. Web üzerinden ulaştığımız profile göre '
+    'üretilen bu ilk taslağı, ek bir görüşme yapmadan <b>doğrudan onay formundan</b> '
+    'geçirebilirsiniz. İlk makale sonrası gönderilecek <b>uzun stil kontrol listesi</b> '
+    '(Bölüm 9.2) profilinizi belirgin biçimde size yaklaştırır.'))
 
-story.append(section_h3('Yol C — Önerinin sizden gelmesi'))
+story.append(section_h3('Yol B — Önerinin sizden gelmesi'))
 story.append(p(
     'Klinik gözleminizden bir konu önerisi varsa onu birlikte değerlendiririz; '
-    'oradan başlayarak hem profilinizi hem ilk yazıyı kurarız.'))
+    'oradan başlayarak ilk yazıyı kurarız. Aynı şekilde ek görüşme gerekmez — '
+    'profil web kaynaklarından oluşturulur, makale taslağı sizinle paylaşılır, '
+    'onay/değişiklik formuyla rafine edilir.'))
 story.append(Spacer(1, 0.2*cm))
 story.append(p(
     'Hangi yol size daha uygunsa, <b>Doç. Dr. Senai Aksoy\'a</b> kısaca iletmeniz yeterli.'))

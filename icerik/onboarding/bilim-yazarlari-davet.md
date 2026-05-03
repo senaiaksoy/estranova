@@ -148,7 +148,7 @@ Her bilim yazarı için bir **profil dosyası** hazırlanır. Profile **modüler
 - **`hot.md`** — yazı tonu, signature açılış kalıpları, tıbbi sınır uyarıları (her makalede yüklenir)
 - **`hidden.md`** — gizli gözlemler, hassas sınırlar (yayınlanmaz)
 
-Bu dosyalar bir kere kurulur ve zamanla **canlı bir sistemle** evrim geçirir (her 10 makale veya 6 ayda bir). İlk profilinizi oluştururken sizden 30-60 dakikalık bir **profil görüşmesi** rica ederiz; daha sonra siz revize etmek istemediğiniz sürece sabit kalır.
+Bu dosyalar bir kere kurulur ve zamanla **canlı bir sistemle** evrim geçirir (her 10 makale veya 6 ayda bir). İlk profilinizi web üzerinden ulaşılabilen kaynaklardan (CV, kamuya açık yazılarınız, varsa röportajlarınız) oluştururuz; ek metinler paylaşırsanız profil zenginleşir. Süreç içinde size gönderilen formlarla profiliniz **giderek size yaklaşır** (detay: Bölüm 11).
 
 ### 4.3. Faz 3 — AI Destekli Taslak
 
@@ -412,19 +412,15 @@ Yasal sorularınız için yayın yönetimimiz (Berna Aksoy) sizinle ayrı bir ed
 
 ## 12. Sıradaki Adım: Sizden Beklediğimiz
 
-Bu belgeyi okuduktan sonra üç olası yol vardır:
+Bu belgeyi okuduktan sonra iki olası yol vardır:
 
-### Yol A — Profil görüşmesi randevusu
+### Yol A — Hazır taslak inceleme
 
-30-60 dakikalık bir görüşmede sizin profilinizi (cold/warm/hot dosyaları) birlikte oluştururuz; ses imzanızı, uzmanlık alanlarınızı, konu önerilerinizi konuşuruz. Bu görüşme sonrası ilk taslak makale çıkarılabilir.
+Sizin uzmanlık alanınızda bir konu için (örneğin postmenopozal cilt + topikal retinoidler, ya da postmenopozal osteoporoz tedavi sıralaması) **hazırlanmış bir taslak** sizinle paylaşılır. Web üzerinden ulaştığımız profile göre üretilen bu ilk taslağı, ek bir görüşme yapmadan **doğrudan onay formundan** geçirebilirsiniz. İlk makale sonrası gönderilecek **uzun stil kontrol listesi** (Bölüm 11.2) profilinizi belirgin biçimde size yaklaştırır.
 
-### Yol B — Hazır taslak inceleme
+### Yol B — Önerinin sizden gelmesi
 
-Sizin uzmanlık alanınızda bir konu için (örneğin postmenopozal cilt + topikal retinoidler, ya da postmenopozal osteoporoz tedavi sıralaması) **hazırlanmış bir taslak** önce sizinle paylaşılır; profil görüşmesi yerine doğrudan onay formundan geçmesi denenir.
-
-### Yol C — Önerinin sizden gelmesi
-
-Klinik gözleminizden bir konu önerisi varsa onu birlikte değerlendiririz; oradan başlayarak hem profilinizi hem ilk yazıyı kurarız.
+Klinik gözleminizden bir konu önerisi varsa onu birlikte değerlendiririz; oradan başlayarak ilk yazıyı kurarız. Aynı şekilde ek görüşme gerekmez — profil web kaynaklarından oluşturulur, makale taslağı sizinle paylaşılır, onay/değişiklik formuyla rafine edilir.
 
 Hangi yol size daha uygunsa, **Doç. Dr. Senai Aksoy'a** kısaca iletmeniz yeterli.
 
