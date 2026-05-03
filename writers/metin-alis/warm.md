@@ -52,7 +52,7 @@ Metin Alış için anekdot kullanımı sınırlı ve disiplinli:
 
 ## Yazım sözlüğü ve geçişler (v0.1)
 
-### Tipik kalıplar (korpustan örüntü)
+### Tipik kalıplar (korpustan)
 
 - **Tanım kuralı:** "X olarak adlandırılır", "Y'ye Z denir" — klinik tanım girişi.
 - **Sebep-sonuç köprü:** "Bu nedenle…", "Sonuç olarak…", "Buna karşılık…", "Ancak…".
