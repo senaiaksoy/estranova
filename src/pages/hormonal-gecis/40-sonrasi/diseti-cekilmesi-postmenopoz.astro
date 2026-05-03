@@ -1,0 +1,471 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero =
+  submenuHeroByRoute['/hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz']
+  ?? submenuHeroByRoute['/hormonal-gecis/40-sonrasi']!;
+
+const tocEntries = [
+  { id: 'nedir', label: 'Nedir, Neden Sıklaşır?' },
+  { id: 'iki-tip', label: 'İki Tip Çekilme' },
+  { id: 'mekanizma', label: 'Östrojen Kaybı ve Doku' },
+  { id: 'risk-bakim', label: 'Risk Faktörleri ve Bakım' },
+  { id: 'tedavi', label: 'Tedavi Adımları' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Postmenopozda Dişeti Çekilmesi — Östrojen Kaybı ve Bakım';
+const articleDescription =
+  'Postmenopozda dişeti çekilmesi — östrojen kaybının dişeti dokusunu nasıl etkilediği, hassas yapı ve bakteriyel köken iki tip ayrımı, sayısal pratik bakım direktifleri ve ne zaman tedavi gerektiği. Diş hekimi gözüyle dört-parçalı pratik çerçeve: belirti, neden, önlem, tedavi.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'duygu-karaosmanoglu',
+  publishedDate: '3 Mayıs 2026',
+  pathname: '/hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: [
+    'dişeti çekilmesi',
+    'postmenopoz',
+    'östrojen kaybı',
+    'periodontitis',
+    'gingival recession',
+    'menopoz ağız sağlığı',
+    'diş bakımı 40 sonrası',
+    'bruksizm',
+    'oral hijyen',
+    'alveolar kemik kaybı',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · 40 Sonrası"
+      title="Postmenopozda Dişeti Çekilmesi — Östrojen Kaybı ve Bakım"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="3 Mayıs 2026" readingMinutes={8} />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton
+          slug="/hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz"
+          title={articleTitle}
+        />
+      </div>
+
+      <section
+        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
+      >
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-ink/80">
+          Düzgün, pembe ve sağlıklı dişetleri güzel bir gülüş için çok önemlidir.
+          Postmenopozda ise dişeti çekilmeleri, çoğu kadının düşünmediği ama
+          hormonal geçişle doğrudan bağı olan bir alanda <em>biraz daha sık</em>
+          karşımıza çıkmaya başlar. Genel olarak iki tip çekilmeden bahsedebiliriz:
+          <strong>hassas ve ince dişeti yapısına bağlı</strong> olanlar ve
+          <strong>bakteriyel kaynaklı</strong> olanlar. Bu yazı belirti, neden,
+          önlem, tedavi çatısında postmenopozal değişimi, östrojen kaybının doku
+          üzerindeki etkisini, pratik bakım direktiflerini ve ne zaman diş
+          hekimine gitmek gerektiğini sade bir biçimde topluyor.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="nedir">Dişeti Çekilmesi Nedir, Postmenopozda Neden Sıklaşır?</h2>
+        <p>
+          Dişeti çekilmesi, dişetinin diş yüzeyinden kademeli olarak geri çekilmesi
+          ve diş kökünün açıkta kalmaya başlamasıdır. Toplumda en sık karşılaşılan
+          şikâyetlerden biridir; ancak postmenopoz dönemine geçişle birlikte hem
+          sıklığı hem de ilerleme hızı bir miktar artar.
+        </p>
+        <p>
+          Bunun arkasında üç birleşik etken vardır: <strong>azalan östrojen</strong>,
+          <strong>tükürük üretiminde değişim</strong> ve <strong>alveolar kemik
+          metabolizmasındaki dönüşüm</strong>. Postmenopozda kadınların önemli bir
+          kısmı periodontal sorunlarda artış bildirmiştir <Evidence level={4} />.
+          Bu artış dramatik bir tablo değil; ama önleyici bakım yaklaşımının
+          <em>bu dönemde özellikle kıymetli</em> olduğunu gösteriyor.
+        </p>
+
+        <h2 id="iki-tip">İki Tip Çekilme — Hassas Yapı ve Bakteriyel Köken</h2>
+        <p>
+          Genel olarak <strong>2 tip çekilmeden</strong> bahsedebiliriz; her ikisi
+          de postmenopoz döneminde farklı şekilde belirginleşebilir.
+        </p>
+        <p>
+          <strong>1 — Hassas ve ince dişeti yapısına bağlı çekilme:</strong>
+          Doğuştan veya sonradan ince dişeti yapısı olan kadınlarda bazı
+          alışkanlıklar çekilmeyi tetikler. Postmenopozda bağ doku yapısının
+          değişmesi bu hassasiyeti biraz daha öne çıkarır.
+        </p>
+        <p>
+          <strong>Diş gıcırdatma (bruksizm):</strong> Dişlerinde yaygın ya da
+          bölgesel üçgen çekilmeler oluşturur. Bite guard kullanımı önerilir.
+          Postmenopoz stres dönemiyle birleştiğinde gıcırdatma sıklığı artabilir.
+        </p>
+        <p>
+          <strong>Yanlış diş fırçalama:</strong> Sert fırça ve yanlış teknik —
+          özellikle köşe dişlerde — ciddi çekilmeler yaratabilir. Uygun fırça
+          (yumuşak/orta) ve fırçalama tekniği öğrenilmelidir.
+        </p>
+        <p>
+          <strong>Hatalı yapılmış dolgu ve kaplamalar:</strong> Dişetine ve kapanışa
+          gereken özenin gösterilmediği durumlarda dişeti çekilmesine sebep olur;
+          fark edilince en kısa sürede yenilenmeleri gerekir.
+        </p>
+        <p>
+          <strong>2 — Bakteriyel kaynaklı dişeti çekilmeleri:</strong> Bölgesel
+          bakteri birikmeleri — özellikle alt çene ön bölgede — çekilmeye sebep
+          olur. Çoğu zaman basit bir diştaşı temizliği ve sonrasında iyi bakım
+          problemi halleder. Postmenopozda tükürük üretiminin azalmasıyla bakteri
+          birikimi kolaylaşabildiği için bu tip çekilmeler bu yaş bandında bir
+          miktar daha hızlı ilerleyebilir.
+        </p>
+
+        <h2 id="mekanizma">Östrojen Kaybı Dişeti Dokusunu Nasıl Etkiler? — Kısa Mekanizma</h2>
+        <p>
+          Östrojen reseptörleri yalnızca üreme dokularında değil, dişeti
+          dokusunda da yer alır. Postmenopozda östrojen düşüşü üç ana noktada
+          görünür hale gelir.
+        </p>
+        <p>
+          <strong>Bağ doku ve kollajen değişimi:</strong> Dişetinin esnek ve
+          dolgun yapısını sağlayan kollajen lifleri, sistemik östrojen düşüşüyle
+          birlikte daha ince bir tablo gösterir <Evidence from={3} to={4} />. Bu,
+          mekanik travmaya (sert fırça, gıcırdatma) karşı doğal toleransı düşürür.
+        </p>
+        <p>
+          <strong>Tükürük üretiminde azalma:</strong> Postmenopozda kadınların
+          önemli bir kısmı ağız kuruluğu (xerostomia) belirtileri yaşar; tükürük
+          azaldığında bakterilerin tabii temizlenmesi de azalır. Bu da plak
+          birikimini ve dişeti enflamasyonunu kolaylaştırır.
+        </p>
+        <p>
+          <strong>Alveolar kemik metabolizması:</strong> Dişleri tutan kemik
+          (alveolar kemik) sistemik kemik metabolizmasının bir parçasıdır;
+          postmenopozal kemik kaybı (osteoporoz) ile alveolar kemik kaybı
+          arasında ölçülebilir bir bağ vardır <Evidence level={4} />. Diş
+          desteği zayıfladıkça çekilme ve diş hareketi belirginleşebilir.
+        </p>
+        <p>
+          Bu üç değişim eşzamanlı olduğunda, postmenopoz hassasiyeti ortaya
+          çıkar. Önemli olan, bu hassasiyeti panik konusu değil; <em>özen
+          gösterilmesi gereken bir alan</em> olarak okumak.
+        </p>
+
+        <h2 id="risk-bakim">Postmenopozal Risk Faktörleri ve Bakım — Pratik Liste</h2>
+        <p>
+          Aşağıdaki risk faktörleri postmenopoz döneminde dişeti çekilmesini
+          hızlandırabilir:
+        </p>
+        <ul>
+          <li><strong>Sigara kullanımı</strong> — periodontal hastalık riskini en güçlü artıran faktör</li>
+          <li><strong>Bruksizm (gece diş gıcırdatma)</strong> — postmenopoz stres döneminde sıklaşır</li>
+          <li><strong>Yanlış fırçalama tekniği</strong> — sert fırça + yatay hareket</li>
+          <li><strong>Ağız kuruluğu</strong> — postmenopozda yaygın; bakteri birikimini kolaylaştırır</li>
+          <li><strong>Düzensiz diş hekimi ziyareti</strong> — diştaşı birikimi sessizce ilerler</li>
+          <li><strong>Diabet, Sjögren sendromu, otoimmün durumlar</strong> — dokuyu daha kırılgan kılar</li>
+          <li><strong>Bazı ilaçlar</strong> (antidepresan, tansiyon ilacı) — ağız kuruluğunu artırabilir</li>
+        </ul>
+
+        <p>
+          Pratik bakımda dikkat edilecek temel adımlar — sayısal pratik
+          direktiflerle:
+        </p>
+
+        <p>
+          <strong>Diş fırçalama:</strong> Sabah ve akşam, günde iki defa, ikişer
+          dakika. Yumuşak veya orta sertlikte fırça; yatay sürtme yerine 45 derece
+          açıyla dişeti hattından dişe doğru hafif hareket. Elektrikli fırça
+          özellikle yanlış teknik alışkanlığı olan kişilerde yardımcı olabilir.
+        </p>
+        <p>
+          <strong>Diş ipi:</strong> Günde en az bir defa. Diş fırçası iki dişin
+          arasını tam anlamıyla temizleyemez; ara yüzeylerdeki plak diş ipi ile
+          ortadan kalkar. Diş ipini kullanmamak postmenopozda ara yüz çürüklerinin
+          sık nedenidir.
+        </p>
+        <p>
+          <strong>Diştaşı temizliği:</strong> 6 ayda bir profesyonel kontrol ve
+          gerekirse temizlik. Postmenopozda bu süre kişisel risk profiline göre
+          biraz daha sıklaştırılabilir (3-4 ayda bir).
+        </p>
+        <p>
+          <strong>Asitli gıdalar:</strong> Diş fırçaladıktan yarım saat öncesinde
+          ve sonrasında portakal suyu, gazlı içecek, asitli meyve gibi asitli
+          gıdalardan kaçınmak — minenin aşınmasını azaltır.
+        </p>
+        <p>
+          <strong>Su tüketimi:</strong> Tükürük üretimini destekleyen en doğal
+          adım. Şekersiz sakız da tükürük akışını uyarır.
+        </p>
+        <p>
+          <strong>Bruksizm için gece koruyucu:</strong> Gıcırdatma şüphesi varsa
+          (sabah çene ağrısı, baş ağrısı, dişlerde aşınma) diş hekiminin önereceği
+          özel hazırlanmış bite guard etkilidir.
+        </p>
+
+        <RedFlagBox
+          markers={[
+            'Diş eti kanaması düzenli ve kontrolsüz devam ediyorsa — periodontoloji değerlendirmesi şart',
+            'Diş gevşekliği veya ısırırken hareketi — alveolar kemik kaybı sinyali',
+            'Şişlik, abse, yüzeysel ağrı + ateş — akut enfeksiyon, vakit kaybetmeden diş hekimine',
+            'Sigara + postmenopoz — periodontal hastalık riski iki kat artar; bırakma planı kıymetli',
+            'Yoğun bruksizm + dişeti çekilmesi — gece koruyucu olmadan beklemek riski büyütür',
+            'Diabet veya Sjögren tanısı — ağız hijyeni planı bireyselleştirilmelidir',
+            'Antidepresan, tansiyon ilacı kullanan kadınlarda kuru ağız + dişeti çekilmesi birleşimi',
+            'Diş ipi kullandığınızda iki haftadan fazla süren kanama — gizli enflamasyon işareti',
+          ]}
+          footnote="Bu liste teşhis amaçlı değildir; ağız sağlığında bir hekimle konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
+        />
+
+        <h2 id="tedavi">Tedavi Adımları — Hangi Durumda Ne Yapılır?</h2>
+        <p>
+          Tedavi planı kademelidir; <em>her durumda öncelikle</em> çekilmenin
+          sebebini bulmak ve onu ortadan kaldırmaktır.
+        </p>
+        <p>
+          <strong>Erken çekilme (yüzeysel) + iyi bakım:</strong> Çoğu zaman
+          uygun fırça-fırçalama tekniği eğitimi, diştaşı temizliği ve düzenli
+          takip yeterlidir. Tablo ilerlemiyorsa ek müdahale gerekmez.
+        </p>
+        <p>
+          <strong>Bakteri birikmesinden kaynaklanan çekilme:</strong> Mutlaka
+          profesyonel bir diştaşı temizliği uygulanır; bakteri artıkları
+          uzaklaştırılır. Sonraki dönemde günlük bakım disiplini sürdürülür.
+        </p>
+        <p>
+          <strong>Dişeti hastalığı (periodontitis) eşlik ediyorsa:</strong> Daha
+          derin bir periodontal tedavi gerekir; bakteri kontrol altına alınır,
+          gerekirse periodontoloji uzmanı yönlendirmesi yapılır. Erken yaşlarda
+          karşılaşılan dişeti problemleri agresif tipte olabilir; genetik geçiş
+          söz konusudur. Postmenopozda yıllar içinde sessizce ilerlemiş bir
+          tablo olabilir.
+        </p>
+        <p>
+          <strong>İlerlemiş çekilme (estetik veya sağlık açısından gereklilik):</strong>
+          Ağzın başka bir bölgesinden alınan dişeti dokusu, çekilme olan bölgeye
+          yamanarak tedavi yapılır (greft operasyonu). Postmenopozda bu seçenek
+          için karar — kemik desteği, sigara durumu, sistemik sağlık gibi
+          faktörlerle birlikte bireysel olarak değerlendirilir.
+        </p>
+        <p>
+          Tüm bu adımlar boyunca <em>"yüze yakışanı arayan"</em> yaklaşım
+          önemini korur — agresif estetik müdahale yerine, doğal görünümü ve
+          sürdürülebilir bakımı önceliklendiren karar zinciri uzun vadede daha
+          değerlidir.
+        </p>
+
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+
+        <h3>Hormon replasman tedavisi (HRT) dişeti çekilmesini düzeltir mi?</h3>
+        <p>
+          Doğrudan "düzeltir" demek mümkün değil; ama bazı çalışmalar sistemik
+          östrojen tedavisinin postmenopozal dişeti hassasiyetini ve alveolar
+          kemik kaybı hızını <em>azaltabildiğini</em> bildirmiştir
+          <Evidence from={2} to={3} />. Etki büyüklüğü orta düzeyde ve bireysel
+          değişkenlik gösterir; HRT kararı dişeti sağlığı tek başına bir
+          gerekçe değildir, ancak HRT alan kadınlarda periodontal sağlık
+          parametrelerinde küçük bir avantaj gözlenebilir. Bu konuda hem diş
+          hekiminizle hem jinekoloğunuzla birlikte değerlendirme yapmak en
+          mantıklı yoldur.
+        </p>
+
+        <h3>Hangi diş macunu uygundur?</h3>
+        <p>
+          Özel ihtiyaçlar olmadığı sürece (aşırı diş taşı, dişeti hassasiyeti,
+          hassas dişler vb.) florid içerip içermediğine bakmak yeterlidir;
+          çoğu kişinin ekstra bileşenlere ihtiyacı yoktur. Postmenopozda hassas
+          diş eti ve kuru ağız söz konusuysa <em>SLS (sodium lauryl sulphate)</em>
+          ve alkol içermeyen formüller daha iyi tolere edilebilir; <em>aşındırıcılık
+          değeri (RDA)</em> düşük macunlar mineye nazik kalır. Bu konuda diş
+          hekiminizden kişisel öneri almak — paketleri rastgele seçmekten daha
+          dürüst bir yoldur.
+        </p>
+
+        <h3>Bruksizm için gece koruyucu kullanmalı mıyım?</h3>
+        <p>
+          Sabah çene ağrısı, kulaklara vuran baş ağrısı, dişlerde aşınma ya da
+          "uyandığımda dişlerim kenetlenmiş gibi" hissi varsa — diş hekiminin
+          değerlendirmesiyle özel hazırlanmış bir gece koruyucu (bite guard)
+          önerilir. Postmenopozda stres ve uyku bölünmesi gıcırdatmayı sıklaştırır;
+          gece koruyucu olmadan ilerlemiş gıcırdatma dişeti çekilmesine ve diş
+          aşınmasına yol açar.
+        </p>
+
+        <h3>Diş ipi kullandığımda kanama olursa ne yapayım?</h3>
+        <p>
+          Yeni diş ipi kullanmaya başlandığında ilk birkaç gün hafif kanama
+          olabilir; bu çoğu zaman <em>iki hafta içinde</em> azalır. İki haftadan
+          uzun süren veya yoğun kanama dişeti enflamasyonunun (gingivitis)
+          işaretidir; diş hekimi değerlendirmesi gerekir. Diş ipinden vazgeçmek
+          yerine — <em>doğru teknik</em> ve <em>düzenli kullanım</em> ile devam
+          etmek doğru cevaptır.
+        </p>
+
+        <h3>Periodontoloji ne kadar acil bir konu?</h3>
+        <p>
+          Akut bir tablo (abse, ateş, şişlik) varsa <em>bekleme yok</em>. Ama
+          çoğu periodontal hastalık <em>sessiz ve yavaş ilerler</em>; bu yüzden
+          erken evrede hekimle konuşmak — geç evrede greft veya implant
+          gündemine gelmekten çok daha kolay bir patikadır. Postmenopozda
+          düzenli (6 ayda bir, gerekirse daha sık) kontrol bu sessiz ilerlemeyi
+          erken yakalamanın en pratik yoludur.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Postmenopozda dişeti çekilmesi büyük bir tehdit değil; ama
+          <em>özen gösterilmesi gereken bir alan</em>. Hormonal geçişin doku
+          üzerindeki etkisi, sayısal pratik bakım disiplini ve düzenli diş
+          hekimi takibi üçlüsü çoğu kadında tabloyu kontrol altında tutmaya
+          yeter.
+        </p>
+        <p>
+          Diş hekiminize üç soruyla gidin: <em>"Benim çekilmem hangi tipte —
+          hassas yapıya mı, bakteriyel kaynağa mı, ikisinin birleşimine mi
+          bağlı?"</em>, <em>"Postmenopoz hassasiyetimi göz önünde bulundurarak
+          bakım planımda neyi değiştirmem gerek?"</em>, <em>"Bruksizm değerlendirmesi
+          ve gerekirse gece koruyucu için nasıl bir yol izleyelim?"</em>. Bu üç
+          soru görüşmenin niteliğini değiştirir; size <em>"yüze yakışanı arayan"</em>
+          — modaya kapılan değil, bedeninize ve gülüşünüze sürdürülebilir biçimde
+          yatırım yapan — bir karar zemini açar.
+        </p>
+        <p>
+          Doğal bir gülüş, ısrarla yapılmış olandan değil; doğru zamanda doğru
+          ölçüde özen gösterilmiş olandan doğar. Postmenopoz dönemi, bu özene
+          yeniden bakmak için doğal bir kavşaktır.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri',
+          '/zamansiz-yasam/d-vitamini-rehberi',
+        ]}
+      />
+
+      <section
+        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
+      >
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={4} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Bu yazı bir <em>diş hekimi gözüyle pratik bakım rehberi</em>dir;
+            bireysel tıbbi değerlendirme veya tedavi önerisi olarak okunmamalıdır.
+            Aşağıda kadın hastalıkları ve doğum perspektifinden tamamlayıcı bir
+            klinik çerçeve eklendi.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik bağlam:</strong> Postmenopozal
+            kadınlarda jinekoloji muayenelerinde "ağız sağlığım da değişiyor mu"
+            sorusu giderek daha sık geliyor. Östrojen kaybının vajinal-üriner
+            mukozadaki etkisi ile periodontal dokulardaki etkisi <em>aynı
+            sistemik mekanizmanın iki farklı yüzü</em>; biri daha açık konuşulan
+            (vajinal atrofi), diğeri daha az konuşulan (dişeti hassasiyeti). Bu
+            yazı az konuşulan tarafa pratik bir mercek tutuyor.
+          </p>
+          <p>
+            <strong class="text-burgundy">Mekanik çerçeve:</strong> Östrojen
+            reseptörleri (özellikle ER-β) periodontal ligament fibroblastları,
+            gingival epitelyum ve alveolar osteoblastlarda eksprese olur.
+            Postmenopozda azalan östrojen → azalmış kollajen sentezi + artmış
+            inflammatory sitokin yanıtı (IL-1β, IL-6, TNF-α) + osteoklastik
+            aktivite artışı. Bu mekanik zincir alveolar kemik kaybı ve
+            periodontitis ilerleme hızını biraz arttırır. Ayrıca menopozda kuru
+            ağız (xerostomia) prevalansı %25-40 arasında bildirilmiştir; tükürük
+            azalması bakteriyel yükü ve plak birikimini kolaylaştırır.
+            Sistemik osteoporoz ile alveolar kemik kaybı arasındaki korelasyon
+            uzun süreli kohortlarda gösterilmiştir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong>
+            Hızlı ilerleyen dişeti çekilmesi — özellikle 50+ yaş ve sigara
+            kullanıyorsa periodontoloji konsültasyonu öncelikli. Diabetik
+            kadınlarda glisemik kontrol periodontitis seyrini doğrudan etkiler;
+            HbA1c değerleri planın parçası olmalıdır. Sjögren sendromu, otoimmün
+            tablolar ve kemoterapi öyküsünde mukozal bakım
+            bireyselleştirilmelidir. Aktif osteoporoz tedavisinde olan hastalarda
+            (özellikle bisfosfonat kullananlarda) invaziv diş prosedürleri öncesi
+            mutlaka tedavi ekibinin bilgilendirilmesi gereklidir —
+            osteonekroz riski nadir ama ciddi bir konudur. Hormon replasman
+            tedavisi alan kadınlarda periodontal parametrelerin daha iyi seyrettiği
+            bildirilmiştir; ancak HRT periodontal sağlık endikasyonu ile
+            başlatılmaz.
+          </p>
+          <p>
+            <strong class="text-burgundy">Pratik bütünleşim:</strong> Tedavi
+            planı bir hiyerarşi izler — (1) sebep tespiti (hassas yapı / bakteriyel
+            köken / kombinasyon); (2) günlük disiplinli ev bakımı (sabah-akşam
+            fırçalama, diş ipi, asitli gıdadan yarım saat öncesi/sonrası
+            kaçınma); (3) düzenli diştaşı temizliği (postmenopozda 6 → 3-4 ayda
+            bire çekilebilir); (4) bruksizm değerlendirmesi ve gece koruyucu
+            (bite guard); (5) periodontolojik konsültasyon (orta-ileri evre);
+            (6) cerrahi seçenekler (greft) — yalnızca estetik veya sağlık
+            açısından gereklilik durumunda. Sigara bırakma planı her aşamada
+            risk profilini değiştirir. Tedavi planı diş hekimi-jinekolog-
+            (gerekirse) endokrinolog üçgeninde bireyselleştirilir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Bireyselleştirme uyarısı:</strong>
+            Sn. Karaosmanoğlu'nun yazısında paylaştığı "yüze yakışanı arayan"
+            klinik-pratik yaklaşım genel popülasyon çerçevesidir; sizin
+            tablonuzdaki çekilme tipi, alveolar kemik durumu, sistemik sağlık
+            (diabet / osteoporoz / Sjögren), kullandığınız ilaçlar ve sigara
+            durumu tedavi seçimine yön verir. Burada okuduklarınız bir başlangıç
+            çerçevesidir, karar değil; sizin için uygun adımları diş hekiminiz —
+            ve gerektiğinde jinekoloğunuzla birlikte — değerlendirmeniz önemlidir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Tıbbi Editör
+          </p>
+        </div>
+      </section>
+
+      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
+        <p class="text-sm leading-relaxed text-ink/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine
+          geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

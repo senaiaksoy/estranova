@@ -19,7 +19,14 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const editorPick: any = null;
+const editorPick = {
+  href: '/hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz',
+  title: 'Postmenopozda Dişeti Çekilmesi — Östrojen Kaybı ve Bakım',
+  lede: 'Düzgün, pembe ve sağlıklı dişetleri güzel bir gülüş için çok önemlidir. Postmenopozda ise dişeti çekilmeleri biraz daha sık karşımıza çıkar. İki tip ayrımı, östrojen-doku mekanizması, sayısal pratik bakım direktifleri ve tedavi adımları — diş hekimi gözüyle dört-parçalı çerçeve.',
+  writerSlug: 'duygu-karaosmanoglu',
+  readingMinutes: 8,
+  image: submenuHeroByRoute['/hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz'] ?? submenuHeroByRoute['/hormonal-gecis/40-sonrasi']!,
+};
 
 const tocArticles = [
   {
