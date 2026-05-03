@@ -115,7 +115,7 @@ H2 = style('H2',
            fontSize=18,
            leading=24,
            textColor=BURGUNDY,
-           spaceBefore=18,
+           spaceBefore=24,
            spaceAfter=10)
 
 H3 = style('H3',
@@ -354,6 +354,7 @@ story.append(p(
     'Estranova\'nın bilimsel editörü <b>Doç. Dr. Senai Aksoy</b> sizinle her aşamada '
     'iletişime hazır.', BODY_LARGE))
 
+
 story.append(PageBreak())
 
 # --- 01. Estranova Nedir ---
@@ -411,7 +412,6 @@ story.append(p(
     '<b>biraz daha sade</b>, biraz daha <b>az iddialı</b> hale getirir; bu sade hâl tam '
     'da Estranova\'nın imzasıdır.'))
 
-story.append(PageBreak())
 
 # --- 02. Sizin Yeriniz ---
 story += section_h2(2, 'Sizin Yeriniz: Bilim Yazarları Kadrosu')
@@ -462,7 +462,6 @@ story.append(p(
     'sonundaki <b>Bilimsel Editör Notu (BEN)</b>, default olarak Doç. Dr. Senai Aksoy '
     'imzasıyla yer alır. Bu ikiliği bilinçle koruyoruz.'))
 
-story.append(PageBreak())
 
 # --- 03. Editöryal İlkeler ---
 story += section_h2(3, 'Editöryal İlkeler')
@@ -510,7 +509,6 @@ story.append(p(
     'Bu durumda <b>kişisel kimlik bilgisi (isim, klinik detay, ilaç, doz, lab sonucu)</b> '
     'asla yazıya girmez; <b>anonim genelleme</b> çerçevesi tercih edilir.'))
 
-story.append(PageBreak())
 
 # --- 04. Yazı Üretim Süreci ---
 story += section_h2(4, 'Yazı Üretim Süreci — Uçtan Uca')
@@ -609,7 +607,6 @@ story.append(p(
     'Estranova\'nın yapısal indekslerine eklenir: hub sayfası, sayı sayfası, anasayfa '
     'yeni yayınlar bandı, belirti bazlı navigasyon, JSON-LD yapısal veri.'))
 
-story.append(PageBreak())
 
 # --- 05. Kanıt Seviyeleri ---
 story += section_h2(5, 'Sayısal Disiplin: Kanıt Seviyeleri')
@@ -662,7 +659,6 @@ story.append(Paragraph(
     '<i>— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova '
     'Bilimsel Editörü</i>', QUOTE))
 
-story.append(PageBreak())
 
 # --- 07. Etik Sınırlar Tablo ---
 story += section_h2(7, 'Etik Sınırlar (Özet)')
@@ -703,7 +699,6 @@ ethics_rows = [
 ethics_rows = [[Paragraph(c, BODY) for c in row] for row in ethics_rows]
 story.append(three_col_table(ethics_rows, col_widths=[3*cm, 6*cm, 6.5*cm], header=True))
 
-story.append(PageBreak())
 
 # --- 08. Teknik Altyapı + Belge Ekosistemi + Site Plan ---
 story += section_h2(8, 'Teknik Altyapı, Belge Ekosistemi, Yayın Planı')
@@ -758,7 +753,6 @@ story.append(p(
     'editöryal parçalarını kapsar.</b> Sizin yazılarınız Faz 4\'te bile büyük olasılıkla '
     'paywall dışında kalacaktır.'))
 
-story.append(PageBreak())
 
 # --- 09. Stil Olgunlaşması, AI-Assisted Publishing ve Telif Hakları ---
 story += section_h2(9, 'Stil Olgunlaşması, AI-Assisted Publishing ve Telif Hakları')
@@ -918,7 +912,6 @@ story.append(p(
     'Yasal sorularınız için yayın yönetimimiz (Berna Aksoy) sizinle ayrı bir editöryal '
     'anlaşma metnini imzalamaya hazırdır.'))
 
-story.append(PageBreak())
 
 # --- 10. Sıradaki Adım + İletişim ---
 story += section_h2(10, 'Sıradaki Adım: Sizden Beklediğimiz')
