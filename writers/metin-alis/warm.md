@@ -1,6 +1,6 @@
 # Dr. Metin Alış — warm.md
 
-> Yarı-açık katman: Estranova için yazma stili, manifesto kalıpları (lazy aktivasyon) ve klinik felsefe omurgası iskeleti. v0.1 — 2026-05-02.
+> Yarı-açık katman: Estranova için yazma stili, manifesto kalıpları ve klinik felsefe omurgası. v0.2 — 2026-05-03 (lazy aktivasyon turu kullanıcı onayıyla tamamlandı).
 
 ---
 
@@ -15,47 +15,31 @@ Metin Alış için anekdot kullanımı sınırlı ve disiplinli:
 
 ---
 
-## §4e · Manifesto Kalıpları — LAZY AKTİVASYON
+## §4e · Manifesto Kalıpları — v0.2 AKTİF (2026-05-03)
 
-> v0.1'de boş havuz. **İlk makale üretiminde** AI agent korpustan + tematik türetmeden 4-6 kalıp türetip kullanıcıya onaylatır, sonra bu bölüme yazılır ve `writer_version` v0.2'ye bump edilir. Memory: feedback_pool_activation_lazy_2026_05_02.md.
+> 6 cümle havuzu kullanıcı onayıyla yazıldı (memory: feedback_pool_activation_lazy_2026_05_02.md). Hepsi `[MA-T]` tematik türetme — metinalis.com ders kitabı tonunda olduğu için doğrudan birinci-şahıs alıntı yok. v0.3'te ResearchGate / TEMD / röportaj arşivinden `[MA-K]` etiketli ekleme yapılabilir. **Estranova kuralı:** max 1 manifesto cümlesi / makale.
 
-**Aktivasyon protokolü:**
-
-1. AI agent ilk makale öncesi `metinalis.com/{kategori}` sayfalarını (4-5 alt sayfa) tam metin halinde toplar.
-2. ResearchGate'te "Metin Alış" / "Metin Alis" sorgusu ile akademik makale + kitap bölümü katkısı taranır; varsa giriş paragrafları kaynak.
-3. Türkiye Endokrinoloji ve Metabolizma Derneği (TEMD) yıllık konferans bildiri / kılavuz katkısı varsa eklenir.
-4. **4-6 manifesto kalıbı** çıkarılır (3'ü [MA-K] doğrulanmış kanıtla, 2-3'ü [MA-T] tematik türetme).
-5. Her kalıp şu yapıya sahiptir:
-
-```
-- id: "kalibin-kisa-adi"
-  source: "[MA-K]" veya "[MA-T]"
-  page: "kaynak sayfa adı (varsa)"
-  structure: "açıklayıcı 1 cümle"
-  use_case: "hangi makale eksenine uygun"
-```
-
-**Aday tematik kalıplar (v0.1 placeholder — onay sonrası yer değişebilir):**
-
-- *Yanlış anlaşılan klinik tablo açma* — "X mi Y mi" sorusunu mekanizma haritasıyla cevaplama
-- *Lab değer dilini öğretme* — "şu test şunu söyler, şunu söylemez"
-- *Mekanizma → klinik karşılık zinciri* — fizyolojik bağlamı klinik karara nasıl bağlar
-- *Bireyselleştirme felsefesi* — "kılavuz var ama herkes farklı; rakam değil tablo değerlendirilir"
-- *Panik vs netleştirme* — "korkutmadan açıklama" tonu
-- *Hekim-hasta diyaloğu* — "doktorunuza şunu sorabilirsiniz" rehberi
+| ID | Kaynak | Cümle | Kullanım |
+|---|---|---|---|
+| `tek-deger-tabloyla-okunur` | [MA-T] | "Bir hormonun düzeyi tek başına yorumlanmaz; klinik tabloyla beraber okunur." | Lab okuma, hormon paneli, perimenopoz dinamik panel |
+| `yanlis-anlasilan-tablo-tani-geciktirir` | [MA-T] | "Yanlış anlaşılan endokrin tablo, doğru tanıyı geciktiren en sık nedendir." | Tiroid-menopoz, kortizol-stres, insülin-yağ kavşak |
+| `tiroid-menopoz-ses-ayirma` | [MA-T] | "Tiroid ve menopoz aynı odadaysa, sesi karıştırmadan ayırmak hekimliğin ilk işidir." | Tiroid-perimenopoz, Hashimoto ayırıcı tanı |
+| `kmd-sessiz-degisir` | [MA-T] | "Kemik mineral yoğunluğu sessiz değişir; izlemeye geçmek panik değil bilgidir." | Postmenopozal kemik, osteoporoz prevention, KMD okuma |
+| `kilavuz-hasta-yol` | [MA-T] | "Kılavuz adımı gösterir, hasta yolu özelleştirir; ikisi birlikte konuşur." | Bireyselleştirme, tedavi kararı, klinik karar süreci |
+| `lab-cumle-tablo-paragraf` | [MA-T] | "Lab değeri bir cümledir, klinik tablo paragraftır; cümleyi paragrafsız okumak yanıltır." | Lab okuma kültürü, hormon test yorumlama, TSH/fT4 |
 
 ---
 
-## §4f · Klinik Felsefe Omurgası — LAZY AKTİVASYON
+## §4f · Klinik Felsefe Omurgası — v0.2 AKTİF (2026-05-03)
 
-> Senai'nin "dörtgen mimari" paritesinde ama henüz boş. v0.1'de iskelet — ilk makale öncesi 3-4 direk türetilecek.
+> Senai'nin "dörtgen mimari" paritesinde 4 direk kullanıcı onayıyla yazıldı. **Estranova kuralı:** bir makale max 2 direkten beslenir.
 
-**Aday direk başlıkları (v0.1 placeholder):**
-
-1. **Yanlış anlaşılan tabloyu açma** — Estranova'da Metin'in HARD imzası: panik değil netleştirme.
-2. **Kanıt-temelli kılavuz çerçevesi** — uluslararası klinik kılavuzlarla uyum (anonim olarak; isim YASAK).
-3. **Bireyselleştirme** — "kılavuz var ama herkes farklı; tek doğru reçete yok".
-4. **Mekanizma → klinik karşılık** — fizyolojinin günlük karara çevrilmesi.
+| Direk | Açıklama | Kaynak |
+|---|---|---|
+| **D1 — Yanlış anlaşılan tabloyu açma** | Panik değil netleştirme; kafa karışıklığını isimlendirip ayırma. Metin'in HARD imzası. | [MA-T] |
+| **D2 — Mekanizma → klinik karşılık → karar zinciri** | 3-bölüm yapısı: durum → hormonal mekanizma → ne yapılır. Profile §3 ve §6 ile uyumlu. | [MA-T] |
+| **D3 — Lab okuma kültürü** | Değer ne söyler, ne söylemez; tek bakış vs dinamik panel ayrımı. | [MA-T] |
+| **D4 — Bireyselleştirme felsefesi** | Kılavuz var ama tek doğru reçete yok; hekim-hasta iletişim rehberi formatı. | [MA-T] |
 
 **Estranova kuralları (Senai paraleliyle ortak):**
 

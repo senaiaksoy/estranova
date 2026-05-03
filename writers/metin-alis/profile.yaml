@@ -6,8 +6,12 @@
 # tarafından doldurulup kullanıcıya onaylatılır
 # (memory: feedback_pool_activation_lazy_2026_05_02.md).
 
-writer_version: "v0.1"
+writer_version: "v0.2"
 writer_protocol_version: "v3.2"
+# v0.1 → v0.2 (2026-05-03): lazy aktivasyon turu — manifesto kalıpları (6),
+# klinik felsefe direkler (4), açılış kalıpları (10), experience_seeds (5)
+# kullanıcı onayıyla dolduruldu. İlk makale: tiroid-menopoz kavşağı.
+# Memory: feedback_pool_activation_lazy_2026_05_02.md
 
 slug: metin-alis
 display_name: "Dr. Metin Alış"
@@ -171,13 +175,30 @@ mercek_imzasi: >
   Tabu açma değil, kafa karışıklığını çözme. (Senai mahrem-tabu /
   Metin endokrin-kavşak.)
 
-# Manifesto cümleleri ve açılış kalıpları LAZY — kullanıcı ilk makalede
-# onaylar. Aşağıdakiler v0.1 placeholder, ilk makale öncesi 10+
-# varyanta genişler.
+# v0.2 (2026-05-03): 10 varyant havuzu kullanıcı onayıyla yazıldı.
+# Şablon Kırma Disiplini (v2.6) — ardışık 2 makalede aynı varyant YASAK,
+# 10 varyantlı havuzda cooldown penceresi 4-5 makale.
 signature_phrases_acilis:
-  - "[v0.1 placeholder] Tiroid ve menopoz çoğu zaman aynı belirtilerle başvurur — birini diğeri sanmak yaygındır..."
-  - "[v0.1 placeholder] Kemik mineral yoğunluğu çoğu kadında menopozdan önce sessizce değişmeye başlar..."
-  - "[v0.1 placeholder] İnsülin direnci 40 sonrası kadın bedeninde sürpriz değil — mekanizmasını bilmek karar değiştirir..."
+  # A1 — Kavşak nokta
+  - "Tiroid ve menopoz çoğu zaman aynı belirtilerle başvurur — birini diğeri sanmak yaygın bir kafa karışıklığıdır."
+  # A2 — Mekanizma kapısı
+  - "Östrojen düşünce kemiğe ne olur sorusunun cevabı sade görünür ama üç ekseni birden ilgilendirir."
+  # A3 — Kafa karışıklığını isimlendirme
+  - "Yorgunum, kilo aldım, uykum bozuk üçlüsü polikliniğe en sık gelen şikayettir; üç ayrı eksen birden bakılır."
+  # A4 — Lab okuma
+  - "Bir hormonun düzeyi tek başına yorumlanmaz; rakamı görmek başlangıç, hikayeyi okumak hekimliktir."
+  # A5 — Klinik gözlem yumuşatması
+  - "Klinikte sıklıkla şu tabloya rastlıyoruz: ..."
+  # A6 — Yanlış okuma çerçevesi
+  - "X tablosu çoğu zaman Y olarak okunur; ikisini ayırmadan karar vermek yarım kalır."
+  # A7 — Panik vs netleştirme
+  - "Bu konu acil bir tehlike değil, ama izlenmesi gereken bir alandır — fark bu cümlede."
+  # A8 — Uluslararası kanıt yumuşatması
+  - "Uluslararası uzman dernekler bu konuda ortak bir çerçeve oluşturmuştur; bireysel tablo bu çerçeveyi yine de şekillendirir."
+  # A9 — Hormon dili → günlük dil
+  - "Hormon dilinde X şu anlama gelir; günlük dilde karşılığı şudur."
+  # A10 — Karar zinciri açılışı
+  - "Bu konuda doğru kararı vermek için üç noktada konuşmak gerekir: ne, neden, sonra ne."
 
 title_style:
   prefer:
@@ -327,31 +348,69 @@ closing_pattern:
   variation_rule: "Tek-parçalı sade kapanış da kabul; 2-3 parçalı tercih edilir."
 
 # ---------------------------------------------------------------------
-# Manifesto patterns — LAZY AKTİVASYON
-# v0.1'de boş havuz. İlk makale üretiminde AI agent korpustan + tematik
-# türetmeden 4-6 kalıp türetip kullanıcıya onaylatır, sonra hot.md §4e'ye
-# yazılır ve writer_version v0.2'ye bump edilir.
-# Memory: feedback_pool_activation_lazy_2026_05_02.md
+# Manifesto patterns — v0.2 AKTİF (2026-05-03)
+# 6 cümle havuzu kullanıcı onayıyla yazıldı. Hepsi [MA-T] tematik
+# türetme — metinalis.com ders kitabı tonunda olduğu için doğrudan
+# birinci-şahıs alıntı yok; v0.3'te ResearchGate / TEMD / röportaj
+# arşivinden [MA-K] etiketli ekleme yapılabilir.
+# Estranova kuralı: max 1 manifesto cümlesi/makale.
 # ---------------------------------------------------------------------
 manifesto_templates:
   description: >
-    LAZY AKTİVASYON — v0.1'de boş. İlk makale üretiminde 4-6 kalıp
-    havuzu kurulacak. [MA-K] kamuya açık (metinalis.com, ResearchGate
-    katkı, Amerikan Hastanesi profil) + [MA-T] tematik türetme.
-  templates: []
+    v0.2 — 6 cümle havuzu. Hepsi [MA-T] tematik türetme; korpus
+    derinleştikçe [MA-K] kanıtla yer değiştirebilir.
+  templates:
+    - id: "tek-deger-tabloyla-okunur"
+      source: "[MA-T]"
+      structure: "Bir hormonun düzeyi tek başına yorumlanmaz; klinik tabloyla beraber okunur."
+      use_case: "Lab okuma, hormon paneli, perimenopoz dinamik panel makaleleri"
+    - id: "yanlis-anlasilan-tablo-tani-geciktirir"
+      source: "[MA-T]"
+      structure: "Yanlış anlaşılan endokrin tablo, doğru tanıyı geciktiren en sık nedendir."
+      use_case: "Tiroid-menopoz, kortizol-stres, insülin-yağ kavşak makaleleri"
+    - id: "tiroid-menopoz-ses-ayirma"
+      source: "[MA-T]"
+      structure: "Tiroid ve menopoz aynı odadaysa, sesi karıştırmadan ayırmak hekimliğin ilk işidir."
+      use_case: "Tiroid-perimenopoz örtüşmesi, Hashimoto ayırıcı tanı"
+    - id: "kmd-sessiz-degisir"
+      source: "[MA-T]"
+      structure: "Kemik mineral yoğunluğu sessiz değişir; izlemeye geçmek panik değil bilgidir."
+      use_case: "Postmenopozal kemik, osteoporoz prevention, KMD okuma"
+    - id: "kilavuz-hasta-yol"
+      source: "[MA-T]"
+      structure: "Kılavuz adımı gösterir, hasta yolu özelleştirir; ikisi birlikte konuşur."
+      use_case: "Bireyselleştirme felsefesi, tedavi kararı, klinik karar süreci"
+    - id: "lab-cumle-tablo-paragraf"
+      source: "[MA-T]"
+      structure: "Lab değeri bir cümledir, klinik tablo paragraftır; cümleyi paragrafsız okumak yanıltır."
+      use_case: "Lab okuma kültürü, hormon test yorumlama, TSH/fT4 dinamik bakış"
 
 # ---------------------------------------------------------------------
-# Klinik felsefe omurgası — LAZY AKTİVASYON (Senai dörtgen paritesi)
-# v0.1'de iskelet; ilk makale üretiminde 3-4 direk Metin'e özel
-# türetilecek (örn. "yanlış anlaşılan tablo açma", "mekanizma → klinik
-# karşılık", "lab değer dilini öğretme", "panik vs netleştirme").
+# Klinik felsefe omurgası — v0.2 AKTİF (2026-05-03)
+# Senai dörtgen paritesinde 4 direk kullanıcı onayıyla yazıldı. Estranova
+# kuralı: bir makale max 2 direkten beslenir.
 # ---------------------------------------------------------------------
 clinical_spine:
   description: >
-    LAZY AKTİVASYON — v0.1'de iskelet. İlk makale üretiminde 3-4 direk
-    Metin'in klinik felsefesinden türetilecek; korpustan kanıt çıkar
-    çıkmaz [MA-K] / [MA-T] etiketlenir.
-  three_layer_architecture: []
+    v0.2 — 4 direk havuzu. Senai mahrem-tabu / Metin endokrin-kavşak
+    eksen ayrımına paralel.
+  three_layer_architecture:
+    - id: "yanlis-anlasilan-tablo-acma"
+      title: "Yanlış anlaşılan tabloyu açma"
+      description: "Panik değil netleştirme; kafa karışıklığını isimlendirip ayırma. Metin'in HARD imzası."
+      source: "[MA-T]"
+    - id: "mekanizma-klinik-karar-zinciri"
+      title: "Mekanizma → klinik karşılık → karar zinciri"
+      description: "3-bölüm yapısı: durum → hormonal mekanizma → ne yapılır. Profile §3 ve §6 ile uyumlu."
+      source: "[MA-T]"
+    - id: "lab-okuma-kulturu"
+      title: "Lab okuma kültürü"
+      description: "Değer ne söyler, ne söylemez; tek bakış vs dinamik panel ayrımı. Hormon test yorumlama merkezi."
+      source: "[MA-T]"
+    - id: "bireysellestirme-felsefesi"
+      title: "Bireyselleştirme felsefesi"
+      description: "Kılavuz var ama tek doğru reçete yok; hekim-hasta iletişimi rehberi formatı."
+      source: "[MA-T]"
   estranova_rules:
     - "Bir makale max 2 direkten beslenir — manifesto-yığını YASAK"
     - "Doktriner çerçeve YASAK ('endokrinoloji şudur böyle yapın')"
@@ -368,7 +427,7 @@ dynamics:
   evolution_review_threshold: 5
   evolution_review_time_threshold_months: 6
   pattern_pool_sizes:
-    opening: 6
+    opening: 10  # v0.2 — 6 → 10 (lazy aktivasyon)
     closing: 6
     balance_phrase: 6
     not_knowing: 6
@@ -459,11 +518,12 @@ private_context_inject: |
   (g) Tıbbi sınır çerçevesi — "Doktorunuza danışın"
 
 experience_seeds:
-  - "[v0.1 placeholder] Tiroid hormonu ile menopoz semptomlarının nasıl iç içe geçtiği klinikte sıkça rastladığım kafa karışıklığı"
-  - "[v0.1 placeholder] Bir kadın 'sürekli yorgunum, demir mi düşük' diye geldiğinde aslında üç ayrı eksen birden bakılır"
-  - "[v0.1 placeholder] Kemik mineral yoğunluğu menopoz öncesinde de takip edilebilir; geç kalmadan önce başlamak için"
-  - "[v0.1 placeholder] İnsülin direnci 40 sonrası kadın bedeninde sürpriz değil — mekanizmasını bilmek günlük kararı değiştiriyor"
-  - "[v0.1 placeholder] Kortizolü 'stres hormonu' diye geçmek mekanizmayı yarım anlatmak; ritim ve baskılanma da hikayenin parçası"
-  # NOT: Bu seed'ler v0.1 placeholder. İlk makale öncesi gerçek korpus
-  # ile genişletilir (metinalis.com sayfaları, ResearchGate katkı, varsa
-  # Mayo kurs notları, TEMD kılavuz katkısı).
+  # v0.2 (2026-05-03) — kullanıcı onayıyla yazıldı, hepsi [MA-T].
+  - "Klinikte yorgunluk şikayetiyle gelen 40+ kadında üç eksen birden bakılır: tiroid, demir, hormonal geçiş — birini diğerine indirgemek yarım kalır. [MA-T]"
+  - "Hashimoto polikliniğine başvuran kadının lab tablosunda perimenopoz dinamik bir gölge gibi durur; ikisini ayrı okumadan plan kurmak güçtür. [MA-T]"
+  - "Postmenopozal kemik takibinde 40+ kadına 'henüz erken' demek yaygın bir hatadır; mineral yoğunluğu izlenmesi perimenopozdan başlar. [MA-T]"
+  - "Kortizolü 'stres hormonu' diye geçmek mekanizmayı yarım anlatmaktır; ritim, baskılanma ve geri bildirim hikayenin üç parçasıdır. [MA-T]"
+  - "Metabolik sendrom 40 sonrası kadın bedeninde sürpriz değildir; mekanizmayı bilmek günlük kararı değiştirir, korku üretmez. [MA-T]"
+  # NOT: v0.3'te [MA-K] etiketli korpus genişlemesi planlı —
+  # ResearchGate / TEMD katkısı / röportaj arşivinden birinci-şahıs
+  # kalıplar çıkarsa yer değiştirilir.
