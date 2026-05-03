@@ -26,7 +26,14 @@ const neighbors = [
   { href: '/bilimsel-pencere/hucreler-ve-yaslanma', title: 'Hücreler ve Yaşlanma', excerpt: 'NAD+, mitokondri, senesans — yaşlanma biyolojisinin son 20 yılı.' },
 ];
 
-const editorPick: any = null;
+const editorPick = {
+  href: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo',
+  title: 'Menopozal Kilo İçin GLP-1 Analogları: Mucize Değil, Klinik Karar',
+  lede: 'Semaglutid ve tirzepatid menopozal kilo değişimi için kanıtlanmış araçlar; ama mucize değil. Tip 2 diyabet ve obezite endikasyonunda güçlü kanıt; estetik kilo verme alanında belirgin sınır. Menopoza özel üç ek soru: visceral adipoz, sarkopeni, kemik.',
+  writerSlug: 'senai-aksoy',
+  readingMinutes: 11,
+  image: submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo'] ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar']!,
+};
 ---
 
 <SiteLayout
@@ -70,7 +77,7 @@ const editorPick: any = null;
 
           <div class="lg:col-span-4 lg:pt-1">
             <MarginaliaRail>
-              <MarginaliaItem label="Durum" value="Hazırlık aşamasında · İlk yayın yakında" />
+              <MarginaliaItem label="Durum" value="İlk yayın eklendi · Yeni içerikler hazırlık aşamasında" />
               <MarginaliaItem label="Kapsam" emphasized="RCT'ler, meta-analizler ve klavuz güncellemeleri." />
               <MarginaliaItem label="Bu bölümde olacak">
                 <ul class="mt-2 space-y-3 text-sm leading-snug text-ink/78">
