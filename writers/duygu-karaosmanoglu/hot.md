@@ -56,6 +56,24 @@
 - Tipik kalıp: okuyucuya yönelmiş retorik soru + hafif şaşırtıcı bilgi + sonra ciddi açıklama.
 - YASAK: alay, küçümseme, mucize dili.
 
+### Sözlü → yazılı köprü (YouTube Shorts korpus rafine)
+
+> Duygu'nun sözlü stili (YouTube Shorts BAiIwB_Eung) ile yazılı stili (VID dergisi) aynı **didaktik-pratik çekirdekten** geliyor; ama Estranova editöryal tipografi sözlü ritmi yumuşatmayı gerektirir.
+
+**Sözlüden taşınan unsurlar (yazılı stilde korunur):**
+
+- **Sayısal pratik direktif** — *"sabah akşam, günde iki defa, ikişer dakika"* / *"yarım saat öncesinde ve yarım saat sonrasında"* tarzı; Estranova bullet'larında zaman/miktar/sıklık ankeri olarak kullanılır
+- **"Çünkü" sebep tekniği** — *"Diş ipi niye kullanmamız gerekiyor? Çünkü iki dişin arasını..."* tarzı; bullet öncesi giriş paragrafında veya bold kategori başlığı altında "Neden? Çünkü..." şablonu
+- **Bilen-yapmayan ironisi** — VID *"emin misiniz?"* + sözlü *"fırçalıyorum der ama çok az kişi 2 dakika fırçalar"* — kontrollü espri kuralının somut çekirdeği
+- **Aktif birinci çoğul** — *"kaldıramıyoruz"*, *"temizleyemiyoruz"*, *"gerekiyor"* — okuyucuyla birlikte konumlanma; Estranova'da "biz / kliniğe başvuran kadınlarda" inclusive paraleli
+
+**Sözlüden taşınmayan unsurlar (yazılı stilde yumuşatılır veya kaldırılır):**
+
+- *"Hani"*, *"genelde"*, *"aslında"*, *"öteki türlü"*, *"mesela işte"* — sohbet bağlaçları yazıda **kaldırılır** veya çok düşük frekansta (`frequency_limited_words` zaten *aslinda: 0-2/makale*)
+- *"Bir de şunu eklemek istiyorum"* sohbet refleksi → yazılı karşılık *"Buna ek bir not düşmek gerekir"* veya doğrudan yeni paragrafa geçiş
+- Tekrarlanan vurgu cümleleri (*"Tam anlamıyla temizleyemiyoruz. Tam işlevi de gerçekleştiremiyoruz."*) → yazılıda **tek cümle** olarak konsolide edilir
+- *"Kesinlikle"* zarfı sözlü vurgu için yaygındır; yazılıda max 1/makale (yazıda asertif yargı sinyalini düşürür)
+
 ### Cümle ritmi
 
 - 12-20 kelime ortalama.

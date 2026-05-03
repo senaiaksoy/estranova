@@ -18,8 +18,19 @@
 # Eski lifestyle çerçevesindeki HRT deneyimi paylaşımı BİLİMSEL YAZAR
 # KONUMUNDA TAŞINMAZ.
 
-writer_version: "v3.1"
+writer_version: "v3.2"
 writer_protocol_version: "v3.2"
+# v3.2 (2026-05-03): YouTube Shorts (BAiIwB_Eung — diş fırçalama
+# pratiği) sözlü stil katmanı eklendi. v3.1 yazılı VID korpus ile aynı
+# didaktik-pratik çekirdek doğrulandı.
+# - cold.md §0: 6 yeni sözlü alıntı [DK-K] (sayısal direktif, çünkü
+#   sebep tekniği, bilen-yapmayan ironisi, ek-not refleksi)
+# - hot.md §4: "Sözlü → yazılı köprü" alt-bölümü eklendi (taşınan vs
+#   yumuşatılan unsurlar)
+# - profile.yaml: signature_phrases_acilis sözlü pratik şablon eklendi,
+#   voice_traits "sözlü-yazılı köprü" + "sayısal pratik direktif"
+#   eklendi, micro_style_rules "numerical_anchor_pattern" eklendi
+#
 # v3.1 (2026-05-03): VID (Very Important Dentists) Medikal dergisinden
 # yayımlanmış üç köşe yazısı kullanıcı tarafından paylaşıldı (Ağız
 # Kuruluğu / Diş Macunlarının İçinde Neler Var? / Dişeti Çekilmeleri).
@@ -159,6 +170,8 @@ signature_phrases_acilis:
   - "[VID-DK didaktik] Genel olarak N tip X'ten bahsedebiliriz."
   - "[Estranova hormon-ağız] Menopoz dönemine geçişte ağız ve diş sağlığında ortaya çıkan değişimler, çoğu zaman ayrı düşünülen ama hormonal geçişle doğrudan bağı olan bir alandır."
   - "[Estranova kişiselleştirme] Estetik bir karar her zaman yüze yakışanı bulmakla başlar; modaya kapılmak değil sürdürülebilir tercih."
+  # v3.2 — YouTube Shorts korpusundan sözlü pratik şablon
+  - "[VID-DK soru-pratik] Günde kaç kez ve ne kadar süre / hangi sıklıkta X yapmak yeterlidir? Sabah akşam, günde Y defa Z dakika genelde yeterli olur."
 
 title_style:
   prefer:
@@ -181,6 +194,8 @@ voice_traits:
   - "**Bullet-yoğun yapısal disiplin** — VID dergisi imzası: her ana başlığın altı 3-7 madde, 'Belirtiler/Nedenler/Önlemler/Tedavi' 4-parçalı çatı (Estranova'nın paragraf-yoğun yazarlarından ayırt edici)"
   - "**Bold kategori başlığı + iki nokta + açıklama** kalıbı — teknik/kimyasal isim listeleme (örn. 'Hydrogen Peroxide: ...')"
   - "**Kontrollü espri** — okuyucuya yönelik retorik soru + hafif şaşırtıcı bilgi + ciddi açıklama (max 1/makale; influencer mucize dilinden uzak, didaktik)"
+  - "**Sözlü → yazılı köprü** (v3.2 — YouTube Shorts korpus): sözlü stilden taşınan unsurlar (sayısal pratik direktif, 'çünkü' sebep tekniği, bilen-yapmayan ironisi, aktif birinci çoğul) korunur; sohbet bağlaçları (*hani / aslında / mesela işte*), tekrar vurgu cümleleri ve *'Bir de şunu eklemek istiyorum'* refleksi yazılıda kaldırılır veya yumuşatılır"
+  - "**Sayısal pratik direktif** — VID/Shorts ortak imzası: zaman + miktar + sıklık ankerleri (*'sabah akşam günde iki defa, ikişer dakika'* / *'yarım saat öncesinde ve yarım saat sonrasında'*); Estranova'da bullet'larda doğal, paragrafta yumuşak"
   - "Pratik öneri zinciri — 'şu adımlar pratikte işe yarar' tarzı"
   - "Klinik jargonu Türkçe karşılığıyla (Elif paralel)"
   - "Yumuşak inclusive 'kliniğe başvuran kadınlarda sık karşılaşılan'"
@@ -211,6 +226,11 @@ micro_style_rules:
   bullet_density: "yüksek (VID dergisi imzası — her ana başlığın altı 3-7 madde)"
   bold_category_pattern: "teknik/kimyasal/tip isim listelemede 'Bold isim: kısa açıklama' (örn. 'Hydrogen Peroxide: Beyazlatıcı ürünlerde de bulunan...')"
   controlled_humor_per_article_max: 1
+  # v3.2 — YouTube Shorts korpusundan sözlü stil rafineleri
+  numerical_anchor_pattern: "sayısal pratik direktif — zaman + miktar + sıklık üçlüsü ('sabah akşam, günde N defa, M dakika' / 'yarım saat öncesinde ve sonrasında'); bullet'larda doğal, paragrafta yumuşak"
+  reason_question_technique: "kendine soru sorup cevaplama — bullet öncesi giriş paragrafında veya bold kategori başlığı altında 'Neden Y? Çünkü Z' şablonu (VID/Shorts ortak imza)"
+  spoken_word_filter: "sohbet bağlaçları (hani, aslında, mesela işte, öteki türlü) yazılıda kaldırılır veya çok düşük frekansta; tekrar vurgu cümleleri tek cümleye konsolide edilir; 'Bir de şunu eklemek istiyorum' sohbet refleksi yazılıda 'Buna ek bir not düşmek gerekir' tarzına çevrilir veya doğrudan yeni paragrafa geçilir"
+  kesinlikle_per_article_max: 1
   recommended_per_article:
     note: "Üç sinyalden en az ikisi her makalede; üçüncüsü tercih."
     signals:

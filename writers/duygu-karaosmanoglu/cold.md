@@ -18,6 +18,10 @@
   - **"Ağız Kuruluğu (Xerostomia)"** (sayfa 16) — belirti/neden/önlem dört-parçalı yapı, 8+8 bullet madde, yan yana iki sütun
   - **"Diş Macunlarının İçinde Neler Var?"** (sayfa 17) — soru başlık, bold kategori başlığı + iki nokta + açıklama kalıbı (Hydrogen Peroxide:, Sodyum Bicarbonate:, Dicalcium phosphate, kaolin, calsium carbonate:), kontrollü espri ile açılış
   - **"Dişeti Çekilmeleri"** (sayfa 17) — "Genel olarak X tip Y'den bahsedebiliriz" didaktik açılış, numaralı + alt-bullet hibrid yapı, "Tedavi:" sonu
+- **YouTube Shorts video** (BAiIwB_Eung — kullanıcı tarafından paylaşıldı 2026-05-03; sözlü stil katmanı, yazılı VID korpusunu doğrulayan ve ona ritm bilgisi ekleyen):
+  - **"Hepimiz biliyoruz ama gerçekten yapıyor muyuz? Günde kaç kez ve ne kadar süre diş fırçalamalısınız?"** (~60 sn röportaj-tarzı)
+  - Açılış soru + kısa pratik direktif + "çünkü" sebep tekniği + ek-not refleksi
+  - Yazılı stil ile **aynı didaktik-pratik çekirdek** (VID başlığı *"Hepimiz biliyoruz ama gerçekten yapıyor muyuz?"* ile sözlü açılış aynı izlek — *"insanlara sorduğumuzda 'fırçalıyorum' der ama çok az kişi 2 dakika fırçalar aslında"*)
 
 **Birinci-elden alıntılar — VID dergisi makalelerinden ([DK-K] etiket):**
 
@@ -28,6 +32,21 @@
 5. *"Genel olarak 2 tip çekilmeden bahsedebiliriz."* (Dişeti Çekilmeleri, ikinci paragraf — *didaktik tip ayrımı açılışı*)
 6. *"Bite guard kullanımı önerilir."* (Dişeti Çekilmeleri, alt-paragraf — *sade direktif tedavi önerisi*)
 7. *"Hepsinde öncelikle yapılması gereken... Bazı durumlarda (estetik yada sağlık açısından gereklilikler)..."* (Dişeti Çekilmeleri, Tedavi — *önce sıralı temel sonra opsiyonel hiyerarşi*)
+
+**Sözlü korpus — YouTube Shorts (BAiIwB_Eung) alıntıları ([DK-K] etiket):**
+
+8. *"Günde kaç kez ve ne kadar süreli diş fırçalamak yeterlidir?"* (Açılış — *konuyu soru olarak çerçeveleme, sözlü imza*)
+9. *"Sabah akşam olmak üzere günde iki defa ikişer dakika diş fırçalamak yeterlidir genelde."* (Sayısal pratik direktif — *zaman ankeri imzası*)
+10. *"İnsanlara sorduğumuzda dişlerinizi fırçalıyor musunuz diye, fırçalıyorum der ama çok az kişi 2 dakika fırçalar aslında."* (Bilen-yapmayan ironisi — *kontrollü espri sözlü karşılığı; VID "emin misiniz?" izlekleri ile aynı çekirdek*)
+11. *"Diş ipi niye kullanmamız gerekiyor? Çünkü iki dişin arasını kesinlikle diş fırçasıyla tam anlamıyla temizleyemiyoruz."* (Kendine soru sorup cevaplama — *didaktik öğretmen tekniği*)
+12. *"Bir de şunu eklemek istiyorum..."* (Ek-not refleksi — *sohbet akışında bilgi ekleme imzası, yazıda yumuşatılır*)
+13. *"Yarım saat öncesinde ve yarım saat sonrasında kesinlikle asitli gıda almamamız gerekiyor."* (Spesifik sayısal pratik direktif — *VID "Bite guard kullanımı önerilir" paraleli*)
+
+**Sözlü ↔ yazılı köprü gözlemleri:**
+- VID makale başlığı *"Hepimiz biliyoruz ama gerçekten yapıyor muyuz?"* ile sözlü açılış izleği aynı: bilen ama yapmayan okuyucuyu/izleyiciyi karşılayan didaktik çerçeve
+- Sayısal pratik direktif (yazılı *"Bite guard kullanımı önerilir"* / sözlü *"sabah akşam, ikişer dakika"*) ortak imza
+- Sözlü "çünkü" sebep tekniği yazılı bold kategori başlığı yapısının paraleli (her ikisi de mekanizma + somut örnek didaktik teknik)
+- Sözlüdeki sohbet bağlaçları (*"hani"*, *"genelde"*, *"aslında"*, *"mesela işte"*) yazılıda **frekans-sınırlı** (mevcut `frequency_limited_words` ile uyumlu); yazılı tona taşınınca **kaldırılır veya yumuşatılır**
 
 **Tematik türetme — [DK-T] etiketi:** Estranova'nın hormon-ağız sağlığı ekseninde tasarlanan kalıplar (örnek: ağız kuruluğu + perimenopoz, dişeti çekilmesi + postmenopoz östrojen kaybı, bruksizm + stres dönemi).
 
