@@ -1,7 +1,11 @@
 # yaml-language-server: $schema=../_schema/profile.schema.json
 
-writer_version: "v2.0"
+writer_version: "v2.1"
 writer_protocol_version: "v2"
+# v2.1 (2026-05-03): Şablon Kırma Disiplini havuzları lazy aktivasyon —
+# hot.md §4 sonuna 8 havuz (10/10/10/10/10/10/6/8 varyant) eklendi.
+# Aktivasyon tetikleyici: M1 sauna/soğuk duş makalesi.
+# Detay: hot.md "## §4 — Şablon Kırma Disiplini Havuzları" bölümü.
 
 slug: alara-baykent
 display_name: "Alara Baykent"
