@@ -23,7 +23,7 @@ const hero =
 const tocEntries = [
   { id: 'sabah-ahir', label: 'Sabah Ahırda Soğukla' },
   { id: 'sporcu-deneyim', label: 'Sauna Bana Ne Öğretti' },
-  { id: 'anne-nesli', label: 'Annemin Sıcak Basması' },
+  { id: 'kusak-gozlem', label: 'Sıcak Basması Paradoksu' },
   { id: 'bilim-sauna', label: 'Bilim Ne Diyor: Sauna' },
   { id: 'bilim-soguk', label: 'Bilim Ne Diyor: Soğuk' },
   { id: 'pratik-notlar', label: 'Kim İçin, Nasıl?' },
@@ -32,9 +32,9 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Sauna ve Soğuk Duş — Sporcu Bedenden Anne Neslinin Sıcak Basmasına';
+const articleTitle = 'Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına';
 const articleDescription =
-  'Sporcu olarak sauna ve soğuk maruziyet deneyimim, annemin sıcak basmasını izlerken öğrendiklerim, bilim ne diyor (kardiyovasküler, mood, sıcak basması paradoksu) ve güvenlik notları. Yaşıt ama mütevazı bir kuşak köprüsü.';
+  'Sporcu olarak sauna ve soğuk maruziyet deneyimim, çevremdeki kadınların sıcak basmasını izlerken öğrendiklerim, bilim ne diyor (kardiyovasküler, mood, sıcak basması paradoksu) ve güvenlik notları. Yaşıt ama mütevazı bir kuşak köprüsü.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -69,7 +69,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Zamansız Yaşam · Ameliyatsız Uygulamalar"
-      title="Sauna ve Soğuk Duş — Sporcu Bedenden Anne Neslinin Sıcak Basmasına"
+      title="Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -92,13 +92,13 @@ const articleSchemas = buildArticleSchemas({
         <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
         <p class="leading-relaxed text-ink/80">
           Sauna ve soğuk duş — sporcu yaşamımın iki sabit dinlenme aracı. Ben
-          henüz menopoz dönemine ait bir beden değişimi yaşamıyorum; ama annemin
-          sıcak basmasını izlerken bu iki uygulamanın o dönemde ne anlama
-          geldiğini sormaya başladım. Bu yazıda kendi sporcu deneyimimi, anne
-          neslinden gözlemlediklerimi ve bilimin <em>"sauna ve menopoz"</em>
-          ile <em>"soğuk maruziyet ve menopoz"</em> sorularına bugün verebileceği
-          dürüst cevapları yan yana koyuyorum — yaşıt ama mütevazı bir kuşak
-          köprüsü.
+          henüz menopoz dönemine ait bir beden değişimi yaşamıyorum; ama
+          çevremdeki kadınların sıcak basmasını izlerken bu iki uygulamanın o
+          dönemde ne anlama geldiğini sormaya başladım. Bu yazıda kendi sporcu
+          deneyimimi, önceki kuşağın gözlemlerinden öğrendiklerimi ve bilimin
+          <em>"sauna ve menopoz"</em> ile <em>"soğuk maruziyet ve menopoz"</em>
+          sorularına bugün verebileceği dürüst cevapları yan yana koyuyorum —
+          yaşıt ama mütevazı bir kuşak köprüsü.
         </p>
       </section>
 
@@ -117,10 +117,11 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Bu yazı sauna ve soğuk duş üzerine; ama benim için bir kapı:
           sporcu yaşamımın iki sıradan dinlenme aracı olan bu iki şeyin
-          annemin yaşadığı dönemde nasıl bir anlam kazanabileceğini düşündüğüm
-          bir kapı. Henüz benim dönemim değil; ama annemin döneminde olmayan
-          bir şey bende var: bilgi. Önce kendi deneyimim, sonra annemin
-          gözleminden öğrendiğim, sonra bilim çerçevesi.
+          çevremdeki kadınların yaşadığı dönemde nasıl bir anlam kazanabileceğini
+          düşündüğüm bir kapı. Henüz benim dönemim değil; ama önceki kuşağın
+          döneminde olmayan bir şey bende var: bilgi. Önce kendi deneyimim,
+          sonra çevremdeki kadınların gözleminden öğrendiğim, sonra bilim
+          çerçevesi.
         </p>
 
         <h2 id="sporcu-deneyim">Sauna Bana Ne Öğretti</h2>
@@ -152,18 +153,19 @@ const articleSchemas = buildArticleSchemas({
           geçerli.
         </p>
 
-        <h2 id="anne-nesli">Annemin Sıcak Basması ile Saunadan Yardım mı, Tetik mi?</h2>
+        <h2 id="kusak-gozlem">Sıcak Basması Paradoksu — Yakındaki Bir Kadından Gözlem</h2>
         <p>
-          Annemi mutfakta sıcak bastığında kapıyı açmaya yürüdüğü o ânı hep
-          hatırlıyorum — birkaç saniye duruyor, pencereyi açıyor, sonra geri
-          dönüyor. O ânın bir doku işareti olduğunu o yıllarda anlamamıştım.
-          Sıcak basması annemin günlük temposunun bir parçası oldu yıllarca;
-          ben bunu bedenimden değil onun anlatımından öğrendim.
+          Yakın bir aile dostumun mutfakta sıcak bastığında kapıyı açmaya
+          yürüdüğü o ânı hep hatırlıyorum — birkaç saniye duruyor, pencereyi
+          açıyor, sonra geri dönüyor. O ânın bir doku işareti olduğunu o
+          yıllarda anlamamıştım. Sıcak basması bu kadının günlük temposunun
+          bir parçası oldu yıllarca; ben bunu bedenimden değil onun
+          anlatımından öğrendim.
         </p>
         <p>
           Saunaya iyi gelen ısı dolu bir an — bir sporcu için sıradan dinlenme;
           sıcak basması yaşayan bir kadın için aynı an çok başka bir
-          deneyim olabiliyor. Bunu anneme sorduğumda bana şunu söyledi:
+          deneyim olabiliyor. Bunu kendisine sorduğumda bana şunu söyledi:
           <em>"İyi geldiği günler oldu, kötü geldiği günler oldu. Bedenimle
           farklı zamanlarda farklı bir denkleme oturuyor."</em> Bu kadarı
           sauna ile menopoz arasındaki sorunun ne kadar nüanslı olduğunu
@@ -194,7 +196,7 @@ const articleSchemas = buildArticleSchemas({
           uzun vadede vücudun ısı toleransını artırarak sıcak basması
           şikâyetini hafifletebileceğine işaret ediyor; bazıları ise akut
           olarak sıcak basmasını <em>tetikleyebileceğini</em> bildiriyor
-          <Evidence from={2} to={3} />. Yani aynı annenin saunadan iyi
+          <Evidence from={2} to={3} />. Yani aynı kadının saunadan iyi
           gelen ve kötü gelen günleri bilimde de yansımasını buluyor —
           tek bir cevabı olmayan bir konu.
         </p>
@@ -254,8 +256,9 @@ const articleSchemas = buildArticleSchemas({
         <p>
           <strong>Sıcak basması olan dönem:</strong> Saunaya iyi gelen
           sporcu bir gün, sıcak basması yaşayan bir kadında aynı şekilde
-          işlemeyebilir. Annemin <em>"iyi geldi / kötü geldi"</em> ayırımı
-          burada bir kılavuz: deneme yapılırken günlük tutmak (semptom
+          işlemeyebilir. Yakındaki bir kadından duyduğum <em>"iyi geldi / kötü
+          geldi"</em> ayırımı burada bir kılavuz: deneme yapılırken günlük
+          tutmak (semptom
           şiddeti, uyku, ruh hali) ve <em>kötü gelen günleri kabul
           etmek</em> önemli. Bu konuda kendi hekiminizle konuşmak en
           güvenli ilk adım.
@@ -292,8 +295,9 @@ const articleSchemas = buildArticleSchemas({
 
         <h3>Sıcak basması yaşayan biri sauna yapabilir mi?</h3>
         <p>
-          Tek bir cevabı yok — annemin <em>"iyi geldi / kötü geldi"</em>
-          ayırımı burada bilim ile örtüşüyor. Bazı kadınlarda düzenli
+          Tek bir cevabı yok — yakınımdaki bir kadının <em>"iyi geldi / kötü
+          geldi"</em> ayırımı burada bilim ile örtüşüyor. Bazı kadınlarda
+          düzenli
           sauna uzun vadede ısı toleransını artırarak sıcak basmasını
           hafifletebiliyor; bazılarında akut olarak sıcak basmasını
           tetikleyebiliyor. Deneme yaparken günlük tutmak (semptom
@@ -347,17 +351,17 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="kapanis">Kapanış</h2>
         <p>
           Sauna ve soğuk duş — sporcu yaşamımın iki sade dinlenme aracı,
-          ama anne neslinin bedenine değdiği an çok daha nüanslı bir konuya
+          ama önceki kuşağın bedenine değdiği an çok daha nüanslı bir konuya
           dönüşüyor. Bilim sauna için kardiyovasküler tarafta sağlam,
           mood/uyku tarafında orta, sıcak basması tarafında paradoksal
           bir kanıt çiziyor; soğuk maruziyet için kanıt henüz toparlanma
-          aşamasında. Annemin <em>"iyi geldi / kötü geldi"</em> ayırımı
-          bu paradoksun bedendeki gerçek karşılığı; reçete değil, bir
-          dinleme rehberi.
+          aşamasında. Yakındaki bir kadından duyduğum <em>"iyi geldi / kötü
+          geldi"</em> ayırımı bu paradoksun bedendeki gerçek karşılığı;
+          reçete değil, bir dinleme rehberi.
         </p>
         <p>
           Ben yaşamadım ama yakından gördüm — atımla sabah ahırda bunu
-          düşündüm. Henüz benim dönemim değil; ama annemin döneminde
+          düşündüm. Henüz benim dönemim değil; ama önceki kuşağın döneminde
           olmayan bir şey bende var: dürüst bir bilim çerçevesi ve
           yakındaki bir kadından öğrenmek için zaman.
         </p>
@@ -387,7 +391,7 @@ const articleSchemas = buildArticleSchemas({
             <strong class="text-burgundy">Klinik bağlam:</strong> Sauna ve soğuk
             maruziyet menopozal hasta poliklinik konuşmalarında giderek daha sık
             geçiyor — sosyal medyadaki <em>"biohack"</em> içerikleri ilgi yarattı,
-            anne nesliyle gözlemleyerek hazırlanan genç kadınlardan da sorular
+            önceki kuşağı gözlemleyerek hazırlanan genç kadınlardan da sorular
             geliyor. Sauna kardiyovasküler tarafta uzun-soluklu Finlandiya kohortları
             başta olmak üzere geniş gözlemsel kanıta sahip; soğuk maruziyet ise
             mekanizma çalışmaları ile mood/inflammation ekseninde sınırlı klinik
@@ -437,8 +441,8 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             <strong class="text-burgundy">Bireyselleştirme uyarısı:</strong>
-            Sn. Baykent'in yazısında paylaştığı sporcu deneyimi ve anne neslinden
-            gözlemler kişisel bir kuşak köprüsüdür; sizin için uygun olup
+            Sn. Baykent'in yazısında paylaştığı sporcu deneyimi ve çevresindeki
+            kadınlardan yaptığı gözlemler kişisel bir kuşak köprüsüdür; sizin için uygun olup
             olmadığını kendi hekiminizle değerlendirmek önemlidir. Özellikle
             kardiyovasküler durumu olan, sıcak basması yoğun yaşayan, ya da
             HRT planı içinde olan kadınlarda sauna ve soğuk maruziyet kararı
