@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
@@ -96,6 +96,9 @@ const journey = [
   },
 ];
 
+// Yazar kategorileri — iki ayrı carousel için filtreler
+const lifestyleWriters = writers.filter((w) => w.category !== 'scientific');
+const scientificWriters = writers.filter((w) => w.category === 'scientific');
 ---
 
 <SiteLayout
@@ -246,39 +249,11 @@ const journey = [
       </div>
     </section>
 
-    <SymptomNavigation />
-
-    <section class="border-t border-b border-burgundy/12 bg-white px-6 py-10 md:py-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
-        <p class="font-sans text-sm text-ink/75">
-          İçeriklerimiz editöryal ve tıbbi incelemeden geçer.{' '}
-          <a
-            href="/editoryal-politika/nasil-arastiriyoruz"
-            class="text-ink underline decoration-gold/60 underline-offset-4 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
-            >Kanıt seviyeleri nasıl belirlenir? →</a>
-        </p>
-        <nav
-          aria-label="Güven ve politikalar"
-          class="flex flex-col items-center gap-2 font-sans sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-1"
-        >
-          <a
-            href="/editoryal-politika"
-            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
-            >Editöryal Politika</a>
-          <span class="hidden text-gold sm:inline" aria-hidden="true">·</span>
-          <a
-            href="/tibbi-sorumluluk"
-            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
-            >Tıbbi Sorumluluk Reddi</a>
-          <span class="hidden text-gold sm:inline" aria-hidden="true">·</span>
-          <a
-            href="/editoryal-politika/nasil-arastiriyoruz"
-            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
-            >Nasıl Araştırıyoruz</a>
-        </nav>
-      </div>
-    </section>
-
+    <!--
+      Yazar Kadrosu — yaşam yazarları (lifestyle category).
+      Konum: Editöryal Seçki sonrası (2026-05-03'te taşındı; eski konumu en altta idi).
+      Bilim yazarları için ayrı carousel sayfa sonunda yer alır.
+    -->
     <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 max-w-3xl">
@@ -289,8 +264,8 @@ const journey = [
           </p>
           <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bu sayıda yazanlar</h2>
           <p class="text-lg leading-relaxed text-ink/75">
-            Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden yedi ses. Her yazar, kendi bakış açısıyla
-            katkı sunuyor.
+            Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden yazıyor olan yaşıt sesler. Her yazar kendi
+            bakış açısıyla katkı sunuyor.
           </p>
           <p class="mt-4 text-lg leading-relaxed text-ink/75">
             Estranova bir “kişisel vitrin” ya da “influencer alanı” değil. Burada yazmak; deneyimi parlatmak değil, anlamlandırmak demek.
@@ -332,7 +307,7 @@ const journey = [
             class="writers-track flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:gap-6"
           >
             {
-              writers.map((w) => (
+              lifestyleWriters.map((w) => (
                 <li class="flex shrink-0 snap-start" style="width: clamp(240px, 78vw, 280px);">
                   <a
                     href={`/yazarlar/${w.slug}`}
@@ -373,13 +348,13 @@ const journey = [
               ))
             }
           </ul>
-        </div>
 
-        <div
-          data-writers-dots
-          aria-hidden="true"
-          class="mt-6 flex items-center justify-center gap-2"
-        ></div>
+          <div
+            data-writers-dots
+            aria-hidden="true"
+            class="mt-6 flex items-center justify-center gap-2"
+          ></div>
+        </div>
 
         <div class="mt-10 flex justify-center">
           <a
@@ -389,6 +364,39 @@ const journey = [
             Tüm yayın kurulu →
           </a>
         </div>
+      </div>
+    </section>
+
+    <SymptomNavigation />
+
+    <section class="border-t border-b border-burgundy/12 bg-white px-6 py-10 md:py-12">
+      <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
+        <p class="font-sans text-sm text-ink/75">
+          İçeriklerimiz editöryal ve tıbbi incelemeden geçer.{' '}
+          <a
+            href="/editoryal-politika/nasil-arastiriyoruz"
+            class="text-ink underline decoration-gold/60 underline-offset-4 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            >Kanıt seviyeleri nasıl belirlenir? →</a>
+        </p>
+        <nav
+          aria-label="Güven ve politikalar"
+          class="flex flex-col items-center gap-2 font-sans sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-1"
+        >
+          <a
+            href="/editoryal-politika"
+            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            >Editöryal Politika</a>
+          <span class="hidden text-gold sm:inline" aria-hidden="true">·</span>
+          <a
+            href="/tibbi-sorumluluk"
+            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            >Tıbbi Sorumluluk Reddi</a>
+          <span class="hidden text-gold sm:inline" aria-hidden="true">·</span>
+          <a
+            href="/editoryal-politika/nasil-arastiriyoruz"
+            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            >Nasıl Araştırıyoruz</a>
+        </nav>
       </div>
     </section>
 
@@ -404,6 +412,116 @@ const journey = [
     </section>
 
     <EditorialDigestStrip />
+
+    <!--
+      Bilim Yazarları — scientific category.
+      Konum: EditorialDigestStrip sonrası, Kütüphane'den önce (2026-05-03'te eklendi).
+      Aynı carousel JS pattern'ı (multi-carousel forEach destekli).
+    -->
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-12 max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+            <span class="font-serif font-normal tabular-nums text-gold">06</span>
+            <span class="mx-2 text-gold">—</span>
+            Bilim Yazarları
+          </p>
+          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Tıbbi danışmanlar ve bilim kurulu</h2>
+          <p class="text-lg leading-relaxed text-ink/75">
+            Estranova'nın bilimsel inceleme katmanını taşıyan hekimler ve uzmanlar. Yazılarımız bu kadronun editöryal
+            denetiminden geçer; her makalenin sonundaki Bilimsel Editör Notu da bu mercekten doğar.
+          </p>
+        </header>
+
+        <div class="relative" data-writers-carousel>
+          <button
+            type="button"
+            data-writers-prev
+            aria-label="Önceki bilim yazarları"
+            class="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 -translate-x-3 items-center justify-center rounded-full border border-burgundy/25 bg-white/95 text-burgundy shadow-sm backdrop-blur transition hover:border-burgundy/55 hover:bg-white hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-burgundy/25 disabled:hover:bg-white/95 disabled:hover:shadow-sm md:flex"
+          >
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m12 15-5-5 5-5" />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            data-writers-next
+            aria-label="Sonraki bilim yazarları"
+            class="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 translate-x-3 items-center justify-center rounded-full border border-burgundy/25 bg-white/95 text-burgundy shadow-sm backdrop-blur transition hover:border-burgundy/55 hover:bg-white hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:border-burgundy/25 disabled:hover:bg-white/95 disabled:hover:shadow-sm md:flex"
+          >
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m8 5 5 5-5 5" />
+            </svg>
+          </button>
+
+          <ul
+            data-writers-track
+            role="list"
+            aria-label="Bilim yazarları kadrosu — yatay kaydırarak gezinebilirsiniz"
+            class="writers-track flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 md:gap-6"
+          >
+            {
+              scientificWriters.map((w) => (
+                <li class="flex shrink-0 snap-start" style="width: clamp(240px, 78vw, 280px);">
+                  <a
+                    href={`/yazarlar/${w.slug}`}
+                    class="group flex w-full items-start gap-4 border-r border-burgundy/12 pr-5 last:border-r-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                  >
+                    {w.portrait ? (
+                      <img
+                        src={w.portrait}
+                        alt={`${w.displayName} portresi`}
+                        width="160"
+                        height="160"
+                        loading="lazy"
+                        decoding="async"
+                        class="h-20 w-20 shrink-0 rounded-full object-cover ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/45"
+                      />
+                    ) : (
+                      <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-cream-warm font-serif text-2xl text-burgundy ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/45">
+                        {w.displayName
+                          .split(/\s+/)
+                          .filter((part) => part.length > 0)
+                          .map((n) => n[0])
+                          .join('')}
+                      </div>
+                    )}
+                    <div class="min-w-0 flex-1">
+                      <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy">
+                        {w.role.split('/')[0].trim()}
+                      </p>
+                      <h3 class="mt-1.5 font-serif text-lg leading-tight text-ink group-hover:underline group-hover:decoration-burgundy/35">
+                        {w.displayName}
+                      </h3>
+                      <p class="writer-phrase mt-2 font-serif text-sm italic leading-snug text-ink/70">
+                        {w.signaturePhrase}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+
+          <div
+            data-writers-dots
+            aria-hidden="true"
+            class="mt-6 flex items-center justify-center gap-2"
+          ></div>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+          <a
+            href="/yayin-kurulu"
+            class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
+          >
+            Tüm yayın kurulu →
+          </a>
+        </div>
+      </div>
+    </section>
 
     <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-14 md:py-16">
       <div class="mx-auto max-w-3xl text-center">
@@ -443,13 +561,15 @@ const journey = [
 </style>
 
 <script>
-  function initWritersCarousel() {
-    const carousel = document.querySelector('[data-writers-carousel]');
-    if (!carousel) return;
+  // Multi-carousel destek (2026-05-03): anasayfada iki ayrı yazar carousel'i var
+  // (yaşam yazarları + bilim yazarları). Her birinin track / prev / next /
+  // dots elemanları kendi carousel scope'unda yer alır; JS hepsini forEach
+  // ile bağımsız initialize eder.
+  function initWritersCarousel(carousel) {
     const track = carousel.querySelector('[data-writers-track]');
     const prevBtn = carousel.querySelector('[data-writers-prev]');
     const nextBtn = carousel.querySelector('[data-writers-next]');
-    const dotsContainer = document.querySelector('[data-writers-dots]');
+    const dotsContainer = carousel.querySelector('[data-writers-dots]');
     if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
     const items = Array.from(track.querySelectorAll(':scope > li'));
@@ -579,9 +699,13 @@ const journey = [
     updateButtons();
   }
 
+  function initAllWritersCarousels() {
+    document.querySelectorAll('[data-writers-carousel]').forEach(initWritersCarousel);
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initWritersCarousel);
+    document.addEventListener('DOMContentLoaded', initAllWritersCarousels);
   } else {
-    initWritersCarousel();
+    initAllWritersCarousels();
   }
 </script>
