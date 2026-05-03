@@ -19,14 +19,21 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const editorPick: any = null;
+const editorPick = {
+  href: '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim',
+  title: 'HIFU, Radyofrekans ve Mikroakım — Non-İnvaziv Cihazların Kanıt Sınırı',
+  lede: 'HIFU, RF, mikroakım ve LED ışık cihazları "ameliyatsız yüz germe" vaadiyle yoğun pazarlanıyor; oysa kanıt cerrahi sonuçtan belirgin biçimde uzakta. Mekanizma sözlüğü, kanıt haritası, postmenopozal bağlam ve hekim görüşmesi için somut soruların dürüst çerçevesi.',
+  writerSlug: 'senai-aksoy',
+  readingMinutes: 9,
+  image: submenuHeroByRoute['/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim'] ?? submenuHeroByRoute['/zamansiz-yasam/non-invaziv']!,
+};
 
 const tocArticles = [
   {
     href: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
     title: 'Vajinal Sağlık ve Menopoz',
     excerpt: 'Vulvovajinal atrofi, atrofik etkilerin günlük konfora yansıması ve non-hormonal destek seçenekleri üzerine planlı rehber.',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'senai-aksoy',
     readingMinutes: 8,
   },
 ];
