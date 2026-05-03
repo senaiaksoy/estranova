@@ -360,15 +360,17 @@
     <p class="section-hint">Beş öğe — her birinde "Tam tarzım / Kısmen / Bana uymaz" seçeneği. Yanıtlarınız profil dosyalarınıza işlenir; sonraki makalelerde stiliniz daha hassas yansır.</p>
 
     <div class="field">
-      <span class="field-label">10. Bullet (madde) yoğunluğu</span>
+      <span class="field-label">10. Yapısal yoğunluk — H2 + bullet + RedFlagBox dengesi</span>
       <div class="field-example">
-        Bu yazıda 7 risk maddesi + 6 pratik bakım maddesi yer aldı; "Belirtiler /
-        Nedenler / Önlemler / Tedavi" 4-parçalı çatı uygulandı. Genel olarak bullet
-        yoğun bir yapı yazıma uyar mı?
+        Bu yazıda 7 H2 başlık + RedFlagBox (7 kırmızı bayrak maddesi) + 4 lab
+        değeri bullet listesi + 5 FAQ sorusu yer aldı. Akış: "Üçlü şikayet →
+        Mekanizma → Lab okuma → Hashimoto/perimenopoz ayırma → Hekim iletişim
+        → FAQ → Kapanış" — 7-bölümlü çatı. Genel yapısal yoğunluk yazınıza
+        uyar mı?
       </div>
       <div class="style-choice">
         <label><input type="radio" name="stilYapi" value="tam" required>Tam tarzım</label>
-        <label><input type="radio" name="stilYapi" value="kismen">Kısmen — daha az olabilir</label>
+        <label><input type="radio" name="stilYapi" value="kismen">Kısmen — daha sade olabilir</label>
         <label><input type="radio" name="stilYapi" value="uymaz">Bana uymaz — daha akıcı paragraf</label>
       </div>
     </div>
@@ -376,16 +378,18 @@
     <div class="field">
       <span class="field-label">11. Başlık tipi tercihi</span>
       <div class="field-example">
-        Bu yazıda <strong>tireli iki bölümlü başlık</strong> kullandık: "Postmenopozda
-        Dişeti Çekilmesi — Östrojen Kaybı ve Bakım". Alternatifler:<br>
-        (a) <em>Soru başlık:</em> "Postmenopozda Ağzımıza Ne Oluyor?"<br>
-        (b) <em>Parantez içi terim:</em> "Dişeti Çekilmesi (Gingival Recession)"<br>
-        (c) <em>Sade isim:</em> "Postmenopoz ve Dişetleri"
+        Bu yazıda <strong>"X mi Y mi" + tireli iki bölümlü + üçlü liste</strong>
+        başlığı kullandık: "Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku
+        Bozukluğunun Üç Ekseni". Alternatifler:<br>
+        (a) <em>Sade soru:</em> "Yorgunluk Hashimoto mu Perimenopoz mu?"<br>
+        (b) <em>Parantez içi terim:</em> "Tiroid–Menopoz Kavşağı (Hashimoto Ayırıcı Tanı)"<br>
+        (c) <em>Mekanizma odaklı:</em> "Östrojen Düşünce Tiroide Ne Olur?"<br>
+        (d) <em>Sade isim:</em> "Tiroid ve Menopoz"
       </div>
       <div class="style-choice">
-        <label><input type="radio" name="stilBaslik" value="tireli" required>Tireli iki bölümlü</label>
-        <label><input type="radio" name="stilBaslik" value="soru">Soru başlık</label>
-        <label><input type="radio" name="stilBaslik" value="parantez">Parantez içi terim</label>
+        <label><input type="radio" name="stilBaslik" value="x-mi-y-mi" required>"X mi Y mi" + tireli</label>
+        <label><input type="radio" name="stilBaslik" value="sade-soru">Sade soru başlık</label>
+        <label><input type="radio" name="stilBaslik" value="mekanizma">Mekanizma odaklı</label>
         <label><input type="radio" name="stilBaslik" value="hepsi">Hepsi uygun (rotasyon)</label>
       </div>
     </div>
@@ -393,45 +397,54 @@
     <div class="field">
       <span class="field-label">12. Açılış kalıbı tercihi</span>
       <div class="field-example">
-        Bu yazıda <em>genel önem + yaygınlık</em> kalıbı kullandık ("Düzgün, pembe ve
-        sağlıklı dişetleri..."). Alternatifler:<br>
-        (a) <em>Durum tanımı:</em> "Dişeti çekilmesi, dişetinin diş yüzeyinden..."<br>
-        (b) <em>Didaktik tip ayrımı:</em> "Genel olarak 2 tip çekilmeden bahsedebiliriz."<br>
-        (c) <em>Kontrollü espri:</em> "Dişeti çekilmesini fark eden çoğumuz önce..."
+        Bu yazıda <em>kafa karışıklığını isimlendirme</em> açılışı kullandık
+        ("Yorgunum, kilo aldım, uykum bozuk üçlüsü polikliniğe en sık gelen
+        şikayettir; üç ayrı eksen birden bakılır"). Alternatifler:<br>
+        (a) <em>Kavşak nokta:</em> "Tiroid ve menopoz çoğu zaman aynı belirtilerle başvurur — birini diğeri sanmak yaygındır..."<br>
+        (b) <em>Mekanizma kapısı:</em> "Östrojen düşünce kemiğe ne olur sorusunun cevabı sade görünür ama üç ekseni birden ilgilendirir..."<br>
+        (c) <em>Klinik gözlem yumuşatması:</em> "Klinikte sıklıkla şu tabloya rastlıyoruz..."<br>
+        (d) <em>Lab okuma:</em> "Bir hormonun düzeyi tek başına yorumlanmaz; rakamı görmek başlangıç..."
       </div>
       <div class="style-choice">
-        <label><input type="radio" name="stilAcilis" value="onem" required>Genel önem</label>
-        <label><input type="radio" name="stilAcilis" value="durum">Durum tanımı</label>
-        <label><input type="radio" name="stilAcilis" value="didaktik">Didaktik tip ayrımı</label>
-        <label><input type="radio" name="stilAcilis" value="espri">Kontrollü espri</label>
+        <label><input type="radio" name="stilAcilis" value="kafa-karisikligi" required>Kafa karışıklığı isimlendirme</label>
+        <label><input type="radio" name="stilAcilis" value="kavsak">Kavşak nokta</label>
+        <label><input type="radio" name="stilAcilis" value="mekanizma">Mekanizma kapısı</label>
+        <label><input type="radio" name="stilAcilis" value="klinik-gozlem">Klinik gözlem yumuşatma</label>
       </div>
     </div>
 
     <div class="field">
-      <span class="field-label">13. Bold kategori başlığı + iki nokta + açıklama kalıbı</span>
+      <span class="field-label">13. Bold soru başlığı + klinik akıl yürütme kalıbı</span>
       <div class="field-example">
-        Bu yazıda <strong>"Diş gıcırdatma:"</strong>, <strong>"Yanlış diş fırçalama:"</strong>,
-        <strong>"Hatalı dolgu ve kaplamalar:"</strong> tarzı bold kategori başlıkları yer aldı
-        (her birinin altı kısa açıklama). Bu kalıp yazınızda olmalı mı?
+        Bu yazıda Hashimoto/perimenopoz ayırma bölümünde <strong>"Soru 1 —
+        Belirtinin kalıbı hangisine daha çok yakın?"</strong>, <strong>"Soru 2
+        — Lab tablosunda hangisinin işareti var?"</strong>, <strong>"Soru 3 —
+        Klinik bağlam ne söylüyor?"</strong> tarzı bold soru-yapılı klinik
+        akıl yürütme başlıkları yer aldı. Ayrıca lab değerlerinde
+        <strong>"TSH"</strong>, <strong>"fT4 (serbest tiroksin)"</strong>,
+        <strong>"Anti-TPO"</strong> bold tek-kelime kategori başlıkları
+        kullanıldı. Bu kalıp imzanız mı?
       </div>
       <div class="style-choice">
         <label><input type="radio" name="stilKategori" value="evet" required>Evet, bu imzam</label>
-        <label><input type="radio" name="stilKategori" value="bazen">Bazen — sadece teknik konularda</label>
-        <label><input type="radio" name="stilKategori" value="hayir">Hayır, kullanmıyorum</label>
+        <label><input type="radio" name="stilKategori" value="bazen">Bazen — sadece klinik akıl yürütme</label>
+        <label><input type="radio" name="stilKategori" value="hayir">Hayır, daha akıcı tercih ederim</label>
       </div>
     </div>
 
     <div class="field">
-      <span class="field-label">14. Kontrollü espri seviyesi</span>
+      <span class="field-label">14. Klinik mesafe ve "biz" tonu — yumuşatma seviyesi</span>
       <div class="field-example">
-        Bu yazıda kontrollü espri olarak <em>"çoğu kadının düşünmediği ama hormonal
-        geçişle doğrudan bağı olan..."</em> tarzı yumuşak ironik dokunmalar yer aldı.
-        Espri seviyesi sizi yansıtıyor mu?
+        Yazıda <em>"klinikte sıklıkla şu tabloya rastlıyoruz"</em>,
+        <em>"polikliniğe başvuran kadınlarda"</em> tarzı yumuşak inclusive
+        ifadeler yer aldı (yaşıt yazar tonu DEĞİL — klinisyen mesafesi
+        korunarak inclusive yumuşatma). "Klinikten gelen sıcak akademisyen"
+        dengesi sizi yansıtıyor mu?
       </div>
       <div class="style-choice">
         <label><input type="radio" name="stilEspri" value="dogru" required>Doğru ölçü</label>
-        <label><input type="radio" name="stilEspri" value="azalt">Daha az olsun</label>
-        <label><input type="radio" name="stilEspri" value="artir">Daha çok olsun</label>
+        <label><input type="radio" name="stilEspri" value="mesafeli">Daha mesafeli olsun</label>
+        <label><input type="radio" name="stilEspri" value="sicak">Daha sıcak olsun</label>
       </div>
     </div>
   </section>
@@ -440,7 +453,7 @@
     <p class="section-num">Bölüm 4 / 4 · ~2 dk</p>
     <h2>Yorumunuz (opsiyonel)</h2>
     <p class="section-hint">Değişiklik istiyorsanız nereye dokunulmalı, kısa not. Açık alanda kendi tercih ettiğiniz cümle/kalıp/açılış varsa ekleyin — profile işlenir.</p>
-    <textarea id="yorum" name="yorum" maxlength="600" placeholder="Örn: Bölüm 3'te bir cümle daha tıbbi olabilir; kapanışta 'doğal görünüm' vurgusu daha yumuşak; tercih ettiğim açılış kalıbı 'X yıl önce kliniğe başvuran...'"></textarea>
+    <textarea id="yorum" name="yorum" maxlength="600" placeholder="Örn: Lab okuma bölümünde TSH paragrafı biraz daha sade olabilir; FAQ'daki HRT-tiroid sorusunu daha kapsamlı yazmak isterim; tercih ettiğim açılış kalıbı 'Endokrin polikliniğinde sıkça duyduğumuz şikayet...'"></textarea>
     <div class="char-count" id="charCount">0 / 600</div>
   </section>
 

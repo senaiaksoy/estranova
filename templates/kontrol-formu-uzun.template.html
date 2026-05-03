@@ -354,6 +354,26 @@
     </div>
   </section>
 
+  <!--
+    UYARI — TEMPLATE BAKIM NOTU
+    Bölüm 3 (sorular 10-14) ŞU AN Duygu Karaosmanoğlu / dişeti çekilmesi
+    makalesi örneklerine göre HARD-CODED yazılmıştır.
+
+    Yeni bir yazarın ilk makalesi için form üretilirken (--first-article
+    flag'iyle) bu bölüm:
+      - Yazarın gerçek stil özelliklerine (profile.yaml + hot.md)
+      - O makalede gerçek kullanılan örneklere (açılış / başlık / kategori /
+        bullet yoğunluğu / espri-mesafe)
+    göre el ile yeniden yazılmalıdır.
+
+    Aksi halde Metin Alış / Tiroid makalesinde olduğu gibi yanlış yazarın
+    (Duygu/dişeti) örnekleri sızar (kullanıcı tarafından 2026-05-03
+    raporlandı, manuel düzeltme yapıldı).
+
+    UZUN VADELİ ÇÖZÜM: Bu bölümü create-approval-package.mjs'de
+    parametrize etmek (writers/<slug>/profile.yaml'dan style snapshot
+    çekmek). Şu an v1 yetersiz.
+  -->
   <section class="card">
     <p class="section-num">Bölüm 3 / 4 · ~4 dk</p>
     <h2>Stil rafine — sizi en iyi yansıtan tercihler</h2>
