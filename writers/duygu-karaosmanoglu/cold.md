@@ -14,12 +14,30 @@
 - **EDAD (Estetik Diş Hekimliği Akademisi Derneği)** — Yönetim Kurulu üyesi.
 - **DEKİD (Diş Hekimleri Klinik Sahipleri Derneği)** — aktif üye.
 - **Uluslararası dergi yayınları (2):** porselen laminate veneer onarımı + interdental papilla rezesyonu kapatma seramik laminate veneerlerle (Elif Özcan Dulundu ortak yazar).
+- **VID (Very Important Dentists) Medikal dergisi** — yayımlanmış üç köşe yazısı (kullanıcı tarafından paylaşıldı 2026-05-03; Duygu'nun gerçek yazı stilini gösteren birinci-elden korpus):
+  - **"Ağız Kuruluğu (Xerostomia)"** (sayfa 16) — belirti/neden/önlem dört-parçalı yapı, 8+8 bullet madde, yan yana iki sütun
+  - **"Diş Macunlarının İçinde Neler Var?"** (sayfa 17) — soru başlık, bold kategori başlığı + iki nokta + açıklama kalıbı (Hydrogen Peroxide:, Sodyum Bicarbonate:, Dicalcium phosphate, kaolin, calsium carbonate:), kontrollü espri ile açılış
+  - **"Dişeti Çekilmeleri"** (sayfa 17) — "Genel olarak X tip Y'den bahsedebiliriz" didaktik açılış, numaralı + alt-bullet hibrid yapı, "Tedavi:" sonu
 
-**Tematik türetme — [DK-T] etiketi:** Estranova'nın hormon-ağız sağlığı ekseninde tasarlanan kalıplar. v3.0'da placeholder.
+**Birinci-elden alıntılar — VID dergisi makalelerinden ([DK-K] etiket):**
 
-**Korpus karakter gözlemi:**
-- Akademisyen-klinisyen pedagojik tonu (eğitim veren).
-- "Doğal görünümü zorlamayı sevmeyen" felsefe (yayin-kurulu bio'sundan).
+1. *"Ağız kuruluğu, tükürük bezlerinin salgılama fonksiyonlarının, çeşitli nedenlerle azalması ile oluşur."* (Xerostomia, açılış cümlesi — *durum tanımı* tipi)
+2. *"Diş macunlarının etiketlerine göz attığınızda, bir şeyler anlamak için biokimya uzmanı olmanız gerektiğini düşünebilirsiniz."* (Diş Macunları, açılış — *okuyucu-yönelimli kontrollü espri*)
+3. *"Tüm bunları ağzınıza sokmak istediğinize emin misiniz?"* (Diş Macunları, ikinci paragraf — *kontrollü espri + soru tekniği*)
+4. *"Düzgün, pembe ve sağlıklı dişetleri güzel bir gülüş için çok önemlidir. Dişeti çekilmeleri ise toplumda en sık karşılaşılan şikâyetlerden biridir."* (Dişeti Çekilmeleri, açılış — *genel önem + yaygınlık çerçevesi*)
+5. *"Genel olarak 2 tip çekilmeden bahsedebiliriz."* (Dişeti Çekilmeleri, ikinci paragraf — *didaktik tip ayrımı açılışı*)
+6. *"Bite guard kullanımı önerilir."* (Dişeti Çekilmeleri, alt-paragraf — *sade direktif tedavi önerisi*)
+7. *"Hepsinde öncelikle yapılması gereken... Bazı durumlarda (estetik yada sağlık açısından gereklilikler)..."* (Dişeti Çekilmeleri, Tedavi — *önce sıralı temel sonra opsiyonel hiyerarşi*)
+
+**Tematik türetme — [DK-T] etiketi:** Estranova'nın hormon-ağız sağlığı ekseninde tasarlanan kalıplar (örnek: ağız kuruluğu + perimenopoz, dişeti çekilmesi + postmenopoz östrojen kaybı, bruksizm + stres dönemi).
+
+**Korpus karakter gözlemi (rafine — VID dergisi sonrası):**
+- Akademisyen-klinisyen **pedagojik didaktik** tonu (eğitim veren — VID dergisi makalelerinde net görünür).
+- **Bullet-yoğun yapısal disiplin** — her ana başlığın altı 3-7 madde; "Belirtiler / Nedenler / Ne Yapılabilir / Tedavi" çatısı.
+- **Bold kategori başlığı + iki nokta + kısa açıklama** kalıbı (kimyasal/teknik isim listeleme tarzı).
+- **Soru-tabanlı başlık** + **konu + parantez içi Latince terim** ikilisi (Diş Macunlarının İçinde Neler Var? / Ağız Kuruluğu (Xerostomia)).
+- **Kontrollü espri** — okuyucuya yönelmiş, hafif ironik, eğitici çerçevede ("biokimya uzmanı olmanız gerektiğini düşünebilirsiniz").
+- "Doğal görünümü zorlamayı sevmeyen" felsefe (yayin-kurulu bio'sundan) — gözlemler arası sürekli.
 - 22+ yıl Elif ile ortak eğitmenlik → didaktik dilin disipline edilmiş hali.
 - Klinik-pratik kanat (Elif'in akademik-lider tonundan farklı; gündelik öneri zinciri).
 

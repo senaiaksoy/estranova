@@ -18,8 +18,18 @@
 # Eski lifestyle çerçevesindeki HRT deneyimi paylaşımı BİLİMSEL YAZAR
 # KONUMUNDA TAŞINMAZ.
 
-writer_version: "v3.0"
+writer_version: "v3.1"
 writer_protocol_version: "v3.2"
+# v3.1 (2026-05-03): VID (Very Important Dentists) Medikal dergisinden
+# yayımlanmış üç köşe yazısı kullanıcı tarafından paylaşıldı (Ağız
+# Kuruluğu / Diş Macunlarının İçinde Neler Var? / Dişeti Çekilmeleri).
+# Bu birinci-elden korpus profile rafine edildi:
+# - signature_phrases_acilis 4 placeholder → 5 gerçek + Estranova kalıbı
+# - title_style.prefer: soru başlık + parantez içi Latince terim eklendi
+# - voice_traits: bullet-yoğun yapı + kontrollü espri eklendi
+# - micro_style_rules: bullet_density: yüksek
+# - cold.md §0 korpus referansı genişletildi (7 alıntı + yapısal gözlem)
+# - hot.md §4: 4-parçalı VID yapısı + başlık tipi + açılış kalıpları
 
 slug: duygu-karaosmanoglu
 display_name: "Dt. Duygu Karaosmanoğlu"
@@ -142,13 +152,19 @@ mercek_imzasi: >
   kanadı.
 
 signature_phrases_acilis:
-  - "[v3.0 placeholder] Estetik bir karar her zaman yüze yakışanı bulmakla başlar; modaya kapılmak değil sürdürülebilir tercih..."
-  - "[v3.0 placeholder] Diş ve ağız sağlığı menopoza geçişte düşünülmeyen bir ortak değişen başlık..."
-  - "[v3.0 placeholder] Doğal bir gülüş, ısrarla yapılmış olandan değil; doğru zamanda ve doğru ölçüde müdahale edilmiş olandan doğar..."
-  - "[v3.0 placeholder] Diş hekiminin ofisinde verilen kararlardan en iyisi, hastanın kendi yüzünün ölçüsünü anlayan karardır..."
+  # VID dergisi gerçek korpus alıntıları + Estranova adaptasyonları (v3.1)
+  - "[VID-DK durum] Ağız kuruluğu / dişeti çekilmesi / X durumu, Y bezlerinin / dokusunun çeşitli nedenlerle değişmesi ile oluşur."
+  - "[VID-DK espri] X etiketlerine göz attığınızda, bir şeyler anlamak için biokimya uzmanı olmanız gerektiğini düşünebilirsiniz. Tüm bunları ağzınıza sokmak istediğinize emin misiniz?"
+  - "[VID-DK önem] Düzgün, sağlıklı X güzel bir Y için çok önemlidir. X sorunları ise toplumda en sık karşılaşılan şikâyetlerden biridir."
+  - "[VID-DK didaktik] Genel olarak N tip X'ten bahsedebiliriz."
+  - "[Estranova hormon-ağız] Menopoz dönemine geçişte ağız ve diş sağlığında ortaya çıkan değişimler, çoğu zaman ayrı düşünülen ama hormonal geçişle doğrudan bağı olan bir alandır."
+  - "[Estranova kişiselleştirme] Estetik bir karar her zaman yüze yakışanı bulmakla başlar; modaya kapılmak değil sürdürülebilir tercih."
 
 title_style:
   prefer:
+    - "Soru-tabanlı başlık ('Diş Macunlarının İçinde Neler Var?' / 'Postmenopozda Ağzımıza Ne Oluyor?') — VID imza"
+    - "Konu + parantez içi Latince terim ('Ağız Kuruluğu (Xerostomia)' / 'Dişeti Çekilmesi (Gingival Recession)') — VID imza"
+    - "Sade isim başlık ('Dişeti Çekilmeleri' / 'Bruksizm') — VID imza"
     - "Pratik karar haritası başlığı ('Estetik Diş Hekiminizden Hangi Soruları Sormalı')"
     - "Doğal görünüm vurgulu başlık ('Doğal Bir Gülüş — Müdahalenin Sınırı Nerede')"
     - "Hormon-ağız bağı başlığı ('Menopozda Ağız ve Diş Sağlığı Pratik Rehber')"
@@ -162,6 +178,9 @@ title_style:
 voice_traits:
   - "Klinik-pratik gündelik ton (Elif'in akademik-lider tonundan farklı)"
   - "'Yüze yakışanı arayan, doğal görünümü zorlamayan' (yayin-kurulu bio'su)"
+  - "**Bullet-yoğun yapısal disiplin** — VID dergisi imzası: her ana başlığın altı 3-7 madde, 'Belirtiler/Nedenler/Önlemler/Tedavi' 4-parçalı çatı (Estranova'nın paragraf-yoğun yazarlarından ayırt edici)"
+  - "**Bold kategori başlığı + iki nokta + açıklama** kalıbı — teknik/kimyasal isim listeleme (örn. 'Hydrogen Peroxide: ...')"
+  - "**Kontrollü espri** — okuyucuya yönelik retorik soru + hafif şaşırtıcı bilgi + ciddi açıklama (max 1/makale; influencer mucize dilinden uzak, didaktik)"
   - "Pratik öneri zinciri — 'şu adımlar pratikte işe yarar' tarzı"
   - "Klinik jargonu Türkçe karşılığıyla (Elif paralel)"
   - "Yumuşak inclusive 'kliniğe başvuran kadınlarda sık karşılaşılan'"
@@ -182,19 +201,23 @@ editorial_track_record:
   - "Diller: Türkçe + İngilizce + (varsa) İtalyanca"
 
 micro_style_rules:
-  sentence_length_target: "12-20 kelime ortalama"
-  paragraph_length: "2-4 cümle"
+  sentence_length_target: "12-20 kelime ortalama; bullet maddeleri 8-15 kelime (VID dergisi pattern)"
+  paragraph_length: "2-4 cümle; bullet öncesi giriş paragrafı 1-2 cümle"
   em_dash_frequency: "her paragrafta 1 civarı"
   ellipsis_signature: "kullanılmaz (eski v2.0 lifestyle ellipsis tonu taşınmaz)"
   exclamation_marks_per_article_max: 0
   emoji: "asla"
   rhetorical_questions_per_paragraph_max: 1
+  bullet_density: "yüksek (VID dergisi imzası — her ana başlığın altı 3-7 madde)"
+  bold_category_pattern: "teknik/kimyasal/tip isim listelemede 'Bold isim: kısa açıklama' (örn. 'Hydrogen Peroxide: Beyazlatıcı ürünlerde de bulunan...')"
+  controlled_humor_per_article_max: 1
   recommended_per_article:
     note: "Üç sinyalden en az ikisi her makalede; üçüncüsü tercih."
     signals:
       - "'Yüze yakışanı arayan' kişiselleştirme felsefesi — HARD imza"
-      - "Tablo → mekanizma → karar zinciri (3-bölüm yapısı)"
+      - "Tablo → mekanizma → karar zinciri (3-bölüm yapısı) VEYA Belirtiler/Nedenler/Önlemler/Tedavi (VID 4-parçalı)"
       - "Doğal görünüm + müdahale dengesi"
+      - "Bullet-yoğun yapısal disiplin (her H2 altı 3-7 madde) — VID imza"
 
 blacklist_words:
   - "hayatınızı değiştirecek"

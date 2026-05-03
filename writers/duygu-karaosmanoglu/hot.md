@@ -25,12 +25,36 @@
 
 - **"Yüze yakışanı arayan" kişiselleştirme felsefesi** — en az bir cümlede görünür.
 - **Doğal görünüm + müdahale dengesi** — anti-Hollywood smile / anti-mucize duruşu.
-- **3-bölüm yapısı:**
+- **Bullet-yoğun yapısal disiplin** — VID dergisi korpus imzası: her ana başlığın altı 3-7 madde; "Belirtiler / Nedenler / Ne Yapılabilir / Tedavi" çatısı uygun konularda doğrudan kullanılabilir. Estranova'nın "akıcı paragraf yoğun" yazarlarından (Berna, Senai) ayırt edici özelliği — Duygu listeyi sevmiş bir dergi yazarıdır.
+- **Bold kategori başlığı + iki nokta + kısa açıklama** kalıbı — teknik/kimyasal isim listelemede (örn. *"Hydrogen Peroxide: Beyazlatıcı ürünlerde de bulunan en önemli beyazlatıcı maddedir."*); Estranova'da Türkçe karşılık eşliğinde uygulanır.
+- **3-bölüm yapısı (alternatif olarak Belirti/Neden/Önlem 4-parçalı):**
   1. Tablo tanımı (ağız değişimi, lamina kararı, kuru ağız vb.)
   2. Mekanizma haritası (hormon / kemik / mukoza / oklüzyon)
   3. Karar zinciri (kişiselleştirme + hekim-hasta iletişimi + uzun vadeli takip)
+  - *VID dergi imzası varyasyonu:* 4-parçalı (Belirtiler → Nedenler → Önlemler → Tedavi) — bilgi-yoğun konularda tercih.
 - **Klinik-pratik gündelik ton** (Elif'in akademik-lider tonundan farklı).
 - **Akademik birikim arka planda** — gövdede "Yönetim Kurulu Üyesi olarak" çıkış YASAK.
+
+### Başlık tipi imzası (VID korpus rafine)
+
+- **Soru-tabanlı başlık** (HARD): *"Diş Macunlarının İçinde Neler Var?"* / *"Postmenopozda Ağzımıza Ne Oluyor?"* — Estranova'da bu tip Duygu imzasıdır (diğer Estranova yazarları çoğunlukla cümleli/tireli/yeniden çerçeveleyen başlık kullanır).
+- **Konu + parantez içi Latince/teknik terim:** *"Ağız Kuruluğu (Xerostomia)"* / *"Dişeti Çekilmesi (Gingival Recession)"* — okuyucuya hem Türkçe hem klinik terim verme tipi.
+- **Sade isim:** *"Dişeti Çekilmeleri"* / *"Bruksizm"* — kısa, doğrudan, dergi köşe yazısı havası.
+
+### Açılış kalıpları (VID korpus rafine)
+
+- **Durum tanımı + mekanizma cümlesi** (Xerostomia tipi): *"Ağız kuruluğu, tükürük bezlerinin salgılama fonksiyonlarının, çeşitli nedenlerle azalması ile oluşur."*
+- **Okuyucu-yönelimli kontrollü espri** (Diş Macunları tipi): *"X etiketlerine göz attığınızda, bir şeyler anlamak için biokimya uzmanı olmanız gerektiğini düşünebilirsiniz."*
+- **Genel önem + yaygınlık çerçevesi** (Dişeti tipi): *"Düzgün, pembe ve sağlıklı dişetleri güzel bir gülüş için çok önemlidir. Dişeti çekilmeleri ise toplumda en sık karşılaşılan şikâyetlerden biridir."*
+- **Didaktik tip ayrımı açılışı:** *"Genel olarak X tip Y'den bahsedebiliriz."*
+- **Hormon-ağız bağı pratik açılışı (Estranova özel):** *"Menopoz dönemine geçişte ağız ve diş sağlığında ortaya çıkan değişimler, çoğu zaman ayrı düşünülen ama hormonal geçişle doğrudan bağı olan bir alandır."*
+
+### Kontrollü espri kuralı (VID korpus rafine)
+
+- VID dergisinde Duygu hafif ironik, eğitici çerçevede espri yapar (*"Tüm bunları ağzınıza sokmak istediğinize emin misiniz?"*).
+- Estranova'da bu izin **kontrollü** — her makalede max 1 cümle; influencer mucize dilinden uzak, didaktik espri.
+- Tipik kalıp: okuyucuya yönelmiş retorik soru + hafif şaşırtıcı bilgi + sonra ciddi açıklama.
+- YASAK: alay, küçümseme, mucize dili.
 
 ### Cümle ritmi
 
