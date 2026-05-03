@@ -8,10 +8,18 @@ url: /hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["hormon tedavisi", "HRT", "MHT", "menopoz", "östrojen", "progesteron", "sıcak basması", "karar verme"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?
+
+## Kısa Özet
+
+Hormon tedavisi — ya da sıkça duyduğunuz adıyla HRT — menopozal belirtiler için en etkili seçeneklerden biri.
+Ancak "almalı mıyım, almamalı mıyım" sorusunun tek bir doğru cevabı yok. Yaşınız, son adetinizden bu yana geçen süre,
+hangi belirtilerin hayatınızı zorladığı, kişisel sağlık geçmişiniz — hepsi birlikte değerlendirilir.
+Bu yazı size doğrudan bir öneri vermez; karar sürecinde neye baktığımızı, doktorunuzla hangi soruları
+konuşmak istediğinizi biraz daha netleştirmeye çalışır.
 
 ## Karar Değil, Konuşma
 
@@ -191,3 +199,27 @@ kişisel ve zaman içinde ayarlanabilir bir plan.
 Ben kendi kararıma yıllar süren bir konuşmanın sonunda geldim; karar kendi kararımdı, sorumluluğu da kendime
 ait. Belki şu soru yardımcı olur: bu kararı kendim mi veriyorum, yoksa başkasının korkusunu mu taşıyorum?
 Beden bir soru sormuştu; sen kendi yolundan cevap veriyorsun.
+
+Bilimsel Editör Notu
+
+Menopozal hormon tedavisi, östrojen eksikliğinin yarattığı vazomotor belirtileri, ürogenital atrofiyi ve
+kemik sağlığı kayıplarını hedefleyen onaylı bir tedavi seçeneğidir. Endikasyonlar ve rejim seçimi, semptom
+şiddeti ile bireysel risk profilinin birlikte değerlendirilmesini gerektirir.
+
+Kanıt temeli sağlamdır; 60 yaş altı ve menopozdan sonraki ilk on yıl içinde başlatılan tedavide fayda-risk
+dengesi büyük çoğunluk için olumlu seyreder. Yaş ilerledikçe ya da süre uzadıkça tablo kişiselleşir ve
+hekim takibi daha titiz tutulmalıdır.
+
+Östrojen yolu (oral vs transdermal), progestin tipi, doz ve süre kişisel öyküye göre titrize edilir; tedavi
+başlangıcından sonra yıllık fayda-risk değerlendirmesi önerilir. Geçmiş meme kanseri, aktif venöz
+tromboembolizm öyküsü, tanı konmamış vajinal kanama ve aktif karaciğer hastalığı sistemik tedavi için
+mutlak veya göreli kontrendikasyon oluşturur.
+
+Düzenleyici onayı olmayan, eczacı karışımı veya tükürük testlerine dayandırılan "kişiye özel" formülasyonların
+güvenlik ve etkinlik verisi yetersizdir; standart dozlu, onaylı preparatlarla yönetilen tedavi tercih edilmelidir.
+Hormon tedavisi kullanmayan kadınlar için yaşam tarzı, bilişsel davranışçı terapi ve hormonsuz ilaç
+seçenekleri kanıtlı alternatifler arasındadır.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

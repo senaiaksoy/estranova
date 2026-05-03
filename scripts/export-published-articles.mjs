@@ -136,10 +136,37 @@ function parseFrontmatter(astroSource) {
 }
 
 function extractArticleBodyFromHtml(html) {
-  // ArticleProsePanel render edildiğinde "prose prose-lg prose-estranova" sınıflı bir div oluşur.
+  // Estranova makalesinde 4 ana bölüm var; sırasıyla extract edilir:
+  //   1. Kısa Özet (gold gradient kart) — "from-white to-cream-soft" class
+  //   2. ArticleProsePanel ana gövde — "prose-estranova" class (RedFlagBox dahil)
+  //   3. Bilimsel Editör Notu (gold border-left) — "border-l-gold" class
+  //   4. Disclaimer (dashed border) — "border-dashed" class
+  // Bulunanlar sıraya göre birleştirilir; eksik olanlar atlanır.
+
+  const parts = [];
+
+  // 1. Kısa Özet
+  const ozetRe = /<section\s+class="[^"]*from-white\s+to-cream-soft[^"]*"[^>]*>([\s\S]*?)<\/section>/;
+  const ozetMatch = html.match(ozetRe);
+  if (ozetMatch) parts.push(ozetMatch[0]);
+
+  // 2. ArticleProsePanel render edildiğinde "prose prose-lg prose-estranova" sınıflı bir div oluşur.
   const proseRe = /<div\s+class="[^"]*prose-estranova[^"]*"[^>]*>([\s\S]*?)<\/div>\s*<\/section>/;
-  const m = html.match(proseRe);
-  if (m) return m[1];
+  const proseMatch = html.match(proseRe);
+  if (proseMatch) parts.push(proseMatch[0]);
+
+  // 3. Bilimsel Editör Notu (border-l-gold gold accent kart)
+  const benRe = /<section\s+class="[^"]*border-l-gold[^"]*"[^>]*>([\s\S]*?)<\/section>/;
+  const benMatch = html.match(benRe);
+  if (benMatch) parts.push(benMatch[0]);
+
+  // 4. Disclaimer (border-dashed kart)
+  const dscRe = /<section\s+class="[^"]*border-dashed[^"]*"[^>]*>([\s\S]*?)<\/section>/;
+  const dscMatch = html.match(dscRe);
+  if (dscMatch) parts.push(dscMatch[0]);
+
+  if (parts.length > 0) return parts.join('\n\n');
+
   // Fallback: <main id="main-content"> içi (gürültülü ama içerik yine yakalanır)
   const mainRe = /<main\s+id="main-content"[^>]*>([\s\S]*?)<\/main>/;
   const m2 = html.match(mainRe);

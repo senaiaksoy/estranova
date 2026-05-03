@@ -8,10 +8,17 @@ url: /hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["menopoza hazırlık", "koruyucu sağlık", "sağlık kayıtları", "semptom günlüğü", "tarama testleri", "vital göstergeler", "aile öyküsü"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?
+
+## Kısa Özet
+
+Menopoza hazırlık dönemi bence en değerli aralıklardan biri: kadının bedeninde büyük değişimler
+kapıda olsa da göstergeler hâlâ ölçülebilir. Okudukça şunu anladım — tansiyon, kilo, lipid profili
+gibi temel ölçümleri bugünden düzenli kaydetmek; ileride neyin "yeni" neyin "kişisel normalim"
+olduğunu ayırt etmeyi kolaylaştırıyor. Amaç hastalık aramak değil; kendi referans hattını kurmak.
 
 ## Neden Bu Evrede Kayıt?
 
@@ -114,3 +121,30 @@ kişiselleştirilmiş bir takvim oluşturmak en doğrusu.
 "Tarama" ile "tanı" arasındaki farkı hatırlamak da değerli: tarama bir bulgu görse bile sonraki adım her
 zaman tanı koymak değil, ek değerlendirme. Bu yüzden tarama sonuçlarını okurken aceleci yorum yerine
 hekimle birlikte değerlendirmek temel ilke.
+
+Bilimsel Editör Notu
+
+Menopoza hazırlık dönemi (perimenopoz öncesi 40+ yaşları), koruyucu sağlık çerçevesinin sistematik
+biçimde kurulması için klinik açıdan değerli bir aralıktır. Östrojen düşüşü öncesinde bireysel
+referans değerlerinin kayıt altına alınması, geçiş ve sonrası dönemde gözlenen değişikliklerin
+patolojik mi yoksa fizyolojik mi olduğunu ayırt etmeyi kolaylaştırır.
+
+Düzenli olarak izlenmesi önerilen başlıca parametreler arasında kan basıncı, kilo ve bel çevresi,
+lipid profili (toplam kolesterol, LDL, HDL, trigliserid), açlık glukozu ve HbA1c, tiroid fonksiyonları
+(TSH), tam kan sayımı ile D vitamini düzeyi yer alır. Karaciğer fonksiyonları, ferritin ve B12 ise
+klinik tabloya göre değerlendirilir.
+
+Tek bir ölçüm değerinden çok, aynı koşullarda alınan ölçümlerin zaman içindeki seyri (eğri) klinik
+olarak bilgilendiricidir. Vital göstergelerin yıllık ortalamalarının ve lab değerlerinin
+longitudinal trendlerinin izlenmesi, bireysel kardiyovasküler ve metabolik risk profilinin daha
+erken fark edilmesini sağlar.
+
+Ölçüm sıklığı, izlenecek parametre seti ve tarama testleri (mamografi, jinekolojik kontrol, kemik
+mineral yoğunluğu, kolon taraması) bireyin yaşı, aile öyküsü, mevcut sağlık durumu ve ulusal
+rehberlere göre kişiselleştirilmelidir. Bu yazıdaki gözlemler genel bir bilgilendirme amacı taşır;
+kişisel ölçüm ve değerlendirme planı her zaman hekimle birlikte oluşturulur.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık
+kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.

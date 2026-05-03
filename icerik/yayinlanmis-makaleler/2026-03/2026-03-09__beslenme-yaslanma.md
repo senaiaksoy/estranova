@@ -8,10 +8,18 @@ url: /zamansiz-yasam/beslenme-yaslanma
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "beslenme", "protein", "kalsiyum", "omega-3", "anti-inflamatuar"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi
+
+## Kısa Özet
+
+40 sonrasında ve menopoz geçişinde, eski beslenme alışkanlıklarının aynı sonucu vermediğini çoğu
+kadın yaşıyor; bunu çevremde de, kendi mutfağımda da farklı biçimlerde duyuyorum. Okudukça şunu
+anladım: amaç katı bir plan değil, vücudun yeni ritmini sade ve bilinçli seçimlerle desteklemek.
+Protein, B vitaminleri, omega-3 yağlar ve antioksidanlar bu dönemde tabakta biraz daha bilinçli yer
+açtığım başlıklar oldu.
 
 ## 40+ Yaşta Beslenme Neden Değişir?
 
@@ -224,3 +232,28 @@ telefonu uzaklaştırmak. Bunların hiçbiri kahramanlık değil; kendine ayrıl
 Belki şu soru yardımcı olur: bu hafta tabağa hangi rengi yargılamadan, sadece ekleme niyetiyle
 koyabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen
 tabağa o cümlenin cevabını koyuyorsun.
+
+Bilimsel Editör Notu
+
+40 sonrası ve menopoz geçişindeki beslenme stratejisi, bazal metabolizma yavaşlaması, sarkopenik
+eğilim, östrojen düşüşüne bağlı yağ dağılımı kayması ve mikro besin emilim dinamiklerindeki
+değişimler birlikte değerlendirilerek kurulur. Tek bir diyet modeli evrensel doğru değildir;
+mekanizma çoklu eksenlidir.
+
+Akdeniz tipi çerçeve, kardiyovasküler sağlık, kemik koruma ve nörobilişsel parametreler üzerinde en
+tutarlı kanıt seviyesine sahip yaklaşımdır. Yeterli protein alımı (1.0-1.2 g/kg/gün), kaliteli yağ
+asidi profili (omega-3 dengesi), tam tahıl ve sebze ağırlıklı lif tüketimi temel sütunlardır.
+
+D vitamini, B12 (50+ yaş emilim azalması nedeniyle), kalsiyum ve magnezyum öncelikli mikro besin
+başlıkları arasındadır. Takviye kararı kan tetkikleri ve klinik tabloya göre kişiselleştirilir;
+"raf alışkanlığı" yerine eksiklik temelli destek tercih edilmelidir.
+
+Kronik hastalık (tip 2 diyabet, hipertansiyon, hipotiroidi vb.), ilaç etkileşimleri, sindirim
+sistemi başlıkları ve gıda intoleransları olan kadınlarda planın bir hekim ve/veya diyetisyen
+eşliğinde kişiselleştirilmesi en güvenli yoldur. Aralıklı oruç gibi popüler yaklaşımların menopoz
+spesifik kanıt seviyesi sınırlıdır; bireysel değerlendirme önerilir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
+kendi hekiminizle birlikte değerlendirme yapınız.

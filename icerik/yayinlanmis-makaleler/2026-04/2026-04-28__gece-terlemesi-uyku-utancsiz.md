@@ -8,10 +8,17 @@ url: /zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["gece terlemesi", "menopoz", "uyku", "sıcak basması", "mahrem sağlık", "çarşaf", "yatak takımı"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Gece Terlemesi ve Uyku: Utançsız Bir Bakış
+
+## Kısa Özet
+
+Gece yarısı sırılsıklam uyanmak, sessizce çarşafı değiştirmek, partneri uyandırmamak için nefesini
+tutmak. Bu hepimizin yaşadığı bir an, ama nedense kapı arkasında bile zor konuşulan bir yan var. Bu yazı
+sana bir şey öğretmeye değil, tanıdık bir sahneyi yargısızca anlatmaya geldi: ne oluyor, neden bu kadar
+zor, ve geceyi biraz daha hafif geçirmek için ne deneyebilirsin.
 
 ## O An — Hepimizin Yaşadığı
 
@@ -140,3 +147,13 @@ terlemesinin "uyandırıcı" yanını gerçekten yumuşatabiliyor. Çok pahalı 
 yapmadan önce, ucuz bir soğutucu jel yastık kılıfı veya bambu örtü ile bir-iki hafta denemek mantıklı.
 Eğer fark hissetmiyorsan, asıl odağı yatak takımı kumaşına, oda ısısına ve akşam alışkanlıklarına vermek
 genellikle daha kalıcı bir rahatlama sağlıyor.
+
+Bilimsel Editör Notu
+
+Gece terlemesi, perimenopoz ve menopozda yaygın bir vazomotor belirti. Yatak odası düzenlemeleri ve akşam
+alışkanlıkları çoğu kadında geceyi belirgin biçimde hafifletebilir; sıklığı yüksek ve gündüz işlevini
+etkileyen tablolarda hekim değerlendirmesi anlamlıdır. Hormon temelli ve hormonal olmayan seçenekler
+birey bazında, hekimle birlikte planlanmalıdır.
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları
+için sağlık profesyoneline başvurunuz.

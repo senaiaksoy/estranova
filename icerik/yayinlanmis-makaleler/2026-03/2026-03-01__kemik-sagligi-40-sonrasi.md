@@ -8,10 +8,16 @@ url: /zamansiz-yasam/kemik-sagligi-40-sonrasi
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["kemik sağlığı", "osteoporoz", "menopoz", "kalsiyum", "direnç egzersizi", "D vitamini"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # 40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber
+
+## Kısa Özet
+
+Östrojen düşüşü ile kemik yoğunluğu zamanla azalabilir ve 40+ kadınlarda osteoporoz riski artış gösterebilir.
+Düzenli tarama, beslenme desteği ve planlı hareket kemik kaybını yavaşlatmada önemli rol oynar.
+Erken ve sakin bir plan, ileri yaşta kırık riskini azaltmanın temel adımıdır.
 
 ## Neden Kemik Sağlığı Önemlidir?
 
@@ -135,3 +141,29 @@ etrafında kişiselleşir.
 Belki şu soru yardımcı olur: bu yıl yapımı destekleyecek hangi tek alışkanlığı yargılamadan, sadece
 yerleştirmek niyetiyle ekleyebilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir
 cümle söylemişti; sen onu kendi yapına yazıyorsun.
+
+Bilimsel Editör Notu
+
+Kemik sağlığı, östrojen düşüşünün hızlandırdığı bir kayıp eğrisi üzerinden okunan, 40 sonrası
+kadınlar için klinik olarak öncelikli bir alandır. Yaşa bağlı kemik döngüsündeki yıkım-yapım
+dengesizliği menopoz geçişinde belirginleşir; postmenopozun ilk 5-10 yılında kayıp eğrisi en
+dik seyrini izleyebilir.
+
+DEXA (DXA) ölçümü, kemik mineral yoğunluğunun tanı çerçevesinde standart yöntemidir; T-skoru
+-1 ile -2.5 arası osteopeni, -2.5 ve altı osteoporoz olarak sınıflandırılır. Tarama zamanlaması
+ulusal kılavuzlarda 65 yaş sonrası rutin önerilirken, erken menopoz, aile öyküsü, uzun süreli
+kortikosteroid kullanımı ve düşük travma kırığı öyküsü daha erken tarama gerektirebilir.
+
+Beslenme desteğinde günlük kalsiyum hedefi 1000-1200 mg, D vitamini düzeyi serum 25(OH)D ölçümü
+ile bireyselleştirilir; protein alımı 1.0-1.2 g/kg düzeyinde planlanır. Ağırlık taşıyan
+egzersizler, direnç antrenmanı ve denge çalışmaları kemik koruması ile düşme riski azaltımında
+birlikte etki sağlar.
+
+Tıbbi seçenekler (HRT, bifosfonatlar, SERM, denosumab gibi anti-rezorptif ajanlar) yaş, kırık
+öyküsü, kemik mineral yoğunluğu, eşlik eden hastalıklar ve kişisel risk-fayda dengesinde
+değerlendirilir. Bu yazıdaki bilgiler genel bir bilgilendirme amacı taşır; tarama zamanlaması,
+takviye dozajı ve tedavi kararı kişisel sağlık geçmişi ile birlikte hekim tarafından verilmelidir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

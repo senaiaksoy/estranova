@@ -8,10 +8,18 @@ url: /hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["sıcak basması", "gece terlemesi", "menopoz", "perimenopoz", "uyku", "tetikleyiciler"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi
+
+## Kısa Özet
+
+Sıcak basması ve gece terlemesi bu dönemin en çok duyulan başlıklarından biri. "Birden ısınıyorum,
+sonra üşüyorum" cümlesini çevremdeki kadınlardan defalarca duydum. Okudukça anladığım şu: bu belirtiler
+"yalnızca stres" değil; bedenin ısı düzenleme sistemi ile hormon dalgalanmasının birlikte yazdığı
+biyolojik bir denklem. İyi haber şu — birkaç sade adım ve gerektiğinde kişiye uygun tıbbi seçeneklerle
+çoğu kadında şiddet ve sıklık belirgin biçimde yumuşayabiliyor.
 
 ## Vazomotor Belirtiler Aslında Ne?
 
@@ -221,3 +229,31 @@ geniş.
 Belki şu soru yardımcı olur: bu hafta gecemde yargılamadan, sadece kayıt etmek niyetiyle hangi tek
 değişikliği yapabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti;
 sen onu gecenin içinde dinliyorsun.
+
+Bilimsel Editör Notu
+
+Vazomotor belirtiler (sıcak basması ve gece terlemesi) menopoz geçişinin en sık karşılaşılan biyolojik
+imzasıdır. Östrojen dalgalanması beynin termoregülasyon merkezindeki (hipotalamik termal nötr zon)
+duyarlılığı değiştirir; vücut küçük ısı değişimlerini "fazla ısı" olarak okuyarak vazodilatasyon ve
+terleme refleksiyle hızlı serinlemeye geçer.
+
+Klinik kanıt vazomotor belirtilerin perimenopozda başlayıp menopoz sonrası yıllarda hafiflediğini
+ortaya koyuyor; ancak süre kişiden kişiye geniş bir yelpazeye yayılıyor — bazı kadınlarda birkaç yıl,
+bazılarında on yılı aşan bir seyir mümkün.
+
+Yaşam tarzı stratejileri (uyku ortamı serinliği, ince katmanlı giyim, alkol-baharat-sıcak tetikleyici
+farkındalığı, dakikada altı nefes ritmi, düzenli hareket, sigaranın bırakılması) belirti şiddetinde
+ölçülebilir azalma sağlayabilir; etki çoğu zaman tek bir hamleden değil, sade adımların tutarlı
+kombinasyonundan gelir.
+
+Tıbbi seçenekler kişiselleştirilir: HRT uygun adaylarda en etkili seçenek olarak öne çıkar; hormon
+dışı yollar (düşük doz paroksetin, venlafaksin, gabapentin, yeni nesil moleküller) HRT alamayan ya da
+almak istemeyen kadınlarda anlamlı yarar sağlayabilir. Yıllar sonra hâlâ yaşam kalitesini bozan
+belirtiler "katlanılan bir tablo" değil, yeniden değerlendirme anıdır. Açıklanamayan kilo kaybı,
+ateş, çarpıntı veya tiroid bulgu birlikteliği menopoz çerçevesinin dışına işaret eder ve gecikmeden
+değerlendirilmelidir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi
+hekiminizle birlikte değerlendirme yapınız.

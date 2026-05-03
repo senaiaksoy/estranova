@@ -8,10 +8,19 @@ url: /hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["menopoz", "vücut kompozisyonu", "kas kaybı", "viseral yağ", "tartı", "BMI sınırlılığı", "menopozda kilo", "kompozisyon değişimi", "östrojen düşüşü", "direnç antrenmanı", "protein"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması
+
+## Kısa Özet
+
+Bir noktada şunu fark ettim — bedenle ilişkide tartının yetmediği bir nokta var. Sayı uzun zamandır
+pek değişmeyen birçok kadın, bedenin değişmeye devam ettiğini söylüyor. Sayı yatışınca geriye kalan,
+ölçüye tam olarak gelmeyen bir kayış: kas yavaşça azalıyor, yağ farklı bir yere yerleşmeye başlıyor.
+Bu yazı bir reçete değil; tartının yetmediği noktada nereye bakılacağına dair sakin bir gözlem.
+Menopoz fizyolojisinin kompozisyon üzerindeki etkisi, annemin kuşağından kızımınkine geçişte orta
+kuşağın yeri — sırasıyla bunlara bakmaya çalışıyorum.
 
 ## Tartının yatıştığı yer — bir sayının yerine başka bir hikâye geçiyor
 
@@ -195,3 +204,37 @@ Belki şu soru yardımcı olur: bu altı ayda tartı dışında neyi yargılamad
 niyetiyle gözlemleyebilirim? Bir pantolonun düşüşü, bir merdivenin sonunda nefesin tonu, sabah
 kalkarken belin nasıl açıldığı. Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle
 söylemişti; sen onu kendi duruşundan okuyorsun.
+
+Bilimsel Editör Notu
+
+Menopoz dönemindeki vücut kompozisyonu değişimi — kas kütlesinin yavaşça azalması (sarkopenik
+eğilim) ve yağın özellikle karın çevresine yeniden dağılması (visseral kayış) — östrojen düşüşünün
+yaş alma sürecine eklediği ayrı bir katmandır. Uzun dönemli kohort çalışmaları, bu kayışın yalnızca
+yaşa bağlı genel düşüşle açıklanamayacağını ortaya koymaktadır
+(iyi kanıt)
+.
+
+Vücut kütle endeksi (BMI) tek başına kompozisyonu yansıtmaz; aynı kilo değerinde belirgin biçimde
+farklı metabolik profilleri gizleyebilir. Özellikle visseral yağ oranı, kardiyovasküler ve metabolik
+risk değerlendirmesinde tartı veya BMI'den daha bilgilendiricidir
+(iyi kanıt)
+. Bu nedenle
+ölçüm aracı tek başına yeterli değil; kompozisyon ölçümleri (DEXA, bioimpedans vb.) ek bilgi sağlar.
+
+Düzenli direnç antrenmanının menopoz dönemindeki kadınlarda kas kütlesi koruması üzerinde anlamlı
+etkisi olduğu ve yeterli protein alımının kompozisyon korumasına katkı sağladığı yönündeki veriler
+giderek güçlenmektedir
+(iyi kanıt)
+. Antrenman tipi, sıklık ve yoğunluk bireysel ortopedik
+tabloya göre titrize edilir; protein hedefi ise böbrek fonksiyonu, mevcut hastalıklar ve ilaç
+kullanımıyla birlikte değerlendirilir.
+
+Ölçüm sıklığı, antrenman protokolü, beslenme planı ve kompozisyon takip yöntemi her bireyin sağlık
+geçmişine, mevcut tıbbi durumuna ve yaşam koşullarına göre kişiselleştirilmelidir. Bu yazıdaki
+gözlemler genel bir bilgilendirme amacı taşır; ölçüm sıklığında, antrenman tipinde ya da protein
+hedeflerinde belirgin değişiklik yapmadan önce mevcut sağlık durumu, ilaçlar ve laboratuvar
+değerleri hekimle birlikte gözden geçirilmelidir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

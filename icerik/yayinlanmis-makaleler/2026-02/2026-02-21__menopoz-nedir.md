@@ -8,10 +8,16 @@ url: /hormonal-gecis/menopoz/menopoz-nedir
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["menopoz", "menopoz geçişi", "FSH", "östrojen", "menopoz sonrası dönem", "hormonal geçiş"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Menopoz Nedir? - Temel Rehber
+
+## Kısa Özet
+
+Menopoz tek bir gün değil; son adetin 12 ay sonrasında geriye dönük netleşen bir eşik. Perimenopozun
+sonu, postmenopozun başlangıcı. Belirtiler çoğu kadında bu eşikte hafiflemeye başlar; ama sağlık
+gündemi yer değiştirir: kemik, kalp ve metabolik denge yeni başlıklar olarak öne çıkar.
 
 ## Menopoz Nedir?
 
@@ -105,3 +111,26 @@ ama bu belirsizlik aslında planı kişiselleştirmenin de zemini oluyor.
 En yararlı yaklaşım tek bir yöntem aramak yerine sürdürülebilir bir sağlık planı kurmak.
 Beslenme, direnç egzersizi, yürüyüş, uyku hijyeni ve stres yönetimi gibi temel alışkanlıklar uzun
 vadede güçlü bir koruma sağlar. Menopoz bu planın başlangıç noktası olabilir.
+
+Bilimsel Editör Notu
+
+Menopoz bir hastalık değil, yaşam döngüsünün doğal bir evresidir. Klinik tanım son adetin üzerinden
+12 ay geçmesiyle geriye dönük olarak konulur; perimenopoz, menopoz ve postmenopoz aşamaları
+biyolojik açıdan farklı dinamikler taşır.
+
+Hormonal değişim profili (FSH yükselişi, östrojen ve progesteron düşüşü) bu evrede sistematik olarak
+izlenir; tek bir hormon ölçümü tanı koymak için yeterli değildir, klinik bulgu ve yaş ile birlikte
+yorumlanır.
+
+Postmenopozun ilk yıllarında kemik kaybı görece hızlanabilir, kardiyovasküler risk parametrelerinde
+yaşa bağlı artış belirginleşir. Bu nedenle kemik mineral yoğunluğu, kan basıncı, lipid profili,
+glukoz dengesi ve bel çevresi gibi göstergeler düzenli izlem çerçevesinin parçasıdır.
+
+Önleyici sağlık yaklaşımı (yeterli protein, kalsiyum-D vitamini dengesi, direnç egzersizi, düzenli
+uyku, sosyal bağ, stres yönetimi) uzun vadeli iyi oluşun korunmasında en tutarlı etkiyi sağlayan
+çerçevedir. HRT ve diğer tıbbi seçenekler kişisel risk-fayda dengesinde değerlendirilir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
+kendi hekiminizle birlikte değerlendirme yapınız.

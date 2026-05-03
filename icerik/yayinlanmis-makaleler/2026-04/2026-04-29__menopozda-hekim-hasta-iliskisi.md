@@ -8,10 +8,20 @@ url: /hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["menopoz", "hekim seçimi", "hekim-hasta ilişkisi", "HRT", "paydaş karar verme", "shared decision making", "menopoz takibi", "hormon tedavisi", "jinekolog"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor
+
+## Kısa Özet
+
+Bu yazıyı yazmak benim için kolay değil. Eşim jinekolog ama beni takip eden hekim o değil — yakınlarını
+takip etmenin doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına devretti. Üstelik bu
+meslektaş aynı zamanda arkadaş çevremizden biri; bu yüzden ben bekleme salonunda da beklemiyorum. Bu çift
+ayrıcalık (eş hekim + arkadaş hekim) bana sıradan bir hastanın deneyimini içeriden bilmek imkânı bırakmıyor.
+O yüzden bu yazı bir cevap değil, kendime sorduğum bir soru: modern kadın menopoz takibinde hekiminden ne
+arıyor? Çevremdeki kadınların anlattıkları, dört farklı doktor profili ve üç kuşağın eşiği arasında durmaya
+çalışıyorum.
 
 ## Eskinin Hekim-Hasta Resmi — Otoritenin Tek Sesi
 
@@ -184,3 +194,28 @@ tanıması, ve bu pozisyona uyacak hekimle yıllar içinde olgunlaşacak bir ba�
 Belki şu soru yardımcı olur: bu hekimle bir yıl sonra hâlâ konuşmaya değer bulduğum bir şey kalır mı?
 Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen onu hekiminle masada
 açıyorsun.
+
+Bilimsel Editör Notu
+
+Hekim-hasta ilişkisinin niteliği, menopoz gibi uzun süreli hormonal takip gerektiren süreçlerde
+klinik kararların güvenli ve sürdürülebilir biçimde alınmasında belirleyici bir parametredir. İlişkinin
+sürekliliği, karşılıklı güven ve karar paylaşımı, tedaviye uyum ve yaşam kalitesi üzerinde ölçülebilir
+etki yaratmaktadır.
+
+Paydaş karar verme (shared decision-making) modeli, özellikle hormon replasman tedavisi gibi
+fayda-risk dengesinin kişiselleştirilmesi gereken alanlarda günümüz jinekoloji literatüründe
+tartışılan ve önerilen bir yaklaşımdır. Hasta tercihi, klinik kanıt ve hekim deneyiminin bir araya
+getirildiği bu modelde tedaviye uyum ve memnuniyet artmaktadır.
+
+Hekim seçimi ve takip stratejisi her bireyin sağlık geçmişine, kişisel beklentilerine ve yaşam
+koşullarına göre kişiselleştirilmelidir. Tek bir "doğru" hekim profili yoktur; hastanın kendi
+pozisyonunu tanıması ve bu pozisyona uyan tarzla uzun süreli bir takip kurabilmesi tercih edilen
+yoldur.
+
+Yakın aile bireylerinin tedavi edilmemesi yaygın bir meslek normudur; hekim-hasta ve aile-eş
+ilişkilerinin sınırlarını korumaya yönelik etik bir uygulamadır. Bu sınır ilişkilere mesafe değil,
+netlik kazandırır.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

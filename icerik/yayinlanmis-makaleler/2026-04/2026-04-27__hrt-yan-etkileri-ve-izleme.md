@@ -8,10 +8,18 @@ url: /hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["HRT", "hormon tedavisi yan etkileri", "meme hassasiyeti", "baş ağrısı", "kanama düzensizliği", "menopoz", "izleme takvimi", "3 aylık kontrol", "alarm belirtileri"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?
+
+## Kısa Özet
+
+Hormon tedavisine başladıktan sonraki ilk haftalarda meme hassasiyeti, hafif baş ağrısı, küçük bir
+ödem ya da kanama düzeninde dalgalanma yaşamak — birçok kadında bekleniyor. Çoğu bu belirti vücut
+yeni hormonal dengeye yerleşirken gelir, geçer. Ama hangi belirti yumuşak ve geçici, hangisi gecikmeden
+hekime götürülmesi gereken bir alarm? Bu yazı izleme takvimini birlikte kuruyor — yönlendirme yapmadan,
+dikkatli bir okuma çerçevesi sunarak.
 
 ## Tezgâhın Köşesindeki Defter
 
@@ -274,3 +282,30 @@ küçük bir alışkanlık var: haftada bir cümle.
 Belki şu soru yardımcı olur: bu hafta hangi belirtiyi yargılamadan, sadece kayıt etmek niyetiyle
 yazabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen onu
 deftere geçiriyorsun.
+
+Bilimsel Editör Notu
+
+Menopozal hormon tedavisinin ilk haftalarında görülen yumuşak yan etkiler (meme hassasiyeti, hafif
+ödem, gerilim tipi baş ağrısı, kanama düzensizliği) büyük çoğunlukla bedenin yeni hormonal dengeye
+yerleşme sürecinin parçasıdır. Endometrial uyum, sıvı dengesi ve vasküler tonus üzerindeki erken
+etkiler ilk üç–altı ayda dengelenmeye eğilimlidir.
+
+Klinik kanıt yumuşak yan etkilerin büyük kısmının üçüncü aya kadar belirgin biçimde gerilediğini,
+altıncı aya kadar kanama düzeninin yerleşmesinin beklendiğini ortaya koymaktadır. Bu süreçte
+tedavinin yargılanması yerine düzenli gözlem önerilir.
+
+Bireysel doz, form (oral / transdermal / vajinal) ve izlem kararları her zaman ilgili hekim
+tarafından klinik duruma göre verilir. İlk yıl üç aylık aralıklarla görüşme; sonraki yıllarda klinik
+tabloya göre altı ay–yıllık görüşme ve yıllık mamografi standart izlem çerçevesinin parçasıdır.
+
+Bacakta tek taraflı şişlik veya ısrarlı baldır ağrısı, göğüste yoğun ağrı, açıklanamayan nefes
+darlığı, ani görme bozukluğu, aurayla başlayan veya karakteri değişen şiddetli baş ağrısı,
+postmenopoz döneminde açıklanamayan kanama, memede yeni kitle ya da şiddetli karın ağrısı / sarılık
+tablosu gecikmeden değerlendirilmelidir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+Hormon tedavisi başlama, doz ayarlama, izleme ve sonlandırma kararları kendi hekiminle birlikte
+değerlendirilir. Beklenmedik belirti durumunda planlı kontrolden önce hekiminle iletişime geçmen
+güvenli tercihtir.

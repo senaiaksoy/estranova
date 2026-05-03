@@ -8,10 +8,16 @@ url: /beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["libido", "cinsel istek", "menopoz", "GSM", "lokal östrojen", "testosteron", "cinsel sağlık", "40+ kadın", "mahrem sağlık"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi
+
+## Editörden Kısa Bir Not
+
+Bu yazıyı yazmak için kimse gönüllü olmadı… Mahrem sayılan konuları yazmak çoğumuz için zor. Masaya
+ben oturdum — hekim kimliğimden değil, yıllardır kadın sağlığının içinde duran biri olarak. Tıbbi
+jargon yok, sadece konuşulması gereken bir konuyu komşu sıcaklığıyla anlatma çabası.
 
 ## Yalnız Değilsin
 
@@ -242,3 +248,18 @@ Cinsel sağlık yalnızca partnerli yaşam meselesi değil. Vajinal sağlık (ku
 yaşam kalitesini doğrudan etkiler; idrar yolu sağlığı ile yakından ilişkilidir. Kendinle olan beden
 farkındalığı ve özbakım bu dönemde önem kazanır. Yani evet — partnerden bağımsız olarak bu konu
 ilgilenmeye değer.
+
+Bilimsel Editör Notu
+
+Menopozda libido değişimi yaygındır ve genellikle çok-faktörlüdür: hormonal değişim, vajinal sağlık,
+uyku, ruh hâli, ilaç kullanımı ve ilişki dinamikleri eşzamanlı rol oynar. Lokal vajinal östrojen
+tedavisi vulvovajinal atrofiye bağlı belirtilerde etkili ve büyük ölçüde güvenli bir seçenektir; sistemik
+HRT, testosteron tedavisi (off-label) ve davranışsal yaklaşımlar bireysel değerlendirme sonrasında
+gündeme alınmalıdır. Antidepresan kullanan hastalarda libido tarafındaki değişim asla tek başına ilaç
+kesilmesinin gerekçesi değildir; alternatifler hekimle birlikte planlanır. Cinsel ilişkide ısrarlı ağrı,
+postmenopoz beklenmedik kanama veya tekrarlayan idrar yolu enfeksiyonları varlığında kadın hastalıkları
+uzmanına başvuru gecikmeden yapılmalıdır.
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+Tedavi seçenekleri, ilaç kullanımı veya cinsel sağlık ile ilgili kararlar için kendi hekiminle
+birlikte değerlendirme yapman önemlidir.

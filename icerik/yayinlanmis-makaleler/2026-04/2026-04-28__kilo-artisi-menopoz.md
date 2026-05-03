@@ -8,10 +8,18 @@ url: /zamansiz-yasam/kilo-artisi-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "kilo artışı", "östrojen", "visseral yağ", "bel çevresi", "sarkopeni", "kas kütlesi", "metabolizma", "insülin direnci", "protein", "direnç egzersizi", "40+ kadın"]
-exportedAt: 2026-05-02
+exportedAt: 2026-05-03
 ---
 
 # Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet
+
+## Kısa Özet
+
+Menopoz geçişinde kilo değişimi tek bir nedene bağlanamaz; östrojen düşüşüyle yağın bel çevresine
+kayması, kas kütlesinin sessizce erimesi, uyku ve stresin metabolizma üzerindeki etkisi aynı anda
+konuşur. Burada büyük bir diyet planı değil; bedenin ne yapmaya çalıştığını, kalori saymanın neden
+yetmediğini ve diyet kültürüne kapılmadan bu hafta denenebilecek sade adımları konuşacağız. Tartı
+tek başına bir karar vermez; bedenin tamamı konuşur.
 
 ## Neden Aynı Yaşamda Tartı Konuşmaya Başladı?
 
@@ -266,3 +274,15 @@ B12 düşükse takviye, magnezyum eksikliği uyku ve kas konforu için anlamlı 
 sonucuna göre planlanır. Protein tozu beslenmenin protein hedefine ulaşmakta zorlanan bir günde
 pratik olabilir; ama gerçek besinlerin yerini tutmuyor. Takviye planı hekim ya da diyetisyen
 değerlendirmesiyle kişiselleştiğinde anlam kazanıyor.
+
+Bilimsel Editör Notu
+
+Menopoz ilişkili kilo değişimi tek bir mekanizmaya bağlanamaz; östrojen düşüşüyle yağ dağılımının
+visseral alana kayması, sarkopeni, uyku-kortizol ekseni ve insülin duyarlılığındaki değişim birlikte
+değerlendirilir. Belirgin kalori kısıtlaması yerine protein temelli tabak yapısı, düzenli direnç
+çalışması, uyku korunumu ve stres yönetimi en tutarlı destek başlıkları arasında. Hızlı ve
+açıklanamayan kilo değişimleri, eşlik eden sistemik belirtiler ya da güçlü aile öyküsü varsa plan
+mutlaka hekim değerlendirmesi ile şekillendirilir.
+
+Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+Sağlık kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.
