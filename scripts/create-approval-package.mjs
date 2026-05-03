@@ -5,17 +5,27 @@
  * Üç dosya oluşturur:
  *   icerik/onay-bekleyen/<slug>/<YYYY-MM-DD>_<makale-slug>/
  *     kontrol-formu.html       templates/kontrol-formu.template.html'den render
+ *                              (--first-article ile kontrol-formu-uzun.template.html)
  *     makale-onizleme.html     templates/makale-onizleme.template.html'den render
  *     meta.json                templates/meta.template.json'dan render
  *
- * Kullanım:
- *   npm run author:send-for-approval -- --slug X --article /pathname [--days 7] [--site URL]
+ * Form tipleri (formType meta.json'da):
+ *   - 'standard' (default, ~5 dk, 7 alan): yazarın 2. ve sonraki makaleleri için
+ *   - 'first-article-style-refine' (~10 dk, 14 alan): yazarın ilk framework
+ *     makalesi için bir defaya mahsus stil rafine + onay hibridi. Bölüm 3
+ *     (5 stil öğesi) yanıtları profile dosyalarına işlenir.
  *
- * Örnek:
+ * Kullanım:
+ *   npm run author:send-for-approval -- --slug X --article /pathname [--days 7] [--site URL] [--first-article]
+ *
+ * Örnek (sonraki makaleler için standard form):
  *   npm run author:send-for-approval -- --slug bahar-ozeray \
- *       --article /zamansiz-yasam/eklem-agrisi-menopoz \
- *       --days 7 \
- *       --site https://estranova.com.tr
+ *       --article /zamansiz-yasam/eklem-agrisi-menopoz
+ *
+ * Örnek (yazarın İLK framework makalesi için 10 dk uzun stil rafine formu):
+ *   npm run author:send-for-approval -- --slug duygu-karaosmanoglu \
+ *       --article /hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz \
+ *       --first-article
  *
  * Detay: docs/AUTHOR-APPROVAL-WORKFLOW.md
  */
@@ -184,8 +194,14 @@ async function main() {
 
   const previewUrl = site.replace(/\/+$/, '') + article.pathname;
 
+  // Form tipi seçimi (--first-article bayrağı varsa uzun stil rafine template)
+  const isFirstArticle = !!args['first-article'];
+  const formTemplateName = isFirstArticle
+    ? 'kontrol-formu-uzun.template.html'
+    : 'kontrol-formu.template.html';
+
   // Template'leri yükle ve render et
-  const formTpl = await readFile(path.join(TEMPLATES_DIR, 'kontrol-formu.template.html'));
+  const formTpl = await readFile(path.join(TEMPLATES_DIR, formTemplateName));
   const previewTpl = await readFile(path.join(TEMPLATES_DIR, 'makale-onizleme.template.html'));
   const metaTpl = await readFile(path.join(TEMPLATES_DIR, 'meta.template.json'));
 
@@ -218,6 +234,9 @@ async function main() {
   console.log(`  ${C.dim}├─${C.reset} kontrol-formu.html ${C.dim}(yazara gönderilen form)${C.reset}`);
   console.log(`  ${C.dim}├─${C.reset} makale-onizleme.html ${C.dim}(landing)${C.reset}`);
   console.log(`  ${C.dim}└─${C.reset} meta.json ${C.dim}(durum: pending)${C.reset}\n`);
+
+  console.log(`${C.bold}Form tipi:${C.reset} ${isFirstArticle ? C.gold + 'uzun stil rafine (~10 dk, 14 alan)' + C.reset : C.dim + 'standart (~5 dk, 7 alan)' + C.reset}`);
+  console.log(`${C.dim}(template: ${formTemplateName})${C.reset}\n`);
 
   console.log(`${C.bold}Yazara iletilecek:${C.reset}`);
   console.log(`  ${C.gold}Önizleme:${C.reset}  file:///${path.join(packageDir, 'makale-onizleme.html').replace(/\\/g, '/')}`);

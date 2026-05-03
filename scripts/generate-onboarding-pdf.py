@@ -776,28 +776,36 @@ story.append(p(
     'mesafeyi gösteren <b>mercek</b>ler. Profile dosyalarınızda bunları korumak — '
     'yani ses imzanızı kayba uğratmadan AI taslağında yansıtmak — birinci hedefimiz.'))
 
-story.append(section_h3('İlk makale sonrası: bir defalık uzun stil kontrol listesi'))
+story.append(section_h3('İlk makale ile birlikte: 10 dakikalık stil rafine + onay formu'))
 story.append(p(
-    'İlk taslak makale sizinle paylaşıldıktan sonra <b>bir defaya mahsus uzun bir stil '
-    'kontrol formu</b> göndereceğiz. Normal onay formundan farklı olarak:'))
+    'İlk taslak makaleniz sizinle paylaşıldığında, normal kısa onay formundan biraz '
+    'daha kapsamlı bir form göndereceğiz — <b>bir defaya mahsus</b>, hem makale onayı '
+    'hem stil rafinesi bir arada. Bu form ilk turdaki yatırımdır; sonraki tüm '
+    'makaleleriniz boyunca tasarrufa dönüşür.'))
 story += bullets([
-    '<b>20-30 dakika</b> sürer (normal makale formu 5-10 dakika)',
+    '<b>~10 dakika</b> sürer (normal makale formu 5 dakika)',
     '<b>Tıklanabilir</b> formatta — tarayıcıda açılır, internet bağlantısı şart değil',
-    '50-60 maddeyi içerir: cümle ritmi, geçiş bağlaçları, sıfat sıklığı, metafor '
-    'tercihi, duygusal mesafe, terminoloji eğilimi, hitap formu vb.',
-    'Her madde için <b>3-5 örnek</b> sunulur; siz <i>"bu bana uyar / uymaz / bu daha '
-    'iyi"</i> şeklinde işaretlersiniz',
-    'Açık alanlar: kendi tercih ettiğiniz cümle/kalıp/ifadeleri ekleyebilirsiniz',
+    '<b>14 alan + karar</b> içerir, dört bölüme bölünmüş',
+    '<b>Bölüm 1 — Genel ses (5 likert):</b> sesi tanıma, dürüstlük, pazarlama hissi, '
+    'yapısal yoğunluk, kanıt seviyesi',
+    '<b>Bölüm 2 — Kritik kontrol (4 toggle):</b> Çift Rol, yasak ad, BEN ayrı blok, '
+    'hasta sızıntısı',
+    '<b>Bölüm 3 — Stil rafine (5 öğe, "Tam tarzım / Kısmen / Bana uymaz"):</b> '
+    'bullet yoğunluğu, başlık tipi, açılış kalıbı, bold kategori başlığı, kontrollü '
+    'espri seviyesi — her birinde örnek metinler',
+    '<b>Bölüm 4 — Açık yorum (textarea, opsiyonel, max 600 karakter)</b>',
+    '2 büyük buton: <b>✓ ONAYLIYORUM / ✏ DEĞİŞİKLİK İSTİYORUM</b>',
 ])
 story.append(Spacer(1, 0.2*cm))
 story.append(p(
-    'Bu liste sizin profil dosyalarınıza işlenir; sonraki makalelerde stil <b>belirgin '
-    'biçimde</b> size yaklaşır. Tek seferlik bir yatırım, kalıcı bir kazanç.'))
+    'Bölüm 3\'teki tercihleriniz <b>profil dosyalarınıza işlenir</b>; sonraki '
+    'makalelerde stil <b>belirgin biçimde</b> size yaklaşır. Tek seferlik bir yatırım, '
+    'kalıcı bir kazanç.'))
 
 story.append(section_h3('Her makale öncesi: 5 dakikalık onay formu'))
 story.append(p(
-    'İlk uzun listeden sonra her yeni makale için size <b>kısa bir onay formu</b> '
-    'gönderilir (Faz 5\'te detaylandırıldığı gibi):'))
+    'İlk makale sonrasındaki her yeni makale için size <b>kısa bir onay formu</b> '
+    'gönderilir:'))
 story += bullets([
     '3 likert + 3 toggle + 1 opsiyonel yorum',
     '2 büyük buton: <b>Onayla / Değişiklik İste</b>',

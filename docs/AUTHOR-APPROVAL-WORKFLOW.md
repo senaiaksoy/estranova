@@ -85,12 +85,33 @@ Editör (manuel olarak) yazara email atar:
 
 ### 4. Yazar formu doldurur
 
-`kontrol-formu.html` tarayıcıda açılır — **internet bağımlılığı yok**, tek başına çalışır:
+`kontrol-formu.html` tarayıcıda açılır — **internet bağımlılığı yok**, tek başına çalışır.
+
+İki form tipi vardır; AI agent makaleyi onaya gönderirken `--first-article` bayrağıyla seçim yapar:
+
+#### Standart form (~5 dk, 7 alan) — yazarın 2. ve sonraki makaleleri için
 
 - **Bölüm 1 — Genel Ses (3 likert 1-5):** Sesi tanıyor musunuz / Tabu konularda dürüst mü / Pazarlama hissi var mı?
-- **Bölüm 2 — Kritik Kontrol (3 yes/no):** Çift Rol disiplini korunmuş mu / Yasak kuruluş-marka adı geçiyor mu / Bilimsel Editör Notu yazar sesinden ayrı blok mu?
+- **Bölüm 2 — Kritik Kontrol (3 yes/no):** Çift Rol disiplini / Yasak ad / BEN ayrı blok mu?
 - **Bölüm 3 — Yorumunuz (opsiyonel textarea):** kısa not.
 - **Karar (2 büyük buton):** ✓ **ONAYLIYORUM** veya ✏ **DEĞİŞİKLİK İSTİYORUM**.
+
+#### Stil rafine + onay formu (~10 dk, 14 alan) — yazarın İLK framework makalesi için (bir defaya mahsus)
+
+- **Bölüm 1 — Genel ses (5 likert):** sesi tanıma + dürüstlük + pazarlama hissi + yapısal yoğunluk + kanıt seviyesi
+- **Bölüm 2 — Kritik kontrol (4 toggle):** Çift Rol + yasak ad + BEN ayrı blok + hasta sızıntısı
+- **Bölüm 3 — Stil rafine (5 öğe, "Tam tarzım / Kısmen / Bana uymaz"):**
+  - Bullet (madde) yoğunluğu
+  - Başlık tipi tercihi (tireli / soru / parantez içi terim / sade isim)
+  - Açılış kalıbı tercihi (durum / önem / didaktik / espri)
+  - Bold kategori başlığı + iki nokta kalıbı
+  - Kontrollü espri seviyesi
+- **Bölüm 4 — Açık yorum (textarea, max 600 karakter)**
+- **Karar:** ✓ ONAYLIYORUM / ✏ DEĞİŞİKLİK İSTİYORUM
+
+**Bölüm 3 yanıtları** profil dosyalarına işlenir (manuel editör adımı); sonraki makalelerde stil yazara belirgin biçimde yaklaşır.
+
+**JSON payload `formType` alanı:** `'standard'` veya `'first-article-style-refine'`. Editör email'de bu alana bakarak sürecin hangi tipte olduğunu anlar.
 
 ### 5. Form gönderilir
 
@@ -117,11 +138,12 @@ Email'i alan editör:
 
 Tüm placeholder'lar `{{ALL_CAPS_SNAKE}}` formatında. Script substitution yapar.
 
-| Template | Placeholder'lar |
-|---|---|
-| `templates/kontrol-formu.template.html` | `{{WRITER_NAME}}`, `{{WRITER_SLUG}}`, `{{ARTICLE_TITLE}}`, `{{ARTICLE_SLUG}}`, `{{PREVIEW_URL}}`, `{{SENT_DATE}}`, `{{DEADLINE_DATE}}`, `{{TARGET_EMAIL}}` |
-| `templates/makale-onizleme.template.html` | `{{WRITER_NAME}}`, `{{ARTICLE_TITLE}}`, `{{PREVIEW_URL}}`, `{{FORM_URL}}` (relative `./kontrol-formu.html`) |
-| `templates/meta.template.json` | Yukarıdakilerin yapısal versiyonu + `status` `createdAt` `deadline` |
+| Template | Form tipi | Placeholder'lar |
+|---|---|---|
+| `templates/kontrol-formu.template.html` | Standart (~5 dk) | `{{WRITER_NAME}}`, `{{WRITER_SLUG}}`, `{{ARTICLE_TITLE}}`, `{{ARTICLE_SLUG}}`, `{{PREVIEW_URL}}`, `{{SENT_DATE}}`, `{{DEADLINE_DATE}}`, `{{TARGET_EMAIL}}` |
+| `templates/kontrol-formu-uzun.template.html` | İlk makale stil rafine (~10 dk) | Aynı placeholder seti |
+| `templates/makale-onizleme.template.html` | — | `{{WRITER_NAME}}`, `{{ARTICLE_TITLE}}`, `{{PREVIEW_URL}}`, `{{FORM_URL}}` (relative `./kontrol-formu.html`) |
+| `templates/meta.template.json` | — | Yukarıdakilerin yapısal versiyonu + `status` `createdAt` `deadline` |
 
 ---
 

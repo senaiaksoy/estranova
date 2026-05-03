@@ -331,21 +331,30 @@ Estranova şu an **tasarım ve içerik aşamasındadır**. Aşağıdaki fazlar p
 
 Bu metinler bizim için sadece "veri" değil — yazınızdaki **doğal ritmi**, sevdiğiniz **bağlaçları**, kaçındığınız ifadeleri ve okuyucuyla kurduğunuz mesafeyi gösteren **mercek**ler. Profile dosyalarınızda bunları korumak — yani ses imzanızı kayba uğratmadan AI taslağında yansıtmak — birinci hedefimiz.
 
-### 11.2. İlk makale sonrası: bir defalık uzun stil kontrol listesi
+### 11.2. İlk makale ile birlikte: 10 dakikalık stil rafine + onay formu
 
-İlk taslak makale sizinle paylaşıldıktan sonra **bir defaya mahsus uzun bir stil kontrol formu** göndereceğiz. Normal onay formundan farklı olarak:
+İlk taslak makaleniz sizinle paylaşıldığında, normal kısa onay formundan biraz daha kapsamlı bir form göndereceğiz — **bir defaya mahsus**, hem makale onayı hem de stil rafinesi bir arada. Bu form ilk turdaki yatırımdır; sonraki tüm makaleleriniz boyunca tasarrufa dönüşür.
 
-- **20-30 dakika** sürer (normal makale formu 5-10 dakika)
+- **~10 dakika** sürer (normal makale formu 5 dakika)
 - **Tıklanabilir** formatta — tarayıcıda açılır, internet bağlantısı şart değil
-- 50-60 maddeyi içerir: cümle ritmi, geçiş bağlaçları, sıfat sıklığı, metafor tercihi, duygusal mesafe, terminoloji eğilimi, hitap formu vb.
-- Her madde için **3-5 örnek** sunulur; siz *"bu bana uyar / uymaz / bu daha iyi"* şeklinde işaretlersiniz
-- Açık alanlar: kendi tercih ettiğiniz cümle/kalıp/ifadeleri ekleyebilirsiniz
+- **14 alan + karar** içerir, dört bölüme bölünmüş:
+  - **Bölüm 1 — Genel ses (5 likert):** sesi tanıma, dürüstlük, pazarlama hissi, yapısal yoğunluk, kanıt seviyesi
+  - **Bölüm 2 — Kritik kontrol (4 toggle):** Çift Rol, yasak ad, BEN ayrı blok, hasta sızıntısı
+  - **Bölüm 3 — Stil rafine (5 öğe):** her birinde "Tam tarzım / Kısmen / Bana uymaz" seçenekleri ve **örnek metinler**:
+    - Bullet (madde) yoğunluğu
+    - Başlık tipi tercihi (tireli / soru / parantez içi terim / sade isim)
+    - Açılış kalıbı tercihi (durum / önem / didaktik / espri)
+    - Bold kategori başlığı + iki nokta kalıbı
+    - Kontrollü espri seviyesi
+  - **Bölüm 4 — Açık yorum (textarea, opsiyonel):** kendi tercih ettiğiniz cümle/kalıp/ifadeleri ekleyebilirsiniz; max 600 karakter
 
-Bu liste sizin profil dosyalarınıza işlenir; sonraki makalelerde stil **belirgin biçimde** size yaklaşır. Tek seferlik bir yatırım, kalıcı bir kazanç.
+- 2 büyük buton: ✓ **ONAYLIYORUM** veya ✏ **DEĞİŞİKLİK İSTİYORUM**
+
+Bölüm 3'teki tercihleriniz **profil dosyalarınıza işlenir**; sonraki makalelerde stil **belirgin biçimde** size yaklaşır. Tek seferlik bir yatırım, kalıcı bir kazanç.
 
 ### 11.3. Her makale öncesi: 5 dakikalık onay formu
 
-İlk uzun listeden sonra her yeni makale için size **kısa bir onay formu** gönderilir (yukarıda Faz 5'te detaylandırıldığı gibi):
+İlk makale sonrasındaki her yeni makale için size **kısa bir onay formu** gönderilir:
 
 - 3 likert + 3 toggle + 1 opsiyonel yorum
 - 2 büyük buton: **Onayla / Değişiklik İste**
