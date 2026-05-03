@@ -1,0 +1,18 @@
+{
+  "writer": {
+    "slug": "{{WRITER_SLUG}}",
+    "name": "{{WRITER_NAME}}"
+  },
+  "article": {
+    "slug": "{{ARTICLE_SLUG}}",
+    "title": "{{ARTICLE_TITLE}}",
+    "previewUrl": "{{PREVIEW_URL}}"
+  },
+  "package": {
+    "createdAt": "{{SENT_ISO}}",
+    "deadline": "{{DEADLINE_ISO}}",
+    "status": "pending",
+    "estimatedFormDuration": "10 dakika",
+    "targetEmail": "{{TARGET_EMAIL}}"
+  }
+}

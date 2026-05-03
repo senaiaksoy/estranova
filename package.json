@@ -16,6 +16,8 @@
     "articles:export": "node scripts/export-published-articles.mjs",
     "articles:status": "node scripts/list-article-approvals.mjs",
     "article:context": "node scripts/article-context-build.mjs",
+    "authors:init-folders": "node scripts/init-author-folders.mjs",
+    "author:send-for-approval": "node scripts/create-approval-package.mjs",
     "writers:lint": "node scripts/check-writer-profile-consistency.mjs",
     "encoding:check": "node scripts/check-encoding.mjs",
     "tokens:check": "node scripts/check-color-tokens.mjs",
