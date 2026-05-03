@@ -320,7 +320,97 @@ Estranova şu an **tasarım ve içerik aşamasındadır**. Aşağıdaki fazlar p
 
 ---
 
-## 11. Sıradaki Adım: Sizden Beklediğimiz
+## 11. Stil Olgunlaşması, AI-Assisted Publishing ve Telif Hakları
+
+### 11.1. Stil olgunlaşma yolculuğu
+
+Şu an web üzerinden ulaşabildiğimiz CV'niz ve kamuya açık yazılarınızdan **kısıtlı bir profil** oluşturduk. Bu profil, sizin gerçek üslubunuzun büyük olasılıkla **küçük bir kısmını** yansıtıyor. Geliştirmek için sizden iki tür katkı yararlı olur:
+
+- **Daha önce yayımlanmış yazılarınız** (köşe yazıları, dergi makaleleri, blog gönderileri, kitap parçaları)
+- **Sözel kayıtlarınız varsa transkriptler** (TV/radyo röportajları, podcast bölümleri, konferans konuşmaları)
+
+Bu metinler bizim için sadece "veri" değil — yazınızdaki **doğal ritmi**, sevdiğiniz **bağlaçları**, kaçındığınız ifadeleri ve okuyucuyla kurduğunuz mesafeyi gösteren **mercek**ler. Profile dosyalarınızda bunları korumak — yani ses imzanızı kayba uğratmadan AI taslağında yansıtmak — birinci hedefimiz.
+
+### 11.2. İlk makale sonrası: bir defalık uzun stil kontrol listesi
+
+İlk taslak makale sizinle paylaşıldıktan sonra **bir defaya mahsus uzun bir stil kontrol formu** göndereceğiz. Normal onay formundan farklı olarak:
+
+- **20-30 dakika** sürer (normal makale formu 5-10 dakika)
+- **Tıklanabilir** formatta — tarayıcıda açılır, internet bağlantısı şart değil
+- 50-60 maddeyi içerir: cümle ritmi, geçiş bağlaçları, sıfat sıklığı, metafor tercihi, duygusal mesafe, terminoloji eğilimi, hitap formu vb.
+- Her madde için **3-5 örnek** sunulur; siz *"bu bana uyar / uymaz / bu daha iyi"* şeklinde işaretlersiniz
+- Açık alanlar: kendi tercih ettiğiniz cümle/kalıp/ifadeleri ekleyebilirsiniz
+
+Bu liste sizin profil dosyalarınıza işlenir; sonraki makalelerde stil **belirgin biçimde** size yaklaşır. Tek seferlik bir yatırım, kalıcı bir kazanç.
+
+### 11.3. Her makale öncesi: 5 dakikalık onay formu
+
+İlk uzun listeden sonra her yeni makale için size **kısa bir onay formu** gönderilir (yukarıda Faz 5'te detaylandırıldığı gibi):
+
+- 3 likert + 3 toggle + 1 opsiyonel yorum
+- 2 büyük buton: **Onayla / Değişiklik İste**
+- 5 dakikadan kısa süre
+
+Her onay turunda profil dosyalarınız küçük bir miktar daha **rafine** olur — sıkça reddettiğiniz bir kalıp havuzdan çıkar, sıkça beğendiğiniz bir geçiş havuza girer. Bu **canlı bir öğrenme** süreci; üç-dört makale sonrasında AI taslakları size **giderek daha yakın** çıkmaya başlar.
+
+Hedefimiz — uzun vadede sizi **stil olarak tatmin eden**, kendi sesinizmiş gibi okunan ama AI desteğiyle hızlı üretilen bir yayın akışı.
+
+### 11.4. AI-Assisted Publishing — Modern Yayıncılık İlkelerine Uyum
+
+Estranova'nın AI destekli üretim akışı, dünya genelindeki **çağdaş yayıncılık standartlarıyla** uyumlu olarak tasarlanmıştır:
+
+- **Şeffaflık** — AI desteğiyle üretildiği gerçeği kullanıcıdan saklanmaz; editöryal politika sayfasında açıkça belirtilir
+- **İnsan editör doğrulaması** — AI'nın hiçbir çıktısı yazarın onayı olmadan yayınlanmaz
+- **Kanıt zinciri** — her bilimsel iddianın yanında kanıt seviyesi etiketi (Düzey 1-5) yer alır
+- **Yazarın yaratıcı katkısı** — yazar yalnızca onaylayan değil, **düzenleyen, reddeden, yeni cümle ekleyen** bir aktif rolde
+- **Tıbbi sorumluluk reddi** — her makalede standart disclaimer
+- **Halüsinasyon kontrolü** — AI'nın uydurabileceği klinik veri / kuruluş referansı / spesifik sayılar sistematik olarak yasak filtrelerden geçer
+
+Bu prensipler **Reuters Trust Principles**, **AP (Associated Press) AI guidelines** ve **EU AI Act 2024** ile genel hatlarıyla uyumludur. Estranova editöryal politika sayfası bu çerçeveyi okuyucuyla şeffaf biçimde paylaşır.
+
+### 11.5. Telif Hakları ve Yasal Çerçeve
+
+**Final yazının kullanım hakları tamamen size aittir.** Estranova, yazılarınızı yayınlama (mali) hakkını editöryal anlaşma kapsamında kullanır; ancak **manevi haklar** (yaratıcı sahiplik) yazara aittir ve devredilmez. Bu çerçeve aşağıdaki yasal kaynaklarla uyumludur:
+
+**Türkiye — 5846 Sayılı Fikir ve Sanat Eserleri Kanunu (FSEK)**
+
+- *Madde 1 / 8:* Eseri meydana getiren kişi eser sahibidir; eser sahipliği doğal olarak yazarın üzerindedir
+- *Madde 13-19:* Mali haklar (yayma, çoğaltma, işleme, temsil, umuma iletim) ve manevi haklar (kamuya sunma, ad belirtme, eserin bütünlüğünü koruma) eser sahibinindir
+- *Madde 48-52:* Mali haklar yazılı sözleşmeyle devredilir veya lisans verilir; **manevi haklar devredilemez**
+
+**Amerika Birleşik Devletleri — US Copyright Office (2023 Rehberi)**
+
+- Telif yalnızca **insan yaratıcı katkısıyla** oluşan eserlere verilir
+- AI tarafından üretilen ham metin tek başına telif haklarına konu **olmaz**
+- Ancak **önemli insan müdahalesi** (düzenleme, seçim, yeniden çerçeveleme, onay) ile oluşan eserler telifli sayılır
+- Estranova akışı bu *"substantial human authorship"* eşiğini fazlasıyla karşılar
+
+**Avrupa Birliği — EU AI Act (2024)**
+
+- AI sistemlerinde **şeffaflık yükümlülüğü** zorunludur — kullanıcıya AI çıktısı olduğu bilgisi verilir
+- AI tarafından üretilen veya değiştirilen içeriklerin **etiketlenmesi**
+- Yüksek riskli AI uygulamalarında insan denetimi şartı
+
+**Reuters Trust Principles — Yapay Zeka Yayın Kılavuzu**
+
+- AI çıktısı insan editör tarafından **doğrulanır**
+- Editöryal sorumluluk yine **insan tarafında** kalır
+- AI desteğinin varlığı kullanıcıya **açıkça belirtilir**
+- AI **yardımcıdır, yazarın yerini almaz**
+
+**Estranova için pratik anlamı**
+
+- Yazınızın **mali ve manevi hakları size aittir**
+- Estranova yayın hakkını editöryal anlaşma kapsamında kullanır
+- İsterseniz yazıyı **istediğiniz zaman** sitenin yayın listesinden çekebilirsiniz (yayından kaldırma talebi)
+- Yazıyı **başka bir yerde yayımlama hakkı size aittir** (köşe yazısı olarak gazete/dergi'ye verilebilir)
+- AI desteği şeffaf biçimde editöryal politika sayfasında belirtilir; sizin kişisel imzanız bu şeffaflığı bozmaz
+
+Yasal sorularınız için yayın yönetimimiz (Berna Aksoy) sizinle ayrı bir editöryal anlaşma metnini imzalamaya hazırdır.
+
+---
+
+## 12. Sıradaki Adım: Sizden Beklediğimiz
 
 Bu belgeyi okuduktan sonra üç olası yol vardır:
 
@@ -340,7 +430,7 @@ Hangi yol size daha uygunsa, **Doç. Dr. Senai Aksoy'a** kısaca iletmeniz yeter
 
 ---
 
-## 12. İletişim
+## 13. İletişim
 
 - **Bilimsel editör:** Doç. Dr. Senai Aksoy
 - **E-posta:** drsenaiaksoy@gmail.com

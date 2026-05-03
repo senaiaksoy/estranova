@@ -758,8 +758,168 @@ story.append(p(
 
 story.append(PageBreak())
 
-# --- 09. Sıradaki Adım + İletişim ---
-story += section_h2(9, 'Sıradaki Adım: Sizden Beklediğimiz')
+# --- 09. Stil Olgunlaşması, AI-Assisted Publishing ve Telif Hakları ---
+story += section_h2(9, 'Stil Olgunlaşması, AI-Assisted Publishing ve Telif Hakları')
+
+story.append(section_h3('Stil olgunlaşma yolculuğu'))
+story.append(p(
+    'Şu an web üzerinden ulaşabildiğimiz CV\'niz ve kamuya açık yazılarınızdan '
+    '<b>kısıtlı bir profil</b> oluşturduk. Bu profil, sizin gerçek üslubunuzun büyük '
+    'olasılıkla <b>küçük bir kısmını</b> yansıtıyor. Geliştirmek için sizden iki tür '
+    'katkı yararlı olur:'))
+story += bullets([
+    '<b>Daha önce yayımlanmış yazılarınız</b> (köşe yazıları, dergi makaleleri, blog '
+    'gönderileri, kitap parçaları)',
+    '<b>Sözel kayıtlarınız varsa transkriptler</b> (TV/radyo röportajları, podcast '
+    'bölümleri, konferans konuşmaları)',
+])
+story.append(Spacer(1, 0.2*cm))
+story.append(p(
+    'Bu metinler bizim için sadece "veri" değil — yazınızdaki <b>doğal ritmi</b>, '
+    'sevdiğiniz <b>bağlaçları</b>, kaçındığınız ifadeleri ve okuyucuyla kurduğunuz '
+    'mesafeyi gösteren <b>mercek</b>ler. Profile dosyalarınızda bunları korumak — '
+    'yani ses imzanızı kayba uğratmadan AI taslağında yansıtmak — birinci hedefimiz.'))
+
+story.append(section_h3('İlk makale sonrası: bir defalık uzun stil kontrol listesi'))
+story.append(p(
+    'İlk taslak makale sizinle paylaşıldıktan sonra <b>bir defaya mahsus uzun bir stil '
+    'kontrol formu</b> göndereceğiz. Normal onay formundan farklı olarak:'))
+story += bullets([
+    '<b>20-30 dakika</b> sürer (normal makale formu 5-10 dakika)',
+    '<b>Tıklanabilir</b> formatta — tarayıcıda açılır, internet bağlantısı şart değil',
+    '50-60 maddeyi içerir: cümle ritmi, geçiş bağlaçları, sıfat sıklığı, metafor '
+    'tercihi, duygusal mesafe, terminoloji eğilimi, hitap formu vb.',
+    'Her madde için <b>3-5 örnek</b> sunulur; siz <i>"bu bana uyar / uymaz / bu daha '
+    'iyi"</i> şeklinde işaretlersiniz',
+    'Açık alanlar: kendi tercih ettiğiniz cümle/kalıp/ifadeleri ekleyebilirsiniz',
+])
+story.append(Spacer(1, 0.2*cm))
+story.append(p(
+    'Bu liste sizin profil dosyalarınıza işlenir; sonraki makalelerde stil <b>belirgin '
+    'biçimde</b> size yaklaşır. Tek seferlik bir yatırım, kalıcı bir kazanç.'))
+
+story.append(section_h3('Her makale öncesi: 5 dakikalık onay formu'))
+story.append(p(
+    'İlk uzun listeden sonra her yeni makale için size <b>kısa bir onay formu</b> '
+    'gönderilir (Faz 5\'te detaylandırıldığı gibi):'))
+story += bullets([
+    '3 likert + 3 toggle + 1 opsiyonel yorum',
+    '2 büyük buton: <b>Onayla / Değişiklik İste</b>',
+    '5 dakikadan kısa süre',
+])
+story.append(Spacer(1, 0.2*cm))
+story.append(p(
+    'Her onay turunda profil dosyalarınız küçük bir miktar daha <b>rafine</b> olur — '
+    'sıkça reddettiğiniz bir kalıp havuzdan çıkar, sıkça beğendiğiniz bir geçiş havuza '
+    'girer. Bu <b>canlı bir öğrenme</b> süreci; üç-dört makale sonrasında AI taslakları '
+    'size <b>giderek daha yakın</b> çıkmaya başlar.'))
+story.append(p(
+    'Hedefimiz — uzun vadede sizi <b>stil olarak tatmin eden</b>, kendi sesinizmiş gibi '
+    'okunan ama AI desteğiyle hızlı üretilen bir yayın akışı.'))
+
+story.append(section_h3('AI-Assisted Publishing — Modern Yayıncılık İlkelerine Uyum'))
+story.append(p(
+    'Estranova\'nın AI destekli üretim akışı, dünya genelindeki <b>çağdaş yayıncılık '
+    'standartlarıyla</b> uyumlu olarak tasarlanmıştır:'))
+story += bullets([
+    '<b>Şeffaflık</b> — AI desteğiyle üretildiği gerçeği kullanıcıdan saklanmaz; '
+    'editöryal politika sayfasında açıkça belirtilir',
+    '<b>İnsan editör doğrulaması</b> — AI\'nın hiçbir çıktısı yazarın onayı olmadan '
+    'yayınlanmaz',
+    '<b>Kanıt zinciri</b> — her bilimsel iddianın yanında kanıt seviyesi etiketi '
+    '(Düzey 1-5) yer alır',
+    '<b>Yazarın yaratıcı katkısı</b> — yazar yalnızca onaylayan değil, <b>düzenleyen, '
+    'reddeden, yeni cümle ekleyen</b> bir aktif rolde',
+    '<b>Tıbbi sorumluluk reddi</b> — her makalede standart disclaimer',
+    '<b>Halüsinasyon kontrolü</b> — AI\'nın uydurabileceği klinik veri / kuruluş '
+    'referansı / spesifik sayılar sistematik olarak yasak filtrelerden geçer',
+])
+story.append(Spacer(1, 0.2*cm))
+story.append(p(
+    'Bu prensipler <b>Reuters Trust Principles</b>, <b>AP (Associated Press) AI '
+    'guidelines</b> ve <b>EU AI Act 2024</b> ile genel hatlarıyla uyumludur. Estranova '
+    'editöryal politika sayfası bu çerçeveyi okuyucuyla şeffaf biçimde paylaşır.'))
+
+story.append(section_h3('Telif Hakları ve Yasal Çerçeve'))
+story.append(p(
+    '<b>Final yazının kullanım hakları tamamen size aittir.</b> Estranova, yazılarınızı '
+    'yayınlama (mali) hakkını editöryal anlaşma kapsamında kullanır; ancak '
+    '<b>manevi haklar</b> (yaratıcı sahiplik) yazara aittir ve devredilmez. Bu çerçeve '
+    'aşağıdaki yasal kaynaklarla uyumludur:'))
+
+story.append(Spacer(1, 0.2*cm))
+story.append(Paragraph('<b>Türkiye — 5846 Sayılı Fikir ve Sanat Eserleri Kanunu (FSEK)</b>',
+                       style('LegalHeader', fontName='Calibri-Bold', fontSize=10.5,
+                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+story += bullets([
+    '<i>Madde 1 / 8:</i> Eseri meydana getiren kişi eser sahibidir; eser sahipliği '
+    'doğal olarak yazarın üzerindedir',
+    '<i>Madde 13-19:</i> Mali haklar (yayma, çoğaltma, işleme, temsil, umuma iletim) '
+    've manevi haklar (kamuya sunma, ad belirtme, eserin bütünlüğünü koruma) eser '
+    'sahibinindir',
+    '<i>Madde 48-52:</i> Mali haklar yazılı sözleşmeyle devredilir veya lisans '
+    'verilir; <b>manevi haklar devredilemez</b>',
+])
+
+story.append(Spacer(1, 0.2*cm))
+story.append(Paragraph('<b>Amerika Birleşik Devletleri — US Copyright Office (2023 Rehberi)</b>',
+                       style('LegalHeader2', fontName='Calibri-Bold', fontSize=10.5,
+                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+story += bullets([
+    'Telif yalnızca <b>insan yaratıcı katkısıyla</b> oluşan eserlere verilir',
+    'AI tarafından üretilen ham metin tek başına telif haklarına konu <b>olmaz</b>',
+    'Ancak <b>önemli insan müdahalesi</b> (düzenleme, seçim, yeniden çerçeveleme, '
+    'onay) ile oluşan eserler telifli sayılır',
+    'Estranova akışı bu <i>"substantial human authorship"</i> eşiğini fazlasıyla '
+    'karşılar',
+])
+
+story.append(Spacer(1, 0.2*cm))
+story.append(Paragraph('<b>Avrupa Birliği — EU AI Act (2024)</b>',
+                       style('LegalHeader3', fontName='Calibri-Bold', fontSize=10.5,
+                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+story += bullets([
+    'AI sistemlerinde <b>şeffaflık yükümlülüğü</b> zorunludur — kullanıcıya AI çıktısı '
+    'olduğu bilgisi verilir',
+    'AI tarafından üretilen veya değiştirilen içeriklerin <b>etiketlenmesi</b>',
+    'Yüksek riskli AI uygulamalarında insan denetimi şartı',
+])
+
+story.append(Spacer(1, 0.2*cm))
+story.append(Paragraph('<b>Reuters Trust Principles — Yapay Zeka Yayın Kılavuzu</b>',
+                       style('LegalHeader4', fontName='Calibri-Bold', fontSize=10.5,
+                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+story += bullets([
+    'AI çıktısı insan editör tarafından <b>doğrulanır</b>',
+    'Editöryal sorumluluk yine <b>insan tarafında</b> kalır',
+    'AI desteğinin varlığı kullanıcıya <b>açıkça belirtilir</b>',
+    'AI <b>yardımcıdır, yazarın yerini almaz</b>',
+])
+
+story.append(Spacer(1, 0.3*cm))
+story.append(Paragraph('<b>Estranova için pratik anlamı</b>',
+                       style('LegalHeader5', fontName='Calibri-Bold', fontSize=11,
+                             leading=15, textColor=BURGUNDY_DEEP, spaceBefore=8,
+                             spaceAfter=4)))
+story += bullets([
+    'Yazınızın <b>mali ve manevi hakları size aittir</b>',
+    'Estranova yayın hakkını editöryal anlaşma kapsamında kullanır',
+    'İsterseniz yazıyı <b>istediğiniz zaman</b> sitenin yayın listesinden çekebilirsiniz '
+    '(yayından kaldırma talebi)',
+    'Yazıyı <b>başka bir yerde yayımlama hakkı size aittir</b> (köşe yazısı olarak '
+    'gazete/dergi\'ye verilebilir)',
+    'AI desteği şeffaf biçimde editöryal politika sayfasında belirtilir; sizin kişisel '
+    'imzanız bu şeffaflığı bozmaz',
+])
+story.append(Spacer(1, 0.2*cm))
+story.append(p(
+    'Yasal sorularınız için yayın yönetimimiz (Berna Aksoy) sizinle ayrı bir editöryal '
+    'anlaşma metnini imzalamaya hazırdır.'))
+
+story.append(PageBreak())
+
+# --- 10. Sıradaki Adım + İletişim ---
+story += section_h2(10, 'Sıradaki Adım: Sizden Beklediğimiz')
 
 story.append(p('Bu belgeyi okuduktan sonra üç olası yol vardır:'))
 
