@@ -574,11 +574,11 @@ story += bullets([
     '<b>Standart disclaimer</b>',
 ])
 
-story.append(section_h3('Faz 5 — Yazar Onayı (10 Dakikalık Form)'))
+story.append(section_h3('Faz 5 — Yazar Onayı (5 Dakikalık Form)'))
 story.append(p('Taslak hazır olduğunda size <b>iki ek</b> ile bir e-posta gönderilir:'))
 story += numbered([
     '<b>Makale önizleme linki</b> — yazıyı tarayıcınızda okumanız için',
-    '<b>Tıklanabilir kontrol formu</b> — internet bağlantısı şart değil',
+    '<b>Tıklanabilir kontrol formu</b> — yaklaşık 5 dakika, internet bağlantısı şart değil',
 ])
 story.append(Spacer(1, 0.2*cm))
 story.append(p('Form üç kısımdan oluşur:'))
@@ -591,18 +591,30 @@ story += bullets([
 story.append(Spacer(1, 0.2*cm))
 story.append(p('Sonunda iki büyük buton:'))
 story += bullets([
-    '<font color="#6B2D3E"><b>✓ ONAYLIYORUM</b></font> → makale yayında',
-    '<font color="#6B2D3E"><b>✏ DEĞİŞİKLİK İSTİYORUM</b></font> → AI yorumla revizyon yapar',
+    '<font color="#6B2D3E"><b>✓ ONAYLIYORUM</b></font> → paket onaylanan klasörüne taşınır, yayın süreci başlar',
+    '<font color="#6B2D3E"><b>✏ DEĞİŞİKLİK İSTİYORUM</b></font> → AI yorumla revizyon yapar ve yeni 5 dakikalık form üretir',
 ])
 story.append(Spacer(1, 0.2*cm))
 story.append(p(
     'Bir butona tıkladığınızda e-posta istemciniz açılır; yanıtınız JSON yapıda hazır '
     'olur. Tek yapmanız gereken <b>gönder</b> tuşuna basmak. Üçüncü taraf bir servis '
     'kullanılmaz.'))
+story.append(p(
+    'Form yanıtınız yalnızca yayın kararı değildir; yazı sesinizi daha iyi anlamamız '
+    'için de kullanılır. Beğendiğiniz, mesafeli bulduğunuz veya değiştirmek istediğiniz '
+    'ritim ve ifade tercihleri önce editöryal nota çevrilir. Kalıcı yazar profili '
+    'değişiklikleri otomatik yapılmaz; editör onayıyla ve tekrar eden sinyaller '
+    'görüldüğünde işlenir.'))
+story.append(p(
+    'Editoryal çekirdek ekipteki bazı yazarlar için iç süreç farklıdır: Berna Aksoy, '
+    'Alara Baykent ve Senai Aksoy yazılarında 5 dakikalık yazar formu zorunlu değildir; '
+    'KC editör doğrudan onayı kayıt altına alınarak yayın kapısı açılabilir. Bu istisna '
+    'yalnızca iç editoryal iş akışıdır; dış bilim yazarlarında standart form korunur.'))
 
 story.append(section_h3('Faz 6 — Yayın'))
 story.append(p(
-    'Onaylanan makale <b>main</b> dalına push edilir; site <b>Cloudflare Pages</b>\'te '
+    'Yayın fazı yalnızca yazar onayı geldikten ve paket onaylanan klasörüne '
+    'taşındıktan sonra başlar. Onaylanan makale <b>main</b> dalına push edilir; site <b>Cloudflare Pages</b>\'te '
     'otomatik build alır. Site canlıya alındığında yayın anlık olur. Makale, '
     'Estranova\'nın yapısal indekslerine eklenir: hub sayfası, sayı sayfası, anasayfa '
     'yeni yayınlar bandı, belirti bazlı navigasyon, JSON-LD yapısal veri.'))
@@ -776,14 +788,14 @@ story.append(p(
     'mesafeyi gösteren <b>mercek</b>ler. Profile dosyalarınızda bunları korumak — '
     'yani ses imzanızı kayba uğratmadan AI taslağında yansıtmak — birinci hedefimiz.'))
 
-story.append(section_h3('İlk makale ile birlikte: 10 dakikalık stil rafine + onay formu'))
+story.append(section_h3('İlk makale ile birlikte: opsiyonel stil rafine + onay destek formu'))
 story.append(p(
-    'İlk taslak makaleniz sizinle paylaşıldığında, normal kısa onay formundan biraz '
-    'daha kapsamlı bir form göndereceğiz — <b>bir defaya mahsus</b>, hem makale onayı '
-    'hem stil rafinesi bir arada. Bu form ilk turdaki yatırımdır; sonraki tüm '
-    'makaleleriniz boyunca tasarrufa dönüşür.'))
+    'İlk taslak makaleniz sizinle paylaşıldığında, normal kısa onay formuna ek olarak '
+    'biraz daha kapsamlı bir stil rafine formu gönderebiliriz — <b>bir defaya mahsus</b>. '
+    'Kanonik yayın kapısı yine her makale ve her revizyon için üretilen 5 dakikalık '
+    'onay formudur.'))
 story += bullets([
-    '<b>~10 dakika</b> sürer (normal makale formu 5 dakika)',
+    '<b>~10 dakika</b> sürer; bu form opsiyoneldir, normal makale onay formu yaklaşık 5 dakikadır',
     '<b>Tıklanabilir</b> formatta — tarayıcıda açılır, internet bağlantısı şart değil',
     '<b>14 alan + karar</b> içerir, dört bölüme bölünmüş',
     '<b>Bölüm 1 — Genel ses (5 likert):</b> sesi tanıma, dürüstlük, pazarlama hissi, '
@@ -804,8 +816,7 @@ story.append(p(
 
 story.append(section_h3('Her makale öncesi: 5 dakikalık onay formu'))
 story.append(p(
-    'İlk makale sonrasındaki her yeni makale için size <b>kısa bir onay formu</b> '
-    'gönderilir:'))
+    'Her yeni makale ve her revizyon için size <b>kısa bir onay formu</b> gönderilir:'))
 story += bullets([
     '3 likert + 3 toggle + 1 opsiyonel yorum',
     '2 büyük buton: <b>Onayla / Değişiklik İste</b>',
@@ -813,9 +824,10 @@ story += bullets([
 ])
 story.append(Spacer(1, 0.2*cm))
 story.append(p(
-    'Her onay turunda profil dosyalarınız küçük bir miktar daha <b>rafine</b> olur — '
-    'sıkça reddettiğiniz bir kalıp havuzdan çıkar, sıkça beğendiğiniz bir geçiş havuza '
-    'girer. Bu <b>canlı bir öğrenme</b> süreci; üç-dört makale sonrasında AI taslakları '
+    'Her onay turunda profil dosyalarınız kontrollü biçimde <b>rafine</b> olur — '
+    'sıkça reddettiğiniz bir kalıp önce log\'a düşer, tekrarlanırsa havuzdan çıkar; '
+    'sıkça beğendiğiniz bir geçiş önce editöryal not olur, sonra profile girer. '
+    'Bu <b>canlı ama denetimli bir öğrenme</b> süreci; üç-dört makale sonrasında AI taslakları '
     'size <b>giderek daha yakın</b> çıkmaya başlar.'))
 story.append(p(
     'Hedefimiz — uzun vadede sizi <b>stil olarak tatmin eden</b>, kendi sesinizmiş gibi '

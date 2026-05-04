@@ -2,9 +2,9 @@
 """
 Yazar onay formu HTML'inin görsel PDF arşivi.
 
-10 dakikalık stil rafine + onay formunu (templates/kontrol-formu-uzun.template.html)
-veya 5 dakikalık standart formu (templates/kontrol-formu.template.html) görsel
-referans amaçlı PDF'e çevirir.
+5 dakikalık standart onay formunu (templates/kontrol-formu.template.html) veya
+opsiyonel 10 dakikalık stil rafine formunu
+(templates/kontrol-formu-uzun.template.html) görsel referans amaçlı PDF'e çevirir.
 
 PDF interaktif değildir — radio butonları boş kutucuk olarak görünür; karar
 butonları statik. Yazar gerçek formu HTML olarak doldurur (mailto akışı). PDF

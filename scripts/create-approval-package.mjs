@@ -1,28 +1,36 @@
 #!/usr/bin/env node
 /**
- * Bir Astro makalesini yazara onaya göndermek için paket üretir.
+ * Bir Astro makalesini yazara onaya göndermek için kanonik paket üretir.
+ * Bu paket hem yayın kapısıdır hem de yazar stilini geliştiren geri bildirim
+ * kaynağıdır. Yazar onayı gelmeden makale sitede yayınlanmaz.
  *
  * Üç dosya oluşturur:
- *   icerik/onay-bekleyen/<slug>/<YYYY-MM-DD>_<makale-slug>/
+ *   icerik/yazar-onaylari/<slug>/onay-bekleyen/<YYYY-MM-DD>_<makale-slug>/
  *     kontrol-formu.html       templates/kontrol-formu.template.html'den render
  *                              (--first-article ile kontrol-formu-uzun.template.html)
  *     makale-onizleme.html     templates/makale-onizleme.template.html'den render
  *     meta.json                templates/meta.template.json'dan render
  *
  * Form tipleri (formType meta.json'da):
- *   - 'standard' (default, ~5 dk, 7 alan): yazarın 2. ve sonraki makaleleri için
+ *   - 'standard' (default, ~5 dk, 7 alan): her makale ve her revizyon için
+ *     kullanılan kanonik yazar onay kapısı.
  *   - 'first-article-style-refine' (~10 dk, 14 alan): yazarın ilk framework
- *     makalesi için bir defaya mahsus stil rafine + onay hibridi. Bölüm 3
- *     (5 stil öğesi) yanıtları profile dosyalarına işlenir.
+ *     makalesi için bir defaya mahsus opsiyonel stil rafine yardımcısı.
+ *     Kanonik 5 dakikalık onay kapısının yerini almaz.
+ *
+ * Yanıt işleme:
+ *   - Ham JSON yanıtı paket klasöründe saklayın.
+ *   - Stil sinyallerini article-log.md içine özetleyin.
+ *   - Kalıcı writers/<slug>/ profil değişikliklerini yalnızca editör onayıyla yapın.
  *
  * Kullanım:
  *   npm run author:send-for-approval -- --slug X --article /pathname [--days 7] [--site URL] [--first-article]
  *
- * Örnek (sonraki makaleler için standard form):
+ * Örnek (her makale / her revizyon için standard form):
  *   npm run author:send-for-approval -- --slug bahar-ozeray \
  *       --article /zamansiz-yasam/eklem-agrisi-menopoz
  *
- * Örnek (yazarın İLK framework makalesi için 10 dk uzun stil rafine formu):
+ * Örnek (yazarın İLK framework makalesi için opsiyonel uzun stil rafine formu):
  *   npm run author:send-for-approval -- --slug duygu-karaosmanoglu \
  *       --article /hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz \
  *       --first-article
@@ -39,11 +47,12 @@ const ROOT = path.resolve(__dirname, '..');
 const WRITERS_FILE = path.join(ROOT, 'src/data/writers.ts');
 const PAGES_DIR = path.join(ROOT, 'src/pages');
 const TEMPLATES_DIR = path.join(ROOT, 'templates');
-const PENDING_ROOT = path.join(ROOT, 'icerik/onay-bekleyen');
+const APPROVAL_ROOT = path.join(ROOT, 'icerik/yazar-onaylari');
 
 const DEFAULT_TARGET_EMAIL = 'drsenaiaksoy@gmail.com';
 const DEFAULT_SITE = 'https://estranova.com.tr';
 const DEFAULT_DAYS = 7;
+const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 'senai-aksoy']);
 
 const C = {
   reset: '\x1b[0m', bold: '\x1b[1m', dim: '\x1b[2m',
@@ -95,28 +104,40 @@ async function findWriter(slug) {
 }
 
 /**
- * src/pages/<pathname>.astro dosyasından articleTitle + articleDescription parse et.
+ * src/pages/<pathname>.astro veya src/pages/<pathname>/index.astro dosyasından
+ * articleTitle + articleDescription parse et.
  */
 async function parseArticle(pathname) {
   // pathname örneği: /zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu
   const cleaned = pathname.replace(/^\/+/, '').replace(/\/+$/, '');
-  const astroPath = path.join(PAGES_DIR, cleaned + '.astro');
+  const directAstroPath = path.join(PAGES_DIR, cleaned + '.astro');
+  const indexAstroPath = path.join(PAGES_DIR, cleaned, 'index.astro');
+  let astroPath = directAstroPath;
   let content;
   try {
     content = await readFile(astroPath);
   } catch {
-    throw new Error(`Astro dosyası bulunamadı: ${astroPath}`);
+    astroPath = indexAstroPath;
+    try {
+      content = await readFile(astroPath);
+    } catch {
+      throw new Error(`Astro dosyası bulunamadı: ${directAstroPath} veya ${indexAstroPath}`);
+    }
   }
 
   // const articleTitle = '...'  veya `...` (template literal)
   const titleMatch = content.match(/const\s+articleTitle\s*=\s*[`'"]([^`'"]+)[`'"]/);
+  const layoutTitleMatch = content.match(/\btitle=\s*[`'"]([^`'"]+?)(?:\s+-\s+Estranova)?[`'"]/);
   const title = titleMatch
     ? titleMatch[1]
-    : cleaned.split('/').pop().replace(/-/g, ' ');
+    : layoutTitleMatch
+      ? layoutTitleMatch[1]
+      : cleaned.split('/').pop().replace(/-/g, ' ');
 
   // articleDescription opsiyonel, hata vermez
   const descMatch = content.match(/const\s+articleDescription\s*=\s*[`'"]([^`'"]+)[`'"]/);
-  const description = descMatch ? descMatch[1] : '';
+  const layoutDescriptionMatch = content.match(/\bdescription=\s*[`'"]([^`'"]+)[`'"]/);
+  const description = descMatch ? descMatch[1] : (layoutDescriptionMatch ? layoutDescriptionMatch[1] : '');
 
   return { title, description, pathname: '/' + cleaned };
 }
@@ -177,6 +198,12 @@ async function main() {
     process.exit(1);
   }
   console.log(`${C.dim}Yazar:${C.reset} ${C.bold}${writer.displayName}${C.reset} (${writer.slug})`);
+  if (DIRECT_EDITOR_APPROVAL_WRITERS.has(writer.slug)) {
+    console.log(
+      `${C.yellow}Not:${C.reset} Bu yazar KC editör doğrudan onayı kapsamındadır; ` +
+        `5 dakikalık yazar formu zorunlu değildir. Form yalnızca arşiv/stil geri bildirimi için opsiyonel üretilir.`,
+    );
+  }
 
   // Makale
   const article = await parseArticle(articlePathname);
@@ -189,7 +216,7 @@ async function main() {
 
   const articleSlug = article.pathname.split('/').pop();
   const folderName = `${isoDate(sentDate)}_${articleSlug}`;
-  const packageDir = path.join(PENDING_ROOT, writer.slug, folderName);
+  const packageDir = path.join(APPROVAL_ROOT, writer.slug, 'onay-bekleyen', folderName);
   await ensureFolder(packageDir);
 
   const previewUrl = site.replace(/\/+$/, '') + article.pathname;
@@ -233,7 +260,7 @@ async function main() {
   console.log(`${C.green}${C.bold}✓ Paket hazır:${C.reset} ${relPath}/`);
   console.log(`  ${C.dim}├─${C.reset} kontrol-formu.html ${C.dim}(yazara gönderilen form)${C.reset}`);
   console.log(`  ${C.dim}├─${C.reset} makale-onizleme.html ${C.dim}(landing)${C.reset}`);
-  console.log(`  ${C.dim}└─${C.reset} meta.json ${C.dim}(durum: pending)${C.reset}\n`);
+  console.log(`  ${C.dim}└─${C.reset} meta.json ${C.dim}(durum: pending-author-approval)${C.reset}\n`);
 
   console.log(`${C.bold}Form tipi:${C.reset} ${isFirstArticle ? C.gold + 'uzun stil rafine (~10 dk, 14 alan)' + C.reset : C.dim + 'standart (~5 dk, 7 alan)' + C.reset}`);
   console.log(`${C.dim}(template: ${formTemplateName})${C.reset}\n`);
@@ -245,7 +272,10 @@ async function main() {
   console.log(`  ${C.gold}Email:${C.reset}     ${targetEmail}`);
   console.log(`  ${C.gold}Deadline:${C.reset}  ${turkishDate(deadlineDate)} (${days} gün)\n`);
 
-  console.log(`${C.dim}Yanıt geldiğinde JSON payload'ı icerik/yazarlar/${writer.slug}/onay-belgeleri/${folderName}.json olarak kaydedin.${C.reset}\n`);
+  console.log(`${C.dim}Yanıt geldiğinde JSON payload'ı aynı paket klasöründe saklayın.${C.reset}`);
+  console.log(`${C.dim}Form yanıtını stil geliştirme girdisi olarak article-log.md içine özetleyin; kalıcı profil değişikliği için editör onayı alın.${C.reset}`);
+  console.log(`${C.dim}Değişiklik istenirse revizyonu yapın ve yeni makale + yeni 5 dk form için komutu yeniden çalıştırın.${C.reset}`);
+  console.log(`${C.dim}Yazar ONAYLIYORUM dedikten sonra paketi icerik/yazar-onaylari/${writer.slug}/onaylanan/${folderName}/ altına taşıyın ve yayını ancak o zaman başlatın.${C.reset}\n`);
 }
 
 main().catch((err) => {

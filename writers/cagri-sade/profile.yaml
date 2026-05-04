@@ -32,7 +32,7 @@ file_layout:
   warm: "./warm.md"
   cold: "./cold.md"
   hidden: "./hidden.md"
-  article_log: "../cagri-sade-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/cagri-sade/article-log.md"
   citations_dir: "./citations/"
 
 section_index:
@@ -288,7 +288,7 @@ clinical_spine:
     - "Önce-sonra hikayesi MUTLAK YASAK"
 
 dynamics:
-  log_path: "../cagri-sade-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/cagri-sade/article-log.md"
   birth_year: 1970  # Tahmini — Ankara Üniv. 1994 mezuniyet varsayımı
   cooldown_overrides: {}
   cooldown_exempt: []

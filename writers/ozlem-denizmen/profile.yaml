@@ -28,7 +28,7 @@ file_layout:
   cold: "./cold.md"
   hidden: "./hidden.md"
   readme: "./README.md"
-  article_log: "../ozlem-denizmen-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/ozlem-denizmen/article-log.md"
   citations_dir: "./citations/"
 
 # ---------------------------------------------------------------------
@@ -450,7 +450,7 @@ context_rules_posta_vs_estranova:
 # Dynamics
 # ---------------------------------------------------------------------
 dynamics:
-  log_path: "../ozlem-denizmen-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/ozlem-denizmen/article-log.md"
   birth_year: 1971
   # v2.6 (2026-05-02) — Şablon Kırma Disiplini cooldown'ları (evrensel kural).
   # Detay: docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md

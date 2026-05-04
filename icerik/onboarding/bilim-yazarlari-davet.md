@@ -177,12 +177,12 @@ Yayına hazır makalenin yapısı:
 
 Yapı sıkı görünebilir; ama bu sıkılık her makaleye **aynı güveni** verir. Okuyucu hangi yazıyı açarsa açsın aynı disiplinli editöryal mühürle karşılaşır.
 
-### 4.5. Faz 5 — Yazar Onayı (10 Dakikalık Form)
+### 4.5. Faz 5 — Yazar Onayı (5 Dakikalık Form)
 
 Taslak hazır olduğunda size **iki ek** ile bir e-posta gönderilir:
 
 1. **Makale önizleme linki** — yazıyı tarayıcınızda okumanız için
-2. **Tıklanabilir kontrol formu** (HTML, internet bağlantısı şart değil) — 10 dakikadan kısa sürede doldurulması hedeflenmiş
+2. **Tıklanabilir kontrol formu** (HTML, internet bağlantısı şart değil) — yaklaşık 5 dakikada doldurulması hedeflenmiş
 
 Form üç kısımdan oluşur:
 
@@ -197,13 +197,17 @@ Sonunda iki büyük buton:
 
 Bir butona tıkladığınızda e-posta istemciniz açılır; yanıtınız JSON yapıda hazır olur. Tek yapmanız gereken **gönder** tuşuna basmak. Form yanıtınız sadece editör adresimize iletilir; üçüncü taraf bir servis kullanılmaz.
 
-**Onaylarsanız** → makale yayında, e-posta yanıtınız `icerik/yazarlar/<slug>/onay-belgeleri/` klasörüne arşivlenir.
+Form yanıtınız yalnızca yayın kararı değildir; yazı sesinizi daha iyi anlamamız için de kullanılır. Beğendiğiniz, mesafeli bulduğunuz veya değiştirmek istediğiniz ritim ve ifade tercihleri önce editöryal not olarak `article-log.md` dosyanıza özetlenir. Kalıcı yazar profili değişiklikleri otomatik yapılmaz; editör onayıyla ve tekrar eden sinyaller görüldüğünde işlenir.
 
-**Değişiklik isterseniz** → AI yazar yorumunuzla revizyon yapar; size yeni bir paket gönderilir; bu döngü siz onaylayana kadar sürer (genelde 1 revizyon yeterli oluyor).
+**Onaylarsanız** → e-posta yanıtınız makale paketiyle birlikte `icerik/yazar-onaylari/<slug>/onaylanan/` klasörüne arşivlenir; yayın süreci ancak bundan sonra başlar.
+
+**Değişiklik isterseniz** → AI yazar yorumunuzla revizyon yapar; size revize makale + yeni 5 dakikalık onay formu gönderilir; bu döngü siz onaylayana kadar sürer (genelde 1 revizyon yeterli oluyor).
+
+Editoryal çekirdek ekipteki bazı yazarlar için iç süreç farklıdır: Berna Aksoy, Alara Baykent ve Senai Aksoy yazılarında 5 dakikalık yazar formu zorunlu değildir; KC editör doğrudan onayı kayıt altına alınarak yayın kapısı açılabilir. Bu istisna yalnızca iç editoryal iş akışıdır; dış bilim yazarlarında standart form korunur.
 
 ### 4.6. Faz 6 — Yayın
 
-Onaylanan makale **`main` dalına** push edilir; site **Cloudflare Pages**'te otomatik build alır. Site canlıya alındığında (şu an tasarım aşamasındayız) yayın anlık olur. Makale, Estranova'nın yapısal indekslerine eklenir:
+Yayın fazı yalnızca yazar onayı geldikten ve paket `icerik/yazar-onaylari/<slug>/onaylanan/` altına taşındıktan sonra başlar. Onaylanan makale **`main` dalına** push edilir; site **Cloudflare Pages**'te otomatik build alır. Site canlıya alındığında (şu an tasarım aşamasındayız) yayın anlık olur. Makale, Estranova'nın yapısal indekslerine eklenir:
 
 - **Hub sayfası** — makale ilgili kategori hub'ında listelenir
 - **Sayı sayfası** — aylık sayının kapak dosyasında veya kalan yazılarda
@@ -331,11 +335,11 @@ Estranova şu an **tasarım ve içerik aşamasındadır**. Aşağıdaki fazlar p
 
 Bu metinler bizim için sadece "veri" değil — yazınızdaki **doğal ritmi**, sevdiğiniz **bağlaçları**, kaçındığınız ifadeleri ve okuyucuyla kurduğunuz mesafeyi gösteren **mercek**ler. Profile dosyalarınızda bunları korumak — yani ses imzanızı kayba uğratmadan AI taslağında yansıtmak — birinci hedefimiz.
 
-### 11.2. İlk makale ile birlikte: 10 dakikalık stil rafine + onay formu
+### 11.2. İlk makale ile birlikte: opsiyonel stil rafine + onay destek formu
 
-İlk taslak makaleniz sizinle paylaşıldığında, normal kısa onay formundan biraz daha kapsamlı bir form göndereceğiz — **bir defaya mahsus**, hem makale onayı hem de stil rafinesi bir arada. Bu form ilk turdaki yatırımdır; sonraki tüm makaleleriniz boyunca tasarrufa dönüşür.
+İlk taslak makaleniz sizinle paylaşıldığında, normal kısa onay formuna ek olarak biraz daha kapsamlı bir stil rafine formu gönderebiliriz — **bir defaya mahsus**, yazı sesinizi daha iyi tanımak için. Kanonik yayın kapısı yine her makale ve her revizyon için üretilen 5 dakikalık onay formudur.
 
-- **~10 dakika** sürer (normal makale formu 5 dakika)
+- **~10 dakika** sürer; bu form opsiyoneldir, normal makale onay formu yaklaşık 5 dakikadır
 - **Tıklanabilir** formatta — tarayıcıda açılır, internet bağlantısı şart değil
 - **14 alan + karar** içerir, dört bölüme bölünmüş:
   - **Bölüm 1 — Genel ses (5 likert):** sesi tanıma, dürüstlük, pazarlama hissi, yapısal yoğunluk, kanıt seviyesi
@@ -354,13 +358,13 @@ Bölüm 3'teki tercihleriniz **profil dosyalarınıza işlenir**; sonraki makale
 
 ### 11.3. Her makale öncesi: 5 dakikalık onay formu
 
-İlk makale sonrasındaki her yeni makale için size **kısa bir onay formu** gönderilir:
+Her yeni makale ve her revizyon için size **kısa bir onay formu** gönderilir:
 
 - 3 likert + 3 toggle + 1 opsiyonel yorum
 - 2 büyük buton: **Onayla / Değişiklik İste**
 - 5 dakikadan kısa süre
 
-Her onay turunda profil dosyalarınız küçük bir miktar daha **rafine** olur — sıkça reddettiğiniz bir kalıp havuzdan çıkar, sıkça beğendiğiniz bir geçiş havuza girer. Bu **canlı bir öğrenme** süreci; üç-dört makale sonrasında AI taslakları size **giderek daha yakın** çıkmaya başlar.
+Her onay turunda profil dosyalarınız kontrollü biçimde **rafine** olur — sıkça reddettiğiniz bir kalıp önce log'a düşer, tekrarlanırsa havuzdan çıkar; sıkça beğendiğiniz bir geçiş önce editöryal not olur, sonra profile girer. Bu **canlı ama denetimli bir öğrenme** süreci; üç-dört makale sonrasında AI taslakları size **giderek daha yakın** çıkmaya başlar.
 
 Hedefimiz — uzun vadede sizi **stil olarak tatmin eden**, kendi sesinizmiş gibi okunan ama AI desteğiyle hızlı üretilen bir yayın akışı.
 
@@ -442,7 +446,7 @@ Hangi yol size daha uygunsa, **Doç. Dr. Senai Aksoy'a** kısaca iletmeniz yeter
 - **Yayın yönetimi:** Berna Aksoy (yönetici editör)
 - **Site (geliştirme):** estranova.com (henüz canlı değil)
 
-Onay sürecinde formla ilgili teknik bir takıntı yaşarsanız (ör. e-posta istemcisinin açılmaması, formun farklı bir tarayıcıda davranması) lütfen bize iletin. Hekim yoğunluğu içinde 10 dakikalık bir adımı bile zorlaştıran küçük detaylar varsa düzeltmek bizim sorumluluğumuz.
+Onay sürecinde formla ilgili teknik bir takıntı yaşarsanız (ör. e-posta istemcisinin açılmaması, formun farklı bir tarayıcıda davranması) lütfen bize iletin. Hekim yoğunluğu içinde 5 dakikalık bir adımı bile zorlaştıran küçük detaylar varsa düzeltmek bizim sorumluluğumuz.
 
 ---
 

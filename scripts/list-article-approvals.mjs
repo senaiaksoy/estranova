@@ -21,6 +21,7 @@ const ROOT = path.resolve(__dirname, '..');
 const PAGES_DIR = path.join(ROOT, 'src/pages');
 const APPROVALS_FILE = path.join(ROOT, 'src/data/article-approvals.ts');
 const WRITERS_FILE = path.join(ROOT, 'src/data/writers.ts');
+const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 'senai-aksoy']);
 
 const EXCLUDED_BASENAMES = new Set([
   'index.astro',
@@ -169,6 +170,10 @@ async function main() {
   const total = articles.length;
   const approved = articles.filter((a) => a.approval).length;
   const pending = total - approved;
+  const directEditorPending = articles.filter(
+    (a) => !a.approval && DIRECT_EDITOR_APPROVAL_WRITERS.has(a.writerSlug),
+  ).length;
+  const authorFormPending = pending - directEditorPending;
   const percent = total > 0 ? Math.round((approved / total) * 100) : 0;
 
   // === RAPOR ===
@@ -178,6 +183,8 @@ async function main() {
   console.log(`  Toplam makale     : ${C.bold}${total}${C.reset}`);
   console.log(`  ${C.green}Onaylı            : ${C.bold}${approved}${C.reset} ${C.green}(%${percent})${C.reset}`);
   console.log(`  ${C.yellow}Onay bekleniyor   : ${C.bold}${pending}${C.reset} ${C.yellow}(%${100 - percent})${C.reset}`);
+  console.log(`  ${C.yellow}Form bekleyen     : ${C.bold}${authorFormPending}${C.reset}`);
+  console.log(`  ${C.gold}Editör onayı bek. : ${C.bold}${directEditorPending}${C.reset} ${C.dim}(Berna/Alara/Senai istisnası)${C.reset}`);
   console.log('');
 
   // Yazar bazında detay (alfabetik)
@@ -188,9 +195,11 @@ async function main() {
   for (const [slug, group] of sortedWriters) {
     const ws = group.articles;
     const wApproved = ws.filter((a) => a.approval).length;
+    const directEditorMode = DIRECT_EDITOR_APPROVAL_WRITERS.has(slug);
     console.log(
       `${C.bold}${C.burgundy}▼ ${group.writerName}${C.reset} ${C.dim}(${slug})${C.reset}  ` +
-        `${C.green}${wApproved}${C.reset}/${ws.length} onaylı`,
+        `${C.green}${wApproved}${C.reset}/${ws.length} onaylı` +
+        (directEditorMode ? ` ${C.gold}(KC doğrudan onay kapsamı)${C.reset}` : ''),
     );
     for (const a of ws.sort((x, y) => x.pathname.localeCompare(y.pathname))) {
       if (a.approval) {
@@ -198,7 +207,8 @@ async function main() {
           `  ${C.green}✓${C.reset} ${C.gold}${a.pathname}${C.reset}  ${C.dim}(onay: ${a.approval.approvedAt})${C.reset}`,
         );
       } else {
-        console.log(`  ${C.yellow}○${C.reset} ${a.pathname}`);
+        const pendingLabel = directEditorMode ? 'KC editör onayı bekliyor' : 'yazar formu bekliyor';
+        console.log(`  ${C.yellow}○${C.reset} ${a.pathname}  ${C.dim}(${pendingLabel})${C.reset}`);
       }
     }
     console.log('');

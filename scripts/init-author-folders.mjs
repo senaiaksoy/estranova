@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 /**
- * Estranova yazar arşivi iskeletini açar.
+ * Estranova yazar onay arşivi iskeletini açar.
  *
  * src/data/writers.ts'deki tüm yazarlar için:
- *   icerik/yazarlar/<slug>/
+ *   icerik/yazar-onaylari/<slug>/
  *     README.md
- *     yayinlanan/.gitkeep
- *     onay-belgeleri/.gitkeep
+ *     article-log.md
+ *     onay-bekleyen/.gitkeep
+ *     onaylanan/.gitkeep
  *
  * İdempotent — tekrar çalıştırılabilir, mevcut dosyaları üzerine yazmaz
- * (README.md'yi sadece yoksa oluşturur).
+ * (README.md ve article-log.md'yi sadece yoksa oluşturur).
  *
  * Kullanım:
  *   npm run authors:init-folders
@@ -24,7 +25,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const WRITERS_FILE = path.join(ROOT, 'src/data/writers.ts');
-const ARCHIVE_ROOT = path.join(ROOT, 'icerik/yazarlar');
+const ARCHIVE_ROOT = path.join(ROOT, 'icerik/yazar-onaylari');
 
 const C = {
   reset: '\x1b[0m',
@@ -75,15 +76,24 @@ async function parseWriters() {
 function readmeContent(writer) {
   return `# ${writer.displayName}
 
-Estranova yazar arşivi.
+Estranova yazar onay arşivi.
 
 - **Slug:** \`${writer.slug}\`
 - **Rol:** ${writer.role || '—'}
 
 ## İçerik
 
-- [\`yayinlanan/\`](./yayinlanan/) — onaylı + yayında olan makaleler (markdown kopyaları)
-- [\`onay-belgeleri/\`](./onay-belgeleri/) — yazarın doldurduğu form yanıtları (JSON)
+- [\`onay-bekleyen/\`](./onay-bekleyen/) — yazara gönderilmiş, yanıt bekleyen paketler
+- [\`onaylanan/\`](./onaylanan/) — onay almış makale paketleri ve onay belgeleri
+- [\`article-log.md\`](./article-log.md) — yazarın akümülatif makale üretim günlüğü (varsa)
+
+## Yayın kapısı
+
+Her yeni makale ve her revizyon önce 5 dakikalık onay formuyla \`onay-bekleyen/\` altında tutulur. Yazar \`ONAYLIYORUM\` demeden makale siteye yayınlanmaz ve \`onaylanan/\` altına taşınmaz. \`DEĞİŞİKLİK İSTİYORUM\` yanıtında revizyon yapılır, yeni makale + yeni 5 dakikalık form üretilir.
+
+İstisna: \`berna-aksoy\`, \`alara-baykent\` ve \`senai-aksoy\` için 5 dakikalık yazar formu zorunlu değildir. Bu üç yazarın yazılarında KC editör doğrudan onayı yeterlidir; onay izi \`article-approvals.ts\`, varsa paket README'si ve/veya \`article-log.md\` içinde tutulur.
+
+Form yanıtları aynı zamanda stil geliştirme girdisidir. Ham JSON paket klasöründe kalır; stil sinyali \`article-log.md\` dosyasına özetlenir. Kalıcı \`writers/${writer.slug}/\` profil değişiklikleri otomatik yapılmaz, editör onayı gerektirir.
 
 ## Profile
 
@@ -93,6 +103,34 @@ Detay yazar profili (varsa): \`writers/${writer.slug}/\` veya \`writers/${writer
 
 - [\`docs/AUTHOR-APPROVAL-WORKFLOW.md\`](../../../docs/AUTHOR-APPROVAL-WORKFLOW.md)
 - [\`src/data/article-approvals.ts\`](../../../src/data/article-approvals.ts)
+`;
+}
+
+function articleLogContent(writer) {
+  return `# ${writer.displayName} — Article Log
+
+> Yazılan her makalenin kalıp seçimi ve cooldown takibi. İlk makale sonrası bu tabloya satır eklenir.
+
+---
+
+## Başlangıç
+
+| # | Tarih | Yazı (slug) | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
+|---|---|---|---|---|---|---|---|---|---|
+
+---
+
+## Cooldown takibi
+
+| Kalıp türü | Havuz | Cooldown | Son kullanım |
+|---|---|---|---|
+| Açılış | — | — | — |
+| Kapanış | — | — | — |
+| Dengeleyici | — | — | — |
+| Bilmiyorum | — | — | — |
+| Hekim çerçevesi | — | — | — |
+| Anekdot kapısı | — | — | — |
+| İmza kapanış | — | — | — |
 `;
 }
 
@@ -118,8 +156,17 @@ async function ensureReadme(folder, content) {
   return false;
 }
 
+async function ensureArticleLog(folder, content) {
+  const lp = path.join(folder, 'article-log.md');
+  if (!(await exists(lp))) {
+    await fs.writeFile(lp, content, 'utf-8');
+    return true;
+  }
+  return false;
+}
+
 async function main() {
-  console.log(`${C.bold}${C.burgundy}Estranova — Yazar arşivi iskelet açıcı${C.reset}\n`);
+  console.log(`${C.bold}${C.burgundy}Estranova — Yazar onay arşivi iskelet açıcı${C.reset}\n`);
 
   const writers = await parseWriters();
   if (writers.length === 0) {
@@ -136,19 +183,20 @@ async function main() {
 
   for (const w of writers) {
     const writerDir = path.join(ARCHIVE_ROOT, w.slug);
-    const yayinlanan = path.join(writerDir, 'yayinlanan');
-    const onayBelgeleri = path.join(writerDir, 'onay-belgeleri');
+    const onayBekleyen = path.join(writerDir, 'onay-bekleyen');
+    const onaylanan = path.join(writerDir, 'onaylanan');
 
     const isNew = !(await exists(writerDir));
     await ensureFolder(writerDir);
-    await ensureFolder(yayinlanan);
-    await ensureFolder(onayBelgeleri);
+    await ensureFolder(onayBekleyen);
+    await ensureFolder(onaylanan);
 
     const readmeCreated = await ensureReadme(writerDir, readmeContent(w));
-    const gk1 = await ensureGitkeep(yayinlanan);
-    const gk2 = await ensureGitkeep(onayBelgeleri);
+    const logCreated = await ensureArticleLog(writerDir, articleLogContent(w));
+    const gk1 = await ensureGitkeep(onayBekleyen);
+    const gk2 = await ensureGitkeep(onaylanan);
 
-    const created = isNew || readmeCreated || gk1 || gk2;
+    const created = isNew || readmeCreated || logCreated || gk1 || gk2;
     if (created) {
       createdCount++;
       console.log(`${C.green}  +${C.reset} ${C.bold}${w.slug}${C.reset} ${C.dim}(${w.displayName})${C.reset}`);
@@ -163,7 +211,7 @@ async function main() {
     `${C.gold}${createdCount}${C.reset} oluşturuldu/güncellendi, ` +
     `${C.dim}${skippedCount}${C.reset} dokunulmadı.`
   );
-  console.log(`${C.dim}Konum: icerik/yazarlar/${C.reset}\n`);
+  console.log(`${C.dim}Konum: icerik/yazar-onaylari/${C.reset}\n`);
 }
 
 main().catch((err) => {

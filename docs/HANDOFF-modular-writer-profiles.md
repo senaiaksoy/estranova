@@ -102,7 +102,7 @@ writers/
   gamze-cizreli.md                ← LEGACY (henüz silinmedi, taşınacak)
   gamze-cizreli-alintilar.md      ← korpus (klasör dışı, paylaşılan)
   gamze-cizreli-aphorism-pool.md  ← aphorism havuzu (klasör dışı)
-  gamze-cizreli-article-log.md    ← akümülatif log (Writer Dynamics Framework)
+  icerik/yazar-onaylari/gamze-cizreli/article-log.md    ← akümülatif log (Writer Dynamics Framework)
   berna-aksoy.md                  ← LEGACY (rollout bekliyor)
   basak-pelister.md               ← LEGACY
   duygu-karaosmanoglu.md          ← LEGACY

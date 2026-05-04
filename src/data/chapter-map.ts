@@ -3,12 +3,12 @@
  * sıralayan harita. Her alt-hub'ın bölüm numarası, ait olduğu hub adı ve
  * "bir sonraki bölüm" referansı buradan gelir.
  *
- * 17 alt-hub bölüm sırası:
- *   01–04  Hormonal Geçiş
- *   05–07  Zamansız Yaşam        (chapter numarası 01–03 hub içinde)
- *   08–10  Beden & Yakınlık      (01–03)
- *   11–13  Zihin & Denge         (01–03)
- *   14–16  Bilimsel Pencere      (01–03)
+ * Onaylı alt-hub bölüm sırası:
+ *   01–03  Hormonal Geçiş
+ *   04–06  Zamansız Yaşam        (chapter numarası 01–03 hub içinde)
+ *   07–09  Beden & Yakınlık      (01–03)
+ *   10–12  Zihin & Denge         (01–03)
+ *   13–15  Bilimsel Pencere      (01–03)
  *
  * `number` her hub içinde 01'den başlar (kullanıcıya hub içi sıra
  * mantıklı geliyor). `next` global gezinme sırasıyla diğer hub'a geçer.
@@ -43,13 +43,6 @@ export const chapterMap: Record<string, ChapterEntry> = {
     parent: 'Hormonal Geçiş',
     chapter: 'Menopoz',
     href: '/hormonal-gecis/menopoz',
-    next: '/hormonal-gecis/40-sonrasi',
-  },
-  '/hormonal-gecis/40-sonrasi': {
-    number: '04',
-    parent: 'Hormonal Geçiş',
-    chapter: '40 Sonrası',
-    href: '/hormonal-gecis/40-sonrasi',
     next: '/zamansiz-yasam/vitaminler',
   },
   // Zamansız Yaşam

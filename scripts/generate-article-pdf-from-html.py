@@ -16,7 +16,7 @@ Kullanım:
 Örnek:
     python scripts/generate-article-pdf-from-html.py \\
         "dist/hormonal-gecis/40-sonrasi/diseti-cekilmesi-postmenopoz/index.html" \\
-        "icerik/onay-bekleyen/.../duygu-makale.pdf"
+        "icerik/yazar-onaylari/.../onay-bekleyen/.../duygu-makale.pdf"
 """
 
 import sys

@@ -28,7 +28,7 @@ file_layout:
   cold: "./cold.md"
   hidden: "./hidden.md"
   readme: "./README.md"
-  article_log: "../alara-baykent-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/alara-baykent/article-log.md"
   citations_dir: "./citations/"
 
 # ---------------------------------------------------------------------
@@ -378,7 +378,7 @@ closing_pattern:
 # Dynamics
 # ---------------------------------------------------------------------
 dynamics:
-  log_path: "../alara-baykent-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/alara-baykent/article-log.md"
   birth_year: 1995
   # v2.6 (2026-05-02) — Şablon Kırma Disiplini cooldown'ları (evrensel kural).
   # Detay: docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md

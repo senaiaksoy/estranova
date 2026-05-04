@@ -76,7 +76,7 @@ Aynı kapanış formatı (3-parçalı manifesto, tek paragraf editöryal, soru-c
 
 ## Article-Log "Notlar" Sütunu — Kalıp Seçim Kaydı
 
-Her yayın sonrası `writers/<yazar>-article-log.md` "Notlar" sütununa kalıp seçim özeti yazılır:
+Her yayın sonrası `icerik/yazar-onaylari/<yazar>/article-log.md` "Notlar" sütununa kalıp seçim özeti yazılır:
 
 ```
 | <slug> | açılış: #N (<varyant adı>) | dengeleyici: #N veya yok | kapanış formatı: #N | hekim çerçevesi: #N (varsa) | anekdot kapısı: #N (varsa) | bilmiyorum: #N (varsa) | imza kapanış cümlesi: var(#N + sembol) veya yok | humor: #N veya 0 |
@@ -124,7 +124,7 @@ Tüm 8 yazarın profile.yaml `dynamics.cooldown_overrides:` bloğunda v2.6 sonra
 
 ```yaml
 dynamics:
-  log_path: "../<yazar-slug>-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/<yazar-slug>/article-log.md"
   birth_year: <YYYY>
   # v2.6 — Şablon Kırma Disiplini cooldown'ları
   # docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md tüm yazarlar için evrensel.

@@ -43,7 +43,7 @@ file_layout:
   warm: "./warm.md"
   cold: "./cold.md"
   hidden: "./hidden.md"
-  article_log: "../ersin-sarac-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/ersin-sarac/article-log.md"
   citations_dir: "./citations/"
 
 section_index:
@@ -305,7 +305,7 @@ clinical_spine:
     - "Yaş farkı içtenlik kapısı değil — klinisyen mesafesi korunur"
 
 dynamics:
-  log_path: "../ersin-sarac-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/ersin-sarac/article-log.md"
   birth_year: 1993  # Doğrulanmış (Pain Free Nişantaşı sitesinden)
   cooldown_overrides: {}
   cooldown_exempt: []

@@ -11,8 +11,10 @@
   "package": {
     "createdAt": "{{SENT_ISO}}",
     "deadline": "{{DEADLINE_ISO}}",
-    "status": "pending",
-    "estimatedFormDuration": "10 dakika",
+    "status": "pending-author-approval",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
     "targetEmail": "{{TARGET_EMAIL}}"
   }
 }

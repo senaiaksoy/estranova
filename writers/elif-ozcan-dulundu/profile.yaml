@@ -37,7 +37,7 @@ file_layout:
   warm: "./warm.md"
   cold: "./cold.md"
   hidden: "./hidden.md"
-  article_log: "../elif-ozcan-dulundu-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/elif-ozcan-dulundu/article-log.md"
   citations_dir: "./citations/"
 
 section_index:
@@ -300,7 +300,7 @@ clinical_spine:
     - "Önce-sonra hikayesi MUTLAK YASAK"
 
 dynamics:
-  log_path: "../elif-ozcan-dulundu-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/elif-ozcan-dulundu/article-log.md"
   birth_year: 1968  # Tahmini — İstanbul Üniv. 1991 mezuniyet varsayımı
   cooldown_overrides: {}
   cooldown_exempt: []

@@ -68,7 +68,7 @@ file_layout:
   cold: "./cold.md"
   hidden: "./hidden.md"
   readme: "./README.md"
-  article_log: "../duygu-karaosmanoglu-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/duygu-karaosmanoglu/article-log.md"
   citations_dir: "./citations/"
 
 section_index:
@@ -367,7 +367,7 @@ clinical_spine:
     - "**Eski v2.0 lifestyle eksenleri MUTLAK YASAK**"
 
 dynamics:
-  log_path: "../duygu-karaosmanoglu-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/duygu-karaosmanoglu/article-log.md"
   birth_year: 1971  # Tahmini — Ege Üniv. 1994 mezuniyet varsayımı
   cooldown_overrides: {}
   cooldown_exempt: []

@@ -28,7 +28,7 @@ file_layout:
   warm: "./warm.md"
   cold: "./cold.md"
   hidden: "./hidden.md"
-  article_log: "../alp-aslan-eryilmaz-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/alp-aslan-eryilmaz/article-log.md"
   citations_dir: "./citations/"
 
 section_index:
@@ -331,7 +331,7 @@ clinical_spine:
     - "Promosyonel pioneer vitrini YASAK ('Türkiye'nin ilk TAVİ ekibi' makale gövdesinde değil — biyografi sayfasında)"
 
 dynamics:
-  log_path: "../alp-aslan-eryilmaz-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/alp-aslan-eryilmaz/article-log.md"
   birth_year: 1973  # Tahmini — Akdeniz 1991-1997 mezuniyet varsayımı
   cooldown_overrides: {}
   cooldown_exempt: []

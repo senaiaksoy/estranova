@@ -25,7 +25,7 @@ file_layout:
   cold: "./cold.md"
   hidden: "./hidden.md"
   readme: "./README.md"
-  article_log: "../senai-aksoy-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/senai-aksoy/article-log.md"
   citations_dir: "./citations/"
 
 # ---------------------------------------------------------------------
@@ -498,7 +498,7 @@ clinical_spine:
     - "Kişiselleştirme felsefesi yargısız ('haute couture' jargonu yazıya birebir girmez — 'herkes farklı, karar bireysel' Türkçe karşılığı)"
 
 dynamics:
-  log_path: "../senai-aksoy-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/senai-aksoy/article-log.md"
   birth_year: 1962
   # v2.6 (2026-05-02) — Şablon Kırma Disiplini cooldown'ları (evrensel kural).
   # Detay: docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md

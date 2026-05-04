@@ -1,0 +1,20 @@
+{
+  "writer": {
+    "slug": "berna-aksoy",
+    "name": "Berna Aksoy"
+  },
+  "article": {
+    "slug": "40-sonrasi",
+    "title": "40 Sonrası Sağlık",
+    "previewUrl": "https://estranova.com.tr/hormonal-gecis/40-sonrasi"
+  },
+  "package": {
+    "createdAt": "2026-05-04T13:20:24.228Z",
+    "deadline": "2026-05-11T13:20:24.228Z",
+    "status": "pending-author-approval",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}

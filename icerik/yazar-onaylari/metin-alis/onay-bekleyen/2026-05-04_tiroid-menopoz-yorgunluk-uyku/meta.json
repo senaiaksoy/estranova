@@ -1,0 +1,20 @@
+{
+  "writer": {
+    "slug": "metin-alis",
+    "name": "Dr. Metin Alış"
+  },
+  "article": {
+    "slug": "tiroid-menopoz-yorgunluk-uyku",
+    "title": "Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni",
+    "previewUrl": "https://estranova.com.tr/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku"
+  },
+  "package": {
+    "createdAt": "2026-05-04T13:20:32.890Z",
+    "deadline": "2026-05-11T13:20:32.890Z",
+    "status": "pending-author-approval",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}

@@ -23,7 +23,7 @@ file_layout:
   cold: "./cold.md"
   hidden: "./hidden.md"
   readme: "./README.md"
-  article_log: "../isik-selin-gunce-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/isik-selin-gunce/article-log.md"
   citations_dir: "./citations/"
 
 # ---------------------------------------------------------------------
@@ -446,7 +446,7 @@ mevlana_spine:
   secondary_sufi_sources: []
 
 dynamics:
-  log_path: "../isik-selin-gunce-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/isik-selin-gunce/article-log.md"
   birth_year: 1979
   # v2.6 (2026-05-02) — Şablon Kırma Disiplini cooldown'ları (evrensel kural).
   # Detay: docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md

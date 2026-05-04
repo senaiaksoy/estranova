@@ -31,7 +31,7 @@ file_layout:
   warm: "./warm.md"
   cold: "./cold.md"
   hidden: "./hidden.md"
-  article_log: "../gonca-gokdemir-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/gonca-gokdemir/article-log.md"
   citations_dir: "./citations/"
 
 section_index:
@@ -299,7 +299,7 @@ clinical_spine:
     - "Önce-sonra hikayesi MUTLAK YASAK"
 
 dynamics:
-  log_path: "../gonca-gokdemir-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/gonca-gokdemir/article-log.md"
   birth_year: 1965  # Tahmini — 25+ yıl uzmanlık varsayımı
   cooldown_overrides: {}
   cooldown_exempt: []

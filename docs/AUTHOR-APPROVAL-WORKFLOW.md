@@ -1,6 +1,6 @@
 # Yazar Onay İş Akışı
 
-> **Amaç:** Estranova'da yeni bir makale yazara onaya gönderilirken, onaylanırken veya revizyon istenirken kullanılacak **klasör yapısı + form akışı + komut iskeleti**. Yazarın tek tıkla yanıt verebileceği, en fazla 10 dakikalık tıklanabilir form.
+> **Amaç:** Estranova'da yeni bir makale yazara onaya gönderilirken, revizyon döngüsü yürütülürken ve yalnızca yazar onayı sonrasında yayına alınırken kullanılacak **kanonik klasör yapısı + 5 dakikalık form akışı + komut iskeleti**.
 
 ---
 
@@ -8,27 +8,51 @@
 
 ```
 icerik/
-  yazarlar/                            (yazar bazlı kalıcı arşiv)
+  yazar-onaylari/                      (tek yazar onay arşivi)
     <slug>/
       README.md                        (yazar başlığı + makale sayısı)
-      yayinlanan/                      (onaylı + yayında olan makaleler — markdown kopyaları)
-        2026-05-03_<makale-slug>.md
-      onay-belgeleri/                  (yazarın doldurduğu form yanıtları — JSON)
-        2026-05-03_<makale-slug>.json
-  onay-bekleyen/                       (yazarın yanıt vermesi beklenen geçici paketler)
-    <slug>/
-      <YYYY-MM-DD>_<makale-slug>/
-        kontrol-formu.html             (10 dk tıklanabilir form, tek başına çalışır)
-        makale-onizleme.html           (yazıyı tarayıcıda okumayı kolaylaştıran landing)
-        meta.json                      (gönderim/deadline/status meta verisi)
+      article-log.md                   (varsa akümülatif üretim günlüğü)
+      onay-bekleyen/                   (yazar yanıtı bekleyen paketler)
+        <YYYY-MM-DD>_<makale-slug>/
+          kontrol-formu.html           (5 dk tıklanabilir onay formu, tek başına çalışır)
+          makale-onizleme.html         (yazıyı tarayıcıda okumayı kolaylaştıran landing)
+          <yazar>-makale.pdf           (yazara giden makale PDF'i)
+          <yazar>-onay-formu.pdf       (imza/onay PDF'i)
+          meta.json                    (gönderim/deadline/status meta verisi)
+      onaylanan/                       (onayı alınmış paketler)
+        <YYYY-MM-DD>_<makale-slug>/
+          ...                          (aynı paket + yazar yanıtı/karar kaydı)
   yayinlanmis-makaleler/               (mevcut export — kronolojik dump, dokunulmaz)
     2026-05/...
 ```
 
 **İlke:**
-- `icerik/yazarlar/<slug>/` her yazarın **kalıcı arşivi** — yazıları + onay belgeleri yan yana.
-- `icerik/onay-bekleyen/` **geçici depo** — onay sonrası dosyalar `yazarlar/<slug>/`'a taşınır.
+- `icerik/yazar-onaylari/<slug>/` her yazarın **tek kalıcı onay arşivi** — bekleyen paket, onay belgesi, makale PDF'i ve yazar yanıtı yan yana.
+- `onay-bekleyen/` **aktif iş kuyruğu**, `onaylanan/` **tamamlanmış onay arşivi** olarak aynı yazar klasörü altında durur.
+- `article-log.md` yazarın **akümülatif makale günlüğüdür**; şablon cooldown ve yazar sesi sürekliliği bu dosyadan okunur.
 - `icerik/yayinlanmis-makaleler/` **dokunulmaz kronolojik dump** (`npm run articles:export` çıktısı, audit log).
+
+**Yayın kapısı (hard gate):**
+- Bir makale üretildiğinde **doğrudan siteye yayınlanmaz**; önce `onay-bekleyen/` paketine girer.
+- Her yeni taslak veya revizyonla birlikte **yeni 5 dakikalık onay formu** üretilir.
+- Yazar formda **DEĞİŞİKLİK İSTİYORUM** derse istenen değişiklik yapılır; revize makale için yeni paket/form üretilir ve süreç tekrar başlar.
+- Yazar formda **ONAYLIYORUM** demeden makale `main` yayın akışına, site indekslerine, `article-approvals.ts` kaydına veya `onaylanan/` klasörüne alınmaz.
+- Yazar onayı geldiğinde yanıt aynı pakete kaydedilir; paket `onaylanan/` altına taşınır ve ancak bu noktadan sonra yayın adımları başlar.
+
+**Editör doğrudan onayı istisnası:**
+- `berna-aksoy`, `alara-baykent` ve `senai-aksoy` için 5 dakikalık yazar onay formu zorunlu değildir.
+- Bu üç yazarın yazılarında yayın kapısı **KC editör doğrudan onayı** ile açılır.
+- Doğrudan onay yine iz bırakır: `src/data/article-approvals.ts` kaydında `note` alanına "KC editör doğrudan onayı" + tarih/bağlam yazılır.
+- Varsa ilgili paket `icerik/yazar-onaylari/<slug>/onaylanan/` altına taşınır; paket yoksa `article-log.md` içinde "Doğrudan editör onayı" satırı tutulur.
+- Bu istisna yalnızca onay formu zorunluluğunu kaldırır; tıbbi doğruluk, BEN, Evidence, yayın checklist'i ve stil disiplinini kaldırmaz.
+
+**Stil öğrenme kaynağı:**
+- Her form yanıtı aynı zamanda yazarın stil profilini geliştiren yapılandırılmış geri bildirimdir.
+- Editör doğrudan onayı kapsamındaki üç yazarda form yoksa, KC'nin editöryal onay notu stil sinyali olarak kullanılabilir.
+- Likert yanıtları, kritik toggle'lar ve serbest yorumlar önce paket içinde ham kayıt olarak saklanır; doğrudan profile otomatik yazılmaz.
+- AI agent yanıtı özetleyerek `article-log.md` içine "form sinyali / stil etkisi / önerilen profil güncellemesi" olarak işler.
+- Kalıcı profil değişikliği ancak editör onayıyla `writers/<slug>/profile.yaml`, `hot.md`, `warm.md`, `cold.md` veya `hidden.md` dosyalarına geçirilir.
+- Tek bir formdaki geçici tercih yazarın kalıcı sesi sayılmaz; aynı sinyal birkaç makalede tekrar ederse güçlü stil kuralına dönüşür.
 
 ---
 
@@ -36,13 +60,15 @@ icerik/
 
 ### 1. Makale yazılır
 
-AI agent yeni bir makaleyi `src/pages/<kategori>/<slug>.astro` olarak oluşturur (mevcut [`docs/ARTICLE-PRODUCTION-SPEC.md`](ARTICLE-PRODUCTION-SPEC.md) faz 1-4).
+AI agent yeni bir makaleyi taslak olarak hazırlar. Taslak kaynak dosya veya önizleme hazırlanabilir, ancak yazar onayı gelene kadar makale **yayın statüsünde değildir** ve siteye canlı içerik olarak alınmaz.
 
 ### 2. Onay paketi üretilir
 
 ```bash
 npm run author:send-for-approval -- --slug <writer-slug> --article <article-pathname>
 ```
+
+> `berna-aksoy`, `alara-baykent`, `senai-aksoy` için bu adım zorunlu değildir. Bu üç yazar için KC editör doğrudan onayı yeterlidir; kayıt `article-approvals.ts` ve/veya `article-log.md` içinde tutulur.
 
 Örnek:
 
@@ -67,11 +93,12 @@ Script şunları yapar:
 
 1. `src/data/writers.ts`'ten yazarın `displayName`'ini okur.
 2. `src/pages/<pathname>.astro` dosyasından `articleTitle` ve `articleDescription`'ı parse eder.
-3. `icerik/onay-bekleyen/<slug>/<YYYY-MM-DD>_<son-segment>/` klasörünü açar.
-4. Üç dosya üretir:
+3. `icerik/yazar-onaylari/<slug>/onay-bekleyen/<YYYY-MM-DD>_<son-segment>/` klasörünü açar.
+4. En az üç dosya üretir:
    - **`kontrol-formu.html`** — `templates/kontrol-formu.template.html`'in placeholder'ları doldurulmuş hali.
    - **`makale-onizleme.html`** — yazı için yönlendirme sayfası (canlı URL + form linki).
-   - **`meta.json`** — gönderim tarihi, deadline (default +7 gün), durum (`pending`).
+   - **`meta.json`** — gönderim tarihi, deadline (default +7 gün), durum (`pending-author-approval`) ve stil öğrenme kapısı.
+   - Varsa **makale PDF'i / markdown örneği / kaynak kopyası** aynı pakete eklenir.
 5. Yazara iletilecek dosya yollarını ve email konu satırını terminale basar.
 
 ### 3. Yazara iletilir
@@ -79,15 +106,15 @@ Script şunları yapar:
 Editör (manuel olarak) yazara email atar:
 
 > *Sevgili [Yazar Adı],*
-> *[Makale Başlığı] başlıklı taslağı senin onayına sunuyorum. Aşağıdaki linkten 10 dakika içinde formu doldurabilirsin:*
-> *file:///.../icerik/onay-bekleyen/<slug>/<klasör>/kontrol-formu.html*
+> *[Makale Başlığı] başlıklı taslağı senin onayına sunuyorum. Aşağıdaki linkten yaklaşık 5 dakika içinde formu doldurabilirsin:*
+> *file:///.../icerik/yazar-onaylari/<slug>/onay-bekleyen/<klasör>/kontrol-formu.html*
 > *Yazıya: [canlı önizleme URL'i]*
 
 ### 4. Yazar formu doldurur
 
 `kontrol-formu.html` tarayıcıda açılır — **internet bağımlılığı yok**, tek başına çalışır.
 
-İki form tipi vardır; AI agent makaleyi onaya gönderirken `--first-article` bayrağıyla seçim yapar:
+Kanonik yayın kapısı **standart 5 dakikalık onay formudur**. İlk makalede stil rafinesi gerekiyorsa ek uzun form kullanılabilir; bu uzun form yayın onayı sürecinin yerine geçmez, yalnızca yazar sesini geliştiren yardımcı bir kalibrasyon aracıdır.
 
 #### Standart form (~5 dk, 7 alan) — yazarın 2. ve sonraki makaleleri için
 
@@ -96,7 +123,7 @@ Editör (manuel olarak) yazara email atar:
 - **Bölüm 3 — Yorumunuz (opsiyonel textarea):** kısa not.
 - **Karar (2 büyük buton):** ✓ **ONAYLIYORUM** veya ✏ **DEĞİŞİKLİK İSTİYORUM**.
 
-#### Stil rafine + onay formu (~10 dk, 14 alan) — yazarın İLK framework makalesi için (bir defaya mahsus)
+#### Opsiyonel stil rafine formu (~10 dk, 14 alan) — yazarın İLK framework makalesi için yardımcı kalibrasyon
 
 - **Bölüm 1 — Genel ses (5 likert):** sesi tanıma + dürüstlük + pazarlama hissi + yapısal yoğunluk + kanıt seviyesi
 - **Bölüm 2 — Kritik kontrol (4 toggle):** Çift Rol + yasak ad + BEN ayrı blok + hasta sızıntısı
@@ -109,7 +136,7 @@ Editör (manuel olarak) yazara email atar:
 - **Bölüm 4 — Açık yorum (textarea, max 600 karakter)**
 - **Karar:** ✓ ONAYLIYORUM / ✏ DEĞİŞİKLİK İSTİYORUM
 
-**Bölüm 3 yanıtları** profil dosyalarına işlenir (manuel editör adımı); sonraki makalelerde stil yazara belirgin biçimde yaklaşır.
+**Form yanıtları** profil dosyalarını geliştirmek için kullanılır; ancak profil güncellemesi manuel editör adımıdır. Bölüm 3 ve açık yorum yanıtları önce `article-log.md` içinde özetlenir, sonra gerekirse profile işlenir.
 
 **JSON payload `formType` alanı:** `'standard'` veya `'first-article-style-refine'`. Editör email'de bu alana bakarak sürecin hangi tipte olduğunu anlar.
 
@@ -122,15 +149,36 @@ Yazar karara bastığında JS form datasını JSON'a serialize eder ve `mailto:d
 
 Yazar email'i gönderir (gönderim alışkanlığında olduğu istemcide otomatik açılır).
 
-### 6. Editör onay sonrasını işler
+### 6. Editör yanıtı işler
 
 Email'i alan editör:
 
-1. JSON payload'ı `icerik/yazarlar/<slug>/onay-belgeleri/<YYYY-MM-DD>_<makale-slug>.json` olarak kaydeder.
-2. Eğer onay → makale markdown'ını `icerik/yazarlar/<slug>/yayinlanan/`'a kopyalar (`npm run articles:export` zaten dual-write yapacak — Aşama 2'de eklenecek).
-3. `src/data/article-approvals.ts`'e entry ekler (mevcut pattern korunur).
-4. `icerik/onay-bekleyen/<slug>/<klasör>/`'yi temizler.
-5. Eğer revizyon → AI agent ile birlikte yorumdaki revizyonları uygular, yeni paket üretir, akışı tekrar başlatır.
+1. JSON payload'ı aynı paketin içine `yazar-yaniti.json` veya `onay-yaniti.json` olarak kaydeder.
+2. Yanıttaki stil sinyallerini işler:
+   - Likertlerde düşük puan alan alanları "kaçınılacak eğilim" olarak özetler.
+   - Yazarın beğendiği ritim, başlık, açıklık veya mizah tercihlerini "güçlenen imza" olarak not eder.
+   - Serbest yorumu birebir profile kopyalamaz; editöryal özete çevirir.
+   - `icerik/yazar-onaylari/<slug>/article-log.md` dosyasına form sinyali ve önerilen profil etkisini ekler.
+   - Kalıcı profil değişikliği gerekiyorsa editör onayından sonra `writers/<slug>/` dosyalarına işler.
+3. Eğer karar **DEĞİŞİKLİK İSTİYORUM** ise:
+   - Yazarın istediği değişiklik makaleye uygulanır.
+   - Eski paket revizyon izi olarak `onay-bekleyen/` altında kalır veya `revizyon-1`, `revizyon-2` notuyla korunur.
+   - Revize makale için **yeni 5 dakikalık onay formu** ve yeni paket üretilir.
+   - Editör yeni paketi yazara tekrar gönderir.
+4. Eğer karar **ONAYLIYORUM** ise:
+   - Onay yanıtı aynı pakete kaydedilir.
+   - Tüm paket `icerik/yazar-onaylari/<slug>/onaylanan/<YYYY-MM-DD>_<makale-slug>/` altına taşınır.
+   - `src/data/article-approvals.ts`, hub/sayı indeksleri ve yayın kayıtları ancak bu aşamada güncellenir.
+   - Makale ancak bu aşamadan sonra siteye yayınlanır.
+
+### 6.1 Editör doğrudan onayı nasıl işlenir?
+
+Berna Aksoy, Alara Baykent veya Senai Aksoy yazısında KC doğrudan onay verdiyse:
+
+1. `src/data/article-approvals.ts` içine ilgili pathname için kayıt eklenir.
+2. `note` alanı şu formatı taşır: `KC editör doğrudan onayı — <tarih> — <kısa bağlam>`.
+3. Varsa onay bekleyen paket `onaylanan/` altına taşınır; yoksa `article-log.md` satırında doğrudan onay ve stil notu tutulur.
+4. Yayın/hub/sayı indeksleri ancak bu kayıt sonrası güncellenir.
 
 ---
 
@@ -141,7 +189,7 @@ Tüm placeholder'lar `{{ALL_CAPS_SNAKE}}` formatında. Script substitution yapar
 | Template | Form tipi | Placeholder'lar |
 |---|---|---|
 | `templates/kontrol-formu.template.html` | Standart (~5 dk) | `{{WRITER_NAME}}`, `{{WRITER_SLUG}}`, `{{ARTICLE_TITLE}}`, `{{ARTICLE_SLUG}}`, `{{PREVIEW_URL}}`, `{{SENT_DATE}}`, `{{DEADLINE_DATE}}`, `{{TARGET_EMAIL}}` |
-| `templates/kontrol-formu-uzun.template.html` | İlk makale stil rafine (~10 dk) | Aynı placeholder seti |
+| `templates/kontrol-formu-uzun.template.html` | Opsiyonel ilk makale stil rafine (~10 dk) | Aynı placeholder seti |
 | `templates/makale-onizleme.template.html` | — | `{{WRITER_NAME}}`, `{{ARTICLE_TITLE}}`, `{{PREVIEW_URL}}`, `{{FORM_URL}}` (relative `./kontrol-formu.html`) |
 | `templates/meta.template.json` | — | Yukarıdakilerin yapısal versiyonu + `status` `createdAt` `deadline` |
 
@@ -151,8 +199,8 @@ Tüm placeholder'lar `{{ALL_CAPS_SNAKE}}` formatında. Script substitution yapar
 
 | Komut | Ne yapar |
 |---|---|
-| `npm run authors:init-folders` | `src/data/writers.ts`'teki tüm yazarlar için `icerik/yazarlar/<slug>/{yayinlanan,onay-belgeleri}/` iskeletini açar (bir kerelik). |
-| `npm run author:send-for-approval -- --slug X --article /path` | Yeni onay paketi üretir. |
+| `npm run authors:init-folders` | `src/data/writers.ts`'teki tüm yazarlar için `icerik/yazar-onaylari/<slug>/{onay-bekleyen,onaylanan}/` iskeletini açar (bir kerelik). |
+| `npm run author:send-for-approval -- --slug X --article /path` | Yeni 5 dakikalık yazar onay paketi üretir. Her revizyon turunda yeniden çalıştırılır. |
 | `npm run articles:status` | (mevcut) onaylı/onaysız makale dökümü. |
 | `npm run articles:export` | (mevcut) yayınlanmış makaleleri markdown'a döker. v2'de dual-write yapacak. |
 
@@ -160,22 +208,22 @@ Tüm placeholder'lar `{{ALL_CAPS_SNAKE}}` formatında. Script substitution yapar
 
 ## Kapsam ve aşamalar
 
-**v1 (şu an):** Klasör yapısı + 3 template + 2 script (init + paket üretici) + dokümantasyon. Mevcut 21 onaylı makale (Berna 13 + Senai 8) `article-approvals.ts`'te kalır; yeni makaleler bu sistemden geçer.
+**v1 (şu an):** Klasör yapısı + 3 template + 2 script (init + paket üretici) + dokümantasyon. Yeni makaleler yazar onayı gelmeden yayınlanmaz; onay gelene kadar `onay-bekleyen/` altında kalır.
 
-**v2 (sonraki):** `articles:export` script'ini extend et — dual-write hem `yayinlanmis-makaleler/` hem `yazarlar/<slug>/yayinlanan/`'a yazsın. Mevcut 21 makaleyi retrofit etmek için bir kerelik script.
+**v2 (sonraki):** Onaylanan paketlere yazar yanıtı, karar tarihi ve gerekirse markdown/PDF export kopyası ekleyen otomasyonu genişlet. Mevcut 21 makaleyi retrofit etmek için bir kerelik script.
 
 **v3 (opsiyonel):** Form yanıtını mailto yerine Cloudflare Pages Function endpoint'ine POST eden HTTP akışı (Resend Faz 3 aktivasyonu sonrası).
 
 ---
 
-## Form süre hedefi (10 dk)
+## Form süre hedefi (5 dk)
 
 - 3 likert (slider veya 5 radio button) ≈ 90 sn
 - 3 yes/no/uygulanmaz toggle ≈ 60 sn
 - 1 opsiyonel textarea (max 200 karakter) ≈ 90 sn
-- Yazıyı önizleme süresi ≈ 5-6 dakika (yazara bırakılır, form süreye dahil değil)
+- Yazıyı önizleme süresi yazara bırakılır, form süreye dahil değildir.
 - Karar + email gönderim ≈ 30 sn
-- **Toplam form süresi: ~5 dakika** (yazıyı okuma dahil 10 dk hedefi rahatça yakalanır)
+- **Toplam form süresi: ~5 dakika**
 
 ---
 
@@ -187,4 +235,5 @@ Form yanıtı email yoluyla iletilir; yazar göndermeden önce JSON payload'ı t
 
 ## Versiyon
 
+- **v1.1** (2026-05-04) — Kanonik yayın kapısı netleştirildi: her taslak/revizyon için 5 dakikalık onay formu, değişiklik istenirse yeni revizyon paketi, yalnızca yazar onayı sonrası yayın + `onaylanan/`.
 - **v1.0** (2026-05-03) — İlk yayım. Klasör yapısı + 3 template + 2 script + dokümantasyon. Pilot: yeni Senai/Berna makaleleri için.

@@ -64,7 +64,7 @@ Yazarın `hot.md §4`'üne bak:
     1. AI agent yazarın `cold.md / warm.md / hot.md / hidden.md` profillerini okur
     2. Yazarın sosyal haritasından, mesleki arka planından, ses imzasından, mevcut makale arşivinden (varsa) türeterek **8 imza kalıbı için minimum havuz boyutu** önerir (açılış 10, anekdot kapısı 10, dengeleyici 10, bilmiyorum 10, hekim çerçevesi 10, kapanış formatı 10, imza kapanış 6+atlama, humor 8-10)
     3. **Kullanıcıya sunar**: "Şu yazar için Şablon Kırma havuzu önerim: [...]"
-    4. Onay sonrası AI agent havuzu yazarın `hot.md §4`'üne yazar (`writer_version` minor bump)
+    4. İnsan editör onayı sonrası AI agent havuzu yazarın `hot.md §4`'üne yazar (`writer_version` minor bump)
     5. Sonra 1.5.1'e geçilir
 
 > **Yapay boilerplate yasak:** Havuz alfabetik sıralı/jenerik üretilemez. Yazarın **canlı dokümantasyonundan** türetilir; yapay üretim yazardan kopuk olur.
@@ -73,7 +73,7 @@ Yazarın `hot.md §4`'üne bak:
 
 ### 1.5.1 Article log'u oku
 
-`writers/<yazar-slug>-article-log.md` dosyasını oku. Log boşsa (yazarın ilk makalesi) bu adım atlanır, doğrudan 1.5.3'e geç.
+`icerik/yazar-onaylari/<yazar-slug>/article-log.md` dosyasını oku. Log boşsa veya henüz yoksa (yazarın ilk makalesi) bu adım atlanır, doğrudan 1.5.3'e geç.
 
 ### 1.5.2 Cooldown filtreleri uygula
 
@@ -159,7 +159,7 @@ writers/<slug>.md   tek dosya, tüm bölümler (§0 + §3 + §4 + §0.5 [v3.2 va
 **Yan dosyalar** (her iki formatta da klasör dışı, paylaşılan):
 
 ```
-writers/<slug>-article-log.md       akümülatif log (Writer Dynamics Framework Katman B)
+icerik/yazar-onaylari/<slug>/article-log.md  akümülatif log (Writer Dynamics Framework Katman B)
 writers/<slug>-alintilar.md         korpus (varsa)
 writers/<slug>-aphorism-pool.md     aforizma havuzu (varsa)
 ```
@@ -181,7 +181,7 @@ Pre-script şunları yapar:
 1. `profile.yaml`'ı oku (`section_index`, `topic_sections`, `dynamics`, `dual_role_warning`, `citations`)
 2. Konuyu `topic_sections`'a eşle (exact ya da fallback)
 3. Yüklenecek dosya listesini üret: hot.md (zorunlu) + ilgili warm/cold/hidden bölümleri
-4. `<slug>-article-log.md`'den cooldown listesi çıkar (Faz 1.5.2 ile uyumlu)
+4. `icerik/yazar-onaylari/<slug>/article-log.md`'den cooldown listesi çıkar (Faz 1.5.2 ile uyumlu)
 5. `dual_role_warning.active=true` ise hidden.md'yi listeye ekle ve uyarı bayrağını çıkar
 6. Atıf çerçevesi referanslarını ekle (canonical/extended/pending path'leri + frekans kuralı)
 7. Çelişki çözüm zincirini sırasıyla yazdır
@@ -190,7 +190,7 @@ Pre-script şunları yapar:
 - Default (`--writer X --topic Y`): markdown (insan-okur, AI prompt'a manuel kopya)
 - `--json`: yapısal JSON (programatik enjekte için)
 
-**Legacy yazarlar için:** Pre-script yok; AI agent doğrudan `writers/<slug>.md`'i + `<slug>-article-log.md`'i okur, cooldown'u Faz 1.5.2 kurallarına göre kendi çıkarır.
+**Legacy yazarlar için:** Pre-script yok; AI agent doğrudan `writers/<slug>.md`'i + `icerik/yazar-onaylari/<slug>/article-log.md`'i okur, cooldown'u Faz 1.5.2 kurallarına göre kendi çıkarır.
 
 **Drift kontrolü:** `npm run writers:lint` (modüler yazarlar) — `profile.yaml ↔ markdown anchor` doğrulaması, `file_layout` dosya varlığı, `dual_role+hidden` tutarlılığı. CI'a bağlanma planı: Aşama 3.
 
@@ -423,6 +423,8 @@ Zorunlu yapı:
 
 ## Faz 5 — Pre-publish Checklist (YAYIN ÖNCESİ ZORUNLU)
 
+> **Yazar onayı hard gate:** Faz 5 kontrolleri tamamlanan makale dahi doğrudan yayınlanmaz. Önce `npm run author:send-for-approval` ile 5 dakikalık yazar onay paketi üretilir ve paket `icerik/yazar-onaylari/<slug>/onay-bekleyen/` altında kalır. Yazar formda **ONAYLIYORUM** demeden makale `main` yayın akışına, hub/sayı indekslerine, `article-approvals.ts` kaydına veya `onaylanan/` klasörüne alınamaz. İstisna: `berna-aksoy`, `alara-baykent`, `senai-aksoy` için form zorunlu değildir; KC editör doğrudan onayı `article-approvals.ts` ve/veya `article-log.md` içinde kayıtlıysa yayın kapısı açılır. Aynı form yanıtı veya doğrudan onay notu yazar stilini geliştirmek için de kullanılır; ham yanıt pakette kalır, stil özeti `article-log.md`'a işlenir, kalıcı profil değişikliği editör onayıyla yapılır.
+
 | # | Kontrol | Sonuç |
 |---|---|---|
 | 1 | Yazar §13 self-check (varsa, v3.2'de zorunlu — Gamze) — 0-1 hayır kabul, 2+ revizyon | ☐ |
@@ -442,12 +444,29 @@ Zorunlu yapı:
 | 15 | Yasak filtreleri temiz (URL, kuruluş adı, marka, HRT/ilaç adı, lüks dekor, sosyal/siyasi yorum) | ☐ |
 | 16 | Tıbbi sorumluluk reddi disclaimer'ı görünür (CLAUDE.md §1) | ☐ |
 | 17 | Dil: %100 Türkçe (CLAUDE.md Dil politikası) | ☐ |
+| 18 | Yazar onayı yolu seçildi: standart yazar formu veya `berna-aksoy` / `alara-baykent` / `senai-aksoy` için KC editör doğrudan onayı | ☐ |
+| 19 | Standart yazarlar için 5 dakikalık onay paketi `onay-bekleyen/` altında; istisna yazarlar için KC doğrudan onay kaydı hazırlanmış | ☐ |
+| 20 | Form yanıtı veya KC doğrudan onay notu geldiğinde stil sinyallerinin `article-log.md`'a özetleneceği ve kalıcı profil değişikliğinin editör onayı gerektirdiği not edildi | ☐ |
 
-**13-17 herhangi birinde "hayır" → otomatik büyük revizyon.** Yayın engellenir.
+**13-20 herhangi birinde "hayır" → otomatik büyük revizyon veya yazar onay döngüsü.** Yayın engellenir.
+
+### 5.1 Yazar Onay Döngüsü
+
+1. Makale taslağı tamamlanınca `npm run author:send-for-approval -- --slug <writer-slug> --article <article-pathname>` çalıştırılır.
+2. `berna-aksoy`, `alara-baykent`, `senai-aksoy` için form zorunlu değildir; KC doğrudan onay verirse `article-approvals.ts` kaydı ve `article-log.md` notu yeterlidir.
+3. Standart yazarlar için oluşan paket `icerik/yazar-onaylari/<slug>/onay-bekleyen/<YYYY-MM-DD>_<makale-slug>/` altında tutulur.
+4. Editör 5 dakikalık `kontrol-formu.html` dosyasını yazara gönderir.
+5. Yazar **DEĞİŞİKLİK İSTİYORUM** derse yanıt aynı pakete kaydedilir, makale revize edilir ve revizyon için yeni makale + yeni 5 dakikalık onay formu üretilir.
+6. Her form yanıtı veya KC doğrudan onay notu stil öğrenme girdisi olarak değerlendirilir: düşük puanlar kaçınılacak eğilimlere, yüksek puanlar güçlenen imzalara, serbest yorumlar/editör notları editöryal özete dönüştürülür.
+7. Stil sinyali `icerik/yazar-onaylari/<slug>/article-log.md` dosyasına yazılır; `writers/<slug>/` profil dosyalarına kalıcı değişiklik yalnızca editör onayıyla geçirilir.
+8. Standart yazarlarda döngü yazar **ONAYLIYORUM** diyene kadar sürer; istisna yazarlarda KC doğrudan onayı yeterlidir.
+9. Onay geldiğinde paket varsa `onaylanan/` altına taşınır ve ancak bundan sonra Faz 6 yayın adımları başlar.
 
 ---
 
-## Faz 6 — Post-publish
+## Faz 6 — Publish / Post-publish
+
+Faz 6 yalnızca `icerik/yazar-onaylari/<slug>/onaylanan/<paket>/` altında kayıtlı yazar onayı varsa başlar.
 
 - Cloudflare auto-deploy (push = main → site, bkz. `reference_cloudflare_deploy.md`)
 - /symptoms bento entry (gerekirse, bkz. `project_symptoms_audit_2026_04_28.md`)
@@ -461,7 +480,7 @@ Zorunlu yapı:
 
 ### 7.1 Log'a yeni satır ekle
 
-`writers/<yazar-slug>-article-log.md` dosyasının tablosuna yeni satır append. Sütunlar:
+`icerik/yazar-onaylari/<yazar-slug>/article-log.md` dosyasının tablosuna yeni satır append. Sütunlar:
 
 | # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -505,10 +524,13 @@ Detaylı prosedür: Framework Katman D.
 8. Bilimsel Editör Notu 5-katmanlı (150-250 kelime, Senai Aksoy imza).
 9. ArticleAuthorBlock + RelatedReadings 3-5 + Hero (vault).
 10. JSON-LD: buildArticleSchemas().
-11. Pre-publish checklist 17 madde — 13-17 must-pass.
-12. Hub linkage. Compliance ≥85.
-13. Push → Cloudflare auto-deploy.
-14. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.
+11. Pre-publish checklist 18 madde — 13-18 must-pass.
+12. Yazar onay paketi oluştur: `author:send-for-approval` → `onay-bekleyen`.
+13. Yazar değişiklik isterse revizyon + yeni 5 dk form; onay gelene kadar tekrar.
+14. Yazar ONAYLIYORUM dedikten sonra paket `onaylanan` altına taşınır.
+15. Hub linkage. Compliance ≥85.
+16. Push → Cloudflare auto-deploy.
+17. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.
 ```
 
 ---
@@ -520,7 +542,7 @@ Detaylı prosedür: Framework Katman D.
 - **docs/WRITER-DYNAMICS-FRAMEWORK.md** — yazar dinamizm mimarisi (5 katman: DNA / log / temporal / evrim / cross-link)
 - **docs/HANDOFF-modular-writer-profiles.md** — modüler profil mimari geçişi (Aşama 1-3 rollout planı)
 - **writers/_schema/profile.schema.json** — modüler `profile.yaml` JSON Schema (zorunlu alanlar + section_index + citations)
-- **writers/<yazar>-article-log.md** — per-writer akümülatif log (Katman B)
+- **icerik/yazar-onaylari/<yazar>/article-log.md** — per-writer akümülatif log (Katman B)
 - **writers/gamze-cizreli/** — modüler v3.2 protokol (`profile.yaml` + `hot.md §0.5/§4/§5c/§13` + `warm.md` + `cold.md §12 gold-standard` + `hidden.md §5c-ek`)
 - **scripts/article-context-build.mjs** — pre-script: konu+yazar → yüklenecek dosya listesi + cooldown + Çift Rol bayrağı + atıf çerçevesi
 - **scripts/check-writer-profile-consistency.mjs** — drift CI (`npm run writers:lint`)

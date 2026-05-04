@@ -33,7 +33,7 @@ file_layout:
   warm: "./warm.md"
   cold: "./cold.md"
   hidden: "./hidden.md"
-  article_log: "../metin-alis-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/metin-alis/article-log.md"
   citations_dir: "./citations/"
 
 # ---------------------------------------------------------------------
@@ -417,7 +417,7 @@ clinical_spine:
     - "Promosyonel başhekim vitrini YASAK"
 
 dynamics:
-  log_path: "../metin-alis-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/metin-alis/article-log.md"
   birth_year: 1972  # Tahmini — GATA 1995 mezuniyeti varsayımı
   # v2.6 (2026-05-02) Şablon Kırma Disiplini — evrensel kural.
   # v0.1'de havuz boyutu 6; ilk makale öncesi 10'a genişletilecek.

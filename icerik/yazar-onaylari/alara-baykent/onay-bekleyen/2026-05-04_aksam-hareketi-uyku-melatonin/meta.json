@@ -1,0 +1,14 @@
+{
+  "writerSlug": "alara-baykent",
+  "writerName": "Alara Baykent",
+  "articleSlug": "aksam-hareketi-uyku-melatonin",
+  "title": "Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?",
+  "status": "pending-author-approval",
+  "publishedDate": "2026-05-04",
+  "sitePath": "/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin",
+  "sourcePath": "src/pages/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin.astro",
+  "markdownExample": "makale-ornek.md",
+  "styleControlPath": "docs/style-controls/aksam-hareketi-alara-v2-rewrite.md",
+  "archivedAt": "2026-05-04",
+  "notes": "Eşik Sayı 01 için son yazılan Alara Baykent yazısı, yazar onayı bekleyen paket olarak kaynak ve stil kontrol izleriyle birlikte arşivlendi."
+}

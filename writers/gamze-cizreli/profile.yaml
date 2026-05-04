@@ -30,7 +30,7 @@ file_layout:
   readme: "./README.md"
   corpus: "../gamze-cizreli-alintilar.md"
   aphorism_pool: "../gamze-cizreli-aphorism-pool.md"
-  article_log: "../gamze-cizreli-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/gamze-cizreli/article-log.md"
   citations_dir: "./citations/"
 
 # ---------------------------------------------------------------------
@@ -579,7 +579,7 @@ mevlana_spine:
 # Dynamics — Writer Dynamics Framework parametreleri
 # ---------------------------------------------------------------------
 dynamics:
-  log_path: "../gamze-cizreli-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/gamze-cizreli/article-log.md"
   birth_year: 1968
   # v2.6 (2026-05-02) — Şablon Kırma Disiplini cooldown'ları (evrensel kural).
   # Detay: docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md

@@ -126,7 +126,7 @@ if (dualRoleActive && !filesToLoad.has('hidden')) {
 // ---- article log → cooldown ----
 const logPath = profile.dynamics?.log_path
   ? path.resolve(writerDir, profile.dynamics.log_path)
-  : path.join(REPO_ROOT, 'writers', `${writerSlug}-article-log.md`);
+  : path.join(REPO_ROOT, 'icerik', 'yazar-onaylari', writerSlug, 'article-log.md');
 
 let cooldown = {
   aphorism: [],
@@ -254,7 +254,7 @@ const result = {
     `writers/${writerSlug}/profile.yaml + hot.md`,
     `writers/${writerSlug}/warm.md (konu-tetikli)`,
     `writers/${writerSlug}/hidden.md (Çift Rol aktifse)`,
-    `writers/${writerSlug}-article-log.md (cooldown)`,
+    `icerik/yazar-onaylari/${writerSlug}/article-log.md (cooldown)`,
     ...(aphorismPoolPath ? [`${path.relative(REPO_ROOT, aphorismPoolPath).replace(/\\/g, '/')} (aforizma havuzu)`] : []),
     `writers/${writerSlug}/citations/canonical-sources.md (atıf çerçevesi)`,
   ],

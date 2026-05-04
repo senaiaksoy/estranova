@@ -78,7 +78,7 @@ file_layout:
   cold: "./cold.md"
   hidden: "./hidden.md"
   readme: "./README.md"
-  article_log: "../berna-aksoy-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/berna-aksoy/article-log.md"
   citations_dir: "./citations/"
 
 # ---------------------------------------------------------------------
@@ -482,7 +482,7 @@ closing_pattern:
 # Dynamics — Writer Dynamics Framework parametreleri
 # ---------------------------------------------------------------------
 dynamics:
-  log_path: "../berna-aksoy-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/berna-aksoy/article-log.md"
   birth_year: 1969
   # v2.6 — Şablon Kırma Disiplini cooldown'ları (post-mortem sonrası).
   # Framework default'u 6 makale ara (humor için); aşağıdaki override'lar

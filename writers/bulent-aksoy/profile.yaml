@@ -38,7 +38,7 @@ file_layout:
   warm: "./warm.md"
   cold: "./cold.md"
   hidden: "./hidden.md"
-  article_log: "../bulent-aksoy-article-log.md"
+  article_log: "../../icerik/yazar-onaylari/bulent-aksoy/article-log.md"
   citations_dir: "./citations/"
 
 section_index:
@@ -312,7 +312,7 @@ clinical_spine:
     - "Önce-sonra hikayesi MUTLAK YASAK"
 
 dynamics:
-  log_path: "../bulent-aksoy-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/bulent-aksoy/article-log.md"
   birth_year: 1961  # Tahmini — Cerrahpaşa 1979-1985 mezuniyet varsayımı
   cooldown_overrides: {}
   cooldown_exempt: []

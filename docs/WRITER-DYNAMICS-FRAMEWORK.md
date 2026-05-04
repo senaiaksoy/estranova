@@ -13,7 +13,7 @@
 | Katman | Konum | Yenilenme |
 |---|---|---|
 | **A) Statik DNA** | `writers/<yazar>.md` (mevcut profil) | Versiyon bazında (v3.2 → v3.3); ay/yıl bazında değişmez |
-| **B) Akümülatif log** | `writers/<yazar>-article-log.md` | Her makale sonrası satır ekleme |
+| **B) Akümülatif log** | `icerik/yazar-onaylari/<yazar>/article-log.md` | Her makale sonrası satır ekleme |
 | **C) Temporal context** | Runtime (otomatik hesap) | Her makale yazımında |
 | **D) Periyodik evrim review** | İnsan editör + AI pass | Her 10 makale veya 6 ay (hangisi önce) |
 | **E) Inter-article continuity** | Makale gövdesi içinde soft cross-link | Makale yazımında, opsiyonel |
@@ -42,7 +42,7 @@ DNA versiyon bazında evrildi (v2 → v2.1 → v3.1 → v3.2). Versiyon bump bil
 
 ### Konum
 
-`writers/<yazar-slug>-article-log.md`
+`icerik/yazar-onaylari/<yazar-slug>/article-log.md`
 
 ### Schema (8 yazar için ortak — ZORUNLU)
 
@@ -246,7 +246,7 @@ Her yazar profilinin §11 YAML'ında zorunlu blok:
 
 ```yaml
 dynamics:
-  log_path: "./<yazar-slug>-article-log.md"
+  log_path: "../../icerik/yazar-onaylari/<yazar-slug>/article-log.md"
   birth_year: <YYYY>
   cooldown_overrides: {}                  # boş = varsayılan
   cooldown_exempt: []                     # imza-cümle/metafor
@@ -281,7 +281,7 @@ Framework spec dosyasına 2 faz olarak entegre edilir:
 **Konum:** Faz 1 (yazar atama) ile Faz 2 (yazar §0.5 protokolü) arası.
 
 **Adımlar:**
-1. Yazar log dosyasını oku (`writers/<yazar>-article-log.md`)
+1. Yazar log dosyasını oku (`icerik/yazar-onaylari/<yazar>/article-log.md`)
 2. Cooldown filtreleri uygula:
    - Son 6 makaleden aforizma listesi → bu makalede o aforizmalar YASAK
    - Son 4 makaleden manifesto kalıpları → YASAK
@@ -356,7 +356,7 @@ Bu framework yayın tarihinde (2026-04-29) zaten yayınlanmış makaleler var. R
 - **docs/ARTICLE-PRODUCTION-SPEC.md** — makale üretimi 6-fazlı spec; Faz 1.5 + Faz 7 framework'e bağlanır
 - **docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md** — v2.6 evrensel şablon kırma kuralları (8 imza kalıbı + cooldown standartları + yapısal tekrar yasakları)
 - **writers/<yazar>.md** — DNA katmanı (Statik A)
-- **writers/<yazar>-article-log.md** — akümülatif log (Katman B)
+- **icerik/yazar-onaylari/<yazar>/article-log.md** — akümülatif log (Katman B)
 - **vault wiki/sites/estranova/writers-profile-architecture.md** — yazar profil mimarisi notu
 - **memory/reference_writer_dynamics_framework.md** — bu framework'e referans memory entry
 - **memory/feedback_template_breaking_universal_2026_05_02.md** — Şablon Kırma Disiplini evrensel kuralı memory entry
