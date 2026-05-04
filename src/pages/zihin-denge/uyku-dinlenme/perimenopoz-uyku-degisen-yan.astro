@@ -29,7 +29,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Perimenopozda Uykunun Gerçekten Değişen Yanı';
 const articleDescription =
-  'Perimenopozda uyku neden değişiyor? Östrojen ve progesteron uykunun hangi evresine dokunuyor, hangi değişim geçici, hangisi kalıcı bir düzen kuruyor — sakin bir yaşıt perspektifinden.';
+  'Perimenopozda uyku neden değişiyor? Östrojen ve progesteron uykunun hangi evresine dokunuyor, gece uyanmaları nasıl okunmalı, hangi destekler gerçekten anlamlı — sakin bir yaşıt perspektifinden.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -38,7 +38,7 @@ const articleSchemas = buildArticleSchemas({
   pathname: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
-  keywords: ['perimenopoz', 'uyku', 'uyku evresi', 'östrojen', 'progesteron', 'REM', 'NREM', 'menopoz uyku'],
+  keywords: ['perimenopoz', 'uyku', 'uyku evresi', 'östrojen', 'progesteron', 'REM', 'NREM', 'CBT-I', 'menopoz uyku'],
   siteUrl,
 });
 ---
@@ -195,6 +195,14 @@ const articleSchemas = buildArticleSchemas({
           zihni "yarına aktarma" rutini — kısa not, üç madde plan — pek çok kadının fayda gördüğü, sade alışkanlıklar.
         </p>
         <p>
+          Eğer sorun birkaç kötü geceden çıkıp yatağa kaygıyla girilen, gece uyanınca tekrar uykuya dönmenin
+          zorlaştığı bir döngüye dönüştüyse, mesele yalnızca "uyku hijyeni" olmayabilir. CBT-I, yani uykusuzluk için
+          bilişsel-davranışçı yaklaşım, yatak-uyku bağını yeniden kurmayı, yatakta uyanık kalma süresini yönetmeyi ve
+          "bu gece de uyuyamayacağım" düşüncesinin yarattığı alarmı azaltmayı hedefler. Bu, rahatlatıcı bir tavsiye
+          listesi değildir. Yapılandırılmış, disiplin isteyen ve etkisi güçlü bir davranışsal omurgadır.
+          <Evidence level={5} />
+        </p>
+        <p>
           Tanıdığım bir kadın bu son iki saatlik pencereyle ilgili gülerek anlatmıştı: "Akşam onda yatağa girmek
           için planı yapıyorum; on birde elimde kitap, 'bir bölüm daha kalmış' oluyor; on iki yarımda hâlâ 'şu
           paragrafı bitireyim' diyorum. Sabah dinlenmemiş kalkmamın sebebini hormonlara değil, kitabın iki sayfa
@@ -202,10 +210,11 @@ const articleSchemas = buildArticleSchemas({
           için "akşamın son iki saati" hormonal bir mesele olduğu kadar bir sınır kurma meselesi.
         </p>
         <p>
-          Hormon takviyesi (HRT) bu üç başlığın yerine değil, gerektiğinde yanına eklenen bir seçenek. Bunun
-          tamamen kişisel bir karar olduğu altı çizilmesi gereken bir nokta: hekiminle birlikte, kendi sağlık öykün
-          üzerinden değerlendirilmesi gerekir. Tek bir reçete yok; senin için doğru olanı, yine seninle ilgilenen
-          hekim ve kendi öncelikler haritan birlikte söyleyecektir.
+          Hormon takviyesi (HRT) bu üç başlığın yerine değil, gerektiğinde yanına eklenen bir seçenek. Gece terlemesi
+          ve sıcak basması uykuyu belirgin biçimde bölüyorsa, uygun adaylarda uyku kalitesine dolaylı katkı sağlayabilir.
+          Ama tek başına "uyku ilacı" gibi düşünülmez. Karar; sağlık öykün, kontrendikasyonların ve önceliklerin
+          üzerinden hekiminle birlikte değerlendirilir. Tek bir reçete yoktur. Senin için doğru olanı, yine seninle
+          ilgilenen hekim ve kendi öncelikler haritan birlikte söyleyecektir. <Evidence level={4} />
         </p>
 
         <h2 id="ne-zaman">Ne Zaman Hekim Devreye Girmeli</h2>
@@ -215,7 +224,7 @@ const articleSchemas = buildArticleSchemas({
           hekiminle bir görüşme planlamak iyi olur.
         </p>
         <ul>
-          <li>Üç haftadan uzun süren, gündüz işlev kaybına yol açan uykusuzluk.</li>
+          <li>Üç ayı aşan ya da gündüz işlev kaybına yol açan tekrarlayıcı uykusuzluk.</li>
           <li>
             Yatağa çekildikten kısa süre sonra ya da gece tekrar tekrar yaşanan, nefes kesilmesi ya da yüksek
             horlama tarifi.
@@ -226,6 +235,10 @@ const articleSchemas = buildArticleSchemas({
             benzeri tablolar.
           </li>
           <li>Gece terlemelerinin yatak çarşafını ıslatacak yoğunlukta ve sık yaşanması.</li>
+          <li>
+            Yeni başlayan belirgin çarpıntı, açıklanamayan kilo değişimi, demir eksikliği ya da tiroid bozukluğu
+            şüphesi.
+          </li>
           <li>
             Bacaklarda gece yatağa girince başlayan rahatsız edici his, hareket etme zorunluluğu duygusu.
           </li>
@@ -250,6 +263,20 @@ const articleSchemas = buildArticleSchemas({
           bazılarında ilk işaret bu olurken, bazılarında âdet düzensizliği ya da ruh hâlindeki dalgalanma daha önce
           fark ediliyor. Yani "perimenopoza girdim, uykum hemen bozulacak" diye bir kural yok; ancak gece
           dinlenmen son birkaç yıldır farklı geliyorsa, bu dönemin işareti olabilir.
+        </p>
+        <h3>Her gece üçte uyanmak perimenopoz belirtisi mi?</h3>
+        <p>
+          Olabilir, ama tek açıklama bu değildir. Perimenopozda gece uyanmaları özellikle sıcak basması, gece
+          terlemesi ve stres sistemi devredeyse sıklaşabilir. Aynı tablo alkol, geç yemek, erken kortizol yükselişi,
+          uyku apnesi, huzursuz bacak, kaygı ya da depresif belirtilerle de ilişkili olabilir. Döngü üç ayı aşıyor ve
+          gündüz işlevini bozuyorsa, bunu yalnızca "yaş dönemi" diye taşımamak iyi olur.
+        </p>
+        <h3>CBT-I tam olarak nedir?</h3>
+        <p>
+          CBT-I, uykusuzluk için yapılandırılmış bilişsel-davranışçı yaklaşımdır. Uyku hijyeninden daha fazlasıdır:
+          yatak-uyku bağını, yatakta uyanık kalma süresini, uykuya dair kaygılı düşünceleri ve uyku ritmini birlikte
+          ele alır. Etkisi genellikle uygulandıkça, birkaç hafta içinde daha net fark edilir; hızlı bir gevşeme
+          önerisi değil, düzenli uygulama isteyen bir yeniden öğrenme sürecidir.
         </p>
         <h3>Uyku takip cihazı (akıllı saat) bana ne söyler, ne söylemez?</h3>
         <p>

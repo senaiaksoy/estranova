@@ -216,7 +216,7 @@ forbidden_address_forms:
   - "ablacığım"
   - "şekerim"
   - "hocam"
-  - "abi" / "abla"
+  - "abi / abla"
 
 avoid:
   - "'Genç fizyoterapist olarak söylerim ki' yaş vurgusu"
