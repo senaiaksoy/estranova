@@ -30,6 +30,10 @@
 > Son review: —
 > Tetikleyici: 10 makale veya 6 ay (default)
 
+## Onay Kayıtları
+
+- 2026-05-04 — `/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin` KC doğrudan editör onayıyla onaylandı. Alara Baykent istisna yazar olduğu için 5 dakikalık dış yazar formu zorunlu değil; stil kontrol paketi ve kaynak kopyası `onaylanan/2026-05-04_aksam-hareketi-uyku-melatonin` altında onay izi olarak korunur.
+
 ## Retrofit özet (pre-framework yayınlar — 2026-04-29 öncesi)
 
 Alara Baykent'e atanmış yayınlanmış makaleler:
