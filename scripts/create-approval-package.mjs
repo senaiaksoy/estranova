@@ -52,7 +52,7 @@ const APPROVAL_ROOT = path.join(ROOT, 'icerik/yazar-onaylari');
 const DEFAULT_TARGET_EMAIL = 'drsenaiaksoy@gmail.com';
 const DEFAULT_SITE = 'https://estranova.com.tr';
 const DEFAULT_DAYS = 7;
-const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 'senai-aksoy']);
+const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 'senai-aksoy', 'estranova-editorial']);
 
 const C = {
   reset: '\x1b[0m', bold: '\x1b[1m', dim: '\x1b[2m',

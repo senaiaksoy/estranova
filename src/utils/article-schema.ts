@@ -88,14 +88,21 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
 
   const writer = getWriter(writerSlug);
   const isoDate = toISODate(publishedDate);
-  const authorPerson: JsonLdSchema = {
-    '@type': 'Person',
-    name: writer.displayName,
-    jobTitle: writer.role,
-    description: writer.publicBio,
-    ...(writer.portrait ? { image: joinUrl(siteUrl, writer.portrait) } : {}),
-    url: joinUrl(siteUrl, '/yayin-kurulu'),
-  };
+  const authorPerson: JsonLdSchema = writer.isInstitutionalByline
+    ? {
+        '@type': 'Organization',
+        name: writer.displayName,
+        description: writer.publicBio,
+        url: joinUrl(siteUrl, '/editoryal-politika'),
+      }
+    : {
+        '@type': 'Person',
+        name: writer.displayName,
+        jobTitle: writer.role,
+        description: writer.publicBio,
+        ...(writer.portrait ? { image: joinUrl(siteUrl, writer.portrait) } : {}),
+        url: joinUrl(siteUrl, '/yayin-kurulu'),
+      };
 
   const reviewerPerson: JsonLdSchema = {
     '@type': 'Person',

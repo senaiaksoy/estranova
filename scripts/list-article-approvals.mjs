@@ -21,7 +21,7 @@ const ROOT = path.resolve(__dirname, '..');
 const PAGES_DIR = path.join(ROOT, 'src/pages');
 const APPROVALS_FILE = path.join(ROOT, 'src/data/article-approvals.ts');
 const WRITERS_FILE = path.join(ROOT, 'src/data/writers.ts');
-const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 'senai-aksoy']);
+const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 'senai-aksoy', 'estranova-editorial']);
 
 const EXCLUDED_BASENAMES = new Set([
   'index.astro',
@@ -184,7 +184,7 @@ async function main() {
   console.log(`  ${C.green}Onaylı            : ${C.bold}${approved}${C.reset} ${C.green}(%${percent})${C.reset}`);
   console.log(`  ${C.yellow}Onay bekleniyor   : ${C.bold}${pending}${C.reset} ${C.yellow}(%${100 - percent})${C.reset}`);
   console.log(`  ${C.yellow}Form bekleyen     : ${C.bold}${authorFormPending}${C.reset}`);
-  console.log(`  ${C.gold}Editör onayı bek. : ${C.bold}${directEditorPending}${C.reset} ${C.dim}(Berna/Alara/Senai istisnası)${C.reset}`);
+  console.log(`  ${C.gold}Editör onayı bek. : ${C.bold}${directEditorPending}${C.reset} ${C.dim}(Berna/Alara/Senai/Estranova Editörleri istisnası)${C.reset}`);
   console.log('');
 
   // Yazar bazında detay (alfabetik)

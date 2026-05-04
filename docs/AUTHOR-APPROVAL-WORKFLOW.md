@@ -46,6 +46,16 @@ icerik/
 - Varsa ilgili paket `icerik/yazar-onaylari/<slug>/onaylanan/` altına taşınır; paket yoksa `article-log.md` içinde "Doğrudan editör onayı" satırı tutulur.
 - Bu istisna yalnızca onay formu zorunluluğunu kaldırır; tıbbi doğruluk, BEN, Evidence, yayın checklist'i ve stil disiplinini kaldırmaz.
 
+**Kurumsal editöryal imza istisnası:**
+- `estranova-editorial` slug'ı **Estranova Editörleri** kurumsal byline'ıdır; kişi/yazar profili değildir.
+- Bu imza temel rehberler, hub tamamlayıcıları ve açıklayıcı editöryal sağlık haritalarında kullanılır.
+- Dış yazar formu üretilmez; yayın kapısı **KC editör doğrudan onayı + bilimsel editör incelemesi** ile açılır.
+- Görünür yazar kadrosunda ve `/yazarlar/<slug>` sayfalarında listelenmez; makale içinde sahipsiz anonimlik yerine “Hazırlayan: Estranova Editörleri” görünür.
+- Kişisel anekdot, birinci tekil deneyim iddiası, dış yazar sesi taklidi veya köşe yazısı için kullanılmaz.
+- Yazı tonu **Estranova Editorial Gloss** hibritidir: Vogue’dan atmosfer/seçicilik, Marie Claire’den çağdaş kadın deneyimine yakınlık, Estranova’dan kanıt-temelli sağlık disiplini alınır; hiçbir dış yayın, marka cümlesi veya bireysel yazar sesi taklit edilmez.
+- Açılışta beden, zaman, şehir, gardırop, uyku, ayna, takvim veya mevsim gibi rafine bir sahne kurulabilir; ancak tıbbi iddialar Evidence, kırmızı bayraklar, kaynak disiplini ve Bilimsel Editör Notu ile dengelenir.
+- Tüm yayınlarda `article-approvals.ts` kaydı ve mümkünse `icerik/yazar-onaylari/estranova-editorial/onaylanan/` altında kaynak/meta paketi tutulur.
+
 **Stil öğrenme kaynağı:**
 - Her form yanıtı aynı zamanda yazarın stil profilini geliştiren yapılandırılmış geri bildirimdir.
 - Editör doğrudan onayı kapsamındaki üç yazarda form yoksa, KC'nin editöryal onay notu stil sinyali olarak kullanılabilir.

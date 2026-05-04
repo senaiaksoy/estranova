@@ -8,6 +8,9 @@ export interface Writer {
   portrait?: string; // /images/writers/{slug}.jpg (yoksa undefined)
   focusAreas: string[]; // 2-3 çekirdek kategori etiketi
   isEditor: boolean; // Berna true, diğerleri false
+  // Kurumsal imza: görünür yazar kadrosuna girmez, ama makale byline'ında
+  // "Estranova Editörleri" gibi sahipsiz olmayan editöryal imza sağlar.
+  isInstitutionalByline?: boolean;
   // active = sitede yazar kadrosunda görünür; inactive = profil/arşiv korunur,
   // ancak kadro kartları, arama ve /yazarlar rotalarında görünmez.
   status?: 'active' | 'inactive';
@@ -25,6 +28,43 @@ export interface Writer {
 }
 
 export const writers: Writer[] = [
+  {
+    slug: 'estranova-editorial',
+    displayName: 'Estranova Editörleri',
+    role: 'Kurumsal Editöryal İmza',
+    ageBand: '—',
+    publicBio:
+      'Estranova Editörleri; temel rehberler, hub tamamlayıcıları ve kurumsal bilgi yazıları için kullanılan editöryal imzadır. Bu içerikler Estranova Editorial Gloss tonuyla hazırlanır: sofistike kadın dergisi ritmi, sakin sağlık okuryazarlığı ve bilimsel editör disiplini birlikte taşınır.',
+    signaturePhrase:
+      'Vogue’un atmosfer duygusunu, Marie Claire’in çağdaş kadın deneyimine yakınlığını ve Estranova’nın kanıt-temelli sağlık çizgisini birleştirir.',
+    focusAreas: ['Editorial Gloss', 'Temel Rehberler', 'Bilimsel İnceleme'],
+    isEditor: false,
+    isInstitutionalByline: true,
+    status: 'inactive',
+    writingStyle: {
+      voice:
+        'Estranova Editorial Gloss: rafine, şehirli, atmosferik ve kadın deneyimine yakın; Vogue/Marie Claire hissinden ilham alır ama hiçbir dış yayını taklit etmez. Kişisel deneyim iddiası kurmadan, kanıt-temelli editöryal sorumluluğu korur.',
+      rhythm:
+        'Kısa-orta paragraflar; görsel/duygusal bir lede, sonra net ayrım, ardından uygulanabilir sağlık okuryazarlığı adımı. Cümleler parlak ama ölçülü; dergisel akış klinik netlikle dengelenir.',
+      framing:
+        'Konuyu isimli yazar sesiyle değil, Estranova editöryal rehberliğiyle çerçeveler. Açılışta beden, zaman, şehir, gardırop, uyku, ayna, takvim veya mevsim gibi atmosferik bir kapı kullanılabilir; her tıbbi iddia bilimsel editör notu ve kaynak disipliniyle desteklenir.',
+      dos: [
+        'İmzada “Estranova Editörleri” kullan; sahipsiz anonimlik yaratma.',
+        'Kişisel anekdot veya birinci tekil deneyim iddiası kurma.',
+        'Vogue’dan atmosfer ve seçicilik, Marie Claire’den erişilebilir çağdaş kadın dili al; marka, cümle veya yayın taklidi yapma.',
+        'Açılışı kuru tanımla değil, okurun bedensel/gündelik farkındalığını çağıran zarif bir sahneyle kur.',
+        'Temel rehber, hub tamamlayıcı ve açıklayıcı sağlık haritası formatını editorial gloss ile yumuşat.',
+        'Tıbbi konularda bilimsel editör incelemesini ve kırmızı bayrakları görünür tut.',
+      ],
+      donts: [
+        'Kişisel köşe yazısı, yazar deneyimi veya dış yazar üslubu taklidi yapma.',
+        'Moda dergisi parıltısını bilimsel belirsizliği örtecek şekilde kullanma.',
+        'Lüks, trend, güzellik veya performans baskısı kuran dil kullanma.',
+        'Klinik tanı/tedavi talimatını hekim değerlendirmesi gibi sunma.',
+        'Yazar onayı gerekiyormuş gibi dış form üretme.',
+      ],
+    },
+  },
   {
     slug: 'berna-aksoy',
     displayName: 'Berna Aksoy',

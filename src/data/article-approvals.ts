@@ -125,6 +125,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-04',
     note: 'KC editor direct approval for Alara exception author. Pending package icerik/yazar-onaylari/alara-baykent/onay-bekleyen/2026-05-04_aksam-hareketi-uyku-melatonin moved to onaylanan; style-control package preserved as approval trace.',
   },
+  {
+    pathname: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-05-04',
+    note: 'Berna exception author — KC direct editor approval. Perimenopause hub center article added as approved publication; no external 5-minute author form required.',
+  },
 ];
 
 /**

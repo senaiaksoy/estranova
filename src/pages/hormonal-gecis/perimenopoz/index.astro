@@ -19,9 +19,24 @@ const chapter = chapterMap[__path]!;
 const epigraph = subHubEpigraphs[__path];
 const next = getNextChapter(__path);
 
-const editorPick: any = null;
+const editorPick = {
+  href: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
+  title: 'Perimenopozda İlk İşaretler',
+  lede: 'Adet takvimi, uyku, ısı dalgaları, ruh hali ve odak değişimini tek tek değil, aynı geçiş haritasının küçük notları gibi okumak.',
+  writerSlug: 'berna-aksoy',
+  readingMinutes: 9,
+  image: hero,
+};
 
 const tocArticles = [
+  {
+    href: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
+    title: 'Perimenopozda İlk İşaretler',
+    excerpt:
+      'Adet düzeni, uyku, sıcak basması, ruh hali ve beyin sisi gibi ilk işaretleri panik yaratmadan okumak için sakin bir geçiş haritası.',
+    writerSlug: 'berna-aksoy',
+    readingMinutes: 9,
+  },
   {
     href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
     title: 'Menopozda Uyku Bozukluğu — Dinlenme Rehberi',
@@ -133,7 +148,7 @@ const themes = [
     <SubmenuSection variant="cream" borderedTop={true}>
       <header class="mb-10 max-w-3xl">
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bu Evrede Okumalar</p>
-        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Perimenopoz okumaları</h2>
       </header>
 
       <MagazineTOC items={tocArticles} />

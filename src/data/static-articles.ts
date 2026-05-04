@@ -18,6 +18,26 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
+    title: 'Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem',
+    description:
+      'Perimenopozun ilk işaretlerini adet düzeni, uyku, sıcak basması, ruh hali, odaklanma ve beden hissi üzerinden panik yaratmadan okumak için Berna Aksoy’dan sakin bir rehber.',
+    publishedDate: '4 Mayıs 2026',
+    writerSlug: 'berna-aksoy',
+    section: 'Hormonal Geçiş · Perimenopoz',
+    sectionPath: '/hormonal-gecis',
+    keywords: [
+      'perimenopoz',
+      'menopoz geçişi',
+      'adet düzensizliği',
+      'sıcak basması',
+      'gece terlemesi',
+      'uyku',
+      'beyin sisi',
+      'FSH',
+    ],
+  },
+  {
     path: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
     title: 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi',
     description:
