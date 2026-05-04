@@ -22,7 +22,7 @@ icerik/
       onaylanan/                       (onayı alınmış paketler)
         <YYYY-MM-DD>_<makale-slug>/
           ...                          (aynı paket + yazar yanıtı/karar kaydı)
-  yayinlanmis-makaleler/               (mevcut export — kronolojik dump, dokunulmaz)
+  yayinlanmis-makaleler/               (mevcut export — yalnız onaylı/yayındaki makalelerin kronolojik dump'ı)
     2026-05/...
 ```
 
@@ -30,10 +30,11 @@ icerik/
 - `icerik/yazar-onaylari/<slug>/` her yazarın **tek kalıcı onay arşivi** — bekleyen paket, onay belgesi, makale PDF'i ve yazar yanıtı yan yana.
 - `onay-bekleyen/` **aktif iş kuyruğu**, `onaylanan/` **tamamlanmış onay arşivi** olarak aynı yazar klasörü altında durur.
 - `article-log.md` yazarın **akümülatif makale günlüğüdür**; şablon cooldown ve yazar sesi sürekliliği bu dosyadan okunur.
-- `icerik/yayinlanmis-makaleler/` **dokunulmaz kronolojik dump** (`npm run articles:export` çıktısı, audit log).
+- `icerik/yayinlanmis-makaleler/` **yalnız onaylanmış ve yayında olan makalelerin kronolojik dump'ıdır** (`npm run articles:export` çıktısı, audit log). Yanlışlıkla onay bekleyen bir makale bu arşive girmişse kayıt yayında sayılmaz; ilgili yazarın `onay-bekleyen/` paketine taşınır ve arşiv README'si düzeltilir.
 
 **Yayın kapısı (hard gate):**
 - Bir makale üretildiğinde **doğrudan siteye yayınlanmaz**; önce `onay-bekleyen/` paketine girer.
+- `onay-bekleyen/` statüsündeki makale **site kaynak ağacında canlı rota olarak duramaz**: `src/pages/` altında `.astro` yayın dosyası, hub/sayı indeksi bağlantısı, RSS/static manifest kaydı veya `icerik/yayinlanmis-makaleler/` arşiv kaydı bulunmamalıdır. Varsa kaynak kopya aynı onay paketinde `site-kaynak.astro`, `makale-kaynak.astro` veya benzeri adla saklanır.
 - Her yeni taslak veya revizyonla birlikte **yeni 5 dakikalık onay formu** üretilir.
 - Yazar formda **DEĞİŞİKLİK İSTİYORUM** derse istenen değişiklik yapılır; revize makale için yeni paket/form üretilir ve süreç tekrar başlar.
 - Yazar formda **ONAYLIYORUM** demeden makale `main` yayın akışına, site indekslerine, `article-approvals.ts` kaydına veya `onaylanan/` klasörüne alınmaz.

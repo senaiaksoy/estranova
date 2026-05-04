@@ -423,7 +423,7 @@ Zorunlu yapı:
 
 ## Faz 5 — Pre-publish Checklist (YAYIN ÖNCESİ ZORUNLU)
 
-> **Yazar onayı hard gate:** Faz 5 kontrolleri tamamlanan makale dahi doğrudan yayınlanmaz. Önce `npm run author:send-for-approval` ile 5 dakikalık yazar onay paketi üretilir ve paket `icerik/yazar-onaylari/<slug>/onay-bekleyen/` altında kalır. Yazar formda **ONAYLIYORUM** demeden makale `main` yayın akışına, hub/sayı indekslerine, `article-approvals.ts` kaydına veya `onaylanan/` klasörüne alınamaz. İstisna: `berna-aksoy`, `alara-baykent`, `senai-aksoy` için form zorunlu değildir; KC editör doğrudan onayı `article-approvals.ts` ve/veya `article-log.md` içinde kayıtlıysa yayın kapısı açılır. Aynı form yanıtı veya doğrudan onay notu yazar stilini geliştirmek için de kullanılır; ham yanıt pakette kalır, stil özeti `article-log.md`'a işlenir, kalıcı profil değişikliği editör onayıyla yapılır.
+> **Yazar onayı hard gate:** Faz 5 kontrolleri tamamlanan makale dahi doğrudan yayınlanmaz. Önce `npm run author:send-for-approval` ile 5 dakikalık yazar onay paketi üretilir ve paket `icerik/yazar-onaylari/<slug>/onay-bekleyen/` altında kalır. Yazar formda **ONAYLIYORUM** demeden makale `main` yayın akışına, `src/pages/` canlı rota ağacına, hub/sayı indekslerine, RSS/static manifest'e, `icerik/yayinlanmis-makaleler/` arşivine, `article-approvals.ts` kaydına veya `onaylanan/` klasörüne alınamaz. İstisna: `berna-aksoy`, `alara-baykent`, `senai-aksoy` için form zorunlu değildir; KC editör doğrudan onayı `article-approvals.ts` ve/veya `article-log.md` içinde kayıtlıysa yayın kapısı açılır. Aynı form yanıtı veya doğrudan onay notu yazar stilini geliştirmek için de kullanılır; ham yanıt pakette kalır, stil özeti `article-log.md`'a işlenir, kalıcı profil değişikliği editör onayıyla yapılır.
 
 | # | Kontrol | Sonuç |
 |---|---|---|
@@ -438,8 +438,8 @@ Zorunlu yapı:
 | 9 | RelatedReadings 3-5 link (parent hub + komşu kategori) | ☐ |
 | 10 | Hero image — vault catalog veya yeni üretim, archetype çerçevesi | ☐ |
 | 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList (`buildArticleSchemas`) | ☐ |
-| 12 | Parent hub'a listelendi (mevcut hub `index.astro`'ya makale eklendi) | ☐ |
-| 13 | Manifest entry eklendi (varsa kategori manifesti) | ☐ |
+| 12 | Yayın bağlantı planı hazır; ancak standart yazar onayı gelmeden parent hub/sayı indeksine canlı link eklenmedi | ☐ |
+| 13 | Manifest entry yalnız yayın kapısı açıldıktan sonra eklenecek; onay bekleyen makale RSS/static manifest'te yok | ☐ |
 | 14 | Compliance score ≥ 85 (`compliance_expert_agent.py`) | ☐ |
 | 15 | Yasak filtreleri temiz (URL, kuruluş adı, marka, HRT/ilaç adı, lüks dekor, sosyal/siyasi yorum) | ☐ |
 | 16 | Tıbbi sorumluluk reddi disclaimer'ı görünür (CLAUDE.md §1) | ☐ |
@@ -461,16 +461,18 @@ Zorunlu yapı:
 7. Stil sinyali `icerik/yazar-onaylari/<slug>/article-log.md` dosyasına yazılır; `writers/<slug>/` profil dosyalarına kalıcı değişiklik yalnızca editör onayıyla geçirilir.
 8. Standart yazarlarda döngü yazar **ONAYLIYORUM** diyene kadar sürer; istisna yazarlarda KC doğrudan onayı yeterlidir.
 9. Onay geldiğinde paket varsa `onaylanan/` altına taşınır ve ancak bundan sonra Faz 6 yayın adımları başlar.
+10. Onay bekleyen paketteki kaynak kopya gerekirse `site-kaynak.astro` / `makale-kaynak.astro` olarak saklanır; canlı rota için `src/pages/` altına ancak yayın kapısı açıldıktan sonra geri alınır.
 
 ---
 
 ## Faz 6 — Publish / Post-publish
 
-Faz 6 yalnızca `icerik/yazar-onaylari/<slug>/onaylanan/<paket>/` altında kayıtlı yazar onayı varsa başlar.
+Faz 6 yalnızca `icerik/yazar-onaylari/<slug>/onaylanan/<paket>/` altında kayıtlı yazar onayı veya istisna yazarlar için kayıtlı KC doğrudan onayı varsa başlar.
 
 - Cloudflare auto-deploy (push = main → site, bkz. `reference_cloudflare_deploy.md`)
 - /symptoms bento entry (gerekirse, bkz. `project_symptoms_audit_2026_04_28.md`)
 - Hub linkage audit (orphan kontrolü, bkz. `feedback_article_hub_linking_rule.md`)
+- Canlı rota ekleme: `src/pages/`, hub/sayı indeksi, `src/data/static-articles.ts` / RSS manifest ve `icerik/yayinlanmis-makaleler/` export'u yalnız bu aşamada güncellenir.
 
 ---
 

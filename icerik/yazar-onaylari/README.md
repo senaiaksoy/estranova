@@ -11,6 +11,8 @@ Bir makale paketi kendi içinde bütün izleri birlikte tutar: makale PDF'i, ona
 
 Yayın kapısı katıdır: yeni makale önce `onay-bekleyen/` altına girer ve yazar onayı gelmeden siteye yayınlanmaz. Yazar değişiklik isterse revizyon yapılır, revize makale + yeni 5 dakikalık form içeren yeni paket üretilir ve döngü tekrar eder. Yazar `ONAYLIYORUM` dediğinde yanıt pakete kaydedilir, paket `onaylanan/` altına taşınır ve yayın süreci ancak bundan sonra başlar.
 
+`onay-bekleyen/` statüsündeki bir yazı canlı sitede görünmemelidir: `src/pages/` altında rota dosyası, hub/sayı indeksi bağlantısı, RSS/static manifest kaydı veya `icerik/yayinlanmis-makaleler/` arşiv kaydı tutulmaz. Yayın kaynak kopyası gerekiyorsa aynı pakette `site-kaynak.astro` veya `makale-kaynak.astro` adıyla saklanır.
+
 İstisna: `berna-aksoy`, `alara-baykent` ve `senai-aksoy` için 5 dakikalık yazar formu zorunlu değildir. Bu üç yazarın yazılarında KC editör doğrudan onayı yeterlidir; onay izi `article-approvals.ts`, varsa paket README'si ve/veya `article-log.md` içinde tutulur.
 
 Form yanıtları aynı zamanda yazar stilini geliştirmek için kullanılır. Ham JSON yanıtı paket klasöründe kalır; likert, toggle ve serbest yorumlardan çıkan stil sinyali `article-log.md` dosyasına özetlenir. Kalıcı `writers/<slug>/` profil değişiklikleri otomatik yapılmaz, editör onayı gerektirir.

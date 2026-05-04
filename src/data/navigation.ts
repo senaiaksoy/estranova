@@ -30,6 +30,7 @@ export const mainNav: NavLink[] = [
       { name: 'Perimenopoz', href: '/hormonal-gecis/perimenopoz' },
       { name: 'Menopoza hazırlık', href: '/hormonal-gecis/menopoza-hazirlik' },
       { name: 'Menopoz', href: '/hormonal-gecis/menopoz' },
+      { name: '40 Sonrası Sağlık', href: '/hormonal-gecis/40-sonrasi' },
     ],
   },
   {

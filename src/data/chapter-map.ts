@@ -4,7 +4,7 @@
  * "bir sonraki bölüm" referansı buradan gelir.
  *
  * Onaylı alt-hub bölüm sırası:
- *   01–03  Hormonal Geçiş
+ *   01–04  Hormonal Geçiş
  *   04–06  Zamansız Yaşam        (chapter numarası 01–03 hub içinde)
  *   07–09  Beden & Yakınlık      (01–03)
  *   10–12  Zihin & Denge         (01–03)
@@ -43,6 +43,13 @@ export const chapterMap: Record<string, ChapterEntry> = {
     parent: 'Hormonal Geçiş',
     chapter: 'Menopoz',
     href: '/hormonal-gecis/menopoz',
+    next: '/hormonal-gecis/40-sonrasi',
+  },
+  '/hormonal-gecis/40-sonrasi': {
+    number: '04',
+    parent: 'Hormonal Geçiş',
+    chapter: '40 Sonrası Sağlık',
+    href: '/hormonal-gecis/40-sonrasi',
     next: '/zamansiz-yasam/vitaminler',
   },
   // Zamansız Yaşam

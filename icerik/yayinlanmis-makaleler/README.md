@@ -1,6 +1,6 @@
 # Estranova Yayınlanmış Makale Arşivi
 
-Toplam makale: **32**
+Toplam makale: **31**
 Son export: 2026-05-03
 
 Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik üretilir. `src/pages/` altındaki Astro source'tan metadata, `dist/` altındaki build HTML'den gövde markdown'ına dönüştürülür. Aynı içerik aynı anda obsidian vault'a (`<VAULT>/articles/`) da yazılır.
@@ -33,7 +33,6 @@ npm run articles:export # markdown'a dök
 | 2026-05-03 | - | [Sıcacık Köşe — Bu Ay Kadın Dünyasında Ne Konuşuluyor?](2026-05/2026-05-03__nisan-2026.md) | editorun-kosesi |
 | 2026-05-03 | - | [Editöryal İlkelerimiz](2026-05/2026-05-03__editoryal-ilkeler.md) |  |
 | 2026-05-03 | - | [Nasıl Araştırıyoruz](2026-05/2026-05-03__nasil-arastiriyoruz.md) | editoryal-politika |
-| 2026-05-03 | duygu-karaosmanoglu | [Postmenopozda Dişeti Çekilmesi — Östrojen Kaybı ve Bakım](2026-05/2026-05-03__diseti-cekilmesi-postmenopoz.md) | Hormonal Geçiş |
 | 2026-05-03 | - | [Tarama ve İzlem: Genel Çerçeve](2026-05/2026-05-03__tarama-testleri.md) | Hormonal Geçiş |
 | 2026-05-03 | senai-aksoy | [Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?](2026-05/2026-05-03__coenzyme-q10-takviyesi.md) | Zamansız Yaşam |
 | 2026-05-03 | senai-aksoy | [Deneysel Tedaviyi Okuma Kılavuzu](2026-05/2026-05-03__deneysel-tedaviyi-okuma-kilavuzu.md) | Zamansız Yaşam |
