@@ -18,6 +18,28 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi',
+    title: 'Menopoza Hazırlıkta İlk Kontrol Dosyası: Hangi Test Ne Söyler, Hangisi Herkes İçin Gerekli Değildir?',
+    description:
+      'Menopoza yaklaşırken hangi kan tahlilleri, taramalar ve temel kontroller gerçekten anlamlıdır? Bu rehber, sık istenen testleri panik yaratmadan açıklamaya, her sonucun ne söylediğini ayırt etmeye ve gereksiz test kalabalığı içinde daha sakin bir çerçeve kurmaya yardımcı olur.',
+    publishedDate: '4 Mayıs 2026',
+    writerSlug: 'estranova-editorial',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: [
+      'menopoza hazırlık',
+      'kan tahlili',
+      'FSH',
+      'B12',
+      'ferritin',
+      'tiroid',
+      'D vitamini',
+      'mamografi',
+      'smear',
+      '40 sonrası sağlık',
+    ],
+  },
+  {
     path: '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik',
     title: 'Perimenopozda Zihinsel Bulanıklık: Unutkanlık Hissi Günlük Hayatta Nasıl Okunur?',
     description:

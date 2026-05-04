@@ -1,0 +1,252 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import EditorialMedicalEditorNote from '../../../components/site/EditorialMedicalEditorNote.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi';
+const hero =
+  submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik']!;
+const articleTitle =
+  'Menopoza Hazırlıkta İlk Kontrol Dosyası: Hangi Test Ne Söyler, Hangisi Herkes İçin Gerekli Değildir?';
+const articleDescription =
+  'Menopoza yaklaşırken hangi kan tahlilleri, taramalar ve temel kontroller gerçekten anlamlıdır? Bu rehber, sık istenen testleri panik yaratmadan açıklamaya, her sonucun ne söylediğini ayırt etmeye ve gereksiz test kalabalığı içinde daha sakin bir çerçeve kurmaya yardımcı olur.';
+const publishedDate = '4 Mayıs 2026';
+const readingMinutes = 9;
+
+const tocEntries = [
+  { id: 'neden-kontrol-dosyasi', label: 'Neden bir kontrol dosyası oluşturmak iyi gelir?' },
+  { id: 'test-mi-tablo-mu', label: 'Her yakınma için test gerekir mi?' },
+  { id: 'temel-kan-testleri', label: 'Tam kan sayımı, ferritin, B12 ve tiroid testleri' },
+  { id: 'fsh-ostrojen', label: 'FSH ve östrojen sonuçları her zaman net cevap verir mi?' },
+  { id: 'metabolik-gostergeler', label: 'Kolesterol, glukoz ve metabolik göstergeler' },
+  { id: 'kemik-d-vitamini', label: 'Kemik sağlığı ve D vitamini değerlendirmeleri' },
+  { id: 'taramalar', label: 'Mamografi, smear ve diğer taramalar' },
+  { id: 'kisa-hatirlatma', label: 'Kısa hatırlatma' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'estranova-editorial',
+  publishedDate,
+  pathname,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
+  keywords: [
+    'menopoza hazırlık',
+    'kan tahlili',
+    'FSH',
+    'B12',
+    'ferritin',
+    'tiroid',
+    'D vitamini',
+    'mamografi',
+    'smear',
+    '40 sonrası sağlık',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoza Hazırlık"
+      title="Menopoza Hazırlıkta İlk Kontrol Dosyası"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="estranova-editorial"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+      />
+
+      <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
+        <h2 class="mb-4 font-serif text-3xl text-ink">Kısa Özet</h2>
+        <p class="leading-relaxed text-ink/80">
+          Menopoza yaklaşırken birçok kadın bir anda uzun test listeleriyle karşılaşabiliyor. Oysa her belirti tek
+          başına hormon geçişi anlamına gelmediği gibi, her test de herkese aynı netliği sağlamaz. Daha sakin bir
+          yaklaşım, yakınmaları dinlemek, temel sağlık başlıklarını taramak ve gerçekten anlamlı olan sonuçları birlikte
+          okumaktan geçer <Evidence level={4} />.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="neden-kontrol-dosyasi">Menopoza hazırlanırken neden bir “kontrol dosyası” oluşturmak iyi gelir?</h2>
+        <p>
+          Bazı dönemlerde beden tek bir belirtiyle değil, küçük sinyallerin toplamıyla konuşur. Menopoza hazırlık da
+          tam olarak böyle bir dönemdir; tek bir cevaptan çok, parçaları bir arada görmeye ihtiyaç duyar.
+        </p>
+        <p>
+          Kontrol dosyası fikri, paniği büyütmek için değil dağınık bilgiyi toparlamak içindir. Son kan sonuçları,
+          düzenli taramalar, uyku ve enerji notları, aile öyküsü ve sorulmak istenen başlıklar tek yerde durduğunda
+          tablo daha okunabilir hale gelir. Böylece hekim görüşmesi yalnızca o günkü yakınmaya değil, son aylara ve
+          yıllara yayılan seyre de bakabilir.
+        </p>
+        <p>
+          Buradaki amaç “olabildiğince çok test” değildir. Asıl amaç, kendiniz için anlamlı bir sağlık zaman çizelgesi
+          kurmaktır: ne zaman neye bakıldı, ne değişti, ne sabit kaldı. Bu çerçeve çoğu zaman gereksiz tekrarları azaltır
+          ve gerçekten önemli başlıkları daha net öne çıkarır.
+        </p>
+
+        <h2 id="test-mi-tablo-mu">Her yakınma için test gerekir mi, yoksa önce tabloyu okumak mı önemlidir?</h2>
+        <p>
+          Bir belirti ortaya çıktığında ilk refleks çoğu zaman hemen test istemek oluyor. Oysa çoğu durumda ilk adım,
+          belirtilerin ritmini ve bağlamını sakin biçimde okumaktır.
+        </p>
+        <p>
+          Yorgunluk, uyku bölünmesi, sinirlilik, sıcak basması, odaklanma güçlüğü ya da kilo değişimi gibi başlıklar
+          tek tek değil, birlikte değerlendirildiğinde daha anlamlı hale gelir. Adet düzeni değişti mi, yakınmalar ne
+          kadar süredir var, günlük işlevi ne kadar etkiliyor, aile öyküsü ne söylüyor, eşlik eden başka sağlık
+          başlıkları var mı: çoğu zaman asıl resmi bu sorular kurar.
+        </p>
+        <p>
+          Testler bu hikâyenin yerine geçmez; onu tamamlar. Bu yüzden iyi bir başlangıç çoğu zaman test listesinden önce
+          kısa bir belirti özeti ve temel sağlık geçmişi hazırlamaktır. Böyle bir özet, hem gereksiz kalabalığı azaltır
+          hem de hangi değerlendirmenin gerçekten anlamlı olduğunu daha görünür kılar.
+        </p>
+
+        <h2 id="temel-kan-testleri">Tam kan sayımı, ferritin, B12 ve tiroid testleri neyi aydınlatabilir?</h2>
+        <p>
+          Bazı belirtiler vardır; hormon geçişine benzer görünür ama arka planda bambaşka bir başlık taşıyabilir.
+          İşte bu yüzden temel kan testleri, çoğu zaman “menopoz mu değil mi” sorusundan çok daha geniş bir çerçeve için
+          değer taşır.
+        </p>
+        <p>
+          Tam kan sayımı, ferritin, B12 ve tiroid fonksiyonları özellikle yorgunluk, halsizlik, çarpıntı, saç dökülmesi
+          ve zihinsel bulanıklık gibi yakınmalarda tabloyu ayırmaya yardımcı olabilir <Evidence level={4} />. Demir
+          depolarının azalması, B12 eksikliği ya da tiroid düzensizlikleri tek başına bile bu belirtilerin bir kısmını
+          açıklayabilir.
+        </p>
+        <p>
+          Bu nedenle her şeyi otomatik olarak hormon geçişine bağlamak her zaman doğru değildir. Kontrol dosyasının en
+          yararlı tarafı da tam burada ortaya çıkar: benzer görünen belirtileri daha geniş bir sağlık bağlamı içinde
+          düşünmeye alan açar.
+        </p>
+
+        <h2 id="fsh-ostrojen">FSH ve östrojen sonuçları her zaman net cevap verir mi?</h2>
+        <p>
+          Hormon testleri kulağa çok kesinmiş gibi gelir; sanki tek bir sonuç bütün süreci açıklayacakmış gibi. Ama
+          özellikle perimenopoz ve menopoza hazırlık döneminde beden bu kadar düz bir çizgide ilerlemez.
+        </p>
+        <p>
+          FSH ve östrojen gibi göstergeler bazı durumlarda fikir verebilir; ancak dalgalı seyir nedeniyle tek bir ölçüm
+          her zaman net çerçeve sunmaz <Evidence level={4} />. Sonucun hangi gün alındığı, adet örüntüsü, yaşanan
+          belirtiler ve genel klinik bağlam birlikte değerlendirilmediğinde sayıların anlamı kolayca abartılabilir.
+        </p>
+        <p>
+          Bu yüzden kontrol dosyasında hormon sonuçlarının yeri vardır ama rolü sınırlıdır. Onları nihai karar gibi
+          değil, daha büyük resmin bir parçası gibi görmek çoğu zaman daha sakin ve doğru bir yaklaşım sağlar.
+        </p>
+
+        <h2 id="metabolik-gostergeler">Kolesterol, glukoz ve metabolik göstergeler neden bu dönemde önem kazanır?</h2>
+        <p>
+          Menopoza hazırlık yalnızca sıcak basması ya da adet düzeni başlığı değildir. Aynı dönemde kalp-damar ve
+          metabolik sağlık da daha sessiz ama daha önemli bir yer tutmaya başlar.
+        </p>
+        <p>
+          Lipid profili, açlık glukozu, HbA1c, bel çevresi ve tansiyon gibi göstergeler zaman içinde birlikte okununca
+          daha anlamlı bir risk çerçevesi oluşturur <Evidence level={5} />. Özellikle karın çevresinde değişim, enerji
+          dalgalanması, ailede diyabet veya kalp hastalığı öyküsü varsa bu başlıklar daha görünür hale gelir.
+        </p>
+        <p>
+          Bu dosyanın kıymeti tam da burada: “ben sadece hormonlarıma bakmak istedim” diye başlayan sürecin, aslında
+          daha geniş bir 40+ sağlık resmi sunduğunu hatırlatır. Bazen en önemli soru, hangi testin istendiği değil;
+          sonuçların yıllar içinde nasıl bir yön gösterdiğidir.
+        </p>
+
+        <h2 id="kemik-d-vitamini">Kemik sağlığı ve D vitamini tarafında hangi değerlendirmeler gündeme gelebilir?</h2>
+        <p>
+          Kemik sağlığı çoğu zaman ağrı başlayana kadar ertelenen bir başlıktır. Oysa menopozdan önceki yıllar, bu
+          konuyu daha soğukkanlı konuşmak için çok değerli bir aralık sunar.
+        </p>
+        <p>
+          D vitamini düzeyi, günlük hareket, direnç egzersizi, beslenmede kalsiyum dengesi, ailede osteoporoz öyküsü ve
+          varsa daha önce yaşanmış kırıklar birlikte ele alınır <Evidence from={4} to={5} />. Herkes için aynı tarama
+          veya aynı ölçüm gerekli değildir; ama risk çerçevesi erkenden kurulduğunda takip daha anlamlı hale gelir.
+        </p>
+        <p>
+          Kontrol dosyasına bu başlığı eklemek, hemen test yaptırmak zorunda olmak anlamına gelmez. Sadece kemik
+          sağlığını ileride değil, bugünden konuşulabilir bir başlık haline getirir.
+        </p>
+
+        <h2 id="taramalar">Mamografi, smear ve diğer taramalar bu dosyanın neresinde durur?</h2>
+        <p>
+          Kontrol dosyası yalnızca kan sonuçlarından oluşmaz. Aslında çoğu zaman en önemli kısmı, düzenli taramaların
+          tarihlerini ve kişisel takvimini görünür kılmasıdır.
+        </p>
+        <p>
+          Mamografi, smear, jinekolojik kontrol, kolon taraması ya da risk durumuna göre başka değerlendirmeler; hepsi
+          yaşa, aile öyküsüne ve bireysel sağlık durumuna göre planlanır. Tek bir liste herkes için geçerli değildir.
+          Ama son taramanın ne zaman yapıldığı ve bir sonraki görüşmede hangi başlığın sorulacağı biliniyorsa süreç çok
+          daha sakin ilerler.
+        </p>
+        <p>
+          Bu nedenle iyi bir kontrol dosyasında yalnızca “sonuçlar” değil, “tarih” de vardır. Bazen en faydalı bilgi,
+          test değerinin kendisinden çok, ne zaman bakıldığını bilmektir.
+        </p>
+
+        <h2 id="kisa-hatirlatma">Kısa hatırlatma: Çok test yaptırmak her zaman daha çok netlik sağlamaz</h2>
+        <p>
+          Sağlık söz konusu olduğunda çokluk bazen güven hissi yaratır. Ama menopoza hazırlık döneminde asıl güven,
+          her şeyi ölçmekten değil neye neden bakıldığını anlamaktan gelir.
+        </p>
+        <p>
+          Çok sayıda test bazen daha fazla netlik değil, daha fazla gürültü üretir. Oysa sade bir özet, düzenli birkaç
+          temel başlık ve iyi sorularla kurulmuş bir görüşme çoğu zaman çok daha yol göstericidir. Kontrol dosyasının
+          kıymeti de tam burada: dağınık sağlık parçalarını tek bir çerçevede toplar.
+        </p>
+        <p>
+          Eğer bu dönemde nereden başlayacağınızı bilmiyorsanız, en iyi ilk adım belki de şudur: son sonuçları bir araya
+          getirmek, tarama tarihlerini not etmek ve hekim görüşmesinde sormak istediğiniz üç soruyu yazmak. Bazen en
+          güçlü hazırlık, daha çok test değil daha net bir konuşmadır.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
+          '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri',
+        ]}
+      />
+
+      <EditorialMedicalEditorNote
+        paragraphs={[
+          'Menopoza yaklaşan dönemde değerlendirme, yalnızca hormon testlerinden ibaret değildir. Klinik anlam çoğu zaman yakınmaların süresi, adet örüntüsü, uyku kalitesi, metabolik riskler ve genel sağlık taramalarının birlikte okunmasıyla ortaya çıkar.',
+          'FSH ve östrojen gibi parametreler bazı durumlarda fikir verebilir; ancak özellikle perimenopozda dalgalı seyir nedeniyle tek başına kesin çerçeve sunmaları beklenmemelidir.',
+          'Yorgunluk, çarpıntı, bilişsel bulanıklık veya saç dökülmesi gibi belirtilerde anemi, ferritin düşüklüğü, B12 eksikliği, tiroid düzensizlikleri ve metabolik başlıklar da düşünülmelidir.',
+          'Daha doğru yaklaşım, gereksiz test kalabalığı oluşturmak değil, kişisel risk profiline ve belirtilere göre anlamlı bir izlem planı kurmaktır.',
+        ]}
+      />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
