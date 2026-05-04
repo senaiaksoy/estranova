@@ -20,8 +20,8 @@ const tocEntries = [
   { id: 'hormon-tedavisi-nedir', label: 'Hormon Tedavisi Nedir?' },
   { id: 'vucutta-ne-oluyor', label: 'Vücutta Ne Oluyor?' },
   { id: 'bilim-ne-diyor', label: 'Bilim Ne Diyor?' },
-  { id: 'turkiye-baglamı', label: 'Türkiye Bağlamı' },
-  { id: 'karar-cercevesi', label: 'Karar Çerçevesi' },
+  { id: 'turkiye-baglamı', label: 'Türkiye Notları' },
+  { id: 'karar-cercevesi', label: 'Karar Planı' },
   { id: 'sss', label: 'Sıkça Sorulan Sorular' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
@@ -29,7 +29,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?';
 const articleDescription =
-  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye bağlamı ve doktorunuzla konuşurken sorabileceğiniz sorular.';
+  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve doktorunuzla konuşurken sorabileceğiniz sorular.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -94,7 +94,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Muayene odasında en sık gördüğüm şey şudur: bir kadın HRT'yi ya mucize gibi ya da mutlak tehlike gibi
-          duymuş olarak gelir. İkisi de eksik çerçevedir. Hormon tedavisi ne herkese verilmesi gereken bir rutin,
+          duymuş olarak gelir. İkisi de eksik bir bakıştır. Hormon tedavisi ne herkese verilmesi gereken bir rutin,
           ne de konuşulmadan elenmesi gereken bir seçenektir.
         </p>
         <p>
@@ -146,7 +146,7 @@ const articleSchemas = buildArticleSchemas({
           Kanıt durumu son yirmi yılda belirgin biçimde netleşti — ama bazı sorular hâlâ açık.
         </p>
         <p>
-          Menopoz alanında çalışan dernekler bugün temelde şu çerçeveyi kullanıyor: 60 yaş altındaki ve menopozdan
+          Menopoz alanında çalışan dernekler bugün temelde şu bakışı kullanıyor: 60 yaş altındaki ve menopozdan
           sonraki ilk on yıl içinde olan, belirti yaşayan ve tıbbi engeli bulunmayan kadınlarda fayda-risk dengesi
           hormon tedavisi lehine duruyor <Evidence level={5} />. Bu zaman aralığı bazı kaynaklarda "fırsat penceresi"
           olarak anılıyor.
@@ -169,7 +169,7 @@ const articleSchemas = buildArticleSchemas({
           hangi süre, hangi endikasyonla?" sorusudur.
         </p>
 
-        <h2 id="turkiye-baglamı">Türkiye Bağlamı</h2>
+        <h2 id="turkiye-baglamı">Türkiye Notları</h2>
         <p>
           Türkiye'de hormon tedavisine erişim mümkün; ama görünmeyen bir alan da var.
         </p>
@@ -192,9 +192,9 @@ const articleSchemas = buildArticleSchemas({
           sorma hakkınızı kullanmanız doğal ve gerekli.
         </p>
 
-        <h2 id="karar-cercevesi">Karar Çerçevesi</h2>
+        <h2 id="karar-cercevesi">Karar Planı</h2>
         <p>
-          Soru çoğunlukla "almalı mıyım, almamalı mıyım" değil, "benim için hangi çerçevede uygun" biçimine evriliyor.
+          Soru çoğunlukla "almalı mıyım, almamalı mıyım" değil, "benim için hangi koşulda uygun" biçimine evriliyor.
         </p>
         <p>
           İlk basamak şu: yeterince rahatsızlık veren bir belirti var mı? Sıcak basmaları ya da gece terlemeleri
@@ -241,7 +241,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           <strong>Ne kadar süre kullanabilirim?</strong> Eskiden "en kısa süre, en düşük dozda, sonra mutlaka kesin"
-          yaklaşımı yaygındı. Güncel çerçeve daha esnek: belirtileriniz devam ediyor, yaşam kaliteniz tedaviden anlamlı
+          yaklaşımı yaygındı. Güncel yaklaşım daha esnek: belirtileriniz devam ediyor, yaşam kaliteniz tedaviden anlamlı
           fayda görüyor ve yeni bir kontrendikasyon çıkmadıysa, devam etmek bir seçenek. Yıllık olarak fayda ve riski
           yeniden tartmak ise her zaman geçerli.
         </p>

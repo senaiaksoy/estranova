@@ -9,7 +9,7 @@
  * Üretim turunda makaleler güncellendiğinde linkler buradan tek
  * noktadan değiştirilir; her hub sayfası ilgili kaydı import eder.
  *
- * 5 hub için 3'er adım: "Genel çerçeve → Sık karşılaşılan
+ * 5 hub için 3'er adım: "Genel bakış → Sık karşılaşılan
  * konu / mahrem konu → Pratik / karar / derin bakış".
  */
 
@@ -44,11 +44,11 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
     kicker: 'Hormonal geçişe yeni misin?',
     title: 'Bu hub\'da nereden başlamalıyım?',
     intro:
-      'Üç adımlık bir okuma yolu — önce genel çerçeve, sonra en sık karşılaşılan konu, sonunda karar verme. İstediğin zaman alt-bölümlere dağılabilirsin; bu yol seni acele ettirmez.',
+      'Üç adımlık bir okuma yolu — önce genel bakış, sonra en sık karşılaşılan konu, sonunda karar verme. İstediğin zaman alt-bölümlere dağılabilirsin; bu yol seni acele ettirmez.',
     steps: [
       {
         step: '01',
-        label: 'Genel çerçeve',
+        label: 'Genel bakış',
         title: 'Menopoz Nedir',
         excerpt:
           'Menopozun klinik tanımı, geçiş aşamaları ve sürecin temel özellikleri — sakin bir giriş.',
@@ -84,7 +84,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
     steps: [
       {
         step: '01',
-        label: 'Beslenme çerçevesi',
+        label: 'Beslenme temeli',
         title: 'Beslenme & Yaşlanma — Sürdürülebilir Bir Tabak',
         excerpt:
           'Diyet kültürünün uzağında, 40 sonrası bedeni destekleyen besin örüntülerini yaşıt tonuyla anlatan açılış rehberi.',
@@ -105,7 +105,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Klinik takviye',
         title: 'D Vitamini Rehberi',
         excerpt:
-          '"Vitamin" adı yanıltıcı — biyolojik olarak hormon. Tarama, dozaj ve bireysel karar çerçevesi.',
+          '"Vitamin" adı yanıltıcı — biyolojik olarak hormon. Tarama, dozaj ve bireysel karar notları.',
         href: '/zamansiz-yasam/d-vitamini-rehberi',
         readingMinutes: 9,
       },
@@ -195,7 +195,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Temel biyoloji',
         title: 'Östrojen Biyolojisi ve Sağlık',
         excerpt:
-          'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler, ER-α/ER-β reseptörleri ve HRT çerçevesi.',
+          'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler, ER-α/ER-β reseptörleri ve HRT\'ye giriş.',
         href: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
         readingMinutes: 10,
       },

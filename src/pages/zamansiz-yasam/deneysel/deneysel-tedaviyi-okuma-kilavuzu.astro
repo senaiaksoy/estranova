@@ -33,7 +33,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Deneysel Tedaviyi Okuma Kılavuzu';
 const articleDescription =
-  'Bir tedaviye "deneysel" demek ne anlama gelir? Kanıt seviyesi nasıl okunur? Pazarlamayı bilimden hangi sinyaller ayırır? Off-label kullanım ile deneysel uygulama farkı; doktora sorabileceğiniz üç somut soru — sınır bilen sakin editöryal bir çerçeve.';
+'Bir tedaviye "deneysel" demek ne anlama gelir? Kanıt seviyesi nasıl okunur? Pazarlamayı bilimden hangi sinyaller ayırır? Off-label kullanım ile deneysel uygulama farkı; doktora sorabileceğiniz üç somut soru — sınır bilen sakin editöryal bir rehber.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -115,7 +115,7 @@ const articleSchemas = buildArticleSchemas({
           Onaylı bir ilacın veya cihazın, onaylandığı endikasyon dışında — ama
           hekimin profesyonel sorumluluğunda — reçete edilmesi. Yaygındır,
           çoğu yerde meşrudur, kanıt seviyesi olguya göre değişir.
-          <strong>Klinik araştırma çerçevesinde uygulama:</strong> Etik kurul
+<strong>Klinik araştırma içinde uygulama:</strong> Etik kurul
           onaylı bir protokol içinde, bilgilendirilmiş onam ile, sonuçları
           ölçülmek üzere yapılan uygulama. <strong>"Deneysel"</strong> teriminin
           asıl yeri burası: yeterli kanıt henüz oluşmamış, araştırma sürüyor.
@@ -190,7 +190,7 @@ const articleSchemas = buildArticleSchemas({
             'Kanıt sorulduğunda net yanıt yerine "araştırmalar gösteriyor" tarzı kapalı atıf',
             'Önce-sonra fotoğrafları (kontrolsüz, ışıklandırma/poz farkı, seçilmiş hasta)',
             '"%95 sonuç" gibi kaynaksız ve örneklem büyüklüğü verilmemiş iddialar',
-            '"Size özel ticari sunum / süreli fiyat avantajı" — tıbbi karar bağlamında pazarlama dili',
+'"Size özel ticari sunum / süreli fiyat avantajı" — tıbbi karar zemininde pazarlama dili',
             '"Bir milyon hastada işe yaradı" anekdot tabanlı pazarlama, kontrollü çalışma referansı yok',
             'Marka adı ön planda, mekanizma ve sınırlamalar arka planda anlatım',
             '"Nihai çare / hayatınızı değiştirir" tarzı vaat dili',
@@ -277,10 +277,10 @@ const articleSchemas = buildArticleSchemas({
           profesyonel sorumluluğunda kullanılmasıdır — yaygındır, çoğu yerde
           meşrudur ve birçok durumda makul kanıta dayanır. <em>Deneysel</em>
           ise yeterli kanıt henüz oluşmamış, çoğu zaman klinik araştırma
-          çerçevesinde uygulanan bir yaklaşımdır. İkisinin de gözeneği farklı:
+içinde uygulanan bir yaklaşımdır. İkisinin de gözeneği farklı:
           off-label kullanım için sorulacak soru <em>"bu endikasyonda kanıt ne
           kadar?"</em>, deneysel uygulama için sorulacak soru <em>"bu klinik
-          araştırma çerçevesinde mi yapılıyor, etik kurul onayı var mı?"</em>
+araştırma içinde mi yapılıyor, etik kurul onayı var mı?"</em>
           olur.
         </p>
 
@@ -328,7 +328,7 @@ const articleSchemas = buildArticleSchemas({
           Bu cihazlar belirli ürogenital endikasyonlar için onay almıştır; ama
           pazarlandıkları endikasyonların büyük kısmı <em>onay alınanın
           dışında</em> kalır — <em>"sıkılaştırma", "estetik yenileme",
-          "antiaging"</em> gibi geniş çerçeveler için kanıt seviyesi sınırlıdır
+"antiaging"</em> gibi geniş vaatler için kanıt seviyesi sınırlıdır
           <Evidence level={2} />. Yine cihazların kullanım protokolleri
           merkez ve kullanıcıya göre belirgin değişebilir; aynı cihaz farklı
           ellerde farklı sonuç verebilir. Bu ekosistemde ihtiyatlı olmak
@@ -341,7 +341,7 @@ const articleSchemas = buildArticleSchemas({
           Bir tedaviyi <em>"deneysel"</em> diye etiketlemek tek başına ne
           reddetmek ne de kabul etmek demektir; yelpazenin neresinde olduğunu
           görmek demektir. Onaylı endikasyon, off-label kullanım, klinik
-          araştırma çerçevesindeki uygulama ve henüz kanıtın çok zayıf olduğu
+araştırma içindeki uygulama ve henüz kanıtın çok zayıf olduğu
           alan — bunlar hep aynı kelimenin altında toplanabiliyor. Hastanın
           elindeki en güçlü araç, bu yelpazeyi okuyabilmek ve hangi soruyu
           ne zaman soracağını bilmek.
@@ -385,7 +385,7 @@ const articleSchemas = buildArticleSchemas({
             notta açmam mantıklı oldu — uzman olarak.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik bağlam:</strong> Yeni bir uygulama
+            <strong class="text-burgundy">Klinik not:</strong> Yeni bir uygulama
             ya da takviye için <em>"sizin görüşünüz nedir"</em> sorusu, kliniğimde
             de muayene odasında belki en sık gelen sorulardan biri. Sosyal medya
             ve özel merkez pazarlaması bilgi akışını çok hızlandırdı; ama bu
@@ -394,7 +394,7 @@ const articleSchemas = buildArticleSchemas({
             olmadığında, karar çoğu zaman algoritmaya teslim oluyor.
           </p>
           <p>
-            <strong class="text-burgundy">Mekanik çerçeve:</strong> Klinik kanıt
+            <strong class="text-burgundy">Mekanizma notu:</strong> Klinik kanıt
             hiyerarşisi piramidal yapıdadır: vaka raporu/uzman görüşü tabanda,
             randomize kontrollü çalışma üst sıralarda, sistematik derleme ve
             meta-analiz tepede. Klinik araştırmalar dört faz hâlinde ilerler —
@@ -429,10 +429,10 @@ const articleSchemas = buildArticleSchemas({
             yeni bir tedavi seçeneğini hastaya değerlendirirken birlikte oturup
             şu basamakları izlemeye özen gösteririm: (1) endikasyon netleştirme
             — bu uygulama gerçekten <em>sizin tablonuza</em> mı yönelik, yoksa
-            geniş bir pazarlama çerçevesinin parçası mı; (2) kanıt seviyesi
+geniş bir pazarlama hattının parçası mı; (2) kanıt seviyesi
             haritası — vaka raporu mu, gözlemsel çalışma mı, RCT mi, derleme mi
             söz konusu; (3) onay durumu netleştirme — endikasyon-içi mi, off-label
-            mi, klinik araştırma çerçevesinde mi; (4) bireysel risk-fayda
+mi, klinik araştırma içinde mi; (4) bireysel risk-fayda
             değerlendirmesi — hastanın eşlik eden tıbbi durumları, kullandığı
             ilaçlar, yaş ve hormonal tablosu hesaba katılır; (5) standart kanıtlı
             seçenekler önce konuşulur — deneysel uygulama bunların yerine değil,
@@ -446,11 +446,11 @@ const articleSchemas = buildArticleSchemas({
           <p>
             <strong class="text-burgundy">Bireysellik vurgusu:</strong> Yukarıda
             paylaştıklarım — hem yazıda hem bu notta — genel popülasyon
-            çerçevesidir; sizin tablonuzdaki sağlık öyküsü, kullandığınız
+yaklaşımıdır; sizin tablonuzdaki sağlık öyküsü, kullandığınız
             ilaçlar, eşlik eden tıbbi durumlar, hayat tercihleri ve önceki
             tedavi yanıtları bir uygulamayı denemek için <em>doğru zamanı</em>
-            ve <em>doğru çerçeveyi</em> belirler. Burada okuduğunuz bir
-            başlangıç çerçevesidir, karar değil; sizin için uygun adımları
+ve <em>doğru yolu</em> belirler. Burada okuduğunuz bir
+başlangıç rehberidir, karar değil; sizin için uygun adımları
             kendi hekiminizle birebir değerlendirmeniz önemlidir — özellikle
             kanıtın hâlâ olgunlaşmakta olduğu alanlarda.
           </p>

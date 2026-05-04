@@ -444,6 +444,7 @@ Zorunlu yapı:
 | 15 | Yasak filtreleri temiz (URL, kuruluş adı, marka, HRT/ilaç adı, lüks dekor, sosyal/siyasi yorum) | ☐ |
 | 16 | Tıbbi sorumluluk reddi disclaimer'ı görünür (CLAUDE.md §1) | ☐ |
 | 17 | Dil: %100 Türkçe (CLAUDE.md Dil politikası) | ☐ |
+| 17a | `npm run lexicon:check` temiz; `hard_ban` ihlali yok, `soft_ban` warning'leri gözden geçirildi | ☐ |
 | 18 | Yazar onayı yolu seçildi: standart yazar formu veya `berna-aksoy` / `alara-baykent` / `senai-aksoy` için KC editör doğrudan onayı | ☐ |
 | 19 | Standart yazarlar için 5 dakikalık onay paketi `onay-bekleyen/` altında; istisna yazarlar için KC doğrudan onay kaydı hazırlanmış | ☐ |
 | 20 | Form yanıtı veya KC doğrudan onay notu geldiğinde stil sinyallerinin `article-log.md`'a özetleneceği ve kalıcı profil değişikliğinin editör onayı gerektirdiği not edildi | ☐ |
@@ -526,13 +527,14 @@ Detaylı prosedür: Framework Katman D.
 8. Bilimsel Editör Notu 5-katmanlı (150-250 kelime, Senai Aksoy imza).
 9. ArticleAuthorBlock + RelatedReadings 3-5 + Hero (vault).
 10. JSON-LD: buildArticleSchemas().
-11. Pre-publish checklist 18 madde — 13-18 must-pass.
-12. Yazar onay paketi oluştur: `author:send-for-approval` → `onay-bekleyen`.
-13. Yazar değişiklik isterse revizyon + yeni 5 dk form; onay gelene kadar tekrar.
-14. Yazar ONAYLIYORUM dedikten sonra paket `onaylanan` altına taşınır.
-15. Hub linkage. Compliance ≥85.
-16. Push → Cloudflare auto-deploy.
-17. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.
+11. `npm run lexicon:check` çalıştır; `hard_ban` sıfır olmalı.
+12. Pre-publish checklist 18+ madde — 13-18 must-pass.
+13. Yazar onay paketi oluştur: `author:send-for-approval` → `onay-bekleyen`.
+14. Yazar değişiklik isterse revizyon + yeni 5 dk form; onay gelene kadar tekrar.
+15. Yazar ONAYLIYORUM dedikten sonra paket `onaylanan` altına taşınır.
+16. Hub linkage. Compliance ≥85.
+17. Push → Cloudflare auto-deploy.
+18. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.
 ```
 
 ---

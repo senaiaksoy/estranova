@@ -87,6 +87,15 @@ Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; K
 - **"Destekler" / "iyileştirir"** yalnızca **3. şahıs aktif fiil** anlamında yasaktır ("X'i destekler", "Y'yi iyileştirir"); **pasif ve sıfat formları** (destekleyen, destekleyici, desteklenmektedir, destekleyebilir, iyileştirici, iyileşebilir) **meşru** akademik / yumuşatılmış kullanımdır (`compliance_expert_agent.py` word-boundary eşlemesi).
 - **Tercih edilen kalıplar:** "yardımcı olabilir", "ilişkili olabilir", "fayda görebilir", "herkeste aynı olmayabilir".
 
+#### Editoryal lexicon enforcement (HARD CONSTRAINT)
+
+- Yasaklı ve kaçınılacak editoryal kelimeler yalnızca prompt düzeyinde değil, **deterministik lint** ile de denetlenir.
+- Kanonik sözlük dosyası: **`config/editorial-lexicon.json`**
+- Zorunlu kontrol script'i: **`scripts/check-editorial-lexicon.mjs`**
+- `hard_ban` listesine giren bir kelime (`örüntü` gibi) `src/`, `docs/` veya tanımlı tarama alanlarında geçtiğinde kontrol **hata** verir ve yayın/build kapısı kapanır.
+- `soft_ban` listesi build'i durdurmaz; ama warning üretir ve editoryal revizyon beklenir.
+- Yeni yasak veya tercihli karşılık eklenecekse doğrudan prompt metinlerine dağınık biçimde yazmak yerine önce `editorial-lexicon.json` güncellenir.
+
 #### Engelli / nörodivergan / kronik durum görünürlüğü (HARD CONSTRAINT)
 
 > **Detaylı kural:** [`docs/editorial-rules-disability-visibility.md`](docs/editorial-rules-disability-visibility.md). Tüm yazar profilleri ve writer agent çıktıları bu belgeye uyar.

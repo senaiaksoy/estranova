@@ -21,7 +21,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi',
     title: 'Menopoza Hazırlıkta İlk Kontrol Dosyası: Hangi Test Ne Söyler, Hangisi Herkes İçin Gerekli Değildir?',
     description:
-      'Menopoza yaklaşırken hangi kan tahlilleri, taramalar ve temel kontroller gerçekten anlamlıdır? Bu rehber, sık istenen testleri panik yaratmadan açıklamaya, her sonucun ne söylediğini ayırt etmeye ve gereksiz test kalabalığı içinde daha sakin bir çerçeve kurmaya yardımcı olur.',
+    'Menopoza yaklaşırken hangi kan tahlilleri, taramalar ve temel kontroller gerçekten anlamlıdır? Bu rehber, sık istenen testleri panik yaratmadan açıklamaya, her sonucun ne söylediğini ayırt etmeye ve gereksiz test kalabalığı içinde daha sakin bir yol kurmaya yardımcı olur.',
     publishedDate: '4 Mayıs 2026',
     writerSlug: 'estranova-editorial',
     section: 'Hormonal Geçiş',

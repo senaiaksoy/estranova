@@ -1,0 +1,30 @@
+{
+  "hard_ban": {
+    "örüntü": ["seyir", "gidiş", "tekrar eden tablo", "düzen"],
+    "örüntüler": ["seyirler", "tekrar eden tablolar", "düzenler"],
+    "örüntüsünü": ["seyrini", "gidişini", "düzenini"],
+    "örüntüsünde": ["seyrinde", "gidişinde", "düzeninde"],
+    "örüntüsel": ["tekrar eden", "kalıplaşan"],
+    "örüntüye": ["seyre", "gidişe", "düzene"]
+  },
+  "soft_ban": {
+    "çerçeve": ["bakış", "yol", "hat", "yaklaşım"],
+    "çerçevesi": ["yaklaşımı", "bakışı", "hattı"],
+    "çerçevede": ["bu bakışla", "bu hatta", "bu yaklaşımla"],
+    "bağlam": ["zemin", "durum", "arka plan"],
+    "bağlamda": ["bu durumda", "bu zeminde", "arka planda"]
+  },
+  "include": [
+    "src/**/*.astro",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.md",
+    "src/**/*.mdx",
+    "docs/**/*.md",
+    "scripts/**/*.mjs"
+  ],
+  "exclude": [
+    "dist/**",
+    "node_modules/**"
+  ]
+}
