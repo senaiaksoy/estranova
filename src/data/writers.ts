@@ -8,6 +8,9 @@ export interface Writer {
   portrait?: string; // /images/writers/{slug}.jpg (yoksa undefined)
   focusAreas: string[]; // 2-3 çekirdek kategori etiketi
   isEditor: boolean; // Berna true, diğerleri false
+  // active = sitede yazar kadrosunda görünür; inactive = profil/arşiv korunur,
+  // ancak kadro kartları, arama ve /yazarlar rotalarında görünmez.
+  status?: 'active' | 'inactive';
   // 'lifestyle' = magazinsel yaşıt sesi (doktor değil, kendi uzmanlığı + 40+
   // kadın sağlığı kesişimi); 'scientific' = doktor / klinik uzman, kendi
   // alanında bilimsel anlatım. Default 'lifestyle'.
@@ -94,6 +97,7 @@ export const writers: Writer[] = [
       'Uzlaşmayı önceleyen titiz bir avukat-arabulucu; 40 sonrası yaşam gustosunu seçici estetik ve gündelik neşeyle yazan yaşıt sesi.',
     focusAreas: ['Hak & Sınır', 'Karar & Uzlaşma', 'Yaşam Tarzı', 'Estetik & Gusto'],
     isEditor: false,
+    status: 'inactive',
     writingStyle: {
       voice: 'Ölçülü, kararlı ve uzlaşmacı; özel hayata dair notlarda neşeli ve zarif.',
       rhythm: 'Sade ve kararlı cümleler; karar veren ama dayatmayan ton; sonda küçük bir yaşamsal dokunuş.',
@@ -173,6 +177,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/gonca-gokdemir.webp',
     focusAreas: ['Cilt & Menopoz', 'Lekeler & Hormon-Cilt', 'Önleyici Dermatoloji'],
     isEditor: false,
+    status: 'inactive',
     category: 'scientific',
     writingStyle: {
       voice: 'Anlaşılır + okuru rahatlatan + akademik birikim arka planda; "trendin değil cildin tarafında" anti-trend duruşu.',
@@ -346,6 +351,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/elif-ozcan-dulundu.webp',
     focusAreas: ['Ağız Sağlığı & Menopoz', 'Estetik Diş Karar Süreci', 'Minimal İnvaziv Felsefe'],
     isEditor: false,
+    status: 'inactive',
     category: 'scientific',
     writingStyle: {
       voice: 'Akademik birikim arka planda + sade Türkçe; "sade ama kalıcı olanı seven, abartıdan uzak duran" minimal invaziv felsefe.',
@@ -537,6 +543,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/ozlem-denizmen.webp',
     focusAreas: ['Finansal Sağlık', '40 Sonrası Dayanıklılık', 'Profesyonel Kadın'],
     isEditor: false,
+    status: 'inactive',
     writingStyle: {
       voice: 'Net, düzenli ve karar kalitesini artıran öğretici yaşıt tonu.',
       rhythm: 'Maddelemeyi seven, kısa paragrafla ilerleyen planlı akış.',
@@ -720,15 +727,19 @@ export const writers: Writer[] = [
   },
 ];
 
+export const inactiveWriterSlugs = ['bahar-ozeray', 'gonca-gokdemir', 'elif-ozcan-dulundu', 'ozlem-denizmen'] as const;
+
+export const activeWriters = writers.filter((w) => w.status !== 'inactive');
+
 // Editör her zaman ilk: Berna; diğerleri: displayName alfabetik
-export const editors = writers.filter((w) => w.isEditor);
+export const editors = activeWriters.filter((w) => w.isEditor);
 
 // Magazinsel yaşıt sesi yazarlar — doktor değil; kendi uzmanlık alanı +
 // 40+ kadın sağlığı kesişiminde günlük gözlem ve magazinsel makaleler.
 // Editör (Berna) ve bilimsel yazarlar (Duygu, Senai) bu listede yer almaz.
 export const guestWriters = writers
   .slice()
-  .filter((w) => !w.isEditor && (w.category ?? 'lifestyle') === 'lifestyle')
+  .filter((w) => w.status !== 'inactive' && !w.isEditor && (w.category ?? 'lifestyle') === 'lifestyle')
   .sort((a, b) => a.displayName.localeCompare(b.displayName, 'tr'));
 
 // Bilimsel yazarlar — doktor / klinik uzman; kendi uzmanlık alanında
@@ -736,7 +747,7 @@ export const guestWriters = writers
 // yazıya geçen kadro burada listelenir.
 export const scientificWriters = writers
   .slice()
-  .filter((w) => w.category === 'scientific')
+  .filter((w) => w.status !== 'inactive' && w.category === 'scientific')
   .sort((a, b) => a.displayName.localeCompare(b.displayName, 'tr'));
 
 // Geri-uyumluluk için korunuyor — Senai Aksoy ayrı kart referansı.

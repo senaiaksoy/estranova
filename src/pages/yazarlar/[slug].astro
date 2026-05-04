@@ -3,11 +3,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import WriterArchive from '../../components/site/WriterArchive.astro';
-import { writers } from '../../data/writers';
+import { activeWriters } from '../../data/writers';
 import type { Writer } from '../../data/writers';
 
 export async function getStaticPaths() {
-  return writers.map((writer) => ({
+  return activeWriters.map((writer) => ({
     params: { slug: writer.slug },
     props: { writer },
   }));

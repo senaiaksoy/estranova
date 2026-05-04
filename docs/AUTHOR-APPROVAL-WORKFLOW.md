@@ -204,6 +204,17 @@ Tüm placeholder'lar `{{ALL_CAPS_SNAKE}}` formatında. Script substitution yapar
 | `npm run articles:status` | (mevcut) onaylı/onaysız makale dökümü. |
 | `npm run articles:export` | (mevcut) yayınlanmış makaleleri markdown'a döker. v2'de dual-write yapacak. |
 
+## Pasif Yazar Kuralı
+
+Bir yazar geçici olarak aktif kadrodan çıkarılacaksa profili, article-log'u ve onay arşivi silinmez. `src/data/writers.ts` içinde `status: 'inactive'` işaretlenir; site yalnızca `activeWriters` üzerinden kart, arama ve `/yazarlar/<slug>` rotası üretir. Tekrar aktif etmek için `status` alanı kaldırılır veya `active` yapılır.
+
+Şu an pasif tutulan, geri dönüşe hazır yazarlar:
+
+- `bahar-ozeray`
+- `gonca-gokdemir`
+- `elif-ozcan-dulundu`
+- `ozlem-denizmen`
+
 ---
 
 ## Kapsam ve aşamalar

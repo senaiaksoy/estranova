@@ -7,7 +7,7 @@ import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
 import IssueHero from '../components/site/IssueHero.astro';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
-import { writers } from '../data/writers';
+import { activeWriters, writers } from '../data/writers';
 import { currentIssue, resolveCoverDossier, formatIssuePad } from '../data/issues';
 import { magazineConfig } from '../data/magazine-config';
 
@@ -90,8 +90,8 @@ const journey = [
 ];
 
 // Yazar kategorileri — iki ayrı carousel için filtreler
-const lifestyleWriters = writers.filter((w) => w.category !== 'scientific');
-const scientificWriters = writers.filter((w) => w.category === 'scientific');
+const lifestyleWriters = activeWriters.filter((w) => w.category !== 'scientific');
+const scientificWriters = activeWriters.filter((w) => w.category === 'scientific');
 ---
 
 <SiteLayout

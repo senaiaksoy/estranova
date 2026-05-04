@@ -11,7 +11,7 @@ import { mainNav } from './navigation';
 import { chapterMap } from './chapter-map';
 import { staticArticles } from './static-articles';
 import { issues, formatIssuePad } from './issues';
-import { writers } from './writers';
+import { activeWriters } from './writers';
 import { magazineConfig } from './magazine-config';
 
 export interface SearchItem {
@@ -126,7 +126,7 @@ const issueEntries: SearchItem[] = issues
 // "Doç. Dr." önekiyle birlikte ayrı eklenmiyor (zaten writers.ts'te var
 // ama görünür ad farklı). Senai için arama sonucunda "Doç. Dr. Senai
 // Aksoy" gözüksün.
-const writerEntries: SearchItem[] = writers.map((w) => {
+const writerEntries: SearchItem[] = activeWriters.map((w) => {
   const displayName = w.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : w.displayName;
   return {
     title: displayName,
