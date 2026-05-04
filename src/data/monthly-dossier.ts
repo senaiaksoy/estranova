@@ -60,10 +60,10 @@ export const dossiers: MonthlyDossier[] = [
     kicker: 'MAYIS 2026 · DOSYA',
     title: 'Uyuyamadığımız Geceler',
     subtitle: 'Perimenopozda uykunun değişen yanı',
-    lede: 'Perimenopozun en sessiz belirtisi belki de uyku. Bu ay beş yazı, uykunun neden değiştiğini ve geri kazanılabilen yanlarını yan yana koyuyor.',
+    lede: 'Perimenopozun en sessiz belirtisi belki de uyku. Bu ay üç yazı, uykunun neden değiştiğini, gece terlemesinin mahrem yanını ve akşam hareketinin toparlayıcı gücünü yan yana koyuyor.',
     curatorSlug: 'isik-selin-gunce',
     editorNote:
-      'Bir gece bir saat erken yatıyoruz, ertesi sabah daha yorgun kalkıyoruz. Saat üçte gözümüzü açıyoruz, sonra uyumayı beceremiyoruz. Bu dosyayı hazırlarken hep aynı cümleyi duydum: "Eskiden böyle değildi." Doğru — eskiden değildi. Şimdi başka bir şey oluyor; ama panik yapmadan, adım adım bakılabilir bir şey.\n\nBeş yazı boyunca uykuyu farklı kapılardan açıyoruz: bedenin kimyası, akşamın ritmi, yıllar içinde değişen kişisel deneyim, mahrem yan ve bilimin sınırı. Hiçbiri tek başına çözüm değil; ama beş tanesi yan yana getirildiğinde bir gece bir adımı denemek kolaylaşıyor.',
+      'Bir gece bir saat erken yatıyoruz, ertesi sabah daha yorgun kalkıyoruz. Saat üçte gözümüzü açıyoruz, sonra uyumayı beceremiyoruz. Bu dosyayı hazırlarken hep aynı cümleyi duydum: "Eskiden böyle değildi." Doğru — eskiden değildi. Şimdi başka bir şey oluyor; ama panik yapmadan, adım adım bakılabilir bir şey.\n\nÜç yazı boyunca uykuyu üç kapıdan açıyoruz: Berna Aksoy hormonal zemini ve uyku mimarisini kuruyor; Senai Aksoy gece terlemesinin mahrem ama konuşulabilir yanını açıyor; Alara Baykent akşam hareketini performans baskısı değil, geceye geçiş ritüeli olarak okuyor. Hiçbiri tek başına çözüm değil; ama yan yana geldiklerinde bir gece bir adımı denemek kolaylaşıyor.',
     heroImage: {
       src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
       alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku, perimenopoz ve dinlenme teması',
@@ -86,6 +86,15 @@ export const dossiers: MonthlyDossier[] = [
         status: 'published',
         href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
         readingMinutes: 6,
+      },
+      {
+        title: 'Akşam hareketi uykuyu bozar mı, toparlar mı?',
+        excerpt:
+          'Sporcu beden okumasıyla akşam egzersizi, melatonin ve beden ısısı ilişkisi: performans baskısı değil, geceye geçiş ritüeli.',
+        writerSlug: 'alara-baykent',
+        status: 'published',
+        href: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
+        readingMinutes: 7,
       },
       ],
     status: 'current',

@@ -131,6 +131,26 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],
   },
   {
+    path: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
+    title: 'Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?',
+    description:
+      'Akşam egzersizi, melatonin, beden ısısı ve perimenopozda uyku ilişkisi. Alara Baykent sporcu beden okumasıyla, performans baskısı yaratmadan sürdürülebilir akşam hareketini anlatıyor.',
+    publishedDate: '4 Mayıs 2026',
+    writerSlug: 'alara-baykent',
+    section: 'Zihin & Denge · Uyku & Dinlenme',
+    sectionPath: '/zihin-denge',
+    keywords: [
+      'akşam egzersizi',
+      'uyku',
+      'melatonin',
+      'perimenopoz',
+      'menopoz',
+      'beden ısısı',
+      'hafif hareket',
+      'sürdürülebilir egzersiz',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/beslenme-yaslanma',
     title: 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi',
     description: 'Menopoz döneminde metabolik değişiklikleri desteklemek için protein, vitaminler ve antioksidanlar hakkında rehberlik.',

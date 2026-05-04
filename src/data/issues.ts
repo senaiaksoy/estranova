@@ -126,14 +126,14 @@ export const issue01: Issue = {
   monthYear: 'Mayıs 2026',
   theme: 'Geceler',
   coverHeadline: 'Eşik · Sayı 01 — Mayıs 2026 · Geceler',
-  lede: 'Perimenopozun en sessiz belirtisi belki de uyku. İlk sayıda beş yazı, uykunun neden değiştiğini ve geri kazanılabilen yanlarını yan yana koyuyor.',
+  lede: 'Perimenopozun en sessiz belirtisi belki de uyku. İlk sayıda üç yazı, uykunun neden değiştiğini, gece terlemesinin mahrem yanını ve akşam hareketinin toparlayıcı gücünü yan yana koyuyor.',
   coverImage: {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
     alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku, perimenopoz ve dinlenme teması',
   },
   editorLetter: {
     writerSlug: 'senai-aksoy',
-    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBeş yazı boyunca bedenin kimyasından akşamın ritmine, dokuz yıllık kişisel bir gözlemden uyku biliminin sınırına kadar geniş bir alana bakıyoruz. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, yaşıt sesinde ve sakin bir editöryal düzende okurla buluşturmak.',
+    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBu sayıyı özellikle üç sesle kuruyoruz: Berna Aksoy uykunun hormonal zeminini sadeleştiriyor; Senai Aksoy gece terlemesinin mahrem ve klinik yanını utanmadan konuşuyor; Alara Baykent akşam hareketini performans baskısı değil, bedeni geceye hazırlayan küçük bir geçiş olarak okuyor. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, yaşıt sesinde ve sakin bir editöryal düzende okurla buluşturmak.',
   },
   coverDossierSlug: '2026-05-uyuyamadigimiz-geceler',
   releaseDate: '2026-05-01',
