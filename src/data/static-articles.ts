@@ -54,7 +54,7 @@ export const staticArticles: StaticArticleEntry[] = [
     description:
       'Hormon tedavisinin ilk haftalarında ve aylarında karşılaşılabilecek yumuşak yan etkiler, ne zaman geçici sayıldıkları, hekimle birlikte kurulan izleme takvimi ve hangi belirtilerin gecikmeden değerlendirilmesi gerektiği üzerine sakin bir rehber.',
     publishedDate: '27 Nisan 2026',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'senai-aksoy',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
     keywords: [
@@ -85,7 +85,7 @@ export const staticArticles: StaticArticleEntry[] = [
     description:
       'Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.',
     publishedDate: '25 Nisan 2026',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'senai-aksoy',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
     keywords: ['sıcak basması', 'gece terlemesi', 'menopoz', 'perimenopoz', 'uyku', 'tetikleyiciler'],
@@ -145,7 +145,7 @@ export const staticArticles: StaticArticleEntry[] = [
     title: 'Uyku Bozukluğu ve Menopoz — Dinlenmeyi Yeniden Kazanma Rehberi',
     description: 'Menopoz döneminde uyku bozukluklarını anlamak ve kanıt temelli adımlarla uyku kalitesini desteklemek için kapsamlı rehber.',
     publishedDate: '12 Mart 2026',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'senai-aksoy',
     section: 'Zihin & Denge',
     sectionPath: '/zihin-denge',
     keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],

@@ -49,15 +49,15 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
-    writerSlug: 'berna-aksoy',
-    approvedAt: '2026-05-01',
-    note: 'Berna v2.4 kısa doğrulama formu (≤5 dakika, 7 alan) — Bölüm 3 final onayı: Evet. Çift Rol ifşası + "bilmiyorum" anı + 3-parçalı kapanış + 5-katmanlı Bilimsel Editör Notu doğrulandı. İkinci onaylı Estranova makalesi.',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-04',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT karar çerçevesi doktor uzmanlık alanı gerektirdiği için Berna kişisel/yaşıt pasajları temizlendi; URL korundu.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
-    writerSlug: 'berna-aksoy',
-    approvedAt: '2026-05-01',
-    note: 'Berna v2.4 kısa doğrulama formu (ikinci kullanım, ≤5 dakika) — final onayı: Evet. Çift Rol ifşası İzleme Takvimi bölümünde + "bilmiyorum" anı Ruh Hali bölümünde + defter metaforu kapanışı (bedenle yazışma varyasyonu) + 5-katmanlı BEN doğrulandı. Üçüncü onaylı Estranova makalesi, HRT ekseninde ikinci.',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-04',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. Yan etki, doz/form ayarı ve izlem takvimi doktor uzmanlık alanı gerektirdiği için klinik eğitim tonunda yeniden yazıldı; URL korundu.',
   },
   {
     pathname: '/zamansiz-yasam/beslenme-yaslanma',
@@ -79,9 +79,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
-    writerSlug: 'berna-aksoy',
-    approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — En zorlu Kanal A KAPALI revizyonu: 5 birinci elden anekdot ("Ben iki haftalık not tuttum", "bende süreyi kısaltıyor", "Ben kendi adıma protokol kurdum" vb.) dolaylı sese çevrildi, 7 kollektif "biz" + 1 sahne kuruluşu ("Sen de fark etmişsindir") düzeltildi. "Bilmiyorum" anı HRT bağlamında, gece varyasyonu kapanışı (bedenle yazışma serisi 7 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece), 5-katmanlı BEN (hipotalamik termal nötr zon mekanizması). Yedinci onaylı Estranova makalesi.',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-04',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. Vazomotor belirti tedavisi, HRT ve non-hormonal ilaç seçenekleri doktor uzmanlık alanı gerektirdiği için Senai klinik sesine çevrildi; URL korundu.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu',
@@ -93,7 +93,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — Önleyici sağlık ekseni + v2.5 humor havuzundan ilk yeni kalıp uygulaması (algoritma şakası #6). Apple Watch + istirahat nabzı Kanal A KAPALI ihlal düzeltildi (dolaylı tansiyon notu çerçevesine), 3 kollektif "biz" düzeltildi, "yaşıt hesabın" yumuşatma artifact algoritma şakasıyla değiştirildi. Takvim varyasyonu kapanışı (bedenle yazışma serisi 9 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim), 5-katmanlı BEN (klinik bağlam + parametre seti + longitudinal trend). Dokuzuncu onaylı Estranova makalesi.',
+    note: 'Berna doğrudan onayı (form üretmeden) — Önleyici sağlık ekseni + v2.5 humor havuzundan ilk yeni kalıp uygulaması (algoritma şakası #6). Apple Watch + istirahat nabzı Kanal A KAPALI ihlal düzeltildi (dolaylı tansiyon notu çerçevesine), 3 kollektif "biz" düzeltildi, "yaşıt hesabın" yumuşatma artifact algoritma şakasıyla değiştirildi. 2026-05-04 editoryal revizyon: lab markerları/tarama testleri doktor önerisi gibi değil, hekime götürülecek kişisel kayıt dosyası ve tarama takvimi konuşması olarak yeniden çerçevelendi; Berna imzasında kalması uygun görüldü. Takvim varyasyonu kapanışı (bedenle yazışma serisi 9 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim), 5-katmanlı BEN (klinik bağlam + parametre seti + longitudinal trend). Dokuzuncu onaylı Estranova makalesi.',
   },
   {
     pathname: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
@@ -115,9 +115,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-    writerSlug: 'berna-aksoy',
-    approvedAt: '2026-05-02',
-    note: 'Berna doğrudan onayı (form üretmeden) — Uyku bozukluğu ekseni (Kanal A KAPALI + hassas konu humor 0) — KRİTİK 4 Kanal A KAPALI ihlal düzeltildi: (1) Bölüm 01 "Apple Watch\'ım da bunu yıllar boyu kayıt altına aldı: aynı saatte yatıyorum, ama derin uykunun süresi giderek değişiyor. Bu küçük gözlem, \'neden hep yorgunum\' sorusunun yanıtı için iyi bir başlangıç oldu" → niteliksel ("\'Neden uzun uyuduğum bir gecenin ardından bile dinlenmemiş kalkıyorum?\' sorusunun yanıtı çoğu zaman buradadır: süre değil, mimarinin hangi katmanının kısaldığı belirleyicidir"); (2) Bölüm 03 "Bir okurun yorumunda gördüm — aynı soruyu ben de yıllar önce sormuştum: \'Yatağa girer girmez uyuyamıyorum, uyusam da gece üçte gözlerim kendiliğinden açılıyor\'" → tamamen dolaylı ses ("Tanıdığım bir kadın bunu şöyle anlatmıştı..."); (3) Bölüm 06 "Ben kendi adıma HRT konusunda kararı doktorumla birlikte değerlendirip aldım" → hekim çerçeve rotasyonu ("Hekimimle bir konuşmamızda: \'Uyku tedavisinde tek bir doğru protokol yok; semptomun önde gelen iki-üç bileşenini ayırmak ilk işimiz\'") + bireysellik vurgusu; (4) SSS HRT "Ben kendi adıma da bu pencerede iyileşmeyi yaşadım" → "HRT yalnızca uyku için verilen bir tedavi değil; bireysel bir karardır". Berna açılışı korundu ("Bir noktada şunu fark ettim: uyku, göz kapatıp sabaha kadar süren tek bir blok değil"), 5 yerde kollektif "biz" düzeltmesi (sandığımızdan → ilk bakışta görünenden, deneyebiliriz → denenebilir, çoğumuzun anlattığı tablo → yaygın olarak anlatılan tablo, birçoğumuzun bilmediği → az bilinen, birçoğumuzda → pek çok kadında), Bölüm 07 "Bilmiyorum" anı (apnenin niçin daha sessiz seyrettiği bireysel ölçekte mümkün değil) + "Bu benim yolum" dengeleyici. v2.5 humor 0 (hassas konu kuralı: apne + ciddi sağlık etkileri — Berna profile §3 v2.3 kuralı). Yastık varyasyonu kapanışı (bedenle yazışma serisi 13 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim → yapı → nefes → saat → yastık), 5-katmanlı BEN (klinik bağlam çok faktörlü uyku bozukluğu + allopregnanolon-GABA mekanik + apne/RLS/depresyon kırmızı bayraklar + tedavi hiyerarşisi (hijyen → HRT → CBT-I) + tiroid/anemi/RLS ayırıcı tanı). On üçüncü ve son onaylı Estranova makalesi — Berna 13/13 tamamlandı.',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-04',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT, gabapentin, CBT-I, apne, polisomnografi ve uyku tıbbı değerlendirmesi doktor uzmanlık alanı gerektirdiği için klinik sesle revize edildi; URL korundu.',
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',

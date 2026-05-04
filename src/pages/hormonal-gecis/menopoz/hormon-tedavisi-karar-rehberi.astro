@@ -33,7 +33,7 @@ const articleDescription =
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'berna-aksoy',
+  writerSlug: 'senai-aksoy',
   publishedDate: '20 Nisan 2026',
   pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
   articleSection: 'Hormonal Geçiş',
@@ -70,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
     />
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="20 Nisan 2026" readingMinutes={7} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="20 Nisan 2026" readingMinutes={7} />
 
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
@@ -88,22 +88,19 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="karar-konusma">Karar Değil, Konuşma</h2>
         <p>
-          Bir noktada şunu fark ettim: hormon tedavisi sorusu çoğu zaman 'doğru cevabı' bekleyen bir sınav gibi
-          yaşanıyor. Oysa bu bir konuşma — bedeninle, hekiminle, yıllar içinde olgunlaşan bir konuşma.
+          Hormon tedavisi sorusu çoğu zaman "doğru cevabı" bekleyen bir sınav gibi yaşanıyor. Oysa klinikte
+          bunun tek bir cevabı yok; iyi karar, semptomun ağırlığı ile kişisel risk profilinin aynı masada
+          konuşulmasıyla verilir.
         </p>
         <p>
-          Bu konuşmaya ben de kendi sandalyemden başlıyorum, dürüst söylemem gerekirse; ve sandalyem alışılmış olandan
-          biraz farklı. Eşim jinekolog; ama beni takip eden o değil. Yakınlarını takip etmenin etik açıdan doğru
-          olmadığını düşünür; takiplerimi yıllar önce güvendiği bir meslektaşına devretti. Bu nedenle bekleme odasında
-          oturup sıramı beklemiyorum, dönüş yolunda aklın bin parçaya bölünmesini içeriden bilmiyorum. Bu körlüğümü
-          en başta kabul etmek istiyorum — çünkü bu yazının yazıldığı yer, çoğu kadının oturduğu yerden biraz
-          ayrıcalıklı.
+          Muayene odasında en sık gördüğüm şey şudur: bir kadın HRT'yi ya mucize gibi ya da mutlak tehlike gibi
+          duymuş olarak gelir. İkisi de eksik çerçevedir. Hormon tedavisi ne herkese verilmesi gereken bir rutin,
+          ne de konuşulmadan elenmesi gereken bir seçenektir.
         </p>
         <p>
-          Yine de evdeki bir akşam yemeğinde tıbbi bir konunun nasıl açıldığını yakından izliyorum — bir başka açıdan
-          bakmama yardımcı oluyor; ama karar her zaman benim ile asıl hekimim arasında kuruluyor. Bu yazıda hormon
-          tedavisi kararına bir çerçeve koymaya çalışacağım — yönlendirme yapmadan, seçenekleri birlikte düşünerek.
-          Burada bir genelleme yapmak istemem; sadece karar sürecinde nereye baktığımı paylaşıyorum.
+          Bu yazıda amaç reçete önermek değil; karar konuşmasının iskeletini kurmak. Hangi belirtiler tedavi
+          gündemine alınır, hangi riskler kapıyı kapatır, hangi noktalar yıllık izlemle yeniden değerlendirilir:
+          güvenli karar bu soruların sırasını doğru kurmakla başlar.
         </p>
 
         <h2 id="hormon-tedavisi-nedir">Hormon Tedavisi Nedir?</h2>
@@ -160,17 +157,16 @@ const articleSchemas = buildArticleSchemas({
           etkiler. Bu yüzden yaş ve zaman önemli <Evidence level={4} />.
         </p>
         <p>
-          Meme kanseri konusundaki tartışma benim için hâlâ açık bir soru. Araştırmaların ortaya koyduğu mutlak
+          Meme kanseri konusundaki tartışma klinik kararın en hassas alanlarından biridir. Araştırmaların ortaya koyduğu mutlak
           risk — yani binlerce kadında yılda kaç ek vakaya yol açtığı — pek çok kadının sandığından daha düşük
-          <Evidence from={4} to={5} />. Yine de bunu kendi ailem için tartarken durup düşündüğüm anlar oluyor.
-          Bilimin verdiği rakamlar bir şey söyler; kendi tarihimiz başka bir şey söyler. İkisini birlikte tartmak
-          gerekiyor — ve bu tartının nasıl kurulacağına dair tek bir doğru cevap yok.
+          <Evidence from={4} to={5} />. Yine de aile öyküsü, önceki meme biyopsileri, kullanılan rejim, süre ve
+          tarama disiplini aynı anda değerlendirilmeden "risk düşük" ya da "risk yüksek" demek doğru olmaz.
         </p>
         <p>
           Progestin tipi, östrojenin alınma yolu (ağız mı cilt mi), doz ve süre — bu ince ayrıntıların hepsi güvenlik
-          profilini değiştirebiliyor. Hekimimle bir konuşmamızda 'aynı isim altında pek çok rejim var' demişti; bu
-          cümle benim için bu konunun anahtar cümlesi oldu. Aynı adı taşıyan iki tedavi, farklı kadınlarda farklı
-          profillerle yazılabiliyor.
+          profilini değiştirebiliyor. Aynı ad altında konuşulan iki tedavi, iki kadında bambaşka risk-fayda
+          dengesi yaratabilir. Bu yüzden "HRT kullanıyor musunuz?" sorusundan daha önemlisi "hangi form, hangi doz,
+          hangi süre, hangi endikasyonla?" sorusudur.
         </p>
 
         <h2 id="turkiye-baglamı">Türkiye Bağlamı</h2>
@@ -221,9 +217,8 @@ const articleSchemas = buildArticleSchemas({
           Kararın özetini iki cümlede toplayabiliriz: belirtiler ne kadar rahatsızlık veriyor, ne kadar risk kabul
           edilebilir — bu ikisinin kesiştiği yer kişisel kararın yeri. Hormon almayan kadınların da başka kanıtlı
           seçenekleri var: yaşam tarzı, bilişsel davranışçı terapi, hormonsuz yeni ilaçlar <Evidence level={4} />.
-          "Evet" dememek bir seçenek kaybı değil. Bir konuşmada hekimimin söylediği bir cümle uzun süre aklımda kaldı:
-          "çevredeki kadınların yaptığı tablodan çıkıp kendi belirtilerini izlemeye başlamak — ilk adım çoğu zaman
-          bu." Ben bu yolu böyle yürüdüm; ama bu benim yolum, sizinki başka olabilir — ve olmalı da.
+          "Evet" dememek bir seçenek kaybı değildir. İlk adım çoğu zaman çevredeki kadınların kararından çıkıp
+          kendi belirtilerini, kendi risklerini ve kendi önceliklerini yazıya dökmektir.
         </p>
 
         <h2 id="sss">Sıkça Sorulan Sorular</h2>
@@ -269,9 +264,9 @@ const articleSchemas = buildArticleSchemas({
           kişisel ve zaman içinde ayarlanabilir bir plan.
         </p>
         <p>
-          Ben kendi kararıma yıllar süren bir konuşmanın sonunda geldim; karar kendi kararımdı, sorumluluğu da kendime
-          ait. Belki şu soru yardımcı olur: bu kararı kendim mi veriyorum, yoksa başkasının korkusunu mu taşıyorum?
-          Beden bir soru sormuştu; sen kendi yolundan cevap veriyorsun.
+          Hormon tedavisi kararı aceleyle değil, bilgiyi sakinleştirerek verilir. Muayeneye giderken en değerli
+          hazırlık çoğu zaman kısa bir listedir: belirti, süre, şiddet, aile öyküsü, kullandığınız ilaçlar ve
+          sizi asıl zorlayan hedef.
         </p>
       </ArticleProsePanel>
 

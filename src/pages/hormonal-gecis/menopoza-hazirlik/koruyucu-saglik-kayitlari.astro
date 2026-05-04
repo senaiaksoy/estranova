@@ -14,10 +14,10 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const tocEntries = [
   { id: 'neden-kayit', label: 'Neden Bu Evrede Kayıt?' },
   { id: 'vital-gostergeler', label: 'Vital Göstergeler' },
-  { id: 'lab-markerlari', label: 'Lab Markerları' },
+  { id: 'lab-markerlari', label: 'Kan Değerleri Notu' },
   { id: 'semptom-gunlugu', label: 'Semptom Günlüğü' },
   { id: 'aile-oykusu', label: 'Aile Öyküsü' },
-  { id: 'tarama-cercevesi', label: 'Tarama Çerçevesi' },
+  { id: 'tarama-cercevesi', label: 'Tarama Takvimi' },
   { id: 'hekimle-paylasim', label: 'Hekimle Paylaşım' },
   { id: 'baslangic-30-gun', label: 'İlk 30 Gün' },
   { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
@@ -27,7 +27,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?';
 const articleDescription =
-  'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo ve semptom takibinin neden önemli olduğunu, hangi göstergeleri ne sıklıkta izleyebileceğinizi ele alan sade rehber.';
+  'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo, aile öyküsü ve semptom notlarını hekime götürülebilecek sade bir kişisel referans dosyasına dönüştürme rehberi.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -41,7 +41,7 @@ const articleSchemas = buildArticleSchemas({
     'koruyucu sağlık',
     'sağlık kayıtları',
     'semptom günlüğü',
-    'tarama testleri',
+    'tarama takvimi',
     'vital göstergeler',
     'aile öyküsü',
   ],
@@ -118,22 +118,21 @@ const articleSchemas = buildArticleSchemas({
           etmek; üç ay sonra okunabilir bir resim ortaya çıkarıyor.
         </p>
 
-        <h2 id="lab-markerlari">Hangi Lab Markerları Bu Dönemde Önemli?</h2>
+        <h2 id="lab-markerlari">Kan Değerleri İçin Küçük Bir Not Defteri</h2>
         <p>
-          Lab değerleri konusunda kişiye özel liste hekimle birlikte netleşiyor; ama hazırlık döneminde sık gündeme
-          gelen bir çekirdek küme var.
+          Kan değerleri konusunda listeyi benim yazmam doğru olmaz; bunu kişisel sağlık öyküsünü bilen hekimle
+          birlikte belirlemek gerekir. Benim burada önerdiğim şey test istemek değil, eldeki sonuçları kaybetmemek.
         </p>
         <p>
-          Lipid profili (toplam kolesterol, LDL, HDL, trigliserid), açlık glukozu ve HbA1c, tiroid fonksiyonları
-          (TSH), tam kan sayımı ve D vitamini düzeyi en sık izlenen başlıklardandır. Karaciğer fonksiyonları, ferritin
-          ve B12 de bireysel risk profiline göre değerlendirilir <Evidence level={4} />. FSH ve östradiol gibi hormon
-          ölçümleri tek başına bir "menopoz tanı testi" değildir; klinik tablo ve adet öyküsüyle birlikte
-          yorumlanması gerekiyor.
+          Yıllık kontrolden sonra gelen sonuçları tek bir klasöre koymak bile tabloyu değiştiriyor. Lipid profili,
+          glukoz/HbA1c, tiroid, tam kan sayımı, D vitamini, ferritin ya da B12 gibi değerler bazen farklı yıllarda
+          farklı hekimlerin önünde açılıyor; o anda "geçen yıl nasıldı?" sorusuna yanıt verebilmek konuşmayı
+          hızlandırıyor <Evidence level={4} />.
         </p>
         <p>
-          Bir noktada şunu fark ettim: bu değerleri tek seferlik bir "check-up" olarak değil, yıllık ya da iki yıllık
-          aralıklarla tekrarlanan bir referans hattı olarak düşünmek çok daha bilgilendirici. Tek bir nokta yerine
-          eğri çiziyorsun gibi.
+          Hormon değerleri konusunda da aynı sakinlik işe yarıyor. FSH veya östradiol gibi sonuçlar tek başına
+          "menopoza girdim/girmedim" diye okunmamalı; adet öyküsü ve belirtilerle birlikte yorumlanır. Benim
+          dosyamda bu sonuçların görevi karar vermek değil, hekimle konuşurken resmi tamamlamak.
         </p>
 
         <h2 id="semptom-gunlugu">Semptom Günlüğü Tutmak: Neden ve Nasıl?</h2>
@@ -174,22 +173,20 @@ const articleSchemas = buildArticleSchemas({
           bir not, hafıza yardımcısından çok daha fazlası — bir tür hatırlama disiplini.
         </p>
 
-        <h2 id="tarama-cercevesi">Tarama Testleri: Genel Çerçeve</h2>
+        <h2 id="tarama-cercevesi">Tarama Takvimini Nasıl Konuşmalı?</h2>
         <p>
-          Tarama testleri, belirti yokken yapılan kontroller demek. Hazırlık döneminde bu çerçeve daha sistematik
-          hâle geliyor; bunun bana en çok kazandırdığı şey, "ben her şeyi takip edemem" kaygısının yerini bir takvime
-          bırakması oldu.
+          Tarama konusu kolayca "hangi testi ne zaman yaptırmalıyım" listesine dönüşebiliyor. Ben bunu kendi adıma
+          liste ezberlemek yerine takvim konuşması olarak tutmayı daha sağlıklı buldum.
         </p>
         <p>
-          Meme görüntüleme, jinekolojik kontrol, kemik mineral yoğunluğu (gerektiğinde), kolon taraması ve
-          kardiyovasküler risk değerlendirmesi en sık konuşulan başlıklar. Hangi taramanın hangi yaşta ne sıklıkta
-          önerildiği kişisel risk profiline ve ulusal rehberlere göre değişiyor; bu nedenle hekiminle birlikte
-          kişiselleştirilmiş bir takvim oluşturmak en doğrusu.
+          Meme görüntüleme, jinekolojik kontrol, kolon taraması, kemik mineral yoğunluğu ya da kardiyovasküler risk
+          değerlendirmesi gibi başlıkların her biri yaşa, aile öyküsüne ve kişisel risklere göre değişiyor. Bu
+          yüzden benim dosyamda bu bölümün başlığı "yaptırılacaklar listesi" değil: "hekime sorulacak takvim soruları".
         </p>
         <p>
-          "Tarama" ile "tanı" arasındaki farkı hatırlamak da değerli: tarama bir bulgu görse bile sonraki adım her
-          zaman tanı koymak değil, ek değerlendirme. Bu yüzden tarama sonuçlarını okurken aceleci yorum yerine
-          hekimle birlikte değerlendirmek temel ilke.
+          Pratikte bir sayfa yetiyor: son mamografi tarihi, son jinekolojik kontrol, varsa kolon taraması, varsa kemik
+          yoğunluğu ölçümü, ailede önemli hastalık öyküleri ve "bu yıl hangisi gerekli?" sorusu. Böyle bakınca tarama
+          kaygı üreten bir liste olmaktan çıkıp, yıllık görüşmenin sakin gündemi oluyor.
         </p>
       </ArticleProsePanel>
 
@@ -201,8 +198,9 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Yıllık kontrole giderken son bir yılın tansiyon ortalamasını, kilo seyrini, semptom günlüğünden birkaç
-          anahtar notu ve aile öyküsünün güncel hâlini yanına almak; konuşmayı "şimdi neyiniz var" ekseninden çıkarıp
-          "son dönemdeki seyriniz nasıl" eksenine taşıyor. Bu fark, koruyucu sağlık yaklaşımının özü.
+          anahtar notu, aile öyküsünün güncel hâlini ve önceki tetkik tarihlerini yanına almak; konuşmayı "şimdi
+          neyiniz var" ekseninden çıkarıp "son dönemdeki seyriniz nasıl" eksenine taşıyor. Bu fark, koruyucu sağlık
+          yaklaşımının özü.
         </p>
         <p>
           Verilerini bir kâğıda özetlemek ya da telefonda küçük bir not şablonu hazırlamak işi kolaylaştırır.
@@ -219,8 +217,8 @@ const articleSchemas = buildArticleSchemas({
         <p>
           İlk hafta yalnızca tansiyon ölçümünü düzenli yap, haftalık ortalamayı bir nota geçir. İkinci hafta semptom
           günlüğüne başla; üç-dört kısa kategoriyle sınırlı tut (uyku, enerji, ruh hali, adet). Üçüncü hafta aile
-          öyküsünü tek bir nota topla. Dördüncü hafta önümüzdeki bir yıl için lab testleri ve tarama takvimini
-          hekiminle planla.
+          öyküsünü tek bir nota topla. Dördüncü hafta eski kan sonuçlarını ve tarama tarihlerini aynı dosyada
+          birleştir; sonraki kontrolde hekiminle hangi başlıkların gerçekten gerekli olduğunu konuş.
         </p>
         <p>
           Otuz günün sonunda elinde dört şey oluyor: tansiyon eğrisi başlangıcı, semptom referansı, aile öyküsü tek
@@ -239,9 +237,9 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <h3>Hangi sıklıkta lab testi yaptırmalıyım?</h3>
         <p>
-          Genel olarak yıllık ya da iki yıllık aralıklar yaygın bir yaklaşım; ama kişisel risk profiline göre
-          bu sıklık değişir. Lipid profili veya glukoz takibinde değişim varsa hekiminiz daha sık önerebilir.
-          Tek bir "doğru sıklık" yok; hekiminle birlikte kararlaştırılır.
+          Bu sorunun tek cevabı yok; kişisel risk profiline ve önceki sonuçlara göre değişir. Benim önerim,
+          "şu testi şu sıklıkta yaptır" diye ezberlemek yerine eski sonuçlarını yanında götürüp sıklığı hekiminle
+          birlikte belirlemek.
         </p>
         <h3>Ev tipi tansiyon aleti güvenilir mi?</h3>
         <p>
@@ -262,7 +260,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Tek bir ölçüm bir günlük resim verir; aynı ölçümün üç yıllık seyri ise bir hikâye. Yıllık tansiyon
-          ortalaması, lab eğrisi, semptom günlüğü ve aile öyküsü — bu dört çapayı bir takvime yerleştirmek,
+          ortalaması, kan değerleri klasörü, semptom günlüğü ve aile öyküsü — bu dört çapayı bir takvime yerleştirmek,
           "her şeyi takip edemem" kaygısının yerine sade bir ritim koyuyor. Bu benim yolum oldu, yıllar içinde
           olgunlaşarak; senin yolun başka olabilir — ve olmalı da.
         </p>
@@ -288,15 +286,13 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
         <p class="mb-3 leading-relaxed text-ink/80">
           Menopoza hazırlık dönemi (perimenopoz öncesi 40+ yaşları), koruyucu sağlık çerçevesinin sistematik
-          biçimde kurulması için klinik açıdan değerli bir aralıktır. Östrojen düşüşü öncesinde bireysel
-          referans değerlerinin kayıt altına alınması, geçiş ve sonrası dönemde gözlenen değişikliklerin
-          patolojik mi yoksa fizyolojik mi olduğunu ayırt etmeyi kolaylaştırır.
+          biçimde kurulması için klinik açıdan değerli bir aralıktır. Bu yazının ana önerisi test istemek değil;
+          mevcut ölçüm, belirti ve aile öyküsü bilgilerinin düzenli tutulmasıdır.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Düzenli olarak izlenmesi önerilen başlıca parametreler arasında kan basıncı, kilo ve bel çevresi,
-          lipid profili (toplam kolesterol, LDL, HDL, trigliserid), açlık glukozu ve HbA1c, tiroid fonksiyonları
-          (TSH), tam kan sayımı ile D vitamini düzeyi yer alır. Karaciğer fonksiyonları, ferritin ve B12 ise
-          klinik tabloya göre değerlendirilir.
+          Hangi kan değerlerinin ve hangi taramaların izleneceği kişisel risk profiline göre değişir. Kan basıncı,
+          kilo-bel çevresi, metabolik göstergeler, tiroid, tam kan sayımı, D vitamini, ferritin/B12 gibi başlıklar
+          klinikte sık konuşulabilir; ancak bu liste kişiye özel olarak hekim tarafından düzenlenmelidir.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
           Tek bir ölçüm değerinden çok, aynı koşullarda alınan ölçümlerin zaman içindeki seyri (eğri) klinik
@@ -305,10 +301,9 @@ const articleSchemas = buildArticleSchemas({
           erken fark edilmesini sağlar.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Ölçüm sıklığı, izlenecek parametre seti ve tarama testleri (mamografi, jinekolojik kontrol, kemik
-          mineral yoğunluğu, kolon taraması) bireyin yaşı, aile öyküsü, mevcut sağlık durumu ve ulusal
-          rehberlere göre kişiselleştirilmelidir. Bu yazıdaki gözlemler genel bir bilgilendirme amacı taşır;
-          kişisel ölçüm ve değerlendirme planı her zaman hekimle birlikte oluşturulur.
+          Ölçüm sıklığı, izlenecek parametre seti ve tarama testleri bireyin yaşı, aile öyküsü, mevcut sağlık
+          durumu ve ulusal rehberlere göre kişiselleştirilmelidir. Bu yazıdaki çerçeve kişisel kayıt düzeni
+          içindir; kişisel ölçüm, tarama ve değerlendirme planı her zaman hekimle birlikte oluşturulur.
         </p>
         <p class="text-sm italic text-burgundy">
           — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
