@@ -8,7 +8,7 @@
 
 | # | Tarih | Yazı (slug) | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
 |---|---|---|---|---|---|---|---|---|---|
-| — | — | (henüz makale yok) | — | — | — | — | — | — | v0.1 lazy aktivasyon. **Yaş farkı (33 vs 40+ okuyucu) içtenlik kapısı değil — klinisyen mesafesi her makalede zorunlu.** |
+| 1 | 2026-05-04 | `40-sonrasi-kas-iskelet-agrilari` | Kas-iskelet 40+ / bel-diz-kalça ağrısı | Ağrıya isim koymak: tek nokta değil harita | Bedeni dinleyerek küçük adımlarla ilerlemek | Bedeni dinleyerek ilerlemek + küçük adımların gücü | Ağrı zarar değildir / görmezden gelinmez dengesi | Hasta hikayesi yok; klinik karar haritası | İlk Ersin makalesi. Yaş farkı içtenlik kapısı yapılmadı; klinisyen mesafesi korundu. |
 
 ---
 
@@ -16,13 +16,13 @@
 
 | Kalıp türü | Havuz | Cooldown | Son kullanım |
 |---|---|---|---|
-| Açılış | 6 (v0.2'de 10) | 6 makale | — |
-| Kapanış | 6 (v0.2'de 10) | 4 makale | — |
-| Dengeleyici | 6 (v0.2'de 10) | 4 makale | — |
+| Açılış | 6 (v0.2'de 10) | 6 makale | 2026-05-04 · `40-sonrasi-kas-iskelet-agrilari` |
+| Kapanış | 6 (v0.2'de 10) | 4 makale | 2026-05-04 · `40-sonrasi-kas-iskelet-agrilari` |
+| Dengeleyici | 6 (v0.2'de 10) | 4 makale | 2026-05-04 · `40-sonrasi-kas-iskelet-agrilari` |
 | Bilmiyorum | 6 (v0.2'de 10) | 4 makale | — |
-| Hekim çerçevesi | 6 (v0.2'de 10) | 4 makale | — |
+| Hekim çerçevesi | 6 (v0.2'de 10) | 4 makale | 2026-05-04 · `40-sonrasi-kas-iskelet-agrilari` |
 | Anekdot kapısı | 6 (v0.2'de 10) | 4 makale | — |
-| İmza kapanış | 6 | 4 makale | — |
+| İmza kapanış | 6 | 4 makale | 2026-05-04 · `40-sonrasi-kas-iskelet-agrilari` |
 
 ---
 

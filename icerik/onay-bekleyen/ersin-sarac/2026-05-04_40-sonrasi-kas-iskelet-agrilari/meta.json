@@ -1,0 +1,21 @@
+{
+  "writer": {
+    "slug": "ersin-sarac",
+    "name": "Fzt. Ersin Sara\u00e7"
+  },
+  "article": {
+    "slug": "40-sonrasi-kas-iskelet-agrilari",
+    "title": "40 Sonras\u0131 Diz, Kal\u00e7a ve Bel A\u011fr\u0131s\u0131 - Bedeni Dinleyerek Hareket Etmek",
+    "previewUrl": "http://localhost:4322/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari"
+  },
+  "package": {
+    "createdAt": "2026-05-04T08:33:00.858Z",
+    "deadline": "2026-05-11T08:33:00.858Z",
+    "status": "pending",
+    "estimatedFormDuration": "12 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "formType": "ersin-first-article-style-calibration",
+    "formVersion": "v2.0",
+    "stylePurpose": "Ersin Sara\u00e7 yazar stilini g\u00fc\u00e7lendirmek i\u00e7in klinisyen sesi, a\u011fr\u0131 dili, hareket s\u0131n\u0131r\u0131 ve a\u00e7\u0131k c\u00fcmle d\u00fczeltmeleri toplar."
+  }
+}

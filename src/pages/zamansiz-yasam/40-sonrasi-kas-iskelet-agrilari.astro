@@ -1,0 +1,306 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const tocEntries = [
+  { id: 'isim-koymak', label: 'Ağrıya İsim Koymak' },
+  { id: 'yasla-degisen', label: 'Yaşla Değişen Sistem' },
+  { id: 'bel-diz-kalca', label: 'Bel, Diz ve Kalça' },
+  { id: 'hareket-haritasi', label: 'Hareket Haritası' },
+  { id: 'denge-guven', label: 'Denge ve Güven' },
+  { id: 'ne-zaman-destek', label: 'Ne Zaman Destek?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = '40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek';
+const articleDescription =
+  '40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge, ağrı sinyali ve fizyoterapi desteği üzerinden anlatan sade rehber.';
+const articlePath = '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'ersin-sarac',
+  publishedDate: '4 Mayıs 2026',
+  pathname: articlePath,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['40 sonrası hareket', 'bel ağrısı', 'diz ağrısı', 'kalça ağrısı', 'kas-iskelet sağlığı', 'fizyoterapi', 'denge egzersizi'],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="pt-24 text-ink">
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="ersin-sarac" publishedDate="4 Mayıs 2026" readingMinutes={8} />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={articlePath} title={articleTitle} />
+      </div>
+
+      <header class="mb-10">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Zamansız Yaşam · Hareket</p>
+        <h1 class="font-serif text-4xl leading-tight md:text-6xl">40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek</h1>
+      </header>
+
+      <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
+        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <p class="leading-relaxed text-ink/80">
+          40 sonrasında diz, kalça ve bel ağrısını tek bir nedene bağlamak çoğu zaman yanıltıcıdır. Kas gücü,
+          eklem yükü, uyku, kilo değişimi, denge ve günlük hareket alışkanlıkları aynı haritanın parçalarıdır.
+          Bu yazı, ağrıyı susturmaya değil, bedenin verdiği sinyali okuyarak güvenli hareket alanı kurmaya
+          odaklanır.
+        </p>
+      </section>
+
+      <ArticleProsePanel>
+        <h2 id="isim-koymak">Ağrıya İsim Koymak: Tek Bir Nokta Değil, Bir Harita</h2>
+        <p class="italic">
+          Diz, kalça ya da bel ağrısı başladığında ilk soru genellikle "hangi hareket iyi gelir?" oluyor.
+          Daha güvenli soru şudur: beden bu ağrıyla hangi yükü anlatmaya çalışıyor?
+        </p>
+        <p>
+          40 sonrası kas-iskelet ağrıları çoğu zaman tek bir dokudan çıkmaz. Eklem yüzeyi, kas gücü, tendon
+          kapasitesi, omurga hareketliliği, uyku kalitesi ve günlük yüklenme biçimi aynı tabloya katkı
+          verebilir <Evidence level={4} />. Bu nedenle ağrıyı tek egzersize bağlamak yerine, ağrının ne zaman
+          arttığını ve ne zaman sakinleştiğini izlemek daha öğretici olur.
+        </p>
+        <p>
+          Bedeni dinleyerek ilerlemek pasif kalmak anlamına gelmez. Ağrının sesini duyup hareketi tamamen
+          bırakmak ile ağrıyı yok sayıp yüklenmeye devam etmek iki uçtur. Klinik pratikte amaç, bu iki ucun
+          arasında güvenli bir çalışma alanı bulmaktır.
+        </p>
+
+        <h2 id="yasla-degisen">40 Sonrasında Kas, Eklem ve Denge Neden Değişir?</h2>
+        <p class="italic">
+          Yaş alma yalnızca takvimle ilgili değildir; kas kuvveti, tendon esnekliği, eklem yükü ve denge
+          sistemi de zaman içinde farklı çalışmaya başlar.
+        </p>
+        <p>
+          Yetişkinlik boyunca kas kütlesi ve kuvveti korunmadığında yavaş yavaş azalabilir. Menopoz geçişiyle
+          birlikte vücut kompozisyonu, yağ dağılımı ve toparlanma kapasitesi de değişebilir <Evidence from={4} to={5} />.
+          Kas gücü azaldığında eklemlerin taşıdığı yük daha belirgin hissedilir; diz ve kalça ağrısında bu
+          mekanizma sık karşımıza çıkar.
+        </p>
+        <p>
+          Denge sistemi de yalnızca "denge tahtası" meselesi değildir. Görme, ayak tabanından gelen duyular,
+          iç kulak, kalça çevresi kaslar ve gövde kontrolü birlikte çalışır. Dünya Sağlık Örgütü, yetişkinlerde
+          düzenli fiziksel aktiviteye ek olarak güçlendirme ve yaşlı erişkinlerde denge içeren çok bileşenli
+          hareketi önerir <Evidence level={5} />.
+        </p>
+
+        <h2 id="bel-diz-kalca">Bel, Diz ve Kalça Ağrısını Ayırmak Neden Önemli?</h2>
+        <p class="italic">
+          Aynı ağrı bölgesi farklı mekanizmalardan doğabilir. Haritayı doğru okumak, gereksiz korkuyu ve
+          gereksiz yüklenmeyi azaltır.
+        </p>
+        <p>
+          Bel ağrısında çoğu tablo ciddi bir hastalık işareti olmadan, hareket kapasitesi ve yük toleransı
+          üzerinden yönetilir. Kılavuzlar kronik bel ağrısında egzersiz, eğitim ve gerektiğinde çok disiplinli
+          rehabilitasyon yaklaşımını ilk basamak seçenekler arasında görür <Evidence level={5} />. Bu cümle,
+          herkesin aynı egzersizi yapacağı anlamına gelmez; kişinin ağrı davranışı ve işlev hedefi plana yön
+          verir.
+        </p>
+        <p>
+          Diz ve kalça ağrısında eklem kireçlenmesi, tendon yüklenmesi, kas kuvveti kaybı ve hareket paternleri
+          iç içe geçebilir. Diz ve kalça osteoartritinde egzersiz, kilo yönetimi ve eğitim güçlü biçimde
+          önerilen çekirdek yaklaşımlardır <Evidence level={5} />. Ağrı varsa hareketi kesmek değil, hareketin
+          dozunu ve biçimini kişiye göre düzenlemek gerekir.
+        </p>
+
+        <h2 id="hareket-haritasi">Güvenli Hareket Haritası: Ağrıyı Susturmak Değil, Yanıtı Okumak</h2>
+        <p class="italic">
+          Hareket planı bir ceza ya da test değildir. Küçük adımların gücü, bedenin verdiği yanıtı izleyerek
+          ilerlediğinde ortaya çıkar.
+        </p>
+        <p>
+          Güvenli hareket haritası üç soruyla başlar. Birincisi: ağrı hareket sırasında mı, hareketten saatler
+          sonra mı artıyor? İkincisi: ağrı hareket alanını mı kısıtlıyor, yoksa yalnızca rahatsızlık olarak mı
+          kalıyor? Üçüncüsü: ertesi gün belirgin sertlik, topallama veya güç kaybı var mı? Bu yanıtlar,
+          hareketin dozunu ayarlamada çoğu zaman tek bir görüntüleme sonucundan daha kullanışlıdır.
+        </p>
+        <p>
+          Genel çerçevede yürüyüş, kas güçlendirme, eklem hareket açıklığı, denge ve nefesle birlikte gövde
+          kontrolü aynı planın farklı parçalarıdır <Evidence level={4} />. Fizyoterapist desteği, bu parçaları
+          "şu programı yap" düzeyinden çıkarıp kişisel yüklenme haritasına dönüştürür. Amaç ağrısız bir beden
+          vaadi değil; daha güvenli, daha anlaşılır ve sürdürülebilir hareket alanıdır.
+        </p>
+
+        <h2 id="denge-guven">Denge, Düşme Korkusu ve Günlük Yaşam</h2>
+        <p class="italic">
+          Denge çalışması yalnızca ileri yaş konusu değildir. 40 sonrasında güvenli hareket, ileriki yılların
+          bağımsızlığını da etkiler.
+        </p>
+        <p>
+          Düşme riski yaşla birlikte artar; güç, denge ve çevresel düzenleme bu riski azaltmada birlikte
+          düşünülür <Evidence level={5} />. Dengeyi yalnızca ayakta tek bacak durmak gibi görmek dar bir bakış
+          olur. Sandalyeden kalkma, merdiven inme, kaldırım kenarında durma ve karanlıkta yön bulma gibi
+          günlük hareketler de denge sistemini sınar.
+        </p>
+        <p>
+          Bu nedenle hareket planı yalnızca ağrılı bölgeye bakmamalıdır. Diz ağrısı olan bir kişide kalça
+          çevresi kuvvet, ayak bileği hareketliliği ve gövde kontrolü de değerlendirilir. Bel ağrısı olan
+          bir kişide kalça hareket açıklığı ve yürüyüş ritmi tabloyu etkileyebilir. Beden bölge bölge
+          çalışır gibi görünür; işlev sırasında bütün olarak davranır.
+        </p>
+
+        <h2 id="ne-zaman-destek">Ne Zaman Fizyoterapi veya Hekim Desteği Gerekir?</h2>
+        <p class="italic">
+          Her ağrı alarm değildir. Yine de bazı sinyaller, beklemek yerine değerlendirme almanın daha doğru
+          olduğunu gösterir.
+        </p>
+        <p>
+          Ağrı günlük yürüyüşü, merdiven inmeyi, uykuyu veya işe dönüşü belirgin kısıtlıyorsa fizyoterapi
+          değerlendirmesi anlamlıdır. Üç aydan uzun süren, dalgalansa da tamamen yatışmayan veya tekrar eden
+          ağrılarda hareket alışkanlığı, kuvvet, denge, eklem hareketliliği ve yüklenme düzeni birlikte
+          incelenmelidir <Evidence level={4} />.
+        </p>
+        <p>
+          Hekim değerlendirmesi özellikle travma, enfeksiyon bulgusu, açıklanamayan kilo kaybı, ilerleyen
+          nörolojik belirti veya kanser öyküsü gibi durumlarda geciktirilmemelidir <Evidence level={5} />.
+          Fizyoterapi bu haritanın hareket ve işlev tarafını kurar; tıbbi ayırıcı tanı gerektiğinde hekimle
+          aynı masada düşünülür.
+        </p>
+
+        <RedFlagBox
+          markers={[
+            'Düşme, çarpma veya burkulma sonrası üzerine basamama ya da belirgin şekil bozukluğu',
+            'Bacakta ilerleyen güç kaybı, uyuşma veya ayak bileğini kaldıramama',
+            'İdrar veya dışkı kontrolünde yeni kayıp, kasık çevresinde uyuşma',
+            'Ateş, gece terlemesi, açıklanamayan kilo kaybı veya genel durum bozukluğu ile birlikte ağrı',
+            'Kanser öyküsü olan kişide yeni başlayan ve dinlenmeyle geçmeyen bel, kalça veya kemik ağrısı',
+            'Gece uykudan uyandıran, pozisyonla rahatlamayan ve giderek artan ağrı',
+          ]}
+          footnote="Bu liste tanı koymaz; beklemek yerine sağlık profesyoneliyle hızlı değerlendirme gerektirebilecek durumları hatırlatır."
+        />
+
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+
+        <h3>Ağrım varken hareket etmek zararlı mı?</h3>
+        <p>
+          Her ağrı zarar anlamına gelmez; ama her ağrı görmezden de gelinmez. Hafif ve hareket sonrası kısa
+          sürede yatışan rahatsızlık çoğu zaman yüklenme ayarıyla yönetilebilir <Evidence level={4} />. Ağrı
+          hareketle belirgin artıyor, ertesi gün işlevi bozuyor veya güç kaybı eşlik ediyorsa planın yeniden
+          düzenlenmesi gerekir.
+        </p>
+
+        <h3>Bel, diz ve kalça ağrısında tek bir doğru egzersiz var mı?</h3>
+        <p>
+          Hayır. Kılavuzlar egzersizi güçlü biçimde destekler; ancak egzersizin türü kişinin ağrı davranışına,
+          kuvvet düzeyine, denge durumuna ve günlük hedeflerine göre değişir <Evidence level={5} />. Bu yüzden
+          iyi plan, tek hareket değil; kişinin yanıtına göre ayarlanan hareket haritasıdır.
+        </p>
+
+        <h3>Yürüyüş yeterli olur mu?</h3>
+        <p>
+          Yürüyüş iyi bir başlangıç olabilir; dolaşım, eklem beslenmesi ve genel dayanıklılığa katkı sağlar.
+          Ancak kas gücü, denge ve eklem kontrolü için tek başına her zaman yeterli değildir. WHO yetişkinlerde
+          aerobik aktiviteye ek olarak kas güçlendirmeyi de haftalık hareketin parçası olarak önerir
+          <Evidence level={5} />.
+        </p>
+
+        <h3>Görüntüleme sonucumda kireçlenme veya fıtık yazıyor; ağrımın nedeni bu mu?</h3>
+        <p>
+          Görüntüleme bulguları önemli bilgi verebilir, ancak tek başına ağrının tamamını açıklamayabilir.
+          Klinik muayene, hareketle değişen ağrı, güç ve işlev değerlendirmesi birlikte yorumlanmalıdır
+          <Evidence level={4} />. Bazen raporda görünen bulgu uzun süredir vardır; yeni ağrıyı yaratan şey
+          yüklenme düzenindeki değişim olabilir.
+        </p>
+
+        <h3>Fizyoterapiye ne zaman başlamalıyım?</h3>
+        <p>
+          Ağrı günlük yaşamı kısıtlıyorsa, tekrar ediyorsa veya üç ayı aşıyorsa değerlendirme almak iyi bir
+          adımdır. Amaç yalnızca ağrılı bölgeye müdahale etmek değil; hareket alışkanlığını, kuvveti, dengeyi
+          ve güvenli yüklenmeyi birlikte düzenlemektir.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          40 sonrası diz, kalça ve bel ağrısı bedenin "dur" dediği tek bir nokta değildir. Çoğu zaman beden,
+          yüklenme biçimini yeniden düşünmeye çağırır. Bu çağrı panik gerektirmez; dikkat, düzen ve küçük
+          adımlar gerektirir.
+        </p>
+        <p>
+          Bedeni dinleyerek ilerlemek, ağrıyı büyütmeden ama hareketten de vazgeçmeden yol bulmaktır. Hangi
+          hareketin size uygun olduğunu, bedeninizin ertesi gün verdiği yanıt ve profesyonel değerlendirme
+          birlikte belirler. Küçük bir adım bazen büyük bir programdan daha öğreticidir; çünkü sürdürülebilir
+          olan hareket, zamanla güveni de geri çağırır.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+          '/zamansiz-yasam/kilo-artisi-menopoz',
+          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri',
+          '/zamansiz-yasam/d-vitamini-rehberi',
+        ]}
+      />
+
+      <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Bu yazı, fizyoterapi alanındaki hareket ve işlev değerlendirmesini kadın sağlığı bağlamına taşıyor.
+            Tıbbi açıdan önemli olan nokta, ağrıyı ne küçümsemek ne de her ağrıyı görüntüleme raporuna indirgemektir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik bağlam:</strong> 40 sonrası kadınlarda bel, diz ve kalça ağrısı
+            kas gücü, eklem yükü, vücut kompozisyonu, uyku, hormonal geçiş ve günlük hareket alışkanlıklarıyla
+            birlikte değerlendirilmelidir. Egzersiz ve eğitim; kronik bel ağrısı, diz-kalça osteoartriti ve
+            düşme riskini azaltma alanlarında güçlü kılavuz desteğine sahiptir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Sınır:</strong> Egzersiz önerileri kişisel muayene yerine geçmez.
+            Ağrının yeri, yayılımı, nörolojik bulgu, travma öyküsü, kemik kırılganlığı riski ve eşlik eden
+            hastalıklar değerlendirmeyi değiştirir. Özellikle ilerleyen güç kaybı, idrar-dışkı kontrolünde
+            yeni sorun, ateş, açıklanamayan kilo kaybı veya kanser öyküsü varsa tıbbi değerlendirme gecikmemelidir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Pratik bütünleşim:</strong> Fizyoterapi, hareketin dozunu ve biçimini
+            kişiye göre düzenleyen bir süreçtir; tek bir egzersiz reçetesinden ibaret değildir. Hekim ve
+            fizyoterapist işbirliği, özellikle uzun süren ağrı, düşme riski, osteoporoz veya nörolojik belirti
+            bulunan kişilerde kararın güvenli kurulmasına yardımcı olur.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
+        <p class="text-sm leading-relaxed text-ink/75">
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı, tedavi ve egzersiz planı için sağlık profesyoneline başvurunuz.
+        </p>
+      </section>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
