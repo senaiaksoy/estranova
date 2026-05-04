@@ -63,7 +63,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/beslenme-yaslanma',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — Kanal A KAPALI ihlali düzeltildi (Apple Watch + uyku verisi → dolaylı ses), "bilmiyorum" anı Beslenme Şekilleri bölümünde, tabak metaforu kapanışı (bedenle yazışma serisi: mektup → defter → tabak), 5-katmanlı BEN. Dördüncü onaylı Estranova makalesi, beslenme imza ekseninde ilk.',
+    note: 'Berna doğrudan onayı (form üretmeden) — Kanal A KAPALI ihlali düzeltildi (Apple Watch + uyku verisi → dolaylı ses), "bilmiyorum" anı Beslenme Şekilleri bölümünde, tabak metaforu kapanışı (bedenle yazışma serisi: mektup → defter → tabak), 5-katmanlı BEN. 2026-05-04 editoryal revizyon: protein gram/kg, D vitamini/B12/kalsiyum/magnezyum ve takviye kararları Berna’nın yaşam ritmi dilinde bırakıldı; hedef/doz/takviye kararı hekim veya diyetisyenle kişiselleştirilir çerçevesi güçlendirildi. Dördüncü onaylı Estranova makalesi, beslenme imza ekseninde ilk.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',

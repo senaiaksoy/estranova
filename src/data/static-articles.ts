@@ -173,7 +173,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/zamansiz-yasam/beslenme-yaslanma',
     title: 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi',
-    description: 'Menopoz döneminde metabolik değişiklikleri desteklemek için protein, vitaminler ve antioksidanlar hakkında rehberlik.',
+    description: 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekim veya diyetisyenle netleştirmeyi hatırlatan rehber.',
     publishedDate: '9 Mart 2026',
     writerSlug: 'berna-aksoy',
     section: 'Zamansız Yaşam',
