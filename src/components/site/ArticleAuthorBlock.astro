@@ -2,11 +2,10 @@
 import { writers } from '../../data/writers';
 
 interface Props {
-  authorSlug: string; // 'berna-aksoy' | 'alara-baykent' | ...
-  publishedDate: string; // ör. "14 Nisan 2026"
-  lastUpdated?: string; // opsiyonel; yoksa gösterilmez
-  readingMinutes: number; // ör. 7
-  /** Bilimsel inceleme imzası — varsayılan Doç. Dr. Senai Aksoy */
+  authorSlug: string;
+  publishedDate: string;
+  lastUpdated?: string;
+  readingMinutes: number;
   medicalReviewer?: string;
 }
 
@@ -24,7 +23,6 @@ if (!writer) {
 }
 
 const bylineLabel = writer.isInstitutionalByline ? 'Hazırlayan' : 'Yazan';
-const reviewerLabel = writer.isInstitutionalByline ? 'Bilimsel inceleme' : 'Bilimsel inceleme';
 const initials = writer.displayName
   .split(/\s+/)
   .filter((part) => part.length > 0)
@@ -32,9 +30,7 @@ const initials = writer.displayName
   .join('');
 ---
 
-<section
-  class="rounded-[28px] border border-burgundy/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8"
->
+<section class="rounded-[28px] border border-burgundy/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
   <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
     {
       writer.portrait ? (
@@ -62,16 +58,34 @@ const initials = writer.displayName
       <p class="text-sm text-ink/70">{writer.role.split('/')[0].trim()}</p>
 
       <p class="mt-3 text-xs text-ink/65">
-        {reviewerLabel}: <span class="text-ink/85">{medicalReviewer}</span>
+        Bilimsel inceleme: <span class="text-ink/85">{medicalReviewer}</span>
       </p>
+
       {
         writer.isInstitutionalByline && (
-          <p class="mt-2 text-xs leading-relaxed text-ink/60">
-            Bu içerik Estranova editörleri tarafından hazırlanmış kurumsal editöryal içeriktir.
-          </p>
+          <>
+            <p class="mt-2 text-xs leading-relaxed text-ink/60">
+              Bu içerik Estranova editörleri tarafından hazırlanmış kurumsal editoryal içeriktir.
+            </p>
+            <section class="mt-5 rounded-[22px] border border-burgundy/12 border-l-[5px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft px-5 py-4 ring-1 ring-burgundy/8">
+              <p class="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör</p>
+              <p class="text-sm leading-relaxed text-ink/78">
+                Bu editoryal içerik, okuyucuya dönük dil sadeliği korunarak hazırlanır ve yayın öncesinde
+                <span class="font-semibold text-ink"> {medicalReviewer}</span> tarafından bilimsel uygunluk,
+                terminoloji ve kanıt dengesi açısından gözden geçirilir.
+              </p>
+            </section>
+            <section class="mt-4 rounded-[18px] border border-dashed border-burgundy/20 bg-white/90 px-5 py-4 ring-1 ring-burgundy/8">
+              <p class="text-sm leading-relaxed text-ink/72">
+                Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları
+                için sağlık profesyoneline başvurunuz.
+              </p>
+            </section>
+          </>
         )
       }
-      <p class="mt-1 text-xs text-ink/55">
+
+      <p class="mt-3 text-xs text-ink/55">
         Yayımlandı: {publishedDate}
         {
           lastUpdated && (

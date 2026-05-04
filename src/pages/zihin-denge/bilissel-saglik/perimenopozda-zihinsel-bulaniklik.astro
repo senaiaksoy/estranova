@@ -9,6 +9,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import EditorialMedicalEditorNote from '../../../components/site/EditorialMedicalEditorNote.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -79,6 +80,15 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="estranova-editorial"
         publishedDate={publishedDate}
         readingMinutes={readingMinutes}
+      />
+
+      <EditorialMedicalEditorNote
+        paragraphs={[
+          'Perimenopozda tarif edilen bilişsel bulanıklık çoğu zaman yapısal bir bellek kaybından çok dikkat, uyku ve stres yükünün kesişiminde belirginleşen geçici bir işlev dalgalanmasıdır.',
+          'Östrojen dalgalanması, gece uyanmaları, vazomotor belirtiler ve duygu durum yükü birlikte çalıştığında kelime bulmada gecikme, odakta kırılma ve zihinsel yorgunluk hissi daha görünür hale gelebilir.',
+          'Bununla birlikte belirgin yön bulma güçlüğü, hızla artan unutkanlık, günlük işlevde bozulma, uzun süren çökkünlük ya da eşlik eden nörolojik belirtiler varsa tablo yalnızca hormonal geçiş başlığı altında değerlendirilmemelidir.',
+          'Klinik yaklaşım çoğu zaman uyku düzeni, stres yükü, beslenme, tiroid-B12-demir ekseni ve gerekirse nörolojik veya psikiyatrik değerlendirme dahil daha geniş bir çerçeveyle düşünmeyi gerektirir.',
+        ]}
       />
 
       <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
@@ -220,12 +230,14 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-        <p class="text-sm leading-relaxed text-ink/75">
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için
-          sağlık profesyoneline başvurunuz.
-        </p>
-      </section>
+      <EditorialMedicalEditorNote
+        paragraphs={[
+          'Perimenopozda tarif edilen bilişsel bulanıklık çoğu zaman yapısal bir bellek kaybından çok dikkat, uyku ve stres yükünün kesişiminde belirginleşen geçici bir işlev dalgalanmasıdır.',
+          'Östrojen dalgalanması, gece uyanmaları, vazomotor belirtiler ve duygu durum yükü birlikte çalıştığında kelime bulmada gecikme, odakta kırılma ve zihinsel yorgunluk hissi daha görünür hale gelebilir.',
+          'Bununla birlikte belirgin yön bulma güçlüğü, hızla artan unutkanlık, günlük işlevde bozulma, uzun süren çökkünlük ya da eşlik eden nörolojik belirtiler varsa tablo yalnızca hormonal geçiş başlığı altında değerlendirilmemelidir.',
+          'Klinik yaklaşım çoğu zaman uyku düzeni, stres yükü, beslenme, tiroid-B12-demir ekseni ve gerekirse nörolojik veya psikiyatrik değerlendirme dahil daha geniş bir çerçeveyle düşünmeyi gerektirir.',
+        ]}
+      />
     </SubmenuArticleBody>
   </main>
 

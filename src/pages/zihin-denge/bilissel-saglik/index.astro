@@ -21,7 +21,15 @@ const chapter = chapterMap[path]!;
 const epigraph = subHubEpigraphs[path];
 const next = getNextChapter(path);
 
-const editorPick: any = null;
+const editorPick = {
+  href: '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik',
+  title: 'Perimenopozda Zihinsel Bulanıklık: Unutkanlık Hissi Günlük Hayatta Nasıl Okunur?',
+  lede:
+    'Kelimeyi biraz geç bulmak, aynı anda üç şey düşünürken çabuk dağılmak, günün ortasında zihnin sislenmesi. Perimenopozda bu his neden ortaya çıkar, ne kadarı olağan bir geçiştir, ne zaman daha dikkatli bakmak gerekir?',
+  writerSlug: 'estranova-editorial',
+  readingMinutes: 8,
+  image: hero,
+};
 
 const neighbors = [
   { href: '/zihin-denge/uyku-dinlenme', title: 'Uyku & Dinlenme', excerpt: 'Uyku kalitesi bilişsel performansla doğrudan bağlantılıdır.' },

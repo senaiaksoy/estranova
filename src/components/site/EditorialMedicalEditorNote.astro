@@ -1,0 +1,30 @@
+---
+interface Props {
+  title?: string;
+  paragraphs: string[];
+  signature?: string;
+}
+
+const {
+  title = 'Tıbbi Editör Notu',
+  paragraphs,
+  signature = '— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü',
+} = Astro.props;
+---
+
+<section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
+  <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">{title}</p>
+  {
+    paragraphs.map((paragraph) => (
+      <p class="mb-3 leading-relaxed text-ink/80">{paragraph}</p>
+    ))
+  }
+  <p class="text-sm italic text-burgundy">{signature}</p>
+</section>
+
+<section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
+  <p class="text-sm leading-relaxed text-ink/75">
+    Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık
+    kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.
+  </p>
+</section>
