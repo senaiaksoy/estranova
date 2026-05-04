@@ -38,7 +38,7 @@ Estranova, menopoza ve sonrasına bilimsel bir rehberdir. Tonu editöryel ve sı
 | Favicon, app icon, OG image, lockup, baskı | `logo-icon.svg` (8 köşeli) | ≥32px |
 | Eyebrow etiket, inline editöryel süs, kart başı, e-posta inline ikon | `logo-icon-spark.svg` (4 köşeli) | ≤24px |
 
-**Önemli:** Spark varyantı sembol değişimi değil — aynı yıldızın küçük boy için optimize edilmiş halidir. 8 köşeli ana yıldız küçültüldüğünde "+" işaretine dönüşür; bu yüzden 24px ve altı kullanımlar için sparkle versiyonu kullanılır. Tipik renk altın (`#C9A96E`); gerektiğinde bordo (`#4f171c`) da olabilir.
+**Önemli:** Spark varyantı sembol değişimi değil — aynı yıldızın küçük boy için optimize edilmiş halidir. 8 köşeli ana yıldız küçültüldüğünde "+" işaretine dönüşür; bu yüzden 24px ve altı kullanımlar için sparkle versiyonu kullanılır. Tipik renk altın (`#C9A96E`); gerektiğinde vişne deep (`#7a1f33`) da olabilir.
 
 ### Boş alan (clearspace)
 Logo etrafında en az **"E" harfi yüksekliği** kadar boşluk bırakın.
@@ -67,36 +67,35 @@ Logo etrafında en az **"E" harfi yüksekliği** kadar boşluk bırakın.
 ### Birincil
 | Renk | HEX | Rol |
 |---|---|---|
-| Bordo | `#4f171c` | Ana renk |
+| Vişne Deep | `#7a1f33` | Hero, footer, CTA ve hover |
+| Vişne Mid | `#9c2845` | Link, lede, drop cap ve ana vurgu |
 | Altın | `#C9A96E` | Vurgu |
-| Hardal | `#775a19` | İkincil |
-| Krem | `#fcf9f4` | Arka plan |
-| Charcoal | `#1c1c19` | Metin |
+| Rose Soft | `#d4aab2` | Divider ve kart fonu |
+| Rose Accent | `#b07683` | İkincil aksent |
+| Krem | `#fdf8f0` | Arka plan |
+| Mürekkep | `#2d2d2d` | Makale metni |
 
 ### Genişletilmiş
 | Renk | HEX | Rol |
 |---|---|---|
-| Bordo Link | `#6B2D3E` | Linkler |
-| Bordo Koyu | `#2a0c0f` | Gradient sonu |
-| Hardal Açık | `#8a6a2e` | İkinci aksent |
-| Krem Sıcak | `#FDF8F0` | Kart zemin |
-| Bej | `#F5EDE0` | Vurgu zemin |
-| Prose Body | `#2D2D2D` | Makale metni |
+| Cherry Gradient Sonu | `#4c1220` | Koyu vişne gradient |
+| Krem Rose | `#f8eef0` | Sıcak kart zemin |
+| Charcoal | `#1c1c19` | UI koyu metin |
 
 ### Kombinasyon kuralları
-- **Yüksek kontrast:** Bordo ↔ Krem — ana lockup.
-- **Lüks vurgu:** Altın yalnızca ince çizgiler ve süslemeler için. **Geniş alan rengi olarak kullanmayın.**
-- **Gradient:** `linear-gradient(135deg, #4f171c 0%, #2a0c0f 100%)` — sosyal medya kapağı, hero alanları.
+- **Yüksek kontrast:** Vişne Deep ↔ Krem — ana lockup.
+- **Lüks vurgu:** Altın yalnızca chapter counter, evidence level 5, ince çizgiler ve süslemeler için. **Geniş alan rengi olarak kullanmayın.**
+- **Gradient:** `linear-gradient(135deg, #7a1f33 0%, #4c1220 100%)` — sosyal medya kapağı, hero alanları.
 - **Okuma kontrastı:** Body metni `#2D2D2D` krem zeminde — WCAG AA uyumlu.
 
 ### Mevcut kullanım (`src/index.css`)
 ```css
 @theme {
-  --color-primary: #4f171c;
-  --color-primary-container: #6b2d31;
-  --color-secondary: #775a19;
-  --color-surface: #fcf9f4;
-  --color-surface-container: #f5f4ef;
+  --color-primary: #7a1f33;
+  --color-primary-container: #9c2845;
+  --color-secondary: #b07683;
+  --color-surface: #fdf8f0;
+  --color-surface-container: #f8eef0;
   --color-charcoal: #1c1c19;
 }
 ```
