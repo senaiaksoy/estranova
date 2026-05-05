@@ -30,8 +30,9 @@ const { entries } = Astro.props;
 <nav
   data-toc
   aria-label="İçindekiler"
-  class="rounded-[30px] border border-burgundy/12 bg-white/78 p-5 font-sans shadow-[0_20px_52px_-34px_rgba(44,22,28,0.34)] ring-1 ring-white/75 backdrop-blur"
+  class="rounded-[30px] border border-burgundy/12 bg-white p-5 font-sans shadow-[0_20px_58px_-42px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04]"
 >
+  <div class="pointer-events-none mb-5 h-px w-full bg-gradient-to-r from-transparent via-gold/65 to-transparent"></div>
   <div
     data-toc-progress
     aria-hidden="true"
@@ -56,7 +57,7 @@ const { entries } = Astro.props;
           <a
             href={`#${entry.id}`}
             data-toc-link={entry.id}
-            class="group grid grid-cols-[2rem_1fr] gap-2 rounded-2xl border border-transparent px-2 py-1.5 text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 hover:bg-cream-soft/70 hover:text-burgundy data-[active=true]:border-gold/30 data-[active=true]:bg-cream-warm/70 data-[active=true]:font-semibold data-[active=true]:text-burgundy"
+            class="group grid grid-cols-[2rem_1fr] gap-2 rounded-2xl border border-transparent px-2 py-1.5 text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 hover:bg-cream-soft/35 hover:text-burgundy data-[active=true]:border-gold/30 data-[active=true]:bg-cream-soft/45 data-[active=true]:font-semibold data-[active=true]:text-burgundy"
           >
             <span class="font-serif tabular-nums text-gold transition group-data-[active=true]:text-burgundy">
               {String(i + 1).padStart(2, '0')}

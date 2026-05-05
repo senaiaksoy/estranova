@@ -60,14 +60,14 @@ const items: Item[] = paths.map((path): Item => {
 
 <aside
   class:list={[
-    'relative overflow-hidden rounded-[38px] border border-burgundy/12 bg-gradient-to-br from-cream-soft via-white to-cream-warm/80 p-7 shadow-[0_34px_96px_-54px_rgba(44,22,28,0.36)] ring-1 ring-white/80 md:p-9',
+    'relative overflow-hidden rounded-[38px] border border-burgundy/12 bg-white p-7 shadow-[0_34px_96px_-58px_rgba(44,22,28,0.32)] ring-1 ring-black/[0.04] md:p-9',
     className,
   ]}
   aria-labelledby="related-readings-heading"
 >
   <div class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
-  <div class="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-gold/16"></div>
-  <div class="pointer-events-none absolute -left-12 bottom-4 h-28 w-28 rounded-full bg-burgundy/7 blur-3xl"></div>
+  <div class="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-gold/[0.08]"></div>
+  <div class="pointer-events-none absolute -left-12 bottom-4 h-28 w-28 rounded-full bg-burgundy/[0.035] blur-3xl"></div>
   <p class="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-gold">
     <svg class="h-3 w-3 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
       <polygon
@@ -87,7 +87,7 @@ const items: Item[] = paths.map((path): Item => {
 
   <ol class="grid gap-3 md:grid-cols-2">
     {items.map((item, idx) => (
-      <li class="group relative overflow-hidden rounded-[26px] border border-burgundy/10 bg-white/82 ring-1 ring-white/75 transition duration-300 hover:-translate-y-0.5 hover:border-gold/35 hover:shadow-[0_20px_54px_-32px_rgba(44,22,28,0.38)]">
+      <li class="group relative overflow-hidden rounded-[26px] border border-burgundy/10 bg-white ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/25 hover:shadow-[0_20px_54px_-36px_rgba(44,22,28,0.32)]">
         <div class="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent opacity-0 transition group-hover:opacity-100"></div>
         <a
           href={item.href}
