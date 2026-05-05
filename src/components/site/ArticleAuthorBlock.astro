@@ -31,16 +31,11 @@ if (!writer) {
 
 const routeHero = getSubmenuHeroImage(Astro.url.pathname);
 const bylineLabel = writer.isInstitutionalByline ? 'Hazırlayan' : 'Yazan';
-const coverSrc = imageSrc ?? routeHero?.src ?? writer.portrait;
+const coverSrc = imageSrc ?? routeHero?.src;
 const coverAlt =
   imageAlt ??
   routeHero?.alt ??
-  (writer.portrait ? `${writer.displayName} portresi` : `${writer.displayName} imzası`);
-const initials = writer.displayName
-  .split(/\s+/)
-  .filter((part) => part.length > 0)
-  .map((n) => n[0])
-  .join('');
+  'Estranova makale konusu için editoryal kapak görseli';
 ---
 
 <section class="relative overflow-hidden rounded-[34px] border border-black/10 bg-white shadow-[0_34px_120px_-76px_rgba(44,24,28,0.42)] ring-1 ring-black/[0.035]">
@@ -58,8 +53,8 @@ const initials = writer.displayName
             class="absolute inset-0 h-full w-full object-cover object-center"
           />
         ) : (
-          <div class="absolute inset-0 flex items-center justify-center bg-cream-warm font-serif text-6xl text-burgundy/70">
-            {initials}
+          <div class="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_30%_20%,rgba(201,169,110,0.28),transparent_32%),linear-gradient(135deg,#f7efe5,#ffffff_48%,#efe1d4)] px-8 text-center">
+            <p class="font-serif text-4xl italic leading-tight text-burgundy/70">Estranova dosya</p>
           </div>
         )
       }

@@ -96,7 +96,13 @@ const jsonLd = writerSlug
 
       {writerSlug && (
         <div class="mb-10">
-          <ArticleAuthorBlock authorSlug={writerSlug} publishedDate={publishedDate} readingMinutes={5} />
+          <ArticleAuthorBlock
+            authorSlug={writerSlug}
+            publishedDate={publishedDate}
+            readingMinutes={5}
+            imageSrc={post.data.imageSrc}
+            imageAlt={post.data.imageAlt}
+          />
         </div>
       )}
 
