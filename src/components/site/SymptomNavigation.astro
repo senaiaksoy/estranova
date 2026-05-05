@@ -25,6 +25,7 @@ const secondary = featured[1];
 ---
 
 <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+  <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
   <div class="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
   <div class="pointer-events-none absolute right-0 top-12 hidden font-serif text-[12rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.045] lg:block">
     atlas
@@ -104,7 +105,7 @@ const secondary = featured[1];
           secondary && (
             <a
               href={secondary.href}
-              class="group relative overflow-hidden rounded-[34px] border border-burgundy/14 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/60 shadow-[0_30px_96px_-60px_rgba(44,22,28,0.44)] ring-1 ring-white/80 transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+              class="group relative overflow-hidden rounded-[34px] border border-burgundy/14 bg-white shadow-[0_30px_96px_-60px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
               aria-label={`${secondary.title} rehberini oku`}
             >
               <div class="grid gap-0 md:grid-cols-[0.9fr_1.1fr] lg:grid-cols-1 xl:grid-cols-[0.85fr_1.15fr]">
@@ -138,11 +139,11 @@ const secondary = featured[1];
           )
         }
 
-        <div class="overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/75 shadow-[0_24px_80px_-58px_rgba(44,22,28,0.34)] ring-1 ring-white/80">
+        <div class="overflow-hidden rounded-[34px] border border-burgundy/12 bg-white shadow-[0_24px_80px_-58px_rgba(44,22,28,0.3)] ring-1 ring-black/[0.04]">
           {rest.map((s, index) => (
             <a
               href={s.href}
-              class="group grid gap-4 border-t border-burgundy/10 px-5 py-5 transition hover:bg-cream-soft/70 first:border-t-0 md:grid-cols-[72px_1fr_auto] md:items-center md:px-6"
+              class="group grid gap-4 border-t border-burgundy/10 px-5 py-5 transition hover:bg-cream-soft/35 first:border-t-0 md:grid-cols-[72px_1fr_auto] md:items-center md:px-6"
               aria-label={`${s.title} okuma rotasını aç`}
             >
               <div class="relative h-20 overflow-hidden rounded-[20px]">
