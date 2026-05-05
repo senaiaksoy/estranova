@@ -5,60 +5,94 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 
 const pageTitle = 'Okuma Panelin — Estranova';
 const pageDescription =
-  'Sonra Oku listene, Estranova Mektubu kaydına ve okuma tercihlerine buradan erişebilirsin. Hiçbir bilgi sunucuda saklanmaz; tüm veri tarayıcında durur.';
+  'Sonra Oku listenize, Estranova Mektubu kaydınıza ve okuma tercihlerinize buradan erişebilirsiniz. Hiçbir bilgi sunucuda saklanmaz; tüm veri tarayıcınızda durur.';
 ---
 
 <SiteLayout title={pageTitle} description={pageDescription}>
   <SiteNavbar currentPath="/hesabim" />
 
   <main id="main-content" class="text-ink">
-    <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
-      <div class="mx-auto max-w-4xl">
-        <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
-          <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
-          <span class="mx-2 text-gold">·</span>
-          <span class="text-burgundy">Okuma Panelin</span>
-        </nav>
+    <section class="relative overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-cream-warm via-cream-soft to-white px-6 py-16 md:py-24">
+      <div class="absolute left-[-4rem] top-10 hidden h-64 w-64 rounded-full bg-gold/10 blur-3xl lg:block"></div>
+      <div class="absolute right-[-7vw] top-16 hidden font-serif text-[11rem] leading-none text-burgundy/[0.045] lg:block">
+        oku
+      </div>
 
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-          Senin Köşen
-        </p>
-        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
-          Okuma Panelin
-        </h1>
-        <p class="max-w-3xl text-lg leading-relaxed text-ink/80 md:text-xl">
-          Sonra okumak için kaydettiklerin, Estranova Mektubu kaydın ve okuma tercihlerin tek bir
-          yerde. Hiçbir bilgi sunucuda saklanmaz; tüm veri yalnızca senin tarayıcında durur.
-        </p>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.72fr] lg:items-end">
+        <div>
+          <nav aria-label="Sayfa konumu" class="mb-8 text-xs uppercase tracking-[0.22em] text-ink/55">
+            <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+            <span class="mx-2 text-gold">·</span>
+            <span class="text-burgundy">Okuma Panelin</span>
+          </nav>
+
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-burgundy">
+            Sizin Köşeniz
+          </p>
+          <h1 class="mb-6 max-w-4xl font-serif text-5xl leading-[0.98] text-burgundy md:text-7xl">
+            Sessiz bir okuma çekmecesi
+          </h1>
+          <p class="max-w-3xl text-lg leading-relaxed text-ink/76 md:text-xl">
+            Sonra okumak için kaydettikleriniz, Estranova Mektubu kaydınız ve yazı boyutu tercihiniz tek bir yerde durur. Bu alan üyelik panosu değil; tarayıcınızda saklanan küçük, kişisel bir okuma not defteridir.
+          </p>
+        </div>
+
+        <aside class="rounded-[36px] border border-burgundy/10 bg-white/85 p-8 shadow-[0_24px_70px_rgba(74,47,39,0.10)] backdrop-blur">
+          <p class="mb-3 font-serif text-3xl text-burgundy">Yerel ve hafif</p>
+          <p class="text-sm leading-relaxed text-ink/68">
+            Hiçbir bilgi sunucuda saklanmaz. Tarayıcı verisini temizlersen liste de temizlenir; bu yüzden burası bir hesap kasası değil, günlük okuma düzeni için sade bir hatırlatıcıdır.
+          </p>
+          <div class="mt-6 grid grid-cols-2 gap-3 border-t border-burgundy/10 pt-5">
+            <div>
+              <p class="font-serif text-3xl text-gold">3</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-ink/50">panel</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl text-gold">0</p>
+              <p class="text-xs uppercase tracking-[0.2em] text-ink/50">sunucu kaydı</p>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="bg-white px-6 py-12 md:py-16">
-      <div class="mx-auto max-w-5xl">
+    <section class="bg-white px-6 py-12 md:py-18">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-gold">Okuma Masası</p>
+            <h2 class="font-serif text-4xl leading-tight text-ink md:text-5xl">Bugün bıraktığın izler</h2>
+          </div>
+          <p class="max-w-md text-sm leading-relaxed text-ink/62">
+            Bu üç kart, okuma alışkanlığınızı ölçmekten çok sizi yarım kalan içeriklere nazikçe geri çağırmak için var.
+          </p>
+        </div>
+
         <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
           {/* Sonra Oku panel */}
           <article
             data-panel="sonra-oku"
-            class="flex flex-col rounded-[24px] border border-burgundy/15 bg-cream-soft p-6 shadow-sm md:p-7"
+            class="group relative flex min-h-[21rem] flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-cream-soft p-7 shadow-[0_18px_55px_rgba(74,47,39,0.08)] transition duration-300 hover:-translate-y-1 md:p-8"
           >
-            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            <span class="absolute right-6 top-6 font-serif text-6xl text-burgundy/[0.06]">01</span>
+            <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-burgundy/75">
               Sonra Oku
             </p>
-            <h2 class="mb-3 font-serif text-2xl leading-snug text-ink">
-              Listendeki yazılar
-            </h2>
+            <h3 class="mb-4 font-serif text-3xl leading-snug text-ink">
+              Listenizdeki yazılar
+            </h3>
             <p
               data-panel-summary="sonra-oku"
-              class="mb-5 flex-1 text-base leading-relaxed text-ink/75"
+              class="mb-7 flex-1 text-base leading-relaxed text-ink/72"
             >
               Henüz kaydedilmiş yazı yok. Bir yazıyı okurken sağ üstteki Sonra Oku düğmesine basarak
-              listeye ekleyebilirsin.
+              listeye ekleyebilirsiniz.
             </p>
             <a
               href="/sonra-oku"
-              class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+              class="inline-flex w-fit items-center gap-2 rounded-full border border-burgundy/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-burgundy transition hover:border-burgundy/45 hover:bg-white/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
             >
-              <span>Listeye git</span>
+              <span>Listeyi aç</span>
               <span aria-hidden="true">→</span>
             </a>
           </article>
@@ -66,24 +100,25 @@ const pageDescription =
           {/* Estranova Mektubu panel */}
           <article
             data-panel="mektup"
-            class="flex flex-col rounded-[24px] border border-burgundy/15 bg-cream-soft p-6 shadow-sm md:p-7"
+            class="group relative flex min-h-[21rem] flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-burgundy p-7 text-white shadow-[0_22px_65px_rgba(107,45,62,0.18)] transition duration-300 hover:-translate-y-1 md:p-8"
           >
-            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            <span class="absolute right-6 top-6 font-serif text-6xl text-white/[0.08]">02</span>
+            <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">
               Estranova Mektubu
             </p>
-            <h2 class="mb-3 font-serif text-2xl leading-snug text-ink">
-              Mektup kaydın
-            </h2>
+            <h3 class="mb-4 font-serif text-3xl leading-snug text-white">
+              Mektup kaydınız
+            </h3>
             <p
               data-panel-summary="mektup"
-              class="mb-5 flex-1 text-base leading-relaxed text-ink/75"
+              class="mb-7 flex-1 text-base leading-relaxed text-white/76"
             >
-              Mektup üyeliğin henüz başlamadı. İlk sayı yayına girdiğinde mektup yola çıkar; istersen
-              hemen kaydolabilirsin.
+              Mektup üyeliğiniz henüz başlamadı. İlk sayı yayına girdiğinde mektup yola çıkar; isterseniz
+              hemen kaydolabilirsiniz.
             </p>
             <a
               href="/mektup"
-              class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+              class="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:border-white/45 hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/45"
             >
               <span>Mektup hakkında</span>
               <span aria-hidden="true">→</span>
@@ -93,21 +128,22 @@ const pageDescription =
           {/* Okuma tercihi panel */}
           <article
             data-panel="okuma-tercihi"
-            class="flex flex-col rounded-[24px] border border-burgundy/15 bg-cream-soft p-6 shadow-sm md:p-7"
+            class="group relative flex min-h-[21rem] flex-col overflow-hidden rounded-[34px] border border-gold/25 bg-gold/10 p-7 shadow-[0_18px_55px_rgba(74,47,39,0.08)] transition duration-300 hover:-translate-y-1 md:p-8"
           >
-            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            <span class="absolute right-6 top-6 font-serif text-6xl text-burgundy/[0.06]">03</span>
+            <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-burgundy/75">
               Okuma Tercihi
             </p>
-            <h2 class="mb-3 font-serif text-2xl leading-snug text-ink">
+            <h3 class="mb-4 font-serif text-3xl leading-snug text-ink">
               Yazı boyutu
-            </h2>
+            </h3>
             <p
               data-panel-summary="okuma-tercihi"
-              class="mb-5 flex-1 text-base leading-relaxed text-ink/75"
+              class="mb-7 flex-1 text-base leading-relaxed text-ink/72"
             >
-              Şu anki tercihin: <span data-reader-scale-label class="font-semibold text-burgundy">varsayılan</span>.
+              Şu anki tercihiniz: <span data-reader-scale-label class="font-semibold text-burgundy">varsayılan</span>.
               Bir makaleye girdiğinde sağ üstteki <span class="font-semibold">A− / A / A+</span> butonlarıyla
-              değiştirebilirsin; tercih bu tarayıcıda saklanır.
+              değiştirebilirsiniz; tercih bu tarayıcıda saklanır.
             </p>
             <button
               type="button"
@@ -121,26 +157,31 @@ const pageDescription =
       </div>
     </section>
 
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-14">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="mb-4 font-serif text-2xl leading-snug text-ink md:text-3xl">
-          Verilerin nerede duruyor?
-        </h2>
-        <p class="mb-3 text-base leading-relaxed text-ink/75">
-          Bu paneldeki tüm bilgiler — kayıtlı yazılar, mektup kaydın, okuma boyutun — yalnızca senin
-          tarayıcının yerel deposunda durur. Estranova sunucularında bu bilgilerin hiçbir kopyası yok.
-        </p>
-        <p class="text-base leading-relaxed text-ink/75">
-          Tarayıcı verisini sildiğinde bu liste de kaybolur. Yeni bir cihazda devam etmek için
-          tekrar Sonra Oku ya da Mektup kaydını başlatabilirsin.
-        </p>
+    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-16">
+      <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="rounded-[34px] bg-white p-8 shadow-[0_16px_45px_rgba(74,47,39,0.06)]">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.26em] text-gold">Gizlilik</p>
+          <h2 class="font-serif text-4xl leading-tight text-ink">
+            Verilerin nerede duruyor?
+          </h2>
+        </div>
+        <div class="rounded-[34px] border border-burgundy/10 bg-white/70 p-8">
+          <p class="mb-4 text-base leading-relaxed text-ink/75">
+            Bu paneldeki tüm bilgiler — kayıtlı yazılar, mektup kaydınız, okuma boyutunuz — yalnızca sizin
+            tarayıcının yerel deposunda durur. Estranova sunucularında bu bilgilerin hiçbir kopyası yok.
+          </p>
+          <p class="text-base leading-relaxed text-ink/75">
+            Tarayıcı verisini sildiğinde bu liste de kaybolur. Yeni bir cihazda devam etmek için
+            tekrar Sonra Oku ya da Mektup kaydını başlatabilirsiniz.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
-      <div class="mx-auto max-w-3xl text-center">
+    <section class="border-t border-burgundy/10 bg-white px-6 py-10">
+      <div class="mx-auto max-w-4xl rounded-full border border-burgundy/10 bg-cream-soft px-6 py-5 text-center">
         <p class="text-sm leading-relaxed text-ink/65">
-          KVKK ve veri politikamız için <a href="/kvkk" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsin.
+          KVKK ve veri politikamız için <a href="/kvkk" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsiniz.
         </p>
       </div>
     </section>
@@ -197,7 +238,7 @@ const pageDescription =
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
       sonraOkuSummary.innerHTML =
-        `Listende ${count} ${count === 1 ? 'yazı' : 'yazı'} var. ` +
+        `Listenizde ${count} ${count === 1 ? 'yazı' : 'yazı'} var. ` +
         (latestEscaped ? `Son eklenen: <em class="font-serif italic text-ink/85">"${latestEscaped}"</em>.` : '');
     }
 
@@ -214,7 +255,7 @@ const pageDescription =
         .replace(/>/g, '&gt;');
       mektupSummary.innerHTML =
         `Mektup için <strong class="font-semibold text-burgundy">${emailEscaped}</strong> adresini kaydettik. ` +
-        'Estranova Mektubu yayına girdiğinde gelen kutuna düşecek; istediğin an ayrılabilirsin.';
+        'Estranova Mektubu yayına girdiğinde gelen kutunuza düşecek; istediğiniz an ayrılabilirsiniz.';
     }
 
     // Okuma tercihi etiketi

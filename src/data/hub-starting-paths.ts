@@ -29,7 +29,7 @@ export interface PathStep {
 }
 
 export interface HubStartingPath {
-  /** Bant açılış kicker'ı — örn. "Hormonal geçişe yeni misin?" */
+  /** Bant açılış kicker'ı — örn. "Hormonal geçişe yeni misiniz?" */
   kicker: string;
   /** Ana başlık */
   title: string;
@@ -41,10 +41,10 @@ export interface HubStartingPath {
 
 export const hubStartingPaths: Record<string, HubStartingPath> = {
   '/hormonal-gecis': {
-    kicker: 'Hormonal geçişe yeni misin?',
+    kicker: 'Hormonal geçişe yeni misiniz?',
     title: 'Bu hub\'da nereden başlamalıyım?',
     intro:
-      'Üç adımlık bir okuma yolu — önce genel bakış, sonra en sık karşılaşılan konu, sonunda karar verme. İstediğin zaman alt-bölümlere dağılabilirsin; bu yol seni acele ettirmez.',
+    'Üç adımlık bir okuma yolu — önce genel bakış, sonra en sık karşılaşılan konu, sonunda karar verme. İstediğiniz zaman alt-bölümlere dağılabilirsiniz; bu yol sizi acele ettirmez.',
     steps: [
       {
         step: '01',
@@ -69,7 +69,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Karar verme',
         title: 'Hormon Tedavisi Karar Rehberi',
         excerpt:
-          'HRT seçeneklerine adım adım, abartısız bir bakış. Hekiminle hangi noktaları birlikte değerlendirirsin?',
+          'HRT seçeneklerine adım adım, abartısız bir bakış. Hekiminizle hangi noktaları birlikte değerlendirirsiniz?',
         href: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
         readingMinutes: 10,
       },
@@ -185,7 +185,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
   },
 
   '/bilimsel-pencere': {
-    kicker: 'Bilimsel zemini merak ediyorsan',
+      kicker: 'Bilimsel zemini merak ediyorsanız',
     title: 'Hormonal geçişe bilimin penceresinden bakmak',
     intro:
       'Hormonların biyolojisinden hücresel yaşlanmaya, bilimin bugün ne biliyor — ne henüz bilmiyor. İki adımlık yol — temel biyoloji, hücresel mekanizma — kanıt disipliniyle başlayan bir okuma.',

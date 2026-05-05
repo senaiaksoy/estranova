@@ -18,25 +18,45 @@ const pageDescription = membershipActive
   <SiteNavbar currentPath="/giris" />
 
   <main id="main-content" class="text-ink">
-    <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
-      <div class="mx-auto max-w-3xl">
-        <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
-          <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
-          <span class="mx-2 text-gold">·</span>
-          <span class="text-burgundy">Giriş</span>
-        </nav>
+    <section class="relative overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-cream-warm via-cream-soft to-white px-6 py-16 md:py-24">
+      <div class="absolute right-[-6vw] top-12 hidden font-serif text-[12rem] leading-none text-burgundy/[0.045] lg:block">
+        giriş
+      </div>
+      <div class="absolute left-[-5rem] bottom-0 hidden h-72 w-72 rounded-full bg-gold/10 blur-3xl lg:block"></div>
 
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-          Estranova Okur
-        </p>
-        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
-          {membershipActive ? 'Tek tıklık giriş' : 'Giriş yakında'}
-        </h1>
-        <p class="text-lg leading-relaxed text-ink/80 md:text-xl">
-          {membershipActive
-            ? 'E-postanı yaz; tek kullanımlık bir giriş bağlantısı gönderelim. Parola hatırlamak yok, hesap güvenliği bizde.'
-            : 'Estranova okur hesabı sistemi yakında açılır. O güne kadar Sonra Oku listen, Mektup kaydın ve okuma tercihlerin yalnızca bu tarayıcıda saklanır — kayıt gerektirmez.'}
-        </p>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_0.74fr] lg:items-end">
+        <div>
+          <nav aria-label="Sayfa konumu" class="mb-8 text-xs uppercase tracking-[0.22em] text-ink/55">
+            <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+            <span class="mx-2 text-gold">·</span>
+            <span class="text-burgundy">Giriş</span>
+          </nav>
+
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-burgundy">
+            Estranova Okur
+          </p>
+          <h1 class="mb-6 max-w-4xl font-serif text-5xl leading-[0.98] text-burgundy md:text-7xl">
+            {membershipActive ? 'Tek tıklık okur girişi' : 'Kapı açık; hesap sonra'}
+          </h1>
+          <p class="max-w-3xl text-lg leading-relaxed text-ink/76 md:text-xl">
+            {membershipActive
+              ? 'E-postanı yaz; tek kullanımlık bir giriş bağlantısı gönderelim. Parola hatırlamak yok, okur alanına sakin ve güvenli bir geçiş var.'
+              : 'Estranova okur hesabı sistemi henüz açılmadı. Bu arada okuma paneliniz, Sonra Oku listeniz ve yazı boyutu tercihiniz yalnızca bu tarayıcıda durur; içerikleri okumak için kayıt gerekmez.'}
+          </p>
+        </div>
+
+        <aside class="rounded-[36px] border border-burgundy/10 bg-white/85 p-8 shadow-[0_24px_70px_rgba(74,47,39,0.10)] backdrop-blur">
+          <p class="mb-3 font-serif text-3xl text-burgundy">Okur alanı notu</p>
+          <p class="text-sm leading-relaxed text-ink/68">
+            Estranova'da hesap, içeriğe erişmek için zorunlu bir kapı değil. Açıldığında yalnızca okuma geçmişini ve tercihlerini daha düzenli taşımaya yarayan hafif bir katman olacak.
+          </p>
+          <div class="mt-6 border-t border-burgundy/10 pt-5">
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-gold">Bugün</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink/65">
+              Okuma paneli ve mektup kaydı tarayıcı içinde çalışır; kişisel sağlık verisi istemez.
+            </p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -51,32 +71,57 @@ const pageDescription = membershipActive
     )}
 
     {!membershipActive && (
-      <section class="bg-white px-6 py-12 md:py-16">
-        <div class="mx-auto max-w-3xl">
-          <div class="rounded-[28px] border border-gold/35 bg-cream-soft/60 p-8 md:p-10">
-            <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
-              Şimdi yapabileceklerin
-            </p>
-            <h2 class="mb-3 font-serif text-2xl leading-snug text-ink md:text-3xl">
-              Hesap olmadan da okuma panelin var
-            </h2>
-            <p class="mb-6 text-base leading-relaxed text-ink/75">
-              Sonra Oku listene, mektup kaydına ve okuma tercihlerine kayıt olmadan ulaşabilirsin.
-              Tüm bilgiler sadece bu tarayıcıda durur — sunucumuza kopya gitmiyor.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <a
-                href="/hesabim"
-                class="inline-flex items-center gap-1.5 rounded-xl bg-burgundy px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-burgundy/35"
-              >
-                Okuma panelime git
-              </a>
-              <a
-                href="/mektup"
-                class="inline-flex items-center gap-1.5 rounded-xl border-2 border-burgundy px-6 py-3 text-sm font-semibold text-burgundy transition hover:bg-burgundy/5 focus:outline-none focus:ring-2 focus:ring-burgundy/35"
-              >
-                Mektup hakkında
-              </a>
+      <section class="bg-white px-6 py-12 md:py-18">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="rounded-[36px] bg-burgundy p-8 text-white shadow-[0_24px_70px_rgba(107,45,62,0.18)] md:p-10">
+              <p class="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+                Şimdi yapabileceklerin
+              </p>
+              <h2 class="mb-5 font-serif text-4xl leading-tight md:text-5xl">
+                Hesap olmadan da okuma panelin var
+              </h2>
+              <p class="mb-7 text-base leading-relaxed text-white/76">
+                Sonra Oku listenize, mektup kaydınıza ve okuma tercihlerinize kayıt olmadan ulaşabilirsiniz.
+                Tüm bilgiler sadece bu tarayıcıda durur; sunucumuza kopya gitmiyor.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="/hesabim"
+                  class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-burgundy shadow-sm transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/45"
+                >
+                  Okuma panelimi aç
+                </a>
+                <a
+                  href="/mektup"
+                  class="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/45"
+                >
+                  Mektubu incele
+                </a>
+              </div>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <article class="rounded-[32px] border border-burgundy/10 bg-cream-soft p-7">
+                <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-gold">01</p>
+                <h3 class="mb-3 font-serif text-3xl text-ink">Kaydet</h3>
+                <p class="text-sm leading-relaxed text-ink/66">
+                  Uzun bir yazıyı yarım bıraktığınızda Sonra Oku listesine ekleyebilirsiniz.
+                </p>
+              </article>
+              <article class="rounded-[32px] border border-burgundy/10 bg-cream-soft p-7">
+                <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-gold">02</p>
+                <h3 class="mb-3 font-serif text-3xl text-ink">Sakince dön</h3>
+                <p class="text-sm leading-relaxed text-ink/66">
+                  Okuma paneliniz, listeyi ve yazı boyutu tercihinizi aynı yüzeyde toplar.
+                </p>
+              </article>
+              <article class="rounded-[32px] border border-gold/25 bg-gold/10 p-7 md:col-span-2">
+                <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Veri sınırı</p>
+                <p class="text-sm leading-relaxed text-ink/68">
+                  Bu alan kişisel sağlık verisi toplamaz, klinik değerlendirme yapmaz ve okuma alışkanlığını sunucuda takip etmez.
+                </p>
+              </article>
             </div>
           </div>
         </div>
@@ -84,9 +129,9 @@ const pageDescription = membershipActive
     )}
 
     <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
-      <div class="mx-auto max-w-3xl text-center">
+      <div class="mx-auto max-w-4xl rounded-full border border-burgundy/10 bg-white/70 px-6 py-5 text-center">
         <p class="text-sm leading-relaxed text-ink/65">
-          KVKK ve veri politikamız için <a href="/kvkk" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsin.
+          KVKK ve veri politikamız için <a href="/kvkk" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsiniz.
         </p>
       </div>
     </section>

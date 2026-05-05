@@ -58,11 +58,11 @@ function updateButtonState(button: HTMLButtonElement): void {
   const saved = isSaved(slug);
   button.dataset.saved = saved ? 'true' : 'false';
   button.setAttribute('aria-pressed', saved ? 'true' : 'false');
-  labelEl.textContent = saved ? 'Listende' : 'Sonra Oku';
+  labelEl.textContent = saved ? 'Listenizde' : 'Sonra Oku';
   button.setAttribute(
     'aria-label',
     saved
-      ? 'Bu yazıyı okuma listenden çıkar'
+    ? 'Bu yazıyı okuma listenizden çıkar'
       : 'Bu yazıyı sonra oku listesine ekle',
   );
 }
