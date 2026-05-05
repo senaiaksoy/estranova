@@ -71,7 +71,7 @@ export const writers: Writer[] = [
     role: 'Yönetici Editör / Ana Yazar',
     ageBand: '55-56',
     publicBio:
-      'Uzun yıllar kurumsal bankacılıkta çalıştıktan sonra kendi işini kuran bir iş insanı; yüz kişiyi aşkın bir ekibi yönetti. Estranova\'da yayın çizgisini, içerik önceliklerini ve önleyici sağlık başlıklarını şekillendiriyor. Telaşı sevmeyen, kararı veriye konuşturarak veren bir yaşıt.',
+      'Kurumsal hayatın ardından kendi işini kurmuş, kararlarını aceleyle değil veriyle veren bir yönetici. Estranova\'da yayın çizgisini, içerik önceliklerini ve önleyici sağlık başlıklarını şekillendiriyor. Telaşı sevmeyen, resmi sadeleştirip okura yön duygusu veren bir yaşıt.',
     signaturePhrase:
       'Hormonal geçişi sakin bir araştırmacı gözüyle okuyor; kontrolü kaybetmeden anlamayı kolaylaştırıyor.',
     portrait: '/images/writers/berna-aksoy.webp',
@@ -100,7 +100,7 @@ export const writers: Writer[] = [
     role: 'Sağlık Yazarı / Konuk Katkı',
     ageBand: '30-31',
     publicBio:
-      'Eski profesyonel windsurfer; sporun içinde geçen uzun yıllar bedeni okuma alışkanlığını kalıcı kıldı. Estranova\'da hareket, anti-aging ve sürdürülebilir egzersiz başlıklarında sporcu beden okumasıyla yazıyor. Atlar, köpekler ve kuşlarla iç içe yaşayan, anne kuşağını sevgiyle gözlemleyen genç bir yaşıt.',
+      'Eski profesyonel windsurfer; sporun içinde geçen yıllar onda bedeni dikkatle okuma alışkanlığı bıraktı. Estranova\'da hareket, anti-aging ve sürdürülebilir egzersiz başlıklarını performans baskısı kurmadan yazıyor. Doğayla iç içe yaşayan, anne kuşağını sevgiyle gözlemleyen genç bir yaşıt.',
     signaturePhrase:
       'Anne kuşağını gözlemleyen, sporcu beden okumasıyla erken hazırlık yazıları yazan genç bir yaşıt.',
     portrait: '/images/writers/alara-baykent.webp',
@@ -161,7 +161,7 @@ export const writers: Writer[] = [
     role: 'Araştırma Yazarı / Konuk Katkı — Üç Kuşaklı Tanıklık',
     ageBand: '55-57',
     publicBio:
-      "Marka stratejisi ve deneyim danışmanı; Plume Magazine ve Mahmure'de yazıları yayımlandı. Estranova'da uzun menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını araştırmacı bir gözle yazıyor. Soruyu seven, yarım bırakmayı bilen, samimi itiraflarıyla okurun yanına oturan meraklı bir gezgin.",
+      'Marka ve deneyim alanından gelen, soruyu sevmeyi bilen araştırmacı bir yazar. Estranova\'da uzun menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını samimi ama ölçülü bir tonla yazıyor. Yargı dağıtmadan yanına oturan, merakını gizlemeyen bir yaşıt.',
     signaturePhrase:
       'Dokuz yıllık menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını soru-cevap yaşıtdiyaloğu, üç nokta ve samimi itiraflarla harmanlayan gezgin bir araştırmacı.',
     portrait: '/images/writers/basak-pelister.webp',
@@ -259,7 +259,7 @@ export const writers: Writer[] = [
     role: 'Plastik & Estetik Cerrahi Bilimsel Yazarı',
     ageBand: '55-57',
     publicBio:
-      "Plastik, rekonstrüktif ve estetik cerrahi alanında 25+ yıllık deneyimli bir hekim. Ankara Üniversitesi Tıp Fakültesi mezunu, Şişli Etfal'de uzmanlık; New York'ta Sherrell J. Aston gözleminde tamamladığı ek eğitimle yüz cerrahisinde uluslararası izlere sahip. Şu an Amerikan Hastanesi ve Nişantaşı muayenehanesinde. Estranova'da estetik girişimleri \"modaya değil yüze ve kişiye bakan\" çerçevede; gerçekçi beklenti, doğal yaşlanma kabulü ve müdahale dengesi başlıklarında yazıyor — pazarlama değil bilgi çerçevesinde.",
+      'Plastik, rekonstrüktif ve estetik cerrahi alanında çalışan deneyimli bir hekim. Estranova\'da estetik girişimleri modaya değil yüze ve kişiye bakarak, gerçekçi beklenti ve doğal yaşlanma dengesi içinde anlatıyor. Pazarlama dili yerine karar vermeyi kolaylaştıran sakin bir bilgi hattı kuruyor.',
     signaturePhrase:
       'Yüz ve cilt yaşlanması 40+ ekseninde "size uygun mu" karar çerçevesini öne çıkaran; doğal yaşlanma kabulü ile müdahale dengesini bilgi diliyle açan klinisyen.',
     portrait: '/images/writers/cagri-sade.webp',
@@ -436,7 +436,7 @@ export const writers: Writer[] = [
     role: 'Ortopedi & Travmatoloji Bilimsel Yazarı',
     ageBand: '63-65',
     publicBio:
-      "Ortopedi ve travmatoloji alanında 25+ yıllık deneyimli bir akademisyen ve cerrah. İstanbul Üniversitesi-Cerrahpaşa Tıp Fakültesi mezunu (1985); Memorial Hastanesi (2009-2016) ve şu an Amerikan Hastanesi (2016→) ortopedi bölümlerinde görev yapıyor; Beşiktaş'taki muayenehanesinde de hasta kabul ediyor. Efes Pilsen Spor Kulübü (1994-2007) ve Galatasaray Spor Kulübü (2010-2012) tabipliği yapmış spor hekimi. Estranova'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarında \"hastayı ameliyat masasından önce hayata yönlendirmeyi tercih eden\" sakin hekim çerçevesinde, cerrahi-öncesi konservatif yaklaşım vurgusuyla yazıyor.",
+      'Ortopedi ve travmatoloji alanında çalışan deneyimli bir hekim. Estranova\'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarını cerrahiyi ilk cevap gibi sunmadan anlatıyor. Hastayı ameliyat masasından önce hayata yönlendirmeyi önemseyen sakin bir klinisyen.',
     signaturePhrase:
       'Postmenopozal kemik-kas-iskelet sistemini "ameliyat masasından önce hayata yönlendirmek" felsefesinde okuyan; cerrahi-öncesi konservatif yaklaşım ve sakin hekim tonuyla yazan akademisyen-cerrah.',
     portrait: '/images/writers/bulent-aksoy.webp',
@@ -607,7 +607,7 @@ export const writers: Writer[] = [
     role: 'Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı',
     ageBand: '55-56',
     publicBio:
-      "Medya ve dijital yayıncılıkta yıllarca yöneticilik yaptı; halen Sparkle Medya'da ortak. Estranova'da bilim ve teknoloji başlıklarını araştırmacı titizliğiyle yazıyor; aynı zamanda kaynak doğrulama ve yayın akışına editöryal danışmanlık veriyor. Bilgi kirliliğini ayıklamayı seven; \"kaynak nereden?\" sorusunu sormaktan çekinmeyen biri.",
+      'Medya ve dijital yayıncılıkta uzun yıllar çalışmış bir editör ve araştırmacı. Estranova\'da bilim ve teknoloji başlıklarını yazıyor; aynı zamanda kaynak doğrulama ve yayın akışına editöryal destek veriyor. Bilgi kirliliğini ayıklamayı seven, "kaynak nereden?" sorusunu sormaktan çekinmeyen biri.',
     signaturePhrase:
       'Bilimi ve teknolojiyi meraklı bir araştırmacı titizliğiyle takip eden, editöryal süreç akışına da göz kulak olan bir ses.',
     portrait: '/images/writers/rima-erdemir.webp',
@@ -636,7 +636,7 @@ export const writers: Writer[] = [
     role: 'Gastronomi ve Sürdürülebilirlik Yazarı / Konuk Katkı',
     ageBand: '57-58',
     publicBio:
-      "Türkiye'de modern Anadolu mutfağı kültürünün öncülerinden bir girişimci; uzun yıllar Hürriyet'te lifestyle ve gastronomi köşesi yazdı. Estranova'da beslenme, sürdürülebilirlik ve sabah rutinleri başlıklarını sofra sıcaklığıyla yazıyor. Kültürel referansı bir mevsim sebzesi gibi gündelik hayata sokan, üç noktayı seven bir yaşıt.",
+      'Gastronomi ve gündelik hayat bilgisini aynı sofrada buluşturan bir yazar. Estranova\'da beslenme, sürdürülebilirlik ve sabah rutinleri başlıklarını sofra sıcaklığıyla yazıyor. Kültürel referansı gösterişe kaçmadan gündelik hayata sokan, ritmi yumuşak bir yaşıt.',
     signaturePhrase:
       'Anadolu mutfak bilgeliğini sürdürülebilir yaşamla birleştiren; kişisel bir hafta anısıyla başlayıp kültürel-edebi bir köprüden geçen, sabah sesli bir rehber.',
     portrait: '/images/writers/gamze-cizreli.webp',
@@ -675,7 +675,7 @@ export const writers: Writer[] = [
     role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
     ageBand: 'Belirtilmedi',
     publicBio:
-      'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı içerik üretimine taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurla sıcak temas kuran bir üslupla yazıyor. Panik değil yön duygusu veren, okurun hissini önce normalize eden bir yaşıt.',
+      'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı yazıya taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurun hissini önce normalize ederek yazıyor. Panik değil yön duygusu veren sıcak bir yaşıt sesi var.',
     signaturePhrase:
       'Tiyatro sanatçısı duyarlılığıyla perimenopoz ve menopoz başlıklarını sadeleştiren, okura sahici bir eşlik duygusu veren bir ses.',
     portrait: '/images/writers/isik-selin-gunce.jpg',
@@ -707,7 +707,7 @@ export const writers: Writer[] = [
     role: 'Kimsenin Yazmak İstemediği Konu Yazarı',
     ageBand: '50+',
     publicBio:
-      'Estranova\'nın bilimsel editörü; ama bu kartta hekim kimliğini değil, yıllardır kadın sağlığının içinde olmuş birinin sesini taşıyor. Vajinal sağlık, idrar kaçırma ya da libido gibi konularda kimse yazmaya gönüllü olmadığında masaya kendisi oturuyor. Tıbbi jargon değil, komşu sıcaklığıyla konuşan; soruyu küçümsemeyen biri.',
+      'Estranova\'nın bilimsel editörü; ama bu kartta öne çıkan şey hekim unvanından çok, yıllardır kadın sağlığının içinde olmuş birinin sesi. Vajinal sağlık, idrar kaçırma ya da libido gibi konularda kimse yazmaya gönüllü olmadığında masaya kendisi oturuyor. Jargonla mesafe koyan, soruyu ciddiye alan ve gereksiz vaat kurmayan biri.',
     signaturePhrase:
       'Konuşulması zor ama bilinmesi gereken konuları, jargon değil komşu sıcaklığıyla anlatan yazar.',
     portrait: '/images/writers/senai-aksoy.webp',
@@ -739,7 +739,7 @@ export const writers: Writer[] = [
     role: 'Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı',
     ageBand: '58',
     publicBio:
-      "İngilizce öğretmenliği mezunu; uzun yıllar Japonya Dış Ticaret Teşkilatı'nın İstanbul ofisinde çalışarak iki kültürü yakından izledi. Estranova'da menopoz deneyimi, Japon kültürü ve gündelik nezaket başlıklarında HRT yolunu paylaşan bir yaşıt tonuyla yazıyor. Aile sıcaklığını ve sakin gözlemi her satıra taşıyan candan bir ses.",
+      'Uzun yıllar Türkiye-Japonya hattında çalışmış, iki kültürü yakından gözlemlemiş bir yazar. Estranova\'da menopoz deneyimi, Japon kültürü ve gündelik nezaket başlıklarını HRT yolunu da saklamadan, ölçülü bir yaşıt tonuyla yazıyor. Aile sıcaklığını ve sakin gözlemi metne taşıyan candan bir sesi var.',
     signaturePhrase:
       'Türkiye-Japonya hattında uzun yıllar çalışmış; menopoz geçişini iki kültürün sakinliği, aile sıcaklığı ve gündelik nezaketle yazan candan bir yaşıt sesi.',
     portrait: '/images/writers/demet-kizilkaya.webp',

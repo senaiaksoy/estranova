@@ -4,60 +4,253 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
+import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tarama-testleri']!;
+const tocEntries = [
+  { id: 'tarama-ne-demek', label: 'Tarama Ne Demek?' },
+  { id: 'temel-bes-baslik', label: '40 Sonrasında Temel Başlıklar' },
+  { id: 'kemik-yogunlugu', label: 'Kemik Sağlığı ve DXA' },
+  { id: 'metabolik-izlem', label: 'Metabolik İzlem ve Kan Testleri' },
+  { id: 'kadina-ozgu-izlem', label: 'Kadına Özgü İzlem Çerçevesi' },
+  { id: 'kisisel-plan', label: 'Kişisel Plan Nasıl Kurulur?' },
+  { id: 'hekim-gorusmesi', label: 'Hekim Görüşmesine Hazırlık' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = '40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?';
+const articleDescription =
+  '40 sonrası tarama planını kemik, metabolik ve kadın sağlığı başlıklarında sade bir çerçeveyle ele alan başlangıç rehberi.';
+const articlePath = '/hormonal-gecis/40-sonrasi/tarama-testleri';
+const faqItems = articleFaqs[articlePath] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  publishedDate: '5 Mayıs 2026',
+  pathname: articlePath,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/40-sonrasi',
+  keywords: [
+    '40 sonrası tarama',
+    'koruyucu sağlık',
+    'kemik yoğunluğu',
+    'metabolik izlem',
+    'menopoz',
+    'kadın sağlığı kontrolleri',
+  ],
+  faqItems,
+  siteUrl,
+});
 ---
 
 <SiteLayout
-  title="Tarama ve İzlem: Başlangıç Rehberi - Estranova"
-  description="40 sonrası dönemde koruyucu sağlık ve tarama kavramını editoryal bir bakışla özetleyen bilgilendirici sayfa."
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Hormonal Geçiş · 40 Sonrası"
-      title="Tarama ve İzlem: Başlangıç Rehberi"
+      title={articleTitle}
       lede="Bilgilendirme amaçlıdır; kişisel tarama planı hekiminizle belirlenir."
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
-        <ArticleProsePanel>
-          <p>
-            Koruyucu sağlıkta “tarama”, belirti olmadan belirli riskleri erken dönemde değerlendirmeyi ifade eder. Hangi testin
-            ne sıklıkla yapılacağı; yaş, aile öyküsü, eşlik eden hastalıklar ve kullandığınız ilaçlara göre değişir. Tek bir
-            liste herkes için geçerli değildir.
-          </p>
-          <p>
-            Menopozal geçiş döneminde kemik sağlığı, kalp-damar riskleri, metabolik göstergeler ve jinekolojik izlem sık
-            birlikte konuşulur. Bu başlıkların her biri ayrı ayrı hekimlik değerlendirmesi ve gerektiğinde yönlendirme gerektirir.
-          </p>
-          <p>
-            Estranova’da amaç size “ne sorulabileceği” ve “hangi gözle düşünülebileceği” konusunda sade bir başlangıç sunmaktır.
-            Son karar her zaman bireysel klinik değerlendirmeye aittir.
-          </p>
-        </ArticleProsePanel>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="5 Mayıs 2026" readingMinutes={8} />
 
-        <RelatedReadings
-          class="mt-14"
-          paths={[
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/hormonal-gecis/40-sonrasi',
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Tarama testleri, belirti başlamadan riski erken yakalamak için kullanılır; yani korku listesi değil, yol haritasıdır.
+          40 sonrasında bu plan; kemik sağlığı, metabolik göstergeler ve kadın sağlığı başlıklarını birlikte düşünmeyi gerektirir
+          <Evidence level={5} />.
+          Tek bir “herkese uyan liste” yoktur; doğru plan kişisel risk profiliyle ve hekim görüşmesiyle belirlenir.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="tarama-ne-demek">Tarama Testi Ne Demek, Neyi Değiştirir?</h2>
+        <p>
+          Tarama, şikayet başladıktan sonra yapılan test değil; şikayet yokken riski erken yakalama yaklaşımıdır.
+        </p>
+        <p>
+          Çoğu kadın taramayı “hasta olunca yapılan kontrol” gibi algılar. Oysa koruyucu sağlıkta tarama, tam tersine,
+          henüz belirti yokken potansiyel riskleri yakalamaya çalışır. Amaç bir etiket koymak değil; müdahale penceresini erken açmaktır.
+        </p>
+        <p>
+          40 sonrası dönemde hormonal geçişe eşlik eden metabolik ve iskelet sistemi değişiklikleri, tarama planını daha anlamlı hale getirir.
+          Bu planın doğru kurulması, yalnızca bugün için değil gelecek 10-20 yıl için de yaşam kalitesi farkı yaratabilir <Evidence level={4} />.
+        </p>
+
+        <h2 id="temel-bes-baslik">40 Sonrasında Neden Beş Başlık Birlikte Düşünülür?</h2>
+        <p>
+          İyi bir tarama planı tek testten oluşmaz; birbirini tamamlayan bir başlık setiyle çalışır.
+        </p>
+        <p>
+          Pratikte en sık konuştuğumuz alanlar şunlardır: kemik sağlığı, metabolik riskler, kardiyovasküler göstergeler,
+          kadın sağlığı kontrolleri ve yaşam tarzı belirteçleri. Bu başlıkların her biri farklı uzmanlık alanına temas etse de
+          kişide tek bir sağlık hikayesi içinde birleşir.
+        </p>
+        <p>
+          Burada kritik nokta şudur: test sayısı arttıkça sağlık yönetimi otomatik olarak iyileşmez. Gereksiz test yoğunluğu,
+          kaygıyı artırabilir ve anlamlı takibi zorlaştırabilir. Bu yüzden “çok test” değil, “doğru zamanda doğru test” yaklaşımı gerekir.
+        </p>
+
+        <h2 id="kemik-yogunlugu">Kemik Sağlığı Taramasında DXA Ne Zaman Masaya Gelir?</h2>
+        <p>
+          Kemik yoğunluğu ölçümü her kadın için aynı yaşta başlanacak tek bir protokol değildir.
+        </p>
+        <p>
+          DXA ölçümü, kırık riskini öngörmede değerli bir araçtır; ancak zamanlama kişisel risklere göre değişir.
+          Ortalama riskte ileri yaşta rutin tarama öne çıkarken, erken menopoz, düşük travmayla kırık öyküsü, ailede kalça kırığı,
+          uzun süreli kortikosteroid kullanımı gibi durumlarda daha erken değerlendirme gündeme gelebilir <Evidence level={5} />.
+        </p>
+        <p>
+          Ölçüm sonucunu tek başına okumak yerine, düşme riski, kas gücü, günlük yaşam kapasitesi ve diğer klinik verilerle birlikte yorumlamak gerekir.
+          Sayıyı değil, toplam kırık riskini yönetmek asıl hedeftir.
+        </p>
+
+        <h2 id="metabolik-izlem">Metabolik İzlemde Hangi Testler Sık Konuşulur?</h2>
+        <p>
+          Metabolik izlem bir “check-list” değil, riske göre seçilen bir paneldir.
+        </p>
+        <p>
+          Açlık glukozu, HbA1c, lipid profili, karaciğer enzimleri, tiroid fonksiyonları ve gerektiğinde inflamatuvar belirteçler
+          40 sonrası değerlendirmelerde sık gündeme gelir. Ancak hangi testin hangi aralıkla tekrarlanacağı; aile öyküsü, kilo dağılımı,
+          eşlik eden hastalıklar ve kullanılan tedavilere göre değişir.
+        </p>
+        <p>
+          Burada amaç “normal aralığa bakıp geçmek” değildir. Değerlerin zaman içindeki eğilimi, tek bir ölçümden çoğu zaman daha öğreticidir.
+          Yıllık takipte küçük kaymaların yönünü görmek, ileri risklerin erken yönetimini kolaylaştırabilir <Evidence from={4} to={5} />.
+        </p>
+
+        <h2 id="kadina-ozgu-izlem">Kadına Özgü İzlem Başlıklarında Neyi Atlamamak Gerekir?</h2>
+        <p>
+          Tarama planında kadın sağlığına özgü başlıklar, genel metabolik testlerin yanında ayrı bir sütun oluşturur.
+        </p>
+        <p>
+          Servikal tarama, meme sağlığı izlemi ve jinekolojik değerlendirme; yaş, önceki sonuçlar, aile öyküsü ve bireysel risk
+          durumuna göre kişiselleştirilir. “Geçen yıl normalse bu yıl gerekmez” yaklaşımı her zaman doğru değildir;
+          aynı şekilde “her yıl her test” yaklaşımı da gereksiz yük yaratabilir.
+        </p>
+        <p>
+          Menopoz geçişinde uykusuzluk, ruh hali dalgalanması, kilo değişimi ve kas-iskelet yakınmaları da bu görüşmelerde
+          konuşulmalıdır. Çünkü tarama yalnızca laboratuvar kağıdı değil, günlük yaşam etkisini de kapsayan bir izlem konuşmasıdır.
+        </p>
+
+        <h2 id="kisisel-plan">Kişisel Tarama Planı Nasıl Kurulur, Nasıl Sürdürülür?</h2>
+        <p>
+          Planın sürdürülebilir olması, planın mükemmel olmasından daha değerlidir.
+        </p>
+        <p>
+          Çoğu zaman güçlü bir başlangıç, son bir yılda yaptırılan testleri tek sayfada toplamakla olur: tarih, sonuç, hekim notu ve
+          bir sonraki adım. Bu küçük düzen, dağınık sağlık bilgisini yönetilebilir hale getirir.
+        </p>
+        <p>
+          Klinik pratikte en işe yarayan yaklaşım “tek dosya, net soru” yöntemi oluyor: her kontrolde aynı anda çok başlık açmak yerine
+          öncelikli iki soruya odaklanmak. Bu çerçeveyle görüşmeler daha verimli, kararlar daha uygulanabilir hale geliyor.
+        </p>
+
+        <h2 id="hekim-gorusmesi">Hekim Görüşmesine Gitmeden Önce Hangi Üç Soru Hazır Olsun?</h2>
+        <p>
+          Hazırlıklı görüşme, gereksiz test talebini azaltır ve daha kişisel karar üretir.
+        </p>
+        <p>
+          Görüşme öncesi şu üç soru netleştirilebilir:
+        </p>
+        <p>
+          1) Benim yaş ve öyküme göre bu yıl öncelikli tarama başlıklarım neler?<br />
+          2) Hangi testleri şimdi, hangilerini izleyerek daha sonra yapmalıyız?<br />
+          3) Sonuçlar normal gelse bile hangi belirtilerde daha erken kontrol planlamalıyım?
+        </p>
+        <p>
+          Bu sorular, “her şeyi yaptıralım” telaşını “bana uygun planı kuralım” sakinliğine çevirir.
+          Bu da takip uyumunu güçlendirir.
+        </p>
+
+        <RedFlagBox
+          markers={[
+            'Ani ve açıklanamayan kilo kaybı, gece terlemesi veya uzamış halsizlik',
+            'Düşük travmayla gelişen kırık (özellikle kalça, omurga, el bileği)',
+            'Şiddetli, yeni başlayan göğüs ağrısı, nefes darlığı veya çarpıntı yakınması',
+            'Adet kesildikten sonra vajinal kanama ya da lekelenme',
+            'Açlık şekeri, HbA1c veya lipid değerlerinde kısa sürede belirgin bozulma',
+            'Aile öyküsü güçlü olup tarama takvimi uzun süredir ertelenmiş olması',
           ]}
+          footnote="Bu maddeler tanı koymaz; gecikmeden hekim değerlendirmesi gerektirebilecek durumları hatırlatır."
         />
 
-         <ArticleDisclaimer>
-<p>
-            Bu içerik yalnızca genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
-          </p>
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Tarama testleri bir korku listesi değil, geleceğe dönük bir netlik aracıdır.
+        </p>
+        <p>
+          40 sonrası dönemde güçlü plan, çok test yaptırmakla değil; doğru sırayı kurmakla oluşur.
+          Kemik, metabolik ve kadın sağlığı başlıklarını birlikte ama sade bir takvimle yönetmek,
+          uzun vadede daha güvenli bir yol sunar.
+        </p>
+        <p>
+          Bu yazı bir başlangıç çerçevesidir; kişisel kararınız kendi risk profiliniz ve hekiminizle yaptığınız
+          bireysel değerlendirme üzerinden şekillenir.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/40-sonrasi',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+          '/zamansiz-yasam/d-vitamini-rehberi',
+          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Bu yazı, 40 sonrası tarama yaklaşımını genel bir çerçevede özetleyen editoryal bir değerlendirmedir;
+          bireysel tanı ve tedavi önerisi yerine geçmez.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Klinik pratiğe göre tarama planı; yaş, aile öyküsü, eşlik eden hastalıklar, kullanılan tedaviler ve
+          önceki test sonuçlarının eğilimiyle birlikte belirlenmelidir. Kemik yoğunluğu, metabolik testler ve
+          kadın sağlığı kontrolleri tek tek değil, bütüncül risk çerçevesinde değerlendirilir.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Özellikle erken menopoz, düşük travma kırığı, hızlı metabolik değişim, belirgin semptom yükü veya
+          aile öyküsü bulunan kişilerde tarama sıklığı standart takvimden farklılaşabilir. Bu nedenle kişisel
+          planı hekiminizle birlikte belirlemeniz en güvenli yaklaşımdır.
+        </p>
+        <p class="text-sm italic text-burgundy">
+          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik yalnızca genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+        </p>
       </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>

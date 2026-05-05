@@ -18,14 +18,26 @@ import RelatedReadings from '../../components/site/RelatedReadings.astro';
 
   <main id="main-content" class="pt-24 text-ink">
     <SubmenuArticleBody>
-        <header class="mb-12">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Nisan 2026 — Sıcacık Köşe</p>
-          <h1 class="font-serif text-4xl leading-tight md:text-6xl">Bu Ay Kadın Dünyasında Ne Konuşuluyor?</h1>
-          <p class="mt-4 text-sm text-ink/70">Her ay bir yazı — site editörü Berna Aksoy</p>
+        <header class="relative mb-12 overflow-hidden rounded-[36px] border border-burgundy/12 bg-gradient-to-br from-cream-warm via-cream-soft to-white p-8 shadow-[0_24px_70px_rgba(79,23,28,0.08)] ring-1 ring-gold/20 md:p-12">
+          <div class="pointer-events-none absolute -right-20 top-0 h-64 w-64 rounded-full bg-gold/15 blur-3xl" aria-hidden="true"></div>
+          <div class="pointer-events-none absolute bottom-6 right-8 hidden font-serif text-[7rem] lowercase leading-none text-burgundy/[0.04] md:block" aria-hidden="true">
+            köşe
+          </div>
+          <div class="relative max-w-4xl">
+            <div class="mb-6 h-px w-24 bg-gold"></div>
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-burgundy">Nisan 2026 — Sıcacık Köşe</p>
+            <h1 class="font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-burgundy md:text-8xl">
+              Bu Ay Kadın Dünyasında Ne Konuşuluyor?
+            </h1>
+            <p class="mt-6 max-w-2xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
+              Her ay bir yazı — site editörü Berna Aksoy
+            </p>
+          </div>
         </header>
 
-        <section class="rounded-[28px] border border-burgundy/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
-          <div class="flex flex-col items-center gap-5 text-center">
+        <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/88 p-7 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-8">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
+          <div class="flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
             <img
               src="/images/writers/berna-aksoy.webp"
               alt="Berna Aksoy, Estranova site editörü"
@@ -33,15 +45,24 @@ import RelatedReadings from '../../components/site/RelatedReadings.astro';
               height="112"
               loading="eager"
               decoding="async"
-              class="h-28 w-28 shrink-0 rounded-full border-4 border-white object-cover object-center shadow-sm"
+              class="h-32 w-32 shrink-0 rounded-[28px] border-4 border-white object-cover object-center shadow-[0_18px_45px_rgba(79,23,28,0.14)]"
             />
             <div>
-              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-burgundy">Site editörü</p>
-              <p class="text-xl font-semibold text-ink">Berna Aksoy</p>
-              <p class="text-ink/70">Estranova — Sıcacık Köşe</p>
+              <p class="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-gold">Site editörü</p>
+              <p class="font-serif text-3xl leading-tight text-ink">Berna Aksoy</p>
+              <p class="mt-2 max-w-2xl leading-relaxed text-ink/70">
+                Estranova — Sıcacık Köşe. Ayın kadın sağlığı konuşmalarını sakin, eleştirel ve okurla aynı masada duran bir sesle toplar.
+              </p>
             </div>
           </div>
         </section>
+
+        <ArticleSummary title="Bu Ayın Notu">
+          <p>
+            Nisan sayısı; uyku, kemik-kas sağlığı, ruh hali ve menopoz etrafındaki yoğun pazarlama dilini sakin bir editör bakışıyla okuyor.
+            Amaç tek bir cevap vermek değil; okurun hangi iddiayı, hangi soruyla tartacağını netleştirmek.
+          </p>
+        </ArticleSummary>
 
         <ArticleProsePanel>
           <p>

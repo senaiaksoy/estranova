@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulent Aksoy - 5 Maddelik Onay Formu</title>
+  <style>
+    :root { --b:#6B2D3E; --g:#C9A96E; --bg:#F8F2EA; --card:#fff; --line:rgba(107,45,62,.2); --text:#2D2D2D; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Segoe UI,Tahoma,sans-serif; background:var(--bg); color:var(--text); }
+    .wrap { max-width:860px; margin:28px auto; padding:0 18px 40px; }
+    .hero,.card { background:var(--card); border:1px solid var(--line); border-radius:16px; }
+    .hero { padding:22px; margin-bottom:18px; border-left:6px solid var(--g); }
+    .tag { display:inline-block; background:var(--b); color:#fff; font-size:11px; letter-spacing:.1em; padding:5px 10px; border-radius:999px; margin-bottom:10px; }
+    h1 { margin:4px 0 8px; font-size:28px; font-family:Georgia,serif; color:var(--b); }
+    .meta { font-size:14px; opacity:.8; margin:0; }
+    .card { padding:20px; }
+    .item { margin-bottom:18px; }
+    .item:last-child { margin-bottom:0; }
+    .q { font-weight:700; margin-bottom:8px; }
+    .opts { display:flex; flex-wrap:wrap; gap:8px; }
+    .opts label { border:1px solid var(--line); border-radius:10px; padding:10px 12px; min-width:130px; text-align:center; cursor:pointer; background:#fcf9f5; }
+    .opts input { display:none; }
+    .opts label:has(input:checked) { background:var(--b); color:#fff; border-color:var(--b); font-weight:700; }
+    .actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; }
+    button { border:0; border-radius:12px; padding:14px; font-weight:700; cursor:pointer; }
+    .ok { background:var(--b); color:#fff; }
+    .rev { background:#fff; color:var(--b); border:2px solid var(--b); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="tag">ILK BULENT MAKALESI - 5 MADDE</span>
+      <h1>40 Sonrasi Diz Agrisi: Ne Zaman Izlem, Ne Zaman Mudahale?</h1>
+      <p class="meta">Yazar: Prof. Dr. Bulent Aksoy · Paket: 2026-05-05 · Stil kalibrasyonu + onay</p>
+    </header>
+
+    <form id="f" class="card" onsubmit="return false;">
+      <div class="item">
+        <div class="q">1) Baslik tonu sizin yazi cizginize uygun mu?</div>
+        <div class="opts">
+          <label><input type="radio" name="q1" value="uygun" required>Uygun</label>
+          <label><input type="radio" name="q1" value="kismen">Kismen</label>
+          <label><input type="radio" name="q1" value="degil">Uygun degil</label>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="q">2) "Konservatif once, cerrahi dogru zamanda" dengesi dogru mu?</div>
+        <div class="opts">
+          <label><input type="radio" name="q2" value="evet" required>Evet</label>
+          <label><input type="radio" name="q2" value="biraz-az">Biraz zayif</label>
+          <label><input type="radio" name="q2" value="fazla-keskin">Fazla keskin</label>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="q">3) Klinik mesafe ve sakin hekim tonu yeterli mi?</div>
+        <div class="opts">
+          <label><input type="radio" name="q3" value="evet" required>Yeterli</label>
+          <label><input type="radio" name="q3" value="daha-teknik">Daha teknik olmali</label>
+          <label><input type="radio" name="q3" value="daha-sade">Daha sade olmali</label>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="q">4) Izlemden mudahaleye gecis kriterleri acik mi?</div>
+        <div class="opts">
+          <label><input type="radio" name="q4" value="acik" required>Acik</label>
+          <label><input type="radio" name="q4" value="orta">Orta</label>
+          <label><input type="radio" name="q4" value="belirsiz">Belirsiz</label>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="q">5) Sonraki yazilar icin tercih ettiginiz acilis stili?</div>
+        <div class="opts">
+          <label><input type="radio" name="q5" value="mekanizma" required>Mekanizma acilisi</label>
+          <label><input type="radio" name="q5" value="karar-zinciri">Karar zinciri acilisi</label>
+          <label><input type="radio" name="q5" value="yanlis-bilinen">Yanlis bilinen acilisi</label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="ok" onclick="send('approved')">ONAYLIYORUM</button>
+        <button type="button" class="rev" onclick="send('needs_revision')">REVIZYON ISTIYORUM</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function pick(name){ const el=document.querySelector('input[name="'+name+'"]:checked'); return el?el.value:null; }
+    function send(decision){
+      const req=["q1","q2","q3","q4","q5"];
+      const miss=req.filter(n=>!pick(n));
+      if(miss.length){ alert("Lutfen 5 maddenin tamamini secin."); return; }
+      const payload={
+        formType:"bulent-first-article-5-point",
+        writer:{slug:"bulent-aksoy",name:"Prof. Dr. Bulent Aksoy"},
+        article:{slug:"40-sonrasi-diz-agrisi-izlem-mudahale",title:"40 Sonrasi Diz Agrisi: Ne Zaman Izlem, Ne Zaman Mudahale?"},
+        decision:decision,
+        timestamp:new Date().toISOString(),
+        answers:{ q1:pick("q1"), q2:pick("q2"), q3:pick("q3"), q4:pick("q4"), q5:pick("q5") }
+      };
+      const subject="["+(decision==="approved"?"ONAY":"REVIZYON")+"] Bulent Aksoy 5 maddelik form";
+      const body="Merhaba,\n\n5 maddelik yanitim:\n\n"+JSON.stringify(payload,null,2)+"\n";
+      window.location.href="mailto:drsenaiaksoy@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    }
+  </script>
+</body>
+</html>
