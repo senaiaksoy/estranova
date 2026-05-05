@@ -7,14 +7,14 @@ Satır numaraları referans içindir; dosya değişince kayabilir — önce **b�
 ## Brand-level (değişmez üst kurallar)
 
 - **`CLAUDE.md` §1–§6** — Editoryal kimlik, ton, yasak ifadeler, tıbbi sınır, Türkçe yayın dili, okuma düzeyi (HARD CONSTRAINTS).
-- **`CLAUDE.md` §3 — *Yazar persona'sı*** — Tıp dışı 40+ kadın **yaşıt** sesi; Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor blogu / dergi-atıf dili yasak.
+- **`CLAUDE.md` §3 — *Yazar persona'sı*** — Tıp dışı 40+ kadın **yaşıt** sesi; Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor blogu / dergi-atıf dili yasak; okura hitapta **yalnızca "siz"** kullanılır.
 - **`AGENTS.md`** — Site genelinde forbidden examples, allowed neutral CTA örnekleri, ton tarifi; **Persona ve Dış Referans** özeti (`CLAUDE.md` HARD CONSTRAINT ile hizalı).
 
 ### Oturum kuralları — tek satır harita
 
 | Kural | Lokasyon |
 |-------|----------|
-| Yazar persona (yaşıt, Vogue/Elle) | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Few-shot ornek” |
+| Yazar persona + hitap standardı (yaşıt, Vogue/Elle, yalnızca "siz") | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Few-shot ornek” |
 | Dış URL link yasağı | `CLAUDE.md` §4; `agents/writer_agent.md` (~L79 civarı inline URL yasağı); `prompts/compliance-agent.md` “Strict Validation” |
 | Kuruluş adı yerleştirme yasağı | `CLAUDE.md` §4; `prompts/compliance-agent.md` “Strict Validation” |
 | Humanize zorunluluğu | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Humanize” |
@@ -54,6 +54,7 @@ Dosya: **`agents/writer_agent.md`**
 
 - **Yeni yasak ifade** → `CLAUDE.md` §4 + gerekiyorsa `compliance_expert_agent.py` içinde `risky_term_patterns` veya `PLAZA_LANGUAGE_SUBSTRINGS`.
 - **Yeni ton / ses kuralı** → `CLAUDE.md` §3.
+- **Okura hitap kuralı** (`siz` / `sen` standardı) → `CLAUDE.md` §3 + `AGENTS.md` ton bölümü.
 - **Yeni yapısal şart** (ör. bölüm sayısı) → `agents/writer_agent.md` (master 8 bölüm bölümü) + `agents/writer_agent.py` validator.
 - **Yeni SEO / format kuralı** → `agents/writer_agent.md` → `## Uzunluk ve SEO`.
 - **Few-shot’a örnek** → `agents/writer_agent.md` → `## Few-shot ornek` altına.

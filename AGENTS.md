@@ -330,6 +330,8 @@ Not allowed:
 
 **Writer persona** (aligned with `CLAUDE.md` HARD CONSTRAINT — §3 *Yazar persona'sı*): Articles should read like **Vogue Türkiye / Elle Türkiye / Marie Claire Türkiye** lifestyle-health sections. The implied author is **not a physician** — a successful **40+ woman** in a **non-clinical** career who researches deeply and speaks as a peer. The reader should feel **“you’re one of us”** warmth. **No** academic citation stack, **no** named international society/journal plugs, **no** inline external URLs in the body; **soft** phrasing (“research suggests”, “experts often note”) is acceptable.
 
+**Hitap kuralı:** Kullanıcıya dönük tüm makale ve editoryal gövde metinlerinde hitap biçimi **daima "siz"** olmalıdır. "Sen" kalıbı, doğrudan okura seslenen yayın metninde kullanılmaz.
+
 **Klinik kürsüsü yasağı:** Makale gövdesi ve ana yazar sesi “kliniğimde / hastalarım / klinik deneyimimde / tıbbi olarak söylüyorum” gibi hekim-kürsüsü ifadeleri kullanmaz. Tıbbi disiplin gerekiyorsa bu içerik ayrı **Bilimsel Editör Notu** panelinde, kısa ve nötr biçimde yer alır; ana metin yayın masası + yaşıt okur tonunu korur.
 
 Write in a tone that is:
@@ -384,6 +386,7 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 ## Persona ve Dış Referans (CLAUDE.md HARD CONSTRAINT)
 
 - **Yazar persona:** Tıp dışı 40+ kadın yaşıt; Vogue / Elle / Marie Claire tonu. Hekim perspektifi **YASAK**.
+- **Hitap standardı:** Okura doğrudan seslenirken **yalnızca "siz"** kullanılır; yayın metninde **"sen" kullanılmaz**.
 - **Dış URL link YASAK** — yumuşak referans (“araştırmalar gösteriyor”) kabul. Kuruluş adı (NAMS / NICE / Mayo vb.) cümle içine yerleştirme **YASAK**.
 - **Humanize:** Her makalede en az 1 yaşıt / deneyim cümlesi.
 - **FAQ:** `pratik_veya_sss` 3–5 konuya özgü gerçek soru; yayınlanan sayfada tek görünür SSS yüzeyi bulunmalı. Gövde içi editoryal SSS varsa ikinci `ArticleFAQ` ekleme; görünür SSS yoksa `ArticleFAQ` kullan. `FAQPage` schema'sı aynı soru-cevap kaynağıyla birebir karşılık taşımalı.

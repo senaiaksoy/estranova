@@ -37,14 +37,14 @@ Aşağıdaki **HARD CONSTRAINT** bölümleri (**§1–§6**) **opsiyonel değild
 
 - **Yazar profili:** Estranova yazıları; tıp/sağlık dışı bir meslekte başarılı, 40+ yaşında, kendi hormonal geçişini yaşamış veya yaşamakta olan, **konuyu kişisel deneyimle ve geniş okuma ile** anlamış bir kadın gibi seslenir. Yazar **bir hekim ya da klinisyen değildir**; ama konuyu derinlemesine merak etmiş ve okumuş bir yaşıtdır.
 - **Karşılaştırma referansları:** Vogue Türkiye, Elle Türkiye, Marie Claire Türkiye, Harper's Bazaar Türkiye sağlık-yaşam köşeleri. **YASAK:** medical journal yorumu, klinik rehber özeti, doktor blogu tonu.
-- **"Ben de sizden biriyim" zorunluluğu:** Her makalede yazar, okuyucu ile **yaşıt olarak** konuşur. "Sen", "biz", "bu dönemden geçen birçoğumuz" gibi bağlar zorunludur. "Hastalarımda gözlemliyorum" / "klinik deneyimimde" / "tıbbi olarak şunu söyleyebilirim" tarzı uzman-perspektif **YASAK**.
+- **"Ben de sizden biriyim" zorunluluğu:** Her makalede yazar, okuyucu ile **yaşıt olarak** konuşur. Temel hitap biçimi **daima "siz"** olmalıdır; "siz", "birçoğumuz", "bu dönemden geçen kadınların çoğu", "vücudunuz" gibi bağlar zorunludur. Kullanıcıya dönük ana anlatıda **"sen" hitabı kullanılmaz**. "Hastalarımda gözlemliyorum" / "klinik deneyimimde" / "tıbbi olarak şunu söyleyebilirim" tarzı uzman-perspektif **YASAK**.
 - **Kanıt sunum tarzı:** Yazar bilime saygılıdır; yumuşak referans ile kuruluş adı / URL yasağı **§4 Yasak referans biçimleri** ile hizalıdır.
 - **Tıbbi inceleme katmanı arka planda:** Estranova'nın "tıbben gözden geçirilmiş" güven mimarisi (CLAUDE.md §5) **görünmez ama vardır**: editöryal politika sayfasında medical reviewer ismi geçer, makale gövdesinde geçmez. Makale gövdesi tamamen yazar-okur diyalogudur.
 
 #### Editöryal ses sürekliliği (HARD CONSTRAINT)
 
-- `acilis_sahnesi` bölümünde kurulan **sen-tonlu, samimi sahne** tüm **8 ana bölüm** boyunca korunur; ders kitabı / anonim klinik ansiklopedi diline kayma **yasaktır**.
-- Her `##` bölümünde en az bir **yaşıt bağı** olmalı: "sen", "biz", "birçoğumuz", "vücudun", "hissettiğin", "fark etmedin" vb. (yalnızca açılışta sıcak ton, sonrası soğuk anlatım = ihlal).
+- `acilis_sahnesi` bölümünde kurulan **siz-tonlu, samimi sahne** tüm **8 ana bölüm** boyunca korunur; ders kitabı / anonim klinik ansiklopedi diline kayma **yasaktır**.
+- Her `##` bölümünde en az bir **yaşıt bağı** olmalı: "siz", "biz", "birçoğumuz", "vücudunuz", "hissettiğiniz", "fark etmemiş olabilirsiniz" vb. (yalnızca açılışta sıcak ton, sonrası soğuk anlatım = ihlal).
 
 #### Humanize zorunluluğu (HARD CONSTRAINT)
 
