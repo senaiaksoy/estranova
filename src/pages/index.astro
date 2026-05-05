@@ -557,29 +557,48 @@ const homeFaqs = [
       </div>
     </section>
 
-    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <header class="mb-10 max-w-3xl">
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -left-24 top-16 h-72 w-72 rounded-full bg-burgundy/8 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-0 top-10 hidden font-serif text-[10rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.035] lg:block">
+        notlar
+      </div>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+        <header class="lg:sticky lg:top-28">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
             <span class="font-serif font-normal tabular-nums text-gold">07</span>
             <span class="mx-2 text-gold">—</span>
             Sık Sorulanlar
           </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Estranova’yı nasıl okumalı?</h2>
-          <p class="text-lg leading-relaxed text-ink/75">
+          <h2 class="mb-5 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Estranova’yı nasıl okumalı?</h2>
+          <p class="max-w-xl text-lg leading-relaxed text-ink/75">
             İlk kez gelen okur için kısa bir yön bulma notu. Burada amaç tedavi vaat etmek değil, doğru soruları sakin bir editoryal düzende görünür kılmaktır.
           </p>
+          <div class="mt-8 overflow-hidden rounded-[32px] border border-burgundy/12 bg-gradient-to-br from-[#fffaf2] to-cream-warm/55 p-6 shadow-[0_24px_86px_-66px_rgba(44,22,28,0.4)] ring-1 ring-white/80">
+            <p class="text-[0.64rem] font-bold uppercase tracking-[0.22em] text-gold-bronze">
+              Okuma masası
+            </p>
+            <p class="mt-4 font-serif text-5xl italic leading-none tracking-[-0.05em] text-gold/80">
+              4 kısa yanıt
+            </p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/62">
+              Platformun ne olduğunu, ne olmadığını ve nereden başlanacağını tek bakışta ayırmak için.
+            </p>
+          </div>
         </header>
 
-        <div class="grid gap-4 md:grid-cols-2">
+        <div class="grid gap-4">
           {
-            homeFaqs.map((item) => (
-              <details class="group rounded-[24px] border border-burgundy/12 bg-cream-soft p-6 open:bg-white open:shadow-[0_18px_42px_-28px_rgba(44,24,28,0.35)]">
-                <summary class="flex cursor-pointer list-none items-start justify-between gap-4 font-serif text-xl leading-snug text-ink">
-                  <span>{item.question}</span>
-                  <span class="mt-1 text-gold transition group-open:rotate-45" aria-hidden="true">+</span>
+            homeFaqs.map((item, idx) => (
+              <details class="group relative overflow-hidden rounded-[30px] border border-burgundy/12 bg-cream-soft/80 p-6 ring-1 ring-white/80 transition open:bg-white open:shadow-[0_24px_78px_-54px_rgba(44,24,28,0.42)] md:p-7">
+                <span class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent opacity-0 transition group-open:opacity-100"></span>
+                <summary class="flex cursor-pointer list-none items-start justify-between gap-5">
+                  <span class="flex gap-4">
+                    <span class="font-serif text-3xl leading-none tabular-nums text-gold">{String(idx + 1).padStart(2, '0')}</span>
+                    <span class="font-serif text-2xl leading-tight tracking-[-0.015em] text-ink transition group-open:text-burgundy">{item.question}</span>
+                  </span>
+                  <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/35 text-gold transition group-open:rotate-45 group-open:bg-gold/10" aria-hidden="true">+</span>
                 </summary>
-                <p class="mt-4 leading-relaxed text-ink/72">{item.answer}</p>
+                <p class="mt-5 border-l border-gold/45 pl-5 leading-relaxed text-ink/72">{item.answer}</p>
               </details>
             ))
           }
@@ -587,12 +606,30 @@ const homeFaqs = [
       </div>
     </section>
 
-    <section class="border-t border-white/10 bg-burgundy-deep px-6 py-24 text-cream-soft md:py-32">
-      <div class="mx-auto max-w-4xl">
+    <section class="relative isolate overflow-hidden border-t border-white/10 bg-burgundy-deep px-6 py-24 text-cream-soft md:py-32">
+      <div class="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-gold/12 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-0 top-6 hidden font-serif text-[11rem] italic leading-none tracking-[-0.08em] text-white/[0.035] lg:block">
+        manifesto
+      </div>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.74fr_1.26fr] lg:items-end">
+        <div class="rounded-[34px] border border-white/12 bg-white/[0.045] p-6 ring-1 ring-white/10 backdrop-blur-sm">
+          <p class="text-[0.64rem] font-bold uppercase tracking-[0.24em] text-gold">
+            Editoryal durak
+          </p>
+          <p class="mt-5 font-serif text-5xl italic leading-none tracking-[-0.06em] text-gold/85 md:text-7xl">
+            sakin bilgi
+          </p>
+          <p class="mt-5 text-sm leading-relaxed text-cream-soft/68">
+            Acele ettirmeyen, karar verdirmeye çalışmayan; sadece bedeni daha iyi okuyabilmek için açılmış bir ara sayfa.
+          </p>
+        </div>
         <blockquote class="relative pl-8 md:pl-10">
           <span aria-hidden="true" class="absolute left-0 top-0 h-full w-[2px] bg-gold"></span>
           <p class="font-serif text-4xl italic leading-snug md:text-5xl md:leading-[1.1] lg:text-6xl lg:leading-[1.05]">
-            Okumak, bu dönemden geçerken kendine ayırabileceğin en küçük ama en kalıcı iyiliktir.
+            Okumak, bu dönemden geçerken kendinize ayırabileceğiniz en küçük ama en kalıcı iyiliktir.
+          </p>
+          <p class="mt-7 max-w-2xl text-base leading-relaxed text-cream-soft/70 md:text-lg">
+            Estranova bu yüzden bir rota dayatmaz; soruları sadeleştirir, bilgiyi sakinleştirir ve okurun kendi hızına yer açar.
           </p>
         </blockquote>
       </div>
@@ -617,11 +654,23 @@ const homeFaqs = [
             <span class="mx-2 text-gold">—</span>
             Bilim Yazarları
           </p>
-          <div>
+          <div class="grid gap-6 lg:grid-cols-[1fr_0.82fr] lg:items-end">
+            <div>
             <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Tıbbi danışmanlar ve bilim kurulu</h2>
             <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
               Estranova’nın bilimsel inceleme katmanını taşıyan hekimler ve uzmanlar. Her makalenin sonundaki Bilimsel Editör Notu bu mercekten doğar.
             </p>
+            </div>
+            <div class="rounded-[32px] border border-burgundy/12 bg-gradient-to-br from-[#fffaf2] to-cream-warm/55 p-5 shadow-[0_22px_76px_-58px_rgba(44,22,28,0.38)] ring-1 ring-white/80">
+              <p class="text-[0.64rem] font-bold uppercase tracking-[0.22em] text-gold-bronze">
+                İnceleme ritmi
+              </p>
+              <div class="mt-4 grid gap-3 text-sm leading-relaxed text-ink/68">
+                <p><span class="font-serif text-xl text-gold">01</span> Yazarın sesi korunur.</p>
+                <p><span class="font-serif text-xl text-gold">02</span> Tıbbi iddia sakinleştirilir.</p>
+                <p><span class="font-serif text-xl text-gold">03</span> Okur karara zorlanmaz.</p>
+              </div>
+            </div>
           </div>
         </header>
 
@@ -722,23 +771,34 @@ const homeFaqs = [
 
     <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-0 top-10 hidden font-serif text-[10rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.035] lg:block">
+        indeks
+      </div>
       <div class="mx-auto max-w-6xl">
         <a
           href="/library"
-          class="group relative grid gap-8 overflow-hidden rounded-[42px] border border-burgundy/14 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/55 p-8 shadow-[0_34px_110px_-70px_rgba(44,22,28,0.42)] ring-1 ring-white/80 transition hover:-translate-y-1 hover:border-gold/40 md:grid-cols-[0.82fr_1.18fr] md:items-center md:p-10"
+          class="group relative grid gap-8 overflow-hidden rounded-[46px] border border-burgundy/14 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/55 p-8 shadow-[0_38px_120px_-72px_rgba(44,22,28,0.46)] ring-1 ring-white/80 transition hover:-translate-y-1 hover:border-gold/40 md:grid-cols-[0.8fr_1.2fr] md:items-center md:p-10"
         >
           <span class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>
           <div>
             <p class="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-burgundy/75">
+              <span class="font-serif font-normal tabular-nums text-gold">10</span>
+              <span class="mx-2 text-gold">—</span>
               Kütüphane
             </p>
             <p class="font-serif text-6xl italic leading-none tracking-[-0.06em] text-gold/75 md:text-8xl">
               arşiv
             </p>
+            <p class="mt-5 max-w-xs text-sm leading-relaxed text-ink/58">
+              Ana sayfanın dışına taşan başlıklar için sakin bir indeks.
+            </p>
           </div>
           <div>
             <p class="mb-6 max-w-3xl font-serif text-3xl italic leading-tight text-ink/78 md:text-5xl">
               Bu sayfada henüz değinmediğimiz başlıkları ve tüm arşivi kütüphanede bulabilirsiniz.
+            </p>
+            <p class="mb-6 max-w-2xl border-l border-gold/45 pl-5 text-base leading-relaxed text-ink/66">
+              Belirti, dönem, yazar veya dosya fark etmeksizin; daha sonra okumak istediğiniz yollar burada daha düzenli görünür.
             </p>
             <span
               class="inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy"
