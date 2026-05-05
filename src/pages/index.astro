@@ -44,6 +44,8 @@ const editorialPicks = (coverDossier?.articles ?? []).slice(0, 3).map((article, 
     title: article.title,
     body: article.excerpt,
     href: article.href ?? `/sayi/${currentIssue.slug}`,
+    thumbnailSrc: getHubThumbnail(article.href),
+    thumbnailAlt: article.title,
     highlight: idx === 1,
     author: writer?.displayName ?? 'Estranova',
     isPlanned: article.status === 'planned',
@@ -147,28 +149,31 @@ const homeFaqs = [
   <main id="main-content" class="text-ink">
     <HomeHero hero={homePageHero} />
 
-    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
+    <section class="border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
       <div class="mx-auto max-w-6xl">
-        <header class="mb-10 max-w-3xl">
+        <header class="mb-12 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
             <span class="font-serif font-normal tabular-nums text-gold">01</span>
             <span class="mx-2 text-gold">—</span>
             Yolculuk Haritası
           </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight text-ink md:text-5xl">Hormonal Geçiş Yolculuk Haritası</h2>
-          <p class="text-lg leading-relaxed text-ink/75">
-            Her dönem farklı sorular getirir. İçerikleri, yaşam evresine göre adım adım takip edebilirsiniz.
-          </p>
+          <div>
+            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] text-ink md:text-6xl">Hormonal geçiş için dört kapı</h2>
+            <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
+              Her dönem farklı sorular getirir. Burada okur, kendini bir testin içinde değil, sakin bir dergi dosyasının içinde bulur.
+            </p>
+          </div>
         </header>
 
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
           {
             journey.map((j) => {
               const img = submenuHeroByRoute[j.imageKey];
               return (
-                <article class="group overflow-hidden rounded-[28px] border border-burgundy/12 bg-cream-soft shadow-sm transition hover:shadow-lg">
-                  <a href={j.href} class="block h-full outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2">
-                    <div class="relative h-36 overflow-hidden">
+                <article class="group">
+                  <a href={j.href} class="grid gap-5 py-7 outline-none transition focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[88px_220px_1fr_auto] md:items-center md:gap-8 md:py-8">
+                    <span class="font-serif text-5xl leading-none tabular-nums text-gold md:text-6xl">{j.step}</span>
+                    <div class="relative h-32 overflow-hidden rounded-[26px] md:h-36">
                       <img
                         src={img.src}
                         alt=""
@@ -176,18 +181,15 @@ const homeFaqs = [
                         height="225"
                         loading="lazy"
                         decoding="async"
-                        class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
+                        class="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.04]"
                       />
-                      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/65 via-[#1c1412]/15 to-transparent" />
-                      <span class="absolute bottom-3 left-4 font-serif text-3xl font-medium tabular-nums text-white/95 md:text-4xl">
-                        {j.step}
-                      </span>
+                      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/28 via-transparent to-transparent" />
                     </div>
-                    <div class="border-t border-burgundy/10 p-7">
-                      <h3 class="mb-3 font-serif text-2xl">{j.title}</h3>
-                      <p class="mb-4 leading-relaxed text-ink/75">{j.excerpt}</p>
-                      <span class="font-semibold text-burgundy group-hover:underline">Yazıyı aç</span>
+                    <div>
+                      <h3 class="mb-2 font-serif text-3xl leading-tight tracking-[-0.015em] text-ink md:text-4xl">{j.title}</h3>
+                      <p class="max-w-2xl leading-relaxed text-ink/72">{j.excerpt}</p>
                     </div>
+                    <span class="font-serif text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
                   </a>
                 </article>
               );
@@ -207,41 +209,74 @@ const homeFaqs = [
 
     <IssueHero issue={currentIssue} sectionNumber="03" />
 
-    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
+    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
       <div class="mx-auto max-w-6xl">
-        <header class="mb-10 max-w-3xl">
+        <header class="mb-12 max-w-3xl">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
             <span class="font-serif font-normal tabular-nums text-gold">04</span>
             <span class="mx-2 text-gold">—</span>
             EDİTÖRYAL SEÇKİ
           </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bu sayıdan öne çıkanlar</h2>
+          <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Bu sayıdan öne çıkanlar</h2>
           <p class="text-lg leading-relaxed text-ink/75">
             {magazineConfig.name} · Sayı {issuePad} kapak dosyasından üç öne çıkan yazı, ardından sayının kalan parçaları.
           </p>
         </header>
 
-        <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-7">
+        <div class="grid gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-stretch">
           {
-            editorialPicks.map((z) => (
+            editorialPicks[0] && (
               <a
-                href={z.href}
-                class:list={[
-                  'group flex h-full flex-col rounded-[28px] border bg-cream-soft p-7 shadow-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
-                  z.highlight
-                    ? 'border-burgundy/35 ring-2 ring-burgundy/20 md:-translate-y-1 md:shadow-xl'
-                    : 'border-burgundy/12 hover:-translate-y-0.5 hover:shadow-md',
-                ]}
+                href={editorialPicks[0].href}
+                class="group grid overflow-hidden border-y border-burgundy/15 bg-cream-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[0.9fr_1fr]"
               >
-                <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">{z.tag}</p>
-                <h3 class="mb-3 font-serif text-2xl group-hover:underline group-hover:decoration-burgundy/35">{z.title}</h3>
-                <p class="mb-5 flex-1 leading-relaxed text-ink/75">{z.body}</p>
-                <p class="mt-2 font-serif text-xs italic text-ink/55">
-                  Yazan: <span class="text-ink/75">{z.author}</span>
-                </p>
+                <div class="relative min-h-[320px] overflow-hidden">
+                  <img
+                    src={editorialPicks[0].thumbnailSrc}
+                    alt={editorialPicks[0].thumbnailAlt}
+                    width="720"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
+                  />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/38 via-transparent to-transparent"></div>
+                </div>
+                <div class="flex flex-col justify-between p-7 md:p-9">
+                  <div>
+                    <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-burgundy">{editorialPicks[0].tag}</p>
+                    <h3 class="mb-4 font-serif text-4xl leading-[1.02] tracking-[-0.025em] text-ink group-hover:underline group-hover:decoration-gold/70 md:text-5xl">
+                      {editorialPicks[0].title}
+                    </h3>
+                    <p class="text-lg leading-relaxed text-ink/72">{editorialPicks[0].body}</p>
+                  </div>
+                  <p class="mt-8 font-serif text-sm italic text-ink/55">
+                    Yazan: <span class="text-ink/75">{editorialPicks[0].author}</span>
+                  </p>
+                </div>
               </a>
-            ))
+            )
           }
+          <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
+            {
+              editorialPicks.slice(1).map((z, idx) => (
+                <a
+                  href={z.href}
+                  class="group grid gap-5 py-7 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 sm:grid-cols-[104px_1fr]"
+                >
+                  <span class="font-serif text-5xl leading-none tabular-nums text-gold">{String(idx + 2).padStart(2, '0')}</span>
+                  <span>
+                    <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">{z.tag}</span>
+                    <span class="block font-serif text-3xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">{z.title}</span>
+                    <span class="mt-3 block leading-relaxed text-ink/70">{z.body}</span>
+                    <span class="mt-5 block font-serif text-xs italic text-ink/55">
+                      Yazan: <span class="text-ink/75">{z.author}</span>
+                    </span>
+                  </span>
+                </a>
+              ))
+            }
+          </div>
         </div>
 
         <div class="mt-14 md:mt-16">
@@ -293,27 +328,25 @@ const homeFaqs = [
       Konum: Editöryal Seçki sonrası (2026-05-03'te taşındı; eski konumu en altta idi).
       Bilim yazarları için ayrı carousel sayfa sonunda yer alır.
     -->
-    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
+    <section class="border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
       <div class="mx-auto max-w-6xl">
-        <header class="mb-12 max-w-3xl">
+        <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
             <span class="font-serif font-normal tabular-nums text-gold">05</span>
             <span class="mx-2 text-gold">—</span>
             Yazar Kadrosu
           </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Bu sayıda yazanlar</h2>
-          <p class="text-lg leading-relaxed text-ink/75">
-            Estranova editöryal ekibi: farklı yaş, uzmanlık ve hayat ritimlerinden yazıyor olan yaşıt sesler. Her yazar kendi
-            bakış açısıyla katkı sunuyor.
-          </p>
-          <p class="mt-4 text-lg leading-relaxed text-ink/75">
-            Estranova bir “kişisel vitrin” ya da “influencer alanı” değil. Burada yazmak; deneyimi parlatmak değil, anlamlandırmak demek.
+          <div>
+            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Bu sayıda yazanlar</h2>
+            <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
+              Estranova bir kişisel vitrin değil. Farklı hayat ritimlerinden gelen yaşıt sesler, deneyimi parlatmak için değil anlamlandırmak için yazıyor.
+            </p>
             <a
               href="/yayin-kurulu#neden-yaziyorlar"
-              class="ml-1 font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
+              class="mt-5 inline-flex text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
               >Neden burada yazıyorlar? →</a
             >
-          </p>
+          </div>
         </header>
 
         <div class="relative" data-writers-carousel>
@@ -347,10 +380,10 @@ const homeFaqs = [
           >
             {
               lifestyleWriters.map((w) => (
-                <li class="flex shrink-0 snap-start" style="width: clamp(240px, 78vw, 280px);">
+                <li class="flex shrink-0 snap-start" style="width: clamp(270px, 78vw, 340px);">
                   <a
                     href={`/yazarlar/${w.slug}`}
-                    class="group flex w-full items-start gap-4 border-r border-burgundy/12 pr-5 last:border-r-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                    class="group flex w-full flex-col border-r border-burgundy/12 pr-5 last:border-r-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
                     {w.portrait ? (
                       <img
@@ -360,10 +393,10 @@ const homeFaqs = [
                         height="160"
                         loading="lazy"
                         decoding="async"
-                        class="h-20 w-20 shrink-0 rounded-full object-cover ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/45"
+                        class="mb-5 aspect-[4/5] w-full rounded-[28px] object-cover object-top ring-1 ring-burgundy/12 transition duration-500 group-hover:scale-[1.01] group-hover:ring-burgundy/35"
                       />
                     ) : (
-                      <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-cream-warm font-serif text-2xl text-burgundy ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/45">
+                      <div class="mb-5 flex aspect-[4/5] w-full items-center justify-center rounded-[28px] bg-cream-warm font-serif text-5xl text-burgundy ring-1 ring-burgundy/12 transition group-hover:ring-burgundy/35">
                         {w.displayName
                           .split(/\s+/)
                           .filter((part) => part.length > 0)
@@ -371,14 +404,14 @@ const homeFaqs = [
                           .join('')}
                       </div>
                     )}
-                    <div class="min-w-0 flex-1">
+                    <div class="min-w-0 flex-1 border-t border-burgundy/14 pt-5">
                       <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy">
                         {w.role.split('/')[0].trim()}
                       </p>
-                      <h3 class="mt-1.5 font-serif text-lg leading-tight text-ink group-hover:underline group-hover:decoration-burgundy/35">
+                      <h3 class="mt-2 font-serif text-2xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">
                         {w.displayName}
                       </h3>
-                      <p class="writer-phrase mt-2 font-serif text-sm italic leading-snug text-ink/70">
+                      <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
                         {w.signaturePhrase}
                       </p>
                     </div>
@@ -406,34 +439,40 @@ const homeFaqs = [
       </div>
     </section>
 
-    <section class="border-t border-b border-burgundy/12 bg-white px-6 py-10 md:py-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
-        <p class="font-sans text-sm text-ink/75">
-          İçeriklerimiz editöryal ve tıbbi incelemeden geçer.{' '}
-          <a
-            href="/editoryal-politika/nasil-arastiriyoruz"
-            class="text-ink underline decoration-gold/60 underline-offset-4 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
-            >Kanıt seviyeleri nasıl belirlenir? →</a>
-        </p>
+    <section class="border-y border-burgundy/12 bg-burgundy-deep px-6 py-14 text-cream-soft md:py-16">
+      <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_1.15fr] md:items-center">
+        <div>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-gold">Yayın standardı</p>
+          <h2 class="font-serif text-3xl leading-tight md:text-5xl">Güven, burada tasarımın altında değil; sayfanın omurgasında.</h2>
+        </div>
+        <div>
+          <p class="font-sans text-base leading-relaxed text-cream-soft/78 md:text-lg">
+            İçeriklerimiz editöryal ve tıbbi incelemeden geçer. Kanıt dili, tıbbi sorumluluk notu ve yayın politikası her sayfanın sessiz güven katmanıdır.
+            <a
+              href="/editoryal-politika/nasil-arastiriyoruz"
+              class="ml-1 text-cream-soft underline decoration-gold/70 underline-offset-4 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
+              >Kanıt seviyeleri nasıl belirlenir? →</a>
+          </p>
         <nav
           aria-label="Güven ve politikalar"
-          class="flex flex-col items-center gap-2 font-sans sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-1"
+          class="mt-6 flex flex-col gap-2 font-sans sm:flex-row sm:flex-wrap sm:gap-x-3 sm:gap-y-1"
         >
           <a
             href="/editoryal-politika"
-            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            class="text-xs uppercase tracking-[0.24em] text-cream-soft/70 transition hover:text-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
             >Editöryal Politika</a>
           <span class="hidden text-gold sm:inline" aria-hidden="true">·</span>
           <a
             href="/tibbi-sorumluluk"
-            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            class="text-xs uppercase tracking-[0.24em] text-cream-soft/70 transition hover:text-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
             >Tıbbi Sorumluluk Reddi</a>
           <span class="hidden text-gold sm:inline" aria-hidden="true">·</span>
           <a
             href="/editoryal-politika/nasil-arastiriyoruz"
-            class="text-xs uppercase tracking-[0.24em] text-ink/65 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            class="text-xs uppercase tracking-[0.24em] text-cream-soft/70 transition hover:text-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
             >Nasıl Araştırıyoruz</a>
         </nav>
+        </div>
       </div>
     </section>
 
@@ -514,26 +553,27 @@ const homeFaqs = [
       </div>
     </section>
 
-    <EditorialDigestStrip />
+    <EditorialDigestStrip sectionNumber="08" />
 
     <!--
       Bilim Yazarları — scientific category.
       Konum: EditorialDigestStrip sonrası, Kütüphane'den önce (2026-05-03'te eklendi).
       Aynı carousel JS pattern'ı (multi-carousel forEach destekli).
     -->
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20">
+    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
       <div class="mx-auto max-w-6xl">
-        <header class="mb-12 max-w-3xl">
+        <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">08</span>
+            <span class="font-serif font-normal tabular-nums text-gold">09</span>
             <span class="mx-2 text-gold">—</span>
             Bilim Yazarları
           </p>
-          <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Tıbbi danışmanlar ve bilim kurulu</h2>
-          <p class="text-lg leading-relaxed text-ink/75">
-            Estranova'nın bilimsel inceleme katmanını taşıyan hekimler ve uzmanlar. Yazılarımız bu kadronun editöryal
-            denetiminden geçer; her makalenin sonundaki Bilimsel Editör Notu da bu mercekten doğar.
-          </p>
+          <div>
+            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Tıbbi danışmanlar ve bilim kurulu</h2>
+            <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
+              Estranova’nın bilimsel inceleme katmanını taşıyan hekimler ve uzmanlar. Her makalenin sonundaki Bilimsel Editör Notu bu mercekten doğar.
+            </p>
+          </div>
         </header>
 
         <div class="relative" data-writers-carousel>
@@ -567,10 +607,10 @@ const homeFaqs = [
           >
             {
               scientificWriters.map((w) => (
-                <li class="flex shrink-0 snap-start" style="width: clamp(240px, 78vw, 280px);">
+                <li class="flex shrink-0 snap-start" style="width: clamp(270px, 78vw, 340px);">
                   <a
                     href={`/yazarlar/${w.slug}`}
-                    class="group flex w-full items-start gap-4 border-r border-burgundy/12 pr-5 last:border-r-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                    class="group flex w-full flex-col border-r border-burgundy/12 pr-5 last:border-r-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
                     {w.portrait ? (
                       <img
@@ -580,10 +620,10 @@ const homeFaqs = [
                         height="160"
                         loading="lazy"
                         decoding="async"
-                        class="h-20 w-20 shrink-0 rounded-full object-cover ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/45"
+                        class="mb-5 aspect-[4/5] w-full rounded-[28px] object-cover object-top ring-1 ring-burgundy/12 transition duration-500 group-hover:scale-[1.01] group-hover:ring-burgundy/35"
                       />
                     ) : (
-                      <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-cream-warm font-serif text-2xl text-burgundy ring-2 ring-burgundy/15 transition group-hover:ring-burgundy/45">
+                      <div class="mb-5 flex aspect-[4/5] w-full items-center justify-center rounded-[28px] bg-cream-warm font-serif text-5xl text-burgundy ring-1 ring-burgundy/12 transition group-hover:ring-burgundy/35">
                         {w.displayName
                           .split(/\s+/)
                           .filter((part) => part.length > 0)
@@ -591,14 +631,14 @@ const homeFaqs = [
                           .join('')}
                       </div>
                     )}
-                    <div class="min-w-0 flex-1">
+                    <div class="min-w-0 flex-1 border-t border-burgundy/14 pt-5">
                       <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy">
                         {w.role.split('/')[0].trim()}
                       </p>
-                      <h3 class="mt-1.5 font-serif text-lg leading-tight text-ink group-hover:underline group-hover:decoration-burgundy/35">
+                      <h3 class="mt-2 font-serif text-2xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">
                         {w.displayName}
                       </h3>
-                      <p class="writer-phrase mt-2 font-serif text-sm italic leading-snug text-ink/70">
+                      <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
                         {w.signaturePhrase}
                       </p>
                     </div>
@@ -626,20 +666,22 @@ const homeFaqs = [
       </div>
     </section>
 
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-14 md:py-16">
-      <div class="mx-auto max-w-3xl text-center">
+    <section class="border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-20">
+      <div class="mx-auto grid max-w-6xl gap-8 border-y border-burgundy/14 py-10 md:grid-cols-[0.85fr_1.15fr] md:items-center">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy/70">
           Kütüphane
         </p>
-        <p class="mb-6 font-serif text-xl italic leading-relaxed text-ink/75 md:text-2xl">
-          Bu sayfada henüz değinmediğimiz başlıkları ve tüm arşivi kütüphanede bulabilirsin.
-        </p>
-        <a
-          href="/library"
-          class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
-        >
-          Kütüphaneye göz at →
-        </a>
+        <div>
+          <p class="mb-6 font-serif text-3xl italic leading-tight text-ink/75 md:text-5xl">
+            Bu sayfada henüz değinmediğimiz başlıkları ve tüm arşivi kütüphanede bulabilirsin.
+          </p>
+          <a
+            href="/library"
+            class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+          >
+            Kütüphaneye göz at →
+          </a>
+        </div>
       </div>
     </section>
   </main>

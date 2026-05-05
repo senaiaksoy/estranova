@@ -31,28 +31,30 @@ const issueHref = `/sayi/${issue.slug}`;
 const issuePad = formatIssuePad(issue.number);
 ---
 
-<section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-soft to-cream-warm px-6 py-16 md:py-20">
+<section class="border-t border-burgundy/10 bg-gradient-to-b from-[#fffaf0] via-cream-soft to-cream-warm px-6 py-16 md:py-24">
   <div class="mx-auto max-w-6xl">
-    <header class="mb-10 max-w-3xl">
+    <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
       <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
         <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
         <span class="mx-2 text-gold">—</span>
         Bu Ayın Sayısı
       </p>
-      <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
-        {magazineConfig.name} · Sayı {issuePad} · {issue.monthYear}
-      </p>
-      <h2 class="mb-4 font-serif text-4xl leading-tight text-burgundy md:text-5xl lg:text-6xl">
-        {issue.theme}
-      </h2>
-      <p class="text-lg leading-relaxed text-ink/75">{issue.lede}</p>
+      <div>
+        <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+          {magazineConfig.name} · Sayı {issuePad} · {issue.monthYear}
+        </p>
+        <h2 class="mb-4 font-serif text-5xl leading-[0.92] tracking-[-0.045em] text-burgundy md:text-7xl lg:text-8xl">
+          {issue.theme}
+        </h2>
+        <p class="max-w-2xl text-lg leading-relaxed text-ink/75">{issue.lede}</p>
+      </div>
     </header>
 
     <a
       href={issueHref}
-      class="group flex flex-col overflow-hidden rounded-[36px] border border-burgundy/15 bg-white shadow-[0_24px_60px_-28px_rgba(44,24,28,0.4)] ring-1 ring-black/5 transition hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:flex-row md:items-stretch"
+      class="group grid overflow-hidden border-y border-burgundy/16 bg-white/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[0.48fr_0.52fr] md:items-stretch"
     >
-      <div class="relative aspect-[4/5] w-full shrink-0 overflow-hidden md:aspect-auto md:w-[40%]">
+      <div class="relative aspect-[4/5] w-full shrink-0 overflow-hidden md:aspect-auto">
         <img
           src={issue.coverImage.src}
           alt={issue.coverImage.alt}
@@ -77,15 +79,15 @@ const issuePad = formatIssuePad(issue.number);
         </div>
       </div>
 
-      <div class="flex min-w-0 flex-1 flex-col justify-between p-8 md:p-12">
+      <div class="flex min-w-0 flex-1 flex-col justify-between border-t border-burgundy/12 p-8 md:border-l md:border-t-0 md:p-12 lg:p-14">
         <div>
           <p class="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-gold">
             Bu sayıda
           </p>
-          <h3 class="mb-4 font-serif text-3xl leading-snug text-ink md:text-4xl">
+          <h3 class="mb-5 font-serif text-4xl leading-[1.02] tracking-[-0.025em] text-ink md:text-5xl">
             {issue.coverHeadline}
           </h3>
-          <p class="mb-6 font-serif text-lg italic leading-relaxed text-ink/70 md:text-xl">
+          <p class="mb-8 font-serif text-xl italic leading-relaxed text-ink/70 md:text-2xl">
             {coverDossier?.lede ?? issue.lede}
           </p>
           {articleCount > 0 && (

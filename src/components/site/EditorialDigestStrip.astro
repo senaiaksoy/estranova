@@ -1,10 +1,18 @@
+---
+interface Props {
+  sectionNumber?: string;
+}
+
+const { sectionNumber = '08' } = Astro.props;
+---
+
 <!-- Inline aylık editoryal özet — form action backend ile bağlanacak -->
 <section
-  class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-14"
+  class="border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20"
   aria-labelledby="editorial-digest-heading"
 >
-  <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10">
-    <div class="lg:col-span-3">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-8 border-y border-burgundy/14 py-8 lg:grid-cols-12 lg:gap-10">
+    <div class="lg:col-span-4">
       <img
         src="/images/newsletter/newsletter-ritual.webp"
         alt="Açık bir kitap, keten kumaş ve bir fincan: sakin bir sabah ritüeli"
@@ -12,26 +20,26 @@
         height="1200"
         loading="lazy"
         decoding="async"
-        class="aspect-square w-full max-w-[280px] rounded-2xl object-cover ring-1 ring-burgundy/10 lg:max-w-none"
+        class="aspect-[4/5] w-full rounded-[30px] object-cover ring-1 ring-burgundy/10"
       />
     </div>
 
-    <div class="lg:col-span-5">
+    <div class="flex flex-col justify-center lg:col-span-4">
       <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-        <span class="font-serif font-normal tabular-nums text-gold">06</span>
+        <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
         <span class="mx-2 text-gold">—</span>
         EDİTÖRYAL ÖZET
       </p>
-      <h2 id="editorial-digest-heading" class="mb-4 font-serif text-3xl leading-tight text-ink">
+      <h2 id="editorial-digest-heading" class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] text-ink md:text-6xl">
         Aylık bir sakin seçki
       </h2>
-      <p class="text-base leading-relaxed text-ink/75">
+      <p class="text-lg leading-relaxed text-ink/75">
         Her ay okuduğumuz ve hazırladığımız içeriklerden bir araya getirdiğimiz kısa bir seçki. Satış yok, promosyon
         yok. İstediğin an ayrılırsın.
       </p>
     </div>
 
-    <div class="lg:col-span-4">
+    <div class="flex flex-col justify-center lg:col-span-4">
       <!-- Faz 2 öncesi: localStorage bekleme listesi; backend'e geçince
            newsletter-signup.ts script'i endpoint çağrısına bağlanır. -->
       <form
@@ -52,11 +60,11 @@
             autocomplete="email"
             required
             placeholder="E-posta"
-            class="min-h-[48px] w-full min-w-0 flex-1 rounded-xl border border-burgundy/20 bg-white px-4 text-sm text-ink shadow-sm outline-none transition placeholder:text-ink/40 focus:border-burgundy/40 focus:ring-2 focus:ring-burgundy/20"
+            class="min-h-[52px] w-full min-w-0 flex-1 rounded-full border border-burgundy/20 bg-white px-5 text-sm text-ink shadow-sm outline-none transition placeholder:text-ink/40 focus:border-burgundy/40 focus:ring-2 focus:ring-burgundy/20"
           />
           <button
             type="submit"
-            class="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-xl bg-burgundy px-6 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-burgundy/35 sm:px-7"
+            class="inline-flex min-h-[52px] shrink-0 items-center justify-center rounded-full bg-burgundy px-7 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-burgundy/35 sm:px-8"
           >
             Özeti al
           </button>
