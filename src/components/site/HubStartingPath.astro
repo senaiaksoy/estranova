@@ -46,7 +46,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-white to-cream-soft/55 px-6 py-16 md:py-20">
+<section class="relative overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
   <div class="pointer-events-none absolute -left-12 top-16 h-44 w-44 rounded-full bg-burgundy/6 blur-3xl"></div>
   <div class="pointer-events-none absolute right-8 top-10 hidden font-serif text-[8rem] italic leading-none text-burgundy/[0.035] md:block" aria-hidden="true">
     rota
@@ -64,12 +64,12 @@ const {
       </div>
     </header>
 
-    <ol class="overflow-hidden rounded-[38px] border border-burgundy/12 bg-white/68 shadow-[0_28px_90px_-60px_rgba(44,22,28,0.34)] ring-1 ring-white/75">
+    <ol class="overflow-hidden rounded-[38px] border border-burgundy/12 bg-white shadow-[0_28px_90px_-66px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04]">
       {steps.map((step) => (
         <li class="border-t border-burgundy/12 first:border-t-0">
           <a
             href={step.href}
-            class="group grid gap-4 px-5 py-7 transition hover:bg-cream-soft/72 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[90px_180px_1fr_auto] md:items-center md:gap-7 md:px-7"
+            class="group grid gap-4 px-5 py-7 transition hover:bg-cream-soft/22 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[90px_180px_1fr_auto] md:items-center md:gap-7 md:px-7"
           >
             <span class="font-serif text-5xl italic leading-none tabular-nums text-gold md:text-6xl">
               {step.step}

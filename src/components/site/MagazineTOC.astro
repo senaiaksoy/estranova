@@ -24,7 +24,7 @@ const enriched = items.map((it, i) => ({
 }));
 ---
 
-<div class="relative overflow-hidden rounded-[36px] border border-burgundy/12 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/45 shadow-[0_30px_96px_-60px_rgba(44,22,28,0.42)] ring-1 ring-white/80">
+<div class="relative overflow-hidden rounded-[36px] border border-burgundy/12 bg-white shadow-[0_30px_96px_-68px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04]">
   <div class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></div>
   <ol role="list">
     {
@@ -32,7 +32,7 @@ const enriched = items.map((it, i) => ({
         <li class="border-t border-burgundy/12 first:border-t-0">
           <a
             href={a.href}
-            class="group relative grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 px-5 py-7 transition duration-300 hover:bg-white/75 md:grid-cols-[auto_1fr_auto] md:items-baseline md:gap-x-8 md:px-8 md:py-9"
+            class="group relative grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 px-5 py-7 transition duration-300 hover:bg-cream-soft/20 md:grid-cols-[auto_1fr_auto] md:items-baseline md:gap-x-8 md:px-8 md:py-9"
           >
             <span class="font-serif text-3xl italic leading-none text-gold transition group-hover:text-burgundy md:text-5xl" aria-hidden="true">
               {a.num}

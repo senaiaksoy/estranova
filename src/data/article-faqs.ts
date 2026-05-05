@@ -40,19 +40,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler': [
     {
-      question: 'Perimenopozun ilk işareti her zaman adet düzensizliği midir?',
+      question: 'Perimenopoz kaç yaşında başlar?',
       answer:
-        'Hayır. Bazı kadınlarda ilk fark edilen şey uyku, ruh hali, sıcak basması ya da zihinsel dağınıklık olabilir. Adet düzeni önemli bir ipucu olsa da tek kapı değildir.',
+        'Çoğu kadında kırklı yaşlarda fark edilir; bazı kadınlarda otuzların sonlarında, bazılarında ellilere yakın başlayabilir. Aile öyküsü, sigara, bazı kanser tedavileri, yumurtalık cerrahisi ve bazı otoimmün durumlar zamanlamayı etkileyebilir. Yaştan çok gidişe bakmak gerekir.',
     },
     {
-      question: 'Bu dönemde belirtiler neden bazı aylarda çok artıp sonra geri çekilir?',
+      question: 'Adet görüyorsam hâlâ gebe kalabilir miyim?',
       answer:
-        'Perimenopozun doğası dalgalıdır; hormon üretimi çizgisel değil inişli çıkışlı değişir. Bu yüzden bir ay daha sakin geçen tablo, sonraki ay yeniden belirginleşebilir.',
+        'Evet. Yumurtlama düzensizleşse de tamamen bitmiş sayılmaz. Gebelik istemiyorsanız, menopoz son adet üzerinden 12 ay geçerek netleşene kadar doğum kontrolü konusunu hekiminizle konuşmanız gerekir.',
     },
     {
-      question: 'İlk işaretleri not etmek gerçekten işe yarar mı?',
+      question: 'Her sıcak basması perimenopoz mudur?',
       answer:
-        'Evet. Tarih, sıklık ve eşlik eden durumları birkaç hafta not etmek hem kişisel farkındalığı artırır hem de hekim görüşmesini daha somut hale getirir. Dağınık bir hissi daha okunur bir düzene dönüştürür.',
+        'Hayır. Sıcak basması perimenopozda sık görülür, ama tiroid sorunları, bazı ilaçlar, enfeksiyonlar, stres sistemi ve başka tıbbi durumlar da benzer hisler yaratabilir. Yeni, şiddetli veya günlük hayatı bozan belirtilerde değerlendirme gerekir.',
+    },
+    {
+      question: 'Beyin sisi kalıcı mı?',
+      answer:
+        'Çoğu kadında hafif, dalgalı ve geçiş dönemine eşlik eden bir şikâyet olarak yaşanır. Uyku bozukluğu, stres, demir eksikliği, tiroid sorunları ve depresyon da tabloyu artırabilir. Korkuya kapılmadan, ama uzun sürerse görmezden gelmeden ele almak en sağlıklısıdır.',
+    },
+    {
+      question: 'Hormon tedavisi bu dönemde şart mı?',
+      answer:
+        'Hayır, şart değildir; ama bazı kadınlarda belirgin vazomotor belirtiler ve yaşam kalitesi etkilenmesi varsa seçeneklerden biri olabilir. Karar yaş, sağlık öyküsü, riskler, beklentiler ve kontrendikasyonlar birlikte değerlendirilerek hekimle verilir. Bu yazı karar rehberi değil, ilk işaretleri okuma rehberidir.',
     },
   ],
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': [

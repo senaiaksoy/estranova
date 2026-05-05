@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yazar Stil + Onay Formu - Perimenopozda İlk İşaretler</title>
+<style>
+  :root {
+    --burgundy: #6B2D3E;
+    --burgundy-deep: #4f171c;
+    --gold: #C9A96E;
+    --ink: #2D2D2D;
+    --cream-warm: #F8F2EA;
+    --cream-soft: #FAF6EE;
+    --white: #ffffff;
+    --border: rgba(107, 45, 62, 0.18);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream-warm);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Verdana, sans-serif;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 32px auto;
+    padding: 0 20px 48px;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--white), var(--cream-soft));
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--gold);
+    border-radius: 18px;
+    padding: 28px 28px 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .tag {
+    display: inline-block;
+    background: var(--burgundy);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin: 0 0 10px 0;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+  }
+  .meta {
+    font-size: 14px;
+    color: rgba(45, 45, 45, 0.72);
+    margin: 0;
+  }
+  .meta strong { color: var(--burgundy); }
+  .preview-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 18px;
+    background: var(--burgundy);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .preview-link:hover { background: var(--burgundy-deep); }
+  .intro-note {
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: var(--cream-soft);
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(45, 45, 45, 0.78);
+  }
+  .intro-note strong { color: var(--burgundy); }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+  }
+  .section-num {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    margin: 0 0 4px 0;
+    color: var(--burgundy);
+  }
+  .section-hint {
+    font-size: 13px;
+    color: rgba(45, 45, 45, 0.65);
+    margin: 4px 0 18px 0;
+    font-style: italic;
+  }
+  .field { margin-bottom: 18px; }
+  .field:last-child { margin-bottom: 0; }
+  .field-label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .field-example {
+    background: var(--cream-soft);
+    border-left: 3px solid var(--gold);
+    padding: 10px 14px;
+    margin: 6px 0 10px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(45, 45, 45, 0.78);
+    border-radius: 6px;
+  }
+  .likert {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .likert label,
+  .toggle label,
+  .choice label {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.15s ease;
+  }
+  .likert label {
+    text-align: center;
+    padding: 10px 6px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--cream-soft);
+    font-size: 13px;
+  }
+  .likert label:hover,
+  .toggle label:hover,
+  .choice label:hover {
+    border-color: var(--gold);
+    background: var(--white);
+  }
+  .likert input,
+  .toggle input,
+  .choice input { display: none; }
+  .likert label:has(input:checked),
+  .toggle label:has(input:checked),
+  .choice label:has(input:checked) {
+    background: var(--burgundy);
+    color: var(--white);
+    border-color: var(--burgundy-deep);
+    font-weight: 600;
+  }
+  .likert .scale-line {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: rgba(45, 45, 45, 0.55);
+    margin-top: 4px;
+  }
+  .toggle,
+  .choice {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .toggle label {
+    padding: 9px 18px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--cream-soft);
+    font-size: 13px;
+  }
+  .choice label {
+    flex: 1;
+    min-width: 130px;
+    padding: 11px 14px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--cream-soft);
+    font-size: 13px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--cream-soft);
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    resize: vertical;
+    line-height: 1.5;
+  }
+  textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: var(--white);
+  }
+  .char-count {
+    font-size: 11px;
+    color: rgba(45, 45, 45, 0.55);
+    text-align: right;
+    margin-top: 4px;
+  }
+  .decision-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .btn {
+    cursor: pointer;
+    padding: 22px 18px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    transition: all 0.15s ease;
+    font-family: inherit;
+  }
+  .btn-approve {
+    border: none;
+    background: var(--burgundy);
+    color: var(--white);
+  }
+  .btn-approve:hover {
+    background: var(--burgundy-deep);
+    transform: translateY(-1px);
+  }
+  .btn-revise {
+    background: var(--white);
+    color: var(--burgundy);
+    border: 2px solid var(--burgundy);
+  }
+  .btn-revise:hover {
+    background: var(--cream-soft);
+    transform: translateY(-1px);
+  }
+  .btn-icon {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  .footer-note {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: var(--cream-soft);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    font-size: 12px;
+    color: rgba(45, 45, 45, 0.7);
+    line-height: 1.5;
+  }
+  .footer-note strong { color: var(--burgundy); }
+  .result-box {
+    display: none;
+    margin-top: 18px;
+    padding: 18px 20px;
+    background: var(--cream-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .result-box.is-visible { display: block; }
+  .result-box h3 {
+    margin: 0 0 10px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    color: var(--burgundy);
+  }
+  .result-box p {
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    color: rgba(45, 45, 45, 0.78);
+  }
+  .result-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--burgundy);
+    margin: 10px 0 6px;
+    text-transform: uppercase;
+  }
+  .result-output {
+    width: 100%;
+    min-height: 82px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .result-output.subject { min-height: 48px; }
+  .result-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .mini-btn {
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--burgundy);
+    border-radius: 999px;
+    padding: 9px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-family: inherit;
+  }
+  .mini-btn:hover {
+    border-color: var(--gold);
+    background: var(--cream-soft);
+  }
+  @media (max-width: 600px) {
+    .decision-row { grid-template-columns: 1fr; }
+    h1 { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="tag">YAZARA GÖNDERİLECEK TIKLANABİLİR FORM · 10 SORU</span>
+    <p class="eyebrow">YAZAR STİL + ONAY FORMU</p>
+    <h1>Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem</h1>
+    <p class="meta">
+      Yazar: <strong>Berna Aksoy</strong> &nbsp;·&nbsp;
+      Gönderim: <strong>5 Mayıs 2026</strong> &nbsp;·&nbsp;
+      Yanıt için son gün: <strong>12 Mayıs 2026</strong>
+    </p>
+    <a href="http://localhost:4322/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler" class="preview-link" target="_blank" rel="noopener">→ Yazıyı tarayıcıda aç</a>
+    <div class="intro-note">
+      <strong>Bu form 10 sorudan oluşur.</strong> Sorular hem yazı onayı hem de stil ayarı içindir.
+      En alttaki karar düğmesine tıkladığınızda e-posta istemciniz açılır ve yanıtlarınız otomatik olarak gövdeye yerleşir.
+    </div>
+  </header>
+
+  <form id="approval-form" onsubmit="return false;">
+
+    <section class="card">
+      <p class="section-num">Bölüm 1 / 3</p>
+      <h2>Genel ses</h2>
+      <p class="section-hint">İlk 5 soru için 1 en düşük, 5 en yüksek uyumu gösterir.</p>
+
+      <div class="field">
+        <span class="field-label">1. Yazının genel sesi Berna Aksoy imzasını taşıyor mu?</span>
+        <div class="likert">
+          <label><input type="radio" name="q1" value="1" required><span>1</span></label>
+          <label><input type="radio" name="q1" value="2"><span>2</span></label>
+          <label><input type="radio" name="q1" value="3"><span>3</span></label>
+          <label><input type="radio" name="q1" value="4"><span>4</span></label>
+          <label><input type="radio" name="q1" value="5"><span>5</span></label>
+          <div class="scale-line"><span>hiç değil</span><span>tam olarak</span></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">2. Açılıştaki dolaylı ses ve gözlem tonu doğal mı?</span>
+        <div class="likert">
+          <label><input type="radio" name="q2" value="1" required><span>1</span></label>
+          <label><input type="radio" name="q2" value="2"><span>2</span></label>
+          <label><input type="radio" name="q2" value="3"><span>3</span></label>
+          <label><input type="radio" name="q2" value="4"><span>4</span></label>
+          <label><input type="radio" name="q2" value="5"><span>5</span></label>
+          <div class="scale-line"><span>zorlama</span><span>çok doğal</span></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">3. Yazı sakin ve editoryal kalıyor mu; panik ya da pazarlama dili üretiyor mu?</span>
+        <div class="likert">
+          <label><input type="radio" name="q3" value="1" required><span>1</span></label>
+          <label><input type="radio" name="q3" value="2"><span>2</span></label>
+          <label><input type="radio" name="q3" value="3"><span>3</span></label>
+          <label><input type="radio" name="q3" value="4"><span>4</span></label>
+          <label><input type="radio" name="q3" value="5"><span>5</span></label>
+          <div class="scale-line"><span>kaymış</span><span>çok dengeli</span></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">4. Bilimsel açıklık ile dergi tonu arasındaki denge yerinde mi?</span>
+        <div class="likert">
+          <label><input type="radio" name="q4" value="1" required><span>1</span></label>
+          <label><input type="radio" name="q4" value="2"><span>2</span></label>
+          <label><input type="radio" name="q4" value="3"><span>3</span></label>
+          <label><input type="radio" name="q4" value="4"><span>4</span></label>
+          <label><input type="radio" name="q4" value="5"><span>5</span></label>
+          <div class="scale-line"><span>fazla teknik / soğuk</span><span>dengeli</span></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">5. Kapanış cümleleri sizde doğru bir editoryal his bırakıyor mu?</span>
+        <div class="likert">
+          <label><input type="radio" name="q5" value="1" required><span>1</span></label>
+          <label><input type="radio" name="q5" value="2"><span>2</span></label>
+          <label><input type="radio" name="q5" value="3"><span>3</span></label>
+          <label><input type="radio" name="q5" value="4"><span>4</span></label>
+          <label><input type="radio" name="q5" value="5"><span>5</span></label>
+          <div class="scale-line"><span>zayıf</span><span>çok güçlü</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-num">Bölüm 2 / 3</p>
+      <h2>Kritik kontroller</h2>
+      <p class="section-hint">Bu bölümde yazının kural ve yayın akışı açısından netliğini ölçüyoruz.</p>
+
+      <div class="field">
+        <span class="field-label">6. Yazı boyunca hitap biçimi sizce tutarlı mı? “siz” çizgisi korunmuş mu?</span>
+        <div class="toggle">
+          <label><input type="radio" name="q6" value="evet" required>Evet</label>
+          <label><input type="radio" name="q6" value="kismen">Kısmen</label>
+          <label><input type="radio" name="q6" value="hayir">Hayır</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">7. Gövdedeki “Sıkça Sorulanlar” bölümü ile alttaki SSS akordeonunun birlikte görünmesi sizce sorun mu?</span>
+        <div class="field-example">
+          Burada amaç tek görünür SSS yüzeyi mi olsun, yoksa iki yüzey bir arada kabul edilebilir mi, bunu netleştirmek.
+        </div>
+        <div class="choice">
+          <label><input type="radio" name="q7" value="tek-sss" required>Tek SSS yüzeyi olmalı</label>
+          <label><input type="radio" name="q7" value="iki-yuzey-olur">İki yüzey de olabilir</label>
+          <label><input type="radio" name="q7" value="emin-degil">Emin değilim</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">8. Bilimsel Editör Notu ana yazıdan yeterince ayrışıyor mu?</span>
+        <div class="toggle">
+          <label><input type="radio" name="q8" value="ayri" required>Evet, ayrışıyor</label>
+          <label><input type="radio" name="q8" value="karisik">Biraz karışıyor</label>
+          <label><input type="radio" name="q8" value="hayir">Hayır</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">9. Bu yazıda özellikle yeniden yazılmasını istediğiniz bir bölüm var mı?</span>
+        <div class="choice">
+          <label><input type="radio" name="q9" value="acilis" required>Açılış</label>
+          <label><input type="radio" name="q9" value="orta-bolumler">Orta bölümler</label>
+          <label><input type="radio" name="q9" value="sss">SSS / soru-cevap</label>
+          <label><input type="radio" name="q9" value="kapanis">Kapanış</label>
+          <label><input type="radio" name="q9" value="gerek-yok">Gerek yok</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-num">Bölüm 3 / 3</p>
+      <h2>Son tercih</h2>
+      <p class="section-hint">Son soru, sonraki makalelerde tonu daha iyi oturtmak için kullanılacak.</p>
+
+      <div class="field">
+        <span class="field-label">10. Berna için gelecek makalelerde hangi açılış çizgisini daha çok görmek istersiniz?</span>
+        <div class="choice">
+          <label><input type="radio" name="q10" value="dolayli-ses" required>Dolaylı sesle açılış</label>
+          <label><input type="radio" name="q10" value="gozlem-ci̇mlesi">Gözlem cümlesiyle açılış</label>
+          <label><input type="radio" name="q10" value="hekim-cumlesi">Hekim cümlesiyle açılış</label>
+          <label><input type="radio" name="q10" value="rotasyon">Rotasyon olsun</label>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="card">
+      <h2>Karar</h2>
+      <p class="section-hint">Düğmeye tıkladığınızda sistem önce e-posta uygulamasını açmayı dener. Eğer tarayıcı bunu engellerse, aşağıda konu ve mesaj metni görünür; tek tıkla kopyalayabilirsiniz.</p>
+      <div class="field">
+        <span class="field-label">Yazarın son yorumu (opsiyonel)</span>
+        <textarea id="yorum" name="yorum" maxlength="600" placeholder="İsterseniz burada belirli bir cümleyi, bölümü, ton tercihlerini ya da son kararınızı etkileyen kısa notu yazabilirsiniz."></textarea>
+        <div class="char-count" id="charCount">0 / 600</div>
+      </div>
+      <div class="decision-row">
+        <button type="button" class="btn btn-approve" onclick="submitDecision('approved')">
+          <span class="btn-icon">✓</span>
+          ONAYLIYORUM
+        </button>
+        <button type="button" class="btn btn-revise" onclick="submitDecision('needs_revision')">
+          <span class="btn-icon">✎</span>
+          DEĞİŞİKLİK İSTİYORUM
+        </button>
+      </div>
+      <div id="resultBox" class="result-box" aria-live="polite">
+        <h3>Hazırlanan e-posta</h3>
+        <p id="resultMessage">E-posta uygulaması açılmazsa aşağıdaki konu ve metni kopyalayabilirsiniz.</p>
+        <span class="result-label">Konu</span>
+        <div id="resultSubject" class="result-output subject"></div>
+        <span class="result-label">Mesaj</span>
+        <div id="resultBody" class="result-output"></div>
+        <div class="result-actions">
+          <button type="button" class="mini-btn" id="openMailBtn">E-posta uygulamasını aç</button>
+          <button type="button" class="mini-btn" id="copySubjectBtn">Konuyu kopyala</button>
+          <button type="button" class="mini-btn" id="copyBodyBtn">Mesajı kopyala</button>
+        </div>
+      </div>
+    </section>
+
+  </form>
+
+  <div class="footer-note">
+    <strong>Süreç notu:</strong> Bu form üçüncü taraf servise veri göndermez. Tıkladığınızda varsayılan e-posta
+    istemciniz açılır ve yanıtlarınız <strong>drsenaiaksoy@gmail.com</strong> adresine gidecek şekilde gövdeye yerleşir.
+  </div>
+</div>
+
+<script>
+(function () {
+  var ta = document.getElementById('yorum');
+  var cc = document.getElementById('charCount');
+  ta.addEventListener('input', function () {
+    cc.textContent = ta.value.length + ' / 600';
+  });
+})();
+
+var lastMailtoUrl = '';
+var lastSubject = '';
+var lastBody = '';
+
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise(function (resolve, reject) {
+    var helper = document.createElement('textarea');
+    helper.value = text;
+    helper.setAttribute('readonly', '');
+    helper.style.position = 'absolute';
+    helper.style.left = '-9999px';
+    document.body.appendChild(helper);
+    helper.select();
+    try {
+      var ok = document.execCommand('copy');
+      document.body.removeChild(helper);
+      if (ok) resolve();
+      else reject(new Error('copy-failed'));
+    } catch (err) {
+      document.body.removeChild(helper);
+      reject(err);
+    }
+  });
+}
+
+function openMailClient(url) {
+  var anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.style.display = 'none';
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+}
+
+function showPreparedMail(subject, body, mailtoUrl, decision) {
+  lastSubject = subject;
+  lastBody = body;
+  lastMailtoUrl = mailtoUrl;
+
+  var box = document.getElementById('resultBox');
+  var subjectBox = document.getElementById('resultSubject');
+  var bodyBox = document.getElementById('resultBody');
+  var message = document.getElementById('resultMessage');
+
+  subjectBox.textContent = subject;
+  bodyBox.textContent = body;
+  message.textContent =
+    decision === 'approved'
+      ? 'Onay e-postası hazırlandı. E-posta uygulaması açılmazsa aşağıdaki konu ve mesajı kopyalayabilirsiniz.'
+      : 'Revizyon e-postası hazırlandı. E-posta uygulaması açılmazsa aşağıdaki konu ve mesajı kopyalayabilirsiniz.';
+
+  box.classList.add('is-visible');
+}
+
+document.getElementById('openMailBtn').addEventListener('click', function () {
+  if (lastMailtoUrl) openMailClient(lastMailtoUrl);
+});
+
+document.getElementById('copySubjectBtn').addEventListener('click', function () {
+  if (!lastSubject) return;
+  copyText(lastSubject).then(function () {
+    alert('Konu kopyalandı.');
+  }).catch(function () {
+    alert('Konu kopyalanamadı. Elle seçip kopyalayabilirsiniz.');
+  });
+});
+
+document.getElementById('copyBodyBtn').addEventListener('click', function () {
+  if (!lastBody) return;
+  copyText(lastBody).then(function () {
+    alert('Mesaj kopyalandı.');
+  }).catch(function () {
+    alert('Mesaj kopyalanamadı. Elle seçip kopyalayabilirsiniz.');
+  });
+});
+
+function submitDecision(decision) {
+  var form = document.getElementById('approval-form');
+  var requiredNames = ['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10'];
+  var missing = [];
+  for (var i = 0; i < requiredNames.length; i++) {
+    var checked = form.querySelector('input[name="' + requiredNames[i] + '"]:checked');
+    if (!checked) missing.push(requiredNames[i]);
+  }
+  if (missing.length > 0) {
+    alert('Lütfen önce tüm 10 soruyu yanıtlayın.');
+    return;
+  }
+
+  function v(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : null;
+  }
+
+  var payload = {
+    formType: 'writer-approval-10-question',
+    formVersion: 'v1.0',
+    writer: {
+      slug: 'berna-aksoy',
+      name: 'Berna Aksoy'
+    },
+    article: {
+      slug: 'perimenopoz-ilk-isaretler',
+      title: 'Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem'
+    },
+    decision: decision,
+    timestamp: new Date().toISOString(),
+    answers: {
+      q1_genel_ses: v('q1'),
+      q2_acilis_dogal_mi: v('q2'),
+      q3_panik_pazarlama_dengesi: v('q3'),
+      q4_bilim_editoryal_denge: v('q4'),
+      q5_kapanis_gucu: v('q5'),
+      q6_siz_hitabi: v('q6'),
+      q7_tek_sss_yuzeyi: v('q7'),
+      q8_editor_notu_ayrimi: v('q8'),
+      q9_yeniden_yazim_ihtiyaci: v('q9'),
+      q10_tercih_edilen_acilis_tipi: v('q10')
+    },
+    yorum: document.getElementById('yorum').value.trim()
+  };
+
+  var subjectTag = decision === 'approved' ? 'ONAY' : 'REVIZYON';
+  var subject = '[' + subjectTag + '] Perimenopozda İlk İşaretler';
+  var greeting = 'Merhaba,\n\nAşağıdaki yazar onay + stil formu yanıtını iletiyorum:\n\n';
+  var jsonBody = JSON.stringify(payload, null, 2);
+  var signature = '\n\n— Berna Aksoy';
+  var body = greeting + jsonBody + signature;
+
+  var mailtoUrl = 'mailto:drsenaiaksoy@gmail.com?subject=' + encodeURIComponent(subject) +
+                   '&body=' + encodeURIComponent(body);
+
+  showPreparedMail(subject, body, mailtoUrl, decision);
+  openMailClient(mailtoUrl);
+}
+</script>
+</body>
+</html>

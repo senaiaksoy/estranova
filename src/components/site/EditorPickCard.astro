@@ -32,7 +32,7 @@ const writer = writers.find((w) => w.slug === writerSlug);
 
 <a
   href={href}
-    class="group relative block overflow-hidden rounded-[44px] border border-burgundy/14 bg-gradient-to-br from-white via-[#fffdf9] to-cream-warm/45 shadow-[0_38px_120px_-62px_rgba(44,24,28,0.48)] ring-1 ring-white/85 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_48px_140px_-64px_rgba(44,24,28,0.56)]"
+    class="group relative block overflow-hidden rounded-[44px] border border-burgundy/14 bg-white shadow-[0_38px_120px_-70px_rgba(44,24,28,0.42)] ring-1 ring-black/[0.05] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_48px_140px_-72px_rgba(44,24,28,0.50)]"
 >
   <div class="pointer-events-none absolute inset-x-10 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/85 to-transparent"></div>
   <div class="pointer-events-none absolute -left-16 top-10 h-44 w-44 rounded-full bg-gold/10 blur-3xl"></div>
@@ -78,7 +78,7 @@ const writer = writers.find((w) => w.slug === writerSlug);
           )
         }
         <span>{readingMinutes} dk okuma</span>
-        <span class="ml-auto inline-flex items-center gap-2 rounded-full border border-burgundy/10 bg-white/55 px-4 py-2 font-semibold text-burgundy shadow-sm transition group-hover:border-gold/35 group-hover:bg-cream-soft">
+        <span class="ml-auto inline-flex items-center gap-2 rounded-full border border-burgundy/10 bg-white px-4 py-2 font-semibold text-burgundy shadow-sm ring-1 ring-black/[0.03] transition group-hover:border-gold/35 group-hover:bg-cream-soft/35">
           {cta}
           <span aria-hidden="true">→</span>
         </span>
