@@ -9,34 +9,49 @@ interface Props {
 const { currentPath = '/' } = Astro.props;
 
 const linkBase =
-  'text-xs font-semibold uppercase tracking-[0.13em] transition-colors px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary';
+  'relative rounded-full px-3 py-2 text-[0.66rem] font-bold uppercase tracking-[0.15em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50';
 
 const mobileLinkBase =
-  'text-base font-serif py-2.5 px-4 rounded-lg text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary';
+  'text-base font-serif py-3 px-4 rounded-2xl text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50';
 ---
 
 <nav
   aria-label="Ana navigasyon menüsü"
   role="navigation"
-  class="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-[#fffaf0]/92 px-6 py-3 shadow-[0_10px_30px_-28px_rgba(44,24,28,0.6)] backdrop-blur-md focus-within:ring-2 focus-within:ring-primary/20"
+  class="fixed left-0 right-0 top-0 z-50 border-b border-primary/10 bg-[#fffaf0]/88 px-4 py-3 shadow-[0_18px_60px_-48px_rgba(44,24,28,0.72)] backdrop-blur-xl focus-within:ring-2 focus-within:ring-primary/20 md:px-6"
 >
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent"></div>
+
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4">
     <a
       href="/"
-      class="rounded px-2 py-1 text-2xl font-serif font-bold tracking-[-0.04em] text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 md:text-3xl"
+      class="group flex items-center gap-3 rounded px-2 py-1 text-left text-2xl font-serif font-bold tracking-[-0.04em] text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 md:text-3xl"
       aria-label="ESTRANOVA Ana Sayfası"
     >
-      <span>ESTRANOVA</span>
-      <span class="mt-1 block text-[9px] font-sans font-semibold tracking-[0.28em] text-secondary"
-        >EDİTORYAL SAĞLIK PLATFORMU</span
-      >
+      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/45 bg-burgundy shadow-[0_18px_54px_-32px_rgba(44,24,28,0.78)] ring-1 ring-white/70 md:h-11 md:w-11">
+        <span
+          aria-hidden="true"
+          class="h-7 w-7 bg-[#d8bd7a] drop-shadow-[0_1px_4px_rgba(255,250,240,0.24)] transition duration-300 group-hover:rotate-45 md:h-7.5 md:w-7.5"
+          style="-webkit-mask: url('/favicon.svg') center / contain no-repeat; mask: url('/favicon.svg') center / contain no-repeat;"
+        ></span>
+      </span>
+      <span>
+        <span>ESTRANOVA</span>
+        <span class="mt-1 block text-[9px] font-sans font-semibold tracking-[0.28em] text-secondary"
+          >EDİTORYAL SAĞLIK PLATFORMU</span
+        >
+        <span class="mt-2 block h-px w-10 bg-gold/55 transition group-hover:w-16"></span>
+      </span>
     </a>
 
-    <nav aria-label="Ana menü" class="hidden md:flex items-center gap-1 lg:gap-2">
+    <nav
+      aria-label="Ana menü"
+      class="hidden items-center gap-0.5 rounded-full border border-burgundy/10 bg-white/38 p-1 shadow-[0_14px_56px_-48px_rgba(44,24,28,0.64)] ring-1 ring-white/70 lg:flex"
+    >
       {
         mainNav.map((item) => {
           const active = isNavActive(currentPath, item);
-          const activeClass = active ? 'text-primary font-semibold' : 'text-charcoal/60 hover:text-primary';
+          const activeClass = active ? 'bg-burgundy text-cream-soft shadow-sm' : 'text-charcoal/58 hover:bg-burgundy/6 hover:text-primary';
 
           if (!item.children) {
             return (
@@ -64,8 +79,8 @@ const mobileLinkBase =
                 </a>
                 <span
                   class:list={[
-                    'pointer-events-none inline-flex h-7 w-4 shrink-0 items-center justify-center text-charcoal/45 group-hover:text-primary',
-                    active ? 'text-primary' : '',
+                    'pointer-events-none -ml-2 inline-flex h-8 w-5 shrink-0 items-center justify-center rounded-full text-charcoal/38 group-hover:text-primary',
+                    active ? 'text-cream-soft/80' : '',
                   ]}
                   aria-hidden="true"
                 >
@@ -79,7 +94,7 @@ const mobileLinkBase =
                 role="group"
                 aria-label={`${item.name} alt menü`}
               >
-                <div class="overflow-hidden rounded-[22px] border border-primary/15 bg-[#fffaf0] py-2 shadow-[0_24px_70px_-36px_rgba(44,24,28,0.5)]">
+                <div class="overflow-hidden rounded-[26px] border border-primary/12 bg-[#fffaf0]/96 p-2 shadow-[0_28px_90px_-48px_rgba(44,24,28,0.58)] ring-1 ring-white/80 backdrop-blur-md">
                   {
                     item.children.map((child) => {
                       const subActive =
@@ -88,10 +103,10 @@ const mobileLinkBase =
                         <a
                           href={child.href}
                           class:list={[
-                            'block px-4 py-2.5 text-sm transition-colors',
+                            'block rounded-2xl px-4 py-2.5 text-sm transition-colors',
                             subActive
-                              ? 'bg-primary/8 font-semibold text-primary'
-                              : 'text-charcoal/85 hover:bg-primary/5 hover:text-primary',
+                              ? 'bg-burgundy/10 font-semibold text-primary'
+                              : 'text-charcoal/78 hover:bg-burgundy/6 hover:text-primary',
                           ]}
                           aria-current={subActive ? 'page' : undefined}
                         >
@@ -111,7 +126,7 @@ const mobileLinkBase =
       <button
         type="button"
         data-search-trigger
-        class="ml-3 hidden items-center gap-2 rounded-full border border-primary/12 px-3 py-1.5 text-xs font-medium text-charcoal/55 transition-colors hover:border-primary/30 hover:text-primary md:flex"
+        class="ml-2 hidden items-center gap-2 rounded-full border border-primary/12 bg-white/52 px-3 py-2 text-xs font-semibold text-charcoal/58 transition-colors hover:border-primary/30 hover:bg-white/82 hover:text-primary md:flex"
         aria-label="Sitede ara (Ctrl+K)"
       >
         <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -119,7 +134,7 @@ const mobileLinkBase =
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
         <span>Ara</span>
-        <kbd class="rounded border border-charcoal/12 px-1.5 py-0.5 text-[9px] font-bold tracking-wider text-charcoal/30">⌘K</kbd>
+        <kbd class="rounded border border-charcoal/12 bg-cream-soft/68 px-1.5 py-0.5 text-[9px] font-bold tracking-wider text-charcoal/30">⌘K</kbd>
       </button>
 
       <!-- Sonra Oku (kayıtlı yazı listesi) — sadece liste boş değilse görünür -->
@@ -127,7 +142,7 @@ const mobileLinkBase =
         href="/sonra-oku"
         data-save-counter-link
         hidden
-        class="ml-2 hidden items-center gap-1.5 rounded-xl border border-primary/15 px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:border-primary/40 md:flex"
+        class="ml-1 hidden items-center gap-1.5 rounded-full border border-primary/15 bg-gold/10 px-3 py-2 text-xs font-semibold text-primary transition-colors hover:border-primary/40 hover:bg-gold/16 md:flex"
         aria-label="Sonra Oku listenizi aç"
         title="Sonra Oku — kaydettiğiniz yazılar"
       >
@@ -139,12 +154,12 @@ const mobileLinkBase =
       </a>
     </nav>
 
-    <div class="flex items-center gap-2 md:hidden">
+    <div class="flex items-center gap-2 lg:hidden">
       <!-- Mobile search trigger -->
       <button
         type="button"
         data-search-trigger
-        class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/15 text-primary/65 transition-colors hover:border-primary/35 hover:text-primary"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/15 bg-white/48 text-primary/65 transition-colors hover:border-primary/35 hover:bg-white/78 hover:text-primary"
         aria-label="Sitede ara"
       >
         <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -158,7 +173,7 @@ const mobileLinkBase =
         href="/sonra-oku"
         data-save-counter-link
         hidden
-        class="relative flex h-10 w-10 items-center justify-center rounded-full border border-primary/15 text-primary/85 transition-colors hover:border-primary/35"
+        class="relative flex h-10 w-10 items-center justify-center rounded-full border border-primary/15 bg-gold/10 text-primary/85 transition-colors hover:border-primary/35 hover:bg-gold/16"
           aria-label="Sonra Oku listenizi aç"
       >
         <svg viewBox="0 0 14 14" class="h-4 w-4 fill-current" aria-hidden="true">
@@ -173,7 +188,7 @@ const mobileLinkBase =
 
       <button
         type="button"
-        class="text-primary p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary"
+        class="rounded-full border border-primary/12 bg-white/48 p-2 text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
         aria-label="Menüyü aç/kapat"
         aria-controls="mobile-menu"
         aria-expanded="false"
@@ -189,7 +204,7 @@ const mobileLinkBase =
 
     <div
       id="mobile-menu"
-      class="absolute top-full left-0 right-0 hidden max-h-[min(80vh,560px)] overflow-y-auto border-y border-primary/10 bg-[#fffaf0] p-3 shadow-xl md:hidden flex-col gap-2"
+      class="absolute left-0 right-0 top-full hidden max-h-[min(80vh,560px)] flex-col gap-2 overflow-y-auto border-y border-primary/10 bg-[#fffaf0]/98 p-3 shadow-xl backdrop-blur-md lg:hidden"
       role="menu"
       aria-hidden="true"
     >
@@ -214,9 +229,9 @@ const mobileLinkBase =
           }
 
           return (
-            <details class="rounded-xl border border-primary/10 overflow-hidden" open={active}>
+            <details class="overflow-hidden rounded-[22px] border border-primary/10 bg-white/34" open={active}>
               <summary
-                class="cursor-pointer list-none px-4 py-3 font-serif font-medium text-charcoal bg-primary/5 hover:bg-primary/10 [&::-webkit-details-marker]:hidden flex items-center justify-between"
+                class="flex cursor-pointer list-none items-center justify-between bg-primary/5 px-4 py-3 font-serif font-medium text-charcoal hover:bg-primary/10 [&::-webkit-details-marker]:hidden"
               >
                 <span>{item.name}</span>
                 <span class="text-charcoal/40 text-xs" aria-hidden="true">

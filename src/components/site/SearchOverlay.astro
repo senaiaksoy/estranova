@@ -2,65 +2,75 @@
 import { searchIndex } from '../../data/search-index';
 ---
 
-<!-- Search Overlay -->
-<div id="search-overlay" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Site icinde ara">
-  <!-- Backdrop -->
-  <div id="search-backdrop" class="absolute inset-0 bg-charcoal/40 backdrop-blur-sm"></div>
+<div id="search-overlay" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Site içinde ara">
+  <div id="search-backdrop" class="absolute inset-0 bg-burgundy-deep/64 backdrop-blur-md"></div>
 
-  <!-- Search Panel -->
-  <div class="absolute inset-0 flex items-start justify-center px-4 pt-[12vh] pointer-events-none">
-    <div id="search-panel" class="w-full max-w-2xl bg-card rounded-[28px] editorial-shadow overflow-hidden flex flex-col max-h-[70vh] pointer-events-auto">
-
-      <!-- Search Input -->
-      <div class="flex items-center gap-3 px-7 py-5 border-b border-primary/10">
-        <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary/50 shrink-0" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="7"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input
-          id="search-input"
-          type="text"
-          placeholder="Sayfa, semptom veya konu ara..."
-          autocomplete="off"
-          class="flex-1 text-lg bg-transparent outline-none text-charcoal placeholder:text-charcoal/30 font-sans"
-        />
-        <kbd class="hidden md:flex items-center gap-1 text-[11px] font-bold text-charcoal/25 tracking-wider uppercase border border-charcoal/10 rounded-lg px-2 py-1">
-          ESC
-        </kbd>
+  <div class="absolute inset-0 flex items-start justify-center px-4 pt-[10vh] pointer-events-none">
+    <div
+      id="search-panel"
+      class="relative flex max-h-[76vh] w-full max-w-3xl flex-col overflow-hidden rounded-[38px] border border-burgundy/14 bg-gradient-to-br from-[#fffaf2] via-white to-cream-warm shadow-[0_44px_140px_-70px_rgba(20,10,12,0.72)] ring-1 ring-white/80 pointer-events-auto"
+    >
+      <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-gold/16 blur-3xl"></div>
+      <div class="pointer-events-none absolute bottom-3 right-6 hidden font-serif text-[7rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.045] md:block">
+        ara
       </div>
 
-      <!-- Results -->
-      <div id="search-results" class="overflow-y-auto overscroll-contain px-3 py-3">
-        <!-- Default: grouped by category -->
-        <div id="search-default" class="space-y-4"></div>
-        <!-- Active search results -->
-        <div id="search-filtered" class="hidden space-y-1"></div>
-        <!-- No results -->
-        <div id="search-empty" class="hidden py-12 text-center">
-          <p class="text-charcoal/40 text-sm">Sonuc bulunamadi</p>
+      <div class="relative border-b border-burgundy/10 px-6 pb-5 pt-6 md:px-8 md:pt-7">
+        <div class="mb-5 flex items-center justify-between gap-4">
+          <div>
+            <p class="text-[0.64rem] font-bold uppercase tracking-[0.26em] text-gold-bronze">Arama masası</p>
+            <p class="mt-1 font-serif text-2xl italic leading-tight text-burgundy">Konuyu sakince bulun.</p>
+          </div>
+          <kbd class="hidden rounded-full border border-burgundy/12 bg-white/62 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/38 md:inline-flex">
+            ESC
+          </kbd>
+        </div>
+
+        <label class="flex items-center gap-4 rounded-full border border-burgundy/12 bg-white/76 px-5 py-4 shadow-[0_18px_70px_-58px_rgba(44,22,28,0.58)] ring-1 ring-white/80">
+          <span class="sr-only">Arama terimi</span>
+          <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-burgundy/52" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Konu, belirti, yazar veya dosya ara..."
+            autocomplete="off"
+            class="min-w-0 flex-1 bg-transparent text-lg text-ink outline-none placeholder:text-ink/32"
+          />
+        </label>
+      </div>
+
+      <div id="search-results" class="relative overflow-y-auto overscroll-contain px-4 py-4 md:px-5 md:py-5">
+        <div id="search-default" class="space-y-5"></div>
+        <div id="search-filtered" class="hidden space-y-2"></div>
+        <div id="search-empty" class="hidden py-14 text-center">
+          <p class="font-serif text-3xl italic text-burgundy">Sonuç bulunamadı.</p>
+          <p class="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-ink/52">
+            Daha kısa bir kelime deneyin ya da belirti, dönem veya yazar adıyla yeniden arayın.
+          </p>
         </div>
       </div>
 
-      <!-- Footer -->
-      <div class="flex items-center justify-between px-7 py-3 border-t border-primary/5 bg-surface-container/50">
-        <div class="flex items-center gap-4 text-[11px] text-charcoal/30 font-medium">
+      <div class="relative flex flex-col gap-3 border-t border-burgundy/8 bg-cream-soft/58 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-8">
+        <div class="flex flex-wrap items-center gap-4 text-[11px] font-medium text-ink/38">
           <span class="flex items-center gap-1">
-            <kbd class="inline-flex items-center justify-center w-5 h-5 rounded border border-charcoal/10 text-[10px]">&uarr;</kbd>
-            <kbd class="inline-flex items-center justify-center w-5 h-5 rounded border border-charcoal/10 text-[10px]">&darr;</kbd>
+            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-burgundy/12 bg-white/58 text-[10px]">&uarr;</kbd>
+            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-burgundy/12 bg-white/58 text-[10px]">&darr;</kbd>
             gezin
           </span>
           <span class="flex items-center gap-1">
-            <kbd class="inline-flex items-center justify-center w-5 h-5 rounded border border-charcoal/10 text-[10px]">&crarr;</kbd>
-            ac
+            <kbd class="inline-flex h-5 min-w-5 items-center justify-center rounded border border-burgundy/12 bg-white/58 px-1 text-[10px]">&crarr;</kbd>
+            aç
           </span>
         </div>
-        <p class="text-[11px] text-charcoal/25 font-medium">Estranova</p>
+        <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bronze">Estranova</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Inject search data & behavior -->
 <script define:vars={{ items: searchIndex }}>
   const searchOverlay = document.getElementById('search-overlay');
   const searchBackdrop = document.getElementById('search-backdrop');
@@ -72,28 +82,33 @@ import { searchIndex } from '../../data/search-index';
   let activeIndex = -1;
   let visibleItems = [];
 
-  // --- Category config ---
   const categoryMeta = {
-    'Sayfa':     { color: 'bg-primary/10 text-primary' },
-    'Kategori':  { color: 'bg-secondary/10 text-secondary' },
-    'Semptom':   { color: 'bg-primary/8 text-primary-container' },
-    'Makale':    { color: 'bg-charcoal/5 text-charcoal/70' },
-    'Sayı':      { color: 'bg-secondary/15 text-secondary' },
-    'Yazar':     { color: 'bg-primary/12 text-primary' },
+    Sayfa: { color: 'bg-burgundy/10 text-burgundy', label: 'Sayfa' },
+    Kategori: { color: 'bg-gold/14 text-gold-bronze', label: 'Kategori' },
+    Semptom: { color: 'bg-burgundy/8 text-burgundy', label: 'Belirti' },
+    Makale: { color: 'bg-ink/5 text-ink/64', label: 'Makale' },
+    Sayı: { color: 'bg-gold/16 text-gold-bronze', label: 'Sayı' },
+    Yazar: { color: 'bg-burgundy/12 text-burgundy', label: 'Yazar' },
   };
 
-  // --- Render helpers ---
+  function metaFor(item) {
+    return categoryMeta[item.category] || { color: 'bg-ink/5 text-ink/55', label: item.category };
+  }
+
   function createResultItem(item, idx) {
+    const meta = metaFor(item);
     const a = document.createElement('a');
     a.href = item.href;
     a.dataset.idx = idx;
-    a.className = 'search-result-item flex items-start gap-4 px-4 py-3 rounded-2xl cursor-pointer transition-colors hover:bg-surface-container';
+    a.className =
+      'search-result-item group flex items-start gap-4 rounded-[22px] border border-transparent px-4 py-3.5 transition hover:border-burgundy/10 hover:bg-white/74 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35';
     a.innerHTML = `
-      <div class="flex-1 min-w-0">
-        <p class="text-sm font-semibold text-charcoal truncate">${item.title}</p>
-        <p class="text-xs text-charcoal/50 mt-0.5 line-clamp-1">${item.description}</p>
-      </div>
-      <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase ${categoryMeta[item.category]?.color || 'bg-charcoal/5 text-charcoal/50'}">${item.category}</span>
+      <span class="mt-0.5 hidden font-serif text-2xl leading-none text-gold sm:block">${String(idx + 1).padStart(2, '0')}</span>
+      <span class="min-w-0 flex-1">
+        <span class="block truncate font-serif text-xl leading-tight text-ink group-hover:text-burgundy">${item.title}</span>
+        <span class="mt-1.5 block line-clamp-1 text-sm leading-relaxed text-ink/52">${item.description}</span>
+      </span>
+      <span class="mt-0.5 shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] ${meta.color}">${meta.label}</span>
     `;
     return a;
   }
@@ -101,33 +116,34 @@ import { searchIndex } from '../../data/search-index';
   function renderDefault() {
     searchDefault.innerHTML = '';
     const groups = {};
-    items.forEach(item => {
+    items.forEach((item) => {
       if (!groups[item.category]) groups[item.category] = [];
       groups[item.category].push(item);
     });
 
     let globalIdx = 0;
-    for (const [cat, catItems] of Object.entries(groups)) {
-      const section = document.createElement('div');
-      section.innerHTML = `<p class="px-4 pb-1 text-[11px] font-bold tracking-[0.22em] uppercase text-charcoal/30">${cat}</p>`;
+    Object.entries(groups).forEach(([cat, catItems]) => {
+      const section = document.createElement('section');
+      section.innerHTML = `<p class="px-4 pb-2 text-[11px] font-bold uppercase tracking-[0.24em] text-burgundy/42">${metaFor({ category: cat }).label}</p>`;
       const list = document.createElement('div');
-      list.className = 'space-y-0.5';
-      catItems.forEach(item => {
+      list.className = 'space-y-1';
+      catItems.forEach((item) => {
         list.appendChild(createResultItem(item, globalIdx));
         globalIdx++;
       });
       section.appendChild(list);
       searchDefault.appendChild(section);
-    }
+    });
     visibleItems = items.map((item, i) => ({ ...item, _idx: i }));
   }
 
   function renderFiltered(query) {
     const q = normalize(query);
-    const matched = items.filter(item =>
-      normalize(item.title).includes(q) ||
-      normalize(item.description).includes(q) ||
-      normalize(item.category).includes(q)
+    const matched = items.filter(
+      (item) =>
+        normalize(item.title).includes(q) ||
+        normalize(item.description).includes(q) ||
+        normalize(item.category).includes(q),
     );
 
     searchFiltered.innerHTML = '';
@@ -150,33 +166,26 @@ import { searchIndex } from '../../data/search-index';
   }
 
   function normalize(str) {
-    return str
-      .toLowerCase()
+    return String(str)
+      .toLocaleLowerCase('tr-TR')
       .replace(/ı/g, 'i')
       .replace(/ö/g, 'o')
       .replace(/ü/g, 'u')
       .replace(/ş/g, 's')
       .replace(/ç/g, 'c')
-      .replace(/ğ/g, 'g')
-      .replace(/İ/g, 'i')
-      .replace(/Ö/g, 'o')
-      .replace(/Ü/g, 'u')
-      .replace(/Ş/g, 's')
-      .replace(/Ç/g, 'c')
-      .replace(/Ğ/g, 'g');
+      .replace(/ğ/g, 'g');
   }
 
   function setActive(idx) {
     const allItems = document.querySelectorAll('.search-result-item');
-    allItems.forEach(el => el.classList.remove('bg-surface-container'));
+    allItems.forEach((el) => el.classList.remove('border-burgundy/18', 'bg-white/86'));
     activeIndex = idx;
     if (idx >= 0 && idx < allItems.length) {
-      allItems[idx].classList.add('bg-surface-container');
+      allItems[idx].classList.add('border-burgundy/18', 'bg-white/86');
       allItems[idx].scrollIntoView({ block: 'nearest' });
     }
   }
 
-  // --- Open / Close ---
   function openSearch() {
     searchOverlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
@@ -195,8 +204,6 @@ import { searchIndex } from '../../data/search-index';
     searchInput.value = '';
   }
 
-  // --- Events ---
-  // Global keyboard shortcut: Ctrl+K or /
   document.addEventListener('keydown', (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
       e.preventDefault();
@@ -208,18 +215,15 @@ import { searchIndex } from '../../data/search-index';
     }
   });
 
-  // Navbar trigger
-  document.querySelectorAll('[data-search-trigger]').forEach(el => {
+  document.querySelectorAll('[data-search-trigger]').forEach((el) => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
       openSearch();
     });
   });
 
-  // Close on backdrop click
   searchBackdrop.addEventListener('click', closeSearch);
 
-  // Close on Escape
   searchOverlay.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       e.preventDefault();
@@ -227,7 +231,6 @@ import { searchIndex } from '../../data/search-index';
     }
   });
 
-  // Input handling
   searchInput.addEventListener('input', (e) => {
     const q = e.target.value.trim();
     activeIndex = -1;
@@ -241,7 +244,6 @@ import { searchIndex } from '../../data/search-index';
     }
   });
 
-  // Keyboard navigation
   searchInput.addEventListener('keydown', (e) => {
     const allItems = document.querySelectorAll('.search-result-item');
     const count = allItems.length;
