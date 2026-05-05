@@ -8,10 +8,10 @@ export interface SubmenuHeroImage {
   alt: string;
 }
 
-/** Ana sayfa kahraman görseli (editoryal, paylaşılan deneyim tonu — 2026-05-05 V3 brief). */
+/** Ana sayfa kahraman görseli (editoryal, Boğaz penceresinde paylaşılan deneyim tonu — 2026-05-05 V4 brief). */
 export const homePageHero: SubmenuHeroImage = {
-  src: '/images/hero/home-hero-conversation.webp',
-  alt: 'Pencere kenarında Boğaz ışığına karşı çay ve açık defter eşliğinde sakin sohbet eden iki orta yaş kadın; 40 sonrası sağlık yolculuğunda paylaşılan deneyim ve editoryal rehberlik teması',
+  src: '/images/hero/home-hero-bosphorus-conversation.webp',
+  alt: 'Boğaz manzaralı pencere kenarında kahve, çay ve açık defter eşliğinde sakin sohbet eden iki orta yaş kadın; 40 sonrası sağlık yolculuğunda paylaşılan deneyim ve editoryal rehberlik teması',
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {

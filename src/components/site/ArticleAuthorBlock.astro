@@ -1,5 +1,6 @@
 ---
 import { writers } from '../../data/writers';
+import { getSubmenuHeroImage } from '../../data/submenu-heroes';
 
 interface Props {
   authorSlug: string;
@@ -7,6 +8,9 @@ interface Props {
   lastUpdated?: string;
   readingMinutes: number;
   medicalReviewer?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  eyebrow?: string;
 }
 
 const {
@@ -15,6 +19,9 @@ const {
   lastUpdated,
   readingMinutes,
   medicalReviewer = 'Doç. Dr. Senai Aksoy',
+  imageSrc,
+  imageAlt,
+  eyebrow = 'Makale bilgisi',
 } = Astro.props;
 
 const writer = writers.find((w) => w.slug === authorSlug);
@@ -22,7 +29,13 @@ if (!writer) {
   throw new Error(`ArticleAuthorBlock: writer slug "${authorSlug}" not found in writers.ts`);
 }
 
+const routeHero = getSubmenuHeroImage(Astro.url.pathname);
 const bylineLabel = writer.isInstitutionalByline ? 'Hazırlayan' : 'Yazan';
+const coverSrc = imageSrc ?? routeHero?.src ?? writer.portrait;
+const coverAlt =
+  imageAlt ??
+  routeHero?.alt ??
+  (writer.portrait ? `${writer.displayName} portresi` : `${writer.displayName} imzası`);
 const initials = writer.displayName
   .split(/\s+/)
   .filter((part) => part.length > 0)
@@ -30,82 +43,78 @@ const initials = writer.displayName
   .join('');
 ---
 
-<section class="relative overflow-hidden rounded-[36px] border border-burgundy/15 bg-white p-7 shadow-[0_30px_90px_-56px_rgba(44,24,28,0.34)] ring-1 ring-black/[0.04] md:p-8">
-  <div class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
-  <div class="pointer-events-none absolute -right-10 top-4 h-32 w-32 rounded-full bg-gold/10 blur-3xl"></div>
-  <div class="pointer-events-none absolute bottom-5 right-7 font-serif text-7xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">
-    imza
-  </div>
-  <div class="relative flex flex-col gap-5 sm:flex-row sm:items-start">
-    {
-      writer.portrait ? (
-        <img
-          src={writer.portrait}
-          alt={`${writer.displayName} portresi`}
-          width="192"
-          height="192"
-          loading="lazy"
-          decoding="async"
-          class="h-24 w-24 shrink-0 rounded-[30px] object-cover shadow-[0_18px_40px_-26px_rgba(44,22,28,0.45)] ring-2 ring-gold/35"
-        />
-      ) : (
-        <div
-          class="flex h-24 w-24 shrink-0 items-center justify-center rounded-[30px] bg-cream-warm font-serif text-2xl text-burgundy shadow-[0_18px_40px_-26px_rgba(44,22,28,0.45)] ring-2 ring-gold/35"
-          aria-hidden="true"
-        >
-          {initials}
-        </div>
-      )
-    }
-    <div class="min-w-0 flex-1">
-      <p class="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">
-        <span class="h-px w-8 bg-gold/80"></span>
-        <span>{bylineLabel}</span>
-      </p>
-      <p class="mt-2 font-serif text-2xl italic text-ink md:text-3xl">{writer.displayName}</p>
-      <p class="text-sm text-ink/70">{writer.role.split('/')[0].trim()}</p>
+<section class="relative overflow-hidden rounded-[34px] border border-black/10 bg-white shadow-[0_34px_120px_-76px_rgba(44,24,28,0.42)] ring-1 ring-black/[0.035]">
+  <div class="grid gap-0 lg:grid-cols-[minmax(17rem,0.92fr)_minmax(0,1.08fr)]">
+    <div class="relative min-h-[18rem] overflow-hidden bg-cream-warm lg:min-h-[31rem]">
+      {
+        coverSrc ? (
+          <img
+            src={coverSrc}
+            alt={coverAlt}
+            width="900"
+            height="1120"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 h-full w-full object-cover object-center"
+          />
+        ) : (
+          <div class="absolute inset-0 flex items-center justify-center bg-cream-warm font-serif text-6xl text-burgundy/70">
+            {initials}
+          </div>
+        )
+      }
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1b1413]/42 via-transparent to-transparent"></div>
+      <div class="absolute bottom-5 left-5 rounded-full border border-white/25 bg-white/12 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-white backdrop-blur-md">
+        Estranova
+      </div>
+    </div>
 
-      <p class="mt-4 max-w-2xl border-t border-gold/30 pt-3 text-xs tracking-[0.01em] text-ink/65">
-        Bilimsel inceleme: <span class="text-ink/85">{medicalReviewer}</span>
-      </p>
+    <div class="relative flex min-h-[24rem] flex-col justify-center px-7 py-10 text-center md:px-12 lg:px-16">
+      <div class="pointer-events-none absolute inset-y-8 left-0 hidden w-px bg-gradient-to-b from-transparent via-gold/65 to-transparent lg:block"></div>
+      <div class="pointer-events-none absolute right-8 top-8 font-serif text-7xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">
+        E
+      </div>
+
+      <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-burgundy/72">{eyebrow}</p>
+      <div class="mx-auto mt-5 h-px w-12 bg-gold/80"></div>
+
+      <div class="mx-auto mt-7 max-w-xl">
+        <p class="text-[11px] font-black uppercase tracking-[0.18em] text-ink">
+          {bylineLabel} : <span class="font-black">{writer.displayName}</span>
+        </p>
+        <p class="mt-2 text-[11px] font-black uppercase tracking-[0.16em] text-ink">
+          Bilimsel inceleme : <span class="font-black">{medicalReviewer}</span>
+        </p>
+        <p class="mt-5 font-serif text-sm tracking-[0.22em] text-ink/62">{publishedDate}</p>
+        <div class="mx-auto mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[11px] uppercase tracking-[0.18em] text-ink/52">
+          <span>{readingMinutes} dakikalık okuma</span>
+          {
+            lastUpdated && (
+              <>
+                <span class="text-gold">·</span>
+                <span>Son güncelleme: {lastUpdated}</span>
+              </>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="mx-auto mt-8 max-w-lg border-t border-gold/35 pt-5">
+        <p class="text-sm leading-relaxed text-ink/68">{writer.role.split('/')[0].trim()}</p>
+      </div>
 
       {
         writer.isInstitutionalByline && (
-          <>
-            <p class="mt-2 text-xs leading-relaxed text-ink/60">
-              Bu içerik Estranova editörleri tarafından hazırlanmış kurumsal editoryal içeriktir.
+          <div class="mx-auto mt-7 max-w-xl rounded-[22px] border border-burgundy/12 bg-cream-warm/45 px-5 py-4 text-left">
+            <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-burgundy">Editoryal not</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink/72">
+              Bu içerik Estranova editörleri tarafından hazırlanmış kurumsal editoryal içeriktir ve yayın öncesinde
+              <span class="font-semibold text-ink"> {medicalReviewer}</span> tarafından bilimsel uygunluk, terminoloji
+              ve kanıt dengesi açısından gözden geçirilir.
             </p>
-            <section class="mt-5 rounded-[22px] border border-burgundy/12 border-l-[5px] border-l-gold bg-white px-5 py-4 shadow-[0_18px_52px_-44px_rgba(44,22,28,0.32)] ring-1 ring-black/[0.04]">
-              <p class="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör</p>
-              <p class="text-sm leading-relaxed text-ink/78">
-                Bu editoryal içerik, okuyucuya dönük dil sadeliği korunarak hazırlanır ve yayın öncesinde
-                <span class="font-semibold text-ink"> {medicalReviewer}</span> tarafından bilimsel uygunluk,
-                terminoloji ve kanıt dengesi açısından gözden geçirilir.
-              </p>
-            </section>
-            <section class="mt-4 rounded-[18px] border border-dashed border-burgundy/20 bg-white/90 px-5 py-4 ring-1 ring-burgundy/8">
-              <p class="text-sm leading-relaxed text-ink/72">
-                Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları
-                için sağlık profesyoneline başvurunuz.
-              </p>
-            </section>
-          </>
+          </div>
         )
       }
-
-      <p class="mt-4 inline-flex flex-wrap items-center gap-y-1 rounded-full border border-burgundy/10 bg-white/70 px-4 py-2 text-xs text-ink/55 shadow-[0_14px_32px_-26px_rgba(44,22,28,0.3)]">
-        Yayımlandı: {publishedDate}
-        {
-          lastUpdated && (
-            <>
-              <span class="mx-1.5 text-gold">·</span>
-              <span>Son güncelleme: {lastUpdated}</span>
-            </>
-          )
-        }
-        <span class="mx-1.5 text-gold">·</span>
-        <span>{readingMinutes} dakikalık okuma</span>
-      </p>
     </div>
   </div>
 </section>
