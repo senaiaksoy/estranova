@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -13,7 +13,9 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
@@ -22,36 +24,40 @@ const hero =
 
 const tocEntries = [
   { id: 'ne-demek', label: 'Deneysel Ne Demek?' },
-  { id: 'kanit-yelpazesi', label: 'Kanıt Bir Yelpaze' },
-  { id: 'pazarlama-bilim', label: 'Pazarlama mı, Bilim mi?' },
+  { id: 'kanit-yelpazesi', label: 'KanÄ±t Bir Yelpaze' },
+  { id: 'pazarlama-bilim', label: 'Pazarlama mÄ±, Bilim mi?' },
   { id: 'off-label', label: 'Off-label vs Deneysel' },
-  { id: 'uc-soru', label: 'Doktora Üç Soru' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
-  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'uc-soru', label: 'Doktora ÃœÃ§ Soru' },
+  { id: 'sik-sorulanlar', label: 'SÄ±kÃ§a Sorulanlar' },
+  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Deneysel Tedaviyi Okuma Kılavuzu';
+const articleTitle = 'Deneysel Tedaviyi Okuma KÄ±lavuzu';
 const articleDescription =
-'Bir tedaviye "deneysel" demek ne anlama gelir? Kanıt seviyesi nasıl okunur? Pazarlamayı bilimden hangi sinyaller ayırır? Off-label kullanım ile deneysel uygulama farkı; doktora sorabileceğiniz üç somut soru — sınır bilen sakin editöryal bir rehber.';
+'Bir tedaviye "deneysel" demek ne anlama gelir? KanÄ±t seviyesi nasÄ±l okunur? PazarlamayÄ± bilimden hangi sinyaller ayÄ±rÄ±r? Off-label kullanÄ±m ile deneysel uygulama farkÄ±; doktora sorabileceÄŸiniz Ã¼Ã§ somut soru â€” sÄ±nÄ±r bilen sakin editÃ¶ryal bir rehber.';
+const faqItems = articleFaqs['/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
-  publishedDate: '3 Mayıs 2026',
+  publishedDate: '3 MayÄ±s 2026',
   pathname: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
-  articleSection: 'Zamansız Yaşam',
+  articleSection: 'ZamansÄ±z YaÅŸam',
   sectionPath: '/zamansiz-yasam',
   keywords: [
     'deneysel tedavi',
-    'kanıt seviyesi',
-    'off-label kullanım',
-    'klinik araştırma',
-    'tedavi okuma kılavuzu',
-    'hekim-hasta iletişimi',
+    'kanÄ±t seviyesi',
+    'off-label kullanÄ±m',
+    'klinik araÅŸtÄ±rma',
+    'tedavi okuma kÄ±lavuzu',
+    'hekim-hasta iletiÅŸimi',
     'menopoz',
     'anti-aging',
   ],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -66,15 +72,15 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zamansız Yaşam · Deneysel Yaklaşımlar"
-      title="Deneysel Tedaviyi Okuma Kılavuzu"
+      eyebrow="ZamansÄ±z YaÅŸam Â· Deneysel YaklaÅŸÄ±mlar"
+      title="Deneysel Tedaviyi Okuma KÄ±lavuzu"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="3 Mayıs 2026" readingMinutes={8} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="3 MayÄ±s 2026" readingMinutes={8} />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
@@ -87,15 +93,15 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
       >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
         <p class="leading-relaxed text-ink/80">
-          Sosyal medyada her hafta yeni bir <em>"çığır açıcı"</em> tedavi vaadi
-          duyuyoruz; muayene odasında en sık karşılaştığım sorulardan biri
-          <em>"sizin görüşünüz nedir"</em>. Bu yazı tek bir tedaviyi anlatmıyor;
-          <em>nasıl okunacağını</em> anlatıyor: <em>"deneysel"</em> etiketinin ne
-          anlama geldiğini, kanıt seviyesinin neden tek bir sayı olmadığını,
-          pazarlamayı bilimden ayıran sinyalleri, off-label kullanım ile deneysel
-          uygulama farkını ve doktorunuza sorabileceğiniz üç somut soruyu —
+          Sosyal medyada her hafta yeni bir <em>"Ã§Ä±ÄŸÄ±r aÃ§Ä±cÄ±"</em> tedavi vaadi
+          duyuyoruz; muayene odasÄ±nda en sÄ±k karÅŸÄ±laÅŸtÄ±ÄŸÄ±m sorulardan biri
+          <em>"sizin gÃ¶rÃ¼ÅŸÃ¼nÃ¼z nedir"</em>. Bu yazÄ± tek bir tedaviyi anlatmÄ±yor;
+          <em>nasÄ±l okunacaÄŸÄ±nÄ±</em> anlatÄ±yor: <em>"deneysel"</em> etiketinin ne
+          anlama geldiÄŸini, kanÄ±t seviyesinin neden tek bir sayÄ± olmadÄ±ÄŸÄ±nÄ±,
+          pazarlamayÄ± bilimden ayÄ±ran sinyalleri, off-label kullanÄ±m ile deneysel
+          uygulama farkÄ±nÄ± ve doktorunuza sorabileceÄŸiniz Ã¼Ã§ somut soruyu â€”
           umut etiketi yerine bilgi.
         </p>
       </section>
@@ -103,266 +109,268 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="ne-demek">Bir Tedaviye "Deneysel" Demek Ne Demek?</h2>
         <p>
-          İşin doğrusu şu — ve bunu söylerken ne ürkütmek istiyorum ne de gizlemek.
-          <em>"Deneysel"</em> etiketi tek bir şey anlamına gelmiyor; bir spektrum
-          tanımlıyor. Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz;
-          o yüzden ilk işimiz dört kavramı birbirinden ayırmak.
+          Ä°ÅŸin doÄŸrusu ÅŸu â€” ve bunu sÃ¶ylerken ne Ã¼rkÃ¼tmek istiyorum ne de gizlemek.
+          <em>"Deneysel"</em> etiketi tek bir ÅŸey anlamÄ±na gelmiyor; bir spektrum
+          tanÄ±mlÄ±yor. Konunun adÄ± bile sÃ¶ylenemiyorsa, Ã§Ã¶zÃ¼mÃ¼ zaten konuÅŸulmaz;
+          o yÃ¼zden ilk iÅŸimiz dÃ¶rt kavramÄ± birbirinden ayÄ±rmak.
         </p>
         <p>
-          <strong>Onaylı tedavi:</strong> Düzenleyici otoritelerden (uluslararası
-          ve ulusal) belirli bir endikasyon için izin almış, kanıtı kontrollü
-          klinik çalışmalarda gösterilmiş tedavi. <strong>Off-label kullanım:</strong>
-          Onaylı bir ilacın veya cihazın, onaylandığı endikasyon dışında — ama
-          hekimin profesyonel sorumluluğunda — reçete edilmesi. Yaygındır,
-          çoğu yerde meşrudur, kanıt seviyesi olguya göre değişir.
-<strong>Klinik araştırma içinde uygulama:</strong> Etik kurul
-          onaylı bir protokol içinde, bilgilendirilmiş onam ile, sonuçları
-          ölçülmek üzere yapılan uygulama. <strong>"Deneysel"</strong> teriminin
-          asıl yeri burası: yeterli kanıt henüz oluşmamış, araştırma sürüyor.
+          <strong>OnaylÄ± tedavi:</strong> DÃ¼zenleyici otoritelerden (uluslararasÄ±
+          ve ulusal) belirli bir endikasyon iÃ§in izin almÄ±ÅŸ, kanÄ±tÄ± kontrollÃ¼
+          klinik Ã§alÄ±ÅŸmalarda gÃ¶sterilmiÅŸ tedavi. <strong>Off-label kullanÄ±m:</strong>
+          OnaylÄ± bir ilacÄ±n veya cihazÄ±n, onaylandÄ±ÄŸÄ± endikasyon dÄ±ÅŸÄ±nda â€” ama
+          hekimin profesyonel sorumluluÄŸunda â€” reÃ§ete edilmesi. YaygÄ±ndÄ±r,
+          Ã§oÄŸu yerde meÅŸrudur, kanÄ±t seviyesi olguya gÃ¶re deÄŸiÅŸir.
+<strong>Klinik araÅŸtÄ±rma iÃ§inde uygulama:</strong> Etik kurul
+          onaylÄ± bir protokol iÃ§inde, bilgilendirilmiÅŸ onam ile, sonuÃ§larÄ±
+          Ã¶lÃ§Ã¼lmek Ã¼zere yapÄ±lan uygulama. <strong>"Deneysel"</strong> teriminin
+          asÄ±l yeri burasÄ±: yeterli kanÄ±t henÃ¼z oluÅŸmamÄ±ÅŸ, araÅŸtÄ±rma sÃ¼rÃ¼yor.
         </p>
         <p>
-          Klinik araştırmalar dört faz hâlinde ilerler — küçük güvenlik
-          çalışmasından geniş etkinlik çalışmasına <Evidence level={4} />.
-          Bir tedavi <em>her aşamada</em> "deneysel" sayılabilir; ama her
-          aşamanın güven verici olduğu kanıt aralığı farklıdır. Bu ayrımı
-          bilmek, "deneysel" etiketini görünce panik yapmak ile körü körüne
-          kabul etmek arasında üçüncü bir yol açar: <em>sakin değerlendirme</em>.
-          Bu yazıyla aynı sayıdaki
+          Klinik araÅŸtÄ±rmalar dÃ¶rt faz hÃ¢linde ilerler â€” kÃ¼Ã§Ã¼k gÃ¼venlik
+          Ã§alÄ±ÅŸmasÄ±ndan geniÅŸ etkinlik Ã§alÄ±ÅŸmasÄ±na <Evidence level={4} />.
+          Bir tedavi <em>her aÅŸamada</em> "deneysel" sayÄ±labilir; ama her
+          aÅŸamanÄ±n gÃ¼ven verici olduÄŸu kanÄ±t aralÄ±ÄŸÄ± farklÄ±dÄ±r. Bu ayrÄ±mÄ±
+          bilmek, "deneysel" etiketini gÃ¶rÃ¼nce panik yapmak ile kÃ¶rÃ¼ kÃ¶rÃ¼ne
+          kabul etmek arasÄ±nda Ã¼Ã§Ã¼ncÃ¼ bir yol aÃ§ar: <em>sakin deÄŸerlendirme</em>.
+          Bu yazÄ±yla aynÄ± sayÄ±daki
           <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
-            NAD+ takviyesi yazısı
+            NAD+ takviyesi yazÄ±sÄ±
           </a>
-          bu üçüncü yolun somut bir örneği — mekanizma sağlam, hayvan verileri
-          umut verici, insan kanıtı sınırlı.
+          bu Ã¼Ã§Ã¼ncÃ¼ yolun somut bir Ã¶rneÄŸi â€” mekanizma saÄŸlam, hayvan verileri
+          umut verici, insan kanÄ±tÄ± sÄ±nÄ±rlÄ±.
         </p>
 
-        <h2 id="kanit-yelpazesi">Kanıt Tek Sayı Değil, Bir Yelpaze</h2>
+        <h2 id="kanit-yelpazesi">KanÄ±t Tek SayÄ± DeÄŸil, Bir Yelpaze</h2>
         <p>
-          <em>"Bilim ne diyor?"</em> sorusunun tek bir cevabı yok; çünkü bilim
-          tek sesli bir şey değil. Aynı tedavi için elimizde bir kanıt
-          <em>yelpazesi</em> olabilir: bir uçta tek bir hekimin gözlemi, diğer
-          uçta on binlerce kişiyi izleyen randomize çalışmaların derlemesi.
+          <em>"Bilim ne diyor?"</em> sorusunun tek bir cevabÄ± yok; Ã§Ã¼nkÃ¼ bilim
+          tek sesli bir ÅŸey deÄŸil. AynÄ± tedavi iÃ§in elimizde bir kanÄ±t
+          <em>yelpazesi</em> olabilir: bir uÃ§ta tek bir hekimin gÃ¶zlemi, diÄŸer
+          uÃ§ta on binlerce kiÅŸiyi izleyen randomize Ã§alÄ±ÅŸmalarÄ±n derlemesi.
         </p>
         <p>
-          Klinik kanıt hiyerarşisi kabaca şöyle sıralanır: en alta
-          <em>uzman görüşü ve vaka raporu</em> oturur (önemli ama zayıf —
-          birikmiş klinik gözlem değerli, yine de tek tek deneyimler yanıltıcı
-          olabilir). Bir basamak yukarıda <em>vaka serileri ve gözlemsel
-          çalışmalar</em> bulunur; ardından <em>kontrolsüz veya küçük örneklemli
-          klinik çalışmalar</em> gelir. Daha güçlü kanıt için
-          <em>randomize kontrollü çalışmalar</em> (RCT) gerekir; doruk noktası ise
-          birden çok RCT'yi birleştiren <em>sistematik derleme ve meta-analiz</em>
+          Klinik kanÄ±t hiyerarÅŸisi kabaca ÅŸÃ¶yle sÄ±ralanÄ±r: en alta
+          <em>uzman gÃ¶rÃ¼ÅŸÃ¼ ve vaka raporu</em> oturur (Ã¶nemli ama zayÄ±f â€”
+          birikmiÅŸ klinik gÃ¶zlem deÄŸerli, yine de tek tek deneyimler yanÄ±ltÄ±cÄ±
+          olabilir). Bir basamak yukarÄ±da <em>vaka serileri ve gÃ¶zlemsel
+          Ã§alÄ±ÅŸmalar</em> bulunur; ardÄ±ndan <em>kontrolsÃ¼z veya kÃ¼Ã§Ã¼k Ã¶rneklemli
+          klinik Ã§alÄ±ÅŸmalar</em> gelir. Daha gÃ¼Ã§lÃ¼ kanÄ±t iÃ§in
+          <em>randomize kontrollÃ¼ Ã§alÄ±ÅŸmalar</em> (RCT) gerekir; doruk noktasÄ± ise
+          birden Ã§ok RCT'yi birleÅŸtiren <em>sistematik derleme ve meta-analiz</em>
           olur <Evidence level={5} />.
         </p>
         <p>
-          Burada size yardımcı olacak iki pratik hatırlatma var. <em>Birincisi</em>:
-          aynı tedavi farklı endikasyonlarda farklı kanıt seviyesinde olabilir —
-          bir uygulama belirli bir hastalık için güçlü kanıtlıdır, başka bir
-          hastalık için sınırlı kanıtlıdır. <em>İkincisi</em>: <em>"yapılmış
-          çalışmalar var"</em> ile <em>"güçlü kanıt var"</em> aynı şey değildir.
-          Pazarlama mesajları çoğu zaman birinciye dayanır, ikinciye atlar.
-          Hangi seviyede olduğunuzu bilmek, sözü <em>tartabilmek</em> demektir.
+          Burada size yardÄ±mcÄ± olacak iki pratik hatÄ±rlatma var. <em>Birincisi</em>:
+          aynÄ± tedavi farklÄ± endikasyonlarda farklÄ± kanÄ±t seviyesinde olabilir â€”
+          bir uygulama belirli bir hastalÄ±k iÃ§in gÃ¼Ã§lÃ¼ kanÄ±tlÄ±dÄ±r, baÅŸka bir
+          hastalÄ±k iÃ§in sÄ±nÄ±rlÄ± kanÄ±tlÄ±dÄ±r. <em>Ä°kincisi</em>: <em>"yapÄ±lmÄ±ÅŸ
+          Ã§alÄ±ÅŸmalar var"</em> ile <em>"gÃ¼Ã§lÃ¼ kanÄ±t var"</em> aynÄ± ÅŸey deÄŸildir.
+          Pazarlama mesajlarÄ± Ã§oÄŸu zaman birinciye dayanÄ±r, ikinciye atlar.
+          Hangi seviyede olduÄŸunuzu bilmek, sÃ¶zÃ¼ <em>tartabilmek</em> demektir.
         </p>
 
-        <h2 id="pazarlama-bilim">Pazarlama mı, Bilim mi? Hastanın Elinde Hangi Sinyaller Var?</h2>
+        <h2 id="pazarlama-bilim">Pazarlama mÄ±, Bilim mi? HastanÄ±n Elinde Hangi Sinyaller Var?</h2>
         <p>
-          Sokakta her on kadından üçü son bir yıl içinde <em>"size özel"</em>
-          ya da <em>"deneysel"</em> bir uygulama önerisi duymuştur — ama çoğu
-          zaman kararı vermeden önce sinyalleri okuma fırsatı bulamaz.
-          Aşağıdaki bayraklar tek başına suçlu değildir; ama birden fazlası
-          aynı anda görünüyorsa ihtiyat artırılır.
+          Sokakta her on kadÄ±ndan Ã¼Ã§Ã¼ son bir yÄ±l iÃ§inde <em>"size Ã¶zel"</em>
+          ya da <em>"deneysel"</em> bir uygulama Ã¶nerisi duymuÅŸtur â€” ama Ã§oÄŸu
+          zaman kararÄ± vermeden Ã¶nce sinyalleri okuma fÄ±rsatÄ± bulamaz.
+          AÅŸaÄŸÄ±daki bayraklar tek baÅŸÄ±na suÃ§lu deÄŸildir; ama birden fazlasÄ±
+          aynÄ± anda gÃ¶rÃ¼nÃ¼yorsa ihtiyat artÄ±rÄ±lÄ±r.
         </p>
         <p>
-          Önce dürüst pazarlama nasıl görünür ona bakalım: mekanizma sade
-          anlatılır, kanıt seviyesi açık söylenir, sınırlamaları gizlenmez,
-          bireysel değerlendirme önerilir, soru sorulduğunda yanıt verilir.
-          Şişirilmiş pazarlamada ise mekanizma bilim diliyle süslenir, kanıt
-          <em>"araştırmalar gösteriyor"</em> tarzı sayısız bir referansa
-          sıkıştırılır, sınırlamalar belirsizleştirilir, <em>"size özel ticari sunum"</em>
-          aciliyetiyle birlikte sunulur. Plasebo etkisi tüm tedavilerde gerçek
-          bir etken — özellikle subjektif belirtilerde
-          %30'a kadar yanıt oranlarına ulaşabilir <Evidence level={4} />;
-          dolayısıyla <em>"hastalarımın hepsi memnun"</em> tek başına bilimsel
-          kanıt değildir.
+          Ã–nce dÃ¼rÃ¼st pazarlama nasÄ±l gÃ¶rÃ¼nÃ¼r ona bakalÄ±m: mekanizma sade
+          anlatÄ±lÄ±r, kanÄ±t seviyesi aÃ§Ä±k sÃ¶ylenir, sÄ±nÄ±rlamalarÄ± gizlenmez,
+          bireysel deÄŸerlendirme Ã¶nerilir, soru sorulduÄŸunda yanÄ±t verilir.
+          ÅiÅŸirilmiÅŸ pazarlamada ise mekanizma bilim diliyle sÃ¼slenir, kanÄ±t
+          <em>"araÅŸtÄ±rmalar gÃ¶steriyor"</em> tarzÄ± sayÄ±sÄ±z bir referansa
+          sÄ±kÄ±ÅŸtÄ±rÄ±lÄ±r, sÄ±nÄ±rlamalar belirsizleÅŸtirilir, <em>"size Ã¶zel ticari sunum"</em>
+          aciliyetiyle birlikte sunulur. Plasebo etkisi tÃ¼m tedavilerde gerÃ§ek
+          bir etken â€” Ã¶zellikle subjektif belirtilerde
+          %30'a kadar yanÄ±t oranlarÄ±na ulaÅŸabilir <Evidence level={4} />;
+          dolayÄ±sÄ±yla <em>"hastalarÄ±mÄ±n hepsi memnun"</em> tek baÅŸÄ±na bilimsel
+          kanÄ±t deÄŸildir.
         </p>
 
         <RedFlagBox
           markers={[
-            'Kanıt sorulduğunda net yanıt yerine "araştırmalar gösteriyor" tarzı kapalı atıf',
-            'Önce-sonra fotoğrafları (kontrolsüz, ışıklandırma/poz farkı, seçilmiş hasta)',
-            '"%95 sonuç" gibi kaynaksız ve örneklem büyüklüğü verilmemiş iddialar',
-'"Size özel ticari sunum / süreli fiyat avantajı" — tıbbi karar zemininde pazarlama dili',
-            '"Bir milyon hastada işe yaradı" anekdot tabanlı pazarlama, kontrollü çalışma referansı yok',
-            'Marka adı ön planda, mekanizma ve sınırlamalar arka planda anlatım',
-            '"Nihai çare / hayatınızı değiştirir" tarzı vaat dili',
-            'Risk-fayda dengesi sorulduğunda yalnızca fayda anlatımı',
+            'KanÄ±t sorulduÄŸunda net yanÄ±t yerine "araÅŸtÄ±rmalar gÃ¶steriyor" tarzÄ± kapalÄ± atÄ±f',
+            'Ã–nce-sonra fotoÄŸraflarÄ± (kontrolsÃ¼z, Ä±ÅŸÄ±klandÄ±rma/poz farkÄ±, seÃ§ilmiÅŸ hasta)',
+            '"%95 sonuÃ§" gibi kaynaksÄ±z ve Ã¶rneklem bÃ¼yÃ¼klÃ¼ÄŸÃ¼ verilmemiÅŸ iddialar',
+'"Size Ã¶zel ticari sunum / sÃ¼reli fiyat avantajÄ±" â€” tÄ±bbi karar zemininde pazarlama dili',
+            '"Bir milyon hastada iÅŸe yaradÄ±" anekdot tabanlÄ± pazarlama, kontrollÃ¼ Ã§alÄ±ÅŸma referansÄ± yok',
+            'Marka adÄ± Ã¶n planda, mekanizma ve sÄ±nÄ±rlamalar arka planda anlatÄ±m',
+            '"Nihai Ã§are / hayatÄ±nÄ±zÄ± deÄŸiÅŸtirir" tarzÄ± vaat dili',
+            'Risk-fayda dengesi sorulduÄŸunda yalnÄ±zca fayda anlatÄ±mÄ±',
           ]}
-          footnote="Bu liste teşhis amaçlı değil; bir uygulamayı değerlendirirken sakin bir filtre tutar."
+          footnote="Bu liste teÅŸhis amaÃ§lÄ± deÄŸil; bir uygulamayÄ± deÄŸerlendirirken sakin bir filtre tutar."
         />
 
-        <h2 id="off-label">Aynı Cihaz, Farklı Endikasyon — Off-label vs Deneysel</h2>
+        <h2 id="off-label">AynÄ± Cihaz, FarklÄ± Endikasyon â€” Off-label vs Deneysel</h2>
         <p>
-          En çok karıştırılan şey burada başlıyor: <em>onaylı bir cihaz veya
-          ilaç</em> her zaman <em>her durumda kanıtlı</em> demek değildir.
-          Onay belirli bir endikasyon için verilir; o endikasyon dışı kullanım
-          <em>off-label</em> sayılır ve bu kullanımın kanıt seviyesi her durumda
-          ayrı ayrı değerlendirilmelidir.
+          En Ã§ok karÄ±ÅŸtÄ±rÄ±lan ÅŸey burada baÅŸlÄ±yor: <em>onaylÄ± bir cihaz veya
+          ilaÃ§</em> her zaman <em>her durumda kanÄ±tlÄ±</em> demek deÄŸildir.
+          Onay belirli bir endikasyon iÃ§in verilir; o endikasyon dÄ±ÅŸÄ± kullanÄ±m
+          <em>off-label</em> sayÄ±lÄ±r ve bu kullanÄ±mÄ±n kanÄ±t seviyesi her durumda
+          ayrÄ± ayrÄ± deÄŸerlendirilmelidir.
         </p>
         <p>
-          Somut bir örnek üzerinden konuşalım. Yerel lazer ve radyofrekans
-          uygulamaları belirli ürogenital endikasyonlar için onay almıştır;
-          ama aynı cihaz <em>"sıkılaştırma", "estetik yenileme",
-          "antiaging"</em> gibi pazarlanan endikasyonlar için kanıt seviyesi
-          belirgin biçimde sınırlıdır <Evidence level={2} />. Onay belgesi
-          aynı; uygulanan endikasyon farklı; kanıt seviyesi farklı; risk
-          değerlendirmesi de farklı olmak zorunda. Pazarlama mesajları çoğu
-          zaman bu üç farklılığı tek bir <em>"onaylı cihaz"</em> ifadesinin
-          arkasında birleştirir; oysa onay belgesi tek başına hangi
-          endikasyon için, hangi kanıt gücüyle verildiğini söylemez.
+          Somut bir Ã¶rnek Ã¼zerinden konuÅŸalÄ±m. Yerel lazer ve radyofrekans
+          uygulamalarÄ± belirli Ã¼rogenital endikasyonlar iÃ§in onay almÄ±ÅŸtÄ±r;
+          ama aynÄ± cihaz <em>"sÄ±kÄ±laÅŸtÄ±rma", "estetik yenileme",
+          "antiaging"</em> gibi pazarlanan endikasyonlar iÃ§in kanÄ±t seviyesi
+          belirgin biÃ§imde sÄ±nÄ±rlÄ±dÄ±r <Evidence level={2} />. Onay belgesi
+          aynÄ±; uygulanan endikasyon farklÄ±; kanÄ±t seviyesi farklÄ±; risk
+          deÄŸerlendirmesi de farklÄ± olmak zorunda. Pazarlama mesajlarÄ± Ã§oÄŸu
+          zaman bu Ã¼Ã§ farklÄ±lÄ±ÄŸÄ± tek bir <em>"onaylÄ± cihaz"</em> ifadesinin
+          arkasÄ±nda birleÅŸtirir; oysa onay belgesi tek baÅŸÄ±na hangi
+          endikasyon iÃ§in, hangi kanÄ±t gÃ¼cÃ¼yle verildiÄŸini sÃ¶ylemez.
         </p>
         <p>
-          İkinci bir karışıklık alanı: <em>uluslararası onay</em> ile
-          <em>ulusal onay</em> arasındaki fark. Bir tedavi bir ülkede onaylı
-          olabilir, başka bir ülkede henüz onay sürecinde olabilir; bir
-          tedavi belirli bir endikasyon için belli bir kuruluştan onay almış,
-          başka bir kuruluştan reddedilmiş olabilir. Bu farklılık kötü niyet
-          değil — düzenleyici sistemler bağımsız çalışır. Ama hasta için
-          pratik anlamı şudur: <em>"yurtdışında kullanılıyor"</em> tek başına
-          bir tedavi için yeterli güvence değildir; sorulması gereken soru
-          aynı kalır — <em>hangi endikasyon için, hangi kanıt seviyesinde,
-          hangi koşullarda?</em>
+          Ä°kinci bir karÄ±ÅŸÄ±klÄ±k alanÄ±: <em>uluslararasÄ± onay</em> ile
+          <em>ulusal onay</em> arasÄ±ndaki fark. Bir tedavi bir Ã¼lkede onaylÄ±
+          olabilir, baÅŸka bir Ã¼lkede henÃ¼z onay sÃ¼recinde olabilir; bir
+          tedavi belirli bir endikasyon iÃ§in belli bir kuruluÅŸtan onay almÄ±ÅŸ,
+          baÅŸka bir kuruluÅŸtan reddedilmiÅŸ olabilir. Bu farklÄ±lÄ±k kÃ¶tÃ¼ niyet
+          deÄŸil â€” dÃ¼zenleyici sistemler baÄŸÄ±msÄ±z Ã§alÄ±ÅŸÄ±r. Ama hasta iÃ§in
+          pratik anlamÄ± ÅŸudur: <em>"yurtdÄ±ÅŸÄ±nda kullanÄ±lÄ±yor"</em> tek baÅŸÄ±na
+          bir tedavi iÃ§in yeterli gÃ¼vence deÄŸildir; sorulmasÄ± gereken soru
+          aynÄ± kalÄ±r â€” <em>hangi endikasyon iÃ§in, hangi kanÄ±t seviyesinde,
+          hangi koÅŸullarda?</em>
         </p>
 
-        <h2 id="uc-soru">Doktora Sorabileceğiniz Üç Soru</h2>
+        <h2 id="uc-soru">Doktora SorabileceÄŸiniz ÃœÃ§ Soru</h2>
         <p>
-          O zaman biz ne yapıyoruz? Hekim odasına üç soruyla girilirse, görüşme
-          başka bir yere taşınır. Bu üç soru bir <em>panzehir</em> değil; ama
-          klinik karara birlikte oturmak için sağlam bir zemin kurar.
+          O zaman biz ne yapÄ±yoruz? Hekim odasÄ±na Ã¼Ã§ soruyla girilirse, gÃ¶rÃ¼ÅŸme
+          baÅŸka bir yere taÅŸÄ±nÄ±r. Bu Ã¼Ã§ soru bir <em>panzehir</em> deÄŸil; ama
+          klinik karara birlikte oturmak iÃ§in saÄŸlam bir zemin kurar.
         </p>
         <p>
           <strong>Birincisi:</strong>
-          <em>"Bu tedavinin benim durumum için kanıt seviyesi nedir? Hangi
-          tip çalışmaya dayanıyor — vaka serisi mi, randomize çalışma mı,
+          <em>"Bu tedavinin benim durumum iÃ§in kanÄ±t seviyesi nedir? Hangi
+          tip Ã§alÄ±ÅŸmaya dayanÄ±yor â€” vaka serisi mi, randomize Ã§alÄ±ÅŸma mÄ±,
           sistematik derleme mi?"</em> Bu soru, hekimi pazarlama dili yerine
-          kanıt diline davet eder. Cevap bilinmiyor olabilir — bilen bir hekim
-          <em>"bu konuda kanıtımız sınırlı"</em> demekten çekinmez. Bu cümle
-          güven sinyalidir; <em>"kesindir"</em> diyen tedavi sıklıkla
-          incelenmemiştir.
+          kanÄ±t diline davet eder. Cevap bilinmiyor olabilir â€” bilen bir hekim
+          <em>"bu konuda kanÄ±tÄ±mÄ±z sÄ±nÄ±rlÄ±"</em> demekten Ã§ekinmez. Bu cÃ¼mle
+          gÃ¼ven sinyalidir; <em>"kesindir"</em> diyen tedavi sÄ±klÄ±kla
+          incelenmemiÅŸtir.
         </p>
         <p>
-          <strong>İkincisi:</strong>
-          <em>"Benim sağlık tablomda — eşlik eden tıbbi durumlar, kullandığım
-          ilaçlar, yaş, hormonal durum dahil — bu uygulamanın güvenliği nedir?
-          Hangi gruptan değilim?"</em> Bu soru kişiselleştirme zeminini açar.
-          Aynı tedavi iki kadında çok farklı sonuç verebilir; bedeniniz,
-          geçmişiniz, hayat tercihleriniz hepsi hesaba katılır. Reçete tek
-          değil — sizin reçeteniz var.
+          <strong>Ä°kincisi:</strong>
+          <em>"Benim saÄŸlÄ±k tablomda â€” eÅŸlik eden tÄ±bbi durumlar, kullandÄ±ÄŸÄ±m
+          ilaÃ§lar, yaÅŸ, hormonal durum dahil â€” bu uygulamanÄ±n gÃ¼venliÄŸi nedir?
+          Hangi gruptan deÄŸilim?"</em> Bu soru kiÅŸiselleÅŸtirme zeminini aÃ§ar.
+          AynÄ± tedavi iki kadÄ±nda Ã§ok farklÄ± sonuÃ§ verebilir; bedeniniz,
+          geÃ§miÅŸiniz, hayat tercihleriniz hepsi hesaba katÄ±lÄ±r. ReÃ§ete tek
+          deÄŸil â€” sizin reÃ§eteniz var.
         </p>
         <p>
-          <strong>Üçüncüsü:</strong>
-          <em>"Faydayı nasıl ölçeceğiz, ne kadar sürede değerlendireceğiz, ne
-          olursa devam etmek doğru olmaz?"</em> Bu soru, tedaviyi <em>açık
-          uçlu bir maceraya</em> değil bir <em>plana</em> dönüştürür. Bir
-          takvim, bir ölçüt, bir <em>"durduruyorum"</em> kriteri olduğunda
-          uygulama hem güvenli hem değerlendirilebilir hâle gelir. Bu üç soru
-          görüşmenin niteliğini değiştirir; size bilgiye dayalı bir karar verme
-          zemini açar.
+          <strong>ÃœÃ§Ã¼ncÃ¼sÃ¼:</strong>
+          <em>"FaydayÄ± nasÄ±l Ã¶lÃ§eceÄŸiz, ne kadar sÃ¼rede deÄŸerlendireceÄŸiz, ne
+          olursa devam etmek doÄŸru olmaz?"</em> Bu soru, tedaviyi <em>aÃ§Ä±k
+          uÃ§lu bir maceraya</em> deÄŸil bir <em>plana</em> dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r. Bir
+          takvim, bir Ã¶lÃ§Ã¼t, bir <em>"durduruyorum"</em> kriteri olduÄŸunda
+          uygulama hem gÃ¼venli hem deÄŸerlendirilebilir hÃ¢le gelir. Bu Ã¼Ã§ soru
+          gÃ¶rÃ¼ÅŸmenin niteliÄŸini deÄŸiÅŸtirir; size bilgiye dayalÄ± bir karar verme
+          zemini aÃ§ar.
         </p>
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <h2 id="sik-sorulanlar">SÄ±kÃ§a Sorulanlar</h2>
 
-        <h3>Off-label kullanım ile deneysel tedavi aynı şey mi?</h3>
+        <h3>Off-label kullanÄ±m ile deneysel tedavi aynÄ± ÅŸey mi?</h3>
         <p>
-          Hayır, ikisi farklı kavramlar. <em>Off-label</em> onaylı bir ilacın
-          veya cihazın, onaylandığı endikasyon dışında bir durumda hekimin
-          profesyonel sorumluluğunda kullanılmasıdır — yaygındır, çoğu yerde
-          meşrudur ve birçok durumda makul kanıta dayanır. <em>Deneysel</em>
-          ise yeterli kanıt henüz oluşmamış, çoğu zaman klinik araştırma
-içinde uygulanan bir yaklaşımdır. İkisinin de gözeneği farklı:
-          off-label kullanım için sorulacak soru <em>"bu endikasyonda kanıt ne
-          kadar?"</em>, deneysel uygulama için sorulacak soru <em>"bu klinik
-araştırma içinde mi yapılıyor, etik kurul onayı var mı?"</em>
+          HayÄ±r, ikisi farklÄ± kavramlar. <em>Off-label</em> onaylÄ± bir ilacÄ±n
+          veya cihazÄ±n, onaylandÄ±ÄŸÄ± endikasyon dÄ±ÅŸÄ±nda bir durumda hekimin
+          profesyonel sorumluluÄŸunda kullanÄ±lmasÄ±dÄ±r â€” yaygÄ±ndÄ±r, Ã§oÄŸu yerde
+          meÅŸrudur ve birÃ§ok durumda makul kanÄ±ta dayanÄ±r. <em>Deneysel</em>
+          ise yeterli kanÄ±t henÃ¼z oluÅŸmamÄ±ÅŸ, Ã§oÄŸu zaman klinik araÅŸtÄ±rma
+iÃ§inde uygulanan bir yaklaÅŸÄ±mdÄ±r. Ä°kisinin de gÃ¶zeneÄŸi farklÄ±:
+          off-label kullanÄ±m iÃ§in sorulacak soru <em>"bu endikasyonda kanÄ±t ne
+          kadar?"</em>, deneysel uygulama iÃ§in sorulacak soru <em>"bu klinik
+araÅŸtÄ±rma iÃ§inde mi yapÄ±lÄ±yor, etik kurul onayÄ± var mÄ±?"</em>
           olur.
         </p>
 
-        <h3>Klinik araştırmaya katılmak güvenli mi?</h3>
+        <h3>Klinik araÅŸtÄ±rmaya katÄ±lmak gÃ¼venli mi?</h3>
         <p>
-          Klinik araştırmalar etik kurul onaylı bir protokol içinde, bağımsız
-          denetimle ve <em>bilgilendirilmiş onam</em> alınarak yürütülür;
-          beklenen fayda, olası riskler, alternatif tedaviler ve katılımcının
-          istediği zaman çekilme hakkı açıkça anlatılır. Güvenli ya da güvensiz
-          yargısı tek başına verilemez — her araştırmanın faz aşaması, denetim
-          mekanizması ve risk-fayda dengesi ayrı değerlendirilir. Düşünüyorsanız
-          sorulacak temel sorular: araştırmanın fazı (1-4), birincil sonuç
-          ölçütü, denetleyen etik kurul, beklenen yan etki listesi, devam
-          ederken hekim takip sıklığı.
+          Klinik araÅŸtÄ±rmalar etik kurul onaylÄ± bir protokol iÃ§inde, baÄŸÄ±msÄ±z
+          denetimle ve <em>bilgilendirilmiÅŸ onam</em> alÄ±narak yÃ¼rÃ¼tÃ¼lÃ¼r;
+          beklenen fayda, olasÄ± riskler, alternatif tedaviler ve katÄ±lÄ±mcÄ±nÄ±n
+          istediÄŸi zaman Ã§ekilme hakkÄ± aÃ§Ä±kÃ§a anlatÄ±lÄ±r. GÃ¼venli ya da gÃ¼vensiz
+          yargÄ±sÄ± tek baÅŸÄ±na verilemez â€” her araÅŸtÄ±rmanÄ±n faz aÅŸamasÄ±, denetim
+          mekanizmasÄ± ve risk-fayda dengesi ayrÄ± deÄŸerlendirilir. DÃ¼ÅŸÃ¼nÃ¼yorsanÄ±z
+          sorulacak temel sorular: araÅŸtÄ±rmanÄ±n fazÄ± (1-4), birincil sonuÃ§
+          Ã¶lÃ§Ã¼tÃ¼, denetleyen etik kurul, beklenen yan etki listesi, devam
+          ederken hekim takip sÄ±klÄ±ÄŸÄ±.
         </p>
 
-        <h3>Bir kliniğin sonuç yüzdesini nasıl okumalıyım?</h3>
+        <h3>Bir kliniÄŸin sonuÃ§ yÃ¼zdesini nasÄ±l okumalÄ±yÄ±m?</h3>
         <p>
-          Tek başına bir sayı anlamlı değildir. <em>"%85 başarı"</em> demek
-          için önce <em>başarının tanımı</em> bilinmelidir (semptom geçmesi mi,
-          ölçülen değerin değişmesi mi, hastanın memnun kalması mı?), sonra
-          <em>örneklem büyüklüğü</em> (kaç kişi takip edildi?) ve <em>takip
-          süresi</em> (1 ay sonra mı, 1 yıl sonra mı?), en sonunda da
-          <em>karşılaştırma grubu</em> (tedavi alanlar ile almayanlar arasında
-          fark var mı?). Bu dört bilgi olmadan sonuç yüzdesi bir reklam
-          numarasıdır. Kontrollü klinik çalışmalarda gerçek sonuçlar
-          çoğu zaman pazarlamada söylenenden belirgin biçimde düşüktür.
+          Tek baÅŸÄ±na bir sayÄ± anlamlÄ± deÄŸildir. <em>"%85 baÅŸarÄ±"</em> demek
+          iÃ§in Ã¶nce <em>baÅŸarÄ±nÄ±n tanÄ±mÄ±</em> bilinmelidir (semptom geÃ§mesi mi,
+          Ã¶lÃ§Ã¼len deÄŸerin deÄŸiÅŸmesi mi, hastanÄ±n memnun kalmasÄ± mÄ±?), sonra
+          <em>Ã¶rneklem bÃ¼yÃ¼klÃ¼ÄŸÃ¼</em> (kaÃ§ kiÅŸi takip edildi?) ve <em>takip
+          sÃ¼resi</em> (1 ay sonra mÄ±, 1 yÄ±l sonra mÄ±?), en sonunda da
+          <em>karÅŸÄ±laÅŸtÄ±rma grubu</em> (tedavi alanlar ile almayanlar arasÄ±nda
+          fark var mÄ±?). Bu dÃ¶rt bilgi olmadan sonuÃ§ yÃ¼zdesi bir reklam
+          numarasÄ±dÄ±r. KontrollÃ¼ klinik Ã§alÄ±ÅŸmalarda gerÃ§ek sonuÃ§lar
+          Ã§oÄŸu zaman pazarlamada sÃ¶ylenenden belirgin biÃ§imde dÃ¼ÅŸÃ¼ktÃ¼r.
         </p>
 
-        <h3>Yurtdışında onayı olmayan ama Türkiye'de uygulanan tedaviyi nasıl değerlendirmeliyim?</h3>
+        <h3>YurtdÄ±ÅŸÄ±nda onayÄ± olmayan ama TÃ¼rkiye'de uygulanan tedaviyi nasÄ±l deÄŸerlendirmeliyim?</h3>
         <p>
-          Düzenleyici sistemler bağımsız çalışır; bir tedavi bir ülkede onaylı
-          olabilir, başka ülkede henüz değerlendirme aşamasında olabilir. Bu
-          tek başına ne <em>"daha iyi"</em> ne de <em>"daha kötü"</em>
-          anlamına gelir — sadece düzenleyici süreç farklıdır. Hasta için
-          asıl soru aynı kalır: bu uygulamanın kanıt seviyesi nedir, hangi
-          endikasyon için, benim tablomda riski nedir, faydayı nasıl
-          ölçeceğiz? Bir tedavinin yurtdışında <em>kullanılıyor olması</em>
-          tek başına yeterli güvence değildir; nerede, hangi koşulda, hangi
-          gözle değerlendirildiği önemlidir.
+          DÃ¼zenleyici sistemler baÄŸÄ±msÄ±z Ã§alÄ±ÅŸÄ±r; bir tedavi bir Ã¼lkede onaylÄ±
+          olabilir, baÅŸka Ã¼lkede henÃ¼z deÄŸerlendirme aÅŸamasÄ±nda olabilir. Bu
+          tek baÅŸÄ±na ne <em>"daha iyi"</em> ne de <em>"daha kÃ¶tÃ¼"</em>
+          anlamÄ±na gelir â€” sadece dÃ¼zenleyici sÃ¼reÃ§ farklÄ±dÄ±r. Hasta iÃ§in
+          asÄ±l soru aynÄ± kalÄ±r: bu uygulamanÄ±n kanÄ±t seviyesi nedir, hangi
+          endikasyon iÃ§in, benim tablomda riski nedir, faydayÄ± nasÄ±l
+          Ã¶lÃ§eceÄŸiz? Bir tedavinin yurtdÄ±ÅŸÄ±nda <em>kullanÄ±lÄ±yor olmasÄ±</em>
+          tek baÅŸÄ±na yeterli gÃ¼vence deÄŸildir; nerede, hangi koÅŸulda, hangi
+          gÃ¶zle deÄŸerlendirildiÄŸi Ã¶nemlidir.
         </p>
 
-        <h3>Yerel lazer ve radyofrekans cihazlarının kanıt seviyesi neden tartışmalı?</h3>
+        <h3>Yerel lazer ve radyofrekans cihazlarÄ±nÄ±n kanÄ±t seviyesi neden tartÄ±ÅŸmalÄ±?</h3>
         <p>
-          Bu cihazlar belirli ürogenital endikasyonlar için onay almıştır; ama
-          pazarlandıkları endikasyonların büyük kısmı <em>onay alınanın
-          dışında</em> kalır — <em>"sıkılaştırma", "estetik yenileme",
-"antiaging"</em> gibi geniş vaatler için kanıt seviyesi sınırlıdır
-          <Evidence level={2} />. Yine cihazların kullanım protokolleri
-          merkez ve kullanıcıya göre belirgin değişebilir; aynı cihaz farklı
-          ellerde farklı sonuç verebilir. Bu ekosistemde ihtiyatlı olmak
-          modası geçmiş bir şey değil; pazarlama hızının önüne geçmiş bir
-          kanıt sınırının bilincinde olmak.
+          Bu cihazlar belirli Ã¼rogenital endikasyonlar iÃ§in onay almÄ±ÅŸtÄ±r; ama
+          pazarlandÄ±klarÄ± endikasyonlarÄ±n bÃ¼yÃ¼k kÄ±smÄ± <em>onay alÄ±nanÄ±n
+          dÄ±ÅŸÄ±nda</em> kalÄ±r â€” <em>"sÄ±kÄ±laÅŸtÄ±rma", "estetik yenileme",
+"antiaging"</em> gibi geniÅŸ vaatler iÃ§in kanÄ±t seviyesi sÄ±nÄ±rlÄ±dÄ±r
+          <Evidence level={2} />. Yine cihazlarÄ±n kullanÄ±m protokolleri
+          merkez ve kullanÄ±cÄ±ya gÃ¶re belirgin deÄŸiÅŸebilir; aynÄ± cihaz farklÄ±
+          ellerde farklÄ± sonuÃ§ verebilir. Bu ekosistemde ihtiyatlÄ± olmak
+          modasÄ± geÃ§miÅŸ bir ÅŸey deÄŸil; pazarlama hÄ±zÄ±nÄ±n Ã¶nÃ¼ne geÃ§miÅŸ bir
+          kanÄ±t sÄ±nÄ±rÄ±nÄ±n bilincinde olmak.
         </p>
 
-        <h2 id="kapanis">Kapanış</h2>
+        <h2 id="kapanis">KapanÄ±ÅŸ</h2>
         <p>
-          Bir tedaviyi <em>"deneysel"</em> diye etiketlemek tek başına ne
-          reddetmek ne de kabul etmek demektir; yelpazenin neresinde olduğunu
-          görmek demektir. Onaylı endikasyon, off-label kullanım, klinik
-araştırma içindeki uygulama ve henüz kanıtın çok zayıf olduğu
-          alan — bunlar hep aynı kelimenin altında toplanabiliyor. Hastanın
-          elindeki en güçlü araç, bu yelpazeyi okuyabilmek ve hangi soruyu
-          ne zaman soracağını bilmek.
+          Bir tedaviyi <em>"deneysel"</em> diye etiketlemek tek baÅŸÄ±na ne
+          reddetmek ne de kabul etmek demektir; yelpazenin neresinde olduÄŸunu
+          gÃ¶rmek demektir. OnaylÄ± endikasyon, off-label kullanÄ±m, klinik
+araÅŸtÄ±rma iÃ§indeki uygulama ve henÃ¼z kanÄ±tÄ±n Ã§ok zayÄ±f olduÄŸu
+          alan â€” bunlar hep aynÄ± kelimenin altÄ±nda toplanabiliyor. HastanÄ±n
+          elindeki en gÃ¼Ã§lÃ¼ araÃ§, bu yelpazeyi okuyabilmek ve hangi soruyu
+          ne zaman soracaÄŸÄ±nÄ± bilmek.
         </p>
         <p>
-          Hekim odasına üç soru ile gidin: <em>"Kanıt seviyesi nedir, hangi
-          tip çalışmaya dayanıyor?"</em>, <em>"Benim sağlık tablomda güvenliği
-          nedir, hangi gruptan değilim?"</em>, <em>"Faydayı nasıl ölçeceğiz,
-          ne kadar sürede değerlendireceğiz?"</em>. Cevapların bir kısmı
-          <em>"bilmiyoruz"</em> olabilir; bilen bir hekim bunu söylemekten
-          çekinmez. Bu cümle güven sinyalidir.
+          Hekim odasÄ±na Ã¼Ã§ soru ile gidin: <em>"KanÄ±t seviyesi nedir, hangi
+          tip Ã§alÄ±ÅŸmaya dayanÄ±yor?"</em>, <em>"Benim saÄŸlÄ±k tablomda gÃ¼venliÄŸi
+          nedir, hangi gruptan deÄŸilim?"</em>, <em>"FaydayÄ± nasÄ±l Ã¶lÃ§eceÄŸiz,
+          ne kadar sÃ¼rede deÄŸerlendireceÄŸiz?"</em>. CevaplarÄ±n bir kÄ±smÄ±
+          <em>"bilmiyoruz"</em> olabilir; bilen bir hekim bunu sÃ¶ylemekten
+          Ã§ekinmez. Bu cÃ¼mle gÃ¼ven sinyalidir.
         </p>
         <p>
-          Bilgi belirsizliğin panzehiridir — bu konuda da öyle. Yarısı yeni
-          bir uygulamayı duyuyor, ama çoğu sınırını dürüstçe söyleyen bir
-          sese rastlamıyor; yazıya bunu söyleyerek başladık çünkü sessizliği
-          kırmak bir tedavinin <em>doğru tartılabilmesinin</em> önündeki ilk
-          engeli kaldırıyor. Sakin değerlendirme, hem cüzdanı hem ruhsal
+          Bilgi belirsizliÄŸin panzehiridir â€” bu konuda da Ã¶yle. YarÄ±sÄ± yeni
+          bir uygulamayÄ± duyuyor, ama Ã§oÄŸu sÄ±nÄ±rÄ±nÄ± dÃ¼rÃ¼stÃ§e sÃ¶yleyen bir
+          sese rastlamÄ±yor; yazÄ±ya bunu sÃ¶yleyerek baÅŸladÄ±k Ã§Ã¼nkÃ¼ sessizliÄŸi
+          kÄ±rmak bir tedavinin <em>doÄŸru tartÄ±labilmesinin</em> Ã¶nÃ¼ndeki ilk
+          engeli kaldÄ±rÄ±yor. Sakin deÄŸerlendirme, hem cÃ¼zdanÄ± hem ruhsal
           beklentiyi koruyor.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"
@@ -376,94 +384,94 @@ araştırma içindeki uygulama ve henüz kanıtın çok zayıf olduğu
       <section
         class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={4} /></p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
+        <p class="mb-4 text-lg font-semibold text-ink">KanÄ±t DÃ¼zeyi: <Evidence from={3} to={4} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Manifesto köşesi yazıları doğası gereği genel kalır; ama deneysel
-            tedavi gibi konularda klinik karar tarafının somut iskeletini bu
-            notta açmam mantıklı oldu — uzman olarak.
+            Manifesto kÃ¶ÅŸesi yazÄ±larÄ± doÄŸasÄ± gereÄŸi genel kalÄ±r; ama deneysel
+            tedavi gibi konularda klinik karar tarafÄ±nÄ±n somut iskeletini bu
+            notta aÃ§mam mantÄ±klÄ± oldu â€” uzman olarak.
           </p>
           <p>
             <strong class="text-burgundy">Klinik not:</strong> Yeni bir uygulama
-            ya da takviye için <em>"sizin görüşünüz nedir"</em> sorusu, kliniğimde
-            de muayene odasında belki en sık gelen sorulardan biri. Sosyal medya
-            ve özel merkez pazarlaması bilgi akışını çok hızlandırdı; ama bu
-            akışın kalitesi homojen değil — dürüst kanıt yorumu ile şişirilmiş
-            vaat aynı arayüzde yan yana çıkıyor. Hastanın elinde okuma kılavuzu
-            olmadığında, karar çoğu zaman algoritmaya teslim oluyor.
+            ya da takviye iÃ§in <em>"sizin gÃ¶rÃ¼ÅŸÃ¼nÃ¼z nedir"</em> sorusu, kliniÄŸimde
+            de muayene odasÄ±nda belki en sÄ±k gelen sorulardan biri. Sosyal medya
+            ve Ã¶zel merkez pazarlamasÄ± bilgi akÄ±ÅŸÄ±nÄ± Ã§ok hÄ±zlandÄ±rdÄ±; ama bu
+            akÄ±ÅŸÄ±n kalitesi homojen deÄŸil â€” dÃ¼rÃ¼st kanÄ±t yorumu ile ÅŸiÅŸirilmiÅŸ
+            vaat aynÄ± arayÃ¼zde yan yana Ã§Ä±kÄ±yor. HastanÄ±n elinde okuma kÄ±lavuzu
+            olmadÄ±ÄŸÄ±nda, karar Ã§oÄŸu zaman algoritmaya teslim oluyor.
           </p>
           <p>
-            <strong class="text-burgundy">Mekanizma notu:</strong> Klinik kanıt
-            hiyerarşisi piramidal yapıdadır: vaka raporu/uzman görüşü tabanda,
-            randomize kontrollü çalışma üst sıralarda, sistematik derleme ve
-            meta-analiz tepede. Klinik araştırmalar dört faz hâlinde ilerler —
-            faz 1 küçük güvenlik çalışması, faz 2-3 etkinlik ve geniş örneklemli
-            karşılaştırmalı çalışma, faz 4 onay sonrası gözetim. Bir tedavinin
-            "deneysel" sayılması <em>hangi fazda olduğuna</em> ve <em>hangi
-            endikasyon için sorulduğuna</em> göre anlam değiştirir; aynı tedavi
-            bir endikasyonda güçlü kanıtlı, başka bir endikasyonda sınırlı
-            kanıtlı olabilir. Off-label kullanım onaylı bir tedavinin onaylandığı
-            endikasyon dışında reçetelenmesidir; meşrudur ama kanıt seviyesi her
-            durumda ayrı değerlendirilir. Plasebo etkisi özellikle subjektif
-            belirtilerde gerçek bir etken — bu da kontrolsüz gözlemlerin neden
-            yanıltıcı olabileceğini açıklar.
+            <strong class="text-burgundy">Mekanizma notu:</strong> Klinik kanÄ±t
+            hiyerarÅŸisi piramidal yapÄ±dadÄ±r: vaka raporu/uzman gÃ¶rÃ¼ÅŸÃ¼ tabanda,
+            randomize kontrollÃ¼ Ã§alÄ±ÅŸma Ã¼st sÄ±ralarda, sistematik derleme ve
+            meta-analiz tepede. Klinik araÅŸtÄ±rmalar dÃ¶rt faz hÃ¢linde ilerler â€”
+            faz 1 kÃ¼Ã§Ã¼k gÃ¼venlik Ã§alÄ±ÅŸmasÄ±, faz 2-3 etkinlik ve geniÅŸ Ã¶rneklemli
+            karÅŸÄ±laÅŸtÄ±rmalÄ± Ã§alÄ±ÅŸma, faz 4 onay sonrasÄ± gÃ¶zetim. Bir tedavinin
+            "deneysel" sayÄ±lmasÄ± <em>hangi fazda olduÄŸuna</em> ve <em>hangi
+            endikasyon iÃ§in sorulduÄŸuna</em> gÃ¶re anlam deÄŸiÅŸtirir; aynÄ± tedavi
+            bir endikasyonda gÃ¼Ã§lÃ¼ kanÄ±tlÄ±, baÅŸka bir endikasyonda sÄ±nÄ±rlÄ±
+            kanÄ±tlÄ± olabilir. Off-label kullanÄ±m onaylÄ± bir tedavinin onaylandÄ±ÄŸÄ±
+            endikasyon dÄ±ÅŸÄ±nda reÃ§etelenmesidir; meÅŸrudur ama kanÄ±t seviyesi her
+            durumda ayrÄ± deÄŸerlendirilir. Plasebo etkisi Ã¶zellikle subjektif
+            belirtilerde gerÃ§ek bir etken â€” bu da kontrolsÃ¼z gÃ¶zlemlerin neden
+            yanÄ±ltÄ±cÄ± olabileceÄŸini aÃ§Ä±klar.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong>
-            Kanıt seviyesi sorusuna kapalı yanıt; örneklem büyüklüğü, takip süresi
-            ve kontrol grubu açıklanmamış sonuç iddiaları; risk
-            tartışmasının yokluğu; aciliyet baskısı içeren <em>"size özel
-            ticari sunum"</em> anlatımları; aktif ciddi tıbbi durumu olan hastalara
-            (kanser, immünsüpresyon, ileri kalp/karaciğer/böbrek hastalığı)
-            kanıtsız uygulama önerisi; <em>"onaylı cihaz / onaylı ilaç"</em>
-            ifadesinin onay alınan endikasyon dışı kullanımda kalkan olarak
-            kullanılması;
-            mekanizma anlatımı yerine marka adının ön plana çıkması;
-            <em>"nihai çare"</em> dili. Bu sinyaller tek başına bir
-            uygulamayı reddetmek için yeterli değildir; ama birden fazlası bir
-            arada görünüyorsa ek değerlendirme istenir.
+            <strong class="text-burgundy">Klinik kÄ±rmÄ±zÄ± bayraklar:</strong>
+            KanÄ±t seviyesi sorusuna kapalÄ± yanÄ±t; Ã¶rneklem bÃ¼yÃ¼klÃ¼ÄŸÃ¼, takip sÃ¼resi
+            ve kontrol grubu aÃ§Ä±klanmamÄ±ÅŸ sonuÃ§ iddialarÄ±; risk
+            tartÄ±ÅŸmasÄ±nÄ±n yokluÄŸu; aciliyet baskÄ±sÄ± iÃ§eren <em>"size Ã¶zel
+            ticari sunum"</em> anlatÄ±mlarÄ±; aktif ciddi tÄ±bbi durumu olan hastalara
+            (kanser, immÃ¼nsÃ¼presyon, ileri kalp/karaciÄŸer/bÃ¶brek hastalÄ±ÄŸÄ±)
+            kanÄ±tsÄ±z uygulama Ã¶nerisi; <em>"onaylÄ± cihaz / onaylÄ± ilaÃ§"</em>
+            ifadesinin onay alÄ±nan endikasyon dÄ±ÅŸÄ± kullanÄ±mda kalkan olarak
+            kullanÄ±lmasÄ±;
+            mekanizma anlatÄ±mÄ± yerine marka adÄ±nÄ±n Ã¶n plana Ã§Ä±kmasÄ±;
+            <em>"nihai Ã§are"</em> dili. Bu sinyaller tek baÅŸÄ±na bir
+            uygulamayÄ± reddetmek iÃ§in yeterli deÄŸildir; ama birden fazlasÄ± bir
+            arada gÃ¶rÃ¼nÃ¼yorsa ek deÄŸerlendirme istenir.
           </p>
           <p>
-            <strong class="text-burgundy">Pratik bütünleşim:</strong> Klinikte
-            yeni bir tedavi seçeneğini hastaya değerlendirirken birlikte oturup
-            şu basamakları izlemeye özen gösteririm: (1) endikasyon netleştirme
-            — bu uygulama gerçekten <em>sizin tablonuza</em> mı yönelik, yoksa
-geniş bir pazarlama hattının parçası mı; (2) kanıt seviyesi
-            haritası — vaka raporu mu, gözlemsel çalışma mı, RCT mi, derleme mi
-            söz konusu; (3) onay durumu netleştirme — endikasyon-içi mi, off-label
-mi, klinik araştırma içinde mi; (4) bireysel risk-fayda
-            değerlendirmesi — hastanın eşlik eden tıbbi durumları, kullandığı
-            ilaçlar, yaş ve hormonal tablosu hesaba katılır; (5) standart kanıtlı
-            seçenekler önce konuşulur — deneysel uygulama bunların yerine değil,
-            uygunsa yanına; (6) deneme yapılacaksa <em>ölçülebilir bir takvim</em>
-            (örneğin 8-12 hafta + nesnel-subjektif değerlendirme + devam-durdur
-            kriteri) konur. Aktif kanseri, ileri immünsüpresyonu, hamilelik veya
-            laktasyon dönemi olan hastalarda kanıtı sınırlı uygulamalar için
-            standart önerim daha temkinlidir; çünkü teorik risk-fayda dengesi
-            bu gruplarda lehte değildir.
+            <strong class="text-burgundy">Pratik bÃ¼tÃ¼nleÅŸim:</strong> Klinikte
+            yeni bir tedavi seÃ§eneÄŸini hastaya deÄŸerlendirirken birlikte oturup
+            ÅŸu basamaklarÄ± izlemeye Ã¶zen gÃ¶steririm: (1) endikasyon netleÅŸtirme
+            â€” bu uygulama gerÃ§ekten <em>sizin tablonuza</em> mÄ± yÃ¶nelik, yoksa
+geniÅŸ bir pazarlama hattÄ±nÄ±n parÃ§asÄ± mÄ±; (2) kanÄ±t seviyesi
+            haritasÄ± â€” vaka raporu mu, gÃ¶zlemsel Ã§alÄ±ÅŸma mÄ±, RCT mi, derleme mi
+            sÃ¶z konusu; (3) onay durumu netleÅŸtirme â€” endikasyon-iÃ§i mi, off-label
+mi, klinik araÅŸtÄ±rma iÃ§inde mi; (4) bireysel risk-fayda
+            deÄŸerlendirmesi â€” hastanÄ±n eÅŸlik eden tÄ±bbi durumlarÄ±, kullandÄ±ÄŸÄ±
+            ilaÃ§lar, yaÅŸ ve hormonal tablosu hesaba katÄ±lÄ±r; (5) standart kanÄ±tlÄ±
+            seÃ§enekler Ã¶nce konuÅŸulur â€” deneysel uygulama bunlarÄ±n yerine deÄŸil,
+            uygunsa yanÄ±na; (6) deneme yapÄ±lacaksa <em>Ã¶lÃ§Ã¼lebilir bir takvim</em>
+            (Ã¶rneÄŸin 8-12 hafta + nesnel-subjektif deÄŸerlendirme + devam-durdur
+            kriteri) konur. Aktif kanseri, ileri immÃ¼nsÃ¼presyonu, hamilelik veya
+            laktasyon dÃ¶nemi olan hastalarda kanÄ±tÄ± sÄ±nÄ±rlÄ± uygulamalar iÃ§in
+            standart Ã¶nerim daha temkinlidir; Ã§Ã¼nkÃ¼ teorik risk-fayda dengesi
+            bu gruplarda lehte deÄŸildir.
           </p>
           <p>
-            <strong class="text-burgundy">Bireysellik vurgusu:</strong> Yukarıda
-            paylaştıklarım — hem yazıda hem bu notta — genel popülasyon
-yaklaşımıdır; sizin tablonuzdaki sağlık öyküsü, kullandığınız
-            ilaçlar, eşlik eden tıbbi durumlar, hayat tercihleri ve önceki
-            tedavi yanıtları bir uygulamayı denemek için <em>doğru zamanı</em>
-ve <em>doğru yolu</em> belirler. Burada okuduğunuz bir
-başlangıç rehberidir, karar değil; sizin için uygun adımları
-            kendi hekiminizle birebir değerlendirmeniz önemlidir — özellikle
-            kanıtın hâlâ olgunlaşmakta olduğu alanlarda.
+            <strong class="text-burgundy">Bireysellik vurgusu:</strong> YukarÄ±da
+            paylaÅŸtÄ±klarÄ±m â€” hem yazÄ±da hem bu notta â€” genel popÃ¼lasyon
+yaklaÅŸÄ±mÄ±dÄ±r; sizin tablonuzdaki saÄŸlÄ±k Ã¶ykÃ¼sÃ¼, kullandÄ±ÄŸÄ±nÄ±z
+            ilaÃ§lar, eÅŸlik eden tÄ±bbi durumlar, hayat tercihleri ve Ã¶nceki
+            tedavi yanÄ±tlarÄ± bir uygulamayÄ± denemek iÃ§in <em>doÄŸru zamanÄ±</em>
+ve <em>doÄŸru yolu</em> belirler. Burada okuduÄŸunuz bir
+baÅŸlangÄ±Ã§ rehberidir, karar deÄŸil; sizin iÃ§in uygun adÄ±mlarÄ±
+            kendi hekiminizle birebir deÄŸerlendirmeniz Ã¶nemlidir â€” Ã¶zellikle
+            kanÄ±tÄ±n hÃ¢lÃ¢ olgunlaÅŸmakta olduÄŸu alanlarda.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            â€” DoÃ§. Dr. Senai Aksoy, KadÄ±n HastalÄ±klarÄ± ve DoÄŸum UzmanÄ±, Estranova Bilimsel EditÃ¶rÃ¼
           </p>
         </div>
       </section>
 
       <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
         <p class="text-sm leading-relaxed text-ink/75">
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine
-          geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme yerine
+          geÃ§mez. TanÄ± ve tedavi kararlarÄ± iÃ§in saÄŸlÄ±k profesyoneline baÅŸvurunuz.
         </p>
       </section>
     </SubmenuArticleBody>
@@ -471,3 +479,4 @@ başlangıç rehberidir, karar değil; sizin için uygun adımları
 
   <SiteFooter />
 </SiteLayout>
+

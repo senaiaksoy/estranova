@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -10,36 +10,42 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam/beslenme-yaslanma']!;
 
 const tocEntries = [
-  { id: 'neden-degisir', label: 'Neden Değişir' },
+  { id: 'neden-degisir', label: 'Neden DeÄŸiÅŸir' },
   { id: 'makronutrientler', label: 'Makro Besinler' },
   { id: 'mikronutrientler', label: 'Mikro Besinler' },
   { id: 'antioksidanlar', label: 'Antioksidanlar' },
-  { id: 'ogun-modeli', label: 'Öğün Modeli' },
-  { id: 'beslenme-sekilleri', label: 'Beslenme Şekilleri' },
-  { id: 'tercih-sinirla', label: 'Tercih ve Sınırlama' },
-  { id: 'ek-takviyeler', label: 'Takviye Kararı' },
-  { id: 'kisisellestirme', label: 'Kişiselleştirilmiş Yaklaşım' },
-  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'ogun-modeli', label: 'Ã–ÄŸÃ¼n Modeli' },
+  { id: 'beslenme-sekilleri', label: 'Beslenme Åekilleri' },
+  { id: 'tercih-sinirla', label: 'Tercih ve SÄ±nÄ±rlama' },
+  { id: 'ek-takviyeler', label: 'Takviye KararÄ±' },
+  { id: 'kisisellestirme', label: 'KiÅŸiselleÅŸtirilmiÅŸ YaklaÅŸÄ±m' },
+  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi';
-const articleDescription = 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekim veya diyetisyenle netleştirmeyi hatırlatan rehber.';
+const articleTitle = 'Beslenme ve YaÅŸlanma â€” 40+ KadÄ±nlar iÃ§in Beslenme Rehberi';
+const articleDescription = 'Menopoz dÃ¶neminde protein, vitaminler ve antioksidanlarÄ± tabakta daha bilinÃ§li konumlandÄ±rÄ±rken kiÅŸisel hedefleri hekim veya diyetisyenle netleÅŸtirmeyi hatÄ±rlatan rehber.';
+const faqItems = articleFaqs['/zamansiz-yasam/beslenme-yaslanma'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '9 Mart 2026',
   pathname: '/zamansiz-yasam/beslenme-yaslanma',
-  articleSection: 'Zamansız Yaşam',
+  articleSection: 'ZamansÄ±z YaÅŸam',
   sectionPath: '/zamansiz-yasam',
   keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'anti-inflamatuar'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -54,8 +60,8 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zamansız Yaşam · Beslenme"
-      title="Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi"
+      eyebrow="ZamansÄ±z YaÅŸam Â· Beslenme"
+      title="Beslenme ve YaÅŸlanma â€” 40+ KadÄ±nlar iÃ§in Beslenme Rehberi"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -65,197 +71,199 @@ const articleSchemas = buildArticleSchemas({
         <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="9 Mart 2026" readingMinutes={4} />
 
         <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
-          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+          <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
           <p class="leading-relaxed text-ink/80">
-            40 sonrasında ve menopoz geçişinde, eski beslenme alışkanlıklarının aynı sonucu vermediğini çoğu
-            kadın yaşıyor; bunu çevremde de, kendi mutfağımda da farklı biçimlerde duyuyorum. Okudukça şunu
-            anladım: amaç katı bir plan değil, vücudun yeni ritmini sade ve bilinçli seçimlerle desteklemek.
-            Protein, B vitaminleri, omega-3 yağlar ve antioksidanlar bu dönemde tabakta biraz daha bilinçli yer
-            açtığım başlıklar oldu.
+            40 sonrasÄ±nda ve menopoz geÃ§iÅŸinde, eski beslenme alÄ±ÅŸkanlÄ±klarÄ±nÄ±n aynÄ± sonucu vermediÄŸini Ã§oÄŸu
+            kadÄ±n yaÅŸÄ±yor; bunu Ã§evremde de, kendi mutfaÄŸÄ±mda da farklÄ± biÃ§imlerde duyuyorum. OkudukÃ§a ÅŸunu
+            anladÄ±m: amaÃ§ katÄ± bir plan deÄŸil, vÃ¼cudun yeni ritmini sade ve bilinÃ§li seÃ§imlerle desteklemek.
+            Protein, B vitaminleri, omega-3 yaÄŸlar ve antioksidanlar bu dÃ¶nemde tabakta biraz daha bilinÃ§li yer
+            aÃ§tÄ±ÄŸÄ±m baÅŸlÄ±klar oldu.
           </p>
         </section>
 
         <ArticleProsePanel>
-          <h2 id="neden-degisir">40+ Yaşta Beslenme Neden Değişir?</h2>
+          <h2 id="neden-degisir">40+ YaÅŸta Beslenme Neden DeÄŸiÅŸir?</h2>
           <p>
-            Bir noktada şunu fark ettim: aynı yemekler, aynı porsiyonlar, aynı saatler — ama bedenim aynı şekilde
-            cevap vermiyordu. Bu öncelikle disiplinim azaldığı için değil; vücudumda bir zemin değişiyordu.
+            Bir noktada ÅŸunu fark ettim: aynÄ± yemekler, aynÄ± porsiyonlar, aynÄ± saatler â€” ama bedenim aynÄ± ÅŸekilde
+            cevap vermiyordu. Bu Ã¶ncelikle disiplinim azaldÄ±ÄŸÄ± iÃ§in deÄŸil; vÃ¼cudumda bir zemin deÄŸiÅŸiyordu.
           </p>
           <p>
-            40 yaşından sonra temel metabolik hız (bazal metabolizma) yavaşlar, kas kütlesinin doğal kaybı hızlanır
-            ve hormon üretimi dalgalanmaya başlar <Evidence level={5} />. Sindirim sistemi de aynı zamanda yaşlanmayı
-            sürdürür; bazı kadınlar laktoz toleransında düşüş veya B12 emilim sıkıntısı yaşayabilir
+            40 yaÅŸÄ±ndan sonra temel metabolik hÄ±z (bazal metabolizma) yavaÅŸlar, kas kÃ¼tlesinin doÄŸal kaybÄ± hÄ±zlanÄ±r
+            ve hormon Ã¼retimi dalgalanmaya baÅŸlar <Evidence level={5} />. Sindirim sistemi de aynÄ± zamanda yaÅŸlanmayÄ±
+            sÃ¼rdÃ¼rÃ¼r; bazÄ± kadÄ±nlar laktoz toleransÄ±nda dÃ¼ÅŸÃ¼ÅŸ veya B12 emilim sÄ±kÄ±ntÄ±sÄ± yaÅŸayabilir
             <Evidence level={4} />.
           </p>
           <p>
-            Menopoz dönemindeki hormon değişiklikleri yağ depolanma yerlerini, enerji harcamasını ve besin
-            tercihlerini etkiler <Evidence level={5} />. Aktivite seviyesi de çoğu zaman sessizce düşer; aynı kiloda
-            kalsan bile kalori ihtiyacı azalabiliyor <Evidence level={5} />. Bu nedenle eski alışkanlıkların artık
-            "tam oturmaması" garip değil; seçimlerimizin biraz daha bilinçli olması gerekiyor.
+            Menopoz dÃ¶nemindeki hormon deÄŸiÅŸiklikleri yaÄŸ depolanma yerlerini, enerji harcamasÄ±nÄ± ve besin
+            tercihlerini etkiler <Evidence level={5} />. Aktivite seviyesi de Ã§oÄŸu zaman sessizce dÃ¼ÅŸer; aynÄ± kiloda
+            kalsan bile kalori ihtiyacÄ± azalabiliyor <Evidence level={5} />. Bu nedenle eski alÄ±ÅŸkanlÄ±klarÄ±n artÄ±k
+            "tam oturmamasÄ±" garip deÄŸil; seÃ§imlerimizin biraz daha bilinÃ§li olmasÄ± gerekiyor.
           </p>
 
-          <h2 id="makronutrientler">Makro Besinler: Protein, Yağ, Karbonhidrat</h2>
+          <h2 id="makronutrientler">Makro Besinler: Protein, YaÄŸ, Karbonhidrat</h2>
           <p>
-            Benim için dönüm noktası şu oldu: bir gün hekimimle bir kontrolde "kas tarafında erime sessizce
-            ilerliyor, proteini hafife almayalım" dedi. O günden sonra sabah kahvaltılarımı yeniden düşünmeye
-            başladım.
+            Benim iÃ§in dÃ¶nÃ¼m noktasÄ± ÅŸu oldu: bir gÃ¼n hekimimle bir kontrolde "kas tarafÄ±nda erime sessizce
+            ilerliyor, proteini hafife almayalÄ±m" dedi. O gÃ¼nden sonra sabah kahvaltÄ±larÄ±mÄ± yeniden dÃ¼ÅŸÃ¼nmeye
+            baÅŸladÄ±m.
           </p>
           <p>
-            Protein, bu dönemde tabağında daha bilinçli yer açmak isteyeceğin besinlerden. Kas kaybı, doku sağlığı,
-            kemik bütünlüğü ve metabolik işlevler yeterli protein alımıyla yakından ilişkili <Evidence level={5} />.
-            Kaynaklarda sık geçen gram/kilogram aralıkları klinik konuşma için bir referans olabilir; ama kişinin
-            kilosu, böbrek fonksiyonu, aktivite düzeyi, iştahı ve eşlik eden hastalıkları hedefi değiştirir. Benim
-için daha güvenli yol şu: her ana öğünde güvenilir bir protein kaynağı düşünmek, sayı hedefini ise
-            gerekiyorsa diyetisyen veya hekimle netleştirmek.
+            Protein, bu dÃ¶nemde tabaÄŸÄ±nda daha bilinÃ§li yer aÃ§mak isteyeceÄŸin besinlerden. Kas kaybÄ±, doku saÄŸlÄ±ÄŸÄ±,
+            kemik bÃ¼tÃ¼nlÃ¼ÄŸÃ¼ ve metabolik iÅŸlevler yeterli protein alÄ±mÄ±yla yakÄ±ndan iliÅŸkili <Evidence level={5} />.
+            Kaynaklarda sÄ±k geÃ§en gram/kilogram aralÄ±klarÄ± klinik konuÅŸma iÃ§in bir referans olabilir; ama kiÅŸinin
+            kilosu, bÃ¶brek fonksiyonu, aktivite dÃ¼zeyi, iÅŸtahÄ± ve eÅŸlik eden hastalÄ±klarÄ± hedefi deÄŸiÅŸtirir. Benim
+iÃ§in daha gÃ¼venli yol ÅŸu: her ana Ã¶ÄŸÃ¼nde gÃ¼venilir bir protein kaynaÄŸÄ± dÃ¼ÅŸÃ¼nmek, sayÄ± hedefini ise
+            gerekiyorsa diyetisyen veya hekimle netleÅŸtirmek.
           </p>
           <p>
-            Yağlara gelince, doymuş ve doymamış yağ dengesi önemli <Evidence level={5} />. Omega-3 yağ asitleri
-            (balık, chia tohumu, ceviz, keten tohumu) iltihabi yükü azaltmaya ve beyin sağlığına katkıda
-            bulunabiliyor. Karbonhidrat seçimi kaliteli olmalı: tam tahıllar, sebzeler ve meyveler tercih edilir;
-            şeker ve beyaz tahıl sınırlanır <Evidence level={5} />. Lif, sindirim sağlığı ve doygunluk açısından
-            kritik bir başlık.
+            YaÄŸlara gelince, doymuÅŸ ve doymamÄ±ÅŸ yaÄŸ dengesi Ã¶nemli <Evidence level={5} />. Omega-3 yaÄŸ asitleri
+            (balÄ±k, chia tohumu, ceviz, keten tohumu) iltihabi yÃ¼kÃ¼ azaltmaya ve beyin saÄŸlÄ±ÄŸÄ±na katkÄ±da
+            bulunabiliyor. Karbonhidrat seÃ§imi kaliteli olmalÄ±: tam tahÄ±llar, sebzeler ve meyveler tercih edilir;
+            ÅŸeker ve beyaz tahÄ±l sÄ±nÄ±rlanÄ±r <Evidence level={5} />. Lif, sindirim saÄŸlÄ±ÄŸÄ± ve doygunluk aÃ§Ä±sÄ±ndan
+            kritik bir baÅŸlÄ±k.
           </p>
 
           <h2 id="mikronutrientler">Kritik Mikro Besinler</h2>
           <p>
-            Yorgunluk, unutkanlık veya çabuk tükenme hissi yaşıyorsan — bunu kendi haftalarımda da fark ettim —
-            bazı mikro besinleri gözden geçirmek anlamlı olabilir.
+            Yorgunluk, unutkanlÄ±k veya Ã§abuk tÃ¼kenme hissi yaÅŸÄ±yorsan â€” bunu kendi haftalarÄ±mda da fark ettim â€”
+            bazÄ± mikro besinleri gÃ¶zden geÃ§irmek anlamlÄ± olabilir.
           </p>
           <p>
-            B vitaminleri (B6, B12, folat) enerji üretimi, beyin sağlığı ve hücre bölünmesi için önemli
-            <Evidence level={5} />. B12, özellikle 50+ yaştan sonra emilim ve beslenme modeli nedeniyle hekimle
-            konuşmaya değer bir başlık; et, balık, yumurta ve süt ürünleri başlıca kaynaklar arasında. Demir ihtiyacı
-            menopoz sonrası dönemde aylık kanama durduğu için azalabiliyor; yine de eksiklik şüphesi varsa karar
-            kan tetkiki ve klinik değerlendirmeyle verilmelidir <Evidence level={5} />.
+            B vitaminleri (B6, B12, folat) enerji Ã¼retimi, beyin saÄŸlÄ±ÄŸÄ± ve hÃ¼cre bÃ¶lÃ¼nmesi iÃ§in Ã¶nemli
+            <Evidence level={5} />. B12, Ã¶zellikle 50+ yaÅŸtan sonra emilim ve beslenme modeli nedeniyle hekimle
+            konuÅŸmaya deÄŸer bir baÅŸlÄ±k; et, balÄ±k, yumurta ve sÃ¼t Ã¼rÃ¼nleri baÅŸlÄ±ca kaynaklar arasÄ±nda. Demir ihtiyacÄ±
+            menopoz sonrasÄ± dÃ¶nemde aylÄ±k kanama durduÄŸu iÃ§in azalabiliyor; yine de eksiklik ÅŸÃ¼phesi varsa karar
+            kan tetkiki ve klinik deÄŸerlendirmeyle verilmelidir <Evidence level={5} />.
           </p>
           <p>
-            Çinko bağışıklık sistemi ve cilt sağlığı açısından değerli <Evidence level={5} />. Magnezyum uyku, kas
-esnekliği ve kemik sağlığı zemininde konuşulabilir <Evidence level={5} />. Yeşil yapraklı sebzeler
-            (ıspanak, pazı), kuruyemişler ve tam tahıllar iyi kaynaklar. Kalsiyum ve D vitamini kemik sağlığı için
-            önemlidir; ama D vitamini düzeyi, kalsiyum ihtiyacı ve takviye gerekip gerekmediği kişisel risk ve
-            tetkiklerle birlikte değerlendirilmelidir.
-          </p>
-
-          <h2 id="antioksidanlar">Antioksidanlar ve Bitkisel Besin Bileşenleri</h2>
-          <p>
-            Tabağa renk eklemek yalnızca görsel bir tercih değil. Bunu fark etmem zaman aldı, ama mutfak alışverişimi
-            "ne kadar çok renk?" diye düşünmeye başladığımda her şey biraz değişti.
-          </p>
-          <p>
-            Renkli sebzeler (sarı, kırmızı, yeşil, mor) farklı antioksidanlar içerir ve iltihabi yükü dengelemeye
-            yardımcı olabiliyor <Evidence level={5} />. Meyveler (özellikle yaban mersini, çilek) hücre hasarına
-            karşı koruyucu bileşenler sağlıyor <Evidence level={5} />. Yeşil ve siyah çay, polifenoller gibi
-            bileşiklerle sağlıklı yaş alma sürecine katkıda bulunabiliyor <Evidence level={5} />. Zerdeçal gibi
-            baharatlar, kurkumin içeriğiyle iltihabi yanıtı azaltmaya yardımcı olabiliyor <Evidence level={4} />.
+            Ã‡inko baÄŸÄ±ÅŸÄ±klÄ±k sistemi ve cilt saÄŸlÄ±ÄŸÄ± aÃ§Ä±sÄ±ndan deÄŸerli <Evidence level={5} />. Magnezyum uyku, kas
+esnekliÄŸi ve kemik saÄŸlÄ±ÄŸÄ± zemininde konuÅŸulabilir <Evidence level={5} />. YeÅŸil yapraklÄ± sebzeler
+            (Ä±spanak, pazÄ±), kuruyemiÅŸler ve tam tahÄ±llar iyi kaynaklar. Kalsiyum ve D vitamini kemik saÄŸlÄ±ÄŸÄ± iÃ§in
+            Ã¶nemlidir; ama D vitamini dÃ¼zeyi, kalsiyum ihtiyacÄ± ve takviye gerekip gerekmediÄŸi kiÅŸisel risk ve
+            tetkiklerle birlikte deÄŸerlendirilmelidir.
           </p>
 
-          <h2 id="ogun-modeli">Beslenme Alışkanlıkları ve Öğün Modeli</h2>
+          <h2 id="antioksidanlar">Antioksidanlar ve Bitkisel Besin BileÅŸenleri</h2>
           <p>
-            Gün içinde enerjinin hızla düşüp yükselmesi çok tanıdık bir his. Düzenli öğünler kan şekeri ve enerji
-            seviyesini dengelemeye yardımcı oluyor <Evidence level={5} />. Sabit uyku-uyanış saati ve beslenme
-            ritmi biyolojik ritmi yumuşak tutuyor <Evidence level={4} />. Su tüketimi kişisel ihtiyaca göre
-            planlanmalı; yaşla birlikte susama hissi azalabildiği için bilinçli su içmek önem kazanıyor
+            TabaÄŸa renk eklemek yalnÄ±zca gÃ¶rsel bir tercih deÄŸil. Bunu fark etmem zaman aldÄ±, ama mutfak alÄ±ÅŸveriÅŸimi
+            "ne kadar Ã§ok renk?" diye dÃ¼ÅŸÃ¼nmeye baÅŸladÄ±ÄŸÄ±mda her ÅŸey biraz deÄŸiÅŸti.
+          </p>
+          <p>
+            Renkli sebzeler (sarÄ±, kÄ±rmÄ±zÄ±, yeÅŸil, mor) farklÄ± antioksidanlar iÃ§erir ve iltihabi yÃ¼kÃ¼ dengelemeye
+            yardÄ±mcÄ± olabiliyor <Evidence level={5} />. Meyveler (Ã¶zellikle yaban mersini, Ã§ilek) hÃ¼cre hasarÄ±na
+            karÅŸÄ± koruyucu bileÅŸenler saÄŸlÄ±yor <Evidence level={5} />. YeÅŸil ve siyah Ã§ay, polifenoller gibi
+            bileÅŸiklerle saÄŸlÄ±klÄ± yaÅŸ alma sÃ¼recine katkÄ±da bulunabiliyor <Evidence level={5} />. ZerdeÃ§al gibi
+            baharatlar, kurkumin iÃ§eriÄŸiyle iltihabi yanÄ±tÄ± azaltmaya yardÄ±mcÄ± olabiliyor <Evidence level={4} />.
+          </p>
+
+          <h2 id="ogun-modeli">Beslenme AlÄ±ÅŸkanlÄ±klarÄ± ve Ã–ÄŸÃ¼n Modeli</h2>
+          <p>
+            GÃ¼n iÃ§inde enerjinin hÄ±zla dÃ¼ÅŸÃ¼p yÃ¼kselmesi Ã§ok tanÄ±dÄ±k bir his. DÃ¼zenli Ã¶ÄŸÃ¼nler kan ÅŸekeri ve enerji
+            seviyesini dengelemeye yardÄ±mcÄ± oluyor <Evidence level={5} />. Sabit uyku-uyanÄ±ÅŸ saati ve beslenme
+            ritmi biyolojik ritmi yumuÅŸak tutuyor <Evidence level={4} />. Su tÃ¼ketimi kiÅŸisel ihtiyaca gÃ¶re
+            planlanmalÄ±; yaÅŸla birlikte susama hissi azalabildiÄŸi iÃ§in bilinÃ§li su iÃ§mek Ã¶nem kazanÄ±yor
             <Evidence level={5} />.
           </p>
           <p>
-            Porsiyon kontrolü, "diyet" gibi düşünmediğim ama gözden kaçıran bir başlık. Daha büyük porsiyonlar fark
-            etmeden enerji alımını artırabiliyor ve tokluk sinyallerini zorlayabiliyor <Evidence level={5} />.
-            Ultra-işlenmiş gıdalar (paketli atıştırmalıklar, hazır yemekler, şekerli içecekler) sınırlanması iyi
-            olan başlıklar arasında <Evidence level={5} />. Geçen gün Instagram'da bir hesabın paylaşımı dikkatimi
-            çekti: "İçeriğindeki üç sözcüğün anlamını söyleyemediğin bir paketi mutfağa almıyorum" demiş. Sade ama
-            işe yarayan bir filtre.
+            Porsiyon kontrolÃ¼, "diyet" gibi dÃ¼ÅŸÃ¼nmediÄŸim ama gÃ¶zden kaÃ§Ä±ran bir baÅŸlÄ±k. Daha bÃ¼yÃ¼k porsiyonlar fark
+            etmeden enerji alÄ±mÄ±nÄ± artÄ±rabiliyor ve tokluk sinyallerini zorlayabiliyor <Evidence level={5} />.
+            Ultra-iÅŸlenmiÅŸ gÄ±dalar (paketli atÄ±ÅŸtÄ±rmalÄ±klar, hazÄ±r yemekler, ÅŸekerli iÃ§ecekler) sÄ±nÄ±rlanmasÄ± iyi
+            olan baÅŸlÄ±klar arasÄ±nda <Evidence level={5} />. GeÃ§en gÃ¼n Instagram'da bir hesabÄ±n paylaÅŸÄ±mÄ± dikkatimi
+            Ã§ekti: "Ä°Ã§eriÄŸindeki Ã¼Ã§ sÃ¶zcÃ¼ÄŸÃ¼n anlamÄ±nÄ± sÃ¶yleyemediÄŸin bir paketi mutfaÄŸa almÄ±yorum" demiÅŸ. Sade ama
+            iÅŸe yarayan bir filtre.
           </p>
 
-          <h2 id="beslenme-sekilleri">Beslenme Şekilleri: Hangisi Uygun?</h2>
+          <h2 id="beslenme-sekilleri">Beslenme Åekilleri: Hangisi Uygun?</h2>
           <p>
-            Beslenme modeli seçerken amaç kendini sıkıştırmak değil, sürdürebileceğin bir ritim bulmak. Uzun süre
-            şöyle sandım: bir "doğru" plan vardır, onu bulan kazanır. Sonra anladım ki bunlar planlardan çok
-yaklaşımlar.
+            Beslenme modeli seÃ§erken amaÃ§ kendini sÄ±kÄ±ÅŸtÄ±rmak deÄŸil, sÃ¼rdÃ¼rebileceÄŸin bir ritim bulmak. Uzun sÃ¼re
+            ÅŸÃ¶yle sandÄ±m: bir "doÄŸru" plan vardÄ±r, onu bulan kazanÄ±r. Sonra anladÄ±m ki bunlar planlardan Ã§ok
+yaklaÅŸÄ±mlar.
           </p>
           <p>
-            Akdeniz tipi beslenme, menopoz döneminde güçlü kanıta sahip yaklaşımlardan biri <Evidence level={5} />.
-            Balık, zeytinyağı, sebzeler ve tam tahıl ağırlıklı olan bu yaklaşımın kalp ve beyin sağlığı yararları
-            geniş çalışmalarla gösterilmiş durumda. DASH yaklaşımı (kan basıncını destekleyen sebze-meyve-tam tahıl
-odaklı bir yaklaşım) hipertansiyon ve kalp damar sağlığı için tasarlanmış; menopoz döneminde de etkili
+            Akdeniz tipi beslenme, menopoz dÃ¶neminde gÃ¼Ã§lÃ¼ kanÄ±ta sahip yaklaÅŸÄ±mlardan biri <Evidence level={5} />.
+            BalÄ±k, zeytinyaÄŸÄ±, sebzeler ve tam tahÄ±l aÄŸÄ±rlÄ±klÄ± olan bu yaklaÅŸÄ±mÄ±n kalp ve beyin saÄŸlÄ±ÄŸÄ± yararlarÄ±
+            geniÅŸ Ã§alÄ±ÅŸmalarla gÃ¶sterilmiÅŸ durumda. DASH yaklaÅŸÄ±mÄ± (kan basÄ±ncÄ±nÄ± destekleyen sebze-meyve-tam tahÄ±l
+odaklÄ± bir yaklaÅŸÄ±m) hipertansiyon ve kalp damar saÄŸlÄ±ÄŸÄ± iÃ§in tasarlanmÄ±ÅŸ; menopoz dÃ¶neminde de etkili
             olabiliyor <Evidence level={5} />.
           </p>
           <p>
-            Vejetaryen ve vegan yaklaşımlar mümkün ama B12, demir ve protein kaynakları açısından dikkatli planlama
-            gerekiyor; bu noktada diyetisyen desteği özellikle değerli olabilir <Evidence level={4} />. Düşük
-            karbonhidrat planları bazı kadınlara uyarken, başkalarında enerji veya ruh hali dalgalanmasına yol
-            açabiliyor <Evidence level={4} />. Aralıklı oruç konusunda menopoza özgü çalışma sayısı sınırlı; bireysel
-            danışma önerilir <Evidence level={3} />.
+            Vejetaryen ve vegan yaklaÅŸÄ±mlar mÃ¼mkÃ¼n ama B12, demir ve protein kaynaklarÄ± aÃ§Ä±sÄ±ndan dikkatli planlama
+            gerekiyor; bu noktada diyetisyen desteÄŸi Ã¶zellikle deÄŸerli olabilir <Evidence level={4} />. DÃ¼ÅŸÃ¼k
+            karbonhidrat planlarÄ± bazÄ± kadÄ±nlara uyarken, baÅŸkalarÄ±nda enerji veya ruh hali dalgalanmasÄ±na yol
+            aÃ§abiliyor <Evidence level={4} />. AralÄ±klÄ± oruÃ§ konusunda menopoza Ã¶zgÃ¼ Ã§alÄ±ÅŸma sayÄ±sÄ± sÄ±nÄ±rlÄ±; bireysel
+            danÄ±ÅŸma Ã¶nerilir <Evidence level={3} />.
           </p>
           <p>
-Burada açık tuttuğum bir soru var: hangi yaklaşımın kime uyacağını kestirmek bende her zaman mümkün
-            olmuyor. Bir arkadaşıma yıllarca uymuş bir model, bir başka tanıdığımda ilk üç haftada yorgunluk
-yarattı. Bu yaklaşımlar birer plandan çok birer rota; rotanın doğru olup olmadığı yola çıktıktan
-            sonra netleşiyor. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
-          </p>
-
-          <h2 id="tercih-sinirla">Yiyecekler: Tercih Et, Sınırla</h2>
-          <p>
-            Alışveriş sepetini sadeleştirmek iyi bir başlangıç. Tercih ettiğim gıdalar: tam tahıllar, balık, tavuk,
-            yumurta, baklagiller, yeşil yapraklı sebzeler, meyveler, kuruyemişler ve tohumlar. Sınırlandırmaya değer
-            gıdalar: işlenmiş et, şekerli içecekler, ultra-işlenmiş ürünler ve aşırı tuz.
-          </p>
-          <p>
-            Kafein ve alkol için ayrı bir not: kafein uyku kalitesini bozabiliyor — öğleden sonra ikiden sonra
-            sınırlamak benim için iyi geldi. Alkol, sıcak basması ve uyku bölünmesini artırabiliyor; miktarı
-            azaltmak birçok kişi için daha güvenli bir yaklaşım <Evidence level={5} />. Bunu söylemek alkolü hayattan
-            çıkarmak değil; sadece bedeninin sana ne dediğini dinlemek.
+Burada aÃ§Ä±k tuttuÄŸum bir soru var: hangi yaklaÅŸÄ±mÄ±n kime uyacaÄŸÄ±nÄ± kestirmek bende her zaman mÃ¼mkÃ¼n
+            olmuyor. Bir arkadaÅŸÄ±ma yÄ±llarca uymuÅŸ bir model, bir baÅŸka tanÄ±dÄ±ÄŸÄ±mda ilk Ã¼Ã§ haftada yorgunluk
+yarattÄ±. Bu yaklaÅŸÄ±mlar birer plandan Ã§ok birer rota; rotanÄ±n doÄŸru olup olmadÄ±ÄŸÄ± yola Ã§Ä±ktÄ±ktan
+            sonra netleÅŸiyor. Bu benim yolum; sizinki baÅŸka olabilir â€” ve olmalÄ± da.
           </p>
 
-          <h2 id="ek-takviyeler">Takviye Kararı: Raf Değil, Değerlendirme</h2>
+          <h2 id="tercih-sinirla">Yiyecekler: Tercih Et, SÄ±nÄ±rla</h2>
           <p>
-            Takviye rafı kalabalık görünebilir; bunu kendi mutfak dolabımda da yıllar içinde yaşadım. Önce gerçekten
-            neye ihtiyacın olduğunu anlamak, rafı sadeleştirmenin en sade yolu.
+            AlÄ±ÅŸveriÅŸ sepetini sadeleÅŸtirmek iyi bir baÅŸlangÄ±Ã§. Tercih ettiÄŸim gÄ±dalar: tam tahÄ±llar, balÄ±k, tavuk,
+            yumurta, baklagiller, yeÅŸil yapraklÄ± sebzeler, meyveler, kuruyemiÅŸler ve tohumlar. SÄ±nÄ±rlandÄ±rmaya deÄŸer
+            gÄ±dalar: iÅŸlenmiÅŸ et, ÅŸekerli iÃ§ecekler, ultra-iÅŸlenmiÅŸ Ã¼rÃ¼nler ve aÅŸÄ±rÄ± tuz.
           </p>
           <p>
-            D vitamini, özellikle kış aylarında veya kapalı ortamlarda uzun saat geçirenlerde gündeme gelebilir
-            <Evidence level={5} />; ama doz ve süre kan düzeyi, kemik sağlığı, ilaçlar ve kişisel risklerle birlikte
-            belirlenir. Kalsiyum değerlendirmesi yalnızca tablete bakmaz; tabaktaki kalsiyumu, böbrek taşı öyküsünü
-            ve kemik riskini de hesaba katar <Evidence level={5} />. Omega-3, B12, magnezyum veya multivitamin için de
-            benim tuttuğum sınır aynı: eksiklik, beslenme modeli ya da klinik gerekçe yoksa raf alışkanlığı kararın
+            Kafein ve alkol iÃ§in ayrÄ± bir not: kafein uyku kalitesini bozabiliyor â€” Ã¶ÄŸleden sonra ikiden sonra
+            sÄ±nÄ±rlamak benim iÃ§in iyi geldi. Alkol, sÄ±cak basmasÄ± ve uyku bÃ¶lÃ¼nmesini artÄ±rabiliyor; miktarÄ±
+            azaltmak birÃ§ok kiÅŸi iÃ§in daha gÃ¼venli bir yaklaÅŸÄ±m <Evidence level={5} />. Bunu sÃ¶ylemek alkolÃ¼ hayattan
+            Ã§Ä±karmak deÄŸil; sadece bedeninin sana ne dediÄŸini dinlemek.
+          </p>
+
+          <h2 id="ek-takviyeler">Takviye KararÄ±: Raf DeÄŸil, DeÄŸerlendirme</h2>
+          <p>
+            Takviye rafÄ± kalabalÄ±k gÃ¶rÃ¼nebilir; bunu kendi mutfak dolabÄ±mda da yÄ±llar iÃ§inde yaÅŸadÄ±m. Ã–nce gerÃ§ekten
+            neye ihtiyacÄ±n olduÄŸunu anlamak, rafÄ± sadeleÅŸtirmenin en sade yolu.
+          </p>
+          <p>
+            D vitamini, Ã¶zellikle kÄ±ÅŸ aylarÄ±nda veya kapalÄ± ortamlarda uzun saat geÃ§irenlerde gÃ¼ndeme gelebilir
+            <Evidence level={5} />; ama doz ve sÃ¼re kan dÃ¼zeyi, kemik saÄŸlÄ±ÄŸÄ±, ilaÃ§lar ve kiÅŸisel risklerle birlikte
+            belirlenir. Kalsiyum deÄŸerlendirmesi yalnÄ±zca tablete bakmaz; tabaktaki kalsiyumu, bÃ¶brek taÅŸÄ± Ã¶ykÃ¼sÃ¼nÃ¼
+            ve kemik riskini de hesaba katar <Evidence level={5} />. Omega-3, B12, magnezyum veya multivitamin iÃ§in de
+            benim tuttuÄŸum sÄ±nÄ±r aynÄ±: eksiklik, beslenme modeli ya da klinik gerekÃ§e yoksa raf alÄ±ÅŸkanlÄ±ÄŸÄ± kararÄ±n
             yerini tutmaz <Evidence level={4} />.
           </p>
           <p>
-            Hekimimle bir konuşmamızda magnezyum gündeme gelmişti; "ihtiyacının ne olduğunu önce kayıttan görelim,
-            sonra tabakla karşılayabiliyor muyuz bakalım" demişti. Tanıdığım bir kadın bana benzer bir gözlemi
-            anlatmıştı — yıllar boyu "uyku için magnezyum" diye duymuş, sonunda hekimle konuştuğunda kan tetkikleri,
-            ilaçları ve böbrek fonksiyonuyla birlikte planlamak farklı bir konfor sağlamış. Benim için takviye kararı
-            böyle bir kontrol sorusuna dönüştü; senin yolun farklı olabilir, kendi hekimin veya diyetisyeninle
-            konuşman bu kararın temeli.
+            Hekimimle bir konuÅŸmamÄ±zda magnezyum gÃ¼ndeme gelmiÅŸti; "ihtiyacÄ±nÄ±n ne olduÄŸunu Ã¶nce kayÄ±ttan gÃ¶relim,
+            sonra tabakla karÅŸÄ±layabiliyor muyuz bakalÄ±m" demiÅŸti. TanÄ±dÄ±ÄŸÄ±m bir kadÄ±n bana benzer bir gÃ¶zlemi
+            anlatmÄ±ÅŸtÄ± â€” yÄ±llar boyu "uyku iÃ§in magnezyum" diye duymuÅŸ, sonunda hekimle konuÅŸtuÄŸunda kan tetkikleri,
+            ilaÃ§larÄ± ve bÃ¶brek fonksiyonuyla birlikte planlamak farklÄ± bir konfor saÄŸlamÄ±ÅŸ. Benim iÃ§in takviye kararÄ±
+            bÃ¶yle bir kontrol sorusuna dÃ¶nÃ¼ÅŸtÃ¼; senin yolun farklÄ± olabilir, kendi hekimin veya diyetisyeninle
+            konuÅŸman bu kararÄ±n temeli.
           </p>
 
-          <h2 id="kisisellestirme">Kişiselleştirilmiş Yaklaşım</h2>
+          <h2 id="kisisellestirme">KiÅŸiselleÅŸtirilmiÅŸ YaklaÅŸÄ±m</h2>
           <p>
-            Senin tabağın başkasının planıyla bire bir aynı olmak zorunda değil.
+            Senin tabaÄŸÄ±n baÅŸkasÄ±nÄ±n planÄ±yla bire bir aynÄ± olmak zorunda deÄŸil.
           </p>
           <p>
-            Beslenme ihtiyaçları kişiden kişiye değişir; kronik hastalık (diyabet, hipertansiyon), ilaçlar,
-sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) yolu şekillendiriyor. Bir
-            diyetisyen veya beslenme danışmanından tavsiye almak — özellikle kronik hastalık varsa — kişiye
-            uygun bir plan oluşturmayı kolaylaştırıyor. Geri kalanı zamanın ve bedenin sana verdiği geri
-            bildirimin işi.
+            Beslenme ihtiyaÃ§larÄ± kiÅŸiden kiÅŸiye deÄŸiÅŸir; kronik hastalÄ±k (diyabet, hipertansiyon), ilaÃ§lar,
+sindirim baÅŸlÄ±klarÄ± veya belirli kÄ±sÄ±tlamalar (alerji, intolerans) yolu ÅŸekillendiriyor. Bir
+            diyetisyen veya beslenme danÄ±ÅŸmanÄ±ndan tavsiye almak â€” Ã¶zellikle kronik hastalÄ±k varsa â€” kiÅŸiye
+            uygun bir plan oluÅŸturmayÄ± kolaylaÅŸtÄ±rÄ±yor. Geri kalanÄ± zamanÄ±n ve bedenin sana verdiÄŸi geri
+            bildirimin iÅŸi.
           </p>
 
-          <h2 id="kapanis">Kapanış</h2>
+          <h2 id="kapanis">KapanÄ±ÅŸ</h2>
           <p>
-            Tabak, küçük tutarlılıkların aynası — büyük dönüşümün değil.
+            Tabak, kÃ¼Ã§Ã¼k tutarlÄ±lÄ±klarÄ±n aynasÄ± â€” bÃ¼yÃ¼k dÃ¶nÃ¼ÅŸÃ¼mÃ¼n deÄŸil.
           </p>
           <p>
-            Yıllar içinde benim için ortaya çıkan en sade gerçek şu: dengeli beslenmenin sırrı katı bir plan
-            değil, haftaya yayılan küçük tutarlılıklar. Bir akşam zeytinyağıyla pişmiş sebze, ertesi sabah
-            yumurta-yoğurt-tam tahıl üçlüsü, gün içinde bir avuç kuruyemiş, akşam masasına oturduğunda
-            telefonu uzaklaştırmak. Bunların hiçbiri kahramanlık değil; kendine ayrılmış küçük zaman dilimleri.
+            YÄ±llar iÃ§inde benim iÃ§in ortaya Ã§Ä±kan en sade gerÃ§ek ÅŸu: dengeli beslenmenin sÄ±rrÄ± katÄ± bir plan
+            deÄŸil, haftaya yayÄ±lan kÃ¼Ã§Ã¼k tutarlÄ±lÄ±klar. Bir akÅŸam zeytinyaÄŸÄ±yla piÅŸmiÅŸ sebze, ertesi sabah
+            yumurta-yoÄŸurt-tam tahÄ±l Ã¼Ã§lÃ¼sÃ¼, gÃ¼n iÃ§inde bir avuÃ§ kuruyemiÅŸ, akÅŸam masasÄ±na oturduÄŸunda
+            telefonu uzaklaÅŸtÄ±rmak. BunlarÄ±n hiÃ§biri kahramanlÄ±k deÄŸil; kendine ayrÄ±lmÄ±ÅŸ kÃ¼Ã§Ã¼k zaman dilimleri.
           </p>
           <p>
-            Belki şu soru yardımcı olur: bu hafta tabağa hangi rengi yargılamadan, sadece ekleme niyetiyle
-            koyabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti; sen
-            tabağa o cümlenin cevabını koyuyorsun.
+            Belki ÅŸu soru yardÄ±mcÄ± olur: bu hafta tabaÄŸa hangi rengi yargÄ±lamadan, sadece ekleme niyetiyle
+            koyabilirim? Karar kendi kararÄ±n, sorumluluÄŸu da kendine ait. Beden bir cÃ¼mle sÃ¶ylemiÅŸti; sen
+            tabaÄŸa o cÃ¼mlenin cevabÄ±nÄ± koyuyorsun.
           </p>
         </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
         <RelatedReadings
           class="mt-14"
@@ -269,41 +277,41 @@ sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) yolu şe
         />
 
         <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
           <p class="mb-3 leading-relaxed text-ink/80">
-            40 sonrası ve menopoz geçişindeki beslenme stratejisi, bazal metabolizma yavaşlaması, sarkopenik
-            eğilim, östrojen düşüşüne bağlı yağ dağılımı kayması ve mikro besin emilim dinamiklerindeki
-            değişimler birlikte değerlendirilerek kurulur. Tek bir diyet modeli evrensel doğru değildir;
-            mekanizma çoklu eksenlidir.
+            40 sonrasÄ± ve menopoz geÃ§iÅŸindeki beslenme stratejisi, bazal metabolizma yavaÅŸlamasÄ±, sarkopenik
+            eÄŸilim, Ã¶strojen dÃ¼ÅŸÃ¼ÅŸÃ¼ne baÄŸlÄ± yaÄŸ daÄŸÄ±lÄ±mÄ± kaymasÄ± ve mikro besin emilim dinamiklerindeki
+            deÄŸiÅŸimler birlikte deÄŸerlendirilerek kurulur. Tek bir diyet modeli evrensel doÄŸru deÄŸildir;
+            mekanizma Ã§oklu eksenlidir.
           </p>
           <p class="mb-3 leading-relaxed text-ink/80">
-Akdeniz tipi yaklaşım, kardiyovasküler sağlık, kemik koruma ve nörobilişsel parametreler üzerinde en
-            tutarlı kanıt seviyesine sahip yaklaşımdır. Yeterli protein alımı, kaliteli yağ asidi profili (omega-3
-            dengesi), tam tahıl ve sebze ağırlıklı lif tüketimi temel sütunlardır; ancak gram/kilogram protein hedefi
-            klinik durum, böbrek fonksiyonu, aktivite düzeyi ve beslenme örüntüsüne göre hekim veya diyetisyenle
-            kişiselleştirilmelidir.
+Akdeniz tipi yaklaÅŸÄ±m, kardiyovaskÃ¼ler saÄŸlÄ±k, kemik koruma ve nÃ¶robiliÅŸsel parametreler Ã¼zerinde en
+            tutarlÄ± kanÄ±t seviyesine sahip yaklaÅŸÄ±mdÄ±r. Yeterli protein alÄ±mÄ±, kaliteli yaÄŸ asidi profili (omega-3
+            dengesi), tam tahÄ±l ve sebze aÄŸÄ±rlÄ±klÄ± lif tÃ¼ketimi temel sÃ¼tunlardÄ±r; ancak gram/kilogram protein hedefi
+            klinik durum, bÃ¶brek fonksiyonu, aktivite dÃ¼zeyi ve beslenme Ã¶rÃ¼ntÃ¼sÃ¼ne gÃ¶re hekim veya diyetisyenle
+            kiÅŸiselleÅŸtirilmelidir.
           </p>
           <p class="mb-3 leading-relaxed text-ink/80">
-            D vitamini, B12, kalsiyum ve magnezyum sık konuşulan mikro besin başlıklarıdır; fakat bu başlıkların
-            hiçbiri otomatik takviye anlamına gelmez. Takviye kararı kan tetkikleri, beslenme modeli, ilaçlar,
-            böbrek/karaciğer fonksiyonu ve klinik tabloya göre kişiselleştirilir; "raf alışkanlığı" yerine eksiklik
-            veya açık klinik gerekçe temelli destek tercih edilmelidir.
+            D vitamini, B12, kalsiyum ve magnezyum sÄ±k konuÅŸulan mikro besin baÅŸlÄ±klarÄ±dÄ±r; fakat bu baÅŸlÄ±klarÄ±n
+            hiÃ§biri otomatik takviye anlamÄ±na gelmez. Takviye kararÄ± kan tetkikleri, beslenme modeli, ilaÃ§lar,
+            bÃ¶brek/karaciÄŸer fonksiyonu ve klinik tabloya gÃ¶re kiÅŸiselleÅŸtirilir; "raf alÄ±ÅŸkanlÄ±ÄŸÄ±" yerine eksiklik
+            veya aÃ§Ä±k klinik gerekÃ§e temelli destek tercih edilmelidir.
           </p>
           <p class="mb-3 leading-relaxed text-ink/80">
-            Kronik hastalık (tip 2 diyabet, hipertansiyon, hipotiroidi vb.), ilaç etkileşimleri, sindirim
-            sistemi başlıkları ve gıda intoleransları olan kadınlarda planın bir hekim ve/veya diyetisyen
-            eşliğinde kişiselleştirilmesi en güvenli yoldur. Aralıklı oruç gibi popüler yaklaşımların menopoz
-            spesifik kanıt seviyesi sınırlıdır; bireysel değerlendirme önerilir.
+            Kronik hastalÄ±k (tip 2 diyabet, hipertansiyon, hipotiroidi vb.), ilaÃ§ etkileÅŸimleri, sindirim
+            sistemi baÅŸlÄ±klarÄ± ve gÄ±da intoleranslarÄ± olan kadÄ±nlarda planÄ±n bir hekim ve/veya diyetisyen
+            eÅŸliÄŸinde kiÅŸiselleÅŸtirilmesi en gÃ¼venli yoldur. AralÄ±klÄ± oruÃ§ gibi popÃ¼ler yaklaÅŸÄ±mlarÄ±n menopoz
+            spesifik kanÄ±t seviyesi sÄ±nÄ±rlÄ±dÄ±r; bireysel deÄŸerlendirme Ã¶nerilir.
           </p>
           <p class="text-sm italic text-burgundy">
-            — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+            â€” DoÃ§. Dr. Senai Aksoy, Estranova Bilimsel EditÃ¶rÃ¼
           </p>
         </section>
 
         <section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
           <p class="text-sm leading-relaxed text-ink/75">
-            Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
-            kendi hekiminizle birlikte değerlendirme yapınız.
+            Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme, tanÄ± veya tedavinin yerini almaz. SaÄŸlÄ±k kararlarÄ±nÄ±z iÃ§in
+            kendi hekiminizle birlikte deÄŸerlendirme yapÄ±nÄ±z.
           </p>
         </section>
     </SubmenuArticleBody>
@@ -311,3 +319,4 @@ Akdeniz tipi yaklaşım, kardiyovasküler sağlık, kemik koruma ve nörobilişs
 
   <SiteFooter />
 </SiteLayout>
+

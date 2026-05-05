@@ -12,7 +12,9 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik']!;
@@ -28,12 +30,14 @@ const tocEntries = [
   { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sss', label: 'S?k?a Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Östrojen Biyolojisi ve Sağlık — Tek Hormon Değil, Bir Aile';
 const articleDescription =
   'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler ER-α ve ER-β reseptörleri üzerinden; yaşam boyu yolculuk; metabolizma karaciğerden mikrobiyotaya (estrobolome); endojen vs eksojen (HRT) çerçevesi; östrojen-kanser ilişkisinin karmaşık tablosu — bilimsel mekanizmalardan klinik kararların pratik sınırlarına kadar.';
+const faqItems = articleFaqs['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -43,6 +47,8 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere',
   keywords: ['östrojen', 'estradiol', 'estron', 'estriol', 'estetrol', 'ER-alfa', 'ER-beta', 'GSM', 'HRT', 'estrobolome', 'menopoz'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -384,6 +390,8 @@ const articleSchemas = buildArticleSchemas({
           nasıl olacak. Sorunun kendisi cevabın yarısıdır.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

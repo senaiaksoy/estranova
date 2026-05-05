@@ -8,7 +8,9 @@ import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const tocEntries = [
@@ -22,11 +24,13 @@ const tocEntries = [
   { id: 'yol-haritasi', label: 'İlk 12 Ay' },
   { id: 'iyi-olus', label: 'İyi Oluş Alışkanlıkları' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopoz Nedir? - Temel Rehber';
 const articleDescription = 'Menopozun tanımını, evrelerini, belirtilerini ve uzun vadeli sağlık gündemini ele alan sade rehber.';
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/menopoz-nedir'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -36,6 +40,8 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis',
   keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -207,6 +213,8 @@ Beslenmede ise yeterli protein, renkli sebze-meyve, kaliteli yağ kaynakları ve
             söylemişti; sen onu kendi haritana yazıyorsun.
           </p>
         </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
         <RelatedReadings
           class="mt-14"
           paths={[
@@ -254,6 +262,7 @@ rehberdir. HRT ve diğer tıbbi seçenekler kişisel risk-fayda dengesinde değe
 
   <SiteFooter />
 </SiteLayout>
+
 
 
 

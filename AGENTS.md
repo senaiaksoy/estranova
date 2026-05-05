@@ -156,6 +156,7 @@ The visual shell is **not** optional for new `.astro` articles under `src/pages/
    - **Kısa Özet** (or equivalent intro) in the gold-tint summary card class used on current pages.
    - Main text: **`ArticleProsePanel`** only — do **not** put `prose` on a bare `<section>`; the panel supplies the white card + typography.
    - Extra prose blocks (e.g. “Kısa Hatırlatma”): second **`ArticleProsePanel`** with `class="mt-10"` (and more if needed).
+   - **`ArticleFAQ`** — visible **Sıkça Sorulan Sorular** bloğu zorunlu. `src/data/article-faqs.ts` veya sayfaya özel `faqItems` kaynağı kullan; 3–5 konuya özgü gerçek soru, her yanıtta 2–3 cümle. Yerleşim: ana gövdenin ardından, `RelatedReadings` öncesi.
    - **İlgili İçerikler** (cream panel), optional **Bilimsel editör notu** (gradient left-border panel), **disclaimer** (dashed border card) — match classes from an updated article such as `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro`.
 4. **Imports:** `../../components/site/...` from `src/pages/<section>/`; add one `../` per extra directory level (e.g. `hormonal-gecis/menopoz/` → `../../../components/site/`).
 5. **CMS / JSON-driven articles** rendered by `src/pages/article/[slug].astro` already use `SubmenuArticleBody` + `ArticleProsePanel` for HTML body; follow the same content blocks in `src/data/articles` (title, excerpt, transparency, disclaimer).
@@ -204,11 +205,13 @@ Every published article ships with schema.org JSON-LD so search engines and assi
 **Usage (in article frontmatter):**
 ```astro
 import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Makale Başlığı';
 const articleDescription = 'Kısa 1-2 cümle SEO meta açıklama.';
+const faqItems = articleFaqs['/zihin-denge/slug'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -218,6 +221,7 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Zihin & Denge',    // human label
   sectionPath: '/zihin-denge',        // hub URL path
   keywords: ['menopoz', 'uyku', '…'],
+  faqItems,
   siteUrl,
 });
 ```
@@ -231,10 +235,11 @@ Then pass to `SiteLayout`:
 >
 ```
 
-**What the helper emits (3 schemas, appended to SiteLayout's default WebSite + Organization):**
+**What the helper emits (4 schemas, appended to SiteLayout's default WebSite + Organization):**
 - **`MedicalWebPage`** — `name`, `description`, `url`, `inLanguage: 'tr-TR'`, `datePublished`/`dateModified` (ISO), `reviewedBy: Person` (Doç. Dr. Senai Aksoy default).
 - **`Article`** — `headline`, `description`, ISO dates, `mainEntityOfPage`, `articleSection`, `keywords`, `author: Person` (resolved from `writers.ts` — includes `name`, `jobTitle`, `description`, `image`, `url: /yayin-kurulu`), `publisher: Organization` (with logo), `reviewedBy: Person`.
 - **`BreadcrumbList`** — Anasayfa → (optional) articleSection → Article title.
+- **`FAQPage`** — `faqItems` verildiğinde otomatik eklenir. Bu artık tüm yayın makalelerinde zorunlu yüzeydir; görünür `ArticleFAQ` bloğundaki soru-cevaplarla birebir aynı kaynaktan beslenmelidir.
 
 **Category ↔ path map:**
 - `/zihin-denge/…` → `articleSection: 'Zihin & Denge'`, `sectionPath: '/zihin-denge'`
@@ -249,6 +254,7 @@ Then pass to `SiteLayout`:
 - Pass absolute URLs in `pathname` — the helper prepends `siteUrl` and handles double-slash prevention.
 - Override `medicalReviewer`/`medicalReviewerTitle` unless the article is genuinely reviewed by a different person (editorial coordination first).
 - Omit `writerSlug` — every article has a named author resolved from `writers.ts`.
+- Ayrı bir FAQ kaynağı yazıp sayfadaki görünür blokla schema'yı drift'e bırakma — `ArticleFAQ` ve `buildArticleSchemas({ faqItems })` aynı veri kaynağını kullanmalı.
 
 **Dynamic articles** rendered via `src/pages/article/[slug].astro` keep their existing inline schema (richer: citations, reviewer roles). The helper is for the 17 static hub-style articles.
 
@@ -378,7 +384,7 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 - **Yazar persona:** Tıp dışı 40+ kadın yaşıt; Vogue / Elle / Marie Claire tonu. Hekim perspektifi **YASAK**.
 - **Dış URL link YASAK** — yumuşak referans (“araştırmalar gösteriyor”) kabul. Kuruluş adı (NAMS / NICE / Mayo vb.) cümle içine yerleştirme **YASAK**.
 - **Humanize:** Her makalede en az 1 yaşıt / deneyim cümlesi.
-- **FAQ:** `pratik_veya_sss` 3–5 konuya özgü gerçek soru.
+- **FAQ:** `pratik_veya_sss` 3–5 konuya özgü gerçek soru; yayınlanan sayfada görünür `ArticleFAQ` bloğu ve `FAQPage` schema'sı ile birebir karşılığı bulunmalı.
 
 Kural detayı: **`CLAUDE.md`** (§3 + §4 alt bölümleri). Operasyonel detay: **[docs/PIPELINE.md](docs/PIPELINE.md)** + **[docs/style-rules-map.md](docs/style-rules-map.md)**.
 

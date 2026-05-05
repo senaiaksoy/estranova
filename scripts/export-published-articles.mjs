@@ -26,6 +26,7 @@ const ROOT = path.resolve(__dirname, '..');
 const PAGES_DIR = path.join(ROOT, 'src/pages');
 const DIST_DIR = path.join(ROOT, 'dist');
 const ARSIV_DIR = path.join(ROOT, 'icerik/yayinlanmis-makaleler');
+const APPROVALS_FILE = path.join(ROOT, 'src/data/article-approvals.ts');
 const VAULT_DIR =
   process.env.ESTRANOVA_VAULT_ARTICLES_DIR ||
   'D:/A-klasör/obsidian-vaults/draksoyivf-knowledge/wiki/sites/estranova/articles';
@@ -84,6 +85,11 @@ async function findAstroArticles(dir, results = []) {
     }
   }
   return results;
+}
+
+async function loadApprovedPathnames() {
+  const src = await fs.readFile(APPROVALS_FILE, 'utf-8');
+  return new Set([...src.matchAll(/pathname:\s*['"`]([^'"`]+)['"`]/g)].map((m) => m[1]));
 }
 
 function extractFrontmatterField(fm, regex) {
@@ -427,6 +433,7 @@ async function main() {
   }
 
   const articles = await findAstroArticles(PAGES_DIR);
+  const approvedPathnames = await loadApprovedPathnames();
   console.log(`Bulunan Astro page: ${articles.length}\n`);
 
   const exported = [];
@@ -441,6 +448,11 @@ async function main() {
       if (result.skipped) {
         skipped.push({ rel, reason: result.reason });
         console.log(`SKIP  ${rel}  (${result.reason})`);
+        continue;
+      }
+      if (!approvedPathnames.has(result.fm.pathname)) {
+        skipped.push({ rel, reason: 'approval kaydi yok' });
+        console.log(`SKIP  ${rel}  (approval kaydi yok)`);
         continue;
       }
       const { vaultWritten } = await writeBoth(result.relPath, result.md);

@@ -11,6 +11,7 @@ import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const route = '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz';
@@ -35,6 +36,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi';
 const articleDescription =
   'Menopozda cinsel istek nasıl değişir, neden tek bir nedene bağlanamaz, hangi seçenekler vardır? Yargısız, jargonsuz ve çözüm odaklı bir okuma.';
+const faqItems = articleFaqs[route] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,

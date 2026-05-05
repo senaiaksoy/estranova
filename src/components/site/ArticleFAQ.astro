@@ -1,0 +1,50 @@
+---
+import type { ArticleFaqItem } from '../../data/article-faqs';
+
+interface Props {
+  items: ArticleFaqItem[];
+  class?: string;
+  title?: string;
+  intro?: string;
+  id?: string;
+}
+
+const {
+  items,
+  class: className,
+  title = 'Sıkça Sorulan Sorular',
+  intro = 'Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.',
+  id = 'sss',
+} = Astro.props;
+---
+
+{items.length > 0 && (
+  <section
+    id={id}
+    class:list={[
+      'rounded-[28px] border border-burgundy/12 bg-gradient-to-br from-white to-cream-soft/75 p-7 shadow-sm ring-1 ring-burgundy/8 md:p-8',
+      className,
+    ]}
+  >
+    <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Pratik Sorular</p>
+    <h2 class="mt-3 font-serif text-3xl text-ink">{title}</h2>
+    <p class="mt-3 max-w-3xl leading-relaxed text-ink/72">{intro}</p>
+
+    <div class="mt-8 space-y-4">
+      {items.map((item) => (
+        <details class="group rounded-[22px] border border-burgundy/12 bg-white/95 p-5 ring-1 ring-burgundy/8">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left font-serif text-xl leading-snug text-ink marker:hidden">
+            <span>{item.question}</span>
+            <span
+              aria-hidden="true"
+              class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gold/50 text-sm text-burgundy transition group-open:rotate-45"
+            >
+              +
+            </span>
+          </summary>
+          <p class="mt-4 leading-relaxed text-ink/78">{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+)}

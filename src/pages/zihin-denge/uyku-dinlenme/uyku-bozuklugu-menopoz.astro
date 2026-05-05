@@ -13,7 +13,9 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz']!;
@@ -28,12 +30,14 @@ const tocEntries = [
   { id: 'uzman-ne-zaman', label: 'Ne Zaman Uzmana Başvurmalı' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Uyku Bozukluğu — Dinlenme Rehberi';
 const articleDescription =
   'Menopozda uyku neden bozulur, hangi belirtiler yaygın, hangi adımlar denenebilir? Hormonal geçişin içinden geçen bir yaşıt perspektifinden, sakin bir uyku rehberi.';
+const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -43,6 +47,8 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
   keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -289,6 +295,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
+      <ArticleFAQ items={faqItems} class="mt-10" />
+
       <RelatedReadings
           class="mt-14"
           paths={[
@@ -354,3 +362,4 @@ const articleSchemas = buildArticleSchemas({
 
   <SiteFooter />
 </SiteLayout>
+

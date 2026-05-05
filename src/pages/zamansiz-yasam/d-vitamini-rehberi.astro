@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -13,36 +13,42 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const hero = submenuHeroByRoute['/zamansiz-yasam/d-vitamini-rehberi']!;
 
 const tocEntries = [
-  { id: 'vitamin-mi-hormon-mu', label: 'D Vitamini — Vitamin mi Hormon mu?' },
-  { id: 'kan-degeri', label: 'Kan Değeri Yorumu — Eksiklik Ne Demek?' },
-  { id: 'turkiye-yaygin', label: "Türkiye'de Niye Bu Kadar Yaygın?" },
-  { id: 'postmenopozal', label: 'Postmenopozal Kadında Özel Önem' },
-  { id: 'tarama-dozaj', label: 'Tarama ve Dozaj — Tek Reçete Yok' },
-  { id: 'toksisite', label: 'Toksisite ve Etkileşimler' },
-  { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
-  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'vitamin-mi-hormon-mu', label: 'D Vitamini â€” Vitamin mi Hormon mu?' },
+  { id: 'kan-degeri', label: 'Kan DeÄŸeri Yorumu â€” Eksiklik Ne Demek?' },
+  { id: 'turkiye-yaygin', label: "TÃ¼rkiye'de Niye Bu Kadar YaygÄ±n?" },
+  { id: 'postmenopozal', label: 'Postmenopozal KadÄ±nda Ã–zel Ã–nem' },
+  { id: 'tarama-dozaj', label: 'Tarama ve Dozaj â€” Tek ReÃ§ete Yok' },
+  { id: 'toksisite', label: 'Toksisite ve EtkileÅŸimler' },
+  { id: 'iletisim', label: 'Doktora Hangi SorularÄ± SormalÄ±?' },
+  { id: 'sik-sorulanlar', label: 'SÄ±kÃ§a Sorulanlar' },
+  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar';
+const articleTitle = 'D Vitamini Rehberi â€” Tarama, Dozaj ve Bireysel Karar';
 const articleDescription =
-  'D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel. Vitamin mi hormon mu? Kan değeri yorumu, Türkiye\'de niye bu kadar yaygın, postmenopozal kadında özel önemi, tarama ve dozaj çerçevesi, toksisite ve doktora sormak gereken sorular — pazarlama değil, klinik çerçeve.';
+  'D vitamini herkesin gÃ¼ndeminde ama dozaj ve takip kararÄ± bireysel. Vitamin mi hormon mu? Kan deÄŸeri yorumu, TÃ¼rkiye\'de niye bu kadar yaygÄ±n, postmenopozal kadÄ±nda Ã¶zel Ã¶nemi, tarama ve dozaj Ã§erÃ§evesi, toksisite ve doktora sormak gereken sorular â€” pazarlama deÄŸil, klinik Ã§erÃ§eve.';
+const faqItems = articleFaqs['/zamansiz-yasam/d-vitamini-rehberi'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
-  publishedDate: '2 Mayıs 2026',
+  publishedDate: '2 MayÄ±s 2026',
   pathname: '/zamansiz-yasam/d-vitamini-rehberi',
-  articleSection: 'Zamansız Yaşam',
+  articleSection: 'ZamansÄ±z YaÅŸam',
   sectionPath: '/zamansiz-yasam',
-  keywords: ['D vitamini', '25-OH-D', 'menopoz', 'kemik sağlığı', 'osteoporoz', 'güneş', 'takviye', 'tarama', 'kalsiyum', 'K2'],
+  keywords: ['D vitamini', '25-OH-D', 'menopoz', 'kemik saÄŸlÄ±ÄŸÄ±', 'osteoporoz', 'gÃ¼neÅŸ', 'takviye', 'tarama', 'kalsiyum', 'K2'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -57,15 +63,15 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zamansız Yaşam · Vitaminler"
-      title="D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar"
+      eyebrow="ZamansÄ±z YaÅŸam Â· Vitaminler"
+      title="D Vitamini Rehberi â€” Tarama, Dozaj ve Bireysel Karar"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="2 Mayıs 2026" readingMinutes={9} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="2 MayÄ±s 2026" readingMinutes={9} />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
@@ -78,280 +84,282 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
       >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
         <p class="leading-relaxed text-ink/80">
-          D vitamini muayenehaneme gelen kadınların büyük çoğunluğunda — özellikle postmenopozal
-          grupta — gördüğüm en sık eksiklik tablolarından biri. <em>"Herkes eksik"</em> söylemi
-          gerçek bir epidemiyolojik tabana oturuyor; ama dozaj, takip ve hangi durumda
-          yüksek-doz yükleme yapılacağı kararı <em>bireysel</em>. Bu yazı D vitamini'nin
-          gerçekte bir hormon olduğunu, kan değeri yorumunun nasıl okunduğunu, Türkiye'de niye
-          bu kadar yaygın olduğunu, postmenopozal kadında neden özel önem taşıdığını,
-          tarama-dozaj rehberini, toksisite riskini ve doktorunuza ne sormanız gerektiğini
-          birlikte koyuyor — pazarlama değil, klinik notlar.
+          D vitamini muayenehaneme gelen kadÄ±nlarÄ±n bÃ¼yÃ¼k Ã§oÄŸunluÄŸunda â€” Ã¶zellikle postmenopozal
+          grupta â€” gÃ¶rdÃ¼ÄŸÃ¼m en sÄ±k eksiklik tablolarÄ±ndan biri. <em>"Herkes eksik"</em> sÃ¶ylemi
+          gerÃ§ek bir epidemiyolojik tabana oturuyor; ama dozaj, takip ve hangi durumda
+          yÃ¼ksek-doz yÃ¼kleme yapÄ±lacaÄŸÄ± kararÄ± <em>bireysel</em>. Bu yazÄ± D vitamini'nin
+          gerÃ§ekte bir hormon olduÄŸunu, kan deÄŸeri yorumunun nasÄ±l okunduÄŸunu, TÃ¼rkiye'de niye
+          bu kadar yaygÄ±n olduÄŸunu, postmenopozal kadÄ±nda neden Ã¶zel Ã¶nem taÅŸÄ±dÄ±ÄŸÄ±nÄ±,
+          tarama-dozaj rehberini, toksisite riskini ve doktorunuza ne sormanÄ±z gerektiÄŸini
+          birlikte koyuyor â€” pazarlama deÄŸil, klinik notlar.
         </p>
       </section>
 
       <ArticleProsePanel>
-        <h2 id="vitamin-mi-hormon-mu">D Vitamini — Vitamin mi Hormon mu?</h2>
+        <h2 id="vitamin-mi-hormon-mu">D Vitamini â€” Vitamin mi Hormon mu?</h2>
         <p>
-          Adı <em>"vitamin"</em> ama biyolojik olarak <em>hormon</em> gibi davranıyor.
-          Vitaminler genellikle dışarıdan alınan ve vücudun kendi üretmediği maddelerdir;
-          oysa D vitamini'nin baskın kaynağı dışarıdan değil, <strong>kendi cildimiz</strong>:
-          ultraviyole B (UVB) ışınları cilt altındaki kolesterol türevini D3'e dönüştürüyor
-          <Evidence level={5} />. Sonra karaciğerde 25-hidroksi-D'ye (depo formu),
-          böbrekte 1,25-dihidroksi-D'ye (aktif form) dönüşüyor.
+          AdÄ± <em>"vitamin"</em> ama biyolojik olarak <em>hormon</em> gibi davranÄ±yor.
+          Vitaminler genellikle dÄ±ÅŸarÄ±dan alÄ±nan ve vÃ¼cudun kendi Ã¼retmediÄŸi maddelerdir;
+          oysa D vitamini'nin baskÄ±n kaynaÄŸÄ± dÄ±ÅŸarÄ±dan deÄŸil, <strong>kendi cildimiz</strong>:
+          ultraviyole B (UVB) Ä±ÅŸÄ±nlarÄ± cilt altÄ±ndaki kolesterol tÃ¼revini D3'e dÃ¶nÃ¼ÅŸtÃ¼rÃ¼yor
+          <Evidence level={5} />. Sonra karaciÄŸerde 25-hidroksi-D'ye (depo formu),
+          bÃ¶brekte 1,25-dihidroksi-D'ye (aktif form) dÃ¶nÃ¼ÅŸÃ¼yor.
         </p>
         <p>
-          Aktif form vücudun her köşesinde bulunan reseptörlere (VDR — vitamin D reseptörü)
-          bağlanıyor; gen transkripsiyonunu doğrudan etkiliyor — yani <em>klasik bir hormon
-          gibi</em> çalışıyor <Evidence level={5} />. Bağırsakta kalsiyum-fosfor emilimi,
-          kemikte mineralizasyon, kasta kasılma, bağışıklık hücrelerinde aktivite —
+          Aktif form vÃ¼cudun her kÃ¶ÅŸesinde bulunan reseptÃ¶rlere (VDR â€” vitamin D reseptÃ¶rÃ¼)
+          baÄŸlanÄ±yor; gen transkripsiyonunu doÄŸrudan etkiliyor â€” yani <em>klasik bir hormon
+          gibi</em> Ã§alÄ±ÅŸÄ±yor <Evidence level={5} />. BaÄŸÄ±rsakta kalsiyum-fosfor emilimi,
+          kemikte mineralizasyon, kasta kasÄ±lma, baÄŸÄ±ÅŸÄ±klÄ±k hÃ¼crelerinde aktivite â€”
           hepsinde rol oynuyor.
         </p>
         <p>
-          Bu ayrım önemli çünkü <em>"vitamin gibi alıp gerisini düşünmemek"</em> yaklaşımı
-          klinik gerçeklikle uyuşmuyor. D vitamini hormon olduğu için aşırı dozda
-          <strong>toksik</strong> olabiliyor, eksiklikte ise sadece kemiği değil
-          <em>çok daha geniş bir sistemi</em> etkiliyor. Bu bakış dozaj kararının niye
-          bireysel olması gerektiğinin temelini oluşturuyor.
+          Bu ayrÄ±m Ã¶nemli Ã§Ã¼nkÃ¼ <em>"vitamin gibi alÄ±p gerisini dÃ¼ÅŸÃ¼nmemek"</em> yaklaÅŸÄ±mÄ±
+          klinik gerÃ§eklikle uyuÅŸmuyor. D vitamini hormon olduÄŸu iÃ§in aÅŸÄ±rÄ± dozda
+          <strong>toksik</strong> olabiliyor, eksiklikte ise sadece kemiÄŸi deÄŸil
+          <em>Ã§ok daha geniÅŸ bir sistemi</em> etkiliyor. Bu bakÄ±ÅŸ dozaj kararÄ±nÄ±n niye
+          bireysel olmasÄ± gerektiÄŸinin temelini oluÅŸturuyor.
         </p>
 
-        <h2 id="kan-degeri">Kan Değeri Yorumu — Eksiklik Ne Demek?</h2>
+        <h2 id="kan-degeri">Kan DeÄŸeri Yorumu â€” Eksiklik Ne Demek?</h2>
         <p>
-          D vitamini durumu kanda <strong>25-hidroksi-D (25-OH-D)</strong> ölçümüyle
-          değerlendiriliyor — bu test depo formunu gösteriyor ve klinik altın standart
-          <Evidence level={5} />. Aktif form (1,25-dihidroksi-D) genel taramada anlamlı
-          değil; özel klinik durumlar için saklanıyor.
+          D vitamini durumu kanda <strong>25-hidroksi-D (25-OH-D)</strong> Ã¶lÃ§Ã¼mÃ¼yle
+          deÄŸerlendiriliyor â€” bu test depo formunu gÃ¶steriyor ve klinik altÄ±n standart
+          <Evidence level={5} />. Aktif form (1,25-dihidroksi-D) genel taramada anlamlÄ±
+          deÄŸil; Ã¶zel klinik durumlar iÃ§in saklanÄ±yor.
         </p>
         <p>
-          Aralık tanımları biraz kafa karıştırıcı çünkü uluslararası uzman dernekleri arasında
-          <em>tam uzlaşı yok</em>. Genel kabul gören referans şu: 20 ng/mL altı
-          <strong>eksiklik</strong>, 20-30 ng/mL arası <strong>yetersizlik</strong>, 30-50
-          ng/mL arası <strong>yeterli</strong>, 50-100 ng/mL üstü <strong>fazla</strong>,
-          150 ng/mL üstü <strong>toksik</strong> <Evidence level={4} />. Bazı uzman dernekleri
-          eşik olarak 30 yerine 20 ng/mL'yi savunuyor; klinik duruma göre değerlendiriliyor.
+          AralÄ±k tanÄ±mlarÄ± biraz kafa karÄ±ÅŸtÄ±rÄ±cÄ± Ã§Ã¼nkÃ¼ uluslararasÄ± uzman dernekleri arasÄ±nda
+          <em>tam uzlaÅŸÄ± yok</em>. Genel kabul gÃ¶ren referans ÅŸu: 20 ng/mL altÄ±
+          <strong>eksiklik</strong>, 20-30 ng/mL arasÄ± <strong>yetersizlik</strong>, 30-50
+          ng/mL arasÄ± <strong>yeterli</strong>, 50-100 ng/mL Ã¼stÃ¼ <strong>fazla</strong>,
+          150 ng/mL Ã¼stÃ¼ <strong>toksik</strong> <Evidence level={4} />. BazÄ± uzman dernekleri
+          eÅŸik olarak 30 yerine 20 ng/mL'yi savunuyor; klinik duruma gÃ¶re deÄŸerlendiriliyor.
         </p>
         <p>
-          Birim karmaşası da var: bazı laboratuvarlar nmol/L kullanıyor (1 ng/mL ≈ 2.5
-          nmol/L). Sonuç raporunda hangi birimde olduğunu kontrol etmek temel adım. Aynı sayı
-          farklı birimde tamamen farklı yorumlanıyor.
-        </p>
-
-        <h2 id="turkiye-yaygin">Türkiye'de Niye Bu Kadar Yaygın?</h2>
-        <p>
-          Bu sorunun cevabı sanıldığı kadar <em>"güneşli ülkede yaşıyoruz, eksik olamayız"</em>
-          diye akıl yürütmüyor. Türk popülasyonunda D vitamini eksikliği yaygınlığı çeşitli
-          çalışmalarda %50-90 arasında bildirilmiş <Evidence level={4} />. Postmenopozal
-          kadınlarda bu oran daha da yüksek.
-        </p>
-        <p>
-          Birkaç katman var: (1) <strong>Coğrafi ve mevsimsel</strong> — Türkiye'nin büyük
-          kısmı 35-42° kuzey enleminde; kış aylarında UVB etkisi belirgin azalıyor.
-          (2) <strong>Cilt rengi ve örtünme</strong> — koyu cilt rengi ve kapalı kıyafet
-          UVB temasını sınırlıyor. (3) <strong>Yaşam biçimi</strong> — kapalı ortamda geçen
-          uzun saatler, güneşten korkma kültürü (ten yanığı önleme), güneş kremi
-          kullanımı tüm UVB etkisini azaltıyor; ki bunlar ayrı ayrı haklı sebepler.
-          (4) <strong>Beslenmede sınırlı kaynak</strong> — D vitamini doğal olarak yağlı
-          balık, yumurta sarısı, mantar (UV'ye maruz kalmış) gibi az gıdada bulunuyor;
-          Türk diyetinde ortalama alım çoğu zaman ihtiyacı karşılamıyor.
-          (5) <strong>Yaşla azalan cilt sentez kapasitesi</strong> — 70 yaşında cildin
-          D3 üretme kapasitesi 20'li yaşlardakinin yaklaşık dörtte biri <Evidence level={4} />.
-        </p>
-        <p>
-          Bu beş katman birlikte değerlendirildiğinde <em>"yaz aylarında bile eksik"</em>
-          sonucunun nereden çıktığı anlaşılıyor. Sadece <em>"daha çok güneşlenirim"</em>
-          önerisi çoğu hasta için yeterli olmuyor.
+          Birim karmaÅŸasÄ± da var: bazÄ± laboratuvarlar nmol/L kullanÄ±yor (1 ng/mL â‰ˆ 2.5
+          nmol/L). SonuÃ§ raporunda hangi birimde olduÄŸunu kontrol etmek temel adÄ±m. AynÄ± sayÄ±
+          farklÄ± birimde tamamen farklÄ± yorumlanÄ±yor.
         </p>
 
-        <h2 id="postmenopozal">Postmenopozal Kadında Özel Önem</h2>
+        <h2 id="turkiye-yaygin">TÃ¼rkiye'de Niye Bu Kadar YaygÄ±n?</h2>
         <p>
-          Postmenopozal dönemde D vitamini'nin önemi artıyor — birkaç katmanda. En bilineni
-          <strong>kemik sağlığı</strong>: östrojen düşüşüyle kemik kaybı hızlanıyor; D
-          vitamini + kalsiyum kombinasyonu osteoporoz tedavisinin omurgasında yer alıyor
-          <Evidence level={5} />. Kemik kırığı önleme açısından özellikle 70 yaş üstünde ve
-          osteoporozu olanlarda kanıt güçlü.
+          Bu sorunun cevabÄ± sanÄ±ldÄ±ÄŸÄ± kadar <em>"gÃ¼neÅŸli Ã¼lkede yaÅŸÄ±yoruz, eksik olamayÄ±z"</em>
+          diye akÄ±l yÃ¼rÃ¼tmÃ¼yor. TÃ¼rk popÃ¼lasyonunda D vitamini eksikliÄŸi yaygÄ±nlÄ±ÄŸÄ± Ã§eÅŸitli
+          Ã§alÄ±ÅŸmalarda %50-90 arasÄ±nda bildirilmiÅŸ <Evidence level={4} />. Postmenopozal
+          kadÄ±nlarda bu oran daha da yÃ¼ksek.
         </p>
         <p>
-          <strong>Düşmeyi azaltma</strong> ayrı bir konu: D vitamini kas işlevi için
-          gerekli; eksiklik kas zayıflığına yol açıyor. Ancak yüksek doz takviyenin düşme
-          önlemedeki etkisi <em>tartışmalı</em> — bazı çalışmalarda fayda gösterilmiş, bazıları
-          yüksek-dozun aksine düşmeyi artırdığını bildirmiş <Evidence from={2} to={3} />.
-          Bu yüzden yüksek bolus dozlar (örneğin yılda bir 500.000 IU) artık önerilmiyor.
+          BirkaÃ§ katman var: (1) <strong>CoÄŸrafi ve mevsimsel</strong> â€” TÃ¼rkiye'nin bÃ¼yÃ¼k
+          kÄ±smÄ± 35-42Â° kuzey enleminde; kÄ±ÅŸ aylarÄ±nda UVB etkisi belirgin azalÄ±yor.
+          (2) <strong>Cilt rengi ve Ã¶rtÃ¼nme</strong> â€” koyu cilt rengi ve kapalÄ± kÄ±yafet
+          UVB temasÄ±nÄ± sÄ±nÄ±rlÄ±yor. (3) <strong>YaÅŸam biÃ§imi</strong> â€” kapalÄ± ortamda geÃ§en
+          uzun saatler, gÃ¼neÅŸten korkma kÃ¼ltÃ¼rÃ¼ (ten yanÄ±ÄŸÄ± Ã¶nleme), gÃ¼neÅŸ kremi
+          kullanÄ±mÄ± tÃ¼m UVB etkisini azaltÄ±yor; ki bunlar ayrÄ± ayrÄ± haklÄ± sebepler.
+          (4) <strong>Beslenmede sÄ±nÄ±rlÄ± kaynak</strong> â€” D vitamini doÄŸal olarak yaÄŸlÄ±
+          balÄ±k, yumurta sarÄ±sÄ±, mantar (UV'ye maruz kalmÄ±ÅŸ) gibi az gÄ±dada bulunuyor;
+          TÃ¼rk diyetinde ortalama alÄ±m Ã§oÄŸu zaman ihtiyacÄ± karÅŸÄ±lamÄ±yor.
+          (5) <strong>YaÅŸla azalan cilt sentez kapasitesi</strong> â€” 70 yaÅŸÄ±nda cildin
+          D3 Ã¼retme kapasitesi 20'li yaÅŸlardakinin yaklaÅŸÄ±k dÃ¶rtte biri <Evidence level={4} />.
         </p>
         <p>
-          Daha az kanıtlı ama araştırma alanları: <strong>kardiyovasküler risk</strong>
-          (eksiklikte risk artışı epidemiyolojik olarak gösterilmiş, ama takvinin riski
-          belirgin azalttığına dair kanıt sınırlı), <strong>bağışıklık ve enfeksiyon</strong>
-          (eksiklikte bazı solunum yolu enfeksiyonu sıklığı artıyor), <strong>kanser
-          riski</strong> (zayıf kanıt, klinik öneri için yetersiz) <Evidence from={2} to={3} />.
-          Bu alanları <em>"kesin"</em> sonuç gibi sunmak yanlış olur.
+          Bu beÅŸ katman birlikte deÄŸerlendirildiÄŸinde <em>"yaz aylarÄ±nda bile eksik"</em>
+          sonucunun nereden Ã§Ä±ktÄ±ÄŸÄ± anlaÅŸÄ±lÄ±yor. Sadece <em>"daha Ã§ok gÃ¼neÅŸlenirim"</em>
+          Ã¶nerisi Ã§oÄŸu hasta iÃ§in yeterli olmuyor.
         </p>
 
-        <h2 id="tarama-dozaj">Tarama ve Dozaj — Tek Reçete Yok</h2>
+        <h2 id="postmenopozal">Postmenopozal KadÄ±nda Ã–zel Ã–nem</h2>
         <p>
-          <strong>Tarama:</strong> Postmenopozal kadın, osteoporozu veya yüksek kemik kaybı
-          riski olan, kemik kırığı öyküsü olan, malabsorbsiyon (çölyak, gastrik bypass),
-          kronik böbrek/karaciğer hastalığı, anti-konvülsan/glukokortikoid kullanımı olan
-          hastalarda 25-OH-D ölçümü endikasyonu güçlü <Evidence level={5} />. <em>"Sağlıklı,
-          asemptomatik genel popülasyonda rutin tarama yapılmalı mı?"</em> sorusu uluslararası
-          uzman dernekler arasında tartışmalı; bazıları evet, bazıları hayır diyor.
-          Pratikte: Türkiye'de eksiklik bu kadar yaygınken, postmenopozal dönemde en azından
-          bir kez baseline ölçüm klinik açıdan mantıklı.
+          Postmenopozal dÃ¶nemde D vitamini'nin Ã¶nemi artÄ±yor â€” birkaÃ§ katmanda. En bilineni
+          <strong>kemik saÄŸlÄ±ÄŸÄ±</strong>: Ã¶strojen dÃ¼ÅŸÃ¼ÅŸÃ¼yle kemik kaybÄ± hÄ±zlanÄ±yor; D
+          vitamini + kalsiyum kombinasyonu osteoporoz tedavisinin omurgasÄ±nda yer alÄ±yor
+          <Evidence level={5} />. Kemik kÄ±rÄ±ÄŸÄ± Ã¶nleme aÃ§Ä±sÄ±ndan Ã¶zellikle 70 yaÅŸ Ã¼stÃ¼nde ve
+          osteoporozu olanlarda kanÄ±t gÃ¼Ã§lÃ¼.
         </p>
         <p>
-          <strong>Dozaj — yükleme dozu vs idame:</strong> Tek bir reçete yok; klinikte adım
-          sıralamamı kişiselleştirilmiş kalibrasyona göre kuruyorum. Genel yol şu:
+          <strong>DÃ¼ÅŸmeyi azaltma</strong> ayrÄ± bir konu: D vitamini kas iÅŸlevi iÃ§in
+          gerekli; eksiklik kas zayÄ±flÄ±ÄŸÄ±na yol aÃ§Ä±yor. Ancak yÃ¼ksek doz takviyenin dÃ¼ÅŸme
+          Ã¶nlemedeki etkisi <em>tartÄ±ÅŸmalÄ±</em> â€” bazÄ± Ã§alÄ±ÅŸmalarda fayda gÃ¶sterilmiÅŸ, bazÄ±larÄ±
+          yÃ¼ksek-dozun aksine dÃ¼ÅŸmeyi artÄ±rdÄ±ÄŸÄ±nÄ± bildirmiÅŸ <Evidence from={2} to={3} />.
+          Bu yÃ¼zden yÃ¼ksek bolus dozlar (Ã¶rneÄŸin yÄ±lda bir 500.000 IU) artÄ±k Ã¶nerilmiyor.
         </p>
         <p>
-          • <strong>Belirgin eksiklik (10 ng/mL altı)</strong> — yükleme dozu (örneğin 6-8
-          hafta süresince haftalık 50.000 IU veya günlük 5.000-10.000 IU) sonrasında idame
-          (genelde günlük 1.500-2.000 IU). Hedef seviye genelde 30-50 ng/mL aralığında
+          Daha az kanÄ±tlÄ± ama araÅŸtÄ±rma alanlarÄ±: <strong>kardiyovaskÃ¼ler risk</strong>
+          (eksiklikte risk artÄ±ÅŸÄ± epidemiyolojik olarak gÃ¶sterilmiÅŸ, ama takvinin riski
+          belirgin azalttÄ±ÄŸÄ±na dair kanÄ±t sÄ±nÄ±rlÄ±), <strong>baÄŸÄ±ÅŸÄ±klÄ±k ve enfeksiyon</strong>
+          (eksiklikte bazÄ± solunum yolu enfeksiyonu sÄ±klÄ±ÄŸÄ± artÄ±yor), <strong>kanser
+          riski</strong> (zayÄ±f kanÄ±t, klinik Ã¶neri iÃ§in yetersiz) <Evidence from={2} to={3} />.
+          Bu alanlarÄ± <em>"kesin"</em> sonuÃ§ gibi sunmak yanlÄ±ÅŸ olur.
+        </p>
+
+        <h2 id="tarama-dozaj">Tarama ve Dozaj â€” Tek ReÃ§ete Yok</h2>
+        <p>
+          <strong>Tarama:</strong> Postmenopozal kadÄ±n, osteoporozu veya yÃ¼ksek kemik kaybÄ±
+          riski olan, kemik kÄ±rÄ±ÄŸÄ± Ã¶ykÃ¼sÃ¼ olan, malabsorbsiyon (Ã§Ã¶lyak, gastrik bypass),
+          kronik bÃ¶brek/karaciÄŸer hastalÄ±ÄŸÄ±, anti-konvÃ¼lsan/glukokortikoid kullanÄ±mÄ± olan
+          hastalarda 25-OH-D Ã¶lÃ§Ã¼mÃ¼ endikasyonu gÃ¼Ã§lÃ¼ <Evidence level={5} />. <em>"SaÄŸlÄ±klÄ±,
+          asemptomatik genel popÃ¼lasyonda rutin tarama yapÄ±lmalÄ± mÄ±?"</em> sorusu uluslararasÄ±
+          uzman dernekler arasÄ±nda tartÄ±ÅŸmalÄ±; bazÄ±larÄ± evet, bazÄ±larÄ± hayÄ±r diyor.
+          Pratikte: TÃ¼rkiye'de eksiklik bu kadar yaygÄ±nken, postmenopozal dÃ¶nemde en azÄ±ndan
+          bir kez baseline Ã¶lÃ§Ã¼m klinik aÃ§Ä±dan mantÄ±klÄ±.
+        </p>
+        <p>
+          <strong>Dozaj â€” yÃ¼kleme dozu vs idame:</strong> Tek bir reÃ§ete yok; klinikte adÄ±m
+          sÄ±ralamamÄ± kiÅŸiselleÅŸtirilmiÅŸ kalibrasyona gÃ¶re kuruyorum. Genel yol ÅŸu:
+        </p>
+        <p>
+          â€¢ <strong>Belirgin eksiklik (10 ng/mL altÄ±)</strong> â€” yÃ¼kleme dozu (Ã¶rneÄŸin 6-8
+          hafta sÃ¼resince haftalÄ±k 50.000 IU veya gÃ¼nlÃ¼k 5.000-10.000 IU) sonrasÄ±nda idame
+          (genelde gÃ¼nlÃ¼k 1.500-2.000 IU). Hedef seviye genelde 30-50 ng/mL aralÄ±ÄŸÄ±nda
           <Evidence level={4} />.<br>
-          • <strong>Yetersizlik (20-30 ng/mL)</strong> — idame dozu (günlük 1.000-2.000 IU)
-          ile başlanıp 8-12 hafta sonra kontrol.<br>
-          • <strong>Yeterli (30-50 ng/mL)</strong> — düşük doz idame (günlük 600-1.000 IU)
-          mevsimsel ayarla; yaz aylarında düşük, kış aylarında yüksek tutmak mümkün.<br>
-          • <strong>Hedef üstü</strong> — takviyeyi gözden geçir, durdur veya azalt.
+          â€¢ <strong>Yetersizlik (20-30 ng/mL)</strong> â€” idame dozu (gÃ¼nlÃ¼k 1.000-2.000 IU)
+          ile baÅŸlanÄ±p 8-12 hafta sonra kontrol.<br>
+          â€¢ <strong>Yeterli (30-50 ng/mL)</strong> â€” dÃ¼ÅŸÃ¼k doz idame (gÃ¼nlÃ¼k 600-1.000 IU)
+          mevsimsel ayarla; yaz aylarÄ±nda dÃ¼ÅŸÃ¼k, kÄ±ÅŸ aylarÄ±nda yÃ¼ksek tutmak mÃ¼mkÃ¼n.<br>
+          â€¢ <strong>Hedef Ã¼stÃ¼</strong> â€” takviyeyi gÃ¶zden geÃ§ir, durdur veya azalt.
         </p>
         <p>
-          Bu rakamlar ortalama erişkin kadın için; eşlik eden tıbbi durumlar (özellikle
-          böbrek hastalığı, hiperkalsemi, sarkoidoz gibi granülomatöz hastalıklar) doz
-          ayarını değiştiriyor. <em>"İnternette okudum, kendim yüksek doz alayım"</em>
-          yaklaşımı bu yüzden güvenli değil.
+          Bu rakamlar ortalama eriÅŸkin kadÄ±n iÃ§in; eÅŸlik eden tÄ±bbi durumlar (Ã¶zellikle
+          bÃ¶brek hastalÄ±ÄŸÄ±, hiperkalsemi, sarkoidoz gibi granÃ¼lomatÃ¶z hastalÄ±klar) doz
+          ayarÄ±nÄ± deÄŸiÅŸtiriyor. <em>"Ä°nternette okudum, kendim yÃ¼ksek doz alayÄ±m"</em>
+          yaklaÅŸÄ±mÄ± bu yÃ¼zden gÃ¼venli deÄŸil.
         </p>
 
-        <h2 id="toksisite">Toksisite ve Etkileşimler</h2>
+        <h2 id="toksisite">Toksisite ve EtkileÅŸimler</h2>
         <p>
-          D vitamini toksisitesi <em>nadir</em> ama gerçek bir tablo. Genelde haftalarca
-          devam eden çok yüksek doz takviye (günde 50.000 IU üstü) veya kontrolsüz bolus
-          dozlardan kaynaklanıyor. Mekanizma: D vitamini bağırsak kalsiyum emilimini
-          artırıyor; aşırıya kaçtığında <strong>hiperkalsemi</strong> gelişiyor —
-          bulantı, kusma, kabızlık, böbrek taşı, böbrek yetmezliği, kalp ritim bozukluğu
+          D vitamini toksisitesi <em>nadir</em> ama gerÃ§ek bir tablo. Genelde haftalarca
+          devam eden Ã§ok yÃ¼ksek doz takviye (gÃ¼nde 50.000 IU Ã¼stÃ¼) veya kontrolsÃ¼z bolus
+          dozlardan kaynaklanÄ±yor. Mekanizma: D vitamini baÄŸÄ±rsak kalsiyum emilimini
+          artÄ±rÄ±yor; aÅŸÄ±rÄ±ya kaÃ§tÄ±ÄŸÄ±nda <strong>hiperkalsemi</strong> geliÅŸiyor â€”
+          bulantÄ±, kusma, kabÄ±zlÄ±k, bÃ¶brek taÅŸÄ±, bÃ¶brek yetmezliÄŸi, kalp ritim bozukluÄŸu
           tablosu yapabiliyor <Evidence level={5} />.
         </p>
         <p>
-          <strong>Kalsiyum etkileşimi:</strong> D vitamini takviyesi alan birinin kalsiyum
-          alımı (besin + takviye) bilinmeli; ikisi birlikte yüksek olduğunda hiperkalsemi
-          riski artıyor. Postmenopozal kadında osteoporoz tedavisinde D vitamini ile birlikte
-          kalsiyum takviyesi gündeme geldiğinde, kardiyovasküler risk konusu açıkça
-          değerlendirilmeli — bazı çalışmalar kalsiyum takviyesinin kardiyovasküler olayları
-          artırabileceğini bildirmiş, ancak veriler tartışmalı <Evidence from={2} to={3} />.
+          <strong>Kalsiyum etkileÅŸimi:</strong> D vitamini takviyesi alan birinin kalsiyum
+          alÄ±mÄ± (besin + takviye) bilinmeli; ikisi birlikte yÃ¼ksek olduÄŸunda hiperkalsemi
+          riski artÄ±yor. Postmenopozal kadÄ±nda osteoporoz tedavisinde D vitamini ile birlikte
+          kalsiyum takviyesi gÃ¼ndeme geldiÄŸinde, kardiyovaskÃ¼ler risk konusu aÃ§Ä±kÃ§a
+          deÄŸerlendirilmeli â€” bazÄ± Ã§alÄ±ÅŸmalar kalsiyum takviyesinin kardiyovaskÃ¼ler olaylarÄ±
+          artÄ±rabileceÄŸini bildirmiÅŸ, ancak veriler tartÄ±ÅŸmalÄ± <Evidence from={2} to={3} />.
         </p>
         <p>
-          <strong>K2 vitamini:</strong> Pazarlamada sık karşılaşıyorsunuz —
-          <em>"D vitamini K2 olmadan kalsiyumu damarlara yerleştirir"</em> iddiası. Bu
-          biyokimyasal olarak akla yatıyor; ancak insan klinik çalışmalarında D + K2
-          kombinasyonunun D tek başına olana üstünlüğü <em>net gösterilmedi</em>
-          <Evidence level={2} />. Eksikliği belgelenmiş bir hastada K2 düşünülebilir; ama
-          rutin önerisi için kanıt yetersiz.
+          <strong>K2 vitamini:</strong> Pazarlamada sÄ±k karÅŸÄ±laÅŸÄ±yorsunuz â€”
+          <em>"D vitamini K2 olmadan kalsiyumu damarlara yerleÅŸtirir"</em> iddiasÄ±. Bu
+          biyokimyasal olarak akla yatÄ±yor; ancak insan klinik Ã§alÄ±ÅŸmalarÄ±nda D + K2
+          kombinasyonunun D tek baÅŸÄ±na olana Ã¼stÃ¼nlÃ¼ÄŸÃ¼ <em>net gÃ¶sterilmedi</em>
+          <Evidence level={2} />. EksikliÄŸi belgelenmiÅŸ bir hastada K2 dÃ¼ÅŸÃ¼nÃ¼lebilir; ama
+          rutin Ã¶nerisi iÃ§in kanÄ±t yetersiz.
         </p>
         <p>
-          <strong>İlaç etkileşimleri:</strong> Anti-konvülsan, glukokortikoid, anti-retroviral,
-          orlistat ve bazı kanser tedavileri D vitamini metabolizmasını etkileyebiliyor.
-          Düzenli reçeteli ilaç kullanan biri için doz hekim eşliğinde belirlenmeli.
+          <strong>Ä°laÃ§ etkileÅŸimleri:</strong> Anti-konvÃ¼lsan, glukokortikoid, anti-retroviral,
+          orlistat ve bazÄ± kanser tedavileri D vitamini metabolizmasÄ±nÄ± etkileyebiliyor.
+          DÃ¼zenli reÃ§eteli ilaÃ§ kullanan biri iÃ§in doz hekim eÅŸliÄŸinde belirlenmeli.
         </p>
 
         <RedFlagBox
           markers={[
-            'Granülomatöz hastalık öyküsü (sarkoidoz, tüberküloz) — D vitamini takviyesi öncesi mutlaka değerlendirilmeli; bu tablolarda hiperkalsemi riski artar',
-            'Hiperparatiroidi öyküsü veya tekrarlayan böbrek taşı — D takvisi öncesi endokrinoloji ve nefroloji değerlendirmesi',
-            'İleri kronik böbrek hastalığı — aktif D formu (kalsitriol) gerekebilir; standart D3 yetersiz kalabilir',
-            'Çok yüksek doz takviye (günde 10.000 IU üstü) — kontrolsüz alımda hiperkalsemi tablosu (bulantı, kusma, böbrek taşı, kalp ritim bozukluğu) gelişebilir',
-            'Postmenopozal kadında ani başlangıçlı kemik ağrısı, kırık öyküsü — D vitamini değerlendirmesinin yanında osteoporoz taraması (KMD) ve diğer ayırıcı tanılar gerekli',
-            'Çocuk yapma planı — yüksek doz D yükleme tedavisi değerlendirmesi obstetrik konsültasyon ile birlikte planlanmalı',
+            'GranÃ¼lomatÃ¶z hastalÄ±k Ã¶ykÃ¼sÃ¼ (sarkoidoz, tÃ¼berkÃ¼loz) â€” D vitamini takviyesi Ã¶ncesi mutlaka deÄŸerlendirilmeli; bu tablolarda hiperkalsemi riski artar',
+            'Hiperparatiroidi Ã¶ykÃ¼sÃ¼ veya tekrarlayan bÃ¶brek taÅŸÄ± â€” D takvisi Ã¶ncesi endokrinoloji ve nefroloji deÄŸerlendirmesi',
+            'Ä°leri kronik bÃ¶brek hastalÄ±ÄŸÄ± â€” aktif D formu (kalsitriol) gerekebilir; standart D3 yetersiz kalabilir',
+            'Ã‡ok yÃ¼ksek doz takviye (gÃ¼nde 10.000 IU Ã¼stÃ¼) â€” kontrolsÃ¼z alÄ±mda hiperkalsemi tablosu (bulantÄ±, kusma, bÃ¶brek taÅŸÄ±, kalp ritim bozukluÄŸu) geliÅŸebilir',
+            'Postmenopozal kadÄ±nda ani baÅŸlangÄ±Ã§lÄ± kemik aÄŸrÄ±sÄ±, kÄ±rÄ±k Ã¶ykÃ¼sÃ¼ â€” D vitamini deÄŸerlendirmesinin yanÄ±nda osteoporoz taramasÄ± (KMD) ve diÄŸer ayÄ±rÄ±cÄ± tanÄ±lar gerekli',
+            'Ã‡ocuk yapma planÄ± â€” yÃ¼ksek doz D yÃ¼kleme tedavisi deÄŸerlendirmesi obstetrik konsÃ¼ltasyon ile birlikte planlanmalÄ±',
           ]}
-          footnote="Bu liste teşhis amaçlı değil; bir hekimle vakit kaybetmeden konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
+          footnote="Bu liste teÅŸhis amaÃ§lÄ± deÄŸil; bir hekimle vakit kaybetmeden konuÅŸmaya deÄŸer kabul edilen durumlarÄ±n hatÄ±rlatÄ±cÄ±sÄ±dÄ±r."
         />
 
-        <h2 id="iletisim">Doktora Hangi Soruları Sormalı?</h2>
+        <h2 id="iletisim">Doktora Hangi SorularÄ± SormalÄ±?</h2>
         <p>
-          D vitamini değerlendirmesi için hekim odasına üç soruyla gidin: <strong>Birincisi</strong>
-          — <em>"Benim profilimde 25-OH-D ölçümü endikasyonu var mı, varsa şu an kaç?"</em>
-          Bu, baseline kuruyor. <strong>İkincisi</strong> — <em>"Eksiklik veya yetersizlik
-          varsa hangi dozla başlayacağız, ne kadar süre kullanıp kontrol edeceğiz?"</em>
-          Bu, takvim öneriyor (genelde 8-12 hafta + tekrar ölçüm). <strong>Üçüncüsü</strong>
-          — <em>"Aldığım diğer ilaçlar, takviyeler ve eşlik eden tıbbi durumlar D vitamini
-          dozumu nasıl etkiliyor?"</em> Bu, kişiselleştirme zeminini açıyor.
+          D vitamini deÄŸerlendirmesi iÃ§in hekim odasÄ±na Ã¼Ã§ soruyla gidin: <strong>Birincisi</strong>
+          â€” <em>"Benim profilimde 25-OH-D Ã¶lÃ§Ã¼mÃ¼ endikasyonu var mÄ±, varsa ÅŸu an kaÃ§?"</em>
+          Bu, baseline kuruyor. <strong>Ä°kincisi</strong> â€” <em>"Eksiklik veya yetersizlik
+          varsa hangi dozla baÅŸlayacaÄŸÄ±z, ne kadar sÃ¼re kullanÄ±p kontrol edeceÄŸiz?"</em>
+          Bu, takvim Ã¶neriyor (genelde 8-12 hafta + tekrar Ã¶lÃ§Ã¼m). <strong>ÃœÃ§Ã¼ncÃ¼sÃ¼</strong>
+          â€” <em>"AldÄ±ÄŸÄ±m diÄŸer ilaÃ§lar, takviyeler ve eÅŸlik eden tÄ±bbi durumlar D vitamini
+          dozumu nasÄ±l etkiliyor?"</em> Bu, kiÅŸiselleÅŸtirme zeminini aÃ§Ä±yor.
         </p>
         <p>
-          Bu üç soru hem dozajın doğru başlamasını hem de takvinin sürekli ayarlanabilmesini
-          sağlıyor. <em>"İnternetten gördüğüm dozda 6 ay alacağım"</em> yaklaşımı çoğu kez
-          ya yetersiz ya gereksiz yüksek; ikisi de hedef değil.
-        </p>
-
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
-
-        <h3>Güneşten yeterince alabilir miyim?</h3>
-        <p>
-          Türkiye coğrafyası teorik olarak güneşten D vitamini sentezi için uygun; ancak
-          pratikte birkaç engel var. Güneş kremi (SPF 15 üstü) D vitamini sentezini büyük
-          ölçüde engelliyor <Evidence level={4} />; ten yanığı ve cilt kanseri önleme açısından
-          güneş kremi kullanmak doğru, ama bu D vitamini açığını derinleştiriyor. Cam UVB
-          geçirmiyor — pencere arkasında oturmak D üretmiyor. Kapalı kıyafet, kapalı yaşam
-          biçimi, koyu ten, yaşla azalan cilt sentezi tüm bunlar birikiyor. Pratik sonuç:
-          <em>çoğu postmenopozal kadın güneşle yeterli D alamıyor</em>; bu epidemiyolojik
-          veriden çıkan bir cümle.
+          Bu Ã¼Ã§ soru hem dozajÄ±n doÄŸru baÅŸlamasÄ±nÄ± hem de takvinin sÃ¼rekli ayarlanabilmesini
+          saÄŸlÄ±yor. <em>"Ä°nternetten gÃ¶rdÃ¼ÄŸÃ¼m dozda 6 ay alacaÄŸÄ±m"</em> yaklaÅŸÄ±mÄ± Ã§oÄŸu kez
+          ya yetersiz ya gereksiz yÃ¼ksek; ikisi de hedef deÄŸil.
         </p>
 
-        <h3>D2 ve D3 arasındaki fark önemli mi?</h3>
+        <h2 id="sik-sorulanlar">SÄ±kÃ§a Sorulanlar</h2>
+
+        <h3>GÃ¼neÅŸten yeterince alabilir miyim?</h3>
         <p>
-          <strong>D3 (kolekalsiferol)</strong> hayvansal kaynaklı; <strong>D2 (ergokalsiferol)</strong>
-          bitkisel ve mantar kaynaklı. İnsan vücudunda her ikisi de etkili; ancak D3'ün
-          25-OH-D düzeyini D2'ye göre <em>daha etkili ve uzun süreli</em> yükselttiğini
-          gösteren çalışmalar var <Evidence level={4} />. Çoğu klinik durumda D3 tercih
-          ediliyor; vegan veya vejetaryen tercihler için liken kaynaklı D3 ürünleri var.
+          TÃ¼rkiye coÄŸrafyasÄ± teorik olarak gÃ¼neÅŸten D vitamini sentezi iÃ§in uygun; ancak
+          pratikte birkaÃ§ engel var. GÃ¼neÅŸ kremi (SPF 15 Ã¼stÃ¼) D vitamini sentezini bÃ¼yÃ¼k
+          Ã¶lÃ§Ã¼de engelliyor <Evidence level={4} />; ten yanÄ±ÄŸÄ± ve cilt kanseri Ã¶nleme aÃ§Ä±sÄ±ndan
+          gÃ¼neÅŸ kremi kullanmak doÄŸru, ama bu D vitamini aÃ§Ä±ÄŸÄ±nÄ± derinleÅŸtiriyor. Cam UVB
+          geÃ§irmiyor â€” pencere arkasÄ±nda oturmak D Ã¼retmiyor. KapalÄ± kÄ±yafet, kapalÄ± yaÅŸam
+          biÃ§imi, koyu ten, yaÅŸla azalan cilt sentezi tÃ¼m bunlar birikiyor. Pratik sonuÃ§:
+          <em>Ã§oÄŸu postmenopozal kadÄ±n gÃ¼neÅŸle yeterli D alamÄ±yor</em>; bu epidemiyolojik
+          veriden Ã§Ä±kan bir cÃ¼mle.
         </p>
 
-        <h3>Ne sıklıkta ölçüm yaptırmalıyım?</h3>
+        <h3>D2 ve D3 arasÄ±ndaki fark Ã¶nemli mi?</h3>
         <p>
-          İlk ölçüm sonrası takviye başlandıysa <strong>8-12 hafta sonra</strong> kontrol
-          mantıklı; bu süre 25-OH-D'nin yeni düzeye ulaşması için yeterli <Evidence level={4} />.
-          Hedef seviyeye ulaşıldıysa idame dozuna geçilir; yılda 1-2 kontrol — özellikle
-          mevsim geçişlerinde — sürdürülebilir bir yaklaşım. Çok daha sık ölçüm gereksiz
-          ve maliyetli; çok daha seyrek ölçüm sapmaları gözden kaçırıyor.
+          <strong>D3 (kolekalsiferol)</strong> hayvansal kaynaklÄ±; <strong>D2 (ergokalsiferol)</strong>
+          bitkisel ve mantar kaynaklÄ±. Ä°nsan vÃ¼cudunda her ikisi de etkili; ancak D3'Ã¼n
+          25-OH-D dÃ¼zeyini D2'ye gÃ¶re <em>daha etkili ve uzun sÃ¼reli</em> yÃ¼kselttiÄŸini
+          gÃ¶steren Ã§alÄ±ÅŸmalar var <Evidence level={4} />. Ã‡oÄŸu klinik durumda D3 tercih
+          ediliyor; vegan veya vejetaryen tercihler iÃ§in liken kaynaklÄ± D3 Ã¼rÃ¼nleri var.
         </p>
 
-        <h3>Yağlı yiyecek olmadan emilim olur mu?</h3>
+        <h3>Ne sÄ±klÄ±kta Ã¶lÃ§Ã¼m yaptÄ±rmalÄ±yÄ±m?</h3>
         <p>
-          D vitamini yağda çözünüyor; emilim için bir miktar diyet yağı gerekiyor
-          <Evidence level={4} />. Aç karna alındığında emilim belirgin azalıyor. En pratik
-          yaklaşım: D vitamini takviyesini günün ana öğününüzün yanında almak (zeytinyağlı
-          salata, yumurta, balık, ceviz gibi yağ içerikli bir öğün ideal). Aynı durum yağda
-          çözünen E ve K vitaminleri için de geçerli.
+          Ä°lk Ã¶lÃ§Ã¼m sonrasÄ± takviye baÅŸlandÄ±ysa <strong>8-12 hafta sonra</strong> kontrol
+          mantÄ±klÄ±; bu sÃ¼re 25-OH-D'nin yeni dÃ¼zeye ulaÅŸmasÄ± iÃ§in yeterli <Evidence level={4} />.
+          Hedef seviyeye ulaÅŸÄ±ldÄ±ysa idame dozuna geÃ§ilir; yÄ±lda 1-2 kontrol â€” Ã¶zellikle
+          mevsim geÃ§iÅŸlerinde â€” sÃ¼rdÃ¼rÃ¼lebilir bir yaklaÅŸÄ±m. Ã‡ok daha sÄ±k Ã¶lÃ§Ã¼m gereksiz
+          ve maliyetli; Ã§ok daha seyrek Ã¶lÃ§Ã¼m sapmalarÄ± gÃ¶zden kaÃ§Ä±rÄ±yor.
         </p>
 
-        <h3>Yüksek dozun "aslında ne kadar zararlı"?</h3>
+        <h3>YaÄŸlÄ± yiyecek olmadan emilim olur mu?</h3>
         <p>
-          Tam doz-zarar ilişkisi bireysel ama genel yol şu: günde 4.000 IU üstü uzun
-          süreli kullanım <em>üst güvenli sınır</em> olarak kabul ediliyor (sağlıklı erişkin)
-          <Evidence level={4} />. Belirli endikasyonla (belgelenmiş ciddi eksiklik, yükleme
-          dozu) kısa süreli daha yüksek doz uygun olabiliyor; ama hekim eşliğinde. <em>"Daha
-          fazla daha iyi"</em> yaklaşımı D vitamini için doğru değil — özellikle haftalar veya
-          aylar boyu yüksek kalıcı dozda hiperkalsemi tablosu gerçek bir risk. Bu konuda
-          dürüst olmak hem cüzdanı hem böbreği koruyor.
+          D vitamini yaÄŸda Ã§Ã¶zÃ¼nÃ¼yor; emilim iÃ§in bir miktar diyet yaÄŸÄ± gerekiyor
+          <Evidence level={4} />. AÃ§ karna alÄ±ndÄ±ÄŸÄ±nda emilim belirgin azalÄ±yor. En pratik
+          yaklaÅŸÄ±m: D vitamini takviyesini gÃ¼nÃ¼n ana Ã¶ÄŸÃ¼nÃ¼nÃ¼zÃ¼n yanÄ±nda almak (zeytinyaÄŸlÄ±
+          salata, yumurta, balÄ±k, ceviz gibi yaÄŸ iÃ§erikli bir Ã¶ÄŸÃ¼n ideal). AynÄ± durum yaÄŸda
+          Ã§Ã¶zÃ¼nen E ve K vitaminleri iÃ§in de geÃ§erli.
         </p>
 
-        <h2 id="kapanis">Kapanış</h2>
+        <h3>YÃ¼ksek dozun "aslÄ±nda ne kadar zararlÄ±"?</h3>
         <p>
-          D vitamini Türkiye'de — özellikle postmenopozal kadınlarda — gerçek bir epidemiyolojik
-          eksiklik konusu; kemik sağlığı için önemini kanıt güçlü desteklemiş bir mikro-besin.
-          Ama <em>"vitamin"</em> adı yanıltıcı — biyolojik olarak hormon gibi davranıyor; bu
-          yüzden dozaj, takip ve eşlik eden durumlar için <em>tek bir reçete yok</em>. Bilgi
-          belirsizliğin panzehiridir; bu konuda da öyle. Önce baseline 25-OH-D ölçümü, hedef
-          seviyeye yönelik kişiselleştirilmiş dozaj, 8-12 haftalık kontrol takvimi ve eşlik
-          eden tıbbi durumlar/ilaçlarla birlikte değerlendirme — bu yaklaşım hem cüzdanı hem
-          böbreği koruyor.
+          Tam doz-zarar iliÅŸkisi bireysel ama genel yol ÅŸu: gÃ¼nde 4.000 IU Ã¼stÃ¼ uzun
+          sÃ¼reli kullanÄ±m <em>Ã¼st gÃ¼venli sÄ±nÄ±r</em> olarak kabul ediliyor (saÄŸlÄ±klÄ± eriÅŸkin)
+          <Evidence level={4} />. Belirli endikasyonla (belgelenmiÅŸ ciddi eksiklik, yÃ¼kleme
+          dozu) kÄ±sa sÃ¼reli daha yÃ¼ksek doz uygun olabiliyor; ama hekim eÅŸliÄŸinde. <em>"Daha
+          fazla daha iyi"</em> yaklaÅŸÄ±mÄ± D vitamini iÃ§in doÄŸru deÄŸil â€” Ã¶zellikle haftalar veya
+          aylar boyu yÃ¼ksek kalÄ±cÄ± dozda hiperkalsemi tablosu gerÃ§ek bir risk. Bu konuda
+          dÃ¼rÃ¼st olmak hem cÃ¼zdanÄ± hem bÃ¶breÄŸi koruyor.
+        </p>
+
+        <h2 id="kapanis">KapanÄ±ÅŸ</h2>
+        <p>
+          D vitamini TÃ¼rkiye'de â€” Ã¶zellikle postmenopozal kadÄ±nlarda â€” gerÃ§ek bir epidemiyolojik
+          eksiklik konusu; kemik saÄŸlÄ±ÄŸÄ± iÃ§in Ã¶nemini kanÄ±t gÃ¼Ã§lÃ¼ desteklemiÅŸ bir mikro-besin.
+          Ama <em>"vitamin"</em> adÄ± yanÄ±ltÄ±cÄ± â€” biyolojik olarak hormon gibi davranÄ±yor; bu
+          yÃ¼zden dozaj, takip ve eÅŸlik eden durumlar iÃ§in <em>tek bir reÃ§ete yok</em>. Bilgi
+          belirsizliÄŸin panzehiridir; bu konuda da Ã¶yle. Ã–nce baseline 25-OH-D Ã¶lÃ§Ã¼mÃ¼, hedef
+          seviyeye yÃ¶nelik kiÅŸiselleÅŸtirilmiÅŸ dozaj, 8-12 haftalÄ±k kontrol takvimi ve eÅŸlik
+          eden tÄ±bbi durumlar/ilaÃ§larla birlikte deÄŸerlendirme â€” bu yaklaÅŸÄ±m hem cÃ¼zdanÄ± hem
+          bÃ¶breÄŸi koruyor.
         </p>
         <p>
-          Bir yandan bilmemek gereken şeyleri söyleyebilirim: yüksek-doz bolus stratejileri
-          (yılda bir 500.000 IU gibi) artık önerilmiyor; düşmeyi önlemediği, hatta bazı
-          çalışmalarda artırdığı gösterilmiş. <em>"Daha fazla daha iyi"</em> yaklaşımı bu
-          mikro-besin için doğru değil. Doktorunuza üç soruyla gidin — ölçüm gerekli mi,
-          hangi dozla başlayacağız, eşlik eden durumlar dozumu nasıl etkiliyor. Sorunun
-          kendisi cevabın yarısıdır; bu yarısını siz koyduğunuzda kalanı klinik diyalogun
-          parçası oluyor.
+          Bir yandan bilmemek gereken ÅŸeyleri sÃ¶yleyebilirim: yÃ¼ksek-doz bolus stratejileri
+          (yÄ±lda bir 500.000 IU gibi) artÄ±k Ã¶nerilmiyor; dÃ¼ÅŸmeyi Ã¶nlemediÄŸi, hatta bazÄ±
+          Ã§alÄ±ÅŸmalarda artÄ±rdÄ±ÄŸÄ± gÃ¶sterilmiÅŸ. <em>"Daha fazla daha iyi"</em> yaklaÅŸÄ±mÄ± bu
+          mikro-besin iÃ§in doÄŸru deÄŸil. Doktorunuza Ã¼Ã§ soruyla gidin â€” Ã¶lÃ§Ã¼m gerekli mi,
+          hangi dozla baÅŸlayacaÄŸÄ±z, eÅŸlik eden durumlar dozumu nasÄ±l etkiliyor. Sorunun
+          kendisi cevabÄ±n yarÄ±sÄ±dÄ±r; bu yarÄ±sÄ±nÄ± siz koyduÄŸunuzda kalanÄ± klinik diyalogun
+          parÃ§asÄ± oluyor.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
@@ -367,71 +375,71 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
+        <p class="mb-4 text-lg font-semibold text-ink">KanÄ±t DÃ¼zeyi: <Evidence from={4} to={5} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel; yazıda genel
-            yolu kurdum, bu notta klinik karar tarafını biraz daha doğrudan açıyorum.
+            D vitamini herkesin gÃ¼ndeminde ama dozaj ve takip kararÄ± bireysel; yazÄ±da genel
+            yolu kurdum, bu notta klinik karar tarafÄ±nÄ± biraz daha doÄŸrudan aÃ§Ä±yorum.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik not:</strong> D vitamini eksikliği muayenehanemde
-            gelen postmenopozal kadınların önemli bir kısmında baseline tablonun parçası — Türkiye
-            popülasyon verileriyle de uyumlu (%50-90 yaygınlık çeşitli çalışmalarda). Ancak
-            <em>"eksiklik = kesinlikle takviye"</em> denklemi her hastada doğru kurulmuyor; eşlik
-            eden böbrek-paratiroid-kalsiyum metabolizması tablosu, kullanılan ilaçlar, granülomatöz
-            hastalık öyküsü doz kararını değiştiriyor.
+            <strong class="text-burgundy">Klinik not:</strong> D vitamini eksikliÄŸi muayenehanemde
+            gelen postmenopozal kadÄ±nlarÄ±n Ã¶nemli bir kÄ±smÄ±nda baseline tablonun parÃ§asÄ± â€” TÃ¼rkiye
+            popÃ¼lasyon verileriyle de uyumlu (%50-90 yaygÄ±nlÄ±k Ã§eÅŸitli Ã§alÄ±ÅŸmalarda). Ancak
+            <em>"eksiklik = kesinlikle takviye"</em> denklemi her hastada doÄŸru kurulmuyor; eÅŸlik
+            eden bÃ¶brek-paratiroid-kalsiyum metabolizmasÄ± tablosu, kullanÄ±lan ilaÃ§lar, granÃ¼lomatÃ¶z
+            hastalÄ±k Ã¶ykÃ¼sÃ¼ doz kararÄ±nÄ± deÄŸiÅŸtiriyor.
           </p>
           <p>
             <strong class="text-burgundy">Mekanizma notu:</strong> D vitamini steroid hormon
-            ailesinde; nükleer reseptörü (VDR) çoğu dokuda bulunuyor. 25-OH-D karaciğerde,
-            1,25-(OH)2-D böbrekte 1-alfa-hidroksilaz aracılığıyla üretiliyor. Aktif form
-            bağırsakta kalsiyum-fosfor emilimi, kemikte mineralizasyon, kasta kasılma, immün
-            modülasyon ve gen ekspresyonu üzerinden geniş etkili. PTH-D-kalsiyum-fosfor ekseni
-            birlikte değerlendiriliyor; eksikliği uzun süreli sürdüğünde sekonder
-            hiperparatiroidi gelişebiliyor.
+            ailesinde; nÃ¼kleer reseptÃ¶rÃ¼ (VDR) Ã§oÄŸu dokuda bulunuyor. 25-OH-D karaciÄŸerde,
+            1,25-(OH)2-D bÃ¶brekte 1-alfa-hidroksilaz aracÄ±lÄ±ÄŸÄ±yla Ã¼retiliyor. Aktif form
+            baÄŸÄ±rsakta kalsiyum-fosfor emilimi, kemikte mineralizasyon, kasta kasÄ±lma, immÃ¼n
+            modÃ¼lasyon ve gen ekspresyonu Ã¼zerinden geniÅŸ etkili. PTH-D-kalsiyum-fosfor ekseni
+            birlikte deÄŸerlendiriliyor; eksikliÄŸi uzun sÃ¼reli sÃ¼rdÃ¼ÄŸÃ¼nde sekonder
+            hiperparatiroidi geliÅŸebiliyor.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong> Granülomatöz hastalık
-            (sarkoidoz, tüberküloz, lenfoma) — ekstra-renal 1-alfa-hidroksilaz aktivitesi
-            nedeniyle hiperkalsemi riski; D takviyesi öncesi mutlaka değerlendirilmeli.
-            Hiperparatiroidi, tekrarlayan böbrek taşı, ileri KBH (CKD evre 4-5) — aktif D
-            formu (kalsitriol/parikalsitol) gerekebilir, standart D3 yetmez. Yüksek doz takviye
-            (günlük 4.000 IU üstü uzun süreli) — hiperkalsemi takibi gerekli. Postmenopozal
-            ani kemik ağrısı/kırık — D + KMD + diğer ayırıcı tanılar (myelom dahil) birlikte
-            değerlendirilmeli.
+            <strong class="text-burgundy">Klinik kÄ±rmÄ±zÄ± bayraklar:</strong> GranÃ¼lomatÃ¶z hastalÄ±k
+            (sarkoidoz, tÃ¼berkÃ¼loz, lenfoma) â€” ekstra-renal 1-alfa-hidroksilaz aktivitesi
+            nedeniyle hiperkalsemi riski; D takviyesi Ã¶ncesi mutlaka deÄŸerlendirilmeli.
+            Hiperparatiroidi, tekrarlayan bÃ¶brek taÅŸÄ±, ileri KBH (CKD evre 4-5) â€” aktif D
+            formu (kalsitriol/parikalsitol) gerekebilir, standart D3 yetmez. YÃ¼ksek doz takviye
+            (gÃ¼nlÃ¼k 4.000 IU Ã¼stÃ¼ uzun sÃ¼reli) â€” hiperkalsemi takibi gerekli. Postmenopozal
+            ani kemik aÄŸrÄ±sÄ±/kÄ±rÄ±k â€” D + KMD + diÄŸer ayÄ±rÄ±cÄ± tanÄ±lar (myelom dahil) birlikte
+            deÄŸerlendirilmeli.
           </p>
           <p>
-            <strong class="text-burgundy">Pratik bütünleşim:</strong> Klinikte adım sıralamamı
-            kişiselleştirilmiş kalibrasyona göre kuruyorum: (1) endikasyon değerlendirmesi —
-            postmenopoz, osteoporoz/kırık öyküsü, malabsorbsiyon, anti-konvülsan/glukokortikoid
-            kullanımı; (2) baseline 25-OH-D + kalsiyum + paratiroid hormonu; (3) eksiklik
-            seviyesine göre dozaj — belirgin eksiklikte yükleme + idame, yetersizlikte idame
-            başlangıç; (4) 8-12 hafta sonra kontrol; (5) hedef ulaşıldıysa düşük doz idame
-            mevsimsel ayarla. Yüksek bolus dozları (yılda bir 500.000 IU gibi) son dönem
-            kanıtla artık önerilmiyor — düşmeyi önlemediği, bazı çalışmalarda artırdığı
-            gösterilmiş. K2 ve magnezyum gibi kombinasyonlarda kanıt henüz rutin öneriye
-            yetmiyor; hedefli endikasyonlarda değerlendirilebilir.
+            <strong class="text-burgundy">Pratik bÃ¼tÃ¼nleÅŸim:</strong> Klinikte adÄ±m sÄ±ralamamÄ±
+            kiÅŸiselleÅŸtirilmiÅŸ kalibrasyona gÃ¶re kuruyorum: (1) endikasyon deÄŸerlendirmesi â€”
+            postmenopoz, osteoporoz/kÄ±rÄ±k Ã¶ykÃ¼sÃ¼, malabsorbsiyon, anti-konvÃ¼lsan/glukokortikoid
+            kullanÄ±mÄ±; (2) baseline 25-OH-D + kalsiyum + paratiroid hormonu; (3) eksiklik
+            seviyesine gÃ¶re dozaj â€” belirgin eksiklikte yÃ¼kleme + idame, yetersizlikte idame
+            baÅŸlangÄ±Ã§; (4) 8-12 hafta sonra kontrol; (5) hedef ulaÅŸÄ±ldÄ±ysa dÃ¼ÅŸÃ¼k doz idame
+            mevsimsel ayarla. YÃ¼ksek bolus dozlarÄ± (yÄ±lda bir 500.000 IU gibi) son dÃ¶nem
+            kanÄ±tla artÄ±k Ã¶nerilmiyor â€” dÃ¼ÅŸmeyi Ã¶nlemediÄŸi, bazÄ± Ã§alÄ±ÅŸmalarda artÄ±rdÄ±ÄŸÄ±
+            gÃ¶sterilmiÅŸ. K2 ve magnezyum gibi kombinasyonlarda kanÄ±t henÃ¼z rutin Ã¶neriye
+            yetmiyor; hedefli endikasyonlarda deÄŸerlendirilebilir.
           </p>
           <p>
-            <strong class="text-burgundy">Bireysellik vurgusu:</strong> Yukarıda paylaştıklarım
-            — hem yazıda hem bu notta — genel popülasyon ve standart klinik yaklaşımıdır; sizin
-            tablonuzdaki baseline 25-OH-D, eşlik eden tıbbi durumlar (özellikle böbrek,
-            paratiroid, granülomatöz hastalıklar), kullandığınız ilaçlar (anti-konvülsan,
-            glukokortikoid, malabsorbsiyon yapan ajanlar), kalsiyum alımı ve kemik dansitesi
-            tedavi seçimine yön verir. Burada okuduğunuz bir başlangıç rehberidir, karar
-            değil; sizin için uygun adımları kendi hekiminizle birebir değerlendirmeniz
-            önemlidir — özellikle yüksek doz veya uzun süreli takviye düşünüyorsanız.
+            <strong class="text-burgundy">Bireysellik vurgusu:</strong> YukarÄ±da paylaÅŸtÄ±klarÄ±m
+            â€” hem yazÄ±da hem bu notta â€” genel popÃ¼lasyon ve standart klinik yaklaÅŸÄ±mÄ±dÄ±r; sizin
+            tablonuzdaki baseline 25-OH-D, eÅŸlik eden tÄ±bbi durumlar (Ã¶zellikle bÃ¶brek,
+            paratiroid, granÃ¼lomatÃ¶z hastalÄ±klar), kullandÄ±ÄŸÄ±nÄ±z ilaÃ§lar (anti-konvÃ¼lsan,
+            glukokortikoid, malabsorbsiyon yapan ajanlar), kalsiyum alÄ±mÄ± ve kemik dansitesi
+            tedavi seÃ§imine yÃ¶n verir. Burada okuduÄŸunuz bir baÅŸlangÄ±Ã§ rehberidir, karar
+            deÄŸil; sizin iÃ§in uygun adÄ±mlarÄ± kendi hekiminizle birebir deÄŸerlendirmeniz
+            Ã¶nemlidir â€” Ã¶zellikle yÃ¼ksek doz veya uzun sÃ¼reli takviye dÃ¼ÅŸÃ¼nÃ¼yorsanÄ±z.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            â€” DoÃ§. Dr. Senai Aksoy, KadÄ±n HastalÄ±klarÄ± ve DoÄŸum UzmanÄ±, Estranova Bilimsel EditÃ¶rÃ¼
           </p>
         </div>
       </section>
 
       <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
         <p class="text-sm leading-relaxed text-ink/75">
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme yerine geÃ§mez. TanÄ± ve tedavi kararlarÄ± iÃ§in saÄŸlÄ±k profesyoneline baÅŸvurunuz.
         </p>
       </section>
     </SubmenuArticleBody>
@@ -439,3 +447,4 @@ const articleSchemas = buildArticleSchemas({
 
   <SiteFooter />
 </SiteLayout>
+

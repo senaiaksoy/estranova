@@ -13,7 +13,9 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban']!;
@@ -27,12 +29,14 @@ const tocEntries = [
   { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sss', label: 'S?k?a Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Konuşmadığımız Şey — 40 Sonrası İdrar Kaçırma';
 const articleDescription =
   '40 sonrası kadınların önemli bir kısmı idrar kaçırma yaşıyor ama çoğu kimseye söylemiyor. İki ana tip, pelvik taban anatomisi, davranışsal adımlar, medikal-cerrahi seçenekler ve doktora hangi soruları sormak gerektiği — sade bir klinik bakış.';
+const faqItems = articleFaqs['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -42,6 +46,8 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik',
   keywords: ['idrar kaçırma', 'üriner inkontinans', 'pelvik taban', 'stres tipi', 'urge tipi', 'menopoz', 'kadın sağlığı'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -282,6 +288,8 @@ başlasın, üç ayda yeniden konuşalım"</em> gibi bir yol. <strong>Üçüncü
           kendisi cevabın yarısıdır; bu yarısını siz koyarsanız, kalanı klinik diyalogun parçası oluyor.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

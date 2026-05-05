@@ -8,7 +8,9 @@ import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const tocEntries = [
@@ -20,20 +22,24 @@ const tocEntries = [
   { id: 'hareket-plani', label: 'Hareket Planı' },
   { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber';
 const articleDescription = '40 yaş sonrası kemik sağlığını desteklemek için tarama, beslenme, hareket ve tıbbi seçenekleri anlatan kapsamlı rehber.';
+const faqItems = articleFaqs['/zamansiz-yasam/kemik-sagligi-40-sonrasi'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'berna-aksoy',
+  writerSlug: 'senai-aksoy',
   publishedDate: '1 Mart 2026',
   pathname: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam',
   keywords: ['kemik sağlığı', 'osteoporoz', 'menopoz', 'kalsiyum', 'direnç egzersizi', 'D vitamini'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -49,7 +55,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="pt-24 text-ink">
     <SubmenuArticleBody>
         <ArticleTOC slot="toc" entries={tocEntries} />
-        <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="1 Mart 2026" readingMinutes={3} />
+        <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="1 Mart 2026" readingMinutes={6} />
 
         <header class="mb-10">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Zamansız Yaşam · Koruyucu Sağlık</p>
@@ -59,140 +65,153 @@ const articleSchemas = buildArticleSchemas({
         <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
           <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
           <p class="leading-relaxed text-ink/80">
-            Östrojen düşüşü ile kemik yoğunluğu zamanla azalabilir ve 40+ kadınlarda osteoporoz riski artış gösterebilir.
-            Düzenli tarama, beslenme desteği ve planlı hareket kemik kaybını yavaşlatmada önemli rol oynar.
-            Erken ve sakin bir plan, ileri yaşta kırık riskini azaltmanın temel adımıdır.
+            Kemik kaybı çoğu zaman sessiz ilerler; ilk işaretini ağrıdan değil, yıllar sonra gelen kırık riskinden verir.
+            Menopoz geçişinde östrojen düşüşü bu süreci hızlandırabilir <Evidence level={5} />.
+            Bu nedenle konu yalnızca kalsiyum almak değil; risk değerlendirmesi, doğru zamanda tarama, kas gücünü koruyan hareket
+            ve gerektiğinde tıbbi tedavi seçeneklerini aynı çerçevede düşünmektir.
           </p>
         </section>
 
         <ArticleProsePanel>
           <h2 id="neden-onemli">Neden Kemik Sağlığı Önemlidir?</h2>
           <p>
-            Bir noktada şunu fark ettim: kemik sağlığı çoğu zaman ancak bir ağrı, düşme ya da ailede kırık
-            hikâyesi duyulduğunda gündeme geliyor. Oysa o ana kadar sessizce işleyen bir yapı var.
+            İşin doğrusu şu: kemik sağlığı çoğu kadının gündemine ancak bir düşme, bir kırık ya da bir ölçüm sonucu
+            düşük geldiğinde giriyor. Oysa kayıp çok daha önce, sessiz biçimde başlamış olabiliyor.
           </p>
           <p>
-            Kemikler yalnızca vücudu ayakta tutan bir iskelet değil; hareketin, dengenin ve günlük işlevlerin
-            temel taşı. Kalsiyum ve fosfor gibi mineraller için bir depo görevi de görürler. Yaşla birlikte
-            kemik yapım-yıkım dengesi değiştiğinde, bu sistem daha kırılgan hâle gelebilir.
+            Kemik yalnızca vücudu ayakta tutan sert bir çatı değil; metabolik olarak canlı bir dokudur. Gün boyunca
+            yıkım ve yapım dengesi içinde yeniden şekillenir. Bu denge genç yaşlarda genellikle yapım lehine çalışırken,
+            yaş ilerledikçe ve özellikle menopozla birlikte yıkım tarafı hız kazanabilir <Evidence level={5} />.
           </p>
           <p>
-            40 yaş sonrası dönemde östrojen düzeylerindeki azalma kemik döngüsünü etkiler. Kemik yıkımı artarken
-            yeni kemik yapımı aynı hızda ilerlemeyebilir <Evidence level={5} />. Bu nedenle kemik sağlığına
-            erken dönemde yatırım yapmak, yalnızca bugün için değil, ileri yaş hareketliliği için de kritik
-            değerdedir. Tanıdığım bir kadın bunu şöyle ifade etmişti: "Kemiğin değişmek için izin istemiyor —
-            zaten değişiyor. Önemli olan ne kadar erken fark ettiğin."
+            Menopozdan sonraki ilk yıllarda bu hızlanma daha belirgindir; özellikle ilk 5 ila 10 yılda kemik mineral
+            yoğunluğu daha hızlı azalabilir <Evidence level={5} />. Konunun önemi burada başlar: amaç yalnızca bugünkü
+            laboratuvar veya ölçüm sonucunu düzeltmek değil, ileriki yıllardaki kırık riskini, duruşu, dengeyi ve
+            bağımsız hareket kapasitesini korumaktır.
           </p>
 
           <h2 id="osteopeni-osteoporoz">Osteopeni ve Osteoporoz Arasındaki Fark</h2>
           <p>
-            Ölçüm sonucunda bu kelimeleri görmek insanı tedirgin edebilir; osteopeni, kemik yoğunluğunun normalden düşük ama osteoporoz düzeyine ulaşmadığı ara evreyi ifade eder.
-            Osteoporoz ise kırık riskinin belirgin şekilde arttığı daha ileri kemik kaybı tablosudur.
+            Ölçüm sonucunda bu iki kelimeyi görmek çoğu kişiyi gereğinden fazla korkutuyor. Oysa aralarındaki farkı
+            bilmek, tabloyu panikle değil çerçeveyle okumayı sağlar.
           </p>
           <p>
-            DEXA (DXA) ölçümü bu ayrımı yapmak için en sık kullanılan yöntemdir. T-skoru -1 ile -2.5 arası osteopeni, -2.5 ve altı osteoporoz
-            olarak değerlendirilir. Bu sınıflama tek başına yeterli değildir; yaş, düşme riski, aile öyküsü ve ek hastalıklarla birlikte yorumlanır.
+            Osteopeni, kemik yoğunluğunun yaşa göre beklenenden düşük olduğu ama osteoporoz düzeyine henüz inmediği ara
+            evredir. Osteoporoz ise kırık riskinin daha belirgin arttığı ileri kemik kaybı tablosudur. DXA ölçümünde
+            T-skorunun `-1` ile `-2.5` arasında olması osteopeni, `-2.5` ve altında olması osteoporoz lehine yorumlanır.
+            Fakat bu sınıflama tek başına karar verdirmez; aynı ölçüm sonucu iki farklı kadında çok farklı klinik anlam
+            taşıyabilir.
+          </p>
+          <p>
+            Burada kırık öyküsü, düşme riski, yaş, vücut ağırlığı, erken menopoz, ailede kalça kırığı varlığı ve eşlik
+            eden hastalıklar birlikte değerlendirilir. Yani raporda yazan kelime önemlidir; ama klinik karar yalnızca o
+            kelimeye bakılarak verilmez.
           </p>
 
           <h2 id="risk-faktorleri">Risk Faktörleri Nelerdir?</h2>
           <p>
-            Risk faktörlerini okumak korkutmak için değil, kendi haritanı daha net görmek içindir. Menopoz sonrası kadınlarda kemik kaybı riski artar. Aile öyküsü, düşük vücut ağırlığı, hareketsizlik, sigara, yüksek alkol tüketimi,
-            düşük kalsiyum-D vitamini alımı ve uzun süreli kortikosteroid kullanımı önemli risk faktörleri arasındadır <Evidence from={4} to={5} />.
+            Risk listesinin amacı korkutmak değil; kimin daha erken bakılması gerektiğini ayırmaktır. Aynı yaşta iki
+            kadının kemik riski birbirinden belirgin biçimde farklı olabilir.
           </p>
           <p>
-            Tiroid hastalıkları, bazı bağırsak emilim bozuklukları ve kronik iltihabi durumlar da kemik sağlığını etkileyebilir.
-            Bu yüzden risk değerlendirmesi tek başlıktan değil, bütüncül bir sağlık profili üzerinden yapılmalıdır.
+            En sık gördüğümüz risk başlıkları şunlardır: erken menopoz, düşük vücut ağırlığı, ailede osteoporoz veya
+            kalça kırığı öyküsü, hareketsizlik, sigara kullanımı, yüksek alkol tüketimi, yetersiz protein ve kalsiyum
+            alımı, düşük D vitamini düzeyi ve uzun süreli kortikosteroid kullanımı <Evidence from={4} to={5} />.
+          </p>
+          <p>
+            Tiroid fazlalığı, emilim bozuklukları, kronik böbrek hastalığı, iltihabi bağırsak hastalıkları ve bazı romatolojik
+            durumlar da kemik kaybını hızlandırabilir. Muayene odasında en sık duyduğum cümlelerden biri “Ben sadece biraz
+            zayıfım, başka riskim yok” oluyor; oysa bazen asıl belirleyici tek bir alışkanlık değil, birkaç orta düzey
+            riskin üst üste binmesidir.
           </p>
 
           <h2 id="kemik-taramasi">Kemik Sağlığı Taraması: Ne Zaman, Nasıl?</h2>
           <p>
-            Tarama yaşı konusunda tek bir cevaba sıkışmak yerine, kişisel risk öyküsüne bakmak daha doğru.
+            Tarama zamanlamasında tek bir yaş söylemek pratik görünür; ama iyi klinik karar çoğu zaman o kadar basit değildir.
           </p>
           <p>
-            Kılavuzlar çoğu kadın için 65 yaş sonrası rutin DEXA taramasını önerir <Evidence level={5} />. Ancak
-            risk faktörü olanlarda daha erken tarama planlanabilir. Erken menopoz, aile öyküsü, uzun süreli
-            steroid kullanımı ve düşük travma kırığı öyküsü bu kararı etkileyen başlıklardır. Hekimimle bir
-            konuşmamızda "tarama yaşı bir kural değil bir kişisel karar" demişti — kuralın tek başına yeterli
-            olmadığı bir alan.
+            Pek çok kılavuz, ortalama risk taşıyan kadınlarda 65 yaş sonrası rutin DXA taramasını önerir <Evidence level={5} />.
+            Ancak risk faktörü olanlarda daha erken tarama gündeme gelebilir. Erken menopoz, düşük travma ile gelişen kırık,
+            uzun süreli steroid kullanımı, belirgin zayıflık, güçlü aile öyküsü ve sekonder nedenler bu kararı öne çekebilir.
           </p>
           <p>
-            İlk tarama, kişiye özgü bir başlangıç noktası sağlar. Sonraki ölçümler bu başlangıç değeriyle
-            karşılaştırılarak izlenir. Bazı durumlarda P1NP ve CTX gibi kemik döngüsü belirteçleri de sağlık
-            kararına destek olabilir.
+            İlk ölçüm “kemik sağlığı iyi mi kötü mü?” sorusundan çok, kişisel başlangıç noktasını gösterir. Sonraki ölçümlerin
+            aralığı da buna göre şekillenir; herkese aynı sıklıkta tekrar yapılmaz. Bazı olgularda FRAX benzeri kırık risk
+            hesaplamaları ve kemik döngüsü belirteçleri de karar sürecini destekleyebilir, ama bunlar ana kararın yerine
+            geçen testler değildir.
           </p>
 
           <h2 id="beslenme-destegi">Beslenme ile Kemik Desteği</h2>
           <p>
-            Kemik sağlığı tabakta başlar — ama tabaktaki sayı kişiden kişiye değişiyor.
+            Kemik sağlığında beslenme desteği önemlidir; ama bu başlık çoğu zaman tek bir vitamin sorusuna indirgenir.
+            Oysa kemik yalnızca kalsiyumdan ibaret değildir.
           </p>
           <p>
-            Günlük kalsiyum hedefi çoğu 40+ kadın için 1000-1200 mg aralığındadır <Evidence level={5} />. Süt
-            ürünleri, koyu yeşil yapraklı sebzeler, susam, badem ve kalsiyumla zenginleştirilmiş ürünler bu
-            hedefe katkı sağlayabilir.
+            Günlük kalsiyum hedefi çoğu 40+ kadın için yaklaşık 1000 ila 1200 mg aralığındadır <Evidence level={5} />.
+            Bu hedefin ilk tercihi, mümkünse besinlerden karşılanmasıdır. Süt ürünleri, yoğurt, peynir, susam, bazı kuruyemişler,
+            koyu yeşil sebzeler ve kalsiyumla zenginleştirilmiş ürünler burada iş görür.
           </p>
           <p>
-            D vitamini düzeyi kemik sağlığında belirleyici. Birçok kişide 1000-2000 IU aralığında destek planı
-            kullanılabilir; ancak doz kararı kan düzeyi ve kişisel risk profiline göre verilmelidir
-            <Evidence level={5} />. Protein alımı da gözden kaçmamalı. Kas gücü ile kemik dayanıklılığı birlikte
-            ilerlediği için günlük protein hedefi genellikle 1.0-1.2 g/kg düzeyinde planlanır
-            <Evidence level={4} />.
+            D vitamini düzeyi kemik metabolizmasının önemli parçalarından biridir. Destek gerekip gerekmediği ve hangi dozun uygun
+            olacağı, ölçülen 25(OH)D düzeyi ile kişisel risk profiline göre belirlenmelidir <Evidence level={5} />. Protein de en
+            az kalsiyum kadar kritiktir; çünkü kas gücü korunmadan kemiği korumak eksik bir hedef olur. Pek çok 40+ kadın için
+            günlük protein alımını yaklaşık `1.0-1.2 g/kg` düzeyinde planlamak makul bir çerçeve sunar <Evidence level={4} />.
           </p>
           <p>
-            Bir konuda iki kitap okuyunca "biliyorum" diyorum; üçüncüde fark ediyorum ki üçü farklı şey
-            söylüyor. Kalsiyum konusu da bunlardan biri — kaynaklara göre günlük hedef 800 mg'a iniyor, başka
-            kaynaklarda 1500 mg'a çıkıyor. Buradaki en sade tutum şu olabilir: kendi hekiminin önerdiği aralığı
-            referans almak; bunun üzerine ekstra "biliyorum" eklemeye çalışmamak.
+            Magnezyum, K vitamini ve genel beslenme kalitesi de denklemin yan parçalarıdır; ama her başlığı otomatik takviyeye
+            çevirmek doğru olmaz. En güvenli yaklaşım, eksik olanı ölçüp yerine koymak; rastgele ve üst üste takviye eklemek değil.
           </p>
 
           <h2 id="hareket-plani">Hareket Planı ve Yaşam Alışkanlıkları</h2>
           <p>
-            Hareket planı, sporcu gibi yaşamak zorunda olduğun anlamına gelmez — sade bir ritim çoğu zaman
-            yetiyor.
+            Kemik için en güçlü günlük yatırım, gösterişli olmayan ama düzenli yapılan harekettir. Burada hedef “çok spor yapmak”
+            değil; kemiğe ve kasa düzenli uyarı vermektir.
           </p>
           <p>
-            Ağırlık taşıyan egzersizler, direnç antrenmanı ve denge çalışmaları kemik korunmasında temel
-            araçlardır <Evidence level={5} />. Haftada 3-4 gün planlı egzersiz, yalnızca kemik yoğunluğunu değil
-            düşme riskini de olumlu etkiler. Tanıdığım bir kadın bunu şöyle anlatmıştı: "Pilates+yürüyüş çapamdı;
-            haftada bir gün ağırlık eklediğimde aradaki farkı zamanla hissettim — bir hamlede değil, ritimde
-            yerleşen bir biçimde."
+            Ağırlık taşıyan yürüyüşler, direnç egzersizleri, merdiven çıkma, denge çalışmaları ve uygun olgularda güç antrenmanı
+            kemik korunmasında temel araçlardır <Evidence level={5} />. Özellikle direnç egzersizi, kas kaybını sınırlayarak düşme
+            ve kırık riskini dolaylı olarak da azaltır.
           </p>
           <p>
-            Sigara bırakma, alkolü sınırlama ve uzun süreli hareketsizlikten kaçınma da en az egzersiz kadar
-            önemli. Yüksek tuz ve aşırı kafein tüketimi bazı kişilerde kalsiyum dengesini olumsuz etkileyebilir
-            <Evidence level={3} />. Burada açık tuttuğum bir soru var: hangi yaşam tarzı değişikliğinin kemik
-            kütlesinde ne kadar fark yarattığını bireysel ölçekte kestirmek bende mümkün değil. Bilmediğim bir
-            kısım hâlâ var; bu yüzden yargılamadan birden fazla çapayı yan yana koymak en sade yol.
+            Sigaranın bırakılması, alkolün sınırlandırılması ve uzun süreli hareketsizlikten kaçınma da bu planın parçasıdır.
+            Yüksek tuz alımı ve aşırı sedanter yaşam bazı kadınlarda tabloyu olumsuz etkileyebilir <Evidence level={3} />.
+            Burada en sık yapılan hata, hareketi birkaç hafta çok yoğun yapıp sonra tamamen bırakmaktır. Kemik sağlığı kısa süreli
+            hamle değil, uzun ritim işidir.
           </p>
 
           <h2 id="tibbi-secenekler">Tıbbi Seçenekler ve Kişiselleştirme</h2>
           <p>
-            Bazı durumlarda yaşam alışkanlıkları tek başına yeterli olmayabilir; risk düzeyi yüksek kişilerde
-            hekim değerlendirmesi ile HRT, bifosfonatlar, SERM veya diğer ilaç seçenekleri gündeme gelebilir. Bu
-            tedaviler için kanıt seviyesi güçlü <Evidence level={5} />; ancak her seçenek tüm kişiler için uygun
-            olmayabilir.
+            Bazı kadınlarda yaşam tarzı desteği gerekli ama yeterli değildir. Ölçüm sonucu belirgin düşmüşse, kırık öyküsü varsa
+            ya da genel kırık riski yüksek görünüyorsa tıbbi tedavi konuşulur.
           </p>
           <p>
-            Tıbbi planlama yapılırken yaş, kırık öyküsü, eşlik eden hastalıklar, kalp-damar riski ve kişisel
-            öncelikler birlikte değerlendirilir. En sağlıklı yaklaşım, yaşam tarzı desteği ile gerektiğinde
-            tıbbi tedaviyi dengeli biçimde birleştirmek. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
+            Bu tabloda menopozal hormon tedavisi uygun hastada kemik koruyucu ek fayda sağlayabilir <Evidence level={5} />;
+            ancak konu yalnızca HRT değildir. Bifosfonatlar, denosumab, seçilmiş olgularda SERM grubu ilaçlar ve bazı ileri
+            riskli olgularda anabolik tedaviler gündeme gelebilir. Hangi yolun uygun olduğu yaşa, kırık öyküsüne, eşlik eden
+            hastalıklara, böbrek fonksiyonuna, diş sağlığına, düşme riskine ve tedavi önceliklerine göre belirlenir.
+          </p>
+          <p>
+            Burada asıl amaç yalnızca sayıyı düzeltmek değildir; kırığı önlemek, duruşu korumak ve ileride bağımsız hareket kapasitesini
+            savunmaktır. Bu yüzden tıbbi tedavi kararı “ölçüm kötü çıktı, ilaç başlayalım” kadar mekanik kurulmaz; aynı şekilde “ilaç istemiyorum”
+            demek de konuşmayı kapatmaz. İyi karar, veriyi ve kişisel önceliği birlikte tartmaktır.
           </p>
 
           <h2 id="kapanis">Kapanış</h2>
           <p>
-            Kemik bir hastalık başlığı değil; yıllar içinde sade biçimde desteklenen bir yapı.
+            Kemik sağlığı, konuşulması geç kalan ama yönetilmesi geç kalmaması gereken başlıklardan biridir.
           </p>
           <p>
-            Kalsiyum, D vitamini, protein, ağırlık taşıyan hareket, denge çalışması, sigarayı bırakma,
-            alkolü ölçülü tutma — bu altı çapa üst üste binerek yapıyı koruyor. Tek bir hamle değil; yıllara
-            yayılan bir ritim. Erken bir tarama bireysel başlangıç noktasını verir, sonraki yıllar bu noktanın
-            etrafında kişiselleşir.
+            Kalsiyum, D vitamini, protein, direnç egzersizi, denge çalışması, sigaradan uzak durma ve doğru zamanda tarama —
+            bunların her biri küçük görünür; birlikte büyük fark yaratır. İlk adım çoğu zaman karmaşık değildir: kendi riskini bilmek,
+            gerekiyorsa ölçümü zamanında yapmak ve planı süreklilikle sürdürmek.
           </p>
           <p>
-            Belki şu soru yardımcı olur: bu yıl yapımı destekleyecek hangi tek alışkanlığı yargılamadan, sadece
-            yerleştirmek niyetiyle ekleyebilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir
-            cümle söylemişti; sen onu kendi yapına yazıyorsun.
+            Hekiminize şu üç soruyu sormak iyi bir başlangıç olabilir: “Benim kırık riskim ortalamanın üstünde mi?”, “DXA taraması için doğru zamanda mıyım?” ve
+            “Yaşam tarzı adımları bana yeter mi, yoksa tıbbi destek konuşmalı mıyız?” Bilgi, burada gerçekten belirsizliğin panzehiridir.
           </p>
         </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
         <RelatedReadings
           class="mt-14"
@@ -247,3 +266,4 @@ const articleSchemas = buildArticleSchemas({
 
   <SiteFooter />
 </SiteLayout>
+

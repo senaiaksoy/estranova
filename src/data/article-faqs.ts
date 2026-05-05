@@ -1,0 +1,551 @@
+export interface ArticleFaqItem {
+  question: string;
+  answer: string;
+}
+
+export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi': [
+    {
+      question: 'Menopoza yaklaşırken herkese geniş hormon paneli gerekir mi?',
+      answer:
+        'Hayır. Yakınmayı, adet düzenini ve kişisel risk öyküsünü anlamadan yalnızca sayıyı büyütmek çoğu zaman daha fazla netlik sağlamaz. Çekirdek kontroller çoğu kadında daha değerlidir; ileri testler ise belirli bir soru varsa anlam kazanır.',
+    },
+    {
+      question: 'FSH yüksek çıktıysa bu tek başına menopoza girdiğim anlamına gelir mi?',
+      answer:
+        'Hayır. FSH, özellikle perimenopozda dalgalanabilir ve tek başına bütün tabloyu anlatmaz. Adet düzeni, yaş, belirtiler ve bazen tekrar ölçüm ihtiyacı birlikte değerlendirilir.',
+    },
+    {
+      question: 'Kontrol dosyasına hangi notları eklemek görüşmeyi kolaylaştırır?',
+      answer:
+        'Adet tarihi değişimleri, sıcak basması sıklığı, uyku bölünmeleri, kullanılan ilaç ve takviyeler, aile öyküsü ve son tarama tarihleri görüşmeyi çok kolaylaştırır. Bu küçük notlar çoğu zaman ekstra tahlilden daha yol gösterici olur.',
+    },
+  ],
+  '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik': [
+    {
+      question: 'Perimenopozdaki zihinsel bulanıklık kalıcı bir hafıza kaybı mıdır?',
+      answer:
+        'Çoğu zaman hayır. Bu dönem daha çok dikkat, kelime bulma ve zihinsel hız dalgalanması şeklinde yaşanır; uyku, stres ve hormonal değişim birlikte rol oynar. Ama belirgin ilerleme, günlük işlev kaybı veya nörolojik ek belirti varsa konu yeniden ele alınmalıdır.',
+    },
+    {
+      question: 'Beyin sisi ile uykusuzluk arasında gerçekten güçlü bir bağ var mı?',
+      answer:
+        'Evet, çoğu kadında en görünür bağlantılardan biri budur. Gece bölünmeleri arttıkça ertesi gün kelime bulma, odak sürdürme ve zihinsel dayanıklılık daha kırılgan hissedilebilir.',
+    },
+    {
+      question: 'Bu dönemde ne zaman daha ayrıntılı değerlendirme istemek gerekir?',
+      answer:
+        'Yakınma kısa süreli dalgalanmanın ötesine geçip iş, güvenlik ya da günlük yaşamı etkiliyorsa daha dikkatli değerlendirme gerekir. Özellikle tek taraflı güçsüzlük, ani yönelim bozukluğu, şiddetli baş ağrısı veya hızla ilerleyen unutkanlık bekletilmemelidir.',
+    },
+  ],
+  '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler': [
+    {
+      question: 'Perimenopozun ilk işareti her zaman adet düzensizliği midir?',
+      answer:
+        'Hayır. Bazı kadınlarda ilk fark edilen şey uyku, ruh hali, sıcak basması ya da zihinsel dağınıklık olabilir. Adet düzeni önemli bir ipucu olsa da tek kapı değildir.',
+    },
+    {
+      question: 'Bu dönemde belirtiler neden bazı aylarda çok artıp sonra geri çekilir?',
+      answer:
+        'Perimenopozun doğası dalgalıdır; hormon üretimi çizgisel değil inişli çıkışlı değişir. Bu yüzden bir ay daha sakin geçen tablo, sonraki ay yeniden belirginleşebilir.',
+    },
+    {
+      question: 'İlk işaretleri not etmek gerçekten işe yarar mı?',
+      answer:
+        'Evet. Tarih, sıklık ve eşlik eden durumları birkaç hafta not etmek hem kişisel farkındalığı artırır hem de hekim görüşmesini daha somut hale getirir. Dağınık bir hissi daha okunur bir örüntüye dönüştürür.',
+    },
+  ],
+  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': [
+    {
+      question: 'Menopozda libido azalması mutlaka hormonal bir sorun mudur?',
+      answer:
+        'Hayır. Hormonlar önemli bir parça olsa da ilişki dinamiği, uyku, stres, beden konforu, ağrı ve kendilik hissi de tabloyu belirler. Bu yüzden tek neden aramak çoğu zaman konuyu gereğinden fazla daraltır.',
+    },
+    {
+      question: 'İstek azalması ile uyarılma sorunu aynı şey mi?',
+      answer:
+        'Tam olarak değil. İstek, konuya zihinsel ve duygusal yaklaşımı; uyarılma ise bedensel yanıtı tarif eder. İkisi birlikte etkilenebilir ama her zaman aynı şekilde değişmez.',
+    },
+    {
+      question: 'Ne zaman bu konuyu profesyonel destekle konuşmak iyi olur?',
+      answer:
+        'Yakınma ilişkiyi, özsaygıyı ya da bedenle kurduğunuz huzuru belirgin biçimde etkiliyorsa konuşmak iyi olur. Özellikle ağrı, belirgin kuruluk veya yeni başlamış isteksizlik başka başlıklarla birlikte değerlendirilmelidir.',
+    },
+  ],
+  '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme': [
+    {
+      question: 'HRT başladıktan sonra ilk haftalarda hangi yakınmalar geçici sayılabilir?',
+      answer:
+        'Hafif meme hassasiyeti, şişkinlik hissi, hafif baş ağrısı ya da lekelenme bazı rejimlerde başlangıç döneminde görülebilir. Bu tabloyu anlamlı yapan şey şiddeti, süresi ve zaman içinde yatışıp yatışmadığıdır.',
+    },
+    {
+      question: 'Lekelenme olursa hemen tedavinin bana uymadığını mı düşünmeliyim?',
+      answer:
+        'Hayır, özellikle ilk aylarda bazı kadınlarda lekelenme görülebilir. Ama artan miktar, uzayan süre veya beklenmedik zamanlama varsa düzenin yeniden gözden geçirilmesi gerekir.',
+    },
+    {
+      question: 'İzlem yalnızca yan etkileri görmek için mi yapılır?',
+      answer:
+        'Hayır. İzlem aynı zamanda belirtilerin gerçekten düzelip düzelmediğini, dozun uygun olup olmadığını ve kişisel risk dengesinin değişip değişmediğini anlamak için yapılır. Yani yalnızca sorun aramak değil, tedaviyi rafine etmektir.',
+    },
+  ],
+  '/zamansiz-yasam/deneysel/nad-plus-takviyesi': [
+    {
+      question: 'NAD+ takviyeleri menopozda enerji için kanıtlı bir çözüm müdür?',
+      answer:
+        'Şu an için böyle net bir cümle kurmak zor. Mekanizma ilgisi yüksek olsa da insan çalışmalarındaki klinik fayda henüz sınırlı ve tutarsız. Pazarlama dili çoğu zaman bilimin önünde gidiyor.',
+    },
+    {
+      question: 'Laboratuvar mantıklı görünüyorsa takviye otomatik olarak güvenli sayılır mı?',
+      answer:
+        'Hayır. Bir mekanizmanın biyolojik olarak ilginç olması, uzun dönem kullanımın güvenli ve etkili olduğu anlamına gelmez. Özellikle doz, ürün standardı ve ilaç etkileşimleri netleşmeden temkinli olmak gerekir.',
+    },
+    {
+      question: 'Bu tür takviyelerde en doğru başlangıç sorusu ne olmalı?',
+      answer:
+        'En doğru soru genellikle “Hangi somut hedef için düşünüyorum ve bunun için daha kanıtlı bir seçenek var mı?” olur. Hedef netleşmeden takviyeye yönelmek çoğu zaman beklentiyi üründen büyük yapar.',
+    },
+  ],
+  '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi': [
+    {
+      question: 'Sıcak basması yalnızca yüz kızarması mıdır?',
+      answer:
+        'Hayır. Birçok kadın için ani ısı yükselmesi, terleme, çarpıntı hissi ve sonrasında üşüme birlikte yaşanır. Bazılarında gece bölünmeleri gündüz yakınmasından bile daha yıpratıcı olur.',
+    },
+    {
+      question: 'Tetikleyicileri takip etmek gerçekten fark yaratır mı?',
+      answer:
+        'Evet, özellikle alkol, sıcak ortam, yoğun stres, uykusuzluk ve bazı yiyeceklerle kişisel ilişki görmek işe yarayabilir. Her tetik herkeste aynı olmadığı için kısa bir gözlem dönemi yararlıdır.',
+    },
+    {
+      question: 'Ne zaman destek seçeneği konuşmak gerekir?',
+      answer:
+        'Yakınma uykuyu, iş ritmini veya sosyal konforu belirgin bozuyorsa konuşmak gerekir. Amaç yalnızca dayanmak değil, hayat kalitesini hangi düzeyde etkilediğini dürüstçe görmek olmalıdır.',
+    },
+  ],
+  '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma': [
+    {
+      question: 'NAD+ neden yaşlanma tartışmalarında bu kadar sık geçiyor?',
+      answer:
+        'Çünkü hücresel enerji metabolizması ve onarım yollarıyla ilişkili biyolojik bir merkez gibi düşünülüyor. Ama ilginç biyoloji ile kanıtlanmış klinik fayda aynı şey değildir; arada hâlâ önemli boşluklar var.',
+    },
+    {
+      question: 'Fare çalışmaları insanlarda aynı etkiyi beklememiz için yeterli mi?',
+      answer:
+        'Hayır. Erken dönem hayvan verileri yön verici olabilir ama insan bedenindeki sonuçları garanti etmez. Bu başlıkta özellikle doz, süre ve gerçek klinik kazanım hâlâ tartışmalıdır.',
+    },
+    {
+      question: 'Bu alandaki haberlere nasıl daha sakin yaklaşılır?',
+      answer:
+        'Önce çalışma tipine, insan verisi olup olmadığına ve ölçülen sonucun gerçekten günlük yaşamı etkileyen bir sonlanım olup olmadığına bakmak iyi bir başlangıçtır. “Mekanizma var” ifadesi tek başına yeterli değildir.',
+    },
+  ],
+  '/zamansiz-yasam/d-vitamini-rehberi': [
+    {
+      question: 'D vitamini herkese otomatik takviye olarak mı düşünülmeli?',
+      answer:
+        'Hayır. D vitamini önemli olsa da doz ve ihtiyaç kişisel duruma göre değişir. Kimi kadın için yaşam biçimi ve ölçüm takibi yeterliyken, kimi kadın için hedefli destek daha anlamlı olabilir.',
+    },
+    {
+      question: 'Güneş görmek tek başına yeterli olur mu?',
+      answer:
+        'Bazı dönemlerde olabilir, bazı dönemlerde olmayabilir. Mevsim, cilt özellikleri, dışarıda geçirilen süre ve yaşam düzeni bu denklemi değiştirir; bu yüzden tek yanıt herkes için aynı değildir.',
+    },
+    {
+      question: 'D vitamini desteğinde asıl risk eksiklik değil, gereksiz yüksek doz olabilir mi?',
+      answer:
+        'Evet, bu da önemli bir noktadır. “Fazlası daha iyi” yaklaşımı burada güvenli değildir; yüksek dozlar gereksiz yere başka sorunlara kapı açabilir. Denge, eksikliği ve aşırılığı birlikte düşünmeyi gerektirir.',
+    },
+  ],
+  '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz': [
+    {
+      question: 'Menopozda cinsellikte ağrı normalleşmesi gereken bir durum mu?',
+      answer:
+        'Hayır. Sık görülmesi, normalleştirilmesi gerektiği anlamına gelmez. Ağrı, kuruluk, doku hassasiyeti ya da pelvik taban gerilimi gibi başlıkların işareti olabilir ve konuşulmayı hak eder.',
+    },
+    {
+      question: 'Ağrı her zaman yalnızca vajinal kuruluğa mı bağlıdır?',
+      answer:
+        'Hayır. Kuruluk önemli bir neden olsa da enfeksiyon, cilt sorunları, pelvik taban spazmı, korku-anksiyete döngüsü ve farklı yapısal nedenler de rol oynayabilir. Bu yüzden tek açıklamaya sıkışmamak gerekir.',
+    },
+    {
+      question: 'Ne zaman değerlendirme bekletilmemeli?',
+      answer:
+        'Ağrı yeni başladıysa, giderek artıyorsa, kanama eşlik ediyorsa ya da kaçınmaya yol açacak kadar belirginleştiyse bekletmemek iyi olur. Konfor kaybı uzun süre sessiz kalması gereken bir konu değildir.',
+    },
+  ],
+  '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz': [
+    {
+      question: 'Mahrem bölgede kuruluk ve hassasiyet menopozda ne kadar yaygındır?',
+      answer:
+        'Oldukça yaygındır ama her kadın aynı yoğunlukta yaşamaz. Bazılarında yalnızca aralıklı rahatsızlık olurken, bazılarında gündelik konforu ve cinselliği etkileyen daha kalıcı bir tablo gelişebilir.',
+    },
+    {
+      question: 'Yalnızca nemlendirici kullanmak herkeste yeterli olur mu?',
+      answer:
+        'Her zaman değil. Bazı kadınlarda düzenli nem desteği iyi gelirken, bazı kadınlarda doku değişimi daha belirgin olduğu için farklı seçenekleri konuşmak gerekir. İhtiyaç, yakınmanın derinliğine göre değişir.',
+    },
+    {
+      question: 'İdrar yaparken yanma veya sıkışma hissi de bu tabloya eşlik edebilir mi?',
+      answer:
+        'Evet, edebilir. Menopozla birlikte ürogenital dokulardaki değişim yalnızca vajinal konforu değil, mesane ve idrar yolu çevresindeki hissi de etkileyebilir. Ama enfeksiyon gibi başka nedenleri de dışlamak gerekir.',
+    },
+  ],
+  '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz': [
+    {
+      question: 'Menopoz döneminde stres eşiği gerçekten düşebilir mi?',
+      answer:
+        'Evet, birçok kadın bunu böyle tarif eder. Hormon dalgalanması, uyku kırılması ve gündelik yükler birleşince aynı olaylara verilen tepki daha yoğun hissedilebilir.',
+    },
+    {
+      question: 'Stresi yönetmek için büyük hayat değişiklikleri mi gerekir?',
+      answer:
+        'Çoğu zaman hayır. Küçük ama düzenli ritimler, örneğin uyku saatini korumak, gün içinde kısa hareket araları vermek ve zihni yoran yükleri görünür kılmak daha sürdürülebilir sonuç verir.',
+    },
+    {
+      question: 'Ne zaman bu tabloyu yalnızca “yoğunluk” diye geçmemek gerekir?',
+      answer:
+        'Kaygı, çökkünlük, öfke patlamaları ya da beden belirtileri işlevi bozuyorsa daha yakından bakmak gerekir. Çünkü bazen mesele yalnızca stres değil, uyku bozulması veya depresif tabloyla birleşen bir yük olabilir.',
+    },
+  ],
+  '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz': [
+    {
+      question: 'Menopozda uyku bozukluğu yalnızca sıcak basmasına mı bağlıdır?',
+      answer:
+        'Hayır. Sıcak basması önemli bir neden olsa da anksiyete, erken uyanma, düzensiz uyku saati, horlama ve bacak huzursuzluğu gibi başka başlıklar da tabloyu besleyebilir. İyi uyku için önce hangi kapının öne çıktığını görmek gerekir.',
+    },
+    {
+      question: 'Gece sık uyanıp tekrar uyuyabiliyorsam yine de bunu önemsemeli miyim?',
+      answer:
+        'Evet, çünkü uykunun kalitesi yalnızca toplam saatle ilgili değildir. Tekrarlayan bölünmeler ertesi gün zihinsel dayanıklılığı, ruh halini ve beden enerjisini belirgin biçimde etkileyebilir.',
+    },
+    {
+      question: 'Uyku günlüğü tutmak gerçekten işe yarar mı?',
+      answer:
+        'Evet, özellikle sorunun ritmini görmek için çok işe yarar. Yatma-kalkma saatleri, gece uyanma sayısı, alkol-kafein, egzersiz ve sıcak basması notları tabloyu daha okunur hale getirir.',
+    },
+  ],
+  '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin': [
+    {
+      question: 'Akşam egzersizi uykuya her zaman zarar mı verir?',
+      answer:
+        'Hayır. Egzersizin saati kadar yoğunluğu, süresi ve bedende bıraktığı ısı yükü önemlidir. Bazı kadınlarda hafif akşam hareketi toparlayıcı olurken, yoğun antrenman tam tersine uyarıcı kalabilir.',
+    },
+    {
+      question: 'Perimenopozda akşam hareketi neden daha farklı hissedilebilir?',
+      answer:
+        'Çünkü bu dönemde beden ısısı, gece uyanmaları ve toparlanma ritmi daha kırılgan olabilir. Aynı egzersiz genç yaşta sorun yaratmazken, bu dönemde uyku penceresini daraltabilir.',
+    },
+    {
+      question: 'En pratik deneme yöntemi ne olabilir?',
+      answer:
+        'Bir süre yoğunluğu ve bitiş saatini değiştirip ertesi günkü uyku hissini not etmek iyi bir başlangıçtır. Mesele kuralla değil, kendi beden ritmiyle çalışmaktır.',
+    },
+  ],
+  '/zamansiz-yasam/beslenme-yaslanma': [
+    {
+      question: '40 yaş sonrasında beslenmede en çok hangi başlıklar önem kazanır?',
+      answer:
+        'Protein, lif, kemik sağlığını destekleyen besinler ve genel enerji dengesi daha görünür hale gelir. Ama mesele yalnızca eksik tamamlamak değil, sürdürülebilir bir tabak düzeni kurmaktır.',
+    },
+    {
+      question: 'Tek bir “mükemmel menopoz diyeti” var mı?',
+      answer:
+        'Hayır. Kültür, yaşam ritmi, sağlık durumu ve hedefler çok farklıdır. En iyi plan, uzun vadede sürdürülebilen ve bedeni daha dengeli hissettiren plandır.',
+    },
+    {
+      question: 'Takviye almak yerine önce sofraya bakmak neden önemli?',
+      answer:
+        'Çünkü birçok beslenme hedefi önce günlük düzen içinde karşılanabilir. Takviye bazen gerekli olabilir ama iyi bir temel olmadan üzerine eklenen kısa yol gibi kalır.',
+    },
+  ],
+  '/zamansiz-yasam/kilo-artisi-menopoz': [
+    {
+      question: 'Menopozda kilo artışı yalnızca daha az hareket etmekten mi olur?',
+      answer:
+        'Hayır. Yaş, uyku, stres, kas kütlesi, yağ dağılımı ve hormonal değişim birlikte çalışır. Bu yüzden tabloyu yalnızca irade ya da aktivite eksikliği olarak okumak haksızlık olur.',
+    },
+    {
+      question: 'Tartı aynı kalırken bedenin değişmesi mümkün mü?',
+      answer:
+        'Evet, hatta bu dönem için oldukça tanıdık bir durumdur. Kas kütlesi azalırken yağ dağılımı değişebilir; bu da sayı sabit kalsa bile kıyafet ve beden hissini değiştirebilir.',
+    },
+    {
+      question: 'En doğru ilk hedef hızlı kilo vermek midir?',
+      answer:
+        'Çoğu zaman hayır. İlk hedef, kası koruyan ritimleri güçlendirmek, uykuyu toparlamak ve bel çevresi ile enerji düzeyini daha yakından izlemek olabilir. Hızlı çözümler çoğu zaman sürdürülebilir olmaz.',
+    },
+  ],
+  '/zamansiz-yasam/kemik-sagligi-40-sonrasi': [
+    {
+      question: 'Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?',
+      answer:
+        'Çünkü kemik kaybı çoğu zaman sessiz ilerler ve ilk güçlü işaretini yıllar sonra kırık riskiyle verir. Koruyucu yaklaşım, ağrı beklemeden risk faktörlerini ve tarama zamanını düşünmeyi gerektirir.',
+    },
+    {
+      question: 'DXA ölçümü herkese 40 yaşında gerekli midir?',
+      answer:
+        'Hayır. Yaş, kırık öyküsü, aile öyküsü, steroid kullanımı, erken menopoz ve eşlik eden hastalıklar gibi riskler ölçüm zamanını değiştirir. Doğru zamanlama kişisel risk tablosuna göre belirlenir.',
+    },
+    {
+      question: 'Kemik sağlığı için yürüyüş tek başına yeterli olur mu?',
+      answer:
+        'Yürüyüş değerli bir temel ama her zaman tek başına yeterli olmayabilir. Kemik ve kas için yük taşıyan, dengeyi ve direnç kapasitesini geliştiren hareketlerin de plana girmesi çoğu zaman daha güçlü sonuç verir.',
+    },
+  ],
+  '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik': [
+    {
+      question: 'Östrojen neden yalnızca üreme hormonu gibi düşünülmemeli?',
+      answer:
+        'Çünkü etkisi yalnızca adet döngüsüyle sınırlı değildir. Kemik, damar, beyin, cilt ve metabolizma gibi birçok sistem bu hormondaki değişimlerden pay alır.',
+    },
+    {
+      question: 'Östrojenin azalması herkeste aynı sonuçları mı doğurur?',
+      answer:
+        'Hayır. Aynı biyolojik değişim farklı bedenlerde farklı önceliklerle görünür; birinde sıcak basması, diğerinde uyku, başka birinde kemik veya doku konforu öne çıkabilir.',
+    },
+    {
+      question: 'Bu biyolojiyi bilmek günlük yaşam açısından neden değerli?',
+      answer:
+        'Çünkü dağınık görünen yakınmaları tek tek değil, ortak bir çerçevede okumayı kolaylaştırır. Böylece bedenin verdiği sinyaller daha az şaşırtıcı, daha çok anlaşılır hale gelir.',
+    },
+  ],
+  '/hormonal-gecis/menopoz/menopoz-nedir': [
+    {
+      question: 'Menopoz bir gün mü, bir süreç mi?',
+      answer:
+        'Tıbbi tanım olarak tek bir eşik vardır ama yaşantı olarak bir süreçtir. Son adetten 12 ay sonra geriye dönük olarak netleşir; öncesindeki yıllar ise perimenopoz geçişidir.',
+    },
+    {
+      question: 'Menopoz belirtileri son adetle birlikte hemen biter mi?',
+      answer:
+        'Hayır. Bazı kadınlarda belirtiler bu eşiğin ardından da bir süre devam edebilir. Yakınmanın seyri kişiye göre değişir ve yalnızca takvime bakarak anlaşılmaz.',
+    },
+    {
+      question: 'Menopoz sonrası dönemde en çok hangi sağlık başlıkları öne çıkar?',
+      answer:
+        'Kemik sağlığı, kardiyometabolik denge, uyku, beden kompozisyonu ve ürogenital konfor daha görünür hale gelir. Bu yüzden dönem yalnızca “adet bitti” diye değil, yeni bir sağlık ajandası olarak okunmalıdır.',
+    },
+  ],
+  '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': [
+    {
+      question: 'HRT herkes için aynı formda mı planlanır?',
+      answer:
+        'Hayır. Uygulama yolu, doz, progesteron ihtiyacı ve hedeflenen yakınma kişisel tabloya göre değişir. Aynı başlık altında konuşulan iki tedavi aslında çok farklı rejimler olabilir.',
+    },
+    {
+      question: 'Karar verirken en kritik üç başlık nedir?',
+      answer:
+        'Belirtinin hayatı ne kadar etkilediği, kişisel risk profili ve menopozdan bu yana geçen süre en kritik üç başlıktır. Bu üçlü konuşulmadan yalnızca korku veya umut üzerinden karar vermek sağlıklı olmaz.',
+    },
+    {
+      question: 'HRT düşünmüyorsam seçenekler bitmiş mi sayılır?',
+      answer:
+        'Hayır. Yakınmanın türüne göre yaşam tarzı düzenlemeleri, davranışsal yaklaşımlar, hormonsuz seçenekler veya lokal çözümler gündeme gelebilir. “Hayır” demek çoğu zaman boşluk değil, farklı yol anlamına gelir.',
+    },
+  ],
+  '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi': [
+    {
+      question: 'Menopoz takibinde iyi hekim-hasta ilişkisini ne belirler?',
+      answer:
+        'En çok belirleyen şey, kadının sorularını küçültmeden dinleyen ve kararı birlikte kuran bir yaklaşım olmasıdır. Bilgi kadar üslup ve güven hissi de bu süreçte çok önemlidir.',
+    },
+    {
+      question: 'İkinci görüş istemek güvensizlik anlamına mı gelir?',
+      answer:
+        'Hayır. Özellikle büyük kararlar söz konusuysa ikinci görüş bazen zihni sakinleştirir ve seçenekleri daha net görmeyi sağlar. Bu, ilişkiyi bozmak değil, tabloyu olgunlaştırmak olabilir.',
+    },
+    {
+      question: 'Görüşmeye gitmeden önce hangi soruları hazırlamak iyi olur?',
+      answer:
+        'Belirtilerin ne kadar sürdüğü, en çok neyi zorladığı, hangi riski merak ettiğiniz ve hangi hedefe ulaşmak istediğiniz iyi bir başlangıçtır. Net soru, daha net konuşma demektir.',
+    },
+  ],
+  '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu': [
+    {
+      question: 'Tartı değişmiyorsa yine de beden kompozisyonu bozulabilir mi?',
+      answer:
+        'Evet. Kas azalırken yağ dağılımı değişebilir ve bu tartıda görülmeyebilir. Bu yüzden yalnızca kiloya bakmak bedenin bütün hikâyesini anlatmaz.',
+    },
+    {
+      question: 'Bel çevresinin artması neden daha çok konuşuluyor?',
+      answer:
+        'Çünkü menopoz geçişinde yağın yer değiştirmesi sık görülen bir durumdur ve bu değişim metabolik sağlık açısından sayıdan daha anlamlı olabilir. Kıyafetlerin farklı oturması bazen ilk işaret olur.',
+    },
+    {
+      question: 'Vücut kompozisyonunu korumada ilk öncelik nedir?',
+      answer:
+        'Kas kütlesini koruyan hareket ve yeterli protein çoğu zaman ilk önceliktir. Hızlı kalori kısıtları, kısa vadede sayı verse de uzun vadede kompozisyonu daha kırılgan bırakabilir.',
+    },
+  ],
+  '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari': [
+    {
+      question: 'Koruyucu sağlık kaydı tutmak neden bu dönemde daha değerli hale gelir?',
+      answer:
+        'Çünkü belirtiler, taramalar ve aile öyküsü aynı anda önem kazanmaya başlar. Dağınık bilgiler yazıya döküldüğünde hem siz hem de hekim için daha okunur bir çerçeve oluşur.',
+    },
+    {
+      question: 'Bu kayda yalnızca tahlil sonuçları mı yazılmalı?',
+      answer:
+        'Hayır. Adet düzeni, uyku, sıcak basması, ruh hali, tansiyon, kullanılan ilaçlar ve önemli aile öyküleri de en az sonuçlar kadar değerlidir. Bazen kararı sayılar değil, hikâye tamamlar.',
+    },
+    {
+      question: 'Ne kadar ayrıntı fazla olur?',
+      answer:
+        'Her günü dakikası dakikasına tutmak yerine eğilimleri görmek yeterlidir. Kısa, düzenli ve sürdürülebilir kayıt; çok ayrıntılı ama çabuk bırakılan kayıttan daha işlevseldir.',
+    },
+  ],
+  '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan': [
+    {
+      question: 'Perimenopozda uyku sorunu neden bazen hiçbir sebep yokmuş gibi başlar?',
+      answer:
+        'Çünkü hormonal dalgalanma önce beden ritmini değiştirir ve bu değişim her zaman gündüz çok görünür olmayabilir. Gece ise daha sık uyanma, erken uyanma veya hafif uyku olarak kendini gösterebilir.',
+    },
+    {
+      question: 'Yatağa yorgun girmek ama yine de uyuyamamak bu dönemde sık mıdır?',
+      answer:
+        'Evet, oldukça sık tarif edilir. Yorgunluk ile uykuya geçiş kapasitesi aynı şey değildir; beden bitkin olsa bile zihin ve sinir sistemi geceyi kolay bırakmayabilir.',
+    },
+    {
+      question: 'Bu dönemde en işe yarar ilk farkındalık ne olabilir?',
+      answer:
+        'Sorunun yalnızca “az uyumak” değil, uykunun yapısının değişmesi olduğunu görmek önemlidir. Bu bakış, çözümü de daha gerçekçi kurmaya yardım eder.',
+    },
+  ],
+  '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban': [
+    {
+      question: 'İdrar kaçırmanın her türü aynı nedenle mi olur?',
+      answer:
+        'Hayır. Öksürme, zıplama veya gülme ile olan kaçırma ile aniden sıkışıp yetişememe tablosu farklı mekanizmalarla ortaya çıkar. Çoğu kadında iki tipin karışımı da görülebilir.',
+    },
+    {
+      question: 'Pelvik taban egzersizi herkes için aynı biçimde mi yapılmalı?',
+      answer:
+        'Hayır. Bazı kadınlarda güçsüzlük, bazılarında ise fazla kasılı kalma öne çıkar. Bu yüzden yalnızca “daha çok sık” yaklaşımı her bedende aynı sonucu vermez.',
+    },
+    {
+      question: 'Ne zaman bu konuyu ertelememek gerekir?',
+      answer:
+        'Kaçırma günlük hayatı, yürüyüşü, sporu, cinselliği veya dışarı çıkma rahatlığını etkilemeye başladıysa ertelememek gerekir. Sessiz yaşanması, çözümsüz olduğu anlamına gelmez.',
+    },
+  ],
+  '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': [
+    {
+      question: 'GLP-1 analogları menopozda kilo için sihirli çözüm mü?',
+      answer:
+        'Hayır. Bazı kadınlarda güçlü sonuçlar sağlayabilir ama bu ilaçlar yaşam tarzı, kas korunumu ve uzun dönem planın yerini tutmaz. Beklentiyi gerçekçi kurmak çok önemlidir.',
+    },
+    {
+      question: 'Bu ilaçlarla kas kaybı konuşmak neden önemli?',
+      answer:
+        'Çünkü hızlı kilo kaybı her zaman yalnızca yağ dokusundan olmaz. Menopoz geçişinde kas zaten hassas bir başlık olduğu için hareket ve protein desteği daha da önemli hale gelir.',
+    },
+    {
+      question: 'Menopozal kilo yakınması olan herkes bu tedavi için aday mıdır?',
+      answer:
+        'Hayır. Eşlik eden hastalıklar, beden kitle durumu, metabolik risk ve beklenti çerçevesi birlikte değerlendirilir. Klinik karar, yalnızca tartıdan değil bütün sağlık resminden çıkar.',
+    },
+  ],
+  '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari': [
+    {
+      question: '40 yaş sonrası diz, kalça ve bel ağrısı yaşlanmanın kaçınılmaz parçası mı?',
+      answer:
+        'Hayır. Yaşla birlikte bazı yapılar daha hassas hale gelse de ağrıyı otomatik kader gibi görmek doğru değildir. Kas gücü, yüklenme biçimi, uyku ve iyileşme ritmi tabloyu ciddi biçimde değiştirir.',
+    },
+    {
+      question: 'Ağrı varken tamamen dinlenmek en doğru yaklaşım mı?',
+      answer:
+        'Her zaman değil. Bazı durumlarda kısa süreli koruma gerekir ama çoğu tabloda iyi ayarlanmış hareket iyileşmenin parçasıdır. Mesele hiç hareket etmemek değil, ağrıyla kavga etmeyen doz bulmaktır.',
+    },
+    {
+      question: 'Ne zaman görüntüleme veya ayrıntılı değerlendirme düşünmek gerekir?',
+      answer:
+        'Gece uykudan uyandıran ağrı, travma öyküsü, güç kaybı, ilerleyen şişlik ya da nörolojik yakınmalar varsa daha hızlı değerlendirme gerekir. Çünkü bazı durumlarda mesele yalnızca yüklenme değildir.',
+    },
+  ],
+  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi': [
+    {
+      question: 'CoQ10 gerçekten anti-aging için güçlü kanıtlı bir takviye mi?',
+      answer:
+        'Bu iddia için kanıt sınırlıdır. CoQ10’un bazı klinik alanlarda yeri olabilir ama “genel gençlik enerjisi” başlığında pazarlama, bilimin önüne geçme eğilimindedir.',
+    },
+    {
+      question: 'Statin kullanan biri için CoQ10 konusu neden ayrı konuşuluyor?',
+      answer:
+        'Çünkü en fazla klinik ilgi gören alanlardan biri statin ilişkili kas yakınmalarıdır. Yine de herkes için aynı etki beklenmez; bu alan bile kesinlik değil, olasılık üzerinden konuşulur.',
+    },
+    {
+      question: 'Takviye reklamı ile klinik kanıtı ayırmak için ilk bakılacak şey nedir?',
+      answer:
+        'İlk bakılacak şey, hangi sonlanımın ölçüldüğüdür. Gerçek bir yakınma mı düzelmiş, yoksa yalnızca biyokimyasal bir parametre mi değişmiş, bunu ayırmak çok şey söyler.',
+    },
+  ],
+  '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu': [
+    {
+      question: 'Bir tedaviye “deneysel” denmesi tam olarak ne anlama gelir?',
+      answer:
+        'Genellikle etkinlik ve güvenlik verisinin henüz sınırlı olduğu, kullanım yerinin tam netleşmediği anlamına gelir. Bu kelime bazen umut çağrıştırsa da aslında belirsizliğin de adıdır.',
+    },
+    {
+      question: 'Off-label kullanım ile deneysel yaklaşım aynı şey midir?',
+      answer:
+        'Hayır. Off-label kullanım, onaylı bir ilacın farklı bir endikasyonda kullanılması olabilir; deneysel yaklaşım ise çoğu zaman daha az veri ve daha fazla belirsizlik taşır. İkisini aynı torbaya koymamak gerekir.',
+    },
+    {
+      question: 'Deneysel bir seçenek konuşulurken en doğru üç soru nedir?',
+      answer:
+        'Ne kadar insan verisi olduğu, beklenen faydanın ne kadar somut olduğu ve standart seçeneklerin neden yeterli görülmediği iyi üç başlangıç sorusudur. Bu sorular pazarlama ile klinik kararı ayırmaya yardım eder.',
+    },
+  ],
+  '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim': [
+    {
+      question: 'Non-invaziv cihazlar cerrahi sonuçla aynı etkiyi verir mi?',
+      answer:
+        'Genellikle hayır. Bazı cihazlarda sınırlı ya da orta düzey iyileşme görülebilir ama beklentiyi cerrahi sonuç düzeyine taşımak çoğu zaman gerçekçi değildir.',
+    },
+    {
+      question: 'Bu cihazlarda en çok hangi yanılgı oluşuyor?',
+      answer:
+        'En sık yanılgı, teknoloji isminin kanıt gücü sanılmasıdır. Oysa HIFU, RF veya mikroakım demek tek başına güçlü veri demek değildir; uygulama alanı ve çalışma kalitesi çok değişir.',
+    },
+    {
+      question: 'Postmenopozal ciltte neden beklenti daha dikkatli kurulmalı?',
+      answer:
+        'Çünkü doku kalitesi, kollajen yanıtı ve iyileşme temposu değişebilir. Aynı cihaz daha genç ciltte farklı, postmenopozal zeminde daha sınırlı bir karşılık verebilir.',
+    },
+  ],
+  '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz': [
+    {
+      question: 'Sauna sıcak basması yaşayan biri için her zaman iyi gelir mi?',
+      answer:
+        'Hayır. Bazı kadınlar gevşeme hissi yaşarken, bazıları için ısı yükü yakınmayı artırabilir. Burada “iyi gelir” sorusunun yanıtı oldukça kişiseldir.',
+    },
+    {
+      question: 'Soğuk duş dayanıklılık antrenmanı gibi mi düşünülmeli?',
+      answer:
+        'Hayır, özellikle menopoz yakınmaları olan biri için bu yaklaşım fazla sert olabilir. Amaç performans göstermek değil, bedenin neye nasıl yanıt verdiğini sakin biçimde anlamaktır.',
+    },
+    {
+      question: 'Kimler daha dikkatli olmalı?',
+      answer:
+        'Kalp-damar hastalığı, tansiyon düzensizliği, bayılma eğilimi veya belirgin ısı hassasiyeti olan kadınlar daha dikkatli olmalıdır. Çünkü iyi olma aracı olarak düşünülen şey bazen bedene fazla yük binebilir.',
+    },
+  ],
+  '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz': [
+    {
+      question: 'Gece terlemesi neden bu kadar utanç duygusuyla birlikte yaşanabiliyor?',
+      answer:
+        'Çünkü çok mahrem bir anda, kontrol dışında gelişir ve çoğu kadın bunu sessizce yönetmeye çalışır. Oysa bu yakınma yalnız yaşanan bir tuhaflık değil, menopoz geçişinin sık bir parçasıdır.',
+    },
+    {
+      question: 'Yatak odası düzeni gerçekten fark yaratır mı?',
+      answer:
+        'Evet, bazen düşündüğümüzden daha çok fark yaratır. Oda ısısı, katmanlı giyinme ve yatak tekstili gibi basit düzenlemeler geceyi tamamen çözmese bile yükünü azaltabilir.',
+    },
+    {
+      question: 'Ne zaman bu tabloyu yalnızca “alışırım” diye geçmemek gerekir?',
+      answer:
+        'Gece uyanmaları ertesi gün zihni, işi, ilişkiyi veya genel dayanıklılığı etkilemeye başladıysa daha fazla sessiz kalmamak gerekir. Çünkü mesele yalnızca terlemek değil, dinlenmenin bozulmasıdır.',
+    },
+  ],
+};

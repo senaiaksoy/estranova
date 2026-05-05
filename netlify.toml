@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
+  command = "npm run build:ci"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
+  PUBLIC_LAUNCH_MODE = "production"

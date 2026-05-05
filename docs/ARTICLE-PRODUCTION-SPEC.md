@@ -246,9 +246,10 @@ Kategori → klasör eşlemesi:
 
 Zorunlu yapı:
 - Frontmatter import'ları: `BaseLayout`, `SubmenuHero` (varsa kategori submenu-heroes.ts'te), `SubmenuArticleBody`, `ArticleProsePanel`, `Evidence`, `RelatedReadings`, `EditorNote` (BEN için), `ArticleAuthorBlock`, `buildArticleSchemas`
-- JSON-LD injection: `MedicalWebPage` + `Article` + `BreadcrumbList`
+- JSON-LD injection: `MedicalWebPage` + `Article` + `BreadcrumbList` + `FAQPage`
 - Body: `ArticleProsePanel` içinde h2 + italic lede paragraflar
 - `class="prose prose-lg prose-estranova max-w-none"` zorunlu (CLAUDE.md HARD CONSTRAINT)
+- Body sonu: görünür FAQ bloğu (`ArticleFAQ`) zorunlu; 3–5 konuya özgü soru, schema ile aynı içerik
 - Sonra: `RelatedReadings` (3-5 link) → `EditorNote` (BEN) → `ArticleAuthorBlock` → Disclaimer
 
 **Detaylı şablon:** `AGENTS.md` line 147 "Article page layout (Astro)" — kod örnekleri orada.
@@ -414,6 +415,7 @@ Zorunlu yapı:
 - `MedicalWebPage` (üst tip)
 - `Article` (yazar + reviewedBy)
 - `BreadcrumbList` (kategoriden makaleye yol)
+- `FAQPage` (`faqItems` verildiğinde; yeni yayınlarda zorunlu)
 
 `author.Person` → `writers.ts`
 `reviewedBy.Person` → Tıbbi editör (Doç. Dr. Senai Aksoy)
@@ -437,7 +439,8 @@ Zorunlu yapı:
 | 8 | ArticleAuthorBlock — writers.ts'ten | ☐ |
 | 9 | RelatedReadings 3-5 link (parent hub + komşu kategori) | ☐ |
 | 10 | Hero image — vault catalog veya yeni üretim, archetype çerçevesi | ☐ |
-| 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList (`buildArticleSchemas`) | ☐ |
+| 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList + FAQPage (`buildArticleSchemas`) | ☐ |
+| 11a | Görünür FAQ bloğu var; 3–5 soru, schema ile birebir aynı veri kaynağından besleniyor | ☐ |
 | 12 | Yayın bağlantı planı hazır; ancak standart yazar onayı gelmeden parent hub/sayı indeksine canlı link eklenmedi | ☐ |
 | 13 | Manifest entry yalnız yayın kapısı açıldıktan sonra eklenecek; onay bekleyen makale RSS/static manifest'te yok | ☐ |
 | 14 | Compliance score ≥ 85 (`compliance_expert_agent.py`) | ☐ |
@@ -526,15 +529,16 @@ Detaylı prosedür: Framework Katman D.
 7. Evidence 2-3 yumuşatılmış. Yasak: literal nokta dizisi.
 8. Bilimsel Editör Notu 5-katmanlı (150-250 kelime, Senai Aksoy imza).
 9. ArticleAuthorBlock + RelatedReadings 3-5 + Hero (vault).
-10. JSON-LD: buildArticleSchemas().
-11. `npm run lexicon:check` çalıştır; `hard_ban` sıfır olmalı.
-12. Pre-publish checklist 18+ madde — 13-18 must-pass.
-13. Yazar onay paketi oluştur: `author:send-for-approval` → `onay-bekleyen`.
-14. Yazar değişiklik isterse revizyon + yeni 5 dk form; onay gelene kadar tekrar.
-15. Yazar ONAYLIYORUM dedikten sonra paket `onaylanan` altına taşınır.
-16. Hub linkage. Compliance ≥85.
-17. Push → Cloudflare auto-deploy.
-18. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.
+10. JSON-LD: buildArticleSchemas() + faqItems.
+11. Görünür FAQ bloğu (`ArticleFAQ`) ekle; schema ile drift bırakma.
+12. `npm run lexicon:check` çalıştır; `hard_ban` sıfır olmalı.
+13. Pre-publish checklist 18+ madde — 13-18 must-pass.
+14. Yazar onay paketi oluştur: `author:send-for-approval` → `onay-bekleyen`.
+15. Yazar değişiklik isterse revizyon + yeni 5 dk form; onay gelene kadar tekrar.
+16. Yazar ONAYLIYORUM dedikten sonra paket `onaylanan` altına taşınır.
+17. Hub linkage. Compliance ≥85.
+18. Push → Cloudflare auto-deploy.
+19. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.
 ```
 
 ---

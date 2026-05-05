@@ -7,6 +7,7 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
 import type { Writer } from '../../data/writers';
 
@@ -34,6 +35,7 @@ const siteUrl = (Astro.site ? Astro.site.toString() : 'https://estranova.com').r
 const pageUrl = `${siteUrl}/blog/${post.id}`;
 
 const writerSlug = post.data.writerSlug as Writer['slug'] | undefined;
+const faqItems = post.data.faqItems ?? [];
 
 const jsonLd = writerSlug
   ? buildArticleSchemas({
@@ -42,6 +44,7 @@ const jsonLd = writerSlug
       writerSlug,
       publishedDate: post.data.date,
       pathname: `/blog/${post.id}`,
+      faqItems,
       siteUrl,
     })
   : {
@@ -97,6 +100,8 @@ const jsonLd = writerSlug
       <ArticleProsePanel>
         <Content />
       </ArticleProsePanel>
+
+      {faqItems.length > 0 && <ArticleFAQ items={faqItems} class="mt-10" />}
     </SubmenuArticleBody>
   </main>
 

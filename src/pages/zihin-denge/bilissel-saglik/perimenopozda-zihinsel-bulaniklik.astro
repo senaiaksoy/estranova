@@ -9,9 +9,11 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import EditorialMedicalEditorNote from '../../../components/site/EditorialMedicalEditorNote.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik';
@@ -33,6 +35,7 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
+const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -53,6 +56,7 @@ const articleSchemas = buildArticleSchemas({
     'stres',
     'hormon değişimi',
   ],
+  faqItems,
   siteUrl,
 });
 ---
@@ -191,7 +195,7 @@ const articleSchemas = buildArticleSchemas({
           olmak değil; gün içindeki yükü biraz daha okunabilir hale getirmektir.
         </p>
         <p>
-          En iyi işleyen adımlar genellikle en gösterişsiz olanlardır. Sabit uyku saati, aynı yerde tutulan not defteri,
+          Gösterişli olanlar değil, çoğu zaman en sade adımlar daha istikrarlı işler. Sabit uyku saati, aynı yerde tutulan not defteri,
           gün içinde tek seferde bir işe dönme, bildirim gürültüsünü azaltma ve kısa hareket molaları bilişsel yükü hafifletebilir
           <Evidence level={3} />. Protein içeren dengeli kahvaltı, gün ışığıyla erken temas ve akşam ekran geçişlerini
           biraz yumuşatmak da dolaylı olarak odak hissini destekleyebilir.
@@ -204,7 +208,7 @@ const articleSchemas = buildArticleSchemas({
           <li>Kendine "neden böyle oldum" yerine "bugün yükü nasıl azaltırım" diye sormak</li>
         </ul>
         <p>
-          Bu öneriler mucize vaat etmez. Ama çoğu kadının anlattığı gerçek şu: zihin sisinin bir kısmı bedenin yükünden,
+          Bu öneriler tek hamlede çözüm vaat etmez. Ama çoğu kadının anlattığı gerçek şu: zihin sisinin bir kısmı bedenin yükünden,
           bir kısmı da her şeyi içeride tutma alışkanlığından beslenir. Küçük dış destekler, zihne tekrar biraz alan açar.
         </p>
 
@@ -220,6 +224,8 @@ const articleSchemas = buildArticleSchemas({
           hatırlatır.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

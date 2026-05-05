@@ -9,8 +9,10 @@ import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/perimenopoz']!;
@@ -25,12 +27,14 @@ const tocEntries = [
   { id: 'ne-zaman', label: 'Ne Zaman Hekim' },
   { id: 'sorular', label: 'Sık Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sss', label: 'S?k?a Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem';
 const articleDescription =
   'Perimenopozun ilk işaretlerini adet düzeni, uyku, sıcak basması, ruh hali, odaklanma ve beden hissi üzerinden panik yaratmadan okumak için Berna Aksoy’dan sakin bir rehber.';
+const faqItems = articleFaqs['/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -49,6 +53,8 @@ const articleSchemas = buildArticleSchemas({
     'beyin sisi',
     'FSH',
   ],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -184,7 +190,7 @@ Bu, “test gereksizdir” demek değil; “testi duruma göre istemek gerekir�
 
         <h2 id="izleme">Üç Aylık Sakin İzleme Planı</h2>
         <p>
-          Perimenopoz şüphesinde evde yapılabilecek en iyi şey, kendini teşhis etmeye çalışmak değil; hekime de yardımcı
+          Perimenopoz şüphesinde evde yapılabilecek en sakin adım, kendini teşhis etmeye çalışmak değil; hekime de yardımcı
           olacak sade bir kayıt tutmak. Üç ay çoğu zaman iyi bir penceredir: yeterince kısa, çünkü hayatı takıntıya
           çevirmiyor; yeterince uzun, çünkü seyri görmeye izin veriyor.
         </p>
@@ -262,6 +268,8 @@ Bu, “test gereksizdir” demek değil; “testi duruma göre istemek gerekir�
           değil; bazıları sadece işaret. Beden bir cümle söylemişti; sen onu bu kez kendi takvimine yazıyorsun.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

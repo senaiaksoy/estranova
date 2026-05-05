@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -10,36 +10,42 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi']!;
 
 const tocEntries = [
-  { id: 'nedir', label: 'Vazomotor Belirtiler Aslında Ne?' },
-  { id: 'neden-olur', label: 'Menopozda Neden Birden Başlıyor?' },
-  { id: 'ne-kadar-surer', label: 'Ne Kadar Sürer, Ne Zaman Hafifler?' },
-  { id: 'tetikleyiciler', label: 'Sık Karşılaşılan Tetikleyiciler' },
-  { id: 'gunluk-adimlar', label: 'Günlük Hayatta Ne İşe Yarıyor?' },
-  { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler — Karar Süreci' },
-  { id: 'ne-zaman-degerlendirme', label: 'Ne Zaman Hekime Sormalı?' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
-  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'nedir', label: 'Vazomotor Belirtiler AslÄ±nda Ne?' },
+  { id: 'neden-olur', label: 'Menopozda Neden Birden BaÅŸlÄ±yor?' },
+  { id: 'ne-kadar-surer', label: 'Ne Kadar SÃ¼rer, Ne Zaman Hafifler?' },
+  { id: 'tetikleyiciler', label: 'SÄ±k KarÅŸÄ±laÅŸÄ±lan Tetikleyiciler' },
+  { id: 'gunluk-adimlar', label: 'GÃ¼nlÃ¼k Hayatta Ne Ä°ÅŸe YarÄ±yor?' },
+  { id: 'tibbi-secenekler', label: 'TÄ±bbi SeÃ§enekler â€” Karar SÃ¼reci' },
+  { id: 'ne-zaman-degerlendirme', label: 'Ne Zaman Hekime SormalÄ±?' },
+  { id: 'sik-sorulanlar', label: 'SÄ±kÃ§a Sorulanlar' },
+  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi';
+const articleTitle = 'SÄ±cak BasmasÄ± ve Gece Terlemesi â€” Menopozda Vazomotor Belirtiler Rehberi';
 const articleDescription =
-  'Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.';
+  'SÄ±cak basmasÄ± ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanÄ±t temelli destek seÃ§eneklerini sade bir dille ele alan rehber.';
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '25 Nisan 2026',
   pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
-  articleSection: 'Hormonal Geçiş',
+  articleSection: 'Hormonal GeÃ§iÅŸ',
   sectionPath: '/hormonal-gecis',
-  keywords: ['sıcak basması', 'gece terlemesi', 'menopoz', 'perimenopoz', 'uyku', 'tetikleyiciler'],
+  keywords: ['sÄ±cak basmasÄ±', 'gece terlemesi', 'menopoz', 'perimenopoz', 'uyku', 'tetikleyiciler'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -49,8 +55,8 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Hormonal Geçiş · Menopoz"
-      title="Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler"
+      eyebrow="Hormonal GeÃ§iÅŸ Â· Menopoz"
+      title="SÄ±cak BasmasÄ± ve Gece Terlemesi â€” Menopozda Vazomotor Belirtiler"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -63,211 +69,213 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
       >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
         <p class="leading-relaxed text-ink/80">
-          Sıcak basması ve gece terlemesi bu dönemin en çok duyulan başlıklarından biri. "Birden ısınıyorum,
-          sonra üşüyorum" cümlesini çevremdeki kadınlardan defalarca duydum. Okudukça anladığım şu: bu belirtiler
-          "yalnızca stres" değil; bedenin ısı düzenleme sistemi ile hormon dalgalanmasının birlikte yazdığı
-          biyolojik bir denklem. İyi haber şu — birkaç sade adım ve gerektiğinde kişiye uygun tıbbi seçeneklerle
-          çoğu kadında şiddet ve sıklık belirgin biçimde yumuşayabiliyor.
+          SÄ±cak basmasÄ± ve gece terlemesi bu dÃ¶nemin en Ã§ok duyulan baÅŸlÄ±klarÄ±ndan biri. "Birden Ä±sÄ±nÄ±yorum,
+          sonra Ã¼ÅŸÃ¼yorum" cÃ¼mlesini Ã§evremdeki kadÄ±nlardan defalarca duydum. OkudukÃ§a anladÄ±ÄŸÄ±m ÅŸu: bu belirtiler
+          "yalnÄ±zca stres" deÄŸil; bedenin Ä±sÄ± dÃ¼zenleme sistemi ile hormon dalgalanmasÄ±nÄ±n birlikte yazdÄ±ÄŸÄ±
+          biyolojik bir denklem. Ä°yi haber ÅŸu â€” birkaÃ§ sade adÄ±m ve gerektiÄŸinde kiÅŸiye uygun tÄ±bbi seÃ§eneklerle
+          Ã§oÄŸu kadÄ±nda ÅŸiddet ve sÄ±klÄ±k belirgin biÃ§imde yumuÅŸayabiliyor.
         </p>
       </section>
 
       <ArticleProsePanel>
-        <h2 id="nedir">Vazomotor Belirtiler Aslında Ne?</h2>
+        <h2 id="nedir">Vazomotor Belirtiler AslÄ±nda Ne?</h2>
         <p>
-          "Toplantıdaydım, birden yüzüm yandı, omzumdan terim aktı" — bu cümleyi başka bir kadından duymak garip biçimde rahatlatıcı
-          oluyor. Sahne aynı, paylaşan çok.
+          "ToplantÄ±daydÄ±m, birden yÃ¼zÃ¼m yandÄ±, omzumdan terim aktÄ±" â€” bu cÃ¼mleyi baÅŸka bir kadÄ±ndan duymak garip biÃ§imde rahatlatÄ±cÄ±
+          oluyor. Sahne aynÄ±, paylaÅŸan Ã§ok.
         </p>
         <p>
-          Tıpta vazomotor belirti (damar açılma-kapanma kaynaklı yakınma) dediğimiz şey aslında bunun karşılığı: sıcak basması ve gece
-          terlemesi aynı başlık altında değerlendiriliyor <Evidence level={5} />. Sıcak basması genellikle yüz, boyun ve göğüs
-          bölgesinde ani bir ısı dalgası ve terlemeyle başlar; birkaç dakika içinde dalga gibi geçer, ardından üşüme gelebilir. Gece
-          terlemesi ise aynı sahnenin uyku saatindeki versiyonu — terleyerek uyanmak ve ardından yeniden uykuya dalmakta zorlanmak.
+          TÄ±pta vazomotor belirti (damar aÃ§Ä±lma-kapanma kaynaklÄ± yakÄ±nma) dediÄŸimiz ÅŸey aslÄ±nda bunun karÅŸÄ±lÄ±ÄŸÄ±: sÄ±cak basmasÄ± ve gece
+          terlemesi aynÄ± baÅŸlÄ±k altÄ±nda deÄŸerlendiriliyor <Evidence level={5} />. SÄ±cak basmasÄ± genellikle yÃ¼z, boyun ve gÃ¶ÄŸÃ¼s
+          bÃ¶lgesinde ani bir Ä±sÄ± dalgasÄ± ve terlemeyle baÅŸlar; birkaÃ§ dakika iÃ§inde dalga gibi geÃ§er, ardÄ±ndan Ã¼ÅŸÃ¼me gelebilir. Gece
+          terlemesi ise aynÄ± sahnenin uyku saatindeki versiyonu â€” terleyerek uyanmak ve ardÄ±ndan yeniden uykuya dalmakta zorlanmak.
         </p>
         <p>
-          Çoğu kadının yıllarca "stres", "havalar nedeniyle" diye geçiştirdiği bu belirti aslında menopoz
-          geçişinin en görünür biyolojik imzalarından biri. Önce adlandırmak; sonrasını konuşmayı
-          kolaylaştırıyor.
-        </p>
-
-        <h2 id="neden-olur">Menopozda Neden Birden Başlıyor?</h2>
-        <p>
-          Tanıdığım bir kadın anlatmıştı: yıllarca aynı odada, aynı yorganla, aynı gecelikle uyumuş; sonra
-          aynı odada birden fazla olmaya başlamış. Değişen oda değil — bedenin ısı algısı.
-        </p>
-        <p>
-          Menopoz geçişinde östrojen dalgalanması, beynin ısı düzenleme merkezinin (hipotalamus — vücudun termostatı gibi çalışan
-          merkez) hassasiyetini değiştirebiliyor <Evidence level={5} />. Bu termostat daralan bir aralıkta çalışmaya başlayınca
-          küçük ısı değişimleri bile "vücut ısınıyor" alarmını tetikliyor; vücut hızlı serinlemek için cilt damarlarını açıyor ve
-          terleme refleksini başlatıyor. Sahne dışarıdan ani görünür; içeride aslında biyolojik bir refleks.
-        </p>
-        <p>
-          Bu süreç tek bir hormona indirgenmez. Uyku eksikliği, stres yükü, beden ağırlığı ve sigara kullanımı
-          şiddeti etkileyebiliyor <Evidence level={4} />. Yani belirtiler biyolojik; ama seyri yaşam koşullarıyla
-          birlikte şekilleniyor. Tetikleyenleri tek başına suçlamak yerine, hangisinin kişide daha güçlü
-          konuştuğunu fark etmek daha işe yarıyor.
+          Ã‡oÄŸu kadÄ±nÄ±n yÄ±llarca "stres", "havalar nedeniyle" diye geÃ§iÅŸtirdiÄŸi bu belirti aslÄ±nda menopoz
+          geÃ§iÅŸinin en gÃ¶rÃ¼nÃ¼r biyolojik imzalarÄ±ndan biri. Ã–nce adlandÄ±rmak; sonrasÄ±nÄ± konuÅŸmayÄ±
+          kolaylaÅŸtÄ±rÄ±yor.
         </p>
 
-        <h2 id="ne-kadar-surer">Ne Kadar Sürer, Ne Zaman Hafifler?</h2>
+        <h2 id="neden-olur">Menopozda Neden Birden BaÅŸlÄ±yor?</h2>
         <p>
-          En sık duyulan sorulardan biri: "Bu ne zaman geçecek?" Doğru cevap, çoğu cevap gibi, kişiden kişiye
-          değişiyor.
+          TanÄ±dÄ±ÄŸÄ±m bir kadÄ±n anlatmÄ±ÅŸtÄ±: yÄ±llarca aynÄ± odada, aynÄ± yorganla, aynÄ± gecelikle uyumuÅŸ; sonra
+          aynÄ± odada birden fazla olmaya baÅŸlamÄ±ÅŸ. DeÄŸiÅŸen oda deÄŸil â€” bedenin Ä±sÄ± algÄ±sÄ±.
         </p>
         <p>
-          Vazomotor belirtiler çoğu kadında perimenopozda başlar; menopoz sonrası yıllarda sıklık ve şiddet
-          genellikle azalır <Evidence level={5} />. Sürenin kişiden kişiye değiştiğini bilmek burada anahtar:
-          bazı kadınlarda birkaç yıl içinde hafifliyor, bazılarında on yılı bulan bir seyir izleyebiliyor
+          Menopoz geÃ§iÅŸinde Ã¶strojen dalgalanmasÄ±, beynin Ä±sÄ± dÃ¼zenleme merkezinin (hipotalamus â€” vÃ¼cudun termostatÄ± gibi Ã§alÄ±ÅŸan
+          merkez) hassasiyetini deÄŸiÅŸtirebiliyor <Evidence level={5} />. Bu termostat daralan bir aralÄ±kta Ã§alÄ±ÅŸmaya baÅŸlayÄ±nca
+          kÃ¼Ã§Ã¼k Ä±sÄ± deÄŸiÅŸimleri bile "vÃ¼cut Ä±sÄ±nÄ±yor" alarmÄ±nÄ± tetikliyor; vÃ¼cut hÄ±zlÄ± serinlemek iÃ§in cilt damarlarÄ±nÄ± aÃ§Ä±yor ve
+          terleme refleksini baÅŸlatÄ±yor. Sahne dÄ±ÅŸarÄ±dan ani gÃ¶rÃ¼nÃ¼r; iÃ§eride aslÄ±nda biyolojik bir refleks.
+        </p>
+        <p>
+          Bu sÃ¼reÃ§ tek bir hormona indirgenmez. Uyku eksikliÄŸi, stres yÃ¼kÃ¼, beden aÄŸÄ±rlÄ±ÄŸÄ± ve sigara kullanÄ±mÄ±
+          ÅŸiddeti etkileyebiliyor <Evidence level={4} />. Yani belirtiler biyolojik; ama seyri yaÅŸam koÅŸullarÄ±yla
+          birlikte ÅŸekilleniyor. Tetikleyenleri tek baÅŸÄ±na suÃ§lamak yerine, hangisinin kiÅŸide daha gÃ¼Ã§lÃ¼
+          konuÅŸtuÄŸunu fark etmek daha iÅŸe yarÄ±yor.
+        </p>
+
+        <h2 id="ne-kadar-surer">Ne Kadar SÃ¼rer, Ne Zaman Hafifler?</h2>
+        <p>
+          En sÄ±k duyulan sorulardan biri: "Bu ne zaman geÃ§ecek?" DoÄŸru cevap, Ã§oÄŸu cevap gibi, kiÅŸiden kiÅŸiye
+          deÄŸiÅŸiyor.
+        </p>
+        <p>
+          Vazomotor belirtiler Ã§oÄŸu kadÄ±nda perimenopozda baÅŸlar; menopoz sonrasÄ± yÄ±llarda sÄ±klÄ±k ve ÅŸiddet
+          genellikle azalÄ±r <Evidence level={5} />. SÃ¼renin kiÅŸiden kiÅŸiye deÄŸiÅŸtiÄŸini bilmek burada anahtar:
+          bazÄ± kadÄ±nlarda birkaÃ§ yÄ±l iÃ§inde hafifliyor, bazÄ±larÄ±nda on yÄ±lÄ± bulan bir seyir izleyebiliyor
           <Evidence level={4} />.
         </p>
         <p>
-          Belirtilerin gidişatı çoğu zaman dalgalı. Bu yüzden "bugün daha kötü" günlerini tek başına kötüye
-          gidiş işareti olarak okumak yanıltıcı; tekrar eden bir grafiğin bir noktası olarak izlemek daha
-          gerçekçi. Tanıdığım bir kadın bunu bir ay grafiği gibi düşünmeye başladığını anlatmıştı — bazı
-          haftalar yoğun, bazıları sessiz.
+          Belirtilerin gidiÅŸatÄ± Ã§oÄŸu zaman dalgalÄ±. Bu yÃ¼zden "bugÃ¼n daha kÃ¶tÃ¼" gÃ¼nlerini tek baÅŸÄ±na kÃ¶tÃ¼ye
+          gidiÅŸ iÅŸareti olarak okumak yanÄ±ltÄ±cÄ±; tekrar eden bir grafiÄŸin bir noktasÄ± olarak izlemek daha
+          gerÃ§ekÃ§i. TanÄ±dÄ±ÄŸÄ±m bir kadÄ±n bunu bir ay grafiÄŸi gibi dÃ¼ÅŸÃ¼nmeye baÅŸladÄ±ÄŸÄ±nÄ± anlatmÄ±ÅŸtÄ± â€” bazÄ±
+          haftalar yoÄŸun, bazÄ±larÄ± sessiz.
         </p>
 
-        <h2 id="tetikleyiciler">Sık Karşılaşılan Tetikleyiciler</h2>
+        <h2 id="tetikleyiciler">SÄ±k KarÅŸÄ±laÅŸÄ±lan Tetikleyiciler</h2>
         <p>
-          Bazı günler hiç olmuyor, bazı günler arka arkaya geliyor — tesadüf gibi görünen şey çoğu zaman
-          tesadüf değil.
+          BazÄ± gÃ¼nler hiÃ§ olmuyor, bazÄ± gÃ¼nler arka arkaya geliyor â€” tesadÃ¼f gibi gÃ¶rÃ¼nen ÅŸey Ã§oÄŸu zaman
+          tesadÃ¼f deÄŸil.
         </p>
         <p>
-          Tetikleyiciler herkes için aynı değil; ama bazı başlıklar tutarlı biçimde daha sık rapor ediliyor:
-          alkol (özellikle akşam kırmızı şarap), baharatlı yiyecekler, sıcak ortam, kalın katmanlı giyinme, geç
-          saatte ağır yemek, yoğun stres ve eksik uyku <Evidence level={4} />. Bunların ortak noktası şu: hepsi
-          vücut ısısını ya da damar tepkisini doğrudan etkiliyor.
+          Tetikleyiciler herkes iÃ§in aynÄ± deÄŸil; ama bazÄ± baÅŸlÄ±klar tutarlÄ± biÃ§imde daha sÄ±k rapor ediliyor:
+          alkol (Ã¶zellikle akÅŸam kÄ±rmÄ±zÄ± ÅŸarap), baharatlÄ± yiyecekler, sÄ±cak ortam, kalÄ±n katmanlÄ± giyinme, geÃ§
+          saatte aÄŸÄ±r yemek, yoÄŸun stres ve eksik uyku <Evidence level={4} />. BunlarÄ±n ortak noktasÄ± ÅŸu: hepsi
+          vÃ¼cut Ä±sÄ±sÄ±nÄ± ya da damar tepkisini doÄŸrudan etkiliyor.
         </p>
         <p>
-          Buradaki hedef "yasak listesi" çıkarmak değil — bedeninin ritmini yakalamak. Bir arkadaşım iki
-          haftalık küçük bir not tuttuğunu anlatmıştı: ne yedim, ne içtim, kaçta yattım, ertesi gün kaç dalga
-          geldi. Üçüncü haftada kalıp kendiliğinden çıkmış; öğle yemeğindeki tek kadeh şarabın akşam saatlerine
-          ne yaptığı gözle görülür hâle gelmiş. Birkaç haftalık küçük bir kayıt çoğu kadın için işe yarıyor;
-          büyük bir günlük tutmaya gerek yok, telefon notlarına yazılan üç-dört kelime yeter.
+          Buradaki hedef "yasak listesi" Ã§Ä±karmak deÄŸil â€” bedeninin ritmini yakalamak. Bir arkadaÅŸÄ±m iki
+          haftalÄ±k kÃ¼Ã§Ã¼k bir not tuttuÄŸunu anlatmÄ±ÅŸtÄ±: ne yedim, ne iÃ§tim, kaÃ§ta yattÄ±m, ertesi gÃ¼n kaÃ§ dalga
+          geldi. ÃœÃ§Ã¼ncÃ¼ haftada kalÄ±p kendiliÄŸinden Ã§Ä±kmÄ±ÅŸ; Ã¶ÄŸle yemeÄŸindeki tek kadeh ÅŸarabÄ±n akÅŸam saatlerine
+          ne yaptÄ±ÄŸÄ± gÃ¶zle gÃ¶rÃ¼lÃ¼r hÃ¢le gelmiÅŸ. BirkaÃ§ haftalÄ±k kÃ¼Ã§Ã¼k bir kayÄ±t Ã§oÄŸu kadÄ±n iÃ§in iÅŸe yarÄ±yor;
+          bÃ¼yÃ¼k bir gÃ¼nlÃ¼k tutmaya gerek yok, telefon notlarÄ±na yazÄ±lan Ã¼Ã§-dÃ¶rt kelime yeter.
         </p>
 
-        <h2 id="gunluk-adimlar">Günlük Hayatta Ne İşe Yarıyor?</h2>
+        <h2 id="gunluk-adimlar">GÃ¼nlÃ¼k Hayatta Ne Ä°ÅŸe YarÄ±yor?</h2>
         <p>
-          İlk refleks çoğu zaman büyük bir değişiklik kurmak — yeni bir diyet, yeni bir program. Oysa bu
-          dönemde işe yarayan adımlar genellikle daha sade ve kulağa daha sıradan geliyor.
+          Ä°lk refleks Ã§oÄŸu zaman bÃ¼yÃ¼k bir deÄŸiÅŸiklik kurmak â€” yeni bir diyet, yeni bir program. Oysa bu
+          dÃ¶nemde iÅŸe yarayan adÄ±mlar genellikle daha sade ve kulaÄŸa daha sÄ±radan geliyor.
         </p>
         <p>
-          En güçlü adımlardan biri uyku ortamını serin tutmak. Yatak odasını yaklaşık 16-19°C aralığında tutmak, ince katmanlı bir
-          gecelik seçmek ve nefes alabilen bir nevresim kullanmak gece uyanmalarını azaltabiliyor <Evidence level={4} />. Yatak
-          başına bir bardak suyun ve bir el yelpazesi kadar küçük bir araç bile sahneyi yumuşatıyor.
+          En gÃ¼Ã§lÃ¼ adÄ±mlardan biri uyku ortamÄ±nÄ± serin tutmak. Yatak odasÄ±nÄ± yaklaÅŸÄ±k 16-19Â°C aralÄ±ÄŸÄ±nda tutmak, ince katmanlÄ± bir
+          gecelik seÃ§mek ve nefes alabilen bir nevresim kullanmak gece uyanmalarÄ±nÄ± azaltabiliyor <Evidence level={4} />. Yatak
+          baÅŸÄ±na bir bardak suyun ve bir el yelpazesi kadar kÃ¼Ã§Ã¼k bir araÃ§ bile sahneyi yumuÅŸatÄ±yor.
         </p>
         <p>
-          Nefes egzersizleri ve düzenli gevşeme pratikleri stres-ısı döngüsünü yatıştırabiliyor
-          <Evidence from={3} to={4} />. Üzerinde durmak istediğim güçlü bir cümle var: dakikada altı nefes
-          ritmi (yaklaşık 5 saniye al, 5 saniye ver) bir dalga başlangıcında uygulandığında çoğu kadında süreyi
-          kısaltabiliyor. Bunu sihirli bir çözüm olarak değil; kıymetli ama küçük bir taktik olarak ele almakta
+          Nefes egzersizleri ve dÃ¼zenli gevÅŸeme pratikleri stres-Ä±sÄ± dÃ¶ngÃ¼sÃ¼nÃ¼ yatÄ±ÅŸtÄ±rabiliyor
+          <Evidence from={3} to={4} />. Ãœzerinde durmak istediÄŸim gÃ¼Ã§lÃ¼ bir cÃ¼mle var: dakikada altÄ± nefes
+          ritmi (yaklaÅŸÄ±k 5 saniye al, 5 saniye ver) bir dalga baÅŸlangÄ±cÄ±nda uygulandÄ±ÄŸÄ±nda Ã§oÄŸu kadÄ±nda sÃ¼reyi
+          kÄ±saltabiliyor. Bunu sihirli bir Ã§Ã¶zÃ¼m olarak deÄŸil; kÄ±ymetli ama kÃ¼Ã§Ã¼k bir taktik olarak ele almakta
           fayda var.
         </p>
         <p>
-          Düzenli hareket, sağlıklı kilo aralığına yaklaşma ve sigarayı bırakma adımları hem genel sağlık hem de vazomotor
-          belirtilerin şiddeti açısından destekleyici <Evidence level={4} />. Etki çoğu zaman tek bir hamleyle değil; sade adımların
-          tutarlı bir kombinasyonuyla belirginleşiyor. Hepsini aynı hafta yapmak gerekmiyor — birini seçip dört-altı hafta korumak
-          zaten farkı yaratıyor.
+          DÃ¼zenli hareket, saÄŸlÄ±klÄ± kilo aralÄ±ÄŸÄ±na yaklaÅŸma ve sigarayÄ± bÄ±rakma adÄ±mlarÄ± hem genel saÄŸlÄ±k hem de vazomotor
+          belirtilerin ÅŸiddeti aÃ§Ä±sÄ±ndan destekleyici <Evidence level={4} />. Etki Ã§oÄŸu zaman tek bir hamleyle deÄŸil; sade adÄ±mlarÄ±n
+          tutarlÄ± bir kombinasyonuyla belirginleÅŸiyor. Hepsini aynÄ± hafta yapmak gerekmiyor â€” birini seÃ§ip dÃ¶rt-altÄ± hafta korumak
+          zaten farkÄ± yaratÄ±yor.
         </p>
 
-        <h2 id="tibbi-secenekler">Tıbbi Seçenekler — Karar Süreci</h2>
+        <h2 id="tibbi-secenekler">TÄ±bbi SeÃ§enekler â€” Karar SÃ¼reci</h2>
         <p>
-          Yaşam tarzı adımlarını denediğin halde sıcak basması iş günlerini, geceleri ya da ilişki kurma kapasiteni belirgin
-          etkiliyorsa, bunu bir irade meselesi gibi görmek yerine masaya seçenekleri birlikte koymak daha kıymetli.
+          YaÅŸam tarzÄ± adÄ±mlarÄ±nÄ± denediÄŸin halde sÄ±cak basmasÄ± iÅŸ gÃ¼nlerini, geceleri ya da iliÅŸki kurma kapasiteni belirgin
+          etkiliyorsa, bunu bir irade meselesi gibi gÃ¶rmek yerine masaya seÃ§enekleri birlikte koymak daha kÄ±ymetli.
         </p>
         <p>
-          Hormon tedavisi (HRT), uygun kadınlarda vazomotor belirtileri azaltmada en etkili seçeneklerden biri olarak biliniyor
-          <Evidence level={5} />. Ancak karar "evet" ya da "hayır" kadar basit değildir: yaş, menopozdan bu yana
-          geçen süre, kişisel ve aile öyküsü, eşlik eden hastalıklar ve kullanılan ilaçlar birlikte değerlendirilir.
-          Aynı belirtinin iki kadında çok farklı bir karara yol açabilmesi bu yüzden normaldir.
+          Hormon tedavisi (HRT), uygun kadÄ±nlarda vazomotor belirtileri azaltmada en etkili seÃ§eneklerden biri olarak biliniyor
+          <Evidence level={5} />. Ancak karar "evet" ya da "hayÄ±r" kadar basit deÄŸildir: yaÅŸ, menopozdan bu yana
+          geÃ§en sÃ¼re, kiÅŸisel ve aile Ã¶ykÃ¼sÃ¼, eÅŸlik eden hastalÄ±klar ve kullanÄ±lan ilaÃ§lar birlikte deÄŸerlendirilir.
+          AynÄ± belirtinin iki kadÄ±nda Ã§ok farklÄ± bir karara yol aÃ§abilmesi bu yÃ¼zden normaldir.
         </p>
         <p>
-          HRT herkes için uygun değil. Hormon dışı seçenekler — belirli düşük doz antidepresan grupları
-          (paroksetin, venlafaksin gibi), gabapentin ya da yeni nesil bazı moleküller — bazı kadınlarda yarar
-          sağlayabiliyor <Evidence level={4} />. Hangi kadına hangi seçeneğin uyacağını muayene ve öykü olmadan
-          kestirmek doğru değildir. Bu seçeneklerin her birinin kendi yan etki profili vardır; karar kişisel öyküyü
+          HRT herkes iÃ§in uygun deÄŸil. Hormon dÄ±ÅŸÄ± seÃ§enekler â€” belirli dÃ¼ÅŸÃ¼k doz antidepresan gruplarÄ±
+          (paroksetin, venlafaksin gibi), gabapentin ya da yeni nesil bazÄ± molekÃ¼ller â€” bazÄ± kadÄ±nlarda yarar
+          saÄŸlayabiliyor <Evidence level={4} />. Hangi kadÄ±na hangi seÃ§eneÄŸin uyacaÄŸÄ±nÄ± muayene ve Ã¶ykÃ¼ olmadan
+          kestirmek doÄŸru deÄŸildir. Bu seÃ§eneklerin her birinin kendi yan etki profili vardÄ±r; karar kiÅŸisel Ã¶ykÃ¼yÃ¼
           bilen hekimle birlikte verilmelidir.
         </p>
 
-        <h2 id="ne-zaman-degerlendirme">Ne Zaman Hekime Sormalı?</h2>
+        <h2 id="ne-zaman-degerlendirme">Ne Zaman Hekime SormalÄ±?</h2>
         <p>
-          Sıcak basması "normal" kabul edilse bile her sıcak basmasını yalnızca menopoza bağlamak doğru olmuyor. Burada okudukça
-          şunu anladım: bazı tablolar erken fark edilirse hem konfor hem güvenlik korunuyor.
+          SÄ±cak basmasÄ± "normal" kabul edilse bile her sÄ±cak basmasÄ±nÄ± yalnÄ±zca menopoza baÄŸlamak doÄŸru olmuyor. Burada okudukÃ§a
+          ÅŸunu anladÄ±m: bazÄ± tablolar erken fark edilirse hem konfor hem gÃ¼venlik korunuyor.
         </p>
         <p>
-          Şu işaretler hekim değerlendirmesi anı: gece terlemesiyle birlikte açıklanamayan kilo kaybı, ateş, sürekli çarpıntı,
-          ellerde titreme, belirgin tiroid belirtileri (cilt-saç değişimi, soğuğa-sıcağa tahammülsüzlük), yeni başlayan şiddetli
-          yakınmalar veya tek taraflı atipik yerleşim. Bu tablolar tiroid bezindeki işlev değişiklikleri, enfeksiyon ya da başka
-          metabolik tablolarla ilişkili olabilir; menopoz çerçevesine sığmıyor.
+          Åu iÅŸaretler hekim deÄŸerlendirmesi anÄ±: gece terlemesiyle birlikte aÃ§Ä±klanamayan kilo kaybÄ±, ateÅŸ, sÃ¼rekli Ã§arpÄ±ntÄ±,
+          ellerde titreme, belirgin tiroid belirtileri (cilt-saÃ§ deÄŸiÅŸimi, soÄŸuÄŸa-sÄ±caÄŸa tahammÃ¼lsÃ¼zlÃ¼k), yeni baÅŸlayan ÅŸiddetli
+          yakÄ±nmalar veya tek taraflÄ± atipik yerleÅŸim. Bu tablolar tiroid bezindeki iÅŸlev deÄŸiÅŸiklikleri, enfeksiyon ya da baÅŸka
+          metabolik tablolarla iliÅŸkili olabilir; menopoz Ã§erÃ§evesine sÄ±ÄŸmÄ±yor.
         </p>
         <p>
-          Ayrıca uykusuzluk gündüz işlev kaybına yol açıyorsa, yoğun anksiyete ya da belirgin depresif belirtiler eşlik ediyorsa
-          destek planını genişletmek yaşam kalitesi açısından önemli. Yardım istemek bu dönemde irade zayıflığı değil; planın
-          gerekli bir parçası.
-        </p>
-
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
-        <h3>Sıcak basması neden gece daha şiddetli yaşanıyor?</h3>
-        <p>
-          Vücut ısısı gün içinde dalgalanır; akşamüstü hafif yükselir, gece uykunun ilk saatlerinde düşmeye başlar. Menopoz
-          döneminde bu düşüş hareketi sırasında termostatın daralan toleransı tetiklenebiliyor; ısı algısı kayıyor ve refleks
-          terlemeyle vücut hızlı serinlemeye çalışıyor <Evidence level={4} />. Yatak başında kalın yorgan, kalın gecelik ya da
-          akşam yenen ağır yemek bu sahneyi büyütüyor. Çoğu kadında ince katmanlı bir gecelik (terlediğinde
-          çıkarabileceğin), nefes alabilen pamuk-keten nevresim ve yatak başına serinletici küçük bir el
-          yelpazesi ya da sprey gece sahnesini belirgin biçimde yumuşatıyor.
-        </p>
-        <h3>HRT dışında paroksetin veya gabapentin gerçekten işe yarıyor mu?</h3>
-        <p>
-          Düşük doz paroksetin (örn. 7,5 mg) ve venlafaksin gibi bazı SSRI/SNRI grubu moleküller vazomotor belirtileri klinik
-          olarak anlamlı düzeyde azaltabiliyor; etki HRT kadar güçlü değil ama HRT alamayacak ya da almak istemeyen kadınlar için
-          değerli bir seçenek <Evidence level={4} />. Gabapentin özellikle gece ağırlıklı sahnesi olan kadınlarda yatmadan önce
-          alındığında uyku kalitesini de destekleyebiliyor. Bu moleküllerin her birinin kendi yan etki profili var (paroksetinde
-          mide bulantısı ve cinsel istek azalması; gabapentinde uyku hali); karar hekimle birlikte verilir, doz yavaş yavaş
-          ayarlanır. Birkaç haftada belirgin fark yaratmazsa zaman kaybetmeden başka bir seçeneğe geçmek mantıklı.
-        </p>
-        <h3>Adaçayı, kara kohoş, soya — bitkisel destekler kanıtlı mı?</h3>
-        <p>
-          Bu üç başlık sık soruluyor; cevabı net olmadığı için yine sık dolaşıyor. Soya izoflavonlarının (özellikle S-equol
-          metabolitini üretebilen kadınlarda) hafif-orta düzeyde fayda gösterdiği çalışmalar var; etki kişiye göre belirgin
-          değişiyor <Evidence from={2} to={3} />. Kara kohoş için literatür karışık; kısa süreli hafif fayda bildiren çalışmalar
-          olsa da etki HRT'ye yakın değil ve uzun süreli güvenlik için karaciğer izlemi öneriliyor <Evidence level={2} />. Adaçayı
-          ekstresinin terleme üzerine küçük çalışmaları var; kanıt erken ve sınırlı. Kullanmaya karar verirsen tek bir destekle
-          başla, dört-altı hafta değerlendir; aynı anda birkaç ürün denemek hem etkiyi hem yan etkiyi okumayı zorlaştırıyor ve
-          mevcut ilaçlarınla etkileşimi mutlaka hekimine sor.
-        </p>
-        <h3>Sıcak basması yıllar sonra hâlâ varsa ne yapmalıyım?</h3>
-        <p>
-          Çoğu kadında menopoz sonrası birkaç yıl içinde sahne yumuşar; ancak kadınların yaklaşık yüzde onunda
-          belirtiler on yılı aşan bir seyir izleyebiliyor <Evidence level={4} />. "Geçer" cümlesi herkes için
-          aynı zamanda gerçekleşmiyor. Yıllar sonra hâlâ yaşam kalitesini bozan belirtiler varsa bunu
-          "katlanılması gereken bir tablo" olarak değil yeniden değerlendirme anı olarak okumakta fayda var;
-          HRT geç başlama penceresinin dışındaysa bile hormon dışı seçenekler ve yaşam tarzı planı
-          güncellenebilir. Kendi hekiminle yeniden bir kontrol planlamak — eğer beş-on yıl önce konuştuysan
-          tekrar konuşmak — kıymetli.
-        </p>
-        <h3>Pratik gece protokolü nasıl kurulur?</h3>
-        <p>
-          Pratik gece planı sade kurulabilir: yatak odasını serin tutmak, ince katmanlı ve nefes alan gece giysisi
-          seçmek, akşam ağır yemek ve alkolü sınırlamak, yatmadan önce kısa bir nefes rutini eklemek. Bu adımlar
-          gece terlemesi yaşayan bazı kadınlarda uyanma sayısını azaltabilir <Evidence level={4} />. Üç-dört hafta
-          tutarlı uygulamadan sonuç beklemek daha gerçekçidir; bir hafta deneyip "olmadı" demek erken bir karar.
+          AyrÄ±ca uykusuzluk gÃ¼ndÃ¼z iÅŸlev kaybÄ±na yol aÃ§Ä±yorsa, yoÄŸun anksiyete ya da belirgin depresif belirtiler eÅŸlik ediyorsa
+          destek planÄ±nÄ± geniÅŸletmek yaÅŸam kalitesi aÃ§Ä±sÄ±ndan Ã¶nemli. YardÄ±m istemek bu dÃ¶nemde irade zayÄ±flÄ±ÄŸÄ± deÄŸil; planÄ±n
+          gerekli bir parÃ§asÄ±.
         </p>
 
-        <h2 id="kapanis">Kapanış</h2>
+        <h2 id="sik-sorulanlar">SÄ±kÃ§a Sorulanlar</h2>
+        <h3>SÄ±cak basmasÄ± neden gece daha ÅŸiddetli yaÅŸanÄ±yor?</h3>
         <p>
-          Sıcak basması bir alarm değil; bedenin yeni bir ısı dengesine geçerken yazdığı sade bir cümle.
+          VÃ¼cut Ä±sÄ±sÄ± gÃ¼n iÃ§inde dalgalanÄ±r; akÅŸamÃ¼stÃ¼ hafif yÃ¼kselir, gece uykunun ilk saatlerinde dÃ¼ÅŸmeye baÅŸlar. Menopoz
+          dÃ¶neminde bu dÃ¼ÅŸÃ¼ÅŸ hareketi sÄ±rasÄ±nda termostatÄ±n daralan toleransÄ± tetiklenebiliyor; Ä±sÄ± algÄ±sÄ± kayÄ±yor ve refleks
+          terlemeyle vÃ¼cut hÄ±zlÄ± serinlemeye Ã§alÄ±ÅŸÄ±yor <Evidence level={4} />. Yatak baÅŸÄ±nda kalÄ±n yorgan, kalÄ±n gecelik ya da
+          akÅŸam yenen aÄŸÄ±r yemek bu sahneyi bÃ¼yÃ¼tÃ¼yor. Ã‡oÄŸu kadÄ±nda ince katmanlÄ± bir gecelik (terlediÄŸinde
+          Ã§Ä±karabileceÄŸin), nefes alabilen pamuk-keten nevresim ve yatak baÅŸÄ±na serinletici kÃ¼Ã§Ã¼k bir el
+          yelpazesi ya da sprey gece sahnesini belirgin biÃ§imde yumuÅŸatÄ±yor.
+        </p>
+        <h3>HRT dÄ±ÅŸÄ±nda paroksetin veya gabapentin gerÃ§ekten iÅŸe yarÄ±yor mu?</h3>
+        <p>
+          DÃ¼ÅŸÃ¼k doz paroksetin (Ã¶rn. 7,5 mg) ve venlafaksin gibi bazÄ± SSRI/SNRI grubu molekÃ¼ller vazomotor belirtileri klinik
+          olarak anlamlÄ± dÃ¼zeyde azaltabiliyor; etki HRT kadar gÃ¼Ã§lÃ¼ deÄŸil ama HRT alamayacak ya da almak istemeyen kadÄ±nlar iÃ§in
+          deÄŸerli bir seÃ§enek <Evidence level={4} />. Gabapentin Ã¶zellikle gece aÄŸÄ±rlÄ±klÄ± sahnesi olan kadÄ±nlarda yatmadan Ã¶nce
+          alÄ±ndÄ±ÄŸÄ±nda uyku kalitesini de destekleyebiliyor. Bu molekÃ¼llerin her birinin kendi yan etki profili var (paroksetinde
+          mide bulantÄ±sÄ± ve cinsel istek azalmasÄ±; gabapentinde uyku hali); karar hekimle birlikte verilir, doz yavaÅŸ yavaÅŸ
+          ayarlanÄ±r. BirkaÃ§ haftada belirgin fark yaratmazsa zaman kaybetmeden baÅŸka bir seÃ§eneÄŸe geÃ§mek mantÄ±klÄ±.
+        </p>
+        <h3>AdaÃ§ayÄ±, kara kohoÅŸ, soya â€” bitkisel destekler kanÄ±tlÄ± mÄ±?</h3>
+        <p>
+          Bu Ã¼Ã§ baÅŸlÄ±k sÄ±k soruluyor; cevabÄ± net olmadÄ±ÄŸÄ± iÃ§in yine sÄ±k dolaÅŸÄ±yor. Soya izoflavonlarÄ±nÄ±n (Ã¶zellikle S-equol
+          metabolitini Ã¼retebilen kadÄ±nlarda) hafif-orta dÃ¼zeyde fayda gÃ¶sterdiÄŸi Ã§alÄ±ÅŸmalar var; etki kiÅŸiye gÃ¶re belirgin
+          deÄŸiÅŸiyor <Evidence from={2} to={3} />. Kara kohoÅŸ iÃ§in literatÃ¼r karÄ±ÅŸÄ±k; kÄ±sa sÃ¼reli hafif fayda bildiren Ã§alÄ±ÅŸmalar
+          olsa da etki HRT'ye yakÄ±n deÄŸil ve uzun sÃ¼reli gÃ¼venlik iÃ§in karaciÄŸer izlemi Ã¶neriliyor <Evidence level={2} />. AdaÃ§ayÄ±
+          ekstresinin terleme Ã¼zerine kÃ¼Ã§Ã¼k Ã§alÄ±ÅŸmalarÄ± var; kanÄ±t erken ve sÄ±nÄ±rlÄ±. Kullanmaya karar verirsen tek bir destekle
+          baÅŸla, dÃ¶rt-altÄ± hafta deÄŸerlendir; aynÄ± anda birkaÃ§ Ã¼rÃ¼n denemek hem etkiyi hem yan etkiyi okumayÄ± zorlaÅŸtÄ±rÄ±yor ve
+          mevcut ilaÃ§larÄ±nla etkileÅŸimi mutlaka hekimine sor.
+        </p>
+        <h3>SÄ±cak basmasÄ± yÄ±llar sonra hÃ¢lÃ¢ varsa ne yapmalÄ±yÄ±m?</h3>
+        <p>
+          Ã‡oÄŸu kadÄ±nda menopoz sonrasÄ± birkaÃ§ yÄ±l iÃ§inde sahne yumuÅŸar; ancak kadÄ±nlarÄ±n yaklaÅŸÄ±k yÃ¼zde onunda
+          belirtiler on yÄ±lÄ± aÅŸan bir seyir izleyebiliyor <Evidence level={4} />. "GeÃ§er" cÃ¼mlesi herkes iÃ§in
+          aynÄ± zamanda gerÃ§ekleÅŸmiyor. YÄ±llar sonra hÃ¢lÃ¢ yaÅŸam kalitesini bozan belirtiler varsa bunu
+          "katlanÄ±lmasÄ± gereken bir tablo" olarak deÄŸil yeniden deÄŸerlendirme anÄ± olarak okumakta fayda var;
+          HRT geÃ§ baÅŸlama penceresinin dÄ±ÅŸÄ±ndaysa bile hormon dÄ±ÅŸÄ± seÃ§enekler ve yaÅŸam tarzÄ± planÄ±
+          gÃ¼ncellenebilir. Kendi hekiminle yeniden bir kontrol planlamak â€” eÄŸer beÅŸ-on yÄ±l Ã¶nce konuÅŸtuysan
+          tekrar konuÅŸmak â€” kÄ±ymetli.
+        </p>
+        <h3>Pratik gece protokolÃ¼ nasÄ±l kurulur?</h3>
+        <p>
+          Pratik gece planÄ± sade kurulabilir: yatak odasÄ±nÄ± serin tutmak, ince katmanlÄ± ve nefes alan gece giysisi
+          seÃ§mek, akÅŸam aÄŸÄ±r yemek ve alkolÃ¼ sÄ±nÄ±rlamak, yatmadan Ã¶nce kÄ±sa bir nefes rutini eklemek. Bu adÄ±mlar
+          gece terlemesi yaÅŸayan bazÄ± kadÄ±nlarda uyanma sayÄ±sÄ±nÄ± azaltabilir <Evidence level={4} />. ÃœÃ§-dÃ¶rt hafta
+          tutarlÄ± uygulamadan sonuÃ§ beklemek daha gerÃ§ekÃ§idir; bir hafta deneyip "olmadÄ±" demek erken bir karar.
+        </p>
+
+        <h2 id="kapanis">KapanÄ±ÅŸ</h2>
+        <p>
+          SÄ±cak basmasÄ± bir alarm deÄŸil; bedenin yeni bir Ä±sÄ± dengesine geÃ§erken yazdÄ±ÄŸÄ± sade bir cÃ¼mle.
         </p>
         <p>
-          Tetikleyenleri anlamak, gece sahnesini yumuşatmak, gerektiğinde tıbbi seçenekleri masaya koymak —
-          bunlar büyük adımlar değil, üst üste binen küçük çapalar. Bir kadının yolu üç ayda netleşebilir,
-          başka bir kadın için iki yıl sürebilir; ortalama eğilim yumuşama yönünde olsa da bireysel dağılım
-          geniş.
+          Tetikleyenleri anlamak, gece sahnesini yumuÅŸatmak, gerektiÄŸinde tÄ±bbi seÃ§enekleri masaya koymak â€”
+          bunlar bÃ¼yÃ¼k adÄ±mlar deÄŸil, Ã¼st Ã¼ste binen kÃ¼Ã§Ã¼k Ã§apalar. Bir kadÄ±nÄ±n yolu Ã¼Ã§ ayda netleÅŸebilir,
+          baÅŸka bir kadÄ±n iÃ§in iki yÄ±l sÃ¼rebilir; ortalama eÄŸilim yumuÅŸama yÃ¶nÃ¼nde olsa da bireysel daÄŸÄ±lÄ±m
+          geniÅŸ.
         </p>
         <p>
-          Bu hafta gece belirtilerini yargılamadan kaydetmek iyi bir başlangıç olabilir: ne zaman geldi, ne kadar
-          sürdü, ne tetikledi, gündüz işlevini bozdu mu? İyi kayıt, iyi tedavi konuşmasının en sade kapısıdır.
+          Bu hafta gece belirtilerini yargÄ±lamadan kaydetmek iyi bir baÅŸlangÄ±Ã§ olabilir: ne zaman geldi, ne kadar
+          sÃ¼rdÃ¼, ne tetikledi, gÃ¼ndÃ¼z iÅŸlevini bozdu mu? Ä°yi kayÄ±t, iyi tedavi konuÅŸmasÄ±nÄ±n en sade kapÄ±sÄ±dÄ±r.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
@@ -282,41 +290,41 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Vazomotor belirtiler (sıcak basması ve gece terlemesi) menopoz geçişinin en sık karşılaşılan biyolojik
-          imzasıdır. Östrojen dalgalanması beynin termoregülasyon merkezindeki (hipotalamik termal nötr zon)
-          duyarlılığı değiştirir; vücut küçük ısı değişimlerini "fazla ısı" olarak okuyarak vazodilatasyon ve
-          terleme refleksiyle hızlı serinlemeye geçer.
+          Vazomotor belirtiler (sÄ±cak basmasÄ± ve gece terlemesi) menopoz geÃ§iÅŸinin en sÄ±k karÅŸÄ±laÅŸÄ±lan biyolojik
+          imzasÄ±dÄ±r. Ã–strojen dalgalanmasÄ± beynin termoregÃ¼lasyon merkezindeki (hipotalamik termal nÃ¶tr zon)
+          duyarlÄ±lÄ±ÄŸÄ± deÄŸiÅŸtirir; vÃ¼cut kÃ¼Ã§Ã¼k Ä±sÄ± deÄŸiÅŸimlerini "fazla Ä±sÄ±" olarak okuyarak vazodilatasyon ve
+          terleme refleksiyle hÄ±zlÄ± serinlemeye geÃ§er.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Klinik kanıt vazomotor belirtilerin perimenopozda başlayıp menopoz sonrası yıllarda hafiflediğini
-          ortaya koyuyor; ancak süre kişiden kişiye geniş bir yelpazeye yayılıyor — bazı kadınlarda birkaç yıl,
-          bazılarında on yılı aşan bir seyir mümkün.
+          Klinik kanÄ±t vazomotor belirtilerin perimenopozda baÅŸlayÄ±p menopoz sonrasÄ± yÄ±llarda hafiflediÄŸini
+          ortaya koyuyor; ancak sÃ¼re kiÅŸiden kiÅŸiye geniÅŸ bir yelpazeye yayÄ±lÄ±yor â€” bazÄ± kadÄ±nlarda birkaÃ§ yÄ±l,
+          bazÄ±larÄ±nda on yÄ±lÄ± aÅŸan bir seyir mÃ¼mkÃ¼n.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Yaşam tarzı stratejileri (uyku ortamı serinliği, ince katmanlı giyim, alkol-baharat-sıcak tetikleyici
-          farkındalığı, dakikada altı nefes ritmi, düzenli hareket, sigaranın bırakılması) belirti şiddetinde
-          ölçülebilir azalma sağlayabilir; etki çoğu zaman tek bir hamleden değil, sade adımların tutarlı
+          YaÅŸam tarzÄ± stratejileri (uyku ortamÄ± serinliÄŸi, ince katmanlÄ± giyim, alkol-baharat-sÄ±cak tetikleyici
+          farkÄ±ndalÄ±ÄŸÄ±, dakikada altÄ± nefes ritmi, dÃ¼zenli hareket, sigaranÄ±n bÄ±rakÄ±lmasÄ±) belirti ÅŸiddetinde
+          Ã¶lÃ§Ã¼lebilir azalma saÄŸlayabilir; etki Ã§oÄŸu zaman tek bir hamleden deÄŸil, sade adÄ±mlarÄ±n tutarlÄ±
           kombinasyonundan gelir.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Tıbbi seçenekler kişiselleştirilir: HRT uygun adaylarda en etkili seçenek olarak öne çıkar; hormon
-          dışı yollar (düşük doz paroksetin, venlafaksin, gabapentin, yeni nesil moleküller) HRT alamayan ya da
-          almak istemeyen kadınlarda anlamlı yarar sağlayabilir. Yıllar sonra hâlâ yaşam kalitesini bozan
-          belirtiler "katlanılan bir tablo" değil, yeniden değerlendirme anıdır. Açıklanamayan kilo kaybı,
-          ateş, çarpıntı veya tiroid bulgu birlikteliği menopoz çerçevesinin dışına işaret eder ve gecikmeden
-          değerlendirilmelidir.
+          TÄ±bbi seÃ§enekler kiÅŸiselleÅŸtirilir: HRT uygun adaylarda en etkili seÃ§enek olarak Ã¶ne Ã§Ä±kar; hormon
+          dÄ±ÅŸÄ± yollar (dÃ¼ÅŸÃ¼k doz paroksetin, venlafaksin, gabapentin, yeni nesil molekÃ¼ller) HRT alamayan ya da
+          almak istemeyen kadÄ±nlarda anlamlÄ± yarar saÄŸlayabilir. YÄ±llar sonra hÃ¢lÃ¢ yaÅŸam kalitesini bozan
+          belirtiler "katlanÄ±lan bir tablo" deÄŸil, yeniden deÄŸerlendirme anÄ±dÄ±r. AÃ§Ä±klanamayan kilo kaybÄ±,
+          ateÅŸ, Ã§arpÄ±ntÄ± veya tiroid bulgu birlikteliÄŸi menopoz Ã§erÃ§evesinin dÄ±ÅŸÄ±na iÅŸaret eder ve gecikmeden
+          deÄŸerlendirilmelidir.
         </p>
         <p class="text-sm italic text-burgundy">
-          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+          â€” DoÃ§. Dr. Senai Aksoy, Estranova Bilimsel EditÃ¶rÃ¼
         </p>
       </section>
 
       <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
         <p class="text-sm leading-relaxed text-ink/75">
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi
-          hekiminizle birlikte değerlendirme yapınız.
+          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme, tanÄ± veya tedavinin yerini almaz. SaÄŸlÄ±k kararlarÄ±nÄ±z iÃ§in kendi
+          hekiminizle birlikte deÄŸerlendirme yapÄ±nÄ±z.
         </p>
       </section>
     </SubmenuArticleBody>
@@ -324,3 +332,4 @@ const articleSchemas = buildArticleSchemas({
 
   <SiteFooter />
 </SiteLayout>
+

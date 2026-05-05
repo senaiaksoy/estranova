@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -13,7 +13,9 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
@@ -21,39 +23,43 @@ const hero =
   ?? submenuHeroByRoute['/zamansiz-yasam/non-invaziv']!;
 
 const tocEntries = [
-  { id: 'sabah-ahir', label: 'Sabah Ahırda Soğukla' },
-  { id: 'sporcu-deneyim', label: 'Sauna Bana Ne Öğretti' },
-  { id: 'kusak-gozlem', label: 'Sıcak Basması Paradoksu' },
+  { id: 'sabah-ahir', label: 'Sabah AhÄ±rda SoÄŸukla' },
+  { id: 'sporcu-deneyim', label: 'Sauna Bana Ne Ã–ÄŸretti' },
+  { id: 'kusak-gozlem', label: 'SÄ±cak BasmasÄ± Paradoksu' },
   { id: 'bilim-sauna', label: 'Bilim Ne Diyor: Sauna' },
-  { id: 'bilim-soguk', label: 'Bilim Ne Diyor: Soğuk' },
-  { id: 'pratik-notlar', label: 'Kim İçin, Nasıl?' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
-  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'bilim-soguk', label: 'Bilim Ne Diyor: SoÄŸuk' },
+  { id: 'pratik-notlar', label: 'Kim Ä°Ã§in, NasÄ±l?' },
+  { id: 'sik-sorulanlar', label: 'SÄ±kÃ§a Sorulanlar' },
+  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına';
+const articleTitle = 'Sauna ve SoÄŸuk DuÅŸ â€” Sporcu Bedenden Ã–nceki KuÅŸaÄŸÄ±n SÄ±cak BasmasÄ±na';
 const articleDescription =
-  'Sporcu olarak sauna ve soğuk maruziyet deneyimim, çevremdeki kadınların sıcak basmasını izlerken öğrendiklerim, bilim ne diyor (kardiyovasküler, mood, sıcak basması paradoksu) ve güvenlik notları. Yaşıt ama mütevazı bir kuşak köprüsü.';
+  'Sporcu olarak sauna ve soÄŸuk maruziyet deneyimim, Ã§evremdeki kadÄ±nlarÄ±n sÄ±cak basmasÄ±nÄ± izlerken Ã¶ÄŸrendiklerim, bilim ne diyor (kardiyovaskÃ¼ler, mood, sÄ±cak basmasÄ± paradoksu) ve gÃ¼venlik notlarÄ±. YaÅŸÄ±t ama mÃ¼tevazÄ± bir kuÅŸak kÃ¶prÃ¼sÃ¼.';
+const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'alara-baykent',
-  publishedDate: '3 Mayıs 2026',
+  publishedDate: '3 MayÄ±s 2026',
   pathname: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz',
-  articleSection: 'Zamansız Yaşam',
+  articleSection: 'ZamansÄ±z YaÅŸam',
   sectionPath: '/zamansiz-yasam',
   keywords: [
     'sauna',
-    'soğuk duş',
-    'menopoz semptomları',
-    'sıcak basması',
-    'kardiyovasküler sağlık',
-    'sporcu kadın',
-    'soğuk maruziyet',
-    'kuşak gözlemi',
+    'soÄŸuk duÅŸ',
+    'menopoz semptomlarÄ±',
+    'sÄ±cak basmasÄ±',
+    'kardiyovaskÃ¼ler saÄŸlÄ±k',
+    'sporcu kadÄ±n',
+    'soÄŸuk maruziyet',
+    'kuÅŸak gÃ¶zlemi',
     'iyi olma',
   ],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -68,15 +74,15 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zamansız Yaşam · Ameliyatsız Uygulamalar"
-      title="Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına"
+      eyebrow="ZamansÄ±z YaÅŸam Â· AmeliyatsÄ±z Uygulamalar"
+      title="Sauna ve SoÄŸuk DuÅŸ â€” Sporcu Bedenden Ã–nceki KuÅŸaÄŸÄ±n SÄ±cak BasmasÄ±na"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="alara-baykent" publishedDate="3 Mayıs 2026" readingMinutes={8} />
+      <ArticleAuthorBlock authorSlug="alara-baykent" publishedDate="3 MayÄ±s 2026" readingMinutes={8} />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
@@ -89,283 +95,285 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
       >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
         <p class="leading-relaxed text-ink/80">
-          Sauna ve soğuk duş — sporcu yaşamımın iki sabit dinlenme aracı. Ben
-          henüz menopoz dönemine ait bir beden değişimi yaşamıyorum; ama
-          çevremdeki kadınların sıcak basmasını izlerken bu iki uygulamanın o
-          dönemde ne anlama geldiğini sormaya başladım. Bu yazıda kendi sporcu
-          deneyimimi, önceki kuşağın gözlemlerinden öğrendiklerimi ve bilimin
-          <em>"sauna ve menopoz"</em> ile <em>"soğuk maruziyet ve menopoz"</em>
-          sorularına bugün verebileceği dürüst cevapları yan yana koyuyorum —
-          yaşıt ama mütevazı bir kuşak köprüsü.
+          Sauna ve soÄŸuk duÅŸ â€” sporcu yaÅŸamÄ±mÄ±n iki sabit dinlenme aracÄ±. Ben
+          henÃ¼z menopoz dÃ¶nemine ait bir beden deÄŸiÅŸimi yaÅŸamÄ±yorum; ama
+          Ã§evremdeki kadÄ±nlarÄ±n sÄ±cak basmasÄ±nÄ± izlerken bu iki uygulamanÄ±n o
+          dÃ¶nemde ne anlama geldiÄŸini sormaya baÅŸladÄ±m. Bu yazÄ±da kendi sporcu
+          deneyimimi, Ã¶nceki kuÅŸaÄŸÄ±n gÃ¶zlemlerinden Ã¶ÄŸrendiklerimi ve bilimin
+          <em>"sauna ve menopoz"</em> ile <em>"soÄŸuk maruziyet ve menopoz"</em>
+          sorularÄ±na bugÃ¼n verebileceÄŸi dÃ¼rÃ¼st cevaplarÄ± yan yana koyuyorum â€”
+          yaÅŸÄ±t ama mÃ¼tevazÄ± bir kuÅŸak kÃ¶prÃ¼sÃ¼.
         </p>
       </section>
 
       <ArticleProsePanel>
-        <h2 id="sabah-ahir">Sabah Ahırda Soğukla Başlayan Bir Gün</h2>
+        <h2 id="sabah-ahir">Sabah AhÄ±rda SoÄŸukla BaÅŸlayan Bir GÃ¼n</h2>
         <p>
-          Atımla sabah ahırda — havanın daha çözülmediği saatlerde içeri
-          girmek bana hep aynı şeyi yaptırır: omuzlarımı yukarı kaldırır,
-          nefesimi yavaşlatır, sonra alıştırır. Soğuk hava bedenle bir
-          konuşma başlatıyor; bu konuşma bittiğinde içeri girip günün asıl
-          işlerine başlıyorum. Sporcu olarak büyürken ısı ve soğukla
-          dans etmeyi erken öğrendim — sahile inen güneş, denizin sıcaklığı,
-          rüzgârın yönü antrenmanı belirledi. Ahırda olunca bu konuşma
-          başka türlü ama aynı mantıkla yürür.
+          AtÄ±mla sabah ahÄ±rda â€” havanÄ±n daha Ã§Ã¶zÃ¼lmediÄŸi saatlerde iÃ§eri
+          girmek bana hep aynÄ± ÅŸeyi yaptÄ±rÄ±r: omuzlarÄ±mÄ± yukarÄ± kaldÄ±rÄ±r,
+          nefesimi yavaÅŸlatÄ±r, sonra alÄ±ÅŸtÄ±rÄ±r. SoÄŸuk hava bedenle bir
+          konuÅŸma baÅŸlatÄ±yor; bu konuÅŸma bittiÄŸinde iÃ§eri girip gÃ¼nÃ¼n asÄ±l
+          iÅŸlerine baÅŸlÄ±yorum. Sporcu olarak bÃ¼yÃ¼rken Ä±sÄ± ve soÄŸukla
+          dans etmeyi erken Ã¶ÄŸrendim â€” sahile inen gÃ¼neÅŸ, denizin sÄ±caklÄ±ÄŸÄ±,
+          rÃ¼zgÃ¢rÄ±n yÃ¶nÃ¼ antrenmanÄ± belirledi. AhÄ±rda olunca bu konuÅŸma
+          baÅŸka tÃ¼rlÃ¼ ama aynÄ± mantÄ±kla yÃ¼rÃ¼r.
         </p>
         <p>
-          Bu yazı sauna ve soğuk duş üzerine; ama benim için bir kapı:
-          sporcu yaşamımın iki sıradan dinlenme aracı olan bu iki şeyin
-          çevremdeki kadınların yaşadığı dönemde nasıl bir anlam kazanabileceğini
-          düşündüğüm bir kapı. Henüz benim dönemim değil; ama önceki kuşağın
-          döneminde olmayan bir şey bende var: bilgi. Önce kendi deneyimim,
-          sonra çevremdeki kadınların gözleminden öğrendiğim, sonra bilim
+          Bu yazÄ± sauna ve soÄŸuk duÅŸ Ã¼zerine; ama benim iÃ§in bir kapÄ±:
+          sporcu yaÅŸamÄ±mÄ±n iki sÄ±radan dinlenme aracÄ± olan bu iki ÅŸeyin
+          Ã§evremdeki kadÄ±nlarÄ±n yaÅŸadÄ±ÄŸÄ± dÃ¶nemde nasÄ±l bir anlam kazanabileceÄŸini
+          dÃ¼ÅŸÃ¼ndÃ¼ÄŸÃ¼m bir kapÄ±. HenÃ¼z benim dÃ¶nemim deÄŸil; ama Ã¶nceki kuÅŸaÄŸÄ±n
+          dÃ¶neminde olmayan bir ÅŸey bende var: bilgi. Ã–nce kendi deneyimim,
+          sonra Ã§evremdeki kadÄ±nlarÄ±n gÃ¶zleminden Ã¶ÄŸrendiÄŸim, sonra bilim
 rehberi.
         </p>
 
-        <h2 id="sporcu-deneyim">Sauna Bana Ne Öğretti</h2>
+        <h2 id="sporcu-deneyim">Sauna Bana Ne Ã–ÄŸretti</h2>
         <p>
-          Sauna sporcu yaşamımda kazanılmış bir alışkanlık değil, doğal bir
-          parçaydı; antrenman sonrası kasları rahatlatmak, terlemek,
-          başka bir tempoda bir araya gelmek için. Bordumun bakımına
-          ayırdığım vakti kendi bedenime ayıramam diye düşünmek için
-          bir antrenman sonrası gerekti — sauna o düşüncenin yer
-          tuttuğu bir alan oldu.
+          Sauna sporcu yaÅŸamÄ±mda kazanÄ±lmÄ±ÅŸ bir alÄ±ÅŸkanlÄ±k deÄŸil, doÄŸal bir
+          parÃ§aydÄ±; antrenman sonrasÄ± kaslarÄ± rahatlatmak, terlemek,
+          baÅŸka bir tempoda bir araya gelmek iÃ§in. Bordumun bakÄ±mÄ±na
+          ayÄ±rdÄ±ÄŸÄ±m vakti kendi bedenime ayÄ±ramam diye dÃ¼ÅŸÃ¼nmek iÃ§in
+          bir antrenman sonrasÄ± gerekti â€” sauna o dÃ¼ÅŸÃ¼ncenin yer
+          tuttuÄŸu bir alan oldu.
         </p>
         <p>
-          Soğuk duş başka bir hikâye. Yıllarca antrenman sonrası soğuk
-          suya girmek <em>"olması gereken"</em> bir şey diye anlatıldı;
-          ama ben kendi bedenimde uzun yıllar bunun ne yaptığını net
-          okuyamadım. Bir noktada fark ettim: <em>kısa süreli</em> bir
-          soğuk maruziyet — birkaç dakikalık bir duş ya da göl daldırışı —
-          benim için bir uyanış değil bir <em>düzenleme</em> aracı.
-          Stresli bir günün sonunda, geceye doğru, beni hızlandıran değil
-          yavaşlatan bir şey. Sporcu olarak bedenimi takip etmek bana
-          şunu öğretti: aynı uygulama farklı saatte ve farklı dozda
-          farklı şey yapar.
+          SoÄŸuk duÅŸ baÅŸka bir hikÃ¢ye. YÄ±llarca antrenman sonrasÄ± soÄŸuk
+          suya girmek <em>"olmasÄ± gereken"</em> bir ÅŸey diye anlatÄ±ldÄ±;
+          ama ben kendi bedenimde uzun yÄ±llar bunun ne yaptÄ±ÄŸÄ±nÄ± net
+          okuyamadÄ±m. Bir noktada fark ettim: <em>kÄ±sa sÃ¼reli</em> bir
+          soÄŸuk maruziyet â€” birkaÃ§ dakikalÄ±k bir duÅŸ ya da gÃ¶l daldÄ±rÄ±ÅŸÄ± â€”
+          benim iÃ§in bir uyanÄ±ÅŸ deÄŸil bir <em>dÃ¼zenleme</em> aracÄ±.
+          Stresli bir gÃ¼nÃ¼n sonunda, geceye doÄŸru, beni hÄ±zlandÄ±ran deÄŸil
+          yavaÅŸlatan bir ÅŸey. Sporcu olarak bedenimi takip etmek bana
+          ÅŸunu Ã¶ÄŸretti: aynÄ± uygulama farklÄ± saatte ve farklÄ± dozda
+          farklÄ± ÅŸey yapar.
         </p>
         <p>
-          Bu deneyim bir öneri değil; sadece bir gözlem. Çevremdeki
-          kadınların anlattıkları çok farklı yerlere işaret ediyor —
-          birine iyi gelen başka birine ağır gelebiliyor. <em>Aynı uygulama
-          farklı bedende farklı sonuç</em> ifadesi sauna ve soğuk için de
-          geçerli.
+          Bu deneyim bir Ã¶neri deÄŸil; sadece bir gÃ¶zlem. Ã‡evremdeki
+          kadÄ±nlarÄ±n anlattÄ±klarÄ± Ã§ok farklÄ± yerlere iÅŸaret ediyor â€”
+          birine iyi gelen baÅŸka birine aÄŸÄ±r gelebiliyor. <em>AynÄ± uygulama
+          farklÄ± bedende farklÄ± sonuÃ§</em> ifadesi sauna ve soÄŸuk iÃ§in de
+          geÃ§erli.
         </p>
 
-        <h2 id="kusak-gozlem">Sıcak Basması Paradoksu — Yakındaki Bir Kadından Gözlem</h2>
+        <h2 id="kusak-gozlem">SÄ±cak BasmasÄ± Paradoksu â€” YakÄ±ndaki Bir KadÄ±ndan GÃ¶zlem</h2>
         <p>
-          Yakın bir aile dostumun mutfakta sıcak bastığında kapıyı açmaya
-          yürüdüğü o ânı hep hatırlıyorum — birkaç saniye duruyor, pencereyi
-          açıyor, sonra geri dönüyor. O ânın bir doku işareti olduğunu o
-          yıllarda anlamamıştım. Sıcak basması bu kadının günlük temposunun
-          bir parçası oldu yıllarca; ben bunu bedenimden değil onun
-          anlatımından öğrendim.
+          YakÄ±n bir aile dostumun mutfakta sÄ±cak bastÄ±ÄŸÄ±nda kapÄ±yÄ± aÃ§maya
+          yÃ¼rÃ¼dÃ¼ÄŸÃ¼ o Ã¢nÄ± hep hatÄ±rlÄ±yorum â€” birkaÃ§ saniye duruyor, pencereyi
+          aÃ§Ä±yor, sonra geri dÃ¶nÃ¼yor. O Ã¢nÄ±n bir doku iÅŸareti olduÄŸunu o
+          yÄ±llarda anlamamÄ±ÅŸtÄ±m. SÄ±cak basmasÄ± bu kadÄ±nÄ±n gÃ¼nlÃ¼k temposunun
+          bir parÃ§asÄ± oldu yÄ±llarca; ben bunu bedenimden deÄŸil onun
+          anlatÄ±mÄ±ndan Ã¶ÄŸrendim.
         </p>
         <p>
-          Saunaya iyi gelen ısı dolu bir an — bir sporcu için sıradan dinlenme;
-          sıcak basması yaşayan bir kadın için aynı an çok başka bir
-          deneyim olabiliyor. Bunu kendisine sorduğumda bana şunu söyledi:
-          <em>"İyi geldiği günler oldu, kötü geldiği günler oldu. Bedenimle
-          farklı zamanlarda farklı bir denkleme oturuyor."</em> Bu kadarı
-          sauna ile menopoz arasındaki sorunun ne kadar nüanslı olduğunu
-          baştan gösteriyor: bir reçete değil, bir <em>denge</em> sorusu.
-          Bedenim henüz bu sinyalleri vermiyor; ama vereceğini biliyorum,
-          hazırlığım o yüzden başladı.
+          Saunaya iyi gelen Ä±sÄ± dolu bir an â€” bir sporcu iÃ§in sÄ±radan dinlenme;
+          sÄ±cak basmasÄ± yaÅŸayan bir kadÄ±n iÃ§in aynÄ± an Ã§ok baÅŸka bir
+          deneyim olabiliyor. Bunu kendisine sorduÄŸumda bana ÅŸunu sÃ¶yledi:
+          <em>"Ä°yi geldiÄŸi gÃ¼nler oldu, kÃ¶tÃ¼ geldiÄŸi gÃ¼nler oldu. Bedenimle
+          farklÄ± zamanlarda farklÄ± bir denkleme oturuyor."</em> Bu kadarÄ±
+          sauna ile menopoz arasÄ±ndaki sorunun ne kadar nÃ¼anslÄ± olduÄŸunu
+          baÅŸtan gÃ¶steriyor: bir reÃ§ete deÄŸil, bir <em>denge</em> sorusu.
+          Bedenim henÃ¼z bu sinyalleri vermiyor; ama vereceÄŸini biliyorum,
+          hazÄ±rlÄ±ÄŸÄ±m o yÃ¼zden baÅŸladÄ±.
         </p>
 
         <h2 id="bilim-sauna">Bilim Ne Diyor: Sauna ve Menopoz Belirtileri?</h2>
         <p>
-Bilimin söyleyebildikleri bir cevaptan çok bir <em>bakış</em>:
-          sauna belirli açılardan sağlam kanıtlı, belirli açılardan henüz
-          tartışmalı.
+Bilimin sÃ¶yleyebildikleri bir cevaptan Ã§ok bir <em>bakÄ±ÅŸ</em>:
+          sauna belirli aÃ§Ä±lardan saÄŸlam kanÄ±tlÄ±, belirli aÃ§Ä±lardan henÃ¼z
+          tartÄ±ÅŸmalÄ±.
         </p>
         <p>
-          <strong>Kardiyovasküler sağlık:</strong> Düzenli sauna kullanımının
-          uzun dönem kardiyovasküler olay riskini ve kan basıncını
-          iyileştirebildiğine dair geniş gözlemsel kanıt var, özellikle
-          Finlandiya'da yapılmış uzun-soluklu kohort çalışmalarından
-          <Evidence level={4} />. Bu kazançlar postmenopozal kadınlarda da
-          gözlemlenmiş; menopozda artan kardiyovasküler risk profiline
-          karşı saunanın bir <em>destekleyici alışkanlık</em> olarak yer
-          tutabileceğini düşündürüyor.
+          <strong>KardiyovaskÃ¼ler saÄŸlÄ±k:</strong> DÃ¼zenli sauna kullanÄ±mÄ±nÄ±n
+          uzun dÃ¶nem kardiyovaskÃ¼ler olay riskini ve kan basÄ±ncÄ±nÄ±
+          iyileÅŸtirebildiÄŸine dair geniÅŸ gÃ¶zlemsel kanÄ±t var, Ã¶zellikle
+          Finlandiya'da yapÄ±lmÄ±ÅŸ uzun-soluklu kohort Ã§alÄ±ÅŸmalarÄ±ndan
+          <Evidence level={4} />. Bu kazanÃ§lar postmenopozal kadÄ±nlarda da
+          gÃ¶zlemlenmiÅŸ; menopozda artan kardiyovaskÃ¼ler risk profiline
+          karÅŸÄ± saunanÄ±n bir <em>destekleyici alÄ±ÅŸkanlÄ±k</em> olarak yer
+          tutabileceÄŸini dÃ¼ÅŸÃ¼ndÃ¼rÃ¼yor.
         </p>
         <p>
-          <strong>Sıcak basması:</strong> Sauna ile sıcak basması arasındaki
-          ilişki paradoksal. Bazı küçük çalışmalar düzenli ısı maruziyetinin
-          uzun vadede vücudun ısı toleransını artırarak sıcak basması
-          şikâyetini hafifletebileceğine işaret ediyor; bazıları ise akut
-          olarak sıcak basmasını <em>tetikleyebileceğini</em> bildiriyor
-          <Evidence from={2} to={3} />. Yani aynı kadının saunadan iyi
-          gelen ve kötü gelen günleri bilimde de yansımasını buluyor —
-          tek bir cevabı olmayan bir konu.
+          <strong>SÄ±cak basmasÄ±:</strong> Sauna ile sÄ±cak basmasÄ± arasÄ±ndaki
+          iliÅŸki paradoksal. BazÄ± kÃ¼Ã§Ã¼k Ã§alÄ±ÅŸmalar dÃ¼zenli Ä±sÄ± maruziyetinin
+          uzun vadede vÃ¼cudun Ä±sÄ± toleransÄ±nÄ± artÄ±rarak sÄ±cak basmasÄ±
+          ÅŸikÃ¢yetini hafifletebileceÄŸine iÅŸaret ediyor; bazÄ±larÄ± ise akut
+          olarak sÄ±cak basmasÄ±nÄ± <em>tetikleyebileceÄŸini</em> bildiriyor
+          <Evidence from={2} to={3} />. Yani aynÄ± kadÄ±nÄ±n saunadan iyi
+          gelen ve kÃ¶tÃ¼ gelen gÃ¼nleri bilimde de yansÄ±masÄ±nÄ± buluyor â€”
+          tek bir cevabÄ± olmayan bir konu.
         </p>
         <p>
-          <strong>Mood ve uyku:</strong> Sauna sonrası bildirilen rahatlama
-          hissi, mood iyileşmesi ve uyku kalitesinde hafif düzelme orta
-          düzeyde kanıtlı <Evidence level={3} />. Bu etkilerin bir kısmı
-          ısının kendisinden, bir kısmı sauna ortamının ritüel-rahatlatıcı
-          etkisinden kaynaklanıyor olabilir; bilim henüz bu iki bileşeni
-          tam ayıramıyor.
-        </p>
-
-        <h2 id="bilim-soguk">Bilim Ne Diyor: Soğuk Maruziyet ve Menopoz?</h2>
-        <p>
-          Soğuk maruziyet üzerine son yıllarda yapılan araştırma sayısı
-          arttı; ama menopoz özelindeki çalışma sayısı henüz çok sınırlı.
-        </p>
-        <p>
-          <strong>Mood ve enerji:</strong> Soğuk duş veya kısa soğuk daldırma
-          sonrası noradrenalin artışı ve vagal aktivasyon değişimleri
-          bildirilmiş; bu mekanizmalar üzerinden mood iyileşmesi ve geçici
-          enerji hissi açıklanmaya çalışılıyor <Evidence from={2} to={3} />.
-          Etki büyüklüğü bireysel olarak çok değişken; bazı kişilerde
-          belirgin, bazılarında belirgin değil.
-        </p>
-        <p>
-          <strong>Bağışıklık ve iltihaplı yanıt:</strong> Düzenli soğuk
-          maruziyetin sistemik iltihabi belirteçleri etkileyebileceğine
-          dair kanıtlar var; ama klinik anlamı henüz net çizilmiş değil
-          <Evidence level={2} />. Postmenopozal kadınlarda artan kronik
-          düşük-düzeyli iltihap zemininde bu konuya ilgi büyüyor; klinik
-          öneri için kanıt yetersiz.
-        </p>
-        <p>
-          <strong>Menopoz semptomları için doğrudan kanıt:</strong>
-          <em>Çok sınırlı</em>. Sıcak basması, gece terlemesi gibi spesifik
-          menopoz semptomları için soğuk maruziyetin yararını gösteren
-          büyük randomize çalışma yok denecek kadar az <Evidence level={2} />.
-          Bu konuda söylenebilecek dürüst cümle şu: <em>henüz çok
-          erken — kanıt birikiyor</em>.
+          <strong>Mood ve uyku:</strong> Sauna sonrasÄ± bildirilen rahatlama
+          hissi, mood iyileÅŸmesi ve uyku kalitesinde hafif dÃ¼zelme orta
+          dÃ¼zeyde kanÄ±tlÄ± <Evidence level={3} />. Bu etkilerin bir kÄ±smÄ±
+          Ä±sÄ±nÄ±n kendisinden, bir kÄ±smÄ± sauna ortamÄ±nÄ±n ritÃ¼el-rahatlatÄ±cÄ±
+          etkisinden kaynaklanÄ±yor olabilir; bilim henÃ¼z bu iki bileÅŸeni
+          tam ayÄ±ramÄ±yor.
         </p>
 
-        <h2 id="pratik-notlar">Kim İçin, Nasıl, Ne Zaman? — Pratik Notlar</h2>
+        <h2 id="bilim-soguk">Bilim Ne Diyor: SoÄŸuk Maruziyet ve Menopoz?</h2>
         <p>
-          Sauna ya da soğuk maruziyeti denemek istiyorsanız bilmeniz
-          yarayacak birkaç pratik nokta var.
+          SoÄŸuk maruziyet Ã¼zerine son yÄ±llarda yapÄ±lan araÅŸtÄ±rma sayÄ±sÄ±
+          arttÄ±; ama menopoz Ã¶zelindeki Ã§alÄ±ÅŸma sayÄ±sÄ± henÃ¼z Ã§ok sÄ±nÄ±rlÄ±.
         </p>
         <p>
-          <strong>Sıklık ve süre:</strong> Sauna için kardiyovasküler
-          kazanımların gözlemlendiği aralıklar haftalık 2-4 seans + her
-          seansın 15-20 dakikası civarında. Daha sık ve uzun seanslar
-          ek fayda göstermiyor; aksine yorgunluk ve dehidrasyon riski
-          artıyor. Soğuk daldırma için tipik araştırma protokolleri
-          birkaç dakikalık (2-5 dk) maruziyet — uzun süreli daldırma
-          önerilen bir uygulama değil.
+          <strong>Mood ve enerji:</strong> SoÄŸuk duÅŸ veya kÄ±sa soÄŸuk daldÄ±rma
+          sonrasÄ± noradrenalin artÄ±ÅŸÄ± ve vagal aktivasyon deÄŸiÅŸimleri
+          bildirilmiÅŸ; bu mekanizmalar Ã¼zerinden mood iyileÅŸmesi ve geÃ§ici
+          enerji hissi aÃ§Ä±klanmaya Ã§alÄ±ÅŸÄ±lÄ±yor <Evidence from={2} to={3} />.
+          Etki bÃ¼yÃ¼klÃ¼ÄŸÃ¼ bireysel olarak Ã§ok deÄŸiÅŸken; bazÄ± kiÅŸilerde
+          belirgin, bazÄ±larÄ±nda belirgin deÄŸil.
         </p>
         <p>
-          <strong>Sıcak basması olan dönem:</strong> Saunaya iyi gelen
-          sporcu bir gün, sıcak basması yaşayan bir kadında aynı şekilde
-          işlemeyebilir. Yakındaki bir kadından duyduğum <em>"iyi geldi / kötü
-          geldi"</em> ayırımı burada bir kılavuz: deneme yapılırken günlük
+          <strong>BaÄŸÄ±ÅŸÄ±klÄ±k ve iltihaplÄ± yanÄ±t:</strong> DÃ¼zenli soÄŸuk
+          maruziyetin sistemik iltihabi belirteÃ§leri etkileyebileceÄŸine
+          dair kanÄ±tlar var; ama klinik anlamÄ± henÃ¼z net Ã§izilmiÅŸ deÄŸil
+          <Evidence level={2} />. Postmenopozal kadÄ±nlarda artan kronik
+          dÃ¼ÅŸÃ¼k-dÃ¼zeyli iltihap zemininde bu konuya ilgi bÃ¼yÃ¼yor; klinik
+          Ã¶neri iÃ§in kanÄ±t yetersiz.
+        </p>
+        <p>
+          <strong>Menopoz semptomlarÄ± iÃ§in doÄŸrudan kanÄ±t:</strong>
+          <em>Ã‡ok sÄ±nÄ±rlÄ±</em>. SÄ±cak basmasÄ±, gece terlemesi gibi spesifik
+          menopoz semptomlarÄ± iÃ§in soÄŸuk maruziyetin yararÄ±nÄ± gÃ¶steren
+          bÃ¼yÃ¼k randomize Ã§alÄ±ÅŸma yok denecek kadar az <Evidence level={2} />.
+          Bu konuda sÃ¶ylenebilecek dÃ¼rÃ¼st cÃ¼mle ÅŸu: <em>henÃ¼z Ã§ok
+          erken â€” kanÄ±t birikiyor</em>.
+        </p>
+
+        <h2 id="pratik-notlar">Kim Ä°Ã§in, NasÄ±l, Ne Zaman? â€” Pratik Notlar</h2>
+        <p>
+          Sauna ya da soÄŸuk maruziyeti denemek istiyorsanÄ±z bilmeniz
+          yarayacak birkaÃ§ pratik nokta var.
+        </p>
+        <p>
+          <strong>SÄ±klÄ±k ve sÃ¼re:</strong> Sauna iÃ§in kardiyovaskÃ¼ler
+          kazanÄ±mlarÄ±n gÃ¶zlemlendiÄŸi aralÄ±klar haftalÄ±k 2-4 seans + her
+          seansÄ±n 15-20 dakikasÄ± civarÄ±nda. Daha sÄ±k ve uzun seanslar
+          ek fayda gÃ¶stermiyor; aksine yorgunluk ve dehidrasyon riski
+          artÄ±yor. SoÄŸuk daldÄ±rma iÃ§in tipik araÅŸtÄ±rma protokolleri
+          birkaÃ§ dakikalÄ±k (2-5 dk) maruziyet â€” uzun sÃ¼reli daldÄ±rma
+          Ã¶nerilen bir uygulama deÄŸil.
+        </p>
+        <p>
+          <strong>SÄ±cak basmasÄ± olan dÃ¶nem:</strong> Saunaya iyi gelen
+          sporcu bir gÃ¼n, sÄ±cak basmasÄ± yaÅŸayan bir kadÄ±nda aynÄ± ÅŸekilde
+          iÅŸlemeyebilir. YakÄ±ndaki bir kadÄ±ndan duyduÄŸum <em>"iyi geldi / kÃ¶tÃ¼
+          geldi"</em> ayÄ±rÄ±mÄ± burada bir kÄ±lavuz: deneme yapÄ±lÄ±rken gÃ¼nlÃ¼k
           tutmak (semptom
-          şiddeti, uyku, ruh hali) ve <em>kötü gelen günleri kabul
-          etmek</em> önemli. Bu konuda kendi hekiminizle konuşmak en
-          güvenli ilk adım.
+          ÅŸiddeti, uyku, ruh hali) ve <em>kÃ¶tÃ¼ gelen gÃ¼nleri kabul
+          etmek</em> Ã¶nemli. Bu konuda kendi hekiminizle konuÅŸmak en
+          gÃ¼venli ilk adÄ±m.
         </p>
         <p>
-          <strong>HRT alanlar için:</strong> Sauna ile HRT arasında
-          doğrudan kontrendikasyon yok; ama sıcak basması yönetimi
-          tedavi planının parçasıysa sauna sıklığı ve zamanlaması
-          hekimle birlikte değerlendirilir.
+          <strong>HRT alanlar iÃ§in:</strong> Sauna ile HRT arasÄ±nda
+          doÄŸrudan kontrendikasyon yok; ama sÄ±cak basmasÄ± yÃ¶netimi
+          tedavi planÄ±nÄ±n parÃ§asÄ±ysa sauna sÄ±klÄ±ÄŸÄ± ve zamanlamasÄ±
+          hekimle birlikte deÄŸerlendirilir.
         </p>
         <p>
-          <strong>Bütçe ve erişim:</strong> Saunanın kendi evinde olması
-          gerekmez; spor merkezleri, oteller ve özel sauna mekânları çok
-          arttı. Soğuk duş için özel bir ekipman gerekmiyor — duş
-          başlığını çevirmek ya da küvete buz koymak yeterli olabiliyor.
-          Bütçe planı uzun süreli sürdürülebilirlik üzerinden yapılır.
+          <strong>BÃ¼tÃ§e ve eriÅŸim:</strong> SaunanÄ±n kendi evinde olmasÄ±
+          gerekmez; spor merkezleri, oteller ve Ã¶zel sauna mekÃ¢nlarÄ± Ã§ok
+          arttÄ±. SoÄŸuk duÅŸ iÃ§in Ã¶zel bir ekipman gerekmiyor â€” duÅŸ
+          baÅŸlÄ±ÄŸÄ±nÄ± Ã§evirmek ya da kÃ¼vete buz koymak yeterli olabiliyor.
+          BÃ¼tÃ§e planÄ± uzun sÃ¼reli sÃ¼rdÃ¼rÃ¼lebilirlik Ã¼zerinden yapÄ±lÄ±r.
         </p>
 
         <RedFlagBox
           markers={[
-            'Bilinen kalp yetmezliği, ileri koroner arter hastalığı, kontrolsüz hipertansiyon — sauna öncesi kardiyoloji onayı şart',
-            'Yakın geçmişte kalp krizi, ileri aritmi, beyin damar olayı — uygulama uygun değil',
-            'Hamilelik veya hamilelik şüphesi — sauna ve aşırı ısı maruziyeti uygun değil',
-            'Sıcak basması yoğun yaşıyorsanız — saunaya iyi gelmediği günler olabilir; günlük tutmak ve hekiminizle konuşmak yardımcı',
-            'Düzensiz veya uzun seanslar (60+ dakika) — yorgunluk, dehidrasyon, düşme riski',
-            'Soğuk daldırma için bilinen Raynaud sendromu, ileri kalp ritim bozukluğu, kontrolsüz hipertansiyon — kontrendikasyon',
-            'Soğuk maruziyetin "kalori yakar / yağ eritir" pazarlama mesajları — bilimsel temel sınırlı',
-            'Yalnız başına sauna veya buzlu su daldırma — özellikle postmenopozal dönemde, baygınlık riskine karşı yanınızda biri olması güvenli',
+            'Bilinen kalp yetmezliÄŸi, ileri koroner arter hastalÄ±ÄŸÄ±, kontrolsÃ¼z hipertansiyon â€” sauna Ã¶ncesi kardiyoloji onayÄ± ÅŸart',
+            'YakÄ±n geÃ§miÅŸte kalp krizi, ileri aritmi, beyin damar olayÄ± â€” uygulama uygun deÄŸil',
+            'Hamilelik veya hamilelik ÅŸÃ¼phesi â€” sauna ve aÅŸÄ±rÄ± Ä±sÄ± maruziyeti uygun deÄŸil',
+            'SÄ±cak basmasÄ± yoÄŸun yaÅŸÄ±yorsanÄ±z â€” saunaya iyi gelmediÄŸi gÃ¼nler olabilir; gÃ¼nlÃ¼k tutmak ve hekiminizle konuÅŸmak yardÄ±mcÄ±',
+            'DÃ¼zensiz veya uzun seanslar (60+ dakika) â€” yorgunluk, dehidrasyon, dÃ¼ÅŸme riski',
+            'SoÄŸuk daldÄ±rma iÃ§in bilinen Raynaud sendromu, ileri kalp ritim bozukluÄŸu, kontrolsÃ¼z hipertansiyon â€” kontrendikasyon',
+            'SoÄŸuk maruziyetin "kalori yakar / yaÄŸ eritir" pazarlama mesajlarÄ± â€” bilimsel temel sÄ±nÄ±rlÄ±',
+            'YalnÄ±z baÅŸÄ±na sauna veya buzlu su daldÄ±rma â€” Ã¶zellikle postmenopozal dÃ¶nemde, baygÄ±nlÄ±k riskine karÅŸÄ± yanÄ±nÄ±zda biri olmasÄ± gÃ¼venli',
           ]}
-          footnote="Bu liste teşhis amaçlı değil; sauna veya soğuk maruziyet düşünülürken bir hekimle konuşmaya değer durumların hatırlatıcısıdır."
+          footnote="Bu liste teÅŸhis amaÃ§lÄ± deÄŸil; sauna veya soÄŸuk maruziyet dÃ¼ÅŸÃ¼nÃ¼lÃ¼rken bir hekimle konuÅŸmaya deÄŸer durumlarÄ±n hatÄ±rlatÄ±cÄ±sÄ±dÄ±r."
         />
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <h2 id="sik-sorulanlar">SÄ±kÃ§a Sorulanlar</h2>
 
-        <h3>Sıcak basması yaşayan biri sauna yapabilir mi?</h3>
+        <h3>SÄ±cak basmasÄ± yaÅŸayan biri sauna yapabilir mi?</h3>
         <p>
-          Tek bir cevabı yok — yakınımdaki bir kadının <em>"iyi geldi / kötü
-          geldi"</em> ayırımı burada bilim ile örtüşüyor. Bazı kadınlarda
-          düzenli
-          sauna uzun vadede ısı toleransını artırarak sıcak basmasını
-          hafifletebiliyor; bazılarında akut olarak sıcak basmasını
-          tetikleyebiliyor. Deneme yaparken günlük tutmak (semptom
-          şiddeti, uyku, ruh hali) ve kötü gelen günleri kabul etmek
-          en pratik yaklaşım. Bu yazıdaki bilginin sizdeki karşılığı
-          için bireysel bir değerlendirme şart.
+          Tek bir cevabÄ± yok â€” yakÄ±nÄ±mdaki bir kadÄ±nÄ±n <em>"iyi geldi / kÃ¶tÃ¼
+          geldi"</em> ayÄ±rÄ±mÄ± burada bilim ile Ã¶rtÃ¼ÅŸÃ¼yor. BazÄ± kadÄ±nlarda
+          dÃ¼zenli
+          sauna uzun vadede Ä±sÄ± toleransÄ±nÄ± artÄ±rarak sÄ±cak basmasÄ±nÄ±
+          hafifletebiliyor; bazÄ±larÄ±nda akut olarak sÄ±cak basmasÄ±nÄ±
+          tetikleyebiliyor. Deneme yaparken gÃ¼nlÃ¼k tutmak (semptom
+          ÅŸiddeti, uyku, ruh hali) ve kÃ¶tÃ¼ gelen gÃ¼nleri kabul etmek
+          en pratik yaklaÅŸÄ±m. Bu yazÄ±daki bilginin sizdeki karÅŸÄ±lÄ±ÄŸÄ±
+          iÃ§in bireysel bir deÄŸerlendirme ÅŸart.
         </p>
 
-        <h3>Soğuk duş gerçekten enerji veriyor mu, yoksa plasebo mu?</h3>
+        <h3>SoÄŸuk duÅŸ gerÃ§ekten enerji veriyor mu, yoksa plasebo mu?</h3>
         <p>
-          İkisinin karışımı muhtemelen. Soğuk maruziyet sonrası ölçülmüş
-          fizyolojik değişimler var (noradrenalin artışı, vagal değişimler,
-          mood iyileşmesi); ama subjektif <em>"enerji" hissinin</em>
-          ne kadarı bu mekanizmalardan, ne kadarı ritüelden geldiği
-          bireysel olarak çok değişiyor. Sporcu olarak bedenimi takip
-          etmek bana şunu öğretti: aynı uygulama farklı saatte ve
-          farklı dozda farklı şey yapar. Kendi bedeninizi izlemek bu
-          konuda en dürüst bilgi kaynağı.
+          Ä°kisinin karÄ±ÅŸÄ±mÄ± muhtemelen. SoÄŸuk maruziyet sonrasÄ± Ã¶lÃ§Ã¼lmÃ¼ÅŸ
+          fizyolojik deÄŸiÅŸimler var (noradrenalin artÄ±ÅŸÄ±, vagal deÄŸiÅŸimler,
+          mood iyileÅŸmesi); ama subjektif <em>"enerji" hissinin</em>
+          ne kadarÄ± bu mekanizmalardan, ne kadarÄ± ritÃ¼elden geldiÄŸi
+          bireysel olarak Ã§ok deÄŸiÅŸiyor. Sporcu olarak bedenimi takip
+          etmek bana ÅŸunu Ã¶ÄŸretti: aynÄ± uygulama farklÄ± saatte ve
+          farklÄ± dozda farklÄ± ÅŸey yapar. Kendi bedeninizi izlemek bu
+          konuda en dÃ¼rÃ¼st bilgi kaynaÄŸÄ±.
         </p>
 
-        <h3>Sauna sıklığı ne olmalı?</h3>
+        <h3>Sauna sÄ±klÄ±ÄŸÄ± ne olmalÄ±?</h3>
         <p>
-          Kardiyovasküler kazanımların gözlemlendiği aralık haftada 2-4
-          seans, seans başına 15-20 dakika civarında. Bundan sık ve uzun
-          olması ek fayda göstermiyor; aksine yorgunluk, dehidrasyon ve
-          baygınlık riski artıyor. Yeni başlıyorsanız haftada 1-2 seans,
-          15 dakika ile başlamak ve bedeninizi izleyerek artırmak en
-          mantıklı yol.
+          KardiyovaskÃ¼ler kazanÄ±mlarÄ±n gÃ¶zlemlendiÄŸi aralÄ±k haftada 2-4
+          seans, seans baÅŸÄ±na 15-20 dakika civarÄ±nda. Bundan sÄ±k ve uzun
+          olmasÄ± ek fayda gÃ¶stermiyor; aksine yorgunluk, dehidrasyon ve
+          baygÄ±nlÄ±k riski artÄ±yor. Yeni baÅŸlÄ±yorsanÄ±z haftada 1-2 seans,
+          15 dakika ile baÅŸlamak ve bedeninizi izleyerek artÄ±rmak en
+          mantÄ±klÄ± yol.
         </p>
 
-        <h3>Kardiyak rahatsızlığı olan menopozal kadın için güvenli mi?</h3>
+        <h3>Kardiyak rahatsÄ±zlÄ±ÄŸÄ± olan menopozal kadÄ±n iÃ§in gÃ¼venli mi?</h3>
         <p>
-          <em>Hekiminize danışmadan başlamak doğru değil</em>. Bilinen
-          kalp yetmezliği, ileri koroner arter hastalığı, kontrolsüz
-          hipertansiyon, ciddi aritmi durumlarında kardiyoloji
-          değerlendirmesi yapılmadan sauna uygun değil. Soğuk maruziyet
-          için de aynı sınır geçerli — ani ısı değişimi kan basıncı
-          dalgalanması yapar; kalp tablosu olan hastada risk yönetimi
-          hekim ile birlikte konuşulur.
+          <em>Hekiminize danÄ±ÅŸmadan baÅŸlamak doÄŸru deÄŸil</em>. Bilinen
+          kalp yetmezliÄŸi, ileri koroner arter hastalÄ±ÄŸÄ±, kontrolsÃ¼z
+          hipertansiyon, ciddi aritmi durumlarÄ±nda kardiyoloji
+          deÄŸerlendirmesi yapÄ±lmadan sauna uygun deÄŸil. SoÄŸuk maruziyet
+          iÃ§in de aynÄ± sÄ±nÄ±r geÃ§erli â€” ani Ä±sÄ± deÄŸiÅŸimi kan basÄ±ncÄ±
+          dalgalanmasÄ± yapar; kalp tablosu olan hastada risk yÃ¶netimi
+          hekim ile birlikte konuÅŸulur.
         </p>
 
-        <h3>HRT alanlar için sauna farklı mı?</h3>
+        <h3>HRT alanlar iÃ§in sauna farklÄ± mÄ±?</h3>
         <p>
-          Doğrudan ilaç-uygulama etkileşimi yok. Ama HRT planı sıcak
-          basması yönetimi de içeriyorsa, sauna sıklığı ve zamanlaması
-          tedavi planının parçası olarak değerlendirilir. Bedeninize
-          iyi geldiğini gözlemlediğiniz seansları hekiminizle paylaşmak
-          tedavi planını incelterken yardımcı olur.
+          DoÄŸrudan ilaÃ§-uygulama etkileÅŸimi yok. Ama HRT planÄ± sÄ±cak
+          basmasÄ± yÃ¶netimi de iÃ§eriyorsa, sauna sÄ±klÄ±ÄŸÄ± ve zamanlamasÄ±
+          tedavi planÄ±nÄ±n parÃ§asÄ± olarak deÄŸerlendirilir. Bedeninize
+          iyi geldiÄŸini gÃ¶zlemlediÄŸiniz seanslarÄ± hekiminizle paylaÅŸmak
+          tedavi planÄ±nÄ± incelterken yardÄ±mcÄ± olur.
         </p>
 
-        <h2 id="kapanis">Kapanış</h2>
+        <h2 id="kapanis">KapanÄ±ÅŸ</h2>
         <p>
-          Sauna ve soğuk duş — sporcu yaşamımın iki sade dinlenme aracı,
-          ama önceki kuşağın bedenine değdiği an çok daha nüanslı bir konuya
-          dönüşüyor. Bilim sauna için kardiyovasküler tarafta sağlam,
-          mood/uyku tarafında orta, sıcak basması tarafında paradoksal
-          bir kanıt çiziyor; soğuk maruziyet için kanıt henüz toparlanma
-          aşamasında. Yakındaki bir kadından duyduğum <em>"iyi geldi / kötü
-          geldi"</em> ayırımı bu paradoksun bedendeki gerçek karşılığı;
-          reçete değil, bir dinleme rehberi.
+          Sauna ve soÄŸuk duÅŸ â€” sporcu yaÅŸamÄ±mÄ±n iki sade dinlenme aracÄ±,
+          ama Ã¶nceki kuÅŸaÄŸÄ±n bedenine deÄŸdiÄŸi an Ã§ok daha nÃ¼anslÄ± bir konuya
+          dÃ¶nÃ¼ÅŸÃ¼yor. Bilim sauna iÃ§in kardiyovaskÃ¼ler tarafta saÄŸlam,
+          mood/uyku tarafÄ±nda orta, sÄ±cak basmasÄ± tarafÄ±nda paradoksal
+          bir kanÄ±t Ã§iziyor; soÄŸuk maruziyet iÃ§in kanÄ±t henÃ¼z toparlanma
+          aÅŸamasÄ±nda. YakÄ±ndaki bir kadÄ±ndan duyduÄŸum <em>"iyi geldi / kÃ¶tÃ¼
+          geldi"</em> ayÄ±rÄ±mÄ± bu paradoksun bedendeki gerÃ§ek karÅŸÄ±lÄ±ÄŸÄ±;
+          reÃ§ete deÄŸil, bir dinleme rehberi.
         </p>
         <p>
-          Ben yaşamadım ama yakından gördüm — atımla sabah ahırda bunu
-          düşündüm. Henüz benim dönemim değil; ama önceki kuşağın döneminde
-olmayan bir şey bende var: dürüst bir bilimsel bakış ve
-          yakındaki bir kadından öğrenmek için zaman.
+          Ben yaÅŸamadÄ±m ama yakÄ±ndan gÃ¶rdÃ¼m â€” atÄ±mla sabah ahÄ±rda bunu
+          dÃ¼ÅŸÃ¼ndÃ¼m. HenÃ¼z benim dÃ¶nemim deÄŸil; ama Ã¶nceki kuÅŸaÄŸÄ±n dÃ¶neminde
+olmayan bir ÅŸey bende var: dÃ¼rÃ¼st bir bilimsel bakÄ±ÅŸ ve
+          yakÄ±ndaki bir kadÄ±ndan Ã¶ÄŸrenmek iÃ§in zaman.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"
@@ -379,86 +387,86 @@ olmayan bir şey bende var: dürüst bir bilimsel bakış ve
       <section
         class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={4} /></p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
+        <p class="mb-4 text-lg font-semibold text-ink">KanÄ±t DÃ¼zeyi: <Evidence from={2} to={4} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Bu yazı bir kişisel deneyim paylaşımı + kuşak gözlemi + dürüst bilim
-rehberi karışımıdır; bireysel tıbbi değerlendirme veya tedavi önerisi
-            olarak okunmamalıdır.
+            Bu yazÄ± bir kiÅŸisel deneyim paylaÅŸÄ±mÄ± + kuÅŸak gÃ¶zlemi + dÃ¼rÃ¼st bilim
+rehberi karÄ±ÅŸÄ±mÄ±dÄ±r; bireysel tÄ±bbi deÄŸerlendirme veya tedavi Ã¶nerisi
+            olarak okunmamalÄ±dÄ±r.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik not:</strong> Sauna ve soğuk
-            maruziyet menopozal hasta poliklinik konuşmalarında giderek daha sık
-            geçiyor — sosyal medyadaki <em>"biohack"</em> içerikleri ilgi yarattı,
-            önceki kuşağı gözlemleyerek hazırlanan genç kadınlardan da sorular
-            geliyor. Sauna kardiyovasküler tarafta uzun-soluklu Finlandiya kohortları
-            başta olmak üzere geniş gözlemsel kanıta sahip; soğuk maruziyet ise
-            mekanizma çalışmaları ile mood/inflammation ekseninde sınırlı klinik
-            kanıt birikiyor. Menopoz spesifik kanıt her ikisi için de henüz çok
-            sınırlı.
+            <strong class="text-burgundy">Klinik not:</strong> Sauna ve soÄŸuk
+            maruziyet menopozal hasta poliklinik konuÅŸmalarÄ±nda giderek daha sÄ±k
+            geÃ§iyor â€” sosyal medyadaki <em>"biohack"</em> iÃ§erikleri ilgi yarattÄ±,
+            Ã¶nceki kuÅŸaÄŸÄ± gÃ¶zlemleyerek hazÄ±rlanan genÃ§ kadÄ±nlardan da sorular
+            geliyor. Sauna kardiyovaskÃ¼ler tarafta uzun-soluklu Finlandiya kohortlarÄ±
+            baÅŸta olmak Ã¼zere geniÅŸ gÃ¶zlemsel kanÄ±ta sahip; soÄŸuk maruziyet ise
+            mekanizma Ã§alÄ±ÅŸmalarÄ± ile mood/inflammation ekseninde sÄ±nÄ±rlÄ± klinik
+            kanÄ±t birikiyor. Menopoz spesifik kanÄ±t her ikisi iÃ§in de henÃ¼z Ã§ok
+            sÄ±nÄ±rlÄ±.
           </p>
           <p>
-            <strong class="text-burgundy">Mekanizma notu:</strong> Sauna kullanımı
-            kardiyovasküler kazanım için sempatik aktivasyon + ısı şoku proteinleri
-            (HSP) + endotel fonksiyonu iyileşmesi yolakları üzerinden açıklanır.
-            Sıcak basması ile etkileşim çift yönlü: kronik ısı maruziyetinin
-            termoregülasyon eşiğini düzenleyici etkisi ile akut ısı yükünün
-            sıcak basmasını tetikleyici etkisi aynı kişide farklı zamanlarda
-            farklı baskınlık gösterebilir. Soğuk maruziyet noradrenalin/dopamin
-            artışı, brown adipose aktivasyonu ve vagal tonus değişimleri üzerinden
-            etki gösterir; postmenopozal kronik düşük-düzeyli iltihap zeminini
-            etkilediğine dair erken kanıtlar var ancak klinik anlamı henüz net
-            çizilmemiş.
+            <strong class="text-burgundy">Mekanizma notu:</strong> Sauna kullanÄ±mÄ±
+            kardiyovaskÃ¼ler kazanÄ±m iÃ§in sempatik aktivasyon + Ä±sÄ± ÅŸoku proteinleri
+            (HSP) + endotel fonksiyonu iyileÅŸmesi yolaklarÄ± Ã¼zerinden aÃ§Ä±klanÄ±r.
+            SÄ±cak basmasÄ± ile etkileÅŸim Ã§ift yÃ¶nlÃ¼: kronik Ä±sÄ± maruziyetinin
+            termoregÃ¼lasyon eÅŸiÄŸini dÃ¼zenleyici etkisi ile akut Ä±sÄ± yÃ¼kÃ¼nÃ¼n
+            sÄ±cak basmasÄ±nÄ± tetikleyici etkisi aynÄ± kiÅŸide farklÄ± zamanlarda
+            farklÄ± baskÄ±nlÄ±k gÃ¶sterebilir. SoÄŸuk maruziyet noradrenalin/dopamin
+            artÄ±ÅŸÄ±, brown adipose aktivasyonu ve vagal tonus deÄŸiÅŸimleri Ã¼zerinden
+            etki gÃ¶sterir; postmenopozal kronik dÃ¼ÅŸÃ¼k-dÃ¼zeyli iltihap zeminini
+            etkilediÄŸine dair erken kanÄ±tlar var ancak klinik anlamÄ± henÃ¼z net
+            Ã§izilmemiÅŸ.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong>
-            Bilinen kalp yetmezliği, ileri koroner arter hastalığı, kontrolsüz
-            hipertansiyon, ciddi aritmi — sauna ve agresif soğuk daldırma için
-            kontrendikasyon ya da hekim onayı şart. Yakın geçmişte kalp krizi,
-            beyin damar olayı, ileri kalp kapak hastalığı — uygulama uygun değil.
-            Hamilelik — sauna ve aşırı ısı maruziyeti uygun değil. Raynaud
-            sendromu, ileri periferik vasküler hastalık, kanama eğilimi — soğuk
-            daldırma için risk değerlendirmesi şart. Yoğun sıcak basması yaşayan
-            kadınlarda sauna paradoksal etki gösterebilir — semptom günlüğü ile
-            izlem mantıklıdır. Yalnız başına yüksek-yoğunluklu seanslar — özellikle
-            postmenopozal dönemde baygınlık ve düşme riskine karşı yanında biri
-            olması güvenli. <em>"Sauna detoksu / soğuk yağ eritir"</em> tarzı
-            pazarlama mesajları — bilimsel temel sınırlı.
+            <strong class="text-burgundy">Klinik kÄ±rmÄ±zÄ± bayraklar:</strong>
+            Bilinen kalp yetmezliÄŸi, ileri koroner arter hastalÄ±ÄŸÄ±, kontrolsÃ¼z
+            hipertansiyon, ciddi aritmi â€” sauna ve agresif soÄŸuk daldÄ±rma iÃ§in
+            kontrendikasyon ya da hekim onayÄ± ÅŸart. YakÄ±n geÃ§miÅŸte kalp krizi,
+            beyin damar olayÄ±, ileri kalp kapak hastalÄ±ÄŸÄ± â€” uygulama uygun deÄŸil.
+            Hamilelik â€” sauna ve aÅŸÄ±rÄ± Ä±sÄ± maruziyeti uygun deÄŸil. Raynaud
+            sendromu, ileri periferik vaskÃ¼ler hastalÄ±k, kanama eÄŸilimi â€” soÄŸuk
+            daldÄ±rma iÃ§in risk deÄŸerlendirmesi ÅŸart. YoÄŸun sÄ±cak basmasÄ± yaÅŸayan
+            kadÄ±nlarda sauna paradoksal etki gÃ¶sterebilir â€” semptom gÃ¼nlÃ¼ÄŸÃ¼ ile
+            izlem mantÄ±klÄ±dÄ±r. YalnÄ±z baÅŸÄ±na yÃ¼ksek-yoÄŸunluklu seanslar â€” Ã¶zellikle
+            postmenopozal dÃ¶nemde baygÄ±nlÄ±k ve dÃ¼ÅŸme riskine karÅŸÄ± yanÄ±nda biri
+            olmasÄ± gÃ¼venli. <em>"Sauna detoksu / soÄŸuk yaÄŸ eritir"</em> tarzÄ±
+            pazarlama mesajlarÄ± â€” bilimsel temel sÄ±nÄ±rlÄ±.
           </p>
           <p>
-            <strong class="text-burgundy">Pratik bütünleşim:</strong> Tedavi
-            planı bir hiyerarşi izler: (1) bilinen kardiyak / hipertansif tablo
-            varsa kardiyoloji onayı; (2) yeni başlıyorsa düşük-doz başlangıç
-            (haftada 1-2 sauna seansı, 10-15 dakika; soğuk duş için 30 saniye-1
-            dakikalık başlangıç); (3) semptom günlüğü ile izlem — özellikle
-            sıcak basması olan dönemde sauna sonrası belirti şiddetinin gözlemi;
-            (4) hidrasyon, beslenme ve uyku ile birlikte düşünülen bir bütün —
-            sauna sonrası dehidrasyon ve postüral hipotansiyon önlenir; (5) HRT
-            kullanan hastalarda planın parçası olarak ele alınır; (6) kötü gelen
-            günleri kabul etmek + uygulamayı durdurmak doğru bir karar olabilir,
-            zorlamak değil.
+            <strong class="text-burgundy">Pratik bÃ¼tÃ¼nleÅŸim:</strong> Tedavi
+            planÄ± bir hiyerarÅŸi izler: (1) bilinen kardiyak / hipertansif tablo
+            varsa kardiyoloji onayÄ±; (2) yeni baÅŸlÄ±yorsa dÃ¼ÅŸÃ¼k-doz baÅŸlangÄ±Ã§
+            (haftada 1-2 sauna seansÄ±, 10-15 dakika; soÄŸuk duÅŸ iÃ§in 30 saniye-1
+            dakikalÄ±k baÅŸlangÄ±Ã§); (3) semptom gÃ¼nlÃ¼ÄŸÃ¼ ile izlem â€” Ã¶zellikle
+            sÄ±cak basmasÄ± olan dÃ¶nemde sauna sonrasÄ± belirti ÅŸiddetinin gÃ¶zlemi;
+            (4) hidrasyon, beslenme ve uyku ile birlikte dÃ¼ÅŸÃ¼nÃ¼len bir bÃ¼tÃ¼n â€”
+            sauna sonrasÄ± dehidrasyon ve postÃ¼ral hipotansiyon Ã¶nlenir; (5) HRT
+            kullanan hastalarda planÄ±n parÃ§asÄ± olarak ele alÄ±nÄ±r; (6) kÃ¶tÃ¼ gelen
+            gÃ¼nleri kabul etmek + uygulamayÄ± durdurmak doÄŸru bir karar olabilir,
+            zorlamak deÄŸil.
           </p>
           <p>
-            <strong class="text-burgundy">Bireyselleştirme uyarısı:</strong>
-            Sn. Baykent'in yazısında paylaştığı sporcu deneyimi ve çevresindeki
-            kadınlardan yaptığı gözlemler kişisel bir kuşak köprüsüdür; sizin için uygun olup
-            olmadığını kendi hekiminizle değerlendirmek önemlidir. Özellikle
-            kardiyovasküler durumu olan, sıcak basması yoğun yaşayan, ya da
-            HRT planı içinde olan kadınlarda sauna ve soğuk maruziyet kararı
-            bireysel klinik tablo, eşlik eden tedaviler ve mevcut sağlık
-            durumunuz hekiminizle birlikte gözden geçirilmelidir.
+            <strong class="text-burgundy">BireyselleÅŸtirme uyarÄ±sÄ±:</strong>
+            Sn. Baykent'in yazÄ±sÄ±nda paylaÅŸtÄ±ÄŸÄ± sporcu deneyimi ve Ã§evresindeki
+            kadÄ±nlardan yaptÄ±ÄŸÄ± gÃ¶zlemler kiÅŸisel bir kuÅŸak kÃ¶prÃ¼sÃ¼dÃ¼r; sizin iÃ§in uygun olup
+            olmadÄ±ÄŸÄ±nÄ± kendi hekiminizle deÄŸerlendirmek Ã¶nemlidir. Ã–zellikle
+            kardiyovaskÃ¼ler durumu olan, sÄ±cak basmasÄ± yoÄŸun yaÅŸayan, ya da
+            HRT planÄ± iÃ§inde olan kadÄ±nlarda sauna ve soÄŸuk maruziyet kararÄ±
+            bireysel klinik tablo, eÅŸlik eden tedaviler ve mevcut saÄŸlÄ±k
+            durumunuz hekiminizle birlikte gÃ¶zden geÃ§irilmelidir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Tıbbi Editör
+            â€” DoÃ§. Dr. Senai Aksoy, KadÄ±n HastalÄ±klarÄ± ve DoÄŸum UzmanÄ±, Estranova TÄ±bbi EditÃ¶r
           </p>
         </div>
       </section>
 
       <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
         <p class="text-sm leading-relaxed text-ink/75">
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine
-          geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme yerine
+          geÃ§mez. TanÄ± ve tedavi kararlarÄ± iÃ§in saÄŸlÄ±k profesyoneline baÅŸvurunuz.
         </p>
       </section>
     </SubmenuArticleBody>
@@ -466,3 +474,4 @@ rehberi karışımıdır; bireysel tıbbi değerlendirme veya tedavi önerisi
 
   <SiteFooter />
 </SiteLayout>
+

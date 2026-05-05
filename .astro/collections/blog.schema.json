@@ -20,6 +20,24 @@
     "writerSlug": {
       "type": "string"
     },
+    "faqItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "question",
+          "answer"
+        ]
+      }
+    },
     "$schema": {
       "type": "string"
     }

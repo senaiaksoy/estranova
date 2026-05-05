@@ -6,19 +6,37 @@
 
 **CLI:** `python main.py "Konu"` veya `python main.py --topic "Konu"` · **Streamlit:** `streamlit run streamlit_app.py`
 
-# Run and deploy your AI Studio app
+# Web site runbook
 
-This contains everything you need to run your app locally.
+Estranova'nın editoryal web yüzü Astro ile derlenir; Netlify tarafında `dist/` klasörü yayınlanır. Python pipeline ve Streamlit araçları içerik üretim / onay operasyonu içindir.
 
-View your app in AI Studio: https://ai.studio/apps/3536bac1-6a06-4ff2-b424-ee84ccb02f16
+## Yerelde çalıştırma
 
-## Run Locally
+Gerekenler: Node.js 20+, npm
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
+1. Bağımlılıkları kurun:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Gerekirse `.env.example` dosyasını `.env` olarak çoğaltın ve içerik pipeline anahtarlarını doldurun.
+3. Web sitesini açın:
    `npm run dev`
+
+## Canlıya çıkış öncesi zorunlu kontroller
+
+1. Tip kontrol:
+   `npm run lint`
+2. Editoryal / compliance kapısı:
+   `npm run compliance`
+3. Production indexing açık build:
+   PowerShell:
+   `$env:PUBLIC_LAUNCH_MODE='production'; npm run build`
+4. Yerel smoke preview:
+   `npm run preview -- --host 0.0.0.0 --port 4322`
+
+## Deploy notları
+
+- Canlı site Cloudflare Pages üzerinden düşünülerek işletilir.
+- Cloudflare build komutu: `npm run build:cloudflare`
+- Cloudflare production build env: `PUBLIC_LAUNCH_MODE=production`
+- Yayın bütünlüğü denetimi: `npm run articles:audit`
+- Sıkı denetim: `npm run articles:audit:strict`
+- Sitemap ve RSS üretimi build sırasında otomatik yapılır.

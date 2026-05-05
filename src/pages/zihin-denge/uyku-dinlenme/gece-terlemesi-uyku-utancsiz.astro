@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -10,24 +10,28 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz']!;
 
 const tocEntries = [
-  { id: 'o-an', label: 'O An — Hepimiz' },
-  { id: 'ne-oluyor', label: 'Vücut Ne Yapıyor' },
-  { id: 'utanc', label: 'Utanç Yan' },
-  { id: 'ne-yapilabilir', label: 'Açık Liste — Pratik' },
+  { id: 'o-an', label: 'O An â€” Hepimiz' },
+  { id: 'ne-oluyor', label: 'VÃ¼cut Ne YapÄ±yor' },
+  { id: 'utanc', label: 'UtanÃ§ Yan' },
+  { id: 'ne-yapilabilir', label: 'AÃ§Ä±k Liste â€” Pratik' },
   { id: 'hekim', label: 'Ne Zaman Hekim' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'sik-sorulanlar', label: 'SÄ±kÃ§a Sorulanlar' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Gece Terlemesi ve Uyku: Utançsız Bir Bakış';
+const articleTitle = 'Gece Terlemesi ve Uyku: UtanÃ§sÄ±z Bir BakÄ±ÅŸ';
 const articleDescription =
-  'Gece yarısı sırılsıklam uyanmak, sessizce çarşafı değiştirmek, partneri uyandırmamak için nefesini tutmak — hepimizin yaşadığı ama zor konuşulan bir an. Yargısız, jargonsuz, açık bir rehber.';
+  'Gece yarÄ±sÄ± sÄ±rÄ±lsÄ±klam uyanmak, sessizce Ã§arÅŸafÄ± deÄŸiÅŸtirmek, partneri uyandÄ±rmamak iÃ§in nefesini tutmak â€” hepimizin yaÅŸadÄ±ÄŸÄ± ama zor konuÅŸulan bir an. YargÄ±sÄ±z, jargonsuz, aÃ§Ä±k bir rehber.';
+const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -36,7 +40,9 @@ const articleSchemas = buildArticleSchemas({
   pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
-  keywords: ['gece terlemesi', 'menopoz', 'uyku', 'sıcak basması', 'mahrem sağlık', 'çarşaf', 'yatak takımı'],
+  keywords: ['gece terlemesi', 'menopoz', 'uyku', 'sÄ±cak basmasÄ±', 'mahrem saÄŸlÄ±k', 'Ã§arÅŸaf', 'yatak takÄ±mÄ±'],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -51,8 +57,8 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zihin & Denge · Uyku · Mayıs Dosyası"
-      title="Gece Terlemesi ve Uyku: Utançsız Bir Bakış"
+      eyebrow="Zihin & Denge Â· Uyku Â· MayÄ±s DosyasÄ±"
+      title="Gece Terlemesi ve Uyku: UtanÃ§sÄ±z Bir BakÄ±ÅŸ"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -64,161 +70,163 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
       >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
         <p class="leading-relaxed text-ink/80">
-          Gece yarısı sırılsıklam uyanmak, sessizce çarşafı değiştirmek, partneri uyandırmamak için nefesini
-          tutmak. Bu hepimizin yaşadığı bir an, ama nedense kapı arkasında bile zor konuşulan bir yan var. Bu yazı
-          sana bir şey öğretmeye değil, tanıdık bir sahneyi yargısızca anlatmaya geldi: ne oluyor, neden bu kadar
-          zor, ve geceyi biraz daha hafif geçirmek için ne deneyebilirsin.
+          Gece yarÄ±sÄ± sÄ±rÄ±lsÄ±klam uyanmak, sessizce Ã§arÅŸafÄ± deÄŸiÅŸtirmek, partneri uyandÄ±rmamak iÃ§in nefesini
+          tutmak. Bu hepimizin yaÅŸadÄ±ÄŸÄ± bir an, ama nedense kapÄ± arkasÄ±nda bile zor konuÅŸulan bir yan var. Bu yazÄ±
+          sana bir ÅŸey Ã¶ÄŸretmeye deÄŸil, tanÄ±dÄ±k bir sahneyi yargÄ±sÄ±zca anlatmaya geldi: ne oluyor, neden bu kadar
+          zor, ve geceyi biraz daha hafif geÃ§irmek iÃ§in ne deneyebilirsin.
         </p>
       </section>
 
       <ArticleProsePanel>
-        <h2 id="o-an">O An — Hepimizin Yaşadığı</h2>
+        <h2 id="o-an">O An â€” Hepimizin YaÅŸadÄ±ÄŸÄ±</h2>
         <p>
-          Saat üçü biraz geçiyor. Gözlerini açtığında ensende ıslaklık var, sırtın yapışmış, yastığın bir yanı
-          soğumaya başlamış bile. Yan tarafında uyuyan biri varsa, ilk düşüncen onun değil; çıkarsan zemin gıcırdar
-          mı, dolaptan temiz pijamayı sessizce alabilir misin, çarşafı sabaha kadar idare edebilir misin.
+          Saat Ã¼Ã§Ã¼ biraz geÃ§iyor. GÃ¶zlerini aÃ§tÄ±ÄŸÄ±nda ensende Ä±slaklÄ±k var, sÄ±rtÄ±n yapÄ±ÅŸmÄ±ÅŸ, yastÄ±ÄŸÄ±n bir yanÄ±
+          soÄŸumaya baÅŸlamÄ±ÅŸ bile. Yan tarafÄ±nda uyuyan biri varsa, ilk dÃ¼ÅŸÃ¼ncen onun deÄŸil; Ã§Ä±karsan zemin gÄ±cÄ±rdar
+          mÄ±, dolaptan temiz pijamayÄ± sessizce alabilir misin, Ã§arÅŸafÄ± sabaha kadar idare edebilir misin.
           <Evidence level={2} />
         </p>
         <p>
-          Bu sahneyi yaşayan tek sen değilsin. Perimenopoz ve menopoz döneminden geçen kadınların büyük çoğunluğu,
-          bir şekilde bu geceyle tanışıyor. <Evidence level={4} /> Bazısı için ayda bir, bazısı için neredeyse her
-          gece. Ortak olan şey çoğu zaman ter değil aslında — onun arkasındaki o küçük, sessiz utanç. "Yine mi",
-          "bu kadar mı", "ben mi tuhafım" duygusu. Yalnız değilsin; bu duygu da en az terleme kadar yaygın.
+          Bu sahneyi yaÅŸayan tek sen deÄŸilsin. Perimenopoz ve menopoz dÃ¶neminden geÃ§en kadÄ±nlarÄ±n bÃ¼yÃ¼k Ã§oÄŸunluÄŸu,
+          bir ÅŸekilde bu geceyle tanÄ±ÅŸÄ±yor. <Evidence level={4} /> BazÄ±sÄ± iÃ§in ayda bir, bazÄ±sÄ± iÃ§in neredeyse her
+          gece. Ortak olan ÅŸey Ã§oÄŸu zaman ter deÄŸil aslÄ±nda â€” onun arkasÄ±ndaki o kÃ¼Ã§Ã¼k, sessiz utanÃ§. "Yine mi",
+          "bu kadar mÄ±", "ben mi tuhafÄ±m" duygusu. YalnÄ±z deÄŸilsin; bu duygu da en az terleme kadar yaygÄ±n.
         </p>
 
-        <h2 id="ne-oluyor">Vücut Tam Olarak Ne Yapıyor</h2>
+        <h2 id="ne-oluyor">VÃ¼cut Tam Olarak Ne YapÄ±yor</h2>
         <p>
-          Mekanizmaya çok dalmadan, mutfakta anlatır gibi söyleyeyim: vücudun ısı ayarı bu dönemde biraz alıngan
-          oluyor. Beynindeki "termostat" hormonal dalgalanmaya daha duyarlı hale gelince, normalde fark
-          etmeyeceğin küçük bir ısı yükselişini "acilen soğumalıyım" sinyali olarak okuyor. <Evidence level={4} />
+          Mekanizmaya Ã§ok dalmadan, mutfakta anlatÄ±r gibi sÃ¶yleyeyim: vÃ¼cudun Ä±sÄ± ayarÄ± bu dÃ¶nemde biraz alÄ±ngan
+          oluyor. Beynindeki "termostat" hormonal dalgalanmaya daha duyarlÄ± hale gelince, normalde fark
+          etmeyeceÄŸin kÃ¼Ã§Ã¼k bir Ä±sÄ± yÃ¼kseliÅŸini "acilen soÄŸumalÄ±yÄ±m" sinyali olarak okuyor. <Evidence level={4} />
         </p>
         <p>
-          Sonuç: aniden açılan damarlar, hızla yükselen cilt sıcaklığı, ardından gelen bol ter ve ter buharlaştıkça
-          üşüme. Hepsi birkaç dakika sürüyor ama uyku ortasında olduğu için seni tamamen uyandırıyor. Bedenin
-          yanlış bir şey yapmıyor; sadece eski ayarlarla yeni hormonal dengeyi uzlaştırmaya çalışıyor.
-        </p>
-
-        <h2 id="utanc">Utanç Yan — Konuşulmayan Kısım</h2>
-        <p>
-          Asıl yorucu olan çoğu zaman terleme değil, etrafındaki sessiz hesaplar. Yanındaki insan uyanmasın diye
-          yorganı yavaşça kaldırmak. Sabah çarşafı değiştirirken kimse uyanmadan halletmek. Yakın bir arkadaşa
-          anlatırken sesin biraz alçalması, sanki söylenmemesi gereken bir şey söylüyormuşsun gibi.
-        </p>
-        <p>
-          Bunu konuşmamızın zor olması garip değil; kültürel olarak kadın bedeninin "fark edilmeden" işlemesi
-          gerektiği fikriyle büyüdük. Ter, koku, ıslaklık — hep "saklanması" gereken şeyler olarak öğretildi. Oysa
-          burada saklanacak hiçbir şey yok. Vücudun bir geçiş yaşıyor, sen de o geçişi taşıyorsun. Partnerine, kız
-          kardeşine, yakın arkadaşına bunu sade bir cümleyle söylemek çoğu zaman düşündüğünden daha rahatlatıcı
-          oluyor: "Geceleri terliyorum, bu dönemin bir parçası, bazen kalkıp üstümü değiştirmem gerekebilir." Bu
-          kadar. Drama gerekmiyor, özür de gerekmiyor.
+          SonuÃ§: aniden aÃ§Ä±lan damarlar, hÄ±zla yÃ¼kselen cilt sÄ±caklÄ±ÄŸÄ±, ardÄ±ndan gelen bol ter ve ter buharlaÅŸtÄ±kÃ§a
+          Ã¼ÅŸÃ¼me. Hepsi birkaÃ§ dakika sÃ¼rÃ¼yor ama uyku ortasÄ±nda olduÄŸu iÃ§in seni tamamen uyandÄ±rÄ±yor. Bedenin
+          yanlÄ±ÅŸ bir ÅŸey yapmÄ±yor; sadece eski ayarlarla yeni hormonal dengeyi uzlaÅŸtÄ±rmaya Ã§alÄ±ÅŸÄ±yor.
         </p>
 
-        <h2 id="ne-yapilabilir">Geceyi Daha Az Zor Geçirmek — Açık Liste</h2>
+        <h2 id="utanc">UtanÃ§ Yan â€” KonuÅŸulmayan KÄ±sÄ±m</h2>
         <p>
-          Her gece terlemesini kökten önlemek elimizde değil, ama gecenin "yönetilebilir" olması ile "yıpratıcı"
-          olması arasındaki farkı küçük seçimler belirliyor. Burada gizleyecek bir şey yok; çoğu kadının dener
-          dener bulduğu pratikleri açıkça sıralayayım.
+          AsÄ±l yorucu olan Ã§oÄŸu zaman terleme deÄŸil, etrafÄ±ndaki sessiz hesaplar. YanÄ±ndaki insan uyanmasÄ±n diye
+          yorganÄ± yavaÅŸÃ§a kaldÄ±rmak. Sabah Ã§arÅŸafÄ± deÄŸiÅŸtirirken kimse uyanmadan halletmek. YakÄ±n bir arkadaÅŸa
+          anlatÄ±rken sesin biraz alÃ§almasÄ±, sanki sÃ¶ylenmemesi gereken bir ÅŸey sÃ¶ylÃ¼yormuÅŸsun gibi.
+        </p>
+        <p>
+          Bunu konuÅŸmamÄ±zÄ±n zor olmasÄ± garip deÄŸil; kÃ¼ltÃ¼rel olarak kadÄ±n bedeninin "fark edilmeden" iÅŸlemesi
+          gerektiÄŸi fikriyle bÃ¼yÃ¼dÃ¼k. Ter, koku, Ä±slaklÄ±k â€” hep "saklanmasÄ±" gereken ÅŸeyler olarak Ã¶ÄŸretildi. Oysa
+          burada saklanacak hiÃ§bir ÅŸey yok. VÃ¼cudun bir geÃ§iÅŸ yaÅŸÄ±yor, sen de o geÃ§iÅŸi taÅŸÄ±yorsun. Partnerine, kÄ±z
+          kardeÅŸine, yakÄ±n arkadaÅŸÄ±na bunu sade bir cÃ¼mleyle sÃ¶ylemek Ã§oÄŸu zaman dÃ¼ÅŸÃ¼ndÃ¼ÄŸÃ¼nden daha rahatlatÄ±cÄ±
+          oluyor: "Geceleri terliyorum, bu dÃ¶nemin bir parÃ§asÄ±, bazen kalkÄ±p Ã¼stÃ¼mÃ¼ deÄŸiÅŸtirmem gerekebilir." Bu
+          kadar. Drama gerekmiyor, Ã¶zÃ¼r de gerekmiyor.
+        </p>
+
+        <h2 id="ne-yapilabilir">Geceyi Daha Az Zor GeÃ§irmek â€” AÃ§Ä±k Liste</h2>
+        <p>
+          Her gece terlemesini kÃ¶kten Ã¶nlemek elimizde deÄŸil, ama gecenin "yÃ¶netilebilir" olmasÄ± ile "yÄ±pratÄ±cÄ±"
+          olmasÄ± arasÄ±ndaki farkÄ± kÃ¼Ã§Ã¼k seÃ§imler belirliyor. Burada gizleyecek bir ÅŸey yok; Ã§oÄŸu kadÄ±nÄ±n dener
+          dener bulduÄŸu pratikleri aÃ§Ä±kÃ§a sÄ±ralayayÄ±m.
         </p>
         <ul>
           <li>
-            <strong>Yatak takımı:</strong> Pamuk, keten ya da bambu gibi nefes alan kumaşlar, sentetik saten
-            alternatiflere göre belirgin biçimde rahatlatabilir. İki takım çarşafı yatağın yanına katlı koymak,
-            gece kalkıp aramak zorunda kalmamak demek.
+            <strong>Yatak takÄ±mÄ±:</strong> Pamuk, keten ya da bambu gibi nefes alan kumaÅŸlar, sentetik saten
+            alternatiflere gÃ¶re belirgin biÃ§imde rahatlatabilir. Ä°ki takÄ±m Ã§arÅŸafÄ± yataÄŸÄ±n yanÄ±na katlÄ± koymak,
+            gece kalkÄ±p aramak zorunda kalmamak demek.
           </li>
           <li>
-            <strong>Oda ısısı:</strong> Yatak odasını biraz serin tutmak (yaklaşık 18 derece civarı) işe
-            yarayabilir. Klima yoksa pencereyi gece başında biraz aralık bırakmak ya da ince bir vantilatör de
+            <strong>Oda Ä±sÄ±sÄ±:</strong> Yatak odasÄ±nÄ± biraz serin tutmak (yaklaÅŸÄ±k 18 derece civarÄ±) iÅŸe
+            yarayabilir. Klima yoksa pencereyi gece baÅŸÄ±nda biraz aralÄ±k bÄ±rakmak ya da ince bir vantilatÃ¶r de
             yeterli olabilir.
           </li>
           <li>
-            <strong>Pijama:</strong> İnce, hafif, geniş kesim pamuklu tercih et; "termal" denen nefessiz kumaşlar
-            geceyi ağırlaştırıyor. Bazı kadınlar için tek parça yerine üst-alt ayrı tercih, gece yarısı sadece üstü
-            değiştirebilmek demek.
+            <strong>Pijama:</strong> Ä°nce, hafif, geniÅŸ kesim pamuklu tercih et; "termal" denen nefessiz kumaÅŸlar
+            geceyi aÄŸÄ±rlaÅŸtÄ±rÄ±yor. BazÄ± kadÄ±nlar iÃ§in tek parÃ§a yerine Ã¼st-alt ayrÄ± tercih, gece yarÄ±sÄ± sadece Ã¼stÃ¼
+            deÄŸiÅŸtirebilmek demek.
           </li>
           <li>
-            <strong>Yatak başında küçük hazırlık:</strong> Bir bardak ılık su, ince bir havlu, yedek bir tişört.
-            Hepsi yastığın yanında olunca gece dolaşmak zorunda kalmıyorsun, partnerin de daha az uyanıyor.
+            <strong>Yatak baÅŸÄ±nda kÃ¼Ã§Ã¼k hazÄ±rlÄ±k:</strong> Bir bardak Ä±lÄ±k su, ince bir havlu, yedek bir tiÅŸÃ¶rt.
+            Hepsi yastÄ±ÄŸÄ±n yanÄ±nda olunca gece dolaÅŸmak zorunda kalmÄ±yorsun, partnerin de daha az uyanÄ±yor.
           </li>
           <li>
-            <strong>Akşam yemeği:</strong> Çok baharatlı, çok yağlı veya çok geç yenen yemekler bazı kadınlarda
-            gece terini belirginleştiriyor. Yatmadan en az iki-üç saat önce yemek bitmiş olsun.
+            <strong>AkÅŸam yemeÄŸi:</strong> Ã‡ok baharatlÄ±, Ã§ok yaÄŸlÄ± veya Ã§ok geÃ§ yenen yemekler bazÄ± kadÄ±nlarda
+            gece terini belirginleÅŸtiriyor. Yatmadan en az iki-Ã¼Ã§ saat Ã¶nce yemek bitmiÅŸ olsun.
           </li>
           <li>
-            <strong>Alkol ve kafein:</strong> Akşam kahvesi ve özellikle akşam içkisi, gece terlemesini ve
-            uyanmaları artırabilir. Bir hafta deneyip kendi bedeninde farkı izlemek genelde çok öğretici oluyor.
+            <strong>Alkol ve kafein:</strong> AkÅŸam kahvesi ve Ã¶zellikle akÅŸam iÃ§kisi, gece terlemesini ve
+            uyanmalarÄ± artÄ±rabilir. Bir hafta deneyip kendi bedeninde farkÄ± izlemek genelde Ã§ok Ã¶ÄŸretici oluyor.
             <Evidence level={3} />
           </li>
           <li>
-            <strong>Ilık duş:</strong> Yatmadan önce çok soğuk değil, ılık bir duş — vücut ısısının yumuşakça
-            düşmesine yardımcı olabilir. Soğuk duş tam tersine bedeni "uyanık" moda alabiliyor.
+            <strong>IlÄ±k duÅŸ:</strong> Yatmadan Ã¶nce Ã§ok soÄŸuk deÄŸil, Ä±lÄ±k bir duÅŸ â€” vÃ¼cut Ä±sÄ±sÄ±nÄ±n yumuÅŸakÃ§a
+            dÃ¼ÅŸmesine yardÄ±mcÄ± olabilir. SoÄŸuk duÅŸ tam tersine bedeni "uyanÄ±k" moda alabiliyor.
           </li>
           <li>
-            <strong>Soğutucu yardımcılar:</strong> Soğutucu jel yastık kılıfları, ince bambu örtüler, gece
-            komodininde küçük bir el yelpazesi. Hepsi büyülü değil, ama küçük bir konfor farkı yaratabilir.
+            <strong>SoÄŸutucu yardÄ±mcÄ±lar:</strong> SoÄŸutucu jel yastÄ±k kÄ±lÄ±flarÄ±, ince bambu Ã¶rtÃ¼ler, gece
+            komodininde kÃ¼Ã§Ã¼k bir el yelpazesi. Hepsi bÃ¼yÃ¼lÃ¼ deÄŸil, ama kÃ¼Ã§Ã¼k bir konfor farkÄ± yaratabilir.
           </li>
         </ul>
         <p>
-          Hepsini birden değiştirmek gerekmiyor. Bir hafta bir maddeyi dene, fark edip etmediğini izle, sonra bir
-          sonrakine geç. Kendi bedenini tanımanın en sakin yolu bu.
+          Hepsini birden deÄŸiÅŸtirmek gerekmiyor. Bir hafta bir maddeyi dene, fark edip etmediÄŸini izle, sonra bir
+          sonrakine geÃ§. Kendi bedenini tanÄ±manÄ±n en sakin yolu bu.
         </p>
 
-        <h2 id="hekim">Ne Zaman Hekimden Söz Etmek</h2>
+        <h2 id="hekim">Ne Zaman Hekimden SÃ¶z Etmek</h2>
         <p>
-          Yukarıdaki düzenlemeler birçok kadın için geceyi belirgin biçimde hafifletebiliyor. Ama bazı durumlarda
-          küçük ayarlar yetmiyor ve bunda da utanılacak hiçbir şey yok.
+          YukarÄ±daki dÃ¼zenlemeler birÃ§ok kadÄ±n iÃ§in geceyi belirgin biÃ§imde hafifletebiliyor. Ama bazÄ± durumlarda
+          kÃ¼Ã§Ã¼k ayarlar yetmiyor ve bunda da utanÄ±lacak hiÃ§bir ÅŸey yok.
         </p>
         <p>
-          Eğer terleme gecede birkaç kez seni uyandırıyorsa, gündüz işlevini ciddi biçimde etkiliyorsa, haftalardır
-          uyku borcu birikiyorsa ya da yanında çarpıntı, beklenmedik kilo değişimi, ateş gibi başka belirtiler
-          varsa, bunu kadın hastalıkları veya aile hekiminle konuşmak için iyi bir zaman. Konuşulan şey illa "ilaç
-          başlamak" demek değil; çoğu zaman görüşmenin kendisi seçenekleri açıyor. <Evidence level={4} />
+          EÄŸer terleme gecede birkaÃ§ kez seni uyandÄ±rÄ±yorsa, gÃ¼ndÃ¼z iÅŸlevini ciddi biÃ§imde etkiliyorsa, haftalardÄ±r
+          uyku borcu birikiyorsa ya da yanÄ±nda Ã§arpÄ±ntÄ±, beklenmedik kilo deÄŸiÅŸimi, ateÅŸ gibi baÅŸka belirtiler
+          varsa, bunu kadÄ±n hastalÄ±klarÄ± veya aile hekiminle konuÅŸmak iÃ§in iyi bir zaman. KonuÅŸulan ÅŸey illa "ilaÃ§
+          baÅŸlamak" demek deÄŸil; Ã§oÄŸu zaman gÃ¶rÃ¼ÅŸmenin kendisi seÃ§enekleri aÃ§Ä±yor. <Evidence level={4} />
         </p>
         <p>
-          Hormon tedavisi (HRT), uygun adaylar için gece terlemesinde etkili seçenekler arasında biliniyor; bunu
-          tercih etmeyenler veya uygun olmayanlar için hormonal olmayan başka yaklaşımlar da var.
-          <Evidence level={4} /> Hangisinin sana yakıştığı seninle hekiminin birlikte konuşacağı bir karar — burada
-          "doğru cevap" tek tip değil. Önemli olan, bu konuyu utanılacak değil, üzerinde sakince konuşulabilecek
-          bir başlık olarak masaya getirmen.
-        </p>
-
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
-
-        <h3>Partnerimi rahatsız etmemek için ne yapabilirim?</h3>
-        <p>
-          En çok yardımcı olan şey aslında konuşmak. Kısa, sade bir cümle çoğu zaman yeterli: "Bu dönemde geceleri
-          terliyorum, bazen üstümü değiştirmem gerekiyor, sen rahat uyumaya devam et." Pratik tarafta ise yatağın
-          senin tarafına ekstra çarşaf, yedek tişört ve ince havlu bırakmak; oda ısısını ortak konuşup biraz daha
-          serin tutmak; iki kişilik tek yorgan yerine her birine ayrı ince yorgan denemek çoğu çiftin işine
-          yarıyor.
+          Hormon tedavisi (HRT), uygun adaylar iÃ§in gece terlemesinde etkili seÃ§enekler arasÄ±nda biliniyor; bunu
+          tercih etmeyenler veya uygun olmayanlar iÃ§in hormonal olmayan baÅŸka yaklaÅŸÄ±mlar da var.
+          <Evidence level={4} /> Hangisinin sana yakÄ±ÅŸtÄ±ÄŸÄ± seninle hekiminin birlikte konuÅŸacaÄŸÄ± bir karar â€” burada
+          "doÄŸru cevap" tek tip deÄŸil. Ã–nemli olan, bu konuyu utanÄ±lacak deÄŸil, Ã¼zerinde sakince konuÅŸulabilecek
+          bir baÅŸlÄ±k olarak masaya getirmen.
         </p>
 
-        <h3>Yatağı çıkıp duş almak yanlış mı, gece kalkmamalıyım mı?</h3>
+        <h2 id="sik-sorulanlar">SÄ±kÃ§a Sorulanlar</h2>
+
+        <h3>Partnerimi rahatsÄ±z etmemek iÃ§in ne yapabilirim?</h3>
         <p>
-          Yanlış değil. Sırılsıklam çarşafta uyumaya çalışmak çoğu zaman uykuyu daha çok bölüyor. Hızlı bir ılık
-          (sıcak değil) suyla yıkanma, kuru bir tişört ve serin bir yastık, bedenin ısısını yumuşakça düşürüp
-          tekrar uykuya geçmene yardımcı olabilir. Önemli olan parlak ışık yakmamak, telefona uzanmamak; banyoda
-          mümkünse loş bir ışık kullanmak. Böylece beden "sabah oldu" sinyalini almıyor.
+          En Ã§ok yardÄ±mcÄ± olan ÅŸey aslÄ±nda konuÅŸmak. KÄ±sa, sade bir cÃ¼mle Ã§oÄŸu zaman yeterli: "Bu dÃ¶nemde geceleri
+          terliyorum, bazen Ã¼stÃ¼mÃ¼ deÄŸiÅŸtirmem gerekiyor, sen rahat uyumaya devam et." Pratik tarafta ise yataÄŸÄ±n
+          senin tarafÄ±na ekstra Ã§arÅŸaf, yedek tiÅŸÃ¶rt ve ince havlu bÄ±rakmak; oda Ä±sÄ±sÄ±nÄ± ortak konuÅŸup biraz daha
+          serin tutmak; iki kiÅŸilik tek yorgan yerine her birine ayrÄ± ince yorgan denemek Ã§oÄŸu Ã§iftin iÅŸine
+          yarÄ±yor.
         </p>
 
-        <h3>Klima açmak yardımcı oluyor ama eklem ağrım artıyor — ne yapayım?</h3>
+        <h3>YataÄŸÄ± Ã§Ä±kÄ±p duÅŸ almak yanlÄ±ÅŸ mÄ±, gece kalkmamalÄ±yÄ±m mÄ±?</h3>
         <p>
-          Bu çok yaygın bir denge sorunu. Klimayı doğrudan üstüne üfletmek yerine odanın bir köşesine yönlendirmek,
-          yatağa girmeden önce odayı serinletip uyurken kapatmak ya da daha yumuşak bir alternatif olarak tavan
-          vantilatörü ile pencereyi hafif aralık bırakmayı deneyebilirsin. İnce bir hırka veya pamuklu çorap yatak
-          başında dururken, gece üşüdüğün anda hızlıca giyebilmek de eklemleri rahatlatabilir.
+          YanlÄ±ÅŸ deÄŸil. SÄ±rÄ±lsÄ±klam Ã§arÅŸafta uyumaya Ã§alÄ±ÅŸmak Ã§oÄŸu zaman uykuyu daha Ã§ok bÃ¶lÃ¼yor. HÄ±zlÄ± bir Ä±lÄ±k
+          (sÄ±cak deÄŸil) suyla yÄ±kanma, kuru bir tiÅŸÃ¶rt ve serin bir yastÄ±k, bedenin Ä±sÄ±sÄ±nÄ± yumuÅŸakÃ§a dÃ¼ÅŸÃ¼rÃ¼p
+          tekrar uykuya geÃ§mene yardÄ±mcÄ± olabilir. Ã–nemli olan parlak Ä±ÅŸÄ±k yakmamak, telefona uzanmamak; banyoda
+          mÃ¼mkÃ¼nse loÅŸ bir Ä±ÅŸÄ±k kullanmak. BÃ¶ylece beden "sabah oldu" sinyalini almÄ±yor.
         </p>
 
-        <h3>Soğuk yastık, jel mat gibi ürünler gerçekten işe yarıyor mu?</h3>
+        <h3>Klima aÃ§mak yardÄ±mcÄ± oluyor ama eklem aÄŸrÄ±m artÄ±yor â€” ne yapayÄ±m?</h3>
         <p>
-          Etkileri kişiden kişiye değişiyor, ama yastık üst kısmının serin kalması bazı kadınlarda gece
-          terlemesinin "uyandırıcı" yanını gerçekten yumuşatabiliyor. Çok pahalı yatak sistemlerine yatırım
-          yapmadan önce, ucuz bir soğutucu jel yastık kılıfı veya bambu örtü ile bir-iki hafta denemek mantıklı.
-          Eğer fark hissetmiyorsan, asıl odağı yatak takımı kumaşına, oda ısısına ve akşam alışkanlıklarına vermek
-          genellikle daha kalıcı bir rahatlama sağlıyor.
+          Bu Ã§ok yaygÄ±n bir denge sorunu. KlimayÄ± doÄŸrudan Ã¼stÃ¼ne Ã¼fletmek yerine odanÄ±n bir kÃ¶ÅŸesine yÃ¶nlendirmek,
+          yataÄŸa girmeden Ã¶nce odayÄ± serinletip uyurken kapatmak ya da daha yumuÅŸak bir alternatif olarak tavan
+          vantilatÃ¶rÃ¼ ile pencereyi hafif aralÄ±k bÄ±rakmayÄ± deneyebilirsin. Ä°nce bir hÄ±rka veya pamuklu Ã§orap yatak
+          baÅŸÄ±nda dururken, gece Ã¼ÅŸÃ¼dÃ¼ÄŸÃ¼n anda hÄ±zlÄ±ca giyebilmek de eklemleri rahatlatabilir.
+        </p>
+
+        <h3>SoÄŸuk yastÄ±k, jel mat gibi Ã¼rÃ¼nler gerÃ§ekten iÅŸe yarÄ±yor mu?</h3>
+        <p>
+          Etkileri kiÅŸiden kiÅŸiye deÄŸiÅŸiyor, ama yastÄ±k Ã¼st kÄ±smÄ±nÄ±n serin kalmasÄ± bazÄ± kadÄ±nlarda gece
+          terlemesinin "uyandÄ±rÄ±cÄ±" yanÄ±nÄ± gerÃ§ekten yumuÅŸatabiliyor. Ã‡ok pahalÄ± yatak sistemlerine yatÄ±rÄ±m
+          yapmadan Ã¶nce, ucuz bir soÄŸutucu jel yastÄ±k kÄ±lÄ±fÄ± veya bambu Ã¶rtÃ¼ ile bir-iki hafta denemek mantÄ±klÄ±.
+          EÄŸer fark hissetmiyorsan, asÄ±l odaÄŸÄ± yatak takÄ±mÄ± kumaÅŸÄ±na, oda Ä±sÄ±sÄ±na ve akÅŸam alÄ±ÅŸkanlÄ±klarÄ±na vermek
+          genellikle daha kalÄ±cÄ± bir rahatlama saÄŸlÄ±yor.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"
@@ -232,19 +240,19 @@ const articleSchemas = buildArticleSchemas({
       <section
         class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
         <p class="leading-relaxed text-ink/80">
-          Gece terlemesi, perimenopoz ve menopozda yaygın bir vazomotor belirti. Yatak odası düzenlemeleri ve akşam
-          alışkanlıkları çoğu kadında geceyi belirgin biçimde hafifletebilir; sıklığı yüksek ve gündüz işlevini
-          etkileyen tablolarda hekim değerlendirmesi anlamlıdır. Hormon temelli ve hormonal olmayan seçenekler
-          birey bazında, hekimle birlikte planlanmalıdır.
+          Gece terlemesi, perimenopoz ve menopozda yaygÄ±n bir vazomotor belirti. Yatak odasÄ± dÃ¼zenlemeleri ve akÅŸam
+          alÄ±ÅŸkanlÄ±klarÄ± Ã§oÄŸu kadÄ±nda geceyi belirgin biÃ§imde hafifletebilir; sÄ±klÄ±ÄŸÄ± yÃ¼ksek ve gÃ¼ndÃ¼z iÅŸlevini
+          etkileyen tablolarda hekim deÄŸerlendirmesi anlamlÄ±dÄ±r. Hormon temelli ve hormonal olmayan seÃ§enekler
+          birey bazÄ±nda, hekimle birlikte planlanmalÄ±dÄ±r.
         </p>
       </section>
 
       <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
         <p class="text-sm leading-relaxed text-ink/75">
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları
-          için sağlık profesyoneline başvurunuz.
+          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme yerine geÃ§mez. TanÄ± ve tedavi kararlarÄ±
+          iÃ§in saÄŸlÄ±k profesyoneline baÅŸvurunuz.
         </p>
       </section>
     </SubmenuArticleBody>
@@ -252,3 +260,4 @@ const articleSchemas = buildArticleSchemas({
 
   <SiteFooter />
 </SiteLayout>
+

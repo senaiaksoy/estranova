@@ -9,9 +9,11 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import EditorialMedicalEditorNote from '../../../components/site/EditorialMedicalEditorNote.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi';
@@ -36,6 +38,7 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
+const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -57,6 +60,7 @@ const articleSchemas = buildArticleSchemas({
     'smear',
     '40 sonrası sağlık',
   ],
+  faqItems,
   siteUrl,
 });
 ---
@@ -222,11 +226,13 @@ const articleSchemas = buildArticleSchemas({
           kıymeti de tam burada: dağınık sağlık parçalarını tek bir yerde toplar.
         </p>
         <p>
-          Eğer bu dönemde nereden başlayacağınızı bilmiyorsanız, en iyi ilk adım belki de şudur: son sonuçları bir araya
+          Eğer bu dönemde nereden başlayacağınızı bilmiyorsanız, en sade ilk adım belki de şudur: son sonuçları bir araya
           getirmek, tarama tarihlerini not etmek ve hekim görüşmesinde sormak istediğiniz üç soruyu yazmak. Bazen en
           güçlü hazırlık, daha çok test değil daha net bir konuşmadır.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

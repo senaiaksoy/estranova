@@ -1,5 +1,6 @@
 import rss from '@astrojs/rss';
 import type { APIContext } from 'astro';
+import { approvedPathnames } from '../data/article-approvals';
 import { staticArticles } from '../data/static-articles';
 import { toISODate, getWriter } from '../utils/article-schema';
 import { resolveSiteUrl } from '../utils/seo';
@@ -7,20 +8,22 @@ import { resolveSiteUrl } from '../utils/seo';
 export async function GET(context: APIContext) {
   const siteUrl = resolveSiteUrl(context.site);
 
-  const items = staticArticles.map((article) => {
-    const writer = getWriter(article.writerSlug);
-    return {
-      title: article.title,
-      description: article.description,
-      pubDate: new Date(`${toISODate(article.publishedDate)}T09:00:00+03:00`),
-      link: article.path,
-      categories: [article.section],
-      author: `editorial@estranova.com (${writer.displayName})`,
-      customData: article.keywords
-        .map((k) => `<category>${escapeXml(k)}</category>`)
-        .join(''),
-    };
-  });
+  const items = staticArticles
+    .filter((article) => approvedPathnames.has(article.path))
+    .map((article) => {
+      const writer = getWriter(article.writerSlug);
+      return {
+        title: article.title,
+        description: article.description,
+        pubDate: new Date(`${toISODate(article.publishedDate)}T09:00:00+03:00`),
+        link: article.path,
+        categories: [article.section],
+        author: `editorial@estranova.com (${writer.displayName})`,
+        customData: article.keywords
+          .map((k) => `<category>${escapeXml(k)}</category>`)
+          .join(''),
+      };
+    });
 
   return rss({
     title: 'Estranova — Editöryal Kadın Sağlığı Yayını',

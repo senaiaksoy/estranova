@@ -1,5 +1,6 @@
 import { writers, type Writer } from '../data/writers';
 import { submenuHeroByRoute } from '../data/submenu-heroes';
+import type { ArticleFaqItem } from '../data/article-faqs';
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -15,6 +16,7 @@ export interface BuildArticleSchemaOptions {
   keywords?: string[];
   medicalReviewer?: string;
   medicalReviewerTitle?: string;
+  faqItems?: ArticleFaqItem[];
   siteUrl: string;
 }
 
@@ -68,6 +70,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     sectionPath,
     image,
     keywords,
+    faqItems = [],
     medicalReviewer = 'Doç. Dr. Senai Aksoy',
     medicalReviewerTitle = 'Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör',
     siteUrl: rawSiteUrl,
@@ -169,5 +172,22 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     itemListElement: breadcrumbItems,
   };
 
-  return [medicalWebPageSchema, articleSchema, breadcrumbSchema];
+  const faqSchema: JsonLdSchema | null = faqItems.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
+
+  return faqSchema
+    ? [medicalWebPageSchema, articleSchema, breadcrumbSchema, faqSchema]
+    : [medicalWebPageSchema, articleSchema, breadcrumbSchema];
 }

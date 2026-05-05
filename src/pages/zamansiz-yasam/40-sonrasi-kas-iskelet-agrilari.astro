@@ -12,6 +12,7 @@ import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const tocEntries = [
@@ -30,6 +31,7 @@ const articleTitle = '40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinley
 const articleDescription =
   '40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge, ağrı sinyali ve fizyoterapi desteği üzerinden anlatan sade rehber.';
 const articlePath = '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari';
+const faqItems = articleFaqs[articlePath] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -39,6 +41,7 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam',
   keywords: ['40 sonrası hareket', 'bel ağrısı', 'diz ağrısı', 'kalça ağrısı', 'kas-iskelet sağlığı', 'fizyoterapi', 'denge egzersizi'],
+  faqItems,
   siteUrl,
 });
 ---

@@ -11,6 +11,7 @@ import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu']!;
@@ -30,6 +31,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması';
 const articleDescription =
   'Tartı sayısı uzun zamandır pek değişmiyor; ama beden değişmeye devam ediyor. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin bir gözlemcinin günlüğünden bakış.';
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -51,6 +53,8 @@ const articleSchemas = buildArticleSchemas({
     'direnç antrenmanı',
     'protein',
   ],
+  faqItems,
+
   siteUrl,
 });
 ---

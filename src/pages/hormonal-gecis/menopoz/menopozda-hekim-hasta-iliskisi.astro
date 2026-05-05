@@ -11,6 +11,7 @@ import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi']!;
@@ -29,6 +30,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor';
 const articleDescription =
   'Hekim-hasta ilişkisinin yıllar içinde nasıl olgunlaştığına dair kişisel notlar. Modern kadının menopoz takibinde dört doktor profili karşısındaki arayışı, paydaş karar verme ve etik bir mesafenin önemi.';
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -48,6 +50,8 @@ const articleSchemas = buildArticleSchemas({
     'hormon tedavisi',
     'jinekolog',
   ],
+  faqItems,
+
   siteUrl,
 });
 ---

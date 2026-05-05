@@ -13,6 +13,8 @@ from agents.writer_agent import ALLOWED_CATEGORIES
 from naming import output_file_basename, slugify_topic
 from state import EstranovaState, initialize_state
 
+APPROVALS_TS_PATH = Path("src") / "data" / "article-approvals.ts"
+
 
 REQUIRED_PACKAGES = [
     "langgraph",
@@ -216,6 +218,29 @@ def blog_markdown_path(topic: str, date_str: str) -> Path:
     """src/content/blog/{date}-{topic}.md — Astro content collection; yalnizca onay sonrasi."""
     base = output_file_basename(topic, date_str)
     return Path("src") / "content" / "blog" / f"{base}.md"
+
+
+def load_editorially_approved_pathnames() -> set[str]:
+    if not APPROVALS_TS_PATH.exists():
+        return set()
+    source = APPROVALS_TS_PATH.read_text(encoding="utf-8")
+    return set(re.findall(r"pathname:\s*['\"`]([^'\"`]+)['\"`]", source))
+
+
+def planned_category_article_path(
+    topic: str,
+    date_str: str,
+    category: str,
+    slug_override: str | None = None,
+) -> str:
+    base = output_file_basename(topic, date_str)
+    slug = slug_override or base.replace(f"{date_str}-", "", 1)
+    category_path = "/".join(part for part in category.strip("/").split("/") if part)
+    return f"/{category_path}/{slug}"
+
+
+def is_path_editorially_approved(pathname: str) -> bool:
+    return pathname in load_editorially_approved_pathnames()
 
 
 def _strip_markdown_inline(text: str) -> str:
@@ -430,6 +455,13 @@ def save_approved_article_with_routing(
     """
     if category not in ALLOWED_CATEGORIES:
         raise ValueError(f"category izin listesinde degil: {category!r}")
+
+    planned_pathname = planned_category_article_path(topic, date_str, category, slug_override)
+    if not is_path_editorially_approved(planned_pathname):
+        raise ValueError(
+            "Bu route icin editoryal onay kaydi bulunamadi: "
+            f"{planned_pathname}. Once src/data/article-approvals.ts icine onay ekleyin."
+        )
 
     md_path = save_approved_blog_article(body, topic, date_str)
     base = output_file_basename(topic, date_str)

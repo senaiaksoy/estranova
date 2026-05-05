@@ -11,6 +11,7 @@ import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi']!;
@@ -30,6 +31,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?';
 const articleDescription =
   'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve doktorunuzla konuşurken sorabileceğiniz sorular.';
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -48,6 +50,8 @@ const articleSchemas = buildArticleSchemas({
     'sıcak basması',
     'karar verme',
   ],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -93,7 +97,7 @@ const articleSchemas = buildArticleSchemas({
           konuşulmasıyla verilir.
         </p>
         <p>
-          Muayene odasında en sık gördüğüm şey şudur: bir kadın HRT'yi ya mucize gibi ya da mutlak tehlike gibi
+          Muayene odasında en sık gördüğüm şey şudur: bir kadın HRT'yi ya tek çıkış gibi ya da mutlak tehlike gibi
           duymuş olarak gelir. İkisi de eksik bir bakıştır. Hormon tedavisi ne herkese verilmesi gereken bir rutin,
           ne de konuşulmadan elenmesi gereken bir seçenektir.
         </p>

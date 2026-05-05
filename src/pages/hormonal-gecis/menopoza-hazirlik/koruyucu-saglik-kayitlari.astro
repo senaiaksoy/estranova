@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -8,43 +8,49 @@ import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const tocEntries = [
-  { id: 'neden-kayit', label: 'Neden Bu Evrede Kayıt?' },
-  { id: 'vital-gostergeler', label: 'Vital Göstergeler' },
-  { id: 'lab-markerlari', label: 'Kan Değerleri Notu' },
-  { id: 'semptom-gunlugu', label: 'Semptom Günlüğü' },
-  { id: 'aile-oykusu', label: 'Aile Öyküsü' },
+  { id: 'neden-kayit', label: 'Neden Bu Evrede KayÄ±t?' },
+  { id: 'vital-gostergeler', label: 'Vital GÃ¶stergeler' },
+  { id: 'lab-markerlari', label: 'Kan DeÄŸerleri Notu' },
+  { id: 'semptom-gunlugu', label: 'Semptom GÃ¼nlÃ¼ÄŸÃ¼' },
+  { id: 'aile-oykusu', label: 'Aile Ã–ykÃ¼sÃ¼' },
   { id: 'tarama-cercevesi', label: 'Tarama Takvimi' },
-  { id: 'hekimle-paylasim', label: 'Hekimle Paylaşım' },
-  { id: 'baslangic-30-gun', label: 'İlk 30 Gün' },
-  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
-  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'hekimle-paylasim', label: 'Hekimle PaylaÅŸÄ±m' },
+  { id: 'baslangic-30-gun', label: 'Ä°lk 30 GÃ¼n' },
+  { id: 'sik-sorulanlar', label: 'SÄ±k Sorulanlar' },
+  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?';
+const articleTitle = 'Koruyucu SaÄŸlÄ±k KayÄ±tlarÄ±: Menopoza HazÄ±rlÄ±k DÃ¶neminde Ne Ä°zlemeli?';
 const articleDescription =
-  'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo, aile öyküsü ve semptom notlarını hekime götürülebilecek sade bir kişisel referans dosyasına dönüştürme rehberi.';
+  'Menopoza hazÄ±rlÄ±k dÃ¶neminde tansiyon, kan deÄŸerleri, kilo, aile Ã¶ykÃ¼sÃ¼ ve semptom notlarÄ±nÄ± hekime gÃ¶tÃ¼rÃ¼lebilecek sade bir kiÅŸisel referans dosyasÄ±na dÃ¶nÃ¼ÅŸtÃ¼rme rehberi.';
+const faqItems = articleFaqs['/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '25 Nisan 2026',
   pathname: '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
-  articleSection: 'Hormonal Geçiş',
+  articleSection: 'Hormonal GeÃ§iÅŸ',
   sectionPath: '/hormonal-gecis',
   keywords: [
-    'menopoza hazırlık',
-    'koruyucu sağlık',
-    'sağlık kayıtları',
-    'semptom günlüğü',
+    'menopoza hazÄ±rlÄ±k',
+    'koruyucu saÄŸlÄ±k',
+    'saÄŸlÄ±k kayÄ±tlarÄ±',
+    'semptom gÃ¼nlÃ¼ÄŸÃ¼',
     'tarama takvimi',
-    'vital göstergeler',
-    'aile öyküsü',
+    'vital gÃ¶stergeler',
+    'aile Ã¶ykÃ¼sÃ¼',
   ],
+  faqItems,
+
   siteUrl,
 });
 ---
@@ -63,213 +69,215 @@ const articleSchemas = buildArticleSchemas({
       <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="25 Nisan 2026" readingMinutes={6} />
 
       <header class="mb-10">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Hormonal Geçiş · Menopoza Hazırlık</p>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Hormonal GeÃ§iÅŸ Â· Menopoza HazÄ±rlÄ±k</p>
         <h1 class="font-serif text-4xl leading-tight md:text-6xl">{articleTitle}</h1>
       </header>
 
       <section
         class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
       >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
+        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
         <p class="leading-relaxed text-ink/80">
-          Menopoza hazırlık dönemi bence en değerli aralıklardan biri: kadının bedeninde büyük değişimler
-          kapıda olsa da göstergeler hâlâ ölçülebilir. Okudukça şunu anladım — tansiyon, kilo, lipid profili
-          gibi temel ölçümleri bugünden düzenli kaydetmek; ileride neyin "yeni" neyin "kişisel normalim"
-          olduğunu ayırt etmeyi kolaylaştırıyor. Amaç hastalık aramak değil; kendi referans hattını kurmak.
+          Menopoza hazÄ±rlÄ±k dÃ¶nemi bence en deÄŸerli aralÄ±klardan biri: kadÄ±nÄ±n bedeninde bÃ¼yÃ¼k deÄŸiÅŸimler
+          kapÄ±da olsa da gÃ¶stergeler hÃ¢lÃ¢ Ã¶lÃ§Ã¼lebilir. OkudukÃ§a ÅŸunu anladÄ±m â€” tansiyon, kilo, lipid profili
+          gibi temel Ã¶lÃ§Ã¼mleri bugÃ¼nden dÃ¼zenli kaydetmek; ileride neyin "yeni" neyin "kiÅŸisel normalim"
+          olduÄŸunu ayÄ±rt etmeyi kolaylaÅŸtÄ±rÄ±yor. AmaÃ§ hastalÄ±k aramak deÄŸil; kendi referans hattÄ±nÄ± kurmak.
         </p>
       </section>
 
       <ArticleProsePanel>
-        <h2 id="neden-kayit">Neden Bu Evrede Kayıt?</h2>
+        <h2 id="neden-kayit">Neden Bu Evrede KayÄ±t?</h2>
         <p>
-          Benim için dönüm noktası şu oldu: bir gün hekime gittiğimde, "Geçen yıl ne çıkmıştı, hatırlıyor musunuz?"
-          sorusuna ne hekim ne ben net bir cevap verebildik. O an karar verdim, kendi referans dosyamı kurmaya başladım.
+          Benim iÃ§in dÃ¶nÃ¼m noktasÄ± ÅŸu oldu: bir gÃ¼n hekime gittiÄŸimde, "GeÃ§en yÄ±l ne Ã§Ä±kmÄ±ÅŸtÄ±, hatÄ±rlÄ±yor musunuz?"
+          sorusuna ne hekim ne ben net bir cevap verebildik. O an karar verdim, kendi referans dosyamÄ± kurmaya baÅŸladÄ±m.
         </p>
         <p>
-          Çoğu kadın için sağlık kontrolü, bir şikâyet olunca hekime gitmek demek. Oysa menopoza hazırlık
-          dönemi farklı bir mantık öneriyor: belirti yokken bile küçük bir kişisel veri seti kurmak. Bu evrede
-          bedende olan değişimlerin bir kısmı yıllara yayılı; bazıları kısa sürede beliriyor. "Normal
-          sınırının" ne olduğuna dair kendi göstergelerin yoksa, sonradan gelen bir bulguyu yorumlamak
-          zorlaşıyor.
+          Ã‡oÄŸu kadÄ±n iÃ§in saÄŸlÄ±k kontrolÃ¼, bir ÅŸikÃ¢yet olunca hekime gitmek demek. Oysa menopoza hazÄ±rlÄ±k
+          dÃ¶nemi farklÄ± bir mantÄ±k Ã¶neriyor: belirti yokken bile kÃ¼Ã§Ã¼k bir kiÅŸisel veri seti kurmak. Bu evrede
+          bedende olan deÄŸiÅŸimlerin bir kÄ±smÄ± yÄ±llara yayÄ±lÄ±; bazÄ±larÄ± kÄ±sa sÃ¼rede beliriyor. "Normal
+          sÄ±nÄ±rÄ±nÄ±n" ne olduÄŸuna dair kendi gÃ¶stergelerin yoksa, sonradan gelen bir bulguyu yorumlamak
+          zorlaÅŸÄ±yor.
         </p>
         <p>
-          Tansiyonun hep böyle miydi, kolesterol son iki yılda mı yükseldi, kilo nereden başlayıp nereye geldi —
-          bu soruların cevabı geriye dönük baktığında elinde kayıtlar varsa daha sağlam oluyor. Bu nedenle koruyucu
-          sağlık kayıtlarını "hastalık dosyası" olarak değil, kişisel bir referans hattı olarak düşünmek bana çok
-          yardımcı oldu.
-        </p>
-
-        <h2 id="vital-gostergeler">Hangi Vital Göstergeleri İzlemek?</h2>
-        <p>
-          Evde kolayca takip edebileceğin temel göstergelerle başlıyoruz; klinik olmadan, sade ölçümlerle. Bu kısım
-          benim için en eğlenceli olanı oldu — küçük bir disiplin alışkanlığa dönüşünce, gerisi kendiliğinden geliyor.
-        </p>
-        <p>
-          Düzenli tansiyon ölçümü, hazırlık döneminin en değerli alışkanlıklarından biri. Östrojendeki değişimler
-          kardiyovasküler riski etkileyen bir tablonun parçası olabilir <Evidence level={4} />; bu nedenle yıllık
-          ortalamaların kaydedilmesi ileride bir trend okumayı kolaylaştırıyor. Aynı şekilde kilo, bel çevresi ve
-          istirahat nabzı da evde izlenebilen göstergeler arasında.
-        </p>
-        <p>
-          Önemli olan tek bir ölçümün değeri değil; aynı koşullarda alınan ölçümlerin zaman içindeki seyri. Bir
-          arkadaşım anlatmıştı: yıllık kontrolüne giderken son altı ayın küçük tansiyon notlarını yanına almış,
-          hekimi "iyi ki kayıt etmişsin" demiş. O sahne kafamda kaldı — kâğıt ya da uygulama fark etmiyor,
-          sadece tutarlılık önemli. Sabah aç karnına, aynı koldan, oturarak ölçülen tansiyonu haftada bir not
-          etmek; üç ay sonra okunabilir bir resim ortaya çıkarıyor.
+          Tansiyonun hep bÃ¶yle miydi, kolesterol son iki yÄ±lda mÄ± yÃ¼kseldi, kilo nereden baÅŸlayÄ±p nereye geldi â€”
+          bu sorularÄ±n cevabÄ± geriye dÃ¶nÃ¼k baktÄ±ÄŸÄ±nda elinde kayÄ±tlar varsa daha saÄŸlam oluyor. Bu nedenle koruyucu
+          saÄŸlÄ±k kayÄ±tlarÄ±nÄ± "hastalÄ±k dosyasÄ±" olarak deÄŸil, kiÅŸisel bir referans hattÄ± olarak dÃ¼ÅŸÃ¼nmek bana Ã§ok
+          yardÄ±mcÄ± oldu.
         </p>
 
-        <h2 id="lab-markerlari">Kan Değerleri İçin Küçük Bir Not Defteri</h2>
+        <h2 id="vital-gostergeler">Hangi Vital GÃ¶stergeleri Ä°zlemek?</h2>
         <p>
-          Kan değerleri konusunda listeyi benim yazmam doğru olmaz; bunu kişisel sağlık öyküsünü bilen hekimle
-          birlikte belirlemek gerekir. Benim burada önerdiğim şey test istemek değil, eldeki sonuçları kaybetmemek.
+          Evde kolayca takip edebileceÄŸin temel gÃ¶stergelerle baÅŸlÄ±yoruz; klinik olmadan, sade Ã¶lÃ§Ã¼mlerle. Bu kÄ±sÄ±m
+          benim iÃ§in en eÄŸlenceli olanÄ± oldu â€” kÃ¼Ã§Ã¼k bir disiplin alÄ±ÅŸkanlÄ±ÄŸa dÃ¶nÃ¼ÅŸÃ¼nce, gerisi kendiliÄŸinden geliyor.
         </p>
         <p>
-          Yıllık kontrolden sonra gelen sonuçları tek bir klasöre koymak bile tabloyu değiştiriyor. Lipid profili,
-          glukoz/HbA1c, tiroid, tam kan sayımı, D vitamini, ferritin ya da B12 gibi değerler bazen farklı yıllarda
-          farklı hekimlerin önünde açılıyor; o anda "geçen yıl nasıldı?" sorusuna yanıt verebilmek konuşmayı
-          hızlandırıyor <Evidence level={4} />.
+          DÃ¼zenli tansiyon Ã¶lÃ§Ã¼mÃ¼, hazÄ±rlÄ±k dÃ¶neminin en deÄŸerli alÄ±ÅŸkanlÄ±klarÄ±ndan biri. Ã–strojendeki deÄŸiÅŸimler
+          kardiyovaskÃ¼ler riski etkileyen bir tablonun parÃ§asÄ± olabilir <Evidence level={4} />; bu nedenle yÄ±llÄ±k
+          ortalamalarÄ±n kaydedilmesi ileride bir trend okumayÄ± kolaylaÅŸtÄ±rÄ±yor. AynÄ± ÅŸekilde kilo, bel Ã§evresi ve
+          istirahat nabzÄ± da evde izlenebilen gÃ¶stergeler arasÄ±nda.
         </p>
         <p>
-          Hormon değerleri konusunda da aynı sakinlik işe yarıyor. FSH veya östradiol gibi sonuçlar tek başına
-          "menopoza girdim/girmedim" diye okunmamalı; adet öyküsü ve belirtilerle birlikte yorumlanır. Benim
-          dosyamda bu sonuçların görevi karar vermek değil, hekimle konuşurken resmi tamamlamak.
-        </p>
-
-        <h2 id="semptom-gunlugu">Semptom Günlüğü Tutmak: Neden ve Nasıl?</h2>
-        <p>
-          Belirti günlüğü, hazırlık döneminin en çok küçümsenen ama en değerli aracı. Feed'de kaydırırken aynı
-          uzmanın aynı cümlesine üçüncü kez denk geldim — algoritma beni benden iyi tanıyor olabilir; ama bu
-          tekrarın altındaki cümle gerçekten kayda değerdi: "Adetin değişmeden önce uykunun değiştiğini, ancak
-          günlüğüne geri baktığında fark edersin." Aynı sahne çevremdeki birçok kadının da tanıdığı bir sahne.
-        </p>
-        <p>
-          Adet düzeni, sıcak basması sıklığı, uyku kalitesi, ruh hali ve enerji düzeyi gibi başlıkları haftalık kısa
-          notlarla kaydetmek; geçişin hangi aşamasında olduğuna dair değerli bir resim çiziyor. Adet düzenindeki
-          düzensizleşme, perimenopoz başlangıcının erken ipuçlarından biri <Evidence level={5} /> — ama bunu fark
-          etmek ancak takip varsa mümkün oluyor.
-        </p>
-        <p>
-          Günlüğün karmaşık olması gerekmiyor. Telefonun takvim uygulamasında küçük etiketler, kâğıt bir ajanda ya da
-          özel bir uygulama; hangisi senin için sürdürülebilirse o doğru araç. Ben kendi adıma dijital bir notu tercih
-          ediyorum, bir arkadaşım kâğıt ajandasına yemin ediyor — herkesin kendi tutarlılığı farklı. Önemli olan her
-          gün uzun yazmak değil; haftada bir-iki dakika geriye bakmak.
+          Ã–nemli olan tek bir Ã¶lÃ§Ã¼mÃ¼n deÄŸeri deÄŸil; aynÄ± koÅŸullarda alÄ±nan Ã¶lÃ§Ã¼mlerin zaman iÃ§indeki seyri. Bir
+          arkadaÅŸÄ±m anlatmÄ±ÅŸtÄ±: yÄ±llÄ±k kontrolÃ¼ne giderken son altÄ± ayÄ±n kÃ¼Ã§Ã¼k tansiyon notlarÄ±nÄ± yanÄ±na almÄ±ÅŸ,
+          hekimi "iyi ki kayÄ±t etmiÅŸsin" demiÅŸ. O sahne kafamda kaldÄ± â€” kÃ¢ÄŸÄ±t ya da uygulama fark etmiyor,
+          sadece tutarlÄ±lÄ±k Ã¶nemli. Sabah aÃ§ karnÄ±na, aynÄ± koldan, oturarak Ã¶lÃ§Ã¼len tansiyonu haftada bir not
+          etmek; Ã¼Ã§ ay sonra okunabilir bir resim ortaya Ã§Ä±karÄ±yor.
         </p>
 
-        <h2 id="aile-oykusu">Aile Öyküsünü Yazıya Dökmek</h2>
+        <h2 id="lab-markerlari">Kan DeÄŸerleri Ä°Ã§in KÃ¼Ã§Ã¼k Bir Not Defteri</h2>
         <p>
-          Çoğu kadın aile öyküsünü kafasında bilir; ama bir hekim sorduğunda anlık olarak doğru hatırlamak zor
-          olabiliyor. Bunu yıllar önce annemle bir akşam masada oturup yazıya geçirmiştim ve sonradan defalarca
-          işime yaradı.
+          Kan deÄŸerleri konusunda listeyi benim yazmam doÄŸru olmaz; bunu kiÅŸisel saÄŸlÄ±k Ã¶ykÃ¼sÃ¼nÃ¼ bilen hekimle
+          birlikte belirlemek gerekir. Benim burada Ã¶nerdiÄŸim ÅŸey test istemek deÄŸil, eldeki sonuÃ§larÄ± kaybetmemek.
         </p>
         <p>
-          Anne, anneanne, babaanne, teyze ve halaların menopoz yaşı; ailede kalp-damar hastalığı, meme veya yumurtalık
-          kanseri, osteoporoz ve diyabet öyküsü — bu bilgilerin tek bir notta toplanması ileride hekim
-          değerlendirmelerinde belirleyici oluyor. Erken menopoz öyküsü olan ailelerde geçişin daha erken yaşlarda
-          başlama eğilimi olabilir <Evidence level={4} />.
+          YÄ±llÄ±k kontrolden sonra gelen sonuÃ§larÄ± tek bir klasÃ¶re koymak bile tabloyu deÄŸiÅŸtiriyor. Lipid profili,
+          glukoz/HbA1c, tiroid, tam kan sayÄ±mÄ±, D vitamini, ferritin ya da B12 gibi deÄŸerler bazen farklÄ± yÄ±llarda
+          farklÄ± hekimlerin Ã¶nÃ¼nde aÃ§Ä±lÄ±yor; o anda "geÃ§en yÄ±l nasÄ±ldÄ±?" sorusuna yanÄ±t verebilmek konuÅŸmayÄ±
+          hÄ±zlandÄ±rÄ±yor <Evidence level={4} />.
         </p>
         <p>
-Bu öyküyü bir kez derli toplu yazmak ve yıllık güncellemek, hekimle yapılan ilk konuşmanın zeminini
-          zenginleştiriyor. Aile öyküsü, kişisel risk profilinin temel taşlarından biri; ama benim deneyimim şu: yazılı
-          bir not, hafıza yardımcısından çok daha fazlası — bir tür hatırlama disiplini.
+          Hormon deÄŸerleri konusunda da aynÄ± sakinlik iÅŸe yarÄ±yor. FSH veya Ã¶stradiol gibi sonuÃ§lar tek baÅŸÄ±na
+          "menopoza girdim/girmedim" diye okunmamalÄ±; adet Ã¶ykÃ¼sÃ¼ ve belirtilerle birlikte yorumlanÄ±r. Benim
+          dosyamda bu sonuÃ§larÄ±n gÃ¶revi karar vermek deÄŸil, hekimle konuÅŸurken resmi tamamlamak.
         </p>
 
-        <h2 id="tarama-cercevesi">Tarama Takvimini Nasıl Konuşmalı?</h2>
+        <h2 id="semptom-gunlugu">Semptom GÃ¼nlÃ¼ÄŸÃ¼ Tutmak: Neden ve NasÄ±l?</h2>
         <p>
-          Tarama konusu kolayca "hangi testi ne zaman yaptırmalıyım" listesine dönüşebiliyor. Ben bunu kendi adıma
-          liste ezberlemek yerine takvim konuşması olarak tutmayı daha sağlıklı buldum.
+          Belirti gÃ¼nlÃ¼ÄŸÃ¼, hazÄ±rlÄ±k dÃ¶neminin en Ã§ok kÃ¼Ã§Ã¼msenen ama en deÄŸerli aracÄ±. Feed'de kaydÄ±rÄ±rken aynÄ±
+          uzmanÄ±n aynÄ± cÃ¼mlesine Ã¼Ã§Ã¼ncÃ¼ kez denk geldim â€” algoritma beni benden iyi tanÄ±yor olabilir; ama bu
+          tekrarÄ±n altÄ±ndaki cÃ¼mle gerÃ§ekten kayda deÄŸerdi: "Adetin deÄŸiÅŸmeden Ã¶nce uykunun deÄŸiÅŸtiÄŸini, ancak
+          gÃ¼nlÃ¼ÄŸÃ¼ne geri baktÄ±ÄŸÄ±nda fark edersin." AynÄ± sahne Ã§evremdeki birÃ§ok kadÄ±nÄ±n da tanÄ±dÄ±ÄŸÄ± bir sahne.
         </p>
         <p>
-          Meme görüntüleme, jinekolojik kontrol, kolon taraması, kemik mineral yoğunluğu ya da kardiyovasküler risk
-          değerlendirmesi gibi başlıkların her biri yaşa, aile öyküsüne ve kişisel risklere göre değişiyor. Bu
-          yüzden benim dosyamda bu bölümün başlığı "yaptırılacaklar listesi" değil: "hekime sorulacak takvim soruları".
+          Adet dÃ¼zeni, sÄ±cak basmasÄ± sÄ±klÄ±ÄŸÄ±, uyku kalitesi, ruh hali ve enerji dÃ¼zeyi gibi baÅŸlÄ±klarÄ± haftalÄ±k kÄ±sa
+          notlarla kaydetmek; geÃ§iÅŸin hangi aÅŸamasÄ±nda olduÄŸuna dair deÄŸerli bir resim Ã§iziyor. Adet dÃ¼zenindeki
+          dÃ¼zensizleÅŸme, perimenopoz baÅŸlangÄ±cÄ±nÄ±n erken ipuÃ§larÄ±ndan biri <Evidence level={5} /> â€” ama bunu fark
+          etmek ancak takip varsa mÃ¼mkÃ¼n oluyor.
         </p>
         <p>
-          Pratikte bir sayfa yetiyor: son mamografi tarihi, son jinekolojik kontrol, varsa kolon taraması, varsa kemik
-          yoğunluğu ölçümü, ailede önemli hastalık öyküleri ve "bu yıl hangisi gerekli?" sorusu. Böyle bakınca tarama
-          kaygı üreten bir liste olmaktan çıkıp, yıllık görüşmenin sakin gündemi oluyor.
+          GÃ¼nlÃ¼ÄŸÃ¼n karmaÅŸÄ±k olmasÄ± gerekmiyor. Telefonun takvim uygulamasÄ±nda kÃ¼Ã§Ã¼k etiketler, kÃ¢ÄŸÄ±t bir ajanda ya da
+          Ã¶zel bir uygulama; hangisi senin iÃ§in sÃ¼rdÃ¼rÃ¼lebilirse o doÄŸru araÃ§. Ben kendi adÄ±ma dijital bir notu tercih
+          ediyorum, bir arkadaÅŸÄ±m kÃ¢ÄŸÄ±t ajandasÄ±na yemin ediyor â€” herkesin kendi tutarlÄ±lÄ±ÄŸÄ± farklÄ±. Ã–nemli olan her
+          gÃ¼n uzun yazmak deÄŸil; haftada bir-iki dakika geriye bakmak.
+        </p>
+
+        <h2 id="aile-oykusu">Aile Ã–ykÃ¼sÃ¼nÃ¼ YazÄ±ya DÃ¶kmek</h2>
+        <p>
+          Ã‡oÄŸu kadÄ±n aile Ã¶ykÃ¼sÃ¼nÃ¼ kafasÄ±nda bilir; ama bir hekim sorduÄŸunda anlÄ±k olarak doÄŸru hatÄ±rlamak zor
+          olabiliyor. Bunu yÄ±llar Ã¶nce annemle bir akÅŸam masada oturup yazÄ±ya geÃ§irmiÅŸtim ve sonradan defalarca
+          iÅŸime yaradÄ±.
+        </p>
+        <p>
+          Anne, anneanne, babaanne, teyze ve halalarÄ±n menopoz yaÅŸÄ±; ailede kalp-damar hastalÄ±ÄŸÄ±, meme veya yumurtalÄ±k
+          kanseri, osteoporoz ve diyabet Ã¶ykÃ¼sÃ¼ â€” bu bilgilerin tek bir notta toplanmasÄ± ileride hekim
+          deÄŸerlendirmelerinde belirleyici oluyor. Erken menopoz Ã¶ykÃ¼sÃ¼ olan ailelerde geÃ§iÅŸin daha erken yaÅŸlarda
+          baÅŸlama eÄŸilimi olabilir <Evidence level={4} />.
+        </p>
+        <p>
+Bu Ã¶ykÃ¼yÃ¼ bir kez derli toplu yazmak ve yÄ±llÄ±k gÃ¼ncellemek, hekimle yapÄ±lan ilk konuÅŸmanÄ±n zeminini
+          zenginleÅŸtiriyor. Aile Ã¶ykÃ¼sÃ¼, kiÅŸisel risk profilinin temel taÅŸlarÄ±ndan biri; ama benim deneyimim ÅŸu: yazÄ±lÄ±
+          bir not, hafÄ±za yardÄ±mcÄ±sÄ±ndan Ã§ok daha fazlasÄ± â€” bir tÃ¼r hatÄ±rlama disiplini.
+        </p>
+
+        <h2 id="tarama-cercevesi">Tarama Takvimini NasÄ±l KonuÅŸmalÄ±?</h2>
+        <p>
+          Tarama konusu kolayca "hangi testi ne zaman yaptÄ±rmalÄ±yÄ±m" listesine dÃ¶nÃ¼ÅŸebiliyor. Ben bunu kendi adÄ±ma
+          liste ezberlemek yerine takvim konuÅŸmasÄ± olarak tutmayÄ± daha saÄŸlÄ±klÄ± buldum.
+        </p>
+        <p>
+          Meme gÃ¶rÃ¼ntÃ¼leme, jinekolojik kontrol, kolon taramasÄ±, kemik mineral yoÄŸunluÄŸu ya da kardiyovaskÃ¼ler risk
+          deÄŸerlendirmesi gibi baÅŸlÄ±klarÄ±n her biri yaÅŸa, aile Ã¶ykÃ¼sÃ¼ne ve kiÅŸisel risklere gÃ¶re deÄŸiÅŸiyor. Bu
+          yÃ¼zden benim dosyamda bu bÃ¶lÃ¼mÃ¼n baÅŸlÄ±ÄŸÄ± "yaptÄ±rÄ±lacaklar listesi" deÄŸil: "hekime sorulacak takvim sorularÄ±".
+        </p>
+        <p>
+          Pratikte bir sayfa yetiyor: son mamografi tarihi, son jinekolojik kontrol, varsa kolon taramasÄ±, varsa kemik
+          yoÄŸunluÄŸu Ã¶lÃ§Ã¼mÃ¼, ailede Ã¶nemli hastalÄ±k Ã¶ykÃ¼leri ve "bu yÄ±l hangisi gerekli?" sorusu. BÃ¶yle bakÄ±nca tarama
+          kaygÄ± Ã¼reten bir liste olmaktan Ã§Ä±kÄ±p, yÄ±llÄ±k gÃ¶rÃ¼ÅŸmenin sakin gÃ¼ndemi oluyor.
         </p>
       </ArticleProsePanel>
 
       <ArticleProsePanel class="mt-10">
-        <h2 id="hekimle-paylasim">Kayıtları Hekimle Paylaşmak</h2>
+        <h2 id="hekimle-paylasim">KayÄ±tlarÄ± Hekimle PaylaÅŸmak</h2>
         <p>
-          Topladığın veri ne kadar düzenli olursa, hekimle yapılan değerlendirme o kadar verimli oluyor. Bunu kendi
-          deneyimimde defalarca yaşadım.
+          TopladÄ±ÄŸÄ±n veri ne kadar dÃ¼zenli olursa, hekimle yapÄ±lan deÄŸerlendirme o kadar verimli oluyor. Bunu kendi
+          deneyimimde defalarca yaÅŸadÄ±m.
         </p>
         <p>
-          Yıllık kontrole giderken son bir yılın tansiyon ortalamasını, kilo seyrini, semptom günlüğünden birkaç
-          anahtar notu, aile öyküsünün güncel hâlini ve önceki tetkik tarihlerini yanına almak; konuşmayı "şimdi
-          neyiniz var" ekseninden çıkarıp "son dönemdeki seyriniz nasıl" eksenine taşıyor. Bu fark, koruyucu sağlık
-          yaklaşımının özü.
+          YÄ±llÄ±k kontrole giderken son bir yÄ±lÄ±n tansiyon ortalamasÄ±nÄ±, kilo seyrini, semptom gÃ¼nlÃ¼ÄŸÃ¼nden birkaÃ§
+          anahtar notu, aile Ã¶ykÃ¼sÃ¼nÃ¼n gÃ¼ncel hÃ¢lini ve Ã¶nceki tetkik tarihlerini yanÄ±na almak; konuÅŸmayÄ± "ÅŸimdi
+          neyiniz var" ekseninden Ã§Ä±karÄ±p "son dÃ¶nemdeki seyriniz nasÄ±l" eksenine taÅŸÄ±yor. Bu fark, koruyucu saÄŸlÄ±k
+          yaklaÅŸÄ±mÄ±nÄ±n Ã¶zÃ¼.
         </p>
         <p>
-          Verilerini bir kâğıda özetlemek ya da telefonda küçük bir not şablonu hazırlamak işi kolaylaştırır.
-          Benim için işe yarayan şey, randevudan bir gün önce 10 dakikalık bir özet çıkarmak oldu; detayların tamamını
-          anlatmak yerine eğilimleri ve kişisel sorularını paylaşmak, kısa randevuda en çok yer açan yaklaşım. Bu
-          benim yöntemim — senin için de çalışıp çalışmayacağını ancak deneyince anlayabilirsin.
+          Verilerini bir kÃ¢ÄŸÄ±da Ã¶zetlemek ya da telefonda kÃ¼Ã§Ã¼k bir not ÅŸablonu hazÄ±rlamak iÅŸi kolaylaÅŸtÄ±rÄ±r.
+          Benim iÃ§in iÅŸe yarayan ÅŸey, randevudan bir gÃ¼n Ã¶nce 10 dakikalÄ±k bir Ã¶zet Ã§Ä±karmak oldu; detaylarÄ±n tamamÄ±nÄ±
+          anlatmak yerine eÄŸilimleri ve kiÅŸisel sorularÄ±nÄ± paylaÅŸmak, kÄ±sa randevuda en Ã§ok yer aÃ§an yaklaÅŸÄ±m. Bu
+          benim yÃ¶ntemim â€” senin iÃ§in de Ã§alÄ±ÅŸÄ±p Ã§alÄ±ÅŸmayacaÄŸÄ±nÄ± ancak deneyince anlayabilirsin.
         </p>
 
-        <h2 id="baslangic-30-gun">İlk 30 Gün: Pratik Başlangıç</h2>
+        <h2 id="baslangic-30-gun">Ä°lk 30 GÃ¼n: Pratik BaÅŸlangÄ±Ã§</h2>
         <p>
-Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağıdaki yol, ilk ay için bana
-          işe yaramış sade bir öneri.
+Bu kadar baÅŸlÄ±k bir arada gelince "nereden baÅŸlamalÄ±" sorusu doÄŸal. AÅŸaÄŸÄ±daki yol, ilk ay iÃ§in bana
+          iÅŸe yaramÄ±ÅŸ sade bir Ã¶neri.
         </p>
         <p>
-          İlk hafta yalnızca tansiyon ölçümünü düzenli yap, haftalık ortalamayı bir nota geçir. İkinci hafta semptom
-          günlüğüne başla; üç-dört kısa kategoriyle sınırlı tut (uyku, enerji, ruh hali, adet). Üçüncü hafta aile
-          öyküsünü tek bir nota topla. Dördüncü hafta eski kan sonuçlarını ve tarama tarihlerini aynı dosyada
-          birleştir; sonraki kontrolde hekiminle hangi başlıkların gerçekten gerekli olduğunu konuş.
+          Ä°lk hafta yalnÄ±zca tansiyon Ã¶lÃ§Ã¼mÃ¼nÃ¼ dÃ¼zenli yap, haftalÄ±k ortalamayÄ± bir nota geÃ§ir. Ä°kinci hafta semptom
+          gÃ¼nlÃ¼ÄŸÃ¼ne baÅŸla; Ã¼Ã§-dÃ¶rt kÄ±sa kategoriyle sÄ±nÄ±rlÄ± tut (uyku, enerji, ruh hali, adet). ÃœÃ§Ã¼ncÃ¼ hafta aile
+          Ã¶ykÃ¼sÃ¼nÃ¼ tek bir nota topla. DÃ¶rdÃ¼ncÃ¼ hafta eski kan sonuÃ§larÄ±nÄ± ve tarama tarihlerini aynÄ± dosyada
+          birleÅŸtir; sonraki kontrolde hekiminle hangi baÅŸlÄ±klarÄ±n gerÃ§ekten gerekli olduÄŸunu konuÅŸ.
         </p>
         <p>
-          Otuz günün sonunda elinde dört şey oluyor: tansiyon eğrisi başlangıcı, semptom referansı, aile öyküsü tek
-          sayfa ve önümüzdeki yıl için bir takvim. Bu dört şey, sonraki on yıl boyunca güncellenecek temel iskelet.
-          Benim için bu iskelet, "ben bunu kontrol altına aldım" hissinin başlangıcı oldu.
+          Otuz gÃ¼nÃ¼n sonunda elinde dÃ¶rt ÅŸey oluyor: tansiyon eÄŸrisi baÅŸlangÄ±cÄ±, semptom referansÄ±, aile Ã¶ykÃ¼sÃ¼ tek
+          sayfa ve Ã¶nÃ¼mÃ¼zdeki yÄ±l iÃ§in bir takvim. Bu dÃ¶rt ÅŸey, sonraki on yÄ±l boyunca gÃ¼ncellenecek temel iskelet.
+          Benim iÃ§in bu iskelet, "ben bunu kontrol altÄ±na aldÄ±m" hissinin baÅŸlangÄ±cÄ± oldu.
         </p>
       </ArticleProsePanel>
 
       <ArticleProsePanel class="mt-10">
-        <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
-        <h3>Belirtim yok, yine de bu kadar şey takip etmem gerekir mi?</h3>
+        <h2 id="sik-sorulanlar">SÄ±k Sorulanlar</h2>
+        <h3>Belirtim yok, yine de bu kadar ÅŸey takip etmem gerekir mi?</h3>
         <p>
-          Belirti olmaması, takip için ideal başlangıç noktasıdır. Çünkü kişisel "normal" aralığını ancak
-          belirti yokken tanımlayabilirsin. Sonradan değişiklik olduğunda karşılaştırma yapılacak referans
+          Belirti olmamasÄ±, takip iÃ§in ideal baÅŸlangÄ±Ã§ noktasÄ±dÄ±r. Ã‡Ã¼nkÃ¼ kiÅŸisel "normal" aralÄ±ÄŸÄ±nÄ± ancak
+          belirti yokken tanÄ±mlayabilirsin. Sonradan deÄŸiÅŸiklik olduÄŸunda karÅŸÄ±laÅŸtÄ±rma yapÄ±lacak referans
           noktan oluyor.
         </p>
-        <h3>Hangi sıklıkta lab testi yaptırmalıyım?</h3>
+        <h3>Hangi sÄ±klÄ±kta lab testi yaptÄ±rmalÄ±yÄ±m?</h3>
         <p>
-          Bu sorunun tek cevabı yok; kişisel risk profiline ve önceki sonuçlara göre değişir. Benim önerim,
-          "şu testi şu sıklıkta yaptır" diye ezberlemek yerine eski sonuçlarını yanında götürüp sıklığı hekiminle
+          Bu sorunun tek cevabÄ± yok; kiÅŸisel risk profiline ve Ã¶nceki sonuÃ§lara gÃ¶re deÄŸiÅŸir. Benim Ã¶nerim,
+          "ÅŸu testi ÅŸu sÄ±klÄ±kta yaptÄ±r" diye ezberlemek yerine eski sonuÃ§larÄ±nÄ± yanÄ±nda gÃ¶tÃ¼rÃ¼p sÄ±klÄ±ÄŸÄ± hekiminle
           birlikte belirlemek.
         </p>
-        <h3>Ev tipi tansiyon aleti güvenilir mi?</h3>
+        <h3>Ev tipi tansiyon aleti gÃ¼venilir mi?</h3>
         <p>
-          Üst koldan ölçen, klinik onayı olan modeller güvenilir bir takip sağlar. Bilek tipi cihazlar daha
-          fazla değişkenlik gösterebilir. Cihazını ilk kullanımda hekim muayenesinde karşılaştırarak
-          doğrulamak iyi bir başlangıç adımı.
+          Ãœst koldan Ã¶lÃ§en, klinik onayÄ± olan modeller gÃ¼venilir bir takip saÄŸlar. Bilek tipi cihazlar daha
+          fazla deÄŸiÅŸkenlik gÃ¶sterebilir. CihazÄ±nÄ± ilk kullanÄ±mda hekim muayenesinde karÅŸÄ±laÅŸtÄ±rarak
+          doÄŸrulamak iyi bir baÅŸlangÄ±Ã§ adÄ±mÄ±.
         </p>
-        <h3>Semptom günlüğüne ne kadar zaman ayırmalıyım?</h3>
+        <h3>Semptom gÃ¼nlÃ¼ÄŸÃ¼ne ne kadar zaman ayÄ±rmalÄ±yÄ±m?</h3>
         <p>
-          Günde bir-iki dakika ve haftada bir kez geriye bakış yeterli. Detaylı yazmak yerine kategoriler ve
-          kısa işaretler kullanmak sürdürülebilirliği artırıyor.
+          GÃ¼nde bir-iki dakika ve haftada bir kez geriye bakÄ±ÅŸ yeterli. DetaylÄ± yazmak yerine kategoriler ve
+          kÄ±sa iÅŸaretler kullanmak sÃ¼rdÃ¼rÃ¼lebilirliÄŸi artÄ±rÄ±yor.
         </p>
 
-        <h2 id="kapanis">Kapanış</h2>
+        <h2 id="kapanis">KapanÄ±ÅŸ</h2>
         <p>
-          Koruyucu sağlık kayıtları bir hastalık dosyası değil; bedenin yıllar içinde takip edebileceğin sade
+          Koruyucu saÄŸlÄ±k kayÄ±tlarÄ± bir hastalÄ±k dosyasÄ± deÄŸil; bedenin yÄ±llar iÃ§inde takip edebileceÄŸin sade
           bir takvimi.
         </p>
         <p>
-          Tek bir ölçüm bir günlük resim verir; aynı ölçümün üç yıllık seyri ise bir hikâye. Yıllık tansiyon
-          ortalaması, kan değerleri klasörü, semptom günlüğü ve aile öyküsü — bu dört çapayı bir takvime yerleştirmek,
-          "her şeyi takip edemem" kaygısının yerine sade bir ritim koyuyor. Bu benim yolum oldu, yıllar içinde
-          olgunlaşarak; senin yolun başka olabilir — ve olmalı da.
+          Tek bir Ã¶lÃ§Ã¼m bir gÃ¼nlÃ¼k resim verir; aynÄ± Ã¶lÃ§Ã¼mÃ¼n Ã¼Ã§ yÄ±llÄ±k seyri ise bir hikÃ¢ye. YÄ±llÄ±k tansiyon
+          ortalamasÄ±, kan deÄŸerleri klasÃ¶rÃ¼, semptom gÃ¼nlÃ¼ÄŸÃ¼ ve aile Ã¶ykÃ¼sÃ¼ â€” bu dÃ¶rt Ã§apayÄ± bir takvime yerleÅŸtirmek,
+          "her ÅŸeyi takip edemem" kaygÄ±sÄ±nÄ±n yerine sade bir ritim koyuyor. Bu benim yolum oldu, yÄ±llar iÃ§inde
+          olgunlaÅŸarak; senin yolun baÅŸka olabilir â€” ve olmalÄ± da.
         </p>
         <p>
-          Belki şu soru yardımcı olur: bu yıl takvime hangi tek göstergeyi yargılamadan, sadece gözlemlemek
-          niyetiyle yerleştirebilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle
-          söylemişti; sen onu kendi takvimine yazıyorsun.
+          Belki ÅŸu soru yardÄ±mcÄ± olur: bu yÄ±l takvime hangi tek gÃ¶stergeyi yargÄ±lamadan, sadece gÃ¶zlemlemek
+          niyetiyle yerleÅŸtirebilirim? Karar kendi kararÄ±n, sorumluluÄŸu da kendine ait. Beden bir cÃ¼mle
+          sÃ¶ylemiÅŸti; sen onu kendi takvimine yazÄ±yorsun.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
@@ -283,37 +291,37 @@ Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağ�
       <section
         class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
       >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
         <p class="mb-3 leading-relaxed text-ink/80">
-Menopoza hazırlık dönemi (perimenopoz öncesi 40+ yaşları), koruyucu sağlık yaklaşımının sistematik
-          biçimde kurulması için klinik açıdan değerli bir aralıktır. Bu yazının ana önerisi test istemek değil;
-          mevcut ölçüm, belirti ve aile öyküsü bilgilerinin düzenli tutulmasıdır.
+Menopoza hazÄ±rlÄ±k dÃ¶nemi (perimenopoz Ã¶ncesi 40+ yaÅŸlarÄ±), koruyucu saÄŸlÄ±k yaklaÅŸÄ±mÄ±nÄ±n sistematik
+          biÃ§imde kurulmasÄ± iÃ§in klinik aÃ§Ä±dan deÄŸerli bir aralÄ±ktÄ±r. Bu yazÄ±nÄ±n ana Ã¶nerisi test istemek deÄŸil;
+          mevcut Ã¶lÃ§Ã¼m, belirti ve aile Ã¶ykÃ¼sÃ¼ bilgilerinin dÃ¼zenli tutulmasÄ±dÄ±r.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Hangi kan değerlerinin ve hangi taramaların izleneceği kişisel risk profiline göre değişir. Kan basıncı,
-          kilo-bel çevresi, metabolik göstergeler, tiroid, tam kan sayımı, D vitamini, ferritin/B12 gibi başlıklar
-          klinikte sık konuşulabilir; ancak bu liste kişiye özel olarak hekim tarafından düzenlenmelidir.
+          Hangi kan deÄŸerlerinin ve hangi taramalarÄ±n izleneceÄŸi kiÅŸisel risk profiline gÃ¶re deÄŸiÅŸir. Kan basÄ±ncÄ±,
+          kilo-bel Ã§evresi, metabolik gÃ¶stergeler, tiroid, tam kan sayÄ±mÄ±, D vitamini, ferritin/B12 gibi baÅŸlÄ±klar
+          klinikte sÄ±k konuÅŸulabilir; ancak bu liste kiÅŸiye Ã¶zel olarak hekim tarafÄ±ndan dÃ¼zenlenmelidir.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Tek bir ölçüm değerinden çok, aynı koşullarda alınan ölçümlerin zaman içindeki seyri (eğri) klinik
-          olarak bilgilendiricidir. Vital göstergelerin yıllık ortalamalarının ve lab değerlerinin
-          longitudinal trendlerinin izlenmesi, bireysel kardiyovasküler ve metabolik risk profilinin daha
-          erken fark edilmesini sağlar.
+          Tek bir Ã¶lÃ§Ã¼m deÄŸerinden Ã§ok, aynÄ± koÅŸullarda alÄ±nan Ã¶lÃ§Ã¼mlerin zaman iÃ§indeki seyri (eÄŸri) klinik
+          olarak bilgilendiricidir. Vital gÃ¶stergelerin yÄ±llÄ±k ortalamalarÄ±nÄ±n ve lab deÄŸerlerinin
+          longitudinal trendlerinin izlenmesi, bireysel kardiyovaskÃ¼ler ve metabolik risk profilinin daha
+          erken fark edilmesini saÄŸlar.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Ölçüm sıklığı, izlenecek parametre seti ve tarama testleri bireyin yaşı, aile öyküsü, mevcut sağlık
-durumu ve ulusal rehberlere göre kişiselleştirilmelidir. Bu yazıdaki yol kişisel kayıt düzeni
-          içindir; kişisel ölçüm, tarama ve değerlendirme planı her zaman hekimle birlikte oluşturulur.
+          Ã–lÃ§Ã¼m sÄ±klÄ±ÄŸÄ±, izlenecek parametre seti ve tarama testleri bireyin yaÅŸÄ±, aile Ã¶ykÃ¼sÃ¼, mevcut saÄŸlÄ±k
+durumu ve ulusal rehberlere gÃ¶re kiÅŸiselleÅŸtirilmelidir. Bu yazÄ±daki yol kiÅŸisel kayÄ±t dÃ¼zeni
+          iÃ§indir; kiÅŸisel Ã¶lÃ§Ã¼m, tarama ve deÄŸerlendirme planÄ± her zaman hekimle birlikte oluÅŸturulur.
         </p>
         <p class="text-sm italic text-burgundy">
-          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+          â€” DoÃ§. Dr. Senai Aksoy, Estranova Bilimsel EditÃ¶rÃ¼
         </p>
       </section>
 
       <section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
         <p class="text-sm leading-relaxed text-ink/75">
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık
-          kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.
+          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme, tanÄ± veya tedavinin yerini almaz. SaÄŸlÄ±k
+          kararlarÄ±nÄ±z iÃ§in kendi hekiminizle birlikte deÄŸerlendirme yapÄ±nÄ±z.
         </p>
       </section>
     </SubmenuArticleBody>
@@ -321,3 +329,4 @@ durumu ve ulusal rehberlere göre kişiselleştirilmelidir. Bu yazıdaki yol ki�
 
   <SiteFooter />
 </SiteLayout>
+
