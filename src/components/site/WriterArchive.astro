@@ -76,7 +76,7 @@ const issuesWithWriter = issues
   .filter((entry) => entry.roles.length > 0)
   .sort((a, b) => b.issue.number - a.issue.number);
 
-// Bilimsel editör (Senai Aksoy) için "Doç. Dr." önekli görünüm
+// Bilimsel editör (Doç. Dr. Senai Aksoy) için akademik ön ekli görünüm
 const displayWithTitle =
   writer.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : writer.displayName;
 ---

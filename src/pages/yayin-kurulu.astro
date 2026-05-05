@@ -79,14 +79,20 @@ const consultants = [
 >
   <SiteNavbar currentPath="/yayin-kurulu" />
 
-  <main id="main-content" class="pt-24">
-    <section class="px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
+  <main id="main-content" class="pt-24 text-ink">
+    <section class="relative overflow-hidden border-y border-burgundy/10 bg-gradient-to-br from-cream-warm via-cream-soft to-white px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full bg-gold/15 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute left-5 top-32 hidden font-serif text-[9rem] lowercase leading-none text-burgundy/[0.035] md:block" aria-hidden="true">
+        kurul
+      </div>
 
-        <header class="mb-14 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-burgundy">Yayın Kurulu</p>
-          <h1 class="mb-6 font-serif text-5xl leading-[1.05] text-ink md:text-7xl">Editoryal ekip ve danışman kadro</h1>
-          <p class="text-lg leading-relaxed text-ink/65 md:text-xl">
+      <div class="relative mx-auto max-w-6xl">
+
+        <header class="mb-14 max-w-4xl">
+          <div class="mb-6 h-px w-24 bg-gold"></div>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-burgundy">Yayın Kurulu</p>
+          <h1 class="mb-7 font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-burgundy md:text-8xl">Editoryal ekip ve danışman kadro</h1>
+          <p class="max-w-3xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
             Estranova içerikleri, editoryal ekip, yazarlar ve tıbbi danışmanların ortak çalışmasıyla hazırlanır. Bu yapı;
             içeriklerin bilimsel doğruluk, dil sadeliği ve editoryal tarafsızlık ilkelerine göre yayımlanmasını destekler.
           </p>
@@ -95,11 +101,12 @@ const consultants = [
         <a
           id="neden-yaziyorlar"
           href="/manifesto"
-          class="group mb-10 block rounded-[32px] border-2 border-burgundy/25 bg-gradient-to-br from-white to-cream-soft p-8 ring-1 ring-gold/25 transition hover:border-burgundy/45 hover:shadow-md"
+          class="group relative mb-10 block overflow-hidden rounded-[34px] border border-burgundy/15 bg-white/84 p-8 shadow-[0_24px_70px_rgba(79,23,28,0.08)] ring-1 ring-gold/20 transition hover:-translate-y-0.5 hover:border-burgundy/35 hover:shadow-[0_30px_80px_rgba(79,23,28,0.12)] md:p-10"
         >
-          <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.28em] text-burgundy">Önce burayı okumanız tavsiye edilir</p>
-          <h2 class="mb-3 font-serif text-3xl italic leading-snug text-burgundy-deep md:text-4xl">Bu Masada Neden Varız</h2>
-          <p class="mb-2 leading-relaxed text-ink/75">
+          <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold via-burgundy/45 to-transparent"></div>
+          <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.28em] text-gold">Önce burayı okumanız tavsiye edilir</p>
+          <h2 class="mb-4 font-serif text-3xl italic leading-snug text-burgundy md:text-4xl">Bu Masada Neden Varız</h2>
+          <p class="mb-2 max-w-4xl leading-relaxed text-ink/75">
             Estranova'da yazan kadınlar; ün, etki veya marka için değil, deneyim aktarmak için yazıyor. Burada bulunmalarının
             nedeni yeni bir unvan eklemek değil; 40 yaş sonrasının bedensel ve zihinsel geçişlerini daha saygın, daha
             gerçekçi ve daha iyi bilgiyle konuşulabilir kılmak. Estranova bir vitrin değil; kadınların birbirine iyi
@@ -111,8 +118,9 @@ const consultants = [
           </span>
         </a>
 
-        <section class="mb-10 rounded-[32px] border border-burgundy/10 bg-cream-soft p-8">
-          <h2 class="mb-4 font-serif text-2xl text-ink">Yayın modeli</h2>
+        <section class="relative mb-10 overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/88 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
+          <h2 class="mb-4 font-serif text-3xl text-ink">Yayın modeli</h2>
           <p class="leading-relaxed text-ink/70">
             Estranova, bağımsız bir editoryal sağlık bilgi platformudur. Bu sayfadaki ekip yapısı, klinik tanıtımı için değil,
             içerik üretim ve doğrulama süreçlerinin şeffaf biçimde paylaşılması amacıyla sunulmaktadır.
@@ -154,23 +162,23 @@ const consultants = [
             yapılır.
           </p>
           <dl class="grid gap-3 md:grid-cols-2">
-            <div class="rounded-2xl border border-burgundy/15 bg-white p-5">
+            <div class="rounded-[24px] border border-gold/25 bg-cream-soft/45 p-5">
               <dt class="mb-2 font-serif italic text-burgundy">(güçlü kanıt)</dt>
               <dd class="text-sm leading-relaxed text-ink/70">Birden fazla bağımsız ve büyük ölçekli klinik çalışma, yerleşik klinik rehberler ve geniş uzlaşıyla desteklenen iddialar.</dd>
             </div>
-            <div class="rounded-2xl border border-burgundy/15 bg-white p-5">
+            <div class="rounded-[24px] border border-gold/25 bg-cream-soft/45 p-5">
               <dt class="mb-2 font-serif italic text-gold-bronze">(iyi kanıt)</dt>
               <dd class="text-sm leading-relaxed text-ink/70">Kapsamlı çalışmalarla desteklenen, sonuçları büyük ölçüde tutarlı ve tartışmalı yan yönleri sınırlı iddialar.</dd>
             </div>
-            <div class="rounded-2xl border border-burgundy/15 bg-white p-5">
+            <div class="rounded-[24px] border border-gold/25 bg-cream-soft/45 p-5">
               <dt class="mb-2 font-serif italic text-gold">(orta kanıt)</dt>
               <dd class="text-sm leading-relaxed text-ink/70">Mevcut çalışmaların çoğu aynı yönü işaret eder; bazı yöntemsel sınırlar veya henüz cevaplanmamış sorular bulunur.</dd>
             </div>
-            <div class="rounded-2xl border border-burgundy/15 bg-white p-5">
+            <div class="rounded-[24px] border border-gold/25 bg-cream-soft/45 p-5">
               <dt class="mb-2 font-serif italic text-gold">(sınırlı kanıt)</dt>
               <dd class="text-sm leading-relaxed text-ink/70">Az sayıda veya küçük ölçekli çalışma vardır; bulgular henüz tutarlı bir desen oluşturmaz.</dd>
             </div>
-            <div class="rounded-2xl border border-burgundy/15 bg-white p-5 md:col-span-2">
+            <div class="rounded-[24px] border border-gold/25 bg-cream-soft/45 p-5 md:col-span-2">
               <dt class="mb-2 font-serif italic text-gold">(zayıf kanıt)</dt>
               <dd class="text-sm leading-relaxed text-ink/70">Henüz yeterli klinik kanıt yoktur; ifade vaka serisi, küçük gözlem veya uzman görüşü düzeyindedir.</dd>
             </div>
@@ -178,7 +186,8 @@ const consultants = [
         </section>
 
         <!-- 1. Editörler -->
-        <section class="mb-10 rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm">
+        <section class="relative mb-10 overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/90 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Editörler</h2>
             <p class="leading-relaxed text-ink/70">
@@ -210,7 +219,8 @@ const consultants = [
         </section>
 
         <!-- 2. Yazar kadrosu -->
-        <section class="mb-10 rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm">
+        <section class="relative mb-10 overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/90 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Yazar Kadromuz</h2>
             <p class="leading-relaxed text-ink/70">
@@ -235,7 +245,8 @@ const consultants = [
         </section>
 
         <!-- 3. Bilimsel yazarlar -->
-        <section class="mb-10 rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm">
+        <section class="relative mb-10 overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/90 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Bilimsel Yazarlar</h2>
             <p class="leading-relaxed text-ink/70">
@@ -268,9 +279,10 @@ const consultants = [
         </section>
 
         <!-- 3. Editöryal süreç -->
-        <section class="mb-10 rounded-[32px] border border-burgundy/10 bg-cream-soft p-8">
-          <h2 class="mb-3 font-serif text-2xl text-ink">Editöryal süreç</h2>
-          <p class="leading-relaxed text-ink/70">
+        <section class="relative mb-10 overflow-hidden rounded-[34px] border border-gold/25 bg-burgundy p-8 text-white shadow-[0_26px_70px_rgba(79,23,28,0.18)] md:p-10">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-white/20 to-transparent"></div>
+          <h2 class="mb-3 font-serif text-3xl">Editöryal süreç</h2>
+          <p class="max-w-4xl leading-relaxed text-white/76">
             Metinler taslak, dil düzeni, kaynak kontrolü ve son okuma aşamalarından geçer; tıbbi terimler sade Türkçe ile
             açıklanır. Okuyucuya yönelik ton, panik yaratmadan bilgilendirme ilkesiyle korunur — abartılı vaat ve alarmist
             dilden uzak.
@@ -278,7 +290,8 @@ const consultants = [
         </section>
 
         <!-- 4. Tıbbi danışmanlar -->
-        <section class="mb-10 rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm">
+        <section class="relative mb-10 overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/90 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Tıbbi Danışmanlar</h2>
             <p class="leading-relaxed text-ink/70">
@@ -298,7 +311,8 @@ const consultants = [
         </section>
 
         <!-- 5. Danışmanlar -->
-        <section class="mb-10 rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm">
+        <section class="relative mb-10 overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/90 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Danışmanlar</h2>
             <p class="leading-relaxed text-ink/70">
@@ -317,9 +331,9 @@ const consultants = [
           </div>
         </section>
 
-        <section class="rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm">
+        <section class="rounded-[34px] border border-gold/30 bg-white/88 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
           <h2 class="mb-4 font-serif text-3xl text-ink">İletişim ve düzeltme talepleri</h2>
-          <p class="leading-relaxed text-ink/70">
+          <p class="max-w-4xl leading-relaxed text-ink/70">
             Yayın kurulu, içerik doğruluğu ve güncelliğiyle ilgili geri bildirimleri değerlendirir. Düzeltme veya görüş iletmek için
             <a href="mailto:editoral@estranova.com" class="font-semibold text-burgundy hover:underline">editoral@estranova.com</a>
             adresine yazabilirsiniz.

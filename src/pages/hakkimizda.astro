@@ -10,13 +10,19 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 >
   <SiteNavbar />
 
-  <main id="main-content" class="pt-24">
-    <section class="px-6 py-16 md:py-20">
-      <div class="max-w-4xl mx-auto">
-        <header class="max-w-3xl mb-14">
-          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Hakkımızda</p>
-          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Hakkımızda</h1>
-          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
+  <main id="main-content" class="pt-24 text-ink">
+    <section class="relative overflow-hidden border-y border-burgundy/10 bg-gradient-to-br from-cream-warm via-cream-soft to-white px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -right-28 top-12 h-80 w-80 rounded-full bg-gold/15 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute bottom-10 left-6 hidden font-serif text-[10rem] lowercase leading-none text-burgundy/[0.035] md:block" aria-hidden="true">
+        masa
+      </div>
+
+      <div class="relative mx-auto max-w-5xl">
+        <header class="mb-14 max-w-4xl">
+          <div class="mb-6 h-px w-24 bg-gold"></div>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-burgundy">Hakkımızda</p>
+          <h1 class="mb-7 font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-burgundy md:text-8xl">Hakkımızda</h1>
+          <p class="max-w-3xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
             Estranova, kadın sağlığı alanında güvenilir ve anlaşılır bilgiye ulaşmayı kolaylaştırmak için kuruldu.
           </p>
         </header>
@@ -24,11 +30,12 @@ import SiteFooter from '../components/site/SiteFooter.astro';
         <div class="space-y-6">
           <a
             href="/manifesto"
-            class="group block rounded-[32px] border-2 border-burgundy/25 bg-gradient-to-br from-white to-cream-soft p-8 ring-1 ring-gold/25 transition hover:border-burgundy/45 hover:shadow-md"
+            class="group relative block overflow-hidden rounded-[34px] border border-burgundy/15 bg-white/82 p-8 shadow-[0_24px_70px_rgba(79,23,28,0.08)] ring-1 ring-gold/20 transition hover:-translate-y-0.5 hover:border-burgundy/35 hover:shadow-[0_30px_80px_rgba(79,23,28,0.12)] md:p-10"
           >
-            <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.26em] text-burgundy">Önce burayı okumanız tavsiye edilir</p>
-            <h2 class="mb-3 font-serif text-3xl italic leading-snug text-burgundy-deep md:text-4xl">Bu Masada Neden Varız</h2>
-            <p class="mb-4 leading-relaxed text-charcoal/72">
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold via-burgundy/45 to-transparent"></div>
+            <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.28em] text-gold">Önce burayı okumanız tavsiye edilir</p>
+            <h2 class="mb-4 font-serif text-3xl italic leading-snug text-burgundy md:text-4xl">Bu Masada Neden Varız</h2>
+            <p class="mb-5 max-w-3xl leading-relaxed text-ink/72">
               Estranova'da yazan kadınlar neden burada yazıyor? Hangi sözü vermiyoruz? Manifestomuz —
               <em>başarı hikâyesi vitrini değil, deneyim paylaşan bir ortak masa</em>.
             </p>
@@ -38,71 +45,75 @@ import SiteFooter from '../components/site/SiteFooter.astro';
             </span>
           </a>
 
-          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
-            <h2 class="text-3xl font-serif mb-4">Platform Hikayesi</h2>
-            <p class="text-charcoal/70 leading-relaxed mb-4">
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/88 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
+            <h2 class="mb-4 font-serif text-3xl text-ink">Platform Hikayesi</h2>
+            <p class="mb-4 leading-relaxed text-ink/70">
               Estranova, 40+ kadınların güvenilir bilgiye erişim ihtiyacından doğdu. Perimenopoz ve menopoz döneminde,
               internette çok fazla dağınık ve çelişkili içerik bulunuyor. Bu durum, hangi bilginin doğru olduğuna karar vermeyi zorlaştırıyor.
             </p>
-            <p class="text-charcoal/70 leading-relaxed mb-4">
+            <p class="mb-4 leading-relaxed text-ink/70">
               Bu platform, karmaşık sağlık bilgisini sade ve düzenli bir yapıda sunmak için oluşturuldu. İçerikler; gündelik yaşamda
             karşılaşılan sorulara net bir yol sunmayı, okurun konuyu adım adım anlamasını ve kendi sağlık sürecini daha bilinçli takip etmesini hedefler.
             </p>
-            <p class="text-charcoal/70 leading-relaxed">
+            <p class="leading-relaxed text-ink/70">
               Estranova bir klinik tanıtım alanı değildir. Bağımsız bir editoryal yayın platformu olarak, bilgi odaklı ve tarafsız bir
               yaklaşımı korur.
             </p>
           </section>
 
-          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
-            <h2 class="text-3xl font-serif mb-4">Misyon ve Vizyon</h2>
-            <p class="text-charcoal/70 leading-relaxed mb-4">
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/88 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
+            <h2 class="mb-4 font-serif text-3xl text-ink">Misyon ve Vizyon</h2>
+            <p class="mb-4 leading-relaxed text-ink/70">
               Bilimsel bilgiyi herkesin anlayacağı dilde sunmak; kadınların sağlıkla ilgili konularda daha net, daha güvenli ve daha bilinçli
               karar süreçleri kurmasına destek olmak.
             </p>
-            <p class="text-charcoal/70 leading-relaxed">
+            <p class="leading-relaxed text-ink/70">
               Uzun vadeli hedefimiz, Türkiye'nin en güvenilir editoryal kadın sağlığı platformu olmak.
             </p>
           </section>
 
-          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
-            <h2 class="text-3xl font-serif mb-6">Değerlerimiz</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
-                <h3 class="text-xl font-serif mb-2">Bağımsızlık</h3>
-                <p class="text-charcoal/70 leading-relaxed">İçerik üretiminde ticari baskılardan uzak, editoryal önceliklerle hareket ederiz.</p>
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/88 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
+            <h2 class="mb-6 font-serif text-3xl text-ink">Değerlerimiz</h2>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <article class="rounded-[26px] border border-gold/25 bg-cream-soft/45 p-6">
+                <h3 class="mb-2 font-serif text-xl text-burgundy">Bağımsızlık</h3>
+                <p class="leading-relaxed text-ink/70">İçerik üretiminde ticari baskılardan uzak, editoryal önceliklerle hareket ederiz.</p>
               </article>
 
-              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
-                <h3 class="text-xl font-serif mb-2">Bilimsel Doğruluk</h3>
-                <p class="text-charcoal/70 leading-relaxed">Bilgiyi güncel bilimsel kaynaklar ve editoryal kontrol ile sunarız.</p>
+              <article class="rounded-[26px] border border-gold/25 bg-cream-soft/45 p-6">
+                <h3 class="mb-2 font-serif text-xl text-burgundy">Bilimsel Doğruluk</h3>
+                <p class="leading-relaxed text-ink/70">Bilgiyi güncel bilimsel kaynaklar ve editoryal kontrol ile sunarız.</p>
               </article>
 
-              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
-                <h3 class="text-xl font-serif mb-2">Tarafsızlık</h3>
-                <p class="text-charcoal/70 leading-relaxed">Yargılayıcı olmayan, yönlendirmeyen ve dengeyi gözeten bir dil kullanırız.</p>
+              <article class="rounded-[26px] border border-gold/25 bg-cream-soft/45 p-6">
+                <h3 class="mb-2 font-serif text-xl text-burgundy">Tarafsızlık</h3>
+                <p class="leading-relaxed text-ink/70">Yargılayıcı olmayan, yönlendirmeyen ve dengeyi gözeten bir dil kullanırız.</p>
               </article>
 
-              <article class="rounded-2xl border border-primary/10 bg-surface p-6">
-                <h3 class="text-xl font-serif mb-2">Erişilebilirlik</h3>
-                <p class="text-charcoal/70 leading-relaxed">Tıbbi konuları sade Türkçe ile anlatır, bilgiyi herkes için ulaşılabilir hale getiririz.</p>
+              <article class="rounded-[26px] border border-gold/25 bg-cream-soft/45 p-6">
+                <h3 class="mb-2 font-serif text-xl text-burgundy">Erişilebilirlik</h3>
+                <p class="leading-relaxed text-ink/70">Tıbbi konuları sade Türkçe ile anlatır, bilgiyi herkes için ulaşılabilir hale getiririz.</p>
               </article>
             </div>
           </section>
 
-          <section class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
-            <h2 class="text-3xl font-serif mb-4">İçerik Yaklaşımımız</h2>
-            <p class="text-charcoal/70 leading-relaxed">
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/88 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
+            <h2 class="mb-4 font-serif text-3xl text-ink">İçerik Yaklaşımımız</h2>
+            <p class="leading-relaxed text-ink/70">
               Estranova içerikleri, bilimsel editör denetiminden geçer. Metinlerde kanıt düzeyi sistemi kullanılır ve tıbbi kavramlar sade Türkçe ile açıklanır.
               Amaç, bilgi karmaşasını azaltmak ve okurun güvenilir içeriğe düzenli bir yapıda ulaşmasını sağlamaktır.
             </p>
           </section>
 
-          <section class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
-            <h2 class="text-3xl font-serif mb-4">Editoryal Politika</h2>
-            <p class="text-charcoal/70 leading-relaxed">
+          <section class="rounded-[34px] border border-gold/30 bg-burgundy p-8 text-white shadow-[0_26px_70px_rgba(79,23,28,0.18)] md:p-10">
+            <h2 class="mb-4 font-serif text-3xl">Editoryal Politika</h2>
+            <p class="leading-relaxed text-white/76">
               İçerik üretim ilkelerimizi ve inceleme sürecimizi daha detaylı görmek için
-              <a href="/editoryal-politika" class="text-primary font-semibold hover:underline">Editoryal Politika</a>
+              <a href="/editoryal-politika" class="font-semibold text-cream-warm underline decoration-gold/55 underline-offset-4 hover:decoration-gold">Editoryal Politika</a>
               sayfasını inceleyebilirsiniz.
             </p>
           </section>

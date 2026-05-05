@@ -2,7 +2,7 @@
  * Aylık sayı (Issue) manifest'i — Eşik dergisi.
  *
  * "Issue" Estranova dergi formatının üst kavramıdır:
- *   - Editör mektubu (Senai Aksoy bilimsel açılış)
+ *   - Editör mektubu (Doç. Dr. Senai Aksoy bilimsel açılış)
  *   - Kapak dosyası (monthly-dossier.ts → MonthlyDossier — 4-6 yazılık tema)
  *   - Yazar köşeleri (sabit aylık imza yazılar — faz 2'de doldurulur)
  *   - Arka sayfa (kısa deneme — faz 2'de doldurulur)
@@ -28,7 +28,7 @@ import { defaultPlannedSections } from './issue-sections';
 export type IssueStatus = 'current' | 'archived' | 'upcoming';
 
 export interface IssueEditorLetter {
-  /** writers.ts slug'ı — şu an Senai Aksoy bilimsel editör */
+/** writers.ts slug'ı — şu an Doç. Dr. Senai Aksoy bilimsel editör */
   writerSlug: string;
   /** 1-2 paragraf bilimsel açılış; \n\n ile paragraf ayrılır */
   body: string;
@@ -133,7 +133,7 @@ export const issue01: Issue = {
   },
   editorLetter: {
     writerSlug: 'senai-aksoy',
-    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBu sayıyı özellikle üç sesle kuruyoruz: Berna Aksoy uykunun hormonal zeminini sadeleştiriyor; Senai Aksoy gece terlemesinin mahrem ve klinik yanını utanmadan konuşuyor; Alara Baykent akşam hareketini performans baskısı değil, bedeni geceye hazırlayan küçük bir geçiş olarak okuyor. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, yaşıt sesinde ve sakin bir editöryal düzende okurla buluşturmak.',
+    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBu sayıyı özellikle üç sesle kuruyoruz: Berna Aksoy uykunun hormonal zeminini sadeleştiriyor; Doç. Dr. Senai Aksoy gece terlemesinin mahrem ve klinik yanını utanmadan konuşuyor; Alara Baykent akşam hareketini performans baskısı değil, bedeni geceye hazırlayan küçük bir geçiş olarak okuyor. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, yaşıt sesinde ve sakin bir editöryel düzende okurla buluşturmak.',
   },
   coverDossierSlug: '2026-05-uyuyamadigimiz-geceler',
   releaseDate: '2026-05-01',

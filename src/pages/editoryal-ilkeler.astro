@@ -56,14 +56,21 @@ const aiLimits = [
 >
   <SiteNavbar currentPath="/editoryal-ilkeler" />
 
-  <main id="main-content" class="pt-24">
-    <section class="px-6 py-16 md:py-20">
+  <main id="main-content" class="pt-24 text-ink">
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -left-24 top-14 h-80 w-80 rounded-full bg-gold/12 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-6 top-10 hidden font-serif text-[10rem] leading-none tracking-[-0.08em] text-burgundy/6 lg:block">
+        editör
+      </div>
       <div class="mx-auto max-w-4xl">
 
         <header class="mb-14 max-w-3xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-burgundy">Editöryal İlkelerimiz</p>
-          <h1 class="mb-6 font-serif text-5xl leading-[1.05] text-ink md:text-7xl">Yayın felsefemiz</h1>
-          <p class="text-lg leading-relaxed text-ink/65 md:text-xl">
+          <div class="mb-5 flex max-w-2xl items-center gap-4">
+            <span class="h-px flex-1 bg-gold/45"></span>
+            <p class="text-xs font-bold uppercase tracking-[0.28em] text-burgundy">Editöryal İlkelerimiz</p>
+          </div>
+          <h1 class="mb-6 font-serif text-6xl leading-[0.92] tracking-[-0.045em] text-burgundy md:text-8xl">Yayın felsefemiz</h1>
+          <p class="max-w-3xl border-l border-gold/50 pl-5 font-serif text-xl italic leading-relaxed text-ink/76 md:text-2xl">
             Estranova'da yayımlanan tüm tıbbi içerikler, alanında uzman hekimlerin bilgi birikimi ve klinik deneyimi temelinde hazırlanır.
             Bilgi üretiminde modern teknolojilerden faydalanırken bilimsel doğruluk, etik bütünlük ve şeffaflık ilkelerinden taviz vermeyiz.
           </p>
@@ -72,7 +79,8 @@ const aiLimits = [
         <div class="space-y-6">
 
           <!-- 1. Üretim sürecimiz -->
-          <section class="rounded-[32px] border border-burgundy/10 bg-white p-8 editorial-shadow">
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white p-8 shadow-xl shadow-burgundy/8 ring-1 ring-white/70">
+            <span class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gold/60"></span>
             <h2 class="mb-3 font-serif text-3xl text-ink">Üretim sürecimiz</h2>
             <p class="mb-7 leading-relaxed text-ink/70">
               Her makale, aşağıdaki çok katmanlı süreçten geçer.
@@ -96,7 +104,8 @@ const aiLimits = [
           </section>
 
           <!-- 2. Eser sahipliği -->
-          <section class="rounded-[32px] border border-burgundy/10 bg-cream-soft p-8">
+          <section class="relative overflow-hidden rounded-[34px] border border-gold/30 bg-cream-soft p-8 shadow-xl shadow-burgundy/8 ring-1 ring-white/70">
+            <span class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gold/60"></span>
             <h2 class="mb-3 font-serif text-3xl text-ink">Eser sahipliği</h2>
             <p class="mb-5 leading-relaxed text-ink/70">
               Her makalenin eser sahibi, makalenin altında adı geçen yazardır. Yapay zekâ yalnızca taslak üretim aracı olarak kullanılır;
@@ -126,7 +135,8 @@ const aiLimits = [
           </section>
 
           <!-- 3. Tıbbi sorumluluk -->
-          <section class="rounded-[32px] border border-burgundy/10 bg-white p-8 editorial-shadow">
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white p-8 shadow-xl shadow-burgundy/8 ring-1 ring-white/70">
+            <span class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gold/60"></span>
             <h2 class="mb-3 font-serif text-3xl text-ink">Tıbbi sorumluluk</h2>
             <p class="leading-relaxed text-ink/70">
               İçeriklerin tıbbi ve bilimsel doğruluğundan bilimsel editörümüz
@@ -137,7 +147,8 @@ const aiLimits = [
           </section>
 
           <!-- 4. Yapay zekâ kullanımının sınırları -->
-          <section class="rounded-[32px] border border-burgundy/10 bg-cream-soft p-8">
+          <section class="relative overflow-hidden rounded-[34px] border border-gold/30 bg-cream-soft p-8 shadow-xl shadow-burgundy/8 ring-1 ring-white/70">
+            <span class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gold/60"></span>
             <h2 class="mb-3 font-serif text-3xl text-ink">Yapay zekâ kullanımının sınırları</h2>
             <p class="mb-7 leading-relaxed text-ink/70">
               Estranova'da yapay zekânın hangi işlerde yardımcı olduğunu ve hangi sınırların dışına çıkmadığını şeffaf biçimde paylaşıyoruz.
@@ -171,7 +182,8 @@ const aiLimits = [
           </section>
 
           <!-- 5. Yanlışlık bildirimi -->
-          <section class="rounded-[32px] border border-burgundy/10 bg-white p-8 editorial-shadow">
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white p-8 shadow-xl shadow-burgundy/8 ring-1 ring-white/70">
+            <span class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gold/60"></span>
             <h2 class="mb-3 font-serif text-3xl text-ink">Yanlışlık bildirimi</h2>
             <p class="leading-relaxed text-ink/70">
               İçeriklerimizde tespit ettiğiniz herhangi bir yanlışlığı

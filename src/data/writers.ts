@@ -701,12 +701,9 @@ export const writers: Writer[] = [
   {
     // "Geçici yazar" personası — hassas konularda (vajinal sağlık, idrar
     // kaçırma, libido, cinsellikte ağrı) yazarlar geri çekildiğinde devreye
-    // giriyor. "Doç. Dr." öneki bilinçli olarak düşürüldü: klinik otorite
-    // değil, "bu işi bilen biri" sesi. Aynı kişi makale tıbbi inceleyici
-    // olarak Doç. Dr. Senai Aksoy adıyla görev alıyor (article-schema.ts
-    // medicalReviewer default'u). Bu iki rol bilinçli olarak ayrı tutuldu.
+    // Görünür yazar adı akademik unvanıyla yazılır; slug sabit kalır.
     slug: 'senai-aksoy',
-    displayName: 'Senai Aksoy',
+    displayName: 'Doç. Dr. Senai Aksoy',
     role: 'Kimsenin Yazmak İstemediği Konu Yazarı',
     ageBand: '50+',
     publicBio:

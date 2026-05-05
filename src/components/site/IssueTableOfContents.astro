@@ -24,7 +24,7 @@ const { issue } = Astro.props;
 const coverDossier = resolveCoverDossier(issue);
 const issuePad = formatIssuePad(issue.number);
 
-// Editör mektubu görünür ad — Senai Aksoy için "Doç. Dr." ön ek
+// Editör mektubu görünür ad — Doç. Dr. Senai Aksoy için akademik ön ek
 const editorWriter = writers.find((w) => w.slug === issue.editorLetter.writerSlug);
 const editorDisplayName =
   editorWriter?.slug === 'senai-aksoy'
