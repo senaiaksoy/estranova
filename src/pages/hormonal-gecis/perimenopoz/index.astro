@@ -49,14 +49,31 @@ const tocArticles = [
 
 const themes = [
   {
+    step: '01',
     title: 'Uyku ve gece terlemesi',
     text: 'Uyku bölünmesi ve gece terlemesi vasomotor belirtilerle ilişkilendirilebilir; günlük güç ve ruh hali üzerindeki etkileri birlikte ele alınır.',
     href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
   },
   {
+    step: '02',
     title: 'Belirtileri sınıflandırmak',
     text: 'Sıcak basması, uyku, kilo ve cilt gibi başlıklarda semptom rehberi ile kendi haritanızı çıkarabilirsiniz.',
     href: '/symptoms',
+  },
+];
+
+const neighboringStages = [
+  {
+    step: '02',
+    href: '/hormonal-gecis/menopoza-hazirlik',
+    title: 'Menopoza hazırlık',
+    text: 'Rutin, hareket ve beslenme başlıklarında planlı adımlar için içerik özetleri.',
+  },
+  {
+    step: '03',
+    href: '/hormonal-gecis/menopoz',
+    title: 'Menopoz',
+    text: 'Son adetten sonra tanımlanan dönem ve sık okunan menopoz rehberleri.',
   },
 ];
 ---
@@ -76,7 +93,7 @@ const themes = [
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
-    <section class="border-b border-burgundy/10 bg-cream-soft px-6 py-12 md:py-16">
+    <section class="border-b border-burgundy/10 bg-[#fffaf0] px-6 py-14 md:py-18">
       <div class="mx-auto max-w-6xl">
         <nav class="mb-8 text-sm text-ink/60" aria-label="İçerik yolu">
           <ol class="flex flex-wrap items-center gap-2">
@@ -88,8 +105,11 @@ const themes = [
           </ol>
         </nav>
 
-        <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
+        <div class="grid gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:items-start lg:gap-16">
           <div>
+            <p class="mb-6 font-serif text-3xl italic leading-tight text-burgundy-deep md:text-5xl">
+              Hormonlar bu dönemde tek çizgi halinde değil, dalga dalga konuşur.
+            </p>
             <p class="mb-5 text-lg leading-relaxed text-ink/82 md:text-xl">
               Perimenopoz, üreme çağından menopoza uzanan doğal sürecin adıdır. Hormonlar tek düz bir çizgide düşmez; dalgalanma,
               adette düzensizlik, uyku ve ruh halinde dalgalanmalar sık görülür. Burada amaç panik değil,{' '}
@@ -103,10 +123,10 @@ const themes = [
           </div>
 
           <aside
-            class="rounded-[28px] border border-burgundy/15 bg-white p-7 shadow-sm md:p-8"
+            class="border-y border-burgundy/15 bg-white/62 p-7 md:p-8"
             aria-labelledby="perimenopoz-ozet-baslik"
           >
-            <h2 id="perimenopoz-ozet-baslik" class="mb-4 font-serif text-xl text-ink">Bu evrede sık sorulanlar</h2>
+            <h2 id="perimenopoz-ozet-baslik" class="mb-5 font-serif text-3xl leading-tight text-ink">Bu evrede sık sorulanlar</h2>
             <ul class="space-y-4 text-sm leading-relaxed text-ink/78">
               <li class="border-b border-burgundy/10 pb-4">
                 <span class="block font-semibold text-ink">Ne kadar sürer?</span>
@@ -129,9 +149,9 @@ const themes = [
     {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={true}>
-      <header class="mb-10 max-w-3xl">
+      <header class="mb-10 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
-        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
+        <h2 class="font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Bu evreden bir okuma</h2>
       </header>
 
       {editorPick && (<EditorPickCard
@@ -146,35 +166,40 @@ const themes = [
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>
-      <header class="mb-10 max-w-3xl">
+      <header class="mb-10 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
         <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bu Evrede Okumalar</p>
-        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Perimenopoz okumaları</h2>
+        <h2 class="font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Perimenopoz okumaları</h2>
       </header>
 
       <MagazineTOC items={tocArticles} />
     </SubmenuSection>
 
     <!-- Themes -->
-    <section class="bg-white px-6 py-16 md:py-20">
+    <section class="bg-white px-6 py-16 md:py-24">
       <div class="mx-auto max-w-6xl">
-        <header class="mb-10 max-w-3xl">
+        <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Konuya göre</p>
-          <h2 class="mb-4 font-serif text-3xl leading-tight md:text-4xl">Yaşam başlıklarıyla okumak</h2>
-          <p class="text-lg leading-relaxed text-ink/75">
-            Hormonal geçiş yalnızca “kadın hastalıkları” kutusunda değildir; uyku, duygu düzeni ve günlük enerji aynı tablonun parçasıdır.
-          </p>
+          <div>
+            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Yaşam başlıklarıyla okumak</h2>
+            <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
+              Hormonal geçiş yalnızca “kadın hastalıkları” kutusunda değildir; uyku, duygu düzeni ve günlük enerji aynı tablonun parçasıdır.
+            </p>
+          </div>
         </header>
 
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
           {
             themes.map((t) => (
               <a
                 href={t.href}
-                class="group rounded-[26px] border border-burgundy/12 bg-cream-soft p-7 transition hover:border-burgundy/28 hover:shadow-sm"
+                class="group grid gap-5 py-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[88px_1fr_auto] md:items-start md:gap-8"
               >
-                <h3 class="mb-2 font-serif text-xl text-ink group-hover:text-burgundy">{t.title}</h3>
-                <p class="text-sm leading-relaxed text-ink/72">{t.text}</p>
-                <span class="mt-4 inline-block text-sm font-semibold text-burgundy group-hover:underline">İçeriği aç</span>
+                <span class="font-serif text-5xl leading-none tabular-nums text-gold md:text-6xl">{t.step}</span>
+                <span>
+                  <span class="block font-serif text-3xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">{t.title}</span>
+                  <span class="mt-2 block text-base leading-relaxed text-ink/72">{t.text}</span>
+                </span>
+                <span class="font-serif text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
               </a>
             ))
           }
@@ -183,31 +208,28 @@ const themes = [
     </section>
 
     <!-- Neighboring stages -->
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20">
+    <section class="border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
       <div class="mx-auto max-w-6xl">
-        <p class="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Geçişin devamı</p>
-        <h2 class="mb-8 font-serif text-2xl md:text-3xl">Komşu evreler</h2>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <a
-            href="/hormonal-gecis/menopoza-hazirlik"
-            class="rounded-[28px] border border-burgundy/12 bg-white p-8 transition hover:border-burgundy/25"
-          >
-            <h3 class="mb-2 font-serif text-xl">Menopoza hazırlık</h3>
-            <p class="text-sm leading-relaxed text-ink/75">
-              Rutin, hareket ve beslenme başlıklarında planlı adımlar için içerik özetleri.
-            </p>
-            <span class="mt-4 inline-block font-semibold text-burgundy">Sayfaya git →</span>
-          </a>
-          <a
-            href="/hormonal-gecis/menopoz"
-            class="rounded-[28px] border border-burgundy/12 bg-white p-8 transition hover:border-burgundy/25"
-          >
-            <h3 class="mb-2 font-serif text-xl">Menopoz</h3>
-            <p class="text-sm leading-relaxed text-ink/75">
-              Son adetten sonra tanımlanan dönem ve sık okunan menopoz rehberleri.
-            </p>
-            <span class="mt-4 inline-block font-semibold text-burgundy">Sayfaya git →</span>
-          </a>
+        <header class="mb-10 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Geçişin devamı</p>
+          <h2 class="font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Komşu evreler</h2>
+        </header>
+        <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
+          {
+            neighboringStages.map((stage) => (
+              <a
+                href={stage.href}
+                class="group grid gap-5 py-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[88px_1fr_auto] md:items-start md:gap-8"
+              >
+                <span class="font-serif text-5xl leading-none tabular-nums text-gold md:text-6xl">{stage.step}</span>
+                <span>
+                  <span class="block font-serif text-3xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">{stage.title}</span>
+                  <span class="mt-2 block text-base leading-relaxed text-ink/72">{stage.text}</span>
+                </span>
+                <span class="font-serif text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+            ))
+          }
         </div>
 
         <p class="mt-12 text-center">
