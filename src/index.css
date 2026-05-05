@@ -16,12 +16,15 @@
   & h2 {
     counter-increment: estranova-chapter;
     font-family: var(--font-serif);
-    font-size: 2.25rem;
-    line-height: 1.1;
+    font-size: clamp(2.15rem, 4vw, 3.15rem);
+    line-height: 1.04;
     letter-spacing: -0.015em;
     margin-top: 4rem;
     margin-bottom: 1.25rem;
     position: relative;
+  }
+  & h2:first-child {
+    margin-top: 0.35rem;
   }
   & h2::before {
     content: counter(estranova-chapter, decimal-leading-zero);
@@ -54,6 +57,17 @@
     line-height: 1.75;
     max-width: 64ch;
   }
+  & strong {
+    color: #6B2D3E;
+    font-weight: 650;
+  }
+  & ul,
+  & ol {
+    max-width: 62ch;
+  }
+  & li::marker {
+    color: #C9A96E;
+  }
   & h2 + p {
     font-family: var(--font-serif);
     font-style: italic;
@@ -63,17 +77,40 @@
     max-width: 58ch;
   }
   & blockquote {
+    background: linear-gradient(135deg, rgba(253, 248, 240, 0.92), rgba(248, 238, 240, 0.62));
+    border-radius: 1.4rem;
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 1.35rem;
     line-height: 1.5;
     border-left: 3px solid #C9A96E;
-    padding-left: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  }
+  & table {
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid rgba(156, 40, 69, 0.12);
+    border-radius: 1.25rem;
+    box-shadow: 0 18px 42px -34px rgba(44, 22, 28, 0.28);
+  }
+  & thead {
+    background: #f8eef0;
+  }
+  & th {
+    color: #6B2D3E;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  & td {
+    border-top: 1px solid rgba(156, 40, 69, 0.1);
   }
   & .evidence {
     display: inline;
     margin: 0 0.15em;
-    color: #b07683;
+    color: #C9A96E;
     font-size: 0.85em;
     cursor: help;
     white-space: nowrap;
@@ -84,10 +121,10 @@
     color: #C9A96E;
   }
   & .evidence[data-level="5"] .evidence-label {
-    color: #c9a96e;
+    color: #6B2D3E;
   }
   & .evidence[data-level="4"] .evidence-label {
-    color: #b07683;
+    color: #8a6a2e;
   }
   & .evidence[data-level="1"] {
     opacity: 0.8;
@@ -169,7 +206,7 @@
   .evidence {
     display: inline;
     margin: 0 0.15em;
-    color: #b07683;
+    color: #C9A96E;
     font-size: 0.85em;
     cursor: help;
     white-space: nowrap;
@@ -180,10 +217,10 @@
     color: #c9a96e;
   }
   .evidence[data-level='5'] .evidence-label {
-    color: #c9a96e;
+    color: #6B2D3E;
   }
   .evidence[data-level='4'] .evidence-label {
-    color: #b07683;
+    color: #8a6a2e;
   }
   .evidence[data-level='1'] {
     opacity: 0.8;

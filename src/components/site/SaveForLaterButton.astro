@@ -35,11 +35,11 @@ const { slug, title, variant = 'full' } = Astro.props;
   data-slug={slug}
   data-title={title}
   class:list={[
-    'group inline-flex items-center gap-2 rounded-full border bg-white text-xs font-semibold uppercase tracking-[0.18em] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35',
+    'group inline-flex items-center gap-2 rounded-full border bg-white/88 text-xs font-semibold uppercase tracking-[0.18em] shadow-sm ring-1 ring-white/70 backdrop-blur transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35',
     variant === 'compact'
       ? 'border-burgundy/20 px-3 py-1.5 text-[10px]'
       : 'border-burgundy/25 px-4 py-2',
-    'text-burgundy hover:border-burgundy/45 hover:bg-cream-soft',
+    'text-burgundy hover:-translate-y-0.5 hover:border-burgundy/45 hover:bg-cream-soft hover:shadow-[0_14px_30px_-24px_rgba(44,22,28,0.45)]',
     'data-[saved=true]:border-burgundy data-[saved=true]:bg-burgundy data-[saved=true]:text-cream-soft',
   ]}
   aria-label="Bu yazıyı sonra oku listesine ekle"

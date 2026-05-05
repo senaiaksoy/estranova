@@ -11,10 +11,12 @@ const { class: className } = Astro.props;
 
 <section
   class:list={[
-    'rounded-[32px] border border-burgundy/10 bg-white p-8 shadow-[0_22px_55px_-32px_rgba(44,22,28,0.2)] ring-1 ring-black/[0.06] md:p-10 lg:p-12',
+    'relative overflow-hidden rounded-[34px] border border-burgundy/10 bg-white p-8 shadow-[0_30px_80px_-42px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.06] md:p-10 lg:p-12',
     className,
   ]}
 >
+  <div class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
+  <div class="pointer-events-none absolute right-8 top-8 h-24 w-24 rounded-full bg-cream-warm/70 blur-2xl"></div>
   <div class="prose prose-lg prose-estranova max-w-none">
     <slot />
   </div>

@@ -27,7 +27,11 @@ interface Props {
 const { entries } = Astro.props;
 ---
 
-<nav data-toc aria-label="İçindekiler" class="font-sans">
+<nav
+  data-toc
+  aria-label="İçindekiler"
+  class="rounded-[26px] border border-burgundy/12 bg-white/72 p-5 font-sans shadow-[0_18px_42px_-32px_rgba(44,22,28,0.32)] ring-1 ring-white/70 backdrop-blur"
+>
   <div
     data-toc-progress
     aria-hidden="true"
@@ -39,20 +43,21 @@ const { entries } = Astro.props;
     ></div>
   </div>
 
-  <p class="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
-    İçindekiler
+  <p class="mb-1 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+    Makale Haritası
   </p>
+  <p class="mb-5 font-serif text-lg italic leading-tight text-ink/80">Bölüm bölüm oku</p>
 
-  <ol class="space-y-3 text-sm leading-snug">
+  <ol class="space-y-3.5 text-sm leading-snug">
     {
       entries.map((entry, i) => (
         <li>
           <a
             href={`#${entry.id}`}
             data-toc-link={entry.id}
-            class="group block text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 hover:text-burgundy data-[active=true]:font-semibold data-[active=true]:text-burgundy"
+            class="group grid grid-cols-[2rem_1fr] gap-2 rounded-2xl px-2 py-1.5 text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 hover:bg-cream-soft/70 hover:text-burgundy data-[active=true]:bg-cream-warm/70 data-[active=true]:font-semibold data-[active=true]:text-burgundy"
           >
-            <span class="mr-2 font-serif tabular-nums text-gold transition group-data-[active=true]:text-burgundy">
+            <span class="font-serif tabular-nums text-gold transition group-data-[active=true]:text-burgundy">
               {String(i + 1).padStart(2, '0')}
             </span>
             <span class="group-hover:underline group-hover:decoration-burgundy/40 group-hover:underline-offset-2 group-data-[active=true]:underline group-data-[active=true]:decoration-burgundy/60 group-data-[active=true]:underline-offset-4">
