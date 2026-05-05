@@ -14,6 +14,7 @@ import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import HubStartingPath from '../../components/site/HubStartingPath.astro';
+import HubEditorialBrief from '../../components/site/HubEditorialBrief.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 import { hubStartingPaths } from '../../data/hub-starting-paths';
@@ -90,6 +91,18 @@ const tocArticles = [
     readingMinutes: 9,
   },
 ];
+
+const editorialBrief = {
+  kicker: 'Bölüm Notu',
+  title: 'Longevity gürültüsünü değil, kanıtın ritmini takip edin',
+  dek: 'Bu bölümde beslenme, kemik, kas, vitaminler ve deneysel yaklaşımlar aynı sakin süzgeçten geçer: ne biliniyor, ne abartılıyor, ne kişisel değerlendirme ister?',
+  quote: 'Uzun yaşam fikri, en çok yavaş okunduğunda güvenilir hale gelir.',
+  items: [
+    'Önce kemik, kas, uyku ve beslenme gibi temel koruyucu sağlık başlıklarını okuyun.',
+    'Takviye ve deneysel uygulamalarda kanıt düzeyi, güvenlik ve kişisel risk farkını ayırın.',
+    'Yeni görünen her öneriyi günlük hayata eklemeden önce gereklilik, ölçüm ve takip sorularıyla tartın.',
+  ],
+};
 ---
 
 <SiteLayout
@@ -108,6 +121,8 @@ const tocArticles = [
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
+
+    <HubEditorialBrief {...editorialBrief} />
 
     {startingPath && (
       <HubStartingPath

@@ -12,6 +12,7 @@ import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import HubStartingPath from '../../components/site/HubStartingPath.astro';
+import HubEditorialBrief from '../../components/site/HubEditorialBrief.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 import { hubStartingPaths } from '../../data/hub-starting-paths';
@@ -44,6 +45,18 @@ const pillars = [
     image: submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar']!,
   },
 ];
+
+const editorialBrief = {
+  kicker: 'Bölüm Notu',
+  title: 'Bilimi büyük vaatlerden arındırarak okumak',
+  dek: 'Burada amaç araştırmayı heyecanlı başlığa çevirmek değil; kanıtın nerede güçlü, nerede erken, nerede kişisel karar gerektirdiğini görünür kılmak.',
+  quote: 'İyi bilim, bazen kesin cevap değil; daha iyi soru sorma disiplinidir.',
+  items: [
+    'Mekanizma yazılarını tedavi önerisi gibi değil, kavramları netleştiren arka plan olarak okuyun.',
+    'Yeni araştırmalarda insan verisi, takip süresi ve gerçek yaşam etkisini ayrı ayrı değerlendirin.',
+    'Kanıt düzeyi düşük başlıklarda beklentiyi ölçülü tutun; kişisel kararları tıbbi değerlendirmeyle birlikte ele alın.',
+  ],
+};
 ---
 
 <SiteLayout
@@ -62,6 +75,9 @@ const pillars = [
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
+
+    <HubEditorialBrief {...editorialBrief} />
+
     {startingPath && (
       <HubStartingPath
         kicker={startingPath.kicker}

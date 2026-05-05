@@ -12,6 +12,7 @@ import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import HubStartingPath from '../../components/site/HubStartingPath.astro';
+import HubEditorialBrief from '../../components/site/HubEditorialBrief.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 import { hubStartingPaths } from '../../data/hub-starting-paths';
@@ -44,6 +45,18 @@ const pillars = [
     image: submenuHeroByRoute['/zihin-denge/bilissel-saglik']!,
   },
 ];
+
+const editorialBrief = {
+  kicker: 'Bölüm Notu',
+  title: 'Zihnin yorgunluğunu karakter meselesi gibi okumayın',
+  dek: 'Uyku, duygu durumu ve odaklanma değişimleri çoğu zaman aynı biyolojik zeminde birbirine dokunur; bu yüzden başlıkları tek tek değil, birlikte okumak gerekir.',
+  quote: 'Bazen en doğru başlangıç, kendinize daha sert davranmak değil, geceyi ve gündüzü aynı cümlede görmektir.',
+  items: [
+    'Uyku bozulması varsa önce gece düzenini ve sıcak basması eşliğini not edin.',
+    'Ruh hali dalgalanmalarında süre, tekrar ve günlük işlev etkisini birlikte değerlendirin.',
+    'Odaklanma ve beyin sisi yazılarını kayıp anlatısı yerine geçici yük ve izlem diliyle okuyun.',
+  ],
+};
 ---
 
 <SiteLayout
@@ -62,6 +75,9 @@ const pillars = [
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
+
+    <HubEditorialBrief {...editorialBrief} />
+
     {startingPath && (
       <HubStartingPath
         kicker={startingPath.kicker}

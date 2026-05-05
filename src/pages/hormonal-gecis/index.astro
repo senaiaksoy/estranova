@@ -12,6 +12,7 @@ import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import HubStartingPath from '../../components/site/HubStartingPath.astro';
+import HubEditorialBrief from '../../components/site/HubEditorialBrief.astro';
 import { hubStartingPaths } from '../../data/hub-starting-paths';
 
 const startingPath = hubStartingPaths['/hormonal-gecis'];
@@ -52,6 +53,18 @@ const pillars = [
     image: submenuHeroByRoute['/hormonal-gecis/40-sonrasi']!,
   },
 ];
+
+const editorialBrief = {
+  kicker: 'Bölüm Notu',
+  title: 'Geçişi tek bir güne değil, bir ritme yayarak okuyun',
+  dek: 'Bu bölüm, perimenopozdan postmenopoza uzanan hattı panik diliyle değil; evre, belirti, karar ve izlem sırasıyla ele alır.',
+  quote: 'Hormonlar bazen yüksek sesle değil, takvimdeki küçük sapmalarla konuşur.',
+  items: [
+    'Önce hangi evrede olduğunuzu anlamaya yarayan temel yazılarla başlayın.',
+    'Ardından sıcak basması, uyku, ruh hali ve vücut kompozisyonu gibi eşlik eden başlıklara geçin.',
+    'Karar gerektiren konuları kişisel tıbbi değerlendirme yerine koymadan, hekiminizle konuşmaya hazırlık olarak okuyun.',
+  ],
+};
 ---
 
 <SiteLayout
@@ -70,6 +83,8 @@ const pillars = [
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
+
+    <HubEditorialBrief {...editorialBrief} />
 
     <HubStartingPath
       kicker={startingPath.kicker}

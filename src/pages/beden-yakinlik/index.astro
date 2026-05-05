@@ -12,6 +12,7 @@ import ChapterMasthead from '../../components/site/ChapterMasthead.astro';
 import EditorialEpigraph from '../../components/site/EditorialEpigraph.astro';
 import ChapterCompass from '../../components/site/ChapterCompass.astro';
 import HubStartingPath from '../../components/site/HubStartingPath.astro';
+import HubEditorialBrief from '../../components/site/HubEditorialBrief.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 import { hubStartingPaths } from '../../data/hub-starting-paths';
@@ -44,6 +45,18 @@ const pillars = [
     image: submenuHeroByRoute['/beden-yakinlik/pelvik-taban']!,
   },
 ];
+
+const editorialBrief = {
+  kicker: 'Bölüm Notu',
+  title: 'Mahrem başlıkları sessiz bırakmadan, sakinleştirerek açıyoruz',
+  dek: 'Beden, yakınlık ve pelvik taban konuları çoğu zaman geç konuşulur. Bu bölüm, utanma dili yerine açıklık, sınır ve güvenli bilgi ritmi kurar.',
+  quote: 'Yakınlık bazen arzudan önce konfor, bazen cevaptan önce kelime ister.',
+  items: [
+    'Cilt ve görünüm yazılarını kozmetik vaat gibi değil, bariyer ve doku değişimi bilgisi olarak okuyun.',
+    'Cinsel sağlık başlıklarında ağrı, kuruluk ve libido değişimini kişisel kusur diliyle eşleştirmeyin.',
+    'Pelvik taban yazılarını egzersiz ezberi değil, günlük yaşamda fark edilen sinyallerin okuması olarak kullanın.',
+  ],
+};
 ---
 
 <SiteLayout
@@ -62,6 +75,9 @@ const pillars = [
       imageSrc={hero.src}
       imageAlt={hero.alt}
     />
+
+    <HubEditorialBrief {...editorialBrief} />
+
     {startingPath && (
       <HubStartingPath
         kicker={startingPath.kicker}

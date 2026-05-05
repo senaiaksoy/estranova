@@ -1,0 +1,50 @@
+---
+interface Props {
+  kicker: string;
+  title: string;
+  dek: string;
+  quote: string;
+  items: string[];
+}
+
+const { kicker, title, dek, quote, items } = Astro.props;
+---
+
+<section class="relative overflow-hidden border-t border-burgundy/10 bg-white px-6 py-12 md:py-16">
+  <div class="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-gold/12 blur-3xl"></div>
+  <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
+    <aside class="relative overflow-hidden rounded-[36px] bg-burgundy p-8 text-white shadow-[0_30px_96px_-66px_rgba(44,22,28,0.72)] md:p-10">
+      <div class="pointer-events-none absolute -left-16 -top-20 h-52 w-52 rounded-full bg-white/10 blur-3xl"></div>
+      <p class="mb-5 text-[11px] font-bold uppercase tracking-[0.28em] text-white/62">{kicker}</p>
+      <blockquote class="font-serif text-3xl italic leading-tight tracking-[-0.025em] text-white md:text-5xl">
+        {quote}
+      </blockquote>
+    </aside>
+
+    <div class="rounded-[36px] border border-burgundy/12 bg-cream-soft/80 p-8 ring-1 ring-white/80 md:p-10">
+      <div class="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+        <div>
+          <p class="mb-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-burgundy">
+            <span class="h-px w-10 bg-gold"></span>
+            Editoryal Not
+          </p>
+          <h2 class="mb-5 font-serif text-4xl leading-[0.95] tracking-[-0.04em] text-ink md:text-6xl">
+            {title}
+          </h2>
+          <p class="max-w-2xl text-base leading-relaxed text-ink/72 md:text-lg">{dek}</p>
+        </div>
+
+        <ol class="space-y-3 border-t border-burgundy/12 pt-5 md:border-l md:border-t-0 md:pl-7 md:pt-0">
+          {items.map((item, index) => (
+            <li class="grid grid-cols-[48px_1fr] gap-4 rounded-2xl bg-white/72 px-4 py-4 ring-1 ring-burgundy/8">
+              <span class="font-serif text-3xl italic leading-none text-gold tabular-nums">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span class="text-sm leading-relaxed text-ink/70">{item}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
