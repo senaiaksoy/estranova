@@ -26,7 +26,7 @@ export interface ArticleApproval {
   writerSlug: string;
   /** Onay tarihi — ISO format YYYY-MM-DD */
   approvedAt: string;
-  /** Onayın kısa bağlamı — hangi süreçten geçti, hangi tur */
+  /** Onayın kısa zemini — hangi süreçten geçti, hangi tur */
   note: string;
 }
 
@@ -37,7 +37,7 @@ export interface ArticleApproval {
  *
  * Yeni onay eklerken:
  *   1. Bu listeye yeni `ArticleApproval` objesi ekle
- *   2. `note` alanına onay turunun bağlamını yaz (form referansı, versiyon)
+ *   2. `note` alanına onay turunun zeminini yaz (form referansı, versiyon)
  *   3. `npm run articles:status` ile rapor doğrula
  */
 export const approvedArticles: ArticleApproval[] = [
@@ -51,7 +51,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-05-04',
-    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT karar çerçevesi doktor uzmanlık alanı gerektirdiği için Berna kişisel/yaşıt pasajları temizlendi; URL korundu.',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT karar hattı doktor uzmanlık alanı gerektirdiği için Berna kişisel/yaşıt pasajları temizlendi; URL korundu.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
@@ -63,7 +63,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/beslenme-yaslanma',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — Kanal A KAPALI ihlali düzeltildi (Apple Watch + uyku verisi → dolaylı ses), "bilmiyorum" anı Beslenme Şekilleri bölümünde, tabak metaforu kapanışı (bedenle yazışma serisi: mektup → defter → tabak), 5-katmanlı BEN. 2026-05-04 editoryal revizyon: protein gram/kg, D vitamini/B12/kalsiyum/magnezyum ve takviye kararları Berna’nın yaşam ritmi dilinde bırakıldı; hedef/doz/takviye kararı hekim veya diyetisyenle kişiselleştirilir çerçevesi güçlendirildi. Dördüncü onaylı Estranova makalesi, beslenme imza ekseninde ilk.',
+    note: 'Berna doğrudan onayı (form üretmeden) — Kanal A KAPALI ihlali düzeltildi (Apple Watch + uyku verisi → dolaylı ses), "bilmiyorum" anı Beslenme Şekilleri bölümünde, tabak metaforu kapanışı (bedenle yazışma serisi: mektup → defter → tabak), 5-katmanlı BEN. 2026-05-04 editoryal revizyon: protein gram/kg, D vitamini/B12/kalsiyum/magnezyum ve takviye kararları Berna’nın yaşam ritmi dilinde bırakıldı; hedef/doz/takviye kararı hekim veya diyetisyenle kişiselleştirilir yaklaşımı güçlendirildi. Dördüncü onaylı Estranova makalesi, beslenme imza ekseninde ilk.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
@@ -87,13 +87,13 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — KRİTİK Kanal A KAPALI ihlal yoğun makale temizlendi: Bölüm 01 komple rewrite ("Tartıyı kaldırdığım gün" kişisel anekdot → "Tanıdığım bir kadının yıllarca anlattığı bir sahne" dolaylı), Apple Watch ironisi (v2.4 humor 5-kalıbından çıkarılan kalıp) KALDIRILDI, "her tahlili her ay yaptırıyordum" → "Hekimimle bir konuşmamızda" çerçevesi. Duruş varyasyonu kapanışı (bedenle yazışma serisi 8 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş), 5-katmanlı BEN (sarkopenik eğilim + visseral kayış). Sekizinci onaylı Estranova makalesi.',
+    note: 'Berna doğrudan onayı (form üretmeden) — KRİTİK Kanal A KAPALI ihlal yoğun makale temizlendi: Bölüm 01 komple rewrite ("Tartıyı kaldırdığım gün" kişisel anekdot → "Tanıdığım bir kadının yıllarca anlattığı bir sahne" dolaylı), Apple Watch ironisi (v2.4 humor 5-kalıbından çıkarılan kalıp) KALDIRILDI, "her tahlili her ay yaptırıyordum" → "Hekimimle bir konuşmamızda" hattı. Duruş varyasyonu kapanışı (bedenle yazışma serisi 8 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş), 5-katmanlı BEN (sarkopenik eğilim + visseral kayış). Sekizinci onaylı Estranova makalesi.',
   },
   {
     pathname: '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — Önleyici sağlık ekseni + v2.5 humor havuzundan ilk yeni kalıp uygulaması (algoritma şakası #6). Apple Watch + istirahat nabzı Kanal A KAPALI ihlal düzeltildi (dolaylı tansiyon notu çerçevesine), 3 kollektif "biz" düzeltildi, "yaşıt hesabın" yumuşatma artifact algoritma şakasıyla değiştirildi. 2026-05-04 editoryal revizyon: lab markerları/tarama testleri doktor önerisi gibi değil, hekime götürülecek kişisel kayıt dosyası ve tarama takvimi konuşması olarak yeniden çerçevelendi; Berna imzasında kalması uygun görüldü. Takvim varyasyonu kapanışı (bedenle yazışma serisi 9 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim), 5-katmanlı BEN (klinik bağlam + parametre seti + longitudinal trend). Dokuzuncu onaylı Estranova makalesi.',
+    note: 'Berna doğrudan onayı (form üretmeden) — Önleyici sağlık ekseni + v2.5 humor havuzundan ilk yeni kalıp uygulaması (algoritma şakası #6). Apple Watch + istirahat nabzı Kanal A KAPALI ihlal düzeltildi (dolaylı tansiyon notu hattına), 3 kollektif "biz" düzeltildi, "yaşıt hesabın" yumuşatma artifact algoritma şakasıyla değiştirildi. 2026-05-04 editoryal revizyon: lab markerları/tarama testleri doktor önerisi gibi değil, hekime götürülecek kişisel kayıt dosyası ve tarama takvimi konuşması olarak yeniden kuruldu; Berna imzasında kalması uygun görüldü. Takvim varyasyonu kapanışı (bedenle yazışma serisi 9 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim), 5-katmanlı BEN (klinik zemin + parametre seti + longitudinal trend). Dokuzuncu onaylı Estranova makalesi.',
   },
   {
     pathname: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
@@ -105,13 +105,13 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-05-02',
-    note: 'Berna doğrudan onayı (form üretmeden) — Duygusal denge ekseni + v2.5 humor havuzundan üçüncü farklı kalıp uygulaması (soru-yağmurluğu #4, CBT bölümü). Berna açılışı ("Bir noktada şunu fark ettim: bu dönemin stresi yalnızca \'iş çok yoğun\' ya da \'çocuklar büyüyor\' ile açıklanmıyor"), Bölüm 02-05 Evidence yumuşatma (level 5 yığını → level 4 ağırlıklı + level 3-4 aralık), Bölüm 03 dolaylı ses ("Bir süre baş ağrımı kahveye, omuz gerginliğimi yastığa, uykusuzluğumu dizilere bağladım — sonunda sadece taşıyamadığım bir hafta olduğunu kabul ettim"), Bölüm 04 Meditasyon: niteliksel ben deneyimi (Apple Watch / cihaz / ölçüm yasak — beş dakikalık oturumdan sonra omuzların indiğini ya da nefesin derinleştiğini fark etmek), Bölüm 06 CBT humor #4 ("12 maddelik soru listesi randevuya gitmek; ama konuşma başladığında sorular birbirine giriyor"), Bölüm 08 Profesyonel: hekim çerçeve rotasyonu ("Hekimimle bir konuşmamızda: \'Stresin ne zaman hayatın bir parçası olmaktan çıkıp müdahale gerektiren bir tabloya döndüğünü tek bir eşik söylemez\'") + "bilmiyorum" anı (kimin niçin daha çabuk çöktüğünü bireysel ölçekte bende mümkün değil) + "Bu benim yolum" dengeleyici. Nefes varyasyonu kapanışı (bedenle yazışma serisi 11 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim → yapı → nefes), 5-katmanlı BEN (HPA eksen dinamiği + kortizol-iltihabi yük zinciri + klinik kırmızı bayraklar + 3 sütun pratik bütünleşim + bireysellik). On birinci onaylı Estranova makalesi.',
+    note: 'Berna doğrudan onayı (form üretmeden) — Duygusal denge ekseni + v2.5 humor havuzundan üçüncü farklı kalıp uygulaması (soru-yağmurluğu #4, CBT bölümü). Berna açılışı ("Bir noktada şunu fark ettim: bu dönemin stresi yalnızca \'iş çok yoğun\' ya da \'çocuklar büyüyor\' ile açıklanmıyor"), Bölüm 02-05 Evidence yumuşatma (level 5 yığını → level 4 ağırlıklı + level 3-4 aralık), Bölüm 03 dolaylı ses ("Bir süre baş ağrımı kahveye, omuz gerginliğimi yastığa, uykusuzluğumu dizilere bağladım — sonunda sadece taşıyamadığım bir hafta olduğunu kabul ettim"), Bölüm 04 Meditasyon: niteliksel ben deneyimi (Apple Watch / cihaz / ölçüm yasak — beş dakikalık oturumdan sonra omuzların indiğini ya da nefesin derinleştiğini fark etmek), Bölüm 06 CBT humor #4 ("12 maddelik soru listesi randevuya gitmek; ama konuşma başladığında sorular birbirine giriyor"), Bölüm 08 Profesyonel: hekim bakışı rotasyonu ("Hekimimle bir konuşmamızda: \'Stresin ne zaman hayatın bir parçası olmaktan çıkıp müdahale gerektiren bir tabloya döndüğünü tek bir eşik söylemez\'") + "bilmiyorum" anı (kimin niçin daha çabuk çöktüğünü bireysel ölçekte bende mümkün değil) + "Bu benim yolum" dengeleyici. Nefes varyasyonu kapanışı (bedenle yazışma serisi 11 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim → yapı → nefes), 5-katmanlı BEN (HPA eksen dinamiği + kortizol-iltihabi yük zinciri + klinik kırmızı bayraklar + 3 sütun pratik bütünleşim + bireysellik). On birinci onaylı Estranova makalesi.',
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-05-02',
-    note: 'Berna doğrudan onayı (form üretmeden) — Uyku ekseni (Kanal A KAPALI) — Mayıs 2026 dosyası "Uyuyamadığımız Geceler" zemin yazısı. KRİTİK Kanal A KAPALI 2 ihlal düzeltildi: (1) Bölüm 02 "Ben de elli beşimde, kendi geçişimde... gece üçte gözlerim açılıyordu" → tamamen dolaylı ses ("Tanıdığım bir kadın bu iki düğmenin nasıl bağımsız çalıştığını şöyle anlatmıştı..."); (2) Bölüm 05 "Ben kendim kullanıyorum [HRT]" → "Bunun tamamen kişisel bir karar olduğu altı çizilmesi gereken bir nokta" (uyku ekseninde HRT için kişisel ifşa Kanal A KAPALI sınırına denk gelir). Berna açılışı ("Bir noktada şunu fark ettim: uyku konusunda en çok karıştırılan şey, \'uyudum/uyumadım\' diye işleyen ikili dil"), 4 yerde kollektif "biz" düzeltmesi (konuşacağımız → konuşulacak, pek çoğumuzun → pek çok kadının ×2, pek çoğumuzda → pek çok kadın için), Bölüm 05 v2.5 humor #2 Gece okuma dolaylı ses çerçevesinde ("Akşam onda yatağa girmek için planı yapıyorum; on birde elimde kitap; on iki yarımda \'şu paragrafı bitireyim\' diyorum"), Bölüm 06 "Bilmiyorum" anı (aynı yaşta benzer hormonal tabloda iki kadından birinin niçin daha çabuk toparlandığı bireysel ölçekte mümkün değil) + "Bu benim yolum" dengeleyici. Saat varyasyonu kapanışı (bedenle yazışma serisi 12 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim → yapı → nefes → saat), 5-katmanlı BEN (NREM/REM uyku mimarisi + allopregnanolon-GABA-A reseptör dinamiği + kortizol akrofaz erken kayışı + CBT-I bütünleşim + apne/anemi/depresyon ayırıcı tanı). Kanal A KAPALI ekseninde humor kullanım kuralı (dolaylı ses çerçevesinde) memory\'e kayıt edildi. On ikinci onaylı Estranova makalesi.',
+    note: 'Berna doğrudan onayı (form üretmeden) — Uyku ekseni (Kanal A KAPALI) — Mayıs 2026 dosyası "Uyuyamadığımız Geceler" zemin yazısı. KRİTİK Kanal A KAPALI 2 ihlal düzeltildi: (1) Bölüm 02 "Ben de elli beşimde, kendi geçişimde... gece üçte gözlerim açılıyordu" → tamamen dolaylı ses ("Tanıdığım bir kadın bu iki düğmenin nasıl bağımsız çalıştığını şöyle anlatmıştı..."); (2) Bölüm 05 "Ben kendim kullanıyorum [HRT]" → "Bunun tamamen kişisel bir karar olduğu altı çizilmesi gereken bir nokta" (uyku ekseninde HRT için kişisel ifşa Kanal A KAPALI sınırına denk gelir). Berna açılışı ("Bir noktada şunu fark ettim: uyku konusunda en çok karıştırılan şey, \'uyudum/uyumadım\' diye işleyen ikili dil"), 4 yerde kollektif "biz" düzeltmesi (konuşacağımız → konuşulacak, pek çoğumuzun → pek çok kadının ×2, pek çoğumuzda → pek çok kadın için), Bölüm 05 v2.5 humor #2 Gece okuma dolaylı ses hattında ("Akşam onda yatağa girmek için planı yapıyorum; on birde elimde kitap; on iki yarımda \'şu paragrafı bitireyim\' diyorum"), Bölüm 06 "Bilmiyorum" anı (aynı yaşta benzer hormonal tabloda iki kadından birinin niçin daha çabuk toparlandığı bireysel ölçekte mümkün değil) + "Bu benim yolum" dengeleyici. Saat varyasyonu kapanışı (bedenle yazışma serisi 12 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim → yapı → nefes → saat), 5-katmanlı BEN (NREM/REM uyku mimarisi + allopregnanolon-GABA-A reseptör dinamiği + kortizol akrofaz erken kayışı + CBT-I bütünleşim + apne/anemi/depresyon ayırıcı tanı). Kanal A KAPALI ekseninde humor kullanım kuralı (dolaylı ses hattında) memory\'e kayıt edildi. On ikinci onaylı Estranova makalesi.',
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',

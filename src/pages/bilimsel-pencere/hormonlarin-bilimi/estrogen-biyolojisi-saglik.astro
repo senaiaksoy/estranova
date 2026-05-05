@@ -27,7 +27,7 @@ const tocEntries = [
   { id: 'yasam-boyu', label: 'Yaşam Boyu Östrojen Yolculuğu' },
   { id: 'hedef-organlar', label: 'Hedef Organlar — Geniş Etki Yelpazesi' },
   { id: 'metabolizma', label: 'Metabolizma — Karaciğer ve Estrobolome' },
-  { id: 'endojen-eksojen', label: 'Endojen vs Eksojen — HRT Çerçevesi' },
+  { id: 'endojen-eksojen', label: 'Endojen vs Eksojen — HRT Bakışı' },
   { id: 'kanser', label: 'Östrojen-Kanser İlişkisi' },
   { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
@@ -37,7 +37,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Östrojen Biyolojisi ve Sağlık — Tek Hormon Değil, Bir Aile';
 const articleDescription =
-  'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler ER-α ve ER-β reseptörleri üzerinden; yaşam boyu yolculuk; metabolizma karaciğerden mikrobiyotaya (estrobolome); endojen vs eksojen (HRT) çerçevesi; östrojen-kanser ilişkisinin karmaşık tablosu — bilimsel mekanizmalardan klinik kararların pratik sınırlarına kadar.';
+  'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler ER-α ve ER-β reseptörleri üzerinden; yaşam boyu yolculuk; metabolizma karaciğerden mikrobiyotaya (estrobolome); endojen vs eksojen (HRT) bakışı; östrojen-kanser ilişkisinin karmaşık tablosu — bilimsel mekanizmalardan klinik kararların pratik sınırlarına kadar.';
 const faqItems = articleFaqs['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -91,9 +91,9 @@ const articleSchemas = buildArticleSchemas({
           besleyici, memede dikkatle ele alınması gereken bir molekül olabiliyor. Yaşam
           boyu profil değişiyor, metabolizma karaciğer ve mikrobiyota (estrobolome)
           üzerinden seyrediyor; endojen düşüşü perimenopoz ve menopozda klinik tablonun
-          merkezine yerleşiyor. Bu yazı mekanizmayı net açıyor, HRT çerçevesini bilimsel
+          merkezine yerleşiyor. Bu yazı mekanizmayı net açıyor, HRT bakışını bilimsel
           temele oturtuyor, östrojen-kanser ilişkisinin neden <em>"basit"</em> olmadığını
-          gösteriyor — pazarlama değil, klinik çerçeveyi bilimden hareketle kuran eğitim.
+          gösteriyor — pazarlama değil, klinik bakışı bilimden hareketle kuran eğitim.
         </p>
       </ArticleSummary>
 
@@ -226,7 +226,7 @@ const articleSchemas = buildArticleSchemas({
           eksenini araştıran çalışmalar artıyor; klinik yansımaları için zaman gerekli.
         </p>
 
-        <h2 id="endojen-eksojen">Endojen vs Eksojen — HRT Çerçevesi</h2>
+        <h2 id="endojen-eksojen">Endojen vs Eksojen — HRT Bakışı</h2>
         <p>
           Hormon Replasman Tedavisi (HRT) eksojen östrojenle endojen düşüşü <em>tamamlama</em>
           değil <em>yumuşatma</em> mantığında çalışıyor. <strong>Form, doz ve uygulama
@@ -362,7 +362,7 @@ const articleSchemas = buildArticleSchemas({
           hızlanır (yılda %2-3'e kadar). Bu yüzden 50-65 yaş bandı osteoporoz açısından
           kritik dönem; KMD taraması, kalsiyum-D vitamini, düzenli ağırlık egzersizi ve
           uygun olgularda HRT veya bisfosfonat gibi seçenekler birlikte değerlendiriliyor.
-          D vitamini bu çerçevede temel rol oynuyor — detaylı tartışma için
+          D vitamini bu hatta temel rol oynuyor — detaylı tartışma için
           <a href="/zamansiz-yasam/d-vitamini-rehberi" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
           D vitamini rehberi</a>.
         </p>
@@ -413,7 +413,7 @@ const articleSchemas = buildArticleSchemas({
             konu. <em>"Östrojen düşüyor, HRT verelim"</em> denklemi günümüzde bu kadar düz
             kurulmuyor — formülasyon, uygulama yolu, eşlik eden durumlar, kanser öykü ve
             risk profili kararı kişiselleştirilmiş bir denkleme çeviriyor. Yazıda paylaştığım
-            mekanik çerçeve sağlam zemine oturuyor; ama klinik karar bu zeminin üstünde inşa
+            mekanik açıklama sağlam zemine oturuyor; ama klinik karar bu zeminin üstünde inşa
             ediliyor — ve her hastada farklı bir bina çıkıyor.
           </p>
           <p>
@@ -451,12 +451,12 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             <strong class="text-burgundy">Bireysellik vurgusu:</strong> Yukarıda paylaştıklarım
-            — hem yazıda hem bu notta — genel popülasyon ve mekanik çerçevedir; sizin
+            — hem yazıda hem bu notta — genel popülasyon ve mekanik bakıştır; sizin
             tablonuzdaki yaş ve menopoz başlangıç zamanı, eşlik eden tıbbi durumlar (özellikle
             KV risk faktörleri, meme/endometrium öyküsü, tromboembolizm öyküsü, karaciğer
             durumu), kullandığınız ilaçlar (özellikle anti-konvülsan, anti-retroviral,
             antikoagülan) ve hedef belirtilerin önceliği tedavi seçimine yön verir. Burada
-            okuduğunuz bir başlangıç çerçevesidir, karar değil; sizin için uygun adımları
+            okuduğunuz bir başlangıç haritasıdır, karar değil; sizin için uygun adımları
             kendi hekiminizle birebir değerlendirmeniz önemlidir — özellikle östrojen-temelli
             kararlar düzenli yeniden değerlendirmeyi gerektiren süreçler.
           </p>

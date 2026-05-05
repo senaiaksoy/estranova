@@ -317,7 +317,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Bu biyolojiyi bilmek günlük yaşam açısından neden değerli?',
       answer:
-        'Çünkü dağınık görünen yakınmaları tek tek değil, ortak bir çerçevede okumayı kolaylaştırır. Böylece bedenin verdiği sinyaller daha az şaşırtıcı, daha çok anlaşılır hale gelir.',
+        'Çünkü dağınık görünen yakınmaları tek tek değil, ortak bir bakışla okumayı kolaylaştırır. Böylece bedenin verdiği sinyaller daha az şaşırtıcı, daha çok anlaşılır hale gelir.',
     },
   ],
   '/hormonal-gecis/menopoz/menopoz-nedir': [
@@ -392,7 +392,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Koruyucu sağlık kaydı tutmak neden bu dönemde daha değerli hale gelir?',
       answer:
-        'Çünkü belirtiler, taramalar ve aile öyküsü aynı anda önem kazanmaya başlar. Dağınık bilgiler yazıya döküldüğünde hem siz hem de hekim için daha okunur bir çerçeve oluşur.',
+        'Çünkü belirtiler, taramalar ve aile öyküsü aynı anda önem kazanmaya başlar. Dağınık bilgiler yazıya döküldüğünde hem siz hem de hekim için daha okunur bir başlangıç haritası oluşur.',
     },
     {
       question: 'Bu kayda yalnızca tahlil sonuçları mı yazılmalı?',
@@ -453,7 +453,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopozal kilo yakınması olan herkes bu tedavi için aday mıdır?',
       answer:
-        'Hayır. Eşlik eden hastalıklar, beden kitle durumu, metabolik risk ve beklenti çerçevesi birlikte değerlendirilir. Klinik karar, yalnızca tartıdan değil bütün sağlık resminden çıkar.',
+        'Hayır. Eşlik eden hastalıklar, beden kitle durumu, metabolik risk ve beklenti hattı birlikte değerlendirilir. Klinik karar, yalnızca tartıdan değil bütün sağlık resminden çıkar.',
     },
   ],
   '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari': [

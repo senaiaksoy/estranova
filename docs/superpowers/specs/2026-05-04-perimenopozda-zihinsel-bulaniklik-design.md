@@ -17,7 +17,7 @@
 - Başlık, korku üretmeden yüksek okur ilgisi taşıyan bir gündelik deneyimi adresliyor.
 - Kurumsal editoryal imza bu konu için uygun; kişisel anekdot yerine sakin açıklama ve yönlendirme öne çıkıyor.
 
-## Editoryal Çerçeve
+## Editoryal Bakış
 
 - Ton: sakin, açıklayıcı, panik yaratmayan, Türkçe kullanıcı dili
 - Konum: editoryal sağlık bilgi platformu

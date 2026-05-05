@@ -47,7 +47,7 @@ export const writers: Writer[] = [
       rhythm:
         'Kısa-orta paragraflar; görsel/duygusal bir lede, sonra net ayrım, ardından uygulanabilir sağlık okuryazarlığı adımı. Cümleler parlak ama ölçülü; dergisel akış klinik netlikle dengelenir.',
       framing:
-        'Konuyu isimli yazar sesiyle değil, Estranova editöryal rehberliğiyle çerçeveler. Açılışta beden, zaman, şehir, gardırop, uyku, ayna, takvim veya mevsim gibi atmosferik bir kapı kullanılabilir; her tıbbi iddia bilimsel editör notu ve kaynak disipliniyle desteklenir.',
+        'Konuyu isimli yazar sesiyle değil, Estranova editöryal rehberliğiyle kurar. Açılışta beden, zaman, şehir, gardırop, uyku, ayna, takvim veya mevsim gibi atmosferik bir kapı kullanılabilir; her tıbbi iddia bilimsel editör notu ve kaynak disipliniyle desteklenir.',
       dos: [
         'İmzada “Estranova Editörleri” kullan; sahipsiz anonimlik yaratma.',
         'Kişisel anekdot veya birinci tekil deneyim iddiası kurma.',
@@ -192,7 +192,7 @@ export const writers: Writer[] = [
         'Bir makalede 1\'den fazla ünlem kullanma (Mahmure coşkusu Estranova\'ya taşınmaz).',
         '"Kanaatindeyim" / "İnanıyorum" gibi aşırı otoriter cümleler kurma; "Bence" / "Bana göre" / "Gözlemim şu" tercih edilir.',
         'Lüks marka adı geçirme (LVMH, Dior, Givenchy, Guerlain) — Plume\'da konunun gereği vardı; Estranova\'da MUTLAK YASAK.',
-        'Kavram-üretme jargonu (Aşk Marka, Hayırsever Marka tarzı orijinal kavram icat etme) — Estranova bağlamında değil.',
+        'Kavram-üretme jargonu (Aşk Marka, Hayırsever Marka tarzı orijinal kavram icat etme) — Estranova dili içinde değil.',
         'Hashtag formatı (#xxx) — sosyal medyada kalır.',
         'İlişki / kadın-erkek psikolojisi merkezli yazılar (Mahmure ekseni); sadece menopozda partner ilişkisi gibi sınırlı köprü.',
       ],
@@ -211,7 +211,7 @@ export const writers: Writer[] = [
     role: 'Medikal & Kozmetik Dermatoloji Bilimsel Yazarı',
     ageBand: '58-62',
     publicBio:
-      "Medikal ve kozmetik dermatoloji alanında 25 yılı aşkın deneyimli bir akademisyen. Şişli Etfal, Okmeydanı, İstanbul Tıp Fakültesi, Liv Hospital ve Bahçeşehir Üniversitesi Tıp Fakültesi'nde görev yaptı; ~150 yerli ve yabancı yayın, çok sayıda kongre sunumu, estetik dermatoloji eğitmenliği ve medikal kozmetik marka danışmanlığı geçmişine sahip. Estranova'da cilt sağlığı, hormonal geçişin cilde etkileri ve estetik dermatoloji başlıklarında yazıyor — \"trendin değil cildin tarafında duran\" çerçevede; anlaşılır anlatımla, marka pazarlamasından uzak, cilt biyolojisi merkezli.",
+      "Medikal ve kozmetik dermatoloji alanında 25 yılı aşkın deneyimli bir akademisyen. Şişli Etfal, Okmeydanı, İstanbul Tıp Fakültesi, Liv Hospital ve Bahçeşehir Üniversitesi Tıp Fakültesi'nde görev yaptı; ~150 yerli ve yabancı yayın, çok sayıda kongre sunumu, estetik dermatoloji eğitmenliği ve medikal kozmetik marka danışmanlığı geçmişine sahip. Estranova'da cilt sağlığı, hormonal geçişin cilde etkileri ve estetik dermatoloji başlıklarında yazıyor — \"trendin değil cildin tarafında duran\" bir bakışla; anlaşılır anlatımla, marka pazarlamasından uzak, cilt biyolojisi merkezli.",
     signaturePhrase:
       'Cilt biyolojisini hormon-UV-zaman ekseninde okuyan; "trendin değil cildin tarafında" duran, marka pazarlamasından uzak akademisyen-klinisyen.',
     portrait: '/images/writers/gonca-gokdemir.webp',
@@ -251,7 +251,7 @@ export const writers: Writer[] = [
     // Bilimsel yazar — plastik, rekonstrüktif ve estetik cerrahi. 4.
     // bilimsel yazar; yüz ve cilt yaşlanması 40+ ekseninde. Estetik
     // konuları Estranova'nın CLAUDE.md §1 (klinik sitesi DEĞİL) ve §4
-    // (promosyon yasakları) çerçevesiyle EN SIKI uygulanır: önce-sonra
+    // (promosyon yasakları) yaklaşımıyla EN SIKI uygulanır: önce-sonra
     // anlatımı, marka adı, başarı vitrini MUTLAK YASAK. Tıbbi danışman
     // kartı korunur (yayin-kurulu.astro medicalAdvisors[2]).
     slug: 'cagri-sade',
@@ -261,22 +261,22 @@ export const writers: Writer[] = [
     publicBio:
       'Plastik, rekonstrüktif ve estetik cerrahi alanında çalışan deneyimli bir hekim. Estranova\'da estetik girişimleri modaya değil yüze ve kişiye bakarak, gerçekçi beklenti ve doğal yaşlanma dengesi içinde anlatıyor. Pazarlama dili yerine karar vermeyi kolaylaştıran sakin bir bilgi hattı kuruyor.',
     signaturePhrase:
-      'Yüz ve cilt yaşlanması 40+ ekseninde "size uygun mu" karar çerçevesini öne çıkaran; doğal yaşlanma kabulü ile müdahale dengesini bilgi diliyle açan klinisyen.',
+      'Yüz ve cilt yaşlanması 40+ ekseninde "size uygun mu" karar hattını öne çıkaran; doğal yaşlanma kabulü ile müdahale dengesini bilgi diliyle açan klinisyen.',
     portrait: '/images/writers/cagri-sade.webp',
     focusAreas: ['Yüz Yaşlanması & Menopoz', 'Estetik Karar Süreci', 'Non-İnvaziv Bilgi Haritası'],
     isEditor: false,
     category: 'scientific',
     writingStyle: {
       voice: 'Bilgilendirici + danışmanlık niteliğinde + hasta-merkezli; "modaya değil yüze ve kişiye bakan" kişiselleştirme felsefesi.',
-      rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → karar zinciri akışı; bullet listin önünde 1 cümle bağlam paragrafı zorunlu.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → karar zinciri akışı; bullet listin önünde 1 cümle zemin paragrafı zorunlu.',
       framing: '"Yapılabilir mi" değil "size uygun mu" sorusunu merkeze al; doğal yaşlanma kabulü ile müdahale dengesini birlikte düşünmeyi öner.',
       dos: [
-        '"Size uygun mu" karar çerçevesini açılışta veya ilk H2\'de kur (kişiselleştirme imzası).',
+        '"Size uygun mu" karar hattını açılışta veya ilk H2\'de kur (kişiselleştirme imzası).',
         'Yüz yaşlanması mekanizmasını katmanlı aç (cilt + yağ + kemik + kas).',
         'Klinik jargonu Türkçe karşılığıyla ver (blefaroplasti = göz kapağı estetiği).',
         '"Cerrahınızla şu konuları konuşabilirsiniz" rehberi kullan.',
         'Doğal yaşlanma kabulü + müdahale dengesini birlikte düşün.',
-        'Bullet listin önünde 1 cümle bağlam paragrafı koy.',
+        'Bullet listin önünde 1 cümle zemin paragrafı koy.',
       ],
       donts: [
         '"25 yıllık cerrah olarak söylerim ki" / "Aston gözleminde olarak" — kibirli otorite + promosyonel referans.',
@@ -289,7 +289,7 @@ export const writers: Writer[] = [
         'Hasta hikayesi anekdot detayı (yaş/yer/tarih/işlem).',
         'Yaşıt yazar pozu — Çağrı Sade ~56, erkek, hekim.',
         'Mahrem (Senai — labiaplasti) / endokrin (Metin) / kardiyo (Alp) eksen karışıklığı.',
-        'Vücut estetiği geneli (BBL / liposuction) — menopoz çerçevesi dışı.',
+        'Vücut estetiği geneli (BBL / liposuction) — menopoz odağı dışı.',
       ],
     },
   },
@@ -307,19 +307,19 @@ export const writers: Writer[] = [
     publicBio:
       'Girişimsel kardiyoloji ve önleyici kalp sağlığı alanında çalışan deneyimli bir hekim. Estranova\'da menopoz sonrası kalp damar değişimini, kadın özelindeki risk başlıklarını ve erken taramanın neden önemli olduğunu sade Türkçeyle anlatıyor. Riski abartmadan ama geçiştirmeden konuşan sakin bir klinisyen sesi var.',
     signaturePhrase:
-      'Menopoz sonrası kalp damar tablosunu, kadın bedeni özelinde önleyici kardiyoloji çerçevesiyle ve sayısal kanıtla — panik değil bilgiyle açan klinisyen.',
+      'Menopoz sonrası kalp damar tablosunu, kadın bedeni özelinde önleyici kardiyoloji bakışıyla ve sayısal kanıtla — panik değil bilgiyle açan klinisyen.',
     portrait: '/images/writers/alp-aslan-eryilmaz.webp',
     focusAreas: ['Önleyici Kardiyoloji', 'Menopoz Sonrası Kalp', 'Lipid & Hipertansiyon'],
     isEditor: false,
     category: 'scientific',
     writingStyle: {
       voice: 'Klinik disiplin + sade Türkçe + sayısal kanıt destekli; "erken tarama hayat kurtarır" tonu, risk anchored ama panik dili yok.',
-      rhythm: 'Orta-uzun cümleler (12-20 kelime); risk → mekanizma → karar zinciri akışı; bullet listin önünde 1 cümle bağlam paragrafı zorunlu.',
-      framing: 'Önleyici çerçeveyle aç ("henüz belirti vermeye başlamadan önce"), risk faktörlerini ve mekanizmayı net listele, sayısal kanıtla destekle, hangi tarama ne zaman ile kapat.',
+      rhythm: 'Orta-uzun cümleler (12-20 kelime); risk → mekanizma → karar zinciri akışı; bullet listin önünde 1 cümle zemin paragrafı zorunlu.',
+      framing: 'Önleyici bakışla aç ("henüz belirti vermeye başlamadan önce"), risk faktörlerini ve mekanizmayı net listele, sayısal kanıtla destekle, hangi tarama ne zaman ile kapat.',
       dos: [
-        '"Önleyici kardiyoloji" çerçevesini açılışta kur (erken tarama / rutin / kontrol altına repertuvarı).',
+        '"Önleyici kardiyoloji" hattını açılışta kur (erken tarama / rutin / kontrol altına repertuvarı).',
         'Sayısal kanıtla destekle ("Kalp krizi riskinde 2-4 kat artış", "İlk yılda %50 azalır") — Evidence level etiketleriyle yumuşat.',
-        'Bullet listin önünde 1 cümle bağlam paragrafı koy; kuru bullet yasak.',
+        'Bullet listin önünde 1 cümle zemin paragrafı koy; kuru bullet yasak.',
         'Kadın kalp krizi atypical presentation (göğüs ağrısı yerine yorgunluk / mide bulantısı / çene ağrısı) farkındalığını işaretle.',
         '"Doktorunuza şu testi / şu soruyu sorabilirsiniz" rehberi kullan.',
         'Klinik jargonu Türkçe karşılığıyla aç (KKS = koroner kalsiyum skoru; AF = atriyal fibrilasyon).',
@@ -361,7 +361,7 @@ export const writers: Writer[] = [
       framing: '"X mi Y mi?" kafa karışıklığını isimlendir, mekanizmayı sade dille aç, lab/test okuma ve hekim-hasta iletişimi rehberi ile kapat.',
       dos: [
         'Klinik jargonu ilk geçtiği yerde Türkçe karşılığıyla ver (TSH = tiroid uyarıcı hormon).',
-        '"Yanlış anlaşılan tablo" çerçevesini açılışta kur (panik değil netleştirme).',
+        '"Yanlış anlaşılan tablo" bakışını açılışta kur (panik değil netleştirme).',
         'Mekanizma → klinik karşılık → karar zinciri yapısını koru.',
         'Lab/test değerinin ne söylediğini ve söylemediğini birlikte aç.',
         '"Doktorunuza şu testi / şu soruyu sorabilirsiniz" rehberi kullan.',
@@ -385,7 +385,7 @@ export const writers: Writer[] = [
     role: 'Estetik Diş Hekimliği Bilimsel Yazarı',
     ageBand: '57-59',
     publicBio:
-      "Estetik diş hekimliği ve porselen laminalar alanında 30+ yıllık deneyimli bir diş hekimi. İstanbul Üniversitesi Diş Hekimliği Fakültesi (1991) mezunu, Siena Üniversitesi (İtalya) Protetik, Estetik ve Dijital Diş Hekimliği Master'ı. Creadenta'nın kurucu ortağı; EDAD (Estetik Diş Hekimliği Akademisi Derneği) Genel Sekreteri ve DEKİD (Diş Hekimleri Klinik Sahipleri Derneği) Başkan Yardımcısı. 2003'ten beri meslektaşlarına eğitim veriyor; uluslararası dergilerde porselen laminalar üzerine yayınları var. Estranova'da gülüş tasarımı, diş sağlığı ve hormonal geçişin ağız sağlığına etkileri başlıklarında \"sade ama kalıcı olanı seven\" çerçevede yazıyor.",
+      "Estetik diş hekimliği ve porselen laminalar alanında 30+ yıllık deneyimli bir diş hekimi. İstanbul Üniversitesi Diş Hekimliği Fakültesi (1991) mezunu, Siena Üniversitesi (İtalya) Protetik, Estetik ve Dijital Diş Hekimliği Master'ı. Creadenta'nın kurucu ortağı; EDAD (Estetik Diş Hekimliği Akademisi Derneği) Genel Sekreteri ve DEKİD (Diş Hekimleri Klinik Sahipleri Derneği) Başkan Yardımcısı. 2003'ten beri meslektaşlarına eğitim veriyor; uluslararası dergilerde porselen laminalar üzerine yayınları var. Estranova'da gülüş tasarımı, diş sağlığı ve hormonal geçişin ağız sağlığına etkileri başlıklarında \"sade ama kalıcı olanı seven\" bir bakışla yazıyor.",
     signaturePhrase:
       'Estetik diş hekimliğini "sağlıklı dokuyu koruyarak" minimal invaziv felsefede ele alan; sade ama kalıcı olanı, modaya değil yüzün geometrisine uygun olanı seçen akademisyen-klinisyen.',
     portrait: '/images/writers/elif-ozcan-dulundu.webp',
@@ -402,7 +402,7 @@ export const writers: Writer[] = [
         '"Sade ama kalıcı" anti-trend duruşunu vurgula (Hollywood smile karşıtı).',
         'Hormonal geçişin ağız sağlığına etkilerini bağla (östrojen-mukoza-kemik ekseni).',
         'Klinik jargonu Türkçe karşılığıyla aç (xerostomi = kuru ağız sendromu).',
-        'Yüzün bütününe bakan gülüş tasarımı çerçevesini koru.',
+        'Yüzün bütününe bakan gülüş tasarımı bakışını koru.',
         '"Diş hekiminizle şu konuyu konuşabilirsiniz" rehberi kullan.',
       ],
       donts: [
@@ -446,7 +446,7 @@ export const writers: Writer[] = [
     writingStyle: {
       voice: 'Klinisyen mesafesi + "sakin bir hekim" tonu (yayin-kurulu bio\'su); cerrahi-öncesi konservatif yaklaşım felsefesi.',
       rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → karar zinciri akışı; tedrici yaklaşım.',
-      framing: '"Hastayı ameliyat masasından önce hayata yönlendirmek" çerçevesinde mekanizma + karar süreci; doğru zamanlama felsefesi.',
+      framing: '"Hastayı ameliyat masasından önce hayata yönlendirmek" hattında mekanizma + karar süreci; doğru zamanlama felsefesi.',
       dos: [
         '"Hastayı ameliyat masasından önce hayata yönlendirmek" felsefesini en az bir cümlede göster (HARD imza).',
         '"Sakin hekim" tonu — panik dili karşıtı, tedrici yaklaşım.',
@@ -467,7 +467,7 @@ export const writers: Writer[] = [
         'Uluslararası kuruluş adı (AAOS/EFORT/SICOT) gövdede.',
         'Hasta hikayesi anekdot detayı.',
         'Yaşıt yazar pozu — Bülent ~64, erkek, hekim.',
-        'Pediatrik ortopedi / spor yaralanmaları geneli — Estranova menopoz çerçevesi dışı.',
+        'Pediatrik ortopedi / spor yaralanmaları geneli — Estranova menopoz odağı dışı.',
         'Sporcu performans odaklı içerik (Alara alanı; Bülent için ayrı yasak).',
         'Mahrem (Senai) / endokrin (Metin) / kardiyo (Alp) / dermatoloji (Gonca) / cerrahi yüz (Çağrı Sade) / dental (Elif/Duygu) / fizyoterapi (Ersin) eksen karışıklığı.',
       ],
@@ -497,7 +497,7 @@ export const writers: Writer[] = [
     writingStyle: {
       voice: 'Klinisyen mesafesi + öğretmen tonu (paternalist DEĞİL, kanıt-temelli rehber); "bedeni dinleyerek ilerlemek" felsefesi.',
       rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → günlük egzersiz/karar zinciri akışı; tedrici yaklaşım.',
-      framing: '"Bedeni dinleyerek ilerlemek" + "küçük adımların gücü" çerçevesinde mekanizma + günlük uygulama zinciri; panik dili / hızlı sonuç vaadi YASAK.',
+      framing: '"Bedeni dinleyerek ilerlemek" + "küçük adımların gücü" hattında mekanizma + günlük uygulama zinciri; panik dili / hızlı sonuç vaadi YASAK.',
       dos: [
         '"Bedeni dinleyerek ilerlemek" / "küçük adımların gücü" felsefesini en az bir cümlede göster (HARD imza).',
         'Tedrici yaklaşımı vurgula — panik dili / "X günde sıfır ağrı" vaadi karşıtı.',
@@ -650,7 +650,7 @@ export const writers: Writer[] = [
         'Beslenme önerilerini mutfakta uygulanabilir hale getir.',
         'Küçük ama sürdürülebilir alışkanlık vurgusu yap.',
         'Yasak dili yerine denge dili kullan.',
-        'Mevsimsel ve kültürel bağlama yer ver.',
+        'Mevsimsel ve kültürel zemine yer ver.',
         'Kişisel zaman çapası açılışı kullan ("Geçtiğimiz hafta…", "Geçen perşembe…").',
         'Bir kültürel-edebi referans köprüsü kur (kitap/film/şarkı, max 1-2/makale).',
         'Üç nokta (…) ile yarım bırakma geçişlerini koru.',
@@ -686,7 +686,7 @@ export const writers: Writer[] = [
       rhythm: 'Kısa-orta cümle dengesi; sahne geçişi gibi akıcı, duraklı ve nefesli akış.',
       framing: 'Önce deneyimi adlandırır, sonra biyolojik resmi sadeleştirir, en sonda güvenli bir adım önerir.',
       dos: [
-        'Okurun duygusunu önce normalize et, ardından bilimsel bağlam kur.',
+        'Okurun duygusunu önce normalize et, ardından bilimsel zemin kur.',
         'Tıbbi terimleri tek cümlede sadeleştir ve gündelik karşılık ver.',
         'Belirsizliklerde kesinlik dili yerine olasılık dili kullan (olabilir, ilişkili olabilir).',
         'Kırmızı bayrakları net, kısa ve eyleme dönük maddeleyerek ver.',

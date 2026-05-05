@@ -5,13 +5,13 @@
 > **Yazar:** Alara Baykent (slug: `alara-baykent`)
 > **Profil versiyonu:** v2.0 (modüler — `writers/alara-baykent/`)
 > **Yenileme tarihi:** 30 Nisan 2026 (orijinal: 28 Nisan 2026, pre-v2.0)
-> **Pilot vaka:** Pre-v2.0 dönemde Alara'ya atanmış 4 yayınlanmış makaleden ilki bu çerçevede yeniden yazıldı.
+> **Pilot vaka:** Pre-v2.0 dönemde Alara'ya atanmış 4 yayınlanmış makaleden ilki bu yaklaşımla yeniden yazıldı.
 
 ---
 
 ## 1. Neden yeniden yazıldı
 
-Orijinal makale Alara v1 sesi ile yazılmıştı; v2.0 profili (2026-04-29 modüler dönüşümü + 2026-04-30 aile rızalı görünürlük çerçevesi) yürürlüğe girince 7 imza katmanından **4'ü zayıf** kalıyordu. Sitede yayında olan içerik bu 4 katmanın her birini destekleyecek biçimde gözden geçirildi; bilim çekirdeği (vücut ısısı eğrisi, melatonin penceresi, üçlü pencere, perimenopozda termoregülasyon, kromotip) korundu, ses ve yapı katmanları yeniden işlendi.
+Orijinal makale Alara v1 sesi ile yazılmıştı; v2.0 profili (2026-04-29 modüler dönüşümü + 2026-04-30 aile rızalı görünürlük hattı) yürürlüğe girince 7 imza katmanından **4'ü zayıf** kalıyordu. Sitede yayında olan içerik bu 4 katmanın her birini destekleyecek biçimde gözden geçirildi; bilim çekirdeği (vücut ısısı eğrisi, melatonin penceresi, üçlü pencere, perimenopozda termoregülasyon, kromotip) korundu, ses ve yapı katmanları yeniden işlendi.
 
 ---
 
@@ -22,10 +22,10 @@ Alara v2.0 ses imzası 7 katmandan oluşur (`writers/alara-baykent/profile.yaml`
 | # | Katman | Orijinal | Yenilenmiş | Kanıt |
 |---|---|---|---|---|
 | 1 | **Saha veya doğa anekdotu** (HARD imza — windsurf bordu, at sırtı, sabah ahır, doğada bir an) | ✗ Yok | ✓ Eklendi | Açılış paragrafı (atımı ahıra erken bıraktım, eve yürüyerek döndüm); H2-2'de "at antrenmandan sonra hemen ahıra çekilip yatmaz, bir süre yürür" termoregülasyon analojisi; H2-4'te sabah ahır ritüeli; H2-7 SSS'de ayrı bir "atçılık ve uyku" sorusu; kapanış H2'de tam saha imgesi |
-| 2 | **"Ben yaşamadım ama yakından gördüm"** yaşıt ama mütevazı çerçeveleme | △ Sadece bir cümlede ("Kendi yaşımdan ileride bakan biri olarak…") | ✓ Birden çok yerde, sınırlandırma açık | H2-5 başlangıç ("Ben henüz 30'larımın başındayım; perimenopozun içinden geçmedim. Ama annem nesli bana bir şeyi açıkça gösterdi"); aynı bölümde "Ben yaşamadım ama yakından gördüm" cümlesi birinci tekil sınırla; kapanışta tekrar netleştirilmiş ("Ben henüz perimenopozun içinde değilim") |
+| 2 | **"Ben yaşamadım ama yakından gördüm"** yaşıt ama mütevazı kurulum | △ Sadece bir cümlede ("Kendi yaşımdan ileride bakan biri olarak…") | ✓ Birden çok yerde, sınırlandırma açık | H2-5 başlangıç ("Ben henüz 30'larımın başındayım; perimenopozun içinden geçmedim. Ama annem nesli bana bir şeyi açıkça gösterdi"); aynı bölümde "Ben yaşamadım ama yakından gördüm" cümlesi birinci tekil sınırla; kapanışta tekrar netleştirilmiş ("Ben henüz perimenopozun içinde değilim") |
 | 3 | **Anne / abla / kuşak gözlemcisi** (kendi yaşadığı değil, gözlemleyerek öğrendiği) | △ Tek cümle ("Annemle akşam yürüyüşlerimizden gözlemim de bu yönde") | ✓ Bir paragrafa genişletildi + somut diyalog | H2-5 ortasında annemin son ay söylediği cümle ("Eskiden saat dokuzda biten yürüyüş beni rahat uyutuyordu; şimdi aynı duyguyu yakalamak için yedi-yedi buçukta bitirmem gerekiyor"); aynı paragrafta "ben birkaç dakika içinde dengeye dönerken o, eve geldikten yarım saat sonra hâlâ 'açıyım' diye pencereye yöneliyor" — gözlem somutlaştı |
 | 4 | **Kapanış 2-parçalı** (sınırlandırma + saha/doğa kapanış imgesi) | ✗ Tek paragraf, sadece "kendi sabahların" cümlesiyle açık uçlu kapanış | ✓ Ayrı H2 olarak iki parça | Yeni H2 "Sabah Ahır, Akşam Ritmi"; ilk paragraf sınırlandırma ("Ben henüz perimenopozun içinde değilim; … atçılığın bana erkenden öğrettiği bir şeyden geliyor — beden kendi takvimini söylüyor, biz sadece dinleyebiliyoruz"); ikinci paragraf saha/doğa imgesi ("Atımı sabah ahıra götürdüğümde — ortalık daha sersem, hava soğuk, ahır kapısı henüz açılmış —…") |
-| 5 | **Bilimsel Editör Notu** 5-katmanlı format (bağlam + 3-5 madde + bireyselleştirme + imza) | ✗ Tek paragraf düz blok | ✓ 5-katmanlı yeniden yapılandırıldı | Bağlam cümlesi ("Bu yazı bir sporcu yazarın kendi deneyimini ve anne kuşağı gözlemini bilimsel literatürle harmanlayan bir yansımadır"); 5 maddelik klinik perspektif (vücut ısısı eğrisi, akşam yoğun egzersizinin etkisi, sirkadiyen ritm, perimenopozda termoregülasyon, kromotip); bireyselleştirme ("Sn. Baykent'in yolu kendi yoludur"); imza (Doç. Dr. Senai Aksoy — Tıbbi Editör) |
+| 5 | **Bilimsel Editör Notu** 5-katmanlı format (zemin + 3-5 madde + bireyselleştirme + imza) | ✗ Tek paragraf düz blok | ✓ 5-katmanlı yeniden yapılandırıldı | Zemin cümlesi ("Bu yazı bir sporcu yazarın kendi deneyimini ve anne kuşağı gözlemini bilimsel literatürle harmanlayan bir yansımadır"); 5 maddelik klinik perspektif (vücut ısısı eğrisi, akşam yoğun egzersizinin etkisi, sirkadiyen ritm, perimenopozda termoregülasyon, kromotip); bireyselleştirme ("Sn. Baykent'in yolu kendi yoludur"); imza (Doç. Dr. Senai Aksoy — Tıbbi Editör) |
 | 6 | **Açılış kalıbı** signature_phrases listesinden | △ "Çoğu zaman 'akşam biraz yürürsem daha iyi uyurum' deriz" — jenerik, signature listesine yok | ✓ Saha-anekdot açılışı | Yeni açılış: "Geçen yaz bir akşam, atımı ahıra erken bıraktım. Hava hâlâ aydınlıktı, saat sekizdi…" — signature_phrases'teki "Atımla sabah ahırda…" kalıbının akşam-versiyonu, doğal Alara açılışı |
 | 7 | **Atçılık merceği** (Cumhuriyet Pazar Eki editöryal uzmanlık imzası — `private_context_inject`'te ÇEKİRDEK) | ✗ Yok (egzersiz vardı, atçılık yoktu) | ✓ Üç ayrı yerde organik bağlandı | (a) H2-2 termoregülasyon analojisi (at antrenmandan sonra soğuma); (b) H2-4 sabah ahır ritüeli — sirkadiyen ritm kalibrasyonu; (c) yeni FAQ sorusu "At binmek veya ahırda geçen vakit uykuya yardımcı mı?" — Alara'nın kanıtlanmış editöryal track record'u |
 
@@ -69,7 +69,7 @@ Alara v2.0 ses imzası 7 katmandan oluşur (`writers/alara-baykent/profile.yaml`
 |---|---|
 | "Kendi yaşımdan ileride bakan biri olarak şunu söyleyebilirim: 40 sonrasında ısı düzeni daha dar bir pencerede çalışmaya başlıyor. Annemle akşam yürüyüşlerimizden gözlemim de bu yönde" — sınırlı bir cümle | Yeniden adlandırıldı: **"40 Sonrasında Beden — Annem Gözleminden"**. Açılış: "Ben henüz 30'larımın başındayım; perimenopozun içinden geçmedim. Ama annem nesli bana bir şeyi açıkça gösterdi…" Annem-anekdotu bir paragrafa genişledi; somut diyalog eklendi: "Annem geçen ay söyledi: 'Eskiden saat dokuzda biten yürüyüş beni rahat uyutuyordu; şimdi aynı duyguyu yakalamak için yedi-yedi buçukta bitirmem gerekiyor.'" + "Ben yaşamadım ama yakından gördüm" cümlesi |
 
-**Eklenen profile uyumu:** signature_phrases_anahtar listesindeki "Annemin neslinden öğrendiklerim…" kalıbına direkt bağlanıyor; yaşıt ama mütevazı çerçeveleme HARD imzası bu bölümde merkezde.
+**Eklenen profile uyumu:** signature_phrases_anahtar listesindeki "Annemin neslinden öğrendiklerim…" kalıbına direkt bağlanıyor; yaşıt ama mütevazı kurulum HARD imzası bu bölümde merkezde.
 
 ### H2-6 Üç Senaryo — sabah erkenci
 
@@ -93,7 +93,7 @@ Yeni eklendi (orijinalde yoktu). Alara'nın editöryal uzmanlık imzasını FAQ'
 
 | Orijinal | Yenilenmiş |
 |---|---|
-| Tek paragraf, jenerik akademik özet. İmza yok. | 5 katman: <br>(1) Bağlam cümlesi (kişisel deneyim + kuşak gözlemi + bilimsel literatür)<br>(2) 5 maddelik klinik perspektif (her maddede kanıt etiketi: güçlü / iyi / orta-iyi / orta)<br>(3) Bireyselleştirme: "Sn. Baykent'in yolu kendi yoludur"<br>(4) Hekim arayışı yönlendirmesi<br>(5) İmza: "Doç. Dr. Senai Aksoy — Tıbbi Editör" |
+| Tek paragraf, jenerik akademik özet. İmza yok. | 5 katman: <br>(1) Zemin cümlesi (kişisel deneyim + kuşak gözlemi + bilimsel literatür)<br>(2) 5 maddelik klinik perspektif (her maddede kanıt etiketi: güçlü / iyi / orta-iyi / orta)<br>(3) Bireyselleştirme: "Sn. Baykent'in yolu kendi yoludur"<br>(4) Hekim arayışı yönlendirmesi<br>(5) İmza: "Doç. Dr. Senai Aksoy — Tıbbi Editör" |
 
 **Eklenen profile uyumu:** `quick_reference.must_include`: "Bilimsel Editör Notu 5-katmanlı (Doç. Dr. Senai Aksoy imzalı)" — bu maddenin yapısal karşılığı.
 
@@ -118,7 +118,7 @@ Yeni eklendi (orijinalde yoktu). Alara'nın editöryal uzmanlık imzasını FAQ'
 | Emoji | Yok | Yok | ✓ Temiz |
 | Yasak kelimeler (büyüledi, mest etti, inanılmaz, muhteşem, mucize, harika, süper, kraliçe, fakat, hayatımı değiştirdi, genç gösterdi) | "muhteşem" yok ama jenerik dil var | Tarama temiz | ✓ Temiz |
 | Yasak hitaplar (canım, tatlım, kızım, abla, kızlar) | Yok | Yok | ✓ Temiz |
-| Aile rızalı görünürlük çerçevesi 5 sınırı (ergen kimliği, klinik tanı detayı, araç-haline-getirme, genelleme, iç dünya varsayımı) | İlgili değil (üvey kardeş bu makalede yok) | İlgili değil — tetiklenmedi | ✓ Tetiklenmedi (kontrol konusu değil) |
+| Aile rızalı görünürlük hattı 5 sınırı (ergen kimliği, klinik tanı detayı, araç-haline-getirme, genelleme, iç dünya varsayımı) | İlgili değil (üvey kardeş bu makalede yok) | İlgili değil — tetiklenmedi | ✓ Tetiklenmedi (kontrol konusu değil) |
 
 ---
 
@@ -177,7 +177,7 @@ Yeni eklendi (orijinalde yoktu). Alara'nın editöryal uzmanlık imzasını FAQ'
 Bu yeniden yazım Alara'ya iletildiğinde aşağıdaki türde notlar yararlı olur:
 
 - **Atçılık analojileri (3 yer):** "At antrenmandan sonra hemen ahıra çekilip yatmaz" / "Atımı sabah erken çıkardığım günlerde…" / "Sabah ahıra götürdüğümde — ortalık daha sersem, hava soğuk" — bu üç anekdotun doğal mı, zorlama mı? Hangisi en güçlü, hangisi çıkarılabilir?
-- **Annem diyaloğu:** "Eskiden saat dokuzda biten yürüyüş beni rahat uyutuyordu; şimdi aynı duyguyu yakalamak için yedi-yedi buçukta bitirmem gerekiyor" — bu somut cümle Alara'nın dilinde mi, yoksa kuşak gözlemi olarak çerçeveyi yumuşatmak gerekir mi?
+- **Annem diyaloğu:** "Eskiden saat dokuzda biten yürüyüş beni rahat uyutuyordu; şimdi aynı duyguyu yakalamak için yedi-yedi buçukta bitirmem gerekiyor" — bu somut cümle Alara'nın dilinde mi, yoksa kuşak gözlemi olarak bakışı yumuşatmak gerekir mi?
 - **Kapanış imgesi:** "Atımı sabah ahıra götürdüğümde — ortalık daha sersem, hava soğuk, ahır kapısı henüz açılmış" — bu kapanış sahnesi Alara'nın gerçek sabah ritüelini doğru tasvir ediyor mu? Eklenmeli / çıkarılmalı bir detay var mı?
 - **Yeni FAQ "At binmek uykuya yardımcı mı?":** Bu soru Alara'nın yazar imzasına uyuyor mu, yoksa Cumhuriyet Pazar Eki köşesine bırakılması mı doğru?
 - **Bilimsel Editör Notu:** Yeni 5-katmanlı format, eski sade paragraf formatından daha mı klinik duruyor — okurun gözünden bakıldığında uyum nasıl?
