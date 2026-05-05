@@ -28,7 +28,7 @@ const { hero } = Astro.props;
   </div>
 
   <div
-    class="relative z-10 mx-auto grid min-h-[min(64vh,720px)] max-w-6xl grid-cols-1 content-end gap-10 px-6 pb-12 pt-28 md:min-h-[min(92vh,1100px)] md:content-center md:pb-16 md:pt-32 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end lg:pb-20"
+    class="relative z-10 mx-auto grid min-h-[min(64vh,720px)] max-w-6xl grid-cols-1 content-end gap-10 px-6 pb-12 pt-28 md:min-h-[min(92vh,1100px)] md:content-center md:pb-16 md:pt-32 lg:pb-20"
   >
     <div class="max-w-3xl">
       <div class="mb-5 flex max-w-xl items-center gap-4">
@@ -55,25 +55,24 @@ const { hero } = Astro.props;
           Belirtilere göre bak
         </a>
       </div>
-    </div>
 
-    <aside class="hidden rounded-[34px] border border-cream-soft/24 bg-[#170f0f]/18 p-6 text-cream-soft/92 shadow-[0_30px_100px_-58px_rgba(0,0,0,0.6)] ring-1 ring-cream-soft/10 backdrop-blur-md lg:block" aria-label="Kapak başlıkları">
-      <span class="pointer-events-none block h-px w-full bg-gradient-to-r from-transparent via-gold/65 to-transparent"></span>
-      <p class="mb-5 border-b border-gold/35 pb-4 text-[10px] font-bold uppercase tracking-[0.32em] text-gold">Kapakta</p>
-      <nav class="space-y-5">
-        <a href="/hormonal-gecis/perimenopoz" class="group block">
-          <span class="block font-serif text-2xl leading-tight group-hover:underline group-hover:decoration-gold/70">Perimenopoz nerede başlar?</span>
-          <span class="mt-1 block text-sm leading-relaxed text-cream-soft/68">İlk işaretleri telaşa çevirmeden okumak.</span>
-        </a>
-        <a href="/zihin-denge/uyku-dinlenme" class="group block border-t border-cream-soft/22 pt-5">
-          <span class="block font-serif text-2xl leading-tight group-hover:underline group-hover:decoration-gold/70">Uyku, gece ve denge</span>
-          <span class="mt-1 block text-sm leading-relaxed text-cream-soft/68">Bu ayın dosyasında sakin bir gece okuması.</span>
-        </a>
-        <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="group block border-t border-cream-soft/22 pt-5">
-          <span class="block font-serif text-2xl leading-tight group-hover:underline group-hover:decoration-gold/70">40 sonrası kemik sağlığı</span>
-          <span class="mt-1 block text-sm leading-relaxed text-cream-soft/68">Güç, hareket ve koruyucu takip.</span>
-        </a>
-      </nav>
-    </aside>
+      <aside class="mt-10 max-w-3xl border-y border-cream-soft/24 py-5 text-cream-soft/88" aria-label="Kapak başlıkları">
+        <p class="mb-4 text-[10px] font-bold uppercase tracking-[0.32em] text-gold">Kapakta</p>
+        <nav class="grid gap-4 md:grid-cols-3">
+          <a href="/hormonal-gecis/perimenopoz" class="group block">
+            <span class="mb-2 block font-serif text-xl leading-tight group-hover:underline group-hover:decoration-gold/70 md:text-2xl">Perimenopoz nerede başlar?</span>
+            <span class="block text-sm leading-relaxed text-cream-soft/68">İlk işaretleri telaşa çevirmeden okumak.</span>
+          </a>
+          <a href="/zihin-denge/uyku-dinlenme" class="group block border-t border-cream-soft/18 pt-4 md:border-l md:border-t-0 md:pl-5 md:pt-0">
+            <span class="mb-2 block font-serif text-xl leading-tight group-hover:underline group-hover:decoration-gold/70 md:text-2xl">Uyku, gece ve denge</span>
+            <span class="block text-sm leading-relaxed text-cream-soft/68">Bu ayın dosyasında sakin bir gece okuması.</span>
+          </a>
+          <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi" class="group block border-t border-cream-soft/18 pt-4 md:border-l md:border-t-0 md:pl-5 md:pt-0">
+            <span class="mb-2 block font-serif text-xl leading-tight group-hover:underline group-hover:decoration-gold/70 md:text-2xl">40 sonrası kemik sağlığı</span>
+            <span class="block text-sm leading-relaxed text-cream-soft/68">Güç, hareket ve koruyucu takip.</span>
+          </a>
+        </nav>
+      </aside>
+    </div>
   </div>
 </section>

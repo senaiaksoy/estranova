@@ -26,8 +26,8 @@ const secondary = featured[1];
 
 <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
   <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
-  <div class="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
-  <div class="pointer-events-none absolute right-0 top-12 hidden font-serif text-[12rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.045] lg:block">
+  <div class="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute right-0 top-12 hidden font-serif text-[12rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.04] lg:block">
     atlas
   </div>
 
@@ -41,7 +41,7 @@ const secondary = featured[1];
         </p>
         <a
           href="/symptoms"
-          class="inline-flex items-center gap-2 rounded-full border border-burgundy/14 bg-white/70 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-burgundy shadow-sm transition hover:border-gold/35 hover:bg-white focus:outline-none focus:ring-2 focus:ring-burgundy/30"
+          class="inline-flex items-center gap-2 rounded-full border border-burgundy/14 bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-burgundy shadow-[0_16px_44px_-34px_rgba(44,22,28,0.45)] transition hover:border-gold/45 hover:bg-cream-soft/35 focus:outline-none focus:ring-2 focus:ring-burgundy/30"
         >
           <span>Belirti rehberini aç</span>
           <span aria-hidden="true">→</span>
@@ -57,12 +57,12 @@ const secondary = featured[1];
       </div>
     </header>
 
-    <div class="grid gap-7 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+    <div class="grid gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
       {
         primary && (
           <a
             href={primary.href}
-            class="group relative min-h-[520px] overflow-hidden rounded-[42px] border border-burgundy/14 bg-ink shadow-[0_42px_130px_-68px_rgba(44,24,28,0.62)] ring-1 ring-white/75 transition duration-300 hover:-translate-y-1 hover:border-gold/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+            class="group relative min-h-[540px] overflow-hidden rounded-[42px] border border-burgundy/14 bg-ink shadow-[0_44px_132px_-72px_rgba(44,24,28,0.62)] ring-1 ring-white/80 transition duration-300 hover:-translate-y-1 hover:border-gold/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
             aria-label={`${primary.title} rehberini oku`}
           >
             <img
@@ -70,19 +70,23 @@ const secondary = featured[1];
               alt={primary.alt}
               loading="lazy"
               decoding="async"
-              class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+              class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/82 via-[#1c1412]/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/86 via-[#1c1412]/34 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1c1412]/28 via-transparent to-transparent"></div>
             <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></div>
-            <div class="relative flex h-full min-h-[520px] flex-col justify-end p-7 md:p-10">
+            <div class="relative flex h-full min-h-[540px] flex-col justify-end p-7 md:p-10">
               <div class="mb-7 flex flex-wrap items-center gap-3">
-                <span class="rounded-full border border-white/35 bg-white/16 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-white backdrop-blur-md">
+                <span class="rounded-full border border-white/35 bg-white/14 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-white backdrop-blur-md">
                   Ana işaret
                 </span>
                 <span class="rounded-full bg-gold/95 px-3 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#3a1216]">
                   {primary.evidence}
                 </span>
               </div>
+              <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-gold/95">
+                Atlas kapağı
+              </p>
               <h3 class="mb-5 max-w-[9ch] font-serif text-5xl leading-[0.9] tracking-[-0.05em] text-white md:text-7xl">
                 {primary.title}
               </h3>
@@ -90,9 +94,7 @@ const secondary = featured[1];
                 {primary.caption}
               </p>
               <div class="mt-8 flex items-center justify-between border-t border-white/18 pt-5 text-white/76">
-                <span class="text-xs font-bold uppercase tracking-[0.18em]">
-                  <span>Rehberi oku</span>
-                </span>
+                <span class="text-xs font-bold uppercase tracking-[0.18em]">Okuma rotasını aç</span>
                 <span class="font-serif text-3xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
               </div>
             </div>
@@ -105,7 +107,7 @@ const secondary = featured[1];
           secondary && (
             <a
               href={secondary.href}
-              class="group relative overflow-hidden rounded-[34px] border border-burgundy/14 bg-white shadow-[0_30px_96px_-60px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+              class="group relative overflow-hidden rounded-[34px] border border-burgundy/14 bg-white shadow-[0_30px_96px_-62px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
               aria-label={`${secondary.title} rehberini oku`}
             >
               <div class="grid gap-0 md:grid-cols-[0.9fr_1.1fr] lg:grid-cols-1 xl:grid-cols-[0.85fr_1.15fr]">
@@ -115,11 +117,14 @@ const secondary = featured[1];
                     alt={secondary.alt}
                     loading="lazy"
                     decoding="async"
-                    class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
+                    class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                   />
-                  <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/42 via-transparent to-transparent"></div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/44 via-transparent to-transparent"></div>
                 </div>
                 <div class="relative p-7">
+                  <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-gold-bronze">
+                    İkinci okuma
+                  </p>
                   <span class="mb-5 inline-flex rounded-full bg-gold/90 px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#3a1216]">
                     {secondary.evidence}
                   </span>
@@ -130,7 +135,7 @@ const secondary = featured[1];
                     {secondary.caption}
                   </p>
                   <div class="mt-6 flex items-center justify-between border-t border-burgundy/12 pt-4 text-xs font-bold uppercase tracking-[0.18em] text-burgundy/75">
-                    <span>Rehberi oku</span>
+                    <span>Okuma rotasını aç</span>
                     <span class="font-serif text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
                   </div>
                 </div>
@@ -139,7 +144,10 @@ const secondary = featured[1];
           )
         }
 
-        <div class="overflow-hidden rounded-[34px] border border-burgundy/12 bg-white shadow-[0_24px_80px_-58px_rgba(44,22,28,0.3)] ring-1 ring-black/[0.04]">
+        <div class="overflow-hidden rounded-[34px] border border-burgundy/12 bg-white shadow-[0_24px_80px_-60px_rgba(44,22,28,0.3)] ring-1 ring-black/[0.04]">
+          <div class="border-b border-burgundy/10 px-6 py-4">
+            <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy/70">Atlas indeksi</p>
+          </div>
           {rest.map((s, index) => (
             <a
               href={s.href}
@@ -152,7 +160,7 @@ const secondary = featured[1];
                   alt=""
                   loading="lazy"
                   decoding="async"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.045]"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/26 via-transparent to-transparent"></div>
               </div>
@@ -166,7 +174,7 @@ const secondary = featured[1];
                 <p class="max-w-2xl text-sm leading-relaxed text-ink/70">{s.desc}</p>
               </div>
               <div class="flex items-center justify-between gap-5 border-t border-burgundy/10 pt-3 text-xs font-bold uppercase tracking-[0.17em] text-burgundy/72 md:border-t-0 md:pt-0">
-                <span>Okuma rotası</span>
+                <span>Rota</span>
                 <span class="font-serif text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
               </div>
             </a>

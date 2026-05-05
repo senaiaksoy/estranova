@@ -1,7 +1,20 @@
 # yaml-language-server: $schema=../_schema/profile.schema.json
 
-writer_version: "v2.6"
+writer_version: "v2.7"
 writer_protocol_version: "v2.1"
+# v2.7 (2026-05-05) — perimenopoz ilk işaretler yazar revizyon turu:
+#   - "Bir noktada şunu fark ettim" açılışı bu makalede revize edildi; açılışta
+#     rotasyon tercihi yeniden teyit edildi. Aynı kalıbın refleks kullanımından kaçınılır.
+#   - Hassas terim notu güçlendirildi: Berna metinlerinde "örüntü", "döngü",
+#     "çökkünlük" ve "çökkün ruh hâli" ifadeleri editoryal gövdede kullanılmaz.
+#   - Yerine konuya göre "genel seyir", "adet düzeni", "adet aralığı",
+#     "kanama düzeni", "tekrar eden değişimler", "mutsuzluk hali" gibi
+#     daha doğal Türkçe karşılıklar seçilir.
+#   - Dil notu: "belirgin bozması" yerine "belirgin şekilde bozması"
+#     kalıbı tercih edilir.
+#   - Anekdot kapısı notu: "Tanıdığım bir kadın" yerine daha doğal ses veren
+#     "bir arkadaşım", "yakın çevremden biri", "bir okur", "evde duyduğum bir cümle"
+#     gibi açılışlar tercih edilir.
 # v2.6 (2026-05-02) — Şablon Kırma Disiplini (post-mortem sonrası):
 #   - 13 onaylı makale post-mortem'inde 9 kalıbın 6-10 makalede birebir cümle olarak
 #     tekrar ettiği, son 3 makalenin (stres / perimenopoz-uyku / uyku-bozukluğu)

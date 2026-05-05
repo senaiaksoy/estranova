@@ -8,10 +8,10 @@ export interface SubmenuHeroImage {
   alt: string;
 }
 
-/** Ana sayfa kahraman görseli (editoryal, canlı topluluk tonu — 2026-05-01 V2 brief). */
+/** Ana sayfa kahraman görseli (editoryal, paylaşılan deneyim tonu — 2026-05-05 V3 brief). */
 export const homePageHero: SubmenuHeroImage = {
-  src: '/images/hero/home-hero.webp',
-  alt: 'Boğaziçi sahil terasında altın saatte çay sohbeti yapan üç orta yaş Türk kadın; arkada Boğaziçi Köprüsü ve Ortaköy Camii — hormonal geçiş döneminde birlikte yaşamı, neşeyi ve topluluğu yansıtan editöryal sahne',
+  src: '/images/hero/home-hero-conversation.webp',
+  alt: 'Pencere kenarında Boğaz ışığına karşı çay ve açık defter eşliğinde sakin sohbet eden iki orta yaş kadın; 40 sonrası sağlık yolculuğunda paylaşılan deneyim ve editoryal rehberlik teması',
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {

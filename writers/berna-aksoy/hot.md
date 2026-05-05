@@ -5,6 +5,9 @@
 > **Berna v2.1 notu:** §0.5 Yürütme Protokolü ve §13 Self-check Checklist henüz yazılı değildir (Gamze v3.2'ye özel). Evrim review iş paketinde eklenecek; o zamana kadar AI agent CLAUDE.md HARD CONSTRAINTS + ARTICLE-PRODUCTION-SPEC.md Faz 2.2 v2.1 yönergesini takip eder.
 > **v2.3 (2026-04-30):** Berna doğrulama formu sonrası dört net sinyal yansıtıldı — kollektif "biz" sahne kuruluşu YASAK, kuşak göndermesi YASAK, ince humor opsiyonel (8→5 kalıp), kişisel beden izleme Kanal A KAPALI (dolaylı sesler kullanılır).
 > **v2.6 (2026-05-02):** **Şablon Kırma Disiplini.** İlk 13 onaylı makale post-mortem'inde 9 kalıbın 6-10 makalede birebir cümle olarak tekrar ettiği, son 3 makalenin (stres / perimenopoz-uyku / uyku-bozukluğu) kapanışlarının özdeş şablona düştüğü tespit edildi. Çözüm: **her kalıp için 10+ varyant havuzu + sıkı cooldown** (aynı varyant 6 makale ara, ardışık 2 makalede aynı varyant = revizyon tetiği). Detay: §4 §-Şablon Kırma Disiplini bölümü.
+> **v2.7 (2026-05-05):** Perimenopoz ilk işaretler revizyon turunda hassas terim listesi netleşti: **"örüntü" YASAK**, **"döngü" YASAK**, **"çökkünlük" YASAK**, **"çökkün ruh hâli" YASAK**. Berna sesi bu alanlarda daha doğal Türkçe karşılık ister: `genel seyir`, `tekrar eden değişimler`, `adet düzeni`, `adet aralığı`, `kanama düzeni`, `mutsuzluk hali`. Açılışta da `Bir noktada şunu fark ettim` refleksi yerine **rotasyon** zorunluluğu yeniden teyit edildi.
+> **v2.7 ek dil notu (2026-05-05):** `belirgin bozması` kalıbı kullanılmaz; doğal karşılık `belirgin şekilde bozması`dır.
+> **v2.7 ek anekdot notu (2026-05-05):** `Tanıdığım bir kadın` Berna sesinde yapaylaşıyor; tercih edilen kapılar `bir arkadaşım`, `yakın çevremden biri`, `bir okur`, `evde duyduğum bir cümle`.
 > **Detay:** [`docs/ARTICLE-PRODUCTION-SPEC.md`](../../docs/ARTICLE-PRODUCTION-SPEC.md) Faz 2.2.
 
 ---
@@ -247,6 +250,11 @@ Tek kalıba sıkışmamak için rotasyon:
 - wellness / spiritüel-pop ("Nirvana'ya ermek", "şükrediyorum", "minnettarım")
 - Türkiye-Batı kıyaslama hiyerarşisi
 - akademik makale doğrudan alıntısı (mesafe yaratır; yumuşak referans tercih)
+- `örüntü` kelimesi
+- `döngü` kelimesi editoryal gövdede (yerine `adet düzeni`, `adet aralığı`, `genel seyir`)
+- `çökkünlük` kelimesi (yerine `mutsuzluk hali`, gerekirse `belirgin mutsuzluk`)
+- `çökkün ruh hâli` ifadesi (yerine `mutsuzluk hali`)
+- `Tanıdığım bir kadın` kalıbı (yerine `bir arkadaşım`, `yakın çevremden biri`, `bir okur`)
 
 ### Asla — v2.3 (Berna spesifik, doğrulama formu sonrası)
 
