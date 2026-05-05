@@ -35,17 +35,17 @@ const { eyebrow, title, lede, imageSrc, imageAlt, compact = false } = Astro.prop
   <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/60 via-[#1c1412]/15 to-transparent"></div>
   <div
     class:list={[
-      'relative z-10 mx-auto flex max-w-6xl flex-col justify-end px-6 pb-10 md:pb-14',
+      'relative z-10 mx-auto flex max-w-6xl flex-col justify-end px-6 pb-10 md:pb-16',
       compact ? 'min-h-[min(38vh,340px)] pt-28 md:pt-32' : 'min-h-[min(46vh,520px)] pt-28 md:pb-16 md:pt-36',
     ]}
   >
-    <p class="text-xs font-bold uppercase tracking-[0.26em] text-cream-warm/90">{eyebrow}</p>
-    <h1 id="submenu-hero-title" class="mt-3 max-w-4xl font-serif text-3xl leading-[1.12] text-white md:text-5xl lg:text-[3.25rem]">
+    <p class="text-xs font-bold uppercase tracking-[0.32em] text-cream-warm/90">{eyebrow}</p>
+    <h1 id="submenu-hero-title" class="mt-4 max-w-5xl font-serif text-[clamp(3rem,7vw,7rem)] leading-[0.9] tracking-[-0.055em] text-white">
       {title}
     </h1>
     {
       lede && (
-        <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/88 md:text-lg">{lede}</p>
+        <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/88 md:text-xl">{lede}</p>
       )
     }
   </div>

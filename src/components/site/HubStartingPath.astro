@@ -46,46 +46,47 @@ const {
 } = Astro.props;
 ---
 
-<section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-18">
+<section class="border-t border-burgundy/10 bg-gradient-to-b from-[#fffaf0] to-cream-soft px-6 py-16 md:py-20">
   <div class="mx-auto max-w-6xl">
-    <header class="mb-10 max-w-3xl">
+    <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
       <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
         {kicker}
       </p>
-      <h2 class="mb-4 font-serif text-3xl leading-tight text-ink md:text-4xl">
-        {title}
-      </h2>
-      <p class="text-base leading-relaxed text-ink/75 md:text-lg">{intro}</p>
+      <div>
+        <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] text-ink md:text-6xl">
+          {title}
+        </h2>
+        <p class="max-w-2xl text-base leading-relaxed text-ink/75 md:text-lg">{intro}</p>
+      </div>
     </header>
 
-    <ol class="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+    <ol class="divide-y divide-burgundy/14 border-y border-burgundy/14">
       {steps.map((step) => (
         <li>
           <a
             href={step.href}
-            class="group flex h-full flex-col rounded-[24px] border border-burgundy/15 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:p-7"
+            class="group grid gap-4 py-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[90px_180px_1fr_auto] md:items-center md:gap-7"
           >
-            <div class="mb-4 flex items-center gap-3">
-              <span class="font-serif text-3xl tabular-nums text-gold md:text-4xl">
-                {step.step}
-              </span>
-              <span class="h-px flex-1 bg-gold/35"></span>
-            </div>
-            <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            <span class="font-serif text-5xl leading-none tabular-nums text-gold md:text-6xl">
+              {step.step}
+            </span>
+            <span class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
               {step.label}
-            </p>
-            <h3 class="mb-3 font-serif text-xl leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35 md:text-2xl">
-              {step.title}
-            </h3>
-            <p class="mb-5 flex-1 text-sm leading-relaxed text-ink/70">{step.excerpt}</p>
-            <div class="flex items-center justify-between text-[11px] uppercase tracking-[0.18em] text-ink/55">
+            </span>
+            <span>
+              <span class="block font-serif text-2xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70 md:text-3xl">
+                {step.title}
+              </span>
+              <span class="mt-2 block text-sm leading-relaxed text-ink/70 md:text-base">{step.excerpt}</span>
+            </span>
+            <span class="flex items-center justify-between gap-4 text-[11px] uppercase tracking-[0.18em] text-ink/55 md:flex-col md:items-end">
               {step.readingMinutes && (
                 <span class="tabular-nums">~{step.readingMinutes} dk</span>
               )}
-              <span class="font-semibold text-burgundy group-hover:underline">
-                Yazıyı aç →
+              <span class="font-serif text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">
+                →
               </span>
-            </div>
+            </span>
           </a>
         </li>
       ))}

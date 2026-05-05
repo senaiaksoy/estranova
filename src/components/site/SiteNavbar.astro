@@ -9,7 +9,7 @@ interface Props {
 const { currentPath = '/' } = Astro.props;
 
 const linkBase =
-  'text-sm font-medium transition-colors px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary';
+  'text-xs font-semibold uppercase tracking-[0.13em] transition-colors px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary';
 
 const mobileLinkBase =
   'text-base font-serif py-2.5 px-4 rounded-lg text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:border-2 focus-visible:border-primary';
@@ -18,16 +18,16 @@ const mobileLinkBase =
 <nav
   aria-label="Ana navigasyon menüsü"
   role="navigation"
-  class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 px-6 py-3 focus-within:ring-2 focus-within:ring-primary/20"
+  class="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-[#fffaf0]/92 px-6 py-3 shadow-[0_10px_30px_-28px_rgba(44,24,28,0.6)] backdrop-blur-md focus-within:ring-2 focus-within:ring-primary/20"
 >
   <div class="max-w-6xl mx-auto flex items-center justify-between">
     <a
       href="/"
-      class="text-2xl font-serif font-bold tracking-tight text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded px-2 py-1"
+      class="rounded px-2 py-1 text-2xl font-serif font-bold tracking-[-0.04em] text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 md:text-3xl"
       aria-label="ESTRANOVA Ana Sayfası"
     >
       <span>ESTRANOVA</span>
-      <span class="text-[10px] font-sans font-medium tracking-[0.2em] text-secondary mt-1 block"
+      <span class="mt-1 block text-[9px] font-sans font-semibold tracking-[0.28em] text-secondary"
         >EDİTORYAL SAĞLIK PLATFORMU</span
       >
     </a>
@@ -79,7 +79,7 @@ const mobileLinkBase =
                 role="group"
                 aria-label={`${item.name} alt menü`}
               >
-                <div class="rounded-xl border border-primary/15 bg-surface py-2 shadow-lg">
+                <div class="overflow-hidden rounded-[22px] border border-primary/15 bg-[#fffaf0] py-2 shadow-[0_24px_70px_-36px_rgba(44,24,28,0.5)]">
                   {
                     item.children.map((child) => {
                       const subActive =
@@ -111,7 +111,7 @@ const mobileLinkBase =
       <button
         type="button"
         data-search-trigger
-        class="ml-3 hidden items-center gap-2 rounded-xl border border-primary/12 px-3 py-1.5 text-xs font-medium text-charcoal/55 transition-colors hover:border-primary/30 hover:text-primary md:flex"
+        class="ml-3 hidden items-center gap-2 rounded-full border border-primary/12 px-3 py-1.5 text-xs font-medium text-charcoal/55 transition-colors hover:border-primary/30 hover:text-primary md:flex"
         aria-label="Sitede ara (Ctrl+K)"
       >
         <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -189,7 +189,7 @@ const mobileLinkBase =
 
     <div
       id="mobile-menu"
-      class="absolute top-full left-0 right-0 hidden max-h-[min(80vh,560px)] overflow-y-auto bg-surface border-y border-primary/10 shadow-xl p-3 md:hidden flex-col gap-2"
+      class="absolute top-full left-0 right-0 hidden max-h-[min(80vh,560px)] overflow-y-auto border-y border-primary/10 bg-[#fffaf0] p-3 shadow-xl md:hidden flex-col gap-2"
       role="menu"
       aria-hidden="true"
     >

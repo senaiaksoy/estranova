@@ -13,10 +13,10 @@ const { href, tag, title, body, footer, highlight = false } = Astro.props;
 const hasFooterSlot = Astro.slots.has('footer');
 
 const shellClass = [
-  'flex h-full flex-col rounded-[28px] border p-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
+  'flex h-full flex-col border-y p-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
   highlight
-    ? 'border-burgundy/35 bg-cream-soft ring-2 ring-burgundy/15 shadow-md md:-translate-y-1 md:shadow-xl'
-    : 'border-burgundy/12 bg-cream-soft shadow-sm hover:-translate-y-0.5 hover:shadow-md',
+    ? 'border-burgundy/35 bg-[#fffaf0] ring-1 ring-burgundy/15'
+    : 'border-burgundy/12 bg-cream-soft hover:bg-white',
 ];
 ---
 
@@ -25,7 +25,7 @@ const shellClass = [
     <a href={href} class:list={['group block h-full', shellClass]}>
       {highlight && <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-burgundy">Öne çıkan</p>}
       <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">{tag}</p>
-      <h3 class="mb-3 font-serif text-2xl group-hover:underline group-hover:decoration-burgundy/35">{title}</h3>
+      <h3 class="mb-3 font-serif text-3xl leading-tight tracking-[-0.015em] group-hover:underline group-hover:decoration-gold/70">{title}</h3>
       <p class="mb-4 flex-1 leading-relaxed text-ink/75">{body}</p>
       {hasFooterSlot ? (
         <div class="text-sm font-medium text-ink/80">
@@ -39,7 +39,7 @@ const shellClass = [
     <article class:list={shellClass}>
       {highlight && <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-burgundy">Öne çıkan</p>}
       <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">{tag}</p>
-      <h3 class="mb-3 font-serif text-2xl">{title}</h3>
+      <h3 class="mb-3 font-serif text-3xl leading-tight tracking-[-0.015em]">{title}</h3>
       <p class="mb-4 flex-1 leading-relaxed text-ink/75">{body}</p>
       {hasFooterSlot ? (
         <div class="text-sm font-medium text-ink/80">
