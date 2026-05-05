@@ -153,11 +153,11 @@ The visual shell is **not** optional for new `.astro` articles under `src/pages/
 3. **Inside the body (typical order):**
    - **`ArticleTOC`** (optional, recommended for articles with 5+ H2's) — `<ArticleTOC slot="toc" entries={tocEntries} />` right after `<SubmenuArticleBody>` open. Renders as narrow sticky sidebar with two-digit numbered index (`01`, `02`…). Entries must match H2 `id` attributes in the body.
    - **`ArticleAuthorBlock`** — `authorSlug` (from `src/data/writers.ts`) + `publishedDate` + `readingMinutes`. Resolves writer portrait, role and medical reviewer line.
-   - **Kısa Özet** (or equivalent intro) in the gold-tint summary card class used on current pages.
+   - **`ArticleSummary`** — every static article starts its reading flow with this component for **Kısa Özet** / quick answer. Do not hand-roll a per-page gold summary `<section>`; use `<ArticleSummary><p>…</p></ArticleSummary>` so the premium Vogue/TR summary card stays consistent.
    - Main text: **`ArticleProsePanel`** only — do **not** put `prose` on a bare `<section>`; the panel supplies the white card + typography.
    - Extra prose blocks (e.g. “Kısa Hatırlatma”): second **`ArticleProsePanel`** with `class="mt-10"` (and more if needed).
    - **SSS / FAQ yüzeyi** — her yayın makalesinde tek görünür SSS yüzeyi zorunlu. `src/data/article-faqs.ts` veya sayfaya özel `faqItems` kaynağı kullan; 3–5 konuya özgü gerçek soru, her yanıtta 2–3 cümle. Eğer SSS ana gövdede `ArticleProsePanel` içinde editoryal H2/H3 akışıyla yazıldıysa ayrıca `ArticleFAQ` ekleme; bu Vogue/TR long-read ritmini bozar ve çift `id` riski doğurur. Eğer gövdede SSS yoksa `ArticleFAQ` bloğunu ana gövdenin ardından, `RelatedReadings` öncesi yerleştir.
-   - **İlgili İçerikler** (cream panel), optional **Bilimsel editör notu** (gradient left-border panel), **disclaimer** (dashed border card) — match classes from an updated article such as `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro`.
+   - **İlgili İçerikler** with `RelatedReadings`, then **`ArticleEditorNote`** for Bilimsel Editör Notu and **`ArticleDisclaimer`** for the medical disclaimer. Do not hand-roll the old gradient left-border editor note or dashed disclaimer `<section>` in new/updated articles; these reusable components are the canonical Vogue/TR article trust blocks.
 4. **Imports:** `../../components/site/...` from `src/pages/<section>/`; add one `../` per extra directory level (e.g. `hormonal-gecis/menopoz/` → `../../../components/site/`).
 5. **CMS / JSON-driven articles** rendered by `src/pages/article/[slug].astro` already use `SubmenuArticleBody` + `ArticleProsePanel` for HTML body; follow the same content blocks in `src/data/articles` (title, excerpt, transparency, disclaimer).
 

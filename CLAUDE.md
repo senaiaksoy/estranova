@@ -269,7 +269,7 @@ Always structure pages as websites with:
 
 #### Article layout (implementation)
 
-For new static Astro articles, follow **AGENTS.md → “Article page layout (Astro)”**: `SubmenuHero` (when in `submenu-heroes`), `SubmenuArticleBody`, `ArticleProsePanel` for body HTML, then related content, optional editor note, disclaimer. Reference `src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro`. Dynamic articles use `article/[slug].astro` with the same body components.
+For new static Astro articles, follow **AGENTS.md → “Article page layout (Astro)”**: `SubmenuHero` (when in `submenu-heroes`), `SubmenuArticleBody`, `ArticleSummary` for Kısa Özet, `ArticleProsePanel` for body HTML, then `RelatedReadings`, `ArticleEditorNote`, and `ArticleDisclaimer`. Do not create one-off summary/editor-note/disclaimer card classes in article pages. Dynamic articles use `article/[slug].astro` with the same body components where applicable.
 
 ### Content Architecture Rules
 

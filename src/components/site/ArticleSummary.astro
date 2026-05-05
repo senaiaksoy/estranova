@@ -1,0 +1,31 @@
+---
+/**
+ * Makale başındaki "Kısa Özet" kartı.
+ * Dergi sayfası hissi verirken bilgiyi hızlı taranabilir tutar.
+ */
+interface Props {
+  title?: string;
+  eyebrow?: string;
+  class?: string;
+}
+
+const { title = 'Kısa Özet', eyebrow = 'Okumaya Başlamadan', class: className } = Astro.props;
+---
+
+<section
+  class:list={[
+    'relative overflow-hidden rounded-[34px] border border-gold/30 bg-gradient-to-br from-white via-cream-soft/80 to-cream-warm/70 p-7 shadow-[0_26px_72px_-42px_rgba(44,22,28,0.28)] ring-1 ring-white/75 md:p-8',
+    className,
+  ]}
+>
+  <div class="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-gold/14"></div>
+  <div class="pointer-events-none absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent"></div>
+  <p class="relative mb-3 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+    <span class="h-px w-10 bg-gold/80"></span>
+    <span>{eyebrow}</span>
+  </p>
+  <h2 class="relative mb-4 font-serif text-3xl italic leading-tight text-burgundy-deep md:text-4xl">{title}</h2>
+  <div class="relative max-w-3xl text-[1.03rem] leading-relaxed text-ink/80 [&_strong]:font-semibold [&_strong]:text-burgundy">
+    <slot />
+  </div>
+</section>

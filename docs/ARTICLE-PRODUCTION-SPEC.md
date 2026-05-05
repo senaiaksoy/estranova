@@ -245,12 +245,12 @@ Kategori → klasör eşlemesi:
 **Kanonik referans:** `src/pages/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz.astro` veya `hormonal-gecis/menopoz/hrt-ilk-alti-ay.astro`
 
 Zorunlu yapı:
-- Frontmatter import'ları: `BaseLayout`, `SubmenuHero` (varsa kategori submenu-heroes.ts'te), `SubmenuArticleBody`, `ArticleProsePanel`, `Evidence`, `RelatedReadings`, `EditorNote` (BEN için), `ArticleAuthorBlock`, `buildArticleSchemas`
+- Frontmatter import'ları: `BaseLayout`/`SiteLayout`, `SubmenuHero` (varsa kategori submenu-heroes.ts'te), `SubmenuArticleBody`, `ArticleSummary`, `ArticleProsePanel`, `Evidence`, `RelatedReadings`, `ArticleEditorNote`, `ArticleDisclaimer`, `ArticleAuthorBlock`, `buildArticleSchemas`
 - JSON-LD injection: `MedicalWebPage` + `Article` + `BreadcrumbList` + `FAQPage`
-- Body: `ArticleProsePanel` içinde h2 + italic lede paragraflar
+- Body başlangıcı: `ArticleSummary` içinde Kısa Özet / quick answer; ardından `ArticleProsePanel` içinde h2 + italic lede paragraflar
 - `class="prose prose-lg prose-estranova max-w-none"` zorunlu (CLAUDE.md HARD CONSTRAINT)
 - Body sonu / SSS: tek görünür SSS yüzeyi zorunlu; gövde içinde editoryal SSS yoksa `ArticleFAQ`, varsa ikinci FAQ bloğu yok; schema ile aynı içerik
-- Sonra: `RelatedReadings` (3-5 link) → `EditorNote` (BEN) → `ArticleAuthorBlock` → Disclaimer
+- Sonra: `RelatedReadings` (3-5 link) → `ArticleEditorNote` (BEN) → `ArticleDisclaimer`. Eski elle yazılmış gradient left-border editor note veya dashed disclaimer `<section>` yeni/yenilenen makalelerde kullanılmaz.
 
 **Detaylı şablon:** `AGENTS.md` line 147 "Article page layout (Astro)" — kod örnekleri orada.
 
@@ -434,9 +434,10 @@ Zorunlu yapı:
 | 1 | Yazar §13 self-check (varsa, v3.2'de zorunlu — Gamze) — 0-1 hayır kabul, 2+ revizyon | ☐ |
 | 2 | Frontmatter eksiksiz: `title`, `description`, `author`, `reviewedBy`, `date`, `category`, `sectionPath`, `hero`, `lang="tr"` | ☐ |
 | 3 | `ArticleProsePanel` + `class="prose prose-lg prose-estranova max-w-none"` (CLAUDE.md HARD CONSTRAINT) | ☐ |
+| 3a | `ArticleSummary` kullanıldı; Kısa Özet için elle yazılmış tekil card class yok | ☐ |
 | 4 | 6-8 cümleli H2 + her birinde italic lede | ☐ |
 | 5 | Evidence 2-3 (max 4-5), yazar sesinde yumuşatılmış (3 yapıdan biri) | ☐ |
-| 6 | Bilimsel Editör Notu 5-katmanlı (150-250 kelime, Doç. Dr. Senai Aksoy imzalı) | ☐ |
+| 6 | Bilimsel Editör Notu `ArticleEditorNote` içinde, 5-katmanlı veya konuya göre kompakt, Doç. Dr. Senai Aksoy imzalı | ☐ |
 | 7 | Çift Rol Uyarısı (Gamze): muayene odası bilgisi sızıntısı yok | ☐ |
 | 8 | ArticleAuthorBlock — writers.ts'ten | ☐ |
 | 9 | RelatedReadings 3-5 link (parent hub + komşu kategori) | ☐ |
@@ -447,7 +448,7 @@ Zorunlu yapı:
 | 13 | Manifest entry yalnız yayın kapısı açıldıktan sonra eklenecek; onay bekleyen makale RSS/static manifest'te yok | ☐ |
 | 14 | Compliance score ≥ 85 (`compliance_expert_agent.py`) | ☐ |
 | 15 | Yasak filtreleri temiz (URL, kuruluş adı, marka, HRT/ilaç adı, lüks dekor, sosyal/siyasi yorum) | ☐ |
-| 16 | Tıbbi sorumluluk reddi disclaimer'ı görünür (CLAUDE.md §1) | ☐ |
+| 16 | Tıbbi sorumluluk reddi `ArticleDisclaimer` ile görünür (CLAUDE.md §1) | ☐ |
 | 17 | Dil: %100 Türkçe (CLAUDE.md Dil politikası) | ☐ |
 | 17a | `npm run lexicon:check` temiz; `hard_ban` ihlali yok, `soft_ban` warning'leri gözden geçirildi | ☐ |
 | 18 | Yazar onayı yolu seçildi: standart yazar formu veya `berna-aksoy` / `alara-baykent` / `senai-aksoy` için KC editör doğrudan onayı | ☐ |
