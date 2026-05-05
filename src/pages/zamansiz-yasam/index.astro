@@ -56,7 +56,15 @@ const pillars = [
 
 const evidenceLevels = [5, 4, 3, 2, 1] as const;
 
-const editorPick: any = null;
+const editorPick = {
+  href: '/zamansiz-yasam/kilo-artisi-menopoz',
+  title: 'Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet',
+  lede:
+    'Aynı yaşam düzeninde bedenin başka bir ritme geçtiğini fark ettiğimiz o sessiz aralığa; tartıdan önce kas, uyku ve günlük düzen tarafından bakıyoruz.',
+  writerSlug: 'berna-aksoy',
+  readingMinutes: 9,
+  image: submenuHeroByRoute['/zamansiz-yasam/kilo-artisi-menopoz']!,
+};
 
 const tocArticles = [
   {
@@ -66,14 +74,6 @@ const tocArticles = [
       'Fzt. Ersin Saraç’ın ilk Estranova yazısı: 40 sonrası kas-iskelet ağrılarını tek egzersize indirgemeden; ağrı sinyali, kas gücü, denge ve güvenli hareket haritası üzerinden okuyan rehber.',
     writerSlug: 'ersin-sarac',
     readingMinutes: 8,
-  },
-  {
-    href: '/zamansiz-yasam/kilo-artisi-menopoz',
-    title: 'Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet',
-    excerpt:
-      'Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları konuşan yaşıt tonlu rehber.',
-    writerSlug: 'berna-aksoy',
-    readingMinutes: 9,
   },
   {
     href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
@@ -119,6 +119,12 @@ const tocArticles = [
     )}
 
     <SubmenuSection variant="cream" borderedTop={true}>
+      <header class="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bölüm İndeksi</p>
+        <h2 class="font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">
+          Uzun yaşam fikrine sakin ve kanıtlı bakmak
+        </h2>
+      </header>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {
           pillars.map((p) => (
@@ -136,12 +142,12 @@ const tocArticles = [
     </SubmenuSection>
 
     <SubmenuSection variant="white" borderedTop={true}>
-      <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
-        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu kategoriden bir okuma</h2>
+      <header class="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">Bu kategoriden bir okuma</h2>
       </header>
 
-      {editorPick && (<EditorPickCard
+      <EditorPickCard
         href={editorPick.href}
         title={editorPick.title}
         lede={editorPick.lede}
@@ -149,13 +155,13 @@ const tocArticles = [
         readingMinutes={editorPick.readingMinutes}
         imageSrc={editorPick.image.src}
         imageAlt={editorPick.image.alt}
-      />)}
+      />
     </SubmenuSection>
 
     <SubmenuSection variant="cream" borderedTop={true}>
-      <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bu Kategoride Okumalar</p>
-        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Sayının diğer başlıkları</h2>
+      <header class="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bu Kategoride Okumalar</p>
+        <h2 class="font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">Sayının diğer başlıkları</h2>
       </header>
 
       <MagazineTOC items={tocArticles} />
@@ -164,7 +170,7 @@ const tocArticles = [
     {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={true}>
-      <div class="rounded-[36px] border border-burgundy/12 bg-cream-warm p-8 shadow-sm ring-1 ring-black/5 md:p-12">
+      <div class="border-y border-burgundy/15 bg-cream-warm/80 p-8 ring-1 ring-black/5 md:p-12">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Kanıt Düzeyi</p>
         <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">İçeriklerimiz nasıl değerlendirilir?</h2>
         <p class="mb-8 max-w-3xl text-lg leading-relaxed text-ink/75">
@@ -227,12 +233,14 @@ const tocArticles = [
     </SubmenuSection>
 
     <SubmenuSection variant="white" borderedTop={true}>
-      <header class="mb-10 max-w-3xl">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Öne Çıkanlar</p>
-        <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
-        <p class="text-lg leading-relaxed text-ink/75">
-          Bu kategorideki popüler başlıklardan örnek içerikler.
-        </p>
+      <header class="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Öne Çıkanlar</p>
+        <div>
+          <h2 class="mb-4 font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">Öne çıkan içerikler</h2>
+          <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
+            Bu kategorideki popüler başlıklardan örnek içerikler.
+          </p>
+        </div>
       </header>
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">

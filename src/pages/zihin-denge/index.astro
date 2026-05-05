@@ -72,6 +72,12 @@ const pillars = [
     )}
 
     <SubmenuSection variant="cream" borderedTop={true}>
+      <header class="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Bölüm İndeksi</p>
+        <h2 class="font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">
+          Zihnin ritmini üç kapıdan okumak
+        </h2>
+      </header>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {
           pillars.map((p) => (
@@ -91,12 +97,14 @@ const pillars = [
     {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={true}>
-      <header class="mb-10 max-w-3xl">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Öne Çıkanlar</p>
-        <h2 class="mb-4 font-serif text-4xl leading-tight md:text-5xl">Öne Çıkan İçerikler</h2>
-        <p class="text-lg leading-relaxed text-ink/75">
+      <header class="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Öne Çıkanlar</p>
+        <div>
+          <h2 class="mb-4 font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">Öne çıkan içerikler</h2>
+          <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
           Zihin ve duygusal denge konularına odaklanan örnek içerikler.
-        </p>
+          </p>
+        </div>
       </header>
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
