@@ -57,7 +57,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme': {
     src: '/images/library/editorial/introspective-clasped-hands.webp',
-    alt: '46 yaş kadın portresi: çene altında kenetlenmiş eller, cream keten gömlek, arka planda yumuşak bordo vazo bokeh; sakin dikkat ve kendi bedenini izleme teması — HRT ilk aylarında izleme defteri çerçevesi.',
+    alt: '46 yaş kadın portresi: çene altında kenetlenmiş eller, cream keten gömlek, arka planda yumuşak bordo vazo bokeh; HRT ilk aylarında sakin dikkat, beden takibi ve izleme defteri yaklaşımı teması.',
   },
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': {
     src: '/images/library/editorial/by-libido-degisimi.webp',
@@ -93,7 +93,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zamansiz-yasam/d-vitamini-rehberi': {
     src: '/images/library/editorial/zy-vitaminler.webp',
-    alt: 'Sabah ışığında ahşap masada yumurtalar, portakal dilimleri, çiğ ceviz ve mavi-yeşil yapraklı sebze; etiketsiz zeytinyağı yanında; D vitamini için besin + güneş + takviye üçgenini sade ve dürüst sunan klinik çerçeve teması',
+    alt: 'Sabah ışığında ahşap masada yumurtalar, portakal dilimleri, çiğ ceviz ve mavi-yeşil yapraklı sebze; etiketsiz zeytinyağı yanında; D vitamini için besin, güneş ve takviye üçgenini sade sağlık okumasıyla değerlendirme teması',
   },
   '/zamansiz-yasam/kemik-sagligi-40-sonrasi': {
     src: '/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi.webp',
