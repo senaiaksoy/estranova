@@ -32,7 +32,8 @@ const numberedIssues = issues
 const archiveIssue = issues.find((i) => i.number === 0);
 ---
 
-<section class="bg-white px-6 py-12 md:py-16">
+<section class="relative isolate overflow-hidden bg-white px-6 py-12 md:py-16">
+  <div class="pointer-events-none absolute right-[-6rem] top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
   <div class="mx-auto max-w-6xl">
     <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
       {
@@ -44,12 +45,13 @@ const archiveIssue = issues.find((i) => i.number === 0);
               <a
                 href={`/sayi/${issue.slug}`}
                 class:list={[
-                  'group flex h-full flex-col overflow-hidden rounded-[28px] border bg-white shadow-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
+                  'group relative flex h-full flex-col overflow-hidden rounded-[34px] border bg-white shadow-xl shadow-burgundy/8 ring-1 ring-white/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
                   highlightCurrent && isCurrent
-                    ? 'border-burgundy/35 ring-2 ring-burgundy/20 hover:-translate-y-0.5 hover:shadow-xl'
-                    : 'border-burgundy/12 hover:-translate-y-0.5 hover:shadow-md',
+                    ? 'border-burgundy/35 ring-2 ring-burgundy/20 hover:-translate-y-1 hover:shadow-2xl hover:shadow-burgundy/14'
+                    : 'border-burgundy/12 hover:-translate-y-1 hover:border-gold/35 hover:shadow-2xl hover:shadow-burgundy/12',
                 ]}
               >
+                <span class="pointer-events-none absolute inset-x-6 top-0 z-10 h-px bg-gold/60"></span>
                 <div class="relative aspect-[4/5] w-full overflow-hidden">
                   <img
                     src={issue.coverImage.src}
@@ -58,9 +60,13 @@ const archiveIssue = issues.find((i) => i.number === 0);
                     height="750"
                     loading="lazy"
                     decoding="async"
-                    class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"
+                    class="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.04]"
                   />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/55 via-[#1c1412]/15 to-transparent"></div>
+                  <div class="pointer-events-none absolute inset-x-4 top-4 flex items-center justify-between text-cream-soft/80">
+                    <span class="text-[9px] font-semibold uppercase tracking-[0.24em]">Kapak</span>
+                    <span class="font-serif text-xl italic text-gold">No {issuePad}</span>
+                  </div>
                   <div class="absolute bottom-5 left-5 right-5 text-cream-soft">
                     <p class="text-[9px] font-semibold uppercase tracking-[0.32em] text-gold/95">
                       {magazineConfig.subtitle}
@@ -76,7 +82,10 @@ const archiveIssue = issues.find((i) => i.number === 0);
                     </span>
                   )}
                 </div>
-                <div class="flex flex-1 flex-col p-6">
+                <div class="relative flex flex-1 flex-col bg-gradient-to-b from-white to-cream-soft/55 p-6">
+                  <span class="pointer-events-none absolute right-5 top-4 font-serif text-5xl italic leading-none text-gold/12">
+                    {issuePad}
+                  </span>
                   <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">
                     {issue.theme}
                   </p>
@@ -96,7 +105,10 @@ const archiveIssue = issues.find((i) => i.number === 0);
     </ul>
 
     {archiveIssue && (
-      <div class="mt-12 rounded-[28px] border border-gold/30 bg-cream-warm/60 p-8 md:p-10">
+      <div class="relative mt-12 overflow-hidden rounded-[34px] border border-gold/30 bg-cream-warm/65 p-8 shadow-xl shadow-burgundy/8 ring-1 ring-white/70 md:p-10">
+        <span class="pointer-events-none absolute right-8 top-2 font-serif text-8xl italic leading-none text-burgundy/6">
+          00
+        </span>
         <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
           Sayı 0 · Arşiv
         </p>
