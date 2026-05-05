@@ -345,7 +345,11 @@ const homeFaqs = [
       Konum: Editöryal Seçki sonrası (2026-05-03'te taşındı; eski konumu en altta idi).
       Bilim yazarları için ayrı carousel sayfa sonunda yer alır.
     -->
-    <section class="border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-0 top-10 hidden font-serif text-[11rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.04] lg:block">
+        imza
+      </div>
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
@@ -400,9 +404,9 @@ const homeFaqs = [
                 <li class="flex shrink-0 snap-start" style="width: clamp(270px, 78vw, 340px);">
                   <a
                     href={`/yazarlar/${w.slug}`}
-                    class="group relative flex w-full flex-col overflow-hidden rounded-[30px] border border-burgundy/12 bg-white/72 p-5 shadow-xl shadow-burgundy/6 ring-1 ring-white/70 transition hover:-translate-y-0.5 hover:border-gold/35 hover:shadow-2xl hover:shadow-burgundy/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                    class="group relative flex w-full flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/45 p-5 shadow-[0_28px_88px_-62px_rgba(44,22,28,0.36)] ring-1 ring-white/80 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_38px_110px_-64px_rgba(44,22,28,0.48)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
-                    <span class="pointer-events-none absolute inset-x-5 top-0 h-px bg-gold/55"></span>
+                    <span class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/75 to-transparent"></span>
                     {w.portrait ? (
                       <img
                         src={w.portrait}
@@ -411,10 +415,10 @@ const homeFaqs = [
                         height="160"
                         loading="lazy"
                         decoding="async"
-                        class="mb-5 aspect-[4/5] w-full rounded-[28px] object-cover object-top ring-1 ring-burgundy/12 transition duration-500 group-hover:scale-[1.01] group-hover:ring-burgundy/35"
+                        class="mb-5 aspect-[4/5] w-full rounded-[30px] object-cover object-top ring-1 ring-burgundy/12 transition duration-700 group-hover:scale-[1.025] group-hover:ring-burgundy/35"
                       />
                     ) : (
-                      <div class="mb-5 flex aspect-[4/5] w-full items-center justify-center rounded-[28px] bg-cream-warm font-serif text-5xl text-burgundy ring-1 ring-burgundy/12 transition group-hover:ring-burgundy/35">
+                      <div class="mb-5 flex aspect-[4/5] w-full items-center justify-center rounded-[30px] bg-cream-warm font-serif text-5xl text-burgundy ring-1 ring-burgundy/12 transition group-hover:ring-burgundy/35">
                         {w.displayName
                           .split(/\s+/)
                           .filter((part) => part.length > 0)
@@ -423,15 +427,19 @@ const homeFaqs = [
                       </div>
                     )}
                     <div class="min-w-0 flex-1 border-t border-burgundy/14 pt-5">
-                      <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy">
+                      <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-bronze">
                         {w.role.split('/')[0].trim()}
                       </p>
-                      <h3 class="mt-2 font-serif text-2xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">
+                      <h3 class="mt-2 font-serif text-3xl leading-[0.98] tracking-[-0.03em] text-ink transition group-hover:text-burgundy">
                         {w.displayName}
                       </h3>
                       <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
                         {w.signaturePhrase}
                       </p>
+                      <span class="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.17em] text-burgundy">
+                        Profili oku
+                        <span class="font-serif text-xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
+                      </span>
                     </div>
                   </a>
                 </li>
@@ -578,7 +586,11 @@ const homeFaqs = [
       Konum: EditorialDigestStrip sonrası, Kütüphane'den önce (2026-05-03'te eklendi).
       Aynı carousel JS pattern'ı (multi-carousel forEach destekli).
     -->
-    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -right-24 top-20 h-72 w-72 rounded-full bg-burgundy/8 blur-3xl"></div>
+      <div class="pointer-events-none absolute left-0 top-10 hidden font-serif text-[10rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.035] lg:block">
+        kurul
+      </div>
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
@@ -628,8 +640,9 @@ const homeFaqs = [
                 <li class="flex shrink-0 snap-start" style="width: clamp(270px, 78vw, 340px);">
                   <a
                     href={`/yazarlar/${w.slug}`}
-                    class="group flex w-full flex-col border-r border-burgundy/12 pr-5 last:border-r-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                    class="group relative flex w-full flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/45 p-5 shadow-[0_28px_88px_-62px_rgba(44,22,28,0.34)] ring-1 ring-white/80 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_38px_110px_-64px_rgba(44,22,28,0.46)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
+                    <span class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/75 to-transparent"></span>
                     {w.portrait ? (
                       <img
                         src={w.portrait}
@@ -638,10 +651,10 @@ const homeFaqs = [
                         height="160"
                         loading="lazy"
                         decoding="async"
-                        class="mb-5 aspect-[4/5] w-full rounded-[28px] object-cover object-top ring-1 ring-burgundy/12 transition duration-500 group-hover:scale-[1.01] group-hover:ring-burgundy/35"
+                        class="mb-5 aspect-[4/5] w-full rounded-[30px] object-cover object-top ring-1 ring-burgundy/12 transition duration-700 group-hover:scale-[1.025] group-hover:ring-burgundy/35"
                       />
                     ) : (
-                      <div class="mb-5 flex aspect-[4/5] w-full items-center justify-center rounded-[28px] bg-cream-warm font-serif text-5xl text-burgundy ring-1 ring-burgundy/12 transition group-hover:ring-burgundy/35">
+                      <div class="mb-5 flex aspect-[4/5] w-full items-center justify-center rounded-[30px] bg-cream-warm font-serif text-5xl text-burgundy ring-1 ring-burgundy/12 transition group-hover:ring-burgundy/35">
                         {w.displayName
                           .split(/\s+/)
                           .filter((part) => part.length > 0)
@@ -650,15 +663,19 @@ const homeFaqs = [
                       </div>
                     )}
                     <div class="min-w-0 flex-1 border-t border-burgundy/14 pt-5">
-                      <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy">
+                      <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-bronze">
                         {w.role.split('/')[0].trim()}
                       </p>
-                      <h3 class="mt-2 font-serif text-2xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">
+                      <h3 class="mt-2 font-serif text-3xl leading-[0.98] tracking-[-0.03em] text-ink transition group-hover:text-burgundy">
                         {w.displayName}
                       </h3>
                       <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
                         {w.signaturePhrase}
                       </p>
+                      <span class="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.17em] text-burgundy">
+                        Profili oku
+                        <span class="font-serif text-xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
+                      </span>
                     </div>
                   </a>
                 </li>

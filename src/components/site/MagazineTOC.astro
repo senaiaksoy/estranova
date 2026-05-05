@@ -24,31 +24,35 @@ const enriched = items.map((it, i) => ({
 }));
 ---
 
-<ol class="overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/70 shadow-[0_24px_80px_-58px_rgba(44,22,28,0.32)] ring-1 ring-white/75" role="list">
-  {
-    enriched.map((a) => (
-      <li class="border-t border-burgundy/12 first:border-t-0">
-        <a
-          href={a.href}
-          class="group grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 px-5 py-7 transition hover:bg-cream-soft/70 md:grid-cols-[auto_1fr_auto] md:items-baseline md:gap-x-8 md:px-7 md:py-8"
-        >
-          <span class="font-serif text-3xl italic text-gold md:text-4xl" aria-hidden="true">
-            {a.num}
-          </span>
-          <div class="min-w-0">
-            <h3 class="mb-2 font-serif text-2xl leading-tight tracking-[-0.015em] text-ink group-hover:text-burgundy md:text-3xl">
-              {a.title}
-            </h3>
-            <p class="max-w-3xl font-serif text-base italic leading-relaxed text-ink/72 md:text-lg">
-              {a.excerpt}
-            </p>
-          </div>
-          <div class="col-start-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs uppercase tracking-[0.14em] text-ink/55 md:col-start-3 md:flex-col md:items-end md:gap-y-1 md:text-right md:tracking-[0.16em]">
-            {a.writer && <span class="font-semibold text-burgundy">{a.writer.displayName}</span>}
-            <span>{a.readingMinutes} dk okuma</span>
-          </div>
-        </a>
-      </li>
-    ))
-  }
-</ol>
+<div class="relative overflow-hidden rounded-[36px] border border-burgundy/12 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/45 shadow-[0_30px_96px_-60px_rgba(44,22,28,0.42)] ring-1 ring-white/80">
+  <div class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></div>
+  <ol role="list">
+    {
+      enriched.map((a) => (
+        <li class="border-t border-burgundy/12 first:border-t-0">
+          <a
+            href={a.href}
+            class="group relative grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 px-5 py-7 transition duration-300 hover:bg-white/75 md:grid-cols-[auto_1fr_auto] md:items-baseline md:gap-x-8 md:px-8 md:py-9"
+          >
+            <span class="font-serif text-3xl italic leading-none text-gold transition group-hover:text-burgundy md:text-5xl" aria-hidden="true">
+              {a.num}
+            </span>
+            <div class="min-w-0">
+              <h3 class="mb-2 max-w-3xl font-serif text-2xl leading-[1.02] tracking-[-0.025em] text-ink transition group-hover:text-burgundy md:text-4xl">
+                {a.title}
+              </h3>
+              <p class="max-w-3xl font-serif text-base italic leading-relaxed text-ink/74 md:text-lg">
+                {a.excerpt}
+              </p>
+            </div>
+            <div class="col-start-2 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-burgundy/10 pt-4 text-xs uppercase tracking-[0.14em] text-ink/55 md:col-start-3 md:flex-col md:items-end md:gap-y-2 md:border-t-0 md:pt-0 md:text-right md:tracking-[0.16em]">
+              {a.writer && <span class="font-semibold text-burgundy">{a.writer.displayName}</span>}
+              <span>{a.readingMinutes} dk okuma</span>
+              <span class="hidden h-px w-10 bg-gold/65 transition group-hover:w-14 md:block"></span>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</div>

@@ -32,31 +32,36 @@ const writer = writers.find((w) => w.slug === writerSlug);
 
 <a
   href={href}
-  class="group relative block overflow-hidden rounded-[40px] border border-burgundy/14 bg-white shadow-[0_34px_100px_-58px_rgba(44,24,28,0.38)] ring-1 ring-white/80 transition duration-300 hover:-translate-y-0.5 hover:border-gold/35 hover:shadow-[0_42px_120px_-60px_rgba(44,24,28,0.48)]"
+  class="group relative block overflow-hidden rounded-[44px] border border-burgundy/14 bg-gradient-to-br from-white via-[#fffaf0] to-cream-warm/60 shadow-[0_38px_120px_-62px_rgba(44,24,28,0.48)] ring-1 ring-white/85 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_48px_140px_-64px_rgba(44,24,28,0.56)]"
 >
-  <div class="pointer-events-none absolute inset-x-10 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
+  <div class="pointer-events-none absolute inset-x-10 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/85 to-transparent"></div>
+  <div class="pointer-events-none absolute -left-16 top-10 h-44 w-44 rounded-full bg-gold/10 blur-3xl"></div>
   <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
-    <div class="relative aspect-[4/3] overflow-hidden rounded-b-[34px] lg:aspect-auto lg:min-h-[420px] lg:rounded-b-none lg:rounded-r-[34px]">
+    <div class="relative aspect-[4/3] overflow-hidden rounded-b-[36px] lg:aspect-auto lg:min-h-[440px] lg:rounded-b-none lg:rounded-r-[36px]">
       <img
         src={imageSrc}
         alt={imageAlt}
-        class="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.02]"
+        class="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.035]"
         loading="lazy"
         decoding="async"
       />
-      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/30 via-transparent to-transparent"></div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/48 via-[#1c1412]/5 to-transparent"></div>
+      <div class="absolute left-6 top-6 rounded-full border border-white/35 bg-white/18 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-white shadow-sm backdrop-blur-md">
+        Kapak Seçkisi
+      </div>
+      <div class="pointer-events-none absolute inset-x-8 bottom-8 h-px bg-gradient-to-r from-white/70 via-gold/70 to-transparent"></div>
     </div>
-    <div class="relative flex flex-col justify-between gap-8 overflow-hidden p-8 md:p-10 lg:p-12">
-      <div class="pointer-events-none absolute bottom-6 right-8 font-serif text-8xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">seçki</div>
+    <div class="relative flex flex-col justify-between gap-9 overflow-hidden p-8 md:p-10 lg:p-12">
+      <div class="pointer-events-none absolute -right-3 bottom-4 font-serif text-8xl italic leading-none text-burgundy/[0.04] md:text-9xl" aria-hidden="true">seçki</div>
       <div>
         <p class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-gold-bronze">
           <span class="h-px w-9 bg-gold/75"></span>
           <span>{eyebrow}</span>
         </p>
-        <h3 class="mb-5 font-serif text-3xl leading-tight tracking-[-0.025em] text-ink group-hover:text-burgundy md:text-5xl">
+        <h3 class="mb-6 max-w-[11ch] font-serif text-4xl leading-[0.96] tracking-[-0.035em] text-ink transition group-hover:text-burgundy md:text-6xl">
           {title}
         </h3>
-        <p class="max-w-xl border-l-2 border-gold/55 pl-5 font-serif text-lg italic leading-relaxed text-burgundy/85 md:text-xl">
+        <p class="max-w-xl border-l-2 border-gold/60 pl-5 font-serif text-lg italic leading-relaxed text-burgundy/88 md:text-xl">
           "{lede}"
         </p>
       </div>
@@ -73,7 +78,7 @@ const writer = writers.find((w) => w.slug === writerSlug);
           )
         }
         <span>{readingMinutes} dk okuma</span>
-        <span class="ml-auto inline-flex items-center gap-2 font-semibold text-burgundy group-hover:underline">
+        <span class="ml-auto inline-flex items-center gap-2 rounded-full border border-burgundy/10 bg-white/55 px-4 py-2 font-semibold text-burgundy shadow-sm transition group-hover:border-gold/35 group-hover:bg-cream-soft">
           {cta}
           <span aria-hidden="true">→</span>
         </span>
