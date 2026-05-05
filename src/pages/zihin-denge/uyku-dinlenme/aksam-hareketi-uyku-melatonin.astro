@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -10,6 +10,9 @@ import ReadingControls from '../../../components/site/ReadingControls.astro';
 import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -20,39 +23,39 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme']!;
 
 const tocEntries = [
-  { id: 'aksam-sporcu', label: 'AkÅŸam Bedeni' },
-  { id: 'yanlis-inanis', label: 'YanlÄ±ÅŸ Ä°nanÄ±ÅŸ' },
-  { id: 'melatonin', label: 'Melatonin ve IsÄ±' },
-  { id: 'uc-zamanlama', label: 'ÃœÃ§ Zamanlama' },
+  { id: 'aksam-sporcu', label: 'Akşam Bedeni' },
+  { id: 'yanlis-inanis', label: 'Yanlış İnanış' },
+  { id: 'melatonin', label: 'Melatonin ve Isı' },
+  { id: 'uc-zamanlama', label: 'Üç Zamanlama' },
   { id: 'ne-denenir', label: 'Ne Denenir' },
   { id: 'ne-zaman', label: 'Ne Zaman Dikkat' },
-  { id: 'sik-sorulanlar', label: 'SÄ±kÃ§a Sorulanlar' },
-  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
   { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'AkÅŸam Hareketi Uykuyu Bozar mÄ±, Toparlar mÄ±?';
+const articleTitle = 'Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?';
 const articleDescription =
-  'AkÅŸam egzersizi, melatonin, beden Ä±sÄ±sÄ± ve perimenopozda uyku iliÅŸkisi. Alara Baykent sporcu beden okumasÄ±yla, performans baskÄ±sÄ± yaratmadan sÃ¼rdÃ¼rÃ¼lebilir akÅŸam hareketini anlatÄ±yor.';
+  'Akşam egzersizi, melatonin, beden ısısı ve perimenopozda uyku ilişkisi. Alara Baykent sporcu beden okumasıyla, performans baskısı yaratmadan sürdürülebilir akşam hareketini anlatıyor.';
 const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'alara-baykent',
-  publishedDate: '4 MayÄ±s 2026',
+  publishedDate: '4 Mayıs 2026',
   pathname: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge',
   keywords: [
-    'akÅŸam egzersizi',
+    'akşam egzersizi',
     'uyku',
     'melatonin',
     'perimenopoz',
     'menopoz',
-    'beden Ä±sÄ±sÄ±',
+    'beden ısısı',
     'hafif hareket',
-    'sÃ¼rdÃ¼rÃ¼lebilir egzersiz',
+    'sürdürülebilir egzersiz',
     'Alara Baykent',
   ],
   faqItems,
@@ -71,15 +74,15 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zihin & Denge Â· Uyku Â· MayÄ±s DosyasÄ±"
-      title="AkÅŸam Hareketi Uykuyu Bozar mÄ±, Toparlar mÄ±?"
+      eyebrow="Zihin & Denge · Uyku · Mayıs Dosyası"
+      title="Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="alara-baykent" publishedDate="4 MayÄ±s 2026" readingMinutes={7} />
+      <ArticleAuthorBlock authorSlug="alara-baykent" publishedDate="4 Mayıs 2026" readingMinutes={7} />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
@@ -89,185 +92,182 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <section
-        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
-      >
-        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
-        <p class="leading-relaxed text-ink/80">
-          AkÅŸam hareketi uykuyu her zaman bozmaz; bazen gÃ¼nÃ¼ bedenden yavaÅŸÃ§a indiren gÃ¼Ã§lÃ¼ bir kÃ¶prÃ¼ olur. Ama
-          perimenopozda gece terlemesi, beden Ä±sÄ±sÄ± ve uykuya dalma hassaslaÅŸtÄ±ÄŸÄ± iÃ§in zamanlama ve yoÄŸunluk daha
-          Ã¶nemli hale gelir. Bu yazÄ±, â€œakÅŸam spor yapmaâ€ yasaÄŸÄ± koymak yerine, hangi hareketin hangi saatte uykuya
-          yardÄ±m edebileceÄŸini sporcu beden okumasÄ±yla anlatÄ±yor.
+      <ArticleSummary title="Kısa Özet">
+<p>
+          Akşam hareketi uykuyu her zaman bozmaz; bazen günü bedenden yavaşça indiren güçlü bir köprü olur. Ama
+          perimenopozda gece terlemesi, beden ısısı ve uykuya dalma hassaslaştığı için zamanlama ve yoğunluk daha
+          önemli hale gelir. Bu yazı, “akşam spor yapma” yasağı koymak yerine, hangi hareketin hangi saatte uykuya
+          yardım edebileceğini sporcu beden okumasıyla anlatıyor.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="aksam-sporcu">AkÅŸam Bedeni GÃ¼ndÃ¼z Bedeni DeÄŸildir</h2>
+        <h2 id="aksam-sporcu">Akşam Bedeni Gündüz Bedeni Değildir</h2>
         <p>
-          RÃ¼zgar Ã¼stÃ¼nde geÃ§irilen bir gÃ¼nÃ¼n sonunda bedenin sesi sabahki gibi Ã§Ä±kmaz. Windsurf yaptÄ±ÄŸÄ±m yÄ±llarda bunu
-          Ã§ok erken Ã¶ÄŸrendim: aynÄ± kas, sabah baÅŸka; akÅŸam baÅŸka cevap verir. Sabah antrenmanÄ±ndaki enerjiyle akÅŸam
-          toparlanma hareketinin aynÄ± ÅŸey olmadÄ±ÄŸÄ±nÄ± beden insana Ã§ok net sÃ¶yler.
+          Rüzgar üstünde geçirilen bir günün sonunda bedenin sesi sabahki gibi çıkmaz. Windsurf yaptığım yıllarda bunu
+          çok erken öğrendim: aynı kas, sabah başka; akşam başka cevap verir. Sabah antrenmanındaki enerjiyle akşam
+          toparlanma hareketinin aynı şey olmadığını beden insana çok net söyler.
         </p>
         <p>
-          Ben henÃ¼z perimenopoz bedenini kendi iÃ§imden yaÅŸamÄ±yorum. Ama annemin kuÅŸaÄŸÄ±ndaki kadÄ±nlarÄ±n akÅŸam saatlerinde
-          â€œÃ§ok yorgunum ama uykuya da geÃ§emiyorumâ€ dediÄŸi anlarÄ± yakÄ±ndan gÃ¶rdÃ¼m. Ã‡oÄŸu zaman sorun hareketin varlÄ±ÄŸÄ±
-          deÄŸil, hareketin diliydi: beden dinlenmek isterken ona hÃ¢lÃ¢ performans gÃ¶revi vermek.
+          Ben henüz perimenopoz bedenini kendi içimden yaşamıyorum. Ama annemin kuşağındaki kadınların akşam saatlerinde
+          “çok yorgunum ama uykuya da geçemiyorum” dediği anları yakından gördüm. Çoğu zaman sorun hareketin varlığı
+          değil, hareketin diliydi: beden dinlenmek isterken ona hâlâ performans görevi vermek.
         </p>
         <p>
-          AkÅŸam hareketi bu yÃ¼zden benim iÃ§in bir egzersiz baÅŸlÄ±ÄŸÄ± deÄŸil; bir geÃ§iÅŸ ritÃ¼eli. GÃ¼nÃ¼ bedenden Ã§Ä±karmak,
-          omuzlarÄ± Ã§Ã¶zmek, nefesi uzatmak, iÃ§ Ä±sÄ±yÄ± yavaÅŸ yavaÅŸ aÅŸaÄŸÄ± indirmek. Sporcu deneyimim bana ÅŸunu Ã¶ÄŸretti:
-          akÅŸam bedenini zorlamakla akÅŸam bedenini dÃ¼zenlemek aynÄ± ÅŸey deÄŸildir.
-        </p>
-
-        <h2 id="yanlis-inanis">â€œAkÅŸam Egzersizi Uykuyu Bozarâ€ Her Zaman DoÄŸru DeÄŸil</h2>
-        <p>
-          Ã‡oÄŸu zaman ÅŸÃ¶yle duyarÄ±z: â€œAkÅŸam spor yaparsan uyuyamazsÄ±n.â€ Oysa bilim daha nÃ¼anslÄ± konuÅŸuyor. Genel
-          araÅŸtÄ±rmalar, yatmadan birkaÃ§ saat Ã¶nce yapÄ±lan orta yoÄŸunluklu hareketin Ã§oÄŸu kiÅŸide uyku kalitesini bozmadÄ±ÄŸÄ±nÄ±,
-          hatta bazÄ± kiÅŸilerde uykuya geÃ§iÅŸi kolaylaÅŸtÄ±rabildiÄŸini gÃ¶steriyor. <Evidence from={3} to={4} />
-        </p>
-        <p>
-          Buradaki kritik ayrÄ±m yoÄŸunluk. Ã‡ok geÃ§ saatte yapÄ±lan yÃ¼ksek yoÄŸunluklu interval, yarÄ±ÅŸ temposu koÅŸu ya da
-          aÄŸÄ±r kuvvet antrenmanÄ± beden Ä±sÄ±sÄ±nÄ±, kalp atÄ±mÄ±nÄ± ve uyarÄ±lmÄ±ÅŸlÄ±ÄŸÄ± yÃ¼ksek tutabilir. Ama kÄ±sa yÃ¼rÃ¼yÃ¼ÅŸ, hafif
-          mobilite, esneme, nefesle eÅŸleÅŸen yavaÅŸ kuvvet Ã§alÄ±ÅŸmasÄ± baÅŸka bir kategori. AynÄ± baÅŸlÄ±ÄŸÄ±n altÄ±nda duruyorlar
-          ama bedende aynÄ± etkiyi yapmÄ±yorlar.
-        </p>
-        <p>
-          Perimenopozda bu ayrÄ±m daha da deÄŸerli. Ã‡Ã¼nkÃ¼ zaten gece Ä±sÄ±sÄ±, sÄ±cak basmasÄ± ve mikro-uyanma zemini hassassa,
-          akÅŸam hareketinin â€œne kadarâ€ ve â€œne zamanâ€ olduÄŸu uykunun ilk iki saatini etkileyebilir. Hareketi yasaklamak
-          deÄŸil, hareketin dozunu akÅŸam bedenine gÃ¶re ayarlamak gerekir.
+          Akşam hareketi bu yüzden benim için bir egzersiz başlığı değil; bir geçiş ritüeli. Günü bedenden çıkarmak,
+          omuzları çözmek, nefesi uzatmak, iç ısıyı yavaş yavaş aşağı indirmek. Sporcu deneyimim bana şunu öğretti:
+          akşam bedenini zorlamakla akşam bedenini düzenlemek aynı şey değildir.
         </p>
 
-        <h2 id="melatonin">Melatonin Sadece KaranlÄ±kla DeÄŸil, IsÄ±yla da KonuÅŸur</h2>
+        <h2 id="yanlis-inanis">“Akşam Egzersizi Uykuyu Bozar” Her Zaman Doğru Değil</h2>
         <p>
-          Melatonin Ã§oÄŸu zaman â€œuyku hormonuâ€ diye anlatÄ±lÄ±r. Bu doÄŸru ama eksik. Melatonin karanlÄ±kla yÃ¼kselir; aynÄ±
-          zamanda beden Ä±sÄ±sÄ±nÄ±n akÅŸam saatlerinde yavaÅŸÃ§a dÃ¼ÅŸmesiyle uyum iÃ§inde Ã§alÄ±ÅŸÄ±r. Uykuya geÃ§iÅŸ, yalnÄ±zca zihnin
-          kapanmasÄ± deÄŸil, bedenin de Ä±sÄ±sÄ±nÄ± bir miktar aÅŸaÄŸÄ± Ã§ekmesidir. <Evidence level={4} />
+          Çoğu zaman şöyle duyarız: “Akşam spor yaparsan uyuyamazsın.” Oysa bilim daha nüanslı konuşuyor. Genel
+          araştırmalar, yatmadan birkaç saat önce yapılan orta yoğunluklu hareketin çoğu kişide uyku kalitesini bozmadığını,
+          hatta bazı kişilerde uykuya geçişi kolaylaştırabildiğini gösteriyor. <Evidence from={3} to={4} />
         </p>
         <p>
-          Hafif akÅŸam hareketi burada ilginÃ§ bir kapÄ± aÃ§abilir. KÄ±sa bir yÃ¼rÃ¼yÃ¼ÅŸten ya da yumuÅŸak mobiliteden sonra
-          beden Ä±sÄ±sÄ± Ã¶nce hafif yÃ¼kselir, sonra dÃ¼ÅŸÃ¼ÅŸe geÃ§er. Bu dÃ¼ÅŸÃ¼ÅŸ, uykuya hazÄ±rlÄ±k sinyaline yardÄ±m edebilir.
-          Ã‡ok yoÄŸun antrenmanda ise Ä±sÄ± ve adrenalin daha uzun sÃ¼re yÃ¼ksek kalabilir; fark burada.
+          Buradaki kritik ayrım yoğunluk. Çok geç saatte yapılan yüksek yoğunluklu interval, yarış temposu koşu ya da
+          ağır kuvvet antrenmanı beden ısısını, kalp atımını ve uyarılmışlığı yüksek tutabilir. Ama kısa yürüyüş, hafif
+          mobilite, esneme, nefesle eşleşen yavaş kuvvet çalışması başka bir kategori. Aynı başlığın altında duruyorlar
+          ama bedende aynı etkiyi yapmıyorlar.
         </p>
         <p>
-          Benim sporcu dilimle sÃ¶ylersem: akÅŸam hareketi bir â€œmotor aÃ§maâ€ deÄŸil, â€œmotor soÄŸutmaâ€ olmalÄ±. Denizde sert
-          bir gÃ¼n bittiÄŸinde ekipmanÄ± nasÄ±l yavaÅŸÃ§a durulayÄ±p topluyorsak, bedeni de geceye Ã¶yle toplamak gerekir.
-        </p>
-
-        <h2 id="uc-zamanlama">ÃœÃ§ Zamanlama: YardÄ±m Eden, KararsÄ±z, Bozan</h2>
-        <p>
-          AkÅŸam hareketini tek bir kuralla yÃ¶netmek yerine Ã¼Ã§ pencereyle dÃ¼ÅŸÃ¼nmek daha pratik.
-        </p>
-        <p>
-          <strong>Yatmadan 4-6 saat Ã¶nce:</strong> Orta yoÄŸunluklu hareket iÃ§in en rahat alan. Tempolu yÃ¼rÃ¼yÃ¼ÅŸ, direnÃ§
-          bandÄ±, pilates, bisiklet ya da yÃ¼zme bu aralÄ±kta Ã§oÄŸu kiÅŸide uykuya zarar vermez. GÃ¼nÃ¼n stresini bedenden
-          boÅŸaltÄ±r, kaslara â€œbugÃ¼n Ã§alÄ±ÅŸtÄ±k, ÅŸimdi toparlanÄ±yoruzâ€ sinyali verir.
-        </p>
-        <p>
-          <strong>Yatmadan 2-3 saat Ã¶nce:</strong> KararsÄ±z alan. Burada hareketin tonu Ã§ok Ã¶nemli. Hafif yÃ¼rÃ¼yÃ¼ÅŸ,
-          esneme, eklem mobilitesi, kÄ±sa yoga akÄ±ÅŸÄ± iyi gelebilir. Ama nabzÄ± Ã§ok yÃ¼kselten, rekabet hissi taÅŸÄ±yan,
-          â€œbugÃ¼n hedefi tamamlamalÄ±yÄ±mâ€ baskÄ±sÄ±yla yapÄ±lan Ã§alÄ±ÅŸma uykuyu zorlayabilir.
-        </p>
-        <p>
-          <strong>Yatmadan son 60-90 dakika:</strong> YavaÅŸlama alanÄ±. Burada egzersiz deÄŸil, bedeni geceye bÄ±rakma
-          daha iyi Ã§alÄ±ÅŸÄ±r: kalÃ§a ve sÄ±rt mobilitesi, gÃ¶ÄŸÃ¼s kafesini aÃ§an yumuÅŸak hareketler, ayak bileÄŸi Ã§evirmeleri,
-          kÄ±sa nefes Ã§alÄ±ÅŸmasÄ±. AmaÃ§ terlemek deÄŸil; bedene â€œgÃ¼n bittiâ€ demektir.
+          Perimenopozda bu ayrım daha da değerli. Çünkü zaten gece ısısı, sıcak basması ve mikro-uyanma zemini hassassa,
+          akşam hareketinin “ne kadar” ve “ne zaman” olduğu uykunun ilk iki saatini etkileyebilir. Hareketi yasaklamak
+          değil, hareketin dozunu akşam bedenine göre ayarlamak gerekir.
         </p>
 
-        <h2 id="ne-denenir">Bu AkÅŸam Ne Denenir?</h2>
+        <h2 id="melatonin">Melatonin Sadece Karanlıkla Değil, Isıyla da Konuşur</h2>
         <p>
-          BÃ¼yÃ¼k programlar yerine kÃ¼Ã§Ã¼k bir test daha dÃ¼rÃ¼st olur. Bir hafta boyunca aynÄ± saatte, aynÄ± yoÄŸunlukta, aynÄ±
-          kÄ±sa akÅŸam rutini deneyin ve sabah nasÄ±l kalktÄ±ÄŸÄ±nÄ±zÄ± not edin. Sporcu beden okumasÄ±nÄ±n Ã¶zÃ¼ de bu: Ã¶lÃ§mek,
-          abartmadan izlemek, bedeni ikna etmeye Ã§alÄ±ÅŸmamak.
+          Melatonin çoğu zaman “uyku hormonu” diye anlatılır. Bu doğru ama eksik. Melatonin karanlıkla yükselir; aynı
+          zamanda beden ısısının akşam saatlerinde yavaşça düşmesiyle uyum içinde çalışır. Uykuya geçiş, yalnızca zihnin
+          kapanması değil, bedenin de ısısını bir miktar aşağı çekmesidir. <Evidence level={4} />
+        </p>
+        <p>
+          Hafif akşam hareketi burada ilginç bir kapı açabilir. Kısa bir yürüyüşten ya da yumuşak mobiliteden sonra
+          beden ısısı önce hafif yükselir, sonra düşüşe geçer. Bu düşüş, uykuya hazırlık sinyaline yardım edebilir.
+          Çok yoğun antrenmanda ise ısı ve adrenalin daha uzun süre yüksek kalabilir; fark burada.
+        </p>
+        <p>
+          Benim sporcu dilimle söylersem: akşam hareketi bir “motor açma” değil, “motor soğutma” olmalı. Denizde sert
+          bir gün bittiğinde ekipmanı nasıl yavaşça durulayıp topluyorsak, bedeni de geceye öyle toplamak gerekir.
+        </p>
+
+        <h2 id="uc-zamanlama">Üç Zamanlama: Yardım Eden, Kararsız, Bozan</h2>
+        <p>
+          Akşam hareketini tek bir kuralla yönetmek yerine üç pencereyle düşünmek daha pratik.
+        </p>
+        <p>
+          <strong>Yatmadan 4-6 saat önce:</strong> Orta yoğunluklu hareket için en rahat alan. Tempolu yürüyüş, direnç
+          bandı, pilates, bisiklet ya da yüzme bu aralıkta çoğu kişide uykuya zarar vermez. Günün stresini bedenden
+          boşaltır, kaslara “bugün çalıştık, şimdi toparlanıyoruz” sinyali verir.
+        </p>
+        <p>
+          <strong>Yatmadan 2-3 saat önce:</strong> Kararsız alan. Burada hareketin tonu çok önemli. Hafif yürüyüş,
+          esneme, eklem mobilitesi, kısa yoga akışı iyi gelebilir. Ama nabzı çok yükselten, rekabet hissi taşıyan,
+          “bugün hedefi tamamlamalıyım” baskısıyla yapılan çalışma uykuyu zorlayabilir.
+        </p>
+        <p>
+          <strong>Yatmadan son 60-90 dakika:</strong> Yavaşlama alanı. Burada egzersiz değil, bedeni geceye bırakma
+          daha iyi çalışır: kalça ve sırt mobilitesi, göğüs kafesini açan yumuşak hareketler, ayak bileği çevirmeleri,
+          kısa nefes çalışması. Amaç terlemek değil; bedene “gün bitti” demektir.
+        </p>
+
+        <h2 id="ne-denenir">Bu Akşam Ne Denenir?</h2>
+        <p>
+          Büyük programlar yerine küçük bir test daha dürüst olur. Bir hafta boyunca aynı saatte, aynı yoğunlukta, aynı
+          kısa akşam rutini deneyin ve sabah nasıl kalktığınızı not edin. Sporcu beden okumasının özü de bu: ölçmek,
+          abartmadan izlemek, bedeni ikna etmeye çalışmamak.
         </p>
         <ul>
           <li>
-            <strong>10 dakika yÃ¼rÃ¼yÃ¼ÅŸ:</strong> Yemekten sonra, telefon konuÅŸmasÄ± yapmadan, sadece adÄ±mÄ± ve nefesi takip
-            ederek. Ã‡ok yavaÅŸ olmak zorunda deÄŸil; ama nefes cÃ¼mle kurmanÄ±za izin vermeli.
+            <strong>10 dakika yürüyüş:</strong> Yemekten sonra, telefon konuşması yapmadan, sadece adımı ve nefesi takip
+            ederek. Çok yavaş olmak zorunda değil; ama nefes cümle kurmanıza izin vermeli.
           </li>
           <li>
-            <strong>6 hareketlik mobilite:</strong> Boyun daireleri, omuz aÃ§ma, kedi-inek, kalÃ§a dairesi, hamstring
-            esnetme, ayak bileÄŸi Ã§evirmesi. Her biri 45-60 saniye.
+            <strong>6 hareketlik mobilite:</strong> Boyun daireleri, omuz açma, kedi-inek, kalça dairesi, hamstring
+            esnetme, ayak bileği çevirmesi. Her biri 45-60 saniye.
           </li>
           <li>
-            <strong>Duvara bacaklar:</strong> 3-5 dakika. Herkes iÃ§in bÃ¼yÃ¼lÃ¼ deÄŸil; ama bazÄ± kadÄ±nlarda bacak aÄŸÄ±rlÄ±ÄŸÄ±nÄ±
-            ve akÅŸam huzursuzluÄŸunu azaltabilir.
+            <strong>Duvara bacaklar:</strong> 3-5 dakika. Herkes için büyülü değil; ama bazı kadınlarda bacak ağırlığını
+            ve akşam huzursuzluğunu azaltabilir.
           </li>
           <li>
-            <strong>YumuÅŸak kuvvet:</strong> 2 set duvar ÅŸÄ±navÄ±, 2 set sandalye otur-kalk, 2 set direnÃ§ bandÄ± Ã§ekiÅŸ.
-            NabzÄ± patlatmadan kaslara â€œben buradayÄ±mâ€ demek yeterli.
+            <strong>Yumuşak kuvvet:</strong> 2 set duvar şınavı, 2 set sandalye otur-kalk, 2 set direnç bandı çekiş.
+            Nabzı patlatmadan kaslara “ben buradayım” demek yeterli.
           </li>
           <li>
-            <strong>BitiriÅŸ nefesi:</strong> 4 saniye al, 6 saniye ver. BeÅŸ tur. AmaÃ§ nefesi mÃ¼kemmel yapmak deÄŸil,
-            sinir sistemine yavaÅŸlama iÅŸareti vermek.
+            <strong>Bitiriş nefesi:</strong> 4 saniye al, 6 saniye ver. Beş tur. Amaç nefesi mükemmel yapmak değil,
+            sinir sistemine yavaşlama işareti vermek.
           </li>
         </ul>
         <p>
-          Ã‡oÄŸu zaman sorun hareket eksikliÄŸi deÄŸil, hareketten sonra fren koymamaktÄ±r. Rutinin sonuna kÄ±sa bir duÅŸ,
-          loÅŸ Ä±ÅŸÄ±k ve ekranÄ± azaltma eklenirse beden hareketi â€œgÃ¼nÃ¼n son gÃ¶reviâ€ deÄŸil, â€œgeceye geÃ§iÅŸâ€ olarak okumaya
-          baÅŸlar. <Evidence level={3} />
+          Çoğu zaman sorun hareket eksikliği değil, hareketten sonra fren koymamaktır. Rutinin sonuna kısa bir duş,
+          loş ışık ve ekranı azaltma eklenirse beden hareketi “günün son görevi” değil, “geceye geçiş” olarak okumaya
+          başlar. <Evidence level={3} />
         </p>
 
         <RedFlagBox
-          title="AkÅŸam hareketini hekimle konuÅŸmanÄ±n anlamlÄ± olduÄŸu durumlar"
-          intro="AÅŸaÄŸÄ±daki durumlar hareketi yasaklamak anlamÄ±na gelmez; ama akÅŸam egzersizi planÄ±nÄ± kiÅŸiselleÅŸtirmek iÃ§in hekim veya fizyoterapist desteÄŸi almak iyi olabilir."
+          title="Akşam hareketini hekimle konuşmanın anlamlı olduğu durumlar"
+          intro="Aşağıdaki durumlar hareketi yasaklamak anlamına gelmez; ama akşam egzersizi planını kişiselleştirmek için hekim veya fizyoterapist desteği almak iyi olabilir."
           markers={[
-            'Egzersiz sÄ±rasÄ±nda gÃ¶ÄŸÃ¼s aÄŸrÄ±sÄ±, bayÄ±lacak gibi olma veya belirgin nefes darlÄ±ÄŸÄ±',
-            'KontrolsÃ¼z hipertansiyon, ritim bozukluÄŸu veya bilinen kalp hastalÄ±ÄŸÄ±',
-            'Gece terlemesiyle birlikte ateÅŸ, aÃ§Ä±klanamayan kilo kaybÄ± veya Ã§arpÄ±ntÄ±',
-            'Egzersiz sonrasÄ± saatlerce sÃ¼ren uyarÄ±lmÄ±ÅŸlÄ±k, titreme veya uyuyamama',
-            'Yeni baÅŸlayan bacak ÅŸiÅŸliÄŸi, baldÄ±r aÄŸrÄ±sÄ± veya ani eklem/kas yaralanmasÄ±',
-            'Uyku bozukluÄŸunun haftalarca sÃ¼rmesi ve gÃ¼ndÃ¼z iÅŸlevini belirgin bozmasÄ±',
+            'Egzersiz sırasında göğüs ağrısı, bayılacak gibi olma veya belirgin nefes darlığı',
+            'Kontrolsüz hipertansiyon, ritim bozukluğu veya bilinen kalp hastalığı',
+            'Gece terlemesiyle birlikte ateş, açıklanamayan kilo kaybı veya çarpıntı',
+            'Egzersiz sonrası saatlerce süren uyarılmışlık, titreme veya uyuyamama',
+            'Yeni başlayan bacak şişliği, baldır ağrısı veya ani eklem/kas yaralanması',
+            'Uyku bozukluğunun haftalarca sürmesi ve gündüz işlevini belirgin bozması',
           ]}
-          footnote="AkÅŸam hareketi Ã§oÄŸu kiÅŸi iÃ§in gÃ¼venli bir alÄ±ÅŸkanlÄ±k olabilir; ama eÅŸlik eden hastalÄ±klar ve yoÄŸun semptomlar varsa plan kiÅŸiye gÃ¶re kurulmalÄ±dÄ±r."
+          footnote="Akşam hareketi çoğu kişi için güvenli bir alışkanlık olabilir; ama eşlik eden hastalıklar ve yoğun semptomlar varsa plan kişiye göre kurulmalıdır."
         />
 
-        <h2 id="sik-sorulanlar">SÄ±kÃ§a Sorulanlar</h2>
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
 
-        <h3>AkÅŸam yÃ¼rÃ¼yÃ¼ÅŸÃ¼ melatonini bozar mÄ±?</h3>
+        <h3>Akşam yürüyüşü melatonini bozar mı?</h3>
         <p>
-          Genellikle hayÄ±r. LoÅŸ Ä±ÅŸÄ±kta, Ã§ok geÃ§e kalmadan yapÄ±lan hafif-orta tempolu yÃ¼rÃ¼yÃ¼ÅŸ Ã§oÄŸu kiÅŸide melatonin
-          ritmini bozmaz. Hatta gÃ¼nÃ¼n stresini dÃ¼ÅŸÃ¼rdÃ¼ÄŸÃ¼ iÃ§in uykuya geÃ§iÅŸi kolaylaÅŸtÄ±rabilir. Ama parlak Ä±ÅŸÄ±k, yÃ¼ksek
-          nabÄ±z ve telefon ekranÄ± yÃ¼rÃ¼yÃ¼ÅŸe eÅŸlik ediyorsa etki deÄŸiÅŸebilir.
+          Genellikle hayır. Loş ışıkta, çok geçe kalmadan yapılan hafif-orta tempolu yürüyüş çoğu kişide melatonin
+          ritmini bozmaz. Hatta günün stresini düşürdüğü için uykuya geçişi kolaylaştırabilir. Ama parlak ışık, yüksek
+          nabız ve telefon ekranı yürüyüşe eşlik ediyorsa etki değişebilir.
         </p>
 
-        <h3>Yatmadan Ã¶nce pilates veya yoga iyi fikir mi?</h3>
+        <h3>Yatmadan önce pilates veya yoga iyi fikir mi?</h3>
         <p>
-          AkÄ±ÅŸ yumuÅŸaksa evet; performans dersi gibiyse hayÄ±r. AkÅŸam rutini terletmekten Ã§ok eklemleri aÃ§malÄ±,
-          omurgayÄ± rahatlatmalÄ± ve nefesi uzatmalÄ±. â€œDaha fazla yakayÄ±mâ€ motivasyonu geceye yaklaÅŸtÄ±kÃ§a uykunun
-          aleyhine dÃ¶nebilir.
+          Akış yumuşaksa evet; performans dersi gibiyse hayır. Akşam rutini terletmekten çok eklemleri açmalı,
+          omurgayı rahatlatmalı ve nefesi uzatmalı. “Daha fazla yakayım” motivasyonu geceye yaklaştıkça uykunun
+          aleyhine dönebilir.
         </p>
 
-        <h3>Gece terlemesi yaÅŸayan biri akÅŸam hareketinden kaÃ§Ä±nmalÄ± mÄ±?</h3>
+        <h3>Gece terlemesi yaşayan biri akşam hareketinden kaçınmalı mı?</h3>
         <p>
-          KaÃ§Ä±nmak ÅŸart deÄŸil; ama yoÄŸunluÄŸu ve saati daha dikkatli seÃ§mek gerekir. AkÅŸam geÃ§ saatte yapÄ±lan sert
-          antrenman bazÄ± kadÄ±nlarda sÄ±cak basmasÄ±nÄ± artÄ±rabilir. Hafif yÃ¼rÃ¼yÃ¼ÅŸ ve mobilite daha gÃ¼venli bir ilk deneme
-          olur. Terleme artÄ±yorsa semptom gÃ¼nlÃ¼ÄŸÃ¼ tutmak Ã§ok Ã¶ÄŸretici olur.
+          Kaçınmak şart değil; ama yoğunluğu ve saati daha dikkatli seçmek gerekir. Akşam geç saatte yapılan sert
+          antrenman bazı kadınlarda sıcak basmasını artırabilir. Hafif yürüyüş ve mobilite daha güvenli bir ilk deneme
+          olur. Terleme artıyorsa semptom günlüğü tutmak çok öğretici olur.
         </p>
 
-        <h3>Sabah mÄ±, akÅŸam mÄ± daha iyi?</h3>
+        <h3>Sabah mı, akşam mı daha iyi?</h3>
         <p>
-          Bedenin cevabÄ± belirleyici. Sabah hareketi iÃ§ saati gÃ¼Ã§lendirebilir; akÅŸam hareketi gÃ¼nÃ¼n stresini boÅŸaltabilir.
-          Ä°kisi de deÄŸerli. EÄŸer akÅŸam hareketinden sonra uyku bozuluyorsa yoÄŸunluÄŸu azaltmak veya rutini 2-3 saat Ã¶ne
-          Ã§ekmek ilk denenmesi gereken ayardÄ±r.
+          Bedenin cevabı belirleyici. Sabah hareketi iç saati güçlendirebilir; akşam hareketi günün stresini boşaltabilir.
+          İkisi de değerli. Eğer akşam hareketinden sonra uyku bozuluyorsa yoğunluğu azaltmak veya rutini 2-3 saat öne
+          çekmek ilk denenmesi gereken ayardır.
         </p>
 
-        <h3>HiÃ§ hareket edemeyecek kadar yorgunsam ne yapayÄ±m?</h3>
+        <h3>Hiç hareket edemeyecek kadar yorgunsam ne yapayım?</h3>
         <p>
-          â€œEgzersizâ€ kelimesini bir gece iÃ§in bÄ±rakÄ±n. Ä°ki dakika omuz Ã§evirmek, Ã¼Ã§ dakika duvara bacaklarÄ± yaslamak,
-          bir bardak su iÃ§ip loÅŸ Ä±ÅŸÄ±kta nefesi yavaÅŸlatmak da bedene bir mesajdÄ±r. SÃ¼rdÃ¼rÃ¼lebilirlik bazen en kÃ¼Ã§Ã¼k
-          hareketi kÃ¼Ã§Ã¼msememekten baÅŸlar.
+          “Egzersiz” kelimesini bir gece için bırakın. İki dakika omuz çevirmek, üç dakika duvara bacakları yaslamak,
+          bir bardak su içip loş ışıkta nefesi yavaşlatmak da bedene bir mesajdır. Sürdürülebilirlik bazen en küçük
+          hareketi küçümsememekten başlar.
         </p>
 
-        <h2 id="kapanis">KapanÄ±ÅŸ</h2>
+        <h2 id="kapanis">Kapanış</h2>
         <p>
-          AkÅŸam hareketi uykunun dÃ¼ÅŸmanÄ± olmak zorunda deÄŸil. DoÄŸru saatte, doÄŸru yoÄŸunlukta ve doÄŸru niyetle yapÄ±ldÄ±ÄŸÄ±nda
-          geceye giden yolu yumuÅŸatabilir. Perimenopozda bedenin Ä±sÄ± ve uyku eÅŸiÄŸi hassaslaÅŸtÄ±ÄŸÄ± iÃ§in bu ayar daha
-          ince yapÄ±lÄ±r; hepsi bu.
+          Akşam hareketi uykunun düşmanı olmak zorunda değil. Doğru saatte, doğru yoğunlukta ve doğru niyetle yapıldığında
+          geceye giden yolu yumuşatabilir. Perimenopozda bedenin ısı ve uyku eşiği hassaslaştığı için bu ayar daha
+          ince yapılır; hepsi bu.
         </p>
         <p>
-          Ben yaÅŸamadÄ±m ama yakÄ±ndan gÃ¶rdÃ¼m: Ã¶nceki kuÅŸaÄŸÄ±n â€œyorgunum ama uyuyamÄ±yorumâ€ dediÄŸi akÅŸamlar bana hareketin
-          yalnÄ±zca gÃ¼Ã§lenmek deÄŸil, bazen sakinleÅŸmek iÃ§in de var olduÄŸunu Ã¶ÄŸretti. Bu gece bÃ¼yÃ¼k bir program deÄŸil,
-          kÃ¼Ã§Ã¼k bir geÃ§iÅŸ deneyin. Bedeniniz cevabÄ± Ã§oÄŸu zaman sessiz ama dÃ¼rÃ¼st verir.
+          Ben yaşamadım ama yakından gördüm: önceki kuşağın “yorgunum ama uyuyamıyorum” dediği akşamlar bana hareketin
+          yalnızca güçlenmek değil, bazen sakinleşmek için de var olduğunu öğretti. Bu gece büyük bir program değil,
+          küçük bir geçiş deneyin. Bedeniniz cevabı çoğu zaman sessiz ama dürüst verir.
         </p>
       </ArticleProsePanel>
 
@@ -280,51 +280,47 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <section
-        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
-      >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
-        <p class="mb-4 text-lg font-semibold text-ink">KanÄ±t DÃ¼zeyi: <Evidence from={3} to={4} /></p>
+      <ArticleEditorNote>
+<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={4} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Bu yazÄ± genel egzersiz-uyku literatÃ¼rÃ¼nÃ¼, perimenopozdaki Ä±sÄ± dÃ¼zenleme hassasiyetiyle birlikte okuyan
-bilgilendirici bir rehberdir; kiÅŸisel tanÄ±, tedavi veya egzersiz reÃ§etesi yerine geÃ§mez.
+            Bu yazı genel egzersiz-uyku literatürünü, perimenopozdaki ısı düzenleme hassasiyetiyle birlikte okuyan
+bilgilendirici bir rehberdir; kişisel tanı, tedavi veya egzersiz reçetesi yerine geçmez.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik not:</strong> AkÅŸam egzersiziyle uyku iliÅŸkisi uzun sÃ¼re â€œgeÃ§ saatte
-            spor yapÄ±lmazâ€ cÃ¼mlesine indirgenmiÅŸtir. Oysa gÃ¼ncel veriler, yatmadan hemen Ã¶nce yapÄ±lan yÃ¼ksek yoÄŸunluklu
-            egzersiz dÄ±ÅŸÄ±nda, orta ve hafif yoÄŸunluklu hareketin Ã§oÄŸu kiÅŸide uyku kalitesini bozmadÄ±ÄŸÄ±nÄ± gÃ¶sterir.
-            Perimenopozda gece terlemesi, sÄ±cak basmasÄ± ve uykunun bÃ¶lÃ¼nmesi bu genel kuralÄ± kiÅŸiselleÅŸtirmeyi gerektirir.
+            <strong class="text-burgundy">Klinik not:</strong> Akşam egzersiziyle uyku ilişkisi uzun süre “geç saatte
+            spor yapılmaz” cümlesine indirgenmiştir. Oysa güncel veriler, yatmadan hemen önce yapılan yüksek yoğunluklu
+            egzersiz dışında, orta ve hafif yoğunluklu hareketin çoğu kişide uyku kalitesini bozmadığını gösterir.
+            Perimenopozda gece terlemesi, sıcak basması ve uykunun bölünmesi bu genel kuralı kişiselleştirmeyi gerektirir.
           </p>
           <p>
-            <strong class="text-burgundy">Mekanizma notu:</strong> Uykuya geÃ§iÅŸte melatonin ritmi, Ä±ÅŸÄ±k maruziyeti,
-            sempatik aktivasyon ve beden Ä±sÄ±sÄ±nÄ±n akÅŸam dÃ¼ÅŸÃ¼ÅŸÃ¼ birlikte Ã§alÄ±ÅŸÄ±r. Hafif akÅŸam hareketi sonrasÄ±nda beden
-            Ä±sÄ±sÄ±nÄ±n yumuÅŸak dÃ¼ÅŸÃ¼ÅŸÃ¼ uykuya geÃ§iÅŸi destekleyebilir; yoÄŸun ve Ã§ok geÃ§ antrenman ise kalp atÄ±mÄ±, adrenalin
-            ve Ä±sÄ± yÃ¼kÃ¼nÃ¼ uzatarak uyku baÅŸlangÄ±cÄ±nÄ± zorlaÅŸtÄ±rabilir.
+            <strong class="text-burgundy">Mekanizma notu:</strong> Uykuya geçişte melatonin ritmi, ışık maruziyeti,
+            sempatik aktivasyon ve beden ısısının akşam düşüşü birlikte çalışır. Hafif akşam hareketi sonrasında beden
+            ısısının yumuşak düşüşü uykuya geçişi destekleyebilir; yoğun ve çok geç antrenman ise kalp atımı, adrenalin
+            ve ısı yükünü uzatarak uyku başlangıcını zorlaştırabilir.
           </p>
           <p>
-<strong class="text-burgundy">Pratik bÃ¼tÃ¼nleÅŸim:</strong> Klinik aÃ§Ä±dan en gÃ¼venli yol; geÃ§ saatte yÃ¼ksek
-            yoÄŸunluÄŸu azaltmak, hareketi yatmadan 2-3 saat Ã¶nce hafifletmek, son 60-90 dakikayÄ± mobilite-nefes-yavaÅŸlama
-            alanÄ± olarak kullanmak ve gece terlemesi yaÅŸayan kadÄ±nlarda semptom gÃ¼nlÃ¼ÄŸÃ¼yle kiÅŸisel yanÄ±tÄ± izlemektir.
+<strong class="text-burgundy">Pratik bütünleşim:</strong> Klinik açıdan en güvenli yol; geç saatte yüksek
+            yoğunluğu azaltmak, hareketi yatmadan 2-3 saat önce hafifletmek, son 60-90 dakikayı mobilite-nefes-yavaşlama
+            alanı olarak kullanmak ve gece terlemesi yaşayan kadınlarda semptom günlüğüyle kişisel yanıtı izlemektir.
           </p>
           <p>
-            <strong class="text-burgundy">BireyselleÅŸtirme uyarÄ±sÄ±:</strong> Sn. Baykent'in yazÄ±sÄ±ndaki sporcu beden
-            okumasÄ± sÃ¼rdÃ¼rÃ¼lebilir hareket fikrini gÃ¼Ã§lendirir; ancak kalp hastalÄ±ÄŸÄ±, kontrolsÃ¼z tansiyon, belirgin
-            Ã§arpÄ±ntÄ±, yeni baÅŸlayan nefes darlÄ±ÄŸÄ± veya uzun sÃ¼ren insomnia varsa egzersiz planÄ± hekim veya fizyoterapist
-            ile birlikte deÄŸerlendirilmelidir.
+            <strong class="text-burgundy">Bireyselleştirme uyarısı:</strong> Sn. Baykent'in yazısındaki sporcu beden
+            okuması sürdürülebilir hareket fikrini güçlendirir; ancak kalp hastalığı, kontrolsüz tansiyon, belirgin
+            çarpıntı, yeni başlayan nefes darlığı veya uzun süren insomnia varsa egzersiz planı hekim veya fizyoterapist
+            ile birlikte değerlendirilmelidir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
-            â€” DoÃ§. Dr. Senai Aksoy, KadÄ±n HastalÄ±klarÄ± ve DoÄŸum UzmanÄ±, Estranova TÄ±bbi EditÃ¶r
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Tıbbi Editör
           </p>
-        </div>
-      </section>
+      </ArticleEditorNote>
 
-      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-        <p class="text-sm leading-relaxed text-ink/75">
-          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme yerine geÃ§mez. TanÄ±, tedavi ve kiÅŸisel egzersiz
-          planÄ± iÃ§in saÄŸlÄ±k profesyoneline baÅŸvurunuz.
+       <ArticleDisclaimer>
+<p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı, tedavi ve kişisel egzersiz
+          planı için sağlık profesyoneline başvurunuz.
         </p>
-      </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

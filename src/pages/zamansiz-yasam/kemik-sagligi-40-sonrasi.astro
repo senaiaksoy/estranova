@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -6,6 +6,9 @@ import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
@@ -62,15 +65,14 @@ const articleSchemas = buildArticleSchemas({
           <h1 class="font-serif text-4xl leading-tight md:text-6xl">40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber</h1>
         </header>
 
-        <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
-          <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
-          <p class="leading-relaxed text-ink/80">
+         <ArticleSummary title="Kısa Özet">
+<p>
             Kemik kaybı çoğu zaman sessiz ilerler; ilk işaretini ağrıdan değil, yıllar sonra gelen kırık riskinden verir.
             Menopoz geçişinde östrojen düşüşü bu süreci hızlandırabilir <Evidence level={5} />.
             Bu nedenle konu yalnızca kalsiyum almak değil; risk değerlendirmesi, doğru zamanda tarama, kas gücünü koruyan hareket
             ve gerektiğinde tıbbi tedavi seçeneklerini aynı çerçevede düşünmektir.
           </p>
-        </section>
+      </ArticleSummary>
 
         <ArticleProsePanel>
           <h2 id="neden-onemli">Neden Kemik Sağlığı Önemlidir?</h2>
@@ -225,9 +227,8 @@ const articleSchemas = buildArticleSchemas({
           ]}
         />
 
-        <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-          <p class="mb-3 leading-relaxed text-ink/80">
+        <ArticleEditorNote>
+<p class="mb-3 leading-relaxed text-ink/80">
             Kemik sağlığı, östrojen düşüşünün hızlandırdığı bir kayıp eğrisi üzerinden okunan, 40 sonrası
             kadınlar için klinik olarak öncelikli bir alandır. Yaşa bağlı kemik döngüsündeki yıkım-yapım
             dengesizliği menopoz geçişinde belirginleşir; postmenopozun ilk 5-10 yılında kayıp eğrisi en
@@ -254,13 +255,13 @@ const articleSchemas = buildArticleSchemas({
           <p class="text-sm italic text-burgundy">
             — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
           </p>
-        </section>
+      </ArticleEditorNote>
 
-        <section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-          <p class="text-sm leading-relaxed text-ink/75">
+         <ArticleDisclaimer>
+<p>
             Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
           </p>
-        </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

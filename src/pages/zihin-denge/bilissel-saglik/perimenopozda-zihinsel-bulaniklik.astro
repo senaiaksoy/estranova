@@ -7,6 +7,9 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
@@ -95,15 +98,14 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
-        <h2 class="mb-4 font-serif text-3xl text-ink">Kısa Özet</h2>
-        <p class="leading-relaxed text-ink/80">
+      <ArticleSummary title="Kısa Özet">
+<p>
           Perimenopozda zihinsel bulanıklık çoğu zaman tek bir nedenden çıkmaz. Uyku bölünmesi, sıcak basmaları,
           stres yükü, dikkat dağılması ve hormonal geçiş bir araya geldiğinde kadınlar kendilerini birden
           "eskisi kadar hızlı düşünemiyormuş" gibi hissedebilir. Bu tablo sık görülebilir <Evidence level={4} />;
           yine de hangi noktada olağan dalgalanma, hangi noktada daha dikkatli değerlendirme gerektiğini ayırt etmek önemlidir.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="neden-simdi">Bu bulanıklık hissi neden tam da şimdi ortaya çıkıyor?</h2>

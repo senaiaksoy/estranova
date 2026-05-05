@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -10,6 +10,9 @@ import ReadingControls from '../../../components/site/ReadingControls.astro';
 import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -20,32 +23,32 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz']!;
 
 const tocEntries = [
-  { id: 'isim-koymak', label: 'Disparoni Tek Bir Tablo DeÄŸil' },
-  { id: 'alt-tipler', label: 'DÃ¶rt Alt-Tip â€” Tedavi Yolu Tipe GÃ¶re' },
-  { id: 'mekanizma', label: 'Bedeniniz Bilgi Veriyor â€” Mekanizma' },
-  { id: 'degerlendirme', label: 'Muayenede AdÄ±m AdÄ±m DeÄŸerlendirme' },
-  { id: 'tedavi-haritasi', label: 'Tedavi HaritasÄ± â€” ÃœÃ§ KapÄ±' },
-  { id: 'partner-iletisim', label: 'Partnerle Ä°letiÅŸim â€” Mahrem Ama Gerekli' },
-  { id: 'iletisim', label: 'Doktora Hangi SorularÄ± SormalÄ±?' },
-  { id: 'sik-sorulanlar', label: 'SÄ±kÃ§a Sorulanlar' },
-  { id: 'kapanis', label: 'KapanÄ±ÅŸ' },
+  { id: 'isim-koymak', label: 'Disparoni Tek Bir Tablo Değil' },
+  { id: 'alt-tipler', label: 'Dört Alt-Tip — Tedavi Yolu Tipe Göre' },
+  { id: 'mekanizma', label: 'Bedeniniz Bilgi Veriyor — Mekanizma' },
+  { id: 'degerlendirme', label: 'Muayenede Adım Adım Değerlendirme' },
+  { id: 'tedavi-haritasi', label: 'Tedavi Haritası — Üç Kapı' },
+  { id: 'partner-iletisim', label: 'Partnerle İletişim — Mahrem Ama Gerekli' },
+  { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
   { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Cinsellikte AÄŸrÄ± â€” Mahrem Bir ÅikÃ¢yet, AÃ§Ä±k Bir Tedavi HaritasÄ±';
+const articleTitle = 'Cinsellikte Ağrı — Mahrem Bir Şikâyet, Açık Bir Tedavi Haritası';
 const articleDescription =
-  'Cinsel iliÅŸkide aÄŸrÄ± (disparoni) tek bir tablo deÄŸil â€” yÃ¼zeysel, derin, postmenopozal, vajinismus alt-tipleri farklÄ± tedavi yollarÄ±na Ã§Ä±kÄ±yor. Ä°sim koymak, mekanizmayÄ± tanÄ±mak, Ã¼Ã§ kapÄ±lÄ± tedavi haritasÄ± ve doktora hangi sorularÄ± sormak gerektiÄŸi â€” sade bir klinik bakÄ±ÅŸ. Pazarlama deÄŸil, eÄŸitim.';
+  'Cinsel ilişkide ağrı (disparoni) tek bir tablo değil — yüzeysel, derin, postmenopozal, vajinismus alt-tipleri farklı tedavi yollarına çıkıyor. İsim koymak, mekanizmayı tanımak, üç kapılı tedavi haritası ve doktora hangi soruları sormak gerektiği — sade bir klinik bakış. Pazarlama değil, eğitim.';
 const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
-  publishedDate: '2 MayÄ±s 2026',
+  publishedDate: '2 Mayıs 2026',
   pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
-  articleSection: 'Beden & YakÄ±nlÄ±k',
+  articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik',
-  keywords: ['cinsellikte aÄŸrÄ±', 'disparoni', 'dispareuni', 'vajinismus', 'GSM', 'menopoz', 'pelvik taban disfonksiyonu', 'vulvodini', 'lokal Ã¶strojen'],
+  keywords: ['cinsellikte ağrı', 'disparoni', 'dispareuni', 'vajinismus', 'GSM', 'menopoz', 'pelvik taban disfonksiyonu', 'vulvodini', 'lokal östrojen'],
   faqItems,
 
   siteUrl,
@@ -62,15 +65,15 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Beden & YakÄ±nlÄ±k Â· Cinsel SaÄŸlÄ±k"
-      title="Cinsellikte AÄŸrÄ± â€” Mahrem Bir ÅikÃ¢yet, AÃ§Ä±k Bir Tedavi HaritasÄ±"
+      eyebrow="Beden & Yakınlık · Cinsel Sağlık"
+      title="Cinsellikte Ağrı — Mahrem Bir Şikâyet, Açık Bir Tedavi Haritası"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="2 MayÄ±s 2026" readingMinutes={8} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="2 Mayıs 2026" readingMinutes={8} />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
@@ -80,292 +83,289 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <section
-        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
-      >
-        <h2 class="mb-4 font-serif text-3xl">KÄ±sa Ã–zet</h2>
-        <p class="leading-relaxed text-ink/80">
-          Cinsel iliÅŸkide aÄŸrÄ± muayene odasÄ±nda en geÃ§ dile getirilen ÅŸikÃ¢yetlerden biri â€” ama
-          en Ã§ok iyileÅŸen tablolardan da biri. Tek bir mesele deÄŸil: yÃ¼zeysel disparoni, derin
-          disparoni, postmenopozal disparoni ve vajinismus farklÄ± mekanizmalardan kaynaklanÄ±yor;
-          bu yÃ¼zden tedavi yolu da farklÄ±. <em>"AlÄ±ÅŸÄ±rÄ±m"</em> deyip taÅŸÄ±nacak bir ÅŸikÃ¢yet
-          deÄŸil; bedeniniz size bir bilgi veriyor. Bu yazÄ± dÃ¶rt alt-tipi netleÅŸtiriyor, Ã¼Ã§
-          kapÄ±lÄ± tedavi haritasÄ± sunuyor (lokal hormonal / fizyoterapi / psikoterapi) ve
-          doktorunuza ne sormak gerektiÄŸini birlikte koyuyor â€” promosyon deÄŸil, eÄŸitim.
+      <ArticleSummary title="Kısa Özet">
+<p>
+          Cinsel ilişkide ağrı muayene odasında en geç dile getirilen şikâyetlerden biri — ama
+          en çok iyileşen tablolardan da biri. Tek bir mesele değil: yüzeysel disparoni, derin
+          disparoni, postmenopozal disparoni ve vajinismus farklı mekanizmalardan kaynaklanıyor;
+          bu yüzden tedavi yolu da farklı. <em>"Alışırım"</em> deyip taşınacak bir şikâyet
+          değil; bedeniniz size bir bilgi veriyor. Bu yazı dört alt-tipi netleştiriyor, üç
+          kapılı tedavi haritası sunuyor (lokal hormonal / fizyoterapi / psikoterapi) ve
+          doktorunuza ne sormak gerektiğini birlikte koyuyor — promosyon değil, eğitim.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="isim-koymak">Disparoni Tek Bir Tablo DeÄŸil â€” Ä°sim Koymak</h2>
+        <h2 id="isim-koymak">Disparoni Tek Bir Tablo Değil — İsim Koymak</h2>
         <p>
-          HastalarÄ±mÄ±n Ã§ok bÃ¼yÃ¼k bir kÄ±smÄ± iÃ§in cinsel iliÅŸkide aÄŸrÄ± muayene odasÄ±nda en geÃ§
-          dile getirilen ÅŸikÃ¢yetlerden biri. Ã‡oÄŸu kadÄ±n bunu kendi baÅŸÄ±na Ã§Ã¶zmesi gereken bir
-          ÅŸey gibi taÅŸÄ±yor; bazÄ±larÄ± <em>"yaÅŸlanma iÅŸte"</em> deyip kabulleniyor; bazÄ±larÄ±
-          partnerle baÄŸÄ± zedelememek iÃ§in sessiz kalÄ±yor. Oysa sÃ¶z konusu olan tÄ±bbi adÄ± olan,
-          tÃ¼rleri olan, etkili biÃ§imde yÃ¶netilebilen bir tablo: <strong>disparoni</strong>
-          (cinsel iliÅŸkide aÄŸrÄ±) <Evidence level={5} />.
+          Hastalarımın çok büyük bir kısmı için cinsel ilişkide ağrı muayene odasında en geç
+          dile getirilen şikâyetlerden biri. Çoğu kadın bunu kendi başına çözmesi gereken bir
+          şey gibi taşıyor; bazıları <em>"yaşlanma işte"</em> deyip kabulleniyor; bazıları
+          partnerle bağı zedelememek için sessiz kalıyor. Oysa söz konusu olan tıbbi adı olan,
+          türleri olan, etkili biçimde yönetilebilen bir tablo: <strong>disparoni</strong>
+          (cinsel ilişkide ağrı) <Evidence level={5} />.
         </p>
         <p>
-          Konunun adÄ± bile sÃ¶ylenemiyorsa, Ã§Ã¶zÃ¼mÃ¼ zaten konuÅŸulmaz. Disparoninin <em>tek bir
-          tablo</em> olduÄŸunu sanmak ilk yanÄ±lgÄ±; aslÄ±nda en az dÃ¶rt farklÄ± alt-tipi var ve
-          her biri farklÄ± bir mekanizmadan, farklÄ± bir tedavi kapÄ±sÄ±ndan geÃ§iyor. Hangi
-          alt-tipte olduÄŸunu bilmek tedavinin yarÄ±sÄ±nÄ± kuruyor â€” Ã§Ã¼nkÃ¼ <em>"size lokal krem
-          yazayÄ±m"</em> her tabloda doÄŸru cevap deÄŸil.
-        </p>
-
-        <h2 id="alt-tipler">DÃ¶rt Alt-Tip â€” Tedavi Yolu Tipe GÃ¶re FarklÄ±laÅŸÄ±r</h2>
-        <p>
-          Burada en Ã¶nemli ayrÄ±m <em>aÄŸrÄ±nÄ±n nerede ve ne zaman</em> olduÄŸunu netleÅŸtirmek.
-          Bu basit gibi gÃ¶rÃ¼nen iki soru, dÃ¶rt alt-tipi ayÄ±rmamÄ±zÄ± saÄŸlÄ±yor.
-        </p>
-        <p>
-          <strong>YÃ¼zeysel disparoni:</strong> AÄŸrÄ± giriÅŸte, dÄ±ÅŸ genital bÃ¶lgede (vulva, vajen
-          giriÅŸi). Genellikle vajinal atrofi (GSM), lokal cilt hastalÄ±klarÄ± (liken sklerozus),
-          vulvodini veya vajen giriÅŸi enfeksiyonlarÄ±na baÄŸlÄ± <Evidence level={5} />. Postmenopozal
-          dÃ¶nemde en sÄ±k gÃ¶rÃ¼len tip.
-        </p>
-        <p>
-          <strong>Derin disparoni:</strong> AÄŸrÄ± pelvis derinliÄŸinde, penetrasyon ilerlerken
-          veya bittikten sonra. Endometriozis, miyom, adenomyozis, pelvik enflamatuvar hastalÄ±k
-          ve pelvik taban kas spazmÄ± bu tabloda Ã¶ncelikli dÃ¼ÅŸÃ¼nÃ¼lmesi gereken nedenler
-          <Evidence level={5} />. 40+ kontekstinde endometriozis ve adenomyozis ayÄ±rÄ±cÄ± tanÄ±da
-          Ã¶nemini koruyor.
-        </p>
-        <p>
-          <strong>Postmenopozal disparoni:</strong> YÃ¼zeysel tipin Ã¶zel bir alt-grubu. Ã–strojen
-          dÃ¼ÅŸÃ¼ÅŸÃ¼ne baÄŸlÄ± genitoÃ¼riner sendrom (GSM) zemininde geliÅŸiyor; vajinal-vulvar epitel
-          incelmesi, kuruluk, doku kÄ±rÄ±lganlÄ±ÄŸÄ± ve cinsel iliÅŸki sÄ±rasÄ±nda mikro yÄ±rtÄ±k
-          eÄŸilimi sÃ¶z konusu <Evidence level={5} />. Bu tip iÃ§in lokal vajinal Ã¶strojen kanÄ±t
-          seviyesi en gÃ¼Ã§lÃ¼ tedavi seÃ§eneklerinden biri.
-        </p>
-        <p>
-          <strong>Vajinismus:</strong> Penetrasyon giriÅŸiminde pelvik taban kaslarÄ±nÄ±n
-          istemsiz, refleksif kasÄ±lmasÄ±. Genellikle korku-aÄŸrÄ± zinciri zemininde geliÅŸiyor;
-          birincil (hiÃ§ iliÅŸki yaÅŸamamÄ±ÅŸ) veya sekonder (Ã¶nceden problemsiz, sonradan baÅŸlayan)
-          olabiliyor <Evidence level={4} />. Postmenopozal dÃ¶nemde sekonder vajinismus, GSM
-          kaynaklÄ± yÃ¼zeysel disparoninin iÅŸlenmemiÅŸ bir komplikasyonu olarak ortaya Ã§Ä±kabiliyor.
-        </p>
-        <p>
-          Bu dÃ¶rt tip birbirinden tamamen ayrÄ± deÄŸil â€” bir kadÄ±nda birkaÃ§Ä± bir arada gÃ¶rÃ¼lebiliyor.
-          Ã–rneÄŸin GSM'i olan bir kadÄ±nda yÃ¼zeysel aÄŸrÄ± zamanla pelvik tabanda koruyucu spazm
-          yaratabiliyor; bu da sekonder vajinismus tablosuna dÃ¶nÃ¼ÅŸebiliyor. AyrÄ±mÄ± doÄŸru kurmak
-          tedavi yolunun her ayaÄŸÄ±nÄ± birlikte planlamayÄ± saÄŸlÄ±yor.
+          Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Disparoninin <em>tek bir
+          tablo</em> olduğunu sanmak ilk yanılgı; aslında en az dört farklı alt-tipi var ve
+          her biri farklı bir mekanizmadan, farklı bir tedavi kapısından geçiyor. Hangi
+          alt-tipte olduğunu bilmek tedavinin yarısını kuruyor — çünkü <em>"size lokal krem
+          yazayım"</em> her tabloda doğru cevap değil.
         </p>
 
-        <h2 id="mekanizma">Bedeniniz Bilgi Veriyor â€” Mekanizma</h2>
+        <h2 id="alt-tipler">Dört Alt-Tip — Tedavi Yolu Tipe Göre Farklılaşır</h2>
         <p>
-          Cinsel iliÅŸkide aÄŸrÄ± bir ÅŸikÃ¢yet deÄŸil, bir bilgi sinyali. Bunu kiÅŸisel bir eksiklik
-          gibi deÄŸil, bedenin sÃ¶ylediÄŸi bir ÅŸey olarak okumak rahatlatÄ±cÄ± oluyor.
+          Burada en önemli ayrım <em>ağrının nerede ve ne zaman</em> olduğunu netleştirmek.
+          Bu basit gibi görünen iki soru, dört alt-tipi ayırmamızı sağlıyor.
         </p>
         <p>
-          Postmenopozal dÃ¶nemde temel mekanizma <strong>Ã¶strojen dÃ¼ÅŸÃ¼ÅŸÃ¼</strong>: vajinal-vulvar
-          epitel inceliyor, doku elastikiyetini ve doÄŸal nem Ã¼retimini kaybediyor; kollajen ve
-          damar desteÄŸi zayÄ±flÄ±yor; vajinal pH alkali tarafa kayÄ±yor (3.5-4.5'tan 5.0+).
-          Bu ortam hem yÃ¼zeysel aÄŸrÄ±yÄ± hem tekrarlayan idrar yolu enfeksiyonu zeminini
-          oluÅŸturuyor <Evidence level={5} />. Yani aynÄ± kadÄ±n <em>"sÃ¼rtÃ¼nÃ¼yor, batÄ±yor"</em>
-          ve <em>"sÄ±k idrar yolu enfeksiyonu geÃ§iriyorum"</em> ÅŸikÃ¢yetlerini birlikte
-          yaÅŸÄ±yorsa, Ã§oÄŸu zaman aynÄ± kÃ¶kteki sendromdan konuÅŸuyoruz.
+          <strong>Yüzeysel disparoni:</strong> Ağrı girişte, dış genital bölgede (vulva, vajen
+          girişi). Genellikle vajinal atrofi (GSM), lokal cilt hastalıkları (liken sklerozus),
+          vulvodini veya vajen girişi enfeksiyonlarına bağlı <Evidence level={5} />. Postmenopozal
+          dönemde en sık görülen tip.
         </p>
         <p>
-          Pelvik taban kaslarÄ± <em>koruyucu refleks</em> ile aÄŸrÄ±ya yanÄ±t veriyor: aÄŸrÄ±
-          beklendiÄŸinde kaslar kasÄ±lÄ±yor, bu da giriÅŸte ek bir bariyer yaratÄ±yor; sonuÃ§:
-          aÄŸrÄ± katmerlenip kalÄ±cÄ± hale geliyor. Bu dÃ¶ngÃ¼ye <em>vajinismus zinciri</em>
-          deniyor; Ã¶zellikle aÄŸrÄ± yÄ±llarca konuÅŸulmadan taÅŸÄ±ndÄ±ÄŸÄ±nda ortaya Ã§Ä±kÄ±yor
-          <Evidence level={4} />. Ä°yi haber: zincir kÄ±rÄ±labilir, ama sÄ±rf lokal tedavi
-          yetmiyor â€” pelvik taban fizyoterapisi ve gerektiÄŸinde psikoterapi devreye giriyor.
+          <strong>Derin disparoni:</strong> Ağrı pelvis derinliğinde, penetrasyon ilerlerken
+          veya bittikten sonra. Endometriozis, miyom, adenomyozis, pelvik enflamatuvar hastalık
+          ve pelvik taban kas spazmı bu tabloda öncelikli düşünülmesi gereken nedenler
+          <Evidence level={5} />. 40+ kontekstinde endometriozis ve adenomyozis ayırıcı tanıda
+          önemini koruyor.
+        </p>
+        <p>
+          <strong>Postmenopozal disparoni:</strong> Yüzeysel tipin özel bir alt-grubu. Östrojen
+          düşüşüne bağlı genitoüriner sendrom (GSM) zemininde gelişiyor; vajinal-vulvar epitel
+          incelmesi, kuruluk, doku kırılganlığı ve cinsel ilişki sırasında mikro yırtık
+          eğilimi söz konusu <Evidence level={5} />. Bu tip için lokal vajinal östrojen kanıt
+          seviyesi en güçlü tedavi seçeneklerinden biri.
+        </p>
+        <p>
+          <strong>Vajinismus:</strong> Penetrasyon girişiminde pelvik taban kaslarının
+          istemsiz, refleksif kasılması. Genellikle korku-ağrı zinciri zemininde gelişiyor;
+          birincil (hiç ilişki yaşamamış) veya sekonder (önceden problemsiz, sonradan başlayan)
+          olabiliyor <Evidence level={4} />. Postmenopozal dönemde sekonder vajinismus, GSM
+          kaynaklı yüzeysel disparoninin işlenmemiş bir komplikasyonu olarak ortaya çıkabiliyor.
+        </p>
+        <p>
+          Bu dört tip birbirinden tamamen ayrı değil — bir kadında birkaçı bir arada görülebiliyor.
+          Örneğin GSM'i olan bir kadında yüzeysel ağrı zamanla pelvik tabanda koruyucu spazm
+          yaratabiliyor; bu da sekonder vajinismus tablosuna dönüşebiliyor. Ayrımı doğru kurmak
+          tedavi yolunun her ayağını birlikte planlamayı sağlıyor.
         </p>
 
-        <h2 id="degerlendirme">Muayenede AdÄ±m AdÄ±m DeÄŸerlendirme</h2>
+        <h2 id="mekanizma">Bedeniniz Bilgi Veriyor — Mekanizma</h2>
         <p>
-          Disparoni ÅŸikÃ¢yetinde deÄŸerlendirme Ã¼Ã§ katmanlÄ±: <strong>Ã¶ykÃ¼, fizik muayene, gerekli
+          Cinsel ilişkide ağrı bir şikâyet değil, bir bilgi sinyali. Bunu kişisel bir eksiklik
+          gibi değil, bedenin söylediği bir şey olarak okumak rahatlatıcı oluyor.
+        </p>
+        <p>
+          Postmenopozal dönemde temel mekanizma <strong>östrojen düşüşü</strong>: vajinal-vulvar
+          epitel inceliyor, doku elastikiyetini ve doğal nem üretimini kaybediyor; kollajen ve
+          damar desteği zayıflıyor; vajinal pH alkali tarafa kayıyor (3.5-4.5'tan 5.0+).
+          Bu ortam hem yüzeysel ağrıyı hem tekrarlayan idrar yolu enfeksiyonu zeminini
+          oluşturuyor <Evidence level={5} />. Yani aynı kadın <em>"sürtünüyor, batıyor"</em>
+          ve <em>"sık idrar yolu enfeksiyonu geçiriyorum"</em> şikâyetlerini birlikte
+          yaşıyorsa, çoğu zaman aynı kökteki sendromdan konuşuyoruz.
+        </p>
+        <p>
+          Pelvik taban kasları <em>koruyucu refleks</em> ile ağrıya yanıt veriyor: ağrı
+          beklendiğinde kaslar kasılıyor, bu da girişte ek bir bariyer yaratıyor; sonuç:
+          ağrı katmerlenip kalıcı hale geliyor. Bu döngüye <em>vajinismus zinciri</em>
+          deniyor; özellikle ağrı yıllarca konuşulmadan taşındığında ortaya çıkıyor
+          <Evidence level={4} />. İyi haber: zincir kırılabilir, ama sırf lokal tedavi
+          yetmiyor — pelvik taban fizyoterapisi ve gerektiğinde psikoterapi devreye giriyor.
+        </p>
+
+        <h2 id="degerlendirme">Muayenede Adım Adım Değerlendirme</h2>
+        <p>
+          Disparoni şikâyetinde değerlendirme üç katmanlı: <strong>öykü, fizik muayene, gerekli
           ek incelemeler</strong>.
         </p>
         <p>
-          <strong>Ã–ykÃ¼</strong> tek baÅŸÄ±na alt-tip hakkÄ±nda Ã§ok ÅŸey sÃ¶ylÃ¼yor. Hekiminize
-          gitmeden Ã¶nce ÅŸu sorularÄ± kendinize cevaplayÄ±n: AÄŸrÄ± tam olarak <em>nerede</em>
-          (giriÅŸte mi, iÃ§eride mi, derinde mi)? <em>Ne zaman</em> baÅŸlÄ±yor (giriÅŸte mi,
-          ilerledikÃ§e mi, sonra mÄ±)? <em>Ne kadar sÃ¼redir</em> var? <em>Hangi durumlarda</em>
-          oluyor (her zaman mÄ±, belirli pozisyonlarda mÄ±)? <em>EÅŸlik eden baÅŸka ÅŸikÃ¢yet</em>
-          var mÄ± (kuruluk, idrar yakÄ±nmalarÄ±, kanama, akÄ±ntÄ±, regl aÄŸrÄ±larÄ±)? Bu beÅŸ soru
-          Ã§oÄŸu zaman alt-tip hipotezini netleÅŸtiriyor.
+          <strong>Öykü</strong> tek başına alt-tip hakkında çok şey söylüyor. Hekiminize
+          gitmeden önce şu soruları kendinize cevaplayın: Ağrı tam olarak <em>nerede</em>
+          (girişte mi, içeride mi, derinde mi)? <em>Ne zaman</em> başlıyor (girişte mi,
+          ilerledikçe mi, sonra mı)? <em>Ne kadar süredir</em> var? <em>Hangi durumlarda</em>
+          oluyor (her zaman mı, belirli pozisyonlarda mı)? <em>Eşlik eden başka şikâyet</em>
+          var mı (kuruluk, idrar yakınmaları, kanama, akıntı, regl ağrıları)? Bu beş soru
+          çoğu zaman alt-tip hipotezini netleştiriyor.
         </p>
         <p>
-          <strong>Fizik muayene</strong> dikkatli ve kademeli yapÄ±lÄ±yor â€” kadÄ±n rahat deÄŸilse
-          muayene zaten amacÄ±na ulaÅŸmÄ±yor. Vulvar inspeksiyonda epitel atrofisi, liken
-          sklerozus bulgularÄ±, fissÃ¼rler, kÄ±zarÄ±klÄ±k gÃ¶zleniyor. Vajinal pH Ã¶lÃ§Ã¼mÃ¼ GSM
-          tanÄ±sÄ±nda pratik bir araÃ§. Pelvik taban tonusu palpasyonla deÄŸerlendiriliyor.
-          Derin disparoni ÅŸÃ¼phesinde bimanual muayene + transvajinal ultrason endometriozis,
-          adenomyozis ve over kistleri iÃ§in ek bilgi saÄŸlÄ±yor <Evidence level={5} />.
+          <strong>Fizik muayene</strong> dikkatli ve kademeli yapılıyor — kadın rahat değilse
+          muayene zaten amacına ulaşmıyor. Vulvar inspeksiyonda epitel atrofisi, liken
+          sklerozus bulguları, fissürler, kızarıklık gözleniyor. Vajinal pH ölçümü GSM
+          tanısında pratik bir araç. Pelvik taban tonusu palpasyonla değerlendiriliyor.
+          Derin disparoni şüphesinde bimanual muayene + transvajinal ultrason endometriozis,
+          adenomyozis ve over kistleri için ek bilgi sağlıyor <Evidence level={5} />.
         </p>
         <p>
-          <strong>Ek incelemeler</strong> ÅŸÃ¼pheye gÃ¶re seÃ§iliyor: tekrarlayan Ã¼riner ÅŸikÃ¢yet
-          varsa idrar tetkiki, derin pelvik aÄŸrÄ± ÅŸÃ¼phesinde MR pelvis, vulvar lezyon varsa
-          biyopsi. Her hastada gerekli deÄŸil â€” ama gerektiÄŸinde atlanmamasÄ± da kritik.
-        </p>
-
-        <h2 id="tedavi-haritasi">Tedavi HaritasÄ± â€” ÃœÃ§ KapÄ±</h2>
-        <p>
-          Disparoninin tedavisi bir hiyerarÅŸi izler ve Ã¼Ã§ kapÄ±sÄ± var; Ã§oÄŸu kadÄ±n iÃ§in
-          birden fazla kapÄ± eÅŸ zamanlÄ± aÃ§Ä±lmasÄ± gereken bir plan ortaya Ã§Ä±kÄ±yor.
-        </p>
-        <p>
-          <strong>Birinci kapÄ± â€” Lokal hormonal ve hormon dÄ±ÅŸÄ± destek:</strong> Postmenopozal
-          tabloda lokal vajinal Ã¶strojen (krem, halka veya tablet) kanÄ±t seviyesi en gÃ¼Ã§lÃ¼
-          tedavi <Evidence level={5} />. Sistemik dolaÅŸÄ±ma geÃ§en miktar dÃ¼ÅŸÃ¼k; sistemik HRT'nin
-          kontrendike olduÄŸu Ã§oÄŸu kadÄ±nda bile deÄŸerlendirilebiliyor (meme kanseri Ã¶ykÃ¼sÃ¼
-          gibi durumlarda multidisipliner karar). Hormon dÄ±ÅŸÄ± seÃ§enekler (dÃ¼zenli vajinal
-          nemlendiriciler, yaÄŸlayÄ±cÄ±lar, hyaluronik asit bazlÄ± vajinal Ã¼rÃ¼nler) eÅŸ zamanlÄ±
-          kullanÄ±labiliyor; bunlar yÃ¼zeysel konfor iÃ§in pratik destek.
-        </p>
-        <p>
-          <strong>Ä°kinci kapÄ± â€” Pelvik taban fizyoterapisi:</strong> Pelvik taban kas spazmÄ±
-          olan veya vajinismus tablosu geliÅŸmiÅŸ kadÄ±nlarda fizyoterapi tedavinin omurgasÄ±nÄ±
-          oluÅŸturuyor <Evidence level={4} />. Kademeli kas farkÄ±ndalÄ±ÄŸÄ±, gevÅŸeme egzersizleri,
-          dilator setiyle yapÄ±landÄ±rÄ±lmÄ±ÅŸ maruziyet ve manuel terapi standart yaklaÅŸÄ±m. Lokal
-          hormonal tedavi tek baÅŸÄ±na yetmiyor; kas zinciri kÄ±rÄ±lmadan aÄŸrÄ± tam Ã§Ã¶zÃ¼lmÃ¼yor.
-        </p>
-        <p>
-          <strong>ÃœÃ§Ã¼ncÃ¼ kapÄ± â€” Psikoterapi / cinsel terapi:</strong> Korku-aÄŸrÄ± zinciri
-          uzun sÃ¼re yerleÅŸmiÅŸse veya psikolojik etkenler (geÃ§miÅŸ travma, iliÅŸki dinamikleri,
-          beden imajÄ±) tabloya eÅŸlik ediyorsa cinsel terapi (CBT-tabanlÄ± disparoni
-          protokolleri) etkili bir destek <Evidence level={4} />. Bu kapÄ± pek Ã§ok kadÄ±n iÃ§in
-          en geÃ§ aÃ§Ä±lan ama en gerekli olanÄ±; <em>"sadece bedensel"</em> bir mesele gibi
-          taÅŸÄ±mak Ã§oÄŸu zaman tablonun yarÄ±sÄ±nÄ± ihmal ediyor.
-        </p>
-        <p>
-          Derin disparoni ÅŸÃ¼phesinde altta yatan tabloya yÃ¶nelik tedavi (endometriozis iÃ§in
-          medikal/cerrahi seÃ§enekler, pelvik enflamatuvar tablo iÃ§in tedavi protokolÃ¼ vb.)
-          bu Ã¼Ã§ kapÄ±ya ek olarak deÄŸerlendiriliyor. Her durumda plan kiÅŸiselleÅŸtirilir;
-          aynÄ± belirti iki kadÄ±nda farklÄ± yollara Ã§Ä±kabiliyor.
+          <strong>Ek incelemeler</strong> şüpheye göre seçiliyor: tekrarlayan üriner şikâyet
+          varsa idrar tetkiki, derin pelvik ağrı şüphesinde MR pelvis, vulvar lezyon varsa
+          biyopsi. Her hastada gerekli değil — ama gerektiğinde atlanmaması da kritik.
         </p>
 
-        <h2 id="partner-iletisim">Partnerle Ä°letiÅŸim â€” Mahrem Ama Gerekli</h2>
+        <h2 id="tedavi-haritasi">Tedavi Haritası — Üç Kapı</h2>
         <p>
-          Cinsellikte aÄŸrÄ± yalnÄ±z taÅŸÄ±nan bir mesele deÄŸil; iliÅŸkinin iÃ§inde yaÅŸanÄ±yor ve
-          orada konuÅŸulmadÄ±kÃ§a saÄŸaltma sÃ¼reci eksik kalÄ±yor. Partnerle aÃ§Ä±k ama nazik
-          iletiÅŸim, tedavinin gÃ¶rÃ¼nmeyen ama belirleyici parÃ§asÄ±.
+          Disparoninin tedavisi bir hiyerarşi izler ve üç kapısı var; çoğu kadın için
+          birden fazla kapı eş zamanlı açılması gereken bir plan ortaya çıkıyor.
         </p>
         <p>
-          BirkaÃ§ pratik nokta: <em>"Ben istemiyorum"</em> ile <em>"Åimdi aÄŸrÄ± yapÄ±yor, baÅŸka
-          ÅŸekilde yakÄ±nlaÅŸalÄ±m mÄ±?"</em> arasÄ±nda Ã§ok ince ama bÃ¼yÃ¼k bir fark var. AÄŸrÄ±yÄ±
-          gizlemek (kabullenip katÄ±lmak) Ã§oÄŸu zaman kalÄ±cÄ± tablo yaratÄ±yor â€” partnerin
-          farkÄ±na varmadan aÄŸrÄ± yaratan ÅŸey ona devam ediyor. KonuÅŸmak ilk baÅŸta zor
-          gelebilir; ama <em>"ÅŸu an benim iÃ§in zor"</em> demek iliÅŸkide saygÄ±yÄ± azaltmÄ±yor,
-          aksine derinleÅŸtiriyor. Tedavi sÃ¼recinde alternatif yakÄ±nlÄ±k biÃ§imleri (penetrasyon
-          dÄ±ÅŸÄ± temas) tedavi tamamlanana kadar bedensel baÄŸÄ± sÃ¼rdÃ¼rmek iÃ§in deÄŸerli; bu
-          dÃ¶nem kalÄ±cÄ± deÄŸil, geÃ§ici bir sÃ¼reÃ§.
+          <strong>Birinci kapı — Lokal hormonal ve hormon dışı destek:</strong> Postmenopozal
+          tabloda lokal vajinal östrojen (krem, halka veya tablet) kanıt seviyesi en güçlü
+          tedavi <Evidence level={5} />. Sistemik dolaşıma geçen miktar düşük; sistemik HRT'nin
+          kontrendike olduğu çoğu kadında bile değerlendirilebiliyor (meme kanseri öyküsü
+          gibi durumlarda multidisipliner karar). Hormon dışı seçenekler (düzenli vajinal
+          nemlendiriciler, yağlayıcılar, hyaluronik asit bazlı vajinal ürünler) eş zamanlı
+          kullanılabiliyor; bunlar yüzeysel konfor için pratik destek.
         </p>
         <p>
-          Cinsel terapide partner katÄ±lÄ±mÄ±, Ã§iftin birlikte gelmesi planÄ± belirgin biÃ§imde
-          gÃ¼Ã§lendiriyor. AÄŸrÄ±yÄ± bir kadÄ±nÄ±n <em>"sorunu"</em> olarak deÄŸil, Ã§iftin birlikte
-          adres aldÄ±ÄŸÄ± bir mesele olarak Ã§erÃ§evelemek hem tedavi baÅŸarÄ±sÄ±nÄ± hem iliÅŸki
-          uyumunu artÄ±rÄ±yor.
+          <strong>İkinci kapı — Pelvik taban fizyoterapisi:</strong> Pelvik taban kas spazmı
+          olan veya vajinismus tablosu gelişmiş kadınlarda fizyoterapi tedavinin omurgasını
+          oluşturuyor <Evidence level={4} />. Kademeli kas farkındalığı, gevşeme egzersizleri,
+          dilator setiyle yapılandırılmış maruziyet ve manuel terapi standart yaklaşım. Lokal
+          hormonal tedavi tek başına yetmiyor; kas zinciri kırılmadan ağrı tam çözülmüyor.
+        </p>
+        <p>
+          <strong>Üçüncü kapı — Psikoterapi / cinsel terapi:</strong> Korku-ağrı zinciri
+          uzun süre yerleşmişse veya psikolojik etkenler (geçmiş travma, ilişki dinamikleri,
+          beden imajı) tabloya eşlik ediyorsa cinsel terapi (CBT-tabanlı disparoni
+          protokolleri) etkili bir destek <Evidence level={4} />. Bu kapı pek çok kadın için
+          en geç açılan ama en gerekli olanı; <em>"sadece bedensel"</em> bir mesele gibi
+          taşımak çoğu zaman tablonun yarısını ihmal ediyor.
+        </p>
+        <p>
+          Derin disparoni şüphesinde altta yatan tabloya yönelik tedavi (endometriozis için
+          medikal/cerrahi seçenekler, pelvik enflamatuvar tablo için tedavi protokolü vb.)
+          bu üç kapıya ek olarak değerlendiriliyor. Her durumda plan kişiselleştirilir;
+          aynı belirti iki kadında farklı yollara çıkabiliyor.
+        </p>
+
+        <h2 id="partner-iletisim">Partnerle İletişim — Mahrem Ama Gerekli</h2>
+        <p>
+          Cinsellikte ağrı yalnız taşınan bir mesele değil; ilişkinin içinde yaşanıyor ve
+          orada konuşulmadıkça sağaltma süreci eksik kalıyor. Partnerle açık ama nazik
+          iletişim, tedavinin görünmeyen ama belirleyici parçası.
+        </p>
+        <p>
+          Birkaç pratik nokta: <em>"Ben istemiyorum"</em> ile <em>"Şimdi ağrı yapıyor, başka
+          şekilde yakınlaşalım mı?"</em> arasında çok ince ama büyük bir fark var. Ağrıyı
+          gizlemek (kabullenip katılmak) çoğu zaman kalıcı tablo yaratıyor — partnerin
+          farkına varmadan ağrı yaratan şey ona devam ediyor. Konuşmak ilk başta zor
+          gelebilir; ama <em>"şu an benim için zor"</em> demek ilişkide saygıyı azaltmıyor,
+          aksine derinleştiriyor. Tedavi sürecinde alternatif yakınlık biçimleri (penetrasyon
+          dışı temas) tedavi tamamlanana kadar bedensel bağı sürdürmek için değerli; bu
+          dönem kalıcı değil, geçici bir süreç.
+        </p>
+        <p>
+          Cinsel terapide partner katılımı, çiftin birlikte gelmesi planı belirgin biçimde
+          güçlendiriyor. Ağrıyı bir kadının <em>"sorunu"</em> olarak değil, çiftin birlikte
+          adres aldığı bir mesele olarak çerçevelemek hem tedavi başarısını hem ilişki
+          uyumunu artırıyor.
         </p>
 
         <RedFlagBox
           markers={[
-            'Cinsel iliÅŸki sonrasÄ± tekrarlayan kanama (Ã¶zellikle postmenopozal dÃ¶nemde)',
-            'Postmenopozal vajinal kanama (herhangi bir miktarda â€” endometrium kanseri ekartasyonu zorunlu)',
-            'Yan aÄŸrÄ±sÄ± veya ateÅŸle birlikte aÄŸrÄ±lÄ± iliÅŸki ÅŸikÃ¢yeti (pelvik enflamatuvar hastalÄ±k ÅŸÃ¼phesi)',
-            'Derin pelvik aÄŸrÄ± + aÄŸÄ±rlÄ±klÄ± menstrÃ¼asyon + kronik kabÄ±zlÄ±k-idrar yakÄ±nmalarÄ± (endometriozis / adenomyozis ayÄ±rÄ±cÄ± tanÄ±sÄ±)',
-            'Vulvar bÃ¶lgede yeni ortaya Ã§Ä±kan yara, beyaz lekeler, kalÄ±nlaÅŸma (liken sklerozus / dermatoz / nadiren malignite ekartasyonu)',
-            '8-12 hafta lokal tedaviye yanÄ±tsÄ±z aÄŸrÄ± â€” ayÄ±rÄ±cÄ± tanÄ± yeniden deÄŸerlendirilmeli',
+            'Cinsel ilişki sonrası tekrarlayan kanama (özellikle postmenopozal dönemde)',
+            'Postmenopozal vajinal kanama (herhangi bir miktarda — endometrium kanseri ekartasyonu zorunlu)',
+            'Yan ağrısı veya ateşle birlikte ağrılı ilişki şikâyeti (pelvik enflamatuvar hastalık şüphesi)',
+            'Derin pelvik ağrı + ağırlıklı menstrüasyon + kronik kabızlık-idrar yakınmaları (endometriozis / adenomyozis ayırıcı tanısı)',
+            'Vulvar bölgede yeni ortaya çıkan yara, beyaz lekeler, kalınlaşma (liken sklerozus / dermatoz / nadiren malignite ekartasyonu)',
+            '8-12 hafta lokal tedaviye yanıtsız ağrı — ayırıcı tanı yeniden değerlendirilmeli',
           ]}
-          footnote="Bu liste teÅŸhis amaÃ§lÄ± deÄŸil; bir hekimle vakit kaybetmeden konuÅŸmaya deÄŸer kabul edilen durumlarÄ±n hatÄ±rlatÄ±cÄ±sÄ±dÄ±r."
+          footnote="Bu liste teşhis amaçlı değil; bir hekimle vakit kaybetmeden konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
         />
 
-        <h2 id="iletisim">Doktora Hangi SorularÄ± SormalÄ±?</h2>
+        <h2 id="iletisim">Doktora Hangi Soruları Sormalı?</h2>
         <p>
-          Bir kadÄ±n bana geÃ§en gÃ¼n <em>"utanÄ±yorum sormaya"</em> dedi. Oysa sorunun kendisi
-          cevabÄ±n yarÄ±sÄ±. Disparoni hakkÄ±nda doktorunuzla konuÅŸmaya hazÄ±rlanÄ±rken Ã¼Ã§ soruyu
-          yanÄ±nÄ±za alÄ±n:
+          Bir kadın bana geçen gün <em>"utanıyorum sormaya"</em> dedi. Oysa sorunun kendisi
+          cevabın yarısı. Disparoni hakkında doktorunuzla konuşmaya hazırlanırken üç soruyu
+          yanınıza alın:
         </p>
         <p>
-          <strong>Birincisi</strong> â€” <em>"AÄŸrÄ±mÄ±n yeri ve zamanÄ± bende hangi alt-tipe
-          iÅŸaret ediyor â€” yÃ¼zeysel mi, derin mi, postmenopozal mÄ±, vajinismus zincirinde
-          miyim?"</em> Bu, planÄ±n doÄŸru kapÄ±ya yÃ¶nelmesini saÄŸlÄ±yor. <strong>Ä°kincisi</strong>
-          â€” <em>"Hangi tedavileri eÅŸ zamanlÄ± kullanacaÄŸÄ±z â€” lokal hormonal mi, fizyoterapi
-          mi, psikoterapi mi, hepsi mi? Her birini ne sÃ¼rede deÄŸerlendireceÄŸiz?"</em> Bu,
-          bir takvim Ã¶neriyor (genelde 8-12 hafta + tekrar deÄŸerlendirme). <strong>ÃœÃ§Ã¼ncÃ¼sÃ¼</strong>
-          â€” <em>"EÅŸlik eden tablolar (GSM, endometriozis, pelvik taban disfonksiyonu, lokal
-          dermatozlar) ekarte edildi mi, gerekli mi?"</em> Bu, ayÄ±rÄ±cÄ± tanÄ±nÄ±n atlanmamasÄ±nÄ±
-          gÃ¼vence altÄ±na alÄ±yor.
+          <strong>Birincisi</strong> — <em>"Ağrımın yeri ve zamanı bende hangi alt-tipe
+          işaret ediyor — yüzeysel mi, derin mi, postmenopozal mı, vajinismus zincirinde
+          miyim?"</em> Bu, planın doğru kapıya yönelmesini sağlıyor. <strong>İkincisi</strong>
+          — <em>"Hangi tedavileri eş zamanlı kullanacağız — lokal hormonal mi, fizyoterapi
+          mi, psikoterapi mi, hepsi mi? Her birini ne sürede değerlendireceğiz?"</em> Bu,
+          bir takvim öneriyor (genelde 8-12 hafta + tekrar değerlendirme). <strong>Üçüncüsü</strong>
+          — <em>"Eşlik eden tablolar (GSM, endometriozis, pelvik taban disfonksiyonu, lokal
+          dermatozlar) ekarte edildi mi, gerekli mi?"</em> Bu, ayırıcı tanının atlanmamasını
+          güvence altına alıyor.
         </p>
 
-        <h2 id="sik-sorulanlar">SÄ±kÃ§a Sorulanlar</h2>
+        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
 
-        <h3>Lokal vajinal Ã¶strojen ne kadar sÃ¼rede aÄŸrÄ±yÄ± azaltÄ±r?</h3>
+        <h3>Lokal vajinal östrojen ne kadar sürede ağrıyı azaltır?</h3>
         <p>
-          Postmenopozal disparonide lokal Ã¶strojen kullanÄ±mÄ±yla aÄŸrÄ± dÃ¼zeyinde belirgin
-          iyileÅŸme genellikle 4-12 hafta iÃ§inde fark ediliyor <Evidence level={5} />. Tipik
-          rejim baÅŸlangÄ±Ã§ta 2 hafta gÃ¼nlÃ¼k, sonra haftada 2 gÃ¼n idame; uzun sÃ¼reli kullanÄ±m
-          gerektirebiliyor. Tedavi GSM iÃ§in sÃ¼rdÃ¼rÃ¼len bir plan; bÄ±rakÄ±ldÄ±ÄŸÄ±nda belirtiler
-          1-3 ay iÃ§inde geri dÃ¶nebiliyor. <em>"SÃ¼rekli kullanmam gerekecek mi?"</em> sorusunun
-          cevabÄ± Ã§oÄŸunlukla evet â€” ama dÃ¼ÅŸÃ¼k doz lokal etkili olduÄŸundan uzun vadeli gÃ¼venlik
+          Postmenopozal disparonide lokal östrojen kullanımıyla ağrı düzeyinde belirgin
+          iyileşme genellikle 4-12 hafta içinde fark ediliyor <Evidence level={5} />. Tipik
+          rejim başlangıçta 2 hafta günlük, sonra haftada 2 gün idame; uzun süreli kullanım
+          gerektirebiliyor. Tedavi GSM için sürdürülen bir plan; bırakıldığında belirtiler
+          1-3 ay içinde geri dönebiliyor. <em>"Sürekli kullanmam gerekecek mi?"</em> sorusunun
+          cevabı çoğunlukla evet — ama düşük doz lokal etkili olduğundan uzun vadeli güvenlik
           profili olumlu.
         </p>
 
         <h3>Vajinismus tedavi edilebilir mi?</h3>
         <p>
-          Evet â€” ve doÄŸru kapÄ±larla yaklaÅŸÄ±ldÄ±ÄŸÄ±nda yanÄ±t oranÄ± yÃ¼ksek. Vajinismus tedavisi
-          genellikle Ã¼Ã§ ayaktan oluÅŸuyor: pelvik taban fizyoterapisi (kas farkÄ±ndalÄ±ÄŸÄ± +
-          dilator seti ile yapÄ±landÄ±rÄ±lmÄ±ÅŸ maruziyet), psikoterapi (CBT-tabanlÄ± protokoller)
-          ve postmenopozal dÃ¶nemde altta yatan GSM varsa lokal hormonal destek
-          <Evidence level={4} />. 8-16 hafta sÃ¼reli yapÄ±landÄ±rÄ±lmÄ±ÅŸ programlar kadÄ±nlarÄ±n
-          Ã¶nemli bir kÄ±smÄ±nda belirgin iyileÅŸme saÄŸlÄ±yor. Tek baÅŸÄ±na lokal tedavi vajinismusu
-          Ã§Ã¶zmÃ¼yor â€” kas-zihin zincirinin birlikte ele alÄ±nmasÄ± gerek.
+          Evet — ve doğru kapılarla yaklaşıldığında yanıt oranı yüksek. Vajinismus tedavisi
+          genellikle üç ayaktan oluşuyor: pelvik taban fizyoterapisi (kas farkındalığı +
+          dilator seti ile yapılandırılmış maruziyet), psikoterapi (CBT-tabanlı protokoller)
+          ve postmenopozal dönemde altta yatan GSM varsa lokal hormonal destek
+          <Evidence level={4} />. 8-16 hafta süreli yapılandırılmış programlar kadınların
+          önemli bir kısmında belirgin iyileşme sağlıyor. Tek başına lokal tedavi vajinismusu
+          çözmüyor — kas-zihin zincirinin birlikte ele alınması gerek.
         </p>
 
-        <h3>Cinsellikten kaÃ§Ä±nmak tedaviye yardÄ±mcÄ± oluyor mu?</h3>
+        <h3>Cinsellikten kaçınmak tedaviye yardımcı oluyor mu?</h3>
         <p>
-          Tam tersine, Ã§oÄŸu zaman kaÃ§Ä±nma korku-aÄŸrÄ± zincirini gÃ¼Ã§lendiriyor. Ama
-          <em>"diÅŸ sÄ±kÄ±p aÄŸrÄ±lÄ± iliÅŸkiye devam etmek"</em> de doÄŸru deÄŸil â€” bu yaklaÅŸÄ±m hem
-          dokuyu hem zihni daha kÃ¶tÃ¼ye gÃ¶tÃ¼rÃ¼yor. Uygun yaklaÅŸÄ±m: tedavi sÃ¼recinde
-          penetrasyon dÄ±ÅŸÄ± yakÄ±nlÄ±k biÃ§imleri (manuel temas, oral, sarÄ±lma) ile bedensel
-          baÄŸÄ±n sÃ¼rdÃ¼rÃ¼lmesi; eÅŸ zamanlÄ± pelvik taban ve psikoterapi ile zincirin kÄ±rÄ±lmasÄ±;
-          ardÄ±ndan kademeli, hekim/fizyoterapist eÅŸliÄŸinde yapÄ±landÄ±rÄ±lmÄ±ÅŸ bir geri dÃ¶nÃ¼ÅŸ.
-          Bu kademeli yapÄ± kalÄ±cÄ± Ã§Ã¶zÃ¼m iÃ§in en gÃ¼venli yol.
+          Tam tersine, çoğu zaman kaçınma korku-ağrı zincirini güçlendiriyor. Ama
+          <em>"diş sıkıp ağrılı ilişkiye devam etmek"</em> de doğru değil — bu yaklaşım hem
+          dokuyu hem zihni daha kötüye götürüyor. Uygun yaklaşım: tedavi sürecinde
+          penetrasyon dışı yakınlık biçimleri (manuel temas, oral, sarılma) ile bedensel
+          bağın sürdürülmesi; eş zamanlı pelvik taban ve psikoterapi ile zincirin kırılması;
+          ardından kademeli, hekim/fizyoterapist eşliğinde yapılandırılmış bir geri dönüş.
+          Bu kademeli yapı kalıcı çözüm için en güvenli yol.
         </p>
 
-        <h3>Meme kanseri Ã¶ykÃ¼sÃ¼ olan biri lokal vajinal Ã¶strojen kullanabilir mi?</h3>
+        <h3>Meme kanseri öyküsü olan biri lokal vajinal östrojen kullanabilir mi?</h3>
         <p>
-          Bu sÄ±kÃ§a karÅŸÄ±laÅŸtÄ±ÄŸÄ±m sorulardan biri. Genel kural: meme kanseri Ã¶ykÃ¼sÃ¼ olan
-          kadÄ±nda lokal Ã¶strojen kararÄ± onkolog + jinekolog ortak deÄŸerlendirmesi gerektiriyor
-          <Evidence level={4} />. Hormon reseptÃ¶rÃ¼ durumu, tedavi Ã¶ykÃ¼sÃ¼, eÅŸlik eden ilaÃ§lar
-          (Ã¶zellikle aromataz inhibitÃ¶rÃ¼) hesaba katÄ±lÄ±yor. BazÄ± durumlarda hormon dÄ±ÅŸÄ±
-          seÃ§enekler Ã¶ncelik kazanÄ±yor; bazÄ± durumlarda dÃ¼ÅŸÃ¼k doz lokal Ã¶strojen uygun
-          bulunabiliyor. <em>"HayÄ±r"</em> anlamÄ±na gelmiyor â€” <em>"birlikte tartÄ±ÅŸÄ±lmasÄ±
-          gereken"</em> anlamÄ±na geliyor.
+          Bu sıkça karşılaştığım sorulardan biri. Genel kural: meme kanseri öyküsü olan
+          kadında lokal östrojen kararı onkolog + jinekolog ortak değerlendirmesi gerektiriyor
+          <Evidence level={4} />. Hormon reseptörü durumu, tedavi öyküsü, eşlik eden ilaçlar
+          (özellikle aromataz inhibitörü) hesaba katılıyor. Bazı durumlarda hormon dışı
+          seçenekler öncelik kazanıyor; bazı durumlarda düşük doz lokal östrojen uygun
+          bulunabiliyor. <em>"Hayır"</em> anlamına gelmiyor — <em>"birlikte tartışılması
+          gereken"</em> anlamına geliyor.
         </p>
 
-        <h3>Pelvik taban fizyoterapisti nasÄ±l bulunur?</h3>
+        <h3>Pelvik taban fizyoterapisti nasıl bulunur?</h3>
         <p>
-          TÃ¼rkiye'de pelvik taban fizyoterapisi son yÄ±llarda hÄ±zla yaygÄ±nlaÅŸÄ±yor; jinekolog
-          veya Ã¼roloji uzmanÄ±nÄ±z muayene sÄ±rasÄ±nda size yÃ¶nlendirme yapabilir. BazÄ± eÄŸitim
-          ve araÅŸtÄ±rma hastanelerinde pelvik taban birimleri var. Fizyoterapistin pelvik
-          taban alanÄ±nda <em>spesifik eÄŸitim</em> almÄ±ÅŸ olmasÄ± Ã¶nemli â€” genel ortopedik
-          fizyoterapi bu konuya yetmiyor. Ä°lk deÄŸerlendirme + 6-12 seanslÄ±k yapÄ±landÄ±rÄ±lmÄ±ÅŸ
-          bir program tipik plan; sonrasÄ± evde sÃ¼rdÃ¼rÃ¼lebilir egzersiz protokolÃ¼ne geÃ§iyor.
+          Türkiye'de pelvik taban fizyoterapisi son yıllarda hızla yaygınlaşıyor; jinekolog
+          veya üroloji uzmanınız muayene sırasında size yönlendirme yapabilir. Bazı eğitim
+          ve araştırma hastanelerinde pelvik taban birimleri var. Fizyoterapistin pelvik
+          taban alanında <em>spesifik eğitim</em> almış olması önemli — genel ortopedik
+          fizyoterapi bu konuya yetmiyor. İlk değerlendirme + 6-12 seanslık yapılandırılmış
+          bir program tipik plan; sonrası evde sürdürülebilir egzersiz protokolüne geçiyor.
         </p>
 
-        <h2 id="kapanis">KapanÄ±ÅŸ</h2>
+        <h2 id="kapanis">Kapanış</h2>
         <p>
-          Cinsel iliÅŸkide aÄŸrÄ± muayene odasÄ±nda en geÃ§ dile getirilen ama tedaviyle Ã§oÄŸu
-          zaman gerÃ§ekten iyileÅŸen ÅŸikÃ¢yetlerden biri. Bilgi belirsizliÄŸin panzehiridir â€”
-          bu konuda da Ã¶yle. Ã–nce konuya isim koymak (disparoni); sonra alt-tipi netleÅŸtirmek
-          (yÃ¼zeysel / derin / postmenopozal / vajinismus); mekanizmayÄ± bilen biri olarak
-          tanÄ±mak (Ã¶strojen dÃ¼ÅŸÃ¼ÅŸÃ¼ + pelvik taban koruyucu refleks); Ã¼Ã§ kapÄ±lÄ± tedavi
-          haritasÄ±nÄ± birlikte deÄŸerlendirmek (lokal hormonal/hormon dÄ±ÅŸÄ± + pelvik taban
-          fizyoterapisi + psikoterapi); ve partnerle aÃ§Ä±k ama nazik iletiÅŸim. <em>"AlÄ±ÅŸÄ±rÄ±m"</em>
-          deyip taÅŸÄ±mak ne fizyolojik ne psikolojik olarak sÃ¼rdÃ¼rÃ¼lebilir.
+          Cinsel ilişkide ağrı muayene odasında en geç dile getirilen ama tedaviyle çoğu
+          zaman gerçekten iyileşen şikâyetlerden biri. Bilgi belirsizliğin panzehiridir —
+          bu konuda da öyle. Önce konuya isim koymak (disparoni); sonra alt-tipi netleştirmek
+          (yüzeysel / derin / postmenopozal / vajinismus); mekanizmayı bilen biri olarak
+          tanımak (östrojen düşüşü + pelvik taban koruyucu refleks); üç kapılı tedavi
+          haritasını birlikte değerlendirmek (lokal hormonal/hormon dışı + pelvik taban
+          fizyoterapisi + psikoterapi); ve partnerle açık ama nazik iletişim. <em>"Alışırım"</em>
+          deyip taşımak ne fizyolojik ne psikolojik olarak sürdürülebilir.
         </p>
         <p>
-          Bir yandan bilmemek gereken ÅŸeyleri sÃ¶yleyebilirim: <em>"ÅŸu sizde iÅŸe yarar"</em>
-          diyebilen tek bir reÃ§ete yok. Ä°ki kadÄ±n aynÄ± belirtiyi yaÅŸar ama iki farklÄ± plan
-          doÄŸru olabilir; bedeniniz, eÅŸlik eden tÄ±bbi durumlar, alt-tipinizin ayrÄ±mÄ± tedavi
-          seÃ§imine yÃ¶n verir. Doktorunuza Ã¼Ã§ soruyla gidin â€” alt-tipim ne, hangi kapÄ±larÄ±
-          eÅŸ zamanlÄ± aÃ§acaÄŸÄ±z, ayÄ±rÄ±cÄ± tanÄ± tamamlandÄ± mÄ±. Sorunun kendisi cevabÄ±n yarÄ±sÄ±dÄ±r;
-          bu yarÄ±sÄ±nÄ± siz koyduÄŸunuzda, kalanÄ± klinik diyalogun parÃ§asÄ± oluyor.
+          Bir yandan bilmemek gereken şeyleri söyleyebilirim: <em>"şu sizde işe yarar"</em>
+          diyebilen tek bir reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı plan
+          doğru olabilir; bedeniniz, eşlik eden tıbbi durumlar, alt-tipinizin ayrımı tedavi
+          seçimine yön verir. Doktorunuza üç soruyla gidin — alt-tipim ne, hangi kapıları
+          eş zamanlı açacağız, ayırıcı tanı tamamlandı mı. Sorunun kendisi cevabın yarısıdır;
+          bu yarısını siz koyduğunuzda, kalanı klinik diyalogun parçası oluyor.
         </p>
       </ArticleProsePanel>
 
@@ -380,79 +380,75 @@ const articleSchemas = buildArticleSchemas({
           ]}
         />
 
-      <section
-        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
-      >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel EditÃ¶r Notu</p>
-        <p class="mb-4 text-lg font-semibold text-ink">KanÄ±t DÃ¼zeyi: <Evidence from={4} to={5} /></p>
+      <ArticleEditorNote>
+<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Bu yazÄ±nÄ±n yazar tarafÄ± bazÄ± klinik ayrÄ±mlarÄ± yumuÅŸak konuÅŸmayÄ± tercih etti;
-            editÃ¶r koltuÄŸunda ise onlarÄ± biraz daha net Ã§izmem gerek.
+            Bu yazının yazar tarafı bazı klinik ayrımları yumuşak konuşmayı tercih etti;
+            editör koltuğunda ise onları biraz daha net çizmem gerek.
           </p>
           <p>
             <strong class="text-burgundy">Klinik not:</strong> Disparoni
-            (cinsel iliÅŸkide aÄŸrÄ±) muayene odasÄ±nda en geÃ§ dile getirilen ama tedaviyle Ã§oÄŸu
-            zaman gerÃ§ekten iyileÅŸen ÅŸikÃ¢yetlerden biri â€” kliniÄŸimde de bu Ã¶rÃ¼ntÃ¼yÃ¼ her
-            ay yeniden gÃ¶zlemliyorum. Postmenopozal kadÄ±nlarda yaygÄ±nlÄ±k %20-40 aralÄ±ÄŸÄ±nda
-            bildiriliyor; ancak utanma kaynaklÄ± bildirim eksikliÄŸi nedeniyle gerÃ§ek sÄ±klÄ±ÄŸÄ±n
-            daha yÃ¼ksek olduÄŸu kabul ediliyor. Disparoni tek bir tablo deÄŸil; alt-tip ayrÄ±mÄ±
-            (yÃ¼zeysel / derin / postmenopozal / vajinismus) tedavi yolunu belirler.
+            (cinsel ilişkide ağrı) muayene odasında en geç dile getirilen ama tedaviyle çoğu
+            zaman gerçekten iyileşen şikâyetlerden biri — kliniğimde de bu örüntüyü her
+            ay yeniden gözlemliyorum. Postmenopozal kadınlarda yaygınlık %20-40 aralığında
+            bildiriliyor; ancak utanma kaynaklı bildirim eksikliği nedeniyle gerçek sıklığın
+            daha yüksek olduğu kabul ediliyor. Disparoni tek bir tablo değil; alt-tip ayrımı
+            (yüzeysel / derin / postmenopozal / vajinismus) tedavi yolunu belirler.
           </p>
           <p>
-            <strong class="text-burgundy">Mekanizma notu:</strong> Postmenopozal yÃ¼zeysel
-            disparonide temel mekanizma Ã¶strojen dÃ¼ÅŸÃ¼ÅŸÃ¼ne baÄŸlÄ± vulvovajinal atrofi (GSM):
-            epitel incelmesi, kollajen ve damar desteÄŸi kaybÄ±, vajinal pH alkalinizasyonu,
-            laktobasil kolonizasyonunun bozulmasÄ±. Derin disparonide pelvik patoloji
-            (endometriozis, adenomyozis, miyom, pelvik enflamatuvar hastalÄ±k) ve pelvik
-            taban kas spazmÄ± Ã¶ncelikli. Vajinismusta korku-aÄŸrÄ± zinciri pelvik taban kaslarÄ±nda
-            istemsiz refleksif kasÄ±lma yaratÄ±r; uzun sÃ¼re yerleÅŸtiÄŸinde sekonder hale gelip
+            <strong class="text-burgundy">Mekanizma notu:</strong> Postmenopozal yüzeysel
+            disparonide temel mekanizma östrojen düşüşüne bağlı vulvovajinal atrofi (GSM):
+            epitel incelmesi, kollajen ve damar desteği kaybı, vajinal pH alkalinizasyonu,
+            laktobasil kolonizasyonunun bozulması. Derin disparonide pelvik patoloji
+            (endometriozis, adenomyozis, miyom, pelvik enflamatuvar hastalık) ve pelvik
+            taban kas spazmı öncelikli. Vajinismusta korku-ağrı zinciri pelvik taban kaslarında
+            istemsiz refleksif kasılma yaratır; uzun süre yerleştiğinde sekonder hale gelip
             altta yatan organik tabloyu maskeleyebilir.
           </p>
           <p>
-            <strong class="text-burgundy">Klinik kÄ±rmÄ±zÄ± bayraklar:</strong> Postmenopozal
-            vajinal kanama (herhangi bir miktar â€” endometrium kanseri ekartasyonu zorunlu);
-            cinsel iliÅŸki sonrasÄ± tekrarlayan kanama; ateÅŸ veya yan aÄŸrÄ±sÄ±yla birlikte
-            disparoni (PID ÅŸÃ¼phesi); derin pelvik aÄŸrÄ± + dismenore + kronik Ã¼riner-baÄŸÄ±rsak
-            yakÄ±nmalarÄ± (endometriozis/adenomyozis); vulvar yeni lezyonlar veya beyaz
+            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong> Postmenopozal
+            vajinal kanama (herhangi bir miktar — endometrium kanseri ekartasyonu zorunlu);
+            cinsel ilişki sonrası tekrarlayan kanama; ateş veya yan ağrısıyla birlikte
+            disparoni (PID şüphesi); derin pelvik ağrı + dismenore + kronik üriner-bağırsak
+            yakınmaları (endometriozis/adenomyozis); vulvar yeni lezyonlar veya beyaz
             lekeler (liken sklerozus veya nadiren malignite ekartasyonu); 8-12 hafta lokal
-            tedaviye yanÄ±tsÄ±zlÄ±k. Bu tablolar disparoni yorumuyla geÃ§iÅŸtirilemez; ayÄ±rÄ±cÄ±
-            tanÄ± zorunlu.
+            tedaviye yanıtsızlık. Bu tablolar disparoni yorumuyla geçiştirilemez; ayırıcı
+            tanı zorunlu.
           </p>
           <p>
-            <strong class="text-burgundy">Pratik bÃ¼tÃ¼nleÅŸim:</strong> Klinikte adÄ±m sÄ±ralamamÄ±
-            ÅŸÃ¶yle koruyorum: (1) Ã¶ykÃ¼ + fizik muayene + vajinal pH + gerektiÄŸinde
-            transvajinal ultrason ile alt-tip ayrÄ±mÄ±; (2) postmenopozal yÃ¼zeysel tabloda
-            lokal vajinal Ã¶strojen â€” kanÄ±t seviyesi en gÃ¼Ã§lÃ¼ tedavi (DÃ¼zey 1); hormon dÄ±ÅŸÄ±
-            nemlendirici/yaÄŸlayÄ±cÄ± eÅŸ zamanlÄ± destek; (3) pelvik taban kas spazmÄ± veya
-            vajinismus zinciri varsa pelvik taban fizyoterapisi â€” tedavinin omurgasÄ±; lokal
-            tedavi tek baÅŸÄ±na yetmiyor; (4) korku-aÄŸrÄ± zinciri yerleÅŸmiÅŸ veya psikolojik
-            etkenler eÅŸlik ediyorsa cinsel terapi (CBT-tabanlÄ± disparoni protokolleri); (5)
-            derin disparonide altta yatan tabloya yÃ¶nelik tedavi (endometriozis iÃ§in
-            medikal/cerrahi). Plan kiÅŸiselleÅŸtirilir; Ã§oÄŸu kadÄ±nda birden fazla kapÄ± eÅŸ
-            zamanlÄ± aÃ§Ä±lmasÄ± gereken bir yapÄ± Ã§Ä±kÄ±yor.
+            <strong class="text-burgundy">Pratik bütünleşim:</strong> Klinikte adım sıralamamı
+            şöyle koruyorum: (1) öykü + fizik muayene + vajinal pH + gerektiğinde
+            transvajinal ultrason ile alt-tip ayrımı; (2) postmenopozal yüzeysel tabloda
+            lokal vajinal östrojen — kanıt seviyesi en güçlü tedavi (Düzey 1); hormon dışı
+            nemlendirici/yağlayıcı eş zamanlı destek; (3) pelvik taban kas spazmı veya
+            vajinismus zinciri varsa pelvik taban fizyoterapisi — tedavinin omurgası; lokal
+            tedavi tek başına yetmiyor; (4) korku-ağrı zinciri yerleşmiş veya psikolojik
+            etkenler eşlik ediyorsa cinsel terapi (CBT-tabanlı disparoni protokolleri); (5)
+            derin disparonide altta yatan tabloya yönelik tedavi (endometriozis için
+            medikal/cerrahi). Plan kişiselleştirilir; çoğu kadında birden fazla kapı eş
+            zamanlı açılması gereken bir yapı çıkıyor.
           </p>
           <p>
-            <strong class="text-burgundy">Bireysellik vurgusu:</strong> YukarÄ±da paylaÅŸtÄ±klarÄ±m
-            â€” hem yazÄ±da hem bu notta â€” genel popÃ¼lasyon Ã§erÃ§evesidir; sizin tablonuzdaki
-            alt-tip ayrÄ±mÄ±, eÅŸlik eden tÄ±bbi durumlar (Ã¶zellikle hormon reseptÃ¶rÃ¼ pozitif
-            meme kanseri Ã¶ykÃ¼sÃ¼, aromataz inhibitÃ¶rÃ¼ kullanÄ±mÄ±, endometriozis/adenomyozis,
-            liken sklerozus, vulvodini) tedavi seÃ§imine yÃ¶n verir. Burada okuduÄŸunuz bir
-            baÅŸlangÄ±Ã§ Ã§erÃ§evesidir, karar deÄŸil; sizin iÃ§in uygun adÄ±mlarÄ± kendi hekiminizle
-            birebir deÄŸerlendirmeniz Ã¶nemlidir â€” Ã¶zellikle birden Ã§ok alt-tipin bir arada
-            seyredebildiÄŸi bu alanda.
+            <strong class="text-burgundy">Bireysellik vurgusu:</strong> Yukarıda paylaştıklarım
+            — hem yazıda hem bu notta — genel popülasyon çerçevesidir; sizin tablonuzdaki
+            alt-tip ayrımı, eşlik eden tıbbi durumlar (özellikle hormon reseptörü pozitif
+            meme kanseri öyküsü, aromataz inhibitörü kullanımı, endometriozis/adenomyozis,
+            liken sklerozus, vulvodini) tedavi seçimine yön verir. Burada okuduğunuz bir
+            başlangıç çerçevesidir, karar değil; sizin için uygun adımları kendi hekiminizle
+            birebir değerlendirmeniz önemlidir — özellikle birden çok alt-tipin bir arada
+            seyredebildiği bu alanda.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
-            â€” DoÃ§. Dr. Senai Aksoy, KadÄ±n HastalÄ±klarÄ± ve DoÄŸum UzmanÄ±, Estranova Bilimsel EditÃ¶rÃ¼
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
           </p>
-        </div>
-      </section>
+      </ArticleEditorNote>
 
-      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-        <p class="text-sm leading-relaxed text-ink/75">
-          Bu iÃ§erik genel bilgi amaÃ§lÄ±dÄ±r ve bireysel tÄ±bbi deÄŸerlendirme yerine geÃ§mez. TanÄ± ve tedavi kararlarÄ± iÃ§in saÄŸlÄ±k profesyoneline baÅŸvurunuz.
+       <ArticleDisclaimer>
+<p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
         </p>
-      </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

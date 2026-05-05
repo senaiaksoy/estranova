@@ -52,7 +52,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'İlk işaretleri not etmek gerçekten işe yarar mı?',
       answer:
-        'Evet. Tarih, sıklık ve eşlik eden durumları birkaç hafta not etmek hem kişisel farkındalığı artırır hem de hekim görüşmesini daha somut hale getirir. Dağınık bir hissi daha okunur bir örüntüye dönüştürür.',
+        'Evet. Tarih, sıklık ve eşlik eden durumları birkaç hafta not etmek hem kişisel farkındalığı artırır hem de hekim görüşmesini daha somut hale getirir. Dağınık bir hissi daha okunur bir düzene dönüştürür.',
     },
   ],
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': [

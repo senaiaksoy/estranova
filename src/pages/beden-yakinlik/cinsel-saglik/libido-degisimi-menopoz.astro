@@ -7,6 +7,9 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -72,16 +75,13 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="27 Nisan 2026" readingMinutes={10} />
 
-      <section
-        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
-      >
-        <h2 class="mb-4 font-serif text-3xl">Editörden Kısa Bir Not</h2>
-        <p class="leading-relaxed text-ink/80">
+      <ArticleSummary title="Editörden Kısa Bir Not">
+<p>
           Bu yazıyı yazmak için kimse gönüllü olmadı… Mahrem sayılan konuları yazmak çoğumuz için zor. Masaya
           ben oturdum — hekim kimliğimden değil, yıllardır kadın sağlığının içinde duran biri olarak. Tıbbi
           jargon yok, sadece konuşulması gereken bir konuyu komşu sıcaklığıyla anlatma çabası.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="acilis">Yalnız Değilsin</h2>
@@ -326,11 +326,8 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <section
-        class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
-      >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="leading-relaxed text-ink/80">
+      <ArticleEditorNote>
+<p>
           Menopozda libido değişimi yaygındır ve genellikle çok-faktörlüdür: hormonal değişim, vajinal sağlık,
           uyku, ruh hâli, ilaç kullanımı ve ilişki dinamikleri eşzamanlı rol oynar. Lokal vajinal östrojen
           tedavisi vulvovajinal atrofiye bağlı belirtilerde etkili ve büyük ölçüde güvenli bir seçenektir; sistemik
@@ -340,17 +337,15 @@ const articleSchemas = buildArticleSchemas({
           postmenopoz beklenmedik kanama veya tekrarlayan idrar yolu enfeksiyonları varlığında kadın hastalıkları
           uzmanına başvuru gecikmeden yapılmalıdır.
         </p>
-      </section>
+      </ArticleEditorNote>
 
-      <section
-        class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10"
-      >
-        <p class="text-sm leading-relaxed text-ink/75">
+      <ArticleDisclaimer>
+<p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
           Tedavi seçenekleri, ilaç kullanımı veya cinsel sağlık ile ilgili kararlar için kendi hekiminle
           birlikte değerlendirme yapman önemlidir.
         </p>
-      </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

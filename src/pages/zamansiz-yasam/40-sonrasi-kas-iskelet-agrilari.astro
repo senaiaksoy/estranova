@@ -9,6 +9,9 @@ import ReadingControls from '../../components/site/ReadingControls.astro';
 import RedFlagBox from '../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
@@ -69,15 +72,14 @@ const articleSchemas = buildArticleSchemas({
         <h1 class="font-serif text-4xl leading-tight md:text-6xl">40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek</h1>
       </header>
 
-      <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
-        <p class="leading-relaxed text-ink/80">
+       <ArticleSummary title="Kısa Özet">
+<p>
           40 sonrasında diz, kalça ve bel ağrısını tek bir nedene bağlamak çoğu zaman yanıltıcıdır. Kas gücü,
           eklem yükü, uyku, kilo değişimi, denge ve günlük hareket alışkanlıkları aynı haritanın parçalarıdır.
           Bu yazı, ağrıyı susturmaya değil, bedenin verdiği sinyali okuyarak güvenli hareket alanı kurmaya
           odaklanır.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="isim-koymak">Ağrıya İsim Koymak: Tek Bir Nokta Değil, Bir Harita</h2>
@@ -265,9 +267,8 @@ Genel olarak yürüyüş, kas güçlendirme, eklem hareket açıklığı, denge 
         ]}
       />
 
-      <section class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+      <ArticleEditorNote>
+<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
 Bu yazı, fizyoterapi alanındaki hareket ve işlev değerlendirmesini kadın sağlığı zeminine taşıyor.
@@ -294,14 +295,13 @@ Bu yazı, fizyoterapi alanındaki hareket ve işlev değerlendirmesini kadın sa
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
             — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
           </p>
-        </div>
-      </section>
+      </ArticleEditorNote>
 
-      <section class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-        <p class="text-sm leading-relaxed text-ink/75">
+       <ArticleDisclaimer>
+<p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı, tedavi ve egzersiz planı için sağlık profesyoneline başvurunuz.
         </p>
-      </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

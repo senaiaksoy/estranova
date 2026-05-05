@@ -7,6 +7,9 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -76,11 +79,8 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="29 Nisan 2026" readingMinutes={10} />
 
-      <section
-        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
-      >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
-        <p class="leading-relaxed text-ink/80">
+      <ArticleSummary title="Kısa Özet">
+<p>
           Bu yazıyı yazmak benim için kolay değil. Eşim jinekolog ama beni takip eden hekim o değil — yakınlarını
           takip etmenin doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına devretti. Üstelik bu
           meslektaş aynı zamanda arkadaş çevremizden biri; bu yüzden ben bekleme salonunda da beklemiyorum. Bu çift
@@ -89,7 +89,7 @@ const articleSchemas = buildArticleSchemas({
           arıyor? Çevremdeki kadınların anlattıkları, dört farklı doktor profili ve üç kuşağın eşiği arasında durmaya
           çalışıyorum.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="eski-resim">Eskinin Hekim-Hasta Resmi — Otoritenin Tek Sesi</h2>
@@ -301,11 +301,8 @@ const articleSchemas = buildArticleSchemas({
           ]}
         />
 
-      <section
-        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
-      >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="mb-3 leading-relaxed text-ink/80">
+      <ArticleEditorNote>
+<p class="mb-3 leading-relaxed text-ink/80">
           Hekim-hasta ilişkisinin niteliği, menopoz gibi uzun süreli hormonal takip gerektiren süreçlerde
           klinik kararların güvenli ve sürdürülebilir biçimde alınmasında belirleyici bir parametredir. İlişkinin
           sürekliliği, karşılıklı güven ve karar paylaşımı, tedaviye uyum ve yaşam kalitesi üzerinde ölçülebilir
@@ -331,13 +328,13 @@ const articleSchemas = buildArticleSchemas({
         <p class="text-sm italic text-burgundy">
           — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
         </p>
-      </section>
+      </ArticleEditorNote>
 
-      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-        <p class="text-sm leading-relaxed text-ink/75">
+       <ArticleDisclaimer>
+<p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
         </p>
-      </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

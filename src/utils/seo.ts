@@ -1,4 +1,4 @@
-﻿export type OgType = 'website' | 'article';
+export type OgType = 'website' | 'article';
 
 interface CanonicalOptions {
   siteUrl: string;

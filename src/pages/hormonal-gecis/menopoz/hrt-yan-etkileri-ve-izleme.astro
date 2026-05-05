@@ -7,6 +7,9 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -79,18 +82,15 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="27 Nisan 2026" readingMinutes={10} />
 
-      <section
-        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
-      >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
-        <p class="leading-relaxed text-ink/80">
+      <ArticleSummary title="Kısa Özet">
+<p>
           Hormon tedavisine başladıktan sonraki ilk haftalarda meme hassasiyeti, hafif baş ağrısı, küçük bir
           ödem ya da kanama düzeninde dalgalanma yaşamak — birçok kadında bekleniyor. Çoğu bu belirti vücut
           yeni hormonal dengeye yerleşirken gelir, geçer. Ama hangi belirti yumuşak ve geçici, hangisi gecikmeden
           hekime götürülmesi gereken bir alarm? Bu yazı izleme takvimini birlikte kuruyor — yönlendirme yapmadan,
 dikkatli bir okuma rehberi sunarak.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="acilis">Tezgâhın Köşesindeki Defter</h2>
@@ -362,11 +362,8 @@ mamografi, kan tetkikleri ve gerektiğinde kemik yoğunluğu ölçümü standart
         ]}
       />
 
-      <section
-        class="mt-14 rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
-      >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="mb-3 leading-relaxed text-ink/80">
+      <ArticleEditorNote>
+<p class="mb-3 leading-relaxed text-ink/80">
           Menopozal hormon tedavisinin ilk haftalarında görülen yumuşak yan etkiler (meme hassasiyeti, hafif
           ödem, gerilim tipi baş ağrısı, kanama düzensizliği) büyük çoğunlukla bedenin yeni hormonal dengeye
           yerleşme sürecinin parçasıdır. Endometrial uyum, sıvı dengesi ve vasküler tonus üzerindeki erken
@@ -391,18 +388,16 @@ tabloya göre altı ay–yıllık görüşme ve yıllık mamografi standart izle
         <p class="text-sm italic text-burgundy">
           — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
         </p>
-      </section>
+      </ArticleEditorNote>
 
-      <section
-        class="mt-10 rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10"
-      >
-        <p class="text-sm leading-relaxed text-ink/75">
+      <ArticleDisclaimer>
+<p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
           Hormon tedavisi başlama, doz ayarlama, izleme ve sonlandırma kararları kendi hekiminle birlikte
           değerlendirilir. Beklenmedik belirti durumunda planlı kontrolden önce hekiminle iletişime geçmen
           güvenli tercihtir.
         </p>
-      </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

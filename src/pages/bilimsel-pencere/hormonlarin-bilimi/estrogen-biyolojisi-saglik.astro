@@ -9,6 +9,9 @@ import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astr
 import ReadingControls from '../../../components/site/ReadingControls.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -80,11 +83,8 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <section
-        class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8"
-      >
-        <h2 class="mb-4 font-serif text-3xl">Kısa Özet</h2>
-        <p class="leading-relaxed text-ink/80">
+      <ArticleSummary title="Kısa Özet">
+<p>
           Östrojen tek bir hormon değil; <strong>E1 (estron), E2 (estradiol), E3 (estriol),
           E4 (estetrol)</strong> ailesinin ortak adı. Etkilerini iki farklı reseptör
           (ER-α ve ER-β) üzerinden, doku-spesifik biçimde gösteriyor — bu yüzden aynı
@@ -96,7 +96,7 @@ const articleSchemas = buildArticleSchemas({
           temele oturtuyor, östrojen-kanser ilişkisinin neden <em>"basit"</em> olmadığını
           gösteriyor — pazarlama değil, klinik çerçeveyi bilimden hareketle kuran eğitim.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="ostrojen-aile">Östrojen Tek Hormon Değil — Bir Aile</h2>
@@ -401,11 +401,8 @@ const articleSchemas = buildArticleSchemas({
           ]}
         />
 
-      <section
-        class="rounded-[28px] border border-burgundy/15 border-l-[6px] border-l-gold bg-gradient-to-r from-cream-warm to-cream-soft p-7 shadow-sm ring-1 ring-burgundy/10 md:p-8"
-      >
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Bilimsel Editör Notu</p>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+      <ArticleEditorNote>
+<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
             Yazı bilim yazısı oldu; bu notu klinikte bu bilgiyi pratik karara nasıl çevirdiğimi
@@ -467,14 +464,13 @@ const articleSchemas = buildArticleSchemas({
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
             — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
           </p>
-        </div>
-      </section>
+      </ArticleEditorNote>
 
-      <section class="rounded-[24px] border border-dashed border-burgundy/25 bg-white/95 p-6 ring-1 ring-burgundy/10">
-        <p class="text-sm leading-relaxed text-ink/75">
+       <ArticleDisclaimer>
+<p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
         </p>
-      </section>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

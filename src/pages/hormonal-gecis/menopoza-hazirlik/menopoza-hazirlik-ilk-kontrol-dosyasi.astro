@@ -7,6 +7,9 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
@@ -90,15 +93,14 @@ const articleSchemas = buildArticleSchemas({
         readingMinutes={readingMinutes}
       />
 
-      <section class="rounded-[28px] border border-gold/35 bg-gradient-to-br from-white to-cream-soft/90 p-7 shadow-sm ring-1 ring-gold/22 md:p-8">
-        <h2 class="mb-4 font-serif text-3xl text-ink">Kısa Özet</h2>
-        <p class="leading-relaxed text-ink/80">
+      <ArticleSummary title="Kısa Özet">
+<p>
           Menopoza yaklaşırken birçok kadın bir anda uzun test listeleriyle karşılaşabiliyor. Oysa her belirti tek
           başına hormon geçişi anlamına gelmediği gibi, her test de herkese aynı netliği sağlamaz. Daha sakin bir
           yaklaşım, yakınmaları dinlemek, temel sağlık başlıklarını taramak ve gerçekten anlamlı olan sonuçları birlikte
           okumaktan geçer <Evidence level={4} />.
         </p>
-      </section>
+      </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="neden-kontrol-dosyasi">Menopoza hazırlanırken neden bir “kontrol dosyası” oluşturmak iyi gelir?</h2>
