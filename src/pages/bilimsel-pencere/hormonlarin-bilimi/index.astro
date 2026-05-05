@@ -31,8 +31,8 @@ const editorPick = {
 };
 
 const neighbors = [
-  { href: '/bilimsel-pencere/hucreler-ve-yaslanma', title: 'Hücreler ve Yaşlanma', excerpt: 'NAD+, mitokondri, senesans — yaşlanma biyolojisinin son 20 yılı.' },
-  { href: '/bilimsel-pencere/yeni-arastirmalar', title: 'Yeni Araştırmalar', excerpt: 'Editöryal kuruldaki yeni çalışma derlemeleri ve meta-analizler.' },
+  { step: '01', href: '/bilimsel-pencere/hucreler-ve-yaslanma', title: 'Hücreler ve Yaşlanma', excerpt: 'NAD+, mitokondri, senesans — yaşlanma biyolojisinin son 20 yılı.' },
+  { step: '02', href: '/bilimsel-pencere/yeni-arastirmalar', title: 'Yeni Araştırmalar', excerpt: 'Editöryal kuruldaki yeni çalışma derlemeleri ve meta-analizler.' },
 ];
 ---
 
@@ -53,7 +53,7 @@ const neighbors = [
       imageAlt={hero.alt}
     />
 
-    <section class="border-b border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20">
+    <section class="border-b border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-20">
       <div class="mx-auto max-w-6xl">
         <nav class="mb-10 text-sm text-ink/60" aria-label="İçerik yolu">
           <ol class="flex flex-wrap items-center gap-2">
@@ -99,9 +99,9 @@ const neighbors = [
     {epigraph && <EditorialEpigraph quote={epigraph} />}
 
     <SubmenuSection variant="white" borderedTop={false}>
-      <header class="mb-10 max-w-3xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
-        <h2 class="font-serif text-3xl leading-tight md:text-4xl">Bu evreden bir okuma</h2>
+      <header class="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Editör'ün Seçimi</p>
+        <h2 class="font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">Bu evreden bir okuma</h2>
       </header>
 
       <EditorPickCard
@@ -118,14 +118,19 @@ const neighbors = [
     <Asterism />
 
     <SubmenuSection variant="cream" borderedTop={false}>
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Aynı kategoride</p>
-      <h2 class="mb-8 font-serif text-2xl md:text-3xl">İlgili alt başlıklar</h2>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <header class="mb-10 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Aynı kategoride</p>
+        <h2 class="font-serif text-4xl leading-[0.95] tracking-[-0.04em] md:text-6xl">İlgili alt başlıklar</h2>
+      </header>
+      <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
         {neighbors.map((n) => (
-          <a href={n.href} class="group rounded-[26px] border border-burgundy/12 bg-white p-7 transition hover:border-burgundy/28 hover:shadow-sm">
-            <h3 class="mb-2 font-serif text-xl text-ink group-hover:text-burgundy">{n.title}</h3>
-            <p class="mb-4 text-sm leading-relaxed text-ink/72">{n.excerpt}</p>
-            <span class="text-sm font-semibold text-burgundy group-hover:underline">Sayfaya git →</span>
+          <a href={n.href} class="group grid gap-5 py-7 transition hover:bg-white/58 md:grid-cols-[88px_1fr_auto] md:items-center md:py-8">
+            <span class="font-serif text-3xl italic text-gold">{n.step}</span>
+            <div>
+              <h3 class="mb-2 font-serif text-3xl leading-tight text-ink group-hover:text-burgundy">{n.title}</h3>
+              <p class="max-w-2xl text-sm leading-relaxed text-ink/72">{n.excerpt}</p>
+            </div>
+            <span class="text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
           </a>
         ))}
       </div>
