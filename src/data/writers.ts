@@ -305,7 +305,7 @@ export const writers: Writer[] = [
     role: 'Girişimsel & Önleyici Kardiyoloji Bilimsel Yazarı',
     ageBand: '53-55',
     publicBio:
-      "Girişimsel kardiyoloji alanında 25+ yıllık deneyimli bir hekim. Akdeniz Üniversitesi Tıp Fakültesi mezunu, İstanbul Üniversitesi Çapa Tıp Fakültesi'nde kardiyoloji uzmanlığı; Türkiye'nin ilk TAVİ ve ilk MitraClip ekiplerinde yer aldı. 2006'dan beri Amerikan Hastanesi Kardiyoloji'de. Estranova'da menopoz sonrası kalp damar değişimi, kadın özelinde kardiyovasküler risk haritası ve önleyici kardiyoloji başlıklarını sade Türkçeyle açıyor — panik dili değil \"erken tarama hayat kurtarır\" repertuvarı.",
+      'Girişimsel kardiyoloji ve önleyici kalp sağlığı alanında çalışan deneyimli bir hekim. Estranova\'da menopoz sonrası kalp damar değişimini, kadın özelindeki risk başlıklarını ve erken taramanın neden önemli olduğunu sade Türkçeyle anlatıyor. Riski abartmadan ama geçiştirmeden konuşan sakin bir klinisyen sesi var.',
     signaturePhrase:
       'Menopoz sonrası kalp damar tablosunu, kadın bedeni özelinde önleyici kardiyoloji çerçevesiyle ve sayısal kanıtla — panik değil bilgiyle açan klinisyen.',
     portrait: '/images/writers/alp-aslan-eryilmaz.webp',
@@ -348,7 +348,7 @@ export const writers: Writer[] = [
     role: 'Endokrinoloji & Metabolizma Bilimsel Yazarı',
     ageBand: '53-55',
     publicBio:
-      "Endokrinoloji ve metabolizma uzmanı bir hekim. Estranova'da hormonal geçişle iç içe geçen tiroid, kemik, metabolik sendrom ve adrenal başlıklarını klinik bilgiyi sade Türkçeye taşıyan bir dille açıyor. GATA mezunu, Mayo Clinic endokrin güncellemelerinden geçmiş, şu an Amerikan Hastanesi Endokrinoloji bölümünün başhekimi. Tonu \"tıbbi otorite çıkışı\" değil; yanlış anlaşılan tabloları yumuşak ama net açıklayan klinisyen.",
+      'Endokrinoloji ve metabolizma alanında çalışan bir hekim. Estranova\'da hormonal geçişle iç içe geçen tiroid, kemik ve metabolik denge başlıklarını sade Türkçeyle açıyor. Yanlış anlaşılan tabloları panik yaratmadan netleştirmeyi seven bir klinisyen.',
     signaturePhrase:
       'Endokrin sistemin kadın bedeniyle nasıl konuştuğunu — tiroid, kemik, metabolik kavşaklarda — panik değil netleştirme tonuyla anlatan klinisyen.',
     portrait: '/images/writers/metin-alis.webp',
@@ -487,7 +487,7 @@ export const writers: Writer[] = [
     role: 'Fizyoterapi & Rehabilitasyon Bilimsel Yazarı',
     ageBand: '33',
     publicBio:
-      "Kas-iskelet rehabilitasyonu, postür ve klinik egzersiz alanında çalışan bir fizyoterapist. KBÜ Fizyoterapi ve Rehabilitasyon Bölümü mezunu (2018); spor travmatolojisi ve manuel terapi alanlarında sertifika eğitimleri aldı. Fenerbahçe Erkek Basketbol A Takımı'nda çalıştı; Pain Free Nişantaşı kliniğinin kurucusu. Estranova'da hareket, kronik ağrı, postmenopozal kas-iskelet sağlığı ve doğum sonrası rehabilitasyon başlıklarında \"bedeni dinleyerek ilerlemeyi öğreten\" çerçevede yazıyor — küçük adımların gücüne inanan klinisyen tonuyla.",
+      'Kas-iskelet rehabilitasyonu, postür ve klinik egzersiz alanında çalışan bir fizyoterapist. Estranova\'da hareket, kronik ağrı ve postmenopozal kas-iskelet sağlığı başlıklarını bedeni dinleyerek ilerleme fikriyle yazıyor. Hızlı sonuç vaat etmek yerine küçük ama sürdürülebilir adımları öne çıkarıyor.',
     signaturePhrase:
       '40+ kadın bedeninde kas-iskelet, postür ve denge eksenini "bedeni dinleyerek ilerlemek" felsefesinde okuyan; tedrici yaklaşım ve kanıt-temelli rehberlikle yazan klinisyen.',
     portrait: '/images/writers/ersin-sarac.webp',
@@ -535,7 +535,7 @@ export const writers: Writer[] = [
     role: 'Estetik Diş Hekimliği Bilimsel Yazarı',
     ageBand: '55-57',
     publicBio:
-      "Estetik diş hekimliği ve porselen laminalar alanında 30+ yıllık deneyimli bir diş hekimi. Ege Üniversitesi Diş Hekimliği Fakültesi (1994) mezunu, Siena Üniversitesi (İtalya) Protetik, Estetik ve Dijital Diş Hekimliği Master'ı. International Hospital ve Dentis Dental Clinic'te çalıştı; 2001'den beri Creadenta'nın kurucu ortağı (Elif Özcan Dulundu ile birlikte). EDAD (Estetik Diş Hekimliği Akademisi Derneği) Yönetim Kurulu üyesi, DEKİD aktif üye. 22+ yıl meslektaş eğitimi; uluslararası dergilerde porselen laminalar üzerine ortak yayınları var. Estranova'da diş sağlığı, gülüş tasarımı ve hormonal geçişin ağız sağlığına etkileri başlıklarında \"yüze yakışanı arayan\" çerçevede yazıyor — doğal görünümü zorlamadan, klinik-pratik bir tonla.",
+      'Estetik diş hekimliği alanında çalışan deneyimli bir diş hekimi. Estranova\'da diş sağlığını, gülüş tasarımını ve hormonal geçişin ağız sağlığına etkilerini doğal görünümü zorlamadan anlatıyor. Yüze yakışanı arayan, jargonu gereksiz yere büyütmeyen bir sesi var.',
     signaturePhrase:
       'Estetik diş hekimliğini "yüze yakışanı arayan" kişiselleştirme felsefesinde ele alan; doğal görünümü zorlamayan, klinik-pratik gündelik tonu olan diş hekimi.',
     portrait: '/images/writers/duygu-karaosmanoglu.webp',

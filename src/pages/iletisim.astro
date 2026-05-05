@@ -11,43 +11,101 @@ import SiteFooter from '../components/site/SiteFooter.astro';
   <SiteNavbar />
 
   <main id="main-content" class="pt-24">
-    <section class="px-6 py-16 md:py-20">
-      <div class="max-w-4xl mx-auto">
-        <header class="max-w-3xl mb-14">
-          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">İletişim</p>
-          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">İletişim</h1>
-          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
-            Estranova editoryal ekibiyle iletişime geçin. Sorularınız, önerileriniz ve düzeltme talepleriniz için aşağıdaki kanallardan doğrudan e-postayla yazabilirsiniz.
-          </p>
+    <section class="relative overflow-hidden px-6 py-16 md:py-24">
+      <div class="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-gradient-to-b from-cream via-surface-container to-transparent"></div>
+      <div class="absolute right-[-5vw] top-16 -z-10 hidden font-serif text-[12rem] leading-none text-primary/[0.035] lg:block">
+        not
+      </div>
+
+      <div class="mx-auto max-w-6xl">
+        <header class="grid gap-10 lg:grid-cols-[1.05fr_0.7fr] lg:items-end">
+          <div>
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-secondary">İletişim</p>
+            <h1 class="mb-6 max-w-4xl font-serif text-5xl leading-[0.98] text-charcoal md:text-7xl">
+              Editoryal masaya not bırakın
+            </h1>
+            <p class="max-w-2xl text-lg leading-relaxed text-charcoal/68 md:text-xl">
+              Estranova'da iletişim; okur sorusu, düzeltme talebi, kaynak önerisi ve yayın iş birliği notları için sakin bir kapıdır. Bize yazarken konuyu kısa, açık ve mümkünse ilgili sayfa bağlantısıyla paylaşmanız yeterli.
+            </p>
+          </div>
+
+          <aside class="rounded-[36px] border border-primary/10 bg-white/85 p-8 shadow-[0_24px_70px_rgba(74,47,39,0.10)] backdrop-blur">
+            <p class="mb-3 font-serif text-3xl text-primary">Yanıt ritmi</p>
+            <p class="text-sm leading-relaxed text-charcoal/68">
+              Her not aynı hızda yanıtlanamayabilir; ancak düzeltme, güvenlik ve kişisel veri talepleri editoryal öncelik sırasına alınır.
+            </p>
+            <div class="mt-6 border-t border-primary/10 pt-5">
+              <p class="text-xs font-bold uppercase tracking-[0.24em] text-secondary">Kısa ilke</p>
+              <p class="mt-2 text-sm leading-relaxed text-charcoal/65">
+                Bu kanal kişisel tanı, tedavi yönlendirmesi veya acil sağlık durumları için kullanılmaz.
+              </p>
+            </div>
+          </aside>
         </header>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <article class="rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow">
-            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">Genel Bilgi</p>
-            <p class="text-charcoal/70 leading-relaxed">
-              <a href="mailto:bilgi@estranova.com" class="text-primary font-semibold hover:underline">bilgi@estranova.com</a>
+        <section class="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <article class="group rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow transition duration-300 hover:-translate-y-1">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-secondary">Genel Bilgi</p>
+            <h2 class="mb-4 font-serif text-3xl text-charcoal">Okur notları</h2>
+            <p class="mb-6 min-h-20 text-sm leading-relaxed text-charcoal/65">
+              Site kullanımı, kategori önerileri, genel geri bildirimler ve platform hakkında kısa sorular.
             </p>
+            <a href="mailto:bilgi@estranova.com" class="text-sm font-semibold text-primary underline decoration-secondary/40 underline-offset-4 transition group-hover:decoration-primary">
+              bilgi@estranova.com
+            </a>
           </article>
 
-          <article class="rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow">
-            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">Editoryal Ekip</p>
-            <p class="text-charcoal/70 leading-relaxed">
-              <a href="mailto:editoral@estranova.com" class="text-primary font-semibold hover:underline">editoral@estranova.com</a>
+          <article class="group rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow transition duration-300 hover:-translate-y-1">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-secondary">Editoryal Ekip</p>
+            <h2 class="mb-4 font-serif text-3xl text-charcoal">Düzeltme ve kaynak</h2>
+            <p class="mb-6 min-h-20 text-sm leading-relaxed text-charcoal/65">
+              Makale düzeltmeleri, kaynak hassasiyeti, yazar ve yayın kurulu ile ilgili editoryal notlar.
             </p>
+            <a href="mailto:editorial@estranova.com" class="text-sm font-semibold text-primary underline decoration-secondary/40 underline-offset-4 transition group-hover:decoration-primary">
+              editorial@estranova.com
+            </a>
           </article>
 
-          <article class="rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow">
-            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">KVKK Talepleri</p>
-            <p class="text-charcoal/70 leading-relaxed">
-              <a href="mailto:kvkk@estranova.com" class="text-primary font-semibold hover:underline">kvkk@estranova.com</a>
+          <article class="group rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow transition duration-300 hover:-translate-y-1">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-secondary">KVKK Talepleri</p>
+            <h2 class="mb-4 font-serif text-3xl text-charcoal">Veri ve gizlilik</h2>
+            <p class="mb-6 min-h-20 text-sm leading-relaxed text-charcoal/65">
+              Kişisel veri başvuruları, gizlilik politikası soruları ve yasal hak kullanım talepleri.
             </p>
+            <a href="mailto:kvkk@estranova.com" class="text-sm font-semibold text-primary underline decoration-secondary/40 underline-offset-4 transition group-hover:decoration-primary">
+              kvkk@estranova.com
+            </a>
           </article>
         </section>
 
-        <section class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
-          <p class="text-charcoal/70 leading-relaxed">
-            Bu kanallar bilgi ve öneri amaçlıdır. Tıbbi danışmanlık veya randevu talebi için kullanılamaz.
-          </p>
+        <section class="mt-10 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+          <div class="rounded-[36px] bg-primary p-8 text-white shadow-[0_24px_70px_rgba(107,45,62,0.18)]">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-secondary">Yazmadan Önce</p>
+            <h2 class="mb-5 font-serif text-4xl">Daha hızlı anlaşılmak için</h2>
+            <ul class="space-y-4 text-sm leading-relaxed text-white/78">
+              <li>İlgili sayfanın bağlantısını veya başlığını ekleyin.</li>
+              <li>Düzeltme talebinde cümleyi ve önerdiğiniz değişikliği açıkça yazın.</li>
+              <li>Kişisel sağlık bilgisi paylaşmamaya özen gösterin.</li>
+            </ul>
+          </div>
+
+          <div class="rounded-[36px] border border-secondary/25 bg-secondary/[0.09] p-8">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-secondary">Güven Notu</p>
+            <div class="grid gap-5 md:grid-cols-2">
+              <article class="rounded-[28px] bg-white/75 p-6">
+                <h3 class="mb-3 font-serif text-2xl text-charcoal">Editoryal açıklık</h3>
+                <p class="text-sm leading-relaxed text-charcoal/65">
+                  Hatalı, eksik veya güncellenmesi gereken bir bilgi gördüğünüzde bunu ciddiyetle inceleriz.
+                </p>
+              </article>
+              <article class="rounded-[28px] bg-white/75 p-6">
+                <h3 class="mb-3 font-serif text-2xl text-charcoal">Tıbbi sınır</h3>
+                <p class="text-sm leading-relaxed text-charcoal/65">
+                  Estranova bireysel tıbbi kararların yerini almaz; içerikler bilgilendirme ve yön bulma amaçlıdır.
+                </p>
+              </article>
+            </div>
+          </div>
         </section>
       </div>
     </section>

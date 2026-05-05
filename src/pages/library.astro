@@ -5,14 +5,40 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 
 const categories = [
   {
+    eyebrow: 'Hormonal Geçiş',
     title: 'Perimenopoz',
     summary: 'Hormonal geçiş dönemindeki belirtiler, güncel yaklaşımlar ve günlük hayata uyarlanan bilgi notları.',
     href: '/hormonal-gecis/perimenopoz',
   },
   {
+    eyebrow: 'Hormonal Geçiş',
     title: 'Menopoz',
     summary: 'Menopoz sürecindeki değişiklikleri açıklayan, tıbbi dili sade tutan temel okuma rotası.',
     href: '/hormonal-gecis/menopoz',
+  },
+  {
+    eyebrow: 'Zihin & Denge',
+    title: 'Uyku ve duygusal denge',
+    summary: 'Gece uyanmaları, ruh hâli değişimleri ve zihinsel bulanıklık için sakin okuma başlıkları.',
+    href: '/zihin-denge',
+  },
+  {
+    eyebrow: 'Beden & Yakınlık',
+    title: 'Mahrem sağlık',
+    summary: 'Cinsellik, pelvik taban, vajinal sağlık ve bedenle yeniden yakınlaşma üzerine yargısız içerikler.',
+    href: '/beden-yakinlik',
+  },
+  {
+    eyebrow: 'Zamansız Yaşam',
+    title: '40 sonrası koruyucu sağlık',
+    summary: 'Kemik, kas, beslenme, D vitamini ve uzun vadeli sağlık okuryazarlığı için düzenli rehberler.',
+    href: '/zamansiz-yasam',
+  },
+  {
+    eyebrow: 'Bilimsel Pencere',
+    title: 'Kanıtı okuma masası',
+    summary: 'Hormon biyolojisi, hücresel yaşlanma ve yeni araştırmaları abartısız bir dille izleyen yazılar.',
+    href: '/bilimsel-pencere',
   },
 ];
 
@@ -25,9 +51,9 @@ const readingPath = [
 const startGuides = [
   {
     title: 'Hormonal geçişe yeni misin?',
-    description: 'Önce perimenopoz hub\'ında genel çerçeveyi okuyun, sonra menopoz alt-kategorisindeki rehberlere geçin.',
+    description: 'Önce perimenopoz hub\'ında genel hattı okuyun, sonra menopoz alt-kategorisindeki rehberlere geçin.',
     href: '/hormonal-gecis/perimenopoz',
-    cta: 'Perimenopoz hub\'ına git',
+    cta: 'Perimenopoz rehberini aç',
   },
   {
     title: 'Uyku, sıcak basması ve günlük enerji düşüşü',
@@ -39,7 +65,7 @@ const startGuides = [
     title: 'Uzun vadeli koruyucu sağlık planı',
     description: 'Kemik sağlığı başlığını okuyarak 40+ dönemi için temel bir yol kurun.',
     href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-    cta: 'Kemik sağlığına başla',
+    cta: 'Kemik sağlığı rehberini aç',
   },
 ] as const;
 ---
@@ -50,46 +76,96 @@ const startGuides = [
 >
   <SiteNavbar currentPath="/library" />
 
-  <main id="main-content" class="pt-24">
-    <section class="px-6 py-16 md:py-20">
-      <div class="max-w-7xl mx-auto">
-        <div class="max-w-3xl mb-14">
-          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Editoryal Kütüphane</p>
-          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Konulara göre düzenlenmiş bilgi arşivi</h1>
-          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
-            Estranova kütüphanesi, güncel ve temel içerikleri bir arada toplar. Hedef, okuru tek bir cevaba değil,
-            konuyu daha iyi anlamaya götüren açık bir okuma düzenine ulaşmak.
-          </p>
+  <main id="main-content" class="bg-cream-soft pt-24 text-ink">
+    <section class="relative overflow-hidden border-b border-burgundy/10 px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -left-24 top-14 h-72 w-72 rounded-full bg-burgundy/8 blur-3xl"></div>
+      <div class="pointer-events-none absolute bottom-0 right-[5%] hidden font-serif text-[11rem] italic leading-none text-burgundy/[0.035] lg:block" aria-hidden="true">
+        arşiv
+      </div>
+      <div class="relative mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <header>
+            <p class="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.32em] text-burgundy">
+              <span class="h-px w-10 bg-gold"></span>
+              Editoryal Kütüphane
+            </p>
+            <h1 class="max-w-4xl font-serif text-6xl leading-[0.9] tracking-[-0.055em] text-burgundy md:text-8xl">
+              Konulara göre düzenlenmiş okuma salonu
+            </h1>
+          </header>
+          <aside class="rounded-[34px] border border-burgundy/12 bg-white/75 p-7 shadow-[0_28px_90px_-62px_rgba(44,22,28,0.35)] ring-1 ring-white/80">
+            <p class="font-serif text-2xl italic leading-snug text-ink/78 md:text-3xl">
+              Güncel ve temel içerikler burada hızlı tüketim için değil, bir konuyu sakin sakin kavramak için yan yana durur.
+            </p>
+            <div class="mt-6 grid grid-cols-3 gap-3 border-t border-gold/25 pt-5 text-center">
+              <div>
+                <p class="font-serif text-3xl text-burgundy">{categories.length}</p>
+                <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">Ana rota</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl text-burgundy">{startGuides.length}</p>
+                <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">Başlangıç</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl text-burgundy">40+</p>
+                <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">Odak</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10 max-w-3xl">
+          <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-burgundy/80">Konu rafları</p>
+          <h2 class="font-serif text-4xl leading-tight tracking-[-0.025em] text-ink md:text-5xl">
+            Her raf bir okuma niyetiyle açılır
+          </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-20">
+        <div class="mb-20 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {categories.map((category) => (
             <a
               href={category.href}
-              class="block rounded-[32px] border border-primary/10 bg-white p-7 editorial-shadow transition hover:border-primary/30"
+              class="group relative flex min-h-[17rem] flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-white p-7 shadow-[0_24px_82px_-62px_rgba(44,22,28,0.36)] ring-1 ring-white/80 transition hover:-translate-y-1 hover:border-gold/45 hover:shadow-[0_34px_98px_-60px_rgba(44,22,28,0.45)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
             >
-              <h2 class="text-3xl font-serif mb-4 leading-tight">{category.title}</h2>
-              <p class="text-charcoal/65 leading-relaxed text-sm mb-5">{category.summary}</p>
-              <span class="text-sm font-semibold text-primary border-b border-primary/30 pb-1">Bölüme git</span>
+              <span class="pointer-events-none absolute inset-x-7 top-0 h-px bg-gold/55"></span>
+              <p class="mb-4 text-[10px] font-bold uppercase tracking-[0.26em] text-gold">
+                {category.eyebrow}
+              </p>
+              <h2 class="mb-4 font-serif text-3xl leading-tight tracking-[-0.025em] text-burgundy md:text-4xl">
+                {category.title}
+              </h2>
+              <p class="mb-7 flex-1 text-sm leading-relaxed text-ink/68">{category.summary}</p>
+              <span class="text-sm font-semibold text-burgundy underline decoration-burgundy/35 underline-offset-4 transition group-hover:decoration-burgundy">
+                Bölümü aç
+              </span>
             </a>
           ))}
         </div>
 
-        <section class="mb-20 rounded-[36px] border border-primary/10 bg-white p-8 md:p-10 editorial-shadow">
+        <section class="mb-20 rounded-[38px] border border-burgundy/12 bg-white p-8 shadow-[0_28px_90px_-66px_rgba(44,22,28,0.36)] ring-1 ring-white/80 md:p-10">
           <div class="max-w-3xl mb-8">
-            <p class="text-secondary text-xs font-bold tracking-[0.24em] uppercase mb-3">Nereden Başlamalı?</p>
-            <h2 class="text-3xl md:text-4xl font-serif mb-4">İhtiyaca göre başlangıç rotası</h2>
-            <p class="text-charcoal/65 leading-relaxed">
+            <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-burgundy/80">Nereden başlamalı?</p>
+            <h2 class="mb-4 font-serif text-3xl leading-tight tracking-[-0.02em] text-ink md:text-5xl">
+              İhtiyaca göre başlangıç rotası
+            </h2>
+            <p class="leading-relaxed text-ink/68">
               Tek bir makaleye odaklanmak yerine, önce temel soruyu netleştirip uygun içerik sırasıyla ilerlemek daha dengeli bir okuma deneyimi sunar.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {startGuides.map((guide) => (
-              <article class="rounded-[28px] border border-primary/10 bg-surface-container p-6">
-                <h3 class="text-xl font-serif mb-3 leading-tight">{guide.title}</h3>
-                <p class="text-sm text-charcoal/65 leading-relaxed mb-5">{guide.description}</p>
-                <a href={guide.href} class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
+            {startGuides.map((guide, index) => (
+              <article class="rounded-[30px] border border-burgundy/10 bg-cream-soft/70 p-6">
+                <p class="mb-3 font-serif text-4xl italic leading-none text-gold">
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                <h3 class="mb-3 font-serif text-2xl leading-tight text-burgundy">{guide.title}</h3>
+                <p class="mb-5 text-sm leading-relaxed text-ink/68">{guide.description}</p>
+                <a href={guide.href} class="inline-flex text-sm font-semibold text-burgundy underline decoration-burgundy/35 underline-offset-4 hover:decoration-burgundy">
                   {guide.cta}
                 </a>
               </article>
@@ -97,9 +173,10 @@ const startGuides = [
           </div>
         </section>
 
-        <aside class="rounded-[36px] burgundy-gradient text-white p-8 md:p-10">
+        <aside class="relative overflow-hidden rounded-[38px] bg-burgundy p-8 text-white shadow-[0_30px_96px_-64px_rgba(44,22,28,0.7)] md:p-10">
+          <div class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold/15 blur-3xl"></div>
           <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Okuma Rotası</p>
-          <h2 class="text-3xl md:text-4xl font-serif leading-tight mb-6">Bu kütüphane nasıl kullanılır?</h2>
+          <h2 class="text-3xl md:text-5xl font-serif leading-tight mb-6">Bu kütüphane nasıl kullanılır?</h2>
           <ul class="space-y-4 mb-8 max-w-3xl">
             {readingPath.map((item) => (
               <li class="flex gap-3 text-base leading-relaxed text-white/85">
@@ -109,8 +186,8 @@ const startGuides = [
             ))}
           </ul>
           <div class="pt-6 border-t border-white/15">
-            <a href="/symptoms" class="inline-flex text-sm font-semibold text-white border-b border-white/30 pb-1 hover:border-white">
-              Semptom rehberine geçin
+            <a href="/symptoms" class="inline-flex text-sm font-semibold text-white underline decoration-white/35 underline-offset-4 hover:decoration-white">
+              Semptom rehberini aç
             </a>
           </div>
         </aside>

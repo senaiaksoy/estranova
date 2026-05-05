@@ -59,24 +59,63 @@ const reviewSignals = [
     </defs>
   </svg>
 
-  <main id="main-content" class="pt-24">
-    <section class="px-6 py-16 md:py-20">
-      <div class="max-w-7xl mx-auto">
-        <div class="max-w-3xl mb-14">
-          <p class="text-secondary text-xs font-bold tracking-[0.28em] uppercase mb-4">Semptom Rehberi</p>
-          <h1 class="text-5xl md:text-7xl font-serif leading-[1.05] text-charcoal mb-6">Değişimleri adlandırmaya yardımcı bir okuma alanı</h1>
-          <p class="text-lg md:text-xl text-charcoal/65 leading-relaxed">
-            Bu sayfa tanı koymak için değil, sık görülen sekiz değişimi anlamlandırmak için hazırlandı.
-            Her başlık kendi rehber sayfasına bağlanır; oradan ilgili içeriklere geçebilirsin.
+  <main id="main-content" class="bg-cream-soft pt-24 text-ink">
+    <section class="relative overflow-hidden border-b border-burgundy/10 px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -left-24 top-16 h-72 w-72 rounded-full bg-burgundy/8 blur-3xl"></div>
+      <div class="pointer-events-none absolute bottom-0 right-[5%] hidden font-serif text-[11rem] italic leading-none text-burgundy/[0.035] lg:block" aria-hidden="true">
+        beden
+      </div>
+      <div class="relative mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
+          <header>
+            <p class="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.32em] text-burgundy">
+              <span class="h-px w-10 bg-gold"></span>
+              Semptom Rehberi
+            </p>
+            <h1 class="max-w-4xl font-serif text-6xl leading-[0.9] tracking-[-0.055em] text-burgundy md:text-8xl">
+              Değişimleri adlandıran belirti atlası
+            </h1>
+          </header>
+          <aside class="rounded-[34px] border border-burgundy/12 bg-white/75 p-7 shadow-[0_28px_90px_-62px_rgba(44,22,28,0.35)] ring-1 ring-white/80">
+            <p class="font-serif text-2xl italic leading-snug text-ink/78 md:text-3xl">
+              Bu sayfa tanı koymak için değil; sık görülen değişimleri daha sakin, daha doğru kelimelerle okumak için hazırlandı.
+            </p>
+            <div class="mt-6 grid grid-cols-3 gap-3 border-t border-gold/25 pt-5 text-center">
+              <div>
+                <p class="font-serif text-3xl text-burgundy">{symptoms.length}</p>
+                <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">Belirti</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl text-burgundy">3</p>
+                <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">İzlem notu</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl text-burgundy">0</p>
+                <p class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">Panik dili</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10 max-w-3xl">
+          <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-burgundy/80">
+            Belirti haritası
           </p>
+          <h2 class="font-serif text-4xl leading-tight tracking-[-0.025em] text-ink md:text-5xl">
+            Önce adını koy, sonra okuma rotasına geç
+          </h2>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-[1.65fr_0.95fr] gap-8 items-start">
+        <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.65fr_0.95fr]">
           <div class="space-y-5">
             {symptoms.map((symptom, index) => (
               <a
                 href={symptom.href}
-                class="group block rounded-[32px] border border-primary/10 bg-white editorial-shadow overflow-hidden transition hover:border-primary/25 hover:shadow-[0_20px_44px_-22px_rgba(44,22,28,0.28)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                class="group block overflow-hidden rounded-[34px] border border-burgundy/12 bg-white shadow-[0_24px_82px_-62px_rgba(44,22,28,0.36)] ring-1 ring-white/80 transition hover:-translate-y-1 hover:border-gold/45 hover:shadow-[0_34px_98px_-60px_rgba(44,22,28,0.45)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                 aria-label={`${symptom.title} — ${symptom.articleCount} makale`}
               >
                 <article class="flex flex-col md:flex-row gap-0 md:gap-6">
@@ -94,25 +133,27 @@ const reviewSignals = [
                     </span>
                   </div>
 
-                  <div class="flex-1 p-7 md:p-8 md:pl-0 flex flex-col md:flex-row md:items-start md:justify-between gap-5">
+                  <div class="flex flex-1 flex-col gap-5 p-7 md:flex-row md:items-start md:justify-between md:p-8 md:pl-0">
                     <div class="max-w-2xl">
-                      <div class="flex items-center gap-3 mb-3">
+                      <div class="mb-3 flex items-center gap-3">
                         <span class:list={[
                           'w-3 h-3 rounded-full shrink-0',
-                          index % 3 === 0 ? 'bg-primary' : index % 3 === 1 ? 'bg-secondary' : 'bg-charcoal/60',
+                          index % 3 === 0 ? 'bg-burgundy' : index % 3 === 1 ? 'bg-gold' : 'bg-ink/60',
                         ]}></span>
-                        <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold">{symptom.category}</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-gold">{symptom.category}</p>
                       </div>
-                      <h2 class="text-2xl md:text-3xl font-serif italic mb-3 leading-tight text-burgundy-deep">{symptom.title}</h2>
-                      <p class="text-charcoal/70 leading-relaxed">{symptom.longDesc}</p>
+                      <h2 class="mb-3 font-serif text-3xl italic leading-tight tracking-[-0.02em] text-burgundy md:text-4xl">
+                        {symptom.title}
+                      </h2>
+                      <p class="leading-relaxed text-ink/70">{symptom.longDesc}</p>
                     </div>
 
                     <div class="md:text-right md:min-w-[160px] md:pt-1">
-                      <p class="text-[11px] uppercase tracking-[0.24em] text-charcoal/35 font-bold mb-2">Devam Okuması</p>
-                      <span class="inline-flex items-center gap-2 text-sm font-semibold text-primary border-b border-primary/30 pb-1 group-hover:border-primary">
-                        <span class="font-serif italic tabular-nums text-secondary">{symptom.articleCount}</span>
+                      <p class="mb-2 text-[11px] font-bold uppercase tracking-[0.24em] text-ink/35">Devam Okuması</p>
+                      <span class="inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/35 underline-offset-4 transition group-hover:decoration-burgundy">
+                        <span class="font-serif italic tabular-nums text-gold">{symptom.articleCount}</span>
                         <span>makale</span>
-                        <span aria-hidden="true" class="text-secondary transition group-hover:translate-x-0.5">→</span>
+                        <span aria-hidden="true" class="text-gold transition group-hover:translate-x-0.5">→</span>
                       </span>
                     </div>
                   </div>
@@ -122,9 +163,10 @@ const reviewSignals = [
           </div>
 
           <aside class="space-y-6 lg:sticky lg:top-28">
-            <section class="rounded-[36px] burgundy-gradient text-white p-8 md:p-10">
+            <section class="relative overflow-hidden rounded-[36px] bg-burgundy p-8 text-white shadow-[0_30px_96px_-64px_rgba(44,22,28,0.7)] md:p-10">
+              <div class="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-gold/15 blur-3xl"></div>
               <p class="text-[11px] uppercase tracking-[0.24em] text-white/70 font-bold mb-4">Kullanım Notu</p>
-              <h2 class="text-3xl font-serif leading-tight mb-6">Bu rehber nasıl okunmalı?</h2>
+              <h2 class="mb-6 font-serif text-3xl leading-tight md:text-4xl">Bu rehber nasıl okunmalı?</h2>
               <ul class="space-y-4">
                 {howToUse.map((item) => (
                   <li class="flex gap-3 text-sm leading-relaxed text-white/80">
@@ -135,52 +177,52 @@ const reviewSignals = [
               </ul>
             </section>
 
-            <section class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
-              <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-4">İlgili Başlıklar</p>
+            <section class="rounded-[34px] border border-burgundy/12 bg-white/80 p-8 shadow-[0_24px_82px_-66px_rgba(44,22,28,0.32)] ring-1 ring-white/80">
+              <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.24em] text-burgundy/80">İlgili Başlıklar</p>
               <ul class="space-y-4 mb-8">
                 {relatedReading.map((item) => (
-                  <li class="text-sm leading-relaxed text-charcoal/70 border-b border-primary/10 pb-4 last:border-b-0 last:pb-0">{item}</li>
+                  <li class="border-b border-burgundy/10 pb-4 text-sm leading-relaxed text-ink/70 last:border-b-0 last:pb-0">{item}</li>
                 ))}
               </ul>
-              <a href="/library" class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary">
-                Kütüphane sayfasına geçin
+              <a href="/library" class="inline-flex text-sm font-semibold text-burgundy underline decoration-burgundy/35 underline-offset-4 hover:decoration-burgundy">
+                Kütüphane sayfasını aç
               </a>
             </section>
           </aside>
         </div>
 
-        <section class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <article class="rounded-[32px] border border-primary/10 bg-white p-8 editorial-shadow">
-            <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-3">Semptom Günlüğü</p>
-            <h2 class="text-3xl font-serif mb-5">Pratik izlem şablonu</h2>
-            <p class="text-charcoal/65 leading-relaxed mb-6">
+        <section class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <article class="rounded-[34px] border border-burgundy/12 bg-white p-8 shadow-[0_24px_82px_-66px_rgba(44,22,28,0.32)] ring-1 ring-white/80">
+            <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-burgundy/80">Semptom Günlüğü</p>
+            <h2 class="mb-5 font-serif text-3xl leading-tight tracking-[-0.02em] text-ink md:text-4xl">Pratik izlem şablonu</h2>
+            <p class="mb-6 leading-relaxed text-ink/65">
               Uzun ve ayrıntılı kayıt yerine kısa, düzenli ve karşılaştırılabilir notlar almak değerlendirme kalitesini artırır.
             </p>
             <ul class="space-y-3">
               {journalTemplate.map((item) => (
-                <li class="flex gap-3 text-sm text-charcoal/70 leading-relaxed">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                <li class="flex gap-3 text-sm leading-relaxed text-ink/70">
+                  <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-burgundy"></span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </article>
 
-          <article class="rounded-[32px] border border-primary/10 bg-surface-container p-8">
-            <p class="text-[11px] uppercase tracking-[0.24em] text-secondary font-bold mb-3">Değerlendirme Eşiği</p>
-            <h2 class="text-3xl font-serif mb-5">Klinik görüşmeyi ne zaman düşünmeli?</h2>
-            <p class="text-charcoal/65 leading-relaxed mb-6">
+          <article class="rounded-[34px] border border-burgundy/12 bg-white/70 p-8 shadow-[0_24px_82px_-66px_rgba(44,22,28,0.28)] ring-1 ring-white/80">
+            <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-burgundy/80">Değerlendirme Eşiği</p>
+            <h2 class="mb-5 font-serif text-3xl leading-tight tracking-[-0.02em] text-ink md:text-4xl">Uzman değerlendirmesini ne zaman düşünmeli?</h2>
+            <p class="mb-6 leading-relaxed text-ink/65">
               Bu başlıklar tanı koydurmaz; ancak semptom gidişatının profesyonel değerlendirme ile ele alınmasının yararlı olabileceğini gösterir.
             </p>
             <ul class="space-y-3 mb-8">
               {reviewSignals.map((item) => (
-                <li class="flex gap-3 text-sm text-charcoal/70 leading-relaxed">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                <li class="flex gap-3 text-sm leading-relaxed text-ink/70">
+                  <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-gold"></span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-            <p class="text-xs text-charcoal/55 leading-relaxed">
+            <p class="text-xs leading-relaxed text-ink/55">
               Not: Bu rehber genel bilgilendirme amaçlıdır; kişisel tıbbi değerlendirme yerine geçmez.
             </p>
           </article>
