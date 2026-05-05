@@ -57,7 +57,7 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
 | `kanit_seviyesi` | **Kanıt seviyesi aciklamasi:** Kanit ne kadar guclu; **sinirlar** ve belirsizlikler acikca; `approved_sources` ile uyumlu. |
 | `turkiye` | **Turkiye bolumu:** Turkiye baglami (erisim, pratik, yerel kilavuz / kamu sagligi diline **nötr** atif mumkunse); genel dunya metni yerine **yerel okuyucu** icin paragraf. |
 | `karar_cercevesi` | **Karar cercevesi:** Tedavi dayatma yok; **ne zaman destek alinabilecegi**, hangi sorulari dusunebilecegi, risk/belirsizligi dusunme **nötr cerceve**. |
-| `pratik_veya_sss` | **Pratik ozet veya SSS:** Madde isaretleri veya kisa soru-cevap; okunabilir. |
+| `pratik_veya_sss` | **Pratik ozet veya SSS:** 3-5 konuya ozgu gercek soru; jenerik meta soru yok; yayin katmaninda tek gorunur SSS yuzeyine donusur. Govde icinde editoryal SSS korunuyorsa ikinci `ArticleFAQ` eklenmez; gorunur SSS yoksa `ArticleFAQ` kullanilir. |
 | `kapanis` | **Kapanis:** Ozet cumleler + guvenli yonlendirme (disclaimer ile uyumlu). |
 
 ### Gecerlilik

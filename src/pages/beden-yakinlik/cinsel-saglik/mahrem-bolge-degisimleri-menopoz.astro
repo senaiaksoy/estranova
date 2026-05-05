@@ -13,7 +13,6 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -30,13 +29,12 @@ const tocEntries = [
   { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sss', label: 'S?k?a Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM';
 const articleDescription =
-  'Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma, hassasiyet ve üriner şikâyet yaşıyor — bir tablonun adı var: genitoüriner menopoz sendromu (GSM). Lokal östrojen, yerel uygulama kanıt sınırı, günlük bakım ve doktora ne sorulmalı — sade bir klinik bakış.';
+  'Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma, hassasiyet ve üriner şikâyet yaşıyor — bir tablonun adı var: genitoüriner menopoz sendromu (GSM). Lokal östrojen, yerel uygulama kanıt sınırı, günlük bakım ve doktora ne sorulmalı — sade bir editoryal rehber.';
 const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -98,9 +96,10 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="isim-koymak">GSM — İsim Koymakla Başlar</h2>
         <p>
-          Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Hastalarımın çoğu yıllarca <em>"yaşlanma
-          işte"</em> deyip geçtiği bu tabloyu sonunda söylediğinde, ilk söyledikleri <em>"bunu kimseye
-          anlatamadım"</em> oluyor. Oysa söz konusu olan tıbbi bir sendrom: <strong>genitoüriner menopoz
+          Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Pek çok kadın yıllarca <em>"yaşlanma
+          işte"</em> deyip geçtiği bu tabloyu sonunda yüksek sesle söylediğinde, ilk cümle çoğu zaman
+          <em>"bunu kimseye anlatamadım"</em> oluyor. Oysa söz konusu olan tıbbi bir sendrom:
+          <strong>genitoüriner menopoz
           sendromu</strong>, kısaca GSM <Evidence level={5} />. Eskiden <em>"vulvovajinal atrofi"</em> deniyordu;
           ama bu eski isim üriner şikâyetleri kapsamıyordu — yeni isim, vajinal değişikliklerin idrar
           yoluyla bağını da görünür kılıyor.
@@ -189,7 +188,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Bazı çalışmalar kısa vadeli iyileşme bildirmiş; ama sahte (sham) işlemle karşılaştırıldığında
-          farkın sanıldığı kadar büyük olmadığı görülüyor. Hangi hasta grubunda, kaç seans, ne kadar
+          farkın sanıldığı kadar büyük olmadığı görülüyor. Hangi kadın grubunda, kaç seans, ne kadar
           süre, hangi belgeli tedaviye alternatif olarak gibi temel sorular hâlâ açık. Bazı uluslararası
           uzman dernekleri lazer uygulamaları için <em>"araştırma çerçevesinde değerlendirilmeli"</em> uyarısında
           bulunuyor.
@@ -321,8 +320,6 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ items={faqItems} class="mt-10" />
-
       <RelatedReadings
           class="mt-14"
           paths={[
@@ -340,16 +337,16 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence level={5} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Yazıyı yazar olarak yazdım; bu notu Estranova'nın bilimsel editörü olarak yazıyorum —
-            aynı konunun klinik disiplin tarafı için.
+            Yazıyı yazar olarak yazdım; bu notu Estranova'nın bilimsel editörü olarak ekliyorum —
+            aynı konunun tıbbi disiplin tarafı için.
           </p>
           <p>
             <strong class="text-burgundy">Klinik not:</strong> Genitoüriner menopoz sendromu (GSM)
-            kliniğimde her hafta birden çok kadında konuştuğum — ama yıllarca sessiz kalmış — bir tablo.
+            yayın masasında sık dönen, hekim görüşmelerinde ise çoğu zaman geç söylenen bir tablo.
             Postmenopozal kadınların yaklaşık %40-60'ında görülen yaygın ve genellikle ilerleyici bir
             durum. Eski terminoloji (vulvovajinal atrofi) sadece vajinal değişiklikleri kapsadığı için
-            yeni terminoloji (GSM, 2014 ISSWSH-NAMS uzlaşı bildirimi) tercih ediliyor; bu üriner
-            şikâyetlerin de aynı sendromun parçası olduğunu görünür kılıyor. Tanı klinik; vajinal
+            yeni terminoloji (GSM) tercih ediliyor; bu üriner şikâyetlerin de aynı sendromun
+            parçası olduğunu görünür kılıyor. Tanı klinik; vajinal
             muayene (epitel atrofisi, pH > 5.0 değişikliği) ve öykü temel değerlendirme aracı.
           </p>
           <p>
@@ -368,8 +365,8 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             <strong class="text-burgundy">Pratik bütünleşim:</strong> Tedavi planı bireyselleştirilir;
-            klinikte uyguladığım sıralama şu hiyerarşiyi izler:
-            (1) Hormon dışı seçenekler — düzenli vajinal nemlendiriciler ve yağlayıcılar — her hastada
+            yayın kurulunda önerdiğimiz değerlendirme hiyerarşisi şu sırayı izler:
+            (1) Hormon dışı seçenekler — düzenli vajinal nemlendiriciler ve yağlayıcılar — her kadında
             ilk basamakta yer alabilir. (2) Lokal vajinal östrojen — GSM için en güçlü kanıtlı tedavi
             (Düzey 1); krem, halka veya tablet formlarında sistemik dolaşıma geçen miktar düşük.
             Başlangıç 2 hafta günlük, idame haftada 2 gün; uzun süreli kullanım gerektirebilir.

@@ -19,7 +19,7 @@ Satır numaraları referans içindir; dosya değişince kayabilir — önce **b�
 | Kuruluş adı yerleştirme yasağı | `CLAUDE.md` §4; `prompts/compliance-agent.md` “Strict Validation” |
 | Humanize zorunluluğu | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Humanize” |
 | Ses sürekliliği (8 bölüm) | `CLAUDE.md` §3 alt bölüm; `agents/writer_agent.md` “Ses surekliligi” |
-| FAQ disiplini (3–5 soru, jenerik yasak + görünür blok + FAQPage schema) | `agents/writer_agent.py` validator; `CLAUDE.md` §3; `AGENTS.md` Article page layout + JSON-LD bölümleri |
+| FAQ disiplini (3–5 soru, jenerik yasak + tek görünür SSS yüzeyi + FAQPage schema) | `agents/writer_agent.py` validator; `CLAUDE.md` §3; `AGENTS.md` Article page layout + JSON-LD bölümleri |
 | Word-boundary `risky_term_patterns` | `agents/compliance_expert_agent.py` `risky_term_patterns` |
 | Compliance threshold 85 | `config/pipeline_limits.py` `COMPLIANCE_SCORE_PUBLISH_OK` |
 

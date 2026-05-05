@@ -8,7 +8,6 @@ import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -276,8 +275,6 @@ Bu kadar baÅŸlÄ±k bir arada gelince "nereden baÅŸlamalÄ±" sorusu doÄŸa
           sÃ¶ylemiÅŸti; sen onu kendi takvimine yazÄ±yorsun.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

@@ -82,6 +82,8 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
 | `pratik_veya_sss` | **Pratik ozet veya SSS (konuya ozgu, NON-template):** **3 ila 5** arasi gercek soru — okuyucunun bu konuyla ilgili **arama yaptiginda yazacagi tip soru** (long-tail). Her sorunun cevabi **en az 2-3 cumle**, derinlikli. **YASAK kaliplar**: "Bu icerik kimler icin?", "Tibbi karar yerine gecer mi?", "Turkiye baglami neden ayri?" gibi **meta sorular** (her makalede tekrarlanan jenerik template) — bunlar SEO-stuffing sinyali. Sorular dogrudan **konunun ozune** dair olmali. |
 | `kapanis` | **Kapanis:** Ozet cumleler + guvenli yonlendirme (disclaimer ile uyumlu). |
 
+**Yayin katmani notu:** `pratik_veya_sss` taslakta gorunur bir bolumdur; Publisher bunu yayinda tek SSS yuzeyine cevirir. Govde icinde H2/H3 editoryal SSS akisi korunuyorsa ikinci `ArticleFAQ` akordeonu eklenmez. Govdede gorunur SSS yoksa `ArticleFAQ` kullanilir. Her iki durumda da `FAQPage` schema ayni soru-cevap kaynagindan beslenir.
+
 ### Gecerlilik
 - `article_outline` **tam 8 eleman** ve her `section_key` **yukaridaki sira ve isimlerle** ayni olmalidir.
 - `draft_content.article` icinde **en az 8 adet** duzey-2 baslik (`## ` ile baslayan satir) olmali ve yukaridaki bolumleri kapsamali; **Türkiye** bolumu metinde **“Türkiye”** veya **“Turkiye”** gecen en az bir baslik veya belirgin paragraf ile okunur olmali.

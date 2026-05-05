@@ -249,7 +249,7 @@ Zorunlu yapı:
 - JSON-LD injection: `MedicalWebPage` + `Article` + `BreadcrumbList` + `FAQPage`
 - Body: `ArticleProsePanel` içinde h2 + italic lede paragraflar
 - `class="prose prose-lg prose-estranova max-w-none"` zorunlu (CLAUDE.md HARD CONSTRAINT)
-- Body sonu: görünür FAQ bloğu (`ArticleFAQ`) zorunlu; 3–5 konuya özgü soru, schema ile aynı içerik
+- Body sonu / SSS: tek görünür SSS yüzeyi zorunlu; gövde içinde editoryal SSS yoksa `ArticleFAQ`, varsa ikinci FAQ bloğu yok; schema ile aynı içerik
 - Sonra: `RelatedReadings` (3-5 link) → `EditorNote` (BEN) → `ArticleAuthorBlock` → Disclaimer
 
 **Detaylı şablon:** `AGENTS.md` line 147 "Article page layout (Astro)" — kod örnekleri orada.
@@ -417,6 +417,8 @@ Zorunlu yapı:
 - `BreadcrumbList` (kategoriden makaleye yol)
 - `FAQPage` (`faqItems` verildiğinde; yeni yayınlarda zorunlu)
 
+**Tek SSS yüzeyi kuralı:** Yayında yalnızca bir görünür SSS yüzeyi olmalı. SSS ana gövde içinde `ArticleProsePanel` akışında H2/H3 olarak yazıldıysa ayrıca `ArticleFAQ` eklenmez. Gövdede görünür SSS yoksa `ArticleFAQ` ana gövdeden sonra, `RelatedReadings` öncesinde kullanılır. Her iki durumda da `FAQPage` schema aynı soru-cevap kaynağıyla beslenir.
+
 `author.Person` → `writers.ts`
 `reviewedBy.Person` → Tıbbi editör (Doç. Dr. Senai Aksoy)
 `articleSection` + `sectionPath` → kategoriye uygun
@@ -440,7 +442,7 @@ Zorunlu yapı:
 | 9 | RelatedReadings 3-5 link (parent hub + komşu kategori) | ☐ |
 | 10 | Hero image — vault catalog veya yeni üretim, archetype çerçevesi | ☐ |
 | 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList + FAQPage (`buildArticleSchemas`) | ☐ |
-| 11a | Görünür FAQ bloğu var; 3–5 soru, schema ile birebir aynı veri kaynağından besleniyor | ☐ |
+| 11a | Tek görünür SSS yüzeyi var: gövde içi editoryal SSS veya `ArticleFAQ`; 3–5 soru, schema ile birebir aynı veri kaynağından besleniyor | ☐ |
 | 12 | Yayın bağlantı planı hazır; ancak standart yazar onayı gelmeden parent hub/sayı indeksine canlı link eklenmedi | ☐ |
 | 13 | Manifest entry yalnız yayın kapısı açıldıktan sonra eklenecek; onay bekleyen makale RSS/static manifest'te yok | ☐ |
 | 14 | Compliance score ≥ 85 (`compliance_expert_agent.py`) | ☐ |
