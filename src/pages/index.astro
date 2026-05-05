@@ -92,7 +92,7 @@ const journey = [
   {
     step: '04',
     title: '40 Sonrası Sağlık',
-    excerpt: 'Kemik, kas, uyku ve tarama başlıklarını tek dosyada oku. Amaç görev listesi değil, hayatın ritmini koruyan sakin bir sağlık çerçevesi.',
+    excerpt: 'Kemik, kas, uyku ve tarama başlıklarını tek dosyada oku. Amaç görev listesi değil, hayatın ritmini koruyan sakin bir sağlık hattı.',
     href: '/hormonal-gecis/40-sonrasi',
     imageKey: '/hormonal-gecis/40-sonrasi' as const,
   },
@@ -104,16 +104,19 @@ const scientificWriters = activeWriters.filter((w) => w.category === 'scientific
 
 const preventionCards = [
   {
+    label: 'Güç',
     title: 'Kemik ve kas gücü',
     body: '40 sonrası sağlık yalnızca belirti yönetimi değildir. Hareket, beslenme ve düzenli takip birlikte düşünülür.',
     href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
   },
   {
+    label: 'Kayıt',
     title: 'Tarama ve kayıt düzeni',
     body: 'Kontrol tarihlerini ve aile öyküsünü sade bir dosyada topla. Soruları önceden yazmak iyi bir başlangıçtır.',
     href: '/hormonal-gecis/40-sonrasi/tarama-testleri',
   },
   {
+    label: 'Ritim',
     title: 'Uyku ve toparlanma',
     body: 'Gece düzeni değiştiğinde bunu irade meselesi gibi okumayalım. Bazen bedenin yeni ritmini anlamak gerekir.',
     href: '/zihin-denge/uyku-dinlenme',
@@ -502,8 +505,12 @@ const homeFaqs = [
       </div>
     </section>
 
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20">
-      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -right-24 top-12 h-80 w-80 rounded-full bg-gold/12 blur-3xl"></div>
+      <div class="pointer-events-none absolute left-0 top-14 hidden font-serif text-[10rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.035] lg:block">
+        on yıl
+      </div>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
         <header class="lg:sticky lg:top-28">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
             <span class="font-serif font-normal tabular-nums text-gold">06</span>
@@ -516,21 +523,33 @@ const homeFaqs = [
           <p class="text-lg leading-relaxed text-ink/75">
             Estranova’da koruyucu sağlık bir “yapılacaklar listesi” değildir. Kemik, kas, uyku, tarama ve günlük ritim birlikte ele alınır.
           </p>
+          <div class="mt-8 rounded-[30px] border border-burgundy/12 bg-white/55 p-5 shadow-[0_22px_72px_-58px_rgba(44,22,28,0.42)] ring-1 ring-white/70">
+            <p class="text-[0.64rem] font-bold uppercase tracking-[0.22em] text-gold-bronze">
+              Editoryal not
+            </p>
+            <p class="mt-3 font-serif text-xl italic leading-snug text-burgundy/82">
+              Uzun vadeli sağlık, çoğu zaman büyük kararlarla değil; iyi tutulan küçük kayıtlarla görünür olur.
+            </p>
+          </div>
         </header>
 
-        <div class="grid gap-4">
+        <div class="grid gap-5">
           {
             preventionCards.map((card, idx) => (
               <a
                 href={card.href}
-                class="group grid gap-5 border-t border-burgundy/15 bg-white/45 px-0 py-7 transition hover:bg-white/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[80px_1fr_auto] md:items-start md:px-6"
+                class="group relative grid gap-5 overflow-hidden rounded-[34px] border border-burgundy/12 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/55 p-6 shadow-[0_24px_86px_-66px_rgba(44,22,28,0.4)] ring-1 ring-white/80 transition hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_34px_105px_-68px_rgba(44,22,28,0.5)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[92px_1fr_auto] md:items-start md:p-7"
               >
-                <span class="font-serif text-4xl leading-none tabular-nums text-gold">{String(idx + 1).padStart(2, '0')}</span>
+                <span class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></span>
+                <span class="flex flex-col gap-2">
+                  <span class="font-serif text-5xl leading-none tabular-nums text-gold">{String(idx + 1).padStart(2, '0')}</span>
+                  <span class="text-[0.62rem] font-bold uppercase tracking-[0.22em] text-burgundy/55">{card.label}</span>
+                </span>
                 <span>
-                  <span class="block font-serif text-2xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">{card.title}</span>
+                  <span class="block font-serif text-3xl leading-[1.02] tracking-[-0.02em] text-ink transition group-hover:text-burgundy">{card.title}</span>
                   <span class="mt-2 block text-base leading-relaxed text-ink/72">{card.body}</span>
                 </span>
-                <span class="hidden pt-1 text-gold transition group-hover:translate-x-1 md:block" aria-hidden="true">→</span>
+                <span class="hidden pt-1 font-serif text-2xl text-gold transition group-hover:translate-x-1 md:block" aria-hidden="true">→</span>
               </a>
             ))
           }
@@ -701,22 +720,34 @@ const homeFaqs = [
       </div>
     </section>
 
-    <section class="border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-20">
-      <div class="mx-auto grid max-w-6xl gap-8 border-y border-burgundy/14 py-10 md:grid-cols-[0.85fr_1.15fr] md:items-center">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy/70">
-          Kütüphane
-        </p>
-        <div>
-          <p class="mb-6 font-serif text-3xl italic leading-tight text-ink/75 md:text-5xl">
-          Bu sayfada henüz değinmediğimiz başlıkları ve tüm arşivi kütüphanede bulabilirsiniz.
-          </p>
-          <a
-            href="/library"
-            class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
-          >
-            Kütüphaneye göz at →
-          </a>
-        </div>
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
+      <div class="mx-auto max-w-6xl">
+        <a
+          href="/library"
+          class="group relative grid gap-8 overflow-hidden rounded-[42px] border border-burgundy/14 bg-gradient-to-br from-white via-[#fffaf2] to-cream-warm/55 p-8 shadow-[0_34px_110px_-70px_rgba(44,22,28,0.42)] ring-1 ring-white/80 transition hover:-translate-y-1 hover:border-gold/40 md:grid-cols-[0.82fr_1.18fr] md:items-center md:p-10"
+        >
+          <span class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>
+          <div>
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-burgundy/75">
+              Kütüphane
+            </p>
+            <p class="font-serif text-6xl italic leading-none tracking-[-0.06em] text-gold/75 md:text-8xl">
+              arşiv
+            </p>
+          </div>
+          <div>
+            <p class="mb-6 max-w-3xl font-serif text-3xl italic leading-tight text-ink/78 md:text-5xl">
+              Bu sayfada henüz değinmediğimiz başlıkları ve tüm arşivi kütüphanede bulabilirsiniz.
+            </p>
+            <span
+              class="inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy"
+            >
+              Kütüphaneye göz at
+              <span class="font-serif text-xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
       </div>
     </section>
   </main>
