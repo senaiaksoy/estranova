@@ -30,8 +30,8 @@ const tocEntries = [
   { id: 'gunluk-yonetim', label: 'Günlük Yönetim' },
   { id: 'profesyonel-yardim', label: 'Profesyonel Yardım' },
   { id: 'ilk-adimlar', label: 'İlk Adımlar' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -228,7 +228,7 @@ const articleSchemas = buildArticleSchemas({
           </p>
         </ArticleProsePanel>
 
-      <ArticleFAQ items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
         <RelatedReadings
           class="mt-14"

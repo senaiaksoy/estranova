@@ -30,7 +30,6 @@ const tocEntries = [
   { id: 'ne-zaman', label: 'Ne Zaman Hekim' },
   { id: 'sorular', label: 'Sık Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sss', label: 'S?k?a Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -271,7 +270,7 @@ Bu, “test gereksizdir” demek değil; “testi duruma göre istemek gerekir�
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

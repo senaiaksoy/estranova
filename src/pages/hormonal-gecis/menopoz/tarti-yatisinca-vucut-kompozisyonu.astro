@@ -13,6 +13,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -305,6 +306,9 @@ için işe yarayacak yaklaşım farklı olabilir — özellikle bu konuyu kendi 
           söylemişti; sen onu kendi duruşundan okuyorsun.
         </p>
       </ArticleProsePanel>
+
+
+      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

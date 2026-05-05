@@ -19,34 +19,37 @@ const {
 ---
 
 {items.length > 0 && (
-  <section
-    id={id}
-    class:list={[
-      'relative overflow-hidden rounded-[32px] border border-burgundy/12 bg-gradient-to-br from-white via-cream-soft/45 to-cream-warm/75 p-7 shadow-[0_22px_60px_-38px_rgba(44,22,28,0.28)] ring-1 ring-burgundy/8 md:p-8',
+<section
+  id={id}
+  class:list={[
+      'relative overflow-hidden rounded-[38px] border border-burgundy/12 bg-gradient-to-br from-white via-cream-soft/50 to-cream-warm/80 p-7 shadow-[0_26px_76px_-42px_rgba(44,22,28,0.32)] ring-1 ring-burgundy/8 md:p-9',
       className,
     ]}
   >
-    <div class="pointer-events-none absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-gold/14"></div>
-    <p class="relative flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+    <div class="pointer-events-none absolute right-0 top-0 h-28 w-28 rounded-bl-full bg-gold/14"></div>
+    <div class="pointer-events-none absolute bottom-0 left-8 h-px w-28 bg-gradient-to-r from-gold/70 to-transparent"></div>
+    <p class="relative flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.26em] text-burgundy">
+      <span class="font-serif text-lg font-normal italic text-gold">Q</span>
       <span class="h-px w-10 bg-gold/80"></span>
       <span>Pratik Sorular</span>
     </p>
-    <h2 class="relative mt-3 font-serif text-3xl italic text-ink md:text-4xl">{title}</h2>
+    <h2 class="relative mt-3 max-w-3xl font-serif text-3xl italic leading-tight text-ink md:text-4xl">{title}</h2>
     <p class="mt-3 max-w-3xl leading-relaxed text-ink/72">{intro}</p>
 
     <div class="mt-8 space-y-4">
-      {items.map((item) => (
-        <details class="group rounded-[24px] border border-burgundy/12 bg-white/90 p-5 ring-1 ring-white/70 transition open:shadow-[0_18px_42px_-34px_rgba(44,22,28,0.34)]">
-          <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left font-serif text-xl leading-snug text-ink marker:hidden">
+      {items.map((item, index) => (
+        <details class="group rounded-[26px] border border-burgundy/12 bg-white/92 p-5 ring-1 ring-white/75 transition duration-300 open:border-gold/45 open:shadow-[0_22px_48px_-34px_rgba(44,22,28,0.34)]">
+          <summary class="grid cursor-pointer list-none grid-cols-[2.5rem_1fr_auto] items-start gap-4 text-left font-serif text-xl leading-snug text-ink marker:hidden">
+            <span class="font-serif text-lg italic tabular-nums text-gold">{String(index + 1).padStart(2, '0')}</span>
             <span>{item.question}</span>
             <span
               aria-hidden="true"
-              class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gold/50 text-sm text-burgundy transition group-open:rotate-45"
+              class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gold/50 text-sm text-burgundy transition group-open:rotate-45 group-open:bg-gold/10"
             >
               +
             </span>
           </summary>
-          <p class="mt-4 leading-relaxed text-ink/78">{item.answer}</p>
+          <p class="mt-4 pl-[3.5rem] leading-relaxed text-ink/78">{item.answer}</p>
         </details>
       ))}
     </div>

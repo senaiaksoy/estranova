@@ -11,13 +11,15 @@ const { class: className } = Astro.props;
 
 <section
   class:list={[
-    'relative overflow-hidden rounded-[34px] border border-burgundy/10 bg-white p-8 shadow-[0_30px_80px_-42px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.06] md:p-10 lg:p-12',
+    'relative overflow-hidden rounded-[38px] border border-burgundy/10 bg-white p-8 shadow-[0_34px_90px_-46px_rgba(44,22,28,0.34)] ring-1 ring-black/[0.05] md:p-10 lg:p-12',
     className,
   ]}
 >
-  <div class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
-  <div class="pointer-events-none absolute right-8 top-8 h-24 w-24 rounded-full bg-cream-warm/70 blur-2xl"></div>
-  <div class="prose prose-lg prose-estranova max-w-none">
+  <div class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></div>
+  <div class="pointer-events-none absolute inset-y-10 left-0 w-px bg-gradient-to-b from-transparent via-gold/55 to-transparent"></div>
+  <div class="pointer-events-none absolute right-8 top-8 h-28 w-28 rounded-full bg-cream-warm/75 blur-2xl"></div>
+  <div class="pointer-events-none absolute bottom-6 right-8 font-serif text-8xl leading-none text-gold/[0.07]" aria-hidden="true">E</div>
+  <div class="prose prose-lg prose-estranova relative max-w-none">
     <slot />
   </div>
 </section>

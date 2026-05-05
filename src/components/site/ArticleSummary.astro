@@ -14,18 +14,22 @@ const { title = 'Kısa Özet', eyebrow = 'Okumaya Başlamadan', class: className
 
 <section
   class:list={[
-    'relative overflow-hidden rounded-[34px] border border-gold/30 bg-gradient-to-br from-white via-cream-soft/80 to-cream-warm/70 p-7 shadow-[0_26px_72px_-42px_rgba(44,22,28,0.28)] ring-1 ring-white/75 md:p-8',
+    'relative overflow-hidden rounded-[38px] border border-gold/30 bg-gradient-to-br from-white via-cream-soft/85 to-cream-warm/75 p-7 shadow-[0_34px_96px_-54px_rgba(44,22,28,0.36)] ring-1 ring-white/80 md:p-9',
     className,
   ]}
 >
-  <div class="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-gold/14"></div>
-  <div class="pointer-events-none absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent"></div>
+  <div class="pointer-events-none absolute right-0 top-0 h-36 w-36 rounded-bl-full bg-gold/16"></div>
+  <div class="pointer-events-none absolute -left-12 bottom-6 h-32 w-32 rounded-full bg-burgundy/7 blur-3xl"></div>
+  <div class="pointer-events-none absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
+  <div class="pointer-events-none absolute bottom-5 right-7 font-serif text-7xl italic leading-none text-burgundy/[0.04]" aria-hidden="true">
+    not
+  </div>
   <p class="relative mb-3 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
     <span class="h-px w-10 bg-gold/80"></span>
     <span>{eyebrow}</span>
   </p>
-  <h2 class="relative mb-4 font-serif text-3xl italic leading-tight text-burgundy-deep md:text-4xl">{title}</h2>
-  <div class="relative max-w-3xl text-[1.03rem] leading-relaxed text-ink/80 [&_strong]:font-semibold [&_strong]:text-burgundy">
+  <h2 class="relative mb-4 max-w-3xl font-serif text-3xl italic leading-tight text-burgundy-deep md:text-4xl">{title}</h2>
+  <div class="relative max-w-3xl border-l-2 border-gold/55 pl-5 text-[1.05rem] leading-relaxed text-ink/80 [&_strong]:font-semibold [&_strong]:text-burgundy md:pl-6">
     <slot />
   </div>
 </section>

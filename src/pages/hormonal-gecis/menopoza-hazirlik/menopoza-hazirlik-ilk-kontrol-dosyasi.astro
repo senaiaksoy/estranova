@@ -13,7 +13,6 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
-import EditorialMedicalEditorNote from '../../../components/site/EditorialMedicalEditorNote.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
@@ -37,6 +36,7 @@ const tocEntries = [
   { id: 'metabolik-gostergeler', label: 'Kolesterol, glukoz ve metabolik göstergeler' },
   { id: 'kemik-d-vitamini', label: 'Kemik sağlığı ve D vitamini değerlendirmeleri' },
   { id: 'taramalar', label: 'Mamografi, smear ve diğer taramalar' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kisa-hatirlatma', label: 'Kısa hatırlatma' },
 ];
 
@@ -234,7 +234,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"
@@ -244,15 +244,17 @@ const articleSchemas = buildArticleSchemas({
           '/hormonal-gecis/40-sonrasi/tarama-testleri',
         ]}
       />
+      <ArticleEditorNote>
+        <p>Menopoza yaklaşan dönemde değerlendirme, yalnızca hormon testlerinden ibaret değildir. Klinik anlam çoğu zaman yakınmaların süresi, adet örüntüsü, uyku kalitesi, metabolik riskler ve genel sağlık taramalarının birlikte okunmasıyla ortaya çıkar.</p>
+        <p>FSH ve östrojen gibi parametreler bazı durumlarda fikir verebilir; ancak özellikle perimenopozda dalgalı seyir nedeniyle tek başına kesin yanıt sunmaları beklenmemelidir.</p>
+        <p>Yorgunluk, çarpıntı, bilişsel bulanıklık veya saç dökülmesi gibi belirtilerde anemi, ferritin düşüklüğü, B12 eksikliği, tiroid düzensizlikleri ve metabolik başlıklar da düşünülmelidir.</p>
+        <p>Daha doğru yaklaşım, gereksiz test kalabalığı oluşturmak değil, kişisel risk profiline ve belirtilere göre anlamlı bir izlem planı kurmaktır.</p>
+        <p class="text-sm italic text-burgundy">— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü</p>
+      </ArticleEditorNote>
 
-      <EditorialMedicalEditorNote
-        paragraphs={[
-          'Menopoza yaklaşan dönemde değerlendirme, yalnızca hormon testlerinden ibaret değildir. Klinik anlam çoğu zaman yakınmaların süresi, adet örüntüsü, uyku kalitesi, metabolik riskler ve genel sağlık taramalarının birlikte okunmasıyla ortaya çıkar.',
-          'FSH ve östrojen gibi parametreler bazı durumlarda fikir verebilir; ancak özellikle perimenopozda dalgalı seyir nedeniyle tek başına kesin yanıt sunmaları beklenmemelidir.',
-          'Yorgunluk, çarpıntı, bilişsel bulanıklık veya saç dökülmesi gibi belirtilerde anemi, ferritin düşüklüğü, B12 eksikliği, tiroid düzensizlikleri ve metabolik başlıklar da düşünülmelidir.',
-          'Daha doğru yaklaşım, gereksiz test kalabalığı oluşturmak değil, kişisel risk profiline ve belirtilere göre anlamlı bir izlem planı kurmaktır.',
-        ]}
-      />
+      <ArticleDisclaimer class="mt-10">
+        <p>Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.</p>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
 

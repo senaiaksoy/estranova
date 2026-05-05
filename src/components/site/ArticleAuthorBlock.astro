@@ -30,8 +30,12 @@ const initials = writer.displayName
   .join('');
 ---
 
-<section class="relative overflow-hidden rounded-[30px] border border-burgundy/15 bg-gradient-to-br from-white via-white to-cream-soft/80 p-7 shadow-[0_18px_54px_-28px_rgba(44,24,28,0.2)] ring-1 ring-black/[0.04] md:p-8">
-  <div class="pointer-events-none absolute right-6 top-6 h-20 w-20 rounded-full bg-gold/12 blur-2xl"></div>
+<section class="relative overflow-hidden rounded-[36px] border border-burgundy/15 bg-gradient-to-br from-white via-white to-cream-soft/85 p-7 shadow-[0_30px_90px_-52px_rgba(44,24,28,0.36)] ring-1 ring-white/80 md:p-8">
+  <div class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
+  <div class="pointer-events-none absolute -right-10 top-4 h-32 w-32 rounded-full bg-gold/16 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-5 right-7 font-serif text-7xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">
+    imza
+  </div>
   <div class="relative flex flex-col gap-5 sm:flex-row sm:items-start">
     {
       writer.portrait ? (
@@ -42,11 +46,11 @@ const initials = writer.displayName
           height="192"
           loading="lazy"
           decoding="async"
-          class="h-24 w-24 shrink-0 rounded-[28px] object-cover ring-2 ring-burgundy/15"
+          class="h-24 w-24 shrink-0 rounded-[30px] object-cover shadow-[0_18px_40px_-26px_rgba(44,22,28,0.45)] ring-2 ring-gold/35"
         />
       ) : (
         <div
-          class="flex h-24 w-24 shrink-0 items-center justify-center rounded-[28px] bg-cream-warm font-serif text-2xl text-burgundy ring-2 ring-burgundy/15"
+          class="flex h-24 w-24 shrink-0 items-center justify-center rounded-[30px] bg-cream-warm font-serif text-2xl text-burgundy shadow-[0_18px_40px_-26px_rgba(44,22,28,0.45)] ring-2 ring-gold/35"
           aria-hidden="true"
         >
           {initials}
@@ -58,10 +62,10 @@ const initials = writer.displayName
         <span class="h-px w-8 bg-gold/80"></span>
         <span>{bylineLabel}</span>
       </p>
-      <p class="mt-2 font-serif text-2xl italic text-ink">{writer.displayName}</p>
+      <p class="mt-2 font-serif text-2xl italic text-ink md:text-3xl">{writer.displayName}</p>
       <p class="text-sm text-ink/70">{writer.role.split('/')[0].trim()}</p>
 
-      <p class="mt-4 max-w-2xl border-t border-gold/25 pt-3 text-xs text-ink/65">
+      <p class="mt-4 max-w-2xl border-t border-gold/30 pt-3 text-xs tracking-[0.01em] text-ink/65">
         Bilimsel inceleme: <span class="text-ink/85">{medicalReviewer}</span>
       </p>
 
@@ -89,7 +93,7 @@ const initials = writer.displayName
         )
       }
 
-      <p class="mt-3 text-xs text-ink/55">
+      <p class="mt-4 inline-flex flex-wrap items-center gap-y-1 rounded-full border border-burgundy/10 bg-white/70 px-4 py-2 text-xs text-ink/55 shadow-[0_14px_32px_-26px_rgba(44,22,28,0.3)]">
         Yayımlandı: {publishedDate}
         {
           lastUpdated && (

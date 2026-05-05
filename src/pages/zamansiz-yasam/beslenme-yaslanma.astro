@@ -30,8 +30,8 @@ const tocEntries = [
   { id: 'tercih-sinirla', label: 'Tercih ve Sınırlama' },
   { id: 'ek-takviyeler', label: 'Takviye Kararı' },
   { id: 'kisisellestirme', label: 'Kişiselleştirilmiş Yaklaşım' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -265,7 +265,7 @@ sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) yolu şe
           </p>
         </ArticleProsePanel>
 
-      <ArticleFAQ items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
         <RelatedReadings
           class="mt-14"
