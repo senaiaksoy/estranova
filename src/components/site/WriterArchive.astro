@@ -81,8 +81,12 @@ const displayWithTitle =
   writer.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : writer.displayName;
 ---
 
-<section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
-  <div class="mx-auto max-w-4xl">
+<section class="relative overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+  <div class="pointer-events-none absolute -left-16 top-16 h-48 w-48 rounded-full bg-burgundy/7 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-6 right-[8%] hidden font-serif text-[9rem] italic leading-none text-burgundy/[0.035] md:block" aria-hidden="true">
+    imza
+  </div>
+  <div class="relative mx-auto max-w-5xl">
     <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
       <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
       <span class="mx-2 text-gold">·</span>
@@ -91,6 +95,7 @@ const displayWithTitle =
       <span class="text-burgundy">{writer.displayName}</span>
     </nav>
 
+    <div class="overflow-hidden rounded-[42px] border border-burgundy/12 bg-white/70 p-7 shadow-[0_34px_100px_-62px_rgba(44,22,28,0.38)] ring-1 ring-white/75 md:p-9">
     <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
       {writer.portrait ? (
         <img
@@ -100,10 +105,10 @@ const displayWithTitle =
           height="240"
           loading="eager"
           decoding="async"
-          class="h-40 w-40 rounded-full object-cover ring-4 ring-burgundy/15 md:h-48 md:w-48"
+          class="h-40 w-40 rounded-[34px] object-cover shadow-[0_22px_62px_-38px_rgba(44,22,28,0.46)] ring-2 ring-gold/30 md:h-48 md:w-48"
         />
       ) : (
-        <div class="flex h-40 w-40 items-center justify-center rounded-full bg-cream-warm font-serif text-5xl text-burgundy ring-4 ring-burgundy/15 md:h-48 md:w-48">
+        <div class="flex h-40 w-40 items-center justify-center rounded-[34px] bg-cream-warm font-serif text-5xl text-burgundy shadow-[0_22px_62px_-38px_rgba(44,22,28,0.46)] ring-2 ring-gold/30 md:h-48 md:w-48">
           {writer.displayName
             .split(/\s+/)
             .filter((part) => part.length > 0)
@@ -112,17 +117,19 @@ const displayWithTitle =
         </div>
       )}
       <div class="min-w-0 flex-1">
-        <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-burgundy">
-          {writer.role}
+        <p class="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-burgundy">
+          <span class="h-px w-9 bg-gold/75"></span>
+          <span>{writer.role}</span>
         </p>
-        <h1 class="mb-4 font-serif text-4xl leading-tight text-burgundy md:text-5xl">
+        <h1 class="mb-4 font-serif text-5xl leading-[0.95] tracking-[-0.04em] text-burgundy md:text-7xl">
           {displayWithTitle}
         </h1>
-        <p class="mb-5 font-serif text-xl italic leading-relaxed text-ink/70 md:text-2xl">
+        <p class="mb-5 max-w-2xl border-l-2 border-gold/60 pl-5 font-serif text-xl italic leading-relaxed text-ink/70 md:text-2xl">
           {writer.signaturePhrase}
         </p>
         <p class="text-base leading-relaxed text-ink/80 md:text-lg">{writer.publicBio}</p>
       </div>
+    </div>
     </div>
 
     {writer.focusAreas && writer.focusAreas.length > 0 && (
@@ -164,7 +171,7 @@ const displayWithTitle =
             <li>
               <a
                 href={`/sayi/${issue.slug}`}
-                class="group flex h-full flex-col overflow-hidden rounded-[24px] border border-burgundy/12 bg-cream-soft shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                class="group flex h-full flex-col overflow-hidden rounded-[32px] border border-burgundy/12 bg-gradient-to-br from-white via-cream-soft/70 to-cream-warm/55 shadow-[0_22px_72px_-54px_rgba(44,22,28,0.34)] ring-1 ring-white/75 transition hover:-translate-y-0.5 hover:border-gold/35 hover:shadow-[0_30px_90px_-58px_rgba(44,22,28,0.44)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
               >
                 <div class="relative aspect-[3/4] w-full overflow-hidden">
                   <img
@@ -174,7 +181,7 @@ const displayWithTitle =
                     height="600"
                     loading="lazy"
                     decoding="async"
-                    class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.04]"
+                    class="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.04]"
                   />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/55 via-[#1c1412]/15 to-transparent"></div>
                   <div class="absolute bottom-4 left-4 right-4 text-cream-soft">
@@ -187,7 +194,8 @@ const displayWithTitle =
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-1 flex-col p-5">
+                <div class="relative flex flex-1 flex-col p-5">
+                  <div class="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
                   <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">
                     {issue.theme}
                   </p>
@@ -229,7 +237,7 @@ const displayWithTitle =
           <li>
             <a
               href={`/dosya/${d.slug}`}
-              class="group flex items-start gap-5 rounded-[24px] border border-burgundy/12 bg-cream-soft p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+              class="group flex items-start gap-5 rounded-[30px] border border-burgundy/12 bg-gradient-to-br from-white via-cream-soft/70 to-cream-warm/55 p-6 shadow-[0_20px_64px_-50px_rgba(44,22,28,0.32)] ring-1 ring-white/75 transition hover:-translate-y-0.5 hover:border-gold/35 hover:shadow-[0_28px_82px_-56px_rgba(44,22,28,0.42)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
             >
               <div class="min-w-0 flex-1">
                 <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">
@@ -264,9 +272,9 @@ const displayWithTitle =
           <li>
             <a
               href={a.href}
-              class="group flex items-start gap-5 rounded-[24px] border border-burgundy/12 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+              class="group flex items-start gap-5 rounded-[30px] border border-burgundy/12 bg-white/80 p-6 shadow-[0_20px_64px_-50px_rgba(44,22,28,0.32)] ring-1 ring-white/75 transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-white hover:shadow-[0_28px_82px_-56px_rgba(44,22,28,0.42)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
             >
-              <span class="shrink-0 font-serif text-3xl tabular-nums text-gold md:text-4xl">
+              <span class="shrink-0 font-serif text-3xl italic tabular-nums text-gold md:text-4xl">
                 {String(idx + 1).padStart(2, '0')}
               </span>
               <div class="min-w-0 flex-1">

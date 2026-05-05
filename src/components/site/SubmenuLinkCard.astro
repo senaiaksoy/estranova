@@ -34,9 +34,10 @@ const {
 
 <a
   href={href}
-  class="group flex h-full flex-col overflow-hidden border-y border-burgundy/14 bg-white/55 transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+  class="group relative flex h-full flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/70 shadow-[0_24px_72px_-48px_rgba(44,22,28,0.32)] ring-1 ring-white/75 transition duration-300 hover:-translate-y-0.5 hover:border-gold/35 hover:bg-white hover:shadow-[0_32px_90px_-54px_rgba(44,22,28,0.42)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
 >
-  <div class="relative aspect-[4/3] overflow-hidden">
+  <div class="pointer-events-none absolute inset-x-6 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
+  <div class="relative aspect-[4/3] overflow-hidden rounded-b-[30px]">
     <img
       src={imageSrc}
       alt={imageAlt}
@@ -46,16 +47,20 @@ const {
       decoding="async"
       class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
     />
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/34 via-transparent to-transparent" />
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/44 via-[#1c1412]/8 to-transparent" />
     {
       step && (
-        <span class="absolute bottom-4 left-5 font-serif text-5xl font-medium tabular-nums text-white/95 md:text-6xl">
+        <span class="absolute bottom-4 left-5 font-serif text-5xl font-medium italic tabular-nums text-white/95 drop-shadow-[0_10px_28px_rgba(0,0,0,0.28)] md:text-6xl">
           {step}
         </span>
       )
     }
   </div>
-  <div class="flex flex-1 flex-col border-t border-burgundy/12 p-6 md:p-7">
+  <div class="relative flex flex-1 flex-col p-6 md:p-7">
+    <p class="mb-4 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.22em] text-gold-bronze">
+      <span class="h-px w-8 bg-gold/70"></span>
+      <span>Bölüm</span>
+    </p>
     <h2 class="mb-3 font-serif text-3xl leading-tight tracking-[-0.015em] md:text-4xl">{title}</h2>
     <p class="mb-6 flex-1 leading-relaxed text-ink/72">{excerpt}</p>
     {readingMinutes && (

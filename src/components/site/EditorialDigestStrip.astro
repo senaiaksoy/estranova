@@ -8,20 +8,27 @@ const { sectionNumber = '08' } = Astro.props;
 
 <!-- Inline aylık editoryal özet — form action backend ile bağlanacak -->
 <section
-  class="border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20"
+  class="relative isolate overflow-hidden border-t border-burgundy/10 bg-cream-soft px-6 py-16 md:py-20"
   aria-labelledby="editorial-digest-heading"
 >
-  <div class="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-8 border-y border-burgundy/14 py-8 lg:grid-cols-12 lg:gap-10">
+  <div class="pointer-events-none absolute -right-24 top-8 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
+  <div class="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-8 rounded-[38px] border border-burgundy/14 bg-white/55 p-5 shadow-2xl shadow-burgundy/8 ring-1 ring-white/70 lg:grid-cols-12 lg:gap-10 lg:p-8">
     <div class="lg:col-span-4">
-      <img
-        src="/images/newsletter/newsletter-ritual.webp"
-        alt="Açık bir kitap, keten kumaş ve bir fincan: sakin bir sabah ritüeli"
-        width="1200"
-        height="1200"
-        loading="lazy"
-        decoding="async"
-        class="aspect-[4/5] w-full rounded-[30px] object-cover ring-1 ring-burgundy/10"
-      />
+      <div class="relative overflow-hidden rounded-[32px]">
+        <img
+          src="/images/newsletter/newsletter-ritual.webp"
+          alt="Açık bir kitap, keten kumaş ve bir fincan: sakin bir sabah ritüeli"
+          width="1200"
+          height="1200"
+          loading="lazy"
+          decoding="async"
+          class="aspect-[4/5] w-full object-cover ring-1 ring-burgundy/10"
+        />
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/22 via-transparent to-transparent"></div>
+        <span class="pointer-events-none absolute left-5 top-5 rounded-full border border-cream-soft/35 bg-white/12 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-cream-soft backdrop-blur-sm">
+          Aylık
+        </span>
+      </div>
     </div>
 
     <div class="flex flex-col justify-center lg:col-span-4">
@@ -45,7 +52,7 @@ const { sectionNumber = '08' } = Astro.props;
       <form
         method="post"
         action="#"
-        class="flex flex-col gap-3"
+        class="flex flex-col gap-3 rounded-[28px] border border-burgundy/12 bg-cream-soft/70 p-4"
         aria-describedby="editorial-digest-kvkk"
         name="editorial-digest"
         data-newsletter-form="monthly"
@@ -64,7 +71,7 @@ const { sectionNumber = '08' } = Astro.props;
           />
           <button
             type="submit"
-            class="inline-flex min-h-[52px] shrink-0 items-center justify-center rounded-full bg-burgundy px-7 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-burgundy/35 sm:px-8"
+            class="inline-flex min-h-[52px] shrink-0 items-center justify-center rounded-full bg-burgundy px-7 text-sm font-semibold text-white shadow-lg shadow-burgundy/18 transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-burgundy/35 sm:px-8"
           >
             Özeti al
           </button>

@@ -24,22 +24,22 @@ const enriched = items.map((it, i) => ({
 }));
 ---
 
-<ol class="divide-y divide-burgundy/15 border-y border-burgundy/15" role="list">
+<ol class="overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/70 shadow-[0_24px_80px_-58px_rgba(44,22,28,0.32)] ring-1 ring-white/75" role="list">
   {
     enriched.map((a) => (
-      <li>
+      <li class="border-t border-burgundy/12 first:border-t-0">
         <a
           href={a.href}
-          class="group grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 py-7 transition md:grid-cols-[auto_1fr_auto] md:items-baseline md:gap-x-8 md:py-8"
+          class="group grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 px-5 py-7 transition hover:bg-cream-soft/70 md:grid-cols-[auto_1fr_auto] md:items-baseline md:gap-x-8 md:px-7 md:py-8"
         >
-          <span class="font-serif text-2xl text-gold md:text-3xl" aria-hidden="true">
+          <span class="font-serif text-3xl italic text-gold md:text-4xl" aria-hidden="true">
             {a.num}
           </span>
           <div class="min-w-0">
-            <h3 class="mb-2 font-serif text-xl leading-tight text-ink group-hover:text-burgundy md:text-2xl">
+            <h3 class="mb-2 font-serif text-2xl leading-tight tracking-[-0.015em] text-ink group-hover:text-burgundy md:text-3xl">
               {a.title}
             </h3>
-            <p class="font-serif text-base italic leading-relaxed text-ink/72 md:text-lg">
+            <p class="max-w-3xl font-serif text-base italic leading-relaxed text-ink/72 md:text-lg">
               {a.excerpt}
             </p>
           </div>

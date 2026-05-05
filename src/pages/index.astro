@@ -149,7 +149,10 @@ const homeFaqs = [
   <main id="main-content" class="text-ink">
     <HomeHero hero={homePageHero} />
 
-    <section class="border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute left-1/2 top-10 hidden -translate-x-1/2 font-serif text-[10rem] leading-none tracking-[-0.08em] text-burgundy/5 lg:block">
+        imzalar
+      </div>
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
@@ -209,18 +212,27 @@ const homeFaqs = [
 
     <IssueHero issue={currentIssue} sectionNumber="03" />
 
-    <section class="border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute -left-24 top-16 h-80 w-80 rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-4 top-12 hidden font-serif text-[11rem] leading-none tracking-[-0.08em] text-burgundy/5 lg:block">
+        seçki
+      </div>
       <div class="mx-auto max-w-6xl">
-        <header class="mb-12 max-w-3xl">
+        <header class="mb-12 grid gap-8 md:grid-cols-[0.78fr_1.22fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
             <span class="font-serif font-normal tabular-nums text-gold">04</span>
             <span class="mx-2 text-gold">—</span>
             EDİTÖRYAL SEÇKİ
           </p>
-          <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Bu sayıdan öne çıkanlar</h2>
-          <p class="text-lg leading-relaxed text-ink/75">
-            {magazineConfig.name} · Sayı {issuePad} kapak dosyasından üç öne çıkan yazı, ardından sayının kalan parçaları.
-          </p>
+          <div>
+            <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+              {magazineConfig.name} · Sayı {issuePad}
+            </p>
+            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">Bu sayıdan öne çıkanlar</h2>
+            <p class="max-w-2xl border-l border-gold/50 pl-5 font-serif text-xl italic leading-relaxed text-ink/72">
+              Kapak dosyasından üç güçlü okuma; ardından sayının sakin ama tamamlayıcı parçaları.
+            </p>
+          </div>
         </header>
 
         <div class="grid gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-stretch">
@@ -228,8 +240,9 @@ const homeFaqs = [
             editorialPicks[0] && (
               <a
                 href={editorialPicks[0].href}
-                class="group grid overflow-hidden border-y border-burgundy/15 bg-cream-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[0.9fr_1fr]"
+                class="group relative grid overflow-hidden rounded-[38px] border border-burgundy/14 bg-cream-soft shadow-2xl shadow-burgundy/10 ring-1 ring-white/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[0.9fr_1fr]"
               >
+                <span class="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-gold/60"></span>
                 <div class="relative min-h-[320px] overflow-hidden">
                   <img
                     src={editorialPicks[0].thumbnailSrc}
@@ -242,7 +255,8 @@ const homeFaqs = [
                   />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/38 via-transparent to-transparent"></div>
                 </div>
-                <div class="flex flex-col justify-between p-7 md:p-9">
+                <div class="relative flex flex-col justify-between p-7 md:p-9">
+                  <span class="pointer-events-none absolute right-7 top-7 font-serif text-7xl italic leading-none text-gold/12">01</span>
                   <div>
                     <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-burgundy">{editorialPicks[0].tag}</p>
                     <h3 class="mb-4 font-serif text-4xl leading-[1.02] tracking-[-0.025em] text-ink group-hover:underline group-hover:decoration-gold/70 md:text-5xl">
@@ -257,14 +271,14 @@ const homeFaqs = [
               </a>
             )
           }
-          <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
+          <div class="overflow-hidden rounded-[34px] border border-burgundy/14 bg-white/72 shadow-xl shadow-burgundy/6 ring-1 ring-cream-soft/80">
             {
               editorialPicks.slice(1).map((z, idx) => (
                 <a
                   href={z.href}
-                  class="group grid gap-5 py-7 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 sm:grid-cols-[104px_1fr]"
+                  class="group grid gap-5 border-b border-burgundy/12 p-6 transition last:border-b-0 hover:bg-cream-soft/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 sm:grid-cols-[104px_1fr]"
                 >
-                  <span class="font-serif text-5xl leading-none tabular-nums text-gold">{String(idx + 2).padStart(2, '0')}</span>
+                  <span class="font-serif text-5xl italic leading-none tabular-nums text-gold">{String(idx + 2).padStart(2, '0')}</span>
                   <span>
                     <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">{z.tag}</span>
                     <span class="block font-serif text-3xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">{z.title}</span>
@@ -280,13 +294,16 @@ const homeFaqs = [
         </div>
 
         <div class="mt-14 md:mt-16">
-          <h3 class="mb-6 font-serif text-2xl text-ink">Son yayınlar</h3>
-          <div>
+          <div class="mb-6 flex items-center gap-4">
+            <h3 class="font-serif text-2xl text-ink">Son yayınlar</h3>
+            <span class="h-px flex-1 bg-gold/35"></span>
+          </div>
+          <div class="overflow-hidden rounded-[30px] border border-burgundy/12 bg-cream-soft/45">
             {
               editorialRecent.map((item) => (
                 <a
                   href={item.href}
-                  class="group flex items-start gap-4 border-t border-burgundy/15 py-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:gap-6"
+                  class="group flex items-start gap-4 border-b border-burgundy/12 p-5 transition last:border-b-0 hover:bg-white/72 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:gap-6 md:p-6"
                 >
                   <img
                     src={item.thumbnailSrc}
@@ -383,8 +400,9 @@ const homeFaqs = [
                 <li class="flex shrink-0 snap-start" style="width: clamp(270px, 78vw, 340px);">
                   <a
                     href={`/yazarlar/${w.slug}`}
-                    class="group flex w-full flex-col border-r border-burgundy/12 pr-5 last:border-r-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                    class="group relative flex w-full flex-col overflow-hidden rounded-[30px] border border-burgundy/12 bg-white/72 p-5 shadow-xl shadow-burgundy/6 ring-1 ring-white/70 transition hover:-translate-y-0.5 hover:border-gold/35 hover:shadow-2xl hover:shadow-burgundy/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
+                    <span class="pointer-events-none absolute inset-x-5 top-0 h-px bg-gold/55"></span>
                     {w.portrait ? (
                       <img
                         src={w.portrait}

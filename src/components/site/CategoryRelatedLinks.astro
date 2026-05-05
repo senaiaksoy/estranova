@@ -1,10 +1,7 @@
 ---
 /**
- * CategoryRelatedLinks — hub sayfalarının sonunda diğer 4 ana kategoriye
+ * CategoryRelatedLinks — hub sayfalarının sonunda diğer ana kategorilere
  * geçiş kartları. Mevcut kategori `exclude` ile hariç tutulur.
- *
- * 5 hub için tutarlı CTA. Hormonal Geçiş'in eski custom "İlgili Kategoriler"
- * bölümünün yerine bu component kullanılır.
  */
 
 interface Category {
@@ -54,25 +51,30 @@ const categories = allCategories.filter((c) => c.href !== exclude);
 
 <aside
   class:list={[
-    'rounded-[32px] border border-burgundy/12 bg-white p-8 shadow-sm ring-1 ring-black/5 md:p-10',
+    'relative overflow-hidden rounded-[38px] border border-burgundy/12 bg-gradient-to-br from-white via-cream-soft/70 to-cream-warm/55 p-8 shadow-[0_30px_96px_-60px_rgba(44,22,28,0.34)] ring-1 ring-white/75 md:p-10',
     className,
   ]}
   aria-labelledby="category-related-heading"
 >
-  <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-    İlgili Kategoriler
+  <div class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
+  <div class="pointer-events-none absolute bottom-5 right-8 font-serif text-7xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">
+    devam
+  </div>
+  <p class="relative mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+    <span class="h-px w-9 bg-gold/75"></span>
+    <span>İlgili Kategoriler</span>
   </p>
   <h2
     id="category-related-heading"
-    class="mb-6 font-serif text-3xl italic leading-tight text-burgundy-deep md:text-4xl"
+    class="relative mb-6 font-serif text-3xl italic leading-tight text-burgundy-deep md:text-4xl"
   >
     Bilgi yollarına devam et
   </h2>
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
     {categories.map((c) => (
       <a
         href={c.href}
-        class="group flex flex-col rounded-2xl border border-burgundy/15 bg-cream-soft p-5 transition hover:border-burgundy/35 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+        class="group flex flex-col rounded-[24px] border border-burgundy/12 bg-white/72 p-5 ring-1 ring-white/70 transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-white hover:shadow-[0_18px_54px_-40px_rgba(44,22,28,0.36)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
       >
         <span class="mb-2 font-serif text-lg italic leading-tight text-burgundy-deep group-hover:underline group-hover:decoration-gold group-hover:underline-offset-4">
           {c.name}

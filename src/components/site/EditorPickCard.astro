@@ -32,10 +32,11 @@ const writer = writers.find((w) => w.slug === writerSlug);
 
 <a
   href={href}
-  class="group block overflow-hidden rounded-[32px] border border-burgundy/15 bg-white shadow-[0_24px_60px_-32px_rgba(44,24,28,0.18)] ring-1 ring-black/[0.04] transition hover:border-burgundy/30 hover:shadow-[0_28px_72px_-30px_rgba(44,24,28,0.24)]"
+  class="group relative block overflow-hidden rounded-[40px] border border-burgundy/14 bg-white shadow-[0_34px_100px_-58px_rgba(44,24,28,0.38)] ring-1 ring-white/80 transition duration-300 hover:-translate-y-0.5 hover:border-gold/35 hover:shadow-[0_42px_120px_-60px_rgba(44,24,28,0.48)]"
 >
+  <div class="pointer-events-none absolute inset-x-10 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
   <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
-    <div class="relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[420px]">
+    <div class="relative aspect-[4/3] overflow-hidden rounded-b-[34px] lg:aspect-auto lg:min-h-[420px] lg:rounded-b-none lg:rounded-r-[34px]">
       <img
         src={imageSrc}
         alt={imageAlt}
@@ -43,19 +44,24 @@ const writer = writers.find((w) => w.slug === writerSlug);
         loading="lazy"
         decoding="async"
       />
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/30 via-transparent to-transparent"></div>
     </div>
-    <div class="flex flex-col justify-between gap-8 p-8 md:p-10 lg:p-12">
+    <div class="relative flex flex-col justify-between gap-8 overflow-hidden p-8 md:p-10 lg:p-12">
+      <div class="pointer-events-none absolute bottom-6 right-8 font-serif text-8xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">seçki</div>
       <div>
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-gold">{eyebrow}</p>
-        <h3 class="mb-5 font-serif text-2xl leading-tight text-ink group-hover:text-burgundy md:text-3xl">
+        <p class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-gold-bronze">
+          <span class="h-px w-9 bg-gold/75"></span>
+          <span>{eyebrow}</span>
+        </p>
+        <h3 class="mb-5 font-serif text-3xl leading-tight tracking-[-0.025em] text-ink group-hover:text-burgundy md:text-5xl">
           {title}
         </h3>
-        <p class="font-serif text-lg italic leading-relaxed text-burgundy/85 md:text-xl">
+        <p class="max-w-xl border-l-2 border-gold/55 pl-5 font-serif text-lg italic leading-relaxed text-burgundy/85 md:text-xl">
           "{lede}"
         </p>
       </div>
 
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-burgundy/12 pt-6 text-sm text-ink/70">
+      <div class="relative flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-burgundy/12 pt-6 text-sm text-ink/70">
         {
           writer && (
             <>

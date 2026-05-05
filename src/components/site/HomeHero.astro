@@ -22,16 +22,23 @@ const { hero } = Astro.props;
   <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#170f0f]/78 via-[#170f0f]/34 to-transparent"></div>
   <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#170f0f]/62 via-transparent to-transparent"></div>
   <div class="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#170f0f]/42 to-transparent"></div>
+  <div class="pointer-events-none absolute inset-x-6 top-28 z-10 hidden h-px bg-cream-soft/28 md:block"></div>
+  <div class="pointer-events-none absolute bottom-8 right-6 z-10 hidden font-serif text-[11rem] leading-none tracking-[-0.08em] text-cream-soft/10 lg:block">
+    E
+  </div>
 
   <div
     class="relative z-10 mx-auto grid min-h-[min(64vh,720px)] max-w-6xl grid-cols-1 content-end gap-10 px-6 pb-12 pt-28 md:min-h-[min(92vh,1100px)] md:content-center md:pb-16 md:pt-32 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end lg:pb-20"
   >
     <div class="max-w-3xl">
-      <p class="text-xs font-bold uppercase tracking-[0.32em] text-cream-warm/90">Estranova · 40+ Kadın Sağlığı</p>
+      <div class="mb-5 flex max-w-xl items-center gap-4">
+        <span class="h-px flex-1 bg-gold/55"></span>
+        <p class="text-xs font-bold uppercase tracking-[0.32em] text-cream-warm/90">Estranova · 40+ Kadın Sağlığı</p>
+      </div>
       <h1 id="home-hero-title" class="mt-4 font-serif text-[clamp(3.1rem,8vw,7.8rem)] leading-[0.88] tracking-[-0.055em] text-white">
         Hormonal geçişi sakin bir dergi gibi okumak
       </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/88 md:text-xl">
+      <p class="mt-6 max-w-2xl border-l border-gold/60 pl-5 font-serif text-xl italic leading-relaxed text-white/88 md:text-2xl">
         Estranova, perimenopozdan menopoz sonrasına uzanan 40+ kadın sağlığını panik diliyle değil, editoryal dikkat ve tıbbi gözden geçirme katmanıyla okur.
       </p>
       <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -50,8 +57,8 @@ const { hero } = Astro.props;
       </div>
     </div>
 
-    <aside class="hidden border-l border-cream-soft/30 pl-6 text-cream-soft/92 lg:block" aria-label="Kapak başlıkları">
-      <p class="mb-5 text-[10px] font-bold uppercase tracking-[0.32em] text-gold">Kapakta</p>
+    <aside class="hidden rounded-[34px] border border-cream-soft/24 bg-[#170f0f]/22 p-6 text-cream-soft/92 shadow-2xl shadow-black/20 backdrop-blur-md lg:block" aria-label="Kapak başlıkları">
+      <p class="mb-5 border-b border-gold/35 pb-4 text-[10px] font-bold uppercase tracking-[0.32em] text-gold">Kapakta</p>
       <nav class="space-y-5">
         <a href="/hormonal-gecis/perimenopoz" class="group block">
           <span class="block font-serif text-2xl leading-tight group-hover:underline group-hover:decoration-gold/70">Perimenopoz nerede başlar?</span>
