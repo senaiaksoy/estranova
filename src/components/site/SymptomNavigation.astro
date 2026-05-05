@@ -15,6 +15,11 @@
 
 import { symptoms } from '../../data/symptoms';
 
+interface Props {
+  sectionNumber?: string;
+}
+
+const { sectionNumber = '05' } = Astro.props;
 const featured = symptoms.filter((s) => s.featured);
 const rest = symptoms.filter((s) => !s.featured);
 ---
@@ -24,7 +29,7 @@ const rest = symptoms.filter((s) => !s.featured);
     <!-- Section header -->
     <header class="mb-10 max-w-3xl">
       <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-        <span class="font-serif font-normal tabular-nums text-gold">05</span>
+        <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
         <span class="mx-2 text-gold">—</span>
         Belirti Bazlı Navigasyon
       </p>
