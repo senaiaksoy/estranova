@@ -174,8 +174,8 @@
   --color-primary: #7a1f33;
   --color-primary-container: #9c2845;
   --color-secondary: #b07683;
-  --color-surface: #fdf8f0;
-  --color-surface-container: #f8eef0;
+  --color-surface: #fffdf9;
+  --color-surface-container: #f7f1ea;
   --color-charcoal: #1c1c19;
 
   /* Editöryal palet — 04-yonetici-default.pdf (2026-04-30).
@@ -186,8 +186,8 @@
   --color-ink: #2d2d2d;
   --color-gold: #c9a96e;
   --color-gold-bronze: #b07683;
-  --color-cream-soft: #fdf8f0;
-  --color-cream-warm: #f8eef0;
+  --color-cream-soft: #fffdf9;
+  --color-cream-warm: #f7f1ea;
 
   /* Rose kart/aksent tonları — gold geniş alan yerine yalnız süs/kanıt/sayaç rolünde kalır. */
   --color-pembe: #d4aab2;

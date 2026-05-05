@@ -18,7 +18,7 @@ const mobileLinkBase =
 <nav
   aria-label="Ana navigasyon menüsü"
   role="navigation"
-  class="fixed left-0 right-0 top-0 z-50 border-b border-primary/10 bg-[#fffaf0]/88 px-4 py-3 shadow-[0_18px_60px_-48px_rgba(44,24,28,0.72)] backdrop-blur-xl focus-within:ring-2 focus-within:ring-primary/20 md:px-6"
+  class="fixed left-0 right-0 top-0 z-50 border-b border-primary/10 bg-white/86 px-4 py-3 shadow-[0_18px_60px_-48px_rgba(44,24,28,0.72)] backdrop-blur-xl focus-within:ring-2 focus-within:ring-primary/20 md:px-6"
 >
   <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent"></div>
 
@@ -94,7 +94,7 @@ const mobileLinkBase =
                 role="group"
                 aria-label={`${item.name} alt menü`}
               >
-                <div class="overflow-hidden rounded-[26px] border border-primary/12 bg-[#fffaf0]/96 p-2 shadow-[0_28px_90px_-48px_rgba(44,24,28,0.58)] ring-1 ring-white/80 backdrop-blur-md">
+                <div class="overflow-hidden rounded-[26px] border border-primary/12 bg-white/96 p-2 shadow-[0_28px_90px_-48px_rgba(44,24,28,0.58)] ring-1 ring-white/80 backdrop-blur-md">
                   {
                     item.children.map((child) => {
                       const subActive =
@@ -204,7 +204,7 @@ const mobileLinkBase =
 
     <div
       id="mobile-menu"
-      class="absolute left-0 right-0 top-full hidden max-h-[min(80vh,560px)] flex-col gap-2 overflow-y-auto border-y border-primary/10 bg-[#fffaf0]/98 p-3 shadow-xl backdrop-blur-md lg:hidden"
+      class="absolute left-0 right-0 top-full hidden max-h-[min(80vh,560px)] flex-col gap-2 overflow-y-auto border-y border-primary/10 bg-white/98 p-3 shadow-xl backdrop-blur-md lg:hidden"
       role="menu"
       aria-hidden="true"
     >
