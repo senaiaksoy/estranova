@@ -29,6 +29,9 @@ const tocEntries = [
   { id: 'kemik-sagligi', label: 'Kemik Sağlığı' },
   { id: 'erken-menopoz-penceresi', label: 'Erken Menopoz Penceresi' },
   { id: 'kalp-ve-metabolizma', label: 'Kalp ve Metabolizma' },
+  { id: 'kilo-ve-vucut-kompozisyonu', label: 'Kilo ve Vücut Kompozisyonu' },
+  { id: 'cilt-ve-sac', label: 'Cilt ve Saç' },
+  { id: 'anti-aging-ve-iyi-olus', label: 'Anti-aging ve İyi Oluş' },
   { id: 'herkes-icin-ayni-degil', label: 'Herkes İçin Aynı Değil' },
   { id: 'gorusmede-sorular', label: 'Görüşmede Sorular' },
   { id: 'kapanis', label: 'Kapanış' },
@@ -57,6 +60,12 @@ const articleSchemas = buildArticleSchemas({
     'vajinal kuruluk',
     'erken menopoz',
     'yaşam kalitesi',
+    'kilo artışı',
+    'bel çevresi',
+    'vücut kompozisyonu',
+    'cilt sağlığı',
+    'saç dökülmesi',
+    'anti-aging',
   ],
   faqItems,
   siteUrl,
@@ -82,7 +91,14 @@ const articleSchemas = buildArticleSchemas({
 
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="6 Mayıs 2026" readingMinutes={11} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        publishedDate="6 Mayıs 2026"
+        readingMinutes={11}
+        imageSrc="/images/library/editorial/senai-hrt-meme-kanseri-hero.webp"
+        imageAlt="Krem tonlarda giyinmiş, düşünceli ifadesiyle pencereden ışık alan zarif bir kadın portresi."
+        imagePosition="center top"
+      />
 
       <ArticleSummary title="Kısa Özet">
         <p>
@@ -91,9 +107,13 @@ const articleSchemas = buildArticleSchemas({
           <Evidence level={5} />. Vajinal kuruluk, ilişki sırasında rahatsızlık ve bazı idrar yolu yakınmaları
           için de önemli bir yarar alanı vardır; burada lokal östrojen seçenekleri ayrıca güçlü bir yere sahiptir
           <Evidence from={4} to={5} />. Kemik kaybını yavaşlatma ve erken menopozda daha geniş koruyucu bir
-          pencere sağlama tarafında da veri güçlüdür <Evidence level={5} />. Buna karşılık kalp-damar, ruh hali
-          ya da bilişsel faydalar gibi başlıklarda cümle daha temkinli kurulmalıdır: zamanlama önemli, herkes için
-          aynı sonuç beklenmez ve her fayda aynı netlikte kanıtlanmış değildir.
+          pencere sağlama tarafında da veri güçlüdür <Evidence level={5} />. Kilo artışını doğrudan tersine çeviren
+          bir tedavi gibi sunulmasa da, bazı kadınlarda yağ dağılımı ve bel çevresi üzerindeki menopoz ilişkili kaymayı
+          daha nötr hale getirebilir <Evidence level={3} />. Cilt kuruluğu, doku kalınlığı ve saç
+          kalitesindeki değişimler açısından ise bazı kadınlarda destekleyici bir etki görülebilir; fakat burada
+          kanıt daha sınırlıdır ve “gençleştirici” vaat dili doğru olmaz <Evidence level={2} />. Buna karşılık
+          kalp-damar, ruh hali, genel iyi oluş ya da bilişsel faydalar gibi başlıklarda cümle daha temkinli
+          kurulmalıdır: zamanlama önemli, herkes için aynı sonuç beklenmez ve her fayda aynı netlikte kanıtlanmış değildir.
         </p>
       </ArticleSummary>
 
@@ -232,6 +252,80 @@ const articleSchemas = buildArticleSchemas({
           başlanan tedavi ile daha geç dönemde, farklı riskleri olan bir kadındaki tablo aynı değildir.
         </p>
 
+        <h2 id="kilo-ve-vucut-kompozisyonu">Kilo ve vücut kompozisyonu tarafında HRT ne kadar fark yaratabilir?</h2>
+        <p>
+          Bu, birçok kadının aklındaki en pratik soru; ama cevabı ne yazık ki tek kelimelik değil.
+        </p>
+        <p>
+          HRT’yi “zayıflatan” bir tedavi gibi anlatmak doğru olmaz. Doğrudan kilo verdiren, tartıyı aşağı çeken ya da
+          diyetin yerini alan bir etkiden söz etmiyoruz. Ama menopozla birlikte görülen <strong>yağın bel çevresine
+          kayması</strong>, visseral yağ artışı ve vücut kompozisyonundaki sessiz değişimler açısından bazı kadınlarda
+          daha nötr bir tablo sağlayabileceğini düşündüren veriler var <Evidence level={3} />.
+        </p>
+        <p>
+          Bu fark çoğu zaman tartıda büyük bir sayı olarak değil, yağın nereye yerleştiği ve bedenin kendini nasıl
+          taşıdığı üzerinden konuşulur. Menopoz döneminde östrojen düşüşüyle birlikte yağ dağılımı alt bedenden karın
+          çevresine kayma eğilimindedir. HRT bu kaymayı bazı kadınlarda kısmen yumuşatabilir gibi görünür; ancak etkisi
+          yaşam tarzı, kas kütlesi, uyku, stres ve başlangıçtaki metabolik tabloyla birlikte düşünülmelidir.
+        </p>
+        <p>
+          Daha dürüst cümle şu olur: HRT, kilo yönetiminin ana aracı değildir; ama doğru kişide menopozun vücut
+          kompozisyonu üzerindeki bazı zorlayıcı etkilerini hafifletmeye katkı sağlayabilir. Eğer kadın daha iyi
+          uyuyorsa, daha az vazomotor yük yaşıyorsa, gün içi hareketini geri kazanıyorsa ve bedenini daha az yorgun
+          hissediyorsa, bunun kilo ve bel çevresi yönetimine dolaylı bir katkısı da olabilir <Evidence level={3} />.
+        </p>
+        <p>
+          Yani burada asıl başlık “kaç kilo verdirdi?” değil, “menopozun metabolik sürtünmesini biraz azalttı mı?”
+          olmalıdır. Bu fark küçük görünebilir; ama birçok kadın için daha sürdürülebilir olan tam da bu daha sakin
+          metabolik zemindir.
+        </p>
+
+        <h2 id="cilt-ve-sac">Cilt ve saç sağlığı tarafında gerçekten bir avantaj var mı?</h2>
+        <p>
+          Bu başlık çok ilgi görüyor; ama ne yazık ki en kolay reklam diline kayan alanlardan biri de yine burası.
+        </p>
+        <p>
+          Östrojen, cilt kalınlığı, nem dengesi, kolajen düzeni ve saç folikül çevresindeki biyolojiyle ilişkilidir.
+          Bu nedenle bazı kadınlarda menopozla birlikte belirginleşen <strong>cilt kuruluğu</strong>, daha ince doku
+          hissi, elastikiyet kaybı ya da saç telinde cansızlaşma HRT ile bir miktar yumuşayabilir <Evidence level={2} />.
+          Özellikle ciltte su tutma, bariyer hissi ve genel konfor tarafında bazı olumlu değişimler bildiren veriler var;
+          ancak bu veriler kemik ve vazomotor belirti kadar güçlü değil.
+        </p>
+        <p>
+          Saç tarafında da tablo benzer. Menopoz döneminde saç teli incelmesi, hacim kaybı ve dökülme artışı çoğu zaman
+          yalnızca hormona bağlanmaz; demir depoları, tiroid, stres yükü, genetik eğilim ve beslenme de aynı resimdedir.
+          Bu yüzden HRT bazı kadınlarda saç kalitesine dolaylı destek sağlayabilir gibi görünse de bunu güvenilir bir
+          “saç dökülmesini çözer” cümlesine çevirmek doğru olmaz <Evidence level={2} />.
+        </p>
+        <p>
+          Daha dürüst okuma şu olabilir: HRT, cilt ve saçta menopozla ilişkili bazı değişimleri <em>bazı kadınlarda</em>
+          daha yumuşak hale getirebilir; ama bu etki ikincil bir kazançtır. Birincil karar gerekçesi hâlâ sıcak basması,
+          uyku bölünmesi, vajinal yakınmalar, kemik sağlığı ve erken menopoz gibi daha net alanlardır.
+        </p>
+
+        <h2 id="anti-aging-ve-iyi-olus">Genel anti-aging ve iyi oluş etkisi nasıl değerlendirilmeli?</h2>
+        <p>
+          “Anti-aging” kelimesi kulağa güçlü geliyor; ama tıbbi kararları çoğu zaman gereğinden parlak bir dile itiyor.
+        </p>
+        <p>
+          HRT bir gençlik serumu ya da biyolojik saati geri saran bir yaklaşım değildir. Daha doğru cümle şudur:
+          doğru kişide kullanıldığında, menopozun bazı yıpratıcı sonuçlarını azaltarak kadının <strong>daha iyi olma
+          hissine</strong> katkıda bulunabilir. Bu katkı çoğu zaman daha iyi uyku, daha az vazomotor yük, cinsellikte
+          daha fazla konfor, bedenle daha az sürtüşme ve günlük ritimde biraz daha az kırılganlık olarak hissedilir
+          <Evidence level={3} />.
+        </p>
+        <p>
+          Yani “well-being” etkisi varsa, çoğu zaman doğrudan değil dolaylıdır. Kadın daha az terleyip daha iyi uyuduğunda,
+          eklemekte zorlandığı sosyal ritme biraz daha kolay döndüğünde, bedenine yabancılaşması azaldığında bu genel iyi
+          oluş hissi büyür. Ama bunu herkeste aynı tonda, aynı hızda ve aynı genişlikte beklemek doğru olmaz.
+        </p>
+        <p>
+          Anti-aging dilinde en çok kaçırılan nokta da bu: HRT bazı sistemlerde destek sağlayabilir, ama onu yaşlanmayı
+          durduran bir proje gibi sunmak hem bilimsel olarak zayıf hem de Estranova çizgisine göre fazla iddialı olur.
+          Daha sakin ve doğru olan, bu tedavinin bazı kadınlarda daha iyi yaş alma deneyimine katkı verebileceğini; ama
+          bunun hedefi “genç görünmek” değil, daha az zorlanmak olduğunu söylemektir.
+        </p>
+
         <h2 id="herkes-icin-ayni-degil">Bu avantajlar neden herkes için aynı anlama gelmiyor?</h2>
         <p>
           HRT’nin avantajları güçlü olabilir; ama “avantaj var” demek “herkes için uygun” demek değildir.
@@ -296,6 +390,8 @@ const articleSchemas = buildArticleSchemas({
           '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
           '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
           '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski',
+          '/zamansiz-yasam/kilo-artisi-menopoz',
+          '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
         ]}
       />
 
@@ -315,8 +411,8 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             <strong class="text-burgundy">Daha temkinli alan:</strong> Ruh hali, bilişsel canlılık, kalp-damar sistemi
-            ve metabolik iyilik gibi başlıklarda sonuçlar daha seçicidir. Burada yaş, zamanlama, uygulama yolu ve eşlik
-            eden riskler cümlenin rengini değiştirir.
+            ve metabolik iyilik gibi başlıklarda sonuçlar daha seçicidir. Kilo ve vücut kompozisyonu, cilt, saç ve genel
+            anti-aging iddiaları da bu daha temkinli kümeye girer. Burada yaş, zamanlama, uygulama yolu ve eşlik eden riskler cümlenin rengini değiştirir.
           </p>
           <p>
             <strong class="text-burgundy">Pratik sonuç:</strong> Fayda kararı hiçbir zaman “herkese iyi gelir” gibi

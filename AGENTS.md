@@ -169,6 +169,10 @@ The archive section should start directly with the small uppercase label `Aynı 
 Submenu content should be data-led where possible:
 - Prefer `src/data/static-articles.ts` for article lists and ordering.
 - Prefer `src/data/submenu-heroes.ts` for article and hub imagery.
+- Treat imagery as three independent surfaces: top `SubmenuHero`, sub-hub latest/archive card image, and article-page `ArticleAuthorBlock` image.
+- Default user-supplied article image behavior: unless the user explicitly says "makale hero görseli de değişsin", do **not** add or overwrite that article route in `submenuHeroByRoute`. Use the supplied image only for the sub-hub card (`articleCardImageByRoute`) and the in-article author/byline visual (`ArticleAuthorBlock imageSrc`).
+- If only the sub-hub `Son yazı` / archive card image should change, do **not** overwrite the page hero in `submenuHeroByRoute`; register a separate card image mapping in `src/data/submenu-heroes.ts` (`articleCardImageByRoute`).
+- If only the article-page author card image should change, pass `imageSrc` / `imageAlt` / `imagePosition` directly to `ArticleAuthorBlock`; this must not force a `SubmenuHero` change.
 - Keep manual `editorPick` objects only when there is a clear editorial reason.
 - Do not link to article routes that do not exist in `src/pages/`.
 
@@ -192,7 +196,7 @@ The visual shell is **not** optional for new `.astro` articles under `src/pages/
 2. **`SubmenuArticleBody`** — wraps the column under the hero: gradient background, responsive grid (sticky TOC on `lg+` if `slot="toc"` present), spacing. Replace ad-hoc `<article class="px-6 py-16">` + inner wrappers with this.
 3. **Inside the body (typical order):**
    - **`ArticleTOC`** (optional, recommended for articles with 5+ H2's) — `<ArticleTOC slot="toc" entries={tocEntries} />` right after `<SubmenuArticleBody>` open. Renders as narrow sticky sidebar with two-digit numbered index (`01`, `02`…). Entries must match H2 `id` attributes in the body.
-   - **`ArticleAuthorBlock`** — `authorSlug` (from `src/data/writers.ts`) + `publishedDate` + `readingMinutes`. Resolves writer portrait, role and medical reviewer line.
+   - **`ArticleAuthorBlock`** — `authorSlug` (from `src/data/writers.ts`) + `publishedDate` + `readingMinutes`. Resolves writer portrait, role and medical reviewer line. When an article needs a dedicated byline visual, pass `imageSrc` / `imageAlt` / `imagePosition` here; this image is independent from both `SubmenuHero` and sub-hub card imagery. If a user supplies a new article image without explicitly asking for the top hero to change, place it here and in `articleCardImageByRoute`, not in `submenuHeroByRoute`.
    - **`ArticleSummary`** — every static article starts its reading flow with this component for **Kısa Özet** / quick answer. Do not hand-roll a per-page gold summary `<section>`; use `<ArticleSummary><p>…</p></ArticleSummary>` so the premium Vogue/TR summary card stays consistent.
    - Main text: **`ArticleProsePanel`** only — do **not** put `prose` on a bare `<section>`; the panel supplies the white card + typography.
    - Extra prose blocks (e.g. “Kısa Hatırlatma”): second **`ArticleProsePanel`** with `class="mt-10"` (and more if needed).

@@ -396,6 +396,12 @@ Zorunlu yapı:
 
 `src/data/writers.ts` içindeki yazar profilinden çekilir. Manuel girme; sadece `slug` ile referans. Component otomatik render eder (display name, bio, avatar, link).
 
+Görsel yüzey ayrımı zorunludur:
+- `ArticleAuthorBlock` yanında görünen byline görseli, üstteki `SubmenuHero` görselinden bağımsızdır.
+- Makale için özel bir byline görseli gerekiyorsa `imageSrc`, `imageAlt`, gerekirse `imagePosition` prop'ları burada verilir.
+- Bu tercih sub-hub `Son yazı` kartını veya üst hero'yu otomatik değiştirmez.
+- Kullanıcının verdiği makale görseli için varsayılan şablon: üst hero aynı kalır; görsel yalnızca `ArticleAuthorBlock` byline yüzeyinde ve sub-hub kartında (`articleCardImageByRoute`) kullanılır. Üst hero ancak kullanıcı açıkça "makale hero görseli değişsin" derse `submenuHeroByRoute` üzerinden değiştirilir.
+
 ### 4.5 RelatedReadings
 
 3-5 link. Aynı kategoriden + komşu kategoriden. CrosslinkRules: `feedback_article_hub_linking_rule.md` (memory):
@@ -408,6 +414,12 @@ Zorunlu yapı:
 - Önce vault katalog (`reference_vault_media_catalog.md`)
 - Eşleşme yoksa konsept-odaklı yükleme isteği (kullanıcıya)
 - 12 Türk kadın arketip çerçevesi (`reference_archetype_framework.md`) — tek yüz tekrarını kır
+
+Hero ve kart görselleri aynı yüzey değildir:
+- Üstteki sayfa hero görseli `src/data/submenu-heroes.ts` içindeki `submenuHeroByRoute` ile yönetilir.
+- Sub-hub sayfalarında `Son yazı` ve arşiv kartları için farklı bir görsel kullanılacaksa ayrı kart eşlemesi kullanılır (`articleCardImageByRoute`).
+- Sadece kart görseli değişecekse `submenuHeroByRoute` güncellenmez; aksi halde makale sayfasındaki üst hero da istenmeden değişir.
+- Yazıya özel verilen görsel için güvenli varsayılan iki yüzeydir: `ArticleAuthorBlock imageSrc` + `articleCardImageByRoute[path]`. Bu ikili, makale hero'sunu bölüm kimliğinde tutarken arşiv/kart okunurluğunu ve yazı içi editoryal görseli günceller.
 
 ### 4.7 JSON-LD (zorunlu — non-optional)
 

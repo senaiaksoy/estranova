@@ -8,6 +8,11 @@ export interface SubmenuHeroImage {
   alt: string;
 }
 
+export interface ArticleCardImage {
+  src: string;
+  alt: string;
+}
+
 /** Ana sayfa kahraman görseli (lüks editoryal şehirli eşik anı — 2026-05-06 update). */
 export const homePageHero: SubmenuHeroImage = {
   src: '/images/hero/home-hero-luxury-editorial.webp',
@@ -235,10 +240,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/senai-hrt-meme-kanseri-hero.webp',
     alt: 'Krem tonlarda giyinmiş, düşünceli ifadesiyle pencereden ışık alan zarif bir kadın portresi; hormon tedavisi ve meme kanseri riski başlığını sakin, dikkatli ve editoryal bir tonla düşünme temasını taşır',
   },
-  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': {
-    src: '/images/library/editorial/senai-hrt-meme-kanseri-hero.webp',
-    alt: 'Pencereden yumuşak gün ışığı alan zarif bir kadın portresi; menopozda hormon tedavisinin avantajlarını sakin, dikkatli ve editoryal bir bakışla değerlendirme teması',
-  },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
     alt: 'Güneş alan ev balkonunda taze otlar ve sade beslenme hazırlığıyla ilgilenen yaşıt kadın; menopozal kilo, metabolik sağlık ve yeni ilaç sınıflarını dengeli değerlendirme teması',
@@ -253,6 +254,13 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
 };
 
+export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': {
+    src: '/images/library/editorial/senai-hrt-meme-kanseri-hero.webp',
+    alt: 'Krem tonlarda giyinmiş, düşünceli ifadesiyle pencereden ışık alan zarif bir kadın portresi; HRT avantajları yazısı için editoryal kart görseli',
+  },
+};
+
 export function normalizePathname(pathname: string): string {
   if (!pathname || pathname === '/') return pathname;
   return pathname.replace(/\/$/, '') || '/';
@@ -261,4 +269,9 @@ export function normalizePathname(pathname: string): string {
 export function getSubmenuHeroImage(pathname: string): SubmenuHeroImage | undefined {
   const p = normalizePathname(pathname);
   return submenuHeroByRoute[p];
+}
+
+export function getArticleCardImage(pathname: string): ArticleCardImage | undefined {
+  const p = normalizePathname(pathname);
+  return articleCardImageByRoute[p];
 }

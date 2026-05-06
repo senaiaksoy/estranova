@@ -12,7 +12,7 @@ import ChapterCompass from './ChapterCompass.astro';
 import SubHubLatestStrip from './SubHubLatestStrip.astro';
 import SubHubArchiveIndex from './SubHubArchiveIndex.astro';
 import type { SubHubConfig } from '../../data/sub-hubs';
-import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { articleCardImageByRoute, submenuHeroByRoute } from '../../data/submenu-heroes';
 import { staticArticles } from '../../data/static-articles';
 import { chapterMap, getNextChapter } from '../../data/chapter-map';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
@@ -58,7 +58,7 @@ const archiveArticles = articles.slice(1);
 const archiveEyebrow = exactArticles.length > 0 ? 'Aynı dosyada' : 'Aynı bölümde';
 
 const toSubHubArticle = (article: (typeof staticArticles)[number]) => {
-  const image = submenuHeroByRoute[article.path] ?? hero;
+  const image = articleCardImageByRoute[article.path] ?? submenuHeroByRoute[article.path] ?? hero;
 
   return {
     href: article.path,
