@@ -197,6 +197,28 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'En doğru soru genellikle “Hangi somut hedef için düşünüyorum ve bunun için daha kanıtlı bir seçenek var mı?” olur. Hedef netleşmeden takviyeye yönelmek çoğu zaman beklentiyi üründen büyük yapar.',
     },
   ],
+  '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz': [
+    {
+      question: 'Peptid denince neden tek bir ürün grubundan söz edemiyoruz?',
+      answer:
+        'Çünkü bu başlık altında iştah-metabolizma hattından yara iyileşmesi, kas toparlanması ve anti-aging iddialarına kadar çok farklı moleküller dolaşıyor. Aynı şemsiye altında anılsalar da etki mekanizması, klinik veri kalitesi ve güvenlik tablosu birbirinden belirgin biçimde ayrılıyor.',
+    },
+    {
+      question: 'Menopozda peptidler kilo kaybı veya kas korunması için kanıtlı bir seçenek midir?',
+      answer:
+        'Bu sorunun yanıtı peptidin hangisi olduğuna göre değişir; hepsini aynı cümleyle değerlendirmek doğru olmaz. GLP-1 hattında daha belirgin insan verisi varken, GLP-1 dışındaki birçok peptidde menopoz özelinde veri az, genel kullanım verisi ise sınırlı veya pazarlama etkisiyle şişirilmiş olabilir.',
+    },
+    {
+      question: 'BPC-157, thymosin beta-4 ya da ipamorelin gibi isimlerde en büyük belirsizlik nedir?',
+      answer:
+        'En büyük belirsizlik, erken dönem mekanizma ilgisinin gerçek klinik fayda ve uzun dönem güvenlik verisiyle yeterince desteklenmemesidir. Ürün standardı, içerik doğruluğu ve hangi hasta grubunda ne kadar işe yaradığı gibi temel sorular çoğu zaman hâlâ açık kalır.',
+    },
+    {
+      question: 'Bir peptid iddiasını reklam dili olmadan değerlendirmek için ilk bakılacak şey nedir?',
+      answer:
+        'Önce hangi sonucun gerçekten ölçüldüğüne bakmak gerekir: kilo, kas gücü, doku onarımı, ağrı ya da yalnızca laboratuvar göstergesi mi? Ardından bu sonucun insan çalışmasıyla mı, küçük pilot verilerle mi, yoksa yalnızca teorik biyoloji anlatısıyla mı desteklendiğini ayırmak sakin bir başlangıç sağlar.',
+    },
+  ],
   '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi': [
     {
       question: 'Sıcak basması yalnızca yüz kızarması mıdır?',
