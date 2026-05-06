@@ -3,13 +3,14 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-const sitemapExcludedPaths = new Set([
+const sitemapExcludedPaths = [
+  '/hesabim',
   '/giris',
   '/abone-ol',
   '/mektup',
   '/okuma-paneli',
   '/sonra-oku',
-]);
+];
 
 // https://astro.build/config
 export default defineConfig({
@@ -48,9 +49,12 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         if (page.includes('/admin') || page.includes('/_')) return false;
-
-        const url = new URL(page);
-        return !sitemapExcludedPaths.has(url.pathname.replace(/\/$/, ''));
+        return !sitemapExcludedPaths.some(
+          (excludedPath) =>
+            page === excludedPath ||
+            page.endsWith(excludedPath) ||
+            page.includes(`${excludedPath}/`)
+        );
       },
       changefreq: 'weekly',
       priority: 0.7,
