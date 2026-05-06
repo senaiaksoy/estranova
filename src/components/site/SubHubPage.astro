@@ -1,0 +1,213 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from './SiteNavbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import SubmenuHero from './SubmenuHero.astro';
+import SubmenuSection from './SubmenuSection.astro';
+import ChapterMasthead from './ChapterMasthead.astro';
+import EditorialEpigraph from './EditorialEpigraph.astro';
+import MarginaliaRail from './MarginaliaRail.astro';
+import MarginaliaItem from './MarginaliaItem.astro';
+import ChapterCompass from './ChapterCompass.astro';
+import SubHubLatestStrip from './SubHubLatestStrip.astro';
+import SubHubArchiveIndex from './SubHubArchiveIndex.astro';
+import type { SubHubConfig } from '../../data/sub-hubs';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { staticArticles } from '../../data/static-articles';
+import { chapterMap, getNextChapter } from '../../data/chapter-map';
+import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
+import { toISODate } from '../../utils/article-schema';
+
+interface Props {
+  config: SubHubConfig;
+}
+
+const { config } = Astro.props;
+const hero = submenuHeroByRoute[config.path]!;
+const chapter = chapterMap[config.path]!;
+const epigraph = subHubEpigraphs[config.path];
+const next = getNextChapter(config.path);
+const sectionPath = `/${config.path.split('/')[1]}`;
+const sectionLabel = chapter.parent;
+const hubLabel = chapter.chapter;
+
+const readingMinutesByPath: Record<string, number> = {
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski': 10,
+  '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': 11,
+  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi': 9,
+  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': 9,
+};
+
+const newestFirst = (a: (typeof staticArticles)[number], b: (typeof staticArticles)[number]) =>
+  toISODate(b.publishedDate).localeCompare(toISODate(a.publishedDate));
+
+const configuredPathSet = new Set(config.articlePaths ?? []);
+const exactArticles = staticArticles
+  .filter((article) =>
+    configuredPathSet.size > 0 ? configuredPathSet.has(article.path) : article.path.startsWith(`${config.path}/`),
+  )
+  .sort(newestFirst);
+
+const broaderArchive = staticArticles
+  .filter((article) => article.sectionPath === sectionPath && !exactArticles.some((item) => item.path === article.path))
+  .sort(newestFirst);
+
+const articles = exactArticles.length > 0 ? exactArticles : broaderArchive.slice(0, 8);
+const latestArticle = articles[0];
+const archiveArticles = articles.slice(1);
+const archiveEyebrow = exactArticles.length > 0 ? 'Aynı dosyada' : 'Aynı bölümde';
+
+const toSubHubArticle = (article: (typeof staticArticles)[number]) => {
+  const image = submenuHeroByRoute[article.path] ?? hero;
+
+  return {
+    href: article.path,
+    title: article.title,
+    excerpt: article.description,
+    writerSlug: article.writerSlug,
+    readingMinutes: readingMinutesByPath[article.path] ?? 9,
+    publishedDate: article.publishedDate,
+    keywords: article.keywords,
+    image,
+  };
+};
+
+const latest = latestArticle ? toSubHubArticle(latestArticle) : undefined;
+const archiveItems = archiveArticles.map(toSubHubArticle);
+const siblings = Object.values(chapterMap).filter(
+  (entry) => entry.parent === chapter.parent && entry.href !== config.path,
+);
+---
+
+<SiteLayout title={config.siteTitle} description={config.description}>
+  <SiteNavbar currentPath={sectionPath} />
+
+  <main id="main-content" class="text-ink">
+    <ChapterMasthead number={chapter.number} parent={chapter.parent} chapter={chapter.chapter} />
+
+    <SubmenuHero
+      eyebrow={config.heroEyebrow}
+      title={config.heroTitle}
+      lede={config.heroLede}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+    />
+
+    <section class="border-b border-burgundy/10 bg-[#fffaf0] px-6 py-14 md:py-16">
+      <div class="mx-auto max-w-6xl">
+        <nav class="mb-8 text-sm text-ink/60" aria-label="İçerik yolu">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a href={sectionPath} class="font-medium text-burgundy hover:underline">{sectionLabel}</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="font-medium text-ink">{hubLabel}</li>
+          </ol>
+        </nav>
+
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14">
+          <div class="lg:col-span-8">
+            <p class="editorial-dropcap mb-7 text-lg leading-relaxed text-ink/85 md:text-xl">
+              {config.description}
+            </p>
+            <p class="text-base leading-relaxed text-ink/72 md:text-lg">
+              En yeni yazı küçük bir seçki olarak görünür; önceki okumalar ise hızlı taranabilen bir dosya indeksi içinde tutulur.
+            </p>
+          </div>
+
+          <div class="lg:col-span-4 lg:pt-1">
+            <MarginaliaRail>
+              <MarginaliaItem
+                label="Dosya"
+                value={`${articles.length} yazı yayında · Yeni içerikler editoryal takvimle eklenir`}
+              />
+              <MarginaliaItem label="Okuma ritmi" emphasized="Güncel yazı üstte; önceki başlıklar indeks mantığıyla taranır." />
+              <MarginaliaItem label="Bu bölümde">
+                <ul class="mt-2 space-y-3 text-sm leading-snug text-ink/78">
+                  <li><span class="block font-semibold text-ink">Güncel okuma</span>Dosyanın en yeni yazısı kısa bir seçki olarak öne çıkar.</li>
+                  <li><span class="block font-semibold text-ink">Arşiv indeksi</span>Önceki yazılar numaralı dizinle daha hızlı bulunur.</li>
+                  <li><span class="block font-semibold text-ink">Komşu başlıklar</span>Aynı ana kategorideki diğer yollar sayfanın sonunda kalır.</li>
+                </ul>
+              </MarginaliaItem>
+            </MarginaliaRail>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {epigraph && <EditorialEpigraph quote={epigraph} />}
+
+    {
+      latest && (
+        <SubmenuSection variant="white" borderedTop={true} class="!py-10 md:!py-12">
+          <header class="mb-5 grid gap-4 lg:grid-cols-[0.42fr_1.58fr] lg:items-end">
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Son yazı</p>
+            <div>
+              <h2 class="font-serif text-3xl leading-tight text-ink md:text-4xl">Bu dosyadan yeni okuma</h2>
+              <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink/68 md:text-base">
+                En yeni yazı yalnızca ritmi belirler; sayfanın ana ağırlığı taranabilir arşivde kalır.
+              </p>
+            </div>
+          </header>
+
+          <SubHubLatestStrip
+            href={latest.href}
+            title={latest.title}
+            excerpt={latest.excerpt}
+            writerSlug={latest.writerSlug}
+            readingMinutes={latest.readingMinutes}
+            publishedDate={latest.publishedDate}
+            imageSrc={latest.image.src}
+            imageAlt={latest.image.alt}
+          />
+        </SubmenuSection>
+      )
+    }
+
+    {
+      archiveItems.length > 0 && (
+        <SubmenuSection variant="cream" borderedTop={true} class="!py-12 md:!py-14">
+          <header class="mb-5">
+            <h2 class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">{archiveEyebrow}</h2>
+          </header>
+
+          <SubHubArchiveIndex items={archiveItems} startAt={2} initialVisible={8} />
+        </SubmenuSection>
+      )
+    }
+
+    {
+      siblings.length > 0 && (
+        <SubmenuSection variant="cream" borderedTop={false}>
+          <header class="mb-10 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Aynı kategoride</p>
+            <h2 class="font-serif text-4xl leading-tight text-ink md:text-5xl">İlgili alt başlıklar</h2>
+          </header>
+          <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
+            {siblings.map((sibling, index) => (
+              <a
+                href={sibling.href}
+                class="group grid gap-5 py-7 transition hover:bg-white/58 md:grid-cols-[88px_1fr_auto] md:items-center md:py-8"
+              >
+                <span class="font-serif text-3xl italic text-gold">{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3 class="mb-2 font-serif text-3xl leading-tight text-ink group-hover:text-burgundy">
+                    {sibling.chapter}
+                  </h3>
+                  <p class="max-w-2xl text-sm leading-relaxed text-ink/72">
+                    {sibling.parent} içinde bir sonraki okuma rotası.
+                  </p>
+                </div>
+                <span class="text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            ))}
+          </div>
+        </SubmenuSection>
+      )
+    }
+
+    <ChapterCompass nextHref={next?.href} nextNumber={next?.number} nextChapter={next?.chapter} nextParent={next?.parent} />
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

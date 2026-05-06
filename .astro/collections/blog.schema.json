@@ -17,6 +17,12 @@
         "type": "string"
       }
     },
+    "imageSrc": {
+      "type": "string"
+    },
+    "imageAlt": {
+      "type": "string"
+    },
     "writerSlug": {
       "type": "string"
     },

@@ -9,9 +9,9 @@ interface Props {
   readingMinutes: number;
   imageSrc: string;
   imageAlt: string;
-  /** Eyebrow label — sub-hub'a göre varyant. Default: "Sayının Açılışı" */
+  /** Eyebrow label — sub-hub'a göre varyant. Default: "Son okuma" */
   eyebrow?: string;
-  /** CTA metni — default: "Okumaya başla" */
+  /** CTA metni — default: "Yazıyı oku" */
   cta?: string;
 }
 
@@ -23,8 +23,8 @@ const {
   readingMinutes,
   imageSrc,
   imageAlt,
-  eyebrow = 'Sayının Açılışı',
-  cta = 'Okumaya başla',
+  eyebrow = 'Son okuma',
+  cta = 'Yazıyı oku',
 } = Astro.props;
 
 const writer = writers.find((w) => w.slug === writerSlug);
@@ -32,12 +32,11 @@ const writer = writers.find((w) => w.slug === writerSlug);
 
 <a
   href={href}
-    class="group relative block overflow-hidden rounded-[44px] border border-burgundy/14 bg-white shadow-[0_38px_120px_-70px_rgba(44,24,28,0.42)] ring-1 ring-black/[0.05] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_48px_140px_-72px_rgba(44,24,28,0.50)]"
+  class="group relative block overflow-hidden rounded-[30px] border border-burgundy/14 bg-white shadow-[0_28px_92px_-68px_rgba(44,24,28,0.38)] ring-1 ring-black/[0.05] transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-[0_36px_112px_-76px_rgba(44,24,28,0.46)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
 >
-  <div class="pointer-events-none absolute inset-x-10 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/85 to-transparent"></div>
-  <div class="pointer-events-none absolute -left-16 top-10 h-44 w-44 rounded-full bg-gold/10 blur-3xl"></div>
-  <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
-    <div class="relative aspect-[4/3] overflow-hidden rounded-b-[36px] lg:aspect-auto lg:min-h-[440px] lg:rounded-b-none lg:rounded-r-[36px]">
+  <div class="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/85 to-transparent"></div>
+  <div class="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr]">
+    <div class="relative aspect-[4/3] overflow-hidden rounded-b-[26px] lg:aspect-auto lg:min-h-[320px] lg:rounded-b-none lg:rounded-r-[26px]">
       <img
         src={imageSrc}
         alt={imageAlt}
@@ -45,28 +44,28 @@ const writer = writers.find((w) => w.slug === writerSlug);
         loading="lazy"
         decoding="async"
       />
-      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/48 via-[#1c1412]/5 to-transparent"></div>
-      <div class="absolute left-6 top-6 rounded-full border border-white/35 bg-white/18 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-white shadow-sm backdrop-blur-md">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/44 via-[#1c1412]/8 to-transparent"></div>
+      <div class="absolute left-5 top-5 rounded-full border border-white/35 bg-white/18 px-3.5 py-2 text-[0.62rem] font-bold uppercase tracking-[0.22em] text-white shadow-sm backdrop-blur-md">
         Kapak Seçkisi
       </div>
-      <div class="pointer-events-none absolute inset-x-8 bottom-8 h-px bg-gradient-to-r from-white/70 via-gold/70 to-transparent"></div>
+      <div class="pointer-events-none absolute inset-x-6 bottom-6 h-px bg-gradient-to-r from-white/70 via-gold/70 to-transparent"></div>
     </div>
-    <div class="relative flex flex-col justify-between gap-9 overflow-hidden p-8 md:p-10 lg:p-12">
-      <div class="pointer-events-none absolute -right-3 bottom-4 font-serif text-8xl italic leading-none text-burgundy/[0.04] md:text-9xl" aria-hidden="true">seçki</div>
+    <div class="relative flex flex-col justify-between gap-7 overflow-hidden p-7 md:p-9 lg:p-10">
+      <div class="pointer-events-none absolute -right-3 bottom-4 font-serif text-7xl italic leading-none text-burgundy/[0.035] md:text-8xl" aria-hidden="true">seçki</div>
       <div>
-        <p class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-gold-bronze">
+        <p class="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-gold-bronze">
           <span class="h-px w-9 bg-gold/75"></span>
           <span>{eyebrow}</span>
         </p>
-        <h3 class="mb-6 max-w-[11ch] font-serif text-4xl leading-[0.96] tracking-[-0.035em] text-ink transition group-hover:text-burgundy md:text-6xl">
+        <h3 class="mb-5 max-w-3xl font-serif text-3xl leading-tight text-ink transition group-hover:text-burgundy md:text-5xl">
           {title}
         </h3>
-        <p class="max-w-xl border-l-2 border-gold/60 pl-5 font-serif text-lg italic leading-relaxed text-burgundy/88 md:text-xl">
+        <p class="max-w-2xl border-l-2 border-gold/60 pl-5 font-serif text-base italic leading-relaxed text-burgundy/88 md:text-lg">
           "{lede}"
         </p>
       </div>
 
-      <div class="relative flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-burgundy/12 pt-6 text-sm text-ink/70">
+      <div class="relative flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-burgundy/12 pt-5 text-sm text-ink/70">
         {
           writer && (
             <>

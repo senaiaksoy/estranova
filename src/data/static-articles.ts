@@ -18,6 +18,69 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari',
+    title: "Menopozda HRT'nin Avantajları: Hangi Faydalar Daha Net, Hangilerinde Daha Temkinli Olmalı?",
+    description:
+      'Hormon tedavisi menopozda yalnızca sıcak basmasını azaltan bir seçenek değildir. Belirti rahatlaması, uyku, vajinal doku konforu, kemik sağlığı ve erken menopozdaki daha geniş koruma penceresi açısından hangi faydaların daha net, hangilerinin daha temkinli okunması gerektiğini bu derleme sakin bir dille ele alır.',
+    publishedDate: '6 Mayıs 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Bilimsel Pencere',
+    sectionPath: '/bilimsel-pencere',
+    keywords: [
+      'menopoz',
+      'HRT',
+      'hormon tedavisi',
+      'menopozda hormon tedavisi',
+      'sıcak basması',
+      'kemik sağlığı',
+      'vajinal kuruluk',
+      'erken menopoz',
+      'yaşam kalitesi',
+    ],
+  },
+  {
+    path: '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski',
+    title: 'Menopozda Hormon Tedavisi ve Meme Kanseri Riski: Yeni Veriler Gerçekten Neyi Değiştirdi?',
+    description:
+      'Menopozda hormon tedavisi ile meme kanseri riski arasındaki ilişki siyah-beyaz değil. Yeni veriler; yaş, başlama zamanı, tedavi kombinasyonu, süre ve kişisel öykünün neden birlikte okunması gerektiğini daha net gösteriyor.',
+    publishedDate: '6 Mayıs 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Bilimsel Pencere',
+    sectionPath: '/bilimsel-pencere',
+    keywords: [
+      'menopoz',
+      'hormon tedavisi',
+      'HRT',
+      'meme kanseri riski',
+      'östrojen',
+      'progesteron',
+      'transdermal östrojen',
+      'mutlak risk',
+      'menopoz araştırmaları',
+    ],
+  },
+  {
+    path: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+    title: 'Menopozda Cilt Değişimleri: Aynaya Bakınca “Bir Şey Değişti” Dedirten Dönem',
+    description:
+      'Menopoz döneminde ciltte kuruluk, elastikiyet kaybı, hassasiyet, leke eğilimi ve kolajen azalması neden belirginleşebilir? Bu yazı, cilt değişimini kozmetik vaatlerden uzak, sakin ve bilimsel bir okumayla ele alır.',
+    publishedDate: '6 Mayıs 2026',
+    writerSlug: 'estranova-editorial',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik',
+    keywords: [
+      'menopoz',
+      'cilt değişimleri',
+      'cilt kuruluğu',
+      'kolajen',
+      'elastikiyet',
+      'cilt bariyeri',
+      'leke',
+      'güneş koruması',
+      '40 sonrası cilt',
+    ],
+  },
+  {
     path: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi',
     title: 'Perimenopozda Kaygı Artışı: Her Şey Aynıyken Neden İçiniz Daralıyor Gibi Hissedebilirsiniz?',
     description:

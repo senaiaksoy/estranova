@@ -194,7 +194,64 @@ Yasak:
 - `Fiyat al`
 - `Paketlerimizi incele`
 
-## 12) Hiza Kontrolü
+## 12) Görsel Prompt Çeşitliliği
+
+Makale görselleri tek bir dar sahneye sıkışmamalıdır. Estranova görsel evreni, konuyu hayatın farklı katmanları içinde taşıyan premium editorial sahnelerden oluşur.
+
+Tercih edilen sahne havuzu:
+
+- şehir yürüyüşü
+- deniz kenarı veya vapur hissi
+- sabah gardırop hazırlığı
+- iş çıkışı lobi veya asansör önü
+- kitapçı veya galeri
+- pazar dönüşü
+- mutfakta sade hazırlık
+- spor sonrası esneme
+- kuaför veya ev aynası
+- balkon
+- otomobilde bekleme anı
+- otel odasında valiz hazırlığı
+- arkadaşla yürüyüş
+- sahil yolu
+- akşam üstü koltukta dinlenme
+
+Aksesuarlar dönüşümlü kullanılmalıdır:
+
+- güneş gözlüğü
+- trençkot
+- ipek fular
+- telefon
+- kulaklık
+- kitap veya dergi
+- çanta
+- anahtar
+- spor ayakkabı
+- su matarası
+- etiketsiz güneş kremi
+- saç fırçası
+- şapka
+- sade makyaj çantası
+- çiçek
+- alışveriş filesi
+- valiz
+- yoga matı
+- portakal veya yeşillik
+- yün hırka
+- gözlük
+- sade mücevher
+
+Kaçınılacak tekrarlar:
+
+- Her promptu çay bardağı, kahve fincanı, not defteri, kalem veya masa sahnesiyle kurma.
+- Aynı "pencere kenarında düşünen kadın" kompozisyonunu üst üste kullanma.
+- Konuyu kozmetik reklamına, spa atmosferine, klinik sahneye veya influencer pozuna çevirme.
+
+Standart prompt niyeti:
+
+> Görsel, makale konusunu açıklamak için değil, o konunun bir kadının hayatında nerelere dokunabileceğini zarifçe hissettirmek için vardır.
+
+## 13) Hiza Kontrolü
 
 Yeni bir editorial makale yayına alınmadan önce şu sorular sorulur:
 
@@ -205,5 +262,6 @@ Yeni bir editorial makale yayına alınmadan önce şu sorular sorulur:
 - Makale okuru korkutmadan ne zaman dikkatli olunması gerektiğini söylüyor mu?
 - Görünür SSS ile JSON-LD FAQ aynı kaynaktan mı besleniyor?
 - Anekdot varsa yazar personasıyla uyumlu ve dengeli mi?
+- Görsel prompt aynı çay/not defteri/masa tekrarına düşmeden hayatın farklı bir sahnesini açıyor mu?
 
 Bu sorulardan biri bile `hayır` cevabı veriyorsa metin yayına hazır değildir.

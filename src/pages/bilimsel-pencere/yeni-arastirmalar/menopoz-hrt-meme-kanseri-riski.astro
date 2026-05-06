@@ -1,0 +1,362 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar']!;
+
+const tocEntries = [
+  { id: 'neden-korku', label: 'Neden Hâlâ Korku Yaratıyor?' },
+  { id: 'yeni-veri', label: 'Yeni Veri Neyi Değiştirdi?' },
+  { id: 'risk-tek-parca-degil', label: 'Risk Tek Parça Değil' },
+  { id: 'rota-ve-progesteron', label: 'Rota ve Progesteron' },
+  { id: 'kimlerde-daha-dikkatli', label: 'Kimlerde Daha Dikkatli?' },
+  { id: 'mutlak-risk', label: 'Mutlak Risk Ne Demek?' },
+  { id: 'doktora-uc-soru', label: 'Doktora Üç Soru' },
+  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Menopozda Hormon Tedavisi ve Meme Kanseri Riski: Yeni Veriler Gerçekten Neyi Değiştirdi?';
+const articleDescription =
+  'Menopozda hormon tedavisi ile meme kanseri riski arasındaki ilişki siyah-beyaz değil. Yeni veriler; yaş, başlama zamanı, tedavi kombinasyonu, süre ve kişisel öykünün neden birlikte okunması gerektiğini daha net gösteriyor.';
+const faqItems = articleFaqs[pathname] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  publishedDate: '6 Mayıs 2026',
+  pathname,
+  articleSection: 'Bilimsel Pencere',
+  sectionPath: '/bilimsel-pencere',
+  keywords: [
+    'menopoz',
+    'hormon tedavisi',
+    'HRT',
+    'meme kanseri riski',
+    'östrojen',
+    'progesteron',
+    'transdermal östrojen',
+    'mutlak risk',
+    'menopoz araştırmaları',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/bilimsel-pencere" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Bilimsel Pencere · Yeni Araştırmalar"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        publishedDate="6 Mayıs 2026"
+        readingMinutes={10}
+        imageSrc="/images/library/editorial/senai-hrt-meme-kanseri-hero.webp"
+        imageAlt="Krem tonlarda giyinmiş, düşünceli ifadesiyle pencereden ışık alan zarif bir kadın portresi."
+        imagePosition="center top"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Hormon tedavisi ile meme kanseri ilişkisi yıllardır ya gereğinden korkutucu ya da
+          gereğinden rahat anlatılıyor. Oysa bugün elimizdeki tablo daha nüanslı:
+          <strong>rahmi olan kadınlarda kombine sistemik tedavide risk artışı vardır</strong>;
+          fakat bu artış, tedavinin <strong>hangi yaşta</strong>, <strong>menopozdan ne kadar
+          süre sonra</strong>, <strong>hangi kombinasyonla</strong> ve <strong>ne kadar süreyle</strong>
+          kullanıldığına göre değişir. Yeni veriler özellikle iki şeyi öne çıkarıyor: risk tek
+          cümleyle anlatılamaz ve göreceli artış ile mutlak artış aynı şey değildir.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="neden-korku">Bu başlık neden hâlâ korkuyla konuşuluyor?</h2>
+        <p>
+          Menopozda hormon tedavisi dendiğinde birçok kadının aklına ilk gelen soru hâlâ meme
+          kanseri oluyor; bunun nedeni yalnızca riskin varlığı değil, bu riskin yıllarca tek ve
+          sert bir cümleyle anlatılmış olması.
+        </p>
+        <p>
+          Yirmi yılı aşkın süredir dolaşımda olan korku cümlesi şuna benziyor:
+          <em>“Hormon tedavisi meme kanseri yapar.”</em> Oysa bu ifade, tedavinin tipi ile
+          süresini, kadının rahminin olup olmadığını, kişisel aile öyküsünü ve başlangıç yaşını
+          aynı torbaya atıyor. Böyle olunca okur ya tamamen geri çekiliyor ya da ters yönde,
+          bu konuyu hiç önemsememeye başlıyor.
+        </p>
+        <p>
+          Klinik görüşmelerde bu başlık açıldığında en sık karşılaştığım tablo, kadınların iki uç
+          mesaj arasında kalmış olması: “Bir yerde çok tehlikeli denmişti” ile “hiç mesele değil”
+          arasında sıkışmış bir belirsizlik. Aslında iki taraf da eksik. Bu başlıkta ihtiyacımız
+          olan şey, korkuyu küçümsemek değil; korkunun ne kadarının veriye, ne kadarının eski ve
+          kaba genellemelere dayandığını ayırmak.
+        </p>
+
+        <h2 id="yeni-veri">Bugün elimizdeki veri eski tartışmadan nasıl ayrılıyor?</h2>
+        <p>
+          Yeni veri, eski tartışmayı tamamen tersine çevirmedi; ama onun fazla kalın çizilmiş
+          yerlerini inceltti. En büyük değişiklik, artık “hormon tedavisi” yerine “hangi hormon
+          tedavisi” diye sormamız.
+        </p>
+        <p>
+          Randomize çalışmaların uzun dönem izlemleri, <strong>rahmi olan kadınlarda östrojen +
+          progestin kombinasyonunun</strong> meme kanseri insidansını artırdığını göstermeye devam
+          ediyor <Evidence level={5} />. Buna karşılık, <strong>rahmi alınmış kadınlarda yalnızca
+          östrojen</strong> kullanılan kolda aynı yön görülmüyor; bazı uzun dönem veriler daha düşük
+          meme kanseri insidansı bildirdi <Evidence level={5} />. Yani ilk temel ayrım, östrojenin
+          tek başına mı yoksa progesteron/progestin eşliğinde mi kullanıldığı.
+        </p>
+        <p>
+          Büyük güncel kohortlar ise ikinci bir katman ekliyor: özellikle <strong>sürekli kombine
+          rejimlerde</strong> ve bazı oral kombinasyonlarda risk sinyali daha belirginleşiyor
+          <Evidence from={4} to={5} />. Bu, “korku abartıldı, konu kapandı” dememize izin vermiyor;
+          ama aynı zamanda bütün rejimleri aynı risk cümlesine hapsetmememiz gerektiğini de
+          gösteriyor.
+        </p>
+
+        <h2 id="risk-tek-parca-degil">Risk tek parça değil: yaş, zamanlama ve süre neden önemli?</h2>
+        <p>
+          Riski dürüstçe konuşmanın yolu, onu sabit bir sayı gibi değil; bağlama göre değişen bir
+          denge gibi görmekten geçiyor.
+        </p>
+        <p>
+          İlk eksen <strong>başlangıç zamanı</strong>. Menopozun üzerinden çok uzun zaman geçmeden,
+          özellikle 60 yaş altındaki kadınlarda başlanan tedavilerde genel fayda-risk dengesi daha
+          elverişli kabul ediliyor <Evidence level={5} />. Bu cümle meme riskini silmez; ama tedavi
+          kararının yalnızca tek bir sonlanıma göre verilmediğini hatırlatır. Sıcak basmaları, uyku
+          bölünmesi, yaşam kalitesi ve kemik gündemi de aynı masadadır.
+        </p>
+        <p>
+          İkinci eksen <strong>süre</strong>. Özellikle kombine sistemik tedavide kullanım uzadıkça
+          meme riski daha görünür hale gelir <Evidence from={4} to={5} />. Bu yüzden artık birçok
+          görüşmede “başlayalım mı?” sorusunun yanında “hangi hedef için ve ne kadar süreyle?”
+          sorusunu da aynı ciddiyetle konuşuyoruz.
+        </p>
+        <p>
+          Üçüncü eksen <strong>kişisel arka plan</strong>. Ailede meme kanseri öyküsü, daha önceki
+          meme biyopsileri, yoğun meme dokusu, obezite, alkol kullanımı ve hareket azlığı gibi başka
+          risk belirleyicileri, hormon tedavisinin etkisini tek başına açıklamaz ama toplam resmi
+          değiştirir <Evidence level={4} />. Yani tedavi riski ile kişinin kendi temel riski üst üste
+          biner; bu yüzden aynı reçete iki kadında aynı anlama gelmez.
+        </p>
+
+        <h2 id="rota-ve-progesteron">Oral, transdermal ve progesteron eşlikleri aynı riski mi taşır?</h2>
+        <p>
+          Kadınların en çok sorduğu yeni sorulardan biri bu; yanıt ise hâlâ temkin gerektiriyor.
+        </p>
+        <p>
+          <strong>Uygulama yolu</strong> açısından, ciltten verilen östrojenin pıhtı ve inme başlığı
+          için daha avantajlı bir profil taşıdığına dair daha tutarlı veri var
+          <Evidence level={4} />; ancak <strong>meme kanseri açısından oral ve transdermal yol
+          arasındaki fark</strong> henüz kesinleşmiş değil <Evidence level={2} />. Bazı gözlemsel
+          veriler transdermal uygulamada daha düşük risk ihtimalini düşündürüyor, ama bunu kesin bir
+          güven cümlesine çevirecek düzeyde veri yok.
+        </p>
+        <p>
+          <strong>Progesteron/progestin seçimi</strong> ise ayrı bir tartışma. Güncel derlemeler,
+          bazı progesteron türlerinde risk sinyalinin daha düşük olabileceğini düşündürüyor;
+          özellikle mikronize progesteron için kısa-orta vadede daha yumuşak bir tablo bildiren
+          çalışmalar var <Evidence level={3} />. Yine de burada iki uyarı önemli: birincisi bu veri
+          tüm kadınlar ve tüm süreler için “güvenli” anlamına gelmiyor; ikincisi kombine sistemik
+          tedavide meme riskini tamamen sıfırlamıyor.
+        </p>
+        <p>
+          Bu yüzden “patch daha güvenli” ya da “şu progesteronda hiç risk yok” gibi net cümleler
+          kurmak için erken. Daha doğru cümle şu: <em>farklı rejimlerin aynı görünmediğini artık daha
+          iyi biliyoruz, ama aradaki farkların büyüklüğü her başlıkta aynı netlikte değil.</em>
+        </p>
+
+        <h2 id="kimlerde-daha-dikkatli">Hangi durumda daha dikkatli değerlendirme gerekir?</h2>
+        <p>
+          Her hormon tedavisi görüşmesi aynı düzeyde kaygı gerektirmez; ama bazı tablolar daha
+          dikkatli tartı ister.
+        </p>
+        <p>
+          Özellikle <strong>kişisel meme kanseri öyküsü</strong>, yüksek genetik risk, açıklığa
+          kavuşmamış meme görüntüleme bulguları, belirgin aile öyküsü, uzun süreli kombine tedavi
+          ihtiyacı veya 60 yaş sonrasında yeni başlangıç düşünülüyorsa karar daha yavaş ve daha sık
+          izlemle verilir <Evidence level={4} />. Bu durumların hiçbiri otomatik olarak aynı cümleye
+          çıkmaz; fakat “aynı reçete herkese uyar” kolaycılığını da bozar.
+        </p>
+        <p>
+          Bir başka önemli ayrım da <strong>lokal vajinal östrojen</strong> ile sistemik tedavi
+          arasındadır. Vajinal kuruluk ve ürogenital yakınmalar için kullanılan düşük doz lokal
+          tedaviler, sistemik kombine tedavinin risk cümlesiyle aynı yere konmaz; mevcut veriler bu
+          başlıkta daha yatıştırıcıdır <Evidence from={3} to={4} />.
+        </p>
+
+        <RedFlagBox
+          markers={[
+            'Kişisel meme kanseri öyküsü veya aktif meme değerlendirme süreci',
+            'Güçlü aile öyküsü ya da bilinen kalıtsal yüksek risk tablosu',
+            'Uzun süreli kombine sistemik tedavi gereksinimi',
+            '60 yaş sonrasında yeni tedavi başlangıcı',
+            'Açıklanmamış vajinal kanama veya netleşmemiş meme görüntüleme bulguları',
+            'Tedavi kararı öncesi mamografi ve kişisel risk tablosunun birlikte yeniden okunması gereği',
+          ]}
+          footnote="Bu kutu tanı koymaz; hangi durumda kararı biraz daha yavaş, daha kişiselleştirilmiş ve daha yakın izlemle vermenin iyi olacağını hatırlatır."
+        />
+
+        <h2 id="mutlak-risk">Göreceli risk ile mutlak risk arasındaki fark neden bu kadar önemli?</h2>
+        <p>
+          Bu başlığın en çok karıştığı yer tam da burası: göreceli artış kulağa büyük gelebilir, ama
+          mutlak artışın günlük karar anlamı daha farklı olabilir.
+        </p>
+        <p>
+          Örneğin bir çalışmada riskin yüzde 20 ya da yüzde 30 arttığını duymak korkutucudur; fakat
+          bu artışın başlangıç riski düşük bir grupta yıllara yayılan <strong>küçük mutlak sayı
+          farklarına</strong> karşılık gelebileceğini görmek gerekir <Evidence level={4} />. Tersi de
+          doğrudur: temel riski zaten yüksek olan bir kadında aynı göreceli artış, daha anlamlı bir
+          mutlak etki yaratabilir.
+        </p>
+        <p>
+          O yüzden daha dürüst soru şudur: <em>“Risk artıyor mu?”</em> kadar, <em>“Benim yaşımda,
+          benim aile öykümde ve planlanan kullanım süremde bu artış ne kadar anlamlı?”</em> sorusu da
+          önemlidir. Kararı sakinleştiren şey, riski yok saymak değil; onu kendi bağlamına geri
+          yerleştirmektir.
+        </p>
+
+        <h2 id="doktora-uc-soru">Doktora sorabileceğiniz üç net soru</h2>
+        <p>
+          Bu konuda iyi bir görüşmenin kalitesi, çoğu zaman doğru sorularla başlıyor.
+        </p>
+        <p>
+          <strong>Birinci soru:</strong> <em>“Benim kişisel meme kanseri risk tablom nedir ve hormon
+          tedavisi bunun üzerine ne kadar ekleniyor?”</em> Böylece aile öyküsü, meme yoğunluğu,
+          önceki biyopsi öyküsü ve yaşam tarzı faktörleri aynı düzlem içinde konuşulabilir.
+        </p>
+        <p>
+          <strong>İkinci soru:</strong> <em>“Biz sistemik kombine tedaviyi mi, yalnızca östrojeni mi,
+          yoksa lokal vajinal tedaviyi mi konuşuyoruz?”</em> Aynı “hormon” kelimesinin üç farklı
+          klinik senaryoya açıldığını görmek kafa karışıklığını azaltır.
+        </p>
+        <p>
+          <strong>Üçüncü soru:</strong> <em>“Hedefimiz ne ve bu tedaviyi hangi süre mantığıyla
+          değerlendireceğiz?”</em> Süre konuşulmadan risk konuşması eksik kalır. Yıllık yeniden
+          değerlendirme, bu başlıkta güven veren en pratik çerçevelerden biridir.
+        </p>
+
+        <h2 id="sik-sorulanlar">Sık sorulanlar</h2>
+        <p>
+          Bu bölümdeki soru-cevaplar, sayfadaki görünür tek SSS yüzeyini oluşturuyor. Kısa tutuldu;
+          ama her biri gerçek görüşme cümlelerinden çıkıyor.
+        </p>
+        {faqItems.map((item) => (
+          <>
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </>
+        ))}
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Hormon tedavisi ve meme kanseri ilişkisi ne “hiç korkmayın” diyecek kadar basit, ne de tek
+          cümleyle kapatılacak kadar sert bir başlık.
+        </p>
+        <p>
+          Yeni verilerin asıl katkısı, bizi daha kesin konuşan değil daha doğru ayıran bir dile
+          götürmesi oldu: kombine sistemik tedavi ayrı, yalnızca östrojen ayrı, lokal vajinal tedavi
+          ayrı; kısa süre ayrı, uzun süre ayrı; düşük temel risk ayrı, yüksek temel risk ayrı.
+        </p>
+        <p>
+          Bilgi bazen kararı hemen verdirmez; ama belirsizliği daha yönetilebilir hale getirir. Bu
+          başlıkta da asıl kazanç çoğu zaman tam olarak bu: siyah-beyaz bir korkudan çıkıp, daha iyi
+          sorularla daha kişisel bir karara yaklaşmak.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">
+          Kanıt Düzeyi: <Evidence from={3} to={5} />
+        </p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Bu başlıkta en sık gördüğüm sorun, meme riskinin ya bütün tabloyu yutması ya da tam
+            tersine konuşulmayacak kadar küçültülmesi. Klinik açıdan doğru yer, ikisinin arasıdır.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik okuma:</strong> Elimizdeki en sağlam randomize
+            veri, rahmi olan kadınlarda östrojen + progestin kombinasyonunda meme kanseri
+            insidansının arttığını; rahmi olmayan ve yalnızca östrojen kullanan kadınlarda ise aynı
+            yönün görülmediğini gösteriyor. Bu ayrım hâlâ temel taşı.
+          </p>
+          <p>
+            <strong class="text-burgundy">Yeni katman:</strong> Büyük gözlemsel kohortlar, sürekli
+            kombine rejimlerin ve bazı oral kombinasyonların risk sinyalini daha belirgin taşıdığını
+            düşündürüyor. Buna karşılık uygulama yolunun meme riski üzerindeki farkı henüz tam
+            netleşmiş değil; transdermal rota için daha açık avantaj pıhtı ve inme başlığında ortaya
+            çıkıyor.
+          </p>
+          <p>
+            <strong class="text-burgundy">Pratik sonuç:</strong> Karar verirken yalnızca “HRT kullanır
+            mısınız?” diye sormam. Şu beş başlık birlikte okunur: hedef belirti, kişisel temel risk,
+            rahim durumu, planlanan kombinasyon ve öngörülen süre. Meme kanseri riski bu beşlinin
+            yalnızca bir parçasıdır; ama kritik bir parçasıdır.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+            - Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve
+          tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

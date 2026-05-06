@@ -144,6 +144,46 @@ Do not introduce service-oriented navigation unless explicitly approved.
 - Related reading
 - Medical disclaimer
 
+### Submenu / hub page layout (Astro)
+
+New or refreshed submenu pages must feel like a premium editorial publication, but they must remain easy to scan. The goal is Vogue/TR-level visual judgment with clearer access to older articles.
+
+Use this structure for sub-hub pages under `src/pages/<section>/<subsection>/index.astro`:
+- `SiteNavbar`
+- optional `ChapterMasthead`
+- `SubmenuHero`
+- Turkish breadcrumb with `aria-label="İçerik yolu"`
+- short editorial intro plus optional `MarginaliaRail`
+- compact latest article strip via `SubHubLatestStrip`
+- visible scalable article archive / index via `SubHubArchiveIndex`
+- related neighboring subtopics
+- `ChapterCompass`
+- `SiteFooter`
+
+The latest article must not dominate the page. For article-heavy sub-hubs, use `SubHubLatestStrip` or an equivalent slim editorial strip; this is the default for submenu pages that can grow into 10+ articles. Use `EditorPickCard` only on intentionally small, hand-curated pages; avoid large magazine-cover cards that push earlier articles below the fold.
+
+Previously published articles in the same sub-hub should be visible and easy to reach. Use `SubHubArchiveIndex` or a numbered editorial index immediately after the latest article. The archive must be designed for growth: first 6-8 items visible, older items grouped or collapsed so 10, 20 or 50 articles still scan like a publication index rather than a stack of cards. If a sub-hub has only one article, show a broader same-section archive when it helps discovery.
+
+The archive section should start directly with the small uppercase label `Aynı dosyada` (or `Aynı bölümde` only when using a broader fallback archive). Do not add a large `Önceki araştırma yazıları` / `Önceki okumalar` headline or explanatory paragraph above the index; that makes the page feel like a landing page again.
+
+Submenu content should be data-led where possible:
+- Prefer `src/data/static-articles.ts` for article lists and ordering.
+- Prefer `src/data/submenu-heroes.ts` for article and hub imagery.
+- Keep manual `editorPick` objects only when there is a clear editorial reason.
+- Do not link to article routes that do not exist in `src/pages/`.
+
+Readability rules:
+- Hero lede: maximum 2 sentences.
+- Section intro copy: usually 40-70 words.
+- Card descriptions: 1-2 short sentences.
+- Use one visible `h1`; section headings should be meaningful `h2`.
+- Decorative arrows, initials and flourishes should be `aria-hidden`.
+
+Language and compliance:
+- User-facing labels are Turkish: `Son yazı`, `Önceki okumalar`, `Bölüm indeksi`, `Yazıyı oku`, `İçeriği incele`.
+- Do not show "Premium", "Spotlight", "Explore", "Read more" or other English / sales-flavored UI labels.
+- CTA language remains neutral and informational; never use appointment, treatment, package, price, discount or superiority language.
+
 ### Article page layout (Astro — use for every new static article)
 
 The visual shell is **not** optional for new `.astro` articles under `src/pages/`. Reuse these components so pages match the homepage / hub styling:
@@ -443,6 +483,14 @@ Prefer:
 - natural editorial photography
 - subtle medical context
 - thoughtful, non-dramatic visuals
+- life-wide editorial scenes: home, city, workday, walking, wardrobe, kitchen, balcony, bookshop, seaside, travel, gallery, lobby, movement, rest, and quiet personal moments
+- varied props and micro-contexts that support the topic without becoming repetitive
+
+Prompt diversity rule:
+- Do not default to the same visual formula across articles.
+- Avoid repeatedly using tea glasses, coffee cups, notebooks, pens, or desk/table scenes unless the article specifically calls for them.
+- Rotate scene anchors and props: wardrobe, mirror, coat, scarf, sunglasses, bag, keys, phone, headphones, book, magazine, market bag, suitcase, yoga mat, water bottle, hair brush, unlabeled sunscreen, fruit/greens, flowers, balcony rail, seaside path, elevator/lobby, gallery wall, or city street.
+- Every image prompt should cover a broader slice of life while remaining topic-aligned, calm, non-promotional, and editorial.
 
 Avoid:
 - clinical machinery as hero focus

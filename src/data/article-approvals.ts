@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+    writerSlug: 'estranova-editorial',
+    approvedAt: '2026-05-06',
+    note: 'KC editor direct approval: Cilt & Gorunum bolumundeki long-read boslugunu kapatmak icin Yasit Editor tonu ile hazirlandi; kozmetik vaat yerine bariyer, kolajen, gunes korumasi ve dermatolojik degerlendirme cercevesiyle canli envantere alindi.',
+  },
+  {
     pathname: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi',
     writerSlug: 'estranova-editorial',
     approvedAt: '2026-05-06',
@@ -190,6 +196,12 @@ export const approvedArticles: ArticleApproval[] = [
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-05-04',
     note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi.',
+  },
+  {
+    pathname: '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-06',
+    note: 'KC editor direct approval: Yeni Arastirmalar bolumu icin hormon tedavisi ve meme kanseri riski dosyasi guncel randomize izlem, buyuk kohort ve risk ayrimi ekseninde yayina alindi; static route, FAQ schema, RSS manifesti ve kategori vitriniyle hizalandi.',
   },
   {
     pathname: '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari',

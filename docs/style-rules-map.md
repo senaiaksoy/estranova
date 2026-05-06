@@ -57,6 +57,7 @@ Dosya: **`agents/writer_agent.md`**
 - **Yeni ton / ses kuralı** → `CLAUDE.md` §3.
 - **Okura hitap kuralı** (`siz` / `sen` standardı) → `CLAUDE.md` §3 + `AGENTS.md` ton bölümü.
 - **Yeni yapısal şart** (ör. bölüm sayısı) → `agents/writer_agent.md` (master 8 bölüm bölümü) + `agents/writer_agent.py` validator.
+- **Submenu / hub sayfa standardı** → `AGENTS.md` "Submenu / hub page layout (Astro)" + `CLAUDE.md` "Submenu / hub layout (implementation)"; article-heavy alt hub uygulama bileşenleri `SubHubLatestStrip`, `SubHubArchiveIndex`, `SubmenuSection`.
 - **Yeni SEO / format kuralı** → `agents/writer_agent.md` → `## Uzunluk ve SEO`.
 - **Few-shot’a örnek** → `agents/writer_agent.md` → `## Few-shot ornek` altına.
 

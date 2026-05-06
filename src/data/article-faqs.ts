@@ -4,6 +4,55 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': [
+    {
+      question: "HRT'nin en belirgin faydası hangisidir?",
+      answer:
+        'En net ve en güçlü veri, sıcak basması ve gece terlemesi gibi vazomotor belirtilerin azalması tarafındadır. Buna bağlı olarak uyku bölünmeleri ve günlük yaşam kalitesi de birçok kadında iyileşebilir; yani fayda yalnızca tek bir belirtiyi azaltmakla kalmayıp bütün gün ritmini de etkileyebilir.',
+    },
+    {
+      question: 'HRT yalnızca sıcak basması için mi düşünülür?',
+      answer:
+        'Hayır. Vajinal kuruluk, doku hassasiyeti, ilişki sırasında rahatsızlık ve bazı ürogenital yakınmalar için de anlamlı bir yeri vardır; burada özellikle lokal östrojen seçenekleri güçlü bir fayda alanı taşır. Ayrıca kemik kaybını yavaşlatma ve erken menopozda daha geniş bir koruyucu hat sağlama açısından da önemli olabilir.',
+    },
+    {
+      question: 'Kalp ve metabolizma için koruyucu etkisi kesin midir?',
+      answer:
+        'Bu başlıkta daha temkinli konuşmak gerekir. Menopozun erken döneminde, uygun kişide ve doğru zamanlamayla başlanan tedavilerde genel denge daha elverişli olabilir; ancak bunu herkese genellenen güçlü bir “kalbi korur” cümlesine çevirmek doğru değildir. Yaş, başlangıç zamanı ve kişisel damar riski sonucu belirgin biçimde değiştirir.',
+    },
+    {
+      question: 'Kemik sağlığı için faydası neden bu kadar vurgulanıyor?',
+      answer:
+        'Çünkü östrojen düşüşü menopoz sonrası kemik kaybının temel hızlandırıcılarından biridir ve HRT bu kaybı yavaşlatabilir. Özellikle erken menopoz yaşayan ya da kırık riski açısından daha dikkatli izlenen kadınlarda bu fayda daha stratejik bir anlam taşır; ama yine de karar tek başına kemik başlığına bakılarak değil, bütün tabloyla verilir.',
+    },
+  ],
+  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri': [
+    {
+      question: 'Menopozda cilt değişimi yalnızca yaşlanma mı?',
+      answer:
+        'Hayır. Yaş alma, güneş geçmişi, genetik yapı, uyku, stres ve bakım alışkanlıkları etkilidir; fakat menopoz döneminde östrojen azalması da cildin nem, kolajen ve bariyer ritmini değiştirebilir. Bu yüzden tabloyu tek nedenle açıklamak çoğu zaman eksik kalır.',
+    },
+    {
+      question: 'Cilt kuruluğu ve hassasiyet bu dönemde artabilir mi?',
+      answer:
+        'Evet, bazı kadınlarda cilt daha kuru, daha gergin veya daha kolay kızaran bir hale gelebilir. Sert temizleyiciler, yoğun peeling ve üst üste aktif içerik denemeleri bu hassasiyeti artırabilir; önce bariyeri sakinleştirmek çoğu zaman daha iyi bir başlangıçtır.',
+    },
+    {
+      question: 'Menopozda cilt için en güçlü günlük adım nedir?',
+      answer:
+        'Düzenli güneş koruması hâlâ en güçlü ve en iyi kanıtlı temel adımdır. Leke, elastikiyet, ince çizgi ve genel cilt sağlığı açısından gösterişli olmayan ama uzun vadede çok belirleyici bir alışkanlıktır.',
+    },
+    {
+      question: 'Kolajen takviyesi herkes için gerekli midir?',
+      answer:
+        'Hayır. Kolajen takviyeleri için bazı sınırlı olumlu veriler olsa da her kadına genellenebilecek zorunlu bir öneri değildir. Protein alımı, uyku, direnç egzersizi, güneşten korunma ve kişisel sağlık durumu birlikte düşünülmelidir.',
+    },
+    {
+      question: 'Ne zaman dermatolojik değerlendirme geciktirilmemeli?',
+      answer:
+        'Yeni veya hızla büyüyen leke, şekli değişen ben, kanayan ya da kabuklanan alan, geçmeyen yara, yoğun kaşıntı veya belirgin yanma varsa bekletmemek gerekir. Bu belirtiler kozmetik bakım konusu gibi değil, tıbbi değerlendirme gerektiren işaretler olarak ele alınmalıdır.',
+    },
+  ],
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi': [
     {
       question: 'Perimenopozdaki kaygı artışı anksiyete bozukluğu anlamına gelir mi?',
@@ -476,6 +525,28 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       question: 'Menopozal kilo yakınması olan herkes bu tedavi için aday mıdır?',
       answer:
         'Hayır. Eşlik eden hastalıklar, beden kitle durumu, metabolik risk ve beklenti hattı birlikte değerlendirilir. Klinik karar, yalnızca tartıdan değil bütün sağlık resminden çıkar.',
+    },
+  ],
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski': [
+    {
+      question: 'Ailede meme kanseri öyküsü varsa hormon tedavisi tamamen kapanır mı?',
+      answer:
+        'Her zaman hayır. Aile öyküsü önemli bir başlıktır ama tek başına otomatik yasak anlamına gelmez; kişisel risk tablosu, meme görüntüleme geçmişi, tedavi tipi ve hedef belirti birlikte okunur. Karar çoğu zaman “evet ya da hayır”dan çok, “hangi rejim ve hangi yakın izlemle?” sorusuna döner.',
+    },
+    {
+      question: 'Kısa süreli kullanım ile uzun süreli kullanım arasında meme riski farkı var mı?',
+      answer:
+        'Evet, özellikle kombine sistemik tedavide süre uzadıkça risk daha görünür hale gelir. Bu yüzden tedaviye başlarken yalnızca başlangıç değil, yıllık yeniden değerlendirme planı da konuşulmalıdır.',
+    },
+    {
+      question: 'Transdermal östrojen meme açısından daha güvenli mi?',
+      answer:
+        'Bunu bugün kesin cümleyle söylemek için veri yeterli değil. Ciltten uygulanan östrojenin pıhtı başlığında daha avantajlı bir profili var; fakat meme kanseri açısından oral ve transdermal yol arasındaki fark hâlâ netleşmiş değil.',
+    },
+    {
+      question: 'Hormon tedavisine hiç başlamamak her zaman daha mı güvenlidir?',
+      answer:
+        'Bu soru yalnızca riskle değil, fayda tarafıyla da birlikte değerlendirilir. Bazı kadınlarda belirgin sıcak basmaları, uyku kaybı ve yaşam kalitesi düşüşü öyle yüksektir ki kişisel risk tablosu uygunsa tedavinin sağlayacağı kazanım anlamlı olabilir. Güvenlik, çoğu zaman tedavisizlik değil doğru seçilmiş tedavi ve izlem demektir.',
     },
   ],
   '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari': [

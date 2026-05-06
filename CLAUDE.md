@@ -271,6 +271,10 @@ Always structure pages as websites with:
 
 For new static Astro articles, follow **AGENTS.md → “Article page layout (Astro)”**: `SubmenuHero` (when in `submenu-heroes`), `SubmenuArticleBody`, `ArticleSummary` for Kısa Özet, `ArticleProsePanel` for body HTML, then `RelatedReadings`, `ArticleEditorNote`, and `ArticleDisclaimer`. Do not create one-off summary/editor-note/disclaimer card classes in article pages. Dynamic articles use `article/[slug].astro` with the same body components where applicable.
 
+#### Submenu / hub layout (implementation)
+
+Submenu pages should feel like an editorial table of contents, not a landing page or dashboard. The newest article appears as a compact `Son yazı` strip; earlier articles remain visible through a numbered archive or index close to the top of the page. Design the archive for 10, 20 and 50 articles by keeping the first group open and grouping or collapsing older items. The archive starts directly with the small `Aynı dosyada` label; do not add a large archive headline or explanatory paragraph above it. The canonical implementation standard lives in **AGENTS.md → “Submenu / hub page layout (Astro)”**.
+
 ### Content Architecture Rules
 
 The site architecture should be built around knowledge pathways, not services.

@@ -8,10 +8,10 @@ export interface SubmenuHeroImage {
   alt: string;
 }
 
-/** Ana sayfa kahraman görseli (editoryal, Boğaz penceresinde paylaşılan deneyim tonu — 2026-05-05 V4 brief). */
+/** Ana sayfa kahraman görseli (lüks editoryal şehirli eşik anı — 2026-05-06 update). */
 export const homePageHero: SubmenuHeroImage = {
-  src: '/images/hero/home-hero-bosphorus-conversation.webp',
-  alt: 'Boğaz manzaralı pencere kenarında kahve, çay ve açık defter eşliğinde sakin sohbet eden iki orta yaş kadın; 40 sonrası sağlık yolculuğunda paylaşılan deneyim ve editoryal rehberlik teması',
+  src: '/images/hero/home-hero-luxury-editorial.webp',
+  alt: 'Zarif bir girişte gün ışığına doğru yürüyen, krem elbise ve camel palto içindeki 40+ kadın; menopoz ve hormonal geçiş dönemini sakin, güçlü ve editoryal bir yaşam sahnesiyle anlatan ana sayfa görseli',
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
@@ -145,7 +145,11 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/cilt-gorunum': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
-    alt: 'Sun-lit İstanbul evi vanity sahnesinde iki yaşıt kadın (48-52); soldaki koyu kestane chin-length bob ile cream ipek kimono robe içinde vanity stool yanında oturmuş, parmak uçları sağ yanağında nazik öz-dokunuş; sağdaki warm mahogany shoulder dalgalı saç ile cream-tan ipek kimono robe içinde aynanın yanında ayakta saç düzeltiyor, sıcak gülümseme; bakımlı boyalı saçlar (gri/silver YOK), mature graceful natural cilt dokusu (smoothed değil), kimono robe omuza kadar tam kapalı; mermer cream-veined vanity counter üzerinde küçük seramik kasede gül suyu, etiketsiz amber zeytinyağı şişesi, beyaz peony vazoda, açık deri kapaklı not defteri ve dolma kalem, klasik Türk çay bardağı altın tabakta buharlı; brass yeşil camlı vanity abajur warm focused light, sheer keten perde sabah ışığı; cilt değişimleriyle barışık olgun bakım rituali teması',
+    alt: 'Menopozda cilt değişimleri temasını sakin, doğal ve premium editoryal bir bakım sahnesiyle taşıyan 45-55 yaş arası kadınlar',
+  },
+  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri': {
+    src: '/images/library/editorial/by-cilt-degisimleri.webp',
+    alt: 'Menopozda cilt kuruluğu, kolajen ve bariyer değişimi temasını sakin, doğal ve premium editoryal bir bakım sahnesiyle taşıyan 45-55 yaş arası kadınlar',
   },
   '/beden-yakinlik/cinsel-saglik': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
@@ -226,6 +230,14 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/bilimsel-pencere/yeni-arastirmalar': {
     src: '/images/heroes/bilimsel-pencere.webp',
     alt: 'Akademik çalışma odasında bilimsel kitap üzerine eğilmiş kadın; yeni araştırma derlemeleri teması',
+  },
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski': {
+    src: '/images/library/editorial/senai-hrt-meme-kanseri-hero.webp',
+    alt: 'Krem tonlarda giyinmiş, düşünceli ifadesiyle pencereden ışık alan zarif bir kadın portresi; hormon tedavisi ve meme kanseri riski başlığını sakin, dikkatli ve editoryal bir tonla düşünme temasını taşır',
+  },
+  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': {
+    src: '/images/library/editorial/senai-hrt-meme-kanseri-hero.webp',
+    alt: 'Pencereden yumuşak gün ışığı alan zarif bir kadın portresi; menopozda hormon tedavisinin avantajlarını sakin, dikkatli ve editoryal bir bakışla değerlendirme teması',
   },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
