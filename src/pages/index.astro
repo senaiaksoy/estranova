@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
@@ -8,10 +8,12 @@ import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
 import IssueHero from '../components/site/IssueHero.astro';
 import { homeJourneyIntro, homeJourneyItems } from '../data/home-journey-path';
-import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
+import { articleCardImageByRoute, homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 import { activeWriters, writers } from '../data/writers';
 import { currentIssue, resolveCoverDossier, formatIssuePad } from '../data/issues';
 import { magazineConfig } from '../data/magazine-config';
+import { staticArticles } from '../data/static-articles';
+import { toISODate } from '../utils/article-schema';
 
 const coverDossier = resolveCoverDossier(currentIssue);
 const issuePad = formatIssuePad(currentIssue.number);
@@ -68,6 +70,31 @@ const editorialRecent = (coverDossier?.articles ?? []).slice(3).map((article) =>
     isPlanned: article.status === 'planned',
   };
 });
+
+const scienceResearchPinnedPaths = [
+  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari',
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski',
+];
+
+const scienceResearchPrefix = '/bilimsel-pencere/yeni-arastirmalar/';
+const sortNewestFirst = (a: (typeof staticArticles)[number], b: (typeof staticArticles)[number]) =>
+  toISODate(b.publishedDate).localeCompare(toISODate(a.publishedDate));
+
+const scienceResearchPinned = scienceResearchPinnedPaths
+  .map((path) => staticArticles.find((article) => article.path === path))
+  .filter((article): article is (typeof staticArticles)[number] => Boolean(article));
+
+const scienceResearchRecent = staticArticles
+  .filter((article) => article.path.startsWith(scienceResearchPrefix) && !scienceResearchPinnedPaths.includes(article.path))
+  .sort(sortNewestFirst);
+
+function getArticleImage(path: string) {
+  return articleCardImageByRoute[path] ?? submenuHeroByRoute[path] ?? submenuHeroByRoute['/bilimsel-pencere'];
+}
+
+function getArticleWriterName(writerSlug: string): string {
+  return writers.find((writer) => writer.slug === writerSlug)?.displayName ?? 'Estranova';
+}
 
 // Yazar kategorileri — iki ayrı carousel için filtreler
 const lifestyleWriters = activeWriters.filter((w) => w.category !== 'scientific');
@@ -582,6 +609,132 @@ const homeFaqs = [
 
     <EditorialDigestStrip sectionNumber="08" />
 
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
+      <div class="pointer-events-none absolute -left-24 top-20 h-80 w-80 rounded-full bg-burgundy/8 blur-3xl"></div>
+      <div class="pointer-events-none absolute right-0 top-8 hidden font-serif text-[10rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.035] lg:block">
+        araştırma
+      </div>
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+            <span class="font-serif font-normal tabular-nums text-gold">09</span>
+            <span class="mx-2 text-gold">—</span>
+            Bilimsel Araştırmalar
+          </p>
+          <div>
+            <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-bronze">
+              Bilimsel Pencere · Yeni araştırmalar
+            </p>
+            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] md:text-6xl">
+              Yeni verileri sakin bir okuma masasına almak
+            </h2>
+            <p class="max-w-3xl border-l border-gold/50 pl-5 text-lg leading-relaxed text-ink/72">
+              Hormon tedavisi, risk, fayda ve yeni çalışma başlıklarını tek bir blog akışında topluyoruz. En çok dönülen iki HRT yazısı sabit kalır; bu dosyaya eklenen yeni araştırmalar otomatik olarak arkadan görünür.
+            </p>
+          </div>
+        </header>
+
+        <div class="grid gap-7 lg:grid-cols-2">
+          {
+            scienceResearchPinned.map((article, index) => {
+              const image = getArticleImage(article.path);
+
+              return (
+                <a
+                  href={article.path}
+                  class="group relative grid min-h-full overflow-hidden rounded-[38px] border border-burgundy/14 bg-white shadow-[0_30px_98px_-70px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04] transition hover:-translate-y-1 hover:border-gold/42 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                >
+                  <span class="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>
+                  <div class="relative aspect-[16/9] overflow-hidden bg-cream-warm">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      width="720"
+                      height="405"
+                      loading="lazy"
+                      decoding="async"
+                      class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
+                    />
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/36 via-transparent to-transparent"></div>
+                    <span class="absolute left-5 top-5 rounded-full border border-white/30 bg-white/82 px-4 py-2 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-burgundy backdrop-blur">
+                      Sabit okuma
+                    </span>
+                  </div>
+                  <div class="relative p-7 md:p-8">
+                    <span class="pointer-events-none absolute right-7 top-6 font-serif text-7xl italic leading-none text-gold/12">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-gold-bronze">
+                      {article.publishedDate} · {getArticleWriterName(article.writerSlug)}
+                    </p>
+                    <h3 class="max-w-2xl font-serif text-3xl leading-[1.04] tracking-[-0.02em] text-ink transition group-hover:text-burgundy md:text-4xl">
+                      {article.title}
+                    </h3>
+                    <p class="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+                      {article.description}
+                    </p>
+                    <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy">
+                      İçeriği incele
+                      <span class="font-serif text-xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
+                    </span>
+                  </div>
+                </a>
+              );
+            })
+          }
+        </div>
+
+        {
+          scienceResearchRecent.length > 0 && (
+            <div class="mt-10 overflow-hidden rounded-[32px] border border-burgundy/12 bg-white shadow-[0_24px_82px_-64px_rgba(44,22,28,0.32)] ring-1 ring-black/[0.04]">
+              <div class="grid gap-4 border-b border-burgundy/12 px-6 py-5 md:grid-cols-[0.35fr_1fr] md:items-end">
+                <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Yeni eklenenler</p>
+                <p class="max-w-2xl text-sm leading-relaxed text-ink/64">
+                  Aynı dosyaya eklenen araştırma yazıları burada tarih sırasıyla büyür; ana sayfa kısa bir vitrin olarak kalır.
+                </p>
+              </div>
+              <ol class="divide-y divide-burgundy/12">
+                {
+                  scienceResearchRecent.slice(0, 5).map((article, index) => (
+                    <li>
+                      <a
+                        href={article.path}
+                        class="group grid gap-4 px-6 py-5 transition hover:bg-cream-soft/35 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[4.5rem_1fr_auto] md:items-start md:py-6"
+                      >
+                        <span class="font-serif text-3xl italic leading-none text-gold">{String(index + 3).padStart(2, '0')}</span>
+                        <span class="min-w-0">
+                          <span class="mb-2 block text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink/48">
+                            {article.publishedDate} · {getArticleWriterName(article.writerSlug)}
+                          </span>
+                          <span class="block font-serif text-2xl leading-tight text-ink transition group-hover:text-burgundy md:text-3xl">
+                            {article.title}
+                          </span>
+                          <span class="mt-2 block max-w-3xl text-sm leading-relaxed text-ink/68">
+                            {article.description}
+                          </span>
+                        </span>
+                        <span class="text-xl text-gold transition group-hover:translate-x-1 md:justify-self-end" aria-hidden="true">→</span>
+                      </a>
+                    </li>
+                  ))
+                }
+              </ol>
+            </div>
+          )
+        }
+
+        <div class="mt-8 flex justify-end">
+          <a
+            href="/bilimsel-pencere/yeni-arastirmalar"
+            class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+          >
+            Tüm araştırma dosyasını incele →
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!--
       Bilim Yazarları — scientific category.
       Konum: EditorialDigestStrip sonrası, Kütüphane'den önce (2026-05-03'te eklendi).
@@ -596,7 +749,7 @@ const homeFaqs = [
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">09</span>
+            <span class="font-serif font-normal tabular-nums text-gold">10</span>
             <span class="mx-2 text-gold">—</span>
             Bilim Yazarları
           </p>
@@ -732,7 +885,7 @@ const homeFaqs = [
           </span>
           <div>
             <p class="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-burgundy/75">
-              <span class="font-serif font-normal tabular-nums text-gold">10</span>
+              <span class="font-serif font-normal tabular-nums text-gold">11</span>
               <span class="mx-2 text-gold">—</span>
               Kütüphane
             </p>

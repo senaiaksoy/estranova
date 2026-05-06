@@ -256,8 +256,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': {
-    src: '/images/library/editorial/senai-hrt-meme-kanseri-hero.webp',
-    alt: 'Krem tonlarda giyinmiş, düşünceli ifadesiyle pencereden ışık alan zarif bir kadın portresi; HRT avantajları yazısı için editoryal kart görseli',
+    src: '/images/library/editorial/senai-hrt-avantajlari-window-card.webp',
+    alt: 'Krem tonlu bir odada pencere kenarında duran, camel ceketli düşünceli kadın portresi; HRT avantajları yazısı için editoryal kart görseli',
   },
 };
 
