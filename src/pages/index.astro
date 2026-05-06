@@ -13,6 +13,7 @@ import { activeWriters, writers } from '../data/writers';
 import { currentIssue, resolveCoverDossier, formatIssuePad } from '../data/issues';
 import { magazineConfig } from '../data/magazine-config';
 import { staticArticles } from '../data/static-articles';
+import { featureFlags } from '../utils/feature-flags';
 import { toISODate } from '../utils/article-schema';
 
 const coverDossier = resolveCoverDossier(currentIssue);
@@ -143,6 +144,8 @@ const homeFaqs = [
     answer: 'Hayır. Perimenopoz, menopoza hazırlık, menopoz, 40 sonrası koruyucu sağlık, zihin dengesi, beden ve yakınlık gibi başlıklar birlikte ele alınır.',
   },
 ];
+
+const showEditorialDigest = featureFlags.editorialDigestVisible;
 ---
 
 <SiteLayout
@@ -607,7 +610,7 @@ const homeFaqs = [
       </div>
     </section>
 
-    <EditorialDigestStrip sectionNumber="08" />
+    {showEditorialDigest && <EditorialDigestStrip sectionNumber="08" />}
 
     <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>

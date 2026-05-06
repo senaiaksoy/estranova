@@ -23,6 +23,13 @@
 
 export interface FeatureFlags {
   /**
+   * Ana sayfadaki aylık editöryal özet yüzeyi.
+   * Kapalıyken bile ilgili bileşen, /mektup sayfası ve signup script'i
+   * kod tabanında hazır kalır; yalnızca homepage yüzeyi gizlenir.
+   */
+  editorialDigestVisible: boolean;
+
+  /**
    * Faz 2 — Okur kaydı + bülten gönderim sistemi.
    * Aktif olunca:
    *   • /giris ve /abone-ol sayfaları aktif (yer-tutucu yerine gerçek form)
@@ -75,6 +82,7 @@ export interface FeatureFlags {
  *   4. pdfAudioEnabled     (hedef: aylık sayı + audio üretim altyapısı kurulunca)
  */
 export const featureFlags: FeatureFlags = {
+  editorialDigestVisible: false,
   membershipEnabled: false,
   subscriptionEnabled: false,
   paywallEnabled: false,
