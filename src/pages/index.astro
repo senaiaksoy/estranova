@@ -6,6 +6,7 @@ import HomeHero from '../components/site/HomeHero.astro';
 import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
 import IssueHero from '../components/site/IssueHero.astro';
+import { homeJourneyIntro, homeJourneyItems } from '../data/home-journey-path';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 import { activeWriters, writers } from '../data/writers';
 import { currentIssue, resolveCoverDossier, formatIssuePad } from '../data/issues';
@@ -66,37 +67,6 @@ const editorialRecent = (coverDossier?.articles ?? []).slice(3).map((article) =>
     isPlanned: article.status === 'planned',
   };
 });
-
-const journey = [
-  {
-    step: '01',
-    title: 'Perimenopoz',
-    excerpt: 'Adet düzenin değişmeye başladığında vücudunun neyi sessizce anlattığını birlikte okumak için sakin bir başlangıç rehberi.',
-    href: '/hormonal-gecis/perimenopoz',
-    imageKey: '/hormonal-gecis/perimenopoz' as const,
-  },
-  {
-    step: '02',
-    title: 'Menopoza Hazırlık',
-    excerpt: 'Geçişe adım adım ısınırken günlük düzeninizi, takibinizi ve koruyucu alışkanlıklarınızı bu dönemden geçen birçoğumuz gibi sabırla kurabilirsiniz.',
-    href: '/hormonal-gecis/menopoza-hazirlik',
-    imageKey: '/hormonal-gecis/menopoza-hazirlik' as const,
-  },
-  {
-    step: '03',
-    title: 'Menopoz',
-    excerpt: 'Sık karşılaştığımız belirtileri tanımanız ve günlük yaşamınızı biraz daha yumuşatmanız için yanınızda duran sade, yaşıt tonlu bir rehber.',
-    href: '/hormonal-gecis/menopoz',
-    imageKey: '/hormonal-gecis/menopoz' as const,
-  },
-  {
-    step: '04',
-    title: '40 Sonrası Sağlık',
-    excerpt: 'Kemik, kas, uyku ve tarama başlıklarını tek dosyada oku. Amaç görev listesi değil, hayatın ritmini koruyan sakin bir sağlık hattı.',
-    href: '/hormonal-gecis/40-sonrasi',
-    imageKey: '/hormonal-gecis/40-sonrasi' as const,
-  },
-];
 
 // Yazar kategorileri — iki ayrı carousel için filtreler
 const lifestyleWriters = activeWriters.filter((w) => w.category !== 'scientific');
@@ -162,19 +132,19 @@ const homeFaqs = [
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
             <span class="font-serif font-normal tabular-nums text-gold">01</span>
             <span class="mx-2 text-gold">—</span>
-            Yolculuk Haritası
+            {homeJourneyIntro.sectionLabel}
           </p>
           <div>
-            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] text-ink md:text-6xl">Hormonal geçiş için dört kapı</h2>
+            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] text-ink md:text-6xl">{homeJourneyIntro.title}</h2>
             <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
-              Her dönem farklı sorular getirir. Burada okur, kendini bir testin içinde değil, sakin bir dergi dosyasının içinde bulur.
+              {homeJourneyIntro.lede}
             </p>
           </div>
         </header>
 
         <div class="overflow-hidden rounded-[38px] border border-burgundy/12 bg-white shadow-[0_30px_98px_-72px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04]">
           {
-            journey.map((j) => {
+            homeJourneyItems.map((j) => {
               const img = submenuHeroByRoute[j.imageKey];
               return (
                 <article class="group border-b border-burgundy/12 last:border-b-0">
