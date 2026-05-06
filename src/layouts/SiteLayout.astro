@@ -9,8 +9,6 @@ import {
 } from '../utils/seo';
 import { isProductionLaunch } from '../utils/launch';
 
-const allowIndexing = isProductionLaunch();
-
 type JsonLdSchema = Record<string, unknown>;
 
 interface Props {
@@ -20,6 +18,7 @@ interface Props {
   image?: string;
   ogType?: OgType;
   jsonLd?: JsonLdSchema | JsonLdSchema[];
+  allowIndexing?: boolean;
 }
 
 const {
@@ -29,6 +28,7 @@ const {
   image,
   ogType = 'website',
   jsonLd,
+  allowIndexing = isProductionLaunch(),
 } = Astro.props;
 
 const siteUrl = resolveSiteUrl(Astro.site);

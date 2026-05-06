@@ -16,7 +16,7 @@ const pageDescription = subscriptionActive
   : `${magazineConfig.name} dergisinin aylık okurluğu yakında duyurulur. Bekleme listesine kaydolarak ilk haberi alabilirsiniz.`;
 ---
 
-<SiteLayout title={pageTitle} description={pageDescription}>
+<SiteLayout title={pageTitle} description={pageDescription} allowIndexing={false}>
   <SiteNavbar currentPath="/abone-ol" />
 
   <main id="main-content" class="text-ink">
