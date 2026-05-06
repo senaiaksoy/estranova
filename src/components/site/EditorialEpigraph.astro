@@ -1,7 +1,7 @@
 ---
 /**
  * Bölümler arası tam genişlik editöryel epigraf.
- * Italic Newsreader; iki ince gold hairline arasında, krem ya da bordo zeminde.
+ * Italic editorial emphasis; iki ince gold hairline arasında, krem ya da bordo zeminde.
  * Sayfanın duygusal merkezi — sayfa başına tek bir tane kullan.
  */
 interface Props {
@@ -25,7 +25,7 @@ const { quote, attribution, variant = 'cream' } = Astro.props;
   <div class="absolute top-0 left-1/2 h-px w-[min(82%,52rem)] -translate-x-1/2 bg-gold/45"></div>
   <div class="absolute bottom-0 left-1/2 h-px w-[min(82%,52rem)] -translate-x-1/2 bg-gold/45"></div>
   <blockquote class="mx-auto max-w-3xl text-center">
-    <p class="font-serif text-2xl italic leading-snug md:text-3xl lg:text-[2.4rem] lg:leading-[1.2]">
+    <p class="font-sans text-2xl italic leading-snug tracking-[0.004em] md:text-3xl lg:text-[2.25rem] lg:leading-[1.28]">
       &ldquo;{quote}&rdquo;
     </p>
     {attribution && (

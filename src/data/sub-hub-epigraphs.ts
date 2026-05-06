@@ -1,6 +1,6 @@
 /**
  * Her hub ve alt-hub için tek bir editöryel epigraf cümlesi.
- * Sayfanın duygusal merkezini taşıyan satır — italic Newsreader,
+ * Sayfanın duygusal merkezini taşıyan satır — italic vurgu,
  * full-bleed cream bantta gösterilir.
  *
  * 3 cümle (cinsel-saglik, uyku-dinlenme, hormonlarin-bilimi) brand-writer

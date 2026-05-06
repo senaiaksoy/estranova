@@ -34,7 +34,7 @@ export interface MonthlyDossier {
   monthYearISO: string;
   /** Üst kicker etiket — "MAYIS 2026 · DOSYA" */
   kicker: string;
-  /** Ana başlık — Newsreader serif */
+  /** Ana başlık */
   title: string;
   /** Alt başlık / kicker tamamlayıcı, opsiyonel */
   subtitle?: string;
