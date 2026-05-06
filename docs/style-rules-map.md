@@ -9,6 +9,7 @@ Satır numaraları referans içindir; dosya değişince kayabilir — önce **b�
 - **`CLAUDE.md` §1–§6** — Editoryal kimlik, ton, yasak ifadeler, tıbbi sınır, Türkçe yayın dili, okuma düzeyi (HARD CONSTRAINTS).
 - **`CLAUDE.md` §3 — *Yazar persona'sı*** — Tıp dışı 40+ kadın **yaşıt** sesi; Vogue / Elle / Marie Claire Türkiye lifestyle-health tonu hedefi; doktor blogu / dergi-atıf dili yasak; okura hitapta **yalnızca "siz"** kullanılır.
 - **`AGENTS.md`** — Site genelinde forbidden examples, allowed neutral CTA örnekleri, ton tarifi; **Persona ve Dış Referans** özeti (`CLAUDE.md` HARD CONSTRAINT ile hizalı).
+- **`docs/editorial-style-guide.md`** — `Yaşıt Editör` ana editorial sesi; başlık tonu, giriş formülü, H2 ritmi, anekdot kullanımı, SSS ve CTA dili için pratik yazım standardı.
 
 ### Oturum kuralları — tek satır harita
 

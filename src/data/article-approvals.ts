@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi',
+    writerSlug: 'estranova-editorial',
+    approvedAt: '2026-05-06',
+    note: 'KC editor direct approval: Duygusal Denge bolumundeki semptom boslugunu kapatmak icin Estranova Editorial Stil Rehberi / Yasit Editor tonu ile hazirlandi; editorial desk imzasiyla canli envantere alindi.',
+  },
+  {
     pathname: '/zamansiz-yasam/kilo-artisi-menopoz',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-04-30',

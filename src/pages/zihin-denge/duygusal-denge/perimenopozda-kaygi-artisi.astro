@@ -1,0 +1,279 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zihin-denge/duygusal-denge']!;
+const bylineImage = {
+  src: '/images/library/editorial/perimenopozda-kaygi-artisi-byline.webp',
+  alt: 'İstanbul penceresi önünde çay ve not defteri eşliğinde sakin konuşan iki yaşıt kadın; perimenopozda kaygı artışını yargısız paylaşma temasını taşıyan 4:5 editoryal görsel',
+};
+const articleTitle = 'Perimenopozda Kaygı Artışı: Her Şey Aynıyken Neden İçiniz Daralıyor Gibi Hissedebilirsiniz?';
+const articleDescription =
+  'Perimenopoz döneminde kaygı, iç sıkışması, huzursuzluk ve bedensel alarm hissi neden artabilir? Bu rehber, hormon dalgalanması, uyku, sıcak basması ve yaşam yükünü sakin bir bakışla okur.';
+const publishedDate = '6 Mayıs 2026';
+const readingMinutes = 8;
+
+const tocEntries = [
+  { id: 'neden-simdi', label: 'Bu kaygı hissi neden tam da şimdi belirginleşebilir?' },
+  { id: 'kaygi-stres', label: 'Kaygı ile stres aynı şey mi?' },
+  { id: 'bedensel-alarm', label: 'Beden alarmdaymış gibi hissettiğinde ne olur?' },
+  { id: 'uyku-sicak-basma', label: 'Uyku ve sıcak basmaları kaygıyı nasıl büyütür?' },
+  { id: 'olagan-dalga', label: 'Hangi dalgalanmalar sık görülebilir?' },
+  { id: 'ne-zaman-destek', label: 'Ne zaman destek düşünmek gerekir?' },
+  { id: 'gunluk-duzenler', label: 'Gündelik hayatı biraz yumuşatan düzenler' },
+  { id: 'kisa-hatirlatma', label: 'Kısa hatırlatma' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const faqItems = articleFaqs[pathname] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'estranova-editorial',
+  publishedDate,
+  pathname,
+  articleSection: 'Zihin & Denge',
+  sectionPath: '/zihin-denge',
+  image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
+  keywords: [
+    'perimenopoz',
+    'kaygı',
+    'anksiyete',
+    'iç sıkışması',
+    'duygusal denge',
+    'uyku',
+    'sıcak basması',
+    'hormon dalgalanması',
+    '40 sonrası sağlık',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zihin-denge" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zihin & Denge · Duygusal Denge"
+      title="Perimenopozda Kaygı Artışı"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="estranova-editorial"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc={bylineImage.src}
+        imageAlt={bylineImage.alt}
+        imagePosition="center"
+      />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Perimenopozda kaygı artışı, çoğu zaman tek bir nedene bağlanmaz. Hormon dalgalanması, uyku bölünmesi,
+          sıcak basması, gece terlemesi, yaşam yükü ve bedensel alarm sistemi aynı anda çalıştığında, daha önce
+          rahat taşınan konular birden daha büyük hissedilebilir <Evidence from={3} to={4} />. Bu tablo sık
+          görülebilir; yine de kaygı günlük işlevi, uykuyu, ilişkileri veya güvenlik hissini belirgin etkiliyorsa
+          daha dikkatli değerlendirme gerekir.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="neden-simdi">Bu kaygı hissi neden tam da şimdi belirginleşebilir?</h2>
+        <p>
+          Bazen takvim değişmez, işler değişmez, evin sesi bile aynıdır; ama içinizde sanki küçük bir alarm daha
+          çabuk çalışmaya başlar. Perimenopozda kaygı artışı tam da bu nedenle kafa karıştırabilir.
+        </p>
+        <p>
+          Bu dönemde östrojen ve progesteron düzeyleri düz bir çizgi gibi ilerlemez; dalgalanır. Beyin, özellikle
+          uyku, duygu düzenleme, dikkat ve bedensel uyarılma sistemleri üzerinden bu dalgalanmaya duyarlıdır
+          <Evidence level={4} />. Bu yüzden bazı kadınlar kendilerini daha çabuk irkilir, daha kolay bunalan veya
+          sebepsiz yere içi sıkışan biri gibi hissedebilir.
+        </p>
+        <p>
+          Burada önemli ayrım şudur: Kaygı hissi "karakteriniz değişti" anlamına gelmek zorunda değildir. Bazen
+          bedenin eşik ayarı değişmiştir; aynı uyaran daha yüksek sesle duyulur. İşte, evde veya yalnız kaldığınız
+          bir anda "normalde bu kadar etkilenmezdim" cümlesi aklınızdan geçiyorsa, bunu kendinize karşı sert bir
+          hüküm gibi değil, bedenin verdiği bir işaret gibi okumak daha iyi bir başlangıç olabilir.
+        </p>
+
+        <h2 id="kaygi-stres">Kaygı ile stres aynı şey mi?</h2>
+        <p>
+          Stres çoğu zaman dışarıdaki yükle başlar; kaygı ise bazen yük ortada yokken bile içeride devam eden bir
+          tetikte kalma hali gibi hissedilir. İkisi birbirine karışabilir, ama aynı şey değildir.
+        </p>
+        <p>
+          Stres, teslim tarihi, aile sorumluluğu, sağlık kontrolü, ilişki gerilimi veya maddi plan gibi daha görünür
+          bir nedene bağlanabilir. Kaygıda ise beden bazen neden henüz açık değilken alarm verir: göğüste sıkışma,
+          mide düğümü, hızlı düşünce akışı, sabah erken uyanma veya "bir şey olacak" hissi öne çıkabilir
+          <Evidence level={3} />.
+        </p>
+        <p>
+          Perimenopoz bu iki alanı birbirine yaklaştırabilir. Uykusuz bir gece, ertesi gün iş yükünü daha ağır
+          hissettirebilir; sıcak basması bedensel alarmı tetikleyebilir; yoğun bir hafta da hormon dalgalanmasının
+          yarattığı hassas zeminde daha keskin yaşanabilir. Bu yüzden "stres mi, hormon mu?" sorusunun yanıtı çoğu
+          zaman "ikisi de aynı zeminde konuşuyor olabilir" olur.
+        </p>
+
+        <h2 id="bedensel-alarm">Beden alarmdaymış gibi hissettiğinde ne olur?</h2>
+        <p>
+          Kaygının en zor taraflarından biri, yalnızca düşüncede kalmamasıdır. Beden de konuşur; bazen düşünceden
+          önce beden konuşur.
+        </p>
+        <p>
+          Çarpıntı hissi, göğüs veya boğazda sıkışma, mide hassasiyeti, yüzeysel nefes, omuzlarda gerginlik ve
+          ani terleme, kaygıya eşlik edebilen bedensel belirtilerdir <Evidence level={4} />. Perimenopozda sıcak
+          basması ve gece terlemesi de benzer bedensel duyumlar yaratabildiği için kadınlar bazen "kaygı mı başladı,
+          sıcak basması mı geliyor?" ayrımını yapmakta zorlanabilir.
+        </p>
+        <p>
+          Yayın masasına bu konuda gelen en tanıdık cümlelerden biri şuna benzer: "Ortada büyük bir sorun yok, ama
+          bedenim sanki sınava girecekmişim gibi." Bu cümle tek başına tanı koydurmaz; ama bu dönemin ne kadar
+          bedensel yaşanabildiğini iyi anlatır. Sizin deneyiminiz farklı olabilir; bazı kadınlarda bu his göğüste,
+          bazılarında midede, bazılarında ise zihnin hızlanmasında belirginleşir.
+        </p>
+
+        <h2 id="uyku-sicak-basma">Uyku ve sıcak basmaları kaygıyı nasıl büyütür?</h2>
+        <p>
+          Gece iyi kapanmayan bir sistem, sabah dünyayı daha gürültülü duyar. Perimenopozda kaygıyı anlamak için
+          yalnızca gündüze değil, geceye de bakmak gerekir.
+        </p>
+        <p>
+          Uyku bölündüğünde beyin ertesi gün duygusal uyaranlara daha hassas yanıt verebilir <Evidence level={4} />.
+          Sıcak basması ve gece terlemesi uykuyu kesintiye uğrattığında, dinlenme azalır; dinlenme azaldığında ise
+          sabah daha çabuk irkilme, daha düşük tahammül ve daha yoğun kaygı hissi ortaya çıkabilir. Bu bir irade
+          eksikliği değil, toparlanma kapasitesinin zorlanmasıdır.
+        </p>
+        <p>
+          Bu yüzden kaygı artışını yalnızca "zihinsel" bir başlık gibi okumak eksik kalır. Uyku günlüğü, sıcak basması
+          sıklığı, kafein-alkol düzeni, akşam ekran alışkanlığı ve sabah yorgunluğu aynı resmin parçaları olabilir.
+          Bazen kaygıyı hafifletmenin ilk adımı, düşünceleri ikna etmeye çalışmak değil, geceyi daha görünür hale
+          getirmektir.
+        </p>
+
+        <h2 id="olagan-dalga">Hangi dalgalanmalar sık görülebilir?</h2>
+        <p>
+          Her kaygı dalgası ağır bir ruh sağlığı tablosu anlamına gelmez. Ama sık görülmesi, yaşanan hissin önemsiz
+          olduğu anlamına da gelmez.
+        </p>
+        <p>
+          Ara ara gelen iç sıkışması, sabahları daha huzursuz uyanma, kalabalık ortamlarda daha çabuk yorulma, küçük
+          kararları gereğinden büyük hissetme, regl öncesi dönemde kaygının artması veya sıcak basmasıyla birlikte
+          bedensel alarm yaşama perimenopozda görülebilen dalgalanmalardır <Evidence from={3} to={4} />.
+        </p>
+        <p>
+          Bu belirtileri izlerken üç soru işe yarar: Ne kadar sürüyor? Günlük hayatı ne kadar daraltıyor? Zamanla
+          artıyor mu, dalga dalga mı geliyor? Bu üç soru, hem gereksiz paniği azaltır hem de "bunu artık konuşmak
+          iyi olur" noktasını daha net gösterir.
+        </p>
+
+        <h2 id="ne-zaman-destek">Ne zaman destek düşünmek gerekir?</h2>
+        <p>
+          Bazı eşikler vardır; orada mesele artık yalnızca "yoğun bir dönem" diye geçiştirilemez. Destek istemek
+          telaş değil, tabloyu ciddiye alma biçimidir.
+        </p>
+        <p>
+          Kaygı işinizi, uykunuzu, ilişkilerinizi veya dışarı çıkma rahatlığınızı belirgin biçimde etkiliyorsa;
+          panik atak benzeri ataklar oluyorsa; çökünlük, umutsuzluk, yoğun suçluluk, kendinize zarar verme düşüncesi
+          veya alkol/ilaçla baş etmeye çalışma eşlik ediyorsa profesyonel değerlendirme geciktirilmemelidir
+          <Evidence level={5} />.
+        </p>
+        <p>
+          Ayrıca tiroid düzensizlikleri, kansızlık, B12 eksikliği, bazı ilaçlar, yoğun yas veya uzun süren bakım yükü
+          de kaygı benzeri bir tabloyu ağırlaştırabilir. Bu nedenle her şeyi yalnızca hormon geçişiyle açıklamak
+          zorunda değiliz. Bazen en iyi soru "Bu perimenopoz mu?" değil, "Bu dönemde hangi parçalar üst üste bindi?"
+          sorusudur.
+        </p>
+
+        <h2 id="gunluk-duzenler">Gündelik hayatı biraz yumuşatan düzenler neler olabilir?</h2>
+        <p>
+          Kaygı yükseldiğinde büyük yaşam kararları almak çoğu zaman iyi bir ilk adım değildir. Önce sistemi biraz
+          sessizleştiren küçük düzenler daha güvenli bir zemin kurar.
+        </p>
+        <p>
+          Düzenli uyku saati, sabah gün ışığı, gün içinde kısa yürüyüş, kafein saatini öne çekmek, akşam ekran
+          geçişini yumuşatmak, nefesi uzatan kısa pratikler ve yapılacakları zihinde tutmak yerine yazıya dökmek
+          bazı kadınlarda yükü azaltabilir <Evidence level={3} />. Burada amaç kaygıyı "kontrol etmek" değil, bedene
+          daha az alarm sebebi vermektir.
+        </p>
+        <ul>
+          <li>Sabah ilk 30 dakikada bedeninizi tarayın: çene, omuz, mide ve nefes nasıl?</li>
+          <li>Kaygının günün hangi saatinde arttığını kısa not alın.</li>
+          <li>Gece uyanmalarını ayrı bir sağlık başlığı olarak görün.</li>
+          <li>Bir karar vermeden önce "bugün yorgun muyum, aç mıyım, uykusuz muyum?" diye sorun.</li>
+          <li>Kaygı dalgası geldiğinde aynı anda üç şeyi çözmeye çalışmak yerine tek küçük adımı seçin.</li>
+        </ul>
+        <p>
+          Bu adımlar tedavi yerine geçmez; ama tabloyu daha okunur hale getirir. Kaygı bazen belirsiz bir sis gibi
+          gelir. Not almak, uykuya bakmak, bedensel eşikleri fark etmek ve gerektiğinde destek istemek, o sisi biraz
+          daha şekilli görmeye yardımcı olur.
+        </p>
+
+        <h2 id="kisa-hatirlatma">Kısa hatırlatma: Kaygı artışı sizi zayıf yapmaz</h2>
+        <p>
+          Perimenopozda kaygı artışı çoğu zaman "ben artık eski ben değilim" cümlesinden daha karmaşık bir yerden
+          gelir. Beden, uyku, hormon dalgalanması, yaşam yükü ve sinir sistemi aynı anda konuşuyor olabilir.
+        </p>
+        <p>
+          Kendinizi son aylarda daha çabuk irkilir, daha kolay bunalan veya içi daha sık daralan biri gibi
+          hissediyorsanız, bunu yalnızca karakter meselesi gibi okumayın. Ama bunu kendi başınıza taşımak zorunda
+          olduğunuz bir sır gibi de düşünmeyin. Sık görülen bir dalga olabilir; günlük hayat alanınızı daraltmaya
+          başladıysa, daha dikkatli değerlendirme iyi bir öz bakım adımıdır.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
+          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
+          '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p>Perimenopoz döneminde kaygı artışı, hormonal dalgalanmanın duygu düzenleme, uyku ve otonom sinir sistemi yanıtlarıyla kesiştiği bir alanda değerlendirilebilir.</p>
+        <p>Uyku bölünmesi, vazomotor belirtiler, mevcut stres yükü, geçmiş kaygı öyküsü ve eşlik eden tıbbi durumlar tabloyu belirginleştirebilir; bu nedenle tek nedenli açıklama çoğu zaman yetersiz kalır.</p>
+        <p>Günlük işlev kaybı, panik atak benzeri ataklar, uzun süren çökünlük, kendine zarar verme düşüncesi veya bedensel belirtilerin şiddetlenmesi durumunda bireysel değerlendirme geciktirilmemelidir.</p>
+        <p class="text-sm italic text-burgundy">— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü</p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.</p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

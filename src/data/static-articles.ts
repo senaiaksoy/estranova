@@ -18,6 +18,27 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi',
+    title: 'Perimenopozda Kaygı Artışı: Her Şey Aynıyken Neden İçiniz Daralıyor Gibi Hissedebilirsiniz?',
+    description:
+      'Perimenopoz döneminde kaygı, iç sıkışması, huzursuzluk ve bedensel alarm hissi neden artabilir? Bu rehber, hormon dalgalanması, uyku, sıcak basması ve yaşam yükünü sakin bir bakışla okur.',
+    publishedDate: '6 Mayıs 2026',
+    writerSlug: 'estranova-editorial',
+    section: 'Zihin & Denge',
+    sectionPath: '/zihin-denge',
+    keywords: [
+      'perimenopoz',
+      'kaygı',
+      'anksiyete',
+      'iç sıkışması',
+      'duygusal denge',
+      'uyku',
+      'sıcak basması',
+      'hormon dalgalanması',
+      '40 sonrası sağlık',
+    ],
+  },
+  {
     path: '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi',
     title: 'Menopoza Hazırlıkta İlk Kontrol Dosyası: Hangi Test Ne Söyler, Hangisi Herkes İçin Gerekli Değildir?',
     description:

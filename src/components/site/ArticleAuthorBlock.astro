@@ -10,6 +10,7 @@ interface Props {
   medicalReviewer?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imagePosition?: string;
   eyebrow?: string;
 }
 
@@ -21,6 +22,7 @@ const {
   medicalReviewer = 'Doç. Dr. Senai Aksoy',
   imageSrc,
   imageAlt,
+  imagePosition = 'center',
   eyebrow = 'Makale bilgisi',
 } = Astro.props;
 
@@ -38,36 +40,11 @@ const coverAlt =
   'Estranova makale konusu için editoryal kapak görseli';
 const authorProfileHref = writer.isInstitutionalByline ? '/editoryal-politika' : `/yazarlar/${writer.slug}`;
 const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Yazar profili';
-const shareUrl = Astro.url.href;
-const encodedShareUrl = encodeURIComponent(shareUrl);
-const encodedShareText = encodeURIComponent('Estranova makalesi');
-const shareLinks = [
-  {
-    label: 'X',
-    href: `https://twitter.com/intent/tweet?url=${encodedShareUrl}&text=${encodedShareText}`,
-    ariaLabel: "X'te paylaş",
-  },
-  {
-    label: 'in',
-    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}`,
-    ariaLabel: "LinkedIn'de paylaş",
-  },
-  {
-    label: 'WA',
-    href: `https://wa.me/?text=${encodedShareText}%20${encodedShareUrl}`,
-    ariaLabel: "WhatsApp'ta paylaş",
-  },
-  {
-    label: '@',
-    href: `mailto:?subject=${encodedShareText}&body=${encodedShareUrl}`,
-    ariaLabel: 'E-posta ile paylaş',
-  },
-];
 ---
 
 <section class="relative overflow-hidden rounded-[34px] border border-black/10 bg-white shadow-[0_34px_120px_-76px_rgba(44,24,28,0.42)] ring-1 ring-black/[0.035]">
-  <div class="grid gap-0 lg:grid-cols-[minmax(17rem,0.92fr)_minmax(0,1.08fr)]">
-    <div class="relative min-h-[18rem] overflow-hidden bg-cream-warm lg:min-h-[31rem]">
+  <div class="grid gap-0 lg:grid-cols-[minmax(18rem,0.86fr)_minmax(0,1.14fr)]">
+    <div class="relative aspect-[4/5] min-h-0 overflow-hidden bg-cream-warm">
       {
         coverSrc ? (
           <img
@@ -77,6 +54,7 @@ const shareLinks = [
             height="1120"
             loading="lazy"
             decoding="async"
+            style={`object-position: ${imagePosition};`}
             class="absolute inset-0 h-full w-full object-cover object-center"
           />
         ) : (
@@ -136,24 +114,6 @@ const shareLinks = [
           >
             Tıbbi not
           </a>
-        </div>
-        <div class="mt-7">
-          <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-ink/42">Paylaş</p>
-          <div class="mt-3 flex items-center justify-center gap-3">
-            {
-              shareLinks.map((link) => (
-                <a
-                  href={link.href}
-                  aria-label={link.ariaLabel}
-                  target={link.href.startsWith('http') ? '_blank' : undefined}
-                  rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  class="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-[11px] font-black tracking-[-0.02em] text-ink shadow-[0_18px_48px_-36px_rgba(44,24,28,0.48)] transition hover:border-burgundy/35 hover:bg-burgundy hover:text-white"
-                >
-                  {link.label}
-                </a>
-              ))
-            }
-          </div>
         </div>
       </div>
 

@@ -4,6 +4,28 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi': [
+    {
+      question: 'Perimenopozdaki kaygı artışı anksiyete bozukluğu anlamına gelir mi?',
+      answer:
+        'Her zaman hayır. Perimenopozda kaygı dalgalanması hormon değişimi, uyku bölünmesi ve yaşam yüküyle ilişkili olabilir. Ama kaygı günlük işlevi belirgin bozuyorsa, panik atak benzeri ataklar oluyorsa veya çökünlük eşlik ediyorsa profesyonel değerlendirme iyi olur.',
+    },
+    {
+      question: 'Kaygı hissi adet düzeni değişmeden de başlayabilir mi?',
+      answer:
+        'Evet, bazı kadınlarda ruh hali, uyku veya bedensel alarm hissi adet düzenindeki belirgin değişimden önce fark edilebilir. Perimenopoz her kadında aynı sırayla ilerlemez; bu yüzden yalnızca takvime bakmak tabloyu eksik bırakabilir.',
+    },
+    {
+      question: 'Gece uyanmaları kaygıyı gerçekten artırabilir mi?',
+      answer:
+        'Evet. Uyku bölündüğünde ertesi gün sinir sistemi daha tetikte çalışabilir; küçük stresler daha büyük hissedilebilir. Sıcak basması ve gece terlemesi de bu döngüyü besleyebilir.',
+    },
+    {
+      question: 'Ne zaman bunu yalnızca yoğunluk diye geçmemek gerekir?',
+      answer:
+        'Kaygı işinizi, ilişkinizi, uykunuzu, dışarı çıkma rahatlığınızı veya güvenlik hissinizi belirgin etkiliyorsa ertelememek gerekir. Kendinize zarar verme düşüncesi, yoğun umutsuzluk veya panik atak benzeri ataklar varsa destek aramak acil önem taşır.',
+    },
+  ],
   '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi': [
     {
       question: 'Menopoza yaklaşırken herkese geniş hormon paneli gerekir mi?',
