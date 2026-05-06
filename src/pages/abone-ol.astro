@@ -12,8 +12,8 @@ const pageTitle = subscriptionActive
   ? `${magazineConfig.name} okuru ol — Estranova`
   : `${magazineConfig.name} okurluğu yakında — Estranova`;
 const pageDescription = subscriptionActive
-  ? `${magazineConfig.name} dergisinin aylık okurluğunu açmak için tier seçimi.`
-  : `${magazineConfig.name} dergisinin aylık okurluğu yakında açılır. Bekleme listesine kaydolarak ilk haberi alabilirsiniz.`;
+  ? `${magazineConfig.name} dergisinin aylık okurluğu için yayın seçenekleri.`
+  : `${magazineConfig.name} dergisinin aylık okurluğu yakında duyurulur. Bekleme listesine kaydolarak ilk haberi alabilirsiniz.`;
 ---
 
 <SiteLayout title={pageTitle} description={pageDescription}>
@@ -32,12 +32,12 @@ const pageDescription = subscriptionActive
           {magazineConfig.name} · {magazineConfig.subtitle}
         </p>
         <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
-          {subscriptionActive ? `${magazineConfig.name} okuru ol` : 'Yayını izle, sırada beklersin'}
+          {subscriptionActive ? `${magazineConfig.name} okuru ol` : 'Yayını izleyin, ilk haber sizde olsun'}
         </h1>
         <p class="max-w-3xl text-lg leading-relaxed text-ink/80 md:text-xl">
           {subscriptionActive
-            ? `${magazineConfig.name} dergisinin aylık sayısı, sayı arşivi ve özel bölümlerine erişim için yayın okurluğunu aç.`
-            : `${magazineConfig.name} dergisinin aylık okurluğu, ilk sayılar yola çıktıktan sonra açılır. O güne kadar Estranova Mektubu üyeliğiyle yola çıkabilirsiniz; ilk okurluk açıldığında ilk haberi siz alırsınız.`}
+            ? `${magazineConfig.name} dergisinin aylık sayısı, sayı arşivi ve özel bölümlerine erişim için yayın okurluğu seçeneklerini inceleyebilirsiniz.`
+            : `${magazineConfig.name} dergisinin aylık okurluğu, ilk sayılar yola çıktıktan sonra duyurulur. O güne kadar Estranova Mektubu kaydıyla yola çıkabilirsiniz; ilk okurluk açıldığında ilk haberi siz alırsınız.`}
         </p>
       </div>
     </section>
@@ -54,7 +54,7 @@ const pageDescription = subscriptionActive
             </h2>
             <p class="mb-6 text-base leading-relaxed text-ink/75">
               Estranova Mektubu'na kayıt ol; aylık okurluk açıldığında ilk mektupta haber gönderiyoruz.
-              Hemen abonelik almak yerine adınız bekleme listesine yazılır — istediğiniz an ayrılırsınız.
+              Herhangi bir ödeme ya da yayın taahhüdü yok; adınız bekleme listesine yazılır — istediğiniz an ayrılırsınız.
             </p>
             <div class="flex flex-wrap gap-3">
               <a
@@ -79,7 +79,7 @@ const pageDescription = subscriptionActive
       <section class="bg-white px-6 py-12 md:py-16">
         <div class="mx-auto max-w-3xl">
           <p class="text-base leading-relaxed text-ink/65">
-            <em class="font-serif italic">Aylık okurluk tier kartları yer-tutucusu — Faz 3 implementasyonu için iyzico CheckoutForm bağlantı noktası burada açılır. featureFlags.subscriptionEnabled true olunca SubscriptionTiersCard bileşeni render edilir.</em>
+            <em class="font-serif italic">Aylık okurluk seçenekleri yayın masası tarafından duyurulduğunda bu alanda sade bir bilgilendirme kartı yer alır. Temel sağlık rehberleri herkese açık kalır.</em>
           </p>
         </div>
       </section>
