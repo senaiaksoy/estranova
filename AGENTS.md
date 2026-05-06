@@ -135,6 +135,16 @@ Do not introduce service-oriented navigation unless explicitly approved.
 - Soft CTA
 - Trust footer
 
+### Homepage scientific research block
+
+The homepage `Bilimsel Araştırmalar` section follows a fixed editorial pattern:
+- The top row contains exactly **2 manually pinned** articles from `Bilimsel Pencere / Yeni Araştırmalar`.
+- New research articles are **not** allowed to replace these two automatically.
+- The lower `Yeni eklenenler` list is populated automatically from `src/data/static-articles.ts` for routes under `/bilimsel-pencere/yeni-arastirmalar/`.
+- The lower automatic list shows a maximum of **5** items on the homepage.
+- When new articles are published in this subsection, they should appear in the automatic list once they are added to `src/data/static-articles.ts`; older items naturally roll off the homepage after the first five.
+- If the pinned pair should change, update the homepage config explicitly rather than changing the automatic list behavior.
+
 ### Article pages should include
 - Title
 - Quick answer / summary
