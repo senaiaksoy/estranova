@@ -3,6 +3,14 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
+const sitemapExcludedPaths = new Set([
+  '/giris',
+  '/abone-ol',
+  '/mektup',
+  '/okuma-paneli',
+  '/sonra-oku',
+]);
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://estranova.com',
@@ -38,7 +46,12 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/_'),
+      filter: (page) => {
+        if (page.includes('/admin') || page.includes('/_')) return false;
+
+        const url = new URL(page);
+        return !sitemapExcludedPaths.has(url.pathname.replace(/\/$/, ''));
+      },
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
