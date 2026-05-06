@@ -1,0 +1,474 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+import { articleFaqs } from '../../../data/article-faqs';
+
+const hero =
+  submenuHeroByRoute['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz']
+  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel']!;
+
+const tocEntries = [
+  { id: 'peptid-nedir', label: 'Peptid Nedir?' },
+  { id: 'glp1-ayri', label: 'GLP-1 Neden Ayrı?' },
+  { id: 'doku-kas', label: 'Doku ve Kas İddiaları' },
+  { id: 'kilo-kompozisyon', label: 'Kilo ve Kompozisyon' },
+  { id: 'enerji-uyku-longevity', label: 'Enerji ve Longevity' },
+  { id: 'guvenlik-standardizasyon', label: 'Güvenlik ve Standardizasyon' },
+  { id: 'uc-soru', label: 'Doktora Üç Soru' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const faqItems = articleFaqs['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz'] ?? [];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Peptidler Menopozda Gerçekten Ne Vaat Ediyor?';
+const articleDescription =
+  'Peptid başlığı altında dolaşan kilo kaybı, kas toparlanması, doku onarımı, enerji ve anti-aging iddiaları aynı kanıt gücüne sahip değil. Bu dosya, GLP-1 hattını kısa bir referans olarak ayırıp GLP-1 dışı peptid kullanımlarını kanıt, güvenlik ve reklam dili açısından sakin biçimde değerlendirir.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  publishedDate: '6 Mayıs 2026',
+  pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz',
+  articleSection: 'Zamansız Yaşam · Deneysel',
+  sectionPath: '/zamansiz-yasam',
+  keywords: [
+    'peptid',
+    'menopoz',
+    'BPC-157',
+    'TB-500',
+    'GHK-Cu',
+    'MOT-C',
+    'thymosin beta-4',
+    'ipamorelin',
+    'AOD-9604',
+    'epitalon',
+    'anti-aging',
+    'takviye güvenliği',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Deneysel Yaklaşımlar"
+      title="Peptidler Menopozda Gerçekten Ne Vaat Ediyor?"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        publishedDate="6 Mayıs 2026"
+        readingMinutes={10}
+        imageSrc="/images/library/editorial/zy-peptid-kullanimlari-menopoz-window-card.png"
+        imageAlt="Açık renkli bir iç mekanda pencere yanında duran, bordo hırkalı düşünceli kadın portresi"
+        imagePosition="74% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton
+          slug="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz"
+          title={articleTitle}
+        />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Son bir yılda peptid kelimesi, menopoz konuşmalarında neredeyse tek bir çatı
+          terim gibi dolaşmaya başladı. Oysa aynı başlık altında birbiriyle ilgisi zayıf
+          birkaç ayrı hat var: reçeteli GLP-1 analogları, doku onarımı iddiasıyla konuşulan
+          peptidler, büyüme hormonu eksenini hedefleyen GH-secretagogue hattı ve anti-aging
+          vaadiyle sunulan daha deneysel moleküller. Bu yazı GLP-1 tarafını kısa bir
+          referans olarak ayırıyor; asıl odağını ise BPC-157, thymosin beta-4, CJC-1295,
+          ipamorelin, AOD-9604 ve epitalon gibi GLP-1 dışı isimlerin menopoz çevresinde ne
+          kadar kanıtla konuşulabildiğine çeviriyor.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="peptid-nedir">Peptid Dediğimiz Şey Aslında Nedir?</h2>
+        <p>
+          Peptid kelimesi kulağa tek ve yeni bir çözüm gibi gelebiliyor; oysa biyolojide çok
+          geniş bir aileyi anlatıyor. Önce kelimeyi sakinleştirmek, sonra vaatleri ayırmak
+          gerekiyor.
+        </p>
+        <p>
+          Peptidler, kısa aminoasit zincirlerinden oluşan moleküllerdir ve vücutta sinyal
+          iletimi, hormon benzeri iletişim, doku tamiri ya da metabolik düzenleme gibi çok
+          farklı görevlerde yer alabilir <Evidence level={4} />. Bu teknik tanım doğru olsa
+          da günlük kullanımda iki önemli karışıklık yaratıyor. Birincisi, biyolojik olarak
+          peptid olmak, otomatik olarak etkili ya da güvenli olmak anlamına gelmiyor.
+          İkincisi, aynı ailede yer alan moleküller bambaşka kanıt düzeylerine sahip
+          olabiliyor.
+        </p>
+        <p>
+          Editoryal masada son aylarda peptid başlığının bu kadar sık dönmesi biraz da bu
+          yüzden dikkat çekici geldi bana: aynı kelime bazen reçeteli bir metabolik tedaviyi,
+          bazen spor salonu çevresinde dolaşan kas toparlanma vaadini, bazen de daha uzun
+          yaşama hayalini çağırıyor. Ama bu benim gördüğüm yoğunluk; sizin önünüze gelen
+          soru muhtemelen kilo, uyku ya da toparlanma ekseninden birinde daha kişisel bir
+          ihtiyaçtan doğuyor.
+        </p>
+        <p>
+          Menopoz çevresinde bu ilginin artmasının nedeni anlaşılır. Kilo kompozisyonu
+          değişebiliyor, kas kütlesini korumak zorlaşabiliyor, egzersiz sonrası toparlanma
+          daha yavaş hissedilebiliyor, uyku ve enerji kalitesi dalgalanabiliyor. Fakat bu
+          belirtilerin her birini peptid başlığı altında aynı kolaylıkla çözmek mümkünmüş
+          gibi konuşmak doğru değil. Buradaki temel ayrım, molekülün biyolojik olarak ilginç
+          olmasıyla klinik olarak işe yaradığının gösterilmesi arasındaki farktır
+          <Evidence from={2} to={3} />.
+        </p>
+
+        <h2 id="glp1-ayri">GLP-1 Hattını Neden Ayrı Bir Dosya Gibi Düşünmeliyiz?</h2>
+        <p>
+          GLP-1 hattı bu konuşmada hep araya giriyor; çünkü kamuoyunda peptid denince ilk
+          akla gelen örneklerden biri hâline geldi. Ama bilimsel olarak bu alanı, diğer
+          peptid vaatlerinden ayırmak daha dürüst bir okuma sağlıyor.
+        </p>
+        <p>
+          GLP-1 analogları ve ilgili inkretin hattı, kilo yönetimi ve metabolik sağlık için
+          randomize kontrollü çalışmalarla desteklenen ayrı bir tedavi ailesidir
+          <Evidence level={5} />. Bu grup menopozdaki kilo değişimi açısından ayrıca
+          tartışılabilir; nitekim Estranova'da bunun için ayrı bir dosya var. Buradaki önemli
+          nokta şu: GLP-1 için var olan klinik veri yoğunluğunu, GLP-1 dışı peptidlerin
+          tamamına yaymak mümkün değil.
+        </p>
+        <p>
+          Sosyal medyada sorun tam burada başlıyor. Bazen reçeteli GLP-1 hattının meşruiyeti,
+          BPC-157 ya da AOD-9604 gibi moleküllere de aynı bilimsel ağırlık varmış hissi
+          yaratmak için kullanılıyor. Oysa bunların klinik yolculukları, düzenleyici konumu,
+          insan verisi ve güvenlik takibi aynı değil. Kısacası GLP-1 alanının ciddiyeti,
+          peptid etiketli her başka ürünün de aynı derecede oturmuş olduğu anlamına gelmiyor.
+        </p>
+        <p>
+          Bu ayrımı başta yapmak önemli; çünkü aksi hâlde menopozdaki gerçek meseleler
+          birbirine karışıyor. Kilo yönetimi, insülin direnci ya da obezite ile ilgili bir
+          dosya ile doku onarımı veya anti-aging merakıyla açılan dosya aynı soruyu sormuyor.
+          Bu yazının geri kalanı, özellikle GLP-1 dışındaki iddiaları o nedenle daha yakın
+          mercekten okuyor.
+        </p>
+
+        <h2 id="doku-kas">Doku Onarımı ve Kas Toparlanması İçin Söylenenler Ne Kadar Güçlü?</h2>
+        <p>
+          Peptid anlatısının en çekici tarafı belki de burada: daha hızlı toparlanma, daha az
+          ağrı, daha sağlam kas hissi. Fakat hoş bir biyolojik hikâye ile güçlü insan verisi
+          aynı cümle değil.
+        </p>
+        <h3>BPC-157</h3>
+        <p>
+          BPC-157 için konuşulan ana vaat, doku iyileşmesini hızlandırma ve inflamasyon yükünü
+          azaltma yönünde. Laboratuvar ve hayvan verilerinde tendon, bağ ve bağırsak yüzeyi
+          gibi alanlarda ilginç sinyaller var <Evidence level={2} />; ama menopozdaki kadınlarda
+          egzersiz sonrası toparlanmayı, eklem yakınmalarını ya da cerrahi dışı yumuşak doku
+          iyileşmesini belirgin biçimde iyileştirdiğini gösteren güçlü insan verisi şu an yok.
+          Buradaki boşluk yalnızca birkaç iyi çalışma eksikliği değil; standardize ürün,
+          tekrarlanabilir form ve uzun dönem izlem eksikliği de var.
+        </p>
+        <h3>TB-500 / Thymosin Beta-4 Hattı</h3>
+        <p>
+          TB-500 adı pratikte çoğu zaman thymosin beta-4 ekseninin daha ticari, daha
+          dolaşımda olan yüzü gibi konuşuluyor. Burada da yara iyileşmesi, hareket rahatlığı
+          ve toparlanma üzerine erken dönem mekanistik ilgi var <Evidence level={2} />; fakat
+          insan çalışmalarındaki netlik hâlâ zayıf. Menopoz bağlamında bunu düzenli hareket
+          sonrası daha hızlı iyileşme ya da kas-iskelet yakınmalarında klinik bir araç gibi
+          sunmak için elimizde yeterli veri bulunmuyor.
+        </p>
+        <h3>GHK-Cu</h3>
+        <p>
+          GHK-Cu daha çok cilt, saç ve doku yenilenmesi alanında duyuluyor; bu yüzden menopozda
+          kolajen, iyileşme ve görünüm başlıklarına kolayca bağlanıyor. Biyolojik olarak bakır
+          taşıyan bir peptid olarak yara iyileşmesi ve doku sinyalleşmesi açısından ilgi çekici
+          bir yeri var <Evidence from={1} to={2} />. Ama bunu menopozdaki cilt kalitesi,
+          doku toparlanması ya da sistemik gençleşme için kanıtlı bir yol gibi anlatmak erken
+          olur; veri daha çok sınırlı insan gözlemleri ve preklinik zemin düzeyinde kalıyor.
+        </p>
+        <h3>GH prekürsörleri: CJC-1295, Ipamorelin ve benzeri hat</h3>
+        <p>
+          Kas hattında ise CJC-1295 ve ipamorelin gibi GH prekürsörleri ya da daha geniş adıyla
+          GH-secretagogue çizgisi öne çıkıyor. Teorik zemin, büyüme hormonu ve IGF-1 eksenini
+          uyararak kas yapımı veya toparlanma dinamiklerini etkilemek <Evidence from={1} to={2} />.
+          Bu mekanizma kâğıt üzerinde ilginç; ancak menopozda rutin kas koruma aracı olarak
+          yerleşmiş değil. Orta yaşta kas kaybı yaşayan pek çok kadın için asıl belirleyici
+          faktörler hâlâ direnç egzersizi, yeterli protein alımı, uyku düzeni, ilaç yan etkileri
+          ve tiroid gibi eşlik eden başlıklardır.
+        </p>
+        <p>
+          Burada önemli bir reklam tuzağı var: egzersiz sonrası daha iyi hissetmek ile kas
+          kütlesinde ölçülebilir, sürdürülebilir artış aynı şey değil. Kas hissi, ağrı algısı
+          ve motivasyon çok daha kolay etkilenebilir; gerçek kas kazanımı ise haftalar ve aylar
+          içinde objektif ölçümler gerektirir. Peptid hattı bu ayrımı çoğu zaman belirsiz
+          bırakıyor.
+        </p>
+
+        <h2 id="kilo-kompozisyon">Kilo Kaybı ve Vücut Kompozisyonu Vaatleri Neden Ayrı Tartılmalı?</h2>
+        <p>
+          Menopozda kilo konusu hassas; o yüzden bu başlık da en hızlı yayılan vaatlere açık.
+          Tam da bu nedenle burada duyulan her yeni ismi aynı heyecanla kabul etmek yerine
+          hangi hattın gerçekten veri taşıdığına bakmak gerekiyor.
+        </p>
+        <h3>AOD-9604</h3>
+        <p>
+          GLP-1 hattını kenara koyduğumuzda, kilo ve yağ kütlesi için en sık anılan peptid
+          isimlerinden biri AOD-9604 oluyor. Pazarlama dili bunu bazen yağ yakımına odaklı,
+          bazen de büyüme hormonu etkilerinden ayrışan bir seçenek gibi sunuyor. Oysa insan
+          verisi sınırlı ve sonuçlar tutarlı değil <Evidence level={2} />. Menopozal kilo
+          artışı, visseral yağlanma veya bel çevresi için standart, güçlü ve tekrar edilmiş
+          fayda gösteren bir veri setinden söz etmek şu an mümkün görünmüyor.
+        </p>
+        <h3>MOT-C</h3>
+        <p>
+          MOT-C daha çok mitokondri, egzersiz verimliliği ve metabolik esneklik etrafında
+          konuşulan bir peptid. Bu başlık menopoz için çekici geliyor; çünkü enerji düşüşü,
+          yağ dağılımı ve hareket kapasitesi aynı anda etkilenebiliyor. Ama MOT-C için insan
+          verisi çok erken evrede <Evidence from={1} to={2} /> ve menopozdaki kadınlarda kilo
+          yönetimi ya da metabolik dengeyi doğrudan iyileştirdiğini gösteren güçlü klinik
+          veri yok.
+        </p>
+        <p>
+          Kilo konuşmalarında ikinci karışıklık, tartıdaki sayı ile vücut kompozisyonunun
+          aynı şey sanılması. Menopozda yağ dağılımı, kas kaybı, ödem, uyku ve stres birlikte
+          tabloyu değiştirir. Bu yüzden bir peptid başlığını değerlendirirken yalnızca kilo
+          değil; yağ yüzdesi, bel çevresi, kuvvet, iştah seyri ve sürdürülebilirlik de
+          önemlidir. Kısa sürede küçük bir değişim görmek, bunun güvenli ve kalıcı olduğu
+          anlamına gelmez.
+        </p>
+        <p>
+          Eğer asıl soru kilo yönetimiyse, GLP-1 alanı için ayrı veri okumak daha mantıklıdır;
+          diğer peptidleri onun gölgesinde aynı düzeyde değerlendirmek ise beklentiyi gereksiz
+          şişirebilir. Bu da hem duygusal hem maddi olarak yoran bir döngü yaratır.
+        </p>
+
+        <h2 id="enerji-uyku-longevity">Enerji, Uyku ve Longevity Vaatleri En Kırılgan Alan mı?</h2>
+        <p>
+          Belki de evet; çünkü burada ölçülen sonucun kendisi daha yumuşak. Enerji, uyku
+          kalitesi ya da daha genç hissetme gibi başlıklar hepimizin kolayca umut bağladığı,
+          ama bilimsel olarak en zor ayrıştırılan alanlar.
+        </p>
+        <h3>Epithalon / Epitalon</h3>
+        <p>
+          Epithalon ya da daha sık görülen yazımıyla epitalon bu başlıkta en çok geçen
+          örneklerden biri. Longevity, sirkadiyen ritim ve hücresel yaşlanma anlatısında sık
+          yer alıyor; fakat insan çalışmalarının sayısı az, örneklemleri küçük ve uzun dönem
+          sonuçları belirsiz <Evidence from={1} to={2} />. Uykuya yardımcı olur, biyolojik yaşı
+          geri çevirir ya da menopozdaki enerji düşüşünü belirgin biçimde düzeltir demek için
+          elimizde yeterli veri yok. Bu alanda mekanizma anlatısı, kanıtın önüne çok kolay
+          geçiyor.
+        </p>
+        <h3>MOT-C neden burada yeniden anılmayı hak ediyor?</h3>
+        <p>
+          MOT-C aynı anda hem metabolik başlıklara hem de enerji anlatısına bağlandığı için
+          bu bölümde ikinci kez anılmayı hak ediyor. Özellikle "daha dayanıklı hissetme",
+          "egzersizden daha iyi sonuç alma" ya da "metabolizmayı gençleştirme" vaatleri bu
+          molekül etrafında büyüyor <Evidence level={1} />. Fakat bugünün dürüst okuması şu:
+          MOT-C ilginç bir araştırma hattı olabilir, ama menopozda klinik karar düzeyine
+          gelmiş bir araç değil.
+        </p>
+        <p>
+          Enerji şikâyeti zaten başlı başına karışık bir alan. Uyku apnesi, demir eksikliği,
+          B12 yetersizliği, tiroid bozukluğu, depresif belirtiler, gece uyanmaları, alkol
+          düzeni ya da yoğun stres aynı tabloyu taklit edebilir. Bu yüzden herhangi bir peptid
+          başlığını konuşmadan önce, yorgunluğun gerçekten neye bağlı olabileceğini ayırmak
+          genellikle daha kıymetlidir <Evidence level={4} />.
+        </p>
+        <p>
+          Longevity anlatısında da benzer bir problem var. Daha uzun yaşama ya da daha genç
+          kalmaya dair vaatler çoğu zaman doğrudan insan sonucuna değil, biyobelirteç veya
+          preklinik veriye yaslanıyor. Oysa günlük hayatta asıl ihtiyacımız, hayat kalitesini
+          yükselten güvenilir adımlar. Bu nedenle enerji ve longevity alanı, peptid reklamını
+          en fazla süzen bölge olmalı.
+        </p>
+
+        <h2 id="guvenlik-standardizasyon">Güvenlik, Ürün Standardizasyonu ve Reklam Dili Neden Bu Kadar Merkezde?</h2>
+        <p>
+          Bazen bir molekülün en zayıf halkası etkisi değil, ürüne dönüşme biçimi oluyor.
+          Peptid alanında asıl tedirginliklerden biri de burada başlıyor: aynı isim var, ama
+          içeriğin gerçekten o isimde ve o saflıkta olup olmadığını her zaman bilmiyoruz.
+        </p>
+        <p>
+          GLP-1 dışındaki peptidlerin önemli bir kısmı için piyasadaki ürünlerin kalite
+          standardı, saflık doğrulaması ve düzenli farmakovijilans takibi belirsizdir
+          <Evidence level={2} />. Bu da teorik yan etki listesinden daha büyük bir sorun
+          yaratır: kişi yalnızca molekülün biyolojisini değil, ürünün kendisini de satın
+          almış olur. Kontaminasyon, doz sapması, içerik uyumsuzluğu ya da soğuk zincir
+          sorunları klinik kanıt kadar önemlidir.
+        </p>
+        <p>
+          Güvenlik tarafında ayrıca şu başlıklar öne çıkıyor: kan şekeri ve iştah seyrinde
+          beklenmeyen değişiklikler, sıvı dengesi ve ödem, baş ağrısı, çarpıntı hissi,
+          enjeksiyon bölgesi reaksiyonları, uykuda bozulma ve büyüme hormonu ekseniyle ilişkili
+          teorik riskler. Bunların hepsi her molekül için aynı değil; ama çoğu reklam metninde
+          ya silikleşiyor ya da hiç konuşulmuyor.
+        </p>
+        <RedFlagBox
+          markers={[
+            'Ürün için net üretici bilgisi, içerik doğrulaması veya saflık belgesi gösterilemiyorsa',
+            'Öneri, GLP-1 verisini başka peptidlere otomatik olarak taşıyormuş gibi sunuyorsa',
+            'Kilo, uyku ve kas toparlanması için aynı ürünle aynı anda geniş vaatler kuruluyorsa',
+            'Tiroid hastalığı, aktif kanser öyküsü, diyabet, ciddi karaciğer veya böbrek hastalığı varsa',
+            'Eş zamanlı çoklu takviye ve hormon kullanımı nedeniyle etkileşim tablosu belirsizse',
+            'Fayda için açık ölçüt ve bırakma kriteri konuşulmadan uzun süreli kullanım öneriliyorsa',
+          ]}
+          footnote="Bu kutu alarm üretmek için değil, peptid başlığını konuşurken hangi durumlarda daha dikkatli olunması gerektiğini görünür kılmak için yer alıyor."
+        />
+        <p>
+          Reklam dilinde en sorunlu cümle genellikle çok basit olur: "Doğal bir sinyal
+          molekülü, o yüzden güvenli." Biyolojide doğal olmak otomatik olarak düşük risk
+          anlamına gelmez. Özellikle menopoz döneminde ilaçlar, tiroid dengesi, metabolik
+          riskler ve yaşam ritmi iç içe geçtiği için, ürün standardizasyonu kadar klinik zemin
+          da önem taşır.
+        </p>
+
+        <h2 id="uc-soru">Doktorunuza Sorabileceğiniz Üç Soru</h2>
+        <p>
+          Bir peptid başlığını konuşurken görüşmenin havasını değiştiren şey, çoğu zaman tek
+          doğru cevabı aramak değil, doğru soruları masaya koymaktır. Üç soru bu dosyada
+          özellikle işe yarıyor.
+        </p>
+        <p>
+          <strong>Birincisi:</strong> <em>"Benim hedefim tam olarak ne: kilo yönetimi, kas
+          toparlanması, doku onarımı, uyku mu; ve önerilen peptid bu hedef için hangi insan
+          verisine dayanıyor?"</em> Bu soru, GLP-1 hattı ile GLP-1 dışı peptid iddialarını
+          baştan ayırmaya yardımcı olur.
+        </p>
+        <p>
+          <strong>İkincisi:</strong> <em>"Faydayı hangi ölçütle izleyeceğiz ve ne kadar süre
+          sonra bu yaklaşımın benim için anlamlı olmadığına karar vereceğiz?"</em> Ölçütsüz
+          başlanan her deneysel başlık, kolayca süresi uzayan bir beklentiye dönüşebilir.
+          Tartı, bel çevresi, uyku günlüğü, kuvvet performansı ya da laboratuvar takibi gibi
+          somut ölçütler konuşulmadan başlamak pek verimli olmaz.
+        </p>
+        <p>
+          <strong>Üçüncüsü:</strong> <em>"Önerilen ürünün standardizasyonu, güvenlik takibi ve
+          benim mevcut ilaçlarımla olası etkileşimleri hakkında ne biliyoruz?"</em> Bu soru
+          bazen en rahatsız edici olanı gibi görünür, ama tam da bu yüzden kıymetlidir.
+          Kalite kontrol bilgisi, bırakma kriteri ve risk profili olmadan alınan karar, çoğu
+          zaman yalnızca umut satın almak olur.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleProsePanel class="mt-10">
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Peptid başlığı menopoz konuşmalarında tek bir çözüm kutusu gibi sunuluyor; oysa
+          içeride birbirinden çok farklı dosyalar var. GLP-1 hattı ayrı bir veri gücüne sahip;
+          BPC-157, thymosin beta-4, CJC-1295, ipamorelin, AOD-9604 ve epitalon gibi GLP-1 dışı
+          isimler ise daha sınırlı, parçalı ve çoğu zaman standardizasyon sorunu taşıyan bir
+          alanda duruyor.
+        </p>
+        <p>
+          Bu yüzden en dürüst sonuç, peptid kelimesini duyduğunuz anda heyecanı değil ayrımı
+          büyütmek olabilir. Hangi hedef için konuşulduğunu, hangi kanıt düzeyine dayandığını
+          ve ürünün gerçekten ne kadar güvenilir olduğunu sormak; özellikle menopoz döneminde
+          hem bedeninizi hem beklentinizi korur. Bir molekülün ilginç olması başka, sizin için
+          doğru ve güvenli bir seçenek olması başka şeydir.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
+          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Yazının ana gövdesinde özellikle reklam dili ile kanıt dili arasındaki farkı öne
+            çıkardım; bu notta ise klinik ayrımı daha doğrudan anlatıyorum.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik not:</strong> Menopoz döneminde peptid
+            soruları genellikle üç başlıkta geliyor: kilo yönetimi, egzersiz sonrası
+            toparlanma ve daha iyi uyku ya da enerji arayışı. Bu üç başlık aynı kelimeyi
+            kullanıyor olsa da aynı bilimsel zeminde durmuyor. GLP-1 hattı için ayrı ve daha
+            olgun bir veri seti varken, BPC-157, thymosin beta-4, CJC-1295, ipamorelin,
+            AOD-9604 ve epitalon gibi isimlerde verinin parçalı olduğunu baştan kabul etmek
+            gerekir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Mekanizma notu:</strong> BPC-157 ve thymosin beta-4
+            için doku iyileşmesi ve inflamasyon yanıtına dair preklinik sinyaller; CJC-1295 ve
+            ipamorelin hattı için büyüme hormonu ekseni üzerinden teorik kas/toparlanma
+            mekanizması; AOD-9604 için yağ metabolizmasına dönük iddialar; epitalon için ise
+            sirkadiyen ritim ve hücresel yaşlanma çevresinde tartışmalar bulunur. Ancak
+            menopozdaki kadınlarda anlamlı klinik sonuca dönüştüğü gösterilmiş, standartlaşmış
+            ve tekrar edilmiş insan verisi çoğu başlıkta yetersizdir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik kırmızı bayraklar:</strong> İçerik doğrulaması
+            yapılamayan ürünler; eş zamanlı çoklu hormon veya takviye kullanımı; aktif kanser
+            öyküsü, diyabet, ciddi tiroid, karaciğer ya da böbrek hastalığı; kilo kaybı, kas
+            artışı ve uyku için aynı anda geniş vaat kurulması; bırakma ölçütü olmadan belirsiz
+            süreli kullanım. Bu durumlarda değerlendirme daha dikkatli yapılmalıdır.
+          </p>
+          <p>
+            <strong class="text-burgundy">Pratik bütünleşim:</strong> Gerçek soru çoğu zaman
+            "Bu peptid etkili mi?" değil, "Benim semptom dosyam için elimizde ne kadar veri
+            var ve bu verinin kalitesi ne?" oluyor. Menopozdaki yorgunlukta önce uyku, tiroid,
+            demir ve ruh hali; kas kaybında önce direnç egzersizi, protein ve eşlik eden ilaç
+            etkileri; kilo yönetiminde ise metabolik risklerin temel değerlendirmesi öne
+            alınmalıdır. Peptid hattı, ancak bu yaklaşım kurulduktan sonra konuşulursa anlamlı
+            olur.
+          </p>
+          <p>
+            <strong class="text-burgundy">Bireysellik vurgusu:</strong> Buradaki yaklaşım genel
+            bilgi içindir. Kullandığınız ilaçlar, eşlik eden tıbbi durumlar, metabolik tablo ve
+            asıl hedefiniz, peptid başlığının sizin için tamamen farklı anlam taşımasına yol
+            açabilir. Bu nedenle karar, mutlaka bireysel değerlendirmeyle netleştirilmelidir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı
+          ve tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

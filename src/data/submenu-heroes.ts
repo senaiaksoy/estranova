@@ -259,6 +259,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/senai-hrt-avantajlari-window-card.webp',
     alt: 'Krem tonlu bir odada pencere kenarında duran, camel ceketli düşünceli kadın portresi; HRT avantajları yazısı için editoryal kart görseli',
   },
+  '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz': {
+    src: '/images/library/editorial/zy-peptid-kullanimlari-menopoz-window-card.png',
+    alt: 'Açık renkli bir iç mekanda pencere yanında duran, bordo hırkalı düşünceli kadın portresi; peptid kullanımları yazısı için editoryal kart görseli',
+  },
 };
 
 export function normalizePathname(pathname: string): string {
