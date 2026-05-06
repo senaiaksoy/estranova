@@ -12,6 +12,7 @@ import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro'
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
@@ -270,6 +271,8 @@ Bu, “test gereksizdir” demek değil; “testi duruma göre istemek gerekir�
         değil; bazıları sadece işaret. Beden bir cümle söylemişti; siz onu bu kez kendi takviminize yazıyorsunuz.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

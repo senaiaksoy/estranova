@@ -13,6 +13,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -352,6 +353,8 @@ mamografi, kan tetkikleri ve gerektiğinde kemik yoğunluğu ölçümü standart
           bulgularını ayırmak, HRT kararını daha sakin ve daha tıbbi bir zemine taşır.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

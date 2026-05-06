@@ -2,6 +2,7 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
@@ -11,6 +12,8 @@ import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro'
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -32,13 +35,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?';
 const articleDescription =
   'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo, aile öyküsü ve semptom notlarını hekime götürülebilecek sade bir kişisel referans dosyasına dönüştürme rehberi.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari'] ?? [];
+const pathname = '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik']!;
+const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '25 Nisan 2026',
-  pathname: '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
+  pathname,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis',
   keywords: [
@@ -64,15 +69,18 @@ const articleSchemas = buildArticleSchemas({
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
 
-  <main id="main-content" class="pt-24 text-ink">
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Ge?i? ? Menopoza Haz?rl?k"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="25 Nisan 2026" readingMinutes={6} />
-
-      <header class="mb-10">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Hormonal Geçiş · Menopoza Hazırlık</p>
-        <h1 class="font-serif text-4xl leading-tight md:text-6xl">{articleTitle}</h1>
-      </header>
 
       <ArticleSummary title="Kısa Özet">
 <p>
@@ -274,6 +282,8 @@ Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağ�
         söylemişti; siz onu kendi takviminize yazıyorsunuz.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

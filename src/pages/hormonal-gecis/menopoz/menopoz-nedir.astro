@@ -2,6 +2,7 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
@@ -12,6 +13,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -33,13 +35,15 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopoz Nedir? - Temel Rehber';
 const articleDescription = 'Menopozun tanımını, evrelerini, belirtilerini ve uzun vadeli sağlık gündemini ele alan sade rehber.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoz/menopoz-nedir'] ?? [];
+const pathname = '/hormonal-gecis/menopoz/menopoz-nedir';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoz']!;
+const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '21 Şubat 2026',
-  pathname: '/hormonal-gecis/menopoz/menopoz-nedir',
+  pathname,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis',
   keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
@@ -57,15 +61,18 @@ const articleSchemas = buildArticleSchemas({
 >
   <SiteNavbar currentPath="/hormonal-gecis" />
 
-  <main id="main-content" class="pt-24 text-ink">
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Ge?i? ? Menopoz"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
     <SubmenuArticleBody>
         <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="21 Şubat 2026" readingMinutes={4} />
-
-        <header class="mb-10">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Hormonal Geçiş · Menopoz</p>
-          <h1 class="font-serif text-4xl leading-tight md:text-6xl">Menopoz Nedir? - Temel Rehber</h1>
-        </header>
 
          <ArticleSummary title="Kısa Özet">
 <p>

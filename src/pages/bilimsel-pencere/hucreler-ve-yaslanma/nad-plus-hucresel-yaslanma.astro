@@ -13,6 +13,7 @@ import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro'
 import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
@@ -361,6 +362,8 @@ mütevazı, uzun vadeli sonuç henüz bilinmiyor"</em>. Bu bakışla yaklaşıld
           hikâyeniz — bu cümleyi NAD+ alanı kadar net çağıran az alan var.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

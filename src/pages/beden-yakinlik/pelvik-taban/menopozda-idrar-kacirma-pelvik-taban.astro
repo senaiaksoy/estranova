@@ -16,6 +16,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -286,6 +287,8 @@ başlasın, üç ayda yeniden konuşalım"</em> gibi bir yol. <strong>Üçüncü
           kendisi cevabın yarısıdır; bu yarısını siz koyarsanız, kalanı klinik diyalogun parçası oluyor.
         </p>
       </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
