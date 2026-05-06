@@ -71,6 +71,12 @@ const staticPages: SearchItem[] = [
     category: 'Sayfa',
   },
   {
+    title: 'Okuma Paneli',
+    description: 'Sonra Oku listeniz, mektup kaydınız ve yazı boyutu tercihiniz için yerel okuma alanı.',
+    href: '/okuma-paneli',
+    category: 'Sayfa',
+  },
+  {
     title: 'İletişim',
     description: 'Estranova editöryel ekibiyle iletişim.',
     href: '/iletisim',

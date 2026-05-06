@@ -17,6 +17,15 @@ interface SavedItem {
 }
 
 const STORAGE_KEY = 'estranova:save-for-later';
+const SECTION_LABELS: Record<string, string> = {
+  'hormonal-gecis': 'Hormonal Geçiş',
+  'zihin-denge': 'Zihin & Denge',
+  'beden-yakinlik': 'Beden & Yakınlık',
+  'zamansiz-yasam': 'Zamansız Yaşam',
+  'bilimsel-pencere': 'Bilimsel Pencere',
+  dosya: 'Dosya',
+  sayi: 'Sayı',
+};
 
 function getSavedItems(): SavedItem[] {
   try {
@@ -31,6 +40,14 @@ function getSavedItems(): SavedItem[] {
 
 function setSavedItems(items: SavedItem[]): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 function isSaved(slug: string): boolean {
@@ -89,25 +106,33 @@ function updateHeaderCounter(): void {
 function renderSavedListPage(): void {
   const container = document.querySelector<HTMLElement>('[data-saved-list]');
   const emptyState = document.querySelector<HTMLElement>('[data-saved-empty]');
+  const listShell = document.querySelector<HTMLElement>('[data-saved-shell]');
+  const countEl = document.querySelector<HTMLElement>('[data-saved-count]');
   if (!container) return;
 
   const items = getSavedItems();
 
   if (items.length === 0) {
     if (emptyState) emptyState.removeAttribute('hidden');
+    if (listShell) listShell.setAttribute('hidden', 'hidden');
+    if (countEl) countEl.textContent = '0';
     container.innerHTML = '';
     return;
   }
 
   if (emptyState) emptyState.setAttribute('hidden', 'hidden');
+  if (listShell) listShell.removeAttribute('hidden');
+  if (countEl) countEl.textContent = String(items.length);
 
   container.innerHTML = items
-    .map((item) => {
-      const safeTitle = item.title
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
-      const safeSlug = item.slug;
+    .map((item, index) => {
+      const safeTitle = escapeHtml(item.title);
+      const safeSlug = escapeHtml(item.slug);
+      const sectionKey = safeSlug
+        .split('/')
+        .filter(Boolean)[0]
+        ?? '';
+      const sectionLabel = SECTION_LABELS[sectionKey] ?? 'Okuma';
       const date = new Date(item.savedAt);
       const formattedDate = isNaN(date.getTime())
         ? ''
@@ -117,21 +142,28 @@ function renderSavedListPage(): void {
             year: 'numeric',
           });
       return `
-        <li class="border-b border-burgundy/12 py-6">
-          <article class="flex items-start gap-5">
-            <a href="${safeSlug}" class="group min-w-0 flex-1">
-              <p class="mb-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/65">
-                ${formattedDate ? `Kaydedildi · ${formattedDate}` : 'Kaydedildi'}
-              </p>
-              <h3 class="font-serif text-xl leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35 md:text-2xl">
-                ${safeTitle}
-              </h3>
-              <p class="mt-2 text-xs text-ink/55">${safeSlug}</p>
+        <li class="px-5 py-5 md:px-7 md:py-6">
+          <article class="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
+            <a href="${safeSlug}" class="group flex min-w-0 gap-4">
+              <span class="mt-1 hidden font-serif text-4xl italic leading-none text-gold md:block">
+                ${String(index + 1).padStart(2, '0')}
+              </span>
+              <span class="min-w-0">
+                <span class="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy/60">
+                  <span>${formattedDate ? `Kaydedildi · ${formattedDate}` : 'Kaydedildi'}</span>
+                  <span class="h-1 w-1 rounded-full bg-gold/70" aria-hidden="true"></span>
+                  <span>${sectionLabel}</span>
+                </span>
+                <span class="block font-serif text-2xl leading-snug tracking-[-0.02em] text-ink transition group-hover:text-burgundy md:text-3xl">
+                  ${safeTitle}
+                </span>
+                <span class="mt-2 block truncate text-xs text-ink/45">${safeSlug}</span>
+              </span>
             </a>
             <button
               type="button"
               data-remove-slug="${safeSlug}"
-              class="shrink-0 rounded-full border border-burgundy/20 bg-cream-soft px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-burgundy/85 transition hover:border-burgundy/45 hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+              class="shrink-0 rounded-full border border-burgundy/18 bg-cream-soft px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-burgundy/80 transition hover:-translate-y-0.5 hover:border-burgundy/45 hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
               aria-label="Bu yazıyı listemden çıkar"
             >
               Listeden çıkar

@@ -7,11 +7,11 @@ import { isFeatureActive } from '../utils/feature-flags';
 const membershipActive = isFeatureActive('membershipEnabled');
 
 const pageTitle = membershipActive
-  ? 'Estranova\'ya giriş'
-  : 'Giriş yakında — Estranova';
+  ? 'Okur girişi — Estranova'
+  : 'Okur alanı yakında — Estranova';
 const pageDescription = membershipActive
-  ? 'Estranova okur hesabına e-posta ile giriş yap. Parola yok; tek kullanımlık link gönderilir.'
-  : 'Estranova okur hesabı sistemi yakında açılır. O güne kadar tüm içerikler kayıtsız erişilebilir.';
+  ? 'Estranova okur alanına e-posta ile giriş yapılır. Parola yok; tek kullanımlık link gönderilir.'
+  : 'Estranova okur alanı yakında açılır. O güne kadar tüm içerikler kayıtsız erişilebilir.';
 ---
 
 <SiteLayout title={pageTitle} description={pageDescription}>
@@ -20,7 +20,7 @@ const pageDescription = membershipActive
   <main id="main-content" class="text-ink">
     <section class="relative overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-cream-warm via-cream-soft to-white px-6 py-16 md:py-24">
       <div class="absolute right-[-6vw] top-12 hidden font-serif text-[12rem] leading-none text-burgundy/[0.045] lg:block">
-        giriş
+        okur
       </div>
       <div class="absolute left-[-5rem] bottom-0 hidden h-72 w-72 rounded-full bg-gold/10 blur-3xl lg:block"></div>
 
@@ -29,26 +29,26 @@ const pageDescription = membershipActive
           <nav aria-label="Sayfa konumu" class="mb-8 text-xs uppercase tracking-[0.22em] text-ink/55">
             <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
             <span class="mx-2 text-gold">·</span>
-            <span class="text-burgundy">Giriş</span>
+            <span class="text-burgundy">Okur Alanı</span>
           </nav>
 
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-burgundy">
             Estranova Okur
           </p>
           <h1 class="mb-6 max-w-4xl font-serif text-5xl leading-[0.98] text-burgundy md:text-7xl">
-            {membershipActive ? 'Tek tıklık okur girişi' : 'Kapı açık; hesap sonra'}
+            {membershipActive ? 'Tek tıklık okur girişi' : 'Okur alanı yakında; okuma açık'}
           </h1>
           <p class="max-w-3xl text-lg leading-relaxed text-ink/76 md:text-xl">
             {membershipActive
-              ? 'E-postanı yaz; tek kullanımlık bir giriş bağlantısı gönderelim. Parola hatırlamak yok, okur alanına sakin ve güvenli bir geçiş var.'
-              : 'Estranova okur hesabı sistemi henüz açılmadı. Bu arada okuma paneliniz, Sonra Oku listeniz ve yazı boyutu tercihiniz yalnızca bu tarayıcıda durur; içerikleri okumak için kayıt gerekmez.'}
+              ? 'E-postanızı yazın; tek kullanımlık bir giriş bağlantısı gönderelim. Parola hatırlamak yok, okur alanına sakin ve güvenli bir geçiş var.'
+              : 'Estranova okur alanı henüz açılmadı. Bu arada okuma paneliniz, Sonra Oku listeniz ve yazı boyutu tercihiniz yalnızca bu tarayıcıda durur; içerikleri okumak için kayıt gerekmez.'}
           </p>
         </div>
 
         <aside class="rounded-[36px] border border-burgundy/10 bg-white/85 p-8 shadow-[0_24px_70px_rgba(74,47,39,0.10)] backdrop-blur">
           <p class="mb-3 font-serif text-3xl text-burgundy">Okur alanı notu</p>
           <p class="text-sm leading-relaxed text-ink/68">
-            Estranova'da hesap, içeriğe erişmek için zorunlu bir kapı değil. Açıldığında yalnızca okuma geçmişini ve tercihlerini daha düzenli taşımaya yarayan hafif bir katman olacak.
+            Estranova'da kayıt, içeriğe erişmek için zorunlu bir kapı değil. Açıldığında yalnızca okuma geçmişini ve tercihlerini daha düzenli taşımaya yarayan hafif bir katman olacak.
           </p>
           <div class="mt-6 border-t border-burgundy/10 pt-5">
             <p class="text-xs font-bold uppercase tracking-[0.24em] text-gold">Bugün</p>
@@ -76,10 +76,10 @@ const pageDescription = membershipActive
           <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <div class="rounded-[36px] bg-burgundy p-8 text-white shadow-[0_24px_70px_rgba(107,45,62,0.18)] md:p-10">
               <p class="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
-                Şimdi yapabileceklerin
+                Şimdi yapabilecekleriniz
               </p>
               <h2 class="mb-5 font-serif text-4xl leading-tight md:text-5xl">
-                Hesap olmadan da okuma panelin var
+                Kayıt olmadan da okuma paneliniz var
               </h2>
               <p class="mb-7 text-base leading-relaxed text-white/76">
                 Sonra Oku listenize, mektup kaydınıza ve okuma tercihlerinize kayıt olmadan ulaşabilirsiniz.
@@ -87,10 +87,10 @@ const pageDescription = membershipActive
               </p>
               <div class="flex flex-wrap gap-3">
                 <a
-                  href="/hesabim"
+                  href="/okuma-paneli"
                   class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-burgundy shadow-sm transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/45"
                 >
-                  Okuma panelimi aç
+                  Okuma paneline git
                 </a>
                 <a
                   href="/mektup"

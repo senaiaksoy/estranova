@@ -2,7 +2,7 @@
  * Estranova feature flag'leri — Faz 2 / 3 / 4 sistemlerinin tek-dokunuş
  * aktivasyonu için merkezi toggle dosyası.
  *
- * Kullanıcı eşiğine ulaşılana kadar hesap kaydı, abonelik ve paywall
+ * Kullanıcı eşiğine ulaşılana kadar okur kaydı, abonelik ve paywall
  * sistemleri kapalı tutulur. Sayfalar ve bileşenler bu flagleri okur:
  *
  *   import { featureFlags } from '../utils/feature-flags';
@@ -23,13 +23,13 @@
 
 export interface FeatureFlags {
   /**
-   * Faz 2 — Hesap kaydı + bülten gönderim sistemi.
+   * Faz 2 — Okur kaydı + bülten gönderim sistemi.
    * Aktif olunca:
    *   • /giris ve /abone-ol sayfaları aktif (yer-tutucu yerine gerçek form)
-   *   • Header'a "Hesabım" linki çıkar (oturum açıkken)
+   *   • Header'a "Okuma Paneli" linki çıkar (oturum açıkken)
    *   • newsletter-signup.ts: localStorage yerine Resend API çağrısı
    *   • save-for-later.ts: localStorage + Supabase çift-yazım
-   *   • /hesabim sayfası: localStorage + sunucu verisi karması
+   *   • /okuma-paneli sayfası: localStorage + sunucu verisi karması
    */
   membershipEnabled: boolean;
 
@@ -37,7 +37,7 @@ export interface FeatureFlags {
    * Faz 3 — Aylık dergi aboneliği (iyzico).
    * Aktif olunca:
    *   • /abone-ol tier seçim sayfası ödeme akışıyla bağlanır
-   *   • /hesabim/yayin-durumu paneli gözükür
+   *   • /okuma-paneli/yayin-durumu paneli gözükür
    *   • Header'da "Yayını izle" CTA'sı (oturum yokken)
    *   • Webhook + recurring kayıt sistemi devreye girer
    * BAĞIMLI: membershipEnabled aktif olmalı.
@@ -58,7 +58,7 @@ export interface FeatureFlags {
   /**
    * Faz 5 — Aylık PDF + audio dağıtımı.
    * Aktif olunca:
-   *   • Hesap sayfasında "Sayını indir" PDF link'leri
+   *   • Okuma Paneli'nde "Sayını indir" PDF link'leri
    *   • Audio player makale altında
    *   • Cloudflare R2 signed URL üretimi
    * BAĞIMLI: subscriptionEnabled aktif olmalı.

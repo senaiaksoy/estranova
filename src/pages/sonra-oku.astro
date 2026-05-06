@@ -40,7 +40,7 @@ const pageDescription =
             </p>
             <div class="mt-6 border-t border-gold/25 pt-5">
               <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/55">
-                Yerel liste · Hesap zorunlu değil · Sessiz okuma alanı
+                Yerel liste · Kayıt zorunlu değil · Sessiz okuma alanı
               </p>
             </div>
           </aside>
@@ -63,7 +63,7 @@ const pageDescription =
           </h2>
           <p class="mx-auto mb-7 max-w-2xl text-base leading-relaxed text-ink/70">
             Bir yazıyı okurken sağ üstteki <span class="font-semibold text-burgundy">Sonra Oku</span> düğmesine
-              basarsanız listenizde birikir. Listeye yalnızca siz erişirsiniz; kayıt veya hesap gerekmez.
+              basarsanız listenizde birikir. Listeye yalnızca siz erişirsiniz; kayıt gerekmez.
           </p>
           <a
             href="/sayi"
@@ -74,7 +74,28 @@ const pageDescription =
           </a>
         </div>
 
-        <ul data-saved-list class="rounded-[34px] border border-burgundy/12 bg-white/75 shadow-[0_24px_82px_-66px_rgba(44,22,28,0.32)] ring-1 ring-white/80"></ul>
+        <section
+          data-saved-shell
+          hidden
+          class="overflow-hidden rounded-[38px] border border-burgundy/12 bg-white shadow-[0_28px_90px_-66px_rgba(44,22,28,0.36)] ring-1 ring-white/80"
+        >
+          <header class="grid gap-4 border-b border-burgundy/10 bg-cream-soft/45 px-6 py-6 md:grid-cols-[1fr_auto] md:items-end md:px-8">
+            <div>
+              <p class="mb-2 text-[11px] font-bold uppercase tracking-[0.26em] text-gold">
+                Kaydedilenler
+              </p>
+              <h2 class="font-serif text-3xl leading-tight tracking-[-0.025em] text-ink md:text-4xl">
+                Kişisel okuma rafınız
+              </h2>
+            </div>
+            <p class="text-sm leading-relaxed text-ink/60 md:text-right">
+              <span data-saved-count class="font-serif text-4xl leading-none text-burgundy">0</span>
+              <span class="ml-2 text-[11px] font-bold uppercase tracking-[0.22em] text-ink/45">yazı</span>
+            </p>
+          </header>
+
+          <ul data-saved-list class="divide-y divide-burgundy/10"></ul>
+        </section>
       </div>
     </section>
 
@@ -90,10 +111,10 @@ const pageDescription =
         </div>
         <div class="md:text-right">
           <a
-            href="/hesabim"
+            href="/okuma-paneli"
             class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
           >
-            Okuma panelimi aç
+            Okuma paneline git
             <span aria-hidden="true">→</span>
           </a>
         </div>
@@ -103,7 +124,7 @@ const pageDescription =
     <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
       <div class="mx-auto max-w-3xl text-center">
         <p class="text-sm leading-relaxed text-ink/70">
-          Liste yalnızca bu tarayıcıda saklanır. Tarayıcı verisini sildiğinde liste de kaybolur.
+          Liste yalnızca bu tarayıcıda saklanır. Tarayıcı verisini sildiğinizde liste de kaybolur.
         </p>
       </div>
     </section>
