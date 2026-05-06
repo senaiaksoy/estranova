@@ -8,6 +8,7 @@ coverage/
 !.env.example
 # Yerel Claude/Cursor paralel worktree klonlari (git worktree kaydi disinda; repoya girmesin)
 .claude/worktrees/
+.worktrees/
 .env
 __pycache__/
 **/__pycache__/
