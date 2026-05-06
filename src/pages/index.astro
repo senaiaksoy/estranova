@@ -3,9 +3,11 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import HomeHero from '../components/site/HomeHero.astro';
+import HomeJourneyMap from '../components/site/HomeJourneyMap.astro';
 import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
 import IssueHero from '../components/site/IssueHero.astro';
+import { homeJourneyIntro, homeJourneyItems } from '../data/home-journey-path';
 import { homePageHero, submenuHeroByRoute } from '../data/submenu-heroes';
 import { activeWriters, writers } from '../data/writers';
 import { currentIssue, resolveCoverDossier, formatIssuePad } from '../data/issues';
@@ -67,40 +69,13 @@ const editorialRecent = (coverDossier?.articles ?? []).slice(3).map((article) =>
   };
 });
 
-const journey = [
-  {
-    step: '01',
-    title: 'Perimenopoz',
-    excerpt: 'Adet düzenin değişmeye başladığında vücudunun neyi sessizce anlattığını birlikte okumak için sakin bir başlangıç rehberi.',
-    href: '/hormonal-gecis/perimenopoz',
-    imageKey: '/hormonal-gecis/perimenopoz' as const,
-  },
-  {
-    step: '02',
-    title: 'Menopoza Hazırlık',
-    excerpt: 'Geçişe adım adım ısınırken günlük düzeninizi, takibinizi ve koruyucu alışkanlıklarınızı bu dönemden geçen birçoğumuz gibi sabırla kurabilirsiniz.',
-    href: '/hormonal-gecis/menopoza-hazirlik',
-    imageKey: '/hormonal-gecis/menopoza-hazirlik' as const,
-  },
-  {
-    step: '03',
-    title: 'Menopoz',
-    excerpt: 'Sık karşılaştığımız belirtileri tanımanız ve günlük yaşamınızı biraz daha yumuşatmanız için yanınızda duran sade, yaşıt tonlu bir rehber.',
-    href: '/hormonal-gecis/menopoz',
-    imageKey: '/hormonal-gecis/menopoz' as const,
-  },
-  {
-    step: '04',
-    title: '40 Sonrası Sağlık',
-    excerpt: 'Kemik, kas, uyku ve tarama başlıklarını tek dosyada oku. Amaç görev listesi değil, hayatın ritmini koruyan sakin bir sağlık hattı.',
-    href: '/hormonal-gecis/40-sonrasi',
-    imageKey: '/hormonal-gecis/40-sonrasi' as const,
-  },
-];
-
 // Yazar kategorileri — iki ayrı carousel için filtreler
 const lifestyleWriters = activeWriters.filter((w) => w.category !== 'scientific');
 const scientificWriters = activeWriters.filter((w) => w.category === 'scientific');
+const homeJourneyFeatured = homeJourneyItems.find((item) => item.featured) ?? homeJourneyItems[0];
+const hasHomeJourneySection = Boolean(
+  homeJourneyFeatured && (submenuHeroByRoute[homeJourneyFeatured.imageKey] ?? submenuHeroByRoute['/hormonal-gecis'])
+);
 
 const preventionCards = [
   {
@@ -152,65 +127,30 @@ const homeFaqs = [
   <main id="main-content" class="text-ink">
     <HomeHero hero={homePageHero} />
 
-    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
-      <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
-      <div class="pointer-events-none absolute left-1/2 top-10 hidden -translate-x-1/2 font-serif text-[10rem] leading-none tracking-[-0.08em] text-burgundy/5 lg:block">
-        imzalar
-      </div>
-      <div class="mx-auto max-w-6xl">
-        <header class="mb-12 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-end">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">01</span>
-            <span class="mx-2 text-gold">—</span>
-            Yolculuk Haritası
-          </p>
-          <div>
-            <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] text-ink md:text-6xl">Hormonal geçiş için dört kapı</h2>
-            <p class="max-w-2xl text-lg leading-relaxed text-ink/75">
-              Her dönem farklı sorular getirir. Burada okur, kendini bir testin içinde değil, sakin bir dergi dosyasının içinde bulur.
+    {
+      hasHomeJourneySection && (
+        <>
+          <HomeJourneyMap
+            sectionNumber="01"
+            sectionLabel={homeJourneyIntro.sectionLabel}
+            title={homeJourneyIntro.title}
+            lede={homeJourneyIntro.lede}
+            items={homeJourneyItems}
+          />
+
+          <div class="mx-auto flex max-w-2xl flex-col items-center justify-center gap-4 px-6 py-8 text-center md:py-10">
+            <div class="flex w-full max-w-sm items-center justify-center gap-4">
+              <span class="h-px flex-1 bg-gold/35"></span>
+              <span class="font-serif text-xl text-gold" aria-hidden="true">❦</span>
+              <span class="h-px flex-1 bg-gold/35"></span>
+            </div>
+            <p class="max-w-xl font-serif text-lg italic leading-relaxed text-burgundy/78">
+              {homeJourneyIntro.transitionNote}
             </p>
           </div>
-        </header>
-
-        <div class="overflow-hidden rounded-[38px] border border-burgundy/12 bg-white shadow-[0_30px_98px_-72px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04]">
-          {
-            journey.map((j) => {
-              const img = submenuHeroByRoute[j.imageKey];
-              return (
-                <article class="group border-b border-burgundy/12 last:border-b-0">
-                  <a href={j.href} class="grid gap-5 p-6 outline-none transition hover:bg-cream-soft/30 focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[88px_220px_1fr_auto] md:items-center md:gap-8 md:p-8">
-                    <span class="font-serif text-5xl leading-none tabular-nums text-gold md:text-6xl">{j.step}</span>
-                    <div class="relative h-32 overflow-hidden rounded-[26px] ring-1 ring-black/[0.04] md:h-36">
-                      <img
-                        src={img.src}
-                        alt=""
-                        width="600"
-                        height="225"
-                        loading="lazy"
-                        decoding="async"
-                        class="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.04]"
-                      />
-                      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/28 via-transparent to-transparent" />
-                    </div>
-                    <div>
-                      <h3 class="mb-2 font-serif text-3xl leading-tight tracking-[-0.015em] text-ink md:text-4xl">{j.title}</h3>
-                      <p class="max-w-2xl leading-relaxed text-ink/72">{j.excerpt}</p>
-                    </div>
-                    <span class="font-serif text-2xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
-                  </a>
-                </article>
-              );
-            })
-          }
-        </div>
-      </div>
-    </section>
-
-    <div class="mx-auto flex max-w-sm items-center justify-center gap-4 py-8 md:py-10">
-      <span class="h-px flex-1 bg-gold/35"></span>
-      <span class="font-serif text-xl text-gold" aria-hidden="true">❦</span>
-      <span class="h-px flex-1 bg-gold/35"></span>
-    </div>
+        </>
+      )
+    }
 
     <SymptomNavigation sectionNumber="02" />
 
