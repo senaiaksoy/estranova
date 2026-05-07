@@ -1,0 +1,236 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi';
+const hero = submenuHeroByRoute['/zamansiz-yasam']!;
+
+const articleTitle = 'Yapay Zekâya Sorduğum Bir Soru, Hekime Yazdığım Bir Not — Sağlık Bilgisinin Üçlü Dengesi';
+const articleDescription =
+  'Yapay zekâ asistanı, kişisel takip verisi ve hekim yorumu aynı masada nasıl durur? Rima Erdemir, post-menopoz döneminde kendi bedenini okurken üç bilgi kaynağının birbirinin yerine geçmeden nasıl tamamlayıcı hale geldiğini anlatıyor.';
+
+const tocEntries = [
+  { id: 'gece-sorusu', label: 'Gece Sorusu' },
+  { id: 'yapay-zeka-siniri', label: 'Yapay Zekânın Sınırı' },
+  { id: 'cihaz-verisi', label: 'Cihaz Verisi' },
+  { id: 'hekim-yorumu', label: 'Hekim Yorumu' },
+  { id: 'sade-soru', label: 'Daha Sade Soru' },
+  { id: 'sss', label: 'Sık Sorulanlar' },
+];
+
+const faqItems = [
+  {
+    question: 'Yapay zekâ destekli sağlık asistanlarına ne kadar güvenilmeli?',
+    answer:
+      'Başlangıç noktası olarak değerli olabilirler; yaygın tetikleyicileri, araştırma başlıklarını ve genel çerçeveyi toparlarlar. Ama kişisel karar aracı değillerdir. Sizin geçmiş öykünüzü, risk profilinizi ve o haftaki yaşam değişikliklerinizi bilmedikleri için cevabın son halkası olamazlar.',
+  },
+  {
+    question: 'Dijital takip verisini hekime götürmek anlamlı mı?',
+    answer:
+      'Evet, eğer veriyi tanı yerine gözlem olarak sunuyorsanız anlamlı olabilir. “Son üç haftadır şu kalıp dikkatimi çekti” demek, görüşmeyi daha somut hale getirebilir. Cihaz teşhis koymaz; ama ortak bir konuşma zemini açabilir.',
+  },
+  {
+    question: 'Yapay zekâya sorduğum soruyu hekime nasıl taşımalıyım?',
+    answer:
+      'En pratik yol üç parçalı bir nottur: yapay zekânın ne söylediği, sizin ne gözlemlediğiniz ve asıl neyi merak ettiğiniz. Böylece görüşme “bunu internette okudum” seviyesinde kalmaz; daha kişisel ve daha işe yarar bir soru haline gelir.',
+  },
+  {
+    question: 'Yapay zekâ yanlış ya da eksik cevap verirse ne yapmak gerekir?',
+    answer:
+      'Tek bir kaynağa güvenmemek gerekir. Yapay zekâ, cihaz verisi ve hekim yorumu yan yana geldiğinde eksik ya da fazla iddialı bilginin ayıklanması kolaylaşır. Özellikle ilaç başlama, kesme ya da tedavi değiştirme gibi kararlar yalnızca dijital yanıtlarla verilmemelidir.',
+  },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'rima-erdemir',
+  publishedDate: '29 Nisan 2026',
+  pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: [
+    'yapay zekâ',
+    'dijital sağlık',
+    'dijital takip verisi',
+    'menopoz',
+    'post-menopoz',
+    'sağlık okuryazarlığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Dijital Sağlık"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="rima-erdemir" publishedDate="29 Nisan 2026" readingMinutes={8} />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Yapay zekâ asistanları, kişisel takip verileri ve hekim yorumu artık aynı sağlık cümlesinin içinde yer
+          alıyor. Ama bu üç kaynağın hiçbirini ötekinin yerine koymak gerekmiyor <Evidence from={3} to={4} />. Bu yazı,
+          post-menopoz döneminde bedenini biraz daha dikkatli dinlemeye çalışan bir kadının gözünden, dijital bilginin
+          ancak kişisel öykü ve hekim yorumu ile birlikte anlam kazandığını anlatıyor.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="gece-sorusu">Bir Gece Sorulan Soru, Sabah Başka Bir Cümleye Dönüştü</h2>
+        <p>
+          Bazen cevap gece gelir sanırsınız; sabah olunca onun aslında yalnızca iyi kurulmuş bir soru olduğunu anlarsınız.
+        </p>
+        <p>
+          Geçen ay bir gece sıcak basmasıyla uyandım. Böyle geceler benim için yeni değil; ama bu kez bedenim aynı cümleyi
+          biraz daha yüksek sesle söylüyor gibiydi. Telefona uzandım, yapay zekâ asistanına gece sıcak basmasının son
+          haftalarda neden daha yoğun hissedilebileceğini sordum. Karşıma uzun bir liste çıktı: akşam yemeği saati, oda
+          ısısı, stres, kahve, bazı ilaç etkileşimleri, uyku düzeni.
+        </p>
+        <p>
+          O cevap aydınlatıcıydı, ama bana ait değildi. Yapay zekâ son üç haftadır kahveyi biraz artırdığımı bilmiyordu.
+          Aile içinde uykunun bölündüğü bir döneme girdiğimizi bilmiyordu. Benim tarama geçmişimi, bedenimin yıllardır
+          verdiği küçük işaretleri bilmiyordu. Sabah hekimime not düşerken listeyi değil, gözlemimi yazdım: “Şu üç
+          değişiklik oldu; sizce bunların bir anlamı var mı?”
+        </p>
+
+        <h2 id="yapay-zeka-siniri">Yapay Zekânın Söyleyebildiği ile Söyleyemediği Arasında Fark Var</h2>
+        <p>
+          Yapay zekâ hızlı bir yol arkadaşı olabilir; ama yolun nereye döndüğünü hâlâ sizin öykünüz belirliyor.
+        </p>
+        <p>
+          Yapay zekâ destekli sağlık asistanları geniş bir bilgi havuzundan kısa özetler çıkarma konusunda oldukça işe
+          yarar. Yaygın tetikleyicileri sıralar, bir konuyu ilk kez düşünürken aklı toparlar, bazen de doğru başlığı
+          bulmanıza yardım eder <Evidence from={3} to={4} />. Ama klinik karar aracı değildir; çünkü kişisel risk
+          profilinizi, aile öykünüzü, o hafta yaşadığınız değişiklikleri ve bedeninizin eski alışkanlıklarını bilmez.
+        </p>
+        <p>
+          Uzun yıllar bilgi gürültüsünün içinde çalıştığım için manşet ile anlam arasındaki boşluğu sezmeye alışığım.
+          Bugün aynı refleksi sağlık bilgisinde de kullanıyorum. Yapay zekâ bana çoğu zaman “buraya bakmaya değer” diyor;
+          ama “kararı buradan ver” demiyor. Bilim bu alanda hızlı ilerliyor; şunu biliyoruz, şu hâlâ belirsiz.
+        </p>
+
+        <h2 id="cihaz-verisi">Takip Verisi Bazen Yalnızca Bir Kalıbı Görünür Kılar</h2>
+        <p>
+          Verinin büyüsü, onu yorumlamaya başladığınız anda azalıyor; ama tam o noktada işe yaramaya başlıyor.
+        </p>
+        <p>
+          Uyku takip uygulamam son haftalarda bir değişim işaret ediyordu: hafif uyku uzuyor, derin uyku kısalıyordu. İlk
+          anda bunu fazla ciddiye almadım. Bir uygulamanın benden fazla şey bildiğini sanacak kadar aceleci davranmak
+          istemiyorum artık. Ama aynı dönemde gece sıcak basmaları da belirginleşince, veri birden anlamlı bir arka plan
+          oldu.
+        </p>
+        <p>
+          Takip cihazları tanı koymaz. Uyku evresi sınıflandırmalarında sınırlı kalabildiklerini biliyoruz
+          <Evidence level={3} />. Yine de bir kalıbı görünür hale getirebilirler. Benim için işe yarayan taraf da bu:
+          hekimle konuşurken yalnızca “son günlerde biraz kötü uyuyorum” demek yerine, “şu dönemde ritim böyle değişti”
+          diyebilmek.
+        </p>
+        <p>
+          Cihaz tek başına cevap değil; ama doğru soruyu sormaya yardım ediyor. Bence dijital sağlık alanındaki çoğu
+          vaadi sakinleştiren cümle de tam olarak bu.
+        </p>
+
+        <h2 id="hekim-yorumu">Üçüncü Ses Hâlâ Hekim Yorumu</h2>
+        <p>
+          Yapay zekâ geniş haritayı çıkarıyor, veri ritmi işaret ediyor, hekim ise bunların hangisinin size ait bir anlam
+          taşıdığını ayırıyor.
+        </p>
+        <p>
+          Sabah hekimime yazdığım notun tonu oldukça sadeydi: “Son haftalarda gece sıcak basmaları arttı. Yapay zekâ
+          asistanı birkaç olası tetikleyici sıraladı. Uyku takibimde de ritim değişiyor. Ben ayrıca kahve miktarımın
+          arttığını fark ettim. Sizce bunların arasında nasıl bir bağ olabilir?”
+        </p>
+        <p>
+          Gelen yanıt, yapay zekâ cevabından daha kısaydı; ama daha kişiseldi. İki değişken öne çıktı, bir kontrol
+          önerildi, birkaç hafta sonra yeniden konuşma planlandı. O anda fark ettiğim şey çok basitti: üç kaynak aynı şeyi
+          söylemek zorunda değil. Zaten değerleri de orada. Biri genişletiyor, biri görünür kılıyor, biri yorumluyor.
+        </p>
+
+        <h2 id="sade-soru">Bilgi Çoğaldıkça Daha Sade Soru Sormayı Öğreniyorum</h2>
+        <p>
+          Çok bilgi bazen daha karmaşık bir zihin değil, daha sade bir soru istiyor.
+        </p>
+        <p>
+          Geçmişe dönüp telefonumdaki aramalara baksam, aynı başlık etrafında ne kadar çok dolaştığımı görürüm. Uyku,
+          sıcak basması, uyku takip verisi, yapay zekâ, hormonal geçiş. Bir süre bunun beni daha güçlü
+          kıldığını sanıyordum. Oysa zamanla öğrendiğim şey şu oldu: bilgi arttıkça soru kısalmalı.
+        </p>
+        <p>
+          Şimdi kendime daha dar sorular soruyorum. “Bu veri hangi kalıbı gösteriyor?” “Bu değişiklik ne zaman başladı?”
+          “Bunu kendi beden öykümle birlikte düşündüğümde ne anlam çıkıyor?” Belki de yaş almanın iyi taraflarından biri
+          bu: daha çok şey bilirken daha az kelimeyle konuşmayı öğrenmek.
+        </p>
+        <p>
+          Hâlâ her şey net değil. Ama artık belirsizliğin kendisini panik değil, çalışma alanı olarak okuyorum. Benim
+          yolum bu; sizinki daha sessiz, daha hızlı ya da bambaşka olabilir.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+          '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Yapay zekâ destekli sağlık asistanları ve kişisel takip araçları, sağlık bilgisi okuryazarlığını
+          destekleyen yardımcı kaynaklar olarak değerlidir. Ancak bu araçlar klinik karar verme süreçlerinin yerine geçmez.
+          Tanı ve tedavi planlaması bireysel öykü, muayene ve hekim değerlendirmesi gerektirir.
+        </p>
+        <p>
+          Bu araçlardan gelen veriler bazı kalıpları görünür hale getirebilir; fakat özellikle uyku evresi ya da beden
+          ritmi yorumlarında sınırlı kalabilirler. Bu nedenle dijital veriyi mutlak sonuç gibi değil, görüşmeyi zenginleştiren
+          bir gözlem aracı gibi okumak daha doğrudur.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Sağlığınıza dair kararları kendi
+          hekiminizle birlikte değerlendirmeniz önerilir.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -347,6 +347,24 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['menopoz', 'vücut kompozisyonu', 'kas kaybı', 'viseral yağ', 'tartı', 'BMI sınırlılığı', 'menopozda kilo', 'kompozisyon değişimi', 'östrojen düşüşü', 'direnç antrenmanı', 'protein'],
   },
   {
+    path: '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi',
+    title: 'Yapay Zekâya Sorduğum Bir Soru, Hekime Yazdığım Bir Not — Sağlık Bilgisinin Üçlü Dengesi',
+    description:
+      'Yapay zekâ asistanı, kişisel takip verisi ve hekim yorumu aynı masada nasıl durur? Rima Erdemir, post-menopoz döneminde kendi bedenini okurken üç bilgi kaynağının birbirinin yerine geçmeden nasıl tamamlayıcı hale geldiğini anlatıyor.',
+    publishedDate: '29 Nisan 2026',
+    writerSlug: 'rima-erdemir',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam',
+    keywords: [
+      'yapay zekâ',
+      'dijital sağlık',
+      'dijital takip verisi',
+      'menopoz',
+      'post-menopoz',
+      'sağlık okuryazarlığı',
+    ],
+  },
+  {
     path: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
     title: 'Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor',
     description: 'Hekim-hasta ilişkisinin yıllar içinde nasıl olgunlaştığına dair kişisel notlar. Modern kadının menopoz takibinde dört doktor profili karşısındaki arayışı, paydaş karar verme ve etik bir mesafenin önemi.',

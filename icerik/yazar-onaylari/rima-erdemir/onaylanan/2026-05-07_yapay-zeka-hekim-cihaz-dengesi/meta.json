@@ -1,0 +1,24 @@
+{
+  "writer": {
+    "slug": "rima-erdemir",
+    "name": "Rima Erdemir"
+  },
+  "article": {
+    "slug": "yapay-zeka-hekim-cihaz-dengesi",
+    "title": "Yapay Zekâya Sorduğum Bir Soru, Hekime Yazdığım Bir Not — Sağlık Bilgisinin Üçlü Dengesi",
+    "previewUrl": "./makale-onizleme.html",
+    "plannedPath": "/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi"
+  },
+  "package": {
+    "createdAt": "2026-05-07T13:10:00.000Z",
+    "status": "approved-final-polished",
+    "source": "rima-test-makale-onayli.pdf",
+    "checks": [
+      "rima-writer-profile-aligned",
+      "estranova-article-shell-aligned",
+      "turkish-copy-polished",
+      "formal-siz-hitabi-enforced"
+    ],
+    "notes": "PDF onayı geldiği için metin son turda Rima sesi, site kuralları ve Türkçe akış açısından temizlendi. Bu paket yayın öncesi son kaynak kopyadır."
+  }
+}

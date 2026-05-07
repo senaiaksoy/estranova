@@ -8,6 +8,7 @@
 
 | # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2026-05-07 | `yapay-zeka-hekim-cihaz-dengesi` | Zamansız Yaşam / dijital sağlık | v2.0 | — | Kalıp 1 + Kalıp 6 izi | Sabah okuma + post-menopoz gece uyanışı | “Geçen ay bir gece...” | tireli iki bölümlü | ilkbahar | Onaylı PDF’den son stil/Türkçe temizliği yapıldı. İngilizce “AI/wearable” dili Türkçeleştirildi; hitap tamamen “siz” standardına çekildi; route-ready Astro ve HTML önizleme paketi oluşturuldu. |
 
 ## Sütun anahtarı
 
