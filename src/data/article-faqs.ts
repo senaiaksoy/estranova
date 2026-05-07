@@ -4,6 +4,28 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar': [
+    {
+      question: 'Magnezyum menopozda herkese gerekli bir takviye midir?',
+      answer:
+        'Hayır. Bazı kadınlarda uyku, kabızlık ya da belirli eksiklik riski nedeniyle anlamlı olabilir; ama herkese otomatik olarak gerekliymiş gibi konuşmak doğru olmaz. Asıl soru, hangi yakınma için ve hangi gerekçeyle düşünüldüğüdür.',
+    },
+    {
+      question: 'Uyku için magnezyum gerçekten işe yarar mı?',
+      answer:
+        'Uyku tarafında bazı kadınlarda fayda hissi olabilir; ancak kanıt bütün uyku sorunları için aynı güçte değildir. Özellikle uyku bozukluğunun nedeni sıcak basması, anksiyete, uyku apnesi ya da gece bölünmesi ise magnezyum tek başına bütün tabloyu çözmez.',
+    },
+    {
+      question: 'Hangi magnezyum formu daha iyi sorusunun tek cevabı var mı?',
+      answer:
+        'Hayır. Form seçimi çoğu zaman hedefe göre anlam kazanır: kabızlıkta sitrat daha pratik olabilirken, mide-barsak hassasiyetinde başka formlar daha iyi tolere edilebilir. “En iyi form” yerine “hangi amaç için” sorusu daha doğru bir başlangıç sağlar.',
+    },
+    {
+      question: 'Magnezyum zararsız diye düşünmek doğru mu?',
+      answer:
+        'Her zaman değil. Özellikle böbrek hastalığı olanlarda, bazı ilaçları kullananlarda ya da yüksek dozları uzun süre alanlarda daha dikkatli olunmalıdır. Takviyenin sıradan görünmesi, herkes için risksiz olduğu anlamına gelmez.',
+    },
+  ],
   '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': [
     {
       question: "HRT'nin en belirgin faydası hangisidir?",

@@ -18,6 +18,28 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar',
+    title: 'Magnezyum Menopozda Gerçekten Ne İşe Yarar?',
+    description:
+      'Uyku, kas krampları, kabızlık, stres ve çarpıntı gibi yakınmalarda magnezyum sık öneriliyor; ama bütün etkiler aynı güçte kanıt taşımıyor. Bu rehber, menopoz döneminde magnezyumun ne zaman anlamlı olabileceğini, hangi vaatlerin abartıldığını ve form seçimi konuşulurken neyin gerçekten önemli olduğunu ayırır.',
+    publishedDate: '7 Mayıs 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Zamansız Yaşam · Vitaminler',
+    sectionPath: '/zamansiz-yasam',
+    keywords: [
+      'magnezyum',
+      'menopoz',
+      'uyku',
+      'kas krampları',
+      'kabızlık',
+      'magnezyum glisinat',
+      'magnezyum sitrat',
+      'çarpıntı',
+      'stres',
+      'takviye güvenliği',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz',
     title: 'Peptidler Menopozda Gerçekten Ne Vaat Ediyor?',
     description:

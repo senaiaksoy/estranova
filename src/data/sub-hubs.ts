@@ -57,12 +57,15 @@ export const subHubs: SubHubConfig[] = [
   {
     path: '/zamansiz-yasam/vitaminler',
     siteTitle: 'Vitaminler ve Takviyeler - Estranova',
-    description: 'D vitamini ve seçilmiş takviye konularında kanıt odaklı zamansız yaşam içerikleri.',
+    description: 'Vitaminler ve seçilmiş takviye başlıklarında kanıt odaklı zamansız yaşam içerikleri.',
     heroEyebrow: 'Zamansız Yaşam · Vitaminler',
     heroTitle: 'Vitaminler ve Takviyeler',
     heroLede:
-      'Bu alt başlıkta vitaminleri tek bir hap olarak değil, beslenme ve günlük alışkanlıkların bir parçası olarak okuyoruz. Şu an için D vitamini üzerine derinlemesine bir rehber yayında.',
-    articlePaths: ['/zamansiz-yasam/d-vitamini-rehberi'],
+      'Bu alt başlıkta vitaminleri tek bir hap olarak değil, beslenme ve günlük alışkanlıkların bir parçası olarak okuyoruz. D vitamini, magnezyum ve seçilmiş takviye başlıklarını abartıdan ayıran sakin bir okuma ritmi kuruyoruz.',
+    articlePaths: [
+      '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar',
+      '/zamansiz-yasam/d-vitamini-rehberi',
+    ],
   },
   {
     path: '/zamansiz-yasam/deneysel',
