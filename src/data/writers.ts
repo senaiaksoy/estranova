@@ -163,7 +163,7 @@ export const writers: Writer[] = [
     publicBio:
       'Marka ve deneyim alanından gelen, soruyu sevmeyi bilen araştırmacı bir yazar. Estranova\'da uzun menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını samimi ama ölçülü bir tonla yazıyor. Yargı dağıtmadan yanına oturan, merakını gizlemeyen bir yaşıt.',
     signaturePhrase:
-      'Dokuz yıllık menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını soru-cevap yaşıtdiyaloğu, üç nokta ve samimi itiraflarla harmanlayan gezgin bir araştırmacı.',
+      'Dokuz yıllık menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını soru-cevap yaşıt diyaloğu, üç nokta ve samimi itiraflarla harmanlayan gezgin bir araştırmacı.',
     portrait: '/images/writers/basak-pelister.webp',
     focusAreas: ['Menopoz', 'HRT yolculuğu', 'Üç kuşaklı bağ', 'Biohacking', 'Seyahat & Estetik'],
     isEditor: false,
