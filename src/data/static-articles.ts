@@ -76,6 +76,24 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
+    path: '/hormonal-gecis/40-sonrasi/tarama-testleri',
+    title: '40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?',
+    description:
+      '40 sonrası tarama planını kemik, metabolik ve kadın sağlığı başlıklarında sade bir yaklaşımla ele alan başlangıç rehberi.',
+    publishedDate: '5 Mayıs 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis/40-sonrasi',
+    keywords: [
+      '40 sonrası tarama',
+      'koruyucu sağlık',
+      'kemik yoğunluğu',
+      'metabolik izlem',
+      'menopoz',
+      'kadın sağlığı kontrolleri',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar',
     title: 'Magnezyum Menopozda Gerçekten Ne İşe Yarar?',
     description:

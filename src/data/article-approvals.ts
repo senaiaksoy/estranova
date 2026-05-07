@@ -275,6 +275,30 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-04',
     note: 'Prelaunch inventory reconciliation: canli route static manifest ve schema metadata ile birlikte editorial launch setine dahil edildi.',
   },
+  {
+    pathname: '/hormonal-gecis/40-sonrasi/tarama-testleri',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-07',
+    note: 'KC editor direct approval: audit reconciliation icin canli schema kullanan tarama testleri route production approval setine eklendi; mevcut Senai klinik yazari, static manifest ve article schema ile hizalandi.',
+  },
+  {
+    pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-07',
+    note: 'KC editor direct approval: audit reconciliation icin canli deneysel peptid route production approval setine eklendi; static manifest, schema ve Senai klinik yazari uyumu dogrulandi.',
+  },
+  {
+    pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-07',
+    note: 'KC editor direct approval: audit reconciliation ve compliance temizligi sonrasi magnezyum makalesi production approval setine eklendi; static manifest ve canli route uyumu dogrulandi.',
+  },
+  {
+    pathname: '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-07',
+    note: 'KC editor direct approval: RSS manifestinde bulunan HRT avantajlari dosyasi production approval setine eklendi; Bilimsel Pencere manifest ve Senai klinik yazari uyumu tamamlandi.',
+  },
 ];
 
 /**
