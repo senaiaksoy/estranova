@@ -4,6 +4,28 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge': [
+    {
+      question: 'Kasık ağrısı yaşıyorsam önce jinekoloji mi yoksa fizyoterapi mi düşünmeliyim?',
+      answer:
+        'Yanıt ağrının davranışına göre değişir. Kanama, akıntı, ateş, idrar yakınması ya da ilişkiyle belirginleşen farklı bir tablo varsa jinekolojik veya ürolojik değerlendirme öne çıkar; ağrı oturup kalkmakla, yürümekle, bel pozisyonuyla ya da uzun oturmayla değişiyorsa mekanik hat da düşünülür.',
+    },
+    {
+      question: 'Bel kaynaklı ağrı genital bölgede gerçekten hissedilebilir mi?',
+      answer:
+        'Evet. Bazı sinir hatları ve kas-fasya ilişkileri nedeniyle ağrı beklenenden daha önde ya da aşağıda hissedilebilir. Bu, her genital ağrının belden geldiği anlamına gelmez; yalnızca bel-kalça-pelvik taban hattının değerlendirmede unutulmaması gerektiğini gösterir.',
+    },
+    {
+      question: 'MR temizse ağrının mekanik olmadığı sonucuna varılır mı?',
+      answer:
+        'Hayır. Görüntüleme normal olsa bile sinir hassasiyeti, pelvik taban gerginliği, kas yüklenmesi ya da hareket paternine bağlı ağrı olabilir. Klinik değerlendirme ile görüntüleme aynı soruya bakmaz; biri diğerinin yerini tam olarak tutmaz.',
+    },
+    {
+      question: 'Evde dinlenmek mi, hareket etmek mi daha doğru olur?',
+      answer:
+        'Tam hareketsizlik çoğu zaman çözüm olmaz; ama ağrıyı artıran yüklenmeyi zorlamak da doğru değildir. Bedeni dinleyerek ilerlemek, ağrıyı belirgin artırmayan kısa hareket araları ve rahatlatan pozisyonlarla geçici bir denge kurmak anlamına gelir.',
+    },
+  ],
   '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari': [
     {
       question: 'Dokuz yıl sonra HRT başlamak otomatik olarak geç kalınmış bir karar mı sayılır?',

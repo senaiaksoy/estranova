@@ -11,7 +11,7 @@
   "package": {
     "createdAt": "2026-05-07T09:00:00.000Z",
     "deadline": "2026-05-14T09:00:00.000Z",
-    "status": "pending-author-approval",
+    "status": "approved-and-published",
     "approvalGate": "publish-after-author-approval",
     "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
     "estimatedFormDuration": "5 dakika",
