@@ -1,0 +1,323 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const tocEntries = [
+  { id: 'agri-haritasi', label: 'Ağrının Haritası' },
+  { id: 'bel-kalca-hatti', label: 'Bel ve Kalça Hattı' },
+  { id: 'sinir-pelvik-taban', label: 'Sinir ve Pelvik Taban' },
+  { id: 'mekanik-ipuclari', label: 'Mekanik İpuçları' },
+  { id: 'degerlendirme-zinciri', label: 'Değerlendirme Zinciri' },
+  { id: 'evde-dikkat', label: 'Evde Dikkat' },
+  { id: 'ne-zaman-beklememeli', label: 'Ne Zaman Beklememeli?' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Belden Gelen Ağrı Her Zaman Belde Kalmaz: Kasık ve Genital Bölgeye Vuran Ağrıyı Nasıl Okumalı?';
+const articleDescription =
+  'Kasıkta, alt karında ya da genital bölgede hissedilen ağrı her zaman jinekolojik bir nedenden kaynaklanmaz. Kimi kadınlarda bel, sakroiliak eklem, kalça çevresi kasları ya da sinir hassasiyeti bu bölgelere yansıyan ağrı yaratabilir. Bu yazı, bel kaynaklı yansıyan ağrının hangi işaretlerle düşünülebileceğini, ne zaman pelvik taban hattının devreye girdiğini ve hangi durumlarda farklı branş değerlendirmesinin öne çıktığını sade bir dille ayırır.';
+const articlePath = '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge';
+const hero = submenuHeroByRoute[articlePath] ?? submenuHeroByRoute['/zamansiz-yasam']!;
+const faqItems = [
+  {
+    question: 'Kasık ağrısı yaşıyorsam önce jinekoloji mi yoksa fizyoterapi mi düşünmeliyim?',
+    answer:
+      'Yanıt ağrının davranışına göre değişir. Kanama, akıntı, ateş, idrar yakınması ya da ilişkiyle belirginleşen farklı bir tablo varsa jinekolojik veya ürolojik değerlendirme öne çıkar; ağrı oturup kalkmakla, yürümekle, bel pozisyonuyla ya da uzun oturmayla değişiyorsa mekanik hat da düşünülür.',
+  },
+  {
+    question: 'Bel kaynaklı ağrı genital bölgede gerçekten hissedilebilir mi?',
+    answer:
+      'Evet. Bazı sinir hatları ve kas-fasya ilişkileri nedeniyle ağrı beklenenden daha önde ya da aşağıda hissedilebilir. Bu, her genital ağrının belden geldiği anlamına gelmez; yalnızca bel-kalça-pelvik taban hattının değerlendirmede unutulmaması gerektiğini gösterir.',
+  },
+  {
+    question: 'MR temizse ağrının mekanik olmadığı sonucuna varılır mı?',
+    answer:
+      'Hayır. Görüntüleme normal olsa bile sinir hassasiyeti, pelvik taban gerginliği, kas yüklenmesi ya da hareket paternine bağlı ağrı olabilir. Klinik değerlendirme ile görüntüleme aynı soruya bakmaz; biri diğerinin yerini tam olarak tutmaz.',
+  },
+  {
+    question: 'Evde dinlenmek mi, hareket etmek mi daha doğru olur?',
+    answer:
+      'Tam hareketsizlik çoğu zaman çözüm olmaz; ama ağrıyı artıran yüklenmeyi zorlamak da doğru değildir. Bedeni dinleyerek ilerlemek, ağrıyı belirgin artırmayan kısa hareket araları ve rahatlatan pozisyonlarla geçici bir denge kurmak anlamına gelir.',
+  },
+];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'ersin-sarac',
+  publishedDate: '7 Mayıs 2026',
+  pathname: articlePath,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: ['kasık ağrısı', 'genital bölge ağrısı', 'bel ağrısı', 'pelvik taban', 'sakroiliak eklem', 'yansıyan ağrı'],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Hareket"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="ersin-sarac" publishedDate="7 Mayıs 2026" readingMinutes={9} />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={articlePath} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Kasıkta ya da genital bölgede hissedilen ağrı, mahrem bir bölgede ortaya çıktığı için çoğu zaman hızla tek bir başlığın altına
+          yerleştirilir. Oysa kimi kadınlarda alt bel, sakroiliak eklem, kalça çevresi, sinir hattı ve pelvik taban aynı yakınmayı farklı
+          yüzlerle gösterebilir <Evidence from={3} to={4} />. Bu yazı, “ağrı tam olarak nerede?” sorusundan çok “ağrı nasıl davranıyor?”
+          sorusuna odaklanır; çünkü doğru değerlendirme çoğu zaman ilk anda en yüksek sesle konuşan bölgeden değil, bütün hareket zincirinden
+          çıkar.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="agri-haritasi">Ağrının Yeri Her Zaman Kaynağını Söylemez</h2>
+        <p>
+          Beden bazen çok dürüst davranır; ağrı neredeyse sorun da oradadır. Bazen ise ağrı yer değiştirir, öne doğru yürür ve dikkati asıl
+          kaynağından uzaklaştırır.
+        </p>
+        <p>
+          Yansıyan ağrı, fizyoterapi ve rehabilitasyon pratiğinde sık karşılaştığımız bir durumdur <Evidence level={4} />. Alt bel, kalça
+          çevresi ya da sakroiliak eklem hattı, kimi kadınlarda ağrıyı kasıkta, alt karında ya da genital bölgeye yakın bir hatta
+          hissettirebilir. Bu yüzden değerlendirmeyi yalnızca ağrının işaret ettiği noktaya sabitlemek, tabloyu gereğinden daraltabilir.
+        </p>
+        <p>
+          Bazen bir hastam eliyle doğrudan kasığını gösterip “sorun tam burada” der. Konuşma biraz ilerleyince ağrının uzun oturma, ayağa
+          kalkma, bel pozisyonu ya da tek tarafa yük verme ile biçim değiştirdiği ortaya çıkar. Buradaki esas bilgi, ağrının yeri değil;
+          küçük bir dedektiflik isteyen davranışıdır.
+        </p>
+        <p>
+          Ersin Saraç’ın yazı çizgisine en uygun başlangıç da tam buradadır: bedeni dinleyerek ilerlemek. Çünkü kasık ya da genital bölgede
+          hissedilen her ağrı korkuyla okunmak zorunda değildir; ama mahrem bir alanda diye hızla tek açıklamaya kapatılması da doğru olmaz.
+        </p>
+
+        <h2 id="bel-kalca-hatti">Bel, Sakroiliak Eklem ve Kalça Hattı Kasıkta Nasıl Konuşur?</h2>
+        <p>
+          Alt bel ile kalça çevresi, günlük hareketin görünmeyen omurgası gibidir. Bu hatta yük dağılımı bozulduğunda beden bazen ağrıyı tam
+          merkezde değil, daha önde ve daha içeride hissettirir.
+        </p>
+        <p>
+          Özellikle uzun oturmanın ardından ayağa kalkarken, merdiven çıkarken, yatakta dönerken ya da tek taraflı yük taşırken artan
+          yakınmalar bu hattı düşündürebilir <Evidence from={3} to={4} />. Sakroiliak eklem çevresi, kalça fleksörleri, adduktorlar ve derin
+          kalça kasları aynı bölgeye farklı biçimlerde sinyal bırakabilir.
+        </p>
+        <h3>Herkeste aynı his olmaz</h3>
+        <p>
+          Kimi kadınlar bunu çekilme diye tarif eder. Kimileri derin baskı der. Bazıları ise tam yerini gösteremediği, içeride dolaşan bir
+          sızıdan söz eder. Mekanik kaynaklı ağrı her zaman keskin ya da düzenli bir karakter taşımaz; bazen de tam bu yüzden daha ilginç ve
+          daha yanıltıcıdır. Ama hareketle şekil değiştirmesi, çoğu zaman onun bıraktığı en dürüst ipucudur.
+        </p>
+        <p>
+          Bu nedenle “kasıkta hissediyorum, demek ki yalnızca kasık bölgesinin sorunu” demek çoğu zaman erken bir karar olur. Kronik ağrı
+          yönetimi, Ersin’in biyografisinde de olduğu gibi, tek doğru hareketi aramaktan çok bedenin verdiği yanıtları okumakla başlar.
+        </p>
+
+        <h2 id="sinir-pelvik-taban">Sinir Hattı ile Pelvik Taban Neden Bu Kadar Kolay Karışır?</h2>
+        <p>
+          Mahrem bölgede hissedilen ağrı yalnızca kas meselesi değildir. Bazen sinir hassasiyeti ile pelvik taban yükü birbirine o kadar
+          yaklaşır ki, tarif edilen his tek bir kelimeyle yakalanamaz.
+        </p>
+        <p>
+          Sinir çevresi hassasiyetinde yanma, batma, elektriklenme, dokunmayla artan rahatsızlık ya da çizgi şeklinde yayılan bir duyum
+          görülebilir <Evidence level={3} />. Pelvik taban fazla gergin olduğunda ise tablo daha çok baskı, dolgunluk, otururken artan
+          rahatsızlık ya da derin iç ağrı gibi hissedilebilir.
+        </p>
+        <p>
+          Pelvik taban tek başına çalışan bir yapı değildir. Nefes, karın duvarı, bel çevresi ve kalça kaslarıyla birlikte hareket eder.
+          Bu yüzden bel ve kalça hattındaki koruyucu kasılma, zaman zaman pelvik tabana da fazladan iş yükü bindirebilir.
+        </p>
+        <p>
+          Bazen bir hastam bunu “tam ağrı değil ama oturdukça içeri doğru yayılan bir huzursuzluk” diye anlatır. Bu cümle tek başına tanı
+          koydurmaz; fakat sinir hattı ile pelvik tabanı birlikte düşünmemiz gerektiğini güçlü biçimde hatırlatır. Küçük adımların gücü de
+          biraz burada ortaya çıkar: tabloyu büyütmeden, ama küçümsemeden okumak.
+        </p>
+
+        <h2 id="mekanik-ipuclari">Hangi İşaretler Mekanik Bir Hattı Daha Güçlü Düşündürür?</h2>
+        <p>
+          Mekanik ağrıda beden çoğu zaman hareketle konuşur. En değerli veri, ağrının var olup olmaması değil; hangi yük altında nasıl
+          değiştiğidir.
+        </p>
+        <p>
+          Uzun oturmayla belirginleşen, yürüyüş temposu değiştiğinde biçim değiştiren, oturup kalkmakla ya da bel pozisyonuyla artan ağrı
+          mekanik köken lehine olabilir <Evidence level={4} />. Sabah sertliği kısa sürüyor, gün içinde dağılım değişiyor ve belirgin
+          sistemik bulgu eşlik etmiyorsa bu olasılık biraz daha güçlenir.
+        </p>
+        <h3>Ertesi gün bıraktığı iz de önemlidir</h3>
+        <p>
+          Bazı yakınmalar o an hafif görünür; ama ertesi gün işlevi belirgin biçimde bozar. Bu, yüklenmenin beden için fazla geldiğini
+          düşündürebilir. Bedeni dinleyerek ilerlemek burada pasif kalmak değil, bedenin ertesi gün verdiği yanıtı da hesaba katmaktır.
+        </p>
+        <p>
+          Ersin Saraç’ın yaklaşımıyla söylemek gerekirse hedef “ağrıyı bastırmak” değil, yükü daha okunabilir hale getirmektir. Çünkü doğru
+          yük seçimi çoğu zaman hızlı değil, tedrici bir süreçtir.
+        </p>
+
+        <h2 id="degerlendirme-zinciri">Değerlendirme Zincirinde Hangi Sorular Öne Çıkar?</h2>
+        <p>
+          Kasık ve genital bölgeye vuran ağrıda iyi değerlendirme, tek bir görüntüleme raporuna ya da tek bir uzmanlık cümlesine dayanmaz.
+          Hareket kalitesi, sinir duyarlılığı, yüklenme biçimi ve eşlik eden bedensel işaretler birlikte okunur.
+        </p>
+        <p>
+          Bel hareket açıklığı, kalça rotasyonları, tek taraflı yük taşıma, yürüme paterni, oturup kalkma ve ağrının bunlara verdiği yanıt
+          ilk çerçeveyi kurar <Evidence level={4} />. Gerekirse sinir gerilim testleri, pelvik taban fizyoterapisi açısından daha özel bir
+          değerlendirme ya da farklı branşa yönlendirme düşünülür.
+        </p>
+        <h3>Jinekolojik ve ürolojik hat ne zaman öne çıkar?</h3>
+        <p>
+          Kanama, akıntı, ateş, idrar yaparken yanma, ilişkiyle belirginleşen farklı ağrı, ani gelişen alt karın yakınması ya da bağırsak
+          düzeniyle birlikte değişen tablo varsa karar zinciri başka yöne kayar <Evidence level={5} />. Bu durumda mekanik hat tamamen
+          dışlanmaz; ama öncelik değişir.
+        </p>
+        <p>
+          Kısacası amaç “bu kesin belden” ya da “bu kesin jinekolojik” demek değildir. Amaç, hangi alanın daha çok söz aldığını sakin
+          biçimde ayırmaktır. İyi fizyoterapi değerlendirmesi bazen tanı koymaktan önce doğru soruyu görünür hale getirir.
+        </p>
+
+        <h2 id="evde-dikkat">Evde Neyi Zorlamamak Daha Doğru Olur?</h2>
+        <p>
+          Kasık ve genital bölgeye vuran ağrıda en sık yapılan iki hata, tamamen geri çekilmek ya da ağrıyı yok sayarak aynı tempoda
+          sürmektir. İlk günlerde bedenin ihtiyacı genellikle ikisinin ortasında bir dengedir.
+        </p>
+        <p>
+          Uzun süre aynı pozisyonda kalmak, ağrıyı belirgin artıran derin esnemeler, kontrolsüz karın sıkma egzersizleri ya da rahatsızlık
+          artmasına rağmen tempoyu yükseltmek tabloyu bulanıklaştırabilir <Evidence level={3} />. Bazen daha fazla hareket değil, daha
+          akıllı aralıklarla hareket etmek çok daha öğretici olur.
+        </p>
+        <p>
+          Klinik gözlemde sık gördüğümüz bir durum şudur: Kadınlar çoğu zaman “biraz daha esnersem açılır” ya da “hiç hareket etmezsem
+          yatışır” diye düşünür. Oysa bazı tablolar bu iki stratejinin de yüzünü kara çıkarır. Küçük adımların gücü burada devreye girer;
+          kısa yürüyüşler, pozisyon araları ve daha dengeli yük dağılımı bazen o büyük çözüm arayışından daha işe yarar bir ilk kapı açar.
+        </p>
+        <p>
+          Bu yazının sınırı gereği burada egzersiz reçetesi verilmez. Ama fizyoterapistinizle konuşurken şu sorular işe yarar: Hangi hareket
+          ağrıyı o anda artırıyor? Hangisi ertesi gün iz bırakıyor? Hangi pozisyon kısa süreli de olsa rahatlatıyor? Yanıtlar çoğu zaman
+          programın yönünü netleştirir.
+        </p>
+
+        <h2 id="ne-zaman-beklememeli">Hangi Durumlarda Beklememek Gerekir?</h2>
+        <p>
+          Çoğu mekanik yakınma planlı değerlendirmeyle ele alınabilir. Yine de bazı sinyaller vardır; orada yalnızca izlemek değil, daha
+          hızlı değerlendirme almak gerekir.
+        </p>
+        <p>
+          İlerleyen güç kaybı, yaygın uyuşma, idrar-dışkı kontrolünde yeni değişiklik, travma sonrasında başlayan ağrı, ateş,
+          açıklanamayan kilo kaybı ya da gece uykudan uyandıran giderek artan yakınma geciktirilmemelidir <Evidence level={5} />.
+          Genital bölgede uyuşma ya da belirgin nörolojik değişiklik de ayrıca ciddiye alınmalıdır.
+        </p>
+
+        <RedFlagBox
+          markers={[
+            'İdrar veya dışkı kontrolünde yeni kayıp ya da belirgin değişiklik',
+            'Kasık, iç uyluk veya genital bölgede uyuşma ile birlikte ilerleyen güç kaybı',
+            'Düşme, çarpma ya da ani zorlanma sonrası başlayan ve üzerine yük bindirmeyi zorlaştıran ağrı',
+            'Ateş, gece terlemesi, açıklanamayan kilo kaybı veya genel durum bozukluğuyla birlikte kasık-bel ağrısı',
+            'Kanama, yoğun akıntı, idrar yaparken yanma veya ani gelişen farklı alt karın ağrısı',
+            'Gece uykudan uyandıran, pozisyonla rahatlamayan ve günler içinde artan ağrı',
+          ]}
+          footnote="Bu işaretler tek başına tanı koymaz; ama değerlendirmeyi ertelememek gerektiğini hatırlatır."
+        />
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Belden gelen ağrı her zaman belde kalmaz. Bazen kasıkta, bazen genital bölgede, bazen de tam yerini söylemesi zor bir iç
+          huzursuzluk gibi konuşur.
+        </p>
+        <p>
+          Bu yüzden mahrem bölgede hissedilen her ağrıyı korkuyla okumak da, belirsiz diye küçümsemek de iyi bir yol değildir. Daha doğru
+          değerlendirme çoğu zaman daha doğru sorularla başlar: Ağrı neyle artıyor, neyle dağılıyor, hangi yükün ardından biçim
+          değiştiriyor, hangi işaretler başka bir değerlendirmeyi öne çıkarıyor?
+        </p>
+        <p>
+          Ersin Saraç’ın çizgisiyle bitirecek olursak, bedeni dinleyerek ilerlemek tam da burada anlam kazanır. Küçük adımların gücü,
+          bazen büyük çözümler sunmasında değil; dağınık görünen bir tabloyu daha okunur hale getirmesinde yatar. Ağrının bir gün kasıkta,
+          ertesi gün kalçada, bazen de yalnızca otururken beliren o tuhaf gezgin dili sizi şaşırtabilir; ama doğru sorularla bakıldığında
+          beden çoğu zaman sandığımızdan daha açık konuşur. Gerekli olduğunda hekiminizle, gerektiğinde fizyoterapistinizle kuracağınız
+          sakin ve net iletişim, çoğu zaman bu dili çözmenin en güvenli yoludur.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari',
+          '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
+          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
+          '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
+          '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={5} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Bu yazı, kasık ve genital bölgeye vuran ağrıyı tek bir branşın içine kapatmadan okuma amacı taşır. Klinik açıdan önemli olan,
+            bu yakınmayı ne otomatik olarak yalnızca jinekolojik ne de kolayca yalnızca belden diye etiketlememektir.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik not:</strong> Bel, sakroiliak eklem, kalça çevresi ve pelvik taban hattı kimi kadınlarda
+            birbirini besleyen bir ağrı örüntüsü oluşturabilir. Buna karşılık idrar yakınmaları, kanama, sistemik bulgular veya ilerleyen
+            nörolojik belirtiler farklı değerlendirmeyi öne çıkarır.
+          </p>
+          <p>
+            <strong class="text-burgundy">Sınır:</strong> Bu rehber değerlendirme mantığını anlatır; muayenenin yerini tutmaz. Ağrının
+            sinir, eklem, kas ya da iç organ kaynaklı ayrımı kişisel öykü ve muayeneyle kurulur.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Kasık, genital bölge veya bel ağrısında tanı ve
+          tedavi kararı için sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

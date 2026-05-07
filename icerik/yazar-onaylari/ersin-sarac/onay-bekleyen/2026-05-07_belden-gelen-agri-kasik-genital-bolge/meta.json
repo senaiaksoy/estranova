@@ -1,0 +1,20 @@
+{
+  "writer": {
+    "slug": "ersin-sarac",
+    "name": "Fzt. Ersin Saraç"
+  },
+  "article": {
+    "slug": "belden-gelen-agri-kasik-genital-bolge",
+    "title": "Belden Gelen Ağrı Her Zaman Belde Kalmaz: Kasık ve Genital Bölgeye Vuran Ağrıyı Nasıl Okumalı?",
+    "previewUrl": "./makale-onizleme.html"
+  },
+  "package": {
+    "createdAt": "2026-05-07T09:00:00.000Z",
+    "deadline": "2026-05-14T09:00:00.000Z",
+    "status": "pending-author-approval",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}

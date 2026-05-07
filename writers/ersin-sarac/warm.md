@@ -6,10 +6,11 @@
 
 ## §4b · Manifesto-aligned Anekdot Yönelimi
 
-- **Tercih edilen:** anonim klinik gözlem ("kliniğe başvuran 40+ kadınlarda sıkça karşılaşılan tablo…", "kronik bel ağrısı şikayetiyle gelen hastalarda…").
+- **Tercih edilen:** anonim klinik gözlem ("kliniğe başvuran 40+ kadınlarda sıkça karşılaşılan tablo…", "bazen bir danışan bunu şöyle tarif eder…", "isim vermeden söylemek gerekirse bazı kadınlar ilk görüşmede…").
+- **İzinli format:** 1-2 cümlelik, adı olmayan, yaşı/tarihi/kurumu/şehir detayı taşımayan, tanı ya da sonuç pornografisine dönmeyen mikro-klinik sahne.
 - **Yasak:** isimle anekdot, yaş + tarih + yer detayı, dramatik iyileşme hikayesi, **önce-sonra anlatımı** (MUTLAK YASAK), **Pain Free Nişantaşı klinik referansı**, **Fenerbahçe Basketbol vakası**.
-- **Anekdot kapısı kullanım sıklığı:** 0-1 / makale.
-- **Anekdot bağlamı:** karar sürecindeki bir "kafa karışıklığı" örneği OK; sonuç-odaklı vaka YASAK.
+- **Anekdot kapısı kullanım sıklığı:** 0-2 / makale.
+- **Anekdot bağlamı:** karar sürecindeki kafa karışıklığı, ağrının nasıl tarif edildiği ya da değerlendirme eşiği örneği OK; sonuç-odaklı vaka, kahraman anlatısı ya da “doğru egzersizle düzeldi” çizgisi YASAK.
 
 ---
 

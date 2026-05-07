@@ -29,6 +29,7 @@
   3. Karar zinciri (egzersiz reçetesi pratik + fizyoterapist iletişimi + ev modifikasyonu)
 - **Klinisyen mesafesi + öğretmen tonu** (paternalist DEĞİL, kanıt-temelli rehber).
 - **Yaş farkı içtenlik kapısı DEĞİL** — Ersin 33, okuyucu 40+; "ben de bunu yaşıyorum" tipi yaklaşım YASAK.
+- **Anonim klinik mikro-sahne** kullanılabilir; yalnızca isim, yaş, kurum, tarih, sonuç zaferi ve dramatizasyon taşımıyorsa.
 
 ### Cümle ritmi
 
@@ -84,7 +85,7 @@
 11. [ ] **Spesifik alet / cihaz / takviye / kineziyolojik bant markası gövdede YOK mu?**
 12. [ ] **Hızlı sonuç vaadi ("X günde") YOK mu?**
 13. [ ] **Pain Free Nişantaşı / Fenerbahçe Basketbol referansı gövdede YOK mu?**
-14. [ ] **Önce-sonra anlatımı YOK mu? Hasta hikayesi anekdot detayı YOK mu?**
+14. [ ] **Önce-sonra anlatımı YOK mu? Varsa anonim klinik sahne isim, yaş, tarih, kurum ve dramatik sonuç detayı taşımıyor mu?**
 15. [ ] **Yaş vurgusu / yaşıt persona izi YOK mu? (Ersin 33, klinisyen mesafesi sıkı.)**
 
 ---
