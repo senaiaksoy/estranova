@@ -177,9 +177,12 @@ for (const file of auditedFiles) {
 
   if (file.endsWith(".astro")) {
     const sentences = text
+      .replace(/^---\s*\n[\s\S]*?\n---/, " ")
+      .replace(/<\/(p|h[1-6]|li|div|section|article|blockquote)>/giu, ". ")
+      .replace(/<br\s*\/?>/giu, ". ")
       .replace(/<[^>]+>/g, " ")
       .replace(/\s+/g, " ")
-      .split(/[.!?]+/)
+      .split(/[.!?;]+/)
       .map((s) => s.trim())
       .filter(Boolean);
 
