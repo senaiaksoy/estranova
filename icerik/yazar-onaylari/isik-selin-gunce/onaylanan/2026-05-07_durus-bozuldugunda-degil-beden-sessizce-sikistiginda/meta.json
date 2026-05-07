@@ -1,0 +1,20 @@
+{
+  "writer": {
+    "slug": "isik-selin-gunce",
+    "name": "Işık Selin Günce"
+  },
+  "article": {
+    "slug": "durus-bozuldugunda-degil-beden-sessizce-sikistiginda",
+    "title": "Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında: Gerginliği Fark Etmenin İnce Yolu",
+    "previewUrl": "./makale-onizleme.html"
+  },
+  "package": {
+    "createdAt": "2026-05-07T12:30:00.000Z",
+    "deadline": "2026-05-14T12:30:00.000Z",
+    "status": "awaiting-author-review",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}

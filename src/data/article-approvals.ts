@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda',
+    writerSlug: 'isik-selin-gunce',
+    approvedAt: '2026-05-07',
+    note: 'Işık Selin Günce author approval received from icerik/yazar-onaylari/isik-selin-gunce/onaylanan/2026-05-07_durus-bozuldugunda-degil-beden-sessizce-sikistiginda paketi. Onaylanan taslak Türkçe karakter, makale şablonu ve Selin yazı tonu yönünden son kez temizlenip canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı.',
+  },
+  {
     pathname: '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi',
     writerSlug: 'rima-erdemir',
     approvedAt: '2026-05-07',

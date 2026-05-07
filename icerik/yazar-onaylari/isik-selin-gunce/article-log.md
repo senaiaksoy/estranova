@@ -24,6 +24,8 @@
 
 > Şu an log boş — cooldown filtresi 2026-04-29 sonrası ilk gerçek yayından itibaren tam çalışacak.
 
+| 1 | 2026-05-07 | Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında | Zamansız Yaşam | v2.1 | — | Kalıp 3 izi (gevşek) | T1 | A3 | tireli iki bölümlü | ilkbahar | Selin için sahne-beden farkındalığı ekseninde ilk onay paketi üretildi; lirik ama sakin gövde hedeflendi. |
+
 ## Evolution review
 
 > Son review: —
