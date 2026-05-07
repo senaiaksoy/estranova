@@ -4,6 +4,28 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari': [
+    {
+      question: 'Dokuz yıl sonra HRT başlamak otomatik olarak geç kalınmış bir karar mı sayılır?',
+      answer:
+        'Hayır. Bu başlıkta tek başına takvime bakmak çoğu zaman yeterli değildir; belirtilerin yükü, menopoza giriş yaşı, kişisel riskler ve hekimle kurulan izlem planı birlikte değerlendirilir. Aynı soru iki farklı kadın için iki farklı yanıta dönüşebilir.',
+    },
+    {
+      question: 'Ailede osteoporoz öyküsü HRT kararını tek başına belirler mi?',
+      answer:
+        'Hayır. Aile öyküsü önemli bir veri sunar ama kararın tamamı onun üstüne kurulmaz. Kemik sağlığı, mevcut tarama sonuçları, başka risk faktörleri ve genel sağlık zemini birlikte okunur.',
+    },
+    {
+      question: 'Uzun yıllardır tanıdığınız bir hekimle karar vermek daha mı güvenlidir?',
+      answer:
+        'Tanışıklık güven duygusunu güçlendirebilir; ama klinik kararın yerini tutmaz. Asıl önemli olan, kişisel öykünün dikkatle dinlenmesi ve izlem planının açık biçimde kurulmasıdır.',
+    },
+    {
+      question: 'Bu tür kişisel bir HRT deneyimi herkese örnek alınacak bir yol haritası sunar mı?',
+      answer:
+        'Hayır. Kişisel anlatılar yalnızca bir deneyimin nasıl yaşandığını görünür kılar. Tedavi kararı ise her zaman kişisel belirtiler, risk-fayda dengesi ve hekim değerlendirmesiyle ayrı ayrı verilir.',
+    },
+  ],
   '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar': [
     {
       question: 'Magnezyum menopozda herkese gerekli bir takviye midir?',

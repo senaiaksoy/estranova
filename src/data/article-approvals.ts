@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari',
+    writerSlug: 'basak-pelister',
+    approvedAt: '2026-05-07',
+    note: 'Başak Pelister author approval received from icerik/yazar-onaylari/basak-pelister/onaylanan/basak-test-makale (1).pdf. Approved editorial test draft publication kurallarina hizalanarak site rotasi, FAQ schema ve static manifest ile canli envantere alindi.',
+  },
+  {
     pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
     writerSlug: 'estranova-editorial',
     approvedAt: '2026-05-06',

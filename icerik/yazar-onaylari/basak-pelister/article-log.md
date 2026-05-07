@@ -8,6 +8,7 @@
 
 | # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2026-05-07 | HRT karar güncesi | Hormonal Geçiş · Menopoz | v2.6 | — | deneyim aktarmak | T1 + T2 + T3 | "Yıllarca beklediğim cevabı duyduğumda..." | tireli iki bölümlü başlık | ilkbahar | Onaylı test taslağı yayına uyarlandı; üç kuşaklı masa + aile öyküsü + kişisel karar dengesi korundu. |
 
 ## Sütun anahtarı
 
@@ -23,7 +24,7 @@
 ## Cooldown durumu (canlı)
 
 > Bu bölüm her yeni satır eklendiğinde güncellenir. AI Faz 1.5 review'da burayı okur.
-> Şu an log boş — cooldown filtresi 2026-04-29 sonrası ilk gerçek yayından itibaren tam çalışacak.
+> Son yayın: `2026-05-07` — `dokuz-yillik-menopoz-sonunda-hrt-karari`
 
 ## Evolution review
 

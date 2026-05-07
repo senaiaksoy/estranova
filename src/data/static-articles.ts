@@ -18,6 +18,27 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari',
+    title: 'Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı',
+    description:
+      'Başak Pelister, kırk altı yaşında başladığı menopozdan dokuz yıl sonra HRT kararına nasıl geldiğini; aile öyküsü, hekimle kurulan güven, üç kuşaklı kadın bağı ve kişisel risk-fayda dengesi üzerinden anlatıyor.',
+    publishedDate: '7 Mayıs 2026',
+    writerSlug: 'basak-pelister',
+    section: 'Hormonal Geçiş',
+    sectionPath: '/hormonal-gecis',
+    keywords: [
+      'menopoz',
+      'HRT',
+      'hormon tedavisi',
+      'kişisel karar',
+      'menopoz güncesi',
+      'aile öyküsü',
+      'osteoporoz',
+      'sıcak basması',
+      'menopozda hekim kararı',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar',
     title: 'Magnezyum Menopozda Gerçekten Ne İşe Yarar?',
     description:
