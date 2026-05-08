@@ -62,7 +62,7 @@ Temel amaç, utanç ve panik duygusunu azaltırken değerlendirme eşiğini de b
 8. Evde neyi zorlamamak gerekir, hangi hareketler geçici olarak dikkat ister?
 9. Ne zaman gecikmeden değerlendirme alınmalı?
 
-## Ton ve Klinik Çerçeve
+## Ton ve Klinik Yaklaşım
 
 Metin:
 - “bel fıtığı mutlaka budur” gibi kesin hüküm kurmayacak

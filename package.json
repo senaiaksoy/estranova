@@ -1,5 +1,5 @@
 {
-  "name": "react-example",
+  "name": "estranova",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +19,7 @@
     "articles:status": "node scripts/list-article-approvals.mjs",
     "articles:audit": "node scripts/check-published-content-integrity.mjs",
     "articles:audit:strict": "node scripts/check-published-content-integrity.mjs --strict",
+    "seo:audit": "node scripts/check-seo-output.mjs",
     "article:context": "node scripts/article-context-build.mjs",
     "authors:init-folders": "node scripts/init-author-folders.mjs",
     "author:send-for-approval": "node scripts/create-approval-package.mjs",

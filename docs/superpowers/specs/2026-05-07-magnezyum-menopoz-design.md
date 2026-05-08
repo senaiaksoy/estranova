@@ -6,7 +6,7 @@
 
 Bu yazı:
 - mevcut `D Vitamini Rehberi`ni tekrar etmeyecek
-- menopoz çevresinde en sık abartılan takviyelerden biri olan magnezyumu sakin bir çerçevede okuyacak
+- menopoz çevresinde en sık abartılan takviyelerden biri olan magnezyumu sakin bir yaklaşımla okuyacak
 - "herkese lazım" dili yerine belirti, kanıt ve form ayrımı yapacak
 - vitaminler/takviyeler bölümünü tek yazılık bir dosya olmaktan çıkaracak
 
@@ -58,7 +58,7 @@ Yazının temel duygusu, takviye baskısını büyütmek değil; karar karmaşas
 7. Kimler rastgele başlamamalı?
 8. Doktora sorulabilecek üç net soru
 
-## Ton ve Klinik Çerçeve
+## Ton ve Klinik Yaklaşım
 
 Metin:
 - klinik satış dili kurmayacak

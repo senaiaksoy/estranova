@@ -18,7 +18,7 @@ akışına almak.
 4. `meta.json`
 5. `article-log.md` güncellemesi
 
-## Editoryal Çerçeve
+## Editoryal Yaklaşım
 
 - Ana bağ: değişen beden, uyku, enerji ve tahammül ritminin partnerlikte yankısı
 - Yan bağ: aynı sahneyi ve aynı hayatı paylaşmanın ritim duygusu

@@ -16,7 +16,7 @@ Makale, okurun aklındaki temel soruyu netleştirmelidir:
 ## Editoryal hedef
 
 - `Peptid` kelimesini tek bir mucize sınıf gibi sunmamak
-- `GLP-1` hattını mevcut yazıyla çakıştırmadan yalnızca referans çerçevesi olarak kısaca anmak
+- `GLP-1` hattını mevcut yazıyla çakıştırmadan yalnızca referans hattı olarak kısaca anmak
 - Asıl gövdeyi `GLP-1 dışı` peptid iddialarına ayırmak
 - Klinik araç, erken araştırma ve reklam iddiası ayrımını görünür kılmak
 - Okuru peptid kullanmaya değil, doğru soruları sormaya yaklaştırmak
@@ -48,7 +48,7 @@ Alternatif başlıklar:
 
 Makale bir `ürün öneri rehberi` olmayacak. Bir `kanıt okuma dosyası` olacak.
 
-Ana çerçeve:
+Ana yaklaşım:
 
 1. Peptid nedir, neden bu kadar hızlı pazarlanıyor?
 2. `GLP-1` neden peptid başlığında ayrı bir yerde duruyor?

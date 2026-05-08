@@ -28,9 +28,9 @@ export default defineConfig({
     '/beden-yakinlik/cinsel-saglik/yakinlik-agrisi-menopoz': '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
     '/beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban': '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
     '/zihin-denge/uyku-bozuklugu-menopoz': '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-    '/zihin-denge/ruh-hali-degisimleri-menopoz': '/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz',
+    '/zihin-denge/ruh-hali-degisimleri-menopoz': '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi',
     '/zihin-denge/stres-yonetimi-menopoz': '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
-    '/zihin-denge/bellek-odaklanma-menopoz': '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
+    '/zihin-denge/bellek-odaklanma-menopoz': '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik',
     '/bilimsel-pencere/estrogen-biyolojisi-saglik': '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
     '/bilimsel-pencere/nad-plus-hucresel-yaslanma': '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
     // D Vitamini DUPLICATE temizliği — vitaminler/ altındaki sığ versiyon
@@ -42,7 +42,7 @@ export default defineConfig({
     // SubmenuHero ile hizalı yeni editöryal pattern, daha derin bilişsel
     // kapsam (bellek türleri / BDNF / bilişsel rezerv), araştırmacı yazar tonu.
     '/hormonal-gecis/perimenopoz/perimenopozda-beyin-sisi-odaklanma-rehberi':
-      '/zihin-denge/bilissel-saglik/bellek-odaklanma-menopoz',
+      '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik',
   },
   integrations: [
     react(),

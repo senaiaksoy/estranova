@@ -1,6 +1,6 @@
 # Ana Sayfa `01 — Yolculuk Haritası` Dengeli Revizyon Tasarımı
 
-## Bağlam
+## Zemin
 
 Estranova ana sayfasındaki `01 — Yolculuk Haritası` bölümü premium editorial bir dille tasarlanmış olsa da, mevcut haliyle sayfanın kalanındaki editoryal hiyerarşiden kopuk görünmektedir. Sorun görsel kalite değil; bölümün ana sayfanın geri kalanında kullanılan `kapak sahnesi + ikincil katman + açık ama nötr CTA` ritmine göre fazla eşit ağırlıklı ve fazla indeks-benzeri davranmasıdır.
 
