@@ -54,6 +54,12 @@ export interface Issue {
   /** Bilimsel editör mektubu — sayı içinde EditorLetter bileşeniyle render */
   editorLetter: IssueEditorLetter;
   /**
+   * Site editörü Berna Aksoy'un "Sıcacık Köşe" yazısı — sayıyı tanıtan
+   * editöryal kapı yazısı. URL: `/editorun-kosesi/<slug>`.
+   * Faz 2'de zorunlu — her sayının kendi tanıtım köşesi olur.
+   */
+  editorColumnSlug?: string;
+  /**
    * Kapak dosyası — `monthly-dossier.ts`'teki MonthlyDossier slug'ı.
    * Resolve edildiğinde sayının 4-6 yazılık tema dosyasına bağlanır.
    * Sayı 0 (arşiv) için boş — 45 makale farklı kapılardan geliyor.
@@ -135,6 +141,7 @@ export const issue01: Issue = {
     writerSlug: 'senai-aksoy',
     body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBu sayıyı özellikle üç sesle kuruyoruz: Berna Aksoy uykunun hormonal zeminini sadeleştiriyor; Doç. Dr. Senai Aksoy gece terlemesinin mahrem ve klinik yanını utanmadan konuşuyor; Alara Baykent akşam hareketini performans baskısı değil, bedeni geceye hazırlayan küçük bir geçiş olarak okuyor. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, yaşıt sesinde ve sakin bir editöryel düzende okurla buluşturmak.',
   },
+  editorColumnSlug: 'mayis-2026',
   coverDossierSlug: '2026-05-uyuyamadigimiz-geceler',
   releaseDate: '2026-05-01',
   status: 'current',

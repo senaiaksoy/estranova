@@ -133,6 +133,19 @@ Estranova "Eşik" adıyla aylık dijital dergi formatına geçiş aşamasındad�
 - **Yasak dil (arayüz):** "Premium", "Abone ol", "Üye ol", "Kilitli içerik", "Bedava deneme", "Kampanya / Paket / İndirim", "Webinar". Tercih: "Yayını izle", "Aylık sayıyı oku", "Estranova okuru ol", "Estranova Mektubu".
 - **Asla paywall'a alınmayanlar:** mevcut tüm makaleler, hub sayfaları, kapak dosyasındaki ana yazılar, yazar profilleri, tıbbi sorumluluk reddi, editöryal politika, kanıt seviyesi açıklamaları.
 
+#### Editörün Köşesi — sayı tanıtım kuralı (HARD CONSTRAINT)
+
+Eşik'in her sayısı bir "Sıcacık Köşe" yazısıyla açılır: **site editörü Berna Aksoy'un imzasıyla, sayıyı tanıtan kapı önü yazısı**. Bu köşe sayının dışından sayıya bakar; klinik makale değil, editöryal davettir.
+
+- **Kural:** Yeni bir Eşik sayısı yayınlanmadan önce ona eşlik eden bir editör köşesi yazısı hazırlanır. Köşesiz sayı yayınlanmaz.
+- **Konum:** [`src/pages/editorun-kosesi/<ay>-<yil>.astro`](src/pages/editorun-kosesi/) — slug sayının ayıyla hizalanır (örn. Sayı 01 — Mayıs 2026 için `mayis-2026.astro`).
+- **Bağlama:** Sayı interface'inde `editorColumnSlug` alanı doldurulur ([`src/data/issues.ts`](src/data/issues.ts)). [`src/pages/sayi/[slug].astro`](src/pages/sayi/%5Bslug%5D.astro) kapak altında bu slug'a bir "Sıcacık Köşe" çağrısı render eder.
+- **İçerik çatısı:** (1) "Bu sayıya giriş" ArticleSummary, (2) Eşik adının hatırlatması veya bir önceki sayıdan bağ, (3) bu ayın teması ve niyeti, (4) kapak dosyasındaki yazıların kısa tanıtımı (yazar + bir cümlelik vaat), (5) "Sayıya nasıl başlanır" kısa daveti, (6) Berna imzası.
+- **Bileşenler:** `ArticleSummary`, `ArticleAuthorBlock` (berna-aksoy), `ArticleProsePanel`, `RelatedReadings` (sayı sayfası + 3 kapak yazısı), `ArticleDisclaimer`, `buildArticleSchemas`. **Klinik makale değildir:** Evidence yumuşatması ve `ArticleEditorNote` (Bilimsel Editör Notu) eklenmez; FAQPage zorunlu değildir.
+- **Yazar protokolü:** Berna Aksoy yazar onay istisnasındadır (memory: doğrudan KC editör onayı). Form üretilmez; onay `article-approvals.ts` veya `article-log.md` kaydında kapanır.
+- **Ton:** Berna site editörü kimliğiyle yazar — *"yan yana oturup sayfa aralayan biri"*; ders veren değil. CLAUDE.md §3 yazar ses kuralları geçerli; Berna humor imzasından 1 sade örnek yeter, yoğun klinik anlatım yok.
+- **Yasak:** "Bu ay neler konuşuluyor / gündem özeti" gibi jenerik ay-özeti köşesi yazma; Eşik'in o sayısını tanıtmayan editör köşesi yayınlanmaz. Pazarlama / abonelik dili (yasak liste yukarıda) bu köşe içinde de geçersiz.
+
 #### Pipeline operasyonel parametreleri (referans)
 
 - **Yayın eşiği:** `compliance_score` **≥ 85** iken yayın bandına girilebilir (`COMPLIANCE_SCORE_PUBLISH_OK`; altı revizyon / best-effort akışı). Tam sayı ve model matrisi: **`docs/PIPELINE.md`**.

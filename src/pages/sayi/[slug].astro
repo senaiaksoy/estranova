@@ -50,6 +50,30 @@ const pageDescription = issue.lede;
   <main id="main-content" class="text-ink">
     <IssueCover issue={issue} />
 
+    {issue.editorColumnSlug && (
+      <section class="border-t border-burgundy/10 bg-white px-6 py-14 md:py-16">
+        <div class="mx-auto max-w-4xl">
+          <a
+            href={`/editorun-kosesi/${issue.editorColumnSlug}`}
+            class="group block rounded-[28px] border border-gold/30 bg-gradient-to-br from-cream-warm via-cream-soft to-white p-7 shadow-[0_18px_56px_rgba(79,23,28,0.08)] ring-1 ring-gold/15 transition hover:-translate-y-0.5 hover:shadow-[0_22px_70px_rgba(79,23,28,0.12)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:p-9"
+          >
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-burgundy">
+              Sıcacık Köşe — {issue.monthYear}
+            </p>
+            <h2 class="mb-3 font-serif text-3xl leading-tight text-burgundy group-hover:underline group-hover:decoration-burgundy/30 md:text-[2.25rem]">
+              Bu sayıya site editöründen kapı önü yazısı
+            </h2>
+            <p class="mb-4 max-w-2xl leading-relaxed text-ink/75">
+              Berna Aksoy'un her sayıya yazdığı kısa editör notu — sayıyı neden bu temaya açtık, bu ay hangi soruyu konuşuyoruz.
+            </p>
+            <p class="font-serif text-sm italic text-burgundy/80 group-hover:text-burgundy">
+              Köşeyi oku →
+            </p>
+          </a>
+        </div>
+      </section>
+    )}
+
     <IssueTableOfContents issue={issue} />
 
     <EditorLetter letter={issue.editorLetter} />
