@@ -180,9 +180,11 @@ Submenu content should be data-led where possible:
 - Prefer `src/data/static-articles.ts` for article lists and ordering.
 - Prefer `src/data/submenu-heroes.ts` for article and hub imagery.
 - Treat imagery as three independent surfaces: top `SubmenuHero`, sub-hub latest/archive card image, and article-page `ArticleAuthorBlock` image.
+- Publishing gate for new/approved articles: before marking an article as published or adding it to submenu/archive surfaces, check whether a dedicated article image has been supplied. If not, explicitly ask the user/editor for the article image and pause the visual binding step until it is provided or the user says to publish without a dedicated image for now.
 - Default user-supplied article image behavior: unless the user explicitly says "makale hero görseli de değişsin", do **not** add or overwrite that article route in `submenuHeroByRoute`. Use the supplied image only for the sub-hub card (`articleCardImageByRoute`) and the in-article author/byline visual (`ArticleAuthorBlock imageSrc`).
 - If only the sub-hub `Son yazı` / archive card image should change, do **not** overwrite the page hero in `submenuHeroByRoute`; register a separate card image mapping in `src/data/submenu-heroes.ts` (`articleCardImageByRoute`).
 - If only the article-page author card image should change, pass `imageSrc` / `imageAlt` / `imagePosition` directly to `ArticleAuthorBlock`; this must not force a `SubmenuHero` change.
+- Implementation invariant: a user-supplied article image must change exactly these two surfaces by default: `ArticleAuthorBlock imageSrc` on the article page and `articleCardImageByRoute` for sub-hub/latest/archive cards. It must not create, change, or overwrite a `submenuHeroByRoute` entry unless the user explicitly asks for the top hero to change.
 - Keep manual `editorPick` objects only when there is a clear editorial reason.
 - Do not link to article routes that do not exist in `src/pages/`.
 

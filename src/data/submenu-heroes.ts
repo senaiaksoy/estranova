@@ -259,6 +259,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale': {
+    src: '/images/library/editorial/zy-diz-agrisi-ortopedik-takip.png',
+    alt: 'Premium editoryal tonda, sakin bir iç mekanda diz sağlığı ve ortopedik takip temasını taşıyan olgun kadın portresi; 40 sonrası diz ağrısını izlem ve müdahale dengesiyle okuma görseli',
+  },
   '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': {
     src: '/images/library/editorial/senai-hrt-avantajlari-window-card.webp',
     alt: 'Krem tonlu bir odada pencere kenarında duran, camel ceketli düşünceli kadın portresi; HRT avantajları yazısı için editoryal kart görseli',
