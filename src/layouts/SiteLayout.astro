@@ -8,6 +8,8 @@ import {
   type OgType,
 } from '../utils/seo';
 import { isProductionLaunch } from '../utils/launch';
+import { featureFlags } from '../utils/feature-flags';
+import CookieBanner from '../components/site/CookieBanner.astro';
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -117,6 +119,8 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
     <script src={mobileMenuScript} defer></script>
 
     <slot />
+
+    {featureFlags.cookieBannerEnabled && <CookieBanner />}
 
     <script>
       import '../scripts/save-for-later';

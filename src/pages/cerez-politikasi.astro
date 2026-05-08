@@ -1,0 +1,132 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+import { featureFlags } from '../utils/feature-flags';
+
+const bannerActive = featureFlags.cookieBannerEnabled;
+const analyticsActive = featureFlags.analyticsEnabled;
+---
+
+<SiteLayout
+  title="Çerez Politikası - Estranova"
+  description="Estranova'da çerez ve tarayıcı depolama kullanımının açık özeti."
+>
+  <SiteNavbar currentPath="/cerez-politikasi" />
+
+  <main id="main-content" class="pt-24 text-ink">
+    <div class="mx-auto max-w-3xl px-6 py-16 md:py-20">
+      <header class="mb-12">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">YASAL BİLGİLENDİRME</p>
+        <h1 class="mb-6 font-serif text-4xl leading-tight md:text-5xl">Çerez Politikası</h1>
+        <p class="text-lg leading-relaxed text-ink/75">
+          Estranova; sade, sakin bir editöryal yayın olarak en az veri ile çalışmayı tercih eder.
+          Bu sayfa, hangi tarayıcı depolamasının ve hangi çerezlerin kullanıldığını şeffaf biçimde özetler.
+        </p>
+      </header>
+
+      <div class="space-y-10">
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Şu anki durum</h2>
+          {bannerActive ? (
+            <p class="leading-relaxed text-ink/75">
+              Estranova; sayfa kullanımını anonim olarak ölçmek için isteğe bağlı analitik
+              çerezler kullanabilir. Bu çerezler yalnızca alt çerez bandından açıkça onay
+              vermeniz halinde yüklenir; reddederseniz site aynı şekilde çalışır.
+            </p>
+          ) : (
+            <p class="leading-relaxed text-ink/75">
+              Estranova şu an çerez kullanmamaktadır. Üçüncü taraf izleme aracı, reklam
+              pikseli veya analiz çerezi yüklenmez. İlerleyen dönemde site kullanımını
+              anlamak için isteğe bağlı analitik çerezler eklenirse, sayfanın altında
+              kayan bir çerez bandı üzerinden onay sorulur ve kararınız 12 ay saklanır.
+            </p>
+          )}
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Tarayıcı depolama (çerez değil)</h2>
+          <p class="leading-relaxed text-ink/75">
+            Bazı tercihleriniz tarayıcınızda <em>localStorage</em> üzerinde saklanır.
+            Bu veri sunucuya gönderilmez; istediğiniz an tarayıcı geliştirici araçlarından
+            (Application sekmesi → Local Storage) silebilirsiniz.
+          </p>
+          <ul class="mt-4 space-y-2 text-ink/75 list-disc list-inside leading-relaxed">
+            <li>Yazı boyutu ve okuma tercihleri</li>
+            <li>Kayıtlı makaleler (yer-imi)</li>
+            <li>Bülten kaydı (Faz 2'de gerçek e-posta hizmetine taşınacak)</li>
+          </ul>
+          <p class="mt-4 leading-relaxed text-ink/75">
+            Bu depolama, banner üzerinde <strong>Zorunlu</strong> kategori altında listelenir
+            ve ayrı bir onay gerektirmez; site işlevselliği için gereklidir.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Analitik çerezler — Google Analytics 4</h2>
+          {analyticsActive ? (
+            <p class="leading-relaxed text-ink/75">
+              Onay verirseniz Google Analytics 4 yüklenir; reddederseniz hiçbir GA4
+              script'i sayfaya eklenmez.
+            </p>
+          ) : (
+            <p class="leading-relaxed text-ink/75">
+              Henüz aktif değildir. Aşağıdaki ayarlar, aktivasyon anında geçerli olacak
+              yapılandırmayı tanımlar.
+            </p>
+          )}
+          <ul class="mt-4 space-y-2 text-ink/75 list-disc list-inside leading-relaxed">
+            <li>Toplanan veri: anonim sayfa görüntüleme, oturum süresi, cihaz türü, tarayıcı dili</li>
+            <li>IP adresi: kısaltılmış (anonymize_ip) — kalıcı olarak saklanmaz</li>
+            <li>Google Signals (cihazlar arası takip): kapalı</li>
+            <li>Reklam kişiselleştirme sinyalleri: kapalı</li>
+            <li>Veri saklama süresi: 14 ay; sonrasında otomatik silinir</li>
+            <li>Kullanım amacı: editöryal okuma alışkanlıklarını anonim olarak anlamak</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Üçüncü taraflar</h2>
+          <p class="leading-relaxed text-ink/75">
+            Estranova reklam pikseli, sosyal medya etiketleyicisi, ısı haritası aracı veya
+            A/B testi servisi kullanmaz. Şu an tek üçüncü taraf bağlantısı yazı tipi yüklemesi
+            için Google Fonts'tur; sayfa açıldığında Google sunucularından yazı tipi dosyaları
+            indirilir ve bu sırada IP adresiniz Google'a ulaşır. Bu bağlantı çerez kullanmaz.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">Tercihinizi yönetme</h2>
+          <p class="leading-relaxed text-ink/75">
+            Banner aktif olduğunda sayfanın altında her zaman görünür bir <strong>Çerez tercihleri</strong>
+            linki yer alır; bu link bandı yeniden açar ve kararınızı değiştirmenizi sağlar.
+            Tarayıcınızdan da depolanan tüm çerez ve localStorage verisini temizleyebilirsiniz.
+          </p>
+          {bannerActive && (
+            <p class="mt-4">
+              <button
+                type="button"
+                data-cookie-trigger="open"
+                class="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-burgundy/40 bg-white px-5 text-sm font-semibold text-burgundy-deep transition hover:bg-burgundy/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
+              >
+                Çerez tercihlerini aç
+              </button>
+            </p>
+          )}
+        </section>
+
+        <section>
+          <h2 class="mb-3 font-serif text-2xl">İletişim</h2>
+          <p class="leading-relaxed text-ink/75">
+            Çerez veya kişisel veri kullanımına ilişkin sorularınız için
+            <a href="/iletisim" class="underline decoration-gold-bronze/30 underline-offset-2 hover:text-burgundy-deep">iletişim</a>
+            sayfasından yazabilirsiniz. Geniş veri politikası için ayrıca
+            <a href="/kvkk" class="underline decoration-gold-bronze/30 underline-offset-2 hover:text-burgundy-deep">KVKK aydınlatma metni</a>'ne bakabilirsiniz.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

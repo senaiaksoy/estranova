@@ -1,3 +1,9 @@
+---
+import { featureFlags } from '../../utils/feature-flags';
+
+const showCookieTrigger = featureFlags.cookieBannerEnabled;
+---
+
 <footer
   aria-label="Alt bilgi"
   role="contentinfo"
@@ -66,6 +72,7 @@
           <ul class="space-y-3 text-sm text-cream-soft/60">
             <li><a href="/tibbi-sorumluluk" class="rounded px-2 py-1 transition-colors hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50" title="Tıbbi sorumluluk reddi">Tıbbi Sorumluluk Reddi</a></li>
             <li><a href="/kvkk" class="rounded px-2 py-1 transition-colors hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50" title="KVKK Aydınlatma Metni — kişisel verilerin işlenmesi">KVKK Aydınlatma Metni</a></li>
+            <li><a href="/cerez-politikasi" class="rounded px-2 py-1 transition-colors hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50" title="Çerez politikası">Çerez Politikası</a></li>
             <li><a href="/kullanim-kosullari" class="rounded px-2 py-1 transition-colors hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50" title="Kullanım koşulları">Kullanım Koşulları</a></li>
           </ul>
         </nav>
@@ -101,6 +108,17 @@
         <a href="/tibbi-sorumluluk" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Tıbbi sorumluluk reddi">TIBBİ SORUMLULUK REDDİ</a>
         <a href="/editoryal-politika" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Editoryal politika">EDİTORYAL POLİTİKA</a>
         <a href="/kvkk" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="KVKK Aydınlatma Metni">KVKK AYDINLATMA METNİ</a>
+        <a href="/cerez-politikasi" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Çerez politikası">ÇEREZ POLİTİKASI</a>
+        {showCookieTrigger && (
+          <button
+            type="button"
+            data-cookie-trigger="open"
+            class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1 underline decoration-cream-soft/30 underline-offset-4"
+            title="Çerez tercihlerini değiştir"
+          >
+            ÇEREZ TERCİHLERİ
+          </button>
+        )}
         <a href="/kullanim-kosullari" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Kullanım koşulları">KULLANIM KOŞULLARI</a>
         <a href="/yayin-kurulu" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Künye">KÜNYE</a>
         <a href="/iletisim" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="İletişim">İLETİŞİM</a>

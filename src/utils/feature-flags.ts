@@ -71,6 +71,31 @@ export interface FeatureFlags {
    * BAĞIMLI: subscriptionEnabled aktif olmalı.
    */
   pdfAudioEnabled: boolean;
+
+  /**
+   * Çerez onay banner'ı görünürlüğü.
+   * Aktif olunca:
+   *   • İlk ziyarette alt şerit kayar (1.5s gecikmeli)
+   *   • Footer'a "Çerez tercihleri" linki çıkar
+   *   • Kullanıcı kararı 12 ay localStorage'da saklanır
+   * Banner kapsamı: zorunlu (her zaman açık) + analitik (opt-in GA4).
+   * Tek başına aktive etmek anlamlıdır yalnızca analyticsEnabled da
+   * birlikte aktive edildiğinde; aksi halde banner var ama yükleyecek
+   * analytics kalmaz.
+   */
+  cookieBannerEnabled: boolean;
+
+  /**
+   * Google Analytics 4 yüklemesi.
+   * Aktif olunca + kullanıcı banner üzerinden "Analitik" onayını verince
+   * GA4 dinamik olarak yüklenir; öncesinde script tag DOM'a eklenmez.
+   * Gereksinim: PUBLIC_GA4_MEASUREMENT_ID env var (Cloudflare Pages).
+   * Yapılandırma notu: GA4 panelinde data retention 14 ay, Google Signals
+   * kapalı, ads personalization kapalı tutulur. Bu kod ek olarak
+   * anonymize_ip + Google Signals + ads personalization'ı runtime'da
+   * kapatır; panel ayarının yerine geçmez, savunma katmanıdır.
+   */
+  analyticsEnabled: boolean;
 }
 
 /**
@@ -87,6 +112,8 @@ export const featureFlags: FeatureFlags = {
   subscriptionEnabled: false,
   paywallEnabled: false,
   pdfAudioEnabled: false,
+  cookieBannerEnabled: false,
+  analyticsEnabled: false,
 };
 
 /**

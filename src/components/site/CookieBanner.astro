@@ -1,0 +1,187 @@
+---
+/**
+ * CookieBanner — alt şerit, çerez onay paneli.
+ *
+ * `featureFlags.cookieBannerEnabled = true` olduğunda
+ * `SiteLayout.astro` tarafından render edilir. Şerit ilk ziyarette 1.5s
+ * gecikmeyle kayar; karar verildiyse görünmez. Footer'daki
+ * [data-cookie-trigger="open"] linki bandı yeniden açar.
+ *
+ * Kategoriler:
+ *   • Zorunlu — her zaman açık (localStorage tercih saklama)
+ *   • Analitik — opt-in, GA4 dinamik yüklenir (PUBLIC_GA4_MEASUREMENT_ID gerekli)
+ *
+ * Mantık: src/scripts/cookie-consent.ts
+ * Durum: src/utils/consent.ts
+ */
+
+const TITLE_ID = 'estranova-cookie-banner-title';
+const DESC_ID = 'estranova-cookie-banner-desc';
+---
+
+<aside
+  id="estranova-cookie-banner"
+  role="dialog"
+  aria-modal="false"
+  aria-labelledby={TITLE_ID}
+  aria-describedby={DESC_ID}
+  aria-hidden="true"
+  data-state="closed"
+  data-view="collapsed"
+  class="pointer-events-none fixed inset-x-0 bottom-0 z-50 translate-y-full transition-transform duration-300 ease-out motion-reduce:transition-none data-[state=open]:pointer-events-auto data-[state=open]:translate-y-0"
+>
+  <div class="mx-auto max-w-5xl px-4 pb-4 sm:px-6 sm:pb-6">
+    <div class="relative rounded-[28px] border border-burgundy/12 bg-white p-5 shadow-[0_24px_72px_-32px_rgba(44,22,28,0.32)] ring-1 ring-black/[0.04] sm:p-7">
+      <button
+        type="button"
+        data-action="close"
+        aria-label="Çerez bandını kapat ve kararımı reddet olarak kaydet"
+        class="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-ink/55 transition hover:bg-burgundy/5 hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M5 5l10 10M15 5L5 15" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div data-section="collapsed">
+        <p class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-gold">
+          <svg class="h-2.5 w-2.5 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
+            <polygon
+              fill="#C9A96E"
+              points="100,10 111.31,88.69 190,100 111.31,111.31 100,190 88.69,111.31 10,100 88.69,88.69"
+            ></polygon>
+          </svg>
+          <span>ÇEREZ TERCİHİNİZ</span>
+        </p>
+        <h2
+          id={TITLE_ID}
+          class="mb-3 pr-10 font-serif text-xl italic leading-tight text-burgundy-deep sm:text-2xl"
+        >
+          Sayfa kullanımını ölçmemize izin verir misiniz?
+        </h2>
+        <p
+          id={DESC_ID}
+          class="mb-5 max-w-[58ch] text-sm leading-relaxed text-ink/75 sm:text-[15px]"
+        >
+          Estranova; sayfa kullanımını anonim olarak ölçmek için isteğe bağlı analitik
+          çerezler kullanabilir. Reddederseniz site aynı şekilde çalışır; içerik kısıtlanmaz.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <button
+            type="button"
+            data-action="accept-all"
+            class="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl border border-burgundy/40 bg-burgundy-deep px-5 text-sm font-semibold text-white transition hover:bg-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
+          >
+            Tümünü kabul et
+          </button>
+          <button
+            type="button"
+            data-action="reject-all"
+            class="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl border border-burgundy/40 bg-white px-5 text-sm font-semibold text-burgundy-deep transition hover:bg-burgundy/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
+          >
+            Reddet
+          </button>
+          <button
+            type="button"
+            data-action="open-preferences"
+            class="inline-flex min-h-[44px] items-center justify-center gap-1 rounded-xl px-3 text-sm font-medium text-burgundy-deep underline decoration-gold-bronze/30 underline-offset-4 transition hover:text-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40 sm:flex-shrink-0"
+          >
+            Tercihler →
+          </button>
+        </div>
+        <p class="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-gold/30 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-gold-bronze/85">
+          <a
+            href="/cerez-politikasi"
+            class="underline decoration-gold-bronze/30 underline-offset-2 transition hover:text-burgundy-deep focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+          >
+            Çerez politikası
+          </a>
+          <span class="text-gold">·</span>
+          <a
+            href="/kvkk"
+            class="underline decoration-gold-bronze/30 underline-offset-2 transition hover:text-burgundy-deep focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+          >
+            KVKK
+          </a>
+        </p>
+      </div>
+
+      <div data-section="expanded" hidden>
+        <h2 class="mb-1 pr-10 font-serif text-xl italic leading-tight text-burgundy-deep sm:text-2xl">
+          Çerez tercihleri
+        </h2>
+        <p class="mb-5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold-bronze/85">
+          Kategorileri ayrı ayrı seçebilirsiniz
+        </p>
+
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-gold/30 bg-cream/50 p-4">
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="consent-essential"
+                checked
+                disabled
+                aria-describedby="consent-essential-desc"
+                class="mt-1 h-4 w-4 shrink-0 rounded border-burgundy/30 text-burgundy-deep accent-burgundy-deep focus:ring-burgundy/40 disabled:opacity-70"
+              />
+              <div class="flex-1">
+                <label for="consent-essential" class="block text-sm font-semibold text-burgundy-deep">
+                  Zorunlu
+                  <span class="ml-1 text-[10px] uppercase tracking-[0.2em] text-gold-bronze/85">· Her zaman açık</span>
+                </label>
+                <p id="consent-essential-desc" class="mt-1 text-xs leading-relaxed text-ink/70 sm:text-sm">
+                  Yazı boyutu, kayıtlı makaleler gibi tarayıcı tercihleriniz için
+                  yalnızca tarayıcınızda kalan teknik depolama. Sunucuya gönderilmez.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-burgundy/12 bg-white p-4">
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="consent-analytics"
+                data-toggle="analytics"
+                aria-describedby="consent-analytics-desc"
+                class="mt-1 h-4 w-4 shrink-0 rounded border-burgundy/40 accent-burgundy-deep focus:ring-burgundy/40"
+              />
+              <div class="flex-1">
+                <label for="consent-analytics" class="block text-sm font-semibold text-burgundy-deep">
+                  Analitik
+                  <span class="ml-1 text-[10px] uppercase tracking-[0.2em] text-gold-bronze/85">· Google Analytics 4</span>
+                </label>
+                <p id="consent-analytics-desc" class="mt-1 text-xs leading-relaxed text-ink/70 sm:text-sm">
+                  Hangi içeriklerin okunduğunu anonim olarak ölçer. IP kısaltılır,
+                  pazarlama özellikleri kapalıdır, veri 14 ay sonra silinir.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <button
+            type="button"
+            data-action="save-preferences"
+            class="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl bg-burgundy-deep px-5 text-sm font-semibold text-white transition hover:bg-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
+          >
+            Tercihlerimi kaydet
+          </button>
+          <button
+            type="button"
+            data-action="reject-all"
+            class="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-burgundy/40 bg-white px-5 text-sm font-semibold text-burgundy-deep transition hover:bg-burgundy/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
+          >
+            Tümünü reddet
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+  import '../../scripts/cookie-consent';
+</script>
