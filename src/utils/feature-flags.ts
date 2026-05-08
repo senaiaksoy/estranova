@@ -112,8 +112,8 @@ export const featureFlags: FeatureFlags = {
   subscriptionEnabled: false,
   paywallEnabled: false,
   pdfAudioEnabled: false,
-  cookieBannerEnabled: false,
-  analyticsEnabled: false,
+  cookieBannerEnabled: true,
+  analyticsEnabled: true,
 };
 
 /**
