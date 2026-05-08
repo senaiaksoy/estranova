@@ -16,6 +16,7 @@ import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { articleFaqs } from '../../data/article-faqs';
 import { buildArticleSchemas } from '../../utils/article-schema';
 import { resolveSiteUrl } from '../../utils/seo';
 
@@ -41,6 +42,7 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
+const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -59,6 +61,7 @@ const articleSchemas = buildArticleSchemas({
     'ortopedik takip',
     'diz ağrısı kırmızı bayrak',
   ],
+  faqItems,
   siteUrl,
 });
 ---
