@@ -319,6 +319,28 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Önce çalışma tipine, insan verisi olup olmadığına ve ölçülen sonucun gerçekten günlük yaşamı etkileyen bir sonlanım olup olmadığına bakmak iyi bir başlangıçtır. “Mekanizma var” ifadesi tek başına yeterli değildir.',
     },
   ],
+  '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma': [
+    {
+      question: 'Epitalon menopozu geciktirir veya hormonal geçişi yumuşatır mı?',
+      answer:
+        'Bilimsel olarak henüz desteklenmiş bir iddia değildir. Pineal bezin hormonal döngülerle ilişkisi mekanizma düzeyinde tartışılır; ama Epitalon\'un menopoz başlangıcını ertelediği veya geçiş belirtilerini hafiflettiği bir kontrollü insan verisi mevcut değil. Mekanizmadan klinik vaade atlamak bu alanda en sık yapılan yanlıştır.',
+    },
+    {
+      question: 'Telomerazı destekleyen bir molekül kanser riski yaratır mı?',
+      answer:
+        'Önemli bir soru. Yeni laboratuvar verileri, Epitalon\'un sağlıklı hücrelerde telomerazı orta seviyelerde uyardığını ve kanser hücrelerindeki ölümsüzlük seviyelerine ulaşmadığını gösteriyor; ALT mekanizması ise sağlıklı hücrelerde aktive olmuyor. Bu yorum laboratuvar düzeyinde rahatlatıcı ama insan klinik güvenlik verisi anlamına gelmez. Aktif kanseri olan veya yüksek riskli kanser öyküsü taşıyan kişilerde net güvenlik verisi olmadan deneysel telomer uzatma stratejisi önerilmez.',
+    },
+    {
+      question: 'İnternette satılan Epitalon enjeksiyonu güvenli midir?',
+      answer:
+        'Türkiye\'de ve birçok ülkede Epitalon onaylı bir ilaç değil; gri kanaldan edinilen peptid ürünlerinin saflık, doz ve içerik tutarlılığı bilinen bir sorundur. Kanıtsız bir molekülü kanıtsız kaynaktan kullanmak iki belirsizliği üst üste koymak demektir; klinik karar açısından makul bir adım değil.',
+    },
+    {
+      question: 'Epitalon hakkında bilimsel haberlere nasıl daha sakin yaklaşılır?',
+      answer:
+        'Üç soruyla başlamak iyi olur: çalışma laboratuvar mı, hayvan mı, insan mı? İnsan ise küçük bir gözlem mi, plasebo kontrollü randomize bir araştırma mı? Ölçülen sonuç gerçekten günlük yaşamı etkileyen bir sonlanım mı, yoksa biyobelirteç değişimi mi? Bu üç soru pazarlama dilinden bilim diline geçişin filtresidir.',
+    },
+  ],
   '/zamansiz-yasam/d-vitamini-rehberi': [
     {
       question: 'D vitamini herkese otomatik takviye olarak mı düşünülmeli?',

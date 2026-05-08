@@ -216,6 +216,12 @@ export const approvedArticles: ArticleApproval[] = [
     note: 'Prelaunch inventory reconciliation: canli route current writer signature ile eslestirildi ve approval kaydi production envanterine eklendi.',
   },
   {
+    pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-08',
+    note: 'KC editor direct approval (Senai default): Hucreler ve Yaslanma hub icin Epitalon ve telomer biyolojisi derlemesi; saglikli hucre vs kanser hucresi iki yolak ayrimi (telomeraz vs ALT), in vitro 2D kanit sinirliligi ve insan klinik kanit yoklugu dengesi ekseninde yayina alindi; static route, FAQ schema, RSS manifesti ve kategori vitriniyle hizalandi.',
+  },
+  {
     pathname: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-05-04',

@@ -539,6 +539,16 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['NAD+', 'hücresel yaşlanma', 'sirtuin', 'biohacking', 'menopoz'],
   },
   {
+    path: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma',
+    title: 'Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar',
+    description: 'Epitalon peptidi, telomer biyolojisi ve telomeraz/ALT mekanizma ayrımı; sağlıklı hücre ile kanser hücresinde farklı çalışan etki ve insan klinik kanıtının erken aşamadaki sınırları üzerine bilimsel derleme.',
+    publishedDate: '8 Mayıs 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Bilimsel Pencere',
+    sectionPath: '/bilimsel-pencere',
+    keywords: ['Epitalon', 'epithalon', 'telomer', 'telomeraz', 'hTERT', 'ALT', 'pineal bez', 'hücresel yaşlanma', 'anti-aging', 'menopoz'],
+  },
+  {
     path: '/zamansiz-yasam/d-vitamini-rehberi',
     title: 'D Vitamini Rehberi',
     description: 'D vitamini taraması, beslenme, güneş maruziyeti ve takviye planını dengeli biçimde ele alan rehber.',

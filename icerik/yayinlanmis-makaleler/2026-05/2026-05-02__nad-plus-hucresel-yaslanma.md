@@ -8,23 +8,10 @@ url: /bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["NAD+", "NMN", "NR", "sirtuin", "PARP", "CD38", "mitokondri", "hücresel yaşlanma", "epigenetik yaşlanma", "menopoz"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # NAD+ ve Hücresel Yaşlanma — Mekanizmadan Pratik Sınırlara
-
-## Kısa Özet
-
-NAD+ hücresel yaşlanma araştırmalarının merkezinde duran bir koenzim — mitokondriyal
-enerji üretimi, DNA hasar yanıtı ve epigenetik düzenlemenin kalbinde rol oynuyor.
-Sirtuin, PARP ve CD38 yolakları üzerinden yaşlanmanın temel hipotezleri NAD+'a
-bağlanıyor. Mekanizma sağlam zeminde; ama *"NAD+'ı yükseltirsek yaşlanmayı
-geri çevirir miyiz?"* sorusunun klinik cevabı henüz alınmadı. Bu yazı
-mekanizmayı net açıyor, insan çalışmalarının kanıt seviyesini dürüstçe yorumluyor,
-hayvan-insan çeviri sorununu adıyla anıyor ve klinik karşılığı için pratik
-sınırları çiziyor. Klinik takviye yorumu için
-[
-NAD+ takviyesi yazısı](/zamansiz-yasam/deneysel/nad-plus-takviyesi)'na göz atılabilir.
 
 ## Mekanizmanın Temeli — NAD+ Hücrede Ne Yapar?
 
@@ -273,8 +260,8 @@ belirtilerine etkisi konusunda da güçlü kanıt yok.
 ### Bu alanda umut verici ama belirsiz — kararı nasıl vermeli?
 
 Bu alanda *"hiçbir şey kanıtlanmamış"* da yanlış, *"her şey kanıtlandı"*
-da yanlış. Doğru çerçeve: *"mekanizma sağlam, insanda etki var ama büyüklüğü
-mütevazı, uzun vadeli sonuç henüz bilinmiyor"*. Bu çerçeveyle yaklaşıldığında
+da yanlış. Doğru bakış: *"mekanizma sağlam, insanda etki var ama büyüklüğü
+mütevazı, uzun vadeli sonuç henüz bilinmiyor"*. Bu bakışla yaklaşıldığında
 kişisel karar şuna iniyor: yaşam tarzı temelini kuran, hekim değerlendirmesi
 sonrası eksiklik takviyelerini kullanan ve maddi-zaman kaynaklarını gözeten
 bir kişi *"deneyebileceğim ek bir adım"* olarak düşünebilir. Acelesi
@@ -297,57 +284,6 @@ NMN/NR'yi *"belki ek bir adım"* olarak (kanıtlı seçeneklerin yerine değil
 yanına) düşünmek bugün için en dengeli yaklaşım. Standart protokol değil sizin
 hikâyeniz — bu cümleyi NAD+ alanı kadar net çağıran az alan var.
 
-Bilimsel Editör Notu
-
-Kanıt Düzeyi:
-(sınırlı–orta kanıt)
-
-Bilimsel pencere yazısında mekanizmaya odaklandım; bu notta o mekanizmanın
-klinik karşılığını ve hastalarımla yaptığım pratik konuşmayı ekliyorum — uzman
-olarak.
-
-**Klinik bağlam:** NAD+ alanı kliniğimde son
-yıllarda en sık sorulan ama en az netliği olan başlıklardan biri. Yazıda paylaştığım
-mekanik çerçeve sağlam; ama klinik karar bunun çok ötesinde bir denge gerektiriyor.
-Hücresel yaşlanma araştırmalarının bilimsel heyecanı klinik öneriye doğrudan
-tercüme edilemez; bu boşluk bu alanda en sık atlanan nokta.
-
-**Mekanik çerçeve:** NAD+ mitokondriyal
-elektron taşıma zincirinde, oksidatif stres yanıtında (NADP+/NADPH üzerinden)
-ve sirtuin/PARP/CD38 enzimleri için substrat olarak çalışır. Yaşla NAD+ düzeyleri
-azalır; bunun bir nedeni NAD+ tüketen enzimlerin (özellikle CD38, PARP) yaşla
-artan aktivitesi. NAD+ tükenişinin yaşlanmanın *nedensel* mi
-*eşlik eden* bir bileşeni mi olduğu henüz tam çözülmüş değil — bu
-tartışma klinik yorumun temelini etkiliyor.
-
-**Klinik kırmızı bayraklar:** Aktif malignite,
-immünsüpresif tedavi veya kanser öyküsü — bazı kanserlerin NAD+ tüketimine
-bağımlı olması ve PARP yolağının DNA hasar yanıtındaki rolü nedeniyle teorik
-risk; net güvenlik verisi yok. NAMPT inhibitörleri kanser tedavisi olarak
-araştırıldığı için takviye-tümör etkileşimi temkinli okunmalı. Düzenli reçeteli
-ilaç kullanımı (özellikle onkolojik tedaviler ve immünmodülatörler) — etkileşim
-verisi yetersiz. Hamilelik/laktasyon — güvenlik verisi yok.
-
-**Pratik bütünleşim:** Pratikte tedavi
-adımlarını birlikte değerlendirirken şu basamakları izlerim: (1) bilimsel
-mekanizma sağlam ama klinik kanıt seviyesi sınırlı — bu fark hastayla açıkça
-paylaşılır; (2) yaşam tarzı temeli (uyku, beslenme, düzenli aerobik+direnç
-egzersizi) NAD+/sirtuin yolaklarını doğal destekler ve kanıt güçlü; bu zemin
-kurulmadan takviye düşünülmez; (3) hekim değerlendirmesi sonrası eksikliği
-saptanmış mikro-besinlerin (D vitamini, B12, demir, magnezyum) hedefli takviyesi;
-(4) ardından — temel oturduktan sonra — NMN veya NR'yi 8-12 haftalık deneme +
-biyobelirteç + subjektif değişiklik takibi çerçevesinde değerlendirmek; kanıtlı
-seçeneklerin yerine değil yanına. (5) Aktif kanseri veya immünsüpresyonu olan
-hastalarda önermem; çift taraflı belirsiz risk-fayda dengesi nedeniyle.
-
-**Bireysellik vurgusu:** Yukarıda paylaştıklarım
-— hem yazıda hem bu notta — genel popülasyon ve mekanik çerçevedir; sizin
-tablonuzdaki sağlık öyküsü, kullandığınız ilaçlar, kanser öyküsü, mevcut
-takviyeleriniz ve hangi mikro-besin eksikliği taşıdığınız tedavi kararına yön
-verir. Burada okuduğunuz bir başlangıç çerçevesidir, karar değil; sizin için
-uygun adımları kendi hekiminizle birebir değerlendirmeniz önemlidir — özellikle
-kanıt seviyesinin bu kadar değişken olduğu bir alanda.
-
-— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

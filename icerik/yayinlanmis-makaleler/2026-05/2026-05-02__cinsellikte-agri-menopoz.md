@@ -8,20 +8,10 @@ url: /beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["cinsellikte ağrı", "disparoni", "dispareuni", "vajinismus", "GSM", "menopoz", "pelvik taban disfonksiyonu", "vulvodini", "lokal östrojen"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # Cinsellikte Ağrı — Mahrem Bir Şikâyet, Açık Bir Tedavi Haritası
-
-## Kısa Özet
-
-Cinsel ilişkide ağrı muayene odasında en geç dile getirilen şikâyetlerden biri — ama
-en çok iyileşen tablolardan da biri. Tek bir mesele değil: yüzeysel disparoni, derin
-disparoni, postmenopozal disparoni ve vajinismus farklı mekanizmalardan kaynaklanıyor;
-bu yüzden tedavi yolu da farklı. *"Alışırım"* deyip taşınacak bir şikâyet
-değil; bedeniniz size bir bilgi veriyor. Bu yazı dört alt-tipi netleştiriyor, üç
-kapılı tedavi haritası sunuyor (lokal hormonal / fizyoterapi / psikoterapi) ve
-doktorunuza ne sormak gerektiğini birlikte koyuyor — promosyon değil, eğitim.
 
 ## Disparoni Tek Bir Tablo Değil — İsim Koymak
 
@@ -176,7 +166,7 @@ iletişim, tedavinin görünmeyen ama belirleyici parçası.
 
 Birkaç pratik nokta: *"Ben istemiyorum"* ile *"Şimdi ağrı yapıyor, başka
 şekilde yakınlaşalım mı?"* arasında çok ince ama büyük bir fark var. Ağrıyı
-gizlemek (kabullenip katılmak) çoğu zaman kalıcı tablo yaratıyor — partnerin
+gizlemek (kabullenip katılmak) çoğu zaman kalıcı tablo yaratıyor — partnerinizin
 farkına varmadan ağrı yaratan şey ona devam ediyor. Konuşmak ilk başta zor
 gelebilir; ama *"şu an benim için zor"* demek ilişkide saygıyı azaltmıyor,
 aksine derinleştiriyor. Tedavi sürecinde alternatif yakınlık biçimleri (penetrasyon
@@ -188,7 +178,7 @@ güçlendiriyor. Ağrıyı bir kadının *"sorunu"* olarak değil, çiftin birli
 adres aldığı bir mesele olarak çerçevelemek hem tedavi başarısını hem ilişki
 uyumunu artırıyor.
 
-<p class="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-gold">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
@@ -295,61 +285,6 @@ seçimine yön verir. Doktorunuza üç soruyla gidin — alt-tipim ne, hangi kap
 eş zamanlı açacağız, ayırıcı tanı tamamlandı mı. Sorunun kendisi cevabın yarısıdır;
 bu yarısını siz koyduğunuzda, kalanı klinik diyalogun parçası oluyor.
 
-Bilimsel Editör Notu
-
-Kanıt Düzeyi:
-(iyi–güçlü kanıt)
-
-Bu yazının yazar tarafı bazı klinik ayrımları yumuşak konuşmayı tercih etti;
-editör koltuğunda ise onları biraz daha net çizmem gerek.
-
-**Klinik bağlam:** Disparoni
-(cinsel ilişkide ağrı) muayene odasında en geç dile getirilen ama tedaviyle çoğu
-zaman gerçekten iyileşen şikâyetlerden biri — kliniğimde de bu örüntüyü her
-ay yeniden gözlemliyorum. Postmenopozal kadınlarda yaygınlık %20-40 aralığında
-bildiriliyor; ancak utanma kaynaklı bildirim eksikliği nedeniyle gerçek sıklığın
-daha yüksek olduğu kabul ediliyor. Disparoni tek bir tablo değil; alt-tip ayrımı
-(yüzeysel / derin / postmenopozal / vajinismus) tedavi yolunu belirler.
-
-**Mekanik çerçeve:** Postmenopozal yüzeysel
-disparonide temel mekanizma östrojen düşüşüne bağlı vulvovajinal atrofi (GSM):
-epitel incelmesi, kollajen ve damar desteği kaybı, vajinal pH alkalinizasyonu,
-laktobasil kolonizasyonunun bozulması. Derin disparonide pelvik patoloji
-(endometriozis, adenomyozis, miyom, pelvik enflamatuvar hastalık) ve pelvik
-taban kas spazmı öncelikli. Vajinismusta korku-ağrı zinciri pelvik taban kaslarında
-istemsiz refleksif kasılma yaratır; uzun süre yerleştiğinde sekonder hale gelip
-altta yatan organik tabloyu maskeleyebilir.
-
-**Klinik kırmızı bayraklar:** Postmenopozal
-vajinal kanama (herhangi bir miktar — endometrium kanseri ekartasyonu zorunlu);
-cinsel ilişki sonrası tekrarlayan kanama; ateş veya yan ağrısıyla birlikte
-disparoni (PID şüphesi); derin pelvik ağrı + dismenore + kronik üriner-bağırsak
-yakınmaları (endometriozis/adenomyozis); vulvar yeni lezyonlar veya beyaz
-lekeler (liken sklerozus veya nadiren malignite ekartasyonu); 8-12 hafta lokal
-tedaviye yanıtsızlık. Bu tablolar disparoni yorumuyla geçiştirilemez; ayırıcı
-tanı zorunlu.
-
-**Pratik bütünleşim:** Klinikte adım sıralamamı
-şöyle koruyorum: (1) öykü + fizik muayene + vajinal pH + gerektiğinde
-transvajinal ultrason ile alt-tip ayrımı; (2) postmenopozal yüzeysel tabloda
-lokal vajinal östrojen — kanıt seviyesi en güçlü tedavi (Düzey 1); hormon dışı
-nemlendirici/yağlayıcı eş zamanlı destek; (3) pelvik taban kas spazmı veya
-vajinismus zinciri varsa pelvik taban fizyoterapisi — tedavinin omurgası; lokal
-tedavi tek başına yetmiyor; (4) korku-ağrı zinciri yerleşmiş veya psikolojik
-etkenler eşlik ediyorsa cinsel terapi (CBT-tabanlı disparoni protokolleri); (5)
-derin disparonide altta yatan tabloya yönelik tedavi (endometriozis için
-medikal/cerrahi). Plan kişiselleştirilir; çoğu kadında birden fazla kapı eş
-zamanlı açılması gereken bir yapı çıkıyor.
-
-**Bireysellik vurgusu:** Yukarıda paylaştıklarım
-— hem yazıda hem bu notta — genel popülasyon çerçevesidir; sizin tablonuzdaki
-alt-tip ayrımı, eşlik eden tıbbi durumlar (özellikle hormon reseptörü pozitif
-meme kanseri öyküsü, aromataz inhibitörü kullanımı, endometriozis/adenomyozis,
-liken sklerozus, vulvodini) tedavi seçimine yön verir. Burada okuduğunuz bir
-başlangıç çerçevesidir, karar değil; sizin için uygun adımları kendi hekiminizle
-birebir değerlendirmeniz önemlidir — özellikle birden çok alt-tipin bir arada
-seyredebildiği bu alanda.
-
-— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

@@ -1,6 +1,6 @@
 ---
 title: "Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM"
-description: "Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma, hassasiyet ve üriner şikâyet yaşıyor — bir tablonun adı var: genitoüriner menopoz sendromu (GSM). Lokal östrojen, yerel uygulama kanıt sınırı, günlük bakım ve doktora ne sorulmalı — sade bir klinik bakış."
+description: "Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma, hassasiyet ve üriner şikâyet yaşıyor — bir tablonun adı var: genitoüriner menopoz sendromu (GSM). Lokal östrojen, yerel uygulama kanıt sınırı, günlük bakım ve doktora ne sorulmalı — sade bir editoryal rehber."
 writer: senai-aksoy
 publishedDate: "2 Mayıs 2026"
 publishedDateIso: 2026-05-02
@@ -8,25 +8,17 @@ url: /beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["vajinal kuruluk", "GSM", "genitoüriner menopoz sendromu", "vulvovajinal atrofi", "lokal östrojen", "menopoz", "cinsel sağlık", "mahrem bölge"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM
 
-## Kısa Özet
-
-Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma hissi, hassasiyet ve üriner
-şikâyet yaşıyor — ama çoğu konuya bir isim koyamadığı için sessiz kalıyor. Tablonun adı var:
-**genitoüriner menopoz sendromu (GSM)**. Bu yazı belirtileri ve mekanizmayı net
-dille açıyor; lokal östrojen ile sistemik HRT arasındaki farkı (aynı kelime, başka şey)
-netleştiriyor; yerel lazer/RF uygulamalarının kanıt sınırını dürüstçe söylüyor; günlük bakım
-ve doktora ne sormak gerektiği konusunda yol gösteriyor — promosyon değil, eğitim.
-
 ## GSM — İsim Koymakla Başlar
 
-Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Hastalarımın çoğu yıllarca *"yaşlanma
-işte"* deyip geçtiği bu tabloyu sonunda söylediğinde, ilk söyledikleri *"bunu kimseye
-anlatamadım"* oluyor. Oysa söz konusu olan tıbbi bir sendrom: **genitoüriner menopoz
+Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Pek çok kadın yıllarca *"yaşlanma
+işte"* deyip geçtiği bu tabloyu sonunda yüksek sesle söylediğinde, ilk cümle çoğu zaman
+*"bunu kimseye anlatamadım"* oluyor. Oysa söz konusu olan tıbbi bir sendrom:
+**genitoüriner menopoz
 sendromu**, kısaca GSM
 (güçlü kanıt)
 . Eskiden *"vulvovajinal atrofi"* deniyordu;
@@ -117,7 +109,7 @@ kanıt seviyesi sınırlı; uzun dönem ve kontrollü karşılaştırmalı veril
 .
 
 Bazı çalışmalar kısa vadeli iyileşme bildirmiş; ama sahte (sham) işlemle karşılaştırıldığında
-farkın sanıldığı kadar büyük olmadığı görülüyor. Hangi hasta grubunda, kaç seans, ne kadar
+farkın sanıldığı kadar büyük olmadığı görülüyor. Hangi kadın grubunda, kaç seans, ne kadar
 süre, hangi belgeli tedaviye alternatif olarak gibi temel sorular hâlâ açık. Bazı uluslararası
 uzman dernekleri lazer uygulamaları için *"araştırma çerçevesinde değerlendirilmeli"* uyarısında
 bulunuyor.
@@ -161,7 +153,7 @@ bir takvim. **Üçüncüsü** — *"Yan etkiler ve kontrol sıklığı nasıl ol
 tekrarlayan idrar yolu enfeksiyonum varsa bu da değişir mi?"* Bu, takip planını ve eşlik eden
 tabloları konuşmayı sağlıyor.
 
-<p class="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-gold">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
@@ -252,53 +244,6 @@ geçmişiniz, eşlik eden tıbbi durumlar hepsi hesaba katılır. Doktorunuza ü
 tablonun GSM ile uyumu, lokal östrojen size uygun mu, takip planı nasıl olacak. Sorunun kendisi
 cevabın yarısıdır.
 
-Bilimsel Editör Notu
-
-Kanıt Düzeyi:
-(güçlü kanıt)
-
-Yazıyı yazar olarak yazdım; bu notu Estranova'nın bilimsel editörü olarak yazıyorum —
-aynı konunun klinik disiplin tarafı için.
-
-**Klinik bağlam:** Genitoüriner menopoz sendromu (GSM)
-kliniğimde her hafta birden çok kadında konuştuğum — ama yıllarca sessiz kalmış — bir tablo.
-Postmenopozal kadınların yaklaşık %40-60'ında görülen yaygın ve genellikle ilerleyici bir
-durum. Eski terminoloji (vulvovajinal atrofi) sadece vajinal değişiklikleri kapsadığı için
-yeni terminoloji (GSM, 2014 ISSWSH-NAMS uzlaşı bildirimi) tercih ediliyor; bu üriner
-şikâyetlerin de aynı sendromun parçası olduğunu görünür kılıyor. Tanı klinik; vajinal
-muayene (epitel atrofisi, pH > 5.0 değişikliği) ve öykü temel değerlendirme aracı.
-
-**Mekanik çerçeve:** Östrojen reseptörleri vajinal,
-vulvar ve alt üriner sistem epitelinde yüksek yoğunlukta bulunur. Östrojen düşüşüyle epitel
-tabaka inceliyor, kollajen ve elastin yapısı bozuluyor, glikojen üretimi azalıyor. Glikojen
-azalması laktobasil kolonizasyonunu etkiliyor; vajinal pH alkali tarafa kayıyor (3.5-4.5'tan
-5.0+). Bu mikrobiyota değişimi tekrarlayan idrar yolu enfeksiyonu zemini oluşturuyor.
-
-**Klinik kırmızı bayraklar:** Postmenopozal vajinal
-kanama (herhangi bir miktarda — endometrium kanseri ekartasyonu zorunlu); cinsel ilişki
-sonrası tekrarlayan kanama; kaşıntıya eşlik eden cilt değişiklikleri (liken sklerozus
-ayırıcı tanısı); ateş veya yan ağrısıyla birlikte üriner şikâyet (üst üriner sistem
-enfeksiyonu); 8-12 hafta lokal tedaviye yanıtsızlık. Bu tablolar GSM yorumuyla geçiştirilemez.
-
-**Pratik bütünleşim:** Tedavi planı bireyselleştirilir;
-klinikte uyguladığım sıralama şu hiyerarşiyi izler:
-(1) Hormon dışı seçenekler — düzenli vajinal nemlendiriciler ve yağlayıcılar — her hastada
-ilk basamakta yer alabilir. (2) Lokal vajinal östrojen — GSM için en güçlü kanıtlı tedavi
-(Düzey 1); krem, halka veya tablet formlarında sistemik dolaşıma geçen miktar düşük.
-Başlangıç 2 hafta günlük, idame haftada 2 gün; uzun süreli kullanım gerektirebilir.
-(3) Diğer seçenekler — DHEA (prasterone) intravajinal, ospemifen oral SERM, testosteron
-(seçilmiş olgular) — bireysel değerlendirme. (4) Yerel enerji uygulamaları (lazer/RF) —
-kanıt seviyesi sınırlı (Düzey 2-3); standart tedavi öncesi alternatif olarak değil, seçilmiş
-olgularda araştırma çerçevesinde değerlendirilmeli.
-
-**Bireysellik vurgusu:** Yukarıda paylaştıklarım — hem
-yazıda hem bu notta — genel popülasyon çerçevesidir; sizin tablonuzdaki anatomik bulgular,
-eşlik eden tıbbi durumlar (özellikle hormon reseptörü pozitif meme kanseri öyküsü, aromataz
-inhibitörü kullanımı) ve liken sklerozus / lokal enfeksiyonlar / vulvodini / pelvik taban
-disfonksiyonu gibi ayırıcı tanılar tedavi seçimine yön verir. Burada okuduğunuz bir başlangıç
-çerçevesidir, karar değil; sizin için uygun adımları kendi hekiminizle birebir değerlendirmeniz
-önemlidir.
-
-— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

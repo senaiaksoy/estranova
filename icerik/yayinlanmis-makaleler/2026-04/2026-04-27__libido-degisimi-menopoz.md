@@ -8,18 +8,12 @@ url: /beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["libido", "cinsel istek", "menopoz", "GSM", "lokal östrojen", "testosteron", "cinsel sağlık", "40+ kadın", "mahrem sağlık"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi
 
-## Editörden Kısa Bir Not
-
-Bu yazıyı yazmak için kimse gönüllü olmadı… Mahrem sayılan konuları yazmak çoğumuz için zor. Masaya
-ben oturdum — hekim kimliğimden değil, yıllardır kadın sağlığının içinde duran biri olarak. Tıbbi
-jargon yok, sadece konuşulması gereken bir konuyu komşu sıcaklığıyla anlatma çabası.
-
-## Yalnız Değilsin
+## Yalnız Değilsiniz
 
 Menopoz döneminde cinsel istekteki değişim, en az konuşulan ama en sık aranan başlıklardan biri.
 
@@ -132,7 +126,7 @@ etkiler gösterebilir
 
 Önemli olan şu: kullandığın ilaçları gözden geçirmek hiçbir ilacı tek başına kesmek anlamına gelmez.
 Antidepresan kullanan biri için bu cümle hayati: tedaviyi kesmek depresyon riskini artırır ve libido
-değişimi tek başına bir gerekçe değildir. Hekiminle birlikte alternatif değerlendirilebilir; bazı
+değişimi tek başına bir gerekçe değildir. Hekiminizle birlikte alternatif değerlendirilebilir; bazı
 kadınlarda farklı bir ilaca geçiş yapılabilir, bazılarında doz ayarlanabilir, bazılarında ek bir
 destek düşünülebilir
 (iyi kanıt)
@@ -189,7 +183,7 @@ farkındalık çalışması veya gerektiğinde fizyoterapi yarar sağlayabilir
 .
 
 **Kısa not:** Bu listenin amacı reçete vermek değil; *seçeneklerin var olduğunu
-görmeni* sağlamak. Hangisinin senin için uygun olduğu klinik değerlendirmeyle netleşir.
+görmenizi* sağlamak. Hangisinin sizin için uygun olduğu klinik değerlendirmeyle netleşir.
 
 ## Ne Zaman Hekime Başvurmalı
 
@@ -237,7 +231,7 @@ değerlendirin.
 
 ### Partnerimle bunu nasıl konuşurum?
 
-Suçlama dilinden uzak bir başlangıç çoğu zaman yardımcıdır: "Sana karşı hissim değişmedi, bedenim bu
+Suçlama dilinden uzak bir başlangıç çoğu zaman yardımcıdır: "Size karşı hissim değişmedi, bedenim bu
 dönemde farklı çalışıyor — birlikte düşünelim mi?" Konuşmanın hekime başvurmadan önce yapılması
 gerekmiyor; bazen önce hekimle netleşmek, sonra paylaşmak daha rahat oluyor. Çiftler bu eşikte birlikte
 büyüyebilir; ama yalnızca konuşulursa.
@@ -249,17 +243,8 @@ yaşam kalitesini doğrudan etkiler; idrar yolu sağlığı ile yakından ilişk
 farkındalığı ve özbakım bu dönemde önem kazanır. Yani evet — partnerden bağımsız olarak bu konu
 ilgilenmeye değer.
 
-Bilimsel Editör Notu
-
-Menopozda libido değişimi yaygındır ve genellikle çok-faktörlüdür: hormonal değişim, vajinal sağlık,
-uyku, ruh hâli, ilaç kullanımı ve ilişki dinamikleri eşzamanlı rol oynar. Lokal vajinal östrojen
-tedavisi vulvovajinal atrofiye bağlı belirtilerde etkili ve büyük ölçüde güvenli bir seçenektir; sistemik
-HRT, testosteron tedavisi (off-label) ve davranışsal yaklaşımlar bireysel değerlendirme sonrasında
-gündeme alınmalıdır. Antidepresan kullanan hastalarda libido tarafındaki değişim asla tek başına ilaç
-kesilmesinin gerekçesi değildir; alternatifler hekimle birlikte planlanır. Cinsel ilişkide ısrarlı ağrı,
-postmenopoz beklenmedik kanama veya tekrarlayan idrar yolu enfeksiyonları varlığında kadın hastalıkları
-uzmanına başvuru gecikmeden yapılmalıdır.
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
-Tedavi seçenekleri, ilaç kullanımı veya cinsel sağlık ile ilgili kararlar için kendi hekiminle
+Tedavi seçenekleri, ilaç kullanımı veya cinsel sağlık ile ilgili kararlar için kendi hekiminizle
 birlikte değerlendirme yapman önemlidir.

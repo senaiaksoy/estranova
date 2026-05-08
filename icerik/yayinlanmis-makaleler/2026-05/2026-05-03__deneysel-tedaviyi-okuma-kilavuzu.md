@@ -1,6 +1,6 @@
 ---
 title: "Deneysel Tedaviyi Okuma Kılavuzu"
-description: "Bir tedaviye \"deneysel\" demek ne anlama gelir? Kanıt seviyesi nasıl okunur? Pazarlamayı bilimden hangi sinyaller ayırır? Off-label kullanım ile deneysel uygulama farkı; doktora sorabileceğiniz üç somut soru — sınır bilen sakin editöryal bir çerçeve."
+description: "Bir tedaviye \"deneysel\" demek ne anlama gelir? Kanıt seviyesi nasıl okunur? Pazarlamayı bilimden hangi sinyaller ayırır? Off-label kullanım ile deneysel uygulama farkı; doktora sorabileceğiniz üç somut soru — sınır bilen sakin editöryal bir rehber."
 writer: senai-aksoy
 publishedDate: "3 Mayıs 2026"
 publishedDateIso: 2026-05-03
@@ -8,21 +8,10 @@ url: /zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["deneysel tedavi", "kanıt seviyesi", "off-label kullanım", "klinik araştırma", "tedavi okuma kılavuzu", "hekim-hasta iletişimi", "menopoz", "anti-aging"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # Deneysel Tedaviyi Okuma Kılavuzu
-
-## Kısa Özet
-
-Sosyal medyada her hafta yeni bir *"çığır açıcı"* tedavi vaadi
-duyuyoruz; muayene odasında en sık karşılaştığım sorulardan biri
-*"sizin görüşünüz nedir"*. Bu yazı tek bir tedaviyi anlatmıyor;
-*nasıl okunacağını* anlatıyor: *"deneysel"* etiketinin ne
-anlama geldiğini, kanıt seviyesinin neden tek bir sayı olmadığını,
-pazarlamayı bilimden ayıran sinyalleri, off-label kullanım ile deneysel
-uygulama farkını ve doktorunuza sorabileceğiniz üç somut soruyu —
-umut etiketi yerine bilgi.
 
 ## Bir Tedaviye "Deneysel" Demek Ne Demek?
 
@@ -37,7 +26,7 @@ klinik çalışmalarda gösterilmiş tedavi. **Off-label kullanım:**
 Onaylı bir ilacın veya cihazın, onaylandığı endikasyon dışında — ama
 hekimin profesyonel sorumluluğunda — reçete edilmesi. Yaygındır,
 çoğu yerde meşrudur, kanıt seviyesi olguya göre değişir.
-**Klinik araştırma çerçevesinde uygulama:** Etik kurul
+**Klinik araştırma içinde uygulama:** Etik kurul
 onaylı bir protokol içinde, bilgilendirilmiş onam ile, sonuçları
 ölçülmek üzere yapılan uygulama. **"Deneysel"** teriminin
 asıl yeri burası: yeterli kanıt henüz oluşmamış, araştırma sürüyor.
@@ -97,7 +86,7 @@ anlatılır, kanıt seviyesi açık söylenir, sınırlamaları gizlenmez,
 bireysel değerlendirme önerilir, soru sorulduğunda yanıt verilir.
 Şişirilmiş pazarlamada ise mekanizma bilim diliyle süslenir, kanıt
 *"araştırmalar gösteriyor"* tarzı sayısız bir referansa
-sıkıştırılır, sınırlamalar belirsizleştirilir, *"size özel paket"*
+sıkıştırılır, sınırlamalar belirsizleştirilir, *"size özel ticari sunum"*
 aciliyetiyle birlikte sunulur. Plasebo etkisi tüm tedavilerde gerçek
 bir etken — özellikle subjektif belirtilerde
 %30'a kadar yanıt oranlarına ulaşabilir
@@ -106,7 +95,7 @@ bir etken — özellikle subjektif belirtilerde
 dolayısıyla *"hastalarımın hepsi memnun"* tek başına bilimsel
 kanıt değildir.
 
-<p class="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-gold">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
@@ -115,11 +104,11 @@ Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değe
 
 -   Kanıt sorulduğunda net yanıt yerine "araştırmalar gösteriyor" tarzı kapalı atıf
 -   Önce-sonra fotoğrafları (kontrolsüz, ışıklandırma/poz farkı, seçilmiş hasta)
--   "%95 başarı oranı" gibi kaynaksız ve örneklem büyüklüğü verilmemiş iddialar
--   "Size özel paket / kampanya / indirim" — tıbbi karar bağlamında pazarlama dili
+-   "%95 sonuç" gibi kaynaksız ve örneklem büyüklüğü verilmemiş iddialar
+-   "Size özel ticari sunum / süreli fiyat avantajı" — tıbbi karar zemininde pazarlama dili
 -   "Bir milyon hastada işe yaradı" anekdot tabanlı pazarlama, kontrollü çalışma referansı yok
 -   Marka adı ön planda, mekanizma ve sınırlamalar arka planda anlatım
--   "Kesin çözüm / mucize / hayatınızı değiştirir" tarzı vaat dili
+-   "Nihai çare / hayatınızı değiştirir" tarzı vaat dili
 -   Risk-fayda dengesi sorulduğunda yalnızca fayda anlatımı
 
 Bu liste teşhis amaçlı değil; bir uygulamayı değerlendirirken sakin bir filtre tutar.
@@ -194,10 +183,10 @@ veya cihazın, onaylandığı endikasyon dışında bir durumda hekimin
 profesyonel sorumluluğunda kullanılmasıdır — yaygındır, çoğu yerde
 meşrudur ve birçok durumda makul kanıta dayanır. *Deneysel*
 ise yeterli kanıt henüz oluşmamış, çoğu zaman klinik araştırma
-çerçevesinde uygulanan bir yaklaşımdır. İkisinin de gözeneği farklı:
+içinde uygulanan bir yaklaşımdır. İkisinin de gözeneği farklı:
 off-label kullanım için sorulacak soru *"bu endikasyonda kanıt ne
 kadar?"*, deneysel uygulama için sorulacak soru *"bu klinik
-araştırma çerçevesinde mi yapılıyor, etik kurul onayı var mı?"*
+araştırma içinde mi yapılıyor, etik kurul onayı var mı?"*
 olur.
 
 ### Klinik araştırmaya katılmak güvenli mi?
@@ -212,7 +201,7 @@ sorulacak temel sorular: araştırmanın fazı (1-4), birincil sonuç
 ölçütü, denetleyen etik kurul, beklenen yan etki listesi, devam
 ederken hekim takip sıklığı.
 
-### Bir kliniğin "başarı oranı" verisini nasıl okumalıyım?
+### Bir kliniğin sonuç yüzdesini nasıl okumalıyım?
 
 Tek başına bir sayı anlamlı değildir. *"%85 başarı"* demek
 için önce *başarının tanımı* bilinmelidir (semptom geçmesi mi,
@@ -220,8 +209,8 @@ için önce *başarının tanımı* bilinmelidir (semptom geçmesi mi,
 *örneklem büyüklüğü* (kaç kişi takip edildi?) ve *takip
 süresi* (1 ay sonra mı, 1 yıl sonra mı?), en sonunda da
 *karşılaştırma grubu* (tedavi alanlar ile almayanlar arasında
-fark var mı?). Bu dört bilgi olmadan başarı oranı bir reklam
-numarasıdır. Kontrollü klinik çalışmalarda gerçek başarı oranları
+fark var mı?). Bu dört bilgi olmadan sonuç yüzdesi bir reklam
+numarasıdır. Kontrollü klinik çalışmalarda gerçek sonuçlar
 çoğu zaman pazarlamada söylenenden belirgin biçimde düşüktür.
 
 ### Yurtdışında onayı olmayan ama Türkiye'de uygulanan tedaviyi nasıl değerlendirmeliyim?
@@ -241,7 +230,7 @@ gözle değerlendirildiği önemlidir.
 Bu cihazlar belirli ürogenital endikasyonlar için onay almıştır; ama
 pazarlandıkları endikasyonların büyük kısmı *onay alınanın
 dışında* kalır — *"sıkılaştırma", "estetik yenileme",
-"antiaging"* gibi geniş çerçeveler için kanıt seviyesi sınırlıdır
+"antiaging"* gibi geniş vaatler için kanıt seviyesi sınırlıdır
 
 (sınırlı kanıt)
 . Yine cihazların kullanım protokolleri
@@ -255,7 +244,7 @@ kanıt sınırının bilincinde olmak.
 Bir tedaviyi *"deneysel"* diye etiketlemek tek başına ne
 reddetmek ne de kabul etmek demektir; yelpazenin neresinde olduğunu
 görmek demektir. Onaylı endikasyon, off-label kullanım, klinik
-araştırma çerçevesindeki uygulama ve henüz kanıtın çok zayıf olduğu
+araştırma içindeki uygulama ve henüz kanıtın çok zayıf olduğu
 alan — bunlar hep aynı kelimenin altında toplanabiliyor. Hastanın
 elindeki en güçlü araç, bu yelpazeyi okuyabilmek ve hangi soruyu
 ne zaman soracağını bilmek.
@@ -274,81 +263,7 @@ kırmak bir tedavinin *doğru tartılabilmesinin* önündeki ilk
 engeli kaldırıyor. Sakin değerlendirme, hem cüzdanı hem ruhsal
 beklentiyi koruyor.
 
-Bilimsel Editör Notu
-
-Kanıt Düzeyi:
-(orta–iyi kanıt)
-
-Manifesto köşesi yazıları doğası gereği genel kalır; ama deneysel
-tedavi gibi konularda klinik karar tarafının somut iskeletini bu
-notta açmam mantıklı oldu — uzman olarak.
-
-**Klinik bağlam:** Yeni bir uygulama
-ya da takviye için *"sizin görüşünüz nedir"* sorusu, kliniğimde
-de muayene odasında belki en sık gelen sorulardan biri. Sosyal medya
-ve özel merkez pazarlaması bilgi akışını çok hızlandırdı; ama bu
-akışın kalitesi homojen değil — dürüst kanıt yorumu ile şişirilmiş
-vaat aynı arayüzde yan yana çıkıyor. Hastanın elinde okuma kılavuzu
-olmadığında, karar çoğu zaman algoritmaya teslim oluyor.
-
-**Mekanik çerçeve:** Klinik kanıt
-hiyerarşisi piramidal yapıdadır: vaka raporu/uzman görüşü tabanda,
-randomize kontrollü çalışma üst sıralarda, sistematik derleme ve
-meta-analiz tepede. Klinik araştırmalar dört faz hâlinde ilerler —
-faz 1 küçük güvenlik çalışması, faz 2-3 etkinlik ve geniş örneklemli
-karşılaştırmalı çalışma, faz 4 onay sonrası gözetim. Bir tedavinin
-"deneysel" sayılması *hangi fazda olduğuna* ve *hangi
-endikasyon için sorulduğuna* göre anlam değiştirir; aynı tedavi
-bir endikasyonda güçlü kanıtlı, başka bir endikasyonda sınırlı
-kanıtlı olabilir. Off-label kullanım onaylı bir tedavinin onaylandığı
-endikasyon dışında reçetelenmesidir; meşrudur ama kanıt seviyesi her
-durumda ayrı değerlendirilir. Plasebo etkisi özellikle subjektif
-belirtilerde gerçek bir etken — bu da kontrolsüz gözlemlerin neden
-yanıltıcı olabileceğini açıklar.
-
-**Klinik kırmızı bayraklar:**
-Kanıt seviyesi sorusuna kapalı yanıt; örneklem büyüklüğü, takip süresi
-ve kontrol grubu açıklanmamış başarı oranı iddiaları; risk
-tartışmasının yokluğu; aciliyet baskısı içeren *"size özel
-paket"* sunumları; aktif ciddi tıbbi durumu olan hastalara
-(kanser, immünsüpresyon, ileri kalp/karaciğer/böbrek hastalığı)
-kanıtsız uygulama önerisi; *"onaylı cihaz / onaylı ilaç"*
-ifadesinin onay alınan endikasyon dışı kullanımda kalkan olarak
-kullanılması;
-mekanizma anlatımı yerine marka adının ön plana çıkması;
-*"kesin çözüm / mucize"* dili. Bu sinyaller tek başına bir
-uygulamayı reddetmek için yeterli değildir; ama birden fazlası bir
-arada görünüyorsa ek değerlendirme istenir.
-
-**Pratik bütünleşim:** Klinikte
-yeni bir tedavi seçeneğini hastaya değerlendirirken birlikte oturup
-şu basamakları izlemeye özen gösteririm: (1) endikasyon netleştirme
-— bu uygulama gerçekten *sizin tablonuza* mı yönelik, yoksa
-geniş bir pazarlama çerçevesinin parçası mı; (2) kanıt seviyesi
-haritası — vaka raporu mu, gözlemsel çalışma mı, RCT mi, derleme mi
-söz konusu; (3) onay durumu netleştirme — endikasyon-içi mi, off-label
-mi, klinik araştırma çerçevesinde mi; (4) bireysel risk-fayda
-değerlendirmesi — hastanın eşlik eden tıbbi durumları, kullandığı
-ilaçlar, yaş ve hormonal tablosu hesaba katılır; (5) standart kanıtlı
-seçenekler önce konuşulur — deneysel uygulama bunların yerine değil,
-uygunsa yanına; (6) deneme yapılacaksa *ölçülebilir bir takvim*
-(örneğin 8-12 hafta + nesnel-subjektif değerlendirme + devam-durdur
-kriteri) konur. Aktif kanseri, ileri immünsüpresyonu, hamilelik veya
-laktasyon dönemi olan hastalarda kanıtı sınırlı uygulamalar için
-standart önerim daha temkinlidir; çünkü teorik risk-fayda dengesi
-bu gruplarda lehte değildir.
-
-**Bireysellik vurgusu:** Yukarıda
-paylaştıklarım — hem yazıda hem bu notta — genel popülasyon
-çerçevesidir; sizin tablonuzdaki sağlık öyküsü, kullandığınız
-ilaçlar, eşlik eden tıbbi durumlar, hayat tercihleri ve önceki
-tedavi yanıtları bir uygulamayı denemek için *doğru zamanı*
-ve *doğru çerçeveyi* belirler. Burada okuduğunuz bir
-başlangıç çerçevesidir, karar değil; sizin için uygun adımları
-kendi hekiminizle birebir değerlendirmeniz önemlidir — özellikle
-kanıtın hâlâ olgunlaşmakta olduğu alanlarda.
-
-— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine
 geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

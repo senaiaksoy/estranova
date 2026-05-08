@@ -1,6 +1,6 @@
 ---
 title: "D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar"
-description: "D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel. Vitamin mi hormon mu? Kan değeri yorumu, Türkiye\\'de niye bu kadar yaygın, postmenopozal kadında özel önemi, tarama ve dozaj çerçevesi, toksisite ve doktora sormak gereken sorular — pazarlama değil, klinik çerçeve."
+description: "D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel. Vitamin mi hormon mu? Kan değeri yorumu, Türkiye\\'de niye bu kadar yaygın, postmenopozal kadında özel önemi, tarama ve dozaj yaklaşımı, toksisite ve doktora sormak gereken sorular — pazarlama değil, klinik bakış."
 writer: senai-aksoy
 publishedDate: "2 Mayıs 2026"
 publishedDateIso: 2026-05-02
@@ -8,21 +8,10 @@ url: /zamansiz-yasam/d-vitamini-rehberi
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["D vitamini", "25-OH-D", "menopoz", "kemik sağlığı", "osteoporoz", "güneş", "takviye", "tarama", "kalsiyum", "K2"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar
-
-## Kısa Özet
-
-D vitamini muayenehaneme gelen kadınların büyük çoğunluğunda — özellikle postmenopozal
-grupta — gördüğüm en sık eksiklik tablolarından biri. *"Herkes eksik"* söylemi
-gerçek bir epidemiyolojik tabana oturuyor; ama dozaj, takip ve hangi durumda
-yüksek-doz yükleme yapılacağı kararı *bireysel*. Bu yazı D vitamini'nin
-gerçekte bir hormon olduğunu, kan değeri yorumunun nasıl okunduğunu, Türkiye'de niye
-bu kadar yaygın olduğunu, postmenopozal kadında neden özel önem taşıdığını,
-tarama-dozaj çerçevesini, toksisite riskini ve doktorunuza ne sormanız gerektiğini
-birlikte koyuyor — pazarlama değil, klinik çerçeve.
 
 ## D Vitamini — Vitamin mi Hormon mu?
 
@@ -46,7 +35,7 @@ hepsinde rol oynuyor.
 Bu ayrım önemli çünkü *"vitamin gibi alıp gerisini düşünmemek"* yaklaşımı
 klinik gerçeklikle uyuşmuyor. D vitamini hormon olduğu için aşırı dozda
 **toksik** olabiliyor, eksiklikte ise sadece kemiği değil
-*çok daha geniş bir sistemi* etkiliyor. Bu çerçeve dozaj kararının niye
+*çok daha geniş bir sistemi* etkiliyor. Bu bakış dozaj kararının niye
 bireysel olması gerektiğinin temelini oluşturuyor.
 
 ## Kan Değeri Yorumu — Eksiklik Ne Demek?
@@ -65,7 +54,7 @@ ng/mL arası **yeterli**, 50-100 ng/mL üstü **fazla**,
 150 ng/mL üstü **toksik**
 (iyi kanıt)
 . Bazı uzman dernekleri
-eşik olarak 30 yerine 20 ng/mL'yi savunuyor; klinik bağlama göre değerlendiriliyor.
+eşik olarak 30 yerine 20 ng/mL'yi savunuyor; klinik duruma göre değerlendiriliyor.
 
 Birim karmaşası da var: bazı laboratuvarlar nmol/L kullanıyor (1 ng/mL ≈ 2.5
 nmol/L). Sonuç raporunda hangi birimde olduğunu kontrol etmek temel adım. Aynı sayı
@@ -139,7 +128,7 @@ Pratikte: Türkiye'de eksiklik bu kadar yaygınken, postmenopozal dönemde en az
 bir kez baseline ölçüm klinik açıdan mantıklı.
 
 **Dozaj — yükleme dozu vs idame:** Tek bir reçete yok; klinikte adım
-sıralamamı kişiselleştirilmiş kalibrasyona göre kuruyorum. Genel çerçeve şu:
+sıralamamı kişiselleştirilmiş kalibrasyona göre kuruyorum. Genel yol şu:
 
 • **Belirgin eksiklik (10 ng/mL altı)** — yükleme dozu (örneğin 6-8
 hafta süresince haftalık 50.000 IU veya günlük 5.000-10.000 IU) sonrasında idame
@@ -193,7 +182,7 @@ rutin önerisi için kanıt yetersiz.
 orlistat ve bazı kanser tedavileri D vitamini metabolizmasını etkileyebiliyor.
 Düzenli reçeteli ilaç kullanan biri için doz hekim eşliğinde belirlenmeli.
 
-<p class="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-gold">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
@@ -245,7 +234,7 @@ bitkisel ve mantar kaynaklı. İnsan vücudunda her ikisi de etkili; ancak D3'ü
 25-OH-D düzeyini D2'ye göre *daha etkili ve uzun süreli* yükselttiğini
 gösteren çalışmalar var
 (iyi kanıt)
-. Çoğu klinik bağlamda D3 tercih
+. Çoğu klinik durumda D3 tercih
 ediliyor; vegan veya vejetaryen tercihler için liken kaynaklı D3 ürünleri var.
 
 ### Ne sıklıkta ölçüm yaptırmalıyım?
@@ -270,7 +259,7 @@ salata, yumurta, balık, ceviz gibi yağ içerikli bir öğün ideal). Aynı dur
 
 ### Yüksek dozun "aslında ne kadar zararlı"?
 
-Tam doz-zarar ilişkisi bireysel ama genel çerçeve şu: günde 4.000 IU üstü uzun
+Tam doz-zarar ilişkisi bireysel ama genel yol şu: günde 4.000 IU üstü uzun
 süreli kullanım *üst güvenli sınır* olarak kabul ediliyor (sağlıklı erişkin)
 
 (iyi kanıt)
@@ -288,7 +277,7 @@ Ama *"vitamin"* adı yanıltıcı — biyolojik olarak hormon gibi davranıyor; 
 yüzden dozaj, takip ve eşlik eden durumlar için *tek bir reçete yok*. Bilgi
 belirsizliğin panzehiridir; bu konuda da öyle. Önce baseline 25-OH-D ölçümü, hedef
 seviyeye yönelik kişiselleştirilmiş dozaj, 8-12 haftalık kontrol takvimi ve eşlik
-eden tıbbi durumlar/ilaçlarla birlikte değerlendirme — bu çerçeve hem cüzdanı hem
+eden tıbbi durumlar/ilaçlarla birlikte değerlendirme — bu yaklaşım hem cüzdanı hem
 böbreği koruyor.
 
 Bir yandan bilmemek gereken şeyleri söyleyebilirim: yüksek-doz bolus stratejileri
@@ -299,58 +288,6 @@ hangi dozla başlayacağız, eşlik eden durumlar dozumu nasıl etkiliyor. Sorun
 kendisi cevabın yarısıdır; bu yarısını siz koyduğunuzda kalanı klinik diyalogun
 parçası oluyor.
 
-Bilimsel Editör Notu
-
-Kanıt Düzeyi:
-(iyi–güçlü kanıt)
-
-D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel; yazıda genel
-çerçeveyi kurdum, bu notta klinik karar tarafını biraz daha doğrudan açıyorum.
-
-**Klinik bağlam:** D vitamini eksikliği muayenehanemde
-gelen postmenopozal kadınların önemli bir kısmında baseline tablonun parçası — Türkiye
-popülasyon verileriyle de uyumlu (%50-90 yaygınlık çeşitli çalışmalarda). Ancak
-*"eksiklik = kesinlikle takviye"* denklemi her hastada doğru kurulmuyor; eşlik
-eden böbrek-paratiroid-kalsiyum metabolizması tablosu, kullanılan ilaçlar, granülomatöz
-hastalık öyküsü doz kararını değiştiriyor.
-
-**Mekanik çerçeve:** D vitamini steroid hormon
-ailesinde; nükleer reseptörü (VDR) çoğu dokuda bulunuyor. 25-OH-D karaciğerde,
-1,25-(OH)2-D böbrekte 1-alfa-hidroksilaz aracılığıyla üretiliyor. Aktif form
-bağırsakta kalsiyum-fosfor emilimi, kemikte mineralizasyon, kasta kasılma, immün
-modülasyon ve gen ekspresyonu üzerinden geniş etkili. PTH-D-kalsiyum-fosfor ekseni
-birlikte değerlendiriliyor; eksikliği uzun süreli sürdüğünde sekonder
-hiperparatiroidi gelişebiliyor.
-
-**Klinik kırmızı bayraklar:** Granülomatöz hastalık
-(sarkoidoz, tüberküloz, lenfoma) — ekstra-renal 1-alfa-hidroksilaz aktivitesi
-nedeniyle hiperkalsemi riski; D takviyesi öncesi mutlaka değerlendirilmeli.
-Hiperparatiroidi, tekrarlayan böbrek taşı, ileri KBH (CKD evre 4-5) — aktif D
-formu (kalsitriol/parikalsitol) gerekebilir, standart D3 yetmez. Yüksek doz takviye
-(günlük 4.000 IU üstü uzun süreli) — hiperkalsemi takibi gerekli. Postmenopozal
-ani kemik ağrısı/kırık — D + KMD + diğer ayırıcı tanılar (myelom dahil) birlikte
-değerlendirilmeli.
-
-**Pratik bütünleşim:** Klinikte adım sıralamamı
-kişiselleştirilmiş kalibrasyona göre kuruyorum: (1) endikasyon değerlendirmesi —
-postmenopoz, osteoporoz/kırık öyküsü, malabsorbsiyon, anti-konvülsan/glukokortikoid
-kullanımı; (2) baseline 25-OH-D + kalsiyum + paratiroid hormonu; (3) eksiklik
-seviyesine göre dozaj — belirgin eksiklikte yükleme + idame, yetersizlikte idame
-başlangıç; (4) 8-12 hafta sonra kontrol; (5) hedef ulaşıldıysa düşük doz idame
-mevsimsel ayarla. Yüksek bolus dozları (yılda bir 500.000 IU gibi) son dönem
-kanıtla artık önerilmiyor — düşmeyi önlemediği, bazı çalışmalarda artırdığı
-gösterilmiş. K2 ve magnezyum gibi kombinasyonlarda kanıt henüz rutin öneriye
-yetmiyor; hedefli endikasyonlarda değerlendirilebilir.
-
-**Bireysellik vurgusu:** Yukarıda paylaştıklarım
-— hem yazıda hem bu notta — genel popülasyon ve standart klinik çerçevedir; sizin
-tablonuzdaki baseline 25-OH-D, eşlik eden tıbbi durumlar (özellikle böbrek,
-paratiroid, granülomatöz hastalıklar), kullandığınız ilaçlar (anti-konvülsan,
-glukokortikoid, malabsorbsiyon yapan ajanlar), kalsiyum alımı ve kemik dansitesi
-tedavi seçimine yön verir. Burada okuduğunuz bir başlangıç çerçevesidir, karar
-değil; sizin için uygun adımları kendi hekiminizle birebir değerlendirmeniz
-önemlidir — özellikle yüksek doz veya uzun süreli takviye düşünüyorsanız.
-
-— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

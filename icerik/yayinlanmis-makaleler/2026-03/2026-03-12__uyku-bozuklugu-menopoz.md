@@ -1,24 +1,17 @@
 ---
 title: "Menopozda Uyku Bozukluğu — Dinlenme Rehberi"
 description: "Menopozda uyku neden bozulur, hangi belirtiler yaygın, hangi adımlar denenebilir? Hormonal geçişin içinden geçen bir yaşıt perspektifinden, sakin bir uyku rehberi."
-writer: berna-aksoy
+writer: senai-aksoy
 publishedDate: "12 Mart 2026"
 publishedDateIso: 2026-03-12
 url: /zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "uyku", "uyku bozukluğu", "insomnia", "sıcak basması", "uyku hijyeni"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # Menopozda Uyku Bozukluğu — Dinlenme Rehberi
-
-## Kısa Özet
-
-Menopozda uyku, ilk bakışta görünenden daha katmanlı bir konudur. Sıcak basması, hormon dalgalanması ve
-ruh hâli değişimleri aynı anda devreye girince sabah dinlenmemiş uyanmak alışkanlık hâline gelebilir.
-Bu rehber, mesele tek bir "doğru" çözüm değil — birkaç sade adımı tutarlı biçimde sürdürmek olduğunu
-öne çıkarıyor. Hormonal geçişin içinden geçen bir yaşıt perspektifinden — sakin, panik dilinden uzak.
 
 ## Uyku Aslında Düz Bir Çizgi Değil
 
@@ -89,13 +82,13 @@ uzaklaşmak, ekran ışığını yumuşatmak ve kısa bir kapanış rutini kurma
 alışkanlıklardır.
 
 Uyku alanında çalışan uzmanların sıklıkla altını çizdiği bir cümle var: "uyku hazırlığı yatakta değil,
-akşamın son iki saatinde başlar." Bu çerçeve, uykuyu bir karar değil bir geçiş alanı olarak görmeye
+akşamın son iki saatinde başlar." Bu bakış, uykuyu bir karar değil bir geçiş alanı olarak görmeye
 yardımcı oluyor. Kendi akşamında kurabileceğin tutarlılık ne olursa olsun — gerisi zamanla oturuyor.
 
 ## Doğal Destekler ve Takviyeler — Aceleci Olmadan
 
 Uyku bozulduğunda ilk akla gelenlerden biri takviyeler oluyor. Bu konuda araştırmaları okuyup kendi
-hekiminle birlikte değerlendirmek genelde en güvenli yol — pek çok kadının kendi adına bu adımdan fayda
+hekiminizle birlikte değerlendirmek genelde en güvenli yol — pek çok kadının kendi adına bu adımdan fayda
 gördüğü görünüyor.
 
 Melatonin bazı kişilerde uykuya geçiş süresini kısaltabilir
@@ -108,17 +101,17 @@ kişiye değişir
 daha gerçekçi bir hedef.
 
 Düzenli ilaç kullanan biri için en önemli nokta etkileşim. Özellikle kronik hastalık varsa, bir takviyeye
-başlamadan önce hekim görüşü almak güvenlik açısından gerekir. Bu cümleyi bir uzman ağzından değil; aynı
-dönemden geçen bir yaşıtın hatırlatıcısı olarak okumak daha doğru olabilir.
+başlamadan önce hekim görüşü almak güvenlik açısından gerekir. Uyku için kullanılan "doğal" destekler de
+ilaçlarla etkileşebilir; bu nedenle güvenlik değerlendirmesi tedavi planının parçasıdır.
 
 ## Tıbbi Destek Seçenekleri — Karar Süreci
 
 Yaşam tarzı adımları denendiği hâlde uykusuzluk sürüyorsa, bunu bir irade meselesi gibi görmek yerine
-masaya seçenekleri birlikte koymak daha kıymetlidir. Hekimimle bir konuşmamızda şöyle demişti: "Uyku
-tedavisinde tek bir 'doğru' protokol yok; semptomun önde gelen iki-üç bileşenini ayırmak ilk işimiz."
-Bu cümle bende sade bir karar haritası bıraktı.
+masaya seçenekleri birlikte koymak daha kıymetlidir. Uyku tedavisinde tek bir "doğru" protokol yoktur;
+ilk iş semptomun önde gelen iki-üç bileşenini ayırmaktır: vazomotor belirti mi, insomnia mı, apne mi,
+huzursuz bacak mı, duygu durum mu?
 
-Bu çerçevede HRT, kısa süreli uyku desteği, gabapentin ve duygu durum eşlik ediyorsa uygun psikiyatrik
+Bu tabloda HRT, kısa süreli uyku desteği, gabapentin ve duygu durum eşlik ediyorsa uygun psikiyatrik
 destek seçenekleri gündeme gelebilir. Bilişsel davranışçı terapi — uykusuzluk için uyarlanmış formuyla
 (CBT-I) — uzun dönem uyku iyileşmesinde en güçlü kanıt tabanına sahip yöntemlerden biri olarak kabul
 edilir
@@ -133,15 +126,15 @@ birey-hekim diyalogu birlikte düşünüldüğünde anlamlı olur.
 
 ## Ne Zaman Bir Uyku Uzmanı Düşünmeli?
 
-Bazı gece sorunları "menopoz uykusu" deyip geçiştirilmemeli. Burada okudukça şunu anladım: alarm verici
-bazı işaretler var ve onları erken fark etmek hem konforu hem güvenliği koruyor.
+Bazı gece sorunları "menopoz uykusu" deyip geçiştirilmemeli. Alarm verici işaretleri erken fark etmek
+hem konforu hem güvenliği korur.
 
 Şiddetli horlama, nefes durması şüphesi, bacaklarda huzursuzluk hissi, gündüz belirgin uyku hali ve
 üç aydan uzun süren uyku bozukluğu durumunda uyku tıbbı değerlendirmesi gerekli. Gerektiğinde
 polisomnografi gibi testlerle uyku mimarisi ayrıntılı incelenebilir; bu yöntem korkutucu değil, bilgilendirici
 bir adım.
 
-<p class="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-gold">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
@@ -159,12 +152,11 @@ Bu liste teşhis amaçlı değil; bir hekimle konuşmaya değer kabul edilen dur
 
 Düzenli bir planla ilerleyen pek çok kadında uyku kalitesi belirgin biçimde iyileşiyor. Küçük ama tutarlı
 adımlar, bu dönemde gerçekten en kıymetli yaklaşımdır. Eğer bu yazıdan tek bir not alınacaksa: önce sabit
-saat, sonra serin oda, sonra hekiminle bir sohbet — diğer her şey bu üçünün üstüne sakince oturuyor.
+saat, sonra serin oda, sonra hekiminizle bir sohbet — diğer her şey bu üçünün üstüne sakince oturuyor.
 
-Bu noktada okuduğumun ötesine geçemem: aynı yaşta, benzer hormonal tabloda iki kadından birinde apnenin
-niçin daha sessiz seyrettiğini, diğerinde niçin gündüz uykululuğuyla erken görünür hâle geldiğini önceden
-ayırt edebilen bir donanımım yok. Klinik değerlendirme, polisomnografi ve uyku uzmanının izlemi bu sınırı
-kapatan asıl araçlar.
+Aynı yaşta, benzer hormonal tabloda iki kadından birinde apne sessiz seyrederken diğerinde gündüz
+uykululuğuyla erken görünür olabilir. Bu ayrımı tahminle değil, klinik değerlendirme, gerekirse
+polisomnografi ve uyku uzmanı izlemiyle yapmak gerekir.
 
 ## Sıkça Sorulanlar
 
@@ -231,43 +223,8 @@ gelir — sıralama önemli, önce zemin sonra üst yapı. Apne, huzursuz bacak 
 uykusuzluk ise "menopoz uykusu" diye geçiştirilemeyecek tablolar; erken değerlendirme yalnız gece
 konforunu değil, kalp ve metabolik sağlığı da koruyor.
 
-Beden bir cümle söylemişti; sen onu yastığa bırakıyorsun.
+Beden bir cümle söylemişti; siz onu yastığa bırakıyorsunuz.
 
-Bilimsel Editör Notu
-
-Kanıt Düzeyi:
-(iyi–güçlü kanıt)
-
-**Klinik bağlam:** Menopozal geçişte uyku bozukluğu çok faktörlüdür:
-vazomotor semptomlar (sıcak basması, gece terlemesi), östrojen-progesteron dalgalanması, kortizol akrofazının
-erken kayması, ruh hâli iniş-çıkışları ve obstrüktif uyku apnesinin postmenopozda artan riski tek bir
-gecede aynı anda devreye girebilir. "Menopoz uykusu" tek bir tablo değil, ayırıcı tanı gerektiren bir
-sendromlar grubudur.
-
-**Mekanik çerçeve:** Östrojen REM uykusunun bütünlüğüne ve termoregülasyona
-katkıda bulunur; düşüşü gece terlemesi ve mikro-uyanmalar üzerinden uyku fragmantasyonuna yol açabilir.
-Progesteronun sedatif metaboliti allopregnanolon GABA-A reseptörü üzerinden uykuya geçişi kolaylaştırır;
-geç luteal evrede üretiminin düzensizleşmesi uyku başlangıcını uzatır. Postmenopozda yağ dağılımı ve
-üst hava yolu tonusundaki değişimler obstrüktif uyku apnesi için ek bir risk zemini oluşturabilir.
-
-**Klinik kırmızı bayraklar:** Tanıklı nefes durması ya da ağır horlama;
-gündüz dayanılması güç uyku hâli (toplantıda, direksiyonda); huzursuz bacak hissi; üç aydan uzun süren
-ve gündüz işlevini bozan insomnia; uyku şikâyetine eşlik eden iki haftadan uzun depresif tablo —
-bu tablolar yalnızca menopoz yorumuyla geçiştirilemez. Polisomnografi ve uyku tıbbı değerlendirmesi
-ayırıcı tanıda esastır.
-
-**Pratik bütünleşim:** Tedavi planı bir hiyerarşi izler:
-(1) uyku hijyeni ve sirkadiyen ritim disiplini, (2) vazomotor semptom yönetimi ve gerektiğinde HRT,
-(3) uykusuzluk için bilişsel-davranışçı terapi (CBT-I) — uzun vadede en güçlü kanıt tabanına sahip
-seçenek. Kısa süreli farmakolojik destek ve gabapentin gibi seçenekler bireysel olarak değerlendirilir;
-uzun süreli sedatif kullanımı genelde önerilmez.
-
-**Bireysellik vurgusu:** Uyku şikâyetinin altında menopozdan
-bağımsız tablolar olabilir: tiroid bozuklukları, anemi, demir eksikliği, depresyon, ilaç yan etkileri,
-kronik ağrı, restless legs sendromu. Bu nedenle "menopoz uykusu" başlığı altındaki her şikâyet, ayırıcı
-tanı eşliğinde değerlendirilmelidir; ucuz bir takviye denemek yerine erken klinik değerlendirme çoğu
-zaman daha yararlıdır.
-
-— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

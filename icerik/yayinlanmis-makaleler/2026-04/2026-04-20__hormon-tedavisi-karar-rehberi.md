@@ -1,42 +1,31 @@
 ---
 title: "Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?"
-description: "Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye bağlamı ve doktorunuzla konuşurken sorabileceğiniz sorular."
-writer: berna-aksoy
+description: "Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve doktorunuzla konuşurken sorabileceğiniz sorular."
+writer: senai-aksoy
 publishedDate: "20 Nisan 2026"
 publishedDateIso: 2026-04-20
 url: /hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["hormon tedavisi", "HRT", "MHT", "menopoz", "östrojen", "progesteron", "sıcak basması", "karar verme"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?
 
-## Kısa Özet
-
-Hormon tedavisi — ya da sıkça duyduğunuz adıyla HRT — menopozal belirtiler için en etkili seçeneklerden biri.
-Ancak "almalı mıyım, almamalı mıyım" sorusunun tek bir doğru cevabı yok. Yaşınız, son adetinizden bu yana geçen süre,
-hangi belirtilerin hayatınızı zorladığı, kişisel sağlık geçmişiniz — hepsi birlikte değerlendirilir.
-Bu yazı size doğrudan bir öneri vermez; karar sürecinde neye baktığımızı, doktorunuzla hangi soruları
-konuşmak istediğinizi biraz daha netleştirmeye çalışır.
-
 ## Karar Değil, Konuşma
 
-Bir noktada şunu fark ettim: hormon tedavisi sorusu çoğu zaman 'doğru cevabı' bekleyen bir sınav gibi
-yaşanıyor. Oysa bu bir konuşma — bedeninle, hekiminle, yıllar içinde olgunlaşan bir konuşma.
+Hormon tedavisi sorusu çoğu zaman "doğru cevabı" bekleyen bir sınav gibi yaşanıyor. Oysa klinikte
+bunun tek bir cevabı yok; iyi karar, semptomun ağırlığı ile kişisel risk profilinin aynı masada
+konuşulmasıyla verilir.
 
-Bu konuşmaya ben de kendi sandalyemden başlıyorum, dürüst söylemem gerekirse; ve sandalyem alışılmış olandan
-biraz farklı. Eşim jinekolog; ama beni takip eden o değil. Yakınlarını takip etmenin etik açıdan doğru
-olmadığını düşünür; takiplerimi yıllar önce güvendiği bir meslektaşına devretti. Bu nedenle bekleme odasında
-oturup sıramı beklemiyorum, dönüş yolunda aklın bin parçaya bölünmesini içeriden bilmiyorum. Bu körlüğümü
-en başta kabul etmek istiyorum — çünkü bu yazının yazıldığı yer, çoğu kadının oturduğu yerden biraz
-ayrıcalıklı.
+Muayene odasında en sık gördüğüm şey şudur: bir kadın HRT'yi ya tek çıkış gibi ya da mutlak tehlike gibi
+duymuş olarak gelir. İkisi de eksik bir bakıştır. Hormon tedavisi ne herkese verilmesi gereken bir rutin,
+ne de konuşulmadan elenmesi gereken bir seçenektir.
 
-Yine de evdeki bir akşam yemeğinde tıbbi bir konunun nasıl açıldığını yakından izliyorum — bir başka açıdan
-bakmama yardımcı oluyor; ama karar her zaman benim ile asıl hekimim arasında kuruluyor. Bu yazıda hormon
-tedavisi kararına bir çerçeve koymaya çalışacağım — yönlendirme yapmadan, seçenekleri birlikte düşünerek.
-Burada bir genelleme yapmak istemem; sadece karar sürecinde nereye baktığımı paylaşıyorum.
+Bu yazıda amaç reçete önermek değil; karar konuşmasının iskeletini kurmak. Hangi belirtiler tedavi
+gündemine alınır, hangi riskler kapıyı kapatır, hangi noktalar yıllık izlemle yeniden değerlendirilir:
+güvenli karar bu soruların sırasını doğru kurmakla başlar.
 
 ## Hormon Tedavisi Nedir?
 
@@ -80,7 +69,7 @@ net biçimde rahatlatıyor.
 
 Kanıt durumu son yirmi yılda belirgin biçimde netleşti — ama bazı sorular hâlâ açık.
 
-Menopoz alanında çalışan dernekler bugün temelde şu çerçeveyi kullanıyor: 60 yaş altındaki ve menopozdan
+Menopoz alanında çalışan dernekler bugün temelde şu bakışı kullanıyor: 60 yaş altındaki ve menopozdan
 sonraki ilk on yıl içinde olan, belirti yaşayan ve tıbbi engeli bulunmayan kadınlarda fayda-risk dengesi
 hormon tedavisi lehine duruyor
 (güçlü kanıt)
@@ -93,20 +82,19 @@ etkiler. Bu yüzden yaş ve zaman önemli
 (iyi kanıt)
 .
 
-Meme kanseri konusundaki tartışma benim için hâlâ açık bir soru. Araştırmaların ortaya koyduğu mutlak
+Meme kanseri konusundaki tartışma klinik kararın en hassas alanlarından biridir. Araştırmaların ortaya koyduğu mutlak
 risk — yani binlerce kadında yılda kaç ek vakaya yol açtığı — pek çok kadının sandığından daha düşük
 
 (iyi–güçlü kanıt)
-. Yine de bunu kendi ailem için tartarken durup düşündüğüm anlar oluyor.
-Bilimin verdiği rakamlar bir şey söyler; kendi tarihimiz başka bir şey söyler. İkisini birlikte tartmak
-gerekiyor — ve bu tartının nasıl kurulacağına dair tek bir doğru cevap yok.
+. Yine de aile öyküsü, önceki meme biyopsileri, kullanılan rejim, süre ve
+tarama disiplini aynı anda değerlendirilmeden "risk düşük" ya da "risk yüksek" demek doğru olmaz.
 
 Progestin tipi, östrojenin alınma yolu (ağız mı cilt mi), doz ve süre — bu ince ayrıntıların hepsi güvenlik
-profilini değiştirebiliyor. Hekimimle bir konuşmamızda 'aynı isim altında pek çok rejim var' demişti; bu
-cümle benim için bu konunun anahtar cümlesi oldu. Aynı adı taşıyan iki tedavi, farklı kadınlarda farklı
-profillerle yazılabiliyor.
+profilini değiştirebiliyor. Aynı ad altında konuşulan iki tedavi, iki kadında bambaşka risk-fayda
+dengesi yaratabilir. Bu yüzden "HRT kullanıyor musunuz?" sorusundan daha önemlisi "hangi form, hangi doz,
+hangi süre, hangi endikasyonla?" sorusudur.
 
-## Türkiye Bağlamı
+## Türkiye Notları
 
 Türkiye'de hormon tedavisine erişim mümkün; ama görünmeyen bir alan da var.
 
@@ -127,9 +115,9 @@ Yani Türkiye'de yaşıyorsanız: doktorunuzla önce onaylı seçenekleri konuş
 seçmek en sağlam yol. "Tükürüğünü alalım, formülünü biz belirleyelim" diyen bir yaklaşımla karşılaştığınızda, soru
 sorma hakkınızı kullanmanız doğal ve gerekli.
 
-## Karar Çerçevesi
+## Karar Planı
 
-Soru çoğunlukla "almalı mıyım, almamalı mıyım" değil, "benim için hangi çerçevede uygun" biçimine evriliyor.
+Soru çoğunlukla "almalı mıyım, almamalı mıyım" değil, "benim için hangi koşulda uygun" biçimine evriliyor.
 
 İlk basamak şu: yeterince rahatsızlık veren bir belirti var mı? Sıcak basmaları ya da gece terlemeleri
 uykuyu bölüyor mu, işte veya ilişkilerde zorluk yaratıyor mu? Yalnızca vajinal kuruluk yaşıyorsa, belki
@@ -152,14 +140,13 @@ edilebilir — bu ikisinin kesiştiği yer kişisel kararın yeri. Hormon almaya
 seçenekleri var: yaşam tarzı, bilişsel davranışçı terapi, hormonsuz yeni ilaçlar
 (iyi kanıt)
 .
-"Evet" dememek bir seçenek kaybı değil. Bir konuşmada hekimimin söylediği bir cümle uzun süre aklımda kaldı:
-"çevredeki kadınların yaptığı tablodan çıkıp kendi belirtilerini izlemeye başlamak — ilk adım çoğu zaman
-bu." Ben bu yolu böyle yürüdüm; ama bu benim yolum, sizinki başka olabilir — ve olmalı da.
+"Evet" dememek bir seçenek kaybı değildir. İlk adım çoğu zaman çevredeki kadınların kararından çıkıp
+kendi belirtilerini, kendi risklerini ve kendi önceliklerini yazıya dökmektir.
 
 ## Sıkça Sorulan Sorular
 
 Karar konuşmasında sık duyduğum sorulardan birkaçını burada bir araya getirdim. Her biri kısa; ayrıntısını
-kendi hekiminle birlikte yorumlamak en sağlam yol.
+kendi hekiminizle birlikte yorumlamak en sağlam yol.
 
 **HRT kesinlikle meme kanseri yapar mı?** Hayır, "kesinlikle" diyebileceğimiz bir durum değil. Kullanılan
 rejime, süreye, başlangıç yaşına ve kişisel risk profiline göre değişiyor. Rahmi olan kadında kombin tedavide,
@@ -177,7 +164,7 @@ hafif şişkinlik olabiliyor; bunlar genellikle zamanla dengeleniyor
 .
 
 **Ne kadar süre kullanabilirim?** Eskiden "en kısa süre, en düşük dozda, sonra mutlaka kesin"
-yaklaşımı yaygındı. Güncel çerçeve daha esnek: belirtileriniz devam ediyor, yaşam kaliteniz tedaviden anlamlı
+yaklaşımı yaygındı. Güncel yaklaşım daha esnek: belirtileriniz devam ediyor, yaşam kaliteniz tedaviden anlamlı
 fayda görüyor ve yeni bir kontrendikasyon çıkmadıysa, devam etmek bir seçenek. Yıllık olarak fayda ve riski
 yeniden tartmak ise her zaman geçerli.
 
@@ -196,30 +183,10 @@ da damar tıkanıklığı öyküsü varsa hatırlamak, kullanılan tüm ilaç ve
 muayeneye giderken yanına alınabilecek en faydalı not. Gerisi — hangi rejim, hangi doz, hangi süre —
 kişisel ve zaman içinde ayarlanabilir bir plan.
 
-Ben kendi kararıma yıllar süren bir konuşmanın sonunda geldim; karar kendi kararımdı, sorumluluğu da kendime
-ait. Belki şu soru yardımcı olur: bu kararı kendim mi veriyorum, yoksa başkasının korkusunu mu taşıyorum?
-Beden bir soru sormuştu; sen kendi yolundan cevap veriyorsun.
+Hormon tedavisi kararı aceleyle değil, bilgiyi sakinleştirerek verilir. Muayeneye giderken en değerli
+hazırlık çoğu zaman kısa bir listedir: belirti, süre, şiddet, aile öyküsü, kullandığınız ilaçlar ve
+sizi asıl zorlayan hedef.
 
-Bilimsel Editör Notu
-
-Menopozal hormon tedavisi, östrojen eksikliğinin yarattığı vazomotor belirtileri, ürogenital atrofiyi ve
-kemik sağlığı kayıplarını hedefleyen onaylı bir tedavi seçeneğidir. Endikasyonlar ve rejim seçimi, semptom
-şiddeti ile bireysel risk profilinin birlikte değerlendirilmesini gerektirir.
-
-Kanıt temeli sağlamdır; 60 yaş altı ve menopozdan sonraki ilk on yıl içinde başlatılan tedavide fayda-risk
-dengesi büyük çoğunluk için olumlu seyreder. Yaş ilerledikçe ya da süre uzadıkça tablo kişiselleşir ve
-hekim takibi daha titiz tutulmalıdır.
-
-Östrojen yolu (oral vs transdermal), progestin tipi, doz ve süre kişisel öyküye göre titrize edilir; tedavi
-başlangıcından sonra yıllık fayda-risk değerlendirmesi önerilir. Geçmiş meme kanseri, aktif venöz
-tromboembolizm öyküsü, tanı konmamış vajinal kanama ve aktif karaciğer hastalığı sistemik tedavi için
-mutlak veya göreli kontrendikasyon oluşturur.
-
-Düzenleyici onayı olmayan, eczacı karışımı veya tükürük testlerine dayandırılan "kişiye özel" formülasyonların
-güvenlik ve etkinlik verisi yetersizdir; standart dozlu, onaylı preparatlarla yönetilen tedavi tercih edilmelidir.
-Hormon tedavisi kullanmayan kadınlar için yaşam tarzı, bilişsel davranışçı terapi ve hormonsuz ilaç
-seçenekleri kanıtlı alternatifler arasındadır.
-
-— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.

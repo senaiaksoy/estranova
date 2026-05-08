@@ -1,25 +1,17 @@
 ---
 title: "Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi"
 description: "Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber."
-writer: berna-aksoy
+writer: senai-aksoy
 publishedDate: "25 Nisan 2026"
 publishedDateIso: 2026-04-25
 url: /hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["sıcak basması", "gece terlemesi", "menopoz", "perimenopoz", "uyku", "tetikleyiciler"]
-exportedAt: 2026-05-03
+exportedAt: 2026-05-08
 ---
 
 # Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi
-
-## Kısa Özet
-
-Sıcak basması ve gece terlemesi bu dönemin en çok duyulan başlıklarından biri. "Birden ısınıyorum,
-sonra üşüyorum" cümlesini çevremdeki kadınlardan defalarca duydum. Okudukça anladığım şu: bu belirtiler
-"yalnızca stres" değil; bedenin ısı düzenleme sistemi ile hormon dalgalanmasının birlikte yazdığı
-biyolojik bir denklem. İyi haber şu — birkaç sade adım ve gerektiğinde kişiye uygun tıbbi seçeneklerle
-çoğu kadında şiddet ve sıklık belirgin biçimde yumuşayabiliyor.
 
 ## Vazomotor Belirtiler Aslında Ne?
 
@@ -127,18 +119,17 @@ etkiliyorsa, bunu bir irade meselesi gibi görmek yerine masaya seçenekleri bir
 Hormon tedavisi (HRT), uygun kadınlarda vazomotor belirtileri azaltmada en etkili seçeneklerden biri olarak biliniyor
 
 (güçlü kanıt)
-. Ben kendi adıma bu konuyu hekimimle uzun bir kontrolde konuştum; aldığım cevap "evet" ya da
-"hayır" değil, sade bir karar çerçevesiydi: yaş, menopoz süresi, kişisel ve aile öyküsü, eşlik eden sağlık durumları
-birlikte değerlendiriliyor. Aynı belirtinin iki kadında çok farklı bir karara yol açabileceğini görmek bana güven verdi.
+. Ancak karar "evet" ya da "hayır" kadar basit değildir: yaş, menopozdan bu yana
+geçen süre, kişisel ve aile öyküsü, eşlik eden hastalıklar ve kullanılan ilaçlar birlikte değerlendirilir.
+Aynı belirtinin iki kadında çok farklı bir karara yol açabilmesi bu yüzden normaldir.
 
 HRT herkes için uygun değil. Hormon dışı seçenekler — belirli düşük doz antidepresan grupları
 (paroksetin, venlafaksin gibi), gabapentin ya da yeni nesil bazı moleküller — bazı kadınlarda yarar
 sağlayabiliyor
 (iyi kanıt)
-. Burada açık tuttuğum bir soru var: hangi kadına hangi seçeneğin
-uyacağını önceden kestirmek bende mümkün değil. Bu seçeneklerin her birinin kendi yan etki profili
-var; kararı kişisel öyküyü bilen bir hekimle birlikte vermek bu yüzden önemli. Senin yolun benimkine
-benzemek zorunda değil — kendi hekiminle konuşman bu kararın temeli.
+. Hangi kadına hangi seçeneğin uyacağını muayene ve öykü olmadan
+kestirmek doğru değildir. Bu seçeneklerin her birinin kendi yan etki profili vardır; karar kişisel öyküyü
+bilen hekimle birlikte verilmelidir.
 
 ## Ne Zaman Hekime Sormalı?
 
@@ -201,21 +192,17 @@ belirtiler on yılı aşan bir seyir izleyebiliyor
 aynı zamanda gerçekleşmiyor. Yıllar sonra hâlâ yaşam kalitesini bozan belirtiler varsa bunu
 "katlanılması gereken bir tablo" olarak değil yeniden değerlendirme anı olarak okumakta fayda var;
 HRT geç başlama penceresinin dışındaysa bile hormon dışı seçenekler ve yaşam tarzı planı
-güncellenebilir. Kendi hekiminle yeniden bir kontrol planlamak — eğer beş-on yıl önce konuştuysan
+güncellenebilir. Kendi hekiminizle yeniden bir kontrol planlamak — eğer beş-on yıl önce konuştuysanız
 tekrar konuşmak — kıymetli.
 
 ### Pratik gece protokolü nasıl kurulur?
 
-Hekimimle bir konuşmamızda gündeme gelen sade çerçeve şuydu — sahası geniş ama uygulaması sade:
-yatak odasını 16-19°C aralığına çek, pencereyi mümkünse aralık bırak; ince pamuk gecelik
-(terlediğinde çıkarabileceğin), nefes alabilen yorgan; yatak başına bir bardak ılık su, ince bir
-havlu ve serinletici sprey; akşam yemeğini yatmadan üç saat önce bitir, alkolü mümkünse akşamdan
-akşama değil seyrek hale getir; yatmadan önce 5-10 dakika dakikada altı nefes ritmi (5 saniye al,
-5 saniye ver). Bu protokol gece terlemesi yaşayan kadınlarda toplam uyanma sayısını anlamlı düzeyde
-azaltabiliyor
+Pratik gece planı sade kurulabilir: yatak odasını serin tutmak, ince katmanlı ve nefes alan gece giysisi
+seçmek, akşam ağır yemek ve alkolü sınırlamak, yatmadan önce kısa bir nefes rutini eklemek. Bu adımlar
+gece terlemesi yaşayan bazı kadınlarda uyanma sayısını azaltabilir
 (iyi kanıt)
-. Üç-dört hafta tutarlı uygulamadan sonuç beklemek gerçekçi;
-bir hafta deneyip "olmadı" demek erken bir karar.
+. Üç-dört hafta
+tutarlı uygulamadan sonuç beklemek daha gerçekçidir; bir hafta deneyip "olmadı" demek erken bir karar.
 
 ## Kapanış
 
@@ -226,34 +213,10 @@ bunlar büyük adımlar değil, üst üste binen küçük çapalar. Bir kadını
 başka bir kadın için iki yıl sürebilir; ortalama eğilim yumuşama yönünde olsa da bireysel dağılım
 geniş.
 
-Belki şu soru yardımcı olur: bu hafta gecemde yargılamadan, sadece kayıt etmek niyetiyle hangi tek
-değişikliği yapabilirim? Karar kendi kararın, sorumluluğu da kendine ait. Beden bir cümle söylemişti;
-sen onu gecenin içinde dinliyorsun.
+Bu hafta gece belirtilerini yargılamadan kaydetmek iyi bir başlangıç olabilir: ne zaman geldi, ne kadar
+sürdü, ne tetikledi, gündüz işlevini bozdu mu? İyi kayıt, iyi tedavi konuşmasının en sade kapısıdır.
 
-Bilimsel Editör Notu
-
-Vazomotor belirtiler (sıcak basması ve gece terlemesi) menopoz geçişinin en sık karşılaşılan biyolojik
-imzasıdır. Östrojen dalgalanması beynin termoregülasyon merkezindeki (hipotalamik termal nötr zon)
-duyarlılığı değiştirir; vücut küçük ısı değişimlerini "fazla ısı" olarak okuyarak vazodilatasyon ve
-terleme refleksiyle hızlı serinlemeye geçer.
-
-Klinik kanıt vazomotor belirtilerin perimenopozda başlayıp menopoz sonrası yıllarda hafiflediğini
-ortaya koyuyor; ancak süre kişiden kişiye geniş bir yelpazeye yayılıyor — bazı kadınlarda birkaç yıl,
-bazılarında on yılı aşan bir seyir mümkün.
-
-Yaşam tarzı stratejileri (uyku ortamı serinliği, ince katmanlı giyim, alkol-baharat-sıcak tetikleyici
-farkındalığı, dakikada altı nefes ritmi, düzenli hareket, sigaranın bırakılması) belirti şiddetinde
-ölçülebilir azalma sağlayabilir; etki çoğu zaman tek bir hamleden değil, sade adımların tutarlı
-kombinasyonundan gelir.
-
-Tıbbi seçenekler kişiselleştirilir: HRT uygun adaylarda en etkili seçenek olarak öne çıkar; hormon
-dışı yollar (düşük doz paroksetin, venlafaksin, gabapentin, yeni nesil moleküller) HRT alamayan ya da
-almak istemeyen kadınlarda anlamlı yarar sağlayabilir. Yıllar sonra hâlâ yaşam kalitesini bozan
-belirtiler "katlanılan bir tablo" değil, yeniden değerlendirme anıdır. Açıklanamayan kilo kaybı,
-ateş, çarpıntı veya tiroid bulgu birlikteliği menopoz çerçevesinin dışına işaret eder ve gecikmeden
-değerlendirilmelidir.
-
-— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi
 hekiminizle birlikte değerlendirme yapınız.
