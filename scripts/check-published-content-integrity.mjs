@@ -9,6 +9,7 @@ const ROOT = path.resolve(__dirname, '..');
 const PAGES_DIR = path.join(ROOT, 'src/pages');
 const APPROVALS_FILE = path.join(ROOT, 'src/data/article-approvals.ts');
 const STATIC_ARTICLES_FILE = path.join(ROOT, 'src/data/static-articles.ts');
+const SUB_HUBS_FILE = path.join(ROOT, 'src/data/sub-hubs.ts');
 const strict = process.argv.includes('--strict');
 
 const EXCLUDED_BASENAMES = new Set([
@@ -91,6 +92,84 @@ async function loadStaticArticlePaths() {
   return [...source.matchAll(/path:\s*['"`]([^'"`]+)['"`]/g)].map((m) => m[1]);
 }
 
+async function loadStaticArticleEntries() {
+  const source = await fs.readFile(STATIC_ARTICLES_FILE, 'utf8');
+  return [...source.matchAll(/path:\s*['"`]([^'"`]+)['"`][\s\S]*?sectionPath:\s*['"`]([^'"`]+)['"`]/g)].map((m) => ({
+    path: m[1],
+    sectionPath: m[2],
+  }));
+}
+
+async function loadSubHubCoverage() {
+  const source = await fs.readFile(SUB_HUBS_FILE, 'utf8');
+  const hubs = new Map();
+  const blockRegex = /\{\s*path:\s*['"`]([^'"`]+)['"`]([\s\S]*?)\n\s*\},/g;
+  let match;
+  while ((match = blockRegex.exec(source))) {
+    const [, hubPath, body] = match;
+    const articlePathsBlock = body.match(/articlePaths:\s*\[([\s\S]*?)\]/);
+    hubs.set(hubPath, {
+      hasManualArticlePaths: Boolean(articlePathsBlock),
+      articlePaths: articlePathsBlock
+        ? [...articlePathsBlock[1].matchAll(/['"`]([^'"`]+)['"`]/g)].map((m) => m[1])
+        : [],
+    });
+  }
+  return hubs;
+}
+
+async function loadManualTocPageCoverage() {
+  const coverage = new Map();
+  const topLevelDirs = await fs.readdir(PAGES_DIR, { withFileTypes: true });
+  for (const entry of topLevelDirs) {
+    if (!entry.isDirectory()) continue;
+    const sectionPath = `/${entry.name}`;
+    const indexFile = path.join(PAGES_DIR, entry.name, 'index.astro');
+    try {
+      const source = await fs.readFile(indexFile, 'utf8');
+      if (!source.includes('const tocArticles')) continue;
+      coverage.set(sectionPath, {
+        source,
+        isStaticArticlesDriven:
+          source.includes('staticArticles') &&
+          (source.includes(`article.sectionPath === '${sectionPath}'`) ||
+            source.includes(`article.sectionPath === "${sectionPath}"`) ||
+            source.includes('article.sectionPath === __hubPath')),
+      });
+    } catch {
+      // A top-level route without an index page is not a submenu surface.
+    }
+  }
+  return coverage;
+}
+
+async function findMenuCoverageIssues() {
+  const entries = await loadStaticArticleEntries();
+  const subHubs = await loadSubHubCoverage();
+  const manualTocPages = await loadManualTocPageCoverage();
+  const issues = [];
+
+  for (const article of entries) {
+    const subHub = subHubs.get(article.sectionPath);
+    if (subHub?.hasManualArticlePaths && !subHub.articlePaths.includes(article.path)) {
+      issues.push(`${article.path} -> ${article.sectionPath} alt menusu articlePaths listesinde yok`);
+      continue;
+    }
+
+    if (subHub && !subHub.hasManualArticlePaths && !article.path.startsWith(`${article.sectionPath}/`)) {
+      issues.push(`${article.path} -> ${article.sectionPath} otomatik alt menu kapsami disinda`);
+      continue;
+    }
+
+    const manualToc = manualTocPages.get(article.sectionPath);
+    if (manualToc && !manualToc.isStaticArticlesDriven && !manualToc.source.includes(article.path)) {
+      issues.push(`${article.path} -> ${article.sectionPath} kategori okuma listesinde yok`);
+    }
+  }
+
+  return issues;
+}
+
 function printSection(title, items) {
   if (!items.length) return;
   console.log(`\n${title}`);
@@ -103,6 +182,7 @@ async function main() {
   const articlePages = await findStaticArticlePages(PAGES_DIR);
   const approved = await loadApprovedPathnames();
   const staticPaths = await loadStaticArticlePaths();
+  const menuCoverageIssues = await findMenuCoverageIssues();
 
   const publishedWithoutApproval = articlePages
     .filter((page) => !approved.has(page.pathname))
@@ -118,8 +198,10 @@ async function main() {
   printSection('Onaysiz ama yayimli statik makale sayfalari', publishedWithoutApproval);
   printSection('RSS manifestinde olup approval kaydi olmayan yollar', staticWithoutApproval);
   printSection('Approval kaydi olup RSS manifestinde bulunmayan yollar', approvedMissingFromStatic);
+  printSection('Alt menu/listede gorunmeyen statik makaleler', menuCoverageIssues);
 
-  const hasIssues = publishedWithoutApproval.length > 0 || staticWithoutApproval.length > 0;
+  const hasIssues =
+    publishedWithoutApproval.length > 0 || staticWithoutApproval.length > 0 || menuCoverageIssues.length > 0;
   if (!hasIssues) {
     console.log('\nYayin butunlugu temiz.');
     return;
