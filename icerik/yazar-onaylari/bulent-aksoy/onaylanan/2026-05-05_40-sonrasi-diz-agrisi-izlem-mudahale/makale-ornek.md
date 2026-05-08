@@ -22,9 +22,9 @@ Burada sık yapılan hata, tüm yükü "kıkırdak aşınması" üzerine yıkmak
 
 *İzlem, pasif bekleme değildir; ölçülebilir hedeflerle yürütülen aktif bir tedavi dönemidir.*
 
-Hafif ve orta şiddette, ilerleyici nörolojik bulgu göstermeyen, travma öyküsü olmayan diz ağrılarında ilk yaklaşım çoğu zaman konservatif izlem olmalıdır. Bu dönemde amaç "ağrıyı sıfırlamak" değil, işlevi geri kazandırmaktır. Ağrı tamamen kaybolmadan da hasta günlük yaşamına güvenli şekilde dönebilir.
+Hafif ve orta şiddette, travma öyküsü, belirgin instabilite, kilitlenme ya da nörovasküler uyarı bulgusu olmayan diz ağrılarında ilk yaklaşım çoğu zaman konservatif izlem olmalıdır. Bu dönemde amaç "ağrıyı sıfırlamak" değil, işlevi geri kazandırmaktır. Ağrı tamamen kaybolmadan da hasta günlük yaşamına güvenli şekilde dönebilir.
 
-İyi bir izlem planı genellikle 8-12 haftalık bir çerçeveyle yürütülür ve şu bileşenleri içerir:
+İyi bir izlem planı genellikle 8-12 haftalık bir çerçeveyle, hastanın yaşı, bulguları ve işlev kaybı dikkate alınarak kişiselleştirilir; çoğu zaman şu bileşenleri içerir:
 
 - Aktivite doz ayarı: Tam istirahat değil, yüklenmeyi düzenleme.
 - Hedefli egzersiz: Diz çevresi kas güçlendirme, kalça stabilitesi, hareket açıklığı çalışmaları.
@@ -48,7 +48,7 @@ Konservatif plan doğru uygulanmasına rağmen hastanın yaşam kalitesi belirgi
 - Dizde kilitlenme, takılma veya boşalma hissinin sıklaşması
 - Günlük işlevlerde belirgin bağımlılık ve yaşam kalitesinde düşüş
 
-Burada "müdahale" sözcüğü her zaman ameliyat anlamına gelmez. Hedefli enjeksiyon seçenekleri, rehabilitasyon protokolünün yeniden düzenlenmesi, biyomekanik desteklerin değerlendirilmesi veya ileri ortopedik inceleme ara basamak olarak kullanılabilir. Cerrahi, bu zincirin sonunda doğru endikasyonla değerlendirildiğinde anlam kazanır.
+Burada "müdahale" sözcüğü her zaman ameliyat anlamına gelmez. Uygun hastada, hekim kararıyla hedefli enjeksiyon seçenekleri, rehabilitasyon protokolünün yeniden düzenlenmesi, biyomekanik desteklerin değerlendirilmesi veya ileri ortopedik inceleme ara basamak olarak kullanılabilir. Cerrahi, bu zincirin sonunda doğru endikasyonla değerlendirildiğinde anlam kazanır.
 
 ## Kırmızı Bayraklar: İzlem Değil, Hızlı Değerlendirme Gerektiren Durumlar
 
@@ -61,8 +61,9 @@ Her diz ağrısı acil değildir; ancak bazı bulgular beklemeye uygun değildir
 - Ateşle birlikte diz ağrısı
 - İstirahatte de süren ve şiddeti artan ağrı
 - Bacakta güç kaybı, belirgin dengesizlik veya ani fonksiyon kaybı
+- Baldırda tek taraflı şişlik, kızarıklık, belirgin hassasiyet veya nefes darlığının eşlik etmesi
 
-Bu belirtiler tanıyı tek başına koydurmaz, fakat enfeksiyon, ciddi bağ-yumuşak doku hasarı veya kırık gibi ayırıcı tanıları hızla dışlamayı gerektirir.
+Bu belirtiler tanıyı tek başına koydurmaz, fakat enfeksiyon, ciddi bağ-yumuşak doku hasarı, kırık veya damar kaynaklı acil durumlar gibi ayırıcı tanıları hızla dışlamayı gerektirir.
 
 ## Hasta-Hekim Görüşmesinde Karar Zinciri Nasıl Kurulur?
 
@@ -98,7 +99,7 @@ Genellikle 8-12 hafta. Bu sürede ölçülebilir iyileşme yoksa müdahale basam
 
 *İzlem ve müdahale birbirine rakip değil, aynı yolun farklı basamaklarıdır.*
 
-40 sonrası diz ağrısında en güvenli yaklaşım, konservatif planla başlamak, yanıtı düzenli izlemek ve gerektiğinde müdahaleyi geciktirmeden devreye almaktır. Cerrahi ne "hemen" ne "asla" başlığıdır; doğru hasta, doğru zaman, doğru endikasyon başlığıdır.
+40 sonrası diz ağrısında en güvenli yaklaşım, konservatif planla başlamak, yanıtı düzenli izlemek ve gerektiğinde müdahaleyi geciktirmeden devreye almaktır. Cerrahi ne "hemen" ne de "asla" denecek bir seçenektir; doğru hasta, doğru zaman ve doğru endikasyonla anlam kazanır.
 
 Asıl hedef yalnızca ağrı puanını düşürmek değildir. Hedef; yürüyebilmek, merdiven çıkabilmek, gece rahat uyuyabilmek ve günlük yaşamı daha az kaygıyla sürdürebilmektir. Ortopedi hekiminizle birlikte kuracağınız açık bir karar zinciri, tedavinin en güçlü başlangıç noktasıdır.
 
@@ -110,6 +111,6 @@ Asıl hedef yalnızca ağrı puanını düşürmek değildir. Hedef; yürüyebil
 
 Cerrahi kararında temel belirleyici, görüntüleme sonucu tek başına değil; iyi uygulanmış izlem dönemine rağmen devam eden işlev kaybıdır. Bu nedenle hasta-hekim görüşmesinde hedeflerin netleştirilmesi, takip süresinin baştan konuşulması ve kırmızı bayrak bulgularının açıkça tanımlanması önemlidir.
 
-Özellikle travma sonrası üzerine basamama, gece artan istirahat ağrısı, hızlı gelişen şişlik, ateş eşlik eden eklem yakınması veya belirgin güç kaybı gibi bulgularda gecikmeden değerlendirme gerekir. Kendi durumunuza uygun izlem ve müdahale planını ortopedi hekiminizle bireysel olarak belirlemeniz en güvenli yaklaşımdır.
+Özellikle travma sonrası üzerine basamama, gece artan istirahat ağrısı, hızlı gelişen şişlik, ateş eşlik eden eklem yakınması, belirgin güç kaybı veya baldırda tek taraflı şişlik-kızarıklık gibi bulgularda gecikmeden değerlendirme gerekir. Kendi durumunuza uygun izlem ve müdahale planını ortopedi hekiminizle bireysel olarak belirlemeniz en güvenli yaklaşımdır.
 
 — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü

@@ -42,6 +42,18 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale',
+    writerSlug: 'bulent-aksoy',
+    approvedAt: '2026-05-08',
+    note: 'Prof. Dr. Bülent Aksoy author approval received for icerik/yazar-onaylari/bulent-aksoy/onay-bekleyen/2026-05-05_40-sonrasi-diz-agrisi-izlem-mudahale. Approval package was corrected for Turkish PDF headers, conservative follow-up wording, personalized 8-12 week framing, injection expectation language, DVT red-flag coverage and surgery wording; live route/static manifest restored and package moved to onaylanan.',
+  },
+  {
+    pathname: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku',
+    writerSlug: 'metin-alis',
+    approvedAt: '2026-05-08',
+    note: 'Dr. Metin Alış author approval received after v2/v3 medical-editorial cleanup. Pending package icerik/yazar-onaylari/metin-alis/onay-bekleyen/2026-05-04_tiroid-menopoz-yorgunluk-uyku was updated for FSH/estradiol testing scope, fT3 routine-panel language, oral/transdermal estrogen distinction, TSH variability wording and red-flag alignment; approved package then moved to onaylanan and live route/static manifest restored.',
+  },
+  {
     pathname: '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda',
     writerSlug: 'isik-selin-gunce',
     approvedAt: '2026-05-07',

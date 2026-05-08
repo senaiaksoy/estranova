@@ -18,6 +18,48 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale',
+    title: '40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?',
+    description:
+      '40 sonrası diz ağrısında MR raporuna sıkışmadan; ağrının şiddeti, süresi, işlev kaybı, izlem planı, kırmızı bayraklar ve müdahale eşikleri üzerinden karar vermeyi anlatan ortopedik takip rehberi.',
+    publishedDate: '8 Mayıs 2026',
+    writerSlug: 'bulent-aksoy',
+    section: 'Zamansız Yaşam · Ortopedik Takip',
+    sectionPath: '/zamansiz-yasam',
+    keywords: [
+      '40 sonrası diz ağrısı',
+      'diz ağrısı izlem',
+      'diz ağrısı müdahale',
+      'diz osteoartriti',
+      'menisküs yırtığı',
+      'konservatif tedavi',
+      'ortopedik takip',
+      'diz ağrısı kırmızı bayrak',
+    ],
+  },
+  {
+    path: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku',
+    title: 'Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni',
+    description:
+      'Yorgunluk, kilo artışı ve uyku bozukluğu üçlüsü 40+ kadında tiroid disfonksiyonu, hormonal geçiş ve metabolik değişimin üç ekseninde okunur. Hashimoto ve perimenopozun benzer belirtileri nasıl ayrılır, TSH ve fT4 hangi soruyu cevaplar, hangisini cevaplamaz — bir endokrinolog gözüyle yanlış anlaşılan tabloyu açan klinik ayırma rehberi.',
+    publishedDate: '8 Mayıs 2026',
+    writerSlug: 'metin-alis',
+    section: 'Hormonal Geçiş · 40 Sonrası',
+    sectionPath: '/hormonal-gecis/40-sonrasi',
+    keywords: [
+      'tiroid menopoz',
+      'Hashimoto perimenopoz',
+      'TSH yorumlama',
+      'hipotiroidizm yorgunluk',
+      'menopoz kilo artışı',
+      'perimenopoz uyku',
+      'fT4 fT3',
+      'anti-TPO',
+      'tiroid laboratuvar okuma',
+      '40 sonrası endokrin',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda',
     title: 'Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında: Gerginliği Fark Etmenin İnce Yolu',
     description:

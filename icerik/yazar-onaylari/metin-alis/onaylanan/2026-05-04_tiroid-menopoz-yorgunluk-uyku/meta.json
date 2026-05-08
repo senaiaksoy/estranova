@@ -11,8 +11,10 @@
   "package": {
     "createdAt": "2026-05-04T13:20:32.890Z",
     "deadline": "2026-05-11T13:20:32.890Z",
-    "status": "pending-author-approval",
+    "status": "approved",
     "approvalGate": "publish-after-author-approval",
+    "approvedAt": "2026-05-08",
+    "publishedAt": "2026-05-08",
     "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
     "estimatedFormDuration": "5 dakika",
     "targetEmail": "drsenaiaksoy@gmail.com"

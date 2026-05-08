@@ -23,8 +23,8 @@ doc = SimpleDocTemplate(
     rightMargin=2.2 * cm,
     topMargin=2.0 * cm,
     bottomMargin=2.0 * cm,
-    title="40 Sonrasi Diz Agrisi: Ne Zaman Izlem, Ne Zaman Mudahale?",
-    author="Prof. Dr. Bulent Aksoy",
+    title="40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?",
+    author="Prof. Dr. Bülent Aksoy",
 )
 
 styles = getSampleStyleSheet()
@@ -102,10 +102,10 @@ for raw_line in lines:
         story.append(Spacer(1, 5))
         continue
     if line.startswith("# "):
-        story.append(Paragraph("Zamansiz Yasam · Ortopedik Takip", eyebrow_style))
+        story.append(Paragraph("Zamansız Yaşam · Ortopedik Takip", eyebrow_style))
         story.append(Paragraph(line[2:].strip(), title_style))
         story.append(HRFlowable(width=3.2 * cm, thickness=2, color=colors.HexColor("#C9A96E"), hAlign="LEFT", spaceAfter=8))
-        story.append(Paragraph("Yazar: Prof. Dr. Bulent Aksoy · Okuma suresi: 7-8 dakika", h1_byline_style))
+        story.append(Paragraph("Yazar: Prof. Dr. Bülent Aksoy · Okuma süresi: 7-8 dakika", h1_byline_style))
         continue
     if line.startswith("## "):
         story.append(Paragraph(line[3:].strip(), h2_style))
@@ -121,7 +121,7 @@ for raw_line in lines:
         continue
     if not summary_added:
         summary_box = Table(
-            [[Paragraph("Kisa Ozet", summary_title_style)], [Paragraph(line.replace("*", ""), body_style)]],
+            [[Paragraph("Kısa Özet", summary_title_style)], [Paragraph(line.replace("*", ""), body_style)]],
             colWidths=[16.4 * cm],
         )
         summary_box.setStyle(

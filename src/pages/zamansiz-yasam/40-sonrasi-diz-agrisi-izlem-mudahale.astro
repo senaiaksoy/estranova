@@ -1,0 +1,311 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale';
+const hero =
+  submenuHeroByRoute[pathname] ??
+  submenuHeroByRoute['/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari'] ??
+  submenuHeroByRoute['/zamansiz-yasam']!;
+
+const articleTitle = '40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?';
+const articleDescription =
+  '40 sonrası diz ağrısında MR raporuna sıkışmadan; ağrının şiddeti, süresi, işlev kaybı, izlem planı, kırmızı bayraklar ve müdahale eşikleri üzerinden karar vermeyi anlatan ortopedik takip rehberi.';
+
+const tocEntries = [
+  { id: 'tek-cumle', label: 'Tek Cümleye Sıkıştırmamak' },
+  { id: 'mekanizmalar', label: 'Mekanizmalar' },
+  { id: 'izlem', label: 'İzlem Dönemi' },
+  { id: 'mudahale', label: 'Müdahale Eşikleri' },
+  { id: 'kirmizi-bayraklar', label: 'Kırmızı Bayraklar' },
+  { id: 'karar-zinciri', label: 'Karar Zinciri' },
+  { id: 'sss', label: 'Sık Sorulanlar' },
+  { id: 'sonuc', label: 'Sonuç' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'bulent-aksoy',
+  publishedDate: '8 Mayıs 2026',
+  pathname: pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam',
+  keywords: [
+    '40 sonrası diz ağrısı',
+    'diz ağrısı izlem',
+    'diz ağrısı müdahale',
+    'diz osteoartriti',
+    'menisküs yırtığı',
+    'konservatif tedavi',
+    'ortopedik takip',
+    'diz ağrısı kırmızı bayrak',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Ortopedik Takip"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="bulent-aksoy" publishedDate="8 Mayıs 2026" readingMinutes={8} />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          40 sonrası diz ağrısı, çoğu kadında bir sabah aniden başlamış gibi görünür. Oysa tablo genellikle daha uzun
+          bir sürecin sonucudur: azalan kas gücü, değişen hareket alışkanlıkları, kilo dağılımındaki farklılaşma,
+          uykusuzluk, zaman zaman da eski küçük travmaların birikimi. Bu yüzden ilk sorumuz "hemen müdahale gerekir mi?"
+          değil, "bu ağrının hangi kısmı izlemle düzelebilir?" olmalıdır. Cerrahi seçenek doğru hasta için değerlidir;
+          ancak pek çok hastada ilk güçlü adım, iyi planlanmış konservatif yaklaşım olur.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="tek-cumle">Diz Ağrısını Tek Cümleye Sıkıştırmamak Neden Önemli?</h2>
+        <p class="italic">
+          Diz ağrısı bir rapor sonucu değil, bir işlev sorunudur; karar da işlev üzerinden kurulmalıdır.
+        </p>
+        <p>
+          Klinikte en sık duyduğumuz ifade "MR'da kireçlenme var" cümlesidir. Bu bilgi önemlidir, fakat tek başına
+          tedavi kararı verdirmez. Aynı rapor sonucuna sahip iki hastanın günlük yaşam kapasitesi çok farklı olabilir.
+          Biri merdiven inip çıkabiliyor, diğeri 15 dakikalık yürüyüşte durmak zorunda kalıyorsa, asıl belirleyici unsur
+          görüntüleme değil işlev kaybıdır.
+        </p>
+        <p>
+          Diz ağrısını değerlendirirken dört başlığı birlikte düşünürüz: ağrının şiddeti, ağrının süresi, ağrının gün
+          içindeki davranışı ve hareket kapasitesine etkisi. Örneğin sabah kısa süreli tutuklukla başlayan ama gün içinde
+          açılan bir diz ile gece uykudan uyandıran, istirahatte de süren ağrı aynı sınıfta değildir. Bu ayrımı doğru
+          yapmak, gereksiz panik kadar gereksiz gecikmeyi de önler.
+        </p>
+
+        <h2 id="mekanizmalar">40 Sonrası Dizde Hangi Mekanizmalar Öne Çıkar?</h2>
+        <p class="italic">
+          Sorun yalnızca eklem yüzeyi değildir; kas, tendon ve yüklenme ritmi tabloyu birlikte belirler.
+        </p>
+        <p>
+          Hormonal geçişle birlikte kas kütlesinde azalma eğilimi görülebilir. Kas kuvveti düştüğünde diz eklemi günlük
+          yaşamda daha yüksek mekanik yük hisseder. Özellikle kuadriseps ve kalça çevresi kasların zayıflığı, merdiven
+          inişinde ve uzun yürüyüşlerde dizin daha hızlı yorulmasına yol açabilir <Evidence from={4} to={5} />.
+        </p>
+        <p>
+          Burada sık yapılan hata, tüm yükü "kıkırdak aşınması" üzerine yıkmaktır. Oysa diz, tek başına çalışan bir yapı
+          değildir. Kalça kontrolü, ayak bileği hareketliliği, gövde dengesi ve yürüme paterni bir zincir gibi birbirine
+          bağlıdır. Zincirin bir halkası zayıfladığında diz ağrısı görünür hale gelir. Bu nedenle diz ağrısında
+          değerlendirme yalnızca "dize bakmak" değildir; tüm alt ekstremiteyi bir sistem olarak okumaktır.
+        </p>
+
+        <h2 id="izlem">İzlem Dönemi Ne Zaman Uygun ve Nasıl Planlanır?</h2>
+        <p class="italic">
+          İzlem, pasif bekleme değildir; ölçülebilir hedeflerle yürütülen aktif bir tedavi dönemidir.
+        </p>
+        <p>
+          Hafif ve orta şiddette, travma öyküsü, belirgin instabilite, kilitlenme ya da nörovasküler uyarı bulgusu
+          olmayan diz ağrılarında ilk yaklaşım çoğu zaman konservatif izlem olmalıdır. Bu dönemde amaç "ağrıyı
+          sıfırlamak" değil, işlevi geri kazandırmaktır. Ağrı tamamen kaybolmadan da hasta günlük yaşamına güvenli
+          şekilde dönebilir.
+        </p>
+        <p>
+          İyi bir izlem planı genellikle 8-12 haftalık bir çerçeveyle, hastanın yaşı, bulguları ve işlev kaybı dikkate
+          alınarak kişiselleştirilir; çoğu zaman şu bileşenleri içerir:
+        </p>
+        <ul>
+          <li><strong>Aktivite doz ayarı:</strong> Tam istirahat değil, yüklenmeyi düzenleme.</li>
+          <li><strong>Hedefli egzersiz:</strong> Diz çevresi kas güçlendirme, kalça stabilitesi, hareket açıklığı çalışmaları.</li>
+          <li><strong>Günlük yaşam düzeni:</strong> Merdiven, uzun ayakta kalma, çömelme gibi yük artıran davranışları geçici olarak ayarlama.</li>
+          <li><strong>Kilo ve uyku desteği:</strong> Eklem yükünü azaltan ve toparlanmayı kolaylaştıran temel başlıklar.</li>
+          <li><strong>Ağrı günlüğü:</strong> Hangi aktivite sonrası ne kadar ağrı olduğu ve ertesi gün işlevin nasıl değiştiğini izleme.</li>
+        </ul>
+        <p>
+          Bu yaklaşımın ana felsefesi nettir: hastayı ameliyat masasından önce hayata yönlendirmek. Çünkü konservatif
+          plan başarıyla yürüdüğünde, birçok hastada hem ağrı hem hareket kısıtlılığı belirgin ölçüde azalır.
+        </p>
+
+        <h2 id="mudahale">Müdahale Kararı Hangi Eşiklerde Gündeme Gelir?</h2>
+        <p class="italic">
+          Müdahale kararı ağrının varlığına değil, tedaviye yanıtsız işlev kaybına göre verilir.
+        </p>
+        <p>
+          Konservatif plan doğru uygulanmasına rağmen hastanın yaşam kalitesi belirgin olarak düşmeye devam ediyorsa,
+          bir üst basamağa geçmek gerekir. Bu karar için tek bir ölçüt yoktur; ancak bazı klinik eşikler yol göstericidir.
+        </p>
+        <p>
+          8-12 haftalık düzenli izlem sonrasında aşağıdaki bulgular devam ediyorsa müdahale gündeme alınır:
+        </p>
+        <ul>
+          <li>Gece ağrısının sürmesi veya artması</li>
+          <li>Yürüme mesafesinde belirgin kısalma</li>
+          <li>Merdiven inip çıkmada giderek artan zorlanma</li>
+          <li>Dizde kilitlenme, takılma veya boşalma hissinin sıklaşması</li>
+          <li>Günlük işlevlerde belirgin bağımlılık ve yaşam kalitesinde düşüş</li>
+        </ul>
+        <p>
+          Burada "müdahale" sözcüğü her zaman ameliyat anlamına gelmez. Uygun hastada, hekim kararıyla hedefli enjeksiyon
+          seçenekleri, rehabilitasyon protokolünün yeniden düzenlenmesi, biyomekanik desteklerin değerlendirilmesi veya
+          ileri ortopedik inceleme ara basamak olarak kullanılabilir. Cerrahi, bu zincirin sonunda doğru endikasyonla
+          değerlendirildiğinde anlam kazanır.
+        </p>
+
+        <h2 id="kirmizi-bayraklar">Kırmızı Bayraklar: İzlem Değil, Hızlı Değerlendirme Gerektiren Durumlar</h2>
+        <p class="italic">
+          Bazı belirtilerde zaman kaybetmek yerine doğrudan ortopedik değerlendirme gerekir.
+        </p>
+        <p>
+          Her diz ağrısı acil değildir; ancak bazı bulgular beklemeye uygun değildir. Aşağıdaki durumlarda gecikmeden
+          değerlendirme alınmalıdır:
+        </p>
+        <RedFlagBox
+          markers={[
+            'Travma sonrası üzerine basamama',
+            'Dizde kısa sürede artan şişlik ve belirgin ısı artışı',
+            'Ateşle birlikte diz ağrısı',
+            'İstirahatte de süren ve şiddeti artan ağrı',
+            'Bacakta güç kaybı, belirgin dengesizlik veya ani fonksiyon kaybı',
+            'Baldırda tek taraflı şişlik, kızarıklık, belirgin hassasiyet veya nefes darlığının eşlik etmesi',
+          ]}
+          footnote="Bu belirtiler tanıyı tek başına koydurmaz; enfeksiyon, ciddi bağ-yumuşak doku hasarı, kırık veya damar kaynaklı acil durumların hızlı dışlanmasını gerektirebilir."
+        />
+
+        <h2 id="karar-zinciri">Hasta-Hekim Görüşmesinde Karar Zinciri Nasıl Kurulur?</h2>
+        <p class="italic">
+          Doğru karar, tek cümlelik reçeteden değil; ortak hedef belirlemeden doğar.
+        </p>
+        <p>İyi bir muayenede hastanın şu soruları sorması süreci netleştirir:</p>
+        <ol>
+          <li>Bu ağrının ana mekanizması sizce mekanik yüklenme mi, inflamasyon mu, ikisinin karışımı mı?</li>
+          <li>İlk 2-3 ay için gerçekçi hedefimiz nedir: ağrı azalması mı, yürüme mesafesi mi, merdiven kapasitesi mi?</li>
+          <li>Hangi bulgu ortaya çıkarsa izlemden daha ileri müdahaleye geçmeyi konuşacağız?</li>
+          <li>Benim yaşam düzenime uygun egzersiz ve takip planı nasıl olmalı?</li>
+          <li>Cerrahi dışı seçeneklerin beklenen kazanımı ve sınırı nedir?</li>
+        </ol>
+        <p>
+          Bu sorular, hem hastanın belirsizliğini azaltır hem de karar sürecini ölçülebilir hale getirir. Tedavinin
+          başarısı çoğu zaman doğru ilacı seçmek kadar doğru iletişim kurmaya da bağlıdır.
+        </p>
+
+        <h2 id="sss">Sık Sorulan Kısa Sorular</h2>
+        <p class="italic">
+          Diz ağrısında net, kısa yanıtlar kaygıyı azaltır ve izleme uyumu artırır.
+        </p>
+
+        <h3>Dizimde ağrı varken yürüyüş yapabilir miyim?</h3>
+        <p>
+          Çoğu hastada evet; ancak süre ve tempo kişiye göre ayarlanmalıdır. Ağrıyı artıran uzun yürüyüşler yerine kısa
+          ve düzenli yürüyüşler tercih edilir.
+        </p>
+
+        <h3>MR'da menisküs yırtığı yazıyorsa ameliyat şart mı?</h3>
+        <p>
+          Hayır. Menisküs bulgusu klinik muayene ve işlev kaybı ile birlikte değerlendirilir. Her menisküs bulgusu
+          cerrahi gerektirmez.
+        </p>
+
+        <h3>Kilo vermek gerçekten diz ağrısını azaltır mı?</h3>
+        <p>
+          Çoğu hastada evet. Vücut ağırlığındaki azalma diz eklemine binen yükü azaltır ve hareket toleransını artırır.
+        </p>
+
+        <h3>Ne kadar süre konservatif plan denenmeli?</h3>
+        <p>
+          Genellikle 8-12 hafta. Bu sürede ölçülebilir iyileşme yoksa müdahale basamakları yeniden değerlendirilir.
+        </p>
+
+        <h2 id="sonuc">Sonuç: Amaç Taraf Seçmek Değil, Doğru Sıra Kurmaktır</h2>
+        <p class="italic">
+          İzlem ve müdahale birbirine rakip değil, aynı yolun farklı basamaklarıdır.
+        </p>
+        <p>
+          40 sonrası diz ağrısında en güvenli yaklaşım, konservatif planla başlamak, yanıtı düzenli izlemek ve
+          gerektiğinde müdahaleyi geciktirmeden devreye almaktır. Cerrahi ne "hemen" ne de "asla" denecek bir
+          seçenektir; doğru hasta, doğru zaman ve doğru endikasyonla anlam kazanır.
+        </p>
+        <p>
+          Asıl hedef yalnızca ağrı puanını düşürmek değildir. Hedef; yürüyebilmek, merdiven çıkabilmek, gece rahat
+          uyuyabilmek ve günlük yaşamı daha az kaygıyla sürdürebilmektir. Ortopedi hekiminizle birlikte kuracağınız açık
+          bir karar zinciri, tedavinin en güçlü başlangıç noktasıdır.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+          '/zamansiz-yasam/kilo-artisi-menopoz',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Bu yazı genel bilgilendirme amaçlıdır; bireysel tanı ve tedavi önerisi yerine geçmez.
+          </p>
+          <p>
+            <strong class="text-burgundy">Klinik not:</strong> 40 sonrası diz ağrısında ilk basamak yaklaşımın konservatif plan
+            olması, güncel ortopedi ve rehabilitasyon kılavuzlarıyla uyumludur. Ağrı şiddeti kadar işlev kaybının,
+            yürüme kapasitesinin ve günlük yaşam etkisinin birlikte değerlendirilmesi klinik karar kalitesini artırır.
+          </p>
+          <p>
+            Cerrahi kararında temel belirleyici, görüntüleme sonucu tek başına değil; iyi uygulanmış izlem dönemine
+            rağmen devam eden işlev kaybıdır. Bu nedenle hasta-hekim görüşmesinde hedeflerin netleştirilmesi, takip
+            süresinin baştan konuşulması ve kırmızı bayrak bulgularının açıkça tanımlanması önemlidir.
+          </p>
+          <p>
+            Özellikle travma sonrası üzerine basamama, gece artan istirahat ağrısı, hızlı gelişen şişlik, ateş eşlik
+            eden eklem yakınması, belirgin güç kaybı veya baldırda tek taraflı şişlik-kızarıklık gibi bulgularda
+            gecikmeden değerlendirme gerekir.
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Kendi
+          durumunuza uygun izlem ve müdahale planını ortopedi hekiminizle bireysel olarak belirleyiniz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

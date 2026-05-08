@@ -1,10 +1,10 @@
 # Tiroid mi Menopoz mu? — Onay Bekleyen Paket
 
 - **Yazar:** Dr. Metin Alış
-- **Durum:** Yazar onayı bekliyor
+- **Durum:** Yazar onayı alındı; yayına alındı
 - **Eski site yolu:** `/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku`
-- **İşlem:** Makale canlı siteden kaldırıldı; kaynak dosya bu pakete taşındı.
-- **Yayın kapısı:** Yazar `ONAYLIYORUM` demeden siteye geri alınmayacak.
+- **İşlem:** Makale canlı siteden kaldırıldı; kaynak dosya bu pakete taşındı. 8 Mayıs 2026'da yazar onayı sonrası canlı siteye geri alındı.
+- **Yayın kapısı:** Yazar onayı alındı; paket `onaylanan/` arşivine taşınır.
 
 ## Dosyalar
 
