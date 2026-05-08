@@ -263,6 +263,26 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/zy-diz-agrisi-ortopedik-takip.png',
     alt: 'Premium editoryal tonda, sakin bir iç mekanda diz sağlığı ve ortopedik takip temasını taşıyan olgun kadın portresi; 40 sonrası diz ağrısını izlem ve müdahale dengesiyle okuma görseli',
   },
+  '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku': {
+    src: '/images/library/editorial/metin-alis-tiroid-menopoz-yorgunluk-uyku-byline.jpg',
+    alt: 'Boğaz manzaralı aydınlık bir odada, açık defterine not alırken pencereden dışarı bakan 40+ kadın portresi; tiroid, menopoz ve uyku yorgunluğu yazısı için sakin editoryal kart görseli',
+  },
+  '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda': {
+    src: '/images/library/editorial/isik-selin-gunce-durus-beden-farkindaligi-byline.jpg',
+    alt: 'Aydınlık bir pencere önünde boynunu ve omuzlarını nazikçe esneten kadın; beden farkındalığı, duruş ve günlük gerginlik yazısı için sakin editoryal kart görseli',
+  },
+  '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge': {
+    src: '/images/library/editorial/ersin-sarac-belden-gelen-agri-byline.jpg',
+    alt: 'Aydınlık bir odada bel ve kalça hattındaki gerilimi fark eder gibi duran kadın; belden kasık ve genital bölgeye yansıyan ağrı yazısı için sakin editoryal kart görseli',
+  },
+  '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari': {
+    src: '/images/library/editorial/basak-pelister-hrt-karari-byline.jpg',
+    alt: 'Balkonda kahvesiyle oturan, şehir ışıklarına doğru düşünen 50+ kadın portresi; menopoz sonrası HRT kararı yazısı için sakin editoryal kart görseli',
+  },
+  '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi': {
+    src: '/images/library/editorial/rima-erdemir-yapay-zeka-hekim-cihaz-byline.jpg',
+    alt: 'Çalışma masasında tablet ve sağlık notları yanında düşünen 50+ kadın portresi; yapay zekâ, hekim yorumu ve kişisel takip verisi dengesi yazısı için sakin editoryal kart görseli',
+  },
   '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': {
     src: '/images/library/editorial/senai-hrt-avantajlari-window-card.webp',
     alt: 'Krem tonlu bir odada pencere kenarında duran, camel ceketli düşünceli kadın portresi; HRT avantajları yazısı için editoryal kart görseli',
