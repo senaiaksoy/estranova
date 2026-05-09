@@ -116,11 +116,17 @@ async function loadAnalytics(state: ConsentState): Promise<void> {
   // plain Array (verified empirically: spread variant left consent state
   // marked "implicit" and suppressed the auto page_view hit).
   window.dataLayer = window.dataLayer ?? [];
-  function gtag(): void {
+  // Rest param signature satisfies the type checker (gtag is called with
+  // 2-3 args below). The body intentionally pushes `arguments` rather than
+  // the rest array — gtag.js's dataLayer processor reads each entry's
+  // index properties, and the Arguments object is what the official
+  // Google snippet pushes; a plain Array left consent in implicit state
+  // during testing.
+  function gtag(..._args: unknown[]): void {
     // eslint-disable-next-line prefer-rest-params
     window.dataLayer?.push(arguments);
   }
-  window.gtag = gtag as (...args: unknown[]) => void;
+  window.gtag = gtag;
 
   // Consent Mode v2: declare consent explicitly so GA4 records the hit as
   // "analytics granted" rather than the implicit/denied default. Without
