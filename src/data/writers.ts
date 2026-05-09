@@ -28,6 +28,13 @@ export interface Writer {
 }
 
 export const writers: Writer[] = [
+  // estranova-editorial: kurumsal byline (kişi DEĞİL). status: 'inactive'
+  // burada "geçici olarak duraklatılmış yazar" anlamında değil — kurumsal
+  // imza yazar kadrosu listelerinden (activeWriters / lifestyleWriters /
+  // scientificWriters / arama indeksi / /yazarlar rotaları) ayrı tutulsun
+  // diye konuldu. ArticleAuthorBlock authorSlug üzerinden doğrudan çözer,
+  // status'a bakmaz; bu yüzden 4+ kurumsal makale "Hazırlayan: Estranova
+  // Editörleri" şeklinde sorunsuz render olur. Detay: CLAUDE.md §6.
   {
     slug: 'estranova-editorial',
     displayName: 'Estranova Editörleri',
