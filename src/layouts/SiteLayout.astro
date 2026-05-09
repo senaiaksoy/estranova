@@ -40,6 +40,7 @@ const canonicalUrl = resolveCanonicalUrl({
   canonical,
 });
 const socialImageUrl = resolveSocialImageUrl({ siteUrl, image });
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 const webSiteSchema: JsonLdSchema = {
   '@context': 'https://schema.org',
@@ -82,6 +83,9 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
       content={allowIndexing ? 'index, follow, max-image-preview:large' : 'noindex, nofollow'}
     />
     <meta name="theme-color" content="#7a1f33" />
+    {googleSiteVerification && (
+      <meta name="google-site-verification" content={googleSiteVerification} />
+    )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="alternate" type="application/rss+xml" title="Estranova — Editöryal Yayın" href="/rss.xml" />
