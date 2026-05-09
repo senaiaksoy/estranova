@@ -201,16 +201,16 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; menopoz döneminde uyku düzenini yeniden kurma sabah ritüeli teması',
   },
   '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan': {
-    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; perimenopozda uykunun değişen yanı, hormonal dalga ve uyku evreleri kaydı teması',
+    src: '/images/library/editorial/zd-perimenopoz-uyku-sabah-defter.webp',
+    alt: 'Erken sabah ışığında İstanbul evinin yatak odası bitişiği pencere köşesinde 47-52 yaşında bakımlı Türk kadın; koyu kestane omuz dalga saç (gri yok), cream cashmere modest gecelik ve warm taupe linen pant, mahogany yan masada açık deri kapaklı uyku günlüğüne dolma kalemle yazıyor, sol elinde buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda tek peony, kapalı brass okuma lambası ve açık ciltli kitap; sheer keten perde arkasından soft predawn-to-early-morning natural light; perimenopozda uykunun değişen yanını yargısız fark etme ve sabah günce kaydı teması',
   },
   '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz': {
-    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; gece terlemesi sonrası sakin dengelenme ve mahrem uyku deneyiminin yargısız kaydı teması',
+    src: '/images/library/editorial/zd-gece-terlemesi-uyku-utancsiz.webp',
+    alt: 'Predawn cool-blue ışığında İstanbul evi sade yatak odası natürmort (kişi yok); beyaz keten yatak takımı ve kenara çekilmiş sage-green ince örtü hafif buruşuk, oak ahşap bedside masada porselen su sürahisi ve cam bardak, ince keten mendil hafif katlanmış, küçük seramik vazoda solmaya başlamış lavanta dalı, kapalı deri uyku günlüğü, ince deri kayışlı minimalist saat 04:12, kapalı brass-burnished bedside lamp; sağda yarı açık ahşap pencere ve serin esintiyle yumuşakça hareketlenen ince beyaz keten perde, dışarıda soft predawn cool blue-violet natural light ve uzakta İstanbul Boğaz silueti bokeh; gece terlemesi sonrası sakin dengelenme ve mahrem uyku deneyiminin yargısız kaydı teması',
   },
   '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin': {
-    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; akşam hareketi sonrası bedeni geceye hazırlama, melatonin ve sakin ritim teması',
+    src: '/images/library/editorial/zd-aksam-hareketi-uyku-melatonin.webp',
+    alt: 'Akşam alacakaranlık ışığında İstanbul evi salon köşesinde 47-52 yaşında bakımlı Türk kadın geniş pencere önünde nazik beden hareketi yapıyor; warm mahogany low loose ponytail (gri yok), soft cream cotton uzun kollu modest hareket bluzu ve warm taupe linen wide-leg loose pant, ¾ profil görünüm, sakin ifade — boyun ve omuz yumuşak esneme veya gentle forward fold akışı; ince doğal renkli ev matı, küçük seramik vazoda kuru pampas ve tek peony, walnut floor-to-ceiling kitaplık bokesi, brass-burnished floor lamp arkadan warm subtle backlight, walnut yan masada açık not defteri ve dolma kalem; pencere arkasında akşam alacakaranlık (sky soft pink-warm üst, dusty blue alt), sun ufkun ardına çekilmiş; performans baskısı değil geceye geçiş ritüeli teması',
   },
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz': {
     src: '/images/library/editorial/zd-stres-yonetimi.webp',

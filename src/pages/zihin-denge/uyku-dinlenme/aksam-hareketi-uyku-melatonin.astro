@@ -21,7 +21,9 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme']!;
+const hero =
+  submenuHeroByRoute['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin']
+  ?? submenuHeroByRoute['/zihin-denge/uyku-dinlenme']!;
 
 const tocEntries = [
   { id: 'aksam-sporcu', label: 'Akşam Bedeni' },
