@@ -99,7 +99,16 @@ function getArticleWriterName(writerSlug: string): string {
 
 // Yazar kategorileri — iki ayrı carousel için filtreler
 const lifestyleWriters = activeWriters.filter((w) => w.category !== 'scientific');
-const scientificWriters = activeWriters.filter((w) => w.category === 'scientific');
+// Tıbbi danışmanlar ve bilim kurulu carousel'i — Doç. Dr. Senai Aksoy
+// Estranova bilimsel editörü olarak en başta görünür; kalan yazarlar
+// writers.ts insertion sırasını korur (stable sort).
+const scientificWriters = activeWriters
+  .filter((w) => w.category === 'scientific')
+  .sort((a, b) => {
+    if (a.slug === 'senai-aksoy') return -1;
+    if (b.slug === 'senai-aksoy') return 1;
+    return 0;
+  });
 
 // Her yazarın en yeni yayınlanmış yazısı — ana sayfa carousel kartında
 // signaturePhrase yerine "son yazı" başlığını göstermek için.
