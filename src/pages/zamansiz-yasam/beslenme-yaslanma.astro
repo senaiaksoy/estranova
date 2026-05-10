@@ -18,7 +18,9 @@ import { buildArticleSchemas } from '../../utils/article-schema';
 import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
-const hero = submenuHeroByRoute['/zamansiz-yasam/beslenme-yaslanma']!;
+// CLAUDE.md §6 — makale üst hero görseli daima parent hub'dan gelir.
+// memory: feedback_makale_hero_degismez_2026_05_10
+const hero = submenuHeroByRoute['/zamansiz-yasam']!;
 
 const tocEntries = [
   { id: 'neden-degisir', label: 'Neden Değişir' },

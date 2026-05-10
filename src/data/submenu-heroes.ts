@@ -36,17 +36,9 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/journey-menopoza-hazirlik.webp',
     alt: 'Sıcak bir İstanbul evinin çalışma köşesinde walnut masada karşılıklı çalışan iki yaşıt kadın (45-48); biri açık deri planner üstünde dolma kalemle yazıyor, diğeri eli çenede ilgiyle eğilmiş kibar gülümseme; bakımlı boyalı saçlar (koyu kestane dalga ve açık kestane bob), oatmeal cashmere kazak ve cream ipek bluz bordo eşarp boyunda; brass-burnished abajur, walnut kitaplık bokesi, peony pembe vazoda, masada espresso fincanı ve sade kitap yığını; menopoza birlikte hazırlık ve ortak plan teması',
   },
-  '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler': {
-    src: '/images/library/editorial/hg-perimenopoz-ilk-isaretler.webp',
-    alt: 'Boğaz manzaralı aydınlık bir İstanbul kafesinde açık not defteri, dolma kalem ve kahve eşliğinde sakin konuşan iki yaşıt kadın; perimenopozun ilk işaretlerini birlikte fark etme ve bedendeki değişime isim koyma teması',
-  },
   '/hormonal-gecis/menopoz': {
     src: '/images/library/editorial/journey-menopoz.webp',
     alt: 'Yaz akşamı İstanbul terasında üç yaşıt kadın (50-55) dolu bir sohbet anında; soldaki klasik Türk çay bardağını altın detaylı tabakta tutarak gülerek dinliyor, ortadaki ivory ipek yelpazeyi hafifçe açmış (sıcak basma referansı subtle), sağdaki porselen Türk kahvesi fincanını tabakta lokumla tutuyor; bakımlı boyalı saçlar (kestane chignon, dalgalı auburn, mahogany), ivory + dusty-rose + bordo paleti, jasmine ve wisteria sarmalı pergola, masada incir ve halved nar, golden hour Boğaz silueti boke; menopoz döneminin canlı yaşandığı arkadaşlık ve dolu bir akşam teması',
-  },
-  '/hormonal-gecis/menopoz/menopoz-nedir': {
-    src: '/images/library/editorial/hg-menopoz-nedir.webp',
-    alt: 'Boğaz manzaralı İstanbul terasında çay, kahve ve açık not defteri eşliğinde sohbet eden üç yaşıt kadın; menopozu panik değil, yaşanan ve konuşulabilen doğal bir geçiş olarak okuma teması',
   },
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu': {
     src: '/images/library/editorial/pair-window-cafe-reflection.webp',
@@ -100,14 +92,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zy-vitaminler.webp',
     alt: 'Sabah ışığında ahşap masada yumurtalar, portakal dilimleri, çiğ ceviz ve mavi-yeşil yapraklı sebze; etiketsiz zeytinyağı yanında; D vitamini için besin, güneş ve takviye üçgenini sade sağlık okumasıyla değerlendirme teması',
   },
-  '/zamansiz-yasam/kemik-sagligi-40-sonrasi': {
-    src: '/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi.webp',
-    alt: 'Boğaz manzaralı aydınlık bir evde yoga matı, direnç bandı, hafif ağırlıklar ve açık not defteri eşliğinde hareket planı yapan iki yaşıt kadın; 40 sonrası kemik sağlığı ve düzenli güçlenme teması',
-  },
-  '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari': {
-    src: '/images/library/editorial/zy-kas-iskelet-agrilari-esneme.webp',
-    alt: 'Boğaz manzaralı aydınlık bir odada mat üzerinde sakin esneme yapan 40+ kadın; kas-iskelet ağrılarını panik değil, beden farkındalığı ve düzenli hareketle okuma teması',
-  },
   '/zamansiz-yasam/deneysel': {
     src: '/images/library/editorial/zy-deneysel.webp',
     alt: 'Sun-lit İstanbul evi küçük seramik atölyesi köşesinde geç öğleden sonra warm ışıkta solo aktif hands-on çömlekçilik sahnesinde bir yaşıt kadın (62-65); warm mahogany shoulder dalgalı saç soft loose tied-back, modest cream cotton long-sleeve top ve warm camel canvas-linen artist apron belde (apron üzerinde subtle clay smudge ler — gerçek working studio), warm taupe canvas pant; küçük ahşap stool da slow-turning potter s wheel başında oturmuş, iki el yumuşakça forming clay shape etrafında (küçük bowl ya da vase başlangıcı, mid-shaping light fingertip pressure), composed mature concentration, gentle inner stillness ve soft small smile creative joy eyes on clay form; bakımlı boyalı saç (gri/silver YOK 60+ olsa bile fully colored), mature graceful natural cilt (smoothed değil, soft expression lines doğal kabul), modest tam kapalı yaka; sol uçta küçük seramik bowl water ve katlı bez üstünde küçük tahta shaping tools, raflarda hand-made unfired raw clay bowls ve vases bokeh, sheer white perde tall pencerden warm late-afternoon sunlight, sol arkada monstera ve geniş yapraklı bitki bokeh, warm pale wooden floor ve natural-fiber rug; 60+ post-menopoz olgunluğun yaratıcı yeni deneyim sürecinde clay ile şekil verme rituali ve deneysel yaklaşımlara sakin merak teması',
@@ -116,18 +100,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/zy-deneysel.webp',
     alt: 'Sun-lit İstanbul evi küçük seramik atölyesi köşesinde geç öğleden sonra warm ışıkta solo aktif hands-on çömlekçilik sahnesinde bir yaşıt kadın (62-65); warm mahogany shoulder dalgalı saç soft loose tied-back, modest cream cotton long-sleeve top ve warm camel canvas-linen artist apron belde, warm taupe canvas pant; küçük ahşap stool da slow-turning potter s wheel başında oturmuş, iki el yumuşakça forming clay shape etrafında (küçük bowl ya da vase başlangıcı), composed mature concentration ve gentle inner stillness ve soft small smile creative joy; bakımlı boyalı saç (gri/silver YOK), mature graceful natural cilt, modest tam kapalı yaka; sol uçta küçük seramik bowl water ve tahta tools, raflarda hand-made unfired raw clay bowls ve vases bokeh, sheer white perde tall pencerden warm late-afternoon sunlight, monstera ve geniş yapraklı bitki bokeh, warm pale wooden floor ve natural-fiber rug; NAD+ takviye gibi deneysel longevity yaklaşımlarını yaratıcı hands-on bir hobiyle bedeniyle yeni deneyim olarak karşılama teması',
   },
-  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi': {
-    src: '/images/library/editorial/zy-coq10-kanit-notlari.webp',
-    alt: 'Sıcak ışıklı çalışma masasında açık not defteri, dolma kalem, amber cam şişe, çay ve kitaplar; CoQ10 takviyesi iddialarını reklam vaadi değil kanıt okuması olarak değerlendirme teması',
-  },
-  '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu': {
-    src: '/images/library/editorial/zy-deneysel-tedavi-kanit-masasi.webp',
-    alt: 'Burgundy kitaplar, açık araştırma metinleri, dolma kalem, pirinç lamba ve çay eşliğinde hazırlanmış sıcak ışıklı çalışma masası; deneysel tedavi iddialarını pazarlama vaadi değil kanıt okuryazarlığıyla okuma teması',
-  },
-  '/zamansiz-yasam/beslenme-yaslanma': {
-    src: '/images/library/editorial/zy-beslenme-yaslanma-kahvalti.webp',
-    alt: 'Boğaz manzaralı aydınlık mutfakta kahvaltı tabağı, kahve, açık not defteri ve kalem eşliğinde düşünen 40+ kadın; beslenme ve yaşlanmayı katı diyet değil bilinçli tabak ritmi olarak okuma teması',
-  },
   '/zamansiz-yasam/kilo-artisi-menopoz': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
     alt: 'Sun-lit İstanbul evi balkon herb garden inde geç sabah ışığında solo aktif gardening sahnesinde bir yaşıt kadın (46-50); warm honey-chestnut shoulder dalgalı saç, thick cream speckled chunky knit cardigan ve cream cotton gömlek altında ile warm camel canvas-linen apron belde, soft canvas pant; ahşap balkon masası önünde ayakta mid-action terracotta saksıdan taze rosemary topluyor sağ el dalında, sol el küçük seramik tabakta yeni-toplanmış mevsim sebze (yeşil fasulye, taze maydanoz, küçük cherry tomato) tutuyor; composed present-moment ifade eyes on herbs ve soft small smile peaceful task focus; bakımlı boyalı saç (gri/silver YOK), modest tam kapalı yaka, mature graceful natural cilt; etrafında terracotta saksılarda rosemary, basil, mint, thyme, parsley ve oregano kümeleri (küçük ev herb garden), geniş yapraklı yeşillik fiddle leaf fig soft bokeh, küçük cam su sürahisi ahşap üzerinde, warm pale wooden balkon zemin, sheer white perde subtle uçuşlu sağ pencerden, uzakta İstanbul çatıları haze bokeh; menopoz döneminde kilo değişimini diyet kültüründen uzak yargısız doğal beslenme ve toprakla bağ ile karşılama teması',
@@ -135,14 +107,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/zamansiz-yasam/non-invaziv': {
     src: '/images/library/editorial/zy-non-invaziv.webp',
     alt: 'Ahşap masada keten örtü üzerinde cam sürahi, açık pembe çiçek, seramik kasede pürüzsüz taş ve katlı pamuklu havlu; bordo arka plan — pürüzsüzlük, yenilenme ve zaman metaforu',
-  },
-  '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim': {
-    src: '/images/library/editorial/zy-non-invaziv-cilt-cihazlari.webp',
-    alt: 'Burgundy zeminde şakayıklar, pamuklu havlu, cam su bardağı ve metalik cilt bakım cihazı ile hazırlanmış premium still-life; non-invaziv cihaz vaatlerini reklam değil kanıt sınırıyla değerlendirme teması',
-  },
-  '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz': {
-    src: '/images/library/editorial/zy-sauna-soguk-dus-rituel.webp',
-    alt: 'Aydınlık kıyı evinde bornozla oturup su içen 40+ kadın, yanında keten havlu ve sade dinlenme atmosferi; sauna ve soğuk duşu performans değil beden ritmini dinleme olarak okuma teması',
   },
   '/beden-yakinlik': {
     src: '/images/heroes/beden-yakinlik.webp',
@@ -235,10 +199,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/bilimsel-pencere/yeni-arastirmalar': {
     src: '/images/heroes/bilimsel-pencere.webp',
     alt: 'Akademik çalışma odasında bilimsel kitap üzerine eğilmiş kadın; yeni araştırma derlemeleri teması',
-  },
-  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski': {
-    src: '/images/library/editorial/senai-hrt-meme-kanseri-hero.webp',
-    alt: 'Krem tonlarda giyinmiş, düşünceli ifadesiyle pencereden ışık alan zarif bir kadın portresi; hormon tedavisi ve meme kanseri riski başlığını sakin, dikkatli ve editoryal bir tonla düşünme temasını taşır',
   },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
