@@ -1,37 +1,50 @@
 # Op. Dr. Çağrı Sade — Article Log
 
-> Yazılan her makalenin kalıp seçimi ve cooldown takibi. v0.1 başlangıç.
+> Yazılan her makalenin kalıp seçimi ve cooldown takibi.
 
 ---
 
-## v0.1 — 2026-05-02 başlangıç
+## v0.2 — 2026-05-10 (debut + lazy aktivasyon)
 
-| # | Tarih | Yazı (slug) | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
+| # | Tarih | Yazı | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
 |---|---|---|---|---|---|---|---|---|---|
-| — | — | (henüz makale yok) | — | — | — | — | — | — | v0.1 lazy aktivasyon: ilk makale öncesi havuzlar 6 → 10 + 4-6 manifesto |
+| 01 | 2026-05-10 | [Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'](/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu) | estetik-karar-kriterleri + dogal-yaslanma-kabulu | "Aynaya bakan kadın" hekim gözlemi (DEBUT seed) | 3-katmanlı özet + "kararın sizin elinizde kalması" (DEBUT seed) | "yapılabilir mi → size uygun mu" (5 eksen) (DEBUT seed) | "Bu yazı bir öneri rehberi değil; bir karar çerçevesi" (DEBUT seed) | "Bir hekim olarak gözlemim şu" — açılış sahnesi (DEBUT seed) | KC editör doğrudan onayı; havuzlar bu yazıdan seed alındı; profile.yaml v0.1 → v0.2; manifesto_templates 4 kalıbı dolduruldu (`olcu-sorusu`, `ritim-dili`, `dort-katman`, `kadar-cok-degil-dogru`) |
 
 ---
 
-## Cooldown takibi
+## Cooldown takibi (v0.2)
 
-| Kalıp türü | Havuz | Cooldown | Son kullanım |
-|---|---|---|---|
-| Açılış | 6 (v0.2'de 10) | 6 makale | — |
-| Kapanış | 6 (v0.2'de 10) | 4 makale | — |
-| Dengeleyici | 6 (v0.2'de 10) | 4 makale | — |
-| Bilmiyorum | 6 (v0.2'de 10) | 4 makale | — |
-| Hekim çerçevesi | 6 (v0.2'de 10) | 4 makale | — |
-| Anekdot kapısı | 6 (v0.2'de 10) | 4 makale | — |
-| İmza kapanış | 6 | 4 makale | — |
+| Kalıp türü | Havuz | Cooldown | Son kullanım | Kullanılan varyant |
+|---|---|---|---|---|
+| Açılış | 6 | 6 makale | 2026-05-10 | Aynaya bakan kadın · hekim gözlemi |
+| Kapanış | 6 | 4 makale | 2026-05-10 | 3-katmanlı özet + "sizin elinizde kalması" |
+| Dengeleyici | 6 | 4 makale | 2026-05-10 | "Bu yazı bir öneri rehberi değil; bir karar çerçevesi" |
+| Bilmiyorum | 6 | 4 makale | — | (debut'ta kullanılmadı) |
+| Hekim çerçevesi | 6 | 4 makale | 2026-05-10 | "Bir hekim olarak gözlemim şu" |
+| Anekdot kapısı | 6 | 4 makale | 2026-05-10 | "Aynaya bakan kadın çoğu zaman..." |
+| İmza kapanış | 6 | 4 makale | 2026-05-10 | "kararın sizin elinizde kalması için kurulmuştur" |
 
 ---
 
-## Aktivasyon notu (v0.2'ye geçiş)
+## v0.1 → v0.2 geçişi (2026-05-10)
 
-İlk makale üretilince:
-1. AI agent kullanıcıya 4-6 manifesto + 10/10/6 varyant havuzu önerir.
-2. Onay sonrası `writers/cagri-sade/hot.md §4` ve `warm.md §4e` güncellenir.
-3. `profile.yaml.pattern_pool_sizes` 6 → 10.
-4. `manifesto_templates.templates` doldurulur.
-5. `writer_version` v0.1 → v0.2.
-6. Bu log'un ilk satırı doldurulur.
+İlk makale üretildi ve havuzlar **lazy aktivasyon** ile bu yazıdan seed alındı:
+
+1. ✅ AI agent kullanıcıya 4 manifesto kalıbı önerdi (article body içinden çıktı):
+   - **`olcu-sorusu`** — "yapılabilir mi" → "size uygun mu" + 5 eksen (yaş, beklenti, yaşam tarzı, sağlık zemini, motivasyon kaynağı)
+   - **`ritim-dili`** — "panik dili yerine ritim dili" (doğal yaşlanma kabulü ↔ müdahale dengesi)
+   - **`dort-katman`** — yüz yaşlanması = cilt + yağ + kemik + kas (mekanizma çerçevesi)
+   - **`kadar-cok-degil-dogru`** — "Daha çok değil, daha doğru" (FAQ'da geçti, manifesto kapısı)
+2. ✅ KC editör doğrudan onayı (article-approvals.ts kaydında).
+3. ⏳ `writers/cagri-sade/hot.md §4` ve `warm.md §4e` güncellenmeli (bu PR'da yapılacak).
+4. ⏳ `profile.yaml.pattern_pool_sizes` 6 → 10 (v0.2'de hedef; ilk makale ile 6 yeterli).
+5. ✅ `writer_version` v0.1 → **v0.2** (profile.yaml).
+6. ✅ Bu log'un ilk satırı dolduruldu.
+
+---
+
+## Sıradaki makale öncesi kontrol
+
+- Yeni makale **estetik-karar-kriterleri** ekseninden geliyorsa: bu satırdaki açılış / dengeleyici / kapanış varyantlarından **farklı** seç. Cooldown 4-6 makale.
+- Manifesto: aynı 4 kalıptan farklı bir kalıbı sırada kullan; aynı kalıp 4 makale ardışık yasak.
+- "Bir hekim olarak" çerçevesi: bu yazıda 3 yerde kullanıldı — sıradaki makalede yoğunluğu azalt (1-2 kullanım yeter).

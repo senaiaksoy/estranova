@@ -92,6 +92,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/heroes/zamansiz-yasam.webp',
     alt: 'Akdeniz longevity temalı geç-sabah brunch sofrası — taş duvarlı bir bahçe terasında zeytin dalları altında üç yaşıt Türk kadın (46-52) yavaş yemek paylaşımı; solda yoğurta bal damlatan kestane ponytail, ortada terracotta wrap içinde portakal suyu tutan gülen yüz, sağda cream kaftan içinde şeftali dilimleyen koyu auburn; bakımlı boyalı saçlar, eskimiş rustik ahşap masada incir + nar + üzüm + zeytin + ceviz + ekmek + zeytinyağı + Türk kahvesi; honey-toned taş duvar + bougainvillea bokeh; uzun vadeli yaşam ve sosyal yavaş yaşam teması',
   },
+  '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu': {
+    src: '/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu.webp',
+    alt: "Sabah ışığında ev içi sade bir köşede yandan profil duran, parmaklarını çene-yanak hattına yumuşakça değdirmiş 50+ kadın; bordo bluz ve doğal pencere ışığında, kararı zaten vermemiş ama soruyu taşıyan editöryal portre",
+  },
   '/zamansiz-yasam/vitaminler': {
     src: '/images/library/editorial/zy-vitaminler.webp',
     alt: 'Ahşap tahta üzerinde sabah ışığında yumurtalar, portakal dilimleri, çiğ badem ve ceviz, etiketsiz zeytinyağı; vitamin kaynakları gerçek besinlerle temalandırılmış',
@@ -282,6 +286,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   '/hormonal-gecis/menopoz/hrt-ilk-alti-ay': {
     src: '/images/library/editorial/hg-hrt-ilk-alti-ay.webp',
     alt: 'Sabah ışığında mutfak tezgâhının yanında çayını demleyen, sade ve düşünceli 58 yaşında kadın portresi; HRT yolunda ilk altı ayın gözlemlerini ölçülü bir yaşıt tonuyla anlatan kart görseli',
+  },
+  '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu': {
+    src: '/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu.webp',
+    alt: "Sabah ışığında ev içi sade bir köşede yandan profil duran, parmaklarını çene-yanak hattına yumuşakça değdirmiş 50+ kadın portresi; bordo bluz ve doğal pencere ışığında 'ölçü sorusu' atmosferi taşıyan kart görseli",
   },
   '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi': {
     src: '/images/library/editorial/rima-erdemir-yapay-zeka-hekim-cihaz-byline.jpg',

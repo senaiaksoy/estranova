@@ -18,6 +18,27 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu',
+    title: "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'",
+    description:
+      "40 sonrası yüz müdahalelerine bakarken hangi sorular size aittir, hangileri başkasınındır? Yüz yaşlanmasının dört katmanı, 'yapılabilir mi' yerine 'size uygun mu' sorusu, müdahale haritasının kanıt sıralaması ve hekiminizle konuşmaya değer altı soru üzerinden bir karar çerçevesi.",
+    publishedDate: '10 Mayıs 2026',
+    writerSlug: 'cagri-sade',
+    section: 'Zamansız Yaşam · Yüz Yaşlanması',
+    sectionPath: '/zamansiz-yasam',
+    keywords: [
+      '40 sonrası estetik',
+      'yüz müdahalesi karar',
+      'yüz yaşlanması',
+      'non-invaziv yüz tedavileri',
+      'estetik karar kriterleri',
+      'doğal yaşlanma kabulü',
+      'menopozda cilt',
+      'estetik beklenti yönetimi',
+      'size uygun mu sorusu',
+    ],
+  },
+  {
     path: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
     title: 'HRT — İlk Altı Ayın Notları',
     description:

@@ -323,6 +323,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-10',
     note: 'KC editor direct approval: Demet Kizilkaya debut yazisi HRT — Ilk Alti Ayin Notlari editorial revize sonrasi onaylandi. Cift Rol gerecesi klinik spesifikler (jel→oral progesteron form degisikligi, endometrium ultrason bulgusu, doktor mektup quote) anonimlestirildi; isyeri kurum adi (JETRO / Japonya Dis Ticaret Teskilati) Demet ricasi geregi yazili metinde yer almaz. Yazar profili writers/demet-kizilkaya/ v3.2 paritesinde scaffolded; Astro rota, static manifest, hub linkage ve hero gorseli birlikte uretim envanterine alindi.',
   },
+  {
+    pathname: '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu',
+    writerSlug: 'cagri-sade',
+    approvedAt: '2026-05-10',
+    note: 'KC editor direct approval: Op. Dr. Cagri Sade debut yazisi "Hangi Yuz Mudahalesi Sizin Icin? — 40 Sonrasi Olcu Sorusu" editoryal kontrol sonrasi onaylandi. CLAUDE.md §1 (klinik sitesi degil) + §4 (promosyon yasaklari) cercevesinde sertce kontrol edildi: marka adi yok (botulinum toksini jenerik), ASPS/ISAPS/IPRAS yok, kendi sitesi (cagrisade.com.tr) / Amerikan Hastanesi yok, "25 yil deneyim / Aston gozleminde" govdede yok, once-sonra dili yok. HARD imza karar cercevesi ("yapilabilir mi" yerine "size uygun mu", 5 eksen) Bolum 03te tam, 3-bolum yapisi (mekanizma 02 → karar 03 → harita 04) korundu. Hero gorseli zy-yuz-mudahalesi-olcu-sorusu.webp 2400x1000 webp olarak yayina alindi. Yazar profili writers/cagri-sade v0.1de manifesto havuzlari lazy aktivasyon ile bu makaleden seedlendi.',
+  },
 ];
 
 /**

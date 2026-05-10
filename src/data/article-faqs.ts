@@ -75,6 +75,33 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Tam hareketsizlik çoğu zaman çözüm olmaz; ama ağrıyı artıran yüklenmeyi zorlamak da doğru değildir. Bedeni dinleyerek ilerlemek, ağrıyı belirgin artırmayan kısa hareket araları ve rahatlatan pozisyonlarla geçici bir denge kurmak anlamına gelir.',
     },
   ],
+  '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu': [
+    {
+      question: '"Henüz erken mi, yoksa geç mi kalıyorum?" diye düşünüyorum — bu sorunun bir cevabı var mı?',
+      answer:
+        'Bu sorunun tek bir yaş cevabı yoktur. Erken ya da geç, bir kadının kendi yüzünde hangi katmanın konuştuğuna ve hangi beklentiyle bakıldığına bağlıdır. 35 yaşındaki bir kadın için bazı cilt katmanı uygulamaları erken olabilir; 60 yaşındaki bir kadın için bazı cerrahi müdahaleler hâlâ uygun olabilir. Doğru zaman, kişisel zemine ve hekimle birlikte yapılan değerlendirmeye bağlıdır.',
+    },
+    {
+      question: 'Aynı arkadaşımda çok iyi sonuç veren bir işlem bende neden farklı sonuç verir?',
+      answer:
+        'Aynı işlem aynı sonucu vermez; çünkü cilt zemini, yağ ve kemik desteği, mimik yapısı, iyileşme hızı ve hatta yaşam tarzı her kadında farklıdır. Yüz yaşlanmasının dört katmanı her kadında aynı oranda değişmediği için, aynı tip müdahale farklı bir tabloya yerleşir. Bu yüzden başkasının sonucu üzerinden karar almak çoğu zaman beklenti hatasına yol açar.',
+    },
+    {
+      question: 'Daha az müdahale ile daha iyi sonuç almak mümkün mü?',
+      answer:
+        'Genellikle evet — özellikle erken aşamada. Bakım katmanının ihmal edilmediği bir ciltte, küçük ve doğru zamanlanmış müdahaleler yıllar içinde bütünlüklü bir tablo verir. "Daha çok değil, daha doğru" prensibi sürdürülebilir sonucun sıkça gözlenen yoludur.',
+    },
+    {
+      question: 'Müdahale yaptırmazsam yüzüm hızla kötüye gider mi?',
+      answer:
+        'Doğal yaşlanma yıllar içinde ilerler; bir günde dramatik bir değişim olmaz. Müdahale "olmazsa olmaz" değil, "ölçülü tercih" olarak düşünüldüğünde panik dilinden uzaklaşır. Hiç müdahale yapmadan bakım katmanını sürdüren bir kadın da yıllar içinde güzel bir yaşlanma yaşayabilir.',
+    },
+    {
+      question: 'Karar verme sürecinde kendime hangi soruyu sormalıyım?',
+      answer:
+        'Tek bir soruda toparlanırsa: "Bu kararı kim soruyor — ben mi, yoksa duyduğum cümleler mi?" Cevap "ben" ise, hekimle yapılacak görüşmenin zemini sağlamdır. Cevap belirsiz ise, kararı bir süre daha taşımak ve yüzünüzle daha uzun bir konuşma yapmak çoğu zaman daha sürdürülebilir bir yola çıkar.',
+    },
+  ],
   '/hormonal-gecis/menopoz/hrt-ilk-alti-ay': [
     {
       question: 'HRT\'nin etkisi ne kadar sürede başlar?',

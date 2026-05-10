@@ -8,7 +8,7 @@
 # (klinik sitesi değil) ve §4 (promosyon yasakları) kurallarına en
 # yakın temas eden eksen. Yasak listesi sıkı uygulanır.
 
-writer_version: "v0.1"
+writer_version: "v0.2"
 writer_protocol_version: "v3.2"
 
 slug: cagri-sade
@@ -142,6 +142,7 @@ editorial_track_record:
   - "Amerikan Hastanesi Plastik Cerrahi (aktif)"
   - "Nişantaşı Abdi İpekçi muayenehane"
   - "Kişisel blog: cagrisade.com.tr — 26 yayın (yüz/dudak/dudak dolgusu/burun/yüz germe/liposuction/non-invaziv)"
+  - "Estranova: Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu' (10 Mayıs 2026 — debut)"
   - "Diller: Türkçe + İngilizce (büyük olasılıkla — NYC eğitim)"
 
 micro_style_rules:
@@ -270,10 +271,56 @@ closing_pattern:
 
 manifesto_templates:
   description: >
-    LAZY AKTİVASYON — v0.1'de boş. İlk makale öncesi 4-6 kalıp havuzu
-    kurulacak. [CS-K] cagrisade.com.tr blog 26 yazısı + [CS-T] tematik
-    türetme.
-  templates: []
+    v0.2 (2026-05-10) — debut yazı "Hangi Yüz Müdahalesi Sizin İçin?"
+    içinden 4 kalıp seed'lendi (lazy aktivasyon). Cooldown 4 makale.
+    Bir makalede max 1 kalıp.
+  templates:
+    - id: "olcu-sorusu"
+      source: "[CS-Ö]"
+      page: "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu' (10 Mayıs 2026)"
+      structure: "'Yapılabilir mi' (teknik soru) → 'Size uygun mu' (kişisel soru) + 5 eksen (yaş + beklenti + yaşam tarzı + sağlık zemini + motivasyon kaynağı)"
+      use_case: "estetik karar kriterleri / kişiselleştirme / hekim-hasta görüşmesi açılışı"
+      example: >
+        "Yapılabilir mi" sorusu teknik bir soru. Cevabı çoğunlukla evettir;
+        bugün pek çok şey teknik olarak yapılabilir. Bu yüzden bu soru,
+        kararın asıl yükünü taşımaz. "Size uygun mu" ise beş ayrı eksende
+        düşünmeyi gerektirir: yaş ve dönem; kişisel beklenti; yaşam tarzı;
+        sağlık zemini; motivasyon kaynağı.
+      note: "Çağrı'nın HARD imza eksenidir; cooldown DAHA UZUN tutulmalı (her 4-6 makalede max 1)"
+
+    - id: "ritim-dili"
+      source: "[CS-Ö]"
+      page: "Hangi Yüz Müdahalesi Sizin İçin? (10 Mayıs 2026)"
+      structure: "'Panik dili' yerine 'ritim dili' — doğal yaşlanma kabulü ↔ müdahale dengesi; müdahalenin amacı yaşlanmayı durdurmak değil, ritmini biraz daha ölçülü hale getirmek"
+      use_case: "doğal yaşlanma kabulü / aciliyet diline karşı / sürdürülebilir karar çerçevesi"
+      example: >
+        Doğal yaşlanmayı tamamen reddetmek mümkün değildir; her müdahale
+        yıllar içinde *zaten yaşlanan bir yüz üzerinde* yapılır, ve doğal
+        süreç durmaz. Bu yüzden müdahalenin amacı yaşlanmayı durdurmak
+        değil, *zamanın yüze işleyiş biçimini biraz daha ölçülü hale
+        getirmek* olabilir. Bu çerçeve "panik dili" yerine "ritim dili" kurar.
+
+    - id: "dort-katman"
+      source: "[CS-Ö]"
+      page: "Hangi Yüz Müdahalesi Sizin İçin? (10 Mayıs 2026)"
+      structure: "Yüz yaşlanması tek katman değil; cilt + yağ + kemik + kas dört katmanın aynı anda farklı oranda konuşması. Her katmanın günlük yansıması farklı."
+      use_case: "yüz yaşlanması mekanizması / hangi katman konuşuyor sorusu / müdahale haritasında doğru basamak seçimi"
+      example: >
+        Yüz, tek bir noktanın değişimi değil; cilt, yağ, kemik ve kasın
+        aynı anda konuştuğu bir tablodur. [...] Yüzde "düşme" hissinin
+        nedeni çoğu zaman cildin sarkması değil, alttaki yağ ve kemik
+        desteğinin azalması olur.
+
+    - id: "kadar-cok-degil-dogru"
+      source: "[CS-Ö]"
+      page: "Hangi Yüz Müdahalesi Sizin İçin? (10 Mayıs 2026)"
+      structure: "'Daha çok değil, daha doğru' — minimal müdahale + doğru zamanlama + bireysel uygunluk; sayıca müdahale yığmak yerine az ama doğru tercih"
+      use_case: "estetik beklenti yönetimi / az müdahale ile sürdürülebilir tablo / FAQ cevap çerçevesi"
+      example: >
+        Bakım katmanının ihmal edilmediği bir ciltte, küçük ve doğru
+        zamanlanmış müdahaleler yıllar içinde bütünlüklü bir tablo verir.
+        "Daha çok değil, daha doğru" prensibi sürdürülebilir sonucun
+        sıkça gözlenen yoludur.
 
 clinical_spine:
   description: >
