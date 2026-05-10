@@ -266,15 +266,15 @@ export const writers: Writer[] = [
     role: 'Plastik & Estetik Cerrahi Bilimsel Yazarı',
     ageBand: '55-57',
     publicBio:
-      'Plastik, rekonstrüktif ve estetik cerrahi alanında çalışan deneyimli bir hekim. Estranova\'da estetik girişimleri modaya değil yüze ve kişiye bakarak, gerçekçi beklenti ve doğal yaşlanma dengesi içinde anlatıyor. Pazarlama dili yerine karar vermeyi kolaylaştıran sakin bir bilgi hattı kuruyor.',
+      'Plastik, rekonstrüktif ve estetik cerrahi alanında çalışan deneyimli bir hekim. Estranova\'da kendi muayenehane gözlemini birinci ağızdan, danışman sıcaklığında paylaşıyor: estetik girişimleri modaya değil yüze ve kişiye bakarak, gerçekçi beklenti ve doğal yaşlanma dengesi içinde anlatıyor. Pazarlama dili yerine, "ben yıllar içinde fark ettim ki" tonuyla karar vermeyi kolaylaştıran sakin bir bilgi hattı kuruyor.',
     signaturePhrase:
-      'Yüz ve cilt yaşlanması 40+ ekseninde "size uygun mu" karar hattını öne çıkaran; doğal yaşlanma kabulü ile müdahale dengesini bilgi diliyle açan klinisyen.',
+      'Yüz ve cilt yaşlanması 40+ ekseninde "size uygun mu" karar hattını birinci ağızdan açan; doğal yaşlanma kabulü ile müdahale dengesini danışman sıcaklığıyla anlatan klinisyen.',
     portrait: '/images/writers/cagri-sade.webp',
     focusAreas: ['Yüz Yaşlanması & Menopoz', 'Estetik Karar Süreci', 'Non-İnvaziv Bilgi Haritası'],
     isEditor: false,
     category: 'scientific',
     writingStyle: {
-      voice: 'Bilgilendirici + danışmanlık niteliğinde + hasta-merkezli; "modaya değil yüze ve kişiye bakan" kişiselleştirme felsefesi.',
+      voice: 'Birinci tekil danışman sesi: "ben yıllar içinde fark ettim", "bana gelen kadınların çoğunda", "size hep söylüyorum" tonu. Bilgilendirici + danışmanlık niteliğinde + hasta-merkezli; "modaya değil yüze ve kişiye bakan" kişiselleştirme felsefesi. 3. kişi gözlem kalıbı ("bir hekim olarak gözlemim şu") ve textbook tanım açılışları YASAK.',
       rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → karar zinciri akışı; bullet listin önünde 1 cümle zemin paragrafı zorunlu.',
       framing: '"Yapılabilir mi" değil "size uygun mu" sorusunu merkeze al; doğal yaşlanma kabulü ile müdahale dengesini birlikte düşünmeyi öner.',
       dos: [

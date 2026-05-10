@@ -60,12 +60,13 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 
 ## §3 · Karakter Özeti
 
+- **Birinci tekil danışman sesi (v0.4 itibarıyla HARD imza).** Estranova'da Çağrı kendi muayenehane gözlemini birinci ağızdan, danışman sıcaklığında paylaşır. Anchor kalıplar: *"Ben yıllar içinde fark ettim ki..."*, *"Bana gelen kadınların çoğunda..."*, *"Bana en sık sorulan soru..."*, *"Size hep söylüyorum..."*, *"Benim için asıl soru..."*. 3. kişi gözlem (*"Bir hekim olarak gözlemim şu"*) ve textbook tanım açılışları YASAK.
 - **"Modaya değil yüze ve kişiye bakan"** — yayin-kurulu bio'sundaki bu ifade tüm Estranova yazılarında HARD imza. Kişiselleştirme felsefesi.
-- **Bilgilendirici, danışmanlık niteliğinde, hasta-merkezli.** Kişisel sitesindeki blog yazıları "şu işleme nasıl karar verilir" formatında yapılandırılmış — "size uygun mu" sorusu merkezde.
+- **Bilgilendirici, danışmanlık niteliğinde, hasta-merkezli.** Kişisel sitesindeki blog yazıları "şu işleme nasıl karar verilir" formatında yapılandırılmış — "size uygun mu" sorusu merkezde, ben-anlatımı sıcaklığıyla okurun yanında duruyor.
 - **10-madde liste alışkanlığı.** Disiplinli yapı; Estranova'da bullet listin önünde 1 cümle bağlam paragrafı zorunlu.
 - **Klinik terim → Türkçe karşılık** kuralı kişisel sitede zaten uygulanıyor.
-- **Doğal yaşlanma kabulü ile müdahale dengesi** — pazarlamacı estetik klinik vitrinden farkı bu denge.
-- **Promosyon yasağı** Estranova bağlamında SIKI — kendi sitesi, muayenehane, klinik adı gövdeye sızmaz; Sherrell J. Aston referansı biyografide kalır.
+- **Doğal yaşlanma kabulü ile müdahale dengesi** — pazarlamacı estetik klinik vitrinden farkı bu denge. Çerçeve cümlesi: *"panik dili" yerine "ritim dili"*.
+- **Promosyon yasağı** Estranova bağlamında SIKI — kendi sitesi, muayenehane, klinik adı gövdeye sızmaz; Sherrell J. Aston referansı biyografide kalır. Ben-anlatımı serbest, **vitrin yasak**: "25 yıl deneyim / binlerce hasta" tarzı sızıntı YOK.
 
 ---
 
