@@ -77,7 +77,7 @@ Kullanılmaz
 ## Yanlışlık bildirimi
 
 İçeriklerimizde tespit ettiğiniz herhangi bir yanlışlığı
-[editoral@estranova.com](mailto:editoral@estranova.com)
+[info@estranova.com](mailto:info@estranova.com)
 adresine bildirebilirsiniz. Bilimsel editörümüz tarafından yedi iş günü içinde değerlendirilir; düzeltme gerekirse
 şeffaf biçimde yapılır ve sayfada belirtilir.
 

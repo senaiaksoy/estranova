@@ -32,7 +32,7 @@ manuel karar Senai Aksoy + Berna Aksoy'un.
 2. Domain DNS kayıtları:
    - SPF: `v=spf1 include:_spf.resend.com ~all`
    - DKIM: Resend dashboard'dan verilen TXT kaydı
-   - DMARC: `v=DMARC1; p=quarantine; rua=mailto:dmarc@estranova.com`
+   - DMARC: `v=DMARC1; p=quarantine; rua=mailto:info@estranova.com`
 3. **Supabase projesi aç** (supabase.com — ücretsiz tier 500 MB DB).
    - Region: **Frankfurt** (KVKK uyum için EU residency).
    - Auth → Magic Link aktif et.

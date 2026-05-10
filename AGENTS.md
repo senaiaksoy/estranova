@@ -333,7 +333,7 @@ After creating `src/pages/<section>/<slug>.astro` with `buildArticleSchemas()`, 
 - Hand-edit `dist/rss.xml` or `dist/sitemap-*.xml` — regenerated every build.
 - Skip the manifest entry — the article will appear in search (via sitemap) but not in the RSS feed, causing silent drift between discovery surfaces.
 - Re-order `staticArticles` manually for sort order — RSS endpoint consumes the array as-is; keep newest-first convention aligned with `publishedDate` descending.
-- Rely on author field in RSS for legal identity — it uses `editorial@estranova.com` + writer display name for email-like format; real editor contact is the `managingEditor` / `webMaster` channel tags.
+- Rely on author field in RSS for legal identity — it uses `info@estranova.com` + writer display name for email-like format; real editor contact is the `managingEditor` / `webMaster` channel tags (also `info@estranova.com` — site has a single contact address).
 
 ### Yayın Kurulu kişi kartı şablonu — `KuruluCard.astro`
 

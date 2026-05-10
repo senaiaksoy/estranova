@@ -18,7 +18,7 @@ export async function GET(context: APIContext) {
         pubDate: new Date(`${toISODate(article.publishedDate)}T09:00:00+03:00`),
         link: article.path,
         categories: [article.section],
-        author: `editorial@estranova.com (${writer.displayName})`,
+        author: `info@estranova.com (${writer.displayName})`,
         customData: article.keywords
           .map((k) => `<category>${escapeXml(k)}</category>`)
           .join(''),
@@ -34,8 +34,8 @@ export async function GET(context: APIContext) {
     customData: `
       <language>tr-TR</language>
       <copyright>© ${new Date().getFullYear()} Estranova</copyright>
-      <managingEditor>editorial@estranova.com (Berna Aksoy)</managingEditor>
-      <webMaster>webmaster@estranova.com</webMaster>
+      <managingEditor>info@estranova.com (Berna Aksoy)</managingEditor>
+      <webMaster>info@estranova.com</webMaster>
       <ttl>1440</ttl>
       <image>
         <url>${siteUrl.replace(/\/$/, '')}/favicon.svg</url>
