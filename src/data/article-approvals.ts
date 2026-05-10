@@ -317,6 +317,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-07',
     note: 'KC editor direct approval: RSS manifestinde bulunan HRT avantajlari dosyasi production approval setine eklendi; Bilimsel Pencere manifest ve Senai klinik yazari uyumu tamamlandi.',
   },
+  {
+    pathname: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
+    writerSlug: 'demet-kizilkaya',
+    approvedAt: '2026-05-10',
+    note: 'KC editor direct approval: Demet Kizilkaya debut yazisi HRT — Ilk Alti Ayin Notlari editorial revize sonrasi onaylandi. Cift Rol gerecesi klinik spesifikler (jel→oral progesteron form degisikligi, endometrium ultrason bulgusu, doktor mektup quote) anonimlestirildi; isyeri kurum adi (JETRO / Japonya Dis Ticaret Teskilati) Demet ricasi geregi yazili metinde yer almaz. Yazar profili writers/demet-kizilkaya/ v3.2 paritesinde scaffolded; Astro rota, static manifest, hub linkage ve hero gorseli birlikte uretim envanterine alindi.',
+  },
 ];
 
 /**

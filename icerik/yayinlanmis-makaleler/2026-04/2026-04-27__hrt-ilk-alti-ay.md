@@ -83,18 +83,19 @@ Semptom envanterini birlikte doldururken fark ettim: maddeleri tek tek okurken n
 
 O dönemde fark ettiğim değişimler şunlardı: gün ortası yorgunluğun yumuşaması; cildimde — yıllarca
 dikkatimi çekmeyen bir kuruluk vardı — yumuşak bir nem dönüşü; mahrem konforun yıllar önceki rahatlığa
-benzer bir hâl alması; eskiden zaman zaman canımı sıkan miyom kaynaklı kasık ağrılarının sessizce
-geçmiş olması; ve en şaşırtıcısı, küçük bir *iç sessizlik*. Sürekli alarmda olan bir şeyin
-biraz dinlendiğini hissediyordum — belki birçoğumuzun yıllardır bedeninde taşıdığı o sessiz teyakkuz
-hissini bilirsiniz. Üç aylık bir tedavide bu kadar geniş ve dengeli bir yanıt almak her zaman
-olmuyormuş; doktorum bunu hem doğru tedavi seçiminin hem de "doz atlamadın" disiplinimin birlikte
-sonucu olarak çerçeveledi.
+benzer bir hâl alması; eskiden zaman zaman canımı sıkan kasık bölgesindeki sızıların yumuşaması; ve
+en şaşırtıcısı, küçük bir *iç sessizlik*. Sürekli alarmda olan bir şeyin biraz dinlendiğini
+hissediyordum — belki birçoğumuzun yıllardır bedeninde taşıdığı o sessiz teyakkuz hissini bilirsiniz.
+Üç aylık bir tedavide bu kadar geniş ve dengeli bir yanıt almak her zaman olmuyormuş; hekimim bunu
+hem birlikte yaptığımız ön çalışmanın hem de tedaviye bağlılık disiplinimin birlikte sonucu olarak
+çerçeveledi.
 
-Bu kontrolde tek somut değişiklik progesteron tarafında oldu: jel formdan akşam yatarken alınan oral
-bir kapsüle geçtik. Hekimim bu formun uyumunun daha kolay, kanıt düzeyinin daha sağlam olduğunu, üstüne
-hafif bir uyku desteği de getirdiğini söyledi. Östrojen jeline aynen devam ettik — yıllar içinde
-kanıtlanmış, bana uygun bir formülmüş. Bir de rahim içi kalınlığını ultrasonla kontrol etti; ince ve
-düzgün olduğunu görmek "rahatladığı parametrelerden biri" olarak kayıt etmesinin nedeniymiş.
+Bu kontrolde rutin takip parametrelerini de gözden geçirdik; hekimimin "rahatladığı parametreler"
+olarak kayda geçirdiği şeyin ne olduğunu sonradan anladım: takvimle ilerlerken yan etki tarafında
+bir sürpriz olmaması, semptom tablosunun küçülerek yerleşmesi, ve kontrol sonuçlarının beklenen
+bantta kalması. Tedavinin formuyla ilgili küçük bir ayar yaptık — detayını yazmıyorum, çünkü o ayar
+benim için doğru olabilir, başkası için doğru olmayabilir. Bu kararlar her zaman bireysel, hekimle
+birlikte verilir.
 
 Bu değişimlerin tamamı HRT'ye mi bağlıydı? Bilmiyorum. Aynı dönemde sabah yürüyüşlerimi düzene oturtmuştum,
 akşam çayımı saatten önce kesmeye başlamıştım, magnezyum desteğine alışmıştım. Hayatın küçük çapaları
@@ -142,12 +143,13 @@ değişen karakteri — hemen randevulaşıyoruz. Bu güvenlik ağı kararı ta�
 (güçlü kanıt)
 .
 
-Jel uygulamasıyla ilgili doktorumun her seferinde tekrarladığı üç küçük nokta var — paylaşmadan olmaz:
-süründükten sonra cildin kuruması için en az beş dakika beklemek; sürdüğüm bölgeyi en az bir saat
-yıkamamak; eli yıkamadan en az yarım saat boyunca eşime dokunmamaya özen göstermek. Bu üçüncüsünün
-sebebi şu: hormon parmaklarda da kalıyor, uzun süre tekrarlandığında erkek partnerde göğüs gelişimine
-(jinekomasti) yol açabiliyor. İlk duyduğumda biraz tuhaf gelmişti; ama gündelik bir alışkanlık hâline
-gelince fark edilmez oldu.
+Tedavinin ev içindeki rutiniyle ilgili yıllar içinde içselleştirdiğim küçük notlar var — paylaşmadan
+olmaz; çünkü ilaç prospektüsünden çok yaşıt deneyiminden öğrenilen şeyler. Topikal hormon
+uygulamalarında uygulanan bölgenin kurumasını beklemek, kısa süre içinde o bölgeyi yıkamamak ve
+elin temas yoluyla başka bir kişiye hormon taşıyabileceğini gözden kaçırmamak — bu üç kural çoğu
+prospektüste yazar; ama gündelik hayatta üzerine düşünmek, bir-iki haftada bir alışkanlığa dönüşür.
+Erkek partner için çok küçük bir göğüs hassasiyeti veya gelişim ihtimali (jinekomasti) literatürde
+bilinen bir başlık (orta kanıt); o da zaten bu basit önlemlerle bertaraf ediliyor.
 
 ## Aile, Eş, Kız — Görünmeyen Etki
 
@@ -160,12 +162,13 @@ veremeyeceği kadar değerli bir geri bildirim. Çünkü onun ölçtüğü şey,
 
 Bahar başında uzun zamandır planladığımız bir Japonya seyahatindeydik. Komşumuzdaki acı bir yangın
 haberini aldığımız akşam kalbim hızla çarpmaya başladı; o gece kısa bir hastane sahnesi yaşadım. İlk
-düşüncem oldukça insani bir şeydi: "Bu tedaviyle ilgili olabilir mi?" Türkiye'ye dönüşte hekimimle uzun
-uzun konuştuk. Şokun ve eski yıllardan tanıdığım bir kalp hassasiyetinin üst üste binmesinin yarattığı
-bir an olduğunu, kullandığım jel formunun teknik özelliği nedeniyle bu tür risklerle ilişkilenmediğini
-öğrendim — cilt yoluyla emilen östrojen karaciğerden ilk geçişe uğramıyor, pıhtılaşma faktörlerini
-aktive etmiyormuş. İçimde bir gevşeme oldu; ama korkuyu paylaşmak da önemliydi. Yaşıt hikayelerinin
-bir kısmı böyle telaşı paylaşmaktan geçiyor — belki sizin de benzer bir geceniz olmuştur.
+düşüncem oldukça insani bir şeydi: "Bu tedaviyle ilgili olabilir mi?" Türkiye'ye dönüşte hekimimle
+uzun uzun konuştuk; sonradan bu konuyu literatür tarafında da okudum. Şokun ve eski yıllardan
+tanıdığım bir kalp hassasiyetinin üst üste binmesinin yarattığı bir an olduğunu öğrendim. Bir de
+şunu: cilt yoluyla emilen östrojen oral formdan farklı olarak karaciğerden ilk geçişe uğramıyor;
+bu fark, pıhtılaşma riski açısından önemli bir başlık (güçlü kanıt). İçimde bir gevşeme oldu; ama
+korkuyu paylaşmak da önemliydi. Yaşıt hikayelerinin bir kısmı böyle telaşı paylaşmaktan geçiyor —
+belki sizin de benzer bir geceniz olmuştur.
 
 Kızım — şimdi yirmili yaşlarında — beni daha sakin gördüğünü söyledi. Annemin kuşağı bu konuları
 neredeyse hiç konuşmadan geçirmişti; benim kuşağım yarı sessiz, yarı utangaç bir şekilde adım atıyor;
@@ -191,11 +194,12 @@ birlikte kuracağız. Tek bir karar değil, sürekli güncellenen bir konuşma
 (güçlü kanıt)
 .
 
-Doktorumun bana son kontrol mektubunda yazdığı bir çerçeve var, paylaşmadan olmaz: *"Hedef en yüksek
-fayda, en düşük risk; ikisi birlikte düşünülür."* Bu cümleyi okuduğumda hem rahatlamış hem ciddiyetimi
-bulmuş hissettim. Tedavinin keskin bir bıçak olduğunu, faydasının da risklerinin de gerçek olduğunu,
-bu yüzden altı ayda bir buluşmanın pazarlık edilemez olduğunu hatırlattı. Mevcut iyilik hissim, bu
-disiplinin bir sonucu.
+Bu sürecin başından beri zihnimde tuttuğum bir çerçeve var, paylaşmadan olmaz: *"Hedef en yüksek
+fayda, en düşük risk; ikisi birlikte düşünülür."* Hem hekimimle konuşmalarımızda altını çizdiğimiz,
+hem güncel rehberlerin ortaklaştığı bir denge. Bu cümleyi her hatırladığımda hem rahatlamış hem
+ciddiyetimi bulmuş hissediyorum. Tedavinin keskin bir bıçak olduğunu, faydasının da risklerinin de
+gerçek olduğunu, bu yüzden altı ayda bir buluşmanın pazarlık edilemez olduğunu hatırlatıyor.
+Mevcut iyilik hissim, bu disiplinin bir sonucu.
 
 Bilmediğim çok şey var. Bildiğim şu: bu ilk dört ay, bedenle bir kez daha tanışmak için yeterince
 zamandı. Önümüzdeki aylar başka şeyler öğretecek; altıncı ayın sonunda nereye varacağımı şimdiden

@@ -279,6 +279,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/basak-pelister-hrt-karari-byline.jpg',
     alt: 'Balkonda kahvesiyle oturan, şehir ışıklarına doğru düşünen 50+ kadın portresi; menopoz sonrası HRT kararı yazısı için sakin editoryal kart görseli',
   },
+  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay': {
+    src: '/images/library/editorial/hg-hrt-ilk-alti-ay.webp',
+    alt: 'Sabah ışığında mutfak tezgâhının yanında çayını demleyen, sade ve düşünceli 58 yaşında kadın portresi; HRT yolunda ilk altı ayın gözlemlerini ölçülü bir yaşıt tonuyla anlatan kart görseli',
+  },
   '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi': {
     src: '/images/library/editorial/rima-erdemir-yapay-zeka-hekim-cihaz-byline.jpg',
     alt: 'Çalışma masasında tablet ve sağlık notları yanında düşünen 50+ kadın portresi; yapay zekâ, hekim yorumu ve kişisel takip verisi dengesi yazısı için sakin editoryal kart görseli',

@@ -75,6 +75,33 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Tam hareketsizlik çoğu zaman çözüm olmaz; ama ağrıyı artıran yüklenmeyi zorlamak da doğru değildir. Bedeni dinleyerek ilerlemek, ağrıyı belirgin artırmayan kısa hareket araları ve rahatlatan pozisyonlarla geçici bir denge kurmak anlamına gelir.',
     },
   ],
+  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay': [
+    {
+      question: 'HRT\'nin etkisi ne kadar sürede başlar?',
+      answer:
+        'Bireysel deneyim büyük ölçüde değişir. Bazı kadınlarda ilk iki–dört hafta içinde hafif değişimler görülebilir; ancak gerçek dengelenmenin oturması genellikle iki–üç ay sürer. İlk hafta hiçbir şey hissetmemek de tamamen normal; sabırla beklemek ve hekimle düzenli iletişim genellikle daha iyi bir yol haritası verir.',
+    },
+    {
+      question: 'İlk aylarda yan etki yaşamak yaygın mı?',
+      answer:
+        'Evet, hafif yan etkiler ilk iki–üç ayda görülebilir: hafif baş ağrısı, hassasiyet, hafif şişkinlik gibi. Bunların büyük kısmı vücut alıştıkça geriler. Şiddetli veya beklenmedik bir belirti — örneğin yoğun baş ağrısı, beklenmedik kanama, göğüste belirgin hassasiyet — yaşanırsa hekime başvurmak gerekir.',
+    },
+    {
+      question: 'HRT kullanırken günlük yaşam alışkanlıkları neden hâlâ önemli?',
+      answer:
+        'Hormon tedavisi tek bir müdahaledir; ancak hareket, beslenme, uyku ve stres yönetimi gibi yaşam alışkanlıkları da menopoz dönemindeki bedensel ve zihinsel iyi oluş için kritik kalır. HRT bir köprü kurar; günlük alışkanlıklar bu köprünün dayandığı zemini oluşturur. İkisi birbirinin yerine değil, tamamlayıcısıdır.',
+    },
+    {
+      question: 'Hekimle ne sıklıkta görüşmek anlamlı?',
+      answer:
+        'İlk yıl genellikle 3 aylık aralıklarla, sonrasında klinik duruma göre 6 ay–yıllık aralıklarla. Yıllık mamografi, kan tetkikleri ve kemik yoğunluğu takibi (klinik karara göre) standart izlem çerçevesinin parçasıdır. Beklenmedik bir belirti olduğunda planlı zamandan önce başvurmak her zaman güvenli tercihtir.',
+    },
+    {
+      question: 'Aile içinde "doğru karar mı?" kuşkusu olduğunda nasıl konuşulur?',
+      answer:
+        'Eşin, kızın veya kardeşin sessiz bir endişesi normaldir; çoğu zaman bilgisizlikten değil, sevgiden gelir. Erken aşamada paylaşılabilecek üç şey var: kararın hekimle birlikte alındığı, takvimin nasıl kurulduğu (üç ay sonra muhasebe), ve hangi belirtilerin "hemen ara" sinyali olduğu. Süreç zaman ilerledikçe çoğu zaman onların ölçümleri — "daha az yorgunsun", "daha az gergin görünüyorsun" gibi — yazılı bir rapordan daha güvenilir bir geri bildirim kaynağı olur.',
+    },
+  ],
   '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari': [
     {
       question: 'Dokuz yıl sonra HRT başlamak otomatik olarak geç kalınmış bir karar mı sayılır?',

@@ -18,6 +18,27 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay',
+    title: 'HRT — İlk Altı Ayın Notları',
+    description:
+      'Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk aylarından bir yazı: karar süreci, üç ayın muhasebesi, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.',
+    publishedDate: '27 Nisan 2026',
+    writerSlug: 'demet-kizilkaya',
+    section: 'Hormonal Geçiş · Menopoz',
+    sectionPath: '/hormonal-gecis/menopoz',
+    keywords: [
+      'HRT',
+      'hormon replasman tedavisi',
+      'menopoz',
+      'menopoz HRT deneyimi',
+      'üç ayın muhasebesi',
+      'aile bağı menopoz',
+      'transdermal östrojen',
+      '58 yaş HRT',
+      'yaşıt hikayesi',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale',
     title: '40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?',
     description:
