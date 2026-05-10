@@ -8,7 +8,7 @@
 
 | # | Tarih | Yazı | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
 |---|---|---|---|---|---|---|---|---|---|
-| 01 | 2026-05-10 | [Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'](/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu) | estetik-karar-kriterleri + dogal-yaslanma-kabulu | "Aynaya bakan kadın" hekim gözlemi (DEBUT seed) | 3-katmanlı özet + "kararın sizin elinizde kalması" (DEBUT seed) | "yapılabilir mi → size uygun mu" (5 eksen) (DEBUT seed) | "Bu yazı bir öneri rehberi değil; bir karar çerçevesi" (DEBUT seed) | "Bir hekim olarak gözlemim şu" — açılış sahnesi (DEBUT seed) | KC editör doğrudan onayı; havuzlar bu yazıdan seed alındı; profile.yaml v0.1 → v0.2; manifesto_templates 4 kalıbı dolduruldu (`olcu-sorusu`, `ritim-dili`, `dort-katman`, `kadar-cok-degil-dogru`) |
+| 01 | 2026-05-10 | [Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'](/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu) | estetik-karar-kriterleri + dogal-yaslanma-kabulu | "Aynaya bakıp 'bir şeyler değişmiş' demek..." samimi ortak an (revize seed v2) | "Modaya değil, kendi yüzünüzün tarihine bakan bir yaklaşım her zaman daha sürdürülebilir" (revize) | "yapılabilir mi → size uygun mu" (5 eksen, kompakt) | "Aşağıda öneri listesi yok; karar verirken zihninizde tutmaya değer bir çerçeve var" (revize — daha akıcı) | "Aynaya bakıp 'bir şeyler değişmiş' demek 40'tan sonra çoğu kadının paylaştığı bir an" | KC editör doğrudan onayı v1 (10 May); yazardan feedback sonrası **revize v2 (10 May)**: didaktik ton ↓ samimi ton ↑, "Kısa Özet" → "Özet", güneş/D vit denge düzeltmesi, ~%30 kısaltma, 7 → 5 ana bölüm, 6 → 4 hekim sorusu, profile.yaml v0.2 → **v0.3**, manifesto_templates havuzu cooldown notları korundu |
 
 ---
 

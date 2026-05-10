@@ -19,24 +19,21 @@ import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const pathname = '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu';
-// Üst hero parent hub'dan gelir (CLAUDE.md §6 — submenuHeroByRoute
-// üst hero görseli kullanıcı açıkça istemedikçe değiştirilmez).
-// Makale-spesifik görsel sadece ArticleAuthorBlock imageSrc (Dosya
-// görseli) ve articleCardImageByRoute (alt menü kart görseli) alanlarında.
+// CLAUDE.md §6 — makale üst hero görseli daima parent hub'dan gelir.
+// memory: feedback_makale_hero_degismez_2026_05_10
 const hero = submenuHeroByRoute['/zamansiz-yasam']!;
 
 const articleTitle = "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'";
 const articleDescription =
-  "40 sonrası yüz müdahalelerine bakarken hangi sorular size aittir, hangileri başkasınındır? Yüz yaşlanmasının dört katmanı, 'yapılabilir mi' yerine 'size uygun mu' sorusu, müdahale haritasının kanıt sıralaması ve hekiminizle konuşmaya değer altı soru üzerinden bir karar çerçevesi.";
+  "40 sonrası yüz müdahalelerine bakarken hangi sorular size aittir, hangileri başkasının? Yüzünüzün dört katmanı, 'yapılabilir mi' yerine 'size uygun mu' sorusu, müdahale haritası ve hekiminize sormaya değer dört soru üzerinden sade bir karar çerçevesi.";
 
 const tocEntries = [
-  { id: 'aynanin-karsisinda', label: 'Aynanın Karşısında Bir Sabah' },
-  { id: 'dort-katman', label: 'Yüz Yaşlanması Dört Katmanın Konuşmasıdır' },
-  { id: 'olcu-sorusu', label: '"Yapılabilir mi?" Yerine "Size Uygun mu?"' },
-  { id: 'mudahale-haritasi', label: 'Müdahale Haritası — Hafiften Ağıra' },
-  { id: 'kabul-mudahale', label: 'Doğal Yaşlanma Kabulü ile Müdahale Dengesi' },
-  { id: 'cerrahla-konusmak', label: 'Cerrahınızla Konuşmak — Sormaya Değer Sorular' },
-  { id: 'ozet', label: 'Bir Cümlede Özet' },
+  { id: 'aynanin-karsisinda', label: 'Aynanın Karşısındaki Soru' },
+  { id: 'dort-katman', label: 'Yüzünüzün Dört Katmanı' },
+  { id: 'olcu-sorusu', label: '"Size Uygun mu?" Sorusu' },
+  { id: 'mudahale-haritasi', label: 'Müdahale Haritası' },
+  { id: 'kabul-mudahale', label: 'Kabul ve Müdahale Dengesi' },
+  { id: 'cerrahla-konusmak', label: 'Hekiminize Sormaya Değer Sorular' },
   { id: 'sss', label: 'Sık Sorulanlar' },
 ];
 
@@ -59,6 +56,7 @@ const articleSchemas = buildArticleSchemas({
     'doğal yaşlanma kabulü',
     'menopozda cilt',
     'estetik beklenti yönetimi',
+    'size uygun mu sorusu',
   ],
   faqItems,
   siteUrl,
@@ -87,226 +85,179 @@ const articleSchemas = buildArticleSchemas({
       <ArticleAuthorBlock
         authorSlug="cagri-sade"
         publishedDate="10 Mayıs 2026"
-        readingMinutes={11}
+        readingMinutes={8}
         imageSrc="/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu-byline.webp"
         imageAlt="Sabah ışığında ev içi sade bir köşede yandan profil duran, parmaklarını çene-yanak hattına yumuşakça değdirmiş 50+ kadın portresi; bordo bluz ve doğal pencere ışığında 'ölçü sorusu' atmosferi taşıyan dikey dosya görseli"
         imagePosition="center center"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Özet">
         <p>
-          Bu yazı bir öneri rehberi değil; 40 sonrası yüz müdahaleleri etrafında bir karar çerçevesi. Op. Dr. Çağrı
-          Sade, yüz yaşlanmasının dört katmanını (cilt, yağ, kemik, kas), <em>"yapılabilir mi"</em> sorusunun
-          yerine <em>"size uygun mu"</em> sorusunun beş eksenini, müdahale haritasının kanıt sıralamasını ve
-          doğal yaşlanma kabulü ile müdahale dengesinin nasıl kurulduğunu sade bir tabloyla aktarıyor. Kapanışta
-          hekimle yapılacak konuşma için altı somut soru.
+          40 sonrası yüz müdahalelerine bakarken asıl yardımcı olan soru "yapılabilir mi" değil, <em>"size uygun
+          mu"</em>. Op. Dr. Çağrı Sade yüzün dört katmanını (cilt, yağ, kemik, kas), kararın beş eksenini
+          (yaş, beklenti, yaşam tarzı, sağlık zemini, motivasyon kaynağı), müdahale haritasının kanıt sıralamasını
+          ve hekiminize sormaya değer dört somut soruyu sade bir tabloyla aktarıyor. Modaya değil yüzün kendi
+          tarihine bakan bir çerçeve.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="aynanin-karsisinda">Aynanın Karşısında Bir Sabah</h2>
+        <h2 id="aynanin-karsisinda">Aynanın Karşısındaki Soru</h2>
         <p>
-          40 sonrası birçok kadın bir sabah aynaya bakar ve aynı cümleyi düşünür: "Bir şeyler değişti — ne yapsam?"
-          Soru meşrudur; cevap zor olduğu için değil, soruyu kimin sorduğu zor olduğu için.
+          Aynaya bakıp "bir şeyler değişmiş" demek 40'tan sonra çoğu kadının paylaştığı bir an. Sonrasında gelen
+          soru bazen sessiz, bazen biraz kararsız: "Şimdi ne yapsam?"
         </p>
         <p>
-          Bu yazı bir öneri rehberi değil; bir karar çerçevesi. Estetik müdahale alanında en sık görülen karar
-          yorgunluğu <em>yapılabilir mi</em> sorusunun cevapsızlığından değil, <em>size uygun mu</em> sorusunun
-          yeterince sorulmamış olmasından gelir. Bir hekim olarak gözlemim şu: aynaya bakan kadın çoğu zaman
-          yüzünden değil, yüzü hakkında duyduğu cümlelerden başlıyor. Bu yazı aynanın karşısına döner; yüze bakar
-          ve oradan geriye doğru bir mantık kurar.
+          Bu soruya hızlı bir cevap aramak çoğu zaman aceleye getirir. Aşağıda öneri listesi yok; karar verirken
+          zihninizde tutmaya değer bir çerçeve var. Çoğunlukla sorduğumuz "yapılabilir mi" sorusu teknik bir
+          sorudur — cevabı genellikle evettir. Asıl yardımcı olan soru farklı: <em>"Size uygun mu?"</em>
         </p>
 
-        <h2 id="dort-katman">Yüz Yaşlanması Dört Katmanın Birlikte Konuşmasıdır</h2>
+        <h2 id="dort-katman">Yüzünüzün Dört Katmanı Birlikte Konuşur</h2>
         <p>
-          Yüz, tek bir noktanın değişimi değil; cilt, yağ, kemik ve kasın aynı anda konuştuğu bir tablodur. Hangi
-          katmanın ne ölçüde değiştiğini anlamak, hangi müdahale mantığının uygun olabileceğine bakmadan önceki
-          ilk adımdır.
+          Yüz, tek bir noktanın değil; cilt, yağ, kemik ve kasın aynı anda konuştuğu bir tablodur. Hangi katmanın
+          daha çok değiştiğini anlamak ilk adımdır.
         </p>
         <p>
-          Cilt katmanında östrojen düşüşüyle birlikte kollajen ve elastin azalır; ten incelir, ince çizgiler
-          belirginleşir, nem tutma kapasitesi düşer <Evidence level={5} />. Yağ katmanında genç yıllarda yüze
-          hacim veren yağ paketleri (medikal terim: <em>yağ kompartmanları</em>) hem azalır hem yer değiştirir;
-          bu süreç yüze "düşmüş" görünüm verir. Kemik katmanında ise yıllar içinde kafatası ve çene kemiğinde
-          küçük rezorpsiyon (<em>kemik erimesi</em>) olur; bu erime gözle görünmez ama yüzün dış çerçevesini
-          değiştirir. Kas katmanında uzun yıllar tekrar eden mimik desenleri belirli bölgelerde derinleşmeye yol
-          açar.
+          Cildiniz hormonal geçişle birlikte incelir, kollajen ve nem kaybı belirginleşir <Evidence level={5} />.
+          Yüzdeki yağ paketleri (medikal terim: <em>yağ kompartmanları</em>) zamanla hem azalır hem yer değiştirir;
+          bu, yüze "biraz düşmüş" görünüm verir. Kemik tarafında yıllar içinde küçük bir erime
+          (<em>rezorpsiyon</em>) olur; gözle görünmez ama yüzün dış çerçevesini değiştirir. Kaslar ise tekrar eden
+          mimik desenleriyle bazı bölgelerde derinleşir.
         </p>
         <p>
-          Bu dört katman aynı anda değişir, ama her kadında aynı oranda değişmez. Bir kadında cilt değişimi öne
-          çıkarken, başka birinde yağ kaybı, başka birinde kemik kaynaklı çerçeve değişimi belirleyici olur.
-          Müdahale kararının ilk adımı, <em>kendi yüzünüzde hangi katmanın daha çok konuştuğunu</em> anlamaktır
-          — bu da çoğu zaman dışarıdan değil, yıllar içinde kendi fotoğraflarınıza bakarak görülür.
+          Bu dört katman aynı anda değişir — ama her kadında aynı oranda değil. Birinde cilt, başkasında yağ
+          kaybı, başkasında kemik kaynaklı çerçeve değişimi öne çıkar. Önce kendi fotoğraflarınıza yıllar
+          üzerinden bakmak çoğu zaman dışarıdan gelen yorumlardan daha fazla şey söyler.
         </p>
-        <p>
-          <strong>Kısa not:</strong> Yüzde "düşme" hissinin nedeni çoğu zaman cildin sarkması değil, alttaki yağ
-          ve kemik desteğinin azalması olur. Yüzeysel müdahalelerin bazı tablolarda neden yetersiz kaldığı bu
-          mekanikten okunur.
+        <p class="border-l-2 border-gold/50 pl-4 italic text-ink/75">
+          Yüzdeki "düşme" hissi çoğu zaman cildin sarkmasından değil, alttaki yağ ve kemik desteğinin
+          azalmasından gelir. Yüzeysel müdahalelerin bazı tablolarda neden yetersiz kaldığı bu mekanikten okunur.
         </p>
 
-        <h2 id="olcu-sorusu">"Yapılabilir mi?" Yerine "Size Uygun mu?" Sorusu</h2>
+        <h2 id="olcu-sorusu">Asıl Soru: "Size Uygun mu?"</h2>
         <p>
-          Estetik konularda en sık duyduğum cümle "yapılabilir mi"dir. Oysa daha doğru soru "size uygun mu" — bu
-          küçük gibi görünen değişiklik, kararın merkezini değiştirir.
+          Bir teknik bugün yapılabilir olabilir; ama her teknik herkese aynı uygunlukta değildir. Asıl soruyu
+          beş eksen şekillendirir.
         </p>
         <p>
-          "Yapılabilir mi" sorusu teknik bir soru. Cevabı çoğunlukla evettir; bugün pek çok şey teknik olarak
-          yapılabilir. Bu yüzden bu soru, kararın asıl yükünü taşımaz. "Size uygun mu" ise beş ayrı eksende
-          düşünmeyi gerektirir:
+          <strong>Yaş ve dönem.</strong> Aynı işlem 42 yaşındaki bir kadında ve 58 yaşındaki bir kadında farklı
+          sonuç verir; hormonal zemin ve doku elastikiyeti farklıdır.
         </p>
         <p>
-          Birinci eksen — <strong>yaş ve dönem</strong>. Aynı işlem 42 yaşındaki bir kadında ve 58 yaşındaki bir
-          kadında farklı sonuç verir; hormonal zemin, doku elastikiyeti ve iyileşme hızı farklıdır. İkinci eksen
-          — <strong>kişisel beklenti</strong>. "Daha dinlenmiş görünmek" ile "daha genç görünmek" arasındaki
-          fark, doğru müdahale tipini belirler; ikincisi çoğu zaman aşırı müdahaleye yol açar. Üçüncü eksen —
-          <strong>yaşam tarzı</strong>. Açık havada çok zaman geçiren, yoğun mimik kullanan ya da uzun iyileşme
-          sürelerine ayrılacak vakti olmayan bir kadın için aynı işlem aynı uygunlukta değildir. Dördüncü eksen
-          — <strong>sağlık zemini</strong>. Tiroid, otoimmün durum, kanama eğilimi, ilaç kullanımı; bunlar
-          müdahale seçimini doğrudan etkileyen kriterlerdir. Beşinci eksen — <strong>motivasyon kaynağı</strong>.
-          Karar siz, eşiniz, sosyal çevreniz ya da bir paylaşım algoritması tarafından mı veriliyor? Bu sorunun
-          cevabı ne kadar net, sonuç da o kadar tutarlı olur.
+          <strong>Beklentiniz.</strong> "Daha dinlenmiş görünmek" ile "daha genç görünmek" aynı şey değil;
+          ikincisi çoğu zaman aşırı müdahaleye yol açar.
         </p>
         <p>
-          Bu beş eksende kendi kararınızı bir hekim önünde dile getirebiliyorsanız, "size uygun mu" sorusunun
-          cevabı zaten birlikte aranabilir. Aksi halde, sorunun teknik kısmı (yapılabilir mi) doğru cevabın
-          yerine geçer ki tablo sürdürülebilir olmaz.
+          <strong>Yaşam tarzınız.</strong> Açık havada çok zaman geçiren ya da uzun iyileşme sürelerine vakti
+          olmayan bir kadın için aynı işlem aynı uygunlukta değildir.
+        </p>
+        <p>
+          <strong>Sağlık zemininiz.</strong> Tiroid, otoimmün durum, kanama eğilimi, ilaç kullanımı — bunlar
+          müdahale seçimini doğrudan etkiler.
+        </p>
+        <p>
+          <strong>Motivasyonunuzun kaynağı.</strong> Karar siz, eşiniz, sosyal çevreniz, yoksa bir paylaşım
+          algoritması mı? Bu sorunun cevabı netse, sonuç da çoğu zaman tutarlı olur.
+        </p>
+        <p>
+          Bu beş ekseni kendi başınıza dile getirebiliyorsanız, hekiminizle konuşma çok daha verimli açılır.
+          Aksi halde teknik soru ("yapılabilir mi") asıl sorunun yerine geçer ve tablo zamanla sürdürülebilir
+          olmaz.
         </p>
 
-        <h2 id="mudahale-haritasi">Müdahale Haritası — Hafiften Ağıra Bir Sıralama Mantığı</h2>
+        <h2 id="mudahale-haritasi">Hafiften Ağıra: Müdahale Haritası</h2>
         <p>
-          Müdahalelerin haritasını dik bir merdiven gibi düşünmek yerine, kanıt ve geri dönüşebilirlik düzeylerine
-          göre sıralanmış bir hat olarak görmek daha sağlıklıdır. Bu hat aşağıdan yukarıya doğru, müdahale
-          ağırlığı ve kalıcılığı arttıkça ilerler.
-        </p>
-        <p>
-          Bu sıralama bir reçete değildir; bir kadında en uygun başlangıç noktası, başkasında ortadan ya da hiç
-          başlamamaktan da olabilir. Aşağıdaki kademeler tipler düzeyinde çerçevelenmiştir; spesifik markalar ve
-          tekniklere bilinçli olarak girilmemiştir, çünkü bunlar bireysel değerlendirme ile birlikte düşünülür.
+          Müdahaleleri dik bir merdiven gibi değil, kanıt ve geri dönüşebilirliğe göre sıralanmış bir hat olarak
+          düşünmek daha sağlıklı. Bu sıralama bir reçete değil; başlangıç noktanız bambaşka bir basamak da
+          olabilir.
         </p>
 
         <ul>
           <li>
-            <strong>Bakım katmanı (sıfır müdahale eşiği).</strong> Düzenli güneşten korunma, bariyer-destekli
-            temel cilt rutini, beslenme ve uyku düzeni; bu katmanın etkisi yıllar içinde ölçülür ve hiçbir
-            müdahale bunun üzerine kurulamaz <Evidence level={5} />. Bu katman atlandığında üst katmanların
-            sürdürülebilirliği azalır.
+            <strong>Bakım katmanı.</strong> Cilt bakımı, beslenme, uyku ve güneşle ilişkinizin dengesi. Güneş
+            hem cilt yaşlanmasının hem de D vitamini sentezinin kaynağıdır; bu yüzden yoğun saatlerde korunmak,
+            öğle sonrası kısa süreli (15-20 dakika) kontrollü güneş almak iki yönlü bir denge demek
+            <Evidence level={5} />. Bu zemin atlandığında üst basamakların etkisi azalır.
           </li>
           <li>
-            <strong>Enerji bazlı non-invaziv uygulamalar.</strong> Odaklanmış ultrason ve radyofrekans gibi cilt
-            sıkılaştırma teknolojileri; cildin alt katmanlarında ısı ile kollajen üretimini uyarmayı amaçlar. Etki
-            ılımlı, kalıcılık değişken <Evidence level={3} />. En uygun aday: doku tonusu hâlâ taşıyabilen, hafif
-            sarkma şikayeti olan bir cilt zemini.
+            <strong>Enerji bazlı non-invaziv uygulamalar.</strong> Odaklanmış ultrason ve radyofrekans gibi
+            cilt sıkılaştırma teknolojileri, alt katmanlarda ısı ile kollajen üretimini uyarmayı amaçlar. Etki
+            ılımlı, kalıcılık değişkendir <Evidence level={3} />. En uygun aday: doku tonusu hâlâ taşıyabilen
+            bir cilt zemini.
           </li>
           <li>
-            <strong>Lazer tabanlı uygulamalar.</strong> Yüzeysel ten tonu, lekeler ve ince çizgiler için
-            fraksiyonel ya da pigment-hedefli teknolojiler kullanılır. Etki belirli <Evidence from={3} to={4} />
-            ama iyileşme süresi ve cilt tonuna göre uygunluk değişir.
+            <strong>Lazer tabanlı uygulamalar.</strong> Yüzeysel ten tonu, lekeler ve ince çizgiler için.
+            Etki belirli <Evidence from={3} to={4} />; cilt tonuna ve iyileşme süresine göre uygunluk değişir.
           </li>
           <li>
-            <strong>Enjeksiyon bazlı uygulamalar.</strong> Botulinum toksini (mimik kaslarını hedefler) ve
-            dolgular (hacim kaybını hedefler) iki farklı mantıkla çalışır; aynı kararın altında değildirler.
-            Etki belirli ama geçicidir; doğru endikasyonda aşırı kullanım sürdürülebilir bir tablo doğurmaz
-            <Evidence level={5} />.
+            <strong>Enjeksiyonlar.</strong> Botulinum toksini mimik kaslarını, dolgular hacim kaybını
+            hedefler — iki farklı mantıkla çalışırlar. Etki belirli ama geçicidir; doğru endikasyonda kullanım
+            yıllar içinde sürdürülebilir bir tablo verir, aşırı kullanım vermez <Evidence level={5} />.
           </li>
           <li>
-            <strong>İplik askılama uygulamaları.</strong> Cildin altına yerleştirilen erimeyebilir ya da erir
-            tipte ipliklerle yumuşak askılama amaçlanır. Kanıt seviyesi sınırlıdır <Evidence level={2} />; etki
-            kısa ve değişkendir, beklenti yönetimi en kritik alandır.
+            <strong>İplik askılama.</strong> Cilt altına yerleştirilen ipliklerle yumuşak askılama amaçlanır.
+            Kanıt seviyesi sınırlıdır <Evidence level={2} />; etki kısa, beklenti yönetimi en kritik alandır.
           </li>
           <li>
-            <strong>Cerrahi müdahaleler.</strong> Göz kapağı estetiği, yüz germe gibi cerrahi seçenekler en
-            kalıcı sonucu verir ve uygun adayda en bütünlüklü tabloyu sunar <Evidence level={5} />. Karşılığında
+            <strong>Cerrahi müdahaleler.</strong> Göz kapağı estetiği ve yüz germe gibi seçenekler en kalıcı
+            sonucu verir; uygun adayda en bütünlüklü tabloyu sunar <Evidence level={5} />. Karşılığında
             iyileşme süresi, anestezi yükü ve geri dönüşsüzlük gibi ağır kriterler taşır.
           </li>
         </ul>
 
-        <p>
-          Bu listenin en önemli özelliği şu: bir üst basamak, bir alt basamağın eksiğini her zaman tamamlamaz.
-          Yani bakım katmanı atlanmış bir cilt zemininde enerji bazlı uygulamalar beklenen sonucu vermez; yağ ve
-          kemik kaynaklı hacim kaybı varsa yüzeysel ciltte yapılan tek başına müdahale yetersiz kalır. Hangi
-          basamakta başlanması anlamlı, <em>hangi katmanın konuştuğuna</em> (önceki bölüm) ve <em>hangi soruya
-          cevap aradığınıza</em> (üstteki bölüm) bağlıdır.
+        <p class="border-l-2 border-gold/50 pl-4 italic text-ink/75">
+          Bir üst basamak, bir alt basamağın eksiğini her zaman tamamlamaz: bakım katmanı atlanmış bir ciltte
+          enerji bazlı uygulamalar beklenen sonucu vermez; yağ ve kemik kaynaklı hacim kaybı varsa yalnız
+          yüzey müdahalesi yetersiz kalır.
         </p>
 
-        <h2 id="kabul-mudahale">Doğal Yaşlanma Kabulü ile Müdahale Dengesi</h2>
+        <h2 id="kabul-mudahale">Doğal Yaşlanma ve Müdahale: İki Ucu Birden Tutmak</h2>
         <p>
-          Estetik düşüncenin kendi içinde bir denge çizgisi vardır: bir uçta hiç müdahale etmemek, diğer uçta her
-          değişime hemen müdahale etmek. Sürdürülebilir bir karar bu iki ucun arasındaki bir yerde durur — ve o
-          yer her kadında farklıdır.
+          Bir uçta hiç dokunmamak, diğer uçta her değişime hemen müdahale etmek var. Sürdürülebilir karar
+          genellikle ikisinin arasında, kişiden kişiye değişen bir yerde durur.
         </p>
         <p>
-          Doğal yaşlanmayı tamamen reddetmek mümkün değildir; her müdahale yıllar içinde <em>zaten yaşlanan bir
-          yüz üzerinde</em> yapılır, ve doğal süreç durmaz. Bu yüzden müdahalenin amacı yaşlanmayı durdurmak
-          değil, <em>zamanın yüze işleyiş biçimini biraz daha ölçülü hale getirmek</em> olabilir. Bu çerçeve
-          "panik dili" yerine "ritim dili" kurar.
+          Doğal yaşlanmayı tamamen reddetmek zor; her müdahale yıllar içinde <em>zaten yaşlanan bir yüz
+          üzerinde</em> yapılır. Bu yüzden müdahalenin amacı yaşlanmayı durdurmak değil, <em>zamanın yüze
+          işleyiş ritmini biraz daha ölçülü hale getirmek</em> olabilir. Bu çerçeve "panik dili" yerine "ritim
+          dili" kurar.
         </p>
         <p>
-          Karar verirken bazı cümleler durdurmalıdır. <em>"Bunu yapmazsan geç kalırsın"</em> dili çoğu zaman
-          bilgiden değil, ticari aciliyetten gelir. <em>"Şu an çok popüler"</em> dili modaya bağlı bir karara
-          işaret eder; oysa moda yıllar içinde değişir, yüz aynı kalır. <em>"Sırrı bu"</em> dili yetersiz
-          kanıtlı bir teknik için satış cümlesidir. Bu cümleleri bir reklamda, bir röportajda ya da görüşme
-          odasında karşınıza çıktığında, bir adım geri durup karar zeminini yeniden gözden geçirmek anlamlıdır.
+          Karar verirken bazı cümleler durdurmalıdır. <em>"Bunu yapmazsan geç kalırsın"</em> çoğu zaman
+          bilgiden değil ticari aciliyetten gelir. <em>"Şu an çok popüler"</em> modaya işaret eder; oysa moda
+          değişir, yüz aynı kalır. <em>"Sırrı bu"</em> yetersiz kanıtlı bir teknik için satış cümlesidir. Bu
+          cümleleri bir reklamda, bir röportajda ya da görüşme odasında duyarsanız, bir adım geri durup zemini
+          yeniden tartmak anlamlıdır.
         </p>
         <p>
-          Kabul ile müdahalenin dengesi şöyle de düşünülebilir: müdahale, doğal yaşlanmanın yerine geçmez;
-          onunla birlikte ilerleyen, yer yer ona eşlik eden bir araçtır. Bir kadın, "yıllar geçtikçe hâlâ kendi
-          yüzümü tanıyabilmek istiyorum" diye düşünüyorsa, bu cümle hem hekimine yön verir hem de kendi
-          sürdürülebilir kararını kurar.
+          Modaya değil, kendi yüzünüzün tarihine bakan bir yaklaşım her zaman daha sürdürülebilir.
         </p>
 
-        <h2 id="cerrahla-konusmak">Cerrahınızla Konuşmak — Sormaya Değer Sorular</h2>
+        <h2 id="cerrahla-konusmak">Hekiminize Sormaya Değer Dört Soru</h2>
         <p>
-          Bir hekim olarak en çok değer verdiğim hasta görüşmeleri, soru hazırlığı ile gelen görüşmelerdir.
-          Aşağıdaki altı soru, türü fark etmeksizin (non-invaziv ya da cerrahi) bir müdahale değerlendirmesinde
-          sorulması anlamlı sorulardır.
-        </p>
-        <p>
-          Bu sorular bir test değil, bir konuşmanın açılışıdır. Sorduğunuzda hekiminiz bu soruları doğal
-          karşılıyorsa, görüşmenin zemini sağlam demektir.
+          Aşağıdakiler bir test değil, görüşmenin sade bir açılışıdır. Sorduğunuzda hekiminiz bunları doğal
+          karşılıyorsa, zemin sağlam demektir.
         </p>
 
         <ul>
           <li>
-            <strong>"Bu işlem benim için hangi katmanın değişimine cevap verir, hangisine vermez?"</strong> Bu
-            soru karar çerçevesini katmanlı düşünmenize yardım eder; tek bir işlemin yüzü bütünüyle değiştirmesini
-            beklemekten korur.
+            <strong>"Bu işlem yüzümün hangi katmanına cevap verir, hangisine vermez?"</strong> Tek bir işlemin
+            yüzü bütünüyle değiştirmesini beklemekten korur.
           </li>
           <li>
-            <strong>"Aynı sonuç için daha az müdahaleli bir seçenek var mı?"</strong> Bu soru hekiminizin tedavi
-            haritasını sizinle paylaşmasını sağlar. Cevap "yok"sa, neden olmadığını anlamak için yer açar.
+            <strong>"Aynı sonuca daha az müdahaleli bir yol var mı?"</strong> Hekiminizin tedavi haritasını
+            sizinle paylaşmasını sağlar.
           </li>
           <li>
-            <strong>"Sonucu kalıcılığı ne kadar olur, sonra ne yapılır?"</strong> Bir müdahalenin sürdürülebilirliği
-            yıllar içinde değerlendirilir; "sonra ne olur" sorusu kararın bütününü görmeyi sağlar.
+            <strong>"Sonuç ne kadar kalıcı, sonra ne yapılır?"</strong> Kararı kısa vadeli değil, yıllar boyu
+            görmek için.
           </li>
           <li>
-            <strong>"İyileşme sürecinde günlük hayatım nasıl etkilenir?"</strong> Bu soru zaman planlaması, iş,
-            sosyal yaşam ve kendinizle olan kişisel takvim için önemlidir.
-          </li>
-          <li>
-            <strong>"Risk profilim — kullanmakta olduğum ilaçlar, sağlık geçmişim — bu işlemi nasıl etkiler?"</strong>
-            Bu soru sağlık zemini ekseninin masaya gelmesini sağlar; çoğu zaman müdahale öncesi en sık atlanan
-            başlıktır.
-          </li>
-          <li>
-            <strong>"Yapmamayı seçersem ne olur?"</strong> Bu soru çoğu hekim için samimi bir görüşme
-            tetikleyicisidir; çünkü cevabı dürüstçe verilebiliyorsa, kararın aciliyet diliyle değil, ölçü diliyle
-            kurulduğunu gösterir.
+            <strong>"Yapmamayı seçersem ne olur?"</strong> Cevabı dürüstçe verilebiliyorsa, kararın ölçü
+            diliyle kurulduğunu gösterir.
           </li>
         </ul>
-
-        <h2 id="ozet">Bir Cümlede Özet</h2>
-        <p>
-          Hangi yüz müdahalesi sizin için, sorusunun cevabı her zaman bireyseldir. Karar üç katmanlı düşünülürse
-          — yüzünüzün hangi katmanı konuşuyor, "size uygun mu" sorusunun beş ekseni nereye işaret ediyor, ve
-          müdahale haritasında hangi basamakta başlamak anlamlı — yıllar içinde sürdürülebilir bir tablo doğar.
-        </p>
-        <p>
-          Estetik karar bir an meselesi değil, yıllar boyu aynı yüzle kurulan bir ilişkidir. Bir yandan
-          yaşlanmanın doğal akışını kabul etmek, diğer yandan ölçülü ve gerekçeli müdahalelerle bu akışın
-          ritmini biraz daha ele almak — ikisi birbirine düşman değil, birlikte düşünülen iki ucu olan bir hat.
-          Bu yazıdaki çerçeve, kararın kendisini almak için değil; kararın sizin elinizde kalması için kurulmuştur.
-        </p>
       </ArticleProsePanel>
 
       <ArticleFAQ
@@ -328,24 +279,19 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleEditorNote class="mt-10">
         <p>
-          Yüz ve cilt yaşlanması, hormonal geçişle birlikte 40 sonrası kadınlarda farklı katmanlarda farklı
-          hızla ilerler. Estetik müdahaleler kanıt seviyeleri açısından geniş bir yelpazede yer alır: bakım
-          katmanı ve cerrahi seçenekler için kanıt görece sağlamdır; bazı non-invaziv teknolojiler için kanıt
-          gelişmektedir; iplik askılama gibi bazı teknikler için kanıt sınırlıdır. Bu farkı anlamak, beklenti
-          yönetimi ile sürdürülebilir karar arasındaki köprüdür.
+          Yüz ve cilt yaşlanması 40 sonrası kadınlarda farklı katmanlarda farklı hızla ilerler. Estetik
+          müdahaleler kanıt seviyesi açısından geniş bir yelpazede yer alır: bakım katmanı ve cerrahi
+          seçenekler için kanıt görece sağlamdır; bazı non-invaziv teknolojiler için kanıt gelişmektedir;
+          iplik askılama gibi bazı tekniklerde kanıt sınırlıdır. Bu farkı anlamak, beklenti yönetimi ile
+          sürdürülebilir karar arasındaki köprüdür.
         </p>
         <p>
-          Estetik karar daima <strong>bireyseldir</strong>: yaş, hormonal zemin, sağlık geçmişi, ilaç kullanımı,
-          doku özellikleri ve kişisel beklenti birlikte değerlendirilir. Bu yazıdaki çerçeve bir reçete değil,
-          hekiminizle yapacağınız değerlendirmenin zihinsel ön hazırlığıdır.
-        </p>
-        <p>
-          Müdahale öncesi konsültasyonda <strong>kişisel risk faktörleri</strong> (sigara kullanımı, kanama
-          eğilimi, otoimmün durum, hormonal tedaviler dahil), <strong>gerçekçi beklenti</strong> ve
-          <strong>takip planı</strong> birlikte konuşulur. Bir karar verildiğinde, hangi tipte müdahale olursa
-          olsun, <strong>uzun vadeli sürdürülebilirlik</strong> kısa vadeli sonuçtan daha belirleyici bir
-          kriterdir. Beklenmedik belirti ya da iyileşme süreci endişesinde planlı zamandan önce hekiminize
-          başvurmak güvenli tercihtir.
+          Estetik karar daima <strong>bireyseldir</strong>: yaş, hormonal zemin, sağlık geçmişi, ilaç
+          kullanımı, doku özellikleri ve kişisel beklenti birlikte değerlendirilir. Müdahale öncesi
+          konsültasyonda kişisel risk faktörleri, gerçekçi beklenti ve takip planı birlikte konuşulur.
+          Hangi tipte müdahale olursa olsun <strong>uzun vadeli sürdürülebilirlik</strong>, kısa vadeli
+          sonuçtan daha belirleyicidir. Beklenmedik belirti ya da iyileşme süreciyle ilgili soruda planlı
+          zamandan önce hekiminize başvurmak güvenli tercihtir.
         </p>
       </ArticleEditorNote>
 
