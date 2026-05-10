@@ -19,7 +19,11 @@ import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const pathname = '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu';
-const hero = submenuHeroByRoute[pathname]!;
+// Üst hero parent hub'dan gelir (CLAUDE.md §6 — submenuHeroByRoute
+// üst hero görseli kullanıcı açıkça istemedikçe değiştirilmez).
+// Makale-spesifik görsel sadece ArticleAuthorBlock imageSrc (Dosya
+// görseli) ve articleCardImageByRoute (alt menü kart görseli) alanlarında.
+const hero = submenuHeroByRoute['/zamansiz-yasam']!;
 
 const articleTitle = "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'";
 const articleDescription =
