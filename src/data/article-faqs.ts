@@ -79,27 +79,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Erken mi, geç mi kalıyorum?',
       answer:
-        'Tek bir yaş cevabı yok. Erken ya da geç olması, kendi yüzünüzde hangi katmanın konuştuğuna ve hangi beklentiyle baktığınıza bağlı. 35\'inde bir kadın için bazı uygulamalar erken olabilir; 60\'ında biri için bazı cerrahi müdahaleler hâlâ uygun olabilir.',
+        'Bu soruyu çok duyuyorum. Tek bir yaş cevabı yok. Erken ya da geç olması, kendi yüzünüzde hangi katmanın konuştuğuna ve hangi beklentiyle baktığınıza bağlı. 35\'inde bir kadın için bazı uygulamalar erken, 60\'ında bir kadın için bazı cerrahi müdahaleler hâlâ uygun olabiliyor.',
     },
     {
       question: 'Arkadaşımda iyi sonuç veren işlem bende neden farklı sonuç verir?',
       answer:
-        'Cilt zemini, yağ ve kemik desteği, mimik yapısı, iyileşme hızı ve yaşam tarzı her kadında farklıdır. Aynı işlem aynı tabloya yerleşmez; bu yüzden başkasının sonucu üzerinden karar almak çoğu zaman beklenti hatasına yol açar.',
+        'Çünkü cilt zemini, yağ ve kemik desteği, mimik yapısı, iyileşme hızı ve yaşam tarzınız bambaşka. Aynı işlem aynı tabloya yerleşmiyor; bu yüzden başkasının sonucu üzerinden karar almak çoğu zaman beklenti hatasına yol açıyor.',
     },
     {
       question: 'Daha az müdahaleyle daha iyi sonuç almak mümkün mü?',
       answer:
-        'Çoğu zaman evet, özellikle erken aşamada. Bakım katmanının ihmal edilmediği bir ciltte, küçük ve doğru zamanlanmış müdahaleler yıllar içinde bütünlüklü bir tablo verir. "Daha çok değil, daha doğru" prensibi sürdürülebilir sonucun gözlenen yoludur.',
+        'Çoğu zaman evet — özellikle erken aşamada. Bakım katmanının ihmal edilmediği bir ciltte, küçük ve doğru zamanlanmış müdahaleler yıllar içinde bütünlüklü bir tablo veriyor. Ben bunu hep şöyle özetliyorum: "Daha çok değil, daha doğru."',
     },
     {
       question: 'Müdahale yaptırmazsam yüzüm hızla kötüye gider mi?',
       answer:
-        'Hayır. Doğal yaşlanma yıllar içinde ilerler; bir günde dramatik bir değişim olmaz. Müdahale "olmazsa olmaz" değil, "ölçülü tercih" olarak düşünüldüğünde panik dilinden uzaklaşır.',
+        'Hayır. Doğal yaşlanma yıllar içinde ilerliyor; bir günde dramatik bir değişim olmaz. Müdahaleyi "olmazsa olmaz" değil, "ölçülü tercih" olarak gördüğünüzde panik dilinden uzaklaşıyor.',
     },
     {
       question: 'Karar verirken kendime hangi soruyu sormalıyım?',
       answer:
-        'Tek bir soru: "Bu kararı kim soruyor — ben mi, yoksa duyduğum cümleler mi?" Cevap "ben" ise, hekiminizle yapılacak görüşmenin zemini sağlamdır. Cevap belirsizse, kararı bir süre daha taşımak ve yüzünüzle daha uzun bir konuşma yapmak çoğu zaman daha doğrudur.',
+        'Tek bir soru: "Bu kararı kim soruyor — ben mi, yoksa duyduğum cümleler mi?" Cevap "ben" ise, hekiminizle yapılacak görüşmenin zemini sağlam. Cevap belirsizse, kararı bir süre daha taşımak ve yüzünüzle daha uzun bir konuşma yapmak çoğu zaman daha doğru oluyor.',
     },
   ],
   '/hormonal-gecis/menopoz/hrt-ilk-alti-ay': [
