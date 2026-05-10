@@ -117,6 +117,27 @@ for (const article of staticArticles) {
     });
   }
 }
+
+// "Akıştaki Dosyalar" — anasayfa 04 section için en yeni 4 yazı
+// (Harper's Bazaar "This Week's Edit" çizgisinde numaralı index).
+// Kaynak: staticArticles, toISODate descending; aynı tarihte manifest sırası korunur.
+// Görselsiz indeks olduğundan thumbnail lookup'ı yok.
+const latestStreamArticles = staticArticles
+  .slice()
+  .sort(sortNewestFirst)
+  .slice(0, 4)
+  .map((article) => {
+    const writer = writers.find((w) => w.slug === article.writerSlug);
+    const dateParts = article.publishedDate.trim().split(/\s+/);
+    const shortDate = dateParts.length >= 2 ? `${dateParts[0]} ${dateParts[1]}` : article.publishedDate;
+    return {
+      path: article.path,
+      title: article.title,
+      sectionLabel: article.section.toLocaleUpperCase('tr-TR'),
+      writerName: writer?.displayName ?? 'Estranova',
+      shortDate,
+    };
+  });
 const homeJourneyFeatured = homeJourneyItems.find((item) => item.featured) ?? homeJourneyItems[0];
 const hasHomeJourneySection = Boolean(
   homeJourneyFeatured && (submenuHeroByRoute[homeJourneyFeatured.imageKey] ?? submenuHeroByRoute['/hormonal-gecis'])
@@ -203,6 +224,74 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
 
     <IssueHero issue={currentIssue} sectionNumber="03" />
 
+    {/*
+      04 — Akıştaki Dosyalar (2026-05-10 eklendi).
+      Numaralı index, görselsiz, en yeni 4 makale; Harper's Bazaar
+      "This Week's Edit" çizgisinde. Kapak dosyasından (03 IssueHero)
+      çıkan okurun "kapak dışında ne var?" sorusuna kompakt bir cevap.
+      Görsel yoğunluk eklemez; sadece tipografi + gold counter ritmi.
+    */}
+    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-12 md:py-14">
+      <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-9 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+              <span class="font-serif font-normal tabular-nums text-gold">04</span>
+              <span class="mx-2 text-gold">—</span>
+              AKIŞTAKİ DOSYALAR
+            </p>
+            <h2 class="font-serif text-3xl leading-[0.98] tracking-[-0.025em] text-ink md:text-4xl">
+              Bu haftanın incelemeleri
+            </h2>
+          </div>
+          <p class="max-w-md font-serif text-base italic leading-relaxed text-ink/65 md:text-right">
+            Editöryal akıştaki en son dört yazı; sayı kapağının dışından bir okuma daveti.
+          </p>
+        </header>
+
+        <ol class="grid gap-x-10 gap-y-2 md:grid-cols-2">
+          {
+            latestStreamArticles.map((article, idx) => (
+              <li>
+                <a
+                  href={article.path}
+                  class="group grid grid-cols-[auto_1fr] items-start gap-5 rounded-2xl px-3 py-4 transition hover:bg-cream-soft/35 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:gap-6 md:px-4 md:py-5"
+                >
+                  <span class="font-serif text-3xl italic tabular-nums leading-none text-gold md:text-4xl">
+                    {String(idx + 1).padStart(2, '0')}
+                  </span>
+                  <div class="border-l border-gold/40 pl-4 md:pl-5">
+                    <p class="mb-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-gold-bronze">
+                      {article.sectionLabel}
+                    </p>
+                    <h3 class="mb-2 font-serif text-xl leading-snug tracking-[-0.01em] text-ink transition group-hover:underline group-hover:decoration-gold/70 group-hover:underline-offset-4 md:text-2xl">
+                      {article.title}
+                    </h3>
+                    <p class="font-serif text-sm italic leading-relaxed text-ink/55">
+                      {article.writerName}
+                      <span class="mx-1.5 text-gold">·</span>
+                      {article.shortDate}
+                    </p>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+
+        <div class="mt-9 flex justify-end md:mt-10">
+          <a
+            href="/library"
+            class="group inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
+          >
+            Kütüphaneyi açın
+            <span class="font-serif text-lg text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
       <div class="pointer-events-none absolute -left-24 top-16 h-80 w-80 rounded-full bg-gold/10 blur-3xl"></div>
@@ -212,7 +301,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.78fr_1.22fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">04</span>
+            <span class="font-serif font-normal tabular-nums text-gold">05</span>
             <span class="mx-2 text-gold">—</span>
             EDİTÖRYAL SEÇKİ
           </p>
@@ -346,7 +435,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">05</span>
+            <span class="font-serif font-normal tabular-nums text-gold">06</span>
             <span class="mx-2 text-gold">—</span>
             Yazar Kadrosu
           </p>
@@ -515,7 +604,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
         <header class="lg:sticky lg:top-28">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">06</span>
+            <span class="font-serif font-normal tabular-nums text-gold">07</span>
             <span class="mx-2 text-gold">—</span>
             Koruyucu Sağlık
           </p>
@@ -568,7 +657,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
         <header class="lg:sticky lg:top-28">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">07</span>
+            <span class="font-serif font-normal tabular-nums text-gold">08</span>
             <span class="mx-2 text-gold">—</span>
             Sık Sorulanlar
           </p>
@@ -638,7 +727,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       </div>
     </section>
 
-    {showEditorialDigest && <EditorialDigestStrip sectionNumber="08" />}
+    {showEditorialDigest && <EditorialDigestStrip sectionNumber="09" />}
 
     <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[#fffaf0] px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
@@ -649,7 +738,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">09</span>
+            <span class="font-serif font-normal tabular-nums text-gold">10</span>
             <span class="mx-2 text-gold">—</span>
             Bilimsel Araştırmalar
           </p>
@@ -780,7 +869,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       <div class="mx-auto max-w-6xl">
         <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
-            <span class="font-serif font-normal tabular-nums text-gold">10</span>
+            <span class="font-serif font-normal tabular-nums text-gold">11</span>
             <span class="mx-2 text-gold">—</span>
             Bilim Yazarları
           </p>
@@ -927,7 +1016,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
           </span>
           <div>
             <p class="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-burgundy/75">
-              <span class="font-serif font-normal tabular-nums text-gold">11</span>
+              <span class="font-serif font-normal tabular-nums text-gold">12</span>
               <span class="mx-2 text-gold">—</span>
               Kütüphane
             </p>
