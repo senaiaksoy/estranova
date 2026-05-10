@@ -100,6 +100,23 @@ function getArticleWriterName(writerSlug: string): string {
 // Yazar kategorileri — iki ayrı carousel için filtreler
 const lifestyleWriters = activeWriters.filter((w) => w.category !== 'scientific');
 const scientificWriters = activeWriters.filter((w) => w.category === 'scientific');
+
+// Her yazarın en yeni yayınlanmış yazısı — ana sayfa carousel kartında
+// signaturePhrase yerine "son yazı" başlığını göstermek için.
+// Kaynak: staticArticles manifesti (tek otorite). publishedDate Türkçe ("8 Mayıs 2026")
+// → toISODate ile ISO'ya çevrilir; string karşılaştırma kronolojik sırayı korur.
+const latestArticleByWriter = new Map<string, { title: string; href: string; iso: string }>();
+for (const article of staticArticles) {
+  const iso = toISODate(article.publishedDate);
+  const current = latestArticleByWriter.get(article.writerSlug);
+  if (!current || iso.localeCompare(current.iso) > 0) {
+    latestArticleByWriter.set(article.writerSlug, {
+      title: article.title,
+      href: article.path,
+      iso,
+    });
+  }
+}
 const homeJourneyFeatured = homeJourneyItems.find((item) => item.featured) ?? homeJourneyItems[0];
 const hasHomeJourneySection = Boolean(
   homeJourneyFeatured && (submenuHeroByRoute[homeJourneyFeatured.imageKey] ?? submenuHeroByRoute['/hormonal-gecis'])
@@ -409,9 +426,20 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
                       <h3 class="mt-2 font-serif text-3xl leading-[0.98] tracking-[-0.03em] text-ink transition group-hover:text-burgundy">
                         {w.displayName}
                       </h3>
-                      <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
-                        {w.signaturePhrase}
-                      </p>
+                      {latestArticleByWriter.has(w.slug) ? (
+                        <div class="mt-3">
+                          <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-burgundy/75">
+                            Son yazısı
+                          </p>
+                          <p class="writer-phrase mt-1 font-serif text-base italic leading-snug text-ink/80">
+                            {latestArticleByWriter.get(w.slug)!.title}
+                          </p>
+                        </div>
+                      ) : (
+                        <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
+                          {w.signaturePhrase}
+                        </p>
+                      )}
                       <span class="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.17em] text-burgundy">
                         Profili oku
                         <span class="font-serif text-xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
@@ -839,9 +867,20 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
                       <h3 class="mt-2 font-serif text-3xl leading-[0.98] tracking-[-0.03em] text-ink transition group-hover:text-burgundy">
                         {w.displayName}
                       </h3>
-                      <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
-                        {w.signaturePhrase}
-                      </p>
+                      {latestArticleByWriter.has(w.slug) ? (
+                        <div class="mt-3">
+                          <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-burgundy/75">
+                            Son yazısı
+                          </p>
+                          <p class="writer-phrase mt-1 font-serif text-base italic leading-snug text-ink/80">
+                            {latestArticleByWriter.get(w.slug)!.title}
+                          </p>
+                        </div>
+                      ) : (
+                        <p class="writer-phrase mt-3 font-serif text-base italic leading-snug text-ink/70">
+                          {w.signaturePhrase}
+                        </p>
+                      )}
                       <span class="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.17em] text-burgundy">
                         Profili oku
                         <span class="font-serif text-xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
