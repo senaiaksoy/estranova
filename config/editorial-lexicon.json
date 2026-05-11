@@ -9,7 +9,10 @@
     "örüntüsünde": ["seyrinde", "gidişinde", "düzeninde"],
     "örüntüsüyle": ["seyriyle", "kalıbıyla", "düzeniyle"],
     "örüntüsel": ["tekrar eden", "kalıplaşan"],
-    "örüntüye": ["seyre", "gidişe", "düzene"]
+    "örüntüye": ["seyre", "gidişe", "düzene"],
+    "çökkünlük": ["çöküntü hali", "depresif belirti", "duygusal çöküntü"],
+    "çökünlük": ["çöküntü hali", "depresif belirti", "duygusal çöküntü"],
+    "çökkün": ["çökmüş", "yorgun"]
   },
   "soft_ban": {
     "çerçeve": ["bakış", "yol", "hat", "yaklaşım"],
