@@ -141,7 +141,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Sessiz konu',
         title: '40 Sonrası İdrar Kaçırma',
         excerpt:
-          'Sokakta her on kadından dördü yaşıyor ama çoğu kimseye söylemiyor. İki tip ayrımı + üç kapılı tedavi haritası.',
+          'Çevremizdeki kadınların önemli bir kısmı yaşıyor ama çoğu kimseye söylemiyor. İki tip ayrımı + üç kapılı tedavi haritası.',
         href: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
         readingMinutes: 7,
       },

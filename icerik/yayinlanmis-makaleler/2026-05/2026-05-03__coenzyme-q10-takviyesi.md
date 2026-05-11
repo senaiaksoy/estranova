@@ -223,7 +223,7 @@ ilacı, tiroid ilacı — CoQ10 ile etkileşime girer mi? Hangi sırayla
 almam, neye dikkat etmem gerekir?"* Bu soru hem güvenliği
 arttırır hem de kararı bireyselleştirir. Hekim cevap bilmiyor
 olabilir — bilen bir hekim *"bu konuda kontrol edip dönelim"*
-demekten çekinmez. Bu cümle güven sinyalidir.
+demekten çekinmez. Bu açıklık, güven ilişkisinin başlangıcıdır.
 
 ## Sıkça Sorulanlar
 
@@ -236,7 +236,7 @@ hastalarda ubiquinolün biraz daha iyi emildiğini bildirmiş
 (orta kanıt)
 . Pratikte sağlıklı hastaların çoğunda fark
 klinik olarak belirgin değil; ama ubiquinol fiyat olarak daha yüksek.
-Pazarlama dilindeki *"NMN daha üstün"* tarzı tartışmalar
+Pazarlama dilindeki *"ubiquinol daha üstün"* tarzı tartışmalar
 büyük ölçüde reklam dilidir — bireysel karar bütçe + emilim profili
 + hekim önerisiyle netleşir.
 

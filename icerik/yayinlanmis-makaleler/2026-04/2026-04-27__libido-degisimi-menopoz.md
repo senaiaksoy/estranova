@@ -247,4 +247,4 @@ Tıbbi Not
 
 Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
 Tedavi seçenekleri, ilaç kullanımı veya cinsel sağlık ile ilgili kararlar için kendi hekiminizle
-birlikte değerlendirme yapman önemlidir.
+birlikte değerlendirme yapmanız önemlidir.

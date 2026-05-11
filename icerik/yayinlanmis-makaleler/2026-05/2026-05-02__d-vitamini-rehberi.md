@@ -106,7 +106,7 @@ yüksek-dozun aksine düşmeyi artırdığını bildirmiş
 Bu yüzden yüksek bolus dozlar (örneğin yılda bir 500.000 IU) artık önerilmiyor.
 
 Daha az kanıtlı ama araştırma alanları: **kardiyovasküler risk**
-(eksiklikte risk artışı epidemiyolojik olarak gösterilmiş, ama takvinin riski
+(eksiklikte risk artışı epidemiyolojik olarak gösterilmiş, ama takviyenin riski
 belirgin azalttığına dair kanıt sınırlı), **bağışıklık ve enfeksiyon**
 (eksiklikte bazı solunum yolu enfeksiyonu sıklığı artıyor), **kanser
 riski** (zayıf kanıt, klinik öneri için yetersiz)
@@ -190,7 +190,7 @@ Dikkat çekmek istediğimiz
 Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğin durumlardır.
 
 -   Granülomatöz hastalık öyküsü (sarkoidoz, tüberküloz) — D vitamini takviyesi öncesi mutlaka değerlendirilmeli; bu tablolarda hiperkalsemi riski artar
--   Hiperparatiroidi öyküsü veya tekrarlayan böbrek taşı — D takvisi öncesi endokrinoloji ve nefroloji değerlendirmesi
+-   Hiperparatiroidi öyküsü veya tekrarlayan böbrek taşı — D takviyesi öncesi endokrinoloji ve nefroloji değerlendirmesi
 -   İleri kronik böbrek hastalığı — aktif D formu (kalsitriol) gerekebilir; standart D3 yetersiz kalabilir
 -   Çok yüksek doz takviye (günde 10.000 IU üstü) — kontrolsüz alımda hiperkalsemi tablosu (bulantı, kusma, böbrek taşı, kalp ritim bozukluğu) gelişebilir
 -   Postmenopozal kadında ani başlangıçlı kemik ağrısı, kırık öyküsü — D vitamini değerlendirmesinin yanında osteoporoz taraması (KMD) ve diğer ayırıcı tanılar gerekli
@@ -208,7 +208,7 @@ Bu, takvim öneriyor (genelde 8-12 hafta + tekrar ölçüm). **Üçüncüsü**
 — *"Aldığım diğer ilaçlar, takviyeler ve eşlik eden tıbbi durumlar D vitamini
 dozumu nasıl etkiliyor?"* Bu, kişiselleştirme zeminini açıyor.
 
-Bu üç soru hem dozajın doğru başlamasını hem de takvinin sürekli ayarlanabilmesini
+Bu üç soru hem dozajın doğru başlamasını hem de takviyenin sürekli ayarlanabilmesini
 sağlıyor. *"İnternetten gördüğüm dozda 6 ay alacağım"* yaklaşımı çoğu kez
 ya yetersiz ya gereksiz yüksek; ikisi de hedef değil.
 

@@ -16,7 +16,7 @@ exportedAt: 2026-05-11
 ## İsim Koymak: İki Tip Var, İkisi de Konuşulmaz
 
 Hastalarımın çok büyük bir kısmı yıllardır söyleyemediği şeyi sonunda söylediğinde, ilk
-söyledikleri *"bunu kimseye anlatamadım"* oluyor. Oysa konu sokakta her on kadından dördünü
+söyledikleri *"bunu kimseye anlatamadım"* oluyor. Oysa konu çevremizdeki kadınların önemli bir kısmını
 ilgilendiriyor
 (güçlü kanıt)
 . İsmi konulmayan bir konunun çözümü konuşulmuyor —
