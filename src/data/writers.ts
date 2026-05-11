@@ -43,14 +43,14 @@ export const writers: Writer[] = [
     publicBio:
       'Estranova Editörleri; temel rehberler, hub tamamlayıcıları ve kurumsal bilgi yazıları için kullanılan editöryal imzadır. Bu içerikler Estranova Editorial Gloss tonuyla hazırlanır: sofistike kadın dergisi ritmi, sakin sağlık okuryazarlığı ve bilimsel editör disiplini birlikte taşınır.',
     signaturePhrase:
-      'Vogue’un atmosfer duygusunu, Marie Claire’in çağdaş kadın deneyimine yakınlığını ve Estranova’nın kanıt-temelli sağlık çizgisini birleştirir.',
+      'Sofistike kadın dergisi atmosferiyle Estranova’nın kanıt-temelli sağlık disiplinini birleştiren kurumsal editöryal imza.',
     focusAreas: ['Editorial Gloss', 'Temel Rehberler', 'Bilimsel İnceleme'],
     isEditor: false,
     isInstitutionalByline: true,
     status: 'inactive',
     writingStyle: {
       voice:
-        'Estranova Editorial Gloss: rafine, şehirli, atmosferik ve kadın deneyimine yakın; Vogue/Marie Claire hissinden ilham alır ama hiçbir dış yayını taklit etmez. Kişisel deneyim iddiası kurmadan, kanıt-temelli editöryal sorumluluğu korur.',
+        'Estranova Editorial Gloss: rafine, şehirli, atmosferik ve kadın deneyimine yakın; sofistike kadın dergisi atmosferinden ilham alır ama hiçbir dış yayını taklit etmez. Kişisel deneyim iddiası kurmadan, kanıt-temelli editöryal sorumluluğu korur.',
       rhythm:
         'Kısa-orta paragraflar; görsel/duygusal bir lede, sonra net ayrım, ardından uygulanabilir sağlık okuryazarlığı adımı. Cümleler parlak ama ölçülü; dergisel akış klinik netlikle dengelenir.',
       framing:
@@ -58,7 +58,7 @@ export const writers: Writer[] = [
       dos: [
         'İmzada “Estranova Editörleri” kullan; sahipsiz anonimlik yaratma.',
         'Kişisel anekdot veya birinci tekil deneyim iddiası kurma.',
-        'Vogue’dan atmosfer ve seçicilik, Marie Claire’den erişilebilir çağdaş kadın dili al; marka, cümle veya yayın taklidi yapma.',
+        'Sofistike kadın dergisi atmosferinden seçicilik ve erişilebilir çağdaş kadın dili al; marka, cümle veya yayın taklidi yapma.',
         'Açılışı kuru tanımla değil, okurun bedensel/gündelik farkındalığını çağıran zarif bir sahneyle kur.',
         'Temel rehber, hub tamamlayıcı ve açıklayıcı sağlık haritası formatını editorial gloss ile yumuşat.',
         'Tıbbi konularda bilimsel editör incelemesini ve kırmızı bayrakları görünür tut.',
@@ -774,6 +774,14 @@ export const writers: Writer[] = [
 export const inactiveWriterSlugs = ['bahar-ozeray', 'gonca-gokdemir', 'elif-ozcan-dulundu', 'ozlem-denizmen'] as const;
 
 export const activeWriters = writers.filter((w) => w.status !== 'inactive');
+
+// /yazarlar/<slug> rotalarında profil sayfası üretilen yazar/imza listesi.
+// `activeWriters` kadrosu + kurumsal byline'lar (`isInstitutionalByline: true`).
+// Anasayfa carousel'leri ve arama indeksi bu listeyi kullanmaz; orada
+// `activeWriters` / `lifestyleWriters` / `scientificWriters` geçerlidir.
+export const routableWriters = writers.filter(
+  (w) => w.status !== 'inactive' || w.isInstitutionalByline === true,
+);
 
 // Editör her zaman ilk: Berna; diğerleri: displayName alfabetik
 export const editors = activeWriters.filter((w) => w.isEditor);
