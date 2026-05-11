@@ -8,22 +8,22 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Estetik diş kararı için ideal bir yaş var mı?',
       answer:
-        'Tek bir ideal yaş yok; karar, dişin ve dişetinin sağlık durumuyla, kemik desteğiyle ve kişinin kendi yüzüne baktığı yerle ilgilidir. 40 sonrası yüz orta hattının, dudak hattının ve çevre kemiğin değişmeye başladığı bir dönemdir; bu yüzden bu yaş bandında alınan estetik diş kararı, daha önceki kararlardan farklı düşünmeyi gerektirir. Aceleci bir tarih belirlemek yerine, hekiminizle yüz yapınızın bugünkü ölçüsünü ve önümüzdeki 5–10 yıl içindeki seyrini birlikte değerlendirmek daha sürdürülebilir bir başlangıçtır.',
+        'Hastalarıma hep söylediğim şey şu: tek bir ideal yaş yok. Karar, dişin ve dişetinin sağlık durumuyla, kemik desteğiyle ve sizin kendi yüzünüze baktığınız yerle ilgili. 40 sonrası yüz orta hattının, dudak hattının ve çevre kemiğin değişmeye başladığı bir dönem; bu yüzden bu yaş bandında muayene odamda alınan estetik diş kararlarını, 25 yaşındakilerden farklı düşünüyorum. Aceleci bir tarih belirlemek yerine, yüz yapınızın bugünkü ölçüsünü ve önümüzdeki 5–10 yıl içindeki seyrini birlikte konuşmak — bana göre çok daha sürdürülebilir bir başlangıç.',
     },
     {
       question: 'Aynı işlem bir arkadaşımda iyi sonuç verdi; bende de aynı olur mu?',
       answer:
-        'Çoğunlukla hayır — ya da en azından "aynı" olmaz. Diş rengi, dişeti hattı, dudak kalınlığı, gülüş çizgisi, yüz simetrisi, kemik desteği ve iyileşme kapasitesi kişiden kişiye değişir. Aynı işlem aynı yüze yerleşmez. Başkasının sonucu üzerinden karar almak, çoğu zaman beklenti hatasına yol açar; kendi yüzünüzün ölçüsünü tanıyan bir karar, her zaman daha sürdürülebilir kalır.',
+        'Çoğunlukla hayır — ya da en azından "aynı" olmaz. Bunu hastalarıma muayene odamda hemen hemen her hafta söylüyorum. Diş rengi, dişeti hattı, dudak kalınlığı, gülüş çizgisi, yüz simetrisi, kemik desteği ve iyileşme kapasitesi kişiden kişiye değişir; aynı işlem aynı yüze yerleşmez. Başkasının sonucu üzerinden karar almak çoğu zaman beklenti hatasına yol açıyor. Bence kendi yüzünüzün ölçüsünü tanıyan bir karar her zaman daha sürdürülebilir kalıyor.',
     },
     {
       question: 'Estetik diş kararına karar vermek kaç görüşme alır?',
       answer:
-        'Çoğu kalıcı estetik karar için tek görüşme yeterli değildir. İlk görüşme genelde yüzünüzü ve dişlerinizi tanıma görüşmesidir; ikinci görüşmede seçenekler, sınırlar ve gerçekçi beklentiler konuşulur. Daha geri dönüşsüz adımlar — özellikle minenin aşındırılmasını gerektiren işlemler — düşünülüyorsa, ara bir görüşme veya geçici bir denemeyle ilerlemek karara güven katar. "Bugün karar vermek zorunda değilsiniz" cümlesi, hekiminizden duymanız gereken sade bir cümledir.',
+        'Hastalarımda kalıcı estetik kararlar için neredeyse hiçbir zaman tek görüşmeyle ilerlemiyorum. İlk görüşme bende yüzünüzü ve dişlerinizi tanıma görüşmesidir; ikinci görüşmede seçenekleri, sınırları ve gerçekçi beklentileri birlikte konuşuyoruz. Daha geri dönüşsüz adımlar — özellikle minenin aşındırılmasını gerektiren işlemler — düşünülüyorsa ara bir görüşme veya geçici bir deneme rica ediyorum; bu, karara güven katar. Hastalarıma sıkça söylediğim bir cümle var: "Bugün karar vermek zorunda değilsiniz." Bunu bir hekimden duyduğunuzda iyi bir işarettir.',
     },
     {
       question: 'Estetik diş hekimi seçerken neye dikkat etmek gerek?',
       answer:
-        'En sade kontrol: hekimin sizi konuştuğunda <em>"ben şunu yaparım"</em> yerine <em>"sizin yüzünüze ne yakışır"</em> çerçevesinden ilerleyip ilerlemediğine bakın. Geri döndürülemez adımları (mine aşındırma, çoklu kron, agresif beyazlatma) ilk görüşmede önerme aceleciliği, sürdürülebilir bir yaklaşımın işareti değildir. Müdahale yapmamayı veya daha küçük bir müdahaleyi de bir seçenek olarak masaya koyan hekim — uzun vadede daha güvenilir bir adres olur.',
+        'En sade kontrol şu: hekim sizinle konuşurken <em>"ben şunu yaparım"</em> mı diyor, yoksa <em>"sizin yüzünüze ne yakışır"</em> mı diye soruyor — bu fark her şeyi söyler. Geri döndürülemez adımları (mine aşındırma, çoklu kron, agresif beyazlatma) ilk görüşmede önerme aceleciliği; bence sürdürülebilir bir yaklaşımın işareti değil. Müdahale yapmamayı veya daha küçük bir müdahaleyi de bir seçenek olarak masaya koyan hekim — uzun vadede daha güvenilir bir adres oluyor.',
     },
   ],
   '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku': [

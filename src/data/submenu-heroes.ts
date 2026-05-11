@@ -227,6 +227,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/metin-alis-tiroid-menopoz-yorgunluk-uyku-byline.jpg',
     alt: 'Boğaz manzaralı aydınlık bir odada, açık defterine not alırken pencereden dışarı bakan 40+ kadın portresi; tiroid, menopoz ve uyku yorgunluğu yazısı için sakin editoryal kart görseli',
   },
+  '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari': {
+    src: '/images/library/editorial/duygu-karaosmanoglu-yuze-yakisan-card.webp',
+    alt: 'Sıcak ışıklı bir iç mekanda el aynası tutarak kendi doğal gülüşüne bakan 50\'li yaşlardaki kadın portresi; estetik diş kararında yüze yakışanı arayan kişiselleştirme yaklaşımının editoryal kart görseli',
+  },
   '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda': {
     src: '/images/library/editorial/isik-selin-gunce-durus-beden-farkindaligi-byline.jpg',
     alt: 'Aydınlık bir pencere önünde boynunu ve omuzlarını nazikçe esneten kadın; beden farkındalığı, duruş ve günlük gerginlik yazısı için sakin editoryal kart görseli',
