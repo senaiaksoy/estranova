@@ -80,28 +80,6 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
-    path: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
-    title: 'Yüze Yakışan Estetik Diş Kararı — Aynadan Önce Yüze Bakmak',
-    description:
-      '40 sonrası estetik diş kararı: yüze yakışanı aramak, doğal görünümün üç ölçüsü, müdahale yelpazesinin sınırları ve ilk görüşmede sormanızı önerdiğim beş soru. Estetik diş hekimi gözüyle, muayene odasından bir karar rehberi.',
-    publishedDate: '11 Mayıs 2026',
-    writerSlug: 'duygu-karaosmanoglu',
-    section: 'Hormonal Geçiş · 40 Sonrası',
-    sectionPath: '/hormonal-gecis/40-sonrasi',
-    keywords: [
-      'estetik diş hekimliği',
-      'gülüş tasarımı',
-      'porselen laminat',
-      'diş beyazlatma',
-      'yetişkin ortodonti',
-      'doğal görünüm',
-      '40 sonrası estetik',
-      'menopoz diş sağlığı',
-      'kişiselleştirilmiş tedavi',
-      'estetik karar süreci',
-    ],
-  },
-  {
     path: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku',
     title: 'Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni',
     description:

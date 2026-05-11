@@ -49,7 +49,6 @@ export const subHubs: SubHubConfig[] = [
     heroLede:
       'Kırktan sonra sağlık yalnızca belirti çıktığında bakılan bir alan değil; tarama takvimi, ağız-diş sağlığı, kemik, metabolizma ve günlük ritmin birlikte izlendiği uzun vadeli bir sağlık hattıdır.',
     articlePaths: [
-      '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
       '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku',
       '/hormonal-gecis/40-sonrasi/tarama-testleri',
       '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari',
