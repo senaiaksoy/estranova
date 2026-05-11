@@ -63,6 +63,19 @@ const latest = latestArticle ? toHubArticle(latestArticle) : undefined;
 const archiveItems = archiveArticles.map(toHubArticle);
 const chapters = Object.values(chapterMap).filter((entry) => entry.href.startsWith(`${config.path}/`));
 const next = chapters[0];
+
+// Bölümdeki yazıların keyword'leri sıklığa göre toplanır; sağ kolondaki
+// "Konular" chip listesi okuyucunun kategoriyi tarama hızını artırır.
+const keywordFrequency = new Map<string, number>();
+for (const article of articles) {
+  for (const kw of article.keywords) {
+    keywordFrequency.set(kw, (keywordFrequency.get(kw) ?? 0) + 1);
+  }
+}
+const topKeywords = Array.from(keywordFrequency.entries())
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'tr'))
+  .slice(0, 6)
+  .map(([kw]) => kw);
 ---
 
 <SiteLayout title={config.siteTitle} description={config.description}>
@@ -83,28 +96,34 @@ const next = chapters[0];
       <div class="mx-auto max-w-6xl">
         <div class="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14">
           <div class="lg:col-span-8">
-            <p class="editorial-dropcap mb-7 text-lg leading-relaxed text-ink/85 md:text-xl">
+            <p class="editorial-dropcap text-lg leading-relaxed text-ink/85 md:text-xl">
               {config.description}
-            </p>
-            <p class="text-base leading-relaxed text-ink/72 md:text-lg">
-              En yeni yazı küçük bir seçki olarak görünür; önceki okumalar ise hızlı taranabilen bir dosya indeksi içinde tutulur.
             </p>
           </div>
 
           <div class="lg:col-span-4 lg:pt-1">
             <MarginaliaRail>
               <MarginaliaItem
-                label="Dosya"
-                value={`${articles.length} yazı yayında · ${chapters.length} alt başlık`}
+                label="Bu bölüm"
+                value={`${articles.length} yazı · ${chapters.length} alt başlık${latestArticle ? ` · En yeni: ${latestArticle.publishedDate}` : ''}`}
               />
-              <MarginaliaItem label="Okuma ritmi" emphasized="Güncel yazı üstte; önceki başlıklar indeks mantığıyla taranır." />
-              <MarginaliaItem label="Bu bölümde">
-                <ul class="mt-2 space-y-3 text-sm leading-snug text-ink/78">
-                  <li><span class="block font-semibold text-ink">Güncel okuma</span>Bölümün en yeni yazısı kısa bir seçki olarak öne çıkar.</li>
-                  <li><span class="block font-semibold text-ink">Arşiv indeksi</span>Önceki yazılar numaralı dizinle daha hızlı bulunur.</li>
-                  <li><span class="block font-semibold text-ink">Alt başlıklar</span>Aynı ana kategorideki yollar sayfanın sonunda kalır.</li>
-                </ul>
-              </MarginaliaItem>
+              {topKeywords.length > 0 && (
+                <MarginaliaItem label="Konular">
+                  <ul class="mt-2 flex flex-wrap gap-1.5">
+                    {topKeywords.map((kw) => (
+                      <li>
+                        <span class="inline-flex items-center rounded-full border border-burgundy/15 bg-cream-soft/40 px-2.5 py-1 text-[11px] uppercase tracking-[0.16em] text-ink/72">
+                          {kw}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </MarginaliaItem>
+              )}
+              <MarginaliaItem
+                label="Tıbbi inceleme"
+                value="Her yazı bilimsel editör Doç. Dr. Senai Aksoy gözden geçirmesinden geçer; iddialar kanıt seviyesiyle birlikte yayınlanır."
+              />
             </MarginaliaRail>
           </div>
         </div>
