@@ -38,19 +38,37 @@ const readingMinutesByPath: Record<string, number> = {
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': 9,
 };
 
-const newestFirst = (a: (typeof staticArticles)[number], b: (typeof staticArticles)[number]) =>
-  toISODate(b.publishedDate).localeCompare(toISODate(a.publishedDate));
+// Senai Aksoy ve Berna Aksoy yazıları dosyada varsa her zaman en üstte
+// görünür; her yeni yazı geldikçe bu pinned slotlar da kendi içinde en
+// yeniyle güncellenir. Pinned grup sırası: Senai → Berna → diğerleri.
+// Her grup kendi içinde yayın tarihine göre yeniden eskiye sıralanır.
+const pinnedAuthorRank = new Map<string, number>([
+  ['senai-aksoy', 0],
+  ['berna-aksoy', 1],
+]);
+
+const sortByPinnedThenNewest = (
+  a: (typeof staticArticles)[number],
+  b: (typeof staticArticles)[number],
+) => {
+  const aRank = pinnedAuthorRank.get(a.writerSlug);
+  const bRank = pinnedAuthorRank.get(b.writerSlug);
+  if (aRank !== undefined && bRank === undefined) return -1;
+  if (aRank === undefined && bRank !== undefined) return 1;
+  if (aRank !== undefined && bRank !== undefined && aRank !== bRank) return aRank - bRank;
+  return toISODate(b.publishedDate).localeCompare(toISODate(a.publishedDate));
+};
 
 const configuredPathSet = new Set(config.articlePaths ?? []);
 const exactArticles = staticArticles
   .filter((article) =>
     configuredPathSet.size > 0 ? configuredPathSet.has(article.path) : article.path.startsWith(`${config.path}/`),
   )
-  .sort(newestFirst);
+  .sort(sortByPinnedThenNewest);
 
 const broaderArchive = staticArticles
   .filter((article) => article.sectionPath === sectionPath && !exactArticles.some((item) => item.path === article.path))
-  .sort(newestFirst);
+  .sort(sortByPinnedThenNewest);
 
 const articles = exactArticles.length > 0 ? exactArticles : broaderArchive.slice(0, 8);
 const latestArticle = articles[0];
