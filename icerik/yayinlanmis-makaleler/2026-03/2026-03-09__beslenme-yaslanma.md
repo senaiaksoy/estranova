@@ -222,8 +222,7 @@ yumurta-yoğurt-tam tahıl üçlüsü, gün içinde bir avuç kuruyemiş, akşam
 telefonu uzaklaştırmak. Bunların hiçbiri kahramanlık değil; kendine ayrılmış küçük zaman dilimleri.
 
 Belki şu soru yardımcı olur: bu hafta tabağa hangi rengi yargılamadan, sadece ekleme niyetiyle
-koyabilirim? Karar kendi kararınız, sorumluluğu da size ait. Beden bir cümle söylemişti; siz
-tabağa o cümlenin cevabını koyuyorsunuz.
+koyabilirim? Karar kendi kararınız, sorumluluğu da size ait. Tabağa hangi rengi ekleyeceğini bilmek; o tabağı zorlamaktan çok daha sürdürülebilir bir başlangıçtır.
 
 Tıbbi Not
 

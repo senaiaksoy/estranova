@@ -277,8 +277,7 @@ Ama *"vitamin"* adı yanıltıcı — biyolojik olarak hormon gibi davranıyor; 
 yüzden dozaj, takip ve eşlik eden durumlar için *tek bir reçete yok*. Bilgi
 belirsizliğin panzehiridir; bu konuda da öyle. Önce baseline 25-OH-D ölçümü, hedef
 seviyeye yönelik kişiselleştirilmiş dozaj, 8-12 haftalık kontrol takvimi ve eşlik
-eden tıbbi durumlar/ilaçlarla birlikte değerlendirme — bu yaklaşım hem cüzdanı hem
-böbreği koruyor.
+eden tıbbi durumlar/ilaçlarla birlikte değerlendirme — bu yaklaşım çoğu kadın için hem güvenli hem ekonomik.
 
 Bir uyarıyı da paylaşmadan geçmeyeyim: yüksek-doz bolus stratejileri
 (yılda bir 500.000 IU gibi) artık önerilmiyor; düşmeyi önlemediği, hatta bazı

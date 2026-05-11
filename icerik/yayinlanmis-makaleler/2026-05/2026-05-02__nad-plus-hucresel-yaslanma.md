@@ -87,7 +87,7 @@ NADaz/glikohidrolaz enzimi; yaşla aktivitesi belirgin biçimde artıyor
 
 (iyi kanıt)
 . Kronik düşük düzeyli iltihabi yük (sıklıkla
-*"inflammaging"* olarak anılıyor) CD38'i tetikliyor; bu da NAD+'ın
+*iltihaplı yaşlanma* olarak anılıyor) CD38'i tetikliyor; bu da NAD+'ın
 tüketilmesine yol açıyor. CD38 inhibisyonu hayvan çalışmalarında NAD+ düzeylerini
 ve mitokondriyal işlevi belirgin biçimde iyileştiriyor — ama insan denemeleri
 henüz erken aşamada.
@@ -106,7 +106,7 @@ tedavi stratejisini bütünüyle değiştiriyor.
 **"Sebep" hipotezi:** NAD+ düşüşü yaşlanma süreçlerini başlatıyor
 — sirtuinler yetmiyor, PARP'lar tükeniyor, mitokondri zayıflıyor, hücreler
 yaşlanma fenotipine giriyor. Bu hipotez doğruysa NAD+'ı yükseltmek *yaşlanmayı
-yavaşlatabilir*. David Sinclair gibi araştırmacılar bu yönde yoğun çalışıyor.
+yavaşlatabilir*. Bu hipotezi savunan araştırmacılar son yıllarda öne çıkıyor.
 
 **"Sonuç" hipotezi:** NAD+ düşüşü yaşlanmanın eşlik eden bir sonucu;
 asıl mekanizmalar başka yerlerde (telomer kısalması, mitokondriyal mutasyonlar,

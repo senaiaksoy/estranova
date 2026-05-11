@@ -19,7 +19,7 @@ Rüzgar üstünde geçirilen bir günün sonunda bedenin sesi sabahki gibi çık
 çok erken öğrendim: aynı kas, sabah başka; akşam başka cevap verir. Sabah antrenmanındaki enerjiyle akşam
 toparlanma hareketinin aynı şey olmadığını beden insana çok net söyler.
 
-Ben henüz perimenopoz bedenini kendi içimden yaşamıyorum. Ama annemin kuşağındaki kadınların akşam saatlerinde
+Ben henüz perimenopoz bedenini kendi içimden yaşamıyorum. Ama çevremdeki kadınların akşam saatlerinde
 “çok yorgunum ama uykuya da geçemiyorum” dediği anları yakından gördüm. Çoğu zaman sorun hareketin varlığı
 değil, hareketin diliydi: beden dinlenmek isterken ona hâlâ performans görevi vermek.
 

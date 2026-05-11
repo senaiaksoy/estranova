@@ -171,7 +171,7 @@ bazen geç geliyor. Bunların hiçbiri tek başına felaket cümlesi değil; ama
 haritasını çizebilir.
 
 Ben bu dönemi bir test sonucundan çok bir defter sayfası gibi düşünmeyi seviyorum. Her belirti bir karar
-değil; bazıları sadece işaret. Beden bir cümle söylemişti; siz onu bu kez kendi takviminize yazıyorsunuz.
+değil; bazıları sadece işaret. Bedeniniz işaret veriyor; siz onu yargılamadan, bu kez kendi takviminize yazıyorsunuz.
 
 Tıbbi Not
 

@@ -59,8 +59,8 @@ hafiflemesi ve bedenle kurulan gergin ilişkinin yumuşaması nedeniyle genel iy
 çevrilmemelidir. Fayda varsa çoğu zaman dolaylı yoldan gelir: daha iyi uyku, daha az gece bölünmesi,
 daha az sürekli tetikte olma hali.
 
-Bu dönemi yaşayan biri olarak çevrenizde de şunu duymuş olabilirsiniz: “Aslında mesele sadece sıcak
-basması değilmiş; ben daha az dağılmış hissetmeye başladım.” Ama bu benim yolum, sizinki farklı olabilir.
+Hastalarımdan sık duyduğum cümlelerden biri şu: “Aslında mesele sadece sıcak
+basması değilmiş; ben daha az dağılmış hissetmeye başladım.” Ama her kadının yolu aynı değil.
 HRT’nin yaşam kalitesine katkısı gerçektir; yine de bunun herkeste aynı tonda yaşanacağını varsaymamak
 gerekir.
 
@@ -188,7 +188,7 @@ Daha dürüst okuma şu olabilir: HRT, cilt ve saçta menopozla ilişkili bazı 
 daha yumuşak hale getirebilir; ama bu etki ikincil bir kazançtır. Birincil karar gerekçesi hâlâ sıcak basması,
 uyku bölünmesi, vajinal yakınmalar, kemik sağlığı ve erken menopoz gibi daha net alanlardır.
 
-## Genel anti-aging ve iyi oluş etkisi nasıl değerlendirilmeli?
+## Genel yaşlanma karşıtı söylem ve iyi oluş etkisi nasıl değerlendirilmeli?
 
 “Anti-aging” kelimesi kulağa güçlü geliyor; ama tıbbi kararları çoğu zaman gereğinden parlak bir dile itiyor.
 
@@ -204,7 +204,7 @@ Yani “well-being” etkisi varsa, çoğu zaman doğrudan değil dolaylıdır. 
 eklemekte zorlandığı sosyal ritme biraz daha kolay döndüğünde, bedenine yabancılaşması azaldığında bu genel iyi
 oluş hissi büyür. Ama bunu herkeste aynı tonda, aynı hızda ve aynı genişlikte beklemek doğru olmaz.
 
-Anti-aging dilinde en çok kaçırılan nokta da bu: HRT bazı sistemlerde destek sağlayabilir, ama onu yaşlanmayı
+Yaşlanma karşıtı söylemde en çok kaçırılan nokta da bu: HRT bazı sistemlerde destek sağlayabilir, ama onu yaşlanmayı
 durduran bir proje gibi sunmak hem bilimsel olarak zayıf hem de Estranova çizgisine göre fazla iddialı olur.
 Daha sakin ve doğru olan, bu tedavinin bazı kadınlarda daha iyi yaş alma deneyimine katkı verebileceğini; ama
 bunun hedefi “genç görünmek” değil, daha az zorlanmak olduğunu söylemektir.

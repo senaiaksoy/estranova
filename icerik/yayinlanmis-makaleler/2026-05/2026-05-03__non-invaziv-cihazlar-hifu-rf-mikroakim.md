@@ -151,7 +151,7 @@ temelin yerine değil.
 ## Beklenti, Maliyet, Risk: Pratik Notlar
 
 Eğer hekiminizle birlikte bir non-invaziv cihaz değerlendirmeye karar
-verirseniz, bilmeniz yarayacak birkaç pratik nokta var.
+verirseniz, işinize yarayacak birkaç pratik nokta var.
 
 **Beklenti yönetimi:** En önemli adım. Bu cihazlardan
 beklenen *küçük-orta düzeyde sıkılaşma, hafif kontur iyileşmesi,

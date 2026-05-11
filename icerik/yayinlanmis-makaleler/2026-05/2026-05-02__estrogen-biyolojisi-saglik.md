@@ -321,7 +321,7 @@ metabolizması, formla doz ve uygulama yolu seçenekleri, kanser ilişkisinin
 mozaik tablosu — hepsi *"basit reçete"* mantığını dışlıyor. Bilgi
 belirsizliğin panzehiridir; bu konuda da öyle. Mekanizmayı bilmek tedavi
 kararının temelini kuruyor; ama mekanizma tek başına karar vermiyor — eşlik eden
-tıbbi durumlar, bireysel risk-fayda dengesi ve takip planı birlikte yorulduğunda
+tıbbi durumlar, bireysel risk-fayda dengesi ve takip planı birlikte yorumlandığında
 anlamlı bir tablo çıkıyor.
 
 Bilim tarafında bir hatırlatmayı da paylaşayım: bu alandaki bilim hızla

@@ -113,7 +113,7 @@ zaten farkı yaratıyor.
 
 ## Tıbbi Seçenekler — Karar Süreci
 
-Yaşam tarzı adımlarını denediğin halde sıcak basması iş günlerini, geceleri ya da ilişki kurma kapasiteni belirgin
+Yaşam tarzı adımlarını denediğiniz halde sıcak basması iş günlerinizi, gecelerinizi ya da ilişki kurma kapasitenizi belirgin
 etkiliyorsa, bunu bir irade meselesi gibi görmek yerine masaya seçenekleri birlikte koymak daha kıymetli.
 
 Hormon tedavisi (HRT), uygun kadınlarda vazomotor belirtileri azaltmada en etkili seçeneklerden biri olarak biliniyor
@@ -154,8 +154,8 @@ döneminde bu düşüş hareketi sırasında termostatın daralan toleransı tet
 terlemeyle vücut hızlı serinlemeye çalışıyor
 (iyi kanıt)
 . Yatak başında kalın yorgan, kalın gecelik ya da
-akşam yenen ağır yemek bu sahneyi büyütüyor. Çoğu kadında ince katmanlı bir gecelik (terlediğinde
-çıkarabileceğin), nefes alabilen pamuk-keten nevresim ve yatak başına serinletici küçük bir el
+akşam yenen ağır yemek bu sahneyi büyütüyor. Çoğu kadında ince katmanlı bir gecelik (terlediğinizde
+çıkarabileceğiniz), nefes alabilen pamuk-keten nevresim ve yatak başına serinletici küçük bir el
 yelpazesi ya da sprey gece sahnesini belirgin biçimde yumuşatıyor.
 
 ### HRT dışında paroksetin veya gabapentin gerçekten işe yarıyor mu?
@@ -179,9 +179,9 @@ değişiyor
 olsa da etki HRT'ye yakın değil ve uzun süreli güvenlik için karaciğer izlemi öneriliyor
 (sınırlı kanıt)
 . Adaçayı
-ekstresinin terleme üzerine küçük çalışmaları var; kanıt erken ve sınırlı. Kullanmaya karar verirsen tek bir destekle
-başla, dört-altı hafta değerlendir; aynı anda birkaç ürün denemek hem etkiyi hem yan etkiyi okumayı zorlaştırıyor ve
-mevcut ilaçlarınla etkileşimi mutlaka hekimine sor.
+ekstresinin terleme üzerine küçük çalışmaları var; kanıt erken ve sınırlı. Kullanmaya karar verirseniz tek bir destekle
+başlayın, dört-altı hafta değerlendirin; aynı anda birkaç ürün denemek hem etkiyi hem yan etkiyi okumayı zorlaştırıyor ve
+mevcut ilaçlarınızla etkileşimi mutlaka hekiminize sorun.
 
 ### Sıcak basması yıllar sonra hâlâ varsa ne yapmalıyım?
 

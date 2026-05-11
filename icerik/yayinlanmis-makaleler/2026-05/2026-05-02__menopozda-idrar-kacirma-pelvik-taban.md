@@ -114,7 +114,7 @@ temel sorular hâlâ açık.
 Bu cümleyi *"umut etiketi"* yerine bilen birinin gerçek yorumlaması olarak okumak daha doğru:
 karar vermeden önce davranışsal adımlar denenmiş mi, doğru tip belirlenmiş mi, lokal östrojen
 gibi belgeli seçeneklerin yeri konuşulmuş mu? Bu sıralamayı atlayarak yerel cihaz uygulamasına
-gitmek, çoğu zaman umulan sonucu vermiyor; bütçe ve beklenti birlikte yorulduğunda hayal
+gitmek, çoğu zaman umulan sonucu vermiyor; bütçe ve beklenti birlikte yorumlandığında hayal
 kırıklığı doğuyor.
 
 ## Doktora Hangi Soruları Sormalı?

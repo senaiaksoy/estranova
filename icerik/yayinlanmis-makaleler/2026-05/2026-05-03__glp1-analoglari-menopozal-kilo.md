@@ -189,7 +189,7 @@ plana ihtiyaç vardır (HRT, non-hormonal seçenekler, davranışsal yaklaşıml
 
 ## Pratik Notlar: Yan Etki, Maliyet, Erişim, Tedavi Süresi
 
-GLP-1 tedavisi düşünüyorsanız bilmeniz yarayacak pratik notlar.
+GLP-1 tedavisini düşünüyorsanız işinize yarayacak pratik notlar.
 
 **Yan etki profili:** En sık görülen yan etkiler bulantı,
 ishal, kabızlık, geğirme, hafif baş ağrısı; çoğu hastada doz artışına

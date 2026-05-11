@@ -231,7 +231,7 @@ mantıklıdır, ama haftaları aşan ve gündüz işlevini bozan bir uykusuzluk 
 doğru bir strateji değildir. Bunu söylerken kesinlik iddia etmiyorum; sadece kendi okumamın getirdiği
 çerçeveyi paylaşıyorum.
 
-Beden bir cümle söylemişti; siz onu kendi saatinizde dinliyorsunuz.
+Her gece aynı saatte uyumak gerekmez; aynı saatte uyanmaya niyet etmek, ritmi kendiliğinden yapılandırır.
 
 Tıbbi Not
 

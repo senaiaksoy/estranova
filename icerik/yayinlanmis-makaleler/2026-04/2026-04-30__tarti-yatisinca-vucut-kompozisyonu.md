@@ -147,7 +147,7 @@ takvime yerleşti. Kararım kendi kararım, ama yalnız aldığım bir karar de�
 
 Bu üç notun da arkasında aynı tutum var: bedeni izlemek değil, bedenle bir konuşma kurmak. Kararı her
 seferinde hekimimle birlikte değerlendirdik; her seferinde "bu benim yolum" diye tuttum. Sizin
-için işe yarayacak yaklaşım farklı olabilir — özellikle bu konuyu kendi sağlık geçmişinle birlikte
+için işe yarayacak yaklaşım farklı olabilir — özellikle bu konuyu kendi sağlık geçmişinizle birlikte
 değerlendirebilecek bir hekimle uzun bir bağ, en değerli adım.
 
 ## Sıkça Sorulan Sorular
@@ -193,8 +193,7 @@ ve olmalı da.
 
 Belki şu soru yardımcı olur: bu altı ayda tartı dışında neyi yargılamadan, sadece fark etmek
 niyetiyle gözlemleyebilirim? Bir pantolonun düşüşü, bir merdivenin sonunda nefesin tonu, sabah
-kalkarken belinizin nasıl açıldığı. Karar kendi kararınız, sorumluluğu da size ait. Beden bir cümle
-söylemişti; siz onu kendi duruşunuzdan okuyorsunuz.
+kalkarken belinizin nasıl açıldığı. Karar kendi kararınız, sorumluluğu da size ait. Tartının söylediğinden çok bedenin söylediğine kulak vermek, bu dönemde öğrenilen en sade yön oluyor.
 
 Tıbbi Not
 

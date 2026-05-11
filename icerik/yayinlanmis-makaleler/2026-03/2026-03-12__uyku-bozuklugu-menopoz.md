@@ -15,8 +15,8 @@ exportedAt: 2026-05-11
 
 ## Uyku Aslında Düz Bir Çizgi Değil
 
-Şu soruyu yıllarca aklımda dolaştırdım: aynı saatte yatıp aynı saatte kalkmak neden bazı sabahlar
-dinlenmiş, bazı sabahlar eksik bir hisle bırakıyor? Cevap, uykunun düz bir çizgi olmadığını fark
+Klinik pratiğimde yıllardır şu soruyla sık karşılaşırım: aynı saatte yatıp aynı saatte kalkmak neden bazı sabahlar
+dinlenmiş, bazı sabahlar eksik bir hisle bırakır? Cevap, uykunun düz bir çizgi olmadığını fark
 ettiğimde gelmeye başladı. Beden gece boyu ince bir koreografi yürütüyor; bu yüzden saat tek başına
 yetmiyor.
 
@@ -223,7 +223,7 @@ gelir — sıralama önemli, önce zemin sonra üst yapı. Apne, huzursuz bacak 
 uykusuzluk ise "menopoz uykusu" diye geçiştirilemeyecek tablolar; erken değerlendirme yalnız gece
 konforunu değil, kalp ve metabolik sağlığı da koruyor.
 
-Beden bir cümle söylemişti; siz onu yastığa bırakıyorsunuz.
+Uyku bozukluğu görünmez bir yük; doğru sırayla bakıldığında çoğunlukla yatışan bir tablodur.
 
 Tıbbi Not
 

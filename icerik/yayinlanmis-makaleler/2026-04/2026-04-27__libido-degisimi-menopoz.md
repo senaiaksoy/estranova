@@ -124,7 +124,7 @@ etkiler gösterebilir
 (iyi kanıt)
 . Bu etkiler doza, ilaç türüne ve kişiye göre değişir.
 
-Önemli olan şu: kullandığın ilaçları gözden geçirmek hiçbir ilacı tek başına kesmek anlamına gelmez.
+Önemli olan şu: kullandığınız ilaçları gözden geçirmek hiçbir ilacı tek başına kesmek anlamına gelmez.
 Antidepresan kullanan biri için bu cümle hayati: tedaviyi kesmek depresyon riskini artırır ve libido
 değişimi tek başına bir gerekçe değildir. Hekiminizle birlikte alternatif değerlendirilebilir; bazı
 kadınlarda farklı bir ilaca geçiş yapılabilir, bazılarında doz ayarlanabilir, bazılarında ek bir

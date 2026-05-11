@@ -30,9 +30,9 @@ gece. Ortak olan şey çoğu zaman ter değil aslında — onun arkasındaki o k
 
 ## Vücut Tam Olarak Ne Yapıyor
 
-Mekanizmaya çok dalmadan, mutfakta anlatır gibi söyleyeyim: vücudun ısı ayarı bu dönemde biraz alıngan
-oluyor. Beynindeki "termostat" hormonal dalgalanmaya daha duyarlı hale gelince, normalde fark
-etmeyeceğin küçük bir ısı yükselişini "acilen soğumalıyım" sinyali olarak okuyor.
+Mekanizmayı kısaca anlatayım: vücudun ısı ayarı bu dönemde biraz alıngan
+oluyor. Beyindeki "termostat" hormonal dalgalanmaya daha duyarlı hale gelince, normalde fark
+edilmeyecek küçük bir ısı yükselişini "acilen soğumalıyım" sinyali olarak okuyor.
 (iyi kanıt)
 
 Sonuç: aniden açılan damarlar, hızla yükselen cilt sıcaklığı, ardından gelen bol ter ve ter buharlaştıkça

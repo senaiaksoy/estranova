@@ -116,7 +116,7 @@ bulunuyor.
 
 Bu cümleyi *"umut etiketi"* yerine bilen birinin gerçek yorumu olarak okumak daha doğru: lokal
 östrojen denenmeden veya değerlendirilmeden, doğrudan yerel cihaz uygulamalarına geçmek çoğu
-zaman beklenen sonucu vermiyor. Bütçe, beklenti ve zaman birlikte yorulduğunda hayal kırıklığı
+zaman beklenen sonucu vermiyor. Bütçe, beklenti ve zaman birlikte yorumlandığında hayal kırıklığı
 doğuyor. Sıralama önemli — önce kanıtlı seçenekler.
 
 ## Günlük Bakım: Sade ve Tutarlı

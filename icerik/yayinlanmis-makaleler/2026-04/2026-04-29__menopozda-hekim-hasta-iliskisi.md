@@ -182,8 +182,7 @@ Cevabı bulmak değil, doğru soruyu sormaya alışmak — son birkaç yıl bana
 tanıması, ve bu pozisyona uyacak hekimle yıllar içinde olgunlaşacak bir bağ kurabilmesi.
 
 Belki şu soru yardımcı olur: bu hekimle bir yıl sonra hâlâ konuşmaya değer bulduğum bir şey kalır mı?
-Karar kendi kararınız, sorumluluğu da size ait. Beden bir cümle söylemişti; siz onu hekiminizle masada
-açıyorsunuz.
+Karar kendi kararınız, sorumluluğu da size ait. O sandalyede oturduğunuzda sorduğunuz her sorunun bir karşılığı olduğunu hatırlamak, konuşmayı kuran ilk cümleyi sizin elinize verir.
 
 Tıbbi Not
 

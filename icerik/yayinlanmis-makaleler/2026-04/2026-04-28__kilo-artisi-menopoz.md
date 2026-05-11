@@ -127,7 +127,7 @@ referans
 (güçlü kanıt)
 ; aktif yaşam ve direnç çalışması varsa bu aralık üst sınıra
 yaklaştırılabilir. Üç ana öğüne dağıtılmış 25-30 gram civarı protein, hem kas korunmasına katkı
-sağlayabiliyor hem de tokluk hissini uzatıyor. Yumurta, yoğurt, peynir, baklagiller, balık, tavuk, az pişmiş et —
+sağlayabiliyor hem de tokluk hissini uzatıyor. Yumurta, yoğurt, peynir, baklagiller, balık, tavuk, yağsız et —
 seçenek bol; tek tip değil çeşitlilik fayda veriyor.
 
 Lifli sebzeler tabağın büyük kısmı olduğunda hem doyum hem kan şekeri eğrisi yumuşuyor. Tam tahıl,
@@ -212,7 +212,7 @@ Tartıya her gün çıkmak yerine haftada bir ölçüm — aynı saat, aynı dur
 takılmasını engelliyor. Bel çevresini ölçmek, giysilerin oturuşuna bakmak ve günlük enerjiyi
 izlemek tartıdan daha bilgilendirici sinyaller. Birkaç hafta sonra fark edeceğin şey büyük bir
 dönüşüm değil, sade bir dengelenme: bir akşam pantolonun beli daha rahat, bir sabah kalkışta o eski
-ağırlık his değil. Beden bir mektup yazmıştı; siz de cevap veriyorsunuz.
+ağırlık his değil. Bedeniniz bu dönemin haritasını çiziyor; siz de o haritaya yargılamadan, tek bir alışkanlıkla cevap veriyorsunuz.
 
 ## Sıkça Sorulanlar
 

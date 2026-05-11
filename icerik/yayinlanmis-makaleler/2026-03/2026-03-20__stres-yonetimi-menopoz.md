@@ -201,7 +201,7 @@ ama hiçbiri "küçük" de değil. Ve profesyonel destek istemek geri çekilmek 
 konuşmak, kendi başınıza denediğiniz her şeye ek bir aydınlatma getirir. Size son bir soru: bu yazıdan tek bir cümle
 yanınızda götürecek olsanız hangisi olurdu?
 
-Beden bir cümle söylemişti; siz onu nefese çeviriyorsunuz.
+Cevabı bilmiyorum; ama bu sorunun kendisi bile, bir nefes kadar gerçek.
 
 Tıbbi Not
 

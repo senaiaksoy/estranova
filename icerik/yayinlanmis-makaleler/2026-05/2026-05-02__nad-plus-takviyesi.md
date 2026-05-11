@@ -159,8 +159,7 @@ değerlendirme); subjektif "iyi hissetme" tek başına yetmez. **Üçüncüsü**
 uzak durmalıyım?"* Bu, dürüst bir yol kurar; hekim de pazarlama mesajı yerine
 bilgi paylaşır.
 
-Bütçe boyutunu da konuşmak gerek. NAD+ öncüleri pahalı takviyeler; aylık 100-300 USD
-civarı maliyet sıradan değil. Aynı bütçeyle daha güçlü kanıtlı seçenekler (uyku,
+Bütçe boyutunu da konuşmak gerek. NAD+ öncüleri pahalı takviyeler; aylık masraf ciddi sayılabilir. Aynı bütçeyle daha güçlü kanıtlı seçenekler (uyku,
 beslenme düzeni, düzenli hareket, hekim onaylı vitamin/mineral takviyeleri)
 bulunduğunda, takviyeyi denemek *"ek bir adım"* olarak — değişmez bir
 gereklilik değil — değerlendirilmelidir.

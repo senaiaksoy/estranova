@@ -15,7 +15,7 @@ exportedAt: 2026-05-11
 
 ## CoQ10 Nedir, Hücrede Ne İş Yapıyor?
 
-Sokakta her on kadından üçü kırklı yaşların ortasından sonra bir CoQ10
+Kırklı yaşların ortasından sonra çoğumuz şu ya da bu CoQ10
 reklamıyla karşılaşmıştır — sosyal medyada en sık pazarlanan
 takviyelerden biri. Oysa bu molekül zaten her hücremizde mevcut: vücudun
 kendi ürettiği, hayati bir koenzim. İlk işimiz konuya isim koymak.
@@ -146,8 +146,7 @@ karar.
 
 ## Pratik Notlar: Ubiquinone, Ubiquinol, Doz, Etkileşim
 
-Eğer hekiminizle birlikte CoQ10 denemeye karar verirseniz, bilmeniz
-yarayacak birkaç pratik nokta var.
+Eğer hekiminizle birlikte CoQ10 denemeye karar verirseniz, işinize yarayacak birkaç pratik nokta var.
 
 **Ubiquinone vs ubiquinol:** Ubiquinol (indirgenmiş form)
 biraz daha kolay emildiği bildirilmiş; özellikle 60+ yaş ve emilim
@@ -205,7 +204,7 @@ Bu liste teşhis amaçlı değil; CoQ10 değerlendirilirken bir hekimle konuşma
 O zaman biz ne yapıyoruz? CoQ10 düşünüyorsanız hekim odasına üç
 soruyla girilirse görüşme başka bir yere taşınır.
 
-**Birincisi:** *"Ben hangi grubtayım — statin yan etkisi, migren önleme, kalp
+**Birincisi:** *"Ben hangi gruptayım — statin yan etkisi, migren önleme, kalp
 yetmezliği desteği, yoksa anti-aging meraklısı mıyım? Bu grupların
 hangisinin kanıt seviyesi benim durumum için anlamlı?"* Bu soru,
 molekülün üç farklı hayatından hangisinde olduğunuzu netleştirir.

@@ -75,7 +75,7 @@ Hangi seviyede olduğunuzu bilmek, sözü *tartabilmek* demektir.
 
 ## Pazarlama mı, Bilim mi? Hastanın Elinde Hangi Sinyaller Var?
 
-Sokakta her on kadından üçü son bir yıl içinde *"size özel"*
+Son bir yıl içinde çoğumuz *"size özel"*
 ya da *"deneysel"* bir uygulama önerisi duymuştur — ama çoğu
 zaman kararı vermeden önce sinyalleri okuma fırsatı bulamaz.
 Aşağıdaki bayraklar tek başına suçlu değildir; ama birden fazlası
@@ -254,7 +254,7 @@ tip çalışmaya dayanıyor?"*, *"Benim sağlık tablomda güvenliği
 nedir, hangi gruptan değilim?"*, *"Faydayı nasıl ölçeceğiz,
 ne kadar sürede değerlendireceğiz?"*. Cevapların bir kısmı
 *"bilmiyoruz"* olabilir; bilen bir hekim bunu söylemekten
-çekinmez. Bu cümle güven sinyalidir.
+çekinmez. Bu açıklık, güven ilişkisinin başlangıcıdır.
 
 Bilgi belirsizliğin panzehiridir — bu konuda da öyle. Yarısı yeni
 bir uygulamayı duyuyor, ama çoğu sınırını dürüstçe söyleyen bir

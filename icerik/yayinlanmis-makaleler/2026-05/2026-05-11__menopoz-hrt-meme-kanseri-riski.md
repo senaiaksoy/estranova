@@ -104,7 +104,7 @@ bazı progesteron türlerinde risk sinyalinin daha düşük olabileceğini düş
 tüm kadınlar ve tüm süreler için “güvenli” anlamına gelmiyor; ikincisi kombine sistemik
 tedavide meme riskini tamamen sıfırlamıyor.
 
-Bu yüzden “patch daha güvenli” ya da “şu progesteronda hiç risk yok” gibi net cümleler
+Bu yüzden “yama daha güvenli” ya da “şu progesteronda hiç risk yok” gibi net cümleler
 kurmak için erken. Daha doğru cümle şu: *farklı rejimlerin aynı görünmediğini artık daha
 iyi biliyoruz, ama aradaki farkların büyüklüğü her başlıkta aynı netlikte değil.*
 
