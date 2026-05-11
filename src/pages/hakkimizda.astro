@@ -2,6 +2,11 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
+import { activeWriters } from '../data/writers';
+
+// Künye özeti için kompakt yazar sayım istatistikleri.
+const scientificCount = activeWriters.filter((w) => w.category === 'scientific').length;
+const lifestyleCount = activeWriters.filter((w) => w.category !== 'scientific').length;
 ---
 
 <SiteLayout
@@ -107,6 +112,46 @@ import SiteFooter from '../components/site/SiteFooter.astro';
               Estranova içerikleri, bilimsel editör denetiminden geçer. Metinlerde kanıt düzeyi sistemi kullanılır ve tıbbi kavramlar sade Türkçe ile açıklanır.
               Amaç, bilgi karmaşasını azaltmak ve okurun güvenilir içeriğe düzenli bir yapıda ulaşmasını sağlamaktır.
             </p>
+          </section>
+
+          <section class="relative overflow-hidden rounded-[34px] border border-burgundy/12 bg-white/88 p-8 shadow-[0_20px_60px_rgba(79,23,28,0.07)] ring-1 ring-gold/15 md:p-10">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-burgundy/20 to-transparent"></div>
+            <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy/75">Künye</p>
+            <h2 class="mb-4 font-serif text-3xl text-ink">Editöryal ekip ve danışman kadro</h2>
+            <p class="mb-5 leading-relaxed text-ink/70">
+              Estranova içerikleri editöryal ekip, yazarlar ve tıbbi danışmanların ortak çalışmasıyla hazırlanır. Bu yapı; bilimsel doğruluk, dil sadeliği ve editöryal tarafsızlık ilkelerine göre yayımlanmayı destekler. Tüm katkılar gönüllülük esasıyla sağlanır; platform hiçbir ticari ilişki veya hekim/klinik tanıtımı değildir.
+            </p>
+            <dl class="mb-6 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-[22px] border border-gold/25 bg-cream-soft/45 p-5">
+                <dt class="mb-1 text-[10px] font-bold uppercase tracking-[0.22em] text-burgundy/75">Bilimsel Editör</dt>
+                <dd class="font-serif text-lg leading-snug text-burgundy">Doç. Dr. Senai Aksoy</dd>
+                <p class="mt-2 text-sm leading-relaxed text-ink/70">
+                  Tüm makalelerde bilimsel doğruluk, kanıt düzeyi ve terminoloji tutarlılığını denetler.
+                </p>
+              </div>
+              <div class="rounded-[22px] border border-gold/25 bg-cream-soft/45 p-5">
+                <dt class="mb-1 text-[10px] font-bold uppercase tracking-[0.22em] text-burgundy/75">Yazar Kadrosu</dt>
+                <dd class="font-serif text-lg leading-snug text-burgundy">{lifestyleCount} yaşıt · {scientificCount} bilim yazarı</dd>
+                <p class="mt-2 text-sm leading-relaxed text-ink/70">
+                  Farklı uzmanlık alanlarından kadın sesleri; deneyim, klinik bakış ve editöryal disiplin birlikte taşınır.
+                </p>
+              </div>
+              <div class="rounded-[22px] border border-gold/25 bg-cream-soft/45 p-5">
+                <dt class="mb-1 text-[10px] font-bold uppercase tracking-[0.22em] text-burgundy/75">Tıbbi Danışmanlar</dt>
+                <dd class="font-serif text-lg leading-snug text-burgundy">Endokrinoloji · Kardiyoloji · Ortopedi</dd>
+                <p class="mt-2 text-sm leading-relaxed text-ink/70">
+                  Konunun gerektirdiği uzmanlığa göre ilgili tıbbi danışmanın görüşü alınır.
+                </p>
+              </div>
+            </dl>
+            <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              <a href="/yazarlar" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy">
+                Yazar kadrosu →
+              </a>
+              <a href="/yayin-kurulu" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy">
+                Yayın kurulunun tamamı →
+              </a>
+            </div>
           </section>
 
           <section class="rounded-[34px] border border-gold/30 bg-burgundy p-8 text-white shadow-[0_26px_70px_rgba(79,23,28,0.18)] md:p-10">

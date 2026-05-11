@@ -74,8 +74,8 @@ export const mainNav: NavLink[] = [
     ],
   },
   { name: 'Sayılar', href: '/sayi', label: 'Eşik dergisi sayıları ve arşivi' },
-  { name: 'Hakkımızda', href: '/hakkimizda', label: 'Platform hakkında' },
-  { name: 'Künye', href: '/yayin-kurulu', label: 'Editöryal ekip, yazarlar ve tıbbi danışmanlar' },
+  { name: 'Yazarlar', href: '/yazarlar', label: 'Estranova yazar kadrosu ve editöryal imza' },
+  { name: 'Hakkımızda', href: '/hakkimizda', label: 'Platform, editöryal ekip ve künye' },
 ];
 
 /** Üst veya alt yol eşleşmesi için aktif durumu */
