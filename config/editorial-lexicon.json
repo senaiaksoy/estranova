@@ -1,9 +1,13 @@
 {
   "hard_ban": {
-    "örüntü": ["seyir", "gidiş", "tekrar eden tablo", "düzen"],
-    "örüntüler": ["seyirler", "tekrar eden tablolar", "düzenler"],
+    "örüntü": ["seyir", "gidiş", "tekrar eden tablo", "düzen", "kalıp"],
+    "örüntüler": ["seyirler", "tekrar eden tablolar", "düzenler", "kalıplar"],
+    "örüntüsü": ["seyri", "kalıbı", "düzeni"],
+    "örüntüyü": ["seyri", "kalıbı", "düzeni"],
+    "örüntünün": ["seyrin", "kalıbın", "düzenin"],
     "örüntüsünü": ["seyrini", "gidişini", "düzenini"],
     "örüntüsünde": ["seyrinde", "gidişinde", "düzeninde"],
+    "örüntüsüyle": ["seyriyle", "kalıbıyla", "düzeniyle"],
     "örüntüsel": ["tekrar eden", "kalıplaşan"],
     "örüntüye": ["seyre", "gidişe", "düzene"]
   },

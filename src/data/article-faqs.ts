@@ -236,7 +236,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Perimenopozdaki kaygı artışı anksiyete bozukluğu anlamına gelir mi?',
       answer:
-        'Her zaman hayır. Perimenopozda kaygı dalgalanması hormon değişimi, uyku bölünmesi ve yaşam yüküyle ilişkili olabilir. Ama kaygı günlük işlevi belirgin bozuyorsa, panik atak benzeri ataklar oluyorsa veya çökünlük eşlik ediyorsa profesyonel değerlendirme iyi olur.',
+        'Her zaman hayır. Perimenopozda kaygı dalgalanması hormon değişimi, uyku bölünmesi ve yaşam yüküyle ilişkili olabilir. Ama kaygı günlük işlevi belirgin bozuyorsa, panik atak benzeri ataklar oluyorsa veya çökkünlük eşlik ediyorsa profesyonel değerlendirme iyi olur.',
     },
     {
       question: 'Kaygı hissi adet düzeni değişmeden de başlayabilir mi?',
