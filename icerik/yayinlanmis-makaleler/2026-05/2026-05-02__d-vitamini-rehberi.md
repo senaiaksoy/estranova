@@ -282,7 +282,7 @@ eden tıbbi durumlar/ilaçlarla birlikte değerlendirme — bu yaklaşım çoğu
 Bir uyarıyı da paylaşmadan geçmeyeyim: yüksek-doz bolus stratejileri
 (yılda bir 500.000 IU gibi) artık önerilmiyor; düşmeyi önlemediği, hatta bazı
 çalışmalarda artırdığı gösterilmiş. *"Daha fazla daha iyi"* yaklaşımı bu
-mikro-besin için doğru değil. Doktorunuza üç soruyla gidin — ölçüm gerekli mi,
+mikro-besin için doğru değil. Görüşmede şu üç soruyu sorabilirsiniz — ölçüm gerekli mi,
 hangi dozla başlayacağız, eşlik eden durumlar dozumu nasıl etkiliyor. Sorunun
 kendisi cevabın yarısıdır; bu yarısını siz koyduğunuzda kalanı klinik diyalogun
 parçası oluyor.

@@ -17,7 +17,7 @@ exportedAt: 2026-05-11
 
 İşin doğrusu şu — ve bunu söylerken ne ürkütmek istiyorum ne de gizlemek.
 *"Deneysel"* etiketi tek bir şey anlamına gelmiyor; bir spektrum
-tanımlıyor. Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz;
+tanımlıyor. İsim koyamadığımız şeyi konuşamayız;
 o yüzden ilk işimiz dört kavramı birbirinden ayırmak.
 
 **Onaylı tedavi:** Düzenleyici otoritelerden (uluslararası

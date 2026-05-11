@@ -329,8 +329,8 @@ ilerliyor — son 10 yılda E4 ürünleri, doku-spesifik SERM'ler, transdermal
 formülasyonlar ve mikrobiyota etkileşimi gibi yeni katmanlar eklendi. *"Bir
 kez karar verdik, hep böyle gideceğiz"* mantığı östrojen-temelli tedaviler
 için doğru değil; düzenli yeniden değerlendirme klinik standartın parçası.
-Doktorunuza üç soruyla gidin — risk-fayda dengem ne, hangi form-doz neden, takip
-nasıl olacak. Sorunun kendisi cevabın yarısıdır.
+Görüşmeye şu üç soruyu yanınıza alın — risk-fayda dengem ne, hangi form-doz neden, takip
+nasıl olacak. Doğru sorular cevabın yarısını kurar.
 
 Tıbbi Not
 

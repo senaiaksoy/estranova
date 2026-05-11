@@ -289,7 +289,7 @@ mikroakım ve LED ev cihazları için kanıt belirgin biçimde sınırlı.
 Postmenopozal dönemde sonuç biraz daha mütevazı olur — çünkü cihaz
 hormonal yaşlanmayı çözmez, üstüne küçük bir katkı sunar.
 
-Doktorunuza üç soruyla gidin: *"Bu cihaz için kanıt seviyesi nedir,
+Konuşmayı şu üç soruyla yönlendirin: *"Bu cihaz için kanıt seviyesi nedir,
 hangi tür çalışmaya dayanıyor?"*, *"Beklenti seviyem ne olmalı,
 sonucu ne ile ölçeceğiz?"*, *"Yan etki, risk ve memnun kalmayan
 hasta oranı nedir?"*. Bu üç soru tedaviyi bir vaatten klinik

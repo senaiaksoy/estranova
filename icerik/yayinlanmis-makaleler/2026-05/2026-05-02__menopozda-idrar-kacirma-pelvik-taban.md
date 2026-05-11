@@ -19,7 +19,7 @@ Hastalarımın çok büyük bir kısmı yıllardır söyleyemediği şeyi sonund
 söyledikleri *"bunu kimseye anlatamadım"* oluyor. Oysa konu sokakta her on kadından dördünü
 ilgilendiriyor
 (güçlü kanıt)
-. Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz —
+. İsmi konulmayan bir konunun çözümü konuşulmuyor —
 bu yüzden ilk işimiz konuya isim koymak.
 
 İdrar kaçırma "yaşlanmanın doğal sonucu" değil; ismi olan, türleri olan, tedavi seçenekleri olan
@@ -119,7 +119,7 @@ kırıklığı doğuyor.
 
 ## Doktora Hangi Soruları Sormalı?
 
-Bir kadın bana geçen gün *"utanıyorum sormaya"* dedi. Oysa sorunun kendisi cevabın yarısı.
+Kliniğe gelen kadınlardan birinin sözüydü: *"söyleyemiyorum, çocuklarımın yanında bile değişiyorum."* Oysa o cümleyi kurabilmek bile yarı yolu açıyor.
 Hekim odasında yargıya değil bilgiye giriyorsunuz — ve hangi soruları sorduğunuz görüşmenin
 niteliğini doğrudan etkiliyor.
 
@@ -212,7 +212,7 @@ yerine bilgi koymak, hem bütçeyi hem zamanı koruyor.
 
 Burada açıkça söylemem gereken bir şey daha var: bu konuda *"şu sizde işe yarar"* diyebilen
 tek bir reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı seçenek doğru olabilir;
-bedeniniz, geçmişiniz, hayat tercihleriniz hepsi hesaba katılır. Doktorunuza üç soruyla gidin —
+bedeniniz, geçmişiniz, hayat tercihleriniz hepsi hesaba katılır. Görüşmeye giderken üç temel soru çantanızda olsun —
 tipiniz, davranışsal adımların etkisi nasıl ölçülecek, bir sonraki adım ne olacak. Sorunun
 kendisi cevabın yarısıdır; bu yarısını siz koyarsanız, kalanı klinik diyalogun parçası oluyor.
 

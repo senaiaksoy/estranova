@@ -15,7 +15,7 @@ exportedAt: 2026-05-11
 
 ## GSM — İsim Koymakla Başlar
 
-Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Pek çok kadın yıllarca *"yaşlanma
+Adı söylenmediği sürece çözüm de gündeme gelmiyor. Pek çok kadın yıllarca *"yaşlanma
 işte"* deyip geçtiği bu tabloyu sonunda yüksek sesle söylediğinde, ilk cümle çoğu zaman
 *"bunu kimseye anlatamadım"* oluyor. Oysa söz konusu olan tıbbi bir sendrom:
 **genitoüriner menopoz
@@ -141,7 +141,7 @@ meselesi değil. Tedaviyle yaklaşılması gereken bir tablo.
 
 ## Doktora Hangi Soruları Sormalı?
 
-Bir kadın bana geçen gün *"utanıyorum sormaya"* dedi. Oysa sorunun kendisi cevabın yarısı.
+Çoğu görüşme aynı cümleyle başlar: *"bunu kimseye anlatamamıştım."* Bu kelimeleri sesli söyleyebilmek bile, bilgiye giden yolun ilk adımı.
 GSM hakkında doktorunuzla konuşurken hazırlıklı gitmek görüşmenin niteliğini doğrudan etkiliyor.
 
 Üç soruyu hazırlayın: **Birincisi** — *"Belirtilerim GSM tablosuyla uyumlu mu,
@@ -240,7 +240,7 @@ tutarlı; cinsellikte ağrı bir sinyal, alışılması gereken bir şey değil.
 
 Dürüstçe söylemek gerekirse: *"şu sizde işe yarar"* diyebilen tek bir
 reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı seçenek doğru olabilir; bedeniniz,
-geçmişiniz, eşlik eden tıbbi durumlar hepsi hesaba katılır. Doktorunuza üç soruyla gidin —
+geçmişiniz, eşlik eden tıbbi durumlar hepsi hesaba katılır. Hekiminize şu üç soruyu götürmek konuşmayı yapılandırır —
 tablonun GSM ile uyumu, lokal östrojen size uygun mu, takip planı nasıl olacak. Sorunun kendisi
 cevabın yarısıdır.
 

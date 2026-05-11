@@ -340,7 +340,7 @@ alanında *henüz pazarlama vaadi*. Aynı molekül, aynı isim — ama
 karar her endikasyon için ayrı verilir, üstelik menopozal kadınlarda
 ek üç eksen (visceral adipoz, sarkopeni, kemik) hesaba katılır.
 
-Doktorunuza üç soruyla gidin: *"Hangi endikasyondayım, kanıt nerede?"*,
+Hekim görüşmesine şu üç soruyla girin: *"Hangi endikasyondayım, kanıt nerede?"*,
 *"Sarkopeni, kemik, sürdürülebilirlik için planım ne?"*, *"Ne
 kadar süre, durduğunda ne olur, HRT ile etkileşim var mı?"*. Bu üç
 soru tedaviyi tek bir iğne kararından çıkarır, klinik bir plana çevirir.

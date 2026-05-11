@@ -226,9 +226,9 @@ takviyeler kanıtlı standart tedavilerin yerine değil, hekim onayıyla deneneb
 ek bir adımdır. Bilgi belirsizliğin panzehiridir — bu konuda da öyle. Sınırını
 bilmek, hem cüzdanı hem ruhsal beklentiyi koruyor.
 
-Doktorunuza üç soruyla gidin: *"Benim profilim için güvenli mi?"*, *"Faydayı
+Hekiminizle konuşurken şu üç başlığı kapatmak yeterli: *"Benim profilim için güvenli mi?"*, *"Faydayı
 neyle ölçeceğiz?"*, *"Kanıt seviyesi sınırlı bu alanda dikkat etmem gereken
-ne?"*. Sorunun kendisi cevabın yarısıdır; bu yarısını siz koyduğunuzda, kalanı
+ne?"*. İyi soru, iyi cevabın temelidir; bu yarısını siz koyduğunuzda, kalanı
 klinik diyalogun parçası oluyor.
 
 Tıbbi Not

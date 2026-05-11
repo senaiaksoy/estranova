@@ -24,7 +24,7 @@ türleri olan, etkili biçimde yönetilebilen bir tablo: **disparoni**
 (güçlü kanıt)
 .
 
-Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz. Disparoninin *tek bir
+Adı söylenmediği sürece tedavi de gündeme gelmiyor. Disparoninin *tek bir
 tablo* olduğunu sanmak ilk yanılgı; aslında en az dört farklı alt-tipi var ve
 her biri farklı bir mekanizmadan, farklı bir tedavi kapısından geçiyor. Hangi
 alt-tipte olduğunu bilmek tedavinin yarısını kuruyor — çünkü *"size lokal krem
@@ -196,8 +196,8 @@ Bu liste teşhis amaçlı değil; bir hekimle vakit kaybetmeden konuşmaya değe
 
 ## Doktora Hangi Soruları Sormalı?
 
-Bir kadın bana geçen gün *"utanıyorum sormaya"* dedi. Oysa sorunun kendisi
-cevabın yarısı. Disparoni hakkında doktorunuzla konuşmaya hazırlanırken üç soruyu
+Yıllar içinde defalarca duyduğum bir cümle var: *"ne diyeceğimi bilemedim doktora."* Ama sormaya cesaret etmek,
+çözüme açılan ilk kapı. Disparoni hakkında doktorunuzla konuşmaya hazırlanırken üç soruyu
 yanınıza alın:
 
 **Birincisi** — *"Ağrımın yeri ve zamanı bende hangi alt-tipe
@@ -281,8 +281,8 @@ deyip taşımak ne fizyolojik ne psikolojik olarak sürdürülebilir.
 Şunu da netleştireyim: *"şu sizde işe yarar"*
 diyebilen tek bir reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı plan
 doğru olabilir; bedeniniz, eşlik eden tıbbi durumlar, alt-tipinizin ayrımı tedavi
-seçimine yön verir. Doktorunuza üç soruyla gidin — alt-tipim ne, hangi kapıları
-eş zamanlı açacağız, ayırıcı tanı tamamlandı mı. Sorunun kendisi cevabın yarısıdır;
+seçimine yön verir. Görüşmede şu üç noktayı netleştirin — alt-tipim ne, hangi kapıları
+eş zamanlı açacağız, ayırıcı tanı tamamlandı mı. Soruyu netleştirmek cevabı da netleştirir;
 bu yarısını siz koyduğunuzda, kalanı klinik diyalogun parçası oluyor.
 
 Tıbbi Not

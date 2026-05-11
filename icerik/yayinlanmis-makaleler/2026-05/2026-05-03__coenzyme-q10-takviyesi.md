@@ -297,7 +297,7 @@ seçenek* — kanıtlı standart tedavilerin yerine değil, hekim onayıyla
 yanına. Kanıt sınırını bilmek hem cüzdanı hem ruhsal beklentiyi
 koruyor.
 
-Doktorunuza üç soruyla gidin: *"Ben hangi grupta — kanıtım nerede?"*,
+Görüşmeye giderken şu üç soruyu yazın: *"Ben hangi grupta — kanıtım nerede?"*,
 *"Faydayı neyle, ne kadar sürede ölçeceğiz?"*, *"İlaç
 etkileşimleri için neye dikkat etmeliyim?"*. Sorunun kendisi
 cevabın yarısıdır; bu yarısını siz koyduğunuzda kalanı klinik diyalogun
