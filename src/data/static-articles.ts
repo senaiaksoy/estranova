@@ -21,7 +21,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu',
     title: "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'",
     description:
-      "40 sonrası yüz müdahalelerine bakarken hangi sorular size aittir, hangileri başkasınındır? Yüz yaşlanmasının dört katmanı, 'yapılabilir mi' yerine 'size uygun mu' sorusu, müdahale haritasının kanıt sıralaması ve hekiminizle konuşmaya değer altı soru üzerinden bir karar çerçevesi.",
+      "40 sonrası yüz müdahalelerine bakarken hangi sorular size aittir, hangileri başkasınındır? Yüz yaşlanmasının dört katmanı, 'yapılabilir mi' yerine 'size uygun mu' sorusu, müdahale haritasının kanıt sıralaması ve hekiminizle konuşmaya değer altı soru üzerinden bir karar bakışı.",
     publishedDate: '10 Mayıs 2026',
     writerSlug: 'cagri-sade',
     section: 'Zamansız Yaşam · Yüz Yaşlanması',
