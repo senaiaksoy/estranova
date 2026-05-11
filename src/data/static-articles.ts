@@ -714,10 +714,11 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/hormonal-gecis/menopoz/menopoz-nedir',
-    title: 'Menopoz Nedir? - Temel Rehber',
-    description: 'Menopozun tanımını, evrelerini, belirtilerini ve uzun vadeli sağlık gündemini ele alan sade rehber.',
-    publishedDate: '21 Şubat 2026',
-    writerSlug: 'berna-aksoy',
+    title: 'Menopoz Nedir? — Temel Rehber',
+    description:
+      'Menopozun tanımını, evrelerini, hormon değişimini ve uzun vadeli sağlık gündemini Estranova editöryal disipliniyle ele alan sakin başlangıç rehberi.',
+    publishedDate: '11 Mayıs 2026',
+    writerSlug: 'estranova-editorial',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis',
     keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
