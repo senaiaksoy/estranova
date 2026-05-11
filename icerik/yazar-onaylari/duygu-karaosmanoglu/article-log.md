@@ -8,7 +8,9 @@
 
 ## v3.0 — 2026-05-02 başlangıç
 
-> **Durum notu, 2026-05-04:** İlk makale yazar onayı tamamlanana kadar yayından kaldırıldı. Site kaynak dosyası ve eski yayın arşivi kaydı `onay-bekleyen/2026-05-03_diseti-cekilmesi-postmenopoz/` paketinde tutuluyor.
+> **Durum notu, 2026-05-04:** İlk makale (#1 dişeti çekilmesi) yazar onayı tamamlanana kadar yayından kaldırıldı. Site kaynak dosyası ve eski yayın arşivi kaydı `onay-bekleyen/2026-05-03_diseti-cekilmesi-postmenopoz/` paketinde tutuluyor.
+>
+> **Durum notu, 2026-05-11:** Yazı #2 (yüze yakışan estetik diş kararı) Dt. Duygu Karaosmanoğlu onayıyla yayında. Voice rewrite turu sonrası klinisyen birinci tekil sese geçti; M2 framework makalesi. Paket `onaylanan/2026-05-11_yuze-yakisan-estetik-dis-karari/`'ne taşındı, canlı rota açıldı, hub indeksi (`/hormonal-gecis/40-sonrasi` `articlePaths`) ile static-articles manifest güncellendi, `article-approvals.ts` kaydı eklendi. Byline 1200×1500 + card 1800×1000 görselleri devrede; submenuHeroByRoute korundu (parent hub fallback).
 
 | # | Tarih | Yazı (slug) | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
 |---|---|---|---|---|---|---|---|---|---|

@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
+    writerSlug: 'duygu-karaosmanoglu',
+    approvedAt: '2026-05-11',
+    note: 'Dt. Duygu Karaosmanoğlu author approval received for icerik/yazar-onaylari/duygu-karaosmanoglu/onaylanan/2026-05-11_yuze-yakisan-estetik-dis-karari. Voice rewrite turn: article moved from cool 3rd-person editorial into warm clinician first-person (CLAUDE.md §3 clinician exception for category: scientific writers) — "muayene odamda", "hastalarımla", "bir hekim olarak bence" anchors woven naturally; promotional başhekim vitrini, Creadenta brand name, Elif Özcan Dulundu partnership, HRT (Çift Rol) references stayed forbidden. User-supplied article image rendered into two crops: byline 1200×1500 (ArticleAuthorBlock imageSrc) + card 1800×1000 (articleCardImageByRoute); submenuHeroByRoute NOT modified (memory: makale üst hero görseli ASLA değişmez). FAQ also rewritten in clinician first-person. M2 framework article for Duygu (M1 dişeti çekilmesi paketi onay-bekleyende durmaya devam).',
+  },
+  {
     pathname: '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale',
     writerSlug: 'bulent-aksoy',
     approvedAt: '2026-05-08',
