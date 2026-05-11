@@ -38,21 +38,12 @@ const issuePad = formatIssuePad(issue.number);
     {issuePad}
   </div>
   <div class="mx-auto max-w-6xl">
-    <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
-      <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+    <header class="mb-12">
+      <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
         <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
         <span class="mx-2 text-gold">—</span>
         Bu Ayın Sayısı
       </p>
-      <div>
-        <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
-          {magazineConfig.name} · Sayı {issuePad} · {issue.monthYear}
-        </p>
-        <h2 class="mb-4 font-serif text-5xl leading-[0.92] tracking-[-0.045em] text-burgundy md:text-7xl lg:text-8xl">
-          {issue.theme}
-        </h2>
-        <p class="max-w-2xl text-lg leading-relaxed text-ink/75">{issue.lede}</p>
-      </div>
     </header>
 
     <a
