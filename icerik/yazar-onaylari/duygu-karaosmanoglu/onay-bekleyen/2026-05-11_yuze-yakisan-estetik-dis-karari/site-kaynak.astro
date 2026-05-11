@@ -1,0 +1,433 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi']!;
+
+const tocEntries = [
+  { id: 'yuze-yakisan', label: 'Yüze Yakışan Ne Demek?' },
+  { id: 'estetik-referans', label: '40 Sonrası Estetik Referans' },
+  { id: 'uc-olcu', label: 'Doğal Görünümün Üç Ölçüsü' },
+  { id: 'mudahale-yelpazesi', label: 'Müdahale Yelpazesi' },
+  { id: 'bes-soru', label: 'Hekiminize Beş Soru' },
+  { id: 'mudahale-yapmamak', label: 'Müdahale Yapmamak Da Karardır' },
+  { id: 'yol', label: 'Yüze Yakışanı Aramak' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Yüze Yakışan Estetik Diş Kararı — Aynadan Önce Yüze Bakmak';
+const articleDescription =
+  '40 sonrası estetik diş kararı: yüze yakışanı aramak, doğal görünümün üç ölçüsü, müdahale yelpazesinin sınırları ve hekiminize sormanız gereken beş soru. Diş hekimi gözüyle kişiselleştirme rehberi.';
+const faqItems = articleFaqs['/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari'] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'duygu-karaosmanoglu',
+  publishedDate: '11 Mayıs 2026',
+  pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis',
+  keywords: [
+    'estetik diş hekimliği',
+    'gülüş tasarımı',
+    'porselen laminat',
+    'diş beyazlatma',
+    'yetişkin ortodonti',
+    'doğal görünüm',
+    '40 sonrası estetik',
+    'menopoz diş sağlığı',
+    'kişiselleştirilmiş tedavi',
+    'estetik karar süreci',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · 40 Sonrası"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="duygu-karaosmanoglu" publishedDate="11 Mayıs 2026" readingMinutes={9} />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton
+          slug="/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari"
+          title={articleTitle}
+        />
+      </div>
+
+      <ArticleSummary>
+        <p>
+          Estetik bir karar çoğu zaman aynanın önünde başlar; ama
+          <em>yüze yakışanı</em> bulmak, aynanın söylediğiyle değil,
+          kendi yüzünüzün ölçüsünü tanımakla ilgilidir. 40 sonrası dönem
+          dişin, dişetinin, kemik desteğinin ve yüz orta hattının birlikte
+          değiştiği bir dönemdir; bu yüzden bu yaş bandında alınan estetik
+          diş kararı, 20'li yaşlardaki bir karardan farklı düşünmeyi
+          gerektirir. Bu yazı; <strong>yüze yakışan ne demek</strong>,
+          <strong>doğal görünümün üç ölçüsü</strong>, müdahale
+          yelpazesinin sınırları ve diş hekiminizle ilk görüşmeden önce
+          sormaya değer beş soru üzerinden — modaya değil, kendi yüzünüze
+          sorulan bir karar bakışı sunuyor.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="yuze-yakisan">Yüze Yakışan Ne Demek — Modaya Değil, Ölçüye Sorulan Soru</h2>
+        <p>
+          Estetik bir karar "yapılabilir mi" değil "yüze yakışıyor mu"
+          sorusundan başlar; bu fark, kararın tonunu da hekiminizle
+          görüşmenizin niteliğini de değiştirir.
+        </p>
+        <p>
+          Estetik diş hekimliğinde son yıllarda en sık konuşulan eğilim
+          tipik bir gülüş ölçüsüne — beyaz, simetrik, eş boyda dişlerden
+          oluşan tek tip bir görsele — yaklaşmak oldu. Bu görsel sosyal
+          medyada her yerde dolaştığı için, çoğu kadın diş hekimi
+          konsültasyonuna belirli bir hayalle geliyor. Polikliniğe gelen
+          birçok kadında en sık duyulan cümlelerden biri şudur:
+          <em>"Şunun gibi olsun istiyorum."</em> Burada yapmamız gereken
+          önce <em>"sizin gibi olursa nasıl durur"</em> sorusuna geri
+          dönmektir.
+        </p>
+        <p>
+          Yüze yakışanı aramak, modaya kapılmak değil sürdürülebilir
+          tercih demektir. Sürdürülebilir tercih dört şeyi birlikte tutar:
+          kendi yüzünüzün simetrisi, dudak hattınızın doğal kavisi, diş
+          renginiz ile cilt tonunuzun ilişkisi, ve önümüzdeki 10–15 yıl
+          içinde bu kararı geriye dönüp gözden geçirmeniz gerektiğinde
+          duyacağınız rahatlık. Bir karar bu dördünden birini görmezden
+          gelirse — uzun vadede ya pişmanlığa ya tekrar müdahale ihtiyacına
+          yol açar.
+        </p>
+
+        <h2 id="estetik-referans">40 Sonrası Yüz Değişir; Estetik Referans Noktaları da Değişir</h2>
+        <p>
+          40 sonrası, dişler kadar dişin etrafındaki dokuların da
+          konuştuğu bir dönemdir; estetik kararın referansı bu yüzden
+          gençliktekiyle aynı değildir.
+        </p>
+        <p>
+          Yüzde — diş hekimi gözüyle bakıldığında — şu değişimler
+          kademeli olarak görünür hale gelir <Evidence level={3} />:
+        </p>
+        <ul>
+          <li><strong>Dudak hattı:</strong> Dudak kası tonu yavaş bir değişimle azalır; üst dudak ön dişlerin daha azını gösterir.</li>
+          <li><strong>Diş rengi:</strong> Yıllar içinde mine inceldikçe altındaki dentinin sarı tonu daha çok görünür; bu doğal bir yaşlanma sürecidir.</li>
+          <li><strong>Dişeti hattı:</strong> Postmenopoz döneminde dişeti çekilmeleri sıklaşabilir; gülüş çizgisi değişir.</li>
+          <li><strong>Kemik desteği:</strong> Alveolar kemik metabolizması sistemik kemik metabolizmasından bağımsız değildir; özellikle postmenopozda kemik desteği bir miktar geriler.</li>
+          <li><strong>Aşınma ve kapanış:</strong> Yıllar içinde mine aşınması ve oklüzyon değişimi dişlerin boyunu kısaltır; yüzün alt üçte birinde küçülme hissi yaratır.</li>
+        </ul>
+        <p>
+          Bu değişimleri bilmek — paniğe değil, ölçüye davet eder. 25
+          yaşında bir kadının yüzüne yerleşen bir gülüş, 55 yaşında bir
+          kadının yüzünde aynı şekilde durmaz. Estetik karar referansının
+          değişmesi, bir kayıp değil; <em>kararın kendi yüzünüzle güncel
+          kalması</em> demektir.
+        </p>
+
+        <h2 id="uc-olcu">Doğal Görünümün Üç Ölçüsü — Renk, Biçim, Hizalama</h2>
+        <p>
+          Doğal bir gülüş üç ölçüde okunur: rengin yaşa uygunluğu, dişin
+          biçiminin yüzün biçimine yakınlığı, ve hizalamanın simetri
+          toleransına saygısı.
+        </p>
+        <p>
+          <strong>Renk:</strong> Doğal bir dişin rengi 40 sonrasında genellikle ortalama bir
+          sarımsı-bej tona doğru kayar. Aşırı beyazlatma — özellikle cilt
+          tonunun sıcak olduğu yüzlerde — yapay bir kontrast yaratır.
+          "Yüze yakışan beyaz" kavramı, mineye en çok zarar veren değil;
+          dudak kavisi ve cilt tonuyla uyumlu olan tondur. Bu yüzden
+          renk kararı, ayna karşısında değil, doğal gün ışığında ve
+          rahatlamış bir yüzde verilir.
+        </p>
+        <p>
+          <strong>Biçim:</strong> Diş biçimi yüz biçimine "yaşıt"
+          olmalıdır. Yuvarlak yüze çok keskin, dikdörtgen ön dişler;
+          köşeli yüze çok yumuşak, ovalimsi dişler — yüzde rahatsız
+          edici bir gerilim yaratır. Diş biçimi aynı zamanda yaşa da
+          yaşıt olmalı; 55 yaşında bir kadının yüzünde 18 yaşında bir
+          kadının diş biçimi yapay durur. Burada bir tasarım kararı
+          yerine bir <em>uyum kararı</em> aranır.
+        </p>
+        <p>
+          <strong>Hizalama:</strong> Doğal yüzler simetri değil, ölçülü
+          asimetri taşır; doğanın kendi simetri toleransı vardır. Eski
+          fotoğraflarınıza bakın — yüzünüz hiçbir zaman matematiksel
+          olarak simetrik olmadı. Estetik kararın bu doğal toleransı
+          silmemesi, doğal görünüm için kritiktir. Aşırı düzeltilmiş bir
+          hizalama, hep "fark edilen" bir gülüştür; ölçülü hizalama ise
+          fark edilmeden güzelleşen bir gülüştür.
+        </p>
+
+        <h2 id="mudahale-yelpazesi">Müdahale Yelpazesi — Hangi Yöntem Ne Yapar, Sınırı Nedir?</h2>
+        <p>
+          Estetik diş hekimliği tek bir araç değildir; bir yelpazedir.
+          Bu yelpazenin doğru ucundan başlamak, çoğu zaman uzun yıllar
+          sürecek bir doğal görünüm sağlar.
+        </p>
+        <p>
+          <strong>Profesyonel temizlik ve renk düzeltmesi:</strong>
+          Çoğu kadında ilk durak budur. Diştaşı temizliği, yüzeysel leke
+          ayrımı ve mineye nazik bir cilalama — sanılandan çok daha
+          görünür bir fark yaratır. Bu adım geri dönüşlüdür ve hiçbir
+          dokuya kalıcı müdahale içermez.
+        </p>
+        <p>
+          <strong>Beyazlatma:</strong> Mekanizması hidrojen peroksit veya
+          karbamid peroksitin mine içine sızıp renk pigmentlerini
+          oksidasyonla parçalamasıdır <Evidence level={4} />. Klinik veya
+          ev tipi olarak iki ana yol vardır; ikisi de hekim
+          değerlendirmesiyle uygulanır. Sınırları: aşırı tekrarlanan
+          beyazlatma diş hassasiyetini ve mine bütünlüğünü etkiler;
+          dolgu, kron ve laminat beyazlatmaya yanıt vermez; bazı iç
+          renklenmeler (tetrasiklin lekeleri, mine gelişim bozuklukları)
+          dış beyazlatmaya kapalıdır. Beyazlatma "mucize" değildir; iyi
+          tarif edilmiş bir kimyasal süreçtir.
+        </p>
+        <p>
+          <strong>Şekillendirme (bonding / kontur):</strong> Küçük çatlak,
+          köşe kırığı, hafif boyut farkları için kompozit reçineyle
+          yapılan müdahale. Geri dönüşlü ve mineye en az müdahale ile
+          yapılır. 40 sonrasında ufak estetik düzeltmeler için ilk
+          düşünülmesi gereken yöntemdir; mine aşındırmadığı için
+          ileride başka bir karar almak istediğinizde elinizi bağlamaz.
+        </p>
+        <p>
+          <strong>Porselen laminat (veneer):</strong> Dişin ön yüzeyine
+          ince bir porselen tabakanın yapıştırılmasıdır. Renk, biçim ve
+          hafif hizalama düzeltmeleri için güçlü bir araçtır. Sınırları:
+          uygulamasında genelde mineden bir miktar aşındırılır — bu
+          adım geri dönüşsüzdür. Servis ömrü kişiye göre değişir; iyi
+          bakım ve uygun oklüzyonla on yıl ve üzeri sürebilir, ama bir
+          gün yenilenmesi gereken bir karardır. Bruksizmi olan, ağız
+          hijyeni düzenli olmayan veya beklenti yönetimi yapılmamış
+          kişilerde tercih edilmemelidir.
+        </p>
+        <p>
+          <strong>Şeffaf plak ortodonti:</strong> Yetişkinlerde hafif-orta
+          hizalama bozukluklarında doğal yapıyı koruyan bir yoldur.
+          Kişinin disiplinine bağlı sonuç verir. Estetik laminat kararı
+          öncesinde mutlaka düşünülmesi gereken bir seçenektir; çünkü
+          dişlerin kendi yapısı korunarak hizalama düzelir.
+        </p>
+        <p>
+          Yelpazenin her ucu farklı bir geri dönüş eşiği taşır. Sürdürülebilir
+          estetik karar — bu eşiği görerek alınan karardır.
+        </p>
+
+        <h2 id="bes-soru">Diş Hekiminizle Konuşmadan Önce Beş Soru</h2>
+        <p>
+          Doğru hekim, sizinle yaptığı ilk görüşmede kendi araçlarını
+          değil — sizin yüzünüzü konuşur. Aşağıdaki beş soru görüşmenin
+          niteliğini değiştirebilir.
+        </p>
+        <ol>
+          <li>
+            <strong>"Önce bana yüzümün ölçüsünü anlatır mısınız —
+            hangi noktada müdahale yapılabilir, hangi noktada müdahale
+            yapılmamalı?"</strong> Bu soru, görüşmeyi tedavi kataloğundan
+            ayırıp kişisel değerlendirmeye çevirir.
+          </li>
+          <li>
+            <strong>"Düşündüğüm karar geri dönüşlü mü, geri dönüşsüz
+            mü?"</strong> Mine aşındıran her müdahale geri dönüşsüzdür.
+            Hekimin verdiği yanıtın netliği — sürecin sonraki tonu
+            hakkında çok şey söyler.
+          </li>
+          <li>
+            <strong>"On yıl sonra bu karar nasıl yaşlanır?"</strong>
+            Estetik bir müdahalenin "şu an iyi durması" yeterli değil;
+            10–15 yıl içinde nasıl yaşlanacağı — kemik desteği,
+            dişeti çekilmesi, renk uyumu ve oklüzyon değişimleri ile
+            birlikte düşünülmelidir.
+          </li>
+          <li>
+            <strong>"Bu karar için daha az müdahaleli bir alternatifi
+            var mı?"</strong> Çoğu zaman vardır. Hekiminizin alternatifi
+            sizinle paylaşmaya istekli olması, kararı sizin için
+            kişiselleştirmeye açık olduğunun bir işaretidir.
+          </li>
+          <li>
+            <strong>"Karar vermek için kaç görüşmeye ihtiyacımız
+            olabilir?"</strong> Geri dönüşsüz adımlar için ikinci bir
+            görüşme — bazen üçüncü — neredeyse her zaman değerlidir.
+            "Bugün karar vermek zorunda değilsiniz" cümlesini duymak
+            iyi bir işarettir.
+          </li>
+        </ol>
+        <p>
+          Estetik müdahale memnuniyetinin, müdahale öncesi danışma
+          kalitesi ve beklenti hizalamasıyla doğrudan ilişkili olduğunu
+          gösteren çalışmalar vardır <Evidence from={2} to={3} />. Yani
+          görüşmeyi uzatmak — sonucu zayıflatmaz, güçlendirir.
+        </p>
+
+        <h2 id="mudahale-yapmamak">Müdahale Yapmamak Da Bir Karardır</h2>
+        <p>
+          Doğal bir gülüş ısrarla yapılmış olandan değil; doğru zamanda
+          doğru ölçüde müdahale edilmiş olandan doğar. Bazen doğru
+          ölçü — hiç müdahale etmemektir.
+        </p>
+        <p>
+          Estetik diş hekimliği bir "yapılacaklar listesi" değildir.
+          Ayna karşısında kendi yüzüne biraz fazla yakından bakan
+          kadınların büyük çoğunluğunda, hekim gözüyle bakıldığında
+          aslında belirgin bir estetik sorun yoktur. Algının yarattığı
+          aciliyetle, gerçek estetik gerekliliği ayırmak — diş
+          hekiminizin önemli görevlerinden biridir. Burada "ben şunu
+          yaparım" cevabı yerine "şu anda bir müdahale gerekmiyor"
+          cevabını duymak — birinci seçenek kadar değerli olabilir.
+        </p>
+        <p>
+          Müdahale yapmamak kararının arkasında üç bakış durur: yüzün
+          kendi simetri toleransına saygı, mineye ve dişetine gereksiz
+          dokunmamak, ve kararın doğru zamanını beklemek. Bazı estetik
+          kararlar 5 yıl ertelenince çok daha iyi sonuç verir; çünkü
+          yüzün kendi seyrini görmek — daha sürdürülebilir bir tasarım
+          mümkün kılar.
+        </p>
+
+        <h2 id="yol">Yüze Yakışanı Aramak — Karar Değil, Bir Yol</h2>
+        <p>
+          Estetik diş kararı tek seferlik bir tıklama değil; yıllar
+          içinde sizinle birlikte güncellenen bir yoldur. Bu yolda
+          merkezde duran soru hep aynıdır: <em>yüze yakışıyor mu.</em>
+        </p>
+        <p>
+          Bu yolun ilk durağı, sizi konuştuğunda yüzünüzün ölçüsüne
+          referans veren bir hekim bulmaktır. İkinci durak, geri
+          dönüşsüz adımları her zaman bir alttaki müdahaleyi
+          değerlendirdikten sonra düşünmektir. Üçüncü durak, kararınızı
+          önümüzdeki on yıl içinde yaşlanma seyriyle birlikte düşünmek;
+          dördüncüsü, müdahale yapmamayı da bir seçenek olarak masada
+          tutmak. Bu dört durağı koruyan bir yol — modaya değil,
+          yüzünüze sorulan estetik bir kararı mümkün kılar.
+        </p>
+        <p>
+          Sonuç olarak, doğal görünümü zorlamamak; daha az değil, daha
+          doğru bir tasarımdır. 40 sonrası bu yaklaşım daha da kıymetli
+          olur; çünkü bu dönem yüze yakışanı aramaya — yüzün kendisinin
+          de davet ettiği bir kavşaktır.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        class="mt-14"
+        items={faqItems}
+        title="Pratik Sorular"
+        intro="Estetik diş kararı görüşmesine girmeden önce en sık dile getirilen sorular."
+      />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu',
+          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="italic">
+          Bu yazı, estetik diş hekimliğinde karar süreci üzerine bir
+          klinik-pratik rehberdir; bireysel tıbbi değerlendirme veya
+          tedavi önerisi olarak okunmamalıdır. Aşağıda kadın hastalıkları
+          ve doğum perspektifinden tamamlayıcı bir klinik bakış
+          eklendi.
+        </p>
+        <p>
+          <strong>Hormon — yüz — dental destek bağı:</strong>
+          Postmenopozda azalan östrojenin etkisi yalnızca üreme
+          dokularıyla sınırlı değildir; cilt kollajen yoğunluğu, ağız
+          mukozası, alveolar kemik metabolizması ve dudak çevresi
+          yumuşak doku tonu da bu sistemik geçişten etkilenir. Estetik
+          diş kararının 40 sonrası farklı bir referans noktasına oturması
+          — biyolojik bir gerçekliğin yansımasıdır <Evidence from={3} to={4} />.
+          Bu yüzden tek başına diş üzerinden değil; dişin etrafındaki
+          dokuların seyri üzerinden de karar verilmelidir.
+        </p>
+        <p>
+          <strong>Beklenti yönetimi ve memnuniyet:</strong> Estetik
+          müdahale memnuniyeti, müdahalenin teknik başarısı kadar —
+          öncesinde yapılan beklenti hizalamasıyla doğrudan ilişkilidir.
+          Sn. Karaosmanoğlu'nun yazısında öne çıkardığı "ikinci, gerekirse
+          üçüncü görüşme" yaklaşımı; klinik karar bilimi literatürüyle
+          uyumlu bir disiplindir. Tek görüşmede alınan geri dönüşsüz
+          estetik kararların memnuniyetsizlik oranı, çoklu görüşmelerle
+          alınan kararlardan ölçülebilir biçimde yüksektir.
+        </p>
+        <p>
+          <strong>Bruksizm ve sistemik sağlık önceliği:</strong>
+          Estetik diş kararı öncesinde bruksizm, ağız hijyeni
+          alışkanlıkları, dişeti sağlığı, kemik desteği ve sigara
+          durumu — kararın teknik uygunluğunu doğrudan etkiler.
+          Postmenopoz stres dönemiyle birleşen bruksizm,
+          laminat-veneer veya kompozit kaplama kararlarının servis
+          ömrünü kısaltabilir. Sistemik osteoporoz tedavisi alan ya
+          da bisfosfonat kullanan kadınlarda invaziv adımlar öncesinde
+          tedavi ekibinin haberdar olması — nadir ama ciddi
+          komplikasyonların önlenmesi açısından gereklidir.
+        </p>
+        <p>
+          <strong>Bireyselleştirme uyarısı:</strong> Sn. Karaosmanoğlu'nun
+          yazısında paylaştığı "yüze yakışanı arayan" yaklaşım genel
+          popülasyon çerçevesidir; sizin yüzünüzdeki simetri ölçüsü,
+          dişeti sağlığı, kemik desteği, kullandığınız ilaçlar ve sistemik
+          sağlık durumunuz — kararın somut uygulamasına yön verir.
+          Burada okuduklarınız bir başlangıç çerçevesidir, karar
+          değil; sizin için uygun adımları diş hekiminiz ile birlikte —
+          gerektiğinde hekim grubu (jinekolog, endokrinolog) konsültasyonu
+          ile — değerlendirmeniz önemlidir.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+          — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Tıbbi Editör
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme
+          yerine geçmez. Tanı, tedavi ve estetik karar süreçleri için
+          sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
