@@ -8,7 +8,7 @@ url: /hormonal-gecis/40-sonrasi/tarama-testleri
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/40-sonrasi
 keywords: ["40 sonrası tarama", "koruyucu sağlık", "kemik yoğunluğu", "metabolik izlem", "menopoz", "kadın sağlığı kontrolleri"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # 40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?

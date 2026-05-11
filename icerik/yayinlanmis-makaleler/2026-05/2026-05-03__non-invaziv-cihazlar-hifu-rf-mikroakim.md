@@ -8,7 +8,7 @@ url: /zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["HIFU", "radyofrekans", "mikroakım", "non-invaziv estetik", "cilt sıkılaştırma", "yüz germe", "pelvik radyofrekans", "postmenopozal cilt", "kanıt seviyesi", "LED ışık tedavisi"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # HIFU, Radyofrekans ve Mikroakım — Non-İnvaziv Cihazların Kanıt Sınırı

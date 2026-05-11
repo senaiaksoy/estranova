@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "uyku", "uyku bozukluğu", "insomnia", "sıcak basması", "uyku hijyeni"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Menopozda Uyku Bozukluğu — Dinlenme Rehberi
@@ -197,7 +197,7 @@ kortizol ritmi ve düşen östrojenin birlikte etkisiyle ilişkili
 (iyi kanıt)
 . Yatmadan üç-dört
 saat önce ağır yemek, alkol ve yoğun ekran kullanımını sınırlamak bu tabloyu yumuşatabilir. Yatağa
-tekrar girip 20 dakika içinde uyuyamıyorsan kalkıp loş ışıkta kısa bir okuma yapmak — telefon değil —
+tekrar girip 20 dakika içinde uyuyamıyorsanız kalkıp loş ışıkta kısa bir okuma yapmak — telefon değil —
 uyku basıncını yeniden inşa eden bir taktik.
 
 ### Magnezyum, ashwagandha ve kediotu — hangisi gerçekten kanıtlı?

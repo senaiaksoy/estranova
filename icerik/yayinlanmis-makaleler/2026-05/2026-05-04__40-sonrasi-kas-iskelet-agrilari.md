@@ -8,7 +8,7 @@ url: /zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["40 sonrası hareket", "bel ağrısı", "diz ağrısı", "kalça ağrısı", "kas-iskelet sağlığı", "fizyoterapi", "denge egzersizi"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # 40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek
@@ -42,9 +42,9 @@ Kas gücü azaldığında eklemlerin taşıdığı yük daha belirgin hissedilir
 mekanizma sık karşımıza çıkar.
 
 Denge sistemi de yalnızca "denge tahtası" meselesi değildir. Görme, ayak tabanından gelen duyular,
-iç kulak, kalça çevresi kaslar ve gövde kontrolü birlikte çalışır. Dünya Sağlık Örgütü, yetişkinlerde
+iç kulak, kalça çevresi kaslar ve gövde kontrolü birlikte çalışır. Uluslararası hareket kılavuzları, yetişkinlerde
 düzenli fiziksel aktiviteye ek olarak güçlendirme ve yaşlı erişkinlerde denge içeren çok bileşenli
-hareketi önerir
+hareketi öneriyor
 (güçlü kanıt)
 .
 

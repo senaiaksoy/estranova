@@ -8,7 +8,7 @@ url: /zamansiz-yasam/deneysel/nad-plus-takviyesi
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["NAD+", "NMN", "NR", "nikotinamid mononükleotid", "nikotinamid ribozid", "anti-aging", "takviye", "kanıt seviyesi", "menopoz"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı

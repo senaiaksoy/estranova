@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["perimenopoz", "uyku", "uyku evresi", "östrojen", "progesteron", "REM", "NREM", "CBT-I", "menopoz uyku"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Perimenopozda Uykunun Gerçekten Değişen Yanı
@@ -94,7 +94,7 @@ söylüyor, bazıları için ise daha hafif ve daha kolay bölünen bir uyku kal
 değişimin bir kısmı geçici dalga, bir kısmı ise yeni bir düzen.
 (orta–iyi kanıt)
 
-Bunun pratik anlamı: bu yıl yaşadığın uyku kalıbının üç yıl sonraki kalıbın olacağını varsaymak
+Bunun pratik anlamı: bu yıl yaşadığınız uyku kalıbının üç yıl sonraki kalıbınız olacağını varsaymak
 gerekmiyor. Aynı şekilde, "geçer, beklerim" demek de her zaman doğru bir strateji değil — özellikle
 gündüz işlevini bozan, aylarca süren uyku şikâyetleri için. Acele bir karar yerine planlı bir takip, bu
 noktada en sağlıklısı.
@@ -182,7 +182,7 @@ Perimenopoz çoğunlukla kırklı yaşların başında, bazen daha erken başlı
 önceki yedi-on yıllık geçiş dönemi olarak tanımlanıyor. Uyku değişimi her kadında aynı anda gelmiyor —
 bazılarında ilk işaret bu olurken, bazılarında âdet düzensizliği ya da ruh hâlindeki dalgalanma daha önce
 fark ediliyor. Yani "perimenopoza girdim, uykum hemen bozulacak" diye bir kural yok; ancak gece
-dinlenmen son birkaç yıldır farklı geliyorsa, bu dönemin işareti olabilir.
+dinlenmeniz son birkaç yıldır farklı geliyorsa, bu dönemin işareti olabilir.
 
 ### Her gece üçte uyanmak perimenopoz belirtisi mi?
 

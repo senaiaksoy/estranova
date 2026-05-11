@@ -8,7 +8,7 @@ url: /zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz
 section: "Zamansız Yaşam · Deneysel"
 sectionPath: /zamansiz-yasam
 keywords: ["peptid", "menopoz", "BPC-157", "TB-500", "GHK-Cu", "MOT-C", "thymosin beta-4", "ipamorelin", "AOD-9604", "epitalon", "anti-aging", "takviye güvenliği"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Peptidler Menopozda Gerçekten Ne Vaat Ediyor?

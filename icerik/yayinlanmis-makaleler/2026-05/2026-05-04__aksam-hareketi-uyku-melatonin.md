@@ -8,7 +8,7 @@ url: /zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["akşam egzersizi", "uyku", "melatonin", "perimenopoz", "menopoz", "beden ısısı", "hafif hareket", "sürdürülebilir egzersiz", "Alara Baykent"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?

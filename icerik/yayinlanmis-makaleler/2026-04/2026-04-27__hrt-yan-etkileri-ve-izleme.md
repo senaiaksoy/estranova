@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["HRT", "hormon tedavisi yan etkileri", "meme hassasiyeti", "baş ağrısı", "kanama düzensizliği", "menopoz", "izleme takvimi", "3 aylık kontrol", "alarm belirtileri"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?
@@ -48,7 +48,7 @@ ettiği bir aralık. Üç ay, çoğu kadında ilk gerçek değerlendirme noktas�
 (iyi–güçlü kanıt)
 .
 
-**Kısa not:** İlk iki haftada çok hafif belirtiler yaşamak veya hiç bir şey hissetmemek
+**Kısa not:** İlk iki haftada çok hafif belirtiler yaşamak veya hiçbir şey hissetmemek
 aynı tabloda normal sayılır. Yargı için erken; gözlem için tam zamanı.
 
 ## Yumuşak ve Geçici Olan
@@ -129,7 +129,7 @@ de yumuşatır.
 
 İlk üç ayda yaşanan duygusal yorgunluğun ne kadarının tedaviye, ne kadarının uyku, stres ve yaşam
 ritmine ait olduğunu bazen tek cümlede ayırmak mümkün değildir. Bu yüzden klinik izlemde "belirtiyi
-etiketlemek" yerine örüntüyü izlemek daha güvenlidir: ne zaman başladı, ne kadar sürdü, neyle birlikte
+etiketlemek" yerine kalıbı izlemek daha güvenlidir: ne zaman başladı, ne kadar sürdü, neyle birlikte
 arttı, günlük işlevi etkiledi mi?
 
 ## İzleme Takvimi: 3, 6, 12 Ay

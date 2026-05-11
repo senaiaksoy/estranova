@@ -8,15 +8,15 @@ url: /zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["gece terlemesi", "menopoz", "uyku", "sıcak basması", "mahrem sağlık", "çarşaf", "yatak takımı"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Gece Terlemesi ve Uyku: Utançsız Bir Bakış
 
 ## O An — Hepimizin Yaşadığı
 
-Saat üçü biraz geçiyor. Gözlerini açtığında ensende ıslaklık var, sırtın yapışmış, yastığın bir yanı
-soğumaya başlamış bile. Yan tarafında uyuyan biri varsa, ilk düşüncen onun değil; çıkarsan zemin gıcırdar
+Saat üçü biraz geçiyor. Gözlerinizi açtığınızda ensenizde ıslaklık var, sırtınız yapışmış, yastığınızın bir yanı
+soğumaya başlamış bile. Yan tarafınızda uyuyan biri varsa, ilk düşünceniz onun değil; çıkarsanız zemin gıcırdar
 mı, dolaptan temiz pijamayı sessizce alabilir misiniz, çarşafı sabaha kadar idare edebilir misiniz.
 
 (sınırlı kanıt)
@@ -48,7 +48,7 @@ anlatırken sesin biraz alçalması, sanki söylenmemesi gereken bir şey söyl�
 Bunu konuşmamızın zor olması garip değil; kültürel olarak kadın bedeninin "fark edilmeden" işlemesi
 gerektiği fikriyle büyüdük. Ter, koku, ıslaklık — hep "saklanması" gereken şeyler olarak öğretildi. Oysa
 burada saklanacak hiçbir şey yok. Vücudunuz bir geçiş yaşıyor, siz de o geçişi taşıyorsunuz. Partnerinize, kız
-kardeşine, yakın arkadaşına bunu sade bir cümleyle söylemek çoğu zaman düşündüğünden daha rahatlatıcı
+kardeşinize, yakın arkadaşınıza bunu sade bir cümleyle söylemek çoğu zaman düşündüğünüzden daha rahatlatıcı
 oluyor: "Geceleri terliyorum, bu dönemin bir parçası, bazen kalkıp üstümü değiştirmem gerekebilir." Bu
 kadar. Drama gerekmiyor, özür de gerekmiyor.
 
@@ -123,7 +123,7 @@ yarıyor.
 
 Yanlış değil. Sırılsıklam çarşafta uyumaya çalışmak çoğu zaman uykuyu daha çok bölüyor. Hızlı bir ılık
 (sıcak değil) suyla yıkanma, kuru bir tişört ve serin bir yastık, bedenin ısısını yumuşakça düşürüp
-tekrar uykuya geçmene yardımcı olabilir. Önemli olan parlak ışık yakmamak, telefona uzanmamak; banyoda
+tekrar uykuya geçmenize yardımcı olabilir. Önemli olan parlak ışık yakmamak, telefona uzanmamak; banyoda
 mümkünse loş bir ışık kullanmak. Böylece beden "sabah oldu" sinyalini almıyor.
 
 ### Klima açmak yardımcı oluyor ama eklem ağrım artıyor — ne yapayım?
@@ -131,14 +131,14 @@ mümkünse loş bir ışık kullanmak. Böylece beden "sabah oldu" sinyalini alm
 Bu çok yaygın bir denge sorunu. Klimayı doğrudan üstüne üfletmek yerine odanın bir köşesine yönlendirmek,
 yatağa girmeden önce odayı serinletip uyurken kapatmak ya da daha yumuşak bir alternatif olarak tavan
 vantilatörü ile pencereyi hafif aralık bırakmayı deneyebilirsiniz. İnce bir hırka veya pamuklu çorap yatak
-başında dururken, gece üşüdüğün anda hızlıca giyebilmek de eklemleri rahatlatabilir.
+başında dururken, gece üşüdüğünüz anda hızlıca giyebilmek de eklemleri rahatlatabilir.
 
 ### Soğuk yastık, jel mat gibi ürünler gerçekten işe yarıyor mu?
 
 Etkileri kişiden kişiye değişiyor, ama yastık üst kısmının serin kalması bazı kadınlarda gece
 terlemesinin "uyandırıcı" yanını gerçekten yumuşatabiliyor. Çok pahalı yatak sistemlerine yatırım
 yapmadan önce, ucuz bir soğutucu jel yastık kılıfı veya bambu örtü ile bir-iki hafta denemek mantıklı.
-Eğer fark hissetmiyorsan, asıl odağı yatak takımı kumaşına, oda ısısına ve akşam alışkanlıklarına vermek
+Eğer fark hissetmiyorsanız, asıl odağı yatak takımı kumaşına, oda ısısına ve akşam alışkanlıklarına vermek
 genellikle daha kalıcı bir rahatlama sağlıyor.
 
 Tıbbi Not

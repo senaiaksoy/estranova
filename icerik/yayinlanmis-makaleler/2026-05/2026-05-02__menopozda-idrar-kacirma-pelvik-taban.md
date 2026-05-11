@@ -8,7 +8,7 @@ url: /beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["idrar kaçırma", "üriner inkontinans", "pelvik taban", "stres tipi", "urge tipi", "menopoz", "kadın sağlığı"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Konuşmadığımız Şey — 40 Sonrası İdrar Kaçırma
@@ -210,7 +210,7 @@ ve seçilmiş olgularda cerrahi seçenekler hekiminizle birlikte değerlendirili
 ve RF gibi cihaz tabanlı uygulamalarda kanıt sınırı dürüstçe söylenmeli — umut etiketinin
 yerine bilgi koymak, hem bütçeyi hem zamanı koruyor.
 
-Bir yandan bilmemek gereken şeyleri söyleyebilirim: bu konuda *"şu sizde işe yarar"* diyebilen
+Burada açıkça söylemem gereken bir şey daha var: bu konuda *"şu sizde işe yarar"* diyebilen
 tek bir reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı seçenek doğru olabilir;
 bedeniniz, geçmişiniz, hayat tercihleriniz hepsi hesaba katılır. Doktorunuza üç soruyla gidin —
 tipiniz, davranışsal adımların etkisi nasıl ölçülecek, bir sonraki adım ne olacak. Sorunun

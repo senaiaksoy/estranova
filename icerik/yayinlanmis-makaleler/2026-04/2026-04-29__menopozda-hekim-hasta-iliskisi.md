@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz
 keywords: ["menopoz", "hekim seçimi", "hekim-hasta ilişkisi", "HRT", "paydaş karar verme", "shared decision making", "menopoz takibi", "hormon tedavisi", "jinekolog"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor
@@ -39,7 +39,7 @@ güç veriyor hem de yorgunluk.
 Yıllar içinde kadınların hekim sandalyesindeki konumu farklılaştı. Bir görüşmeye gitmeden önce
 çevrimiçi forumları okumuş, sosyal medyada kıyaslamalar yapmış, yapay zekâya soru sormuş,
 arkadaşlarıyla konuşmuş bir kadın oturuyor masanın karşısında. Hekimine "ben şunu okudum, siz ne
-diyorsun" diyebiliyor. Bu sade değişim son yıllarda kayda değer bir konum farkı yarattı. Üstelik
+diyorsunuz" diyebiliyor. Bu sade değişim son yıllarda kayda değer bir konum farkı yarattı. Üstelik
 hekim-hasta paylaşımının klinik karar süreçlerinde aktif rol oynaması, jinekoloji ve menopoz
 literatüründe paydaş karar verme (shared decision-making) modeli olarak tartışılıyor
 
@@ -171,7 +171,7 @@ anlatı birleştiğinde tablo netleşir. Bu çabaya açık olmayan bir hekimle u
 değil, sizinle birlikte düşünmesini. "Şu ilacı kullanın" cümlesinden çok "şu seçenekler var, siz ne
 hissediyorsunuz?" cümlesini duymak istiyorsanız, bu beklenti sizi yalnız bırakacak bir hekim değil — paydaş
 bir hekim arıyorsunuz demektir. Bu beklentinin altını çizmek sizin hakkınız; ifade etmek de sizin
-sorumluluğun.
+sorumluluğunuz.
 
 ## Kapanış
 
@@ -183,7 +183,7 @@ tanıması, ve bu pozisyona uyacak hekimle yıllar içinde olgunlaşacak bir ba�
 
 Belki şu soru yardımcı olur: bu hekimle bir yıl sonra hâlâ konuşmaya değer bulduğum bir şey kalır mı?
 Karar kendi kararınız, sorumluluğu da size ait. Beden bir cümle söylemişti; siz onu hekiminizle masada
-açıyorsun.
+açıyorsunuz.
 
 Tıbbi Not
 

@@ -8,7 +8,7 @@ url: /zamansiz-yasam/deneysel/coenzyme-q10-takviyesi
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["coenzyme Q10", "CoQ10", "ubiquinone", "ubiquinol", "statin yan etkisi", "migren önleme", "kalp yetmezliği", "anti-aging takviye", "menopoz", "takviye kanıt"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?
@@ -81,7 +81,7 @@ yerine değil yanına* düşünülen bir seçenek.
 ### 3. Kalp yetmezliği desteği
 
 Kalp yetmezliği olan hastalarda kalp kasının enerji üretiminde
-mitokondriyal dysfunction önemli bir bileşen; bu zeminde CoQ10
+mitokondriyal disfonksiyon önemli bir bileşen; bu zeminde CoQ10
 takviyesi yıllardır araştırılıyor. Geniş bir randomize kontrollü
 çalışma standart kalp yetmezliği tedavisine eklenen CoQ10'un mortaliteyi
 ve hastane yatışlarını anlamlı azaltabildiğini bildirmiş
@@ -282,7 +282,7 @@ emilimi belirgin artırır. Sabah veya öğlen kahvaltı/öğle yemeğiyle
 almak çoğu hasta için iyi tolere edilir. Bazı hastalarda akşam
 alındığında hafif uyarıcı etki bildirilmiştir; uyku bölünmesine
 yatkınlığı varsa öğleden önce almak daha mantıklı. Klinik
-çalışmaların büyük çoğunluğu doğum yemekleriyle birlikte alımı
+çalışmaların büyük çoğunluğu ana öğünlerle birlikte alımı
 tercih eder.
 
 ## Kapanış

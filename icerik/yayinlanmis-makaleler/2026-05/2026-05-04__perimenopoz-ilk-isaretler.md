@@ -8,7 +8,7 @@ url: /hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["perimenopoz", "menopoz geçişi", "adet düzensizliği", "sıcak basması", "gece terlemesi", "uyku", "beyin sisi", "FSH"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem
@@ -81,7 +81,7 @@ Menopoz alanındaki uzman kaynaklar, orta yaş kadınlarında geçiş döneminde
 
 Yine de ruh hali belirtilerini küçümsememek gerekir. İki haftadan uzun süren belirgin mutsuzluk hali, yoğun kaygı,
 panik atak benzeri tablolar, işlev kaybı ya da kendine zarar düşünceleri perimenopoz etiketiyle bekletilecek
-şeyler değildir. Bu ayrım bence en kıymetli sınır: normalleştimek rahatlatır; geçiştirmek geciktirir.
+şeyler değildir. Bu ayrım bence en kıymetli sınır: normalleştirmek rahatlatır; geçiştirmek geciktirir.
 
 ## Peki Kan Testiyle Anlaşılmaz mı?
 

@@ -8,7 +8,7 @@ url: /beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["cinsellikte ağrı", "disparoni", "dispareuni", "vajinismus", "GSM", "menopoz", "pelvik taban disfonksiyonu", "vulvodini", "lokal östrojen"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Cinsellikte Ağrı — Mahrem Bir Şikâyet, Açık Bir Tedavi Haritası
@@ -278,7 +278,7 @@ haritasını birlikte değerlendirmek (lokal hormonal/hormon dışı + pelvik ta
 fizyoterapisi + psikoterapi); ve partnerle açık ama nazik iletişim. *"Alışırım"*
 deyip taşımak ne fizyolojik ne psikolojik olarak sürdürülebilir.
 
-Bir yandan bilmemek gereken şeyleri söyleyebilirim: *"şu sizde işe yarar"*
+Şunu da netleştireyim: *"şu sizde işe yarar"*
 diyebilen tek bir reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı plan
 doğru olabilir; bedeniniz, eşlik eden tıbbi durumlar, alt-tipinizin ayrımı tedavi
 seçimine yön verir. Doktorunuza üç soruyla gidin — alt-tipim ne, hangi kapıları

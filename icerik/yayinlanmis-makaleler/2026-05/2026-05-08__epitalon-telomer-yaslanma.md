@@ -8,7 +8,7 @@ url: /bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["Epitalon", "epithalon", "telomer", "telomeraz", "hTERT", "ALT", "pineal bez", "hücresel yaşlanma", "anti-aging", "menopoz"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar
@@ -185,7 +185,7 @@ dar köprü.
 ## Pratik Sınırlar — Yaşlanma Karşıtı Vaadlere Sakin Bir Bakış
 
 Epitalon'un internet üzerindeki sunumu çoğu zaman iki uçta dolaşıyor:
-*"yaşlanmayı geri çeviren mucize molekül"* başlıklı sayfalar bir tarafta;
+*"yaşlanmayı geri çeviren güçlü molekül"* başlıklı sayfalar bir tarafta;
 klinik tıbbın suskun olduğu bir köşe öteki tarafta. Sakin bakış arada bir
 yerde, soğukkanlı bir okuma istiyor.
 

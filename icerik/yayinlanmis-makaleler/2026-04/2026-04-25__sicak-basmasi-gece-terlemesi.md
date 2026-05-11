@@ -8,7 +8,7 @@ url: /hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis
 keywords: ["sıcak basması", "gece terlemesi", "menopoz", "perimenopoz", "uyku", "tetikleyiciler"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi

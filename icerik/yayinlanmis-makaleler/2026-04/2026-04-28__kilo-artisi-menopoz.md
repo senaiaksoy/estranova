@@ -8,7 +8,7 @@ url: /zamansiz-yasam/kilo-artisi-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["menopoz", "kilo artışı", "östrojen", "visseral yağ", "bel çevresi", "sarkopeni", "kas kütlesi", "metabolizma", "insülin direnci", "protein", "direnç egzersizi", "40+ kadın"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet
@@ -137,7 +137,7 @@ insülin yanıtı belirgin destek görüyor
 . Sağlıklı yağlar — zeytinyağı, ceviz,
 balık omega-3'leri, avokado — tokluğu uzatıyor ve hücre membranını besliyor. Akdeniz tarzı sade
 bir yol — sebze, meyve, tam tahıl, balık, zeytinyağı, baklagiller — bu dönem için en tutarlı
-okuyan beslenme kalıplarınden biri
+okuyan beslenme kalıplarından biri
 (güçlü kanıt)
 .
 

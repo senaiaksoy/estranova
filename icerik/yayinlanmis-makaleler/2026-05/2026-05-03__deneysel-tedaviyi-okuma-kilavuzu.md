@@ -8,7 +8,7 @@ url: /zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["deneysel tedavi", "kanıt seviyesi", "off-label kullanım", "klinik araştırma", "tedavi okuma kılavuzu", "hekim-hasta iletişimi", "menopoz", "anti-aging"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Deneysel Tedaviyi Okuma Kılavuzu
@@ -85,7 +85,7 @@ aynı anda görünüyorsa ihtiyat artırılır.
 anlatılır, kanıt seviyesi açık söylenir, sınırlamaları gizlenmez,
 bireysel değerlendirme önerilir, soru sorulduğunda yanıt verilir.
 Şişirilmiş pazarlamada ise mekanizma bilim diliyle süslenir, kanıt
-*"araştırmalar gösteriyor"* tarzı sayısız bir referansa
+*"araştırmalar gösteriyor"* tarzı belirsiz bir referansa
 sıkıştırılır, sınırlamalar belirsizleştirilir, *"size özel ticari sunum"*
 aciliyetiyle birlikte sunulur. Plasebo etkisi tüm tedavilerde gerçek
 bir etken — özellikle subjektif belirtilerde
@@ -183,7 +183,7 @@ veya cihazın, onaylandığı endikasyon dışında bir durumda hekimin
 profesyonel sorumluluğunda kullanılmasıdır — yaygındır, çoğu yerde
 meşrudur ve birçok durumda makul kanıta dayanır. *Deneysel*
 ise yeterli kanıt henüz oluşmamış, çoğu zaman klinik araştırma
-içinde uygulanan bir yaklaşımdır. İkisinin de gözeneği farklı:
+içinde uygulanan bir yaklaşımdır. İkisinin de zemini farklı:
 off-label kullanım için sorulacak soru *"bu endikasyonda kanıt ne
 kadar?"*, deneysel uygulama için sorulacak soru *"bu klinik
 araştırma içinde mi yapılıyor, etik kurul onayı var mı?"*

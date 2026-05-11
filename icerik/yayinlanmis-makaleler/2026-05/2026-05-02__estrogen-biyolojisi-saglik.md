@@ -8,7 +8,7 @@ url: /bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["östrojen", "estradiol", "estron", "estriol", "estetrol", "ER-alfa", "ER-beta", "GSM", "HRT", "estrobolome", "menopoz"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Östrojen Biyolojisi ve Sağlık — Tek Hormon Değil, Bir Aile
@@ -76,7 +76,7 @@ baskın olur; total östrojen düzeyleri normal sikluslara göre 100-1000 kat ar
 
 **Perimenopozda** tablo *düz bir düşüş* değil, *kaotik
 dalgalanma*. Estradiol bazı sikluslarda yüksek, bazılarında düşük; FSH
-karşıtmen kompansatuvar yükselir; mensual sikluslar düzensizleşir. Bu kaos
+kompansatuvar yükselir; adet siklusları düzensizleşir. Bu kaos
 dönemi kadına göre 2-10 yıl sürebiliyor
 (güçlü kanıt)
 .
@@ -324,7 +324,7 @@ kararının temelini kuruyor; ama mekanizma tek başına karar vermiyor — eşl
 tıbbi durumlar, bireysel risk-fayda dengesi ve takip planı birlikte yorulduğunda
 anlamlı bir tablo çıkıyor.
 
-Bir yandan bilmemek gereken şeyleri söyleyebilirim: bu alandaki bilim hızla
+Bilim tarafında bir hatırlatmayı da paylaşayım: bu alandaki bilim hızla
 ilerliyor — son 10 yılda E4 ürünleri, doku-spesifik SERM'ler, transdermal
 formülasyonlar ve mikrobiyota etkileşimi gibi yeni katmanlar eklendi. *"Bir
 kez karar verdik, hep böyle gideceğiz"* mantığı östrojen-temelli tedaviler

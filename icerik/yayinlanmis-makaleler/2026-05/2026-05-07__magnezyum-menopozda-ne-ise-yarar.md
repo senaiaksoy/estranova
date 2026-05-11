@@ -8,7 +8,7 @@ url: /zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar
 section: "Zamansız Yaşam · Vitaminler"
 sectionPath: /zamansiz-yasam
 keywords: ["magnezyum", "menopoz", "uyku", "kas krampları", "kabızlık", "magnezyum glisinat", "magnezyum sitrat", "çarpıntı", "stres", "takviye güvenliği"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Magnezyum Menopozda Gerçekten Ne İşe Yarar?

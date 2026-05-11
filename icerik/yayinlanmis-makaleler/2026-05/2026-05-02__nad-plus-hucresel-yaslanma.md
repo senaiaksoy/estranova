@@ -8,7 +8,7 @@ url: /bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["NAD+", "NMN", "NR", "sirtuin", "PARP", "CD38", "mitokondri", "hücresel yaşlanma", "epigenetik yaşlanma", "menopoz"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # NAD+ ve Hücresel Yaşlanma — Mekanizmadan Pratik Sınırlara
@@ -156,7 +156,7 @@ okumamız gereken bir nokta.
 
 Anti-aging araştırmalarının klasik öyküsü şu: hayvan modellerinde (özellikle
 fareler) etkileyici sonuçlar gösteriliyor, ama insan çalışmalarında etkinin
-büyüklüğü çoğu zaman küçülüyor — bazen kayboluyor. NAD+ alanı bu örüntünün
+büyüklüğü çoğu zaman küçülüyor — bazen kayboluyor. NAD+ alanı bu kalıbın
 tipik bir örneği.
 
 Birkaç sebep var: (1) **Yaşam süresi farkı** — fare 2 yıl yaşıyor,

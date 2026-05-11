@@ -8,7 +8,7 @@ url: /zamansiz-yasam/d-vitamini-rehberi
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["D vitamini", "25-OH-D", "menopoz", "kemik sağlığı", "osteoporoz", "güneş", "takviye", "tarama", "kalsiyum", "K2"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar
@@ -280,7 +280,7 @@ seviyeye yönelik kişiselleştirilmiş dozaj, 8-12 haftalık kontrol takvimi ve
 eden tıbbi durumlar/ilaçlarla birlikte değerlendirme — bu yaklaşım hem cüzdanı hem
 böbreği koruyor.
 
-Bir yandan bilmemek gereken şeyleri söyleyebilirim: yüksek-doz bolus stratejileri
+Bir uyarıyı da paylaşmadan geçmeyeyim: yüksek-doz bolus stratejileri
 (yılda bir 500.000 IU gibi) artık önerilmiyor; düşmeyi önlemediği, hatta bazı
 çalışmalarda artırdığı gösterilmiş. *"Daha fazla daha iyi"* yaklaşımı bu
 mikro-besin için doğru değil. Doktorunuza üç soruyla gidin — ölçüm gerekli mi,

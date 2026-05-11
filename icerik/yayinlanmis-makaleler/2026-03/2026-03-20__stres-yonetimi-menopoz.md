@@ -8,7 +8,7 @@ url: /zihin-denge/duygusal-denge/stres-yonetimi-menopoz
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["menopoz", "perimenopoz", "stres", "anksiyete", "kortizol", "rahatlama"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Stres Yönetimi — Menopozda Stres ve Adaptasyon
@@ -44,7 +44,7 @@ Stresin tek bir yüzü yok. Akut stres (kısa süreli, belirli bir sebebi olan) 
 sınava hazırlanırken adrenal cevabın bizi diri tuttuğu o his
 (iyi kanıt)
 .
-Sorun, bu yanıtın kapanması gerektiğinde kapanmamasıyla başlar: kronik stres (uzun süreli, kesintisiz) kortisol ve adrenalini sürekli yüksekte tutar,
+Sorun, bu yanıtın kapanması gerektiğinde kapanmamasıyla başlar: kronik stres (uzun süreli, kesintisiz) kortizol ve adrenalini sürekli yüksekte tutar,
 bağışıklık sisteminin dengesi zaman içinde bozulabilir
 (iyi kanıt)
 .

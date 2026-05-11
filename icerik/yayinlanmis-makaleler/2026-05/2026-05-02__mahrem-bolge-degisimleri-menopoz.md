@@ -8,7 +8,7 @@ url: /beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik
 keywords: ["vajinal kuruluk", "GSM", "genitoüriner menopoz sendromu", "vulvovajinal atrofi", "lokal östrojen", "menopoz", "cinsel sağlık", "mahrem bölge"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM
@@ -238,7 +238,7 @@ mekanizmayı kişisel eksiklik değil, hormon değişiminin yansıması olarak o
 lazer ve RF gibi cihaz uygulamalarında kanıt sınırı dürüstçe söylenmeli. Günlük bakım sade ve
 tutarlı; cinsellikte ağrı bir sinyal, alışılması gereken bir şey değil.
 
-Bir yandan bilmemek gereken şeyleri söyleyebilirim: *"şu sizde işe yarar"* diyebilen tek bir
+Dürüstçe söylemek gerekirse: *"şu sizde işe yarar"* diyebilen tek bir
 reçete yok. İki kadın aynı belirtiyi yaşar ama iki farklı seçenek doğru olabilir; bedeniniz,
 geçmişiniz, eşlik eden tıbbi durumlar hepsi hesaba katılır. Doktorunuza üç soruyla gidin —
 tablonun GSM ile uyumu, lokal östrojen size uygun mu, takip planı nasıl olacak. Sorunun kendisi

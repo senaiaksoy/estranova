@@ -1,7 +1,7 @@
 # Estranova Yayınlanmış Makale Arşivi
 
-Toplam makale: **44**
-Son export: 2026-05-08
+Toplam makale: **48**
+Son export: 2026-05-11
 
 Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik üretilir. `src/pages/` altındaki Astro source'tan metadata, `dist/` altındaki build HTML'den gövde markdown'ına dönüştürülür. Aynı içerik aynı anda obsidian vault'a (`<VAULT>/articles/`) da yazılır.
 
@@ -29,20 +29,24 @@ npm run articles:export # markdown'a dök
 
 | Tarih | Yazar | Başlık | Bölüm |
 |---|---|---|---|
-| 2026-05-08 | - | [Menopozda Cilt Değişimleri](2026-05/2026-05-08__menopozda-cilt-degisimleri.md) | Beden & Yakınlık |
+| 2026-05-11 | - | [Menopozda Cilt Değişimleri](2026-05/2026-05-11__menopozda-cilt-degisimleri.md) | Beden & Yakınlık |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__menopoz-hrt-meme-kanseri-riski.md) | Bilimsel Pencere |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__menopozda-hrt-avantajlari.md) | Bilimsel Pencere |
+| 2026-05-11 | - | [Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni](2026-05/2026-05-11__tiroid-menopoz-yorgunluk-uyku.md) | Hormonal Geçiş |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__dokuz-yillik-menopoz-sonunda-hrt-karari.md) | Hormonal Geçiş |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__hrt-ilk-alti-ay.md) | Hormonal Geçiş |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__menopoz-nedir.md) | Hormonal Geçiş |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__koruyucu-saglik-kayitlari.md) | Hormonal Geçiş |
+| 2026-05-11 | - | [Menopoza Hazırlıkta İlk Kontrol Dosyası](2026-05/2026-05-11__menopoza-hazirlik-ilk-kontrol-dosyasi.md) | Hormonal Geçiş |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__belden-gelen-agri-kasik-genital-bolge.md) | Zamansız Yaşam |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__durus-bozuldugunda-degil-beden-sessizce-sikistiginda.md) | Zamansız Yaşam |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__kemik-sagligi-40-sonrasi.md) | Zamansız Yaşam |
+| 2026-05-11 | - | [Kısa Özet](2026-05/2026-05-11__yapay-zeka-hekim-cihaz-dengesi.md) | Zamansız Yaşam |
+| 2026-05-11 | - | [Özet](2026-05/2026-05-11__yuz-mudahalesi-olcu-sorusu.md) | Zamansız Yaşam |
+| 2026-05-11 | - | [Perimenopozda Zihinsel Bulanıklık](2026-05/2026-05-11__perimenopozda-zihinsel-bulaniklik.md) | Zihin & Denge |
+| 2026-05-11 | - | [Perimenopozda Kaygı Artışı](2026-05/2026-05-11__perimenopozda-kaygi-artisi.md) | Zihin & Denge |
 | 2026-05-08 | senai-aksoy | [Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar](2026-05/2026-05-08__epitalon-telomer-yaslanma.md) | Bilimsel Pencere |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__menopoz-hrt-meme-kanseri-riski.md) | Bilimsel Pencere |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__menopozda-hrt-avantajlari.md) | Bilimsel Pencere |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__dokuz-yillik-menopoz-sonunda-hrt-karari.md) | Hormonal Geçiş |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__menopoz-nedir.md) | Hormonal Ge?i? ? Menopoz |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__koruyucu-saglik-kayitlari.md) | Hormonal Ge?i? ? Menopoza Haz?rl?k |
-| 2026-05-08 | - | [Menopoza Hazırlıkta İlk Kontrol Dosyası](2026-05/2026-05-08__menopoza-hazirlik-ilk-kontrol-dosyasi.md) | Hormonal Geçiş |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__belden-gelen-agri-kasik-genital-bolge.md) | Zamansız Yaşam |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__durus-bozuldugunda-degil-beden-sessizce-sikistiginda.md) | Zamansız Yaşam |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__kemik-sagligi-40-sonrasi.md) | Zamans?z Ya?am ? Koruyucu Sa?l?k |
-| 2026-05-08 | - | [Kısa Özet](2026-05/2026-05-08__yapay-zeka-hekim-cihaz-dengesi.md) | Zamansız Yaşam |
-| 2026-05-08 | - | [Perimenopozda Zihinsel Bulanıklık](2026-05/2026-05-08__perimenopozda-zihinsel-bulaniklik.md) | Zihin & Denge |
-| 2026-05-08 | - | [Perimenopozda Kaygı Artışı](2026-05/2026-05-08__perimenopozda-kaygi-artisi.md) | Zihin & Denge |
+| 2026-05-08 | bulent-aksoy | [40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?](2026-05/2026-05-08__40-sonrasi-diz-agrisi-izlem-mudahale.md) | Zamansız Yaşam |
 | 2026-05-07 | senai-aksoy | [Magnezyum Menopozda Gerçekten Ne İşe Yarar?](2026-05/2026-05-07__magnezyum-menopozda-ne-ise-yarar.md) | Zamansız Yaşam · Vitaminler |
 | 2026-05-06 | senai-aksoy | [Peptidler Menopozda Gerçekten Ne Vaat Ediyor?](2026-05/2026-05-06__peptid-kullanimlari-menopoz.md) | Zamansız Yaşam · Deneysel |
 | 2026-05-05 | senai-aksoy | [40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?](2026-05/2026-05-05__tarama-testleri.md) | Hormonal Geçiş |

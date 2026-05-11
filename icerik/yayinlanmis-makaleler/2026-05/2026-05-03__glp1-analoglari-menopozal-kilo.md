@@ -8,7 +8,7 @@ url: /bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere
 keywords: ["GLP-1 analogları", "semaglutid", "tirzepatid", "menopozal kilo", "obezite tedavisi", "STEP çalışması", "SURMOUNT çalışması", "visceral adipoz", "sarkopeni", "HRT etkileşimi"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Menopozal Kilo İçin GLP-1 Analogları: Abartısız Klinik Karar

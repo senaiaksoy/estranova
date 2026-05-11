@@ -8,7 +8,7 @@ url: /zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam
 keywords: ["sauna", "soğuk duş", "menopoz semptomları", "sıcak basması", "kardiyovasküler sağlık", "sporcu kadın", "soğuk maruziyet", "kuşak gözlemi", "iyi olma"]
-exportedAt: 2026-05-08
+exportedAt: 2026-05-11
 ---
 
 # Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına
@@ -36,7 +36,7 @@ rehberi.
 
 Sauna sporcu yaşamımda kazanılmış bir alışkanlık değil, doğal bir
 parçaydı; antrenman sonrası kasları rahatlatmak, terlemek,
-başka bir tempoda bir araya gelmek için. Bordumun bakımına
+başka bir tempoda bir araya gelmek için. Atımın bakımına
 ayırdığım vakti kendi bedenime ayıramam diye düşünmek için
 bir antrenman sonrası gerekti — sauna o düşüncenin yer
 tuttuğu bir alan oldu.
