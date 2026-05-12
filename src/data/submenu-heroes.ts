@@ -219,6 +219,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/hormonal-gecis/40-sonrasi/menopozdan-sonra-kalp-sagligina-neden-daha-dikkatli-bakiyorum': {
+    src: '/images/library/editorial/alp-aslan-eryilmaz-menopoz-kalp-byline.png',
+    alt: 'Krem trençkot ve bordo fular detayıyla apartman girişinde kısa bir duraklama anında görülen orta yaşlı kadın; menopoz sonrası kalp sağlığı yazısı için sakin editoryal kart görseli',
+  },
   '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale': {
     src: '/images/library/editorial/zy-diz-agrisi-ortopedik-takip.png',
     alt: 'Premium editoryal tonda, sakin bir iç mekanda diz sağlığı ve ortopedik takip temasını taşıyan olgun kadın portresi; 40 sonrası diz ağrısını izlem ve müdahale dengesiyle okuma görseli',

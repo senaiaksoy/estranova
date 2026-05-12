@@ -12,6 +12,16 @@
 
 ---
 
+### Durum notu - 2026-05-11
+
+- İlk makale adayı seçildi: `menopozdan-sonra-kalp-sagligina-neden-daha-dikkatli-bakiyorum`
+- Eksen: menopoz sonrası kardiyovasküler risk + HRT'nin kalp tarafındaki yeri
+- Taslak yayın formatına uyarlandı: `ArticleSummary` + 7 H2 + tek görünür SSS + Bilimsel Editör Notu
+- Lexicon kontrol notu: hard-ban taramasında taslaktaki riskli ifade temizlendi; kayıt temiz sürüm üzerinden tutuluyor
+- Paket üretildi: `onay-bekleyen/2026-05-11_menopozdan-sonra-kalp-sagligina-neden-daha-dikkatli-bakiyorum/`
+- Kullanıcı görseli eklendi: byline ve kart görseli bağlandı, üst hero bilinçli olarak korunuyor
+- Sonraki adım: manifesto havuzu aktivasyonu + yazar onay döngüsü
+
 ## Cooldown takibi
 
 | Kalıp türü | Havuz boyutu | Cooldown | Son kullanım |

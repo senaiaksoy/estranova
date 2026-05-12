@@ -1,0 +1,21 @@
+{
+  "writer": {
+    "slug": "alp-aslan-eryilmaz",
+    "name": "Dr. Alp Aslan Eryılmaz"
+  },
+  "article": {
+    "slug": "menopozdan-sonra-kalp-sagligina-neden-daha-dikkatli-bakiyorum",
+    "title": "Menopozdan sonra kalp sağlığına neden daha dikkatli bakıyorum",
+    "previewUrl": "./makale-onizleme.html"
+  },
+  "package": {
+    "createdAt": "2026-05-11T21:28:59.1112623+03:00",
+    "deadline": "2026-05-18T21:28:59.1112623+03:00",
+    "status": "pending-author-approval",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "formType": "standard",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}
