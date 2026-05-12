@@ -66,7 +66,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/40-sonrasi': {
     src: '/images/library/editorial/journey-40-sonrasi.webp',
-    alt: 'Çağdaş İstanbul sanat galerisinde öğleden sonra sergi gezişinde üç yaşıt kadın (55-62); soldaki bordo şal omuzunda büyük abstract tabloya dalgın merakla bakarak küçük Türk kahvesi fincanı tutuyor, ortadaki kahkahayla jest yapıyor, sağdaki porselen Türk kahvesi fincanıyla dingin gülümseyerek dinliyor; bakımlı boyalı saçlar (mahogany dalgalı, açık kestane omuz dalgası, auburn bob), navy ipek + bordo şal + cream linen + bordo ipek bluz, dark oak galeri zemini, gerideki ikram konsolunda Türk kahvesi servisi; post-menopoz yaşam dolu sosyal kültürel akşam teması',
+    alt: 'İstanbul Boğaz sahilinde altın saat ışığında enerjik tempolu yan yana yürüyen üç yaşıt kadın (40-45); navy zip-up ve cream wide-leg pant giyen dark brown uzun saçlı kadın kahkahayla arkadaşına dönüyor, bordo zip-up ve camel jogger giyen chestnut saçlı kadın su şişesi elinde kararlı adımlarla öne bakıyor, cream zip-up ve dark kahverengi tayt giyen auburn saçlı kadın hafif öne eğilmiş arkadaşını dinliyor; bakımlı boyalı saçlar, fit ve aktif beden dili, doğal minimal makyaj; arka planda Boğaz mavi-yeşil su ve İstanbul silüeti bokeh, sahil promenad taş zemini; 40 sonrası hareket güç ve sosyal vitalite teması',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri': {
     src: '/images/library/editorial/hg-tarama-testleri.webp',
