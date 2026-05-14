@@ -17,11 +17,11 @@ const allowedExt = new Set(['.astro', '.ts', '.tsx', '.mdx']);
 
 // Anahtar küçük harf — eşleşme case-insensitive yapılır.
 const BRAND_TOKENS = {
-  '#6b2d3e': 'burgundy',
-  '#4f171c': 'burgundy-deep',
+  '#d81b60': 'burgundy',
+  '#ad1457': 'burgundy-deep',
   '#2d2d2d': 'ink',
-  '#c9a96e': 'gold',
-  '#775a19': 'gold-bronze',
+  '#000000': 'gold',
+  '#2d2d2d': 'gold-bronze',
   '#fdf8f0': 'cream-soft',
   '#f5ede0': 'cream-warm',
   '#fcf9f4': 'surface',

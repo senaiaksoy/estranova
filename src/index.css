@@ -6,10 +6,10 @@
 @utility prose-estranova {
   --tw-prose-body: #2D2D2D;
   --tw-prose-headings: #2D2D2D;
-  --tw-prose-links: #9c2845;
-  --tw-prose-bullets: #C9A96E;
-  --tw-prose-quotes: #9c2845;
-  --tw-prose-quote-borders: #C9A96E;
+  --tw-prose-links: #D81B60;
+  --tw-prose-bullets: #000000;
+  --tw-prose-quotes: #D81B60;
+  --tw-prose-quote-borders: #000000;
 
   counter-reset: estranova-chapter;
 
@@ -33,7 +33,7 @@
     font-family: var(--font-serif);
     font-size: 0.75rem;
     letter-spacing: 0.22em;
-    color: #C9A96E;
+    color: #000000;
     margin-bottom: 0.75rem;
     font-feature-settings: "tnum";
   }
@@ -42,7 +42,7 @@
     display: block;
     width: 2.5rem;
     height: 1px;
-    background: #C9A96E;
+    background: #000000;
     margin-top: 0.75rem;
     margin-bottom: 1.5rem;
   }
@@ -62,7 +62,7 @@
     max-width: 64ch;
   }
   & strong {
-    color: #6B2D3E;
+    color: #D81B60;
     font-weight: 650;
   }
   & ul,
@@ -70,7 +70,7 @@
     max-width: 62ch;
   }
   & li::marker {
-    color: #C9A96E;
+    color: #000000;
   }
   & h2 + p {
     font-family: var(--font-sans);
@@ -79,18 +79,18 @@
     line-height: 1.64;
     letter-spacing: 0.003em;
     font-weight: 400;
-    color: #9c2845;
+    color: #D81B60;
     max-width: 58ch;
   }
   & blockquote {
     background:
-      linear-gradient(90deg, rgba(201, 169, 110, 0.7), rgba(201, 169, 110, 0)) top left / 6rem 1px no-repeat,
+      linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) top left / 6rem 1px no-repeat,
       linear-gradient(135deg, rgba(253, 248, 240, 0.96), rgba(248, 238, 240, 0.68));
-    border: 1px solid rgba(156, 40, 69, 0.12);
-    border-left: 4px solid #C9A96E;
+    border: 1px solid rgba(216, 27, 96, 0.12);
+    border-left: 4px solid #000000;
     border-radius: 1.9rem;
     box-shadow:
-      0 24px 70px -48px rgba(44, 22, 28, 0.36),
+      0 24px 70px -48px rgba(80, 8, 36, 0.36),
       inset 0 1px 0 rgba(255, 255, 255, 0.78);
     font-family: var(--font-sans);
     font-style: italic;
@@ -110,7 +110,7 @@
     font-family: var(--font-sans);
     font-size: 4.75rem;
     line-height: 1;
-    color: rgba(156, 40, 69, 0.08);
+    color: rgba(216, 27, 96, 0.08);
   }
   & blockquote p {
     font-size: inherit;
@@ -127,26 +127,26 @@
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
-    border: 1px solid rgba(156, 40, 69, 0.12);
+    border: 1px solid rgba(216, 27, 96, 0.12);
     border-radius: 1.25rem;
-    box-shadow: 0 18px 42px -34px rgba(44, 22, 28, 0.28);
+    box-shadow: 0 18px 42px -34px rgba(80, 8, 36, 0.28);
   }
   & thead {
     background: #f8eef0;
   }
   & th {
-    color: #6B2D3E;
+    color: #D81B60;
     font-size: 0.78rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
   & td {
-    border-top: 1px solid rgba(156, 40, 69, 0.1);
+    border-top: 1px solid rgba(216, 27, 96, 0.1);
   }
   & .evidence {
     display: inline;
     margin: 0 0.15em;
-    color: #C9A96E;
+    color: #000000;
     font-size: 0.85em;
     cursor: help;
     white-space: nowrap;
@@ -154,23 +154,23 @@
   & .evidence-label {
     font-family: var(--font-serif);
     font-style: italic;
-    color: #C9A96E;
+    color: #000000;
   }
   & .evidence[data-level="5"] .evidence-label {
-    color: #6B2D3E;
+    color: #D81B60;
   }
   & .evidence[data-level="4"] .evidence-label {
-    color: #8a6a2e;
+    color: #C2185B;
   }
   & .evidence[data-level="1"] {
     opacity: 0.8;
   }
   & a {
     text-decoration: none;
-    border-bottom: 1px solid rgba(156, 40, 69, 0.35);
+    border-bottom: 1px solid rgba(216, 27, 96, 0.35);
   }
   & a:hover {
-    border-bottom-color: #7a1f33;
+    border-bottom-color: #AD1457;
   }
 }
 
@@ -178,27 +178,27 @@
   --font-serif: "Manrope", sans-serif;
   --font-sans: "Kulim Park", sans-serif;
 
-  --color-primary: #7a1f33;
-  --color-primary-container: #9c2845;
-  --color-secondary: #b07683;
+  --color-primary: #AD1457;
+  --color-primary-container: #D81B60;
+  --color-secondary: #C2185B;
   --color-surface: #fffdf9;
   --color-surface-container: #f7f1ea;
   --color-charcoal: #1c1c19;
 
-  /* Editöryal palet — 04-yonetici-default.pdf (2026-04-30).
-     Component'lerin halihazırda kullandığı semantic utility'ler
-     semantic utility'lere taşımak için: bg-burgundy, text-ink, bg-cream-soft … */
-  --color-burgundy: #9c2845;
-  --color-burgundy-deep: #7a1f33;
+  /* Editöryal palet — Pink 600 ana ton, siyah accent (2026-05-14).
+     Önceki burgundy (#D81B60) + gold (#000000) paleti Pink 600 + siyaha geçti.
+     Component'lerin kullandığı utility'ler: bg-burgundy, text-ink, bg-cream-soft … */
+  --color-burgundy: #D81B60;
+  --color-burgundy-deep: #AD1457;
   --color-ink: #2d2d2d;
-  --color-gold: #c9a96e;
-  --color-gold-bronze: #b07683;
+  --color-gold: #000000;
+  --color-gold-bronze: #2d2d2d;
   --color-cream-soft: #fffdf9;
   --color-cream-warm: #f7f1ea;
 
-  /* Rose kart/aksent tonları — gold geniş alan yerine yalnız süs/kanıt/sayaç rolünde kalır. */
-  --color-pembe: #d4aab2;
-  --color-pembe-deep: #b07683;
+  /* Rose kart/aksent tonları — accent siyah geniş alan yerine yalnız süs/kanıt/sayaç rolünde kalır. */
+  --color-pembe: #F8BBD0;
+  --color-pembe-deep: #C2185B;
 }
 
 @layer base {
@@ -234,7 +234,7 @@
   }
 
   ::selection {
-    background: rgba(156, 40, 69, 0.15);
+    background: rgba(216, 27, 96, 0.15);
     color: #2D2D2D;
   }
 }
@@ -247,7 +247,7 @@
   .evidence {
     display: inline;
     margin: 0 0.15em;
-    color: #C9A96E;
+    color: #000000;
     font-size: 0.85em;
     cursor: help;
     white-space: nowrap;
@@ -255,13 +255,13 @@
   .evidence-label {
     font-family: var(--font-serif);
     font-style: italic;
-    color: #c9a96e;
+    color: #000000;
   }
   .evidence[data-level='5'] .evidence-label {
-    color: #6B2D3E;
+    color: #D81B60;
   }
   .evidence[data-level='4'] .evidence-label {
-    color: #8a6a2e;
+    color: #C2185B;
   }
   .evidence[data-level='1'] {
     opacity: 0.8;
@@ -398,7 +398,7 @@
   font-weight: 600;
   font-size: 4.65rem;
   line-height: 0.9;
-  color: #9c2845;
+  color: #D81B60;
   float: left;
   margin: 0.38rem 0.62rem -0.16rem 0;
   padding: 0;
@@ -415,5 +415,5 @@
 }
 
 .burgundy-gradient {
-  background: linear-gradient(135deg, #7a1f33 0%, #4c1220 100%);
+  background: linear-gradient(135deg, #AD1457 0%, #4c1220 100%);
 }

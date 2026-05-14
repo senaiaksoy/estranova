@@ -1,0 +1,105 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const candidates = [
+  { hex: '#D81B60', label: 'Pink 600', code: '#D81B60' },
+  { hex: '#C2185B', label: 'Pink 700', code: '#C2185B' },
+  { hex: '#AD1457', label: 'Pink 800', code: '#AD1457' },
+  { hex: '#880E4F', label: 'Pink 900', code: '#880E4F' },
+  { hex: '#6B2D3E', label: 'Mevcut Burgundy', code: '#6B2D3E' },
+];
+
+const gold = '#000000';
+const cream = '#FAF7F2';
+const ink = '#2D2D2D';
+---
+
+<SiteLayout
+  title="Renk Denemesi — Burgundy alternatifleri"
+  description="Estranova editoryal paletinde burgundy yerine üç pembe tonun yan yana denemesi."
+>
+  <style is:global>
+    #estranova-cookie-banner { display: none !important; }
+  </style>
+  <main style={`background:${cream};min-height:100vh;padding:3rem 1.5rem;color:${ink};font-family:'Inter',system-ui,sans-serif;`}>
+    <div style="max-width:1400px;margin:0 auto;">
+      <header style="text-align:center;margin-bottom:2.5rem;">
+        <h1 style="font-family:'Newsreader',Georgia,serif;font-size:2.25rem;font-weight:500;letter-spacing:-0.01em;margin:0 0 0.5rem;">Renk Denemesi</h1>
+        <p style="color:#666;max-width:640px;margin:0 auto;">Mevcut burgundy (#6B2D3E) ile üç Material Design pembe tonunun yan yana editoryal karşılaştırması. Aynı bileşen seti her sütunda tek değişkenle (ana renk) render edilir.</p>
+      </header>
+
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;">
+        {candidates.map((c) => (
+          <section style={`background:#fff;border:1px solid #eee;border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.04);`}>
+            {/* swatch header */}
+            <div style={`background:${c.hex};color:#fff;padding:1.25rem 1rem;`}>
+              <div style="font-family:'Newsreader',Georgia,serif;font-size:1.15rem;font-weight:500;">{c.label}</div>
+              <div style="font-family:ui-monospace,monospace;font-size:0.8rem;opacity:0.85;margin-top:0.15rem;">{c.code}</div>
+            </div>
+
+            {/* hero-mini */}
+            <div style={`padding:1.5rem 1.25rem 1.25rem;border-bottom:1px solid #f0eae0;background:${cream};`}>
+              <div style={`font-family:ui-monospace,monospace;font-size:0.7rem;letter-spacing:0.12em;color:${c.hex};text-transform:uppercase;margin-bottom:0.5rem;`}>SAYI 01 · MAYIS 2026</div>
+              <h2 style={`font-family:'Newsreader',Georgia,serif;font-size:1.4rem;line-height:1.2;font-weight:500;color:${c.hex};margin:0 0 0.5rem;`}>Perimenopozda Uyku Değişen Yan</h2>
+              <p style="font-size:0.85rem;line-height:1.5;color:#555;margin:0;">Hormonal geçişin gece yarısı sahnesinde, bedenin söyledikleri ile söylenmeyenler arasında ince bir denge.</p>
+            </div>
+
+            {/* prose-estranova mock */}
+            <article style="padding:1.5rem 1.25rem;">
+              <div style={`font-family:'Newsreader',Georgia,serif;color:${gold};font-size:0.9rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.25rem;`}>01</div>
+              <h3 style={`font-family:'Newsreader',Georgia,serif;color:${c.hex};font-size:1.15rem;font-weight:500;margin:0 0 0.5rem;`}>Gece terlemesi sandığınızdan erken başlar</h3>
+              <div style={`width:2.5rem;height:2px;background:${gold};margin-bottom:0.85rem;`}></div>
+              <p style={`font-family:'Newsreader',Georgia,serif;font-style:italic;color:${c.hex};font-size:0.95rem;line-height:1.55;margin:0 0 0.85rem;`}>Çoğumuz bunu önce yorgunluk sanırız; oysa beden çok önceden bir cümle kuruyordur.</p>
+              <p style="font-size:0.85rem;line-height:1.65;color:#333;margin:0 0 0.6rem;">Perimenopozun ilk yıllarında gece terlemesi, sıcak basması olarak adlandırdığımız sahnenin sessiz habercisidir <em style={`color:${c.hex};font-style:italic;font-size:0.78em;`}>(orta kanıt)</em>. Belirti her kadında aynı yoğunlukta görülmez.</p>
+              <p style="font-size:0.85rem;line-height:1.65;color:#333;margin:0;">Bu dönemden geçen birçoğumuzun bildiği gibi, bedeniniz size yeni bir dil öğretiyor olabilir.</p>
+            </article>
+
+            {/* button row */}
+            <div style="padding:0 1.25rem 1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <a href="#" style={`background:${c.hex};color:#fff;padding:0.55rem 1rem;font-size:0.8rem;letter-spacing:0.04em;text-decoration:none;border-radius:2px;`}>Rehberi keşfet</a>
+              <a href="#" style={`background:transparent;color:${c.hex};border:1px solid ${c.hex};padding:0.55rem 1rem;font-size:0.8rem;letter-spacing:0.04em;text-decoration:none;border-radius:2px;`}>Devamını oku</a>
+            </div>
+
+            {/* author block mock */}
+            <div style={`background:${cream};padding:1rem 1.25rem;border-top:1px solid #f0eae0;display:flex;align-items:center;gap:0.75rem;`}>
+              <div style={`width:42px;height:42px;border-radius:50%;background:${c.hex};opacity:0.85;flex-shrink:0;`}></div>
+              <div>
+                <div style={`font-family:'Newsreader',Georgia,serif;font-size:0.9rem;color:${c.hex};font-weight:500;`}>Berna Aksoy</div>
+                <div style="font-size:0.72rem;color:#777;letter-spacing:0.04em;">SİTE EDİTÖRÜ</div>
+              </div>
+            </div>
+
+            {/* evidence pill + tag row */}
+            <div style="padding:0.85rem 1.25rem;border-top:1px solid #f0eae0;display:flex;gap:0.4rem;flex-wrap:wrap;">
+              <span style={`background:${c.hex};color:#fff;font-size:0.7rem;padding:0.25rem 0.55rem;border-radius:2px;letter-spacing:0.04em;`}>PERİMENOPOZ</span>
+              <span style={`border:1px solid ${c.hex};color:${c.hex};font-size:0.7rem;padding:0.25rem 0.55rem;border-radius:2px;letter-spacing:0.04em;`}>UYKU</span>
+              <span style={`color:${gold};font-size:0.7rem;padding:0.25rem 0;letter-spacing:0.04em;font-style:italic;`}>(iyi kanıt)</span>
+            </div>
+
+            {/* link / hover sample */}
+            <div style="padding:1rem 1.25rem;border-top:1px solid #f0eae0;font-size:0.85rem;color:#444;">
+              Gövde içinde bir <a href="#" style={`color:${c.hex};text-decoration:underline;text-decoration-color:${gold};text-underline-offset:3px;`}>iç bağlantı</a> ve <strong style={`color:${c.hex};`}>vurgulanmış</strong> bir kavram.
+            </div>
+          </section>
+        ))}
+      </div>
+
+      {/* palette swatch row */}
+      <section style="margin-top:3rem;padding:1.5rem;background:#fff;border:1px solid #eee;border-radius:6px;">
+        <h2 style="font-family:'Newsreader',Georgia,serif;font-size:1.2rem;font-weight:500;margin:0 0 1rem;">Palet karşılaştırma — siyah (#000000) accent ile yan yana</h2>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;">
+          {candidates.map((c) => (
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <div style={`display:flex;height:80px;border-radius:4px;overflow:hidden;`}>
+                <div style={`flex:2;background:${c.hex};`}></div>
+                <div style={`flex:1;background:${gold};`}></div>
+                <div style={`flex:1;background:${cream};border-left:1px solid #eee;`}></div>
+              </div>
+              <div style="font-family:ui-monospace,monospace;font-size:0.75rem;color:#555;">{c.label} · {c.code}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  </main>
+</SiteLayout>
