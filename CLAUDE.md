@@ -161,7 +161,8 @@ Makale gövdeleri (Astro veya dinamik) **tek bir editöryal tipografi sistemi** 
 - **Altın ayraç:** Her H2'den sonra 2.5rem genişlikte gold çizgi (`::after`) otomatik basılır. Bu çizgiyi manuel `<hr>` ile taklit etme; kart içinde çift çizgi doğar.
 - **İtalik lede zorunluluğu:** Her H2'den **sonraki ilk `<p>`** otomatik olarak **italic serif burgundy** render edilir (`h2 + p` selector). Bu paragraf bölümün "lede"sidir — 1-2 cümlede bölümün kanısını/sorusunu/durumunu kurar. **Bullet list, ağır veri, veya uzun tanım ile başlayan bölüm yasaktır**; yazar, publisher ve her metin üreten ajan bunu üretim sırasında hesaba katar.
 - **Gizli mekanizma:** CSS editoryal katmanı görünür. Yazar markdown/HTML'de sadece `<h2>başlık</h2><p>gövde</p>` yazar; numara, çizgi ve italic lede görsel katmandan gelir. Yazar manuel olarak "01." yazmaz, italic tag atmaz.
-- **Değiştirme kuralı:** `src/index.css` içindeki `@utility prose-estranova` bloğuna yapılan değişiklikler tüm makaleleri etkiler. Renk tokenları (`--tw-prose-*`) ve palet değerleri (#6B2D3E, #C9A96E, #4f171c, #2D2D2D) marka paletinde sabittir; "premium editöryal his" tanımlı bu paletle korunur.
+- **Değiştirme kuralı:** `src/index.css` içindeki `@utility prose-estranova` bloğuna yapılan değişiklikler tüm makaleleri etkiler. Renk tokenları (`--tw-prose-*`) ve palet değerleri (#D81B60 Pink 600 ana ton, #AD1457 Pink 800 koyu, #000000 siyah accent, #2D2D2D ink) marka paletinde sabittir; "premium editöryal his" tanımlı bu paletle korunur. (2026-05-14: önceki burgundy #6B2D3E + gold #C9A96E paleti Pink 600 + siyaha geçti.)
+- **Karanlık zeminde okunabilirlik (HARD CONSTRAINT):** Siyah accent (`--color-gold: #000000`) yalnızca **açık zeminde** (cream/white) okunur. Foto overlay üstündeki pill / divider / eyebrow / sectionNumber gibi accent role'lerinde **siyah yerine cream-warm** (veya beyaz/şeffaf cam) kullanılır. Foto üstüne basılan etiket / kanıt pill'i kalıbı: `border border-white/35 bg-white/10 text-white backdrop-blur-sm` + beyaz dot — siyah/burgundy dolgu pill **yasaktır**. `bg-burgundy` zeminli aside / footer / hero için gold accent → cream-warm tonu. Component örnekleri: SubmenuHero, SiteFooter, HubEditorialBrief, hakkimizda bg-burgundy section, symptoms.astro evidence pill.
 - **Teknik kaynak:** Uygulama detayı + kod snippet'leri **AGENTS.md → "Article page layout (Astro)"** bölümünde. Kurulum: `@tailwindcss/typography` devDependency, `src/index.css` içinde `@plugin "@tailwindcss/typography"`.
 - **Kanıt düzeyi etiketi:** Yayında kanıt gücü yalnızca `<Evidence level={N} />` (`N` = 1–5) veya aralık için `<Evidence from={A} to={B} />` ile gösterilir. Render formatı **parantez içi italic Türkçe etikettir**: `(güçlü kanıt)` · `(iyi kanıt)` · `(orta kanıt)` · `(sınırlı kanıt)` · `(zayıf kanıt)`; aralık `(orta–iyi kanıt)` biçiminde birleşir. Level 5 burgundy, level 4 gold-bronze, level 1-3 gold; italic Newsreader serif, 0.85em. Tooltip (`title` + `aria-label`) sayısal magnitude'u (`5/5` vb.) korur. `[●●●●●]`, `[●●●●○]` vb. **literal nokta / daire dizileri yasaktır**; Writer ve Publisher bu kalıpları metne yazmaz, Publisher Astro gövdesinde `Evidence` bileşenini kullanır.
 
@@ -219,12 +220,15 @@ It must NOT feel like:
 - a hospital dashboard
 
 #### Color direction
-Preferred palette:
-- muted deep burgundy
-- warm cream
-- soft beige-gold accent
-- dark gray text
+Preferred palette (2026-05-14 — Pink 600 + black accent paleti):
+- Pink 600 (#D81B60) ana ton — "burgundy" token rolü
+- Pink 800 (#AD1457) koyu varyant — "burgundy-deep" token rolü
+- warm cream (#FFFDF9 / #F7F1EA) zemin
+- black (#000000) accent — yalnız açık zeminde (cream/white); foto overlay ve bg-burgundy zeminde **cream-warm** veya **şeffaf cam (white/10 + white/35 border + backdrop-blur)** ile değiştirilir
+- dark gray text (#2D2D2D ink)
 - white or warm off-white backgrounds
+
+> Önceki burgundy #6B2D3E + gold #C9A96E paleti yerine geçti.
 
 #### Typography
 Preferred style:
