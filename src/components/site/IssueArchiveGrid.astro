@@ -48,10 +48,10 @@ const archiveIssue = issues.find((i) => i.number === 0);
                   'group relative flex h-full flex-col overflow-hidden rounded-[34px] border bg-white shadow-[0_28px_88px_-62px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
                   highlightCurrent && isCurrent
                     ? 'border-burgundy/35 ring-2 ring-burgundy/20 hover:-translate-y-1 hover:shadow-[0_36px_104px_-66px_rgba(44,22,28,0.38)]'
-                    : 'border-burgundy/12 hover:-translate-y-1 hover:border-gold/35 hover:shadow-[0_36px_104px_-66px_rgba(44,22,28,0.34)]',
+                    : 'border-burgundy/12 hover:-translate-y-1 hover:border-cream-warm/35 hover:shadow-[0_36px_104px_-66px_rgba(44,22,28,0.34)]',
                 ]}
               >
-                <span class="pointer-events-none absolute inset-x-6 top-0 z-10 h-px bg-gold/60"></span>
+                <span class="pointer-events-none absolute inset-x-6 top-0 z-10 h-px bg-cream-warm/60"></span>
                 <div class="relative aspect-[4/5] w-full overflow-hidden">
                   <img
                     src={issue.coverImage.src}
@@ -65,10 +65,10 @@ const archiveIssue = issues.find((i) => i.number === 0);
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/55 via-[#1c1412]/15 to-transparent"></div>
                   <div class="pointer-events-none absolute inset-x-4 top-4 flex items-center justify-between text-cream-soft/80">
                     <span class="text-[9px] font-semibold uppercase tracking-[0.24em]">Kapak</span>
-                    <span class="font-serif text-xl italic text-gold">No {issuePad}</span>
+                    <span class="font-serif text-xl italic text-cream-warm">No {issuePad}</span>
                   </div>
                   <div class="absolute bottom-5 left-5 right-5 text-cream-soft">
-                    <p class="text-[9px] font-semibold uppercase tracking-[0.32em] text-gold/95">
+                    <p class="text-[9px] font-semibold uppercase tracking-[0.32em] text-cream-warm/95">
                       {magazineConfig.subtitle}
                     </p>
                     <p class="mt-1 font-serif text-4xl leading-none">{magazineConfig.name}</p>
