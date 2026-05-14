@@ -21,3 +21,30 @@ output/_debug/
 rag/chroma_db/
 # Yazara redline icin uretilen Word taslaklari (yayinlanmamis icerik; repoya girmesin)
 article-drafts/
+
+# Yazar onay paketlerinde HTML/ZIP ana kaynak tutulur; kopya build assetleri repoya girmesin.
+icerik/yazar-onaylari/**/_astro/
+icerik/yazar-onaylari/**/images/
+icerik/yazar-onaylari/**/apple-touch-icon.png
+icerik/yazar-onaylari/**/favicon-*.png
+icerik/yazar-onaylari/**/favicon.svg
+icerik/yazar-onaylari/**/og-default.png
+icerik/yazar-onaylari/**/site.webmanifest
+
+# Duygu 2026-05-13 ara paketi, onaylanan 2026-05-11 paketiyle superseded.
+icerik/yazar-onaylari/duygu-karaosmanoglu/onay-bekleyen/2026-05-13_yuze-yakisan-estetik-dis-karari/
+
+# Birinci el seminer korpuslarında ham sunum/medya dosyaları lokal arşivdir.
+writers/**/citations/**/*.docx
+writers/**/citations/**/*.key
+writers/**/citations/**/*.key/
+writers/**/citations/**/*.zip
+writers/**/citations/**/*.mov
+writers/**/citations/**/*.m4v
+writers/**/citations/**/*.mp4
+writers/**/citations/**/*.jpg
+writers/**/citations/**/*.jpeg
+writers/**/citations/**/*.png
+writers/**/citations/**/*.tiff
+writers/**/citations/**/__MACOSX/
+writers/**/citations/**/._*
