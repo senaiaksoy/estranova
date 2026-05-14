@@ -64,16 +64,20 @@ Logo etrafında en az **"E" harfi yüksekliği** kadar boşluk bırakın.
 
 ## 3. Renk Paleti
 
-### Birincil
+### Birincil (2026-05-14 — Pink 600 + siyah accent paleti)
 | Renk | HEX | Rol |
 |---|---|---|
-| Vişne Deep | `#7a1f33` | Hero, footer, CTA ve hover |
-| Vişne Mid | `#9c2845` | Link, lede, drop cap ve ana vurgu |
-| Altın | `#C9A96E` | Vurgu |
-| Rose Soft | `#d4aab2` | Divider ve kart fonu |
-| Rose Accent | `#b07683` | İkincil aksent |
+| Pink 600 | `#D81B60` | Hero, footer, CTA, link, lede, drop cap, ana vurgu (`--color-burgundy`) |
+| Pink 800 | `#AD1457` | Koyu varyant — hover, gradient sonu (`--color-burgundy-deep`) |
+| Pink 700 | `#C2185B` | İkincil aksent (`--color-secondary`) |
+| Siyah | `#000000` | Accent — yalnız **açık zeminde** (chapter counter, h2 ayraç, evidence label) (`--color-gold`) |
+| Pink 100 | `#F8BBD0` | Divider ve kart fonu (`--color-pembe`) |
 | Krem | `#fdf8f0` | Arka plan |
 | Mürekkep | `#2d2d2d` | Makale metni |
+
+> **Karanlık zemin kuralı:** Foto overlay üstündeki pill / divider / eyebrow rolünde **siyah yerine cream-warm** veya şeffaf cam (`bg-white/10 border-white/35 text-white backdrop-blur-sm`) kullanılır. `bg-burgundy` zeminli aside / footer için gold accent → `cream-warm` tonu (Pink 600 zeminde siyah okunmaz).
+
+> 2026-05-14 öncesi palet — vişne (#7a1f33 / #9c2845) + altın (#C9A96E) — terk edildi.
 
 ### Genişletilmiş
 | Renk | HEX | Rol |
