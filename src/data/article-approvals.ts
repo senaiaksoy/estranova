@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
+    writerSlug: 'duygu-karaosmanoglu',
+    approvedAt: '2026-05-14',
+    note: 'Dt. Duygu Karaosmanoğlu author approval received after revised approval package icerik/yazar-onaylari/duygu-karaosmanoglu/onaylanan/2026-05-11_yuze-yakisan-estetik-dis-karari. Title updated to "Yüzümüzle uyumlu gülüşün kararı"; live route, static manifest, 40 sonrası sub-hub archive and approval inventory were aligned for publication.',
+  },
+  {
     pathname: '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale',
     writerSlug: 'bulent-aksoy',
     approvedAt: '2026-05-08',
