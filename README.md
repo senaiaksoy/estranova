@@ -35,6 +35,7 @@ Gerekenler: Node.js 20+, npm
 ## Deploy notları
 
 - Canlı site Cloudflare Pages üzerinden düşünülerek işletilir.
+- Cloudflare Pages project dashboard: https://dash.cloudflare.com/4797b38bf5bfb1b15a30ac27f0a9a78f/pages/view/estranova
 - Cloudflare build komutu: `npm run build:cloudflare`
 - Cloudflare production build env: `PUBLIC_LAUNCH_MODE=production`
 - Yayın bütünlüğü denetimi: `npm run articles:audit`
