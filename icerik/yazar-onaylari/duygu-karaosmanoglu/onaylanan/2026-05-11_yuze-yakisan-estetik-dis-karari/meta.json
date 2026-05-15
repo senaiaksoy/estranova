@@ -5,14 +5,16 @@
   },
   "article": {
     "slug": "yuze-yakisan-estetik-dis-karari",
-    "title": "Yüze Yakışan Estetik Diş Kararı — Aynadan Önce Yüze Bakmak",
+    "title": "Yüzümüzle uyumlu gülüşün kararı",
     "previewUrl": "https://estranova.com.tr/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari"
   },
   "package": {
     "createdAt": "2026-05-11T15:52:38.574Z",
     "deadline": "2026-05-18T15:52:38.574Z",
     "status": "approved",
-    "approvedAt": "2026-05-11",
+    "approvedAt": "2026-05-14",
+    "revisedAt": "2026-05-13",
+    "revisionNote": "Dubai semineri korpusu ([DK-S], 2026-05-12 WeTransfer) ile yeniden yazıldı. Omurga Analiz → Hazırlık → Prova üç aşamasına çevrildi; bruksizm ve vertikal boyut H2'si eklendi; bullet-yoğun VID imzası getirildi; 1 doğrudan alıntı + 1 metafor (frequency_rule). Korpus konumu: writers/duygu-karaosmanoglu/citations/seminar-dubai-2026-02/. Yeni onay turu önerilir.",
     "approvalGate": "publish-after-author-approval",
     "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
     "estimatedFormDuration": "5 dakika",

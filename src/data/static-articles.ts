@@ -18,6 +18,28 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
+    title: 'Yüzümüzle uyumlu gülüşün kararı',
+    description:
+      '40 sonrası estetik diş kararı: yüze yakışanı aramak, doğal görünümün üç ölçüsü, müdahale yelpazesinin sınırları ve ilk görüşmede sormanızı önerdiğim beş soru. Estetik diş hekimi gözüyle bir karar rehberi.',
+    publishedDate: '11 Mayıs 2026',
+    writerSlug: 'duygu-karaosmanoglu',
+    section: 'Hormonal Geçiş · 40 Sonrası',
+    sectionPath: '/hormonal-gecis/40-sonrasi',
+    keywords: [
+      'estetik diş hekimliği',
+      'gülüş tasarımı',
+      'porselen laminat',
+      'diş beyazlatma',
+      'yetişkin ortodonti',
+      'doğal görünüm',
+      '40 sonrası estetik',
+      'menopoz diş sağlığı',
+      'kişiselleştirilmiş tedavi',
+      'estetik karar süreci',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu',
     title: "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'",
     description:

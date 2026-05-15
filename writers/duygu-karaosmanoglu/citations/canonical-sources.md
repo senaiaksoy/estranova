@@ -41,6 +41,33 @@
 
 ---
 
+## [DK-S] Seminer korpusu (birinci-elden, kullanıcı tarafından paylaşılan)
+
+### Dubai Şubat 2026 — porselen lamina iş akışı (3 oturum)
+
+- **Konum:** `./seminar-dubai-2026-02/README.md` (repo içi tematik harita); ham `.docx`, `.key` ve medya dosyaları yalnız yerel kaynak arşivinde tutulur.
+- **Paylaşım:** Kullanıcı (2026-05-12, WeTransfer).
+- **İçerik:** Analiz (yüz analizi, gülüş çerçevesi, dişeti mimarisi) + Kesim (minimum prep felsefesi, knife-edge margin) + Try-in (prova oturumu disiplini, materyal/siman seçimi).
+- **Tematik harita:** `./seminar-dubai-2026-02/README.md` (7 ekseni Estranova çerçevesine adapte etmek için kullanılır).
+
+**Doğrudan atfedilebilir [DK-S] cümleler — birinci-elden, doğrulanmış:**
+
+> *"Estetik karar 'yapılabilir mi' değil 'yüze yakışıyor mu' sorusundan başlar."* — Dubai Analiz §1, *"Before we start the treatment we have to explain to our patient what we can and what we can not do"* + Estranova Türkçesine adapte (kullanıcı onaylı imza cümlesi).
+
+> *"Mine, dişin stres emiciidir; bir kez aşıldığında bedeli porselenle kapatılamaz."* — Dubai Kesim §1, *"Enamel absorb the stress. This is the key for long term success"* Türkçe adaptasyonu.
+
+> *"Restorasyonun oturuşu, kontakt lens gibi olmalıdır — parmakla hissedilen, zorlanmayan."* — Dubai Try-in, *"The restorations should fit like contact lenses"* doğrudan çevirisi (metafor kullanım hakkı: 1/makale).
+
+> *"Yaşlanma sürecinde üst dudak düşer, philtrum uzar, alt yüz kısalır — ve dişlerimiz artık eskisi gibi görünmez."* — Dubai Analiz §1+§2 birleştirme; korpus mekanizması (kollajen + hyaluronik asit kaybı + gravite).
+
+> *"Bruksizm sessiz çalışır; vertikal boyutu yıllar içinde kısaltır."* — Dubai Kesim §3 + Analiz §1, vertikal boyut + flexcimeter pratik ölçüm tartışmasından türetildi.
+
+> *"Lamina eklemeli bir tedavidir; ne kadar çok dentin açığa çıkarırsak, geri dönüş o kadar zorlaşır."* — Dubai Kesim §1, *"Laminate is an additive treatment procedure"* + dentin flex argümanı.
+
+**Atıf disiplini:** [DK-S] kaynağı `[DK-K]` kategorisiyle aynı disiplinde — gövdede "Creadenta", "ortağım Elif", "Dubai'de verdiğim seminerde" ifadeleri YASAK. Korpus prensipleri taşınır; bağlam (yer, tarih, dinleyici, hasta detayı) taşınmaz.
+
+---
+
 ## [DK-T] Tematik türetme (uydurulmuş — onay gerekli)
 
 > Bu cümleler henüz **doğrulanmadı**. v0.2 öncesi kullanıcı onayı zorunlu.
