@@ -1,0 +1,158 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+
+const pink = '#DB2777';
+
+const logoOptions = [
+  {
+    name: 'Yumuşak Kutup Yıldızı',
+    note: 'Dört ana yön uzun, ara yönler daha kısa; çiçek ve yıldız dengesi en güçlü seçenek.',
+    svg: `
+      <svg viewBox="0 0 200 200" role="img" aria-label="Yumuşak Kutup Yıldızı">
+        <circle cx="100" cy="100" r="82" fill="${pink}"/>
+        <g fill="#fff">
+          <path d="M92 91C83 76 87 49 101 40C118 52 117 78 106 94C102 101 96 100 92 91Z"/>
+          <path d="M95 92C89 82 93 64 106 55C118 66 117 84 106 96C102 101 98 100 95 92Z" transform="rotate(45 100 100)"/>
+          <path d="M92 91C83 76 87 49 101 40C118 52 117 78 106 94C102 101 96 100 92 91Z" transform="rotate(90 100 100)"/>
+          <path d="M95 92C89 82 93 64 106 55C118 66 117 84 106 96C102 101 98 100 95 92Z" transform="rotate(135 100 100)"/>
+          <path d="M92 91C83 76 87 49 101 40C118 52 117 78 106 94C102 101 96 100 92 91Z" transform="rotate(180 100 100)"/>
+          <path d="M95 92C89 82 93 64 106 55C118 66 117 84 106 96C102 101 98 100 95 92Z" transform="rotate(225 100 100)"/>
+          <path d="M92 91C83 76 87 49 101 40C118 52 117 78 106 94C102 101 96 100 92 91Z" transform="rotate(270 100 100)"/>
+          <path d="M95 92C89 82 93 64 106 55C118 66 117 84 106 96C102 101 98 100 95 92Z" transform="rotate(315 100 100)"/>
+        </g>
+        <circle cx="100" cy="100" r="14" fill="${pink}" stroke="#fff" stroke-width="7"/>
+      </svg>
+    `,
+  },
+  {
+    name: 'Nova Çiçeği',
+    note: 'Referans çizime en yakın, organik ve hafif elde çizilmiş hissi taşıyan yorum.',
+    svg: `
+      <svg viewBox="0 0 200 200" role="img" aria-label="Nova Çiçeği">
+        <circle cx="100" cy="100" r="82" fill="${pink}"/>
+        <g fill="#fff">
+          <path d="M95 91C88 78 90 59 101 50C113 58 114 77 105 92C102 97 98 97 95 91Z"/>
+          <path d="M95 91C88 78 90 59 101 50C113 58 114 77 105 92C102 97 98 97 95 91Z" transform="rotate(50 100 100)"/>
+          <path d="M95 91C88 78 90 59 101 50C113 58 114 77 105 92C102 97 98 97 95 91Z" transform="rotate(100 100 100)"/>
+          <path d="M95 91C88 78 90 59 101 50C113 58 114 77 105 92C102 97 98 97 95 91Z" transform="rotate(150 100 100)"/>
+          <path d="M95 91C88 78 90 59 101 50C113 58 114 77 105 92C102 97 98 97 95 91Z" transform="rotate(205 100 100)"/>
+          <path d="M95 91C88 78 90 59 101 50C113 58 114 77 105 92C102 97 98 97 95 91Z" transform="rotate(255 100 100)"/>
+          <path d="M95 91C88 78 90 59 101 50C113 58 114 77 105 92C102 97 98 97 95 91Z" transform="rotate(305 100 100)"/>
+        </g>
+        <circle cx="100" cy="100" r="15" fill="${pink}" stroke="#fff" stroke-width="8"/>
+      </svg>
+    `,
+  },
+  {
+    name: 'Işık Çiçeği',
+    note: 'Daha ışınsal; yıldız etkisi belirgin, yaprak uçları yuvarlak kaldığı için sertleşmiyor.',
+    svg: `
+      <svg viewBox="0 0 200 200" role="img" aria-label="Işık Çiçeği">
+        <circle cx="100" cy="100" r="82" fill="${pink}"/>
+        <g fill="#fff">
+          <ellipse cx="100" cy="66" rx="12" ry="29"/>
+          <ellipse cx="100" cy="76" rx="9" ry="21" transform="rotate(45 100 100)"/>
+          <ellipse cx="100" cy="66" rx="12" ry="29" transform="rotate(90 100 100)"/>
+          <ellipse cx="100" cy="76" rx="9" ry="21" transform="rotate(135 100 100)"/>
+          <ellipse cx="100" cy="66" rx="12" ry="29" transform="rotate(180 100 100)"/>
+          <ellipse cx="100" cy="76" rx="9" ry="21" transform="rotate(225 100 100)"/>
+          <ellipse cx="100" cy="66" rx="12" ry="29" transform="rotate(270 100 100)"/>
+          <ellipse cx="100" cy="76" rx="9" ry="21" transform="rotate(315 100 100)"/>
+        </g>
+        <circle cx="100" cy="100" r="13" fill="${pink}"/>
+      </svg>
+    `,
+  },
+  {
+    name: 'Altı Tombul Petal',
+    note: 'Daha sakin ve lüks; çiçek hissi kuvvetli, yıldız hissi daha yumuşak.',
+    svg: `
+      <svg viewBox="0 0 200 200" role="img" aria-label="Altı Tombul Petal">
+        <circle cx="100" cy="100" r="82" fill="${pink}"/>
+        <g fill="#fff">
+          <path d="M88 90C80 72 86 50 101 42C118 52 121 75 108 93C103 101 92 100 88 90Z"/>
+          <path d="M88 90C80 72 86 50 101 42C118 52 121 75 108 93C103 101 92 100 88 90Z" transform="rotate(60 100 100)"/>
+          <path d="M88 90C80 72 86 50 101 42C118 52 121 75 108 93C103 101 92 100 88 90Z" transform="rotate(120 100 100)"/>
+          <path d="M88 90C80 72 86 50 101 42C118 52 121 75 108 93C103 101 92 100 88 90Z" transform="rotate(180 100 100)"/>
+          <path d="M88 90C80 72 86 50 101 42C118 52 121 75 108 93C103 101 92 100 88 90Z" transform="rotate(240 100 100)"/>
+          <path d="M88 90C80 72 86 50 101 42C118 52 121 75 108 93C103 101 92 100 88 90Z" transform="rotate(300 100 100)"/>
+        </g>
+        <circle cx="100" cy="100" r="13" fill="${pink}" stroke="#fff" stroke-width="7"/>
+      </svg>
+    `,
+  },
+  {
+    name: 'Estranova Rozeti',
+    note: 'Tek parça, daha grafik ve logo gibi; çiçekten çok marka rozeti hissi verir.',
+    svg: `
+      <svg viewBox="0 0 200 200" role="img" aria-label="Estranova Rozeti">
+        <circle cx="100" cy="100" r="82" fill="${pink}"/>
+        <path
+          fill="#fff"
+          d="M100 39C109 60 119 69 141 62C134 84 140 96 162 105C139 112 130 123 137 146C116 137 104 143 95 164C88 141 77 132 54 139C63 118 57 106 36 96C59 89 68 78 62 55C82 64 94 58 100 39Z"
+        />
+        <circle cx="100" cy="100" r="16" fill="${pink}"/>
+      </svg>
+    `,
+  },
+];
+---
+
+<SiteLayout
+  title="Logo Denemesi - Estranova"
+  description="Estranova için pembe zemin üzerinde beyaz çiçek-yıldız logo alternatifleri."
+  allowIndexing={false}
+>
+  <style is:global>
+    #estranova-cookie-banner { display: none !important; }
+    #main-content svg[role='img'] {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <SiteNavbar currentPath="/logo-denemesi" />
+  <main id="main-content" class="min-h-screen bg-[#FAF7F2] px-5 pb-20 pt-28 text-[#2D2D2D] md:px-8">
+    <section class="mx-auto max-w-6xl">
+      <header class="mb-10 max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#DB2777]">Logo denemesi</p>
+        <h1 class="font-serif text-4xl leading-tight md:text-6xl">Çiçekten esinlenen yıldız formları</h1>
+        <p class="mt-5 text-lg leading-relaxed text-[#2D2D2D]/72">
+          Her seçenek pembe zemin üzerinde beyaz sembol olarak gösterilir. Büyük görünüm, navbar ölçeği ve küçük favicon ölçeği yan yana durur.
+        </p>
+      </header>
+
+      <div class="grid gap-5 lg:grid-cols-2">
+        {logoOptions.map((option, index) => (
+          <article class="border border-[#6B2D3E]/12 bg-white p-5 md:p-6">
+            <div class="mb-5 flex items-start justify-between gap-4">
+              <div>
+                <p class="mb-2 font-serif text-3xl italic text-[#C9A96E]">{String(index + 1).padStart(2, '0')}</p>
+                <h2 class="font-serif text-3xl leading-tight text-[#2D2D2D]">{option.name}</h2>
+              </div>
+              <div class="h-16 w-16 shrink-0" set:html={option.svg} />
+            </div>
+
+            <p class="mb-6 max-w-xl text-sm leading-relaxed text-[#2D2D2D]/70">{option.note}</p>
+
+            <div class="grid grid-cols-[1fr_auto_auto] items-end gap-5 border-t border-[#6B2D3E]/10 pt-5">
+              <div>
+                <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B2D3E]/58">Büyük</p>
+                <div class="h-28 w-28" set:html={option.svg} />
+              </div>
+              <div>
+                <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B2D3E]/58">Navbar</p>
+                <div class="h-12 w-12" set:html={option.svg} />
+              </div>
+              <div>
+                <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B2D3E]/58">Favicon</p>
+                <div class="h-6 w-6" set:html={option.svg} />
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</SiteLayout>
