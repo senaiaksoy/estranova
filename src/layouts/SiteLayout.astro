@@ -42,22 +42,28 @@ const canonicalUrl = resolveCanonicalUrl({
 const socialImageUrl = resolveSocialImageUrl({ siteUrl, image });
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
+const DR_AKSOY_PERSON_ID = 'https://senaiaksoy.net/#person';
+
 const webSiteSchema: JsonLdSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
   name: 'Estranova',
   url: siteUrl,
   inLanguage: 'tr-TR',
   description,
+  publisher: { '@id': `${siteUrl}/#organization` },
 };
 
 const organizationSchema: JsonLdSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   name: 'Estranova',
   url: siteUrl,
   logo: `${siteUrl}/favicon.svg`,
   description: '40+ kadın sağlığına odaklanan bağımsız editoryal sağlık platformu.',
+  reviewedBy: { '@id': DR_AKSOY_PERSON_ID },
 };
 
 const additionalSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
@@ -65,7 +71,7 @@ const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
 ---
 
 <!doctype html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr-TR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

@@ -4,6 +4,10 @@ import type { ArticleFaqItem } from '../data/article-faqs';
 
 type JsonLdSchema = Record<string, unknown>;
 
+// Canonical Person @id — portföy genelinde Dr. Aksoy entity'sini birleştirir.
+// senaiaksoy.net Block A'da deklare edilmiş tek kanonik kayıt.
+const DR_AKSOY_PERSON_ID = 'https://senaiaksoy.net/#person';
+
 export interface BuildArticleSchemaOptions {
   title: string;
   description: string;
@@ -91,6 +95,9 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
 
   const writer = getWriter(writerSlug);
   const isoDate = toISODate(publishedDate);
+
+  // Dr. Aksoy yazar olduğunda canonical Person @id'ye referans ver —
+  // portföy entity'sini siloed olmaktan kurtarır (Semrush AI-search lensi).
   const authorPerson: JsonLdSchema = writer.isInstitutionalByline
     ? {
         '@type': 'Organization',
@@ -98,6 +105,8 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         description: writer.publicBio,
         url: joinUrl(siteUrl, '/editoryal-politika'),
       }
+    : writerSlug === 'senai-aksoy'
+    ? { '@id': DR_AKSOY_PERSON_ID }
     : {
         '@type': 'Person',
         name: writer.displayName,
@@ -107,11 +116,16 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         url: joinUrl(siteUrl, '/yayin-kurulu'),
       };
 
-  const reviewerPerson: JsonLdSchema = {
-    '@type': 'Person',
-    name: medicalReviewer,
-    jobTitle: medicalReviewerTitle,
-  };
+  // Medical reviewer canonical Person @id — Dr. Aksoy bilim editörü/inceleyici
+  // olduğunda inline name+jobTitle yerine entity'ye referans.
+  const reviewerIsDrAksoy = medicalReviewer.includes('Senai Aksoy');
+  const reviewerPerson: JsonLdSchema = reviewerIsDrAksoy
+    ? { '@id': DR_AKSOY_PERSON_ID }
+    : {
+        '@type': 'Person',
+        name: medicalReviewer,
+        jobTitle: medicalReviewerTitle,
+      };
 
   const medicalWebPageSchema: JsonLdSchema = {
     '@context': 'https://schema.org',
