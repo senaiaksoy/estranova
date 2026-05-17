@@ -271,6 +271,154 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/zy-peptid-kullanimlari-menopoz-window-card.png',
     alt: 'Açık renkli bir iç mekanda pencere yanında duran, bordo hırkalı düşünceli kadın portresi; peptid kullanımları yazısı için editoryal kart görseli',
   },
+  '/hormonal-gecis/40-sonrasi/tarama-testleri': {
+    src: '/images/library/editorial/hg-tarama-testleri.webp',
+    alt: 'Sabah ışığında açık takvim, not defteri, çay fincanı ve çiçeklerle düzenlenmiş masa; 40 sonrası tarama testlerini sakin bir takip ritmiyle ele alan kart görseli',
+  },
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski': {
+    src: '/images/library/editorial/senai-hrt-meme-kanseri-author-block-v2.png',
+    alt: 'Krem tonlu aydınlık bir odada düşünen olgun kadın portresi; HRT ve meme kanseri riski yazısı için sakin editoryal kart görseli',
+  },
+  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri': {
+    src: '/images/library/editorial/menopozda-cilt-degisimleri-byline.webp',
+    alt: 'Doğal ışıkta cilt değişimini sakin ve özenli biçimde taşıyan olgun kadın portresi; menopozda cilt değişimleri yazısı için kart görseli',
+  },
+  '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi': {
+    src: '/images/library/editorial/perimenopozda-kaygi-artisi-byline.webp',
+    alt: 'Sabah ışığında içe dönük, sakin bir duruşla görülen kadın portresi; perimenopozda kaygı artışı yazısı için editoryal kart görseli',
+  },
+  '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi': {
+    src: '/images/library/editorial/hg-tarama-testleri.webp',
+    alt: 'Açık takvim, not defteri ve çay fincanıyla düzenlenmiş masa; menopoza hazırlıkta ilk kontrol dosyası için sakin kart görseli',
+  },
+  '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik': {
+    src: '/images/library/editorial/zd-bellek-odaklanma.webp',
+    alt: 'Aydınlık bir kütüphane köşesinde birlikte not alan iki yaşıt kadın; perimenopozda zihinsel bulanıklık yazısı için kart görseli',
+  },
+  '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler': {
+    src: '/images/library/editorial/hg-perimenopoz-ilk-isaretler.webp',
+    alt: 'Aydınlık bir iç mekanda bedensel değişimi fark eden 40+ kadın portresi; perimenopozun ilk işaretleri yazısı için kart görseli',
+  },
+  '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin': {
+    src: '/images/library/editorial/zd-aksam-hareketi-uyku-melatonin.webp',
+    alt: 'Akşam ışığında evde nazik beden hareketi yapan kadın; uyku, melatonin ve akşam hareketi yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari': {
+    src: '/images/library/editorial/zy-kas-iskelet-agrilari-esneme.webp',
+    alt: 'Aydınlık bir ev köşesinde nazik esneme yapan olgun kadın; 40 sonrası kas-iskelet ağrıları yazısı için kart görseli',
+  },
+  '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': {
+    src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
+    alt: 'Ev balkonunda taze otlarla ilgilenen krem tonlarda giyinmiş kadın; menopozal kilo ve metabolik sağlık yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi': {
+    src: '/images/library/editorial/zy-coq10-kanit-notlari.webp',
+    alt: 'Aydınlık masa üzerinde notlar ve sakin araştırma atmosferi; CoQ10 takviyesi ve kanıt okuması yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu': {
+    src: '/images/library/editorial/zy-deneysel-tedavi-kanit-masasi.webp',
+    alt: 'Sade bir masada araştırma notları ve kanıt okuma atmosferi; deneysel tedavi okuma kılavuzu için kart görseli',
+  },
+  '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim': {
+    src: '/images/library/editorial/zy-non-invaziv-cilt-cihazlari.webp',
+    alt: 'Sakin bakım atmosferinde non-invaziv cilt cihazları temasını taşıyan editoryal görsel; HIFU, RF ve mikroakım yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz': {
+    src: '/images/library/editorial/zy-sauna-soguk-dus-rituel.webp',
+    alt: 'Sade bir iyi oluş ritüeli atmosferinde sıcak-soğuk dengesi; sauna ve soğuk duş yazısı için kart görseli',
+  },
+  '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban': {
+    src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
+    alt: 'Evde sakin hareket ve beden farkındalığı atmosferi; idrar kaçırma ve pelvik taban sağlığı yazısı için kart görseli',
+  },
+  '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu': {
+    src: '/images/library/editorial/pair-window-cafe-reflection.webp',
+    alt: 'Pencere kenarında iki yaşıt kadının sakin sohbeti; tartı ve vücut kompozisyonu yazısı için kart görseli',
+  },
+  '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi': {
+    src: '/images/library/editorial/hg-menopozda-hekim-hasta-iliskisi.webp',
+    alt: 'Sabah ışığında mutfakta sağlık notlarını düşünerek güne hazırlanan kadın; menopozda hekim-hasta ilişkisi yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/kilo-artisi-menopoz': {
+    src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
+    alt: 'Balkonda taze otlarla ilgilenen 40+ kadın; menopozda kilo artışını doğal beslenme ve bedenle bağ içinde ele alan kart görseli',
+  },
+  '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan': {
+    src: '/images/library/editorial/zd-perimenopoz-uyku-sabah-defter.webp',
+    alt: 'Erken sabah ışığında uyku günlüğüne not alan kadın; perimenopozda uykunun değişen yanını anlatan kart görseli',
+  },
+  '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz': {
+    src: '/images/library/editorial/zd-gece-terlemesi-uyku-utancsiz.webp',
+    alt: 'Serin sabah öncesi ışığında sade yatak odası ve su bardağı; gece terlemesi ve uyku yazısı için kart görseli',
+  },
+  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': {
+    src: '/images/library/editorial/by-libido-degisimi.webp',
+    alt: 'Bahçe terasında iki yaşıt kadının yargısız sohbeti; menopozda libido değişimi yazısı için kart görseli',
+  },
+  '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme': {
+    src: '/images/library/editorial/introspective-clasped-hands.webp',
+    alt: 'Sabah ışığında birleşmiş eller ve açık not defteri; HRT yan etkileri ve izleme yazısı için sakin kart görseli',
+  },
+  '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi': {
+    src: '/images/library/editorial/journey-menopoz.webp',
+    alt: 'Yaz akşamı terasında sohbet eden yaşıt kadınlar ve yelpaze detayı; sıcak basması ve gece terlemesi yazısı için kart görseli',
+  },
+  '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari': {
+    src: '/images/library/editorial/introspective-clasped-hands.webp',
+    alt: 'Açık not defteri ve sakin el duruşu; menopoza hazırlıkta koruyucu sağlık kayıtları yazısı için kart görseli',
+  },
+  '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': {
+    src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
+    alt: 'Boğaz sahilinde yürüyerek konuşan iki yaşıt kadın; hormon tedavisi karar rehberi için kart görseli',
+  },
+  '/zamansiz-yasam/deneysel/nad-plus-takviyesi': {
+    src: '/images/library/editorial/zy-deneysel.webp',
+    alt: 'Seramik atölyesinde yeni bir form üzerinde çalışan olgun kadın; NAD+ takviyesi yazısı için deneysel merak temalı kart görseli',
+  },
+  '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma': {
+    src: '/images/library/editorial/bp-nad-plus.webp',
+    alt: 'Cam tavanlı kış bahçesinde olgun kadınların doğayla iç içe sohbeti; NAD+ ve hücresel yaşlanma yazısı için kart görseli',
+  },
+  '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma': {
+    src: '/images/library/editorial/bp-nad-plus.webp',
+    alt: 'Kış bahçesinde olgun yaş alma ve doğayla bağ atmosferi; epitalon ve telomer biyolojisi yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/d-vitamini-rehberi': {
+    src: '/images/library/editorial/zy-vitaminler.webp',
+    alt: 'Sabah ışığında yumurta, ceviz, yeşillik ve sade besin hazırlığı; D vitamini rehberi için kart görseli',
+  },
+  '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz': {
+    src: '/images/library/editorial/by-vajinal-saglik.webp',
+    alt: 'Keten örtü üzerinde çiçek, su bardağı ve pamuklu dokular; menopozda cinsellikte ağrı yazısı için sakin kart görseli',
+  },
+  '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz': {
+    src: '/images/library/editorial/by-vajinal-saglik.webp',
+    alt: 'Sade bakım atmosferinde çiçek, su ve keten dokular; menopozda mahrem bölge değişimleri yazısı için kart görseli',
+  },
+  '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz': {
+    src: '/images/library/editorial/zd-stres-yonetimi.webp',
+    alt: 'Botanik dolu bir ev köşesinde sakin sohbet eden iki yaşıt kadın; menopozda stres yönetimi yazısı için kart görseli',
+  },
+  '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz': {
+    src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
+    alt: 'Yumuşak sabah ışığında uyku günlüğü, çay bardağı ve başucu masası; menopozda uyku bozukluğu yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/beslenme-yaslanma': {
+    src: '/images/library/editorial/zy-beslenme-yaslanma-kahvalti.webp',
+    alt: 'Sade kahvaltı hazırlığı ve gerçek besinlerle düzenlenmiş masa; beslenme ve yaşlanma yazısı için kart görseli',
+  },
+  '/zamansiz-yasam/kemik-sagligi-40-sonrasi': {
+    src: '/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi.webp',
+    alt: 'Aydınlık bir alanda kontrollü direnç hareketi yapan kadın; 40 sonrası kemik sağlığı yazısı için kart görseli',
+  },
+  '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik': {
+    src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
+    alt: 'Akademik çalışma masasında biyoloji notları, kitap ve çay bardağı; östrojen biyolojisi yazısı için kart görseli',
+  },
+  '/hormonal-gecis/menopoz/menopoz-nedir': {
+    src: '/images/library/editorial/hg-menopoz-nedir.webp',
+    alt: 'Sakin ve güvenli bir geçiş hissi taşıyan olgun kadın portresi; menopoz nedir temel rehberi için kart görseli',
+  },
 };
 
 export function normalizePathname(pathname: string): string {
