@@ -366,9 +366,20 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
               editorialPicks.slice(1).map((z, idx) => (
                 <a
                   href={z.href}
-                  class="group grid gap-5 border-b border-burgundy/12 p-6 transition last:border-b-0 hover:bg-cream-soft/35 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 sm:grid-cols-[104px_1fr]"
+                  class="group grid gap-5 border-b border-burgundy/12 p-6 transition last:border-b-0 hover:bg-cream-soft/35 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 sm:grid-cols-[118px_1fr]"
                 >
-                  <span class="font-serif text-5xl italic leading-none tabular-nums text-gold">{String(idx + 2).padStart(2, '0')}</span>
+                  <span class="relative aspect-[4/5] overflow-hidden rounded-[24px] bg-cream-warm">
+                    <img
+                      src={z.thumbnailSrc}
+                      alt=""
+                      width="236"
+                      height="295"
+                      loading="lazy"
+                      decoding="async"
+                      class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.045]"
+                    />
+                    <span class="absolute left-3 top-3 rounded-full bg-white/88 px-2.5 py-1 font-serif text-xl italic leading-none text-gold">{String(idx + 2).padStart(2, '0')}</span>
+                  </span>
                   <span>
                     <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">{z.tag}</span>
                     <span class="block font-serif text-3xl leading-tight text-ink group-hover:underline group-hover:decoration-gold/70">{z.title}</span>

@@ -173,16 +173,16 @@ const topKeywords = Array.from(keywordFrequency.entries())
 
     {
       chapters.length > 0 && (
-        <SubmenuSection variant="cream" borderedTop={archiveItems.length === 0}>
+        <SubmenuSection variant="white" borderedTop={archiveItems.length === 0}>
           <header class="mb-10 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
             <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Alt başlıklar</p>
             <h2 class="font-serif text-4xl leading-tight text-ink md:text-5xl">Bu kategorideki yollar</h2>
           </header>
-          <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
+          <div class="divide-y divide-burgundy/14 border-y border-burgundy/14 bg-white">
             {chapters.map((chapter, index) => (
               <a
                 href={chapter.href}
-                class="group grid gap-5 py-7 transition hover:bg-white/58 md:grid-cols-[88px_1fr_auto] md:items-center md:py-8"
+                class="group grid gap-5 bg-white py-7 transition hover:bg-white md:grid-cols-[88px_1fr_auto] md:items-center md:py-8"
               >
                 <span class="font-serif text-3xl italic text-gold">{String(index + 1).padStart(2, '0')}</span>
                 <div>

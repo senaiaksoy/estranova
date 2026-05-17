@@ -6,13 +6,12 @@ import SubmenuHero from './SubmenuHero.astro';
 import SubmenuSection from './SubmenuSection.astro';
 import ChapterMasthead from './ChapterMasthead.astro';
 import EditorialEpigraph from './EditorialEpigraph.astro';
-import ChapterCompass from './ChapterCompass.astro';
 import SubHubLatestStrip from './SubHubLatestStrip.astro';
 import SubHubArchiveIndex from './SubHubArchiveIndex.astro';
 import type { SubHubConfig } from '../../data/sub-hubs';
 import { articleCardImageByRoute, submenuHeroByRoute } from '../../data/submenu-heroes';
 import { staticArticles } from '../../data/static-articles';
-import { chapterMap, getNextChapter } from '../../data/chapter-map';
+import { chapterMap } from '../../data/chapter-map';
 import { subHubEpigraphs } from '../../data/sub-hub-epigraphs';
 import { toISODate } from '../../utils/article-schema';
 
@@ -24,7 +23,6 @@ const { config } = Astro.props;
 const hero = submenuHeroByRoute[config.path]!;
 const chapter = chapterMap[config.path]!;
 const epigraph = subHubEpigraphs[config.path];
-const next = getNextChapter(config.path);
 const sectionPath = `/${config.path.split('/')[1]}`;
 const sectionLabel = chapter.parent;
 const hubLabel = chapter.chapter;
@@ -188,7 +186,6 @@ const siblings = Object.values(chapterMap).filter(
       )
     }
 
-    <ChapterCompass nextHref={next?.href} nextNumber={next?.number} nextChapter={next?.chapter} nextParent={next?.parent} />
   </main>
 
   <SiteFooter />
