@@ -127,9 +127,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/hormonal-gecis/menopoz/menopoz-nedir',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'estranova-editorial',
     approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — Geniş giriş/tanım yazısı; Berna açılışı ("Bir noktada şunu fark ettim"), kollektif "biz" 4 yerde düzeltildi, dolaylı ses ("Tanıdığım bir kadın... yeniden kazanılan sessizlik"), "bilmiyorum" anı + hekim konuşma rotasyonu Bölüm 07\'de, harita varyasyonu kapanışı (bedenle yazışma serisi 6 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita), 5-katmanlı BEN. Altıncı onaylı Estranova makalesi.',
+    note: 'Editoryal rehber olarak kalması onaylandı — kurumsal Estranova Editörleri imzası, tanım/evre/sağlık gündemi odağı, promosyon dışı nötr çerçeve. 2026-05-17 revizyonunda açılış, bölüm lede\'leri ve kapanış daha ilgi çekici editoryal ritme çekildi; tıbbi denge, SSS, schema ve disclaimer yüzeyleri korundu.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',

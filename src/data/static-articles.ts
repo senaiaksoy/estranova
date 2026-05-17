@@ -373,7 +373,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
     title: 'Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem',
     description:
-      'Perimenopozun ilk işaretlerini adet düzeni, uyku, sıcak basması, ruh hali, odaklanma ve beden hissi üzerinden panik yaratmadan okumak için Berna Aksoy’dan sakin bir rehber.',
+      'Perimenopozun ilk işaretlerini adet düzeni, uyku, sıcak basması, ruh hali, odaklanma ve beden hissi üzerinden panik yaratmadan okumak için Berna Aksoy’dan zarif ve sakin bir rehber.',
     publishedDate: '4 Mayıs 2026',
     writerSlug: 'berna-aksoy',
     section: 'Hormonal Geçiş · Perimenopoz',
