@@ -617,7 +617,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
     title: 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?',
-    description: 'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve doktorunuzla konuşurken sorabileceğiniz sorular.',
+    description: 'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve hekiminizle konuşurken sorabileceğiniz sorular.',
     publishedDate: '20 Nisan 2026',
     writerSlug: 'senai-aksoy',
     section: 'Hormonal Geçiş',

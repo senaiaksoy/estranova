@@ -34,7 +34,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?';
 const articleDescription =
-  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve doktorunuzla konuşurken sorabileceğiniz sorular.';
+  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve hekiminizle konuşurken sorabileceğiniz sorular.';
 const faqItems = articleFaqs['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -87,42 +87,41 @@ const articleSchemas = buildArticleSchemas({
       />
 
       <ArticleSummary title="Kısa Özet">
-<p>
-          Hormon tedavisi — ya da sıkça duyduğunuz adıyla HRT — menopozal belirtiler için en etkili seçeneklerden biri.
-          Ancak "almalı mıyım, almamalı mıyım" sorusunun tek bir doğru cevabı yok. Yaşınız, son adetinizden bu yana geçen süre,
-          hangi belirtilerin hayatınızı zorladığı, kişisel sağlık geçmişiniz — hepsi birlikte değerlendirilir.
-          Bu yazı size doğrudan bir öneri vermez; karar sürecinde neye baktığımızı, doktorunuzla hangi soruları
-          konuşmak istediğinizi biraz daha netleştirmeye çalışır.
+        <p>
+          Hormon tedavisi — günlük dilde HRT, daha güncel adıyla menopozal hormon tedavisi — belirli menopoz yakınmaları
+          için kanıtı güçlü seçeneklerden biridir. Ama soru yalnızca "almalı mıyım, almamalı mıyım?" değildir. Yaşınız,
+          son adetten bu yana geçen süre, hangi belirtinin hayatınızı zorladığı ve kişisel sağlık geçmişiniz aynı masada
+          değerlendirilir. Bu yazı size karar vermez; hekiminizle yapacağınız konuşmada hangi başlıkların netleşmesi
+          gerektiğini gösterir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="karar-konusma">Karar Değil, Konuşma</h2>
         <p>
-          Hormon tedavisi sorusu çoğu zaman "doğru cevabı" bekleyen bir sınav gibi yaşanıyor. Oysa klinikte
-          bunun tek bir cevabı yok; iyi karar, semptomun ağırlığı ile kişisel risk profilinin aynı masada
-          konuşulmasıyla verilir.
+          Hormon tedavisi sorusu çoğu zaman doğru cevabı olan bir sınav gibi yaşanıyor. Oysa bu konu sınav değil;
+          belirtiler, riskler ve kişisel öncelikler yan yana konduğunda şekillenen bir konuşmadır.
         </p>
         <p>
-          Muayene odasında en sık gördüğüm şey şudur: bir kadın HRT'yi ya tek çıkış gibi ya da mutlak tehlike gibi
-          duymuş olarak gelir. İkisi de eksik bir bakıştır. Hormon tedavisi ne herkese verilmesi gereken bir rutin,
-          ne de konuşulmadan elenmesi gereken bir seçenektir.
+          Yıllardır kadın sağlığı görüşmelerinde aynı iki uç cümleyi çok duydum: "Bunu almak zorundayım" ve "Bundan
+          uzak durmalıyım." İkisi de eksik kalır. Hormon tedavisi ne herkese verilmesi gereken bir rutin, ne de
+          konuşulmadan elenecek bir seçenektir.
         </p>
         <p>
-          Bu yazıda amaç reçete önermek değil; karar konuşmasının iskeletini kurmak. Hangi belirtiler tedavi
-          gündemine alınır, hangi riskler kapıyı kapatır, hangi noktalar yıllık izlemle yeniden değerlendirilir:
-          güvenli karar bu soruların sırasını doğru kurmakla başlar.
+          O zaman biz ne yapıyoruz? Önce belirtinin hayatı ne kadar etkilediğini anlıyoruz; sonra kişisel riskleri
+          görüyoruz; en son seçeneklerin hangisinin sizin hikayenize uyduğunu konuşuyoruz. Güvenli karar, soruların
+          sırasını doğru kurmakla başlar.
         </p>
 
         <h2 id="hormon-tedavisi-nedir">Hormon Tedavisi Nedir?</h2>
         <p>
-          Hormon tedavisi tek bir şey değil; aynı isimle anılan birçok farklı rejim var. Bu yüzden iki kadına aynı
-          ad altında çok farklı reçeteler yazılabiliyor.
+          Hormon tedavisi tek bir şey değildir; aynı başlığın altında farklı yollar, farklı dozlar ve farklı hedefler
+          bulunur. Bu ayrımı yapmak, konuşmayı daha baştan sadeleştirir.
         </p>
         <p>
           Temel olarak hormon tedavisi, menopoz sürecinde azalan östrojeni ve gereğinde progesteronu dışarıdan ilaç
           olarak almayı ifade ediyor. Günümüzde daha çok "menopozal hormon tedavisi" — yani MHT — olarak adlandırılıyor;
-          ama hasta dilinde HRT ismi hâlâ yaygın. İkisi aynı şey.
+          ama günlük kullanımda HRT ismi hâlâ yaygın. İkisi aynı şeyi anlatır.
         </p>
         <p>
           Tedavi birden fazla biçimde geliyor: ağızdan hap, deriden uygulanan bant ya da jel, vajinal krem veya tablet,
@@ -134,27 +133,27 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="vucutta-ne-oluyor">Vücutta Ne Oluyor?</h2>
         <p>
-          Yumurtalıkların ürettiği östrojen menopozla birlikte belirgin biçimde azalıyor; bu düşüş bedenin pek çok
-          yerinde sessizce yankılanıyor.
+          Yumurtalıkların ürettiği östrojen menopozla birlikte belirgin biçimde azalır. Bu düşüş yalnızca adet düzenini
+          değil, ısı kontrolünü, uykuyu, dokuları ve kemik metabolizmasını da etkileyebilir.
         </p>
         <p>
           Östrojen düşüşü sıcak basmalarını, gece terlemelerini, uyku bölünmesini, ruh halindeki iniş çıkışları, kemik
           kaybının hızlanmasını ve vajinal dokunun incelmesini tetikleyebiliyor. Her kadın bu değişimi aynı yoğunlukta
-          yaşamıyor — bazıları hemen hiç fark etmiyor, bazıları yıllarca etkileniyor. Tanıdığım bir kadın yıllarca sadece
-          uykusunun yarıda kalmasıyla başa çıktığını sandı; sonradan fark etti ki gece bölünmelerin arkasında uzun süredir
-          sessizce çalışan bir hormonal kayma vardı.
+          yaşamıyor — bazıları hemen hiç fark etmiyor, bazıları yıllarca etkileniyor. Bu yüzden ilk iş, "hangi belirti
+          gerçekten hayatı zorluyor?" sorusunu dürüstçe sormaktır.
         </p>
         <p>
           Hormon tedavisi, vücuda eksilen östrojeni dışarıdan sağlayarak bu belirtilerin çoğunu yumuşatıyor. Özellikle
           sıcak basmaları ve gece terlemeleri üzerindeki etkisi güçlü: hafta içindeki belirti sıklığını üçte ikisinden
           fazla azaltabiliyor <Evidence level={5} />. Kemik koruması ve vajinal dokunun canlanması da belgelenmiş
-          faydaları arasında <Evidence level={5} />. Yani tedavi "her şeyi çözen sihir" değil — ama belirli bir grubu
-          net biçimde rahatlatıyor.
+          faydaları arasında <Evidence level={5} />. Yani tedavi "her şeyi çözen sihir" değildir; doğru kişide, doğru
+          nedenle ve doğru izlemle anlamlı rahatlama sağlayabilen bir seçenektir.
         </p>
 
         <h2 id="bilim-ne-diyor">Bilim Ne Diyor?</h2>
         <p>
-          Kanıt durumu son yirmi yılda belirgin biçimde netleşti — ama bazı sorular hâlâ açık.
+          Kanıt durumu son yirmi yılda belirgin biçimde netleşti; yine de bu başlıkta tek cümlelik cevaplar çoğu zaman
+          yanıltıcıdır. Zamanlama, kullanılan rejim ve kişisel öykü tabloyu değiştirir.
         </p>
         <p>
           Menopoz alanında çalışan dernekler bugün temelde şu bakışı kullanıyor: 60 yaş altındaki ve menopozdan
@@ -174,7 +173,7 @@ const articleSchemas = buildArticleSchemas({
           tarama disiplini aynı anda değerlendirilmeden "risk düşük" ya da "risk yüksek" demek doğru olmaz.
         </p>
         <p>
-          Progestin tipi, östrojenin alınma yolu (ağız mı cilt mi), doz ve süre — bu ince ayrıntıların hepsi güvenlik
+          Progestin tipi, östrojenin alınma yolu, doz ve süre — bu ince ayrıntıların hepsi güvenlik
           profilini değiştirebiliyor. Aynı ad altında konuşulan iki tedavi, iki kadında bambaşka risk-fayda
           dengesi yaratabilir. Bu yüzden "HRT kullanıyor musunuz?" sorusundan daha önemlisi "hangi form, hangi doz,
           hangi süre, hangi endikasyonla?" sorusudur.
@@ -182,12 +181,13 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="turkiye-baglamı">Türkiye Notları</h2>
         <p>
-          Türkiye'de hormon tedavisine erişim mümkün; ama görünmeyen bir alan da var.
+          Türkiye'de hormon tedavisine erişim mümkün; ama bu alanda bilgi kadar bilgi kirliliği de dolaşıyor. Bu yüzden
+          seçeneğin adını bilmek yetmez, hangi seçeneğin onaylı ve izlenebilir olduğunu da bilmek gerekir.
         </p>
         <p>
           Erişim reçeteyle yapılıyor ve birçok formun ülke piyasasında karşılığı var. Fakat pratikte iki tablo öne
           çıkıyor: birincisi, pek çok kadın bu seçeneği hekimiyle konuşmadan kendiliğinden eliyor — çoğunlukla eski
-          haber başlıklarının gölgesinde. İkincisi, bazı kliniklerin "kişiye özel karışım hormon" diye sattığı,
+          haber başlıklarının gölgesinde. İkincisi, bazı merkezlerin "kişiye özel karışım hormon" diye sunduğu,
           düzenleyici onayı olmayan formülasyonlar yavaş yavaş yaygınlaşıyor.
         </p>
         <p>
@@ -198,14 +198,15 @@ const articleSchemas = buildArticleSchemas({
           olduğunu vurguluyor <Evidence level={5} />.
         </p>
         <p>
-          Yani Türkiye'de yaşıyorsanız: doktorunuzla önce onaylı seçenekleri konuşmak, sonra size uygun olanı birlikte
-          seçmek en sağlam yol. "Tükürüğünü alalım, formülünü biz belirleyelim" diyen bir yaklaşımla karşılaştığınızda, soru
-          sorma hakkınızı kullanmanız doğal ve gerekli.
+          Yani Türkiye'de yaşıyorsanız: hekiminizle önce onaylı seçenekleri konuşmak, sonra size uygun olanı birlikte
+          değerlendirmek daha güvenli bir çerçevedir. "Tükürüğünüzden özel formül çıkaralım" diyen bir yaklaşımla
+          karşılaştığınızda, kanıtı ve güvenlik izlemini sormanız yerindedir.
         </p>
 
         <h2 id="karar-cercevesi">Karar Planı</h2>
         <p>
-          Soru çoğunlukla "almalı mıyım, almamalı mıyım" değil, "benim için hangi koşulda uygun" biçimine evriliyor.
+          Karar planı "almalı mıyım, almamalı mıyım?" sorusuyla başlamaz; "benim için hangi koşulda anlamlı olabilir?"
+          sorusuyla başlar. Bu küçük değişiklik, konuşmanın tonunu da güvenliğini de değiştirir.
         </p>
         <p>
           İlk basamak şu: yeterince rahatsızlık veren bir belirti var mı? Sıcak basmaları ya da gece terlemeleri
@@ -220,7 +221,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Üçüncü basamak yaş ve zamanlama; yaş ve menopozdan bu yana geçen süre fırsat penceresini belirliyor.
-          Dördüncü basamak rejim ve rota — hangi östrojen, hangi progestin, ağızdan mı yoksa ciltten mi. Beşinci
+          Dördüncü basamak rejim ve uygulama yolu — hangi östrojen, hangi progestin, ağızdan mı yoksa ciltten mi. Beşinci
           basamak doz ve süre: en düşük etkili doz genelde tercih ediliyor, süre ise belirtilere ve kişisel risk
           profiline göre yılda bir yeniden değerlendiriliyor.
         </p>
@@ -232,57 +233,24 @@ const articleSchemas = buildArticleSchemas({
           kendi belirtilerini, kendi risklerini ve kendi önceliklerini yazıya dökmektir.
         </p>
 
-        <h2 id="sss">Sıkça Sorulan Sorular</h2>
-        <p>
-          Karar konuşmasında sık duyduğum sorulardan birkaçını burada bir araya getirdim. Her biri kısa; ayrıntısını
-          kendi hekiminizle birlikte yorumlamak en sağlam yol.
-        </p>
-        <p>
-          <strong>HRT kesinlikle meme kanseri yapar mı?</strong> Hayır, "kesinlikle" diyebileceğimiz bir durum değil. Kullanılan
-          rejime, süreye, başlangıç yaşına ve kişisel risk profiline göre değişiyor. Rahmi olan kadında kombin tedavide,
-          uzun süreyle kullanımda rölatif risk hafifçe artıyor; östrojen-tek kullanımda ise daha yakın zamanlı büyük
-          çalışmalar hafif bir azalma bile gösterebiliyor. Konu "kırmızı çizgi" değil, "kişiselleştirilmiş denge"
-          <Evidence level={5} />.
-        </p>
-        <p>
-          <strong>HRT aldığımda kilo alır mıyım?</strong> Yaygın bir endişe ama mevcut çalışmalar doğrudan bir bağlantı
-          göstermiyor. Menopoz döneminde kilo artışı ve özellikle bel çevresindeki değişim, hormonal tedaviden bağımsız
-          olarak sıkça yaşanıyor. Kimi kadında tedavi başladıktan sonra ilk haftalarda su tutma, göğüs hassasiyeti veya
-          hafif şişkinlik olabiliyor; bunlar genellikle zamanla dengeleniyor <Evidence level={4} />.
-        </p>
-        <p>
-          <strong>Ne kadar süre kullanabilirim?</strong> Eskiden "en kısa süre, en düşük dozda, sonra mutlaka kesin"
-          yaklaşımı yaygındı. Güncel yaklaşım daha esnek: belirtileriniz devam ediyor, yaşam kaliteniz tedaviden anlamlı
-          fayda görüyor ve yeni bir kontrendikasyon çıkmadıysa, devam etmek bir seçenek. Yıllık olarak fayda ve riski
-          yeniden tartmak ise her zaman geçerli.
-        </p>
-        <p>
-          <strong>"Doğal" seçenekler aynı işi görür mü?</strong> Bazı kadınlarda bitkisel destekler veya yaşam tarzı
-          değişiklikleri hafif-orta düzeyde belirtileri yumuşatıyor olabilir. Ancak etki tutarsız ve preparatların
-          standardı değişken. Ayrıca "doğal" etiketi taşıyan bazı ürünler, kullandığınız başka ilaçlarla — tamoksifen,
-          kan sulandırıcılar gibi — ciddi şekilde etkileşebiliyor. Bu yüzden "aldığım her takviye aslında bir ilaç" diye
-          düşünüp doktorunuzla paylaşmak güvenli bir tutum.
-        </p>
-
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          Konuşma için hazırlığı sade tutmak çoğu zaman yarıyor.
+          Hormon tedavisi kararı aceleyle değil, bilgiyi sakinleştirerek verilir. Bilgi belirsizliği azaltır; kararın
+          ağırlığını ise hekiminizle birlikte kurduğunuz çerçeve taşır.
         </p>
         <p>
-          Birkaç gün belirtileri gözlemlemek, en çok hangi anlarda zorlanıldığını not etmek, ailede meme kanseri ya
-          da damar tıkanıklığı öyküsü varsa hatırlamak, kullanılan tüm ilaç ve takviyeleri yazmak — bu sade liste
-          muayeneye giderken yanına alınabilecek en faydalı not. Gerisi — hangi rejim, hangi doz, hangi süre —
-          kişisel ve zaman içinde ayarlanabilir bir plan.
+          Görüşmeye giderken hazırlığı sade tutmak çoğu zaman yeterlidir: hangi belirti sizi zorluyor, ne kadar süredir
+          devam ediyor, ailede meme kanseri ya da damar tıkanıklığı öyküsü var mı, hangi ilaç ve takviyeleri
+          kullanıyorsunuz? Bu kısa liste, konuşmayı soyut korkudan somut karara yaklaştırır.
         </p>
         <p>
-          Hormon tedavisi kararı aceleyle değil, bilgiyi sakinleştirerek verilir. Muayeneye giderken en değerli
-          hazırlık çoğu zaman kısa bir listedir: belirti, süre, şiddet, aile öyküsü, kullandığınız ilaçlar ve
-          sizi asıl zorlayan hedef.
+          Son cümle şu olabilir: HRT bir evet-hayır bayrağı değil; doğru kişide, doğru nedenle, doğru izlemle anlam
+          kazanabilen bir seçenektir. Sizin sorunuz da burada başlar: "Benim hikayemde bu seçeneğin yeri var mı?"
         </p>
       </ArticleProsePanel>
 
 
-      <ArticleFAQ items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
@@ -291,10 +259,10 @@ const articleSchemas = buildArticleSchemas({
             '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
             '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
           ]}
-        />
+      />
 
       <ArticleEditorNote>
-<p class="mb-3 leading-relaxed text-ink/80">
+        <p class="mb-3 leading-relaxed text-ink/80">
           Menopozal hormon tedavisi, östrojen eksikliğinin yarattığı vazomotor belirtileri, ürogenital atrofiyi ve
           kemik sağlığı kayıplarını hedefleyen onaylı bir tedavi seçeneğidir. Endikasyonlar ve rejim seçimi, semptom
           şiddeti ile bireysel risk profilinin birlikte değerlendirilmesini gerektirir.
@@ -312,7 +280,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
           Düzenleyici onayı olmayan, eczacı karışımı veya tükürük testlerine dayandırılan "kişiye özel" formülasyonların
-          güvenlik ve etkinlik verisi yetersizdir; standart dozlu, onaylı preparatlarla yönetilen tedavi tercih edilmelidir.
+          güvenlik ve etkinlik verisi yetersizdir; standart dozlu, onaylı preparatlarla yönetilen tedavi daha güvenli bir
+          çerçeve sunar.
           Hormon tedavisi kullanmayan kadınlar için yaşam tarzı, bilişsel davranışçı terapi ve hormonsuz ilaç
           seçenekleri kanıtlı alternatifler arasındadır.
         </p>
@@ -321,9 +290,10 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleEditorNote>
 
-       <ArticleDisclaimer>
-<p>
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için
+          sağlık profesyoneline başvurunuz.
         </p>
       </ArticleDisclaimer>
     </SubmenuArticleBody>

@@ -31,9 +31,9 @@ const tocEntries = [
   { id: 'rota-ve-progesteron', label: 'Rota ve Progesteron' },
   { id: 'kimlerde-daha-dikkatli', label: 'Kimlerde Daha Dikkatli?' },
   { id: 'mutlak-risk', label: 'Mutlak Risk Ne Demek?' },
-  { id: 'doktora-uc-soru', label: 'Doktora Üç Soru' },
-  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+  { id: 'doktora-uc-soru', label: 'Hekime Üç Soru' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -124,7 +124,7 @@ const articleSchemas = buildArticleSchemas({
           bu konuyu hiç önemsememeye başlıyor.
         </p>
         <p>
-          Klinik görüşmelerde bu başlık açıldığında en sık karşılaştığım tablo, kadınların iki uç
+          Görüşmelerde bu başlık açıldığında en sık karşılaştığım tablo, kadınların iki uç
           mesaj arasında kalmış olması: “Bir yerde çok tehlikeli denmişti” ile “hiç mesele değil”
           arasında sıkışmış bir belirsizlik. Aslında iki taraf da eksik. Bu başlıkta ihtiyacımız
           olan şey, korkuyu küçümsemek değil; korkunun ne kadarının veriye, ne kadarının eski ve
@@ -255,7 +255,7 @@ const articleSchemas = buildArticleSchemas({
           yerleştirmektir.
         </p>
 
-        <h2 id="doktora-uc-soru">Doktora sorabileceğiniz üç net soru</h2>
+        <h2 id="doktora-uc-soru">Hekiminize sorabileceğiniz üç net soru</h2>
         <p>
           Bu konuda iyi bir görüşmenin kalitesi, çoğu zaman doğru sorularla başlıyor.
         </p>
@@ -274,18 +274,6 @@ const articleSchemas = buildArticleSchemas({
           değerlendireceğiz?”</em> Süre konuşulmadan risk konuşması eksik kalır. Yıllık yeniden
           değerlendirme, bu başlıkta güven veren en pratik çerçevelerden biridir.
         </p>
-
-        <h2 id="sik-sorulanlar">Sık sorulanlar</h2>
-        <p>
-          Bu bölümdeki soru-cevaplar, sayfadaki görünür tek SSS yüzeyini oluşturuyor. Kısa tutuldu;
-          ama her biri gerçek görüşme cümlelerinden çıkıyor.
-        </p>
-        {faqItems.map((item) => (
-          <>
-            <h3>{item.question}</h3>
-            <p>{item.answer}</p>
-          </>
-        ))}
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
@@ -338,8 +326,8 @@ const articleSchemas = buildArticleSchemas({
             çıkıyor.
           </p>
           <p>
-            <strong class="text-burgundy">Pratik sonuç:</strong> Karar verirken yalnızca “HRT kullanır
-            mısınız?” diye sormam. Şu beş başlık birlikte okunur: hedef belirti, kişisel temel risk,
+            <strong class="text-burgundy">Pratik sonuç:</strong> Karar verirken yalnızca “HRT gündemde
+            mi?” diye sormam. Şu beş başlık birlikte okunur: hedef belirti, kişisel temel risk,
             rahim durumu, planlanan kombinasyon ve öngörülen süre. Meme kanseri riski bu beşlinin
             yalnızca bir parçasıdır; ama kritik bir parçasıdır.
           </p>
