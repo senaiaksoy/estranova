@@ -1,4 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Estranova">
   <title>Estranova</title>
-  <polygon fill="#4f171c" points="100,20 104.59,88.91 128.28,71.72 111.09,95.41 180,100 111.09,104.59 128.28,128.28 104.59,111.09 100,180 95.41,111.09 71.72,128.28 88.91,104.59 20,100 88.91,95.41 71.72,71.72 95.41,88.91"/>
+  <circle cx="100" cy="100" r="82" fill="#DB2777"/>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
+    <path d="M100 54v92" stroke-width="22"/>
+    <path d="M54 100h92" stroke-width="22"/>
+    <path d="M70 70l60 60" stroke-width="20"/>
+    <path d="M130 70l-60 60" stroke-width="20"/>
+  </g>
 </svg>
