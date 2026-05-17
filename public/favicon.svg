@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Estranova">
   <title>Estranova</title>
   <circle cx="100" cy="100" r="82" fill="#DB2777"/>
-  <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
-    <path d="M100 54v92" stroke-width="22"/>
-    <path d="M54 100h92" stroke-width="22"/>
-    <path d="M70 70l60 60" stroke-width="20"/>
-    <path d="M130 70l-60 60" stroke-width="20"/>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-width="24">
+    <path d="M100 56v88"/>
+    <path d="M56 100h88"/>
+    <path d="M69 69l62 62"/>
+    <path d="M131 69l-62 62"/>
   </g>
 </svg>
