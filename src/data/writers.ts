@@ -224,7 +224,6 @@ export const writers: Writer[] = [
     portrait: '/images/writers/gonca-gokdemir.webp',
     focusAreas: ['Cilt & Menopoz', 'Lekeler & Hormon-Cilt', 'Önleyici Dermatoloji'],
     isEditor: false,
-    status: 'inactive',
     category: 'scientific',
     writingStyle: {
       voice: 'Anlaşılır + okuru rahatlatan + akademik birikim arka planda; "trendin değil cildin tarafında" anti-trend duruşu.',
@@ -771,7 +770,7 @@ export const writers: Writer[] = [
   },
 ];
 
-export const inactiveWriterSlugs = ['bahar-ozeray', 'gonca-gokdemir', 'elif-ozcan-dulundu', 'ozlem-denizmen'] as const;
+export const inactiveWriterSlugs = ['bahar-ozeray', 'elif-ozcan-dulundu', 'ozlem-denizmen'] as const;
 
 export const activeWriters = writers.filter((w) => w.status !== 'inactive');
 

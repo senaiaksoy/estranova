@@ -18,6 +18,29 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+    title: 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak',
+    description:
+      'Prof. Dr. Gonca Gökdemir, menopoz döneminde ciltte kuruluk, hassasiyet, leke eğilimi ve kolajen değişimini hormon, UV, melanin ve bariyer biyolojisi üzerinden anlatıyor.',
+    publishedDate: '18 Mayıs 2026',
+    writerSlug: 'gonca-gokdemir',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik',
+    keywords: [
+      'menopoz',
+      'cilt değişimleri',
+      'cilt kuruluğu',
+      'kolajen',
+      'elastikiyet',
+      'cilt bariyeri',
+      'melanin',
+      'leke',
+      'güneş koruması',
+      '40 sonrası cilt',
+      'dermatoloji',
+    ],
+  },
+  {
     path: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
     title: 'Yüzümüzle uyumlu gülüşün kararı',
     description:
@@ -282,27 +305,6 @@ export const staticArticles: StaticArticleEntry[] = [
       'transdermal östrojen',
       'mutlak risk',
       'menopoz araştırmaları',
-    ],
-  },
-  {
-    path: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
-    title: 'Menopozda Cilt Değişimleri: Aynaya Bakınca “Bir Şey Değişti” Dedirten Dönem',
-    description:
-      'Menopoz döneminde ciltte kuruluk, elastikiyet kaybı, hassasiyet, leke eğilimi ve kolajen azalması neden belirginleşebilir? Bu yazı, cilt değişimini kozmetik vaatlerden uzak, sakin ve bilimsel bir okumayla ele alır.',
-    publishedDate: '6 Mayıs 2026',
-    writerSlug: 'estranova-editorial',
-    section: 'Beden & Yakınlık',
-    sectionPath: '/beden-yakinlik',
-    keywords: [
-      'menopoz',
-      'cilt değişimleri',
-      'cilt kuruluğu',
-      'kolajen',
-      'elastikiyet',
-      'cilt bariyeri',
-      'leke',
-      'güneş koruması',
-      '40 sonrası cilt',
     ],
   },
   {

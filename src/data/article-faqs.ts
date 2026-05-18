@@ -231,27 +231,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopozda cilt değişimi yalnızca yaşlanma mı?',
       answer:
-        'Hayır. Yaş alma, güneş geçmişi, genetik yapı, uyku, stres ve bakım alışkanlıkları etkilidir; fakat menopoz döneminde östrojen azalması da cildin nem, kolajen ve bariyer ritmini değiştirebilir. Bu yüzden tabloyu tek nedenle açıklamak çoğu zaman eksik kalır.',
+        'Hayır. Yaş alma, güneş geçmişi, genetik yapı, uyku, stres ve bakım alışkanlıkları etkilidir; fakat menopoz döneminde östrojen azalması da cildin nem, kolajen ve bariyer ritmini değiştirebilir. Ben bu tabloyu tek nedenle açıklamam; hormon, UV, melanin, bariyer ve kişisel cilt öyküsü birlikte değerlendirilmelidir.',
     },
     {
       question: 'Cilt kuruluğu ve hassasiyet bu dönemde artabilir mi?',
       answer:
-        'Evet, bazı kadınlarda cilt daha kuru, daha gergin veya daha kolay kızaran bir hale gelebilir. Sert temizleyiciler, yoğun peeling ve üst üste aktif içerik denemeleri bu hassasiyeti artırabilir; önce bariyeri sakinleştirmek çoğu zaman daha iyi bir başlangıçtır.',
+        'Evet, bazı kadınlarda cilt daha kuru, daha gergin veya daha kolay kızaran bir hale gelebilir. Sert temizleyiciler, sıcak su, yoğun peeling ve üst üste aktif içerik denemeleri bu hassasiyeti artırabilir; önce bariyeri sakinleştirmek çoğu zaman daha doğru bir başlangıçtır.',
     },
     {
-      question: 'Menopozda cilt için en güçlü günlük adım nedir?',
+      question: 'Menopozda cilt için kanıtı güçlü günlük adım nedir?',
       answer:
-        'Düzenli güneş koruması hâlâ en güçlü ve en iyi kanıtlı temel adımdır. Leke, elastikiyet, ince çizgi ve genel cilt sağlığı açısından gösterişli olmayan ama uzun vadede çok belirleyici bir alışkanlıktır.',
+        'Düzenli güneş koruması hâlâ kanıtı güçlü temel adımlardan biridir. Leke, elastikiyet, ince çizgi, kolajen kaybı ve genel cilt sağlığı açısından gösterişli olmayan ama uzun vadede çok belirleyici bir alışkanlıktır.',
     },
     {
       question: 'Kolajen takviyesi herkes için gerekli midir?',
       answer:
-        'Hayır. Kolajen takviyeleri için bazı sınırlı olumlu veriler olsa da her kadına genellenebilecek zorunlu bir öneri değildir. Protein alımı, uyku, direnç egzersizi, güneşten korunma ve kişisel sağlık durumu birlikte düşünülmelidir.',
+        'Hayır. Kolajen takviyeleri için bazı sınırlı olumlu veriler olsa da her kadına genellenebilecek zorunlu bir öneri değildir. Protein alımı, uyku, direnç egzersizi, güneşten korunma, sigaradan uzak durma ve kişisel sağlık durumu birlikte düşünülmelidir.',
     },
     {
       question: 'Ne zaman dermatolojik değerlendirme geciktirilmemeli?',
       answer:
-        'Yeni veya hızla büyüyen leke, şekli değişen ben, kanayan ya da kabuklanan alan, geçmeyen yara, yoğun kaşıntı veya belirgin yanma varsa bekletmemek gerekir. Bu belirtiler kozmetik bakım konusu gibi değil, tıbbi değerlendirme gerektiren işaretler olarak ele alınmalıdır.',
+        'Yeni veya hızla büyüyen leke, şekli değişen ben, kanayan ya da kabuklanan alan, geçmeyen yara, yoğun kaşıntı, belirgin yanma, ani saç dökülmesi veya tırnak değişikliği varsa bekletmemek gerekir. Bu belirtiler kozmetik bakım konusu gibi değil, dermatolojik değerlendirme gerektiren işaretler olarak ele alınmalıdır.',
     },
   ],
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi': [

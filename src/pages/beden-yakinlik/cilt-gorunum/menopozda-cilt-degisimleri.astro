@@ -11,6 +11,7 @@ import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro'
 import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
@@ -20,21 +21,20 @@ import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri';
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/beden-yakinlik/cilt-gorunum']!;
-const articleTitle = 'Menopozda Cilt Değişimleri: Aynaya Bakınca “Bir Şey Değişti” Dedirten Dönem';
+const articleTitle = 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak';
 const articleDescription =
-  'Menopoz döneminde ciltte kuruluk, elastikiyet kaybı, hassasiyet, leke eğilimi ve kolajen azalması neden belirginleşebilir? Bu yazı, cilt değişimini kozmetik vaatlerden uzak, sakin ve bilimsel bir okumayla ele alır.';
-const publishedDate = '6 Mayıs 2026';
-const readingMinutes = 8;
+  'Prof. Dr. Gonca Gökdemir, menopoz döneminde ciltte kuruluk, hassasiyet, leke eğilimi ve kolajen değişimini hormon, UV, melanin ve bariyer biyolojisi üzerinden anlatıyor.';
+const publishedDate = '18 Mayıs 2026';
+const readingMinutes = 9;
 
 const tocEntries = [
-  { id: 'ayna-ani', label: 'Aynadaki değişim neden birden fark edilir?' },
-  { id: 'ostrojen-cilt', label: 'Östrojen cilde nereden dokunur?' },
-  { id: 'kuruluk-bariyer', label: 'Kuruluk ve hassasiyet neden artabilir?' },
-  { id: 'kolajen-elastikiyet', label: 'Kolajen ve elastikiyet meselesi' },
-  { id: 'leke-donukluk', label: 'Leke, donukluk ve iyileşme temposu' },
+  { id: 'cildi-nasil-okurum', label: 'Cildi nasıl okurum?' },
+  { id: 'ostrojen-bariyer', label: 'Östrojen, bariyer ve nem' },
+  { id: 'kolajen-elastikiyet', label: 'Kolajen ve elastikiyet' },
+  { id: 'leke-melanin', label: 'Leke, melanin ve güneş geçmişi' },
   { id: 'bakim-ritmi', label: 'Bakım ritmini sadeleştirmek' },
-  { id: 'ne-zaman-destek', label: 'Ne zaman değerlendirme gerekir?' },
-  { id: 'kisa-hatirlatma', label: 'Kısa hatırlatma' },
+  { id: 'aktif-madde', label: 'Aktif maddeleri nasıl düşünmeli?' },
+  { id: 'degerlendirme', label: 'Ne zaman değerlendirme gerekir?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
@@ -43,7 +43,7 @@ const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'estranova-editorial',
+  writerSlug: 'gonca-gokdemir',
   publishedDate,
   pathname,
   articleSection: 'Beden & Yakınlık',
@@ -56,9 +56,11 @@ const articleSchemas = buildArticleSchemas({
     'kolajen',
     'elastikiyet',
     'cilt bariyeri',
+    'melanin',
     'leke',
     'güneş koruması',
     '40 sonrası cilt',
+    'dermatoloji',
   ],
   faqItems,
   siteUrl,
@@ -85,7 +87,7 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
-        authorSlug="estranova-editorial"
+        authorSlug="gonca-gokdemir"
         publishedDate={publishedDate}
         readingMinutes={readingMinutes}
         imageSrc="/images/library/editorial/menopozda-cilt-degisimleri-byline.webp"
@@ -95,148 +97,155 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
         <p>
-          Menopoz döneminde ciltte kuruluk, elastikiyet kaybı, daha çabuk hassaslaşma, leke eğilimi ve iyileşme
-          temposunda yavaşlama fark edilebilir. Bu değişimler yalnızca "yaş almak" cümlesine sıkışmaz; östrojenin
-          azalması, kolajen üretimi, cilt bariyeri, güneş geçmişi, uyku ve stres aynı resmin parçalarıdır <Evidence from={3} to={4} />.
-          En sağlam günlük adım hâlâ düzenli güneş koruması ve bariyeri yormayan sade bakım ritmidir <Evidence level={5} />.
+          Menopoz döneminde ciltte kuruluk, hassasiyet, daha belirgin çizgiler, leke eğilimi ve iyileşme temposunda
+          yavaşlama fark edilebilir. Ben bu tabloyu tek başına "yaş alma" cümlesiyle açıklamam; östrojen azalması,
+          cilt bariyeri, kolajen düzeni, melanin yanıtı, UV geçmişi, uyku ve stres aynı resmin parçalarıdır <Evidence from={3} to={4} />.
+          Güvenilir başlangıç, trendleri çoğaltmak değil; güneş koruması, bariyeri yormayan bakım ve gerektiğinde
+          dermatolojik değerlendirmeyle cildi kendi biyolojisi içinde okumaktır <Evidence level={5} />.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="ayna-ani">Aynadaki değişim neden birden fark edilir?</h2>
+        <h2 id="cildi-nasil-okurum">Cildi nasıl okurum?</h2>
         <p>
-          Bazen yüzünüzdeki değişim yavaş yavaş gelir; ama siz onu bir sabah, ışık banyoda biraz farklı düştüğünde fark
-          edersiniz. Menopozda cilt değişimleri çoğu kadında tam da böyle, sessiz bir birikimin görünür hale gelmesi gibi yaşanır.
+          Menopozda cilt değişimini konuşurken benim ilk baktığım şey ayna değil, cildin ne anlatmaya çalıştığıdır. Çünkü
+          cilt yalnızca görünüm yüzeyi değil; hormon, UV, melanin, kolajen ve bariyer fonksiyonunun birlikte yazdığı canlı
+          bir dokudur.
         </p>
         <p>
-          Cildin daha kuru hissetmesi, makyajın eskisi gibi oturmaması, yanaklarda daha çabuk kızarma, ince çizgilerin
-          belirginleşmesi veya "yorgun görünüm" hissi tek başına dramatik değildir. Fakat bir araya geldiklerinde kadın
-          kendini aynada birden daha yabancı okuyabilir. Burada mesele kusur aramak değil, cildin değişen biyolojisini
-          daha sakin anlamaktır.
+          Kliniğimde kadınların sık kullandığı bir cümle var: "Cildim artık eskisi gibi davranmıyor." Bu cümleyi önemli
+          bulurum, çünkü çoğu zaman tek bir şikayet değil, bir ritim değişimini anlatır. Nemlendirici yetmiyordur, makyaj
+          daha pütürlü duruyordur, yanaklar daha kolay kızarıyordur veya eski lekeler birden daha görünür hale gelmiştir.
         </p>
         <p>
-          Yayın masasında bu konuyu konuşurken hep aynı cümleye dönüyoruz: Cilt, yalnızca görünüm değildir; aynı zamanda
-          bariyer, nem, onarım ve çevreyle temas yüzeyidir. Bu yüzden menopozdaki cilt değişimini "güzellik" başlığından
-          önce sağlık ve konfor başlığı olarak okumak daha dürüst bir başlangıç olur.
-        </p>
-
-        <h2 id="ostrojen-cilt">Östrojen cilde nereden dokunur?</h2>
-        <p>
-          Östrojen yalnızca adet döngüsünün hormonu değildir; cilt dokusunun nem, kalınlık, elastikiyet ve onarım
-          kapasitesiyle de ilişkilidir. Bu ilişki menopoz geçişinde daha görünür hale gelir.
-        </p>
-        <p>
-          Östrojenin azalmasıyla ciltte kolajen düzeni, su tutma kapasitesi, damar yanıtı ve bariyer dayanıklılığı
-          etkilenebilir <Evidence level={4} />. Bu yüzden bazı kadınlarda yüz, boyun, el üstü veya dekolte bölgesinde
-          kuruluk, incelme hissi, daha belirgin çizgiler ya da daha kolay tahriş olma öne çıkabilir.
-        </p>
-        <p>
-          Bu cümle "her değişimin sebebi hormon" demek değildir. Güneş maruziyeti, sigara, hava kirliliği, genetik
-          yatkınlık, uyku düzeni, beslenme ve stres de aynı tabloya katılır. Menopoz bu zemini değiştirebilir; ama cilt
-          hikâyesi çoğu zaman yılların biriktirdiği dış etkenlerle birlikte okunur.
+          Bu noktada benim durduğum yer trendlerin değil, cildin tarafıdır. Yeni bir ürün, yeni bir işlem veya sosyal
+          medyada hızla dolaşan bir aktif madde fikri cazip gelebilir; ama menopoz döneminde iyi bakım çoğu zaman önce
+          cildin neden değiştiğini anlamakla başlar. Her cilt aynı hızda yaşlanmaz, aynı şekilde lekelenmez ve aynı aktif
+          maddeye aynı yanıtı vermez.
         </p>
 
-        <h2 id="kuruluk-bariyer">Kuruluk ve hassasiyet neden artabilir?</h2>
+        <h2 id="ostrojen-bariyer">Östrojen, bariyer ve nem ilişkisi neden önemli?</h2>
         <p>
-          Cilt kuruluğu bazen yalnızca "nemlendirici yetmiyor" hissi değildir. Bariyer daha kolay yoruluyor, daha çabuk
-          tepki veriyor ve eski ritmine daha geç dönüyor olabilir.
+          Östrojen yalnızca üreme sistemiyle ilgili bir hormon değildir; ciltte nem, kalınlık, elastikiyet ve onarım
+          kapasitesiyle de ilişkilidir. Menopoz geçişinde bu ilişki bazı kadınlarda oldukça görünür hale gelir.
         </p>
         <p>
-          Cilt bariyeri, dış dünya ile beden arasındaki ince ama çok çalışan sınırdır. Menopoz döneminde yağ ve nem dengesi
-          değiştiğinde bu sınır daha geçirgen, daha hassas veya daha kırılgan hissedilebilir <Evidence level={3} />.
-          Sıcak su, sert temizleyiciler, yoğun peeling, parfümlü ürünler ve üst üste aktif içerik denemeleri bu hassasiyeti
-          daha da görünür hale getirebilir.
+          Östrojen azalmasıyla cildin su tutma kapasitesi, sebum dengesi, bariyer dayanıklılığı ve damar yanıtı
+          etkilenebilir <Evidence level={4} />. Bu nedenle yüz, boyun, el üstü ve dekolte bölgesinde kuruluk, gerginlik,
+          daha kolay kızarma veya "cildim inceldi" hissi ortaya çıkabilir.
         </p>
         <p>
-          Ben bunu en çok kadınların "Artık cildim eskisi gibi her şeyi kaldırmıyor" cümlesinde duyuyorum. Bu cümle bir
-          yenilgi değil; cildin daha seçici bir ritim istediğini anlatan iyi bir işaret olabilir. Sizin cildiniz farklı
-          tepki verebilir; önemli olan, değişimi aceleyle daha çok ürün ekleyerek değil, önce neyin yorduğunu ayırt ederek okumaktır.
+          Burada önemli ayrım şu: Her kuruluk menopozdan kaynaklanmaz. Sert temizleyiciler, sıcak su, yoğun peeling,
+          parfümlü ürünler, hava kirliliği, bazı ilaçlar, tiroid sorunları veya egzama eğilimi de tabloyu değiştirebilir.
+          Bu yüzden ben cilt kuruluğunu yalnızca nemlendirici eksikliği gibi değil, bariyerin yorulma işareti gibi de okurum.
         </p>
 
         <h2 id="kolajen-elastikiyet">Kolajen ve elastikiyet meselesi nasıl okunmalı?</h2>
         <p>
-          Kolajen kelimesi son yıllarda neredeyse her vaadin içinde geçiyor. Oysa ciltteki kolajen değişimini pazarlama
-          sloganı gibi değil, doku mimarisinin yavaş değişimi gibi düşünmek daha gerçekçidir.
+          Kolajen kelimesi bugün neredeyse her vaat cümlesinin içinde geçiyor. Oysa dermatolojik açıdan kolajen, bir slogan
+          değil; cildin taşıyıcı mimarisinin parçasıdır.
         </p>
         <p>
           Menopoz sonrasında kolajen kaybı ve elastikiyet azalması daha belirgin hissedilebilir <Evidence level={4} />.
-          Bu durum yüz ovalinde yumuşama, ciltte daha ince bir doku hissi, çizgilerin daha kalıcı görünmesi veya ellerde
-          incelme olarak fark edilebilir. Ancak kolajen yalnızca takviye kutusuyla konuşulacak bir konu değildir.
+          Bu, yüz ovalinde yumuşama, ince çizgilerin daha kalıcı görünmesi, el üstlerinde incelme, boyun ve dekoltede daha
+          kuru ya da gevşek bir doku hissi olarak fark edilebilir. Bu tabloyu tek bir krem, tek bir takviye veya tek bir
+          işlemle çözülmesi gereken bir problem gibi anlatmak doğru değildir.
         </p>
         <p>
-          Protein alımı, direnç egzersizi, uyku, güneşten korunma, sigaradan uzak durma ve gerektiğinde dermatolojik
-          değerlendirme aynı resmin parçalarıdır <Evidence from={3} to={4} />. Kolajen takviyeleri için bazı sınırlı
-          olumlu veriler bulunsa da her kadına genellenebilecek tek başına dönüştürücü bir etki beklemek doğru olmaz <Evidence level={2} />.
-          Burada daha sağlıklı yaklaşım, "ne vaat ediyor?" sorusundan önce "kanıt düzeyi ne, bana uygun mu?" sorusunu sormaktır.
+          Kolajeni konuşurken benim öncelik sıram daha temeldir: güneşten korunma, sigaradan uzak durma, yeterli protein,
+          direnç egzersizi, uyku, bariyer dostu bakım ve kişisel dermatolojik değerlendirme <Evidence from={3} to={4} />.
+          Kolajen takviyeleri için sınırlı olumlu veriler vardır; fakat bunları her kadına gerekli, güçlü ve tek başına
+          dönüştürücü bir çözüm gibi sunmak kanıt düzeyini aşar <Evidence level={2} />.
         </p>
 
-        <h2 id="leke-donukluk">Leke, donukluk ve iyileşme temposu neden değişebilir?</h2>
+        <h2 id="leke-melanin">Leke, melanin ve güneş geçmişi neden menopozda daha görünür olabilir?</h2>
         <p>
-          Cilt bazen yalnızca kurumaz; daha mat, daha dalgalı, daha kolay lekelenir veya daha geç toparlanır gibi
-          hissedilebilir. Bu da menopoz dönemindeki değişimin daha görünür yüzlerinden biridir.
+          Leke eğilimi çoğu zaman bir günde başlamaz; yılların güneş geçmişi, genetik yatkınlık, inflamasyon ve hormonal
+          zemin aynı anda konuşur. Menopoz döneminde bu eski notlar bazen daha yüksek sesle görünür hale gelir.
         </p>
         <p>
-          Güneş geçmişi, hormonal dalgalanma, inflamasyon, uykusuzluk ve bariyer hassasiyeti leke ve ton eşitsizliği
-          algısını artırabilir <Evidence level={3} />. Aynı dönemde yara iyileşmesi, tahriş sonrası toparlanma veya
-          işlem sonrası hassasiyet bazı kadınlarda daha yavaş hissedilebilir. Bu yüzden ciltte "eskiden hızlı geçerdi"
-          dediğiniz şeylerin daha uzun sürmesi şaşırtıcı değildir.
+          Melanin, cildin pigment üretim sistemidir. Güneş maruziyeti, hormonal dalgalanma, tahriş, akne sonrası izler ve
+          bazı ilaçlar melanin yanıtını etkileyebilir <Evidence level={3} />. Bu nedenle melazma, lentigo dediğimiz güneş
+          lekeleri veya ton eşitsizlikleri 40 sonrası dönemde daha dikkat çekici hale gelebilir.
         </p>
         <p>
-          Bu noktada düzenli güneş koruması özel bir yere sahip. Cilt bakımında en az gösterişli ama en güçlü adım çoğu
-          zaman budur <Evidence level={5} />. Leke eğilimi, ince çizgi, elastikiyet ve genel cilt sağlığı söz konusu
-          olduğunda güneş koruması kozmetik bir detay değil, uzun vadeli bakımın omurgasıdır.
+          Leke tedavisinde en sık gördüğüm hata, lekeyi yalnızca açılması gereken bir renk farkı gibi düşünmektir. Ben
+          önce lekenin tipini, derinliğini, tetikleyicisini ve cilt bariyerinin durumunu anlamak isterim. Çünkü her lekeye
+          aynı yaklaşım doğru değildir; hatta fazla agresif bakım bazı lekelerde tahrişi artırarak tabloyu daha inatçı
+          hale getirebilir.
+        </p>
+        <p>
+          Düzenli güneş koruması bu yüzden gösterişsiz ama çok güçlü bir adımdır <Evidence level={5} />. Cilt bakımında
+          en az romantik görünen alışkanlık, leke, kolajen, elastikiyet ve cilt kanseri riskini birlikte etkileyen en
+          temel koruyucu davranışlardan biridir.
         </p>
 
         <h2 id="bakim-ritmi">Bakım ritmini sadeleştirmek neden çoğu zaman daha iyi başlar?</h2>
         <p>
-          Cilt değiştiğinde ilk dürtü çoğu zaman daha çok şey denemektir. Oysa menopoz döneminde cilt bazen çoğalmaya
-          değil, sadeleşmeye daha iyi yanıt verir.
+          Cilt değiştiğinde ilk dürtü çoğu zaman daha fazla ürün, daha fazla aktif madde ve daha hızlı sonuç aramaktır.
+          Menopoz döneminde ise cilt bazen çoğalmaya değil, sadeleşmeye daha iyi yanıt verir.
         </p>
         <p>
-          Nazik temizleme, düzenli nem desteği, gündüz güneş koruması ve cildi sık sık tahriş eden yoğun denemeleri
-          azaltmak iyi bir temel kurabilir <Evidence level={4} />. Retinoid, asit, C vitamini gibi aktif içerikler bazı
-          kadınlarda faydalı olabilir; ancak hassasiyet artmışsa birden çok aktif içeriği aynı dönemde başlatmak cildi
-          gereksiz yere yorabilir.
+          Nazik temizleme, düzenli nem desteği, gündüz güneş koruması ve bariyeri yoran yoğun denemeleri azaltmak iyi bir
+          temel kurabilir <Evidence level={4} />. Ben bakım planını değerlendirirken "ne ekleyelim?" sorusundan önce
+          "neyi azaltırsak cilt rahatlar?" sorusunu da sorarım. Çünkü yanma, batma, pullanma ve kızarıklık varsa cilt
+          çoğu zaman yeni bir uyarana değil, sakinleşmeye ihtiyaç duyar.
         </p>
         <ul>
-          <li>Cildinizin sabah ve akşam nasıl hissettiğini bir hafta izleyin: gergin, yanakları sıcak, pul pul veya sakin?</li>
-          <li>Yeni bir ürünü aynı anda üç ürünle birlikte değil, tek başına değerlendirin.</li>
-          <li>Kuruluk ve yanma hissi arttıysa önce bariyeri sakinleştirmeyi düşünün.</li>
-          <li>Güneş korumasını yalnızca yaz tatili değil, günlük ritim başlığı olarak görün.</li>
-          <li>Takviye veya işlem kararını reklam diliyle değil, kişisel risk ve beklentiyle tartın.</li>
+          <li>Cildinizin sabah ve akşam nasıl hissettiğini birkaç gün izleyin: gergin, sıcak, pul pul, yağlı veya sakin?</li>
+          <li>Yeni bir ürünü aynı anda birkaç aktif içerikle birlikte değil, tek başına değerlendirin.</li>
+          <li>Kuruluk ve yanma artıyorsa önce bariyeri desteklemeyi düşünün.</li>
+          <li>Güneş korumasını yalnızca yaz tatili değil, yıl boyu bakım ritmi olarak görün.</li>
+          <li>İşlem veya takviye kararını reklam diliyle değil, cilt tipi, risk ve kanıt düzeyiyle tartın.</li>
         </ul>
         <p>
-          Bu liste tedavi planı değildir; daha çok cildin sesini duymak için küçük bir düzen önerisidir. Bazen iyi bakım,
-          yeni bir şey eklemekten önce gereksiz yoranı azaltmakla başlar.
+          Bu liste bir tedavi reçetesi değildir. Cildinizi daha dikkatli dinlemek için bir başlangıç yoludur; sizin
+          cildinizin ihtiyacı, eşlik eden hastalıklarınız ve kullandığınız ürünler bu yolu değiştirebilir.
         </p>
 
-        <h2 id="ne-zaman-destek">Ne zaman değerlendirme gerekir?</h2>
+        <h2 id="aktif-madde">Aktif maddeleri nasıl düşünmeli?</h2>
         <p>
-          Cilt değişiminin çoğu olağan yaşlanma ve hormonal geçiş zeminiyle ilişkili olabilir. Yine de bazı işaretler
-          "bunu sadece bakım meselesi saymayalım" dedirtir.
+          Retinoidler, antioksidanlar, niasinamid, hyalüronik asit, peptidler ve asitler cilt bakımında sık konuşulur.
+          Ben bu maddeleri marka isimleriyle değil, neye hizmet ettikleri ve hangi ciltte ne kadar tolere edildikleri
+          üzerinden değerlendiririm.
         </p>
         <p>
-          Yeni veya hızla büyüyen leke, şekli değişen ben, kanayan veya kabuklanan alan, geçmeyen yara, yoğun kaşıntı,
-          belirgin kızarıklık, yanma, döküntü ya da saç-tırnak değişimleri eşlik ediyorsa dermatolojik değerlendirme
-          iyi olur <Evidence level={5} />. Ayrıca rozasea, egzama, melazma, akne veya hassas cilt öykünüz varsa menopoz
-          geçişinde bakım ritmini kendi kendinize sertleştirmek yerine profesyonel görüş almak daha güvenli olabilir.
+          Retinoidler hücre yenilenmesi, ince çizgi görünümü ve bazı leke tabloları açısından anlamlı olabilir; ancak
+          tahriş potansiyeli nedeniyle her ciltte aynı hızda başlanmaz <Evidence level={3} />. Antioksidanlar çevresel
+          stresle ilişkili hasarı azaltma mantığıyla konuşulur; nem tutucu içerikler bariyer konforunu destekleyebilir
+          <Evidence level={3} />. Fakat bunların hiçbiri güneş korumasının yerine geçmez.
         </p>
         <p>
-          Estetik işlem, cihaz uygulaması veya yoğun aktif içerik kararlarında da beklentiyi netleştirmek önemlidir.
-          Cilt dokusu değişirken "eskisi gibi olma" vaadi çoğu zaman gerçekçi değildir; daha iyi soru, "cildimin bu
-          dönemde neye ihtiyacı var ve hangi adımın kanıtı ne kadar güçlü?" olabilir.
+          Menopoz döneminde aktif madde okur-yazarlığı özellikle değerlidir. Çünkü cilt daha kuru veya hassassa, iyi bir
+          içeriğin yanlış sıklıkta, yanlış sırayla veya fazla ürünle birlikte kullanılması beklenen fayda yerine kızarıklık
+          ve tahriş yaratabilir. Bu nedenle "daha güçlü" her zaman "daha doğru" anlamına gelmez.
         </p>
 
-        <h2 id="kisa-hatirlatma">Kısa hatırlatma: Cildiniz sizden ayrı bir proje değil</h2>
+        <h2 id="degerlendirme">Ne zaman dermatolojik değerlendirme gerekir?</h2>
         <p>
-          Menopozda cilt değişimleri, aynadaki bir kusur listesi değil; bedenin değişen ritminin görünür notlarıdır.
-          Kuruluk, hassasiyet, elastikiyet kaybı ve donukluk hissi çoğu zaman aynı biyolojik zeminde buluşur.
+          Cilt değişimlerinin çoğu yaş, hormonlar ve çevresel etkenlerle birlikte okunabilir. Yine de bazı işaretler
+          bakım rutiniyle oyalanmadan dermatolojik değerlendirme gerektirir.
         </p>
         <p>
-          Bu dönemde cildinize daha sert davranmak zorunda değilsiniz. Daha sakin, daha düzenli, daha kanıtlı bir ritim
-          çoğu zaman daha iyi bir başlangıçtır. Güneş koruması, bariyeri yormayan bakım, uyku ve gerektiğinde dermatolojik
-          değerlendirme; cildi "gençleştirme" vaadinden daha güvenilir bir bakım dili kurar.
+          Yeni ortaya çıkan veya hızla büyüyen leke, şekli değişen ben, kanayan ya da kabuklanan alan, geçmeyen yara,
+          yoğun kaşıntı, belirgin yanma, yaygın kızarıklık, ani saç dökülmesi veya tırnak değişiklikleri varsa bu tabloyu
+          yalnızca "menopoz cildi" diye geçiştirmemek gerekir <Evidence level={5} />. Cilt kanseri taraması ve ben takibi,
+          estetik kaygıdan ayrı bir koruyucu sağlık başlığıdır.
         </p>
+
+        <RedFlagBox
+          title="Dermatoloji değerlendirmesini geciktirmemenin anlamlı olduğu durumlar"
+          intro="Aşağıdaki işaretler tek başına tanı koydurmaz; ama cildi yalnızca bakım ürünüyle izlemek yerine dermatoloji görüşü almayı gerektirebilir."
+          markers={[
+            'Yeni çıkan, hızla büyüyen veya rengi belirgin değişen ben ya da leke',
+            'Kanayan, kabuklanan, iyileşmeyen veya tekrarlayan yara',
+            'Asimetrik, sınırları düzensiz veya birden fazla renge sahip ben',
+            'Yoğun kaşıntı, yanma, yaygın kızarıklık veya ani hassasiyet artışı',
+            'Ani başlayan belirgin saç dökülmesi, kaş-kirpik kaybı veya tırnak değişikliği',
+            'İşlem ya da ürün sonrası uzayan tahriş, yanık hissi veya lekelenme',
+          ]}
+          footnote="Bu liste panik yaratmak için değil; cilt değişimini doğru zamanda doğru uzmanlıkla değerlendirmek için hazırlanmış bir hatırlatmadır."
+        />
       </ArticleProsePanel>
 
       <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
@@ -251,8 +260,8 @@ const articleSchemas = buildArticleSchemas({
       />
 
       <ArticleEditorNote>
-        <p>Menopoz döneminde cilt değişimleri; östrojen azalması, kolajen düzeni, bariyer fonksiyonu, sebum/nem dengesi ve çevresel maruziyetlerin birlikte etkisiyle değerlendirilmelidir.</p>
-        <p>Düzenli güneş koruması, sigaradan uzak durma, bariyeri destekleyen bakım ve kişisel risklere göre dermatolojik değerlendirme en güvenilir çerçeveyi oluşturur.</p>
+        <p>Menopoz döneminde cilt değişimleri; östrojen azalması, kolajen düzeni, bariyer fonksiyonu, sebum/nem dengesi, melanin yanıtı ve çevresel maruziyetlerin birlikte etkisiyle değerlendirilmelidir.</p>
+        <p>Düzenli güneş koruması, sigaradan uzak durma, bariyeri destekleyen bakım ve kişisel risklere göre dermatolojik değerlendirme güvenilir bir yol oluşturur.</p>
         <p>Yeni, değişen, kanayan, kabuklanan veya iyileşmeyen cilt lezyonları kozmetik bakım konusu gibi ertelenmemeli; dermatolojik değerlendirme geciktirilmemelidir.</p>
         <p class="text-sm italic text-burgundy">— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü</p>
       </ArticleEditorNote>
