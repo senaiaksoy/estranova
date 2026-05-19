@@ -1,10 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Estranova">
-  <title>Estranova</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">Estranova Editoryal Monogram</title>
+  <desc id="desc">Pembe daire icinde Manrope uyumlu beyaz sans serif E monogrami ve kucuk nova cicek isareti.</desc>
+  <defs>
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+      .monogram {
+        font-family: "Manrope", Arial, sans-serif;
+        font-size: 120px;
+        font-weight: 760;
+        letter-spacing: -8px;
+      }
+    ]]></style>
+    <g id="small-nova">
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11"/>
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11" transform="rotate(45)"/>
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11" transform="rotate(135)"/>
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11" transform="rotate(225)"/>
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11" transform="rotate(270)"/>
+      <ellipse cx="0" cy="-13" rx="4.2" ry="11" transform="rotate(315)"/>
+      <circle cx="0" cy="0" r="3"/>
+    </g>
+  </defs>
   <circle cx="100" cy="100" r="82" fill="#DB2777"/>
-  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-width="24">
-    <path d="M100 56v88"/>
-    <path d="M56 100h88"/>
-    <path d="M69 69l62 62"/>
-    <path d="M131 69l-62 62"/>
+  <text class="monogram" x="96" y="146" text-anchor="middle" fill="#FFFFFF">E</text>
+  <g fill="#FFFFFF" transform="translate(139 60) scale(.86)">
+    <use href="#small-nova"/>
   </g>
 </svg>
