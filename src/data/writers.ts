@@ -608,6 +608,19 @@ export const writers: Writer[] = [
     },
   },
   {
+    slug: 'sanem-altan',
+    displayName: 'Sanem Altan',
+    role: 'Edebi Deneme ve Lifestyle Yazarı / Konuk Katkı',
+    ageBand: '53-54',
+    publicBio:
+      "İktisat mezunu gazeteci ve deneme yazarı; üç kuşak Türk basın-edebiyat geleneğinin içinden geliyor. Vatan gazetesinde yıllarca köşe yazarlığı yaptı, NTV'de \"Off the Record\" programını sundu. *Özler İnsan Kendini* (Alfa, 2013) adlı denemesinin yazarı. Estranova'da hormonal geçişi bir mevsim metaforu içinden okuyan, lirik ve sezgisel bir yaşıt tonuyla yazıyor.",
+    signaturePhrase:
+      'Hormonal geçişi bir mevsim metaforu içinden okuyan, lirik ve sezgisel bir yaşıt sesi.',
+    focusAreas: ['Edebi Deneme', 'Hormonal Geçiş', 'Lifestyle'],
+    isEditor: false,
+    status: 'inactive',
+  },
+  {
     slug: 'rima-erdemir',
     displayName: 'Rima Erdemir',
     role: 'Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı',
@@ -770,7 +783,7 @@ export const writers: Writer[] = [
   },
 ];
 
-export const inactiveWriterSlugs = ['bahar-ozeray', 'elif-ozcan-dulundu', 'ozlem-denizmen'] as const;
+export const inactiveWriterSlugs = ['bahar-ozeray', 'elif-ozcan-dulundu', 'ozlem-denizmen', 'sanem-altan'] as const;
 
 export const activeWriters = writers.filter((w) => w.status !== 'inactive');
 
