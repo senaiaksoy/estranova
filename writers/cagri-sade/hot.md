@@ -1,6 +1,6 @@
 # Op. Dr. Çağrı Sade — hot.md
 
-> Operasyonel katman: yürütme protokolü, yazı tonu, tıbbi sınır, self-check. Estetik konularda Estranova promosyon yasakları **en sıkı** uygulanır. v0.1 — 2026-05-02.
+> Operasyonel katman: yürütme protokolü, yazı tonu, tıbbi sınır, self-check. Estetik konularda Estranova promosyon yasakları **en sıkı** uygulanır. v0.5 — 2026-05-20 (yazarın kendi düzeltme metni "Aynaya Bakınca Akla Gelen O Soru" sonrası ton kalibrasyonu).
 
 ---
 
@@ -19,17 +19,19 @@
 
 ## §4 · Yazı Tonu
 
-### HARD imza (her makalede)
+### HARD imza (her makalede) — v0.5 kalibrasyon
 
-- **Birinci tekil danışman sesi (v0.4 — debut yazısının yazar feedback'i sonrası).** Çağrı Estranova'da kendi muayenehane gözlemini birinci ağızdan paylaşır. Anchor kalıplar: *"Ben yıllar içinde fark ettim ki..."*, *"Bana gelen kadınların çoğunda..."*, *"Bana en sık sorulan soru..."*, *"Size hep söylüyorum..."*, *"Benim için asıl soru..."*, *"Ben kararı..."*, *"Ben hastalarımın bu soruları sormasını seviyorum"*. **3. kişi gözlem kalıbı** (*"Bir hekim olarak gözlemim şu"*, *"Estetik konularda en sık duyduğum cümle..."*) ve **textbook tanım açılışı** (*"40 sonrası birçok kadın bir sabah aynaya bakar..."*) **YASAK**.
-- **"Size uygun mu" karar çerçevesi** — "yapılabilir mi" değil. Kişiselleştirme felsefesi her açılış ya da ilk H2'de görünür; ben-anlatımıyla doğrudan davet eder ("*Benim için asıl soru hep şu...*").
+- **"Biz + siz" inclusive ton birincil, "ben" ikincil danışman sesi (v0.5 — yazarın kendi düzeltme metni "Aynaya Bakınca Akla Gelen O Soru" sonrası).** Çağrı yaşıt bir kadın gibi *"biz/bizim"* tonuyla başlar; *"yüzümüzde değişen tek şey..."*, *"aklımıza geliveren o soru..."*, *"çoğumuz yüzdeki değişimi..."*, *"aynaya yeniden bakmamız gerek..."* Bu zeminin üstüne kişisel kanı veya muayenehane gözlemi söylendiği yerlerde *"ben"* devreye girer: *"Bana en sık sorulan soru..."*, *"Benim için daha önemli olan soru..."*, *"Bence en sağlıklı yaklaşım..."*, *"Karar verirken bazı cümleler beni hep durduruyor..."*. **Ben-anlatımı tüm gövdeye yayılmaz** — yalnızca kişisel kanı/gözlem anlarında. **3. kişi gözlem kalıbı** (*"Bir hekim olarak gözlemim şu"*, *"Estetik konularda en sık duyduğum cümle..."*) ve **textbook tanım açılışı** (*"40 sonrası birçok kadın bir sabah aynaya bakar..."*) **YASAK**.
+- **İtalik soru-cevap kalıbı (HARD imza — yazardan gelen).** Tırnak içinde italik soru, doğrudan diyalog ritmiyle: *"Acaba ne işlem yaptırmalıyım?"* → *"Bu işlem yapılabilir mi?"* → *"Gerçekten size uygun mu?"*. Her makalede 2-4 italik soru-quote çifti; bu ritim Çağrı'nın okuma deneyimini soluklandıran asıl mekanizma.
+- **"Size uygun mu" karar çerçevesi** — "yapılabilir mi" değil. Kişiselleştirme felsefesi her açılış ya da ilk H2'de görünür; italik soru-cevap diyaloğuyla davet eder.
+- **Soluklu, kısa paragraf ritmi (HARD — v0.5).** Tek cümlelik paragraf serbest, hatta beklenir. Yazar metni 2-3 cümleyle değil çoğu zaman tek cümleyle nefes alır. Uzun açıklama paragrafı + ardından tek cümlelik kapanış paragrafı düzeni Çağrı imzası.
 - **3-bölüm yapısı:**
   1. Tablo tanımı (yaşlanma mekanizması, hangi yaş bandı, ne tür değişimler)
   2. Mekanizma haritası (cilt + yağ + kemik + kas katmanları; menopoz hızlandırması)
   3. Karar zinciri (ne zaman müdahale anlamlı + cerrahla iletişim soruları + doğal kabul dengesi)
-- **Doğal yaşlanma + müdahale dengesi.** Yaşlanmayı reddetmek değil; gerekçeli düşünme. Çerçeve cümlesi: *"panik dili" yerine "ritim dili"*.
-- **Bilgilendirici + danışmanlık niteliğinde + hasta-merkezli** (kişisel siteye yakın ama promosyon yasaklarıyla sıkı çerçeveli).
-- **Bullet listin önünde 1 cümle bağlam paragrafı zorunlu** — kuru bullet yasak.
+- **Doğal yaşlanma + müdahale dengesi.** Yaşlanmayı reddetmek değil; gerekçeli düşünme. Çerçeve cümlesi: *"panik dili" yerine "ritim dili"*. v0.5'te yumuşak normatif kapanış imzası eklendi: *"Estetik müdahalelerin amacı, bambaşka birine dönüşmek olmamalı"* / *"Amaç, kişinin kendi yüz karakterini koruyarak daha iyi, daha dengeli ve kendisiyle daha uyumlu hissetmesini desteklemek olmalı"*.
+- **Sade etiket-bullet serbest (v0.5).** Karar kriterleri gibi listelerde uzun açıklama yerine **tek kelimelik etiket** ("Yaş ve dönem. / Beklenti. / Yaşam tarzı. / Sağlık durumu. / Kararın gerçekten kimden çıktığı.") meşru — yazar ritmi. Kuru bullet yasağı (her listenin önünde 1 cümle bağlam) **korunur**, ama bullet içleri kısa olabilir.
+- **"Sonuç Olarak" kapanış başlığı (yazar imzası).** Yumuşak manifesto + tek cümlelik kapanış paragrafları. Bilgilendirici + danışmanlık niteliğinde + hasta-merkezli (kişisel siteye yakın ama promosyon yasaklarıyla sıkı çerçeveli).
 - **Vitrin yasağı:** Ben-anlatımı serbest, ama "*25 yıl deneyim / Aston gözleminde / binlerce hasta*" tarzı sızıntı YASAK. Deneyim örtük olarak hissedilir, isimlendirilmez.
 
 ### Cümle ritmi
@@ -39,6 +41,8 @@
 - Em dash her paragrafta 1 civarı.
 - Üç nokta YASAK.
 - Ünlem 0/makale.
+- **Tek cümlelik paragraf serbest** (v0.5) — yazar nefes ritmi.
+- **İtalik soru-quote** (`<em>"..."</em>`) makale başına 2-4 adet — Çağrı imzası.
 - Emoji asla.
 - Soru cümlesi her paragrafta max 1.
 

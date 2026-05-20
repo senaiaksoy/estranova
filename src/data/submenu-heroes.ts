@@ -253,7 +253,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu': {
     src: '/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu.webp',
-    alt: "Sabah ışığında ev içi sade bir köşede yandan profil duran, parmaklarını çene-yanak hattına yumuşakça değdirmiş 50+ kadın portresi; bordo bluz ve doğal pencere ışığında 'ölçü sorusu' atmosferi taşıyan kart görseli",
+    alt: "Sabah ışığında pencere kenarındaki sade bir masada otururken pencereye doğru bakan, önünde küçük oval ayna ve açık bir defter duran, bordo ipek bluzlu, omuz hizasında kahverengi saçlı 50'li yaşlarında bir kadının yatay editöryal sahnesi; arkada okaliptüs dalı, krem perde ve porselen kahve fincanı — 'aynaya yeniden bakmak' atmosferi taşıyan kart görseli",
   },
   '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi': {
     src: '/images/library/editorial/rima-erdemir-yapay-zeka-hekim-cihaz-byline.jpg',
