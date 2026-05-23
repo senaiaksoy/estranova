@@ -17,7 +17,7 @@ const pageDescription = subscriptionActive
 ---
 
 <SiteLayout title={pageTitle} description={pageDescription} allowIndexing={false}>
-  <SiteNavbar currentPath="/abone-ol" />
+  <SiteNavbar currentPath="/abone-ol/" />
 
   <main id="main-content" class="text-ink">
     <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
@@ -58,13 +58,13 @@ const pageDescription = subscriptionActive
             </p>
             <div class="flex flex-wrap gap-3">
               <a
-                href="/mektup"
+                href="/mektup/"
                 class="inline-flex items-center gap-1.5 rounded-xl bg-burgundy px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-burgundy/35"
               >
                 Mektuba kaydol
               </a>
               <a
-                href={`/sayi/${magazineConfig.firstIssue.monthYearISO === '2026-05' ? '01-mayis-2026-geceler' : ''}`}
+                href={`/sayi/${magazineConfig.firstIssue.monthYearISO === '2026-05' ? '01-mayis-2026-geceler' : ''}/`}
                 class="inline-flex items-center gap-1.5 rounded-xl border-2 border-burgundy px-6 py-3 text-sm font-semibold text-burgundy transition hover:bg-burgundy/5 focus:outline-none focus:ring-2 focus:ring-burgundy/35"
               >
                 Bu ayın sayısına git
@@ -97,7 +97,7 @@ const pageDescription = subscriptionActive
           kendine özgü editöryal parçalarını kapsar.
         </p>
         <p class="text-base leading-relaxed text-ink/75">
-          Detaylı kural için <a href="/editoryal-politika" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">Editöryal Politika</a>'mıza göz atabilirsiniz.
+          Detaylı kural için <a href="/editoryal-politika/" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">Editöryal Politika</a>'mıza göz atabilirsiniz.
         </p>
       </div>
     </section>
@@ -105,7 +105,7 @@ const pageDescription = subscriptionActive
     <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
       <div class="mx-auto max-w-3xl text-center">
         <p class="text-sm leading-relaxed text-ink/65">
-          KVKK ve veri politikamız için <a href="/kvkk" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsiniz.
+          KVKK ve veri politikamız için <a href="/kvkk/" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsiniz.
         </p>
       </div>
     </section>

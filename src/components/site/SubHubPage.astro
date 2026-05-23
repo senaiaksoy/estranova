@@ -23,15 +23,15 @@ const { config } = Astro.props;
 const hero = submenuHeroByRoute[config.path]!;
 const chapter = chapterMap[config.path]!;
 const epigraph = subHubEpigraphs[config.path];
-const sectionPath = `/${config.path.split('/')[1]}`;
+const sectionPath = `/${config.path.split('/')[1]}/`;
 const sectionLabel = chapter.parent;
 const hubLabel = chapter.chapter;
 
 const readingMinutesByPath: Record<string, number> = {
-  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski': 10,
-  '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': 11,
-  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi': 9,
-  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': 9,
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/': 10,
+  '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': 11,
+  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': 9,
+  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/': 9,
 };
 
 // Senai Aksoy ve Berna Aksoy yazıları dosyada varsa her zaman en üstte

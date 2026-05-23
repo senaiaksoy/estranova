@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/nad-plus-takviyesi']!;
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/nad-plus-takviyesi/']!;
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'Reklam Vaadi ile Bilim Arası' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı';
 const articleDescription =
   'Anti-aging takviyeleri arasında NAD+ öncüleri (NMN, NR) yoğun pazarlanıyor. Kanıt seviyesi nerede duruyor, kim için anlamlı, kim için erken? Mekanizma + insan çalışmalarının bugünkü durumu + güvenlik + doktora hangi soruları sormak gerektiği — promosyon değil, dürüst yorumlama.';
-const faqItems = articleFaqs['/zamansiz-yasam/deneysel/nad-plus-takviyesi'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/deneysel/nad-plus-takviyesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
-  pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
+  pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: ['NAD+', 'NMN', 'NR', 'nikotinamid mononükleotid', 'nikotinamid ribozid', 'anti-aging', 'takviye', 'kanıt seviyesi', 'menopoz'],
   faqItems,
 
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -84,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/deneysel/nad-plus-takviyesi"
+          slug="/zamansiz-yasam/deneysel/nad-plus-takviyesi/"
           title={articleTitle}
         />
       </div>
@@ -323,9 +323,9 @@ uzak durmalıyım?"</em> Bu, dürüst bir yol kurar; hekim de pazarlama mesajı 
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/d-vitamini-rehberi',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zamansiz-yasam/d-vitamini-rehberi/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
           ]}
         />
 

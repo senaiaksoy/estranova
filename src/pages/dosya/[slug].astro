@@ -30,7 +30,7 @@ const contributingWriters = Array.from(
   .filter((w): w is NonNullable<typeof w> => Boolean(w));
 
 const editorNoteParagraphs = dossier.editorNote.split('\n\n').filter(Boolean);
-const currentPath = `/dosya/${dossier.slug}`;
+const currentPath = `/dosya/${dossier.slug}/`;
 ---
 
 <SiteLayout
@@ -46,7 +46,7 @@ const currentPath = `/dosya/${dossier.slug}`;
         <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
           <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
           <span class="mx-2 text-gold">·</span>
-          <a href="/dosya" class="text-ink/65 hover:text-burgundy">Dosya</a>
+          <a href="/dosya/" class="text-ink/65 hover:text-burgundy">Dosya</a>
           <span class="mx-2 text-gold">·</span>
           <span class="text-burgundy">{dossier.monthYear}</span>
         </nav>
@@ -260,9 +260,9 @@ const currentPath = `/dosya/${dossier.slug}`;
           yerine geçmez. Kişisel sağlık kararları için doktorunuza danışınız.
         </p>
         <p class="mt-3 text-xs uppercase tracking-[0.22em] text-ink/55">
-          <a href="/tibbi-sorumluluk" class="hover:text-burgundy">Tıbbi Sorumluluk Reddi</a>
+          <a href="/tibbi-sorumluluk/" class="hover:text-burgundy">Tıbbi Sorumluluk Reddi</a>
           <span class="mx-2 text-gold">·</span>
-          <a href="/editoryal-politika" class="hover:text-burgundy">Editöryal Politika</a>
+          <a href="/editoryal-politika/" class="hover:text-burgundy">Editöryal Politika</a>
         </p>
       </div>
     </section>

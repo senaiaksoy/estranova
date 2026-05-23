@@ -22,8 +22,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo']
-  ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar']!;
+  submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/']
+  ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/']!;
 
 const tocEntries = [
   { id: 'neden-zorlu', label: 'Menopozal Kilo Neden Zorlu?' },
@@ -41,15 +41,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozal Kilo İçin GLP-1 Analogları: Abartısız Klinik Karar';
 const articleDescription =
 'Semaglutid ve tirzepatid menopozal kilo değişimi için kanıtlanmış araçlar; ama tek başına çözüm değildir. Tip 2 diyabet ve obezite endikasyonunda güçlü kanıt; estetik kilo verme alanında belirgin sınır. Postmenopozal alt-grup verileri, sarkopeni ve kemik endişesi, HRT etkileşimi, uzun dönem belirsizlik — pazarlama vaadi ile klinik karar arasındaki dürüst rehber.';
-const faqItems = articleFaqs['/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo'] ?? [];
+const faqItems = articleFaqs['/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '3 Mayıs 2026',
-  pathname: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo',
+  pathname: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',
   articleSection: 'Bilimsel Pencere',
-  sectionPath: '/bilimsel-pencere',
+  sectionPath: '/bilimsel-pencere/',
   keywords: [
     'GLP-1 analogları',
     'semaglutid',
@@ -74,7 +74,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/bilimsel-pencere" />
+  <SiteNavbar currentPath="/bilimsel-pencere/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -97,7 +97,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo"
+          slug="/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/"
           title={articleTitle}
         />
       </div>
@@ -215,7 +215,7 @@ Endikasyon dışı (off-label) kullanım yaygınlaştı; ama bu tabloda
           kullanıma genişletir; bilimsel olarak bu sıçrama zayıftır.
         </p>
         <p>
-          <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
+          <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
             Aynı sayıdaki deneysel tedaviyi okuma kılavuzu
           </a>
           burada da geçerli: <em>aynı molekül farklı endikasyonda farklı kanıt
@@ -471,9 +471,9 @@ sayılmadığı gibi. Tedaviye başlarken bu yolu netleştirmek
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi',
-          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
-          '/zamansiz-yasam/d-vitamini-rehberi',
+          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
         ]}
       />
 

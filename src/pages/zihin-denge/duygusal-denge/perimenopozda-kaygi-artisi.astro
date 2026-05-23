@@ -18,8 +18,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zihin-denge/duygusal-denge']!;
+const pathname = '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zihin-denge/duygusal-denge/']!;
 const bylineImage = {
   src: '/images/library/editorial/perimenopozda-kaygi-artisi-byline.webp',
   alt: 'İstanbul penceresi önünde çay ve not defteri eşliğinde sakin konuşan iki yaşıt kadın; perimenopozda kaygı artışını yargısız paylaşma temasını taşıyan 4:5 editoryal görsel',
@@ -51,7 +51,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate,
   pathname,
   articleSection: 'Zihin & Denge',
-  sectionPath: '/zihin-denge',
+  sectionPath: '/zihin-denge/',
   image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
   keywords: [
     'perimenopoz',
@@ -75,7 +75,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zihin-denge" />
+  <SiteNavbar currentPath="/zihin-denge/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -256,9 +256,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
-          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
-          '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik',
+          '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
+          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
+          '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
         ]}
       />
 

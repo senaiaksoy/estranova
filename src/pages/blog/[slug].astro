@@ -46,7 +46,7 @@ const jsonLd = writerSlug
       description: post.data.description,
       writerSlug,
       publishedDate: post.data.date,
-      pathname: `/blog/${post.id}`,
+      pathname: `/blog/${post.id}/`,
       faqItems,
       siteUrl,
     })
@@ -68,12 +68,12 @@ const jsonLd = writerSlug
   ogType="article"
   jsonLd={jsonLd}
 >
-  <SiteNavbar currentPath="/blog" />
+  <SiteNavbar currentPath="/blog/" />
 
   <main id="main-content" class="pt-24">
     <SubmenuArticleBody>
       <a
-        href="/blog"
+        href="/blog/"
         class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary mb-10"
       >
         Yazılara dön

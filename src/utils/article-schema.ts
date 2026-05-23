@@ -13,9 +13,9 @@ export interface BuildArticleSchemaOptions {
   description: string;
   writerSlug: Writer['slug'];
   publishedDate: string; // "14 Nisan 2026" veya ISO
-  pathname: string; // örn. "/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz" (leading slash)
+  pathname: string; // örn. "/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz/" (leading slash)
   articleSection?: string; // breadcrumb + schema.articleSection ("Zihin & Denge")
-  sectionPath?: string; // örn. "/zihin-denge"
+  sectionPath?: string; // örn. "/zihin-denge/"
   image?: string; // absolute, OG image
   keywords?: string[];
   medicalReviewer?: string;
@@ -26,7 +26,7 @@ export interface BuildArticleSchemaOptions {
 
 function joinUrl(siteUrl: string, path: string): string {
   const base = siteUrl.replace(/\/+$/, '');
-  const p = path.startsWith('/') ? path : `/${path}`;
+  const p = path.startsWith('/') ? path : `/${path}/`;
   return `${base}${p}`;
 }
 
@@ -103,7 +103,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         '@type': 'Organization',
         name: writer.displayName,
         description: writer.publicBio,
-        url: joinUrl(siteUrl, '/editoryal-politika'),
+        url: joinUrl(siteUrl, '/editoryal-politika/'),
       }
     : writerSlug === 'senai-aksoy'
     ? { '@id': DR_AKSOY_PERSON_ID }
@@ -113,7 +113,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         jobTitle: writer.role,
         description: writer.publicBio,
         ...(writer.portrait ? { image: joinUrl(siteUrl, writer.portrait) } : {}),
-        url: joinUrl(siteUrl, '/yayin-kurulu'),
+        url: joinUrl(siteUrl, '/yayin-kurulu/'),
       };
 
   // Medical reviewer canonical Person @id — Dr. Aksoy bilim editörü/inceleyici

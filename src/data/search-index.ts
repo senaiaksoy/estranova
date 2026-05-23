@@ -31,55 +31,55 @@ const staticPages: SearchItem[] = [
   {
     title: 'Manifesto — Bu Masada Neden Varız',
     description: 'Estranova\'da yazan kadınlar neden burada yazıyor? Açılış sözleri.',
-    href: '/manifesto',
+    href: '/manifesto/',
     category: 'Sayfa',
   },
   {
     title: 'Hakkımızda',
     description: 'Estranova\'nın editöryel yaklaşımı, misyonu, değerleri.',
-    href: '/hakkimizda',
+    href: '/hakkimizda/',
     category: 'Sayfa',
   },
   {
     title: 'Yayın Kurulu',
     description: 'Editörler, yazarlar, tıbbi danışmanlar ve danışman ekip.',
-    href: '/yayin-kurulu',
+    href: '/yayin-kurulu/',
     category: 'Sayfa',
   },
   {
     title: 'Editöryal Politika',
     description: 'Estranova\'nın içerik üretim ilkeleri ve inceleme süreci.',
-    href: '/editoryal-politika',
+    href: '/editoryal-politika/',
     category: 'Sayfa',
   },
   {
     title: 'Yazarlar',
     description: 'Estranova\'da yazan editörler ve konuk yazarların bibliyografisi.',
-    href: '/authors',
+    href: '/authors/',
     category: 'Sayfa',
   },
   {
     title: 'Editöryal Kütüphane',
     description: 'Tüm makalelerin tarihe göre listelendiği editöryal arşiv.',
-    href: '/library',
+    href: '/library/',
     category: 'Sayfa',
   },
   {
     title: 'Semptom Rehberi',
     description: 'Sıcak basması, uyku, ruh hali, bellek ve diğer belirtilere giriş.',
-    href: '/symptoms',
+    href: '/symptoms/',
     category: 'Sayfa',
   },
   {
     title: 'İletişim',
     description: 'Estranova editöryel ekibiyle iletişim.',
-    href: '/iletisim',
+    href: '/iletisim/',
     category: 'Sayfa',
   },
   {
     title: 'Tıbbi Sorumluluk Reddi',
     description: 'Estranova içeriklerinin bilgi amaçlı olduğuna dair sorumluluk reddi.',
-    href: '/tibbi-sorumluluk',
+    href: '/tibbi-sorumluluk/',
     category: 'Sayfa',
   },
 ];
@@ -118,7 +118,7 @@ const issueEntries: SearchItem[] = issues
   .map((issue) => ({
     title: `${magazineConfig.name} · Sayı ${formatIssuePad(issue.number)} — ${issue.theme}`,
     description: `${issue.monthYear} sayısı: ${issue.lede}`,
-    href: `/sayi/${issue.slug}`,
+    href: `/sayi/${issue.slug}/`,
     category: 'Sayı' as const,
   }));
 
@@ -131,7 +131,7 @@ const writerEntries: SearchItem[] = activeWriters.map((w) => {
   return {
     title: displayName,
     description: w.signaturePhrase,
-    href: `/yazarlar/${w.slug}`,
+    href: `/yazarlar/${w.slug}/`,
     category: 'Yazar' as const,
   };
 });

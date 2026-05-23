@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi']!;
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/']!;
 
 const tocEntries = [
   { id: 'nedir', label: 'Vazomotor Belirtiler Aslında Ne?' },
@@ -36,15 +36,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi';
 const articleDescription =
   'Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi'] ?? [];
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '25 Nisan 2026',
-  pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi',
+  pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   keywords: ['sıcak basması', 'gece terlemesi', 'menopoz', 'perimenopoz', 'uyku', 'tetikleyiciler'],
   faqItems,
 
@@ -53,7 +53,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout title={`${articleTitle} - Estranova`} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -285,10 +285,10 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/hormonal-gecis/menopoz/menopoz-nedir',
-            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
-            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
           ]}
         />
 

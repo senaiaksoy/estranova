@@ -18,8 +18,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar']!;
+const pathname = '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/']!;
 
 const tocEntries = [
   { id: 'neden-yeniden-konusuluyor', label: 'Neden Yeniden Konuşuluyor?' },
@@ -49,7 +49,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '6 Mayıs 2026',
   pathname,
   articleSection: 'Bilimsel Pencere',
-  sectionPath: '/bilimsel-pencere',
+  sectionPath: '/bilimsel-pencere/',
   keywords: [
     'menopoz',
     'HRT',
@@ -78,7 +78,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/bilimsel-pencere" />
+  <SiteNavbar currentPath="/bilimsel-pencere/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -387,11 +387,11 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
-          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
-          '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski',
-          '/zamansiz-yasam/kilo-artisi-menopoz',
-          '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri',
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+          '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/',
+          '/zamansiz-yasam/kilo-artisi-menopoz/',
+          '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
         ]}
       />
 

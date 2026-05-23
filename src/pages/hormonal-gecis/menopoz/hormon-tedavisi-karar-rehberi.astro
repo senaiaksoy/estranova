@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi']!;
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/']!;
 
 const tocEntries = [
   { id: 'karar-konusma', label: 'Karar Değil, Konuşma' },
@@ -35,15 +35,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?';
 const articleDescription =
   'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve hekiminizle konuşurken sorabileceğiniz sorular.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi'] ?? [];
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '20 Nisan 2026',
-  pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+  pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis/menopoz',
+  sectionPath: '/hormonal-gecis/menopoz/',
   keywords: [
     'hormon tedavisi',
     'HRT',
@@ -66,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -255,9 +255,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
           ]}
       />
 

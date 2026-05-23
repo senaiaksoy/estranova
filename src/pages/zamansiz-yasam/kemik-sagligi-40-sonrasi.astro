@@ -33,8 +33,8 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber';
 const articleDescription = '40 yaş sonrası kemik sağlığını desteklemek için tarama, beslenme, hareket ve tıbbi seçenekleri anlatan kapsamlı rehber.';
-const pathname = '/zamansiz-yasam/kemik-sagligi-40-sonrasi';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam']!;
+const pathname = '/zamansiz-yasam/kemik-sagligi-40-sonrasi/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam/']!;
 const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -43,7 +43,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '1 Mart 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: ['kemik sağlığı', 'osteoporoz', 'menopoz', 'kalsiyum', 'direnç egzersizi', 'D vitamini'],
   faqItems,
 
@@ -57,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -231,12 +231,12 @@ const articleSchemas = buildArticleSchemas({
         <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/kilo-artisi-menopoz',
-            '/hormonal-gecis/40-sonrasi',
-            '/zamansiz-yasam/d-vitamini-rehberi',
-            '/zamansiz-yasam/vitaminler',
-            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
-            '/bilimsel-pencere/arastirma',
+            '/zamansiz-yasam/kilo-artisi-menopoz/',
+            '/hormonal-gecis/40-sonrasi/',
+            '/zamansiz-yasam/d-vitamini-rehberi/',
+            '/zamansiz-yasam/vitaminler/',
+            '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
+            '/bilimsel-pencere/arastirma/',
           ]}
         />
 

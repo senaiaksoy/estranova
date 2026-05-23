@@ -35,8 +35,8 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?';
 const articleDescription =
   'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo, aile öyküsü ve semptom notlarını hekime götürülebilecek sade bir kişisel referans dosyasına dönüştürme rehberi.';
-const pathname = '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik']!;
+const pathname = '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik/']!;
 const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -45,7 +45,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '25 Nisan 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   keywords: [
     'menopoza hazırlık',
     'koruyucu sağlık',
@@ -67,7 +67,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -293,9 +293,9 @@ Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağ�
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/hormonal-gecis/40-sonrasi/tarama-testleri',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
-            '/zamansiz-yasam/beslenme-yaslanma',
+            '/hormonal-gecis/40-sonrasi/tarama-testleri/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
+            '/zamansiz-yasam/beslenme-yaslanma/',
           ]}
         />
 

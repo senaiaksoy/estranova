@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/']!;
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'GSM — İsim Koymakla Başlar' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM';
 const articleDescription =
   'Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma, hassasiyet ve üriner şikâyet yaşıyor — bir tablonun adı var: genitoüriner menopoz sendromu (GSM). Lokal östrojen, yerel uygulama kanıt sınırı, günlük bakım ve doktora ne sorulmalı — sade bir editoryal rehber.';
-const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz'] ?? [];
+const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
-  pathname: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
+  pathname: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
   articleSection: 'Beden & Yakınlık',
-  sectionPath: '/beden-yakinlik',
+  sectionPath: '/beden-yakinlik/',
   keywords: ['vajinal kuruluk', 'GSM', 'genitoüriner menopoz sendromu', 'vulvovajinal atrofi', 'lokal östrojen', 'menopoz', 'cinsel sağlık', 'mahrem bölge'],
   faqItems,
 
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/beden-yakinlik" />
+  <SiteNavbar currentPath="/beden-yakinlik/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -84,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz"
+          slug="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/"
           title={articleTitle}
         />
       </div>
@@ -332,10 +332,10 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
-            '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
-            '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/',
+            '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
+            '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
           ]}
         />
 

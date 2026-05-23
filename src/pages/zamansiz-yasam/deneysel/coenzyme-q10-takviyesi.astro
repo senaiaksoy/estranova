@@ -22,8 +22,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi']
-  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel']!;
+  submenuHeroByRoute['/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/']
+  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 
 const tocEntries = [
   { id: 'nedir', label: 'CoQ10 Nedir?' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?';
 const articleDescription =
 'CoQ10 (ubiquinone) takviyesi anti-aging reklamlarının başrol oyuncularından biri; oysa kanıt tek bir hikaye değil. Statin yan etkisi, migren önleme ve kalp yetmezliği desteğinde gerçek klinik kanıt var; anti-aging ve menopozal "enerji" iddialarında kanıt çok daha sınırlı. Üç farklı yüzü ayrı ayrı, pazarlama dili yerine kanıt düzeyiyle.';
-const faqItems = articleFaqs['/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '3 Mayıs 2026',
-  pathname: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi',
+  pathname: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'coenzyme Q10',
     'CoQ10',
@@ -72,7 +72,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -95,7 +95,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi"
+          slug="/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/"
           title={articleTitle}
         />
       </div>
@@ -239,7 +239,7 @@ yolu pratik klinik tutum olmaya devam ediyor. <em>Bu uygulama
         </p>
         <p>
           Bu yazıyla aynı sayıdaki
-          <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
+          <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
             deneysel tedaviyi okuma kılavuzu
           </a>
           burada da geçerli: <em>aynı molekül farklı endikasyonda farklı kanıt
@@ -427,9 +427,9 @@ yolu pratik klinik tutum olmaya devam ediyor. <em>Bu uygulama
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
-          '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
-          '/zamansiz-yasam/d-vitamini-rehberi',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
         ]}
       />
 

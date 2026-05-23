@@ -75,7 +75,7 @@ export const dossiers: MonthlyDossier[] = [
           'Genel resim: hangi hormonal dalga uykunun hangi evresine dokunuyor, ve hangi değişimler "geçici", hangileri kalıcı bir düzen kuruyor.',
         writerSlug: 'berna-aksoy',
         status: 'published',
-        href: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
+        href: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
         readingMinutes: 8,
       },
       {
@@ -84,7 +84,7 @@ export const dossiers: MonthlyDossier[] = [
           'Konuşulması zor ama herkesin yaşadığı bir an: gece yarısı uyanma, çarşafı değiştirme, sessizce yeniden uyumayı deneme. Mahrem yan, jargonsuz.',
         writerSlug: 'senai-aksoy',
         status: 'published',
-        href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
+        href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
         readingMinutes: 6,
       },
       {
@@ -93,7 +93,7 @@ export const dossiers: MonthlyDossier[] = [
           'Sporcu beden okumasıyla akşam egzersizi, melatonin ve beden ısısı ilişkisi: performans baskısı değil, geceye geçiş ritüeli.',
         writerSlug: 'alara-baykent',
         status: 'published',
-        href: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
+        href: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
         readingMinutes: 7,
       },
       ],

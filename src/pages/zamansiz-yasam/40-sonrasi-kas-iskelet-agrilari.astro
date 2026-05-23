@@ -36,8 +36,8 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek';
 const articleDescription =
   '40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge, ağrı sinyali ve fizyoterapi desteği üzerinden anlatan sade rehber.';
-const articlePath = '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari';
-const hero = submenuHeroByRoute[articlePath] ?? submenuHeroByRoute['/zamansiz-yasam']!;
+const articlePath = '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/';
+const hero = submenuHeroByRoute[articlePath] ?? submenuHeroByRoute['/zamansiz-yasam/']!;
 const faqItems = articleFaqs[articlePath] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -46,7 +46,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '4 Mayıs 2026',
   pathname: articlePath,
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: ['40 sonrası hareket', 'bel ağrısı', 'diz ağrısı', 'kalça ağrısı', 'kas-iskelet sağlığı', 'fizyoterapi', 'denge egzersizi'],
   faqItems,
   siteUrl,
@@ -59,7 +59,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -274,11 +274,11 @@ Genel olarak yürüyüş, kas güçlendirme, eklem hareket açıklığı, denge 
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-          '/zamansiz-yasam/kilo-artisi-menopoz',
-          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
-          '/hormonal-gecis/40-sonrasi/tarama-testleri',
-          '/zamansiz-yasam/d-vitamini-rehberi',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+          '/zamansiz-yasam/kilo-artisi-menopoz/',
+          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
         ]}
       />
 

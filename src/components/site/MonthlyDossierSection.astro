@@ -22,7 +22,7 @@ const { dossier, sectionNumber = '03' } = Astro.props;
 const curator = writers.find((w) => w.slug === dossier.curatorSlug);
 const totalMinutes = getTotalReadingMinutes(dossier);
 const articleCount = dossier.articles.length;
-const dossierHref = `/dosya/${dossier.slug}`;
+const dossierHref = `/dosya/${dossier.slug}/`;
 
 // Yan yazıların yazar isimlerini çöz
 const articlesWithAuthors = dossier.articles.map((a) => {
@@ -180,7 +180,7 @@ const articlesWithAuthors = dossier.articles.map((a) => {
 
     <div class="mt-8 flex justify-end">
       <a
-        href="/dosya"
+        href="/dosya/"
         class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
       >
         Tüm dosya arşivi →

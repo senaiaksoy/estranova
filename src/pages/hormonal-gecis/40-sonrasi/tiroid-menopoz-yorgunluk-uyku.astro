@@ -21,8 +21,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku']
-  ?? submenuHeroByRoute['/hormonal-gecis/40-sonrasi']!;
+  submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/']
+  ?? submenuHeroByRoute['/hormonal-gecis/40-sonrasi/']!;
 
 const tocEntries = [
   { id: 'uclu-sikayet', label: 'Üçlü Şikayetin Üç Ekseni' },
@@ -38,7 +38,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni';
 const articleDescription =
   'Yorgunluk, kilo artışı ve uyku bozukluğu üçlüsü 40+ kadında tiroid disfonksiyonu, hormonal geçiş ve metabolik değişimin üç ekseninde okunur. Hashimoto ve perimenopozun benzer belirtileri nasıl ayrılır, TSH ve fT4 hangi soruyu cevaplar, hangisini cevaplamaz — bir endokrinolog gözüyle yanlış anlaşılan tabloyu açan klinik ayırma rehberi.';
-const pathname = '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku';
+const pathname = '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/';
 const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -47,7 +47,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '8 Mayıs 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   keywords: [
     'tiroid menopoz',
     'Hashimoto perimenopoz',
@@ -71,7 +71,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -95,7 +95,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku"
+          slug="/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/"
           title={articleTitle}
         />
       </div>
@@ -478,9 +478,9 @@ const articleSchemas = buildArticleSchemas({
 
       <RelatedReadings
         paths={[
-          '/hormonal-gecis/40-sonrasi/tarama-testleri',
-          '/hormonal-gecis/perimenopoz',
-          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
+          '/hormonal-gecis/perimenopoz/',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
         ]}
       />
 

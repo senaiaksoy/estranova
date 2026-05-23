@@ -22,8 +22,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim']
-  ?? submenuHeroByRoute['/zamansiz-yasam/non-invaziv']!;
+  submenuHeroByRoute['/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/']
+  ?? submenuHeroByRoute['/zamansiz-yasam/non-invaziv/']!;
 
 const tocEntries = [
   { id: 'mekanizma', label: 'Mekanizma Sözlüğü' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'HIFU, Radyofrekans ve Mikroakım — Non-İnvaziv Cihazların Kanıt Sınırı';
 const articleDescription =
 'HIFU, radyofrekans ve mikroakım cihazları "ameliyatsız yüz germe" vaadiyle yoğun pazarlanıyor; oysa kanıt cerrahi sonuçtan belirgin biçimde uzakta. HIFU yüz germede orta kanıt, RF cilt sıkılaştırma ve pelvik uygulamalar zayıf-orta kanıt, mikroakım ve LED ev cihazları sınırlı. Postmenopozal cilt zemini, beklenti yönetimi ve klinik karar için dürüst rehber.';
-const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '3 Mayıs 2026',
-  pathname: '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim',
+  pathname: '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'HIFU',
     'radyofrekans',
@@ -72,7 +72,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -95,7 +95,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim"
+          slug="/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/"
           title={articleTitle}
         />
       </div>
@@ -138,7 +138,7 @@ rahatsız olduğunu"</em> ekledi. His meşru, bilimsel tablo ayrı: bu
           uygulamalar için farklı cihaz tipleri var — aynı isim altında çok
           farklı endikasyonlar. Bu yazıda yüz/cilt eksenine odaklanıyoruz; pelvik
           RF için
-          <a href="/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
+          <a href="/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
 idrar kaçırma yazısındaki yaklaşım
           </a>
           ayrıca okunabilir.
@@ -220,7 +220,7 @@ içinde değerlendirilmeli, standart önerilemez"</em> uyarısında
           bu his değerli ama bilimsel sonuç değil. Bu yüzden <em>"hastalarımın
           hepsi memnun"</em> tek başına klinik kanıt sayılmaz. Bu yazıyla aynı
           eksendeki
-          <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
+          <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
             deneysel tedaviyi okuma kılavuzu
           </a>
           burada da geçerli: <em>aynı cihaz farklı endikasyon ve farklı protokolde
@@ -423,9 +423,9 @@ deriz — bu duygu meşru ve insanca. His meşru, bilimsel tablo ayrı:
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
-          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi',
-          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
+          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
         ]}
       />
 

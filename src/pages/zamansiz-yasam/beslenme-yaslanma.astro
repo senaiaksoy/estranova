@@ -20,7 +20,7 @@ import { resolveSiteUrl } from '../../utils/seo';
 
 // CLAUDE.md §6 — makale üst hero görseli daima parent hub'dan gelir.
 // memory: feedback_makale_hero_degismez_2026_05_10
-const hero = submenuHeroByRoute['/zamansiz-yasam']!;
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const tocEntries = [
   { id: 'neden-degisir', label: 'Neden Değişir' },
@@ -39,15 +39,15 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi';
 const articleDescription = 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekim veya diyetisyenle netleştirmeyi hatırlatan rehber.';
-const faqItems = articleFaqs['/zamansiz-yasam/beslenme-yaslanma'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/beslenme-yaslanma/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '9 Mart 2026',
-  pathname: '/zamansiz-yasam/beslenme-yaslanma',
+  pathname: '/zamansiz-yasam/beslenme-yaslanma/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'anti-inflamatuar'],
   faqItems,
 
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -278,11 +278,11 @@ sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) yolu şe
         <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/kilo-artisi-menopoz',
-            '/zamansiz-yasam/d-vitamini-rehberi',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+            '/zamansiz-yasam/kilo-artisi-menopoz/',
+            '/zamansiz-yasam/d-vitamini-rehberi/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
           ]}
         />
 

@@ -18,8 +18,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zihin-denge/bilissel-saglik']!;
+const pathname = '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zihin-denge/bilissel-saglik/']!;
 const articleTitle = 'Perimenopozda Zihinsel Bulanıklık: Unutkanlık Hissi Günlük Hayatta Nasıl Okunur?';
 const articleDescription =
   'Perimenopoz döneminde kelime bulmakta zorlanma, unutkanlık hissi, odak dalgalanması ve zihinsel yorgunluk neden olur? Bu rehber, gündelik hayatta fark edilen bilişsel değişimleri panik yaratmadan anlamaya ve ne zaman daha dikkatli değerlendirme gerektiğini ayırt etmeye yardımcı olur.';
@@ -46,7 +46,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate,
   pathname,
   articleSection: 'Zihin & Denge',
-  sectionPath: '/zihin-denge',
+  sectionPath: '/zihin-denge/',
   image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
   keywords: [
     'perimenopoz',
@@ -70,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zihin-denge" />
+  <SiteNavbar currentPath="/zihin-denge/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -225,9 +225,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-          '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz',
-          '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+          '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
+          '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
         ]}
       />
       <ArticleEditorNote>

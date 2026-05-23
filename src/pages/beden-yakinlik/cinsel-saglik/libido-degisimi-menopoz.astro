@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const route = '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz';
+const route = '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/';
 const hero = submenuHeroByRoute[route] ?? {
   src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
   alt: "Estranova editöryal görsel placeholder — submenu-heroes.ts altına özel görsel ekleyin.",
@@ -48,7 +48,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '27 Nisan 2026',
   pathname: route,
   articleSection: 'Beden & Yakınlık',
-  sectionPath: '/beden-yakinlik',
+  sectionPath: '/beden-yakinlik/',
   keywords: ['libido', 'cinsel istek', 'menopoz', 'GSM', 'lokal östrojen', 'testosteron', 'cinsel sağlık', '40+ kadın', 'mahrem sağlık'],
   faqItems,
   siteUrl,
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/beden-yakinlik" />
+  <SiteNavbar currentPath="/beden-yakinlik/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -328,10 +328,10 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
-          '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
-          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
-          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
+          '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
+          '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
+          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
         ]}
       />
 

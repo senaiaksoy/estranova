@@ -52,7 +52,7 @@ const displayWithTitle = (w: Writer) =>
   title="Yazarlar - Estranova"
   description="Estranova yazar kadrosu: bilim yazarları, yaşıt yazarlar ve kurumsal editöryal imza."
 >
-  <SiteNavbar currentPath="/yazarlar" />
+  <SiteNavbar currentPath="/yazarlar/" />
 
   <main id="main-content" class="text-ink">
     <section class="relative overflow-hidden border-b border-burgundy/10 bg-gradient-to-br from-cream-warm via-cream-soft to-white px-6 py-16 md:py-20">
@@ -92,7 +92,7 @@ const displayWithTitle = (w: Writer) =>
               {group.writers.map((w) => (
                 <li>
                   <a
-                    href={`/yazarlar/${w.slug}`}
+                    href={`/yazarlar/${w.slug}/`}
                     class="group relative flex h-full w-full flex-col overflow-hidden rounded-[30px] border border-burgundy/12 bg-white p-5 shadow-[0_24px_72px_-58px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-[0_32px_94px_-60px_rgba(44,22,28,0.38)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
                     <span class="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></span>
@@ -152,7 +152,7 @@ const displayWithTitle = (w: Writer) =>
             </p>
           </header>
           <a
-            href={`/yazarlar/${institutionalByline.slug}`}
+            href={`/yazarlar/${institutionalByline.slug}/`}
             class="inline-flex items-center gap-2 rounded-full border border-burgundy/30 bg-white px-5 py-3 text-sm font-semibold text-burgundy transition hover:border-burgundy hover:bg-cream-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40 focus-visible:ring-offset-2"
           >
             Estranova Editörlerinden yazıların tamamı
@@ -172,7 +172,7 @@ const displayWithTitle = (w: Writer) =>
           Estranova’nın bilimsel inceleme katmanı, tıbbi danışmanlar listesi ve editöryal süreç notlarının tamamı için yayın kurulu sayfasına bakabilirsiniz.
         </p>
         <a
-          href="/yayin-kurulu"
+          href="/yayin-kurulu/"
           class="inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
         >
           Yayın kurulunun tamamını oku →

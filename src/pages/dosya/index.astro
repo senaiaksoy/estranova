@@ -11,14 +11,14 @@ const archived = dossiers
 
 const currentCurator = writers.find((w) => w.slug === currentDossier.curatorSlug);
 const currentTotalMinutes = getTotalReadingMinutes(currentDossier);
-const currentHref = `/dosya/${currentDossier.slug}`;
+const currentHref = `/dosya/${currentDossier.slug}/`;
 ---
 
 <SiteLayout
   title="Dosya Arşivi — Estranova"
   description="Estranova'nın aylık tematik dosyaları: bir küratörün yan yana getirdiği yazı kümeleri."
 >
-  <SiteNavbar currentPath="/dosya" />
+  <SiteNavbar currentPath="/dosya/" />
 
   <main id="main-content" class="text-ink">
     {/* Hero */}
@@ -146,7 +146,7 @@ const currentHref = `/dosya/${currentDossier.slug}`;
                 return (
                   <li>
                     <a
-                      href={`/dosya/${dossier.slug}`}
+                      href={`/dosya/${dossier.slug}/`}
                       class="group relative flex h-full flex-col overflow-hidden rounded-[30px] border border-burgundy/12 bg-white shadow-xl shadow-burgundy/6 ring-1 ring-white/70 transition hover:-translate-y-1 hover:border-gold/35 hover:shadow-2xl hover:shadow-burgundy/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                     >
                       <span class="pointer-events-none absolute inset-x-5 top-0 z-10 h-px bg-gold/55"></span>

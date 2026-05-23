@@ -22,8 +22,8 @@ import { resolveSiteUrl } from '../../../utils/seo';
 import { articleFaqs } from '../../../data/article-faqs';
 
 const hero =
-  submenuHeroByRoute['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz']
-  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel']!;
+  submenuHeroByRoute['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/']
+  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 
 const tocEntries = [
   { id: 'peptid-nedir', label: 'Peptid Nedir?' },
@@ -37,7 +37,7 @@ const tocEntries = [
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
-const faqItems = articleFaqs['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/'] ?? [];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Peptidler Menopozda Gerçekten Ne Vaat Ediyor?';
@@ -48,9 +48,9 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '6 Mayıs 2026',
-  pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz',
+  pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
   articleSection: 'Zamansız Yaşam · Deneysel',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'peptid',
     'menopoz',
@@ -76,7 +76,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -100,7 +100,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz"
+          slug="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/"
           title={articleTitle}
         />
       </div>
@@ -402,9 +402,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo',
-          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
-          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi',
+          '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
         ]}
       />
 

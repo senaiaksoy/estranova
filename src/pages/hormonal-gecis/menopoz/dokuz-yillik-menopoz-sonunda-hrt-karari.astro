@@ -18,8 +18,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari';
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz']!;
+const pathname = '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/';
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
 
 const articleTitle = 'Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı';
 const articleDescription =
@@ -44,7 +44,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '7 Mayıs 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   keywords: [
     'menopoz',
     'HRT',
@@ -67,7 +67,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -239,9 +239,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-10"
         paths={[
-          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
-          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
-          '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+          '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
         ]}
       />
 

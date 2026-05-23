@@ -18,7 +18,7 @@ interface Props {
 }
 
 const { writer } = Astro.props;
-const currentPath = `/yazarlar/${writer.slug}`;
+const currentPath = `/yazarlar/${writer.slug}/`;
 
 const displayWithTitle =
   writer.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : writer.displayName;

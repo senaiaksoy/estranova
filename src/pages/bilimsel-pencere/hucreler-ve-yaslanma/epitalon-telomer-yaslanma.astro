@@ -20,7 +20,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma']!;
+const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/']!;
 
 const tocEntries = [
   { id: 'telomer-temel', label: 'Telomerler ve Hücresel Yaşlanma — Kromozom Uçlarındaki Sayaç' },
@@ -37,15 +37,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar';
 const articleDescription =
   "Epitalon, pineal bez ekstraktından elde edilen küçük bir peptid; sağlıklı hücrelerde telomeraz aktivitesini destekleyebilirken kanser hücrelerinde farklı bir telomer onarım yolunu (ALT) tetikleyebileceği gösterilmiş. Bu yazı telomer biyolojisini sade açıyor; Epitalon'un sağlıklı hücre ile kanser hücresinde neden farklı çalıştığını anlatıyor; kanıt düzeyini dürüstçe yorumluyor; ve klinik karşılığı için pratik sınırları çiziyor — pazarlama değil, yapılandırılmış bilgi.";
-const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma'] ?? [];
+const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '8 Mayıs 2026',
-  pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma',
+  pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',
   articleSection: 'Bilimsel Pencere',
-  sectionPath: '/bilimsel-pencere',
+  sectionPath: '/bilimsel-pencere/',
   keywords: ['Epitalon', 'epithalon', 'telomer', 'telomeraz', 'hTERT', 'ALT', 'pineal bez', 'hücresel yaşlanma', 'anti-aging', 'menopoz'],
   faqItems,
   siteUrl,
@@ -58,7 +58,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/bilimsel-pencere" />
+  <SiteNavbar currentPath="/bilimsel-pencere/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -81,7 +81,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma"
+          slug="/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/"
           title={articleTitle}
         />
       </div>
@@ -98,7 +98,7 @@ const articleSchemas = buildArticleSchemas({
           açıyor, Epitalon'un iki yüzünü dürüstçe ele alıyor ve <em>"laboratuvardan klinik
           karara"</em> uzanan yolun hangi noktasında olduğumuzu çiziyor. Genel hücresel
           yaşlanma yorumu için
-          <a href="/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
+          <a href="/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
           NAD+ ve hücresel yaşlanma yazısı</a> tamamlayıcı okuma olabilir.
         </p>
       </ArticleSummary>
@@ -386,11 +386,11 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
-            '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
-            '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
-            '/zamansiz-yasam/d-vitamini-rehberi',
-            '/library',
+            '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
+            '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
+            '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+            '/zamansiz-yasam/d-vitamini-rehberi/',
+            '/library/',
           ]}
         />
 

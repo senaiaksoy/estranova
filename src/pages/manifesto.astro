@@ -10,14 +10,14 @@ import Asterism from '../components/site/Asterism.astro';
 import ChapterCompass from '../components/site/ChapterCompass.astro';
 import { submenuHeroByRoute } from '../data/submenu-heroes';
 
-const hero = submenuHeroByRoute['/manifesto']!;
+const hero = submenuHeroByRoute['/manifesto/']!;
 ---
 
 <SiteLayout
   title="Bu Masada Neden Varız — Estranova Manifestosu"
   description="Estranova'da yazan kadınlar; ün, etki veya marka için değil, deneyim aktarmak için yazıyor. Bu sayfa neyi seçtiğimizi, neyi seçmediğimizi anlatır."
 >
-  <SiteNavbar currentPath="/manifesto" />
+  <SiteNavbar currentPath="/manifesto/" />
 
   <main id="main-content" class="text-ink">
     <ChapterMasthead variant="section" chapter="Manifesto" />
@@ -153,7 +153,7 @@ const hero = submenuHeroByRoute['/manifesto']!;
           başına bir değer.
         </p>
         <a
-          href="/yayin-kurulu"
+          href="/yayin-kurulu/"
           class="inline-flex items-center gap-2 font-serif text-xl italic text-burgundy underline decoration-gold/50 decoration-2 underline-offset-8 hover:decoration-burgundy"
         >
           Bu masadakiler
@@ -163,7 +163,7 @@ const hero = submenuHeroByRoute['/manifesto']!;
     </SubmenuSection>
 
     <ChapterCompass
-      nextHref="/yayin-kurulu"
+      nextHref="/yayin-kurulu/"
       nextChapter="Yayın Kurulu"
       nextParent="Estranova"
       disclaimer="Bu sayfa Estranova'nın editöryel duruşunu açıklar. Sağlık konularında bireysel tıbbi değerlendirme her zaman hekimle yapılır."

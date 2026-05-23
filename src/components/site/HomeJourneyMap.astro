@@ -22,7 +22,7 @@ const hasItems = items.length > 0;
 const featured = hasItems ? items.find((item) => item.featured) ?? items[0] : undefined;
 const secondaryItems = featured ? items.filter((item) => item.href !== featured.href) : [];
 const featuredImage =
-  featured ? submenuHeroByRoute[featured.imageKey] ?? submenuHeroByRoute['/hormonal-gecis'] : undefined;
+  featured ? submenuHeroByRoute[featured.imageKey] ?? submenuHeroByRoute['/hormonal-gecis/'] : undefined;
 ---
 
 {hasItems && featured && featuredImage && (
@@ -101,7 +101,7 @@ const featuredImage =
           <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy/72">Diğer geçiş rotaları</p>
         </div>
         {secondaryItems.slice(0, 3).map((item) => {
-          const image = submenuHeroByRoute[item.imageKey] ?? submenuHeroByRoute['/hormonal-gecis'];
+          const image = submenuHeroByRoute[item.imageKey] ?? submenuHeroByRoute['/hormonal-gecis/'];
 
           return (
             <a

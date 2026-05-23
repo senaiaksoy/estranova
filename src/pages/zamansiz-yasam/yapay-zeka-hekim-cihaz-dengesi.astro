@@ -17,8 +17,8 @@ import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../utils/article-schema';
 import { resolveSiteUrl } from '../../utils/seo';
 
-const pathname = '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi';
-const hero = submenuHeroByRoute['/zamansiz-yasam']!;
+const pathname = '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const articleTitle = 'Yapay Zekâya Sorduğum Bir Soru, Hekime Yazdığım Bir Not — Sağlık Bilgisinin Üçlü Dengesi';
 const articleDescription =
@@ -64,7 +64,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '29 Nisan 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'yapay zekâ',
     'dijital sağlık',
@@ -84,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -211,9 +211,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-10"
         paths={[
-          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
-          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-          '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+          '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',
         ]}
       />
 

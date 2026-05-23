@@ -22,8 +22,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar']
-  ?? submenuHeroByRoute['/zamansiz-yasam/vitaminler']!;
+  submenuHeroByRoute['/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/']
+  ?? submenuHeroByRoute['/zamansiz-yasam/vitaminler/']!;
 
 const tocEntries = [
   { id: 'neden-bu-kadar-konusuluyor', label: 'Neden Bu Kadar Konuşuluyor?' },
@@ -42,15 +42,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Magnezyum Menopozda Gerçekten Ne İşe Yarar?';
 const articleDescription =
   'Uyku, kas krampları, kabızlık, stres ve çarpıntı gibi yakınmalarda magnezyum sık öneriliyor; ama bütün etkiler aynı güçte kanıt taşımıyor. Bu rehber, menopoz döneminde magnezyumun ne zaman anlamlı olabileceğini, hangi vaatlerin abartıldığını ve form seçimi konuşulurken neyin gerçekten önemli olduğunu ayırır.';
-const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '7 Mayıs 2026',
-  pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar',
+  pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
   articleSection: 'Zamansız Yaşam · Vitaminler',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'magnezyum',
     'menopoz',
@@ -74,7 +74,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -98,7 +98,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar"
+          slug="/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/"
           title={articleTitle}
         />
       </div>
@@ -324,9 +324,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/d-vitamini-rehberi',
-          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
         ]}
       />
 

@@ -18,8 +18,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/hormonal-gecis/menopoz/hrt-ilk-alti-ay';
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz']!;
+const pathname = '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/';
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
 
 const articleTitle = 'HRT — İlk Altı Ayın Notları';
 const articleDescription =
@@ -45,7 +45,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '27 Nisan 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   keywords: [
     'HRT',
     'hormon replasman tedavisi',
@@ -68,7 +68,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -319,9 +319,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-10"
         paths={[
-          '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari',
-          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
-          '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari',
+          '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+          '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',
         ]}
       />
 

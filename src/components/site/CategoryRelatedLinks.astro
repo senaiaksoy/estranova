@@ -11,7 +11,7 @@ interface Category {
 }
 
 interface Props {
-  /** Mevcut kategori path'i — listeden hariç tutulur. Örn. '/hormonal-gecis' */
+  /** Mevcut kategori path'i — listeden hariç tutulur. Örn. '/hormonal-gecis/' */
   exclude: string;
   class?: string;
 }
@@ -21,27 +21,27 @@ const { exclude, class: className } = Astro.props;
 const allCategories: Category[] = [
   {
     name: 'Hormonal Geçiş',
-    href: '/hormonal-gecis',
+    href: '/hormonal-gecis/',
     description: 'Perimenopozdan menopoza geçiş sürecinin haritası.',
   },
   {
     name: 'Zamansız Yaşam',
-    href: '/zamansiz-yasam',
+    href: '/zamansiz-yasam/',
     description: 'Vitaminler, deneysel ve ameliyatsız yaklaşımlar.',
   },
   {
     name: 'Beden & Yakınlık',
-    href: '/beden-yakinlik',
+    href: '/beden-yakinlik/',
     description: 'Bedensel değişimler, cinsel sağlık ve yakınlık.',
   },
   {
     name: 'Zihin & Denge',
-    href: '/zihin-denge',
+    href: '/zihin-denge/',
     description: 'Uyku, ruh hali, hafıza ve stres yönetimi.',
   },
   {
     name: 'Bilimsel Pencere',
-    href: '/bilimsel-pencere',
+    href: '/bilimsel-pencere/',
     description: 'Uzman görüşleri ve araştırma özetleri.',
   },
 ];

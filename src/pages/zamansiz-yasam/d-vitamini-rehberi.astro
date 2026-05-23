@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../utils/article-schema';
 import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
-const hero = submenuHeroByRoute['/zamansiz-yasam/d-vitamini-rehberi']!;
+const hero = submenuHeroByRoute['/zamansiz-yasam/d-vitamini-rehberi/']!;
 
 const tocEntries = [
   { id: 'vitamin-mi-hormon-mu', label: 'D Vitamini — Vitamin mi Hormon mu?' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar';
 const articleDescription =
   'D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel. Vitamin mi hormon mu? Kan değeri yorumu, Türkiye\'de niye bu kadar yaygın, postmenopozal kadında özel önemi, tarama ve dozaj yaklaşımı, toksisite ve doktora sormak gereken sorular — pazarlama değil, klinik bakış.';
-const faqItems = articleFaqs['/zamansiz-yasam/d-vitamini-rehberi'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/d-vitamini-rehberi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
-  pathname: '/zamansiz-yasam/d-vitamini-rehberi',
+  pathname: '/zamansiz-yasam/d-vitamini-rehberi/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: ['D vitamini', '25-OH-D', 'menopoz', 'kemik sağlığı', 'osteoporoz', 'güneş', 'takviye', 'tarama', 'kalsiyum', 'K2'],
   faqItems,
 
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -84,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/d-vitamini-rehberi"
+          slug="/zamansiz-yasam/d-vitamini-rehberi/"
           title={articleTitle}
         />
       </div>
@@ -368,11 +368,11 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/zamansiz-yasam/vitaminler',
-            '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
-            '/library',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/zamansiz-yasam/vitaminler/',
+            '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
+            '/library/',
           ]}
         />
 

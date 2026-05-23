@@ -4,7 +4,7 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
-  '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari': [
+  '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/': [
     {
       question: 'Estetik diş kararı için ideal bir yaş var mı?',
       answer:
@@ -26,7 +26,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'En sade kontrol şu: hekim sizinle konuşurken <em>"ben şunu yaparım"</em> mı diyor, yoksa <em>"sizin yüzünüze ne yakışır"</em> mı diye soruyor — bu fark her şeyi söyler. Geri döndürülemez adımları (mine aşındırma, çoklu kron, agresif beyazlatma) ilk görüşmede önerme aceleciliği; bence sürdürülebilir bir yaklaşımın işareti değil. Müdahale yapmamayı veya daha küçük bir müdahaleyi de bir seçenek olarak masaya koyan hekim — uzun vadede daha güvenilir bir adres oluyor.',
     },
   ],
-  '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku': [
+  '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/': [
     {
       question: 'TSH normal ama yorgunum, başka ne bakılmalı?',
       answer:
@@ -53,7 +53,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Genel olarak evet, ancak levotiroksinin aç karna ve diğer ilaçlardan en az 30-60 dakika önce alınması önerilir; kalsiyum, demir gibi mineraller ve bazı yiyecekler emilimi azaltır. HRT oral formunda sabah levotiroksinden ayrı bir saatte alınması yeterlidir. Spesifik ilaç etkileşimi planını eczacı ve hekiminizle birlikte yapmanız en güvenli yoldur.',
     },
   ],
-  '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale': [
+  '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/': [
     {
       question: 'Dizimde ağrı varken yürüyüş yapabilir miyim?',
       answer:
@@ -75,7 +75,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Genellikle 8-12 hafta. Bu sürede ölçülebilir iyileşme yoksa müdahale basamakları yeniden değerlendirilir.',
     },
   ],
-  '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge': [
+  '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/': [
     {
       question: 'Kasık ağrısı yaşıyorsam önce jinekoloji mi yoksa fizyoterapi mi düşünmeliyim?',
       answer:
@@ -97,7 +97,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Tam hareketsizlik çoğu zaman çözüm olmaz; ama ağrıyı artıran yüklenmeyi zorlamak da doğru değildir. Bedeni dinleyerek ilerlemek, ağrıyı belirgin artırmayan kısa hareket araları ve rahatlatan pozisyonlarla geçici bir denge kurmak anlamına gelir.',
     },
   ],
-  '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu': [
+  '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/': [
     {
       question: 'Erken mi, geç mi kalıyorum?',
       answer:
@@ -124,7 +124,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Tek bir soru: "Bu kararı kim soruyor — ben mi, yoksa duyduğum cümleler mi?" Cevap "ben" ise, hekiminizle yapılacak görüşmenin zemini sağlam. Cevap belirsizse, kararı bir süre daha taşımak ve yüzünüzle daha uzun bir konuşma yapmak çoğu zaman daha doğru oluyor.',
     },
   ],
-  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay': [
+  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/': [
     {
       question: 'HRT\'nin etkisi ne kadar sürede başlar?',
       answer:
@@ -151,7 +151,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Eşin, kızın veya kardeşin sessiz bir endişesi normaldir; çoğu zaman bilgisizlikten değil, sevgiden gelir. Erken aşamada paylaşılabilecek üç şey var: kararın hekimle birlikte alındığı, takvimin nasıl kurulduğu (üç ay sonra muhasebe), ve hangi belirtilerin "hemen ara" sinyali olduğu. Süreç zaman ilerledikçe çoğu zaman onların ölçümleri — "daha az yorgunsun", "daha az gergin görünüyorsun" gibi — yazılı bir rapordan daha güvenilir bir geri bildirim kaynağı olur.',
     },
   ],
-  '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari': [
+  '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/': [
     {
       question: 'Dokuz yıl sonra HRT başlamak otomatik olarak geç kalınmış bir karar mı sayılır?',
       answer:
@@ -173,7 +173,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Hayır. Kişisel anlatılar yalnızca bir deneyimin nasıl yaşandığını görünür kılar. Tedavi kararı ise her zaman kişisel belirtiler, risk-fayda dengesi ve hekim değerlendirmesiyle ayrı ayrı verilir.',
     },
   ],
-  '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar': [
+  '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/': [
     {
       question: 'Magnezyum menopozda herkese gerekli bir takviye midir?',
       answer:
@@ -195,7 +195,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Her zaman değil. Özellikle böbrek hastalığı olanlarda, bazı ilaçları kullananlarda ya da yüksek dozları uzun süre alanlarda daha dikkatli olunmalıdır. Takviyenin sıradan görünmesi, herkes için risksiz olduğu anlamına gelmez.',
     },
   ],
-  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari': [
+  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/': [
     {
       question: "HRT'nin en belirgin faydası hangisidir?",
       answer:
@@ -227,7 +227,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'HRT’yi kilo verdiren bir tedavi gibi düşünmek doğru değildir. Ancak menopozla birlikte yağın karın çevresine kayması ve vücut kompozisyonundaki değişim açısından bazı kadınlarda daha nötr bir zemin sağlayabileceğini düşündüren veriler vardır; bu etki genellikle büyük tartı değişiminden çok bel çevresi, uyku, hareket kapasitesi ve genel metabolik denge üzerinden okunur.',
     },
   ],
-  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri': [
+  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': [
     {
       question: 'Menopozda cilt değişimi yalnızca yaşlanma mı?',
       answer:
@@ -254,7 +254,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Yeni veya hızla büyüyen leke, şekli değişen ben, kanayan ya da kabuklanan alan, geçmeyen yara, yoğun kaşıntı, belirgin yanma, ani saç dökülmesi veya tırnak değişikliği varsa bekletmemek gerekir. Bu belirtiler kozmetik bakım konusu gibi değil, dermatolojik değerlendirme gerektiren işaretler olarak ele alınmalıdır.',
     },
   ],
-  '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi': [
+  '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': [
     {
       question: 'Perimenopozdaki kaygı artışı anksiyete bozukluğu anlamına gelir mi?',
       answer:
@@ -276,7 +276,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Kaygı işinizi, ilişkinizi, uykunuzu, dışarı çıkma rahatlığınızı veya güvenlik hissinizi belirgin etkiliyorsa ertelememek gerekir. Kendinize zarar verme düşüncesi, yoğun umutsuzluk veya panik atak benzeri ataklar varsa destek aramak acil önem taşır.',
     },
   ],
-  '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi': [
+  '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/': [
     {
       question: 'Menopoza yaklaşırken herkese geniş hormon paneli gerekir mi?',
       answer:
@@ -293,7 +293,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Adet tarihi değişimleri, sıcak basması sıklığı, uyku bölünmeleri, kullanılan ilaç ve takviyeler, aile öyküsü ve son tarama tarihleri görüşmeyi çok kolaylaştırır. Bu küçük notlar çoğu zaman ekstra tahlilden daha yol gösterici olur.',
     },
   ],
-  '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik': [
+  '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/': [
     {
       question: 'Perimenopozdaki zihinsel bulanıklık kalıcı bir hafıza kaybı mıdır?',
       answer:
@@ -310,7 +310,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Yakınma kısa süreli dalgalanmanın ötesine geçip iş, güvenlik ya da günlük yaşamı etkiliyorsa daha dikkatli değerlendirme gerekir. Özellikle tek taraflı güçsüzlük, ani yönelim bozukluğu, şiddetli baş ağrısı veya hızla ilerleyen unutkanlık bekletilmemelidir.',
     },
   ],
-  '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler': [
+  '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/': [
     {
       question: 'Perimenopoz kaç yaşında başlar?',
       answer:
@@ -337,7 +337,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Hayır, şart değildir; ama bazı kadınlarda belirgin vazomotor belirtiler ve yaşam kalitesi etkilenmesi varsa seçeneklerden biri olabilir. Karar yaş, sağlık öyküsü, riskler, beklentiler ve kontrendikasyonlar birlikte değerlendirilerek hekimle verilir. Bu yazı karar rehberi değil, ilk işaretleri okuma rehberidir.',
     },
   ],
-  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz': [
+  '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/': [
     {
       question: 'Menopozda libido azalması mutlaka hormonal bir sorun mudur?',
       answer:
@@ -354,7 +354,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Yakınma ilişkiyi, özsaygıyı ya da bedenle kurduğunuz huzuru belirgin biçimde etkiliyorsa konuşmak iyi olur. Özellikle ağrı, belirgin kuruluk veya yeni başlamış isteksizlik başka başlıklarla birlikte değerlendirilmelidir.',
     },
   ],
-  '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme': [
+  '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': [
     {
       question: 'HRT başladıktan sonra ilk haftalarda hangi yakınmalar geçici sayılabilir?',
       answer:
@@ -371,7 +371,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Hayır. İzlem aynı zamanda belirtilerin gerçekten düzelip düzelmediğini, dozun uygun olup olmadığını ve kişisel risk dengesinin değişip değişmediğini anlamak için yapılır. Yani yalnızca sorun aramak değil, tedaviyi rafine etmektir.',
     },
   ],
-  '/zamansiz-yasam/deneysel/nad-plus-takviyesi': [
+  '/zamansiz-yasam/deneysel/nad-plus-takviyesi/': [
     {
       question: 'NAD+ takviyeleri menopozda enerji için kanıtlı bir çözüm müdür?',
       answer:
@@ -388,7 +388,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'En doğru soru genellikle “Hangi somut hedef için düşünüyorum ve bunun için daha kanıtlı bir seçenek var mı?” olur. Hedef netleşmeden takviyeye yönelmek çoğu zaman beklentiyi üründen büyük yapar.',
     },
   ],
-  '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz': [
+  '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/': [
     {
       question: 'Peptid denince neden tek bir ürün grubundan söz edemiyoruz?',
       answer:
@@ -410,7 +410,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Önce hangi sonucun gerçekten ölçüldüğüne bakmak gerekir: kilo, kas gücü, doku onarımı, ağrı ya da yalnızca laboratuvar göstergesi mi? Ardından bu sonucun insan çalışmasıyla mı, küçük pilot verilerle mi, yoksa yalnızca teorik biyoloji anlatısıyla mı desteklendiğini ayırmak sakin bir başlangıç sağlar.',
     },
   ],
-  '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi': [
+  '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/': [
     {
       question: 'Sıcak basması yalnızca yüz kızarması mıdır?',
       answer:
@@ -427,7 +427,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Yakınma uykuyu, iş ritmini veya sosyal konforu belirgin bozuyorsa konuşmak gerekir. Amaç yalnızca dayanmak değil, hayat kalitesini hangi düzeyde etkilediğini dürüstçe görmek olmalıdır.',
     },
   ],
-  '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma': [
+  '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': [
     {
       question: 'NAD+ neden yaşlanma tartışmalarında bu kadar sık geçiyor?',
       answer:
@@ -444,7 +444,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Önce çalışma tipine, insan verisi olup olmadığına ve ölçülen sonucun gerçekten günlük yaşamı etkileyen bir sonlanım olup olmadığına bakmak iyi bir başlangıçtır. “Mekanizma var” ifadesi tek başına yeterli değildir.',
     },
   ],
-  '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma': [
+  '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/': [
     {
       question: 'Epitalon menopozu geciktirir veya hormonal geçişi yumuşatır mı?',
       answer:
@@ -466,7 +466,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Üç soruyla başlamak iyi olur: çalışma laboratuvar mı, hayvan mı, insan mı? İnsan ise küçük bir gözlem mi, plasebo kontrollü randomize bir araştırma mı? Ölçülen sonuç gerçekten günlük yaşamı etkileyen bir sonlanım mı, yoksa biyobelirteç değişimi mi? Bu üç soru pazarlama dilinden bilim diline geçişin filtresidir.',
     },
   ],
-  '/zamansiz-yasam/d-vitamini-rehberi': [
+  '/zamansiz-yasam/d-vitamini-rehberi/': [
     {
       question: 'D vitamini herkese otomatik takviye olarak mı düşünülmeli?',
       answer:
@@ -483,7 +483,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Evet, bu da önemli bir noktadır. “Fazlası daha iyi” yaklaşımı burada güvenli değildir; yüksek dozlar gereksiz yere başka sorunlara kapı açabilir. Denge, eksikliği ve aşırılığı birlikte düşünmeyi gerektirir.',
     },
   ],
-  '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz': [
+  '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/': [
     {
       question: 'Menopozda cinsellikte ağrı normalleşmesi gereken bir durum mu?',
       answer:
@@ -500,7 +500,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Ağrı yeni başladıysa, giderek artıyorsa, kanama eşlik ediyorsa ya da kaçınmaya yol açacak kadar belirginleştiyse bekletmemek iyi olur. Konfor kaybı uzun süre sessiz kalması gereken bir konu değildir.',
     },
   ],
-  '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz': [
+  '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': [
     {
       question: 'Mahrem bölgede kuruluk ve hassasiyet menopozda ne kadar yaygındır?',
       answer:
@@ -517,7 +517,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Evet, edebilir. Menopozla birlikte ürogenital dokulardaki değişim yalnızca vajinal konforu değil, mesane ve idrar yolu çevresindeki hissi de etkileyebilir. Ama enfeksiyon gibi başka nedenleri de dışlamak gerekir.',
     },
   ],
-  '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz': [
+  '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': [
     {
       question: 'Menopoz döneminde stres eşiği gerçekten düşebilir mi?',
       answer:
@@ -534,7 +534,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Kaygı, çöküntü hali, öfke patlamaları ya da beden belirtileri işlevi bozuyorsa daha yakından bakmak gerekir. Çünkü bazen mesele yalnızca stres değil, uyku bozulması veya depresif tabloyla birleşen bir yük olabilir.',
     },
   ],
-  '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz': [
+  '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/': [
     {
       question: 'Menopozda uyku bozukluğu yalnızca sıcak basmasına mı bağlıdır?',
       answer:
@@ -551,7 +551,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Evet, özellikle sorunun ritmini görmek için çok işe yarar. Yatma-kalkma saatleri, gece uyanma sayısı, alkol-kafein, egzersiz ve sıcak basması notları tabloyu daha okunur hale getirir.',
     },
   ],
-  '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin': [
+  '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/': [
     {
       question: 'Akşam egzersizi uykuya her zaman zarar mı verir?',
       answer:
@@ -568,7 +568,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Bir süre yoğunluğu ve bitiş saatini değiştirip ertesi günkü uyku hissini not etmek iyi bir başlangıçtır. Mesele kuralla değil, kendi beden ritmiyle çalışmaktır.',
     },
   ],
-  '/zamansiz-yasam/beslenme-yaslanma': [
+  '/zamansiz-yasam/beslenme-yaslanma/': [
     {
       question: '40 yaş sonrasında beslenmede en çok hangi başlıklar önem kazanır?',
       answer:
@@ -585,7 +585,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Çünkü birçok beslenme hedefi önce günlük düzen içinde karşılanabilir. Takviye bazen gerekli olabilir ama iyi bir temel olmadan üzerine eklenen kısa yol gibi kalır.',
     },
   ],
-  '/zamansiz-yasam/kilo-artisi-menopoz': [
+  '/zamansiz-yasam/kilo-artisi-menopoz/': [
     {
       question: 'Menopozda kilo artışı yalnızca daha az hareket etmekten mi olur?',
       answer:
@@ -602,7 +602,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Çoğu zaman hayır. İlk hedef, kası koruyan ritimleri güçlendirmek, uykuyu toparlamak ve bel çevresi ile enerji düzeyini daha yakından izlemek olabilir. Hızlı çözümler çoğu zaman sürdürülebilir olmaz.',
     },
   ],
-  '/zamansiz-yasam/kemik-sagligi-40-sonrasi': [
+  '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': [
     {
       question: 'Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?',
       answer:
@@ -619,7 +619,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Yürüyüş değerli bir temel ama her zaman tek başına yeterli olmayabilir. Kemik ve kas için yük taşıyan, dengeyi ve direnç kapasitesini geliştiren hareketlerin de plana girmesi çoğu zaman daha güçlü sonuç verir.',
     },
   ],
-  '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik': [
+  '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': [
     {
       question: 'Östrojen neden yalnızca üreme hormonu gibi düşünülmemeli?',
       answer:
@@ -636,7 +636,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Çünkü dağınık görünen yakınmaları tek tek değil, ortak bir bakışla okumayı kolaylaştırır. Böylece bedenin verdiği sinyaller daha az şaşırtıcı, daha çok anlaşılır hale gelir.',
     },
   ],
-  '/hormonal-gecis/menopoz/menopoz-nedir': [
+  '/hormonal-gecis/menopoz/menopoz-nedir/': [
     {
       question: 'Menopoz bir gün mü, bir süreç mi?',
       answer:
@@ -653,7 +653,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Kemik sağlığı, kardiyometabolik denge, uyku, beden kompozisyonu ve ürogenital konfor daha görünür hale gelir. Bu yüzden dönem yalnızca “adet bitti” diye değil, yeni bir sağlık ajandası olarak okunmalıdır.',
     },
   ],
-  '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi': [
+  '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/': [
     {
       question: 'HRT herkes için aynı formda mı planlanır?',
       answer:
@@ -670,7 +670,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Hayır. Yakınmanın türüne göre yaşam tarzı düzenlemeleri, davranışsal yaklaşımlar, hormonsuz seçenekler veya lokal çözümler gündeme gelebilir. “Hayır” demek çoğu zaman boşluk değil, farklı yol anlamına gelir.',
     },
   ],
-  '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi': [
+  '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/': [
     {
       question: 'Menopoz takibinde iyi hekim-hasta ilişkisini ne belirler?',
       answer:
@@ -687,7 +687,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Belirtilerin ne kadar sürdüğü, en çok neyi zorladığı, hangi riski merak ettiğiniz ve hangi hedefe ulaşmak istediğiniz iyi bir başlangıçtır. Net soru, daha net konuşma demektir.',
     },
   ],
-  '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu': [
+  '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/': [
     {
       question: 'Tartı değişmiyorsa yine de beden kompozisyonu bozulabilir mi?',
       answer:
@@ -704,7 +704,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Kas kütlesini koruyan hareket ve yeterli protein çoğu zaman ilk önceliktir. Hızlı kalori kısıtları, kısa vadede sayı verse de uzun vadede kompozisyonu daha kırılgan bırakabilir.',
     },
   ],
-  '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari': [
+  '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/': [
     {
       question: 'Koruyucu sağlık kaydı tutmak neden bu dönemde daha değerli hale gelir?',
       answer:
@@ -721,7 +721,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Her günü dakikası dakikasına tutmak yerine eğilimleri görmek yeterlidir. Kısa, düzenli ve sürdürülebilir kayıt; çok ayrıntılı ama çabuk bırakılan kayıttan daha işlevseldir.',
     },
   ],
-  '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan': [
+  '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/': [
     {
       question: 'Perimenopozda uyku sorunu neden bazen hiçbir sebep yokmuş gibi başlar?',
       answer:
@@ -738,7 +738,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Sorunun yalnızca “az uyumak” değil, uykunun yapısının değişmesi olduğunu görmek önemlidir. Bu bakış, çözümü de daha gerçekçi kurmaya yardım eder.',
     },
   ],
-  '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban': [
+  '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/': [
     {
       question: 'İdrar kaçırmanın her türü aynı nedenle mi olur?',
       answer:
@@ -755,7 +755,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Kaçırma günlük hayatı, yürüyüşü, sporu, cinselliği veya dışarı çıkma rahatlığını etkilemeye başladıysa ertelememek gerekir. Sessiz yaşanması, çözümsüz olduğu anlamına gelmez.',
     },
   ],
-  '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo': [
+  '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': [
     {
       question: 'GLP-1 analogları menopozda kilo için sihirli çözüm mü?',
       answer:
@@ -772,7 +772,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Hayır. Eşlik eden hastalıklar, beden kitle durumu, metabolik risk ve beklenti hattı birlikte değerlendirilir. Klinik karar, yalnızca tartıdan değil bütün sağlık resminden çıkar.',
     },
   ],
-  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski': [
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/': [
     {
       question: 'Ailede meme kanseri öyküsü varsa hormon tedavisi tamamen kapanır mı?',
       answer:
@@ -794,7 +794,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Bu soru yalnızca riskle değil, fayda tarafıyla da birlikte değerlendirilir. Bazı kadınlarda belirgin sıcak basmaları, uyku kaybı ve yaşam kalitesi düşüşü öyle yüksektir ki kişisel risk tablosu uygunsa tedavinin sağlayacağı kazanım anlamlı olabilir. Güvenlik, çoğu zaman tedavisizlik değil doğru seçilmiş tedavi ve izlem demektir.',
     },
   ],
-  '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari': [
+  '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/': [
     {
       question: '40 yaş sonrası diz, kalça ve bel ağrısı yaşlanmanın kaçınılmaz parçası mı?',
       answer:
@@ -811,7 +811,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Gece uykudan uyandıran ağrı, travma öyküsü, güç kaybı, ilerleyen şişlik ya da nörolojik yakınmalar varsa daha hızlı değerlendirme gerekir. Çünkü bazı durumlarda mesele yalnızca yüklenme değildir.',
     },
   ],
-  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi': [
+  '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': [
     {
       question: 'CoQ10 gerçekten anti-aging için güçlü kanıtlı bir takviye mi?',
       answer:
@@ -828,7 +828,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'İlk bakılacak şey, hangi sonlanımın ölçüldüğüdür. Gerçek bir yakınma mı düzelmiş, yoksa yalnızca biyokimyasal bir parametre mi değişmiş, bunu ayırmak çok şey söyler.',
     },
   ],
-  '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu': [
+  '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/': [
     {
       question: 'Bir tedaviye “deneysel” denmesi tam olarak ne anlama gelir?',
       answer:
@@ -845,7 +845,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Ne kadar insan verisi olduğu, beklenen faydanın ne kadar somut olduğu ve standart seçeneklerin neden yeterli görülmediği iyi üç başlangıç sorusudur. Bu sorular pazarlama ile klinik kararı ayırmaya yardım eder.',
     },
   ],
-  '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim': [
+  '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/': [
     {
       question: 'Non-invaziv cihazlar cerrahi sonuçla aynı etkiyi verir mi?',
       answer:
@@ -862,7 +862,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Çünkü doku kalitesi, kollajen yanıtı ve iyileşme temposu değişebilir. Aynı cihaz daha genç ciltte farklı, postmenopozal zeminde daha sınırlı bir karşılık verebilir.',
     },
   ],
-  '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz': [
+  '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/': [
     {
       question: 'Sauna sıcak basması yaşayan biri için her zaman iyi gelir mi?',
       answer:
@@ -879,7 +879,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Kalp-damar hastalığı, tansiyon düzensizliği, bayılma eğilimi veya belirgin ısı hassasiyeti olan kadınlar daha dikkatli olmalıdır. Çünkü iyi olma aracı olarak düşünülen şey bazen bedene fazla yük binebilir.',
     },
   ],
-  '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz': [
+  '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/': [
     {
       question: 'Gece terlemesi neden bu kadar utanç duygusuyla birlikte yaşanabiliyor?',
       answer:

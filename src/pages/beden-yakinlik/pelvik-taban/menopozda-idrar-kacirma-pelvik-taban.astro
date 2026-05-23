@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/']!;
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'İsim Koymak: İki Tip Var' },
@@ -38,15 +38,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Konuşmadığımız Şey — 40 Sonrası İdrar Kaçırma';
 const articleDescription =
   '40 sonrası kadınların önemli bir kısmı idrar kaçırma yaşıyor ama çoğu kimseye söylemiyor. İki ana tip, pelvik taban anatomisi, davranışsal adımlar, medikal-cerrahi seçenekler ve doktora hangi soruları sormak gerektiği — sade bir klinik bakış.';
-const faqItems = articleFaqs['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban'] ?? [];
+const faqItems = articleFaqs['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
-  pathname: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
+  pathname: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
   articleSection: 'Beden & Yakınlık',
-  sectionPath: '/beden-yakinlik',
+  sectionPath: '/beden-yakinlik/',
   keywords: ['idrar kaçırma', 'üriner inkontinans', 'pelvik taban', 'stres tipi', 'urge tipi', 'menopoz', 'kadın sağlığı'],
   faqItems,
 
@@ -60,7 +60,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/beden-yakinlik" />
+  <SiteNavbar currentPath="/beden-yakinlik/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -83,7 +83,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban"
+          slug="/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/"
           title={articleTitle}
         />
       </div>
@@ -299,11 +299,11 @@ başlasın, üç ayda yeniden konuşalım"</em> gibi bir yol. <strong>Üçüncü
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
-            '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/library',
+            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
+            '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/library/',
           ]}
         />
 

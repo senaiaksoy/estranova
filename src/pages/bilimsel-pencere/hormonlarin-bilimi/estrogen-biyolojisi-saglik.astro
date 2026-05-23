@@ -20,7 +20,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik']!;
+const hero = submenuHeroByRoute['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/']!;
 
 const tocEntries = [
   { id: 'ostrojen-aile', label: 'Östrojen Tek Hormon Değil — Bir Aile' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Östrojen Biyolojisi ve Sağlık — Tek Hormon Değil, Bir Aile';
 const articleDescription =
   'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler ER-α ve ER-β reseptörleri üzerinden; yaşam boyu yolculuk; metabolizma karaciğerden mikrobiyotaya (estrobolome); endojen vs eksojen (HRT) bakışı; östrojen-kanser ilişkisinin karmaşık tablosu — bilimsel mekanizmalardan klinik kararların pratik sınırlarına kadar.';
-const faqItems = articleFaqs['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik'] ?? [];
+const faqItems = articleFaqs['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
-  pathname: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+  pathname: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
   articleSection: 'Bilimsel Pencere',
-  sectionPath: '/bilimsel-pencere',
+  sectionPath: '/bilimsel-pencere/',
   keywords: ['östrojen', 'estradiol', 'estron', 'estriol', 'estetrol', 'ER-alfa', 'ER-beta', 'GSM', 'HRT', 'estrobolome', 'menopoz'],
   faqItems,
 
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/bilimsel-pencere" />
+  <SiteNavbar currentPath="/bilimsel-pencere/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -84,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik"
+          slug="/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/"
           title={articleTitle}
         />
       </div>
@@ -184,7 +184,7 @@ const articleSchemas = buildArticleSchemas({
           epitel kalınlığını, kollajen-elastin yapısını ve damar desteğini koruyor; düşüşü
           GSM (genitoüriner menopoz sendromu) tablosunun temeli <Evidence level={5} /> —
           bu konuda detaylı inceleme için
-          <a href="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
+          <a href="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
           GSM yazısı</a>.
         </p>
         <p>
@@ -249,7 +249,7 @@ const articleSchemas = buildArticleSchemas({
           östrojen</strong> (krem, halka, tablet) lokal etki amaçlı; sistemik dolaşıma
           geçen miktar düşük; GSM tedavisi için en güçlü kanıtlı seçenek <Evidence level={5} />.
           Bu konuda detaylı tartışma için
-          <a href="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
+          <a href="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
           GSM yazısı</a>.
         </p>
         <p>
@@ -370,7 +370,7 @@ const articleSchemas = buildArticleSchemas({
           kritik dönem; KMD taraması, kalsiyum-D vitamini, düzenli ağırlık egzersizi ve
           uygun olgularda HRT veya bisfosfonat gibi seçenekler birlikte değerlendiriliyor.
           D vitamini bu hatta temel rol oynuyor — detaylı tartışma için
-          <a href="/zamansiz-yasam/d-vitamini-rehberi" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
+          <a href="/zamansiz-yasam/d-vitamini-rehberi/" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
           D vitamini rehberi</a>.
         </p>
 
@@ -401,11 +401,11 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
-            '/zamansiz-yasam/d-vitamini-rehberi',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
+            '/zamansiz-yasam/d-vitamini-rehberi/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
           ]}
         />
 

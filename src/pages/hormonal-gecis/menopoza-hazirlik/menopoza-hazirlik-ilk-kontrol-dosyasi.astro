@@ -18,9 +18,9 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi';
+const pathname = '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/';
 const hero =
-  submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik']!;
+  submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik/']!;
 const articleTitle =
   'Menopoza Hazırlıkta İlk Kontrol Dosyası: Hangi Test Ne Söyler, Hangisi Herkes İçin Gerekli Değildir?';
 const articleDescription =
@@ -49,7 +49,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate,
   pathname,
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
   keywords: [
     'menopoza hazırlık',
@@ -74,7 +74,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -241,9 +241,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
-          '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler',
-          '/hormonal-gecis/40-sonrasi/tarama-testleri',
+          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
+          '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
         ]}
       />
       <ArticleEditorNote>

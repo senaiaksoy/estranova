@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/']!;
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'Disparoni Tek Bir Tablo Değil' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Cinsellikte Ağrı — Mahrem Bir Şikâyet, Açık Bir Tedavi Haritası';
 const articleDescription =
   'Cinsel ilişkide ağrı (disparoni) tek bir tablo değil — yüzeysel, derin, postmenopozal, vajinismus alt-tipleri farklı tedavi yollarına çıkıyor. İsim koymak, mekanizmayı tanımak, üç kapılı tedavi haritası ve doktora hangi soruları sormak gerektiği — sade bir klinik bakış. Pazarlama değil, eğitim.';
-const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz'] ?? [];
+const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
-  pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
+  pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
   articleSection: 'Beden & Yakınlık',
-  sectionPath: '/beden-yakinlik',
+  sectionPath: '/beden-yakinlik/',
   keywords: ['cinsellikte ağrı', 'disparoni', 'dispareuni', 'vajinismus', 'GSM', 'menopoz', 'pelvik taban disfonksiyonu', 'vulvodini', 'lokal östrojen'],
   faqItems,
 
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/beden-yakinlik" />
+  <SiteNavbar currentPath="/beden-yakinlik/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -84,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz"
+          slug="/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/"
           title={articleTitle}
         />
       </div>
@@ -380,11 +380,11 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
-            '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz',
-            '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
-            '/library',
+            '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
+            '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/',
+            '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
+            '/library/',
           ]}
         />
 

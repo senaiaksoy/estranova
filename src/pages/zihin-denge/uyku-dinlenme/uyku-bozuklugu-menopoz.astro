@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz']!;
+const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/']!;
 
 const tocEntries = [
   { id: 'uyku-mimarisi', label: 'Uyku Mimarisi' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Uyku Bozukluğu — Dinlenme Rehberi';
 const articleDescription =
   'Menopozda uyku neden bozulur, hangi belirtiler yaygın, hangi adımlar denenebilir? Hormonal geçişin içinden geçen bir yaşıt perspektifinden, sakin bir uyku rehberi.';
-const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz'] ?? [];
+const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '12 Mart 2026',
-  pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+  pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
   articleSection: 'Zihin & Denge',
-  sectionPath: '/zihin-denge',
+  sectionPath: '/zihin-denge/',
   keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],
   faqItems,
 
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zihin-denge" />
+  <SiteNavbar currentPath="/zihin-denge/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -84,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz"
+          slug="/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/"
           title={articleTitle}
         />
       </div>
@@ -305,8 +305,8 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/library',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/library/',
           ]}
         />
 

@@ -19,7 +19,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tarama-testleri']!;
+const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tarama-testleri/']!;
 const tocEntries = [
   { id: 'tarama-ne-demek', label: 'Tarama Ne Demek?' },
   { id: 'temel-bes-baslik', label: '40 Sonrasında Temel Başlıklar' },
@@ -34,7 +34,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?';
 const articleDescription =
   '40 sonrası tarama planını kemik, metabolik ve kadın sağlığı başlıklarında sade bir yaklaşımla ele alan başlangıç rehberi.';
-const articlePath = '/hormonal-gecis/40-sonrasi/tarama-testleri';
+const articlePath = '/hormonal-gecis/40-sonrasi/tarama-testleri/';
 const faqItems = articleFaqs[articlePath] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -43,7 +43,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '5 Mayıs 2026',
   pathname: articlePath,
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis/40-sonrasi',
+  sectionPath: '/hormonal-gecis/40-sonrasi/',
   keywords: [
     '40 sonrası tarama',
     'koruyucu sağlık',
@@ -63,7 +63,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -225,11 +225,11 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/hormonal-gecis/40-sonrasi',
-          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-          '/zamansiz-yasam/d-vitamini-rehberi',
-          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari',
-          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
+          '/hormonal-gecis/40-sonrasi/',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
+          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
         ]}
       />
 

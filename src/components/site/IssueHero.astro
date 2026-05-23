@@ -27,7 +27,7 @@ const { issue, sectionNumber = '03' } = Astro.props;
 const coverDossier = resolveCoverDossier(issue);
 const readingMinutes = getIssueReadingMinutes(issue);
 const articleCount = coverDossier?.articles.length ?? 0;
-const issueHref = `/sayi/${issue.slug}`;
+const issueHref = `/sayi/${issue.slug}/`;
 const issuePad = formatIssuePad(issue.number);
 ---
 
@@ -113,7 +113,7 @@ const issuePad = formatIssuePad(issue.number);
 
     <div class="mt-6 flex justify-end">
       <a
-        href="/sayi"
+        href="/sayi/"
         class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
       >
         Tüm sayılar →

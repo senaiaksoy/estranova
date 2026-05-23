@@ -20,7 +20,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma']!;
+const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/']!;
 
 const tocEntries = [
   { id: 'mekanizma-temel', label: 'Mekanizmanın Temeli — NAD+ Hücrede Ne Yapar?' },
@@ -38,15 +38,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'NAD+ ve Hücresel Yaşlanma — Mekanizmadan Pratik Sınırlara';
 const articleDescription =
   'NAD+ hücresel yaşlanma araştırmalarının merkezinde — sirtuin, PARP ve CD38 yolakları üzerinden mitokondriyal enerji ve DNA hasar yanıtının kalbinde duruyor. Bu yazı mekanizmayı net açıyor; insan çalışmalarının kanıt seviyesini dürüstçe yorumluyor; hayvan-insan çeviri sorununu adıyla anıyor; ve klinik karşılığı için pratik sınırları çiziyor — pazarlama değil, eğitim.';
-const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma'] ?? [];
+const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
-  pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
+  pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
   articleSection: 'Bilimsel Pencere',
-  sectionPath: '/bilimsel-pencere',
+  sectionPath: '/bilimsel-pencere/',
   keywords: ['NAD+', 'NMN', 'NR', 'sirtuin', 'PARP', 'CD38', 'mitokondri', 'hücresel yaşlanma', 'epigenetik yaşlanma', 'menopoz'],
   faqItems,
 
@@ -60,7 +60,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/bilimsel-pencere" />
+  <SiteNavbar currentPath="/bilimsel-pencere/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -83,7 +83,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma"
+          slug="/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/"
           title={articleTitle}
         />
       </div>
@@ -98,7 +98,7 @@ const articleSchemas = buildArticleSchemas({
           mekanizmayı net açıyor, insan çalışmalarının kanıt seviyesini dürüstçe yorumluyor,
           hayvan-insan çeviri sorununu adıyla anıyor ve klinik karşılığı için pratik
           sınırları çiziyor. Klinik takviye yorumu için
-          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
+          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi/" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
           NAD+ takviyesi yazısı</a>'na göz atılabilir.
         </p>
       </ArticleSummary>
@@ -287,7 +287,7 @@ const articleSchemas = buildArticleSchemas({
           hastalarda NMN/NR önermiyorum; çünkü PARP yolağının DNA hasar yanıtındaki rolü
           bu durumda risk-fayda dengesini değiştiriyor — net güvenlik verisi yok. Bu sınır
           klinikte güvenle koruduğum bir disiplin. Klinik takviye yorumumun tamamı
-          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
+          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi/" class="font-semibold text-burgundy underline decoration-gold/40 underline-offset-4 hover:decoration-burgundy">
           NAD+ takviyesi yazısında</a>.
         </p>
 
@@ -374,11 +374,11 @@ mütevazı, uzun vadeli sonuç henüz bilinmiyor"</em>. Bu bakışla yaklaşıld
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
-            '/zamansiz-yasam/d-vitamini-rehberi',
-            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/library',
+            '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
+            '/zamansiz-yasam/d-vitamini-rehberi/',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/library/',
           ]}
         />
 

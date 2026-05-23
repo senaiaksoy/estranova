@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz']!;
+const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/']!;
 
 const tocEntries = [
   { id: 'o-an', label: 'O An — Hepimiz' },
@@ -33,15 +33,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Gece Terlemesi ve Uyku: Utançsız Bir Bakış';
 const articleDescription =
   'Gece yarısı sırılsıklam uyanmak, sessizce çarşafı değiştirmek, partneri uyandırmamak için nefesini tutmak — hepimizin yaşadığı ama zor konuşulan bir an. Yargısız, jargonsuz, açık bir rehber.';
-const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz'] ?? [];
+const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '28 Nisan 2026',
-  pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
+  pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
   articleSection: 'Zihin & Denge',
-  sectionPath: '/zihin-denge',
+  sectionPath: '/zihin-denge/',
   keywords: ['gece terlemesi', 'menopoz', 'uyku', 'sıcak basması', 'mahrem sağlık', 'çarşaf', 'yatak takımı'],
   faqItems,
 
@@ -55,7 +55,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zihin-denge" />
+  <SiteNavbar currentPath="/zihin-denge/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -236,9 +236,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
-          '/dosya/2026-05-uyuyamadigimiz-geceler',
-          '/library',
+          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
+          '/dosya/2026-05-uyuyamadigimiz-geceler/',
+          '/library/',
         ]}
       />
 

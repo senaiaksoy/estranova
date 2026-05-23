@@ -22,8 +22,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu']
-  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel']!;
+  submenuHeroByRoute['/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/']
+  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 
 const tocEntries = [
   { id: 'ne-demek', label: 'Deneysel Ne Demek?' },
@@ -39,15 +39,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Deneysel Tedaviyi Okuma Kılavuzu';
 const articleDescription =
 'Bir tedaviye "deneysel" demek ne anlama gelir? Kanıt seviyesi nasıl okunur? Pazarlamayı bilimden hangi sinyaller ayırır? Off-label kullanım ile deneysel uygulama farkı; doktora sorabileceğiniz üç somut soru — sınır bilen sakin editöryal bir rehber.';
-const faqItems = articleFaqs['/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '3 Mayıs 2026',
-  pathname: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
+  pathname: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'deneysel tedavi',
     'kanıt seviyesi',
@@ -70,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -93,7 +93,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu"
+          slug="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/"
           title={articleTitle}
         />
       </div>
@@ -139,7 +139,7 @@ const articleSchemas = buildArticleSchemas({
           bilmek, "deneysel" etiketini görünce panik yapmak ile körü körüne
           kabul etmek arasında üçüncü bir yol açar: <em>sakin değerlendirme</em>.
           Bu yazıyla aynı sayıdaki
-          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
+          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi/" class="text-burgundy underline decoration-burgundy/30 underline-offset-2 hover:decoration-burgundy">
             NAD+ takviyesi yazısı
           </a>
           bu üçüncü yolun somut bir örneği — mekanizma sağlam, hayvan verileri
@@ -380,9 +380,9 @@ araştırma içindeki uygulama ve henüz kanıtın çok zayıf olduğu
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/deneysel/nad-plus-takviyesi',
-          '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma',
-          '/zamansiz-yasam/d-vitamini-rehberi',
+          '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
+          '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
         ]}
       />
 

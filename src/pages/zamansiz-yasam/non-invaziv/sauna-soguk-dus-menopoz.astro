@@ -22,8 +22,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz']
-  ?? submenuHeroByRoute['/zamansiz-yasam/non-invaziv']!;
+  submenuHeroByRoute['/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/']
+  ?? submenuHeroByRoute['/zamansiz-yasam/non-invaziv/']!;
 
 const tocEntries = [
   { id: 'sabah-ahir', label: 'Sabah Ahırda Soğukla' },
@@ -40,15 +40,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına';
 const articleDescription =
   'Sporcu olarak sauna ve soğuk maruziyet deneyimim, çevremdeki kadınların sıcak basmasını izlerken öğrendiklerim, bilim ne diyor (kardiyovasküler, mood, sıcak basması paradoksu) ve güvenlik notları. Yaşıt ama mütevazı bir kuşak köprüsü.';
-const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'alara-baykent',
   publishedDate: '3 Mayıs 2026',
-  pathname: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz',
+  pathname: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'sauna',
     'soğuk duş',
@@ -72,7 +72,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -95,7 +95,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz"
+          slug="/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/"
           title={articleTitle}
         />
       </div>
@@ -383,9 +383,9 @@ olmayan bir şey bende var: dürüst bir bilimsel bakış ve
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim',
-          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari',
-          '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale',
+          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+          '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/',
         ]}
       />
 

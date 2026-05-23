@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu']!;
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/']!;
 
 const tocEntries = [
   { id: 'tartiyi-kaldirdigim-gun', label: 'Tartıyı kaldırdığım gün' },
@@ -35,15 +35,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması';
 const articleDescription =
   'Tartı sayısı uzun zamandır pek değişmiyor; ama beden değişmeye devam ediyor. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin bir gözlemcinin günlüğünden bakış.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu'] ?? [];
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '30 Nisan 2026',
-  pathname: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu',
+  pathname: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis/menopoz',
+  sectionPath: '/hormonal-gecis/menopoz/',
   keywords: [
     'menopoz',
     'vücut kompozisyonu',
@@ -69,7 +69,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -318,10 +318,10 @@ için işe yarayacak yaklaşım farklı olabilir — özellikle bu konuyu kendi 
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/kilo-artisi-menopoz',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/zamansiz-yasam/beslenme-yaslanma',
-            '/hormonal-gecis/menopoz/menopoz-nedir',
+            '/zamansiz-yasam/kilo-artisi-menopoz/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/zamansiz-yasam/beslenme-yaslanma/',
+            '/hormonal-gecis/menopoz/menopoz-nedir/',
           ]}
         />
 

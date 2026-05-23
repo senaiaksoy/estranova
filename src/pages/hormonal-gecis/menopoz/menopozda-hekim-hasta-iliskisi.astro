@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi']!;
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/']!;
 
 const tocEntries = [
   { id: 'eski-resim', label: 'Eskinin Hekim-Hasta Resmi' },
@@ -34,15 +34,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor';
 const articleDescription =
   'Hekim-hasta ilişkisinin yıllar içinde nasıl olgunlaştığına dair kişisel notlar. Modern kadının menopoz takibinde dört doktor profili karşısındaki arayışı, paydaş karar verme ve etik bir mesafenin önemi.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi'] ?? [];
+const faqItems = articleFaqs['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '29 Nisan 2026',
-  pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
+  pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis/menopoz',
+  sectionPath: '/hormonal-gecis/menopoz/',
   keywords: [
     'menopoz',
     'hekim seçimi',
@@ -66,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -305,8 +305,8 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
-            '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
+            '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+            '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
           ]}
         />
 

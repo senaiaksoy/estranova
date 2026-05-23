@@ -21,8 +21,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar']!;
+const pathname = '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/bilimsel-pencere/yeni-arastirmalar/']!;
 
 const tocEntries = [
   { id: 'neden-korku', label: 'Neden Hâlâ Korku Yaratıyor?' },
@@ -48,7 +48,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '6 Mayıs 2026',
   pathname,
   articleSection: 'Bilimsel Pencere',
-  sectionPath: '/bilimsel-pencere',
+  sectionPath: '/bilimsel-pencere/',
   keywords: [
     'menopoz',
     'hormon tedavisi',
@@ -71,7 +71,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/bilimsel-pencere" />
+  <SiteNavbar currentPath="/bilimsel-pencere/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -297,9 +297,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi',
-          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme',
-          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu',
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
         ]}
       />
 

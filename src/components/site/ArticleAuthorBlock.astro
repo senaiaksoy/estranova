@@ -38,7 +38,7 @@ const coverAlt =
   imageAlt ??
   routeHero?.alt ??
   'Estranova makale konusu için editoryal kapak görseli';
-const authorProfileHref = writer.isInstitutionalByline ? '/editoryal-politika' : `/yazarlar/${writer.slug}`;
+const authorProfileHref = writer.isInstitutionalByline ? '/editoryal-politika/' : `/yazarlar/${writer.slug}/`;
 const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Yazar profili';
 ---
 
@@ -109,7 +109,7 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
             {authorProfileLabel}
           </a>
           <a
-            href="/tibbi-sorumluluk"
+            href="/tibbi-sorumluluk/"
             class="rounded-full border border-gold/35 px-4 py-2 text-ink/58 transition hover:border-gold hover:bg-gold/10 hover:text-ink"
           >
             Tıbbi not

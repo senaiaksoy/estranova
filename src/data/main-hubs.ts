@@ -9,7 +9,7 @@ export interface MainHubConfig {
 
 export const mainHubs: MainHubConfig[] = [
   {
-    path: '/hormonal-gecis',
+    path: '/hormonal-gecis/',
     siteTitle: 'Hormonal Geçiş - Estranova',
     description:
       'Perimenopozdan menopoza, hormonal geçiş sürecinizi anlamak için kapsamlı bilgi rehberleri. Bu bölümde geçiş dönemlerini adım adım inceleyebilir, her evreye dair sorulara sade ve dengeli bir yoldan ulaşabilirsiniz.',
@@ -19,7 +19,7 @@ export const mainHubs: MainHubConfig[] = [
       'Perimenopozdan menopoza, hormonal geçiş sürecinizi anlamak için kapsamlı bilgi rehberleri. Bu bölümde geçiş dönemlerini adım adım inceleyebilir, her evreye dair sorulara sade ve dengeli bir yoldan ulaşabilirsiniz.',
   },
   {
-    path: '/zamansiz-yasam',
+    path: '/zamansiz-yasam/',
     siteTitle: 'Zamansız Yaşam - Estranova',
     description:
       'Dinamik ve enerjik yaşlanmak için bilimsel bilgi. Vitaminlerden deneysel yaklaşımlara, kanıt düzeyiyle değerlendirilmiş içerikler. Bu bölüm, anti-aging ve longevity başlıklarını sade bir yerde toplar.',
@@ -29,7 +29,7 @@ export const mainHubs: MainHubConfig[] = [
       'Dinamik ve enerjik yaşlanmak için bilimsel bilgi. Vitaminlerden deneysel yaklaşımlara, kanıt düzeyiyle değerlendirilmiş içerikler. Bu bölüm, anti-aging ve longevity başlıklarını sade bir yerde toplar.',
   },
   {
-    path: '/beden-yakinlik',
+    path: '/beden-yakinlik/',
     siteTitle: 'Beden & Yakınlık - Estranova',
     description:
       'Menopoz döneminde bedeniniz, cinsel sağlığınız ve cinsel yaşamınız hakkında bilimsel bilgi ve rehberlik. Bu bölüm, değişen beden deneyimini yargılamadan ele alır.',
@@ -39,7 +39,7 @@ export const mainHubs: MainHubConfig[] = [
       'Menopoz döneminde bedeniniz, cinsel sağlığınız ve cinsel yaşamınız hakkında bilimsel bilgi ve rehberlik. Bu bölüm, değişen beden deneyimini yargılamadan ele alır.',
   },
   {
-    path: '/zihin-denge',
+    path: '/zihin-denge/',
     siteTitle: 'Zihin & Denge - Estranova',
     description:
       'Hormonal değişimlerin zihinsel ve duygusal etkilerini anlamak, uyku ve ruh halini desteklemek için bilimsel rehberlik. Günlük dalgalanmaları sade bir dille ele alırız.',
@@ -49,7 +49,7 @@ export const mainHubs: MainHubConfig[] = [
       'Hormonal değişimlerin zihinsel ve duygusal etkilerini anlamak, uyku ve ruh halini desteklemek için bilimsel rehberlik. Günlük dalgalanmaları sade bir dille ele alırız.',
   },
   {
-    path: '/bilimsel-pencere',
+    path: '/bilimsel-pencere/',
     siteTitle: 'Bilimsel Pencere - Estranova',
     description:
       'Uzman görüşleri, güncel araştırma özetleri ve mitlerin bilimle karşılaştırılması. Tıbbi veriyi erişilebilir bir dille sunarız.',

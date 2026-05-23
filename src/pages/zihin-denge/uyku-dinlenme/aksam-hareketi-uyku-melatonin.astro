@@ -22,8 +22,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
-  submenuHeroByRoute['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin']
-  ?? submenuHeroByRoute['/zihin-denge/uyku-dinlenme']!;
+  submenuHeroByRoute['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/']
+  ?? submenuHeroByRoute['/zihin-denge/uyku-dinlenme/']!;
 
 const tocEntries = [
   { id: 'aksam-sporcu', label: 'Akşam Bedeni' },
@@ -40,15 +40,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?';
 const articleDescription =
   'Akşam egzersizi, melatonin, beden ısısı ve perimenopozda uyku ilişkisi. Alara Baykent sporcu beden okumasıyla, performans baskısı yaratmadan sürdürülebilir akşam hareketini anlatıyor.';
-const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin'] ?? [];
+const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'alara-baykent',
   publishedDate: '4 Mayıs 2026',
-  pathname: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
+  pathname: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
   articleSection: 'Zihin & Denge',
-  sectionPath: '/zihin-denge',
+  sectionPath: '/zihin-denge/',
   keywords: [
     'akşam egzersizi',
     'uyku',
@@ -72,7 +72,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zihin-denge" />
+  <SiteNavbar currentPath="/zihin-denge/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -95,7 +95,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin"
+          slug="/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/"
           title={articleTitle}
         />
       </div>
@@ -284,9 +284,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
-          '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
-          '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz',
+          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
+          '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
+          '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/',
         ]}
       />
 

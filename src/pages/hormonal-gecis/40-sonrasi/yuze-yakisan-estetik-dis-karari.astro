@@ -20,7 +20,7 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi']!;
+const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/']!;
 
 const tocEntries = [
   { id: 'yuze-yakisan', label: 'Yüze Yakışan Ne Demek' },
@@ -36,15 +36,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Yüzümüzle uyumlu gülüşün kararı';
 const articleDescription =
   '40 sonrası estetik diş kararı: yüze yakışanı aramak, doğal görünümün üç ölçüsü, müdahale yelpazesinin sınırları ve ilk görüşmede sormanızı önerdiğim beş soru. Estetik diş hekimi gözüyle bir karar rehberi.';
-const faqItems = articleFaqs['/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari'] ?? [];
+const faqItems = articleFaqs['/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'duygu-karaosmanoglu',
   publishedDate: '11 Mayıs 2026',
-  pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari',
+  pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   keywords: [
     'estetik diş hekimliği',
     'gülüş tasarımı',
@@ -68,7 +68,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -91,7 +91,7 @@ const articleSchemas = buildArticleSchemas({
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
         <SaveForLaterButton
-          slug="/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari"
+          slug="/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/"
           title={articleTitle}
         />
       </div>
@@ -387,9 +387,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu',
-          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim',
-          '/hormonal-gecis/40-sonrasi/tarama-testleri',
+          '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/',
+          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
         ]}
       />
 

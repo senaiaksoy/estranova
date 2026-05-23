@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan']!;
+const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/']!;
 
 const tocEntries = [
   { id: 'uyku-mimarisi', label: 'Uyku Tek Bir Şey Değil' },
@@ -35,15 +35,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Perimenopozda Uykunun Gerçekten Değişen Yanı';
 const articleDescription =
   'Perimenopozda uyku neden değişiyor? Östrojen ve progesteron uykunun hangi evresine dokunuyor, gece uyanmaları nasıl okunmalı, hangi destekler gerçekten anlamlı — sakin bir yaşıt perspektifinden.';
-const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan'] ?? [];
+const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '28 Nisan 2026',
-  pathname: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
+  pathname: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
   articleSection: 'Zihin & Denge',
-  sectionPath: '/zihin-denge',
+  sectionPath: '/zihin-denge/',
   keywords: ['perimenopoz', 'uyku', 'uyku evresi', 'östrojen', 'progesteron', 'REM', 'NREM', 'CBT-I', 'menopoz uyku'],
   faqItems,
 
@@ -57,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zihin-denge" />
+  <SiteNavbar currentPath="/zihin-denge/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -333,9 +333,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz',
-          '/dosya/2026-05-uyuyamadigimiz-geceler',
-          '/library',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+          '/dosya/2026-05-uyuyamadigimiz-geceler/',
+          '/library/',
         ]}
       />
 

@@ -19,8 +19,8 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/beden-yakinlik/cilt-gorunum']!;
+const pathname = '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/']!;
 const articleTitle = 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak';
 const articleDescription =
   'Prof. Dr. Gonca Gökdemir, menopoz döneminde ciltte kuruluk, hassasiyet, leke eğilimi ve kolajen değişimini hormon, UV, melanin ve bariyer biyolojisi üzerinden anlatıyor.';
@@ -47,7 +47,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate,
   pathname,
   articleSection: 'Beden & Yakınlık',
-  sectionPath: '/beden-yakinlik',
+  sectionPath: '/beden-yakinlik/',
   image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
   keywords: [
     'menopoz',
@@ -73,7 +73,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/beden-yakinlik" />
+  <SiteNavbar currentPath="/beden-yakinlik/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -253,9 +253,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim',
-          '/zamansiz-yasam/beslenme-yaslanma',
-          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu',
+          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
+          '/zamansiz-yasam/beslenme-yaslanma/',
+          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
         ]}
       />
 

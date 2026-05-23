@@ -21,11 +21,11 @@ const issuePad = formatIssuePad(currentIssue.number);
 
 // Hub adı eşlemesi — makale URL'sinden bölüm adını çıkar
 const hubLabels: Record<string, string> = {
-  '/hormonal-gecis': 'Hormonal Geçiş',
-  '/zamansiz-yasam': 'Zamansız Yaşam',
-  '/beden-yakinlik': 'Beden & Yakınlık',
-  '/zihin-denge': 'Zihin & Denge',
-  '/bilimsel-pencere': 'Bilimsel Pencere',
+  '/hormonal-gecis/': 'Hormonal Geçiş',
+  '/zamansiz-yasam/': 'Zamansız Yaşam',
+  '/beden-yakinlik/': 'Beden & Yakınlık',
+  '/zihin-denge/': 'Zihin & Denge',
+  '/bilimsel-pencere/': 'Bilimsel Pencere',
 };
 
 function getHubLabel(href?: string): string {
@@ -35,10 +35,10 @@ function getHubLabel(href?: string): string {
 }
 
 function getHubThumbnail(href?: string): string {
-  if (!href) return submenuHeroByRoute['/hormonal-gecis'].src;
+  if (!href) return submenuHeroByRoute['/hormonal-gecis/'].src;
   const hub = '/' + href.split('/')[1];
   const hero = submenuHeroByRoute[hub as keyof typeof submenuHeroByRoute];
-  return hero?.src ?? submenuHeroByRoute['/hormonal-gecis'].src;
+  return hero?.src ?? submenuHeroByRoute['/hormonal-gecis/'].src;
 }
 
 // Mevcut sayının kapak dosyasından öne çıkan 3 yazı (idx 0-2)
@@ -48,7 +48,7 @@ const editorialPicks = (coverDossier?.articles ?? []).slice(0, 3).map((article, 
     tag: getHubLabel(article.href),
     title: article.title,
     body: article.excerpt,
-    href: article.href ?? `/sayi/${currentIssue.slug}`,
+    href: article.href ?? `/sayi/${currentIssue.slug}/`,
     thumbnailSrc: getHubThumbnail(article.href),
     thumbnailAlt: article.title,
     highlight: idx === 1,
@@ -64,7 +64,7 @@ const editorialRecent = (coverDossier?.articles ?? []).slice(3).map((article) =>
     dateLine: `${currentIssue.monthYear.toLocaleUpperCase('tr-TR')} · ${getHubLabel(article.href).toLocaleUpperCase('tr-TR')}`,
     title: article.title,
     excerpt: article.excerpt,
-    href: article.href ?? `/sayi/${currentIssue.slug}`,
+    href: article.href ?? `/sayi/${currentIssue.slug}/`,
     thumbnailSrc: getHubThumbnail(article.href),
     thumbnailAlt: article.title,
     author: writer?.displayName ?? 'Estranova',
@@ -73,8 +73,8 @@ const editorialRecent = (coverDossier?.articles ?? []).slice(3).map((article) =>
 });
 
 const scienceResearchPinnedPaths = [
-  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari',
-  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski',
+  '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',
+  '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/',
 ];
 
 const scienceResearchPrefix = '/bilimsel-pencere/yeni-arastirmalar/';
@@ -90,7 +90,7 @@ const scienceResearchRecent = staticArticles
   .sort(sortNewestFirst);
 
 function getArticleImage(path: string) {
-  return articleCardImageByRoute[path] ?? submenuHeroByRoute[path] ?? submenuHeroByRoute['/bilimsel-pencere'];
+  return articleCardImageByRoute[path] ?? submenuHeroByRoute[path] ?? submenuHeroByRoute['/bilimsel-pencere/'];
 }
 
 function getArticleWriterName(writerSlug: string): string {
@@ -149,7 +149,7 @@ const latestStreamArticles = staticArticles
   });
 const homeJourneyFeatured = homeJourneyItems.find((item) => item.featured) ?? homeJourneyItems[0];
 const hasHomeJourneySection = Boolean(
-  homeJourneyFeatured && (submenuHeroByRoute[homeJourneyFeatured.imageKey] ?? submenuHeroByRoute['/hormonal-gecis'])
+  homeJourneyFeatured && (submenuHeroByRoute[homeJourneyFeatured.imageKey] ?? submenuHeroByRoute['/hormonal-gecis/'])
 );
 
 const preventionCards = [
@@ -157,19 +157,19 @@ const preventionCards = [
     label: 'Güç',
     title: 'Kemik ve kas gücü',
     body: '40 sonrası sağlık yalnızca belirti yönetimi değildir. Hareket, beslenme ve düzenli takip birlikte düşünülür.',
-    href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
+    href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
   },
   {
     label: 'Kayıt',
     title: 'Tarama ve kayıt düzeni',
     body: 'Kontrol tarihlerini ve aile öyküsünü sade bir dosyada topla. Soruları önceden yazmak iyi bir başlangıçtır.',
-    href: '/hormonal-gecis/40-sonrasi/tarama-testleri',
+    href: '/hormonal-gecis/40-sonrasi/tarama-testleri/',
   },
   {
     label: 'Ritim',
     title: 'Uyku ve toparlanma',
     body: 'Gece düzeni değiştiğinde bunu irade meselesi gibi okumayalım. Bazen bedenin yeni ritmini anlamak gerekir.',
-    href: '/zihin-denge/uyku-dinlenme',
+    href: '/zihin-denge/uyku-dinlenme/',
   },
 ];
 
@@ -291,7 +291,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
 
         <div class="mt-9 flex justify-end md:mt-10">
           <a
-            href="/library"
+            href="/library/"
             class="group inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
           >
             Kütüphaneyi açın
@@ -431,7 +431,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
           </div>
           <div class="mt-6 flex justify-end">
             <a
-              href={`/sayi/${currentIssue.slug}`}
+              href={`/sayi/${currentIssue.slug}/`}
               class="text-sm font-semibold text-burgundy underline decoration-burgundy/50 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
             >
               Sayının tamamı →
@@ -513,7 +513,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
               scientificWriters.map((w) => (
                 <li class="flex shrink-0 snap-start" style="width: clamp(270px, 78vw, 340px);">
                   <a
-                    href={`/yazarlar/${w.slug}`}
+                    href={`/yazarlar/${w.slug}/`}
                     class="group relative flex w-full flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-white p-5 shadow-[0_28px_88px_-62px_rgba(44,22,28,0.32)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_38px_110px_-64px_rgba(44,22,28,0.42)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
                     <span class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/75 to-transparent"></span>
@@ -582,7 +582,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
 
         <div class="mt-10 flex justify-center">
           <a
-            href="/yayin-kurulu"
+            href="/yayin-kurulu/"
             class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
           >
             Tüm yayın kurulu →
@@ -655,7 +655,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
               lifestyleWriters.map((w) => (
                 <li class="flex shrink-0 snap-start" style="width: clamp(270px, 78vw, 340px);">
                   <a
-                    href={`/yazarlar/${w.slug}`}
+                    href={`/yazarlar/${w.slug}/`}
                     class="group relative flex w-full flex-col overflow-hidden rounded-[34px] border border-burgundy/12 bg-white p-5 shadow-[0_28px_88px_-62px_rgba(44,22,28,0.32)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_38px_110px_-64px_rgba(44,22,28,0.42)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
                   >
                     <span class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/75 to-transparent"></span>
@@ -724,13 +724,13 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
 
         <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           <a
-            href="/yayin-kurulu"
+            href="/yayin-kurulu/"
             class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
           >
             Tüm yayın kurulu →
           </a>
           <a
-            href="/yazarlar/estranova-editorial"
+            href="/yazarlar/estranova-editorial/"
             class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
           >
             Estranova Editörlerinden yazılar →
@@ -749,7 +749,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
           <p class="font-sans text-base leading-relaxed text-cream-soft/78 md:text-lg">
             İçeriklerimiz editöryal ve tıbbi incelemeden geçer. Kanıt dili, tıbbi sorumluluk notu ve yayın politikası her sayfanın sessiz güven katmanıdır.
             <a
-              href="/editoryal-politika/nasil-arastiriyoruz"
+              href="/editoryal-politika/nasil-arastiriyoruz/"
               class="ml-1 text-cream-soft underline decoration-cream-warm/70 underline-offset-4 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cream-warm/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
               >Kanıt seviyeleri nasıl belirlenir? →</a>
           </p>
@@ -758,17 +758,17 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
           class="mt-6 flex flex-col gap-2 font-sans sm:flex-row sm:flex-wrap sm:gap-x-3 sm:gap-y-1"
         >
           <a
-            href="/editoryal-politika"
+            href="/editoryal-politika/"
             class="text-xs uppercase tracking-[0.24em] text-cream-soft/70 transition hover:text-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-cream-warm/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
             >Editöryal Politika</a>
           <span class="hidden text-cream-warm sm:inline" aria-hidden="true">·</span>
           <a
-            href="/tibbi-sorumluluk"
+            href="/tibbi-sorumluluk/"
             class="text-xs uppercase tracking-[0.24em] text-cream-soft/70 transition hover:text-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-cream-warm/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
             >Tıbbi Sorumluluk Reddi</a>
           <span class="hidden text-cream-warm sm:inline" aria-hidden="true">·</span>
           <a
-            href="/editoryal-politika/nasil-arastiriyoruz"
+            href="/editoryal-politika/nasil-arastiriyoruz/"
             class="text-xs uppercase tracking-[0.24em] text-cream-soft/70 transition hover:text-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-cream-warm/45 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy-deep"
             >Nasıl Araştırıyoruz</a>
         </nav>
@@ -1027,7 +1027,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
 
         <div class="mt-8 flex justify-end">
           <a
-            href="/bilimsel-pencere/yeni-arastirmalar"
+            href="/bilimsel-pencere/yeni-arastirmalar/"
             class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
           >
             Tüm araştırma dosyasını incele →
@@ -1044,7 +1044,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
       </div>
       <div class="mx-auto max-w-6xl">
         <a
-          href="/library"
+          href="/library/"
           class="group relative grid gap-8 overflow-hidden rounded-[46px] border border-burgundy/14 bg-white p-8 shadow-[0_38px_120px_-72px_rgba(44,22,28,0.38)] ring-1 ring-black/[0.05] transition hover:-translate-y-1 hover:border-gold/40 md:grid-cols-[0.8fr_1.2fr] md:items-center md:p-10"
         >
           <span class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>

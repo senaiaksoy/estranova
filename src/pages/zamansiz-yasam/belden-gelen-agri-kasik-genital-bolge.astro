@@ -18,8 +18,8 @@ import { buildArticleSchemas } from '../../utils/article-schema';
 import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
-const pathname = '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam']!;
+const pathname = '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/';
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const articleTitle = 'Belden Gelen Ağrı Her Zaman Belde Kalmaz: Kasık ve Genital Bölgeye Vuran Ağrıyı Nasıl Okumalı?';
 const articleDescription =
@@ -46,7 +46,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '7 Mayıs 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'kasık ağrısı',
     'genital bölge ağrısı',
@@ -66,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -266,11 +266,11 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari',
-          '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz',
-          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban',
-          '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz',
-          '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+          '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
+          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
+          '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
+          '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
         ]}
       />
 

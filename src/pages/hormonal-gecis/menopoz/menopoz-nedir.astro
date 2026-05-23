@@ -36,10 +36,10 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopoz Nedir? — Temel Rehber';
 const articleDescription =
   'Menopozun tanımını, evrelerini, hormon değişimini ve uzun vadeli sağlık gündemini Estranova editöryal disipliniyle ele alan sakin başlangıç rehberi.';
-const pathname = '/hormonal-gecis/menopoz/menopoz-nedir';
+const pathname = '/hormonal-gecis/menopoz/menopoz-nedir/';
 const publishedDate = '11 Mayıs 2026';
 const readingMinutes = 5;
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoz']!;
+const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
 const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -48,7 +48,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate,
   pathname,
   articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  sectionPath: '/hormonal-gecis/',
   keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
   faqItems,
   siteUrl,
@@ -61,7 +61,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -277,9 +277,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/hormonal-gecis/40-sonrasi',
-          '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-          '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+          '/hormonal-gecis/40-sonrasi/',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+          '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
         ]}
       />
 

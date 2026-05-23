@@ -13,8 +13,8 @@ import { resolveSiteUrl } from '../../utils/seo';
 import { getIssueBySlug } from '../../data/issues';
 
 const issue = getIssueBySlug('01-mayis-2026-geceler');
-const issuePath = `/sayi/${issue?.slug ?? '01-mayis-2026-geceler'}`;
-const pathname = '/editorun-kosesi/mayis-2026';
+const issuePath = `/sayi/${issue?.slug ?? '01-mayis-2026-geceler'}/`;
+const pathname = '/editorun-kosesi/mayis-2026/';
 
 const articleTitle = "Sıcacık Köşe — Mayıs 2026: Eşik'in İlk Sayısı";
 const articleDescription =
@@ -28,7 +28,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '1 Mayıs 2026',
   pathname,
   articleSection: 'Editörün Köşesi',
-  sectionPath: '/editorun-kosesi',
+  sectionPath: '/editorun-kosesi/',
   keywords: [
     'Eşik dergisi',
     'Estranova editör köşesi',
@@ -172,9 +172,9 @@ const articleSchemas = buildArticleSchemas({
         class="mt-14"
         paths={[
           issuePath,
-          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan',
-          '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz',
-          '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin',
+          '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
+          '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
+          '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
         ]}
       />
 

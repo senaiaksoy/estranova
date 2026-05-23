@@ -18,7 +18,7 @@ import { buildArticleSchemas } from '../../utils/article-schema';
 import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
-const hero = submenuHeroByRoute['/zamansiz-yasam/kilo-artisi-menopoz']!;
+const hero = submenuHeroByRoute['/zamansiz-yasam/kilo-artisi-menopoz/']!;
 
 const tocEntries = [
   { id: 'neden-simdi', label: 'Neden Aynı Yaşamda Tartı Konuşmaya Başladı?' },
@@ -37,15 +37,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet';
 const articleDescription =
   'Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları yaşıt tonuyla anlatan rehber.';
-const faqItems = articleFaqs['/zamansiz-yasam/kilo-artisi-menopoz'] ?? [];
+const faqItems = articleFaqs['/zamansiz-yasam/kilo-artisi-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '28 Nisan 2026',
-  pathname: '/zamansiz-yasam/kilo-artisi-menopoz',
+  pathname: '/zamansiz-yasam/kilo-artisi-menopoz/',
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     'menopoz',
     'kilo artışı',
@@ -72,7 +72,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -354,9 +354,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
-            '/zamansiz-yasam/beslenme-yaslanma',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi',
-            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik',
+            '/zamansiz-yasam/beslenme-yaslanma/',
+            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
           ]}
         />
 

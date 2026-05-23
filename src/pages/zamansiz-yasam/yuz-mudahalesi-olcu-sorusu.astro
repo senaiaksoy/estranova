@@ -18,10 +18,10 @@ import { buildArticleSchemas } from '../../utils/article-schema';
 import { articleFaqs } from '../../data/article-faqs';
 import { resolveSiteUrl } from '../../utils/seo';
 
-const pathname = '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu';
+const pathname = '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/';
 // CLAUDE.md §6 — makale üst hero görseli daima parent hub'dan gelir.
 // memory: feedback_makale_hero_degismez_2026_05_10
-const hero = submenuHeroByRoute['/zamansiz-yasam']!;
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const articleTitle = "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'";
 const articleDescription =
@@ -47,7 +47,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '10 Mayıs 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
-  sectionPath: '/zamansiz-yasam',
+  sectionPath: '/zamansiz-yasam/',
   keywords: [
     '40 sonrası estetik',
     'yüz müdahalesi karar',
@@ -70,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/zamansiz-yasam" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
@@ -263,9 +263,9 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-10"
         paths={[
-          '/zamansiz-yasam/non-invaziv/cilt-cihazlari-rehberi',
-          '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari',
-          '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale',
+          '/zamansiz-yasam/non-invaziv/cilt-cihazlari-rehberi/',
+          '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
+          '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/',
         ]}
       />
 
