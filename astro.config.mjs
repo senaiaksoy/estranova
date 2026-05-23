@@ -10,6 +10,10 @@ const sitemapExcludedPaths = [
   '/mektup/',
   '/okuma-paneli/',
   '/sonra-oku/',
+  // Tasarım denemesi sayfası — SiteLayout `allowIndexing={false}` ile
+  // production'da da noindex; sitemap'te kalması GSC "noindex etiketiyle
+  // hariç tutuldu" hatası üretiyordu (2026-05-23).
+  '/logo-denemesi/',
 ];
 
 // https://astro.build/config
