@@ -30,9 +30,10 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <h2 class="mb-3 font-serif text-2xl">Şu anki durum</h2>
           {bannerActive ? (
             <p class="leading-relaxed text-ink/75">
-              Estranova; sayfa kullanımını anonim olarak ölçmek için isteğe bağlı analitik
-              çerezler kullanabilir. Bu çerezler yalnızca alt çerez bandından açıkça onay
-              vermeniz halinde yüklenir; reddederseniz site aynı şekilde çalışır.
+              Estranova; sayfa kullanımını anonim olarak ölçmek için Google Analytics 4
+              kullanabilir. Analitik çerezler yalnızca çerez tercih panelinden açıkça onay
+              vermeniz halinde açılır; reddederseniz site aynı şekilde çalışır ve yalnızca
+              çerezsiz, temel ziyaret ölçümü yapılır.
             </p>
           ) : (
             <p class="leading-relaxed text-ink/75">
@@ -66,8 +67,10 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <h2 class="mb-3 font-serif text-2xl">Analitik çerezler — Google Analytics 4</h2>
           {analyticsActive ? (
             <p class="leading-relaxed text-ink/75">
-              Onay verirseniz Google Analytics 4 yüklenir; reddederseniz hiçbir GA4
-              script'i sayfaya eklenmez.
+              Google Analytics 4, kararınıza uygun Consent Mode durumuyla yüklenir.
+              Onay verirseniz <em>analytics_storage</em> açık olur ve analitik çerezleri
+              kullanılabilir; reddederseniz <em>analytics_storage</em> kapalı kalır ve
+              yalnızca çerezsiz temel ölçüm pingleri gönderilir.
             </p>
           ) : (
             <p class="leading-relaxed text-ink/75">

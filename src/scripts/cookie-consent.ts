@@ -4,15 +4,16 @@
  * Akış:
  *   1. Sayfa yüklendiğinde `#estranova-cookie-banner` aranır.
  *      • Yoksa (banner feature flag kapalı) sessizce çıkılır.
- *      • Varsa karar verilmemişse 1.5s sonra şerit kayar.
+ *      • Varsa karar verilmemişse sayfa açılışında modal gösterilir.
  *   2. Kullanıcı butonları:
  *        Tümünü kabul et   → analytics: true
  *        Reddet            → analytics: false
  *        Tercihler         → şerit dikey büyür (kategori toggle)
  *        Tercihlerimi kaydet → toggle değerine göre yazar
- *        ESC / kapat (X)    → analytics: false (12 ay tekrar sorulmaz)
  *   3. Karar yazıldığında `estranova:consent-change` event yayılır;
- *      `loadAnalytics()` analytics onayı geldiyse GA4'ü dinamik yükler.
+ *      `loadAnalytics()` GA4'ü kullanıcının kararına uygun Consent Mode
+ *      durumuyla yükler. Kabulde analytics_storage granted, redde denied
+ *      olur; reddeden ziyaretler çerezsiz temel ölçüm pingiyle sayılabilir.
  *   4. Footer'daki [data-cookie-trigger="open"] butonu banner'ı
  *      yeniden açar (mevcut karar pre-fill edilir).
  *
@@ -40,7 +41,16 @@ declare global {
 }
 
 const BANNER_ID = 'estranova-cookie-banner';
-const SHOW_DELAY_MS = 1500;
+const FOCUSABLE_SELECTOR = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
+
+let previousBodyOverflow: string | null = null;
 
 function getBanner(): HTMLElement | null {
   return document.getElementById(BANNER_ID);
@@ -50,8 +60,52 @@ function setVisible(banner: HTMLElement, visible: boolean): void {
   banner.dataset.state = visible ? 'open' : 'closed';
   banner.setAttribute('aria-hidden', visible ? 'false' : 'true');
   if (visible) {
-    const focusTarget = banner.querySelector<HTMLButtonElement>('[data-action="reject-all"]');
-    focusTarget?.focus();
+    if (previousBodyOverflow === null) {
+      previousBodyOverflow = document.body.style.overflow;
+    }
+    document.body.style.overflow = 'hidden';
+    window.requestAnimationFrame(() => focusInitialControl(banner));
+  } else {
+    document.body.style.overflow = previousBodyOverflow ?? '';
+    previousBodyOverflow = null;
+  }
+}
+
+function getFocusableControls(banner: HTMLElement): HTMLElement[] {
+  return Array.from(banner.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => {
+    return !element.hasAttribute('hidden') && element.offsetParent !== null;
+  });
+}
+
+function focusInitialControl(banner: HTMLElement): void {
+  const focusTarget =
+    banner.querySelector<HTMLButtonElement>('[data-action="accept-all"]') ??
+    getFocusableControls(banner)[0];
+  focusTarget?.focus();
+}
+
+function trapModalFocus(banner: HTMLElement, event: KeyboardEvent): void {
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    focusInitialControl(banner);
+    return;
+  }
+  if (event.key !== 'Tab') return;
+
+  const focusable = getFocusableControls(banner);
+  if (focusable.length === 0) {
+    event.preventDefault();
+    return;
+  }
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
   }
 }
 
@@ -94,20 +148,27 @@ function handleAction(banner: HTMLElement, action: string): void {
       close(banner);
       break;
     }
-    case 'close':
-      writeConsent({ analytics: false });
-      close(banner);
-      break;
   }
 }
 
-async function loadAnalytics(state: ConsentState): Promise<void> {
-  if (!state.analytics) return;
+async function loadAnalytics(state: ConsentState, options: { sendConsentEvent?: boolean } = {}): Promise<void> {
   if (!featureFlags.analyticsEnabled) return;
   const measurementId = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID as string | undefined;
   if (!measurementId) return;
-  if (window.__estranovaGa4Loaded) return;
-  window.__estranovaGa4Loaded = true;
+  const analyticsStorage = state.analytics ? 'granted' : 'denied';
+
+  if (window.__estranovaGa4Loaded && window.gtag) {
+    window.gtag('consent', 'update', {
+      analytics_storage: analyticsStorage,
+    });
+    if (options.sendConsentEvent) {
+      window.gtag('event', 'cookie_consent_choice', {
+        analytics_consent: state.analytics ? 'accepted' : 'rejected',
+        non_interaction: true,
+      });
+    }
+    return;
+  }
 
   // dataLayer + gtag stub MUST be initialized BEFORE the gtag.js script tag
   // is appended. We follow Google's official snippet exactly — function
@@ -127,22 +188,18 @@ async function loadAnalytics(state: ConsentState): Promise<void> {
     window.dataLayer?.push(arguments);
   }
   window.gtag = gtag;
+  window.__estranovaGa4Loaded = true;
 
-  // Consent Mode v2: declare consent explicitly so GA4 records the hit as
-  // "analytics granted" rather than the implicit/denied default. Without
-  // this, the gcd= parameter on /collect requests encodes "consent not
-  // declared" and reports may suppress the data. We default everything to
-  // denied (privacy-safe), then immediately grant analytics_storage because
-  // the user already accepted via the banner before reaching this point.
-  // ad_* signals stay denied: Estranova does not run ads.
+  // Consent Mode v2: declare the user's choice before loading gtag.js.
+  // Accepted visitors get analytics_storage=granted. Rejected visitors keep
+  // analytics_storage=denied, which lets GA4 receive cookieless consent-mode
+  // pings without writing analytics cookies. ad_* signals stay denied:
+  // Estranova does not run ads.
   gtag('consent', 'default', {
-    analytics_storage: 'denied',
+    analytics_storage: analyticsStorage,
     ad_storage: 'denied',
     ad_user_data: 'denied',
     ad_personalization: 'denied',
-  });
-  gtag('consent', 'update', {
-    analytics_storage: 'granted',
   });
 
   gtag('js', new Date());
@@ -151,6 +208,12 @@ async function loadAnalytics(state: ConsentState): Promise<void> {
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
   });
+  if (options.sendConsentEvent) {
+    gtag('event', 'cookie_consent_choice', {
+      analytics_consent: state.analytics ? 'accepted' : 'rejected',
+      non_interaction: true,
+    });
+  }
 
   const script = document.createElement('script');
   script.async = true;
@@ -172,10 +235,7 @@ function init(): void {
   });
 
   banner.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      writeConsent({ analytics: false });
-      close(banner);
-    }
+    trapModalFocus(banner, event);
   });
 
   document.addEventListener('click', (event) => {
@@ -190,14 +250,14 @@ function init(): void {
 
   window.addEventListener(CONSENT_EVENT, (event) => {
     const detail = (event as CustomEvent<ConsentState>).detail;
-    void loadAnalytics(detail);
+    void loadAnalytics(detail, { sendConsentEvent: true });
   });
 
   const existing = readConsent();
   if (existing) {
     void loadAnalytics(existing);
   } else if (!hasDecided()) {
-    window.setTimeout(() => setVisible(banner, true), SHOW_DELAY_MS);
+    setVisible(banner, true);
   }
 }
 

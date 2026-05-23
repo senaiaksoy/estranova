@@ -1,13 +1,14 @@
 /**
  * Çerez onay durumu — localStorage tabanlı.
  *
- * Estranova şu an analitik / pazarlama çerezi yüklemez. Bu modül,
+ * Estranova analitik tercihini açık kullanıcı kararıyla yönetir. Bu modül,
  * `featureFlags.cookieBannerEnabled` aktive edildiğinde devreye girer:
  *   • Kullanıcı kararı `localStorage.estranova_consent_v1` altında saklanır
  *   • Karar 12 ay (CONSENT_DURATION_MS) sonra geçersiz sayılır ve
  *     yeniden sorulur
  *   • Bir karar yazıldığında `estranova:consent-change` custom event
- *     fırlatılır; GA4 yükleyicisi bu olayı dinler
+ *     fırlatılır; GA4 yükleyicisi bu olayı dinler ve Consent Mode durumunu
+ *     kullanıcı kararına göre ayarlar
  *
  * Bu modül SSR güvenlidir: `window`/`localStorage` yokken sessizce
  * `null` döner ve hata fırlatmaz.

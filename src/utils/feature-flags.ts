@@ -75,20 +75,22 @@ export interface FeatureFlags {
   /**
    * Çerez onay banner'ı görünürlüğü.
    * Aktif olunca:
-   *   • İlk ziyarette alt şerit kayar (1.5s gecikmeli)
+   *   • İlk ziyarette merkez modal açılır ve seçim yapılana kadar görünür
    *   • Footer'a "Çerez tercihleri" linki çıkar
    *   • Kullanıcı kararı 12 ay localStorage'da saklanır
-   * Banner kapsamı: zorunlu (her zaman açık) + analitik (opt-in GA4).
+   * Banner kapsamı: zorunlu (her zaman açık) + analitik çerez tercihi.
    * Tek başına aktive etmek anlamlıdır yalnızca analyticsEnabled da
-   * birlikte aktive edildiğinde; aksi halde banner var ama yükleyecek
+   * birlikte aktive edildiğinde; aksi halde banner var ama ölçülecek
    * analytics kalmaz.
    */
   cookieBannerEnabled: boolean;
 
   /**
    * Google Analytics 4 yüklemesi.
-   * Aktif olunca + kullanıcı banner üzerinden "Analitik" onayını verince
-   * GA4 dinamik olarak yüklenir; öncesinde script tag DOM'a eklenmez.
+   * Aktif olunca GA4 kullanıcının banner kararına uygun Consent Mode
+   * durumuyla dinamik olarak yüklenir: kabulde analytics_storage granted,
+   * redde analytics_storage denied. Reddeden ziyaretler çerez yazmadan
+   * temel ölçüm pingiyle sayılabilir.
    * Gereksinim: PUBLIC_GA4_MEASUREMENT_ID env var (Cloudflare Pages).
    * Yapılandırma notu: GA4 panelinde data retention 14 ay, Google Signals
    * kapalı, ads personalization kapalı tutulur. Bu kod ek olarak
