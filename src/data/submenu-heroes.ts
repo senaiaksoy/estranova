@@ -81,8 +81,8 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Sabah ışığında ahşap masada açık ajanda, çay bardağı ve not alınmış sağlık başlıkları; menopoza hazırlıkta sakin takip ve kontrol teması',
   },
   '/zamansiz-yasam/': {
-    src: '/images/heroes/zamansiz-yasam.webp',
-    alt: 'Akdeniz longevity temalı geç-sabah brunch sofrası — taş duvarlı bir bahçe terasında zeytin dalları altında üç yaşıt Türk kadın (46-52) yavaş yemek paylaşımı; solda yoğurta bal damlatan kestane ponytail, ortada terracotta wrap içinde portakal suyu tutan gülen yüz, sağda cream kaftan içinde şeftali dilimleyen koyu auburn; bakımlı boyalı saçlar, eskimiş rustik ahşap masada incir + nar + üzüm + zeytin + ceviz + ekmek + zeytinyağı + Türk kahvesi; honey-toned taş duvar + bougainvillea bokeh; uzun vadeli yaşam ve sosyal yavaş yaşam teması',
+    src: '/images/library/editorial/anil-yalmaz-harekete-yeniden-baslamak-byline.webp',
+    alt: 'İstanbul manzaralı sıcak bir evde, mat üzerinde kontrollü hareket hazırlığında duran 40+ kadın; Zamansız Yaşam bölümünde güç, denge ve sürdürülebilir hareket temasını anlatan editoryal görsel',
   },
   '/zamansiz-yasam/vitaminler/': {
     src: '/images/library/editorial/zy-vitaminler.webp',
