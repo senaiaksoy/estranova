@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+    writerSlug: 'anil-yalmaz',
+    approvedAt: '2026-05-26',
+    note: 'Anil Yalmaz author approval received in Codex thread on 2026-05-26. Warm first-person editorial draft published with supplied movement image as article byline/card visual; static manifest, FAQ schema and production archive were aligned.',
+  },
+  {
     pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
     writerSlug: 'duygu-karaosmanoglu',
     approvedAt: '2026-05-14',

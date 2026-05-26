@@ -15,8 +15,8 @@ export interface Writer {
   // ancak kadro kartları, arama ve /yazarlar rotalarında görünmez.
   status?: 'active' | 'inactive';
   // 'lifestyle' = magazinsel yaşıt sesi (doktor değil, kendi uzmanlığı + 40+
-  // kadın sağlığı kesişimi); 'scientific' = doktor / klinik uzman, kendi
-  // alanında bilimsel anlatım. Default 'lifestyle'.
+  // kadın sağlığı kesişimi); 'scientific' = hekim / klinik uzman / hareket
+  // uzmanı, kendi alanında bilimsel anlatım. Default 'lifestyle'.
   category?: 'lifestyle' | 'scientific';
   writingStyle?: {
     voice: string;
@@ -476,6 +476,46 @@ export const writers: Writer[] = [
         'Pediatrik ortopedi / spor yaralanmaları geneli — Estranova menopoz odağı dışı.',
         'Sporcu performans odaklı içerik (Alara alanı; Bülent için ayrı yasak).',
         'Mahrem (Senai) / endokrin (Metin) / kardiyo (Alp) / dermatoloji (Gonca) / cerrahi yüz (Çağrı Sade) / dental (Elif/Duygu) / fizyoterapi (Ersin) eksen karışıklığı.',
+      ],
+    },
+  },
+  {
+    // Bilimsel yazar — hareket, güçlenme ve sürdürülebilir egzersiz.
+    // Anıl tıbbi danışman değil; yayın kurulunda "Hareket ve Egzersiz
+    // Danışmanı" olarak kalır. Bilimsel yazar konumu, egzersiz okuryazarlığı
+    // ve 40+ kadın bedeninde güvenli hareket çerçevesiyle sınırlıdır.
+    slug: 'anil-yalmaz',
+    displayName: 'Anıl Yalmaz',
+    role: 'Hareket & Egzersiz Bilimsel Yazarı',
+    ageBand: 'Belirtilmedi',
+    publicBio:
+      'Spor Bilimleri mezunu bir hareket uzmanı; Pilates ve medikal fitness eğitimleri aldı. Estranova\'da hareket, güçlenme ve sürdürülebilir egzersiz rutinlerini 40+ kadın bedeninin değişen ihtiyaçlarıyla birlikte ele alıyor. Hızlı dönüşüm vaadi yerine küçük, düzenli ve güvenli adımları önemseyen bir yaklaşımı var.',
+    signaturePhrase:
+      '40+ kadın bedeninde hareketi performans baskısı değil; güç, denge ve sürdürülebilirlik meselesi olarak okuyan hareket uzmanı.',
+    focusAreas: ['Hareket & Egzersiz', 'Güçlenme', 'Sürdürülebilir Rutin'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice:
+        'Sakin, pratik ve öğretici hareket uzmanı tonu; motive eder ama performans baskısı kurmaz.',
+      rhythm:
+        'Kısa-orta cümleler; gündelik beden farkındalığı → bilimsel gerekçe → güvenli küçük adım akışı.',
+      framing:
+        'Hareketi kilo, görünüm veya disiplin baskısı üzerinden değil; kas gücü, denge, eklem güvenliği ve günlük yaşam kapasitesi üzerinden kurar.',
+      dos: [
+        'Hareket önerilerini genel bilgilendirme düzeyinde tut; kişisel program gibi yazma.',
+        'Küçük başlangıç, düzenlilik ve beden yanıtını izleme fikrini merkeze al.',
+        '40+ kadın bedeninde kas gücü, denge ve mobilite başlıklarını sade mekanizma diliyle açıkla.',
+        'Ağrı, nefes darlığı, baş dönmesi veya yeni başlayan belirti varsa uzman değerlendirmesini hatırlat.',
+        'Egzersizi görünüm hedefinden çok günlük yaşam kapasitesiyle ilişkilendir.',
+      ],
+      donts: [
+        'Set/tekrar/sıklık içeren kişisel egzersiz reçetesi verme.',
+        'Kilo verme, incelme, hızlı dönüşüm veya performans vaadi kurma.',
+        'Önce-sonra anlatımı, başarı hikayesi veya danışan referansı kullanma.',
+        'Klinik tanı, tedavi veya rehabilitasyon planı yazma; fizyoterapi ve hekim alanına taşma.',
+        'Personal training hizmeti, randevu, paket, fiyat veya başvuru çağrısı yapma.',
+        'Spesifik cihaz, salon, marka, takviye veya ekipman pazarlaması yapma.',
       ],
     },
   },

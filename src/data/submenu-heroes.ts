@@ -307,6 +307,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/zy-kas-iskelet-agrilari-esneme.webp',
     alt: 'Aydınlık bir ev köşesinde nazik esneme yapan olgun kadın; 40 sonrası kas-iskelet ağrıları yazısı için kart görseli',
   },
+  '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/': {
+    src: '/images/library/editorial/anil-yalmaz-harekete-yeniden-baslamak-byline.webp',
+    alt: 'İstanbul manzaralı sıcak bir evde, mat üzerinde kontrollü step-up hazırlığında duran 40+ kadın; harekete yeniden başlama, denge ve sürdürülebilir güçlenme yazısı için kart görseli',
+  },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
     alt: 'Ev balkonunda taze otlarla ilgilenen krem tonlarda giyinmiş kadın; menopozal kilo ve metabolik sağlık yazısı için kart görseli',

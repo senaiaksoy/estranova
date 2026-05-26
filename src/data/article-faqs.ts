@@ -811,6 +811,33 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Gece uykudan uyandıran ağrı, travma öyküsü, güç kaybı, ilerleyen şişlik ya da nörolojik yakınmalar varsa daha hızlı değerlendirme gerekir. Çünkü bazı durumlarda mesele yalnızca yüklenme değildir.',
     },
   ],
+  '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/': [
+    {
+      question: 'Uzun süredir spor yapmadıysam yürüyüşle başlamak yeterli mi?',
+      answer:
+        'Yürüyüş iyi bir başlangıç olabilir; özellikle dolaşım, genel dayanıklılık ve ruh hali için değerli bir kapı açar. Ancak kas gücü, denge ve hareket açıklığı için zamanla güvenli güçlenme ve denge çalışmaları da plana eklenebilir.',
+    },
+    {
+      question: "Ağırlık çalışmak 40'tan sonra güvenli mi?",
+      answer:
+        'Çoğu kişi için doğru teknik, uygun doz ve kişisel sağlık durumu dikkate alındığında güç çalışması değerlidir. Başlangıç seviyesi, eklem geçmişi, osteoporoz riski, tansiyon, kalp sağlığı ve mevcut ağrılar planı değiştirebilir.',
+    },
+    {
+      question: 'Her gün hareket etmek gerekir mi?',
+      answer:
+        'Her gün aynı yoğunlukta egzersiz yapmak gerekmez. Bazı günler yürüyüş, bazı günler hareket açıklığı, bazı günler güçlenme, bazı günler yalnızca hafif esneme ve nefes çalışması daha uygun olabilir.',
+    },
+    {
+      question: 'Hareketten sonra ağrı olması normal mi?',
+      answer:
+        'Hafif kas hassasiyeti, özellikle uzun aradan sonra görülebilir. Fakat keskin, eklem içine binen, uyuşma veya güç kaybıyla gelen, topallatan ya da birkaç gün içinde yatışmayan ağrı normal kabul edilmemelidir.',
+    },
+    {
+      question: 'Menopoz döneminde hareket kilo vermek için mi yapılmalı?',
+      answer:
+        'Kilo yönetimi bazı kadınlar için gündeme gelebilir, ancak hareketin değeri yalnızca kilo üzerinden okunmamalıdır. Kas gücü, kemik sağlığı, denge, uyku, metabolik esneklik ve günlük yaşam kapasitesi en az tartı kadar önemlidir.',
+    },
+  ],
   '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': [
     {
       question: 'CoQ10 gerçekten anti-aging için güçlü kanıtlı bir takviye mi?',

@@ -18,6 +18,26 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+    title: "40'tan Sonra Harekete Yeniden Başlamak: Daha Sert Değil, Daha Akıllı",
+    description:
+      '40 sonrası harekete yeniden başlamak için güç, denge, hareket açıklığı ve sürdürülebilirlik ekseninde sıcak bir başlangıç rehberi.',
+    publishedDate: '26 Mayıs 2026',
+    writerSlug: 'anil-yalmaz',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      '40 sonrası hareket',
+      'harekete yeniden başlamak',
+      'menopozda egzersiz',
+      'kas gücü',
+      'denge',
+      'hareket açıklığı',
+      'sürdürülebilir egzersiz',
+      'güvenli hareket',
+    ],
+  },
+  {
     path: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
     title: 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak',
     description:
