@@ -99,17 +99,111 @@ export const dossiers: MonthlyDossier[] = [
       ],
     status: 'current',
   },
+  {
+    slug: '2026-06-guc-esigi',
+    monthYear: 'Haziran 2026',
+    monthYearISO: '2026-06',
+    kicker: 'HAZIRAN 2026 · DOSYA',
+    title: 'Güç Eşiği',
+    subtitle: "40'tan sonra bedeni yeniden zorlamadan kurmak",
+    lede:
+      "40'tan sonra güç, daha fazla zorlanmak değil; kası, kemiği, dengeyi, uykuyu ve enerjiyi aynı hayatın içinde yeniden duymak. Bu ay altı yazı, bedeni performans baskısı kurmadan okumaya çağırıyor.",
+    curatorSlug: 'anil-yalmaz',
+    editorNote:
+      "Güç kelimesi bazen sert gelir: daha çok çalışmak, daha çok sıkmak, daha çok dayanmak. Oysa 40'tan sonra iyi soru çoğu zaman bu değil. İyi soru şu: hangi kas günlük hayatı daha rahat taşır, hangi eklem sessizce yardım ister, hangi kemik kaybı henüz görünmeden konuşulmalı, hangi yorgunluk yalnızca tembellik sanılmamalı?\n\nBu dosyada gücü tek bir egzersiz başlığına sıkıştırmıyoruz. Anıl Yalmaz hareketin başlangıç haritasını kuruyor; Prof. Dr. Bülent Aksoy kemiği ve kırık riskini daha erken konuşmaya çağırıyor; Fzt. Ersin Saraç dengeyi ayak-kalça-gövde hattında okuyor; Dr. Metin Alış yorgunluğu tiroid, metabolizma ve kas ekseninde ayırıyor; Alara Baykent yaz başlarken bedeni uyandırmayı performans değil devamlılık olarak ele alıyor; Başak Pelister ise gücü çanta, merdiven, anne-kız sohbeti ve kendi küçük itiraflarıyla daha kişisel bir yerden okuyor.",
+    heroImage: {
+      src: '/images/library/editorial/zy-hareket-saglik.webp',
+      alt: "40 sonrası hareket ve güçlenme temasını taşıyan sakin editoryal sahne; bedeni zorlamadan yeniden kurma hissi",
+    },
+    articles: [
+      {
+        title: "40'tan Sonra Harekete Yeniden Başlamak: Daha Sert Değil, Daha Akıllı",
+        excerpt:
+          'Uzun aradan sonra bedeni korkutmadan yeniden hareket ettirmek: güç, denge, hareket açıklığı ve nefes aynı başlangıçta buluşuyor.',
+        writerSlug: 'anil-yalmaz',
+        status: 'published',
+        href: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+        readingMinutes: 8,
+      },
+      {
+        title: 'Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular',
+        excerpt:
+          'Kemik sağlığı bir rapor satırından ibaret değil; düşme riski, aile öyküsü, D vitamini, direnç egzersizi ve izlem ritmi de konuşmaya katılıyor.',
+        writerSlug: 'bulent-aksoy',
+        status: 'published',
+        href: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+        readingMinutes: 7,
+      },
+      {
+        title: 'Denge Kaybolmadan: Ayak, Kalça ve Gövde Hattını Yeniden Duymak',
+        excerpt:
+          'Denge çoğu zaman bir düşme yaşanmadan önce konuşulmaz. Oysa ayak tabanı, kalça çevresi ve gövde hattı 40 sonrası hareket güveninin temelini kurar.',
+        writerSlug: 'ersin-sarac',
+        status: 'published',
+        href: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
+        readingMinutes: 7,
+      },
+      {
+        title: 'Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?',
+        excerpt:
+          'Sabah ağır gelen beden her zaman tek bir nedene bağlanmaz. Tiroid, kas kütlesi, uyku ve metabolik değişim yan yana okunur.',
+        writerSlug: 'metin-alis',
+        status: 'published',
+        href: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
+        readingMinutes: 8,
+      },
+      {
+        title: 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık',
+        excerpt:
+          'Mevsim değişirken hareketi hedef baskısı gibi değil, bedene yeniden ritim kazandıran sürdürülebilir bir hazırlık gibi düşünmek.',
+        writerSlug: 'alara-baykent',
+        status: 'published',
+        href: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
+        readingMinutes: 6,
+      },
+      {
+        title: 'Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır',
+        excerpt:
+          'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini spor cümlelerinden değil; çanta, merdiven ve anne-kız sohbeti içinden yeniden okuyor.',
+        writerSlug: 'basak-pelister',
+        status: 'published',
+        href: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',
+        readingMinutes: 6,
+      },
+    ],
+    status: 'upcoming',
+  },
 ];
 
+function currentMonthInTurkeyISO(date = new Date()): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Istanbul',
+    year: 'numeric',
+    month: '2-digit',
+  }).format(date);
+}
+
+export function isDossierReleased(dossier: MonthlyDossier, date = new Date()): boolean {
+  return dossier.monthYearISO <= currentMonthInTurkeyISO(date);
+}
+
+export const releasedDossiers: MonthlyDossier[] = dossiers.filter((dossier) =>
+  isDossierReleased(dossier),
+);
+
 export const currentDossier: MonthlyDossier =
-  dossiers.find((d) => d.status === 'current') ?? dossiers[0];
+  releasedDossiers
+    .filter((d) => d.status !== 'archived' && d.monthYearISO <= currentMonthInTurkeyISO())
+    .sort((a, b) => b.monthYearISO.localeCompare(a.monthYearISO))[0] ??
+  dossiers.find((d) => d.status === 'current') ??
+  dossiers[0];
 
 export function getDossierBySlug(slug: string): MonthlyDossier | undefined {
   return dossiers.find((d) => d.slug === slug);
 }
 
 export function getArchivedDossiers(): MonthlyDossier[] {
-  return dossiers
+  return releasedDossiers
     .filter((d) => d.status === 'archived')
     .sort((a, b) => b.monthYearISO.localeCompare(a.monthYearISO));
 }

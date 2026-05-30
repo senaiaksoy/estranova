@@ -838,6 +838,141 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Kilo yönetimi bazı kadınlar için gündeme gelebilir, ancak hareketin değeri yalnızca kilo üzerinden okunmamalıdır. Kas gücü, kemik sağlığı, denge, uyku, metabolik esneklik ve günlük yaşam kapasitesi en az tartı kadar önemlidir.',
     },
   ],
+  '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/': [
+    {
+      question: 'Kemik ölçümü normal çıktıysa kırık riski tamamen biter mi?',
+      answer:
+        'Tamamen kapanmaz. Kemik yoğunluğu iyi bir haber olabilir; yine de düşme riski, önceki kırık, aile öyküsü, kas gücü ve eşlik eden hastalıklar tabloya eklenir. Rapor rahatlatır, ama bütün hikayeyi tek başına anlatmaz.',
+    },
+    {
+      question: 'Osteopeni mutlaka ilaç kullanmak anlamına mı gelir?',
+      answer:
+        'Hayır, bu otomatik bir eşik değildir. Osteopenide yaş, kırık öyküsü, düşme riski ve aile öyküsü birlikte okunur. Bazı kadınlarda izlem ve yaşam düzeni yeterli olurken, bazı kadınlarda dosyayı biraz daha yakından açmak gerekir.',
+    },
+    {
+      question: 'Kemik için yürüyüş yeterli mi?',
+      answer:
+        'Yürüyüş iyi bir kapı açar; ritim, dolaşım ve denge için değerlidir. Ama kemik ve kas yalnızca adım sayısıyla güçlenmez. Zamanla güvenli direnç egzersizleri ve denge çalışmaları da konuşmaya katılabilir.',
+    },
+    {
+      question: 'D vitamini takviyesine herkes başlamalı mı?',
+      answer:
+        'Rastgele başlamak iyi fikir değildir. D vitamini düzeyi, beslenme, güneşle temas, kemik riski ve mevcut hastalıklar aynı kişide farklı bir yanıt verebilir. Bu yüzden “herkese aynı doz” yerine ölçülü bir değerlendirme daha güvenlidir.',
+    },
+    {
+      question: 'Düşme sonrası ağrı azaldıysa yine de kontrol gerekir mi?',
+      answer:
+        'Ağrının azalması rahatlatır ama kırığı tamamen dışlamaz. Kalça, kasık, bel, omurga veya el bileği hattında basmayı, yürümeyi ya da günlük işi bozan ağrı varsa “geçer” diye beklememek daha doğru olur.',
+    },
+  ],
+  '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/': [
+    {
+      question: 'Denge sorunu yalnızca baş dönmesiyle mi anlaşılır?',
+      answer:
+        'Hayır. Baş dönmesi olmadan da denge güveni azalabilir. Merdiven inerken trabzana fazla yüklenmek, çorap giyerken oturacak yer aramak ya da gece yürürken duvara dokunmak da küçük ama değerli ipuçlarıdır.',
+    },
+    {
+      question: 'Ayak tabanı denge için neden önemlidir?',
+      answer:
+        'Çünkü beden zemini önce ayaktan okur. Taban duyusu, ayak bileği hareketi, parmakların zemini kavraması ve ayakkabı seçimi günlük denge hissini şaşırtıcı ölçüde değiştirebilir.',
+    },
+    {
+      question: 'Denge çalışmasına tek ayak üzerinde durarak başlamak doğru mu?',
+      answer:
+        'Herkes için ilk adım bu olmayabilir. Bazı bedenler önce ağırlığı güvenle aktarmayı, ayak bileğini hareket ettirmeyi veya kalçayı kontrol etmeyi öğrenmelidir. Başlangıç seviyesi risk, ağrı ve ev güvenliğiyle birlikte seçilir.',
+    },
+    {
+      question: 'Ev içinde denge için ilk bakılacak şey nedir?',
+      answer:
+        'Önce evin küçük tuzaklarına bakılır: kayan halı, zayıf ışık, kablo, kaygan terlik, dar geçiş. Bazen denge çalışmasının ilk adımı egzersiz matı değil, gece yürüdüğünüz yolu biraz daha güvenli hale getirmektir.',
+    },
+    {
+      question: 'Ne zaman fizyoterapi veya tıbbi değerlendirme düşünülmeli?',
+      answer:
+        'Sık düşme, yeni başlayan belirgin dengesizlik, travma sonrası ağrı, uyuşma, güç kaybı veya günlük hareketi kısıtlayan güvensizlik varsa beklememek gerekir. Baş dönmesi eşlik ediyorsa tablo ayrıca tıbbi açıdan da okunmalıdır.',
+    },
+  ],
+  '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/': [
+    {
+      question: 'Yorgunluk varsa önce tiroid testi mi yapılmalı?',
+      answer:
+        'Tiroid sık akla gelir, haklı olarak da önemli bir başlıktır. Ama yorgunluğu tek testle kapatmak çoğu zaman yetmez. Süre, uyku, kilo değişimi, menopoz durumu, demir depoları, B12, D vitamini ve glikoz metabolizması da aynı hikayeye dahil olabilir.',
+    },
+    {
+      question: 'TSH normal çıkarsa tiroid tamamen dışlanır mı?',
+      answer:
+        'Normal TSH çoğu zaman rahatlatıcıdır; yine de her sorunun kapağını tek başına kapatmaz. Yakınmaların biçimi, fT4, ilaç kullanımı, tiroid antikorları ve öykü bazı kişilerde ek bakışı gerekli kılabilir.',
+    },
+    {
+      question: 'Yemekten sonra gelen uyku hali metabolik bir işaret olabilir mi?',
+      answer:
+        'Olabilir. Özellikle yemekten sonra gözlerin kapanması, tatlı isteği, karın çevresinde artış ve ailede diyabet öyküsü aynı tabloda buluşuyorsa glikoz metabolizmasına ayrıca bakmak anlamlıdır.',
+    },
+    {
+      question: 'Kas kütlesi azalması gerçekten yorgunluk yapar mı?',
+      answer:
+        'Evet, kas yalnızca spor salonunun konusu değildir. Merdiven, çanta taşıma, uzun yürüyüş ve sabah yataktan kalkış bile kas kalitesinden etkilenir. Kas azaldığında aynı gün daha ağır yaşanabilir.',
+    },
+    {
+      question: 'D vitamini düşüklüğü bütün yorgunluğu açıklar mı?',
+      answer:
+        'Tek başına her zaman açıklamaz. D vitamini düşüklüğü önemli olabilir; ama yorgunlukta demir, B12, tiroid, uyku, metabolik durum ve eşlik eden hastalıklar da dosyaya girer. Tek değere fazla anlam yüklememek gerekir.',
+    },
+  ],
+  '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/': [
+    {
+      question: 'Yaz öncesi harekete yürüyüşle başlamak yeterli mi?',
+      answer:
+        'Yürüyüş çok iyi bir başlangıç olabilir; özellikle ritim, nefes ve dayanıklılık için. Yine de yazı daha rahat taşımak istiyorsanız zamanla kas gücü, denge ve hareket açıklığı için güvenli ek çalışmalar da işe yarar.',
+    },
+    {
+      question: 'Her gün egzersiz yapmak gerekir mi?',
+      answer:
+        'Her gün aynı şeyi yapmak gerekmez. Bir gün yürüyüş, bir gün hafif güçlenme, bir gün esneme, bir gün yalnızca toparlanma olabilir. Devam eden ritim, kusursuz takvimden daha değerlidir.',
+    },
+    {
+      question: 'Sıcak havada hareket ederken nelere dikkat edilmeli?',
+      answer:
+        'Sabah erken saatler, gölge, yeterli sıvı ve daha yumuşak tempo iyi başlangıçtır. Nefesiniz sertleşiyor, başınız dönüyor, bulantı ya da çarpıntı geliyorsa “biraz daha dayanayım” demek iyi bir fikir değildir.',
+    },
+    {
+      question: 'Ağrı varken hareket tamamen bırakılmalı mı?',
+      answer:
+        'Her ağrı hareketi tamamen yasaklamaz. Ama keskinleşen, artan, ekleme binen, topallatan ya da birkaç gün içinde yatışmayan ağrı “duy beni” diyen bir işarettir. O noktada kişisel değerlendirme daha güvenlidir.',
+    },
+    {
+      question: 'Yaz hedefi kilo vermek olmak zorunda mı?',
+      answer:
+        'Hayır. Yaz hedefi tartı olmak zorunda değil. Daha rahat yürümek, daha iyi uyumak, daha dengeli hissetmek, kası ve kemiği korumak da gayet gerçek hedeflerdir.',
+    },
+  ],
+  '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/': [
+    {
+      question: 'Menopozda güç yalnızca egzersizle mi ilgilidir?',
+      answer:
+        'Hayır. Egzersiz kas ve kemik için çok değerli; ama günlük güç bazen uykuya sahip çıkmak, yük paylaşmak, sınır koymak ya da “bugün bunu taşımayayım” diyebilmekten de geçer.',
+    },
+    {
+      question: 'HRT kararı kişisel deneyime bakarak verilebilir mi?',
+      answer:
+        'Hayır. Başkasının deneyimi yalnızca soru sormayı kolaylaştırır; kararın kendisi olmaz. HRT kişisel yakınmalar, sağlık geçmişi, riskler, muayene ve takip planıyla konuşulmalıdır.',
+    },
+    {
+      question: 'Menopozda yorgunluk normal kabul edilip geçiştirilmeli mi?',
+      answer:
+        'Geçiştirilmemeli. Uyku bölünmesi, sıcak basması ve hormonal geçiş yorgunluğu artırabilir; ama tiroid, demir depoları, metabolizma, ilaçlar ve başka sağlık başlıkları da tabloya karışabilir.',
+    },
+    {
+      question: 'Günlük yükü hafifletmek sağlık açısından gerçekten anlamlı mı?',
+      answer:
+        'Evet, bazı kadınlar için çok anlamlıdır. Çanta, takvim, merdiven, uzun ayakta kalma ve uykusuzluk birikince beden bunu hisseder. Küçük düzenlemeler tedavi değildir; ama günün yükünü daha taşınabilir kılabilir.',
+    },
+    {
+      question: 'Deneyim yazıları tıbbi öneri yerine geçer mi?',
+      answer:
+        'Geçmez. Deneyim yazıları “yalnız değilim” duygusu verebilir ve iyi soru sordurabilir. Tanı, tedavi ve takip kararı ise kişisel tıbbi değerlendirme ister.',
+    },
+  ],
   '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': [
     {
       question: 'CoQ10 gerçekten anti-aging için güçlü kanıtlı bir takviye mi?',

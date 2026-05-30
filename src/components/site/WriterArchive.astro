@@ -9,16 +9,16 @@
  */
 
 import type { Writer } from '../../data/writers';
-import { dossiers } from '../../data/monthly-dossier';
+import { releasedDossiers as dossiers } from '../../data/monthly-dossier';
 import { writers } from '../../data/writers';
 import {
-  issues,
+  releasedIssues as issues,
   formatIssuePad,
   resolveCoverDossier,
   resolveIssueSections,
 } from '../../data/issues';
 import { magazineConfig } from '../../data/magazine-config';
-import { staticArticles } from '../../data/static-articles';
+import { publishedStaticArticles as staticArticles } from '../../data/static-articles';
 import { toISODate } from '../../utils/article-schema';
 
 interface Props {

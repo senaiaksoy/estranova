@@ -1,0 +1,276 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { articleFaqs } from '../../data/article-faqs';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+const faqItems = articleFaqs[pathname] ?? [];
+
+const tocEntries = [
+  { id: 'sessiz-baslar', label: 'Sessiz Başlar' },
+  { id: 'hangi-sorular', label: 'İlk Sorular' },
+  { id: 'olcum', label: 'Ölçüm' },
+  { id: 'kas-denge', label: 'Kas ve Denge' },
+  { id: 'beslenme', label: 'Beslenme' },
+  { id: 'kirmizi-bayraklar', label: 'Kırmızı Bayraklar' },
+  { id: 'karar-zinciri', label: 'Karar Zinciri' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular';
+const articleDescription =
+  '40 sonrası kemik gücünü kırık yaşanmadan önce konuşmak için tarama, düşme riski, kas gücü, D vitamini, beslenme ve ortopedik izlem başlıklarını bir araya getiriyoruz.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'bulent-aksoy',
+  publishedDate: '1 Haziran 2026',
+  pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'kemik gücü',
+    '40 sonrası kemik sağlığı',
+    'osteoporoz',
+    'kırık riski',
+    'düşme riski',
+    'direnç egzersizi',
+    'D vitamini',
+    'ortopedik takip',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Kemik Sağlığı"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="bulent-aksoy"
+        publishedDate="1 Haziran 2026"
+        readingMinutes={7}
+        imageSrc="/images/library/editorial/bulent-kemik-gucu-kirik-beklemeden-byline.webp"
+        imageAlt="Aydınlık bir evde pencere yanında oturan 50+ kadın; kemik gücü, kırık riski ve koruyucu ortopedik takip temasını taşıyan sakin editoryal görsel"
+        imagePosition="50% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Kemik gücü çoğu zaman ağrı yapmadan, kendini göstermeden gündemden düşer. Oysa 40 sonrasında iyi soru
+          yalnızca "kemik ölçümüm kaç çıktı?" değildir; düşme riski, kas gücü, aile öyküsü, D vitamini, beslenme
+          ve izlem ritmi de konuşmaya katılır. Bu yazı, kırık yaşanmadan önce sorulabilecek koruyucu soruları toplar.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="sessiz-baslar">Kemik Kaybı Neden Sessiz Başlar?</h2>
+        <p>
+          Kemik sağlığının zor tarafı, çoğu zaman günlük hayatta kendini gürültülü biçimde belli etmemesidir. Bir
+          eklem ağrır, kas tutulur, bel uyarır; kemik ise uzun süre sessiz kalabilir.
+        </p>
+        <p>
+          Kemik canlı bir dokudur; yapım ve yıkım dengesi içinde sürekli yenilenir. Menopoz geçişiyle birlikte
+          östrojen düzeyindeki azalma, bazı kadınlarda kemik yıkımını hızlandırabilir <Evidence level={5} />.
+          Bu nedenle kemik gücünü yalnızca ileri yaşın konusu gibi görmek, konuşmayı geç başlatabilir.
+        </p>
+        <p>
+          Ortopedik bir kararda en iyi başlangıç, kişiyi ameliyat masasından önce hayata yönlendirmektir. Kemik
+          sağlığında bunun karşılığı da kırık olduktan sonra değil, kırığı beklemeden riskleri görünür kılmaktır.
+          Çünkü koruyucu akıl, dramatik bir müdahaleden önce sessizce çalışmaya başlar.
+        </p>
+        <p>
+          Ben kemik konusunu bazen evdeki en sıradan basamakla düşünürüm. Asansör çalışmadığında iki kat çıkmak,
+          mutfakta üst rafa uzanmak ya da kaldırım kenarında bir an duraksamak, kemiğin değil ama kemiği taşıyan
+          bütün sistemin nasıl çalıştığını hatırlatır. Bu yalnızca bir gündelik benzetme; sizin risk tablonuz ölçüm,
+          öykü ve kişisel koşullarla anlaşılır.
+        </p>
+
+        <h2 id="hangi-sorular">Kırığı Beklemeden Hangi Sorular Sorulmalı?</h2>
+        <p>
+          Kemik sağlığı görüşmesi yalnızca tek bir rapor satırına indirgenmemelidir. Rapor önemlidir; ama iyi karar,
+          raporun arkasındaki yaşam tablosunu da görür.
+        </p>
+        <p>
+          İlk sorular genellikle basittir: Ailede kalça kırığı var mı? Daha önce düşük travmayla kırık yaşandı mı?
+          Boyda belirgin kısalma, kamburlaşma hissi veya yeni sırt ağrısı oldu mu? Uzun süre kortizon kullanımı,
+          erken menopoz, belirgin zayıflık, tiroid fazlalığı, emilim sorunu veya kronik iltihabi hastalık var mı?
+          Bu başlıklar kırık riskini değiştirebilir <Evidence from={4} to={5} />.
+        </p>
+        <p>
+          Bir başka soru da düşme riskiyle ilgilidir. Evde gece kalkarken dengesizlik, merdivende güvensizlik,
+          sık takılma, baş dönmesi veya görme sorunu varsa kemik ölçümü normal görünse bile tablo dikkat ister.
+          Çünkü kırık riski yalnızca kemiğin yoğunluğuyla değil, düşme olasılığıyla da ilgilidir.
+        </p>
+
+        <h2 id="olcum">Kemik Ölçümü Ne Söyler, Ne Söylemez?</h2>
+        <p>
+          DXA ölçümü değerli bir başlangıç noktasıdır; ama tek başına bütün hikayeyi anlatmaz. Aynı T-skoru iki
+          farklı kadında farklı klinik anlam taşıyabilir.
+        </p>
+        <p>
+          Osteopeni, kemik yoğunluğunun beklenenden düşük olduğu ara evreyi; osteoporoz ise kırık riskinin daha
+          belirgin arttığı tabloyu anlatır. Yine de karar yalnızca "osteopeni" ya da "osteoporoz" kelimesiyle
+          verilmez. Yaş, önceki kırık, aile öyküsü, düşme riski, eşlik eden hastalıklar ve kullanılan ilaçlar aynı
+          değerlendirmeye katılır <Evidence level={5} />.
+        </p>
+        <p>
+          Ölçümün zamanlaması da kişiseldir. Ortalama riskte tarama daha geç yaşlarda gündeme gelirken, güçlü risk
+          faktörü olan kadınlarda daha erken bakmak anlamlı olabilir. Burada amaç panik yaratmak değil; kişisel
+          başlangıç çizgisini bilmek ve izlem aralığını ona göre kurmaktır.
+        </p>
+
+        <h2 id="kas-denge">Kemik Gücü Neden Kas ve Dengeyle Birlikte Konuşulur?</h2>
+        <p>
+          Kemik tek başına korunmaz; onu taşıyan kas, yöneten denge ve günlük hareket alışkanlığıyla birlikte
+          korunur. Bu yüzden kemik sağlığı yalnızca bir mineral yoğunluğu meselesi değildir.
+        </p>
+        <p>
+          Direnç egzersizi ve ağırlık taşıyan hareketler kemik korunmasında güçlü bir zemine sahiptir <Evidence level={5} />.
+          Ancak "direnç" kelimesi herkeste aynı program anlamına gelmez. Diz, kalça, bel, omuz ve denge geçmişi
+          göz önüne alınarak güvenli bir başlangıç gerekir.
+        </p>
+        <p>
+          Kas gücü azaldığında düşme riski artabilir; düşme riski arttığında kırık ihtimali büyür. Bu zincirin en
+          iyi tarafı şudur: bazı halkaları günlük hayat içinde güçlendirmek mümkündür. Merdiven güveni, otur-kalk
+          kuvveti, kalça çevresi kasları, ayak bileği kontrolü ve ev içi aydınlatma bile bu denklemin parçasıdır.
+        </p>
+
+        <h2 id="beslenme">Beslenme ve D Vitamini Konusunda Nerede Durmalı?</h2>
+        <p>
+          Kemik sağlığı konuşulurken konu hızla takviyelere kayabilir. Oysa iyi başlangıç, eksik olanı ayırmak ve
+          temel beslenme zemininin gerçekten yerinde olup olmadığını görmektir.
+        </p>
+        <p>
+          Kalsiyum gereksinimi, protein alımı ve D vitamini düzeyi kemik metabolizmasının ana parçalarıdır
+          <Evidence level={5} />. Kalsiyumun mümkün olduğunca besinlerden karşılanması, yeterli protein alınması,
+          D vitamini eksikliği varsa bunun ölçüme ve kişisel riske göre düzenlenmesi daha dengeli bir yol sunar.
+        </p>
+        <p>
+          Rastgele ve üst üste takviye eklemek iyi bir kestirme yol değildir. Kemik sağlığı bir alışveriş listesi
+          gibi değil, riskin ve eksiklerin tek tek okunduğu bir takip başlığı gibi ele alınmalıdır.
+        </p>
+
+        <h2 id="kirmizi-bayraklar">Hangi Durumlar Daha Hızlı Değerlendirme Gerektirir?</h2>
+        <p>
+          Kemik sağlığı genellikle uzun vadeli bir izlem konusudur; yine de bazı işaretler beklemeyi doğru kılmaz.
+          Özellikle düşme sonrası tabloyu küçümsememek gerekir.
+        </p>
+
+        <RedFlagBox
+          title="Kemik ve kırık riski açısından geciktirilmemesi gereken işaretler"
+          intro="Aşağıdaki durumlar kişisel izlem planından önce daha hızlı ortopedik veya tıbbi değerlendirme gerektirebilir."
+          markers={[
+            'Düşme sonrası kalça, kasık, bel veya el bileğinde şiddetli ağrı ve üzerine basamama',
+            'Yeni gelişen belirgin sırt ağrısı, boy kısalması hissi veya omurgada çökme şüphesi',
+            'Ateş, belirgin şişlik, kızarıklık veya eklemde hızlı artan hareket kısıtlılığı',
+            'Uyuşma, güç kaybı, idrar-dışkı kontrolünde yeni sorun veya giderek artan gece ağrısı',
+          ]}
+          footnote="Bu liste tanı koymaz; daha hızlı değerlendirme gerektirebilecek işaretleri görünür kılar."
+        />
+
+        <h2 id="karar-zinciri">Sakin Karar Zinciri Nasıl Kurulur?</h2>
+        <p>
+          Kemik gücü için iyi karar, tek bir cümleyle verilmez. Ölçüm, risk, hareket, beslenme, düşme olasılığı ve
+          tıbbi seçenekler birlikte tartıldığında tablo netleşir.
+        </p>
+        <p>
+          İlk adım kişisel riskin adını koymaktır. İkinci adım, düzeltilebilir alanları ayırmaktır: D vitamini
+          eksikliği, yetersiz protein, hareketsizlik, ev içi düşme riski, kas güçsüzlüğü, görme sorunu veya uygun
+          olmayan ilaç kullanımı gibi. Üçüncü adım ise izlem ve gerekiyorsa tedavi kararını kişisel tabloya göre
+          planlamaktır.
+        </p>
+        <p>
+          Cerrahi seçenekler ortopedide doğru zamanlandığında değer kazanır; fakat kemik sağlığında temel hedef,
+          mümkün olduğunca kırığı ve düşmeyi önlemektir. Bu yazının ana cümlesi bu yüzden basit: kemiği konuşmak
+          için kemiğin kırılmasını beklemek gerekmez.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <p>
+          Menopoz sonrası kemik kaybı, düşme riski ve kırık önleme başlıkları güçlü bilimsel zemin taşıyan koruyucu
+          sağlık alanlarıdır. DXA ölçümü, kırık öyküsü, aile öyküsü, sekonder nedenler ve düşme riski birlikte
+          değerlendirildiğinde karar daha güvenilir hale gelir.
+        </p>
+        <p>
+          <strong>Klinik sınır:</strong> Bu yazı kişisel tanı, tedavi veya cerrahi karar yerine geçmez. Düşme sonrası
+          şiddetli ağrı, üzerine basamama, omurga çökmesi şüphesi, nörolojik bulgu veya hızla artan eklem şişliği
+          varsa gecikmeden değerlendirme gerekir.
+        </p>
+        <p>
+          <strong>Pratik bütünleşim:</strong> Kemik sağlığını yalnızca kalsiyum veya ölçüm sonucu üzerinden değil;
+          kas gücü, denge, ev güvenliği, beslenme ve izlem ritmiyle birlikte düşünmek kırık önleme açısından daha
+          anlamlıdır.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+          — Estranova Bilimsel Editör Notu
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır. Tanı, tedavi, cerrahi karar veya kişisel egzersiz programı yerine
+          geçmez. Kemik yoğunluğu sonucunuz, kırık öykünüz, mevcut hastalıklarınız veya düzenli ilaç kullanımınız
+          varsa kişisel planınızı sağlık profesyoneliyle birlikte değerlendiriniz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

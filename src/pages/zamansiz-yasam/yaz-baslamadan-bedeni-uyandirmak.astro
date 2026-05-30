@@ -1,0 +1,253 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { articleFaqs } from '../../data/article-faqs';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+const faqItems = articleFaqs[pathname] ?? [];
+
+const tocEntries = [
+  { id: 'yaz-oncesi', label: 'Yaz Öncesi' },
+  { id: 'devamlilik', label: 'Devamlılık' },
+  { id: 'kas-ritmi', label: 'Kas Ritmi' },
+  { id: 'nefes-isi', label: 'Nefes ve Isı' },
+  { id: 'kucuk-plan', label: 'Küçük Plan' },
+  { id: 'durulacak-yer', label: 'Durulacak Yer' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık';
+const articleDescription =
+  'Yaz öncesi hareketi hedef baskısı olmadan, 40 sonrası bedeni yavaşça uyandıran sürdürülebilir bir ritim olarak ele alan sıcak bir hareket yazısı.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'alara-baykent',
+  publishedDate: '1 Haziran 2026',
+  pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'yaz öncesi hareket',
+    '40 sonrası egzersiz',
+    'sürdürülebilir hareket',
+    'kas gücü',
+    'denge',
+    'nefes',
+    'devamlılık',
+    'beden farkındalığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Hareket"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="alara-baykent"
+        publishedDate="1 Haziran 2026"
+        readingMinutes={6}
+        imageSrc="/images/library/editorial/alara-yaz-baslamadan-bedeni-uyandirmak-byline.webp"
+        imageAlt="Sahil yolunda mat ve çantasıyla sakin yürüyen 40+ kadın; yaz öncesi bedeni performans baskısı olmadan uyandırma temasını taşıyan editoryal görsel"
+        imagePosition="50% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Yaz yaklaşırken hareketi çoğu zaman “hızlıca forma girme” baskısıyla düşünürüz. Oysa 40 sonrasında daha iyi
+          başlangıç, bedeni cezalandırmadan uyandırmak; kası, nefesi, dengeyi ve günlük ritmi düzenli adımlarla
+          tekrar çağırmaktır. Bu yazı performans hedefi değil, devamlılık hissi kurmak için sıcak bir hareket notu.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="yaz-oncesi">Yaz Öncesi Hareket Neden Bir Baskıya Dönüşüyor?</h2>
+        <p>
+          Yaz yaklaşırken beden hakkında konuşma biçimimiz birden hızlanıyor. Daha sıkı, daha ince, daha hazır, daha
+          hızlı; oysa beden çoğu zaman bu acele cümlelerden hoşlanmıyor.
+        </p>
+        <p>
+          Çoğu zaman mayıs sonunda bir anda “başlamalıyım” deriz; oysa beden bir takvim değişti diye hemen başka bir
+          kapasiteye geçmez. Özellikle 40 sonrasında uyku, stres, sıcak hava, eklem geçmişi ve kas gücü aynı planın
+          içine girer <Evidence from={4} to={5} />.
+        </p>
+        <p>
+          Ben yaz sporlarını sevdiğim için bu aceleyi iyi tanırım. Bir yaz sabahı denize çıkmadan önce rüzgara değil,
+          önce bedene bakmayı öğrenmiştim: omuz nasıl, nefes nasıl, ayak tabanı uyanık mı? Bu benim yolum; sizin
+          başlangıcınız deniz kenarı değil, apartman merdiveni ya da kısa bir mahalle yürüyüşü olabilir.
+        </p>
+
+        <h2 id="devamlilik">Performans Değil Devamlılık Ne Demek?</h2>
+        <p>
+          Devamlılık, her gün aynı şeyi yapmak değildir. Daha çok, bedeninize tekrar tekrar güvenli bir davet göndermek
+          gibidir.
+        </p>
+        <p>
+          Hareketin etkisi yalnızca yoğunluğundan değil, tekrar edilebilirliğinden gelir. Düzenli yürüyüş, hafif
+          direnç çalışması, denge pratikleri ve hareket açıklığı egzersizleri birlikte düşünüldüğünde 40 sonrası kas,
+          kemik ve metabolik sağlık için güçlü bir zemin oluşturur <Evidence level={5} />.
+        </p>
+        <p>
+          Burada asıl soru “ne kadar zorlanmalıyım?” değil, “bunu gelecek hafta da sürdürebilir miyim?” sorusudur. Çünkü
+          yaz başında başlayan ama iki hafta sonra biten büyük hamle, bazen sade bir günlük ritim kadar kalıcı olmaz.
+        </p>
+
+        <h2 id="kas-ritmi">Kas Gücünü Uyandırmak Neden Önemli?</h2>
+        <p>
+          Kas gücü, yalnızca spor salonunda görünen bir şey değildir. Sandalyeden kalkarken, bavul taşırken, uzun bir
+          yürüyüşten sonra hâlâ iyi hissederken kendini belli eder.
+        </p>
+        <p>
+          40 sonrasında kas kütlesi ve kas kalitesi düzenli uyarı almadığında azalabilir <Evidence level={4} />. Bu
+          yüzden yaz öncesi hareket planında yalnızca yürüyüş değil, güvenli direnç ve denge çalışmaları da zamanla
+          yer bulabilir. Ama başlangıç dozu kişisel olmalıdır; ağrıyı büyüten, nefesi kilitleyen veya ertesi günü bozan
+          yoğunluk iyi bir rehber değildir.
+        </p>
+        <p>
+          Yıllar içinde deniz kenarında da, salonda da şunu öğrendim: güçlü beden, her zaman en sert çalışan beden
+          değildir. Çoğu zaman kendini dinleyen, toparlanmaya yer açan ve tekrar edebilen bedendir.
+        </p>
+
+        <h2 id="nefes-isi">Sıcak Hava, Nefes ve Toparlanma Nasıl Hesaba Katılır?</h2>
+        <p>
+          Yaz öncesi hareketin bir parçası da havayı okumaktır. Sıcak, nem, uyku bölünmesi ve gün içi yorgunluk hareketin
+          hissini değiştirebilir.
+        </p>
+        <p>
+          Özellikle sıcak havalarda nabız daha kolay yükselir, sıvı kaybı artabilir ve yoğun egzersiz daha zor
+          toparlanabilir <Evidence level={4} />. Bu nedenle sabah erken saatler, gölge, yeterli sıvı, nefesi izlemek ve
+          konuşabilecek kadar rahat bir tempo başlangıç için daha iyi bir yol sunabilir.
+        </p>
+        <p>
+          Nefes burada sade bir iç pusuladır. Hareket ederken kısa cümle kuramayacak kadar zorlanıyorsanız, beden
+          başlangıç için daha yumuşak bir doza ihtiyaç duyuyor olabilir.
+        </p>
+
+        <h2 id="kucuk-plan">Küçük Bir Yaz Öncesi Plan Nasıl Kurulur?</h2>
+        <p>
+          İyi plan gösterişli olmak zorunda değildir. Hatta bazen en iyi plan, hayatın içine sığdığı için devam eder.
+        </p>
+        <p>
+          İlk hafta kendinize üç soru sorabilirsiniz: Bugün bedenim ne kadar hareket taşır? Hareketten sonra daha açık
+          mı, daha bitkin mi hissediyorum? Ertesi gün aynı ritme dönmem mümkün mü? Bu sorular program yazmaz; ama
+          programdan önce bedeninizin dilini anlamaya yardım eder.
+        </p>
+        <p>
+          Çoğu kadın için kısa yürüyüşler, merdiven farkındalığı, hafif esneme, ayak bileği-kalça hareketliliği ve
+          kontrollü güçlenme pratik bir başlangıç haritası oluşturabilir. Asıl hedef “yaz geldi” paniği değil, yaz
+          boyunca bedene eşlik edecek bir ritimdir.
+        </p>
+
+        <h2 id="durulacak-yer">Nerede Durmak Gerekir?</h2>
+        <p>
+          Hareket iyi gelir; ama her belirti hareketle çözülmez. Bedeni uyandırmak, bedenin uyarılarını duymayı da
+          içerir.
+        </p>
+
+        <RedFlagBox
+          title="Yaz öncesi hareket planında ciddiye alınması gereken işaretler"
+          intro="Aşağıdaki durumlar hareketi zorlayarak sürdürmek yerine sağlık profesyoneliyle değerlendirme gerektirebilir."
+          markers={[
+            'Egzersiz sırasında göğüs ağrısı, bayılma hissi, belirgin nefes darlığı veya yeni çarpıntı',
+            'Keskin eklem ağrısı, üzerine basamama, şişlik veya travma sonrası belirgin kısıtlılık',
+            'Uyuşma, güç kaybı, topallama veya birkaç gün içinde yatışmayan artan ağrı',
+            'Sıcak havada baş dönmesi, bulantı, aşırı halsizlik veya sıvı kaybı bulguları',
+          ]}
+          footnote="Bu liste tanı koymaz; hareket planı öncesi daha dikkatli değerlendirme gerektirebilecek işaretleri görünür kılar."
+        />
+
+        <p>
+          Yaz başlamadan bedeni uyandırmak, onunla yarışmak değildir. En güçlü başlangıç bazen daha az dramatik ama
+          daha düzenli olanıdır: kısa yürüyüş, iyi uyku, birkaç güvenli güç hareketi, biraz nefes ve ertesi gün yeniden
+          başlayabilecek kadar yumuşak bir tempo.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
+          '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <p>
+          40 sonrası hareket planında aerobik aktivite, direnç egzersizi, denge çalışması ve toparlanma birlikte
+          düşünülmelidir. Sıcak hava, uyku kalitesi, eklem geçmişi ve mevcut sağlık durumu egzersiz yoğunluğunu
+          etkileyebilir.
+        </p>
+        <p>
+          <strong>Klinik sınır:</strong> Bu yazı kişisel egzersiz programı değildir. Kalp-damar hastalığı, kontrolsüz
+          tansiyon, osteoporoz, yeni ağrı, düşme öyküsü, nörolojik bulgu veya ilaç kullanımı varsa hareket planı
+          bireysel değerlendirmeyle kurulmalıdır.
+        </p>
+        <p>
+          <strong>Pratik bütünleşim:</strong> Yaz öncesi en sürdürülebilir yaklaşım, bedeni kısa vadeli hedef baskısıyla
+          değil; tekrar edilebilir hareket ritmiyle desteklemektir.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+          — Estranova Bilimsel Editör Notu
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır. Tanı, tedavi, rehabilitasyon veya kişisel egzersiz programı yerine
+          geçmez. Ağrı, kronik hastalık, düşme öyküsü, hamilelik/lohusalık durumu veya düzenli ilaç kullanımınız varsa
+          hareket planınızı sağlık profesyoneliyle birlikte değerlendiriniz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

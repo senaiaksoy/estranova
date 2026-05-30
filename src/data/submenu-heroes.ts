@@ -219,6 +219,26 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/': {
+    src: '/images/library/editorial/basak-guc-canta-hafifletmek.webp',
+    alt: 'Sıcak doğal ışıkta evde çantasını hazırlayan 50+ kadın; menopoz deneyimi, günlük güç ve çantayı hafifletme yazısı için sevimli editoryal kart görseli',
+  },
+  '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/': {
+    src: '/images/library/editorial/alara-yaz-baslamadan-bedeni-uyandirmak.webp',
+    alt: 'Sahil yolunda mat ve çantasıyla sakin yürüyen 40+ kadın; yaz öncesi bedeni performans baskısı olmadan uyandırma yazısı için editoryal kart görseli',
+  },
+  '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/': {
+    src: '/images/library/editorial/metin-yorgunluk-kas-tiroid-metabolizma.webp',
+    alt: 'Aydınlık yatak odasında gardırop yanında güne hazırlanırken durup beden enerjisini fark eden 50+ kadın; yorgunluk, tiroid, metabolizma ve kas kütlesi yazısı için sakin editoryal kart görseli',
+  },
+  '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/': {
+    src: '/images/library/editorial/ersin-denge-ayak-kalca-govde.webp',
+    alt: 'Ev koridorunda duvara hafifçe temas ederek dengesini fark eden 40+ kadın; ayak, kalça ve gövde hattını yeniden duyma yazısı için sakin editoryal kart görseli',
+  },
+  '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/': {
+    src: '/images/library/editorial/bulent-kemik-gucu-kirik-beklemeden.webp',
+    alt: 'Aydınlık bir evde pencere yanında oturan 50+ kadın; kemik gücü, kırık riski ve koruyucu ortopedik takip yazısı için sakin editoryal kart görseli',
+  },
   '/hormonal-gecis/40-sonrasi/menopozdan-sonra-kalp-sagligina-neden-daha-dikkatli-bakiyorum/': {
     src: '/images/library/editorial/alp-aslan-eryilmaz-menopoz-kalp-byline.png',
     alt: 'Krem trençkot ve bordo fular detayıyla apartman girişinde kısa bir duraklama anında görülen orta yaşlı kadın; menopoz sonrası kalp sağlığı yazısı için sakin editoryal kart görseli',

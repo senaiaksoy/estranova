@@ -16,6 +16,45 @@ const sitemapExcludedPaths = [
   '/logo-denemesi/',
 ];
 
+const scheduledReleasePaths = [
+  { path: '/sayi/02-haziran-2026-guc-esigi/', releaseDate: '2026-06-01' },
+  { path: '/dosya/2026-06-guc-esigi/', releaseDate: '2026-06-01' },
+  { path: '/editorun-kosesi/haziran-2026/', releaseDate: '2026-06-01' },
+  {
+    path: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+    releaseDate: '2026-06-01',
+  },
+  {
+    path: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
+    releaseDate: '2026-06-01',
+  },
+  {
+    path: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
+    releaseDate: '2026-06-01',
+  },
+  {
+    path: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
+    releaseDate: '2026-06-01',
+  },
+  {
+    path: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',
+    releaseDate: '2026-06-01',
+  },
+];
+
+function todayInTurkeyISO(date = new Date()) {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Istanbul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);
+}
+
+function matchesSitemapPath(page, excludedPath) {
+  return page === excludedPath || page.endsWith(excludedPath) || page.includes(`${excludedPath}/`);
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://estranova.com',
@@ -28,6 +67,7 @@ export default defineConfig({
   // Eski düz URL'lerden yeni alt-hub'lı yapıya kalıcı yönlendirmeler
   // (3 hub Tip A mimarisine geçiş — 2026-04-26).
   redirects: {
+    '/authors/': '/yazarlar/',
     '/beden-yakinlik/menopozda-cilt-degisimleri/': '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
     '/beden-yakinlik/vajinal-saglik-menopoz/': '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
     '/beden-yakinlik/yakinlik-agrisi-menopoz/': '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
@@ -59,11 +99,11 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         if (page.includes('/admin') || page.includes('/_')) return false;
-        return !sitemapExcludedPaths.some(
-          (excludedPath) =>
-            page === excludedPath ||
-            page.endsWith(excludedPath) ||
-            page.includes(`${excludedPath}/`)
+        const scheduledExclusions = scheduledReleasePaths
+          .filter((item) => item.releaseDate > todayInTurkeyISO())
+          .map((item) => item.path);
+        return ![...sitemapExcludedPaths, ...scheduledExclusions].some((excludedPath) =>
+          matchesSitemapPath(page, excludedPath)
         );
       },
       changefreq: 'weekly',

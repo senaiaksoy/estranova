@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import type { APIContext } from 'astro';
 import { approvedPathnames } from '../data/article-approvals';
-import { staticArticles } from '../data/static-articles';
+import { publishedStaticArticles as staticArticles } from '../data/static-articles';
 import { toISODate, getWriter } from '../utils/article-schema';
 import { resolveSiteUrl } from '../utils/seo';
 

@@ -1,4 +1,4 @@
-import { getWriter } from '../utils/article-schema';
+import { getWriter, toISODate } from '../utils/article-schema';
 
 export interface StaticArticleEntry {
   path: string; // pathname, leading slash
@@ -18,10 +18,109 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+    title: 'Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular',
+    description:
+      '40 sonrası kemik gücünü kırık yaşanmadan önce konuşmak: tarama, düşme riski, kas gücü, D vitamini, beslenme ve ortopedik izlem aynı hayatın içinde buluşuyor.',
+    publishedDate: '1 Haziran 2026',
+    writerSlug: 'bulent-aksoy',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'kemik gücü',
+      '40 sonrası kemik sağlığı',
+      'osteoporoz',
+      'kırık riski',
+      'düşme riski',
+      'direnç egzersizi',
+      'D vitamini',
+      'ortopedik takip',
+    ],
+  },
+  {
+    path: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
+    title: 'Denge Kaybolmadan: Ayak, Kalça ve Gövde Hattını Yeniden Duymak',
+    description:
+      'Düşmeyi beklemeden dengeyi okumak: ayak tabanı, kalça çevresi, gövde kontrolü ve ev içindeki küçük işaretler 40 sonrası hareket güvenini anlatır.',
+    publishedDate: '1 Haziran 2026',
+    writerSlug: 'ersin-sarac',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'denge',
+      '40 sonrası hareket',
+      'düşme önleme',
+      'ayak tabanı',
+      'kalça kasları',
+      'gövde kontrolü',
+      'fizyoterapi',
+      'kas-iskelet sağlığı',
+    ],
+  },
+  {
+    path: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
+    title: 'Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?',
+    description:
+      'Sabah ağır gelen bedeni tek kelimeyle kapatmadan; tiroid, kas kütlesi, uyku, insülin direnci ve laboratuvar okumasını yan yana getiren bir endokrin yazısı.',
+    publishedDate: '1 Haziran 2026',
+    writerSlug: 'metin-alis',
+    section: 'Hormonal Geçiş · 40 Sonrası',
+    sectionPath: '/hormonal-gecis/40-sonrasi/',
+    keywords: [
+      'yorgunluk',
+      'tiroid',
+      'metabolizma',
+      '40 sonrası',
+      'menopoz',
+      'kas kütlesi',
+      'insülin direnci',
+      'laboratuvar okuma',
+    ],
+  },
+  {
+    path: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
+    title: 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık',
+    description:
+      'Yaz öncesi hareketi hedef baskısı olmadan; 40 sonrası bedeni yavaşça uyandıran, sürdürülebilir ritim arayan sıcak bir hareket yazısı.',
+    publishedDate: '1 Haziran 2026',
+    writerSlug: 'alara-baykent',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'yaz öncesi hareket',
+      '40 sonrası egzersiz',
+      'sürdürülebilir hareket',
+      'kas gücü',
+      'denge',
+      'nefes',
+      'devamlılık',
+      'beden farkındalığı',
+    ],
+  },
+  {
+    path: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',
+    title: 'Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır',
+    description:
+      'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini çanta, merdiven, anne-kız sohbeti ve HRT kararının içinden kendi sesiyle yeniden okuyor.',
+    publishedDate: '1 Haziran 2026',
+    writerSlug: 'basak-pelister',
+    section: 'Hormonal Geçiş · Menopoz',
+    sectionPath: '/hormonal-gecis/menopoz/',
+    keywords: [
+      'menopoz deneyimi',
+      'HRT yolculuğu',
+      '40 sonrası güç',
+      'menopozda yorgunluk',
+      'anne kız sohbeti',
+      'beden farkındalığı',
+      'günlük hayat',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
     title: "40'tan Sonra Harekete Yeniden Başlamak: Daha Sert Değil, Daha Akıllı",
     description:
-      '40 sonrası harekete yeniden başlamak için güç, denge, hareket açıklığı ve sürdürülebilirlik ekseninde sıcak bir başlangıç rehberi.',
+      '40 sonrası harekete yeniden başlamak için güç, denge, hareket açıklığı ve sürdürülebilirliği gerçek hayata sığdıran bir başlangıç yazısı.',
     publishedDate: '26 Mayıs 2026',
     writerSlug: 'anil-yalmaz',
     section: 'Zamansız Yaşam',
@@ -768,6 +867,23 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
   },
 ];
+
+function todayInTurkeyISO(date = new Date()): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Istanbul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);
+}
+
+export function isStaticArticlePublished(article: StaticArticleEntry, date = new Date()): boolean {
+  return toISODate(article.publishedDate) <= todayInTurkeyISO(date);
+}
+
+export const publishedStaticArticles = staticArticles.filter((article) =>
+  isStaticArticlePublished(article),
+);
 
 export function getStaticArticleAuthor(slug: string) {
   const entry = staticArticles.find((a) => a.path === slug);

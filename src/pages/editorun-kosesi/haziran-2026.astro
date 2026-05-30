@@ -1,0 +1,174 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+import { getIssueBySlug } from '../../data/issues';
+
+const issue = getIssueBySlug('02-haziran-2026-guc-esigi');
+const issuePath = `/sayi/${issue?.slug ?? '02-haziran-2026-guc-esigi'}/`;
+const pathname = '/editorun-kosesi/haziran-2026/';
+
+const articleTitle = 'Sıcacık Köşe — Haziran 2026: Güç Eşiği';
+const articleDescription =
+  "Eşik dergisinin Haziran 2026 sayısı: Güç Eşiği. Site editörü Berna Aksoy'un kapı önü yazısı; bu ay kas, kemik, denge, enerji ve sürdürülebilir hareketi birlikte düşünüyoruz.";
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '2026-06-01',
+  pathname,
+  articleSection: "Editörün Köşesi",
+  sectionPath: '/sayi/',
+  keywords: [
+    'Eşik dergisi',
+    'Estranova editör köşesi',
+    'Sıcacık Köşe',
+    'Berna Aksoy',
+    'Haziran 2026 sayısı',
+    'Güç Eşiği',
+    '40 sonrası hareket',
+    'menopozda güç',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath={pathname} />
+
+  <main id="main-content" class="pt-24 text-ink">
+    <SubmenuArticleBody>
+      <header
+        class="relative mb-12 overflow-hidden rounded-[36px] border border-burgundy/12 bg-gradient-to-br from-cream-warm via-cream-soft to-white p-8 shadow-[0_24px_70px_rgba(79,23,28,0.08)] ring-1 ring-gold/20 md:p-12"
+      >
+        <div class="pointer-events-none absolute -right-20 top-0 h-64 w-64 rounded-full bg-gold/15 blur-3xl" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute bottom-6 right-8 hidden font-serif text-[7rem] lowercase leading-none text-burgundy/[0.04] md:block" aria-hidden="true">
+          güç
+        </div>
+        <div class="relative max-w-4xl">
+          <div class="mb-6 h-px w-24 bg-gold"></div>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-burgundy">
+            Sıcacık Köşe · Haziran 2026
+          </p>
+          <h1 class="font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-burgundy md:text-7xl">
+            Güç Eşiği
+          </h1>
+          <p class="mt-6 max-w-2xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
+            Bu ay gücü daha sert olmak değil, bedeni daha iyi duymak olarak okuyoruz.
+          </p>
+        </div>
+      </header>
+
+      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="1 Haziran 2026" readingMinutes={5} />
+
+      <ArticleSummary title="Bu Sayıya Giriş">
+        <p>
+          <strong>Eşik · Sayı 02 — Güç Eşiği</strong>, 40 sonrasında gücü yalnızca kasla değil; kemik,
+          denge, enerji, uyku ve sürdürülebilir hareketle birlikte ele alıyor. Bu sayı, bedeni
+          zorlamadan yeniden duymanın daveti.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="neden-guc">Bu Ay Neden Güç?</h2>
+        <p>
+          Güç kelimesi çoğu zaman biraz sert duyulur; daha çok çalışmak, daha çok dayanmak, daha çok
+          sıkmak gibi. Oysa 40'tan sonra güç, benim için daha çok bedeni duyma biçimi.
+        </p>
+        <p>
+          Bir sabah merdiveni çıkarken dizinizi fark edersiniz; bir akşam çantayı taşırken omzunuzu.
+          Bazen tartı aynı kalır ama bedenin taşıma hissi değişir. Bazen de yorgunluk, takvimdeki
+          yoğunluktan çok daha derin bir yerden konuşur. İşte bu sayı, o işaretleri büyütmeden
+          ciddiye almak için hazırlandı.
+        </p>
+        <p>
+          Ben bu dosyayı hazırlarken kendi sabah yürüyüşlerimde de aynı şeyi fark ettim: bazen saat ekranındaki
+          rakamdan çok, merdivenin sonunda nefesin nasıl döndüğü daha dürüst bir bilgi veriyor. Bu benim
+          editör notum; sizin bedeniniz aynı cümleyi başka bir anda, başka bir işaretle kurabilir.
+        </p>
+
+        <h2 id="sayi-02">Sayı 02 — Güç Eşiği</h2>
+        <p>
+          Haziran sayısında gücü bir spor dosyası gibi değil, 40 sonrası sağlık okuryazarlığının
+          ana eksenlerinden biri gibi ele alıyoruz. Çünkü kas, kemik, denge ve metabolizma aynı
+          hikayenin farklı sayfaları.
+        </p>
+        <p>Bu ay altı yazı, altı farklı kapı açıyor:</p>
+        <ul>
+          <li>
+            <strong>Anıl Yalmaz</strong> hareketin başlangıç haritasını kuruyor: daha sert değil,
+            daha akıllı.
+          </li>
+          <li>
+            <strong>Prof. Dr. Bülent Aksoy</strong> kemiği kırık sonrası değil, kırık oluşmadan
+            önce konuşmaya çağırıyor.
+          </li>
+          <li>
+            <strong>Fzt. Ersin Saraç</strong> dengeyi ayak, kalça ve gövde hattında yeniden
+            duymayı anlatıyor.
+          </li>
+          <li>
+            <strong>Dr. Metin Alış</strong> yorgunluğu kas, tiroid ve metabolizma ekseninde ayırıyor.
+          </li>
+          <li>
+            <strong>Alara Baykent</strong> yaz başlarken hareketi performans değil, devamlılık
+            olarak ele alıyor.
+          </li>
+          <li>
+            <strong>Başak Pelister</strong> kendi menopoz deneyiminden gelen sevimli bir denemeyle
+            gücü çanta, merdiven, anne-kız sohbeti ve küçük itiraflar üzerinden okuyor.
+          </li>
+        </ul>
+
+        <h2 id="bu-sayiya-nasil-baslanir">Bu Sayıya Nasıl Başlanır?</h2>
+        <p>
+          Tek oturuşta her şeyi okumak gerekmiyor. Bu sayıya, bedeninizin o hafta en çok ses verdiği
+          yerden başlayabilirsiniz: hareket, kemik, denge, yorgunluk ya da yaz ritmi.
+        </p>
+        <p>
+          Sayı sayfasından başlayabilirsiniz: <a href={issuePath}>Eşik · Sayı 02 — Haziran 2026 · Güç Eşiği</a>.
+          Bilimsel editör mektubu ve kapak dosyasındaki yazılar orada bir araya geliyor.
+        </p>
+        <p class="italic">
+          Bu ay kendimize daha fazla yüklenmek yerine, bedenin taşıma biçimini yeniden dinleyelim.
+        </p>
+        <p>— Berna Aksoy, Site Editörü</p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          issuePath,
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+        ]}
+      />
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin
+          yerini almaz. Dergi yazılarında geçen klinik konular için Eşik'in her sayısında yayımlanan
+          editör mektubu ve ilgili yazıların altındaki Bilimsel Editör Notu yaklaşımı geçerlidir.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

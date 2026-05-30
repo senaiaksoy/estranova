@@ -11,7 +11,8 @@
  * Yazar köşeleri ve arka sayfa ileride.
  *
  * Sayı 0: geriye dönük 45 makaleyi tek arşiv şemsiyesi altında toplar.
- * Sayı 01: Mayıs 2026 — "Uyuyamadığımız Geceler" (mevcut dossier).
+ * Sayı 01: Mayıs 2026 — "Uyuyamadığımız Geceler" (mevcut sayı, 1 Haziran'a kadar).
+ * Sayı 02: Haziran 2026 — "Güç Eşiği" (1 Haziran 2026 yayın adayı).
  *
  * URL pattern: /sayi/<slug>
  *
@@ -147,12 +148,61 @@ export const issue01: Issue = {
   status: 'current',
 };
 
+/**
+ * Sayı 02 — Haziran 2026 · Güç Eşiği
+ *
+ * Kapak dosyası: monthly-dossier.ts → "2026-06-guc-esigi"
+ * Editör mektubu: Doç. Dr. Senai Aksoy bilimsel açılış
+ * Tema: kas, kemik, denge, yorgunluk ve sürdürülebilir hareket
+ */
+export const issue02: Issue = {
+  number: 2,
+  slug: '02-haziran-2026-guc-esigi',
+  monthYearISO: '2026-06',
+  monthYear: 'Haziran 2026',
+  theme: 'Güç Eşiği',
+  coverHeadline: 'Eşik · Sayı 02 — Haziran 2026 · Güç Eşiği',
+  lede:
+    "40'tan sonra güç, daha fazla zorlanmak değil; kası, kemiği, dengeyi, uykuyu ve enerjiyi aynı hayatın içinde yeniden duymak. Bu sayıda bedeni performans baskısı kurmadan okumaya başlıyoruz.",
+  coverImage: {
+    src: '/images/library/editorial/zy-hareket-saglik.webp',
+    alt: "40 sonrası hareket ve güçlenme temasını taşıyan sakin editoryal sahne; bedeni zorlamadan yeniden kurma hissi",
+  },
+  editorLetter: {
+    writerSlug: 'senai-aksoy',
+    body: "Bu ay güç kelimesini yalnızca kasla sınırlamıyoruz. Hormonal geçişte güç; kemik yoğunluğu, düşme riski, uyku kalitesi, kas kütlesi, metabolik denge ve günlük hareket güveniyle yan yana duran daha geniş bir sağlık başlığı.\n\nBu sayıda okuru daha sert bir programa çağırmıyoruz. Anıl Yalmaz hareketin başlangıç haritasını kuruyor; Prof. Dr. Bülent Aksoy kemiği kırığı beklemeden konuşmaya açıyor; Fzt. Ersin Saraç dengeyi ayak-kalça-gövde hattında okuyor; Dr. Metin Alış yorgunluğu tiroid, metabolizma ve kas ekseninde ayırıyor; Alara Baykent yaz başlarken hareketi performans değil devamlılık olarak ele alıyor; Başak Pelister de kendi menopoz deneyiminden gelen yaşıt sesiyle gücü daha kişisel bir yerden açıyor.\n\nGüç, bu yaş döneminde çoğu zaman daha fazlasını yapmak değil; bedene daha iyi kulak vererek daha sürdürülebilir bir zemin kurmaktır.",
+  },
+  editorColumnSlug: 'haziran-2026',
+  coverDossierSlug: '2026-06-guc-esigi',
+  releaseDate: '2026-06-01',
+  status: 'upcoming',
+};
+
 /** Tüm sayılar — yeni-eski sırayla (Sayı 0 EN ALTTA arşiv olarak) */
-export const issues: Issue[] = [issue01, archiveIssue];
+export const issues: Issue[] = [issue02, issue01, archiveIssue];
+
+function todayInTurkeyISO(date = new Date()): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Istanbul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);
+}
+
+export function isIssueReleased(issue: Issue, date = new Date()): boolean {
+  return issue.releaseDate <= todayInTurkeyISO(date);
+}
+
+export const releasedIssues: Issue[] = issues.filter((issue) => isIssueReleased(issue));
 
 /** Şu anki yayın sayısı — anasayfa hero için */
 export const currentIssue: Issue =
-  issues.find((i) => i.status === 'current') ?? issues[0];
+  releasedIssues
+    .filter((i) => i.status !== 'archived')
+    .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate))[0] ??
+  issues.find((i) => i.status === 'current') ??
+  issues[0];
 
 /** Slug ile sayı bul */
 export function getIssueBySlug(slug: string): Issue | undefined {
@@ -161,7 +211,7 @@ export function getIssueBySlug(slug: string): Issue | undefined {
 
 /** Arşivlenmiş sayılar — eskiye göre azalan; arşiv (Sayı 0) en sonda */
 export function getArchivedIssues(): Issue[] {
-  return issues
+  return releasedIssues
     .filter((i) => i.status === 'archived' && i.number > 0)
     .sort((a, b) => b.monthYearISO.localeCompare(a.monthYearISO));
 }

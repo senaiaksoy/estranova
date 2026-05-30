@@ -1,0 +1,262 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { articleFaqs } from '../../data/article-faqs';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+const faqItems = articleFaqs[pathname] ?? [];
+
+const tocEntries = [
+  { id: 'denge-kaybolmadan', label: 'Denge Kaybolmadan' },
+  { id: 'ayak-tabani', label: 'Ayak Tabanı' },
+  { id: 'kalca-cevresi', label: 'Kalça Çevresi' },
+  { id: 'govde-hatti', label: 'Gövde Hattı' },
+  { id: 'ev-ici-ipucu', label: 'Ev İçi İpucu' },
+  { id: 'ne-zaman-destek', label: 'Ne Zaman Destek?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Denge Kaybolmadan: Ayak, Kalça ve Gövde Hattını Yeniden Duymak';
+const articleDescription =
+  '40 sonrasında dengeyi düşme yaşanmadan önce okumak: ayak tabanı, kalça çevresi, gövde kontrolü ve ev içindeki küçük işaretler hareket güvenini anlatır.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'ersin-sarac',
+  publishedDate: '1 Haziran 2026',
+  pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'denge',
+    '40 sonrası hareket',
+    'düşme önleme',
+    'ayak tabanı',
+    'kalça kasları',
+    'gövde kontrolü',
+    'fizyoterapi',
+    'kas-iskelet sağlığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Hareket"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="ersin-sarac"
+        publishedDate="1 Haziran 2026"
+        readingMinutes={7}
+        imageSrc="/images/library/editorial/ersin-denge-ayak-kalca-govde-byline.webp"
+        imageAlt="Ev koridorunda duvara hafifçe temas ederek dengesini fark eden 40+ kadın; ayak, kalça ve gövde hattını yeniden duyma temasını taşıyan sakin editoryal görsel"
+        imagePosition="48% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Denge, genellikle ancak kaybolduğunda fark edilen bir güven duygusudur. Oysa 40 sonrasında ayak tabanı,
+          kalça çevresi ve gövde kontrolü günlük hareketin sessiz destek hattını kurar. Bu yazı, düşmeyi beklemeden
+          dengeyi nasıl okuyabileceğinizi ve hangi durumlarda profesyonel değerlendirme almanın yerinde olacağını
+          anlatır.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="denge-kaybolmadan">Denge Kaybolmadan Neden Konuşulmalı?</h2>
+        <p>
+          Denge, yalnızca tek ayak üzerinde durabilmek değildir. Gün içinde yön değiştirirken, merdivenden inerken,
+          karanlık koridorda yürürken ve bir eşyaya uzanırken bedenin sessizce yaptığı ayarlardır.
+        </p>
+        <p>
+          40 sonrasında denge sistemini yalnızca yaşlılık konusu gibi düşünmek konuşmayı geciktirir. Kas kuvveti,
+          eklem hareket açıklığı, görme, ayak bileği kontrolü, vestibüler sistem ve dikkat aynı tabloya katılır
+          <Evidence from={4} to={5} />. Küçük bir dengesizlik hissi, bazen düşme olmadan önce gelen değerli bir uyarıdır.
+        </p>
+        <p>
+          Bedeni dinleyerek ilerlemek burada özellikle önemlidir. Mesele korkup hareketi azaltmak değil; bedenin
+          nerede güvensiz kaldığını fark edip daha güvenli bir hareket zemini kurmaktır.
+        </p>
+        <p>
+          Bunu en çok sabah telaşında görürüz: tek ayak üzerinde çorap giymeye çalışırken duvara hafifçe dokunmak,
+          ayakkabı bağlarken oturacak yer aramak ya da kapıdan çıkmadan önce çantayı diğer omza almak. Bu sahneler
+          tek başına sorun demek değildir; ama bedenin hangi noktada destek istediğini nazikçe gösterir.
+        </p>
+
+        <h2 id="ayak-tabani">Ayak Tabanı Ne Söyler?</h2>
+        <p>
+          Denge sık sık yukarıda, başta ya da gövdede aranır; oysa ilk bilgi çoğu kez ayak tabanından gelir. Zeminle
+          temas, bedene nerede olduğunu söyleyen ilk duyudur.
+        </p>
+        <p>
+          Ayak bileği hareketi, parmakların zemini kavrama becerisi, taban duyusu ve ayakkabı seçimi günlük dengeyi
+          etkileyebilir <Evidence level={4} />. Ev içinde sık takılma, halı kenarında güvensizlik, çıplak ayakta daha
+          iyi ya da daha kötü hissetme gibi küçük ayrıntılar bazen önemli ipuçları verir.
+        </p>
+        <p>
+          Bu yüzden dengeyi konuşurken yalnızca “başım dönüyor mu?” sorusuna bakmayız. “Ayağınız zemini ne kadar net
+          hissediyor?” sorusu da en az onun kadar öğreticidir.
+        </p>
+
+        <h2 id="kalca-cevresi">Kalça Çevresi Neden Ana Destek Hattıdır?</h2>
+        <p>
+          Kalça çevresi kasları, bedeni her adımda yana, öne ve arkaya savrulmaktan koruyan güçlü bir destek hattıdır.
+          Bu kaslar sessiz çalışır; zayıfladığında ise denge çoğu zaman daha kırılgan hissedilir.
+        </p>
+        <p>
+          Merdiven inerken dizin içe kaçması, yürüyüşte kalçanın düşmesi, tek ayakta dururken gövdenin yana yatması
+          veya uzun yürüyüşten sonra bel-kalça hattında yorgunluk oluşması kalça çevresinin daha yakından
+          değerlendirilmesi gerektiğini düşündürebilir <Evidence level={4} />.
+        </p>
+        <p>
+          Burada hedef sert bir güç gösterisi değildir. Güvenli denge küçük, kontrollü ve tekrar edilebilir
+          hareketlerle gelişir. Kısa ama düzenli bir çalışma alanı, düzensiz büyük hamlelerden daha sürdürülebilir olur.
+        </p>
+
+        <h2 id="govde-hatti">Gövde Hattı Dengeyi Nasıl Taşır?</h2>
+        <p>
+          Gövde kontrolü, denge sisteminin merkezdeki sessiz düzenleyicisidir. Bel, karın, sırt ve nefes ritmi birlikte
+          çalışmadığında beden küçük yön değişikliklerinde bile daha fazla efor harcar.
+        </p>
+        <p>
+          Gövde kontrolü yalnızca “karın kası” meselesi değildir. Nefes, kaburga hareketi, pelvis pozisyonu ve omurga
+          hareketliliği aynı hatta yer alır <Evidence level={3} />. Özellikle masa başı günler, uzun süreli oturma ve
+          tek taraflı çanta taşıma bu hattı daha gergin ve daha az esnek hale getirebilir.
+        </p>
+        <p>
+          Denge çalışmaları bazen ayakta başlar; bazen de nefes, ağırlık aktarımı ve yavaş yön değiştirme gibi daha
+          küçük farkındalıklarla başlar. Beden, güvende olduğunu hissettikçe daha iyi organize olur.
+        </p>
+
+        <h2 id="ev-ici-ipucu">Ev İçinde Hangi İpuçları Dengeyi Gösterir?</h2>
+        <p>
+          Dengeyi yalnızca egzersiz sırasında ölçmek yeterli değildir. Ev içindeki küçük zorlanmalar, günlük hayatın
+          doğal testi gibi çalışır.
+        </p>
+        <p>
+          Gece tuvalete kalkarken duvara dokunma ihtiyacı, çorap giyerken oturmadan duramama, merdiven inerken trabzana
+          güçlü tutunma, yerden bir şey alırken güvensizlik veya kalabalık sokakta yön değiştirirken tedirginlik dikkat
+          edilmeye değer işaretlerdir.
+        </p>
+        <p>
+          Ev düzeni de bu tabloya dahildir. Kayan halılar, zayıf ışık, dar geçişler, kablolar, kaygan terlikler ve sık
+          kullanılan eşyaların çok yukarıda olması düşme riskini artırabilir <Evidence level={4} />. Bazen denge
+          çalışmasının ilk adımı, evin bedene daha az tuzak kurmasını sağlamaktır.
+        </p>
+
+        <h2 id="ne-zaman-destek">Ne Zaman Destek Almak Daha Doğru Olur?</h2>
+        <p>
+          Her küçük dengesizlik acil bir sorun anlamına gelmez. Ama bazı işaretler, yalnızca evde dikkat etmekle
+          yetinmemek gerektiğini gösterir.
+        </p>
+
+        <RedFlagBox
+          title="Denge yakınmasında geciktirilmemesi gereken işaretler"
+          intro="Aşağıdaki durumlar fizyoterapi planından önce veya onunla birlikte tıbbi değerlendirme gerektirebilir."
+          markers={[
+            'Yeni başlayan belirgin baş dönmesi, bayılma hissi veya düşme',
+            'Düşme sonrası kalça, bel, el bileği ya da baş bölgesinde şiddetli ağrı',
+            'Uyuşma, güç kaybı, konuşma bozulması, görme değişikliği veya yüz-kol-bacakta ani güçsüzlük',
+            'Ateş, açıklanamayan kilo kaybı, gece uykusunu bölen ağrı veya giderek artan dengesizlik',
+          ]}
+          footnote="Bu liste tanı koymaz; daha hızlı değerlendirme gerektirebilecek işaretleri görünür kılar."
+        />
+
+        <p>
+          Daha hafif tablolarda ise fizyoterapi değerlendirmesi; ayak bileği hareketini, kalça gücünü, gövde kontrolünü,
+          yürüme biçimini ve ev içi riskleri birlikte okumaya yardımcı olabilir. Hedef, herkese aynı egzersizi vermek
+          değil; sizin bedeninizin hangi halkada desteğe ihtiyaç duyduğunu bulmaktır.
+        </p>
+        <p>
+          Denge kaybolmadan konuşulduğunda, konu korku değil güven olur. Bazen en iyi başlangıç bir program değil,
+          bedenin küçük sinyallerini ciddiye alan daha dikkatli bir gündelik ritimdir.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+          '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+          '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <p>
+          Düşme riski, kas kuvveti, denge eğitimi ve ev içi güvenlik düzenlemeleri 40 sonrası hareket kapasitesi ve
+          uzun vadeli bağımsızlık açısından birlikte ele alınmalıdır. Denge çalışmaları kişisel risk, ağrı, kemik
+          sağlığı ve nörolojik bulgularla uyumlu planlandığında daha güvenli ilerler.
+        </p>
+        <p>
+          <strong>Klinik sınır:</strong> Bu yazı kişisel egzersiz reçetesi yerine genel hareket okuryazarlığı sunar.
+          Düşme, yeni nörolojik bulgu, bayılma, üzerine basamama, travma sonrası ağrı veya hızla artan dengesizlik
+          varsa bireysel değerlendirme geciktirilmemelidir.
+        </p>
+        <p>
+          <strong>Pratik bütünleşim:</strong> Ayak tabanı, kalça çevresi ve gövde hattı ayrı başlıklar gibi görünse de
+          günlük hayatta tek bir hareket güvenliği sistemi gibi çalışır.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+          — Estranova Bilimsel Editör Notu
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır. Tanı, tedavi, rehabilitasyon veya kişisel egzersiz programı yerine
+          geçmez. Denge kaybı, düşme, baş dönmesi, ağrı, nörolojik belirti veya mevcut hastalıklarınız varsa kişisel
+          planınızı sağlık profesyoneliyle birlikte değerlendiriniz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

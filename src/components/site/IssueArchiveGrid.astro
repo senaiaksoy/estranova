@@ -13,7 +13,7 @@
  */
 
 import type { Issue } from '../../data/issues';
-import { formatIssuePad } from '../../data/issues';
+import { currentIssue, formatIssuePad } from '../../data/issues';
 import { magazineConfig } from '../../data/magazine-config';
 
 interface Props {
@@ -39,7 +39,7 @@ const archiveIssue = issues.find((i) => i.number === 0);
       {
         numberedIssues.map((issue) => {
           const issuePad = formatIssuePad(issue.number);
-          const isCurrent = issue.status === 'current';
+          const isCurrent = issue.number === currentIssue.number;
           return (
             <li>
               <a

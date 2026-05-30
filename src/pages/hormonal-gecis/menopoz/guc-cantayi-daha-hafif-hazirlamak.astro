@@ -1,0 +1,250 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/';
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
+const faqItems = articleFaqs[pathname] ?? [];
+
+const tocEntries = [
+  { id: 'canta', label: 'Çanta' },
+  { id: 'guc-ne', label: 'Güç Ne?' },
+  { id: 'dokuz-yil', label: 'Dokuz Yıl' },
+  { id: 'anne-kiz', label: 'Anne Kız' },
+  { id: 'self-care', label: 'Kendine Bakım' },
+  { id: 'bedenle-anlasma', label: 'Bedenle Anlaşma' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır';
+const articleDescription =
+  'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini çanta, merdiven, anne-kız sohbeti ve HRT kararının içinden sevimli bir yaşıt denemesiyle yeniden okuyor.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'basak-pelister',
+  publishedDate: '1 Haziran 2026',
+  pathname,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/',
+  keywords: [
+    'menopoz deneyimi',
+    'HRT yolculuğu',
+    '40 sonrası güç',
+    'menopozda yorgunluk',
+    'anne kız sohbeti',
+    'beden farkındalığı',
+    'günlük hayat',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="basak-pelister"
+        publishedDate="1 Haziran 2026"
+        readingMinutes={6}
+        imageSrc="/images/library/editorial/basak-guc-canta-hafifletmek-byline.webp"
+        imageAlt="Sıcak doğal ışıkta evde çantasını hazırlayan 50+ kadın; menopoz deneyimi, günlük güç ve çantayı hafifletme temasını taşıyan sevimli editoryal görsel"
+        imagePosition="50% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Güç bazen daha ağır çalışmak değil, gereksiz yükü fark etmektir. Başak Pelister bu yazıda dokuz yıllık
+          menopoz deneyimini; çanta hazırlamak, merdiven çıkmak, anne-kız konuşmaları ve yakın dönem HRT kararının
+          çevresinde sevimli ama ölçülü bir yaşıt notuna dönüştürüyor. Bu bir öneri listesi değil; bedene daha az
+          kavga, daha çok dikkatle bakma daveti.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="canta">Aslında Her Şey Bir Çantayla Başladı...</h2>
+        <p>
+          Hepimizin yaşadığı bir an vardır: evden çıkmadan önce çantaya bir şey daha koyarız. Sonra bir şey daha...
+          Sonra omuzumuz konuşmaya başlar.
+        </p>
+        <p>
+          Ben bunu yıllarca “hazırlıklı olmak” sandım. Gözlük, şal, su, küçük çanta içinde başka küçük çanta, belki
+          lazım olur diye bir şey daha. Derken bir gün merdiven çıkarken omzumdaki yükün yalnızca çanta olmadığını
+          fark ettim. Sizce de bazen güç, taşıyabildiğimizi göstermek değil, neyi taşımak istemediğimizi anlamak
+          olabilir mi?
+        </p>
+        <p>
+          Bende öyle bir an oldu ki, çantayı yere koyup içinden üç şey çıkardım. Dünya değişmedi. Ama omzum değişti.
+          Bu benim minik keşfim; sizin keşfiniz belki dolapta, belki takvimde, belki de “bugün bunu yapmayacağım”
+          diyebildiğiniz bir anda saklıdır.
+        </p>
+
+        <h2 id="guc-ne">Güç Dediğimiz Şey Tam Olarak Ne?</h2>
+        <p>
+          Güç kelimesi bazen fazla sert geliyor. Sanki hep daha fazlasını kaldırmak, daha çok dayanmak, daha az
+          yorulmak zorundayız.
+        </p>
+        <p>
+          Menopozdan sonra güç benim için yavaş yavaş başka bir kelimeye dönüştü: kapasite. Bugün neyi taşıyabilirim,
+          neyi bölmem gerekir, neyi başkasına bırakabilirim? Kas gücü ve denge elbette önemli; 40 sonrasında hareket,
+          kemik ve kas sağlığı için güçlü bir destek hattıdır <Evidence level={5} />. Ama gündelik güç yalnızca kasla
+          değil, sınır koyma becerisiyle de ilgili.
+        </p>
+        <p>
+          Burada samimi itirafım şu: eskiden “yaparım” demeyi çok severdim. Şimdi bazen “bunu daha hafif yapabilirim”
+          demek bana daha olgun geliyor. Hiç düşündünüz mü, bazı yükler fiziksel olduğu kadar editoryal de olabilir:
+          hayatınızdan neyi çıkaracağınıza karar vermek gibi.
+        </p>
+
+        <h2 id="dokuz-yil">Dokuz Yıllık Menopozdan Sonra Neyi Daha Net Duyuyorum?</h2>
+        <p>
+          Menopoz benim hayatıma tek bir gün gibi gelmedi. Daha çok uzun bir yol, bazen sessiz, bazen şaşırtıcı, bazen
+          de insanın kendine gülümsediği bir yoldu.
+        </p>
+        <p>
+          Dokuz yıl içinde bedenimin sinyalleri değişti. Uykunun değeri, sabah enerjisinin kırılganlığı, sıcak basmasının
+          sosyal hayattaki hesapları, kas gücünün merdivendeki varlığı... Bunlar tek tek ayrı başlıklar gibi
+          görünürken zamanla aynı dosyanın sayfaları oldu <Evidence from={3} to={4} />.
+        </p>
+        <p>
+          Yakın dönemde HRT kararımı da bu yüzden aceleyle değil, konuşarak aldım. Bunu bir “herkese uygun yol” gibi
+          yazmıyorum; benim yolum hekim değerlendirmesi, kişisel riskler ve düzenli takip içinde şekillendi. Sizinki
+          farklı olabilir. Zaten iyi karar biraz da burada başlıyor: kendi bedeninizin cümlesini başkasının paragrafına
+          zorla sığdırmamak.
+        </p>
+
+        <h2 id="anne-kiz">Anne Kız Arasında Güç Nasıl Konuşulur?</h2>
+        <p>
+          Bazen bir konuyu en net annenizle veya kızınızla konuşurken anlarsınız. Çünkü aynı kelime üç kuşakta üç ayrı
+          anlama gelir.
+        </p>
+        <p>
+          Annem için güç uzun süre “şikayet etmeden yapmak” demekti. Kızımın kuşağında güç daha çok “sınırımı biliyorum”
+          cümlesine benziyor. Ben ikisinin arasında, biraz eski refleksle biraz yeni farkındalık arasında gidip geliyorum.
+          Siz hangi kuşağın cümlesine daha yakınsınız?
+        </p>
+        <p>
+          Bu konuşmalarda şunu seviyorum: menopoz bir aile sırrı gibi değil, yaşam bilgisi gibi dolaşmaya başlıyor.
+          Sıcak basması, uyku, enerji, libidonun değişmesi, HRT soruları, takvimler, kontroller... Her şey bir anda
+          hafiflemiyor ama konuşulabilir hale geliyor. Bazen güç de tam olarak bu: utanmadan, abartmadan, saklamadan
+          konuşabilmek.
+        </p>
+
+        <h2 id="self-care">Kendine Bakım Bazen Daha Az Eşya Taşımaktır</h2>
+        <p>
+          Self-care kelimesi bazen fazla süslü duruyor, biliyorum. Ama bazen gerçekten çok basit bir şey: çantanızı,
+          gününüzü ve bedeninizden beklentinizi biraz hafifletmek.
+        </p>
+        <p>
+          Bir seyahate çıkarken eskiden her ihtimali çantama koyardım. Şimdi kendime daha sık şunu soruyorum: “Bunu
+          taşıyacak olan ben miyim, yoksa kaygım mı?” Bu soru bana iyi geliyor. Ama bu benim ritmim; siz belki bunu
+          ayakkabı seçerken, merdiven yerine asansör seçerken veya akşam planınızı sadeleştirirken sorarsınız.
+        </p>
+        <p>
+          Menopoz sonrası beden bazen daha doğrudan konuşuyor. Uykusuz kaldıysam, fazla yüklendiysem, su içmeyi
+          unuttuysam ya da kendimi kanıtlamaya çalıştıysam cevap daha hızlı geliyor. Eskiden bunu “niye böyle oldum?”
+          diye okurdum. Şimdi biraz daha sevimli okuyorum: bedenim bana kısa not bırakıyor.
+        </p>
+
+        <h2 id="bedenle-anlasma">Bedenle Anlaşmak Mümkün mü?</h2>
+        <p>
+          Bedenle anlaşmak, her gün iyi hissetmek değildir. Daha çok, kötü hissettiğiniz günlerde de kendinizle
+          kavga etmemeyi öğrenmektir.
+        </p>
+        <p>
+          Güçlü olmak bazen egzersiz yapmak, bazen hekime soru sormak, bazen laboratuvar sonucunu telaşlanmadan okumak, bazen
+          de çantadan gereksiz üç şeyi çıkarmaktır. Menopoz sonrası sağlık kararlarında uyku, hareket, kemik sağlığı,
+          metabolik takip ve kişisel riskler birlikte düşünülür <Evidence level={4} />; ama günlük hayatta bunların
+          karşılığı çoğu zaman küçük seçimlerdir.
+        </p>
+        <p>
+          Benim bu yazıdaki cümlem şu: Güç, her şeyi taşımak değildir. Güç, neyi taşımayacağınızı fark ettiğinizde
+          de ortaya çıkar. Ve inanın, bazen bir çantayı hafifletmek bile bütün güne başka bir omuz verir.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
+          '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/',
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={4} /></p>
+        <p>
+          Bu yazı kişisel deneyim merkezli bir denemedir. Menopoz sonrası enerji, uyku, kas gücü, metabolik takip ve
+          HRT kararı kişisel riskler, yakınmalar ve tıbbi değerlendirme ile birlikte ele alınmalıdır.
+        </p>
+        <p>
+          <strong>Klinik sınır:</strong> HRT veya başka bir tıbbi yaklaşım herkes için aynı karar değildir. Meme
+          sağlığı, rahim durumu, pıhtı riski, kalp-damar öyküsü, yakınmaların şiddeti ve kişisel öncelikler birlikte
+          değerlendirilmelidir.
+        </p>
+        <p>
+          <strong>Pratik bütünleşim:</strong> Deneyim yazıları okura yalnız olmadığını hissettirebilir; ancak kişisel
+          sağlık kararları bireysel tıbbi değerlendirme ile verilmelidir.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+          — Estranova Bilimsel Editör Notu
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme ve kişisel deneyim aktarımı amaçlıdır. Tanı, tedavi, HRT kararı, ilaç düzenlemesi
+          veya kişisel tıbbi öneri yerine geçmez. Menopoz yakınmalarınız, sağlık geçmişiniz veya tedavi seçenekleriniz
+          için sağlık profesyoneliyle bireysel değerlendirme yapınız.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

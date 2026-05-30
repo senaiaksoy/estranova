@@ -1,0 +1,275 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/';
+const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/']!;
+const faqItems = articleFaqs[pathname] ?? [];
+
+const tocEntries = [
+  { id: 'tek-etiket-yetmez', label: 'Tek Etiket Yetmez' },
+  { id: 'tiroid', label: 'Tiroid' },
+  { id: 'metabolizma', label: 'Metabolizma' },
+  { id: 'kas', label: 'Kas' },
+  { id: 'laboratuvar', label: 'Laboratuvar' },
+  { id: 'kirmizi-bayraklar', label: 'Kırmızı Bayraklar' },
+  { id: 'gorusmeye-hazirlik', label: 'Görüşmeye Hazırlık' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?';
+const articleDescription =
+  '40 sonrasında sabah ağır gelen bedeni tek kelimeyle açıklamadan; tiroid, kas kütlesi, uyku, insülin direnci ve laboratuvar okumasını yan yana değerlendiren endokrin yazısı.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'metin-alis',
+  publishedDate: '1 Haziran 2026',
+  pathname,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/',
+  keywords: [
+    'yorgunluk',
+    'tiroid',
+    'metabolizma',
+    '40 sonrası',
+    'menopoz',
+    'kas kütlesi',
+    'insülin direnci',
+    'laboratuvar okuma',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · 40 Sonrası"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="metin-alis"
+        publishedDate="1 Haziran 2026"
+        readingMinutes={8}
+        imageSrc="/images/library/editorial/metin-yorgunluk-kas-tiroid-metabolizma-byline.webp"
+        imageAlt="Aydınlık yatak odasında gardırop yanında güne hazırlanırken durup beden enerjisini fark eden 50+ kadın; yorgunluk, tiroid, metabolizma ve kas kütlesi temasını taşıyan sakin editoryal görsel"
+        imagePosition="50% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          40 sonrasında yorgunluk çoğu zaman tek bir kutuya sığmaz. Tiroid hormonları, uyku kalitesi, kas kütlesi,
+          insülin direnci, demir depoları ve menopoz geçişi aynı şikayeti farklı yollarla büyütebilir. Bu yazıda
+          yorgunluğu tembellik ya da yaşlanma diye kapatmadan; hangi soruların, hangi laboratuvar değerlerinin ve
+          hangi klinik ipuçlarının birlikte okunabileceğini anlatır.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="tek-etiket-yetmez">Yorgunluğa Tek Etiket Neden Yetmez?</h2>
+        <p>
+          Sabah kalktığınızda bedeniniz ağırsa, bu her zaman aynı anlama gelmez. Aynı kelime — yorgunluk — tiroidden
+          kasa, uykudan metabolizmaya uzanan farklı yolları anlatabilir.
+        </p>
+        <p>
+          Yorgunlukla ilgili en sık kafa karışıklığı şudur: insan bu hissi tek bir değere bağlamak ister. Oysa laboratuvar
+          değeri bir cümledir, bedenin hikayesi paragraftır; cümleyi paragrafsız okumak yanıltır. İlk hedef hızlı etiket
+          koymak değil, tabloyu doğru parçalara ayırmaktır.
+        </p>
+        <p>
+          Birçok kadın bu soruyu sabah gardırobun önünde fark eder: kıyafet seçmek zor gelmez de, kolu kaldırmak,
+          saç kurutmak, merdivene çıkmak beklenenden ağır gelir. Bu sahne tek başına tanı koydurmaz; ama hekime
+          anlatılacak hikayeyi daha somut hale getirir.
+        </p>
+        <p>
+          40 sonrasında östrojen dalgalanması, uyku bölünmesi, kas kütlesinde azalma, tiroid bozuklukları, demir
+          eksikliği, B12 eksikliği, glikoz düzensizliği ve kronik stres birbirine benzeyen belirtiler yaratabilir
+          <Evidence from={4} to={5} />. Bu benzerlik, iyi bir klinik soruyu daha değerli hale getirir: Yorgunluk ne
+          zaman başlıyor, neyle artıyor, neyle azalıyor?
+        </p>
+
+        <h2 id="tiroid">Tiroid Yorgunluğu Nasıl Bir İz Bırakır?</h2>
+        <p>
+          Tiroid hormonu vücudun enerji hızını düzenleyen ana sistemlerden biridir. Az çalıştığında yalnızca yorgunluk
+          değil, bedenin genel temposunda yavaşlama hissi oluşabilir.
+        </p>
+        <p>
+          Hipotiroidizmde kabızlık, üşüme, cilt kuruluğu, saç dökülmesi, kilo alma eğilimi, zihinsel yavaşlama ve
+          nabızda düşüklük görülebilir <Evidence level={5} />. Buna karşılık hipertiroidizmde çarpıntı, titreme, kilo
+          kaybı, terleme, huzursuzluk ve uyku bozulması öne çıkabilir. İki tablo da yorgunluk yaratabilir; fakat
+          mekanizmaları farklıdır.
+        </p>
+        <p>
+          TSH, yani tiroid uyarıcı hormon, tiroid değerlendirmesinde ana başlangıç değerlerinden biridir. Ancak tek
+          başına her soruyu cevaplamaz. fT4, bazen fT3, tiroid antikorları, ilaç kullanımı, gebelik/lohusalık geçmişi,
+          kalp ritmi ve semptomların süresi birlikte okunmalıdır.
+        </p>
+
+        <h2 id="metabolizma">Metabolik Yorgunluk Neyi Anlatabilir?</h2>
+        <p>
+          Metabolik yorgunluk çoğu zaman günün belli saatlerinde belirginleşir. Yemekten sonra bastıran uyku hali,
+          karın çevresinde kilo artışı ve tatlı isteği tabloya eşlik edebilir.
+        </p>
+        <p>
+          İnsülin direnci ve glikoz dalgalanmaları, bazı kadınlarda enerji hissini gün içinde oynatabilir <Evidence level={4} />.
+          Bu tablo her zaman belirgin diyabet anlamına gelmez; bazen açlık glukozu, HbA1c, bel çevresi, tansiyon,
+          trigliserid ve HDL gibi değerleri yan yana görmek gerekir.
+        </p>
+        <p>
+          Menopoz geçişinde vücut kompozisyonu değişebilir. Aynı kiloda kalırken kas oranı azalabilir, karın çevresi
+          artabilir, uyku bozulduğu için iştah ve enerji düzeni etkilenebilir. Bu nedenle “metabolizmam yavaşladı”
+          cümlesini tek başına bırakmak yerine, hangi sistemin nasıl değiştiğini ayırmak gerekir.
+        </p>
+
+        <h2 id="kas">Kas Kütlesi Yorgunluğu Nasıl Büyütür?</h2>
+        <p>
+          Kas yalnızca hareket etmek için değildir; enerji kullanımının ve günlük dayanıklılığın da önemli parçasıdır.
+          Kas kütlesi azaldığında aynı günlük işler daha fazla efor gibi hissedilebilir.
+        </p>
+        <p>
+          40 sonrasında düzenli direnç uyarısı azaldığında kas kuvveti ve kas kalitesi düşebilir <Evidence level={4} />.
+          Bu durum merdivende daha çabuk yorulma, çanta taşırken omuz-bel hattında yük hissi, uzun yürüyüşten sonra
+          beklenenden fazla bitkinlik veya sabah hareketlerinde ağırlık olarak görülebilir.
+        </p>
+        <p>
+          Kas yorgunluğu ile tiroid yorgunluğu birbirini taklit edebilir. Ayrım için yalnızca hisse değil; kas gücü,
+          protein alımı, hareket düzeyi, uyku, inflamasyon, D vitamini, demir depoları ve eşlik eden ilaçlar birlikte
+          değerlendirilmelidir.
+        </p>
+
+        <h2 id="laboratuvar">Laboratuvar Hangi Soruyu Cevaplar?</h2>
+        <p>
+          Laboratuvar testleri yorgunlukta çok değerlidir; ancak doğru soru sorulmadığında fazla test de kafa karışıklığı
+          yaratabilir. Amaç bütün değerleri toplamak değil, şikayeti anlamlı başlıklarla eşleştirmektir.
+        </p>
+        <p>
+          Sık değerlendirilen başlıklar arasında tam kan sayımı, ferritin, B12, D vitamini, TSH, fT4, açlık glukozu,
+          HbA1c, karaciğer-böbrek fonksiyonları ve bazı durumlarda inflamasyon göstergeleri yer alabilir <Evidence level={4} />.
+          Hangi testin gerekli olduğu yaşa, öyküye, ilaçlara ve muayene bulgularına göre değişir.
+        </p>
+        <p>
+          Bir hormonun düzeyi tek başına yorumlanmaz; klinik tabloyla beraber okunur. Bu yüzden “TSH normal, o halde
+          hiçbir şey yok” veya “D vitamini düşük, bütün yorgunluğum bundan” gibi tek cümlelik sonuçlar çoğu zaman
+          yetersiz kalır.
+        </p>
+
+        <h2 id="kirmizi-bayraklar">Hangi Yorgunluk Beklememeli?</h2>
+        <p>
+          Yorgunluğun pek çok nedeni adım adım değerlendirmeyle anlaşılır; ama bazı eşlik eden bulgular daha hızlı tıbbi
+          değerlendirme gerektirir. Burada niyet korkutmak değil, ayrımı netleştirmektir.
+        </p>
+
+        <RedFlagBox
+          title="Yorgunlukta geciktirilmemesi gereken işaretler"
+          intro="Aşağıdaki durumlar yorgunluğu rutin bir takip konusu olmaktan çıkarabilir ve daha hızlı değerlendirme gerektirebilir."
+          markers={[
+            'Göğüs ağrısı, bayılma, belirgin nefes darlığı veya yeni başlayan çarpıntı',
+            'Açıklanamayan hızlı kilo kaybı, gece terlemesi, uzun süren ateş veya belirgin iştahsızlık',
+            'Şiddetli halsizlikle birlikte bilinç bulanıklığı, kusma, tansiyon düşüklüğü veya susuz kalma bulguları',
+            'Kan şekeri düşüklüğünü düşündüren terleme, titreme, dalgınlık veya tekrarlayan baygınlık hissi',
+          ]}
+          footnote="Bu liste tanı koymaz; daha hızlı değerlendirme gerektirebilecek işaretleri görünür kılar."
+        />
+
+        <h2 id="gorusmeye-hazirlik">Hekim Görüşmesine Nasıl Hazırlanmalı?</h2>
+        <p>
+          Yorgunluğu anlatırken en işe yarayan bilgi, şikayetin zaman haritasıdır. Ne zaman başladı, günün hangi
+          saatinde artıyor, yemekle ilişkisi var mı, uykuyla toparlıyor mu, hareketle düzeliyor mu?
+        </p>
+        <p>
+          Görüşmeye giderken son üç ayın kilo değişimi, adet düzeni veya menopoz durumu, uyku kalitesi, kullandığınız
+          ilaçlar, takviyeler, ailede tiroid-diyabet öyküsü, beslenme düzeni ve hareket düzeyi not edilebilir. Bu liste
+          tanı koymak için değil, görüşmenin daha verimli geçmesi için bir hafıza desteğidir.
+        </p>
+        <p>
+          Kılavuz adımı gösterir, kişisel yol ise hikayeyle özelleşir. Yorgunluk da böyledir: aynı şikayet iki kadında
+          iki farklı nedene dayanabilir. İyi tıbbi karar, tek bir değeri büyütmeden; laboratuvarı, bedeni ve hikayeyi
+          yan yana okuyabilmektir.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
+          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <p>
+          40 sonrası yorgunluk değerlendirmesinde tiroid fonksiyonu, anemi/demir depoları, B12 ve D vitamini durumu,
+          glikoz metabolizması, uyku, ilaçlar ve vücut kompozisyonu birlikte düşünülür. Tek bir normal laboratuvar
+          değeri, klinik yakınmayı otomatik olarak açıklamaz veya dışlamaz.
+        </p>
+        <p>
+          <strong>Klinik sınır:</strong> Bu yazı tanı veya tedavi önerisi değildir. Yeni başlayan çarpıntı, göğüs
+          ağrısı, bayılma, açıklanamayan kilo kaybı, ateş, bilinç değişikliği veya ciddi kan şekeri belirtileri varsa
+          değerlendirme geciktirilmemelidir.
+        </p>
+        <p>
+          <strong>Pratik bütünleşim:</strong> Yorgunluğu doğru okumak, çoğu zaman laboratuvarı çoğaltmak değil; doğru
+          soruyu doğru değerle eşleştirmektir.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-burgundy">
+          — Estranova Bilimsel Editör Notu
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır. Tanı, tedavi, ilaç düzenlemesi veya kişisel laboratuvar yorumu
+          yerine geçmez. Yorgunluk yakınmanız belirgin, yeni, giderek artan veya günlük yaşamınızı sınırlayan bir
+          düzeydeyse kişisel değerlendirmenizi sağlık profesyoneliyle birlikte yapınız.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

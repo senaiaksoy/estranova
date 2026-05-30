@@ -504,6 +504,7 @@ Prefer:
 
 Prompt diversity rule:
 - Do not default to the same visual formula across articles.
+- Do not default to the same woman archetype across images. Vary Turkish / Türkiye-context female representation intentionally: different regional looks, skin undertones, hair colors and textures, facial features, body shapes, heights, styling habits, and urban / coastal / Anatolian / professional / home-life cues. Prompts may say "Turkish woman" but should further specify a distinct, realistic type so the generator does not keep producing the same generic face.
 - Avoid repeatedly using tea glasses, coffee cups, notebooks, pens, or desk/table scenes unless the article specifically calls for them.
 - Rotate scene anchors and props: wardrobe, mirror, coat, scarf, sunglasses, bag, keys, phone, headphones, book, magazine, market bag, suitcase, yoga mat, water bottle, hair brush, unlabeled sunscreen, fruit/greens, flowers, balcony rail, seaside path, elevator/lobby, gallery wall, or city street.
 - Every image prompt should cover a broader slice of life while remaining topic-aligned, calm, non-promotional, and editorial.

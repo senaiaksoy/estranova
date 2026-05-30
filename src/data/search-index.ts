@@ -55,7 +55,7 @@ const staticPages: SearchItem[] = [
   {
     title: 'Yazarlar',
     description: 'Estranova\'da yazan editörler ve konuk yazarların bibliyografisi.',
-    href: '/authors/',
+    href: '/yazarlar/',
     category: 'Sayfa',
   },
   {
