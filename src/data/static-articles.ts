@@ -117,6 +117,26 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
+    path: '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
+    title: 'Menopoz Sonrası Büyük Göğüsler: Meme Küçültme Ne Zaman Bir Konfor Meselesine Dönüşür?',
+    description:
+      'Menopoz sonrası dönemde büyük göğüslerin omuz, sırt, duruş, meme altı tahriş ve beden konforu açısından nasıl değerlendirilebileceğine; meme küçültme kararına acele etmeden, kişisel sağlık zeminiyle bakmaya dair Çağrı Sade imzalı rehber.',
+    publishedDate: '30 Mayıs 2026',
+    writerSlug: 'cagri-sade',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik/',
+    keywords: [
+      'menopoz sonrası büyük göğüs',
+      'meme küçültme',
+      'beden konforu',
+      'omuz sırt ağrısı',
+      'meme altı tahriş',
+      'menopoz sonrası beden',
+      'estetik cerrahi karar süreci',
+      '40 sonrası beden farkındalığı',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
     title: "40'tan Sonra Harekete Yeniden Başlamak: Daha Sert Değil, Daha Akıllı",
     description:

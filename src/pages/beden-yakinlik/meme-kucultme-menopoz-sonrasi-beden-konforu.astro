@@ -1,0 +1,281 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/';
+const hero = submenuHeroByRoute['/beden-yakinlik/']!;
+const articleTitle = 'Menopoz Sonrası Büyük Göğüsler: Meme Küçültme Ne Zaman Bir Konfor Meselesine Dönüşür?';
+const articleDescription =
+  'Op. Dr. Çağrı Sade, menopoz sonrası dönemde büyük göğüslerin omuz, sırt, duruş, meme altı tahriş ve beden konforu açısından nasıl değerlendirilebileceğini; meme küçültme kararına acele etmeden, kişisel sağlık zeminiyle bakmayı anlatıyor.';
+const publishedDate = '30 Mayıs 2026';
+const readingMinutes = 8;
+const articleImage = '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu.webp';
+const bylineImage = '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu-byline.webp';
+
+const tocEntries = [
+  { id: 'beden-yuku', label: 'Bedenin taşıma biçimi' },
+  { id: 'menopoz-sonrasi-yuk', label: 'Yük neden artar?' },
+  { id: 'estetikten-fazlasi', label: 'Estetikten fazlası mı?' },
+  { id: 'karar-sorulari', label: 'Karar soruları' },
+  { id: 'daha-rahat', label: 'Daha genç değil, daha rahat' },
+  { id: 'konusmak', label: 'Utanmadan konuşmak' },
+  { id: 'sss', label: 'Sık sorulanlar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  publishedDate,
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  image: `${siteUrl}${articleImage}`,
+  keywords: [
+    'menopoz sonrası büyük göğüs',
+    'meme küçültme',
+    'reduction mammoplasty',
+    'beden konforu',
+    'omuz sırt ağrısı',
+    'meme altı tahriş',
+    'menopoz sonrası beden',
+    'estetik cerrahi karar süreci',
+    '40 sonrası beden farkındalığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/beden-yakinlik/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Beden Konforu"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc={bylineImage}
+        imageAlt="İstanbul evinde pencere ve ayna yanında omzuna nazikçe dokunan, krem kazaklı ve bordo hırka detaylı 50'li yaşlarda kadın; menopoz sonrası beden konforu ve omuz-duruş farkındalığı temasını taşıyan editoryal portre"
+        imagePosition="center top"
+      />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Menopozdan sonra değişen şey yalnızca hormonlar değildir. Cilt elastikiyeti, bağ dokusu, kas
+          desteği, duruş ve bedenin ağırlığı taşıma biçimi de zamanla değişebilir <Evidence from={3} to={4} />.
+          Büyük göğüsler bazı kadınlarda bu dönemde omuz, sırt, boyun, meme altı tahrişi, kıyafet seçimi
+          ve hareket konforu gibi gündelik başlıklarla iç içe geçebilir. Meme küçültme ameliyatı bu yüzden
+          bir güzelleşme vaadi gibi değil; kişisel ihtiyaç, sağlık geçmişi, beden konforu ve uzun vadeli
+          denge birlikte değerlendirilerek konuşulması gereken cerrahi bir seçenek olarak ele alınmalıdır.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="beden-yuku">Bazen Beden Aynı Kalmaz, Yük Aynı Kalsa Bile</h2>
+        <p>
+          Menopoz sonrası dönemi çoğu zaman sıcak basması, uyku, ruh hali ya da kilo değişimi üzerinden
+          konuşuyoruz. Oysa daha sessiz bir değişim daha var: bedenin kendini taşıma biçimi.
+        </p>
+        <p>
+          Aynı göğüs ölçüsü, aynı sütyen, aynı ceket, aynı yürüyüş mesafesi birkaç yıl sonra eskisi gibi
+          hissettirmeyebilir. Bazen bunu büyük bir farkındalık anında değil, çok küçük bir gündelik detayda
+          anlarsınız.
+        </p>
+        <p>
+          Merdiven çıkarken nefesinizden çok omuzlarınızı fark edersiniz. Sütyeni çıkardığınızda deride
+          kalan izi görürsünüz. Yazın meme altında oluşan tahriş canınızı sıkar. Bir kıyafet güzel olduğu
+          halde bedeninizde rahat durmaz.
+        </p>
+        <p>
+          Ben bu konuyu yalnızca estetik kelimesinin içine sıkıştırmayı doğru bulmuyorum. Çünkü bazı kadınlar
+          için büyük göğüs meselesi dışarıdan nasıl göründüğünden çok, içeriden nasıl taşındığıyla ilgilidir.
+          Burada merkeze alınması gereken soru "daha küçük görünmek istiyor muyum?" değil, "bedenimin içinde
+          daha rahat olabilir miyim?" sorusudur.
+        </p>
+
+        <h2 id="menopoz-sonrasi-yuk">Menopoz Sonrası Bu Yük Neden Daha Fazla Hissedilebilir?</h2>
+        <p>
+          Yaşla birlikte cilt daha ince, bağ dokusu daha gevşek, kas desteği daha sınırlı hale gelebilir.
+          Kilo dağılımı değişebilir; duruş alışkanlıkları yıllar içinde bedende iz bırakabilir.
+        </p>
+        <p>
+          Bunların hiçbiri tek başına dramatik olmak zorunda değildir. Ama bir araya geldiklerinde bedenin
+          ağırlığı taşıma biçimini değiştirebilirler. Genç yaşlarda daha kolay tolere edilen büyük göğüsler,
+          menopoz sonrası dönemde daha belirgin bir yük gibi hissedilebilir.
+        </p>
+        <p>
+          Omuz kuşağı, sırt kasları ve boyun hattı aynı ağırlığı eskisi kadar rahat karşılamayabilir. Meme
+          dokusunun aşağı doğru yer değiştirmesi, sütyen desteğine daha fazla ihtiyaç duyulması ya da meme
+          altı ciltte tahriş bu hissi artırabilir <Evidence level={3} />.
+        </p>
+        <p class="border-l-2 border-gold/50 pl-4 italic text-ink/75">
+          İyi soru "göğüslerim fazla mı büyük?" olmayabilir. Daha iyi soru şudur: "Bedenim bu ağırlığı
+          hâlâ rahat taşıyor mu?"
+        </p>
+
+        <h2 id="estetikten-fazlasi">Meme Küçültme Bir Görünüm Kararından Fazlası Olabilir mi?</h2>
+        <p>
+          Bazı kadınlar için evet. Ama bu cümleyi dikkatli kurmak gerekir; çünkü her büyük göğüs sorun
+          yaratmaz, her rahatsızlık ameliyat gerektirmez ve her meme küçültme kararı aynı gerekçeyle verilmez.
+        </p>
+        <p>
+          Kimi kadın için konu kıyafetle ilgilidir. Kimi için spor yaparken zorlanmakla. Kimi için yıllardır
+          süren omuz-sırt yüküyle. Kimi için yaz aylarında tekrarlayan meme altı tahrişiyle. Kimi içinse
+          bedeniyle kurduğu ilişkinin artık daha fazla hafiflik ve denge istemesiyle.
+        </p>
+        <p>
+          Bu yüzden meme küçültme ameliyatı bir vaat gibi anlatılmamalıdır. "Kesin rahatlatır", "hayatı
+          değiştirir" ya da "mutlaka iyi gelir" gibi cümleler doğru değildir. Bedenler farklıdır, iyileşme
+          süreçleri farklıdır, beklentiler farklıdır <Evidence level={4} />.
+        </p>
+        <p>
+          Daha doğru yaklaşım şudur: Meme küçültme, bazı kadınlarda beden konforu açısından değerlendirmeye
+          değer bir seçenek olabilir. Ama bu seçenek, ancak kişisel sağlık durumu ve beklentiyle birlikte
+          ele alındığında anlam kazanır.
+        </p>
+
+        <h2 id="karar-sorulari">Karar Yalnızca Ölçüyle Verilmez</h2>
+        <p>
+          Bu konuda en sık yapılan hata, kararı yalnızca ölçü üzerinden düşünmektir. "Kaç beden küçülecek?"
+          sorusu elbette konuşulur; ama bence ilk soru bu olmamalıdır.
+        </p>
+        <p>
+          Önce bedenin ne anlattığını dinlemek gerekir. Aşağıdaki sorular bir karar formu değil; hekiminizle
+          konuşmaya daha hazırlıklı gitmenizi sağlayan sade bir başlangıçtır.
+        </p>
+        <ul>
+          <li>Sırt ve boyun ağrısı günlük hayatınızı etkiliyor mu?</li>
+          <li>Omuzlarda sürekli baskı ya da sütyen askısı izi var mı?</li>
+          <li>Spor, yürüyüş, uyku ya da kıyafet seçimi zorlaşıyor mu?</li>
+          <li>Meme altında tahriş sık tekrarlıyor mu?</li>
+          <li>Daha küçük görünmek mi istiyorsunuz, yoksa daha rahat hissetmek mi?</li>
+          <li>Bu karar sizin bedensel ihtiyacınızdan mı geliyor, yoksa dışarıdan gelen yorumlardan mı?</li>
+        </ul>
+        <p>
+          Cerrahi açıdan bakıldığında da yalnızca meme boyutu yeterli bilgi vermez. Cilt kalitesi, dolaşım,
+          diyabet, tansiyon, sigara kullanımı, kilo değişimleri, mamografi geçmişi, kullanılan ilaçlar ve
+          yara iyileşme kapasitesi birlikte değerlendirilmelidir.
+        </p>
+        <p>
+          Menopoz sonrası dönemde cilt ve bağ dokusu daha hassas davranabileceği için planlama daha dikkatli
+          yapılmalıdır. Amaç olabildiğince küçültmek değil; bedene uygun, doğal, uzun vadede taşınabilir bir
+          denge kurmaktır.
+        </p>
+
+        <h2 id="daha-rahat">Daha Genç Değil, Daha Rahat</h2>
+        <p>
+          Estetik cerrahi uzun süre "daha genç görünmek" diliyle anlatıldı. Oysa 40 sonrası kadın bedeni
+          için bence daha olgun ve daha dürüst bir soru var: "Ben bundan sonra bedenimin içinde nasıl daha
+          rahat yaşayacağım?"
+        </p>
+        <p>
+          Bu soru, göründüğünden daha derindir. Çünkü menopoz sonrası dönem birçok kadın için başkalarının
+          bedende ne gördüğünden çok, kendi bedeninin içinde ne hissettiğine dönme dönemidir.
+        </p>
+        <p>
+          Bazen mesele ayna değildir, omuzdur. Bazen kıyafet değildir, nefes ve hareket rahatlığıdır. Bazen
+          görüntü değildir, gün sonunda bedeni daha az yorgun hissetme arzusudur.
+        </p>
+        <p>
+          Bu yüzden meme küçültme kararı, bir güzellik standardına yaklaşma çabası olarak değil; bedenle
+          daha dengeli bir ilişki kurma ihtimali olarak konuşulmalıdır. Elbette bu ihtimal herkes için doğru
+          değildir. Bazı kadınlar için cerrahi dışı destekler yeterli olabilir; bazı kadınlarda ise uzun
+          süredir devam eden fiziksel yük, cerrahi seçeneğin tıbbi olarak değerlendirilmesini anlamlı kılabilir.
+        </p>
+
+        <h2 id="konusmak">Utanmadan Konuşmak, Abartmadan Değerlendirmek</h2>
+        <p>
+          Büyük göğüslerle ilgili rahatsızlık yaşayan kadınların bir kısmı bu konuyu dile getirmekte gecikebilir.
+          Çünkü mesele bazen estetik kaygı gibi küçümsenir. Oysa beden konforu estetikten daha geniş bir alandır.
+        </p>
+        <p>
+          Bir kadının omuzlarının ağrıması, yazın meme altında tahriş yaşaması, spor yaparken zorlanması ya da
+          kıyafet içinde kendini sürekli ayarlamak zorunda kalması yalnızca görüntü meselesi değildir. Bunlar
+          gündelik hayatın gerçek parçalarıdır.
+        </p>
+        <p>
+          Yine de karar aceleye getirilmemelidir. Sosyal medyadaki karşılaştırmalı görseller, çevreden gelen
+          "yaptır rahatla" yorumları ya da tam tersi "hiç gerek yok" cümleleri bu karar için yeterli değildir.
+        </p>
+        <p>
+          Benim bu konudaki yaklaşımım sade: Önce bedenin ne söylediğini anlamak gerekir. Sonra bu rahatsızlığın
+          gerçekten meme ağırlığı, duruş, kas-iskelet sistemi, cilt tahrişi veya başka bir nedenle ilişkili olup
+          olmadığı değerlendirilmelidir. En son aşamada, cerrahi seçeneğin kişi için uygun olup olmadığı konuşulmalıdır.
+        </p>
+        <p>
+          Bu kararın merkezinde işlem değil, kadın olmalıdır.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sss"
+        class="mt-10"
+        items={faqItems}
+        title="Bu Yazıdan Sonra Akla Gelen Sorular"
+        intro="Meme küçültme kararını menopoz sonrası beden konforu açısından düşünürken sık dönen soruları kısa yanıtlarla topladım."
+      />
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/',
+          '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Menopoz sonrası dönemde meme küçültme gibi cerrahi seçenekler yalnızca estetik tercih diliyle
+          anlatılmamalıdır. Omuz-sırt yükü, cilt tahrişi, hareket konforu ve kişisel sağlık zemini birlikte
+          değerlendirilir. Bu değerlendirme; meme görüntüleme geçmişi, eşlik eden hastalıklar, ilaç kullanımı,
+          sigara, kilo değişimi ve yara iyileşme kapasitesi gibi değişkenleri içerir.
+        </p>
+        <p>
+          Bu yazı bir işlem önerisi değildir; deneyim anlatısı, başarı iddiası veya yönlendirici vaat dili
+          kullanmadan hazırlanmıştır. Amaç, okurun kendi beden konforunu daha sakin
+          sorularla değerlendirmesine yardımcı olmaktır.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10" />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

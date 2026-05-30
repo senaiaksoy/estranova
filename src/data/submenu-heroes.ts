@@ -219,6 +219,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/': {
+    src: '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu.webp',
+    alt: "İstanbul evinde ayna ve pencere yanında omzuna nazikçe dokunan 50'li yaşlarda kadın; menopoz sonrası beden konforu, duruş ve omuz farkındalığı yazısı için sakin editoryal kart görseli",
+  },
   '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/': {
     src: '/images/library/editorial/basak-guc-canta-hafifletmek.webp',
     alt: 'Sıcak doğal ışıkta evde çantasını hazırlayan 50+ kadın; menopoz deneyimi, günlük güç ve çantayı hafifletme yazısı için sevimli editoryal kart görseli',

@@ -4,6 +4,33 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/': [
+    {
+      question: 'Menopoz sonrası meme küçültme ameliyatı düşünülebilir mi?',
+      answer:
+        'Bazı kadınlarda düşünülebilir; ancak karar yalnızca yaşa veya menopoz durumuna göre verilmez. Genel sağlık durumu, meme yapısı, mamografi geçmişi, cilt kalitesi, kullanılan ilaçlar ve iyileşme kapasitesi birlikte değerlendirilmelidir.',
+    },
+    {
+      question: 'Büyük göğüsler menopozdan sonra neden daha rahatsız edici olabilir?',
+      answer:
+        'Cilt elastikiyeti, bağ dokusu, kas desteği ve kilo dağılımı yaşla birlikte değişebilir. Bu değişimler omuz, sırt, boyun ve meme altı cilt bölgesindeki yükü daha belirgin hale getirebilir.',
+    },
+    {
+      question: 'Meme küçültme yalnızca estetik bir işlem midir?',
+      answer:
+        'Hayır. Bazı kadınlarda beden konforu ve günlük yaşam dengesiyle ilişkili bir cerrahi seçenek olarak değerlendirilebilir. Ancak bu, işlemin herkese uygun olduğu anlamına gelmez; kişisel tıbbi değerlendirme gerekir.',
+    },
+    {
+      question: 'Her büyük göğüs ameliyat gerektirir mi?',
+      answer:
+        'Hayır. Her büyük göğüs fiziksel sorun yaratmaz. Bazı kadınlarda doğru sütyen desteği, postür çalışmaları, kilo dengesi, cilt bakım önlemleri veya yaşam tarzı düzenlemeleri yeterli olabilir.',
+    },
+    {
+      question: 'Karar verirken en önemli soru nedir?',
+      answer:
+        'En önemli soru şudur: "Bu kararı bedenimin gerçek konforu için mi düşünüyorum?" Eğer yanıt evetse, ikinci adım bunun tıbbi olarak uygun ve güvenli olup olmadığını değerlendirmektir.',
+    },
+  ],
   '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/': [
     {
       question: 'Estetik diş kararı için ideal bir yaş var mı?',

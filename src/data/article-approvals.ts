@@ -341,6 +341,12 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-20',
     note: 'Yazar onayi v4 (20 May 2026): Op. Dr. Cagri Sade kendi duzeltme metnini ("Aynaya Bakinca Akla Gelen O Soru" .docx) gonderdi; metin Estranova editoryal sablonuna kalibre edildi. Onceki v3 ben-anlatimi agirligi yazar geri bildirimi uzerine biz/siz inclusive zemine cevrildi; ben-anlatimi yalniz kisisel kani/gozlem anlarinda birakildi. Italik soru-quote diyalogu ("Acaba ne islem yaptirmaliyim?" → "Bu islem yapilabilir mi?" → "Gercekten size uygun mu?") Cagri imzasi olarak yerlesti. "Sonuc Olarak" yumusak normatif kapanis basligi eklendi (TOC ve sayfa). Sade etiket-bullet (5 madde tek kelimelik) yazar ritmi olarak meslulastirildi. CLAUDE.md §1/§4 sert kontrol gecti: marka adi yok, ASPS/ISAPS/IPRAS yok, kendi sitesi/hastane yok, vitrin (25 yil/Aston) yok, once-sonra yok, "en iyi" superlatifi "en yardimci olan" olarak yumusatildi. Evidence pillleri korundu (5/3/3-4/5/2/5). Hero gorseli (zy-yuz-mudahalesi-olcu-sorusu.webp 2400x1000) ve byline gorseli (zy-yuz-mudahalesi-olcu-sorusu-byline.webp 1200x1500) yeni Cagri sahnesiyle (oval ayna + okaliptus + pencere kenari + bordo bluz) iki ayri render olarak yenilendi; alt metinleri "aynaya yeniden bakmak" temasiyla guncellendi. Yazar profili hot.md v0.1 → v0.5: HARD imza biz+siz inclusive birincil + ben-anlatimi ikincil, italik soru-quote HARD imza, "Sonuc Olarak" kapanis basligi imzasi, sade etiket-bullet izni, tek cumlelik paragraf serbestligi. Article-log v4 satiri yazildi. Bilimsel Editor Notu (Doc. Dr. Senai Aksoy) + FAQ + JSON-LD degismedi.',
   },
+  {
+    pathname: '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
+    writerSlug: 'cagri-sade',
+    approvedAt: '2026-05-30',
+    note: 'KC editor direct approval: Cagri Sade tarafindan iletilen meme kucultme ve menopoz sonrasi beden konforu metni Estranova editorial-compliance cizgisine kalibre edilerek yayina alindi. Hasta alintisi, karsilastirmali sonuc anlatimi, kesin fayda vaadi, klinik yonlendirme ve promotional cerrahi dili temizlendi; karar sorulari, beden konforu, mamografi/gecmis saglik zemini ve ttb-saglik bakanligi tanitim sinirlari editor notuyla gorunur kilindi. Ust hero parent Beden & Yakinlik olarak korundu; kullanici sagladigi yatay gorsel kart/arshiv, dikey gorsel ArticleAuthorBlock yuzeyine baglandi.',
+  },
 ];
 
 /**
