@@ -1,0 +1,130 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+
+const pageTitle = 'Bilimsel Editörden Kısa Bir Not - Estranova';
+const pageDescription =
+  'Doç. Dr. Senai Aksoy’dan Estranova’nın amacını, bilimsel editör denetimini ve sakin sağlık okuryazarlığı yaklaşımını anlatan kısa mektup.';
+---
+
+<SiteLayout title={pageTitle} description={pageDescription}>
+  <SiteNavbar currentPath="/bilimsel-editor-mektubu/" />
+
+  <main id="main-content" class="text-ink">
+    <section class="relative isolate overflow-hidden border-b border-burgundy/10 bg-burgundy px-6 pb-16 pt-32 text-white md:pb-24 md:pt-40">
+      <div class="pointer-events-none absolute inset-x-6 top-24 h-px bg-white/30"></div>
+      <div class="pointer-events-none absolute -right-16 top-28 hidden font-serif text-[10rem] italic leading-none tracking-[-0.08em] text-white/[0.07] lg:block" aria-hidden="true">
+        not
+      </div>
+      <div class="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-white/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-5xl">
+        <nav aria-label="Sayfa konumu" class="mb-8 text-xs uppercase tracking-[0.22em] text-white/65">
+          <a href="/" class="text-white/72 underline decoration-white/30 underline-offset-4 hover:text-white">Anasayfa</a>
+          <span class="mx-2 text-white/45">·</span>
+          <span class="text-white">Bilimsel Editörün Notu</span>
+        </nav>
+
+        <div class="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div class="flex items-center gap-5">
+            <img
+              src="/images/writers/senai-aksoy.webp"
+              alt="Doç. Dr. Senai Aksoy"
+              width="240"
+              height="240"
+              class="h-24 w-24 rounded-[24px] border border-white/30 bg-white/12 object-cover shadow-[0_24px_70px_-42px_rgba(0,0,0,0.6)] md:h-32 md:w-32"
+            />
+            <div>
+              <p class="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-white/72">
+                Bilimsel Editörden
+              </p>
+              <p class="font-serif text-3xl leading-none tracking-[-0.03em] md:text-5xl">
+                Doç. Dr. Senai Aksoy
+              </p>
+              <p class="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-white/68">
+                Estranova Bilimsel Editörü
+              </p>
+            </div>
+          </div>
+
+          <header class="border-t border-white/25 pt-7 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-white/68">
+              Kısa mektup
+            </p>
+            <h1 class="max-w-3xl font-serif text-5xl leading-[0.95] tracking-[-0.045em] md:text-7xl">
+              Durup bakalım diyen küçük bir not
+            </h1>
+            <p class="mt-6 max-w-3xl font-serif text-xl italic leading-relaxed text-white/86 md:text-2xl">
+              Estranova’nın bilimsel editör masasında biraz kırmızı kalem, biraz sağduyu, biraz da iyi soru var.
+            </p>
+          </header>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-cream-soft px-6 py-14 md:py-20">
+      <div class="pointer-events-none absolute right-0 top-16 hidden font-serif text-[9rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.035] lg:block" aria-hidden="true">
+        mektup
+      </div>
+
+      <article class="relative mx-auto max-w-3xl rounded-[34px] border border-burgundy/12 bg-white p-7 shadow-[0_32px_110px_-76px_rgba(44,22,28,0.45)] ring-1 ring-black/[0.04] md:p-10">
+        <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-burgundy/70 to-transparent"></div>
+
+        <div class="space-y-6 text-lg leading-relaxed text-ink/78 md:text-xl md:leading-relaxed">
+          <p class="font-serif text-2xl italic leading-relaxed text-burgundy md:text-3xl">
+            Merhaba,
+          </p>
+          <p>
+            Estranova’yı kurarken aklımızda çok basit bir soru vardı: 40 yaşından sonra bedenimiz değişirken, neden bu kadar çok kadın ya yalnız bırakılıyor ya da gereksiz yere korkutuluyor?
+          </p>
+          <p>
+            Ben bu sitede biraz “durup bakalım” diyen kişiyim.
+          </p>
+          <p>
+            Her belirti büyük bir alarm değildir; ama “boş ver, geçer” denecek kadar önemsiz de olmayabilir. İşte Estranova’nın sevdiğim tarafı tam burada: acele ettirmeden, abartmadan, küçümsemeden bakmaya çalışıyoruz.
+          </p>
+          <p>
+            Bilimsel editör olarak görevim yazıların arkasında sessizce durmak. Bazen bir cümleyi yumuşatmak, bazen fazla iddialı bir ifadeye kaş kaldırmak, bazen de “burada okurun kafası karışır, daha sade anlatalım” demek. Kısacası mutfakta biraz kırmızı kalem, biraz sağduyu, biraz da “bir dakika, bunu gerçekten biliyor muyuz?” sorusu var.
+          </p>
+          <p>
+            Estranova bir klinik kapısı değil. Randevuya çağırmaz, tedavi önermez, kimseyi bir yola itmez. Daha çok, “Bedenimde bir şey değişiyor; ben bunu daha iyi anlamak istiyorum” diyen kadınlar için hazırlanmış sakin bir okuma masası.
+          </p>
+          <p>
+            Buradan ayrılırken her şeyi çözmüş olmanız gerekmiyor. Belki sadece daha iyi bir soru bulursunuz. Bazen sağlıkta en yerinde başlangıç da tam olarak budur.
+          </p>
+        </div>
+
+        <footer class="mt-10 border-t border-burgundy/12 pt-7">
+          <p class="font-serif text-2xl leading-tight text-burgundy">
+            Doç. Dr. Senai Aksoy
+          </p>
+          <p class="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-ink/48">
+            Estranova Bilimsel Editörü
+          </p>
+        </footer>
+      </article>
+    </section>
+
+    <section class="border-t border-burgundy/10 bg-white px-6 py-12">
+      <div class="mx-auto flex max-w-3xl flex-col gap-4 text-center md:flex-row md:items-center md:justify-center md:text-left">
+        <a
+          href="/hakkimizda/"
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-burgundy px-6 py-3 text-sm font-semibold text-white transition hover:bg-burgundy-deep focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+        >
+          Platform yaklaşımını inceleyin
+          <span class="font-serif text-lg" aria-hidden="true">→</span>
+        </a>
+        <a
+          href="/"
+          class="inline-flex items-center justify-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/35 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+        >
+          Ana sayfaya dönün
+          <span class="font-serif text-lg" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

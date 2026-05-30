@@ -1,0 +1,72 @@
+---
+const editorName = 'Doç. Dr. Senai Aksoy';
+---
+
+<section
+  class="relative isolate overflow-hidden bg-burgundy px-6 py-8 text-white md:py-12"
+  aria-labelledby="home-medical-editor-title"
+>
+  <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-white/35"></div>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-black/15"></div>
+  <div
+    class="pointer-events-none absolute -right-10 top-1/2 hidden -translate-y-1/2 font-serif text-[8rem] italic leading-none tracking-[-0.08em] text-white/[0.07] lg:block"
+    aria-hidden="true"
+  >
+    not
+  </div>
+
+  <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-[0.72fr_1.28fr] md:items-center md:gap-7">
+    <div class="flex items-center gap-5">
+      <a
+        href="/yayin-kurulu/#senai-aksoy"
+        class="group relative block h-20 w-20 shrink-0 overflow-hidden rounded-[20px] border border-white/30 bg-white/12 shadow-[0_20px_50px_-32px_rgba(0,0,0,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy md:h-28 md:w-28 md:rounded-[22px]"
+        aria-label="Doç. Dr. Senai Aksoy yayın kurulu kartı"
+      >
+        <img
+          src="/images/writers/senai-aksoy.webp"
+          alt="Doç. Dr. Senai Aksoy"
+          width="224"
+          height="224"
+          loading="eager"
+          decoding="async"
+          class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+        />
+      </a>
+      <div>
+        <p class="mb-2 text-[0.65rem] font-bold uppercase tracking-[0.26em] text-white/78">
+          Bilimsel Editörün Notu
+        </p>
+        <h2 id="home-medical-editor-title" class="font-serif text-3xl leading-none tracking-[-0.03em] md:text-5xl">
+          {editorName}
+        </h2>
+        <p class="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-white/72">
+          Estranova Bilimsel Editörü
+        </p>
+      </div>
+    </div>
+
+    <div class="relative border-t border-white/24 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
+      <p class="max-w-3xl font-serif text-xl italic leading-snug text-white md:text-3xl">
+        Her belirti büyük bir alarm değildir; ama "boş ver, geçer" denecek kadar önemsiz de olmayabilir.
+      </p>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-white/80">
+        Estranova'da bilimsel editör notu biraz kırmızı kalem, biraz sağduyu, biraz da "bir dakika, bunu gerçekten biliyor muyuz?" sorusudur.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold">
+        <a
+          href="/hakkimizda/"
+          class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-burgundy-deep transition hover:bg-cream-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy"
+        >
+          Platform yaklaşımını inceleyin
+          <span class="font-serif text-lg" aria-hidden="true">→</span>
+        </a>
+        <a
+          href="/bilimsel-editor-mektubu/"
+          class="text-white underline decoration-white/45 underline-offset-4 transition hover:decoration-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy"
+        >
+          Kısa notu okuyun
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

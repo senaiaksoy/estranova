@@ -3,6 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import HomeHero from '../components/site/HomeHero.astro';
+import HomeMedicalEditorBand from '../components/site/HomeMedicalEditorBand.astro';
 import HomeJourneyMap from '../components/site/HomeJourneyMap.astro';
 import SymptomNavigation from '../components/site/SymptomNavigation.astro';
 import EditorialDigestStrip from '../components/site/EditorialDigestStrip.astro';
@@ -203,6 +204,7 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
 
   <main id="main-content" class="text-ink">
     <HomeHero hero={homePageHero} />
+    <HomeMedicalEditorBand />
 
     {
       hasHomeJourneySection && (
