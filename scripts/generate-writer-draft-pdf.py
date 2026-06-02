@@ -24,7 +24,7 @@ ZORUNLU YAPISAL ÖGELER (HARD MUST-CHECK — atlanmaz):
 Sabit kalanlar (Estranova editöryal tipografi pattern'i):
   - A4 sayfa, 2.5/2 cm kenar boşlukları
   - Constantia (serif) + Calibri (sans-serif) — Windows sistem fontları
-  - Palette: burgundy (#6B2D3E / #4f171c), gold (#C9A96E), dark_gray (#2D2D2D)
+  - Palette: primary (#D81B60), gold (#C9A96E), dark_gray (#2D2D2D)
   - H1 + 3.2cm gold ayraç
   - H2 = küçük gold "01"…"NN" + başlık + 2.5cm gold ayraç + italic lede
   - Gövde Calibri 11pt, satır yüksekliği 1.5
@@ -78,8 +78,8 @@ registerFontFamily('Calibri',
                    boldItalic='Calibri-BoldItalic')
 
 # --- Estranova palette ---
-burgundy        = HexColor('#6B2D3E')
-deep_burgundy   = HexColor('#4f171c')
+primary        = HexColor('#D81B60')
+secondary_pink   = HexColor('#D81B60')
 gold            = HexColor('#C9A96E')
 dark_gray       = HexColor('#2D2D2D')
 light_gray      = HexColor('#888888')
@@ -92,12 +92,12 @@ byline_style = ParagraphStyle(
 )
 
 h1_style = ParagraphStyle(
-    'H1', fontName='Constantia-Bold', fontSize=24, textColor=deep_burgundy,
+    'H1', fontName='Constantia-Bold', fontSize=24, textColor=secondary_pink,
     leading=30, spaceBefore=8, spaceAfter=4, alignment=TA_LEFT,
 )
 
 opening_lede_style = ParagraphStyle(
-    'OpeningLede', fontName='Constantia-Italic', fontSize=13, textColor=burgundy,
+    'OpeningLede', fontName='Constantia-Italic', fontSize=13, textColor=primary,
     leading=21, spaceBefore=14, spaceAfter=18, alignment=TA_LEFT, leftIndent=0,
 )
 
@@ -107,12 +107,12 @@ chapter_num_style = ParagraphStyle(
 )
 
 h2_style = ParagraphStyle(
-    'H2', fontName='Constantia-Bold', fontSize=17, textColor=deep_burgundy,
+    'H2', fontName='Constantia-Bold', fontSize=17, textColor=secondary_pink,
     leading=22, spaceBefore=2, spaceAfter=4, alignment=TA_LEFT,
 )
 
 section_lede_style = ParagraphStyle(
-    'SectionLede', fontName='Constantia-Italic', fontSize=12, textColor=burgundy,
+    'SectionLede', fontName='Constantia-Italic', fontSize=12, textColor=primary,
     leading=19, spaceBefore=10, spaceAfter=12, alignment=TA_LEFT, leftIndent=0,
 )
 
@@ -122,12 +122,12 @@ body_style = ParagraphStyle(
 )
 
 profile_label_style = ParagraphStyle(
-    'ProfileLabel', fontName='Calibri-Bold', fontSize=11, textColor=deep_burgundy,
+    'ProfileLabel', fontName='Calibri-Bold', fontSize=11, textColor=secondary_pink,
     leading=15, spaceBefore=8, spaceAfter=2, alignment=TA_LEFT,
 )
 
 faq_q_style = ParagraphStyle(
-    'FAQQ', fontName='Calibri-Bold', fontSize=11, textColor=deep_burgundy,
+    'FAQQ', fontName='Calibri-Bold', fontSize=11, textColor=secondary_pink,
     leading=16, spaceBefore=12, spaceAfter=4, alignment=TA_LEFT,
 )
 
@@ -137,7 +137,7 @@ faq_a_style = ParagraphStyle(
 )
 
 closing_lede_style = ParagraphStyle(
-    'ClosingLede', fontName='Constantia-Italic', fontSize=12, textColor=burgundy,
+    'ClosingLede', fontName='Constantia-Italic', fontSize=12, textColor=primary,
     leading=19, spaceBefore=18, spaceAfter=14, alignment=TA_LEFT, leftIndent=0,
 )
 
@@ -160,7 +160,7 @@ editor_note_body_style = ParagraphStyle(
 )
 
 editor_note_signature_style = ParagraphStyle(
-    'EditorNoteSignature', fontName='Calibri-Italic', fontSize=9.5, textColor=deep_burgundy,
+    'EditorNoteSignature', fontName='Calibri-Italic', fontSize=9.5, textColor=secondary_pink,
     leading=12, spaceBefore=4, alignment=TA_LEFT,
 )
 

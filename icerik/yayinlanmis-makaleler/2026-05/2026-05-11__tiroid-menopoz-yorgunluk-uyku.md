@@ -152,7 +152,7 @@ Polikliniğe başvuran kadınlarda Hashimoto'nun perimenopoz
 dinamiği içinde "dinamik bir gölge" gibi durduğunu sıklıkla
 görürüz; ikisini ayrı okumadan plan kurmak güçtür.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Klinik değerlendirmeyi öncelikli kılan bulgular

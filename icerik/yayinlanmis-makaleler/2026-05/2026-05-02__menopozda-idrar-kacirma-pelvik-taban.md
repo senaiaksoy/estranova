@@ -131,7 +131,7 @@ başlasın, üç ayda yeniden konuşalım"* gibi bir yol. **Üçüncüsü** —
 *"Tedavinin bir sonraki adımı ne olur, bu adımın yan etki ve sınırı nedir?"* Bu, kararın
 tek seferlik bir karar değil, bir süreç olduğunu net hale getiriyor.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

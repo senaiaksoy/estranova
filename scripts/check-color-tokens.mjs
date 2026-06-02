@@ -17,11 +17,9 @@ const allowedExt = new Set(['.astro', '.ts', '.tsx', '.mdx']);
 
 // Anahtar küçük harf — eşleşme case-insensitive yapılır.
 const BRAND_TOKENS = {
-  '#d81b60': 'burgundy',
-  '#ad1457': 'burgundy-deep',
+  '#d81b60': 'primary',
   '#2d2d2d': 'ink',
   '#000000': 'gold',
-  '#2d2d2d': 'gold-bronze',
   '#fdf8f0': 'cream-soft',
   '#f5ede0': 'cream-warm',
   '#fcf9f4': 'surface',
@@ -97,5 +95,5 @@ for (const [file, list] of grouped) {
     console.error(`    L${v.line}  ${v.hex}  →  ${v.suggestion}`);
   }
 }
-console.error('\nDüzeltme: bg-[#6B2D3E] yerine bg-burgundy, text-[#2D2D2D] yerine text-ink, ...');
+console.error('\nDüzeltme: bg-[#D81B60] yerine bg-primary, text-[#2D2D2D] yerine text-ink, ...');
 process.exit(1);

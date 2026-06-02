@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -55,16 +55,16 @@ const displayWithTitle = (w: Writer) =>
   <SiteNavbar currentPath="/yazarlar/" />
 
   <main id="main-content" class="text-ink">
-    <section class="relative overflow-hidden border-b border-burgundy/10 bg-gradient-to-br from-cream-warm via-cream-soft to-white px-6 py-16 md:py-20">
+    <section class="relative overflow-hidden border-b border-primary/10 bg-gradient-to-br from-cream-warm via-cream-soft to-white px-6 py-16 md:py-20">
       <div class="pointer-events-none absolute -right-24 top-12 h-72 w-72 rounded-full bg-gold/15 blur-3xl" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute bottom-10 left-6 hidden font-serif text-[9rem] lowercase leading-none text-burgundy/[0.035] md:block" aria-hidden="true">
+      <div class="pointer-events-none absolute bottom-10 left-6 hidden font-serif text-[9rem] lowercase leading-none text-primary/[0.035] md:block" aria-hidden="true">
         yazarlar
       </div>
       <div class="relative mx-auto max-w-6xl">
         <header class="max-w-4xl">
           <div class="mb-6 h-px w-24 bg-gold"></div>
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-burgundy">Yazar kadrosu</p>
-          <h1 class="mb-7 font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-burgundy md:text-7xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-primary">Yazar kadrosu</p>
+          <h1 class="mb-7 font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-primary md:text-7xl">
             Estranova’da kimler yazıyor?
           </h1>
           <p class="max-w-3xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
@@ -76,10 +76,10 @@ const displayWithTitle = (w: Writer) =>
 
     {
       groups.map((group) => (
-        <section class="border-b border-burgundy/10 bg-white px-6 py-14 md:py-18">
+        <section class="border-b border-primary/10 bg-white px-6 py-14 md:py-18">
           <div class="mx-auto max-w-6xl">
             <header class="mb-10 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-              <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">{group.kicker}</p>
+              <p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">{group.kicker}</p>
               <div>
                 <h2 class="mb-3 font-serif text-3xl leading-[0.98] tracking-[-0.03em] text-ink md:text-5xl">
                   {group.title}
@@ -93,7 +93,7 @@ const displayWithTitle = (w: Writer) =>
                 <li>
                   <a
                     href={`/yazarlar/${w.slug}/`}
-                    class="group relative flex h-full w-full flex-col overflow-hidden rounded-[30px] border border-burgundy/12 bg-white p-5 shadow-[0_24px_72px_-58px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-[0_32px_94px_-60px_rgba(44,22,28,0.38)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                    class="group relative flex h-full w-full flex-col overflow-hidden rounded-[30px] border border-primary/12 bg-white p-5 shadow-[0_24px_72px_-58px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-[0_32px_94px_-60px_rgba(44,22,28,0.38)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
                   >
                     <span class="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></span>
                     {w.portrait ? (
@@ -104,10 +104,10 @@ const displayWithTitle = (w: Writer) =>
                         height="200"
                         loading="lazy"
                         decoding="async"
-                        class="mb-4 aspect-[4/5] w-full rounded-[24px] object-cover object-top ring-1 ring-burgundy/12 transition duration-700 group-hover:scale-[1.02] group-hover:ring-burgundy/30"
+                        class="mb-4 aspect-[4/5] w-full rounded-[24px] object-cover object-top ring-1 ring-primary/12 transition duration-700 group-hover:scale-[1.02] group-hover:ring-primary/30"
                       />
                     ) : (
-                      <div class="mb-4 flex aspect-[4/5] w-full items-center justify-center rounded-[24px] bg-cream-warm font-serif text-5xl text-burgundy ring-1 ring-burgundy/12 transition group-hover:ring-burgundy/30">
+                      <div class="mb-4 flex aspect-[4/5] w-full items-center justify-center rounded-[24px] bg-cream-warm font-serif text-5xl text-primary ring-1 ring-primary/12 transition group-hover:ring-primary/30">
                         {w.displayName
                           .split(/\s+/)
                           .filter((part) => part.length > 0)
@@ -115,17 +115,17 @@ const displayWithTitle = (w: Writer) =>
                           .join('')}
                       </div>
                     )}
-                    <div class="flex min-w-0 flex-1 flex-col border-t border-burgundy/14 pt-4">
+                    <div class="flex min-w-0 flex-1 flex-col border-t border-primary/14 pt-4">
                       <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-bronze">
                         {w.role.split('/')[0].trim()}
                       </p>
-                      <h3 class="mt-2 font-serif text-2xl leading-[1.05] tracking-[-0.02em] text-ink transition group-hover:text-burgundy md:text-3xl">
+                      <h3 class="mt-2 font-serif text-2xl leading-[1.05] tracking-[-0.02em] text-ink transition group-hover:text-primary md:text-3xl">
                         {displayWithTitle(w)}
                       </h3>
                       <p class="mt-3 font-serif text-base italic leading-snug text-ink/72">
                         {w.signaturePhrase}
                       </p>
-                      <span class="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.17em] text-burgundy">
+                      <span class="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.17em] text-primary">
                         Profili oku
                         <span class="font-serif text-xl text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
                       </span>
@@ -140,10 +140,10 @@ const displayWithTitle = (w: Writer) =>
     }
 
     {institutionalByline && (
-      <section class="border-b border-burgundy/10 bg-cream-soft/45 px-6 py-14 md:py-18">
+      <section class="border-b border-primary/10 bg-cream-soft/45 px-6 py-14 md:py-18">
         <div class="mx-auto max-w-4xl">
           <header class="mb-8 max-w-3xl">
-            <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Kurumsal Editöryal İmza</p>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-primary">Kurumsal Editöryal İmza</p>
             <h2 class="mb-3 font-serif text-3xl leading-[0.98] tracking-[-0.03em] text-ink md:text-4xl">
               {institutionalByline.displayName}
             </h2>
@@ -153,7 +153,7 @@ const displayWithTitle = (w: Writer) =>
           </header>
           <a
             href={`/yazarlar/${institutionalByline.slug}/`}
-            class="inline-flex items-center gap-2 rounded-full border border-burgundy/30 bg-white px-5 py-3 text-sm font-semibold text-burgundy transition hover:border-burgundy hover:bg-cream-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40 focus-visible:ring-offset-2"
+            class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-white px-5 py-3 text-sm font-semibold text-primary transition hover:border-primary hover:bg-cream-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
           >
             Estranova Editörlerinden yazıların tamamı
             <span class="font-serif text-lg text-gold" aria-hidden="true">→</span>
@@ -162,9 +162,9 @@ const displayWithTitle = (w: Writer) =>
       </section>
     )}
 
-    <section class="border-b border-burgundy/10 bg-white px-6 py-12 md:py-16">
+    <section class="border-b border-primary/10 bg-white px-6 py-12 md:py-16">
       <div class="mx-auto max-w-4xl text-center">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Detaylı yayın kurulu</p>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-primary">Detaylı yayın kurulu</p>
         <h2 class="mb-4 font-serif text-3xl leading-tight text-ink md:text-4xl">
           Editöryal süreç, tıbbi danışmanlar ve süreç desteği
         </h2>
@@ -173,7 +173,7 @@ const displayWithTitle = (w: Writer) =>
         </p>
         <a
           href="/yayin-kurulu/"
-          class="inline-flex items-center gap-2 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition hover:decoration-primary"
         >
           Yayın kurulunun tamamını oku →
         </a>

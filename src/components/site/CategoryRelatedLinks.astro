@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * CategoryRelatedLinks — hub sayfalarının sonunda diğer ana kategorilere
  * geçiş kartları. Mevcut kategori `exclude` ile hariç tutulur.
@@ -51,22 +51,22 @@ const categories = allCategories.filter((c) => c.href !== exclude);
 
 <aside
   class:list={[
-    'relative overflow-hidden rounded-[38px] border border-burgundy/12 bg-white p-8 shadow-[0_30px_96px_-66px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] md:p-10',
+    'relative overflow-hidden rounded-[38px] border border-primary/12 bg-white p-8 shadow-[0_30px_96px_-66px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] md:p-10',
     className,
   ]}
   aria-labelledby="category-related-heading"
 >
   <div class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
-  <div class="pointer-events-none absolute bottom-5 right-8 font-serif text-7xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">
+  <div class="pointer-events-none absolute bottom-5 right-8 font-serif text-7xl italic leading-none text-primary/[0.035]" aria-hidden="true">
     devam
   </div>
-  <p class="relative mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+  <p class="relative mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-primary">
     <span class="h-px w-9 bg-gold/75"></span>
     <span>İlgili Kategoriler</span>
   </p>
   <h2
     id="category-related-heading"
-    class="relative mb-6 font-serif text-3xl italic leading-tight text-burgundy-deep md:text-4xl"
+    class="relative mb-6 font-serif text-3xl italic leading-tight text-secondary md:text-4xl"
   >
     Bilgi yollarına devam et
   </h2>
@@ -74,9 +74,9 @@ const categories = allCategories.filter((c) => c.href !== exclude);
     {categories.map((c) => (
       <a
         href={c.href}
-        class="group flex flex-col rounded-[24px] border border-burgundy/12 bg-cream-soft/18 p-5 ring-1 ring-black/[0.03] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-white hover:shadow-[0_18px_54px_-42px_rgba(44,22,28,0.32)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+        class="group flex flex-col rounded-[24px] border border-primary/12 bg-cream-soft/18 p-5 ring-1 ring-black/[0.03] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-white hover:shadow-[0_18px_54px_-42px_rgba(44,22,28,0.32)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
       >
-        <span class="mb-2 font-serif text-lg italic leading-tight text-burgundy-deep group-hover:underline group-hover:decoration-gold group-hover:underline-offset-4">
+        <span class="mb-2 font-serif text-lg italic leading-tight text-secondary group-hover:underline group-hover:decoration-gold group-hover:underline-offset-4">
           {c.name}
         </span>
         <span class="text-xs leading-relaxed text-ink/75">

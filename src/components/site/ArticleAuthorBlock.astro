@@ -1,4 +1,4 @@
----
+﻿---
 import { writers } from '../../data/writers';
 import { getSubmenuHeroImage } from '../../data/submenu-heroes';
 
@@ -59,7 +59,7 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
           />
         ) : (
           <div class="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_30%_20%,rgba(201,169,110,0.28),transparent_32%),linear-gradient(135deg,#f7efe5,#ffffff_48%,#efe1d4)] px-8 text-center">
-            <p class="font-serif text-4xl italic leading-tight text-burgundy/70">Estranova dosya</p>
+            <p class="font-serif text-4xl italic leading-tight text-primary/70">Estranova dosya</p>
           </div>
         )
       }
@@ -71,11 +71,11 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
 
     <div class="relative flex min-h-[24rem] flex-col justify-center px-7 py-10 text-center md:px-12 lg:px-16">
       <div class="pointer-events-none absolute inset-y-8 left-0 hidden w-px bg-gradient-to-b from-transparent via-gold/65 to-transparent lg:block"></div>
-      <div class="pointer-events-none absolute right-8 top-8 font-serif text-7xl italic leading-none text-burgundy/[0.035]" aria-hidden="true">
+      <div class="pointer-events-none absolute right-8 top-8 font-serif text-7xl italic leading-none text-primary/[0.035]" aria-hidden="true">
         E
       </div>
 
-      <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-burgundy/72">{eyebrow}</p>
+      <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-primary/72">{eyebrow}</p>
       <div class="mx-auto mt-5 h-px w-12 bg-gold/80"></div>
 
       <div class="mx-auto mt-7 max-w-xl">
@@ -104,7 +104,7 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
         <div class="mt-5 flex flex-wrap items-center justify-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em]">
           <a
             href={authorProfileHref}
-            class="rounded-full border border-burgundy/15 px-4 py-2 text-burgundy transition hover:border-burgundy/35 hover:bg-burgundy hover:text-white"
+            class="rounded-full border border-primary/15 px-4 py-2 text-primary transition hover:border-primary/35 hover:bg-primary hover:text-white"
           >
             {authorProfileLabel}
           </a>
@@ -119,8 +119,8 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
 
       {
         writer.isInstitutionalByline && (
-          <div class="mx-auto mt-7 max-w-xl rounded-[22px] border border-burgundy/12 bg-cream-warm/45 px-5 py-4 text-left">
-            <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-burgundy">Editoryal not</p>
+          <div class="mx-auto mt-7 max-w-xl rounded-[22px] border border-primary/12 bg-cream-warm/45 px-5 py-4 text-left">
+            <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">Editoryal not</p>
             <p class="mt-2 text-sm leading-relaxed text-ink/72">
               Bu içerik Estranova editörleri tarafından hazırlanmış kurumsal editoryal içeriktir ve yayın öncesinde
               <span class="font-semibold text-ink"> {medicalReviewer}</span> tarafından bilimsel uygunluk, terminoloji

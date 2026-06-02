@@ -178,7 +178,7 @@ güçlendiriyor. Ağrıyı bir kadının *"sorunu"* olarak değil, çiftin birli
 adres aldığı bir mesele olarak çerçevelemek hem tedavi başarısını hem ilişki
 uyumunu artırıyor.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

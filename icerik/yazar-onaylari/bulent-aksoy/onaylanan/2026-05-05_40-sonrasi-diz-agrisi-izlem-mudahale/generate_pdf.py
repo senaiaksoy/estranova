@@ -34,7 +34,7 @@ eyebrow_style = ParagraphStyle(
     fontName="Calibri-Bold",
     fontSize=9,
     leading=12,
-    textColor=colors.HexColor("#6B2D3E"),
+    textColor=colors.HexColor("#D81B60"),
     spaceAfter=6,
 )
 title_style = ParagraphStyle(
@@ -43,7 +43,7 @@ title_style = ParagraphStyle(
     fontName="Calibri-Bold",
     fontSize=20,
     leading=24,
-    textColor=colors.HexColor("#4f171c"),
+    textColor=colors.HexColor("#D81B60"),
     spaceAfter=12,
 )
 h1_byline_style = ParagraphStyle(
@@ -61,7 +61,7 @@ h2_style = ParagraphStyle(
     fontName="Calibri-Bold",
     fontSize=13.5,
     leading=18,
-    textColor=colors.HexColor("#6B2D3E"),
+    textColor=colors.HexColor("#D81B60"),
     spaceBefore=10,
     spaceAfter=6,
 )
@@ -71,7 +71,7 @@ lede_style = ParagraphStyle(
     fontName="Calibri-Italic",
     fontSize=11,
     leading=16,
-    textColor=colors.HexColor("#6B2D3E"),
+    textColor=colors.HexColor("#D81B60"),
     spaceAfter=8,
 )
 body_style = ParagraphStyle(
@@ -89,7 +89,7 @@ summary_title_style = ParagraphStyle(
     fontName="Calibri-Bold",
     fontSize=11,
     leading=14,
-    textColor=colors.HexColor("#4f171c"),
+    textColor=colors.HexColor("#D81B60"),
     spaceAfter=6,
 )
 

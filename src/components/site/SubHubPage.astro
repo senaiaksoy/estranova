@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from './SiteNavbar.astro';
 import SiteFooter from './SiteFooter.astro';
@@ -108,11 +108,11 @@ const siblings = Object.values(chapterMap).filter(
       imageAlt={hero.alt}
     />
 
-    <section class="border-b border-burgundy/10 bg-[#fffaf0] px-6 py-14 md:py-16">
+    <section class="border-b border-primary/10 bg-[#fffaf0] px-6 py-14 md:py-16">
       <div class="mx-auto max-w-6xl">
         <nav class="mb-8 text-sm text-ink/60" aria-label="İçerik yolu">
           <ol class="flex flex-wrap items-center gap-2">
-            <li><a href={sectionPath} class="font-medium text-burgundy hover:underline">{sectionLabel}</a></li>
+            <li><a href={sectionPath} class="font-medium text-primary hover:underline">{sectionLabel}</a></li>
             <li aria-hidden="true">/</li>
             <li class="font-medium text-ink">{hubLabel}</li>
           </ol>
@@ -147,7 +147,7 @@ const siblings = Object.values(chapterMap).filter(
       archiveItems.length > 0 && (
         <SubmenuSection variant="cream" borderedTop={true} class="!py-12 md:!py-14">
           <header class="mb-5">
-            <h2 class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">{archiveEyebrow}</h2>
+            <h2 class="text-xs font-bold uppercase tracking-[0.24em] text-primary">{archiveEyebrow}</h2>
           </header>
 
           <SubHubArchiveIndex items={archiveItems} startAt={2} initialVisible={8} />
@@ -159,10 +159,10 @@ const siblings = Object.values(chapterMap).filter(
       siblings.length > 0 && (
         <SubmenuSection variant="cream" borderedTop={false}>
           <header class="mb-10 grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-            <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Aynı kategoride</p>
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">Aynı kategoride</p>
             <h2 class="font-serif text-4xl leading-tight text-ink md:text-5xl">İlgili alt başlıklar</h2>
           </header>
-          <div class="divide-y divide-burgundy/14 border-y border-burgundy/14">
+          <div class="divide-y divide-primary/14 border-y border-primary/14">
             {siblings.map((sibling, index) => (
               <a
                 href={sibling.href}
@@ -170,7 +170,7 @@ const siblings = Object.values(chapterMap).filter(
               >
                 <span class="font-serif text-3xl italic text-gold">{String(index + 1).padStart(2, '0')}</span>
                 <div>
-                  <h3 class="mb-2 font-serif text-3xl leading-tight text-ink group-hover:text-burgundy">
+                  <h3 class="mb-2 font-serif text-3xl leading-tight text-ink group-hover:text-primary">
                     {sibling.chapter}
                   </h3>
                   <p class="max-w-2xl text-sm leading-relaxed text-ink/72">

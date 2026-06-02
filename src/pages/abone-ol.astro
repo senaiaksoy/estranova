@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
@@ -20,18 +20,18 @@ const pageDescription = subscriptionActive
   <SiteNavbar currentPath="/abone-ol/" />
 
   <main id="main-content" class="text-ink">
-    <section class="border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+    <section class="border-t border-primary/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
       <div class="mx-auto max-w-4xl">
         <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
-          <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+          <a href="/" class="text-ink/65 hover:text-primary">Anasayfa</a>
           <span class="mx-2 text-gold">·</span>
-          <span class="text-burgundy">{magazineConfig.name} Okuru Ol</span>
+          <span class="text-primary">{magazineConfig.name} Okuru Ol</span>
         </nav>
 
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-primary">
           {magazineConfig.name} · {magazineConfig.subtitle}
         </p>
-        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
+        <h1 class="mb-5 font-serif text-5xl leading-[1.05] text-primary md:text-6xl">
           {subscriptionActive ? `${magazineConfig.name} okuru ol` : 'Yayını izleyin, ilk haber sizde olsun'}
         </h1>
         <p class="max-w-3xl text-lg leading-relaxed text-ink/80 md:text-xl">
@@ -59,13 +59,13 @@ const pageDescription = subscriptionActive
             <div class="flex flex-wrap gap-3">
               <a
                 href="/mektup/"
-                class="inline-flex items-center gap-1.5 rounded-xl bg-burgundy px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-burgundy/35"
+                class="inline-flex items-center gap-1.5 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-primary/35"
               >
                 Mektuba kaydol
               </a>
               <a
                 href={`/sayi/${magazineConfig.firstIssue.monthYearISO === '2026-05' ? '01-mayis-2026-geceler' : ''}/`}
-                class="inline-flex items-center gap-1.5 rounded-xl border-2 border-burgundy px-6 py-3 text-sm font-semibold text-burgundy transition hover:bg-burgundy/5 focus:outline-none focus:ring-2 focus:ring-burgundy/35"
+                class="inline-flex items-center gap-1.5 rounded-xl border-2 border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/35"
               >
                 Bu ayın sayısına git
               </a>
@@ -85,7 +85,7 @@ const pageDescription = subscriptionActive
       </section>
     )}
 
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-12 md:py-14">
+    <section class="border-t border-primary/10 bg-cream-soft px-6 py-12 md:py-14">
       <div class="mx-auto max-w-3xl">
         <h2 class="mb-4 font-serif text-2xl leading-snug text-ink md:text-3xl">
           Şu an açık olan değer
@@ -97,15 +97,15 @@ const pageDescription = subscriptionActive
           kendine özgü editöryal parçalarını kapsar.
         </p>
         <p class="text-base leading-relaxed text-ink/75">
-          Detaylı kural için <a href="/editoryal-politika/" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">Editöryal Politika</a>'mıza göz atabilirsiniz.
+          Detaylı kural için <a href="/editoryal-politika/" class="font-semibold text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary">Editöryal Politika</a>'mıza göz atabilirsiniz.
         </p>
       </div>
     </section>
 
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
+    <section class="border-t border-primary/10 bg-cream-soft px-6 py-10">
       <div class="mx-auto max-w-3xl text-center">
         <p class="text-sm leading-relaxed text-ink/65">
-          KVKK ve veri politikamız için <a href="/kvkk/" class="font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 hover:decoration-burgundy">KVKK Aydınlatma Metni</a>'ne göz atabilirsiniz.
+          KVKK ve veri politikamız için <a href="/kvkk/" class="font-semibold text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary">KVKK Aydınlatma Metni</a>'ne göz atabilirsiniz.
         </p>
       </div>
     </section>

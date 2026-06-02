@@ -1,4 +1,4 @@
-/**
+﻿/**
  * "Sonra Oku" — localStorage tabanlı kişisel okuma listesi.
  *
  * Hiçbir kişisel veri sunucuya gönderilmez; tüm liste yalnızca okurun
@@ -149,12 +149,12 @@ function renderSavedListPage(): void {
                 ${String(index + 1).padStart(2, '0')}
               </span>
               <span class="min-w-0">
-                <span class="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-burgundy/60">
+                <span class="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-primary/60">
                   <span>${formattedDate ? `Kaydedildi · ${formattedDate}` : 'Kaydedildi'}</span>
                   <span class="h-1 w-1 rounded-full bg-gold/70" aria-hidden="true"></span>
                   <span>${sectionLabel}</span>
                 </span>
-                <span class="block font-serif text-2xl leading-snug tracking-[-0.02em] text-ink transition group-hover:text-burgundy md:text-3xl">
+                <span class="block font-serif text-2xl leading-snug tracking-[-0.02em] text-ink transition group-hover:text-primary md:text-3xl">
                   ${safeTitle}
                 </span>
                 <span class="mt-2 block truncate text-xs text-ink/45">${safeSlug}</span>
@@ -163,7 +163,7 @@ function renderSavedListPage(): void {
             <button
               type="button"
               data-remove-slug="${safeSlug}"
-              class="shrink-0 rounded-full border border-burgundy/18 bg-cream-soft px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-burgundy/80 transition hover:-translate-y-0.5 hover:border-burgundy/45 hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35"
+              class="shrink-0 rounded-full border border-primary/18 bg-cream-soft px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary/80 transition hover:-translate-y-0.5 hover:border-primary/45 hover:bg-cream-warm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35"
               aria-label="Bu yazıyı listemden çıkar"
             >
               Listeden çıkar

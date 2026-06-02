@@ -6,8 +6,8 @@
 <title>Yazar Kontrol Formu — {{ARTICLE_TITLE}}</title>
 <style>
   :root {
-    --burgundy: #6B2D3E;
-    --burgundy-deep: #4f171c;
+    --primary: #D81B60;
+    --secondary: #D81B60;
     --gold: #C9A96E;
     --ink: #2D2D2D;
     --cream-warm: #F8F2EA;
@@ -43,7 +43,7 @@
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--burgundy);
+    color: var(--primary);
     margin: 0 0 10px 0;
   }
   header.hero h1 {
@@ -58,12 +58,12 @@
     color: rgba(45, 45, 45, 0.72);
     margin: 0;
   }
-  header.hero .meta strong { color: var(--burgundy); }
+  header.hero .meta strong { color: var(--primary); }
   header.hero .preview-link {
     display: inline-block;
     margin-top: 16px;
     padding: 10px 18px;
-    background: var(--burgundy);
+    background: var(--primary);
     color: var(--white);
     text-decoration: none;
     border-radius: 999px;
@@ -71,7 +71,7 @@
     font-weight: 600;
     letter-spacing: 0.04em;
   }
-  header.hero .preview-link:hover { background: var(--burgundy-deep); }
+  header.hero .preview-link:hover { background: var(--secondary); }
 
   section.card {
     background: var(--white);
@@ -84,7 +84,7 @@
     font-family: Georgia, "Times New Roman", serif;
     font-size: 19px;
     margin: 0 0 6px 0;
-    color: var(--burgundy);
+    color: var(--primary);
   }
   section.card p.section-hint {
     font-size: 13px;
@@ -131,8 +131,8 @@
     font-weight: 700;
   }
   .likert label:has(input:checked) {
-    background: var(--burgundy);
-    border-color: var(--burgundy-deep);
+    background: var(--primary);
+    border-color: var(--secondary);
   }
   .likert .scale-line {
     grid-column: 1 / -1;
@@ -165,9 +165,9 @@
   }
   .toggle input[type="radio"] { display: none; }
   .toggle label:has(input:checked) {
-    background: var(--burgundy);
+    background: var(--primary);
     color: var(--white);
-    border-color: var(--burgundy-deep);
+    border-color: var(--secondary);
     font-weight: 600;
   }
 
@@ -211,14 +211,14 @@
     font-family: inherit;
   }
   .btn-approve {
-    background: var(--burgundy);
+    background: var(--primary);
     color: var(--white);
   }
-  .btn-approve:hover { background: var(--burgundy-deep); transform: translateY(-1px); }
+  .btn-approve:hover { background: var(--secondary); transform: translateY(-1px); }
   .btn-revise {
     background: var(--white);
-    color: var(--burgundy);
-    border: 2px solid var(--burgundy);
+    color: var(--primary);
+    border: 2px solid var(--primary);
   }
   .btn-revise:hover { background: var(--cream-soft); transform: translateY(-1px); }
   .btn-icon {
@@ -238,7 +238,7 @@
     color: rgba(45, 45, 45, 0.7);
     line-height: 1.5;
   }
-  .footer-note strong { color: var(--burgundy); }
+  .footer-note strong { color: var(--primary); }
 
   @media (max-width: 600px) {
     .decision-row { grid-template-columns: 1fr; }

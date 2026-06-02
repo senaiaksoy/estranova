@@ -90,7 +90,7 @@ Bazı belirtilerde zaman kaybetmek yerine doğrudan ortopedik değerlendirme ger
 Her diz ağrısı acil değildir; ancak bazı bulgular beklemeye uygun değildir. Aşağıdaki durumlarda gecikmeden
 değerlendirme alınmalıdır:
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

@@ -209,7 +209,7 @@ Aphorism pool akış grafiği:
 CLAUDE.md ile uyum (zorunlu):
 
 - **6-8 H2** (cümleli — tek-kelime "Beslenme" YASAK)
-- Her H2'den sonra **ilk paragraf = italic lede** (1-2 cümle, bölümün açılış kanısı/sorusu/durumu) — `prose-estranova` CSS'i bunu otomatik italic burgundy serif render eder
+- Her H2'den sonra **ilk paragraf = italic lede** (1-2 cümle, bölümün açılış kanısı/sorusu/durumu) — `prose-estranova` CSS'i bunu otomatik italic primary serif render eder
 - **Bullet list / ağır veri / uzun tanım** ile başlayan H2 YASAK (CSS lede zorunluluğu)
 - Wrapper: `ArticleProsePanel` + `class="prose prose-lg prose-estranova max-w-none"`
 - Yazar markdown'da sadece `## başlık` + lede paragrafı yazar; chapter numarası (01, 02), gold ayraç ve italic lede CSS'ten otomatik gelir

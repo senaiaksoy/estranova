@@ -261,7 +261,7 @@ Zorunlu yapı:
 ### 4.1 Editöryal tipografi (CLAUDE.md HARD CONSTRAINT)
 
 - **6-8 H2** (cümleli; tek-kelime "Beslenme" / "Sonuç" YASAK)
-- Her H2'den sonra **ilk paragraf = italic lede** (1-2 cümle, bölümün açılış kanısı/sorusu/durumu) — `prose-estranova` CSS otomatik italic burgundy serif render
+- Her H2'den sonra **ilk paragraf = italic lede** (1-2 cümle, bölümün açılış kanısı/sorusu/durumu) — `prose-estranova` CSS otomatik italic ana pembe render
 - Bullet list / veri yığını / uzun tanım ile başlayan H2 YASAK
 - Chapter numarası (01, 02), gold ayraç ve italic lede CSS'ten otomatik gelir; manuel "01." YAZMA
 

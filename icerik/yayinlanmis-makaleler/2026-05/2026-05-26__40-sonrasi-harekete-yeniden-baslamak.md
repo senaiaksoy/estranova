@@ -117,7 +117,7 @@ günlük yaşamı belirgin bozan ağrı ciddiye alınmalıdır
 (iyi kanıt)
 .
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hareket planından önce değerlendirme almanın anlamlı olduğu durumlar

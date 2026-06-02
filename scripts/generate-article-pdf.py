@@ -3,7 +3,7 @@
 Estranova editöryal tipografide markdown → PDF dönüştürücü (generic).
 
 Estranova'nın yayınlanmış makale markdown'larını (npm run articles:export
-çıktısı) Constantia/Calibri + burgundy/gold paletinde PDF'e çevirir.
+çıktısı) Constantia/Calibri + primary/gold paletinde PDF'e çevirir.
 
 Kullanım:
     python scripts/generate-article-pdf.py <input.md> <output.pdf>
@@ -52,8 +52,8 @@ registerFontFamily('Calibri', normal='Calibri', bold='Calibri-Bold',
                    italic='Calibri-Italic', boldItalic='Calibri-BoldItalic')
 
 # --- Estranova palette ---
-BURGUNDY = HexColor('#6B2D3E')
-BURGUNDY_DEEP = HexColor('#4f171c')
+PRIMARY_PINK = HexColor('#D81B60')
+SECONDARY_PINK = HexColor('#D81B60')
 GOLD = HexColor('#C9A96E')
 GOLD_DEEP = HexColor('#a8884c')
 INK = HexColor('#2D2D2D')
@@ -75,25 +75,25 @@ def style(name, **kwargs):
 EYEBROW = style('Eyebrow', fontName='Calibri-Bold', fontSize=9, leading=12,
                 textColor=GOLD_DEEP, spaceAfter=6, alignment=TA_LEFT)
 H1_COVER = style('H1Cover', fontName='Constantia-Bold', fontSize=28,
-                 leading=34, textColor=BURGUNDY_DEEP, spaceAfter=12,
+                 leading=34, textColor=SECONDARY_PINK, spaceAfter=12,
                  alignment=TA_LEFT)
 BYLINE = style('Byline', fontName='Constantia-Italic', fontSize=12,
-               leading=18, textColor=BURGUNDY, spaceAfter=14)
+               leading=18, textColor=PRIMARY_PINK, spaceAfter=14)
 
 H1 = style('H1', fontName='Constantia-Bold', fontSize=24, leading=30,
-           textColor=BURGUNDY_DEEP, spaceAfter=10)
+           textColor=SECONDARY_PINK, spaceAfter=10)
 H2 = style('H2', fontName='Constantia-Bold', fontSize=17, leading=23,
-           textColor=BURGUNDY, spaceBefore=22, spaceAfter=8)
+           textColor=PRIMARY_PINK, spaceBefore=22, spaceAfter=8)
 H3 = style('H3', fontName='Constantia-Bold', fontSize=13, leading=19,
-           textColor=BURGUNDY, spaceBefore=14, spaceAfter=6)
+           textColor=PRIMARY_PINK, spaceBefore=14, spaceAfter=6)
 LEDE = style('Lede', fontName='Constantia-Italic', fontSize=12, leading=18,
-             textColor=BURGUNDY, spaceAfter=10)
+             textColor=PRIMARY_PINK, spaceAfter=10)
 BODY = style('Body', fontName='Calibri', fontSize=10.5, leading=16,
              textColor=INK, spaceAfter=8)
 LIST_ITEM = style('ListItem', fontName='Calibri', fontSize=10.5, leading=15,
                   textColor=INK, leftIndent=14, spaceAfter=4)
 QUOTE = style('Quote', fontName='Constantia-Italic', fontSize=11.5,
-              leading=18, textColor=BURGUNDY, leftIndent=14,
+              leading=18, textColor=PRIMARY_PINK, leftIndent=14,
               spaceBefore=8, spaceAfter=12)
 
 # --- FooterCanvas ---
@@ -122,7 +122,7 @@ class FooterCanvas(canvas.Canvas):
         self.setFillColor(INK_55)
         self.drawString(2*cm, 1.1*cm, 'Estranova · Yazar Taslağı')
         self.setFont('Calibri', 8)
-        self.setFillColor(BURGUNDY)
+        self.setFillColor(PRIMARY_PINK)
         self.drawRightString(A4[0]-2*cm, 1.1*cm, f'Sayfa {self._pageNumber} / {page_count}')
 
 # --- Helpers ---
@@ -133,7 +133,7 @@ def gold_rule(width=4*cm, thickness=1.2):
 def section_h2_block(title_html, number=None):
     out = []
     if number is not None:
-        eyebrow_text = f'<font color="#a8884c">{number:02d}</font> &nbsp;<font color="#6B2D3E">|</font>'
+        eyebrow_text = f'<font color="#a8884c">{number:02d}</font> &nbsp;<font color="#D81B60">|</font>'
         out.append(Paragraph(eyebrow_text, EYEBROW))
     out.append(Paragraph(title_html, H2))
     out.append(gold_rule(width=2.5*cm, thickness=1.2))
@@ -160,10 +160,10 @@ def render_inline(elem):
             href = child.get('href', '')
             inner = render_inline(child)
             if href.startswith('http'):
-                out += f'<link href="{href}" color="#6B2D3E">{inner}</link>'
+                out += f'<link href="{href}" color="#D81B60">{inner}</link>'
             else:
-                # internal link → just show text in burgundy
-                out += f'<font color="#6B2D3E">{inner}</font>'
+                # internal link → just show text in primary
+                out += f'<font color="#D81B60">{inner}</font>'
         elif child.name == 'code':
             out += f'<font face="Courier" size="10">{render_inline(child)}</font>'
         elif child.name == 'br':

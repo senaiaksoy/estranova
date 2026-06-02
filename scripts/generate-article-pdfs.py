@@ -10,7 +10,7 @@ Makaleler (icerik/yayinlanmis-makaleler/ markdown export'undan):
 
 Her PDF Estranova editöryal tipografi sistemine sadık kalır:
     H1 başlık + altın ayraç + H2 sonrası chapter num + gold separator
-    + italic burgundy lede + gövde + (kanıt) inline gold italic
+    + italic primary lede + gövde + (kanıt) inline gold italic
     + FAQ Q-A + Bilimsel Editör Notu (Doç. Dr. Senai Aksoy imzalı)
     + medical disclaimer + footer.
 """
@@ -44,8 +44,8 @@ registerFontFamily('Calibri', normal='Calibri', bold='Calibri-Bold',
                    italic='Calibri-Italic', boldItalic='Calibri-BoldItalic')
 
 # Estranova palette
-burgundy        = HexColor('#6B2D3E')
-deep_burgundy   = HexColor('#4f171c')
+primary        = HexColor('#D81B60')
+secondary_pink   = HexColor('#D81B60')
 gold            = HexColor('#C9A96E')
 dark_gray       = HexColor('#2D2D2D')
 light_gray      = HexColor('#888888')
@@ -57,22 +57,22 @@ form_bg         = HexColor('#FAF6EE')
 byline_style = ParagraphStyle('Byline', fontName='Calibri-Italic', fontSize=9,
     textColor=light_gray, alignment=TA_RIGHT, spaceAfter=14, leading=12)
 h1_style = ParagraphStyle('H1', fontName='Constantia-Bold', fontSize=23,
-    textColor=deep_burgundy, leading=29, spaceBefore=8, spaceAfter=4, alignment=TA_LEFT)
+    textColor=secondary_pink, leading=29, spaceBefore=8, spaceAfter=4, alignment=TA_LEFT)
 opening_lede_style = ParagraphStyle('OpeningLede', fontName='Constantia-Italic',
-    fontSize=12.5, textColor=burgundy, leading=20, spaceBefore=12, spaceAfter=18, alignment=TA_LEFT)
+    fontSize=12.5, textColor=primary, leading=20, spaceBefore=12, spaceAfter=18, alignment=TA_LEFT)
 chapter_num_style = ParagraphStyle('ChapterNum', fontName='Constantia-Bold', fontSize=11,
     textColor=gold, leading=14, spaceBefore=22, spaceAfter=2, alignment=TA_LEFT)
 h2_style = ParagraphStyle('H2', fontName='Constantia-Bold', fontSize=16.5,
-    textColor=deep_burgundy, leading=21, spaceBefore=2, spaceAfter=4, alignment=TA_LEFT)
+    textColor=secondary_pink, leading=21, spaceBefore=2, spaceAfter=4, alignment=TA_LEFT)
 section_lede_style = ParagraphStyle('SectionLede', fontName='Constantia-Italic',
-    fontSize=11.5, textColor=burgundy, leading=18, spaceBefore=10, spaceAfter=12, alignment=TA_LEFT)
+    fontSize=11.5, textColor=primary, leading=18, spaceBefore=10, spaceAfter=12, alignment=TA_LEFT)
 body_style = ParagraphStyle('Body', fontName='Calibri', fontSize=11,
     textColor=dark_gray, leading=17, spaceBefore=4, spaceAfter=10, alignment=TA_LEFT)
 list_style = ParagraphStyle('List', fontName='Calibri', fontSize=11,
     textColor=dark_gray, leading=17, spaceBefore=2, spaceAfter=4, alignment=TA_LEFT,
     leftIndent=18, bulletIndent=6)
 faq_q_style = ParagraphStyle('FAQQ', fontName='Calibri-Bold', fontSize=11,
-    textColor=deep_burgundy, leading=16, spaceBefore=12, spaceAfter=4, alignment=TA_LEFT)
+    textColor=secondary_pink, leading=16, spaceBefore=12, spaceAfter=4, alignment=TA_LEFT)
 faq_a_style = ParagraphStyle('FAQA', fontName='Calibri', fontSize=11,
     textColor=dark_gray, leading=17, spaceBefore=0, spaceAfter=8, alignment=TA_LEFT)
 editor_note_label_style = ParagraphStyle('EditorNoteLabel', fontName='Constantia-Bold',
@@ -80,7 +80,7 @@ editor_note_label_style = ParagraphStyle('EditorNoteLabel', fontName='Constantia
 editor_note_body_style = ParagraphStyle('EditorNoteBody', fontName='Calibri', fontSize=10.5,
     textColor=dark_gray, leading=16, spaceAfter=8, alignment=TA_LEFT)
 editor_note_signature_style = ParagraphStyle('EditorNoteSig', fontName='Calibri-Italic',
-    fontSize=9.5, textColor=deep_burgundy, leading=12, spaceBefore=4, alignment=TA_LEFT)
+    fontSize=9.5, textColor=secondary_pink, leading=12, spaceBefore=4, alignment=TA_LEFT)
 inline_disclaimer_style = ParagraphStyle('InlineDisclaimer', fontName='Calibri-Italic',
     fontSize=10, textColor=light_gray, leading=14, spaceBefore=10, spaceAfter=12,
     alignment=TA_LEFT, leftIndent=10, rightIndent=10)

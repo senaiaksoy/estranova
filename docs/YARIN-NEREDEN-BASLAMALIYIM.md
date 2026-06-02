@@ -1,4 +1,4 @@
-# Yarın Nereden Başlamalıyım
+﻿# Yarın Nereden Başlamalıyım
 
 > **Tarih:** 2026-04-19 oturum 2 kapanışı
 > **Durum:** Editöryal yayın altyapısı **yayına hazır** — tipografi sistemi, kanıt rozeti, JSON-LD schema, sitemap + RSS hepsi canlı. Dış bağımlı görevler kaldı.
@@ -16,8 +16,8 @@
 
 ### Phase A — Makale okuma deneyimi
 - **TOC rollout (16 makale):** `ArticleTOC` sticky sidebar her hub-style makaleye bağlandı; iki haneli numaralı index H2 id'leriyle eşleşir. Paralel 3 agent ile dağıtıldı.
-- **prose-estranova tipografi sistemi:** `@tailwindcss/typography` plugin + `@utility prose-estranova` katmanı kuruldu. Her H2 önünde otomatik `01`, `02` gold chapter number; 2.5rem gold rule; H2 sonrası ilk `<p>` otomatik italic burgundy serif lede; H3 ayrı ritim; blockquote pull-quote; marka paleti tokenları. Manuel H2 styling yasaklandı (HARD CONSTRAINT).
-- **`<Evidence>` kanıt rozeti:** Sparkline bar ilk denendi (ölçek semantiği okunmadı), parantez içi Türkçe etikete döndü: `(güçlü kanıt)` burgundy, `(iyi kanıt)` gold-bronze, `(orta–iyi kanıt)` range. Italic Newsreader 0.85em. 17 makaledeki 311 literal `[●●●●●]` string'i component çağrısına dönüştürüldü (`scripts/migrate-evidence.mjs`).
+- **prose-estranova tipografi sistemi:** `@tailwindcss/typography` plugin + `@utility prose-estranova` katmanı kuruldu. Her H2 önünde otomatik `01`, `02` gold chapter number; 2.5rem gold rule; H2 sonrası ilk `<p>` otomatik italic primary serif lede; H3 ayrı ritim; blockquote pull-quote; marka paleti tokenları. Manuel H2 styling yasaklandı (HARD CONSTRAINT).
+- **`<Evidence>` kanıt rozeti:** Sparkline bar ilk denendi (ölçek semantiği okunmadı), parantez içi Türkçe etikete döndü: `(güçlü kanıt)` primary, `(iyi kanıt)` gold-bronze, `(orta–iyi kanıt)` range. Italic Manrope (`font-serif`) 0.85em. 17 makaledeki 311 literal `[●●●●●]` string'i component çağrısına dönüştürüldü (`scripts/migrate-evidence.mjs`).
 
 ### Phase B — SEO ve keşfedilebilirlik
 - **Article JSON-LD schema:** `src/utils/article-schema.ts → buildArticleSchemas()` helper; 17 statik makaleye `MedicalWebPage + Article + BreadcrumbList` eklendi. `Person` author writers.ts'ten, `reviewedBy` Doç. Dr. Senai Aksoy default. URL ve tarih normalizasyonu double-slash-safe.
@@ -63,7 +63,7 @@
 3. **Cloudflare Pages deploy** — `astro build` temiz; tek tuşla canlıya.
 
 ### Yayın öncesi opsiyonel (ben yapabilirim)
-4. **Performans pass 4** — Google Fonts `@import` → preload (`src/index.css:1`, LCP ~200ms); hero `<link rel="preload" as="image">`; submenu-heroes Unsplash URL'leri `srcset` (Yolculuk kartları ve thumbnail'ler şu an 1800w indiriyor).
+4. **Performans pass 4** — Google Fonts `@import` / preload hattı Manrope + Kulim Park için korunmalı (`src/index.css:1`, LCP ~200ms); hero `<link rel="preload" as="image">`; submenu-heroes Unsplash URL'leri `srcset` (Yolculuk kartları ve thumbnail'ler şu an 1800w indiriyor).
 5. **"Okur Soruyor" köşesi** — NYT Well "Ask Well" tarzı; okur sorusu + yazar rotasyonlu yanıt. Yeni component + landing sayfası.
 6. **Aesthetic Paket B** — Koruyucu Sağlık split-screen (`text-9xl "40+"`) + Yazar Kadrosu dalga offset.
 7. **Aesthetic Paket C** — Oversize 9xl italic kapak numarası arkaplanda, italic-roman heading kırılması.
@@ -134,7 +134,7 @@ Sonra bana ne yapmak istediğimi sor. Olasılıklar:
 1. Yazar portrelerini izinli foto ile değiştir (yayın öncesi kritik, dış bağımlı — fotoları ben sağlarım)
 2. Hero foto (AI → gerçek editöryal)
 3. Cloudflare Pages deploy
-4. Performans pass 4 (Google Fonts preload, hero srcset, responsive Unsplash)
+4. Performans pass 4 (Google Fonts preload: Manrope + Kulim Park, hero srcset, responsive Unsplash)
 5. "Okur Soruyor" köşesi (NYT Well tarzı)
 6. Aesthetic Paket B (Koruyucu Sağlık split-screen + Yazar Kadrosu dalga)
 7. Aesthetic Paket C (oversize italic kapak numarası)

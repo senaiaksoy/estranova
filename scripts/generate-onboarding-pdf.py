@@ -9,11 +9,11 @@ Kaynak: icerik/onboarding/bilim-yazarlari-davet.md (paralel manuel yazım)
 Sabit kalanlar (Estranova editöryal tipografi pattern'i):
   - A4 sayfa, 2.5/2 cm kenar boşlukları
   - Constantia (serif) + Calibri (sans-serif) — Windows sistem fontları
-  - Palette: burgundy (#6B2D3E / #4f171c), gold (#C9A96E), dark_gray (#2D2D2D)
+  - Palette: primary (#D81B60), gold (#C9A96E), dark_gray (#2D2D2D)
   - H1 + gold ayraç
   - H2 = küçük gold rakam + başlık + gold ayraç
   - Gövde Calibri 11pt, satır yüksekliği 1.5
-  - Tablolar: burgundy başlık, cream satır, gold ayraçlar
+  - Tablolar: primary başlık, cream satır, gold ayraçlar
   - Footer: gold ince çizgi + disclaimer + sayfa numarası
 
 Kanonik referans: memory/reference_estranova_pdf_typography.md
@@ -59,8 +59,8 @@ registerFontFamily('Calibri',
                    boldItalic='Calibri-BoldItalic')
 
 # --- Estranova palette ---
-BURGUNDY = HexColor('#6B2D3E')
-BURGUNDY_DEEP = HexColor('#4f171c')
+PRIMARY_PINK = HexColor('#D81B60')
+SECONDARY_PINK = HexColor('#D81B60')
 GOLD = HexColor('#C9A96E')
 GOLD_DEEP = HexColor('#a8884c')
 DARK_GRAY = HexColor('#2D2D2D')
@@ -90,7 +90,7 @@ EYEBROW = style('Eyebrow',
                 fontName='Calibri-Bold',
                 fontSize=8,
                 leading=12,
-                textColor=BURGUNDY,
+                textColor=PRIMARY_PINK,
                 spaceAfter=6,
                 alignment=TA_LEFT)
 
@@ -98,7 +98,7 @@ H1 = style('H1',
            fontName='Constantia-Bold',
            fontSize=28,
            leading=34,
-           textColor=BURGUNDY_DEEP,
+           textColor=SECONDARY_PINK,
            spaceBefore=0,
            spaceAfter=10)
 
@@ -106,7 +106,7 @@ H1_COVER = style('H1Cover',
                  fontName='Constantia-Bold',
                  fontSize=34,
                  leading=42,
-                 textColor=BURGUNDY_DEEP,
+                 textColor=SECONDARY_PINK,
                  spaceAfter=14,
                  alignment=TA_LEFT)
 
@@ -114,7 +114,7 @@ H2 = style('H2',
            fontName='Constantia-Bold',
            fontSize=18,
            leading=24,
-           textColor=BURGUNDY,
+           textColor=PRIMARY_PINK,
            spaceBefore=24,
            spaceAfter=10)
 
@@ -122,7 +122,7 @@ H3 = style('H3',
            fontName='Constantia-Bold',
            fontSize=14,
            leading=20,
-           textColor=BURGUNDY,
+           textColor=PRIMARY_PINK,
            spaceBefore=14,
            spaceAfter=6)
 
@@ -130,7 +130,7 @@ LEDE = style('Lede',
              fontName='Constantia-Italic',
              fontSize=12,
              leading=18,
-             textColor=BURGUNDY,
+             textColor=PRIMARY_PINK,
              spaceAfter=12)
 
 BODY = style('Body',
@@ -151,7 +151,7 @@ QUOTE = style('Quote',
               fontName='Constantia-Italic',
               fontSize=12,
               leading=20,
-              textColor=BURGUNDY,
+              textColor=PRIMARY_PINK,
               leftIndent=14,
               spaceBefore=8,
               spaceAfter=14)
@@ -168,7 +168,7 @@ SIGNATURE = style('Signature',
                   fontName='Constantia-Italic',
                   fontSize=11,
                   leading=16,
-                  textColor=BURGUNDY,
+                  textColor=PRIMARY_PINK,
                   spaceBefore=12,
                   spaceAfter=4,
                   alignment=TA_LEFT)
@@ -207,7 +207,7 @@ class FooterCanvas(canvas.Canvas):
         self.drawString(2*cm, 1.1*cm,
             'Estranova · Bilim Yazarları Davet Belgesi · v1.0 · 3 Mayıs 2026')
         self.setFont('Calibri', 8)
-        self.setFillColor(BURGUNDY)
+        self.setFillColor(PRIMARY_PINK)
         self.drawRightString(A4[0]-2*cm, 1.1*cm,
             f'Sayfa {self._pageNumber} / {page_count}')
 
@@ -222,7 +222,7 @@ def soft_rule(width=None, thickness=0.4):
 
 def section_h2(number, title):
     """H2 with gold number prefix + title + gold rule below."""
-    eyebrow_text = f'<font color="#a8884c">{number:02d}</font> &nbsp;&nbsp;<font color="#6B2D3E">{title.upper()}</font>'
+    eyebrow_text = f'<font color="#a8884c">{number:02d}</font> &nbsp;&nbsp;<font color="#D81B60">{title.upper()}</font>'
     return [
         Paragraph(eyebrow_text, EYEBROW),
         Paragraph(title, H2),
@@ -268,11 +268,11 @@ def two_col_table(rows, col_widths=None, header=False):
     ])
     if header:
         style.add('FONTNAME', (0,0), (-1,0), 'Calibri-Bold')
-        style.add('TEXTCOLOR', (0,0), (-1,0), BURGUNDY)
+        style.add('TEXTCOLOR', (0,0), (-1,0), PRIMARY_PINK)
         style.add('LINEBELOW', (0,0), (-1,0), 1, GOLD)
         style.add('BACKGROUND', (0,0), (-1,0), CREAM_WARM)
     style.add('FONTNAME', (0,0 if not header else 1), (0,-1), 'Calibri-Bold')
-    style.add('TEXTCOLOR', (0,0 if not header else 1), (0,-1), BURGUNDY)
+    style.add('TEXTCOLOR', (0,0 if not header else 1), (0,-1), PRIMARY_PINK)
     t.setStyle(style)
     return t
 
@@ -293,11 +293,11 @@ def three_col_table(rows, col_widths=None, header=False):
     ])
     if header:
         style.add('FONTNAME', (0,0), (-1,0), 'Calibri-Bold')
-        style.add('TEXTCOLOR', (0,0), (-1,0), BURGUNDY)
+        style.add('TEXTCOLOR', (0,0), (-1,0), PRIMARY_PINK)
         style.add('LINEBELOW', (0,0), (-1,0), 1, GOLD)
         style.add('BACKGROUND', (0,0), (-1,0), CREAM_WARM)
     style.add('FONTNAME', (0,0 if not header else 1), (0,-1), 'Calibri-Bold')
-    style.add('TEXTCOLOR', (0,0 if not header else 1), (0,-1), BURGUNDY)
+    style.add('TEXTCOLOR', (0,0 if not header else 1), (0,-1), PRIMARY_PINK)
     t.setStyle(style)
     return t
 
@@ -334,7 +334,7 @@ story.append(Spacer(1, 0.4*cm))
 
 # Opening letter
 story.append(Paragraph('Sevgili Meslektaşlarımız,', style('Greeting',
-    fontName='Constantia-Bold', fontSize=15, textColor=BURGUNDY_DEEP, spaceAfter=12)))
+    fontName='Constantia-Bold', fontSize=15, textColor=SECONDARY_PINK, spaceAfter=12)))
 story.append(p(
     'Estranova\'nın <b>Bilim Yazarları kadrosuna</b> katılım davetiniz vesilesiyle bu '
     'belgeyi sizlere sunuyoruz. Aşağıdaki sayfalarda; <b>Estranova nedir, neyi yapar, '
@@ -591,8 +591,8 @@ story += bullets([
 story.append(Spacer(1, 0.2*cm))
 story.append(p('Sonunda iki büyük buton:'))
 story += bullets([
-    '<font color="#6B2D3E"><b>✓ ONAYLIYORUM</b></font> → paket onaylanan klasörüne taşınır, yayın süreci başlar',
-    '<font color="#6B2D3E"><b>✏ DEĞİŞİKLİK İSTİYORUM</b></font> → AI yorumla revizyon yapar ve yeni 5 dakikalık form üretir',
+    '<font color="#D81B60"><b>✓ ONAYLIYORUM</b></font> → paket onaylanan klasörüne taşınır, yayın süreci başlar',
+    '<font color="#D81B60"><b>✏ DEĞİŞİKLİK İSTİYORUM</b></font> → AI yorumla revizyon yapar ve yeni 5 dakikalık form üretir',
 ])
 story.append(Spacer(1, 0.2*cm))
 story.append(p(
@@ -866,7 +866,7 @@ story.append(p(
 story.append(Spacer(1, 0.2*cm))
 story.append(Paragraph('<b>Türkiye — 5846 Sayılı Fikir ve Sanat Eserleri Kanunu (FSEK)</b>',
                        style('LegalHeader', fontName='Calibri-Bold', fontSize=10.5,
-                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+                             leading=15, textColor=PRIMARY_PINK, spaceAfter=4)))
 story += bullets([
     '<i>Madde 1 / 8:</i> Eseri meydana getiren kişi eser sahibidir; eser sahipliği '
     'doğal olarak yazarın üzerindedir',
@@ -880,7 +880,7 @@ story += bullets([
 story.append(Spacer(1, 0.2*cm))
 story.append(Paragraph('<b>Amerika Birleşik Devletleri — US Copyright Office (2023 Rehberi)</b>',
                        style('LegalHeader2', fontName='Calibri-Bold', fontSize=10.5,
-                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+                             leading=15, textColor=PRIMARY_PINK, spaceAfter=4)))
 story += bullets([
     'Telif yalnızca <b>insan yaratıcı katkısıyla</b> oluşan eserlere verilir',
     'AI tarafından üretilen ham metin tek başına telif haklarına konu <b>olmaz</b>',
@@ -893,7 +893,7 @@ story += bullets([
 story.append(Spacer(1, 0.2*cm))
 story.append(Paragraph('<b>Avrupa Birliği — EU AI Act (2024)</b>',
                        style('LegalHeader3', fontName='Calibri-Bold', fontSize=10.5,
-                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+                             leading=15, textColor=PRIMARY_PINK, spaceAfter=4)))
 story += bullets([
     'AI sistemlerinde <b>şeffaflık yükümlülüğü</b> zorunludur — kullanıcıya AI çıktısı '
     'olduğu bilgisi verilir',
@@ -904,7 +904,7 @@ story += bullets([
 story.append(Spacer(1, 0.2*cm))
 story.append(Paragraph('<b>Reuters Trust Principles — Yapay Zeka Yayın Kılavuzu</b>',
                        style('LegalHeader4', fontName='Calibri-Bold', fontSize=10.5,
-                             leading=15, textColor=BURGUNDY, spaceAfter=4)))
+                             leading=15, textColor=PRIMARY_PINK, spaceAfter=4)))
 story += bullets([
     'AI çıktısı insan editör tarafından <b>doğrulanır</b>',
     'Editöryal sorumluluk yine <b>insan tarafında</b> kalır',
@@ -915,7 +915,7 @@ story += bullets([
 story.append(Spacer(1, 0.3*cm))
 story.append(Paragraph('<b>Estranova için pratik anlamı</b>',
                        style('LegalHeader5', fontName='Calibri-Bold', fontSize=11,
-                             leading=15, textColor=BURGUNDY_DEEP, spaceBefore=8,
+                             leading=15, textColor=SECONDARY_PINK, spaceBefore=8,
                              spaceAfter=4)))
 story += bullets([
     'Yazınızın <b>mali ve manevi hakları size aittir</b>',
@@ -984,7 +984,7 @@ story.append(Paragraph(
     '<b>Estranova Editöryal Ekibi</b><br/>'
     '<i>Bilimsel Editör: Doç. Dr. Senai Aksoy · Yönetici Editör: Berna Aksoy</i>',
     style('SignatureBlock', fontName='Constantia', fontSize=11, leading=16,
-          textColor=BURGUNDY, spaceAfter=20)))
+          textColor=PRIMARY_PINK, spaceAfter=20)))
 
 # --- Build ---
 doc.build(story, canvasmaker=FooterCanvas)

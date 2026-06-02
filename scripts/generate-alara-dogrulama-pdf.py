@@ -49,8 +49,8 @@ registerFontFamily('Calibri',
                    italic='Calibri-Italic', boldItalic='Calibri-BoldItalic')
 
 # Estranova palette
-burgundy        = HexColor('#6B2D3E')
-deep_burgundy   = HexColor('#4f171c')
+primary        = HexColor('#D81B60')
+secondary_pink   = HexColor('#D81B60')
 gold            = HexColor('#C9A96E')
 dark_gray       = HexColor('#2D2D2D')
 light_gray      = HexColor('#888888')
@@ -64,7 +64,7 @@ byline_style = ParagraphStyle(
     alignment=TA_RIGHT, spaceAfter=14, leading=12,
 )
 form_title_style = ParagraphStyle(
-    'FormTitle', fontName='Constantia-Bold', fontSize=21, textColor=deep_burgundy,
+    'FormTitle', fontName='Constantia-Bold', fontSize=21, textColor=secondary_pink,
     leading=27, spaceAfter=6, alignment=TA_LEFT,
 )
 form_intro_style = ParagraphStyle(
@@ -72,11 +72,11 @@ form_intro_style = ParagraphStyle(
     leading=16, spaceBefore=10, spaceAfter=14, alignment=TA_LEFT,
 )
 form_section_style = ParagraphStyle(
-    'FormSection', fontName='Constantia-Bold', fontSize=14, textColor=deep_burgundy,
+    'FormSection', fontName='Constantia-Bold', fontSize=14, textColor=secondary_pink,
     leading=20, spaceBefore=18, spaceAfter=6, alignment=TA_LEFT,
 )
 form_section_lede_style = ParagraphStyle(
-    'FormSectionLede', fontName='Constantia-Italic', fontSize=11, textColor=burgundy,
+    'FormSectionLede', fontName='Constantia-Italic', fontSize=11, textColor=primary,
     leading=16, spaceAfter=8, alignment=TA_LEFT,
 )
 form_question_style = ParagraphStyle(
@@ -84,7 +84,7 @@ form_question_style = ParagraphStyle(
     leading=15, spaceBefore=8, spaceAfter=2, alignment=TA_LEFT,
 )
 form_question_quote_style = ParagraphStyle(
-    'FormQuestionQuote', fontName='Calibri-Italic', fontSize=10.5, textColor=burgundy,
+    'FormQuestionQuote', fontName='Calibri-Italic', fontSize=10.5, textColor=primary,
     leading=15, spaceBefore=4, spaceAfter=2, alignment=TA_LEFT, leftIndent=12,
 )
 form_options_style = ParagraphStyle(
@@ -163,8 +163,8 @@ class InteractiveLikert(Flowable):
             c.acroForm.radio(
                 name=self.name, value=val, selected=False,
                 x=ax, y=ay, size=11, buttonStyle='circle',
-                borderColor=burgundy, fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy, borderWidth=0.7,
+                borderColor=primary, fillColor=HexColor('#ffffff'),
+                textColor=secondary_pink, borderWidth=0.7,
                 forceBorder=True, tooltip=label,
             )
             c.setFont('Calibri', 9)
@@ -196,8 +196,8 @@ class InteractiveTriple(Flowable):
             c.acroForm.radio(
                 name=self.name, value=val, selected=False,
                 x=ax, y=ay, size=11, buttonStyle='circle',
-                borderColor=burgundy, fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy, borderWidth=0.7,
+                borderColor=primary, fillColor=HexColor('#ffffff'),
+                textColor=secondary_pink, borderWidth=0.7,
                 forceBorder=True, tooltip=label,
             )
             c.setFont('Calibri', 9.5)
@@ -228,8 +228,8 @@ class InteractiveDouble(Flowable):
             c.acroForm.radio(
                 name=self.name, value=val, selected=False,
                 x=ax, y=ay, size=11, buttonStyle='circle',
-                borderColor=burgundy, fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy, borderWidth=0.7,
+                borderColor=primary, fillColor=HexColor('#ffffff'),
+                textColor=secondary_pink, borderWidth=0.7,
                 forceBorder=True, tooltip=label,
             )
             c.setFont('Calibri', 9.5)

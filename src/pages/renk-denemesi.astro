@@ -3,10 +3,6 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 
 const candidates = [
   { hex: '#D81B60', label: 'Pink 600', code: '#D81B60' },
-  { hex: '#C2185B', label: 'Pink 700', code: '#C2185B' },
-  { hex: '#AD1457', label: 'Pink 800', code: '#AD1457' },
-  { hex: '#880E4F', label: 'Pink 900', code: '#880E4F' },
-  { hex: '#6B2D3E', label: 'Mevcut Burgundy', code: '#6B2D3E' },
 ];
 
 const gold = '#000000';
@@ -15,41 +11,41 @@ const ink = '#2D2D2D';
 ---
 
 <SiteLayout
-  title="Renk Denemesi — Burgundy alternatifleri"
-  description="Estranova editoryal paletinde burgundy yerine üç pembe tonun yan yana denemesi."
+  title="Renk Denemesi — Pembe palet"
+  description="Estranova editoryal paletinde tek pembe ton olarak Pink 600 kullanılır."
 >
   <style is:global>
     #estranova-cookie-banner { display: none !important; }
   </style>
-  <main style={`background:${cream};min-height:100vh;padding:3rem 1.5rem;color:${ink};font-family:'Inter',system-ui,sans-serif;`}>
+  <main style={`background:${cream};min-height:100vh;padding:3rem 1.5rem;color:${ink};font-family:var(--font-sans);`}>
     <div style="max-width:1400px;margin:0 auto;">
       <header style="text-align:center;margin-bottom:2.5rem;">
-        <h1 style="font-family:'Newsreader',Georgia,serif;font-size:2.25rem;font-weight:500;letter-spacing:-0.01em;margin:0 0 0.5rem;">Renk Denemesi</h1>
-        <p style="color:#666;max-width:640px;margin:0 auto;">Mevcut burgundy (#6B2D3E) ile üç Material Design pembe tonunun yan yana editoryal karşılaştırması. Aynı bileşen seti her sütunda tek değişkenle (ana renk) render edilir.</p>
+        <h1 style="font-family:var(--font-serif);font-size:2.25rem;font-weight:700;letter-spacing:-0.01em;margin:0 0 0.5rem;">Renk Denemesi</h1>
+        <p style="color:#666;max-width:640px;margin:0 auto;">Estranova editoryal paleti tek pembe ton olarak Pink 600 ile izlenir. Aynı bileşen seti bu ana vurgu rengiyle render edilir.</p>
       </header>
 
-      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;">
         {candidates.map((c) => (
           <section style={`background:#fff;border:1px solid #eee;border-radius:6px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.04);`}>
             {/* swatch header */}
             <div style={`background:${c.hex};color:#fff;padding:1.25rem 1rem;`}>
-              <div style="font-family:'Newsreader',Georgia,serif;font-size:1.15rem;font-weight:500;">{c.label}</div>
+              <div style="font-family:var(--font-serif);font-size:1.15rem;font-weight:700;">{c.label}</div>
               <div style="font-family:ui-monospace,monospace;font-size:0.8rem;opacity:0.85;margin-top:0.15rem;">{c.code}</div>
             </div>
 
             {/* hero-mini */}
             <div style={`padding:1.5rem 1.25rem 1.25rem;border-bottom:1px solid #f0eae0;background:${cream};`}>
               <div style={`font-family:ui-monospace,monospace;font-size:0.7rem;letter-spacing:0.12em;color:${c.hex};text-transform:uppercase;margin-bottom:0.5rem;`}>SAYI 01 · MAYIS 2026</div>
-              <h2 style={`font-family:'Newsreader',Georgia,serif;font-size:1.4rem;line-height:1.2;font-weight:500;color:${c.hex};margin:0 0 0.5rem;`}>Perimenopozda Uyku Değişen Yan</h2>
+              <h2 style={`font-family:var(--font-serif);font-size:1.4rem;line-height:1.2;font-weight:700;color:${c.hex};margin:0 0 0.5rem;`}>Perimenopozda Uyku Değişen Yan</h2>
               <p style="font-size:0.85rem;line-height:1.5;color:#555;margin:0;">Hormonal geçişin gece yarısı sahnesinde, bedenin söyledikleri ile söylenmeyenler arasında ince bir denge.</p>
             </div>
 
             {/* prose-estranova mock */}
             <article style="padding:1.5rem 1.25rem;">
-              <div style={`font-family:'Newsreader',Georgia,serif;color:${gold};font-size:0.9rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.25rem;`}>01</div>
-              <h3 style={`font-family:'Newsreader',Georgia,serif;color:${c.hex};font-size:1.15rem;font-weight:500;margin:0 0 0.5rem;`}>Gece terlemesi sandığınızdan erken başlar</h3>
+              <div style={`font-family:var(--font-serif);color:${gold};font-size:0.9rem;font-weight:700;letter-spacing:0.05em;margin-bottom:0.25rem;`}>01</div>
+              <h3 style={`font-family:var(--font-serif);color:${c.hex};font-size:1.15rem;font-weight:700;margin:0 0 0.5rem;`}>Gece terlemesi sandığınızdan erken başlar</h3>
               <div style={`width:2.5rem;height:2px;background:${gold};margin-bottom:0.85rem;`}></div>
-              <p style={`font-family:'Newsreader',Georgia,serif;font-style:italic;color:${c.hex};font-size:0.95rem;line-height:1.55;margin:0 0 0.85rem;`}>Çoğumuz bunu önce yorgunluk sanırız; oysa beden çok önceden bir cümle kuruyordur.</p>
+              <p style={`font-family:var(--font-sans);font-style:italic;color:${c.hex};font-size:0.95rem;line-height:1.55;margin:0 0 0.85rem;`}>Çoğumuz bunu önce yorgunluk sanırız; oysa beden çok önceden bir cümle kuruyordur.</p>
               <p style="font-size:0.85rem;line-height:1.65;color:#333;margin:0 0 0.6rem;">Perimenopozun ilk yıllarında gece terlemesi, sıcak basması olarak adlandırdığımız sahnenin sessiz habercisidir <em style={`color:${c.hex};font-style:italic;font-size:0.78em;`}>(orta kanıt)</em>. Belirti her kadında aynı yoğunlukta görülmez.</p>
               <p style="font-size:0.85rem;line-height:1.65;color:#333;margin:0;">Bu dönemden geçen birçoğumuzun bildiği gibi, bedeniniz size yeni bir dil öğretiyor olabilir.</p>
             </article>
@@ -64,7 +60,7 @@ const ink = '#2D2D2D';
             <div style={`background:${cream};padding:1rem 1.25rem;border-top:1px solid #f0eae0;display:flex;align-items:center;gap:0.75rem;`}>
               <div style={`width:42px;height:42px;border-radius:50%;background:${c.hex};opacity:0.85;flex-shrink:0;`}></div>
               <div>
-                <div style={`font-family:'Newsreader',Georgia,serif;font-size:0.9rem;color:${c.hex};font-weight:500;`}>Berna Aksoy</div>
+                <div style={`font-family:var(--font-serif);font-size:0.9rem;color:${c.hex};font-weight:700;`}>Berna Aksoy</div>
                 <div style="font-size:0.72rem;color:#777;letter-spacing:0.04em;">SİTE EDİTÖRÜ</div>
               </div>
             </div>
@@ -86,8 +82,8 @@ const ink = '#2D2D2D';
 
       {/* palette swatch row */}
       <section style="margin-top:3rem;padding:1.5rem;background:#fff;border:1px solid #eee;border-radius:6px;">
-        <h2 style="font-family:'Newsreader',Georgia,serif;font-size:1.2rem;font-weight:500;margin:0 0 1rem;">Palet karşılaştırma — siyah (#000000) accent ile yan yana</h2>
-        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;">
+        <h2 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;margin:0 0 1rem;">Palet önizleme — siyah (#000000) accent ile yan yana</h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
           {candidates.map((c) => (
             <div style="display:flex;flex-direction:column;gap:0.5rem;">
               <div style={`display:flex;height:80px;border-radius:4px;overflow:hidden;`}>

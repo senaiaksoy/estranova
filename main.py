@@ -396,11 +396,11 @@ const publishedDate = formatDate(post.data.date);
     />
 
     <SubmenuArticleBody>
-      <section class="rounded-[28px] border border-[#6B2D3E]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
+      <section class="rounded-[28px] border border-[#D81B60]/15 bg-white p-7 shadow-[0_16px_44px_-24px_rgba(44,24,28,0.14)] ring-1 ring-black/[0.04] md:p-8">
         <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
-          <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#6B2D3E]/10" aria-hidden="true"></div>
+          <div class="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-[#E8DDD4] to-[#C9A96E]/35 ring-2 ring-[#D81B60]/10" aria-hidden="true"></div>
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#6B2D3E]">Estranova Editör Ekibi</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D81B60]">Estranova Editör Ekibi</p>
             <p class="text-xl font-semibold text-[#2D2D2D]">Tıbbi inceleme: Doç. Dr. Senai Aksoy</p>
             <p class="text-[#2D2D2D]/70">40+ kadın sağlığı odaklı editöryal içerik</p>
             <p class="mt-2 text-sm text-[#2D2D2D]/65">Yayın tarihi: {publishedDate}</p>
@@ -417,7 +417,7 @@ const publishedDate = formatDate(post.data.date);
         <Content />
       </ArticleProsePanel>
 
-      <section class="mt-14 rounded-[28px] border border-dashed border-[#6B2D3E]/30 bg-white/60 p-6 text-sm text-[#2D2D2D]/70 ring-1 ring-[#6B2D3E]/10 md:p-8">
+      <section class="mt-14 rounded-[28px] border border-dashed border-[#D81B60]/30 bg-white/60 p-6 text-sm text-[#2D2D2D]/70 ring-1 ring-[#D81B60]/10 md:p-8">
         <p>
           <strong>Önemli not:</strong> Bu içerik yalnızca genel bilgilendirme amacıyla hazırlanmıştır.
           Tıbbi tavsiye, tanı veya tedavi yerine geçmez. Sağlık durumunuzla ilgili kararlar için lütfen

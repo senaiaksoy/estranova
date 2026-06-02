@@ -87,7 +87,7 @@ It should NOT feel like:
 
 ### Design characteristics
 Use:
-- muted burgundy / cream / beige-gold palette
+- muted Pink 600 / cream / black-accent palette
 - serif headings
 - readable sans-serif body text
 - large type
@@ -225,7 +225,7 @@ Article body inside `ArticleProsePanel` is rendered via a single editorial typog
 ```astro
 <ArticleProsePanel>
   <h2 id="slug">Section Title</h2>
-  <p>Opening 1–2 sentences — renders as italic burgundy serif lede.</p>
+  <p>Opening 1–2 sentences — renders as italic primary-pink lede.</p>
   <p>Regular body paragraph in sans-serif …</p>
 </ArticleProsePanel>
 ```
@@ -234,12 +234,14 @@ Under the hood: `<section class="rounded-[32px] …"><div class="prose prose-lg 
 **Behavior baked into `prose-estranova` (see `src/index.css` `@utility prose-estranova` block):**
 - **Chapter counter:** every `<h2>` is preceded by a gold two-digit number (`01`, `02` …) via CSS counter. These numbers must match the `ArticleTOC` sidebar — so the TOC and chapter numbers read as one numbered sequence.
 - **Gold rule after H2:** auto-inserted 2.5rem gold line (`::after`). Do **not** add a manual `<hr>` beneath H2's; you'll get a double rule.
-- **Italic serif lede:** `h2 + p` selector styles the first paragraph after each H2 as italic burgundy serif, ~1.2rem, `max-width: 58ch`. Writers must author the first paragraph after every H2 as an editorial opener (1–2 sentences framing the section), not a bulleted list, data dump, or long definition.
+- **Italic lede:** `h2 + p` selector styles the first paragraph after each H2 as italic primary-pink `font-sans`, ~1.2rem, `max-width: 58ch`. Writers must author the first paragraph after every H2 as an editorial opener (1–2 sentences framing the section), not a bulleted list, data dump, or long definition.
 - **H3 rhythm:** `h3` scaled at 1.5rem serif with its own top margin — sub-section structure works out of the box.
-- **Palette tokens:** `--tw-prose-body: #2D2D2D`, `--tw-prose-headings: #2D2D2D`, `--tw-prose-links: #6B2D3E`, `--tw-prose-bullets: #C9A96E`, `--tw-prose-quotes: #4f171c`, `--tw-prose-quote-borders: #C9A96E`. Do not override per-article.
+- **Palette tokens:** `--tw-prose-body: #2D2D2D`, `--tw-prose-headings: #2D2D2D`, `--tw-prose-links: #D81B60`, `--tw-prose-bullets: #000000`, `--tw-prose-quotes: #D81B60`, `--tw-prose-quote-borders: #000000`. Do not override per-article.
 - **Blockquote:** renders as italic serif pull-quote with left gold border — use for editorial emphasis sparingly.
-- **Links:** thin burgundy underline (solid on hover). Inline external URLs in article bodies are still forbidden by HARD CONSTRAINT §4.
-- **Evidence label (mandatory in published article HTML):** Inline evidence strength uses `src/components/site/Evidence.astro` inside `ArticleProsePanel` prose flow. **Single level:** `<Evidence level={N} />` with `N` in `1 | 2 | 3 | 4 | 5` — renders as parenthetical italic Turkish label: `(zayıf kanıt)` · `(sınırlı kanıt)` · `(orta kanıt)` · `(iyi kanıt)` · `(güçlü kanıt)`. **Range:** `<Evidence from={A} to={B} />` renders combined as e.g. `(orta–iyi kanıt)`. **Color coding:** level 5 burgundy `#6B2D3E`, level 4 gold-bronze `#8a6a2e`, level 1-3 gold `#C9A96E`; italic Newsreader serif, 0.85em inline. **Tooltip:** `title` + `aria-label` both carry `Kanıt düzeyi: <label> (<N>/5)` for hover/assistive magnitude. Styling lives under `prose-estranova` in `src/index.css` and duplicated in `@layer components` for hub tables/cards outside the prose wrapper. **Forbidden:** literal bracket/dot strings like `[●●●●●]` in shipped pages (CLAUDE.md HARD CONSTRAINT).
+- **Links:** thin primary-pink underline (solid on hover). Inline external URLs in article bodies are still forbidden by HARD CONSTRAINT §4.
+- **Evidence label (mandatory in published article HTML):** Inline evidence strength uses `src/components/site/Evidence.astro` inside `ArticleProsePanel` prose flow. **Single level:** `<Evidence level={N} />` with `N` in `1 | 2 | 3 | 4 | 5` — renders as parenthetical italic Turkish label: `(zayıf kanıt)` · `(sınırlı kanıt)` · `(orta kanıt)` · `(iyi kanıt)` · `(güçlü kanıt)`. **Range:** `<Evidence from={A} to={B} />` renders combined as e.g. `(orta–iyi kanıt)`. **Color coding:** level 4-5 Pink 600 `#D81B60`, level 1-3 black accent `#000000`; italic `font-serif` / Manrope, 0.85em inline. **Tooltip:** `title` + `aria-label` both carry `Kanıt düzeyi: <label> (<N>/5)` for hover/assistive magnitude. Styling lives under `prose-estranova` in `src/index.css` and duplicated in `@layer components` for hub tables/cards outside the prose wrapper. **Forbidden:** literal bracket/dot strings like `[●●●●●]` in shipped pages (CLAUDE.md HARD CONSTRAINT).
+
+**Live font rule (2026-06-02):** estranova.com production CSS maps `--font-serif` to Manrope and `--font-sans` to Kulim Park. Newsreader, Playfair Display and Inter are stale memory/draft references and must not be used for new site, social or production assets.
 
 **Setup (one-time, already landed):**
 - `package.json` devDependency: `@tailwindcss/typography`.
@@ -345,7 +347,7 @@ Tüm yayın kurulu bölümlerinde (Editörler, Yazarlar, Tıbbi Danışmanlar, D
 |---|---|---|
 | `portrait` | string? | Opsiyonel; varsa 112×112 rounded-xl |
 | `name` | string | font-serif text-2xl |
-| `role` | string | text-xs uppercase burgundy |
+| `role` | string | text-xs uppercase primary-pink |
 | `bio` | string | **max 2-3 cümle** — text-sm; tüm gruplar aynı boyut |
 | `tags` | string[]? | Opsiyonel; varsa rounded-full chip'ler |
 | `anchor` | string? | Kartın `id` attribute'u + `#anchor` link |

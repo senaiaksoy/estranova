@@ -1,4 +1,4 @@
-#!/usr/bin/env tsx
+﻿#!/usr/bin/env tsx
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { getWriterStyleSummary } from '../src/utils/writer-style';
@@ -111,7 +111,7 @@ ${input.stylePrompt}
       <ArticleAuthorBlock authorSlug="${input.writerSlug}" publishedDate="${input.publishedDate}" readingMinutes={5} />
 
       <header class="mb-10">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#6B2D3E]">Hormonal Geçiş</p>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#D81B60]">Hormonal Geçiş</p>
         <h1 class="font-serif text-4xl leading-tight md:text-6xl">{articleTitle}</h1>
       </header>
 

@@ -151,7 +151,7 @@ Sanem'in tekrar eden imgeleri bir banka oluşturur. Aforizma seçilirken bunlard
 
 ### H2 sonrası italic lede ZORUNLU
 
-CLAUDE.md editöryal tipografi: her H2'den sonraki ilk `<p>` italic serif burgundy render edilir. Bu paragraf bölümün **lede**'sidir — 1-2 cümlede bölümün kanısını/sorusunu/durumunu kurar. Bullet list, ağır veri veya uzun tanım ile başlayan bölüm YASAK.
+CLAUDE.md editöryal tipografi: her H2'den sonraki ilk `<p>` italic serif primary render edilir. Bu paragraf bölümün **lede**'sidir — 1-2 cümlede bölümün kanısını/sorusunu/durumunu kurar. Bullet list, ağır veri veya uzun tanım ile başlayan bölüm YASAK.
 
 ---
 

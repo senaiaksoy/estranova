@@ -131,7 +131,7 @@ Düzenli ilaç kullananlar (özellikle kanser tedavileri, immünsüpresanlar, ba
 metabolik tedaviler) için ilaç-takviye etkileşimi konusunda yeterli çalışma yok.
 Bu, "olmayacağı kesin" değil *"bilinmediği kesin"* anlamına geliyor.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * Makale içi sticky TOC (içindekiler) — Aeon ve Atlantic uzun-form
  * okuma deneyiminin Estranova uyarlaması.
@@ -8,7 +8,7 @@
  * 2. Sticky liste — SubmenuArticleBody içinde `<aside class="sticky">`
  *    wrapping ile zaten sticky.
  * 3. Active section highlight — IntersectionObserver ile makale H2'leri
- *    izlenir, viewport ortasındaki bölümün link'i burgundy ve kalın
+ *    izlenir, viewport ortasındaki bölümün link'i primary ve kalın
  *    olarak işaretlenir.
  *
  * Client-side davranış: src/scripts/article-toc.ts (SiteLayout'ta
@@ -30,13 +30,13 @@ const { entries } = Astro.props;
 <nav
   data-toc
   aria-label="İçindekiler"
-  class="rounded-[30px] border border-burgundy/12 bg-white p-5 font-sans shadow-[0_20px_58px_-42px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04]"
+  class="rounded-[30px] border border-primary/12 bg-white p-5 font-sans shadow-[0_20px_58px_-42px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04]"
 >
   <div class="pointer-events-none mb-5 h-px w-full bg-gradient-to-r from-transparent via-gold/65 to-transparent"></div>
   <div
     data-toc-progress
     aria-hidden="true"
-    class="mb-5 h-0.5 w-full overflow-hidden rounded-full bg-burgundy/10"
+    class="mb-5 h-0.5 w-full overflow-hidden rounded-full bg-primary/10"
   >
     <div
       data-toc-progress-bar
@@ -44,7 +44,7 @@ const { entries } = Astro.props;
     ></div>
   </div>
 
-  <p class="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+  <p class="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
     <span class="font-serif text-base font-normal italic text-gold">folio</span>
     Makale Haritası
   </p>
@@ -57,12 +57,12 @@ const { entries } = Astro.props;
           <a
             href={`#${entry.id}`}
             data-toc-link={entry.id}
-            class="group grid grid-cols-[2rem_1fr] gap-2 rounded-2xl border border-transparent px-2 py-1.5 text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 hover:bg-cream-soft/35 hover:text-burgundy data-[active=true]:border-gold/30 data-[active=true]:bg-cream-soft/45 data-[active=true]:font-semibold data-[active=true]:text-burgundy"
+            class="group grid grid-cols-[2rem_1fr] gap-2 rounded-2xl border border-transparent px-2 py-1.5 text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 hover:bg-cream-soft/35 hover:text-primary data-[active=true]:border-gold/30 data-[active=true]:bg-cream-soft/45 data-[active=true]:font-semibold data-[active=true]:text-primary"
           >
-            <span class="font-serif tabular-nums text-gold transition group-data-[active=true]:text-burgundy">
+            <span class="font-serif tabular-nums text-gold transition group-data-[active=true]:text-primary">
               {String(i + 1).padStart(2, '0')}
             </span>
-            <span class="group-hover:underline group-hover:decoration-burgundy/40 group-hover:underline-offset-2 group-data-[active=true]:underline group-data-[active=true]:decoration-burgundy/60 group-data-[active=true]:underline-offset-4">
+            <span class="group-hover:underline group-hover:decoration-primary/40 group-hover:underline-offset-2 group-data-[active=true]:underline group-data-[active=true]:decoration-primary/60 group-data-[active=true]:underline-offset-4">
               {entry.label}
             </span>
           </a>

@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
@@ -46,13 +46,13 @@ const hubs = [
     <section class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-4xl">
         <header class="mb-14 max-w-2xl">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-burgundy">404</p>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.28em] text-primary">404</p>
           <h1 class="mb-6 font-serif text-5xl leading-[1.05] text-charcoal md:text-6xl">
             Aradığınız sayfa burada değil.
           </h1>
           <p class="text-lg leading-relaxed text-charcoal/70 md:text-xl">
             Bağlantı eski ya da eksik olabilir. Aşağıdaki bilgi yollarından devam edebilir, isterseniz
-            <a href="/" class="font-semibold text-burgundy underline-offset-4 hover:underline">ana sayfaya</a>
+            <a href="/" class="font-semibold text-primary underline-offset-4 hover:underline">ana sayfaya</a>
             dönebilirsiniz.
           </p>
         </header>
@@ -61,11 +61,11 @@ const hubs = [
           {hubs.map((hub) => (
             <a
               href={hub.href}
-              class="group block rounded-[28px] border border-burgundy/12 bg-white p-6 transition hover:border-burgundy/30 hover:shadow-md"
+              class="group block rounded-[28px] border border-primary/12 bg-white p-6 transition hover:border-primary/30 hover:shadow-md"
             >
-              <h2 class="mb-2 font-serif text-2xl text-burgundy-deep">{hub.label}</h2>
+              <h2 class="mb-2 font-serif text-2xl text-secondary">{hub.label}</h2>
               <p class="mb-3 text-sm leading-relaxed text-charcoal/68">{hub.description}</p>
-              <span class="inline-flex items-center gap-2 text-sm font-semibold text-burgundy group-hover:underline">
+              <span class="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:underline">
                 Bölüme git
                 <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
               </span>
@@ -81,15 +81,15 @@ const hubs = [
             <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">
               {magazineConfig.name} · Sayı {issuePad}
             </p>
-            <p class="mt-1 font-serif text-base leading-snug text-burgundy-deep group-hover:underline">
+            <p class="mt-1 font-serif text-base leading-snug text-secondary group-hover:underline">
               {currentIssue.theme}
             </p>
           </a>
           <a
             href="/sayi/"
-            class="group rounded-[20px] border border-burgundy/15 bg-cream-soft px-5 py-4 transition hover:border-burgundy/35"
+            class="group rounded-[20px] border border-primary/15 bg-cream-soft px-5 py-4 transition hover:border-primary/35"
           >
-            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
               Sayı arşivi
             </p>
             <p class="mt-1 font-serif text-base leading-snug text-ink group-hover:underline">
@@ -98,9 +98,9 @@ const hubs = [
           </a>
           <a
             href="/library/"
-            class="group rounded-[20px] border border-burgundy/15 bg-cream-soft px-5 py-4 transition hover:border-burgundy/35"
+            class="group rounded-[20px] border border-primary/15 bg-cream-soft px-5 py-4 transition hover:border-primary/35"
           >
-            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
               Editoryal arşiv
             </p>
             <p class="mt-1 font-serif text-base leading-snug text-ink group-hover:underline">
@@ -111,7 +111,7 @@ const hubs = [
 
         <p class="mt-12 text-sm leading-relaxed text-charcoal/60">
           Bir bağlantı kırık görünüyorsa
-          <a href="/iletisim/" class="font-semibold text-burgundy underline-offset-4 hover:underline">iletişim sayfasından</a>
+          <a href="/iletisim/" class="font-semibold text-primary underline-offset-4 hover:underline">iletişim sayfasından</a>
           haber verebilirsiniz.
         </p>
       </div>

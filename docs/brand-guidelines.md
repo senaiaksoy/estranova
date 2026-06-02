@@ -13,7 +13,7 @@ Estranova, menopoza ve sonrasına bilimsel bir rehberdir. Tonu editöryel ve sı
 **Temel ilkeler:**
 - **Bilimsel ama sıcak** — lab dergisi soğukluğunda olmadan kanıta dayalı.
 - **Editöryel ama erişilebilir** — The Cut / Aeon / Nautilus tonu.
-- **Lüks ama klinik değil** — bordo + altın paleti zarafet verir; klinik beyazdan kaçın.
+- **Lüks ama klinik değil** — Pink 600 + krem + siyah accent paleti zarafet verir; klinik beyazdan kaçın.
 - **Kadın merkezli ama klişeleştirilmemiş** — pembe-çiçek estetiğinden uzak.
 
 ---
@@ -26,7 +26,7 @@ Estranova, menopoza ve sonrasına bilimsel bir rehberdir. Tonu editöryel ve sı
 ### Dosyalar
 | Dosya | Kullanım |
 |---|---|
-| `logo.svg` | Ana lockup (yıldız + wordmark), açık zeminde bordo |
+| `logo.svg` | Ana lockup (yıldız + wordmark), açık zeminde Pink 600 |
 | `logo-icon.svg` | 8 köşeli pusula yıldızı — favicon, avatar, baskı, ≥32px her yer |
 | `logo-icon-spark.svg` | 4 köşeli sparkle — yalnız küçük boy (≤24px) inline süs |
 | **Ters versiyon** | Koyu zeminde altın yıldız + krem wordmark |
@@ -38,7 +38,7 @@ Estranova, menopoza ve sonrasına bilimsel bir rehberdir. Tonu editöryel ve sı
 | Favicon, app icon, OG image, lockup, baskı | `logo-icon.svg` (8 köşeli) | ≥32px |
 | Eyebrow etiket, inline editöryel süs, kart başı, e-posta inline ikon | `logo-icon-spark.svg` (4 köşeli) | ≤24px |
 
-**Önemli:** Spark varyantı sembol değişimi değil — aynı yıldızın küçük boy için optimize edilmiş halidir. 8 köşeli ana yıldız küçültüldüğünde "+" işaretine dönüşür; bu yüzden 24px ve altı kullanımlar için sparkle versiyonu kullanılır. Tipik renk altın (`#C9A96E`); gerektiğinde vişne deep (`#7a1f33`) da olabilir.
+**Önemli:** Spark varyantı sembol değişimi değil — aynı yıldızın küçük boy için optimize edilmiş halidir. 8 köşeli ana yıldız küçültüldüğünde "+" işaretine dönüşür; bu yüzden 24px ve altı kullanımlar için sparkle versiyonu kullanılır. Tipik renk siyah accent (`#000000`) veya Pink 600 (`#D81B60`) olabilir.
 
 ### Boş alan (clearspace)
 Logo etrafında en az **"E" harfi yüksekliği** kadar boşluk bırakın.
@@ -51,7 +51,7 @@ Logo etrafında en az **"E" harfi yüksekliği** kadar boşluk bırakın.
 - Logoyu orijinal SVG'den kullanın.
 - Bordo logo → açık zemin. Altın logo → koyu zemin.
 - Boş alana saygı gösterin.
-- Tek renkli baskıda tek bordo veya tek altın versiyonu.
+- Tek renkli baskıda tek Pink 600 veya tek siyah versiyonu.
 
 ### ✕ Yapmayın
 - Döndürmeyin, eğmeyin, gerdirmeyin.
@@ -64,40 +64,36 @@ Logo etrafında en az **"E" harfi yüksekliği** kadar boşluk bırakın.
 
 ## 3. Renk Paleti
 
-### Birincil (2026-05-14 — Pink 600 + siyah accent paleti)
+### Birincil (2026-06-02 — Pink 600 + siyah accent paleti)
 | Renk | HEX | Rol |
 |---|---|---|
-| Pink 600 | `#D81B60` | Hero, footer, CTA, link, lede, drop cap, ana vurgu (`--color-burgundy`) |
-| Pink 800 | `#AD1457` | Koyu varyant — hover, gradient sonu (`--color-burgundy-deep`) |
-| Pink 700 | `#C2185B` | İkincil aksent (`--color-secondary`) |
+| Pink 600 | `#D81B60` | Hero, footer, CTA, link, lede, drop cap, ana vurgu |
 | Siyah | `#000000` | Accent — yalnız **açık zeminde** (chapter counter, h2 ayraç, evidence label) (`--color-gold`) |
-| Pink 100 | `#F8BBD0` | Divider ve kart fonu (`--color-pembe`) |
 | Krem | `#fdf8f0` | Arka plan |
 | Mürekkep | `#2d2d2d` | Makale metni |
 
-> **Karanlık zemin kuralı:** Foto overlay üstündeki pill / divider / eyebrow rolünde **siyah yerine cream-warm** veya şeffaf cam (`bg-white/10 border-white/35 text-white backdrop-blur-sm`) kullanılır. `bg-burgundy` zeminli aside / footer için gold accent → `cream-warm` tonu (Pink 600 zeminde siyah okunmaz).
+> **Karanlık zemin kuralı:** Foto overlay üstündeki pill / divider / eyebrow rolünde **siyah yerine cream-warm** veya şeffaf cam (`bg-white/10 border-white/35 text-white backdrop-blur-sm`) kullanılır. Ana renk zeminli aside / footer için gold accent → `cream-warm` tonu (Pink 600 zeminde siyah okunmaz).
 
-> 2026-05-14 öncesi palet — vişne (#7a1f33 / #9c2845) + altın (#C9A96E) — terk edildi.
+> Aktif palet yalnız Pink 600, siyah accent, krem ve mürekkep tonlarından oluşur.
 
 ### Genişletilmiş
 | Renk | HEX | Rol |
 |---|---|---|
-| Cherry Gradient Sonu | `#4c1220` | Koyu vişne gradient |
 | Krem Rose | `#f8eef0` | Sıcak kart zemin |
 | Charcoal | `#1c1c19` | UI koyu metin |
 
 ### Kombinasyon kuralları
-- **Yüksek kontrast:** Vişne Deep ↔ Krem — ana lockup.
-- **Lüks vurgu:** Altın yalnızca chapter counter, evidence level 5, ince çizgiler ve süslemeler için. **Geniş alan rengi olarak kullanmayın.**
-- **Gradient:** `linear-gradient(135deg, #7a1f33 0%, #4c1220 100%)` — sosyal medya kapağı, hero alanları.
+- **Yüksek kontrast:** Pink 600 ↔ Krem — ana lockup.
+- **Lüks vurgu:** Siyah accent yalnızca chapter counter, evidence level 5, ince çizgiler ve süslemeler için. **Geniş alan rengi olarak kullanmayın.**
+- **Ana vurgu:** Pink 600 `#D81B60` — sosyal medya kapağı, hero alanları ve CTA yüzeyleri.
 - **Okuma kontrastı:** Body metni `#2D2D2D` krem zeminde — WCAG AA uyumlu.
 
 ### Mevcut kullanım (`src/index.css`)
 ```css
 @theme {
-  --color-primary: #7a1f33;
-  --color-primary-container: #9c2845;
-  --color-secondary: #b07683;
+  --color-primary: #D81B60;
+  --color-primary-container: #D81B60;
+  --color-secondary: #D81B60;
   --color-surface: #fdf8f0;
   --color-surface-container: #f8eef0;
   --color-charcoal: #1c1c19;
@@ -108,22 +104,24 @@ Logo etrafında en az **"E" harfi yüksekliği** kadar boşluk bırakın.
 
 ## 4. Tipografi
 
-İki font: **Newsreader** (serif, başlıklar) + **Manrope** (sans, metin). İkisi de değişken font, Google Fonts üzerinden.
+İki font: **Manrope** (`font-serif`, başlıklar / wordmark / editoryal vurgu) + **Kulim Park** (`font-sans`, gövde / arayüz / okuma metni). İkisi de Google Fonts üzerinden yüklenir.
+
+> **Canlı font kuralı (2026-06-02):** estranova.com üretim CSS'i `--font-serif: "Manrope", sans-serif` ve `--font-sans: "Kulim Park", sans-serif` kullanır. Newsreader, Playfair Display ve Inter eski hafıza / taslak kalıntısıdır; yeni web, sosyal medya veya üretim asset'lerinde kullanılmaz.
 
 ### Hiyerarşi
 | Eleman | Font | Boyut | Ağırlık | Diğer |
 |---|---|---|---|---|
-| H1 / Hero | Newsreader Italic | 72–96px | 350 | letter-spacing -0.01em |
-| H2 / Bölüm | Newsreader Italic | 36–44px | 400 | |
-| H3 / Alt | Newsreader | 22–24px | 400 | |
-| Lead | Newsreader Italic | 19–22px | 350 | |
-| Body | Manrope | 16–18px | 400 | line-height 1.6–1.75, max-width 64ch |
-| UI / etiket | Manrope | 11–13px | 500 | letter-spacing 0.18–0.32em, UPPERCASE |
-| Wordmark | Manrope | — | 500 | letter-spacing 10px (tracked uppercase) |
+| H1 / Hero | Manrope | 72–96px | 620–800 | tracking sıkı, dergi kapağı hissi |
+| H2 / Bölüm | Manrope | 36–56px | 600–700 | `font-serif` sınıfı |
+| H3 / Alt | Manrope | 22–24px | 600 | |
+| Lead | Kulim Park Italic | 19–22px | 400 | sakin editoryal giriş |
+| Body | Kulim Park | 16–18px | 400 | line-height 1.6–1.75, max-width 64ch |
+| UI / etiket | Kulim Park / Manrope | 11–13px | 500–700 | letter-spacing 0.12–0.28em, UPPERCASE |
+| Wordmark | Manrope | — | 500–700 | tracked uppercase |
 
 ### Import
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@200..800&display=swap');
 ```
 
 ---
@@ -155,18 +153,18 @@ Estranova bir **editöryel rehberdir**, bir wellness blogu değil. Tonu sakin, k
 ## 6. Kullanım Alanları
 
 ### Dijital
-- **Web sitesi:** Krem zemin (`#fcf9f4`), bordo başlıklar, charcoal metin.
-- **Favicon:** `logo-icon.svg` — bordo yıldız.
-- **Sosyal medya avatarı:** `social/avatar.svg` — bordo gradient zeminde altın yıldız.
+- **Web sitesi:** Krem zemin (`#fcf9f4`), Pink 600 başlıklar, charcoal metin.
+- **Favicon:** `logo-icon.svg` — Pink 600 yıldız.
+- **Sosyal medya avatarı:** `social/avatar.svg` — Pink 600 gradient zeminde açık yıldız.
 - **LinkedIn banner:** `social/banner-linkedin.svg` (1584×396).
 - **X banner:** `social/banner-x.svg` (1500×500).
 - **Instagram post:** `social/post-template.svg` (1080×1080) şablonu.
 - **E-posta imzası:** `email/signature.html`.
 
 ### Baskı
-- **Kartvizit:** Krem kart, bordo wordmark, altın detay; arka yüz boş veya ince altın çerçeve.
+- **Kartvizit:** Krem kart, Pink 600 wordmark, siyah accent detay; arka yüz boş veya ince siyah çerçeve.
 - **Letterhead:** Üstte sol köşede yıldız + ESTRANOVA, altta küçük altın çizgi.
-- **Sunum şablonu:** Krem zemin, bordo başlık, ufak altın bölüm numarası.
+- **Sunum şablonu:** Krem zemin, Pink 600 başlık, ufak siyah bölüm numarası.
 
 ---
 

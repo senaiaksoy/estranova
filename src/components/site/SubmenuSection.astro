@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
   variant?: 'cream' | 'white' | 'sand';
   /** Hero altında ilk bölümde üst çizgi */
@@ -15,7 +15,7 @@ const bg = {
 }[variant];
 ---
 
-<section class:list={[borderedTop && 'border-t border-burgundy/10', bg, 'px-6 py-16 md:py-20', className]}>
+<section class:list={[borderedTop && 'border-t border-primary/10', bg, 'px-6 py-16 md:py-20', className]}>
   <div class="mx-auto max-w-6xl">
     <slot />
   </div>

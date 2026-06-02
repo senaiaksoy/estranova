@@ -98,7 +98,7 @@ Görüşme öncesi şu üç soru netleştirilebilir:
 Bu sorular, “her şeyi yaptıralım” telaşını “bana uygun planı kuralım” sakinliğine çevirir.
 Bu da takip uyumunu güçlendirir.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

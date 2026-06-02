@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * Anasayfa "Bu Ayın Sayısı" hero kartı.
  *
@@ -31,15 +31,15 @@ const issueHref = `/sayi/${issue.slug}/`;
 const issuePad = formatIssuePad(issue.number);
 ---
 
-<section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+<section class="relative isolate overflow-hidden border-t border-primary/10 bg-white px-6 py-16 md:py-24">
   <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
   <div class="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
-  <div class="pointer-events-none absolute right-0 top-1/3 hidden font-serif text-[12rem] leading-none tracking-[-0.08em] text-burgundy/5 lg:block">
+  <div class="pointer-events-none absolute right-0 top-1/3 hidden font-serif text-[12rem] leading-none tracking-[-0.08em] text-primary/5 lg:block">
     {issuePad}
   </div>
   <div class="mx-auto max-w-6xl">
     <header class="mb-12">
-      <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+      <p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">
         <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
         <span class="mx-2 text-gold">—</span>
         Bu Ayın Sayısı
@@ -48,7 +48,7 @@ const issuePad = formatIssuePad(issue.number);
 
     <a
       href={issueHref}
-      class="group relative grid overflow-hidden rounded-[38px] border border-burgundy/14 bg-white shadow-[0_36px_118px_-72px_rgba(44,22,28,0.42)] ring-1 ring-black/[0.05] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[0.48fr_0.52fr] md:items-stretch"
+      class="group relative grid overflow-hidden rounded-[38px] border border-primary/14 bg-white shadow-[0_36px_118px_-72px_rgba(44,22,28,0.42)] ring-1 ring-black/[0.05] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 md:grid-cols-[0.48fr_0.52fr] md:items-stretch"
     >
       <span class="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-cream-warm/55"></span>
       <div class="relative aspect-[4/5] w-full shrink-0 overflow-hidden md:aspect-auto">
@@ -76,7 +76,7 @@ const issuePad = formatIssuePad(issue.number);
         </div>
       </div>
 
-      <div class="relative flex min-w-0 flex-1 flex-col justify-between border-t border-burgundy/12 p-8 md:border-l md:border-t-0 md:p-12 lg:p-14">
+      <div class="relative flex min-w-0 flex-1 flex-col justify-between border-t border-primary/12 p-8 md:border-l md:border-t-0 md:p-12 lg:p-14">
         <span class="pointer-events-none absolute right-8 top-8 font-serif text-6xl italic leading-none text-gold/12 md:text-8xl">
           {issuePad}
         </span>
@@ -103,7 +103,7 @@ const issuePad = formatIssuePad(issue.number);
           )}
         </div>
         <div class="mt-8">
-          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy">
+          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition group-hover:decoration-primary">
             Sayıyı oku
             <span aria-hidden="true">→</span>
           </span>
@@ -114,7 +114,7 @@ const issuePad = formatIssuePad(issue.number);
     <div class="mt-6 flex justify-end">
       <a
         href="/sayi/"
-        class="text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+        class="text-sm font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition hover:decoration-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
       >
         Tüm sayılar →
       </a>

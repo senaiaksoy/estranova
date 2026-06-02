@@ -2,7 +2,7 @@
 Estranova editöryal makale taslağı → Word çıktısı.
 
 Yazara redline/yorum amacıyla göndermek için tasarlandı.
-Brand renkleri (bordo/gold/mustard) ve Georgia (Newsreader Word'de yok)
+Brand renkleri (bordo/gold/mustard) ve DOCX fallback fontları
 ile minimal, okunabilir bir taslak üretir.
 
 Kullanım:

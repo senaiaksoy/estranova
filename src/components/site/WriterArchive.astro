@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * /yazarlar/[slug] sayfasında yazar profili + dergi arşivi.
  *
@@ -90,21 +90,21 @@ const displayWithTitle =
   writer.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : writer.displayName;
 ---
 
-<section class="relative overflow-hidden border-t border-burgundy/10 bg-white px-6 py-14 md:py-20">
-  <div class="pointer-events-none absolute -left-16 top-16 h-48 w-48 rounded-full bg-burgundy/7 blur-3xl"></div>
-  <div class="pointer-events-none absolute bottom-6 right-[8%] hidden font-serif text-[9rem] italic leading-none text-burgundy/[0.035] md:block" aria-hidden="true">
+<section class="relative overflow-hidden border-t border-primary/10 bg-white px-6 py-14 md:py-20">
+  <div class="pointer-events-none absolute -left-16 top-16 h-48 w-48 rounded-full bg-primary/7 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-6 right-[8%] hidden font-serif text-[9rem] italic leading-none text-primary/[0.035] md:block" aria-hidden="true">
     imza
   </div>
   <div class="relative mx-auto max-w-5xl">
     <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
-      <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+      <a href="/" class="text-ink/65 hover:text-primary">Anasayfa</a>
       <span class="mx-2 text-gold">·</span>
-      <a href="/yayin-kurulu/" class="text-ink/65 hover:text-burgundy">Yayın Kurulu</a>
+      <a href="/yayin-kurulu/" class="text-ink/65 hover:text-primary">Yayın Kurulu</a>
       <span class="mx-2 text-gold">·</span>
-      <span class="text-burgundy">{writer.displayName}</span>
+      <span class="text-primary">{writer.displayName}</span>
     </nav>
 
-    <div class="overflow-hidden rounded-[42px] border border-burgundy/12 bg-white p-7 shadow-[0_34px_100px_-70px_rgba(44,22,28,0.34)] ring-1 ring-black/[0.04] md:p-9">
+    <div class="overflow-hidden rounded-[42px] border border-primary/12 bg-white p-7 shadow-[0_34px_100px_-70px_rgba(44,22,28,0.34)] ring-1 ring-black/[0.04] md:p-9">
     <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
       {writer.portrait ? (
         <img
@@ -117,7 +117,7 @@ const displayWithTitle =
           class="h-40 w-40 rounded-[34px] object-cover shadow-[0_22px_62px_-38px_rgba(44,22,28,0.46)] ring-2 ring-gold/30 md:h-48 md:w-48"
         />
       ) : (
-        <div class="flex h-40 w-40 items-center justify-center rounded-[34px] bg-cream-soft/20 font-serif text-5xl text-burgundy shadow-[0_22px_62px_-42px_rgba(44,22,28,0.38)] ring-2 ring-gold/30 md:h-48 md:w-48">
+        <div class="flex h-40 w-40 items-center justify-center rounded-[34px] bg-cream-soft/20 font-serif text-5xl text-primary shadow-[0_22px_62px_-42px_rgba(44,22,28,0.38)] ring-2 ring-gold/30 md:h-48 md:w-48">
           {writer.displayName
             .split(/\s+/)
             .filter((part) => part.length > 0)
@@ -126,11 +126,11 @@ const displayWithTitle =
         </div>
       )}
       <div class="min-w-0 flex-1">
-        <p class="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-burgundy">
+        <p class="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-primary">
           <span class="h-px w-9 bg-gold/75"></span>
           <span>{writer.role}</span>
         </p>
-        <h1 class="mb-4 font-serif text-5xl leading-[0.95] tracking-[-0.04em] text-burgundy md:text-7xl">
+        <h1 class="mb-4 font-serif text-5xl leading-[0.95] tracking-[-0.04em] text-primary md:text-7xl">
           {displayWithTitle}
         </h1>
         <p class="mb-5 max-w-2xl border-l-2 border-gold/60 pl-5 font-serif text-xl italic leading-relaxed text-ink/70 md:text-2xl">
@@ -143,11 +143,11 @@ const displayWithTitle =
 
     {writer.focusAreas && writer.focusAreas.length > 0 && (
       <div class="mt-10 flex flex-wrap items-center gap-3">
-        <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+        <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
           İmza alanları
         </p>
         {writer.focusAreas.map((area) => (
-          <span class="rounded-full border border-burgundy/15 bg-white px-3 py-1 text-xs uppercase tracking-[0.18em] text-ink/70">
+          <span class="rounded-full border border-primary/15 bg-white px-3 py-1 text-xs uppercase tracking-[0.18em] text-ink/70">
             {area}
           </span>
         ))}
@@ -157,10 +157,10 @@ const displayWithTitle =
 </section>
 
 {writerSiteArticles.length > 0 && (
-  <section class="border-t border-burgundy/10 bg-white px-6 py-12 md:py-16">
+  <section class="border-t border-primary/10 bg-white px-6 py-12 md:py-16">
     <div class="mx-auto max-w-4xl">
       <header class="mb-8">
-        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-primary">
           Estranova'da
         </p>
         <h2 class="font-serif text-3xl leading-tight text-ink md:text-4xl">
@@ -177,16 +177,16 @@ const displayWithTitle =
           <li>
             <a
               href={a.path}
-              class="group flex items-start gap-5 rounded-[30px] border border-burgundy/12 bg-white p-6 shadow-[0_20px_64px_-54px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_28px_82px_-60px_rgba(44,22,28,0.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+              class="group flex items-start gap-5 rounded-[30px] border border-primary/12 bg-white p-6 shadow-[0_20px_64px_-54px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_28px_82px_-60px_rgba(44,22,28,0.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
             >
               <span class="shrink-0 font-serif text-3xl italic tabular-nums text-gold md:text-4xl">
                 {String(idx + 1).padStart(2, '0')}
               </span>
               <div class="min-w-0 flex-1">
-                <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+                <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
                   {a.publishedDate} · {a.section}
                 </p>
-                <h3 class="mb-2 font-serif text-xl leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35 md:text-2xl">
+                <h3 class="mb-2 font-serif text-xl leading-snug text-ink group-hover:underline group-hover:decoration-primary/35 md:text-2xl">
                   {a.title}
                 </h3>
                 <p class="text-sm leading-relaxed text-ink/70">{a.description}</p>
@@ -200,10 +200,10 @@ const displayWithTitle =
 )}
 
 {issuesWithWriter.length > 0 && (
-  <section class="border-t border-burgundy/10 bg-white px-6 py-12 md:py-16">
+  <section class="border-t border-primary/10 bg-white px-6 py-12 md:py-16">
     <div class="mx-auto max-w-5xl">
       <header class="mb-10 max-w-2xl">
-        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-primary">
           {magazineConfig.name} Sayılarında
         </p>
         <h2 class="font-serif text-3xl leading-tight text-ink md:text-4xl">
@@ -223,7 +223,7 @@ const displayWithTitle =
             <li>
               <a
                 href={`/sayi/${issue.slug}/`}
-                class="group flex h-full flex-col overflow-hidden rounded-[32px] border border-burgundy/12 bg-white shadow-[0_22px_72px_-58px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_30px_90px_-62px_rgba(44,22,28,0.38)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                class="group flex h-full flex-col overflow-hidden rounded-[32px] border border-primary/12 bg-white shadow-[0_22px_72px_-58px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_30px_90px_-62px_rgba(44,22,28,0.38)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
               >
                 <div class="relative aspect-[3/4] w-full overflow-hidden">
                   <img
@@ -254,13 +254,13 @@ const displayWithTitle =
                   <ul class="flex flex-wrap gap-1.5">
                     {roles.map((role) => (
                       <li>
-                        <span class="inline-flex items-center rounded-full border border-burgundy/15 bg-white px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-burgundy/80">
+                        <span class="inline-flex items-center rounded-full border border-primary/15 bg-white px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary/80">
                           {role}
                         </span>
                       </li>
                     ))}
                   </ul>
-                  <span class="mt-4 text-xs font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy">
+                  <span class="mt-4 text-xs font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition group-hover:decoration-primary">
                     Sayıyı aç →
                   </span>
                 </div>
@@ -274,10 +274,10 @@ const displayWithTitle =
 )}
 
 {curatedDossiers.length > 0 && (
-  <section class="border-t border-burgundy/10 bg-white px-6 py-12 md:py-16">
+  <section class="border-t border-primary/10 bg-white px-6 py-12 md:py-16">
     <div class="mx-auto max-w-4xl">
       <header class="mb-8">
-        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-primary">
           Küratörlüğünü Üstlendiği Dosyalar
         </p>
         <h2 class="font-serif text-3xl leading-tight text-ink md:text-4xl">
@@ -289,13 +289,13 @@ const displayWithTitle =
           <li>
             <a
               href={`/dosya/${d.slug}/`}
-              class="group flex items-start gap-5 rounded-[30px] border border-burgundy/12 bg-white p-6 shadow-[0_20px_64px_-54px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_28px_82px_-60px_rgba(44,22,28,0.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+              class="group flex items-start gap-5 rounded-[30px] border border-primary/12 bg-white p-6 shadow-[0_20px_64px_-54px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_28px_82px_-60px_rgba(44,22,28,0.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
             >
               <div class="min-w-0 flex-1">
                 <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">
                   {d.kicker}
                 </p>
-                <h3 class="mb-2 font-serif text-2xl leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35">
+                <h3 class="mb-2 font-serif text-2xl leading-snug text-ink group-hover:underline group-hover:decoration-primary/35">
                   {d.title}
                 </h3>
                 <p class="text-sm leading-relaxed text-ink/70">{d.lede}</p>
@@ -309,10 +309,10 @@ const displayWithTitle =
 )}
 
 {writerArticles.length > 0 && (
-  <section class="border-t border-burgundy/10 bg-white px-6 py-12 md:py-16">
+  <section class="border-t border-primary/10 bg-white px-6 py-12 md:py-16">
     <div class="mx-auto max-w-4xl">
       <header class="mb-8">
-        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+        <p class="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-primary">
           Eşik Sayılarındaki Yazıları
         </p>
         <h2 class="font-serif text-3xl leading-tight text-ink md:text-4xl">
@@ -324,16 +324,16 @@ const displayWithTitle =
           <li>
             <a
               href={a.href}
-              class="group flex items-start gap-5 rounded-[30px] border border-burgundy/12 bg-white p-6 shadow-[0_20px_64px_-54px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_28px_82px_-60px_rgba(44,22,28,0.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+              class="group flex items-start gap-5 rounded-[30px] border border-primary/12 bg-white p-6 shadow-[0_20px_64px_-54px_rgba(44,22,28,0.28)] ring-1 ring-black/[0.04] transition hover:-translate-y-0.5 hover:border-gold/35 hover:bg-cream-soft/16 hover:shadow-[0_28px_82px_-60px_rgba(44,22,28,0.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
             >
               <span class="shrink-0 font-serif text-3xl italic tabular-nums text-gold md:text-4xl">
                 {String(idx + 1).padStart(2, '0')}
               </span>
               <div class="min-w-0 flex-1">
-                <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+                <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
                   {a.monthYear} · {a.dossierTitle}
                 </p>
-                <h3 class="mb-2 font-serif text-xl leading-snug text-ink group-hover:underline group-hover:decoration-burgundy/35 md:text-2xl">
+                <h3 class="mb-2 font-serif text-xl leading-snug text-ink group-hover:underline group-hover:decoration-primary/35 md:text-2xl">
                   {a.title}
                 </h3>
                 <p class="text-sm leading-relaxed text-ink/70">{a.excerpt}</p>
@@ -352,14 +352,14 @@ const displayWithTitle =
 )}
 
 {writerSiteArticles.length === 0 && writerArticles.length === 0 && curatedDossiers.length === 0 && (
-  <section class="border-t border-burgundy/10 bg-white px-6 py-12">
+  <section class="border-t border-primary/10 bg-white px-6 py-12">
     <div class="mx-auto max-w-3xl text-center">
       <p class="font-serif text-lg italic leading-relaxed text-ink/70">
         {writer.displayName}, Eşik dergisinin önümüzdeki sayılarında okurla buluşuyor.
       </p>
       <a
         href="/library/"
-        class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition hover:decoration-burgundy"
+        class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition hover:decoration-primary"
       >
         Kütüphanede tüm yazıları gör
         <span aria-hidden="true">→</span>

@@ -51,8 +51,8 @@ registerFontFamily('Calibri', normal='Calibri', bold='Calibri-Bold',
                    italic='Calibri-Italic')
 
 # --- Palette ---
-BURGUNDY = HexColor('#6B2D3E')
-BURGUNDY_DEEP = HexColor('#4f171c')
+PRIMARY_PINK = HexColor('#D81B60')
+SECONDARY_PINK = HexColor('#D81B60')
 GOLD = HexColor('#C9A96E')
 GOLD_DEEP = HexColor('#a8884c')
 INK = HexColor('#2D2D2D')
@@ -71,13 +71,13 @@ def st(name, **kw):
     return ParagraphStyle(**base)
 
 TAG = st('Tag', fontName='Calibri-Bold', fontSize=9, textColor=GOLD_DEEP, spaceAfter=6)
-EYEBROW = st('Eyebrow', fontName='Calibri-Bold', fontSize=9, textColor=BURGUNDY, spaceAfter=4)
-H1 = st('H1', fontName='Constantia-Bold', fontSize=22, leading=27, textColor=BURGUNDY_DEEP, spaceAfter=10)
+EYEBROW = st('Eyebrow', fontName='Calibri-Bold', fontSize=9, textColor=PRIMARY_PINK, spaceAfter=4)
+H1 = st('H1', fontName='Constantia-Bold', fontSize=22, leading=27, textColor=SECONDARY_PINK, spaceAfter=10)
 META = st('Meta', fontSize=10, textColor=INK_70, spaceAfter=4)
 INTRO = st('Intro', fontSize=10, textColor=INK, leading=15, spaceAfter=12,
            leftIndent=10, rightIndent=10)
 SECT_NUM = st('SectNum', fontName='Calibri-Bold', fontSize=8.5, textColor=GOLD_DEEP, spaceAfter=2)
-H2 = st('H2', fontName='Constantia-Bold', fontSize=15, leading=20, textColor=BURGUNDY, spaceBefore=14, spaceAfter=4)
+H2 = st('H2', fontName='Constantia-Bold', fontSize=15, leading=20, textColor=PRIMARY_PINK, spaceBefore=14, spaceAfter=4)
 HINT = st('Hint', fontName='Calibri-Italic', fontSize=9.5, textColor=INK_70, spaceAfter=10)
 LABEL = st('Label', fontName='Calibri-Bold', fontSize=10.5, textColor=INK, spaceAfter=6)
 EXAMPLE = st('Example', fontSize=9.5, leading=14, textColor=INK_70, leftIndent=10,
@@ -85,7 +85,7 @@ EXAMPLE = st('Example', fontSize=9.5, leading=14, textColor=INK_70, leftIndent=1
 SCALE = st('Scale', fontSize=8.5, textColor=INK_55, spaceAfter=4)
 FOOTER_NOTE = st('FooterNote', fontSize=9, textColor=INK_70, leading=14, spaceBefore=14)
 DECISION = st('Decision', fontName='Constantia-Bold', fontSize=14, alignment=TA_CENTER, textColor=WHITE, leading=20)
-DECISION_ALT = st('DecisionAlt', fontName='Constantia-Bold', fontSize=14, alignment=TA_CENTER, textColor=BURGUNDY, leading=20)
+DECISION_ALT = st('DecisionAlt', fontName='Constantia-Bold', fontSize=14, alignment=TA_CENTER, textColor=PRIMARY_PINK, leading=20)
 
 # --- FooterCanvas ---
 class FooterCanvas(canvas.Canvas):
@@ -113,7 +113,7 @@ class FooterCanvas(canvas.Canvas):
         self.setFillColor(INK_55)
         self.drawString(2*cm, 1.1*cm, 'Estranova · Yazar Onay Formu — görsel PDF arşivi')
         self.setFont('Calibri', 8)
-        self.setFillColor(BURGUNDY)
+        self.setFillColor(PRIMARY_PINK)
         self.drawRightString(A4[0]-2*cm, 1.1*cm, f'Sayfa {self._pageNumber} / {page_count}')
 
 # --- Box drawings (radio buttons as empty boxes) ---
@@ -320,7 +320,7 @@ def build_form_story(html_text):
     # Decision row (statik buton görseli)
     btn_approve = Paragraph('<font face="Constantia-Bold" size="14" color="#FFFFFF">'
                             '<br/>✓ ONAYLIYORUM<br/></font>', DECISION)
-    btn_revise = Paragraph('<font face="Constantia-Bold" size="14" color="#6B2D3E">'
+    btn_revise = Paragraph('<font face="Constantia-Bold" size="14" color="#D81B60">'
                            '<br/>✏ DEĞİŞİKLİK İSTİYORUM<br/></font>', DECISION_ALT)
     decision_table = Table([[btn_approve, btn_revise]],
                            colWidths=[(A4[0]-5*cm)/2 - 7]*2,
@@ -328,8 +328,8 @@ def build_form_story(html_text):
     decision_table.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
         ('ALIGN', (0,0), (-1,-1), 'CENTER'),
-        ('BACKGROUND', (0,0), (0,0), BURGUNDY),
-        ('BOX', (1,0), (1,0), 1.5, BURGUNDY),
+        ('BACKGROUND', (0,0), (0,0), PRIMARY_PINK),
+        ('BOX', (1,0), (1,0), 1.5, PRIMARY_PINK),
         ('BACKGROUND', (1,0), (1,0), WHITE),
         ('LEFTPADDING', (0,0), (-1,-1), 0),
         ('RIGHTPADDING', (0,0), (-1,-1), 0),

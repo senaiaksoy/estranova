@@ -1,34 +1,34 @@
----
+﻿---
 import { searchIndex } from '../../data/search-index';
 ---
 
 <div id="search-overlay" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Site içinde ara">
-  <div id="search-backdrop" class="absolute inset-0 bg-burgundy-deep/64 backdrop-blur-md"></div>
+  <div id="search-backdrop" class="absolute inset-0 bg-secondary/64 backdrop-blur-md"></div>
 
   <div class="absolute inset-0 flex items-start justify-center px-4 pt-[10vh] pointer-events-none">
     <div
       id="search-panel"
-      class="relative flex max-h-[76vh] w-full max-w-3xl flex-col overflow-hidden rounded-[38px] border border-burgundy/14 bg-white shadow-[0_44px_140px_-74px_rgba(20,10,12,0.70)] ring-1 ring-black/[0.06] pointer-events-auto"
+      class="relative flex max-h-[76vh] w-full max-w-3xl flex-col overflow-hidden rounded-[38px] border border-primary/14 bg-white shadow-[0_44px_140px_-74px_rgba(20,10,12,0.70)] ring-1 ring-black/[0.06] pointer-events-auto"
     >
       <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-gold/16 blur-3xl"></div>
-      <div class="pointer-events-none absolute bottom-3 right-6 hidden font-serif text-[7rem] italic leading-none tracking-[-0.08em] text-burgundy/[0.045] md:block">
+      <div class="pointer-events-none absolute bottom-3 right-6 hidden font-serif text-[7rem] italic leading-none tracking-[-0.08em] text-primary/[0.045] md:block">
         ara
       </div>
 
-      <div class="relative border-b border-burgundy/10 px-6 pb-5 pt-6 md:px-8 md:pt-7">
+      <div class="relative border-b border-primary/10 px-6 pb-5 pt-6 md:px-8 md:pt-7">
         <div class="mb-5 flex items-center justify-between gap-4">
           <div>
             <p class="text-[0.64rem] font-bold uppercase tracking-[0.26em] text-gold-bronze">Arama masası</p>
-            <p class="mt-1 font-serif text-2xl italic leading-tight text-burgundy">Konuyu sakince bulun.</p>
+            <p class="mt-1 font-serif text-2xl italic leading-tight text-primary">Konuyu sakince bulun.</p>
           </div>
-          <kbd class="hidden rounded-full border border-burgundy/12 bg-cream-soft/30 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/38 md:inline-flex">
+          <kbd class="hidden rounded-full border border-primary/12 bg-cream-soft/30 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/38 md:inline-flex">
             ESC
           </kbd>
         </div>
 
-        <label class="flex items-center gap-4 rounded-full border border-burgundy/12 bg-white px-5 py-4 shadow-[0_18px_70px_-62px_rgba(44,22,28,0.42)] ring-1 ring-black/[0.04]">
+        <label class="flex items-center gap-4 rounded-full border border-primary/12 bg-white px-5 py-4 shadow-[0_18px_70px_-62px_rgba(44,22,28,0.42)] ring-1 ring-black/[0.04]">
           <span class="sr-only">Arama terimi</span>
-          <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-burgundy/52" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-primary/52" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="11" cy="11" r="7"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
@@ -46,22 +46,22 @@ import { searchIndex } from '../../data/search-index';
         <div id="search-default" class="space-y-5"></div>
         <div id="search-filtered" class="hidden space-y-2"></div>
         <div id="search-empty" class="hidden py-14 text-center">
-          <p class="font-serif text-3xl italic text-burgundy">Sonuç bulunamadı.</p>
+          <p class="font-serif text-3xl italic text-primary">Sonuç bulunamadı.</p>
           <p class="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-ink/52">
             Daha kısa bir kelime deneyin ya da belirti, dönem veya yazar adıyla yeniden arayın.
           </p>
         </div>
       </div>
 
-      <div class="relative flex flex-col gap-3 border-t border-burgundy/8 bg-cream-soft/18 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-8">
+      <div class="relative flex flex-col gap-3 border-t border-primary/8 bg-cream-soft/18 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-8">
         <div class="flex flex-wrap items-center gap-4 text-[11px] font-medium text-ink/38">
           <span class="flex items-center gap-1">
-            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-burgundy/12 bg-white/58 text-[10px]">&uarr;</kbd>
-            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-burgundy/12 bg-white/58 text-[10px]">&darr;</kbd>
+            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-primary/12 bg-white/58 text-[10px]">&uarr;</kbd>
+            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-primary/12 bg-white/58 text-[10px]">&darr;</kbd>
             gezin
           </span>
           <span class="flex items-center gap-1">
-            <kbd class="inline-flex h-5 min-w-5 items-center justify-center rounded border border-burgundy/12 bg-white/58 px-1 text-[10px]">&crarr;</kbd>
+            <kbd class="inline-flex h-5 min-w-5 items-center justify-center rounded border border-primary/12 bg-white/58 px-1 text-[10px]">&crarr;</kbd>
             aç
           </span>
         </div>
@@ -83,12 +83,12 @@ import { searchIndex } from '../../data/search-index';
   let visibleItems = [];
 
   const categoryMeta = {
-    Sayfa: { color: 'bg-burgundy/10 text-burgundy', label: 'Sayfa' },
+    Sayfa: { color: 'bg-primary/10 text-primary', label: 'Sayfa' },
     Kategori: { color: 'bg-gold/14 text-gold-bronze', label: 'Kategori' },
-    Semptom: { color: 'bg-burgundy/8 text-burgundy', label: 'Belirti' },
+    Semptom: { color: 'bg-primary/8 text-primary', label: 'Belirti' },
     Makale: { color: 'bg-ink/5 text-ink/64', label: 'Makale' },
     Sayı: { color: 'bg-gold/16 text-gold-bronze', label: 'Sayı' },
-    Yazar: { color: 'bg-burgundy/12 text-burgundy', label: 'Yazar' },
+    Yazar: { color: 'bg-primary/12 text-primary', label: 'Yazar' },
   };
 
   function metaFor(item) {
@@ -101,11 +101,11 @@ import { searchIndex } from '../../data/search-index';
     a.href = item.href;
     a.dataset.idx = idx;
     a.className =
-      'search-result-item group flex items-start gap-4 rounded-[22px] border border-transparent px-4 py-3.5 transition hover:border-burgundy/10 hover:bg-white/74 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35';
+      'search-result-item group flex items-start gap-4 rounded-[22px] border border-transparent px-4 py-3.5 transition hover:border-primary/10 hover:bg-white/74 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35';
     a.innerHTML = `
       <span class="mt-0.5 hidden font-serif text-2xl leading-none text-gold sm:block">${String(idx + 1).padStart(2, '0')}</span>
       <span class="min-w-0 flex-1">
-        <span class="block truncate font-serif text-xl leading-tight text-ink group-hover:text-burgundy">${item.title}</span>
+        <span class="block truncate font-serif text-xl leading-tight text-ink group-hover:text-primary">${item.title}</span>
         <span class="mt-1.5 block line-clamp-1 text-sm leading-relaxed text-ink/52">${item.description}</span>
       </span>
       <span class="mt-0.5 shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] ${meta.color}">${meta.label}</span>
@@ -124,7 +124,7 @@ import { searchIndex } from '../../data/search-index';
     let globalIdx = 0;
     Object.entries(groups).forEach(([cat, catItems]) => {
       const section = document.createElement('section');
-      section.innerHTML = `<p class="px-4 pb-2 text-[11px] font-bold uppercase tracking-[0.24em] text-burgundy/42">${metaFor({ category: cat }).label}</p>`;
+      section.innerHTML = `<p class="px-4 pb-2 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/42">${metaFor({ category: cat }).label}</p>`;
       const list = document.createElement('div');
       list.className = 'space-y-1';
       catItems.forEach((item) => {
@@ -178,10 +178,10 @@ import { searchIndex } from '../../data/search-index';
 
   function setActive(idx) {
     const allItems = document.querySelectorAll('.search-result-item');
-    allItems.forEach((el) => el.classList.remove('border-burgundy/18', 'bg-white/86'));
+    allItems.forEach((el) => el.classList.remove('border-primary/18', 'bg-white/86'));
     activeIndex = idx;
     if (idx >= 0 && idx < allItems.length) {
-      allItems[idx].classList.add('border-burgundy/18', 'bg-white/86');
+      allItems[idx].classList.add('border-primary/18', 'bg-white/86');
       allItems[idx].scrollIntoView({ block: 'nearest' });
     }
   }

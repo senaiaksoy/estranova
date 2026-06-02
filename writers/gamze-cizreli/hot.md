@@ -105,7 +105,7 @@ Eksen → tür eşlemesi `warm.md` §4b'de.
 CLAUDE.md ile uyum (zorunlu):
 
 - **6-8 H2** (cümleli — tek-kelime "Beslenme" YASAK)
-- Her H2'den sonra **ilk paragraf = italic lede** (1-2 cümle, açılış kanı/sorusu/durumu) — `prose-estranova` CSS otomatik italic burgundy serif render eder
+- Her H2'den sonra **ilk paragraf = italic lede** (1-2 cümle, açılış kanı/sorusu/durumu) — `prose-estranova` CSS otomatik italic primary serif render eder
 - **Bullet list / ağır veri / uzun tanım** ile başlayan H2 YASAK (CSS lede zorunluluğu)
 - Wrapper: `ArticleProsePanel` + `class="prose prose-lg prose-estranova max-w-none"`
 - **Evidence bileşeni** kullanılırsa Gamze sesinde **yumuşat**: bilim cümlesini yaşıta köprüle. *"Araştırmalar bunu söylüyor — ama benim mutfağım bana başka şey de hatırlatıyor."* `<Evidence level={N} />` parantez içi italik etiket render eder.

@@ -53,8 +53,8 @@ registerFontFamily('Calibri', normal='Calibri', bold='Calibri-Bold',
                    italic='Calibri-Italic', boldItalic='Calibri-BoldItalic')
 
 # --- Palette ---
-BURGUNDY = HexColor('#6B2D3E')
-BURGUNDY_DEEP = HexColor('#4f171c')
+PRIMARY_PINK = HexColor('#D81B60')
+SECONDARY_PINK = HexColor('#D81B60')
 GOLD = HexColor('#C9A96E')
 GOLD_DEEP = HexColor('#a8884c')
 INK = HexColor('#2D2D2D')
@@ -74,15 +74,15 @@ def st(name, **kw):
 EYEBROW = st('Eyebrow', fontName='Calibri-Bold', fontSize=9, leading=12,
              textColor=GOLD_DEEP, spaceAfter=6)
 H1_COVER = st('H1Cover', fontName='Constantia-Bold', fontSize=28, leading=34,
-              textColor=BURGUNDY_DEEP, spaceAfter=12)
+              textColor=SECONDARY_PINK, spaceAfter=12)
 BYLINE = st('Byline', fontName='Constantia-Italic', fontSize=11.5, leading=18,
-            textColor=BURGUNDY, spaceAfter=14)
+            textColor=PRIMARY_PINK, spaceAfter=14)
 H2 = st('H2', fontName='Constantia-Bold', fontSize=17, leading=23,
-        textColor=BURGUNDY, spaceBefore=22, spaceAfter=8)
+        textColor=PRIMARY_PINK, spaceBefore=22, spaceAfter=8)
 H3 = st('H3', fontName='Constantia-Bold', fontSize=13, leading=19,
-        textColor=BURGUNDY, spaceBefore=14, spaceAfter=6)
+        textColor=PRIMARY_PINK, spaceBefore=14, spaceAfter=6)
 LEDE = st('Lede', fontName='Constantia-Italic', fontSize=12, leading=18,
-          textColor=BURGUNDY, spaceAfter=10)
+          textColor=PRIMARY_PINK, spaceAfter=10)
 BODY = st('Body', fontName='Calibri', fontSize=10.5, leading=16,
           textColor=INK, spaceAfter=8)
 LIST_ITEM = st('ListItem', fontName='Calibri', fontSize=10.5, leading=15,
@@ -90,7 +90,7 @@ LIST_ITEM = st('ListItem', fontName='Calibri', fontSize=10.5, leading=15,
 
 # Kısa Özet card
 OZET_TITLE = st('OzetTitle', fontName='Constantia-Bold', fontSize=18,
-                textColor=BURGUNDY, spaceAfter=8)
+                textColor=PRIMARY_PINK, spaceAfter=8)
 OZET_BODY = st('OzetBody', fontName='Calibri', fontSize=10.5, leading=16,
                textColor=INK, spaceAfter=4)
 
@@ -98,7 +98,7 @@ OZET_BODY = st('OzetBody', fontName='Calibri', fontSize=10.5, leading=16,
 REDFLAG_EYEBROW = st('RFEyebrow', fontName='Calibri-Bold', fontSize=8.5,
                      textColor=GOLD_DEEP, spaceAfter=4)
 REDFLAG_TITLE = st('RFTitle', fontName='Constantia-Bold', fontSize=14,
-                   leading=18, textColor=BURGUNDY, spaceAfter=8)
+                   leading=18, textColor=PRIMARY_PINK, spaceAfter=8)
 REDFLAG_INTRO = st('RFIntro', fontSize=10, leading=14, textColor=INK_70, spaceAfter=8)
 REDFLAG_ITEM = st('RFItem', fontSize=10, leading=14, textColor=INK,
                   leftIndent=14, spaceAfter=4)
@@ -107,14 +107,14 @@ REDFLAG_FOOTNOTE = st('RFFoot', fontName='Constantia-Italic', fontSize=9.5,
 
 # BEN
 BEN_EYEBROW = st('BENEyebrow', fontName='Calibri-Bold', fontSize=9,
-                 textColor=BURGUNDY, spaceAfter=4)
+                 textColor=PRIMARY_PINK, spaceAfter=4)
 BEN_LEVEL = st('BENLevel', fontName='Calibri-Bold', fontSize=12,
                textColor=INK, spaceAfter=10)
 BEN_INTRO = st('BENIntro', fontName='Constantia-Italic', fontSize=11,
                leading=17, textColor=INK, spaceAfter=10)
 BEN_PARA = st('BENPara', fontSize=10, leading=15, textColor=INK, spaceAfter=8)
 BEN_SIG = st('BENSig', fontName='Constantia-Italic', fontSize=10,
-             textColor=BURGUNDY, spaceBefore=10, alignment=TA_LEFT)
+             textColor=PRIMARY_PINK, spaceBefore=10, alignment=TA_LEFT)
 
 # Disclaimer
 DISC = st('Disc', fontName='Calibri-Italic', fontSize=9.5, leading=14,
@@ -146,7 +146,7 @@ class FooterCanvas(canvas.Canvas):
         self.setFillColor(INK_55)
         self.drawString(2*cm, 1.1*cm, 'Estranova · Yazar Taslağı')
         self.setFont('Calibri', 8)
-        self.setFillColor(BURGUNDY)
+        self.setFillColor(PRIMARY_PINK)
         self.drawRightString(A4[0]-2*cm, 1.1*cm, f'Sayfa {self._pageNumber} / {page_count}')
 
 # --- Helpers ---
@@ -183,7 +183,7 @@ def render_inline(elem):
         elif child.name == 'a':
             href = child.get('href', '')
             inner = render_inline(child)
-            out += f'<font color="#6B2D3E">{inner}</font>'
+            out += f'<font color="#D81B60">{inner}</font>'
         elif child.name == 'code':
             out += f'<font face="Courier" size="10">{render_inline(child)}</font>'
         elif child.name == 'br':
@@ -388,7 +388,7 @@ def parse_ben(soup):
         ('TOPPADDING', (0,0), (-1,-1), 16),
         ('BOTTOMPADDING', (0,0), (-1,-1), 16),
         ('LINEBEFORE', (0,0), (0,-1), 5, GOLD),
-        ('BOX', (0,0), (-1,-1), 0.5, BURGUNDY),
+        ('BOX', (0,0), (-1,-1), 0.5, PRIMARY_PINK),
     ]))
     return [Spacer(1, 0.6*cm), card]
 
@@ -408,8 +408,8 @@ def parse_disclaimer(soup):
         ('RIGHTPADDING', (0,0), (-1,-1), 16),
         ('TOPPADDING', (0,0), (-1,-1), 12),
         ('BOTTOMPADDING', (0,0), (-1,-1), 12),
-        ('BOX', (0,0), (-1,-1), 0.5, BURGUNDY),
-        ('DASHES', (0,0), (-1,-1), [3, 2], 0.5, BURGUNDY),
+        ('BOX', (0,0), (-1,-1), 0.5, PRIMARY_PINK),
+        ('DASHES', (0,0), (-1,-1), [3, 2], 0.5, PRIMARY_PINK),
     ]))
     return [Spacer(1, 0.3*cm), card]
 

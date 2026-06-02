@@ -488,6 +488,7 @@ export const writers: Writer[] = [
     displayName: 'Anıl Yalmaz',
     role: 'Hareket & Egzersiz Bilimsel Yazarı',
     ageBand: 'Belirtilmedi',
+    portrait: '/images/writers/anil-yalmaz.webp',
     publicBio:
       'Spor Bilimleri mezunu bir hareket uzmanı; Pilates ve medikal fitness eğitimleri aldı. Estranova\'da hareket, güçlenme ve sürdürülebilir egzersiz rutinlerini 40+ kadın bedeninin değişen ihtiyaçlarıyla birlikte ele alıyor. Hızlı dönüşüm vaadi yerine küçük, düzenli ve güvenli adımları önemseyen bir yaklaşımı var.',
     signaturePhrase:

@@ -234,7 +234,7 @@ enjeksiyon bölgesi reaksiyonları, uykuda bozulma ve büyüme hormonu ekseniyle
 teorik riskler. Bunların hepsi her molekül için aynı değil; ama çoğu reklam metninde
 ya silikleşiyor ya da hiç konuşulmuyor.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

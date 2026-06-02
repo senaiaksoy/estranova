@@ -228,7 +228,7 @@ profili henüz tam haritalanmış değil
 .
 Erken çalışmalar olumlu, ancak uzun süreli izlem verileri birikiyor.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

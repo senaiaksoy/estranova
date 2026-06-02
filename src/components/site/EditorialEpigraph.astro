@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * Bölümler arası tam genişlik editöryel epigraf.
  * Italic editorial emphasis; iki ince gold hairline arasında, krem ya da bordo zeminde.
@@ -17,8 +17,8 @@ const { quote, attribution, variant = 'cream' } = Astro.props;
   class:list={[
     'relative w-full px-6 py-16 md:py-24',
     variant === 'bordo'
-      ? 'bg-gradient-to-br from-burgundy-deep to-[#2a0c0f] text-surface'
-      : 'bg-cream-soft text-burgundy-deep',
+      ? 'bg-gradient-to-br from-secondary to-[#2a0c0f] text-surface'
+      : 'bg-cream-soft text-secondary',
   ]}
   aria-label="Editöryel epigraf"
 >

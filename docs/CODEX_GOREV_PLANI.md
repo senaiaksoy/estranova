@@ -1,4 +1,4 @@
-# CODEX GÖREV PLANI — Estranova
+﻿# CODEX GÖREV PLANI — Estranova
 
 > Bu dosya Codex'e sırasıyla verilecek tüm görevleri içerir.
 > Her görev bir önceki tamamlandıktan sonra verilmelidir.
@@ -89,9 +89,9 @@ Ana sayfa şu 10 bölümü SIRASYLA içermeli:
 10. FOOTER — SiteFooter bileşenini kullan.
 
 TASARIM KURALLARI:
-- Renkler: #6B2D3E bordo, #FDF8F0 krem, #C9A96E altın, #2D2D2D gri, #F5EDE0 bej
-- Başlıklar: serif font (Playfair Display)
-- Gövde: sans-serif (Inter)
+- Renkler: #D81B60 bordo, #FDF8F0 krem, #C9A96E altın, #2D2D2D gri, #F5EDE0 bej
+- Başlıklar: Manrope (`font-serif`)
+- Gövde: Kulim Park (`font-sans`)
 - Bol beyaz alan, büyük tipografi
 - Masaüstü öncelikli responsive
 - App benzeri tasarım YASAK, dergi hissi olmalı

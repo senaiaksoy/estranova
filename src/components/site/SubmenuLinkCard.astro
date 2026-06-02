@@ -1,4 +1,4 @@
----
+﻿---
 import ArticleMetaSigil from './ArticleMetaSigil.astro';
 
 interface Props {
@@ -34,7 +34,7 @@ const {
 
 <a
   href={href}
-    class="group relative flex h-full flex-col overflow-hidden rounded-[36px] border border-burgundy/12 bg-white shadow-[0_26px_82px_-58px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-1 hover:border-gold/45 hover:bg-cream-soft/20 hover:shadow-[0_36px_106px_-62px_rgba(44,22,28,0.40)] focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+    class="group relative flex h-full flex-col overflow-hidden rounded-[36px] border border-primary/12 bg-white shadow-[0_26px_82px_-58px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-1 hover:border-gold/45 hover:bg-cream-soft/20 hover:shadow-[0_36px_106px_-62px_rgba(44,22,28,0.40)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
 >
   <div class="pointer-events-none absolute inset-x-7 top-0 z-10 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
   <div class="pointer-events-none absolute right-6 top-6 z-20 hidden text-[10px] font-bold uppercase tracking-[0.28em] text-white/72 md:block">
@@ -65,14 +65,14 @@ const {
       <span class="h-px w-8 bg-gold/70"></span>
       <span>Bölüm Dosyası</span>
     </p>
-    <h2 class="mb-3 font-serif text-3xl leading-[0.98] tracking-[-0.025em] text-ink transition group-hover:text-burgundy md:text-4xl">{title}</h2>
+    <h2 class="mb-3 font-serif text-3xl leading-[0.98] tracking-[-0.025em] text-ink transition group-hover:text-primary md:text-4xl">{title}</h2>
     <p class="mb-6 flex-1 leading-relaxed text-ink/72">{excerpt}</p>
     {readingMinutes && (
       <div class="mb-3">
         <ArticleMetaSigil readingMinutes={readingMinutes} evidence={evidence} updated={updated} />
       </div>
     )}
-    <span class="inline-flex items-center gap-2 border-t border-burgundy/10 pt-4 text-sm font-semibold text-burgundy group-hover:underline">
+    <span class="inline-flex items-center gap-2 border-t border-primary/10 pt-4 text-sm font-semibold text-primary group-hover:underline">
       {cta}
       <span class="text-gold transition group-hover:translate-x-1" aria-hidden="true">→</span>
     </span>

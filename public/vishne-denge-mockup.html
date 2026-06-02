@@ -3,34 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estranova · Vişne Paleti (Denge) — Mock-up</title>
+<title>Estranova · Pembe Palet (Denge) — Mock-up</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   /* ─── DENGE PALETİ ────────────────────────────────────────── */
   :root {
-    /* YENİ — vişne ekseni */
-    --vishne:        #8B2238;
-    --vishne-deep:   #6B1828;
-    /* YENİ — olgun pembe accent */
-    --pembe:         #D4859A;
-    --pembe-deep:    #C97084;
+    /* YENİ — tek Pink 600 ekseni */
+    --primary-pink:        #D81B60;
+    --primary-pink-deep:   #D81B60;
+    /* Pink accent tonları da Pink 600'a bağlıdır. */
+    --pembe:         #D81B60;
+    --pembe-deep:    #D81B60;
     /* KORUNAN */
     --gold:          #C9A96E;
     --gold-bronze:   #775A19;
     --cream-soft:    #FDF8F0;
     --cream-warm:    #FAF4E8;
     --ink:           #2D2D2D;
-    /* ESKİ — yalnızca karşılaştırma için */
-    --old-burgundy:      #6B2D3E;
-    --old-burgundy-deep: #4F171C;
+    /* Tek pembe karşılaştırma değeri */
+    --comparison-pink-600:      #D81B60;
   }
 
   body {
-    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Kulim Park', sans-serif;
     background: var(--cream-soft);
     color: var(--ink);
     line-height: 1.6;
@@ -39,11 +38,11 @@
     text-rendering: optimizeLegibility;
   }
 
-  .serif { font-family: 'Newsreader', serif; }
+  .serif { font-family: 'Manrope', sans-serif; }
 
   /* ─── TOPBAR ──────────────────────────────────────────────── */
   .topbar {
-    background: var(--vishne);
+    background: var(--primary-pink);
     color: white;
     padding: 0.85rem 2rem;
     font-size: 0.85rem;
@@ -51,7 +50,7 @@
     letter-spacing: 0.05em;
   }
   .topbar em {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     color: var(--cream-soft);
     font-style: italic;
   }
@@ -63,7 +62,7 @@
     padding: 5rem 2rem;
   }
   .section-eyebrow {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 0.78rem;
     letter-spacing: 0.22em;
     color: var(--gold-bronze);
@@ -75,14 +74,14 @@
     margin: 0.85rem 0 1.75rem;
   }
   .section-h {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 2.25rem;
     color: var(--ink);
     margin-bottom: 2rem;
     line-height: 1.1;
     letter-spacing: -0.015em;
   }
-  .section-h em { color: var(--vishne); font-style: italic; }
+  .section-h em { color: var(--primary-pink); font-style: italic; }
 
   /* ─── PALETTE GRID ────────────────────────────────────────── */
   .palette-grid {
@@ -102,12 +101,12 @@
     font-size: 0.85rem;
   }
   .swatch-name {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     color: var(--ink);
   }
   .swatch-hex {
-    font-family: 'Albert Sans', monospace;
+    font-family: 'Kulim Park', sans-serif;
     color: var(--gold-bronze);
     font-size: 0.72rem;
     letter-spacing: 0.06em;
@@ -123,7 +122,7 @@
     text-transform: uppercase;
     vertical-align: middle;
   }
-  .swatch-tag.new { background: var(--vishne); color: white; }
+  .swatch-tag.new { background: var(--primary-pink); color: white; }
   .swatch-tag.kept { background: var(--cream-warm); color: var(--gold-bronze); }
 
   /* ─── BEFORE / AFTER ──────────────────────────────────────── */
@@ -134,7 +133,7 @@
     margin-top: 3rem;
   }
   .compare-item h4 {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     color: var(--ink);
     margin-bottom: 0.6rem;
@@ -153,7 +152,7 @@
     padding: 6px 8px;
     color: white;
     font-size: 0.7rem;
-    font-family: 'Albert Sans', monospace;
+    font-family: 'Kulim Park', sans-serif;
     letter-spacing: 0.05em;
   }
 
@@ -166,16 +165,16 @@
     border-bottom: 1px solid rgba(201, 169, 110, 0.25);
   }
   .hero-eyebrow {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
-    color: var(--vishne);
+    color: var(--primary-pink);
     letter-spacing: 0.25em;
     text-transform: uppercase;
     font-size: 0.78rem;
     margin-bottom: 1.5rem;
   }
   .hero h1 {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 3.5rem;
     line-height: 1.05;
     color: var(--ink);
@@ -185,7 +184,7 @@
     font-weight: 400;
   }
   .hero h1 em {
-    color: var(--vishne);
+    color: var(--primary-pink);
     font-style: italic;
   }
   .hero-rule {
@@ -194,10 +193,10 @@
     margin: 1.75rem auto;
   }
   .hero-dek {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 1.25rem;
-    color: var(--vishne-deep);
+    color: var(--primary-pink-deep);
     max-width: 600px;
     margin: 0 auto 2.25rem;
     line-height: 1.55;
@@ -206,7 +205,7 @@
   /* ─── BUTTONS ─────────────────────────────────────────────── */
   .btn {
     display: inline-block;
-    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Kulim Park', sans-serif;
     font-weight: 500;
     padding: 0.85rem 2rem;
     border-radius: 3px;
@@ -217,22 +216,22 @@
     border: 1px solid transparent;
   }
   .btn-primary {
-    background: var(--vishne);
+    background: var(--primary-pink);
     color: white;
-    border-color: var(--vishne);
+    border-color: var(--primary-pink);
   }
   .btn-primary:hover {
-    background: var(--vishne-deep);
-    border-color: var(--vishne-deep);
+    background: var(--primary-pink-deep);
+    border-color: var(--primary-pink-deep);
   }
   .btn-secondary {
     background: transparent;
-    color: var(--vishne);
-    border-color: var(--vishne);
+    color: var(--primary-pink);
+    border-color: var(--primary-pink);
     margin-left: 0.75rem;
   }
   .btn-secondary:hover {
-    background: var(--vishne);
+    background: var(--primary-pink);
     color: white;
   }
   .btn-pembe {
@@ -258,7 +257,7 @@
     .article-frame { padding: 2.5rem 1.5rem 3rem; }
   }
   .article-h2 {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 2.25rem;
     line-height: 1.1;
     letter-spacing: -0.015em;
@@ -272,7 +271,7 @@
   .article-h2::before {
     content: counter(chapter, decimal-leading-zero);
     display: block;
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.22em;
     color: var(--gold);
@@ -290,11 +289,11 @@
 
   /* Italic lede — H2 sonrası ilk paragraf */
   .lede {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 1.2rem;
     line-height: 1.55;
-    color: var(--vishne-deep);
+    color: var(--primary-pink-deep);
     max-width: 58ch;
     margin-bottom: 1.5rem;
   }
@@ -307,58 +306,58 @@
   }
 
   .article-frame a {
-    color: var(--vishne);
+    color: var(--primary-pink);
     text-decoration: none;
     border-bottom: 1px solid rgba(139, 34, 56, 0.35);
     transition: border-color 0.18s;
   }
   .article-frame a:hover {
-    border-bottom-color: var(--vishne);
+    border-bottom-color: var(--primary-pink);
   }
 
   /* Drop cap */
   .dropcap::first-letter {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-weight: 500;
     font-size: 5rem;
     line-height: 0.85;
-    color: var(--vishne-deep);
+    color: var(--primary-pink-deep);
     float: left;
     margin: 0.4rem 0.6rem -0.2rem 0;
   }
 
   /* Evidence inline */
   .evidence {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 0.85em;
     color: var(--gold);
     white-space: nowrap;
   }
-  .evidence.strong { color: var(--vishne); }
+  .evidence.strong { color: var(--primary-pink); }
   .evidence.deep   { color: var(--gold-bronze); }
 
   /* Blockquote */
   .article-frame blockquote {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 1.35rem;
     line-height: 1.5;
     border-left: 3px solid var(--gold);
     padding-left: 1.5rem;
-    color: var(--vishne-deep);
+    color: var(--primary-pink-deep);
     margin: 2.25rem 0;
   }
 
-  /* Pull-quote — olgun pembe accent showcase */
+  /* Pull-quote — Pink 600 accent showcase */
   .pull-quote {
     background: linear-gradient(135deg, var(--pembe) 0%, var(--pembe-deep) 100%);
     color: white;
     padding: 2.25rem 2.5rem;
     margin: 2.5rem -1rem;
     border-radius: 4px;
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 1.4rem;
     line-height: 1.45;
@@ -380,7 +379,7 @@
     letter-spacing: 0.22em;
     text-transform: uppercase;
     opacity: 0.88;
-    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Kulim Park', sans-serif;
   }
 
   /* BEN — Bilimsel Editör Notu */
@@ -392,7 +391,7 @@
     border-radius: 0 4px 4px 0;
   }
   .ben-label {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 0.72rem;
     letter-spacing: 0.22em;
@@ -401,9 +400,9 @@
     margin-bottom: 0.85rem;
   }
   .ben-title {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 1.18rem;
-    color: var(--vishne-deep);
+    color: var(--primary-pink-deep);
     margin-bottom: 0.65rem;
     line-height: 1.35;
   }
@@ -413,7 +412,7 @@
     color: var(--gold-bronze);
     margin-top: 1.1rem;
     font-style: italic;
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     letter-spacing: 0.05em;
   }
 
@@ -435,7 +434,7 @@
     box-shadow: 0 4px 18px -4px rgba(107, 24, 40, 0.07);
   }
   .component-label {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     color: var(--gold-bronze);
     font-size: 0.75rem;
@@ -452,31 +451,31 @@
     font-size: 0.7rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Kulim Park', sans-serif;
     font-weight: 500;
     margin: 0 0.4rem 0.5rem 0;
   }
-  .badge-vishne { background: var(--vishne); color: white; }
+  .badge-vishne { background: var(--primary-pink); color: white; }
   .badge-pembe  { background: var(--pembe); color: white; }
   .badge-gold   { background: var(--gold); color: var(--ink); }
   .badge-outline {
     background: transparent;
-    color: var(--vishne);
-    border: 1px solid var(--vishne);
+    color: var(--primary-pink);
+    border: 1px solid var(--primary-pink);
   }
 
-  /* Feature card with vişne top accent */
+  /* Feature card with pink-600 top accent */
   .feature-card {
     background: white;
     padding: 2rem;
     border-radius: 4px;
-    border-top: 3px solid var(--vishne);
+    border-top: 3px solid var(--primary-pink);
     box-shadow: 0 4px 18px -4px rgba(107, 24, 40, 0.07);
   }
   .feature-card.pembe { border-top-color: var(--pembe-deep); }
   .feature-card .card-eyebrow {
-    color: var(--vishne);
-    font-family: 'Newsreader', serif;
+    color: var(--primary-pink);
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 0.72rem;
     letter-spacing: 0.22em;
@@ -485,7 +484,7 @@
   }
   .feature-card.pembe .card-eyebrow { color: var(--pembe-deep); }
   .feature-card h4 {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 1.45rem;
     color: var(--ink);
     margin-bottom: 0.65rem;
@@ -510,7 +509,7 @@
     border-radius: 4px;
   }
   .evidence-sample {
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
   }
 
@@ -518,7 +517,7 @@
   .footer-note {
     text-align: center;
     color: var(--gold-bronze);
-    font-family: 'Newsreader', serif;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     font-size: 0.88rem;
     padding: 3rem 1rem;
@@ -620,7 +619,7 @@
 <body>
 
 <div class="topbar">
-  Estranova · <em>Vişne Paleti — Denge v2</em> · #8B2238 + olgun pembe · Newsreader + Albert Sans (Los Feliz proxy) · Cream-warm açıldı
+  Estranova · <em>Pembe Palet — Denge v2</em> · #D81B60 · Manrope + Kulim Park · Cream-warm açıldı
 </div>
 
 <!-- ────────────  1 · PALETTE  ──────────── -->
@@ -631,31 +630,17 @@
 
   <div class="palette-grid">
     <div class="swatch">
-      <div class="swatch-color" style="background:#8B2238;"></div>
+      <div class="swatch-color" style="background:#D81B60;"></div>
       <div class="swatch-info">
-        <div class="swatch-name">vişne <span class="swatch-tag new">yeni</span></div>
-        <div class="swatch-hex">#8B2238</div>
+        <div class="swatch-name">pink-600 <span class="swatch-tag new">yeni</span></div>
+        <div class="swatch-hex">#D81B60</div>
       </div>
     </div>
     <div class="swatch">
-      <div class="swatch-color" style="background:#6B1828;"></div>
+      <div class="swatch-color" style="background:#D81B60;"></div>
       <div class="swatch-info">
-        <div class="swatch-name">vişne-deep <span class="swatch-tag new">yeni</span></div>
-        <div class="swatch-hex">#6B1828</div>
-      </div>
-    </div>
-    <div class="swatch">
-      <div class="swatch-color" style="background:#D4859A;"></div>
-      <div class="swatch-info">
-        <div class="swatch-name">olgun pembe <span class="swatch-tag new">yeni</span></div>
-        <div class="swatch-hex">#D4859A</div>
-      </div>
-    </div>
-    <div class="swatch">
-      <div class="swatch-color" style="background:#C97084;"></div>
-      <div class="swatch-info">
-        <div class="swatch-name">olgun pembe-deep <span class="swatch-tag new">yeni</span></div>
-        <div class="swatch-hex">#C97084</div>
+        <div class="swatch-name">pink-600 <span class="swatch-tag new">yeni</span></div>
+        <div class="swatch-hex">#D81B60</div>
       </div>
     </div>
     <div class="swatch">
@@ -690,17 +675,17 @@
 
   <div class="compare">
     <div class="compare-item">
-      <h4>Mevcut burgundy</h4>
+      <h4>Tek pembe</h4>
       <div class="compare-bar">
-        <div style="background:#6B2D3E;">#6B2D3E</div>
-        <div style="background:#4F171C;">#4F171C</div>
+        <div style="background:#D81B60;">#D81B60</div>
+        <div style="background:#D81B60;">#D81B60</div>
       </div>
     </div>
     <div class="compare-item">
-      <h4>Yeni vişne (Denge)</h4>
+      <h4>Pink 600 / 700 (Denge)</h4>
       <div class="compare-bar">
-        <div style="background:#8B2238;">#8B2238</div>
-        <div style="background:#6B1828;">#6B1828</div>
+        <div style="background:#D81B60;">#D81B60</div>
+        <div style="background:#D81B60;">#D81B60</div>
       </div>
     </div>
   </div>
@@ -732,7 +717,7 @@
 
     <div class="pull-quote">
       Kemiklerimiz, yıllarca sessizce taşıdıkları yükü bize hatırlatmadan önce dinlemeyi öğrenmek <em>en olgun yatırımdır</em>.
-      <span class="pull-quote-attr">— bölüm açılışı · olgun pembe accent</span>
+      <span class="pull-quote-attr">— bölüm açılışı · Pink 600 accent</span>
     </div>
 
     <p>Hareket, buradaki en güçlü ortağımız <span class="evidence">(iyi kanıt)</span>. Direnç egzersizleri, yürüyüş, denge çalışmaları — bunların hepsi kemiklere "burada olduğumuzu" hatırlatır. Tek başına yapılan bir şey değil; arkadaşlarla, grup derslerinde, hatta bahçede bile devam edebilen bir alışkanlık. Belki sen de fark ettin — bu döneme birlikte adım atmak, tek başına yürümekten her zaman daha iyi hissettiriyor.</p>
@@ -780,7 +765,7 @@
 
         <div class="component-label" style="margin-top:1.5rem;">Evidence etiketleri</div>
         <div class="evidence-row">
-          <span class="evidence-sample" style="color: var(--vishne);">(güçlü kanıt)</span>
+          <span class="evidence-sample" style="color: var(--primary-pink);">(güçlü kanıt)</span>
           <span class="evidence-sample" style="color: var(--gold-bronze);">(iyi kanıt)</span>
           <span class="evidence-sample" style="color: var(--gold);">(orta kanıt)</span>
           <span class="evidence-sample" style="color: var(--gold); opacity:0.8;">(sınırlı kanıt)</span>
@@ -806,7 +791,7 @@
 </div>
 
 <div class="footer-note">
-  Estranova <span class="dot">·</span> Vişne Denge Paleti Mock-up <span class="dot">·</span> 2026-05-01
+  Estranova <span class="dot">·</span> Pembe Denge Paleti Mock-up <span class="dot">·</span> 2026-05-01
 </div>
 
 </body>

@@ -160,7 +160,7 @@
     color: #D81B60;
   }
   & .evidence[data-level="4"] .evidence-label {
-    color: #C2185B;
+    color: #D81B60;
   }
   & .evidence[data-level="1"] {
     opacity: 0.8;
@@ -170,35 +170,30 @@
     border-bottom: 1px solid rgba(216, 27, 96, 0.35);
   }
   & a:hover {
-    border-bottom-color: #AD1457;
+    border-bottom-color: #D81B60;
   }
 }
 
 @theme {
+  /* Live typography invariant (2026-06-02): font-serif = Manrope, font-sans = Kulim Park. */
   --font-serif: "Manrope", sans-serif;
   --font-sans: "Kulim Park", sans-serif;
 
-  --color-primary: #AD1457;
+  --color-primary: #D81B60;
   --color-primary-container: #D81B60;
-  --color-secondary: #C2185B;
+  --color-secondary: #D81B60;
   --color-surface: #fffdf9;
   --color-surface-container: #f7f1ea;
   --color-charcoal: #1c1c19;
 
-  /* Editöryal palet — Pink 600 ana ton, siyah accent (2026-05-14).
-     Önceki burgundy (#D81B60) + gold (#000000) paleti Pink 600 + siyaha geçti.
-     Component'lerin kullandığı utility'ler: bg-burgundy, text-ink, bg-cream-soft … */
-  --color-burgundy: #D81B60;
-  --color-burgundy-deep: #AD1457;
+  /* Editöryal palet — Pink 600 ana ton, siyah accent.
+     Aktif palet Pink 600, siyah accent, krem ve mürekkep tonlarından oluşur. */
   --color-ink: #2d2d2d;
   --color-gold: #000000;
   --color-gold-bronze: #2d2d2d;
   --color-cream-soft: #fffdf9;
   --color-cream-warm: #f7f1ea;
 
-  /* Rose kart/aksent tonları — accent siyah geniş alan yerine yalnız süs/kanıt/sayaç rolünde kalır. */
-  --color-pembe: #F8BBD0;
-  --color-pembe-deep: #C2185B;
 }
 
 @layer base {
@@ -261,7 +256,7 @@
     color: #D81B60;
   }
   .evidence[data-level='4'] .evidence-label {
-    color: #C2185B;
+    color: #D81B60;
   }
   .evidence[data-level='1'] {
     opacity: 0.8;
@@ -388,7 +383,7 @@
 }
 
 .editorial-shadow {
-  box-shadow: 0 4px 20px -2px rgba(122, 31, 51, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(216, 27, 96, 0.08);
 }
 
 /* Magazine drop-cap — applied to a paragraph; first letter floats in italic emphasis */
@@ -414,6 +409,6 @@
   border-color: #b07683;
 }
 
-.burgundy-gradient {
-  background: linear-gradient(135deg, #AD1457 0%, #4c1220 100%);
+.primary-gradient {
+  background: linear-gradient(135deg, #D81B60 0%, #D81B60 100%);
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * Estranova yazar onay arşivi iskeletini açar.
  *
@@ -33,7 +33,7 @@ const C = {
   dim: '\x1b[2m',
   green: '\x1b[32m',
   yellow: '\x1b[33m',
-  burgundy: '\x1b[38;5;88m',
+  primary: '\x1b[38;5;88m',
   gold: '\x1b[38;5;178m',
 };
 
@@ -166,7 +166,7 @@ async function ensureArticleLog(folder, content) {
 }
 
 async function main() {
-  console.log(`${C.bold}${C.burgundy}Estranova — Yazar onay arşivi iskelet açıcı${C.reset}\n`);
+  console.log(`${C.bold}${C.primary}Estranova — Yazar onay arşivi iskelet açıcı${C.reset}\n`);
 
   const writers = await parseWriters();
   if (writers.length === 0) {

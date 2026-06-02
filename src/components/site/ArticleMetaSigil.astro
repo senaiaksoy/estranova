@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * Makale kartlarının altındaki küçük editöryel meta satırı.
  * "8 dk okuma · Kanıt: Orta · Güncel: Şub 2026"
@@ -18,7 +18,7 @@ const { readingMinutes, evidence, updated } = Astro.props;
   {evidence && (
     <>
       <span class="mx-2 text-gold">·</span>
-      <span>Kanıt: <span class="text-burgundy">{evidence}</span></span>
+      <span>Kanıt: <span class="text-primary">{evidence}</span></span>
     </>
   )}
   {updated && (

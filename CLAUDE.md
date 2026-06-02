@@ -159,12 +159,14 @@ Makale gövdeleri (Astro veya dinamik) **tek bir editöryal tipografi sistemi** 
 - **Wrapper zorunluluğu:** Makale ana metni her zaman `ArticleProsePanel` içinde yayınlanır. İçerideki div: `class="prose prose-lg prose-estranova max-w-none"`. Bu üç class birlikte zorunludur; değiştirilemez, kaldırılamaz.
 - **Otomatik bölüm numarası (chapter counter):** `prose-estranova` her `<h2>`'nin üstüne gold renkte `01`, `02` … numarası basar (`counter-increment: estranova-chapter`). Sidebar TOC'deki numaralarla **görsel olarak kenetlenir** — TOC ve chapter numaralarının eşleşmesi için ArticleProsePanel dışında manuel `<h2>` kullanma.
 - **Altın ayraç:** Her H2'den sonra 2.5rem genişlikte gold çizgi (`::after`) otomatik basılır. Bu çizgiyi manuel `<hr>` ile taklit etme; kart içinde çift çizgi doğar.
-- **İtalik lede zorunluluğu:** Her H2'den **sonraki ilk `<p>`** otomatik olarak **italic serif burgundy** render edilir (`h2 + p` selector). Bu paragraf bölümün "lede"sidir — 1-2 cümlede bölümün kanısını/sorusunu/durumunu kurar. **Bullet list, ağır veri, veya uzun tanım ile başlayan bölüm yasaktır**; yazar, publisher ve her metin üreten ajan bunu üretim sırasında hesaba katar.
+- **İtalik lede zorunluluğu:** Her H2'den **sonraki ilk `<p>`** otomatik olarak **italic `font-sans` ana pembe** render edilir (`h2 + p` selector). Bu paragraf bölümün "lede"sidir — 1-2 cümlede bölümün kanısını/sorusunu/durumunu kurar. **Bullet list, ağır veri, veya uzun tanım ile başlayan bölüm yasaktır**; yazar, publisher ve her metin üreten ajan bunu üretim sırasında hesaba katar.
 - **Gizli mekanizma:** CSS editoryal katmanı görünür. Yazar markdown/HTML'de sadece `<h2>başlık</h2><p>gövde</p>` yazar; numara, çizgi ve italic lede görsel katmandan gelir. Yazar manuel olarak "01." yazmaz, italic tag atmaz.
-- **Değiştirme kuralı:** `src/index.css` içindeki `@utility prose-estranova` bloğuna yapılan değişiklikler tüm makaleleri etkiler. Renk tokenları (`--tw-prose-*`) ve palet değerleri (#D81B60 Pink 600 ana ton, #AD1457 Pink 800 koyu, #000000 siyah accent, #2D2D2D ink) marka paletinde sabittir; "premium editöryal his" tanımlı bu paletle korunur. (2026-05-14: önceki burgundy #6B2D3E + gold #C9A96E paleti Pink 600 + siyaha geçti.)
-- **Karanlık zeminde okunabilirlik (HARD CONSTRAINT):** Siyah accent (`--color-gold: #000000`) yalnızca **açık zeminde** (cream/white) okunur. Foto overlay üstündeki pill / divider / eyebrow / sectionNumber gibi accent role'lerinde **siyah yerine cream-warm** (veya beyaz/şeffaf cam) kullanılır. Foto üstüne basılan etiket / kanıt pill'i kalıbı: `border border-white/35 bg-white/10 text-white backdrop-blur-sm` + beyaz dot — siyah/burgundy dolgu pill **yasaktır**. `bg-burgundy` zeminli aside / footer / hero için gold accent → cream-warm tonu. Component örnekleri: SubmenuHero, SiteFooter, HubEditorialBrief, hakkimizda bg-burgundy section, symptoms.astro evidence pill.
+- **Değiştirme kuralı:** `src/index.css` içindeki `@utility prose-estranova` bloğuna yapılan değişiklikler tüm makaleleri etkiler. Renk tokenları (`--tw-prose-*`) ve palet değerleri (#D81B60 Pink 600 tek pembe ton, #000000 siyah accent, #2D2D2D ink) marka paletinde sabittir; "premium editöryal his" tanımlı bu paletle korunur.
+- **Karanlık zeminde okunabilirlik (HARD CONSTRAINT):** Siyah accent (`--color-gold: #000000`) yalnızca **açık zeminde** (cream/white) okunur. Foto overlay üstündeki pill / divider / eyebrow / sectionNumber gibi accent role'lerinde **siyah yerine cream-warm** (veya beyaz/şeffaf cam) kullanılır. Foto üstüne basılan etiket / kanıt pill'i kalıbı: `border border-white/35 bg-white/10 text-white backdrop-blur-sm` + beyaz dot — siyah/ana pembe dolgu pill **yasaktır**. Koyu ana renk zeminli aside / footer / hero için gold accent → cream-warm tonu. Component örnekleri: SubmenuHero, SiteFooter, HubEditorialBrief, hakkimizda ana renk section, symptoms.astro evidence pill.
 - **Teknik kaynak:** Uygulama detayı + kod snippet'leri **AGENTS.md → "Article page layout (Astro)"** bölümünde. Kurulum: `@tailwindcss/typography` devDependency, `src/index.css` içinde `@plugin "@tailwindcss/typography"`.
-- **Kanıt düzeyi etiketi:** Yayında kanıt gücü yalnızca `<Evidence level={N} />` (`N` = 1–5) veya aralık için `<Evidence from={A} to={B} />` ile gösterilir. Render formatı **parantez içi italic Türkçe etikettir**: `(güçlü kanıt)` · `(iyi kanıt)` · `(orta kanıt)` · `(sınırlı kanıt)` · `(zayıf kanıt)`; aralık `(orta–iyi kanıt)` biçiminde birleşir. Level 5 burgundy, level 4 gold-bronze, level 1-3 gold; italic Newsreader serif, 0.85em. Tooltip (`title` + `aria-label`) sayısal magnitude'u (`5/5` vb.) korur. `[●●●●●]`, `[●●●●○]` vb. **literal nokta / daire dizileri yasaktır**; Writer ve Publisher bu kalıpları metne yazmaz, Publisher Astro gövdesinde `Evidence` bileşenini kullanır.
+- **Kanıt düzeyi etiketi:** Yayında kanıt gücü yalnızca `<Evidence level={N} />` (`N` = 1–5) veya aralık için `<Evidence from={A} to={B} />` ile gösterilir. Render formatı **parantez içi italic Türkçe etikettir**: `(güçlü kanıt)` · `(iyi kanıt)` · `(orta kanıt)` · `(sınırlı kanıt)` · `(zayıf kanıt)`; aralık `(orta–iyi kanıt)` biçiminde birleşir. Level 4-5 Pink 600, level 1-3 siyah accent; italic `font-serif` / Manrope, 0.85em. Tooltip (`title` + `aria-label`) sayısal magnitude'u (`5/5` vb.) korur. `[●●●●●]`, `[●●●●○]` vb. **literal nokta / daire dizileri yasaktır**; Writer ve Publisher bu kalıpları metne yazmaz, Publisher Astro gövdesinde `Evidence` bileşenini kullanır.
+
+**Canlı font kuralı (2026-06-02):** estranova.com üretim CSS'i `--font-serif: "Manrope", sans-serif` ve `--font-sans: "Kulim Park", sans-serif` kullanır. Newsreader, Playfair Display ve Inter eski hafıza / taslak kalıntısıdır; yeni site, sosyal medya ve üretim asset'lerinde kullanılmaz.
 
 ### 6. Kalite Kontrol Checklist
 
@@ -220,15 +222,14 @@ It must NOT feel like:
 - a hospital dashboard
 
 #### Color direction
-Preferred palette (2026-05-14 — Pink 600 + black accent paleti):
-- Pink 600 (#D81B60) ana ton — "burgundy" token rolü
-- Pink 800 (#AD1457) koyu varyant — "burgundy-deep" token rolü
+Preferred palette (2026-06-02 — Pink 600 + black accent paleti):
+- Pink 600 (#D81B60) tek pembe ton
 - warm cream (#FFFDF9 / #F7F1EA) zemin
-- black (#000000) accent — yalnız açık zeminde (cream/white); foto overlay ve bg-burgundy zeminde **cream-warm** veya **şeffaf cam (white/10 + white/35 border + backdrop-blur)** ile değiştirilir
+- black (#000000) accent — yalnız açık zeminde (cream/white); foto overlay ve ana renk zemininde **cream-warm** veya **şeffaf cam (white/10 + white/35 border + backdrop-blur)** ile değiştirilir
 - dark gray text (#2D2D2D ink)
 - white or warm off-white backgrounds
 
-> Önceki burgundy #6B2D3E + gold #C9A96E paleti yerine geçti.
+> Aktif palet yalnız Pink 600, siyah accent, krem ve mürekkep tonlarından oluşur.
 
 #### Typography
 Preferred style:

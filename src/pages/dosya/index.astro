@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -22,17 +22,17 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
 
   <main id="main-content" class="text-ink">
     {/* Hero */}
-    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+    <section class="relative isolate overflow-hidden border-t border-primary/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
       <div class="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-gold/12 blur-3xl"></div>
-      <div class="pointer-events-none absolute right-6 top-8 hidden font-serif text-[11rem] leading-none tracking-[-0.08em] text-burgundy/6 lg:block">
+      <div class="pointer-events-none absolute right-6 top-8 hidden font-serif text-[11rem] leading-none tracking-[-0.08em] text-primary/6 lg:block">
         dosya
       </div>
       <div class="mx-auto max-w-5xl">
         <div class="mb-5 flex max-w-2xl items-center gap-4">
           <span class="h-px flex-1 bg-gold/45"></span>
-          <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Dosya</p>
+          <p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">Dosya</p>
         </div>
-        <h1 class="mb-5 font-serif text-6xl leading-[0.92] tracking-[-0.045em] text-burgundy md:text-8xl">
+        <h1 class="mb-5 font-serif text-6xl leading-[0.92] tracking-[-0.045em] text-primary md:text-8xl">
           Aylık Dosyalar
         </h1>
         <p class="max-w-3xl border-l border-gold/50 pl-5 font-serif text-xl italic leading-relaxed text-ink/76 md:text-2xl">
@@ -47,14 +47,14 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
       <div class="pointer-events-none absolute right-[-6rem] top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
       <div class="mx-auto max-w-5xl">
         <div class="mb-5 flex items-center gap-4">
-          <p class="text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+          <p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">
             Bu Ayın Dosyası
           </p>
           <span class="h-px flex-1 bg-gold/35"></span>
         </div>
         <a
           href={currentHref}
-          class="group relative flex flex-col overflow-hidden rounded-[38px] border border-burgundy/14 bg-cream-soft shadow-2xl shadow-burgundy/10 ring-1 ring-white/70 transition hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-burgundy/14 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:flex-row md:items-stretch"
+          class="group relative flex flex-col overflow-hidden rounded-[38px] border border-primary/14 bg-cream-soft shadow-2xl shadow-primary/10 ring-1 ring-white/70 transition hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-primary/14 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 md:flex-row md:items-stretch"
         >
           <span class="pointer-events-none absolute inset-x-8 top-0 z-10 h-px bg-gold/60"></span>
           <div class="relative h-64 w-full shrink-0 overflow-hidden md:h-auto md:w-[48%]">
@@ -80,7 +80,7 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
               <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
                 {currentDossier.kicker}
               </p>
-              <h2 class="mb-3 font-serif text-3xl leading-tight text-burgundy md:text-4xl">
+              <h2 class="mb-3 font-serif text-3xl leading-tight text-primary md:text-4xl">
                 {currentDossier.title}
               </h2>
               {currentDossier.subtitle && (
@@ -106,7 +106,7 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
               </p>
             </div>
             <div class="mt-6">
-              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-burgundy underline decoration-burgundy/40 underline-offset-4 transition group-hover:decoration-burgundy">
+              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition group-hover:decoration-primary">
                 Dosyayı keşfet
                 <span aria-hidden="true">→</span>
               </span>
@@ -117,11 +117,11 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
     </section>
 
     {/* Arşiv */}
-    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-cream-soft px-6 py-14 md:py-20">
+    <section class="relative isolate overflow-hidden border-t border-primary/10 bg-cream-soft px-6 py-14 md:py-20">
       <div class="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
       <div class="mx-auto max-w-5xl">
         <header class="mb-10 grid gap-6 md:grid-cols-[0.7fr_1.3fr] md:items-end">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">Arşiv</p>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-primary">Arşiv</p>
           <div>
             <h2 class="font-serif text-4xl leading-tight tracking-[-0.025em] text-ink md:text-5xl">
               Önceki dosyalar
@@ -133,7 +133,7 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
         </header>
 
         {archived.length === 0 ? (
-          <div class="rounded-[24px] border border-dashed border-burgundy/25 bg-white px-6 py-12 text-center">
+          <div class="rounded-[24px] border border-dashed border-primary/25 bg-white px-6 py-12 text-center">
             <p class="font-serif text-lg italic text-ink/60">
               İlk dosya henüz yayında. Yeni sayılar burada birikecek.
             </p>
@@ -147,7 +147,7 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
                   <li>
                     <a
                       href={`/dosya/${dossier.slug}/`}
-                      class="group relative flex h-full flex-col overflow-hidden rounded-[30px] border border-burgundy/12 bg-white shadow-xl shadow-burgundy/6 ring-1 ring-white/70 transition hover:-translate-y-1 hover:border-gold/35 hover:shadow-2xl hover:shadow-burgundy/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2"
+                      class="group relative flex h-full flex-col overflow-hidden rounded-[30px] border border-primary/12 bg-white shadow-xl shadow-primary/6 ring-1 ring-white/70 transition hover:-translate-y-1 hover:border-gold/35 hover:shadow-2xl hover:shadow-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
                     >
                       <span class="pointer-events-none absolute inset-x-5 top-0 z-10 h-px bg-gold/55"></span>
                       <div class="relative h-44 overflow-hidden">
@@ -166,7 +166,7 @@ const currentHref = `/dosya/${currentDossier.slug}/`;
                         <p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
                           {dossier.kicker}
                         </p>
-                        <h3 class="mb-3 font-serif text-2xl text-burgundy group-hover:underline group-hover:decoration-burgundy/35">
+                        <h3 class="mb-3 font-serif text-2xl text-primary group-hover:underline group-hover:decoration-primary/35">
                           {dossier.title}
                         </h3>
                         <p class="mb-4 flex-1 leading-relaxed text-ink/75">{dossier.lede}</p>

@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Estranova",
   "short_name": "Estranova",
   "description": "Perimenopoz, menopoz ve 40+ kadın sağlığı için editöryel bilgi platformu.",
@@ -8,7 +8,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fcf9f4",
-  "theme_color": "#4f171c",
+  "theme_color": "#D81B60",
   "icons": [
     {
       "src": "/favicon-32x32.png",

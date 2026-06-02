@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
   href?: string;
   tag: string;
@@ -13,10 +13,10 @@ const { href, tag, title, body, footer, highlight = false } = Astro.props;
 const hasFooterSlot = Astro.slots.has('footer');
 
 const shellClass = [
-  'relative flex h-full flex-col overflow-hidden rounded-[34px] border bg-white p-7 shadow-[0_24px_78px_-56px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2',
+  'relative flex h-full flex-col overflow-hidden rounded-[34px] border bg-white p-7 shadow-[0_24px_78px_-56px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2',
   highlight
-    ? 'border-burgundy/24'
-    : 'border-burgundy/12 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream-soft/20',
+    ? 'border-primary/24'
+    : 'border-primary/12 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream-soft/20',
 ];
 ---
 
@@ -25,44 +25,44 @@ const shellClass = [
     <a href={href} class:list={['group block h-full', shellClass]}>
       <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
       <div class="pointer-events-none absolute -right-8 top-5 h-28 w-28 rounded-full bg-gold/[0.08] blur-2xl"></div>
-      <div class="pointer-events-none absolute bottom-5 right-6 font-serif text-7xl italic leading-none text-burgundy/[0.045]" aria-hidden="true">
+      <div class="pointer-events-none absolute bottom-5 right-6 font-serif text-7xl italic leading-none text-primary/[0.045]" aria-hidden="true">
         {highlight ? '!' : '•'}
       </div>
-      {highlight && <p class="relative mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Öne çıkan</p>}
-      <p class="relative mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">
+      {highlight && <p class="relative mb-3 text-xs font-bold uppercase tracking-[0.22em] text-primary">Öne çıkan</p>}
+      <p class="relative mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
         <span class="h-px w-7 bg-gold/75"></span>
         <span>{tag}</span>
       </p>
       <h3 class="relative mb-3 font-serif text-3xl leading-[1.02] tracking-[-0.02em] group-hover:underline group-hover:decoration-gold/70">{title}</h3>
       <p class="relative mb-4 flex-1 leading-relaxed text-ink/75">{body}</p>
       {hasFooterSlot ? (
-        <div class="relative border-t border-burgundy/10 pt-4 text-sm font-medium text-ink/80">
+        <div class="relative border-t border-primary/10 pt-4 text-sm font-medium text-ink/80">
           <slot name="footer" />
         </div>
       ) : (
-        footer && <p class="relative border-t border-burgundy/10 pt-4 text-sm font-medium text-ink/80">{footer}</p>
+        footer && <p class="relative border-t border-primary/10 pt-4 text-sm font-medium text-ink/80">{footer}</p>
       )}
     </a>
   ) : (
     <article class:list={shellClass}>
       <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
       <div class="pointer-events-none absolute -right-8 top-5 h-28 w-28 rounded-full bg-gold/[0.08] blur-2xl"></div>
-      <div class="pointer-events-none absolute bottom-5 right-6 font-serif text-7xl italic leading-none text-burgundy/[0.045]" aria-hidden="true">
+      <div class="pointer-events-none absolute bottom-5 right-6 font-serif text-7xl italic leading-none text-primary/[0.045]" aria-hidden="true">
         {highlight ? '!' : '•'}
       </div>
-      {highlight && <p class="relative mb-3 text-xs font-bold uppercase tracking-[0.22em] text-burgundy">Öne çıkan</p>}
-      <p class="relative mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">
+      {highlight && <p class="relative mb-3 text-xs font-bold uppercase tracking-[0.22em] text-primary">Öne çıkan</p>}
+      <p class="relative mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
         <span class="h-px w-7 bg-gold/75"></span>
         <span>{tag}</span>
       </p>
       <h3 class="relative mb-3 font-serif text-3xl leading-[1.02] tracking-[-0.02em]">{title}</h3>
       <p class="relative mb-4 flex-1 leading-relaxed text-ink/75">{body}</p>
       {hasFooterSlot ? (
-        <div class="relative border-t border-burgundy/10 pt-4 text-sm font-medium text-ink/80">
+        <div class="relative border-t border-primary/10 pt-4 text-sm font-medium text-ink/80">
           <slot name="footer" />
         </div>
       ) : (
-        footer && <p class="relative border-t border-burgundy/10 pt-4 text-sm font-medium text-ink/80">{footer}</p>
+        footer && <p class="relative border-t border-primary/10 pt-4 text-sm font-medium text-ink/80">{footer}</p>
       )}
     </article>
   )

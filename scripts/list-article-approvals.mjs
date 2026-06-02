@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * Estranova makale yazar onayı durum raporu.
  *
@@ -56,7 +56,7 @@ const C = {
   dim: '\x1b[2m',
   green: '\x1b[32m',
   yellow: '\x1b[33m',
-  burgundy: '\x1b[38;5;88m',
+  primary: '\x1b[38;5;88m',
   gold: '\x1b[38;5;178m',
   gray: '\x1b[90m',
 };
@@ -178,7 +178,7 @@ async function main() {
 
   // === RAPOR ===
   console.log('');
-  console.log(`${C.bold}${C.burgundy}═══ Estranova Makale Yazar Onay Durumu ═══${C.reset}`);
+  console.log(`${C.bold}${C.primary}═══ Estranova Makale Yazar Onay Durumu ═══${C.reset}`);
   console.log('');
   console.log(`  Toplam makale     : ${C.bold}${total}${C.reset}`);
   console.log(`  ${C.green}Onaylı            : ${C.bold}${approved}${C.reset} ${C.green}(%${percent})${C.reset}`);
@@ -197,7 +197,7 @@ async function main() {
     const wApproved = ws.filter((a) => a.approval).length;
     const directEditorMode = DIRECT_EDITOR_APPROVAL_WRITERS.has(slug);
     console.log(
-      `${C.bold}${C.burgundy}▼ ${group.writerName}${C.reset} ${C.dim}(${slug})${C.reset}  ` +
+      `${C.bold}${C.primary}▼ ${group.writerName}${C.reset} ${C.dim}(${slug})${C.reset}  ` +
         `${C.green}${wApproved}${C.reset}/${ws.length} onaylı` +
         (directEditorMode ? ` ${C.gold}(KC doğrudan onay kapsamı)${C.reset}` : ''),
     );

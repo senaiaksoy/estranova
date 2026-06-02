@@ -1,4 +1,4 @@
----
+﻿---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -14,16 +14,16 @@ const pageDescription = `${magazineConfig.name} dergisinin geçmiş ve mevcut sa
   <SiteNavbar currentPath="/sayi/" />
 
   <main id="main-content" class="text-ink">
-    <section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
+    <section class="relative isolate overflow-hidden border-t border-primary/10 bg-gradient-to-b from-cream-warm to-cream-soft px-6 py-14 md:py-20">
       <div class="pointer-events-none absolute -left-24 top-16 h-80 w-80 rounded-full bg-gold/12 blur-3xl"></div>
-      <div class="pointer-events-none absolute right-6 top-10 hidden font-serif text-[11rem] leading-none tracking-[-0.08em] text-burgundy/6 lg:block">
+      <div class="pointer-events-none absolute right-6 top-10 hidden font-serif text-[11rem] leading-none tracking-[-0.08em] text-primary/6 lg:block">
         sayı
       </div>
       <div class="mx-auto max-w-5xl">
         <nav aria-label="Sayfa konumu" class="mb-6 text-xs uppercase tracking-[0.22em] text-ink/55">
-          <a href="/" class="text-ink/65 hover:text-burgundy">Anasayfa</a>
+          <a href="/" class="text-ink/65 hover:text-primary">Anasayfa</a>
           <span class="mx-2 text-gold">·</span>
-          <span class="text-burgundy">Sayılar</span>
+          <span class="text-primary">Sayılar</span>
         </nav>
 
         <div class="mb-5 flex max-w-2xl items-center gap-4">
@@ -32,7 +32,7 @@ const pageDescription = `${magazineConfig.name} dergisinin geçmiş ve mevcut sa
             {magazineConfig.name} · {magazineConfig.subtitle}
           </p>
         </div>
-        <h1 class="mb-5 font-serif text-6xl leading-[0.92] tracking-[-0.045em] text-burgundy md:text-8xl">
+        <h1 class="mb-5 font-serif text-6xl leading-[0.92] tracking-[-0.045em] text-primary md:text-8xl">
           Sayı arşivi
         </h1>
         <p class="max-w-3xl border-l border-gold/50 pl-5 font-serif text-xl italic leading-relaxed text-ink/76 md:text-2xl">
@@ -44,7 +44,7 @@ const pageDescription = `${magazineConfig.name} dergisinin geçmiş ve mevcut sa
     <IssueArchiveGrid issues={issues} />
 
     {/* Tıbbi sorumluluk reddi */}
-    <section class="border-t border-burgundy/10 bg-cream-soft px-6 py-10">
+    <section class="border-t border-primary/10 bg-cream-soft px-6 py-10">
       <div class="mx-auto max-w-3xl text-center">
         <p class="text-sm leading-relaxed text-ink/70">
           Bu içerik genel bilgilendirme amaçlıdır; bireysel tıbbi değerlendirme, tanı veya tedavinin

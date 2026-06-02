@@ -59,8 +59,8 @@ registerFontFamily('Calibri', normal='Calibri', bold='Calibri-Bold',
                    italic='Calibri-Italic', boldItalic='Calibri-BoldItalic')
 
 # Estranova palette
-burgundy        = HexColor('#6B2D3E')
-deep_burgundy   = HexColor('#4f171c')
+primary        = HexColor('#D81B60')
+secondary_pink   = HexColor('#D81B60')
 gold            = HexColor('#C9A96E')
 dark_gray       = HexColor('#2D2D2D')
 light_gray      = HexColor('#888888')
@@ -72,17 +72,17 @@ form_bg         = HexColor('#FAF6EE')
 byline_style = ParagraphStyle('Byline', fontName='Calibri-Italic', fontSize=9,
     textColor=light_gray, alignment=TA_RIGHT, spaceAfter=14, leading=12)
 form_title_style = ParagraphStyle('FormTitle', fontName='Constantia-Bold', fontSize=21,
-    textColor=deep_burgundy, leading=27, spaceAfter=6, alignment=TA_LEFT)
+    textColor=secondary_pink, leading=27, spaceAfter=6, alignment=TA_LEFT)
 form_intro_style = ParagraphStyle('FormIntro', fontName='Calibri', fontSize=10.5,
     textColor=dark_gray, leading=16, spaceBefore=10, spaceAfter=14, alignment=TA_LEFT)
 form_section_style = ParagraphStyle('FormSection', fontName='Constantia-Bold', fontSize=14,
-    textColor=deep_burgundy, leading=20, spaceBefore=18, spaceAfter=6, alignment=TA_LEFT)
+    textColor=secondary_pink, leading=20, spaceBefore=18, spaceAfter=6, alignment=TA_LEFT)
 form_section_lede_style = ParagraphStyle('FormSectionLede', fontName='Constantia-Italic', fontSize=11,
-    textColor=burgundy, leading=16, spaceAfter=8, alignment=TA_LEFT)
+    textColor=primary, leading=16, spaceAfter=8, alignment=TA_LEFT)
 form_question_style = ParagraphStyle('FormQuestion', fontName='Calibri', fontSize=10.5,
     textColor=dark_gray, leading=15, spaceBefore=8, spaceAfter=2, alignment=TA_LEFT)
 form_question_quote_style = ParagraphStyle('FormQuestionQuote', fontName='Calibri-Italic', fontSize=10.5,
-    textColor=burgundy, leading=15, spaceBefore=4, spaceAfter=2, alignment=TA_LEFT, leftIndent=12)
+    textColor=primary, leading=15, spaceBefore=4, spaceAfter=2, alignment=TA_LEFT, leftIndent=12)
 form_options_style = ParagraphStyle('FormOptions', fontName='Calibri', fontSize=10,
     textColor=dark_gray, leading=14, spaceBefore=0, spaceAfter=8, alignment=TA_LEFT, leftIndent=12)
 form_open_label_style = ParagraphStyle('FormOpenLabel', fontName='Calibri-Italic', fontSize=10,
@@ -144,8 +144,8 @@ class InteractiveLikert(Flowable):
             ay = y + 4
             c.acroForm.radio(name=self.name, value=val, selected=False,
                 x=ax, y=ay, size=11, buttonStyle='circle',
-                borderColor=burgundy, fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy, borderWidth=0.7,
+                borderColor=primary, fillColor=HexColor('#ffffff'),
+                textColor=secondary_pink, borderWidth=0.7,
                 forceBorder=True, tooltip=label)
             c.setFont('Calibri', 9)
             c.setFillColor(dark_gray)
@@ -172,8 +172,8 @@ class InteractiveTriple(Flowable):
             ay = y + 4
             c.acroForm.radio(name=self.name, value=val, selected=False,
                 x=ax, y=ay, size=11, buttonStyle='circle',
-                borderColor=burgundy, fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy, borderWidth=0.7,
+                borderColor=primary, fillColor=HexColor('#ffffff'),
+                textColor=secondary_pink, borderWidth=0.7,
                 forceBorder=True, tooltip=label)
             c.setFont('Calibri', 9.5)
             c.setFillColor(dark_gray)
@@ -199,8 +199,8 @@ class InteractiveDouble(Flowable):
             ay = y + 4
             c.acroForm.radio(name=self.name, value=val, selected=False,
                 x=ax, y=ay, size=11, buttonStyle='circle',
-                borderColor=burgundy, fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy, borderWidth=0.7,
+                borderColor=primary, fillColor=HexColor('#ffffff'),
+                textColor=secondary_pink, borderWidth=0.7,
                 forceBorder=True, tooltip=label)
             c.setFont('Calibri', 9.5)
             c.setFillColor(dark_gray)

@@ -49,8 +49,8 @@ registerFontFamily('Calibri',
                    boldItalic='Calibri-BoldItalic')
 
 # --- Estranova palette ---
-burgundy        = HexColor('#6B2D3E')
-deep_burgundy   = HexColor('#4f171c')
+primary        = HexColor('#D81B60')
+secondary_pink   = HexColor('#D81B60')
 gold            = HexColor('#C9A96E')
 dark_gray       = HexColor('#2D2D2D')
 light_gray      = HexColor('#888888')
@@ -64,12 +64,12 @@ byline_style = ParagraphStyle(
 )
 
 h1_style = ParagraphStyle(
-    'H1', fontName='Constantia-Bold', fontSize=23, textColor=deep_burgundy,
+    'H1', fontName='Constantia-Bold', fontSize=23, textColor=secondary_pink,
     leading=29, spaceBefore=8, spaceAfter=4, alignment=TA_LEFT,
 )
 
 opening_lede_style = ParagraphStyle(
-    'OpeningLede', fontName='Constantia-Italic', fontSize=13, textColor=burgundy,
+    'OpeningLede', fontName='Constantia-Italic', fontSize=13, textColor=primary,
     leading=21, spaceBefore=14, spaceAfter=18, alignment=TA_LEFT, leftIndent=0,
 )
 
@@ -79,12 +79,12 @@ chapter_num_style = ParagraphStyle(
 )
 
 h2_style = ParagraphStyle(
-    'H2', fontName='Constantia-Bold', fontSize=17, textColor=deep_burgundy,
+    'H2', fontName='Constantia-Bold', fontSize=17, textColor=secondary_pink,
     leading=22, spaceBefore=2, spaceAfter=4, alignment=TA_LEFT,
 )
 
 section_lede_style = ParagraphStyle(
-    'SectionLede', fontName='Constantia-Italic', fontSize=12, textColor=burgundy,
+    'SectionLede', fontName='Constantia-Italic', fontSize=12, textColor=primary,
     leading=19, spaceBefore=10, spaceAfter=12, alignment=TA_LEFT, leftIndent=0,
 )
 
@@ -94,7 +94,7 @@ body_style = ParagraphStyle(
 )
 
 faq_q_style = ParagraphStyle(
-    'FAQQ', fontName='Calibri-Bold', fontSize=11, textColor=deep_burgundy,
+    'FAQQ', fontName='Calibri-Bold', fontSize=11, textColor=secondary_pink,
     leading=16, spaceBefore=12, spaceAfter=4, alignment=TA_LEFT,
 )
 
@@ -104,7 +104,7 @@ faq_a_style = ParagraphStyle(
 )
 
 closing_lede_style = ParagraphStyle(
-    'ClosingLede', fontName='Constantia-Italic', fontSize=12, textColor=burgundy,
+    'ClosingLede', fontName='Constantia-Italic', fontSize=12, textColor=primary,
     leading=19, spaceBefore=18, spaceAfter=14, alignment=TA_LEFT, leftIndent=0,
 )
 
@@ -124,13 +124,13 @@ editor_note_body_style = ParagraphStyle(
     leading=16, spaceAfter=8, alignment=TA_LEFT,
 )
 editor_note_signature_style = ParagraphStyle(
-    'EditorNoteSignature', fontName='Calibri-Italic', fontSize=9.5, textColor=deep_burgundy,
+    'EditorNoteSignature', fontName='Calibri-Italic', fontSize=9.5, textColor=secondary_pink,
     leading=12, spaceBefore=4, alignment=TA_LEFT,
 )
 
 # Form-specific styles
 form_title_style = ParagraphStyle(
-    'FormTitle', fontName='Constantia-Bold', fontSize=21, textColor=deep_burgundy,
+    'FormTitle', fontName='Constantia-Bold', fontSize=21, textColor=secondary_pink,
     leading=27, spaceAfter=6, alignment=TA_LEFT,
 )
 form_intro_style = ParagraphStyle(
@@ -138,11 +138,11 @@ form_intro_style = ParagraphStyle(
     leading=16, spaceBefore=10, spaceAfter=14, alignment=TA_LEFT,
 )
 form_section_style = ParagraphStyle(
-    'FormSection', fontName='Constantia-Bold', fontSize=14, textColor=deep_burgundy,
+    'FormSection', fontName='Constantia-Bold', fontSize=14, textColor=secondary_pink,
     leading=20, spaceBefore=18, spaceAfter=6, alignment=TA_LEFT,
 )
 form_section_lede_style = ParagraphStyle(
-    'FormSectionLede', fontName='Constantia-Italic', fontSize=11, textColor=burgundy,
+    'FormSectionLede', fontName='Constantia-Italic', fontSize=11, textColor=primary,
     leading=16, spaceAfter=8, alignment=TA_LEFT,
 )
 form_question_style = ParagraphStyle(
@@ -150,7 +150,7 @@ form_question_style = ParagraphStyle(
     leading=15, spaceBefore=8, spaceAfter=2, alignment=TA_LEFT,
 )
 form_question_quote_style = ParagraphStyle(
-    'FormQuestionQuote', fontName='Calibri-Italic', fontSize=10.5, textColor=burgundy,
+    'FormQuestionQuote', fontName='Calibri-Italic', fontSize=10.5, textColor=primary,
     leading=15, spaceBefore=4, spaceAfter=2, alignment=TA_LEFT, leftIndent=12,
 )
 form_options_style = ParagraphStyle(
@@ -335,9 +335,9 @@ class InteractiveLikert(Flowable):
                 x=ax, y=ay,
                 size=11,
                 buttonStyle='circle',
-                borderColor=burgundy,
+                borderColor=primary,
                 fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy,
+                textColor=secondary_pink,
                 borderWidth=0.7,
                 forceBorder=True,
                 tooltip=label,
@@ -378,9 +378,9 @@ class InteractiveTriple(Flowable):
                 x=ax, y=ay,
                 size=11,
                 buttonStyle='circle',
-                borderColor=burgundy,
+                borderColor=primary,
                 fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy,
+                textColor=secondary_pink,
                 borderWidth=0.7,
                 forceBorder=True,
                 tooltip=label,
@@ -420,9 +420,9 @@ class InteractiveDouble(Flowable):
                 x=ax, y=ay,
                 size=11,
                 buttonStyle='circle',
-                borderColor=burgundy,
+                borderColor=primary,
                 fillColor=HexColor('#ffffff'),
-                textColor=deep_burgundy,
+                textColor=secondary_pink,
                 borderWidth=0.7,
                 forceBorder=True,
                 tooltip=label,

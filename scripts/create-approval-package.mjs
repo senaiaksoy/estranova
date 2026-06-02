@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * Bir Astro makalesini yazara onaya göndermek için kanonik paket üretir.
  * Bu paket hem yayın kapısıdır hem de yazar stilini geliştiren geri bildirim
@@ -57,7 +57,7 @@ const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 
 const C = {
   reset: '\x1b[0m', bold: '\x1b[1m', dim: '\x1b[2m',
   green: '\x1b[32m', yellow: '\x1b[33m', red: '\x1b[31m',
-  burgundy: '\x1b[38;5;88m', gold: '\x1b[38;5;178m',
+  primary: '\x1b[38;5;88m', gold: '\x1b[38;5;178m',
 };
 
 function parseArgs(argv) {
@@ -189,7 +189,7 @@ async function main() {
   const site = args.site || DEFAULT_SITE;
   const targetEmail = args.email || DEFAULT_TARGET_EMAIL;
 
-  console.log(`${C.bold}${C.burgundy}Estranova — Yazar onay paketi üretici${C.reset}\n`);
+  console.log(`${C.bold}${C.primary}Estranova — Yazar onay paketi üretici${C.reset}\n`);
 
   // Yazar
   const writer = await findWriter(writerSlug);

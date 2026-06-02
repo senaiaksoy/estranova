@@ -181,7 +181,7 @@ ishal, hafif baş ağrısı, kanın hafif sulanma hissi, akşam alındığında
 uyku bölünmesi (uyarıcı etki bildirilmiş bazı hastalarda). Yüksek
 dozlarda yan etki oranı artar.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

@@ -1,4 +1,4 @@
-# Homepage Journey Map Implementation Plan
+﻿# Homepage Journey Map Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -170,32 +170,32 @@ const featuredImage = submenuHeroByRoute[featured.imageKey];
 Bileşen gövdesine şu yapıyı yaz:
 
 ```astro
-<section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-[linear-gradient(180deg,#fff_0%,#fcf8f2_100%)] px-6 py-16 md:py-24">
+<section class="relative isolate overflow-hidden border-t border-primary/10 bg-[linear-gradient(180deg,#fff_0%,#fcf8f2_100%)] px-6 py-16 md:py-24">
   <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
   <div class="pointer-events-none absolute -left-16 top-16 h-72 w-72 rounded-full bg-gold/12 blur-3xl"></div>
   <div class="mx-auto max-w-6xl">
     <header class="mb-12 grid gap-8 md:grid-cols-[0.82fr_1.18fr] md:items-end">
-      <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+      <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-primary">
         <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
         <span class="mx-2 text-gold">—</span>
         {sectionLabel}
       </p>
       <div>
         <h2 class="mb-4 font-serif text-4xl leading-[0.98] tracking-[-0.03em] text-ink md:text-6xl">{title}</h2>
-        <p class="max-w-2xl border-l border-gold/55 pl-5 font-serif text-xl italic leading-relaxed text-burgundy/82">
+        <p class="max-w-2xl border-l border-gold/55 pl-5 font-serif text-xl italic leading-relaxed text-primary/82">
           {lede}
         </p>
       </div>
     </header>
 
     <div class="grid gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
-      <a href={featured.href} class="group relative overflow-hidden rounded-[40px] border border-burgundy/14 bg-white shadow-[0_36px_118px_-72px_rgba(44,22,28,0.42)] ring-1 ring-black/[0.05]">
+      <a href={featured.href} class="group relative overflow-hidden rounded-[40px] border border-primary/14 bg-white shadow-[0_36px_118px_-72px_rgba(44,22,28,0.42)] ring-1 ring-black/[0.05]">
         <!-- featured card -->
       </a>
 
-      <div class="overflow-hidden rounded-[34px] border border-burgundy/12 bg-white shadow-[0_24px_80px_-60px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04]">
+      <div class="overflow-hidden rounded-[34px] border border-primary/12 bg-white shadow-[0_24px_80px_-60px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04]">
         {secondaryItems.map((item) => (
-          <a href={item.href} class="group grid gap-4 border-t border-burgundy/10 px-5 py-5 first:border-t-0 md:grid-cols-[72px_1fr_auto] md:items-center md:px-6">
+          <a href={item.href} class="group grid gap-4 border-t border-primary/10 px-5 py-5 first:border-t-0 md:grid-cols-[72px_1fr_auto] md:items-center md:px-6">
             <!-- secondary row -->
           </a>
         ))}
@@ -229,11 +229,11 @@ Ve secondary satırlarda:
 <p class="mb-1 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-gold-bronze">
   {item.step} · {item.eyebrow}
 </p>
-<h3 class="mb-1 font-serif text-2xl leading-tight tracking-[-0.02em] text-ink transition group-hover:text-burgundy">
+<h3 class="mb-1 font-serif text-2xl leading-tight tracking-[-0.02em] text-ink transition group-hover:text-primary">
   {item.title}
 </h3>
 <p class="max-w-2xl text-sm leading-relaxed text-ink/70">{item.excerpt}</p>
-<span class="text-xs font-bold uppercase tracking-[0.17em] text-burgundy/72">{item.ctaLabel}</span>
+<span class="text-xs font-bold uppercase tracking-[0.17em] text-primary/72">{item.ctaLabel}</span>
 ```
 
 - [ ] **Step 5: Bileşen derlenebilirliğini metinsel olarak kontrol et**
@@ -251,7 +251,7 @@ Expected: `featured`, `secondaryItems`, `submenuHeroByRoute` ve Türkçe CTA met
 Mevcut bloktan şu yapıyı sil:
 
 ```astro
-<section class="relative isolate overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-24">
+<section class="relative isolate overflow-hidden border-t border-primary/10 bg-white px-6 py-16 md:py-24">
   ...
 </section>
 ```
@@ -283,7 +283,7 @@ Mevcut ayraç bloğunu şu yapıya çevir:
     <span class="font-serif text-xl text-gold" aria-hidden="true">❦</span>
     <span class="h-px flex-1 bg-gold/35"></span>
   </div>
-  <p class="max-w-xl font-serif text-lg italic leading-relaxed text-burgundy/78">
+  <p class="max-w-xl font-serif text-lg italic leading-relaxed text-primary/78">
     {homeJourneyIntro.transitionNote}
   </p>
 </div>

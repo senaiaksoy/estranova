@@ -182,7 +182,7 @@ rutin önerisi için kanıt yetersiz.
 orlistat ve bazı kanser tedavileri D vitamini metabolizmasını etkileyebiliyor.
 Düzenli reçeteli ilaç kullanan biri için doz hekim eşliğinde belirlenmeli.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

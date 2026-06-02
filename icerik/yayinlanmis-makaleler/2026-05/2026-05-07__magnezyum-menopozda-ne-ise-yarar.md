@@ -174,7 +174,7 @@ bu yüzden “doğal” diye zamansız ve ölçüsüz kullanmak doğru değildir
 bedende gereksiz rahatsızlık yaratabilir. Yani bir kadında “iyi geldi” denilen bir kullanım,
 başka bir kadında doz veya form nedeniyle bırakma sebebi olabilir.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar

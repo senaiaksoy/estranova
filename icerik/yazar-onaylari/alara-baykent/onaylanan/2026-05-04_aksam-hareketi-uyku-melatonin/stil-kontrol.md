@@ -148,7 +148,7 @@ Yeni eklendi (orijinalde yoktu). Alara'nın editöryal uzmanlık imzasını FAQ'
 | (b) Bilimsel Editör Notu Doç. Dr. Senai Aksoy imzalı | Zorunlu | İmza eklendi | ✓ |
 | (c) `<ArticleAuthorBlock authorSlug="alara-baykent" />` | Zorunlu | Korundu | ✓ |
 | (d) `buildArticleSchemas()` JSON-LD | Zorunlu | Frontmatter'da yapılandırılmış (publishedDate güncellendi: 30 Nisan 2026) | ✓ |
-| (e) Her H2 sonrası ilk paragraf italic lede | Estranova editöryal tipografi (CLAUDE.md HARD CONSTRAINT) | `prose-estranova` CSS'i otomatik italic burgundy serif render eder; gövdede manuel italic eklenmedi (CSS işini yapar). Bullet list / veri yığını ile başlayan H2 yok | ✓ |
+| (e) Her H2 sonrası ilk paragraf italic lede | Estranova editöryal tipografi (CLAUDE.md HARD CONSTRAINT) | `prose-estranova` CSS'i otomatik italic primary serif render eder; gövdede manuel italic eklenmedi (CSS işini yapar). Bullet list / veri yığını ile başlayan H2 yok | ✓ |
 | (f) FAQ 3-5 konuya özgü soru | Zorunlu | 5 soru: yatma saati / yoga / **at binmek (yeni)** / sıcak basması / kromotip | ✓ |
 
 ---

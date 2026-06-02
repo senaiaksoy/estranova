@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * Hub sayfasında "Bu konuda nereden başlamalıyım?" 3-adımlı giriş
  * rehberi.
@@ -46,14 +46,14 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden border-t border-burgundy/10 bg-white px-6 py-16 md:py-20">
-  <div class="pointer-events-none absolute -left-12 top-16 h-44 w-44 rounded-full bg-burgundy/6 blur-3xl"></div>
-  <div class="pointer-events-none absolute right-8 top-10 hidden font-serif text-[8rem] italic leading-none text-burgundy/[0.035] md:block" aria-hidden="true">
+<section class="relative overflow-hidden border-t border-primary/10 bg-white px-6 py-16 md:py-20">
+  <div class="pointer-events-none absolute -left-12 top-16 h-44 w-44 rounded-full bg-primary/6 blur-3xl"></div>
+  <div class="pointer-events-none absolute right-8 top-10 hidden font-serif text-[8rem] italic leading-none text-primary/[0.035] md:block" aria-hidden="true">
     rota
   </div>
   <div class="mx-auto max-w-6xl">
     <header class="mb-12 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end">
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-burgundy">
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-primary">
         {kicker}
       </p>
       <div>
@@ -64,17 +64,17 @@ const {
       </div>
     </header>
 
-    <ol class="overflow-hidden rounded-[38px] border border-burgundy/12 bg-white shadow-[0_28px_90px_-66px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04]">
+    <ol class="overflow-hidden rounded-[38px] border border-primary/12 bg-white shadow-[0_28px_90px_-66px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04]">
       {steps.map((step) => (
-        <li class="border-t border-burgundy/12 first:border-t-0">
+        <li class="border-t border-primary/12 first:border-t-0">
           <a
             href={step.href}
-            class="group grid gap-4 px-5 py-7 transition hover:bg-cream-soft/22 focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/35 focus-visible:ring-offset-2 md:grid-cols-[90px_180px_1fr_auto] md:items-center md:gap-7 md:px-7"
+            class="group grid gap-4 px-5 py-7 transition hover:bg-cream-soft/22 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 md:grid-cols-[90px_180px_1fr_auto] md:items-center md:gap-7 md:px-7"
           >
             <span class="font-serif text-5xl italic leading-none tabular-nums text-gold md:text-6xl">
               {step.step}
             </span>
-            <span class="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-burgundy/75">
+            <span class="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
               <span class="h-px w-7 bg-gold/70"></span>
               <span>{step.label}</span>
             </span>

@@ -153,7 +153,7 @@ bir takvim. **Üçüncüsü** — *"Yan etkiler ve kontrol sıklığı nasıl ol
 tekrarlayan idrar yolu enfeksiyonum varsa bu da değişir mi?"* Bu, takip planını ve eşlik eden
 tabloları konuşmayı sağlıyor.
 
-<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-burgundy">
+<p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
