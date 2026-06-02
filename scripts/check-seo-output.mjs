@@ -9,6 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const DIST_DIR = path.join(ROOT, 'dist');
 const SITE_URL = 'https://estranova.com';
+const PREFERRED_SOURCE_URL = 'https://google.com/preferences/source?q=estranova.com';
 
 let hasError = false;
 
@@ -123,6 +124,29 @@ function getSchemaTypes(schema) {
   return Array.isArray(type) ? type : [type].filter(Boolean);
 }
 
+function hasSchemaType(html, schemaType) {
+  return parseJsonLdBlocks(html).some((schema) => getSchemaTypes(schema).includes(schemaType));
+}
+
+function assertPreferredSourceCta(pathname, html) {
+  if (!hasSchemaType(html, 'Article')) return;
+
+  const preferredSourceLinkCount = [...html.matchAll(/https:\/\/google\.com\/preferences\/source\?q=estranova\.com/gu)]
+    .length;
+  if (preferredSourceLinkCount < 2) {
+    fail(`${pathname} Google kaynak tercihi linkini makale + footer yuzeylerinde icermiyor`);
+  }
+  if (!html.includes('data-preferred-source-surface="article"')) {
+    fail(`${pathname} makale sonu Google kaynak tercihi yuzeyini icermiyor`);
+  }
+  if (!html.includes('data-preferred-source-surface="footer"')) {
+    fail(`${pathname} footer Google kaynak tercihi linkini icermiyor`);
+  }
+  if (!html.includes(PREFERRED_SOURCE_URL)) {
+    fail(`${pathname} Google kaynak tercihi URL'i beklenen hedefle uyusmuyor`);
+  }
+}
+
 async function assertConfiguredRedirects() {
   const redirects = astroConfig.redirects ?? {};
   for (const [source, target] of Object.entries(redirects)) {
@@ -214,6 +238,7 @@ async function main() {
     }
 
     assertJsonLdUrls(pathname, html, canonical);
+    assertPreferredSourceCta(pathname, html);
 
     const owners = canonicalOwners.get(canonical) ?? [];
     owners.push(pathname);

@@ -1,5 +1,6 @@
 ---
 import { featureFlags } from '../../utils/feature-flags';
+import PreferredSourceCTA from './PreferredSourceCTA.astro';
 
 const showCookieTrigger = featureFlags.cookieBannerEnabled;
 ---
@@ -122,6 +123,7 @@ const showCookieTrigger = featureFlags.cookieBannerEnabled;
         <a href="/kullanim-kosullari/" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Kullanım koşulları">KULLANIM KOŞULLARI</a>
         <a href="/yayin-kurulu/" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="Künye">KÜNYE</a>
         <a href="/iletisim/" class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded px-2 py-1" title="İletişim">İLETİŞİM</a>
+        <PreferredSourceCTA variant="footer" />
       </div>
     </nav>
   </div>

@@ -42,6 +42,36 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+    writerSlug: 'bulent-aksoy',
+    approvedAt: '2026-06-01',
+    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; static manifest ve production route uyumu dogrulandi.',
+  },
+  {
+    pathname: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
+    writerSlug: 'ersin-sarac',
+    approvedAt: '2026-06-01',
+    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; static manifest ve production route uyumu dogrulandi.',
+  },
+  {
+    pathname: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
+    writerSlug: 'metin-alis',
+    approvedAt: '2026-06-01',
+    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; 40 sonrasi alt hub arsiv baglantisi, static manifest ve production route uyumu dogrulandi.',
+  },
+  {
+    pathname: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
+    writerSlug: 'alara-baykent',
+    approvedAt: '2026-06-01',
+    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; static manifest ve production route uyumu dogrulandi.',
+  },
+  {
+    pathname: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',
+    writerSlug: 'basak-pelister',
+    approvedAt: '2026-06-01',
+    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; menopoz alt hub otomatik arsiv kapsami, static manifest ve production route uyumu dogrulandi.',
+  },
+  {
     pathname: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
     writerSlug: 'anil-yalmaz',
     approvedAt: '2026-05-26',

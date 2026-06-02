@@ -156,7 +156,8 @@ async function findMenuCoverageIssues() {
       continue;
     }
 
-    if (subHub && !subHub.hasManualArticlePaths && !article.path.startsWith(`${article.sectionPath}/`)) {
+    const articlePrefix = `${article.sectionPath.replace(/\/+$/, '')}/`;
+    if (subHub && !subHub.hasManualArticlePaths && !article.path.startsWith(articlePrefix)) {
       issues.push(`${article.path} -> ${article.sectionPath} otomatik alt menu kapsami disinda`);
       continue;
     }

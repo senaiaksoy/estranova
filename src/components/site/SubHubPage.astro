@@ -56,9 +56,10 @@ const sortByPinnedThenNewest = (
 };
 
 const configuredPathSet = new Set(config.articlePaths ?? []);
+const articlePrefix = `${config.path.replace(/\/+$/, '')}/`;
 const exactArticles = staticArticles
   .filter((article) =>
-    configuredPathSet.size > 0 ? configuredPathSet.has(article.path) : article.path.startsWith(`${config.path}/`),
+    configuredPathSet.size > 0 ? configuredPathSet.has(article.path) : article.path.startsWith(articlePrefix),
   )
   .sort(sortByPinnedThenNewest);
 

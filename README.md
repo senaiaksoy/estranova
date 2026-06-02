@@ -22,15 +22,15 @@ Gerekenler: Node.js 20+, npm
 
 ## Canlıya çıkış öncesi zorunlu kontroller
 
-1. Tip kontrol:
-   `npm run lint`
-2. Editoryal / compliance kapısı:
-   `npm run compliance`
-3. Production indexing açık build:
-   PowerShell:
-   `$env:PUBLIC_LAUNCH_MODE='production'; npm run build`
-4. Yerel smoke preview:
+1. Tüm kalite kapıları:
+   `npm run build:ci`
+2. Yerel smoke preview:
    `npm run preview -- --host 0.0.0.0 --port 4322`
+
+`build:ci`; Astro sync, TypeScript lint, compliance, sıkı yayın bütünlüğü denetimi,
+prebuild kontrolleri (encoding / renk token / editoryal lexicon), production build
+ve SEO output audit zincirini birlikte çalıştırır. Google kaynak tercihi CTA'sı da
+SEO audit içinde makale sonu ve footer yüzeyleriyle doğrulanır.
 
 ## Deploy notları
 
@@ -40,4 +40,5 @@ Gerekenler: Node.js 20+, npm
 - Cloudflare production build env: `PUBLIC_LAUNCH_MODE=production`
 - Yayın bütünlüğü denetimi: `npm run articles:audit`
 - Sıkı denetim: `npm run articles:audit:strict`
+- SEO / canonical / Preferred Source denetimi: `npm run seo:audit`
 - Sitemap ve RSS üretimi build sırasında otomatik yapılır.

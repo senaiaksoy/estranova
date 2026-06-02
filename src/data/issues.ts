@@ -145,7 +145,7 @@ export const issue01: Issue = {
   editorColumnSlug: 'mayis-2026',
   coverDossierSlug: '2026-05-uyuyamadigimiz-geceler',
   releaseDate: '2026-05-01',
-  status: 'current',
+  status: 'archived',
 };
 
 /**
@@ -175,7 +175,7 @@ export const issue02: Issue = {
   editorColumnSlug: 'haziran-2026',
   coverDossierSlug: '2026-06-guc-esigi',
   releaseDate: '2026-06-01',
-  status: 'upcoming',
+  status: 'current',
 };
 
 /** Tüm sayılar — yeni-eski sırayla (Sayı 0 EN ALTTA arşiv olarak) */

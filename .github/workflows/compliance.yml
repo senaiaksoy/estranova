@@ -1,4 +1,4 @@
-name: Compliance Check
+name: Quality Gates
 
 on:
   push:
@@ -11,12 +11,16 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: npm
 
-      - name: Run compliance script
-        run: node scripts/compliance-check.mjs
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run quality gates
+        run: npm run build:ci

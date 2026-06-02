@@ -11,7 +11,7 @@ Kapsam:
 Kapsam dışı:
 - `docs/activation-checklist.md` içindeki üyelik, ödeme, paywall ve PDF/audio aktivasyonu
 
-Son güncelleme: 6 Mayıs 2026
+Son güncelleme: 1 Haziran 2026
 
 ---
 
@@ -44,10 +44,11 @@ Bu üç madde kapanmadan "tam hazır" denmemeli.
 
 ## Yayın Öncesi Teknik Kontrol
 
-- [ ] `npm run lint`
-- [ ] `npm run build`
+- [ ] `npm run build:ci`
+- [ ] Sıkı yayın bütünlüğü denetiminde RSS, approval ve alt menü/arşiv listeleri temiz görünüyor.
 - [ ] Build sonunda `/sitemap-index.xml`, `/rss.xml` ve `/robots.txt` üretildiğini kontrol et.
 - [ ] Canonical URL'lerin `https://estranova.com` üstünden üretildiğini kontrol et.
+- [ ] SEO audit içinde Google kaynak tercihi CTA'sının makale sonu + footer yüzeylerinde doğrulandığını kontrol et.
 - [ ] 404 sayfası, ana sayfa, bir hub sayfası ve bir makale sayfasını preview ortamında aç.
 
 Önerilen kontrol yüzeyleri:
@@ -76,6 +77,7 @@ Bu üç madde kapanmadan "tam hazır" denmemeli.
 - [ ] `/rss.xml` açılıyor ve güncel makaleleri içeriyor.
 - [ ] Sitemap içinde yeni static article route'ları görünüyor.
 - [ ] Sosyal paylaşım için ana sayfa ve en az 2 makalede `og:image` çıktısını kontrol et.
+- [ ] Makale sonundaki Google kaynak tercihi linki `https://google.com/preferences/source?q=estranova.com` hedefine gidiyor.
 
 ---
 
@@ -113,6 +115,7 @@ Yayın anında en az şu değerler gözden geçirilmelidir:
 - [ ] `robots.txt`, `rss.xml`, `sitemap-index.xml` canlı domainde tekrar aç.
 - [ ] Mobil görünümde navbar, hero ve makale sayfası tipografisini kontrol et.
 - [ ] Form veya localStorage yüzeylerinde beklenmedik JS hatası var mı console üzerinden kontrol et.
+- [ ] GA4 içinde `add_preferred_source_click` event'inin makale ve footer yüzeylerinden geldiğini kontrol et.
 - [ ] Ekip içinde bir "ilk okur turu" yapıp dil, kırık link ve görsel yüklenme notlarını topla.
 
 ---

@@ -97,7 +97,7 @@ export const dossiers: MonthlyDossier[] = [
         readingMinutes: 7,
       },
       ],
-    status: 'current',
+    status: 'archived',
   },
   {
     slug: '2026-06-guc-esigi',
@@ -171,7 +171,7 @@ export const dossiers: MonthlyDossier[] = [
         readingMinutes: 6,
       },
     ],
-    status: 'upcoming',
+    status: 'current',
   },
 ];
 
