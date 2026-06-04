@@ -44,25 +44,47 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 const DR_AKSOY_PERSON_ID = 'https://senaiaksoy.net/#person';
 
+// Schema @id ve entity URL'leri için trailing-slash'siz kanonik taban.
+// (siteUrl `.../` ile biter; `${siteUrl}/#id` çift slash üretirdi ve
+// senaiaksoy.net'in referans verdiği @id ile birebir eşleşmezdi.)
+const siteBase = siteUrl.replace(/\/+$/, '');
+
 const webSiteSchema: JsonLdSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': `${siteUrl}/#website`,
+  '@id': `${siteBase}/#website`,
   name: 'Estranova',
   url: siteUrl,
   inLanguage: 'tr-TR',
   description,
-  publisher: { '@id': `${siteUrl}/#organization` },
+  publisher: { '@id': `${siteBase}/#organization` },
 };
 
 const organizationSchema: JsonLdSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': `${siteUrl}/#organization`,
+  '@type': 'NewsMediaOrganization',
+  '@id': `${siteBase}/#organization`,
   name: 'Estranova',
+  alternateName: 'Eşik',
   url: siteUrl,
-  logo: `${siteUrl}/favicon.svg`,
+  logo: `${siteBase}/favicon.svg`,
   description: '40+ kadın sağlığına odaklanan bağımsız editoryal sağlık platformu.',
+  foundingDate: '2026',
+  inLanguage: 'tr-TR',
+  knowsAbout: [
+    'Perimenopoz',
+    'Menopoz',
+    'Postmenopoz',
+    'Hormon replasman tedavisi',
+    '40 sonrası kadın sağlığı',
+    'Hormonal geçiş',
+  ],
+  publishingPrinciples: `${siteBase}/editoryal-politika/`,
+  // sameAs — yalnızca doğrulanmış resmi hesaplar (yanlış hesap = yanlış AI entity birleşmesi)
+  sameAs: [
+    'https://www.instagram.com/estranovaofficial/',
+    'https://senaiaksoy.net',
+  ],
   reviewedBy: { '@id': DR_AKSOY_PERSON_ID },
 };
 
