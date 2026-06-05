@@ -476,6 +476,33 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Çünkü bazı çevrimiçi ürünlerde etiket iddiası ile gerçek içerik arasında ciddi uyumsuzluklar bildirilmiştir. Kutu parlak görünebilir; ama bu, içeriğin doğru olduğu anlamına gelmez. Bu yüzden ürün kalitesi, lot numarası, analiz sertifikası, üçüncü taraf test ve yerel yasal durum, molekül seçimi kadar önemli bir güvenlik başlığıdır.',
     },
   ],
+  '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': [
+    {
+      question: 'GHK-Cu menopoz cildi için kanıtlanmış bir tedavi midir?',
+      answer:
+        'Hayır. GHK-Cu için cilt onarımı, kolajen ve yara iyileşmesi alanında ilgi çekici laboratuvar ve küçük insan verileri vardır; ancak menopoz cildinde doğrudan denenmiş güçlü bağımsız klinik çalışma yoktur. Bu nedenle tedavi gibi değil, topikal cilt bakımında beklentisi sınırlı bir yardımcı içerik gibi okunmalıdır.',
+    },
+    {
+      question: 'GHK-Cu içeren topikal serum veya krem kullanmak makul olabilir mi?',
+      answer:
+        'Bazı kişiler için makul olabilir; özellikle ürün iyi formüle edilmişse ve iddiası cilt görünümünü desteklemekle sınırlıysa. Yine de cilt bariyeri hassas, rosacea eğilimi olan veya yoğun retinoid/asit kullanan kişilerde tahriş riski dikkate alınmalıdır. Güneş koruması, bariyer bakımı ve dermatolojik değerlendirme temel adımların yerini tutmaz.',
+    },
+    {
+      question: 'GHK-Cu enjeksiyonu neden daha riskli bir başlık?',
+      answer:
+        'Çünkü enjeksiyon için yayımlanmış güçlü insan klinik çalışması, farmakokinetik veri ve uzun dönem güvenlik haritası yoktur. Ayrıca gri kanaldan edinilen peptidlerde sterilite, endotoksin, doz sapması ve içerik doğruluğu gibi ek riskler bulunabilir. Topikal kozmetik güvenlik bilgisi enjeksiyon güvenliği anlamına gelmez.',
+    },
+    {
+      question: 'Bakır içermesi toksisite açısından endişe yaratır mı?',
+      answer:
+        'Topikal kozmetik kullanımda sistemik bakır yükü genellikle ana kaygı değildir; olası sorunlar daha çok kızarıklık, batma, kaşıntı veya hassasiyet gibi lokal reaksiyonlardır. Ancak bakır metabolizmasıyla ilgili özel hastalığı olanlar, bakır alerjisi öyküsü bulunanlar, gebelik veya emzirme dönemindekiler daha dikkatli değerlendirilmelidir.',
+    },
+    {
+      question: 'GHK-Cu reklamlarında hangi iddialara özellikle temkinli bakılmalı?',
+      answer:
+        '“Genetik reset”, “sistemik gençleşme”, “kolajeni geri kazandırır”, “menopoz cildini tersine çevirir” veya enjeksiyonla geniş sağlık faydası vaat eden cümleler kanıt sınırını aşar. Daha güvenilir dil, GHK-Cu’yu topikal kozmetik bakımda olası ve sınırlı bir destek olarak tarif eder; kesin sonuç veya tedavi vaadi kurmaz.',
+    },
+  ],
   '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/': [
     {
       question: 'Epitalon menopozu geciktirir veya hormonal geçişi yumuşatır mı?',

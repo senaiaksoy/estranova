@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-06-05',
+    note: 'KC editor direct approval: GHK-Cu ve menopoz cildi referans dosyasi, ekli arastirma raporu temel alinarak topikal kozmetik olasilik, enjeksiyon veri boslugu, FDA 503A Mayis 2026 durumu ve pazarlama-kanit ayrimi ekseninde yayina alindi; kullanici tarafindan uretilen tekstil atolyeli gorsel hero/card/byline yuzeylerine baglandi.',
+  },
+  {
     pathname: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
     writerSlug: 'bulent-aksoy',
     approvedAt: '2026-06-01',

@@ -216,6 +216,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/bp-nad-plus.webp',
     alt: 'İstanbul evi cam tavanlı winter garden öğleden sonra ışığında üç yaşıt kadın (62-68) yaşam dolu olgunluk sahnesi; soldaki warm honey-blonde dalgalı saç, soft cream cashmere ve camel pant içinde küçük terracotta saksıda orkide ile özenle ilgileniyor; ortadaki koyu kestane chignon, sage-green ipek bluz ve cream linen pant içinde elinde cam çay bardağı warm gülümsüyor; sağdaki warm mahogany medium-length wavy bob, bordo cashmere kazak içinde kucağında açık botanik dergisi parmak sayfada konuşuyor; bakımlı boyalı saçlar (gri/silver YOK), graceful natural mature cilt; walnut yan masada porselen Türk kahvesi ve tabaklarda lokum + halved nar + incir, cam tavandan dappled afternoon sunlight, fiddle leaf fig + monstera + birds-of-paradise + pampas grass + terracotta saksılar, white-cream wicker mobilya + sage yastıklar; Epitalon, telomer biyolojisi ve hücresel yaşlanma yorumu için doğa içinde olgun yaş alma teması',
   },
+  '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
+    src: '/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg',
+    alt: 'Aydınlık bir tekstil atölyesinde transparan kumaş ve bakır tonlu iplikleri inceleyen 50 yaş civarı kadın; GHK-Cu, kolajen ve menopozda cilt biyolojisi temasını editoryal bir dille taşıyan görsel',
+  },
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
@@ -410,6 +414,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
     alt: 'Kış bahçesinde olgun yaş alma ve doğayla bağ atmosferi; epitalon ve telomer biyolojisi yazısı için kart görseli',
+  },
+  '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
+    src: '/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg',
+    alt: 'Aydınlık tekstil atölyesinde transparan kumaş ve bakır iplikleri inceleyen olgun kadın; GHK-Cu ve menopoz cildi yazısı için kart görseli',
   },
   '/zamansiz-yasam/d-vitamini-rehberi/': {
     src: '/images/library/editorial/zy-vitaminler.webp',

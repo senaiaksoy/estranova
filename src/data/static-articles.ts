@@ -776,6 +776,28 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['NMN', 'NR', 'NAD+', 'takviye', 'menopoz', 'güvenlik'],
   },
   {
+    path: '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/',
+    title: 'GHK-Cu ve Menopoz: Bakır Peptid, Cilt Yaşlanması ve Kanıt Sınırı',
+    description:
+      'GHK-Cu, kolajen ve onarım biyolojisi açısından ilgi çekici bir bakır peptid; ancak menopoz cildi, enjeksiyon kullanımı ve longevity iddiaları için insan kanıtı hâlâ sınırlı. Bu referans dosyası topikal kozmetik olasılığı, güvenlik sınırı ve pazarlama dilini kanıt düzeyiyle ayırır.',
+    publishedDate: '5 Haziran 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Bilimsel Pencere',
+    sectionPath: '/bilimsel-pencere/',
+    keywords: [
+      'GHK-Cu',
+      'bakır peptid',
+      'Copper Tripeptide-1',
+      'menopoz cildi',
+      'kolajen',
+      'cilt yaşlanması',
+      'topikal peptid',
+      'enjeksiyon peptid',
+      'longevity',
+      'kanıt düzeyi',
+    ],
+  },
+  {
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
     title: 'NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe',
     description: 'NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, metabolizma, biliş, uzun yaşam ve fertilite faydası için insan kanıtı hâlâ sınırlı.',
