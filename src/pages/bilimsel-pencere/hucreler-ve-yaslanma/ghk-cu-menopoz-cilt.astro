@@ -55,7 +55,7 @@ const articleSchemas = buildArticleSchemas({
   pathname,
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
-  image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
+  image: hero.src.startsWith('http') ? hero.src : `${siteUrl.replace(/\/$/, '')}${hero.src}`,
   keywords: [
     'GHK-Cu',
     'bakır peptid',
