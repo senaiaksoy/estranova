@@ -777,13 +777,13 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
-    title: 'NAD+ ve Hücresel Yaşlanma — Gelişmekte Olan Bilim',
-    description: 'NAD+ biyolojisi, yaşlanma ilişkisi ve erken evre insan araştırmalarını kanıt düzeyleriyle açıklayan bilimsel derleme.',
-    publishedDate: '14 Nisan 2026',
+    title: 'NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe',
+    description: 'NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, metabolizma, biliş, uzun yaşam ve fertilite faydası için insan kanıtı hâlâ sınırlı.',
+    publishedDate: '5 Haziran 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',
     sectionPath: '/bilimsel-pencere/',
-    keywords: ['NAD+', 'hücresel yaşlanma', 'sirtuin', 'biohacking', 'menopoz'],
+    keywords: ['NAD+', 'NMN', 'NR', 'hücresel yaşlanma', 'sirtuin', 'fertilite', 'menopoz'],
   },
   {
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',

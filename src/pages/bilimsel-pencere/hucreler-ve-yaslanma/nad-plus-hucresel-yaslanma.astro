@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -23,31 +23,32 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/']!;
 
 const tocEntries = [
-  { id: 'mekanizma-temel', label: 'Mekanizmanın Temeli — NAD+ Hücrede Ne Yapar?' },
-  { id: 'sirtuin', label: 'Sirtuin Yolakları — Yaşlanma Hipotezinin Kalbi' },
-  { id: 'parp-cd38', label: 'PARP ve CD38 — NAD+ Tüketicileri' },
-  { id: 'sebep-sonuc', label: 'Yaşla NAD+ Düşüşü — Sebep mi Sonuç mu?' },
-  { id: 'insan-calismalari', label: 'İnsan Çalışmalarının Bugünkü Durumu' },
-  { id: 'hayvan-insan', label: 'Hayvan Modellerinden İnsana — Çeviri Sorunu' },
-  { id: 'pratik-sonuc', label: 'Pratik Sonuçlar — Klinik Sınırlar' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'once-soru', label: 'Önce Soru — NAD+ Bize Neyi Söylüyor?' },
+  { id: 'biyoloji', label: 'Biyoloji Sağlam — Peki Klinik Sonuç?' },
+  { id: 'yasla-dusus', label: 'Yaşla Düşüş Hipotezi — İnsan Verisi Neden Karışık?' },
+  { id: 'nmn-nr', label: 'NMN ve NR — Kanı Yükseltmek Başka, Sonuç Başka' },
+  { id: 'fertilite', label: 'Fertilite İddiaları — Fareden Kadına Geçmeyen Basamak' },
+  { id: 'guvenlik', label: 'Güvenlik ve Düzenleme — Kısa Vade Rahat, Uzun Vade Belirsiz' },
+  { id: 'urun-kalitesi', label: 'Ürün Kalitesi — Etiket Her Zaman İçerik Değildir' },
+  { id: 'karar', label: 'Bugün Kararı Nasıl Çerçeveleriz?' },
+  { id: 'sss', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'NAD+ ve Hücresel Yaşlanma — Mekanizmadan Pratik Sınırlara';
+const articleTitle = 'NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe';
 const articleDescription =
-  'NAD+ hücresel yaşlanma araştırmalarının merkezinde — sirtuin, PARP ve CD38 yolakları üzerinden mitokondriyal enerji ve DNA hasar yanıtının kalbinde duruyor. Bu yazı mekanizmayı net açıyor; insan çalışmalarının kanıt seviyesini dürüstçe yorumluyor; hayvan-insan çeviri sorununu adıyla anıyor; ve klinik karşılığı için pratik sınırları çiziyor — pazarlama değil, eğitim.';
+  'NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, metabolizma, biliş, uzun yaşam ve fertilite faydası için insan kanıtı hâlâ sınırlı. Senai Aksoy, mekanizma ile klinik sonuç arasındaki mesafeyi sakin ve kanıta duyarlı biçimde açıyor.';
 const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
-  publishedDate: '2 Mayıs 2026',
+  publishedDate: '5 Haziran 2026',
   pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
-  keywords: ['NAD+', 'NMN', 'NR', 'sirtuin', 'PARP', 'CD38', 'mitokondri', 'hücresel yaşlanma', 'epigenetik yaşlanma', 'menopoz'],
+  keywords: ['NAD+', 'NMN', 'NR', 'sirtuin', 'CD38', 'mitokondri', 'hücresel yaşlanma', 'fertilite', 'menopoz', 'uzun yaşam'],
   faqItems,
 
   siteUrl,
@@ -65,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Bilimsel Pencere · Hücreler ve Yaşlanma"
-      title="NAD+ ve Hücresel Yaşlanma — Mekanizmadan Pratik Sınırlara"
+      title="NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -74,8 +75,8 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
-        publishedDate="2 Mayıs 2026"
-        readingMinutes={9}
+        publishedDate="5 Haziran 2026"
+        readingMinutes={10}
         imageSrc="/images/library/editorial/bp-nad-plus.webp"
         imageAlt="Cam tavanlı kış bahçesinde doğayla iç içe sohbet eden olgun kadınlar; NAD+ ve hücresel yaşlanma için editoryal görsel"
       />
@@ -89,361 +90,315 @@ const articleSchemas = buildArticleSchemas({
       </div>
 
       <ArticleSummary title="Kısa Özet">
-<p>
-          NAD+ hücresel yaşlanma araştırmalarının merkezinde duran bir koenzim — mitokondriyal
-          enerji üretimi, DNA hasar yanıtı ve epigenetik düzenlemenin kalbinde rol oynuyor.
-          Sirtuin, PARP ve CD38 yolakları üzerinden yaşlanmanın temel hipotezleri NAD+'a
-          bağlanıyor. Mekanizma sağlam zeminde; ama <em>"NAD+'ı yükseltirsek yaşlanmayı
-          geri çevirir miyiz?"</em> sorusunun klinik cevabı henüz alınmadı. Bu yazı
-          mekanizmayı net açıyor, insan çalışmalarının kanıt seviyesini dürüstçe yorumluyor,
-          hayvan-insan çeviri sorununu adıyla anıyor ve klinik karşılığı için pratik
-          sınırları çiziyor. Klinik takviye yorumu için
-          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi/" class="font-semibold text-primary underline decoration-gold/40 underline-offset-4 hover:decoration-primary">
-          NAD+ takviyesi yazısı</a>'na göz atılabilir.
+        <p>
+          NAD+ öncülleri, özellikle NMN ve NR, insanda kandaki NAD+ düzeyini yükseltebilir.
+          Bugün için en sağlam cümle bu. Ama bana gelen soru hiçbir zaman sadece bu olmuyor;
+          insanlar haklı olarak "peki bu benim hayatımda ne değiştirir?" diye soruyor.
+          Daha zor cümle ise şu: Bu yükselmenin kas gücü,
+          metabolizma, biliş, uzun yaşam veya yumurta kalitesi gibi klinik sonuçlara
+          tutarlı biçimde dönüştüğünü henüz bilmiyoruz. Bu yazı, mekanizmanın heyecanını
+          inkâr etmeden, pazarlama dilinin atladığı boşluğu açıyor: biyobelirteç artışı
+          ile gerçek sağlık kazanımı aynı şey değildir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="mekanizma-temel">Mekanizmanın Temeli — NAD+ Hücrede Ne Yapar?</h2>
+        <h2 id="once-soru">Önce Soru — NAD+ Bize Neyi Söylüyor?</h2>
         <p>
-          NAD+ — açık adıyla nikotinamid adenin dinükleotid — hemen her hücrede bulunan ve
-          enerji metabolizmasının merkezinde duran bir koenzim <Evidence level={5} />. İki
-          ana formu var: <strong>NAD+</strong> (oksitlenmiş) ve <strong>NADH</strong>
-          (indirgenmiş). İkisi arasındaki dönüşüm hücredeki neredeyse tüm metabolik
-          reaksiyonların elektron taşıyıcı zincirini oluşturuyor.
+          Bilgi, belirsizliği azaltır; NAD+ alanında da ilk işimiz budur. Çünkü bu konuda
+          okuduğunuz çoğu cümle çok hızlı büyür: bir molekül anlatılır, birkaç satır sonra
+          sanki gençlik vaadine dönüşür.
         </p>
         <p>
-          Mitokondride NADH elektronlarını elektron taşıma zincirine veriyor; bu süreç
-          ATP — hücrenin enerji parası — üretiminin temelini kuruyor <Evidence level={5} />.
-          Hücre dışında ise NAD+ doğrudan substrat olarak kullanan üç önemli enzim ailesi
-          var: sirtuinler, PARP'lar ve CD38. Bu yüzden NAD+ sadece <em>"enerji molekülü"</em>
-          değil, aynı zamanda <strong>sinyal molekülü</strong>: yolakların açık veya kapalı
-          olmasını belirliyor.
+          NAD+ — nikotinamid adenin dinükleotid — hücrenin enerji üretiminde ve onarım
+          yollarında merkezi rol oynayan bir koenzimdir <Evidence level={5} />. Mitokondride
+          elektron taşıma zincirine katılır; DNA hasar yanıtında bazı enzimlere substrat
+          olur; sirtuin denen enzim ailesinin çalışması için gerekir. Bu yüzden yaşlanma
+          biyolojisiyle ilgilenen herkesin masasında NAD+ vardır.
         </p>
         <p>
-          Hücrenin NAD+ havuzu üç kaynaktan dolduruluyor: (1) De novo sentez (triptofan
-          aminoasidinden); (2) Preiss-Handler yolu (niasinden); (3) <strong>Salvage yolu</strong>
-          — kullanılmış nikotinamid molekülünün geri dönüştürülmesi, yetişkin dokularda
-          baskın olan yol <Evidence level={5} />. NMN ve NR takviyeleri bu salvage yoluna
-          giriyor — yani <em>"yeni NAD+ üretmek"</em> değil, <em>"geri dönüşümü hızlandırmak"</em>
-          mantığıyla çalışıyorlar. Bu önemli bir nüans; pazarlama mesajları çoğu zaman
-          atlıyor.
+          Benim bu başlıkta okuyana ilk söylediğim şey şu olur: heyecanı küçümsemeyelim,
+          ama kanıtın sınırını da büyütmeyelim. NAD+ alanında sorun çoğu zaman molekülün
+          önemsiz olması değil; önemli bir molekülden fazla hızlı klinik sonuç çıkarmamızdır.
+          Soruyu orada yavaşlatmak gerekir. Hücre için önemli olan, sizin için otomatik
+          olarak doğru seçenek olmayabilir.
         </p>
 
-        <h2 id="sirtuin">Sirtuin Yolakları — Yaşlanma Hipotezinin Kalbi</h2>
+        <h2 id="biyoloji">Biyoloji Sağlam — Peki Klinik Sonuç?</h2>
         <p>
-          Sirtuinler (SIRT1-SIRT7) NAD+'ı substrat olarak kullanan deasetilaz enzim ailesi
-          <Evidence level={5} />. Histon ve histon dışı proteinleri deasetile ediyorlar;
-          bu da <strong>epigenetik düzenleme</strong>, mitokondriyal biyogenez, DNA tamiri
-          ve oksidatif stres yanıtı gibi yolakları kontrol ediyor. Sirtuin yolu, kalori
-          kısıtlamasının bilinen yaşam-uzatıcı etkilerinin moleküler aracılarından biri
-          olarak öne çıkıyor (özellikle SIRT1 ve SIRT3) <Evidence level={4} />.
+          Hücre biyolojisi tarafında tablo güçlüdür: NAD+, redoks dengesi, mitokondriyal
+          enerji, DNA onarımı ve enflamasyonla ilişkili birçok hatta yer alır. Ama klinikte
+          soru daha sade ve daha zor: okuyan kişinin sağlığına ölçülebilir bir katkı var mı?
+          Laboratuvar masasından günlük hayata geçerken asıl kırılma burada başlar.
         </p>
         <p>
-          Hipotez şu: NAD+ düştüğünde sirtuinler yeterince çalışmıyor; bu da epigenetik
-          değişikliklere ve yaşlanma fenotiplerine yol açıyor. NAD+'ı yükselterek sirtuin
-          aktivitesini geri kazandırmak — bu, anti-aging araştırmalarının ana umutlarından
-          biri. Hayvan modellerinde (özellikle yaşlı farelerde) bu yaklaşımla bazı yaşlanma
-          parametrelerinde geri dönüş gösterilmiş <Evidence level={4} />.
+          Sirtuinler, PARP enzimleri ve CD38, NAD+ tartışmasının üç ana kapısıdır
+          <Evidence level={4} />. Sirtuinler metabolizma ve epigenetik düzenleme ile
+          ilişkilidir. PARP enzimleri DNA hasar yanıtında NAD+ kullanır. CD38 ise NAD+
+          tüketen bir enzim olarak yaşlanma ve düşük düzeyli enflamasyon tartışmalarında
+          sık anılır.
         </p>
         <p>
-          Ama dikkat: sirtuin yolakları doku-spesifik çalışıyor. SIRT1 karaciğerde,
-          SIRT3 kasta, SIRT6 hipotalamusta farklı işlevler taşıyor. Tek bir takviyenin
-          tüm dokularda aynı yarara yol açması beklenmemeli — ve insan çalışmalarında
-          gerçekten de hep aynı yönde sonuç çıkmıyor.
-        </p>
-
-        <h2 id="parp-cd38">PARP ve CD38 — NAD+ Tüketicileri</h2>
-        <p>
-          NAD+ havuzunu dolduran kaynaklar kadar, onu <em>tüketen</em> enzimler de
-          dengeyi belirliyor. İki önemli aktör: PARP (poli-ADP-riboz polimeraz) ve CD38.
+          Bu mekanizma çizgisi, hayvan çalışmalarında oldukça etkileyici sonuçlar üretmiştir
+          <Evidence level={4} />. Yaşlı farelerde NAD+ öncülleriyle mitokondri, kas,
+          metabolizma ve üreme hücresi kalitesi üzerine olumlu sinyaller görülmüştür.
+          Ancak buradan insana geçerken yol kısalmaz; aksine daha dikkatli yürümek gerekir.
         </p>
         <p>
-          <strong>PARP'lar</strong> DNA hasar yanıtının ana enzimleri; NAD+'ı substrat
-          olarak kullanıp hasar bölgelerine ADP-riboz zincirleri ekliyorlar
-          <Evidence level={5} />. Yaşlanmayla birlikte DNA hasar yükü artıyor; PARP
-          aktivitesi de paralel olarak yükseliyor. Bu durum NAD+ havuzunu tüketiyor;
-          sonuç olarak sirtuin gibi diğer NAD+ tüketicileri yetersiz substrata kalıyor.
-          Bu mekanizma <em>"yaşlanmanın NAD+ açıklaması"</em>nın temel taşlarından biri.
-        </p>
-        <p>
-          <strong>CD38</strong> bağışıklık hücrelerinde ve diğer dokularda bulunan bir
-          NADaz/glikohidrolaz enzimi; yaşla aktivitesi belirgin biçimde artıyor
-          <Evidence level={4} />. Kronik düşük düzeyli iltihabi yük (sıklıkla
-          <em>iltihaplı yaşlanma</em> olarak anılıyor) CD38'i tetikliyor; bu da NAD+'ın
-          tüketilmesine yol açıyor. CD38 inhibisyonu hayvan çalışmalarında NAD+ düzeylerini
-          ve mitokondriyal işlevi belirgin biçimde iyileştiriyor — ama insan denemeleri
-          henüz erken aşamada.
-        </p>
-        <p>
-          Yaşlanan dokularda PARP ve CD38 birlikte değerlendirildiğinde NAD+ tüketim
-          baskısının nasıl yükseldiği görülüyor. Bu yüzden <em>"NAD+'ı doldurmak"</em>
-          yaklaşımı kadar <em>"NAD+'ı tüketenleri kontrol etmek"</em> yaklaşımı da
-          ilgi görüyor; ikisi farklı ilaç hedefleri.
+          Çünkü klinik fayda, mekanizmanın varlığından değil, insan çalışmalarındaki sert
+          sonuçlardan anlaşılır: daha az hastalık, daha iyi fonksiyon, daha güvenli uzun
+          dönem kullanım, daha iyi yaşam kalitesi. NAD+ alanında bu sonuçların çoğu hâlâ
+          erken aşamadadır. Bu, bilimi küçültmez; yalnızca cümlemizi daha dürüst kurdurur.
         </p>
 
-        <h2 id="sebep-sonuc">Yaşla NAD+ Düşüşü — Sebep mi Sonuç mu?</h2>
+        <h2 id="yasla-dusus">Yaşla Düşüş Hipotezi — İnsan Verisi Neden Karışık?</h2>
         <p>
-          Bu yazıdaki en kritik bilimsel soru: <strong>NAD+ düşüşü yaşlanmanın bir
-          <em>sebebi</em> mi, yoksa bir <em>sonucu</em> mu?</strong> Cevabı bilmek
-          tedavi stratejisini bütünüyle değiştiriyor.
+          NAD+ pazarlamasının en güçlü cümlesi genellikle şudur: yaşla NAD+ düşer, o halde
+          yükseltmek gerekir. Bu cümle kulağa düzgün gelir; ama insan verisi bu kadar düz
+          değildir. Tıpta bazen en düzgün görünen cümle, en çok ayrıntı isteyen cümledir.
         </p>
         <p>
-          <strong>"Sebep" hipotezi:</strong> NAD+ düşüşü yaşlanma süreçlerini başlatıyor
-          — sirtuinler yetmiyor, PARP'lar tükeniyor, mitokondri zayıflıyor, hücreler
-          yaşlanma fenotipine giriyor. Bu hipotez doğruysa NAD+'ı yükseltmek <em>yaşlanmayı
-          yavaşlatabilir</em>. Bu hipotezi savunan araştırmacılar son yıllarda öne çıkıyor.
+          Kemirgenlerde yaşla doku NAD+ düzeylerinin azaldığını gösteren veri güçlüdür
+          <Evidence level={4} />. Cilt, kas ve bazı dokularda insan verileri de düşüş
+          sinyali verebilir. Fakat kan NAD+ ölçümleri, özellikle yöntem iyi standardize
+          edildiğinde, yaşla her zaman belirgin biçimde düşmeyebilir <Evidence level={3} />.
         </p>
         <p>
-          <strong>"Sonuç" hipotezi:</strong> NAD+ düşüşü yaşlanmanın eşlik eden bir sonucu;
-          asıl mekanizmalar başka yerlerde (telomer kısalması, mitokondriyal mutasyonlar,
-          kök hücre yorgunluğu, kronik iltihap). NAD+'ı yükseltmek bu durumda
-          <em>belirti tedavisi</em> olur; uzun vadeli yaşam veya sağlık etkisi sınırlı kalır.
+          2026'da yayımlanan geniş bir insan kohort analizi, tam kanda NAD+ düzeyinin
+          yaş ve bazı yaşam tarzı müdahaleleriyle beklenenden daha sabit kalabildiğini
+          gösterdi <Evidence level={3} />. Aynı çalışma, NR verildiğinde kandaki NAD+
+          artışını da doğruladı. Bu iki bulgu birlikte okunmalıdır: kan NAD+'ı her zaman
+          iyi bir yaşlanma saati olmayabilir; ama takviyeye yanıt olarak yükselebilir.
         </p>
         <p>
-          Şu anda elimizdeki kanıt iki hipotezi de tamamen reddedemiyor — gerçek muhtemelen
-          ikisinin karışımı: NAD+ bazı yaşlanma süreçlerinde nedensel rol oynuyor, bazılarında
-          sonuç olarak değişiyor <Evidence level={3} />. Bu belirsizlik — pazarlama
-          mesajlarının atladığı kritik nokta — klinik beklentiyi gerçekçi tutmak için
-          önemli.
-        </p>
-
-        <h2 id="insan-calismalari">İnsan Çalışmalarının Bugünkü Durumu</h2>
-        <p>
-          NMN ve NR için insan çalışmaları son 5-7 yılda hızla arttı; ancak literatür hâlâ
-          erken aşama. Mevcut çalışmaların büyük çoğunluğu <strong>küçük örneklemli</strong>
-          (genelde 20-100 katılımcı), <strong>kısa süreli</strong> (4-12 hafta) ve
-          <strong>biyobelirteç odaklı</strong>: kandaki NAD+ artışı, bazı metabolik
-          markerlar, tek bir doku örneğinde sirtuin aktivitesi <Evidence level={3} />.
-        </p>
-        <p>
-          Sonuçlar karmaşık: bazı çalışmalarda kandaki NAD+ artışı net gösterilmiş;
-          bazılarında değil. Bazı çalışmalarda kas işlevi, kan basıncı veya insülin
-          duyarlılığında küçük iyileşmeler bildirilmiş; bazılarında plasebodan farkı
-          gösterilememiş. Doku-spesifik etkiler heterojen — örneğin kasta etkili olduğu
-          gösterilen NMN, beyinde aynı performansı vermiyor olabilir <Evidence level={2} />.
-        </p>
-        <p>
-          <strong>Uzun dönem klinik sonuç</strong> (yaşam süresi, kalp-damar olayları,
-          kanser insidansı, demans) için kontrollü ve geniş örneklemli insan verisi
-          <em>henüz yok</em>. Bunu <em>"belki yararsız"</em> demek değil
-          <em>"belki yararlı, henüz bilemiyoruz"</em> demek doğru. Bilim açısından önemli
-          fark.
-        </p>
-        <p>
-          Menopoz sonrası kadınlara <em>özel</em> NMN/NR çalışması ise pratikte yok
-          denecek kadar az <Evidence level={2} />; bu popülasyona dair kanıtlar genel
-          yetişkin çalışmalarından ekstrapole ediliyor — bu da bilimsel olarak temkinli
-          okumamız gereken bir nokta.
+          Buradaki nüans önemlidir. Doku NAD+'ı ile kan NAD+'ı aynı şey değildir. Hangi
+          dokuda, hangi yaşta, hangi sağlık durumunda, hangi ölçüm yöntemiyle baktığımız
+          sonucu değiştirir. Tek bir kan değeriyle "hücresel yaşınız"ı kesin okumak bugün
+          için fazla iddialı olur. Okurun burada kendini koruması gereken yer tam da budur:
+          sayıya bakmak yetmez, sayının neyi temsil ettiğini de sormak gerekir.
         </p>
 
-        <h2 id="hayvan-insan">Hayvan Modellerinden İnsana — Çeviri Sorunu</h2>
+        <h2 id="nmn-nr">NMN ve NR — Kanı Yükseltmek Başka, Sonuç Başka</h2>
         <p>
-          Anti-aging araştırmalarının klasik öyküsü şu: hayvan modellerinde (özellikle
-          fareler) etkileyici sonuçlar gösteriliyor, ama insan çalışmalarında etkinin
-          büyüklüğü çoğu zaman küçülüyor — bazen kayboluyor. NAD+ alanı bu kalıbın
-          tipik bir örneği.
+          NMN ve NR için insan çalışmalarında en net görülen sonuç şudur: Bu öncüller
+          kandaki NAD+ metabolitlerini artırabilir. Ama biyobelirteç artışı, günlük hayata
+          dokunan klinik fayda demek değildir.
         </p>
         <p>
-          Birkaç sebep var: (1) <strong>Yaşam süresi farkı</strong> — fare 2 yıl yaşıyor,
-          insan 80; bir takviyenin 2 yıllık etkisi insanlarda farklı zaman ölçeklerinde
-          ortaya çıkabiliyor. (2) <strong>Doz farkı</strong> — fare çalışmalarında
-          kullanılan dozlar insana çevrildiğinde imkansız yüksek miktarlara çıkabiliyor;
-          insan çalışmalarındaki gerçekçi dozlar etkiyi azaltıyor. (3) <strong>Genetik
-          homojenlik</strong> — fareler aynı genetik arka planda; insanlar değil.
-          (4) <strong>Yaşam stili</strong> — fareler kontrollü ortamda, insanlar
-          değişken. (5) <strong>Doku biyoyararlanımı</strong> — fareler için belirlenmiş
-          doku NAD+ artışı insanlarda aynı ölçüde gerçekleşmeyebiliyor <Evidence level={4} />.
+          NMN çalışmalarında 250-2000 mg/gün aralığında kısa süreli denemeler yapılmıştır.
+          Genel tablo, kandaki NAD+ artışının gösterilebildiği; glukoz, insülin, lipitler,
+          vücut kompozisyonu veya kas fonksiyonu gibi alanlarda ise sonuçların küçük,
+          heterojen ve tutarsız kaldığı yönündedir <Evidence from={2} to={3} />.
         </p>
         <p>
-          Bu çeviri sorunu NAD+ alanına özel değil — anti-aging bilimi neredeyse bütünüyle
-          bu sorunla mücadele ediyor. Hayvan verilerine dayalı pazarlama mesajlarını
-          okurken bu boşluğu hesaba katmak gerekiyor; <em>"farede etkili"</em> ile
-          <em>"insanda etkili"</em> arasındaki yol uzun ve çoğu zaman zorlu.
-        </p>
-
-        <h2 id="pratik-sonuc">Pratik Sonuçlar — Klinik Sınırlar</h2>
-        <p>
-          Bu uzun mekanizma yolculuğunun klinik karşılığı şudur: NAD+ <em>biyolojik olarak
-          önemli bir koenzim</em>, yaşlanma süreçlerinin bazılarına <em>katılan</em> bir
-          molekül. Ama <em>"NAD+ yükseltirseniz daha uzun yaşarsınız"</em> ya da
-          <em>"yaşlanmayı geri çevirirsiniz"</em> iddiaları bilimsel olarak <em>henüz
-          desteklenmiyor</em>.
+          NR için de benzer bir ayrım vardır. Kısa vadeli insan çalışmalarında NAD+
+          metabolomunda artış ve genel olarak iyi tolere edilme görülür <Evidence level={3} />.
+          Kan basıncı, enflamasyon, kas dokusu veya nörolojik alanlarda bazı sinyaller
+          vardır; fakat bunlar henüz "herkese klinik öneri" diye çevrilecek büyüklükte
+          değildir.
         </p>
         <p>
-          Pratikte söylenebilecek dürüst cümleler: (1) Düzenli aerobik ve direnç egzersizi
-          NAD+/NADH oranını ve mitokondriyal işlevi olumlu etkilediği gösterilmiş —
-          <em>kanıt güçlü</em> <Evidence level={4} />. (2) Düzenli uyku, makul kalori alımı
-          ve aralıklı oruç gibi metabolik stratejiler NAD+ ve sirtuin yolaklarını dolaylı
-          destekliyor — <em>kanıt orta</em>. (3) NMN/NR takviyeleri kandaki NAD+'ı
-          yükseltiyor; bazı kişilerde küçük metabolik iyileşmeler bildirilmiş;
-          <em>uzun dönem klinik fayda kanıtı yok</em>. Bu üçü birlikte değerlendirildiğinde
-          temel öneri net: önce yaşam tarzı temeli, hekim onayıyla değerlendirilmiş
-          eksiklik takviyeleri, sonra deneysel takviye <em>seçilmiş olgularda ek bir adım</em>
-          olarak.
-        </p>
-        <p>
-          Aktif kanseri olan, immünsüpresif tedavi alan veya kanser öyküsü taşıyan
-          hastalarda NMN/NR önermiyorum; çünkü PARP yolağının DNA hasar yanıtındaki rolü
-          bu durumda risk-fayda dengesini değiştiriyor — net güvenlik verisi yok. Bu sınır
-          klinikte güvenle koruduğum bir disiplin. Klinik takviye yorumumun tamamı
-          <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi/" class="font-semibold text-primary underline decoration-gold/40 underline-offset-4 hover:decoration-primary">
-          NAD+ takviyesi yazısında</a>.
+          Bu noktada klinikte ben aynı cümleyi tekrar ederim: NAD+'ı yükseltmek kanıtlı
+          olabilir; bunun sizi daha genç, daha dayanıklı veya daha uzun ömürlü yapması
+          kanıtlı değildir. Aradaki fark küçük değil, kararın merkezidir. Bu farkı bilmek,
+          "denemek istiyorum" diyen kişiyi de daha sakin bir yere getirir.
         </p>
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
-
-        <h3>Hücresel yaşlanmanın "saatleri" var mı, NAD+ bunları etkiliyor mu?</h3>
+        <h2 id="fertilite">Fertilite İddiaları — Fareden Kadına Geçmeyen Basamak</h2>
         <p>
-          Evet, hücresel yaşlanmayı ölçen biyolojik saatler (Horvath saati gibi epigenetik
-          metilasyon temelli) son 10 yılın önemli bir araştırma alanı <Evidence level={4} />.
-          Bu saatler kronolojik yaştan farklı bir <em>"biyolojik yaş"</em> tahmini sunuyor.
-          NMN/NR takviyelerinin bu saatleri yavaşlattığına dair bazı küçük çalışmalar var,
-          ama sonuçlar tutarlı değil ve etki büyüklüğü mütevazı <Evidence level={2} />.
-          Bilim alanı umut verici ama pazarlama mesajlarının iddia ettiği kadar kesinleşmiş
-          değil.
+          Üreme tıbbı alanında NAD+ başlığı özellikle hassastır. Çünkü "yumurta kalitesi"
+          gibi duygusal yükü yüksek bir konuda, preklinik umut çok kolay klinik vaade
+          dönüşebilir. Bu başlıkta kelimeleri özellikle yavaş seçmek gerekir; umut eden
+          bir kadının duyduğu her cümle, yalnızca bilgi değil, beklenti de taşır.
+        </p>
+        <p>
+          Fare çalışmalarında NMN ile yaşa bağlı yumurta kalitesi ve üreme kapasitesi
+          üzerine olumlu sonuçlar bildirilmiştir <Evidence level={4} />. Bu veri bilimsel
+          olarak önemlidir. Ama fare yumurtalığı ile insan doğurganlığı aynı klinik düzlem
+          değildir; hele gebelik ve canlı doğum gibi sonuçlar söz konusuysa, aradaki basamak
+          çok büyüktür.
+        </p>
+        <p>
+          İnsan tarafında şu anda elimizdeki veri büyük ölçüde laboratuvar düzeyindedir:
+          insandan alınmış olgunlaşmamış yumurta hücrelerinin kültür ortamında NMN ile
+          değerlendirilmesi gibi çalışmalar <Evidence level={2} />. Bu çalışmalar, biyolojik
+          olasılığı gösterir; ama kadına ağızdan NMN verildiğinde gebelik veya canlı doğum
+          şansının arttığını göstermez.
+        </p>
+        <p>
+          Haziran 2026 itibarıyla, kadınlara NMN veya NR verilerek gebelik ya da canlı
+          doğum sonucunda belirgin artış gösteren tamamlanmış, hakemli, randomize insan
+          çalışması yoktur <Evidence level={2} />. Bu cümleyi net kurmak gerekir. Çünkü
+          umut başka, kanıt başka şeydir. İkisini karıştırmak, iyi niyetle bile olsa,
+          kararın omzuna gereğinden fazla yük bindirir.
         </p>
 
-        <h3>Sirtuin aktivatörleri (resveratrol vb.) NAD+ ile aynı yolakta mı?</h3>
+        <h2 id="guvenlik">Güvenlik ve Düzenleme — Kısa Vade Rahat, Uzun Vade Belirsiz</h2>
         <p>
-          Resveratrol başlangıçta SIRT1 aktivatörü olarak tanıtıldı; sonraki çalışmalarda
-          dolaylı etkili olduğu (özellikle düşük dozlarda) görüldü <Evidence level={3} />.
-          Pterostilben, fisetin gibi diğer polifenoller de benzer iddialarla pazarlanıyor.
-          Bu moleküller sirtuin yolağına etki etse bile NAD+'dan bağımsız olarak çalışmıyor
-          — sirtuinler hâlâ NAD+'a ihtiyaç duyuyor. Bu yüzden polifenolleri NAD+ desteği
-          olmadan tek başına almak teorik olarak yarım çözüm. İnsan çalışmalarındaki
-          klinik sonuçlar ise hâlâ tutarsız.
+          Kısa vadeli insan çalışmalarında NMN ve NR genel olarak iyi tolere edilmiş
+          görünür. Yine de güvenlik dediğimiz şey, birkaç haftalık rahat kullanım ile
+          yıllar süren kullanımda aynı anlama gelmez. "Bende bir şey olmadı" cümlesi,
+          toplum düzeyinde güvenlik verisinin yerini tutmaz.
+        </p>
+        <p>
+          Mevcut çalışmalarda ciddi yan etki sinyali azdır <Evidence level={3} />. Buna
+          karşılık uzun dönem veri sınırlıdır. Özellikle kanser öyküsü, aktif kanser,
+          immünsüpresif tedavi, gebelik, emzirme ve gebelik arayışı gibi durumlarda
+          "muhtemelen zararsızdır" cümlesi yetmez. Bu gruplarda hekiminizle bireysel
+          değerlendirme gerekir.
+        </p>
+        <p>
+          Düzenleyici tablo da sabit değildir. ABD'de NMN'nin takviye tanımı içindeki
+          yeri 2022'de tartışmalı hâle gelmiş, 29 Eylül 2025 tarihli yeni kararla yeniden
+          takviye çerçevesinde değerlendirilebilir hâle gelmiştir. Avrupa tarafında ise
+          Mayıs 2026'da yetişkinler için belirli bir günlük üst sınırla olumlu güvenlik
+          görüşü verilmiş; bu, nihai ve genel bir pazar onayıyla aynı şey değildir.
+        </p>
+        <p>
+          Türkiye için ise pratik cümle daha temkinlidir: Takviye edici gıda statüsü,
+          resmi bildirim ve içerik uygunluğu ayrıca doğrulanmalıdır. Okuyana düşen, bir
+          ürünü sadece internet vitrinine bakarak değil, yasal statüsü ve kalite belgesiyle
+          birlikte sorgulamaktır.
         </p>
 
-        <h3>NAD+ kanser hücrelerini de besliyor mu, takviye risk midir?</h3>
+        <h2 id="urun-kalitesi">Ürün Kalitesi — Etiket Her Zaman İçerik Değildir</h2>
         <p>
-          Bu önemli bir soru. NAD+ hızlı bölünen hücrelerin enerji ihtiyacı için kritik;
-          bazı kanser tipleri NAD+ tüketimine bağımlı <Evidence level={4} />. Bu nedenle
-          aktif kanseri veya yüksek riskli kanser öyküsü olan hastalarda NMN/NR takviyesi
-          için <em>net güvenlik verisi yok</em> ve teorik risk gerçek. Onkoloji literatüründe
-          bazı NAD+ üretim enzimi (NAMPT) inhibitörleri kanser tedavisi olarak araştırılıyor
-          — yani <em>"NAD+'ı düşürerek tümörü aç bırakma"</em> stratejisi. Bu da
-          takviye-tümör etkileşimi konusunda dikkat etmemiz gerektiğini gösteriyor.
-          Bu hasta gruplarında takviye karar onkolog değerlendirmesi olmadan yapılmaz.
+          NAD+ alanında en az molekül kadar önemli bir konu daha var: ürünün gerçekten
+          etikette yazdığı şeyi içerip içermediği. Bu başlık, bilimsel meraktan çok tüketici
+          güvenliği meselesidir. Ekranda parlak görünen bir kutu, laboratuvar raporu
+          anlamına gelmez.
+        </p>
+        <p>
+          Bağımsız ve sektör kaynaklı analizlerde, çevrimiçi satılan bazı NMN ve NAD+
+          ürünlerinin etiket iddiasıyla içeriği arasında ciddi uyumsuzluklar bildirilmiştir
+          <Evidence level={3} />. Bazı ürünlerde iddia edilen miktarın çok azı bulunmuş,
+          bazılarında ise hedef bileşik saptanmamıştır. Bu verinin kendisi bile, "hangi
+          molekül?" sorusundan önce "hangi kalite?" sorusunu getirir.
+        </p>
+        <p>
+          Bu yüzden bir kişinin hekimiyle konuşmadan, yalnızca "uzun yaşam" diliyle pazarlanan
+          bir ürüne yönelmesi sağlıklı bir karar zemini değildir. Lot numarası, analiz
+          sertifikası, üçüncü taraf test, üretici şeffaflığı ve ülkenizdeki yasal durum
+          aynı masada durmalıdır. Bazen en tıbbi soru, en pratik sorudur: Bu kutunun içinde
+          gerçekten ne var?
+        </p>
+        <p>
+          Burada da standart protokol değil, sizin hikâyeniz önemlidir. Kanser öykünüz,
+          kullandığınız ilaçlar, karaciğer-böbrek durumunuz, gebelik planınız ve beklentiniz
+          farklıysa karar da farklı olur. Molekül aynı olabilir; risk-fayda dengesi aynı
+          olmayabilir.
         </p>
 
-        <h3>Menopoz sonrası kadınlarda NAD+ daha mı düşük?</h3>
+        <h2 id="karar">Bugün Kararı Nasıl Çerçeveleriz?</h2>
         <p>
-          Menopoz sonrası kadınlarda NAD+ düzeylerine dair sınırlı veri var; bazı küçük
-          çalışmalarda postmenopozal kadınlarda daha düşük serum NAD+ düzeyleri bildirilmiş
-          <Evidence level={2} />. Ancak bu çalışmalar küçük örneklemli ve sonuçlar
-          tutarlı değil. Östrojen düşüşünün NAD+ metabolizmasıyla ilişkisi (özellikle
-          karaciğer ve kasta) hayvan çalışmalarında gösterilmiş — insanda mekanizma
-          olası ama klinik anlamı henüz net değil. NAD+ takviyesinin spesifik menopoz
-          belirtilerine etkisi konusunda da güçlü kanıt yok.
+          Bugün için dengeli klinik cümle şudur: NAD+ biyolojisi önemli; NMN ve NR kandaki
+          NAD+ göstergelerini artırabilir; ama uzun yaşam, metabolik sağlık, biliş veya
+          fertilite için kanıt hâlâ sınırlıdır.
         </p>
-
-        <h3>Bu alanda umut verici ama belirsiz — kararı nasıl vermeli?</h3>
         <p>
-          Bu alanda <em>"hiçbir şey kanıtlanmamış"</em> da yanlış, <em>"her şey kanıtlandı"</em>
-da yanlış. Doğru bakış: <em>"mekanizma sağlam, insanda etki var ama büyüklüğü
-mütevazı, uzun vadeli sonuç henüz bilinmiyor"</em>. Bu bakışla yaklaşıldığında
-          kişisel karar şuna iniyor: yaşam tarzı temelini kuran, hekim değerlendirmesi
-          sonrası eksiklik takviyelerini kullanan ve maddi-zaman kaynaklarını gözeten
-          bir kişi <em>"deneyebileceğim ek bir adım"</em> olarak düşünebilir. Acelesi
-          olmayan, kanıtlı seçenekleri öne alan bir karar; pazarlamanın yarattığı aciliyet
-          değil.
+          O zaman biz ne yapıyoruz? Önce beklentiyi netleştiriyoruz. Bir kişi "hücresel
+          yaşlanmayı geri çevirmek" gibi büyük bir iddiayla geliyorsa, bunu durdurup
+          soruyu küçültmek gerekir: Hangi sonuç? Hangi süre? Hangi risk? Hangi alternatif?
+          Bilim böyle okunur. Büyük vaadi küçük, ölçülebilir sorulara indirdiğinizde karar
+          birden daha insani hale gelir.
+        </p>
+        <p>
+          İkinci adım temeli kontrol etmektir. Uyku, direnç egzersizi, düzenli hareket,
+          yeterli protein, makul alkol tüketimi, metabolik hastalıkların takibi ve eksikliklerin
+          hedefli düzeltilmesi, uzun vadeli sağlık için çok daha sağlam zemine sahiptir
+          <Evidence level={4} />. NAD+ öncülleri bu zeminin yerine geçmez.
+        </p>
+        <p>
+          Üçüncü adım, eğer hâlâ düşünülüyorsa, bunu kısa vadeli bir deneme ve açık bir
+          hedefle hekim değerlendirmesine taşımaktır. "Kendimi gençleştirmek istiyorum"
+          ölçülebilir bir hedef değildir. "Uyku, kas gücü, metabolik belirteçler ve yan
+          etkiler açısından ne takip edeceğiz?" daha doğru bir sorudur. Hekimle konuşmaya
+          böyle gittiğinizde, reklam metninden çıkıp gerçek karar masasına oturursunuz.
         </p>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          NAD+ ve hücresel yaşlanma alanı <em>bilimsel olarak heyecan verici, klinik
-          olarak temkin gerektiren</em> bir alan. Sirtuin, PARP, CD38 yolakları yaşlanma
-          biyolojisinin kalbinde; mekanizma sağlam zeminde; hayvan modelleri umut veriyor.
-          Ama insan çalışmalarının kanıt seviyesi sınırlı, hayvan-insan çeviri çoğu zaman
-          büyüklüğü azaltıyor, ve <em>"NAD+ düşüşü sebep mi sonuç mu?"</em> sorusunun
-          klinik cevabı henüz alınmadı. Pazarlama mesajları bu sınırı çoğu zaman atlıyor;
-          oysa bilimsel dürüstlük belirsizliği görmezden gelmiyor — onu adıyla anıyor.
+          NAD+ alanı bilimsel olarak canlı, klinik olarak ise ölçülü okunması gereken bir
+          alan. Mekanizma gerçek; insan kanıtı sınırlı; pazarlama dili çoğu zaman ikisinin
+          arasındaki mesafeyi saklıyor. Benim için bu yazının bütün amacı o mesafeyi
+          görünür kılmak.
         </p>
         <p>
-          Bilgi belirsizliğin panzehiridir; bu konuda da öyle. Yaşam tarzı temelini kurarak
-          başlamak, hekim değerlendirmesi sonrası eksiklik takviyelerini kullanmak ve
-          NMN/NR'yi <em>"belki ek bir adım"</em> olarak (kanıtlı seçeneklerin yerine değil
-          yanına) düşünmek bugün için en dengeli yaklaşım. Standart protokol değil sizin
-          hikâyeniz — bu cümleyi NAD+ alanı kadar net çağıran az alan var.
+          Doktorunuza bu konuyu açacaksanız üç soruyla başlayabilirsiniz: Benim sağlık
+          öykümde sakınca yaratabilecek bir durum var mı? Hangi hedefi takip edeceğiz?
+          Bu deneme, kanıtlı alışkanlıkların yerine mi geçiyor, yanına mı ekleniyor?
+          Bu sorular bazen molekülden daha değerlidir.
+        </p>
+        <p>
+          Bilgi, burada da panzehir gibi çalışır: aceleyi azaltır, iddiayı küçültür,
+          kararı kişiselleştirir. NAD+ için bugün en dürüst cümle budur — hücrede önemli,
+          klinikte hâlâ ölçülmesi gereken bir alan.
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
 
       <RelatedReadings
-          class="mt-14"
-          paths={[
-            '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
-            '/zamansiz-yasam/d-vitamini-rehberi/',
-            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
-            '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
-            '/library/',
-          ]}
-        />
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
+          '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',
+          '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
+          '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
+          '/library/',
+        ]}
+      />
 
       <ArticleEditorNote>
-<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={3} /></p>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={3} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Bilimsel pencere yazısında mekanizmaya odaklandım; bu notta o mekanizmanın
-            klinik karşılığını ve hastalarımla yaptığım pratik konuşmayı ekliyorum — uzman
-            olarak.
+            Bu yazıda pazarlama vaadini bilinçli olarak dışarıda tuttum; aynı konuyu
+            kadın hastalıkları uzmanı olarak burada biraz daha pratik çerçeveye alayım.
           </p>
           <p>
-            <strong class="text-primary">Klinik not:</strong> NAD+ alanı kliniğimde son
-            yıllarda en sık sorulan ama en az netliği olan başlıklardan biri. Yazıda paylaştığım
-mekanizma zemini sağlam; ama klinik karar bunun çok ötesinde bir denge gerektiriyor.
-            Hücresel yaşlanma araştırmalarının bilimsel heyecanı klinik öneriye doğrudan
-            tercüme edilemez; bu boşluk bu alanda en sık atlanan nokta.
+            <strong class="text-primary">Klinik durum:</strong> NAD+ öncülleri hakkında
+            bana gelen soruların çoğu "denemeli miyim?" diye başlar. Benim yanıtım genellikle
+            molekülden değil, beklentiden başlar: Uzun yaşam mı, enerji mi, yumurta kalitesi
+            mi, metabolik sağlık mı? Her hedefin kanıt seviyesi farklıdır.
           </p>
           <p>
-            <strong class="text-primary">Mekanizma notu:</strong> NAD+ mitokondriyal
-            elektron taşıma zincirinde, oksidatif stres yanıtında (NADP+/NADPH üzerinden)
-            ve sirtuin/PARP/CD38 enzimleri için substrat olarak çalışır. Yaşla NAD+ düzeyleri
-            azalır; bunun bir nedeni NAD+ tüketen enzimlerin (özellikle CD38, PARP) yaşla
-            artan aktivitesi. NAD+ tükenişinin yaşlanmanın <em>nedensel</em> mi
-            <em>eşlik eden</em> bir bileşeni mi olduğu henüz tam çözülmüş değil — bu
-            tartışma klinik yorumun temelini etkiliyor.
+            <strong class="text-primary">Kanıt ayrımı:</strong> NMN ve NR'nin kandaki NAD+
+            göstergelerini artırabilmesi klinik açıdan ilginçtir; ama bu, kas, biliş,
+            metabolizma, menopoz belirtileri veya canlı doğum gibi sonuçların iyileştiği
+            anlamına gelmez. Fertilite tarafında insan verisi özellikle temkinli okunmalıdır:
+            laboratuvarda yumurta hücresine eklenen NMN ile kadına ağızdan verilen takviyenin
+            klinik sonucu aynı kanıt düzeyi değildir.
           </p>
           <p>
-            <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Aktif malignite,
-            immünsüpresif tedavi veya kanser öyküsü — bazı kanserlerin NAD+ tüketimine
-            bağımlı olması ve PARP yolağının DNA hasar yanıtındaki rolü nedeniyle teorik
-            risk; net güvenlik verisi yok. NAMPT inhibitörleri kanser tedavisi olarak
-            araştırıldığı için takviye-tümör etkileşimi temkinli okunmalı. Düzenli reçeteli
-            ilaç kullanımı (özellikle onkolojik tedaviler ve immünmodülatörler) — etkileşim
-            verisi yetersiz. Hamilelik/laktasyon — güvenlik verisi yok.
+            <strong class="text-primary">Kırmızı bayraklar:</strong> Aktif kanser, kanser
+            öyküsü, immünsüpresif tedavi, gebelik, emzirme, gebelik arayışı ve düzenli
+            çoklu ilaç kullanımı olan kişilerde bu başlığı kendi başına deneme alanı olarak
+            görmem. NAD+ metabolizması tüm hücreler için önemlidir; hızlı bölünen hücreler
+            söz konusu olduğunda temkin daha da önem kazanır.
           </p>
           <p>
-            <strong class="text-primary">Pratik bütünleşim:</strong> Pratikte tedavi
-            adımlarını birlikte değerlendirirken şu basamakları izlerim: (1) bilimsel
-            mekanizma sağlam ama klinik kanıt seviyesi sınırlı — bu fark hastayla açıkça
-            paylaşılır; (2) yaşam tarzı temeli (uyku, beslenme, düzenli aerobik+direnç
-            egzersizi) NAD+/sirtuin yolaklarını doğal destekler ve kanıt güçlü; bu zemin
-            kurulmadan takviye düşünülmez; (3) hekim değerlendirmesi sonrası eksikliği
-            saptanmış mikro-besinlerin (D vitamini, B12, demir, magnezyum) hedefli takviyesi;
-            (4) ardından — temel oturduktan sonra — NMN veya NR'yi 8-12 haftalık deneme +
-biyobelirteç + subjektif değişiklik takibi içinde değerlendirmek; kanıtlı
-            seçeneklerin yerine değil yanına. (5) Aktif kanseri veya immünsüpresyonu olan
-            hastalarda önermem; çift taraflı belirsiz risk-fayda dengesi nedeniyle.
+            <strong class="text-primary">Pratik bütünleşim:</strong> Klinik disiplinde
+            önce temeli ararım: uyku, direnç egzersizi, metabolik sağlık, eksikliklerin
+            hedefli düzeltilmesi ve gerçekçi takip. Bunlar olmadan NAD+ öncülü konuşmak,
+            haritanın en küçük yolunu büyütüp ana yolu unutmaya benzer. Deneme düşünülüyorsa
+            hedef, süre, ürün kalitesi ve takip edilecek değişkenler baştan belirlenmelidir.
           </p>
           <p>
             <strong class="text-primary">Bireysellik vurgusu:</strong> Yukarıda paylaştıklarım
-— hem yazıda hem bu notta — genel popülasyon ve mekanizma yaklaşımıdır; sizin
-            tablonuzdaki sağlık öyküsü, kullandığınız ilaçlar, kanser öyküsü, mevcut
-            takviyeleriniz ve hangi mikro-besin eksikliği taşıdığınız tedavi kararına yön
-verir. Burada okuduğunuz bir başlangıç rehberidir, karar değil; sizin için
-            uygun adımları kendi hekiminizle birebir değerlendirmeniz önemlidir — özellikle
-            kanıt seviyesinin bu kadar değişken olduğu bir alanda.
+            genel popülasyon ve kanıt çerçevesidir; sizin sağlık öykünüz, kullandığınız
+            ilaçlar, aile öykünüz ve beklentiniz kararı değiştirir. Burada okuduğunuz bir
+            başlangıç rehberidir, karar değil; uygun adımları kendi hekiminizle birebir
+            değerlendirmeniz önemlidir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
             — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
           </p>
+        </div>
       </ArticleEditorNote>
 
-       <ArticleDisclaimer>
-<p>
+      <ArticleDisclaimer>
+        <p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
         </p>
       </ArticleDisclaimer>
@@ -452,4 +407,3 @@ verir. Burada okuduğunuz bir başlangıç rehberidir, karar değil; sizin için
 
   <SiteFooter />
 </SiteLayout>
-

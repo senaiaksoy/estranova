@@ -456,19 +456,24 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': [
     {
-      question: 'NAD+ neden yaşlanma tartışmalarında bu kadar sık geçiyor?',
+      question: 'NMN veya NR kullanmak kandaki NAD+ düzeyini gerçekten yükseltir mi?',
       answer:
-        'Çünkü hücresel enerji metabolizması ve onarım yollarıyla ilişkili biyolojik bir merkez gibi düşünülüyor. Ama ilginç biyoloji ile kanıtlanmış klinik fayda aynı şey değildir; arada hâlâ önemli boşluklar var.',
+        'Kısa süreli insan çalışmalarında NMN ve NR gibi öncüllerin kandaki NAD+ göstergelerini artırabildiği görülüyor. Ama okuyanın asıl sorusu genellikle bu değil; "bu bende neyi değiştirir?" sorusudur. Bugün için biyobelirteç artışı, kas gücü, biliş, metabolizma veya uzun yaşam gibi klinik sonuçların da iyileştiği anlamına gelmez.',
     },
     {
-      question: 'Fare çalışmaları insanlarda aynı etkiyi beklememiz için yeterli mi?',
+      question: 'NAD+ yükselirse yaşlanma yavaşlar mı?',
       answer:
-        'Hayır. Erken dönem hayvan verileri yön verici olabilir ama insan bedenindeki sonuçları garanti etmez. Bu başlıkta özellikle doz, süre ve gerçek klinik kazanım hâlâ tartışmalıdır.',
+        'Bugün için bunu söylemek fazla iddialı olur. NAD+ hücresel enerji ve onarım yollarında önemli bir moleküldür; bu nedenle bilimsel merakı hak eder. Fakat insanda yaşlanmayı yavaşlattığını veya ömrü uzattığını gösteren güçlü, uzun dönem klinik veri henüz yoktur.',
     },
     {
-      question: 'Bu alandaki haberlere nasıl daha sakin yaklaşılır?',
+      question: 'NAD+ öncüleri yumurta kalitesini veya gebelik şansını artırır mı?',
       answer:
-        'Önce çalışma tipine, insan verisi olup olmadığına ve ölçülen sonucun gerçekten günlük yaşamı etkileyen bir sonlanım olup olmadığına bakmak iyi bir başlangıçtır. “Mekanizma var” ifadesi tek başına yeterli değildir.',
+        'Fare ve laboratuvar düzeyindeki insan yumurta hücresi çalışmalarında ilginç sinyaller vardır. Yine de bu başlıkta dili özellikle yavaşlatmak gerekir; umut eden bir kadına mekanizma, klinik sonuç gibi sunulmamalıdır. Haziran 2026 itibarıyla, kadına NMN veya NR verildiğinde gebelik ya da canlı doğum şansını artırdığını gösteren tamamlanmış ve güçlü insan çalışması yoktur.',
+    },
+    {
+      question: 'Ürün kalitesi neden bu kadar vurgulanıyor?',
+      answer:
+        'Çünkü bazı çevrimiçi ürünlerde etiket iddiası ile gerçek içerik arasında ciddi uyumsuzluklar bildirilmiştir. Kutu parlak görünebilir; ama bu, içeriğin doğru olduğu anlamına gelmez. Bu yüzden ürün kalitesi, lot numarası, analiz sertifikası, üçüncü taraf test ve yerel yasal durum, molekül seçimi kadar önemli bir güvenlik başlığıdır.',
     },
   ],
   '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/': [
