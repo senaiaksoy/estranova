@@ -17,8 +17,13 @@ const DEFAULT_SOCIAL_IMAGE_PATH = '/og-default.png';
 function normalizeUrl(value: string): string {
   const url = new URL(value);
 
-  if (url.pathname !== '/' && url.pathname.endsWith('/')) {
-    url.pathname = url.pathname.slice(0, -1);
+  // Site `trailingSlash: 'always'` ile yayınlanıyor (astro.config.mjs) ve
+  // Cloudflare Pages slash'lı URL'yi canonical sayıyor. Slash'sız canonical,
+  // GSC'de "Yönlendirmeli sayfa" / "Kopya" hatası üretir; bu yüzden dosya
+  // uzantısı olmayan yollar daima slash'lı normalize edilir.
+  const lastSegment = url.pathname.split('/').pop() ?? '';
+  if (!url.pathname.endsWith('/') && !lastSegment.includes('.')) {
+    url.pathname = `${url.pathname}/`;
   }
 
   url.hash = '';

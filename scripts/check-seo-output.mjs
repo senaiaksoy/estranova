@@ -230,10 +230,19 @@ async function main() {
       fail(`${pathname} canonical beklenen yol ile uyusmuyor (${canonical} yerine ${expectedCanonical})`);
     }
 
+    // trailingSlash: 'always' — slash'siz canonical Cloudflare 308'ine carpar
+    // ve GSC "Yonlendirmeli sayfa" hatasi uretir; ham deger slash'li olmali.
+    if (!new URL(canonicalValue, SITE_URL).pathname.endsWith('/')) {
+      fail(`${pathname} canonical sondaki slash'i icermiyor (${canonicalValue})`);
+    }
+
     for (const property of ['og:url', 'twitter:url']) {
       const value = getMetaPropertyContent(html, property);
       if (value && normalizeAbsoluteUrl(value) !== canonical) {
         fail(`${pathname} ${property} canonical ile uyusmuyor`);
+      }
+      if (value && !new URL(value, SITE_URL).pathname.endsWith('/')) {
+        fail(`${pathname} ${property} sondaki slash'i icermiyor (${value})`);
       }
     }
 
