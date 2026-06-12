@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { isProductionLaunch } from '../utils/launch';
+import { scheduledReleasePaths, todayInTurkeyISO } from '../data/scheduled-releases';
 
 export const GET: APIRoute = ({ site }) => {
   const base = (site?.href ?? 'https://estranova.com/').replace(/\/$/, '');
@@ -10,8 +11,14 @@ export const GET: APIRoute = ({ site }) => {
     });
   }
 
+  const today = todayInTurkeyISO();
+  const futureDisallows = scheduledReleasePaths
+    .filter((item) => item.releaseDate > today)
+    .map((item) => `Disallow: ${item.path}`);
+
   const lines = [
     'User-agent: *',
+    ...futureDisallows,
     'Allow: /',
     '',
     `Sitemap: ${base}/sitemap-index.xml`,
@@ -21,3 +28,4 @@ export const GET: APIRoute = ({ site }) => {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },
   });
 };
+

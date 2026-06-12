@@ -10,6 +10,8 @@ import {
 import { isProductionLaunch } from '../utils/launch';
 import { featureFlags } from '../utils/feature-flags';
 import CookieBanner from '../components/site/CookieBanner.astro';
+import { isPathScheduled } from '../data/scheduled-releases';
+
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -30,7 +32,7 @@ const {
   image,
   ogType = 'website',
   jsonLd,
-  allowIndexing = isProductionLaunch(),
+  allowIndexing = isProductionLaunch() && !isPathScheduled(Astro.url.pathname),
 } = Astro.props;
 
 const siteUrl = resolveSiteUrl(Astro.site);
