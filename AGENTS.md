@@ -69,6 +69,13 @@ Model değişikliği önerirken öncelik: maliyet ≠ kalite. Writer / checker /
 
 **Stil ve dil kurallarının dosya haritası:** **[docs/style-rules-map.md](docs/style-rules-map.md)**
 
+**Dr. Senai Aksoy makale stili:** Yeni makale, makale revizyonu veya humanize
+işinde önce canonical ekosistem rehberi okunur:
+`D:\A-klasör\obsidian-vaults\draksoyivf-knowledge\wiki\brand\senai-aksoy-makale-stil-rehberi.md`.
+Estranova'da bu rehber Dr. Aksoy tıbbi denetim çizgisini ve yasaklı pazarlama
+dilini üst katman olarak belirler; varsayılan makale gövdesi yine Estranova'nın
+"yaşıt editör" sesiyle yazılır.
+
 ---
 
 ## Product / Design Direction

@@ -33,6 +33,14 @@ Aşağıdaki **HARD CONSTRAINT** bölümleri (**§1–§6**) **opsiyonel değild
 
 ### 3. Yazar Ses ve Üslup
 
+#### Dr. Senai Aksoy makale stili (üst kaynak)
+
+Yeni makale, makale revizyonu veya humanize işinde önce canonical ekosistem rehberi
+okunur: `D:\A-klasör\obsidian-vaults\draksoyivf-knowledge\wiki\brand\senai-aksoy-makale-stil-rehberi.md`.
+Bu rehber Dr. Aksoy tıbbi denetim çizgisini ve pazarlama dili yasaklarını üst
+katman olarak belirler; ancak Estranova'nın varsayılan makale gövdesi hekim sesi
+değil, aşağıdaki "Yaşıt Editör" / yazar persona kurallarıdır.
+
 #### Yazar persona'sı (HARD CONSTRAINT)
 
 - **Yazar profili (DEFAULT):** Estranova yazıları default olarak; tıp/sağlık dışı bir meslekte başarılı, 40+ yaşında, kendi hormonal geçişini yaşamış veya yaşamakta olan, **konuyu kişisel deneyimle ve geniş okuma ile** anlamış bir kadın gibi seslenir. Yazar **bir hekim ya da klinisyen değildir**; ama konuyu derinlemesine merak etmiş ve okumuş bir yaşıtdır.
