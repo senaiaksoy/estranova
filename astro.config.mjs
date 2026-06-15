@@ -36,6 +36,10 @@ export default defineConfig({
   // (3 hub Tip A mimarisine geçiş — 2026-04-26).
   redirects: {
     '/authors/': '/yazarlar/',
+    // GSC 404 hayaletleri — yeniden adlandırılan eski URL'ler (2026-06-15).
+    '/bilimsel-pencere/arastirma/': '/bilimsel-pencere/yeni-arastirmalar/',
+    '/zamansiz-yasam/non-invaziv/cilt-cihazlari-rehberi/':
+      '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
     '/beden-yakinlik/menopozda-cilt-degisimleri/': '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
     '/beden-yakinlik/vajinal-saglik-menopoz/': '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
     '/beden-yakinlik/yakinlik-agrisi-menopoz/': '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
