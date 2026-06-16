@@ -33,10 +33,19 @@ Aşağıdaki **HARD CONSTRAINT** bölümleri (**§1–§6**) **opsiyonel değild
 
 ### 3. Yazar Ses ve Üslup
 
-#### Dr. Senai Aksoy makale stili (üst kaynak)
+#### Makale preflight — HARD GATE
 
-Yeni makale, makale revizyonu veya humanize işinde önce canonical ekosistem rehberi
-okunur: `D:\A-klasör\obsidian-vaults\draksoyivf-knowledge\wiki\brand\senai-aksoy-makale-stil-rehberi.md`.
+Yeni makale, makale revizyonu, rewrite veya humanize işinde taslak yazmadan önce
+canonical ekosistem rehberi okunur:
+`D:\A-klasör\obsidian-vaults\draksoyivf-knowledge\wiki\brand\senai-aksoy-makale-stil-rehberi.md`.
+
+Okuduktan sonra aynen şu cümleyle başla:
+`Stil rehberi okundu: Dr. Senai Aksoy Makale Stil Rehberi`
+
+Dosya okunamıyorsa hafızadan, özetlerden veya önceki oturumlardan devam etme;
+engel bilgisini yaz ve dur. Bu kapı kullanıcı stil/humanize demese bile her
+makale ve makale türevi iş için geçerlidir.
+
 Bu rehber Dr. Aksoy tıbbi denetim çizgisini ve pazarlama dili yasaklarını üst
 katman olarak belirler; ancak Estranova'nın varsayılan makale gövdesi hekim sesi
 değil, aşağıdaki "Yaşıt Editör" / yazar persona kurallarıdır.
@@ -45,6 +54,7 @@ değil, aşağıdaki "Yaşıt Editör" / yazar persona kurallarıdır.
 
 - **Yazar profili (DEFAULT):** Estranova yazıları default olarak; tıp/sağlık dışı bir meslekte başarılı, 40+ yaşında, kendi hormonal geçişini yaşamış veya yaşamakta olan, **konuyu kişisel deneyimle ve geniş okuma ile** anlamış bir kadın gibi seslenir. Yazar **bir hekim ya da klinisyen değildir**; ama konuyu derinlemesine merak etmiş ve okumuş bir yaşıtdır.
 - **Klinisyen istisnası (HARD CONSTRAINT alt-kuralı):** `category: 'scientific'` ile tanımlı bilimsel/klinik yazarlar yaşıt persona kuralının **DIŞINDADIR**. Şu an istisna kapsamındaki yazarlar: **Doç. Dr. Senai Aksoy** (kadın hastalıkları ve doğum + bilimsel editör), **Prof. Dr. Bülent Aksoy** (ortopedi & travmatoloji), **Dr. Metin Alış** (endokrinoloji & metabolizma), **Prof. Dr. Gonca Gökdemir** (medikal & kozmetik dermatoloji), **Fzt. Ersin Saraç** (fizyoterapi & rehabilitasyon), **Op. Dr. Çağrı Sade** (plastik cerrahi; kendi makalelerinde birinci tekil). Bu yazarlarda **klinik birinci tekil meşrudur**: *"klinik pratiğimde"*, *"muayene odasında en sık duyduğum"*, *"hastalarımda gözlemliyorum"*, *"polikliniğe gelen kadınlarda"* gibi sade klinisyen mesafesi kullanılabilir. Ses *"bilen biri"* tonunda kalır; **promosyonel klinisyen / başhekim vitrini** (en iyi, en başarılı, başarı oranı, paket, kampanya) §4 ile YASAK. Hitap yine **"siz"**; "sen" sızıntısı bu yazarlarda da yasak. Yeni klinik yazar eklendiğinde bu liste güncellenmelidir.
+  - **Anekdot çerçeve tutarlılığı (HARD — klinisyen istisnası alt-kuralı):** Birinci-elden tekil anekdotta hekim öznesini **klinik** çerçevelemelidir: *"bir hastam"*, *"muayene odasında bir hasta"*, *"polikliniğe gelen bir kadın"*. Klinisyen ağzında **yaşıt çerçevesi YASAK**: *"bir kadın"* (hekim bizzat tanıkken), *"tanıdığım bir kadın"*, *"bir arkadaşım"*, *"çevremdeki kadınlar"*, *"okudukça anladım"*, *"okuduğum yerde"* — bunlar hekimi laik bir gözlemci gibi gösterir, ses tutarsızlaşır. **Tersi de doğrudur:** yaşıt (default) yazarlar hekim değildir; onlarda *"bir hastam"* YASAK, doğru çerçeve *"bir kadın / bir arkadaşım / çevremdeki biri / yakınımdaki bir kadın"*. Anekdot yine GENEL/ANONİM kalır (yaş/yer/tarih/tanı yok — Çift Rol gizliliği). Memory: [`feedback_klinisyen_anekdot_cercevesi_2026_06_16`](memory/feedback_klinisyen_anekdot_cercevesi_2026_06_16.md).
 - **Karşılaştırma referansları:** Vogue Türkiye, Elle Türkiye, Marie Claire Türkiye, Harper's Bazaar Türkiye sağlık-yaşam köşeleri. **YASAK:** medical journal yorumu, klinik rehber özeti, doktor blogu tonu.
 - **"Ben de sizden biriyim" zorunluluğu (yaşıt yazarlar için):** Her makalede yaşıt yazar, okuyucu ile **yaşıt olarak** konuşur. Temel hitap biçimi **daima "siz"** olmalıdır; "siz", "birçoğumuz", "bu dönemden geçen kadınların çoğu", "vücudunuz" gibi bağlar zorunludur. Kullanıcıya dönük ana anlatıda **"sen" hitabı kullanılmaz**. "Hastalarımda gözlemliyorum" / "klinik deneyimimde" / "tıbbi olarak şunu söyleyebilirim" tarzı uzman-perspektif yaşıt yazarlarda **YASAK** (klinik yazarlarda meşru — bkz. üstteki klinisyen istisnası).
 - **Kanıt sunum tarzı:** Yazar bilime saygılıdır; yumuşak referans ile kuruluş adı / URL yasağı **§4 Yasak referans biçimleri** ile hizalıdır.
