@@ -18,6 +18,17 @@ Estranova bir klinik sitesi, tedavi pazarlama platformu veya hasta edinme hunisi
 - [Editöryal Politika](https://estranova.com/editoryal-politika): İçerik üretim ve denetim ilkeleri.
 - [Tıbbi Sorumluluk](https://estranova.com/tibbi-sorumluluk): Tıbbi disclaimer.
 - [Hakkımızda](https://estranova.com/hakkimizda): Kuruluş bilgisi ve misyon.
+- [Gizlilik](https://estranova.com/gizlilik): Gizlilik yaklaşımının sade özeti; ayrıntı için KVKK Aydınlatma Metni ve Çerez Politikası.
+
+## Öne çıkan içerikler
+
+Hub başına temsilî, derinlemesine rehberler (her biri tıbbi inceleme katmanından geçer, kanıt düzeyi etiketleriyle işaretlidir):
+
+- [Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?](https://estranova.com/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/): Menopozda HRT kararı için sakin rehber; fırsat penceresi, kanıt düzeyi, Türkiye notları.
+- [Menopozda Hormon Tedavisi ve Meme Kanseri Riski](https://estranova.com/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/): Yeni verilerin mutlak riski nasıl bağlamlaştırdığı.
+- [Perimenopozda Zihinsel Bulanıklık](https://estranova.com/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/): Unutkanlık hissinin günlük hayatta okunması.
+- [Menopozda Cilt Değişimleri](https://estranova.com/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/): Cildi trendlerle değil biyolojisiyle okumak.
+- [Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular](https://estranova.com/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/): 40 sonrası kemik sağlığı için önleyici çerçeve.
 
 ## Kanıt düzeyi etiketleri
 
