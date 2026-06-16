@@ -719,7 +719,7 @@ export const staticArticles: StaticArticleEntry[] = [
     description:
       'Hormon tedavisinin ilk haftalarında ve aylarında karşılaşılabilecek yumuşak yan etkiler, ne zaman geçici sayıldıkları, hekimle birlikte kurulan izleme takvimi ve hangi belirtilerin gecikmeden değerlendirilmesi gerektiği üzerine sakin bir rehber.',
     publishedDate: '27 Nisan 2026',
-    writerSlug: 'senai-aksoy',
+    writerSlug: 'alper-mumcu',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis/',
     keywords: [

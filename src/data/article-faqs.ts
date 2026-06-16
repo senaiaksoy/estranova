@@ -383,19 +383,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': [
     {
-      question: 'HRT başladıktan sonra ilk haftalarda hangi yakınmalar geçici sayılabilir?',
+      question: 'Yan etkilerin büyük kısmı ne zamana kadar geçer?',
       answer:
-        'Hafif meme hassasiyeti, şişkinlik hissi, hafif baş ağrısı ya da lekelenme bazı rejimlerde başlangıç döneminde görülebilir. Bu tabloyu anlamlı yapan şey şiddeti, süresi ve zaman içinde yatışıp yatışmadığıdır.',
+        'Yumuşak ve yaygın yan etkilerin büyük kısmı (meme hassasiyeti, hafif ödem, küçük baş ağrıları, kanama düzensizliği) ilk üç–altı ay içinde belirgin biçimde azalır. Üçüncü ay çoğu durumda ilk gerçek değerlendirme noktasıdır; ilk haftalarda yaşanan bir belirti üzerinden tedaviyi yargılamak çoğu zaman erken bir karardır. Altıncı ayda hâlâ belirgin bir rahatsızlık varsa, doz veya form ayarı hekimle birlikte konuşulabilir.',
     },
     {
-      question: 'Lekelenme olursa hemen tedavinin bana uymadığını mı düşünmeliyim?',
+      question: 'İlk haftalarda kanama olması her zaman endişe verici mi?',
       answer:
-        'Hayır, özellikle ilk aylarda bazı kadınlarda lekelenme görülebilir. Ama artan miktar, uzayan süre veya beklenmedik zamanlama varsa düzenin yeniden gözden geçirilmesi gerekir.',
+        'Hayır. Özellikle kombine tedavide (östrojen + progesteron) ilk üç–altı ay boyunca arada gelen küçük lekelenmeler ya da kısa beklenmedik kanamalar görülebilir; bu uyum dönemine ait yaygın bir tablodur. Ancak yoğun ya da uzun süreli kanama, postmenopoz döneminde açıklanamayan kanama veya altıncı aydan sonra hâlâ düzene oturmamış kanama her zaman hekimle değerlendirilir.',
     },
     {
-      question: 'İzlem yalnızca yan etkileri görmek için mi yapılır?',
+      question: 'Hekimle ne sıklıkta görüşmek anlamlı?',
       answer:
-        'Hayır. İzlem aynı zamanda belirtilerin gerçekten düzelip düzelmediğini, dozun uygun olup olmadığını ve kişisel risk dengesinin değişip değişmediğini anlamak için yapılır. Yani yalnızca sorun aramak değil, tedaviyi rafine etmektir.',
+        'İlk yıl genellikle üç aylık aralıklarla; sonraki yıllarda klinik tabloya göre altı ay–yıllık. Yıllık mamografi, kan tetkikleri ve gerektiğinde kemik yoğunluğu ölçümü standart izlemin parçasıdır. Beklenmedik bir belirti olduğunda planlı zamandan önce iletişime geçmek her zaman güvenli tercihtir.',
+    },
+    {
+      question: 'Ev ortamında neyi izlemek anlamlı?',
+      answer:
+        'Çok karmaşık bir takip sistemi gerekmiyor. Telefonda veya küçük bir defterde haftada bir cümle — “bu hafta uyku iyiydi, meme hassasiyeti azaldı, lekelenme oldu” gibi — üç ay sonra hekimle oturulduğunda en değerli kaynak hâline gelir. Belirti günlüğü, neyin tedaviye neyin yaşam tarzına bağlı olduğunun ayrıştırılmasını da kolaylaştırır.',
+    },
+    {
+      question: 'Yan etkiler bana uymadığını mı gösterir?',
+      answer:
+        'Çoğu zaman hayır. İlk haftalarda yaşanan yumuşak yan etkiler tedavinin “uymadığı” anlamına gelmez; vücut yeni dengeye yerleşirken gelir. Üç ayın sonunda hâlâ rahatsız edici bir tablo varsa, hekimle birlikte doz veya form (oral, transdermal jel, bant) değişikliği gündeme gelebilir.',
     },
   ],
   '/zamansiz-yasam/deneysel/nad-plus-takviyesi/': [
