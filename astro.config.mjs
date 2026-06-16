@@ -16,7 +16,7 @@ const sitemapExcludedPaths = [
   '/logo-denemesi/',
 ];
 
-import { scheduledReleasePaths, todayInTurkeyISO } from './src/data/scheduled-releases.ts';
+import { scheduledReleasePaths, todayInTurkeyISO } from './src/data/scheduled-releases.mjs';
 
 
 function matchesSitemapPath(page, excludedPath) {

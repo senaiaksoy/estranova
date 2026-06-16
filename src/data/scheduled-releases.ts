@@ -1,54 +1,18 @@
+// Tipli sarmalayıcı. Çalışma zamanı verisi/fonksiyonları düz JS sibling'den gelir
+// (`scheduled-releases.mjs`) çünkü `astro.config.mjs` Node tarafından doğrudan
+// yüklenir ve Cloudflare'in Node 22.12 sürümü `.ts` import'unu desteklemez.
+// Uygulama tarafı (SiteLayout, robots.txt.ts) bu dosyadan tip güvenli import eder.
 export interface ScheduledRelease {
   path: string;
   releaseDate: string;
 }
 
-export const scheduledReleasePaths: ScheduledRelease[] = [
-  { path: '/sayi/02-haziran-2026-guc-esigi/', releaseDate: '2026-06-01' },
-  { path: '/dosya/2026-06-guc-esigi/', releaseDate: '2026-06-01' },
-  { path: '/editorun-kosesi/haziran-2026/', releaseDate: '2026-06-01' },
-  {
-    path: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
-    releaseDate: '2026-06-01',
-  },
-  {
-    path: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
-    releaseDate: '2026-06-01',
-  },
-  {
-    path: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
-    releaseDate: '2026-06-01',
-  },
-  {
-    path: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
-    releaseDate: '2026-06-01',
-  },
-  {
-    path: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',
-    releaseDate: '2026-06-01',
-  },
-];
+import {
+  scheduledReleasePaths as _scheduledReleasePaths,
+  todayInTurkeyISO as _todayInTurkeyISO,
+  isPathScheduled as _isPathScheduled,
+} from './scheduled-releases.mjs';
 
-export function todayInTurkeyISO(date = new Date()): string {
-  return new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Europe/Istanbul',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).format(date);
-}
-
-export function isPathScheduled(pathname: string, date = new Date()): boolean {
-  // Enforce leading slash and trailing slash to match our list
-  let normalizedPath = pathname;
-  if (!normalizedPath.startsWith('/')) {
-    normalizedPath = '/' + normalizedPath;
-  }
-  if (!normalizedPath.endsWith('/')) {
-    normalizedPath = normalizedPath + '/';
-  }
-  
-  const today = todayInTurkeyISO(date);
-  const match = scheduledReleasePaths.find((item) => item.path === normalizedPath);
-  return match ? match.releaseDate > today : false;
-}
+export const scheduledReleasePaths: ScheduledRelease[] = _scheduledReleasePaths;
+export const todayInTurkeyISO: (date?: Date) => string = _todayInTurkeyISO;
+export const isPathScheduled: (pathname: string, date?: Date) => boolean = _isPathScheduled;
