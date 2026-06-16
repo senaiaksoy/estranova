@@ -53,7 +53,7 @@
 |---|---|
 | Tabu açma | "Sokakta her on kadından dördü..." epidemiyolojik açılış |
 | Mahrem klinik | "Hastalarımdan çoğu yıllarca söyleyemediği şeyi..." anonim genelleme |
-| Hekim-hasta iletişimi | "Bir kadın bana 'utanıyorum sormaya' dedi..." anonim anekdot |
+| Hekim-hasta iletişimi | "Bir hastam bana 'utanıyorum sormaya' dedi..." anonim anekdot |
 | Editöryal pencere | "Bilgiye 'panzehir' dediğim ilk gün..." kişisel manifesto |
 | Bilimsel pencere | "Yıllarca Fransızca + Türkçe okumak..." iki dilde okuma izi |
 
@@ -72,7 +72,7 @@
 | Tabu çerçevesi | "Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz..." |
 | Yumuşak otorite | "İşin doğrusu şu — ve bunu söylerken ne ürkütmek istiyorum ne de gizlemek..." |
 | Manifesto | "Bilgi, belirsizliğin panzehiridir; bu konuda da öyle..." |
-| Anekdot kapısı | "Geçen gün bir kadın bana 'utanıyorum sormaya' dedi; oysa sorunun kendisi cevabın yarısı..." |
+| Anekdot kapısı | "Geçen gün bir hastam bana 'utanıyorum sormaya' dedi; oysa sorunun kendisi cevabın yarısı..." |
 | Yön belirleme | "Menopoz tek bir konu değil; bu yazıdaki konuyu özellikle gölgede kalan tarafından açacağım..." |
 | Yaygınlık | "Kırklı yaşların ortasından sonra çok yaygın olan ama az konuşulan bir şey var..." |
 
@@ -178,7 +178,7 @@
 - "Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz..."
 - "İşin doğrusu şu — ve bunu söylerken ne ürkütmek istiyorum ne de gizlemek..."
 - "Bilgi, belirsizliğin panzehiridir; bu konuda da öyle..."
-- "Geçen gün bir kadın bana 'utanıyorum sormaya' dedi; oysa sorunun kendisi cevabın yarısı..."
+- "Geçen gün bir hastam bana 'utanıyorum sormaya' dedi; oysa sorunun kendisi cevabın yarısı..."
 - "Menopoz tek bir konu değil; bu yazıdaki konuyu özellikle gölgede kalan tarafından açacağım..."
 - "Kırklı yaşların ortasından sonra çok yaygın olan ama az konuşulan bir şey var..."
 

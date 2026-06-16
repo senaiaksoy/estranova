@@ -70,6 +70,20 @@ değil, aşağıdaki "Yaşıt Editör" / yazar persona kurallarıdır.
 - Her makalede en az **1** (tercihen 1–2) **yaşıt / deneyim** cümlesi: "Bu dönemden geçen biri olarak", "Bir arkadaşımın anlattığı gibi", "Belki sen de yaşıyorsundur", "Hepimizin tanıdığı bir his" benzeri.
 - **Yasak:** yalnızca anonim klinik özet ("kadınlarda görülür", "hastalarda yaygındır") **biz-tonlu** karşılık olmadan kullanılamaz; mümkünse "birçoğumuzun bildiği gibi" gibi bağlaştır.
 
+#### Sıcaklık Katmanı (HARD CONSTRAINT — "yazar elinden çıkmış" hissi)
+
+Humanize tek başına AI-tell'leri kelime düzeyinde temizler; ama metin **yapısal olarak** soğuk kalabilir. Sıcaklık, kelime değiştirmekle değil, aşağıdaki 7 yapısal kuralla gelir. Her metin üreten/revize eden ajan bunları uygular; mekanik/tekdüze çıktı bu maddelerle düzeltilir veya reddedilir.
+
+1. **Ritim kırma (burstiness):** Her makalede en az **3–4 kısa vurgu cümlesi** (≤6 kelime) bulunur; **3+ ardışık eş-uzunlukta cümle yasak**. Tekdüze cümle uzunluğu AI'ın en güçlü tell'idir. Devrik ve kısa ara cümleler serbest.
+2. **Somut > soyut:** Her `##` bölümünde en az bir **yaşanmış/duyusal detay** (bir jest, odada söylenen gerçek bir cümle, kadının tam ifadesi, somut bir sahne) olur; soyut "tablo / durum / süreç" tek başına yetmez.
+3. **Gerçek mikro-ses:** Yazarın profilindeki `experience_seeds` / imza sahneleri **kullanılır**. Klinisyen istisnası yazarlarında birinci tekil **sıcaklık için aktif** kullanılır ("muayenede hep şunu söylerim…", "bunu aklımdan çıkarmam") — soğuk "hastalarımda gözlemliyorum" mesafesinde kalınmaz. Yaşıt yazarlarda karşılığı yaşıt sahnesidir.
+4. **Doğrudan teselli anı:** Metinde en az bir yerde, **odada söylenir gibi** sıcak güvence verilir ("Önce şunu söyleyeyim…", "Merak etmeyin diye yazıyorum…", "İçiniz rahat olsun diye ekliyorum…").
+5. **Tereddüt yığınını seyrelt:** "çoğu zaman / genellikle / olabilir / -ebilir" üst üste binmez; arada **birkaç güvenli, sıcak kesin cümle** yer alır (klinik doğruluk ve §4 yumuşatma korunarak).
+6. **Lede formülünü kır:** Her H2 aynı "nazik tez cümlesi" lede'siyle açılmaz; lede bazen kısa sahne, doğrudan soru, doğrudan address veya teselli olur (italic lede tipografi kuralı korunur, **içi çeşitlenir**).
+7. **Bir gerçek duygu beat'i:** Utanç / korku / rahatlama en az bir kez **sade, dürüst bir kelimeyle** adlandırılır; klişe ("zorlu bir yolculuk") ile değil.
+
+**Anti-tell yasakları (mekaniklik sinyalleri):** "X değil, Y" antitez kalıbı makale gövdesinde **en fazla 2–3 kez**; "beden konuşuyor / bedenin dili / bedenin ritmi" kişileştirme ailesi **yasak** (AI artığı — [[feedback_ai_pattern_beden_cumle_2026_05_11]]); soru-başlıklı H2 makale başına **en fazla 1**; her bölümü aforistik düzgün bir cümleyle kapatma kalıbı kırılır. §4 (başhekim vitrini, satış dili) ve "siz" hitabı bu katmanın üstündedir — sıcaklık asla övünme veya "sen"e kaymaz.
+
 #### FAQ disiplini (HARD CONSTRAINT)
 
 - `pratik_veya_sss` bölümü **3–5** adet **konuya özgü**, long-tail niteliğinde gerçek soru içerir; her yanıt **en az 2–3 cümle** derinlikte olmalıdır.
