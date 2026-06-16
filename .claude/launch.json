@@ -9,6 +9,13 @@
       "autoPort": true
     },
     {
+      "name": "tupbebek-dev",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "cd /d D:\\A-klasör\\tupbebek && npx astro dev --host --port 4399"],
+      "port": 4399,
+      "autoPort": false
+    },
+    {
       "name": "estranova-verify",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["astro", "dev", "--host", "0.0.0.0", "--port", "4400"],
