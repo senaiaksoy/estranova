@@ -17,11 +17,9 @@
 Senai Aksoy Estranova'da **aynı kişi iki kart** taşır:
 
 1. **YAZAR İMZASI:** *"Senai Aksoy"* — Dr. öneksiz. writers.ts kayıtlı (`displayName: "Senai Aksoy"`). Komşu sıcaklığı, *"bilen biri"* sesi. Klinik otorite çıkışı YASAK
-2. **TIBBİ İNCELEYİCİ İMZASI:** *"Doç. Dr. Senai Aksoy"* — JSON-LD `reviewedBy.Person` + her makalenin sonundaki Bilimsel Editör Notu (gold accent). `buildArticleSchemas()` default'u (article-schema.ts: `medicalReviewer = 'Doç. Dr. Senai Aksoy'`)
+2. **TIBBİ İNCELEYİCİ İMZASI:** *"Doç. Dr. Senai Aksoy"* — *başka* yazarların makalelerinde JSON-LD `reviewedBy.Person` + Bilimsel Editör Notu (gold accent); `buildArticleSchemas()` default'u.
 
-Bu ikisi **bilinçli olarak ayrı tutulur**. Senai yazılarında bile Bilimsel Editör Notu kendisinin yazısı dışında, **ayrı bir blok** olarak görünür (yazar = kendisi, inceleyici = kendisi — aynı kişi iki kart). Bu `writers.ts:308-344` yorum satırında belgelenmiş tasarım kararıdır:
-
-> *"Aynı kişi makale tıbbi inceleyici olarak Doç. Dr. Senai Aksoy adıyla görev alıyor (article-schema.ts medicalReviewer default'u). Bu iki rol bilinçli olarak ayrı tutuldu."*
+**GÜNCELLEME (2026-06-16) — Senai kendi makalesini inceleyemez:** Senai **yazar** olduğunda tıbbi denetleyici kendisi değil, aynı branştan (kadın hastalıkları ve doğum) **Dr. Alper Mumcu**'dur. `buildArticleSchemas`, `writerSlug==='senai-aksoy'` olduğunda `reviewedBy`'ı otomatik *"Dr. Alper Mumcu"* atar; görünür Bilimsel Editör Notu imzası da Mumcu olur. Eski "aynı kişi iki kart (yazar=inceleyici=kendisi)" tasarımı **yalnızca Senai'nin kendi yazıları için geçersizdir**; Senai'nin inceleyici rolü diğer yazarların makaleleri için sürer.
 
 CLAUDE.md §1 uyumlu (*"başhekim vitrini değil"*) ve §3 yaşıt yazar persona'sını **mümkün olduğu kadar** koruyor (Senai yaşıt değil ama Dr. öneksiz *"bilen biri"* tonu yaklaşıyor).
 

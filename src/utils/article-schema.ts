@@ -77,10 +77,21 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     image,
     keywords,
     faqItems = [],
-    medicalReviewer = 'Doç. Dr. Senai Aksoy',
-    medicalReviewerTitle = 'Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör',
     siteUrl: rawSiteUrl,
   } = opts;
+
+  // Tıbbi inceleyici default: Doç. Dr. Senai Aksoy tüm yazarların makalelerini
+  // inceler — AMA kendi makalesini inceleyemez. Senai yazar olduğunda denetleyici
+  // aynı branştan (kadın hastalıkları ve doğum) Dr. Alper Mumcu olur. Çağıran
+  // taraf explicit `medicalReviewer` geçerse her zaman ona öncelik verilir.
+  const isSenaiAuthor = writerSlug === 'senai-aksoy';
+  const medicalReviewer =
+    opts.medicalReviewer ?? (isSenaiAuthor ? 'Dr. Alper Mumcu' : 'Doç. Dr. Senai Aksoy');
+  const medicalReviewerTitle =
+    opts.medicalReviewerTitle ??
+    (isSenaiAuthor
+      ? 'Kadın Hastalıkları ve Doğum Uzmanı'
+      : 'Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör');
 
   const siteUrl = rawSiteUrl.replace(/\/+$/, '');
   const url = joinUrl(siteUrl, pathname);
@@ -124,12 +135,17 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
   // Medical reviewer canonical Person @id — Dr. Aksoy bilim editörü/inceleyici
   // olduğunda inline name+jobTitle yerine entity'ye referans.
   const reviewerIsDrAksoy = medicalReviewer.includes('Senai Aksoy');
+  // İnceleyici kadromuzdan biriyse (ör. Dr. Alper Mumcu) inline Person düğümünü
+  // görsel + yayın kurulu URL'siyle çözülebilir kıl (E-E-A-T).
+  const reviewerWriter = writers.find((w) => w.displayName === medicalReviewer);
   const reviewerPerson: JsonLdSchema = reviewerIsDrAksoy
     ? { '@id': DR_AKSOY_PERSON_ID }
     : {
         '@type': 'Person',
         name: medicalReviewer,
         jobTitle: medicalReviewerTitle,
+        ...(reviewerWriter?.portrait ? { image: joinUrl(siteUrl, reviewerWriter.portrait) } : {}),
+        ...(reviewerWriter ? { url: joinUrl(siteUrl, '/yayin-kurulu/') } : {}),
       };
 
   const medicalWebPageSchema: JsonLdSchema = {

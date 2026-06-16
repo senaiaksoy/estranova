@@ -432,7 +432,7 @@ Hero ve kart görselleri aynı yüzey değildir:
 **Tek SSS yüzeyi kuralı:** Yayında yalnızca bir görünür SSS yüzeyi olmalı. SSS ana gövde içinde `ArticleProsePanel` akışında H2/H3 olarak yazıldıysa ayrıca `ArticleFAQ` eklenmez. Gövdede görünür SSS yoksa `ArticleFAQ` ana gövdeden sonra, `RelatedReadings` öncesinde kullanılır. Her iki durumda da `FAQPage` schema aynı soru-cevap kaynağıyla beslenir.
 
 `author.Person` → `writers.ts`
-`reviewedBy.Person` → Tıbbi editör (Doç. Dr. Senai Aksoy)
+`reviewedBy.Person` → Tıbbi editör (default Doç. Dr. Senai Aksoy). **İstisna:** yazar Senai Aksoy'un kendisiyse denetleyici **Dr. Alper Mumcu** (aynı branş; Senai kendini inceleyemez). `buildArticleSchemas` otomatik atar.
 `articleSection` + `sectionPath` → kategoriye uygun
 
 **Yazar entity'si sayfada çözülebilir (E-E-A-T):** `author`/`reviewedBy` `@id` referansı (Dr. Aksoy → `https://senaiaksoy.net/#person`) kullandığında, o `@id`'ye karşılık gelen inline `Person` düğümü **aynı sayfada** bulunmalı. Dr. Aksoy Person düğümü `src/layouts/SiteLayout.astro`'da site-geneli basılır; yeni `@id` referanslı yazar eklenirse onunki de tanımlanır. Uydurma `sameAs`/hesap eklenmez.
@@ -462,7 +462,7 @@ AI motorları passage-level "doğrudan cevap" alıntılar. Marka kuralları (gö
 | 3a | `ArticleSummary` kullanıldı; Kısa Özet için elle yazılmış tekil card class yok | ☐ |
 | 4 | 6-8 cümleli H2 + her birinde italic lede | ☐ |
 | 5 | Evidence 2-3 (max 4-5), yazar sesinde yumuşatılmış (3 yapıdan biri) | ☐ |
-| 6 | Bilimsel Editör Notu `ArticleEditorNote` içinde, 5-katmanlı veya konuya göre kompakt, Doç. Dr. Senai Aksoy imzalı | ☐ |
+| 6 | Bilimsel Editör Notu `ArticleEditorNote` içinde, 5-katmanlı veya konuya göre kompakt, Doç. Dr. Senai Aksoy imzalı (**Senai'nin kendi makalelerinde Dr. Alper Mumcu imzalı**) | ☐ |
 | 7 | Çift Rol Uyarısı (Gamze): muayene odası bilgisi sızıntısı yok | ☐ |
 | 8 | ArticleAuthorBlock — writers.ts'ten | ☐ |
 | 9 | RelatedReadings 3-5 link (parent hub + komşu kategori) | ☐ |

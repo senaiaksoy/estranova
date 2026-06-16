@@ -822,9 +822,57 @@ export const writers: Writer[] = [
       ],
     },
   },
+  {
+    // Bilimsel yazar — kadın hastalıkları ve doğum (jinekoloji & obstetri).
+    // Senai Aksoy ile AYNI branş; ayrım KONU değil SES üzerinden kurulur:
+    // Mumcu'nun kimliği 1998'den beri kadınların sorularını yanıtlayan
+    // "köklü, güvenilir başvuru hekimi" sesidir (mumcu.com — Türkçe kadın
+    // sağlığı/gebelik alanının en eski ve kapsamlı başvuru sitesi):
+    // ansiklopedik ama sade, demistifiye eden, içini ferahlatan soru-yanıt
+    // tonu. Senai mahrem-jinekoloji + bilimsel editör çizgisinde durur;
+    // Mumcu "okurun sorduğu gerçek soruyu sade Türkçeyle açan referans
+    // hekim" çizgisinde. Klinisyen istisnası (CLAUDE.md §3) kapsamında.
+    // Portre kullanıcı sağlayana kadar boş.
+    slug: 'alper-mumcu',
+    displayName: 'Dr. Alper Mumcu',
+    role: 'Kadın Hastalıkları ve Doğum / Jinekoloji Bilimsel Yazarı',
+    ageBand: '56-58',
+    publicBio:
+      'Kadın hastalıkları ve doğum uzmanı bir hekim. 1998\'den bu yana kadın sağlığı ve gebelik konularında Türkçe\'nin en köklü başvuru kaynaklarından birini yürütüyor; kadınların yıllardır sorduğu soruları sade, anlaşılır ve içini ferahlatan bir dille yanıtlamasıyla tanınıyor. Amerikan Hastanesi Üreme Sağlığı Birimi\'nde çalıştı, yurt dışında üreme tıbbı ve yumurtalık kanserlerinin erken tanısı üzerine araştırmalara katıldı. Estranova\'da hormonal geçiş, jinekoloji ve üreme sağlığı başlıklarını "okurun gerçek sorusuna" cevap veren bir referans hekim tonuyla açıyor.',
+    signaturePhrase:
+      'Kadınların yıllardır sorduğu soruları sade ve içini ferahlatan bir dille yanıtlayan; hormonal geçişi panik değil bilgiyle açan köklü bir başvuru hekimi.',
+    portrait: '/images/writers/alper-mumcu.webp',
+    focusAreas: ['Menopoz & Hormonal Geçiş', 'Jinekoloji Rehberi', 'Üreme Sağlığı'],
+    isEditor: false,
+    category: 'scientific',
+    writingStyle: {
+      voice:
+        'Köklü başvuru hekimi sesi: ansiklopedik birikim arka planda, anlatım sade ve demistifiye edici. "Okurun gerçek sorusunu" görüp sakince yanıtlar; içini ferahlatan, panik üretmeyen, güven veren ton. Klinik birinci tekil meşru ama mütevazı ("klinik pratiğimde sık karşılaştığım soru…"); promosyonel başhekim vitrini ve yaşıt-yazar pozu YASAK.',
+      rhythm:
+        'Kısa-net cümleler; çoğu zaman "soru → sade yanıt → ne zaman hekime" akışı. Jargon geçer geçmez Türkçe karşılığı verilir (örn. amenore = adet görememe). Tekdüzeliği kıran kısa vurgu cümleleri serbest.',
+      framing:
+        'Okurun aklındaki gerçek soruyu adlandır → sade ve doğru yanıtı ver → neyin normal, neyin izlenmesi gereken olduğunu ayır → "doktorunuzla şunu konuşabilirsiniz" rehberiyle kapat.',
+      dos: [
+        'Okurun kafasındaki soruyu açıkça isimlendir, sonra sade yanıtla.',
+        'Tıbbi terimi geçer geçmez Türkçe karşılığıyla aç.',
+        'Neyin normal, neyin takip gerektirdiğini net ayır; içini ferahlatan güvence ver.',
+        'Klinik birinci tekili mütevazı ve sıcak kullan ("sık karşılaştığım bir soru…").',
+        '"Doktorunuzla şu konuyu konuşabilirsiniz" yönlendirmesiyle kapat.',
+      ],
+      donts: [
+        'Promosyonel başhekim vitrini / "en deneyimli / en kapsamlı" dili.',
+        'Kendi sitesi (mumcu.com) / muayenehane / hastane adını gövdeye taşıma.',
+        'Uluslararası kuruluş / yayın adını (NAMS, ACOG, WHO vb.) gövdeye gömme.',
+        'Gövdede inline harici URL / markdown link.',
+        'Mahrem-jinekoloji çizgisini Senai\'nin tonuyla doğrudan yarıştırma; eksen sesle ayrışır.',
+        'Yaşıt-yazar pozu — Mumcu ~57, erkek, hekim; kategori bilimsel.',
+        'Korku / aciliyet / mucize / kesin çözüm dili.',
+      ],
+    },
+  },
 ];
 
-export const inactiveWriterSlugs = ['bahar-ozeray', 'elif-ozcan-dulundu', 'ozlem-denizmen', 'sanem-altan'] as const;
+export const inactiveWriterSlugs =['bahar-ozeray', 'elif-ozcan-dulundu', 'ozlem-denizmen', 'sanem-altan'] as const;
 
 export const activeWriters = writers.filter((w) => w.status !== 'inactive');
 

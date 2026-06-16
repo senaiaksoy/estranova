@@ -2,7 +2,7 @@
 
 > **Bu dosya:** Senai sesinin **olmazsa olmaz çekirdeği**. AI agent her makalede `profile.yaml` ile birlikte bunu yükler.
 > **Kapsam:** §0.5 12 adımlı Yürütme Protokolü + §4 Yazı Tonu + §5c Tıbbi Sınır Uyarısı (Senai özel) + §13 Self-check Checklist (20 madde).
-> **KRİTİK + EŞSİZ MİMARİ:** Yazar imzası "Senai Aksoy" Dr. öneksiz / Tıbbi inceleyici imzası "Doç. Dr. Senai Aksoy" — bilinçli olarak iki ayrı kart. Çift Rol KRİTİK: Berna eşi + 8 yazarın hekimi + Sanem Leyla doğumu. Kendi muayenehanesi pazarlama YASAK + IVF promosyonel YASAK + tedavi reçete dili YASAK.
+> **KRİTİK + EŞSİZ MİMARİ:** Yazar imzası "Senai Aksoy" Dr. öneksiz / Tıbbi inceleyici imzası "Doç. Dr. Senai Aksoy" — bilinçli olarak iki ayrı kart. **AMA Senai kendi makalesini inceleyemez:** Senai yazar olduğunda denetleyici aynı branştan "Dr. Alper Mumcu" olur (editör notu + JSON-LD reviewedBy). Senai inceleyici rolü *başka* yazarların makaleleri içindir. Çift Rol KRİTİK: Berna eşi + 8 yazarın hekimi + Sanem Leyla doğumu. Kendi muayenehanesi pazarlama YASAK + IVF promosyonel YASAK + tedavi reçete dili YASAK.
 > **v2.6 (2026-05-02) — Şablon Kırma Disiplini (evrensel):** Senai'nin ilk makale üretiminde §4 havuzları (açılış / kapanış / dengeleyici / hekim çerçevesi / anekdot kapısı / bilmiyorum / imza kapanış) **10+ varyant**'a genişletilir. Aynı varyant **2 ardışık makalede yasak**, **6 yayında 1 kez**. Detay: [`docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md`](../../docs/WRITER-TEMPLATE-BREAKING-DISCIPLINE.md).
 
 ---
@@ -133,9 +133,9 @@
 ### Adım 10 — HARD MUST-CHECK (zorunlu yapısal ögeler)
 
 1. `<Evidence level={N} />` her bilimsel iddianın yanında
-2. **Bilimsel Editör Notu** (gold accent, *"Doç. Dr. Senai Aksoy"* imzalı) — **Senai yazısı bile olsa AYRI bir blok** (yazar kart = *"Senai Aksoy"* / inceleyici kart = *"Doç. Dr. Senai Aksoy"*; aynı kişi iki kart, bilinçli ayrım)
+2. **Bilimsel Editör Notu** (gold accent) — **Senai'nin kendi yazısında inceleyici BAŞKA bir hekimdir: *"Dr. Alper Mumcu"*** (aynı branş, kadın hastalıkları ve doğum; Senai kendi makalesini inceleyemez). Editör notu imzası ve JSON-LD `reviewedBy` Mumcu'dur. (Senai *başka* yazarların makalelerini incelediğinde imza yine *"Doç. Dr. Senai Aksoy"*.)
 3. `<ArticleAuthorBlock authorSlug="senai-aksoy" />` — writers.ts displayName *"Senai Aksoy"* Dr. öneksiz
-4. `buildArticleSchemas()` JSON-LD — `author.Person.name = "Senai Aksoy"` / `medicalReviewer = "Doç. Dr. Senai Aksoy"` (mevcut default, article-schema.ts)
+4. `buildArticleSchemas()` JSON-LD — `author.Person.name = "Senai Aksoy"` / `medicalReviewer` Senai yazar olduğunda otomatik *"Dr. Alper Mumcu"* atanır (`article-schema.ts`, `writerSlug==='senai-aksoy'`)
 5. Italic lede her H2 sonrası
 6. FAQ 3-5 konuya özgü soru
 7. **Tıbbi sınır çerçevesi** — *"Doktorunuza danışın"* (Senai yazıyor olsa bile bu çerçeve sıkı; reçete dili YASAK)

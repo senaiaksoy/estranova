@@ -466,11 +466,11 @@ Senai Aksoy hakkında geniş web taraması yapıldı (senaiaksoy.net, tupbebek.c
 8. `senai-aksoy-article-log.md` — article log (boş — ilk yayın bekleniyor)
 
 **Mevcut writers.ts tasarımı KORUNDU:**
-Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi inceleyici imzası *"Doç. Dr. Senai Aksoy"* (article-schema.ts default `medicalReviewer`) — iki rol bilinçli olarak ayrı. writers.ts kaydı genişletildi (writingStyle alanı detaylandırıldı, ama displayName + role alanları korundu).
+Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi inceleyici imzası *"Doç. Dr. Senai Aksoy"* (article-schema.ts default `medicalReviewer`) — iki rol bilinçli olarak ayrı. writers.ts kaydı genişletildi (writingStyle alanı detaylandırıldı, ama displayName + role alanları korundu). **GÜNCELLEME 2026-06-16:** Senai kendi makalesini inceleyemez — Senai yazar olduğunda denetleyici aynı branştan **Dr. Alper Mumcu**'dur (`buildArticleSchemas` otomatik). "Doç. Dr. Senai Aksoy" inceleyici imzası diğer yazarların makaleleri içindir.
 
 **Disiplin (HARD CONSTRAINT v1.0):**
 
-1. **Yazar imzası "Senai Aksoy"** Dr. öneksiz; tıbbi inceleyici imzası "Doç. Dr. Senai Aksoy" ayrı blok (iki rol farklı kart)
+1. **Yazar imzası "Senai Aksoy"** Dr. öneksiz; tıbbi inceleyici imzası "Doç. Dr. Senai Aksoy" diğer yazarların makaleleri için. **Senai'nin kendi makalesinde inceleyici "Dr. Alper Mumcu"** (aynı branş; Senai kendini inceleyemez — `buildArticleSchemas` otomatik atar)
 2. **Çift Rol KRİTİK** — Berna eşi olduğunu yazıya katma YASAK + 8 yazarın muayene odası bilgisi sızdırma YASAK + Sanem Leyla doğumu klinik referansı YASAK
 3. **Kendi muayenehanesi pazarlama YASAK** (Lotus Nişantaşı / Acıbadem Fulya / draksoyivf.com / tupbebek.com)
 4. **Promosyonel başhekim vitrini gövdede YASAK** (30 yıl / 10.000 doğum / Türkiye'nin ilk ICSI ekibi)
