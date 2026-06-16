@@ -728,6 +728,16 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       answer:
         'Hayır. Yakınmanın türüne göre yaşam tarzı düzenlemeleri, davranışsal yaklaşımlar, hormonsuz seçenekler veya lokal çözümler gündeme gelebilir. “Hayır” demek çoğu zaman boşluk değil, farklı yol anlamına gelir.',
     },
+    {
+      question: 'HRT için en uygun zaman ne zaman?',
+      answer:
+        'Kanıt, 60 yaş altında ve menopozdan sonraki ilk on yıl içinde başlanan tedavide fayda-risk dengesinin çoğu kadın için daha olumlu olduğunu gösteriyor; bu aralık bazen “fırsat penceresi” olarak anılır. Pencerenin dışında yeni başlatmada bazı riskler artabildiği için yaş ve menopozdan bu yana geçen süre konuşmanın merkezinde olur.',
+    },
+    {
+      question: 'Vajinal östrojen sistemik hormon tedavisinden farklı mı?',
+      answer:
+        'Evet. Yalnızca vajinal kuruluk gibi lokal yakınmalar için kullanılan düşük doz vajinal östrojen, tüm vücudu etkileyen sistemik tedaviden ayrı değerlendirilir ve genellikle çok daha güvenli bir kategori olarak görülür. Sistemik bir gerekçe yoksa lokal seçenek tek başına yeterli olabilir.',
+    },
   ],
   '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/': [
     {

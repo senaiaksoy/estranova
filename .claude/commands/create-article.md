@@ -52,6 +52,15 @@ Estranova için yeni bir makale üret. Bu komut kuralları **tekrarlamaz, bağla
 - **Hero ASLA değişmez:** `const hero = submenuHeroByRoute['/<parent-hub>']!`. Makale görseli yalnız byline + `articleCardImageByRoute` (yatay 2.4:1).
 - **JSON-LD:** `buildArticleSchemas()` → `MedicalWebPage` + `Article` + `BreadcrumbList` + `FAQPage` (schema, görünür SSS ile aynı kaynak).
 
+### GEO / AI-alıntı optimizasyonu (AI Overviews · ChatGPT · Perplexity)
+
+AI motorları passage-level "doğrudan cevap" çeker. Marka kuralları (gövdede dış URL/kuruluş adı yasak, §4 yumuşatma, "siz") korunarak:
+
+- **Kısa Özet = doğrudan cevap, ~40–55 kelime, tek paragraf.** İlk cümle soruyu doğrudan yanıtlar; veri yığını/uzun girişle açılmaz. AI Overview'lerin tercih ettiği uzunluk.
+- **SSS uzun-kuyruk + sayısal çapa:** 3–5 konuya özgü soru; mümkünse en az biri "ne zaman / hangi durumda / X ile Y farkı" kalıbında. Cevaplar gövdedeki iddialara dayanır, **yeni iddia eklemez**.
+- **Sayısal çapa cümleleri:** somut sayı/eşik (yaş aralığı, oran, süre) içeren cümleler AI tarafından daha sık alıntılanır; gövdede ve Kısa Özet'te en az bir kez geçsin (klinik doğruluk + Evidence ile uyumlu).
+- Kanonik kural: `docs/ARTICLE-PRODUCTION-SPEC.md` §4.8.
+
 ## Faz 5 — Pre-publish kapısı (13–20 must-pass)
 
 Spec Faz 5 tablosunu uygula. Kritik kapılar:

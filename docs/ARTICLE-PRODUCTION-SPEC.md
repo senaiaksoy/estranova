@@ -439,6 +439,15 @@ Hero ve kart görselleri aynı yüzey değildir:
 
 **`dateModified` tazeliği:** Makale içerikçe revize edilirse `buildArticleSchemas`'a `modifiedDate` (revizyon günü) geçilir; verilmezse `datePublished`'a eşitlenir. Revize edilen makalede `dateModified` eski kalmamalı (YMYL tazelik sinyali).
 
+### 4.8 GEO — AI-alıntı optimizasyonu (AI Overviews · ChatGPT · Perplexity)
+
+AI motorları passage-level "doğrudan cevap" alıntılar. Marka kuralları (gövdede inline dış URL / uluslararası kuruluş adı yasak — §4; yumuşatma; "siz" hitabı) bu optimizasyonun üstündedir; aşağıdakiler bu sınır içinde uygulanır.
+
+- **Kısa Özet doğrudan-cevap formu:** `ArticleSummary` içeriği ~**40–55 kelime, tek paragraf**; ilk cümle başlık-sorusunu doğrudan yanıtlar (veri yığını/uzun girişle açılmaz). AI Overview'lerin ilk tercih ettiği yapı.
+- **SSS uzun-kuyruk:** 3–5 konuya özgü sorudan en az biri "ne zaman / hangi durumda / X ile Y farkı nedir" kalıbında long-tail olmalı; her cevap 2–3 cümle ve **gövdedeki iddiaya dayalı** (yeni iddia eklemez, schema ile aynı kaynak).
+- **Sayısal çapa:** somut sayı/eşik içeren cümleler (yaş aralığı, oran, süre) AI tarafından daha sık çekilir; gövdede ve Kısa Özet'te en az bir kez net geçsin — `<Evidence>` ve klinik doğrulukla uyumlu.
+- Bu üç madde mevcut makalelerde de revizyon sırasında uygulanabilir; `dateModified` bump kuralıyla birlikte çalışır.
+
 ---
 
 ## Faz 5 — Pre-publish Checklist (YAYIN ÖNCESİ ZORUNLU)
@@ -460,6 +469,7 @@ Hero ve kart görselleri aynı yüzey değildir:
 | 10 | Hero image — vault catalog veya yeni üretim, archetype çerçevesi | ☐ |
 | 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList + FAQPage (`buildArticleSchemas`) | ☐ |
 | 11b | `@id` referanslı yazar/inceleyici için inline `Person` düğümü sayfada çözülebilir (Dr. Aksoy → SiteLayout site-geneli); revize makalede `modifiedDate` revizyon gününe çekildi | ☐ |
+| 11c | GEO (§4.8): Kısa Özet ~40–55 kelime doğrudan-cevap; SSS'de ≥1 long-tail soru; ≥1 sayısal çapa cümlesi | ☐ |
 | 11a | Tek görünür SSS yüzeyi var: gövde içi editoryal SSS veya `ArticleFAQ`; 3–5 soru, schema ile birebir aynı veri kaynağından besleniyor | ☐ |
 | 12 | Yayın bağlantı planı hazır; ancak standart yazar onayı gelmeden parent hub/sayı indeksine canlı link eklenmedi | ☐ |
 | 13 | Manifest entry yalnız yayın kapısı açıldıktan sonra eklenecek; onay bekleyen makale RSS/static manifest'te yok | ☐ |
