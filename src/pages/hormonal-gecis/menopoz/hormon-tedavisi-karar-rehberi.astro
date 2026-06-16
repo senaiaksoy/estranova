@@ -22,8 +22,8 @@ const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-r
 
 const tocEntries = [
   { id: 'karar-konusma', label: 'Karar Değil, Konuşma' },
-  { id: 'hormon-tedavisi-nedir', label: 'Hormon Tedavisi Nedir?' },
-  { id: 'vucutta-ne-oluyor', label: 'Vücutta Ne Oluyor?' },
+  { id: 'hormon-tedavisi-nedir', label: 'Adı Bir, Yolları Çok' },
+  { id: 'vucutta-ne-oluyor', label: 'Östrojen Düşünce' },
   { id: 'bilim-ne-diyor', label: 'Bilim Ne Diyor?' },
   { id: 'turkiye-baglamı', label: 'Türkiye Notları' },
   { id: 'karar-cercevesi', label: 'Karar Planı' },
@@ -41,6 +41,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '20 Nisan 2026',
+  modifiedDate: '16 Haziran 2026',
   pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/menopoz/',
@@ -99,8 +100,8 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="karar-konusma">Karar Değil, Konuşma</h2>
         <p>
-          Hormon tedavisi sorusu çoğu zaman doğru cevabı olan bir sınav gibi yaşanıyor. Oysa bu konu sınav değil;
-          belirtiler, riskler ve kişisel öncelikler yan yana konduğunda şekillenen bir konuşmadır.
+          Hormon tedavisi sorusu çoğu kadında doğru cevabı olan bir sınav gibi yaşanıyor. Oysa burada tek bir doğru
+          cevap yok. Belirtiler, riskler ve kişisel öncelikler yan yana konduğunda şekillenen bir konuşma var.
         </p>
         <p>
           Yıllardır kadın sağlığı görüşmelerinde aynı iki uç cümleyi çok duydum: "Bunu almak zorundayım" ve "Bundan
@@ -113,10 +114,10 @@ const articleSchemas = buildArticleSchemas({
           sırasını doğru kurmakla başlar.
         </p>
 
-        <h2 id="hormon-tedavisi-nedir">Hormon Tedavisi Nedir?</h2>
+        <h2 id="hormon-tedavisi-nedir">Adı Bir, Yolları Çok</h2>
         <p>
-          Hormon tedavisi tek bir şey değildir; aynı başlığın altında farklı yollar, farklı dozlar ve farklı hedefler
-          bulunur. Bu ayrımı yapmak, konuşmayı daha baştan sadeleştirir.
+          Aynı başlığın altında birden çok yol toplanır: farklı ilaçlar, farklı dozlar, farklı hedefler. Bu ayrımı
+          baştan yapmak konuşmayı sadeleştirir.
         </p>
         <p>
           Temel olarak hormon tedavisi, menopoz sürecinde azalan östrojeni ve gereğinde progesteronu dışarıdan ilaç
@@ -128,10 +129,10 @@ const articleSchemas = buildArticleSchemas({
           hatta hormonlu spiral. Östrojen tek başına kullanılabildiği gibi — çoğunlukla rahmi alınmış kadınlarda — rahmi
           olan kadınlarda östrojenin yanına mutlaka bir progestin ekleniyor. Bu, rahim iç tabakasının korunması için
           gerekli. Sadece vajinal yakınmalar için kullanılan düşük doz vajinal östrojen ise sistemik tedaviden farklı
-          değerlendiriliyor — genellikle çok daha güvenli bir kategori olarak görülüyor <Evidence level={5} />.
+          değerlendiriliyor — genellikle çok daha güvenli bir kategori olarak görülüyor.
         </p>
 
-        <h2 id="vucutta-ne-oluyor">Vücutta Ne Oluyor?</h2>
+        <h2 id="vucutta-ne-oluyor">Östrojen Düşünce</h2>
         <p>
           Yumurtalıkların ürettiği östrojen menopozla birlikte belirgin biçimde azalır. Bu düşüş yalnızca adet düzenini
           değil, ısı kontrolünü, uykuyu, dokuları ve kemik metabolizmasını da etkileyebilir.
@@ -146,14 +147,14 @@ const articleSchemas = buildArticleSchemas({
           Hormon tedavisi, vücuda eksilen östrojeni dışarıdan sağlayarak bu belirtilerin çoğunu yumuşatıyor. Özellikle
           sıcak basmaları ve gece terlemeleri üzerindeki etkisi güçlü: hafta içindeki belirti sıklığını üçte ikisinden
           fazla azaltabiliyor <Evidence level={5} />. Kemik koruması ve vajinal dokunun canlanması da belgelenmiş
-          faydaları arasında <Evidence level={5} />. Yani tedavi "her şeyi çözen sihir" değildir; doğru kişide, doğru
-          nedenle ve doğru izlemle anlamlı rahatlama sağlayabilen bir seçenektir.
+          faydaları arasında. Yani tedavi her şeyi çözen bir sihir gibi düşünülmemeli. Ama uygun kişide, iyi bir
+          izlemle gerçek bir rahatlama getirebiliyor.
         </p>
 
         <h2 id="bilim-ne-diyor">Bilim Ne Diyor?</h2>
         <p>
-          Kanıt durumu son yirmi yılda belirgin biçimde netleşti; yine de bu başlıkta tek cümlelik cevaplar çoğu zaman
-          yanıltıcıdır. Zamanlama, kullanılan rejim ve kişisel öykü tabloyu değiştirir.
+          Kanıt durumu son yirmi yılda belirgin biçimde netleşti. Yine de bu başlıkta tek cümlelik cevaplar yanıltıcı
+          olabilir. Zamanlama, kullanılan rejim ve kişisel öykü tabloyu değiştirir.
         </p>
         <p>
           Menopoz alanında çalışan dernekler bugün temelde şu bakışı kullanıyor: 60 yaş altındaki ve menopozdan
@@ -164,7 +165,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Pencerenin dışında — yani 60 yaşın üstünde veya menopozdan on yıldan fazla zaman geçtikten sonra yeni
           başlatmada — denkleme yeni riskler ekleniyor: damar tıkanıklığı, inme ve bazı durumlarda bilişsel yan
-          etkiler. Bu yüzden yaş ve zaman önemli <Evidence level={4} />.
+          etkiler. Bu yüzden yaş ve zaman önemli.
         </p>
         <p>
           Meme kanseri konusundaki tartışma klinik kararın en hassas alanlarından biridir. Araştırmaların ortaya koyduğu mutlak
@@ -199,7 +200,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Yani Türkiye'de yaşıyorsanız: hekiminizle önce onaylı seçenekleri konuşmak, sonra size uygun olanı birlikte
-          değerlendirmek daha güvenli bir çerçevedir. "Tükürüğünüzden özel formül çıkaralım" diyen bir yaklaşımla
+          değerlendirmek daha güvenli bir yoldur. "Tükürüğünüzden özel formül çıkaralım" diyen bir yaklaşımla
           karşılaştığınızda, kanıtı ve güvenlik izlemini sormanız yerindedir.
         </p>
 
@@ -211,7 +212,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           İlk basamak şu: yeterince rahatsızlık veren bir belirti var mı? Sıcak basmaları ya da gece terlemeleri
           uykuyu bölüyor mu, işte veya ilişkilerde zorluk yaratıyor mu? Yalnızca vajinal kuruluk yaşıyorsa, belki
-          sistemik bir tedaviye gerek olmayabilir — düşük doz lokal bir seçenek yeterli olabilir <Evidence level={5} />.
+          sistemik bir tedaviye gerek olmayabilir — düşük doz lokal bir seçenek yeterli olabilir.
         </p>
         <p>
           İkinci basamak kontrendikasyonlar. Geçmişte meme kanseri, aktif damar tıkanıklığı öyküsü, tanı konmamış
@@ -229,14 +230,14 @@ const articleSchemas = buildArticleSchemas({
           Kararın özetini iki cümlede toplayabiliriz: belirtiler ne kadar rahatsızlık veriyor, ne kadar risk kabul
           edilebilir — bu ikisinin kesiştiği yer kişisel kararın yeri. Hormon almayan kadınların da başka kanıtlı
           seçenekleri var: yaşam tarzı, bilişsel davranışçı terapi, hormonsuz yeni ilaçlar <Evidence level={4} />.
-          "Evet" dememek bir seçenek kaybı değildir. İlk adım çoğu zaman çevredeki kadınların kararından çıkıp
-          kendi belirtilerini, kendi risklerini ve kendi önceliklerini yazıya dökmektir.
+          "Evet" dememek bir seçenek kaybı değildir. İlk adım, çevredeki kadınların kararından çıkıp kendi
+          belirtilerinizi, kendi risklerinizi ve kendi önceliklerinizi yazıya dökmektir.
         </p>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          Hormon tedavisi kararı aceleyle değil, bilgiyi sakinleştirerek verilir. Bilgi belirsizliği azaltır; kararın
-          ağırlığını ise hekiminizle birlikte kurduğunuz çerçeve taşır.
+          Hormon tedavisi kararı acelede olgunlaşmaz. Bilgi belirsizliği azaltır; kararın ağırlığını ise
+          hekiminizle birlikte kurduğunuz yol taşır.
         </p>
         <p>
           Görüşmeye giderken hazırlığı sade tutmak çoğu zaman yeterlidir: hangi belirti sizi zorluyor, ne kadar süredir

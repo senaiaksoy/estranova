@@ -91,8 +91,31 @@ const organizationSchema: JsonLdSchema = {
   reviewedBy: { '@id': DR_AKSOY_PERSON_ID },
 };
 
+// Dr. Aksoy Person entity — author/reviewedBy @id referansları (organization +
+// makale şemaları) site içinde çözülebilsin diye her sayfada bir kez tanımlanır.
+// Kanonik @id senaiaksoy.net'tedir; aynı @id + tutarlı isim/sameAs ile siteler
+// arası entity birleşmesini güçlendirir (E-E-A-T / AI-search yazar otoritesi).
+const drAksoyPersonSchema: JsonLdSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': DR_AKSOY_PERSON_ID,
+  name: 'Doç. Dr. Senai Aksoy',
+  jobTitle: 'Kadın Hastalıkları ve Doğum Uzmanı',
+  url: 'https://senaiaksoy.net',
+  image: `${siteBase}/images/writers/senai-aksoy.webp`,
+  knowsAbout: [
+    'Menopoz',
+    'Perimenopoz',
+    'Hormon replasman tedavisi',
+    'Jinekoloji',
+    '40 sonrası kadın sağlığı',
+  ],
+  // sameAs — yalnızca doğrulanmış kanonik kimlik (yanlış hesap = yanlış entity birleşmesi)
+  sameAs: ['https://senaiaksoy.net'],
+};
+
 const additionalSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
-const allSchemas = [webSiteSchema, organizationSchema, ...additionalSchemas];
+const allSchemas = [webSiteSchema, organizationSchema, drAksoyPersonSchema, ...additionalSchemas];
 ---
 
 <!doctype html>

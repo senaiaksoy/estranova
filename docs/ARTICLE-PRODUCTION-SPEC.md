@@ -435,6 +435,10 @@ Hero ve kart görselleri aynı yüzey değildir:
 `reviewedBy.Person` → Tıbbi editör (Doç. Dr. Senai Aksoy)
 `articleSection` + `sectionPath` → kategoriye uygun
 
+**Yazar entity'si sayfada çözülebilir (E-E-A-T):** `author`/`reviewedBy` `@id` referansı (Dr. Aksoy → `https://senaiaksoy.net/#person`) kullandığında, o `@id`'ye karşılık gelen inline `Person` düğümü **aynı sayfada** bulunmalı. Dr. Aksoy Person düğümü `src/layouts/SiteLayout.astro`'da site-geneli basılır; yeni `@id` referanslı yazar eklenirse onunki de tanımlanır. Uydurma `sameAs`/hesap eklenmez.
+
+**`dateModified` tazeliği:** Makale içerikçe revize edilirse `buildArticleSchemas`'a `modifiedDate` (revizyon günü) geçilir; verilmezse `datePublished`'a eşitlenir. Revize edilen makalede `dateModified` eski kalmamalı (YMYL tazelik sinyali).
+
 ---
 
 ## Faz 5 — Pre-publish Checklist (YAYIN ÖNCESİ ZORUNLU)
@@ -455,6 +459,7 @@ Hero ve kart görselleri aynı yüzey değildir:
 | 9 | RelatedReadings 3-5 link (parent hub + komşu kategori) | ☐ |
 | 10 | Hero image — vault catalog veya yeni üretim, archetype çerçevesi | ☐ |
 | 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList + FAQPage (`buildArticleSchemas`) | ☐ |
+| 11b | `@id` referanslı yazar/inceleyici için inline `Person` düğümü sayfada çözülebilir (Dr. Aksoy → SiteLayout site-geneli); revize makalede `modifiedDate` revizyon gününe çekildi | ☐ |
 | 11a | Tek görünür SSS yüzeyi var: gövde içi editoryal SSS veya `ArticleFAQ`; 3–5 soru, schema ile birebir aynı veri kaynağından besleniyor | ☐ |
 | 12 | Yayın bağlantı planı hazır; ancak standart yazar onayı gelmeden parent hub/sayı indeksine canlı link eklenmedi | ☐ |
 | 13 | Manifest entry yalnız yayın kapısı açıldıktan sonra eklenecek; onay bekleyen makale RSS/static manifest'te yok | ☐ |

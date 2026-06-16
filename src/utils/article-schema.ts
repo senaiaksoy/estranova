@@ -13,6 +13,7 @@ export interface BuildArticleSchemaOptions {
   description: string;
   writerSlug: Writer['slug'];
   publishedDate: string; // "14 Nisan 2026" veya ISO
+  modifiedDate?: string; // revizyonda güncellenir; verilmezse publishedDate'e eşitlenir
   pathname: string; // örn. "/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz/" (leading slash)
   articleSection?: string; // breadcrumb + schema.articleSection ("Zihin & Denge")
   sectionPath?: string; // örn. "/zihin-denge/"
@@ -69,6 +70,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     description,
     writerSlug,
     publishedDate,
+    modifiedDate,
     pathname,
     articleSection,
     sectionPath,
@@ -95,6 +97,9 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
 
   const writer = getWriter(writerSlug);
   const isoDate = toISODate(publishedDate);
+  // dateModified: revizyon tarihi verilmişse onu kullan; yoksa yayın tarihine eşitle.
+  // Bir makale içerikçe güncellendiğinde modifiedDate geçilmeli (tazelik sinyali).
+  const isoModified = modifiedDate ? toISODate(modifiedDate) : isoDate;
 
   // Dr. Aksoy yazar olduğunda canonical Person @id'ye referans ver —
   // portföy entity'sini siloed olmaktan kurtarır (Semrush AI-search lensi).
@@ -135,7 +140,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     url,
     inLanguage: 'tr-TR',
     datePublished: isoDate,
-    dateModified: isoDate,
+    dateModified: isoModified,
     reviewedBy: reviewerPerson,
     ...(resolvedImage ? { image: resolvedImage } : {}),
   };
@@ -146,7 +151,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     headline: title,
     description,
     datePublished: isoDate,
-    dateModified: isoDate,
+    dateModified: isoModified,
     inLanguage: 'tr-TR',
     mainEntityOfPage: url,
     ...(articleSection ? { articleSection } : {}),
