@@ -1,0 +1,296 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/perimenopoz/']!;
+
+const tocEntries = [
+  { id: 'golgede-kalan', label: 'Gölgede Kalan Taraf' },
+  { id: 'olagan-dalgalanma', label: 'Olağan Dalgalanma' },
+  { id: 'cizgi-nerede', label: 'Çizgi Nerede' },
+  { id: 'menopoz-sonrasi', label: 'Menopoz Sonrası Kanama' },
+  { id: 'olasi-nedenler', label: 'Olası Nedenler Haritası' },
+  { id: 'muayene-adimlari', label: 'Değerlendirmenin Adımları' },
+  { id: 'hekime-sorular', label: 'Hekiminize Sorular' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Perimenopozda Kanama Düzeni: Olağan Dalgalanma Nerede Biter, Değerlendirme Nerede Başlar';
+const articleDescription =
+  'Perimenopozda adet düzeni neden değişir, hangi kanama biçimi olağan dalgalanmadır, hangisi bir hekime danışmayı gerektirir? Kanamanın gölgede kalan tarafını panik yaratmadan, klinik bir bakışla açan bir rehber.';
+const faqItems = articleFaqs['/hormonal-gecis/perimenopoz/perimenopozda-kanama-duzeni/'] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  publishedDate: '16 Haziran 2026',
+  pathname: '/hormonal-gecis/perimenopoz/perimenopozda-kanama-duzeni/',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/',
+  keywords: [
+    'perimenopoz',
+    'düzensiz adet',
+    'anormal uterin kanama',
+    'ara kanama',
+    'menopoz sonrası kanama',
+    'miyom',
+    'endometrial değerlendirme',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Perimenopoz"
+      title="Perimenopozda Kanama Düzeni"
+      lede="Perimenopoz çok konuşuluyor; ama kanamanın hangi hâli olağan dalgalanma, hangisi değerlendirme ister — bu çizgi çoğu zaman gölgede kalıyor."
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock authorSlug="senai-aksoy" publishedDate="16 Haziran 2026" readingMinutes={9} />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Perimenopozda adet düzeninin değişmesi çoğu zaman olağandır: aralık kısalır ya da uzar, kanama bazen daha
+          hafif bazen daha yoğun gelir. Ama bu dönemde her kanama "geçiş işte" diyerek geçiştirilemez. Bu yazı,
+          olağan dalgalanma ile değerlendirme isteyen kanama arasındaki çizgiyi sade bir dille çiziyor: hangi tablo
+          beklenebilir, hangi biçim — yoğun ve uzun kanama, ara kanama, ilişki sonrası kanama, menopozdan sonra
+          gelen kanama — bir hekime danışmayı gerektirir. Tanı koymaz; ama nereye dikkat edileceğini ve muayene
+          odasında nelerin konuşulduğunu bir haritaya dönüştürür.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="golgede-kalan">Perimenopoz Tek Bir Konu Değil; Kanama Düzeni Onun Gölgede Kalan Tarafı</h2>
+        <p>
+          Yıllardır aynı sahneye tanık oluyorum: kadın içeri girer, sıcak basmasından, uykusuzluktan söz eder; tam
+          kapıya yönelirken, neredeyse alçak sesle, "bir de şey var" der. O "şey" çoğu zaman kanamadır.
+        </p>
+        <p>
+          Bunu o kadar sık görüyorum ki artık bekliyorum. Geçen gün bir hastam tam böyle yaptı — "tuhaf gelecek ama
+          sormaya çekiniyorum" diye başladı. Birkaç aydır adeti eski takvimine uymuyordu; ama bunu kime soracağını
+          bilememişti. Kanama, kadın sağlığında en görünür ama en zor konuşulan başlık olmayı sürdürüyor; çünkü hâlâ
+          "ayıp" perdesinin arkasında.
+        </p>
+        <p>
+          Önce şunu söyleyeyim — muayene odasında da ilk söylediğim bu olur: kanama düzeninizin değişmesi çoğu zaman
+          korkulacak bir şey değildir. Ama "çoğu zaman" derken bir istisnayı da cebimde tutarım. Bu yazıda birlikte
+          yapacağımız şey de o: önce olağan olanı tanıyıp rahatlayacağız, sonra dikkat isteyen o ince çizgiyi
+          ayıracağız.
+        </p>
+        <p>
+          Türkiye'de bu suskunluğun bir bedeli var. Pek çok kadın "geçer" diyerek aylarca, bazen yıllarca bekliyor;
+          büyüklerinden duyduğu "kapanma dönemi işte" cümlesi de bunu pekiştiriyor. Oysa erken konuşmak gereksiz
+          korkuyu da, değerlendirilmesi gereken bir tablonun gecikmesini de önler. Çoğu zaman tek gereken, birkaç ayın
+          kanama notunu kendiniz tutmaktır.
+        </p>
+
+        <h2 id="olagan-dalgalanma">Önce Olağan Olanı Tanıyalım: Bu Dönemde Düzensizlik Beklenir</h2>
+        <p>
+          Şöyle düşünün: yıllarca aynı saatte çalan bir saat, bir bakmışsınız kimi gün erken, kimi gün geç çalmaya
+          başlamış. Perimenopozda adet de buna benzer.
+        </p>
+        <p>
+          Arkasındaki neden, yumurtlamanın düzensizleşmesi. Östrojen ve progesteron tek çizgide azalmak yerine inip
+          çıkıyor; sonuçta adet aralığı bir ay kısalıyor, bir ay uzuyor, kanama bir ay hafif bir ay yoğun gelebiliyor,
+          bazı aylarda yumurtlama olmadığı için adet hiç gelmeyebiliyor. <Evidence level={4} /> Tek tek bakıldığında
+          bunların çoğu, geçişin beklenen seyridir.
+        </p>
+        <p>
+          Yön duygusu veren küçük bir ölçü işinize yarayabilir. Adet aralığınız tekrar tekrar yedi gün ya da daha fazla
+          oynuyorsa, geçişin başladığına dair anlamlı bir işaret olabilir; iki kanama arasındaki süre ara ara 60 güne
+          kadar uzuyorsa, yol biraz daha ilerlemiş demektir. <Evidence level={4} /> Bu sayılar tanı koymaz. Sadece
+          "galiba bir şeyler değişiyor" deyip not tutmaya başlamanız için bir gerekçe.
+        </p>
+
+        <h2 id="cizgi-nerede">Peki Çizgi Nerede? Değerlendirme İsteyen Kanama Biçimleri</h2>
+        <p>
+          Buraya kadarı rahatlatıcı kısımdı. Şimdi biraz daha dikkatle okumanızı isteyeceğim yere geldik.
+        </p>
+        <p>
+          Püf noktası şu: aralığın değişmesi çoğu zaman olağandır, ama kanamanın <em>niteliği</em> değiştiğinde işler
+          farklılaşır. Çok yoğun ve uzun süren kanama, iki adet arasında lekelenme, ilişki sonrası kanama ya da çok sık
+          tekrarlayan kanama — bunların ardında miyom, polip, rahim iç tabakasındaki değişiklikler veya başka nedenler
+          olabilir. <Evidence level={4} /> Bu tür kanamaları "geçiş dönemi" deyip geçmeyin; bir hekimle konuşmaya
+          değer.
+        </p>
+        <RedFlagBox
+          markers={[
+            'Saatte bir pedi veya tamponu dolduran, büyük pıhtılarla gelen ya da bir haftadan uzun süren kanama',
+            'İki adet arasında ortaya çıkan lekelenme veya ara kanama',
+            'İlişki sonrası kanama',
+            'Adet aralığının sürekli 21 günden kısa olması (çok sık tekrarlayan kanama)',
+            'Kanamaya eşlik eden belirgin halsizlik, çarpıntı, nefes darlığı (kansızlık işareti olabilir)',
+            'Menopozdan sonra — son adetin üzerinden 12 ay geçtikten sonra — yeniden başlayan herhangi bir kanama',
+          ]}
+          footnote="Bu liste tanı amaçlı değil; olağan dalgalanmadan ayrılıp bir hekimle konuşmaya değer kabul edilen kanama biçimlerinin hatırlatıcısıdır."
+        />
+
+        <h2 id="menopoz-sonrasi">Menopozdan Sonra Gelen Kanama Ayrı Bir Başlıktır</h2>
+        <p>
+          Bir tek bu başlıkta sizinle çok net konuşacağım, çünkü burada "bekleyip görelim" yok.
+        </p>
+        <p>
+          Menopoz, son adetten sonra 12 ay geçince geriye dönük tanımlanır. Bu süre dolduktan sonra gelen herhangi bir
+          kanama — bir damla bile olsa — olağan sayılmaz; rahim iç tabakasının değerlendirilmesi standart adımdır.
+          <Evidence level={5} /> Çoğu zaman nedeni iyi huyludur, bunu da hemen ekleyeyim ki içiniz rahat olsun. Bu adım,
+          gözden kaçabilecek bir şeyi erkenden yakalamak için atılır; korkutmak için değil.
+        </p>
+
+        <h2 id="olasi-nedenler">Kanamanın Arkasında Yatabilecek Nedenler</h2>
+        <p>
+          "Neden böyle oluyor?" sorusunu çok duyarım; ve dürüst cevap, tek bir nedenin olmadığıdır.
+        </p>
+        <p>
+          En sık zemin şu: yumurtlama düzensizleştiğinde rahim iç tabakası dengesiz uyarılır; bu, hem atlanan hem de
+          beklenmedik yoğun kanamalara yol açar. Yanında, bu yaşta sık görülen miyom ve polipler kanama düzenini
+          değiştirebilir. <Evidence level={4} /> Daha seyrek ama önemli bir başlık, rahim iç tabakasının aşırı
+          kalınlaşması (hiperplazi) ve nadiren ondan ileri giden değişikliklerdir; özellikle uzun süre yumurtlamasız
+          geçen dönemlerde bunu aklımdan çıkarmam. <Evidence level={4} /> Tiroid, kansızlık, pıhtılaşmayla ilgili
+          durumlar ve bazı ilaçlar da tabloya karışabilir.
+        </p>
+        <p>
+          Bu listeyi sizi en kötü ihtimale hazırlamak için yazmıyorum. Tam tersine: "her düzensizlik kötüdür"
+          korkusunu da, "her kanama nasılsa geçer" rahatlığını da biraz sarsmak istiyorum. Gerçek çoğu zaman ikisinin
+          arasında, size özgü bir yerde durur.
+        </p>
+
+        <h2 id="muayene-adimlari">Muayene Odasındaki Değerlendirmenin Adımları</h2>
+        <p>
+          Çoğu kadın bu kısımdan çekinerek gelir; oysa odada olan şey, sandığınızdan çok daha sakindir.
+        </p>
+        <p>
+          Genelde ayrıntılı bir sohbetle başlarım: kanamanın sıklığı, süresi, yoğunluğu, yanında neler olduğu. Sonra
+          muayene ve çoğu zaman bir ultrason gelir; rahim ve yumurtalıklara, gerekirse rahim iç tabakasının kalınlığına
+          bakılır. <Evidence level={4} /> Tabloya göre kan sayımı, tiroid ya da rahim iç tabakasından küçük bir
+          örnekleme isteyebilirim. Herkese aynı testi sıralamam; size uygun olanı birlikte konuşuruz. Size en büyük
+          yardımı ise şu yapar: kanamanızı birkaç kelimeyle de olsa yazmış olmak — "iki gün erken", "çok yoğundu",
+          "arada lekelendi" gibi. O küçük notlar, bir test sonucundan daha çok yol gösterir.
+        </p>
+
+        <h2 id="hekime-sorular">Hekiminize Sorabileceğiniz Sorular</h2>
+        <p>
+          İyi bir görüşme çoğu zaman iyi sorularla açılır. İsterseniz şunları küçük bir kâğıda yazıp yanınızda
+          götürün; odada aklınızdan çıkması çok olağan.
+        </p>
+        <ul>
+          <li>Benim kanama biçimim bu dönem için olağan dalgalanma mı, yoksa ayrıca değerlendirilmesi gereken bir tablo mu?</li>
+          <li>Bu aşamada bir ultrason veya başka bir inceleme gerekli mi; gerekiyorsa neyi anlamak için?</li>
+          <li>Kanamamın yoğunluğu kansızlık yapmış olabilir mi; kan sayımına bakmalı mıyız?</li>
+          <li>Hangi belirtiler ortaya çıkarsa randevuyu beklemeden size ulaşmalıyım?</li>
+          <li>Şimdilik izlemek mi, yoksa bir adım atmak mı daha doğru; kararı neye göre vereceğiz?</li>
+        </ul>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Kanama düzeninizi izlemek, kendinize karşı sakin bir dikkat göstermenin yolu. Aralığın değişmesi bu dönemde
+          çoğu zaman beklenir; çoğu zaman da kendiliğinden yatışır.
+        </p>
+        <p>
+          Asıl önemli olan, kanamanın niteliği değiştiğinde fark edebilmek: yoğun ve uzun kanama, ara veya ilişki
+          sonrası kanama, menopozdan sonra yeniden gelen kanama. Bunları olağandan ayırabilmek hem paniği hem gereksiz
+          beklemeyi azaltır. Böyle bir işaret görürseniz, kendinizi suçlamadan birkaç kelimeyle yazın ve bir kadın
+          hastalıkları ve doğum uzmanıyla konuşun. Bu dönemde atabileceğiniz en sakin, en sağlam adım budur. Gerisini
+          birlikte çözeriz.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
+          '/hormonal-gecis/menopoz/menopoz-nedir/',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p>
+            Bu yazıda kanama düzenini bilinçle sakin bir dille anlattım; "ne zaman değerlendirme gerekir" çizgisini
+            ise — yazar olarak değil, kadın hastalıkları ve doğum uzmanı olarak — bu notta biraz daha net çizmek
+            istiyorum.
+          </p>
+          <p>
+            <strong class="text-primary">Klinik zemin:</strong> Perimenopozda düzensiz kanama, kliniğimde en sık
+            konuşulan ama en geç dile getirilen başlıklardandır. Anovulatuar sikluslarda rahim iç tabakası karşıt
+            progesteron olmadan östrojenle uyarıldığı için hem atlanan hem de beklenmedik yoğun kanamalar görülebilir;
+            bu, dönemin beklenen fizyolojisidir.
+          </p>
+          <p>
+            <strong class="text-primary">Ayırıcı bakış:</strong> Olağan dalgalanma ile anormal uterin kanama
+            ayrılmalıdır. Yoğun/uzun kanama, sık tekrar (sık aralık), intermenstrüel kanama ve postkoital kanama
+            yapısal (miyom, polip), endometriyal (hiperplazi ve nadiren malignite) ya da sistemik (tiroid, pıhtılaşma,
+            ilaç) nedenleri akla getirir <Evidence level={4} />. Postmenopozal kanama ise ayrı bir başlıktır ve aksi
+            kanıtlanana kadar endometriyal değerlendirme gerektirir <Evidence level={5} />.
+          </p>
+          <p>
+            <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Hemodinamiyi etkileyecek kadar yoğun
+            kanama, anemi bulguları, postmenopozal kanama, tekrarlayan intermenstrüel/postkoital kanama ve risk
+            faktörü taşıyan olgularda persistan anovulatuar kanama — bunlar "geçiş dönemi" yorumuyla geçiştirilemez.
+            Değerlendirmede öykü, muayene, transvajinal ultrason ve endikasyona göre endometriyal örnekleme yer alır.
+          </p>
+          <p>
+            <strong class="text-primary">Pratik bütünleşim:</strong> Klinikte bu tabloyu birlikte değerlendirirken
+            koruduğum sıralama şudur: önce öykü ve kanama paterninin niteliği, ardından muayene ve görüntüleme,
+            gerektiğinde kan sayımı ve tiroid ile sistemik nedenlerin taranması, endikasyon varsa endometriyal
+            örnekleme — ve tedavi kararı her zaman en sona, kişiye özgü olarak bırakılır.
+          </p>
+          <p>
+            <strong class="text-primary">Bireysellik vurgusu:</strong> Yukarıda paylaştıklarım — hem yazıda hem bu
+            notta — genel popülasyon çerçevesidir; sizin tablonuzdaki yaş, kanama biçimi, eşlik eden tıbbi durumlar
+            ve risk faktörleri değerlendirmeye yön verir. Burada okuduğunuz bir başlangıç çerçevesidir, karar değil;
+            sizin için uygun adımları kendi hekiminizle birebir değerlendirmeniz önemlidir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için
+          sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
