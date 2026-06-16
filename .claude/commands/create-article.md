@@ -74,6 +74,7 @@ Spec Faz 5 tablosunu uygula. Kritik kapılar:
 ## Faz 6–7 — Yayın + journal
 
 - Onay sonrası: `src/pages/` rota + hub/sayı indeksi + `src/data/static-articles.ts`/RSS + `icerik/yayinlanmis-makaleler/` export.
+- **Bayrak/temel (cornerstone) makaleyse:** `public/llms.txt` "Öne çıkan içerikler" listesini güncelle (küratörlü, hub başına ~1; sıradan makale eklenmez). Kanonik kural: `CLAUDE.md` §6 `llms.txt` öne-çıkan listesi.
 - Push → Cloudflare auto-deploy; **sonra ana repo'da `git pull origin main`** (memory `project_worktree_workflow`).
 - `article-log.md`'a yeni satır ekle + evrim review tetik kontrolü (Faz 7).
 
