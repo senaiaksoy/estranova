@@ -622,19 +622,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/': [
     {
-      question: 'Akşam egzersizi uykuya her zaman zarar mı verir?',
+      question: 'Akşam yürüyüşü melatonini (uyku hormonu) olumsuz etkiler mi?',
       answer:
-        'Hayır. Egzersizin saati kadar yoğunluğu, süresi ve bedende bıraktığı ısı yükü önemlidir. Bazı kadınlarda hafif akşam hareketi toparlayıcı olurken, yoğun antrenman tam tersine uyarıcı kalabilir.',
+        'Genellikle hayır. Loş ışıkta, çok geçe kalmadan yapılan hafif tempolu bir yürüyüş melatonin salgılanmasını engellemez; aksine günün stresini zihnimizden düşürerek uykuya geçişi destekler. Ancak parlak sokak lambaları altında veya elinizde telefon ekranıyla yürüyorsanız, mavi ışık maruziyeti nedeniyle uykunuz kaçabilir.',
     },
     {
-      question: 'Perimenopozda akşam hareketi neden daha farklı hissedilebilir?',
+      question: 'Yatmadan hemen önce pilates veya yoga yapmak doğru mu?',
       answer:
-        'Çünkü bu dönemde beden ısısı, gece uyanmaları ve toparlanma ritmi daha kırılgan olabilir. Aynı egzersiz genç yaşta sorun yaratmazken, bu dönemde uyku penceresini daraltabilir.',
+        'Eğer seansınız yumuşak esneme hareketlerinden oluşuyorsa evet; ancak kasları yakan yoğun bir performans dersiyse hayır. Akşam rutini terlemekten ziyade eklemleri açmalı, omurgayı rahatlatmalı ve nefesi uzatmalıdır. \'Daha çok kalori yakayım\' hırsı, geceye yaklaşırken uykunun en büyük düşmanına dönüşebilir.',
     },
     {
-      question: 'En pratik deneme yöntemi ne olabilir?',
+      question: 'Gece terlemesi yaşayan kadınlar akşam hareketinden uzak mı durmalı?',
       answer:
-        'Bir süre yoğunluğu ve bitiş saatini değiştirip ertesi günkü uyku hissini not etmek iyi bir başlangıçtır. Mesele kuralla değil, kendi beden ritmiyle çalışmaktır.',
+        'Uzak durmak şart değildir; fakat saati ve yoğunluğu çok daha dikkatli ayarlamak gerekir. Akşam geç vakitte yapılan sert antrenmanlar beden ısısını aşırı yükselterek gece terlemelerini tetikleyebilir. Hafif bir eklem mobilitesi başlangıç için en güvenli yoldur. Eğer terlemeleriniz artıyorsa, küçük bir semptom günlüğü tutarak tetikleyicileri takip edebilirsiniz.',
+    },
+    {
+      question: 'Sabah hareketi mi, akşam hareketi mi daha faydalı?',
+      answer:
+        'Bu sorunun tek bir doğrusu yoktur; belirleyici olan kendi bedeninizin verdiği yanıttır. Sabah saatlerindeki hareket sirkadiyen ritmi (iç saatimizi) güçlendirirken, akşam hareketi günün birikmiş gerilimini boşaltır. Eğer akşam hareketinden sonra uykunuzun kaçtığını fark ediyorsanız, antrenman yoğunluğunu azaltmayı veya rutini 2 saat öne çekmeyi deneyebilirsiniz.',
+    },
+    {
+      question: 'Hiç hareket edemeyecek kadar yorgun hissettiğimde ne yapmalıyım?',
+      answer:
+        'Böyle akşamlarda \'egzersiz\' kelimesini tamamen zihninizden çıkarın. Sadece iki dakika omuzlarınızı geriye doğru çevirmek, üç dakika bacaklarınızı duvara yaslamak veya loş ışıkta nefesinizi yavaşlatmak bile bedene dinlenme sinyali gönderir. Unutmayın, sürdürülebilirlik bazen en küçük adımları bile küçümsememekten başlar.',
     },
   ],
   '/zamansiz-yasam/beslenme-yaslanma/': [
