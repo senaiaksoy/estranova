@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zamansiz-yasam/menopozda-hangi-hareket/',
+    writerSlug: 'anil-yalmaz',
+    approvedAt: '2026-06-18',
+    note: 'Anıl Yalmaz author approval registered. Warm movement guide article addressing yoga, pilates, HIIT, and resistance training humanized, banned words (\'en iyi\') cleaned, and published to live route with staticArticles manifest and FAQ schema aligned.',
+  },
+  {
     pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-06-05',
