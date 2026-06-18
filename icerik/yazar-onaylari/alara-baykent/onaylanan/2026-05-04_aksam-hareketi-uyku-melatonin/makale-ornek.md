@@ -82,7 +82,7 @@ Akşam egzersizi, melatonin, beden ısısı ve perimenopozda uyku ilişkisi. Ala
             ederek. Çok yavaş olmak zorunda değil; ama nefes cümle kurmanıza izin vermeli.
 
           -
-            **6 hareketlik mobilite:** Boyun daireleri, omuz açma, kedi-inek, kalça dairesi, hamstring
+            **6 hareketlik mobilite:** Boyun daireleri, omuz açma, kedi-deve, kalça dairesi, hamstring
             esnetme, ayak bileği çevirmesi. Her biri 45-60 saniye.
 
           -
