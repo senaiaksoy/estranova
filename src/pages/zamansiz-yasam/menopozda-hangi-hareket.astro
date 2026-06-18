@@ -1,0 +1,304 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { articleFaqs } from '../../data/article-faqs';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/menopozda-hangi-hareket/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+const faqItems = articleFaqs[pathname] ?? [];
+
+const tocEntries = [
+  { id: 'hangi-hareket-sorusu', label: 'Hangi Hareket Sorusu' },
+  { id: 'her-biri-ne-anlatir', label: 'Her Biri Bedene Ne Anlatır?' },
+  { id: 'menopozda-beden', label: 'Menopozda Bedenin Cevabı' },
+  { id: 'hangi-gun-hangisi', label: 'Hangi Gün Hangisi?' },
+  { id: 'ortam-farki', label: 'Ortam Fark Eder mi?' },
+  { id: 'ne-zaman-daha-az', label: 'Ne Zaman Daha Az?' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Menopozda Hangi Hareket? Yoga, Pilates, HIIT ve Direnç Arasında Bir Rehber';
+const articleDescription =
+  'Menopoz döneminde yoga, pilates, HIIT ve direnç çalışmasını karşılaştıran, kişisel reçete vermeden doğru sorularla seçim yapmayı kolaylaştıran bir hareket rehberi.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'anil-yalmaz',
+  publishedDate: '18 Haziran 2026',
+  pathname: pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'menopozda hareket',
+    'menopozda egzersiz',
+    'yoga',
+    'pilates',
+    'HIIT',
+    'direnç çalışması',
+    '40 sonrası egzersiz',
+    'egzersiz seçimi',
+    'sürdürülebilir hareket',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Hareket"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="anil-yalmaz"
+        publishedDate="18 Haziran 2026"
+        readingMinutes={8}
+        imageSrc="/images/library/editorial/anil-yalmaz-menopozda-hangi-hareket-byline.webp"
+        imageAlt="Anıl Yalmaz, menopozda hareket seçimi yazısı için gövde ve nefes farkındalığı vurgulayan byline görseli"
+        imagePosition="center center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Menopoz geçişinde "en iyi egzersiz" diye tek bir reçete yoktur; o gün bedeninize en sakin
+          ve şefkatli yanıtı veren hareket en doğrusudur. Yoga nefesle yatıştırır, pilates omurgayı
+          hizalar, direnç çalışmaları ise kemik ve kas gücümüzü yarınlara taşır. Burada size katı bir
+          haftalık program sunmak yerine, sabah yataktan kalktığınızda kendi bedeninize sorabileceğiniz
+          birkaç samimi soru bırakmak istiyorum.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="hangi-hareket-sorusu">Hangi Hareket Sorusu Neden Bu Kadar Karmaşık?</h2>
+        <p>
+          Stüdyoda matın üzerine oturduğumuzda, aklımızdaki o ilk soru genellikle aynıdır: "Bugün bedenim
+          için hangi hareketi seçmeliyim?" Soru çok basit görünse de, o günkü uykusuzluğumuz, eklem
+          hassasiyetimiz ve hatta sabahki ruh halimiz bu soruya sessizce ortak olur.
+        </p>
+        <p>
+          Stüdyoya gelen yorgun bir kadının matına uzanıp derin bir nefesle omuzlarını serbest bıraktığı o ilk
+          anları çok iyi biliyorum. Ben bu soruyu çoğu zaman şöyle çeviririm: "Bugün bedenim hangi harekete daha
+          sakin yanıt verir?" Çünkü en iyi hareket, en popüler ya da en yoğun olanı değil; size o gün en güvenli
+          ve en sürdürülebilir gelenidir.
+        </p>
+        <p>
+          Uzun yıllar boyunca egzersizin hep daha fazlasını, daha hızlısını yapmanın "en iyisi" olduğuna dair
+          bir inançla büyüdük. Oysa hormonal geçişin başladığı 40'lı yaşlardan sonra, bedenimiz bizden bambaşka
+          bir diyalog talep ediyor. Bunlardan birinin diğerinin yerini tam olarak tutması da beklenemez.
+          Soru "hangisi?" değil, "hangi gün, hangi ihtiyaçla, hangi dozda?" olmalıdır.
+        </p>
+
+        <h2 id="her-biri-ne-anlatir">Yoga, Pilates, HIIT, Direnç: Her Biri Bedene Ne Anlatır?</h2>
+        <p>
+          Bu dört hareket biçimi, bedenle bambaşka dillerde konuşur. Biri sinir sistemini nefesle
+          sakinleştirirken, diğeri kaslarımıza ve kemiklerimize geleceğe dair sessiz ama güçlü birer
+          direnç fısıldar.
+        </p>
+        <p>
+          <strong>Yoga</strong>, bedeni yavaşça esnetmek, nefesi derinleştirmek ve sinir sistemini
+          yatıştırmak üzerine kuruludur. Bazı araştırmalar uyku, stres ve eklem hareket açıklığı açısından
+          belirgin faydalar gösterebileceğini doğrulamaktadır <Evidence level={3} />. Sıcak basması ve gece terlemeleriyle
+          bölünen yorgun sabahların ardından matın üzerinde kalmak, bedene şefkatli bir farkındalık katabilir.
+        </p>
+        <p>
+          <strong>Pilates</strong>, gövde kontrolü, omurga hizası ve derin kas katmanlarını çalıştırmaya
+          odaklanır. Avuç içlerimizin mata temas ettiği andaki o merkezlenme hissi, yumuşak ama kontrollü
+          bir güçlenme getirir. Omuz, bel ve kalça çevresindeki stabiliteyi artırmak isteyen kadınlar için
+          pilatesi son derece güvenli bir liman olarak görüyorum <Evidence level={4} />.
+        </p>
+        <p>
+          <strong>HIIT</strong> (yüksek yoğunluklu aralıklı çalışma), kısa sürede kalbi ve nefesi yoğun şekilde
+          uyarır. Kondisyon açısından etkili bir yoldur; fakat yüksek stres altındaki bir bedene ilk adımda ağır
+          gelebilir. Uykusuzluk veya eklem hassasiyetlerinin tavan yaptığı dönemlerde bedene bir de HIIT yükü
+          bindirmek, toparlanma süresini uzatmaktan başka bir işe yaramayabilir <Evidence level={4} />.
+        </p>
+        <p>
+          <strong>Direnç ve güç çalışması</strong>, menopoz geçişinde belki de geleceğe yapılan en sessiz ama
+          en kritik yatırımdır. Kas kütlesi, kemik sağlığı, metabolik denge ve günlük yaşam kapasitesi açısından
+          kanıtı en güçlü olanı budur <Evidence level={5} />. Sandalyeden doğrulmak, ağır bir bavulu kaldırmak veya
+          merdiven çıkmak gibi sıradan işlerin hepsi aslında birer güç hareketidir.
+        </p>
+
+        <h2 id="menopozda-beden">Menopoz Geçişinde Bedenin Cevabı Neden Değişir?</h2>
+        <p>
+          Menopoz, hormonların sadece döngüleri değil; bağ dokusunu, kas kütlesini ve eklem esnekliğini de
+          yeniden yazdığı bir dönemdir. Bu yüzden dün hiç zorlanmadan yaptığınız bir hareket, bugün size
+          tamamen yabancı gelebilir.
+        </p>
+        <p>
+          Özellikle perimenopozda östrojenin o dalgalı seyri, sinir sistemini her zamankinden daha duyarlı hale
+          getirebilir. Yoğun bir antrenman bazen gevşemek yerine yorgunluk ve gerilim bırakabilir.
+          Dün kaldırabildiği hafif dambılı bugün kaldıramadığında insanın içine çöken o sessiz yetersizlik hissiyle
+          yüzleşmek kolay değildir. **Beden bizimle kavga etmez.** O sadece yeni bir denge arıyordur.
+        </p>
+        <p>
+          Aynı şekilde kemik ve kas dokusu menopoz sonrası dönemde daha görünür bir gündem haline gelir.
+          Direnç çalışması bu koruma için harika bir araçtır; ancak başlangıç seviyesi ve tekniğin, bireysel
+          sağlık geçmişine göre ayarlanması gerekir. Burada tek tip bir program yoktur; güvenli ve yavaş ilerlemek
+          altın kuraldır.
+        </p>
+
+        <h2 id="hangi-gun-hangisi">Hangi Gün Hangisi Daha Uygun?</h2>
+        <p>
+          Her sabah yataktan kalktığımda kendime sorduğum basit bir soru vardır: "Bugün bedenim neye hazır?"
+          Katı antrenman programlarına sadık kalmaya çalışmak yerine, o günkü gerçek halimize sadık kalmak
+          hareketle barışık olmanın ilk sırrıdır.
+        </p>
+        <p>
+          Yastıktan kafamızı zor kaldırdığımız, eklemlerimizin hafifçe sızladığı yağmurlu bir sabahta kendimizi
+          HIIT yapmaya zorlamak bedenimize iyi gelmez. Böyle günlerde yoga veya hafif bir pilates, bedeni
+          zorlamadan farkındalık kazandırabilir. Enerjinin yüksek, eklemlerin rahat olduğu günlerde ise kısa bir
+          direnç çalışması denenebilir.
+        </p>
+        <p>
+          Birlikte hareket ettiğimiz kadınlarla sıklıkla oynadığımız küçük bir oyun var: Kendimize "bugün nasılım?"
+          diye soruyoruz. Güçlü hissettiğimiz günlerde direnç, zihin dolup taştığında açık havada sakin bir yürüyüş,
+          omurganın desteğe ihtiyacı olduğunda pilates, kısa ama canlı bir kıvılcım aradığımızda kontrollü HIIT.
+          Bu bir program değil; bedenle el sıkışma biçimidir.
+        </p>
+        <p>
+          Yürüyüşü ise bu listenin dışında tutmam. Yürüyüş, hepsinin altına serbestçe girebilen o temel ritimdir.
+          Nefes, dolaşım, kemik ve ruh hali açısından güvenli bir limandır. Hiçbir hareket türü seçemiyorsanız,
+          düzenli yürüyüş bile başlangıç için çok değerlidir.
+        </p>
+
+        <h2 id="ortam-farki">Evde, Stüdyoda, Dışarıda: Ortam Fark Eder mi?</h2>
+        <p>
+          Hareketin bedenimizdeki yankısı, onu nerede gerçekleştirdiğimizle de yakından ilişkilidir.
+          Evin sessiz, kimsenin sizi izlemediği bir köşesinde matı sermek bazen en dürüst ve
+          özgürleştirici başlangıçtır.
+        </p>
+        <p>
+          Sabah rüzgarının yüzümüze vurduğu açık hava yürüyüşleri ise bedenin yanı sıra gün ışığı, hava değişimi ve
+          ritim açısından ayrı bir katman sunar. Özellikle sabah veya akşam yürüyüşleri, uyku döngüsünü düzenlemeye
+          yardımcı olabilir. Evde başlayan birinin zamanla dışarıda kısa yürüyüşlerle ritmini genişletmesini
+          çok seviyorum.
+        </p>
+        <p>
+          Ortamın sizi küçümsetmeden veya üzerinizde baskı kurmadan desteklemesi en önemli kriterdir.
+          **Hareket ceza değildir.** Eğer bir ortam sürekli yetersiz hissettiriyorsa, orası sizin için doğru yer
+          değildir. Stüdyoda bir eğitmen rehberliği teknik açıdan destekleyici olabilir; ancak bu rehberde spesifik
+          bir marka veya özel salon önerisi bulunmamaktadır.
+        </p>
+
+        <h2 id="ne-zaman-daha-az">Ne Zaman Daha Az Yapmalı, Ne Zaman Destek Almalı?</h2>
+        <p>
+          Egzersizde 'iyi hissetmek', bedeni sınıra kadar itmek değil, onun verdiği ince sinyalleri
+          dinleyebilmek demektir. Bazen o gün planladığımızdan daha azını yapmak, aslında yarın
+          hareket edebilecek gücü saklamanın en olgun yoludur.
+        </p>
+        <p>
+          Hafif kas hassasiyeti, uzun aradan sonra normal karşılanabilir. Fakat keskin ağrı, eklem içine binen baskı,
+          uyuşma veya nefes darlığı durumlarında hareketi artırmak yerine uzman görüşü almak gerekir. Ben burada iki
+          uçtan da uzak durmayı öneririm: ağrıyı yok sayıp zorlamak ve hareketi tamamen bırakmak.
+        </p>
+
+        <RedFlagBox
+          title="Hareket planından önce değerlendirme almanın anlamlı olduğu durumlar"
+          intro="Aşağıdaki durumlar kişisel egzersiz seçiminden önce sağlık profesyoneli değerlendirmesinin daha doğru olabileceğini hatırlatır."
+          markers={[
+            'Egzersiz sırasında göğüs ağrısı, belirgin nefes darlığı veya bayılacak gibi olma',
+            'Yeni başlayan bacak şişliği, düşme sonrası üzerine basamama veya belirgin şekil bozukluğu',
+            'İdrar-dışkı kontrolünde yeni sorun ya da hızla artan uyuşma ve güç kaybı',
+            'Gece uykusunu bölen, dinlenmeyle geçmeyen veya giderek artan ağrı',
+            'Kontrolsüz tansiyon, bilinen kalp-damar hastalığı veya osteoporoz tanısı varsa yeni bir yoğunluk seçmeden önce',
+          ]}
+          footnote="Bu liste tanı koymaz; hareket seçiminden önce daha dikkatli değerlendirme gerektirebilecek işaretleri görünür kılar."
+        />
+
+        <p>
+          Benim hareket felsefemde “daha sert her zaman daha iyi” değildir. Bazen en olgun karar, bugün
+          daha az yapıp yarın devam edebilmektir. Çünkü sürdürülebilir hareket, bedenle kavga
+          ederek değil, onunla anlaşarak büyür.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
+          '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+          '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={5} /></p>
+        <p>
+          Makalede ele alınan hareket türlerinin kanıt düzeyi orta ile güçlü arasındadır. Yoga ve
+          pilatesin uyku, stres ve hareket açıklığı üzerindeki olumlu etkileri orta düzeyde
+          kanıtlanmıştır (3/5). Direnç çalışmasının kas kütlesi, kemik sağlığı ve metabolik denge
+          üzerindeki etkileri güçlü kanıtlarla desteklenir (5/5). HIIT kondisyon açısından iyi kanıt
+          taşır (4/5); ancak menopoz geçişindeki uyku bozukluğu, eklem hassasiyeti veya yüksek stres
+          durumunda daha dikkatli şekilde değerlendirilmelidir.
+        </p>
+        <p>
+          <strong>Klinik sınır:</strong> Bu yazı kişisel egzersiz programı yerine genel hareket
+          okuryazarlığı sunar. Kalp-damar hastalığı, kontrolsüz tansiyon, osteoporoz, yeni başlayan
+          nörolojik belirti, açıklanamayan kilo kaybı, gece ağrısı veya travma sonrası ağrı varsa
+          egzersiz türü ve dozu bireysel değerlendirmeyle seçilmelidir.
+        </p>
+        <p>
+          <strong>Pratik bütünleşim:</strong> En güvenli yaklaşım, farklı hareket türlerini hafta
+          içinde çeşitlendirerek ve bedenin günlük yanıtını izleyerek ilerlemektir. Yoğunluk, süre
+          ve toparlanma birlikte ele alındığında hareket sürdürülebilir hale gelir.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+          — Estranova Bilimsel Editör Notu
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır. Tanı, tedavi, rehabilitasyon veya kişisel egzersiz
+          programı yerine geçmez. Mevcut hastalığınız, ağrınız, yaralanmanız, hamilelik/lohusalık
+          durumunuz veya düzenli ilaç kullanımınız varsa hareket planınızı sağlık profesyoneliyle
+          birlikte değerlendiriniz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
