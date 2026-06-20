@@ -22,40 +22,40 @@ const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam
 
 const articleTitle = 'Beden Değişirken Ortaklığın Ritmi';
 const articleDescription =
-  'Uzun ilişkiler bazen büyük cümlelerle değil, küçük ayarlarla yürür. Işık Selin Günce bu yazıda, değişen bedenin, uykunun, enerjinin ve tahammül ritminin aynı hayatı paylaşan iki kişi arasında nasıl yeni bir ortaklık dili kurduğunu anlatıyor.';
+  'Uzun ilişkiler bazen büyük kararlarla değil, küçük ayarlarla yürür. Işık Selin Günce bu yazıda uyku, enerji, tahammül ve temasın değiştiği dönemlerde aynı hayatı paylaşmanın nasıl daha dikkatli bir ortaklık istediğini anlatıyor.';
 
 const tocEntries = [
-  { id: 'ritim-meselesi', label: 'Ritim Meselesi' },
-  { id: 'ayni-isi-yapmak', label: 'Aynı İşi Yapmak' },
-  { id: 'sahne-ve-ev', label: 'Sahne ve Ev' },
-  { id: 'degisen-beden', label: 'Değişen Beden' },
-  { id: 'yakınlik-ve-sessizlik', label: 'Yakınlık ve Sessizlik' },
+  { id: 'ritim-meselesi', label: 'Sözden Önce Gelen Ayar' },
+  { id: 'ayni-isi-yapmak', label: 'Aynı İşin Yakınlığı' },
+  { id: 'sahne-ve-ev', label: 'Sahneden Eve' },
+  { id: 'degisen-beden', label: 'Uyku ve Tahammül' },
+  { id: 'yakınlik-ve-sessizlik', label: 'Sessiz Yakınlık' },
   { id: 'alan-acmak', label: 'Alan Açmak' },
-  { id: 'kucuk-nezaketler', label: 'Küçük Nezaketler' },
-  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'kucuk-nezaketler', label: 'Günlük Nezaketler' },
+  { id: 'kapanis', label: 'Aynı Tarafta Kalmak' },
   { id: 'sss', label: 'Sık Sorulanlar' },
 ];
 
 const faqItems = [
   {
-    question: 'Partnerlikte değişen beden neden bu kadar belirleyici olabilir?',
+    question: 'Uyku ve enerji değişince ilişki neden etkilenir?',
     answer:
-      'Çünkü uyku, enerji, tahammül eşiği ve temas açıklığı değiştiğinde bunun etkisi yalnızca kişinin içinde kalmaz. Aynı hayatı paylaşan iki kişi arasındaki günlük akış da bundan etkilenir.',
+      'Çünkü uykusuzluk, yorgunluk, tahammül ve temas ihtiyacı yalnızca kişinin içinde kalmaz. Aynı evi, aynı günü ve aynı akşamı paylaşan iki kişi arasındaki günlük akış da bundan payını alır.',
   },
   {
     question: 'Uzun ilişkilerde sessizlik gerçekten yakınlığın parçası olabilir mi?',
     answer:
-      'Evet. Her duygunun aynı anda konuşulması gerekmez. Bazen birinin konuşmaya hazır olmadığı anda geri çekilmemek kadar, zorlamamak da yakınlığın bir biçimidir.',
+      'Evet. Her duygunun aynı anda konuşulması gerekmez. Bazen birinin konuşmaya hazır olmadığı anda yanında kalmak, ama onu hemen açıklamaya zorlamamak da yakınlığın bir biçimidir.',
   },
   {
     question: 'Aynı işi yapmak ilişkiyi mutlaka kolaylaştırır mı?',
     answer:
-      'Hayır. Aynı dili konuşmayı kolaylaştırabilir; ama aynı yorgunluğu taşımak, aynı rekabet alanına yakın durmak ya da aynı ritim içinde kalmak her zaman kolay değildir. Bu yüzden daha çok ayar ister.',
+      'Hayır. Aynı dili konuşmayı kolaylaştırabilir; ama aynı yorgunluğu taşımak, aynı günün yükünü eve getirmek ya da aynı alanda görünür olmak her zaman hafifletici değildir. Bazen daha çok dikkat ister.',
   },
   {
-    question: 'Bu yazının sağlık bağı tam olarak nerede kuruluyor?',
+    question: 'Partner değişen hali kişisel bir uzaklaşma gibi okumamalı mı?',
     answer:
-      'Yazı ilişki tavsiyesi vermez; ama değişen beden, uyku, enerji ve tahammül ritminin ortaklık dilini nasıl etkileyebileceğini görünür kılar. Sağlık bağı burada, gündelik yakınlığın bedensel ritimle birlikte değişmesinde kurulur.',
+      'Her sessizlik ya da geri çekilme ilişkiden uzaklaşma anlamına gelmez. Bazen kişi sadece daha yorgun, daha hassas ya da daha az uyarana ihtiyaç duyan bir günün içindedir. Bunu ayırt etmek ortaklığı yumuşatır.',
   },
 ];
 
@@ -65,6 +65,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'isik-selin-gunce',
   publishedDate: '7 Mayıs 2026',
+  modifiedDate: '19 Haziran 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam',
@@ -106,22 +107,20 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
         <p>
-          Uzun ilişkiler bazen büyük cümlelerle değil, küçük ayarlarla yürür. Özellikle bedenin, uykunun, enerjinin ve
-          tahammül ritminin değiştiği dönemlerde aynı hayatı paylaşmak yeni bir dikkat dili ister <Evidence from={2} to={3} />.
-          Bu yazı, olgun ortaklığı aşkın kendisinden çok ritmi, alanı, sessizliği ve küçük nezaketleri üzerinden okumayı
-          önerir.
+          Uzun ilişkiler bazen büyük cümlelerle değil, günün küçük ayarlarıyla yürür. Uyku, enerji, tahammül ve temas ihtiyacı
+          değiştikçe aynı hayatı paylaşmanın dili de incelir <Evidence from={2} to={3} />. Bu yazı, olgun ortaklığı sahneden eve
+          taşan bir dikkat, sessizlik ve küçük nezaketler üzerinden okur.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="ritim-meselesi">Uzun İlişkiler Neden Zamanla Ritim Meselesine Dönüşür?</h2>
-        <p>Aşk bazen ilk yıllarda sözcüklerle yürür; sonra sözcüklerden çok tempo belirleyici olur.</p>
+        <h2 id="ritim-meselesi">Uzun İlişkilerde Sözden Önce Gelen Bir Ayar Vardır</h2>
+        <p>Aşk ilk yıllarda çoğu zaman sözcüklerle yürür; sonra cümlelerden çok zamanlama belirleyici olur.</p>
         <p>
           Ben bunu biraz da eşim Yunus Günce ile aynı sahneyi paylaştığım yıllarda daha iyi anladım. Birlikte oynadığımız
-          “Karı Koca İşleri”nde bazen cümlenin kendisinden çok, cümlenin nereye bırakıldığı önem kazanıyordu. Kim biraz
-          geri çekilecek, kim ötekinin nefesine yer açacak, kim o akşam aynı sözü biraz daha hafif taşıyacak… Sanırım
-          sahneden eve sızan şey de tam bu oldu: ortaklığın çoğu zaman büyük duygulardan değil, küçük ritim ayarlarından
-          kurulduğunu görmek.
+          “Karı Koca İşleri”nde bazen cümlenin kendisinden çok, nereye bırakıldığı önem kazanıyordu. Kim biraz geri çekilecek,
+          kim ötekinin nefesine yer açacak, kim o akşam aynı sözü biraz daha hafif taşıyacak… Sahneden eve sızan şey de sanırım
+          bu oldu: ortaklığın çoğu zaman büyük duygulardan değil, küçük dikkatlerden kurulduğunu görmek.
         </p>
         <p>
           Bir süre sonra bir ilişkiyi ayakta tutan şeyin yalnızca sevgi olmadığını anlıyorsunuz. Aynı evin içinde nasıl
@@ -130,22 +129,22 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Belki yaş almak da bunu biraz daha görünür hale getiriyor. Eskiden üstünü örttüğünüz küçük sertlikler, bugün
-          uykusuz bir sabahın ardından daha kolay hissediliyor. Eskiden “sonra konuşuruz” diye geçilen şey, şimdi bedenin
+          uykusuz bir sabahın ardından daha kolay hissediliyor. Eskiden “sonra konuşuruz” diye geçilen şey, şimdi günün
           taşıyamadığı bir gerginliğe dönüşebiliyor. O yüzden uzun ortaklık bana artık biraz da birbirinin mevsimini
-          bilmeyi gerektiren bir ritim bilgisi gibi geliyor.
+          bilmeyi gerektiren bir dikkat gibi geliyor.
         </p>
         <p>
-          Bu ritim bilgisi kulağa romantik gelmeyebilir; ama bana kalırsa uzun birlikteliklerin en gerçek tarafı burada.
-          Kimin sabah sessizliğe ihtiyacı var, kim bir cümleyi hemen söylemezse içinde büyütecek, kim günün sonunda
-          yalnızca biraz daha az uyarana ihtiyaç duyuyor… Yıllar geçtikçe sevgi sanki büyük bir duygudan çok, bu küçük
-          haritayı birbirinin elinden düşürmemek gibi bir şeye dönüşüyor.
+          Bu dikkat kulağa çok romantik gelmeyebilir; ama bana kalırsa uzun birlikteliklerin en gerçek tarafı burada.
+          Kimin sabah sessizliğe ihtiyacı var, kim bir cümleyi hemen söylemezse içinde büyütecek, kim günün sonunda yalnızca
+          biraz daha az uyarana ihtiyaç duyuyor… Yıllar geçtikçe sevgi, büyük bir duygudan çok bu küçük haritayı birbirinin
+          elinden düşürmemek gibi bir şeye dönüşüyor.
         </p>
 
-        <h2 id="ayni-isi-yapmak">Aynı İşi Yapmak Partnerliği Kolaylaştırır mı, Zorlaştırır mı?</h2>
+        <h2 id="ayni-isi-yapmak">Aynı İşi Yapmak Her Şeyi Kendiliğinden Kolaylaştırmaz</h2>
         <p>Aynı dili konuşmak bir yakınlık yaratır; ama aynı yorgunluğu taşımak bazen yeni bir dikkat de ister.</p>
         <p>
           Aynı sahnede olmak dışarıdan bakınca kolaylık gibi görünebilir. Sanki hayatın provasını birlikte yapıyormuşsunuz
-          gibi. Oysa aynı işi yapmak bazen birbirinin ritmine fazla yaklaşmak, bazen de tam tersine küçük bir alan ihtiyacını
+          gibi. Oysa aynı işi yapmak bazen birbirinin temposuna fazla yaklaşmak, bazen de tam tersine küçük bir alan ihtiyacını
           daha görünür hale getirmek demektir.
         </p>
         <p>
@@ -155,15 +154,15 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Aynı işi yapmanın yanıltıcı tarafı şu: dışarıdan bakıldığında birbirinizi zaten çok iyi anlayacağınız sanılıyor.
-          Oysa bazen tam tersine, aynı dünyanın yorgunluğunu taşıdığınız için daha dikkatli olmanız gerekiyor. İkiniz de
-          aynı anda yorulabiliyorsunuz, aynı anda kabuğunuza çekilebiliyorsunuz, aynı anda sessizliğe ihtiyaç duyabiliyorsunuz.
+          Oysa bazen aynı dünyanın yorgunluğunu taşıdığınız için daha dikkatli olmanız gerekiyor. İkiniz de aynı anda
+          yorulabiliyorsunuz, aynı anda kabuğunuza çekilebiliyorsunuz, aynı anda sessizliğe ihtiyaç duyabiliyorsunuz.
           İşte o noktada ortaklık, kimin daha çok haklı olduğundan çok, kimin biraz daha yer açabileceğiyle ilgili hale geliyor.
         </p>
 
-        <h2 id="sahne-ve-ev">Aynı Sahnede Olmak ile Aynı Evde Olmak Arasında Nasıl Bir Fark Vardır?</h2>
+        <h2 id="sahne-ve-ev">Sahneden Eve Taşınan Şey Her Zaman Alkış Değildir</h2>
         <p>Sahne, bazen ilişkide eksik olanı değil, ilişkide zaten var olan ayarı büyüterek gösterir.</p>
         <p>
-          Sahne üzerinde birlikte durduğunuzda ritim görünür olur. Biri erken girerse diğerinin nefesi değişir. Biri cümleyi
+          Sahne üzerinde birlikte durduğunuzda tempo görünür olur. Biri erken girerse diğerinin nefesi değişir. Biri cümleyi
           biraz fazla taşısa ötekinin alanı daralır. Hayat da bazen buna benziyor. Aynı evde yaşamak, aynı cümleyi paylaşmak
           değil; bazen birbirinin boşluğunu ezmeden aynı akışta kalabilmek.
         </p>
@@ -174,24 +173,24 @@ const articleSchemas = buildArticleSchemas({
           sayıyor?
         </p>
         <p>
-          Bence birçok uzun ilişkide görünmeyen emek de burada başlıyor. Eve aynı saatte girmek, aynı günün içinden
+          Birçok uzun ilişkide görünmeyen emek de burada başlıyor. Eve aynı saatte girmek, aynı günün içinden
           geçmek, aynı şeyi yaşamış olmak, aynı şekilde toparlanacağınız anlamına gelmiyor. Birinizin hala kalabalıkla
           bağı sürerken ötekiniz çoktan içine dönmüş olabiliyor. Bunu kişisel bir uzaklık gibi okumadığınızda, evin içi
           biraz daha yumuşuyor.
         </p>
 
-        <h2 id="degisen-beden">Değişen Beden, Uyku ve Enerji Ortaklık Dilini Nasıl Etkiler?</h2>
-        <p>Bedenin ritmi değiştiğinde, ilişkinin eski ayarları da bazen sessizce yetersiz kalır.</p>
+        <h2 id="degisen-beden">Uyku, Enerji ve Tahammül Değiştiğinde İlişkinin Ayarı da Değişir</h2>
+        <p>Günün içindeki güç azalınca ilişkinin eski refleksleri bazen sessizce yetersiz kalır.</p>
         <p>
           Daha kolay yorulmak, geceleri daha sık uyanmak, bazen hiçbir neden yokmuş gibi tahammül eşiğinin düşmesi… Bunlar
           sadece kişinin kendi içinde yaşadığı şeyler gibi görünür. Oysa bir ilişki içinde bunların hepsi yankı yaratır.
-          Daha az konuşmak istemek, daha erken yalnız kalmak istemek, dokunulmaya her zaman aynı açıklıkta olmamak; bunların
-          her biri ortaklığın dilini yeniden kurar <Evidence from={2} to={3} />.
+          Daha az konuşmak istemek, daha erken yalnız kalmak istemek, dokunulmaya her zaman aynı açıklıkta olmamak; bunların her
+          biri aynı hayatın akışını yeniden düzenler <Evidence from={2} to={3} />.
         </p>
         <p>
-          Bence olgun ortaklık tam da burada başlıyor. Partnerinizin değişen bedenini kişisel bir reddediş gibi okumamak.
-          Her sessizliği kırgınlık, her geri çekilmeyi uzaklaşma gibi anlamamak. Bazen mesele sevgide azalma değil, bedenin
-          o gün daha dar, daha hassas, daha korunmak ister bir yerden yaşıyor olması.
+          Olgun ortaklık tam da burada başlıyor. Partnerinizin değişen halini kişisel bir reddediş gibi okumamak. Her sessizliği
+          kırgınlık, her geri çekilmeyi uzaklaşma gibi anlamamak. Bazen mesele sevgide azalma değil, o gün daha dar, daha hassas,
+          daha korunmak ister bir yerden yaşanıyor olması.
         </p>
         <p>
           Özellikle kadın bedeni değişirken, yakınlıkla ilgili eski otomatik davranışların da bazen işe yaramadığını
@@ -200,8 +199,8 @@ const articleSchemas = buildArticleSchemas({
           Bunu ilişkiye anlatabilmek kadar, partnerin de bunu hemen bir sorun başlığına çevirmeden duyabilmesi kıymetli.
         </p>
 
-        <h2 id="yakınlik-ve-sessizlik">Yakınlık Her Zaman Konuşarak mı Kurulur?</h2>
-        <p>Bazı günler evet. Bazı günlerse aynı odada sessizce kalabilmek daha güçlü bir ortaklık dili kurar.</p>
+        <h2 id="yakınlik-ve-sessizlik">Yakınlık Bazen Konuşmadan da Kurulur</h2>
+        <p>Bazı günler aynı odada sessizce kalabilmek, uzun bir açıklamadan daha şefkatli olabilir.</p>
         <p>
           Olgun ilişkilerde yakınlık bazen sözle değil, zamanlamayla kurulur. Ne zaman susulacağını bilmek, ne zaman zorlamadan
           beklemek gerektiğini sezmek, bazen “anlatmak istemiyorsanız şimdi anlatmayın” demenin de bir yakınlık olduğunu
@@ -219,7 +218,7 @@ const articleSchemas = buildArticleSchemas({
           koruyucu olabiliyor.
         </p>
 
-        <h2 id="alan-acmak">Olgun Ortaklıkta Alan Açmak Neden Sevginin Parçasıdır?</h2>
+        <h2 id="alan-acmak">Alan Açmak Sevginin Daha Sessiz Bir Biçimi Olabilir</h2>
         <p>Birini sevmek bazen ona yaklaşmak kadar, gerektiğinde geri çekilebilecek kadar olgun kalabilmektir.</p>
         <p>
           Yıllar içinde en çok buna inanmaya başladım. Her yakınlık iç içelik demek değil. Her iyi ortaklık da sürekli birlikte
@@ -238,18 +237,18 @@ const articleSchemas = buildArticleSchemas({
           kalırsa uzun ilişkilerin sürdürülebilir tarafı, tam da bu küçük geri çekilmelerle yeniden yan yana gelebilmesinde.
         </p>
 
-        <h2 id="kucuk-nezaketler">Küçük Nezaketler Neden Uzun İlişkilerin Gizli Omurgasıdır?</h2>
+        <h2 id="kucuk-nezaketler">Küçük Nezaketler Uzun İlişkilerin Günlük Omurgasıdır</h2>
         <p>Büyük sevgi çoğu zaman küçük zarafetlerle ayakta kalır.</p>
         <p>
-          Uzun ortaklıkta büyük jestler elbette unutulmaz; ama asıl taşıyıcı olan çoğu zaman daha küçük bir dikkattir.
+          Uzun ortaklıkta büyük jestler unutulmaz; ama asıl taşıyıcı olan çoğu zaman daha küçük bir dikkattir.
           Sormadan bir şeyi anlamak değil, her şeyi bilmediğini kabul ederek daha dikkatli davranmak. O gün karşısındaki
           insanın biraz kırılgan olabileceğini hesaba katmak. Kendi yorgunluğunu merkeze koyarken onun yorgunluğunu da
           yok saymamak.
         </p>
         <p>
           Sanırım olgun ortaklıkta aşk biraz da buraya yerleşiyor. Çok büyük bir duygu olarak değil, her gün yeniden yapılan
-          küçük bir ayar olarak. Beden değişirken, uyku bozulurken, tahammül azalırken, hayat hızını yeniden kurarken bile
-          o ayarın tamamen dağılmaması.
+          küçük bir ayar olarak. Uyku bozulurken, tahammül azalırken, hayat hızını yeniden kurarken bile o ayarın tamamen
+          dağılmaması.
         </p>
         <p>
           Bazen bir bardak su koymak, bazen karşı tarafın cümlesini tamamlamamak, bazen o günkü gerginliğin tamamını ilişkiye
@@ -258,11 +257,11 @@ const articleSchemas = buildArticleSchemas({
           havayı biraz daha yaşanır tutabilirsiniz.
         </p>
 
-        <h2 id="kapanis">Kapanış</h2>
-        <p>Aynı hayatı paylaşmak bazen aynı cümleyi değil, değişen bedenle birlikte yeni bir ritmi kurmayı gerektirir.</p>
+        <h2 id="kapanis">Aynı Tarafta Kalmanın Daha Sakin Hali</h2>
+        <p>Aynı hayatı paylaşmak bazen aynı cümleyi değil, değişen günlerle birlikte yeni bir ayar kurmayı gerektirir.</p>
         <p>
           Belki uzun ilişkilerin en zor yanı da en güzel yanı da bu. Kimsenin aynı kalmadığını kabul etmek. Kendinizin de
-          değiştiğini görmek. Ve bütün bunlara rağmen sevgiyi eski biçimiyle korumaya çalışmak yerine, onun yeni ritmini
+          değiştiğini görmek. Ve bütün bunlara rağmen sevgiyi eski biçimiyle korumaya çalışmak yerine, onun yeni sesini
           birlikte duymayı öğrenmek.
         </p>
         <p>
