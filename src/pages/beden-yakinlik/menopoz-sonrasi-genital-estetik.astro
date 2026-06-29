@@ -1,0 +1,305 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/beden-yakinlik/menopoz-sonrasi-genital-estetik/';
+// Makale üst hero görseli parent hub'dan gelir; özel makale görseli verilirse yalnızca
+// ArticleAuthorBlock ve articleCardImageByRoute yüzeylerine ayrıca bağlanır.
+const hero = submenuHeroByRoute['/beden-yakinlik/']!;
+const articleTitle = 'Menopoz Sonrası Genital Estetik: Her Değişim Ameliyat Gerektirir mi?';
+const articleDescription =
+  'Op. Dr. Çağrı Sade, menopoz sonrası genital bölge değişimlerini görünüm kaygısına sıkıştırmadan; fiziksel konfor, labioplasti, hacim kaybı ve cerrahi dışı seçenekler arasındaki ayrımı sakin bir karar rehberiyle anlatıyor.';
+const publishedDate = '29 Haziran 2026';
+const readingMinutes = 7;
+const articleImage = '/images/library/editorial/cagri-sade-menopoz-sonrasi-genital-estetik.webp';
+const bylineImage = '/images/library/editorial/cagri-sade-menopoz-sonrasi-genital-estetik-byline.webp';
+
+const tocEntries = [
+  { id: 'degisim-cerrahi-degil', label: 'Her Değişim Cerrahi Değil' },
+  { id: 'genital-bolge', label: 'Genital Bölge Nasıl Etkilenir?' },
+  { id: 'labioplasti', label: 'Labioplasti Ne Zaman Konuşulur?' },
+  { id: 'hacim-kaybi', label: 'Hacim Kaybı Ayrı Bir Başlık' },
+  { id: 'cerrahi-disinda', label: 'Cerrahi Dışı Seçenekler' },
+  { id: 'karar', label: 'Kararı Nasıl Taşımak Gerekir?' },
+  { id: 'sonuc', label: 'Sonuç Olarak' },
+  { id: 'sss', label: 'Sık Sorulanlar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  publishedDate,
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  image: `${siteUrl}${articleImage}`,
+  keywords: [
+    'menopoz sonrası genital estetik',
+    'labioplasti',
+    'genital bölge değişimleri',
+    'menopozda mahrem bölge',
+    'genital konfor',
+    'labium minus',
+    'labium majus',
+    'cerrahi karar süreci',
+    '40 sonrası beden farkındalığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/beden-yakinlik/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Mahrem Konfor"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc={bylineImage}
+        imageAlt="Gün ışığı alan evde ayna ve keten perdeler yanında duran, elini karnına doğru nazikçe yerleştirmiş 50'li yaşlarda kadın; menopoz sonrası mahrem beden değişimlerini sakin ve yargısız biçimde düşünme temasını taşıyan editoryal portre"
+        imagePosition="center top"
+      />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Menopoz sonrası genital bölgede doku incelmesi, elastikiyet azalması, hacim kaybı, renk değişikliği
+          veya sarkma hissi görülebilir <Evidence from={3} to={4} />. Ama bu tablo otomatik olarak ameliyat masasına
+          giden bir yol değildir. Bazen mesele yalnızca “alışık olduğum görüntü değişti” hissidir; bazen de kuruluk,
+          yanma, ilişki sırasında ağrı veya hassasiyet gibi yakınmalarla birlikte günlük konfora dokunur. İyi karar,
+          bu iki alanı acele etmeden ayırabildiğiniz yerde başlar.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="degisim-cerrahi-degil">Mahrem Bölgedeki Her Değişim Ameliyat Anlamına Gelmez</h2>
+        <p>
+          Menopoz denildiğinde çoğu kadının aklına sıcak basması, uykusuzluk veya cilt değişimleri gelir.
+          Oysa hormonlardaki değişim, bedenin en az konuşulan bölgelerinde de zamanla hissedilebilir.
+        </p>
+        <p>
+          Genital bölgedeki değişiklikler bazı kadınlarda yalnızca görünüm farkı olarak kalır. Bazılarında ise
+          dar kıyafet, spor, yürüyüş, bisiklet, oturma konforu veya cinsel yaşam sırasında rahatsızlık duygusuna
+          eşlik eder.
+        </p>
+        <p>
+          Bu konu çoğu zaman yüksek sesle söylenmez; bazen bir cümlenin sonunda, bazen “aslında bir şey daha
+          soracaktım” diye açılır. Bu çekingenlik çok anlaşılırdır. Yine de mahremiyet, konunun önemini azaltmaz;
+          yalnızca daha özenli ve daha yargısız konuşulmasını gerektirir.
+        </p>
+        <p>
+          Böyle anlarda benim için en doğru tempo, konuyu hemen bir işlem adına bağlamamaktır. Önce dinlemek gerekir:
+          ne zamandır fark ediliyor, neyi zorlaştırıyor, bedenin hangi anında kendini hatırlatıyor?
+        </p>
+        <p>
+          Ben bu başlıkta ilk cümleyi hep sade tutmayı tercih ederim: Her değişim ameliyat gerektirmez. Önce
+          yaşanan yakınmanın nedeni, sonra günlük yaşama etkisi, en son da kişinin kendi beklentisi birlikte
+          anlaşılmalıdır.
+        </p>
+
+        <h2 id="genital-bolge">Menopoz Genital Bölgeyi Nasıl Etkileyebilir?</h2>
+        <p>
+          Östrojen azalması yalnızca yüz ve ciltte değil; vulva, vajina çevresi, deri, bağ dokusu ve yağ dokusu
+          üzerinde de etkili olabilir. Bu etki her kadında aynı sırayla veya aynı şiddette görünmez.
+        </p>
+        <p>
+          Doku elastikiyetinin azalması, cilt incelmesi, hacim kaybı, sarkma hissi, renk tonunda değişiklik ve
+          sürtünmeye daha açık bir yapı bazı kadınlarda belirginleşebilir <Evidence level={4} />. Bazen mesele
+          yalnızca aynada fark edilen yeni bir görüntüdür; bazen de iç çamaşırı, yürüyüş, spor veya yakınlık
+          sırasında kendini hatırlatan fiziksel bir konfor meselesine dönüşür.
+        </p>
+        <p>
+          Bu ayrım önemlidir. Çünkü kuruluk, yanma, ilişki sırasında ağrı, tekrarlayan hassasiyet veya irritasyon
+          gibi yakınmaların bir kısmı cerrahi başlığıyla değil, jinekolojik değerlendirme ve lokal bakım/tıbbi
+          seçeneklerle konuşulur <Evidence level={5} />. Yani bazen doğru soru “hangi işlem?” değil, “önce dokunun
+          sağlığı nasıl desteklenir?” sorusudur.
+        </p>
+        <p class="border-l-2 border-gold/50 pl-4 italic text-ink/75">
+          İyi soru "görüntü değişti mi?" değil, "bu değişim günlük hayatımda gerçekten neyi etkiliyor?" sorusudur.
+        </p>
+
+        <h2 id="labioplasti">Labioplasti Ne Zaman Gündeme Gelebilir?</h2>
+        <p>
+          Labioplasti, küçük dudakların (labium minus) kişiyi rahatsız eden fazla dokusunun doğal anatomiyi
+          koruyacak şekilde yeniden düzenlenmesini amaçlayan cerrahi bir işlemdir. Burada ana fikir “küçültmek”
+          değil, kişiyi gerçekten rahatsız eden dokuyu anatomiye saygılı biçimde ele almaktır; çünkü ihtiyaç,
+          doku yapısı ve beklenti kişiden kişiye değişir.
+        </p>
+        <p>
+          Toplumda sanıldığının aksine, genital estetik yalnızca görünüm değiştirme isteğiyle konuşulmaz. Bazı
+          kadınlarda iç çamaşırı veya vücuda oturan kıyafetlerde sürtünme, spor sırasında çekilme hissi, bisiklet
+          veya uzun yürüyüşte rahatsızlık gibi fiziksel başlıklar da masaya gelir.
+        </p>
+        <p>
+          Yine de bu, labioplastinin hafif bir karar olduğu anlamına gelmez. Cerrahi kesidir, iyileşme süreci
+          vardır, iz ve his değişikliği gibi kişiye göre değişebilen riskler taşır <Evidence level={3} />. Bu
+          nedenle "yapılabilir mi?" sorusundan önce "gerçekten hangi yakınmayı çözmesi bekleniyor?" sorusu
+          sorulmalıdır.
+        </p>
+        <p>
+          Bu iki soru birbirine benzer görünür, ama aynı değildir. İlki tekniği konuşur; ikincisi hayatınızdaki gerçek
+          rahatsızlığı. Karar da çoğu zaman bu ikinci soruda netleşir.
+        </p>
+        <p>
+          Burada kararın biraz yavaşlamasını değerli bulurum. Şikayet net değilse, beklenti yalnızca dışarıdan
+          duyulan yorumlarla şekillenmişse veya temel yakınma kuruluk-ağrı-hassasiyet hattındaysa cerrahi karar
+          aceleye gelmemelidir.
+        </p>
+
+        <h2 id="hacim-kaybi">Bazen Sorun Sarkmadan Çok Hacim Kaybıdır</h2>
+        <p>
+          Menopoz sonrası dönemde bazı kadınlarda büyük dudaklarda (labium majus) yağ dokusu azalabilir. Bölge
+          daha içe çekilmiş, daha az dolgun veya kişinin alışık olduğu görünümden farklı hale gelebilir.
+        </p>
+        <p>
+          Bu başlık labioplastiden ayrıdır. Küçük dudakların fazla dokusu ile büyük dudakların hacim kaybı aynı
+          sorun değildir; aynı işlemle de ele alınmaz. Bunu ayırmak bazen başlı başına rahatlatıcıdır, çünkü “genital
+          estetik” diye tek bir torbaya atılan konular aslında birbirinden oldukça farklı olabilir.
+        </p>
+        <p>
+          Uygun kişilerde kişinin kendi yağ dokusunun hazırlanarak ilgili bölgeye verilmesi gibi seçenekler
+          konuşulabilir. Ancak burada da vaat dili doğru değildir. Yağ dokusunun tutulum oranı değişebilir, zaman
+          içinde hacim azalabilir ve planlama kişinin anatomisine, beklentisine ve iyileşme zemininin uygunluğuna
+          göre yapılmalıdır <Evidence from={2} to={3} />.
+        </p>
+        <p>
+          Mahrem bölgede "doğal görünüm" yalnızca estetik bir tercih değil, aynı zamanda ölçülü planlama meselesidir.
+          Fazlası da azı kadar sorun yaratabilir.
+        </p>
+
+        <h2 id="cerrahi-disinda">Cerrahi Her Zaman İlk Seçenek Değildir</h2>
+        <p>
+          Kuruluk, yanma, ilişki sırasında ağrı, hassasiyet veya tekrarlayan irritasyon gibi yakınmalarda ilk
+          durak çoğu zaman cerrahi değildir. Bu yakınmalar vulvovajinal doku değişimi, pH farklılaşması, enfeksiyon,
+          dermatolojik durumlar veya pelvik taban gerginliği gibi başka nedenlerle ilişkili olabilir; yani bedenin
+          “bende ne değişti?” sorusunu bazen ameliyat başlığı değil, daha temel bir tıbbi değerlendirme yanıtlar.
+        </p>
+        <p>
+          Jinekolojik değerlendirmede lokal nemlendiriciler, kayganlaştırıcılar, lokal hormonal seçenekler veya
+          farklı tıbbi yaklaşımlar konuşulabilir <Evidence level={5} />. Enerji bazlı uygulamalar ise bazı merkezlerde
+          gündeme gelse de burada frene basmak iyidir: kanıt, güvenlik ve doğru endikasyon açısından daha temkinli
+          okunmalıdır <Evidence from={1} to={2} />.
+        </p>
+        <p>
+          Bu yüzden doğru sıra önemlidir: Önce yakınmanın nedeni anlaşılır, sonra cerrahi dışı başlıkların yeri
+          görülür, en son gerçekten anatomik-fiziksel bir rahatsızlık varsa cerrahi seçenek konuşulur. Bugün karar
+          vermek zorunda değilsiniz; iyi bir karar çoğu zaman biraz bilgi, biraz zaman ve dürüst bir beden dinlemesi
+          ister.
+        </p>
+
+        <h2 id="karar">Kararı Beden Konforu, Sağlık Zemini ve Beklenti Birlikte Taşır</h2>
+        <p>
+          Genital estetik yalnızca menopozdaki kadınlara yönelik bir işlem değildir. Ancak menopoz sonrası dönemde
+          doku değişimleri nedeniyle konu bazı kadınlarda daha görünür hale gelebilir.
+        </p>
+        <p>
+          Karar verilirken genel sağlık durumu, diyabet, dolaşım, sigara kullanımı, ilaçlar, yara iyileşmesi,
+          enfeksiyon eğilimi, cinsel ağrı öyküsü ve jinekolojik değerlendirme birlikte ele alınmalıdır. Tek başına
+          aynada görülen değişiklik yeterli bir karar zemini değildir.
+        </p>
+        <p>
+          Görüşmeye hazırlık için uzun bir listeye gerek yok. Şu sorular çoğu zaman konuşmayı doğru yere taşır:
+        </p>
+        <ul>
+          <li>Rahatsızlık yalnızca görüntüyle mi ilgili, yoksa fiziksel konforu da etkiliyor mu?</li>
+          <li>Sürtünme, ağrı, tahriş veya oturma-spor sırasında belirgin yakınma var mı?</li>
+          <li>Kuruluk, yanma veya ilişki sırasında ağrı gibi jinekolojik değerlendirme isteyen belirtiler eşlik ediyor mu?</li>
+          <li>Bu karar kendi beden konforumdan mı geliyor, yoksa dışarıdan gelen yorumlardan mı?</li>
+          <li>Cerrahi dışı seçenekler gerçekten değerlendirilmiş mi?</li>
+        </ul>
+        <p>
+          Bu sorular karar verdirmez; kararın kimin, hangi ihtiyaçla ve hangi sağlık zemini üzerinde verildiğini
+          netleştirir. Bazen yanıt “evet, bunu daha ayrıntılı konuşmak istiyorum” olur; bazen de “önce kuruluk ve
+          ağrı tarafını çözmeliyim” olur. İkisi de geçerli bir başlangıçtır. Önemli olan, kararın utançtan veya
+          dışarıdan gelen ölçülerden değil, sizin bedeninizde gerçekten yaşadığınız şeyden çıkmasıdır.
+        </p>
+
+        <h2 id="sonuc">Sonuç Olarak</h2>
+        <p>
+          Kadınlar yüzlerinde, karınlarında veya kollarında zamanla oluşan değişimleri daha rahat konuşabiliyor.
+          Genital bölge ise çoğu zaman sessiz kalıyor.
+        </p>
+        <p>
+          Oysa bedenin her bölgesi gibi bu bölge de yaş alır, hormonlardan etkilenir ve değişebilir. Bu değişimi
+          konuşmak utanılacak bir şey değildir. Yalnız bu konuşmanın kusur arayan bir aynaya dönüşmemesi gerekir.
+        </p>
+        <p>
+          Eğer yaşadığınız değişim günlük yaşamınızı, fiziksel konforunuzu veya kendinizi bedeninizin içinde iyi
+          hissetmenizi etkiliyorsa, bunu plastik cerrahi ve kadın hastalıkları-doğum perspektifleriyle sakin
+          biçimde değerlendirmek anlamlı olabilir. Ama amaç hiçbir zaman bir vaadin peşinden gitmek değildir; amaç,
+          bedenin neye gerçekten ihtiyaç duyduğunu, sizin hızınıza saygı duyarak anlamaktır.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sss"
+        class="mt-10"
+        items={faqItems}
+        title="Bu Yazıdan Sonra Akla Gelen Sorular"
+        intro="Menopoz sonrası genital estetik kararını görünüm, konfor ve tıbbi değerlendirme arasında ayırırken en sık akla gelen soruları daha sade bir yerden topladım."
+      />
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
+          '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
+          '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Menopoz sonrası genital bölge değişimleri; vulvovajinal doku sağlığı, cilt-elastikiyet değişimi,
+          irritasyon, cinsel ağrı, pelvik taban ve kişisel anatomi başlıklarıyla birlikte okunmalıdır.
+          Cerrahi seçenekler yalnızca görünüm kaygısı üzerinden değil; fiziksel rahatsızlık, sağlık zemini,
+          beklenti yönetimi ve cerrahi dışı seçeneklerin yeri görüldükten sonra konuşulmalıdır.
+        </p>
+        <p>
+          Bu yazı işlem önerisi, sonuç vaadi veya yönlendirici tedavi metni değildir. Amaç; okurun mahrem
+          bölge değişimlerini utanmadan, ama aceleci karar diline de kapılmadan değerlendirmesine yardımcı olmaktır.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10" />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

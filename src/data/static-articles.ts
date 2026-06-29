@@ -18,6 +18,27 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/beden-yakinlik/menopoz-sonrasi-genital-estetik/',
+    title: 'Menopoz Sonrası Genital Estetik: Her Değişim Ameliyat Gerektirir mi?',
+    description:
+      'Menopoz sonrası genital bölge değişimlerini görünüm kaygısına sıkıştırmadan; fiziksel konfor, labioplasti, hacim kaybı ve cerrahi dışı seçenekler arasındaki ayrımı sakin biçimde anlatan Çağrı Sade imzalı rehber.',
+    publishedDate: '29 Haziran 2026',
+    writerSlug: 'cagri-sade',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik/',
+    keywords: [
+      'menopoz sonrası genital estetik',
+      'labioplasti',
+      'genital bölge değişimleri',
+      'menopozda mahrem bölge',
+      'genital konfor',
+      'labium minus',
+      'labium majus',
+      'cerrahi karar süreci',
+      '40 sonrası beden farkındalığı',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/menopozda-hangi-hareket/',
     title: 'Menopozda Hangi Hareket? Yoga, Pilates, HIIT ve Direnç Arasında Bir Rehber',
     description:

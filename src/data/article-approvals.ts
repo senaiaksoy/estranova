@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/beden-yakinlik/menopoz-sonrasi-genital-estetik/',
+    writerSlug: 'cagri-sade',
+    approvedAt: '2026-06-29',
+    note: 'KC editor direct approval: Cagri Sade tarafindan iletilen "Menopoz Sonrasi Genital Estetik" metni Estranova makale sablonuna kalibre edildi. "Her degisim ameliyat gerektirmez" cercevesi korundu; garanti/vaat, klinik funnel, kesin tedavi dili ve operasyon superlatifleri temizlendi. Labioplasti, labium majus hacim kaybi, cerrahi disi jinekolojik secenekler ve karar sorulari neutral bilgi diliyle ayrildi. 2026-06-29 Higgsfield Nano Banana Pro ile makale kart/byline gorseli uretildi ve articleCardImageByRoute + ArticleAuthorBlock imageSrc yuzeylerine baglandi; ust hero parent Beden & Yakinlik olarak korundu.',
+  },
+  {
     pathname: '/zamansiz-yasam/menopozda-hangi-hareket/',
     writerSlug: 'anil-yalmaz',
     approvedAt: '2026-06-18',

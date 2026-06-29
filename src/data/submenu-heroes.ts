@@ -223,6 +223,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/beden-yakinlik/menopoz-sonrasi-genital-estetik/': {
+    src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-genital-estetik.webp',
+    alt: "Gün ışığı alan evde ayna ve keten perdeler yanında duran 50'li yaşlarda kadın; menopoz sonrası genital estetik kararını mahremiyet, beden konforu ve acele etmeyen değerlendirme diliyle ele alan editoryal kart görseli",
+  },
   '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/': {
     src: '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu.webp',
     alt: "İstanbul evinde ayna ve pencere yanında omzuna nazikçe dokunan 50'li yaşlarda kadın; menopoz sonrası beden konforu, duruş ve omuz farkındalığı yazısı için sakin editoryal kart görseli",
