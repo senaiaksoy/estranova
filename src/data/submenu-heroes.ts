@@ -223,6 +223,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/beden-yakinlik/menopoz-sonrasi-karin-germe/': {
+    src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-karin-germe.webp',
+    alt: "Gün ışığı alan sakin bir evde ayna yanında duran 50'li yaşlarda kadın; menopoz sonrası karın bölgesi değişimlerini beden hissi, kıyafet ve acele etmeyen karar diliyle ele alan editoryal kart görseli",
+  },
   '/beden-yakinlik/menopoz-sonrasi-genital-estetik/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-genital-estetik.webp',
     alt: "Gün ışığı alan evde ayna ve keten perdeler yanında duran 50'li yaşlarda kadın; menopoz sonrası genital estetik kararını mahremiyet, beden konforu ve acele etmeyen değerlendirme diliyle ele alan editoryal kart görseli",

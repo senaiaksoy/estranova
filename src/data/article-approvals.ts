@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
+    writerSlug: 'cagri-sade',
+    approvedAt: '2026-06-29',
+    note: 'KC editor direct approval: Cagri Sade tarafindan iletilen "Menopoz Sonrasi Karin Germe" metni Estranova makale sablonuna kalibre edildi. Karın germe zayiflama yontemi degildir cercevesi one alindi; garanti/vaat, hizli toparlanma ve operasyon tesvik dili temizlendi. Yag dagilimi, cilt elastikiyeti, bag dokusu, karin duvari gevsekligi, iyilesme sureci ve karar sorulari neutral bilgi diliyle ayrildi. 2026-06-30 humanize turunda baslik beden hissi eksenine cekildi, konfor/konusulur tekrarları azaltildi, muayene odasi sahnesi anonim ve olculu bicimde eklendi. 2026-06-30 makale gorseli uretildi; card/byline yuzeylerine baglandi, ust hero parent Beden & Yakinlik olarak korundu.',
+  },
+  {
     pathname: '/beden-yakinlik/menopoz-sonrasi-genital-estetik/',
     writerSlug: 'cagri-sade',
     approvedAt: '2026-06-29',

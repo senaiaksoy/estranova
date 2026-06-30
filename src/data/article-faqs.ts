@@ -4,6 +4,33 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/beden-yakinlik/menopoz-sonrasi-karin-germe/': [
+    {
+      question: 'Menopoz sonrası karın bölgesindeki değişim yalnızca kilo almakla mı ilgilidir?',
+      answer:
+        'Her zaman değil. Yağ dağılımı, cilt elastikiyeti, bağ dokusu, kas desteği, doğum öyküsü ve kilo alıp verme döngüleri birlikte rol oynayabilir. Bu yüzden ilk soru tartıdaki rakam değil, karın bölgesindeki değişimin hangi dokudan kaynaklandığıdır.',
+    },
+    {
+      question: 'Karın germe ameliyatı kilo verme yöntemi midir?',
+      answer:
+        'Hayır. Karın germe, diyet ve egzersizin yerini alan bir zayıflama yöntemi değildir. Daha çok kilosu büyük ölçüde dengelenmiş kişilerde, belirgin cilt fazlası, alt karın sarkması veya karın duvarı gevşekliği gibi yapısal başlıklar için gündeme gelir.',
+    },
+    {
+      question: 'Menopoz sonrası dönemde karın germe için yaş tek başına engel midir?',
+      answer:
+        'Yaş tek başına karar verdirmez. Genel sağlık durumu, sigara kullanımı, diyabet eğilimi, dolaşım, kullanılan ilaçlar, yara iyileşmesi ve ameliyattan beklenen değişimin gerçekçi olup olmadığı birlikte değerlendirilmelidir.',
+    },
+    {
+      question: 'Karın germe sonrası iyileşme süresi herkes için aynı mıdır?',
+      answer:
+        'Hayır. İşlemin kapsamı, kişinin sağlık zemini, cilt ve doku kalitesi, iş temposu, ev içi destek ve cerrahın planı iyileşme ritmini değiştirir. Bu nedenle tek bir takvim vaadi yerine, kişisel bir iyileşme planı konuşmak daha güvenlidir.',
+    },
+    {
+      question: 'Karar verirken kendime hangi soruyu sormalıyım?',
+      answer:
+        'En sade soru şudur: Bu değişim yalnızca aynadaki görüntümü mü etkiliyor, yoksa kıyafet seçimimi, cilt rahatlığımı, oturma-yürüme hissimi ve günlük hareketimi de değiştiriyor mu? Yanıt netleştiğinde cerrahi ve cerrahi dışı seçenekleri daha gerçekçi bir yerden değerlendirmek mümkün olur.',
+    },
+  ],
   '/beden-yakinlik/menopoz-sonrasi-genital-estetik/': [
       {
         question: 'Menopoz sonrası genital bölgede değişim olması normal mi?',

@@ -18,6 +18,26 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
+    title: 'Menopoz Sonrası Karın Germe: Aynadaki Görüntü ile Beden Hissi Aynı Şeyi Söylemiyorsa',
+    description:
+      'Menopoz sonrası karın bölgesinde yağ dağılımı, cilt elastikiyeti, bağ dokusu ve karın duvarı değişimlerini; karın germe kararına acele etmeden, beden hissi ve sağlık zeminiyle bakmayı anlatan Çağrı Sade imzalı rehber.',
+    publishedDate: '29 Haziran 2026',
+    writerSlug: 'cagri-sade',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik/',
+    keywords: [
+      'menopoz sonrası karın germe',
+      'abdominoplasti',
+      'karın bölgesi gevşemesi',
+      'menopozda karın yağlanması',
+      'karın duvarı gevşemesi',
+      'beden konforu',
+      'estetik cerrahi karar süreci',
+      '40 sonrası beden farkındalığı',
+    ],
+  },
+  {
     path: '/beden-yakinlik/menopoz-sonrasi-genital-estetik/',
     title: 'Menopoz Sonrası Genital Estetik: Her Değişim Ameliyat Gerektirir mi?',
     description:

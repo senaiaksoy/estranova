@@ -1,0 +1,296 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/beden-yakinlik/menopoz-sonrasi-karin-germe/';
+// Makale ust hero gorseli parent hub'dan gelir; ozel makale gorseli verilirse yalnizca
+// ArticleAuthorBlock ve articleCardImageByRoute yuzeylerine ayrica baglanir.
+const hero = submenuHeroByRoute['/beden-yakinlik/']!;
+const articleTitle =
+  'Menopoz Sonrası Karın Germe: Aynadaki Görüntü ile Beden Hissi Aynı Şeyi Söylemiyorsa';
+const articleDescription =
+  'Op. Dr. Çağrı Sade, menopoz sonrası karın bölgesinde yağ dağılımı, cilt elastikiyeti, bağ dokusu ve karın duvarı değişimlerini; karın germe kararına acele etmeden, beden hissi ve sağlık zeminiyle bakmayı anlatıyor.';
+const publishedDate = '29 Haziran 2026';
+const readingMinutes = 8;
+const articleImage = '/images/library/editorial/cagri-sade-menopoz-sonrasi-karin-germe.webp';
+const bylineImage = '/images/library/editorial/cagri-sade-menopoz-sonrasi-karin-germe-byline.webp';
+
+const tocEntries = [
+  { id: 'kilo-meselesi-degil', label: 'Yalnızca kilo meselesi değil' },
+  { id: 'karin-bolgesi', label: 'Karında neler değişir?' },
+  { id: 'ne-degildir', label: 'Karın germe ne değildir?' },
+  { id: 'kimler-icin', label: 'Kimler için gündeme gelir?' },
+  { id: 'iyilesme', label: 'İyileşme de kararın parçası' },
+  { id: 'karar-sorulari', label: 'Kararı netleştiren sorular' },
+  { id: 'sonuc', label: 'Sonuç olarak' },
+  { id: 'sss', label: 'Sık sorulanlar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  publishedDate,
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  image: `${siteUrl}${articleImage}`,
+  keywords: [
+    'menopoz sonrası karın germe',
+    'abdominoplasti',
+    'karın bölgesi gevşemesi',
+    'menopozda karın yağlanması',
+    'karın duvarı gevşemesi',
+    'beden konforu',
+    'estetik cerrahi karar süreci',
+    '40 sonrası beden farkındalığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/beden-yakinlik/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Beden Konforu"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc={bylineImage}
+        imageAlt="Gün ışığı alan sakin bir evde ayna yanında duran, elini alt karın bölgesine nazikçe yerleştirmiş 50'li yaşlarda kadın; menopoz sonrası karın bölgesi değişimlerini beden hissi ve acele etmeyen karar diliyle anlatan editoryal portre"
+        imagePosition="center top"
+      />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Menopoz sonrasında karın bölgesinde değişen şey çoğu zaman yalnızca kilo değildir. Yağ dağılımı, cilt
+          elastikiyeti, bağ dokusu ve karın duvarının desteği birlikte değişebilir <Evidence from={3} to={4} />.
+          Karın germe ameliyatını bu yüzden bir zayıflama yöntemi ya da hızlı toparlanma vaadi gibi değil; kilo dengesi,
+          genel sağlık, belirgin cilt fazlası, karın duvarı gevşekliği, iyileşme süreci ve kişisel beklentinin aynı anda
+          konuşulduğu ciddi bir karar olarak görmek gerekir.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="kilo-meselesi-degil">Karındaki Değişim Her Zaman Kilo Meselesi Değildir</h2>
+        <p>
+          Menopoz, kadın yaşamında doğal bir eşiktir; fakat bu eşik yalnızca adetlerin bitmesi ya da hormonların
+          değişmesiyle sınırlı kalmaz. Bedenin ağırlığı taşıma, yağ depolama ve dokuları destekleme biçimi de zamanla
+          farklılaşabilir.
+        </p>
+        <p>
+          Karın bölgesindeki değişim bu yüzden pek çok kadının ilk fark ettiği başlıklardan biri olur. Düzenli hareket
+          eden, beslenmesine dikkat eden ve kilosu büyük ölçüde dengede olan kadınlar bile alt karında gevşeme, bel
+          kıvrımında silikleşme ya da kıyafetlerin bedene eskisi gibi yerleşmemesi hissi yaşayabilir.
+        </p>
+        <p>
+          Burada ilk sakinleştirici cümle şu olmalı: Her karın değişimi ameliyat anlamına gelmez. Bazen mesele yağ
+          dağılımıdır, bazen cilt kalitesidir, bazen doğumlar ya da yıllar içinde karın duvarında oluşan yapısal
+          gevşemelerdir. Bazen de bunların birkaçının üst üste gelmesidir.
+        </p>
+        <p>
+          Muayene odasında bu konunun çoğu zaman aynadan değil, gün sonu hissinden açıldığını görürüm. Pantolon belinin
+          rahatsız etmesi, otururken alt karında ağırlık hissi, yazın deride sürtünme ya da "bu kıyafet artık benim
+          bedenime ait değilmiş" duygusu... Bunların her biri farklı bir ihtiyaca işaret edebilir. Yine de bu yalnızca
+          bir başlangıçtır; sizin bedeniniz kendi hikayesini daha yavaş ve daha farklı anlatabilir.
+        </p>
+
+        <h2 id="karin-bolgesi">Menopoz Sonrası Karın Bölgesinde Neler Değişebilir?</h2>
+        <p>
+          Östrojen azalmasıyla birlikte yağ dağılımı bazı kadınlarda karın çevresine doğru kayabilir. Bu, tek başına
+          irade ya da disiplin meselesi değildir; metabolizma, kas kütlesi, uyku, stres, insülin duyarlılığı ve yaşla
+          değişen bağ dokusu aynı tablonun içinde durur.
+        </p>
+        <p>
+          Cilt elastikiyetinde azalma, alt karında sarkma, bel kıvrımının daha düz görünmesi, karın duvarında gevşeklik
+          ve kıyafetlerin vücuda oturuşunda değişim menopoz sonrası dönemde daha belirgin hale gelebilir <Evidence
+            from={3}
+            to={4}
+          />. Bu değişimler her kadında aynı sırayla ya da aynı belirginlikte olmaz.
+        </p>
+        <p>
+          Özellikle doğum öyküsü, kilo alıp verme döngüleri, genetik cilt yapısı, sigara kullanımı, güneş hasarı,
+          diyabet eğilimi ve kas dokusunun zaman içindeki azalması karar öncesi konuşulması gereken zemini belirler
+          <Evidence level={4} />. Yani "karın neden değişti?" sorusunun tek bir cevabı yoktur.
+        </p>
+        <p class="border-l-2 border-gold/50 pl-4 italic text-ink/75">
+          İyi karar, "eski halime dönmek istiyorum" cümlesinden önce "bu değişimin kaynağı ne?" sorusunu taşıyabildiğiniz
+          yerde başlar.
+        </p>
+
+        <h2 id="ne-degildir">Karın Germe Nedir, Ne Değildir?</h2>
+        <p>
+          Karın germe, yani abdominoplasti, fazla cilt ve yağ dokusunun çıkarılmasını, gerektiğinde karın duvarındaki
+          gevşemenin onarılmasını ve karın konturunun daha dengeli hale getirilmesini amaçlayan cerrahi bir işlemdir.
+          Genel anestezi altında yapılır ve kişiye göre planlanan bir iyileşme süreci gerektirir.
+        </p>
+        <p>
+          Fakat bu işlemi doğru yere koymak önemlidir: Karın germe bir kilo verme yöntemi değildir. Diyet ve egzersizin
+          yerini almaz; metabolik sağlığı tek başına düzeltmez; herkes için aynı sonucu vermez. Daha çok, kilo büyük
+          ölçüde dengelendikten sonra geride kalan cilt fazlası, alt karın sarkması ya da karın duvarı gevşekliği gibi
+          yapısal başlıklar için konuşulur.
+        </p>
+        <p>
+          Bu ayrım hem beklenti hem güvenlik açısından değerlidir. Çünkü yalnızca yağ birikimi baskınsa konuşmanın yönü
+          farklıdır; cilt fazlası belirginse başka bir plan gerekir; karın duvarı ayrışması veya gevşekliği varsa harita
+          yeniden değişir. Dışarıdan benzer görünen iki karın, tıbbi olarak bambaşka şeyler anlatabilir.
+        </p>
+        <p>
+          Bu yüzden karar "yapılabilir mi?" sorusuyla başlamamalı. Daha iyi soru şudur: Bende hangi dokuyu, hangi
+          beklentiyle ve hangi riskleri gözeterek ele alacak?
+        </p>
+
+        <h2 id="kimler-icin">Kimler İçin Konuşulabilir?</h2>
+        <p>
+          Karın germe kararında yaş tek başına belirleyici değildir. Menopoz sonrası dönemde asıl mesele, bedenin genel
+          sağlık zeminiyle cerrahiden beklenen değişimi aynı cümlede dürüstçe tarif edebilmektir.
+        </p>
+        <p>
+          Kilosu büyük ölçüde stabil olan, belirgin cilt fazlası ya da alt karın sarkması bulunan, genel anestezi ve
+          yara iyileşmesi açısından uygun görülen, sigara-diyabet-dolaşım gibi risk başlıkları değerlendirilmiş kadınlar
+          için bu seçenek konuşulabilir <Evidence level={3} />. Bu "uygundur" demek değildir; yalnızca değerlendirmenin
+          hangi başlıklardan geçtiğini gösterir.
+        </p>
+        <p>
+          Tam tersine, kilo değişimi halen devam ediyorsa, beklenti yalnızca tartıdaki rakamla ilgiliyse, kararın içine
+          sosyal baskı ya da kıyas duygusu karışmışsa, iyileşme sürecine zaman ayrılamayacaksa veya genel sağlık zemini
+          uygun değilse biraz yavaşlamak daha doğru olur.
+        </p>
+        <p>
+          Bazen en doğru adım ameliyat kararı vermek değil, birkaç ay boyunca kilo dengesini, kas gücünü, metabolik
+          durumu ve cilt bakımını daha net görmektir. Beklemek pasif bir şey değildir; çoğu zaman kararın kalitesini
+          artıran en sakin adımdır.
+        </p>
+
+        <h2 id="iyilesme">İyileşme Süreci de Kararın Bir Parçasıdır</h2>
+        <p>
+          Cerrahi karar yalnızca ameliyat gününü değil, sonrasındaki haftaları da içerir. Karın germe sonrası korse
+          kullanımı, hareketin kademeli artırılması, yara bakımı, ağır kaldırma ve yoğun spor gibi aktivitelerin
+          ertelenmesi kişiye özel planlanır.
+        </p>
+        <p>
+          Bazı kişiler sosyal yaşama daha erken dönebilir, bazıları daha yavaş ilerler. Bu fark; işlemin kapsamı, cilt
+          ve doku kalitesi, eşlik eden hastalıklar, sigara kullanımı, iş temposu, ev içi destek ve bedenin iyileşme
+          ritmiyle ilgilidir. Takvim vermek kolaydır; asıl önemli olan o takvimin sizin hayatınıza gerçekten uyup
+          uymadığıdır.
+        </p>
+        <p>
+          Yara izi, his değişikliği, kanama, enfeksiyon, sıvı birikimi, pıhtı riski, asimetri, revizyon ihtimali ve
+          anesteziye bağlı riskler cerrahi konuşmanın doğal parçalarıdır <Evidence level={3} />. Bunları duymak korku
+          yaratmak için değil, kararın gerçek boyutunu görmek için gereklidir.
+        </p>
+        <p>
+          Beden rahatlığı önemli bir gerekçe olabilir; ama bu hedef, iyileşme sürecinin yükünü yok sayarak
+          konuşulmamalıdır. Karar, aynadaki görüntü kadar takviminize, ev düzeninize ve destek alanınıza da bakar.
+        </p>
+
+        <h2 id="karar-sorulari">Kararı Netleştiren Sorular</h2>
+        <p>
+          Karın germe kararını daha sakin bir yere taşımak için uzun listeler gerekmez. Bazen birkaç iyi soru, bütün
+          konuşmanın tonunu değiştirir.
+        </p>
+        <ul>
+          <li>Rahatsızlık yalnızca görüntüyle mi ilgili, yoksa oturma, yürüme, kıyafet ve cilt konforunu da etkiliyor mu?</li>
+          <li>Kilo değişimim son aylarda büyük ölçüde dengede mi?</li>
+          <li>Karın bölgesindeki ana mesele yağ birikimi mi, cilt fazlası mı, karın duvarı gevşekliği mi?</li>
+          <li>Genel sağlık durumum, sigara kullanımı, diyabet eğilimi ve kullandığım ilaçlar cerrahi açısından değerlendirildi mi?</li>
+          <li>İyileşme sürecine gerçekçi biçimde zaman ve destek ayırabilecek miyim?</li>
+          <li>Bu kararı kendi beden konforum için mi düşünüyorum, yoksa dışarıdan gelen yorumlar mı beni hızlandırıyor?</li>
+        </ul>
+        <p>
+          Bu sorular karar verdirmez; kararın hangi ihtiyaçtan doğduğunu gösterir. Bazen yanıt "evet, bunu daha
+          ayrıntılı konuşmak istiyorum" olur. Bazen de "önce kilo dengemi, kas gücümü ve metabolik sağlığımı
+          netleştirmeliyim" olur. İkisi de aceleye değil, açıklığa giden yollardır.
+        </p>
+
+        <h2 id="sonuc">Sonuç Olarak</h2>
+        <p>
+          Menopoz sonrası karın bölgesindeki değişimleri konuşmak, bedeninize kusur arayan bir yerden bakmak zorunda
+          değildir. Bazen mesele aynadaki görüntüdür; bazen ağırlık, sürtünme, kıyafet, duruş ve gün sonundaki yorgunluk
+          hissidir.
+        </p>
+        <p>
+          Karın germe ameliyatı bazı kadınlar için anlamlı bir seçenek olabilir. Ama bu seçenek ancak kilo, cilt, karın
+          duvarı, genel sağlık, iyileşme süreci ve beklenti aynı masaya konduğunda doğru değerlendirilir. Cerrahinin
+          etkili bir araç olabilmesi, herkes için doğru araç olduğu anlamına gelmez.
+        </p>
+        <p>
+          Bu başlıkta amaç "daha ince" ya da "daha genç" görünme vaadi değildir. Amaç, bedeninizde gerçekten neyin
+          değiştiğini, bunun gününüze nasıl dokunduğunu ve hangi adımın sizin hızınıza saygı duyduğunu anlamaktır.
+          Bazen cerrahi konuşulur; bazen konuşulmaz. İyi olan, kararın aceleden değil, bilgiden ve bedeninizi dürüstçe
+          dinlemekten çıkmasıdır.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sss"
+        class="mt-10"
+        items={faqItems}
+        title="Bu Yazıdan Sonra Akla Gelen Sorular"
+        intro="Menopoz sonrası karın germe kararını kilo, doku yapısı, iyileşme süreci ve gerçekçi beklenti ekseninde düşünürken en sık akla gelen soruları sade bir yerde topladım."
+      />
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
+          '/beden-yakinlik/menopoz-sonrasi-genital-estetik/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Menopoz sonrası karın bölgesi değişimleri; yağ dağılımı, cilt elastikiyeti, bağ dokusu, karın duvarı desteği,
+          metabolik sağlık, doğum öyküsü ve kilo değişimi birlikte değerlendirilerek okunmalıdır. Karın germe cerrahisi
+          kilo verme yöntemi olarak sunulmamalı; stabil kilo, belirgin cilt fazlası veya yapısal gevşeklik, genel sağlık
+          zemini ve iyileşme kapasitesiyle birlikte konuşulmalıdır.
+        </p>
+        <p>
+          Bu yazı işlem önerisi, sonuç vaadi veya yönlendirici tedavi metni değildir. Amaç; okurun karın bölgesindeki
+          değişimleri utanmadan, ancak cerrahi kararı aceleye getirmeden değerlendirmesine yardımcı olmaktır.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10" />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
