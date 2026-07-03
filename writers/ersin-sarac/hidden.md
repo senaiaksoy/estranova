@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v0.1'de minimal. Aşağıdaki gözlemler **gövdeye girmez**.
@@ -36,6 +38,8 @@ Pain Free Nişantaşı sitesi kas-iskelet, spor yaralanmaları, postür, kronik 
 Bu tasarım **kişisel klinik deneyiminden türemiş gibi sunulamaz** — "klinik gözlem" anonim çerçevesinde, "kanıt-temelli yaklaşım" tonunda yazılır.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — DEFAULT KAPALI
 

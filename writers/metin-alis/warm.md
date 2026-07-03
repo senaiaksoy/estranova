@@ -15,6 +15,8 @@ Metin Alış için anekdot kullanımı sınırlı ve disiplinli:
 
 ---
 
+<a id="manifesto-kaliplari"></a>
+
 ## §4e · Manifesto Kalıpları — v0.2 AKTİF (2026-05-03)
 
 > 6 cümle havuzu kullanıcı onayıyla yazıldı (memory: feedback_pool_activation_lazy_2026_05_02.md). Hepsi `[MA-T]` tematik türetme — metinalis.com ders kitabı tonunda olduğu için doğrudan birinci-şahıs alıntı yok. v0.3'te ResearchGate / TEMD / röportaj arşivinden `[MA-K]` etiketli ekleme yapılabilir. **Estranova kuralı:** max 1 manifesto cümlesi / makale.

@@ -4,6 +4,8 @@
 
 ---
 
+<a id="manifesto-aligned-anekdot"></a>
+
 ## §4b — Manifesto-aligned Anekdot Yönelimi
 
 Demet'in anekdot kapısı **mutfak çapaları** ve **üç kuşak masası**
@@ -28,6 +30,8 @@ kuşak masası anekdotu. Diğerleri varyasyon olarak girebilir.
 eşin kimliği; annenin spesifik sağlık tanısı.
 
 ---
+
+<a id="manifesto-kaliplari"></a>
 
 ## §4e — Manifesto Kalıpları (3 başlangıç havuzu)
 
@@ -90,6 +94,8 @@ eski iş arkadaşı, Japon meslektaş), Demet sahiplenir ve takvim/rutin/
 düzen metaforuna bağlar.
 
 ---
+
+<a id="yasam-felsefesi-omurgasi"></a>
 
 ## §4f — Yaşam Felsefesi Omurgası (üç direk)
 

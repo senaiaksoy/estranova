@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 1. **Korpus tarama:** eryilmazalp.com'un 5 ana kategori sayfası (özellikle "Risk Taramaları ve Önleyici Kardiyoloji" alt başlık serisi) + Amerikan Hastanesi profili + (varsa) PubMed Eryilmaz AA[Author].
@@ -16,6 +18,8 @@
 8. **Bilimsel Editör Notu:** Doç. Dr. Senai Aksoy imzalı, gold accent, sayfa sonu.
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -70,6 +74,8 @@
 - **Pioneer vitrini YASAK.** TAVİ ve MitraClip "Türkiye'nin ilki" bilgisi biyografide; gövdede "ben yaptım" tonuna kayma yok.
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (15 madde)
 

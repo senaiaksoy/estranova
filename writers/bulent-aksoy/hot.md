@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 1. **Korpus tarama:** Doktortakvimi / Doktorsitesi profilleri + Amerikan Hastanesi profil (varsa) + (varsa) PubMed `Aksoy B[Author]`.
@@ -16,6 +18,8 @@
 8. **Bilimsel öğeler + Bilimsel Editör Notu:** Evidence + RedFlagBox (akut travma) + FAQ + Doç. Dr. Senai Aksoy imzalı sayfa sonu notu. (Soyad paralelliği nedeniyle Bilimsel Editör imzasında "Doç. Dr." öneki kritik — Bülent yazar = "Prof. Dr." farklı kişi.)
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -69,6 +73,8 @@
 - **Promosyon vitrini YASAK** (Memorial / Amerikan Hastanesi / Beşiktaş muayenehane / Efes Pilsen / Galatasaray).
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (15 madde)
 

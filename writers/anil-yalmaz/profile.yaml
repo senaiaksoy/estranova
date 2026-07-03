@@ -294,9 +294,26 @@ closing_pattern:
   variation_rule: "Tek cümlelik slogan kapanışı yerine 2-3 sakin paragraf tercih edilir."
 
 dynamics:
+  pattern_pool_sizes:
+    opening: 10
+    closing: 10
+    balance_phrase: 10
+    not_knowing: 10
+    clinician_frame: 10
+    anecdote_door: 10
+    signature_closing: 6
+    humor: 8
   log_path: "../../icerik/yazar-onaylari/anil-yalmaz/article-log.md"
   birth_year: 1998
-  cooldown_overrides: {}
+  cooldown_overrides:
+    opening_pattern: 6
+    closing_pattern: 4
+    balance_phrase: 4
+    not_knowing_phrase: 4
+    clinician_frame: 4
+    anecdote_door: 4
+    signature_closing_template: 4
+    editor_note_layer_titles: 6
   cooldown_exempt: []
   allow_inter_article_crosslinks: true
   evolution_review_threshold: 4

@@ -1,15 +1,19 @@
 # Fzt. Ersin Saraç — Article Log
 
+> **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
+
 > Yazılan her makalenin kalıp seçimi ve cooldown takibi. v0.1 başlangıç.
 
 ---
 
 ## v0.1 — 2026-05-02 başlangıç
 
-| # | Tarih | Yazı (slug) | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | 2026-05-04 | `40-sonrasi-kas-iskelet-agrilari` | Kas-iskelet 40+ / bel-diz-kalça ağrısı | Ağrıya isim koymak: tek nokta değil harita | Bedeni dinleyerek küçük adımlarla ilerlemek | Bedeni dinleyerek ilerlemek + küçük adımların gücü | Ağrı zarar değildir / görmezden gelinmez dengesi | Hasta hikayesi yok; klinik karar haritası | İlk Ersin makalesi. Yaş farkı içtenlik kapısı yapılmadı; klinisyen mesafesi korundu. |
-| 2 | 2026-05-07 | `belden-gelen-agri-kasik-genital-bolge` | Bel-kasık-genital ağrı / pelvik taban ayrımı | Ağrı yerinin kaynağı her zaman söylemediği harita | Eşik görünürlüğü + sakin yön duygusu | Bedeni dinleyerek ilerlemek + mahrem ağrıda gereksiz alarmı azaltmak | Mekanik olasılığı görünür kılarken jinekolojik/ürolojik eşiği silmeme dengesi | İsim, yaş ve kurum detayı taşımayan 2 anonim klinik mikro-sahne | Onay bekleyen paket hazırlandı. Mahrem ağrı dilinde sakinlik, ayrım gücü, kırmızı bayrak görünürlüğü ve kısa klinik sahne kullanımı öne çıkarıldı. |
+## Schema
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2026-05-04 | `40-sonrasi-kas-iskelet-agrilari` | Kas-iskelet 40+ / bel-diz-kalça ağrısı | v0.1 | — | Bedeni dinleyerek ilerlemek + küçük adımların gücü | Hasta hikayesi yok; klinik karar haritası | Ağrıya isim koymak: tek nokta değil harita | Bedeni dinleyerek küçük adımlarla ilerlemek | — | İlk Ersin makalesi. Yaş farkı içtenlik kapısı yapılmadı; klinisyen mesafesi korundu. |
+| 2 | 2026-05-07 | `belden-gelen-agri-kasik-genital-bolge` | Bel-kasık-genital ağrı / pelvik taban ayrımı | v0.1 | — | Bedeni dinleyerek ilerlemek + mahrem ağrıda gereksiz alarmı azaltmak | İsim, yaş ve kurum detayı taşımayan 2 anonim klinik mikro-sahne | Ağrı yerinin kaynağı her zaman söylemediği harita | Eşik görünürlüğü + sakin yön duygusu | — | Onay bekleyen paket hazırlandı. Mahrem ağrı dilinde sakinlik, ayrım gücü, kırmızı bayrak görünürlüğü ve kısa klinik sahne kullanımı öne çıkarıldı. |
 
 ---
 

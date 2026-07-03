@@ -13,6 +13,8 @@
 
 ---
 
+<a id="manifesto-kaliplari"></a>
+
 ## §4e · Manifesto Kalıpları — LAZY AKTİVASYON
 
 > v0.1'de boş havuz. **İlk makale üretiminde** AI agent korpustan + tematik türetmeden 4-6 kalıp türetip kullanıcıya onaylatır.

@@ -25,6 +25,8 @@ Duygu için anekdot kullanımı **çok sınırlı** (eski v2.0 sosyal masa imzas
 
 ---
 
+<a id="manifesto-kaliplari"></a>
+
 ## §4e · Manifesto Kalıpları — LAZY AKTİVASYON
 
 > v3.0'da boş havuz. **İlk makale üretiminde** AI agent korpustan + tematik türetmeden 4-6 kalıp türetip kullanıcıya onaylatır.

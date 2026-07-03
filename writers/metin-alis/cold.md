@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [MA-K] etiketi**
@@ -18,11 +20,15 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Dr. Metin Alış, endokrinoloji ve metabolizma uzmanı bir hekim. GATA tıp eğitimi, GATA Haydarpaşa endokrinoloji uzmanlığı ve Mayo Clinic endokrin güncellemesi geçmişiyle uluslararası kanıt-temelli klinik bir omurga taşıyor. Estranova'da hormonal geçişle iç içe geçen tiroid, kemik, metabolik sendrom ve adrenal başlıklarını klinisyen mesafesinde sade Türkçeye taşıyan bir yazar. Tabu açan değil, yanlış anlaşılan klinik tabloları yumuşatarak netleştiren bir ses.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -35,6 +41,8 @@ Dr. Metin Alış, endokrinoloji ve metabolizma uzmanı bir hekim. GATA tıp eği
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **GATA hattı:** Türkiye'de askeri tıp akademisi geleneğinden gelen disiplinli klinik formasyon — hipotezi adım adım test eden, kılavuza uyumlu ama hastayı bireyselleştirebilen yaklaşım. İç hastalıklarından önce başlayan endokrinoloji uzmanlığı — sistemik bakış güçlü.
@@ -44,6 +52,8 @@ Dr. Metin Alış, endokrinoloji ve metabolizma uzmanı bir hekim. GATA tıp eği
 > Not: Yayınlanmış birinci-isim klinik makale veya köşe yazısı arşivi henüz toplanmadı. v0.1 sonrası ResearchGate ve PubMed'de "Metin Alış" sorgusu ile derinleştirilecek.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -65,6 +75,8 @@ Dr. Metin Alış, endokrinoloji ve metabolizma uzmanı bir hekim. GATA tıp eği
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Yanlış anlaşılan endokrin tabloları açma** — "tiroid mi menopoz mu", "yorgunluk Hashimoto mu perimenopoz mu", "kortizol stresten mi yüksek".
@@ -75,6 +87,8 @@ Dr. Metin Alış, endokrinoloji ve metabolizma uzmanı bir hekim. GATA tıp eği
 6. **Bilimsel pencere derin yorumlama** — endokrinoloji sınırında yeni araştırmalar; Senai paraleli ama farklı eksen (Senai mahrem klinik / Metin endokrin kavşak).
 
 ---
+
+<a id="uygun-konular"></a>
 
 ## §7 · En Uygun Konular
 
@@ -87,6 +101,8 @@ Dr. Metin Alış, endokrinoloji ve metabolizma uzmanı bir hekim. GATA tıp eği
 - **Editöryal pencere (sınırlı):** endokrinolog perspektifinden 40+ kadın sağlığı kavşağı (manifesto köşesi DEĞİL — Senai alanı).
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar
 
@@ -104,6 +120,8 @@ Dr. Metin Alış, endokrinoloji ve metabolizma uzmanı bir hekim. GATA tıp eği
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 Bir konu Metin Alış'a uygun mu sorusunda 3 hızlı süzgeç:
@@ -113,6 +131,8 @@ Bir konu Metin Alış'a uygun mu sorusunda 3 hızlı süzgeç:
 3. **Mahrem klinik içerik var mı?** Varsa Senai alanı, Metin değil.
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

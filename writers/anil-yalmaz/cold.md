@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 Bu profil v0.1, yalnızca depo içindeki güvenilir kayıtlarla kuruldu:
@@ -17,17 +19,23 @@ Harici web araştırması v0.1'e dahil edilmedi. Bu nedenle okul, kurum, yaş, s
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Anıl Yalmaz, Estranova'da hareket ve egzersiz okuryazarlığı ekseninde yazan genç bir spor hocası/hareket uzmanıdır. Ana alanı 40+ kadın bedeninde harekete yeniden başlamak, güç, denge, mobilite, nefes ve sürdürülebilir rutinleri güvenli bir dille anlatmaktır.
 
 ---
 
+<a id="yayinlanan-biyografi"></a>
+
 ## §2a · Yayınlanan Biyografi
 
 Spor Bilimleri mezunu bir hareket uzmanı; Pilates ve medikal fitness eğitimleri aldı. Estranova'da hareket, güçlenme ve sürdürülebilir egzersiz rutinlerini 40+ kadın bedeninin değişen ihtiyaçlarıyla birlikte ele alıyor. Hızlı dönüşüm vaadi yerine küçük, düzenli ve güvenli adımları önemseyen bir yaklaşımı var.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -36,6 +44,8 @@ Anıl'ın sesi enerjik ama sakin bir spor hocası sesi: okuru yerinden kaldırma
 30 yaş altı olduğu için yaşıt menopoz deneyimi anlatmaz. Bunun yerine hareketi anlatan, ritim veren, "ben bu başlangıcı böyle kurmayı seviyorum" diyen birinci tekil spor hocası sesi kullanır.
 
 ---
+
+<a id="icerik-turleri"></a>
 
 ## §6 · İçerik Türleri
 
@@ -48,6 +58,8 @@ Anıl'ın sesi enerjik ama sakin bir spor hocası sesi: okuru yerinden kaldırma
 - Soru-cevap formatında hareket okuryazarlığı.
 
 ---
+
+<a id="uygun-konular"></a>
 
 ## §7 · Uygun Konular
 
@@ -63,6 +75,8 @@ Anıl'ın sesi enerjik ama sakin bir spor hocası sesi: okuru yerinden kaldırma
 
 ---
 
+<a id="uzak-durulanlar"></a>
+
 ## §8 · Uzak Durulanlar
 
 - Klinik rehabilitasyon ve fizyoterapi planları.
@@ -74,6 +88,8 @@ Anıl'ın sesi enerjik ama sakin bir spor hocası sesi: okuru yerinden kaldırma
 - Danışan başarı hikayesi ve önce-sonra anlatısı.
 
 ---
+
+<a id="ai-atama-kriteri"></a>
 
 ## §9 · AI Atama Kriteri
 
@@ -91,6 +107,8 @@ Anıl şu durumda atanmaz:
 - Yazı bir kilo verme veya görünüm programı gibi kurgulanıyorsa.
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Skorları
 

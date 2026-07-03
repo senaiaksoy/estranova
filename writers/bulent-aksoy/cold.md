@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [BA-K] etiketi**
@@ -27,11 +29,15 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyimli bir akademisyen ve cerrah. İstanbul Üniversitesi-Cerrahpaşa Tıp Fakültesi mezunu (1985); Memorial Hastanesi (2009-2016) ve şu an Amerikan Hastanesi (2016→) ortopedi bölümlerinde görev yapıyor; Beşiktaş'taki muayenehanesinde de hasta kabul ediyor. Efes Pilsen Spor Kulübü (1994-2007) ve Galatasaray Spor Kulübü (2010-2012) tabipliği yapmış spor hekimi. Estranova'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarında **"hastayı ameliyat masasından önce hayata yönlendirmeyi tercih eden"** sakin hekim çerçevesinde, cerrahi-öncesi konservatif yaklaşım vurgusuyla yazıyor.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -50,6 +56,8 @@ Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyim
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **Cerrahpaşa Tıp Fakültesi:** Senai Aksoy paraleli — Türkiye'nin köklü tıp eğitim ortamı (Senai 1979-1985 mezun, Bülent 1979-1985 mezun — aynı yıl mezun olmuş olabilir; aile bağı veya akademik tanışıklık olasılığı kullanıcı doğrulamasına bağlı).
@@ -61,6 +69,8 @@ Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyim
 > Not: PubMed `Aksoy B[Author]` sorgusuyla v0.2 öncesi akademik makaleler taranacak.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -83,6 +93,8 @@ Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyim
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Postmenopozal osteoporoz + kırık riski takibi** — Metin endokrin (medikal tedavi tarafı) yan eksen.
@@ -98,6 +110,8 @@ Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyim
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 · En Uygun Konular
 
 - **Postmenopozal osteoporoz + kırık riski:** kalça/omurga/kol kırığı önleme, ortopedik takip.
@@ -109,6 +123,8 @@ Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyim
 - **Cerrahi-öncesi konservatif:** fizyoterapi/medikal/hareket entegrasyonu.
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar
 
@@ -125,6 +141,8 @@ Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyim
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 3 hızlı süzgeç:
@@ -134,6 +152,8 @@ Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji alanında 25+ yıllık deneyim
 3. **Cerrahi sınır mı yoksa cerrahi-öncesi konservatif mi?** (Konservatif öncelik — "ameliyat masasından önce hayata" felsefesi.) Cerrahi-detay protokol konusu Estranova için DEĞİL.
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

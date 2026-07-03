@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v0.1'de minimal. Aşağıdaki gözlemler **gövdeye girmez**.
@@ -25,6 +27,8 @@ Elif'in profilindeki minimal invaziv vurgu ("sağlıklı dokuyu koruyarak") Tür
 Creadenta sitesi resmi-akademik bir tonda; kişisel sosyal medya görünürlüğü Çağrı Sade kadar yoğun değil. YouTube'daki eğitim videoları en güçlü birinci-şahıs ses kaynağı — v0.2 öncesi transkript önemli.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — DUYGU KARAOSMANOĞLU İLE YAPISAL ORTAKLIK (active: true)
 

@@ -25,7 +25,7 @@ export const homeJourneyIntro = {
 export const homeJourneyItems: HomeJourneyItem[] = [
   {
     step: '01',
-    eyebrow: 'Koruyucu çerçeve',
+    eyebrow: 'Koruyucu yaklaşım',
     title: '40 Sonrası Sağlık',
     excerpt:
       'Kemik, kas, uyku ve tarama başlıklarını tek dosyada okuyun; amaç görev listesi değil, sakin bir sağlık hattı.',

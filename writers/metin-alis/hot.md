@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 Her Metin Alış makalesi için AI agent şu sırayla ilerler:
@@ -18,6 +20,8 @@ Her Metin Alış makalesi için AI agent şu sırayla ilerler:
 8. **Bilimsel Editör Notu:** gold accent, Doç. Dr. Senai Aksoy imzalı, sayfa sonu — Metin yazar = Senai inceleyici (default; iki ayrı kart bilinçli mimari).
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -70,6 +74,8 @@ Her Metin Alış makalesi için AI agent şu sırayla ilerler:
 - **Kırmızı bayraklar:** Akut tabloları (tirotoksik kriz, akut adrenal yetmezlik, ciddi hipoglisemi) `<RedFlagBox />` ile işaretle. "Acil müdahale" değil "hemen değerlendirilmelidir / acil servise başvurulmalıdır" yumuşak ama net.
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (15 madde — v0.1 minimal)
 

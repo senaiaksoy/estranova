@@ -421,7 +421,15 @@ dynamics:
   birth_year: 1972  # Tahmini — GATA 1995 mezuniyeti varsayımı
   # v2.6 (2026-05-02) Şablon Kırma Disiplini — evrensel kural.
   # v0.1'de havuz boyutu 6; ilk makale öncesi 10'a genişletilecek.
-  cooldown_overrides: {}
+  cooldown_overrides:
+    opening_pattern: 6
+    closing_pattern: 4
+    balance_phrase: 4
+    not_knowing_phrase: 4
+    clinician_frame: 4
+    anecdote_door: 4
+    signature_closing_template: 4
+    editor_note_layer_titles: 6
   cooldown_exempt: []
   allow_inter_article_crosslinks: true
   evolution_review_threshold: 5

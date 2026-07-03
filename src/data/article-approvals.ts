@@ -189,7 +189,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/hormonal-gecis/menopoz/menopoz-nedir/',
     writerSlug: 'estranova-editorial',
     approvedAt: '2026-05-01',
-    note: 'Editoryal rehber olarak kalması onaylandı — kurumsal Estranova Editörleri imzası, tanım/evre/sağlık gündemi odağı, promosyon dışı nötr çerçeve. 2026-05-17 revizyonunda açılış, bölüm lede\'leri ve kapanış daha ilgi çekici editoryal ritme çekildi; tıbbi denge, SSS, schema ve disclaimer yüzeyleri korundu.',
+    note: 'Editoryal rehber olarak kalması onaylandı — kurumsal Estranova Editörleri imzası, tanım/evre/sağlık gündemi odağı, promosyon dışı nötr yaklaşım. 2026-05-17 revizyonunda açılış, bölüm lede\'leri ve kapanış daha ilgi çekici editoryal ritme çekildi; tıbbi denge, SSS, schema ve disclaimer yüzeyleri korundu.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',

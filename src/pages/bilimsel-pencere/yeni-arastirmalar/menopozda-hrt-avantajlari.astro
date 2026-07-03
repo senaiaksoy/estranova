@@ -31,7 +31,7 @@ const tocEntries = [
   { id: 'kalp-ve-metabolizma', label: 'Kalp ve Metabolizma' },
   { id: 'kilo-ve-vucut-kompozisyonu', label: 'Kilo ve Vücut Kompozisyonu' },
   { id: 'cilt-ve-sac', label: 'Cilt ve Saç' },
-  { id: 'anti-aging-ve-iyi-olus', label: 'Anti-aging ve İyi Oluş' },
+  { id: 'yaslanma-karsiti-soylem', label: 'Yaşlanma Karşıtı Söylem' },
   { id: 'herkes-icin-ayni-degil', label: 'Herkes İçin Aynı Değil' },
   { id: 'gorusmede-sorular', label: 'Görüşmede Sorular' },
   { id: 'kapanis', label: 'Kapanış' },
@@ -65,7 +65,7 @@ const articleSchemas = buildArticleSchemas({
     'vücut kompozisyonu',
     'cilt sağlığı',
     'saç dökülmesi',
-    'anti-aging',
+    'yaşlanma karşıtı söylem',
   ],
   faqItems,
   siteUrl,
@@ -95,6 +95,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         publishedDate="6 Mayıs 2026"
         readingMinutes={11}
+        medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/senai-hrt-avantajlari-window-portrait.webp"
         imageAlt="Krem tonlu bir odada pencere kenarında duran, camel ceketli düşünceli kadın portresi."
         imagePosition="center"
@@ -120,42 +121,45 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="neden-yeniden-konusuluyor">Bu başlık neden yeniden konuşuluyor?</h2>
         <p>
-          HRT uzun süre ya gereğinden korkularak ya da gereğinden parlatılarak konuşuldu; oysa bugün ihtiyacımız
-          olan şey, avantajları da riskleri de aynı sakin cümlede tutabilmek.
+          HRT uzun süre ya fazla korkuyla ya da fazla parlak cümlelerle anlatıldı; muayene odasında bugün hâlâ en çok
+          ihtiyaç duyduğumuz şey, faydayı da sınırı da aynı sakinlikte konuşabilmek.
         </p>
         <p>
-          Birçok kadın bu konuya hâlâ tek bir soruyla yaklaşıyor: “Değer mi?” Aslında bu sorunun tek bir cevabı
-          yok; çünkü HRT’nin sağladığı yarar, hangi belirti için düşünüldüğüne, menopozun hangi döneminde
-          başlandığına, rahmin olup olmadığına ve kişisel risk tablosuna göre değişiyor. Yine de tabloyu dürüstçe
-          okumak için şunu söylemek mümkün: bazı faydalar belirgin ve güçlü verilerle destekleniyor, bazıları ise
-          daha sınırlı ve daha dikkatli konuşulmayı hak ediyor.
+          Birçok kadın bu konuya hâlâ tek bir soruyla geliyor: “Değer mi?” Bu soruyu küçümsemem; çünkü arkasında
+          uykusuz geceler, ter içinde bölünen toplantılar, cinsellikte sessizce geri çekilme ve bazen de kemik
+          sağlığına dair haklı bir endişe olur. Ama tek bir cevap yok. HRT’nin sağlayabileceği yarar; hangi belirti
+          için düşünüldüğüne, menopozun hangi döneminde başlandığına, rahmin olup olmadığına ve kişisel risk tablosuna
+          göre değişir. Yine de tabloyu dürüstçe okumak için şunu söylemek mümkün: bazı faydalar belirgin ve güçlü
+          verilerle destekleniyor, bazıları ise daha sınırlı ve daha dikkatli konuşulmayı hak ediyor.
         </p>
         <p>
-          Masaya her zaman aynı cümle geliyor: “Sıcak basmalarım için mi, kemiklerim için mi, yoksa genel olarak
-          daha iyi hissetmek için mi?” Bu ayrım önemli. Çünkü HRT bir “iyi gelme hissi” paketi değil; belli
-          başlıklarda daha net, belli başlıklarda ise daha seçici kullanılan tıbbi bir araç.
+          Görüşmede masaya çoğu zaman aynı cümle geliyor: “Sıcak basmalarım için mi, kemiklerim için mi, yoksa genel
+          olarak daha iyi hissetmek için mi?” Bu ayrım küçük görünür ama kararın yönünü değiştirir. HRT bir “her şeyi
+          toparlama” paketi değil; bazı başlıklarda güçlü, bazı başlıklarda seçici kullanılan tıbbi bir araçtır.
         </p>
 
         <h2 id="belirti-rahatlamasi">En net avantaj hâlâ belirti rahatlaması</h2>
         <p>
-          HRT’nin en sağlam yeri, menopozun günlük hayatı en görünür biçimde zorlayan belirtilerinde ortaya çıkıyor.
+          En net kazanç çoğu zaman kadının gününü bölen, uykusunu kesen ve kendini toplum içinde kontrolsüz hissettiren
+          belirtilerde görülür.
         </p>
         <p>
           Özellikle <strong>sıcak basması</strong> ve <strong>gece terlemesi</strong> için sistemik hormon tedavisi,
-          elimizdeki en etkili seçeneklerden biri olmaya devam ediyor <Evidence level={5} />. Belirti sıklığını ve
+          etkisi güçlü biçimde belgelenmiş seçeneklerden biri olmaya devam ediyor <Evidence level={5} />. Belirti sıklığını ve
           şiddetini azaltma konusunda etkisi, pek çok diğer destek seçeneğinden daha belirgin. Bu başlıkta “belki”
           ile değil, çoğu kadın için gerçekten fark edilir bir rahatlama ile konuşuyoruz.
         </p>
         <p>
           Bu fark yalnızca sıcak hissinin azalması demek değil. Toplantı ortasında yüzünüzün alev alması da bunun
-          bir parçası. Gecenin bir yarısı çarşaf değiştirir gibi uyanmak ya da ertesi gün uykusuzluktan daha kırılgan
-          hissetmek de öyle. Küçük görünen ama hayat ritmini bozan parçalar bu faydanın içindedir. Menopozu yaşayan
-          birçok kadın için asıl avantaj tam burada başlar: bedenin gün içindeki “alarm” hissi biraz daha susar.
+          bir parçası. Gecenin bir yarısı çarşaf değiştirir gibi uyanmak, sabah aynaya bakınca “ben dün gece hiç
+          dinlenmedim” demek de öyle. Küçük görünen ama hayatı bölen parçalar bu faydanın içindedir. Menopozu yaşayan
+          birçok kadın için asıl avantaj tam burada başlar: gün içindeki ani alarm hali biraz yatışır.
         </p>
 
         <h2 id="uyku-ve-yasam-kalitesi">Uyku ve yaşam kalitesindeki düzelme neden ayrı bir başlık?</h2>
         <p>
-          Bazen asıl kazanç, doğrudan “uyku ilacı etkisi” değil; uykuyu bozan menopoz belirtilerinin sakinleşmesidir.
+          Uyku tarafındaki iyileşme çoğu zaman doğrudan bir uyutma etkisi değil; geceyi bölen belirtilerin geri
+          çekilmesidir.
         </p>
         <p>
           Sıcak basmaları ve gece terlemeleri azaldığında, gece bölünmelerinin de çoğu kadında gerilediğini
@@ -172,15 +176,15 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Hastalarımdan sık duyduğum cümlelerden biri şu: “Aslında mesele sadece sıcak
-          basması değilmiş; ben daha az dağılmış hissetmeye başladım.” Ama her kadının yolu aynı değil.
+          basması değilmiş; ben daha az dağılmış hissetmeye başladım.” Bu cümleyi önemserim. Ama her kadının yolu aynı değil.
           HRT’nin yaşam kalitesine katkısı gerçektir; yine de bunun herkeste aynı tonda yaşanacağını varsaymamak
           gerekir.
         </p>
 
         <h2 id="urogenital-konfor">Vajinal doku ve ürogenital konfor tarafındaki avantajlar neden önemli?</h2>
         <p>
-          Menopoz konuşulurken çoğu zaman sıcak basması başrole çıkar; ama vajinal kuruluk, doku hassasiyeti ve
-          idrar yolu çevresindeki yakınmalar da hayat kalitesini derinden etkileyebilir.
+          Menopoz konuşulurken çoğu zaman sıcak basması başrole çıkar; oysa vajinal kuruluk, doku hassasiyeti ve
+          idrar yolu çevresindeki yakınmalar kadının kendini iyi hissetme alanını sessizce daraltabilir.
         </p>
         <p>
           Östrojen azalmasıyla birlikte vajinal dokuda incelme, esneklik kaybı, kuruluk ve pH değişimi gelişebilir.
@@ -191,14 +195,14 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Burada önemli bir ayrım var: Sistemik HRT tüm beden belirtileri için düşünülürken, lokal vajinal östrojen
           çok daha hedefli bir rahatlama sağlayabilir. Yani “HRT avantajları” dediğimiz haritanın içinde yalnızca
-          patch ya da tablet değil, vajinal doku için kullanılan yerel seçenekler de bulunur. Bu başlıkta veri hem
+          deri bandı ya da tablet değil, vajinal doku için kullanılan yerel seçenekler de bulunur. Bu başlıkta veri hem
           klinik olarak anlamlı hem de günlük konfor açısından güçlüdür <Evidence from={4} to={5} />.
         </p>
 
         <h2 id="kemik-sagligi">Kemik sağlığındaki yarar neden bu kadar ciddiye alınıyor?</h2>
         <p>
-          Belirti rahatlaması çoğu zaman hızlı fark edilir; kemik tarafındaki fayda ise daha sessiz ama uzun vadede
-          daha stratejiktir.
+          Belirti rahatlaması hızlı fark edilir; kemik tarafındaki fayda ise sessiz çalışır ve değerini çoğu zaman
+          yıllar içinde gösterir.
         </p>
         <p>
           Menopozla birlikte östrojenin düşmesi, kemik yıkımını hızlandıran temel etkenlerden biridir. HRT bu süreci
@@ -233,7 +237,7 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kalp-ve-metabolizma">Kalp ve metabolizma başlığında neden daha temkinli konuşuyoruz?</h2>
         <p>
-          Bu alan ilgi çekici; ama en kolay abartılan alanlardan biri de tam burası.
+          Kalp ve metabolizma başlığı çok ilgi çekici; ama tam da bu yüzden dili yavaşlatmak gerekir.
         </p>
         <p>
           Menopozun erken döneminde, özellikle 60 yaş altı ve son adetten çok uzun zaman geçmeden başlanan tedavilerde,
@@ -254,7 +258,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kilo-ve-vucut-kompozisyonu">Kilo ve vücut kompozisyonu tarafında HRT ne kadar fark yaratabilir?</h2>
         <p>
-          Bu, birçok kadının aklındaki en pratik soru; ama cevabı ne yazık ki tek kelimelik değil.
+          Bu, birçok kadının aklındaki en pratik soru; çünkü çoğu zaman mesele tartıdan önce bel çevresi, kıyafet ve
+          aynadaki yabancılaşma hissidir.
         </p>
         <p>
           HRT’yi “zayıflatan” bir tedavi gibi anlatmak doğru olmaz. Doğrudan kilo verdiren, tartıyı aşağı çeken ya da
@@ -303,9 +308,10 @@ const articleSchemas = buildArticleSchemas({
           uyku bölünmesi, vajinal yakınmalar, kemik sağlığı ve erken menopoz gibi daha net alanlardır.
         </p>
 
-        <h2 id="anti-aging-ve-iyi-olus">Genel yaşlanma karşıtı söylem ve iyi oluş etkisi nasıl değerlendirilmeli?</h2>
+        <h2 id="yaslanma-karsiti-soylem">Genel yaşlanma karşıtı söylem ve iyi oluş etkisi nasıl değerlendirilmeli?</h2>
         <p>
-          “Anti-aging” kelimesi kulağa güçlü geliyor; ama tıbbi kararları çoğu zaman gereğinden parlak bir dile itiyor.
+          “Yaşlanma karşıtı” ifadesi kulağa güçlü geliyor; ama tıbbi kararları çoğu zaman gereğinden parlak bir dile
+          itiyor.
         </p>
         <p>
           HRT bir gençlik serumu ya da biyolojik saati geri saran bir yaklaşım değildir. Daha doğru cümle şudur:
@@ -315,7 +321,7 @@ const articleSchemas = buildArticleSchemas({
           <Evidence level={3} />.
         </p>
         <p>
-          Yani “well-being” etkisi varsa, çoğu zaman doğrudan değil dolaylıdır. Kadın daha az terleyip daha iyi uyuduğunda,
+          Yani iyi oluş etkisi varsa, çoğu zaman doğrudan değil dolaylıdır. Kadın daha az terleyip daha iyi uyuduğunda,
           eklemekte zorlandığı sosyal ritme biraz daha kolay döndüğünde, bedenine yabancılaşması azaldığında bu genel iyi
           oluş hissi büyür. Ama bunu herkeste aynı tonda, aynı hızda ve aynı genişlikte beklemek doğru olmaz.
         </p>
@@ -328,7 +334,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="herkes-icin-ayni-degil">Bu avantajlar neden herkes için aynı anlama gelmiyor?</h2>
         <p>
-          HRT’nin avantajları güçlü olabilir; ama “avantaj var” demek “herkes için uygun” demek değildir.
+          HRT’nin avantajları güçlü olabilir; ama “avantaj var” demek “herkes için uygun” demek değildir. Bu cümleyi
+          bilerek tekrarlamak gerekir.
         </p>
         <p>
           Rahmi olan ve olmayan kadınlarda kullanılan rejimler farklıdır. Kişisel meme kanseri öyküsü, açıklanamayan
@@ -345,7 +352,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="gorusmede-sorular">Hekim görüşmesinde hangi sorular en çok iş görür?</h2>
         <p>
-          İyi bir görüşme çoğu zaman çok soru sormaktan değil, doğru soruları aynı masaya koymaktan güç alır.
+          İyi bir görüşme çoğu zaman çok soru sormaktan değil, doğru soruları aynı masaya koymaktan güç alır. Bir not
+          kâğıdıyla gelmek burada fazlasıyla işe yarar.
         </p>
         <p>
           İlk soru şu olabilir: <em>“Biz hangi ana hedef için konuşuyoruz?”</em> Sıcak basması mı, uyku mu, vajinal
@@ -367,7 +375,7 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          HRT’nin avantajları var; ama hepsi aynı cümleyle anlatılamaz.
+          HRT’nin avantajları var; ama hepsi aynı cümleyle anlatılamaz. Bence bu yazının en önemli cümlesi de bu.
         </p>
         <p>
           En net fayda alanı vazomotor belirtiler, uykuya dolaylı katkı, vajinal doku konforu ve kemik korumasıdır.
@@ -376,9 +384,9 @@ const articleSchemas = buildArticleSchemas({
           biçimde yavaşlatmak gerekir.
         </p>
         <p>
-          Bazen iyi bir karar, faydaları abartmadan ama küçümsemeden konuşabildiğimizde mümkün olur. Bu başlıkta da
-          çoğu kadının ihtiyacı tam olarak bu: siyah-beyaz bir yargı değil, kanıtın tonunu ayıran daha dürüst bir
-          rehberlik.
+          Bazen iyi bir karar, faydaları abartmadan ama küçümsemeden konuşabildiğimizde mümkün olur. Muayene odasında
+          en çok rahatlama getiren şey de çoğu zaman budur: siyah-beyaz bir yargı değil, sizin hayatınıza ve risk
+          tablonuza göre ayrılmış daha dürüst bir rehberlik.
         </p>
       </ArticleProsePanel>
 
@@ -401,11 +409,12 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            HRT avantajları konuşulurken en sık gördüğüm iki hata var: ya yalnızca risk başlığına kilitlenmek ya da
-            fayda başlığını gereğinden parlak anlatmak. Klinik açıdan doğru yer yine ikisinin arasıdır.
+            Bu yazıyı bağımsız bir göz olarak okudum; çünkü bir hekim kendi yazdığını tıbbi incelemeden geçirmiş
+            sayılmaz. HRT avantajları konuşulurken en sık gördüğüm iki hata var: ya yalnızca risk başlığına kilitlenmek
+            ya da faydayı gereğinden parlak anlatmak. Klinik açıdan doğru yer yine ikisinin arasıdır.
           </p>
           <p>
-            <strong class="text-primary">En güçlü alan:</strong> Vazomotor belirtiler, vajinal doku yakınmaları ve
+            <strong class="text-primary">Güçlü alan:</strong> Vazomotor belirtiler, vajinal doku yakınmaları ve
             kemik koruması tarafında veri güçlüdür. Bu yüzden belirti yükü yüksek olan, erken menopoz yaşayan ya da
             kemik sağlığı açısından dikkatli izlenmesi gereken kadınlarda HRT gerçekten anlamlı bir seçenek olabilir.
           </p>
@@ -417,10 +426,10 @@ const articleSchemas = buildArticleSchemas({
           <p>
             <strong class="text-primary">Pratik sonuç:</strong> Fayda kararı hiçbir zaman “herkese iyi gelir” gibi
             verilmez. Hangi belirti için konuştuğumuzu, hangi formun düşünüldüğünü ve yıllık yeniden değerlendirme
-            planını aynı görüşmede netleştirmek çoğu zaman en sağlıklı başlangıçtır.
+            planını aynı görüşmede netleştirmek çoğu zaman daha dengeli bir başlangıçtır.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            - Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            - Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · bu yazının bağımsız tıbbi incelemesi
           </p>
         </div>
       </ArticleEditorNote>

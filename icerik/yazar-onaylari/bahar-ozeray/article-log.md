@@ -1,13 +1,17 @@
 # Bahar Özeray — Article Log
 
+> **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
+
 > Yazılan her makalenin kalıp seçimi ve cooldown takibi. İlk makale sonrası bu tabloya satır eklenir.
 
 ---
 
 ## Başlangıç
 
-| # | Tarih | Yazı (slug) | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
-|---|---|---|---|---|---|---|---|---|---|
+## Schema
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
 
 ---
 

@@ -1,5 +1,7 @@
 # Anıl Yalmaz — Article Log
 
+> **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
+
 > Akümülatif yazar sesi ve cooldown kaydı. v0.1 başlangıç: 2026-06-18.
 
 ---
@@ -15,10 +17,12 @@
 
 ## Yayın / Onay İzleri
 
-| Tarih | Başlık | Durum | Not |
-|---|---|---|---|
-| 2026-06-18 | Menopozda Hangi Hareket? Yoga, Pilates, HIIT ve Direnç Arasında Bir Rehber | onay bekleyen taslak | Anıl Yalmaz imzalı ikinci yazı; Zamansız Yaşam kategorisi. Canlı route'tan geri çekildi, onay sonrası publish edilecek. |
-| 2026-05-26 | 40'tan Sonra Harekete Yeniden Başlamak: Daha Sert Değil, Daha Akıllı | onaylanan klasöründe taslak | Profil v0.1 için ton ve konu referansı olarak kullanıldı. |
+## Schema
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| — | 2026-06-18 | Menopozda Hangi Hareket? Yoga, Pilates, HIIT ve Direnç Arasında Bir Rehber | — | v0.1 | — | — | — | — | — | — | Anıl Yalmaz imzalı ikinci yazı; Zamansız Yaşam kategorisi. Canlı route'tan geri çekildi, onay sonrası publish edilecek. |
+| — | 2026-05-26 | 40'tan Sonra Harekete Yeniden Başlamak: Daha Sert Değil, Daha Akıllı | — | v0.1 | — | — | — | — | — | — | Profil v0.1 için ton ve konu referansı olarak kullanıldı. |
 
 ---
 

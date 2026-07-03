@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v0.1'de minimal. Kullanıcı doğrulamasıyla zaman içinde genişler. Aşağıdaki gözlemler **gövdeye girmez**, sadece içerik kararlarında AI agent için bağlam.
@@ -21,6 +23,8 @@ Instagram aktif (@drmetinalis veya @endokrin.dr.metinalis — doğrulama gerekli
 metinalis.com içeriği klinik referans / ders kitabı tonunda (MSD Manual çevirisine yakın); birinci-şahıs hasta hikayesi yok. Bu, Metin'in profesyonel mesafe alışkanlığını gösterir. Estranova'da anekdot kapısı açıldığında **anonim klinik gözlem** ile sınırlı tutulmalı.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — DEFAULT KAPALI
 

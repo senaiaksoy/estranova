@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 1. **Korpus tarama:** cagrisade.com.tr blog 4-5 yazı + biyografi sayfası + Amerikan Hastanesi profili + (varsa) PubMed `Sade C[Author]`.
@@ -16,6 +18,8 @@
 8. **Bilimsel öğeler + Bilimsel Editör Notu:** Evidence + RedFlagBox (varsa) + FAQ + Doç. Dr. Senai Aksoy imzalı sayfa sonu notu.
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -77,6 +81,8 @@
 - **Promosyon vitrini YASAK.** Aston gözleminde olmak, Sherrell J. Aston, 25 yıl deneyim — biyografide; gövdede "ben yaptım" tonuna kayma yok.
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (16 madde — estetik sıkı)
 

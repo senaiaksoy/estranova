@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v0.1'de minimal. Aşağıdaki gözlemler **gövdeye girmez**, içerik kararlarında AI agent için bağlam.
@@ -21,6 +23,8 @@ Kişisel sitedeki tek tek alt başlıklar, "Tıbbi Danışman" kart bio'sundaki 
 eryilmazalp.com'da rakamlar sıkça kullanılıyor. Estranova'da bu alışkanlık zenginlik — ancak Evidence level etiketleri ile yumuşatılmalı, "p<0.05" tipi akademik dergi tonuna kaymamalı.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — DEFAULT KAPALI
 

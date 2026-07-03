@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [AAE-K] etiketi**
@@ -25,11 +27,15 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Dr. Alp Aslan Eryılmaz, girişimsel kardiyoloji alanında 25+ yıllık deneyimli bir hekim. Akdeniz Üniversitesi Tıp Fakültesi mezunu, İstanbul Üniversitesi Çapa Tıp Fakültesi'nde kardiyoloji uzmanlığı; Türkiye'nin ilk TAVİ (2009) ve ilk MitraClip (2010) ekiplerinde yer aldı. Estranova'da menopoz sonrası kalp sağlığı, önleyici kardiyoloji ve kadın özelinde kardiyovasküler risk haritasını "panik değil, erken tarama" tonuyla açan bir yazar. Senai/Metin paraleli, üçüncü bilimsel yazar — kalp damar ekseninde.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -49,6 +55,8 @@ Dr. Alp Aslan Eryılmaz, girişimsel kardiyoloji alanında 25+ yıllık deneyiml
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **Çapa hattı:** İstanbul Üniversitesi Çapa Tıp Fakültesi'nin köklü kardiyoloji kliniğinden gelen klinik formasyon — geniş hasta hacmi, akademik takip kültürü.
@@ -58,6 +66,8 @@ Dr. Alp Aslan Eryılmaz, girişimsel kardiyoloji alanında 25+ yıllık deneyiml
 > Not: Yayınlanmış birinci-isim klinik makale veya köşe yazısı arşivi henüz toplanmadı. v0.2 öncesi PubMed `Eryilmaz AA[Author]` sorgusu ile derinleştirilecek.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -80,6 +90,8 @@ Dr. Alp Aslan Eryılmaz, girişimsel kardiyoloji alanında 25+ yıllık deneyiml
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Önleyici kardiyoloji rehberi 40+** — risk taraması, koroner kalsiyum skoru (KKS), EKO/EKG/holter okuma, karotis doppler.
@@ -92,6 +104,8 @@ Dr. Alp Aslan Eryılmaz, girişimsel kardiyoloji alanında 25+ yıllık deneyiml
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 · En Uygun Konular
 
 - **Önleyici tarama:** ne zaman hangi test (KKS, EKO, EKG, holter, karotis doppler).
@@ -103,6 +117,8 @@ Dr. Alp Aslan Eryılmaz, girişimsel kardiyoloji alanında 25+ yıllık deneyiml
 - **Sigara / beslenme / egzersiz:** kardiyovasküler risk yönetimi.
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar
 
@@ -120,6 +136,8 @@ Dr. Alp Aslan Eryılmaz, girişimsel kardiyoloji alanında 25+ yıllık deneyiml
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 Bir konu Alp Aslan Eryılmaz'a uygun mu sorusunda 3 hızlı süzgeç:
@@ -129,6 +147,8 @@ Bir konu Alp Aslan Eryılmaz'a uygun mu sorusunda 3 hızlı süzgeç:
 3. **Mahrem klinik veya endokrin başlık mı?** Varsa Senai (mahrem) veya Metin (endokrin); Alp değil.
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

@@ -1,14 +1,18 @@
 # Dr. Alper Mumcu — Article Log
 
+> **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
+
 > Yazılan her makalenin kalıp seçimi ve cooldown takibi. v0.1 — 2026-06-16 profil kuruldu; henüz makale üretilmedi. İlk makalede lazy aktivasyon (havuz 5→10) tamamlanacak. (Memory: `feedback_template_breaking_universal_2026_05_02.md`)
 
 ---
 
 ## Makale kaydı
 
-| # | Tarih | Yazı (slug) | Eksen | Açılış varyantı | Kapanış varyantı | Manifesto | Dengeleyici | Anekdot kapısı | Notlar |
-|---|---|---|---|---|---|---|---|---|---|
-| — | — | _(henüz makale yok)_ | — | — | — | — | — | — | Profil v0.1 kuruldu; ilk makalede lazy aktivasyon. |
+## Schema
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| — | — | _(henüz makale yok)_ | — | v0.1 | — | — | — | — | — | — | Profil v0.1 kuruldu; ilk makalede lazy aktivasyon. |
 
 ---
 

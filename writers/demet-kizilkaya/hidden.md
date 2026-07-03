@@ -7,6 +7,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b — Gizli Gözlemler
 
 ### A) Çift Rol Uyarısı — Senai = Demet'in jinekoloğu (default)

@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 1. **Korpus tarama:** creadenta.com (about + trainings) + EDAD profil + YouTube eğitim videoları + (varsa) PubMed `Dulundu E[Author]`.
@@ -16,6 +18,8 @@
 8. **Bilimsel öğeler + Bilimsel Editör Notu:** Evidence + RedFlagBox + FAQ + Doç. Dr. Senai Aksoy imzalı sayfa sonu notu.
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -66,6 +70,8 @@
 - **Promosyon vitrini YASAK** (Creadenta + Duygu ortaklığı dahil).
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (15 madde)
 

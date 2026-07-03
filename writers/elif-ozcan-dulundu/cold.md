@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [EOD-K] etiketi**
@@ -27,11 +29,15 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında 30+ yıllık deneyimli bir diş hekimi. İstanbul Üniversitesi Diş Hekimliği Fakültesi mezunu (1991), Siena Üniversitesi (İtalya) Protetik, Estetik ve Dijital Diş Hekimliği Master'ı. Creadenta'nın kurucu ortağı (2001→ Duygu Karaosmanoğlu ile birlikte). EDAD Genel Sekreteri, DEKİD Başkan Yardımcısı; 2003'ten beri meslektaşlarına teorik ve uygulamalı kurslar veriyor. Estranova'da gülüş tasarımı, diş sağlığı ve hormonal geçişin ağız sağlığına etkileri başlıklarında "sade ama kalıcı olanı seven" çerçevede yazıyor — minimal invaziv felsefe ve akademik birikim arka planda.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -49,6 +55,8 @@ Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **Galip Gürel mentor mirası:** Dentis Dental Clinic'te 1992-2001 arası 9 yıl Dr. Galip Gürel ile çalışma — Türkiye'de estetik diş hekimliğinin önemli isimlerinden biriyle yan-yana eğitim. Bu deneyim Estranova için altyapı; ama "Galip Gürel ile çalışmıştım" referansı **gövdede pazarlama vitrini olamaz** — biyografide ok.
@@ -60,6 +68,8 @@ Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında
 > Not: Yayınlanmış birinci-isim akademik makaleleri PubMed `Dulundu E[Author]` veya `Ozcan E[Author]` sorgusu ile v0.2 öncesi derinleştirilecek.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -81,6 +91,8 @@ Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Ağız sağlığı ve menopoz** — östrojen-mukoza-kemik ilişkisi; xerostomi, diş eti çekilmesi.
@@ -95,6 +107,8 @@ Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 · En Uygun Konular
 
 - **Ağız sağlığı + menopoz:** östrojen-mukoza-kemik ekseni.
@@ -107,6 +121,8 @@ Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında
 - **Diş ve osteoporoz:** kemik kaybı + diş kaybı paraleli.
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar
 
@@ -123,6 +139,8 @@ Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 3 hızlı süzgeç:
@@ -132,6 +150,8 @@ Dt. Elif Özcan Dulundu, estetik diş hekimliği ve porselen laminalar alanında
 3. **Duygu Karaosmanoğlu ile çakışma riski var mı?** (Aynı kliniği paylaşan ortak vaka anlatımı — YASAK; iki yazar farklı eksenleri vurgular).
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

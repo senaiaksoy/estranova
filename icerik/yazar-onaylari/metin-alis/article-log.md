@@ -1,14 +1,18 @@
 # Dr. Metin Alış — Article Log
 
+> **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
+
 > Yazılan her makalenin kalıp seçimi ve cooldown takibi. v0.2 — 2026-05-03 lazy aktivasyon tamam. (Memory: `feedback_template_breaking_universal_2026_05_02.md`)
 
 ---
 
 ## v0.2 — 2026-05-03 (lazy aktivasyon)
 
-| # | Tarih | Yazı (slug) | Eksen | Açılış varyantı | Kapanış varyantı | Manifesto | Dengeleyici | Anekdot kapısı | Notlar |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | 2026-05-03 | tiroid-menopoz-yorgunluk-uyku | Tiroid-perimenopoz örtüşmesi (D1+D3 direkler) | A3 — "Yorgunum, kilo aldım, uykum bozuk üçlüsü..." | Kapanış 2-parçalı: özet + 3 soruyla görüşme önerisi | M3 — "tiroid ve menopoz aynı odadaysa, sesi karıştırmadan ayırmak hekimliğin ilk işidir" (1 kez kullanıldı) | "yarım kalır" + "panik penceresinden değil izlem penceresinden" | "klinikte sıklıkla şu tabloya rastlıyoruz" + "polikliniğe başvuran kadınlarda" anonim | M1 ve M2 manifesto ihlali tespit edildi (3 vurus), revize ile 1'e indirildi. RedFlagBox 7 madde. FAQ 5 soru. Evidence 6 adet (3-4 düzey). |
+## Schema
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2026-05-03 | tiroid-menopoz-yorgunluk-uyku | Tiroid-perimenopoz örtüşmesi (D1+D3 direkler) | v0.1 | — | M3 — "tiroid ve menopoz aynı odadaysa, sesi karıştırmadan ayırmak hekimliğin ilk işidir" (1 kez kullanıldı) | "klinikte sıklıkla şu tabloya rastlıyoruz" + "polikliniğe başvuran kadınlarda" anonim | A3 — "Yorgunum, kilo aldım, uykum bozuk üçlüsü..." | Kapanış 2-parçalı: özet + 3 soruyla görüşme önerisi | — | M1 ve M2 manifesto ihlali tespit edildi (3 vurus), revize ile 1'e indirildi. RedFlagBox 7 madde. FAQ 5 soru. Evidence 6 adet (3-4 düzey). |
 
 ---
 

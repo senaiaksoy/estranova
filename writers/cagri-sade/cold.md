@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [CS-K] etiketi**
@@ -33,11 +35,15 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ yıllık deneyimli bir hekim. Ankara Üniversitesi Tıp Fakültesi mezunu, Şişli Etfal'de uzmanlık; New York'ta Sherrell J. Aston gözleminde tamamladığı ek eğitimle yüz cerrahisinde uluslararası izlere sahip. Estranova'da estetik girişimleri "modaya değil yüze ve kişiye bakan" çerçevede; gerçekçi beklenti yönetimi, doğal yaşlanma kabulü ve müdahale dengesi başlıklarında yazıyor. Pazarlama çerçevesinde değil **bilgi çerçevesinde** — "size uygun mu" sorusu merkezde.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -50,6 +56,8 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **Şişli Etfal hattı:** Türkiye'nin köklü plastik cerrahi eğitim hastanelerinden gelen klinik formasyon — geniş hasta hacmi, farklı cerrahi prosedürlerle ilk-elden tanışıklık.
@@ -57,6 +65,8 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 - **Akademik yayın arşivi:** v0.1'de doğrulanmadı; v0.2 öncesi PubMed `Sade C[Author]` sorgusu.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -80,6 +90,8 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Yüz yaşlanması mekanizması ve menopoz** — kollajen kaybı, yağ rezorpsiyon, kemik değişimi, cilt elastikiyeti.
@@ -93,6 +105,8 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 · En Uygun Konular
 
 - **Yüz yaşlanması:** kollajen / elastin / yağ / kemik mekanizması; menopoz hızlandırması.
@@ -105,6 +119,8 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 - **Postmenopoz cilt + meme sağlık değişimi** (estetik vitrin DEĞİL — sağlık/destek).
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar (sıkı liste)
 
@@ -123,6 +139,8 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 3 hızlı süzgeç:
@@ -132,6 +150,8 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 3. **Promosyon riski yüksek mi?** Marka adı / önce-sonra / başarı hikayesi gerekiyorsa konu Çağrı Sade için DEĞİL — Estranova'nın §4 yasakları daraltır.
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

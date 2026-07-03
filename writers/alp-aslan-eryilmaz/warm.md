@@ -15,6 +15,8 @@ Alp için anekdot kullanımı sınırlı:
 
 ---
 
+<a id="manifesto-kaliplari"></a>
+
 ## §4e · Manifesto Kalıpları — LAZY AKTİVASYON
 
 > v0.1'de boş havuz. **İlk makale üretiminde** AI agent korpustan (eryilmazalp.com önleyici kardiyoloji sayfa serisi) + tematik türetmeden 4-6 kalıp türetip kullanıcıya onaylatır. Memory: feedback_pool_activation_lazy_2026_05_02.md.

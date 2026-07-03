@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v0.1'de minimal. Aşağıdaki gözlemler **gövdeye girmez**.
@@ -35,6 +37,8 @@ Yeni nesil dermatologlara aktarım rolü → pedagojik dil. Estranova'da "anlaş
 cagrisade.com.tr ile kıyaslandığında: Çağrı Sade'nin yazıları "şu işleme nasıl karar verilir" formatında; Gonca'nın yazıları "şu konuyu nasıl anlamalı" formatında daha eğitici tonda. Bu Estranova için Gonca'nın sesini Çağrı'dan ayıran asıl ipucu.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — DEFAULT KAPALI
 

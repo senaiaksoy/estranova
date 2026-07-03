@@ -6,6 +6,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v3.0'da yenilendi. Aşağıdaki gözlemler **gövdeye girmez**, içerik kararlarında AI agent için bağlam.
@@ -36,6 +38,8 @@ Aşağıdaki eski v2.0 öğeleri v3.0'da gövdeye taşınmaz:
 v2.0 versiyonunda Duygu'nun korpusu "yaşıt sosyal masa imzası" üzerine kuruluydu (sosyal medya yok, blog yok, dergi yazısı yok). v3.0'a geçişte bu boş korpus zorlu — Creadenta site içeriği + EDAD profili + Elif ile ortak yayınlar dışında birinci-şahıs ses kaynağı sınırlı. v0.2 öncesi PubMed taraması + EDAD kongre bildiri arama ile rafine edilmeli.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — İKİ EKSEN (active=true)
 

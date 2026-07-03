@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü
 
 1. **Konu uygunluğu:** Yazı hareket, güçlenme, denge, mobilite, nefes, evde başlangıç veya sürdürülebilir rutin ekseninde mi?
@@ -16,6 +18,8 @@
 8. **Estranova article shell:** ArticleAuthorBlock, ArticleSummary, ArticleProsePanel, FAQ, RelatedReadings, ArticleEditorNote, ArticleDisclaimer ve JSON-LD kuralı korunur.
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -58,6 +62,8 @@
 
 ---
 
+<a id="guvenli-hareket-siniri"></a>
+
 ## §5c · Güvenli Hareket Sınırı
 
 Anıl güvenli hareket okuryazarlığı verir; kişisel egzersiz reçetesi vermez. Yazıda örnek hareket kategorileri anlatılabilir, fakat set/tekrar/sıklık kişiye özel program gibi kurulmaz.
@@ -67,6 +73,8 @@ Anıl güvenli hareket okuryazarlığı verir; kişisel egzersiz reçetesi verme
 **Yumuşak ama net cümle:** "Böyle bir belirti varsa ben hareketi zorlamayı değil, önce değerlendirme almayı daha güvenli bulurum."
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist
 

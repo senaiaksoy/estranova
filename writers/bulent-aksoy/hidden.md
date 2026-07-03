@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v0.1'de minimal. Aşağıdaki gözlemler **gövdeye girmez**.
@@ -32,6 +34,8 @@ Profesörlük + 25+ yıl klinik deneyim + Cerrahpaşa eğitim + 17 yıllık öze
 Doktortakvimi yorumlarında "harika bir kişilik", "alçak gönüllü", "ulaşılabilir", "ameliyat öncesi-sonrası titiz takip" sıfatları. Bu karakter izi yayin-kurulu bio'sundaki "sakin bir hekim" tonuyla uyumlu — Estranova için tutarlı.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — DEFAULT KAPALI (üç eksen ek not)
 

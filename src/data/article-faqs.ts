@@ -298,14 +298,9 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Çünkü östrojen düşüşü menopoz sonrası kemik kaybının temel hızlandırıcılarından biridir ve HRT bu kaybı yavaşlatabilir. Özellikle erken menopoz yaşayan ya da kırık riski açısından daha dikkatli izlenen kadınlarda bu fayda daha stratejik bir anlam taşır; ama yine de karar tek başına kemik başlığına bakılarak değil, bütün tabloyla verilir.',
     },
     {
-      question: 'HRT cilt, saç ve genel anti-aging etkisi için düşünülür mü?',
+      question: 'HRT kilo, cilt, saç ve yaşlanma karşıtı beklentiler için karar nedeni olmalı mı?',
       answer:
-        'Bazı kadınlarda cilt kuruluğu, doku konforu ya da saç kalitesindeki menopoz ilişkili değişimlerde ikincil bir destek sağlayabilir; ancak bu alanlardaki kanıt, sıcak basması ya da kemik sağlığı kadar güçlü değildir. Bu yüzden HRT’yi anti-aging vaadiyle değil, önce daha net ve kanıtı güçlü menopoz hedefleri üzerinden değerlendirmek daha doğru olur.',
-    },
-    {
-      question: 'HRT kilo vermeye ya da göbek çevresini azaltmaya yardımcı olur mu?',
-      answer:
-        'HRT’yi kilo verdiren bir tedavi gibi düşünmek doğru değildir. Ancak menopozla birlikte yağın karın çevresine kayması ve vücut kompozisyonundaki değişim açısından bazı kadınlarda daha nötr bir zemin sağlayabileceğini düşündüren veriler vardır; bu etki genellikle büyük tartı değişiminden çok bel çevresi, uyku, hareket kapasitesi ve genel metabolik denge üzerinden okunur.',
+        'HRT’yi kilo verdiren, saçı geri getiren ya da yaşlanmayı durduran bir tedavi gibi düşünmek doğru değildir. Bazı kadınlarda bel çevresi, cilt kuruluğu, doku konforu veya saç kalitesi tarafında ikincil bir yumuşama görülebilir; ancak bu alanlardaki kanıt, sıcak basması, vajinal doku konforu veya kemik sağlığı kadar güçlü değildir. Bu yüzden karar önce daha net ve kanıtı güçlü menopoz hedefleri üzerinden verilmelidir.',
     },
   ],
   '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': [

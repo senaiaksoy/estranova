@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [DK-K] etiketi**
@@ -62,11 +64,15 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanında 30+ yıllık deneyimli bir diş hekimi. Ege Üniversitesi Diş Hekimliği Fakültesi mezunu (1994), Siena Üniversitesi (İtalya) Protetik, Estetik ve Dijital Diş Hekimliği Master'ı. International Hospital ve Dentis Dental Clinic'te çalıştı; 2001'den beri Creadenta'nın kurucu ortağı (Elif Özcan Dulundu ile birlikte). EDAD Yönetim Kurulu üyesi, DEKİD aktif üye; 2003'ten beri Elif ile birlikte meslektaş eğitimi veriyor. Estranova'da diş sağlığı, gülüş tasarımı ve hormonal geçişin ağız sağlığına etkileri başlıklarında **"yüze yakışanı arayan"** çerçevede yazıyor — doğal görünümü zorlamadan, klinik-pratik bir tonla.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -85,6 +91,8 @@ Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanınd
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **Ege Üniversitesi formasyon:** İzmir merkezli klinik geleneğinde başlayan diş hekimliği eğitimi.
@@ -97,6 +105,8 @@ Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanınd
 > Not: Yayınlanmış birinci-isim akademik makaleleri PubMed `Karaosmanoglu D[Author]` veya `Cimli D[Author]` sorgusu ile v0.2 öncesi derinleştirilecek (Elif yayınları ile ortak olabilir).
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -118,6 +128,8 @@ Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanınd
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Diş sağlığı ve menopoz** — östrojen-mukoza-kemik ilişkisi (pratik anlatımla).
@@ -133,6 +145,8 @@ Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanınd
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 · En Uygun Konular
 
 - **Ağız sağlığı + menopoz pratik bağı.**
@@ -144,6 +158,8 @@ Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanınd
 - **Beyazlatma:** mekanizma + gerçekçi beklenti.
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar
 
@@ -159,6 +175,8 @@ Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanınd
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 3 hızlı süzgeç:
@@ -168,6 +186,8 @@ Dt. Duygu Karaosmanoğlu, estetik diş hekimliği ve porselen laminalar alanınd
 3. **Elif Özcan Dulundu ile çakışma riski var mı?** (Aynı kliniği paylaşan ortak vaka anlatımı YASAK; iki yazar farklı eksenleri vurgular.)
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

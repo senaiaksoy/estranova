@@ -4,6 +4,8 @@
 
 ---
 
+<a id="manifesto-aligned-anekdot"></a>
+
 ## §4b · Manifesto-aligned Anekdot
 
 Anıl'ın anekdotu klinik vaka veya danışan başarısı değildir. En güvenli anekdot ekseni spor hocasının kendi hareket anlatma biçimi, stüdyo/salon adı vermeyen gözlem ve kendi çalışma ritmidir.
@@ -33,6 +35,8 @@ Her birinci tekil sahneden sonra okurun bireysel farkı görünür olmalı:
 - Menopozu kişisel deneyim gibi anlatmak.
 
 ---
+
+<a id="ritim-kaliplari"></a>
 
 ## §4e · Ritim Kalıpları
 

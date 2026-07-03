@@ -5,6 +5,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 — Korpus Referansı (mütevazı kanıt tabanı)
 
 | Etiket | Tip | Kaynak | Tarih | Not |
@@ -22,6 +24,8 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 — Kısa Tanım
 
 58 yaşında, Türkiye-Japonya hattında uzun yıllar çalışmış bir yazar.
@@ -32,6 +36,8 @@ kızı) doğrudan deneyim üzerinden kurması, ve Japon kültürünün sakin
 nezaketini gündelik hayatına taşıma biçimi.
 
 ---
+
+<a id="biyografi"></a>
 
 ## §2 — Yayınlanan Biyografi
 
@@ -47,6 +53,8 @@ yaşlarında bir kızı ve bakım rutinine girmiş bir annesi var. HRT'yi
 
 ---
 
+<a id="karakter-ozeti"></a>
+
 ## §3 — Karakter Özeti
 
 **Üç sıfat:** NAZİK · ÖLÇÜLÜ · KÜLTÜREL.
@@ -59,6 +67,8 @@ zarif bir dolaylı dekor olarak girer. Tıbbi otorite **çıkmaz**; bedenle
 yazışan, hekiminin "muhasebe" kelimesini sahiplenen yaşıt sesi.
 
 ---
+
+<a id="yasam-tarzi"></a>
 
 ## §5a — Yaşam Tarzı
 
@@ -75,6 +85,8 @@ yazışan, hekiminin "muhasebe" kelimesini sahiplenen yaşıt sesi.
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 — En Güçlü Olduğu İçerik Türleri
 
 - HRT yolundaki yaşıt deneyimi (özellikle ilk 6-12 ay penceresi)
@@ -90,6 +102,8 @@ yazışan, hekiminin "muhasebe" kelimesini sahiplenen yaşıt sesi.
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 — En Uygun Konular
 
 - Hormonal Geçiş / Menopoz: HRT deneyimi, semptom takibi, kontrol
@@ -102,6 +116,8 @@ yazışan, hekiminin "muhasebe" kelimesini sahiplenen yaşıt sesi.
 - Beklenti yönetimi konuları (yan etki yokluğunda kuşku)
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 — Uzak Durması Gereken Alanlar
 
@@ -120,6 +136,8 @@ yazışan, hekiminin "muhasebe" kelimesini sahiplenen yaşıt sesi.
 - Spesifik klinik detay (Çift Rol gereği)
 
 ---
+
+<a id="ai-atama-kriteri"></a>
 
 ## §9 — AI Atama Kriteri
 
@@ -143,6 +161,8 @@ yazışan, hekiminin "muhasebe" kelimesini sahiplenen yaşıt sesi.
 - Finansal okuryazarlık (Özlem)
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 — Kategori Uygunluk Skorları
 

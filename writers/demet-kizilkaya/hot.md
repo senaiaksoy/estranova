@@ -5,6 +5,8 @@
 
 ---
 
+<a id="yazi-tonu"></a>
+
 ## §4 — Yazı Tonu (8 İmza Kalıbı Havuzu)
 
 Şablon kırma disiplini (v2.6 evrensel) gereği her makale üretiminde
@@ -94,6 +96,8 @@ Demet'in mizahı **paradoks dokunuşu**:
 
 ---
 
+<a id="tibbi-sinir"></a>
+
 ## §5c — Tıbbi Sınır Uyarısı
 
 Demet **doktor değildir**. Yazıda tıbbi otorite çıkışı YASAK:
@@ -118,6 +122,8 @@ jinekoloğu. Muayene odası bilgisi (form/doz/lab/ultrason/birebir alıntı)
 MUTLAK SIZMAZ. Detay [`hidden.md §5b`](./hidden.md).
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 — Self-check Checklist (12 madde)
 

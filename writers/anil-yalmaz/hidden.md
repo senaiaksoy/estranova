@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler
 
 Anıl profili için ana hassasiyet yaş ve rol sınırıdır. 30 yaş altı, genç ve dinamik spor hocası olması metne enerji verebilir; ancak menopozu yaşıyormuş gibi konuşması, 40+ kadın okura üstten bakması veya "ben bilirim, siz yapın" tonuna kayması yanlış olur.

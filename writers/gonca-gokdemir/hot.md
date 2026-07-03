@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 1. **Korpus tarama:** goncagokdemir.com/makaleler/ + Pharmetic + NG Dergi + Longevity Okulu + (varsa) PubMed `Gokdemir G[Author]`.
@@ -16,6 +18,8 @@
 8. **Bilimsel öğeler + Bilimsel Editör Notu:** Evidence + RedFlagBox (varsa) + FAQ + Doç. Dr. Senai Aksoy imzalı sayfa sonu notu.
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -70,6 +74,8 @@
 - **Kozmetik marka danışmanlığı geçmişi** Estranova'da gövdeye sızmaz; aktif madde düzeyinde objektif bilgi.
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (15 madde — dermatoloji sıkı)
 

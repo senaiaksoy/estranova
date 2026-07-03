@@ -4,6 +4,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 1. **Korpus tarama:** painfree.com.tr (about + services) + (varsa) PubMed `Sarac E[Author]` + sosyal medya transkripti.
@@ -16,6 +18,8 @@
 8. **Bilimsel öğeler + Bilimsel Editör Notu:** Evidence + RedFlagBox (varsa) + FAQ + Doç. Dr. Senai Aksoy imzalı sayfa sonu notu.
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -69,6 +73,8 @@
 - **Promosyon vitrini YASAK** (Pain Free Nişantaşı + Fenerbahçe Basketbol referansları).
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (15 madde)
 

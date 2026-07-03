@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [ES-K] etiketi**
@@ -26,6 +28,8 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Fzt. Ersin Saraç, kas-iskelet rehabilitasyonu, postür ve klinik egzersiz alanında çalışan bir fizyoterapist. KBÜ Fizyoterapi ve Rehabilitasyon Bölümü mezunu (2018); spor travmatolojisi ve manuel terapi alanlarında sertifika eğitimleri aldı. Fenerbahçe Erkek Basketbol A Takımı'nda fizyoterapist olarak çalıştı; Pain Free Nişantaşı kliniğinin kurucusu. Estranova'da hareket, kronik ağrı, postmenopozal kas-iskelet sağlığı ve doğum sonrası rehabilitasyon başlıklarında **"bedeni dinleyerek ilerlemeyi öğreten"** çerçevede yazıyor — küçük adımların gücüne inanan klinisyen tonuyla.
@@ -33,6 +37,8 @@ Fzt. Ersin Saraç, kas-iskelet rehabilitasyonu, postür ve klinik egzersiz alan�
 Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **yaşıt persona kapısı DEĞİL** — klinisyen mesafesi daha sıkı uygulanır.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -52,6 +58,8 @@ Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **y
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **KBÜ Fizyoterapi formasyonu:** Türkiye'de fizyoterapi lisans programı 4 yıl; KBÜ Karabük Üniversitesi mezuniyet (2018).
@@ -62,6 +70,8 @@ Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **y
 > Not: Akademik makale arşivi henüz doğrulanmadı. v0.2 öncesi PubMed `Sarac E[Author]` veya benzer sorgular ile derinleştirilebilir.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -85,6 +95,8 @@ Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **y
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Kas-iskelet sağlığı 40+** — kronik bel ağrısı, omuz, diz, kalça ekseninde mekanizma + egzersiz reçetesi pratik.
@@ -100,6 +112,8 @@ Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **y
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 · En Uygun Konular
 
 - **Kas-iskelet 40+:** kronik bel/omuz/diz/kalça ağrısı.
@@ -111,6 +125,8 @@ Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **y
 - **Klinik egzersiz reçetesi:** ev egzersiz rehberi.
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar
 
@@ -127,6 +143,8 @@ Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **y
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 3 hızlı süzgeç:
@@ -136,6 +154,8 @@ Estranova'nın bilimsel yazarlar grubunda en genç (33 yaş); bu yaş farkı **y
 3. **Eksen karışıklığı yok mu?** (Mahrem klinik Senai; sporcu performans Alara/dış; pelvik taban anlatımı Senai vs egzersiz Ersin — dikkat).
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

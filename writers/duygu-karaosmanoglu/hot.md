@@ -6,6 +6,8 @@
 
 ---
 
+<a id="yurutme-protokolu"></a>
+
 ## §0.5 · Yürütme Protokolü (8 adım)
 
 1. **Korpus tarama:** creadenta.com (about + trainings) + EDAD profil + (varsa) PubMed `Karaosmanoglu D[Author]` veya `Cimli D[Author]`.
@@ -18,6 +20,8 @@
 8. **Bilimsel öğeler + Bilimsel Editör Notu:** Evidence + RedFlagBox + FAQ + Doç. Dr. Senai Aksoy imzalı sayfa sonu notu.
 
 ---
+
+<a id="yazi-tonu"></a>
 
 ## §4 · Yazı Tonu
 
@@ -121,6 +125,8 @@
 - **HRT deneyimi YASAK** — Senai Çift Rol gereği muayene odası bilgisi sızmaz.
 
 ---
+
+<a id="self-check-checklist"></a>
 
 ## §13 · Self-check Checklist (16 madde — v3.0 ek kontrolü dahil)
 

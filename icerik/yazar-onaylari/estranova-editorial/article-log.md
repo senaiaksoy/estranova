@@ -1,11 +1,15 @@
 # Estranova Editörleri — Article Log
 
+> **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
+
 > Kurumsal editöryal byline. Kişi/yazar profili değildir; temel rehberler, hub tamamlayıcıları ve açıklayıcı sağlık haritaları için kullanılır.
 
 ## Schema
 
-| # | Tarih | Konu | Kategori | İmza | Onay | Notlar |
-|---|---|---|---|---|---|---|
+## Schema
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
 
 ## Stil Kuralları
 

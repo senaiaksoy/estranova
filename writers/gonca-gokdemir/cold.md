@@ -4,6 +4,8 @@
 
 ---
 
+<a id="korpus-referansi"></a>
+
 ## §0 · Korpus Referansı
 
 **Kamuya açık kaynaklar — [GG-K] etiketi**
@@ -43,11 +45,15 @@
 
 ---
 
+<a id="kisa-tanim"></a>
+
 ## §1 · Kısa Tanım
 
 Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı aşkın deneyimli bir akademisyen. İstanbul Tıp Fakültesi Dermatoloji çevresinde başlayan kariyeri Şişli Etfal, Okmeydanı, Liv Hospital ve Bahçeşehir Üniversitesi Tıp Fakültesi'nde sürdü. ~150 yerli ve yabancı yayın. Estranova'da cilt sağlığı, hormonal geçişin cilde etkileri ve estetik dermatoloji başlıklarında "trendin değil cildin tarafında duran" çerçevede yazıyor — anlaşılır, marka pazarlamasından uzak, cilt biyolojisi merkezli.
 
 ---
+
+<a id="yayinlanan-biyografi"></a>
 
 ## §2a · Yayınlanan Biyografi
 
@@ -66,6 +72,8 @@ Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı a
 
 ---
 
+<a id="akademik-iz"></a>
+
 ## §2b · Akademik İz
 
 - **İstanbul Tıp Fakültesi hattı:** Türkiye'nin köklü dermatoloji eğitim ortamı — geniş hasta hacmi, akademik takip kültürü.
@@ -77,6 +85,8 @@ Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı a
 > Not: Yayınlanmış birinci-isim akademik makaleleri PubMed `Gokdemir G[Author]` sorgusu ile v0.2 öncesi derinleştirilecek.
 
 ---
+
+<a id="karakter-ozeti"></a>
 
 ## §3 · Karakter Özeti
 
@@ -99,6 +109,8 @@ Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı a
 
 ---
 
+<a id="icerik-turleri"></a>
+
 ## §6 · En Güçlü Olduğu İçerik Türleri
 
 1. **Cilt yaşlanması ve menopoz mekanizması** — kollajen kaybı, kuruluk, atrofi, melanin değişimi.
@@ -114,6 +126,8 @@ Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı a
 
 ---
 
+<a id="uygun-konular"></a>
+
 ## §7 · En Uygun Konular
 
 - **Cilt yaşlanması:** UV / hormon / melanin / kollajen mekanizması.
@@ -128,6 +142,8 @@ Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı a
 - **Mevsim ve cilt:** yaz-kış bakım farkları.
 
 ---
+
+<a id="uzak-durulanlar"></a>
 
 ## §8 · Uzak Durması Gereken Alanlar
 
@@ -145,6 +161,8 @@ Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı a
 
 ---
 
+<a id="ai-atama-kriteri"></a>
+
 ## §9 · AI Atama Kriteri
 
 3 hızlı süzgeç:
@@ -154,6 +172,8 @@ Prof. Dr. Gonca Gökdemir, medikal ve kozmetik dermatoloji alanında 25 yılı a
 3. **Marka tanıtım riski yüksek mi?** Evet ise konu Gonca için reddedilmeli; aktif madde düzeyinde kalınamayacak konu Gonca'ya uygun değil.
 
 ---
+
+<a id="kategori-skorlari"></a>
 
 ## §10 · Kategori Uygunluk Skorları
 

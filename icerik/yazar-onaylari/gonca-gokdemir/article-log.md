@@ -1,14 +1,18 @@
 # Prof. Dr. Gonca Gökdemir — Article Log
 
+> **Article log framework:** [`docs/WRITER-DYNAMICS-FRAMEWORK.md`](../docs/WRITER-DYNAMICS-FRAMEWORK.md)
+
 > Yazılan her makalenin kalıp seçimi ve cooldown takibi. v0.1 başlangıç.
 
 ---
 
 ## v0.1 — 2026-05-02 başlangıç
 
-| # | Tarih | Yazı (slug) | Eksen | Açılış | Kapanış | Manifesto | Dengeleyici | Anekdot | Notlar |
-|---|---|---|---|---|---|---|---|---|---|
-| — | — | (henüz makale yok) | — | — | — | — | — | — | v0.1 lazy aktivasyon |
+## Schema
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| — | — | (henüz makale yok) | — | v0.1 | — | — | — | — | — | — | v0.1 lazy aktivasyon |
 
 ---
 

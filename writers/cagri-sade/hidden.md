@@ -4,6 +4,8 @@
 
 ---
 
+<a id="gizli-gozlemler"></a>
+
 ## §5b · Gizli Gözlemler (yayınlanmaz)
 
 > v0.1'de minimal. Aşağıdaki gözlemler **gövdeye girmez**, içerik kararlarında AI agent için bağlam.
@@ -34,6 +36,8 @@ Sherrell J. Aston gözlemci programı kariyer açısından kritik milad. Biyogra
 Kişisel sitede "cerrahınızla rahat soru sorabilmeli" tipi inclusive yumuşatma var. Bu dilsel doku Estranova'nın "Doktorunuza danışın" çerçevesiyle uyumlu — yumuşak adaptasyon kolay.
 
 ---
+
+<a id="cift-rol-uyarisi"></a>
 
 ## §5c-ek · Çift Rol Uyarısı — DEFAULT KAPALI
 
