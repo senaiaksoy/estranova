@@ -1,0 +1,11 @@
+strategy:
+  name: conservative_daily_trend
+  confirmation_days: 2
+  min_history_days: 30
+  rsi_buy_min: 45
+  rsi_buy_max: 75
+  rsi_reduce: 78
+  drawdown_exit_pct:
+    tefas_yay: 12
+    gold_try: 10
+    silver_try: 18

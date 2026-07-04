@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "market-signals"
+version = "0.1.0"
+description = "Private decision-support market signal tooling for TEFAS and metals"
+requires-python = ">=3.11"
+dependencies = [
+  "requests>=2.32.0",
+  "PyYAML>=6.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+]
+
+[project.scripts]
+market-signals = "market_signals.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
