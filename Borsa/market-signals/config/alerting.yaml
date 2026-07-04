@@ -1,0 +1,4 @@
+alerts:
+  enabled: false
+  default_channel: telegram
+  send_only_on_state_change: true

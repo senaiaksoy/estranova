@@ -1,0 +1,15 @@
+timezone: Europe/Istanbul
+base_currency: TRY
+instruments:
+  - id: tefas_yay
+    label: TEFAS YAY
+    source: sample
+    symbol: YAY
+  - id: gold_try
+    label: Altin TRY
+    source: sample
+    symbol: XAU_TRY
+  - id: silver_try
+    label: Gumus TRY
+    source: sample
+    symbol: XAG_TRY
