@@ -10,14 +10,14 @@ def test_rising_series_generates_conservative_wait_signal():
     assert signal.label == SignalLabel.BEKLE
     assert signal.confidence == Confidence.DUSUK
     assert signal.instrument_id == "tefas_yay"
-    assert "extended RSI14" in signal.reason
+    assert "RSI14 aşırı uzamış" in signal.reason
 
 
 def test_falling_series_generates_risk_signal():
     signal = generate_signal("tefas_yay", "TEFAS YAY", falling_series())
     assert signal.label == SignalLabel.NAKDE_GEC
     assert signal.confidence == Confidence.YUKSEK
-    assert "drawdown" in signal.reason
+    assert "geri çekilme" in signal.reason
 
 
 def test_generate_signal_rejects_empty_points():

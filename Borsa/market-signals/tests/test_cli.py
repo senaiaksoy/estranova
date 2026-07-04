@@ -35,9 +35,16 @@ def test_run_daily_writes_report(tmp_path, monkeypatch):
     monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
 
     result = main(["run-daily"])
+    reports = list((tmp_path / "data" / "reports").glob("daily-*.md"))
 
     assert result == 0
-    assert list((tmp_path / "data" / "reports").glob("daily-*.md"))
+    assert reports
+
+    report_text = reports[0].read_text(encoding="utf-8")
+    assert "# Borsa Günlük Sinyal Raporu" in report_text
+    assert "Bu rapor yatırım tavsiyesi değildir" in report_text
+    assert "- Neden:" in report_text
+    assert "Manuel kontrol penceresi" in report_text
 
 
 def test_alert_defaults_to_dry_run(tmp_path, monkeypatch):
@@ -45,6 +52,11 @@ def test_alert_defaults_to_dry_run(tmp_path, monkeypatch):
     monkeypatch.setenv("MARKET_SIGNALS_ALERTS_ENABLED", "true")
 
     result = main(["alert"])
+    alert_path = tmp_path / "data" / "logs" / "last-alert.txt"
+    alert_text = alert_path.read_text(encoding="utf-8")
 
     assert result == 0
-    assert (tmp_path / "data" / "logs" / "last-alert.txt").is_file()
+    assert alert_path.is_file()
+    assert "Borsa sinyal özeti" in alert_text
+    assert "Bu mesaj yatırım tavsiyesi değildir" in alert_text
+    assert "Manuel kontrol" in alert_text

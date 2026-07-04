@@ -6,19 +6,25 @@ from pathlib import Path
 import requests
 
 from .models import Signal
+from .reports import render_confidence, render_signal_label
 from .storage import ensure_runtime_dirs
 
 
 def format_alert(signals: list[Signal]) -> str:
     lines = [
-        "Borsa sinyal raporu",
-        "Bu mesaj yatirim tavsiyesi degildir; manuel karar destegi icindir.",
+        "Borsa sinyal özeti",
+        "Bu mesaj yatırım tavsiyesi değildir; manuel karar desteği ve hatırlatma amaçlıdır.",
         "",
     ]
     for signal in signals:
-        lines.append(f"{signal.instrument_id}: {signal.label.value} ({signal.confidence.value}) - {signal.reason}")
+        lines.append(
+            f"{signal.instrument_id}: {render_signal_label(signal.label.value)} "
+            f"({render_confidence(signal.confidence.value)})"
+        )
+        lines.append(f"  Neden: {signal.reason}")
     lines.append("")
-    lines.append("TEFAS cutoff baglami: 13:30 TSI oncesi manuel kontrol.")
+    lines.append("Manuel kontrol: TEFAS emir kesim saati bağlamı için 13:30 TSI öncesi son gözden geçirme yapılır.")
+    lines.append("Bu sistem otomatik emir göndermez; karar sizde kalır.")
     return "\n".join(lines)
 
 

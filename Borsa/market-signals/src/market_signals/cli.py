@@ -39,8 +39,8 @@ def build_parser() -> argparse.ArgumentParser:
 def generate_all_signals():
     labels = {
         "tefas_yay": "TEFAS YAY",
-        "gold_try": "Altin TRY",
-        "silver_try": "Gumus TRY",
+        "gold_try": "Altın TRY",
+        "silver_try": "Gümüş TRY",
     }
     return [
         generate_signal(instrument_id, labels[instrument_id], points)
@@ -55,7 +55,7 @@ def run_daily(root: Path) -> int:
         append_signal_log(root, signal)
     report_path = write_daily_report(root, signals)
     alert(root, signals, dry_run=True)
-    print(f"Wrote daily report: {report_path}")
+    print(f"Günlük rapor yazıldı: {report_path}")
     return 0
 
 
@@ -65,13 +65,19 @@ def run_weekly_audit(root: Path) -> int:
     report_path = write_daily_report(root, signals)
     audit_path = root / "data" / "reports" / "weekly-audit.md"
     audit_path.write_text(
-        "# Weekly Audit\n\n"
-        "Private decision-support audit. This is not investment advice.\n\n"
-        f"Signals reviewed: {len(signals)}\n"
-        f"Latest report: {report_path.name}\n",
+        "# Haftalık Sinyal Kalite Auditi\n\n"
+        "Bu audit yatırım tavsiyesi değildir; özel karar destek sisteminin çalışma sağlığını kontrol eder.\n\n"
+        "## Özet\n\n"
+        f"- İncelenen sinyal sayısı: {len(signals)}\n"
+        f"- Son üretilen günlük rapor: {report_path.name}\n"
+        "- Kontrol kapsamı: veri üretimi, sinyal hesaplama ve rapor dosyası oluşturma.\n\n"
+        "## Yorum\n\n"
+        "Haftalık audit, stratejinin finansal doğruluğunu garanti etmez; sadece sistemin beklenen dosyaları ve "
+        "çıktıları üretebildiğini gösterir. Sinyaller portföy ağırlığı, işlem maliyeti, TEFAS saatleri ve kişisel "
+        "risk toleransı ile birlikte manuel değerlendirilmelidir.\n",
         encoding="utf-8",
     )
-    print(f"Wrote weekly audit: {audit_path}")
+    print(f"Haftalık audit yazıldı: {audit_path}")
     return 0
 
 

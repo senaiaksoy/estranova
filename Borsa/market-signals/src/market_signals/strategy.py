@@ -13,7 +13,14 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
     asof = points[-1].date
 
     if len(closes) < 200:
-        return Signal(instrument_id, SignalLabel.BEKLE, Confidence.DUSUK, latest, "Warming up: 200 daily values required", asof)
+        return Signal(
+            instrument_id,
+            SignalLabel.BEKLE,
+            Confidence.DUSUK,
+            latest,
+            "Hazırlık dönemi: sağlıklı uzun trend okuması için 200 günlük veri gerekli",
+            asof,
+        )
 
     sma_50 = sma(closes, 50)
     sma_200 = sma(closes, 200)
@@ -28,7 +35,7 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
             SignalLabel.NAKDE_GEC,
             Confidence.YUKSEK,
             latest,
-            f"{label}: close below SMA200 and drawdown {dd:.2f}%",
+            f"{label}: kapanış SMA200 altında ve son 120 günde geri çekilme {dd:.2f}%",
             asof,
         )
 
@@ -38,7 +45,7 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
             SignalLabel.BEKLE,
             Confidence.DUSUK,
             latest,
-            f"{label}: aligned trend but extended RSI14 {rsi_14:.2f}; SMA50 {sma_50:.2f}, SMA200 {sma_200:.2f}",
+            f"{label}: ana trend uyumlu ancak RSI14 aşırı uzamış {rsi_14:.2f}; SMA50 {sma_50:.2f}, SMA200 {sma_200:.2f}",
             asof,
         )
 
@@ -48,7 +55,7 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
             SignalLabel.AZALT,
             Confidence.ORTA,
             latest,
-            f"{label}: close {latest:.2f}, SMA50 {sma_50:.2f}, RSI14 {rsi_14:.2f}",
+            f"{label}: kapanış {latest:.2f}, SMA50 {sma_50:.2f}, RSI14 {rsi_14:.2f}; kısa vadeli risk izleniyor",
             asof,
         )
 
@@ -58,7 +65,7 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
             SignalLabel.AL,
             Confidence.ORTA if vol > 0.02 else Confidence.YUKSEK,
             latest,
-            f"{label}: trend aligned; close {latest:.2f}, SMA50 {sma_50:.2f}, EMA50 {ema_50:.2f}, RSI14 {rsi_14:.2f}",
+            f"{label}: trend uyumlu; kapanış {latest:.2f}, SMA50 {sma_50:.2f}, EMA50 {ema_50:.2f}, RSI14 {rsi_14:.2f}",
             asof,
         )
 
@@ -67,6 +74,6 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
         SignalLabel.BEKLE,
         Confidence.DUSUK,
         latest,
-        f"{label}: mixed signal; close {latest:.2f}, SMA50 {sma_50:.2f}, SMA200 {sma_200:.2f}, RSI14 {rsi_14:.2f}",
+        f"{label}: karışık sinyal; kapanış {latest:.2f}, SMA50 {sma_50:.2f}, SMA200 {sma_200:.2f}, RSI14 {rsi_14:.2f}",
         asof,
     )
