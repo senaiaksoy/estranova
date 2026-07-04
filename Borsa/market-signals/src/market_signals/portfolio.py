@@ -32,6 +32,98 @@ class PortfolioValuation:
     total_value: float
 
 
+def default_user_holdings() -> list[Holding]:
+    return [
+        Holding(
+            id="gmstr",
+            symbol="GMSTR",
+            label="GMSTR gümüş BYF",
+            quantity=7680,
+            asset_class="equity_derivative",
+            role="transition",
+            pending_action="exit_to_yft",
+            notes="Uygun fiyatta YFT'ye geçiş adayı.",
+        ),
+        Holding(
+            id="z30ea",
+            symbol="Z30EA",
+            label="Z30EA",
+            quantity=2758,
+            asset_class="equity_derivative",
+            role="transition",
+            pending_action="exit_to_yft",
+            notes="Tam sembol doğrulanamazsa manuel fiyat bekler.",
+        ),
+        Holding(
+            id="yay",
+            symbol="YAY",
+            label="YAY / YFAY1",
+            quantity=2576,
+            asset_class="tefas_fund",
+            role="growth",
+            pending_action="none",
+            notes="Ana büyüme pozisyonu.",
+        ),
+        Holding(
+            id="yft",
+            symbol="YFT",
+            label="YFT / SERLF",
+            quantity=82255,
+            asset_class="money_market_fund",
+            role="cash_parking",
+            pending_action="none",
+            notes="Günlük para piyasası park alanı.",
+        ),
+        Holding(
+            id="ylb",
+            symbol="YLB",
+            label="YLB / YLBL bloke",
+            quantity=2333374,
+            asset_class="blocked_cash",
+            role="transition",
+            pending_action="convert_to_yay",
+            notes="Pazartesi YAY alımına dönecek bekleyen tutar.",
+        ),
+        Holding(
+            id="physical_gold",
+            symbol="GRAM_ALTIN",
+            label="Fiziki altın",
+            quantity=1000,
+            asset_class="physical_gold",
+            role="defensive",
+            pending_action="none",
+            notes="1 kg fiziki altın.",
+        ),
+    ]
+
+
+def project_pending_ylb_to_yay(holdings: list[Holding], provider: PriceProvider) -> list[Holding]:
+    by_id = {holding.id: holding for holding in holdings}
+    ylb = by_id.get("ylb")
+    yay = by_id.get("yay")
+    if ylb is None or yay is None:
+        return holdings
+
+    ylb_price = provider.get(ylb.symbol)
+    yay_price = provider.get(yay.symbol)
+    if ylb_price is None or yay_price is None or yay_price.price == 0:
+        return holdings
+
+    ylb_value = ylb.quantity * ylb_price.price
+    projected_yay_quantity = yay.quantity + (ylb_value / yay_price.price)
+
+    projected: list[Holding] = []
+    for holding in holdings:
+        if holding.id == "yay":
+            projected.append(replace(holding, quantity=projected_yay_quantity))
+        elif holding.id == "ylb":
+            projected.append(replace(holding, quantity=0))
+        else:
+            projected.append(holding)
+
+    return projected
+
+
 def value_holdings(holdings: list[Holding], provider: PriceProvider) -> PortfolioValuation:
     rows: list[ValuationRow] = []
     total_value = 0.0
