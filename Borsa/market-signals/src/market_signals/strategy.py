@@ -8,8 +8,8 @@ from .models import Confidence, PricePoint, Signal, SignalLabel
 
 def calculate_signal_features(points: list[PricePoint]) -> dict[str, float]:
     closes = [point.close for point in points]
-    if any(not math.isfinite(close) for close in closes):
-        raise ValueError("price points must contain finite close values")
+    if any(not (math.isfinite(close) and close > 0) for close in closes):
+        raise ValueError("price points must contain finite and positive close values")
 
     if len(closes) < 200:
         return {}

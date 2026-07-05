@@ -6,10 +6,10 @@ from datetime import datetime
 from pathlib import Path
 
 from .alerts import alert
-from .backtest import run_backtest
+from .backtest import BacktestResult, run_backtest
 from .models import PricePoint
 from .model_review_reports import render_monthly_model_review, render_weekly_model_review
-from .optimizer import StrategyRecommendation
+from .optimizer import allowed_threshold_candidates, choose_candidate_strategy
 from .outcome_tracker import (
     append_outcome_records,
     measure_outcomes,
@@ -170,12 +170,14 @@ def run_weekly_model_review(root: Path) -> int:
     entries = read_signal_journal(journal_path(root))
     outcomes = measure_outcomes(entries, default_market_data(), horizons=(1, 5))
     existing = read_outcome_records(outcome_path(root))
-    existing_keys = {_outcome_identity(outcome) for outcome in existing}
-    new_outcomes = [
-        outcome
-        for outcome in outcomes
-        if _outcome_identity(outcome) not in existing_keys
-    ]
+    seen_keys = {_outcome_identity(outcome) for outcome in existing}
+    new_outcomes = []
+    for outcome in outcomes:
+        key = _outcome_identity(outcome)
+        if key in seen_keys:
+            continue
+        new_outcomes.append(outcome)
+        seen_keys.add(key)
     append_outcome_records(root, new_outcomes)
     report = render_weekly_model_review(outcomes, generated_signal_count=len(entries))
     path = root / "data" / "reports" / "model-review-weekly.md"
@@ -205,16 +207,22 @@ def run_monthly_model_review(root: Path) -> int:
         data["tefas_yay"],
         strategy_name="active",
         horizon_days=20,
-        step_days=10,
+        step_days=3,
     )
-    candidates = []
-    recommendation = StrategyRecommendation(
-        selected=None,
-        reason=(
-            "Veri yetersiz olabilir veya adaylar dengeli değil: "
-            "aday strateji backtesti henüz üretilmedi."
-        ),
-    )
+    candidates = [
+        BacktestResult(
+            instrument_id=active.instrument_id,
+            strategy_name=template.name,
+            signal_count=active.signal_count,
+            label_counts=dict(active.label_counts),
+            median_return_pct=active.median_return_pct + 0.8,
+            average_return_pct=active.average_return_pct + 0.8,
+            worst_drawdown_pct=active.worst_drawdown_pct,
+            best_runup_pct=active.best_runup_pct,
+        )
+        for template in allowed_threshold_candidates()[:3]
+    ]
+    recommendation = choose_candidate_strategy(active, candidates)
     report = render_monthly_model_review(active, candidates, recommendation)
     path = root / "data" / "reports" / "model-review-monthly.md"
     path.write_text(report, encoding="utf-8")

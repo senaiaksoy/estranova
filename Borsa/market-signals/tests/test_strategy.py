@@ -55,5 +55,15 @@ def test_calculate_signal_features_rejects_non_finite_values():
     point = points[50]
     points[50] = PricePoint(point.date, float("nan"))
 
-    with pytest.raises(ValueError, match="finite close values"):
+    with pytest.raises(ValueError, match="finite and positive"):
+        calculate_signal_features(points)
+
+
+@pytest.mark.parametrize("close", [0.0, -1.0])
+def test_calculate_signal_features_rejects_non_positive_values(close):
+    points = rising_series()
+    point = points[50]
+    points[50] = PricePoint(point.date, close)
+
+    with pytest.raises(ValueError, match="finite and positive"):
         calculate_signal_features(points)

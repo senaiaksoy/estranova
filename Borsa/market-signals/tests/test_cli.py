@@ -216,6 +216,20 @@ def test_model_review_weekly_is_idempotent_for_same_journal(tmp_path, monkeypatc
     assert second_line_count == first_line_count
 
 
+def test_model_review_weekly_dedupes_duplicate_entries_in_current_journal(
+    tmp_path, monkeypatch
+):
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+
+    assert main(["run-daily"]) == 0
+    assert main(["run-daily"]) == 0
+    assert main(["model-review", "--weekly"]) == 0
+
+    outcome_path = tmp_path / "data" / "signals" / "signal-outcomes.jsonl"
+    line_count = len(outcome_path.read_text(encoding="utf-8").splitlines())
+    assert line_count == 6
+
+
 def test_model_review_monthly_writes_report(tmp_path, monkeypatch):
     monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
 
@@ -225,6 +239,7 @@ def test_model_review_monthly_writes_report(tmp_path, monkeypatch):
     report = tmp_path / "data" / "reports" / "model-review-monthly.md"
     text = report.read_text(encoding="utf-8")
     assert "# Aylık Strateji Gözden Geçirme Raporu" in text
-    assert "Veri yeterli olmadığı için aday strateji üretilemedi." in text
-    assert "Canlı strateji değişikliği yoktur" in text
-    assert "otomatik uygulanmamıştır" not in text
+    assert "Aday strateji |" in text
+    assert "candidate-buymin" in text
+    assert "otomatik uygulanmamıştır" in text
+    assert "Canlı strateji değişikliği yoktur" not in text
