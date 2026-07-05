@@ -1,3 +1,5 @@
+import pytest
+
 from market_signals.models import PricePoint
 from market_signals.outcome_tracker import (
     OutcomeRecord,
@@ -9,7 +11,7 @@ from market_signals.outcome_tracker import (
 from market_signals.signal_journal import SignalJournalEntry
 
 
-def make_entry(label: str = "AL") -> SignalJournalEntry:
+def make_entry(label: str = "AL", close: float = 100.0) -> SignalJournalEntry:
     return SignalJournalEntry(
         run_id="daily-20260701",
         asof="2026-07-01",
@@ -17,7 +19,7 @@ def make_entry(label: str = "AL") -> SignalJournalEntry:
         symbol="YAY",
         signal_label=label,
         confidence="Orta",
-        close=100.0,
+        close=close,
         reason="trend uyumlu",
         features={"rsi14": 55.0},
         strategy_name="conservative_daily_trend",
@@ -55,6 +57,38 @@ def test_measure_outcomes_marks_missing_price_for_unavailable_horizon():
     assert outcomes[0].outcome_status == "missing_price"
     assert outcomes[0].exit_close is None
     assert outcomes[0].return_pct is None
+
+
+def test_measure_outcomes_rejects_zero_entry_close():
+    with pytest.raises(ValueError, match="entry close must be finite and positive"):
+        measure_outcomes([make_entry(close=0.0)], {"tefas_yay": price_points()}, horizons=(1,))
+
+
+def test_measure_outcomes_rejects_nan_entry_close():
+    with pytest.raises(ValueError, match="entry close must be finite and positive"):
+        measure_outcomes(
+            [make_entry(close=float("nan"))],
+            {"tefas_yay": price_points()},
+            horizons=(1,),
+        )
+
+
+def test_measure_outcomes_rejects_non_finite_future_close():
+    points = price_points()
+    points[1] = PricePoint("2026-07-02", float("inf"))
+
+    with pytest.raises(ValueError, match="price closes must be finite and positive"):
+        measure_outcomes([make_entry()], {"tefas_yay": points}, horizons=(1,))
+
+
+def test_measure_outcomes_rejects_zero_horizon():
+    with pytest.raises(ValueError, match="horizons must be positive"):
+        measure_outcomes([make_entry()], {"tefas_yay": price_points()}, horizons=(0,))
+
+
+def test_measure_outcomes_rejects_negative_horizon():
+    with pytest.raises(ValueError, match="horizons must be positive"):
+        measure_outcomes([make_entry()], {"tefas_yay": price_points()}, horizons=(-1,))
 
 
 def test_outcome_record_round_trips_dict():

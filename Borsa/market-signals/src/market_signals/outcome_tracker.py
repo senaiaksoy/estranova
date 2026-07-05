@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 import statistics
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -54,8 +55,15 @@ def measure_outcomes(
     market_data: dict[str, list[PricePoint]],
     horizons: tuple[int, ...] = (1, 5, 20, 60),
 ) -> list[OutcomeRecord]:
+    if any(horizon <= 0 for horizon in horizons):
+        raise ValueError("horizons must be positive")
+
     outcomes: list[OutcomeRecord] = []
     for entry in entries:
+        entry_close = float(entry.close)
+        if not _is_positive_finite(entry_close):
+            raise ValueError("entry close must be finite and positive")
+
         points = market_data.get(entry.instrument_id, [])
         date_to_index = {point.date: index for index, point in enumerate(points)}
         start_index = date_to_index.get(entry.asof)
@@ -66,11 +74,14 @@ def measure_outcomes(
                 continue
 
             exit_index = start_index + horizon
-            entry_close = float(entry.close)
             exit_close = float(points[exit_index].close)
+            future_points = points[start_index + 1 : exit_index + 1]
+            if any(not _is_positive_finite(float(point.close)) for point in future_points):
+                raise ValueError("price closes must be finite and positive")
+
             moves = [
                 (float(point.close) / entry_close - 1.0) * 100
-                for point in points[start_index + 1 : exit_index + 1]
+                for point in future_points
             ]
             outcomes.append(
                 OutcomeRecord(
@@ -166,3 +177,7 @@ def _optional_float(value: Any) -> float | None:
     if value is None:
         return None
     return float(value)
+
+
+def _is_positive_finite(value: float) -> bool:
+    return math.isfinite(value) and value > 0
