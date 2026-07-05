@@ -9,16 +9,39 @@ def _money(value: float | None) -> str:
     return f"{value:,.2f} TL"
 
 
+def _table_text(value: str) -> str:
+    return " ".join(value.split()).replace("|", "\\|")
+
+
 def _row_note(row: ValuationRow) -> str:
     if row.missing_price:
         return "Fiyat doğrulanamadı; manuel kontrol gerekir."
     return row.holding.notes
 
 
+def _missing_symbols(
+    valuation: PortfolioValuation, explicit_symbols: list[str] | None
+) -> list[str]:
+    symbols: list[str] = []
+    for row in valuation.rows:
+        if row.missing_price:
+            symbols.append(row.holding.symbol)
+    if explicit_symbols:
+        symbols.extend(explicit_symbols)
+
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for symbol in symbols:
+        if symbol not in seen:
+            deduped.append(symbol)
+            seen.add(symbol)
+    return deduped
+
+
 def render_portfolio_report(
     valuation: PortfolioValuation, missing_symbols: list[str] | None = None
 ) -> str:
-    missing_symbols = missing_symbols or []
+    missing_symbols = _missing_symbols(valuation, missing_symbols)
     physical_gold_quantity = sum(
         row.holding.quantity
         for row in valuation.rows
@@ -43,12 +66,12 @@ def render_portfolio_report(
         price = row.price.price if row.price is not None else None
         lines.append(
             "| "
-            f"{row.holding.label} | "
+            f"{_table_text(row.holding.label)} | "
             f"{row.holding.quantity:.4f} | "
             f"{_money(price)} | "
             f"{_money(row.market_value)} | "
             f"{row.weight_pct:.2f}% | "
-            f"{_row_note(row)} |"
+            f"{_table_text(_row_note(row))} |"
         )
 
     lines.extend(
