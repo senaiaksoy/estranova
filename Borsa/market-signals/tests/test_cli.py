@@ -19,6 +19,13 @@ def test_cli_has_hermes_commands():
     assert "alert" in help_text
 
 
+def test_cli_has_model_review_command():
+    parser = build_parser()
+    help_text = parser.format_help()
+
+    assert "model-review" in help_text
+
+
 def test_module_entrypoint_is_importable():
     assert module_main.main is main
 
@@ -168,3 +175,29 @@ def test_portfolio_report_command_does_not_overwrite_same_second_runs(
 
     reports = list((tmp_path / "data" / "reports").glob("portfolio-*.md"))
     assert len(reports) == 2
+
+
+def test_model_review_weekly_writes_report(tmp_path, monkeypatch):
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+
+    assert main(["run-daily"]) == 0
+    result = main(["model-review", "--weekly"])
+
+    assert result == 0
+    report = tmp_path / "data" / "reports" / "model-review-weekly.md"
+    text = report.read_text(encoding="utf-8")
+    assert "# Haftalık Model Performans Raporu" in text
+    assert "yatırım tavsiyesi değildir" in text
+    assert (tmp_path / "data" / "signals" / "signal-outcomes.jsonl").is_file()
+
+
+def test_model_review_monthly_writes_report(tmp_path, monkeypatch):
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+
+    result = main(["model-review", "--monthly"])
+
+    assert result == 0
+    report = tmp_path / "data" / "reports" / "model-review-monthly.md"
+    text = report.read_text(encoding="utf-8")
+    assert "# Aylık Strateji Gözden Geçirme Raporu" in text
+    assert "otomatik uygulanmamıştır" in text or "Canlı strateji değişikliği yoktur" in text

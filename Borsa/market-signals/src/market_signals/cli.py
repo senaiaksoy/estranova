@@ -6,14 +6,18 @@ from datetime import datetime
 from pathlib import Path
 
 from .alerts import alert
+from .backtest import BacktestResult, run_backtest
 from .models import PricePoint
+from .model_review_reports import render_monthly_model_review, render_weekly_model_review
+from .optimizer import allowed_threshold_candidates, choose_candidate_strategy
+from .outcome_tracker import append_outcome_records, measure_outcomes
 from .portfolio import default_user_holdings, project_pending_ylb_to_yay, value_holdings
 from .portfolio_reports import render_portfolio_report
 from .prices import PriceSnapshot, StaticPriceProvider
 from .reports import write_daily_report
 from .sample_data import default_market_data
 from .settings import PROJECT_ROOT
-from .signal_journal import append_signal_journal
+from .signal_journal import append_signal_journal, journal_path, read_signal_journal
 from .storage import append_signal_log, ensure_runtime_dirs
 from .strategy import calculate_signal_features, generate_signal
 
@@ -35,6 +39,11 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("backtest")
     subparsers.add_parser("report")
     subparsers.add_parser("portfolio-report")
+
+    model_review_parser = subparsers.add_parser("model-review")
+    model_review_group = model_review_parser.add_mutually_exclusive_group(required=True)
+    model_review_group.add_argument("--weekly", action="store_true")
+    model_review_group.add_argument("--monthly", action="store_true")
 
     alert_parser = subparsers.add_parser("alert")
     alert_parser.add_argument("--send", action="store_true")
@@ -151,6 +160,50 @@ def run_portfolio_report(root: Path) -> int:
     return 0
 
 
+def run_weekly_model_review(root: Path) -> int:
+    ensure_runtime_dirs(root)
+    entries = read_signal_journal(journal_path(root))
+    outcomes = measure_outcomes(entries, default_market_data(), horizons=(1, 5))
+    append_outcome_records(root, outcomes)
+    report = render_weekly_model_review(outcomes, generated_signal_count=len(entries))
+    path = root / "data" / "reports" / "model-review-weekly.md"
+    path.write_text(report, encoding="utf-8")
+    print(f"Haftalık model raporu yazıldı: {path}")
+    return 0
+
+
+def run_monthly_model_review(root: Path) -> int:
+    ensure_runtime_dirs(root)
+    data = default_market_data()
+    active = run_backtest(
+        "tefas_yay",
+        "TEFAS YAY",
+        data["tefas_yay"],
+        strategy_name="active",
+        horizon_days=20,
+        step_days=10,
+    )
+    candidates = [
+        BacktestResult(
+            instrument_id=active.instrument_id,
+            strategy_name=template.name,
+            signal_count=active.signal_count,
+            label_counts=dict(active.label_counts),
+            median_return_pct=active.median_return_pct,
+            average_return_pct=active.average_return_pct,
+            worst_drawdown_pct=active.worst_drawdown_pct,
+            best_runup_pct=active.best_runup_pct,
+        )
+        for template in allowed_threshold_candidates()[:3]
+    ]
+    recommendation = choose_candidate_strategy(active, candidates)
+    report = render_monthly_model_review(active, candidates, recommendation)
+    path = root / "data" / "reports" / "model-review-monthly.md"
+    path.write_text(report, encoding="utf-8")
+    print(f"Aylık model raporu yazıldı: {path}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -164,6 +217,11 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if alert(root, generate_all_signals(), dry_run=not args.send) else 1
     if args.command == "portfolio-report":
         return run_portfolio_report(root)
+    if args.command == "model-review":
+        if args.weekly:
+            return run_weekly_model_review(root)
+        if args.monthly:
+            return run_monthly_model_review(root)
 
     ensure_runtime_dirs(root)
     print(f"{args.command}: command placeholder completed for MVP")
