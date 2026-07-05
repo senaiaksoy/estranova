@@ -60,3 +60,17 @@ def test_alert_defaults_to_dry_run(tmp_path, monkeypatch):
     assert "Borsa sinyal özeti" in alert_text
     assert "Bu mesaj yatırım tavsiyesi değildir" in alert_text
     assert "Manuel kontrol" in alert_text
+
+
+def test_portfolio_report_command_writes_report(tmp_path, monkeypatch):
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+
+    result = main(["portfolio-report"])
+
+    assert result == 0
+    reports = list((tmp_path / "data" / "reports").glob("portfolio-*.md"))
+    assert reports
+    text = reports[0].read_text(encoding="utf-8")
+    assert "# Portföy Karar-Destek Raporu" in text
+    assert "Fiziki altın" in text
+    assert "Z30EA" in text
