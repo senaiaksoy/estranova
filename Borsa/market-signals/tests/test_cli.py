@@ -55,6 +55,20 @@ def test_run_daily_writes_report(tmp_path, monkeypatch):
     assert "Manuel kontrol penceresi" in report_text
 
 
+def test_run_daily_writes_signal_journal_with_features(tmp_path, monkeypatch):
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+
+    result = main(["run-daily"])
+
+    assert result == 0
+    journal_path = tmp_path / "data" / "signals" / "signal-journal.jsonl"
+    text = journal_path.read_text(encoding="utf-8")
+    assert '"strategy_name": "conservative_daily_trend"' in text
+    assert '"strategy_version": "2026-07-05"' in text
+    assert '"source_status": "sample"' in text
+    assert '"sma50"' in text
+
+
 def test_alert_defaults_to_dry_run(tmp_path, monkeypatch):
     monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
     monkeypatch.setenv("MARKET_SIGNALS_ALERTS_ENABLED", "true")

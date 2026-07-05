@@ -12,8 +12,9 @@ from .prices import PriceSnapshot, StaticPriceProvider
 from .reports import write_daily_report
 from .sample_data import default_market_data
 from .settings import PROJECT_ROOT
+from .signal_journal import append_signal_journal
 from .storage import append_signal_log, ensure_runtime_dirs
-from .strategy import generate_signal
+from .strategy import calculate_signal_features, generate_signal
 
 
 def runtime_root() -> Path:
@@ -53,11 +54,32 @@ def generate_all_signals():
     ]
 
 
+def signal_symbol_map() -> dict[str, str]:
+    return {
+        "tefas_yay": "YAY",
+        "gold_try": "GRAM_ALTIN",
+        "silver_try": "XAG_TRY",
+    }
+
+
 def run_daily(root: Path) -> int:
     ensure_runtime_dirs(root)
+    market_data = default_market_data()
     signals = generate_all_signals()
+    symbols = signal_symbol_map()
+    run_id = f"daily-{datetime.now().strftime('%Y%m%d')}"
     for signal in signals:
         append_signal_log(root, signal)
+        append_signal_journal(
+            root,
+            signal,
+            run_id=run_id,
+            symbol=symbols[signal.instrument_id],
+            features=calculate_signal_features(market_data[signal.instrument_id]),
+            strategy_name="conservative_daily_trend",
+            strategy_version="2026-07-05",
+            source_status="sample",
+        )
     report_path = write_daily_report(root, signals)
     alert(root, signals, dry_run=True)
     print(f"Günlük rapor yazıldı: {report_path}")

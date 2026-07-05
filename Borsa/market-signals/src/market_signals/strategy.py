@@ -4,6 +4,21 @@ from .indicators import drawdown_pct, ema, realized_volatility, rsi, sma
 from .models import Confidence, PricePoint, Signal, SignalLabel
 
 
+def calculate_signal_features(points: list[PricePoint]) -> dict[str, float]:
+    closes = [point.close for point in points]
+    if len(closes) < 200:
+        return {}
+
+    return {
+        "sma50": sma(closes, 50),
+        "sma200": sma(closes, 200),
+        "ema50": ema(closes, 50),
+        "rsi14": rsi(closes, 14),
+        "drawdown120": drawdown_pct(closes[-120:]),
+        "volatility20": realized_volatility(closes, 20),
+    }
+
+
 def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) -> Signal:
     if not points:
         raise ValueError("generate_signal requires at least one price point")
