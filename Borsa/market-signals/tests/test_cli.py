@@ -2,6 +2,7 @@ import json
 import math
 
 import market_signals.__main__ as module_main
+import pytest
 from datetime import datetime as real_datetime
 
 from market_signals.cli import build_parser
@@ -24,6 +25,16 @@ def test_cli_has_model_review_command():
     help_text = parser.format_help()
 
     assert "model-review" in help_text
+
+
+def test_model_review_requires_weekly_or_monthly_flag():
+    with pytest.raises(SystemExit):
+        main(["model-review"])
+
+
+def test_model_review_rejects_weekly_and_monthly_together():
+    with pytest.raises(SystemExit):
+        main(["model-review", "--weekly", "--monthly"])
 
 
 def test_module_entrypoint_is_importable():
@@ -191,6 +202,20 @@ def test_model_review_weekly_writes_report(tmp_path, monkeypatch):
     assert (tmp_path / "data" / "signals" / "signal-outcomes.jsonl").is_file()
 
 
+def test_model_review_weekly_is_idempotent_for_same_journal(tmp_path, monkeypatch):
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+
+    assert main(["run-daily"]) == 0
+    assert main(["model-review", "--weekly"]) == 0
+    outcome_path = tmp_path / "data" / "signals" / "signal-outcomes.jsonl"
+    first_line_count = len(outcome_path.read_text(encoding="utf-8").splitlines())
+
+    assert main(["model-review", "--weekly"]) == 0
+
+    second_line_count = len(outcome_path.read_text(encoding="utf-8").splitlines())
+    assert second_line_count == first_line_count
+
+
 def test_model_review_monthly_writes_report(tmp_path, monkeypatch):
     monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
 
@@ -200,4 +225,6 @@ def test_model_review_monthly_writes_report(tmp_path, monkeypatch):
     report = tmp_path / "data" / "reports" / "model-review-monthly.md"
     text = report.read_text(encoding="utf-8")
     assert "# Aylık Strateji Gözden Geçirme Raporu" in text
-    assert "otomatik uygulanmamıştır" in text or "Canlı strateji değişikliği yoktur" in text
+    assert "Veri yeterli olmadığı için aday strateji üretilemedi." in text
+    assert "Canlı strateji değişikliği yoktur" in text
+    assert "otomatik uygulanmamıştır" not in text
