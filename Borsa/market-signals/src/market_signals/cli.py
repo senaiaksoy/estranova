@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 from .alerts import alert
-from .portfolio import default_user_holdings, value_holdings
+from .portfolio import default_user_holdings, project_pending_ylb_to_yay, value_holdings
 from .portfolio_reports import render_portfolio_report
 from .prices import PriceSnapshot, StaticPriceProvider
 from .reports import write_daily_report
@@ -103,8 +103,10 @@ def run_portfolio_report(root: Path) -> int:
     )
     holdings = default_user_holdings()
     valuation = value_holdings(holdings, provider)
+    projected_holdings = project_pending_ylb_to_yay(holdings, provider)
+    projected_valuation = value_holdings(projected_holdings, provider)
     missing_symbols = [row.holding.symbol for row in valuation.rows if row.missing_price]
-    report = render_portfolio_report(valuation, missing_symbols)
+    report = render_portfolio_report(valuation, missing_symbols, projected_valuation)
     timestamp = now.strftime("%Y%m%d-%H%M%S-%f")
     path = root / "data" / "reports" / f"portfolio-{timestamp}.md"
     path.write_text(report, encoding="utf-8")

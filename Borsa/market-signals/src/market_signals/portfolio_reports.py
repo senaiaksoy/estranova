@@ -53,7 +53,9 @@ def _price_source_notes(valuation: PortfolioValuation) -> list[str]:
 
 
 def render_portfolio_report(
-    valuation: PortfolioValuation, missing_symbols: list[str] | None = None
+    valuation: PortfolioValuation,
+    missing_symbols: list[str] | None = None,
+    projected_valuation: PortfolioValuation | None = None,
 ) -> str:
     missing_symbols = _missing_symbols(valuation, missing_symbols)
     price_source_notes = _price_source_notes(valuation)
@@ -72,8 +74,9 @@ def render_portfolio_report(
         "",
         f"- Değerlenmiş toplam: {_money(valuation.total_value)}",
         f"- Fiziki altın miktarı: {physical_gold_quantity:.4f} gram",
+        "- Ağırlıklar yalnızca fiyatı doğrulanan satırlar içinde hesaplanır; fiyatı eksik varlıklar toplam ağırlığa dahil edilmez.",
         "",
-        "| Varlık | Adet/Gram | Fiyat | Değer | Ağırlık | Not |",
+        "| Varlık | Adet/Gram | Fiyat | Değer | Ağırlık (fiyatı doğrulananlar içinde) | Not |",
         "| --- | ---: | ---: | ---: | ---: | --- |",
     ]
 
@@ -98,6 +101,37 @@ def render_portfolio_report(
             "Bu bölüm bir emir talimatı, otomatik işlem önerisi veya kişisel yatırım tavsiyesi değildir; "
             "yalnızca manuel karar öncesi kontrol amacı taşır.",
             "",
+        ]
+    )
+
+    if projected_valuation is not None:
+        lines.extend(
+            [
+                "### YLB -> YAY Sonrası Projeksiyon",
+                "",
+                f"- Projeksiyon toplamı: {_money(projected_valuation.total_value)}",
+                "",
+                "| Varlık | Adet/Gram | Fiyat | Değer | Ağırlık (fiyatı doğrulananlar içinde) | Not |",
+                "| --- | ---: | ---: | ---: | ---: | --- |",
+            ]
+        )
+        for row in projected_valuation.rows:
+            if row.holding.id not in {"yay", "ylb"}:
+                continue
+            price = row.price.price if row.price is not None else None
+            lines.append(
+                "| "
+                f"{_table_text(row.holding.label)} | "
+                f"{row.holding.quantity:.4f} | "
+                f"{_money(price)} | "
+                f"{_money(row.market_value)} | "
+                f"{row.weight_pct:.2f}% | "
+                f"{_table_text(_row_note(row))} |"
+            )
+        lines.append("")
+
+    lines.extend(
+        [
             "## Veri Uyarıları",
             "",
         ]
