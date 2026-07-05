@@ -117,7 +117,14 @@ def render_monthly_model_review(
             "## Değerlendirme",
             "",
             f"- Model gerekçesi: {_table_text(recommendation.reason)}",
-            "- Öneri otomatik uygulanmamıştır; canlı stratejiye alınmadan önce manuel onay gerekir.",
         ]
     )
+    if recommendation.selected is None:
+        lines.append(
+            "- Canlı strateji değişikliği yoktur; bu rapor yalnızca model gözden geçirme notudur."
+        )
+    else:
+        lines.append(
+            "- Öneri otomatik uygulanmamıştır; canlı stratejiye alınmadan önce manuel onay gerekir."
+        )
     return "\n".join(lines)
