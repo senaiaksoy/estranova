@@ -8,7 +8,7 @@ from .models import Signal
 
 
 def ensure_runtime_dirs(root: Path) -> None:
-    for relative in ("data/raw", "data/reports", "data/logs"):
+    for relative in ("data/raw", "data/reports", "data/logs", "data/signals"):
         (root / relative).mkdir(parents=True, exist_ok=True)
 
 

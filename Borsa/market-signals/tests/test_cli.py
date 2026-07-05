@@ -33,6 +33,12 @@ def test_runtime_dirs_are_created(tmp_path):
     assert (tmp_path / "data" / "logs").is_dir()
 
 
+def test_runtime_dirs_include_signal_journal_dir(tmp_path):
+    ensure_runtime_dirs(tmp_path)
+
+    assert (tmp_path / "data" / "signals").is_dir()
+
+
 def test_run_daily_writes_report(tmp_path, monkeypatch):
     monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
 
