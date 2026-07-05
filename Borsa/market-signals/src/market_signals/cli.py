@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .alerts import alert
 from .backtest import BacktestResult, run_backtest
+from .dashboard import dashboard_auth_from_env, serve_dashboard
 from .models import PricePoint
 from .model_review_reports import render_monthly_model_review, render_weekly_model_review
 from .optimizer import allowed_threshold_candidates, choose_candidate_strategy
@@ -52,6 +53,10 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("backtest")
     subparsers.add_parser("report")
     subparsers.add_parser("portfolio-report")
+
+    dashboard_parser = subparsers.add_parser("dashboard")
+    dashboard_parser.add_argument("--host", default="127.0.0.1")
+    dashboard_parser.add_argument("--port", type=int, default=8765)
 
     model_review_parser = subparsers.add_parser("model-review")
     model_review_group = model_review_parser.add_mutually_exclusive_group(required=True)
@@ -342,6 +347,14 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if alert(root, generate_all_signals(), dry_run=not args.send) else 1
     if args.command == "portfolio-report":
         return run_portfolio_report(root)
+    if args.command == "dashboard":
+        serve_dashboard(
+            root,
+            host=args.host,
+            port=args.port,
+            auth=dashboard_auth_from_env(),
+        )
+        return 0
     if args.command == "model-review":
         if args.weekly:
             return run_weekly_model_review(root)
