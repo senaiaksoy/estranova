@@ -98,7 +98,7 @@ def choose_candidate_strategy(
             rejection_reasons.append(reason)
 
     if not viable:
-        detail = "; ".join(rejection_reasons)
+        detail = "; ".join(_unique_texts(rejection_reasons))
         reason = "Veri yetersiz olabilir veya adaylar dengeli değil: dengeli bir aday bulunamadı."
         if detail:
             reason = f"{reason} {detail}"
@@ -129,8 +129,19 @@ def choose_candidate_strategy(
         f"sinyal sayısı {selected_result.signal_count}."
     )
     if rejection_reasons:
-        reason += " Elenen adaylar dengeli değil: " + "; ".join(rejection_reasons)
+        reason += " Elenen adaylar dengeli değil: " + "; ".join(_unique_texts(rejection_reasons))
     return StrategyRecommendation(selected=selected, reason=reason)
+
+
+def _unique_texts(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    unique: list[str] = []
+    for value in values:
+        if value in seen:
+            continue
+        unique.append(value)
+        seen.add(value)
+    return unique
 
 
 def _candidate_rejection_reason(

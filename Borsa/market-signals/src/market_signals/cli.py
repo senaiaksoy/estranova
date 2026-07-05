@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import statistics
 from datetime import datetime
 from pathlib import Path
 
@@ -24,7 +25,14 @@ from .sample_data import default_market_data
 from .settings import PROJECT_ROOT
 from .signal_journal import append_signal_journal, journal_path, read_signal_journal
 from .storage import append_signal_log, ensure_runtime_dirs
-from .strategy import calculate_signal_features, generate_signal
+from .strategy import SignalThresholds, calculate_signal_features, generate_signal
+
+
+MONTHLY_BACKTEST_LABELS = {
+    "tefas_yay": "TEFAS YAY",
+    "gold_try": "Altın TRY",
+    "silver_try": "Gümüş TRY",
+}
 
 
 def runtime_root() -> Path:
@@ -98,7 +106,19 @@ def run_daily(root: Path) -> int:
     ]
     for signal in signals:
         append_signal_log(root, signal)
+    existing_journal_keys = {
+        _journal_entry_identity(entry)
+        for entry in read_signal_journal(journal_path(root))
+    }
     for signal, symbol, features in journal_payloads:
+        journal_key = (
+            run_id,
+            signal.instrument_id,
+            "conservative_daily_trend",
+            "2026-07-05",
+        )
+        if journal_key in existing_journal_keys:
+            continue
         append_signal_journal(
             root,
             signal,
@@ -109,6 +129,7 @@ def run_daily(root: Path) -> int:
             strategy_version="2026-07-05",
             source_status="sample",
         )
+        existing_journal_keys.add(journal_key)
     report_path = write_daily_report(root, signals)
     alert(root, signals, dry_run=True)
     print(f"Günlük rapor yazıldı: {report_path}")
@@ -179,7 +200,10 @@ def run_weekly_model_review(root: Path) -> int:
         new_outcomes.append(outcome)
         seen_keys.add(key)
     append_outcome_records(root, new_outcomes)
-    report = render_weekly_model_review(outcomes, generated_signal_count=len(entries))
+    report = render_weekly_model_review(
+        new_outcomes,
+        generated_signal_count=len({_journal_entry_identity(entry) for entry in entries}),
+    )
     path = root / "data" / "reports" / "model-review-weekly.md"
     path.write_text(report, encoding="utf-8")
     print(f"Haftalık model raporu yazıldı: {path}")
@@ -198,29 +222,26 @@ def _outcome_identity(record):
     )
 
 
+def _journal_entry_identity(entry):
+    return (
+        entry.run_id,
+        entry.instrument_id,
+        entry.strategy_name,
+        entry.strategy_version,
+    )
+
+
 def run_monthly_model_review(root: Path) -> int:
     ensure_runtime_dirs(root)
     data = default_market_data()
-    active = run_backtest(
-        "tefas_yay",
-        "TEFAS YAY",
-        data["tefas_yay"],
-        strategy_name="active",
-        horizon_days=20,
-        step_days=3,
-    )
+    active = _run_monthly_strategy_backtest(data, "active")
     candidates = [
-        BacktestResult(
-            instrument_id=active.instrument_id,
-            strategy_name=template.name,
-            signal_count=active.signal_count,
-            label_counts=dict(active.label_counts),
-            median_return_pct=active.median_return_pct + 0.8,
-            average_return_pct=active.average_return_pct + 0.8,
-            worst_drawdown_pct=active.worst_drawdown_pct,
-            best_runup_pct=active.best_runup_pct,
+        _run_monthly_strategy_backtest(
+            data,
+            template.name,
+            thresholds=SignalThresholds(**template.parameters),
         )
-        for template in allowed_threshold_candidates()[:3]
+        for template in allowed_threshold_candidates()
     ]
     recommendation = choose_candidate_strategy(active, candidates)
     report = render_monthly_model_review(active, candidates, recommendation)
@@ -228,6 +249,84 @@ def run_monthly_model_review(root: Path) -> int:
     path.write_text(report, encoding="utf-8")
     print(f"Aylık model raporu yazıldı: {path}")
     return 0
+
+
+def _run_monthly_strategy_backtest(
+    data: dict[str, list[PricePoint]],
+    strategy_name: str,
+    *,
+    thresholds: SignalThresholds | None = None,
+) -> BacktestResult:
+    missing = [instrument_id for instrument_id in MONTHLY_BACKTEST_LABELS if instrument_id not in data]
+    if missing:
+        raise ValueError(f"monthly backtest data missing instruments: {', '.join(missing)}")
+
+    results = [
+        run_backtest(
+            instrument_id,
+            label,
+            data[instrument_id],
+            strategy_name=strategy_name,
+            horizon_days=20,
+            step_days=3,
+            thresholds=thresholds,
+        )
+        for instrument_id, label in MONTHLY_BACKTEST_LABELS.items()
+    ]
+    return _combine_backtest_results(strategy_name, results)
+
+
+def _combine_backtest_results(
+    strategy_name: str,
+    results: list[BacktestResult],
+) -> BacktestResult:
+    if not results:
+        return BacktestResult("multi_asset", strategy_name, 0, {}, 0.0, 0.0, 0.0, 0.0)
+
+    label_counts: dict[str, int] = {}
+    for result in results:
+        for label, count in result.label_counts.items():
+            label_counts[label] = label_counts.get(label, 0) + count
+
+    signal_count = sum(result.signal_count for result in results)
+    measured = [result for result in results if result.signal_count > 0]
+    instrument_id = "+".join(MONTHLY_BACKTEST_LABELS)
+    if not measured:
+        return BacktestResult(
+            instrument_id,
+            strategy_name,
+            0,
+            label_counts,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+        )
+
+    return_samples = [
+        value
+        for result in measured
+        for value in (result.return_samples_pct or [])
+    ]
+    average_return = sum(
+        result.average_return_pct * result.signal_count for result in measured
+    ) / signal_count
+
+    return BacktestResult(
+        instrument_id=instrument_id,
+        strategy_name=strategy_name,
+        signal_count=signal_count,
+        label_counts=label_counts,
+        median_return_pct=round(statistics.median(return_samples), 4)
+        if return_samples
+        else round(statistics.mean(result.median_return_pct for result in measured), 4),
+        average_return_pct=round(average_return, 4),
+        worst_drawdown_pct=round(
+            max(result.worst_drawdown_pct for result in measured), 4
+        ),
+        best_runup_pct=round(max(result.best_runup_pct for result in measured), 4),
+        return_samples_pct=return_samples,
+    )
 
 
 def main(argv: list[str] | None = None) -> int:

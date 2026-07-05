@@ -6,7 +6,7 @@ from dataclasses import asdict, dataclass
 from typing import Any
 
 from .models import PricePoint, SignalLabel
-from .strategy import generate_signal
+from .strategy import SignalThresholds, generate_signal
 
 
 @dataclass(frozen=True)
@@ -19,12 +19,14 @@ class BacktestResult:
     average_return_pct: float
     worst_drawdown_pct: float
     best_runup_pct: float
+    return_samples_pct: list[float] | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
     @classmethod
     def from_dict(cls, payload: dict[str, Any]) -> BacktestResult:
+        return_samples = payload.get("return_samples_pct")
         return cls(
             instrument_id=str(payload["instrument_id"]),
             strategy_name=str(payload["strategy_name"]),
@@ -37,6 +39,10 @@ class BacktestResult:
             average_return_pct=float(payload["average_return_pct"]),
             worst_drawdown_pct=float(payload["worst_drawdown_pct"]),
             best_runup_pct=float(payload["best_runup_pct"]),
+            return_samples_pct=[
+                float(value)
+                for value in return_samples
+            ] if return_samples is not None else None,
         )
 
 
@@ -48,6 +54,7 @@ def run_backtest(
     strategy_name: str,
     horizon_days: int = 20,
     step_days: int = 5,
+    thresholds: SignalThresholds | None = None,
 ) -> BacktestResult:
     if horizon_days <= 0 or step_days <= 0:
         raise ValueError("horizon_days and step_days must be positive")
@@ -66,7 +73,7 @@ def run_backtest(
 
     for signal_index in range(200, len(points) - horizon_days, step_days):
         window = points[: signal_index + 1]
-        signal = generate_signal(instrument_id, label, window)
+        signal = generate_signal(instrument_id, label, window, thresholds=thresholds)
         label_counts[signal.label.value] += 1
 
         future = points[signal_index + 1 : signal_index + horizon_days + 1]
@@ -90,6 +97,7 @@ def run_backtest(
         average_return_pct=round(statistics.mean(returns), 4),
         worst_drawdown_pct=round(max(drawdowns), 4),
         best_runup_pct=round(max(runups), 4),
+        return_samples_pct=list(returns),
     )
 
 

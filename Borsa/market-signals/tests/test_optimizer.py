@@ -155,6 +155,26 @@ def test_tiny_median_gain_rejected():
     assert "dengeli" in recommendation.reason.lower()
 
 
+def test_repeated_rejection_reasons_are_collapsed():
+    active = _result("active", signal_count=20, median_return_pct=1.0, worst_drawdown_pct=0.4)
+    candidate_a = _result(
+        "candidate-buymin40-rsi70-reduce75",
+        signal_count=16,
+        median_return_pct=1.0,
+        worst_drawdown_pct=0.4,
+    )
+    candidate_b = _result(
+        "candidate-buymin45-rsi72-reduce78",
+        signal_count=16,
+        median_return_pct=1.0,
+        worst_drawdown_pct=0.4,
+    )
+
+    recommendation = choose_candidate_strategy(active, [candidate_a, candidate_b])
+
+    assert recommendation.reason.count("medyan kazanç") == 1
+
+
 def test_tie_break_order_prefers_higher_median_then_lower_drawdown_then_signal_count():
     active = _result("active", signal_count=20, median_return_pct=1.0, worst_drawdown_pct=0.6)
     higher_median_worse_drawdown = _result(

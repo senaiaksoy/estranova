@@ -4,6 +4,7 @@ import pytest
 
 from market_signals.backtest import BacktestResult, run_backtest
 from market_signals.models import PricePoint
+from market_signals.strategy import SignalThresholds
 
 
 def test_run_backtest_produces_deterministic_label_counts():
@@ -35,6 +36,29 @@ def test_run_backtest_measures_return_after_signal_date():
 
     assert result.signal_count == 5
     assert result.median_return_pct == round((303.0 / 302.0 - 1.0) * 100, 4)
+
+
+def test_run_backtest_applies_candidate_signal_thresholds():
+    default_result = run_backtest(
+        "tefas_yay",
+        "TEFAS YAY",
+        _steady_series(count=230),
+        strategy_name="active",
+        horizon_days=5,
+        step_days=5,
+    )
+    candidate_result = run_backtest(
+        "tefas_yay",
+        "TEFAS YAY",
+        _steady_series(count=230),
+        strategy_name="candidate-buymin90-rsi110-reduce120",
+        horizon_days=5,
+        step_days=5,
+        thresholds=SignalThresholds(rsi_buy_min=90.0, rsi_buy_max=110.0, rsi_reduce=120.0),
+    )
+
+    assert default_result.label_counts.get("AL", 0) == 0
+    assert candidate_result.label_counts["AL"] > 0
 
 
 def test_backtest_result_round_trips_dict():

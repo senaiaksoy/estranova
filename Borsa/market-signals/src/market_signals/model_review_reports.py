@@ -82,6 +82,7 @@ def render_monthly_model_review(
         "",
         "## Aktif strateji",
         "",
+        f"- Kapsam: {_table_text(active_result.instrument_id)}",
         f"- Strateji adı: {_table_text(active_result.strategy_name)}",
         f"- Sinyal sayısı: {active_result.signal_count}",
         f"- Medyan getiri: {_pct(active_result.median_return_pct)}",

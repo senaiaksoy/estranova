@@ -5,7 +5,9 @@ import market_signals.__main__ as module_main
 import pytest
 from datetime import datetime as real_datetime
 
+from market_signals.backtest import BacktestResult
 from market_signals.cli import build_parser
+from market_signals.cli import _combine_backtest_results
 from market_signals.cli import main
 from market_signals.sample_data import default_market_data as sample_default_market_data
 from market_signals.storage import ensure_runtime_dirs
@@ -114,6 +116,33 @@ def test_run_daily_writes_signal_journal_with_features(tmp_path, monkeypatch):
         assert all(math.isfinite(value) for value in row["features"].values())
 
 
+def test_run_daily_is_idempotent_for_same_run_id(tmp_path, monkeypatch):
+    class FixedDateTime(real_datetime):
+        @classmethod
+        def now(cls):
+            return cls(2026, 7, 5, 9, 30)
+
+    first_data = sample_default_market_data()
+    second_data = sample_default_market_data()
+    second_data["tefas_yay"] = [
+        point.__class__(point.date, point.close + 10.0)
+        for point in second_data["tefas_yay"]
+    ]
+
+    calls = [first_data, second_data]
+
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+    monkeypatch.setattr("market_signals.cli.datetime", FixedDateTime)
+    monkeypatch.setattr("market_signals.cli.default_market_data", lambda: calls.pop(0))
+
+    assert main(["run-daily"]) == 0
+    assert main(["run-daily"]) == 0
+
+    journal_path = tmp_path / "data" / "signals" / "signal-journal.jsonl"
+    rows = journal_path.read_text(encoding="utf-8").splitlines()
+    assert len(rows) == 3
+
+
 def test_run_daily_uses_single_market_snapshot_for_signals_and_features(
     tmp_path, monkeypatch
 ):
@@ -215,6 +244,9 @@ def test_model_review_weekly_is_idempotent_for_same_journal(tmp_path, monkeypatc
     second_line_count = len(outcome_path.read_text(encoding="utf-8").splitlines())
     assert second_line_count == first_line_count
 
+    report = tmp_path / "data" / "reports" / "model-review-weekly.md"
+    assert "- Ölçülebilen geçmiş sinyal sonucu: 0" in report.read_text(encoding="utf-8")
+
 
 def test_model_review_weekly_dedupes_duplicate_entries_in_current_journal(
     tmp_path, monkeypatch
@@ -239,7 +271,87 @@ def test_model_review_monthly_writes_report(tmp_path, monkeypatch):
     report = tmp_path / "data" / "reports" / "model-review-monthly.md"
     text = report.read_text(encoding="utf-8")
     assert "# Aylık Strateji Gözden Geçirme Raporu" in text
+    assert "tefas_yay+gold_try+silver_try" in text
     assert "Aday strateji |" in text
     assert "candidate-buymin" in text
-    assert "otomatik uygulanmamıştır" in text
-    assert "Canlı strateji değişikliği yoktur" not in text
+    assert "Canlı strateji değişikliği yoktur" in text
+
+
+def test_model_review_monthly_backtests_candidates_with_thresholds(
+    tmp_path, monkeypatch
+):
+    calls = []
+
+    def fake_run_backtest(
+        instrument_id,
+        label,
+        points,
+        *,
+        strategy_name,
+        horizon_days,
+        step_days,
+        thresholds=None,
+    ):
+        calls.append((instrument_id, strategy_name, thresholds))
+        median = 2.0 if thresholds is None else 3.0
+        return BacktestResult(
+            instrument_id,
+            strategy_name,
+            20,
+            {"AL": 20},
+            median,
+            median,
+            1.0,
+            5.0,
+        )
+
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+    monkeypatch.setattr("market_signals.cli.run_backtest", fake_run_backtest)
+
+    assert main(["model-review", "--monthly"]) == 0
+
+    active_calls = [call for call in calls if call[2] is None]
+    candidate_calls = [call for call in calls if call[2] is not None]
+    assert {call[0] for call in active_calls} == {"tefas_yay", "gold_try", "silver_try"}
+    assert {call[0] for call in candidate_calls} == {"tefas_yay", "gold_try", "silver_try"}
+    assert candidate_calls
+
+
+def test_model_review_monthly_rejects_missing_monthly_asset(tmp_path, monkeypatch):
+    data = sample_default_market_data()
+    del data["silver_try"]
+
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+    monkeypatch.setattr("market_signals.cli.default_market_data", lambda: data)
+
+    with pytest.raises(ValueError, match="silver_try"):
+        main(["model-review", "--monthly"])
+
+
+def test_combine_backtest_results_uses_real_combined_median():
+    tefas = BacktestResult(
+        "tefas_yay",
+        "candidate",
+        3,
+        {"AL": 3},
+        100.0,
+        40.0,
+        2.0,
+        120.0,
+        return_samples_pct=[10.0, 10.0, 100.0],
+    )
+    gold = BacktestResult(
+        "gold_try",
+        "candidate",
+        1,
+        {"BEKLE": 1},
+        -10.0,
+        -10.0,
+        1.0,
+        5.0,
+        return_samples_pct=[-10.0],
+    )
+
+    combined = _combine_backtest_results("candidate", [tefas, gold])
+
+    assert combined.median_return_pct == 10.0

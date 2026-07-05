@@ -2,8 +2,24 @@ from __future__ import annotations
 
 import math
 
+from dataclasses import dataclass
+
 from .indicators import drawdown_pct, ema, realized_volatility, rsi, sma
 from .models import Confidence, PricePoint, Signal, SignalLabel
+
+
+@dataclass(frozen=True)
+class SignalThresholds:
+    rsi_buy_min: float = 45.0
+    rsi_buy_max: float = 75.0
+    rsi_reduce: float = 78.0
+
+    def __post_init__(self) -> None:
+        values = (self.rsi_buy_min, self.rsi_buy_max, self.rsi_reduce)
+        if any(not math.isfinite(value) for value in values):
+            raise ValueError("signal thresholds must be finite")
+        if self.rsi_buy_min > self.rsi_buy_max:
+            raise ValueError("rsi_buy_min must be less than or equal to rsi_buy_max")
 
 
 def calculate_signal_features(points: list[PricePoint]) -> dict[str, float]:
@@ -28,9 +44,15 @@ def calculate_signal_features(points: list[PricePoint]) -> dict[str, float]:
     return features
 
 
-def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) -> Signal:
+def generate_signal(
+    instrument_id: str,
+    label: str,
+    points: list[PricePoint],
+    thresholds: SignalThresholds | None = None,
+) -> Signal:
     if not points:
         raise ValueError("generate_signal requires at least one price point")
+    thresholds = thresholds or SignalThresholds()
 
     closes = [point.close for point in points]
     latest = closes[-1]
@@ -63,7 +85,7 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
             asof,
         )
 
-    if latest > sma_50 and sma_50 > sma_200 and rsi_14 >= 78:
+    if latest > sma_50 and sma_50 > sma_200 and rsi_14 >= thresholds.rsi_reduce:
         return Signal(
             instrument_id,
             SignalLabel.BEKLE,
@@ -73,7 +95,7 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
             asof,
         )
 
-    if latest < sma_50 or rsi_14 >= 78:
+    if latest < sma_50 or rsi_14 >= thresholds.rsi_reduce:
         return Signal(
             instrument_id,
             SignalLabel.AZALT,
@@ -83,7 +105,11 @@ def generate_signal(instrument_id: str, label: str, points: list[PricePoint]) ->
             asof,
         )
 
-    if latest > sma_50 and sma_50 > sma_200 and 45 <= rsi_14 <= 75:
+    if (
+        latest > sma_50
+        and sma_50 > sma_200
+        and thresholds.rsi_buy_min <= rsi_14 <= thresholds.rsi_buy_max
+    ):
         return Signal(
             instrument_id,
             SignalLabel.AL,
