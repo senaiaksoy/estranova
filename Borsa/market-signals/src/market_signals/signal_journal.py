@@ -103,7 +103,9 @@ def append_signal_journal(
         source_status=source_status,
     )
     with path.open("a", encoding="utf-8") as handle:
-        handle.write(json.dumps(entry.to_dict(), ensure_ascii=False) + "\n")
+        handle.write(
+            json.dumps(entry.to_dict(), ensure_ascii=False, allow_nan=False) + "\n"
+        )
     return path
 
 

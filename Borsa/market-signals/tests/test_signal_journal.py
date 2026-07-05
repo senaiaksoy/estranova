@@ -1,3 +1,7 @@
+import math
+
+import pytest
+
 from market_signals.models import Confidence, Signal, SignalLabel
 from market_signals.signal_journal import (
     SignalJournalEntry,
@@ -40,6 +44,20 @@ def test_append_signal_journal_writes_jsonl_entry(tmp_path):
     assert entries[0].confidence == "Orta"
     assert entries[0].features["rsi14"] == 55.0
     assert entries[0].source_status == "sample"
+
+
+def test_append_signal_journal_rejects_non_finite_feature_values(tmp_path):
+    with pytest.raises(ValueError):
+        append_signal_journal(
+            tmp_path,
+            make_signal(),
+            run_id="daily-20260705",
+            symbol="YAY",
+            features={"rsi14": math.nan},
+            strategy_name="conservative_daily_trend",
+            strategy_version="2026-07-05",
+            source_status="sample",
+        )
 
 
 def test_read_signal_journal_skips_broken_lines(tmp_path):
