@@ -2,9 +2,13 @@ from __future__ import annotations
 
 import argparse
 import os
+from datetime import datetime
 from pathlib import Path
 
 from .alerts import alert
+from .portfolio import default_user_holdings, project_pending_ylb_to_yay, value_holdings
+from .portfolio_reports import render_portfolio_report
+from .prices import PriceSnapshot, StaticPriceProvider
 from .reports import write_daily_report
 from .sample_data import default_market_data
 from .settings import PROJECT_ROOT
@@ -28,6 +32,7 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("generate-signals")
     subparsers.add_parser("backtest")
     subparsers.add_parser("report")
+    subparsers.add_parser("portfolio-report")
 
     alert_parser = subparsers.add_parser("alert")
     alert_parser.add_argument("--send", action="store_true")
@@ -81,6 +86,34 @@ def run_weekly_audit(root: Path) -> int:
     return 0
 
 
+def run_portfolio_report(root: Path) -> int:
+    ensure_runtime_dirs(root)
+    now = datetime.now()
+    asof = now.strftime("%Y-%m-%d")
+    provider = StaticPriceProvider(
+        {
+            "YAY": PriceSnapshot("YAY", 1867.83, "TRY", "fallback", asof, stale=True),
+            "YFT": PriceSnapshot("YFT", 1.0, "TRY", "fallback", asof, stale=True),
+            "YLB": PriceSnapshot("YLB", 1.0, "TRY", "fallback", asof, stale=True),
+            "GMSTR": PriceSnapshot("GMSTR", 569.50, "TRY", "fallback", asof, stale=True),
+            "GRAM_ALTIN": PriceSnapshot(
+                "GRAM_ALTIN", 6277.78, "TRY", "fallback", asof, stale=True
+            ),
+        }
+    )
+    holdings = default_user_holdings()
+    valuation = value_holdings(holdings, provider)
+    projected_holdings = project_pending_ylb_to_yay(holdings, provider)
+    projected_valuation = value_holdings(projected_holdings, provider)
+    missing_symbols = [row.holding.symbol for row in valuation.rows if row.missing_price]
+    report = render_portfolio_report(valuation, missing_symbols, projected_valuation)
+    timestamp = now.strftime("%Y%m%d-%H%M%S-%f")
+    path = root / "data" / "reports" / f"portfolio-{timestamp}.md"
+    path.write_text(report, encoding="utf-8")
+    print(f"Portföy raporu yazıldı: {path}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -92,6 +125,8 @@ def main(argv: list[str] | None = None) -> int:
         return run_weekly_audit(root)
     if args.command == "alert":
         return 0 if alert(root, generate_all_signals(), dry_run=not args.send) else 1
+    if args.command == "portfolio-report":
+        return run_portfolio_report(root)
 
     ensure_runtime_dirs(root)
     print(f"{args.command}: command placeholder completed for MVP")
