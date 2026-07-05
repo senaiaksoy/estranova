@@ -7,7 +7,6 @@ from market_signals.optimizer import (
     MIN_SIGNAL_COUNT,
     CandidateStrategy,
     StrategyRecommendation,
-    _parameters_from_name,
     allowed_threshold_candidates,
     choose_candidate_strategy,
 )
@@ -34,9 +33,9 @@ def _result(
 
 def test_candidate_strategy_roundtrip():
     candidate = CandidateStrategy(
-        name="candidate-rsi72-reduce78",
+        name="candidate-buymin45-rsi72-reduce78",
         parameters={"rsi_buy_min": 45.0, "rsi_buy_max": 72.0, "rsi_reduce": 78.0},
-        result=_result("candidate-rsi72-reduce78", signal_count=14, median_return_pct=1.4),
+        result=_result("candidate-buymin45-rsi72-reduce78", signal_count=14, median_return_pct=1.4),
     )
 
     assert CandidateStrategy.from_dict(candidate.to_dict()) == candidate
@@ -46,6 +45,7 @@ def test_allowed_threshold_candidates_exact_discrete_set():
     candidates = allowed_threshold_candidates()
 
     assert len(candidates) == 27
+    assert len({candidate.name for candidate in candidates}) == 27
     assert all(isinstance(candidate.result, BacktestResult) for candidate in candidates)
     assert {
         candidate.parameters["rsi_buy_min"] for candidate in candidates
@@ -57,26 +57,65 @@ def test_allowed_threshold_candidates_exact_discrete_set():
         candidate.parameters["rsi_reduce"] for candidate in candidates
     } == {75.0, 78.0, 80.0}
     assert all(
-        candidate.name == f"candidate-rsi{int(candidate.parameters['rsi_buy_max'])}-reduce{int(candidate.parameters['rsi_reduce'])}"
+        candidate.name
+        == (
+            f"candidate-buymin{int(candidate.parameters['rsi_buy_min'])}"
+            f"-rsi{int(candidate.parameters['rsi_buy_max'])}"
+            f"-reduce{int(candidate.parameters['rsi_reduce'])}"
+        )
         for candidate in candidates
     )
 
 
 def test_candidate_insufficient_signal_count_rejected():
     active = _result("active", signal_count=20, median_return_pct=1.5, worst_drawdown_pct=0.4)
-    candidate = _result("candidate-rsi72-reduce78", signal_count=MIN_SIGNAL_COUNT - 1, median_return_pct=2.0, worst_drawdown_pct=0.3)
+    candidate = _result(
+        "candidate-buymin45-rsi72-reduce78",
+        signal_count=MIN_SIGNAL_COUNT - 1,
+        median_return_pct=2.0,
+        worst_drawdown_pct=0.3,
+    )
 
     recommendation = choose_candidate_strategy(active, [candidate])
 
     assert recommendation.selected is None
-    assert "Veri yetersiz" in recommendation.reason
+    assert recommendation.reason.startswith("Veri yetersiz olabilir veya adaylar dengeli değil:")
     assert str(MIN_SIGNAL_COUNT) in recommendation.reason
+
+
+def test_selected_candidate_parameters_are_parsed_from_strategy_name():
+    active = _result("active", signal_count=20, median_return_pct=1.0, worst_drawdown_pct=1.2)
+    selected = _result(
+        "candidate-buymin45-rsi72-reduce78",
+        signal_count=18,
+        median_return_pct=1.9,
+        worst_drawdown_pct=0.7,
+    )
+
+    recommendation = choose_candidate_strategy(active, [selected])
+
+    assert recommendation.selected is not None
+    assert recommendation.selected.parameters == {
+        "rsi_buy_min": 45.0,
+        "rsi_buy_max": 72.0,
+        "rsi_reduce": 78.0,
+    }
 
 
 def test_safer_improvement_selected_and_reason_includes_manuel_onay():
     active = _result("active", signal_count=20, median_return_pct=1.0, worst_drawdown_pct=1.2)
-    safer = _result("candidate-rsi72-reduce78", signal_count=18, median_return_pct=1.9, worst_drawdown_pct=0.7)
-    riskier = _result("candidate-rsi75-reduce80", signal_count=18, median_return_pct=1.7, worst_drawdown_pct=1.0)
+    safer = _result(
+        "candidate-buymin45-rsi72-reduce78",
+        signal_count=18,
+        median_return_pct=1.9,
+        worst_drawdown_pct=0.7,
+    )
+    riskier = _result(
+        "candidate-buymin50-rsi75-reduce80",
+        signal_count=18,
+        median_return_pct=1.7,
+        worst_drawdown_pct=1.0,
+    )
 
     recommendation = choose_candidate_strategy(active, [riskier, safer])
 
@@ -89,7 +128,7 @@ def test_safer_improvement_selected_and_reason_includes_manuel_onay():
 def test_extra_drawdown_rejected_and_reason_mentions_dengeli():
     active = _result("active", signal_count=20, median_return_pct=1.0, worst_drawdown_pct=0.4)
     candidate = _result(
-        "candidate-rsi72-reduce78",
+        "candidate-buymin45-rsi72-reduce78",
         signal_count=16,
         median_return_pct=1.8,
         worst_drawdown_pct=MAX_EXTRA_DRAWDOWN_PCT + active.worst_drawdown_pct + 0.01,
@@ -104,7 +143,7 @@ def test_extra_drawdown_rejected_and_reason_mentions_dengeli():
 def test_tiny_median_gain_rejected():
     active = _result("active", signal_count=20, median_return_pct=1.0, worst_drawdown_pct=0.4)
     candidate = _result(
-        "candidate-rsi72-reduce78",
+        "candidate-buymin45-rsi72-reduce78",
         signal_count=16,
         median_return_pct=active.median_return_pct + MIN_MEDIAN_IMPROVEMENT_PCT - 0.01,
         worst_drawdown_pct=0.5,
@@ -119,36 +158,35 @@ def test_tiny_median_gain_rejected():
 def test_tie_break_order_prefers_higher_median_then_lower_drawdown_then_signal_count():
     active = _result("active", signal_count=20, median_return_pct=1.0, worst_drawdown_pct=0.6)
     higher_median_worse_drawdown = _result(
-        "candidate-rsi72-reduce78",
+        "candidate-buymin45-rsi72-reduce78",
         signal_count=14,
         median_return_pct=2.0,
         worst_drawdown_pct=0.9,
     )
     lower_median_better_drawdown = _result(
-        "candidate-rsi75-reduce80",
+        "candidate-buymin50-rsi75-reduce80",
         signal_count=18,
         median_return_pct=1.8,
         worst_drawdown_pct=0.3,
     )
     equal_median_lower_drawdown = _result(
-        "candidate-rsi72-reduce78",
+        "candidate-buymin45-rsi72-reduce78",
         signal_count=12,
         median_return_pct=2.0,
         worst_drawdown_pct=0.7,
     )
     equal_median_higher_drawdown = _result(
-        "candidate-rsi75-reduce80",
+        "candidate-buymin50-rsi75-reduce80",
         signal_count=22,
         median_return_pct=2.0,
         worst_drawdown_pct=0.8,
     )
     equal_median_equal_drawdown_more_signals = _result(
-        "candidate-rsi72-reduce78",
+        "candidate-buymin45-rsi72-reduce78",
         signal_count=24,
         median_return_pct=2.0,
         worst_drawdown_pct=0.7,
     )
-
     recommendation = choose_candidate_strategy(
         active,
         [lower_median_better_drawdown, higher_median_worse_drawdown],
@@ -169,9 +207,3 @@ def test_tie_break_order_prefers_higher_median_then_lower_drawdown_then_signal_c
     )
     assert recommendation.selected is not None
     assert recommendation.selected.result == equal_median_equal_drawdown_more_signals
-
-
-def test_parameters_from_name_supports_candidate_rsi_dash_and_compact_forms():
-    assert _parameters_from_name("candidate-rsi-72")["rsi_buy_max"] == 72.0
-    assert _parameters_from_name("candidate-rsi72-reduce78")["rsi_buy_max"] == 72.0
-

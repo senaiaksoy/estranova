@@ -64,7 +64,11 @@ def allowed_threshold_candidates() -> list[CandidateStrategy]:
         (70.0, 72.0, 75.0),
         (75.0, 78.0, 80.0),
     ):
-        name = f"candidate-rsi{int(rsi_buy_max)}-reduce{int(rsi_reduce)}"
+        name = (
+            f"candidate-buymin{int(rsi_buy_min)}"
+            f"-rsi{int(rsi_buy_max)}"
+            f"-reduce{int(rsi_reduce)}"
+        )
         candidates.append(
             CandidateStrategy(
                 name=name,
@@ -95,7 +99,7 @@ def choose_candidate_strategy(
 
     if not viable:
         detail = "; ".join(rejection_reasons)
-        reason = "Veri yetersiz: dengeli bir aday bulunamadı."
+        reason = "Veri yetersiz olabilir veya adaylar dengeli değil: dengeli bir aday bulunamadı."
         if detail:
             reason = f"{reason} {detail}"
         return StrategyRecommendation(
@@ -156,19 +160,16 @@ def _candidate_rejection_reason(
 
 def _parameters_from_name(name: str) -> dict[str, float]:
     parameters: dict[str, float] = {}
-    buy_max_match = re.search(r"candidate-rsi-?(?P<buy_max>\d+(?:\.\d+)?)", name)
+    buy_min_match = re.search(r"buymin(?P<buy_min>\d+(?:\.\d+)?)", name)
+    if buy_min_match:
+        parameters["rsi_buy_min"] = float(buy_min_match.group("buy_min"))
+
+    buy_max_match = re.search(r"candidate-(?:buymin\d+(?:\.\d+)?-)?rsi(?P<buy_max>\d+(?:\.\d+)?)", name)
     if buy_max_match:
         parameters["rsi_buy_max"] = float(buy_max_match.group("buy_max"))
 
     reduce_match = re.search(r"reduce(?P<reduce>\d+(?:\.\d+)?)", name)
     if reduce_match:
         parameters["rsi_reduce"] = float(reduce_match.group("reduce"))
-
-    buy_min_match = re.search(r"buymin(?P<buy_min>\d+(?:\.\d+)?)", name)
-    if buy_min_match:
-        parameters["rsi_buy_min"] = float(buy_min_match.group("buy_min"))
-
-    if "rsi_buy_min" not in parameters and "rsi_buy_max" in parameters:
-        parameters["rsi_buy_min"] = parameters["rsi_buy_max"] - 5.0
 
     return parameters
