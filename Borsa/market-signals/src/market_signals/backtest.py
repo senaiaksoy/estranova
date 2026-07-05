@@ -64,12 +64,12 @@ def run_backtest(
     drawdowns: list[float] = []
     runups: list[float] = []
 
-    for end_index in range(200, len(points) - horizon_days, step_days):
-        window = points[:end_index]
+    for signal_index in range(200, len(points) - horizon_days, step_days):
+        window = points[: signal_index + 1]
         signal = generate_signal(instrument_id, label, window)
         label_counts[signal.label.value] += 1
 
-        future = points[end_index : end_index + horizon_days + 1]
+        future = points[signal_index + 1 : signal_index + horizon_days + 1]
         entry = float(window[-1].close)
         exit_close = float(future[-1].close)
         future_closes = [float(point.close) for point in future]
