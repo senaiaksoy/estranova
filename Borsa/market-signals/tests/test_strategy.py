@@ -1,6 +1,8 @@
+import math
+
 import pytest
 
-from market_signals.models import Confidence, SignalLabel
+from market_signals.models import Confidence, PricePoint, SignalLabel
 from market_signals.sample_data import rising_series, falling_series
 from market_signals.strategy import calculate_signal_features, generate_signal
 
@@ -28,7 +30,15 @@ def test_generate_signal_rejects_empty_points():
 def test_calculate_signal_features_returns_core_indicators():
     features = calculate_signal_features(rising_series())
 
-    assert set(features) == {"sma50", "sma200", "ema50", "rsi14", "drawdown120", "volatility20"}
+    assert set(features) == {
+        "sma50",
+        "sma200",
+        "ema50",
+        "rsi14",
+        "drawdown120",
+        "volatility20",
+    }
+    assert all(math.isfinite(value) for value in features.values())
     assert features["sma50"] > features["sma200"]
     assert features["rsi14"] >= 0
     assert features["volatility20"] >= 0
@@ -38,3 +48,12 @@ def test_calculate_signal_features_returns_empty_for_short_history():
     features = calculate_signal_features(rising_series()[:20])
 
     assert features == {}
+
+
+def test_calculate_signal_features_rejects_non_finite_values():
+    points = rising_series()
+    point = points[50]
+    points[50] = PricePoint(point.date, float("nan"))
+
+    with pytest.raises(ValueError, match="finite close values"):
+        calculate_signal_features(points)

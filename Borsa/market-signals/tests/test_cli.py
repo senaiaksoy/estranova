@@ -1,8 +1,12 @@
+import json
+import math
+
 import market_signals.__main__ as module_main
 from datetime import datetime as real_datetime
 
 from market_signals.cli import build_parser
 from market_signals.cli import main
+from market_signals.sample_data import default_market_data as sample_default_market_data
 from market_signals.storage import ensure_runtime_dirs
 
 
@@ -62,11 +66,54 @@ def test_run_daily_writes_signal_journal_with_features(tmp_path, monkeypatch):
 
     assert result == 0
     journal_path = tmp_path / "data" / "signals" / "signal-journal.jsonl"
-    text = journal_path.read_text(encoding="utf-8")
-    assert '"strategy_name": "conservative_daily_trend"' in text
-    assert '"strategy_version": "2026-07-05"' in text
-    assert '"source_status": "sample"' in text
-    assert '"sma50"' in text
+    rows = [
+        json.loads(line)
+        for line in journal_path.read_text(encoding="utf-8").splitlines()
+    ]
+    expected_features = {
+        "sma50",
+        "sma200",
+        "ema50",
+        "rsi14",
+        "drawdown120",
+        "volatility20",
+    }
+
+    assert len(rows) == 3
+    assert {
+        row["instrument_id"]: row["symbol"]
+        for row in rows
+    } == {
+        "tefas_yay": "YAY",
+        "gold_try": "GRAM_ALTIN",
+        "silver_try": "XAG_TRY",
+    }
+    for row in rows:
+        assert row["strategy_name"] == "conservative_daily_trend"
+        assert row["strategy_version"] == "2026-07-05"
+        assert row["source_status"] == "sample"
+        assert set(row["features"]) == expected_features
+        assert all(math.isfinite(value) for value in row["features"].values())
+
+
+def test_run_daily_uses_single_market_snapshot_for_signals_and_features(
+    tmp_path, monkeypatch
+):
+    calls = 0
+
+    def counting_default_market_data():
+        nonlocal calls
+        calls += 1
+        return sample_default_market_data()
+
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+    monkeypatch.setattr(
+        "market_signals.cli.default_market_data",
+        counting_default_market_data,
+    )
+
+    assert main(["run-daily"]) == 0
+    assert calls == 1
 
 
 def test_alert_defaults_to_dry_run(tmp_path, monkeypatch):

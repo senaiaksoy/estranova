@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 from .alerts import alert
+from .models import PricePoint
 from .portfolio import default_user_holdings, project_pending_ylb_to_yay, value_holdings
 from .portfolio_reports import render_portfolio_report
 from .prices import PriceSnapshot, StaticPriceProvider
@@ -42,7 +43,12 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def generate_all_signals():
+def generate_all_signals(
+    market_data: dict[str, list[PricePoint]] | None = None,
+):
+    if market_data is None:
+        market_data = default_market_data()
+
     labels = {
         "tefas_yay": "TEFAS YAY",
         "gold_try": "Altın TRY",
@@ -50,7 +56,7 @@ def generate_all_signals():
     }
     return [
         generate_signal(instrument_id, labels[instrument_id], points)
-        for instrument_id, points in default_market_data().items()
+        for instrument_id, points in market_data.items()
     ]
 
 
@@ -65,17 +71,26 @@ def signal_symbol_map() -> dict[str, str]:
 def run_daily(root: Path) -> int:
     ensure_runtime_dirs(root)
     market_data = default_market_data()
-    signals = generate_all_signals()
+    signals = generate_all_signals(market_data)
     symbols = signal_symbol_map()
     run_id = f"daily-{datetime.now().strftime('%Y%m%d')}"
+    journal_payloads = [
+        (
+            signal,
+            symbols[signal.instrument_id],
+            calculate_signal_features(market_data[signal.instrument_id]),
+        )
+        for signal in signals
+    ]
     for signal in signals:
         append_signal_log(root, signal)
+    for signal, symbol, features in journal_payloads:
         append_signal_journal(
             root,
             signal,
             run_id=run_id,
-            symbol=symbols[signal.instrument_id],
-            features=calculate_signal_features(market_data[signal.instrument_id]),
+            symbol=symbol,
+            features=features,
             strategy_name="conservative_daily_trend",
             strategy_version="2026-07-05",
             source_status="sample",
