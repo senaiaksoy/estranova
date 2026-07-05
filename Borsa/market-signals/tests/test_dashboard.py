@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import base64
+from unittest.mock import MagicMock
 
 from market_signals.dashboard import (
     DashboardAuth,
     collect_dashboard_snapshot,
     is_authorized,
     render_dashboard_html,
+    _handler_factory,
 )
 
 
@@ -59,3 +61,10 @@ def test_dashboard_auth_disabled_without_password():
     auth = DashboardAuth(username="kc", password="")
 
     assert is_authorized(None, auth)
+
+
+def test_handler_factory_defines_do_post_routes():
+    auth = DashboardAuth(username="estranova", password="pw")
+    handler_cls = _handler_factory(MagicMock(), auth)
+    assert hasattr(handler_cls, "do_POST")
+    assert hasattr(handler_cls, "do_GET")

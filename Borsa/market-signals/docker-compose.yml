@@ -1,0 +1,11 @@
+services:
+  market-signals:
+    build: .
+    container_name: market-signals
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    restart: unless-stopped

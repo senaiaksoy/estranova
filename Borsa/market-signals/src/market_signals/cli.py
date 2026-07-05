@@ -67,6 +67,15 @@ def build_parser() -> argparse.ArgumentParser:
     alert_parser.add_argument("--send", action="store_true")
     alert_parser.add_argument("--channel", default="telegram", choices=["telegram"])
 
+    subparsers.add_parser("tax-report")
+
+    telegram_parser = subparsers.add_parser("telegram-bot")
+    telegram_parser.add_argument(
+        "--once",
+        action="store_true",
+        help="Bir sonraki güncellemeyi işle ve çık (test modu)",
+    )
+
     return parser
 
 
@@ -137,6 +146,7 @@ def run_daily(root: Path) -> int:
         existing_journal_keys.add(journal_key)
     report_path = write_daily_report(root, signals)
     alert(root, signals, dry_run=True)
+    run_portfolio_report(root)
     print(f"Günlük rapor yazıldı: {report_path}")
     return 0
 
@@ -167,7 +177,52 @@ def run_portfolio_report(root: Path) -> int:
     ensure_runtime_dirs(root)
     now = datetime.now()
     asof = now.strftime("%Y-%m-%d")
-    provider = StaticPriceProvider(
+    from .prices import LivePriceProvider
+    from .database import get_holdings, save_holding, save_portfolio_snapshot
+
+    db_file = root / "data" / "signals" / "signals.db"
+
+    # Load holdings from SQLite
+    holdings_dict = get_holdings(db_file)
+    if not holdings_dict:
+        # Bootstrap database with default holdings
+        for holding in default_user_holdings():
+            save_holding(db_file, holding.symbol, holding.quantity)
+        save_holding(db_file, "USD", 51640.0)
+        save_holding(db_file, "EUR", 129550.0)
+        holdings_dict = get_holdings(db_file)
+    else:
+        if "USD" not in holdings_dict:
+            save_holding(db_file, "USD", 51640.0)
+            holdings_dict["USD"] = 51640.0
+        if "EUR" not in holdings_dict:
+            save_holding(db_file, "EUR", 129550.0)
+            holdings_dict["EUR"] = 129550.0
+
+    from dataclasses import replace
+    from .portfolio import Holding
+    default_holdings = default_user_holdings()
+    holdings = []
+    seen_symbols = set()
+    for h in default_holdings:
+        qty = holdings_dict.get(h.symbol, h.quantity)
+        holdings.append(replace(h, quantity=qty))
+        seen_symbols.add(h.symbol)
+
+    for symbol, qty in holdings_dict.items():
+        if symbol not in seen_symbols:
+            holdings.append(
+                Holding(
+                    id=symbol.lower(),
+                    symbol=symbol,
+                    label=symbol,
+                    quantity=qty,
+                    asset_class="other",
+                    role="other"
+                )
+            )
+
+    static_fallback = StaticPriceProvider(
         {
             "YAY": PriceSnapshot("YAY", 1867.83, "TRY", "fallback", asof, stale=True),
             "YFT": PriceSnapshot("YFT", 1.0, "TRY", "fallback", asof, stale=True),
@@ -176,14 +231,32 @@ def run_portfolio_report(root: Path) -> int:
             "GRAM_ALTIN": PriceSnapshot(
                 "GRAM_ALTIN", 6277.78, "TRY", "fallback", asof, stale=True
             ),
+            "USD": PriceSnapshot("USD", 33.33, "TRY", "fallback", asof, stale=True),
+            "EUR": PriceSnapshot("EUR", 36.50, "TRY", "fallback", asof, stale=True),
         }
     )
-    holdings = default_user_holdings()
+    provider = LivePriceProvider(fallback_provider=static_fallback)
     valuation = value_holdings(holdings, provider)
     projected_holdings = project_pending_ylb_to_yay(holdings, provider)
     projected_valuation = value_holdings(projected_holdings, provider)
+
+    # Save daily portfolio snapshot
+    usd_rate_snap = provider.get("USDTRY=X")
+    usd_rate = usd_rate_snap.price if usd_rate_snap else 33.33
+    total_val_try = valuation.total_value
+    total_val_usd = total_val_try / usd_rate if usd_rate > 0 else 0.0
+
+    save_portfolio_snapshot(
+        db_file,
+        asof,
+        holdings_dict,
+        total_val_try,
+        total_val_usd,
+        usd_rate
+    )
+
     missing_symbols = [row.holding.symbol for row in valuation.rows if row.missing_price]
-    report = render_portfolio_report(valuation, missing_symbols, projected_valuation)
+    report = render_portfolio_report(valuation, missing_symbols, projected_valuation, db_path=db_file)
     timestamp = now.strftime("%Y%m%d-%H%M%S-%f")
     path = root / "data" / "reports" / f"portfolio-{timestamp}.md"
     path.write_text(report, encoding="utf-8")
@@ -191,7 +264,60 @@ def run_portfolio_report(root: Path) -> int:
     return 0
 
 
+def run_tax_report(root: Path) -> int:
+    """Portföy vergi duyarlılık analizini hesaplar ve konsola/rapora yazar."""
+    ensure_runtime_dirs(root)
+    from .prices import PriceSnapshot
+    from .portfolio import default_user_holdings, value_holdings
+    from .taxes import calculate_portfolio_taxes, format_tax_summary_telegram, MEVZUAT_NOTU
+    from .database import get_db_connection
+
+    db_file = root / "data" / "signals" / "signals.db"
+    try:
+        snapshot = PriceSnapshot.fetch(root)
+    except Exception:
+        from .prices import StaticPriceProvider
+        from datetime import datetime
+        snapshot = StaticPriceProvider({})
+
+    holdings = default_user_holdings(db_file)
+    valuation = value_holdings(holdings, snapshot)
+    tax_result = calculate_portfolio_taxes(db_file, valuation.rows)
+
+    # Konsola yazdır
+    usd_rate = snapshot.prices.get("usd_try", 0.0) if hasattr(snapshot, "prices") else 0.0
+    print(format_tax_summary_telegram(tax_result, usd_rate))
+    print()
+    print(MEVZUAT_NOTU)
+
+    # Dosyaya kaydet
+    from datetime import datetime
+    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+    path = root / "data" / "reports" / f"tax-report-{ts}.txt"
+    path.write_text(format_tax_summary_telegram(tax_result, usd_rate), encoding="utf-8")
+    print(f"\nVergi raporu yazıldı: {path}")
+    return 0
+
+
+def run_telegram_bot(root: Path) -> int:
+    """İnteraktif Telegram botunu başlatır (long-polling)."""
+    import os
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    chat_id = os.getenv("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        print("Hata: TELEGRAM_BOT_TOKEN ve TELEGRAM_CHAT_ID ortam değişkenleri gereklidir.")
+        return 1
+    from .telegram_bot import run_bot
+    print("Telegram botu başlatılıyor…  Durdurmak için Ctrl+C")
+    try:
+        run_bot(token=token, allowed_chat_id=chat_id, root=root)
+    except KeyboardInterrupt:
+        print("\nBot durduruldu.")
+    return 0
+
+
 def run_weekly_model_review(root: Path) -> int:
+
     ensure_runtime_dirs(root)
     entries = read_signal_journal(journal_path(root))
     outcomes = measure_outcomes(entries, default_market_data(), horizons=(1, 5))
@@ -347,6 +473,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if alert(root, generate_all_signals(), dry_run=not args.send) else 1
     if args.command == "portfolio-report":
         return run_portfolio_report(root)
+    if args.command == "tax-report":
+        return run_tax_report(root)
+    if args.command == "telegram-bot":
+        return run_telegram_bot(root)
     if args.command == "dashboard":
         serve_dashboard(
             root,
