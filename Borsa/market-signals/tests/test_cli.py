@@ -29,6 +29,13 @@ def test_cli_has_model_review_command():
     assert "model-review" in help_text
 
 
+def test_cli_has_dashboard_command():
+    parser = build_parser()
+    help_text = parser.format_help()
+
+    assert "dashboard" in help_text
+
+
 def test_model_review_requires_weekly_or_monthly_flag():
     with pytest.raises(SystemExit):
         main(["model-review"])
