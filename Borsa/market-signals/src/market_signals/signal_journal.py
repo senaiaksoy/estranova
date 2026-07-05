@@ -106,10 +106,24 @@ def append_signal_journal(
         handle.write(
             json.dumps(entry.to_dict(), ensure_ascii=False, allow_nan=False) + "\n"
         )
+    try:
+        from .database import save_signal_journal_entry
+        db_file = root / "data" / "signals" / "signals.db"
+        save_signal_journal_entry(db_file, entry)
+    except Exception:
+        pass
     return path
 
 
 def read_signal_journal(path: Path) -> list[SignalJournalEntry]:
+    db_file = path.parent / "signals.db"
+    if db_file.exists():
+        try:
+            from .database import read_signal_journal_entries
+            return read_signal_journal_entries(db_file)
+        except Exception:
+            pass
+
     if not path.exists():
         return []
 

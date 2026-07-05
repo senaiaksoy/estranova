@@ -141,10 +141,24 @@ def append_outcome_records(root: Path, records: list[OutcomeRecord]) -> Path:
             handle.write(
                 json.dumps(record.to_dict(), ensure_ascii=False, allow_nan=False) + "\n"
             )
+    try:
+        from .database import save_outcome_records
+        db_file = root / "data" / "signals" / "signals.db"
+        save_outcome_records(db_file, records)
+    except Exception:
+        pass
     return path
 
 
 def read_outcome_records(path: Path) -> list[OutcomeRecord]:
+    db_file = path.parent / "signals.db"
+    if db_file.exists():
+        try:
+            from .database import read_outcome_records as read_db_outcomes
+            return read_db_outcomes(db_file)
+        except Exception:
+            pass
+
     if not path.exists():
         return []
 

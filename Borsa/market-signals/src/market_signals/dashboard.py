@@ -3,10 +3,12 @@ from __future__ import annotations
 import base64
 import html
 import os
+import json
 from dataclasses import dataclass
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Callable
+from datetime import datetime
 
 
 REPORT_PATTERNS = {
@@ -55,6 +57,106 @@ def collect_dashboard_snapshot(root: Path) -> DashboardSnapshot:
 
 
 def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
+    db_file = snapshot.root / "data" / "signals" / "signals.db"
+
+    # 1. Fetch current holdings
+    from .database import get_holdings_detailed, get_cash_flows
+    detailed_holdings = get_holdings_detailed(db_file)
+    default_symbols = ["YAY", "YFT", "YLB", "GMSTR", "Z30EA", "GRAM_ALTIN", "USD", "EUR"]
+    for sym in default_symbols:
+        if sym not in detailed_holdings:
+            detailed_holdings[sym] = {"quantity": 0.0, "cost_price": 0.0}
+
+    # Calculate live valuation and taxes
+    from .prices import LivePriceProvider, StaticPriceProvider, PriceSnapshot
+    from .portfolio import value_holdings, Holding
+    from .cli import default_user_holdings
+    from .taxes import calculate_portfolio_taxes
+    from dataclasses import replace
+    
+    asof = datetime.now().strftime("%Y-%m-%d")
+    static_fallback = StaticPriceProvider({
+        "YAY": PriceSnapshot("YAY", 1867.83, "TRY", "fallback", asof, stale=True),
+        "YFT": PriceSnapshot("YFT", 1.0, "TRY", "fallback", asof, stale=True),
+        "YLB": PriceSnapshot("YLB", 1.0, "TRY", "fallback", asof, stale=True),
+        "GMSTR": PriceSnapshot("GMSTR", 569.50, "TRY", "fallback", asof, stale=True),
+        "GRAM_ALTIN": PriceSnapshot("GRAM_ALTIN", 6277.78, "TRY", "fallback", asof, stale=True),
+        "USD": PriceSnapshot("USD", 33.33, "TRY", "fallback", asof, stale=True),
+        "EUR": PriceSnapshot("EUR", 36.50, "TRY", "fallback", asof, stale=True)
+    })
+    provider = LivePriceProvider(fallback_provider=static_fallback)
+    
+    holdings = []
+    seen_symbols = set()
+    for h in default_user_holdings():
+        meta = detailed_holdings.get(h.symbol, {})
+        qty = meta.get("quantity", h.quantity)
+        holdings.append(replace(h, quantity=qty))
+        seen_symbols.add(h.symbol)
+        
+    for symbol, meta in detailed_holdings.items():
+        if symbol not in seen_symbols:
+            holdings.append(
+                Holding(
+                    id=symbol.lower(),
+                    symbol=symbol,
+                    label=symbol,
+                    quantity=meta["quantity"],
+                    asset_class="other",
+                    role="other"
+                )
+            )
+            
+    valuation = value_holdings(holdings, provider)
+    tax_summary = calculate_portfolio_taxes(db_file, valuation.rows)
+    
+    total_tax_try = tax_summary["total_tax_try"]
+    total_net_try = tax_summary["total_net_try"]
+    
+    usd_rate_snap = provider.get("USDTRY=X")
+    usd_rate = usd_rate_snap.price if usd_rate_snap else 33.33
+    total_tax_usd = total_tax_try / usd_rate if usd_rate > 0 else 0.0
+    total_net_usd = total_net_try / usd_rate if usd_rate > 0 else 0.0
+
+    # Build holdings table rows for the HTML form
+    holdings_rows = []
+    for sym in default_symbols:
+        meta = detailed_holdings[sym]
+        qty = meta["quantity"]
+        cost_p = meta["cost_price"]
+        holdings_rows.append(f"""
+            <tr style="border-bottom: 1px solid var(--line);">
+                <td style="font-weight:600; padding:6px 0; font-size:0.85rem;">{sym}</td>
+                <td><input type="number" step="any" name="holding_qty_{sym.lower()}" value="{qty}" style="width:90%; padding:4px; font-family:inherit;"></td>
+                <td><input type="number" step="any" name="holding_cost_{sym.lower()}" value="{cost_p}" style="width:90%; padding:4px; font-family:inherit;"></td>
+            </tr>
+        """)
+    holdings_rows_html = "\n".join(holdings_rows)
+
+    # 2. Fetch performance summaries
+    from .performance import get_performance_summary
+    perf_try = get_performance_summary(db_file, currency="TRY")
+    perf_usd = get_performance_summary(db_file, currency="USD")
+
+    # 3. Fetch last 5 cash flows
+    flows = get_cash_flows(db_file)
+    last_flows = flows[-5:]
+
+    # Render cash flow table rows
+    cf_rows = []
+    for cf in reversed(last_flows):
+        type_class = "cf-type-deposit" if cf["flow_type"] == "DEPOSIT" else "cf-type-withdraw"
+        type_label = "Giriş" if cf["flow_type"] == "DEPOSIT" else "Çıkış"
+        cf_rows.append(f"""
+            <tr>
+                <td>{html.escape(cf["date"])}</td>
+                <td><span class="{type_class}">{type_label}</span></td>
+                <td>{cf["amount"]:,.2f} {html.escape(cf["currency"])}</td>
+                <td>{html.escape(cf["description"])}</td>
+            </tr>
+        """)
+    cf_table_body = "\n".join(cf_rows) if cf_rows else "<tr><td colspan='4' style='text-align:center; color:var(--muted);'>Kayıtlı nakit akışı bulunmuyor.</td></tr>"
+
     cards = [
         ("Günlük Sinyal", snapshot.latest_daily),
         ("Portföy Özeti", snapshot.latest_portfolio),
@@ -62,6 +164,15 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
         ("Aylık Strateji", snapshot.monthly_model),
     ]
     sections = "\n".join(_render_report_section(title, path) for title, path in cards)
+
+    # Format summary stats
+    twrr_try = perf_try["twrr_pct"]
+    twrr_usd = perf_usd["twrr_pct"]
+    try_class = "positive" if twrr_try >= 0 else "negative"
+    usd_class = "positive" if twrr_usd >= 0 else "negative"
+    try_sign = "+" if twrr_try >= 0 else ""
+    usd_sign = "+" if twrr_usd >= 0 else ""
+
     return f"""<!doctype html>
 <html lang="tr">
 <head>
@@ -115,6 +226,178 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
       padding: 10px 0 10px 14px;
       margin-top: 16px;
     }}
+    .actions {{
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }}
+    .btn {{
+      background: var(--pink);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }}
+    .btn:hover {{
+      background: #b0124a;
+    }}
+    .btn-gold {{
+      background: var(--gold);
+    }}
+    .btn-gold:hover {{
+      background: #9d7838;
+    }}
+    
+    /* Performance Section */
+    .chart-container {{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 22px;
+    }}
+    .chart-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }}
+    .chart-title {{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      margin: 0;
+    }}
+    .btn-group {{
+      display: flex;
+      gap: 6px;
+    }}
+    .btn-sm {{
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      background: #eee;
+      color: #333;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      font-weight: 600;
+    }}
+    .btn-sm.active {{
+      background: var(--pink);
+      color: white;
+      border-color: var(--pink);
+    }}
+    .btn-sm-gold.active {{
+      background: var(--gold);
+      color: white;
+      border-color: var(--gold);
+    }}
+    .summary-grid {{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }}
+    .summary-card {{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 12px;
+      text-align: center;
+    }}
+    .summary-val {{
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+    }}
+    .summary-val.positive {{
+      color: #2e7d32;
+    }}
+    .summary-val.negative {{
+      color: #c62828;
+    }}
+    .summary-lbl {{
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }}
+
+    /* Form Grid */
+    .form-grid {{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }}
+    .form-panel {{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }}
+    .form-panel h3 {{
+      margin-top: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }}
+    .form-row {{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }}
+    .form-group {{
+      margin-bottom: 12px;
+    }}
+    .form-group label {{
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }}
+    .form-group input, .form-group select {{
+      width: 100%;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      font-family: inherit;
+    }}
+    .table-container {{
+      overflow-x: auto;
+      margin-top: 12px;
+    }}
+    .cf-table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }}
+    .cf-table th, .cf-table td {{
+      padding: 6px 8px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }}
+    .cf-type-deposit {{
+      color: #2e7d32;
+      font-weight: 600;
+    }}
+    .cf-type-withdraw {{
+      color: #c62828;
+      font-weight: 600;
+    }}
+
     .grid {{
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -182,7 +465,8 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
     }}
     @media (max-width: 860px) {{
       main {{ width: min(100% - 20px, 1280px); padding-top: 20px; }}
-      .grid {{ grid-template-columns: 1fr; }}
+      .grid, .form-grid {{ grid-template-columns: 1fr; }}
+      .summary-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .section-head {{ display: block; }}
       .file {{ margin-top: 4px; white-space: normal; }}
     }}
@@ -194,11 +478,278 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
       <h1>Estranova Varlık Pusulası</h1>
       <div class="meta">Özel karar-destek ekranı · hedef adres: varlik.estranova.com · lokal servis: 127.0.0.1:8765</div>
       <div class="notice">Bu ekran yatırım tavsiyesi değildir; otomatik emir, portföy yönetimi veya kişisel al-sat talimatı üretmez. Cloudflare Access ve dashboard parolası arkasında kullanılmalıdır.</div>
+      <div class="actions">
+        <form action="/run-daily" method="post" style="display:inline;">
+          <button type="submit" class="btn">Günlük Sinyal Hesapla</button>
+        </form>
+        <form action="/run-portfolio" method="post" style="display:inline;">
+          <button type="submit" class="btn">Portföy Raporu Oluştur</button>
+        </form>
+        <form action="/run-weekly-model" method="post" style="display:inline;">
+          <button type="submit" class="btn btn-gold">Haftalık Modeli Değerlendir</button>
+        </form>
+        <form action="/run-monthly-model" method="post" style="display:inline;">
+          <button type="submit" class="btn btn-gold">Aylık Strateji Değerlendir</button>
+        </form>
+      </div>
     </header>
+
+    <!-- Performance Chart Section -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h3 class="chart-title">Zaman Ağırlıklı Portföy Getirisi (TWRR)</h3>
+        <div style="display:flex; gap:12px;">
+          <div class="btn-group">
+            <button id="btn-try" class="btn-sm active" onclick="setCurrency('TRY')">TRY</button>
+            <button id="btn-usd" class="btn-sm btn-sm-gold" onclick="setCurrency('USD')">USD</button>
+          </div>
+          <div class="btn-group">
+            <button class="btn-sm range-btn" onclick="filterRange(30)">1 Ay</button>
+            <button class="btn-sm range-btn" onclick="filterRange(90)">3 Ay</button>
+            <button class="btn-sm range-btn" onclick="filterRange(-1)">YTD</button>
+            <button class="btn-sm range-btn active" onclick="filterRange(0)">Tümü</button>
+          </div>
+        </div>
+      </div>
+      <div style="height:320px; position:relative;">
+        <canvas id="perfChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Summary Stats Grid -->
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-val">{try_sign}{twrr_try:,.2f}%</div>
+        <div class="summary-lbl">TRY Bazında TWRR</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val">{usd_sign}{twrr_usd:,.2f}%</div>
+        <div class="summary-lbl">USD Bazında TWRR</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val">{perf_try["net_cash_flow"]:,.2f} TRY</div>
+        <div class="summary-lbl">Net Nakit Akışı (TRY)</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val">{perf_try["end_value"]:,.2f} TRY</div>
+        <div class="summary-lbl" style="font-size:0.75rem; margin-top:2px; color:var(--pink); font-weight:600;">Net: {total_net_try:,.2f} TRY</div>
+        <div class="summary-lbl">Güncel Toplam Değer (TRY)</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val">{perf_usd["end_value"]:,.2f} USD</div>
+        <div class="summary-lbl" style="font-size:0.75rem; margin-top:2px; color:var(--gold); font-weight:600;">Net: {total_net_usd:,.2f} USD</div>
+        <div class="summary-lbl">Güncel Toplam Değer (USD)</div>
+      </div>
+    </div>
+
+    <!-- Form Inputs Section -->
+    <div class="form-grid">
+      <!-- Update Holdings Form -->
+      <div class="form-panel">
+        <h3>Varlık ve Ortalama Maliyet Yönetimi</h3>
+        <form action="/update-holdings" method="post">
+          <table style="width:100%; border-collapse:collapse; margin-bottom:12px; font-size:0.85rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--line); text-align:left;">
+                <th style="padding:4px 0;">Varlık</th>
+                <th style="padding:4px;">Miktar</th>
+                <th style="padding:4px;">Maliyet Fiyatı (TRY/USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {holdings_rows_html}
+            </tbody>
+          </table>
+          <button type="submit" class="btn" style="width:100%;">Miktarları ve Maliyetleri Kaydet</button>
+        </form>
+      </div>
+
+      <!-- Add Cash Flow Form -->
+      <div class="form-panel">
+        <h3>Nakit Akışı Ekle (Yatırma/Çekme)</h3>
+        <form action="/add-cash-flow" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="flow_type">İşlem Türü</label>
+              <select name="flow_type" id="flow_type">
+                <option value="DEPOSIT">Para Girişi</option>
+                <option value="WITHDRAW">Para Çıkışı</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="amount">Miktar</label>
+              <input type="number" step="any" name="amount" id="amount" required placeholder="Miktar">
+            </div>
+            <div class="form-group">
+              <label for="currency">Para Birimi</label>
+              <select name="currency" id="currency">
+                <option value="TRY">TRY</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="grid-column: span 2;">
+              <label for="description">Açıklama</label>
+              <input type="text" name="description" id="description" placeholder="Örn: Ek fon alımı için sermaye ekleme">
+            </div>
+            <div class="form-group">
+              <label for="date">Tarih</label>
+              <input type="date" name="date" id="date" value="{datetime.now().strftime("%Y-%m-%d")}">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%; margin-top:8px;">Nakit Akışı Kaydet</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Last Cash Flows Table -->
+    <div class="chart-container" style="margin-bottom:30px;">
+      <h3 class="chart-title" style="font-size:1.1rem; margin-bottom:10px;">Son Nakit Akışı Kayıtları</h3>
+      <div class="table-container">
+        <table class="cf-table">
+          <thead>
+            <tr>
+              <th>Tarih</th>
+              <th>Tür</th>
+              <th>Miktar</th>
+              <th>Açıklama</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cf_table_body}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="grid">
       {sections}
     </div>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const tryHistory = {json.dumps(perf_try["history"])};
+    const usdHistory = {json.dumps(perf_usd["history"])};
+    
+    let currentCurrency = 'TRY';
+    let chartInstance = null;
+    let currentDays = 0; // 0 = all
+    
+    function initChart() {{
+      const ctx = document.getElementById('perfChart').getContext('2d');
+      const rawData = currentCurrency === 'TRY' ? tryHistory : usdHistory;
+      
+      // Apply date range filter
+      let filteredData = rawData;
+      if (currentDays > 0) {{
+        const cutoff = new Date();
+        cutoff.setDate(cutoff.getDate() - currentDays);
+        filteredData = rawData.filter(item => new Date(item.date) >= cutoff);
+      }} else if (currentDays === -1) {{
+        // YTD
+        const cutoff = new Date(new Date().getFullYear(), 0, 1);
+        filteredData = rawData.filter(item => new Date(item.date) >= cutoff);
+      }}
+      
+      const labels = filteredData.map(item => item.date);
+      const values = filteredData.map(item => item.return_pct);
+      const portfolioValues = filteredData.map(item => item.value);
+      
+      if (chartInstance) {{
+        chartInstance.destroy();
+      }}
+      
+      // If no data, show empty chart
+      if (filteredData.length === 0) {{
+        chartInstance = new Chart(ctx, {{
+          type: 'line',
+          data: {{ labels: [], datasets: [] }},
+          options: {{
+            responsive: true,
+            maintainAspectRatio: false
+          }}
+        }});
+        return;
+      }}
+      
+      // Compounded returns from the start of the visible range
+      // Reset visible returns relative to the first visible point (first visible point = 0% return)
+      const baseReturn = filteredData[0].return_pct;
+      const relativeValues = values.map(v => {{
+        // TWRR compounding subtraction:
+        // (1 + v/100) / (1 + baseReturn/100) - 1
+        const vRatio = 1.0 + (v / 100.0);
+        const baseRatio = 1.0 + (baseReturn / 100.0);
+        return ((vRatio / baseRatio) - 1.0) * 100.0;
+      }});
+
+      chartInstance = new Chart(ctx, {{
+        type: 'line',
+        data: {{
+          labels: labels,
+          datasets: [{{
+            label: 'Zaman Ağırlıklı Getiri (%)',
+            data: relativeValues,
+            borderColor: currentCurrency === 'TRY' ? '#D81B60' : '#B8904A',
+            backgroundColor: currentCurrency === 'TRY' ? 'rgba(216, 27, 96, 0.03)' : 'rgba(184, 144, 74, 0.03)',
+            borderWidth: 2,
+            pointRadius: labels.length > 30 ? 1 : 4,
+            pointHoverRadius: 6,
+            tension: 0.1,
+            fill: true
+          }}]
+        }},
+        options: {{
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {{
+            tooltip: {{
+              callbacks: {{
+                label: function(context) {{
+                  const index = context.dataIndex;
+                  const pct = relativeValues[index].toFixed(2);
+                  const val = portfolioValues[index].toLocaleString('tr-TR', {{ minimumFractionDigits: 2, maximumFractionDigits: 2 }});
+                  return `Getiri: %${{pct >= 0 ? '+' : ''}}${{pct}} | Portföy Değeri: ${{val}} ${{currentCurrency}}`;
+                }}
+              }}
+            }}
+          }},
+          scales: {{
+            y: {{
+              ticks: {{
+                callback: function(value) {{
+                  return (value >= 0 ? '+' : '') + value + '%';
+                }}
+              }}
+            }}
+          }}
+        }}
+      }});
+    }}
+    
+    function setCurrency(curr) {{
+      currentCurrency = curr;
+      document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+      
+      const tryBtn = document.getElementById('btn-try');
+      const usdBtn = document.getElementById('btn-usd');
+      if (curr === 'TRY') {{
+        tryBtn.classList.add('active');
+        usdBtn.classList.remove('active');
+      }} else {{
+        usdBtn.classList.add('active');
+        tryBtn.classList.remove('active');
+      }}
+      initChart();
+    }}
+    
+    function filterRange(days) {{
+      currentDays = days;
+      initChart();
+    }}
+  </script>
 </body>
 </html>"""
 
@@ -225,6 +776,7 @@ def serve_dashboard(
 ) -> None:
     auth = auth or dashboard_auth_from_env()
     handler = _handler_factory(root, auth)
+    ThreadingHTTPServer.allow_reuse_address = True
     httpd = ThreadingHTTPServer((host, port), handler)
     print(f"Estranova Varlık Pusulası: http://{host}:{port}/")
     print("Cloudflare hedef adresi: https://varlik.estranova.com")
@@ -316,7 +868,7 @@ def _handler_factory(root: Path, auth: DashboardAuth) -> Callable[..., BaseHTTPR
                 return
             if not is_authorized(self.headers.get("Authorization"), auth):
                 self.send_response(401)
-                self.send_header("WWW-Authenticate", 'Basic realm="Estranova Varlık Pusulası"')
+                self.send_header("WWW-Authenticate", 'Basic realm="Estranova Varlik Pusulasi"')
                 self.end_headers()
                 return
             body = render_dashboard_html(collect_dashboard_snapshot(root)).encode("utf-8")
@@ -326,6 +878,88 @@ def _handler_factory(root: Path, auth: DashboardAuth) -> Callable[..., BaseHTTPR
             self.send_header("Content-Length", str(len(body)))
             self.end_headers()
             self.wfile.write(body)
+
+        def do_POST(self) -> None:
+            routes = {
+                "/run-daily",
+                "/run-portfolio",
+                "/run-weekly-model",
+                "/run-monthly-model",
+                "/update-holdings",
+                "/add-cash-flow"
+            }
+            if self.path not in routes:
+                self.send_error(404)
+                return
+            if not is_authorized(self.headers.get("Authorization"), auth):
+                self.send_response(401)
+                self.send_header("WWW-Authenticate", 'Basic realm="Estranova Varlik Pusulasi"')
+                self.end_headers()
+                return
+            try:
+                if self.path in {"/update-holdings", "/add-cash-flow"}:
+                    content_length = int(self.headers.get("Content-Length", 0))
+                    post_data = self.rfile.read(content_length).decode("utf-8")
+                    from urllib.parse import parse_qs
+                    params = parse_qs(post_data)
+                    db_file = root / "data" / "signals" / "signals.db"
+
+                    if self.path == "/update-holdings":
+                        from .database import save_holding
+                        symbols = set()
+                        for key in params.keys():
+                            if key.startswith("holding_qty_"):
+                                symbols.add(key[12:])
+                        
+                        for sym in symbols:
+                            qty_list = params.get(f"holding_qty_{sym}", ["0.0"])
+                            cost_list = params.get(f"holding_cost_{sym}", ["0.0"])
+                            try:
+                                qty = float(qty_list[0])
+                                cost_p = float(cost_list[0])
+                                save_holding(db_file, sym.upper(), qty, cost_p)
+                            except (ValueError, IndexError):
+                                pass
+                        # Trigger report to update snapshot and daily file
+                        from .cli import run_portfolio_report
+                        run_portfolio_report(root)
+
+                    elif self.path == "/add-cash-flow":
+                        from .database import add_cash_flow
+                        try:
+                            date = params.get("date", [""])[0]
+                            if not date:
+                                date = datetime.now().strftime("%Y-%m-%d")
+                            amount = float(params.get("amount", [0.0])[0])
+                            currency = params.get("currency", ["TRY"])[0].upper()
+                            flow_type = params.get("flow_type", ["DEPOSIT"])[0].upper()
+                            description = params.get("description", [""])[0]
+                            if amount > 0:
+                                add_cash_flow(db_file, date, amount, currency, flow_type, description)
+                        except (ValueError, IndexError):
+                            pass
+                else:
+                    if self.path == "/run-daily":
+                        from .cli import run_daily
+                        run_daily(root)
+                    elif self.path == "/run-portfolio":
+                        from .cli import run_portfolio_report
+                        run_portfolio_report(root)
+                    elif self.path == "/run-weekly-model":
+                        from .cli import run_weekly_model_review
+                        run_weekly_model_review(root)
+                    elif self.path == "/run-monthly-model":
+                        from .cli import run_monthly_model_review
+                        run_monthly_model_review(root)
+
+                self.send_response(303)
+                self.send_header("Location", "/")
+                self.end_headers()
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "text/plain; charset=utf-8")
+                self.end_headers()
+                self.wfile.write(f"Hata: {str(e)}".encode("utf-8"))
 
         def log_message(self, format: str, *args: object) -> None:
             return
