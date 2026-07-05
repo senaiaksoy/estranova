@@ -105,7 +105,7 @@ def run_portfolio_report(root: Path) -> int:
     valuation = value_holdings(holdings, provider)
     missing_symbols = [row.holding.symbol for row in valuation.rows if row.missing_price]
     report = render_portfolio_report(valuation, missing_symbols)
-    timestamp = now.strftime("%Y%m%d-%H%M%S")
+    timestamp = now.strftime("%Y%m%d-%H%M%S-%f")
     path = root / "data" / "reports" / f"portfolio-{timestamp}.md"
     path.write_text(report, encoding="utf-8")
     print(f"Portföy raporu yazıldı: {path}")

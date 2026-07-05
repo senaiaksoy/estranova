@@ -53,6 +53,35 @@ def test_portfolio_report_derives_missing_symbols_from_valuation_rows():
     assert "Fiyatı doğrulanamayan sembol yok." not in warnings_section
 
 
+def test_portfolio_report_discloses_stale_fallback_prices():
+    valuation = PortfolioValuation(
+        rows=[
+            ValuationRow(
+                holding=Holding(
+                    id="yay",
+                    symbol="YAY",
+                    label="YAY / YFAY1",
+                    quantity=2,
+                    asset_class="tefas_fund",
+                    role="growth",
+                ),
+                price=PriceSnapshot(
+                    "YAY", 100.0, "TRY", "fallback", "2026-07-04", stale=True
+                ),
+                market_value=200.0,
+                weight_pct=100.0,
+                missing_price=False,
+            )
+        ],
+        total_value=200.0,
+    )
+
+    report = render_portfolio_report(valuation)
+
+    assert "fallback" in report
+    assert "güncel fiyat doğrulaması gerekir" in report
+
+
 def test_portfolio_report_escapes_markdown_table_text_cells():
     holding = Holding(
         id="custom",

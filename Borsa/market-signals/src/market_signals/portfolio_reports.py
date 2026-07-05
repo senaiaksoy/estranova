@@ -38,10 +38,25 @@ def _missing_symbols(
     return deduped
 
 
+def _price_source_notes(valuation: PortfolioValuation) -> list[str]:
+    notes: list[str] = []
+    for row in valuation.rows:
+        if row.price is None:
+            continue
+        if row.price.stale or row.price.source == "fallback":
+            source = _table_text(row.price.source)
+            notes.append(
+                f"- {row.holding.symbol}: {source} fiyat kaynağı kullanıldı; "
+                "güncel fiyat doğrulaması gerekir."
+            )
+    return notes
+
+
 def render_portfolio_report(
     valuation: PortfolioValuation, missing_symbols: list[str] | None = None
 ) -> str:
     missing_symbols = _missing_symbols(valuation, missing_symbols)
+    price_source_notes = _price_source_notes(valuation)
     physical_gold_quantity = sum(
         row.holding.quantity
         for row in valuation.rows
@@ -92,6 +107,16 @@ def render_portfolio_report(
         lines.extend(f"- {symbol}: fiyat doğrulanamadı" for symbol in missing_symbols)
     else:
         lines.append("- Fiyatı doğrulanamayan sembol yok.")
+
+    if price_source_notes:
+        lines.extend(
+            [
+                "",
+                "## Fiyat Kaynağı Notu",
+                "",
+                *price_source_notes,
+            ]
+        )
 
     lines.extend(
         [

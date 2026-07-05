@@ -1,4 +1,6 @@
 import market_signals.__main__ as module_main
+from datetime import datetime as real_datetime
+
 from market_signals.cli import build_parser
 from market_signals.cli import main
 from market_signals.storage import ensure_runtime_dirs
@@ -74,3 +76,26 @@ def test_portfolio_report_command_writes_report(tmp_path, monkeypatch):
     assert "# Portföy Karar-Destek Raporu" in text
     assert "Fiziki altın" in text
     assert "Z30EA" in text
+
+
+def test_portfolio_report_command_does_not_overwrite_same_second_runs(
+    tmp_path, monkeypatch
+):
+    class FixedDatetime:
+        calls = [
+            real_datetime(2026, 7, 5, 9, 30, 15, 123456),
+            real_datetime(2026, 7, 5, 9, 30, 15, 654321),
+        ]
+
+        @classmethod
+        def now(cls):
+            return cls.calls.pop(0)
+
+    monkeypatch.setenv("MARKET_SIGNALS_ROOT", str(tmp_path))
+    monkeypatch.setattr("market_signals.cli.datetime", FixedDatetime)
+
+    assert main(["portfolio-report"]) == 0
+    assert main(["portfolio-report"]) == 0
+
+    reports = list((tmp_path / "data" / "reports").glob("portfolio-*.md"))
+    assert len(reports) == 2
