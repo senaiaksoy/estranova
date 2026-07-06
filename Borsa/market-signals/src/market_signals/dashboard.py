@@ -118,6 +118,44 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
     total_tax_usd = total_tax_try / usd_rate if usd_rate > 0 else 0.0
     total_net_usd = total_net_try / usd_rate if usd_rate > 0 else 0.0
 
+    # Build tax table rows for the vergi paneli
+    from .taxes import TAX_LABELS
+    tax_rows_html = []
+    for row in valuation.rows:
+        sym = row.holding.symbol
+        if sym not in tax_summary["assets"]:
+            continue
+        res = tax_summary["assets"][sym]
+        price_str = f"{res['current_price']:,.4f}" if res['current_price'] else "—"
+        mv_str = f"{res['current_value']:,.0f}"
+        cost_str = f"{res['cost_price']:,.4f}" if res['cost_price'] else "—"
+        gain = res['gain']
+        gain_color = "#2e7d32" if gain >= 0 else "#c62828"
+        gain_sign = "+" if gain >= 0 else ""
+        gain_str = f"{gain_sign}{gain:,.0f}"
+        tax_rate = res['tax_rate']
+        if tax_rate == 0.0:
+            badge = "<span style='background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:10px;font-size:0.75rem;font-weight:700;'>%0 muaf</span>"
+        else:
+            badge = f"<span style='background:#fff3e0;color:#e65100;padding:2px 7px;border-radius:10px;font-size:0.75rem;font-weight:700;'>%{tax_rate*100:.1f}</span>"
+        tax_amt = res['tax_amount']
+        net_val = res['net_value']
+        tax_amt_color = "#c62828" if tax_amt > 0 else "var(--muted)"
+        tax_rows_html.append(f"""
+            <tr>
+              <td style="font-weight:600;">{html.escape(row.holding.label)}</td>
+              <td style="text-align:right;">{res['quantity']:,.4f}</td>
+              <td style="text-align:right;">{price_str} TL</td>
+              <td style="text-align:right;">{mv_str} TL</td>
+              <td style="text-align:right;">{cost_str} TL</td>
+              <td style="text-align:right;color:{gain_color};font-weight:600;">{gain_str} TL</td>
+              <td style="text-align:center;">{badge}</td>
+              <td style="text-align:right;color:{tax_amt_color};font-weight:600;">{tax_amt:,.0f} TL</td>
+              <td style="text-align:right;color:#2e7d32;font-weight:600;">{net_val:,.0f} TL</td>
+            </tr>
+        """)
+    tax_table_rows = "\n".join(tax_rows_html) if tax_rows_html else "<tr><td colspan='9' style='text-align:center;color:var(--muted);'>Veri yok.</td></tr>"
+
     # Build holdings table rows for the HTML form
     holdings_rows = []
     for sym in default_symbols:
@@ -303,7 +341,7 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
     }}
     .summary-grid {{
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 12px;
       margin-bottom: 22px;
     }}
@@ -539,6 +577,45 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
         <div class="summary-val">{perf_usd["end_value"]:,.2f} USD</div>
         <div class="summary-lbl" style="font-size:0.75rem; margin-top:2px; color:var(--gold); font-weight:600;">Net: {total_net_usd:,.2f} USD</div>
         <div class="summary-lbl">Güncel Toplam Değer (USD)</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val" style="color:#c62828;">{total_tax_try:,.0f} TL</div>
+        <div class="summary-lbl" style="color:var(--muted);">Tahmini Stopaj Yükü</div>
+      </div>
+    </div>
+
+    <!-- Vergi Duyarlılık Analizi Paneli -->
+    <div class="chart-container" style="margin-bottom:22px;">
+      <div class="chart-header">
+        <h3 class="chart-title">Vergi Duyarlılık Analizi</h3>
+        <span style="font-size:0.8rem; color:var(--muted);">GVK Geç. Md. 67 · 09.07.2025 ve 27.03.2026 CB Kararları · Karar-destek amaçlıdır</span>
+      </div>
+      <div class="table-container">
+        <table class="cf-table" style="font-size:0.84rem;">
+          <thead>
+            <tr style="background:var(--paper);">
+              <th>Varlık</th>
+              <th style="text-align:right;">Miktar</th>
+              <th style="text-align:right;">Güncel Fiyat</th>
+              <th style="text-align:right;">Piyasa Değeri</th>
+              <th style="text-align:right;">Ort. Maliyet</th>
+              <th style="text-align:right;">Kâr / Zarar</th>
+              <th style="text-align:center;">Stopaj</th>
+              <th style="text-align:right;">Vergi Yükü</th>
+              <th style="text-align:right;">Net Değer</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tax_table_rows}
+          </tbody>
+          <tfoot>
+            <tr style="border-top:2px solid var(--line); font-weight:700;">
+              <td colspan="7" style="text-align:right; padding:8px 8px;">TOPLAM</td>
+              <td style="text-align:right; color:#c62828;">{total_tax_try:,.0f} TL</td>
+              <td style="text-align:right; color:#2e7d32;">{total_net_try:,.0f} TL</td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
 

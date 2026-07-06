@@ -239,20 +239,26 @@ def handle_unknown(text: str) -> str:
 
 
 def handle_alarm(root: Path, text: str) -> str:
-    """/alarm SEMBOL ESIK — fiyat alarmı kurar."""
+    """/alarm SEMBOL ESIK [UST_ESIK] — fiyat alarmı kurar."""
     db = _db_path(root)
     parts = text.strip().split()
-    # /alarm YAY 1950.5
+    # /alarm YAY 1950.5  veya  /alarm YAY 1800 2100
     if len(parts) < 3:
         return (
-            "⚠️ Kullanım: `/alarm SEMBOL EŞİK`\n"
-            "Ejemplo: `/alarm YAY 1950` veya `/alarm GRAM_ALTIN 7000`"
+            "⚠️ Kullanım:\n"
+            "  `/alarm SEMBOL EŞİK` — tek yönlü alarm\n"
+            "  `/alarm SEMBOL ALT ÜST` — bant alarmı (ikisi birden)\n\n"
+            "Örnekler:\n"
+            "  `/alarm YAY 1950`\n"
+            "  `/alarm GRAM_ALTIN 7000`\n"
+            "  `/alarm YAY 1800 2100` ← 1800 altı VEYA 2100 üstü"
         )
     symbol = parts[1].upper()
     try:
-        threshold = float(parts[2].replace(",", "."))
+        threshold1 = float(parts[2].replace(",", "."))
+        threshold2 = float(parts[3].replace(",", ".")) if len(parts) >= 4 else None
     except ValueError:
-        return "❌ Eşik değer geçersiz. Örnek: `/alarm YAY 1950.5`"
+        return "❌ Eşik değer geçersiz. Örnek: `/alarm YAY 1950` veya `/alarm YAY 1800 2100`"
 
     # Canlı fiyata göre yön belirle
     try:
@@ -266,19 +272,33 @@ def handle_alarm(root: Path, text: str) -> str:
     except Exception:
         current_price = 0.0
 
-    direction = "above" if threshold > current_price else "below"
-    dir_label = "ykarsışında" if direction == "above" else "altında"
-
     try:
-        alarm_id = add_price_alarm(db, symbol, threshold, direction)
-        return (
-            f"✅ *Alarm kuruldu!*\n"
-            f"  Sembol: {symbol}\n"
-            f"  Eşik: {threshold:,.4f} TL\n"
-            f"  Yön: {threshold:,.4f} TL {dir_label} geçince bildirim\n"
-            f"  Alarm ID: `{alarm_id}`\n\n"
-            f"_Silmek için: /alarmSil {alarm_id}_"
-        )
+        if threshold2 is not None:
+            # Bant alarmı: alt eşik below, üst eşik above
+            low = min(threshold1, threshold2)
+            high = max(threshold1, threshold2)
+            id_low = add_price_alarm(db, symbol, low, "below")
+            id_high = add_price_alarm(db, symbol, high, "above")
+            current_str = f"{current_price:,.4f} TL" if current_price else "bilinmiyor"
+            return (
+                f"✅ *Bant Alarmı kuruldu!*\n"
+                f"  Sembol: {symbol} (şu an: {current_str})\n"
+                f"  ⬇️ Alt sınır: {low:,.4f} TL altına düşünce → ID `{id_low}`\n"
+                f"  ⬆️ Üst sınır: {high:,.4f} TL üstüne çıkınca → ID `{id_high}`\n\n"
+                f"_Silmek için: /alarmSil {id_low} veya /alarmSil {id_high}_"
+            )
+        else:
+            direction = "above" if threshold1 > current_price else "below"
+            dir_label = "üstüne çıkınca" if direction == "above" else "altına düşünce"
+            alarm_id = add_price_alarm(db, symbol, threshold1, direction)
+            current_str = f"{current_price:,.4f} TL" if current_price else "bilinmiyor"
+            return (
+                f"✅ *Alarm kuruldu!*\n"
+                f"  Sembol: {symbol} (şu an: {current_str})\n"
+                f"  Eşik: {threshold1:,.4f} TL {dir_label} bildirim\n"
+                f"  Alarm ID: `{alarm_id}`\n\n"
+                f"_Silmek için: /alarmSil {alarm_id}_"
+            )
     except Exception as exc:
         return f"❌ Alarm kurulamadı: {exc}"
 
