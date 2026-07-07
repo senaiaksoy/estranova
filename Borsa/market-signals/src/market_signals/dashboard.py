@@ -948,6 +948,73 @@ def _markdown_to_html(markdown: str) -> str:
     return "\n".join(lines)
 
 
+def render_dashboard_html_fast(root: Path) -> str:
+    """Render dashboard from pre-generated markdown reports.
+
+    This avoids live price fetching / portfolio calculations on every page load.
+    If the portfolio report is missing, falls back to the dynamic renderer.
+    """
+    snapshot = collect_dashboard_snapshot(root)
+
+    if snapshot.latest_portfolio is None:
+        return render_dashboard_html(snapshot)
+
+    cards = "".join(
+        _render_report_section(title, path)
+        for title, path in [
+            ("Günlük Sinyal", snapshot.latest_daily),
+            ("Portföy Özeti", snapshot.latest_portfolio),
+            ("Haftalık Model", snapshot.weekly_model),
+            ("Aylık Strateji", snapshot.monthly_model),
+        ]
+    )
+
+    title = "Estranova Varlık Pusulası"
+    asof = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    return f"""<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{html.escape(title)}</title>
+  <style>
+    :root {{
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --line: #30363d;
+      --card: #161b22;
+    }}
+    body {{ margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); line-height: 1.5; }}
+    header {{ padding: 22px 24px; border-bottom: 1px solid var(--line); }}
+    header h1 {{ margin: 0; font-size: 1.35rem; }}
+    header p {{ margin: 4px 0 0; color: var(--muted); font-size: 0.85rem; }}
+    main {{ padding: 24px; max-width: 1200px; margin: 0 auto; }}
+    section {{ background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 20px; }}
+    section h2 {{ margin-top: 0; font-size: 1.1rem; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 8px; }}
+    table {{ border-collapse: collapse; width: 100%; font-size: 0.9rem; }}
+    th, td {{ border: 1px solid var(--line); padding: 7px 10px; text-align: left; }}
+    th {{ background: rgba(88,166,255,0.08); }}
+    ul {{ padding-left: 20px; }}
+    .asof {{ text-align: right; color: var(--muted); font-size: 0.8rem; padding: 8px 24px; }}
+    a {{ color: var(--accent); }}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{html.escape(title)}</h1>
+    <p>Karar destek amaçlıdır, yatırım tavsiyesi değildir.</p>
+  </header>
+  <div class="asof">Son güncelleme: {html.escape(asof)}</div>
+  <main>
+    {cards}
+  </main>
+</body>
+</html>"""
+
+
 def _handler_factory(root: Path, auth: DashboardAuth) -> Callable[..., BaseHTTPRequestHandler]:
     class DashboardHandler(BaseHTTPRequestHandler):
         def do_HEAD(self) -> None:
@@ -973,7 +1040,10 @@ def _handler_factory(root: Path, auth: DashboardAuth) -> Callable[..., BaseHTTPR
                 self.send_header("WWW-Authenticate", 'Basic realm="Estranova Varlik Pusulasi"')
                 self.end_headers()
                 return
-            body = render_dashboard_html(collect_dashboard_snapshot(root)).encode("utf-8")
+            try:
+                body = render_dashboard_html_fast(root).encode("utf-8")
+            except Exception:
+                body = render_dashboard_html(collect_dashboard_snapshot(root)).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.send_header("Cache-Control", "no-store")
