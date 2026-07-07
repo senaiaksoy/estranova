@@ -23,6 +23,7 @@ REPORT_PATTERNS = {
 class DashboardAuth:
     username: str
     password: str
+    trust_cloudflare_access: bool = False
 
     @property
     def enabled(self) -> bool:
@@ -42,6 +43,10 @@ def dashboard_auth_from_env() -> DashboardAuth:
     return DashboardAuth(
         username=os.getenv("MARKET_SIGNALS_DASHBOARD_USER", "estranova"),
         password=os.getenv("MARKET_SIGNALS_DASHBOARD_PASSWORD", ""),
+        trust_cloudflare_access=os.getenv(
+            "MARKET_SIGNALS_DASHBOARD_TRUST_CF_ACCESS", ""
+        ).lower()
+        in {"1", "true", "yes", "on"},
     )
 
 
@@ -844,6 +849,12 @@ def is_authorized(header_value: str | None, auth: DashboardAuth) -> bool:
     return bool(separator) and username == auth.username and password == auth.password
 
 
+def is_request_authorized(headers, auth: DashboardAuth) -> bool:
+    if auth.trust_cloudflare_access and headers.get("Cf-Access-Authenticated-User-Email"):
+        return True
+    return is_authorized(headers.get("Authorization"), auth)
+
+
 def serve_dashboard(
     root: Path,
     *,
@@ -939,11 +950,25 @@ def _markdown_to_html(markdown: str) -> str:
 
 def _handler_factory(root: Path, auth: DashboardAuth) -> Callable[..., BaseHTTPRequestHandler]:
     class DashboardHandler(BaseHTTPRequestHandler):
+        def do_HEAD(self) -> None:
+            if self.path not in {"/", "/index.html"}:
+                self.send_error(404)
+                return
+            if not is_request_authorized(self.headers, auth):
+                self.send_response(401)
+                self.send_header("WWW-Authenticate", 'Basic realm="Estranova Varlik Pusulasi"')
+                self.end_headers()
+                return
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+
         def do_GET(self) -> None:
             if self.path not in {"/", "/index.html"}:
                 self.send_error(404)
                 return
-            if not is_authorized(self.headers.get("Authorization"), auth):
+            if not is_request_authorized(self.headers, auth):
                 self.send_response(401)
                 self.send_header("WWW-Authenticate", 'Basic realm="Estranova Varlik Pusulasi"')
                 self.end_headers()
@@ -968,7 +993,7 @@ def _handler_factory(root: Path, auth: DashboardAuth) -> Callable[..., BaseHTTPR
             if self.path not in routes:
                 self.send_error(404)
                 return
-            if not is_authorized(self.headers.get("Authorization"), auth):
+            if not is_request_authorized(self.headers, auth):
                 self.send_response(401)
                 self.send_header("WWW-Authenticate", 'Basic realm="Estranova Varlik Pusulasi"')
                 self.end_headers()

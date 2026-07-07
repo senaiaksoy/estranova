@@ -5,10 +5,12 @@ import os
 import statistics
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 from .alerts import alert
 from .backtest import BacktestResult, run_backtest
 from .dashboard import dashboard_auth_from_env, serve_dashboard
+from .data_collector import fetch_and_store_historical_data
 from .models import PricePoint
 from .model_review_reports import render_monthly_model_review, render_weekly_model_review
 from .optimizer import allowed_threshold_candidates, choose_candidate_strategy
@@ -46,7 +48,14 @@ def build_parser() -> argparse.ArgumentParser:
 
     subparsers.add_parser("run-daily")
     subparsers.add_parser("run-weekly-audit")
-    subparsers.add_parser("collect")
+    collect_parser = subparsers.add_parser("collect")
+    collect_parser.add_argument(
+        "days_back",
+        nargs="?",
+        type=int,
+        default=30,
+        help="Number of days of historical data to fetch (default: 30)",
+    )
     subparsers.add_parser("validate-data")
     subparsers.add_parser("compute-indicators")
     subparsers.add_parser("generate-signals")
@@ -218,7 +227,7 @@ def run_portfolio_report(root: Path) -> int:
                     label=symbol,
                     quantity=qty,
                     asset_class="other",
-                    role="other"
+                    role="other",
                 )
             )
 
@@ -252,7 +261,7 @@ def run_portfolio_report(root: Path) -> int:
         holdings_dict,
         total_val_try,
         total_val_usd,
-        usd_rate
+        usd_rate,
     )
 
     missing_symbols = [row.holding.symbol for row in valuation.rows if row.missing_price]
@@ -317,7 +326,6 @@ def run_telegram_bot(root: Path) -> int:
 
 
 def run_weekly_model_review(root: Path) -> int:
-
     ensure_runtime_dirs(root)
     entries = read_signal_journal(journal_path(root))
     outcomes = measure_outcomes(entries, default_market_data(), horizons=(1, 5))
@@ -341,6 +349,26 @@ def run_weekly_model_review(root: Path) -> int:
     return 0
 
 
+def run_monthly_model_review(root: Path) -> int:
+    ensure_runtime_dirs(root)
+    data = default_market_data()
+    active = _run_monthly_strategy_backtest(data, "active")
+    candidates = [
+        _run_monthly_strategy_backtest(
+            data,
+            template.name,
+            thresholds=SignalThresholds(**template.parameters),
+        )
+        for template in allowed_threshold_candidates()
+    ]
+    recommendation = choose_candidate_strategy(active, candidates)
+    report = render_monthly_model_review(active, candidates, recommendation)
+    path = root / "data" / "reports" / "model-review-monthly.md"
+    path.write_text(report, encoding="utf-8")
+    print(f"Aylık model raporu yazıldı: {path}")
+    return 0
+
+
 def _outcome_identity(record):
     return (
         record.signal_run_id,
@@ -360,26 +388,6 @@ def _journal_entry_identity(entry):
         entry.strategy_name,
         entry.strategy_version,
     )
-
-
-def run_monthly_model_review(root: Path) -> int:
-    ensure_runtime_dirs(root)
-    data = default_market_data()
-    active = _run_monthly_strategy_backtest(data, "active")
-    candidates = [
-        _run_monthly_strategy_backtest(
-            data,
-            template.name,
-            thresholds=SignalThresholds(**template.parameters),
-        )
-        for template in allowed_threshold_candidates()
-    ]
-    recommendation = choose_candidate_strategy(active, candidates)
-    report = render_monthly_model_review(active, candidates, recommendation)
-    path = root / "data" / "reports" / "model-review-monthly.md"
-    path.write_text(report, encoding="utf-8")
-    print(f"Aylık model raporu yazıldı: {path}")
-    return 0
 
 
 def _run_monthly_strategy_backtest(
@@ -427,7 +435,7 @@ def _combine_backtest_results(
             instrument_id,
             strategy_name,
             0,
-            label_counts,
+            {},
             0.0,
             0.0,
             0.0,
@@ -460,6 +468,31 @@ def _combine_backtest_results(
     )
 
 
+def run_collect(root: Path, days_back: int = 30) -> int:
+    print(f"Fetching and storing historical data for the last {days_back} days...")
+    fetch_and_store_historical_data(days_back)
+    print("Data collection completed.")
+    return 0
+
+
+def run_validate_data(root: Path) -> int:
+    # TODO: implement validation
+    print("Data validation not yet implemented.")
+    return 0
+
+
+def run_compute_indicators(root: Path) -> int:
+    # TODO: compute indicators and store
+    print("Indicator computation not yet implemented.")
+    return 0
+
+
+def run_generate_signals(root: Path) -> int:
+    # TODO: generate signals from indicators and store
+    print("Signal generation not yet implemented.")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -469,6 +502,16 @@ def main(argv: list[str] | None = None) -> int:
         return run_daily(root)
     if args.command == "run-weekly-audit":
         return run_weekly_audit(root)
+    if args.command == "collect":
+        # Use the provided days_back or default to 30
+        days_back = getattr(args, "days_back", 30)
+        return run_collect(root, days_back)
+    if args.command == "validate-data":
+        return run_validate_data(root)
+    if args.command == "compute-indicators":
+        return run_compute_indicators(root)
+    if args.command == "generate-signals":
+        return run_generate_signals(root)
     if args.command == "alert":
         return 0 if alert(root, generate_all_signals(), dry_run=not args.send) else 1
     if args.command == "portfolio-report":

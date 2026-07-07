@@ -40,6 +40,7 @@ Private dashboard command:
 ```powershell
 $env:MARKET_SIGNALS_DASHBOARD_USER="estranova"
 $env:MARKET_SIGNALS_DASHBOARD_PASSWORD="<strong-password>"
+$env:MARKET_SIGNALS_DASHBOARD_TRUST_CF_ACCESS="true"
 python -m market_signals dashboard --host 127.0.0.1 --port 8765
 ```
 
@@ -49,6 +50,8 @@ Production target: `https://varlik.estranova.com`
 
 Recommended deployment is Cloudflare Tunnel + Cloudflare Access. Route
 `varlik.estranova.com` to `http://127.0.0.1:8765` and restrict access to approved
-identity rules before exposing the tunnel. Keep the dashboard password enabled as a
-second layer. This dashboard is private decision support; it is not investment advice
+identity rules before exposing the tunnel. Keep the dashboard password enabled for
+direct local use; set `MARKET_SIGNALS_DASHBOARD_TRUST_CF_ACCESS=true` on the
+tunneled service so Cloudflare Access-authenticated requests can reach the
+dashboard. This dashboard is private decision support; it is not investment advice
 and must not be linked from the public Estranova website.

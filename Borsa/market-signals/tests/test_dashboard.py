@@ -7,6 +7,7 @@ from market_signals.dashboard import (
     DashboardAuth,
     collect_dashboard_snapshot,
     is_authorized,
+    is_request_authorized,
     render_dashboard_html,
     _handler_factory,
 )
@@ -63,8 +64,19 @@ def test_dashboard_auth_disabled_without_password():
     assert is_authorized(None, auth)
 
 
+def test_dashboard_auth_can_trust_cloudflare_access_header():
+    auth = DashboardAuth(username="kc", password="secret", trust_cloudflare_access=True)
+
+    assert is_request_authorized(
+        {"Cf-Access-Authenticated-User-Email": "kc@example.com"},
+        auth,
+    )
+    assert not is_request_authorized({}, auth)
+
+
 def test_handler_factory_defines_do_post_routes():
     auth = DashboardAuth(username="estranova", password="pw")
     handler_cls = _handler_factory(MagicMock(), auth)
     assert hasattr(handler_cls, "do_POST")
     assert hasattr(handler_cls, "do_GET")
+    assert hasattr(handler_cls, "do_HEAD")
