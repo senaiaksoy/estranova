@@ -40,6 +40,7 @@ TAX_RATES: dict[str, float] = {
     # Para Piyasası / Borçlanma Araçları Fonları → %17.5
     "YFT":  0.175,
     "YLB":  0.175,
+    "YJY":  0.175,   # Yapı Kredi Yeniköy Serbest (Döviz) Fon
 
     # Fiziki Altın — stopaj muafiyeti
     "GRAM_ALTIN": 0.00,
@@ -56,6 +57,7 @@ TAX_LABELS: dict[str, str] = {
     "GMSTR":      "Gümüş BYF — %17,5 stopaj",
     "YFT":        "Para Piy. Fonu — %17,5 stopaj",
     "YLB":        "Borçlanma Fonu — %17,5 stopaj",
+    "YJY":        "Yeniköy Serbest (Döviz) Fon — %17,5 stopaj",
     "GRAM_ALTIN": "Fiziki Altın — stopaj yok",
     "USD":        "Nakit USD — stopaj yok",
     "EUR":        "Nakit EUR — stopaj yok",

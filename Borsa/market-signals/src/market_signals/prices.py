@@ -42,7 +42,7 @@ class LivePriceProvider:
 
     def get(self, symbol: str) -> PriceSnapshot | None:
         # 1. Check if it's a TEFAS fund
-        if symbol in {"YAY", "YFT", "YLB"}:
+        if symbol in {"YAY", "YFT", "YLB", "YJY"}:
             fund_code = symbol
             if symbol == "YFT":
                 # Dashboard/portfolio uses YFT/SERLF label; TEFAS code is YPT
