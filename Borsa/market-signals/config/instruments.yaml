@@ -13,3 +13,7 @@ instruments:
     label: Gumus TRY
     source: sample
     symbol: XAG_TRY
+  - id: z30ea
+    label: Z30EA BIST30 BYF
+    source: yahoo
+    symbol: Z30EA.IS

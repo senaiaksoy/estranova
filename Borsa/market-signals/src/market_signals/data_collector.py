@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import os
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import List, Tuple
@@ -27,6 +28,88 @@ def _save_to_csv(symbol: str, data: List[Tuple[date, float]]) -> None:
         writer.writerow(["date", "price"])
         for d, p in data:
             writer.writerow([d.isoformat(), p])
+
+
+def _default_data_dir() -> Path:
+    root = Path(os.getenv("MARKET_SIGNALS_ROOT", PROJECT_ROOT))
+    return root / "data" / "raw"
+
+
+def _load_csv_rows(symbol: str, data_dir: Path) -> dict[str, str]:
+    """Return existing {date_iso: price_str} rows for a symbol's CSV, if any."""
+    file_path = data_dir / f"{symbol}.csv"
+    rows: dict[str, str] = {}
+    if not file_path.exists():
+        return rows
+    with file_path.open("r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            try:
+                rows[row["date"]] = row["price"]
+            except KeyError:
+                continue
+    return rows
+
+
+def merge_and_save_to_csv(
+    symbol: str, data: List[Tuple[date, float]], *, data_dir: Path | None = None
+) -> int:
+    """Merge newly fetched (date, price) rows into the existing CSV, deduped by date.
+
+    Unlike ``_save_to_csv`` (full overwrite), this accumulates history across
+    repeated calls. Needed for tickers where a single fetch only ever returns
+    a short window (e.g. Z30EA, which Yahoo Finance exposes with no deep
+    historical feed) — real trading days build up one run at a time instead
+    of being discarded on every refresh.
+    """
+    resolved_dir = data_dir or _default_data_dir()
+    existing = _load_csv_rows(symbol, resolved_dir)
+    for d, p in data:
+        existing[d.isoformat()] = f"{p}"
+
+    resolved_dir.mkdir(parents=True, exist_ok=True)
+    file_path = resolved_dir / f"{symbol}.csv"
+    with file_path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["date", "price"])
+        for d_iso in sorted(existing):
+            writer.writerow([d_iso, existing[d_iso]])
+    return len(existing)
+
+
+def fetch_z30ea_recent(period: str = "5d") -> List[Tuple[date, float]]:
+    """Fetch the most recent Z30EA closes via a period-based Yahoo query.
+
+    Yahoo's start/end date-range query is unreliable for this ticker — a
+    narrow window anchored on "today" can come back empty even though the
+    same day of data is present in a wider window or a period-based query
+    (observed directly; ``period="5d"`` and ``period="1mo"`` both return the
+    single available trading day, while ``start=``/``end=`` a few days back
+    does not). Period-based queries avoid that edge case.
+    """
+    ticker = yf.Ticker("Z30EA.IS")
+    data = ticker.history(period=period)
+    if data.empty:
+        return []
+    data = data.reset_index()
+    result: List[Tuple[date, float]] = []
+    for _, row in data.iterrows():
+        d = row["Date"].date()
+        p = float(row["Close"])
+        result.append((d, p))
+    return result
+
+
+def update_z30ea_history(*, data_dir: Path | None = None, period: str = "5d") -> int:
+    """Fetch the latest Z30EA close(s) and merge them into its history CSV.
+
+    Meant to run on every daily signal cycle so the file keeps accumulating
+    real trading days, since a single historical fetch for this ticker only
+    ever returns the most recent day or two.
+    """
+    data = fetch_z30ea_recent(period=period)
+    if not data:
+        return 0
+    return merge_and_save_to_csv("z30ea", data, data_dir=data_dir)
 
 
 def fetch_tefas_data(fund_code: str, start_date: date, end_date: date) -> List[Tuple[date, float]]:
@@ -133,6 +216,18 @@ def fetch_and_store_historical_data(days_back: int = 30) -> None:
         print(f"  Saved {len(silver_data)} rows for silver_try")
     else:
         print("  No data for silver_try")
+
+    # Z30EA (BIST30 endeks BYF, Borsa Istanbul) — Yahoo only exposes a very
+    # short window for this ticker, so rows accumulate across runs instead
+    # of being overwritten (see merge_and_save_to_csv). A period-based query
+    # is used because start/end date ranges are unreliable for this ticker.
+    print("Fetching Z30EA...")
+    z30ea_data = fetch_z30ea_recent(period="1mo")
+    if z30ea_data:
+        total_rows = merge_and_save_to_csv("z30ea", z30ea_data)
+        print(f"  Merged {len(z30ea_data)} fetched row(s) for z30ea ({total_rows} total on file)")
+    else:
+        print("  No data for z30ea")
 
 
 if __name__ == "__main__":

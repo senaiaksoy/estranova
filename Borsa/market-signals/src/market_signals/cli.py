@@ -20,7 +20,7 @@ from .outcome_tracker import (
     outcome_path,
     read_outcome_records,
 )
-from .portfolio import default_user_holdings, project_pending_ylb_to_yay, value_holdings
+from .portfolio import default_user_holdings, value_holdings
 from .portfolio_reports import render_portfolio_report
 from .prices import PriceSnapshot, StaticPriceProvider
 from .reports import write_daily_report
@@ -98,6 +98,7 @@ def generate_all_signals(
         "tefas_yay": "TEFAS YAY",
         "gold_try": "Altın TRY",
         "silver_try": "Gümüş TRY",
+        "z30ea": "Z30EA BIST30 BYF",
     }
     return [
         generate_signal(instrument_id, labels[instrument_id], points)
@@ -110,11 +111,17 @@ def signal_symbol_map() -> dict[str, str]:
         "tefas_yay": "YAY",
         "gold_try": "GRAM_ALTIN",
         "silver_try": "XAG_TRY",
+        "z30ea": "Z30EA",
     }
 
 
 def run_daily(root: Path) -> int:
     ensure_runtime_dirs(root)
+    try:
+        from .data_collector import update_z30ea_history
+        update_z30ea_history(data_dir=root / "data" / "raw")
+    except Exception:
+        pass
     market_data = default_market_data()
     signals = generate_all_signals(market_data)
     symbols = signal_symbol_map()
@@ -246,8 +253,6 @@ def run_portfolio_report(root: Path) -> int:
     )
     provider = LivePriceProvider(fallback_provider=static_fallback)
     valuation = value_holdings(holdings, provider)
-    projected_holdings = project_pending_ylb_to_yay(holdings, provider)
-    projected_valuation = value_holdings(projected_holdings, provider)
 
     # Save daily portfolio snapshot
     usd_rate_snap = provider.get("USDTRY=X")
@@ -265,7 +270,7 @@ def run_portfolio_report(root: Path) -> int:
     )
 
     missing_symbols = [row.holding.symbol for row in valuation.rows if row.missing_price]
-    report = render_portfolio_report(valuation, missing_symbols, projected_valuation, db_path=db_file)
+    report = render_portfolio_report(valuation, missing_symbols, db_path=db_file, usd_rate=usd_rate)
     timestamp = now.strftime("%Y%m%d-%H%M%S-%f")
     path = root / "data" / "reports" / f"portfolio-{timestamp}.md"
     path.write_text(report, encoding="utf-8")

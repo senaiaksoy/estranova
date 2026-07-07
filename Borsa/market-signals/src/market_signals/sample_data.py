@@ -56,7 +56,7 @@ def load_price_points_from_csv(symbol: str, *, data_dir: Path | None = None) -> 
 
 
 def default_market_data(root: Path | None = None) -> dict[str, list[PricePoint]]:
-    """Return market data for the three instruments.
+    """Return market data for the tracked instruments.
 
     Attempts to load from CSV files under ``root/data/raw`` (or the project
     default if ``root`` is omitted); falls back to synthetic data if files are
@@ -68,13 +68,15 @@ def default_market_data(root: Path | None = None) -> dict[str, list[PricePoint]]
     yay = load_price_points_from_csv("tefas_YAY", data_dir=data_dir)
     gold = load_price_points_from_csv("gold_try", data_dir=data_dir)
     silver = load_price_points_from_csv("silver_try", data_dir=data_dir)
+    z30ea = load_price_points_from_csv("z30ea", data_dir=data_dir)
 
-    # If we have data for all three, use it
-    if yay and gold and silver:
+    # If we have data for all four, use it
+    if yay and gold and silver and z30ea:
         return {
             "tefas_yay": yay,
             "gold_try": gold,
             "silver_try": silver,
+            "z30ea": z30ea,
         }
 
     # Fallback to synthetic data
@@ -82,4 +84,5 @@ def default_market_data(root: Path | None = None) -> dict[str, list[PricePoint]]
         "tefas_yay": rising_series(),
         "gold_try": _series(2500.0, 1.4),
         "silver_try": _series(30.0, -0.01),
+        "z30ea": _series(190.0, 0.05),
     }

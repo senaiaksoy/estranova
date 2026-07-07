@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 from market_signals.portfolio import PortfolioValuation, ValuationRow
 
 
@@ -55,8 +57,8 @@ def _price_source_notes(valuation: PortfolioValuation) -> list[str]:
 def render_portfolio_report(
     valuation: PortfolioValuation,
     missing_symbols: list[str] | None = None,
-    projected_valuation: PortfolioValuation | None = None,
     db_path: Path | None = None,
+    usd_rate: float = 0.0,
 ) -> str:
     missing_symbols = _missing_symbols(valuation, missing_symbols)
     price_source_notes = _price_source_notes(valuation)
@@ -82,15 +84,20 @@ def render_portfolio_report(
         tax_val = tax_summary["total_tax_try"]
         summary_lines.append(f"- Tahmini stopaj yükü: {_money(tax_val)}")
         summary_lines.append(f"- Vergi arındırılmış net değer: {_money(net_val)}")
+        if usd_rate > 0:
+            net_val_usd = net_val / usd_rate
+            summary_lines.append(
+                f"- Vergi arındırılmış net değer (USD): {net_val_usd:,.2f} USD"
+            )
 
     summary_lines.append(f"- Fiziki altın miktarı: {physical_gold_quantity:.4f} gram")
     summary_lines.append("- Ağırlıklar yalnızca fiyatı doğrulanan satırlar içinde hesaplanır; fiyatı eksik varlıklar toplam ağırlığa dahil edilmez.")
 
     table_headers = [
         "| Varlık | Adet/Gram | Fiyat | Değer | Ağırlık | Not |" if not tax_summary else
-        "| Varlık | Adet/Gram | Fiyat | Değer | Ort. Maliyet | Stopaj | Vergi Yükü | Net Değer | Ağırlık | Not |",
+        "| Varlık | Adet/Gram | Fiyat | Değer | Ort. Maliyet | Kâr/Zarar | Kâr/Zarar % | Stopaj | Vergi Yükü | Net Değer | Ağırlık | Not |",
         "| --- | ---: | ---: | ---: | ---: | --- |" if not tax_summary else
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |"
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |"
     ]
 
     lines = [
@@ -111,10 +118,18 @@ def render_portfolio_report(
         if tax_summary and row.holding.symbol in tax_summary["assets"]:
             res = tax_summary["assets"][row.holding.symbol]
             cost_p_str = f"{res['cost_price']:,.2f} TL"
-            tax_rate_str = f"{res['tax_rate']*100:.0f}%"
+            tax_rate_str = f"{res['tax_rate']*100:g}%"
             tax_amt_str = f"{res['tax_amount']:,.2f} TL"
             net_val_str = f"{res['net_value']:,.2f} TL"
-            
+
+            gain = res["gain"]
+            cost_basis = res["cost_basis"]
+            gain_sign = "+" if gain >= 0 else ""
+            gain_str = f"{gain_sign}{gain:,.2f} TL"
+            gain_pct_str = (
+                f"{gain_sign}{gain / cost_basis * 100:,.2f}%" if cost_basis else "—"
+            )
+
             lines.append(
                 "| "
                 f"{_table_text(row.holding.label)} | "
@@ -122,6 +137,8 @@ def render_portfolio_report(
                 f"{_money(price)} | "
                 f"{_money(row.market_value)} | "
                 f"{cost_p_str} | "
+                f"{gain_str} | "
+                f"{gain_pct_str} | "
                 f"{tax_rate_str} | "
                 f"{tax_amt_str} | "
                 f"{net_val_str} | "
@@ -142,41 +159,6 @@ def render_portfolio_report(
     lines.extend(
         [
             "",
-            "## Bekleyen İşlem Projeksiyonu",
-            "",
-            "Bekleyen fon dönüşümü veya bloke tutar projeksiyonu burada görünür. "
-            "Bu bölüm bir emir talimatı, otomatik işlem önerisi veya kişisel yatırım tavsiyesi değildir; "
-            "yalnızca manuel karar öncesi kontrol amacı taşır.",
-            "",
-        ]
-    )
-
-    if projected_valuation is not None:
-        lines.extend(
-            [
-                "### Projeksiyon",
-                "",
-                f"- Projeksiyon toplamı: {_money(projected_valuation.total_value)}",
-                "",
-                "| Varlık | Adet/Gram | Fiyat | Değer | Ağırlık (fiyatı doğrulananlar içinde) | Not |",
-                "| --- | ---: | ---: | ---: | ---: | --- |",
-            ]
-        )
-        for row in projected_valuation.rows:
-            price = row.price.price if row.price is not None else None
-            lines.append(
-                "| "
-                f"{_table_text(row.holding.label)} | "
-                f"{row.holding.quantity:.4f} | "
-                f"{_money(price)} | "
-                f"{_money(row.market_value)} | "
-                f"{row.weight_pct:.2f}% | "
-                f"{_table_text(_row_note(row))} |"
-            )
-        lines.append("")
-
-    lines.extend(
-        [
             "## Veri Uyarıları",
             "",
         ]

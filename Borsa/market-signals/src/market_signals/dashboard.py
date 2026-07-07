@@ -4,6 +4,7 @@ import base64
 import html
 import os
 import json
+import re
 from dataclasses import dataclass
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -135,9 +136,11 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
         mv_str = f"{res['current_value']:,.0f}"
         cost_str = f"{res['cost_price']:,.4f}" if res['cost_price'] else "—"
         gain = res['gain']
+        cost_basis = res['cost_basis']
         gain_color = "#2e7d32" if gain >= 0 else "#c62828"
         gain_sign = "+" if gain >= 0 else ""
         gain_str = f"{gain_sign}{gain:,.0f}"
+        gain_pct_str = f"{gain_sign}{gain / cost_basis * 100:,.2f}%" if cost_basis else "—"
         tax_rate = res['tax_rate']
         if tax_rate == 0.0:
             badge = "<span style='background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:10px;font-size:0.75rem;font-weight:700;'>%0 muaf</span>"
@@ -154,12 +157,13 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
               <td style="text-align:right;">{mv_str} TL</td>
               <td style="text-align:right;">{cost_str} TL</td>
               <td style="text-align:right;color:{gain_color};font-weight:600;">{gain_str} TL</td>
+              <td style="text-align:right;color:{gain_color};font-weight:600;">{gain_pct_str}</td>
               <td style="text-align:center;">{badge}</td>
               <td style="text-align:right;color:{tax_amt_color};font-weight:600;">{tax_amt:,.0f} TL</td>
               <td style="text-align:right;color:#2e7d32;font-weight:600;">{net_val:,.0f} TL</td>
             </tr>
         """)
-    tax_table_rows = "\n".join(tax_rows_html) if tax_rows_html else "<tr><td colspan='9' style='text-align:center;color:var(--muted);'>Veri yok.</td></tr>"
+    tax_table_rows = "\n".join(tax_rows_html) if tax_rows_html else "<tr><td colspan='10' style='text-align:center;color:var(--muted);'>Veri yok.</td></tr>"
 
     # Build holdings table rows for the HTML form
     holdings_rows = []
@@ -605,6 +609,7 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
               <th style="text-align:right;">Piyasa Değeri</th>
               <th style="text-align:right;">Ort. Maliyet</th>
               <th style="text-align:right;">Kâr / Zarar</th>
+              <th style="text-align:right;">Kâr / Zarar %</th>
               <th style="text-align:center;">Stopaj</th>
               <th style="text-align:right;">Vergi Yükü</th>
               <th style="text-align:right;">Net Değer</th>
@@ -615,7 +620,7 @@ def render_dashboard_html(snapshot: DashboardSnapshot) -> str:
           </tbody>
           <tfoot>
             <tr style="border-top:2px solid var(--line); font-weight:700;">
-              <td colspan="7" style="text-align:right; padding:8px 8px;">TOPLAM</td>
+              <td colspan="8" style="text-align:right; padding:8px 8px;">TOPLAM</td>
               <td style="text-align:right; color:#c62828;">{total_tax_try:,.0f} TL</td>
               <td style="text-align:right; color:#2e7d32;">{total_net_try:,.0f} TL</td>
             </tr>
@@ -893,10 +898,23 @@ def _render_report_section(title: str, path: Path | None) -> str:
     )
 
 
+_NUMERIC_CELL_RE = re.compile(
+    r"^-?[\d.,]+\s*(TL|USD|TRY|%|gram)?$|^[+-][\d.,]+\s*(TL|USD|%)?$"
+)
+
+
+def _is_numeric_cell(cell: str) -> bool:
+    stripped = cell.strip()
+    if not stripped or stripped in {"—", "-"}:
+        return True
+    return bool(_NUMERIC_CELL_RE.match(stripped))
+
+
 def _markdown_to_html(markdown: str) -> str:
     lines: list[str] = []
     in_list = False
     in_table = False
+    table_row_index = 0
     for raw_line in markdown.splitlines():
         line = raw_line.rstrip()
         if not line:
@@ -923,10 +941,18 @@ def _markdown_to_html(markdown: str) -> str:
             if all(set(cell) <= {"-", ":", " "} for cell in cells):
                 continue
             if not in_table:
-                lines.append("<table>")
+                lines.append('<table>')
                 in_table = True
-            tag = "th" if not any("<tr>" in item for item in lines[-1:]) else "td"
-            lines.append("<tr>" + "".join(f"<{tag}>{html.escape(cell)}</{tag}>" for cell in cells) + "</tr>")
+                table_row_index = 0
+            is_header = table_row_index == 0
+            tag = "th" if is_header else "td"
+            row_cls = "" if is_header else (" class=\"alt\"" if table_row_index % 2 == 0 else "")
+            cell_html = []
+            for cell in cells:
+                cell_cls = " class=\"num\"" if (not is_header and _is_numeric_cell(cell)) else ""
+                cell_html.append(f"<{tag}{cell_cls}>{html.escape(cell)}</{tag}>")
+            lines.append(f"<tr{row_cls}>" + "".join(cell_html) + "</tr>")
+            table_row_index += 1
             continue
         if in_table:
             lines.append("</table>")
@@ -977,37 +1003,135 @@ def render_dashboard_html_fast(root: Path) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
   <title>{html.escape(title)}</title>
   <style>
     :root {{
-      --bg: #0d1117;
-      --fg: #e6edf3;
-      --muted: #8b949e;
-      --accent: #58a6ff;
-      --line: #30363d;
-      --card: #161b22;
+      color-scheme: dark;
+      --bg: #0a0e15;
+      --card: #131a25;
+      --card-alt: #0f1520;
+      --line: #232c3b;
+      --fg: #e9edf4;
+      --muted: #8b96a8;
+      --gold: #d1a65a;
+      --teal: #37b48d;
+      --danger: #e5586c;
     }}
-    body {{ margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); line-height: 1.5; }}
-    header {{ padding: 22px 24px; border-bottom: 1px solid var(--line); }}
-    header h1 {{ margin: 0; font-size: 1.35rem; }}
-    header p {{ margin: 4px 0 0; color: var(--muted); font-size: 0.85rem; }}
-    main {{ padding: 24px; max-width: 1200px; margin: 0 auto; }}
-    section {{ background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 20px; }}
-    section h2 {{ margin-top: 0; font-size: 1.1rem; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 8px; }}
-    table {{ border-collapse: collapse; width: 100%; font-size: 0.9rem; }}
-    th, td {{ border: 1px solid var(--line); padding: 7px 10px; text-align: left; }}
-    th {{ background: rgba(88,166,255,0.08); }}
-    ul {{ padding-left: 20px; }}
-    .asof {{ text-align: right; color: var(--muted); font-size: 0.8rem; padding: 8px 24px; }}
-    a {{ color: var(--accent); }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(1100px 480px at 12% -10%, rgba(209,166,90,0.10), transparent 60%),
+        radial-gradient(900px 460px at 100% 0%, rgba(55,180,141,0.08), transparent 55%),
+        var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }}
+    .topbar {{ height: 3px; background: linear-gradient(90deg, var(--gold), var(--teal)); }}
+    header {{
+      padding: 28px 32px 22px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 14px;
+    }}
+    header h1 {{
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.01em;
+    }}
+    header p {{ margin: 6px 0 0; color: var(--muted); font-size: 0.88rem; max-width: 62ch; }}
+    .asof {{
+      color: var(--muted);
+      font-size: 0.78rem;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+      padding: 6px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }}
+    .asof strong {{ color: var(--fg); font-weight: 600; }}
+    main {{ padding: 28px 32px 48px; max-width: 1280px; margin: 0 auto; }}
+    section {{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--gold);
+      border-radius: 14px;
+      padding: 0;
+      margin-bottom: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px -18px rgba(0,0,0,0.6);
+    }}
+    section h2 {{
+      margin: 0;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      font-weight: 700;
+    }}
+    .section-head {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+      background: var(--card-alt);
+    }}
+    .file {{
+      color: var(--muted);
+      font-size: 0.76rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+    .report {{ padding: 18px 20px 22px; overflow-x: auto; max-height: 560px; overflow-y: auto; }}
+    .missing {{ padding: 18px 20px 22px; color: var(--muted); font-style: italic; }}
+    h1, h2, h3 {{ font-family: Georgia, "Times New Roman", serif; }}
+    .report h1 {{ font-size: 1.3rem; margin: 4px 0 10px; }}
+    .report h2 {{ font-size: 1.05rem; color: var(--fg); text-transform: none; letter-spacing: 0; margin: 18px 0 8px; }}
+    .report h3 {{ font-size: 0.95rem; color: var(--muted); margin: 14px 0 6px; }}
+    .report p {{ margin: 0 0 9px; color: var(--fg); }}
+    table {{ border-collapse: collapse; width: 100%; font-size: 0.87rem; min-width: 520px; }}
+    th, td {{ padding: 8px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }}
+    th {{
+      background: rgba(209,166,90,0.07);
+      color: var(--gold);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      border-bottom: 1px solid var(--line);
+    }}
+    tr.alt td {{ background: rgba(255,255,255,0.015); }}
+    tbody tr:hover td {{ background: rgba(55,180,141,0.05); }}
+    td.num, th.num {{ text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }}
+    ul {{ padding-left: 20px; margin: 0 0 10px; }}
+    li {{ margin-bottom: 3px; }}
+    a {{ color: var(--teal); }}
+    @media (max-width: 720px) {{
+      header {{ padding: 20px 18px 16px; }}
+      main {{ padding: 20px 18px 40px; }}
+      section .section-top {{ padding: 12px 16px; }}
+      section .body {{ padding: 14px 16px 18px; }}
+    }}
   </style>
 </head>
 <body>
+  <div class="topbar"></div>
   <header>
-    <h1>{html.escape(title)}</h1>
-    <p>Karar destek amaçlıdır, yatırım tavsiyesi değildir.</p>
+    <div>
+      <h1>{html.escape(title)}</h1>
+      <p>Özel karar-destek ekranı; yatırım tavsiyesi, otomatik emir veya kişisel al-sat talimatı değildir.</p>
+    </div>
+    <div class="asof">Son güncelleme&nbsp; <strong>{html.escape(asof)}</strong></div>
   </header>
-  <div class="asof">Son güncelleme: {html.escape(asof)}</div>
   <main>
     {cards}
   </main>

@@ -1,7 +1,6 @@
 from market_signals.portfolio import (
     Holding,
     default_user_holdings,
-    project_pending_ylb_to_yay,
     value_holdings,
 )
 from market_signals.prices import PriceSnapshot, StaticPriceProvider
@@ -60,21 +59,6 @@ def test_default_user_holdings_include_one_kg_physical_gold_and_z30ea():
     assert by_id["physical_gold"].quantity == 1000
     assert by_id["z30ea"].symbol == "Z30EA"
     assert by_id["yft"].symbol == "YFT"
-
-
-def test_project_pending_ylb_to_yay_is_noop_without_ylb():
-    holdings = default_user_holdings()
-    prices = StaticPriceProvider(
-        {
-            "YAY": PriceSnapshot("YAY", 100.0, "TRY", "test", "2026-07-04"),
-        }
-    )
-
-    projected = project_pending_ylb_to_yay(holdings, prices)
-    by_id = {holding.id: holding for holding in projected}
-
-    assert "ylb" not in by_id
-    assert by_id["yay"].quantity == 2576
 
 
 # Removed legacy YLB default-holding tests; YLB is no longer a default position.

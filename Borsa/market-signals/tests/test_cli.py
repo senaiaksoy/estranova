@@ -106,7 +106,7 @@ def test_run_daily_writes_signal_journal_with_features(tmp_path, monkeypatch):
         "volatility20",
     }
 
-    assert len(rows) == 3
+    assert len(rows) == 4
     assert {
         row["instrument_id"]: row["symbol"]
         for row in rows
@@ -114,6 +114,7 @@ def test_run_daily_writes_signal_journal_with_features(tmp_path, monkeypatch):
         "tefas_yay": "YAY",
         "gold_try": "GRAM_ALTIN",
         "silver_try": "XAG_TRY",
+        "z30ea": "Z30EA",
     }
     for row in rows:
         assert row["strategy_name"] == "conservative_daily_trend"
@@ -147,7 +148,7 @@ def test_run_daily_is_idempotent_for_same_run_id(tmp_path, monkeypatch):
 
     journal_path = tmp_path / "data" / "signals" / "signal-journal.jsonl"
     rows = journal_path.read_text(encoding="utf-8").splitlines()
-    assert len(rows) == 3
+    assert len(rows) == 4
 
 
 def test_run_daily_uses_single_market_snapshot_for_signals_and_features(
@@ -197,7 +198,7 @@ def test_portfolio_report_command_writes_report(tmp_path, monkeypatch):
     assert "# Portföy Karar-Destek Raporu" in text
     assert "Fiziki altın" in text
     assert "Z30EA" in text
-    assert "Projeksiyon" in text
+    assert "Projeksiyon" not in text
     assert "Ağırlıklar yalnızca fiyatı doğrulanan satırlar içinde hesaplanır" in text
 
 
@@ -266,7 +267,7 @@ def test_model_review_weekly_dedupes_duplicate_entries_in_current_journal(
 
     outcome_path = tmp_path / "data" / "signals" / "signal-outcomes.jsonl"
     line_count = len(outcome_path.read_text(encoding="utf-8").splitlines())
-    assert line_count == 6
+    assert line_count == 8
 
 
 def test_model_review_monthly_writes_report(tmp_path, monkeypatch):

@@ -87,33 +87,6 @@ def default_user_holdings() -> list[Holding]:
     ]
 
 
-def project_pending_ylb_to_yay(holdings: list[Holding], provider: PriceProvider) -> list[Holding]:
-    by_id = {holding.id: holding for holding in holdings}
-    ylb = by_id.get("ylb")
-    yay = by_id.get("yay")
-    if ylb is None or yay is None:
-        return holdings
-
-    ylb_price = provider.get(ylb.symbol)
-    yay_price = provider.get(yay.symbol)
-    if ylb_price is None or yay_price is None or yay_price.price == 0:
-        return holdings
-
-    ylb_value = ylb.quantity * ylb_price.price
-    projected_yay_quantity = yay.quantity + (ylb_value / yay_price.price)
-
-    projected: list[Holding] = []
-    for holding in holdings:
-        if holding.id == "yay":
-            projected.append(replace(holding, quantity=projected_yay_quantity))
-        elif holding.id == "ylb":
-            projected.append(replace(holding, quantity=0))
-        else:
-            projected.append(holding)
-
-    return projected
-
-
 def value_holdings(holdings: list[Holding], provider: PriceProvider) -> PortfolioValuation:
     rows: list[ValuationRow] = []
     total_value = 0.0
