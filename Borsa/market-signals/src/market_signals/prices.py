@@ -43,17 +43,21 @@ class LivePriceProvider:
     def get(self, symbol: str) -> PriceSnapshot | None:
         # 1. Check if it's a TEFAS fund
         if symbol in {"YAY", "YFT", "YLB"}:
+            fund_code = symbol
+            if symbol == "YFT":
+                # Dashboard/portfolio uses YFT/SERLF label; TEFAS code is YPT
+                fund_code = "YPT"
             if Crawler is not None:
                 try:
                     if self.tefas_crawler is None:
                         self.tefas_crawler = Crawler()
                     today = datetime.now()
                     asof_str = today.strftime("%Y-%m-%d")
-                    df = self.tefas_crawler.fetch(start=asof_str, fund_code=symbol)
+                    df = self.tefas_crawler.fetch(start=asof_str, fund_code=fund_code)
                     if df.empty:
                         start_date = (today - timedelta(days=7)).strftime("%Y-%m-%d")
-                        df = self.tefas_crawler.fetch(start=start_date, end=asof_str, fund_code=symbol)
-                    
+                        df = self.tefas_crawler.fetch(start=start_date, end=asof_str, fund_code=fund_code)
+
                     if not df.empty:
                         latest_row = df.iloc[-1]
                         return PriceSnapshot(

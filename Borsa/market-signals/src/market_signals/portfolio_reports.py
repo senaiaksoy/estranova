@@ -144,7 +144,7 @@ def render_portfolio_report(
             "",
             "## Bekleyen İşlem Projeksiyonu",
             "",
-            "YLB satırı Pazartesi günü YAY alımına dönecek bekleyen tutarın projeksiyonu olarak izlenir. "
+            "Bekleyen fon dönüşümü veya bloke tutar projeksiyonu burada görünür. "
             "Bu bölüm bir emir talimatı, otomatik işlem önerisi veya kişisel yatırım tavsiyesi değildir; "
             "yalnızca manuel karar öncesi kontrol amacı taşır.",
             "",
@@ -154,7 +154,7 @@ def render_portfolio_report(
     if projected_valuation is not None:
         lines.extend(
             [
-                "### YLB -> YAY Sonrası Projeksiyon",
+                "### Projeksiyon",
                 "",
                 f"- Projeksiyon toplamı: {_money(projected_valuation.total_value)}",
                 "",
@@ -163,8 +163,6 @@ def render_portfolio_report(
             ]
         )
         for row in projected_valuation.rows:
-            if row.holding.id not in {"yay", "ylb"}:
-                continue
             price = row.price.price if row.price is not None else None
             lines.append(
                 "| "

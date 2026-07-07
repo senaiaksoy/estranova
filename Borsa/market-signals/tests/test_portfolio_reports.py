@@ -33,29 +33,27 @@ def test_portfolio_report_is_turkish_and_includes_projection_warning():
     assert "Ağırlıklar yalnızca fiyatı doğrulanan satırlar içinde hesaplanır" in report
 
 
-def test_portfolio_report_shows_ylb_to_yay_projection_table():
+def test_portfolio_report_shows_projection_table():
     provider = StaticPriceProvider(
         {
             "YAY": PriceSnapshot("YAY", 100.0, "TRY", "test", "2026-07-04"),
             "YFT": PriceSnapshot("YFT", 1.0, "TRY", "test", "2026-07-04"),
-            "YLB": PriceSnapshot("YLB", 1.0, "TRY", "test", "2026-07-04"),
             "GMSTR": PriceSnapshot("GMSTR", 550.0, "TRY", "test", "2026-07-04"),
             "GRAM_ALTIN": PriceSnapshot("GRAM_ALTIN", 6000.0, "TRY", "test", "2026-07-04"),
         }
     )
     current = value_holdings(default_user_holdings(), provider)
-    projected_holdings = project_pending_ylb_to_yay(default_user_holdings(), provider)
-    projected = value_holdings(projected_holdings, provider)
+    projected = value_holdings(default_user_holdings(), provider)
 
     report = render_portfolio_report(current, projected_valuation=projected)
-    projection_section = report.split("### YLB -> YAY Sonrası Projeksiyon", 1)[1].split(
+    projection_section = report.split("### Projeksiyon", 1)[1].split(
         "## Veri Uyarıları", 1
     )[0]
 
     assert "YAY / YFAY1" in projection_section
-    assert "YLB / YLBL bloke" in projection_section
-    assert "25909.7400" in projection_section
-    assert "| YLB / YLBL bloke | 0.0000 |" in projection_section
+    assert "YFT / YPT" in projection_section
+    assert "Fiziki altın" in projection_section
+
 
 
 def test_portfolio_report_derives_missing_symbols_from_valuation_rows():

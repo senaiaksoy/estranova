@@ -197,7 +197,7 @@ def test_portfolio_report_command_writes_report(tmp_path, monkeypatch):
     assert "# Portföy Karar-Destek Raporu" in text
     assert "Fiziki altın" in text
     assert "Z30EA" in text
-    assert "YLB -> YAY Sonrası Projeksiyon" in text
+    assert "Projeksiyon" in text
     assert "Ağırlıklar yalnızca fiyatı doğrulanan satırlar içinde hesaplanır" in text
 
 
