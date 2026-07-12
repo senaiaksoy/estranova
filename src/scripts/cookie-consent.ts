@@ -261,10 +261,17 @@ function init(): void {
     // (PSI filmstrip'te görülen senaryo). Hero/metin boyandıktan sonra aç.
     const openBanner = () => setVisible(banner, true);
     const scheduleOpen = () => {
-      if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(openBanner, { timeout: 3200 });
+      // `in` daraltması bazı TS hedeflerinde else dalını `never` yapıyor;
+      // typeof kontrolü ile hem tip hem runtime güvenli.
+      const scheduleIdle = (
+        window as Window & {
+          requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+        }
+      ).requestIdleCallback;
+      if (typeof scheduleIdle === 'function') {
+        scheduleIdle(openBanner, { timeout: 3200 });
       } else {
-        window.setTimeout(openBanner, 1800);
+        globalThis.setTimeout(openBanner, 1800);
       }
     };
     if (document.readyState === 'complete') {
