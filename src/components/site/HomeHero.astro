@@ -2,7 +2,7 @@
 import type { SubmenuHeroImage } from '../../data/submenu-heroes';
 
 interface Props {
-  hero: SubmenuHeroImage;
+  hero: SubmenuHeroImage & { srcset?: string; sizes?: string };
 }
 
 const { hero } = Astro.props;
@@ -11,9 +11,11 @@ const { hero } = Astro.props;
 <section class="relative isolate min-h-[min(64vh,720px)] w-full overflow-hidden md:min-h-[min(92vh,1100px)]" aria-labelledby="home-hero-title">
   <img
     src={hero.src}
+    srcset={hero.srcset}
+    sizes={hero.sizes ?? '100vw'}
     alt={hero.alt}
-    width="1800"
-    height="1000"
+    width="1280"
+    height="714"
     loading="eager"
     decoding="async"
     fetchpriority="high"

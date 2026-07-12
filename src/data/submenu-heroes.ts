@@ -13,9 +13,23 @@ export interface ArticleCardImage {
   alt: string;
 }
 
-/** Ana sayfa kahraman görseli (lüks editoryal şehirli eşik anı — 2026-05-06 update). */
-export const homePageHero: SubmenuHeroImage = {
-  src: '/images/hero/home-hero-luxury-editorial.webp',
+/** Ana sayfa kahraman görseli (lüks editoryal şehirli eşik anı — 2026-05-06 update).
+ *  Kaynak 5504px / ~764KB idi; mobil LCP için srcset varyantları (640–1920) üretildi.
+ *  `src` fallback olarak 1280w (~38–65KB bandı) kullanır — 5504px orijinali asla serve etme.
+ */
+export const homePageHero: SubmenuHeroImage & {
+  srcset: string;
+  sizes: string;
+} = {
+  src: '/images/hero/home-hero-luxury-editorial-1280.webp',
+  srcset: [
+    '/images/hero/home-hero-luxury-editorial-640.webp 640w',
+    '/images/hero/home-hero-luxury-editorial-960.webp 960w',
+    '/images/hero/home-hero-luxury-editorial-1280.webp 1280w',
+    '/images/hero/home-hero-luxury-editorial-1600.webp 1600w',
+    '/images/hero/home-hero-luxury-editorial-1920.webp 1920w',
+  ].join(', '),
+  sizes: '100vw',
   alt: 'Zarif bir girişte gün ışığına doğru yürüyen, krem elbise ve camel palto içindeki 40+ kadın; menopoz ve hormonal geçiş dönemini sakin, güçlü ve editoryal bir yaşam sahnesiyle anlatan ana sayfa görseli',
 };
 
