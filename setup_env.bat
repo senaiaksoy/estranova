@@ -21,13 +21,13 @@ if %errorlevel%==0 (
 echo [INFO] Gerekli kutuphaneler yukleniyor...
 if defined PYTHON_EXE (
     if /I "!PYTHON_EXE!"=="py" (
-        py -m pip install langgraph langchain langchain-community openai anthropic google-generativeai langchain-openai langchain-anthropic langchain-google-genai python-dotenv
+        py -m pip install -r agents\requirements.txt
     ) else (
-        "!PYTHON_EXE!" -m pip install langgraph langchain langchain-community openai anthropic google-generativeai langchain-openai langchain-anthropic langchain-google-genai python-dotenv
+        "!PYTHON_EXE!" -m pip install -r agents\requirements.txt
     )
 ) else (
     echo [WARN] Python executable bulunamadi, dogrudan pip denenecek...
-    pip install langgraph langchain langchain-community openai anthropic google-generativeai langchain-openai langchain-anthropic langchain-google-genai python-dotenv
+    pip install -r agents\requirements.txt
 )
 
 if %errorlevel%==0 (

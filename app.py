@@ -59,7 +59,7 @@ def main() -> None:
     p_dash = sub.add_parser("dashboard", help="output/ rapor ozeti (dashboard.py)")
     p_dash.add_argument("--last", type=int, default=7, help="Son N gun (varsayilan: 7)")
 
-    sub.add_parser("setup", help="Bagimliliklari yukle (pip install -r requirements.txt)")
+    sub.add_parser("setup", help="Bagimliliklari yukle (pip install -r agents/requirements.txt)")
 
     p_guide = sub.add_parser("guide", help="Okuyucu Rehberi onerileri (terminal, kural tabanli)")
     p_guide.add_argument(
@@ -114,7 +114,7 @@ def main() -> None:
 
     if args.command == "setup":
         rc = _run_in_root(
-            [py, "-m", "pip", "install", "-r", str(ROOT / "requirements.txt")]
+            [py, "-m", "pip", "install", "-r", str(ROOT / "agents" / "requirements.txt")]
         )
         if rc == 0:
             print("[OK] Kurulum tamamlandi.")
