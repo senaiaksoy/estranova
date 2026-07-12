@@ -38,6 +38,7 @@ SEO audit içinde makale sonu ve footer yüzeyleriyle doğrulanır.
 - Cloudflare Pages project dashboard: https://dash.cloudflare.com/4797b38bf5bfb1b15a30ac27f0a9a78f/pages/view/estranova
 - Cloudflare build komutu: `npm run build:cloudflare`
 - Cloudflare production build env: `PUBLIC_LAUNCH_MODE=production`
+- Python pipeline bağımlılıkları `agents/requirements.txt` altındadır (kökte `requirements.txt` yok). Böylece Pages build yalnızca npm kurar; site derlemesinde langgraph/chromadb kurulmaz.
 - Yayın bütünlüğü denetimi: `npm run articles:audit`
 - Sıkı denetim: `npm run articles:audit:strict`
 - SEO / canonical / Preferred Source denetimi: `npm run seo:audit`
