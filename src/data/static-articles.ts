@@ -180,14 +180,15 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
-    title: 'Menopoz Sonrası Büyük Göğüsler: Meme Küçültme Ne Zaman Bir Konfor Meselesine Dönüşür?',
+    title: 'Menopoz Sonrası Meme Küçültme: Ne Zaman Konfor Meselesi?',
     description:
-      'Menopoz sonrası dönemde büyük göğüslerin omuz, sırt, duruş, meme altı tahriş ve beden konforu açısından nasıl değerlendirilebileceğine; meme küçültme kararına acele etmeden, kişisel sağlık zeminiyle bakmaya dair Çağrı Sade imzalı rehber.',
+      'Menopoz sonrası büyük göğüsler omuz, sırt ve duruşu nasıl etkiler? Op. Dr. Çağrı Sade, meme küçültme kararını acele etmeden beden konforu ekseninde anlatıyor.',
     publishedDate: '30 Mayıs 2026',
     writerSlug: 'cagri-sade',
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik/',
     keywords: [
+      'menopoz sonrası meme küçültme',
       'menopoz sonrası büyük göğüs',
       'meme küçültme',
       'beden konforu',
@@ -921,13 +922,22 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
-    title: 'Uyku Bozukluğu ve Menopoz — Dinlenmeyi Yeniden Kazanma Rehberi',
-    description: 'Menopoz döneminde uyku bozukluklarını anlamak ve kanıt temelli adımlarla uyku kalitesini desteklemek için kapsamlı rehber.',
+    title: 'Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi',
+    description:
+      'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur, hangi sade adımlar denenebilir? Hormonal geçişte uyku bozukluğuna sakin bir rehber.',
     publishedDate: '12 Mart 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zihin & Denge',
     sectionPath: '/zihin-denge/',
-    keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],
+    keywords: [
+      'menopozda uykusuzluk',
+      'menopoz',
+      'uyku',
+      'uyku bozukluğu',
+      'insomnia',
+      'sıcak basması',
+      'uyku hijyeni',
+    ],
   },
   {
     path: '/zamansiz-yasam/beslenme-yaslanma/',

@@ -654,7 +654,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/': [
     {
-      question: 'Menopozda uyku bozukluğu yalnızca sıcak basmasına mı bağlıdır?',
+      question: 'Menopozda uykusuzluk yalnızca sıcak basmasına mı bağlıdır?',
       answer:
         'Hayır. Sıcak basması önemli bir neden olsa da anksiyete, erken uyanma, düzensiz uyku saati, horlama ve bacak huzursuzluğu gibi başka başlıklar da tabloyu besleyebilir. İyi uyku için önce hangi kapının öne çıktığını görmek gerekir.',
     },
