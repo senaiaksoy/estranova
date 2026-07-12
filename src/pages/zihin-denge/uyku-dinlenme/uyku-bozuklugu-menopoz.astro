@@ -36,19 +36,28 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Menopozda Uyku Bozukluğu — Dinlenme Rehberi';
+const articleTitle = 'Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi';
 const articleDescription =
-  'Menopozda uyku neden bozulur, hangi belirtiler yaygın, hangi adımlar denenebilir? Hormonal geçişin içinden geçen bir yaşıt perspektifinden, sakin bir uyku rehberi.';
+  'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur, hangi sade adımlar denenebilir? Hormonal geçişte uyku bozukluğuna sakin bir rehber.';
 const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '12 Mart 2026',
+  modifiedDate: '12 Temmuz 2026',
   pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
-  keywords: ['menopoz', 'uyku', 'uyku bozukluğu', 'insomnia', 'sıcak basması', 'uyku hijyeni'],
+  keywords: [
+    'menopozda uykusuzluk',
+    'menopoz',
+    'uyku',
+    'uyku bozukluğu',
+    'insomnia',
+    'sıcak basması',
+    'uyku hijyeni',
+  ],
   faqItems,
 
   siteUrl,
@@ -66,7 +75,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Zihin & Denge · Uyku"
-      title="Uyku Bozukluğu ve Menopoz — Dinlenmeyi Yeniden Kazanmanın Rehberi"
+      title="Menopozda Uykusuzluk — Uyku Bozukluğu Rehberi"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -91,7 +100,7 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
 <p>
-          Menopozda uyku, ilk bakışta görünenden daha katmanlı bir konudur. Sıcak basması, hormon dalgalanması ve
+          Menopozda uykusuzluk, ilk bakışta görünenden daha katmanlı bir konudur. Sıcak basması, hormon dalgalanması ve
           ruh hâli değişimleri aynı anda devreye girince sabah dinlenmemiş uyanmak alışkanlık hâline gelebilir.
           Bu rehber, mesele tek bir "doğru" çözüm değil — birkaç sade adımı tutarlı biçimde sürdürmek olduğunu
           öne çıkarıyor. Hormonal geçişin içinden geçen bir yaşıt perspektifinden — sakin, panik dilinden uzak.
@@ -120,8 +129,9 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="neden-bozulur">Menopozda Uyku Neden Bozulur?</h2>
         <p>
-          Bir gece ansızın sıcak basmasıyla uyanan bir kadın yalnız değildir. Pek çok kadının anlattığı sahne benzer:
-          serin bir oda, ince bir gecelik, sonra birden boğazdan yukarı bir dalga.
+          Menopozda uykusuzluk çoğu zaman tek bir geceyle sınırlı kalmaz. Bir gece ansızın sıcak basmasıyla
+          uyanan bir kadın yalnız değildir. Pek çok kadının anlattığı sahne benzer: serin bir oda, ince bir
+          gecelik, sonra birden boğazdan yukarı bir dalga.
         </p>
         <p>
           En sık nedenlerden biri gece ortaya çıkan sıcak basması-terleme belirtileridir <Evidence level={4} />.
@@ -166,7 +176,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Uyku alanında çalışan uzmanların sıklıkla altını çizdiği bir cümle var: "uyku hazırlığı yatakta değil,
           akşamın son iki saatinde başlar." Bu bakış, uykuyu bir karar değil bir geçiş alanı olarak görmeye
-          yardımcı oluyor. Kendi akşamında kurabileceğin tutarlılık ne olursa olsun — gerisi zamanla oturuyor.
+          yardımcı oluyor. Kendi akşamınızda kurabileceğiniz tutarlılık ne olursa olsun — gerisi zamanla oturuyor.
         </p>
 
         <h2 id="dogal-destekler">Doğal Destekler ve Takviyeler — Aceleci Olmadan</h2>

@@ -22,7 +22,7 @@ export const GET: APIRoute = ({ site }) => {
     'Allow: /',
     '',
     `Sitemap: ${base}/sitemap-index.xml`,
-    `# RSS: ${base}/rss.xml`,
+    `# Feed discovery: ${base}/rss.xml`,
   ];
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },

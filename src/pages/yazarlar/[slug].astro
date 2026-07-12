@@ -23,8 +23,10 @@ const currentPath = `/yazarlar/${writer.slug}/`;
 const displayWithTitle =
   writer.slug === 'senai-aksoy' ? 'Doç. Dr. Senai Aksoy' : writer.displayName;
 
-const pageTitle = `${displayWithTitle} — ${writer.role.split('/')[0].trim()} | Estranova`;
-const pageDescription = writer.publicBio;
+const pageTitle =
+  writer.seoTitle ??
+  `${displayWithTitle} — ${writer.role.split('/')[0].trim()} | Estranova`;
+const pageDescription = writer.seoDescription ?? writer.publicBio;
 ---
 
 <SiteLayout title={pageTitle} description={pageDescription}>

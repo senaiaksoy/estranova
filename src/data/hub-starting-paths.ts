@@ -157,9 +157,9 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
       {
         step: '01',
         label: 'En sık fark edilen',
-        title: 'Menopozda Uyku Bozukluğu',
+        title: 'Menopozda Uykusuzluk',
         excerpt:
-          'Uyku neden değişir, ne deneyebiliriz? Hormonal geçişin içinden geçen bir yaşıt perspektifinden uyku rehberi.',
+          'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur? Hormonal geçişin içinden geçen bir yaşıt perspektifinden uyku rehberi.',
         href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
         readingMinutes: 6,
       },

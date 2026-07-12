@@ -18,6 +18,10 @@ export interface Writer {
   // kadın sağlığı kesişimi); 'scientific' = hekim / klinik uzman / hareket
   // uzmanı, kendi alanında bilimsel anlatım. Default 'lifestyle'.
   category?: 'lifestyle' | 'scientific';
+  /** SERP title override — verilmezse displayName + role kullanılır. */
+  seoTitle?: string;
+  /** SERP meta description override — verilmezse publicBio kullanılır. */
+  seoDescription?: string;
   writingStyle?: {
     voice: string;
     rhythm: string;
@@ -312,6 +316,9 @@ export const writers: Writer[] = [
     ageBand: '53-55',
     publicBio:
       'Girişimsel kardiyoloji ve önleyici kalp sağlığı alanında çalışan deneyimli bir hekim. Estranova\'da menopoz sonrası kalp damar değişimini, kadın özelindeki risk başlıklarını ve erken taramanın neden önemli olduğunu sade Türkçeyle anlatıyor. Riski abartmadan ama geçiştirmeden konuşan sakin bir klinisyen sesi var.',
+    seoTitle: 'Dr. Alp Aslan Eryılmaz | Kardiyoloji — Estranova',
+    seoDescription:
+      'Dr. Alp Aslan Eryılmaz, girişimsel ve önleyici kardiyoloji hekimi. Estranova\'da menopoz sonrası kalp damar sağlığı ve erken tarama üzerine bilimsel yazılar.',
     signaturePhrase:
       'Menopoz sonrası kalp damar tablosunu, kadın bedeni özelinde önleyici kardiyoloji bakışıyla ve sayısal kanıtla — panik değil bilgiyle açan klinisyen.',
     portrait: '/images/writers/alp-aslan-eryilmaz.webp',
@@ -443,6 +450,9 @@ export const writers: Writer[] = [
     ageBand: '63-65',
     publicBio:
       'Ortopedi ve travmatoloji alanında çalışan deneyimli bir hekim. Estranova\'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarını cerrahiyi ilk cevap gibi sunmadan anlatıyor. Hastayı ameliyat masasından önce hayata yönlendirmeyi önemseyen sakin bir klinisyen.',
+    seoTitle: 'Prof. Dr. Bülent Aksoy | Ortopedi & Travmatoloji — Estranova',
+    seoDescription:
+      'Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji hekimi. Estranova\'da 40 sonrası kemik sağlığı, eklem ağrıları ve cerrahi sınır üzerine bilimsel yazılar.',
     signaturePhrase:
       'Postmenopozal kemik-kas-iskelet sistemini "ameliyat masasından önce hayata yönlendirmek" felsefesinde okuyan; cerrahi-öncesi konservatif yaklaşım ve sakin hekim tonuyla yazan akademisyen-cerrah.',
     portrait: '/images/writers/bulent-aksoy.webp',

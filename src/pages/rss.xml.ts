@@ -46,7 +46,8 @@ export async function GET(context: APIContext) {
     xmlns: {
       atom: 'http://www.w3.org/2005/Atom',
     },
-    trailingSlash: false,
+    // Site `trailingSlash: 'always'` — slash'siz RSS linkleri Cloudflare 308'ine çarpar.
+    trailingSlash: true,
   });
 }
 
