@@ -23,6 +23,12 @@ interface Props {
   ogType?: OgType;
   jsonLd?: JsonLdSchema | JsonLdSchema[];
   allowIndexing?: boolean;
+  /** LCP görseli — ana sayfa / hero sayfalarında erken preload için */
+  preloadLcpImage?: {
+    href: string;
+    imagesrcset?: string;
+    imagesizes?: string;
+  };
 }
 
 const {
@@ -33,6 +39,7 @@ const {
   ogType = 'website',
   jsonLd,
   allowIndexing = isProductionLaunch() && !isPathScheduled(Astro.url.pathname),
+  preloadLcpImage,
 } = Astro.props;
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -140,10 +147,19 @@ const allSchemas = [webSiteSchema, organizationSchema, drAksoyPersonSchema, ...a
     {googleSiteVerification && (
       <meta name="google-site-verification" content={googleSiteVerification} />
     )}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="alternate" type="application/rss+xml" title="Estranova — Editöryal Yayın" href="/rss.xml" />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    {preloadLcpImage && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadLcpImage.href}
+        imagesrcset={preloadLcpImage.imagesrcset}
+        imagesizes={preloadLcpImage.imagesizes}
+        fetchpriority="high"
+      />
+    )}
+    <slot name="head" />
 
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />

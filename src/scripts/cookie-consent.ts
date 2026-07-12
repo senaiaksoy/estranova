@@ -257,7 +257,21 @@ function init(): void {
   if (existing) {
     void loadAnalytics(existing);
   } else if (!hasDecided()) {
-    setVisible(banner, true);
+    // LCP'yi koru: ilk ziyarette modal hemen açılırsa beyaz kart LCP olur
+    // (PSI filmstrip'te görülen senaryo). Hero/metin boyandıktan sonra aç.
+    const openBanner = () => setVisible(banner, true);
+    const scheduleOpen = () => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(openBanner, { timeout: 3200 });
+      } else {
+        window.setTimeout(openBanner, 1800);
+      }
+    };
+    if (document.readyState === 'complete') {
+      scheduleOpen();
+    } else {
+      window.addEventListener('load', scheduleOpen, { once: true });
+    }
   }
 }
 
