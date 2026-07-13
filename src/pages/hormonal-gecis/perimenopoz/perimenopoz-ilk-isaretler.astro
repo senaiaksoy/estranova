@@ -34,6 +34,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem';
+const seoTitle = 'Perimenopozda İlk İşaretler';
 const articleDescription =
   'Perimenopozun ilk işaretlerini adet düzeni, uyku, sıcak basması, ruh hali, odaklanma ve beden hissi üzerinden panik yaratmadan okumak için Berna Aksoy’dan zarif ve sakin bir rehber.';
 const faqItems = articleFaqs['/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/'] ?? [];
@@ -62,7 +63,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

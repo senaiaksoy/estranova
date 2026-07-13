@@ -37,6 +37,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe';
+const seoTitle = 'NAD+ ve Hücresel Yaşlanma';
 const articleDescription =
   'NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, metabolizma, biliş, uzun yaşam ve fertilite faydası için insan kanıtı hâlâ sınırlı. Senai Aksoy, mekanizma ile klinik sonuç arasındaki mesafeyi sakin ve kanıta duyarlı biçimde açıyor.';
 const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/'] ?? [];
@@ -56,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

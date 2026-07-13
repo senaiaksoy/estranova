@@ -37,6 +37,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?';
+const seoTitle = 'Coenzyme Q10: Kanıt mı Reklam mı?';
 const articleDescription =
 'CoQ10 (ubiquinone) takviyesi anti-aging reklamlarının başrol oyuncularından biri; oysa kanıt tek bir hikaye değil. Statin yan etkisi, migren önleme ve kalp yetmezliği desteğinde gerçek klinik kanıt var; anti-aging ve menopozal "enerji" iddialarında kanıt çok daha sınırlı. Üç farklı yüzü ayrı ayrı, pazarlama dili yerine kanıt düzeyiyle.';
 const faqItems = articleFaqs['/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/'] ?? [];
@@ -67,7 +68,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

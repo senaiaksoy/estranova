@@ -27,6 +27,7 @@ function matchesSitemapPath(page, excludedPath) {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://estranova.com',
+  compressHTML: true,
   // Cloudflare Pages slash'lı versiyonu canonical sayıyor. Iç linklerin slash'sız
   // üretilmesi GSC'de "Yönlendirmeli sayfa" hatasına yol açıyordu (2026-05-23).
   // `trailingSlash: 'always'` + `format: 'directory'` ile Astro tüm canonical

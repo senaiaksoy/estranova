@@ -42,15 +42,18 @@ const archiveIssue = issues.find((i) => i.number === 0);
           const isCurrent = issue.number === currentIssue.number;
           return (
             <li>
-              <a
-                href={`/sayi/${issue.slug}/`}
+              <article
                 class:list={[
-                  'group relative flex h-full flex-col overflow-hidden rounded-[34px] border bg-white shadow-[0_28px_88px_-62px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2',
+                  'group relative flex h-full flex-col overflow-hidden rounded-[34px] border bg-white shadow-[0_28px_88px_-62px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition',
                   highlightCurrent && isCurrent
-                    ? 'border-primary/35 ring-2 ring-primary/20 hover:-translate-y-1 hover:shadow-[0_36px_104px_-66px_rgba(44,22,28,0.38)]'
-                    : 'border-primary/12 hover:-translate-y-1 hover:border-cream-warm/35 hover:shadow-[0_36px_104px_-66px_rgba(44,22,28,0.34)]',
+                    ? 'border-primary/35 ring-2 ring-primary/20'
+                    : 'border-primary/12',
                 ]}
               >
+                <a
+                  href={`/sayi/${issue.slug}/`}
+                  class="flex flex-1 flex-col focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
+                >
                 <span class="pointer-events-none absolute inset-x-6 top-0 z-10 h-px bg-cream-warm/60"></span>
                 <div class="relative aspect-[4/5] w-full overflow-hidden">
                   <img
@@ -97,7 +100,18 @@ const archiveIssue = issues.find((i) => i.number === 0);
                     Sayıyı oku →
                   </span>
                 </div>
-              </a>
+                </a>
+                {issue.editorColumnSlug && (
+                  <div class="border-t border-primary/10 bg-cream-soft/40 px-6 py-3">
+                    <a
+                      href={`/editorun-kosesi/${issue.editorColumnSlug}/`}
+                      class="text-xs font-semibold uppercase tracking-[0.16em] text-primary/85 underline decoration-primary/30 underline-offset-4 transition hover:text-primary hover:decoration-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35"
+                    >
+                      Sıcacık Köşe — {issue.monthYear}
+                    </a>
+                  </div>
+                )}
+              </article>
             </li>
           );
         })

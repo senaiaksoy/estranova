@@ -22,6 +22,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const pathname = '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/';
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/']!;
 const articleTitle = 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak';
+const seoTitle = 'Menopozda Cilt Değişimleri';
 const articleDescription =
   'Prof. Dr. Gonca Gökdemir, menopoz döneminde ciltte kuruluk, hassasiyet, leke eğilimi ve kolajen değişimini hormon, UV, melanin ve bariyer biyolojisi üzerinden anlatıyor.';
 const publishedDate = '18 Mayıs 2026';
@@ -68,7 +69,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

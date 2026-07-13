@@ -24,6 +24,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const pathname = '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/';
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/']!;
 const articleTitle = 'GHK-Cu ve Menopoz: Bakır Peptid, Cilt Yaşlanması ve Kanıt Sınırı';
+const seoTitle = 'GHK-Cu ve Menopoz: Kanıt Sınırı';
 const articleDescription =
   'GHK-Cu, kolajen ve onarım biyolojisi açısından ilgi çekici bir bakır peptid; ancak menopoz cildi, enjeksiyon kullanımı ve longevity iddiaları için insan kanıtı hâlâ sınırlı. Bu referans dosyası topikal kozmetik olasılığı, güvenlik sınırı ve pazarlama dilini kanıt düzeyiyle ayırır.';
 const publishedDate = '5 Haziran 2026';
@@ -74,7 +75,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

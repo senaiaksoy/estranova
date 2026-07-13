@@ -39,6 +39,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = "40'tan Sonra Harekete Yeniden Başlamak: Daha Sert Değil, Daha Akıllı";
+const seoTitle = '40 Sonrası Harekete Yeniden Başlamak';
 const articleDescription =
   '40 sonrası harekete yeniden başlamak için güç, denge, hareket açıklığı ve sürdürülebilirlik etrafında gerçek hayata sığan bir başlangıç yazısı.';
 const articleSchemas = buildArticleSchemas({
@@ -65,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

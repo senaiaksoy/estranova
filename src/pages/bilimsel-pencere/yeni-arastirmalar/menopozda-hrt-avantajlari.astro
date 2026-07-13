@@ -39,6 +39,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = "Menopozda HRT'nin Avantajları: Hangi Faydalar Daha Net, Hangilerinde Daha Temkinli Olmalı?";
+const seoTitle = 'Menopozda HRT Avantajları';
 const articleDescription =
   'Hormon tedavisi menopozda yalnızca sıcak basmasını azaltan bir seçenek değildir. Belirti rahatlaması, uyku, vajinal doku konforu, kemik sağlığı ve erken menopozdaki daha geniş koruma penceresi açısından hangi faydaların daha net, hangilerinin daha temkinli okunması gerektiğini bu derleme sakin bir dille ele alır.';
 const faqItems = articleFaqs[pathname] ?? [];
@@ -47,6 +48,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '6 Mayıs 2026',
+  modifiedDate: '13 Temmuz 2026',
   pathname,
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -73,7 +75,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}
@@ -105,16 +107,25 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Hormon tedavisinin en net avantajı, menopozun yaşam kalitesini bozan belirtilerini azaltmasıdır:
           özellikle sıcak basması, gece terlemesi ve bunlara bağlı uyku bölünmesi bu listenin başında gelir
-          <Evidence level={5} />. Vajinal kuruluk, ilişki sırasında rahatsızlık ve bazı idrar yolu yakınmaları
-          için de önemli bir yarar alanı vardır; burada lokal östrojen seçenekleri ayrıca güçlü bir yere sahiptir
+          <Evidence level={5} />.
+        </p>
+        <p>
+          Vajinal kuruluk, ilişki sırasında rahatsızlık ve bazı idrar yolu yakınmaları için de önemli bir yarar
+          alanı vardır; burada lokal östrojen seçenekleri ayrıca güçlü bir yere sahiptir
           <Evidence from={4} to={5} />. Kemik kaybını yavaşlatma ve erken menopozda daha geniş koruyucu bir
-          pencere sağlama tarafında da veri güçlüdür <Evidence level={5} />. Kilo artışını doğrudan tersine çeviren
-          bir tedavi gibi sunulmasa da, bazı kadınlarda yağ dağılımı ve bel çevresi üzerindeki menopoz ilişkili kaymayı
-          daha nötr hale getirebilir <Evidence level={3} />. Cilt kuruluğu, doku kalınlığı ve saç
-          kalitesindeki değişimler açısından ise bazı kadınlarda destekleyici bir etki görülebilir; fakat burada
-          kanıt daha sınırlıdır ve “gençleştirici” vaat dili doğru olmaz <Evidence level={2} />. Buna karşılık
-          kalp-damar, ruh hali, genel iyi oluş ya da bilişsel faydalar gibi başlıklarda cümle daha temkinli
-          kurulmalıdır: zamanlama önemli, herkes için aynı sonuç beklenmez ve her fayda aynı netlikte kanıtlanmış değildir.
+          pencere sağlama tarafında da veri güçlüdür <Evidence level={5} />.
+        </p>
+        <p>
+          Kilo artışını doğrudan tersine çeviren bir tedavi gibi sunulmasa da, bazı kadınlarda yağ dağılımı ve bel
+          çevresi üzerindeki menopoz ilişkili kaymayı daha nötr hale getirebilir <Evidence level={3} />. Cilt
+          kuruluğu, doku kalınlığı ve saç kalitesindeki değişimler açısından ise bazı kadınlarda destekleyici bir
+          etki görülebilir; fakat burada kanıt daha sınırlıdır ve “gençleştirici” vaat dili doğru olmaz
+          <Evidence level={2} />.
+        </p>
+        <p>
+          Kalp-damar, ruh hali, genel iyi oluş ya da bilişsel faydalar gibi başlıklarda cümle daha temkinli
+          kurulmalıdır: zamanlama önemli, herkes için aynı sonuç beklenmez ve her fayda aynı netlikte kanıtlanmış
+          değildir.
         </p>
       </ArticleSummary>
 
@@ -127,10 +138,13 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Birçok kadın bu konuya hâlâ tek bir soruyla geliyor: “Değer mi?” Bu soruyu küçümsemem; çünkü arkasında
           uykusuz geceler, ter içinde bölünen toplantılar, cinsellikte sessizce geri çekilme ve bazen de kemik
-          sağlığına dair haklı bir endişe olur. Ama tek bir cevap yok. HRT’nin sağlayabileceği yarar; hangi belirti
-          için düşünüldüğüne, menopozun hangi döneminde başlandığına, rahmin olup olmadığına ve kişisel risk tablosuna
-          göre değişir. Yine de tabloyu dürüstçe okumak için şunu söylemek mümkün: bazı faydalar belirgin ve güçlü
-          verilerle destekleniyor, bazıları ise daha sınırlı ve daha dikkatli konuşulmayı hak ediyor.
+          sağlığına dair haklı bir endişe olur.
+        </p>
+        <p>
+          Ama tek bir cevap yok. HRT’nin sağlayabileceği yarar; hangi belirti için düşünüldüğüne, menopozun hangi
+          döneminde başlandığına, rahmin olup olmadığına ve kişisel risk tablosuna göre değişir. Yine de tabloyu
+          dürüstçe okumak için şunu söylemek mümkün: bazı faydalar belirgin ve güçlü verilerle destekleniyor,
+          bazıları ise daha sınırlı ve daha dikkatli konuşulmayı hak ediyor.
         </p>
         <p>
           Görüşmede masaya çoğu zaman aynı cümle geliyor: “Sıcak basmalarım için mi, kemiklerim için mi, yoksa genel
@@ -293,8 +307,10 @@ const articleSchemas = buildArticleSchemas({
           Östrojen, cilt kalınlığı, nem dengesi, kolajen düzeni ve saç folikül çevresindeki biyolojiyle ilişkilidir.
           Bu nedenle bazı kadınlarda menopozla birlikte belirginleşen <strong>cilt kuruluğu</strong>, daha ince doku
           hissi, elastikiyet kaybı ya da saç telinde cansızlaşma HRT ile bir miktar yumuşayabilir <Evidence level={2} />.
-          Özellikle ciltte su tutma, bariyer hissi ve genel konfor tarafında bazı olumlu değişimler bildiren veriler var;
-          ancak bu veriler kemik ve vazomotor belirti kadar güçlü değil.
+        </p>
+        <p>
+          Özellikle ciltte su tutma, bariyer hissi ve genel konfor tarafında bazı olumlu değişimler bildiren veriler
+          var; ancak bu veriler kemik ve vazomotor belirti kadar güçlü değil.
         </p>
         <p>
           Saç tarafında da tablo benzer. Menopoz döneminde saç teli incelmesi, hacim kaybı ve dökülme artışı çoğu zaman
