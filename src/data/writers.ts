@@ -81,6 +81,9 @@ export const writers: Writer[] = [
     displayName: 'Berna Aksoy',
     role: 'Yönetici Editör / Ana Yazar',
     ageBand: '55-56',
+    seoTitle: 'Berna Aksoy | Estranova Yönetici Editör',
+    seoDescription:
+      'Berna Aksoy, Estranova yönetici editörü. Hormonal geçiş, 40 sonrası sağlık ve yaşam tarzı başlıklarında yayın çizgisini şekillendiren yaşıt yazar.',
     publicBio:
       'Kurumsal hayatın ardından kendi işini kurmuş, kararlarını aceleyle değil veriyle veren bir yönetici. Estranova\'da yayın çizgisini, içerik önceliklerini ve önleyici sağlık başlıklarını şekillendiriyor. Telaşı sevmeyen, resmi sadeleştirip okura yön duygusu veren bir yaşıt.',
     signaturePhrase:
@@ -361,6 +364,9 @@ export const writers: Writer[] = [
     displayName: 'Dr. Metin Alış',
     role: 'Endokrinoloji & Metabolizma Bilimsel Yazarı',
     ageBand: '53-55',
+    seoTitle: 'Dr. Metin Alış | Endokrinoloji — Estranova',
+    seoDescription:
+      'Dr. Metin Alış, endokrinoloji ve metabolizma hekimi. Estranova\'da tiroid-menopoz kavşağı, kemik ve metabolik denge başlıklarında bilimsel yazılar.',
     publicBio:
       'Endokrinoloji ve metabolizma alanında çalışan bir hekim. Estranova\'da hormonal geçişle iç içe geçen tiroid, kemik ve metabolik denge başlıklarını sade Türkçeyle açıyor. Yanlış anlaşılan tabloları panik yaratmadan netleştirmeyi seven bir klinisyen.',
     signaturePhrase:
@@ -453,7 +459,7 @@ export const writers: Writer[] = [
       'Ortopedi ve travmatoloji alanında çalışan deneyimli bir hekim. Estranova\'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarını cerrahiyi ilk cevap gibi sunmadan anlatıyor. Hastayı ameliyat masasından önce hayata yönlendirmeyi önemseyen sakin bir klinisyen.',
     seoTitle: 'Prof. Dr. Bülent Aksoy | Ortopedi — Estranova',
     seoDescription:
-      'Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji hekimi. Estranova\'da 40 sonrası kemik sağlığı, eklem ağrıları ve cerrahi sınır üzerine bilimsel yazılar.',
+      'Prof. Dr. Bülent Aksoy (Bulent Aksoy), ortopedi ve travmatoloji hekimi. Estranova\'da 40 sonrası kemik sağlığı, eklem ağrıları ve cerrahi sınır üzerine bilimsel yazılar.',
     signaturePhrase:
       'Postmenopozal kemik-kas-iskelet sistemini "ameliyat masasından önce hayata yönlendirmek" felsefesinde okuyan; cerrahi-öncesi konservatif yaklaşım ve sakin hekim tonuyla yazan akademisyen-cerrah.',
     portrait: '/images/writers/bulent-aksoy.webp',

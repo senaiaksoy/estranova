@@ -21,13 +21,14 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
     title: 'Menopoz Sonrası Karın Germe: Aynadaki Görüntü ile Beden Hissi Aynı Şeyi Söylemiyorsa',
     description:
-      'Menopoz sonrası karın bölgesinde yağ dağılımı, cilt elastikiyeti, bağ dokusu ve karın duvarı değişimlerini; karın germe kararına acele etmeden, beden hissi ve sağlık zeminiyle bakmayı anlatan Çağrı Sade imzalı rehber.',
+      'Menopoz sonrası karında değişen şey her zaman kilo ya da şişkinlik değildir. Yağ dağılımı, cilt elastikiyeti, bağ dokusu ve karın duvarı değişimlerini; karın germe kararına acele etmeden anlatan Çağrı Sade imzalı rehber.',
     publishedDate: '29 Haziran 2026',
     writerSlug: 'cagri-sade',
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik/',
     keywords: [
       'menopoz sonrası karın germe',
+      'menopozda karın şişliği',
       'abdominoplasti',
       'karın bölgesi gevşemesi',
       'menopozda karın yağlanması',
@@ -101,15 +102,17 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
-    title: 'Denge Kaybolmadan: Ayak, Kalça ve Gövde Hattını Yeniden Duymak',
+    title: 'Denge ve Ayak: Kalça ile Gövde Hattını Yeniden Duymak',
     description:
-      'Düşmeyi beklemeden dengeyi okumak: ayak tabanı, kalça çevresi, gövde kontrolü ve ev içindeki küçük işaretler 40 sonrası hareket güvenini anlatır.',
+      '40 sonrasında dengeyi düşmeden önce okumak: ayak tabanı, ayak sağlığı, kalça çevresi, gövde kontrolü ve ev içindeki küçük işaretler hareket güvenini anlatır.',
     publishedDate: '1 Haziran 2026',
     writerSlug: 'ersin-sarac',
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam/',
     keywords: [
       'denge',
+      'denge ayak',
+      'ayak sağlığı',
       '40 sonrası hareket',
       'düşme önleme',
       'ayak tabanı',
@@ -575,14 +578,15 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
-    title: 'Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem',
+    title: 'Perimenopoz Belirtileri ve İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem',
     description:
-      'Perimenopozun ilk işaretlerini adet düzeni, uyku, sıcak basması, ruh hali, odaklanma ve beden hissi üzerinden panik yaratmadan okumak için Berna Aksoy’dan zarif ve sakin bir rehber.',
+      'Perimenopoz çoğu zaman tek bir büyük alarmla değil; adet düzeni, uyku, sıcak basması, ruh hali ve odaklanma gibi küçük işaretlerle fark edilir. Belirtileri panik yaratmadan okumak için sakin bir rehber.',
     publishedDate: '4 Mayıs 2026',
     writerSlug: 'berna-aksoy',
     section: 'Hormonal Geçiş · Perimenopoz',
     sectionPath: '/hormonal-gecis/',
     keywords: [
+      'perimenopoz belirtileri',
       'perimenopoz',
       'menopoz geçişi',
       'adet düzensizliği',
@@ -597,12 +601,13 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
     title: 'Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?',
     description:
-      'Akşam egzersizi, melatonin, beden ısısı ve perimenopozda uyku ilişkisi. Alara Baykent sporcu beden okumasıyla, performans baskısı yaratmadan sürdürülebilir akşam hareketini anlatıyor.',
+      'Akşam yürüyüşü ve hafif hareket uykuyu bozar mı, yoksa toparlar mı? Melatonin, beden ısısı ve perimenopozda uyku ilişkisi — performans baskısı yaratmadan.',
     publishedDate: '4 Mayıs 2026',
     writerSlug: 'alara-baykent',
     section: 'Zihin & Denge · Uyku & Dinlenme',
     sectionPath: '/zihin-denge/',
     keywords: [
+      'akşam yürüyüşü',
       'akşam egzersizi',
       'uyku',
       'melatonin',
@@ -801,12 +806,23 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
     title: 'Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi',
     description:
-      'Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.',
+      'Sıcak basması ve gece terlemesi neden olur? Ateş basması denen o ani ısı dalgası, tetikleyiciler ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.',
     publishedDate: '25 Nisan 2026',
     writerSlug: 'senai-aksoy',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis/',
-    keywords: ['sıcak basması', 'gece terlemesi', 'menopoz', 'perimenopoz', 'uyku', 'tetikleyiciler'],
+    keywords: [
+      'sıcak basması',
+      'gece terlemesi',
+      'ateş basması',
+      'gece ateş basması',
+      'menopozda gece terlemeleri',
+      'sıcak basması terleme',
+      'menopoz',
+      'perimenopoz',
+      'uyku',
+      'tetikleyiciler',
+    ],
   },
   {
     path: '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
@@ -830,13 +846,14 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
-    title: 'NAD+ Takviyesi: Bilim Ne Diyor?',
-    description: 'NAD+ takviyeleri hakkında güncel bilimsel verileri, olası faydaları, sınırlılıkları ve güvenlik başlıklarını sade bir dille ele alan rehber.',
-    publishedDate: '17 Nisan 2026',
+    title: 'NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı',
+    description:
+      'Anti-aging takviyeleri arasında NAD+ öncüleri (NMN, NR; aramalarda NAD Plus diye de geçer) yoğun pazarlanıyor. Kanıt seviyesi, güvenlik ve hekimle konuşulacak sorular — promosyon değil, dürüst yorumlama.',
+    publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
     sectionPath: '/zamansiz-yasam/',
-    keywords: ['NMN', 'NR', 'NAD+', 'takviye', 'menopoz', 'güvenlik'],
+    keywords: ['NMN', 'NR', 'NAD+', 'NAD Plus', 'nad plus', 'takviye', 'menopoz', 'güvenlik'],
   },
   {
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/',
