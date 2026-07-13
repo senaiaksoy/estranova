@@ -36,6 +36,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni';
+const seoTitle = 'Tiroid mi Menopoz mu?';
 const articleDescription =
   'Yorgunluk, kilo artışı ve uyku bozukluğu üçlüsü 40+ kadında tiroid disfonksiyonu, hormonal geçiş ve metabolik değişimin üç ekseninde okunur. Hashimoto ve perimenopozun benzer belirtileri nasıl ayrılır, TSH ve fT4 hangi soruyu cevaplar, hangisini cevaplamaz — bir endokrinolog gözüyle yanlış anlaşılan tabloyu açan klinik ayırma rehberi.';
 const pathname = '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/';
@@ -66,7 +67,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

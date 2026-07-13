@@ -34,6 +34,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi';
+const seoTitle = 'Sıcak Basması ve Gece Terlemesi';
 const articleDescription =
   'Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.';
 const faqItems = articleFaqs['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/'] ?? [];
@@ -52,7 +53,7 @@ const articleSchemas = buildArticleSchemas({
 });
 ---
 
-<SiteLayout title={`${articleTitle} - Estranova`} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
+<SiteLayout title={`${seoTitle} - Estranova`} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
   <SiteNavbar currentPath="/hormonal-gecis/" />
 
   <main id="main-content" class="text-ink">

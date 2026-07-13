@@ -23,6 +23,7 @@ const hero =
   submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik/']!;
 const articleTitle =
   'Menopoza Hazırlıkta İlk Kontrol Dosyası: Hangi Test Ne Söyler, Hangisi Herkes İçin Gerekli Değildir?';
+const seoTitle = 'Menopoza Hazırlık: İlk Kontrol';
 const articleDescription =
   'Menopoza yaklaşırken hangi kan tahlilleri, taramalar ve temel kontroller gerçekten anlamlıdır? Bu rehber, sık istenen testleri panik yaratmadan açıklamaya, her sonucun ne söylediğini ayırt etmeye ve gereksiz test kalabalığı içinde daha sakin bir yol kurmaya yardımcı olur.';
 const publishedDate = '4 Mayıs 2026';
@@ -69,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

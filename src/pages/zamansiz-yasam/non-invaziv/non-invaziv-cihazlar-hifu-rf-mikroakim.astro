@@ -37,6 +37,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'HIFU, Radyofrekans ve Mikroakım — Non-İnvaziv Cihazların Kanıt Sınırı';
+const seoTitle = 'HIFU, RF ve Mikroakım: Kanıt Sınırı';
 const articleDescription =
 'HIFU, radyofrekans ve mikroakım cihazları "ameliyatsız yüz germe" vaadiyle yoğun pazarlanıyor; oysa kanıt cerrahi sonuçtan belirgin biçimde uzakta. HIFU yüz germede orta kanıt, RF cilt sıkılaştırma ve pelvik uygulamalar zayıf-orta kanıt, mikroakım ve LED ev cihazları sınırlı. Postmenopozal cilt zemini, beklenti yönetimi ve klinik karar için dürüst rehber.';
 const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/'] ?? [];
@@ -67,7 +68,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

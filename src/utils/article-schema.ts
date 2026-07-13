@@ -179,7 +179,8 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
       url: siteUrl,
       logo: { '@type': 'ImageObject', url: joinUrl(siteUrl, '/favicon.svg') },
     },
-    reviewedBy: reviewerPerson,
+    // GSC: Article.reviewedBy "property not recognized" olarak bayraklanıyor.
+    // Tıbbi inceleme sinyali MedicalWebPage.reviewedBy'da kalır (CreativeWork domain).
     ...(resolvedImage ? { image: resolvedImage } : {}),
   };
 

@@ -33,6 +33,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?';
+const seoTitle = 'Koruyucu Sağlık Kayıtları';
 const articleDescription =
   'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo, aile öyküsü ve semptom notlarını hekime götürülebilecek sade bir kişisel referans dosyasına dönüştürme rehberi.';
 const pathname = '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/';
@@ -62,7 +63,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

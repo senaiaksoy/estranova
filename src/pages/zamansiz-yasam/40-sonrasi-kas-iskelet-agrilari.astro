@@ -34,6 +34,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek';
+const seoTitle = '40 Sonrası Diz, Kalça ve Bel Ağrısı';
 const articleDescription =
   '40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge, ağrı sinyali ve fizyoterapi desteği üzerinden anlatan sade rehber.';
 const articlePath = '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/';
@@ -54,7 +55,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

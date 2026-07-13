@@ -220,6 +220,7 @@ export const writers: Writer[] = [
     slug: 'gonca-gokdemir',
     displayName: 'Prof. Dr. Gonca Gökdemir',
     role: 'Medikal & Kozmetik Dermatoloji Bilimsel Yazarı',
+    seoTitle: 'Prof. Dr. Gonca Gökdemir | Dermatoloji — Estranova',
     ageBand: '58-62',
     publicBio:
       "Medikal ve kozmetik dermatoloji alanında 25 yılı aşkın deneyimli bir akademisyen. Şişli Etfal, Okmeydanı, İstanbul Tıp Fakültesi, Liv Hospital ve Bahçeşehir Üniversitesi Tıp Fakültesi'nde görev yaptı; ~150 yerli ve yabancı yayın, çok sayıda kongre sunumu, estetik dermatoloji eğitmenliği ve medikal kozmetik marka danışmanlığı geçmişine sahip. Estranova'da cilt sağlığı, hormonal geçişin cilde etkileri ve estetik dermatoloji başlıklarında yazıyor — \"trendin değil cildin tarafında duran\" bir bakışla; anlaşılır anlatımla, marka pazarlamasından uzak, cilt biyolojisi merkezli.",
@@ -450,7 +451,7 @@ export const writers: Writer[] = [
     ageBand: '63-65',
     publicBio:
       'Ortopedi ve travmatoloji alanında çalışan deneyimli bir hekim. Estranova\'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarını cerrahiyi ilk cevap gibi sunmadan anlatıyor. Hastayı ameliyat masasından önce hayata yönlendirmeyi önemseyen sakin bir klinisyen.',
-    seoTitle: 'Prof. Dr. Bülent Aksoy | Ortopedi & Travmatoloji — Estranova',
+    seoTitle: 'Prof. Dr. Bülent Aksoy | Ortopedi — Estranova',
     seoDescription:
       'Prof. Dr. Bülent Aksoy, ortopedi ve travmatoloji hekimi. Estranova\'da 40 sonrası kemik sağlığı, eklem ağrıları ve cerrahi sınır üzerine bilimsel yazılar.',
     signaturePhrase:
@@ -743,6 +744,7 @@ export const writers: Writer[] = [
     slug: 'isik-selin-gunce',
     displayName: 'Işık Selin Günce',
     role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
+    seoTitle: 'Işık Selin Günce | Estranova Yazarı',
     ageBand: 'Belirtilmedi',
     publicBio:
       'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı yazıya taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurun hissini önce normalize ederek yazıyor. Panik değil yön duygusu veren sıcak bir yaşıt sesi var.',

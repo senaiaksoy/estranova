@@ -21,6 +21,7 @@ const pathname = '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikist
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const articleTitle = 'Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında: Gerginliği Fark Etmenin İnce Yolu';
+const seoTitle = 'Duruş ve Sessiz Beden Sıkışması';
 const articleDescription =
   'Boyun, omuz, çene, kaburga hattı ya da kalçada biriken gerginlik her zaman kötü duruşla başlamaz; bazen beden yalnızca fazla şeyi sessizce taşımaya başlar. Işık Selin Günce, sahne disiplininden gelen beden farkındalığıyla gün içinde biriken sıkışmayı büyütmeden nasıl okuyabileceğimizi anlatıyor.';
 
@@ -83,7 +84,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

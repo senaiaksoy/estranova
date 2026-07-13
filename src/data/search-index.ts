@@ -4,7 +4,8 @@
  * - "Kategori": 5 hub + 17 alt-hub framework sayfası
  * - "Makale": static-articles manifest'inden gelen 17+ makale
  *
- * Bu index build-time'da derlenir; SearchOverlay onu client-side filtre eder.
+ * Bu index build-time'da derlenir; `/search-index.json` olarak yayınlanır.
+ * SearchOverlay ilk açılışta fetch eder (her HTML sayfasına gömülmez).
  */
 
 import { mainNav } from './navigation';

@@ -21,6 +21,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const pathname = '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/';
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zihin-denge/bilissel-saglik/']!;
 const articleTitle = 'Perimenopozda Zihinsel Bulanıklık: Unutkanlık Hissi Günlük Hayatta Nasıl Okunur?';
+const seoTitle = 'Perimenopozda Zihinsel Bulanıklık';
 const articleDescription =
   'Perimenopoz döneminde kelime bulmakta zorlanma, unutkanlık hissi, odak dalgalanması ve zihinsel yorgunluk neden olur? Bu rehber, gündelik hayatta fark edilen bilişsel değişimleri panik yaratmadan anlamaya ve ne zaman daha dikkatli değerlendirme gerektiğini ayırt etmeye yardımcı olur.';
 const publishedDate = '4 Mayıs 2026';
@@ -65,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

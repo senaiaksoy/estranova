@@ -35,6 +35,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar';
+const seoTitle = 'Epitalon ve Telomer: Klinik Sınırlar';
 const articleDescription =
   "Epitalon, pineal bez ekstraktından elde edilen küçük bir peptid; sağlıklı hücrelerde telomeraz aktivitesini destekleyebilirken kanser hücrelerinde farklı bir telomer onarım yolunu (ALT) tetikleyebileceği gösterilmiş. Bu yazı telomer biyolojisini sade açıyor; Epitalon'un sağlıklı hücre ile kanser hücresinde neden farklı çalıştığını anlatıyor; kanıt düzeyini dürüstçe yorumluyor; ve klinik karşılığı için pratik sınırları çiziyor — pazarlama değil, yapılandırılmış bilgi.";
 const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/'] ?? [];
@@ -53,7 +54,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

@@ -1,5 +1,4 @@
 ﻿---
-import { searchIndex } from '../../data/search-index';
 ---
 
 <div id="search-overlay" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Site içinde ara">
@@ -71,7 +70,7 @@ import { searchIndex } from '../../data/search-index';
   </div>
 </div>
 
-<script define:vars={{ items: searchIndex }}>
+<script>
   const searchOverlay = document.getElementById('search-overlay');
   const searchBackdrop = document.getElementById('search-backdrop');
   const searchInput = document.getElementById('search-input');
@@ -79,6 +78,9 @@ import { searchIndex } from '../../data/search-index';
   const searchFiltered = document.getElementById('search-filtered');
   const searchEmpty = document.getElementById('search-empty');
 
+  /** @type {Array<{title:string,description:string,href:string,category:string}>|null} */
+  let items = null;
+  let itemsPromise = null;
   let activeIndex = -1;
   let visibleItems = [];
 
@@ -93,6 +95,26 @@ import { searchIndex } from '../../data/search-index';
 
   function metaFor(item) {
     return categoryMeta[item.category] || { color: 'bg-ink/5 text-ink/55', label: item.category };
+  }
+
+  function loadItems() {
+    if (items) return Promise.resolve(items);
+    if (itemsPromise) return itemsPromise;
+    itemsPromise = fetch('/search-index.json')
+      .then((res) => {
+        if (!res.ok) throw new Error('search-index fetch failed');
+        return res.json();
+      })
+      .then((data) => {
+        items = Array.isArray(data) ? data : [];
+        return items;
+      })
+      .catch(() => {
+        itemsPromise = null;
+        items = [];
+        return items;
+      });
+    return itemsPromise;
   }
 
   function createResultItem(item, idx) {
@@ -114,6 +136,7 @@ import { searchIndex } from '../../data/search-index';
   }
 
   function renderDefault() {
+    if (!items) return;
     searchDefault.innerHTML = '';
     const groups = {};
     items.forEach((item) => {
@@ -138,6 +161,7 @@ import { searchIndex } from '../../data/search-index';
   }
 
   function renderFiltered(query) {
+    if (!items) return;
     const q = normalize(query);
     const matched = items.filter(
       (item) =>
@@ -186,7 +210,7 @@ import { searchIndex } from '../../data/search-index';
     }
   }
 
-  function openSearch() {
+  async function openSearch() {
     searchOverlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
     searchInput.value = '';
@@ -194,6 +218,7 @@ import { searchIndex } from '../../data/search-index';
     searchDefault.classList.remove('hidden');
     searchFiltered.classList.add('hidden');
     searchEmpty.classList.add('hidden');
+    await loadItems();
     renderDefault();
     requestAnimationFrame(() => searchInput.focus());
   }

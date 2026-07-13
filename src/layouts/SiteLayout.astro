@@ -79,7 +79,6 @@ const organizationSchema: JsonLdSchema = {
   logo: `${siteBase}/favicon.svg`,
   description: '40+ kadın sağlığına odaklanan bağımsız editoryal sağlık platformu.',
   foundingDate: '2026',
-  inLanguage: 'tr-TR',
   knowsAbout: [
     'Perimenopoz',
     'Menopoz',
@@ -95,11 +94,12 @@ const organizationSchema: JsonLdSchema = {
     'https://www.wikidata.org/wiki/Q140051019',
     'https://senaiaksoy.net',
   ],
-  reviewedBy: { '@id': DR_AKSOY_PERSON_ID },
+  // GSC: Organization üzerinde reviewedBy / inLanguage Schema.org domain'inde değil.
+  // Dil → WebSite.inLanguage; tıbbi inceleme → MedicalWebPage.reviewedBy.
 };
 
-// Dr. Aksoy Person entity — author/reviewedBy @id referansları (organization +
-// makale şemaları) site içinde çözülebilsin diye her sayfada bir kez tanımlanır.
+// Dr. Aksoy Person entity — MedicalWebPage.reviewedBy @id referansları
+// site içinde çözülebilsin diye her sayfada bir kez tanımlanır.
 // Kanonik @id senaiaksoy.net'tedir; aynı @id + tutarlı isim/sameAs ile siteler
 // arası entity birleşmesini güçlendirir (E-E-A-T / AI-search yazar otoritesi).
 const drAksoyPersonSchema: JsonLdSchema = {
