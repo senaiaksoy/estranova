@@ -36,17 +36,29 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi';
 const seoTitle = 'Sıcak Basması ve Gece Terlemesi';
 const articleDescription =
-  'Sıcak basması ve gece terlemesinin nedenlerini, tetikleyicilerini ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.';
+  'Sıcak basması ve gece terlemesi neden olur? Ateş basması denen o ani ısı dalgası, tetikleyiciler ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.';
 const faqItems = articleFaqs['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '25 Nisan 2026',
+  modifiedDate: '13 Temmuz 2026',
   pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
-  keywords: ['sıcak basması', 'gece terlemesi', 'menopoz', 'perimenopoz', 'uyku', 'tetikleyiciler'],
+  keywords: [
+    'sıcak basması',
+    'gece terlemesi',
+    'ateş basması',
+    'gece ateş basması',
+    'menopozda gece terlemeleri',
+    'sıcak basması terleme',
+    'menopoz',
+    'perimenopoz',
+    'uyku',
+    'tetikleyiciler',
+  ],
   faqItems,
 
   siteUrl,
@@ -77,11 +89,11 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
 <p>
-          Sıcak basması ve gece terlemesi bu dönemin en çok duyulan başlıklarından biri. "Birden ısınıyorum,
-          sonra üşüyorum" cümlesini muayene odasında defalarca duyarım. Klinik olarak şunu söyleyebilirim: bu belirtiler
-          "yalnızca stres" değil; bedenin ısı düzenleme sistemi ile hormon dalgalanmasının birlikte yazdığı
-          biyolojik bir denklem. İyi haber şu — birkaç sade adım ve gerektiğinde kişiye uygun tıbbi seçeneklerle
-          çoğu kadında şiddet ve sıklık belirgin biçimde yumuşayabiliyor.
+          Sıcak basması ve gece terlemesi bu dönemin en çok duyulan başlıklarından biri. "Birden ısınıyorum, sonra
+          üşüyorum" cümlesini muayene odasında defalarca duyarım. Klinik olarak şunu söyleyebilirim: bu belirtiler
+          "yalnızca stres" değil. Bedenin ısı düzenleme sistemi ile hormon dalgalanması birlikte yazıyor bu denklemi.
+          İyi haber şu — birkaç sade adım ve gerektiğinde kişiye uygun tıbbi seçeneklerle çoğu kadında şiddet ve sıklık
+          yumuşayabiliyor.
         </p>
       </ArticleSummary>
 
@@ -92,10 +104,11 @@ const articleSchemas = buildArticleSchemas({
           oluyor. Sahne aynı, paylaşan çok.
         </p>
         <p>
-          Tıpta vazomotor belirti (damar açılma-kapanma kaynaklı yakınma) dediğimiz şey aslında bunun karşılığı: sıcak basması ve gece
-          terlemesi aynı başlık altında değerlendiriliyor <Evidence level={5} />. Sıcak basması genellikle yüz, boyun ve göğüs
-          bölgesinde ani bir ısı dalgası ve terlemeyle başlar; birkaç dakika içinde dalga gibi geçer, ardından üşüme gelebilir. Gece
-          terlemesi ise aynı sahnenin uyku saatindeki versiyonu — terleyerek uyanmak ve ardından yeniden uykuya dalmakta zorlanmak.
+          Tıpta vazomotor belirti (damar açılma-kapanma kaynaklı yakınma) dediğimiz şey aslında bunun karşılığı: sıcak
+          basması ve gece terlemesi aynı başlık altında değerlendiriliyor <Evidence level={5} />. Günlük dilde buna sıkça
+          ateş basması da denir. Sahne tanıdıktır: yüz, boyun ve göğüste ani bir ısı dalgası, ardından terleme. Birkaç
+          dakika içinde geçer; bazen üşüme gelir. Gece olursa tablo menopozda gece terlemeleri diye anlatılır —
+          terleyerek uyanmak, sonra yeniden uykuya dönememek.
         </p>
         <p>
           Çoğu kadının yıllarca "stres", "havalar nedeniyle" diye geçiştirdiği bu belirti aslında menopoz
@@ -111,8 +124,8 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Menopoz geçişinde östrojen dalgalanması, beynin ısı düzenleme merkezinin (hipotalamus — vücudun termostatı gibi çalışan
           merkez) hassasiyetini değiştirebiliyor <Evidence level={5} />. Bu termostat daralan bir aralıkta çalışmaya başlayınca
-          küçük ısı değişimleri bile "vücut ısınıyor" alarmını tetikliyor; vücut hızlı serinlemek için cilt damarlarını açıyor ve
-          terleme refleksini başlatıyor. Sahne dışarıdan ani görünür; içeride aslında biyolojik bir refleks.
+          küçük ısı değişimleri bile “vücut ısınıyor” alarmını tetikleyebilir. Vücut hızlı serinlemek için cilt damarlarını
+          açıyor ve terleme refleksini başlatıyor. Sahne dışarıdan ani görünür; içeride aslında biyolojik bir refleks.
         </p>
         <p>
           Bu süreç tek bir hormona indirgenmez. Uyku eksikliği, stres yükü, beden ağırlığı ve sigara kullanımı
@@ -286,10 +299,10 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
           class="mt-14"
           paths={[
+            '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
             '/hormonal-gecis/menopoz/menopoz-nedir/',
             '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
             '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
-            '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
           ]}
         />
 

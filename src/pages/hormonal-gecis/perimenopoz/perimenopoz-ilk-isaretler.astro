@@ -33,20 +33,22 @@ const tocEntries = [
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Perimenopozda İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem';
-const seoTitle = 'Perimenopozda İlk İşaretler';
+const articleTitle = 'Perimenopoz Belirtileri ve İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem';
+const seoTitle = 'Perimenopoz Belirtileri ve İlk İşaretler';
 const articleDescription =
-  'Perimenopozun ilk işaretlerini adet düzeni, uyku, sıcak basması, ruh hali, odaklanma ve beden hissi üzerinden panik yaratmadan okumak için Berna Aksoy’dan zarif ve sakin bir rehber.';
+  'Perimenopoz çoğu zaman tek bir büyük alarmla değil; adet düzeni, uyku, sıcak basması, ruh hali ve odaklanma gibi küçük işaretlerle fark edilir. Belirtileri panik yaratmadan okumak için sakin bir rehber.';
 const faqItems = articleFaqs['/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '4 Mayıs 2026',
+  modifiedDate: '13 Temmuz 2026',
   pathname: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
   keywords: [
+    'perimenopoz belirtileri',
     'perimenopoz',
     'menopoz geçişi',
     'adet düzensizliği',
@@ -73,7 +75,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Hormonal Geçiş · Perimenopoz"
-      title="Perimenopozda İlk İşaretler"
+      title="Perimenopoz Belirtileri ve İlk İşaretler"
       lede="Bazen ilk işaret takvimde değil, sabah aynaya bakarken gelen o küçük cümlede belirir: beden aynı, ama ritmi aynı değil."
       imageSrc={hero.src}
       imageAlt={hero.alt}
@@ -92,11 +94,11 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
         <p>
-          Perimenopoz çoğu zaman tek bir büyük belirtiyle değil, yan yana geldiğinde anlam kazanan küçük işaretlerle fark
-          edilir: adet aralığının değişmesi, uykunun bölünmesi, sıcak basması, gece terlemesi, odak dağınıklığı, ruh halinde
-          daha hızlı dalgalanma ve bedenin eski ritmine aynı yanıtı vermemesi. Bu yazı tanı koymaz; ama hangi notların
-          izlenebilir olduğunu, hangi durumda hekime danışmanın geciktirilmemesi gerektiğini ve tek bir test sonucuna neden
-          fazla anlam yüklenmemesi gerektiğini sakin bir haritaya çevirir.
+          Bu dönemin belirtileri çoğu zaman tek bir büyük alarmla değil, yan yana geldiğinde anlam kazanan küçük
+          işaretlerle fark edilir: adet aralığının değişmesi, uykunun bölünmesi, sıcak basması, gece terlemesi, odak
+          dağınıklığı, ruh halinde daha hızlı dalgalanma ve bedenin eski ritmine aynı yanıtı vermemesi. Bu yazı tanı
+          koymaz; ama hangi notların izlenebilir olduğunu, hangi durumda hekime danışmanın geciktirilmemesi gerektiğini
+          ve tek bir test sonucuna neden fazla anlam yüklenmemesi gerektiğini sakin bir haritaya çevirir.
         </p>
       </ArticleSummary>
 
@@ -145,19 +147,25 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="uyku-isi">Uyku, Isı ve Gece Yarısı Uyanmaları</h2>
         <p>
-          Gündüz kendinizi ikna edebilirsiniz; gece ise beden çoğu zaman daha dürüst konuşur. Perimenopozun ikinci büyük
-          işareti bu yüzden sık sık uykunun kıyısında belirir.
+          Gündüz kendinizi ikna edebilirsiniz. Gece ise daha dürüsttür. Perimenopozun ikinci büyük işareti bu yüzden sık
+          sık uykunun kıyısında belirir.
         </p>
         <p>
-          Sıcak basması ve gece terlemesi bu dönemin en sık bildirilen belirtileri arasında yer alır; klinik dilde bunlara
-          vazomotor belirtiler denir. Her kadında aynı yoğunlukta olmaz, ama ortaya çıktığında uyku düzenini, sabah
-          enerjisini ve gün içi dayanıklılığı belirgin etkileyebilir. <Evidence level={4} />
+          <a href="/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/">Sıcak basması ve gece terlemesi</a> bu dönemin en sık
+          bildirilen belirtileri arasında yer alır; klinik dilde bunlara vazomotor belirtiler denir. Her kadında aynı
+          yoğunlukta olmaz. Ama çıktığında uyku, sabah enerjisi ve gün içi dayanıklılık belirgin etkilenebilir.
+          <Evidence level={4} />
         </p>
         <p>
           Daha zor fark edilen taraf şu: uyku değişikliği her zaman sıcak basmasıyla gelmez. Bazı kadınlar hiç belirgin
           terleme yaşamadan daha yüzeysel uyuduğunu, sabaha karşı daha kolay uyandığını ya da eskiye göre daha az
-          dinlenmiş kalktığını anlatır. Bu yüzden “terlemiyorum, demek ki hormonal değil” cümlesi her zaman doğru
-          değildir; ama “uykum bozuldu, kesin perimenopoz” demek de fazla hızlı bir sonuç olur.
+          dinlenmiş kalktığını anlatır. “Terlemiyorum, demek ki hormonal değil” cümlesi her zaman doğru değildir. “Uykum
+          bozuldu, kesin perimenopoz” demek de fazla hızlı bir sonuç olur.
+        </p>
+        <p>
+          Bu arada: uykunun bu dönemde nasıl değiştiğini
+          <a href="/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/">perimenopozda uyku</a> yazısında daha yakından
+          konuşuyoruz. Burada yalnızca şunu tutun — gece, gündüzün sakladığı işaretleri açığa çıkarabilir.
         </p>
         <p>
           Küçük bir ayrım işimize yarar: uykuya dalmak mı zorlaştı, yoksa gece uyanıp tekrar uykuya dönmek mi? Sabah

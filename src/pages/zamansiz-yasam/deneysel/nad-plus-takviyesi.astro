@@ -38,17 +38,18 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı';
 const articleDescription =
-  'Anti-aging takviyeleri arasında NAD+ öncüleri (NMN, NR) yoğun pazarlanıyor. Kanıt seviyesi nerede duruyor, kim için anlamlı, kim için erken? Mekanizma + insan çalışmalarının bugünkü durumu + güvenlik + doktora hangi soruları sormak gerektiği — promosyon değil, dürüst yorumlama.';
+  'Anti-aging takviyeleri arasında NAD+ öncüleri (NMN, NR; aramalarda NAD Plus diye de geçer) yoğun pazarlanıyor. Kanıt seviyesi nerede duruyor, kim için anlamlı, kim için erken? Mekanizma, güvenlik ve hekimle konuşulacak sorular — promosyon değil, dürüst yorumlama.';
 const faqItems = articleFaqs['/zamansiz-yasam/deneysel/nad-plus-takviyesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '2 Mayıs 2026',
+  modifiedDate: '13 Temmuz 2026',
   pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
-  keywords: ['NAD+', 'NMN', 'NR', 'nikotinamid mononükleotid', 'nikotinamid ribozid', 'anti-aging', 'takviye', 'kanıt seviyesi', 'menopoz'],
+  keywords: ['NAD+', 'NAD Plus', 'nad plus', 'NMN', 'NR', 'nikotinamid mononükleotid', 'nikotinamid ribozid', 'anti-aging', 'takviye', 'kanıt seviyesi', 'menopoz'],
   faqItems,
 
   siteUrl,
@@ -111,7 +112,8 @@ const articleSchemas = buildArticleSchemas({
           temel bir koenzim</em>; takviye olarak satılan ürünler ise <em>NAD+ öncülleri</em>
           (öncesinde alınan ve hücrede NAD+'ya dönüşmesi beklenen bileşikler). En sık geçen
           iki isim: <strong>NMN</strong> (nikotinamid mononükleotid) ve <strong>NR</strong>
-          (nikotinamid ribozid).
+          (nikotinamid ribozid). İngilizce aramalarda konu sıkça “NAD Plus” diye de geçer; aynı molekül ailesi,
+          farklı yazım.
         </p>
         <p>
           Bu ayrımı bilmek önemli çünkü "NAD+ takviyesi alıyorum" diyen biri aslında doğrudan
