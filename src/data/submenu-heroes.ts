@@ -147,7 +147,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su, katlı pamuklu bez ve açık bir defter; günlük özenli bakım teması',
   },
   '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/': {
-    src: '/images/library/editorial/introspective-primary-accent.webp',
+    src: '/images/library/editorial/introspective-burgundy-accent.webp',
     alt: 'Sıcak bir İstanbul evinin yatak odası okuma köşesinde akşam üstü warm ışıkta saf natürmort (kişi yok); chaise üstünde cream ipek modest yastık ve üzerine yumuşak katlanmış bordo silk-knit şal (subtle bordo aksanı), walnut yan masada açık deri kapaklı not defteri ve dolma kalem (his günlüğü), küçük seramik vazoda 2-3 cream-blush peony, klasik Türk çay bardağı altın tabakta buharlı, kapalı hardcover şiir kitabı sade kapak; sağda küçük cam votive mumluk içinde tek yumuşak yanan mum, sheer keten perde tall pencerden warm evening light, mahogany floor ve Persian rug edge, brass-burnished abajur warm focused light cream yastık ve bordo şala düşüyor; iç dünyaya dönen sakin akşam ve bedenle iletişim teması',
   },
   '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/': {
