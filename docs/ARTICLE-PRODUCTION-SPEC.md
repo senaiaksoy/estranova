@@ -443,10 +443,14 @@ Hero ve kart görselleri aynı yüzey değildir:
 
 AI motorları passage-level "doğrudan cevap" alıntılar. Marka kuralları (gövdede inline dış URL / uluslararası kuruluş adı yasak — §4; yumuşatma; "siz" hitabı) bu optimizasyonun üstündedir; aşağıdakiler bu sınır içinde uygulanır.
 
+> **Google vs diğer platformlar (2026-07 netlik notu):** Google'ın resmi AI optimizasyon rehberi (developers.google.com/search/docs/fundamentals/ai-optimization-guide) `llms.txt` ve benzeri "AI'a özel" dosyaları **Google Arama'nın yoksaydığını** açıkça yazar; Google için tek geçerli yol temel SEO + özgün/ilk-elden içeriktir (bkz. CLAUDE.md §3 humanize + Şablon Kırma Disiplini — bu ikisi zaten aynı hedefi taşıyor). `llms.txt`, `citation`/`isBasedOn` şeması ve aşağıdaki answer-first/tablo kuralları bu yüzden **Google AI Overviews için değil, ChatGPT/Perplexity/Bing Copilot için** yatırım olarak konumlandırılmalı; efor önceliklendirmesi buna göre yapılır.
+
 - **Kısa Özet doğrudan-cevap formu:** `ArticleSummary` içeriği ~**40–55 kelime, tek paragraf**; ilk cümle başlık-sorusunu doğrudan yanıtlar (veri yığını/uzun girişle açılmaz). AI Overview'lerin ilk tercih ettiği yapı.
-- **SSS uzun-kuyruk:** 3–5 konuya özgü sorudan en az biri "ne zaman / hangi durumda / X ile Y farkı nedir" kalıbında long-tail olmalı; her cevap 2–3 cümle ve **gövdedeki iddiaya dayalı** (yeni iddia eklemez, schema ile aynı kaynak).
+- **SSS uzun-kuyruk:** 3–5 konuya özgü sorudan en az biri "ne zaman / hangi durumda / X ile Y farkı nedir" kalıbında long-tail olmalı; her cevap 2–3 cümle ve **gövdedeki iddiaya dayalı** (yeni iddia eklemez, schema ile aynı kaynak). **Not (2026-07):** Google FAQ rich result'ları Mayıs-Haziran 2026'da SERP'ten tamamen kaldırdı; `FAQPage` şeması hâlâ geçerli ve değerlidir ama artık klasik "rich snippet" faydası için değil, **yalnızca AI-alıntı/grounding sinyali** olarak tutulur — bu beklentiyle işaretlenmelidir.
 - **Sayısal çapa:** somut sayı/eşik içeren cümleler (yaş aralığı, oran, süre) AI tarafından daha sık çekilir; gövdede ve Kısa Özet'te en az bir kez net geçsin — `<Evidence>` ve klinik doğrulukla uyumlu.
-- Bu üç madde mevcut makalelerde de revizyon sırasında uygulanabilir; `dateModified` bump kuralıyla birlikte çalışır.
+- **Answer-first H2 bloğu (yeni — 2026-07):** Her H2'nin italic lede'sinden **sonra gelen paragraf**, bağlamsız alıntılanabilir **40–60 kelimelik bağımsız bir tanım/cevap cümlesi** ile açılır (lede soruyu/kanıyı kurar, bu paragraf onu düz-cevap olarak somutlaştırır). Editöryal ton ve "siz" hitabı korunur — kuru ansiklopedi cümlesi değil, yaşıt/klinisyen sesinde ama **tek başına anlaşılır** bir tanım olmalı. Kaynak: GEO-ANALYSIS.md §9-A; alıntılanabilir içerik metin-only içeriğe göre araştırmalarda belirgin şekilde daha yüksek AI-alıntı oranı gösteriyor.
+- **Karşılaştırma/veri tablosu (yeni — 2026-07):** Hub-amiral (flagship) makalelerde, doğası tabloya uygun en az **bir yerde** (evre/tip karşılaştırması, kanıt düzeyi özeti, "ne zaman doktora gidilir" eşiği vb.) düz metin yerine **tablo** kullanılır. `prose-estranova` tipografisiyle uyumlu, editöryal görünümü bozmayan sade tablo (2-4 sütun). Standart (flagship olmayan) makalelerde zorunlu değil ama teşvik edilir. Bullet-list veri yığını tabloyla karıştırılmaz — H2 açılışında tablo/liste ile başlama yasağı (§4.1) hâlâ geçerlidir; tablo gövde ortasında yer alır.
+- Bu maddeler mevcut makalelerde de revizyon sırasında uygulanabilir; `dateModified` bump kuralıyla birlikte çalışır.
 
 ---
 
@@ -470,6 +474,7 @@ AI motorları passage-level "doğrudan cevap" alıntılar. Marka kuralları (gö
 | 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList + FAQPage (`buildArticleSchemas`) | ☐ |
 | 11b | `@id` referanslı yazar/inceleyici için inline `Person` düğümü sayfada çözülebilir (Dr. Aksoy → SiteLayout site-geneli); revize makalede `modifiedDate` revizyon gününe çekildi | ☐ |
 | 11c | GEO (§4.8): Kısa Özet ~40–55 kelime doğrudan-cevap; SSS'de ≥1 long-tail soru; ≥1 sayısal çapa cümlesi | ☐ |
+| 11d | GEO (§4.8, flagship makalelerde): en az bir H2'de italic lede sonrası 40–60 kelimelik answer-first paragraf; en az bir karşılaştırma/veri tablosu | ☐ |
 | 11a | Tek görünür SSS yüzeyi var: gövde içi editoryal SSS veya `ArticleFAQ`; 3–5 soru, schema ile birebir aynı veri kaynağından besleniyor | ☐ |
 | 12 | Yayın bağlantı planı hazır; ancak standart yazar onayı gelmeden parent hub/sayı indeksine canlı link eklenmedi | ☐ |
 | 13 | Manifest entry yalnız yayın kapısı açıldıktan sonra eklenecek; onay bekleyen makale RSS/static manifest'te yok | ☐ |
@@ -592,5 +597,6 @@ Detaylı prosedür: Framework Katman D.
 
 ## Versiyon
 
+- **v1.2** (2026-07-15) — Google'ın resmi AI optimizasyon rehberi (Mayıs 2026) + 2026 GEO araştırması denetimi sonrası §4.8 genişletildi: answer-first H2 bloğu, karşılaştırma/veri tablosu kuralı, Google/diğer-platform netlik notu, FAQ rich result deprecation notu. Pre-publish checklist'e 11d eklendi. `article-schema.ts`'e opsiyonel `citation`/`isBasedOn` alanı eklendi (GEO-ANALYSIS.md §8.5).
 - **v1.1** (2026-04-29) — Faz 2 modüler profil yapısına bağlandı: §2.0 (modüler vs legacy), §2.1 (pre-script `article-context-build.mjs` + drift lint), §2.2 (yazar protokolü uygulanması). §1.3 Çift Rol referansları modüler path'lere taşındı (`hidden.md §5c-ek`). "Bağlantılı belgeler"'e schema + handoff + iki yeni script eklendi. Backward compatibility: legacy yazarlar tek-dosya akışında devam eder.
 - **v1.0** (2026-04-29) — İlk yayım. v3.2 Gamze protokolü kanıtlandıktan sonra Faz 1-6 + 17 maddelik pre-publish checklist + Evidence/BEN şablonu yapısallaştırıldı. Çift Rol Uyarısı kritik sınır olarak işaretlendi.

@@ -101,6 +101,17 @@ Aşağıdaki §5c tıbbi sınır uyarısına uy. Hekim cümlesi YOK; bireysel t�
 
 > Detaylı kalıplar: `./warm.md §4a-§4f` ve `profile.yaml.signature_phrases_*`.
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Sanem'in kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 **Açılış imzası — Sanem'e özgü 3 sahne türü:**
 
 1. **Akşam yürüyüşü sahnesi** — şehirde, yarı korkulu, "yürüdükçe korkum kayboluyor" hattı

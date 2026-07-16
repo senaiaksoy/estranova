@@ -42,6 +42,18 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/',
+    writerSlug: 'basak-pelister',
+    approvedAt: '2026-07-16',
+    note: 'Başak Pelister author approval received (KC: onay ok). Package moved from onay-bekleyen to onaylanan/2026-07-16_olcu-panigi-beden-algisi-menopoz. Eşik Sayı 03 Kapak 4 published with live route, FAQ schema, static manifest, dossier href and byline/card imagery.',
+  },
+  {
+    pathname: '/editorun-kosesi/temmuz-2026/',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-07-16',
+    note: 'KC editör doğrudan onayı: Berna Aksoy istisnası kapsamında Eşik Sayı 03 · Tartı Susunca için hazırlanan Temmuz 2026 Sıcacık Köşe yazısı yazar formu olmadan onaylandı. Yazı sayı açılışı, dört kapak parçasının tanıtımı ve sayı okuma daveti olarak yayına alındı; klinik makale olmadığı için Evidence, Bilimsel Editör Notu ve SSS eklenmedi.',
+  },
+  {
     pathname: '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
     writerSlug: 'cagri-sade',
     approvedAt: '2026-06-29',
@@ -157,9 +169,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/zamansiz-yasam/kilo-artisi-menopoz/',
-    writerSlug: 'berna-aksoy',
-    approvedAt: '2026-04-30',
-    note: 'Berna v2.4 ikinci tur doğrulama formu sonrası — %85 net onay + 3 yumuşatma + 1 red sonrası revize. İlk onaylı Estranova makalesi.',
+    writerSlug: 'estranova-editorial',
+    approvedAt: '2026-07-15',
+    note: 'KC editör (Dr. Senai Aksoy) doğrudan talimatıyla: Berna Aksoy kendi adıyla yayınlanmasını istemediği için makale Estranova Editörleri kurumsal imzasına taşındı. Gövde metninde tek kişisel anekdot ("Bir arkadaşımın geçen ay anlattığı sahne kafamda kaldı") anonim/genel çerçeveye çevrildi ("Sık karşılaşılan bir sahne şöyle özetlenebilir..."); makalenin geri kalanı zaten yaşıt-kişisel ses taşımıyordu, minimum müdahaleyle Estranova Editorial Gloss\'a hizalandı. publishedDate bugüne çekildi. URL korundu; Berna\'nın önceki onayı geçersiz kalır.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
@@ -199,9 +211,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
-    writerSlug: 'berna-aksoy',
-    approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — KRİTİK Kanal A KAPALI ihlal yoğun makale temizlendi: Bölüm 01 komple rewrite ("Tartıyı kaldırdığım gün" kişisel anekdot → "Tanıdığım bir kadının yıllarca anlattığı bir sahne" dolaylı), Apple Watch ironisi (v2.4 humor 5-kalıbından çıkarılan kalıp) KALDIRILDI, "her tahlili her ay yaptırıyordum" → "Hekimimle bir konuşmamızda" hattı. Duruş varyasyonu kapanışı (bedenle yazışma serisi 8 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş), 5-katmanlı BEN (sarkopenik eğilim + visseral kayış). Sekizinci onaylı Estranova makalesi.',
+    writerSlug: 'estranova-editorial',
+    approvedAt: '2026-07-15',
+    note: 'KC editör (Dr. Senai Aksoy) doğrudan talimatıyla: Berna Aksoy kendi adıyla yayınlanmasını istemediği için makale Estranova Editörleri kurumsal imzasına taşındı. Gövde metni tamamen kurumsal Editorial Gloss tonuna çevrildi: tüm birinci tekil ("ben/benim/kendim") ifadeler ve "hekimimle bir konuşmamızda" kişisel anekdotları kaldırıldı; annem-kızım üç kuşak anekdotu (Bölüm 04) TAMAMEN kaldırılıp yerine "Kuşaklar arasında değişen beden dili" başlıklı genel/anonim bir bölüm yazıldı (ergen/aile mahremiyeti riski de böylece ortadan kalktı). TOC etiketleri kişisel çerçeveden arındırıldı ("Tartıyı kaldırdığım gün" → "Tartının yatıştığı yer", "Hekimimle birlikte vardığımız üç küçük not" → "Üç küçük pratik yön"). Evidence/BEN/Disclaimer/RelatedReadings içerik olarak korundu (zaten nötr). publishedDate bugüne çekildi. URL korundu; Berna\'nın önceki onayı geçersiz kalır.',
   },
   {
     pathname: '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
@@ -216,10 +228,16 @@ export const approvedArticles: ArticleApproval[] = [
     note: 'KC editör kararıyla makale Dr. Senai Aksoy imzasına taşındı ve gövde metni Senai klinik yazı sesiyle yeniden yazıldı. Production article metadata, approval kaydı ve RSS manifesti Senai imzasına hizalandı; URL korundu.',
   },
   {
+    pathname: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
+    writerSlug: 'metin-alis',
+    approvedAt: '2026-07-16',
+    note: 'KC editör doğrudan onayı: Eşik Sayı 03 · Tartı Susunca kapak yazısı. Metin Alış endokrin sesi — iştah/metabolizma/kuşak haritası; Senai\'nin mevcut GLP-1 klinik karar yazısından ayrışık eksen. Humanize turu sonrası canlıya alındı. Açılış A6, manifesto M5 (kılavuz-hasta-yol paraframe), direk D1+D3. Marka/doz/protokol yok. Özel makale görseli henüz yok — hub hero + yazar portresi.',
+  },
+  {
     pathname: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
-    writerSlug: 'berna-aksoy',
-    approvedAt: '2026-05-02',
-    note: 'Berna doğrudan onayı (form üretmeden) — Duygusal denge ekseni + v2.5 humor havuzundan üçüncü farklı kalıp uygulaması (soru-yağmurluğu #4, CBT bölümü). Berna açılışı ("Bir noktada şunu fark ettim: bu dönemin stresi yalnızca \'iş çok yoğun\' ya da \'çocuklar büyüyor\' ile açıklanmıyor"), Bölüm 02-05 Evidence yumuşatma (level 5 yığını → level 4 ağırlıklı + level 3-4 aralık), Bölüm 03 dolaylı ses ("Bir süre baş ağrımı kahveye, omuz gerginliğimi yastığa, uykusuzluğumu dizilere bağladım — sonunda sadece taşıyamadığım bir hafta olduğunu kabul ettim"), Bölüm 04 Meditasyon: niteliksel ben deneyimi (Apple Watch / cihaz / ölçüm yasak — beş dakikalık oturumdan sonra omuzların indiğini ya da nefesin derinleştiğini fark etmek), Bölüm 06 CBT humor #4 ("12 maddelik soru listesi randevuya gitmek; ama konuşma başladığında sorular birbirine giriyor"), Bölüm 08 Profesyonel: hekim bakışı rotasyonu ("Hekimimle bir konuşmamızda: \'Stresin ne zaman hayatın bir parçası olmaktan çıkıp müdahale gerektiren bir tabloya döndüğünü tek bir eşik söylemez\'") + "bilmiyorum" anı (kimin niçin daha çabuk çöktüğünü bireysel ölçekte bende mümkün değil) + "Bu benim yolum" dengeleyici. Nefes varyasyonu kapanışı (bedenle yazışma serisi 11 makaleye ulaştı: mektup → soru → defter → tabak → masa → harita → gece → duruş → takvim → yapı → nefes), 5-katmanlı BEN (HPA eksen dinamiği + kortizol-iltihabi yük zinciri + klinik kırmızı bayraklar + 3 sütun pratik bütünleşim + bireysellik). On birinci onaylı Estranova makalesi.',
+    writerSlug: 'metin-alis',
+    approvedAt: '2026-07-15',
+    note: 'KC editör (Dr. Senai Aksoy) doğrudan talimatıyla makale Berna Aksoy imzasından Dr. Metin Alış imzasına taşındı; gövde metni tamamen Metin Alış endokrinolojik sesiyle yeniden yazıldı (kortizol/HPA ekseni eksen — profile.yaml signature_topics "kortizol-stres" ile uyum doğrulandı; Senai/Anıl/Ersin ekseni uyumsuz bulunup elendi). Açılış A9-stili yeni cümle (A3 cooldown\'da), manifesto M2 ("yanlış anlaşılan endokrin tablo, doğru tanıyı geciktiren en sık nedendir" — M3 cooldown\'da), klinik felsefe direkleri D2 (mekanizma→karar zinciri) + D4 (bireyselleştirme) kullanıldı (önceki makalede D1+D3 kullanılmıştı, çeşitlilik korundu). Anekdot çerçevesi "klinik gözleminde" / "endokrin polikliniğinde" (önceki "klinikte sıklıkla" / "polikliniğe başvuran" cooldown\'da). RedFlagBox 4 madde (Cushing/Addison ayırıcı + panik atak artışı + 2 haftalık işlevsel çöküş). Kapanış 3-parçalı. FAQ tamamen yenilendi (4 soru, kortizol testi + menopoz eşiği + ayırt etme + endokrinoloji değerlendirmesi). BEN 4-katmanlı, Doç. Dr. Senai Aksoy imzalı, standart 3. şahıs şablonu ("Dr. Alış\'ın yazısında..."). publishedDate bugüne çekildi (yeniden yazım/yazar değişimi = fiilen yeni yayın). URL korundu; Berna\'nın bu makaledeki önceki onayı geçersiz kalır.',
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',

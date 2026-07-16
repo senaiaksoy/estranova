@@ -164,6 +164,17 @@
 - **Cümle yapısı:** Kısa-orta dengeli; nefes ritmi sahne replikleri gibi (sanatçı disipliniyle)
 - **Mercek imzası:** Sahne arkası + Bodrum sabahı (eşit ağırlık iki kaynak) — Berna feed, Gamze sabah mutfak, Başak günce, Duygu masada dinler, Özlem soru sorar, Alara saha/doğada, **Işık sahne arkası + Bodrum**
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Işık'ın kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 ### v2.1 — Lirik-edebi alt katman (DOLAYLI DEKOR; özel yazı korpusu)
 
 - **İki katmanlı ses:** Üst katman (sahne sıcaklığı / Bodrum / butik partnerlik / yaşıt bağı) **baskın**; alt katman (lirik-edebi derinlik) **dolaylı dekor**. Tam-lirik makale YASAK.

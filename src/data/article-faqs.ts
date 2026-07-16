@@ -4,6 +4,33 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': [
+    {
+      question: 'Tartıya her sabah çıkmak beden algısını neden bu kadar zorlar?',
+      answer:
+        'Her sabah tartılmak bazı kişilerde kontrol hissi verebilir; ama bazı kişilerde günün duygusunu tek bir rakama teslim eder. Özellikle hormonal geçiş döneminde su tutma, uyku, stres ve bağırsak düzeni gibi günlük değişkenler rakamı oynatabilir. Eğer tartı gününüzü belirlemeye başladıysa, ölçme sıklığını hekiminizle veya güvendiğiniz bir uzmanla konuşmak iyi bir başlangıç olabilir.',
+    },
+    {
+      question: 'Kıyafetlerin birden dar gelmesi panik midir, yoksa bedenin değiştiğini mi söyler?',
+      answer:
+        'İkisi de olabilir. Kıyafetin dar gelmesi gerçek bir beden değişimini gösterebilir; ama o değişime verdiğiniz tepki bazen fiziksel durumdan daha büyük olur. Burada iyi soru şudur: Bu değişimi sağlık, hareket, uyku ve enerjiyle birlikte mi okuyorsunuz, yoksa yalnızca kendinizi suçlamak için mi kullanıyorsunuz?',
+    },
+    {
+      question: 'Annem ve kızım aynı ölçü dilini konuşurken ben neden boğuluyorum?',
+      answer:
+        'Çünkü kuşaklar beden hakkında farklı cümleler taşır. Bir kuşak dayanmayı, bir kuşak incelmeyi, bir kuşak görünmeyi daha çok duymuş olabilir. Sizin sıkışmanız anlaşılır; bu sıkışmayı fark etmek bile aile içinde başka bir dil kurmanın ilk adımı olabilir.',
+    },
+    {
+      question: 'Beden algısı bozulunca hekime ne götürülür: tartı mı, his mi?',
+      answer:
+        'İkisi de götürülebilir. Tartı, bel çevresi, kan değerleri ve tıbbi öykü hekimin işine yarar; ama sizin nasıl hissettiğiniz de resmin parçasıdır. "Kendimi eski bedenimde hissetmiyorum", "aynaya bakmak beni zorluyor", "bu kaygı günümü kaplıyor" gibi cümleler de konuşmaya değerdir.',
+    },
+    {
+      question: '"Tartı susunca" ne demek; tartıyı atmak mı, başka bir ölçü mü kurmak?',
+      answer:
+        'Herkes için tartıyı tamamen bırakmak doğru olmayabilir. Bazı tıbbi durumlarda düzenli izlem gerekir. Buradaki "susmak", rakamın tek otorite olmaması demek: enerji, güç, uyku, kıyafetle rahatlık, ruh hali ve kendinize konuşma biçiminiz de ölçünün parçası olabilir.',
+    },
+  ],
   '/beden-yakinlik/menopoz-sonrasi-karin-germe/': [
     {
       question: 'Menopoz sonrası karın bölgesindeki değişim yalnızca kilo almakla mı ilgilidir?',
@@ -637,19 +664,24 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': [
     {
-      question: 'Menopoz döneminde stres eşiği gerçekten düşebilir mi?',
+      question: 'Kortizol yüksekliği tek bir kan testiyle anlaşılır mı?',
       answer:
-        'Evet, birçok kadın bunu böyle tarif eder. Hormon dalgalanması, uyku kırılması ve gündelik yükler birleşince aynı olaylara verilen tepki daha yoğun hissedilebilir.',
+        'Genellikle hayır. Kortizol gün içinde belirli bir ritimle değişir; rastgele saatte alınan tek bir ölçüm yanıltıcı olabilir. Klinik şüphe varsa zamanlamaya duyarlı yöntemler (sabah kan kortizolü, tükürük örneklemesi, 24 saatlik idrar kortizolü gibi) tercih edilir.',
     },
     {
-      question: 'Stresi yönetmek için büyük hayat değişiklikleri mi gerekir?',
+      question: 'Menopozda stres eşiği neden daha düşük hissediliyor?',
       answer:
-        'Çoğu zaman hayır. Küçük ama düzenli ritimler, örneğin uyku saatini korumak, gün içinde kısa hareket araları vermek ve zihni yoran yükleri görünür kılmak daha sürdürülebilir sonuç verir.',
+        'Östrojenin HPA ekseninin duyarlılığını bir ölçüde yumuşattığı düşünülür. Düzey dalgalandığında aynı yükün bedende bıraktığı kortizol yanıtı büyüklük ve süre olarak değişebilir; bu da aynı olayın daha ağır hissedilmesine yol açabilir.',
     },
     {
-      question: 'Ne zaman bu tabloyu yalnızca “yoğunluk” diye geçmemek gerekir?',
+      question: 'Kronik stres ile menopoz belirtileri birbirinden nasıl ayrılır?',
       answer:
-        'Kaygı, çöküntü hali, öfke patlamaları ya da beden belirtileri işlevi bozuyorsa daha yakından bakmak gerekir. Çünkü bazen mesele yalnızca stres değil, uyku bozulması veya depresif tabloyla birleşen bir yük olabilir.',
+        'Kesin bir çizgi çekmek zordur, çünkü ikisi birbirini besleyebilir. Uyku bölünmesi, sıcak basması ve gündelik yük aynı anda büyüdüğünde hangi eksenin ağır bastığını ayırmak hekimle birlikte yapılan bir değerlendirmeyi gerektirir.',
+    },
+    {
+      question: 'Ne zaman endokrinoloji değerlendirmesi gerekir?',
+      answer:
+        'Ay şeklinde yüz değişimi, mor renkli çatlaklar, açıklanamayan kilo kaybı veya kaybı, tuzlu gıdaya artan istek ya da panik atak sıklığında ani artış gibi bulgular eşlik ediyorsa değerlendirme öncelikli hale gelir.',
     },
   ],
   '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/': [
@@ -715,19 +747,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/zamansiz-yasam/kilo-artisi-menopoz/': [
     {
-      question: 'Menopozda kilo artışı yalnızca daha az hareket etmekten mi olur?',
+      question: 'Kilo artışı yalnızca daha az hareket etmekten mi olur?',
       answer:
-        'Hayır. Yaş, uyku, stres, kas kütlesi, yağ dağılımı ve hormonal değişim birlikte çalışır. Bu yüzden tabloyu yalnızca irade ya da aktivite eksikliği olarak okumak haksızlık olur.',
+        'Hayır. Yaş, uyku, stres, kas kütlesi, yağ dağılımı ve hormonal değişim birlikte etkili oluyor. Bu yüzden tabloyu yalnızca hareketsizliğe bağlamak eksik bir okuma olur.',
     },
     {
-      question: 'Tartı aynı kalırken bedenin değişmesi mümkün mü?',
+      question: 'Tartı aynı kalırken bedende değişim olması mümkün mü?',
       answer:
-        'Evet, hatta bu dönem için oldukça tanıdık bir durumdur. Kas kütlesi azalırken yağ dağılımı değişebilir; bu da sayı sabit kalsa bile kıyafet ve beden hissini değiştirebilir.',
+        'Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ dağılımı değişebiliyor; bu da sayı sabit kalsa bile kıyafetin oturuşunu ve genel hissi değiştirebiliyor.',
     },
     {
-      question: 'En doğru ilk hedef hızlı kilo vermek midir?',
+      question: 'Hızlı kilo verme yöntemleri bu dönemde işe yarar mı?',
       answer:
-        'Çoğu zaman hayır. İlk hedef, kası koruyan ritimleri güçlendirmek, uykuyu toparlamak ve bel çevresi ile enerji düzeyini daha yakından izlemek olabilir. Hızlı çözümler çoğu zaman sürdürülebilir olmaz.',
+        'Çoğunlukla kalıcı bir sonuç sunmuyor. Belirgin kısıtlama kısa vadede tartıyı hareket ettirse de kas kaybını hızlandırabiliyor ve kilo genellikle geri geliyor. Yavaş ama sürdürülebilir bir denge daha tutarlı sonuç veriyor.',
+    },
+    {
+      question: 'Protein miktarı nasıl belirlenmeli?',
+      answer:
+        'Genel bir formül herkese uymuyor. Araştırmalarda sık geçen yaklaşım protein alımını artırmayı işaret ediyor; kesin miktar yaş, aktivite düzeyi ve genel sağlık durumuna göre hekim veya diyetisyenle birlikte değerlendirilmesi gereken bir aralık.',
+    },
+    {
+      question: 'Bel çevresi ölçümü neden tartıdan daha bilgilendirici kabul ediliyor?',
+      answer:
+        'Çünkü tartı toplam kütleyi gösterir, dağılımı göstermez. Bel çevresi, visseral yağ artışına dair daha doğrudan bir sinyal taşıdığı için kilo değerinden bağımsız bir risk göstergesi olarak değerlendiriliyor.',
     },
   ],
   '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': [
@@ -827,19 +869,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/': [
     {
-      question: 'Tartı değişmiyorsa yine de beden kompozisyonu bozulabilir mi?',
+      question: 'Tartı pek değişmiyor ama beden değişti — bu menopoza özgü mü?',
       answer:
-        'Evet. Kas azalırken yağ dağılımı değişebilir ve bu tartıda görülmeyebilir. Bu yüzden yalnızca kiloya bakmak bedenin bütün hikâyesini anlatmaz.',
+        'Tek başına menopoza özgü değildir; ama menopoz bu süreci hızlandırabilir. Kompozisyon değişimi yaş almanın bir parçasıdır — kas yavaşça azalır, yağ farklı bölgelere yerleşebilir. Östrojen düşüşü bu kayışın eğimini biraz daha dikleştirebilir. Sayının yatışıp bedenin değişmeye devam etmesi yaygın bir gözlemdir; bu bir hata değil, ölçü aletini değiştirme zamanının gelmiş olabileceğinin işaretidir.',
     },
     {
-      question: 'Bel çevresinin artması neden daha çok konuşuluyor?',
+      question: 'BMI normal aralıkta ama yağ oranı yüksek; ne yapmalı?',
       answer:
-        'Çünkü menopoz geçişinde yağın yer değiştirmesi sık görülen bir durumdur ve bu değişim metabolik sağlık açısından sayıdan daha anlamlı olabilir. Kıyafetlerin farklı oturması bazen ilk işaret olur.',
+        'Önce hekimle birlikte değerlendirmek gerekir — özellikle yağın nereye yerleştiği metabolik açıdan farklı anlamlar taşıyabilir. Bu bir panik göstergesi olmak zorunda değildir; bir yön göstergesi olabilir. Direnç antrenmanı, yeterli protein ve uyku düzeni, kompozisyon tablosunu zaman içinde değiştirebilen üç ana sütundur. Ölçüm alarm için değil, görmek içindir.',
     },
     {
-      question: 'Vücut kompozisyonunu korumada ilk öncelik nedir?',
+      question: 'Kompozisyon takibi için tek bir doğru yöntem var mı?',
       answer:
-        'Kas kütlesini koruyan hareket ve yeterli protein çoğu zaman ilk önceliktir. Hızlı kalori kısıtları, kısa vadede sayı verse de uzun vadede kompozisyonu daha kırılgan bırakabilir.',
+        '"Tek doğru yöntem" fazla iddialı olur; "yararlı bulunan yöntem" daha dürüst bir yaklaşımdır. Ev tartısının da bir yeri vardır; yanına bedeni gözlemleme alışkanlığı ve hekimle karar verilen aralıklı bir kompozisyon ölçümü tablonun gövdesini görmeye yardım edebilir. İzlemek de bir doza sahiptir.',
+    },
+    {
+      question: 'Direnç antrenmanı menopozda gerçekten kritik mi?',
+      answer:
+        '"Kritik" biraz büyük bir kelimedir; "değerli" daha doğru durur. Düzenli direnç antrenmanının kas kütlesini korumaya yardımcı olabileceği araştırmalarda sık konuşuluyor; menopoz döneminde bu eğilim özellikle önemlidir. Zorunluluk diline çevirmemek de önemli — başlama eşiği kişiden kişiye değişir. Küçük başlangıçlar zamanla fark yaratabilir.',
+    },
+    {
+      question: 'Protein için bir kural var mı?',
+      answer:
+        'Sayısal hedefi hekim belirler. Genel prensip olarak ana öğünlerde proteinin tabakta görünür yer alması, öğünleri kompozisyon açısından daha bilinçli kurgulamaya yardımcı olabilir. Bu, sürekli tartmaktan çok bir alışkanlık konusudur; yerleştiğinde hesap yapmadan da işler.',
     },
   ],
   '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/': [
@@ -901,6 +953,28 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       question: 'İdrar kaçırma menopozdan sonra ortaya çıktıysa geçici midir?',
       answer:
         'Postmenopozal dönemde idrar kaçırma çoğunlukla geçici bir tablo değildir; östrojen düşüşü ve birikmiş pelvik taban yıpranmasıyla sürebilen bir durumdur. Sürdürülebilir tedavi seçenekleri vardır ve büyük çoğunluk kadında belirgin iyileşme mümkündür. Erken değerlendirme şikâyetin yıllar içinde sessizce büyümesinin önüne geçer.',
+    },
+  ],
+  '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/': [
+    {
+      question: 'İkinci kuşak mı, üçüncü kuşak mı “daha iyi”?',
+      answer:
+        'Tek başına doğru soru bu değildir. Üçüncü kuşakta etki büyüyebilir; buna karşılık tolerans, erişim ve uzun dönem izlem de değişir. Doğru soru, sizin bedeninizde hangi sinyalin bozulduğu ve hangi basamağın buna cevap verdiğidir.',
+    },
+    {
+      question: 'GLP-1 yalnızca kilo vermek için midir?',
+      answer:
+        'Hayır. Sınıfın klinik zemini iştah, glikoz düzeni ve metabolik riskle iç içedir. “Biraz incelmek” motivasyonu tek başına klinik gerekçe sayılmaz; hekim endikasyonu, risk ve takip planıyla birlikte değerlendirir.',
+    },
+    {
+      question: 'Menopozdaysam otomatik aday mıyım?',
+      answer:
+        'Hayır. Menopoz iştah ve yağ dağılımını etkileyebilir; bu, herkesin aynı kuşağa gireceği anlamına gelmez. Önce tabloyu ayırmak gerekir.',
+    },
+    {
+      question: 'Kas kaybı kaçınılmaz mı?',
+      answer:
+        'Hayır. Ama tartıya körü körüne bakmak — özellikle etki büyüdükçe — risklidir. Protein, direnç çalışması ve izlem konuşulmadan hızlı düşüş kutlanmamalıdır.',
     },
   ],
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': [

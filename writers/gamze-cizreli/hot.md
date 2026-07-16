@@ -182,6 +182,17 @@ Kurallar çakışırsa öncelik sırası (yukarıdan aşağıya):
 - **Cümle yapısı:** Kısa vurgu cümleleri + orta uzunlukta nefes; sabah ritmine benzer dengeli akış. Arada virgüllü liste cümlesi — Gamze'nin imza ritmi.
 - **Paragraf ritmi:** 2-4 cümlelik kısa paragraflar tercih eder. Sabah disiplinli, kısa nefesli.
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Gamze'nin kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 ### Signature açılış kalıpları (10 açılış)
 
 Gamze yazıları **kişisel zaman çapası** ile başlar:

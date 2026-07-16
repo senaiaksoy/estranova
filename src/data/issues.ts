@@ -12,7 +12,8 @@
  *
  * Sayı 0: geriye dönük 45 makaleyi tek arşiv şemsiyesi altında toplar.
  * Sayı 01: Mayıs 2026 — "Uyuyamadığımız Geceler" (mevcut sayı, 1 Haziran'a kadar).
- * Sayı 02: Haziran 2026 — "Güç Eşiği" (1 Haziran 2026 yayın adayı).
+ * Sayı 02: Haziran 2026 — "Güç Eşiği" (1 Haziran 2026).
+ * Sayı 03: Temmuz 2026 — "Tartı Susunca" (16 Temmuz 2026).
  *
  * URL pattern: /sayi/<slug>
  *
@@ -175,11 +176,41 @@ export const issue02: Issue = {
   editorColumnSlug: 'haziran-2026',
   coverDossierSlug: '2026-06-guc-esigi',
   releaseDate: '2026-06-01',
+  status: 'archived',
+};
+
+/**
+ * Sayı 03 — Temmuz 2026 · Tartı Susunca
+ *
+ * Kapak dosyası: monthly-dossier.ts → "2026-07-tarti-susunca"
+ * Editör mektubu: Doç. Dr. Senai Aksoy bilimsel açılış
+ * Tema: vücut kompozisyonu, iştah, metabolizma ve beden algısı
+ */
+export const issue03: Issue = {
+  number: 3,
+  slug: '03-temmuz-2026-tarti-susunca',
+  monthYearISO: '2026-07',
+  monthYear: 'Temmuz 2026',
+  theme: 'Tartı Susunca',
+  coverHeadline: 'Eşik · Sayı 03 — Temmuz 2026 · Tartı Susunca',
+  lede:
+    'Tartının sesi kısıldığında geriye yalnızca bir rakam kalmaz. Bu sayı vücut kompozisyonunu, iştahı, metabolizmayı ve beden algısını diyet kültürünün yargısından uzak, sakin bir yaklaşımla yan yana getiriyor.',
+  coverImage: {
+    src: '/images/library/editorial/pair-window-cafe-reflection.webp',
+    alt: 'Pencere kenarında sakin bir sohbeti paylaşan iki yaşıt kadın; tartı, vücut kompozisyonu ve beden algısını yargısız konuşma teması',
+  },
+  editorLetter: {
+    writerSlug: 'senai-aksoy',
+    body: 'Menopoz yıllarında kilo ve beden ölçüsü konuşulurken tek bir rakama gereğinden fazla anlam yüklenebiliyor. Oysa kas kütlesi, yağ dağılımı, iştah sinyalleri, uyku, hareket ve metabolik sağlık birlikte değerlendirildiğinde daha açıklayıcı bir tablo ortaya çıkar.\n\nBu sayıda tartıyı bir hüküm aracı olarak değil, diğer verilerle birlikte okunması gereken sınırlı bir bilgi olarak ele alıyoruz. Vücut kompozisyonundaki değişimi, menopozda kilo artışını, GLP-1 ekseninde iştah ile metabolizmayı ve ölçü paniğinin beden algısındaki karşılığını sakin bir dille ayırıyoruz. Amaç bir beden ölçüsü dayatmak değil; hangi değişimin olağan dalgalanma, hangisinin kişisel değerlendirme gerektiren bir sağlık sorusu olduğunu daha açık görebilmek.',
+  },
+  editorColumnSlug: 'temmuz-2026',
+  coverDossierSlug: '2026-07-tarti-susunca',
+  releaseDate: '2026-07-16',
   status: 'current',
 };
 
 /** Tüm sayılar — yeni-eski sırayla (Sayı 0 EN ALTTA arşiv olarak) */
-export const issues: Issue[] = [issue02, issue01, archiveIssue];
+export const issues: Issue[] = [issue03, issue02, issue01, archiveIssue];
 
 function todayInTurkeyISO(date = new Date()): string {
   return new Intl.DateTimeFormat('en-CA', {

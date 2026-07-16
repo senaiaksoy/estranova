@@ -18,6 +18,50 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/',
+    title: 'Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?',
+    description:
+      'Başak Pelister, menopoz yıllarında tartı, ayna ve kıyafet etrafında biriken ölçü paniğini yaşıt sesiyle açıyor; üç kuşak, utanç ve beden algısını reçetesiz, sakin bir dille konuşuyor.',
+    publishedDate: '16 Temmuz 2026',
+    writerSlug: 'basak-pelister',
+    section: 'Zihin & Denge · Duygusal Denge',
+    sectionPath: '/zihin-denge/duygusal-denge/',
+    keywords: [
+      'ölçü paniği',
+      'beden algısı',
+      'menopoz',
+      'tartı',
+      'ayna',
+      'kıyafet',
+      'üç kuşak',
+      'duygusal denge',
+    ],
+  },
+  {
+    path: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
+    title: "Kilo Değil, İştah ve Metabolizma: GLP-1'i Menopozda Abartmadan Okumak",
+    description:
+      "GLP-1 çoğu zaman 'kilo iğnesi' diye anılır. Dr. Metin Alış iştah sinyalini, menopozda değişen metabolik zemini ve birinci–ikinci–üçüncü kuşak seçenekleri abartmadan ayırıyor; reçete değil, hekimle sorulacak doğru soruları netleştiriyor.",
+    publishedDate: '16 Temmuz 2026',
+    writerSlug: 'metin-alis',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'GLP-1',
+      'iştah',
+      'metabolizma',
+      'menopoz',
+      'semaglutid',
+      'tirzepatid',
+      'inkretin',
+      'vücut kompozisyonu',
+      'sarkopeni',
+      'bel çevresi',
+      'insülin',
+      '40+ kadın',
+    ],
+  },
+  {
     path: '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
     title: 'Menopoz Sonrası Karın Germe: Aynadaki Görüntü ile Beden Hissi Aynı Şeyi Söylemiyorsa',
     description:
@@ -691,9 +735,9 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
     title: 'Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması',
-    description: 'Tartı sayısı uzun zamandır pek değişmiyor; ama beden değişmeye devam ediyor. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin bir gözlemcinin günlüğünden bakış.',
-    publishedDate: '30 Nisan 2026',
-    writerSlug: 'berna-aksoy',
+    description: 'Tartı sayısı uzun zamandır pek değişmese de beden değişmeye devam edebilir. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin ve bilgilendirici bir bakış.',
+    publishedDate: '15 Temmuz 2026',
+    writerSlug: 'estranova-editorial',
     section: 'Hormonal Geçiş',
     sectionPath: '/hormonal-gecis/',
     keywords: ['menopoz', 'vücut kompozisyonu', 'kas kaybı', 'viseral yağ', 'tartı', 'BMI sınırlılığı', 'menopozda kilo', 'kompozisyon değişimi', 'östrojen düşüşü', 'direnç antrenmanı', 'protein'],
@@ -728,11 +772,11 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zamansiz-yasam/kilo-artisi-menopoz/',
-    title: 'Menopozda Kilo Artışı — Aynı Yaşamda Değişen Bedenle Sakin Bir Sohbet',
+    title: 'Menopozda Kilo Artışı: Tartının Söylemediği Kısım',
     description:
-      'Menopoz geçişinde kilo artışının arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve diyet kültürüne kapılmadan denenebilecek küçük adımları yaşıt tonuyla anlatan rehber.',
-    publishedDate: '28 Nisan 2026',
-    writerSlug: 'berna-aksoy',
+      'Menopoz geçişinde kilo değişiminin arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve hekimle birlikte değerlendirilebilecek dengeleri ele alan editoryal bir rehber.',
+    publishedDate: '15 Temmuz 2026',
+    writerSlug: 'estranova-editorial',
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam/',
     keywords: [
@@ -929,13 +973,13 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
-    title: 'Stres Yönetimi — Menopozda Stres ve Adaptasyon',
-    description: 'Menopozda stres yönetimi teknikleri ve hormon değişikliklerinin stres tepkisine etkisi hakkında rehberlik.',
-    publishedDate: '20 Mart 2026',
-    writerSlug: 'berna-aksoy',
+    title: 'Kortizol Sadece Stres Hormonu Değil — Menopozda Ne Değişir?',
+    description: 'Kortizol yalnızca "stres hormonu" değildir; HPA ekseninin ürettiği bir metabolik düzenleyicidir. Menopozal geçişte östrojen dalgalanması bu ekseni nasıl etkiler, Dr. Metin Alış açıklıyor.',
+    publishedDate: '15 Temmuz 2026',
+    writerSlug: 'metin-alis',
     section: 'Zihin & Denge',
     sectionPath: '/zihin-denge/',
-    keywords: ['menopoz', 'perimenopoz', 'stres', 'anksiyete', 'kortizol', 'rahatlama'],
+    keywords: ['kortizol', 'HPA ekseni', 'kronik stres', 'menopoz', 'perimenopoz', 'adrenal bez'],
   },
   {
     path: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',

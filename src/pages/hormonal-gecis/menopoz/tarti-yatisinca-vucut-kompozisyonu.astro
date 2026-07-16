@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -13,20 +13,20 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/']!;
+const pathname = '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/';
+const hero = submenuHeroByRoute[pathname]!;
 
 const tocEntries = [
-  { id: 'tartiyi-kaldirdigim-gun', label: 'Tartıyı kaldırdığım gün' },
+  { id: 'tartinin-yatistigi-yer', label: 'Tartının yatıştığı yer' },
   { id: 'soyledigi-soylemedigi', label: 'Tartının söylediği — ve söylemediği' },
   { id: 'sessiz-aritmetik', label: 'Östrojen yatışınca beden ne yapıyor' },
-  { id: 'ayna-tartı-arasında', label: 'Ayna ile tartı arasında bir cümle' },
+  { id: 'ayna-tartı-arasında', label: 'Ölçü ile his arasındaki mesafe' },
   { id: 'kontrol-teslim', label: 'Her şeyi takip etmek — bir yere kadar' },
-  { id: 'uc-kucuk-not', label: 'Hekimimle birlikte vardığımız üç küçük not' },
+  { id: 'uc-kucuk-not', label: 'Üç küçük pratik yön' },
   { id: 'sss', label: 'Sıkça Sorulan Sorular' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
@@ -35,14 +35,15 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması';
 const seoTitle = 'Tartı Yatışınca: Vücut Kompozisyonu';
 const articleDescription =
-  'Tartı sayısı uzun zamandır pek değişmiyor; ama beden değişmeye devam ediyor. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin bir gözlemcinin günlüğünden bakış.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/'] ?? [];
+  'Tartı sayısı uzun zamandır pek değişmese de beden değişmeye devam edebilir. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin ve bilgilendirici bir bakış.';
+const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'berna-aksoy',
-  publishedDate: '30 Nisan 2026',
-  pathname: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+  writerSlug: 'estranova-editorial',
+  publishedDate: '15 Temmuz 2026',
+  modifiedDate: '16 Temmuz 2026',
+  pathname,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/menopoz/',
   keywords: [
@@ -59,7 +60,6 @@ const articleSchemas = buildArticleSchemas({
     'protein',
   ],
   faqItems,
-
   siteUrl,
 });
 ---
@@ -83,238 +83,206 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
-        authorSlug="berna-aksoy"
-        publishedDate="30 Nisan 2026"
+        authorSlug="estranova-editorial"
+        publishedDate="15 Temmuz 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/pair-window-cafe-reflection.webp"
         imageAlt="Pencere kenarında iki yaşıt kadının sakin sohbeti; tartı ve vücut kompozisyonu yazısı için editoryal görsel"
       />
 
       <ArticleSummary title="Kısa Özet">
-<p>
-          Uzun süre tartının yettiğini sandım; sonra bedenle ilişkide onun gösteremediği bir alan olduğunu gördüm. Sayı uzun zamandır
-          pek değişmeyen birçok kadın, bedenin değişmeye devam ettiğini söylüyor. Sayı yatışınca geriye kalan,
-          ölçüye tam olarak gelmeyen bir kayış: kas yavaşça azalıyor, yağ farklı bir yere yerleşmeye başlıyor.
-          Bu yazı bir reçete değil; tartının yetmediği noktada nereye bakılacağına dair sakin bir gözlem.
-          Menopoz fizyolojisinin kompozisyon üzerindeki etkisiyle, annemle kızım arasında değişen beden diline
-          sırasıyla bakmaya çalışıyorum.
+        <p>
+          Tartı uzun süre aynı kalsa da beden değişmeye devam edebilir. Kas yavaşça azalır; yağ bazen başka bir
+          yere yerleşir. Bu rehber bir reçete değil. Tartının yetmediği noktada nereye bakabileceğinize dair
+          sakin bir bakış.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="tartiyi-kaldirdigim-gun">Tartının yatıştığı yer — bir sayının yerine başka bir hikâye geçiyor</h2>
+        <h2 id="tartinin-yatistigi-yer">Tartının yatıştığı yer</h2>
         <p>
-          Bir arkadaşımın yıllarca anlattığı bir sahne vardı — sonra bir gün tartıyı banyo dolabının üst
-          rafına kaldırdı. O sahne kafamda kaldı; çevremde duyduğum benzer hikâyelerin merkezine yerleşti.
+          Yazlık bir bluzun omuz çizgisi. Ayna karşısında on saniye. Bazen tartıdan daha çok şey söyler.
         </p>
         <p>
-          Çoğu kadında tartı yıllarca bir kontrol aracı olur — sabahın ilk on saniyesinde görülen sayı bütün güne
-          bir his yerleştirir. Sayı düşükse rahatlama, yüksekse küçük bir gerilim. Sonra fark ettim ki:
-          asıl izlenen sayı değil, sayının altındaki şu duygu — "iyi miyim, değil miyim". Tartı bu soruyu
-          cevaplamıyor; sadece geçici bir teselli ya da tedirginlik veriyor.
+          Aylardır aynı sayıyı görmek mümkündür — belki artık bakmayı da bıraktınız. Ama pantolon belden başka
+          oturur. Kolun kumaşla buluştuğu yerde ince bir sıkılık belirir. Aynı sayı. Farklı bir görüntü.
         </p>
         <p>
-          Tartıyı kaldırmak büyük bir özgürleşme yaratmıyor genelde. Yalnızca sabahları on saniye boşalıyor, o on
-          saniyede başka bir şeye bakmaya yer açılıyor. Bedenle ilişki bir sayıdan bir gözleme kayıyor. Yine de
-          tartıyı kaldırmak hâlâ bir disiplin biçimi — kontrolün başka bir hâli; kabul ediyorum.
+          Tartı yatışmıştır. Beden değil.
         </p>
         <p>
-          Çevremde gözlemlediğim şu: tartı sayısı uzun zamandır pek değişmeyen birçok kadında bedenin değişmeye
-          devam ettiği bir an geliyor. Pantolonun belden oturuşu farklılaşıyor; kollar başka bir tonda durmaya
-          başlıyor; aynı kilodaki kadın üç yıl öncekinden başka bir bedende oluyor. Tartı yatışmıştır, ama
-          altında sessiz bir aritmetik işlemektedir.
+          Sabahın ilk on saniyesi çoğu zaman aynı soruyla geçer: "İyi miyim?" Tartı bu soruyu cevaplamaz;
+          kısa bir teselli ya da tedirginlik bırakır, sonra susar. Bu yüzden bazı evlerde tartı artık dolabın
+          üst rafındadır. Büyük bir özgürleşme değil. Sabahın on saniyesinin boşalmasıdır sadece. Boşalan yere
+          başka bir gözlem yerleşebilir: ayna, kumaşın oturuşu, merdiven sonunda nefesin tonu.
+        </p>
+        <p>
+          Sizin de tanıdık gelebilecek tablo budur: tartı sayısı uzun zamandır pek değişmez. Aynı kilodaki bir
+          kadın, üç yıl önceki bedeninden farklı hissedebilir. Sayı yatışmış olsa da altında sessiz bir şey
+          değişmeyi sürdürebilir.
         </p>
 
         <h2 id="soyledigi-soylemedigi">Tartının söylediği — ve söylemediği</h2>
         <p>
-        Tartı sayısı bir tek şey söyler: sizin toplam kütleniz. Bu sayının altında neyin değiştiğini söylemez. Bunu
-          okudukça anladım.
+          Tartı tek bir şey söyler: toplam kütle.
         </p>
         <p>
-          Beden ağırlığı, üç ana bileşenin toplamı: kas, yağ ve geri kalan (kemik, su, organlar, doku). Tartı bu
-          üçünü tek bir sayıda toplar; aralarındaki dengeyi göstermez. Bu yüzden iki kadın aynı kiloda olabilir
-          ama tamamen farklı bedenlerde duruyor olabilirler — birinin kas kütlesi yüksek, yağ oranı düşüktür;
-          diğerinde tersi. Vücut kütle endeksi (BMI) de aynı sınırlılığı taşır; uzun dönemli kohort çalışmaları,
-          kompozisyon farkını dikkate almayan ölçümlerin menopoz dönemindeki sağlık riskini olduğundan eksik
-          gösterebileceğini ortaya koyuyor <Evidence level={4} />. Bunu okuduğumda bir cümlede durdum, çünkü
-          çevremde duyduklarım da aynı şeyi söylüyordu — sayı sabit, beden hareket halinde.
+          Altında neyin değiştiğini söylemez. Beden ağırlığı kabaca üç bileşenin toplamıdır: kas, yağ ve geri
+          kalan (kemik, su, organlar, doku). Tartı bunları tek sayıda birleştirir; dengeyi göstermez. Bu yüzden
+          iki kadın aynı kiloda olabilir, ama farklı bedenlerde durabilir. Vücut kütle endeksi (BMI) de aynı
+          sınırlılığı taşır. Araştırmalar, kompozisyonu yok sayan ölçümlerin menopoz döneminde riski olduğundan
+          eksik gösterebileceğini belirtiyor <Evidence level={4} />.
         </p>
         <p>
-          Bana bunun en somut anlatımını bir hekimimle bir konuşmamızda duyduğum şu cümle vermişti: "Tartı sayısı
-          tarihin başlığıdır; gövdesini başka yerde okuman gerekir." Cümle aklımdan çıkmadı. Çünkü bedenle ilişkim
-          tam da o gün başka bir yere kaydı: sayıdan oranlara, anlık ölçümden zaman içindeki eğriye.
+          Sayı sabit kalır. Beden hareket hâlinde olabilir.
         </p>
         <p>
-          Söylemekten çekinmeyeyim, bilmediğim çok şey vardı. Başlangıçta "kompozisyon" sözcüğü bile biraz teknik
-          geliyordu — sanki bir laboratuvar terimiydi. Sonra fark ettim ki bedenle ilgili gündelik konuşmaların
-          tam ortasında duruyor. "Bedenim değişti" demek aslında kompozisyondan bahsetmek; sadece adını
-          koymamışız.
+          "Kompozisyon" sözcüğü ilk duyulduğunda teknik gelebilir. Oysa sizin gündelik cümlenizin tam
+          ortasındadır. "Bedenim değişti" demek çoğu zaman kompozisyondan bahsetmektir. Adı henüz konulmamış
+          olabilir.
+        </p>
+        <p>
+          İçiniz rahat olsun diye ekleyelim: tartının yetersiz kalması sizin yanılmanız demek değildir. Ölçü
+          aletinin sınırıdır.
         </p>
 
-        <h2 id="sessiz-aritmetik">Östrojen yatışınca beden ne yapıyor — sessiz bir aritmetik</h2>
+        <h2 id="sessiz-aritmetik">Östrojen yatışınca beden ne yapıyor</h2>
         <p>
-          Menopoz, ölçüye gelen bir olay değil bir geçişti benim için. Ama bedeninde işleyen sessiz bir aritmetiği
-          var; bunu öğrenmek bana yardımcı oldu.
+          Menopoz tek bir günde bitmez. Bir geçiştir. Ve bedende sessiz bir aritmetik işler.
         </p>
         <p>
-          Östrojen yatışmaya başladığında beden iki şeyi birden yapıyor: bir yandan kas kütlesini koruma yetisini
-          biraz kaybediyor (sarkopeni eğilimi), bir yandan da yağı farklı bir bölgeye — özellikle karın çevresine —
-          yerleştirmeye başlıyor (viseral yağa kayış). Bu iki süreç aynı toplam kiloyu üretebilir; ama kompozisyon
-          değişmiştir. Menopoz dönemindeki kohort çalışmaları, östrojen düşüşünün kas-yağ dengesi üzerindeki
-          etkisinin yaşa bağlı genel kayışın ötesine geçtiğini gösteriyor <Evidence level={4} />. Yani menopoz, yaş
-          almanın "üstüne" değil, yaş almanın içinde ayrı bir katman.
+          Östrojen yatışmaya başladığında beden iki şeyi birden yapabilir: kas kütlesini koruma yetisi biraz
+          zayıflar (sarkopeni eğilimi); yağ da farklı bir bölgeye — özellikle karın çevresine — yerleşmeye
+          başlar (viseral yağa kayış). Toplam kilo aynı kalabilir. Kompozisyon değişmiş olabilir. Araştırmalar,
+          östrojen düşüşünün kas–yağ dengesi üzerindeki etkisinin yalnızca yaşa bağlı genel kayışla
+          açıklanamayabileceğini gösteriyor <Evidence level={4} />. Menopoz, yaş almanın içinde ayrı bir
+          katmandır.
         </p>
         <p>
-          Bunu öğrendikçe biraz rahatladım, biraz da sorumlu hissettim — iki his birden. Rahatlama tarafı: kendi
-          irademle ilgili bir mesele değil, bedenimde işleyen bir geçiş. Sorumluluk tarafı: bedenin yön değiştirdiği
-          bu noktada ne yaptığımın bir önemi var. İki his birbirini yemeden yan yana durabiliyor — yıllar içinde
-          öğrendiğim bir şey de bu oldu.
+          Bunu duymak bazen rahatlatır. Bazen de omuzlara küçük bir yük biner. İkisi yan yana durabilir.
+          Rahatlatıcı taraf: bu yalnızca irade meselesi değildir. Diğer taraf: bedenin yön değiştirdiği noktada
+          atılan küçük adımların bir yeri vardır — sizin yolunuzda, kendi temposunuzda.
         </p>
         <p>
-          Bir cümlede daha duraklayayım: bu sessiz aritmetik herkeste birebir aynı işlemiyor. Birinin kompozisyonu
-          daha hızlı kayıyor, birinin daha yavaş; birinin yağı bele yerleşiyor, birininki kalçaya. Genetik var,
-          uyku var, hareket var, beslenme var, stres var — ve bunların hepsi birbirine dokunuyor. Bu yüzden tek bir
-          formül yok; sadece bir yön ve bir dizi seçim var.
+          Bu aritmetik herkeste aynı işlemez. Kiminde daha hızlı, kiminde daha yavaş. Yağ bazen bele, bazen
+          başka bir yere kayar. Genetik, uyku, hareket, beslenme ve stres birbirine dokunur. Tek formül yok.
+          Bir yön ve bir dizi seçim vardır.
         </p>
 
-        <h2 id="ayna-tartı-arasında">Ayna ile tartı arasında bir cümle — annemle kızım arasında</h2>
+        <h2 id="ayna-tartı-arasında">Ölçü ile his arasındaki mesafe</h2>
         <p>
-          Annem aynaya başka türlü bakardı, kızım da bambaşka türlü bakıyor. Ben ortadayım — ve bu ortalık biraz
-          yorucu, biraz öğretici.
+          Deniz kenarında çekilmiş bir fotoğraf. Ya da mayo provası. Mesafe bir anda duyulur hâle gelir.
         </p>
         <p>
-          Annemin genç kadınlık yıllarında ayna sessizdi. Beden değişiyordu, ama dilin içinde bir adı yoktu. "Yaşlanıyoruz" derdi;
-          o kadar. Tartının üzerine pek çıkmazdı; bedenin form değişimini "geçiyor" diye karşılardı. Bu sessizliğin
-          hem koruyucu hem örtücü bir tarafı vardı: kadın, bedeniyle yaşadığı şeyleri çoğu zaman yalnız taşıyordu.
+          Bazen tartı susar. Ayna susmaz. Kıyafet de susmaz. Önceki yıllarda beden değişimi çoğu zaman sessiz
+          taşınırdı. "Geçiyor" denirdi. Bugün ise beden hakkında daha çok konuşuluyor; bazen fazlasıyla. Her
+          ölçüm, her eğri, her sayı izlenebilir hâle geliyor. İki uç da yorucu olabilir: hiç konuşmamak veya her
+          şeyi ölçmek.
         </p>
         <p>
-          Kızımın yaşında ise tablo tam tersi bir uçta. Bedenin her milimetresini ölçen, bilimden okuyan, sosyal medyada
-        paylaşan bir dünya var. Bedenleriyle çok konuşuyorlar — bazen biraz fazla. Geçen akşam mutfakta bana "anne siz
-          biraz takıntılısın" demişti; itiraz etmek için açtığım ağzımı kapattım, çünkü haklıydı. Ama onun da bir
-          başka takıntısı var: her ölçüm, her sayı, her eğri. İkimiz aynı maddenin iki ayrı uçundayız.
-        </p>
-        <p>
-          Ben ortadayım. Bu ortada olmak yorucu — annenin sessizliğine de yakın değilim, kızımın sürekli ölçüm
-          alışkanlığına da. Ama bir öğreticiliği var: kompozisyon kelimesini öğrendim, ama yine de bedenle
-          ilişkide bir sayı aramıyorum; ne hissettiğime bakıyorum. Belki de benim işim tam burada başlıyor:
-          iki ayrı beden dilini duyup kendiminkine en dürüst karşılığı bulmak.
+          Orta yol çoğu zaman sayıdan önce hisse bakmaktır. Kompozisyon kelimesini bilmek yararlıdır. Ama önce
+          bedeninizde ne hissettiğinizi fark etmek de bir beceridir. Ölçü ile his birbirinden uzaklaştığında bu
+          yalnızlık değildir. Yaygın bir tablo.
         </p>
 
         <h2 id="kontrol-teslim">Her şeyi takip etmek — bir yere kadar</h2>
         <p>
-          Bedeni ölçmek bir yere kadar yardımcı; ondan sonrası, izlemenin de bir tür kaygı yönetimine dönüştüğü
-          yer. Bu çizgiyi yıllar içinde öğrendim.
+          Ölçmek yardımcı olabilir. Ondan sonrası, izlemenin kaygıya dönüştüğü yerdir.
         </p>
         <p>
-        Hekimimle bir konuşmamızda "bu bilgi sizi rahatlatıyor mu, yoruyor mu" demişti çok dingin bir ses
-          tonuyla — bir tahlilin sonucu üzerine konuşurken. O cümle aklımdan günlerce çıkmadı. Çünkü
-          "rahatlatıyor" diyemedim; "tedirginliği erteliyor" demek daha doğruydu. Ölçüm bazen bir cevap değil,
-          bir oyalanma oluyor.
+          Hekim odasında sık duyulan sade soru şudur: "Bu bilgi sizi rahatlatıyor mu, yoruyor mu?" Ölçüm bazen
+          cevap değildir. Bazen oyalanma olur. Telefondaki eğriye bakarken omuzların gerilmesi, o oyalanmanın
+          somut hâli olabilir.
         </p>
         <p>
-          O günden sonra hekimimle birlikte ölçüm ritmini yeniden değerlendirdik, beraber yorumladık. Yıl
-          içinde belirli aralıklarla bakmak, geri kalan zamanı bedenin ne anlattığını dinleyerek geçirmek —
-          ölçümü reddetmek değil; ölçümü kendi yerine oturtmak. Sayı bir not, gözlem gövde, his de işte tam
-          orada bir yerlerde. Üçü birbirine eşitlendiğinde tablo netleşiyor.
+          Ölçüm ritmini hekimle belirli aralıklarla gözden geçirmek; kalan zamanda bedeninizde ne
+          hissettiğinizi fark etmek — ölçümü reddetmek değil, yerine oturtmaktır. Sayı bir not. Gözlem gövde. His de tam orada.
+          Üçü yaklaştığında tablo netleşir.
         </p>
         <p>
-          Bunun cevabını ben de tam bilmiyorum aslında: bedeni ölçmenin en doğru sıklığı nedir, izlemek nerede
-          hasta yapar, hangi ölçüm bilgi verir hangisi sadece kaygıyı erteler. Burası benim için hâlâ açık bir
-          soru. Sadece şu kadarını söyleyebilirim: izlemek istediğim her şeyin bir cevabı olmasını beklemiyorum
-          artık.
+          En doğru sıklık kişiden kişiye değişir. Her izlenen şeyin kesin cevaba bağlanması gerekmez.
         </p>
 
-        <h2 id="uc-kucuk-not">Hekimimle birlikte vardığımız üç küçük not</h2>
+        <h2 id="uc-kucuk-not">Üç küçük pratik yön</h2>
         <p>
-        Bunlar reçete değil; benim kendi sürecimde hekimimle birlikte yararlı bulduğumuz üç yaklaşım. Sizin yolunuz
-          farklı olabilir; kendi hekiminizle konuşmak ilk adımdır.
+          Bunlar reçete değil. Hekimle birlikte değerlendirilebilecek üç yaklaşımdır. Yolunuz farklı olabilir.
         </p>
         <p>
-          <strong>Bir.</strong> Direnç antrenmanı kompozisyonu kasla destekleyen en somut araçlardan biri.
-          Menopozdaki kadınlarda düzenli direnç antrenmanının kas kütlesi koruması üzerinde anlamlı etkisi
-          olduğunu gösteren çalışmalar artıyor <Evidence level={4} />. Ama burada dikkat çekici sözcük
-          "düzenli" — ayda iki kere değil, hafta içine yerleşmiş bir ritim. Pilates ve yürüyüş yıllardır
-          devam eden çapalardı; haftada bir gün ağırlık eklemek farkı zamanla yerleşen bir biçimde getiriyor.
-          Bir hamlede değil, ritimde yerleşen bir değişim.
+          <strong>Bir.</strong> Direnç antrenmanı, kompozisyonu kasla destekleyen somut araçlardan biridir.
+          Menopozdaki kadınlarda düzenli direnç antrenmanının kas kütlesini korumaya yardımcı olabileceğini
+          gösteren çalışmalar artıyor <Evidence level={4} />. Kritik kelime "düzenli"dir — ayda iki kez değil,
+          haftaya yerleşmiş bir ritim. Yürüyüş iyi bir çapa olabilir; haftada bir-iki gün ağırlık eklemek de
+          zamanla fark bırakabilir.
         </p>
         <p>
-          <strong>İki.</strong> Protein, menopoz döneminde yeniden konuşulan bir konu. Yaş aldıkça vücudun
-          proteini işleme yeteneği biraz değişiyor; bu nedenle yeterli protein almak kompozisyon açısından genç
-          yaşlardakine göre biraz daha bilinçli bir tercih hâline geliyor. Bunun da bir miktar/marka tablosu
-          var — ama o yazıda yer almaz; hekiminizle birlikte konuşacağınız bir konu. Hekimimle bir konuşmamızda
-          ortaya çıkan basit prensip şuydu: ana öğünlerde proteinin tabakta görünür yer alması. Sayıdan çok bir
-          alışkanlık konusu.
+          <strong>İki.</strong> Protein, menopoz döneminde yeniden konuşulan bir konudur. Yaş aldıkça bedenin
+          proteini işleme biçimi biraz değişebilir; yeterli protein almak daha bilinçli bir tercih hâline
+          gelebilir. Sayısal hedef hekimle belirlenir. Ana öğünlerde proteinin tabakta görünür yer alması
+          yardımcı olabilir — hesap makinesi değil, alışkanlık.
         </p>
         <p>
-          <strong>Üç.</strong> Kompozisyonu zaman zaman ölçmek — ama her gün değil. Vücut kompozisyonu analizi
-          (örneğin DEXA taraması ya da uygun bir bioimpedans ölçümü) yılda bir-iki kez bir referans noktası
-          verir; sayıdan değil eğriden bakmaya yardımcı olur. Bu da hekimimle birlikte bir karar olarak yıllık
-          takvime yerleşti. Kararım kendi kararım, ama yalnız aldığım bir karar değil.
+          <strong>Üç.</strong> Kompozisyonu zaman zaman ölçmek — her gün değil. Uygun bir kompozisyon ölçümü
+          (hekimle karar verilen yöntem) yılda bir-iki kez referans noktası verebilir. Sayıdan çok eğriye
+          bakmaya yardım eder. Sıklık da hekimle alınan bir karardır.
         </p>
         <p>
-          Bu üç notun da arkasında aynı tutum var: bedeni izlemek değil, bedenle bir konuşma kurmak. Kararı her
-        seferinde hekimimle birlikte değerlendirdik; her seferinde "bu benim yolum" diye tuttum. Sizin
-için işe yarayacak yaklaşım farklı olabilir — özellikle bu konuyu kendi sağlık geçmişinizle birlikte
-          değerlendirebilecek bir hekimle uzun bir bağ, en değerli adım.
+          Üçünün arkasında aynı tutum vardır: bedeni sürekli izlemek değil, bedeni tanımak. En değerli adım
+          çoğu zaman kişisel sağlık geçmişinizi bilen bir hekimle kurulan uzun bağdır.
         </p>
 
         <h2 id="sss">Sıkça Sorulan Sorular</h2>
         <p>
-          Aşağıdaki sorular farklı arkadaşlarımdan ve okurlardan geldi; her birinin cevabı kendi yolumdaki notum.
+          Bu konuda en sık gelen soruların kısa yanıtları:
         </p>
         <p>
-          <strong>Tartı pek değişmiyor ama bedenim değişti — bu menopoza özgü mü?</strong> Tek başına menopoza özgü
-          değil, ama menopoz onu hızlandırıyor. Kompozisyon değişimi yaş alma sürecinin bir parçası — kas yavaşça
-          azalır, yağ farklı bölgelere yerleşir. Östrojen düşüşü bu kayışın eğimini menopoz döneminde biraz daha
-          dikleştiriyor. Yani sayının yatışıp bedenin değişmeye devam etmesi yaygın bir gözlem; "ben bir şeyi yanlış
-          mı yapıyorum" diye düşünme. Yaptığın şey doğru; sadece ölçü aletini değiştirme zamanı.
+          <strong>Tartı pek değişmiyor ama beden değişti — bu menopoza özgü mü?</strong> Tek başına menopoza özgü
+          değildir; ama menopoz bu süreci hızlandırabilir. Kompozisyon değişimi yaş almanın bir parçasıdır —
+          kas yavaşça azalır, yağ farklı bölgelere yerleşebilir. Östrojen düşüşü bu kayışın eğimini biraz daha
+          dikleştirebilir. Sayının yatışıp bedenin değişmeye devam etmesi yaygın bir gözlemdir. Bu bir hata
+          değildir; ölçü aletini değiştirme zamanının gelmiş olabileceğinin işaretidir.
         </p>
         <p>
-          <strong>BMI normal aralıkta ama yağ oranım yüksek; ne yapmalıyım?</strong> İlk olarak, bunu hekiminizle
-          birlikte değerlendirin — özellikle yağın nereye yerleştiği (karın çevresi mi, başka yerler mi)
-          metabolik açıdan farklı anlamlara gelebiliyor. Sonrasında bunun bir "panik" değil, "yön" göstergesi
-          olduğunu hatırlamak iyi geliyor. Direnç antrenmanı, yeterli protein, uyku düzeni — bu üçü kompozisyon
-          tablosunu zaman içinde değiştirebilen üç ana sütun. Ölçüm, durumu görmek için; alarm vermek için değil.
+          <strong>BMI normal aralıkta ama yağ oranı yüksek; ne yapmalı?</strong> Önce hekimle birlikte
+          değerlendirmek gerekir — özellikle yağın nereye yerleştiği (karın çevresi mi, başka yerler mi)
+          metabolik açıdan farklı anlamlar taşıyabilir. Bu bir panik göstergesi olmak zorunda değildir; bir yön
+          göstergesi olabilir. Direnç antrenmanı, yeterli protein ve uyku düzeni, kompozisyon tablosunu zaman
+          içinde değiştirebilen üç ana sütundur. Ölçüm alarm için değil, görmek içindir.
         </p>
         <p>
-          <strong>Kompozisyon takibi için tek bir doğru yöntem var mı?</strong> "Tek doğru yöntem" bende fazla
-          iddialı duruyor; "yararlı bulunan" daha doğru gelir. Ev tartısının da bir yeri var; ama yanına bir aynaya
-          bakma alışkanlığı, bir de yılda bir-iki kez profesyonel bir kompozisyon ölçümü (hekimle birlikte karar
-          verilmiş şekilde) tablonun gövdesini görmeye yardım ediyor. Sıklığın hekimle birlikte belirlenmesi
-          önemli; izlemek de bir doza sahiptir.
+          <strong>Kompozisyon takibi için tek bir doğru yöntem var mı?</strong> "Tek doğru yöntem" fazla iddialı
+          olur. "Yararlı bulunan yöntem" daha dürüst bir yaklaşımdır. Ev tartısının da bir yeri vardır; yanına
+          bedeni gözlemleme alışkanlığı ve hekimle karar verilen aralıklı bir kompozisyon ölçümü tablonun
+          gövdesini görmeye yardım edebilir. İzlemek de bir doza sahiptir.
         </p>
         <p>
-          <strong>Direnç antrenmanı menopozda gerçekten kritik mi?</strong> Kritik kelimesi bende biraz büyük
-          duruyor; "değerli" daha doğru gelir. Düzenli direnç antrenmanının kas kütlesi koruması üzerinde anlamlı
-          etkisi olduğu literatürde tartışılıyor; bu eğilim menopoz dönemindeki kadınlar için özellikle önemli.
-          Ama "yapılması zorunlu" tarzı bir cümleye dönüşmesini de istemem — başlama eşiği herkeste farklı, ve
-          küçük başlangıçlar bile zaman içinde fark yaratıyor.
+          <strong>Direnç antrenmanı menopozda gerçekten kritik mi?</strong> "Kritik" biraz büyük bir kelimedir;
+          "değerli" daha doğru durur. Düzenli direnç antrenmanının kas kütlesini korumaya yardımcı olabileceği
+          araştırmalarda sık konuşuluyor; menopoz döneminde bu eğilim özellikle önemlidir. Zorunluluk diline
+          çevirmemek de önemli — başlama eşiği kişiden kişiye değişir. Küçük başlangıçlar zamanla fark
+          yaratabilir.
         </p>
         <p>
-          <strong>Protein için bir kural var mı?</strong> Sayısal kuralı sizin hekiminiz söylesin; ben sadece bende
-          işe yarayan prensibi anlatabilirim. Ana öğünlerde proteinin tabakta görünür yer alması; öğünleri
-          kompozisyon açısından bilinçli kurgulamak. Bu, tartmaktan çok bir alışkanlık konusu. Yıllar içinde
-          yerleşince, hesap yapmadan da çalışıyor.
+          <strong>Protein için bir kural var mı?</strong> Sayısal hedefi hekim belirler. Genel prensip olarak
+          ana öğünlerde proteinin tabakta görünür yer alması, öğünleri kompozisyon açısından daha bilinçli
+          kurgulamaya yardımcı olabilir. Bu, sürekli tartmaktan çok bir alışkanlık konusudur. Yerleştiğinde
+          hesap yapmadan da işler.
         </p>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          Tartı bir başlangıç noktası — ama bedenin söylediğinin tamamı değil.
+          Tartı bir başlangıç noktası olabilir. Gösterdiği tek şey kütledir.
         </p>
         <p>
-          Sayı yatışınca geriye kalan, bedenle kurulan farklı bir konuşma oluyor. Ölçü değil, gözlem. Karar
-        değil, eğrinin yönü. Bu benim yolum oldu, yıllar içinde olgunlaşarak; sizin yolunuz başka olabilir —
-          ve olmalı da.
+          Sayı yatışınca geriye kalan, bedenle kurulan farklı bir ilişki biçimidir. Ölçüden çok gözlem. Anlık
+          karardan çok eğrinin yönü. Bu yaklaşım kişiden kişiye değişir — ve bu iyi bir şeydir.
         </p>
         <p>
-          Belki şu soru yardımcı olur: bu altı ayda tartı dışında neyi yargılamadan, sadece fark etmek
-          niyetiyle gözlemleyebilirim? Bir pantolonun düşüşü, bir merdivenin sonunda nefesin tonu, sabah
-        kalkarken belinizin nasıl açıldığı. Karar kendi kararınız, sorumluluğu da size ait. Tartının söylediğinden çok bedenin söylediğine kulak vermek, bu dönemde öğrenilen en sade yön oluyor.
+          Belki şu soru yardımcı olur: Bu altı ayda tartı dışında neyi, yargılamadan, yalnızca fark etmek
+          niyetiyle gözlemleyebilirsiniz? Bir pantolonun düşüşü. Merdivenin sonunda nefesin tonu. Sabah belin
+          nasıl açıldığı. Tartı susar; bu ayrıntılar görünür kalır. Bu dönemde öğrenilebilecek en sade yön
+          belki de budur.
         </p>
       </ArticleProsePanel>
-
-
-      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
@@ -329,20 +297,20 @@ için işe yarayacak yaklaşım farklı olabilir — özellikle bu konuyu kendi 
       <ArticleEditorNote>
 <p class="mb-3 leading-relaxed text-ink/80">
           Menopoz dönemindeki vücut kompozisyonu değişimi — kas kütlesinin yavaşça azalması (sarkopenik
-          eğilim) ve yağın özellikle karın çevresine yeniden dağılması (visseral kayış) — östrojen düşüşünün
-          yaş alma sürecine eklediği ayrı bir katmandır. Uzun dönemli kohort çalışmaları, bu kayışın yalnızca
-          yaşa bağlı genel düşüşle açıklanamayacağını ortaya koymaktadır <Evidence level={4} />.
+          eğilim) ve yağın özellikle karın çevresine yeniden dağılması (viseral kayış) — östrojen düşüşünün
+          yaş alma sürecine eklediği ayrı bir katmandır. Araştırmalar, bu kayışın yalnızca yaşa bağlı genel
+          düşüşle açıklanamayabileceğini gösteriyor <Evidence level={4} />.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Vücut kütle endeksi (BMI) tek başına kompozisyonu yansıtmaz; aynı kilo değerinde belirgin biçimde
-          farklı metabolik profilleri gizleyebilir. Özellikle visseral yağ oranı, kardiyovasküler ve metabolik
-          risk değerlendirmesinde tartı veya BMI'den daha bilgilendiricidir <Evidence level={4} />. Bu nedenle
-          ölçüm aracı tek başına yeterli değil; kompozisyon ölçümleri (DEXA, bioimpedans vb.) ek bilgi sağlar.
+          Vücut kütle endeksi (BMI) tek başına kompozisyonu yansıtmaz; aynı kilo değerinde farklı metabolik
+          profilleri gizleyebilir. Özellikle viseral yağ oranı, kardiyovasküler ve metabolik risk
+          değerlendirmesinde tartı veya BMI'den daha bilgilendirici olabilir <Evidence level={4} />. Bu nedenle
+          ölçüm aracı tek başına yeterli değildir; kompozisyon ölçümleri ek bilgi sağlar.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Düzenli direnç antrenmanının menopoz dönemindeki kadınlarda kas kütlesi koruması üzerinde anlamlı
-          etkisi olduğu ve yeterli protein alımının kompozisyon korumasına katkı sağladığı yönündeki veriler
-          giderek güçlenmektedir <Evidence level={4} />. Antrenman tipi, sıklık ve yoğunluk bireysel ortopedik
+          Düzenli direnç antrenmanının menopoz dönemindeki kadınlarda kas kütlesi korunmasına yardımcı
+          olabileceğini ve yeterli protein alımının kompozisyon korumasına yardımcı olabileceğini gösteren
+          veriler giderek güçlenmektedir <Evidence level={4} />. Antrenman tipi, sıklık ve yoğunluk bireysel ortopedik
           tabloya göre titrize edilir; protein hedefi ise böbrek fonksiyonu, mevcut hastalıklar ve ilaç
           kullanımıyla birlikte değerlendirilir.
         </p>

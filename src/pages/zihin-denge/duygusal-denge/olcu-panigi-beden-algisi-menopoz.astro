@@ -1,0 +1,332 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/';
+const hero = submenuHeroByRoute['/zihin-denge/duygusal-denge/']!;
+
+const articleTitle = 'Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?';
+const seoTitle = 'Ölçü Paniği ve Beden Algısı Menopoz';
+const articleDescription =
+  'Başak Pelister, menopoz yıllarında tartı, ayna ve kıyafet etrafında biriken ölçü paniğini yaşıt sesiyle açıyor; üç kuşak, utanç ve beden algısını reçetesiz, sakin bir dille konuşuyor.';
+
+const tocEntries = [
+  { id: 'acilıs', label: 'Aslında Her Şey Masum Başlıyor' },
+  { id: 'olcu-panigi', label: 'Ölçü Paniği mi, Kilo Endişesi mi?' },
+  { id: 'ayna', label: 'Aynanın Sesi' },
+  { id: 'uc-kusak', label: 'Üç Kuşak, Üç Ölçü' },
+  { id: 'durmak', label: 'Didinmenin Sonunda Kalan Soru' },
+  { id: 'beden-algisi', label: 'Tartı Susunca Kalan' },
+  { id: 'sakinlesenler', label: 'İyi Gelmeyenler, Sakinleştirenler' },
+  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'basak-pelister',
+  publishedDate: '16 Temmuz 2026',
+  pathname,
+  articleSection: 'Zihin & Denge',
+  sectionPath: '/zihin-denge',
+  keywords: [
+    'ölçü paniği',
+    'beden algısı',
+    'menopoz',
+    'tartı',
+    'ayna',
+    'kıyafet',
+    'üç kuşak',
+    'duygusal denge',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zihin-denge/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zihin & Denge · Duygusal Denge"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="basak-pelister"
+        publishedDate="16 Temmuz 2026"
+        readingMinutes={8}
+        imageSrc="/images/library/editorial/basak-olcu-panigi-beden-algisi-byline.webp"
+        imageAlt="Ayna önünde kıyafet oturuşuna bakan 40+ kadın; ölçü paniği ve beden algısı yazısı için dosya görseli"
+        imagePosition="center"
+      />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Tartı bazen aynı rakamı gösterir; bazen hiç göstermese de zihnimizdeki ses devam eder. Bu yazı kilo
+          vermeyi, diyet yapmayı ya da tek bir yöntemi anlatmıyor. Başak Pelister, menopoz yıllarında ölçüye,
+          aynaya, kıyafete ve üç kuşağın beden cümlelerine takılan paniği yaşıt sesiyle açıyor: utandırmadan,
+          acele ettirmeden, reçete vermeden.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="acilıs">Aslında her şey çok masum başlıyor</h2>
+        <p>
+          Yıllarca bir denge arayışı içindeydim; bazen tartıda, bazen aynada, bazen de dolabın kapağını açtığım o
+          sessiz anda. Sizde de böyle olmuyor mu?
+        </p>
+        <p>
+          Bir sabah elimi her zamanki pantolona uzattım. Fermuar kapandı ama belimdeki küçük baskı bütün sabahı
+          değiştirdi. Ne olmuştu? İki kilo mu? Su mu? Kas mı? Ya da sadece o gün bedenimi dinlemeye hiç halim yok
+          muydu?
+        </p>
+        <p>
+          Aslında her şey çok masum başlıyor... Bir rakam, bir beden, bir kumaş izi. Sonra o küçücük işaret büyüyor,
+          günün içine sızıyor. Kahveyi karıştırırken bile aklınızın bir köşesinde aynı cümle dönüyor: "Yine mi?"
+        </p>
+        <p>
+          Önce şunu söyleyeyim: bu yazı kilo verme yazısı değil. Bende de uzun bir yolculuk oldu; bireysel takip
+          gerektiren, tek formülle açıklanamayacak bir süreç. Ama bugün onu anlatmayacağım. Bugün, ölçünün içimizde
+          açtığı o küçük paniği konuşmak istiyorum.
+        </p>
+        <p>Çünkü bazen tartı susar. İç ses susmaz.</p>
+
+        <h2 id="olcu-panigi">Ölçü paniği, kilo endişesiyle aynı şey mi?</h2>
+        <p>
+          Ölçü paniği yalnızca kilo kaygısı değildir; çoğu zaman kontrolü kaybetmiş gibi hissetmenin bedende bulduğu
+          küçük bir kapıdır. Peki biz o kapıdan günde kaç kez geçiyoruz?
+        </p>
+        <p>
+          Kilo endişesi daha somut olabilir: rakam değişti mi, kıyafet daraldı mı, bel çevresi farklı mı? Ölçü
+          paniği ise biraz daha sinsi. Rakam değişmese bile "ben değiştim mi?", "çekiciliğim azaldı mı?", "artık
+          eski ben değil miyim?" soruları gelir.
+        </p>
+        <p>
+          Bunu yazarken çok dikkatliyim. Çünkü beden algısı yalnızca estetik bir mesele değildir; ruh hali, uyku,
+          hormonal geçiş, stres ve yaş alma deneyimiyle birlikte değişebilir <Evidence level={3} />. Bu, "her şey
+          hormonlardan" demek değil. Ama "sadece irade meselesi" de değil.
+        </p>
+        <p>
+          Siz hiç tartıya çıkmadan önce nefesinizi tuttuğunuzu fark ettiniz mi? Ben ettim. Bunu itiraf etmek biraz
+          ayıp gibi geliyor, biliyorum. Oysa hepimizin yaşadığı bir an bu.
+        </p>
+        <p>Utanç var.</p>
+        <p>Küçük ama gerçek.</p>
+
+        <h2 id="ayna">Aynanın sesi bazen tartıdan yüksek çıkar</h2>
+        <p>
+          Ayna rakam söylemez; ama bazen tartıdan daha sert bir cümle kurar. Hele yorgunsanız, uykusuzsanız, o gün
+          kendinize karşı sabırsızsanız.
+        </p>
+        <p>
+          Dolap kapağının önünde duran o kadın kim? Pantolon belini iki parmağıyla yoklayan, bluzun omuzda nasıl
+          durduğuna bakan, bir anda "eskiden böyle değildi" diyen kadın... Tanıdık mı?
+        </p>
+        <p>
+          Bende öyle bir an oldu ki, aynaya bakarken aslında bedenime değil, geçmişteki bir versiyonuma baktığımı
+          fark ettim. O kadını geri çağırmaya çalışıyordum. Daha genç olanı, daha hızlı toparlananı, daha az soru
+          soranı.
+        </p>
+        <p>
+          Ama bedenin değişmesi ile bedenin "bozulduğu" hissi aynı şey değil. Burada ince bir çizgi var. Menopoz
+          yıllarında yağ dağılımı, kas miktarı, uyku ve enerji değişebilir; bunun beden hissine yansıması şaşırtıcı
+          değildir <Evidence level={3} />. Yine de her değişimi bir kayıp gibi okumak zorunda değiliz.
+        </p>
+        <p>
+          Peki bunu nasıl okuyacağız? Doğrusu ben de her gün yeniden öğreniyorum. Bazı sabahlar iyi gidiyor. Bazı
+          sabahlar hiç.
+        </p>
+
+        <h2 id="uc-kusak">Üç kuşak, üç ölçü — aynı masada mı?</h2>
+        <p>
+          Annemle konuşurken kızım yan odaya girdiğinde bazen aynı anda üç farklı beden hikâyesi duyuyorum. Biri
+          geçmişin ölçüsüyle, biri bugünün aynasıyla, biri de daha başlamamış bir geleceğin merakıyla konuşuyor.
+        </p>
+        <p>
+          Annemin kuşağı bedeni daha çok dayanıklılıkla ölçtü. "İdare ettim", "geçer", "böyle olur" cümleleriyle...
+          Bizim kuşak biraz daha araştırdı, biraz daha sordu, biraz daha kıyasladı. Kızımın kuşağı ise görüntüyle
+          daha erken karşılaşıyor; ama bazen duyguyu daha cesur adlandırıyor.
+        </p>
+        <p>
+          Geçen akşam sofrada kızım bana, "Bunu neden bu kadar düşündüğünü merak ediyorum" dedi. Detayını
+          anlatmadım; onun hayatına taşımak istemem. Ama soru bende kaldı. Gerçekten neden bu kadar düşünüyorum?
+        </p>
+        <p>
+          Annem olsa başka sorardı: "Sağlığın iyi mi?" Kızım başka yerden bakıyor: "Kendimize neden bu kadar
+          sertiz?" Ben arada kalıyorum. Sizin de arada kaldığınız oluyor mu?
+        </p>
+        <p>
+          İşte bütün mesele burada başlıyor... Üç kuşak aynı masada oturduğunda, ölçü yalnızca santimetre olmuyor.
+          Biraz korku oluyor. Biraz alışkanlık. Biraz da kadınların birbirine fark etmeden devrettiği eski cümleler.
+        </p>
+
+        <h2 id="durmak">Yıllar süren didinmenin sonunda kalan tek soru</h2>
+        <p>
+          Yıllar süren bir didinme döneminin ortasında bir gün durdum, kendime başka bir soru sordum: "Ben aslında
+          neyle bu kadar uğraşıyorum?" Cevabı hemen gelmedi. Hâlâ da tam bildiğimi söyleyemem.
+        </p>
+        <p>
+          Kilo vermek, almak, korumak, yeniden başlamak... Bunların hepsi ayrı ayrı hikâyeler. Kiminde tıbbi takip
+          gerekir, kiminde beslenme düzeni konuşulur, kiminde uyku, kas, tiroid, stres yan yana gelir. Benim
+          öğrendiğim şu: tek formül yok.
+        </p>
+        <p>
+          Bu nedenle kendi yolculuğumu bir yöntem gibi anlatmak istemem. Benim yolum benimdi; sizinki başka olabilir.
+          Hekimle konuşulacak yerler vardır. Kendi kendinize yüklenmemeniz gereken yerler de.
+        </p>
+        <p>
+          Bir noktadan sonra "kaç kilo?" sorusu bana yetmemeye başladı. "Nasıl hissediyorum?", "gün içinde neye
+          gücüm var?", "kendime hangi dille konuşuyorum?" soruları daha dürüst geldi. Sizce de bazen en zor değişim
+          tartıda değil, soruda olmuyor mu?
+        </p>
+        <p>Benim için oldu.</p>
+
+        <h2 id="beden-algisi">Tartı susunca beden algısı hemen susmuyor</h2>
+        <p>
+          Tartı sustuğunda — rakam değişmediğinde ya da artık ona hiç bakmadığınızda — beden algısı çoğu zaman öylece
+          susmaz. Çünkü mesele bazen ölçmek değil, ölçülmüş hissetmektir.
+        </p>
+        <p>
+          Bir kadın kendini yalnızca tartıda ölçmez. Fotoğrafta ölçer. Kıyafetin oturuşunda ölçer. Bir davete
+          hazırlanırken ölçer. Yazlık elbiseyi çıkarırken, merdiven çıkarken, eski bir fotoğrafa bakarken ölçer.
+        </p>
+        <p>
+          Bu noktada içimi rahatlatan cümle şu oldu: beden algısı değişebilir ve yeniden kurulabilir{' '}
+          <Evidence level={2} />. Bu sihirli bir cümle değil. Bir sabah uyanıp aynayla barışmak gibi de olmuyor. Ama
+          tekrar eden küçük pratiklerle, daha yumuşak bir iç dille ve gerektiğinde uzman desteğiyle algı biraz
+          esneyebilir.
+        </p>
+        <p>
+          Merak etmeyin diye yazıyorum: aynada zorlanmak yüzeysel olmak değildir. Kıyafetin dar gelmesine üzülmek de
+          sizi zayıf yapmaz. Bazen sadece aynı anda çok şey taşıyorsunuzdur.
+        </p>
+        <p>O kadar.</p>
+
+        <h2 id="sakinlesenler">Bana iyi gelmeyenler, beni biraz sakinleştirenler</h2>
+        <p>
+          Bana iyi gelen şeylerin listesi hiç iddialı değil; hatta biraz sıkıcı bile. Ama belki tam da bu yüzden
+          gerçek.
+        </p>
+        <p>
+          İşe yaramayanları daha kolay söyleyebilirim. Her sabah tartıya çıkmak bana iyi gelmedi. Aç karnına kendimi
+          yargılamak iyi gelmedi. Bir hafta iyi hissettiğim için kendimi alkışlayıp, ertesi hafta aynı bedene kızmak
+          hiç iyi gelmedi.
+        </p>
+        <p>
+          Biraz sakinleştirenler ise daha basitti. Aynı saatte değil, aynı ruh haliyle bedenime bakmaya çalışmak.
+          Kıyafet denerken "bu beden bana olmadı" yerine "bu kıyafet bugün bana iyi gelmedi" diyebilmek. Hekimime
+          giderken yalnızca rakam değil, his de götürmek. Uyku, enerji, iştah, ruh hali... Hepsi aynı dosyanın
+          içinde.
+        </p>
+        <p>
+          Bir de şunu öğrendim: bedenle ilişki bir self-care pozu değil. Bazen gayet dağınık, bazen sinirli, bazen
+          komik. Kimi gün aynaya bakıp "bugün bu kadar" dersiniz. Yeter.
+        </p>
+        <p>
+          Cevabı bulmak değil, doğru soruyu sormaya alışmak... Belki şu sorudan başlamak yardımcı olur: Bugün
+          bedenimi ölçmek mi istiyorum, yoksa anlamak mı?
+        </p>
+        <p>
+          Bilmediğim çok şey var; bildiğim şu kadar. Tartı sustuğunda geriye kalan ses, yavaş yavaş değişebilir.
+          Sizin için sırası farklı olabilir.
+        </p>
+
+        <h2 id="sss">Sıkça Sorulan Sorular</h2>
+        <p>Ölçü paniği konuşulurken en çok geri dönülen soruları burada kısa ve net topladım.</p>
+
+        <h3>Tartıya her sabah çıkmak beden algısını neden bu kadar zorlar?</h3>
+        <p>
+          Her sabah tartılmak bazı kişilerde kontrol hissi verebilir; ama bazı kişilerde günün duygusunu tek bir
+          rakama teslim eder. Özellikle hormonal geçiş döneminde su tutma, uyku, stres ve bağırsak düzeni gibi günlük
+          değişkenler rakamı oynatabilir. Eğer tartı gününüzü belirlemeye başladıysa, ölçme sıklığını hekiminizle
+          veya güvendiğiniz bir uzmanla konuşmak iyi bir başlangıç olabilir.
+        </p>
+
+        <h3>Kıyafetlerin birden dar gelmesi panik midir, yoksa bedenin değiştiğini mi söyler?</h3>
+        <p>
+          İkisi de olabilir. Kıyafetin dar gelmesi gerçek bir beden değişimini gösterebilir; ama o değişime
+          verdiğiniz tepki bazen fiziksel durumdan daha büyük olur. Burada iyi soru şudur: Bu değişimi sağlık,
+          hareket, uyku ve enerjiyle birlikte mi okuyorsunuz, yoksa yalnızca kendinizi suçlamak için mi
+          kullanıyorsunuz?
+        </p>
+
+        <h3>Annem ve kızım aynı ölçü dilini konuşurken ben neden boğuluyorum?</h3>
+        <p>
+          Çünkü kuşaklar beden hakkında farklı cümleler taşır. Bir kuşak dayanmayı, bir kuşak incelmeyi, bir kuşak
+          görünmeyi daha çok duymuş olabilir. Sizin sıkışmanız anlaşılır; bu sıkışmayı fark etmek bile aile içinde
+          başka bir dil kurmanın ilk adımı olabilir.
+        </p>
+
+        <h3>Beden algısı bozulunca hekime ne götürülür: tartı mı, his mi?</h3>
+        <p>
+          İkisi de götürülebilir. Tartı, bel çevresi, kan değerleri ve tıbbi öykü hekimin işine yarar; ama sizin
+          nasıl hissettiğiniz de resmin parçasıdır. "Kendimi eski bedenimde hissetmiyorum", "aynaya bakmak beni
+          zorluyor", "bu kaygı günümü kaplıyor" gibi cümleler de konuşmaya değerdir.
+        </p>
+
+        <h3>"Tartı susunca" ne demek; tartıyı atmak mı, başka bir ölçü mü kurmak?</h3>
+        <p>
+          Herkes için tartıyı tamamen bırakmak doğru olmayabilir. Bazı tıbbi durumlarda düzenli izlem gerekir.
+          Buradaki "susmak", rakamın tek otorite olmaması demek: enerji, güç, uyku, kıyafetle rahatlık, ruh hali ve
+          kendinize konuşma biçiminiz de ölçünün parçası olabilir.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+          '/zamansiz-yasam/kilo-artisi-menopoz/',
+          '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Bu yazı, kilo yönetimi veya tedavi önerisi sunmaz; beden algısı, ölçü kaygısı ve menopoz dönemindeki öznel
+          beden deneyimini editoryal bir yaklaşımla ele alır. Hormonal geçiş yıllarında vücut kompozisyonu, yağ
+          dağılımı, uyku, stres ve ruh hali birlikte değişebilir; bu nedenle tartı tek başına yeterli bir
+          değerlendirme aracı değildir.
+        </p>
+        <p>
+          Kilo artışı, hızlı beden değişimi, iştah değişikliği, belirgin yorgunluk veya beden algısının günlük
+          yaşamı zorlaması durumunda bireysel tıbbi değerlendirme önemlidir. Okur için güvenli yol şudur: rakamı da
+          hissi de küçümsemeden, gerekirse hekim ve uygun uzman desteğiyle birlikte okumak.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10" />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

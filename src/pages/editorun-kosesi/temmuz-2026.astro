@@ -1,0 +1,188 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+import { getIssueBySlug } from '../../data/issues';
+
+const issue = getIssueBySlug('03-temmuz-2026-tarti-susunca');
+const issuePath = `/sayi/${issue?.slug ?? '03-temmuz-2026-tarti-susunca'}/`;
+const pathname = '/editorun-kosesi/temmuz-2026/';
+
+const articleTitle = 'Sıcacık Köşe — Temmuz 2026: Tartı Susunca';
+const articleDescription =
+  "Eşik dergisinin Temmuz 2026 sayısı: Tartı Susunca. Site editörü Berna Aksoy'un kapı önü yazısı; bu ay vücut kompozisyonunu, iştahı, metabolizmayı ve beden algısını diyet kültüründen uzak konuşuyoruz.";
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  publishedDate: '2026-07-16',
+  pathname,
+  articleSection: "Editörün Köşesi",
+  sectionPath: '/sayi/',
+  keywords: [
+    'Eşik dergisi',
+    'Estranova editör köşesi',
+    'Sıcacık Köşe',
+    'Berna Aksoy',
+    'Temmuz 2026 sayısı',
+    'Tartı Susunca',
+    'vücut kompozisyonu',
+    'menopozda kilo',
+    'beden algısı',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath={pathname} />
+
+  <main id="main-content" class="pt-24 text-ink">
+    <SubmenuArticleBody>
+      <header
+        class="relative mb-12 overflow-hidden rounded-[36px] border border-primary/12 bg-gradient-to-br from-cream-warm via-cream-soft to-white p-8 shadow-[0_24px_70px_rgba(79,23,28,0.08)] ring-1 ring-gold/20 md:p-12"
+      >
+        <div class="pointer-events-none absolute -right-20 top-0 h-64 w-64 rounded-full bg-gold/15 blur-3xl" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute bottom-6 right-8 hidden font-serif text-[7rem] lowercase leading-none text-primary/[0.04] md:block" aria-hidden="true">
+          ölçü
+        </div>
+        <div class="relative max-w-4xl">
+          <div class="mb-6 h-px w-24 bg-gold"></div>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-primary">
+            Sıcacık Köşe · Temmuz 2026
+          </p>
+          <h1 class="font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-primary md:text-7xl">
+            Tartı Susunca
+          </h1>
+          <p class="mt-6 max-w-2xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
+            Yaz aylarında kilo kaygısı bazen daha yüksek sesle gelir. Bu sayı o sesi yavaşça,
+            utandırmadan açıyor.
+          </p>
+        </div>
+      </header>
+
+      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="16 Temmuz 2026" readingMinutes={5} />
+
+      <ArticleSummary title="Bu Sayıya Giriş">
+        <p>
+          <strong>Eşik · Sayı 03 — Tartı Susunca</strong>, tartı sessizleşince — ya da hiç
+          sessizleşmeyince — geriye kalanı konuşuyor. Vücut kompozisyonu, menopozda kilo artışı,
+          iştah ile metabolizma ve beden algısındaki ölçü paniği; ölçüyü tek otorite yapmadan,
+          kimseyi utandırmadan yan yana geliyor.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="yanlis-soruyu-fark-etmek">Önce Yanlış Soruyu Fark Etmek</h2>
+        <p>Önce yanlış soru sorduğumu fark ettim… “Kaç kilo?” Bazen kolay soru gibi duruyor. Çoğu zaman değil.</p>
+        <p>
+          Haziran'da Güç Eşiği'nde bedenin taşıma biçimini dinlemiştik. Temmuz'da ölçünün sesini
+          biraz kısacağız. Arkasında ne kaldığına bakacağız: bilgi mi, korku mu, alışkanlık mı?
+        </p>
+        <p>
+          Yazın bu soru daha sık geliyor. Kıyafetler inceliyor. Kol daha görünür. Tatil fotoğrafı,
+          deniz kenarı, açık kollu bir bluz — beden kışın olduğundan daha az saklanıyor. Kaygı her
+          zaman büyümez. Bazen yalnızca daha duyulur hâle gelir.
+        </p>
+        <p>
+          Bir arkadaşımın cümlesi aklımda kaldı: “Tartı aynı, ben aynı değilim.” Bu cümleyi hemen
+          açıklamaya çalışmadım. Bir süre masada bıraktım. Çünkü bazı konular vardır; konuşmaya
+          başladığınız anda bile bedende küçük bir sıkışma yaratır. Kilo onlardan biri. Yaz aylarında
+          o sıkışma bazen daha erken uyanır.
+        </p>
+        <p>
+          Menopoz yıllarında beden bazen rakamda değil; kas-yağ dengesinde, iştah sinyalinde, aynanın
+          önündeki tonda kayıyor. Sizde de ölçü ile his — hele yazın — bazen birbirinden uzaklaşmıyor mu?
+        </p>
+        <p>
+          Bu dosyayı hazırlarken editör masasında notları yan yana koydum. Kompozisyon. Kilo artışı.
+          İştah. Ölçü paniği. Okudukça şunu gördüm: tartı susunca panik de susmayabiliyor. Merak etmeyin
+          diye yazıyorum — o paniği adlandırmak, utandırmak için değil. Yaz bedeni biraz daha görünür
+          kıldığında bile, biraz alan açmak için.
+        </p>
+
+        <h2 id="sayi-03">Sayı 03 — Tartı Susunca</h2>
+        <p>
+          Temmuz sayısı kilo konusunu diyet dosyası gibi açmıyor. Bu başlık zaten yeterince yüklü;
+          yazın ise daha da yüklenmiş hissedilebiliyor.
+        </p>
+        <p>
+          Bu ay konuyu hormonal geçişin sakin bir haritası gibi okuyoruz. Dört yazı, dört kapı:
+        </p>
+        <ul>
+          <li>
+            <strong>Estranova Editörleri</strong> tartı yatışınca geriye kalanı anlatıyor: vücut
+            kompozisyonunun sessiz kayması.
+          </li>
+          <li>
+            <strong>Estranova Editörleri</strong> menopozda kilo artışını aynı yaşamda değişen bedenle
+            sakin bir sohbete çeviriyor.
+          </li>
+          <li>
+            <strong>Dr. Metin Alış</strong> GLP-1'i “kilo iğnesi” sloganından çekiyor; iştah,
+            metabolizma ve kuşak ekseninde abartmadan okuyor. Reçete değil. Doğru soru.
+          </li>
+          <li>
+            <strong>Başak Pelister</strong> tartı susunca kalan ölçü paniğini yaşıt sesiyle açıyor:
+            üç kuşak, ayna, kıyafet ve yıllar süren didinmenin ardından kalan soru.
+          </li>
+        </ul>
+        <p>Yan yana geldiklerinde netleşen şey şu: tartı bir veri olabilir. Yargıç olmak zorunda değil.</p>
+
+        <h2 id="bu-sayiya-nasil-baslanir">Bu Sayıya Nasıl Başlanır?</h2>
+        <p>
+          Tek oturuşta her şeyi okumak gerekmiyor. Bu sayıyı parça parça okumak daha iyi olabilir.
+        </p>
+        <p>
+          O hafta sizi en çok tutan yerden başlayın: kompozisyon, kilo artışı sohbeti,
+          iştah-metabolizma ya da ölçü paniği.
+        </p>
+        <p>
+          Sayı sayfasından da girebilirsiniz:
+          <a href={issuePath}>Eşik · Sayı 03 — Temmuz 2026 · Tartı Susunca</a>. Bilimsel editör
+          mektubu ve kapak yazıları orada bir arada. Bir önceki kapı için
+          <a href="/editorun-kosesi/haziran-2026/">Haziran 2026 Sıcacık Köşe</a> duruyor.
+        </p>
+        <p class="italic">
+          Bu ay, yazın bedenin daha görünür olduğu günlerde bile, tartıyı yargıç yapmadan dinlemek iyi gelebilir.
+        </p>
+        <p>— Berna Aksoy, Site Editörü</p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          issuePath,
+          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+          '/zamansiz-yasam/kilo-artisi-menopoz/',
+          '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
+        ]}
+      />
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin
+          yerini almaz. Dergi yazılarında geçen klinik konular için Eşik'in her sayısında yayımlanan
+          editör mektubu ve ilgili yazıların altındaki Bilimsel Editör Notu yaklaşımı geçerlidir.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

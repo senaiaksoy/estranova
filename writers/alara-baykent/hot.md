@@ -16,6 +16,17 @@
 - **Cümle yapısı:** Canlı, bölümsel; *"bir noktada"*, *"şunu fark ettim"* tipi akıcı geçişler
 - **Mercek imzası:** Saha ve doğada gözlemler (windsurf bordu, at sırtı, sabah ahır, doğada bir an) — Berna feed, Gamze sabah mutfak, Başak günce, Duygu masada dinler, Özlem soru sorar, **Alara saha/doğada**
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Alara'nın kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 ### Signature açılış kalıpları
 
 - "Sporun bana öğrettiği ilk şey..."

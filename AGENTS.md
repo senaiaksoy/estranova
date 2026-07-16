@@ -203,6 +203,19 @@ Submenu content should be data-led where possible:
 - Keep manual `editorPick` objects only when there is a clear editorial reason.
 - Do not link to article routes that do not exist in `src/pages/`.
 
+#### Makale görseli kırpma — kanonik akış (`npm run article:images`)
+
+İki kanonik crop birbirine çok uzak orandadır (byline **4:5 = 0.80**, kart **2.4:1 = 2.40**); tek AI görselini elle `position` tahminiyle ikisine sokmak yüzü kesiyor ve her seferinde sürtünme yaratıyordu. Kalıcı çözüm `scripts/make-article-images.mjs`'dir. **Yeni makale görseli her zaman bu araçla kırpılır; ad-hoc `sharp` komutu yazılmaz.**
+
+- **Çıktı (sabit):** `<slug>-byline.webp` = **1200×1500** (ArticleAuthorBlock `imageSrc`), `<slug>.webp` = **2400×1000** (`articleCardImageByRoute`). İkisi de `public/images/library/editorial/` altına yazılır.
+- **Önerilen kaynak (en temiz):** byline ve kart için **amaca özel iki ayrı kaynak** üret — dikey (3:4 / 9:16) byline'a, yatay (16:9) karta. Böylece kırpım minimum bilgi kaybıyla oluşur.
+  ```bash
+  npm run article:images -- --slug=<slug> --byline-src=portrait.png --card-src=landscape.png
+  ```
+- **Tek kaynak (hızlı):** `--src=source.png` tek başına verilince ikisi de ondan üretilir; daha çok kırpar.
+- **Otomatik kırpma:** varsayılan `attention` stratejisi yüz/ilgi bölgesine göre kırpar; `position` elle tahmini gerekmez. Gerekirse `--byline-pos=` / `--card-pos=` ile override (`attention` | `entropy` | `centre` | `north` | `east` …).
+- **Değişmez kural (üst hero):** Bu araç yalnızca byline + kart üretir; `submenuHeroByRoute` üst hero'ya **dokunmaz** (kullanıcı açıkça istemedikçe). CLAUDE.md §6 "Makale görsel yayın kapısı" ile hizalı.
+
 Readability rules:
 - Hero lede: maximum 2 sentences.
 - Section intro copy: usually 40-70 words.
@@ -401,7 +414,7 @@ Not allowed:
 
 ## Content Tone
 
-**Writer persona** (aligned with `CLAUDE.md` HARD CONSTRAINT — §3 *Yazar persona'sı*): Articles should read like **Vogue Türkiye / Elle Türkiye / Marie Claire Türkiye** lifestyle-health sections. The implied author is **not a physician** — a successful **40+ woman** in a **non-clinical** career who researches deeply and speaks as a peer. The reader should feel **“you’re one of us”** warmth. **No** academic citation stack, **no** named international society/journal plugs, **no** inline external URLs in the body; **soft** phrasing (“research suggests”, “experts often note”) is acceptable.
+**Writer persona** (aligned with `CLAUDE.md` HARD CONSTRAINT — §3 *Yazar persona'sı*): Articles should read like **Vogue / Harper's Bazaar / Marie Claire** lifestyle-health atmosphere — visual intuition, selective rhythm, urban everyday proximity — with Estranova's medical neutrality and evidence calm. **Taklit yasağı:** no external brand phrases, luxury copy, or fashion-editor persona; only atmosphere and rhythm. The implied author is **not a physician** — a successful **40+ woman** in a **non-clinical** career who researches deeply and speaks as a peer. The reader should feel **“you’re one of us”** warmth. **No** academic citation stack, **no** named international society/journal plugs, **no** inline external URLs in the body; **soft** phrasing (“research suggests”, “experts often note”) is acceptable. Canonical block: each peer female writer's `writers/<slug>/hot.md` → “Kadın dergisi hissi”.
 
 **Hitap kuralı:** Kullanıcıya dönük tüm makale ve editoryal gövde metinlerinde hitap biçimi **daima "siz"** olmalıdır. "Sen" kalıbı, doğrudan okura seslenen yayın metninde kullanılmaz.
 

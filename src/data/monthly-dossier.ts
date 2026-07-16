@@ -54,6 +54,62 @@ export interface MonthlyDossier {
 
 export const dossiers: MonthlyDossier[] = [
   {
+    slug: '2026-07-tarti-susunca',
+    monthYear: 'Temmuz 2026',
+    monthYearISO: '2026-07',
+    kicker: 'TEMMUZ 2026 · DOSYA',
+    title: 'Tartı Susunca',
+    subtitle: 'Ölçünün ötesinde beden, iştah ve metabolizma',
+    lede:
+      'Tartının sesi kısıldığında vücut kompozisyonu, iştah, metabolizma ve beden algısı daha görünür hâle geliyor. Bu ay dört yazı, kilo konusunu diyet kültürünün yargısından uzak ve utandırmadan konuşuyor.',
+    curatorSlug: 'berna-aksoy',
+    editorNote:
+      'Yaz aylarında beden daha görünür olduğunda tartının sesi de yükselebiliyor. Oysa rakam aynı kalsa bile kas-yağ dengesi, kıyafetin oturuşu, iştah sinyalleri ve aynaya bakarken kurduğumuz cümle değişebiliyor. Bu dosya, ölçüyü tek otorite yapmadan geride kalan sorulara alan açıyor.\n\nDört yazı boyunca aynı konuya farklı kapılardan bakıyoruz: Estranova Editörleri vücut kompozisyonundaki sessiz değişimi ve menopozda kilo artışını iki ayrı yaklaşımla ele alıyor; Dr. Metin Alış GLP-1 eksenini iştah ve metabolizma üzerinden açıklıyor; Başak Pelister ise ölçü paniğinin beden algısındaki karşılığını yaşıt sesiyle açıyor.',
+    heroImage: {
+      src: '/images/library/editorial/pair-window-cafe-reflection.webp',
+      alt: 'Pencere kenarında sakin bir sohbeti paylaşan iki yaşıt kadın; tartı, vücut kompozisyonu ve beden algısını yargısız konuşma teması',
+    },
+    articles: [
+      {
+        title: 'Tartı Yatışınca: Vücut Kompozisyonunun Sessiz Kayması',
+        excerpt:
+          'Tartı aynı kalırken kas-yağ dengesi ve bedenin taşıma hissi neden değişebilir? Vücut kompozisyonunu tek rakamın ötesinde okuyan sakin bir rehber.',
+        writerSlug: 'estranova-editorial',
+        status: 'published',
+        href: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+        readingMinutes: 8,
+      },
+      {
+        title: 'Menopozda Kilo Artışı: Aynı Yaşamda Değişen Beden',
+        excerpt:
+          'Menopoz yıllarında kilo değişimini irade yargısından çıkarıp hormonlar, uyku, hareket ve günlük yaşam bağlamında ele alan editoryal bir okuma.',
+        writerSlug: 'estranova-editorial',
+        status: 'published',
+        href: '/zamansiz-yasam/kilo-artisi-menopoz/',
+        readingMinutes: 8,
+      },
+      {
+        title: "GLP-1, İştah ve Metabolizma: Menopoz Yıllarında Neyi Değiştiriyor?",
+        excerpt:
+          'GLP-1 eksenini bir kilo sloganına indirmeden; iştah sinyalleri, metabolik sağlık ve kuşak farkları üzerinden açıklayan klinik yaklaşım.',
+        writerSlug: 'metin-alis',
+        status: 'published',
+        href: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
+        readingMinutes: 9,
+      },
+      {
+        title: 'Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?',
+        excerpt:
+          'Başak Pelister, ayna ve kıyafet ölçüsü etrafında biriken beden kaygısını üç kuşağın deneyimi ve yaşıt sesiyle açıyor.',
+        writerSlug: 'basak-pelister',
+        status: 'published',
+        href: '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/',
+        readingMinutes: 8,
+      },
+    ],
+    status: 'current',
+  },
+  {
     slug: '2026-05-uyuyamadigimiz-geceler',
     monthYear: 'Mayıs 2026',
     monthYearISO: '2026-05',
@@ -171,7 +227,7 @@ export const dossiers: MonthlyDossier[] = [
         readingMinutes: 6,
       },
     ],
-    status: 'current',
+    status: 'archived',
   },
 ];
 

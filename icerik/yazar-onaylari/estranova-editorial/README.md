@@ -2,6 +2,8 @@
 
 Bu klasör, `estranova-editorial` kurumsal editöryal imzasıyla üretilen yazıların onay arşividir.
 
+Kanonik stil dosyası: `writers/estranova-editorial/hot.md`
+
 ## Kullanım İlkesi
 
 - Görünür kişi/yazar profili değildir.

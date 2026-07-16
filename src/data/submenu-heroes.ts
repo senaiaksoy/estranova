@@ -237,6 +237,14 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': {
+    src: '/images/library/editorial/basak-olcu-panigi-beden-algisi.webp',
+    alt: 'Ayna önünde kıyafet oturuşuna bakan 40+ kadın; ölçü paniği ve beden algısı yazısı için editoryal kart görseli',
+  },
+  '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/': {
+    src: '/images/library/editorial/glp1-istah-metabolizma-menopoz.webp',
+    alt: 'Güneş alan mutfakta yarı yenmiş balık, nohut ve yeşillik tabağı önünde duran 40+ kadın; GLP-1, iştah sinyali ve metabolizma yazısı için editoryal kart görseli',
+  },
   '/beden-yakinlik/menopoz-sonrasi-karin-germe/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-karin-germe.webp',
     alt: "Gün ışığı alan sakin bir evde ayna yanında duran 50'li yaşlarda kadın; menopoz sonrası karın bölgesi değişimlerini beden hissi, kıyafet ve acele etmeyen karar diliyle ele alan editoryal kart görseli",

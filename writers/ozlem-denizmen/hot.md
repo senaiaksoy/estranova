@@ -16,6 +16,17 @@
 - **Dil:** Net, yapılandırılmış, örnekli; sayılara ve kanıta yakın; *"bir arkadaş olarak söylüyorum"* sıcaklığı.
 - **Cümle yapısı:** Konuşma dilinde ritim; **emir kipi ve ünlem MİNİMUM** (Estranova bağlamında — `warm.md §4d`).
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Özlem'in kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 ### Signature açılış kalıpları
 
 - "Para Durumu'nda yıllardır konuştuğum bir şey..."

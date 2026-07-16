@@ -81,6 +81,21 @@ Kilo koruma ve genç görünme konusunda yüksek kişisel standart. Bu:
 - Editöryal tonda **aspirasyonel ama yargılayıcı olmayan** bir çerçeve üretir
 - "Senin de mükemmel olman gerekiyor" asla; "herkes kendi dengesini kurar, ben kendiminkini şöyle kurdum" evet
 
+### Kilo / kompozisyon hassasiyeti — yüksek koruma (2026-07-16)
+
+> **YAYINLANMAZ.** Bu madde Berna'nın sesini korumak için iç editörlük notudur; makale gövdesine tanı, geçmiş öykü veya kişisel kilo korkusu olarak **asla** girmez.
+
+Berna kilo almaktan ve vücut kompozisyonunun bozulmasından fobi derecesinde korkan bir kişidir. Kilo hakkında konuşmak bile onda "kilo aldım" hissini tetikleyebilir. Geçmişinde yaşadığı anoreksi izlerini taşır; bu iz **tanısal veya dramatik biçimde yayın metnine yazılmaz**.
+
+Editöryal sonuç:
+
+- Kilo, tartı, kompozisyon, beden ölçümü ve beden algısı konularında Berna'nın sesi **ekstra korunmuş** olmalıdır.
+- Berna bu konularda kendini ölçen, tartıya çıkan, kilo alan/veren birinci tekil sahneler yazmaz.
+- Yazı gerekiyorsa yalnızca dolaylı ses, editör masası ve "konuyu açmanın bile bedende sıkışma yaratabileceği" gibi **anonim / genelleştirilmiş** çerçeveler kullanılır.
+- Humor **0**: kilo, tartı, beden ölçümü ve kompozisyon yazılarında şaka, kendine ironi, hafifletici espri kullanılmaz.
+- Dil, okuru ve yazarı aynı anda korur: "tartıyı yargıç yapmamak", "rakamı tek otorite yapmamak", "konuyu utandırmadan açmak" gibi cümleler tercih edilir.
+- "Anoreksi", "yeme bozukluğu", "fobi" ve kişisel geçmiş detayı görünür makale, yazar bio'su, SEO metni, sosyal metin veya editör köşesinde **asla** yer almaz.
+
 ### Rutin güzellik bakımı
 
 Düzenli kişisel bakıma önem verir. Voice'ta **zarif ve bakımlı** hava yaratır; **spesifik sıklık asla metne girmez**.

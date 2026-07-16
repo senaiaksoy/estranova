@@ -1,0 +1,285 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+
+const tocEntries = [
+  { id: 'yanlis-kapi', label: 'Önce Yanlış Kapıdan Girmeyelim' },
+  { id: 'yeter-sinyali', label: 'Vücut "Yeter" Demeyi Unutunca' },
+  { id: 'uc-basamak', label: 'Aynı Aile, Üç Basamak' },
+  { id: 'tarti-kas', label: 'Tartı İnerken İçeride Ne Oluyor?' },
+  { id: 'net-bulanik', label: 'Ne Net, Ne Bulanık' },
+  { id: 'hekime-sorular', label: 'Hekiminize Bunları Sorun' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = "Kilo Değil, İştah ve Metabolizma: GLP-1'i Menopozda Abartmadan Okumak";
+const seoTitle = 'GLP-1, İştah ve Metabolizma — Menopozda Abartmadan Okumak';
+const articleDescription =
+  "GLP-1 çoğu zaman 'kilo iğnesi' diye anılır. Dr. Metin Alış iştah sinyalini, menopozda değişen metabolik zemini ve birinci–ikinci–üçüncü kuşak seçenekleri abartmadan ayırıyor; reçete değil, hekimle sorulacak doğru soruları netleştiriyor.";
+const faqItems = articleFaqs[pathname] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'metin-alis',
+  publishedDate: '16 Temmuz 2026',
+  pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'GLP-1',
+    'iştah',
+    'metabolizma',
+    'menopoz',
+    'semaglutid',
+    'tirzepatid',
+    'inkretin',
+    'vücut kompozisyonu',
+    'sarkopeni',
+    'bel çevresi',
+    'insülin',
+    '40+ kadın',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Metabolizma"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="metin-alis"
+        publishedDate="16 Temmuz 2026"
+        readingMinutes={8}
+        imageSrc="/images/library/editorial/glp1-istah-metabolizma-menopoz-byline.webp"
+        imageAlt="Güneş alan mutfakta yarı yenmiş balık, nohut ve yeşillik tabağı önünde duran 40+ kadın; GLP-1, iştah sinyali ve metabolizma yazısı için editoryal dosya görseli"
+      />
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          GLP-1 çoğu kadının kulağına “kilo iğnesi” diye geliyor. Asıl mesele çoğu zaman orada değil:
+          iştah sinyali, tokluk hissi ve menopozda değişen metabolik zemin. Bu aile artık tek bir ilaç
+          da değil; birinci, ikinci ve üçüncü kuşak seçenekler yan yana duruyor. Bu yazı reçete değil —
+          abartıyı süzüp, hekiminizle hangi soruyu soracağınızı netleştirmek için.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="yanlis-kapi">Önce Yanlış Kapıdan Girmeyelim</h2>
+        <p>
+          Telefon ekranında hep aynı vaat. Birkaç ay. Daha ince bir beden. “Herkes kullanıyor.”
+        </p>
+        <p>
+          Muayene odasında kadın çantasından telefonunu çıkarıyor, bir kaydı gösteriyor ve soruyor:
+          “Bende de işe yarar mı?” Bu soruyu duyunca acele etmiyorum. Çünkü soru çoğu zaman tartıdan
+          açılıyor; oysa konuşmamız gereken yer iştah.
+        </p>
+        <p>
+          Merak etmeyin diye yazıyorum: Bu ilaç ailesi ne mucize, ne de yasak madde. İkisi de gürültü.
+          Sizin ihtiyacınız gürültüsüz bir harita.
+        </p>
+
+        <h2 id="yeter-sinyali">Vücut “Yeter” Demeyi Unutunca</h2>
+        <p>
+          GLP-1, yemekten sonra bağırsaktan salgılanan doğal bir sinyal. Kısa ömürlü. İlaçlar bu
+          sinyali daha uzun taşıyor.
+        </p>
+        <p>
+          Ne oluyor, günlük dilde? Tokluk daha erken gelebilir. Açlık daha az bağırabilir. Kan şekeri,
+          yemek sonrası daha düzenli seyredebilir <Evidence level={4} />.
+        </p>
+        <p>
+          Bir hastamın cümlesi aklımda: “Eskiden tabak bitene kadar doymuyordum. Şimdi yarıda
+          durabiliyorum.” Bu irade zaferi değil. Sinyalin yeniden duyulması.
+        </p>
+        <p>
+          Menopozda östrojen düşünce bel çevresi ve iştah regülasyonu birlikte değişebilir
+          <Evidence level={4} />. “Kendimi tutamıyorum” utancı çoğu zaman haksızdır. Bedenin
+          konuşması değişmiştir.
+        </p>
+
+        <h2 id="uc-basamak">Aynı Aile, Üç Basamak</h2>
+        <p>
+          “GLP-1” deyince tek iğne sanılıyor. Değil. Klinikte pratik olarak üç basamak anlatıyorum —
+          resmi bir diploma gibi değil, okumayı kolaylaştıran bir sıra.
+        </p>
+        <p>
+          <strong>Birinci kuşak</strong> kapıyı açtı. Erken GLP-1 agonistleri. Daha çok günlük
+          kullanım, daha mütevazı etki. Fikir doğruydu; pratiklik sonradan büyüdü.
+        </p>
+        <p>
+          <strong>İkinci kuşak</strong> işi kolaylaştırdı. Uzun etkili, çoğu zaman haftalık
+          GLP-1’ler. Semaglutid bu basamağın en çok sorulan adı. Dulaglutid de aynı hatta durur. Ağızdan
+          alınan formlar da burada konuşulur — iğne korkusu olan kadın için bu cümle önemli. Hâlâ saf
+          GLP-1: tek reseptör ailesi, daha güçlü ve daha taşınabilir kullanım <Evidence level={4} />.
+        </p>
+        <p>
+          <strong>Üçüncü kuşak</strong> aileye yeni bir kapı açtı. Tirzepatid yalnızca GLP-1’e değil,
+          GIP’e de bağlanır. Çift agonist. “Daha güçlü bir GLP-1” demek bazen eksik kalır; daha doğru
+          cümle şu: inkretin hattının bir sonraki basamağı. Etki büyüyebilir
+          <Evidence from={3} to={4} />. Yan etki, erişim ve uzun dönem izlem de büyür.
+        </p>
+        <p>
+          Daha uçta üçlü agonist adayları var — GLP-1, GIP ve glukagon birlikte. Umut verici
+          görünüyorlar. Ama “duyduk” ile “karara girdi” aynı masa değil. Her molekül her yerde aynı
+          olgunlukta değil <Evidence level={2} />.
+        </p>
+        <p>
+          Kısa tutayım: Birinci kuşak kapıyı açtı. İkinci kuşak haftalık GLP-1’i güçlendirdi. Üçüncü
+          kuşak tek sinyaldan çoklu sinyale geçti.
+        </p>
+        <p>
+          Menopozda asıl soru “en yenisi hangisi” değil. Asıl soru: sizin tablonuzda bozulan şey iştah
+          mı, glikoz mu, bel mi, kas mı?
+        </p>
+
+        <h2 id="tarti-kas">Tartı İnerken İçeride Ne Oluyor?</h2>
+        <p>Burada sesimi biraz yükseltirim.</p>
+        <p>
+          Tartı düşebilir. İçeride yağla birlikte bir miktar kas da etkilenebilir
+          <Evidence level={3} />. Menopozda kas zaten sessizce kaybolmaya meyillidir. Kuşak ilerledikçe
+          etki büyüyorsa, kompozisyon sorusu da büyür.
+        </p>
+        <p>
+          Bu yüzden “ne kadar verdim” tek başına kutlama cümlesi olmamalı. Bel çevresi. Merdiven.
+          Çanta. Protein. Direnç hareketi. Gerekirse kompozisyon okuması.
+        </p>
+        <p>
+          Kılavuz yol gösterir. Sizin yolunuz yine sizin tablonuzla çizilir.
+        </p>
+
+        <h2 id="net-bulanik">Ne Net, Ne Bulanık</h2>
+        <p>
+          Net olanlar var. Tip 2 diyabet ve obezite endikasyonunda ikinci kuşak için veri birikimi
+          güçlü <Evidence level={5} />. Üçüncü kuşak çift agonistlerde etki büyüklüğü birçok çalışmada
+          daha belirgin görünüyor <Evidence from={3} to={4} />. İştah baskılanması gerçek. Bulantı,
+          dolgunluk, bağırsak değişimi de gerçek — kuşaklar bunu paylaşıyor.
+        </p>
+        <p>
+          Bulanık olanlar da var. “Birkaç kilo için, kısa süreli, estetik” kullanımın uzun dönem
+          dengesi herkes için berrak değil <Evidence level={2} />. Üçlü agonistlerde menopoz özel veri
+          her basamakta aynı kalınlıkta değil. İlaç bırakılınca kilo kısmen geri gelebilir. Bu
+          başarısızlık yaftası değil; sinyalin eski haline yaklaşabileceğinin işareti.
+        </p>
+        <p>
+          En yeni kuşak, her kadın için otomatik doğru seçenek değildir. Bunu bilerek konuşmak utanç
+          değil, olgunluktur.
+        </p>
+
+        <h2 id="hekime-sorular">Hekiminize Bunları Sorun</h2>
+        <p>Reçeteyi buradan çıkarmayın. Soruyu buradan çıkarın.</p>
+        <ol>
+          <li>Benim asıl meselem iştah mı, insülin mi, başka bir endokrin katman mı?</li>
+          <li>
+            Konuştuğumuz seçenek ikinci kuşak GLP-1 mi, üçüncü kuşak çift agonist mi — neden o
+            basamak?
+          </li>
+          <li>Hedef tartı mı, bel ve kas koruma mı?</li>
+          <li>Önce hangi laboratuvar okuması gerekir?</li>
+          <li>Kas kaybını nasıl izleriz?</li>
+          <li>Yan etkide ne zaman durur, ne zaman yeniden bakarız?</li>
+        </ol>
+        <p>
+          Lab bir cümledir. Sizin hikâyeniz paragraftır. Cümleyi paragraf olmadan okumak yanıltır.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Yanlış tablo şu: “Bu bir kilo iğnesi.” Daha dürüst tablo şu: “Bu, iştah ve metabolizma
+          sinyalini etkileyebilen, kuşakları olan bir klinik aile. Herkes için değil. Her tartı için
+          değil. Her zaman en yeni basamak için değil.”
+        </p>
+        <p>
+          Hekiminizle oturduğunuzda “en yenisini istiyorum” demek yerine şunu deneyin:
+          <strong>
+            Benim bedenimde hangi sinyal bozuldu — ve hangi basamak buna cevap verir?
+          </strong>
+        </p>
+        <p>Karar çoğu zaman o sorudan sonra sakinleşir.</p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/kilo-artisi-menopoz/',
+          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+          '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">
+          Kanıt Düzeyi: <Evidence from={2} to={5} />
+        </p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p>
+            Bu yazı Dr. Metin Alış'ın endokrinolojik perspektifiyle hazırlanmış bir bilgilendirme
+            metnidir; bireysel tıbbi değerlendirme veya tedavi önerisi olarak okunmamalıdır.
+          </p>
+          <p>
+            <strong class="text-primary">Klinik perspektif:</strong> GLP-1 hattı iştah ve glikoz
+            düzenini etkileyebilir; menopozda bel çevresi ve kas koruma aynı masada konuşulmalıdır
+            <Evidence level={4} />. Kuşak ayrımı pedagojik bir haritadır — resmi bir etiket değil.
+          </p>
+          <p>
+            <strong class="text-primary">Bireyselleştirme uyarısı:</strong> Dr. Alış'ın yazısında
+            paylaştığı çerçeve genel popülasyona yönelik bir bilgi haritasıdır; sizin tablonuzda hangi
+            basamağın uygun olup olmadığını kendi hekiminizle birlikte değerlendirmeniz önemlidir.
+            Özellikle kas kaybı riski, eşlik eden hastalıklar ve uzun dönem izlem konusunda belirgin
+            değişiklik yapmadan önce mevcut sağlık durumunuz gözden geçirilmelidir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini
+          almaz. Sağlık kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız. Doz,
+          marka veya protokol önerisi içermez.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

@@ -147,6 +147,17 @@
 - **Cümle yapısı:** Kısa-orta karışık ritmik
 - **Mercek imzası:** Sabah okuma + araştırma rutini — Berna feed, Gamze sabah mutfak, Başak günce, Duygu masada dinler, Özlem soru sorar, Alara saha/doğada, Işık sahne arkası+Bodrum, **Rima SABAH OKUMA + ARAŞTIRMA**
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Rima'nın kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 ### Signature açılış kalıpları
 
 - "Bir gün bir makalede şuna rastladım..."

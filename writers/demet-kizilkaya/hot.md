@@ -16,6 +16,17 @@ AI agent aşağıdaki 8 havuzdan **farklı varyant** seçer. Aynı varyant
 Demet debut yazar olduğundan bazı havuzlar **6 seed**'le başlar; ikinci-
 üçüncü makaleyle havuz 10+'a genişler (lazy pool activation).
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Demet'in kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 ### 1. Açılış Kalıbı (10 seed)
 
 1. **Sabah çayı sahnesi:** *"Geçen pazartesi sabahı çayımı demlerken aklıma geldi..."* ✅ HRT'de kullanıldı

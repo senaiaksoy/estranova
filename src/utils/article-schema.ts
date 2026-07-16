@@ -22,6 +22,11 @@ export interface BuildArticleSchemaOptions {
   medicalReviewer?: string;
   medicalReviewerTitle?: string;
   faqItems?: ArticleFaqItem[];
+  // Jenerik, kuruluş adı içermeyen kanıt-temeli sinyali (GEO-ANALYSIS.md §8.5).
+  // Örn: "Menopoz döneminde kemik yoğunluğu kaybı üzerine epidemiyolojik çalışmalar".
+  // CLAUDE.md §4 kuruluş adı / URL yasağı schema alanında da geçerlidir — yalnızca
+  // gövdede zaten kullanılan türde yumuşak/anonim referans metni girilir.
+  citation?: string | string[];
   siteUrl: string;
 }
 
@@ -77,6 +82,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     image,
     keywords,
     faqItems = [],
+    citation,
     siteUrl: rawSiteUrl,
   } = opts;
 
@@ -173,6 +179,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     ...(articleSection ? { articleSection } : {}),
     ...(keywords && keywords.length ? { keywords: keywords.join(', ') } : {}),
     author: authorPerson,
+    ...(citation ? { citation: Array.isArray(citation) ? citation : [citation] } : {}),
     publisher: {
       '@type': 'Organization',
       name: 'Estranova',

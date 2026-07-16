@@ -1,0 +1,21 @@
+{
+  "writer": {
+    "slug": "basak-pelister",
+    "name": "Başak Pelister"
+  },
+  "article": {
+    "slug": "olcu-panigi-beden-algisi-menopoz",
+    "title": "Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?",
+    "previewUrl": "https://estranova.com.tr/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/"
+  },
+  "package": {
+    "createdAt": "2026-07-16T17:53:25.268Z",
+    "deadline": "2026-07-23T17:53:25.268Z",
+    "approvedAt": "2026-07-16T18:00:00.000Z",
+    "status": "approved",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}

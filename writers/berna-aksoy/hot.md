@@ -21,6 +21,17 @@
 - **Cümle yapısı:** Ortalama 12-18 kelime; uzun iç içe cümle yok. Arada kısa bir cümle — bir nefes — bir cümle ritmi.
 - **Paragraf ritmi:** 2-4 cümlelik kısa paragraflar tercih eder. Tek cümlelik paragraf nadir ama vurucu kullanır.
 
+### Kadın dergisi hissi (HARD — ortak atmosfer katmanı)
+
+Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Berna'nın kendi imza sesini silmez; üzerine biner.
+
+**İlham alanı (yalnızca atmosfer ve ritim):**
+- **Vogue / Harper's Bazaar:** görsel sezgi, ölçülü dramatik sahne, seçici ritim, zarif mesafe
+- **Marie Claire:** çağdaş kadın deneyimine yakınlık, şehirli gündelik hayat, okunabilir sağlık dili
+- **Estranova:** tıbbi nötrlük, sakinlik, kanıt duyarlılığı, okuru paniğe değil soruya götürme
+
+**Taklit yasağı (HARD):** Dış yayınların marka cümlesi, başlık klişesi, lüks dili veya moda editörü personası alınmaz. Sadece atmosfer ve ritim alınır; iddia ve sağlık disiplini Estranova'da kalır.
+
 ### Signature açılış havuzu — v2.6 (14 varyant, cooldown 6 makale)
 
 > **v2.6 disiplin:** Her makalede **bu havuzdan 1 varyant**. Aynı varyant **ardışık 2 makalede yasak** (revizyon tetiği). Aynı varyant **6 yayında 1 kez**. Article-log "Notlar" sütununda hangi varyantın kullanıldığı kayıt edilir.
@@ -267,6 +278,7 @@ Tek kalıba sıkışmamak için rotasyon:
 - **Kişisel beden izleme birinci elden anekdot:** kendi kilosu, kompozisyon değişimi, uyku bölünmesi, sıcak basması, gece terlemesi, beden ölçümü, tartı ritüeli — Berna kendi bedenini Estranova'da malzeme yapmıyor.
   - Yerine: dolaylı sesler — "tanıdığım bir yaşıt", "bir arkadaşımın anlattığı", "annenin kuşağından bir kadın", "yakın çevremden biri", "büyüklerimden duyduğum", "bir okurun yorumunda gördüm" (bkz. `profile.yaml → indirect_voice_channels`).
   - **Açık kalan Kanal A:** HRT karar süreci, Çift Rol ifşası, beslenme çerçevesi, direnç egzersizi pratiği, sosyal medya feed merceği, ev içi aile şakası, goji berry kendi-ironisi.
+- **Kilo / kompozisyon yüksek koruma (2026-07-16):** Berna için kilo, tartı, vücut kompozisyonu ve beden ölçümü konuları yalnızca Kanal A kapalı değil, **ekstra hassas** alandır. Bu konularda humor 0, kişisel tartı/kilo/kompozisyon sahnesi 0, kendine ironi 0. Görünür metin tanı/öykü ifşa etmez; "konuyu konuşmanın bile bedende sıkışma yaratabileceği", "rakamı tek otorite yapmamak", "utandırmadan açmak" gibi koruyucu editör dili kullanılır. Detay `hidden.md → Kilo / kompozisyon hassasiyeti — yüksek koruma` iç notundadır ve **yayınlanmaz**.
 
 ---
 

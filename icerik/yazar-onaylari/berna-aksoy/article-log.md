@@ -54,9 +54,11 @@ Berna Aksoy'a atanmış yayınlanmış makaleler (writerSlug: 'berna-aksoy' ile 
 - `hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari.astro`
 - `zamansiz-yasam/beslenme-yaslanma.astro`
 - `zamansiz-yasam/kemik-sagligi-40-sonrasi.astro`
-- `zamansiz-yasam/kilo-artisi-menopoz.astro`
-- `zihin-denge/duygusal-denge/stres-yonetimi-menopoz.astro`
+- `zamansiz-yasam/kilo-artisi-menopoz.astro` — **2026-07-15: KC talimatıyla Estranova Editörleri kurumsal imzasına devredildi** (Berna kendi adıyla yayınlanmasını istemedi; bkz. `estranova-editorial/article-log.md` #2); Berna listesinden fiilen çıkmıştır, tarihsel kayıt olarak korunur.
+- `zihin-denge/duygusal-denge/stres-yonetimi-menopoz.astro` — **2026-07-15: KC talimatıyla Dr. Metin Alış'a devredildi ve yeniden yazıldı** (bkz. `metin-alis/article-log.md` #2); Berna listesinden fiilen çıkmıştır, tarihsel kayıt olarak korunur.
 - `zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan.astro`
 - `zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz.astro`
 
 **Toplam: 11 makale** (HRT primary yazar, çok aktif). Detaylı log retrofit yapılmadı; cooldown ve evrim review framework başlangıcından itibaren çalışır.
+
+**Not (2026-07-15):** `hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu.astro` da (04-29 retrofit taramasından sonra yayınlandığı için yukarıdaki listede yer almıyordu) aynı KC talimatıyla Estranova Editörleri imzasına devredildi (bkz. `estranova-editorial/article-log.md` #1). Berna'nın aktif makale sayısı fiilen 9'a düştü.

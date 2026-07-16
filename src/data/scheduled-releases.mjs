@@ -12,6 +12,9 @@
 
 /** @type {ScheduledRelease[]} */
 export const scheduledReleasePaths = [
+  { path: '/sayi/03-temmuz-2026-tarti-susunca/', releaseDate: '2026-07-16' },
+  { path: '/dosya/2026-07-tarti-susunca/', releaseDate: '2026-07-16' },
+  { path: '/editorun-kosesi/temmuz-2026/', releaseDate: '2026-07-16' },
   { path: '/sayi/02-haziran-2026-guc-esigi/', releaseDate: '2026-06-01' },
   { path: '/dosya/2026-06-guc-esigi/', releaseDate: '2026-06-01' },
   { path: '/editorun-kosesi/haziran-2026/', releaseDate: '2026-06-01' },
