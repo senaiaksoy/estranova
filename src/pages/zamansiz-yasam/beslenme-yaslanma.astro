@@ -38,7 +38,8 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi';
-const articleDescription = 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekim veya diyetisyenle netleştirmeyi hatırlatan rehber.';
+const seoTitle = 'Beslenme ve Yaşlanma — 40+ Rehberi';
+const articleDescription = 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekiminizle netleştirmeyi hatırlatan rehber.';
 const faqItems = articleFaqs['/zamansiz-yasam/beslenme-yaslanma/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -56,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

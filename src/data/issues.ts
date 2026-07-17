@@ -51,6 +51,8 @@ export interface Issue {
   coverHeadline: string;
   /** İtalik lede — 1-2 cümle, kapakta tema altı */
   lede: string;
+  /** SERP meta description override (≤160 karakter) — verilmezse lede kullanılır */
+  seoDescription?: string;
   /** Kapak görseli */
   coverImage: SubmenuHeroImage;
   /** Bilimsel editör mektubu — sayı içinde EditorLetter bileşeniyle render */
@@ -135,6 +137,8 @@ export const issue01: Issue = {
   theme: 'Geceler',
   coverHeadline: 'Eşik · Sayı 01 — Mayıs 2026 · Geceler',
   lede: 'Perimenopozun en sessiz belirtisi belki de uyku. İlk sayıda üç yazı, uykunun neden değiştiğini, gece terlemesinin mahrem yanını ve akşam hareketinin toparlayıcı gücünü yan yana koyuyor.',
+  seoDescription:
+    'Perimenopozun en sessiz belirtisi belki de uyku. İlk sayıda üç yazı, uykunun neden değiştiğini ve gece terlemesinin mahrem yanını yan yana koyuyor.',
   coverImage: {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
     alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku, perimenopoz ve dinlenme teması',
@@ -165,6 +169,8 @@ export const issue02: Issue = {
   coverHeadline: 'Eşik · Sayı 02 — Haziran 2026 · Güç Eşiği',
   lede:
     "40'tan sonra güç, daha fazla zorlanmak değil; kası, kemiği, dengeyi, uykuyu ve enerjiyi aynı hayatın içinde yeniden duymak. Bu sayıda bedeni performans baskısı kurmadan okumaya başlıyoruz.",
+  seoDescription:
+    "40'tan sonra güç, daha fazla zorlanmak değil; kası, kemiği ve dengeyi yeniden duymak. Bu sayıda bedeni performans baskısı kurmadan okuyoruz.",
   coverImage: {
     src: '/images/library/editorial/zy-hareket-saglik.webp',
     alt: "40 sonrası hareket ve güçlenme temasını taşıyan sakin editoryal sahne; bedeni zorlamadan yeniden kurma hissi",
@@ -195,6 +201,8 @@ export const issue03: Issue = {
   coverHeadline: 'Eşik · Sayı 03 — Temmuz 2026 · Tartı Susunca',
   lede:
     'Tartının sesi kısıldığında geriye yalnızca bir rakam kalmaz. Bu sayı vücut kompozisyonunu, iştahı, metabolizmayı ve beden algısını diyet kültürünün yargısından uzak, sakin bir yaklaşımla yan yana getiriyor.',
+  seoDescription:
+    'Tartının sesi kısıldığında geriye yalnızca bir rakam kalmaz. Bu sayı vücut kompozisyonunu ve beden algısını diyet kültürünün yargısından uzak ele alıyor.',
   coverImage: {
     src: '/images/library/editorial/pair-window-cafe-reflection.webp',
     alt: 'Pencere kenarında sakin bir sohbeti paylaşan iki yaşıt kadın; tartı, vücut kompozisyonu ve beden algısını yargısız konuşma teması',

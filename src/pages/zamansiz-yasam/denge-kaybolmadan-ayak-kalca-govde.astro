@@ -37,6 +37,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Denge ve Ayak: Kalça ile Gövde Hattını Yeniden Duymak';
+const seoTitle = 'Denge ve Ayak: Kalça-Gövde Hattı';
 const articleDescription =
   '40 sonrasında dengeyi düşmeden önce okumak: ayak tabanı, ayak sağlığı, kalça çevresi, gövde kontrolü ve ev içindeki küçük işaretler hareket güvenini anlatır.';
 const articleSchemas = buildArticleSchemas({
@@ -66,7 +67,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

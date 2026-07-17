@@ -36,8 +36,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır';
+const seoTitle = 'Güç Dediğiniz Şey — Çantayı Hafifletmek';
 const articleDescription =
-  'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini çanta, merdiven, anne-kız sohbeti ve HRT kararının içinden samimi ve ölçülü bir yaşıt denemesiyle yeniden okuyor.';
+  'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini çanta, merdiven ve HRT kararının içinden samimi bir yaşıt denemesiyle yeniden okuyor.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -61,7 +62,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

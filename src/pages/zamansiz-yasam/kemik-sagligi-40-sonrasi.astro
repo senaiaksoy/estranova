@@ -32,6 +32,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber';
+const seoTitle = '40 Sonrası Kemik Sağlığı — Rehber';
 const articleDescription = '40 yaş sonrası kemik sağlığını desteklemek için tarama, beslenme, hareket ve tıbbi seçenekleri anlatan kapsamlı rehber.';
 const pathname = '/zamansiz-yasam/kemik-sagligi-40-sonrasi/';
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam/']!;
@@ -53,7 +54,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

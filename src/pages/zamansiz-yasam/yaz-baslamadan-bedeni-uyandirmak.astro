@@ -37,6 +37,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık';
+const seoTitle = 'Yaz Başlamadan Bedeni Uyandırmak';
 const articleDescription =
   'Yaz öncesi hareketi hedef baskısı olmadan, 40 sonrası bedeni yavaşça uyandıran sürdürülebilir bir ritim olarak ele alan sıcak bir hareket yazısı.';
 const articleSchemas = buildArticleSchemas({
@@ -63,7 +64,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

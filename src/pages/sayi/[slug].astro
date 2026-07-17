@@ -40,8 +40,8 @@ const curator = coverDossier
   ? writers.find((w) => w.slug === coverDossier.curatorSlug)
   : undefined;
 
-const pageTitle = `${magazineConfig.name} · Sayı ${issuePad} — ${issue.monthYear} · ${issue.theme} | Estranova`;
-const pageDescription = issue.lede;
+const pageTitle = `${issue.coverHeadline} | Estranova`;
+const pageDescription = issue.seoDescription ?? issue.lede;
 ---
 
 <SiteLayout title={pageTitle} description={pageDescription}>

@@ -32,6 +32,7 @@ const tocEntries = [
 ];
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?';
+const seoTitle = '40 Sonrası Tarama Testleri';
 const articleDescription =
   '40 sonrası tarama planını kemik, metabolik ve kadın sağlığı başlıklarında sade bir yaklaşımla ele alan başlangıç rehberi.';
 const articlePath = '/hormonal-gecis/40-sonrasi/tarama-testleri/';
@@ -58,7 +59,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

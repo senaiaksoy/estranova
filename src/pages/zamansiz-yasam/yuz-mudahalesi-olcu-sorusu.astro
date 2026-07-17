@@ -24,8 +24,9 @@ const pathname = '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/';
 const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const articleTitle = "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'";
+const seoTitle = 'Hangi Yüz Müdahalesi Sizin İçin?';
 const articleDescription =
-  "Op. Dr. Çağrı Sade kendi muayenehane gözlemiyle anlatıyor: 40 sonrası yüz müdahalelerinde 'yapılabilir mi' yerine 'size uygun mu' sorusu, yüzün dört katmanı, müdahale haritası ve hekiminizle paylaşmaya değer dört soru.";
+  "Op. Dr. Çağrı Sade anlatıyor: 40 sonrası yüz müdahalelerinde 'yapılabilir mi' yerine 'size uygun mu' sorusu ve hekiminizle paylaşacağınız sorular.";
 
 const tocEntries = [
   { id: 'aynanin-karsisinda', label: 'Aynanın Karşısındaki Soru' },
@@ -65,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

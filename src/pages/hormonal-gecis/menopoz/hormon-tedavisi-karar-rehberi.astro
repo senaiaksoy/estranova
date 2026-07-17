@@ -33,8 +33,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?';
+const seoTitle = 'Hormon Tedavisi — Karar Vermeden Önce';
 const articleDescription =
-  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi, Türkiye notları ve hekiminizle konuşurken sorabileceğiniz sorular.';
+  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi ve hekiminizle konuşurken sorabileceğiniz sorular.';
 const faqItems = articleFaqs['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -62,7 +63,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

@@ -37,6 +37,7 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi';
+const seoTitle = 'Menopozda Uykusuzluk — Dinlenme Rehberi';
 const articleDescription =
   'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur, hangi sade adımlar denenebilir? Hormonal geçişte uyku bozukluğuna sakin bir rehber.';
 const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/'] ?? [];
@@ -65,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

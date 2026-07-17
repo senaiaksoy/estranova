@@ -37,8 +37,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar';
+const seoTitle = 'D Vitamini Rehberi: Tarama ve Dozaj';
 const articleDescription =
-  'D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel. Vitamin mi hormon mu? Kan değeri yorumu, Türkiye\'de niye bu kadar yaygın, postmenopozal kadında özel önemi, tarama ve dozaj yaklaşımı, toksisite ve doktora sormak gereken sorular — pazarlama değil, klinik bakış.';
+  'D vitamini herkesin gündeminde ama dozaj ve takip kararı bireysel. Kan değeri yorumu ve postmenopozal kadında özel önemi — klinik bakış.';
 const faqItems = articleFaqs['/zamansiz-yasam/d-vitamini-rehberi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -56,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}
