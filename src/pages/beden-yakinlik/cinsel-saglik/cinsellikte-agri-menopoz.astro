@@ -37,8 +37,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Cinsellikte Ağrı — Mahrem Bir Şikâyet, Açık Bir Tedavi Haritası';
+const seoTitle = 'Cinsellikte Ağrı — Sade Bir Tedavi Haritası';
 const articleDescription =
-  'Cinsel ilişkide ağrı (disparoni) tek bir tablo değil — yüzeysel, derin, postmenopozal, vajinismus alt-tipleri farklı tedavi yollarına çıkıyor. İsim koymak, mekanizmayı tanımak, üç kapılı tedavi haritası ve doktora hangi soruları sormak gerektiği — sade bir klinik bakış. Pazarlama değil, eğitim.';
+  'Cinsel ilişkide ağrı (disparoni) tek bir tablo değil. Alt-tipler, mekanizma ve tedavi haritasıyla doktora sorulacak soruları sade bir klinik bakışla anlatıyor.';
 const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -56,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

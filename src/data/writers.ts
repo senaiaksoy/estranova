@@ -44,6 +44,8 @@ export const writers: Writer[] = [
     displayName: 'Estranova Editörleri',
     role: 'Kurumsal Editöryal İmza',
     ageBand: '—',
+    seoDescription:
+      'Estranova Editörleri, temel rehber ve kurumsal yazılar için editöryal imza. Sakin sağlık okuryazarlığı ve bilimsel editör disipliniyle hazırlanır.',
     publicBio:
       'Estranova Editörleri; temel rehberler, hub tamamlayıcıları ve kurumsal bilgi yazıları için kullanılan editöryal imzadır. Bu içerikler Estranova Editorial Gloss tonuyla hazırlanır: sofistike kadın dergisi ritmi, sakin sağlık okuryazarlığı ve bilimsel editör disiplini birlikte taşınır.',
     signaturePhrase:
@@ -113,6 +115,8 @@ export const writers: Writer[] = [
     displayName: 'Alara Baykent',
     role: 'Sağlık Yazarı / Konuk Katkı',
     ageBand: '30-31',
+    seoDescription:
+      "Alara Baykent, eski profesyonel windsurfer ve sağlık yazarı. Estranova'da hareketi ve sürdürülebilir egzersizi performans baskısı kurmadan yazan genç bir yaşıt.",
     publicBio:
       'Eski profesyonel windsurfer; sporun içinde geçen yıllar onda bedeni dikkatle okuma alışkanlığı bıraktı. Estranova\'da hareket, anti-aging ve sürdürülebilir egzersiz başlıklarını performans baskısı kurmadan yazıyor. Doğayla iç içe yaşayan, anne kuşağını sevgiyle gözlemleyen genç bir yaşıt.',
     signaturePhrase:
@@ -174,6 +178,8 @@ export const writers: Writer[] = [
     displayName: 'Başak Pelister',
     role: 'Araştırma Yazarı / Konuk Katkı — Üç Kuşaklı Tanıklık',
     ageBand: '55-57',
+    seoDescription:
+      "Başak Pelister, dokuz yıllık menopoz deneyimini ve HRT yolculuğunu üç kuşaklı bir bakışla anlatan araştırmacı. Estranova'da samimi, ölçülü bir yaşıt sesi.",
     publicBio:
       'Marka ve deneyim alanından gelen, soruyu sevmeyi bilen araştırmacı bir yazar. Estranova\'da uzun menopoz deneyimini, yakın dönem HRT yolculuğunu ve üç kuşaklı kadın bağını samimi ama ölçülü bir tonla yazıyor. Yargı dağıtmadan yanına oturan, merakını gizlemeyen bir yaşıt.',
     signaturePhrase:
@@ -224,6 +230,8 @@ export const writers: Writer[] = [
     displayName: 'Prof. Dr. Gonca Gökdemir',
     role: 'Medikal & Kozmetik Dermatoloji Bilimsel Yazarı',
     seoTitle: 'Prof. Dr. Gonca Gökdemir | Dermatoloji — Estranova',
+    seoDescription:
+      "Prof. Dr. Gonca Gökdemir, dermatoloji bilimsel yazarı. Estranova'da cilt sağlığı, hormonal geçişin cilde etkileri ve önleyici dermatoloji üzerine yazıyor.",
     ageBand: '58-62',
     publicBio:
       "Medikal ve kozmetik dermatoloji alanında 25 yılı aşkın deneyimli bir akademisyen. Şişli Etfal, Okmeydanı, İstanbul Tıp Fakültesi, Liv Hospital ve Bahçeşehir Üniversitesi Tıp Fakültesi'nde görev yaptı; ~150 yerli ve yabancı yayın, çok sayıda kongre sunumu, estetik dermatoloji eğitmenliği ve medikal kozmetik marka danışmanlığı geçmişine sahip. Estranova'da cilt sağlığı, hormonal geçişin cilde etkileri ve estetik dermatoloji başlıklarında yazıyor — \"trendin değil cildin tarafında duran\" bir bakışla; anlaşılır anlatımla, marka pazarlamasından uzak, cilt biyolojisi merkezli.",
@@ -272,6 +280,8 @@ export const writers: Writer[] = [
     displayName: 'Op. Dr. Çağrı Sade',
     role: 'Plastik & Estetik Cerrahi Bilimsel Yazarı',
     ageBand: '55-57',
+    seoDescription:
+      "Op. Dr. Çağrı Sade, plastik ve estetik cerrahi bilimsel yazarı. Estranova'da yüz yaşlanması ve estetik karar sürecini danışman sıcaklığıyla yazıyor.",
     publicBio:
       'Plastik, rekonstrüktif ve estetik cerrahi alanında çalışan deneyimli bir hekim. Estranova\'da kendi muayenehane gözlemini birinci ağızdan, danışman sıcaklığında paylaşıyor: estetik girişimleri modaya değil yüze ve kişiye bakarak, gerçekçi beklenti ve doğal yaşlanma dengesi içinde anlatıyor. Pazarlama dili yerine, "ben yıllar içinde fark ettim ki" tonuyla karar vermeyi kolaylaştıran sakin bir bilgi hattı kuruyor.',
     signaturePhrase:
@@ -459,7 +469,7 @@ export const writers: Writer[] = [
       'Ortopedi ve travmatoloji alanında çalışan deneyimli bir hekim. Estranova\'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarını cerrahiyi ilk cevap gibi sunmadan anlatıyor. Hastayı ameliyat masasından önce hayata yönlendirmeyi önemseyen sakin bir klinisyen.',
     seoTitle: 'Prof. Dr. Bülent Aksoy | Ortopedi — Estranova',
     seoDescription:
-      'Prof. Dr. Bülent Aksoy (Bulent Aksoy), ortopedi ve travmatoloji hekimi. Estranova\'da 40 sonrası kemik sağlığı, eklem ağrıları ve cerrahi sınır üzerine bilimsel yazılar.',
+      "Prof. Dr. Bülent Aksoy (Bulent Aksoy), ortopedi ve travmatoloji hekimi. Estranova'da kemik sağlığı ve eklem ağrıları üzerine bilimsel yazılar.",
     signaturePhrase:
       'Postmenopozal kemik-kas-iskelet sistemini "ameliyat masasından önce hayata yönlendirmek" felsefesinde okuyan; cerrahi-öncesi konservatif yaklaşım ve sakin hekim tonuyla yazan akademisyen-cerrah.',
     portrait: '/images/writers/bulent-aksoy.webp',
@@ -505,6 +515,8 @@ export const writers: Writer[] = [
     displayName: 'Anıl Yalmaz',
     role: 'Hareket & Egzersiz Bilimsel Yazarı',
     ageBand: 'Belirtilmedi',
+    seoDescription:
+      "Anıl Yalmaz, hareket ve egzersiz bilimsel yazarı. Estranova'da 40+ kadın bedeninde güç, denge ve sürdürülebilir egzersizi performans baskısı kurmadan anlatıyor.",
     portrait: '/images/writers/anil-yalmaz.webp',
     publicBio:
       'Spor Bilimleri mezunu bir hareket uzmanı; Pilates ve medikal fitness eğitimleri aldı. Estranova\'da hareket, güçlenme ve sürdürülebilir egzersiz rutinlerini 40+ kadın bedeninin değişen ihtiyaçlarıyla birlikte ele alıyor. Hızlı dönüşüm vaadi yerine küçük, düzenli ve güvenli adımları önemseyen bir yaklaşımı var.',
@@ -550,6 +562,8 @@ export const writers: Writer[] = [
     displayName: 'Fzt. Ersin Saraç',
     role: 'Fizyoterapi & Rehabilitasyon Bilimsel Yazarı',
     ageBand: '33',
+    seoDescription:
+      'Fzt. Ersin Saraç, fizyoterapi bilimsel yazarı. Estranova\'da postmenopozal kas-iskelet sağlığını "bedeni dinleyerek ilerlemek" felsefesiyle yazıyor.',
     publicBio:
       'Kas-iskelet rehabilitasyonu, postür ve klinik egzersiz alanında çalışan bir fizyoterapist. Estranova\'da hareket, kronik ağrı ve postmenopozal kas-iskelet sağlığı başlıklarını bedeni dinleyerek ilerleme fikriyle yazıyor. Hızlı sonuç vaat etmek yerine küçük ama sürdürülebilir adımları öne çıkarıyor.',
     signaturePhrase:
@@ -598,6 +612,8 @@ export const writers: Writer[] = [
     displayName: 'Dt. Duygu Karaosmanoğlu',
     role: 'Estetik Diş Hekimliği Bilimsel Yazarı',
     ageBand: '55-57',
+    seoDescription:
+      "Dt. Duygu Karaosmanoğlu, estetik diş hekimliği bilimsel yazarı. Estranova'da diş sağlığı, gülüş tasarımı ve hormonal geçişin ağız sağlığına etkilerini yazıyor.",
     publicBio:
       'Estetik diş hekimliği alanında çalışan deneyimli bir diş hekimi. Estranova\'da diş sağlığını, gülüş tasarımını ve hormonal geçişin ağız sağlığına etkilerini doğal görünümü zorlamadan anlatıyor. Yüze yakışanı arayan, jargonu gereksiz yere büyütmeyen bir sesi var.',
     signaturePhrase:
@@ -683,6 +699,8 @@ export const writers: Writer[] = [
     displayName: 'Rima Erdemir',
     role: 'Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı',
     ageBand: '55-56',
+    seoDescription:
+      "Rima Erdemir, araştırma yazarı ve editöryal süreç danışmanı. Estranova'da bilim ve teknoloji başlıklarını kaynak disipliniyle, meraklı bir titizlikle yazıyor.",
     publicBio:
       'Medya ve dijital yayıncılıkta uzun yıllar çalışmış bir editör ve araştırmacı. Estranova\'da bilim ve teknoloji başlıklarını yazıyor; aynı zamanda kaynak doğrulama ve yayın akışına editöryal destek veriyor. Bilgi kirliliğini ayıklamayı seven, "kaynak nereden?" sorusunu sormaktan çekinmeyen biri.',
     signaturePhrase:
@@ -712,6 +730,8 @@ export const writers: Writer[] = [
     displayName: 'Gamze Cizreli',
     role: 'Gastronomi ve Sürdürülebilirlik Yazarı / Konuk Katkı',
     ageBand: '57-58',
+    seoDescription:
+      "Gamze Cizreli, gastronomi ve sürdürülebilirlik yazarı. Estranova'da beslenme, sürdürülebilirlik ve sabah rutinlerini sofra sıcaklığıyla anlatan bir yaşıt sesi.",
     publicBio:
       'Gastronomi ve gündelik hayat bilgisini aynı sofrada buluşturan bir yazar. Estranova\'da beslenme, sürdürülebilirlik ve sabah rutinleri başlıklarını sofra sıcaklığıyla yazıyor. Kültürel referansı gösterişe kaçmadan gündelik hayata sokan, ritmi yumuşak bir yaşıt.',
     signaturePhrase:
@@ -751,6 +771,8 @@ export const writers: Writer[] = [
     displayName: 'Işık Selin Günce',
     role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
     seoTitle: 'Işık Selin Günce | Estranova Yazarı',
+    seoDescription:
+      "Işık Selin Günce, tiyatro sanatçısı ve kadın sağlığı yazarı. Estranova'da perimenopoz ve menopozu sahici, sıcak bir yaşıt sesiyle sadeleştiriyor.",
     ageBand: 'Belirtilmedi',
     publicBio:
       'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı yazıya taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurun hissini önce normalize ederek yazıyor. Panik değil yön duygusu veren sıcak bir yaşıt sesi var.',
@@ -784,6 +806,8 @@ export const writers: Writer[] = [
     displayName: 'Doç. Dr. Senai Aksoy',
     role: 'Kimsenin Yazmak İstemediği Konu Yazarı',
     ageBand: '50+',
+    seoDescription:
+      "Doç. Dr. Senai Aksoy, Estranova'nın bilimsel editörü. Vajinal sağlık, idrar kaçırma ve libido gibi konuşulması zor konuları jargonsuz, sakin bir dille yazıyor.",
     publicBio:
       'Estranova\'nın bilimsel editörü; ama bu kartta öne çıkan şey hekim unvanından çok, yıllardır kadın sağlığının içinde olmuş birinin sesi. Vajinal sağlık, idrar kaçırma ya da libido gibi konularda kimse yazmaya gönüllü olmadığında masaya kendisi oturuyor. Jargonla mesafe koyan, soruyu ciddiye alan ve gereksiz vaat kurmayan biri.',
     signaturePhrase:
@@ -816,6 +840,8 @@ export const writers: Writer[] = [
     displayName: 'Demet Kızılkaya',
     role: 'Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı',
     ageBand: '58',
+    seoDescription:
+      "Demet Kızılkaya, yaşam tarzı ve kültür yazarı. Estranova'da menopoz deneyimini, Japon kültürünü ve gündelik nezaketi ölçülü bir yaşıt tonuyla anlatıyor.",
     publicBio:
       'Uzun yıllar Türkiye-Japonya hattında çalışmış, iki kültürü yakından gözlemlemiş bir yazar. Estranova\'da menopoz deneyimi, Japon kültürü ve gündelik nezaket başlıklarını HRT yolunu da saklamadan, ölçülü bir yaşıt tonuyla yazıyor. Aile sıcaklığını ve sakin gözlemi metne taşıyan candan bir sesi var.',
     signaturePhrase:
@@ -855,6 +881,8 @@ export const writers: Writer[] = [
     displayName: 'Dr. Alper Mumcu',
     role: 'Kadın Hastalıkları ve Doğum / Jinekoloji Bilimsel Yazarı',
     ageBand: '56-58',
+    seoDescription:
+      "Dr. Alper Mumcu, kadın hastalıkları ve doğum bilimsel yazarı. Estranova'da hormonal geçiş ve jinekolojiyi köklü bir başvuru hekimi sesiyle sadeleştiriyor.",
     publicBio:
       'Kadın hastalıkları ve doğum uzmanı bir hekim. 1998\'den bu yana kadın sağlığı ve gebelik konularında Türkçe\'nin en köklü başvuru kaynaklarından birini yürütüyor; kadınların yıllardır sorduğu soruları sade, anlaşılır ve içini ferahlatan bir dille yanıtlamasıyla tanınıyor. Amerikan Hastanesi Üreme Sağlığı Birimi\'nde çalıştı, yurt dışında üreme tıbbı ve yumurtalık kanserlerinin erken tanısı üzerine araştırmalara katıldı. Estranova\'da hormonal geçiş, jinekoloji ve üreme sağlığı başlıklarını "okurun gerçek sorusuna" cevap veren bir referans hekim tonuyla açıyor.',
     signaturePhrase:

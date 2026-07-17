@@ -74,6 +74,7 @@ export const mainNav: NavLink[] = [
     ],
   },
   { name: 'Sayılar', href: '/sayi/', label: 'Eşik dergisi sayıları ve arşivi' },
+  { name: 'Blog', href: '/blog/', label: 'Estranova blog yazıları' },
   { name: 'Yazarlar', href: '/yazarlar/', label: 'Estranova yazar kadrosu ve editöryal imza' },
   { name: 'Hakkımızda', href: '/hakkimizda/', label: 'Platform, editöryal ekip ve künye' },
 ];

@@ -186,10 +186,10 @@ Sosyal bio'larında, llms.txt'te ve Organization schema'sında **her iki ad birl
 ## 11. Hızlı Kazanımlar (bu hafta yapılabilir)
 
 - [x] **Anasayfa `Organization` schema + `sameAs`** (Instagram @estranovaofficial + senaiaksoy.net) + `NewsMediaOrganization` + temiz `@id` — *uygulandı (`src/layouts/SiteLayout.astro`)*
-- [ ] llms.txt'e `## Öne çıkan içerikler` bölümü (en güçlü 8-10 makale)
-- [ ] robots.txt'teki yorumlu `# RSS` satırını aç — feed (`rss.xml`) zaten üretiliyor ve `<head>`'de bağlı, sadece robots ilanı kapalı
-- [ ] IndexNow protokolü kur (Bing Copilot görünürlüğü)
-- [ ] `dateModified`'ı içerik güncellendiğinde gerçekten değiştir (şu an `datePublished` ile özdeş)
+- [x] llms.txt'e `## Öne çıkan içerikler` bölümü (en güçlü 8-10 makale) — *uygulandı (`public/llms.txt`)*
+- [x] robots.txt'teki `# RSS` satırı — *yeniden denetlendi: robots.txt'te resmî bir "feed" direktifi yok, satır zaten sadece açıklayıcı yorum. Asıl feed-discovery mekanizması `SiteLayout.astro:150`'deki `<link rel="alternate" type="application/rss+xml">` — bu zaten doğru ve canlı. Aksiyon gerekmiyor, madde kapatıldı.*
+- [x] IndexNow protokolü kur (Bing Copilot görünürlüğü) — *kurulum tamam (2026-07-15): key dosyası `public/9c6a06a641c28cd9b2144466bbc130d5.txt`, gönderim script'i `scripts/indexnow-submit.mjs` (`npm run seo:indexnow`). **Çalıştırma sırası:** key dosyası önce production'a deploy edilmeli (IndexNow key sahipliğini `estranova.com/<key>.txt` fetch ederek doğrular), sonra `npm run seo:indexnow` bir kez elle çalıştırılır; sonraki yayınlarda tek makale URL'si ile (`npm run seo:indexnow -- <url>`) tekrarlanabilir.*
+- [ ] `dateModified`'ı içerik güncellendiğinde gerçekten değiştir (şu an `datePublished` ile özdeş) — süreç kuralı `docs/ARTICLE-PRODUCTION-SPEC.md` §4.7'de var, disiplin editör takibine bağlı
 
 ## 12. Orta Vadeli (4-8 hafta)
 
@@ -204,6 +204,23 @@ Sosyal bio'larında, llms.txt'te ve Organization schema'sında **her iki ad birl
 - [ ] Marka/yazar için Wikipedia varlığı (notability eşiği için önce basın mention)
 - [ ] Türkçe kadın-sağlığı topluluklarında (Reddit r/Turkey sağlık başlıkları, Ekşi, kadın forumları) organik, spam-olmayan varlık
 - [ ] `sameAs` ile kapsamlı entity-linking — Estranova ↔ Eşik ↔ Dr. Aksoy ↔ akademik yayın portföyü tek graf
+
+---
+
+## 14. Ek — 2026-07-15 güncellemesi (Google resmî AI optimizasyon rehberi denetimi)
+
+Google'ın resmî rehberi (developers.google.com/search/docs/fundamentals/ai-optimization-guide, Mayıs 2026) ve 2026 GEO araştırması ışığında yapılan ek denetim:
+
+- **Ajan-tabanlı tarama (agentic browsing) hazır durum kontrolü:** `ArticleFAQ.astro` (native `<details>/<summary>` — disclosure state otomatik erişilebilirlik ağacına yansır), `ArticleTOC.astro` (`<nav aria-label="İçindekiler">` + sıralı `<ol>` landmark), `Evidence.astro` (`aria-label` + `title` ile kanıt düzeyi ekran okuyucuya/ajan'a da taşınıyor) incelendi — **üçü de zaten doğru semantik/ARIA kalıplarını kullanıyor, düzeltme gerekmedi.**
+- **GSC Üretken AI Performans Raporu** (Google, 3 Haziran 2026 duyurdu): AI Overviews/AI Mode/Discover'daki impression/sayfa/ülke/cihaz kırılımını gösteriyor (henüz tıklama/CTR/sorgu yok); ayrıca sitelerin AI özelliklerinden çıkış (opt-out) yapabileceği yeni bir kontrol 17 Haziran 2026'dan itibaren onaya alınıyor. Rollout kademeli (önce İngilizce/UK alt kümesi) — Estranova TR hesabında henüz görünmeyebilir. **Aksiyon:** Search Console'da bu raporun görünüp görünmediği ayda bir kontrol edilsin; göründüğünde Faz 7 post-publish journal akışına (`docs/ARTICLE-PRODUCTION-SPEC.md` Faz 7) bir "AI impression" satırı eklenmesi önerilir.
+- **FAQ rich result deprecation:** Google, FAQ rich result'ları Mayıs-Haziran 2026'da SERP'ten tamamen kaldırdı (Search Console API desteği Ağustos 2026'da bitiyor). `FAQPage` şeması hâlâ geçerli ve tutulmaya değer ama **artık yalnızca AI-alıntı/grounding sinyali** olarak; klasik "rich snippet" beklentisiyle savunulmamalı. `docs/ARTICLE-PRODUCTION-SPEC.md` §4.8'e bu netlik notu işlendi.
+- **Wikidata marka item'ı — Dr. Aksoy tarafından oluşturuldu ve tamamlandı (2026-07-15):** `Q140051019` (Estranova) canlı; `Q139893832` (Dr. Aksoy) üzerinde `affiliation → Estranova` bağı kurulu — çift yönlü bağ tam. Bu oturumda adım adım tamamlanan işler:
+  - **9/9 ifadeye referans URL eklendi** (instance of, inception, country, main subject ×2, language of work or name, official website, Instagram username, + Q139893832'deki affiliation) — hepsi self-reference (`estranova.com/hakkimizda` veya `/editoryal-politika`), taslağın "referanssız ifade zayıf sayılır" uyarısı artık karşılanıyor.
+  - **Türkçe label/description/aliases tamamlandı:** tr label "Estranova", description "40+ kadın sağlığı üzerine bağımsız Türkçe editöryal yayın platformu", aliases "Eşik / Eşik dergi / Estranova yayını".
+  - **`main subject`e women's health (Q1054094) eklendi** (menopause'a ek) + **`field of work` (P101) → women's health** yeni ifade olarak eklendi.
+  - **Hâlâ açık kalan tek risk (değişmedi):** bağımsız/üçüncü-taraf kaynak (haber, dizin kaydı, basın) hâlâ yok — tüm referanslar self-reference. Notability riski azaldı (referanssız değil) ama tam ortadan kalkmadı; taslağın önerdiği "önce bağımsız mention, sonra güçlendirme" adımı orta-vadeli madde olarak kalıyor (§13).
+- **Answer-first H2 bloğu + karşılaştırma tablosu kuralı** (bkz. §9-A/C) `docs/ARTICLE-PRODUCTION-SPEC.md` §4.8'e ve pre-publish checklist'e (madde 11d) işlendi.
+- **`article-schema.ts`'e opsiyonel `citation` alanı eklendi** (kuruluş adı içermeyen jenerik referans metni, GEO-ANALYSIS §8.5).
 
 ---
 

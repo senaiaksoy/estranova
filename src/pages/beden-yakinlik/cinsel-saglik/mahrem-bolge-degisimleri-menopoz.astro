@@ -37,8 +37,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM';
+const seoTitle = 'Vajinal Kuruluk: Bir İsmi Var — GSM';
 const articleDescription =
-  'Postmenopozal kadınların yarısına yakını vajinal kuruluk, yanma, hassasiyet ve üriner şikâyet yaşıyor — bir tablonun adı var: genitoüriner menopoz sendromu (GSM). Lokal östrojen, yerel uygulama kanıt sınırı, günlük bakım ve doktora ne sorulmalı — sade bir editoryal rehber.';
+  'Postmenopozal kadınların yarısına yakınında vajinal kuruluk görülür — adı GSM. Lokal östrojen, günlük bakım ve doktora ne sorulmalı, sade bir rehber.';
 const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -56,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

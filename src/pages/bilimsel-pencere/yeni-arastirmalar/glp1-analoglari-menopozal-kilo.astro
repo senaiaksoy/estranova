@@ -39,8 +39,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozal Kilo İçin GLP-1 Analogları: Abartısız Klinik Karar';
+const seoTitle = 'Menopozal Kilo İçin GLP-1 Analogları';
 const articleDescription =
-'Semaglutid ve tirzepatid menopozal kilo değişimi için kanıtlanmış araçlar; ama tek başına çözüm değildir. Tip 2 diyabet ve obezite endikasyonunda güçlü kanıt; estetik kilo verme alanında belirgin sınır. Postmenopozal alt-grup verileri, sarkopeni ve kemik endişesi, HRT etkileşimi, uzun dönem belirsizlik — pazarlama vaadi ile klinik karar arasındaki dürüst rehber.';
+'Semaglutid ve tirzepatid menopozal kilo için kanıtlanmış araçlar ama tek başına çözüm değil. Kanıt sınırları ve HRT etkileşimi dürüst bir rehberle anlatılıyor.';
 const faqItems = articleFaqs['/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -69,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}

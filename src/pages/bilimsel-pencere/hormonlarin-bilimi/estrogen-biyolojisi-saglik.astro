@@ -37,8 +37,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Östrojen Biyolojisi ve Sağlık — Tek Hormon Değil, Bir Aile';
+const seoTitle = 'Östrojen Biyolojisi — Tek Hormon Değil';
 const articleDescription =
-  'Östrojen tek bir hormon değil — E1, E2, E3, E4 ailesi. Doku-spesifik etkiler ER-α ve ER-β reseptörleri üzerinden; yaşam boyu yolculuk; metabolizma karaciğerden mikrobiyotaya (estrobolome); endojen vs eksojen (HRT) bakışı; östrojen-kanser ilişkisinin karmaşık tablosu — bilimsel mekanizmalardan klinik kararların pratik sınırlarına kadar.';
+  'Östrojen tek bir hormon değil — E1-E4 ailesi. Doku-spesifik etkiler, yaşam boyu yolculuk ve kanser ilişkisi mekanizmadan pratik sınırlara anlatılıyor.';
 const faqItems = articleFaqs['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -56,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}
