@@ -237,6 +237,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/editorun-kosesi/temmuz-2026/': {
+    src: '/images/library/editorial/temmuz-2026-sicacik-kose.webp',
+    alt: 'Yaz sabahı gardırop önünde keten bluz seçen kadın; Tartı Susunca Sıcacık Köşe kart görseli',
+  },
   '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': {
     src: '/images/library/editorial/basak-olcu-panigi-beden-algisi.webp',
     alt: 'Ayna önünde kıyafet oturuşuna bakan 40+ kadın; ölçü paniği ve beden algısı yazısı için editoryal kart görseli',
