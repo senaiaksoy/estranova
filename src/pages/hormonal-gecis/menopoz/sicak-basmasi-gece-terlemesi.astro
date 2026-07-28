@@ -20,7 +20,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/']!;
 
 const tocEntries = [
-  { id: 'nedir', label: 'Vazomotor Belirtiler Aslında Ne?' },
+  { id: 'nedir', label: 'Sıcak Basması ve Gece Terlemesi Nedir?' },
   { id: 'neden-olur', label: 'Menopozda Neden Birden Başlıyor?' },
   { id: 'ne-kadar-surer', label: 'Ne Kadar Sürer, Ne Zaman Hafifler?' },
   { id: 'tetikleyiciler', label: 'Sık Karşılaşılan Tetikleyiciler' },
@@ -70,7 +70,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Hormonal Geçiş · Menopoz"
-      title="Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler"
+      title="Sıcak Basması ve Gece Terlemesi — Menopozda Ani Isı Dalgaları Rehberi"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -97,17 +97,13 @@ const articleSchemas = buildArticleSchemas({
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="nedir">Vazomotor Belirtiler Aslında Ne?</h2>
+        <h2 id="nedir">Sıcak Basması ve Gece Terlemesi Nedir?</h2>
         <p>
           "Toplantıdaydım, birden yüzüm yandı, omzumdan terim aktı" — bu cümleyi başka bir kadından duymak garip biçimde rahatlatıcı
           oluyor. Sahne aynı, paylaşan çok.
         </p>
         <p>
-          Tıpta vazomotor belirti (damar açılma-kapanma kaynaklı yakınma) dediğimiz şey aslında bunun karşılığı: sıcak
-          basması ve gece terlemesi aynı başlık altında değerlendiriliyor <Evidence level={5} />. Günlük dilde buna sıkça
-          ateş basması da denir. Sahne tanıdıktır: yüz, boyun ve göğüste ani bir ısı dalgası, ardından terleme. Birkaç
-          dakika içinde geçer; bazen üşüme gelir. Gece olursa tablo menopozda gece terlemeleri diye anlatılır —
-          terleyerek uyanmak, sonra yeniden uykuya dönememek.
+          Sıcak basması ve gece terlemesi aslında aynı mekanizmanın iki farklı yüzüdür. Vücut birden ısındığını algılayınca cilt damarlarını açar, kan yüzeye akar, yüz ve göğüste kızarıklık oluşur; ardından terleme başlar <Evidence level={5} />. Tıp dilinde bu tabloya <em>vazomotor belirti</em> denir — kabaca "damar hareketi" anlamına gelir. Ama sadeleştirelim: bu, ani gelen, birkaç dakika süren, sonra çekilen o ısı dalgasıdır. Günlük dilde buna sıkça ateş basması da denir. Gece olursa tablo menopozda gece terlemeleri diye anlatılır — terleyerek uyanmak, sonra yeniden uykuya dönememek.
         </p>
         <p>
           Çoğu kadının yıllarca "stres", "havalar nedeniyle" diye geçiştirdiği bu belirti aslında menopoz
@@ -231,6 +227,10 @@ const articleSchemas = buildArticleSchemas({
         </p>
 
         <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <h3>"Vazomotor" terimi ne anlama geliyor?</h3>
+        <p>
+          Tıp dilinde "vazomotor" damar hareketi demektir (vazo=damar, motor=hareket). Sıcak basması sırasında cilt damarları genişler, kan akışı artar ve cilt kızarır. Terleme de vücudun serinleme refleksidir. Kısacası bu terim, sıcak basması ve gece terlemesini tanımlamak için kullanılan tıbbi addır. Halk arasında "ateş basması" olarak da bilinir.
+        </p>
         <h3>Sıcak basması neden gece daha şiddetli yaşanıyor?</h3>
         <p>
           Vücut ısısı gün içinde dalgalanır; akşamüstü hafif yükselir, gece uykunun ilk saatlerinde düşmeye başlar. Menopoz
@@ -304,8 +304,8 @@ const articleSchemas = buildArticleSchemas({
         />
 
       <ArticleEditorNote>
-<p class="mb-3 leading-relaxed text-ink/80">
-          Vazomotor belirtiler (sıcak basması ve gece terlemesi) menopoz geçişinin en sık karşılaşılan biyolojik
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Sıcak basması ve gece terlemesi — tıp dilinde <em>vazomotor belirtiler</em> olarak da adlandırılır — menopoz geçişinin en sık karşılaşılan biyolojik
           imzasıdır. Östrojen dalgalanması beynin termoregülasyon merkezindeki (hipotalamik termal nötr zon)
           duyarlılığı değiştirir; vücut küçük ısı değişimlerini "fazla ısı" olarak okuyarak vazodilatasyon ve
           terleme refleksiyle hızlı serinlemeye geçer.
