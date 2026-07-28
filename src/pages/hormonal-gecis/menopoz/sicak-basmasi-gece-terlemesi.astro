@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -13,7 +13,6 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
@@ -164,7 +163,7 @@ const articleSchemas = buildArticleSchemas({
           vücut ısısını ya da damar tepkisini doğrudan etkiliyor.
         </p>
         <p>
-          Buradaki hedef "yasak listesi" çıkarmak değil — bedeninin ritmini yakalamak. Bir arkadaşım iki
+          Buradaki hedef "yasak listesi" çıkarmak değil — bedeninin ritmini yakalamak. Bir hastam iki
           haftalık küçük bir not tuttuğunu anlatmıştı: ne yedim, ne içtim, kaçta yattım, ertesi gün kaç dalga
           geldi. Üçüncü haftada kalıp kendiliğinden çıkmış; öğle yemeğindeki tek kadeh şarabın akşam saatlerine
           ne yaptığı gözle görülür hâle gelmiş. Birkaç haftalık küçük bir kayıt çoğu kadın için işe yarıyor;
@@ -216,8 +215,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="ne-zaman-degerlendirme">Ne Zaman Hekime Sormalı?</h2>
         <p>
-          Sıcak basması "normal" kabul edilse bile her sıcak basmasını yalnızca menopoza bağlamak doğru olmuyor. Burada okudukça
-          şunu anladım: bazı tablolar erken fark edilirse hem konfor hem güvenlik korunuyor.
+          Sıcak basması "normal" kabul edilse bile her sıcak basmasını yalnızca menopoza bağlamak doğru olmuyor. Klinik deneyimimde gördüğüm
+          önemli bir nokta var: bazı tablolar erken fark edildiğinde hem konfor hem güvenlik korunuyor.
         </p>
         <p>
           Şu işaretler hekim değerlendirmesi anı: gece terlemesiyle birlikte açıklanamayan kilo kaybı, ateş, sürekli çarpıntı,
@@ -293,8 +292,6 @@ const articleSchemas = buildArticleSchemas({
           sürdü, ne tetikledi, gündüz işlevini bozdu mu? İyi kayıt, iyi tedavi konuşmasının en sade kapısıdır.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
