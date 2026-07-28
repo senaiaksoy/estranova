@@ -442,19 +442,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/': [
     {
-      question: 'Menopozda libido azalması mutlaka hormonal bir sorun mudur?',
+      question: 'Menopozda libido azalması herkeste olur mu?',
       answer:
-        'Hayır. Hormonlar önemli bir parça olsa da ilişki dinamiği, uyku, stres, beden konforu, ağrı ve kendilik hissi de tabloyu belirler. Bu yüzden tek neden aramak çoğu zaman konuyu gereğinden fazla daraltır.',
+        'Hayır. Cinsel istekte azalma menopoz döneminde yaygın olsa da çalışmaların ölçümüne göre oranlar değişir ve her düşük istek klinik bir sorun sayılmaz. Değişimin sizde sıkıntı yaratması ve yaşam kalitenizi etkilemesi değerlendirmede daha belirleyicidir.',
     },
     {
-      question: 'İstek azalması ile uyarılma sorunu aynı şey mi?',
+      question: 'Lokal östrojen güvenli mi, sistemik etkisi var mı?',
       answer:
-        'Tam olarak değil. İstek, konuya zihinsel ve duygusal yaklaşımı; uyarılma ise bedensel yanıtı tarif eder. İkisi birlikte etkilenebilir ama her zaman aynı şekilde değişmez.',
+        'Düşük doz vajinal östrojen genitoüriner menopoz belirtilerinde etkilidir ve sistemik emilimi düşüktür. Östrojen-duyarlı meme kanseri öyküsü veya aktif tedavisi gibi durumlarda ise onkolog ve ilgili hekimle yarar ve riskleri birlikte değerlendirerek karar vermek gerekir.',
     },
     {
-      question: 'Ne zaman bu konuyu profesyonel destekle konuşmak iyi olur?',
+      question: 'Antidepresan kullanıyorum, libido azlığını ona mı bağlamalıyım?',
       answer:
-        'Yakınma ilişkiyi, özsaygıyı ya da bedenle kurduğunuz huzuru belirgin biçimde etkiliyorsa konuşmak iyi olur. Özellikle ağrı, belirgin kuruluk veya yeni başlamış isteksizlik başka başlıklarla birlikte değerlendirilmelidir.',
+        'Bazı antidepresanlar cinsel isteği ve uyarılmayı azaltabilir; ancak menopoz döneminde ağrı, uyku, ruh hâli ve ilişki dinamikleri de tabloya eşlik edebilir. İlacı kendi başınıza kesmeyin; belirtilerin başlangıcıyla ilaç veya doz değişikliği arasındaki zamanı reçete eden hekiminizle değerlendirin.',
+    },
+    {
+      question: 'Partnerimle bunu nasıl konuşurum?',
+      answer:
+        'Suçlama yerine kendi deneyiminizi anlatan bir cümleyle başlayabilirsiniz: “Size karşı hissim değişmedi; bedenim bu dönemde farklı çalışıyor, birlikte düşünelim mi?” Önce hekimle konuşup tabloyu anlamlandırmak da paylaşmayı kolaylaştırabilir; konuşmanın tek bir doğru sırası yoktur.',
+    },
+    {
+      question: 'Partnerim yoksa cinsel sağlıkla ilgilenmem gerekir mi?',
+      answer:
+        'Evet; cinsel sağlık yalnızca partnerli yaşamla ilgili değildir. Vajinal kuruluk, doku hassasiyeti ve ağrı günlük konforu ve idrar yolu sağlığını etkileyebilir. Bedeninizde yeni bir belirti varsa partner durumundan bağımsız olarak değerlendirme isteyebilirsiniz.',
     },
   ],
   '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': [

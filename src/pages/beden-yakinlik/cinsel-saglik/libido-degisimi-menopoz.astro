@@ -20,7 +20,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const route = '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/';
 const hero = submenuHeroByRoute[route] ?? {
   src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
-  alt: "Estranova editöryal görsel placeholder — submenu-heroes.ts altına özel görsel ekleyin.",
+  alt: 'Menopoz döneminde beden ve yakınlık üzerine sakin bir editoryal yaşam sahnesi',
 };
 
 const tocEntries = [
@@ -33,11 +33,12 @@ const tocEntries = [
   { id: 'cozumler', label: 'Çözüm Yelpazesi — Açık Liste' },
   { id: 'ne-zaman-hekime', label: 'Ne Zaman Hekime Başvurmalı' },
   { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+  { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi';
-const seoTitle = 'Menopozda Libido Değişimi';
+const seoTitle = 'Menopozda Libido Azalması: Nedenleri ve Çözüm Seçenekleri';
 const articleDescription =
   'Menopozda cinsel istek nasıl değişir, neden tek bir nedene bağlanamaz, hangi seçenekler vardır? Yargısız, jargonsuz ve çözüm odaklı bir okuma.';
 const faqItems = articleFaqs[route] ?? [];
@@ -46,6 +47,7 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '27 Nisan 2026',
+  modifiedDate: '28 Temmuz 2026',
   pathname: route,
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik/',
@@ -84,7 +86,7 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Klinikten Kısa Bir Not">
         <p>
-          Mahrem sayılan konularda konuşmak ve yazmak kolay değil. Klinik pratiğimde kadınların en çok duraksadığı ama cevabını en çok aradığı konulardan biri bu. Tıbbi jargon yığmadan, hekim kapısını ardına kadar açarak ve komşu sıcaklığını koruyarak masaya yatıralım istedim.
+          Mahrem sayılan konularda konuşmak ve yazmak kolay değil. Klinik pratiğimde kadınların en çok duraksadığı ama cevabını en çok aradığı konulardan biri bu. Tıbbi jargon yığmadan, açık ve yargısız biçimde ele alalım istedim.
         </p>
       </ArticleSummary>
 
@@ -95,8 +97,9 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Birçok kadın bunu sessizce taşır; "yaşımdan", "yorgunluktan" ya da "yalnız bende" diye geçiştirir. Oysa
-          değişim çok yaygın — postmenopoz kadınlarının yaklaşık üçte birinde belirgin bir libido azalması bildirilmiştir
-          <Evidence level={5} />. Bu istatistik avantajınızda: yaşadığınız bir yalnızlık değil, ortak bir geçiş.
+          cinsel istekte azalma menopoz döneminde yaygındır; ancak çalışmaların ölçüm biçimine göre oranlar geniş
+          değişir. Her düşük istek klinik bir sorun değildir. Belirleyici olan, değişimin kişide sıkıntı yaratması
+          ve yaşam kalitesini etkilemesidir <Evidence level={4} />.<sup><a href="#kaynak-1">[1]</a></sup>
         </p>
         <p>
           Konuşmamak çözmüyor, çoğu zaman daha karmaşık hâle getiriyor. O yüzden bu yazı yargılamayı bir kenara
@@ -139,11 +142,17 @@ const articleSchemas = buildArticleSchemas({
           <Evidence from={3} to={4} />. Ama "hormon ekleyelim, libido geri gelsin" denklemi olduğu gibi işlemiyor.
         </p>
         <p>
-          Hormon replasman tedavisi (HRT) bazı kadınlarda libido üzerinde olumlu etki yaratabilir — özellikle
-          fiziksel belirtileri rahatlattığı için <Evidence level={4} />. Testosteron tedavisi kadınlarda
-          off-label uygulamalarla gündeme geliyor; bu konu ülkeler arasında farklı düzenlemelere tabi ve hâlâ
-          tartışmalı bir alan <Evidence level={3} />. Karar her durumda kişiseldir ve hekim değerlendirmesini
-          gerektirir.
+          Sistemik hormon tedavisi sıcak basmaları ve genitoüriner menopoz belirtilerinde etkili olabilir; libido
+          üzerindeki etkisi ise doğrudan ve öngörülebilir değildir. Uyku, ağrı ve fiziksel konforu iyileştirerek
+          dolaylı yarar sağlayabilir <Evidence level={4} />.<sup><a href="#kaynak-2">[2]</a></sup> Rahmi olan
+          kadınlarda sistemik östrojen kullanılıyorsa endometriyumu korumak için genellikle progestojen de gerekir.
+        </p>
+        <p>
+          Testosteron, menopozla ilişkili ve kişide belirgin sıkıntı yaratan düşük cinsel istek durumunda
+          (hipoaktif cinsel istek bozukluğu, HSDD); ağrı, vajinal kuruluk, ilaçlar, ruh hâli ve ilişki dinamikleri
+          değerlendirildikten sonra düşünülebilir. Kan testosteron düzeyi tek başına tanı koydurmaz. Uygun kişide
+          transdermal ve fizyolojik kadın düzeylerini hedefleyen tedavi, yan etki ve düzey takibiyle uzman hekim
+          tarafından planlanır; uzun dönem güvenlilik verileri sınırlıdır <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
         </p>
 
         <h2 id="fiziksel">Fiziksel Engeller — Ağrı, Kuruluk, Yorgunluk</h2>
@@ -152,9 +161,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Genitoüriner menopoz sendromu (vajinal kuruluk, doku incelmesi, mukozal hassasiyet) cinsel ilişkide
-          rahatsızlık ve ağrıya yol açabilir <Evidence level={5} />. Bir kez ağrı yaşandığında beden bunu
-          öğrenir — sonraki yakınlık deneyiminde "şimdi yine ağrı olur mu?" beklentisi doğar. Bu bilinçaltı
-          beklenti tek başına isteği bastırmaya yetebilir.
+          rahatsızlık ve ağrıya yol açabilir <Evidence level={5} />. Ağrı beklentisi, yakınlıktan kaçınmayı ve
+          istekte azalmayı sürdürebilir.
         </p>
         <p>
           Yorgunluk, uyku bölünmesi, sıcak basmaları, eklemlerde sertlik — bunların hepsi günlük enerji bütçesini
@@ -194,14 +202,14 @@ const articleSchemas = buildArticleSchemas({
           Çoğu kadın bilmez: bazı yaygın ilaçlar libido üzerinde belirgin etkiye sahiptir.
         </p>
         <p>
-          Bunu yıllar içinde defalarca duydum — yıllardır kullandığı bir ilacın mahremiyet tarafına dokunduğunu
-          kimse söylemediği için kendini "yıpranmış" sanan kadınların hikâyesi. Oysa beden yıpranmamış; sadece bir
-          molekül arada konuşuyor.
+          Bunu yıllar içinde defalarca duydum: kullandığı bir ilaçla belirtilerin başlangıcı arasındaki zaman
+          ilişkisi fark edilmediği için kendini "yıpranmış" sanan kadınlar var. Bu yalnızca bir olasılık; sizin
+          deneyiminiz ve nedeniniz farklı olabilir.
         </p>
         <p>
-          Antidepresanların bir grubu (özellikle SSRI'ler) cinsel isteği ve uyarılmayı belirgin biçimde azaltabilir
-          <Evidence level={5} />. Bazı tansiyon ilaçları, antihistaminikler ve hormonal kontraseptifler de benzer
-          etkiler gösterebilir <Evidence level={4} />. Bu etkiler doza, ilaç türüne ve kişiye göre değişir.
+          Antidepresanların bir grubu (özellikle SSRI'ler) cinsel isteği ve uyarılmayı azaltabilir
+          <Evidence level={5} />. Başka ilaçlar da bazı kişilerde cinsel işlevi etkileyebilir; burada en anlamlı
+          ipucu, ilacın başlanması veya dozunun değişmesiyle belirtinin zaman ilişkisidir.
         </p>
         <p>
           Önemli olan şu: kullandığınız ilaçları gözden geçirmek hiçbir ilacı tek başına kesmek anlamına gelmez.
@@ -224,20 +232,23 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li>
             <strong>Lokal düşük doz östrojen (vajinal krem, halka, tablet):</strong> Vajinal dokunun yenilenmesinde
-            etkili; sistemik HRT'ye göre çok düşük emilim, çoğu kadında uygun bir seçenek
-            <Evidence level={5} />.
+            etkili ve sistemik emilimi düşüktür <Evidence level={5} />.<sup><a href="#kaynak-2">[2]</a></sup>
+            Östrojen-duyarlı meme kanseri öyküsü veya aktif tedavisi gibi durumlarda onkolog ve ilgili hekimle
+            ortak karar gerekir <sup><a href="#kaynak-4">[4]</a></sup>.
           </li>
         </ul>
         <p><strong>Sistemik seçenekler:</strong></p>
         <ul>
           <li>
             <strong>Hormon replasman tedavisi (HRT):</strong> Genel menopoz belirtilerinde etkili; libido
-            üzerindeki etki kadına göre değişir, fiziksel konforu iyileştirerek dolaylı yarar görülebilir
+            üzerindeki doğrudan etkisi öngörülebilir değildir, fiziksel konforu iyileştirerek dolaylı yarar görülebilir
             <Evidence level={4} />.
           </li>
           <li>
-            <strong>Testosteron (off-label):</strong> Bazı kadınlarda gündeme gelir; ülke düzenlemeleri farklı,
-            kanıt orta düzeyde, kişisel klinik karar gerektirir <Evidence level={3} />.
+            <strong>Testosteron:</strong> Menopozla ilişkili, belirgin sıkıntı yaratan HSDD için biyopsikososyal
+            değerlendirmeden sonra düşünülebilir. Fizyolojik düzeyi hedefleyen transdermal tedavi izlem gerektirir;
+            pellet, enjeksiyon ve kişiye özel hazırlanan kompound ürünler önerilmez
+            <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
           </li>
         </ul>
         <p><strong>Davranışsal ve ilişkisel:</strong></p>
@@ -268,7 +279,7 @@ const articleSchemas = buildArticleSchemas({
         <p>Şu durumlar profesyonel destek için açık bir işarettir:</p>
         <ul>
           <li>Cinsel ilişkide ısrarlı ağrı veya yanma</li>
-          <li>Beklenmedik kanama (özellikle postmenopoz)</li>
+          <li>Herhangi bir postmenopozal kanama — gecikmeden değerlendirilmelidir</li>
           <li>İdrar yolu enfeksiyonlarında belirgin artış</li>
           <li>Libido azlığının ilişkide veya ruh hâlinde belirgin sıkıntıya yol açması</li>
           <li>Antidepresan veya başka ilaç kullanırken libido tarafında ani belirgin değişim</li>
@@ -281,44 +292,32 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
 
-        <h3>Menopozda libido azalması herkeste olur mu?</h3>
-        <p>
-          Hayır, herkeste değil. Çalışmalarda postmenopoz kadınların yaklaşık üçte birinde belirgin libido azalması
-          bildirilmiştir; bir kısım kadın değişim hissetmez, bir kısmı ise belirli dönemlerde dalgalanma yaşar
-          <Evidence level={5} />. Yaygın ama evrensel değil — kişisel değişkenlik büyük.
-        </p>
+        {faqItems.map((item) => (
+          <>
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </>
+        ))}
 
-        <h3>Lokal östrojen güvenli mi, sistemik etkisi var mı?</h3>
+        <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
         <p>
-          Vajinal yoldan uygulanan düşük doz östrojen, kan dolaşımına çok düşük miktarda geçer ve sistemik etkisi
-          büyük ölçüde sınırlıdır <Evidence level={5} />. Genellikle sistemik HRT kullanılamayan veya tercih
-          etmeyen kadınlarda da güvenli bir seçenek olarak kullanılabilir; ancak meme kanseri öyküsü gibi özel
-          durumlarda kişisel klinik değerlendirme şarttır.
+          Tedavi ve güvenlik sınırları güncel klinik kılavuzlar ile temel epidemiyolojik çalışma üzerinden
+          gözden geçirildi.
         </p>
-
-        <h3>Antidepresan kullanıyorum, libido azlığını ona mı bağlamalıyım?</h3>
-        <p>
-          SSRI grubu antidepresanlar libido ve uyarılmada belirgin azalmaya yol açabilir <Evidence level={5} />.
-          Ancak menopoz dönemindeyseniz tek bir nedene bağlamak güç — ikisi üst üste binebilir. Önemli olan:
-          ilacı tek başına kesmeyin; hekiminizle alternatifleri (farklı ilaç, doz ayarı, ek destek)
-          değerlendirin.
-        </p>
-
-        <h3>Partnerimle bunu nasıl konuşurum?</h3>
-        <p>
-          Suçlama dilinden uzak bir başlangıç çoğu zaman yardımcıdır: "Size karşı hissim değişmedi, bedenim bu
-          dönemde farklı çalışıyor — birlikte düşünelim mi?" Konuşmanın hekime başvurmadan önce yapılması
-          gerekmiyor; bazen önce hekimle netleşmek, sonra paylaşmak daha rahat oluyor. Çiftler bu eşikte birlikte
-          büyüyebilir; ama yalnızca konuşulursa.
-        </p>
-
-        <h3>Hiçbir partnerim yok, bu konuyla ilgilenmem gerekiyor mu?</h3>
-        <p>
-          Cinsel sağlık yalnızca partnerli yaşam meselesi değil. Vajinal sağlık (kuruluk, doku konforu) günlük
-          yaşam kalitesini doğrudan etkiler; idrar yolu sağlığı ile yakından ilişkilidir. Kendinle olan beden
-          farkındalığı ve özbakım bu dönemde önem kazanır. Yani evet — partnerden bağımsız olarak bu konu
-          ilgilenmeye değer.
-        </p>
+        <ol>
+          <li id="kaynak-1">
+            West SL ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/18625925/" rel="noopener noreferrer">Menopoz durumu ve düşük cinsel istek üzerine toplum temelli çalışma</a>. 2008.
+          </li>
+          <li id="kaynak-2">
+            North American Menopause Society. <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" rel="noopener noreferrer">2022 hormon tedavisi görüş bildirisi</a>.
+          </li>
+          <li id="kaynak-3">
+            ISSWSH. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8064950/" rel="noopener noreferrer">Kadınlarda HSDD için sistemik testosteron klinik uygulama kılavuzu</a>. 2021.
+          </li>
+          <li id="kaynak-4">
+            ACOG. <a href="https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2021/12/treatment-of-urogenital-symptoms-in-individuals-with-a-history-of-estrogen-dependent-breast-cancer" rel="noopener noreferrer">Östrojen-duyarlı meme kanseri öyküsünde ürogenital belirtilerin tedavisi</a>. 2021.
+          </li>
+        </ol>
       </ArticleProsePanel>
 
       <RelatedReadings
@@ -334,12 +333,13 @@ const articleSchemas = buildArticleSchemas({
       <ArticleEditorNote>
         <p class="mb-3 leading-relaxed text-ink/80">
           Menopozda libido değişimi yaygındır ve genellikle çok-faktörlüdür: hormonal değişim, vajinal sağlık,
-          uyku, ruh hâli, ilaç kullanımı ve ilişki dinamikleri eşzamanlı rol oynar. Lokal vajinal östrojen
-          tedavisi vulvovajinal atrofiye bağlı belirtilerde etkili ve büyük ölçüde güvenli bir seçenektir; sistemik
-          HRT, testosteron tedavisi (off-label) ve davranışsal yaklaşımlar bireysel değerlendirme sonrasında
-          gündeme alınmalıdır. Antidepresan kullanan hastalarda libido tarafındaki değişim asla tek başına ilaç
+          uyku, ruh hâli, ilaç kullanımı ve ilişki dinamikleri eşzamanlı rol oynar. Düşük doz vajinal östrojen
+          genitoüriner menopoz belirtilerinde etkili ve sistemik emilimi düşük bir seçenektir; östrojen-duyarlı
+          meme kanseri öyküsünde ilgili hekimlerle ortak karar gerekir. Sistemik HRT'nin libido üzerindeki etkisi
+          doğrudan ve öngörülebilir değildir. Testosteron yalnızca belirgin sıkıntı yaratan HSDD'de, kapsamlı
+          değerlendirme ve izlem sonrasında gündeme alınmalıdır. Antidepresan kullanan hastalarda değişim tek başına ilaç
           kesilmesinin gerekçesi değildir; alternatifler hekimle birlikte planlanır. Cinsel ilişkide ısrarlı ağrı,
-          postmenopoz beklenmedik kanama veya tekrarlayan idrar yolu enfeksiyonları varlığında kadın hastalıkları
+          herhangi bir postmenopozal kanama veya tekrarlayan idrar yolu enfeksiyonları varlığında kadın hastalıkları
           uzmanına başvuru gecikmeden yapılmalıdır.
         </p>
         <p class="text-sm italic text-primary">
