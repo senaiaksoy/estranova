@@ -257,6 +257,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-genital-estetik.webp',
     alt: "Gün ışığı alan evde ayna ve keten perdeler yanında duran 50'li yaşlarda kadın; menopoz sonrası genital estetik kararını mahremiyet, beden konforu ve acele etmeyen değerlendirme diliyle ele alan editoryal kart görseli",
   },
+  '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/': {
+    src: '/images/library/editorial/menopoz-sonrasi-goguslerdeki-degisim.webp',
+    alt: "Güneş ışığı alan aydınlık bir odada pencere kenarında duran 50'li yaşlarda kadın; menopoz sonrası göğüs değişimleri ve cerrahi karar süreci yazısı için sakin editoryal kart görseli",
+  },
   '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/': {
     src: '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu.webp',
     alt: "İstanbul evinde ayna ve pencere yanında omzuna nazikçe dokunan 50'li yaşlarda kadın; menopoz sonrası beden konforu, duruş ve omuz farkındalığı yazısı için sakin editoryal kart görseli",

@@ -419,6 +419,13 @@ export const approvedArticles: ArticleApproval[] = [
     approvedAt: '2026-05-30',
     note: 'KC editor direct approval: Cagri Sade tarafindan iletilen meme kucultme ve menopoz sonrasi beden konforu metni Estranova editorial-compliance cizgisine kalibre edilerek yayina alindi. Hasta alintisi, karsilastirmali sonuc anlatimi, kesin fayda vaadi, klinik yonlendirme ve promotional cerrahi dili temizlendi; karar sorulari, beden konforu, mamografi/gecmis saglik zemini ve ttb-saglik bakanligi tanitim sinirlari editor notuyla gorunur kilindi. Ust hero parent Beden & Yakinlik olarak korundu; kullanici sagladigi yatay gorsel kart/arshiv, dikey gorsel ArticleAuthorBlock yuzeyine baglandi.',
   },
+  {
+    pathname: '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/',
+    writerSlug: 'cagri-sade',
+    approvedAt: '2026-07-29',
+    note: 'KC editor direct approval: Cagri Sade tarafindan iletilen menopoz sonrasi goguslerdeki degisim metni Estranova editoryal ve compliance ilkelerine (CLAUDE.md ve AGENTS.md) uygun sekilde yeniden yazilarak yayina alindi. Promosyonel cerrahi dili, basari vaatleri, klinisyen ustunluk iddialari temizlendi; memeye yag enjeksiyonunun kalsifikasyon riskleri ve rutin tarama takibi zorluklari, diklestirme/protez seceneklerinin trade-off dengeleri hekimin kisisel danisman tonuyla gorunur kilindi. Gorsel sureci make-article-images.mjs ile byline ve kart olarak ayri render edildi; static route, FAQ, JSON-LD semalari ve RSS manifestiyle hizalandi.',
+  },
+
 ];
 
 /**

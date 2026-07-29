@@ -112,6 +112,28 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'En önemli soru şudur: "Bu kararı bedenimin gerçek konforu için mi düşünüyorum?" Eğer yanıt evetse, ikinci adım bunun tıbbi olarak uygun ve güvenli olup olmadığını değerlendirmektir.',
     },
   ],
+  '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/': [
+    {
+      question: 'Menopoz sonrası göğüslerdeki sarkma sporla tamamen düzeltilebilir mi?',
+      answer:
+        'Hayır, egzersiz göğüs altındaki kas dokusunu (pektoral kaslar) güçlendirebilir ama meme dokusunun kendisinde kas lifi bulunmaz. Menopozda azalan bağ dokusu elastikiyeti ve gerileyen süt bezleri nedeniyle sarkan meme dokusunu sporla tamamen eski konumuna getirmek anatomik olarak mümkün değildir.',
+    },
+    {
+      question: 'Memeye yağ enjeksiyonunun mamografi ve MR takibinde ne gibi riskleri vardır?',
+      answer:
+        'Enjekte edilen yağ dokusunun bir kısmı zamanla canlılığını kaybedebilir ve kireçlenmeye (kalsifikasyon) veya küçük yağ kistlerine yol açabilir. Deneyimli meme radyologları bu değişikliklerin çoğunu iyi huylu bulgular olarak ayırt edebilir; ancak bazı durumlarda ek görüntüleme veya biyopsi gerekebilir.',
+    },
+    {
+      question: 'Meme dikleştirme ameliyatından sonra mutlaka protez kullanılmalı mıdır?',
+      answer:
+        'Hayır, bu tamamen hastanın hacim beklentisine bağlıdır. Eğer sarkma giderildiğinde kalan doğal meme hacmi hasta için yeterliyse ve vücut oranlarıyla uyumluysa ek bir protez gerekmez; sadece dikleştirme (mastopeksi) yapılır. Hacim kaybı belirginse ve dolgunluk isteniyorsa protez veya yağ enjeksiyonu düşünülebilir.',
+    },
+    {
+      question: 'Menopoz sonrası estetik ameliyat kararı alırken yaş tek başına bir engel midir?',
+      answer:
+        'Yaş tek başına bir engel değildir. Önemli olan kronolojik yaştan ziyade kişinin genel sağlık durumu, kronik hastalıklarının (diyabet, tansiyon vb.) kontrol altında olup olmaması, yara iyileşme kapasitesi ve anestezi alabilme durumudur.',
+    },
+  ],
   '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/': [
     {
       question: 'Estetik diş kararı için ideal bir yaş var mı?',

@@ -226,6 +226,27 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
+    path: '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/',
+    title: 'Menopoz Sonrası Göğüslerdeki Değişim: Doğal Süreçler ve Cerrahi Karar Dengesi',
+    description:
+      'Menopoz sonrası göğüslerde görülen hacim kaybı, sarkma ve dokusal değişimlerin nedenlerini; dikleştirme, protez ve yağ enjeksiyonu gibi cerrahi seçenekleri Çağrı Sade birinci ağızdan, gerçekçi beklentilerle anlatıyor.',
+    publishedDate: '29 Temmuz 2026',
+    writerSlug: 'cagri-sade',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik/',
+    keywords: [
+      'menopoz sonrası göğüs değişimi',
+      'meme dikleştirme',
+      'mastopeksi',
+      'memeye yağ enjeksiyonu',
+      'meme protezi',
+      'menopoz sonrası meme sarkması',
+      'göğüste hacim kaybı',
+      'estetik cerrahi karar süreci',
+      '40 sonrası beden farkındalığı',
+    ],
+  },
+  {
     path: '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
     title: 'Menopoz Sonrası Meme Küçültme: Ne Zaman Konfor Meselesi?',
     description:
