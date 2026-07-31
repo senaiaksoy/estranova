@@ -202,6 +202,16 @@ const allSchemas = [webSiteSchema, organizationSchema, drAksoyPersonSchema, ...a
       import '../scripts/article-toc';
       import '../scripts/newsletter-signup';
       import '../scripts/preferred-source';
+
+      // Email link deobfuscation (bypasses Cloudflare obfuscation and intermediate comment stripping)
+      document.querySelectorAll('.email-link').forEach((el) => {
+        const u = el.getAttribute('data-u');
+        const d = el.getAttribute('data-d');
+        if (u && d) {
+          (el as HTMLAnchorElement).href = `mailto:${u}@${d}`;
+          el.textContent = `${u}@${d}`;
+        }
+      });
     </script>
   </body>
 </html>
