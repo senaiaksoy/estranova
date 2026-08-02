@@ -837,9 +837,9 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/',
-    title: 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi',
+    title: 'Menopozda Libido Azalması: Nedenleri ve Ne Yapılabilir?',
     description:
-      'Menopozda cinsel istek nasıl değişir, neden tek bir nedene bağlanamaz, hangi seçenekler vardır? Yargısız, jargonsuz ve çözüm odaklı bir okuma.',
+      'Menopozda libido azalması neden olur? Hormonların, vajinal kuruluğun, uykunun, ilaçların ve ilişki dinamiklerinin etkisini ve destek seçeneklerini inceleyin.',
     publishedDate: '27 Nisan 2026',
     writerSlug: 'senai-aksoy',
     section: 'Beden & Yakınlık',
@@ -869,9 +869,9 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
-    title: 'Sıcak Basması ve Gece Terlemesi — Menopozda Vazomotor Belirtiler Rehberi',
+    title: 'Menopozda Sıcak Basması ve Gece Terlemesi: Neden Olur, Ne İyi Gelir?',
     description:
-      'Sıcak basması ve gece terlemesi neden olur? Ateş basması denen o ani ısı dalgası, tetikleyiciler ve kanıt temelli destek seçeneklerini sade bir dille ele alan rehber.',
+      'Menopozda sıcak basması ve gece terlemesi neden olur, ne iyi gelir? Tetikleyicileri, günlük adımları ve hormonlu-hormonsuz seçenekleri inceleyin.',
     publishedDate: '25 Nisan 2026',
     writerSlug: 'senai-aksoy',
     section: 'Hormonal Geçiş',

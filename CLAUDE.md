@@ -86,9 +86,10 @@ Humanize tek başına AI-tell'leri kelime düzeyinde temizler; ama metin **yapı
 
 #### FAQ disiplini (HARD CONSTRAINT)
 
-- `pratik_veya_sss` bölümü **3–5** adet **konuya özgü**, long-tail niteliğinde gerçek soru içerir; her yanıt **en az 2–3 cümle** derinlikte olmalıdır.
+- Makale türü önce `docs/ARTICLE-TEMPLATES.md` karar ağacıyla belirlenir. `clinical-guide` için SSS **önerilir ama otomatik zorunlu değildir**; `expert-essay`, `experience-essay` ve `editorial-guide` için varsayılan olarak eklenmez. Yalnızca okurun gerçek sorularına ek değer katıyorsa kullanılır.
+- SSS kullanılıyorsa **3–5** adet **konuya özgü**, long-tail niteliğinde gerçek soru içerir; her yanıt **en az 2–3 cümle** derinlikte olmalıdır.
 - **Yasak:** jenerik meta sorular ("bu içerik kimler için", "tıbbi karar yerine geçer mi", "Türkiye bağlamı neden ayrı", "bu metin neyi netleştirir") — SEO şablonu / FAQ stuffing sinyali. Ayrıntı: `agents/writer_agent.md` + `agents/writer_agent.py` doğrulaması.
-- Yayınlanan makalede SSS görünmez taslak olarak kalamaz; sayfada **tek görünür SSS yüzeyi** bulunmalıdır. Eğer SSS `ArticleProsePanel` içinde editoryal long-read akışının doğal bir H2/H3 bölümü olarak yazıldıysa ikinci bir `ArticleFAQ` akordeonu eklenmez. Eğer gövdede görünür SSS bölümü yoksa `ArticleFAQ` kullanılır. Her durumda aynı soru-cevaplar `FAQPage` structured data içinde de yer almalıdır.
+- SSS kullanılıyorsa sayfada **tek görünür SSS yüzeyi** bulunur. Gövde içi SSS varsa ikinci `ArticleFAQ` eklenmez; `FAQPage` yalnızca görünür sorularla birebir aynı kaynaktan üretilir.
 
 - **Ton:** tıbbi olarak okuryazar, **sakin**, **kesin**, **güven veren**, **zarif**, **insani**, **sansasyonel olmayan**.
 - **Kaçınılacaklar:** abartı, alarmist ifade, mucize dili, aşırı vaat, influencer tonu, **satış / funnel metni**, uygulama-SaaS panosu dili, “en iyi / garanti / kesin çözüm” hissi.
@@ -111,8 +112,8 @@ Randevu al; Tedaviye başla; Hemen başvur; En iyi; En başarılı; Garantili; K
 
 #### Yasak referans biçimleri (HARD CONSTRAINT)
 
-- **Inline harici URL yasak:** Makale, sosyal veya bülten gövdesinde markdown `[metin](http://...)` veya `https://...` ile okura tıklanır dış kaynak bağlantısı **yok** (pipeline’da deterministik `regulation_risk`).
-- **Uluslararası kuruluş / yayın adı yasak:** Metin gövdesinde **NAMS, NICE, JAMA, Lancet, NEJM, Mayo Clinic, ACOG, Cleveland Clinic, USPSTF, WHO, NHS, CDC, FDA, PubMed** vb. adları cümle içine yerleştirmek **yasaktır** (aynı liste `compliance_expert_agent.py` ile denetlenir).
+- **Türe göre dış kaynak:** `clinical-guide` içinde doğrulanmış bilimsel kaynaklara tıklanır dış bağlantı verilebilir; hatta iddia-kaynak zinciri için seçilmiş kaynak bölümü zorunludur. Bağlantılar resmî sağlık kaynakları, güncel kılavuzlar, sistematik derlemeler/meta-analizler ve temel hakemli çalışmalarla sınırlıdır. `expert-essay`, `experience-essay` ve `editorial-guide` gövdesinde dış link varsayılan değildir; tıbbi iddia için gerektiğinde kısa kaynak bölümünde kullanılır.
+- **Kuruluş / yayın adı:** Klinik rehberin kaynak listesinde ve iddiaya bağlı dipnotunda gerçek kaynak adı kullanılabilir. Deneyim ve editoryal yazının anlatı gövdesine otorite isimleri yığılmaz.
 - **Serbest:** anonim yumuşak referans — örn. "araştırmalar gösteriyor", "uzmanlar genellikle belirtiyor", "menopoz alanında çalışan dernekler öneriyor".
 - **İç bağlantı:** Site içi öneri listesi **yalnızca Publisher** paketinde otomatik eklenir; **Writer makale gövdesine iç link blokları veya URL önerisi yerleştirmez** (`agents/writer_agent.md` ile uyumlu).
 

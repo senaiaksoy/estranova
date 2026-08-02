@@ -230,18 +230,22 @@ Language and compliance:
 
 ### Article page layout (Astro — use for every new static article)
 
-The visual shell is **not** optional for new `.astro` articles under `src/pages/`. Reuse these components so pages match the homepage / hub styling:
+The visual shell is **not** optional for new `.astro` articles under `src/pages/`. Before scaffolding, select `clinical-guide`, `expert-essay`, `experience-essay` or `editorial-guide` with [`docs/ARTICLE-TEMPLATES.md`](docs/ARTICLE-TEMPLATES.md). The common Estranova shell stays consistent; evidence, sources, TOC, FAQ, medical review and schema follow the selected type instead of a single universal checklist.
+
+Reuse these components so pages match the homepage / hub styling:
 
 1. **`SubmenuHero`** (`compact`) when the URL is registered in `src/data/submenu-heroes.ts` (`submenuHeroByRoute`). If the page uses a plain in-article `<header>` + `pt-24` instead (some informational routes), keep that pattern only where it already exists; new hub-style articles should prefer `SubmenuHero` + hero data.
 2. **`SubmenuArticleBody`** — wraps the column under the hero: gradient background, responsive grid (sticky TOC on `lg+` if `slot="toc"` present), spacing. Replace ad-hoc `<article class="px-6 py-16">` + inner wrappers with this.
 3. **Inside the body (typical order):**
-   - **`ArticleTOC`** (optional, recommended for articles with 5+ H2's) — `<ArticleTOC slot="toc" entries={tocEntries} />` right after `<SubmenuArticleBody>` open. Renders as narrow sticky sidebar with two-digit numbered index (`01`, `02`…). Entries must match H2 `id` attributes in the body.
+   - **`ArticleTOC`** (optional, recommended for clinical/editorial guides with 5+ H2's; normally omitted for experience essays) — `<ArticleTOC slot="toc" entries={tocEntries} />` right after `<SubmenuArticleBody>` open. Renders as narrow sticky sidebar with two-digit numbered index (`01`, `02`…). Entries must match H2 `id` attributes in the body.
    - **`ArticleAuthorBlock`** — `authorSlug` (from `src/data/writers.ts`) + `publishedDate` + `readingMinutes`. Resolves writer portrait, role and medical reviewer line. When an article needs a dedicated byline visual, pass `imageSrc` / `imageAlt` / `imagePosition` here; this image is independent from both `SubmenuHero` and sub-hub card imagery. If a user supplies a new article image without explicitly asking for the top hero to change, place it here and in `articleCardImageByRoute`, not in `submenuHeroByRoute`.
-   - **`ArticleSummary`** — every static article starts its reading flow with this component for **Kısa Özet** / quick answer. Do not hand-roll a per-page gold summary `<section>`; use `<ArticleSummary><p>…</p></ArticleSummary>` so the premium Vogue/TR summary card stays consistent.
+   - **`ArticleSummary`** — use **Kısa Klinik Yanıt** for clinical guides, **Kısa Özet** for expert/editorial guides, and an editorial standfirst such as **Bu yazıya başlarken** for experience essays. Do not hand-roll a per-page gold summary `<section>`.
    - Main text: **`ArticleProsePanel`** only — do **not** put `prose` on a bare `<section>`; the panel supplies the white card + typography.
    - Extra prose blocks (e.g. “Kısa Hatırlatma”): second **`ArticleProsePanel`** with `class="mt-10"` (and more if needed).
-   - **SSS / FAQ yüzeyi** — her yayın makalesinde tek görünür SSS yüzeyi zorunlu. `src/data/article-faqs.ts` veya sayfaya özel `faqItems` kaynağı kullan; 3–5 konuya özgü gerçek soru, her yanıtta 2–3 cümle. Eğer SSS ana gövdede `ArticleProsePanel` içinde editoryal H2/H3 akışıyla yazıldıysa ayrıca `ArticleFAQ` ekleme; bu Vogue/TR long-read ritmini bozar ve çift `id` riski doğurur. Eğer gövdede SSS yoksa `ArticleFAQ` bloğunu ana gövdenin ardından, `RelatedReadings` öncesi yerleştir.
-   - **İlgili İçerikler** with `RelatedReadings`, then **`ArticleEditorNote`** for Bilimsel Editör Notu and **`ArticleDisclaimer`** for the medical disclaimer. Do not hand-roll the old gradient left-border editor note or dashed disclaimer `<section>` in new/updated articles; these reusable components are the canonical Vogue/TR article trust blocks.
+   - **SSS / FAQ yüzeyi** — clinical guides may use 3–5 real questions when they add reader value; other types omit FAQ by default. If used, render one visible FAQ surface from the same `faqItems` source as `FAQPage`; never add a second accordion over a prose FAQ.
+   - **Kaynaklar** — clinical guides include selected, clickable scientific sources and claim-adjacent numbered references. Other types add sources only where medical claims require them; do not turn a personal essay into an academic bibliography.
+   - **Klinik sahne** — clinical guides and expert essays may include up to two anonymized clinical scenes. Follow `docs/ARTICLE-TEMPLATES.md`: remove identifying combinations, label composite scenes, and never use a single case as proof of efficacy.
+   - **İlgili İçerikler** with `RelatedReadings`; use **`ArticleEditorNote`** when the type requires visible medical review, and **`ArticleDisclaimer`** whenever medical information or health decisions are discussed.
 4. **Imports:** `../../components/site/...` from `src/pages/<section>/`; add one `../` per extra directory level (e.g. `hormonal-gecis/menopoz/` → `../../../components/site/`).
 5. **CMS / JSON-driven articles** rendered by `src/pages/article/[slug].astro` already use `SubmenuArticleBody` + `ArticleProsePanel` for HTML body; follow the same content blocks in `src/data/articles` (title, excerpt, transparency, disclaimer).
 
@@ -286,7 +290,7 @@ Under the hood: `<section class="rounded-[32px] …"><div class="prose prose-lg 
 
 ### Article structured data — JSON-LD (MANDATORY)
 
-Every published article ships with schema.org JSON-LD so search engines and assistive tooling can resolve the editorial and medical-review trust chain (EEAT). The helper lives at `src/utils/article-schema.ts` and is non-optional for new static `.astro` articles.
+Every published article ships with schema.org JSON-LD. The helper lives at `src/utils/article-schema.ts` and is non-optional for new static `.astro` articles. Pass `articleType` explicitly: `clinical-guide` emits `MedicalWebPage`; the other types emit `Article` without falsely presenting a personal/editorial essay as a clinical reference page. `FAQPage` is emitted only when visible `faqItems` exist.
 
 **Usage (in article frontmatter):**
 ```astro
@@ -302,6 +306,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',          // must exist in src/data/writers.ts
+  articleType: 'editorial-guide',      // explicit for every new article
   publishedDate: '14 Nisan 2026',     // TR long form OR ISO — helper normalises
   pathname: '/zihin-denge/slug',      // leading slash, no siteUrl concatenation
   articleSection: 'Zihin & Denge',    // human label
@@ -321,11 +326,11 @@ Then pass to `SiteLayout`:
 >
 ```
 
-**What the helper emits (4 schemas, appended to SiteLayout's default WebSite + Organization):**
-- **`MedicalWebPage`** — `name`, `description`, `url`, `inLanguage: 'tr-TR'`, `datePublished`/`dateModified` (ISO), `reviewedBy: Person` (Doç. Dr. Senai Aksoy default).
+**What the helper emits (appended to SiteLayout's default WebSite + Organization):**
+- **`MedicalWebPage`** — only for `clinical-guide`; includes `reviewedBy` and medical dates/image.
 - **`Article`** — `headline`, `description`, ISO dates, `mainEntityOfPage`, `articleSection`, `keywords`, `author: Person` (resolved from `writers.ts` — includes `name`, `jobTitle`, `description`, `image`, `url: /yayin-kurulu`), `publisher: Organization` (with logo), `reviewedBy: Person`.
 - **`BreadcrumbList`** — Anasayfa → (optional) articleSection → Article title.
-- **`FAQPage`** — `faqItems` verildiğinde otomatik eklenir. Bu artık tüm yayın makalelerinde zorunlu yüzeydir; sayfadaki tek görünür SSS yüzeyiyle birebir aynı soru-cevap kaynağından beslenmelidir.
+- **`FAQPage`** — only when visible `faqItems` are supplied; it must match the single visible FAQ surface exactly.
 
 **Category ↔ path map:**
 - `/zihin-denge/…` → `articleSection: 'Zihin & Denge'`, `sectionPath: '/zihin-denge'`

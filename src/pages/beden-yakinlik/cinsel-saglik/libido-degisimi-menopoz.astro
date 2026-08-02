@@ -24,30 +24,30 @@ const hero = submenuHeroByRoute[route] ?? {
 };
 
 const tocEntries = [
-  { id: 'acilis', label: 'Yalnız Değilsiniz' },
-  { id: 'tek-neden-yok', label: 'Tek Bir Neden Yok' },
-  { id: 'hormonlar', label: 'Östrojen, Testosteron — ve Sınırları' },
-  { id: 'fiziksel', label: 'Fiziksel Engeller — Ağrı, Kuruluk, Yorgunluk' },
-  { id: 'psikolojik', label: 'Beden, İlişki, Konuşmak' },
-  { id: 'ilaclar', label: 'Sessiz Suçlu: İlaçlar' },
-  { id: 'cozumler', label: 'Çözüm Yelpazesi — Açık Liste' },
-  { id: 'ne-zaman-hekime', label: 'Ne Zaman Hekime Başvurmalı' },
+  { id: 'acilis', label: 'Libido Azalması Ne Zaman Sorundur?' },
+  { id: 'uc-ayri-soru', label: 'İstek, Uyarılma ve Ağrı Aynı Şey Değil' },
+  { id: 'nedenler', label: 'Neden Tek Bir Hormon Değil?' },
+  { id: 'degerlendirme', label: 'Değerlendirmede Neye Bakılır?' },
+  { id: 'secenekler', label: 'Hangi Destek Ne Zaman Düşünülür?' },
+  { id: 'testosteron', label: 'Testosteron Hakkında Net Sınırlar' },
+  { id: 'ne-zaman-hekime', label: 'Ne Zaman Değerlendirme Gerekir?' },
   { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
   { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Menopozda Libido Değişimi — Sessiz Bir Konunun Açık Sözlü Rehberi';
-const seoTitle = 'Menopozda Libido Azalması: Nedenleri ve Çözüm Seçenekleri';
+const articleTitle = 'Menopozda Libido Azalması: Nedenleri ve Ne Yapılabilir?';
+const seoTitle = articleTitle;
 const articleDescription =
-  'Menopozda cinsel istek nasıl değişir, neden tek bir nedene bağlanamaz, hangi seçenekler vardır? Yargısız, jargonsuz ve çözüm odaklı bir okuma.';
+  'Menopozda libido azalması neden olur? Hormonların, vajinal kuruluğun, uykunun, ilaçların ve ilişki dinamiklerinin etkisini ve destek seçeneklerini inceleyin.';
 const faqItems = articleFaqs[route] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '27 Nisan 2026',
-  modifiedDate: '28 Temmuz 2026',
+  modifiedDate: '2 Ağustos 2026',
   pathname: route,
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik/',
@@ -79,204 +79,127 @@ const articleSchemas = buildArticleSchemas({
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
         publishedDate="27 Nisan 2026"
+        lastUpdated="2 Ağustos 2026"
         readingMinutes={10}
-        imageSrc="/images/library/editorial/by-libido-degisimi.webp"
-        imageAlt="Bahçe terasında iki yaşıt kadının yargısız sohbeti; menopozda libido değişimi için editoryal görsel"
+        medicalReviewer="Dr. Alper Mumcu"
+        imageSrc="/images/library/editorial/libido-degisimi-menopoz-byline.webp"
+        imageAlt="Bahçe terasında not defteriyle oturan olgun kadın; menopozda libido değişimi yazısı"
       />
 
-      <ArticleSummary title="Klinikten Kısa Bir Not">
+      <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Mahrem sayılan konularda konuşmak ve yazmak kolay değil. Klinik pratiğimde kadınların en çok duraksadığı ama cevabını en çok aradığı konulardan biri bu. Tıbbi jargon yığmadan, açık ve yargısız biçimde ele alalım istedim.
+          Menopozda cinsel isteğiniz değişebilir. Bu, tek başına bir hastalık değildir; üstelik mesele çoğu zaman
+          yalnızca hormonlar da değildir. İstek, uyarılma, vajinal konfor, uyku, ruh hâli, kullandığınız ilaçlar
+          ve ilişkinizin o günkü hâli aynı tablonun parçalarıdır. Değişim sizi üzüyorsa asıl soru “Libidomu nasıl
+          yükseltirim?” değil, “Beni zorlayan parça hangisi?” olmalıdır.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="acilis">Yalnız Değilsiniz</h2>
+        <h2 id="acilis">Libido Azalması Ne Zaman Sorundur?</h2>
+        <p>Cinsel isteğin eskisinden farklı olması tek başına sorun değildir. Önemli olan, bu değişimin sizi nasıl hissettirdiğidir.</p>
         <p>
-          Menopoz döneminde cinsel istekteki değişim, en az konuşulan ama en sık aranan başlıklardan biri.
+          Muayene odasında bu konu çoğu zaman görüşmenin sonunda açılır. Hasta tam kalkacakken durur ve “Bir de
+          bunu sormak istiyordum ama nasıl söyleyeceğimi bilemedim,” der. Bu tek bir hastanın hikâyesi değil;
+          yıllar içinde tekrar tekrar karşılaştığım anonim bir sahne. Yine de her kadının yaşadığı ve bunun nedeni
+          kendine özgüdür.
         </p>
         <p>
-          Birçok kadın bunu sessizce taşır; "yaşımdan", "yorgunluktan" ya da "yalnız bende" diye geçiştirir. Oysa
-          cinsel istekte azalma menopoz döneminde yaygındır; ancak çalışmaların ölçüm biçimine göre oranlar geniş
-          değişir. Her düşük istek klinik bir sorun değildir. Belirleyici olan, değişimin kişide sıkıntı yaratması
-          ve yaşam kalitesini etkilemesidir <Evidence level={4} />.<sup><a href="#kaynak-1">[1]</a></sup>
-        </p>
-        <p>
-          Konuşmamak çözmüyor, çoğu zaman daha karmaşık hâle getiriyor. O yüzden bu yazı yargılamayı bir kenara
-          bırakıp tabloyu olduğu gibi anlatıyor: neden değişiyor, neyle ilişkili, hangi seçenekler var.
+          Menopoz döneminde istek değişebilir; fakat herkeste azalmaz. Düşük isteğin varlığı tek başına tanı
+          değildir. Ne kadar sürdüğüne, sizi rahatsız edip etmediğine ve yaşamınızdaki yerine birlikte bakılır
+          <Evidence level={4} />.<sup><a href="#kaynak-1">[1]</a></sup>
         </p>
 
-        <h2 id="tek-neden-yok">Tek Bir Neden Yok</h2>
+        <h2 id="uc-ayri-soru">İstek, Uyarılma ve Ağrı Aynı Şey Değil</h2>
+        <p>“Libidom azaldı” çok anlaşılır bir cümle. Fakat bazen aynı cümlenin içinde birbirinden farklı üç deneyim saklanır.</p>
+        <ul>
+          <li><strong>İstek:</strong> Cinselliğe yönelik düşünce veya motivasyonun azalması.</li>
+          <li><strong>Uyarılma:</strong> İstek olsa bile bedensel yanıtın veya haz duygusunun zorlaşması.</li>
+          <li><strong>Ağrı ve konfor:</strong> Kuruluk, yanma veya ağrı nedeniyle bedenin yakınlıktan kaçınması.</li>
+        </ul>
         <p>
-          Libido bir musluk değil ki "açıp kapatasın". Birden fazla kanaldan beslenen, birden fazla noktadan
-          etkilenen bir akış.
-        </p>
-        <p>
-          Menopozda bu akışı etkileyen başlıklar genellikle dört ayrı katmanda toplanır: hormonal (östrojen ve
-          testosteron düşüşü), fiziksel (vajinal kuruluk, ağrı korkusu, uyku eksikliği), psikolojik (beden imajı,
-          ilişki dinamikleri, stres) ve ilaca bağlı (özellikle bazı antidepresanlar, tansiyon ilaçları)
-          <Evidence level={5} />.
-        </p>
-        <p>
-          Çoğu kadında neden tek bir katmanda değil; ikisi-üçü üst üste binmiş hâlde. Tabloyu görmek, çözümü de
-          parça parça düşünmeye yardımcı olur — bütünü tek hamlede çözmeye çalışmak yerine.
-        </p>
-        <p class="rounded-[18px] bg-cream-soft p-5 text-secondary md:p-6">
-          <strong>Kısa not:</strong> "Hormon mu, yaşam mı, ilişki mi?" sorusuna cevap genelde "üçü birden". Bu
-          karmaşa kötü değil; sadece çözümün de birden fazla pencereden geleceğini gösteriyor.
+          Ağrı bekleyen beden geri çekilir. Zamanla istek de azalabilir. Böyle bir durumda yalnızca isteği
+          artırmaya çalışmak, bedenin verdiği asıl mesajı kaçırmak olur. Önce ağrı ve vajinal konfor ele alınır
+          <Evidence level={5} />.<sup><a href="#kaynak-2">[2]</a></sup>
         </p>
 
-        <h2 id="hormonlar">Östrojen, Testosteron — ve Sınırları</h2>
+        <h2 id="nedenler">Neden Tek Bir Hormon Değil?</h2>
+        <p>Hormonların payı vardır; ama libido yalnızca bir laboratuvar sonucu değildir.</p>
         <p>
-          Hormonların rolü gerçek, ama tek başına açıklamıyor.
+          Östrojen azalması vajinal dokuda kuruluk ve hassasiyetle ilişkili olabilir. Testosteronun da cinsel
+          istekte rolü vardır; ancak kandaki tek bir testosteron değeri düşük cinsel isteğin nedenini açıklamaz
+          ve HSDD tanısı koydurmaz <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
         </p>
         <p>
-          Yıllar içinde defalarca duyduğum soru şu: "Hormonum düşmüş mü, baktırsam görür müyüm?" Cevap çoğu zaman
-          beklenenin tersi — kan testindeki rakam libido tarafında her zaman bir cümle kuramıyor. O yüzden hormonu
-          tek başına suçlamak da, tek başına çözüm beklemek de yetmiyor.
-        </p>
-        <p>
-          Östrojen düşüşü vajinal dokuda ve mukozada doğrudan değişimlere yol açar; bu da fiziksel konfor üzerinden
-          dolaylı olarak istek üzerinde yer eder <Evidence level={5} />. Testosteron — kadınlarda da üretilen, az
-          konuşulan hormon — yaşla birlikte azalır ve bazı kadınlarda libido üzerinde belirgin etkiye sahip olabilir
-          <Evidence from={3} to={4} />. Ama "hormon ekleyelim, libido geri gelsin" denklemi olduğu gibi işlemiyor.
-        </p>
-        <p>
-          Sistemik hormon tedavisi sıcak basmaları ve genitoüriner menopoz belirtilerinde etkili olabilir; libido
-          üzerindeki etkisi ise doğrudan ve öngörülebilir değildir. Uyku, ağrı ve fiziksel konforu iyileştirerek
-          dolaylı yarar sağlayabilir <Evidence level={4} />.<sup><a href="#kaynak-2">[2]</a></sup> Rahmi olan
-          kadınlarda sistemik östrojen kullanılıyorsa endometriyumu korumak için genellikle progestojen de gerekir.
-        </p>
-        <p>
-          Testosteron, menopozla ilişkili ve kişide belirgin sıkıntı yaratan düşük cinsel istek durumunda
-          (hipoaktif cinsel istek bozukluğu, HSDD); ağrı, vajinal kuruluk, ilaçlar, ruh hâli ve ilişki dinamikleri
-          değerlendirildikten sonra düşünülebilir. Kan testosteron düzeyi tek başına tanı koydurmaz. Uygun kişide
-          transdermal ve fizyolojik kadın düzeylerini hedefleyen tedavi, yan etki ve düzey takibiyle uzman hekim
-          tarafından planlanır; uzun dönem güvenlilik verileri sınırlıdır <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
+          Bölünen uyku, sıcak basmaları, depresyon veya kaygı, beden algısındaki değişimler ve ilişki içindeki
+          gerilim aynı tabloya eklenebilir. Bazı antidepresanlar başta olmak üzere kimi ilaçlar da isteği,
+          uyarılmayı veya orgazmı etkileyebilir. Burada zaman çizelgesi değerlidir: Değişim ilaç başladıktan veya
+          dozu değiştikten sonra mı ortaya çıktı? Bu ihtimal varsa ilacı kendi başınıza bırakmak yerine hekiminizle
+          birlikte gözden geçirmeniz gerekir.
         </p>
 
-        <h2 id="fiziksel">Fiziksel Engeller — Ağrı, Kuruluk, Yorgunluk</h2>
+        <h2 id="degerlendirme">Değerlendirmede Neye Bakılır?</h2>
+        <p>İyi bir görüşme, “Hangi hormonum eksik?” sorusuyla başlayıp orada bitmez. Önce sizi asıl zorlayan noktayı anlamaya çalışırız.</p>
+        <p>Ben görüşmede şu ipuçlarının peşinden giderim:</p>
+        <ul>
+          <li>Değişimin ne zaman başladığı ve ani mi, kademeli mi olduğu</li>
+          <li>İstek, uyarılma, orgazm ve ağrıdan hangisinin öne çıktığı</li>
+          <li>Vajinal kuruluk, yanma, kanama veya idrar yakınmaları</li>
+          <li>Uyku, sıcak basması, ruh hâli ve günlük enerji</li>
+          <li>Kullanılan ilaçlar ve belirtilerle zaman ilişkisi</li>
+          <li>İlişki güvenliği, iletişim ve kişinin kendi hedefi</li>
+        </ul>
         <p>
-          Bazen libido azlığı sandığımız şey, aslında bedenin "şu an konfor önceliğim" demesidir.
-        </p>
-        <p>
-          Genitoüriner menopoz sendromu (vajinal kuruluk, doku incelmesi, mukozal hassasiyet) cinsel ilişkide
-          rahatsızlık ve ağrıya yol açabilir <Evidence level={5} />. Ağrı beklentisi, yakınlıktan kaçınmayı ve
-          istekte azalmayı sürdürebilir.
-        </p>
-        <p>
-          Yorgunluk, uyku bölünmesi, sıcak basmaları, eklemlerde sertlik — bunların hepsi günlük enerji bütçesini
-          azaltır. Geriye kalan enerji çoğu zaman temel yaşam fonksiyonlarına ayrılır; yakınlık bu öncelik
-          sıralamasında geride kalır. Bu suç değil, biyoloji.
-        </p>
-        <p class="rounded-[18px] bg-cream-soft p-5 text-secondary md:p-6">
-          <strong>Kısa not:</strong> Ağrı ve kuruluk büyük ölçüde tedavi edilebilir. Bu iki başlığı çözmek, çoğu
-          zaman libido tarafında da kendiliğinden bir yumuşama getirir.
+          Bu soruların sonunda mutlaka bir tedavi başlamak gerekmez. Bazen yaşananı doğru adlandırmak, ağrı ile
+          isteği birbirinden ayırmak ve “Bende ne oluyor?” sorusunu sakinleştirmek; tek başına bir hormon testinden
+          çok daha yol göstericidir.
         </p>
 
-        <h2 id="psikolojik">Beden, İlişki, Konuşmak</h2>
-        <p>
-          Beden imajı bu dönemde sessizce değişir — aynaya baktığımız kadın eskisi gibi değil. Bu farkındalık
-          hem doğal hem zor.
-        </p>
-        <p>
-          Yıllarca taşıdığımız "arzu edilen beden" anlatıları yerine yenisini kurmak zaman alır. Bu süreçte kendi
-          bedenimizle yeniden tanışmak — yargısızca — bir ön çalışma. Cinsel deneyim bedenimizle olan ilişkimizden
-          ayrı bir şey değil; o ilişki sertse, deneyim de sert olur.
-        </p>
-        <p>
-          İlişki tarafında: uzun süreli partnerle "her şey eskisi gibi olmalı" beklentisi çoğu zaman yorucu bir
-          baskı yaratır. Çiftlerin bu eşikte birlikte dönüşmesi mümkün — ama ancak konuşulursa. Sessizlik mesafe
-          büyütür; çoğu kadın eşinin "artık beni istemiyor" diye yorumladığını sonradan öğrenir. Oysa söz konusu
-          olan istek değil, fiziksel konfor veya yorgunluktur. Bunu söylemek bir küçük cesaret işidir; ama
-          ilişkiyi büyük bir yanlış anlamadan korur.
-        </p>
-        <p>
-          Tek başına yaşayan kadınlar için tablo farklı: kendinle olan yakınlık (öz-keşif, öz-bakım, beden
-          farkındalığı) bu dönemde aynı önemde. Cinsel sağlık partnerli olmak demek değildir; bedenle olan
-          ilişkimizin niteliğidir.
-        </p>
-
-        <h2 id="ilaclar">Sessiz Suçlu: İlaçlar</h2>
-        <p>
-          Çoğu kadın bilmez: bazı yaygın ilaçlar libido üzerinde belirgin etkiye sahiptir.
-        </p>
-        <p>
-          Bunu yıllar içinde defalarca duydum: kullandığı bir ilaçla belirtilerin başlangıcı arasındaki zaman
-          ilişkisi fark edilmediği için kendini "yıpranmış" sanan kadınlar var. Bu yalnızca bir olasılık; sizin
-          deneyiminiz ve nedeniniz farklı olabilir.
-        </p>
-        <p>
-          Antidepresanların bir grubu (özellikle SSRI'ler) cinsel isteği ve uyarılmayı azaltabilir
-          <Evidence level={5} />. Başka ilaçlar da bazı kişilerde cinsel işlevi etkileyebilir; burada en anlamlı
-          ipucu, ilacın başlanması veya dozunun değişmesiyle belirtinin zaman ilişkisidir.
-        </p>
-        <p>
-          Önemli olan şu: kullandığınız ilaçları gözden geçirmek hiçbir ilacı tek başına kesmek anlamına gelmez.
-          Antidepresan kullanan biri için bu cümle hayati: tedaviyi kesmek depresyon riskini artırır ve libido
-          değişimi tek başına bir gerekçe değildir. Hekiminizle birlikte alternatif değerlendirilebilir; bazı
-          kadınlarda farklı bir ilaca geçiş yapılabilir, bazılarında doz ayarlanabilir, bazılarında ek bir
-          destek düşünülebilir <Evidence level={4} />. Karar her zaman birlikte alınır.
-        </p>
-
-        <h2 id="cozumler">Çözüm Yelpazesi — Açık Liste</h2>
-        <p>
-          Çözüm yelpazesini açıkça saymak, "tek doğru çözüm" miti kadar zararlı olmayan bir mit kırma işlemi.
-        </p>
-        <p><strong>Lokal seçenekler (vajinal/topikal):</strong></p>
+        <h2 id="secenekler">Hangi Destek Ne Zaman Düşünülür?</h2>
+        <p>Hangi desteğin anlamlı olduğu, tablonun neresinde zorlandığınıza bağlıdır. Her kadına uyan tek bir çözüm yoktur.</p>
         <ul>
           <li>
-            <strong>Vajinal nemlendiriciler ve kayganlaştırıcılar:</strong> Düzenli kullanılan nemlendiriciler
-            doku konforunu artırabilir; cinsel ilişki anında kayganlaştırıcı (tercihen su veya silikon bazlı)
-            ağrıyı belirgin azaltabilir <Evidence level={5} />.
+            <strong>Kuruluk veya ağrı öndeyse:</strong> Vajinal nemlendiriciler ve ilişki sırasında kullanılan
+            kayganlaştırıcılar ilk seçenekler arasında yer alır. Genitoüriner menopoz belirtileri sürüyorsa düşük
+            doz vajinal östrojen değerlendirilebilir <Evidence level={5} />.<sup><a href="#kaynak-2">[2]</a></sup>
           </li>
           <li>
-            <strong>Lokal düşük doz östrojen (vajinal krem, halka, tablet):</strong> Vajinal dokunun yenilenmesinde
-            etkili ve sistemik emilimi düşüktür <Evidence level={5} />.<sup><a href="#kaynak-2">[2]</a></sup>
-            Östrojen-duyarlı meme kanseri öyküsü veya aktif tedavisi gibi durumlarda onkolog ve ilgili hekimle
-            ortak karar gerekir <sup><a href="#kaynak-4">[4]</a></sup>.
+            <strong>Sıcak basması ve uyku bölünmesi öndeyse:</strong> Sistemik menopoz hormon tedavisi uygun
+            kişide bu belirtileri azaltabilir. Libido üzerindeki etkisi doğrudan ve öngörülebilir değildir;
+            konfor ve uykudaki düzelme üzerinden dolaylı yarar görülebilir <Evidence level={4} />.
+            <sup><a href="#kaynak-2">[2]</a></sup>
+          </li>
+          <li>
+            <strong>İlişkisel veya psikolojik etkenler öndeyse:</strong> Cinsel terapi, bireysel psikolojik destek
+            veya çift görüşmeleri bazı kişiler için daha anlamlı başlangıç olabilir.
+          </li>
+          <li>
+            <strong>Pelvik taban gerginliği veya ağrı varsa:</strong> Uygun değerlendirme sonrasında pelvik taban
+            fizyoterapisi destek seçeneklerinden biri olabilir.
           </li>
         </ul>
-        <p><strong>Sistemik seçenekler:</strong></p>
-        <ul>
-          <li>
-            <strong>Hormon replasman tedavisi (HRT):</strong> Genel menopoz belirtilerinde etkili; libido
-            üzerindeki doğrudan etkisi öngörülebilir değildir, fiziksel konforu iyileştirerek dolaylı yarar görülebilir
-            <Evidence level={4} />.
-          </li>
-          <li>
-            <strong>Testosteron:</strong> Menopozla ilişkili, belirgin sıkıntı yaratan HSDD için biyopsikososyal
-            değerlendirmeden sonra düşünülebilir. Fizyolojik düzeyi hedefleyen transdermal tedavi izlem gerektirir;
-            pellet, enjeksiyon ve kişiye özel hazırlanan kompound ürünler önerilmez
-            <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
-          </li>
-        </ul>
-        <p><strong>Davranışsal ve ilişkisel:</strong></p>
-        <ul>
-          <li>
-            <strong>Cinsel terapi / çift terapisi:</strong> Bilişsel davranışçı temelli yaklaşımlar libido ve
-            yakınlık konularında etkili olabilir <Evidence level={4} />.
-          </li>
-          <li>
-            <strong>Pelvik taban farkındalığı:</strong> Pelvik taban değişimi cinsel deneyimi de etkiler;
-            farkındalık çalışması veya gerektiğinde fizyoterapi yarar sağlayabilir <Evidence level={4} />.
-          </li>
-        </ul>
-        <p><strong>Yaşam tarzı:</strong></p>
-        <ul>
-          <li>Düzenli hareket, yeterli uyku ve stres yönetimi libido üzerindeki dolaylı etkileri yumuşatır.</li>
-          <li>Alkol ve sigara cinsel sağlık üzerinde olumsuz etki gösterebilir <Evidence level={4} />.</li>
-        </ul>
-        <p class="rounded-[18px] bg-cream-soft p-5 text-secondary md:p-6">
-          <strong>Kısa not:</strong> Bu listenin amacı reçete vermek değil; <em>seçeneklerin var olduğunu
-          görmenizi</em> sağlamak. Hangisinin sizin için uygun olduğu klinik değerlendirmeyle netleşir.
+        <p>
+          Östrojen-duyarlı meme kanseri öyküsü varsa bu konuşma daha dikkatli yürütülür. Vajinal hormon seçeneğine
+          otomatik olarak “olur” ya da “olmaz” demek yerine, önce hormonal olmayan seçeneklere ve belirtilerin
+          şiddetine bakılır; ardından ilgili uzmanlarla ortak karar verilir <sup><a href="#kaynak-4">[4]</a></sup>.
         </p>
 
-        <h2 id="ne-zaman-hekime">Ne Zaman Hekime Başvurmalı</h2>
+        <h2 id="testosteron">Testosteron Hakkında Net Sınırlar</h2>
+        <p>Testosteron bu konuşmada sık gündeme geliyor. Fakat menopozdaki her istek azalmasının cevabı değildir.</p>
         <p>
-          "Bu kadarı normal mi?" sorusunun en güvenli cevabı, hekimle birlikte değerlendirmektir.
+          Menopozla ilişkili, kişide belirgin sıkıntı yaratan hipoaktif cinsel istek bozukluğunda (HSDD); ağrı,
+          vajinal kuruluk, ilaç etkisi, ruh hâli ve ilişki etkenleri değerlendirildikten sonra düşünülebilir.
+          Tanı kan testosteron düzeyine dayanmaz <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
         </p>
-        <p>Şu durumlar profesyonel destek için açık bir işarettir:</p>
+        <p>
+          Uygun kişide transdermal uygulama, kadınların fizyolojik düzeylerini aşmayacak biçimde ve düzenli izlemle
+          planlanır. Pellet, enjeksiyon ve kişiye özel hazırlanan kompound ürünler; fizyolojik düzeylerin üzerine
+          çıkma veya güvenilir dozlama sorunu nedeniyle önerilmez. Uzun dönem güvenlilik verilerinin sınırlı olması
+          karar verirken saklanmaması gereken bir belirsizliktir <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
+        </p>
+
+        <h2 id="ne-zaman-hekime">Ne Zaman Değerlendirme Gerekir?</h2>
+        <p>Değişim sizi düşündürüyorsa konuşmaya değerdir. Ağrı varsa veya değişim aniden başladıysa “biraz daha kötüleşmesini” beklemeniz gerekmez.</p>
         <ul>
           <li>Cinsel ilişkide ısrarlı ağrı veya yanma</li>
           <li>Herhangi bir postmenopozal kanama — gecikmeden değerlendirilmelidir</li>
@@ -285,9 +208,8 @@ const articleSchemas = buildArticleSchemas({
           <li>Antidepresan veya başka ilaç kullanırken libido tarafında ani belirgin değişim</li>
         </ul>
         <p>
-          Kadın hastalıkları uzmanı veya menopoz konusunda deneyimli bir hekim, bu konuların standart
-          değerlendirme alanıdır. Utanılacak hiçbir şey yok — hekimin haftada ortalama kaç kez bu konuyu
-          duyduğunu tahmin etmek bile cesaret verir.
+          Üstelik görüşmeye kusursuz bir cümle hazırlayarak gelmeniz gerekmiyor. “Ağrı mı, uyarılma mı, istek mi
+          bilmiyorum; ayırmak istiyorum,” demeniz yeterli. Çoğu zaman iyi bir değerlendirme tam da bu cümleden başlar.
         </p>
 
         <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
@@ -301,8 +223,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
         <p>
-          Tedavi ve güvenlik sınırları güncel klinik kılavuzlar ile temel epidemiyolojik çalışma üzerinden
-          gözden geçirildi.
+          Klinik ayrımlar, tedavi seçenekleri ve güvenlik sınırları aşağıdaki kılavuzlar ve temel çalışma
+          üzerinden gözden geçirildi. Kaynak taraması: 2 Ağustos 2026.
         </p>
         <ol>
           <li id="kaynak-1">
@@ -343,7 +265,7 @@ const articleSchemas = buildArticleSchemas({
           uzmanına başvuru gecikmeden yapılmalıdır.
         </p>
         <p class="text-sm italic text-primary">
-          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+          — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı
         </p>
       </ArticleEditorNote>
 

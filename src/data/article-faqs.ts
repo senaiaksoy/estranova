@@ -557,19 +557,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/': [
     {
-      question: 'Sıcak basması yalnızca yüz kızarması mıdır?',
+      question: 'Menopozda sıcak basmasına ne iyi gelir?',
       answer:
-        'Hayır. Birçok kadın için ani ısı yükselmesi, terleme, çarpıntı hissi ve sonrasında üşüme birlikte yaşanır. Bazılarında gece bölünmeleri gündüz yakınmasından bile daha yıpratıcı olur.',
+        'Serin bir ortam, ince ve katmanlı giyinmek, kişisel tetikleyicileri izlemek ve düzenli uyku-hareket ritmi bazı kadınlarda yakınmayı hafifletebilir. Belirtiler uykuyu veya gündelik hayatı belirgin etkiliyorsa hormon tedavisi ve hormon dışı seçenekler kişisel sağlık öykünüzle birlikte hekim tarafından değerlendirilir.',
     },
     {
-      question: 'Tetikleyicileri takip etmek gerçekten fark yaratır mı?',
+      question: 'Sıcak basması neden gece daha şiddetli olabilir?',
       answer:
-        'Evet, özellikle alkol, sıcak ortam, yoğun stres, uykusuzluk ve bazı yiyeceklerle kişisel ilişki görmek işe yarayabilir. Her tetik herkeste aynı olmadığı için kısa bir gözlem dönemi yararlıdır.',
+        'Gece boyunca vücut ısısının doğal değişimi, kalın yatak örtüleri, sıcak oda, akşam alkolü veya ağır yemek gibi etkenler terlemeyi daha fark edilir hâle getirebilir. Odayı serin tutmak ve kolay çıkarılabilen katmanlar kullanmak gece bölünmelerini azaltmaya yardımcı olabilir.',
     },
     {
-      question: 'Ne zaman destek seçeneği konuşmak gerekir?',
+      question: 'Sıcak basması ne kadar sürer?',
       answer:
-        'Yakınma uykuyu, iş ritmini veya sosyal konforu belirgin bozuyorsa konuşmak gerekir. Amaç yalnızca dayanmak değil, hayat kalitesini hangi düzeyde etkilediğini dürüstçe görmek olmalıdır.',
+        'Süre kişiden kişiye değişir. Bazı kadınlarda birkaç yıl içinde hafiflerken bazılarında daha uzun sürebilir; bu nedenle yalnızca ne kadar zamandır devam ettiğine değil, şiddetine ve yaşam kalitesine etkisine bakılır.',
+    },
+    {
+      question: 'Hormon tedavisi dışında seçenekler var mı?',
+      answer:
+        'Evet. Bazı antidepresan grupları, gabapentin ve uygun durumlarda diğer hormon dışı tedaviler değerlendirilebilir. Her seçeneğin yararı, yan etkileri ve ilaç etkileşimleri farklı olduğu için karar bireysel öykü ve muayeneyle birlikte verilir.',
+    },
+    {
+      question: 'Gece terlemesi ne zaman yalnızca menopoza bağlanmamalı?',
+      answer:
+        'Gece terlemesine açıklanamayan kilo kaybı, ateş, sürekli çarpıntı, titreme veya yeni başlayan şiddetli yakınmalar eşlik ediyorsa başka nedenler de değerlendirilmelidir. Bu belirtiler varsa hekime başvurmayı geciktirmeyin.',
     },
   ],
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': [

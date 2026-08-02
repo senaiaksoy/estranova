@@ -1,6 +1,7 @@
 import { writers, type Writer } from '../data/writers';
 import { submenuHeroByRoute } from '../data/submenu-heroes';
 import type { ArticleFaqItem } from '../data/article-faqs';
+import type { ArticleType } from '../data/article-types';
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -12,6 +13,11 @@ export interface BuildArticleSchemaOptions {
   title: string;
   description: string;
   writerSlug: Writer['slug'];
+  /**
+   * Eski sayfaları geriye dönük bozmamak için varsayılan clinical-guide'dır.
+   * Yeni makalelerde tür açıkça geçilmelidir.
+   */
+  articleType?: ArticleType;
   publishedDate: string; // "14 Nisan 2026" veya ISO
   modifiedDate?: string; // revizyonda güncellenir; verilmezse publishedDate'e eşitlenir
   pathname: string; // örn. "/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz/" (leading slash)
@@ -74,6 +80,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     title,
     description,
     writerSlug,
+    articleType = 'clinical-guide',
     publishedDate,
     modifiedDate,
     pathname,
@@ -230,7 +237,10 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
       }
     : null;
 
-  return faqSchema
-    ? [medicalWebPageSchema, articleSchema, breadcrumbSchema, faqSchema]
-    : [medicalWebPageSchema, articleSchema, breadcrumbSchema];
+  const baseSchemas =
+    articleType === 'clinical-guide'
+      ? [medicalWebPageSchema, articleSchema, breadcrumbSchema]
+      : [articleSchema, breadcrumbSchema];
+
+  return faqSchema ? [...baseSchemas, faqSchema] : baseSchemas;
 }

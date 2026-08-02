@@ -11,6 +11,17 @@
 
 ## Faz 1 — Konu + Yazar Atama
 
+### 1.0 Makale türü seçimi (HARD GATE)
+
+Yazar atamadan ve taslak kurmadan önce [`ARTICLE-TEMPLATES.md`](ARTICLE-TEMPLATES.md) karar ağacıyla tür seçilir:
+
+- `clinical-guide`: sağlık sorusu + mekanizma + kanıt + seçenek + güvenlik;
+- `expert-essay`: uzmanın mesleki deneyiminden iletişim/karar/etik denemesi;
+- `experience-essay`: kişisel hayat ve yaşıt deneyimi ana değer;
+- `editorial-guide`: hekim olmayan yazarın araştırmalı editoryal rehberi.
+
+Tür yazarın unvanından otomatik türetilmez. Bir hekim `expert-essay`, hekim olmayan yazar `editorial-guide` yazabilir. Seçilen tür makale loguna ve yeni sayfalarda `buildArticleSchemas({ articleType })` çağrısına yazılır.
+
 ### 1.1 Konu kabul kontrolü
 
 - CLAUDE.md HARD CONSTRAINTS §1-§2 ile uyumlu mu? (kadın sağlığı, hormonal geçiş, 40+ yaşam tarzı; klinik tedavi pazarlaması DEĞİL)
@@ -242,15 +253,20 @@ Kategori → klasör eşlemesi:
 
 ### 3.2 Astro template iskeleti
 
-**Kanonik referans:** `src/pages/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz.astro` veya `hormonal-gecis/menopoz/hrt-ilk-alti-ay.astro`
+**Kanonik referans:** [`ARTICLE-TEMPLATES.md`](ARTICLE-TEMPLATES.md). Yeni iskelet komutu türü zorunlu alır:
+
+```bash
+npm run article:template -- --writer=<slug> --title="<başlık>" --type=<article-type> --section=<alt-bölüm>
+```
 
 Zorunlu yapı:
-- Frontmatter import'ları: `BaseLayout`/`SiteLayout`, `SubmenuHero` (varsa kategori submenu-heroes.ts'te), `SubmenuArticleBody`, `ArticleSummary`, `ArticleProsePanel`, `Evidence`, `RelatedReadings`, `ArticleEditorNote`, `ArticleDisclaimer`, `ArticleAuthorBlock`, `buildArticleSchemas`
-- JSON-LD injection: `MedicalWebPage` + `Article` + `BreadcrumbList` + `FAQPage`
-- Body başlangıcı: `ArticleSummary` içinde Kısa Özet / quick answer; ardından `ArticleProsePanel` içinde h2 + italic lede paragraflar
+- Ortak import'lar: `SiteLayout`, `SubmenuArticleBody`, `ArticleSummary`, `ArticleProsePanel`, `RelatedReadings`, `ArticleAuthorBlock`, `buildArticleSchemas`; `Evidence`, `ArticleEditorNote`, `ArticleTOC` ve FAQ bileşenleri türe göre eklenir.
+- JSON-LD: her türde `Article` + `BreadcrumbList`; yalnızca `clinical-guide` için `MedicalWebPage`; yalnızca görünür SSS varsa `FAQPage`.
+- Body başlangıcı: klinik rehberde **Kısa Klinik Yanıt**, uzman/editoryal rehberde **Kısa Özet**, deneyim yazısında klinik cevap olmayan editoryal spot.
 - `class="prose prose-lg prose-estranova max-w-none"` zorunlu (CLAUDE.md HARD CONSTRAINT)
-- Body sonu / SSS: tek görünür SSS yüzeyi zorunlu; gövde içinde editoryal SSS yoksa `ArticleFAQ`, varsa ikinci FAQ bloğu yok; schema ile aynı içerik
-- Sonra: `RelatedReadings` (3-5 link) → `ArticleEditorNote` (BEN) → `ArticleDisclaimer`. Eski elle yazılmış gradient left-border editor note veya dashed disclaimer `<section>` yeni/yenilenen makalelerde kullanılmaz.
+- Body sonu / SSS: yalnızca okura ek değer katıyorsa; varsa tek görünür yüzey ve schema ile aynı kaynak.
+- Klinik rehber: `RelatedReadings` → `ArticleSources`/kaynaklar → `ArticleEditorNote` → `ArticleDisclaimer`.
+- Deneyim yazısı: `RelatedReadings` → tıbbi iddia varsa kısa nötr editör bağlamı → gerektiğinde `ArticleDisclaimer`.
 
 **Detaylı şablon:** `AGENTS.md` line 147 "Article page layout (Astro)" — kod örnekleri orada.
 
