@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Önizleme: 40 Sonrası Sağlık Kararı: İstek mi, İhtiyaç mı, Yatırım mı? - Estranova</title>
+  
+  <!-- Google Fonts: Kulim Park (Sans-serif) & Manrope (Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-serif: "Manrope", Georgia, serif;
+      --font-sans: "Kulim Park", sans-serif;
+      --color-primary: #D81B60;
+      --color-primary-hover: #b0104a;
+      --color-cream-soft: #fffdf9;
+      --color-cream-warm: #f7f1ea;
+      --color-charcoal: #1c1c19;
+      --color-ink: #2d2d2d;
+      --color-gold: #C9A96E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-cream-soft);
+      color: var(--color-ink);
+      font-family: var(--font-sans);
+      line-height: 1.78;
+      font-size: 17.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Preview Alert Bar */
+    .preview-alert {
+      background: linear-gradient(90deg, #D81B60, #C9A96E);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Site Navbar */
+    .navbar {
+      background: rgba(255, 253, 249, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(216, 27, 96, 0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      height: 80px;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--color-charcoal);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .logo span {
+      color: var(--color-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--color-ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--color-primary);
+    }
+
+    /* Hero Banner */
+    .hero-section {
+      padding: 60px 5% 40px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--color-charcoal);
+      margin-bottom: 40px;
+      max-width: 900px;
+    }
+
+    .hero-image-wrapper {
+      width: 100%;
+      height: 480px;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px -40px rgba(80, 8, 36, 0.2);
+      border: 1px solid rgba(216, 27, 96, 0.08);
+      margin-bottom: 60px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Main Container & Grid Layout */
+    .article-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 5% 100px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 80px;
+    }
+
+    /* Sidebar & TOC */
+    .sidebar {
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-ink);
+      margin-bottom: 25px;
+      opacity: 0.6;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .toc-item a {
+      color: var(--color-ink);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      transition: color 0.2s;
+    }
+
+    .toc-item a::before {
+      content: attr(data-num);
+      font-family: var(--font-serif);
+      font-size: 11px;
+      color: var(--color-gold);
+      margin-top: 3px;
+    }
+
+    .toc-item a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Article Content Area */
+    .main-content {
+      max-width: 760px;
+    }
+
+    /* Author Block */
+    .author-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--color-cream-warm);
+      padding: 24px 30px;
+      border-radius: 24px;
+      margin-bottom: 40px;
+      border: 1px solid rgba(216, 27, 96, 0.04);
+    }
+
+    .author-portrait {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      box-shadow: 0 10px 20px -8px rgba(0,0,0,0.15);
+    }
+
+    .author-info h4 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .author-info p {
+      font-size: 13px;
+      color: rgba(45, 45, 45, 0.7);
+    }
+
+    .author-info p strong {
+      color: var(--color-primary);
+    }
+
+    /* Article Summary Card */
+    .summary-card {
+      background: linear-gradient(135deg, #fffdf9, #fcf8f0);
+      border: 1px solid rgba(216, 27, 96, 0.12);
+      border-left: 6px solid var(--color-primary);
+      border-radius: 24px;
+      padding: 32px 36px;
+      margin-bottom: 60px;
+      box-shadow: 0 20px 40px -30px rgba(80, 8, 36, 0.15);
+    }
+
+    .summary-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+
+    .summary-card p {
+      font-family: var(--font-sans);
+      font-size: 19px;
+      line-height: 1.68;
+      font-weight: 500;
+      color: var(--color-ink);
+    }
+
+    /* Prose Container and Typography Rules (prose-estranova representation) */
+    .prose-estranova {
+      counter-reset: chapter;
+    }
+
+    .prose-estranova h2 {
+      counter-increment: chapter;
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      line-height: 1.15;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      margin-top: 70px;
+      margin-bottom: 25px;
+      color: var(--color-charcoal);
+      position: relative;
+    }
+
+    .prose-estranova h2::before {
+      content: counter(chapter, decimal-leading-zero);
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--color-gold);
+      margin-bottom: 8px;
+    }
+
+    .prose-estranova h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--color-gold);
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .prose-estranova p {
+      font-size: 18px;
+      line-height: 1.78;
+      color: var(--color-ink);
+      margin-bottom: 28px;
+      max-width: 64ch;
+    }
+
+    .prose-estranova strong {
+      color: var(--color-primary);
+      font-weight: 650;
+    }
+
+    /* Italic pink lede after H2 */
+    .prose-estranova h2 + p {
+      font-family: var(--font-sans);
+      font-style: italic;
+      font-size: 21px;
+      line-height: 1.64;
+      font-weight: 400;
+      color: var(--color-primary);
+      max-width: 58ch;
+      margin-bottom: 35px;
+    }
+
+    /* Mini headers structure (bold titles, no bullets) */
+    .prose-estranova .mini-header {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .prose-estranova .mini-title {
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-charcoal);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    /* Evidence tag styles */
+    .evidence {
+      display: inline;
+      margin: 0 0.15em;
+      font-size: 0.85em;
+      cursor: help;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .evidence-label {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--color-ink);
+      border-bottom: 1px dotted var(--color-ink);
+    }
+
+    .evidence[data-level="5"] .evidence-label,
+    .evidence[data-level="4"] .evidence-label {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+    }
+
+    /* FAQ (SSS) styling */
+    .faq-section {
+      margin-top: 80px;
+      border-top: 1px solid rgba(216, 27, 96, 0.1);
+      padding-top: 60px;
+    }
+
+    .faq-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 35px;
+      color: var(--color-charcoal);
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid rgba(216, 27, 96, 0.06);
+      border-radius: 20px;
+      padding: 24px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px -20px rgba(80, 8, 36, 0.1);
+    }
+
+    .faq-question {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-charcoal);
+      margin-bottom: 12px;
+    }
+
+    .faq-answer {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-ink);
+    }
+
+    /* Editor Note Section */
+    .editor-note {
+      background: linear-gradient(135deg, #fffdf9, #fdf6eb);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-left: 5px solid var(--color-gold);
+      border-radius: 28px;
+      padding: 36px 40px;
+      margin-top: 70px;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 50px -40px rgba(0,0,0,0.1);
+    }
+
+    .editor-note-title {
+      font-family: var(--font-serif);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-charcoal);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .editor-note-title::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--color-gold);
+      border-radius: 50%;
+    }
+
+    .editor-note-content {
+      font-size: 16px;
+      line-height: 1.72;
+      color: var(--color-ink);
+    }
+
+    .editor-note-signature {
+      margin-top: 20px;
+      font-family: var(--font-serif);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    /* Disclaimer Section */
+    .disclaimer {
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: rgba(45, 45, 45, 0.6);
+      padding: 30px 40px;
+      border: 1px dashed rgba(45, 45, 45, 0.15);
+      border-radius: 24px;
+      margin-top: 40px;
+    }
+
+    /* Related Readings block */
+    .related-readings {
+      margin-top: 80px;
+      border-top: 1px solid rgba(216, 27, 96, 0.1);
+      padding-top: 60px;
+    }
+
+    .related-title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .related-card {
+      background: white;
+      border: 1px solid rgba(216, 27, 96, 0.05);
+      border-radius: 24px;
+      padding: 30px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 15px 40px -30px rgba(80, 8, 36, 0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px -30px rgba(80, 8, 36, 0.25);
+    }
+
+    .related-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .related-card h4 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--color-charcoal);
+    }
+
+    .related-card p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: rgba(45, 45, 45, 0.7);
+    }
+
+    /* Site Footer */
+    .footer {
+      background-color: var(--color-cream-warm);
+      border-top: 1px solid rgba(216, 27, 96, 0.05);
+      padding: 80px 5% 60px;
+      margin-top: 120px;
+    }
+
+    .footer-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--color-charcoal);
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      font-size: 14.5px;
+      color: rgba(45, 45, 45, 0.7);
+      max-width: 320px;
+    }
+
+    .footer-links h5 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-charcoal);
+      margin-bottom: 20px;
+      opacity: 0.6;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: rgba(45, 45, 45, 0.8);
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-primary);
+    }
+
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 60px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid rgba(45, 45, 45, 0.08);
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: rgba(45, 45, 45, 0.5);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .article-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .sidebar {
+        display: none; /* Hide TOC on mobile */
+      }
+      .hero-image-wrapper {
+        height: 320px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Alert Bar -->
+  <div class="preview-alert">
+    ⚠️ Çevrimdışı Yazar Önizleme Sayfası (Yayınlandığında sitede böyle görünecektir)
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">estranova<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Hormonal Geçiş</a></li>
+      <li><a href="#">Beden & Yakınlık</a></li>
+      <li><a href="#">Zihin & Denge</a></li>
+      <li><a href="#">Zamansız Yaşam</a></li>
+      <li><a href="#">Bilimsel Pencere</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <span class="eyebrow">Hormonal Geçiş · 40 Sonrası</span>
+    <h1>40 Sonrası Sağlık Kararı: İstek mi, İhtiyaç mı, Yatırım mı?</h1>
+    <div class="hero-image-wrapper">
+      <img src="public/images/library/editorial/saglik-kararlarinda-simdi-mi-sorusu.webp" alt="Yaz penceresi kenarında düşünceli bir kadın; 40 sonrası sağlık bütçesi ve karar yorgunluğu çerçevesini simgeleyen premium editoryal görsel" class="hero-image">
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="article-container">
+    
+    <!-- Sidebar Sticky TOC -->
+    <aside class="sidebar">
+      <h4 class="toc-title">İÇİNDEKİLER</h4>
+      <ul class="toc-list">
+        <li class="toc-item"><a href="#karar-yorgunlugu" data-num="01">Karar Yorgunluğu</a></li>
+        <li class="toc-item"><a href="#istek-ihtiyac" data-num="02">İstek mi, İhtiyaç mı?</a></li>
+        <li class="toc-item"><a href="#bedenim" data-num="03">Bedenim Ne Diyor?</a></li>
+        <li class="toc-item"><a href="#kanit" data-num="04">Kanıt Ne Diyor?</a></li>
+        <li class="toc-item"><a href="#hayatim" data-num="05">Hayatım Ne Diyor?</a></li>
+        <li class="toc-item"><a href="#seytanin-avukati" data-num="06">Şeytanın Avukatlığı</a></li>
+        <li class="toc-item"><a href="#bilincli-erteleme" data-num="07">Bilinçli Erteleme</a></li>
+        <li class="toc-item"><a href="#uc-soru" data-num="08">Üç Soruyu Sormak</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Author Block -->
+      <section class="author-block">
+        <img src="public/images/library/editorial/saglik-kararlarinda-simdi-mi-sorusu-byline.webp" alt="Özlem Denizmen" class="author-portrait">
+        <div class="author-info">
+          <h4>Özlem Denizmen</h4>
+          <p>Yazar: <strong>Finansal Sağlık & Yaşam Yazarı</strong> · 26 Nisan 2026</p>
+          <p>Okuma süresi: <strong>6 dakika</strong> · Tıbbi İnceleme: <strong>Doç. Dr. Senai Aksoy</strong></p>
+        </div>
+      </section>
+
+      <!-- Summary Card -->
+      <section class="summary-card">
+        <h5 class="summary-title">KISA ÖZET</h5>
+        <p>Bir bütçe kararı verir gibi sağlık kararı vermek mümkün mü? 40 sonrası "şimdi mi?" sorusunu bedeni, kanıtı ve hayatı aynı anda dinleyerek soran üç adımlık bir çerçeve.</p>
+      </section>
+
+      <!-- Prose Panel (Body) -->
+      <article class="prose-estranova">
+        
+        <h2 id="karar-yorgunlugu">Karar Yorgunluğu Çağında Sağlık</h2>
+        <p>Dün akşam kendinize kaç kez 'bunu sonra düşünürüm' dediniz? Biriken faturalar, ertelenen randevular, 'bir ara bakarım' dediğiniz o test... Zihninizdeki o dosya gerçekten doldu mu?</p>
+        <p>Geçen ay Para Durumu için bir konuşma hazırlarken bir soruda takıldım. Ortalama bir kadının günde verdiği küçük kararların sayısı binleri buluyor. Beslenme, alışveriş, çocuklar, iş, evcil hayvan, faturalar... Yanıt akademik değil; ama gözlemsel olarak yorgunluk çok yüksek <span class="evidence" data-level="3" title="Kanıt düzeyi: orta kanıt (3/5)" aria-label="Kanıt düzeyi: orta kanıt (3/5)"><span class="evidence-label">(orta kanıt)</span></span>. Sağlık kararına geldiğinde zihnin bu yorgunluğun en derininde kalıyor.</p>
+        <p>Eskiler 'sağlık olsun da gerisi kolay' der ama bazen o kararı vermek bile başlı başına bir yük haline gelebiliyor... Karar yorgunluğu sadece popüler bir kavram değil. Art arda karar verdikçe zihinsel yargımızın zayıfladığını gösteren çalışmalar var <span class="evidence" data-level="4" title="Kanıt düzeyi: iyi kanıt (4/5)" aria-label="Kanıt düzeyi: iyi kanıt (4/5)"><span class="evidence-label">(iyi kanıt)</span></span>. Yani günün sonunda bir hekimin önerdiği tetkiki ertelemenin arkasında tembellik yatmıyor. Sadece o karar 'şimdi' dosyasına ekleniyor ve o dosya çoktan doluyor.</p>
+        <p>40 sonrası bu yükü iki katına çıkarıyor. Bir yandan kendi sağlığında daha fazla seçenek önüne geliyor; bir yandan ailedeki diğer kuşakların kararları da masaya ekleniyor. 'Bir gün bu konuya bakacağım' cümlesi, kararın kendine zaman bulamadığı için kaybolduğu bir rafa dönüşüyor...</p>
+
+        <h2 id="istek-ihtiyac">İstek mi, İhtiyaç mı?</h2>
+        <p>Para Durumu’nda yıllardır sorduğumuz o klasik soru var: Bu istek mi, ihtiyaç mı? Geçen hafta önemli bir sağlık kararının önünde dururken aynı soruyu kendime sordum. Bedenin, bilginin ve hayatın bu soruya ayrı dillerde yanıt verdiğini gördüm. Amacım sana bir formül dayatmak değil. Sadece karar yorgunluğu altında kendi yolunu nasıl aydınlatabileceğine dair ufak bir öneri sunuyorum...</p>
+        <p>"Şimdi mi?" üç boyutlu bir soru. Her boyut başka bir kaynaktan besleniyor; üçü birden cevap verdiğinde sadece tek tek değil, <strong>aralarındaki uyum</strong> da görünür oluyor.</p>
+
+        <h2 id="bedenim">Bedenim Ne Diyor?</h2>
+        <p>Bedenin sesi en sade olanı gibi görünür. Oysa çoğu zaman en geç onu duyarız. Uyku kalitesindeki belirgin değişimler, kalıcı yorgunluk veya adetin düzensizleşmesi hekime gitmek için ilk işaret olabilir <span class="evidence" data-level="5" title="Kanıt düzeyi: güçlü kanıt (5/5)" aria-label="Kanıt düzeyi: güçlü kanıt (5/5)"><span class="evidence-label">(güçlü kanıt)</span></span>.</p>
+        <p>Soruyu kendine belki şöyle sorabilirsin: Bedenim son üç ayda bana sürekli aynı sinyali mi veriyor? Yoksa geçici bir durum mu yaşıyorum? Sürekli sinyaller kararı öne çekebilir. Geçici hisler ise sana biraz zaman tanır...</p>
+        <p>Merak etme, amacım bedeninin sesini kulak ardı etmeni söylemek değil. Belirgin bir değişiklik varsa, hekim değerlendirmesi her zaman öncelikli seçenek olarak önümüze çıkıyor <span class="evidence" data-level="5" title="Kanıt düzeyi: güçlü kanıt (5/5)" aria-label="Kanıt düzeyi: güçlü kanıt (5/5)"><span class="evidence-label">(güçlü kanıt)</span></span>. Ben sadece, ertelemediğin durumlarda o 'şimdi mi?' sorusunu zihninde berraklaştırmana yardım etmeye çalışıyorum.</p>
+
+        <h2 id="kanit">Kanıt Ne Diyor?</h2>
+        <p>Kanıt kelimesi kulağa biraz soğuk gelebilir. Oysa sağlıkta çok işe yarar. Bir tarama testi veya tetkik için 'biraz beklesem ne olur?' sorusunun yanıtı yaşa ve risk durumuna göre çok değişiyor <span class="evidence" data-level="4" title="Kanıt düzeyi: iyi kanıt (4/5)" aria-label="Kanıt düzeyi: iyi kanıt (4/5)"><span class="evidence-label">(iyi kanıt)</span></span>.</p>
+        <p>Burada zihninde tutabileceğin üç küçük soru sana kılavuzluk edebilir:</p>
+        
+        <div class="mini-header">
+          <span class="mini-title">NET Mİ, TARTIŞMALI MI</span>
+          <p>Kanıtın net olduğu yerde 'şimdi' kararı ağır basar. Kararsızlık anında bunu bilmek işini kolaylaştırabilir.</p>
+        </div>
+
+        <div class="mini-header">
+          <span class="mini-title">NEDENİ NE</span>
+          <p>Eğer bilimsel olarak tartışmalı bir alandaysan, bunun sebebini hekimine sorabilirsin. Yeterli araştırma mı yok, yoksa kişiden kişiye sonuçlar çok mu değişiyor?</p>
+        </div>
+
+        <div class="mini-header">
+          <span class="mini-title">BANA NE KADAR UYGUN</span>
+          <p>Kendi yaş grubun, geçmişin ve risklerin devreye girdiğinde ortalama tablonun neresindesin? Bu soruyu hekiminin odasına girerken yanına alabilirsin.</p>
+        </div>
+
+        <p>Bu soruları sormak seni bir tıp araştırmacısı yapmaz. Sadece hekiminin önerilerini dinlerken zihninde sessizce tutabileceğin bir filtre sağlar.</p>
+
+        <h2 id="hayatim">Hayatım Ne Diyor?</h2>
+        <p>Üçüncü soruyu genellikle en hızlı geçen biz oluyoruz. Bedenin ve bilim aynı yönü gösterebilir. Oysa hayatının bu kararı bugün taşıyacak gücü var mı? Yoğun iş günleri, ailevi sorumluluklar veya stres seviyen kararın kalitesini doğrudan etkiler <span class="evidence" data-level="3" title="Kanıt düzeyi: orta kanıt (3/5)" aria-label="Kanıt düzeyi: orta kanıt (3/5)"><span class="evidence-label">(orta kanıt)</span></span>.</p>
+        <p>Burada bana yine bütçe analojisi yardım ediyor. Nasıl ki tüm geliri tek bir günde harcamıyor, büyük harcamaları taksitlendiriyorsak, sağlıkta da benzer bir yol izleyebilirsin. Önündeki birkaç hafta bu karar için uygun mu? Değilse, kararı küçük adımlara bölebilir misin? Belki bu hafta sadece bir telefon araması, haftaya bir okuma... Hayatın ne dediğini duymak ertelemek değil, doğru zamanı bulmak demek...</p>
+        <p>Bu sorunun yanıtı bazen seni şaşırtabilir. Hayat genellikle 'şimdi olmaz' demez. 'Şimdi de mümkün ama ufak bir adımla' diye fısıldar...</p>
+
+        <h2 id="seytanin-avukati">Şeytanın Avukatlığı</h2>
+        <p>Geçen pazar akşam yemeğinde birkaç arkadaşımla benzer bir yorgunluğu konuşuyorduk. Hepimiz o sağlık kararını 'bir ara' rafına kaldırmaya eğilimliydik. Durdum ve masaya sordum: 'Ya tersi doğruysa? Ya bu kararı şimdi vermemenin görünmeyen, sessiz bir maliyeti varsa?' Masa bir an sustu. Çünkü hepimiz o sessiz maliyetin ne olduğunu içten içe biliyorduk...</p>
+        <p>Kendi kendine şeytanın avukatlığını yapmak kararı tek başına çözmez. Oysa görmediğin o kör noktayı aydınlatır. 40 sonrası sağlık adımlarında bu çok önemli. Çünkü bazen karar vermemek de kendiliğinden bir karara dönüşür. Ve o kendiliğinden oluşan yol, senin seçtiğin yol olmayabilir.</p>
+        <p>Bunun en tatlı yolu kendinle bir çay arası vermekten geçiyor. Zihninin bir tarafı 'şimdi' diyebilir, diğer tarafı 'sonra'. Amaç kavga etmek değil, o iki sesi de duymak... Göreceksin, doğru yön kendiliğinden netleşir...</p>
+
+        <h2 id="bilincli-erteleme">Bilinçli Erteleme, Kazara Erteleme</h2>
+        <p>'Henüz karar vermedim' cümlesi aslında çok şey söyler. Karar vermemek de başlı başına bir karar ve günler geçtikçe bu durum netleşiyor <span class="evidence" data-level="3" title="Kanıt düzeyi: orta kanıt (3/5)" aria-label="Kanıt düzeyi: orta kanıt (3/5)"><span class="evidence-label">(orta kanıt)</span></span>. Önemli olan o ertelemenin bilinçli mi yoksa kazara mı olduğunu görebilmek.</p>
+        <p>Para Durumu'nda hep söylediğim gibi: Yazmadığın şeyi göremiyorsun, görmediğin şeyi ölçemiyorsun, ölçmediğin şeyi ise yönetemiyorsun. Sağlık da tam böyle...</p>
+        
+        <div class="mini-header">
+          <span class="mini-title">BİLİNÇLİ ERTELEME</span>
+          <p>'Önümüzdeki sekiz hafta yoğunum, şu tarihte bu konuya geri döneceğim' demek de bir karar.</p>
+        </div>
+
+        <div class="mini-header">
+          <span class="mini-title">KAZARA ERTELEME</span>
+          <p>'Bir gün bu konuya bakmam lazım' demek ise sadece bir kayma.</p>
+        </div>
+
+        <p>Aralarındaki tek fark tarih ve kayıt. Sağlıkta da niyetin bir tarihi olmadığı an, ipin ucu kaçıyor...</p>
+        <p>Bütçe yaparken de aynısını yaşarız. Deftere yazılan bir hedef gerçek bir karara dönüşüyor. 'Şöyle bir niyetim var' cümlesi ise sadece bir istek olarak kalıyor.</p>
+
+        <h2 id="uc-soru">Üç Soruyu Aynı Anda Sormak</h2>
+        <p>Bedenin, bilimsel kanıt ve hayatın... Bu üç soruyu üst üste koyduğunda zihninde yeni bir kapı aralanabilir. Bazen üçü aynı yönü gösterir, o zaman karar kolaylaşır. Bazen ikisi başka, biri başka söyler. İşte o an hekiminle veya bir yakınla konuşma vakti geliyor...</p>
+        <p>Burada kestirme yollar yok. Sadece kendi sürecini sahiplenmenin bir yolu var. Kararı mükemmel kılmaktan çok, onu gerçekten senin yapman önemli.</p>
+        <p>Sağlık da para gibi... Tek bir büyük hamle değil, küçük ama süreklilik isteyen adımların toplamı.</p>
+        <p>Bu hafta benimle düşündüğün için teşekkürler. Sahi, senin sağlık bütçende 'şimdi' dosyası nerede duruyor? Bir kapı aralayalım, gerisi senin sorularına kalsın...</p>
+
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h3 class="faq-title">Sık Sorulanlar</h3>
+        
+        <div class="faq-item">
+          <h4 class="faq-question">Sağlık kararlarında bütçe analojisi kurmak ne kadar doğru?</h4>
+          <p class="faq-answer">Sağlık kararları da tıpkı finansal bütçeler gibi kaynak yönetimi gerektiriyor. Zamanımız, enerjimiz ve zihinsel kapasitemiz sınırlı. Hepsini tek bir dönemde tüketmek yerine, tıpkı bütçe planlar gibi adımlara bölmek karar kalitesini artırıyor.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">Bilinçli erteleme sağlığımı riske atar mı?</h4>
+          <p class="faq-answer">Bilinçli erteleme, acil tıbbi durumları kapsamaz. Bedeninden sürekli gelen uyarıcı sinyaller varsa, hekim kontrolü öncelikli adım haline geliyor <span class="evidence" data-level="5" title="Kanıt düzeyi: güçlü kanıt (5/5)" aria-label="Kanıt düzeyi: güçlü kanıt (5/5)"><span class="evidence-label">(güçlü kanıt)</span></span>. Bilinçli erteleme yalnızca rutin, acil olmayan taramalar veya yaşam tarzı değişiklikleri için doğru zamanı ve odaklanma gücünü planlamana yardımcı oluyor.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-question">Hayatın yoğunluğunda bu kararları nasıl sadeleştirebilirim?</h4>
+          <p class="faq-answer">Tıpkı küçük birikimlerin zamanla büyümesi gibi, sağlıkta da dev adımlar yerine mikro alışkanlıklar edinebilirsin. Üç sayfalık bir plan yerine hekimi aramak, küçük bir yürüyüş yapmak veya günde bir bardak fazla su içmek de bütçeni korumaya destek veriyor.</p>
+        </div>
+      </section>
+
+      <!-- Scientific Editor Note (BEN) -->
+      <section class="editor-note">
+        <h4 class="editor-note-title">Bilimsel Editör Notu</h4>
+        <p class="editor-note-content">Sağlık kararlarında rasyonel bir çerçeve kurmak, hormonal dalgalanmaların zihinsel kapasiteyi doğrudan etkilediği perimenopoz ve menopoz süreçlerinde karar yorgunluğunu hafifletmek için faydalı bir stratejidir. Klinik çalışmalar, yapılandırılmış karar verme araçlarının hasta kaygısını azalttığını ve uyumu artırdığını doğrulamaktadır. Bireysel risk faktörleri göz önüne alınarak, hekim ile birlikte oluşturulacak kişiselleştirilmiş bir kontrol takvimi, koruyucu sağlığın en temel bileşenidir.</p>
+        <p class="editor-note-signature">Doç. Dr. Senai Aksoy</p>
+      </section>
+
+      <!-- Medical Disclaimer -->
+      <section class="disclaimer">
+        <strong>Tıbbi Sorumluluk Reddi:</strong> Bu platformda sunulan içerikler yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Sitede yer alan hiçbir bilgi, bir tıp doktoru veya sağlık profesyonelinin bireysel tıbbi değerlendirmesi, teşhisi veya tedavi önerisi yerine geçmez. Kendi sağlığınız, tıbbi geçmişiniz, şikayetleriniz veya kullanmayı düşündüğünüz yöntemler hakkında her türlü karar için lütfen öncelikle kendi hekiminize veya nitelikli bir sağlık kuruluşuna danışın. Acil durumlarda en yakın sağlık kurumuna başvurun.
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>estranova.</h3>
+        <p>Menopoz, perimenopoz ve 40 sonrası kadın sağlığına dair güvenilir, nötr ve bilimsel olarak incelenmiş editoryal rehberiniz.</p>
+      </div>
+      <div class="footer-links">
+        <h5>BÖLÜMLER</h5>
+        <ul>
+          <li><a href="#">Hormonal Geçiş</a></li>
+          <li><a href="#">Beden & Yakınlık</a></li>
+          <li><a href="#">Zihin & Denge</a></li>
+          <li><a href="#">Zamansız Yaşam</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>BİLGİLER</h5>
+        <ul>
+          <li><a href="#">Hakkımızda</a></li>
+          <li><a href="#">Editoryal İlkeler</a></li>
+          <li><a href="#">Tıbbi Sorumluluk Reddi</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Estranova. Tüm hakları saklıdır.</p>
+      <p>Bu site editoryal bir bilgi platformudur.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
