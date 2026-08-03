@@ -684,7 +684,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Ne zaman değerlendirme bekletilmemeli?',
       answer:
-        'Ağrı yeni başladıysa, giderek artıyorsa, kanama eşlik ediyorsa ya da kaçınmaya yol açacak kadar belirginleştiyse bekletmemek iyi olur. Konfor kaybı uzun süre sessiz kalması gereken bir konu değildir.',
+        'Ağrı yeni başladıysa, giderek artıyorsa veya kanama eşlik ediyorsa değerlendirmeyi ertelememek gerekir. Ağrı yakınlığı ve gündelik konforu etkiliyorsa bunu da hekimle paylaşmak önemlidir.',
     },
   ],
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': [
