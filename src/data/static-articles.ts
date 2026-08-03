@@ -18,6 +18,26 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/editorun-kosesi/temmuz-2026/',
+    title: 'Sıcacık Köşe — Temmuz 2026: Tartı Susunca',
+    description: "Eşik dergisinin Temmuz 2026 sayısı: Tartı Susunca. Berna Aksoy'un kapı önü yazısı; vücut kompozisyonu ve beden algısını diyet kültüründen uzak konuşuyoruz.",
+    publishedDate: '16 Temmuz 2026',
+    writerSlug: 'berna-aksoy',
+    section: 'Editörün Köşesi',
+    sectionPath: '/sayi/',
+    keywords: [
+      'Eşik dergisi',
+      'Estranova editör köşesi',
+      'Sıcacık Köşe',
+      'Berna Aksoy',
+      'Temmuz 2026 sayısı',
+      'Tartı Susunca',
+      'vücut kompozisyonu',
+      'menopozda kilo',
+      'beden algısı',
+    ],
+  },
+  {
     path: '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/',
     title: 'Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?',
     description:

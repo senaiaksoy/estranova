@@ -1,4 +1,4 @@
-﻿---
+---
 import { writers } from '../../data/writers';
 import { getSubmenuHeroImage } from '../../data/submenu-heroes';
 
@@ -82,9 +82,13 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
         <p class="text-[11px] font-black uppercase tracking-[0.18em] text-ink">
           {bylineLabel} : <span class="font-black">{writer.displayName}</span>
         </p>
-        <p class="mt-2 text-[11px] font-black uppercase tracking-[0.16em] text-ink">
-          Bilimsel inceleme : <span class="font-black">{medicalReviewer}</span>
-        </p>
+        {
+          medicalReviewer && medicalReviewer !== 'Yok' && (
+            <p class="mt-2 text-[11px] font-black uppercase tracking-[0.16em] text-ink">
+              Bilimsel inceleme : <span class="font-black">{medicalReviewer}</span>
+            </p>
+          )
+        }
         <p class="mt-5 font-serif text-sm tracking-[0.22em] text-ink/62">{publishedDate}</p>
         <div class="mx-auto mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[11px] uppercase tracking-[0.18em] text-ink/52">
           <span>{readingMinutes} dakikalık okuma</span>
