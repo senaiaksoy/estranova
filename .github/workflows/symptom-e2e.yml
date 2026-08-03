@@ -30,7 +30,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Check symptom assessment mappings
-        run: node scripts/check-symptom-assessment-mappings.mjs
+        run: npx tsx scripts/check-symptom-assessment-mappings.mjs
 
       - name: Run browser E2E tests
         run: npm run test:e2e
