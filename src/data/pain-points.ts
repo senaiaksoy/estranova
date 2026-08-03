@@ -284,11 +284,12 @@ export function getActivePainPoints(): PainPoint[] {
   return painPoints.filter((painPoint) => painPoint.status !== 'archived');
 }
 
-export const painPointTopics = painPoints.map(({ id, title, userQuestion, shortDescription, articleRoutes, articleTitles, neutralNextSteps, doctorQuestions, safetyDisclaimer, redFlagTopics }) => ({
+export const painPointTopics = painPoints.map(({ id, title, userQuestion, shortDescription, relatedSymptoms, articleRoutes, articleTitles, neutralNextSteps, doctorQuestions, safetyDisclaimer, redFlagTopics }) => ({
   id,
   title,
   userQuestion,
   shortDescription,
+  relatedSymptoms,
   articleRoutes,
   articleTitles,
   neutralNextSteps,

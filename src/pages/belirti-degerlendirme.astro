@@ -3,6 +3,12 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import PainPointAssessment from '../components/site/PainPointAssessment.astro';
+import { getPainPointsBySymptom } from '../data/pain-points';
+import { symptoms } from '../data/symptoms';
+
+const topic = Astro.url.searchParams.get('topic');
+const initialPainPointId = topic ? getPainPointsBySymptom(topic).find((painPoint) => painPoint.status !== 'archived')?.id : undefined;
+const selectedSymptom = topic ? symptoms.find((symptom) => symptom.slug === topic) : undefined;
 ---
 
 <SiteLayout
@@ -23,7 +29,12 @@ import PainPointAssessment from '../components/site/PainPointAssessment.astro';
     </section>
 
     <section class="px-6 py-12 md:py-20">
-      <PainPointAssessment />
+      {selectedSymptom && (
+        <p class="mb-6 text-sm font-semibold text-primary/80">
+          Seçili belirti: {selectedSymptom.title}
+        </p>
+      )}
+      <PainPointAssessment initialPainPointId={initialPainPointId} initialTopic={topic || undefined} />
     </section>
   </main>
 

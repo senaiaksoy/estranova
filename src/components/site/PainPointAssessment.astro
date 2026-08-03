@@ -3,15 +3,17 @@ import { painPointTopics } from '../../data/pain-points';
 
 interface Props {
   initialPainPointId?: string;
+  initialTopic?: string;
 }
 
-const { initialPainPointId } = Astro.props;
+const { initialPainPointId, initialTopic } = Astro.props;
 ---
 
 <section
   class="mx-auto max-w-4xl rounded-[34px] border border-primary/12 bg-white p-6 shadow-[0_24px_82px_-62px_rgba(44,22,28,0.36)] md:p-10"
   data-pain-point-assessment
   data-initial-pain-point={initialPainPointId}
+  data-initial-topic={initialTopic}
   aria-labelledby="assessment-title"
 >
   <div class="mb-8">
@@ -68,7 +70,9 @@ const { initialPainPointId } = Astro.props;
     const submit = root.querySelector('[data-assessment-submit]');
     const selectedTopicLabel = root.querySelector('[data-selected-topic]');
     const result = root.querySelector('[data-assessment-result]');
-    const initialId = root.getAttribute('data-initial-pain-point');
+    const initialTopic = root.getAttribute('data-initial-topic') || new URLSearchParams(window.location.search).get('topic') || '';
+    const initialId = root.getAttribute('data-initial-pain-point')
+      || painPoints.find((topic) => topic.relatedSymptoms.includes(initialTopic))?.id;
     let selectedId = '';
     let answers = [];
 
