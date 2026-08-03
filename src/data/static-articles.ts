@@ -647,7 +647,7 @@ export const staticArticles: StaticArticleEntry[] = [
     description:
       'Perimenopoz çoğu zaman tek bir büyük alarmla değil; adet düzeni, uyku, sıcak basması, ruh hali ve odaklanma gibi küçük işaretlerle fark edilir. Belirtileri panik yaratmadan okumak için sakin bir rehber.',
     publishedDate: '4 Mayıs 2026',
-    writerSlug: 'berna-aksoy',
+    writerSlug: 'senai-aksoy',
     section: 'Hormonal Geçiş · Perimenopoz',
     sectionPath: '/hormonal-gecis/',
     keywords: [
