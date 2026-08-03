@@ -572,11 +572,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Gece boyunca vücut ısısının doğal değişimi, oda sıcaklığı, kalın örtüler, akşam alkolü veya ağır yemek terlemeyi daha fark edilir kılabilir. Oda serinliği ve katmanlı nevresim uykunun bölünmesini azaltabilir.',
     },
     {
-      question: 'Sıcak basması ne kadar sürer?',
-      answer:
-        'Süre kişiden kişiye değişir. Bazı kadınlarda birkaç yıl içinde hafiflerken bazılarında daha uzun sürebilir; bu nedenle yalnızca süreye değil, şiddetine ve yaşam kalitesine etkisine bakılır.',
-    },
-    {
       question: 'Hormon tedavisi dışında seçenekler var mı?',
       answer:
         'Evet. Bazı antidepresan grupları, gabapentin, bilişsel davranışçı terapi ve kılavuzlarda yer alan diğer hormon dışı tedaviler değerlendirilebilir. Karar bireysel öykü ve yan etki profiline göre verilir.',
