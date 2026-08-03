@@ -6,14 +6,27 @@ test.beforeEach(async ({ page }) => {
   if (await acceptAll.isVisible()) await acceptAll.click();
 });
 
-test('opens the skin assessment questions from the cilt topic query', async ({ page }) => {
-  await page.goto('/belirti-degerlendirme/?topic=cilt');
+const symptomAssessmentTopics = [
+  ['sicak-basmasi', 'Uyku ve gece uyanmaları'],
+  ['uyku-bozuklugu', 'Uyku ve gece uyanmaları'],
+  ['ruh-hali', 'Uyku ve gece uyanmaları'],
+  ['hafiza', 'Beyin sisi ve odaklanma'],
+  ['cilt', 'Cilt değişimlerini anlamak'],
+  ['eklem', 'Kilo ve vücut kompozisyonundaki değişimler'],
+  ['kilo', 'Kilo ve vücut kompozisyonundaki değişimler'],
+  ['libido', 'Libido ve yakınlık değişimleri'],
+] as const;
 
-  await expect(page.locator('[data-selected-topic]')).toHaveText('Cilt değişimlerini anlamak');
-  await expect(page.getByRole('button', { name: 'Başlığa dön' })).toBeVisible();
-  await expect(page.locator('[data-assessment-step="questions"]')).toBeVisible();
-  await expect(page.locator('[data-assessment-step="topic"]')).toBeHidden();
-});
+for (const [slug, expectedTopic] of symptomAssessmentTopics) {
+  test(`opens ${expectedTopic} questions from the ${slug} topic query`, async ({ page }) => {
+    await page.goto(`/belirti-degerlendirme/?topic=${slug}`);
+
+    await expect(page.locator('[data-selected-topic]')).toHaveText(expectedTopic);
+    await expect(page.getByRole('button', { name: 'Başlığa dön' })).toBeVisible();
+    await expect(page.locator('[data-assessment-step="questions"]')).toBeVisible();
+    await expect(page.locator('[data-assessment-step="topic"]')).toBeHidden();
+  });
+}
 
 test('keeps the symptom article and assessment CTAs as separate links on mobile', async ({ page }) => {
   await page.goto('/symptoms/');
