@@ -8,6 +8,7 @@ export interface PainPoint {
   shortDescription: string;
   relatedSymptoms: string[];
   articleRoutes: string[];
+  articleTitles: string[];
   neutralNextSteps: string[];
   doctorQuestions: string[];
   videoTopics: string[];
@@ -33,6 +34,11 @@ export const painPoints: PainPoint[] = [
       '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
       '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
       '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
+    ],
+    articleTitles: [
+      'Menopozda uyku bozukluğu',
+      'Perimenopozda uykunun değişen yanı',
+      'Sıcak basması ve gece terlemesi',
     ],
     neutralNextSteps: [
       'Uyanma saatini, yaklaşık süresini ve eşlik eden belirtileri not edin.',
@@ -69,6 +75,11 @@ export const painPoints: PainPoint[] = [
       '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
       '/hormonal-gecis/perimenopoz/',
       '/hormonal-gecis/menopoz/menopoz-nedir/',
+    ],
+    articleTitles: [
+      'Perimenopozun ilk işaretleri',
+      'Perimenopoz rehberi',
+      'Menopoz nedir?',
     ],
     neutralNextSteps: [
       'Adet tarihlerini, kanama düzenindeki değişiklikleri ve eşlik eden belirtileri not edin.',
@@ -107,6 +118,12 @@ export const painPoints: PainPoint[] = [
       '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
       '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
     ],
+    articleTitles: [
+      'Tartı yatışınca: vücut kompozisyonu',
+      'Menopozda kilo artışı',
+      '40 sonrası harekete yeniden başlamak',
+      '40 sonrası kemik sağlığı',
+    ],
     neutralNextSteps: [
       'Yalnızca tartıdaki sayıyı değil, hareket, uyku, enerji ve bel çevresi değişikliklerini de not edin.',
       'Kuvvet, hareket ve beslenme başlıklarını küçük ve sürdürülebilir adımlarla ele almayı düşünün.',
@@ -142,6 +159,11 @@ export const painPoints: PainPoint[] = [
       '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
       '/zihin-denge/bilissel-saglik/',
       '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+    ],
+    articleTitles: [
+      'Perimenopozda zihinsel bulanıklık',
+      'Bilişsel sağlık rehberi',
+      'Menopozda uyku bozukluğu',
     ],
     neutralNextSteps: [
       'Odaklanma güçlüğünün hangi saatlerde ve hangi koşullarda arttığını not edin.',
@@ -179,6 +201,11 @@ export const painPoints: PainPoint[] = [
       '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
       '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
     ],
+    articleTitles: [
+      'Menopozda libido değişimi',
+      'Cinsellikte ağrı',
+      'Mahrem bölgedeki değişimler',
+    ],
     neutralNextSteps: [
       'Libido değişimini ağrı, kuruluk, uyku, ruh hâli ve ilişki bağlamıyla birlikte düşünün.',
       'Konuşmak istediğiniz soruları güvenli ve uygun bir sağlık görüşmesi için not edin.',
@@ -214,6 +241,11 @@ export const painPoints: PainPoint[] = [
       '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
       '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
       '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
+    ],
+    articleTitles: [
+      'Deneysel tedaviyi okuma kılavuzu',
+      'NAD+ takviyesi',
+      'Peptid kullanımları ve menopoz',
     ],
     neutralNextSteps: [
       'İddianın hangi çalışmaya dayandığını kontrol edin.',
@@ -252,15 +284,17 @@ export function getActivePainPoints(): PainPoint[] {
   return painPoints.filter((painPoint) => painPoint.status !== 'archived');
 }
 
-export const painPointTopics = painPoints.map(({ id, title, userQuestion, shortDescription, articleRoutes, neutralNextSteps, doctorQuestions, safetyDisclaimer }) => ({
+export const painPointTopics = painPoints.map(({ id, title, userQuestion, shortDescription, articleRoutes, articleTitles, neutralNextSteps, doctorQuestions, safetyDisclaimer, redFlagTopics }) => ({
   id,
   title,
   userQuestion,
   shortDescription,
   articleRoutes,
+  articleTitles,
   neutralNextSteps,
   doctorQuestions,
   safetyDisclaimer,
+  redFlagTopics,
 }));
 
 export default painPoints;

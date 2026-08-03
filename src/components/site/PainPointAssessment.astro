@@ -44,6 +44,7 @@ const { initialPainPointId } = Astro.props;
       <button type="button" data-assessment-back class="text-sm font-semibold text-primary underline underline-offset-4">Başlığa dön</button>
     </div>
     <div data-question-list class="space-y-6"></div>
+    <p data-question-error class="mt-4 text-sm font-semibold text-primary" role="alert" hidden>Lütfen her soruya bir yanıt seçin.</p>
     <button type="button" data-assessment-submit class="mt-8 inline-flex min-h-12 items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 disabled:cursor-not-allowed disabled:opacity-40" disabled>
       Okuma rotasını göster
     </button>
@@ -72,9 +73,9 @@ const { initialPainPointId } = Astro.props;
     let answers = [];
 
     const questions = [
-      'Bu değişim günlük yaşamınızı ne ölçüde etkiliyor?',
-      'Bu konu hakkında en çok hangi bilgiyi arıyorsunuz?',
-      'Bu başlıkla ilgili not tutmayı denediniz mi?',
+      { text: 'Bu değişim günlük yaşamınızı ne ölçüde etkiliyor?', options: ['Henüz emin değilim', 'Bazen', 'Belirgin biçimde'] },
+      { text: 'Bu konu hakkında en çok hangi bilgiyi arıyorsunuz?', options: ['Genel bilgi', 'Ne not tutacağımı', 'Sağlık görüşmesine hazırlık'] },
+      { text: 'Bu başlıkla ilgili not tutmayı denediniz mi?', options: ['Hayır', 'Bazen', 'Düzenli olarak'] },
     ];
 
     const getTopic = () => painPoints.find((topic) => topic.id === selectedId);
@@ -83,9 +84,9 @@ const { initialPainPointId } = Astro.props;
       if (!questionList) return;
       questionList.innerHTML = questions.map((question, index) => `
         <fieldset class="border-b border-primary/10 pb-5">
-          <legend class="mb-3 font-serif text-xl text-ink">${question}</legend>
+          <legend class="mb-3 font-serif text-xl text-ink">${question.text}</legend>
           <div class="grid gap-2 sm:grid-cols-3">
-            ${['Henüz emin değilim', 'Bazen', 'Belirgin biçimde'].map((label, value) => `
+            ${question.options.map((label, value) => `
               <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-primary/12 bg-cream-soft/30 px-3 py-3 text-sm text-ink/75 hover:bg-white">
                 <input type="radio" name="assessment-${index}" value="${value}" class="accent-primary" />
                 <span>${label}</span>
@@ -130,11 +131,22 @@ const { initialPainPointId } = Astro.props;
     submit?.addEventListener('click', () => {
       const topic = getTopic();
       if (!topic || !result) return;
+      const error = root.querySelector('[data-question-error]');
+      if (answers.length !== questions.length) {
+        error?.removeAttribute('hidden');
+        return;
+      }
+      error?.setAttribute('hidden', 'hidden');
+      const selectedValues = answers.map((input) => Number(input.value));
+      const needsDoctorPrep = selectedValues[1] === 2 || selectedValues[0] === 2;
+      const needsTracking = selectedValues[2] !== 2;
       const articleLinks = topic.articleRoutes
-        .map((route) => `<li><a href="${route}" class="font-semibold text-primary underline decoration-primary/35 underline-offset-4">İlgili Estranova okumasını aç</a></li>`)
+        .map((route, index) => `<li><a href="${route}" class="font-semibold text-primary underline decoration-primary/35 underline-offset-4">${topic.articleTitles[index] || 'İlgili Estranova okuması'}</a></li>`)
         .join('');
-      const nextSteps = topic.neutralNextSteps.map((item) => `<li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary"></span><span>${item}</span></li>`).join('');
-      const doctorQuestions = topic.doctorQuestions.map((item) => `<li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold"></span><span>${item}</span></li>`).join('');
+      const nextStepItems = needsTracking ? topic.neutralNextSteps : topic.neutralNextSteps.slice(1);
+      const nextSteps = nextStepItems.map((item) => `<li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary"></span><span>${item}</span></li>`).join('');
+      const doctorQuestions = topic.doctorQuestions.filter((_, index) => needsDoctorPrep || index === 0).map((item) => `<li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold"></span><span>${item}</span></li>`).join('');
+      const redFlags = selectedValues[0] === 2 ? `<section class="mt-6 rounded-2xl border border-primary/25 bg-primary/5 p-5"><h4 class="font-serif text-xl text-primary">Ne zaman destek düşünmeli?</h4><p class="mt-3 text-sm leading-relaxed text-ink/70">Günlük yaşamınızı belirgin biçimde etkileyen, yeni başlayan veya giderek artan belirtilerde profesyonel değerlendirmeyi geciktirmeyin.</p><ul class="mt-4 space-y-2 text-sm leading-relaxed text-ink/70">${topic.redFlagTopics.map((item) => `<li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary"></span><span>${item}</span></li>`).join('')}</ul></section>` : '';
       result.innerHTML = `
         <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Okuma rotanız</p>
         <h3 class="font-serif text-3xl leading-tight text-ink">${topic.title}</h3>
@@ -144,8 +156,11 @@ const { initialPainPointId } = Astro.props;
           <section class="rounded-2xl border border-primary/10 bg-white p-5"><h4 class="font-serif text-xl text-ink">Kısa izlem notları</h4><ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink/70">${nextSteps}</ul></section>
         </div>
         <section class="mt-6 rounded-2xl border border-gold/25 bg-cream-soft/60 p-5"><h4 class="font-serif text-xl text-ink">Bir sağlık görüşmesinde sorabileceğiniz sorular</h4><ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink/70">${doctorQuestions}</ul></section>
+        ${redFlags}
         <p class="mt-6 rounded-2xl border border-gold/35 bg-white p-4 text-sm leading-relaxed text-ink/70">${topic.safetyDisclaimer} Belirtileriniz belirginleşiyor veya günlük yaşamınızı etkiliyorsa profesyonel değerlendirme düşünün.</p>
+        <button type="button" data-print-result class="mt-5 inline-flex min-h-11 items-center justify-center rounded-xl border border-primary/25 px-5 py-3 text-sm font-semibold text-primary hover:bg-primary/5">Bu rotayı yazdır</button>
         <a href="/symptoms/" class="mt-6 inline-flex text-sm font-semibold text-primary underline decoration-primary/35 underline-offset-4">Belirti rehberine dön</a>`;
+      result.querySelector('[data-print-result]')?.addEventListener('click', () => window.print());
       showStep(resultStep);
     });
 
