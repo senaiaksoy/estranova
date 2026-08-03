@@ -230,6 +230,45 @@ export const painPoints: PainPoint[] = [
     status: 'draft',
   },
   {
+    id: 'skin-change-uncertainty',
+    slug: 'cilt-degisimlerini-anlamak',
+    title: 'Cilt değişimlerini anlamak',
+    userQuestion: 'Kuruluk, incelme ve elastikiyet değişimini nasıl daha güvenli okuyabilirim?',
+    shortDescription:
+      'Ciltteki kuruluk, hassasiyet ve görünüm değişimlerini tek bir nedene bağlamadan ele almak için bir başlangıç rotası sunar.',
+    relatedSymptoms: ['cilt'],
+    articleRoutes: [
+      '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
+      '/beden-yakinlik/cilt-gorunum/',
+    ],
+    articleTitles: [
+      'Menopozda cilt değişimleri',
+      'Cilt ve görünüm rehberi',
+    ],
+    neutralNextSteps: [
+      'Değişimin ne zaman başladığını; kuruluk, hassasiyet veya kaşıntı gibi eşlik eden durumları not edin.',
+      'Yeni ürünler, mevsim, güneş maruziyeti ve günlük yaşam alışkanlıklarıyla birlikte değişip değişmediğine bakın.',
+      'Sizi en çok düşündüren değişiklikleri bir sağlık görüşmesinde konuşmak üzere yazın.',
+    ],
+    doctorQuestions: [
+      'Ciltteki bu değişimin menopoz dışında değerlendirilmesi gereken nedenleri olabilir mi?',
+      'Hangi değişikliklerde dermatolojik değerlendirme daha erken düşünülmelidir?',
+      'Günlük bakım rutinimle ilgili hangi bilgileri paylaşmam yararlı olur?',
+    ],
+    videoTopics: [
+      'Menopozda ciltte hangi değişimler görülebilir?',
+      'Cilt değişimlerini takip ederken hangi notlar yararlı olur?',
+    ],
+    safetyDisclaimer:
+      'Bu okuma rotası dermatolojik tanı koymaz ve kişisel ürün ya da tedavi önerisi vermez.',
+    redFlagTopics: [
+      'hızla değişen, iyileşmeyen veya kanayan cilt lezyonları',
+      'yaygın, şiddetli ya da kalıcı kaşıntı',
+      'yeni başlayan ve hızla artan döküntü veya hassasiyet',
+    ],
+    status: 'draft',
+  },
+  {
     id: 'evidence-overload',
     slug: 'saglik-iddialarini-okuma',
     title: 'Sağlık iddiaları arasında güvenilir olanı seçmek',
