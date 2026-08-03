@@ -26,6 +26,7 @@ const tocEntries = [
   { id: 'gunluk-adimlar', label: 'Günlük Hayatta Ne Yardımcı Olabilir?' },
   { id: 'tedavi-karari', label: 'Tedavi Kararı Nasıl Verilir?' },
   { id: 'hormon-disi', label: 'Hormon Dışı Seçenekler' },
+  { id: 'karsilastirma', label: 'Tedavi Yollarının Karşılaştırması' },
   { id: 'baska-nedenler', label: 'Ne Zaman Başka Neden Aranır?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
@@ -33,9 +34,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Sıcak Basması ve Gece Terlemesi: Neden Olur, Ne İyi Gelir?';
-const seoTitle = 'Menopozda Sıcak Basması: Neden Olur, Ne İyi Gelir?';
+const seoTitle = 'Menopozda Sıcak Basması ve Gece Terlemesi: Neden Olur, Ne İyi Gelir?';
 const articleDescription =
-  'Menopozda sıcak basması ve gece terlemesi neden olur, ne iyi gelir? Tetikleyicileri, günlük adımları ve hormonlu-hormonsuz seçenekleri inceleyin.';
+  'Menopozda sıcak basması ve gece terlemesi neden olur, ne iyi gelir? Sıcak basması nedenleri, gece ateş basması tetikleyicileri ve hormonlu-hormonsuz tedavi seçenekleri.';
 const faqItems = articleFaqs['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -43,7 +44,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '25 Nisan 2026',
-  modifiedDate: '2 Ağustos 2026',
+  modifiedDate: '3 Ağustos 2026',
   pathname: '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
@@ -54,6 +55,7 @@ const articleSchemas = buildArticleSchemas({
     'gece ateş basması',
     'menopozda gece terlemeleri',
     'sıcak basması terleme',
+    'menopozda sıcak basmasına ne iyi gelir',
     'menopoz',
     'perimenopoz',
     'uyku',
@@ -183,6 +185,42 @@ const articleSchemas = buildArticleSchemas({
           Özellikle reçeteli seçeneklerde “hormonsuz” sözcüğü “risksiz” anlamına gelmez. İlaç etkileşimleri,
           yan etkiler ve gerekli takip daha tedavi başlamadan konuşulmalıdır.
         </p>
+
+        <h2 id="karsilastirma">Tedavi Seçeneklerinin Karşılaştırılması</h2>
+        <p>Menopozda sıcak basması ve gece terlemesinde öne çıkan üç ana yönetim yolunun kanıt gücü ve belirleyici özellikleri aşağıda özetlenmiştir:</p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Yönelim / Seçenek</th>
+                <th class="p-3 font-semibold">Etki Mekanizması</th>
+                <th class="p-3 font-semibold">Kanıt Düzeyi</th>
+                <th class="p-3 font-semibold">Klinik Öncelik & İzlem</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Hormon Replasman Tedavisi (HRT)</td>
+                <td class="p-3">Eksilen östrojeni yerine koyarak hipotalamus ısı regülasyonunu dengeler.</td>
+                <td class="p-3"><Evidence level={5} /> (En yüksek)</td>
+                <td class="p-3">Semptom kontrolünde en etkili seçenektir; yaş, başlama zamanı ve risk profiline göre hekimle planlanır.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Hormon Dışı Reçeteli Seçenekler</td>
+                <td class="p-3">Nörotransmitter ve nöronal yolları düzenleyerek ısı dalgalarını baskılar.</td>
+                <td class="p-3"><Evidence level={4} /> (Yüksek)</td>
+                <td class="p-3">HRT uygun olmadığında veya tercih edilmediğinde hekim takibinde değerlendirilir.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Yaşam Tarzı & Serinleme Adımları</td>
+                <td class="p-3">Tetikleyicileri azaltır, katmanlı giyim ve ortam serinliği ile dalgayı hafifletir.</td>
+                <td class="p-3"><Evidence from={2} to={3} /> (Destekleyici)</td>
+                <td class="p-3">Temel konfor sağlar; şiddetli ve uykuyu bölen dalgalarda medikal destek yerini alamaz.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="baska-nedenler">Ne Zaman Başka Neden Aranır?</h2>
         <p>Menopoz sık rastlanan bir açıklamadır; ama her terlemeyi ve çarpıntıyı onun üzerine bırakmak doğru olmaz.</p>

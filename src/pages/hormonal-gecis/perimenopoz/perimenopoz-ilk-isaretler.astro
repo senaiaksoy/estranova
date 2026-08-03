@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -25,6 +25,7 @@ const tocEntries = [
   { id: 'adet', label: 'Adet Takvimi' },
   { id: 'uyku-isi', label: 'Uyku ve Isı' },
   { id: 'ruh-hali', label: 'Ruh Hali ve Odak' },
+  { id: 'evreler-tablo', label: 'Perimenopoz Evreleri ve Belirtiler' },
   { id: 'testler', label: 'Test Meselesi' },
   { id: 'izleme', label: 'Üç Aylık İzleme' },
   { id: 'ne-zaman', label: 'Ne Zaman Hekim' },
@@ -34,24 +35,26 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Perimenopoz Belirtileri ve İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem';
-const seoTitle = 'Perimenopoz Belirtileri ve İlk İşaretler';
+const seoTitle = 'Perimenopoz Belirtileri ve İlk İşaretler: 40+ Dönemi Rehberi';
 const articleDescription =
-  'Perimenopoz çoğu zaman tek bir büyük alarmla değil; adet düzeni, uyku ve ruh hali gibi küçük işaretlerle fark edilir. Panik yaratmadan okumak için bir rehber.';
+  'Perimenopoz belirtileri nelerdir, kaç yaşında başlar? Adet düzensizliği, sıcak basması, uyku değişimi ve 40+ geçiş dönemi ilk işaretleri sakin bir dille.';
 const faqItems = articleFaqs['/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
   publishedDate: '4 Mayıs 2026',
-  modifiedDate: '13 Temmuz 2026',
+  modifiedDate: '3 Ağustos 2026',
   pathname: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
   keywords: [
     'perimenopoz belirtileri',
-    'perimenopoz',
+    'perimenopoz nedir',
+    'perimenopoz kaç yaşında başlar',
+    'erken menopoz belirtileri',
     'menopoz geçişi',
-    'adet düzensizliği',
+    'adet düzensizliği 40 yaş',
     'sıcak basması',
     'gece terlemesi',
     'uyku',
@@ -195,6 +198,42 @@ const articleSchemas = buildArticleSchemas({
           panik atak benzeri tablolar, işlev kaybı ya da kendine zarar düşünceleri perimenopoz etiketiyle bekletilecek
           şeyler değildir. Bu ayrım bence en kıymetli sınır: normalleştirmek rahatlatır; geçiştirmek geciktirir.
         </p>
+
+        <h2 id="evreler-tablo">Perimenopoz Evreleri ve Belirtiler</h2>
+        <p>Hormonal geçiş döneminde bedensel değişimin evrelere göre dağılımı ve karakteristik işaretleri aşağıda özetlenmiştir:</p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Evre</th>
+                <th class="p-3 font-semibold">Adet Düzeni Değişimi</th>
+                <th class="p-3 font-semibold">Hormon Tablosu</th>
+                <th class="p-3 font-semibold">Öne Çıkan Belirtiler</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Erken Perimenopoz</td>
+                <td class="p-3">Adet aralığında 7 gün veya daha fazla kayma (daha sık ya da daha seyrek).</td>
+                <td class="p-3">Östrojen dalgalı, progesteron düşmeye başlar.</td>
+                <td class="p-3">Hafif uyku bölünmesi, göğüs hassasiyeti, ruh halinde dalgalanma.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Geç Perimenopoz</td>
+                <td class="p-3">İki adet arası 60 gün veya daha fazla açılır; 1-2 ay adet atlanabilir.</td>
+                <td class="p-3">FSH yükselir, östrojen belirgin düşüş eğilimine girer.</td>
+                <td class="p-3">Sıcak basması, gece terlemesi, beyin sisi, vajinal kuruluk başlangıcı.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Menopoz (Tamamlanmış)</td>
+                <td class="p-3">Ardışık 12 ay boyunca hiç kanama olmaması durumudur.</td>
+                <td class="p-3">FSH sürekli yüksek, östrojen düşük seviyede kalıcıdır.</td>
+                <td class="p-3">Son kanamadan geriye dönük netleşir; metabolik ve kemik takibi öne çıkar.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="testler">Peki Kan Testiyle Anlaşılmaz mı?</h2>
         <p>

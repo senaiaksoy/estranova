@@ -48,3 +48,6 @@ writers/**/citations/**/*.png
 writers/**/citations/**/*.tiff
 writers/**/citations/**/__MACOSX/
 writers/**/citations/**/._*
+
+# Test ve geçici çalıştırma kalıntıları
+test-results/

@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -21,6 +21,7 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const tocEntries = [
   { id: 'esik', label: 'Geriye dönük netleşen eşik' },
   { id: 'evreler', label: 'Üç evre: perimenopoz, menopoz, postmenopoz' },
+  { id: 'evreler-tablo', label: 'Menopoz Evrelerinin Karşılaştırması' },
   { id: 'hormon-degisim', label: 'Hormon değişimleri bu evrede' },
   { id: 'belirtiler', label: 'Belirtilerin yeni hali' },
   { id: 'menopoz-sonrasi-donem', label: 'Postmenopoz: ilk yıllar neden kritik?' },
@@ -34,8 +35,9 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopoz Nedir? — Temel Rehber';
+const seoTitle = 'Menopoz Nedir? Belirtileri, Evreleri ve Yaş Sınırı Rehberi';
 const articleDescription =
-  'Menopozun tanımını, evrelerini, hormon değişimini ve uzun vadeli sağlık gündemini Estranova editöryal disipliniyle ele alan sakin başlangıç rehberi.';
+  'Menopoz nedir, kaç yaşında başlar, belirtileri nelerdir? Perimenopoz, menopoz ve postmenopoz evreleri, östrojen değişimi ve 40+ başlangıç rehberi.';
 const pathname = '/hormonal-gecis/menopoz/menopoz-nedir/';
 const publishedDate = '11 Mayıs 2026';
 const readingMinutes = 5;
@@ -46,17 +48,18 @@ const articleSchemas = buildArticleSchemas({
   description: articleDescription,
   writerSlug: 'estranova-editorial',
   publishedDate,
+  modifiedDate: '3 Ağustos 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
-  keywords: ['menopoz', 'menopoz geçişi', 'FSH', 'östrojen', 'menopoz sonrası dönem', 'hormonal geçiş'],
+  keywords: ['menopoz nedir', 'menopoz belirtileri', 'menopoz kaç yaşında başlar', 'menopoz evreleri', 'perimenopoz', 'postmenopoz', 'FSH', 'östrojen'],
   faqItems,
   siteUrl,
 });
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
   jsonLd={articleSchemas}
@@ -93,9 +96,9 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleProsePanel>
         <h2 id="esik">Geriye Dönük Netleşen Bir Eşik</h2>
+        <p>Menopoz, kadının en az 12 ay boyunca üst üste adet görmemesiyle kesinleşen, ortalama 45-55 yaş aralığında yumurtalık fonksiyonlarının ve östrojen üretiminin azalmasıyla gerçekleşen doğal biyolojik bir evredir.</p>
         <p>
-          Menopoz, çoğu kadının zihninde "başladı mı, bitti mi?" sorusuyla duran o belirsiz dönemin adıdır; kesinliği ise
-          ancak geriye bakınca anlaşılır. Son adetten itibaren on iki ay tamamlandığında, beden yeni bir eşiği sessizce
+          Muayene odasında tarif edilen belirsiz dönemin netleşmesi ancak geriye bakınca anlaşılır. Son adetten itibaren on iki ay tamamlandığında, beden yeni bir eşiği sessizce
           işaretlemiş olur.
         </p>
         <p>
@@ -124,6 +127,42 @@ const articleSchemas = buildArticleSchemas({
           Perimenopoz, hormon dalgalanmalarının belirginleştiği geçiş dönemidir. Menopoz, son adet tarihinden sonra on iki
           ay tamamlandığında tanımlanan eşiktir. Postmenopoz ise bu eşiğin ardından yaşamın geri kalanını kapsar.
         </p>
+
+        <h2 id="evreler-tablo">Menopoz Evrelerinin Karşılaştırması</h2>
+        <p>Menopozal geçişin üç temel evresi, klinik tanım eşikleri ve öne çıkan biyolojik özellikleri aşağıda özetlenmiştir:</p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Evre</th>
+                <th class="p-3 font-semibold">Tanı & Zamanlama Eşiği</th>
+                <th class="p-3 font-semibold">Hormonal Tablo</th>
+                <th class="p-3 font-semibold">Öne Çıkan Odak</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Perimenopoz</td>
+                <td class="p-3">İlk adet düzensizliğiyle başlar, son adet gününe kadar sürer (ortalama 4-8 yıl).</td>
+                <td class="p-3">Östrojen şiddetle dalgalanır, progesteron azalır.</td>
+                <td class="p-3">Sıcak basması, uykusuzluk, adet düzensizliği yönetimi.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Menopoz</td>
+                <td class="p-3">Ardışık 12 ay hiç adet görmeyince geriye dönük teyit edilir.</td>
+                <td class="p-3">Yumurtalık östrojen üretimi kalıcı olarak düşmüştür.</td>
+                <td class="p-3">Hormonal eşiğin netleşmesi, yaşam tarzı ve medikal değerlendirme.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Postmenopoz</td>
+                <td class="p-3">12 aylık menopoz eşiğinden sonraki yaşamın tamamını kapsar.</td>
+                <td class="p-3">Östrojen düşük seviyede sabittir, FSH yüksek seyreder.</td>
+                <td class="p-3">Kemik yoğunluğu, kardiyovasküler sağlık, genital-üriner sistem korunması.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p>
           Her evrede öncelikler farklılaşır. Perimenopozda düzensiz adet, sıcak basması ve gece terlemesi öne çıkarken;
           menopoz sonrası dönemde kemik yoğunluğu, kalp-metabolizma dengesi ve ürogenital sağlık daha sistematik bir

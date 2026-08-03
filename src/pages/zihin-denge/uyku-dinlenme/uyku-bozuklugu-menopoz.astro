@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -26,6 +26,7 @@ const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menop
 const tocEntries = [
   { id: 'uyku-mimarisi', label: 'Uyku Mimarisi' },
   { id: 'neden-bozulur', label: 'Menopozda Uyku Neden Bozulur' },
+  { id: 'uyku-nedenleri-tablo', label: 'Uyku Bozukluğu Nedenleri ve Çözüm Adımları' },
   { id: 'yaygin-sorunlar', label: 'Yaygın Uyku Sorunları' },
   { id: 'uyku-hijyeni', label: 'Uyku Hijyeni' },
   { id: 'dogal-destekler', label: 'Doğal Destekler ve Takviyeler' },
@@ -37,25 +38,27 @@ const tocEntries = [
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi';
-const seoTitle = 'Menopozda Uykusuzluk — Dinlenme Rehberi';
+const seoTitle = 'Menopozda Uykusuzluk ve Uyku Bozukluğu: Neden Olur, Ne İyi Gelir?';
 const articleDescription =
-  'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur, hangi sade adımlar denenebilir? Hormonal geçişte uyku bozukluğuna sakin bir rehber.';
+  'Menopozda uykusuzluk neden artar, gece uyanmaları neden olur, ne iyi gelir? Progesteron düşüşü, melatoninin rolü, uyku hijyeni ve çözüm yolları.';
 const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   publishedDate: '12 Mart 2026',
-  modifiedDate: '13 Temmuz 2026',
+  modifiedDate: '3 Ağustos 2026',
   pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
   keywords: [
     'menopozda uykusuzluk',
-    'menopoz',
-    'uyku',
-    'uyku bozukluğu',
+    'menopozda uyku bozukluğu',
+    'menopozda gece uyanması',
+    'menopoz uykuya dalama',
+    'perimenopoz uyku',
     'insomnia',
+    'progesteron uyku',
     'sıcak basması',
     'uyku hijyeni',
   ],
@@ -110,6 +113,7 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleProsePanel>
         <h2 id="uyku-mimarisi">Uyku Aslında Düz Bir Çizgi Değil</h2>
+        <p>Menopozda uykusuzluk ve uyku bozukluğu, progesteron hormonu düşüşünün beyindeki gevşeme reseptörlerini zayıflatması ve gece terlemelerinin uyku evrelerini bölmesiyle oluşan yaygın bir hormonal süreçtir.</p>
         <p>
           Klinik pratiğimde yıllardır şu soruyla sık karşılaşırım: aynı saatte yatıp aynı saatte kalkmak neden bazı sabahlar
           dinlenmiş, bazı sabahlar eksik bir hisle bırakır? Cevap, uykunun düz bir çizgi olmadığını fark
@@ -144,6 +148,42 @@ const articleSchemas = buildArticleSchemas({
           Yaygın bir yanılgı şudur: tek bir tetikleyici var, o bulununca uyku düzelir. Oysa çoğu zaman birden fazla
           faktör aynı anda devrededir. Bu yüzden plan da tek noktaya değil, birkaç sade adıma yayılmalıdır.
         </p>
+
+        <h2 id="uyku-nedenleri-tablo">Uyku Bozukluğu Nedenleri ve Çözüm Adımları</h2>
+        <p>Menopoz döneminde uykuyu bölen ana biyolojik faktörler ve önerilen yönetim stratejileri aşağıda özetlenmiştir:</p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Tetikleyici / Neden</th>
+                <th class="p-3 font-semibold">Biyolojik Mekanizma</th>
+                <th class="p-3 font-semibold">Görülen Uyku Bozukluğu</th>
+                <th class="p-3 font-semibold">Öne Çıkan Destek & Çözüm</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Vazomotor Gece Dalgaları</td>
+                <td class="p-3">Hipotalamus ısınma alarmı verir, gece terlemesiyle beden uyanır.</td>
+                <td class="p-3">Sık gece uyanması, sırılsıklam uyanıp üşüme.</td>
+                <td class="p-3">Serin oda hijyeni, katmanlı nevresim, HRT veya hormon dışı medikal tedavi.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Progesteron Düşüşü</td>
+                <td class="p-3">Beyindeki doğal yatıştırıcı GABA reseptör uyarımı azalır.</td>
+                <td class="p-3">Uykuya dalmakta zorlanma, zihni susturamama.</td>
+                <td class="p-3">Gelişmiş uyku hijyeni, magnezyum glisinat desteği, hekim takibinde progesteron.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Melatonin Ritim Kayması</td>
+                <td class="p-3">Yaş ve hormonal değişimle gece melatonin salgısı azalır.</td>
+                <td class="p-3">Erken saatte uyanma (gece 03:00-04:00).</td>
+                <td class="p-3">Akşam mavi ışık kısıtlaması, düzenli sabah güneşi maruziyeti.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="yaygin-sorunlar">Yaygın Olarak Anlatılan Tablo</h2>
         <p>
