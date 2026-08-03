@@ -1,0 +1,158 @@
+---
+import { painPointTopics } from '../../data/pain-points';
+
+interface Props {
+  initialPainPointId?: string;
+}
+
+const { initialPainPointId } = Astro.props;
+---
+
+<section
+  class="mx-auto max-w-4xl rounded-[34px] border border-primary/12 bg-white p-6 shadow-[0_24px_82px_-62px_rgba(44,22,28,0.36)] md:p-10"
+  data-pain-point-assessment
+  data-initial-pain-point={initialPainPointId}
+  aria-labelledby="assessment-title"
+>
+  <div class="mb-8">
+    <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Kısa okuma rotası</p>
+    <h2 id="assessment-title" class="font-serif text-3xl leading-tight text-ink md:text-4xl">Önce sizi en çok düşündüren başlığı seçin</h2>
+    <p class="mt-4 max-w-2xl leading-relaxed text-ink/70">
+      Birkaç kısa soruyla hangi Estranova okumalarının size başlangıç olabileceğini birlikte bulalım.
+      Bu akış tanı koymaz ve kişisel tedavi önerisi vermez.
+    </p>
+  </div>
+
+  <div data-assessment-step="topic">
+    <div class="grid gap-3 md:grid-cols-2">
+      {painPointTopics.map((topic) => (
+        <button
+          type="button"
+          data-topic-id={topic.id}
+          class="rounded-2xl border border-primary/15 bg-cream-soft/45 p-5 text-left transition hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        >
+          <span class="block font-serif text-xl leading-snug text-primary">{topic.title}</span>
+          <span class="mt-2 block text-sm leading-relaxed text-ink/65">{topic.userQuestion}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div data-assessment-step="questions" hidden>
+    <div class="mb-6 flex items-center justify-between gap-4">
+      <p class="text-sm font-semibold text-primary" data-selected-topic></p>
+      <button type="button" data-assessment-back class="text-sm font-semibold text-primary underline underline-offset-4">Başlığa dön</button>
+    </div>
+    <div data-question-list class="space-y-6"></div>
+    <button type="button" data-assessment-submit class="mt-8 inline-flex min-h-12 items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 disabled:cursor-not-allowed disabled:opacity-40" disabled>
+      Okuma rotasını göster
+    </button>
+  </div>
+
+  <div data-assessment-step="result" hidden>
+    <div data-assessment-result></div>
+    <button type="button" data-assessment-restart class="mt-8 inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">
+      Yeni bir başlık seç
+    </button>
+  </div>
+</section>
+
+<script define:vars={{ painPoints: painPointTopics }}>
+  const root = document.querySelector('[data-pain-point-assessment]');
+  if (root) {
+    const topicStep = root.querySelector('[data-assessment-step="topic"]');
+    const questionStep = root.querySelector('[data-assessment-step="questions"]');
+    const resultStep = root.querySelector('[data-assessment-step="result"]');
+    const questionList = root.querySelector('[data-question-list]');
+    const submit = root.querySelector('[data-assessment-submit]');
+    const selectedTopicLabel = root.querySelector('[data-selected-topic]');
+    const result = root.querySelector('[data-assessment-result]');
+    const initialId = root.getAttribute('data-initial-pain-point');
+    let selectedId = '';
+    let answers = [];
+
+    const questions = [
+      'Bu değişim günlük yaşamınızı ne ölçüde etkiliyor?',
+      'Bu konu hakkında en çok hangi bilgiyi arıyorsunuz?',
+      'Bu başlıkla ilgili not tutmayı denediniz mi?',
+    ];
+
+    const getTopic = () => painPoints.find((topic) => topic.id === selectedId);
+
+    const renderQuestions = () => {
+      if (!questionList) return;
+      questionList.innerHTML = questions.map((question, index) => `
+        <fieldset class="border-b border-primary/10 pb-5">
+          <legend class="mb-3 font-serif text-xl text-ink">${question}</legend>
+          <div class="grid gap-2 sm:grid-cols-3">
+            ${['Henüz emin değilim', 'Bazen', 'Belirgin biçimde'].map((label, value) => `
+              <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-primary/12 bg-cream-soft/30 px-3 py-3 text-sm text-ink/75 hover:bg-white">
+                <input type="radio" name="assessment-${index}" value="${value}" class="accent-primary" />
+                <span>${label}</span>
+              </label>`).join('')}
+          </div>
+        </fieldset>`).join('');
+      questionList.querySelectorAll('input').forEach((input) => input.addEventListener('change', updateSubmit));
+    };
+
+    const updateSubmit = () => {
+      answers = Array.from({ length: questions.length }, (_, index) =>
+        root.querySelector(`input[name="assessment-${index}"]:checked`)
+      ).filter(Boolean);
+      if (submit) submit.disabled = answers.length !== questions.length;
+    };
+
+    const showStep = (step) => {
+      [topicStep, questionStep, resultStep].forEach((element) => element?.setAttribute('hidden', 'hidden'));
+      step?.removeAttribute('hidden');
+    };
+
+    const selectTopic = (id) => {
+      selectedId = id;
+      const topic = getTopic();
+      if (!topic) return;
+      if (selectedTopicLabel) selectedTopicLabel.textContent = topic.title;
+      renderQuestions();
+      showStep(questionStep);
+    };
+
+    root.querySelectorAll('[data-topic-id]').forEach((button) => {
+      button.addEventListener('click', () => selectTopic(button.getAttribute('data-topic-id') || ''));
+    });
+
+    root.querySelector('[data-assessment-back]')?.addEventListener('click', () => showStep(topicStep));
+    root.querySelector('[data-assessment-restart]')?.addEventListener('click', () => {
+      selectedId = '';
+      answers = [];
+      showStep(topicStep);
+    });
+
+    submit?.addEventListener('click', () => {
+      const topic = getTopic();
+      if (!topic || !result) return;
+      const articleLinks = topic.articleRoutes
+        .map((route) => `<li><a href="${route}" class="font-semibold text-primary underline decoration-primary/35 underline-offset-4">İlgili Estranova okumasını aç</a></li>`)
+        .join('');
+      const nextSteps = topic.neutralNextSteps.map((item) => `<li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary"></span><span>${item}</span></li>`).join('');
+      const doctorQuestions = topic.doctorQuestions.map((item) => `<li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold"></span><span>${item}</span></li>`).join('');
+      result.innerHTML = `
+        <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Okuma rotanız</p>
+        <h3 class="font-serif text-3xl leading-tight text-ink">${topic.title}</h3>
+        <p class="mt-4 leading-relaxed text-ink/70">${topic.shortDescription}</p>
+        <div class="mt-7 grid gap-6 md:grid-cols-2">
+          <section class="rounded-2xl border border-primary/10 bg-cream-soft/45 p-5"><h4 class="font-serif text-xl text-ink">Buradan başlayabilirsiniz</h4><ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink/70">${articleLinks}</ul></section>
+          <section class="rounded-2xl border border-primary/10 bg-white p-5"><h4 class="font-serif text-xl text-ink">Kısa izlem notları</h4><ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink/70">${nextSteps}</ul></section>
+        </div>
+        <section class="mt-6 rounded-2xl border border-gold/25 bg-cream-soft/60 p-5"><h4 class="font-serif text-xl text-ink">Bir sağlık görüşmesinde sorabileceğiniz sorular</h4><ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink/70">${doctorQuestions}</ul></section>
+        <p class="mt-6 rounded-2xl border border-gold/35 bg-white p-4 text-sm leading-relaxed text-ink/70">${topic.safetyDisclaimer} Belirtileriniz belirginleşiyor veya günlük yaşamınızı etkiliyorsa profesyonel değerlendirme düşünün.</p>
+        <a href="/symptoms/" class="mt-6 inline-flex text-sm font-semibold text-primary underline decoration-primary/35 underline-offset-4">Belirti rehberine dön</a>`;
+      showStep(resultStep);
+    });
+
+    if (initialId && painPoints.some((topic) => topic.id === initialId)) selectTopic(initialId);
+  }
+</script>
+
+<style>
+  [data-assessment-step][hidden] { display: none; }
+</style>

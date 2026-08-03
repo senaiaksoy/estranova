@@ -1,0 +1,31 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteNavbar from '../components/site/SiteNavbar.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+import PainPointAssessment from '../components/site/PainPointAssessment.astro';
+---
+
+<SiteLayout
+  title="Bu Normal mi? Belirti Değerlendirmesi - Estranova"
+  description="Perimenopoz ve 40 sonrası yaşanan değişimleri daha sakin bir okuma rotasında anlamaya yardımcı olan kısa değerlendirme."
+>
+  <SiteNavbar currentPath="/belirti-degerlendirme/" />
+
+  <main id="main-content" class="bg-cream-soft pt-24 text-ink">
+    <section class="border-b border-primary/10 px-6 py-14 md:py-20">
+      <div class="mx-auto max-w-4xl">
+        <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.28em] text-primary/80">Estranova · Bu normal mi?</p>
+        <h1 class="font-serif text-5xl leading-[0.95] tracking-[-0.04em] text-primary md:text-7xl">Yaşadığınız değişimi birlikte adlandıralım.</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink/70">
+          Kısa sorular, güvenli bir başlangıç ve size uygun Estranova okuma rotası. Bu sayfa tanı koymaz; genel bilgilendirme ve soru hazırlığı için tasarlanmıştır.
+        </p>
+      </div>
+    </section>
+
+    <section class="px-6 py-12 md:py-20">
+      <PainPointAssessment />
+    </section>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
