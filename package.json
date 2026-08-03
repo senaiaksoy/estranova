@@ -29,6 +29,7 @@
     "encoding:check": "node scripts/check-encoding.mjs",
     "tokens:check": "node scripts/check-color-tokens.mjs",
     "lexicon:check": "node scripts/check-editorial-lexicon.mjs",
+    "test:e2e": "playwright test",
     "preview:local": "set ASTRO_TELEMETRY_DISABLED=1&&astro preview --host 0.0.0.0 --port 4322",
     "dev:local": "set ASTRO_TELEMETRY_DISABLED=1&&astro dev --port 4322 --host 0.0.0.0"
   },
@@ -54,6 +55,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/typography": "^0.5.19",
     "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
