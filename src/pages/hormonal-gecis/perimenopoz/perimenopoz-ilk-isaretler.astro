@@ -21,13 +21,13 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/hormonal-gecis/perimenopoz/']!;
 
 const tocEntries = [
-  { id: 'ilk-isaret', label: 'İlk İşaret' },
-  { id: 'adet', label: 'Adet Takvimi' },
-  { id: 'uyku-isi', label: 'Uyku ve Isı' },
-  { id: 'ruh-hali', label: 'Ruh Hali ve Odak' },
+  { id: 'ilk-isaret', label: 'İlk İşareti Nasıl Tanırız?' },
+  { id: 'adet', label: 'Adet Takvimindeki Değişim' },
+  { id: 'uyku-isi', label: 'Uyku ve Gece Belirtileri' },
+  { id: 'ruh-hali', label: 'Ruh Hali, Odak ve Beyin Sisi' },
   { id: 'evreler-tablo', label: 'Perimenopoz Evreleri' },
   { id: 'testler', label: 'Test Meselesi' },
-  { id: 'izleme-hekim', label: 'İzleme ve Hekim' },
+  { id: 'izleme-hekim', label: 'İzleme, Kayıt ve Hekimle Konuşmak' },
   { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
 ];
@@ -41,7 +41,7 @@ const faqItems = articleFaqs['/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaret
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'berna-aksoy',
+  writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '4 Mayıs 2026',
   modifiedDate: '3 Ağustos 2026',
@@ -78,7 +78,7 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuHero
       eyebrow="Hormonal Geçiş · Perimenopoz"
       title="Perimenopoz Belirtileri ve İlk İşaretler"
-      lede="Bazen ilk işaret takvimde değil, sabah aynaya bakarken gelen o küçük cümlede belirir: beden aynı, ama ritmi aynı değil."
+      lede="Bu dönemin ilk işaretleri çoğu zaman takvimde değil, bedene dair o tanıdık güven duygusunun sarsılmasıyla fark edilir."
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -87,113 +87,105 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
-        authorSlug="berna-aksoy"
+        authorSlug="senai-aksoy"
         publishedDate="4 Mayıs 2026"
         lastUpdated="3 Ağustos 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/hg-perimenopoz-ilk-isaretler.webp"
-        imageAlt="Aydınlık bir iç mekanda bedensel değişimi fark eden 40+ kadın portresi; perimenopozun ilk işaretleri için editoryal görsel"
+        imageAlt="Perimenopozun ilk işaretlerini anlatan klinik rehber; Doç. Dr. Senai Aksoy imzalı"
       />
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Perimenopoz, yumurtlama düzensizleşirken adet aralığının değişmesi, uyku bölünmesi, sıcak basması ve
-          ruh halinde dalgalanma ile kendini gösterebilen hormonal geçiş dönemidir. 45 yaş üzerinde klinik olarak
-          tanınabilir; tek bir test sonucu tanımı netleştirmez. Bu yazı belirtileri okuma ve hekimle görüşmeye
-          hazırlanma rehberidir; tanı yerine geçmez.
+          Perimenopoz, yumurtalık fonksiyonunun düzensizleşmeye başladığı ve adet döngüsünün değiştiği geçiş dönemidir.
+          45 yaş üzerinde yeni başlayan vazomotor belirtiler ve adet düzeni değişikliği çoğu zaman klinik tanı için
+          yeterlidir; tek bir kan testi tabloyu netleştirmez. Bu yazı, belirtileri okuma ve hekim görüşmesine hazırlanma
+          için klinik bir başlangıç çerçevesidir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="ilk-isaret">Önce Yanlış Soruyu Sordum</h2>
+        <h2 id="ilk-isaret">İlk İşareti Nasıl Tanırız?</h2>
+        <p>Perimenopoz, çoğu kadının beklerken yakalandığı bir dönem değildir; büyük bir alarm çalmaz. Fark, çoğu zaman bedenin küçük değişikliklerine duyulan o tanıdık güvensizlikte başlar.</p>
         <p>
-          Uzun süre perimenopozun kendini önce takvimde göstereceğini sandım. Sonra fark ettim ki bazen ilk işaret,
-          evin içinde yeri değişmiş küçük bir eşya gibi, adını koyamadığınız ama gözünüzün takıldığı bir ritim kaymasıdır.
+          Muayene odamda bunu yıllar içinde çok duydum: "Her şey aynı, ama bir şey değil." Takvim hâlâ kanama
+          gösteriyor, büyük bir şikâyet yok; ama uyku eskisi gibi değil, aylık ritmde küçük bir kayma var, gece ara
+          sıra ısı dalgası var. İşin doğrusu şu: perimenopozun ilk işaretleri genellikle böyle gelir — yan yana
+          konduğunda anlam kazanan küçük notlar halinde.
         </p>
         <p>
-          Geçenlerde bir okur yorumunda benzer bir cümleye takıldım: "Takvimde hâlâ adet görüyordum; ama bedenim sanki
-          eski takvimi kullanmıyordu." Bir ay daha erken, bir ay daha geç. Bir gece terleme, sonra iki hafta hiçbir şey
-          yok. Bir gün çok net bir zihin, ertesi gün cümleyi yarıda bırakıp kelime arama. Bu bir kanıt değil; sadece
-          çoğu kadının önce his, sonra isim bulduğu o ara bölgeyi anlatan iyi bir sahne.
-        </p>
-        <p>
-          Tıbbi olarak perimenopoz, menopoza giden geçiş dönemidir. Yumurtlama düzensizleşir; östrojen ve
-          progesteron tek çizgide azalmak yerine dalgalanır. Menopoz ise son adetten sonra 12 ay tamamlandığında
-          geriye dönük olarak tanımlanır. Yani perimenopoz hâlâ kanamanın olduğu, bazen düzenli bazen düzensiz,
-          çoğu zaman da "eski düzenin gevşediği" dönemdir. <Evidence level={4} /><sup><a href="#kaynak-1">[1]</a></sup>
+          Tıbbi olarak perimenopoz, menopoza giden geçiş dönemidir. Yumurtlama düzensizleşir; östrojen ve progesteron
+          tek çizgide azalmak yerine dalgalanır. Menopoz ise son adetten sonra 12 ay tamamlandığında geriye dönük
+          olarak tanımlanır — yani perimenopoz hâlâ kanamanın sürdüğü, ama eski düzenin gevşediği dönemdir.
+          <Evidence level={4} /><sup><a href="#kaynak-1">[1]</a></sup>
         </p>
 
-        <h2 id="adet">İlk Not Genellikle Adet Takviminde Belirir</h2>
-        <p>Takvim, bedendeki değişimi her zaman ilk anlatan yer değildir; ama çoğu zaman en düzenli arşiv orada tutulur.
-          Bu yüzden perimenopozu anlamaya çalışırken adet düzenine bakmak hâlâ güçlü bir başlangıçtır.</p>
+        <h2 id="adet">Adet Takvimindeki Değişim</h2>
+        <p>Perimenopozun en erken ve en görünür işareti adet düzenindeki değişimdir; ama bu değişim tek tip gelmez, herkesin takvimi kendi yolunu çizer.</p>
         <p>
-          Perimenopozun en görünür işareti adet düzenindeki değişimdir. Adet aralığı bazen kısalır, bazen uzar; kanama
-          miktarı daha hafif ya da daha yoğun olabilir. Bazı aylarda yumurtlama olmayabilir; bu da beklenen tarihin
-          kaymasına, ara sıra atlanan kanamalara ya da adet düzeninin eskisinden daha değişken görünmesine yol açar. <Evidence level={4} /><sup><a href="#kaynak-1">[1]</a></sup>
+          Adet aralığı kısalabilir ya da uzayabilir; kanama miktarı daha hafif ya da daha yoğun olabilir. Bazı
+          aylarda yumurtlama gerçekleşmeyebilir; bu da beklenen tarihin kaymasına, atlanan kanamalara ya da
+          döngünün genel olarak değişken görünmesine yol açar. <Evidence level={4} /><sup><a href="#kaynak-1">[1]</a></sup>
         </p>
         <p>
-          Burada önemli olan tek bir ayın şaşırtıcı geçmesi değil, birkaç ay boyunca benzer değişimlerin tekrar etmeye
-          başlamasıdır. STRAW+10 sınıflandırmasına dayanan klinik çerçevelere göre; adet tarihinizin birden fazla dönem
-          boyunca sürekli yedi gün veya daha fazla kayması erken geçişe, iki kanama arasındaki sürenin 60 güne ya da daha
-          fazlasına uzaması ise geçişin daha ilerlemiş evresine işaret edebilir.<sup><a href="#kaynak-2">[2]</a></sup>
-          Bu rakamlar tek başına tanı koydurmaz; ama "bedenimde kalıcı bir değişim başlıyor olabilir" demenize
-          ve not tutmaya başlamanıza zemin hazırlar.
+          Klinik değerlendirmede tek bir aylık sapma değil, birkaç ay boyunca tekrar eden değişimler anlamlıdır.
+          STRAW+10 sınıflandırma çerçevesine göre; adet aralığının birden fazla dönem boyunca yedi gün veya daha fazla
+          kayması erken geçiş evresine, iki kanama arasındaki sürenin 60 güne ya da daha fazlasına uzaması ise geçişin
+          ilerlemiş evresine işaret edebilir.<sup><a href="#kaynak-2">[2]</a></sup> Bu rakamlar tanı koydurmaz; ama
+          "bedenimde bir şey değişiyor" cümlesinin altına koyabileceğiniz somut gözlemleri oluştururlar.
         </p>
         <p>
-          Buradan başlayabilirsiniz: üç ay boyunca kanama tarihini, kanama yoğunluğunu ve eşlik eden
-          belirtileri not etmek. Uzun bir günlük değil; birkaç kelime yeter — "Daha yoğun", "iki gün erken", "gece
-          terlemesi vardı", "migren eşlik etti" gibi.
+          Pratik olarak şunları öneriyorum: üç ay boyunca adet başlangıç ve bitiş tarihlerini, kanama yoğunluğunu
+          ve eşlik eden belirtileri kısa notlarla kaydedin. "Üç gün erken", "gece terlemesi vardı", "daha yoğundu"
+          gibi birkaç kelime, muayene odasında benim için en değerli başlangıç noktasını oluşturur.
         </p>
 
-        <h2 id="uyku-isi">Uyku, Isı ve Gece Yarısı Uyanmaları</h2>
-        <p>Gündüz kendinizi ikna edebilirsiniz. Gece ise daha dürüsttür. Perimenopozun ikinci büyük işareti bu yüzden sık
-          sık uykunun kıyısında belirir.</p>
+        <h2 id="uyku-isi">Uyku ve Gece Belirtileri</h2>
+        <p>Gece, gündüzün sakladığı işaretleri açığa çıkarır. Perimenopozun sık görülen bir diğer işareti bu yüzden genellikle uyku değişiklikleriyle birlikte gelir.</p>
         <p>
-          <a href="/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/">Sıcak basması ve gece terlemesi</a> bu dönemin en sık
-          bildirilen belirtileri arasında yer alır; klinik dilde bunlara vazomotor belirtiler denir. Her kadında aynı
-          yoğunlukta olmaz. Ama çıktığında uyku, sabah enerjisi ve gün içi dayanıklılık belirgin etkilenebilir.
+          <a href="/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/">Sıcak basması ve gece terlemesi</a> — klinik
+          dilde vazomotor belirtiler — bu dönemin en sık bildirilen şikâyetleri arasındadır. Her kadında aynı şiddetle
+          görülmez; bazılarında belirgin ısı dalgası ve terleme olurken bazılarında yalnızca sabah yorgunluğu veya
+          yüzeysel uyku fark edilir.
         </p>
         <p>
-          Daha zor fark edilen taraf şu: uyku değişikliği her zaman sıcak basmasıyla gelmez. Bazı kadınlar hiç belirgin
-          terleme yaşamadan daha yüzeysel uyuduğunu, sabaha karşı daha kolay uyandığını ya da eskiye göre daha az
-          dinlenmiş kalktığını anlatır. "Terlemiyorum, demek ki hormonal değil" cümlesi her zaman doğru değildir. "Uykum
-          bozuldu, kesin perimenopoz" demek de fazla hızlı bir sonuç olur.
+          Burada dikkat etmem gereken ayrım şu: uyku değişikliği her zaman sıcak basmasıyla gelmiyor. Poliklinikte
+          karşılaştığım kadınların bir kısmı hiç belirgin terleme olmadan daha sık uyandığını, sabah dinlenmemiş
+          kalktığını ya da eskiye göre çok daha hafif uyuduğunu anlatıyor. "Terlemiyorum, demek ki hormonal değil"
+          sonucu çoğu zaman doğru değildir. Öte yandan "Uykum bozuldu, kesin perimenopoz" da aceleci bir çerçevedir —
+          tiroid, anemi, uyku apnesi ve stres bu tabloya eşlik edebilir ya da tek başına neden olabilir.
         </p>
         <p>
-          Küçük bir ayrım işimize yarar: uykuya dalmak mı zorlaştı, yoksa gece uyanıp tekrar uykuya dönmek mi? Sabah
-          dinlenmemiş kalkmak mı baskın, yoksa gece ısı dalgasıyla uyanmak mı? Hekime giderken bu ayrım, "uyuyamıyorum"
-          cümlesinden çok daha değerli bir bilgi verir.
+          Hekimle görüşürken şu ayrımı taşımak işe yarar: uykuya dalmak mı zorlaştı, yoksa gece uyanıp tekrar
+          uyumak mı? Sabah dinlenmemiş kalkma mı baskın, yoksa ısı dalgasıyla uyanmak mı? Bu iki cümle,
+          "uyuyamıyorum" ifadesinden çok daha değerli bir klinik bilgi sunar.
         </p>
 
         <h2 id="ruh-hali">Ruh Hali, Odak ve "Beyin Sisi"</h2>
-        <p>Perimenopoz yalnızca adet takviminin değil, sinir sisteminin de ritim değiştirdiği bir dönem olabilir. Tam da
-          bu yüzden bazı işaretler bedenden çok, günün tonu değişmiş gibi hissedilir.</p>
+        <p>Perimenopoz yalnızca adet takviminin değil, sinir sisteminin de ritim değiştirdiği bir dönemdir; bu yüzden bazı işaretler bedensel değil, zihinsel tona ait gibi hissedilebilir.</p>
         <p>
-          Bazı kadınlar daha çabuk irrite olduğunu, daha kolay ağladığını, eskiye göre daha hassas ya da sabırsız
-          hissettiğini anlatır. Bazıları ise "unutkanlık değil ama kelime arama", "aynı anda iki işe yetememe", "daha
-          hızlı zihinsel yorulma" gibi odak şikâyetlerini öne çıkarır. Ama bu belirtileri her kadın aynı ölçüde yaşamaz;
-          bazı kadınlarda tablo daha hafif seyreder, bazılarında ise bu başlıkların bir kısmı hiç görülmeyebilir.
+          Kısa süren sinirlilik, daha hızlı gelen gözyaşı, kelime aramak ya da aynı anda iki işe yetememe — bunlar bu
+          dönemde sık bildirilen şikâyetler arasındadır. Menopoz alanındaki klinik veriler, geçiş döneminde bilişsel
+          belirtilerin çoğu zaman hafif ve geçici kaldığını, orta yaşta klinik demansın nadir olduğunu gösteriyor.
+          Bu bilgiyi özellikle vurguluyorum, çünkü "beyin sisi" yaşayan bir kadının bunun kalıcı bir hasar olduğu
+          korkusu genellikle belirtinin kendisinden daha ağırdır.
         </p>
         <p>
-          Menopoz alanındaki uzman kaynaklar, orta yaş kadınlarında geçiş döneminde bilişsel belirtilerin yaygın
-          bildirildiğini; bunun çoğu zaman hafif ve normal sınırlar içinde kaldığını, orta yaşta demansın nadir olduğunu
-          vurgular. Bu bilgi önemli, çünkü "beyin sisi" yaşayan bir kadının korkusu çoğu zaman belirtinin kendisinden daha ağırdır.
-        </p>
-        <p>
-          Yine de ruh hali belirtilerini küçümsememek gerekir. İki haftadan uzun süren belirgin mutsuzluk hali, yoğun kaygı,
-          panik atak benzeri tablolar, işlev kaybı ya da kendine zarar düşünceleri perimenopoz etiketiyle bekletilecek
-          şeyler değildir. Bu ayrım en kıymetli sınır: normalleştirmek rahatlatır; geçiştirmek geciktirir.
+          Bununla birlikte ruh hali değişikliklerini küçümsememek gerekiyor. İki haftadan uzun süren belirgin
+          mutsuzluk hali, yoğun kaygı, panik atak benzeri tablolar, işlev kaybı ya da kendine zarar düşünceleri
+          perimenopoz geçişine bağlanarak bekletilecek şeyler değildir. Bu ayrımı doğru kurmak benim için klinisyen
+          olarak en kıymetli sorumlulukların biri: normalleştirmek rahatlatır; geçiştirmek geciktirir.
         </p>
 
-        <h2 id="evreler-tablo">Perimenopoz Evreleri ve Belirtiler</h2>
-        <p>Hormonal geçiş döneminde bedensel değişimin evrelere göre dağılımı ve karakteristik işaretleri aşağıda özetlenmiştir. Bu tablo STRAW+10 çerçevesine dayanmaktadır; evre sınırları bireyden bireye değişebilir.<sup><a href="#kaynak-2">[2]</a></sup></p>
+        <h2 id="evreler-tablo">Perimenopoz Evreleri</h2>
+        <p>Hormonal geçiş döneminde bedensel değişimin nasıl ilerlediğini anlamak, doğru soruları sormayı kolaylaştırır. Aşağıdaki tablo STRAW+10 çerçevesine dayanmaktadır; evre sınırları kişiden kişiye değişir.<sup><a href="#kaynak-2">[2]</a></sup></p>
 
         <div class="my-8 overflow-x-auto">
           <table class="w-full text-left border-collapse text-sm">
             <thead>
               <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
                 <th class="p-3 font-semibold">Evre</th>
-                <th class="p-3 font-semibold">Adet Düzeni Değişimi</th>
+                <th class="p-3 font-semibold">Adet Düzeni</th>
                 <th class="p-3 font-semibold">Hormon Tablosu</th>
                 <th class="p-3 font-semibold">Öne Çıkan Belirtiler</th>
               </tr>
@@ -207,77 +199,83 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr>
                 <td class="p-3 font-medium">Geç Perimenopoz</td>
-                <td class="p-3">İki adet arası 60 gün veya daha fazla açılır; 1-2 ay adet atlanabilir.</td>
+                <td class="p-3">İki adet arası 60 gün veya daha fazla; 1–2 ay adet atlanabilir.</td>
                 <td class="p-3">FSH yükselir, östrojen belirgin düşüş eğilimine girer.</td>
                 <td class="p-3">Sıcak basması, gece terlemesi, beyin sisi, vajinal kuruluk başlangıcı.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Menopoz (Tamamlanmış)</td>
-                <td class="p-3">Ardışık 12 ay boyunca hiç kanama olmaması durumudur.</td>
-                <td class="p-3">FSH sürekli yüksek, östrojen düşük seviyede kalıcıdır.</td>
+                <td class="p-3">Ardışık 12 ay boyunca hiç kanama olmaması.</td>
+                <td class="p-3">FSH sürekli yüksek, östrojen düşük seviyede kalıcı.</td>
                 <td class="p-3">Son kanamadan geriye dönük netleşir; metabolik ve kemik takibi öne çıkar.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h2 id="testler">Peki Kan Testiyle Anlaşılmaz mı?</h2>
+        <h2 id="testler">Test Meselesi</h2>
+        <p>Belirsizliğin ortasında tek bir sayı görmek güven verici hissettiriyor. Ama perimenopoz, tek bir kan testiyle yakalanması zor bir dönemdir; doğru test, doğru soruya bağlıdır.</p>
         <p>
-          Belirsizliğin ortasında tek bir sayı görmek insana iyi gelir. Ama perimenopoz tam da tek kareyle yakalanması zor
-          bir dönemdir; bugün net görünen tablo, bir sonraki ay başka bir ışıkta durabilir.
+          NICE kılavuzu ve uluslararası klinik rehberler açık: 45 yaş ve üzerindeki sağlıklı kişilerde perimenopoz
+          çoğu zaman laboratuvar testleri olmadan, yeni başlayan vazomotor belirtiler ve adet düzeni değişimiyle
+          klinik olarak tanınabilir. Aynı kılavuz, bu yaş grubunda estradiol, AMH, inhibinler ve antral folikül sayısı
+          gibi testleri perimenopoz tanısı için rutin önermemektedir. FSH ise özellikle 40–45 yaş arası semptomatik
+          kişilerde ya da 40 yaş altı erken yumurtalık yetmezliği şüphesinde daha anlamlı bir yere oturur.
+          <Evidence level={5} /><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
         <p>
-          NICE kılavuzu ve ilgili klinik rehberler, 45 yaş ve üzerindeki sağlıklı kişilerde perimenopozun çoğu zaman laboratuvar
-          testleri olmadan; yeni başlayan vazomotor belirtiler ve adet düzenindeki değişimle klinik olarak tanınabileceğini
-          belirtir. Aynı kılavuz, bu yaş grubunda perimenopozu tanımlamak için estradiol, AMH, inhibinler, antral folikül sayısı
-          gibi testlerin rutin kullanılmamasını önerir. FSH ise özellikle 40–45 yaş arası belirtileri olan kişilerde
-          veya 40 yaş altı erken yumurtalık yetmezliği şüphesinde daha anlamlı olabilir. <Evidence level={5} /><sup><a href="#kaynak-3">[3]</a></sup>
-        </p>
-        <p>
-          Bu, "test gereksizdir" demek değil; "testi duruma göre istemek gerekir" demek. Düzensiz kanama, tiroid
-          bozukluğu şüphesi, demir eksikliği, gebelik ihtimali, ilaç etkisi ya da 40 yaş altı belirtiler varsa hekim
-          elbette başka testler isteyebilir. Perimenopozda iyi hekimlik bazen hormon sonucuna bakmaktan çok, hangi
-          soruya hangi testin cevap vereceğini bilmektir.
+          Bu, "test gereksizdir" demek değildir. Düzensiz kanama, tiroid bozukluğu, demir eksikliği veya gebelik
+          şüphesi varsa elbette farklı testler gerekir. Perimenopozda iyi hekimlik, hangi soruya hangi testin cevap
+          vereceğini bilmekle başlar. Muayene odasına gittiğinizde "Hangi konuda netliğe ihtiyacım var?" sorusunu
+          kendinize sormak, hangi testin isteneceğini birlikte kararlaştırmanıza zemin hazırlar.
         </p>
 
         <h2 id="izleme-hekim">İzleme, Kayıt ve Hekimle Konuşmak</h2>
-        <p>Perimenopoz şüphesinde yapılacak en sakin şey, bedeni sürekli yoklamak değil; onun söylediği şeyi sade bir dille
-          kayda geçirmek olabilir.</p>
+        <p>Perimenopoz şüphesinde yapılacak en verimli şey bedeni sürekli yoklamak değil; onun söylediklerini sade bir dille kaydetmektir.</p>
         <p>
-          Üç ay çoğu zaman iyi bir penceredir: yeterince kısa, çünkü hayatı takıntıya çevirmiyor; yeterince uzun, çünkü
-          seyri görmeye izin veriyor. Ama bu bir bekleme talimatı değildir; belirti sizi zorluyorsa hekime danışmak için
-          takvimin dolmasını beklemeniz gerekmez.
+          Üç aylık bir izleme penceresi hem yeterince kısa hem yeterince uzundur: hayatı takıntıya çevirmiyor,
+          ama seyri görmeye izin veriyor. Bu bir bekleme talimatı değildir. Belirti sizi zorluyorsa hekime danışmak
+          için takvimin dolmasını beklemeniz gerekmez.
         </p>
         <ul>
           <li>Adet başlangıç ve bitiş tarihini, kanama yoğunluğunu ve beklenmedik ara kanamayı not edin.</li>
-          <li>Gece uyanması, sıcak basması, gece terlemesi ve sabah yorgunluğunu haftalık olarak işaretleyin.</li>
+          <li>Gece uyanması, sıcak basması ve sabah yorgunluğunu haftalık olarak işaretleyin.</li>
           <li>Ruh hali, odaklanma, baş ağrısı veya migren değişimini birkaç kelimeyle kaydedin.</li>
-          <li>Kafein, alkol, geç yemek, yoğun stres ve ağır akşam egzersizi gibi tetikleyiciler için ayrı not düşünün.</li>
+          <li>Kafein, alkol, geç yemek ve yoğun stres gibi tetikleyiciler için ayrı not düşünün.</li>
           <li>Belirti sizi hekime götürecek kadar rahatsız ediyorsa "üç ay bitsin" diye beklemeyin.</li>
         </ul>
 
-        <p>Perimenopoz doğal bir dönemdir; ama doğal olması, her belirtiyi evde taşımak gerektiği anlamına gelmez. Aşağıdaki
-          durumlar hekim görüşmesini geciktirmeden gerektirir:</p>
+        <p>Aşağıdaki durumlarda erteleme yerine hekime başvurmanın doğru olduğunu düşünüyorum:</p>
         <ul>
           <li>Kanamanın çok yoğunlaşması, pıhtılı olması ya da günlük hayatı belirgin şekilde bozması.</li>
           <li>Adet arası kanama, ilişki sonrası kanama veya menopozdan sonra yeniden kanama görülmesi.</li>
           <li>40 yaşından önce perimenopoz benzeri belirtilerin başlaması.</li>
-          <li>Gece terlemesi, çarpıntı, kilo değişimi veya yorgunluğun tiroid, anemi ya da başka bir tabloyu düşündürmesi.</li>
+          <li>Gece terlemesi, çarpıntı, kilo değişimi veya yorgunluğun tiroid ya da başka bir tabloyu düşündürmesi.</li>
           <li>İki haftadan uzun süren belirgin mutsuzluk hali, yoğun kaygı, panik veya işlev kaybı.</li>
           <li>Uyku bozukluğunun üç ayı aşması ya da gündüz işlevini belirgin şekilde bozması.</li>
         </ul>
 
+        <p>
+          Bedeniniz işaret veriyor; bunları not etmek bir kontrol listesi doldurmak değil, o görüşmede birlikte
+          daha net düşünmemizi sağlamak içindir. Görüşmeye gittiğinizde şu üç soruyu yanınızda götürmenizi öneririm:
+        </p>
+        <ul>
+          <li><em>"Bu değişim benim için ne kadar anlamlı — yalnızca dikkatimi mi çekiyor, yoksa günlük hayatımı etkiliyor mu?"</em></li>
+          <li><em>"Bu tabloda ayırt edilmesi gereken başka bir neden var mı?"</em></li>
+          <li><em>"Şu an için bir şey yapmak gerekiyor mu, yoksa izlemek yeterli mi?"</em></li>
+        </ul>
+
         <h2 id="kaynaklar">Kaynaklar</h2>
         <p>
-          Bu makalede klinik eşikler, evre sınıflandırması ve test kullanım önerileri aşağıdaki kaynaklara dayanmaktadır.
-          Kaynak taraması: 3 Ağustos 2026.
+          Bu makalede kullanılan klinik eşikler, evre sınıflandırması ve test kullanım önerileri aşağıdaki kaynaklara
+          dayanmaktadır. Kaynak taraması: 3 Ağustos 2026.
         </p>
         <ol>
           <li id="kaynak-1">
-            Harlow SD ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/22253296/" rel="noopener noreferrer">Executive summary of the Stages of Reproductive Aging Workshop+10</a>. Climacteric. 2012.
+            Harlow SD ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/22253296/" rel="noopener noreferrer">Executive summary of the Stages of Reproductive Aging Workshop+10 (STRAW+10)</a>. Menopause. 2012.
           </li>
           <li id="kaynak-2">
-            Harlow SD ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/22253296/" rel="noopener noreferrer">STRAW+10: Staging of reproductive aging — adet aralığı değişimi eşikleri ve evre tanımları</a>. Menopause. 2012.
+            Harlow SD ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/22253296/" rel="noopener noreferrer">STRAW+10: Staging the menopause transition — adet aralığı değişimi eşikleri ve evre tanımları</a>. Climacteric. 2012.
           </li>
           <li id="kaynak-3">
             National Institute for Health and Care Excellence (NICE). <a href="https://www.nice.org.uk/guidance/ng23" rel="noopener noreferrer">Menopause: diagnosis and management — NG23</a>. 2015, güncelleme 2019.
@@ -297,28 +295,29 @@ const articleSchemas = buildArticleSchemas({
       />
 
       <ArticleEditorNote>
-        <p class="mb-4 text-lg font-semibold text-ink">Klinik Not — Bilimsel Editör</p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p>
-            <strong class="text-primary">Tanı çerçevesi:</strong> Perimenopoz, over fonksiyonunun düzensizleştiği ve
-            menstrual düzenin değiştiği geçiş dönemidir. NICE 2019 kılavuzuna göre 45 yaş üzerindeki sağlıklı kişilerde
-            yeni başlayan vazomotor belirtiler ve adet düzeni değişikliği çoğu zaman klinik tanı için yeterli zemini sağlar.
+            <strong class="text-primary">Tanı çerçevesi:</strong> NICE 2019 kılavuzuna göre 45 yaş üzerindeki
+            sağlıklı kişilerde yeni başlayan vazomotor belirtiler ve adet düzeni değişikliği çoğu zaman klinik
+            tanı için yeterlidir. Perimenopoz tanısı koymak için tek bir hormon ölçümüne dayanmak genellikle
+            yanıltıcıdır; östrojen ve FSH bu dönemde belirgin dalgalanır.
           </p>
           <p>
-            <strong class="text-primary">Kanama paterninin önemi:</strong> STRAW+10 çerçevesine göre adet aralığının
+            <strong class="text-primary">Kanama değişiminin önemi:</strong> STRAW+10 çerçevesine göre adet aralığının
             birden fazla dönem boyunca yedi gün veya daha fazla değişmesi erken geçişi, 60 gün ve üzeri aralıklar geç
-            geçişi düşündürebilir; ancak yoğun, ara, ilişki sonrası veya postmenopozal kanama ayrıca değerlendirilmelidir.
+            geçişi düşündürebilir. Yoğun, ara, ilişki sonrası veya postmenopozal kanama ise geçişten bağımsız olarak
+            ayrıca değerlendirilmelidir.
           </p>
           <p>
-            <strong class="text-primary">Test yorumu:</strong> Östrojen ve FSH perimenopozda dalgalanabildiği için tek
-            ölçüm çoğu zaman sınırlı bilgi verir. NICE kılavuzu, 45 yaş üzerindeki sağlıklı kişilerde estradiol, AMH,
-            inhibinler ve görüntüleme temelli yumurtalık belirteçlerini rutin önermemektedir; FSH daha çok 40–45 yaş arası
-            semptomatik kişilerde veya 40 yaş altı erken yumurtalık yetmezliği şüphesinde anlamlıdır.
+            <strong class="text-primary">Test kullanımı:</strong> Estradiol, AMH ve antral folikül sayısı gibi testler
+            perimenopoz tanısı için 45 yaş üzerindeki sağlıklı kişilerde rutin olarak önerilmemektedir. FSH; 40–45 yaş
+            arası semptomatik kişilerde veya 40 yaş altı erken yumurtalık yetmezliği şüphesinde anlamlı ek bilgi
+            sağlayabilir.
           </p>
           <p>
-            <strong class="text-primary">Bireysellik vurgusu:</strong> Uyku, ruh hali, bilişsel yakınmalar ve vazomotor
-            belirtiler perimenopozla ilişkili olabilir; ancak tiroid hastalığı, anemi, gebelik, ilaç etkisi, depresyon,
-            uyku apnesi ve başka jinekolojik nedenler ayırıcı tanıda kalmalıdır.
+            <strong class="text-primary">Ayırıcı tanı:</strong> Uyku, ruh hali, bilişsel yakınmalar ve vazomotor
+            belirtiler perimenopozla ilişkili olabilir; ancak tiroid hastalığı, anemi, gebelik, ilaç etkisi, depresyon
+            ve uyku apnesi ayırıcı tanıda akılda tutulmalıdır.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
             — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
