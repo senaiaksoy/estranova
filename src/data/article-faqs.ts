@@ -557,29 +557,34 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/': [
     {
+      question: 'Sıcak basması ile gece terlemesi aynı şey mi?',
+      answer:
+        'İkisi de beynin ısı düzenleme merkezindeki dalgalanmadan kaynaklanan vazomotor belirtilerdir. Sıcak basması genellikle gündüz aniden gelen bir sıcaklık dalgası ve kızarma şeklinde hissedilirken; gece terlemesi aynı mekanizmanın uyku sırasında ortaya çıkarak uykuyu bölmesi durumudur.',
+    },
+    {
       question: 'Menopozda sıcak basmasına ne iyi gelir?',
       answer:
-        'Serin bir ortam, ince ve katmanlı giyinmek, kişisel tetikleyicileri izlemek ve düzenli uyku-hareket ritmi bazı kadınlarda yakınmayı hafifletebilir. Belirtiler uykuyu veya gündelik hayatı belirgin etkiliyorsa hormon tedavisi ve hormon dışı seçenekler kişisel sağlık öykünüzle birlikte hekim tarafından değerlendirilir.',
+        'Serin ortam, katmanlı giyinmek, kişisel tetikleyicileri izlemek ve düzenli uyku-hareket ritmi konfor sağlayabilir. Belirtiler uykuyu veya gündelik hayatı belirgin etkiliyorsa hormon tedavisi ve hormon dışı seçenekler kişisel sağlık öykünüzle birlikte hekim tarafından değerlendirilir.',
     },
     {
       question: 'Sıcak basması neden gece daha şiddetli olabilir?',
       answer:
-        'Gece boyunca vücut ısısının doğal değişimi, kalın yatak örtüleri, sıcak oda, akşam alkolü veya ağır yemek gibi etkenler terlemeyi daha fark edilir hâle getirebilir. Odayı serin tutmak ve kolay çıkarılabilen katmanlar kullanmak gece bölünmelerini azaltmaya yardımcı olabilir.',
+        'Gece boyunca vücut ısısının doğal değişimi, oda sıcaklığı, kalın örtüler, akşam alkolü veya ağır yemek terlemeyi daha fark edilir kılabilir. Oda serinliği ve katmanlı nevresim uykunun bölünmesini azaltabilir.',
     },
     {
       question: 'Sıcak basması ne kadar sürer?',
       answer:
-        'Süre kişiden kişiye değişir. Bazı kadınlarda birkaç yıl içinde hafiflerken bazılarında daha uzun sürebilir; bu nedenle yalnızca ne kadar zamandır devam ettiğine değil, şiddetine ve yaşam kalitesine etkisine bakılır.',
+        'Süre kişiden kişiye değişir. Bazı kadınlarda birkaç yıl içinde hafiflerken bazılarında daha uzun sürebilir; bu nedenle yalnızca süreye değil, şiddetine ve yaşam kalitesine etkisine bakılır.',
     },
     {
       question: 'Hormon tedavisi dışında seçenekler var mı?',
       answer:
-        'Evet. Bazı antidepresan grupları, gabapentin ve uygun durumlarda diğer hormon dışı tedaviler değerlendirilebilir. Her seçeneğin yararı, yan etkileri ve ilaç etkileşimleri farklı olduğu için karar bireysel öykü ve muayeneyle birlikte verilir.',
+        'Evet. Bazı antidepresan grupları, gabapentin, bilişsel davranışçı terapi ve kılavuzlarda yer alan diğer hormon dışı tedaviler değerlendirilebilir. Karar bireysel öykü ve yan etki profiline göre verilir.',
     },
     {
       question: 'Gece terlemesi ne zaman yalnızca menopoza bağlanmamalı?',
       answer:
-        'Gece terlemesine açıklanamayan kilo kaybı, ateş, sürekli çarpıntı, titreme veya yeni başlayan şiddetli yakınmalar eşlik ediyorsa başka nedenler de değerlendirilmelidir. Bu belirtiler varsa hekime başvurmayı geciktirmeyin.',
+        'Gece terlemesine açıklanamayan kilo kaybı, yüksek ateş, sürekli çarpıntı, titreme veya göğüs ağrısı gibi alışılmadık yakınmalar eşlik ediyorsa başka biyolojik nedenler de değerlendirilmelidir; tabloyu bekleyerek geçiştirmemek gerekir.',
     },
   ],
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': [

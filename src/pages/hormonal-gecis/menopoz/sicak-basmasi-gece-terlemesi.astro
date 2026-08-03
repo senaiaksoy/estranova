@@ -21,12 +21,10 @@ const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/sicak-basmasi-gece-terl
 
 const tocEntries = [
   { id: 'nedir', label: 'Vazomotor Belirti Ne Demek?' },
-  { id: 'seyir', label: 'Belirtilerin Seyri Bize Ne Söyler?' },
-  { id: 'sure', label: 'Ne Kadar Sürebilir?' },
+  { id: 'seyir-sure', label: 'Belirtilerin Seyri ve Süresi' },
   { id: 'gunluk-adimlar', label: 'Günlük Hayatta Ne Yardımcı Olabilir?' },
   { id: 'tedavi-karari', label: 'Tedavi Kararı Nasıl Verilir?' },
-  { id: 'hormon-disi', label: 'Hormon Dışı Seçenekler' },
-  { id: 'karsilastirma', label: 'Tedavi Yollarının Karşılaştırması' },
+  { id: 'tedavi-karsilastirma', label: 'Hormon Dışı Seçenekler ve Karşılaştırma' },
   { id: 'baska-nedenler', label: 'Ne Zaman Başka Neden Aranır?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
@@ -36,7 +34,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Sıcak Basması ve Gece Terlemesi: Neden Olur, Ne İyi Gelir?';
 const seoTitle = 'Menopozda Sıcak Basması ve Gece Terlemesi: Neden Olur, Ne İyi Gelir?';
 const articleDescription =
-  'Menopozda sıcak basması ve gece terlemesi neden olur, ne iyi gelir? Sıcak basması nedenleri, gece ateş basması tetikleyicileri ve hormonlu-hormonsuz tedavi seçenekleri.';
+  'Menopozda sıcak basması ve gece terlemesinin nedenlerini, günlük rahatlatıcı adımları ve hormon tedavisi ile hormon dışı seçeneklerin hangi koşullarda değerlendirildiğini açıklayan sakin bir rehber.';
 const faqItems = articleFaqs['/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -62,7 +60,6 @@ const articleSchemas = buildArticleSchemas({
     'tetikleyiciler',
   ],
   faqItems,
-
   siteUrl,
 });
 ---
@@ -84,7 +81,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
         publishedDate="25 Nisan 2026"
-        lastUpdated="2 Ağustos 2026"
+        lastUpdated="3 Ağustos 2026"
         readingMinutes={9}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/sicak-basmasi-gece-terlemesi-byline.webp"
@@ -93,55 +90,36 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Sıcak basması ve gece terlemesi menopoz geçişinde sık görülür; fakat her kadın aynı biçimde yaşamaz.
-          Bazen kısa bir sıcaklık dalgası olarak geçer, bazen geceyi ve ertesi günü böler. Serinleme önlemleri
-          rahatlatabilir ama belirtiler uykunuzu veya gündelik yaşamınızı bozuyorsa bununla yetinmek zorunda
-          değilsiniz. Hormon tedavisi ve hormon dışı seçenekler, sağlık öykünüz ve önceliklerinizle birlikte değerlendirilir.
+          Sıcak basması ve gece terlemesi menopoz geçişinde sadece "katlanılacak bir dönem" değildir; bilgi, belirsizliğin ve sessizce çekilen sıkıntının en güçlü panzehiridir.
+          Östrojen dalgalanmaları beynin ısı düzenleme merkezini hassaslaştırır. Serinleme önlemleri geçici konfor sağlarken; uykuyu ve gündelik yaşamı etkileyen durumlarda hormon tedavisi (HRT) ve hormon dışı reçeteli seçenekler kişisel risk profiliyle birlikte hekim kontrolünde değerlendirilir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="nedir">Vazomotor Belirti Ne Demek?</h2>
-        <p>Sıcak basması bazen gerçekten “içeriden açılmış bir ısı” gibi gelir. Oysa beden, küçük bir değişime güçlü bir serinleme yanıtı vermektedir.</p>
+        <p>Sıcak basması ve gece terlemesi, menopozal geçişte östrojen düşüşü nedeniyle beynin termostat merkezinin (hipotalamus) hassaslaşmasıyla oluşan vazomotor belirtilerdir.</p>
         <p>
           Muayene odasında tarif çoğu zaman benzerdir: “Önce yüzüm yanıyor, sonra terliyorum; bittiğinde de
-          üşüyorum.” Gece olduğunda aynı dalga uykuyu böler. Bu tek bir hastanın öyküsü değil, görüşmelerde
-          tekrar eden anonim bir gözlemdir. Yine de sizin dalganızın sıklığı, şiddeti ve yanında getirdikleri
-          farklı olabilir.
+          üşüyorum.” Gece olduğunda aynı dalga uykuyu böler. Bu tek bir kadının öyküsü değil, klinik görüşmelerde
+          tekrar eden anonim bir deneyimdir. Yine de sizin dalganızın sıklığı, şiddeti ve yanında getirdikleri
+          kendinize özgüdür. Bu bir dayanıklılık sınavı değildir; bedeniniz değişen hormon ritmine geçici bir serinleme yanıtı vermektedir.
         </p>
         <p>
           Tıp dilinde bunlara <em>vazomotor belirtiler</em> denir. Menopoz geçişindeki hormonal değişimlerin,
-          beynin ısı düzenleme sistemini etkilediği düşünülür. Bu sistemdeki değişiklikler cilt damarlarının
-          genişlemesini ve terlemeyi başlatan ısı kaybı yanıtıyla ilişkilidir <Evidence level={4} />.
+          beynin ısı düzenleme sistemini etkilediği bilinmektedir. Bu sistemdeki hassasiyet cilt damarlarının
+          genişlemesini ve ani terlemeyi başlatan ısı kaybı yanıtıyla ilişkilidir <Evidence level={4} />.
           <sup><a href="#kaynak-4">[4]</a></sup>
         </p>
 
-        <h2 id="seyir">Belirtilerin Seyri Bize Ne Söyler?</h2>
-        <p>Ben yalnızca “Günde kaç kez oluyor?” diye sormam. Asıl belirleyici olan, bu dalgaların hayatınızda neyi böldüğüdür.</p>
+        <h2 id="seyir-sure">Belirtilerin Seyri ve Süresi</h2>
+        <p>Burada yalnızca “günde kaç kez oluyor?” sorusuna takılmamak gerekir; asıl belirleyici olan, bu dalgaların hayatınızda neyi böldüğüdür.</p>
         <p>
           Bazı kadınlarda dalgalar seyrek ve kısa sürer. Bazılarında gecede birkaç kez uyanmaya, ertesi gün
-          yorgunluğa ve odaklanma güçlüğüne yol açar. Bu fark bir dayanıklılık sınavı değildir. Tedavi gereksinimini
-          belirti sayısından çok uykuya, işe ve yaşam kalitesine etkisi belirler.
+          yorgunluğa ve odaklanma güçlüğüne yol açar. Büyük bir uzunlamasına çalışmada sık vazomotor belirti yaşayan kadınlarda toplam ortanca süre yaklaşık 7,4 yıl bulunmuştur; belirtiler son adet döneminden önce başlayanlarda süre daha uzun olabilmiştir <Evidence level={4} />.<sup><a href="#kaynak-2">[2]</a></sup>
         </p>
         <p>
-          Birkaç haftalık kısa kayıt yararlı olabilir: dalganın saati, gece uyanması, o gün kullanılan ilaçlarda
-          değişiklik ve olağandışı bir eşlikçi belirti. Amaç uzun bir yasak listesi çıkarmak değil, sizde tekrar
-          eden tabloyu fark etmektir. Başka bir kadını etkileyen unsur sizde hiçbir şey değiştirmeyebilir.
-        </p>
-
-        <h2 id="sure">Ne Kadar Sürebilir?</h2>
-        <p>“Ne zaman geçecek?” muayene odasında cevaplaması en zor sorulardan biri. Çünkü sıcak basmasının tek bir takvimi yok.</p>
-        <p>
-          Büyük bir uzunlamasına çalışmada sık vazomotor belirti yaşayan kadınlarda toplam ortanca süre yaklaşık
-          7,4 yıl bulunmuştur; belirtiler son adet döneminden önce başlayanlarda süre daha uzun olabilmiştir.
-          Bu sayı sizin için başlatılmış bir geri sayım değildir. Belirli bir çalışma grubunun ortanca sonucunu
-          gösterir; tek bir kadının ne kadar süre belirti yaşayacağını söylemez <Evidence level={4} />.
-          <sup><a href="#kaynak-2">[2]</a></sup>
-        </p>
-        <p>
-          Belirtiler haftalar arasında dalgalanabilir. Birkaç kötü gece, mutlaka sürekli kötüleşme anlamına
-          gelmez. Buna karşılık aylar sonra hâlâ uykunuz ve gündüz işleviniz belirgin etkileniyorsa “geçmesini
-          beklemek” tek seçenek değildir.
+          Bu sayı sizin için başlatılmış sabit bir geri sayım değildir. Belirtiler haftalar arasında dalgalanabilir. Birkaç kötü gece, mutlaka sürekli kötüleşme anlamına
+          gelmez. Ancak aylar sonra hâlâ uykunuz ve gündüz işleviniz belirgin etkileniyorsa “sürecin kendi kendine geçmesini beklemek” tek seçenek değildir.
         </p>
 
         <h2 id="gunluk-adimlar">Günlük Hayatta Ne Yardımcı Olabilir?</h2>
@@ -153,41 +131,33 @@ const articleSchemas = buildArticleSchemas({
           <li>Yalnızca sizde tekrar eden tetikleyicileri not etmek</li>
         </ul>
         <p>
-          Düzenli hareket, sigarayı bırakma ve genel uyku sağlığı başka sağlık nedenleriyle değerlidir; ancak
+          Düzenli hareket, sigarayı bırakma ve genel uyku hijyeni başka sağlık nedenleriyle değerlidir; ancak
           bunları sıcak basmasını kesin olarak durduran reçeteler gibi sunmak doğru olmaz. Nefes egzersizleri
-          o anda sakinleşmenize yardımcı olabilir, fakat vazomotor belirtilerin tedavisinde güçlü ve tutarlı kanıtlı
-          bir yöntem olarak kabul edilmez <Evidence from={2} to={3} />.<sup><a href="#kaynak-3">[3]</a></sup>
+          o anda sakinleşmeye yardımcı olabilir, fakat vazomotor belirtilerin tedavisinde güçlü ve tutarlı bir medikal yöntem olarak kabul edilmez.
         </p>
 
         <h2 id="tedavi-karari">Tedavi Kararı Nasıl Verilir?</h2>
-        <p>Birçok kadın tedaviyi ancak “Artık dayanamıyorum” noktasında konuşabileceğini sanıyor. O noktayı beklemek gerekmiyor.</p>
+        <p>Birçok kadın tedaviyi ancak “Artık dayanamıyorum” noktasında konuşabileceğini sanıyor; oysa o noktayı beklemek gerekmiyor.</p>
         <p>
-          Menopoz hormon tedavisi, uygun adaylarda sıcak basması ve gece terlemesini azaltmada en etkili tedavi
-          seçeneğidir <Evidence level={5} />.<sup><a href="#kaynak-1">[1]</a></sup> Fakat karar yalnızca belirtinin
-          şiddetine göre verilmez. Yaş, menopozdan geçen süre, rahmin bulunup bulunmaması, kişisel sağlık öyküsü,
-          tromboz ve bazı kanserler açısından riskler ile kişinin öncelikleri birlikte değerlendirilir.
+          Menopoz hormon tedavisi, uygun adaylarda sıcak basması ve gece terlemesini azaltmada genel olarak en güçlü kanıt ve etki düzeyine sahip seçenektir <Evidence level={5} />.<sup><a href="#kaynak-1">[1]</a></sup> Fakat karar yalnızca belirtinin şiddetine göre verilmez. Yaş, menopozdan geçen süre, rahmin bulunup bulunmaması, kişisel sağlık öyküsü, tromboz ve bazı kanserler açısından riskler ile kişinin öncelikleri birlikte değerlendirilir.
         </p>
         <p>
-          Bu görüşmelerde sık karşılaştığım düşünce şu: “Hormon tedavisi ya herkes için iyidir ya da herkes için
-          tehlikelidir.” Tıp çoğu zaman bu kadar siyah-beyaz değildir. Aynı belirtiyle gelen iki kadının farklı
-          karar vermesi son derece doğaldır.
+          Klinik görüşmelerde sık karşılaşılan düşüncelerden biri şu: “Hormon tedavisi ya herkes için iyidir ya da herkes için tehlikelidir.” Tıp çoğu zaman bu kadar siyah-beyaz değildir. Hekiminizle görüşmeye giderken şu üç soruyu masaya getirmek ortak karar vermeyi kolaylaştırır:
         </p>
+        <ul>
+          <li><em>“Bu belirtiler uykumu ve gündüz işlevimi ne kadar etkiliyor?”</em></li>
+          <li><em>“Benim için hormon tedavisini düşündüren veya uzaklaştıran kişisel bir sağlık öyküsü var mı?”</em></li>
+          <li><em>“Hormon dışı seçeneklerde mevcut ilaçlarım ve olası yan etkiler nasıl hesaba katılmalı?”</em></li>
+        </ul>
 
-        <h2 id="hormon-disi">Hormon Dışı Seçenekler</h2>
-        <p>Hormon tedavisi sizin için uygun değilse veya bunu tercih etmiyorsanız konuşma burada bitmez.</p>
+        <h2 id="tedavi-karsilastirma">Hormon Dışı Seçenekler ve Karşılaştırma</h2>
+        <p>Hormon tedavisi sizin için uygun değilse veya bunu tercih etmiyorsanız konuşma burada bitmez; bilimsel kılavuzlarda farklı yollar mevcuttur.</p>
         <p>
-          Bazı antidepresan grupları, gabapentin, bilişsel davranışçı terapi ve belirli yeni hormon dışı ilaçlar
-          kılavuzlarda seçenekler arasında yer alır <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
-          Bunların hepsini aynı sepete koymamak gerekir. Uykunuz, kullandığınız diğer ilaçlar, olası yan etkiler
-          ve eşlik eden sağlık durumları hangi seçeneğin sizin için daha makul olduğunu değiştirir.
+          Bazı antidepresan grupları, gabapentin, bilişsel davranışçı terapi (CBT) ve belirli yeni hormon dışı ilaçlar kılavuzlarda seçenekler arasında yer alır. Bilişsel davranışçı terapi (CBT), sıcak basmasının fizyolojik frekansını sıfırlamasa da belirtilerle baş etme, kaygıyı azaltma ve yaşam kalitesini artırmada değerli bir destek sağlar.
         </p>
         <p>
-          Özellikle reçeteli seçeneklerde “hormonsuz” sözcüğü “risksiz” anlamına gelmez. İlaç etkileşimleri,
-          yan etkiler ve gerekli takip daha tedavi başlamadan konuşulmalıdır.
+          Reçeteli seçeneklerde “hormonsuz” sözcüğü “risksiz” anlamına gelmez. İlaç etkileşimleri ve yan etkiler hekiminizle birlikte değerlendirilmelidir. Aşağıdaki tablo, öne çıkan üç ana yönetim yolunun genel kanıt niteliğini özetlemektedir:
         </p>
-
-        <h2 id="karsilastirma">Tedavi Seçeneklerinin Karşılaştırılması</h2>
-        <p>Menopozda sıcak basması ve gece terlemesinde öne çıkan üç ana yönetim yolunun kanıt gücü ve belirleyici özellikleri aşağıda özetlenmiştir:</p>
 
         <div class="my-8 overflow-x-auto">
           <table class="w-full text-left border-collapse text-sm">
@@ -195,7 +165,7 @@ const articleSchemas = buildArticleSchemas({
               <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
                 <th class="p-3 font-semibold">Yönelim / Seçenek</th>
                 <th class="p-3 font-semibold">Etki Mekanizması</th>
-                <th class="p-3 font-semibold">Kanıt Düzeyi</th>
+                <th class="p-3 font-semibold">Kanıt Niteliği</th>
                 <th class="p-3 font-semibold">Klinik Öncelik & İzlem</th>
               </tr>
             </thead>
@@ -203,36 +173,32 @@ const articleSchemas = buildArticleSchemas({
               <tr>
                 <td class="p-3 font-medium">Hormon Replasman Tedavisi (HRT)</td>
                 <td class="p-3">Eksilen östrojeni yerine koyarak hipotalamus ısı regülasyonunu dengeler.</td>
-                <td class="p-3"><Evidence level={5} /> (En yüksek)</td>
-                <td class="p-3">Semptom kontrolünde en etkili seçenektir; yaş, başlama zamanı ve risk profiline göre hekimle planlanır.</td>
+                <td class="p-3">Güçlü Klinik Kanıt (Seviye 5)</td>
+                <td class="p-3">Uygun adaylarda semptom kontrolünde en etkili seçenektir; kişisel öyküyle planlanır.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Hormon Dışı Reçeteli Seçenekler</td>
-                <td class="p-3">Nörotransmitter ve nöronal yolları düzenleyerek ısı dalgalarını baskılar.</td>
-                <td class="p-3"><Evidence level={4} /> (Yüksek)</td>
+                <td class="p-3">Beyindeki ısı düzenleme ve sinyal yollarını farklı biçimlerde etkiler.</td>
+                <td class="p-3">İyi Klinik Kanıt (Seviye 4)</td>
                 <td class="p-3">HRT uygun olmadığında veya tercih edilmediğinde hekim takibinde değerlendirilir.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Yaşam Tarzı & Serinleme Adımları</td>
-                <td class="p-3">Tetikleyicileri azaltır, katmanlı giyim ve ortam serinliği ile dalgayı hafifletir.</td>
-                <td class="p-3"><Evidence from={2} to={3} /> (Destekleyici)</td>
-                <td class="p-3">Temel konfor sağlar; şiddetli ve uykuyu bölen dalgalarda medikal destek yerini alamaz.</td>
+                <td class="p-3">Tetikleyicileri azaltır, katmanlı giyim ve ortam serinliği ile konforu artırır.</td>
+                <td class="p-3">Destekleyici Kanıt (Seviye 2-3)</td>
+                <td class="p-3">Temel konfor sağlar; şiddetli ve uykuyu bölen dalgalarda medikal tedavinin yerini almaz.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <h2 id="baska-nedenler">Ne Zaman Başka Neden Aranır?</h2>
-        <p>Menopoz sık rastlanan bir açıklamadır; ama her terlemeyi ve çarpıntıyı onun üzerine bırakmak doğru olmaz.</p>
+        <p>Menopoz sık rastlanan bir açıklamadır; ama her terlemeyi ve çarpıntıyı tek bir nedene bağlayıp diğer olasılıkları kapatmamak gerekir.</p>
         <p>
-          Yeni başlayan veya alışılmış seyrinizden belirgin farklı gece terlemeleri; ateş, açıklanamayan kilo
-          kaybı, sürekli çarpıntı, titreme, göğüs ağrısı, bayılma ya da belirgin genel durum değişikliğiyle
-          birlikteyse değerlendirme gerekir. Tiroid işlev bozuklukları, enfeksiyonlar, kullanılan ilaçlar ve
-          başka durumlar benzer yakınmalara yol açabilir.
+          Yeni başlayan veya alışılmış seyrinizden belirgin farklı gece terlemelerine yüksek ateş, açıklanamayan kilo kaybı veya titreme eşlik ediyorsa tiroid işlev bozuklukları, enfeksiyonlar ve kullanılan ilaçlar açısından genel hekim değerlendirmesi gerekir.
         </p>
         <p>
-          Uykusuzluk gündüz işlevinizi bozuyorsa veya belirgin kaygı ve depresif belirtiler eşlik ediyorsa bunu
-          da görüşmenin parçası yapın. Bunları anlatmak konuyu dağıtmaz; tam tersine, tablonun tamamını görmemizi sağlar.
+          Göğüs ağrısı, ani gelişen nefes darlığı veya bayılma gibi akut durumlar ise menopozla ilişkilendirilip bekletilecek şeyler değildir; vakit kaybetmeden tıbbi değerlendirme gerektirir. Tabloyu panik yapmadan ama bekleyerek geçiştirmeden ele almak en dürüst yaklaşımdır.
         </p>
 
         <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
@@ -245,8 +211,7 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
         <p>
-          Tedavi, süre ve kanıt sınırları aşağıdaki klinik görüş bildirileri ve uzunlamasına çalışma üzerinden
-          gözden geçirildi. Kaynak taraması: 2 Ağustos 2026.
+          Tedavi, süre ve kanıt sınırları aşağıdaki klinik görüş bildirileri ve uzunlamasına çalışma üzerinden gözden geçirildi. Kaynak taraması: 3 Ağustos 2026.
         </p>
         <ol>
           <li id="kaynak-1">
@@ -276,22 +241,17 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleEditorNote>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Vazomotor belirtilerde tedavi gereksinimini yalnızca dalga sayısı değil, uyku ve gündelik yaşam
-          üzerindeki etki belirler. Hormon tedavisi uygun adaylarda en etkili seçenektir; hormon dışı yolların
-          seçimi ise eşlik eden yakınmalar, kullanılan ilaçlar ve yan etki profiline göre yapılır. Serinleme
-          önlemleri konfor sağlayabilir, ancak nefes egzersizi veya tetikleyici kaçınmasını güçlü tıbbi tedavilerle
-          aynı kanıt düzeyinde sunmamak gerekir. Ateş, açıklanamayan kilo kaybı, sürekli çarpıntı veya alışılmış
-          seyirden belirgin sapma varsa başka nedenler ayrıca değerlendirilmelidir.
+          Bu yazı, vazomotor belirtileri anlamak ve hekim görüşmesine hazırlanmak için genel bir başlangıç çerçevesidir; kişisel riskler, eşlik eden hastalıklar ve kullanılan ilaçlar tedavi seçimini değiştirebilir.
+          Vazomotor belirtilerde tedavi gereksinimini yalnızca dalga sayısı değil, uyku ve gündelik yaşam üzerindeki etki belirler. Hormon tedavisi uygun adaylarda en etkili seçenektir; hormon dışı yolların seçimi ise eşlik eden yakınmalar ve yan etki profiline göre yapılır.
         </p>
         <p class="text-sm italic text-primary">
           — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı
         </p>
       </ArticleEditorNote>
 
-       <ArticleDisclaimer>
-<p>
-          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi
-          hekiminizle birlikte değerlendirme yapınız.
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için kendi hekiminizle birlikte değerlendirme yapınız.
         </p>
       </ArticleDisclaimer>
     </SubmenuArticleBody>
