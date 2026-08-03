@@ -974,8 +974,8 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
-    title: 'Cinsellikte Ağrı — Menopozda Dispareuniya Rehberi',
-    description: 'Menopozda cinsellikte ağrı veya rahatsızlığın nedenleri ve tedavi seçenekleri hakkında kapsamlı rehberlik.',
+    title: 'Cinsellikte Ağrı — Menopozda Disparoni Rehberi',
+    description: 'Menopozda cinsel ilişkide ağrı (disparoni) ve alt-tipleri, vajinal kuruluk ile pelvik taban tedavilerini içeren sade klinik rehber.',
     publishedDate: '3 Nisan 2026',
     writerSlug: 'senai-aksoy',
     section: 'Beden & Yakınlık',
