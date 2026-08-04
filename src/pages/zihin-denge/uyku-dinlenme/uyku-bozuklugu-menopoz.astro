@@ -33,6 +33,7 @@ const tocEntries = [
   { id: 'tibbi-tedavi', label: 'Tıbbi Tedavi Seçenekleri' },
   { id: 'uzman-ne-zaman', label: 'Ne Zaman Uzmana Başvurmalı' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
@@ -40,12 +41,13 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi';
 const seoTitle = 'Menopozda Uykusuzluk ve Uyku Bozukluğu: Neden Olur, Ne İyi Gelir?';
 const articleDescription =
-  'Menopozda uykusuzluk neden artar, gece uyanmaları neden olur, ne iyi gelir? Progesteron düşüşü, melatoninin rolü, uyku hijyeni ve çözüm yolları.';
+  'Menopozda uykusuzluk, gece uyanmaları ve sıcak basmaları arasındaki ilişkiyi; uyku düzenini, CBT-I seçeneğini ve ne zaman değerlendirme gerektiğini anlatan kaynaklı rehber.';
 const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '12 Mart 2026',
   modifiedDate: '3 Ağustos 2026',
   pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
@@ -55,7 +57,7 @@ const articleSchemas = buildArticleSchemas({
     'menopozda uykusuzluk',
     'menopozda uyku bozukluğu',
     'menopozda gece uyanması',
-    'menopoz uykuya dalama',
+    'menopozda uykuya dalamama',
     'perimenopoz uyku',
     'insomnia',
     'progesteron uyku',
@@ -90,7 +92,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         publishedDate="12 Mart 2026"
         readingMinutes={6}
-        imageSrc="/images/library/editorial/zd-uyku-bozuklugu.webp"
+        imageSrc="/images/library/editorial/zd-uyku-bozuklugu-byline.webp"
         imageAlt="Yumuşak sabah ışığında uyku günlüğü, çay bardağı ve başucu masası; menopozda uyku bozukluğu için editoryal görsel"
       />
 
@@ -104,21 +106,20 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
 <p>
-          Menopozda uykusuzluk, ilk bakışta görünenden daha katmanlı bir konudur. Sıcak basması, hormon dalgalanması ve
-          ruh hâli değişimleri aynı anda devreye girince sabah dinlenmemiş uyanmak alışkanlık hâline gelebilir.
-          Bu rehber, mesele tek bir "doğru" çözüm değil — birkaç sade adımı tutarlı biçimde sürdürmek olduğunu
-          öne çıkarıyor. Hormonal geçişin içinden geçen bir yaşıt perspektifinden — sakin, panik dilinden uzak.
+          Menopozda uykusuzluk çoğu zaman tek bir geceden ibaret değildir. Sıcak basması, hormon dalgalanması ve
+          ruh hâli değişimleri üst üste geldiğinde, sabah gözünüzü açtığınızda sanki gece hiç dinlenmemişsiniz gibi
+          hissedebilirsiniz. Bu rehber, kusursuz bir çözüm aramak yerine birkaç sade adımı hayatınıza yerleştirmenin
+          yollarını anlatıyor.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="uyku-mimarisi">Uyku Aslında Düz Bir Çizgi Değil</h2>
-        <p>Menopozda uykusuzluk ve uyku bozukluğu, progesteron hormonu düşüşünün beyindeki gevşeme reseptörlerini zayıflatması ve gece terlemelerinin uyku evrelerini bölmesiyle oluşan yaygın bir hormonal süreçtir.</p>
+        <p>Menopozda uykusuzluk tek bir mekanizmayla açıklanmaz. Sıcak basmaları ve gece terlemeleri, hormonal geçişin uyku düzenine etkisi, ruh hâli değişimleri ve menopozdan bağımsız uyku sorunları aynı tabloya birlikte katkıda bulunabilir.</p>
         <p>
-          Klinik pratiğimde yıllardır şu soruyla sık karşılaşırım: aynı saatte yatıp aynı saatte kalkmak neden bazı sabahlar
-          dinlenmiş, bazı sabahlar eksik bir hisle bırakır? Cevap, uykunun düz bir çizgi olmadığını fark
-          ettiğimde gelmeye başladı. Beden gece boyu ince bir koreografi yürütüyor; bu yüzden saat tek başına
-          yetmiyor.
+          Yıllar içinde farklı kadınlardan aynı cümleyi duydum: "Aynı saatte yatıyorum ama bazı sabahlar iyi,
+          bazı sabahlar tükenmiş kalkıyorum." Uykunun düz bir çizgi olmadığını hatırlamak bu soruyu anlamayı
+          kolaylaştırıyor. Beden gece boyunca kendi ritmini kuruyor; bu nedenle saate bakmak tek başına yeterli değil.
         </p>
         <p>
           Uyku NREM ve REM döngülerinin tekrarladığı dinamik bir süreçtir. NREM evrelerinde fiziksel onarım ve
@@ -126,10 +127,9 @@ const articleSchemas = buildArticleSchemas({
           Ortalama bir döngü yaklaşık 90 dakika; gece boyu birkaç kez tekrarlanır.
         </p>
         <p>
-          Menopoz döneminde bu döngülerin özellikle derin uyku kısmı kısalabilir; toplam uyku süresi benzer
-          görünse bile sabah dinlenmemiş uyanma sıklaşır <Evidence level={4} />. "Neden uzun uyuduğum bir gecenin
-          ardından bile dinlenmemiş kalkıyorum?" sorusunun yanıtı çoğu zaman buradadır: süre değil, mimarinin
-          hangi katmanının kısaldığı belirleyicidir.
+          Menopoz döneminde toplam uyku süresi ve uyku derinliği azalabilir; gece sıcak basmaları da uykuyu
+          bölebilir <Evidence level={4} />. Bu nedenle sabah dinlenmemiş uyanmak, yalnızca yatakta geçirilen saatle
+          açıklanamayabilir.
         </p>
 
         <h2 id="neden-bozulur">Menopozda Uyku Neden Bozulur?</h2>
@@ -145,8 +145,8 @@ const articleSchemas = buildArticleSchemas({
           kayma da eklenebilir <Evidence level={4} />.
         </p>
         <p>
-          Yaygın bir yanılgı şudur: tek bir tetikleyici var, o bulununca uyku düzelir. Oysa çoğu zaman birden fazla
-          faktör aynı anda devrededir. Bu yüzden plan da tek noktaya değil, birkaç sade adıma yayılmalıdır.
+          Bazen insan tek bir neden arıyor: "Şu düzelse uykum da düzelir" diye düşünüyor. Oysa çoğu gecede birkaç
+          etken aynı anda devrede. Bu yüzden küçük bir planı tek bir noktaya değil, birkaç alışkanlığa yaymak daha gerçekçi.
         </p>
 
         <h2 id="uyku-nedenleri-tablo">Uyku Bozukluğu Nedenleri ve Çözüm Adımları</h2>
@@ -165,19 +165,19 @@ const articleSchemas = buildArticleSchemas({
             <tbody class="divide-y divide-primary/10">
               <tr>
                 <td class="p-3 font-medium">Vazomotor Gece Dalgaları</td>
-                <td class="p-3">Hipotalamus ısınma alarmı verir, gece terlemesiyle beden uyanır.</td>
+                <td class="p-3">Sıcaklık düzenlemesindeki değişim ve gece terlemesi uykuyu bölebilir.</td>
                 <td class="p-3">Sık gece uyanması, sırılsıklam uyanıp üşüme.</td>
                 <td class="p-3">Serin oda hijyeni, katmanlı nevresim, HRT veya hormon dışı medikal tedavi.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Progesteron Düşüşü</td>
-                <td class="p-3">Beyindeki doğal yatıştırıcı GABA reseptör uyarımı azalır.</td>
+                <td class="p-3">Hormonal geçiş, uyku düzenleme ve sıcaklık kontrolünü etkileyebilir.</td>
                 <td class="p-3">Uykuya dalmakta zorlanma, zihni susturamama.</td>
-                <td class="p-3">Gelişmiş uyku hijyeni, magnezyum glisinat desteği, hekim takibinde progesteron.</td>
+                <td class="p-3">Uyku düzenini değerlendirme; gerekirse hekimle hormon tedavisi ve CBT-I seçeneklerini konuşma.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Melatonin Ritim Kayması</td>
-                <td class="p-3">Yaş ve hormonal değişimle gece melatonin salgısı azalır.</td>
+                <td class="p-3">Işık, uyku saatleri, yaş ve hormonal geçiş sirkadiyen ritmi etkileyebilir.</td>
                 <td class="p-3">Erken saatte uyanma (gece 03:00-04:00).</td>
                 <td class="p-3">Akşam mavi ışık kısıtlaması, düzenli sabah güneşi maruziyeti.</td>
               </tr>
@@ -205,32 +205,32 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="uyku-hijyeni">Uyku Hijyeni — Sade ve Tutarlı Adımlar</h2>
         <p>
-          Bu listede dönüm noktası çoğu zaman en sıradan görüneni — sabit saatler. Hafta içi ve hafta sonu arasında
-          büyük farklar olmadan uyuyup uyanmak, biyolojik saati dengelemeye yardımcı olur <Evidence level={4} />.
+          Başlangıç için en sıradan görünen adım çoğu zaman en işe yarayanı: mümkün olduğunca sabit saatlerde yatıp
+          kalkmak. Hafta içi ve hafta sonu arasındaki farkı küçültmek biyolojik saatinizi destekleyebilir <Evidence level={4} />.
         </p>
         <p>
-          Yatak odasını serin (yaklaşık 16-19°C), karanlık ve sessiz tutmak gece uyanmalarını azaltabilir
+          Yatak odasını serin, karanlık ve sessiz tutmak; sıcak basması olan kişilerde gece konforunu artırabilir
           <Evidence level={4} />. Akşam saatlerinde kafeini sınırlamak, yatmadan 2-3 saat önce ağır yemekten
           uzaklaşmak, ekran ışığını yumuşatmak ve kısa bir kapanış rutini kurmak bütün tabloyu sakinleştiren
           alışkanlıklardır.
         </p>
         <p>
-          Uyku alanında çalışan uzmanların sıklıkla altını çizdiği bir cümle var: "uyku hazırlığı yatakta değil,
-          akşamın son iki saatinde başlar." Bu bakış, uykuyu bir karar değil bir geçiş alanı olarak görmeye
-          yardımcı oluyor. Kendi akşamınızda kurabileceğiniz tutarlılık ne olursa olsun — gerisi zamanla oturuyor.
+          Uyku hazırlığı yatağa girdiğiniz anda değil, akşamın son bölümünde başlıyor. Işığı biraz azaltmak,
+          telefonu kenara bırakmak ya da her gece tekrarlanan kısa bir kapanış ritüeli seçmek bu geçişi kolaylaştırabilir.
+          Her akşam aynı şeyi yapmanız gerekmiyor; size uyan küçük bir tutarlılık yeterli bir başlangıç.
         </p>
 
         <h2 id="dogal-destekler">Doğal Destekler ve Takviyeler — Aceleci Olmadan</h2>
         <p>
           Uyku bozulduğunda ilk akla gelenlerden biri takviyeler oluyor. Bu konuda araştırmaları okuyup kendi
           hekiminizle birlikte değerlendirmek genelde en güvenli yol — pek çok kadının kendi adına bu adımdan fayda
-          gördüğü görünüyor.
+          gördüğünü söyleyenler olsa da, bunun herkeste aynı sonucu verdiğini gösteren sağlam bir kanıt yok.
         </p>
         <p>
-          Melatonin bazı kişilerde uykuya geçiş süresini kısaltabilir <Evidence level={4} />. Belirli mineral
-          takviyeleri ve hafif bitkisel desteklerin yararlı olabileceği gruplar var; ama etki düzeyi kişiden
-          kişiye değişir <Evidence from={3} to={4} />. "Herkese yarayan" bir formül yok; "kişiye yarayanı bulmak"
-          daha gerçekçi bir hedef.
+          Melatonin ve diğer takviyelerin etkisi kişiden kişiye değişir; menopozal uykusuzluk için rutin ve herkese
+          uygun bir takviye formülü olduğu söylenemez <Evidence from={2} to={3} />. Özellikle düzenli ilaç kullanımı,
+          karaciğer veya böbrek hastalığı, gebelik olasılığı ya da bağışıklık sistemiyle ilgili bir durum varsa,
+          takviye kararını hekim veya eczacıyla konuşmak gerekir.
         </p>
         <p>
           Düzenli ilaç kullanan biri için en önemli nokta etkileşim. Özellikle kronik hastalık varsa, bir takviyeye
@@ -240,14 +240,14 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="tibbi-tedavi">Tıbbi Destek Seçenekleri — Karar Süreci</h2>
         <p>
-          Yaşam tarzı adımları denendiği hâlde uykusuzluk sürüyorsa, bunu bir irade meselesi gibi görmek yerine
-          masaya seçenekleri birlikte koymak daha kıymetlidir. Uyku tedavisinde tek bir "doğru" protokol yoktur;
+          Yaşam tarzı adımlarına rağmen uykusuzluk sürüyorsa, bunu bir irade meselesi gibi görmeyin. Seçenekleri
+          bir sağlık profesyoneliyle birlikte masaya koymak daha yararlı olur. Uyku tedavisinde tek bir "doğru" protokol yoktur;
           ilk iş semptomun önde gelen iki-üç bileşenini ayırmaktır: vazomotor belirti mi, insomnia mı, apne mi,
           huzursuz bacak mı, duygu durum mu?
         </p>
         <p>
-          Bu tabloda HRT, kısa süreli uyku desteği, gabapentin ve duygu durum eşlik ediyorsa uygun psikiyatrik
-          destek seçenekleri gündeme gelebilir. Bilişsel davranışçı terapi — uykusuzluk için uyarlanmış formuyla
+          Bu tabloda vazomotor belirtilerin yönetimi, uykusuzluk için bilişsel davranışçı terapi (CBT-I) ve bazı
+          kişilerde ilaç seçenekleri gündeme gelebilir. Bilişsel davranışçı terapi — uykusuzluk için uyarlanmış formuyla
           (CBT-I) — uzun dönem uyku iyileşmesinde en güçlü kanıt tabanına sahip yöntemlerden biri olarak kabul
           edilir <Evidence level={5} />. HRT, vazomotor şikâyetin uykuyu bölmede baskın olduğu olgularda ek bir
           seçenek olarak tartışılabilir; bu kararın bireyselliği — kişisel sağlık öyküsü, kontrendikasyonlar ve
@@ -293,48 +293,14 @@ const articleSchemas = buildArticleSchemas({
           polisomnografi ve uyku uzmanı izlemiyle yapmak gerekir.
         </p>
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
-        <h3>Melatonin menopozda güvenli mi, ne kadar süre kullanılır?</h3>
-        <p>
-          Düşük doz melatonin (0,5–3 mg, yatmadan 30–60 dakika önce) kısa vadede uyku başlangıcını öne çekmeye
-          yardımcı olabilir; menopozdaki uyku bozulmasında etki kişiden kişiye değişir <Evidence level={3} />.
-          Az bilinen bir nokta var: yüksek doz daha iyi sonuç vermiyor, hatta sabah ağırlığını artırabiliyor.
-          Birkaç hafta sonra fark hissedilmiyorsa büyük olasılıkla o kişide işlemiyor demektir; sürekli kullanmak
-          yerine uyku hijyeni ve sıcak basması yönetimi gibi temele dönmek daha kalıcı bir kazanım.
-        </p>
-        <h3>HRT uykuyu kaç haftada düzeltebilir?</h3>
-        <p>
-          Sıcak basması ve gece terlemesi uykuyu bölüyorsa HRT'nin etkisi çoğu kadında 4–8 hafta içinde belirgin
-          hâle gelir; bazı kadınlarda daha erken, bazılarında biraz daha geç <Evidence level={4} />. HRT yalnızca
-          uyku için verilen bir tedavi değil; genel klinik tablo üzerinden hekimle birlikte değerlendirilmesi
-          gereken bireysel bir karardır. Sıcak basması yoksa ve sorun tek başına insomnia ise HRT'nin doğrudan
-          etkisi sınırlı kalabilir; bu olgularda CBT-I gibi seçenekler öne çıkabilir.
-        </p>
-        <h3>Apne şüphesi varsa hangi belirtilerle uyku tıbbına başvurmalı?</h3>
-        <p>
-          Şiddetli horlama, gece nefes durması (genellikle eşin fark eder), sabah baş ağrısı, gündüz belirgin
-          uyku hali ve uyandığında dinlenmemiş hissi birlikte görülüyorsa uyku tıbbı değerlendirmesi gerekli
-          <Evidence level={5} />. Menopozla apne riski artıyor; özellikle bel çevresi ve boyun çevresi değişen
-          kadınlarda bu tablo gözden kaçabiliyor. Polisomnografi tetkiki korkutucu değil, bilgilendirici bir
-          adım — gerekirse CPAP gibi seçenekler hem uykuyu hem kalp sağlığını birlikte koruyor.
-        </p>
-        <h3>Sabaha karşı erken uyanmalar normal mi, ne yapmalı?</h3>
-        <p>
-          Saat 04:00–05:00 civarı uyanıp tekrar uykuya dönememek menopoz döneminde sıklıkla görülen bir tablo;
-          kortizol ritmi ve düşen östrojenin birlikte etkisiyle ilişkili <Evidence level={4} />. Yatmadan üç-dört
-          saat önce ağır yemek, alkol ve yoğun ekran kullanımını sınırlamak bu tabloyu yumuşatabilir. Yatağa
-          tekrar girip 20 dakika içinde uyuyamıyorsanız kalkıp loş ışıkta kısa bir okuma yapmak — telefon değil —
-          uyku basıncını yeniden inşa eden bir taktik.
-        </p>
-        <h3>Magnezyum, ashwagandha ve kediotu — hangisi gerçekten kanıtlı?</h3>
-        <p>
-          Magnezyum (özellikle glisinat formu) gece kas gevşemesi ve hafif uyku desteği için en tutarlı kanıta
-          sahip; menopozdaki kadınlarda küçük ama anlamlı fark görülebiliyor <Evidence level={3} />. Ashwagandha
-          kortizol modülasyonu üzerinden anksiyete ve uyku kalitesinde bazı çalışmalarda yardımcı bulunmuş; kanıt
-          henüz erken ve sınırlı <Evidence level={2} />. Kediotu için literatür karışık — plasebo-üstü etki tutarlı
-          değil. Kullanmaya karar verilirse tek bir destekle başlayıp dört-altı hafta değerlendirmek daha gerçekçi;
-          aynı anda üç takviyeyi denemek hem etkiyi hem yan etkiyi okumayı zorlaştırır.
-        </p>
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p>Bu rehberdeki klinik çerçeveyi oluşturan başlıca kaynaklar:</p>
+        <ol>
+          <li>Türkiye Endokrinoloji ve Metabolizma Derneği. <a href="https://temd.org.tr/halk/hastaliklar/menopoz" target="_blank" rel="noopener noreferrer">Menopoz hakkında bilgilendirme notu</a>.</li>
+          <li>American Academy of Sleep Medicine. <a href="https://aasm.org/new-guideline-supports-behavioral-psychological-treatments-for-insomnia/" target="_blank" rel="noopener noreferrer">Kronik uykusuzlukta davranışsal ve psikolojik tedaviler kılavuzu</a>.</li>
+          <li>Silvestri R ve ark. <a href="https://pubmed.ncbi.nlm.nih.gov/31547910/" target="_blank" rel="noopener noreferrer">Menopozal uyku bozukluklarının değerlendirilmesi ve tedavisi üzerine görüş bildirisi</a>. Maturitas. 2019.</li>
+          <li>Menopozal uykusuzlukta bilişsel davranışçı terapi üzerine sistematik derleme ve meta-analiz. <a href="https://pubmed.ncbi.nlm.nih.gov/41531400/" target="_blank" rel="noopener noreferrer">PubMed kaydı</a>. 2025.</li>
+        </ol>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
@@ -347,7 +313,8 @@ const articleSchemas = buildArticleSchemas({
           konforunu değil, kalp ve metabolik sağlığı da koruyor.
         </p>
         <p>
-          Uyku bozukluğu görünmez bir yük; doğru sırayla bakıldığında çoğunlukla yatışan bir tablodur.
+          Uyku bozukluğu görünmez bir yük olabilir. Doğru sorularla bakıldığında ise tablo çoğu zaman daha anlaşılır
+          hale gelir ve bir sonraki adım biraz daha seçilebilir olur.
         </p>
       </ArticleProsePanel>
 
@@ -368,17 +335,16 @@ const articleSchemas = buildArticleSchemas({
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p>
             <strong class="text-primary">Klinik not:</strong> Menopozal geçişte uyku bozukluğu çok faktörlüdür:
-            vazomotor semptomlar (sıcak basması, gece terlemesi), östrojen-progesteron dalgalanması, kortizol akrofazının
-            erken kayması, ruh hâli iniş-çıkışları ve obstrüktif uyku apnesinin postmenopozda artan riski tek bir
+            vazomotor semptomlar (sıcak basması, gece terlemesi), hormonal geçiş, ruh hâli iniş-çıkışları ve
+            obstrüktif uyku apnesi olasılığı tek bir
             gecede aynı anda devreye girebilir. "Menopoz uykusu" tek bir tablo değil, ayırıcı tanı gerektiren bir
             sendromlar grubudur.
           </p>
           <p>
-            <strong class="text-primary">Mekanizma notu:</strong> Östrojen REM uykusunun bütünlüğüne ve termoregülasyona
-            katkıda bulunur; düşüşü gece terlemesi ve mikro-uyanmalar üzerinden uyku fragmantasyonuna yol açabilir.
-            Progesteronun sedatif metaboliti allopregnanolon GABA-A reseptörü üzerinden uykuya geçişi kolaylaştırır;
-            geç luteal evrede üretiminin düzensizleşmesi uyku başlangıcını uzatır. Postmenopozda yağ dağılımı ve
-            üst hava yolu tonusundaki değişimler obstrüktif uyku apnesi için ek bir risk zemini oluşturabilir.
+            <strong class="text-primary">Mekanizma notu:</strong> Hormon düzeylerindeki değişim, sıcaklık düzenlemesi,
+            uyku-uyanıklık ritmi ve ruh hâli üzerinden uykuyu etkileyebilir. Gece terlemeleri uyku bölünmesine yol
+            açabilir; menopoz sonrasında horlama, nefes durması veya gündüz uykululuğu varsa obstrüktif uyku apnesi de
+            ayrıca değerlendirilmelidir.
           </p>
           <p>
             <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Tanıklı nefes durması ya da ağır horlama;
@@ -388,11 +354,10 @@ const articleSchemas = buildArticleSchemas({
             ayırıcı tanıda esastır.
           </p>
           <p>
-            <strong class="text-primary">Pratik bütünleşim:</strong> Tedavi planı bir hiyerarşi izler:
-            (1) uyku hijyeni ve sirkadiyen ritim disiplini, (2) vazomotor semptom yönetimi ve gerektiğinde HRT,
-            (3) uykusuzluk için bilişsel-davranışçı terapi (CBT-I) — uzun vadede en güçlü kanıt tabanına sahip
-            seçenek. Kısa süreli farmakolojik destek ve gabapentin gibi seçenekler bireysel olarak değerlendirilir;
-            uzun süreli sedatif kullanımı genelde önerilmez.
+            <strong class="text-primary">Pratik bütünleşim:</strong> Tedavi planı belirtilerin kaynağına göre kurulur:
+            (1) uyku düzeni ve çevresel koşullar, (2) sıcak basması gibi eşlik eden belirtilerin yönetimi,
+            (3) kronik uykusuzlukta CBT-I ve gerektiğinde hekim gözetiminde ilaç seçenekleri. Uyku ilacı veya
+            takviyeyi uzun süre kendi başınıza sürdürmek yerine düzenli izlem gerekir.
           </p>
           <p>
             <strong class="text-primary">Bireysellik vurgusu:</strong> Uyku şikâyetinin altında menopozdan

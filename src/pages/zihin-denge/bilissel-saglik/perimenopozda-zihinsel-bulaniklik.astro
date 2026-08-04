@@ -21,10 +21,11 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const pathname = '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/';
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zihin-denge/bilissel-saglik/']!;
 const articleTitle = 'Perimenopozda Zihinsel Bulanıklık: Unutkanlık Hissi Günlük Hayatta Nasıl Okunur?';
-const seoTitle = 'Perimenopozda Zihinsel Bulanıklık';
+const seoTitle = 'Perimenopozda Beyin Sisi ve Unutkanlık: Ne Zaman Değerlendirilmeli?';
 const articleDescription =
-  'Perimenopoz döneminde kelime bulmakta zorlanma, unutkanlık hissi ve zihinsel yorgunluk neden olur? Bilişsel değişimleri panik yaratmadan anlamaya yardımcı olur.';
+  'Perimenopozda beyin sisi, kelime bulma güçlüğü ve odaklanma sorunlarını; uyku, stres ve sıcak basmalarıyla birlikte sakin ve kaynaklı biçimde ele alan rehber.';
 const publishedDate = '4 Mayıs 2026';
+const modifiedDate = '4 Ağustos 2026';
 const readingMinutes = 8;
 
 const tocEntries = [
@@ -36,6 +37,7 @@ const tocEntries = [
   { id: 'kucuk-duzenler', label: 'Gündelik hayatta zihni rahatlatan küçük düzenler' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kisa-hatirlatma', label: 'Kısa hatırlatma' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -44,7 +46,9 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'estranova-editorial',
+  articleType: 'editorial-guide',
   publishedDate,
+  modifiedDate,
   pathname,
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
@@ -88,41 +92,42 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="estranova-editorial"
         publishedDate={publishedDate}
         readingMinutes={readingMinutes}
-        imageSrc="/images/library/editorial/scholar-library-bokeh.webp"
-        imageAlt="Akademik kadın portresi — cream ipek bluz, el çenede okuma pozu, pirinç lamba yoğun amber ışık, pembe dahlia vazo, walnut floor-to-ceiling kitaplık bokesi; perimenopozda zihinsel bulanıklık ve okuma-bellek tabanlı düşünme temasını sade akademik tonla taşıyan dosya görseli"
+        imageSrc="/images/library/editorial/perimenopozda-zihinsel-bulaniklik-byline.webp"
+        imageAlt="Aydınlık bir kütüphane köşesinde notlarına bakan kadın; perimenopozda zihinsel bulanıklık ve odaklanma yazısı için editoryal görsel"
       />
 
       <ArticleSummary title="Kısa Özet">
 <p>
-          Perimenopozda zihinsel bulanıklık çoğu zaman tek bir nedenden çıkmaz. Uyku bölünmesi, sıcak basmaları,
-          stres yükü, dikkat dağılması ve hormonal geçiş bir araya geldiğinde kadınlar kendilerini birden
-          "eskisi kadar hızlı düşünemiyormuş" gibi hissedebilir. Bu tablo sık görülebilir <Evidence level={4} />;
-          yine de hangi noktada olağan dalgalanma, hangi noktada daha dikkatli değerlendirme gerektiğini ayırt etmek önemlidir.
+          Bazen bir toplantının ortasında aradığınız kelime gelmez; bazen de mutfaktan neden kalktığınızı bir anlığına
+          hatırlayamazsınız. Perimenopozda bu tür anlar, uyku bölünmesi, sıcak basmaları, stres ve hormonal geçişle
+          birlikte daha sık hissedilebilir <Evidence level={4} />. Bu rehber, yaşadığınız şeyi küçümsemeden ama hemen
+          en kötü sonuca da varmadan nasıl okuyabileceğinizi anlatıyor.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="neden-simdi">Bu bulanıklık hissi neden tam da şimdi ortaya çıkıyor?</h2>
         <p>
-          Bazı dönemler vardır; takvim aynı akar ama zihnin çalışma ritmi sanki hafifçe yer değiştirir. Perimenopoz,
-          yalnızca adet düzenini değil, düşüncenin gündelik akışını da etkileyebilen böyle bir eşiktir.
+          Takvim aynı akar ama zihninizin çalışma ritmi bir süreliğine değişmiş gibi gelebilir. Perimenopoz,
+          yalnızca adet düzenini değil, düşüncenin gündelik akışını da etkileyebilen bir geçiş dönemidir.
         </p>
         <p>
-          Bu dönemde östrojen düzeyi dümdüz bir çizgi gibi ilerlemez; dalgalanır. Beyin, özellikle dikkat, bellek ve
-          duygu düzenleme ile ilişkili alanlarda bu değişime duyarlıdır <Evidence level={4} />. Bu yüzden kadınlar
+          Bu dönemde östrojen düzeyi dümdüz bir çizgi gibi ilerlemez; dalgalanır. Araştırmalar, dikkat, bellek ve
+          duygu düzenleme ile ilişkili bilişsel süreçlerin bu geçişten etkilenebileceğini düşündürüyor <Evidence level={3} />.
+          Bu yüzden kadınlar
           bazen kelimeyi geç bulduklarını, aynı anda birden fazla işle uğraşırken daha çabuk dağıldıklarını ya da
           zihinsel olarak günün erken saatlerinde yorulduklarını fark eder.
         </p>
         <p>
-          Burada önemli olan şey, yaşanan hissi hemen ağır bir sonuca bağlamamaktır. Çoğu zaman sorun zekânın
-          azalması değil, sistemin aynı anda daha fazla yük taşımasıdır: bölünmüş uyku, sıcak basmaları, iş hayatı,
-          aile sorumlulukları ve duygusal gerilimler tek bir zeminde üst üste biner.
+          Burada önemli olan, yaşadığınız hissi hemen ağır bir sonuca bağlamamak. Mesele çoğu zaman zekânızın
+          azalması değil; bölünmüş uyku, sıcak basmaları, iş hayatı, aile sorumlulukları ve duygusal gerilimlerin
+          aynı anda zihninizden geçmesi.
         </p>
 
         <h2 id="ayni-sey-mi">Perimenopozda unutkanlık ile zihinsel yorgunluk aynı şey mi?</h2>
         <p>
-          Gün içinde bir kelimeyi birkaç saniye geç hatırlamak ile bütün gün zihnin sisli çalışması aynı tablo değildir.
-          Çoğu kadın bu iki hissi tek bir başlık altında toplar; oysa aralarındaki farkı görmek rahatlatıcı olabilir.
+          Bir kelimeyi birkaç saniye geç hatırlamakla bütün gün zihninizin sisli çalışması aynı şey değil. Bu iki hissi
+          birbirinden ayırmak, neye ihtiyacınız olduğunu anlamayı da kolaylaştırabilir.
         </p>
         <p>
           Unutkanlık hissi daha çok isim, kelime, yapılacak küçük bir iş ya da odaya neden girdiğini bir an için
@@ -131,15 +136,14 @@ const articleSchemas = buildArticleSchemas({
           yaşanabilir <Evidence level={3} />.
         </p>
         <p>
-          Bu ayrımı yapmak önemli; çünkü çoğu zaman kadınların "unutkanlık" diye tarif ettiği şey, aslında uykusuzluk
-          ve stresle ağırlaşmış bir dikkat yorgunluğudur. Bu fark, hem kaygıyı azaltır hem de hangi desteğin daha
-          anlamlı olabileceğini daha net gösterir.
+          Bu ayrım önemli; çünkü "unutkanlık" diye tarif ettiğiniz şey bazen uykusuzluk ve stresle ağırlaşmış bir
+          dikkat yorgunluğu olabilir. Bunu fark etmek kaygıyı azaltır ve hangi desteğin anlamlı olabileceğini gösterir.
         </p>
 
         <h2 id="uyku-stres">Uyku, stres ve sıcak basmaları zihni nasıl etkiliyor?</h2>
         <p>
-          Zihin çoğu zaman gecenin nasıl geçtiğini sabah sessizce ele verir. İyi uyunmayan bir gece, ertesi gün sadece
-          göz altlarında değil; düşüncenin akışında da kendini gösterir.
+          Zihin, gecenin nasıl geçtiğini sabah sessizce anlatır. İyi uyunmayan bir gece yalnızca göz altlarında değil,
+          düşüncenin akışında da kendini belli edebilir.
         </p>
         <p>
           Gece terlemesi, sık uyanma ve yüzeysel uyku, ertesi gün dikkat toplama süresini kısaltabilir <Evidence level={4} />.
@@ -156,7 +160,7 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="olagan-dalgalanma">Hangi belirtiler olağan dalgalanma gibi okunabilir?</h2>
         <p>
           Her zihinsel aksama alarm değildir. Özellikle yoğun dönemlerde yaşanan küçük kaymalar, perimenopozun daha görünür
-          kıldığı ama çoğu zaman geçici kalan bir dalga olabilir.
+          kıldığı bir dalgalanma olarak yaşanabilir; yine de süre, şiddet ve günlük işlev üzerindeki etkisi önemlidir.
         </p>
         <p>
           Ara sıra kelime aramak, alışveriş listesine bakmadan bir şeyi atlamak, aynı anda birkaç işi yürütürken daha
@@ -187,12 +191,12 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kucuk-duzenler">Gündelik hayatta zihni biraz rahatlatan küçük düzenler neler olabilir?</h2>
         <p>
-          Zihin bu dönemde çoğu zaman büyük çözümler değil, küçük sürtünmeleri azaltan düzenler ister. Mesele daha verimli
-          olmak değil; gün içindeki yükü biraz daha okunabilir hale getirmektir.
+          Zihin bu dönemde çoğu zaman büyük çözümlerden çok, gün içindeki küçük sürtünmeleri azaltan düzenlere ihtiyaç duyar.
+          Amaç daha verimli görünmek değil; günü biraz daha taşınabilir hale getirmek.
         </p>
         <p>
-          Gösterişli olanlar değil, çoğu zaman en sade adımlar daha istikrarlı işler. Sabit uyku saati, aynı yerde tutulan not defteri,
-          gün içinde tek seferde bir işe dönme, bildirim gürültüsünü azaltma ve kısa hareket molaları bilişsel yükü hafifletebilir
+          Gösterişli çözümler yerine sade adımlar daha kolay sürdürülebilir. Sabit uyku saati, aynı yerde duran bir not defteri,
+          gün içinde tek bir işe dönmek, bildirim gürültüsünü azaltmak ve kısa hareket molaları bilişsel yükü hafifletebilir
           <Evidence level={3} />. Protein içeren dengeli kahvaltı, gün ışığıyla erken temas ve akşam ekran geçişlerini
           biraz yumuşatmak da dolaylı olarak odak hissini destekleyebilir.
         </p>
@@ -204,21 +208,29 @@ const articleSchemas = buildArticleSchemas({
           <li>Kendine "neden böyle oldum" yerine "bugün yükü nasıl azaltırım" diye sormak</li>
         </ul>
         <p>
-          Bu öneriler tek hamlede çözüm vaat etmez. Ama çoğu kadının anlattığı gerçek şu: zihin sisinin bir kısmı bedenin yükünden,
-          bir kısmı da her şeyi içeride tutma alışkanlığından beslenir. Küçük dış destekler, zihne tekrar biraz alan açar.
+          Bu öneriler bir gecede her şeyi değiştirmez. Ama bedenin yükünü biraz azaltmak, zihninize de yeniden alan açabilir.
+          Bazen daha yararlı olan, her şeyi içeride tutmak yerine küçük bir not almak ya da bir işi yardım isteyerek paylaşmaktır.
         </p>
 
         <h2 id="kisa-hatirlatma">Kısa hatırlatma: Bu dönem zekâyı değil yükü değiştirir</h2>
         <p>
-          Perimenopozda yaşanan bilişsel dalgalanmalar, birçok kadın için en görünmez ama en moral bozucu eşiklerden biridir.
-          Çünkü dışarıdan bakıldığında her şey aynı görünür; içerideyse düşüncenin hızı hafifçe değişmiştir.
+          Perimenopozdaki bilişsel dalgalanmalar, dışarıdan pek görünmediği için daha da yorucu olabilir. Her şey aynı
+          görünürken içeride düşüncenin hızı bir süreliğine değişmiş gibidir.
         </p>
         <p>
-          Yine de bu tablo çoğu zaman bir kayıp hikâyesi değildir. Daha çok, bedenin yeni bir denge kurmaya çalıştığı bir
-          geçiş hikâyesidir. Eğer kendinizi son aylarda biraz daha dağınık, biraz daha çabuk yorulan ve biraz daha kolay
-          bunalan biri gibi hissediyorsanız, bu sizi eksik yapmaz. Sadece bu dönemde zihnin de beden kadar ilgi istediğini
-          hatırlatır.
+          Bu, otomatik olarak bir kayıp hikâyesi anlamına gelmez. Bedeniniz yeni bir denge kurmaya çalışırken zihninizin
+          de ilgi istemesi anlaşılır. Son aylarda kendinizi daha dağınık, daha çabuk yorulan ya da daha kolay bunalan biri
+          gibi hissediyorsanız, bu sizi eksik yapmaz; yalnızca yükünüzü yeniden düzenlemeniz gerektiğini hatırlatabilir.
         </p>
+
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p>Bu yazının bilişsel belirtiler ve değerlendirme sınırları için başvurduğu başlıca kaynaklar:</p>
+        <ol>
+          <li>The Menopause Society. <a href="https://menopause.org/patient-education/menopause-topics/mental-health" target="_blank" rel="noopener noreferrer">Orta yaşta bilişsel işlev ve ruh hâli hakkında hasta bilgilendirmesi</a>.</li>
+          <li>NICE. <a href="https://www.nice.org.uk/guidance/NG23" target="_blank" rel="noopener noreferrer">Menopoz: tanımlama ve yönetim kılavuzu (NG23)</a>.</li>
+          <li>Maki PM ve Weber MT. <a href="https://pubmed.ncbi.nlm.nih.gov/37755656/" target="_blank" rel="noopener noreferrer">Perimenopozda bilişsel sorunlar: güncel kanıtların derlemesi</a>. 2023.</li>
+          <li>Weber MT ve ark. <a href="https://pubmed.ncbi.nlm.nih.gov/23770320/" target="_blank" rel="noopener noreferrer">Perimenopozda biliş ve duygu durumu üzerine sistematik derleme ve meta-analiz</a>. 2013.</li>
+        </ol>
       </ArticleProsePanel>
 
       <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
@@ -232,7 +244,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
       <ArticleEditorNote>
-        <p>Perimenopozda tarif edilen bilişsel bulanıklık çoğu zaman yapısal bir bellek kaybından çok dikkat, uyku ve stres yükünün kesişiminde belirginleşen geçici bir işlev dalgalanmasıdır.</p>
+        <p>Perimenopozda tarif edilen bilişsel bulanıklık çoğu zaman yapısal bir bellek kaybı olarak değil, dikkat, uyku ve stres yükünün kesişiminde belirginleşen bir işlev dalgalanması olarak görünür.</p>
         <p>Östrojen dalgalanması, gece uyanmaları, vazomotor belirtiler ve duygu durum yükü birlikte çalıştığında kelime bulmada gecikme, odakta kırılma ve zihinsel yorgunluk hissi daha görünür hale gelebilir.</p>
         <p>Bununla birlikte belirgin yön bulma güçlüğü, hızla artan unutkanlık, günlük işlevde bozulma, uzun süren çöküntü hali ya da eşlik eden nörolojik belirtiler varsa tablo yalnızca hormonal geçiş başlığı altında değerlendirilmemelidir.</p>
         <p>Klinik yaklaşım çoğu zaman uyku düzeni, stres yükü, beslenme, tiroid-B12-demir ekseni ve gerekirse nörolojik veya psikiyatrik değerlendirme dahil daha geniş bir çerçeveyle düşünmeyi gerektirir.</p>
