@@ -1,0 +1,381 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+import { faqEntry } from './faq-entry';
+
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
+const pathname = '/zamansiz-yasam/deneysel/bpc-157-tb-500-menopoz/';
+const publishedDate = '5 Ağustos 2026';
+
+const tocEntries = [
+  { id: 'menopozda-sorun', label: 'Menopozda Sorun Nedir?' },
+  { id: 'bpc-157', label: 'BPC-157 Ne Biliyoruz?' },
+  { id: 'tb-500', label: 'TB-500 Ne Biliyoruz?' },
+  { id: 'menopoz-ozelinde-kanit', label: 'Menopoz Özelinde Kanıt' },
+  { id: 'guvenlik-urun', label: 'Güvenlik ve Ürün Kalitesi' },
+  { id: 'duzenleyici-cerceve', label: 'Düzenleyici Çerçeve' },
+  { id: 'karar-sorulari', label: 'Karar Vermeden Önce Üç Soru' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulan Sorular' },
+];
+
+const faqItems = faqEntry[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Menopoz ve Perimenopozda BPC-157 ve TB-500: Klinik Bir Değerlendirme';
+const articleDescription =
+  'BPC-157 ve TB-500, menopozdaki eklem, kas ve doku yakınmaları için kanıtlanmış seçenekler mi? İnsan verisi, menopoz özelindeki boşluklar ve ürün güvenliği birlikte değerlendiriliyor.';
+
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
+  publishedDate,
+  modifiedDate: publishedDate,
+  pathname,
+  articleSection: 'Zamansız Yaşam · Deneysel',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'BPC-157',
+    'TB-500',
+    'thymosin beta-4',
+    'menopoz',
+    'perimenopoz',
+    'peptid güvenliği',
+    'kas ve eklem ağrısı',
+    'kemik sağlığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Deneysel Yaklaşımlar"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        publishedDate={publishedDate}
+        readingMinutes={9}
+        imageSrc="/images/library/editorial/bpc-157-tb-500-menopoz-byline.webp"
+        imageAlt="Doğal ışık alan sakin bir iç mekanda omzuna elini koyarak bedenini dinleyen, 40'lı yaşlarının sonlarında düşünceli kadın"
+        imagePosition="center"
+      />
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          BPC-157 ve TB-500, menopoz veya perimenopozdaki eklem, kas, kemik ya da bağ dokusu
+          yakınmaları için kanıtlanmış rutin tedaviler değildir. BPC-157 için insan verisi
+          az ve kısa süreliyken TB-500 için insan klinik verisi bulunmamaktadır; her iki
+          molekülün menopoz özelindeki etkinliği ve uzun dönem güvenliği gösterilmemiştir.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="menopozda-sorun">Menopozda Konuştuğumuz Sorun Aslında Nedir?</h2>
+        <p>
+          Perimenopoz ve menopozda eklem-kas yakınmaları veya toparlanmanın yavaşladığı hissi
+          gerçek olabilir; fakat bu tablo tek bir “doku yenilenmesi” eksikliğiyle açıklanamaz.
+        </p>
+        <p>
+          Menopoz geçişinde kas ve eklem ağrılarının daha sık bildirildiğini gösteren çalışmalar
+          var; ancak bu araştırmalar, belirtiyi tek başına östrojen düzeyine veya tek bir
+          moleküle bağlamıyor <Evidence level={3} />. Uyku, fiziksel aktivite, kas gücü,
+          kilo değişimi, tiroid ve romatolojik ya da ortopedik sorunlar aynı yakınmayı
+          oluşturabilir. Kemik yoğunluğundaki azalma da ayrı bir değerlendirme başlığıdır;
+          eklem ağrısı ile kemik kaybı aynı şey değildir.
+        </p>
+        <p>
+          Bu ayrım önemlidir. Bir peptidin laboratuvarda hücre göçünü veya damar oluşumunu
+          etkileyebilmesi, sizin diz ağrınızı, tendon sorununuzu veya kemik yoğunluğunuzu
+          güvenli biçimde düzelteceğini göstermez. Klinik kararın ilk adımı, hedefi ve asıl
+          nedeni birbirinden ayırmaktır.
+        </p>
+
+        <h2 id="bpc-157">BPC-157 İçin Ne Biliyoruz?</h2>
+        <p>
+          BPC-157, doku iyileşmesi ve hücresel koruma başlıklarında özellikle hayvan ve hücre
+          çalışmalarında incelenmiş deneysel bir peptiddir.
+        </p>
+        <p>
+          Preklinik çalışmalarda yara, tendon, damar ve gastrointestinal sistem modellerinde
+          çeşitli biyolojik sinyaller bildirilmiştir. Bu çalışmalar araştırma açısından ilgi
+          çekicidir; ancak hayvan modelindeki iyileşme, menopozdaki kadınlarda eklem, kas veya
+          kemik sonucuna çevrilemez <Evidence level={2} />. Taslaktaki VEGFR2, FAK, eNOS,
+          GHR veya benzeri yolakları klinik faydanın kanıtı gibi sıralamak bu nedenle doğru
+          olmaz; mekanizma önerileri hâlâ tam olarak açıklığa kavuşmuş değildir.
+        </p>
+        <p>
+          İnsan verisi tarafında tablo daha dardır. FDA’nın 2026 değerlendirmesi, BPC-157 için
+          kısa süreli ve sınırlı insan çalışmalarını ayırırken, ağızdan, cilt altından, burundan
+          veya cilt yoluyla kullanım için yeterli insan farmakokinetik ve güvenlilik verisi
+          bulunmadığını bildiriyor. 2026’da kas yaralanması için yeni bir faz 2 çalışma başlamış
+          olsa da bu çalışmanın henüz sonucu yoktur. Araştırmanın sürüyor olması, etkinliğin
+          kanıtlandığı anlamına gelmez.
+        </p>
+
+        <h2 id="tb-500">TB-500 İçin Ne Biliyoruz?</h2>
+        <p>
+          TB-500 adı, tam thymosin beta-4 proteiniyle sıkça birbirine karıştırılan kısa bir
+          sentetik fragman için kullanılır; bu ayrım, kanıtı doğru okumak için gereklidir.
+        </p>
+        <p>
+          FDA’nın 2026 teknik değerlendirmesinde TB-500, thymosin beta-4’ün 17–23. aminoasitleri
+          arasında yer alan, N-terminalinde asetil grubu bulunan yedi aminoasitlik sentetik
+          fragman olarak tanımlanıyor. Tam thymosin beta-4 ile ilgili hücre, hayvan veya farklı
+          uygulama yollarındaki çalışmalar, internetten satılan ya da enjekte edilen TB-500’ün
+          aynı ürün ve aynı klinik etki olduğunu göstermez.
+        </p>
+        <p>
+          Daha önemlisi, FDA değerlendirmesi yara iyileşmesi amacıyla TB-500 için insanlarda
+          yapılmış klinik çalışma verisi belirlemediğini bildiriyor. Bu nedenle TB-500’ü
+          menopozda tendon, kas, bağ dokusu veya kemik için “toparlanmayı hızlandıran” bir
+          seçenek gibi sunmak, mevcut kanıtın önüne geçer <Evidence level={1} />.
+        </p>
+
+        <h2 id="menopoz-ozelinde-kanit">Menopoz Özelinde Kanıt Ne Söylüyor?</h2>
+        <p>
+          Bu iki molekül için menopoz özelinde asıl sorun, yalnızca çalışma sayısının az olması
+          değil; doğru hasta grubunda doğru sonucun hiç ölçülmemiş olmasıdır.
+        </p>
+        <p>
+          BPC-157 veya TB-500’ün perimenopozdaki kadınlarda sıcak basması, eklem ağrısı,
+          menopozal kas kaybı, kemik mineral yoğunluğu, tendon iyileşmesi ya da yaşam kalitesi
+          üzerinde klinik yarar sağladığını gösteren güvenilir randomize çalışmalar bulunmuyor.
+          BPC-157 için yürüyen kas yaralanması çalışması menopoz tedavisi değildir; TB-500 için
+          insan klinik verisi yoktur. Bu nedenle “menopozda kullanılabilir” sonucu çıkarılamaz.
+        </p>
+        <p>
+          BPC-157 ile TB-500’ü birlikte kullanmanın tek başına kullanılanlardan daha etkili
+          olduğunu gösteren bir insan çalışması da yoktur. “Sinerji”, “kök hücre mobilizasyonu”
+          veya “damarlanmayı artırarak güçlü onarım” gibi ifadeler bu alanda çoğunlukla
+          preklinik hikâyeyi klinik sonuç gibi gösteren pazarlama kısaltmalarıdır.
+        </p>
+        <p>
+          Menopozdaki hedefiniz kemik sağlığıysa kemik kırığı riskinin değerlendirilmesi; kas
+          gücü veya hareket kapasitesiyse fiziksel değerlendirme; sürekli yorgunluksa uyku,
+          tiroid, demir eksikliği, ruh hali ve ilaçların gözden geçirilmesi daha anlamlı bir
+          başlangıçtır. Hedef netleşmeden peptid seçmek, soruyu ürüne teslim eder.
+        </p>
+
+        <h2 id="guvenlik-urun">Güvenlik ve Ürün Kalitesi Neden Ayrı Bir Sorudur?</h2>
+        <p>
+          Deneysel bir molekülde belirsizlik yalnızca “işe yarar mı?” sorusundan ibaret değildir;
+          vücuda giren ürünün gerçekten ne olduğu da aynı derecede önemlidir.
+        </p>
+        <p>
+          FDA, BPC-157 için ürün formu, tuz biçimi, saflık, peptid kümelenmesi ve bağışıklık
+          yanıtı gibi konularda belirsizlikler bulunduğunu; uzun dönem güvenliliği değerlendirmek
+          için verinin yetersiz olduğunu bildiriyor. Bu, çevrim içi “araştırma amaçlıdır” etiketi
+          taşıyan ürünlerin insan kullanımı için güvence sağladığı anlamına gelmez. Etiket,
+          içerik, doz ve saklama koşulları arasındaki sapmalar da klinik riski büyütebilir.
+        </p>
+        <p>
+          Mekanizma düzeyinde damar oluşumu veya hücre göçü konuşulması, kanser riskinin bu
+          ürünlerle arttığının kanıtlandığı anlamına gelmez; böyle bir sonuç çıkarmak doğru
+          değildir. Doğru cümle şudur: uzun dönem insan güvenliği, bağışıklık yanıtı, ürün
+          saflığı ve olası etkileşimler yeterince bilinmediği için risk profili güvenle
+          tanımlanamamaktadır <Evidence level={1} />.
+        </p>
+        <RedFlagBox
+          markers={[
+            'Ürün “insan kullanımı için değildir” veya “yalnızca araştırma amaçlıdır” etiketi taşıyorsa',
+            'Üretici, içerik doğrulaması, saklama koşulu ve bağımsız kalite bilgisi açık değilse',
+            'Aynı anda BPC-157, TB-500, hormonlar ve başka ürünlerden oluşan bir “yığın” öneriliyorsa',
+            'Fayda ölçütü, takip planı ve bırakma koşulu konuşulmadan uzun süreli kullanım öneriliyorsa',
+            'Gebelik olasılığı, emzirme, aktif kanser öyküsü veya ciddi kronik hastalıklar varsa',
+          ]}
+          footnote="Bu maddeler tanı koymak için değil, deneysel bir ürünle ilgili kararı daha güvenli bir görüşmeye taşımak için bir kontrol listesi olarak düşünülmelidir."
+        />
+
+        <h2 id="duzenleyici-cerceve">Düzenleyici Çerçeve Ne Söylüyor?</h2>
+        <p>
+          Bir ürünün bir ülkede konuşuluyor veya satılıyor olması, ruhsatlı ve kanıtlanmış bir
+          tedavi olduğu anlamına gelmez.
+        </p>
+        <p>
+          ABD Gıda ve İlaç Dairesi’nin 2026 belgeleri BPC-157 ve TB-500 ile ilgili bileşikleri
+          belirli kullanım amaçları bakımından 503A bileşik ilaç listesine alınıp alınmaması
+          açısından değerlendirmiştir. Bu, FDA onayı değildir; ayrıca danışma komitesi gündemi
+          veya tavsiyesi, bir ürünün menopoz için etkin ve güvenli olduğunu göstermez. Ülke
+          mevzuatı değişebileceği için ABD’deki bu çerçeve Türkiye’deki hukuki duruma doğrudan
+          çevrilmemelidir.
+        </p>
+        <p>
+          WADA’nın 2026 Yasaklılar Listesi de BPC-157 ve thymosin beta-4 türevlerini sporcular
+          açısından yasaklı maddeler arasında ele alıyor. Bu bilgi sporcu olmayan kişiler için
+          “daha tehlikeli” şeklinde yorumlanmamalı; yalnızca ürünün düzenleyici ve güvenlik
+          statüsünün sıradan bir takviye gibi düşünülmemesi gerektiğini hatırlatmalıdır.
+        </p>
+
+        <h2 id="karar-sorulari">Karar Vermeden Önce Doktorunuza Sorabileceğiniz Üç Soru</h2>
+        <p>
+          Deneysel bir peptid hakkında en koruyucu yaklaşım, tek bir “evet-hayır” cevabı aramak
+          yerine kararın dayandığı boşlukları görünür kılmaktır.
+        </p>
+        <p>
+          <strong>Birincisi:</strong> “Benim gerçek hedefim nedir ve bu hedef için menopozdaki
+          kadınlarda gösterilmiş bir insan verisi var mı?” Eklem ağrısı, kemik kaybı, kas gücü,
+          yorgunluk ve yara iyileşmesi aynı klinik soru değildir.
+        </p>
+        <p>
+          <strong>İkincisi:</strong> “Önerilen ürünün tam kimliği, uygulama yolu, saflığı ve
+          güvenlik takibi nasıl doğrulanıyor?” BPC-157 ile TB-500’ün farklı maddeler olduğu,
+          tam thymosin beta-4 çalışmalarının TB-500 kanıtı sayılamayacağı burada özellikle
+          netleştirilmelidir.
+        </p>
+        <p>
+          <strong>Üçüncüsü:</strong> “Faydayı hangi nesnel ölçütle izleyeceğiz ve hangi durumda
+          bırakacağız?” Ölçülebilir bir hedef, düzenli takip ve durdurma koşulu yoksa deneysel
+          kullanım kolayca süresi belirsiz bir beklentiye dönüşebilir.
+        </p>
+
+        <h2 id="kaynaklar" style="counter-increment: none;">Kaynaklar</h2>
+        <p>
+          Bu dosyada kullanılan kaynaklar, molekülün biyolojik olarak ilgi çekici olmasıyla
+          menopozda klinik olarak işe yaradığının gösterilmesi arasındaki farkı korumak için
+          seçildi.
+        </p>
+        <ol>
+          <li>
+            <a href="https://www.fda.gov/media/193343/download" target="_blank" rel="noreferrer">
+              FDA, BPC-157-related bulk drug substances için 2026 briefing document
+            </a>
+            — insan verisi, ürün standardizasyonu ve güvenlilik sınırlılıkları.
+          </li>
+          <li>
+            <a href="https://www.fda.gov/media/193349/download" target="_blank" rel="noreferrer">
+              FDA, TB-500-related bulk drug substances için 2026 briefing document
+            </a>
+            — TB-500 tanımı ve insan klinik verisinin bulunmaması.
+          </li>
+          <li>
+            <a href="https://clinicaltrials.gov/study/NCT07437547" target="_blank" rel="noreferrer">
+              ClinicalTrials.gov, NCT07437547
+            </a>
+            — BPC-157 için 2026’da başlayan, sonucu henüz yayımlanmamış faz 2 kas yaralanması çalışması.
+          </li>
+          <li>
+            <a href="https://clinicaltrials.gov/study/NCT02637284" target="_blank" rel="noreferrer">
+              ClinicalTrials.gov, NCT02637284
+            </a>
+            — BPC-157 için erken dönem faz 1 güvenlilik/farmakokinetik çalışma kaydı.
+          </li>
+          <li>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41523660/" target="_blank" rel="noreferrer">
+              Musculoskeletal Manifestations of Perimenopause: A Systematic Review and Meta-Analysis of 93,021 Women
+            </a>
+            — menopoz geçişinde kas-eklem yakınmalarının görülme sıklığı ve kanıt sınırları.
+          </li>
+          <li>
+            <a href="https://www.wada-ama.org/en/resources/world-anti-doping-program/prohibited-list" target="_blank" rel="noreferrer">
+              Dünya Dopingle Mücadele Ajansı, 2026 Yasaklılar Listesi
+            </a>
+            — BPC-157 ve thymosin beta-4 türevlerinin spor bağlamındaki statüsü.
+          </li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleProsePanel class="mt-10">
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          BPC-157 ve TB-500 için biyolojik olarak ilgi çekici araştırma başlıkları olabilir;
+          fakat menopoz ve perimenopozda klinik olarak kanıtlanmış, güvenliği tanımlanmış rutin
+          seçenekler değildir. Bugünün en dürüst yanıtı, umut verici mekanizma ile gösterilmiş
+          insan sonucu arasındaki mesafeyi korumaktır.
+        </p>
+        <p>
+          Eklem, kas, kemik veya toparlanma yakınmanız varsa önce hangi sonucun değerlendirilmesi
+          gerektiğini netleştirin. Deneysel bir ürünün adı, bu sorunun yanıtı değildir; iyi bir
+          değerlendirme ve ölçülebilir bir hedef, daha güvenli bir başlangıçtır.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p>
+            <strong class="text-primary">Klinik çerçeve:</strong> BPC-157 ve TB-500 için
+            menopozdaki kadınlarda etkinlik gösteren bir tedavi kanıtı bulunmuyor. BPC-157’nin
+            insan verisi sınırlı; TB-500 için FDA değerlendirmesinde insan klinik verisi
+            belirlenmemiş durumda.
+          </p>
+          <p>
+            <strong class="text-primary">Mekanizma sınırı:</strong> Hücre göçü, damar oluşumu
+            veya yara iyileşmesiyle ilgili preklinik sonuçlar, eklem ağrısı, kas kaybı veya kemik
+            yoğunluğu için klinik yarar anlamına gelmez. Tam thymosin beta-4 ile TB-500 de aynı
+            ürün olarak kabul edilemez.
+          </p>
+          <p>
+            <strong class="text-primary">Güvenlik notu:</strong> Formülasyon, saflık,
+            bağışıklık yanıtı, uygulama yolu ve uzun dönem etkiler konusunda önemli boşluklar
+            var. Teorik mekanizmalar kanıtlanmış kanser riski gibi sunulmamalı; belirsizlik,
+            belirsizlik olarak bırakılmalıdır.
+          </p>
+          <p>
+            <strong class="text-primary">Pratik yön:</strong> Yakınmanın kaynağı ve hedefi
+            netleştirilmeden bir peptide yönelmek yerine kemik, kas, eklem, uyku, tiroid,
+            beslenme ve kullanılan ilaçlar birlikte değerlendirilmelidir. Bu metin reçete veya
+            kişisel kullanım önerisi değildir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, bilimsel inceleme
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı,
+          tetkik veya tedavi kararı için sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
