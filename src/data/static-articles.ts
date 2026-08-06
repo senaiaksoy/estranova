@@ -1004,13 +1004,13 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
-    title: 'Menopozda Mahrem Bölge Değişimleri',
-    description: 'Menopozda mahrem bölgede yaşanan kuruluk, hassasiyet ve doku değişimlerini (vulvovajinal atrofi); günlük konfor ve bakım seçeneklerini sade bir dille anlatan rehber.',
-    publishedDate: '31 Mart 2026',
+    title: 'Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM',
+    description: 'Postmenopozal kadınlarda GSM belirtileri sık görülür; oran, kullanılan tanım ve ölçüm yöntemine göre değişebilir. Lokal östrojen, günlük bakım ve doktora ne sorulmalı, sade bir rehber.',
+    publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik/',
-    keywords: ['mahrem bölge', 'vajinal atrofi', 'vulvovajinal atrofi', 'vajinal kuruluk', 'menopoz', 'östrojen', 'nem', 'cinsel sağlık'],
+    keywords: ['vajinal kuruluk', 'GSM', 'genitoüriner menopoz sendromu', 'vulvovajinal atrofi', 'lokal östrojen', 'menopoz', 'cinsel sağlık', 'mahrem bölge'],
   },
   {
     path: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',

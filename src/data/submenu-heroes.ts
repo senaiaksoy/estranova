@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Alt menü hedef sayfaları için hero görselleri (Unsplash, editoryal ton).
  * Alt metinler bilgilendirici; stok fotoğraflar gerçek kişileri temsil etmeyebilir.
  */
@@ -466,8 +466,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Keten örtü üzerinde çiçek, su bardağı ve pamuklu dokular; menopozda cinsellikte ağrı yazısı için sakin kart görseli',
   },
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': {
-    src: '/images/library/editorial/by-vajinal-saglik.webp',
-    alt: 'Sade bakım atmosferinde çiçek, su ve keten dokular; menopozda mahrem bölge değişimleri yazısı için kart görseli',
+    src: '/images/library/editorial/mahrem-bolge-degisimleri-menopoz.webp',
+    alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su, katlı pamuklu bez ve açık bir defter; menopozda mahrem bölge değişimleri editoryal kart görseli',
   },
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': {
     src: '/images/library/editorial/zd-stres-yonetimi.webp',

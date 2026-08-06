@@ -689,19 +689,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': [
     {
-      question: 'Mahrem bölgede kuruluk ve hassasiyet menopozda ne kadar yaygındır?',
+      question: 'Lokal vajinal östrojen ne kadar sürede etki gösterir?',
       answer:
-        'Oldukça yaygındır ama her kadın aynı yoğunlukta yaşamaz. Bazılarında yalnızca aralıklı rahatsızlık olurken, bazılarında gündelik konforu ve cinselliği etkileyen daha kalıcı bir tablo gelişebilir.',
+        'Lokal östrojenin tipik kullanım rejimi başlangıçta 2 hafta günlük, sonra haftada 2 gün idame; belirgin iyileşme genellikle 4-12 hafta içinde fark ediliyor. Bazı kadınlarda ilk değişiklik daha erken hissedilir, tam doku iyileşmesi birkaç ayı bulabilir. Sürdürülen bir plandır; bırakıldığında belirtiler 1-3 ay içinde geri dönebilir.',
     },
     {
-      question: 'Yalnızca nemlendirici kullanmak herkeste yeterli olur mu?',
+      question: 'Meme kanseri öykülü kadında lokal östrojen kullanılabilir mi?',
       answer:
-        'Her zaman değil. Bazı kadınlarda düzenli nem desteği iyi gelirken, bazı kadınlarda doku değişimi daha belirgin olduğu için farklı seçenekleri konuşmak gerekir. İhtiyaç, yakınmanın derinliğine göre değişir.',
+        'Meme kanseri öyküsü olan kadında lokal östrojen kararı onkolog ve jinekolog ortak değerlendirmesi gerektirir. Hormon reseptörü durumu ve tedavi öyküsü hesaba katılarak karar verilir; bazı durumlarda hormon dışı seçenekler öncelik kazanabilir.',
     },
     {
-      question: 'İdrar yaparken yanma veya sıkışma hissi de bu tabloya eşlik edebilir mi?',
+      question: 'Tekrarlayan idrar yolu enfeksiyonum var, GSM ile bağı ne?',
       answer:
-        'Evet, edebilir. Menopozla birlikte ürogenital dokulardaki değişim yalnızca vajinal konforu değil, mesane ve idrar yolu çevresindeki hissi de etkileyebilir. Ama enfeksiyon gibi başka nedenleri de dışlamak gerekir.',
+        'Postmenopozal kadında tekrarlayan idrar yolu enfeksiyonu sıklıkla GSM’in üriner kanadıyla ilişkilidir; vajinal pH yükselmesi ve mikrobiyota değişimi koruyucu zemini zayıflatır. Sadece antibiyotik geçici rahatlama sağlasa da altta yatan zemine dokunmaz; lokal östrojen bu zemini iyileştirebilir.',
+    },
+    {
+      question: 'Hyaluronik asit, polikarbofil veya doğal içerikli vajinal ürünler işe yarar mı?',
+      answer:
+        'Hormon dışı vajinal nemlendiriciler (hyaluronik asit veya polikarbofil bazlı) günlük konforu artırabilir; bazı kadınlarda düzenli kullanımda fayda sağlar. Özellikle hormon kullanamayan veya tercih etmeyen kadınlarda ilk basamak seçenektir.',
+    },
+    {
+      question: 'Cinsel ilişkide ağrı sürekli; ne kadar süre denemeden hekime başvurmalı?',
+      answer:
+        'Lokal nemlendirici ve yağlayıcı kullanımıyla 4-6 hafta içinde belirgin fark gözlenmiyorsa jinekolog değerlendirmesi gereklidir; lokal östrojen veya pelvik taban fizyoterapisi gibi adımlar gündeme gelir.',
     },
   ],
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': [
