@@ -1065,7 +1065,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
     title: 'Östrojen Biyolojisi ve Sağlık',
     description: 'Östrojenin kemik, kalp, beyin ve metabolizma üzerindeki etkilerini bilimsel bir dille açıklayan rehber.',
-    publishedDate: '25 Şubat 2026',
+    publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',
     sectionPath: '/bilimsel-pencere/',

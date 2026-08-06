@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -32,6 +32,7 @@ const tocEntries = [
   { id: 'kanser', label: 'Östrojen-Kanser İlişkisi' },
   { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
@@ -45,7 +46,9 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '2 Mayıs 2026',
+  modifiedDate: '6 Ağustos 2026',
   pathname: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -77,7 +80,9 @@ const articleSchemas = buildArticleSchemas({
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
         publishedDate="2 Mayıs 2026"
+        lastUpdated="6 Ağustos 2026"
         readingMinutes={10}
+        medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/bp-estrogen-biyolojisi.webp"
         imageAlt="Akademik çalışma masasında biyoloji notları, kitap ve çay bardağı; östrojen biyolojisi yazısı için editoryal görsel"
       />
@@ -90,13 +95,14 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Kısa Klinik Yanıt">
 <p>
           Östrojen tek bir hormon değil; <strong>E1 (estron), E2 (estradiol), E3 (estriol),
           E4 (estetrol)</strong> ailesinin ortak adı. Etkilerini iki farklı reseptör
           (ER-α ve ER-β) üzerinden, doku-spesifik biçimde gösteriyor. Bu yüzden aynı
-          hormon kemikte yapıcı, beyinde nöroprotektif, vajinal-üriner dokuda epitel
-          besleyici olabilir. Memede ise dikkatle ele alınması gereken bir moleküle dönüşür. Yaşam
+          hormon kemik, beyin ve vajinal-üriner dokularda farklı biyolojik etkiler gösterebilir.
+          Bu etkilerin klinik anlamı dokuya, yaşa, hormon düzeyine ve kişinin sağlık bağlamına göre
+          değişir. Memede ise dikkatle ele alınması gereken bir moleküle dönüşür. Yaşam
           boyu profil değişiyor, metabolizma karaciğer ve mikrobiyota (estrobolome)
           üzerinden seyrediyor; endojen düşüşü perimenopoz ve menopozda klinik tablonun
           merkezine yerleşiyor. Bu yazı mekanizmayı net açıyor, HRT bakışını bilimsel
@@ -120,9 +126,10 @@ const articleSchemas = buildArticleSchemas({
           E1 menopoz sonrasında baskın form; yumurtalıklar artık ana kaynak değil — yağ
           dokusunda androjenlerden aromataz enzimi üzerinden üretiliyor. E3 hamilelikte
           plasentadan baskın salgılanıyor; üreme dışı dönemde düşük. E4 plasenta kaynaklı
-          fetal bir hormon. Bu nedenle son yıllarda <em>"daha güvenli HRT"</em>
-          araştırmalarında ilgi görüyor. İlginin nedeni meme dokusunda zayıf etki,
-          kemik ve vajinal dokuda ise yeterli etki profili <Evidence from={3} to={4} />.
+          fetal bir hormon. Menopozal HRT'deki yeri ise hâlâ araştırılıyor; bazı dokularda
+          farklı yanıtlar oluşturabileceği düşünülse de bunu yerleşik bir güvenlilik veya
+          etkinlik üstünlüğü olarak yorumlamak için veri yeterli değil
+          <sup><a href="#kaynak-5">[5]</a></sup> <Evidence from={2} to={3} />.
         </p>
         <p>
           Bu ayrım önemli çünkü <em>"östrojen düşüyor"</em> derken hangi formdan söz
@@ -136,18 +143,19 @@ const articleSchemas = buildArticleSchemas({
           Östrojenin etkisini belirleyen bir başka katman <strong>reseptör çeşitliliği</strong>:
           <strong>ER-α (östrojen reseptörü alfa)</strong> ve <strong>ER-β (östrojen reseptörü
           beta)</strong> aynı hormonu farklı dokularda farklı şekilde okuyor
-          <Evidence level={5} />. Memede ER-α baskın ve hücre çoğalmasını destekliyor;
-          kemikte ER-β belirgin ve kemik koruyucu etki sağlıyor; beyinde her iki reseptör
-          farklı bölgelerde değişen oranlarda; vajinal epitelde ER-α yoğun.
+          <Evidence level={5} />. Reseptörlerin oranı ve hücre içindeki yardımcı proteinler
+          dokuya göre değişiyor; bu nedenle meme, kemik, beyin veya vajinal dokudaki sonucu
+          tek bir reseptörün varlığıyla açıklamak doğru değil.
         </p>
         <p>
           Bu reseptör dağılımı <strong>doku-spesifik tedavi mantığının</strong> temelini
           kuruyor: <strong>SERM</strong> (Selective Estrogen Receptor Modulator —
           Tamoksifen, raloksifen, ospemifen) molekülleri bazı dokularda reseptörü uyaran,
-          bazılarında engelleyen tasarımda <Evidence level={5} />. Tamoksifen memede
-          antagonist (anti-östrojenik), kemikte agonist (kemik koruyucu); raloksifen kemikte
-          ve KV sistemde agonist, memede antagonist; ospemifen vajinal dokuda agonist
-          (postmenopozal disparoni tedavisi onaylı). Bu çoklu reseptör profili tek bir
+          bazılarında engelleyen tasarımda <Evidence level={5} />. Tamoksifen ve raloksifenin
+          dokuya göre değişen etkileri vardır; raloksifen kemik ve meme başlıklarında
+          seçici yanıt gösterse de kardiyovasküler hastalıktan korunma amacıyla kullanılmaz.
+          Ospemifen vajinal dokuda agonist etki gösteren, postmenopozal disparoni için
+          kullanılan bir seçenektir. Bu çoklu reseptör profili tek bir
           basit <em>"östrojen ver / verme"</em> kararının neden yetersiz kaldığını
           gösteriyor.
         </p>
@@ -159,14 +167,14 @@ const articleSchemas = buildArticleSchemas({
           siklus bu hormonla şekillenir. <strong>Üreme döneminde</strong> E2 28 günlük
           siklusta dalga gibi seyreder — folliküler fazda yükselir, ovülasyonda zirveye
           ulaşır, luteal fazda kısmen düşer. <strong>Hamilelikte</strong> E3 plasentadan
-          baskın olur; total östrojen düzeyleri normal sikluslara göre 100-1000 kat artar
-          <Evidence level={5} />.
+          baskın olur; total östrojen düzeyleri normal siklusa göre belirgin biçimde yükselir
+          <Evidence level={4} />.
         </p>
         <p>
           <strong>Perimenopozda</strong> tablo <em>düz bir düşüş</em> değil, <em>kaotik
           dalgalanma</em>. Estradiol bazı sikluslarda yüksek, bazılarında düşük; FSH
           kompansatuvar yükselir; adet siklusları düzensizleşir. Bu kaos
-          dönemi kadına göre 2-10 yıl sürebiliyor <Evidence level={5} />.
+          dönemi birkaç yıl sürebiliyor; süre kişiden kişiye değişiyor <Evidence level={4} />.
         </p>
         <p>
           <strong>Menopozda</strong> yumurtalıklar E2 üretmeyi büyük ölçüde durduruyor;
@@ -181,7 +189,7 @@ const articleSchemas = buildArticleSchemas({
           Östrojen reseptörleri vücudun çoğu dokusunda bulunduğu için etkileri çok geniş.
           <strong>Kemikte</strong> osteoblast (kemik yapan) aktivitesini destekler ve
           osteoklast (kemik yıkan) aktivitesini sınırlar; düşüşü postmenopozal kemik
-          kaybının ana nedeni <Evidence level={5} />. <strong>Vajinal-üriner sistemde</strong>
+          kaybının önemli nedenlerinden biri <Evidence level={5} />. <strong>Vajinal-üriner sistemde</strong>
           epitel kalınlığını, kollajen-elastin yapısını ve damar desteğini koruyor; düşüşü
           GSM (genitoüriner menopoz sendromu) tablosunun temeli <Evidence level={5} /> —
           bu konuda detaylı inceleme için
@@ -190,20 +198,21 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           <strong>Kardiyovasküler sistemde</strong> östrojen damar duvarında nitrik oksit
-          üretimini artırır, lipid profilini olumlu etkiler (HDL'yi yükseltir, LDL'yi
-          düşürür) ve damar düz kasında dilatasyon sağlar <Evidence level={4} />. Premenopozal
-          kadınlarda kardiyovasküler riskin erkek yaşıtlardan düşük olmasının ana
-          nedenlerinden biri bu koruyucu etki. Ancak <strong>"zamanlama hipotezi"</strong>
-          klinik açıdan kritik: HRT'nin kardiyovasküler etkisi başlama zamanına göre
-          değişiyor — menopozun erken döneminde başlatıldığında olası koruyucu, geç
-          başlatıldığında nötr veya artırıcı olabiliyor <Evidence level={4} />.
+          üretimini artırabilir, lipid profili ve damar düz kası üzerinde etkili olabilir
+          <Evidence level={4} />. Kardiyovasküler riskteki yaş ve cinsiyet farkı ise tek
+          başına östrojenle açıklanamaz; tansiyon, lipidler, hareket, sigara ve yaş gibi
+          birçok etken birlikte rol oynar. <strong>"Zamanlama hipotezi"</strong> HRT'nin
+          yarar-risk dengesinin başlama zamanına göre değişebileceğini söyler; bu, HRT'nin
+          kalp-damar hastalığından korunma amacıyla başlanacağı anlamına gelmez
+          <sup><a href="#kaynak-1">[1]</a></sup>.
         </p>
         <p>
           <strong>Beyinde</strong> östrojen reseptörleri hipokampus, prefrontal korteks
-          ve diğer bölgelerde bulunuyor; nöroprotektif, sinaptik plastisite üzerinde
-          olumlu, bilişsel işlevde rol oynayan etkiler gösterilmiş <Evidence level={4} />.
-          Perimenopozda <em>"beyin sisi"</em> tablosunun bir kısmı bu nöroözgül etkilerin
-          dalgalanmasıyla açıklanıyor. <strong>Ciltte</strong> kollajen üretimini destekliyor,
+          ve diğer bölgelerde bulunuyor; sinaptik plastisite ve bilişsel işlevle ilişkili
+          biyolojik etkiler gösterilmiş <Evidence level={4} />. Bu mekanizma, HRT'nin
+          bilişsel gerilemeyi önlediği anlamına gelmez. Perimenopozda <em>"beyin sisi"</em>
+          tablosunun bir kısmı hormonal dalgalanmayla ilişkili olabilir. <strong>Ciltte</strong>
+          kollajen üretimini destekliyor,
           dermis kalınlığını koruyor; menopozda azalan kollajen üretimi cilt incelmesinin
           baş aktörü <Evidence level={4} />. <strong>Metabolik dengede</strong> insülin
           duyarlılığını ve yağ dağılımını etkiliyor — postmenopozda santral yağ artışı bu
@@ -217,10 +226,11 @@ const articleSchemas = buildArticleSchemas({
           Östrojenin <em>nasıl üretildiği</em> kadar <em>nasıl yıkıldığı</em> da klinik
           karar için önemli. Karaciğerde <strong>CYP enzim ailesi</strong> (özellikle
           CYP1A1, CYP1A2, CYP1B1, CYP3A4) östrojeni 2-, 4- veya 16-hidroksi metabolitlerine
-          çeviriyor <Evidence level={5} />. Bu metabolitlerin biyolojik aktivitesi farklı:
-          2-hidroksi metabolitler genellikle <em>"daha güvenli"</em> kabul ediliyor;
-          4-hidroksi metabolitler DNA hasar potansiyeline sahip, kanser araştırmalarında
-          ilgi görüyor <Evidence level={3} />. Bireysel CYP enzim profili (genetik
+          çeviriyor <Evidence level={5} />. Bu metabolitlerin laboratuvar düzeyindeki
+          biyolojik aktiviteleri farklı olabilir; ancak 2-hidroksi metabolitleri klinik olarak
+          <em>"daha güvenli"</em> kabul etmek doğru değildir. 4-hidroksi metabolitlerin DNA
+          hasarıyla ilişkisi kanser araştırmalarında inceleniyor, fakat bu bulgu tek başına
+          kişisel kanser riski anlamına gelmez <Evidence level={2} />. Bireysel CYP enzim profili (genetik
           polimorfizmler) hangi metabolik yolun baskın olduğunu etkiliyor — bu yüzden
           aynı dozda iki kadında farklı etki görülebiliyor.
         </p>
@@ -228,9 +238,10 @@ const articleSchemas = buildArticleSchemas({
           Son yıllarda <strong>estrobolome</strong> (östrojen-bağırsak mikrobiyota etkileşimi)
           alanı ilgi çekiyor. Karaciğerde glukuronidasyonla işaretlenen östrojen safrayla
           bağırsağa atılıyor; bağırsakta β-glukuronidaz enzimi içeren mikrobiyota bu
-          işaretleri kesebiliyor ve östrojen tekrar emiliyor (enterohepatik dolaşım)
-          <Evidence level={3} />. Yani mikrobiyota kompozisyonu kandaki aktif östrojen
-          düzeyini etkileyebiliyor. Bu alan henüz erken — ama beslenme-mikrobiyota-hormon
+          işaretleri kesebiliyor ve östrojenin bir bölümü tekrar emilebiliyor (enterohepatik
+          dolaşım) <Evidence level={3} />. Bu nedenle mikrobiyotanın östrojen metabolizmasını
+          etkileyebileceği düşünülüyor; bunun kişisel tedavi kararına nasıl çevrileceği henüz
+          net değil. Bu alan henüz erken — ama beslenme-mikrobiyota-hormon
           eksenini araştıran çalışmalar artıyor; klinik yansımaları için zaman gerekli.
         </p>
 
@@ -244,22 +255,24 @@ const articleSchemas = buildArticleSchemas({
           <strong>Oral östrojen</strong> ilk geçiş etkisi nedeniyle karaciğerde yoğun
           metabolize oluyor; SHBG, koagülasyon faktörleri ve trigliseritleri etkiliyor.
           <strong>Transdermal östrojen</strong> (yama, jel) karaciğer ilk geçişini
-          atlıyor; venöz tromboembolizm riski açısından oral formdan daha güvenli profili
-          var <Evidence level={5} />. Özellikle kardiyovasküler risk faktörü, migren öyküsü
-          veya tromboz öyküsü olan kadınlarda transdermal tercih ediliyor. <strong>Vajinal
-          östrojen</strong> (krem, halka, tablet) lokal etki amaçlı; sistemik dolaşıma
-          geçen miktar düşük; GSM tedavisi için en güçlü kanıtlı seçenek <Evidence level={5} />.
+          atlıyor; gözlemsel veriler transdermal formda venöz tromboembolizm riskinin oral
+          forma göre daha düşük olabileceğini düşündürüyor <Evidence level={4} />. Bu,
+          her kadın için otomatik olarak transdermal seçileceği anlamına gelmez. <strong>Vajinal
+          östrojen</strong> (krem, halka, tablet) lokal yakınmalar için kullanılan ve sistemik
+          dolaşıma genellikle düşük miktarda geçen bir seçenektir; meme kanseri öyküsünde
+          onkolog ve ilgili hekimle ortak değerlendirme gerekir
+          <sup><a href="#kaynak-2">[2]</a></sup>.
           Bu konuda detaylı tartışma için
           <a href="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/" class="font-semibold text-primary underline decoration-gold/40 underline-offset-4 hover:decoration-primary">
           GSM yazısı</a>.
         </p>
         <p>
-          Uterusu olan kadınlarda östrojen tek başına verilemiyor; <strong>progestajen
-          eklemesi</strong> endometrium koruması için zorunlu (östrojenin tek başına
-          endometrium kalınlaşmasını ve hiperplaziyi tetiklediği için) <Evidence level={5} />.
-          Mikronize progesteron, didrogesteron, sentetik progestajenler — hepsinin profili
-          farklı; meme ve KV güvenlik açısından mikronize progesteron son yıllarda öne
-          çıkan tercih.
+          Uterusu olan kadınlarda <strong>sistemik östrojen</strong> endometriumun kalınlaşması
+          ve hiperplazi riskini azaltmak için progestajenle birlikte planlanır; histerektomi
+          sonrası bu gereklilik farklıdır <Evidence level={5} />. Düşük doz vajinal östrojen
+          ise lokal tedavi olarak ayrıca değerlendirilir. Mikronize progesteron, didrogesteron
+          ve sentetik progestajenlerin profilleri farklıdır; hiçbirini herkes için en güvenli
+          seçenek gibi sunmamak gerekir.
         </p>
 
         <h2 id="kanser">Östrojen-Kanser İlişkisi — Karmaşık Bir Tablo</h2>
@@ -267,30 +280,31 @@ const articleSchemas = buildArticleSchemas({
           Östrojen-kanser ilişkisi <em>tek bir cümleyle</em> ifade edilemiyor; çünkü doku
           tipine ve süreye göre değişiyor. <strong>Memede</strong> östrojen ER-α üzerinden
           hücre çoğalmasını destekliyor; HRT bu mekanizmayla meme kanseri riskini bir miktar
-          artırabiliyor — ama bu artış küçük ve formüla, doza, süreye, progestajen tipine
-          göre değişiyor <Evidence level={5} />. Bazı çalışmalar mikronize progesteron +
-          transdermal östrojen kombinasyonunun riski belirgin artırmadığını bildirmiş;
-          bazı sentetik progestajen kombinasyonları daha yüksek risk göstermiş.
+          artırabiliyor; mutlak risk yaşa, başlangıç zamanına, tedavi süresine, doza ve
+          progestajen tipine göre değişiyor <Evidence level={4} />. Farklı formülasyonlar
+          için gözlemsel bulgular bulunsa da bunlar her kombinasyonun güvenli olduğu anlamına
+          gelmez <sup><a href="#kaynak-1">[1]</a></sup>.
         </p>
         <p>
-          <strong>Endometriumda</strong> östrojen tek başına proliferatif (hiperplaziye yol
-          açan); progestajen bu etkiyi dengeliyor. Bu yüzden uterusu olan kadında HRT'de
-          progestajen <em>zorunlu güvenlik bileşeni</em> <Evidence level={5} />. Histerektomi
-          geçirmiş kadında östrojen tek başına verilebiliyor.
+          <strong>Endometriumda</strong> sistemik östrojen tek başına proliferatif (hiperplaziye
+          yol açabilen) etki gösterir; progestajen bu riski azaltır. Bu yüzden uterusu olan
+          kadında sistemik HRT'de progestajen genellikle gerekli bir koruma bileşenidir
+          <Evidence level={5} />. Histerektomi geçirmiş kadında östrojen tek başına
+          planlanabilir.
         </p>
         <p>
           <strong>Yumurtalık ve serviks kanseri</strong> ile HRT ilişkisi karmaşık —
-          bazı çalışmalar küçük artış bildirirken bazıları nötr; klinik karar bireysel.
-          <strong>Kolon kanseri</strong> için HRT bazı çalışmalarda azaltıcı etki gösterdi
-          (epidemiyolojik veri) <Evidence level={3} />. Bu mozaik tablo neden tek bir
+          bazı çalışmalar küçük artış bildirirken bazıları nötr; bu veriler HRT'yi kanserden
+          korunma amacıyla kullanmak için yeterli değildir. <strong>Kolon kanseri</strong> için
+          bazı çalışmalarda risk azalması bildirilmiş olsa da bu epidemiyolojik bulgu tedavi
+          kararını tek başına belirlemez <Evidence level={2} />. Bu mozaik tablo neden tek bir
           <em>"HRT iyi mi kötü mü?"</em> sorusunun cevaplanamayacağını gösteriyor.
         </p>
         <p>
-          Hormon reseptörü pozitif meme kanseri öyküsü olan kadınlarda HRT genellikle
-          kontrendike kabul ediliyor; ama bazı vakalarda multidisipliner değerlendirmeyle
-          lokal vajinal östrojen düşünülebiliyor — özellikle yaşam kalitesini belirgin
-          etkileyen GSM tablosunda. Bu kararlar onkolog ve jinekoloğun ortak değerlendirmesi
-          gerektiriyor <Evidence level={4} />.
+          Hormon reseptörü pozitif meme kanseri öyküsü olan kadınlarda sistemik HRT genellikle
+          önerilmez. GSM belirginse, hormon dışı seçenekler yetersiz kaldığında düşük doz
+          vajinal östrojen bazı kişilerde onkolog ve jinekoloğun ortak değerlendirmesiyle
+          gündeme gelebilir <Evidence level={4} />.
         </p>
 
         <h2 id="iletisim">Doktora Hangi Soruları Sormalı?</h2>
@@ -314,13 +328,18 @@ const articleSchemas = buildArticleSchemas({
         </p>
 
         <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <p>
+          Bu bölümde östrojen biyolojisi, biyoözdeş hormonlar ve laboratuvar testleri hakkında
+          sık sorulan soruları kanıtın sınırlarını koruyarak yanıtlıyoruz.
+        </p>
 
         <h3>Bioidentik (biyo-eşdeğer) hormonlar daha mı güvenli?</h3>
         <p>
           <strong>"Bioidentik"</strong> terimi yanıltıcı kullanılıyor. Tıbbi anlamda
           bioidentik = vücudun ürettiği molekül ile kimyasal olarak özdeş — yani
           17β-estradiol ve mikronize progesteron <em>bioidentik</em>. Bu moleküller
-          eczanede satılan birçok HRT ürününde zaten kullanılıyor <Evidence level={5} />.
+          eczanede satılan birçok HRT ürününde zaten kullanılıyor <Evidence level={5} />
+          <sup><a href="#kaynak-3">[3]</a></sup>.
           Pazarlamada karşımıza çıkan <em>"compound bioidentical"</em> (kişiye özel
           eczacılarda hazırlanan karışım) ürünler ise farklı kategori — kalite kontrol,
           doz tutarlılığı ve klinik kanıt açısından geleneksel onaylı HRT ürünlerinin
@@ -335,14 +354,15 @@ const articleSchemas = buildArticleSchemas({
           ölçüm rutin olarak <em>"normal aralık"</em>la karşılaştırılmıyor. HRT etkinliği
           kanda E2 ölçümüyle değil <em>klinik yanıtla</em> (sıcak basması, uyku, ruh hali,
           GSM belirtileri) değerlendiriliyor <Evidence level={4} />. Tükürük veya saç
-          testleri pazarlanıyor ama klinik geçerliliği zayıf; rutin uygulamada yeri yok.
+          testleri pazarlanıyor ama klinik geçerliliği zayıf; menopoz belirtileri için rutin
+          başlangıç değerlendirmesinde önerilmiyor <sup><a href="#kaynak-6">[6]</a></sup>.
         </p>
 
         <h3>Soya, isoflavon, fitoöstrojen — gerçekten östrojen yerine geçer mi?</h3>
         <p>
           Fitoöstrojenler (isoflavonlar — soya, kırmızı yonca; lignanlar — keten tohumu)
-          östrojen reseptörlerine bağlanıyor ama afiniteleri düşük (E2'den 100-1000 kat
-          zayıf) ve bazı dokularda agonist, bazılarında antagonist davranıyorlar
+          östrojen reseptörlerine bağlanıyor; E2'ye göre daha düşük bağlanma eğilimleri ve
+          dokuya göre değişen etkileri olabilir
           <Evidence level={3} />. Sıcak basması ve hafif menopoz belirtileri için bazı
           çalışmalarda küçük yararlar bildirilmiş; ama etki büyüklüğü mütevazı, sonuçlar
           tutarsız. <em>"Doğal HRT"</em> diye pazarlanan yüksek doz isoflavon takviyeleri,
@@ -354,11 +374,10 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Östrojen serotonin, dopamin ve nörepinefrin sistemleriyle ilişkide; reseptörlerin
           bu bölgelerdeki yoğunluğu östrojen-ruh hali bağını kurar <Evidence level={4} />.
-          Perimenopozdaki dalgalanma (steady düşüş değil) ruh hâli değişimlerinde anahtar
-          faktör; kadınların önemli bir kısmı bu dönemde anksiyete ve depresif belirtiler
-          yaşıyor — premenstrüel dönem hassasiyeti olanlarda risk daha yüksek. HRT bazı
-          kadınlarda ruh hali belirtilerini düzeltiyor; bazılarında SSRI veya psikoterapi
-          gerekli oluyor; iki yaklaşım birlikte düşünülebiliyor.
+          Perimenopozdaki hormonal dalgalanma ruh hâli değişimlerine katkıda bulunabilir;
+          ancak depresif belirtiler yalnızca östrojenle açıklanamaz. HRT bazı kadınlarda
+          yakınmaları hafifletebilir; depresyon tanısı veya belirgin işlev kaybı varsa SSRI,
+          psikoterapi ya da başka seçenekler ayrıca değerlendirilir.
         </p>
 
         <h3>Östrojen düşüşü kemik kaybını neden hızlandırır?</h3>
@@ -366,14 +385,41 @@ const articleSchemas = buildArticleSchemas({
           Östrojen kemik döngüsünü kontrol eden temel düzenleyicilerden biri: osteoblast
           (kemik yapan) hücreleri destekler, osteoklast (kemik yıkan) hücrelerin
           aktivitesini sınırlar <Evidence level={5} />. Düşüşle birlikte denge yıkım
-          tarafına kayar; postmenopozal ilk 5-10 yılda kemik kaybı belirgin biçimde
-          hızlanır (yılda %2-3'e kadar). Bu yüzden 50-65 yaş bandı osteoporoz açısından
-          kritik dönem; KMD taraması, kalsiyum-D vitamini, düzenli ağırlık egzersizi ve
-          uygun olgularda HRT veya bisfosfonat gibi seçenekler birlikte değerlendiriliyor.
+          tarafına kayar; postmenopozun ilk yıllarında kemik kaybı belirgin biçimde
+          hızlanabilir. KMD taraması 65 yaş ve sonrasında, daha genç postmenopozal kişilerde
+          ise kırık riski yüksekse gündeme gelir. Kalsiyum ve D vitamini gereksinimi, direnç
+          egzersizi ve uygun olgularda HRT veya bisfosfonat gibi seçenekler kişisel riskle
+          birlikte değerlendirilir <sup><a href="#kaynak-4">[4]</a></sup>.
           D vitamini bu hatta temel rol oynuyor — detaylı tartışma için
           <a href="/zamansiz-yasam/d-vitamini-rehberi/" class="font-semibold text-primary underline decoration-gold/40 underline-offset-4 hover:decoration-primary">
           D vitamini rehberi</a>.
         </p>
+
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p>
+          Bu makaledeki HRT, meme güvenliği, hormon testleri, kemik taraması ve E4 sınırlarına
+          ilişkin son kaynak taraması: 6 Ağustos 2026.
+        </p>
+        <ol>
+          <li id="kaynak-1">
+            American College of Obstetricians and Gynecologists. <a href="https://www.acog.org/womens-health/faqs/hormone-therapy-for-menopause" rel="noopener noreferrer">Hormone Therapy for Menopause</a>.
+          </li>
+          <li id="kaynak-2">
+            National Institute for Health and Care Excellence. <a href="https://www.nice.org.uk/guidance/ng23/chapter/Recommendations" rel="noopener noreferrer">Menopause: identification and management — NG23 recommendations</a>.
+          </li>
+          <li id="kaynak-3">
+            American College of Obstetricians and Gynecologists. <a href="https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2023/11/compounded-bioidentical-menopausal-hormone-therapy" rel="noopener noreferrer">Compounded Bioidentical Menopausal Hormone Therapy</a>. 2023.
+          </li>
+          <li id="kaynak-4">
+            U.S. Preventive Services Task Force. <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening" rel="noopener noreferrer">Osteoporosis to Prevent Fractures: Screening</a>. 2025.
+          </li>
+          <li id="kaynak-5">
+            Lobo RA ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/39283289/" rel="noopener noreferrer">Insights on estetrol, the native estrogen: from contraception to hormone replacement therapy</a>. 2024.
+          </li>
+          <li id="kaynak-6">
+            American College of Obstetricians and Gynecologists. <a href="https://www.acog.org/womens-health/experts-and-stories/ask-acog/hormone-testing-before-hormone-therapy" rel="noopener noreferrer">Should I have hormone testing before starting hormone therapy?</a>.
+          </li>
+        </ol>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
@@ -397,7 +443,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
@@ -411,7 +457,7 @@ const articleSchemas = buildArticleSchemas({
         />
 
       <ArticleEditorNote>
-<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={5} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
             Yazı bilim yazısı oldu; bu notu klinikte bu bilgiyi pratik karara nasıl çevirdiğimi
@@ -441,9 +487,10 @@ const articleSchemas = buildArticleSchemas({
             <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Postmenopozal
             kanama (herhangi miktar) — endometrium kanseri ekartasyonu zorunlu; HRT öncesi
             ve süresince kontrol noktası. Hormon reseptörü pozitif meme kanseri öyküsü —
-            sistemik HRT genellikle kontrendike, lokal vajinal östrojen multidisipliner
-            karar gerektirir. Tromboembolik olay öyküsü, bilinen kalıtsal koagülasyon
-            bozukluğu — oral östrojen kaçınılır, transdermal değerlendirilebilir. Aktif
+            sistemik HRT genellikle önerilmez, lokal vajinal östrojen ise multidisipliner
+            karar gerektirebilir. Tromboembolik olay öyküsü, bilinen kalıtsal koagülasyon
+            bozukluğu — oral östrojen yerine transdermal seçenek bazı kişilerde
+            değerlendirilebilir. Aktif
             karaciğer hastalığı, açıklanamayan vajinal kanama, uzun-süre kontrolsüz HRT —
             durum yeniden değerlendirilmeli.
           </p>
@@ -454,8 +501,8 @@ const articleSchemas = buildArticleSchemas({
             hali) hedefliyoruz; (2) risk profili — yaş, menopoz başlangıç zamanı, KV risk
             faktörleri, kanser öyküsü, tromboembolizm öyküsü, eşlik eden tıbbi durumlar
             ve ilaçlar; (3) form ve doz seçimi — sadece GSM ise lokal vajinal yeterli;
-            sistemik belirti baskınsa transdermal tercih (özellikle KV risk varsa); uterusu
-            olanda mikronize progesteron tercih; (4) değerlendirme takvimi — ilk 3-6 ay
+            sistemik belirti baskınsa transdermal seçenek düşünülebilir; uterusu olanda
+            uygun progestajen seçimi; (4) değerlendirme takvimi — ilk 3-6 ay
             yan etki ve etki takibi, sonra yıllık değerlendirme; (5) durdurma kriteri ve
             yeniden değerlendirme — tedavi açık uçlu değil, periyodik yeniden karar.
           </p>
