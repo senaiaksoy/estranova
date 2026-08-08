@@ -18,6 +18,27 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
+    title: 'Kreatin Menopozda Ne İşe Yarar? Kas, Kemik ve Beyin İçin Kanıt Ne Diyor?',
+    description:
+      'Kreatin menopozda kas gücü, kemik, beyin sisi ve duygu durumu için ne kadar etkili? Çalışmaların gösterdiklerini ve sınırlarını Dr. Senai Aksoy açıklıyor.',
+    publishedDate: '8 Ağustos 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Zamansız Yaşam · Vitaminler',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'kreatin',
+      'menopoz',
+      'perimenopoz',
+      'kas gücü',
+      'direnç egzersizi',
+      'kemik sağlığı',
+      'beyin sisi',
+      'kreatin monohidrat',
+      'takviye güvenliği',
+    ],
+  },
+  {
     path: '/editorun-kosesi/temmuz-2026/',
     title: 'Sıcacık Köşe — Temmuz 2026: Tartı Susunca',
     description: "Eşik dergisinin Temmuz 2026 sayısı: Tartı Susunca. Berna Aksoy'un kapı önü yazısı; vücut kompozisyonu ve beden algısını diyet kültüründen uzak konuşuyoruz.",

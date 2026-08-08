@@ -4,6 +4,33 @@ export interface ArticleFaqItem {
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
+  '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/': [
+    {
+      question: 'Kreatin menopoz belirtilerini azaltır mı?',
+      answer:
+        'Kreatinin sıcak basması, gece terlemesi veya menopozun diğer temel belirtilerini azalttığını gösteren yeterli kanıt yoktur. Kas gücüyle ilgili olumlu bulgular, kreatini genel bir menopoz tedavisine dönüştürmez.',
+    },
+    {
+      question: 'Kreatin kemik erimesini önler mi?',
+      answer:
+        'Mevcut çalışmalar kemik mineral yoğunluğunda genel bir artış göstermiyor. Bazı kemik geometrisi ölçümlerinde olumlu sinyaller olsa da osteoporozu önlediği, tedavi ettiği veya kırığı azalttığı kanıtlanmış değildir.',
+    },
+    {
+      question: 'Kreatin beyin sisi için kullanılabilir mi?',
+      answer:
+        'Bugün için rutin kullanımı destekleyen yeterli veri yoktur. Küçük çalışmalar araştırmaya değer sinyaller veriyor; ancak daha büyük ve uzun süreli çalışmalar gereklidir. Yeni veya belirgin bilişsel yakınmalar yalnızca menopoza bağlanmamalıdır.',
+    },
+    {
+      question: 'Kreatin kullanırken direnç egzersizi şart mı?',
+      answer:
+        'Menopoz sonrası kadınlarda en tutarlı kas ve güç sonuçları direnç egzersiziyle birlikte görülmüştür. Egzersiz olmadan düşük doz kreatin kullanan çalışmalarda aynı ölçüde yarar saptanmamıştır.',
+    },
+    {
+      question: 'Kreatin kullanmaya başlamadan önce neyi konuşmalıyım?',
+      answer:
+        'Hedefinizi, mevcut hastalıklarınızı, kullandığınız ilaç ve takviyeleri, egzersiz planınızı ve ürünün içeriğini konuşmalısınız. Özellikle böbrek hastalığı, gebelik, emzirme veya çoklu ilaç kullanımı varsa kişisel değerlendirme gerekir.',
+    },
+  ],
   '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': [
     {
       question: 'Tartıya her sabah çıkmak beden algısını neden bu kadar zorlar?',

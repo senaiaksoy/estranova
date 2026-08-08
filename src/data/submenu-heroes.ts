@@ -237,6 +237,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/': {
+    src: '/images/library/editorial/zy-kreatin-menopoz.webp',
+    alt: "Gün ışığı alan sakin bir egzersiz köşesinde, su bardağı ve dambıl yanında oturan 50'li yaşlarında kadın; menopozda kreatin, kas gücü ve sağlıklı yaş alma yazısı için yatay editoryal kart görseli",
+  },
   '/editorun-kosesi/temmuz-2026/': {
     src: '/images/library/editorial/temmuz-2026-sicacik-kose.webp',
     alt: 'Yaz sabahı gardırop önünde keten bluz seçen kadın; Tartı Susunca Sıcacık Köşe kart görseli',

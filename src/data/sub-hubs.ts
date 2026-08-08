@@ -67,6 +67,7 @@ export const subHubs: SubHubConfig[] = [
     heroLede:
       'Bu alt başlıkta vitaminleri tek bir hap olarak değil, beslenme ve günlük alışkanlıkların bir parçası olarak okuyoruz. D vitamini, magnezyum ve seçilmiş takviye başlıklarını abartıdan ayıran sakin bir okuma ritmi kuruyoruz.',
     articlePaths: [
+      '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
       '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
       '/zamansiz-yasam/d-vitamini-rehberi/',
     ],
