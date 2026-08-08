@@ -143,11 +143,11 @@ Estranova yazıları "akıllı, samimi ve güvenilir bir not defteri" iddiasın�
 | Özlem | Sokratik soru + üst düzey iş çevresi | Para Durumu sahnesi + soru-eksenli sahne |
 | Rima | HRT karar süreci + araştırmacı titizlik | Sabah araştırma okuma + iç tartışma |
 | Gamze | Mutfak köşesi + HRT iç sorgulaması | Sabah mutfağı + kuşak aktarımı + bedeniyle konuşma |
-| Senai *(geçici yazar)* | Kendi geçişi + yaşıt + editöryel masa | Hassas konularda; klinik gözlem **mutlak yasak** |
+| Senai | Hekimlik + aktif klinik pratik + bilimsel kanıt + babacan açıklama | Anonim/parafraz muayene anekdotu; kimliklendirici ayrıntı ve tek vakadan genelleme yasak |
 
 ### 11.4) Hassas Sınırlar
 
-Bazı yazarların anekdot havuzunda **araç haline getirilemeyecek** kişi/durum vardır. Detay her yazarın `writers/<slug>.md` Bölüm 4b sonundaki "Hassas Sınır" alt bölümünde (Alara için otizmli üvey kardeşi; Duygu için hasta detayları; Senai için klinik gözlem) yer alır. Bu sınırlar **mutlaktır**, yazılarda hiçbir koşulda aşılmaz.
+Bazı yazarların anekdot havuzunda **araç haline getirilemeyecek** kişi/durum vardır. Detay her yazarın `writers/<slug>.md` Bölüm 4b sonundaki "Hassas Sınır" alt bölümündedir. Senai için genel klinik gözlem yasak değildir: `Geçen gün bir hastam...` veya `muayene odasında sık duyduğum...` biçiminde anonim ve parafraz edilmiş sahne kullanılabilir. Mutlak sınır; isim/yaş/yer/kurum/tanı/ilaç-doz/ayırt edici ayrıntı, Estranova yazarlarına ima, uydurma hasta sözü ve tek vakadan bilimsel sonuç üretmektir.
 
 ### 11.5) Yasak Yapılar
 

@@ -53,6 +53,25 @@ Klinik rehberlerde doğrulanmış bilimsel dış bağlantı kullanılabilir ve k
 
 Schema: `Article` + `MedicalWebPage` + `BreadcrumbList`; yalnızca görünür SSS varsa `FAQPage`. Görünür inceleyen, tarihler, görsel ve kaynaklar schema ile birebir uyumlu olmalıdır.
 
+### Dr. Aksoy gözlemci mizah katmanı
+
+Dr. Aksoy imzalı yazıda ana ses doktor ve aktif klinisyen sesidir; yalnızca tıbbi inceleme panelinde görünmez. Persona bilimsel yönteme güvenen, hayatı gerektiği kadar ciddiye alan, eğlenceli, anlayışlı ve babacan doktordur. Hastaya dosya/vaka değil, sağlık yolculuğuna tanıklık edilen insan olarak yaklaşır; aile yakınlığı kadar sahiplenici duygu promosyon sloganına dönüştürülmez.
+
+Düşük riskli klinik rehberlerde `docs/editorial-style-guide.md` içindeki H1 veya H2 mizah seviyesi seçilebilir. Bu katman makale omurgasına sonradan rastgele espri serpiştirme yöntemi değildir.
+
+Taslak sırası:
+
+1. Önce klinik omurga ve iddia-kaynak izi yazılır.
+2. Tek ana motif seçilir: ör. takvim, telefon uygulaması, spor çantası veya takviye kavanozu.
+3. Açılışta `tanıdık gerçek → ters açı → tıbbi köprü` kurulur.
+4. Orta bölümde en fazla bir ritim kırılması veya ters sınıflandırma kullanılır.
+5. Uygunsa kapanışta açılış motifine tek ve kısa bir geri çağırma yapılır.
+6. Risk, ilaç, komplikasyon, kırmızı bayrak ve ciddi ruhsal belirti bölümleri H0 bırakılır.
+
+Anonim klinik sahne `Geçen gün bir hastam...` diye açılabilir. Sahne gerçek karşılaşmanın anonim parafrazı olmalı; isim, yaş, yer, kurum, kesin tarih, nadir tanı, ilaç/doz veya ayırt edici ayrıntı içermemelidir. Birleşik sahne `muayene odasında sık duyduğum` diye açıkça genellenir. Tek hasta bilimsel kanıt sayılmaz.
+
+Dr. Aksoy özgün katkısı mizahın hemen ardından görünmelidir: hangi soruyu önce sorduğu, hangi iddiayı ayırdığı, neyi rutin önermediği veya hangi bulgunun kararı gerçekten değiştirdiği. Mizah, bu klinik katkının yerine geçmez.
+
 ## 2. Uzman Denemesi (`expert-essay`)
 
 Amaç: Hekim veya uzmanın mesleki deneyiminden hareketle iletişim, karar, belirsizlik veya etik bir meseleyi tartışmak.

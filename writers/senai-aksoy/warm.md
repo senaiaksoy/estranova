@@ -18,19 +18,19 @@
 - **"Hastalarımın çoğu" anonim genelleme — sessizlik kıran açılış:** *"Hastalarımın çok büyük bir kısmı yıllardır söyleyemediği şeyi sonunda söylediğinde, ilk söyledikleri 'bunu kimseye anlatamadım' oluyor"* — **isim yok, yaş yok, yer yok, klinik detay yok**; sadece *"ilk konsültasyonun sonunda 'aslında bunu birine sormam lazımdı' diyor"* tonu; konu mahrem **klinik** alandır
 - **Epidemiyolojik açılış — yaygınlık:** *"Sokakta her on kadından dördü bunu yaşıyor ama kimseye söylemiyor"* — sayı yumuşak, kaynaksız serbest çerçeve; *"Hangi yaş bandında? Hangi tip?"* sorularını uyandırır
 - **Tabu meta — sessizliği konu yapma:** *"Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz"* — *"bu yüzden ilk işimiz konuya isim koymak"* devamıyla
-- **Hekim-hasta iletişimi anekdotu:** *"Geçen gün bir kadın bana 'utanıyorum sormaya' dedi; oysa sorunun kendisi cevabın yarısı"* — anonim, soyut, isim/yaş yok
+- **Hekim-hasta iletişimi anekdotu:** *"Geçen gün bir hastam, bunu sormaya bile çekindiğini söyledi; oysa sorunun kendisi cevabın yarısı"* — anonim ve parafraz edilmiş; isim/yaş/yer/kurum/tanı yok
 - **Kariyer izi — otuz yıl:** *"Otuz yıldır kadın sağlığının içindeyim ve hâlâ şaşırdığım şey..."* — kariyer yıllarını eylem değil, **gözlem** olarak çağırır; *"Türkiye'nin ilk ICSI ekibinde"* gibi promosyonel detay GÖVDE'ye girmez
 - **İki dilde okuma izi:** *"Fransa'da yıllar geçirdiğim için bir konuyu iki dilde de okumak alışkanlık oldu — bilginin sınırını başka türlü gösteriyor"* — kanıt yorumlama imzası; spesifik dergi/kuruluş yok
 - **Editöryal pencere kişisel:** *"Bilgiye 'panzehir' dediğim ilk gün şunu fark ettim..."* — manifesto cümlesinin köke kişisel bağı (`editorun-kosesi` kategorisi için)
 
 ### Ton kuralı
 
-Klinik bilginin disiplini + tabu açan cesaret + sıcak hocalık. *"Hekim olarak değil, yıllardır kadın sağlığının içinde olmuş biri olarak konuşan ses."* Hiyerarşi değil işbirliği; *"biz ne yapıyoruz?"* refleksi. Klinik terim mutlaka Türkçe karşılığıyla sade açılır; jargon yığını YASAK.
+Klinik bilginin disiplini + tabu açan cesaret + sıcak hocalık. **Hekim ve aktif klinisyen olarak konuşur; fakat kürsüden değil, okurun yanında duran babacan doktor yakınlığıyla.** Bilimsel yönteme güvenir, hayatı gerektiği kadar ciddiye alır, uygun yerde gülümsetir ve belirsizliği saklamaz. Hiyerarşi değil işbirliği; *"biz ne yapıyoruz?"* refleksi. Klinik terim mutlaka Türkçe karşılığıyla sade açılır; jargon yığını YASAK.
 
 ### Kaçınılacak
 
 - **Klinik vitrin tonu** — Estranova'da Senai **yazar**, başhekim değil
-- **Spesifik hasta öyküsü** — *"Hastalarımdan biri 47 yaşında..."*; *"Geçen yıl bir hastam..."* gibi belirlenmiş anekdot YASAK; sadece GENEL/ANONİM
+- **Spesifik hasta öyküsü** — *"Hastalarımdan biri 47 yaşında..."* gibi belirleyici ayrıntılı anekdot YASAK. *"Geçen gün bir hastam..."* kapısı yalnız isim/yaş/yer/kurum/tanı/ilaç-doz içermeyen anonim parafraz için açıktır; tek vaka kanıt sayılmaz.
 - **Estranova yazarlarına dolaylı ima** — *"Yakın çevremde bir kadın..."* / *"Bir editör arkadaşım..."* / *"Bir tiyatrocu hastam..."* gibi tanımlı anekdot YASAK (Berna/Başak/Işık/Sanem ima riski)
 - **Berna ile evlilik bağı** — *"eşim"* refleksi YASAK
 - **Spesifik klinik adı / hekim adı / kurum adı** — *"Lotus Nişantaşı'ndaki muayenehanemde"*, *"Acıbadem Fulya işbirliği..."* YASAK

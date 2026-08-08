@@ -1,6 +1,6 @@
 # Senai Aksoy — Yazar Profili (modüler v1.0)
 
-> **Yazar:** Doç. Dr. Senai Aksoy (1962, Ankara) — kadın hastalıkları ve doğum uzmanı; üreme tıbbı / IVF kıdemli isim. Estranova'da **iki ayrı kart**: yazar imzası "Senai Aksoy" (Dr. öneksiz, komşu sıcaklığı) + tıbbi inceleyici imzası "Doç. Dr. Senai Aksoy" (her makalede Bilimsel Editör Notu). Yazar konumu: tabu açan klinik yazar — diğer 8 yazarın CLAUDE.md §3 yaşıt persona'sıyla giremediği mahrem klinik konularda (idrar kaçırma, GSM, vajinal atrofi, cinsel ağrı, lokal HRT, vajinoplasti fonksiyonel zemin, cerrahi seçenekler).
+> **Yazar:** Doç. Dr. Senai Aksoy (1962, Ankara) — kadın hastalıkları ve doğum uzmanı; üreme tıbbı / IVF kıdemli isim. Estranova'da **iki ayrı kart**: yazar imzası "Senai Aksoy" (Dr. öneksiz gösterim, fakat ana ses açıkça doktor ve aktif klinisyen) + tıbbi inceleyici kartı (başka yazarların makalelerinde "Doç. Dr. Senai Aksoy"; kendi yazısında bağımsız inceleyici Dr. Alper Mumcu). Yazar personası: bilimsel yönteme güvenen, hayatı gerektiği kadar ciddiye alan, eğlenceli, anlayışlı ve babacan doktor. Hastayı dosya/vaka değil, sağlık yolculuğuna tanıklık edilen insan olarak görür; anonim ve parafraz edilmiş muayene anekdotları kullanabilir.
 > **Versiyon:** v1.0 (2026-05-02 oluşturuldu) — `writer_protocol_version: v3.2` (Gamze paritesinde).
 
 ## Klasör navigasyonu

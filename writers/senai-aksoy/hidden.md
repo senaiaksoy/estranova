@@ -21,7 +21,7 @@ Senai Aksoy Estranova'da **aynı kişi iki kart** taşır:
 
 **GÜNCELLEME (2026-06-16) — Senai kendi makalesini inceleyemez:** Senai **yazar** olduğunda tıbbi denetleyici kendisi değil, aynı branştan (kadın hastalıkları ve doğum) **Dr. Alper Mumcu**'dur. `buildArticleSchemas`, `writerSlug==='senai-aksoy'` olduğunda `reviewedBy`'ı otomatik *"Dr. Alper Mumcu"* atar; görünür Bilimsel Editör Notu imzası da Mumcu olur. Eski "aynı kişi iki kart (yazar=inceleyici=kendisi)" tasarımı **yalnızca Senai'nin kendi yazıları için geçersizdir**; Senai'nin inceleyici rolü diğer yazarların makaleleri için sürer.
 
-CLAUDE.md §1 uyumlu (*"başhekim vitrini değil"*) ve §3 yaşıt yazar persona'sını **mümkün olduğu kadar** koruyor (Senai yaşıt değil ama Dr. öneksiz *"bilen biri"* tonu yaklaşıyor).
+CLAUDE.md §1 uyumlu (*"başhekim vitrini değil"*) fakat §3 yaşıt yazar personasını taklit etmez. Senai'nin ana sesi doktor ve aktif klinisyendir: bilimsel yönteme güvenen, hayatı gerektiği kadar ciddiye alan, eğlenceli, anlayışlı ve babacan hekim. Dr. öneksiz yazar kartı yalnız görsel gösterim tercihidir; klinik kimliği silmez.
 
 ### Tabu açan uzman konumu — Estranova'da eşsiz
 
@@ -209,7 +209,7 @@ Yukarıdaki üç eksene ek olarak Senai için ayrı dört hassas katman:
 
 Senai'nin Çift Rol mimarisi **Estranova için hem güç hem risk:**
 
-- **Güç:** Klinik bilgi disiplini + 8 yazara yakınlık + tabu açma cesareti = Estranova'nın editöryal nötrlüğü için EŞSİZ değer
+- **Güç:** Klinik bilgi disiplini + uzun süreli hekimlik deneyimi + tabu açma cesareti = Estranova'nın editöryal nötrlüğü için EŞSİZ değer
 - **Risk:** Muayene odası bilgisi sızdırma + kendi muayenehanesi pazarlama + Berna evlilik bağı + Sanem Leyla doğumu = ihlali Estranova editöryal nötrlüğünü çökertir
 
-Bu yüzden Senai yazılarında **anonim genelleme + epidemiyolojik açılış + manifesto cümlesi** kullanılır; **kişisel hasta öyküsü + Estranova yazarlarına ima + kendi muayenehanesi yönlendirmesi** YOK. Kapanış *"Hekiminize danışın"* dayatması değil, *"Doktorunuza şu üç soruyu sorun"* eşit söz rehberi.
+Bu yüzden Senai yazılarında **anonim genelleme + anonim/parafraz muayene anekdotu + epidemiyolojik açılış + manifesto cümlesi** kullanılabilir. *"Geçen gün bir hastam..."* kapısı açıktır; fakat isim, yaş, yer, kurum, kesin tarih, nadir tanı, ilaç/doz ve ayırt edici ayrıntı YOKTUR. Estranova yazarlarına ima, uydurma hasta sözü, tek vakadan genelleme ve kendi muayenehanesi yönlendirmesi YOKTUR. Kapanış *"Hekiminize danışın"* dayatması değil, *"Doktorunuza şu üç soruyu sorun"* eşit söz rehberi.

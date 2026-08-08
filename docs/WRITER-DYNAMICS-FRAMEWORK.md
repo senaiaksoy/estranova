@@ -328,9 +328,9 @@ Schema standart olduğu için cross-writer SQL-benzeri sorgular mümkün (script
 
 Gamze log'unda **muayene odası bilgisi sızıntısı** sıfır toleranslı. Log'un "Notlar" sütununa ima bile yazılmaz. Editör revizyon yaparken log'u kaynak olarak kullanırken bu sınırı asla unutmaz.
 
-### 2. Senai Aksoy geçici yazar
+### 2. Senai Aksoy klinik yazar
 
-Mahrem konularda ad-hoc kullanım. Şu an log gerekli değil; eğer >5 makale yayınlanırsa log dosyası oluşturulur.
+Dr. Aksoy imzalı metinlerde doktor ve aktif klinisyen personası ana sestir. Bilimsel yönteme güvenen, hayatı gerektiği kadar ciddiye alan, eğlenceli, anlayışlı ve babacan doktor çizgisi korunur. Anonim/parafraz edilmiş muayene anekdotları kullanılabilir; tek hasta kanıt sayılmaz. Humor motifi, anekdot kapısı ve klinik karar kalıbı mevcut `icerik/yazar-onaylari/senai-aksoy/article-log.md` içinde cooldown takibine girer.
 
 ### 3. Test makaleleri
 

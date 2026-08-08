@@ -77,6 +77,83 @@ Her H2 bölümü şu ritimle ilerlemelidir:
 
 H2 başlıkları sayı içermez; görsel chapter numarası `prose-estranova` tarafından verilir.
 
+## 5a) Kontrollü Gözlemci Mizahı
+
+Estranova'nın Yaşıt Editör sesinde ve Dr. Aksoy'un imzalı klinisyen yazılarında, gündelik çelişkileri görünür kılan kontrollü bir mizah kullanılabilir. Amaç stand-up etkisi yaratmak değil; okurun tanıdığı bir anı kısa bir yan bakışla görünür kılıp tıbbi açıklamayı daha anlaşılır ve hatırlanabilir hale getirmektir. Belirli bir sanatçının cümleleri, karakterleri, sahne personası veya ayırt edici ritmi taklit edilmez.
+
+### Yoğunluk seçimi
+
+Taslak başlamadan önce tek seviye seçilir:
+
+- **H0:** Hassas konu veya bölüm; mizah yok.
+- **H1:** Standart sağlık rehberi; makalede 1-2 dokunuş.
+- **H2:** Düşük riskli beslenme, egzersiz, uyku rutini veya takviye kanıtı; makalede 3-4 dokunuş. Açılış, orta bölüm ve tek kapanış geri çağırması arasında dağıtılır.
+
+H2 yazının risk, ilaç, komplikasyon veya kırmızı bayrak bölümleri yine H0'dır. Mizah arka arkaya iki paragrafta kullanılmaz.
+
+### Dört adımlı formül
+
+1. **Tanıdık gerçek:** Somut bir gündelik sahne.
+2. **Beklenen yorum:** Okurun otomatik olarak verdiği anlam.
+3. **Ters açı:** Kısa ve mantıklı sürpriz.
+4. **Tıbbi köprü:** Hemen ardından sade, kaynakla uyumlu açıklama.
+
+Kısa formül: `gözlem → ters açı → gülümseme → tıbbi gerçek`.
+
+Örnek:
+
+> Takviye kavanozlarının ön yüzü bazen küçük bir seçim bildirgesi gibidir: enerji, odak, güç, gençlik; hepsi aynı kapağın altında. Bilimsel değerlendirmede ise her iddia ayrı sonuç ölçütü ve ayrı kanıt gerektirir.
+
+### Kullanılabilecek araçlar
+
+- Gündelik çelişki.
+- İki tanıdık unsur + üçüncüde kısa dönüş biçiminde üçlü kurulum.
+- Uzun iki cümleden sonra kısa cümleyle ritim kırılması: `Mekanizma makul. Sonuç henüz değil.`
+- Reklamın tek sepete koyduğu kavramları klinik olarak ayıran ters sınıflandırma.
+- Hastaya değil editörün veya hekimin kendi karar alışkanlığına yönelen öz-ironi.
+- Açılıştaki tek motifin kapanışta bir kez geri çağrılması.
+
+Yazıyı yalnız mizah taşımaz. Her makalede ayrıca en az iki merak motoru seçilir: paradoks, yanlış arkadaş ayrımı, hücreden gündelik karara ölçek değişimi, karar sorusu, kanıt sürprizi veya somut sahne ayrıntısı.
+
+Tek makalede tek ana motif kullanılır. Takvim, telefon, trafik, aile grubu ve gardırop benzetmelerini aynı yazıda üst üste yığmak yasaktır.
+
+Kurallar:
+
+- Mizah bilgiye giriş veya bölüm geçişi olur; tıbbi açıklamanın yerini almaz.
+- Hedef okur, hasta, beden, yaş veya doğurganlık değil; gündelik beklenti ile bedenin gerçekliği arasındaki çelişkidir.
+- Bir paragrafta en fazla bir mizahi dokunuş; seçilen H1/H2 bütçesi aşılmaz.
+- Mizahi cümlenin hemen ardından sade ve belirsizliği koruyan tıbbi cümle gelir.
+- Ciddi tanı, kayıp, travma, kanser, cinsel ağrı, idrar kaçırma, ilaç/HRT, risk, komplikasyon ve kırmızı bayrak bölümlerinde mizah kullanılmaz.
+- Kilo, görünüş, yaş, doğurganlık, kaygı veya okurun bilgisizliği mizah konusu yapılmaz.
+- Alay, küçümseme, ünlem yoğunluğu ve "hormonlar kafayı yemiş" gibi patolojikleştirici ifadeler yasaktır.
+- Okura hitap daima "siz" dilinde kalır; klinik kürsü veya satış tonu eklenmez.
+
+Örnek:
+
+> Gece uykusu bazen toplantı takvimi gibi davranabilir: herkes yerini ayırmıştır ama kimse zamanında gelmez. Uyku bölünmeleri bu dönemde bazı kadınlarda belirginleşebilir.
+
+### Dr. Aksoy imzalı yazılarda
+
+- Ana ses hekim ve aktif klinisyen sesidir; Dr. Aksoy yalnızca tıbbi inceleme katmanında görünmez.
+- Persona: bilimsel yönteme güvenen, hayatı gerektiği kadar ciddiye alan, gerektiğinde yaşıt yakınlığı kuran, eğlenceli, anlayışlı ve babacan doktor.
+- Hasta bir dosya/vaka olarak değil, sağlık yolculuğuna tanıklık edilen insan olarak görülür. "Hastalarım benim ailem gibidir" duygusu ilişkide hissedilir; slogan veya promosyon yapılmaz.
+- Mizahın hedefi hasta değil, klinik kanıt ile popüler beklenti arasındaki farktır.
+- Sade klinisyen birinci tekil kullanılabilir: `Hastalarımda gözlemliyorum`, `Geçen gün bir hastam...`, `Bu soruyu duyduğumda önce hedefi sorarım.`
+- Gerçek karşılaşma anonim ve parafraz edilmiş biçimde anlatılır. İsim, yaş, yer, kurum, kesin tarih, nadir tanı, ilaç/doz ve ayırt edici ayrıntı verilmez. Birleşik gözlem `muayene odasında sık duyduğum` diye genellenir; tekil vaka kanıt sayılmaz.
+- Mizahi cümleyi mutlaka özgün karar ölçütü izler: neyi ayırdığı, neyi önermediği veya hangi bulgunun kararı değiştirdiği.
+
+### Hızlı kalite testi
+
+- Sanatçının adı çıkarıldığında teknik hâlâ çalışıyor mu?
+- Mizah çıkarıldığında tıbbi iddia aynı kalıyor mu?
+- Hedef durum mu, yoksa okur/beden mi?
+- Hemen ardından tıbbi köprü geliyor mu?
+- Tek motif ve en fazla bir geri çağırma korunuyor mu?
+- Hassas bölümler H0 mı?
+- Cümle gerçekten gülümsetiyor mu, yoksa yalnızca süslü mü?
+
+Bu katman opsiyoneldir. Seçilen H seviyesi, ana motif, kullanılan teknik ve geri çağırma article-log'a yazılır; cooldown disiplini korunur.
+
 İyi H2 örnekleri:
 
 - `Bu kaygı hissi neden tam da şimdi belirginleşebilir?`

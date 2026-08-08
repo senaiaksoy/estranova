@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -32,26 +32,27 @@ const tocEntries = [
   { id: 'tercih-sinirla', label: 'Tercih ve Sınırlama' },
   { id: 'ek-takviyeler', label: 'Takviye Kararı' },
   { id: 'kisisellestirme', label: 'Kişiselleştirilmiş Yaklaşım' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi';
 const seoTitle = 'Beslenme ve Yaşlanma — 40+ Rehberi';
-const articleDescription = 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekiminizle netleştirmeyi hatırlatan rehber.';
+const articleDescription = 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekim veya diyetisyenle netleştirmeyi hatırlatan rehber.';
 const faqItems = articleFaqs['/zamansiz-yasam/beslenme-yaslanma/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
+  articleType: 'editorial-guide',
   publishedDate: '9 Mart 2026',
+  modifiedDate: '7 Ağustos 2026',
   pathname: '/zamansiz-yasam/beslenme-yaslanma/',
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
   keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'anti-inflamatuar'],
   faqItems,
-
   siteUrl,
 });
 ---
@@ -77,7 +78,9 @@ const articleSchemas = buildArticleSchemas({
         <ArticleAuthorBlock
           authorSlug="berna-aksoy"
           publishedDate="9 Mart 2026"
-          readingMinutes={4}
+          lastUpdated="7 Ağustos 2026"
+          medicalReviewer="Doç. Dr. Senai Aksoy"
+          readingMinutes={5}
           imageSrc="/images/library/editorial/still-life-eggs-oil-walnuts.webp"
           imageAlt="Açık ahşap tezgâhta sabah beslenme natürmortu — krem seramik kapta yumurtalar, etiketsiz cam yağ cruet, dilimlenmiş portakal, bütün cevizler ve maydanoz; metabolik denge ve gerçek besin temasını sade editöryal tonla taşıyan dosya görseli"
         />
@@ -121,9 +124,11 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Protein, bu dönemde tabağında daha bilinçli yer açmak isteyeceğin besinlerden. Kas kaybı, doku sağlığı,
             kemik bütünlüğü ve metabolik işlevler yeterli protein alımıyla yakından ilişkili <Evidence level={5} />.
-            Kaynaklarda sık geçen gram/kilogram aralıkları klinik konuşma için bir referans olabilir; ama kişinin
-            kilosu, böbrek fonksiyonu, aktivite düzeyi, iştahı ve eşlik eden hastalıkları hedefi değiştirir. Benim
-için daha güvenli yol şu: her ana öğünde güvenilir bir protein kaynağı düşünmek, sayı hedefini ise
+            Sağlıklı ileri yaştaki yetişkinler için bazı kılavuzlarda geçen kilogram başına `1.0–1.2 g` protein aralığı,
+            daha ileri yaşlarda başvurulabilecek bir referans olabilir; 40+ yaş grubunun tamamı için otomatik bir hedef
+            değildir <Evidence level={5} />. Kişinin kilosu, böbrek fonksiyonu, aktivite düzeyi ve eşlik eden hastalıkları
+            bu hedefi biçimlendirir. Benim
+            için daha güvenli yol şu: her ana öğünde güvenilir bir protein kaynağı düşünmek, sayı hedefini ise
             gerekiyorsa diyetisyen veya hekimle netleştirmek.
           </p>
           <p>
@@ -136,22 +141,20 @@ için daha güvenli yol şu: her ana öğünde güvenilir bir protein kaynağı 
 
           <h2 id="mikronutrientler">Kritik Mikro Besinler</h2>
           <p>
-        Yorgunluk, unutkanlık veya çabuk tükenme hissi yaşıyorsanız — bunu kendi haftalarımda da fark ettim —
+            Yorgunluk, unutkanlık veya çabuk tükenme hissi yaşıyorsanız — bunu kendi haftalarımda da fark ettim —
             bazı mikro besinleri gözden geçirmek anlamlı olabilir.
           </p>
           <p>
             B vitaminleri (B6, B12, folat) enerji üretimi, beyin sağlığı ve hücre bölünmesi için önemli
-            <Evidence level={5} />. B12, özellikle 50+ yaştan sonra emilim ve beslenme modeli nedeniyle hekimle
-            konuşmaya değer bir başlık; et, balık, yumurta ve süt ürünleri başlıca kaynaklar arasında. Demir ihtiyacı
-            menopoz sonrası dönemde aylık kanama durduğu için azalabiliyor; yine de eksiklik şüphesi varsa karar
-            kan tetkiki ve klinik değerlendirmeyle verilmelidir <Evidence level={5} />.
+            <Evidence level={5} />. Özellikle 50 yaş sonrasında bazı kişilerde, mide asidindeki azalma veya başka emilim
+            sorunları nedeniyle doğal besinlerle alınan B12'nin emilimi güçleşebilir; bu, hekimle konuşmaya değer bir
+            başlıktır <Evidence level={5} />. Et, balık, yumurta ve süt ürünleri başlıca kaynaklar arasındadır. Demir
+            ihtiyacı menopoz sonrası dönemde kanamalar durduğu için azalabilir; yine de eksiklik şüphesi varsa karar kan
+            tetkikiyle verilmelidir <Evidence level={5} />.
           </p>
           <p>
             Çinko bağışıklık sistemi ve cilt sağlığı açısından değerli <Evidence level={5} />. Magnezyum uyku, kas
-esnekliği ve kemik sağlığı zemininde konuşulabilir <Evidence level={5} />. Yeşil yapraklı sebzeler
-            (ıspanak, pazı), kuruyemişler ve tam tahıllar iyi kaynaklar. Kalsiyum ve D vitamini kemik sağlığı için
-            önemlidir; ama D vitamini düzeyi, kalsiyum ihtiyacı ve takviye gerekip gerekmediği kişisel risk ve
-            tetkiklerle birlikte değerlendirilmelidir.
+            esnekliği ve kemik sağlığı zemininde konuşulabilir <Evidence level={5} />. Kalsiyum ihtiyacı ise yaş gruplarına göre ayrılır: 19–50 yaş arası kadınlar için günlük 1000 mg hedefi öne çıkarken, 51 yaş ve sonrasında bu miktar günlük 1200 mg düzeyine ulaşır <Evidence level={5} />. D vitamini düzeyi, kalsiyum ihtiyacı ve takviye gerekip gerekmediği kişisel tetkiklerle değerlendirilmelidir.
           </p>
 
           <h2 id="antioksidanlar">Antioksidanlar ve Bitkisel Besin Bileşenleri</h2>

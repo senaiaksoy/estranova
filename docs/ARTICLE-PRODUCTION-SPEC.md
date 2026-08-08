@@ -44,9 +44,9 @@ Tür yazarın unvanından otomatik türetilmez. Bir hekim `expert-essay`, hekim 
 **Diğer:**
 - **Alara** — sporcu/atletik beden perspektifi
 - **Rima** — teknoloji/wearable/AI/digital health
-- **Işık** — mahrem (varsayılan değil; çoğu mahrem konu Senai geçici yazar)
+- **Işık** — mahrem deneyim yazıları; klinik mahrem konularda Senai'nin hekim yazarlığı ayrı eksendir
 
-**Senai Aksoy geçici yazar** (`src/data/writers.ts` slug `senai-aksoy`) — gönüllü yazar bulunamadığında (bkz. vault `wiki/sites/estranova/senai-aksoy-gecici-yazar.md`).
+**Senai Aksoy klinik yazar** (`src/data/writers.ts` slug `senai-aksoy`) — bilimsel yönteme güvenen, hayatı gerektiği kadar ciddiye alan, eğlenceli, anlayışlı ve babacan doktor sesiyle yazar. Dr. Aksoy imzalı metinde hekim/klinik birinci tekil ana sestir; yalnızca bilimsel inceleme katmanında görünmez. Anonim ve parafraz edilmiş muayene anekdotları kullanılabilir; ayırt edici hasta ayrıntısı, tek vakadan genelleme ve kendi muayenehanesi pazarlaması yasaktır.
 
 ### 1.3 Çift Rol Uyarısı kontrolü (KRİTİK SINIR)
 

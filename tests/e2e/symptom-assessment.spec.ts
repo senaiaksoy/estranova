@@ -1,9 +1,16 @@
 import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('/');
-  const acceptAll = page.getByRole('button', { name: 'Tümünü kabul et' });
-  if (await acceptAll.isVisible()) await acceptAll.click();
+  await page.addInitScript(() => {
+    window.localStorage.setItem(
+      'estranova_consent_v1',
+      JSON.stringify({
+        version: 1,
+        analytics: true,
+        decidedAt: new Date().toISOString(),
+      }),
+    );
+  });
 });
 
 const symptomAssessmentTopics = [

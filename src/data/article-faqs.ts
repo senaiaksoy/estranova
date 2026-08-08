@@ -8,27 +8,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Kreatin menopoz belirtilerini azaltır mı?',
       answer:
-        'Kreatinin sıcak basması, gece terlemesi veya menopozun diğer temel belirtilerini azalttığını gösteren yeterli kanıt yoktur. Kas gücüyle ilgili olumlu bulgular, kreatini genel bir menopoz tedavisine dönüştürmez.',
+        'Bugün için kreatinin sıcak basmasını, gece terlemesini veya menopozun diğer temel belirtilerini azalttığını söyleyemeyiz. Kas gücüyle ilgili olumlu bulgular var; ancak bunlar kreatini genel bir menopoz tedavisine dönüştürmüyor.',
     },
     {
       question: 'Kreatin kemik erimesini önler mi?',
       answer:
-        'Mevcut çalışmalar kemik mineral yoğunluğunda genel bir artış göstermiyor. Bazı kemik geometrisi ölçümlerinde olumlu sinyaller olsa da osteoporozu önlediği, tedavi ettiği veya kırığı azalttığı kanıtlanmış değildir.',
+        'Mevcut çalışmalar kemik mineral yoğunluğunda genel bir artış göstermiyor. Bazı kemik geometrisi ölçümlerinde olumlu sinyaller var; fakat buradan osteoporozu önlediği, tedavi ettiği veya kırığı azalttığı sonucuna geçemeyiz.',
     },
     {
       question: 'Kreatin beyin sisi için kullanılabilir mi?',
       answer:
-        'Bugün için rutin kullanımı destekleyen yeterli veri yoktur. Küçük çalışmalar araştırmaya değer sinyaller veriyor; ancak daha büyük ve uzun süreli çalışmalar gereklidir. Yeni veya belirgin bilişsel yakınmalar yalnızca menopoza bağlanmamalıdır.',
+        'Bugün için rutin kullanımı destekleyen yeterli veri yok. Küçük çalışmalar araştırmaya değer sinyaller veriyor; daha büyük ve uzun süreli çalışmaları görmemiz gerekiyor. Yeni veya belirgin zihinsel yakınmaları da yalnızca menopoza bağlamamak önemli.',
     },
     {
       question: 'Kreatin kullanırken direnç egzersizi şart mı?',
       answer:
-        'Menopoz sonrası kadınlarda en tutarlı kas ve güç sonuçları direnç egzersiziyle birlikte görülmüştür. Egzersiz olmadan düşük doz kreatin kullanan çalışmalarda aynı ölçüde yarar saptanmamıştır.',
+        'Menopoz sonrası kadınlarda en tutarlı kas ve güç sonuçları direnç egzersiziyle birlikte görülüyor. Egzersiz olmadan düşük doz kreatin kullanılan çalışmalarda aynı ölçüde yarar saptanmamış. Bu nedenle kreatini egzersizin yerine değil, uygun olduğunda yanına konabilecek bir seçenek olarak düşünmek gerekir.',
     },
     {
       question: 'Kreatin kullanmaya başlamadan önce neyi konuşmalıyım?',
       answer:
-        'Hedefinizi, mevcut hastalıklarınızı, kullandığınız ilaç ve takviyeleri, egzersiz planınızı ve ürünün içeriğini konuşmalısınız. Özellikle böbrek hastalığı, gebelik, emzirme veya çoklu ilaç kullanımı varsa kişisel değerlendirme gerekir.',
+        'Önce hedefinizi konuşun: kas gücü mü, egzersiz kapasitesi mi, yoksa başka bir yakınma mı? Mevcut hastalıklarınız, kullandığınız ilaç ve takviyeler, egzersiz planınız ve ürünün içeriği de değerlendirmeye katılmalı. Özellikle böbrek hastalığı, gebelik, emzirme veya çoklu ilaç kullanımı varsa kişisel değerlendirme gerekir.',
     },
   ],
   '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': [

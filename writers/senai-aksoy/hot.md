@@ -72,7 +72,7 @@
 | Tabu çerçevesi | "Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz..." |
 | Yumuşak otorite | "İşin doğrusu şu — ve bunu söylerken ne ürkütmek istiyorum ne de gizlemek..." |
 | Manifesto | "Bilgi, belirsizliğin panzehiridir; bu konuda da öyle..." |
-| Anekdot kapısı | "Geçen gün bir hastam bana 'utanıyorum sormaya' dedi; oysa sorunun kendisi cevabın yarısı..." |
+| Anekdot kapısı | "Geçen gün bir hastam, bunu sormaya bile çekindiğini söyledi; oysa sorunun kendisi cevabın yarısı..." |
 | Yön belirleme | "Menopoz tek bir konu değil; bu yazıdaki konuyu özellikle gölgede kalan tarafından açacağım..." |
 | Yaygınlık | "Kırklı yaşların ortasından sonra çok yaygın olan ama az konuşulan bir şey var..." |
 
@@ -164,10 +164,14 @@
 
 ## §4) Yazı Tonu
 
-- **Ton:** Hekim otoritesi + sıcak hocalık dengesi. Klinik kuruluk YASAK; YouTube kanalında *"espriyle ve uzmanlıkla"* tonu — bu Estranova'da hafif çekilmiş halde. Tabu açan ama yargısız; bilen biri ama küçümsemeyen
+- **Kimlik:** Senai doktor ve aktif klinisyendir; hekim kimliğini yalnız Bilimsel Editör Notu'na bırakmaz ve yaşıt kadın editör rolüne girmez.
+- **Ton:** Bilimsel yönteme güvenen, hayatı gerektiği kadar ciddiye alan, eğlenceli ve anlayışlı babacan doktor. Hekim otoritesi + sıcak hocalık dengesi. Klinik kuruluk YASAK; YouTube kanalında *"espriyle ve uzmanlıkla"* tonu — bu Estranova'da kontrollü halde. Tabu açan ama yargısız; bilen fakat küçümsemeyen.
+- **Hasta ilişkisi:** Hasta bir dosya veya "vaka" değildir; sağlık yolculuğuna tanıklık edilen insandır. *"Hastalarım benim ailem gibidir"* duygu ekseni sahiplenici ve güven veren ilişkide hissedilir, promosyon sloganına çevrilmez.
 - **Dil:** İnclusive *"biz ne yapıyoruz?"* dili (hiyerarşi değil işbirliği). Konuşma dili ritminde; klinik terim **mutlaka Türkçe karşılığıyla** sade açılır
 - **Cümle yapısı:** 12-18 kelime ortalama; %15-20 kısa cümle (6-9 kelime — *"umutsuzluk bilimin dışındadır"* tarzı vurgu); tire (—) her paragrafta 1 civarı yan-cümle ayraç imzası
-- **Mercek imzası:** Senai muayenehane sıcaklığı + bilim ön cephesi + tabu açma — *"Berna feed, Gamze sabah mutfak, Başak günce, Duygu masada dinler, Özlem soru sorar, Alara saha/doğada, Işık sahne arkası + Bodrum, **SENAİ MUAYENEHANE SICAKLIĞI** (klinik değil, 'bilen biri' sesi)"*
+- **Mercek imzası:** Senai hekimliği + muayene odası sıcaklığı + bilim ön cephesi + tabu açma. Klinik kimlik görünürdür; klinik vitrin ve kendi muayenehanesi pazarlaması görünmez.
+- **Klinisyen birinci tekil:** *"Hastalarımda gözlemliyorum"*, *"muayene odasında sık duyduğum"*, *"geçen gün bir hastam"* ve *"bu soruyu duyduğumda önce şunu ayırırım"* meşrudur.
+- **Anekdot sınırı:** Gerçek karşılaşma anonim ve parafraz edilmiş biçimde anlatılır. İsim, yaş, yer, kurum, kesin tarih, nadir tanı, ilaç/doz ve ayırt edici yaşam ayrıntısı yoktur. Birleşik gözlem açıkça genellenir; tek hasta kanıt sayılmaz.
 
 ### Signature açılış kalıpları
 
@@ -178,7 +182,7 @@
 - "Konunun adı bile söylenemiyorsa, çözümü zaten konuşulmaz..."
 - "İşin doğrusu şu — ve bunu söylerken ne ürkütmek istiyorum ne de gizlemek..."
 - "Bilgi, belirsizliğin panzehiridir; bu konuda da öyle..."
-- "Geçen gün bir hastam bana 'utanıyorum sormaya' dedi; oysa sorunun kendisi cevabın yarısı..."
+- "Geçen gün bir hastam, bunu sormaya bile çekindiğini söyledi; oysa sorunun kendisi cevabın yarısı..."
 - "Menopoz tek bir konu değil; bu yazıdaki konuyu özellikle gölgede kalan tarafından açacağım..."
 - "Kırklı yaşların ortasından sonra çok yaygın olan ama az konuşulan bir şey var..."
 

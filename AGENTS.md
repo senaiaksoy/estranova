@@ -419,11 +419,11 @@ Not allowed:
 
 ## Content Tone
 
-**Writer persona** (aligned with `CLAUDE.md` HARD CONSTRAINT — §3 *Yazar persona'sı*): Articles should read like **Vogue / Harper's Bazaar / Marie Claire** lifestyle-health atmosphere — visual intuition, selective rhythm, urban everyday proximity — with Estranova's medical neutrality and evidence calm. **Taklit yasağı:** no external brand phrases, luxury copy, or fashion-editor persona; only atmosphere and rhythm. The implied author is **not a physician** — a successful **40+ woman** in a **non-clinical** career who researches deeply and speaks as a peer. The reader should feel **“you’re one of us”** warmth. **No** academic citation stack, **no** named international society/journal plugs, **no** inline external URLs in the body; **soft** phrasing (“research suggests”, “experts often note”) is acceptable. Canonical block: each peer female writer's `writers/<slug>/hot.md` → “Kadın dergisi hissi”.
+**Writer persona** (aligned with `CLAUDE.md` HARD CONSTRAINT — §3 *Yazar persona'sı*): Persona is resolved from the byline. Non-clinician writers retain the **Vogue / Harper's Bazaar / Marie Claire** lifestyle-health atmosphere — visual intuition, selective rhythm, urban everyday proximity — with Estranova's medical neutrality and evidence calm. **Taklit yasağı:** no external brand phrases, luxury copy, or fashion-editor persona; only atmosphere and rhythm. These peer writers are successful 40+ women in non-clinical careers who research deeply and speak as peers. **Dr. Senai Aksoy and the scientific/clinical writer list are a separate track:** they speak explicitly as physicians/clinicians in a warm, accessible first person. Canonical block: each writer's own `writers/<slug>/hot.md`; for Senai, `writers/senai-aksoy/hot.md` overrides the peer-writer persona.
 
 **Hitap kuralı:** Kullanıcıya dönük tüm makale ve editoryal gövde metinlerinde hitap biçimi **daima "siz"** olmalıdır. "Sen" kalıbı, doğrudan okura seslenen yayın metninde kullanılmaz.
 
-**Klinik kürsüsü yasağı:** Makale gövdesi ve ana yazar sesi “kliniğimde / hastalarım / klinik deneyimimde / tıbbi olarak söylüyorum” gibi hekim-kürsüsü ifadeleri kullanmaz. Tıbbi disiplin gerekiyorsa bu içerik ayrı **Bilimsel Editör Notu** panelinde, kısa ve nötr biçimde yer alır; ana metin yayın masası + yaşıt okur tonunu korur.
+**Klinik kürsüsü ayrımı:** Hekim olmayan yaşıt yazarlar “kliniğimde / hastalarım / klinik deneyimimde” demez; tıbbi disiplin ayrı **Bilimsel Editör Notu** panelinde görünür. Dr. Aksoy ve diğer klinik yazarlar ise kendi imzalı yazılarında “hastalarımda gözlemliyorum”, “muayene odasında sık duyduğum” ve “geçen gün bir hastam” gibi sade klinisyen birinci tekili kullanabilir. Bu anlatım anonimlik, parafraz, tek vakadan genellememe ve kendi muayenehanesini pazarlamama sınırlarına uyar.
 
 Write in a tone that is:
 - calm
@@ -463,7 +463,7 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 | Özlem Denizmen | Para Durumu sahneleri; üst düzey iş çevresi sokratik soru; finansal karar çerçevesi (analoji) |
 | Rima Erdemir | Sabah araştırma okuma; HRT karar süreci iç tartışması; teknoloji-sağlık gözlemi |
 | Gamze Cizreli | Hürriyet köşe imzası (2012-2023): kişisel zaman çapası açılışı ("Geçen hafta…"), kültürel-edebi referans köprüsü (kitap/film/şarkı), üç nokta (…) yarım bırakma, itirafçı kırılganlık, liste cümleleri; sabah mutfak ritüelleri; pazar/küçük üretici; HRT iç sorgulaması (henüz başlamamış). YASAK: lüks dekor, çok-tema dağınıklık, ünlem yoğunluğu, sosyal/siyasi yorum |
-| Senai Aksoy *(geçici yazar)* | Kendi geçişi; yaşıt çevresi; editöryel masa; mahrem konularda gizlilik mutlak |
+| Senai Aksoy | Hekim ve aktif klinisyen sesi; anonim muayene gözlemleri; bilimsel kanıt + babacan açıklama + kontrollü mizah; hasta mahremiyeti mutlak |
 
 **Operasyonel kural:**
 - **Her makalede 1, en fazla 2 anekdot.** Daha fazlası karikatür, daha azı manifesto-aligned değil.
@@ -476,7 +476,7 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 
 ## Persona ve Dış Referans (CLAUDE.md HARD CONSTRAINT)
 
-- **Yazar persona:** Tıp dışı 40+ kadın yaşıt; Vogue / Elle / Marie Claire tonu. Hekim perspektifi **YASAK**.
+- **Yazar persona:** Byline'a göre seçilir. Hekim olmayan yazarlarda tıp dışı 40+ kadın yaşıt sesi; Dr. Aksoy ve `category: scientific` klinisyenlerde sıcak, babacan, kanıt-merkezli hekim sesi. Klinisyen yazarlarda anonim muayene anekdotu meşrudur; promosyon ve mahremiyet ihlali yasaktır.
 - **Hitap standardı:** Okura doğrudan seslenirken **yalnızca "siz"** kullanılır; yayın metninde **"sen" kullanılmaz**.
 - **Dış URL link YASAK** — yumuşak referans (“araştırmalar gösteriyor”) kabul. Kuruluş adı (NAMS / NICE / Mayo vb.) cümle içine yerleştirme **YASAK**.
 - **Humanize:** Her makalede en az 1 yaşıt / deneyim cümlesi.
