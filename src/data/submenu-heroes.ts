@@ -334,7 +334,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Krem tonlu bir odada pencere kenarında duran, camel ceketli düşünceli kadın portresi; HRT avantajları yazısı için editoryal kart görseli',
   },
   '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/': {
-    src: '/images/library/editorial/zy-magnezyum-menopoz-byline.webp',
+    src: '/images/library/editorial/zy-magnezyum-menopoz.webp',
     alt: 'Açık renkli bir iç mekanda su şişesiyle duran, krem tonlarda giyinmiş düşünceli kadın portresi; magnezyum yazısı için sakin editoryal kart görseli',
   },
   '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/': {

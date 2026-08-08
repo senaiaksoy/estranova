@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -34,8 +34,9 @@ const tocEntries = [
   { id: 'formlar', label: 'Formlar Arasındaki Fark' },
   { id: 'kimler-dikkatli-olmali', label: 'Kimler Dikkatli Olmalı?' },
   { id: 'doktora-uc-soru', label: 'Doktora Üç Soru' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -47,7 +48,10 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '7 Mayıs 2026',
+  modifiedDate: '8 Ağustos 2026',
+  medicalReviewer: 'Dr. Alper Mumcu',
   pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
   articleSection: 'Zamansız Yaşam · Vitaminler',
   sectionPath: '/zamansiz-yasam/',
@@ -88,7 +92,9 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
+        medicalReviewer="Dr. Alper Mumcu"
         publishedDate="7 Mayıs 2026"
+        lastUpdated="8 Ağustos 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/zy-magnezyum-menopoz-byline.webp"
         imageAlt="Açık renkli bir iç mekanda su şişesiyle duran, krem tonlarda giyinmiş düşünceli kadın; menopoz döneminde gündelik ritim ve beden farkındalığı hissi"
@@ -103,179 +109,163 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Magnezyum son yıllarda neredeyse her yakınmanın yanına eklenen bir takviye gibi konuşuluyor:
-          uyku bozulduysa magnezyum, kas gerildiyse magnezyum, kabızlık varsa magnezyum, stres arttıysa
-          yine magnezyum. Oysa aynı başlık altında dolaşan bütün vaatler aynı güçte veri taşımıyor.
-          Menopoz döneminde asıl önemli olan, magnezyumu tek bir “iyi gelir” cümlesiyle değil; hangi
-          belirti için konuşulduğunu, hangi formun neyi hedeflediğini ve kimlerde daha dikkatli olunması
-          gerektiğini ayırarak okumak.
+          Magnezyum son yıllarda uykudan kabızlığa, kas gerginliğinden strese kadar pek çok yakınmanın
+          yanına ekleniyor. Fakat bu başlıkların hepsi aynı kanıt gücüne sahip değil. Menopoz döneminde
+          daha doğru soru, “Magnezyum iyi gelir mi?” değil; “Hangi belirti için, hangi form ve hangi
+          güvenlik sınırları içinde konuşuyoruz?” sorusudur.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="neden-bu-kadar-konusuluyor">Magnezyum Neden Bu Kadar Sık Konuşuluyor?</h2>
         <p>
-          Magnezyum kulağa küçük bir mineral gibi gelebilir; ama kas kasılması, sinir iletimi, enerji
-          üretimi ve bağırsak hareketi gibi birçok fizyolojik süreçte yer alır. Bu yüzden adı çok farklı
-          belirtilerin yanında duyulur.
+          Magnezyum küçük bir mineral olsa da kas kasılması, sinir iletimi, enerji üretimi ve bağırsak
+          hareketi gibi birçok süreçte rol alır. Bu yüzden adı, birbirinden farklı yakınmaların yanında
+          sıkça duyulur.
         </p>
         <p>
-          Magnezyum vücutta yüzlerce enzimatik reaksiyona katılır <Evidence level={5} />. Enerji
+          Vücutta yüzlerce enzimatik reaksiyona katılır <sup><a href="#kaynak-1">[1]</a></sup> <Evidence level={5} />. Enerji
           metabolizmasından kas-iskelet sistemine, sinir hücrelerinin uyarılabilirliğinden kalp ritmine
-          kadar uzanan geniş bir etkisi vardır. Bu biyolojik merkezilik, onu doğal olarak ilgi çekici
-          kılar; ama biyolojik olarak önemli olması, her yakınmada klinik olarak belirleyici olduğu
-          anlamına gelmez.
+          kadar uzanan bir rolü vardır. Ancak bir mineralin biyolojik olarak önemli olması, her belirtiyi
+          açıklayacağı veya her kişide aynı faydayı sağlayacağı anlamına gelmez.
         </p>
         <p>
-          Menopoz döneminde bu ilginin artması anlaşılır. Uyku daha kırılgan hale gelebilir, kas
-          gerginliği ve gece krampları daha görünür hissedilebilir, bağırsak düzeni değişebilir, stres
-          eşiği düşebilir. Fakat bu tabloyu tek bir mineralin eksikliğine bağlamak çoğu zaman fazla
-          basit olur. Çoğu kadında asıl soru “magnezyum eksik mi?” değil, “hangi belirtiyi ne kadar
-          açıklayabiliyor?” olur <Evidence from={2} to={3} />.
+          Menopozda uykunun bölünmesi, kas gerginliği, gece krampları, bağırsak düzenindeki değişiklikler
+          veya stres daha görünür hale gelebilir. Bu yakınmaların hepsini tek bir mineral eksikliğiyle
+          açıklamak ise çoğu zaman fazla kolaycıdır. Asıl soru şudur: Magnezyum, bu belirtiyi ne ölçüde
+          açıklıyor? <sup><a href="#kaynak-2">[2]</a></sup> <Evidence from={2} to={3} />
         </p>
         <p>
-          Muayene odasında burada en sık gördüğüm karışıklık şu: iyi hissetme dili ile eksiklik dili
-          birbirine karışıyor. Magnezyum kimi zaman laboratuvarla ilişkili bir değerlendirme, kimi zaman
-          ise belirti odaklı destek konuşmasıdır. Aynı sözcüğün bu iki anlamı taşıması, reklam dilini
-          klinik dilin önüne itebiliyor.
+          Muayene odasında sık gördüğüm karışıklık, “iyi hissetmek” ile “eksikliği düzeltmek” ifadelerinin
+          birbirine karışmasıdır. Bazen laboratuvar ve kişisel riskler konuşulur; bazen de belirli bir
+          yakınma için destek aranır. Aynı kelime iki ayrı şeyi anlatınca, reklam dili klinik sorunun
+          önüne geçebiliyor.
         </p>
 
         <h2 id="uyku-icin-kanit">Uyku İçin Kanıt Ne Kadar Güçlü?</h2>
         <p>
-          Menopozda uyku bozulduğunda magnezyum ilk önerilen başlıklardan biri oluyor. Fakat burada
-          sorulması gereken şey, uykunun neden bozulduğudur: sıcak basması mı, gece bölünmesi mi,
-          kaygı mı, uyku apnesi mi, yoksa genel gerilim mi?
+          Menopozda uyku bozulduğunda magnezyum sık akla gelir. Önce uykunun neden bozulduğunu ayırmak
+          gerekir: sıcak basması mı, gece uyanmaları mı, kaygı mı, uyku apnesi mi, yoksa bedensel gerginlik
+          mi?
         </p>
         <p>
-          Magnezyumun uyku kalitesi üzerindeki etkisiyle ilgili çalışmalar var; ancak sonuçlar homojen
-          değil <Evidence from={2} to={3} />. Bazı çalışmalarda uykuya dalma, uyku kalitesi ya da
-          subjektif rahatlama hissinde mütevazı iyileşmeler gösterilmiş; bazılarında ise belirgin fark
-          çıkmamış. Bu yüzden “uyku için kesin işe yarar” demek doğru olmaz.
+          Uyku kalitesiyle ilgili çalışmalar var; ancak sonuçlar birbirini tam olarak doğrulamıyor ve
+          sistematik derlemelerde kanıt kesinliği düşük kalıyor <sup><a href="#kaynak-3">[3]</a></sup> <Evidence level={2} />.
+          Bazı çalışmalarda uykuya dalma veya öznel uyku kalitesinde küçük iyileşmeler görülürken,
+          bazılarında belirgin bir fark bulunmuyor. Bu nedenle “uyku için kesin işe yarar” demek doğru değil.
         </p>
         <p>
-          Menopoz özelinde mesele daha da netleşiyor: eğer uykunun ana bozanı gece terlemesi, sıcak
-          basması ya da hormon dalgalanmasına bağlı gece uyanmalarıysa, magnezyum bu zincirin yalnızca
-          küçük bir parçasına dokunabilir. Uykunun ana belirleyicisi bazen demir eksikliği, anksiyete,
-          alkol düzeni, kafein saati ya da uyku apnesi gibi başka bir başlıktır <Evidence level={4} />.
+          Uykuyu asıl bozan şey gece terlemesi, sıcak basması veya hormon dalgalanmasına bağlı uyanmalarsa,
+          magnezyum bu zincirin yalnızca küçük bir bölümüne dokunabilir. Demir eksikliği, anksiyete,
+          alkol, kafein saatleri ve uyku apnesi gibi başka etkenler de mutlaka düşünülmelidir <sup><a href="#kaynak-4">[4]</a></sup> <Evidence level={3} />.
         </p>
         <p>
-          Yine de daha yumuşak bir okumada, uykuya geçişte bedensel gerginlik hissi olan, gece
-          huzursuzluğu yaşayan veya akşam saatlerinde genel gevşeme ihtiyacı tarif eden bazı kadınlarda
-          magnezyum anlamlı olabilir. Bunu “uyku ilacı” gibi değil, hedefi daraltılmış bir destek gibi
-          okumak daha dürüst olur.
+          Bedensel gerginlik veya akşam huzursuzluğu yaşayan bazı kadınlar ise magnezyumu faydalı
+          bulabilir. Bunu bir “uyku ilacı” gibi değil, belirli bir yakınma için denenebilecek sınırlı
+          bir destek olarak görmek daha dürüst olur.
         </p>
 
         <h2 id="kramp-ve-gerginlik">Kas Krampları, Beden Gerginliği ve Huzursuzluk Tarafında Ne Biliyoruz?</h2>
         <p>
-          Magnezyum en sık burada güçlüymüş gibi konuşulur. Çünkü kas ve sinir iletimindeki rolü,
-          gece krampları ya da genel beden sertliğiyle kolayca ilişkilendirilir. Ancak burada da veri
-          tek bir hikâye sunmuyor.
+          Magnezyum, kas ve sinir iletimindeki rolü nedeniyle gece kramplarıyla kolayca ilişkilendirilir.
+          Bu nedenle olduğundan daha güçlü bir çözüm gibi anlatılabilir. Oysa verinin söylediği daha sınırlı.
         </p>
         <p>
-          Kas krampları için magnezyum verisi karışıktır <Evidence level={2} />. Bazı özel durumlarda,
-          özellikle eksiklik düşündüren klinik zemin varsa veya kas yakınmaları başka nedenlerle
-          ağırlaşıyorsa daha anlamlı olabilir. Ama menopozdaki her baldır krampını ya da gece ayağa
-          kalkma ihtiyacını magnezyumla açıklamak doğru olmaz. Sıvı dengesi, egzersiz yükü, damar
-          dolaşımı, tiroid ve kullanılan ilaçlar da tabloyu etkileyebilir.
+          Kas kramplarında magnezyum verisi karışık. Özellikle yaşlı erişkinlerde plaseboya göre klinik
+          olarak anlamlı bir fark gösterilmemiştir <sup><a href="#kaynak-5">[5]</a></sup> <Evidence level={2} />. Eksiklik düşündüren
+          özel durumlarda veya başka nedenlerin eşlik ettiği yakınmalarda değerlendirme değişebilir.
+          Yine de menopozdaki her baldır krampını magnezyumla açıklamak doğru olmaz; sıvı dengesi,
+          egzersiz yükü, tiroid ve ilaçlar da rol oynayabilir.
         </p>
         <p>
-          Huzursuzluk ve beden gerginliği tarafında ise veri biraz daha öznel ilerler. Bazı kadınlar
-          magnezyumla “gevşeme” hissi tarif eder; bu klinik değersiz değildir ama laboratuvar gibi
-          net ölçülemez. Burada beklentiyi doğru kurmak önemli: amaç çoğu zaman bir belirtiyi tamamen
-          silmek değil, akşam saatlerindeki sıkılığı biraz azaltmaktır.
+          Huzursuzluk ve beden gerginliği konusunda ise veri daha öznel. Bazı kadınlar “gevşedim” diye
+          tarif edebilir; bu deneyim önemlidir ama laboratuvar sonucu kadar kesin ölçülemez. Beklentiyi
+          “belirtiyi tamamen silmek” yerine, akşam saatlerindeki sıkılığı azaltmak olarak kurmak gerekir.
         </p>
         <p>
-          Menopozda kas şikâyetlerinin daha geniş bir resme bağlı olabileceğini de unutmamak gerekir.
-          D vitamini eksikliği, düşük protein alımı, uyku kaybı, direnç egzersizinin yokluğu ve kas
-          kütlesindeki sessiz azalma çoğu zaman magnezyum konuşmasından daha belirleyici olabilir
-          <Evidence level={4} />.
+          Menopozda kas yakınmalarına daha geniş bir bakışla yaklaşmak gerekir. D vitamini eksikliği,
+          düşük protein alımı, uyku kaybı, direnç egzersizinin azlığı ve kas kütlesindeki azalma da tabloyu
+          etkileyebilir <sup><a href="#kaynak-6">[6]</a></sup> <Evidence level={3} />.
         </p>
 
         <h2 id="kabizlik">Kabızlıkta Neden Daha Pratik Bir Yeri Var?</h2>
         <p>
-          Magnezyumun en pratik ve en “hedefi belli” kullanım alanlarından biri kabızlık tarafıdır.
-          Çünkü burada biyolojik mekanizma daha doğrudan işler: bazı magnezyum formları bağırsakta su
-          çekerek dışkı kıvamını ve geçişi etkileyebilir.
+          Kabızlık, magnezyumun konuşulduğu en somut başlıklardan biridir. Bazı formlar bağırsakta su
+          tutarak dışkının kıvamını ve geçişini etkileyebilir.
         </p>
         <p>
-          Özellikle magnezyum sitrat ve benzeri osmotik etkili formlar, kabızlıkta daha görünür bir
-          fayda alanı açabilir <Evidence level={4} />. Bu, magnezyumun uyku ya da stres tarafındaki
-          daha tartışmalı alanlarından farklıdır; çünkü burada hedef daha nettir ve etki daha somut
-          hissedilir. Yine de bu kullanım, “her gün yüksek doz alınmalı” anlamına gelmez.
+          Magnezyum sitrat ve benzeri osmotik formlar klinik pratikte kullanılır. Ancak güncel AGA-ACG
+          kılavuzu, magnezyum oksit için koşullu ve çok düşük kesinlikte bir öneri sunar; sitrat için
+          doğrudan yüksek düzeyli bir kılavuz desteği vermez <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={2} />.
         </p>
         <p>
-          Menopoz döneminde kabızlık bazen hormonal geçişten çok; daha az hareket, yetersiz sıvı,
-          düşük lif alımı, tiroid yavaşlaması ya da demir takviyesi gibi nedenlerle belirginleşir.
-          Bu yüzden magnezyumun bağırsakta iş görmesi, kabızlığın bütün nedenlerini çözdüğü anlamına
-          gelmez. Özellikle yeni başlayan, açıklanamayan ya da uzun süren kabızlıkta daha geniş bir
-          değerlendirme gerekir <Evidence level={4} />.
+          Menopozda kabızlık her zaman hormonal geçişten kaynaklanmaz. Daha az hareket, yetersiz sıvı,
+          düşük lif alımı, tiroid yavaşlaması veya demir takviyesi de etkili olabilir. Yeni başlayan,
+          açıklanamayan veya uzun süren kabızlıkta daha geniş bir değerlendirme gerekir <sup><a href="#kaynak-8">[8]</a></sup> <Evidence level={3} />.
         </p>
 
         <h2 id="stres-kaygi-carpinti">Stres, Kaygı ve Çarpıntı Tarafında Neyi Abartmamak Gerekir?</h2>
         <p>
-          Magnezyumun belki de en hızlı romantize edildiği alan burası. “Sinir sistemi minerali” gibi
-          cümleler kulağa çekici geliyor; ama klinik olarak bakıldığında stres ve kaygı çok daha geniş
-          bir tablo.
+          Magnezyumun en hızlı genellendiği alanlardan biri stres ve kaygıdır. “Sinir sistemi minerali”
+          kulağa hoş gelir; fakat stres ve kaygı tek bir mineralin açıklayabileceğinden daha geniştir.
         </p>
         <p>
-          Bazı çalışmalarda magnezyum desteğinin hafif anksiyete belirtileri ya da stres algısı üzerinde
-          sınırlı destek sağlayabileceği gösterilmiş olsa da veri orta-alt güçtedir <Evidence from={2} to={3} />.
-          Bu, özellikle belirti hafifse, beden gerginliği ve uyku bozulması eşlik ediyorsa anlamlı olabilir;
-          ama yoğun anksiyete, panik atak ya da depresif belirtiler için tek başına çözüm diye anlatılamaz.
+          Bazı çalışmalar hafif anksiyete belirtileri veya stres algısında sınırlı bir destek olabileceğini
+          düşündürüyor; ancak kanıtın gücü düşük-orta düzeyde <sup><a href="#kaynak-9">[9]</a></sup> <Evidence level={2} />. Yoğun anksiyete,
+          panik atak veya depresif belirtiler için magnezyum tek başına çözüm değildir.
         </p>
         <p>
-          Çarpıntı tarafında ise daha dikkatli olmak gerekir. Magnezyumun bazı ritim bozukluklarında tıbbi
-          karşılığı vardır; ancak gündelik hayatta hissedilen her çarpıntı bununla ilgili değildir. Menopoz,
-          anksiyete, kafein, tiroid bozukluğu, demir eksikliği ve gerçek ritim sorunları birbirine benzeyebilir.
-          Bu nedenle “çarpıntım var, magnezyum alayım” refleksi yerine önce nedenin ne olabileceğini ayırmak
-          daha güvenlidir <Evidence level={4} />.
+          Çarpıntıda ise daha temkinli olmak gerekir. Magnezyumun bazı ritim bozukluklarında tıbbi yeri
+          vardır; fakat günlük hayatta hissedilen her çarpıntı aynı anlama gelmez. Menopoz, anksiyete,
+          kafein, tiroid bozukluğu, demir eksikliği ve gerçek ritim sorunları birbirine benzeyebilir.
+          Bu nedenle önce nedeni ayırmak daha güvenlidir <sup><a href="#kaynak-10">[10]</a></sup> <Evidence level={3} />.
         </p>
         <p>
-          Bu başlıkta asıl problem, iyi hissetme vaadinin kolay pazarlanmasıdır. Stres, kaygı ve çarpıntı gibi
-          hassas belirtiler söz konusu olduğunda, bir takviyeyi hayatın karmaşası yerine koymak çoğu zaman hem
-          belirtileri hem de kararı bulanıklaştırır.
+          Stres, kaygı ve çarpıntı gibi hassas belirtilerde bir takviyeyi bütün hayatın yerine koymak,
+          hem belirtileri hem de kararı bulanıklaştırabilir.
         </p>
 
         <h2 id="formlar">Glisinat, Sitrat, Oksit ve Diğer Formlar Gerçekte Ne Fark Yaratır?</h2>
         <p>
-          Magnezyum konuşmalarının en karmaşık yeri genellikle form seçimi. Oysa çoğu zaman “tek doğru form”
-          diye tek bir yanıt yok; amaç değiştikçe pratik tercih de değişiyor.
+          Form seçimi, magnezyum konuşmalarının en karışık bölümüdür. Çoğu zaman tek bir “doğru form” yoktur;
+          amaç değiştikçe pratik tercih de değişebilir.
         </p>
         <p>
-          Magnezyum sitrat genellikle bağırsak üzerinde daha hissedilir etki yaratır; bu yüzden kabızlık
-          konuşuluyorsa daha pratik olabilir <Evidence level={4} />. Magnezyum glisinat ise çoğu zaman
-          daha iyi tolere edildiği ve mide-barsak şikâyetini daha az artırdığı düşüncesiyle tercih edilir;
-          bu nedenle uyku veya akşam gevşemesi başlığında daha sık duyulur. Magnezyum oksit ise ucuz ve
-          yaygın olsa da emilim/tolerans dengesi açısından her zaman ilk seçenek değildir.
+          Magnezyum sitrat bağırsak üzerinde daha belirgin etki gösterebilir; bu nedenle kabızlık konuşuluyorsa
+          pratik bir seçenek olarak gündeme gelir <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={2} />. Glisinat ise mide-bağırsak
+          toleransı nedeniyle tercih edilebilir. 2025 tarihli plasebo kontrollü çalışmada uyku verisindeki
+          etki küçük kalmıştır (d=0,2) <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={2} />. Formları doğrudan karşılaştıran başa
+          baş çalışmalar sınırlı olduğu için bir formun diğerine otomatik olarak üstün olduğu söylenemez.
+          Oksit yaygın ve ekonomik olabilir; emilim ve tolerans her kişide aynı olmayabilir.
         </p>
         <p>
-          Buradaki önemli nokta şu: form farkı, otomatik klinik üstünlük demek değildir. Bir formun diğerinden daha
-          “premium” görünmesi, klinik olarak herkes için daha doğru olduğu anlamına gelmez. Mide-barsak
-          toleransı, hedef belirti, eşlik eden ilaçlar ve kullanım amacı daha belirleyicidir.
+          Form farkı otomatik klinik üstünlük demek değildir. Bir ürünün daha “premium” görünmesi, herkes
+          için daha doğru olduğu anlamına gelmez. Hedef belirti, mide-bağırsak toleransı, eşlik eden ilaçlar
+          ve kullanım amacı daha belirleyicidir.
         </p>
         <p>
-          Aynı biçimde doz konusu da form kadar önemlidir. Bazı kadınlar form ararken aslında doz fazlalığı
-          ya da kullanım saatiyle ilgili sorun yaşar. Bu yüzden form seçimini takviyenin “kimliği” gibi değil,
-          aracın pratik kullanımı gibi düşünmek daha sağlıklıdır.
+          Doz ve kullanım saati de form kadar önemlidir. Bazen sorun form değil, gereğinden fazla almak
+          veya yanlış zamanda kullanmaktır. Formu bir takviyenin kimliği gibi değil, belirli bir amaç için
+          kullanılan aracın bir parçası gibi düşünmek daha sağlıklıdır.
         </p>
 
         <h2 id="kimler-dikkatli-olmali">Kimler Rastgele Başlamamalı?</h2>
         <p>
-          Magnezyum çoğu zaman zararsızmış gibi sunulur; ama her takviyede olduğu gibi burada da kişisel durum
-          önemlidir. Özellikle böbrek üzerinden atıldığı için bazı durumlarda daha dikkatli olunmalıdır.
+          Magnezyum çoğu zaman zararsızmış gibi anlatılır. Oysa burada da kişisel sağlık durumu önemlidir.
+          Özellikle böbrek fonksiyonu söz konusu olduğunda daha dikkatli olmak gerekir.
         </p>
         <p>
           Böbrek fonksiyon bozukluğu olanlar, çoklu ilaç kullananlar, bazı antibiyotikler veya tiroid
-          ilaçlarıyla zamanlama sorunu yaşayabilecek olanlar ve yüksek dozları uzun süre kullanmayı düşünenler
-          daha dikkatli olmalıdır <Evidence level={4} />. Magnezyum bazı ilaçların emilimini etkileyebilir;
-          bu yüzden “doğal” diye zamansız ve ölçüsüz kullanmak doğru değildir.
+          ilaçlarıyla zamanlama sorunu yaşayabilecek kişiler ve yüksek dozları uzun süre düşünenler daha
+          dikkatli olmalıdır <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={4} />. Magnezyum bazı ilaçların emilimini etkileyebilir;
+          “doğal” olması ölçüsüz kullanımı güvenli hale getirmez.
         </p>
         <p>
-          İshal eğilimi olanlar için de dikkat gerekir. Kabızlıkta fayda sağlayan aynı etki, başka bir
-          bedende gereksiz rahatsızlık yaratabilir. Yani bir kadında “iyi geldi” denilen bir kullanım,
-          başka bir kadında doz veya form nedeniyle bırakma sebebi olabilir.
+          İshal eğilimi olanlar da dikkat etmelidir. Kabızlıkta işe yarayan bağırsak etkisi, başka bir
+          kişide gereksiz rahatsızlık yaratabilir. Bir kişiye iyi gelen form veya doz, başka biri için
+          uygun olmayabilir.
         </p>
         <RedFlagBox
           markers={[
@@ -291,31 +281,50 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="doktora-uc-soru">Doktora Sorulabilecek Üç Net Soru</h2>
         <p>
-          Magnezyum konuşulurken en yararlı şey çoğu zaman doğru soruyu kurmaktır. İlk soru şu olabilir:
-          <em>“Biz burada hangi yakınma için magnezyumu düşünüyoruz; uyku mu, kabızlık mı, kas gerginliği mi,
-          yoksa olası bir eksiklik mi?”</em> Çünkü hedef netleşmeden takviye konuşmak kolayca havada kalır.
+          Magnezyum konuşulurken en yararlı başlangıç, hedefi netleştirmektir. İlk soru şu olabilir:
+          <em>“Magnezyumu hangi yakınma için düşünüyoruz: uyku, kabızlık, kas gerginliği veya olası bir
+          eksiklik mi?”</em> Hedef belli değilse takviye konuşması kolayca genelleşir.
         </p>
         <p>
           İkinci soru: <em>“Benim için hangi form daha anlamlı ve bunu ne kadar süre deneyeceğiz?”</em>
-          Bu soru, sonsuza uzayan deneme döngüsünü önler. Belirti, tolerans ve kullanım süresi baştan konuşulursa,
-          takviyeyi rastgele uzatmak yerine etkisini değerlendirmek kolaylaşır.
+          Belirti, tolerans ve kullanım süresi baştan konuşulursa, takviyeyi rastgele uzatmak yerine
+          etkisini değerlendirmek kolaylaşır.
         </p>
         <p>
-          Üçüncü soru da belki en kıymetlisi: <em>“Bu yakınmayı önce açıklayabilecek başka bir durum var mı?”</em>
-          Özellikle uyku, çarpıntı, yorgunluk, kas yakınmaları ve kabızlık söz konusuysa; tiroid, demir, D vitamini,
-          ilaç yan etkileri, stres sistemi ya da bağırsak düzeni gibi başka başlıklar çoğu zaman masadadır.
+          Üçüncü soru belki en önemlisidir: <em>“Bu yakınmayı açıklayabilecek başka bir durum var mı?”</em>
+          Uyku, çarpıntı, yorgunluk, kas yakınmaları ve kabızlıkta tiroid, demir, D vitamini, ilaç yan
+          etkileri ve bağırsak düzeni gibi başlıklar da değerlendirilmelidir.
         </p>
+
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p>
+          Aşağıdaki seçilmiş yayınlar ve klinik kılavuzlar, metindeki ayrımların ve kanıt düzeylerinin
+          izlenebilmesi için listelenmiştir.
+        </p>
+        <ol>
+          <li id="kaynak-1">National Institutes of Health (NIH) Office of Dietary Supplements. <em>Magnesium: Fact Sheet for Health Professionals.</em> 2024. <a href="https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/" rel="noopener noreferrer">NIH ODS Bilgi Notu</a>.</li>
+          <li id="kaynak-2">Guerrera MP, Volpe SL, Mao JJ. <em>Therapeutic uses of magnesium.</em> Am Fam Physician. 2009;80(2):157-162. <a href="https://pubmed.ncbi.nlm.nih.gov/19621856/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-3">Mah J, Pitre T. <em>Effect of magnesium supplementation on sleep quality in older adults: A systematic review and meta-analysis.</em> BMC Complement Med Ther. 2021;21(1):180. <a href="https://pubmed.ncbi.nlm.nih.gov/33865376/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-4">Baker FC, de Zambotti M, Colrain IM, Javitz HS. <em>Sleep problems during the menopausal transition: prevalence, impact, and management challenges.</em> Nat Sci Sleep. 2018;10:73-95. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5839925/" rel="noopener noreferrer">Tam metin</a>.</li>
+          <li id="kaynak-5">Garrison SR, Korownyk CS, Kolber MR, Allan GM, Musini VM, Sekhon RK, Dugré JR. <em>Magnesium for skeletal muscle cramps.</em> Cochrane Database Syst Rev. 2020;9(9):CD009402. <a href="https://pubmed.ncbi.nlm.nih.gov/32956536/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-6">Monteleone P, Mascagni G, Giannini A, Genazzani AR, Simoncini T. <em>Symptoms of menopause - global prevalence, physiology and implications.</em> Nat Rev Endocrinol. 2018;14(4):199-215. <a href="https://pubmed.ncbi.nlm.nih.gov/29393299/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-7">Chang L et al. <em>American Gastroenterological Association-American College of Gastroenterology Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation in Adults.</em> Gastroenterology. 2023;164(7):1086-1106. <a href="https://pubmed.ncbi.nlm.nih.gov/37211380/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-8">Belsey J, Greenfield S, Candy D, Geraint M. <em>Systematic review: effectiveness of laxatives in the treatment of chronic constipation.</em> Aliment Pharmacol Ther. 2010;31(9):938-955. <a href="https://pubmed.ncbi.nlm.nih.gov/20180788/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-9">Boyle NB, Lawton C, Dye L. <em>The Effects of Magnesium Supplementation on Subjective Anxiety and Stress—A Systematic Review.</em> Nutrients. 2017;9(5):429. <a href="https://pubmed.ncbi.nlm.nih.gov/28445426/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-10">Zehender M, Meinertz T, Faber T, Caspari A, Jeron A, Just H. <em>Antiarrhythmic effects of oral magnesium in patients with ventricular arrhythmias.</em> J Am Coll Cardiol. 1990;16(7):1555-1561. <a href="https://pubmed.ncbi.nlm.nih.gov/2246470/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-11">Schuster J et al. <em>Magnesium Bisglycinate Supplementation in Healthy Adults Reporting Poor Sleep: A Randomized, Placebo-Controlled Trial.</em> Nat Sci Sleep. 2025;17:2027-2040. <a href="https://pubmed.ncbi.nlm.nih.gov/40918053/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-12">National Institutes of Health (NIH) Office of Dietary Supplements. <em>Magnesium Fact Sheet for Health Professionals: Interactions with Medications.</em> 2024. <a href="https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/#h9" rel="noopener noreferrer">NIH ODS İlaç Etkileşimleri Rehberi</a>.</li>
+        </ol>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          Magnezyum menopoz döneminde anlamlı bir yardımcı olabilir; ama bunu tek cümlede, tek vaatle ve herkese aynı
-          biçimde anlatmak doğru değil. Uyku, kabızlık, kas gerginliği ya da stres gibi başlıkların her biri için farklı
-          bir yerden konuşulması gerekiyor.
+          Magnezyum menopoz döneminde bazı yakınmalar için anlamlı bir destek olabilir. Ama uyku, kabızlık,
+          kas gerginliği ve stres aynı sorunun farklı adları değildir; her biri ayrı değerlendirme ister.
         </p>
         <p>
-          En dürüst yaklaşım şu: magnezyumu “gizli anahtar” gibi değil, hedefi iyi seçildiğinde işe yarayabilen bir araç
-          gibi görmek. Hangi belirti için düşündüğünüzü, hangi formun neyi hedeflediğini ve altta yatan başka başlıkların
-          olup olmadığını ayırdığınızda; karar daha sakin, daha güvenli ve daha gerçekçi hale geliyor.
+          En dürüst yaklaşım, magnezyumu “gizli anahtar” gibi değil, amacı net olduğunda işe yarayabilecek
+          bir araç gibi görmektir. Hangi belirtiyi ele aldığınızı, hangi formu neden düşündüğünüzü ve başka
+          nedenler olup olmadığını ayırdığınızda karar daha sakin ve daha güvenli hale gelir.
         </p>
       </ArticleProsePanel>
 
@@ -330,38 +339,38 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={4} /></p>
+      <ArticleEditorNote title="Bağımsız Tıbbi İnceleme">
+        <p class="mb-4 text-lg font-semibold text-ink">Genel kanıt düzeyi: <Evidence from={2} to={3} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Magnezyumla ilgili en büyük sorun, fazla sevilmesi değil; fazla genellenmesi. Yazıda bunu mümkün olduğunca
-            belirti bazında ayırmaya çalıştım; bu notta klinik çerçeveyi biraz daha net bırakıyorum.
+            Magnezyumla ilgili temel sorun, çok konuşulması değil; farklı yakınmalar için aynı cümleyle
+            anlatılmasıdır. Bu nedenle yazıda belirti başlıklarını birbirinden ayırmaya çalıştım.
           </p>
           <p>
             <strong class="text-primary">Klinik not:</strong> Magnezyum menopozdaki her tablo için aynı ağırlıkta
-            konuşulmaz. Kabızlıkta daha somut ve pratik bir kullanım alanı varken, uyku ve stres tarafında veri daha
-            heterojendir. Gece krampları veya genel beden gerginliği konuşulurken ise eksiklik, sıvı dengesi, kas
-            yüklenmesi, D vitamini ve tiroid gibi eşlik eden başlıkları birlikte düşünmek gerekir.
+            konuşulmaz. Kabızlıkta mekanizma daha doğrudan görünür; uyku ve stres tarafında veri daha
+            heterojendir. Kramplar ve beden gerginliği konuşulurken eksiklik, sıvı dengesi, kas yükü,
+            D vitamini ve tiroid gibi başlıkları da birlikte düşünmek gerekir.
           </p>
           <p>
             <strong class="text-primary">Form notu:</strong> Sitrat daha çok bağırsak etkisiyle, glisinat ise
-            tolerans ve akşam kullanımı etrafında konuşulur. Oksit daha yaygın ve ekonomik olabilir; ama emilim ve
-            mide-barsak tolere edilebilirliği açısından her zaman beklenen pratik karşılığı vermez. Burada “tek doğru form”
-            sorusu genellikle yanlış sorudur; doğru soru “hangi yakınma için?” olur.
+            tolerans ve kullanım amacıyla gündeme gelir. Oksit daha yaygın ve ekonomik olabilir; ancak
+            emilim ve mide-bağırsak toleransı kişiden kişiye değişebilir. Formlar arasında kesin bir klinik
+            üstünlük gösterilmiş değildir.
           </p>
           <p>
             <strong class="text-primary">Güvenlik notu:</strong> Böbrek hastalığı olanlarda, çoklu ilaç kullananlarda,
-            yeni başlayan çarpıntı yakınması tarif edenlerde ve yüksek dozları uzun süre düşünenlerde daha dikkatli
-            olunmalıdır. Magnezyumun gündelik görünmesi, herkes için sınırsız güvenli olduğu anlamına gelmez.
+            yeni başlayan çarpıntısı olanlarda ve yüksek dozları uzun süre düşünenlerde daha dikkatli
+            olunmalıdır. Magnezyumun gündelik bir takviye gibi görünmesi, herkes için sınırsız güvenli
+            olduğu anlamına gelmez.
           </p>
           <p>
             <strong class="text-primary">Pratik bütünleşim:</strong> Menopozda iyi hissetmeyi tek bir takviyeye
-            bağlamak çoğu zaman hayal kırıklığı yaratır. Magnezyum, ancak belirtilerin bağlamı doğru kurulduğunda,
-            kullanım amacı netleştirildiğinde ve başka olası nedenler gözden geçirilip dengeye oturtulduğunda anlamlı
-            olur.
+            bağlamak çoğu zaman hayal kırıklığı yaratır. Magnezyum ancak belirtinin bağlamı, kullanım amacı
+            ve olası diğer nedenler birlikte değerlendirildiğinde anlam kazanır.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 8 Ağustos 2026
           </p>
         </div>
       </ArticleEditorNote>

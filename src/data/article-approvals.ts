@@ -398,8 +398,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-07',
-    note: 'KC editor direct approval: audit reconciliation ve compliance temizligi sonrasi magnezyum makalesi production approval setine eklendi; static manifest ve canli route uyumu dogrulandi.',
+    approvedAt: '2026-08-08',
+    note: 'KC editör doğrudan onayı ve Dr. Alper Mumcu bağımsız tıbbi inceleme onayı — 8 Ağustos 2026. Magnezyum-menopoz klinik rehberinde kanıt kalibrasyonları (AGA-ACG 2023, Cochrane 2020, Mah 2021, Schuster 2025 RCT), kaynakça doğrulama, byline/kart görselleri ve schema uyumu tamamlandı.',
   },
   {
     pathname: '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',

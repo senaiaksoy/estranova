@@ -1,5 +1,5 @@
 import { writers, type Writer } from '../data/writers';
-import { submenuHeroByRoute } from '../data/submenu-heroes';
+import { submenuHeroByRoute, articleCardImageByRoute } from '../data/submenu-heroes';
 import type { ArticleFaqItem } from '../data/article-faqs';
 import type { ArticleType } from '../data/article-types';
 
@@ -110,14 +110,14 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
   const url = joinUrl(siteUrl, pathname);
   const sectionUrl = sectionPath ? joinUrl(siteUrl, sectionPath) : undefined;
 
-  // Image fallback: explicit `image` opt > submenu hero (auto absolute URL).
+  // Image fallback: explicit `image` opt > submenu hero > article card image (auto absolute URL).
   // Article rich results (Google) require an `image` field. This fallback ensures
   // every article schema gets an image without requiring per-article wiring.
-  const heroEntry = submenuHeroByRoute[pathname];
-  const heroAbsolute = heroEntry
-    ? (heroEntry.src.startsWith('http') ? heroEntry.src : joinUrl(siteUrl, heroEntry.src))
+  const heroImageSrc = submenuHeroByRoute[pathname]?.src ?? articleCardImageByRoute[pathname]?.src;
+  const heroAbsolute = heroImageSrc
+    ? (heroImageSrc.startsWith('http') ? heroImageSrc : joinUrl(siteUrl, heroImageSrc))
     : undefined;
-  const resolvedImage = image ?? heroAbsolute;
+  const resolvedImage = image ? (image.startsWith('http') ? image : joinUrl(siteUrl, image)) : heroAbsolute;
 
   const writer = getWriter(writerSlug);
   const isoDate = toISODate(publishedDate);
