@@ -1007,7 +1007,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/d-vitamini-rehberi/',
     title: 'D Vitamini Rehberi',
     description: 'D vitamini taraması, beslenme, güneş maruziyeti ve takviye planını dengeli biçimde ele alan rehber.',
-    publishedDate: '7 Nisan 2026',
+    publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam/',
