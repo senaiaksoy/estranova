@@ -41,6 +41,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleImage = '/images/library/editorial/zy-kreatin-menopoz.webp';
 const articleImageAbsolute = new URL(articleImage, siteUrl).toString();
 const articleTitle = 'Kreatin Menopozda Ne İşe Yarar? Kas, Kemik ve Beyin İçin Kanıt Ne Diyor?';
+const seoTitle = 'Kreatin Menopozda Ne İşe Yarar?';
 const articleDescription =
   'Kreatin menopozda kas gücü, kemik, beyin sisi ve duygu durumu için ne kadar etkili? Çalışmaların gösterdiklerini ve sınırlarını Dr. Senai Aksoy açıklıyor.';
 const faqItems = articleFaqs[pathname] ?? [];
@@ -74,7 +75,7 @@ const articleSchemas = buildArticleSchemas({
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
+  title={`${seoTitle} - Estranova`}
   description={articleDescription}
   image={articleImage}
   ogType="article"
