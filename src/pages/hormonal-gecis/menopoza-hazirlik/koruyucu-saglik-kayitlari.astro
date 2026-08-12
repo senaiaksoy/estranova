@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -8,7 +8,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -43,6 +43,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
+  articleType: 'experience-essay',
   publishedDate: '25 Nisan 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
@@ -83,13 +84,14 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
+        articleType="experience-essay"
         publishedDate="25 Nisan 2026"
         readingMinutes={6}
         imageSrc="/images/library/editorial/introspective-clasped-hands.webp"
         imageAlt="Açık not defteri ve sakin el duruşu; koruyucu sağlık kayıtları yazısı için editoryal görsel"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
 <p>
           Menopoza hazırlık dönemi bence en değerli aralıklardan biri: kadının bedeninde büyük değişimler
           kapıda olsa da göstergeler hâlâ ölçülebilir. Okudukça şunu anladım — tansiyon, kilo, lipid profili
@@ -98,7 +100,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="neden-kayit">Neden Bu Evrede Kayıt?</h2>
         <p>
           Benim için dönüm noktası şu oldu: bir gün hekime gittiğimde, "Geçen yıl ne çıkmıştı, hatırlıyor musunuz?"
@@ -209,7 +211,7 @@ Bu öyküyü bir kez derli toplu yazmak ve yıllık güncellemek, hekimle yapıl
         </p>
       </ArticleProsePanel>
 
-      <ArticleProsePanel class="mt-10">
+      <ArticleProsePanel mode="experience" class="mt-10">
         <h2 id="hekimle-paylasim">Kayıtları Hekimle Paylaşmak</h2>
         <p>
           Topladığın veri ne kadar düzenli olursa, hekimle yapılan değerlendirme o kadar verimli oluyor. Bunu kendi
@@ -246,7 +248,7 @@ Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağ�
         </p>
       </ArticleProsePanel>
 
-      <ArticleProsePanel class="mt-10">
+      <ArticleProsePanel mode="experience" class="mt-10">
         <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
         <h3>Belirtim yok, yine de bu kadar şey takip etmem gerekir mi?</h3>
         <p>
@@ -300,7 +302,7 @@ Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağ�
           ]}
         />
 
-      <ArticleEditorNote>
+      <MedicalContextNote>
 <p class="mb-3 leading-relaxed text-ink/80">
 Menopoza hazırlık dönemi (perimenopoz öncesi 40+ yaşları), koruyucu sağlık yaklaşımının sistematik
           biçimde kurulması için klinik açıdan değerli bir aralıktır. Bu yazının ana önerisi test istemek değil;
@@ -325,7 +327,7 @@ durumu ve ulusal rehberlere göre kişiselleştirilmelidir. Bu yazıdaki yol ki�
         <p class="text-sm italic text-primary">
           — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
        <ArticleDisclaimer>
 <p>

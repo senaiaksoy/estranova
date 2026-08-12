@@ -44,6 +44,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'metin-alis',
+  articleType: 'clinical-guide',
   publishedDate: '15 Temmuz 2026',
   pathname,
   articleSection: 'Zihin & Denge',
@@ -83,6 +84,7 @@ const articleSchemas = buildArticleSchemas({
         <ArticleTOC slot="toc" entries={tocEntries} />
         <ArticleAuthorBlock
           authorSlug="metin-alis"
+        articleType="clinical-guide"
           publishedDate="15 Temmuz 2026"
           readingMinutes={8}
         />

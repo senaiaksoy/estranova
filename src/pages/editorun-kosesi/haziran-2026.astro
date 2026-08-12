@@ -25,6 +25,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
+  articleType: 'experience-essay',
   publishedDate: '2026-06-01',
   pathname,
   articleSection: "Editörün Köşesi",
@@ -74,7 +75,8 @@ const articleSchemas = buildArticleSchemas({
         </div>
       </header>
 
-      <ArticleAuthorBlock authorSlug="berna-aksoy" publishedDate="1 Haziran 2026" readingMinutes={5} medicalReviewer="Yok" />
+      <ArticleAuthorBlock authorSlug="berna-aksoy"
+        articleType="experience-essay" publishedDate="1 Haziran 2026" readingMinutes={5} medicalReviewer="Yok" />
 
       <ArticleSummary title="Bu Sayıya Giriş">
         <p>
@@ -84,7 +86,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="neden-guc">Bu Ay Neden Güç?</h2>
         <p>
           Güç kelimesi çoğu zaman biraz sert duyulur; daha çok çalışmak, daha çok dayanmak, daha çok

@@ -45,6 +45,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '5 Haziran 2026',
   pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
   articleSection: 'Bilimsel Pencere',
@@ -76,6 +77,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
+        articleType="clinical-guide"
         publishedDate="5 Haziran 2026"
         readingMinutes={10}
         imageSrc="/images/library/editorial/bp-nad-plus.webp"

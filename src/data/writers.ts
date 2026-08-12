@@ -18,6 +18,9 @@ export interface Writer {
   // kadın sağlığı kesişimi); 'scientific' = hekim / klinik uzman / hareket
   // uzmanı, kendi alanında bilimsel anlatım. Default 'lifestyle'.
   category?: 'lifestyle' | 'scientific';
+  // Makale schema/yetki hattı. Doktor olmayan uzmanların kurul gruplaması
+  // `scientific` kalabilir; ancak klinik makale yetkisi otomatik verilmez.
+  articleAuthority?: 'scientific' | 'non-clinical';
   /** SERP title override — verilmezse displayName + role kullanılır. */
   seoTitle?: string;
   /** SERP meta description override — verilmezse publicBio kullanılır. */
@@ -525,6 +528,7 @@ export const writers: Writer[] = [
     focusAreas: ['Hareket & Egzersiz', 'Güçlenme', 'Sürdürülebilir Rutin'],
     isEditor: false,
     category: 'scientific',
+    articleAuthority: 'non-clinical',
     writingStyle: {
       voice:
         'Sakin, pratik ve öğretici hareket uzmanı tonu; motive eder ama performans baskısı kurmaz.',
@@ -572,6 +576,7 @@ export const writers: Writer[] = [
     focusAreas: ['Kas-İskelet & 40 Sonrası', 'Postmenopozal Hareket', 'Pelvik Taban Fizyoterapi'],
     isEditor: false,
     category: 'scientific',
+    articleAuthority: 'non-clinical',
     writingStyle: {
       voice: 'Klinisyen mesafesi + öğretmen tonu (paternalist DEĞİL, kanıt-temelli rehber); "bedeni dinleyerek ilerlemek" felsefesi.',
       rhythm: 'Orta-uzun cümleler (12-20 kelime); tablo → mekanizma → günlük egzersiz/karar zinciri akışı; tedrici yaklaşım.',

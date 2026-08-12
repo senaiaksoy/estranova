@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -42,6 +42,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'alper-mumcu',
+  articleType: 'clinical-guide',
   publishedDate: '27 Nisan 2026',
   modifiedDate: '16 Haziran 2026',
   pathname: route,
@@ -84,6 +85,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="alper-mumcu"
+        articleType="clinical-guide"
         publishedDate="27 Nisan 2026"
         readingMinutes={10}
         imageSrc="/images/library/editorial/introspective-clasped-hands.webp"

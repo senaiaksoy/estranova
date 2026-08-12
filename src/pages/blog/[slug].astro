@@ -45,6 +45,7 @@ const jsonLd = writerSlug
       title: post.data.title,
       description: post.data.description,
       writerSlug,
+      articleType: post.data.articleType,
       publishedDate: post.data.date,
       pathname: `/blog/${post.id}/`,
       faqItems,
@@ -98,6 +99,7 @@ const jsonLd = writerSlug
         <div class="mb-10">
           <ArticleAuthorBlock
             authorSlug={writerSlug}
+            articleType={post.data.articleType}
             publishedDate={publishedDate}
             readingMinutes={5}
             imageSrc={post.data.imageSrc}

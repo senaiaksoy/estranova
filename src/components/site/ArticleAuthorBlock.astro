@@ -1,6 +1,7 @@
 ---
 import { writers } from '../../data/writers';
 import { getSubmenuHeroImage } from '../../data/submenu-heroes';
+import { getArticleAuthorTrack, type ArticleType } from '../../data/article-types';
 
 interface Props {
   authorSlug: string;
@@ -12,6 +13,7 @@ interface Props {
   imageAlt?: string;
   imagePosition?: string;
   eyebrow?: string;
+  articleType: ArticleType;
 }
 
 const {
@@ -23,7 +25,8 @@ const {
   imageSrc,
   imageAlt,
   imagePosition = 'center',
-  eyebrow = 'Makale bilgisi',
+  eyebrow,
+  articleType,
 } = Astro.props;
 
 const writer = writers.find((w) => w.slug === authorSlug);
@@ -32,6 +35,12 @@ if (!writer) {
 }
 
 const routeHero = getSubmenuHeroImage(Astro.url.pathname);
+const authorTrack = getArticleAuthorTrack(writer);
+const isExperience = articleType === 'experience-essay';
+const isEditorial = articleType === 'editorial-guide' || authorTrack === 'institutional';
+const resolvedEyebrow =
+  eyebrow ?? (isExperience ? 'Deneyim yazısı' : isEditorial ? 'Editoryal rehber' : 'Bilimsel makale');
+const reviewLabel = authorTrack === 'scientific' ? 'Bilimsel inceleme' : 'Tıbbi bilgi kontrolü';
 const bylineLabel = writer.isInstitutionalByline ? 'Hazırlayan' : 'Yazan';
 const coverSrc = imageSrc ?? routeHero?.src;
 const coverAlt =
@@ -75,7 +84,7 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
         E
       </div>
 
-      <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-primary/72">{eyebrow}</p>
+      <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-primary/72">{resolvedEyebrow}</p>
       <div class="mx-auto mt-5 h-px w-12 bg-gold/80"></div>
 
       <div class="mx-auto mt-7 max-w-xl">
@@ -85,7 +94,7 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
         {
           medicalReviewer && medicalReviewer !== 'Yok' && (
             <p class="mt-2 text-[11px] font-black uppercase tracking-[0.16em] text-ink">
-              Bilimsel inceleme : <span class="font-black">{medicalReviewer}</span>
+              {reviewLabel} : <span class="font-black">{medicalReviewer}</span>
             </p>
           )
         }
@@ -120,6 +129,18 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
           </a>
         </div>
       </div>
+
+      {
+        isExperience && (
+          <div class="mx-auto mt-7 max-w-xl rounded-[22px] border border-primary/12 bg-cream-warm/45 px-5 py-4 text-left">
+            <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">Kişisel deneyim</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink/72">
+              Bu yazı yazarın kendi deneyimini ve gözlemlerini aktarır. Tıbbi bilgi içeren bölümler genel bir bilgi
+              zemini sunar; kişisel deneyim bilimsel kanıt veya kişiye özel sağlık önerisi değildir.
+            </p>
+          </div>
+        )
+      }
 
       {
         writer.isInstitutionalByline && (

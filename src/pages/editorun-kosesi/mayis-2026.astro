@@ -25,6 +25,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
+  articleType: 'experience-essay',
   publishedDate: '1 Mayıs 2026',
   pathname,
   articleSection: 'Editörün Köşesi',
@@ -76,6 +77,7 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
+        articleType="experience-essay"
         publishedDate="1 Mayıs 2026"
         readingMinutes={6}
         medicalReviewer="Yok"
@@ -90,7 +92,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="esik-neden">Bir Derginin Adı Neden "Eşik"?</h2>
         <p>
           Bir hâlden diğerine geçilen ara — antropolojide buna <em>liminal an</em> deniyor. Bir dakika önce

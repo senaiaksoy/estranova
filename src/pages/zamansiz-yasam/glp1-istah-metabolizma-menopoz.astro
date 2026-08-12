@@ -41,6 +41,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'metin-alis',
+  articleType: 'clinical-guide',
   publishedDate: '16 Temmuz 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
@@ -84,6 +85,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="metin-alis"
+        articleType="clinical-guide"
         publishedDate="16 Temmuz 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/glp1-istah-metabolizma-menopoz-byline.webp"

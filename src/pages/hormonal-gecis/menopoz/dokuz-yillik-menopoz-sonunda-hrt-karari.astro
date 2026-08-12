@@ -8,7 +8,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
@@ -42,6 +42,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'basak-pelister',
+  articleType: 'experience-essay',
   publishedDate: '7 Mayıs 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
@@ -83,6 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="basak-pelister"
+        articleType="experience-essay"
         publishedDate="7 Mayıs 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/basak-pelister-hrt-karari-byline.jpg"
@@ -90,7 +92,7 @@ const articleSchemas = buildArticleSchemas({
         imagePosition="right center"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
         <p>
           Bu yazı bir öneri listesi değil; uzun bir bekleyişten sonra verilen kişisel bir kararın güncesi. Başak
           Pelister, kırk altı yaşında başladığı menopozdan dokuz yıl sonra HRT başlama kararına nasıl geldiğini;
@@ -100,7 +102,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="dokuz-yil">Dokuz yıl yalnız bedenimle konuştum</h2>
         <p>
           Bazı kararlar tek bir randevuda verilmez. Bazen bedeninizle yıllarca yaptığınız sessiz konuşmalar, o kısa
@@ -246,7 +248,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote class="mt-10">
+      <MedicalContextNote class="mt-10">
         <p>
           HRT kararı; menopoza giriş yaşı, belirti yükü, kardiyometabolik zemin, aile öyküsü, meme ve endometriyum
           açısından kişisel riskler ile birlikte değerlendirilir. Aynı kişi için farklı yıllarda farklı kararların
@@ -256,7 +258,7 @@ const articleSchemas = buildArticleSchemas({
           Bu yazıdaki kişisel anlatı bir genel öneri yerine geçmez. HRT başlama, sürdürme ya da bırakma kararı kendi
           hekiminizle, düzenli izlem planı içinde ele alınmalıdır.
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
       <ArticleDisclaimer class="mt-10" />
     </SubmenuArticleBody>

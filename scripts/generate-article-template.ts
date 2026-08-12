@@ -2,7 +2,12 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { getWriterStyleSummary } from '../src/utils/writer-style';
-import { articleTypes, type ArticleType } from '../src/data/article-types';
+import { writers } from '../src/data/writers';
+import {
+  articleTypes,
+  assertArticleTypeForWriter,
+  type ArticleType,
+} from '../src/data/article-types';
 
 type Args = {
   writer?: string;
@@ -82,16 +87,29 @@ function buildTemplate(input: {
   { id: 'kapanis', label: 'Kapanış' },
 ];`;
   const tocRender = isExperience ? '' : '      <ArticleTOC slot="toc" entries={tocEntries} />\n';
+  const tocImport = isExperience
+    ? ''
+    : `import ArticleTOC from '../../../components/site/ArticleTOC.astro';`;
   const clinicalImports = isClinical
     ? `import Evidence from '../../../components/site/Evidence.astro';
 import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';`
-    : '';
-  const clinicalTail = isClinical
+    : isExperience
+      ? `import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';`
+      : '';
+  const articleTail = isClinical
     ? `
       <ArticleEditorNote>
         <p>Bilimsel inceleyen tarafından yazılacak kısa, nötr değerlendirme.</p>
       </ArticleEditorNote>`
-    : '';
+    : isExperience
+      ? `
+      <MedicalContextNote>
+        <p>Yalnızca yazıda tıbbi bir iddia varsa, deneyimden ayrı tutulan kaynaklı ve nötr bağlam.</p>
+      </MedicalContextNote>`
+      : '';
+  const disclaimerText = isExperience
+    ? 'Bu yazı kişisel deneyimi aktarır; bilimsel kanıt, tanı veya kişiye özel sağlık önerisi değildir.'
+    : 'Bu içerik genel bilgilendirme amaçlıdır; kişisel tıbbi değerlendirme veya tanı yerine geçmez.';
   const bodySections = isClinical
     ? `        <h2 id="acilis">Temel Klinik Ayrım</h2>
         <p>Bölümü açan 1-2 cümlelik editoryal lede.</p>
@@ -142,7 +160,7 @@ import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+${tocImport}
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -183,7 +201,12 @@ ${input.stylePrompt}
   <main id="main-content" class="pt-24 text-[#2D2D2D]">
     <SubmenuArticleBody>
 ${tocRender}
-      <ArticleAuthorBlock authorSlug="${input.writerSlug}" publishedDate="${input.publishedDate}" readingMinutes={5} />
+      <ArticleAuthorBlock
+        authorSlug="${input.writerSlug}"
+        articleType="${input.articleType}"
+        publishedDate="${input.publishedDate}"
+        readingMinutes={5}
+      />
 
       <header class="mb-10">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#D81B60]">Hormonal Geçiş</p>
@@ -194,15 +217,15 @@ ${tocRender}
         <p>Bu türün amacına uygun, kendi başına anlaşılan kısa açılış.</p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="${isExperience ? 'experience' : 'scientific'}">
 ${bodySections}
       </ArticleProsePanel>
 
       <RelatedReadings paths={[]} />
-${clinicalTail}
+${articleTail}
 
       <ArticleDisclaimer>
-        <p>Bu içerik genel bilgilendirme amaçlıdır; kişisel tıbbi değerlendirme veya tanı yerine geçmez.</p>
+        <p>${disclaimerText}</p>
       </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
@@ -220,6 +243,9 @@ async function main() {
   }
 
   const style = getWriterStyleSummary(args.writer as any);
+  const writer = writers.find((item) => item.slug === style.writerSlug);
+  if (!writer) throw new Error(`Writer not found: ${style.writerSlug}`);
+  assertArticleTypeForWriter(writer, args.type as ArticleType);
   const section = args.section ?? 'perimenopoz';
   const date = args.date ?? '25 Nisan 2026';
   const titleSlug = slugify(args.title);

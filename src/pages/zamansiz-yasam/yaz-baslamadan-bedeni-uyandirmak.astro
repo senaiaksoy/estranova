@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -11,7 +11,7 @@ import RedFlagBox from '../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
@@ -44,6 +44,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'alara-baykent',
+  articleType: 'experience-essay',
   publishedDate: '1 Haziran 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
@@ -84,6 +85,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="alara-baykent"
+        articleType="experience-essay"
         publishedDate="1 Haziran 2026"
         readingMinutes={6}
         imageSrc="/images/library/editorial/alara-yaz-baslamadan-bedeni-uyandirmak-byline.webp"
@@ -96,7 +98,7 @@ const articleSchemas = buildArticleSchemas({
         <SaveForLaterButton slug={pathname} title={articleTitle} />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
         <p>
           Yaz yaklaşırken hareketi çoğu zaman “hızlıca forma girme” baskısıyla düşünürüz. Alara Baykent bu yazıda,
           kendi yaz sporları ve annesinin kuşağından öğrendiği beden okuma biçimini bir araya getiriyor: amaç bedeni
@@ -105,7 +107,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="yaz-oncesi">Yaz Öncesi Hareket Neden Bir Baskıya Dönüşüyor?</h2>
         <p>
           Yaz yaklaşırken beden hakkında konuşma biçimimiz birden hızlanıyor. Daha sıkı, daha ince, daha hazır, daha
@@ -225,7 +227,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote class="mt-14">
+      <MedicalContextNote class="mt-14">
         <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
         <p>
           40 sonrası hareket planında aerobik aktivite, direnç egzersizi, denge çalışması ve toparlanma birlikte
@@ -244,7 +246,7 @@ const articleSchemas = buildArticleSchemas({
         <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
           — Estranova Bilimsel Editör Notu
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
       <ArticleDisclaimer class="mt-10">
         <p>

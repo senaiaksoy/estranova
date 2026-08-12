@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -10,7 +10,7 @@ import ReadingControls from '../../../components/site/ReadingControls.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -43,6 +43,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'basak-pelister',
+  articleType: 'experience-essay',
   publishedDate: '1 Haziran 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
@@ -82,6 +83,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="basak-pelister"
+        articleType="experience-essay"
         publishedDate="1 Haziran 2026"
         readingMinutes={6}
         imageSrc="/images/library/editorial/basak-guc-canta-hafifletmek-byline.webp"
@@ -94,7 +96,7 @@ const articleSchemas = buildArticleSchemas({
         <SaveForLaterButton slug={pathname} title={articleTitle} />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
         <p>
           Güç bazen daha ağır çalışmak değil, gereksiz yükü fark etmektir. Başak Pelister bu yazıda dokuz yıllık
           menopoz deneyimini; çanta hazırlamak, merdiven çıkmak, anne-kız konuşmaları ve yakın dönem HRT kararının
@@ -103,7 +105,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="canta">Aslında Her Şey Bir Çantayla Başladı...</h2>
         <p>
           Hepimizin yaşadığı bir an vardır: evden çıkmadan önce çantaya bir şey daha koyarız. Sonra bir şey daha...
@@ -220,7 +222,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote class="mt-14">
+      <MedicalContextNote class="mt-14">
         <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={4} /></p>
         <p>
           Bu yazı kişisel deneyim merkezli bir denemedir. Menopoz sonrası enerji, uyku, kas gücü, metabolik takip ve
@@ -238,7 +240,7 @@ const articleSchemas = buildArticleSchemas({
         <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
           — Estranova Bilimsel Editör Notu
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
       <ArticleDisclaimer class="mt-10">
         <p>

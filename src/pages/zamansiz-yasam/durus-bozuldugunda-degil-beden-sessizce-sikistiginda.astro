@@ -8,7 +8,7 @@ import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
@@ -65,6 +65,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'isik-selin-gunce',
+  articleType: 'experience-essay',
   publishedDate: '7 Mayıs 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
@@ -104,6 +105,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="isik-selin-gunce"
+        articleType="experience-essay"
         publishedDate="7 Mayıs 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/isik-selin-gunce-durus-beden-farkindaligi-byline.jpg"
@@ -111,7 +113,7 @@ const articleSchemas = buildArticleSchemas({
         imagePosition="right center"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
         <p>
           Boyun, omuz, çene, kaburga hattı ya da kalçada biriken gerginlik her zaman kötü duruşla başlamaz. Bazen beden
           yalnızca fazla şeyi sessizce taşımaya başlar; biz de bunu ancak günün sonunda, yorgunlukla karışmış bir
@@ -120,7 +122,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="beden-her-zaman-agriyla-konusmaz">Beden Her Zaman Ağrıyla Konuşmaz</h2>
         <p>Beden bazen canınızı yakmadan da size bir şey anlatır; mesele, o daha kısık sesi duyup duymadığınızdır.</p>
         <p>
@@ -243,7 +245,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote class="mt-10">
+      <MedicalContextNote class="mt-10">
         <p>
           Beden gerginliği çoğu zaman yaşam temposu, nefes alışkanlığı, kas yükü ve duygusal baskıların birlikte yarattığı
           bir tablo olarak ortaya çıkar. Bu nedenle her sıkışma hissini yalnızca "postür sorunu" diye okumak eksik
@@ -254,7 +256,7 @@ const articleSchemas = buildArticleSchemas({
           daha dikkatli değerlendirme gerektirir. Farkındalık yazıları destekleyici olabilir; ama klinik değerlendirmenin
           yerini almaz.
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
       <ArticleDisclaimer class="mt-10">
         <p>

@@ -25,6 +25,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
+  articleType: 'experience-essay',
   publishedDate: '2026-07-16',
   pathname,
   articleSection: "Editörün Köşesi",
@@ -78,6 +79,7 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
+        articleType="experience-essay"
         publishedDate="16 Temmuz 2026"
         readingMinutes={5}
         medicalReviewer="Yok"
@@ -95,7 +97,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="yanlis-soruyu-fark-etmek">Önce Yanlış Soruyu Fark Etmek</h2>
         <p>Önce yanlış soru sorduğumu fark ettim… “Kaç kilo?” Bazen kolay soru gibi duruyor. Çoğu zaman değil.</p>
         <p>

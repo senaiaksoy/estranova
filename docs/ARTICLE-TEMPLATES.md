@@ -1,19 +1,23 @@
 # Estranova makale türleri ve şablonları
 
-Bu belge, ortak Estranova görsel kabuğu içinde farklı editoryal amaçların aynılaşmasını önler. Tür, yalnızca yazarın mesleğine göre değil, yazının okuyucuya verdiği ana değere göre seçilir.
+Bu belge, ortak Estranova görsel kabuğu içinde klinik uzmanlık ile yaşanmış deneyimin aynılaşmasını önler. Tür seçiminde ilk kapı yazarın editoryal yetki hattı, ikinci kapı yazının okuyucuya verdiği ana değerdir.
 
 ## Karar ağacı
 
-1. Yazı bir sağlık sorusunu tanım, mekanizma, kanıt, seçenek ve güvenlik sınırlarıyla mı yanıtlıyor? `clinical-guide`.
-2. Uzman kendi mesleki deneyiminden hareketle bir karar, iletişim veya etik meseleyi mi tartışıyor? `expert-essay`.
-3. Yazının ana değeri yazarın kendi hayatı, gözlemi ve yaşıt deneyimi mi? `experience-essay`.
-4. Hekim olmayan bir yazar pratik bir konuyu araştırma ve editoryal sentezle mi açıklıyor? `editorial-guide`.
+1. Yazar `scientific` hattında bir hekim/klinik uzman mı?
+   - Sağlık sorusunu tanım, mekanizma, kanıt, seçenek ve güvenlik sınırlarıyla yanıtlıyorsa `clinical-guide`.
+   - Kendi mesleki deneyiminden hareketle karar, iletişim veya etik meseleyi tartışıyorsa `expert-essay`.
+2. Yazar `lifestyle` hattında hekim olmayan bir yaşıt yazar mı?
+   - Ana değer kendi hayatı, gözlemi ve yaşıt deneyimiyse `experience-essay`.
+   - Kişisel klinik otorite kurmadan pratik bir konuyu araştırma ve editoryal sentezle açıklıyorsa `editorial-guide`.
+   - Fizyoterapist veya hareket uzmanı gibi doktor olmayan alan uzmanları da klinik schema yetkisi almaz; kendi mesleki sınırlarında `editorial-guide` kullanır.
+3. İmza kurumsal Estranova editörleri mi? Yalnız `editorial-guide`.
 
-Bir doktor `expert-essay`, doktor olmayan bir yazar `editorial-guide` yazabilir. Türü unvan değil, iddia yetkisi ve içerik vaadi belirler.
+Hekim olmayan isimli yazar `clinical-guide` veya `expert-essay` yazamaz; hekim/klinik uzman da yaşıt deneyimi personasına geçirilmez. Tıbbi bağlam gereken kişisel yazıda bilgi, yazarın deneyiminden ayrı bir `MedicalContextNote` içinde görünür.
 
 ## Ortak kabuk
 
-Tüm türlerde `SiteLayout`, tek H1, `SubmenuHero`, `SubmenuArticleBody`, yazar ve tarih bilgisi, `RelatedReadings`, canonical, Open Graph, `Article` ve `BreadcrumbList` korunur. Görsel dil, Türkçe arayüz, "siz" hitabı, satış dili yasağı ve tıbbi sorumluluk sınırı ortaktır.
+Tüm türlerde `SiteLayout`, tek H1, `SubmenuHero`, `SubmenuArticleBody`, yazar ve tarih bilgisi, `RelatedReadings`, canonical, Open Graph, `Article` ve `BreadcrumbList` korunur. Görsel dil, Türkçe arayüz, "siz" hitabı, satış dili yasağı ve tıbbi sorumluluk sınırı ortaktır. `ArticleProsePanel` tek tipografi sistemidir; `mode="experience"` kişisel anlatıda klinik bölüm sayacını kaldırır.
 
 ## 1. Klinik Rehber (`clinical-guide`)
 
@@ -96,20 +100,21 @@ Tipik akış:
 4. Yazarın neyi fark ettiği ve hangi soruyu sorduğu.
 5. Okura açılan daha geniş yaşıt bağı.
 6. "Bu benim yolumdu; sizinki farklı olabilir" anlamını doğal taşıyan denge.
-7. Tıbbi iddia varsa kısa, ayrı ve nötr `MedicalContextNote`.
+7. Tıbbi iddia varsa kısa, ayrı, kaynaklı ve nötr `MedicalContextNote`; tıbbi bilgi kontrolü görünürdür.
 8. `RelatedReadings` ve gerektiğinde `ArticleDisclaimer`.
 
-Bu türde `ArticleTOC`, numaralı klinik bölümler, `Evidence`, SSS, kaynak listesi ve `ArticleEditorNote` varsayılan değildir. Konu gerektirirse eklenir; yazıyı klinik rehber gibi göstermek için eklenmez.
+Bu türde `ArticleTOC`, numaralı klinik bölümler, SSS ve kaynak listesi varsayılan değildir. `Evidence` yalnız ayrı tıbbi bağlamda önemli bir iddiayı sınırlandırmak için kullanılabilir. `ArticleEditorNote` yerine `MedicalContextNote` kullanılır; yazı klinik rehber gibi gösterilmez.
 
 Schema: `Article` + `BreadcrumbList`. Tıbbi inceleme görünür bir notla gerçekten yapıldıysa belirtilir; `MedicalWebPage` varsayılan değildir.
 
 ## 4. Editoryal Rehber (`editorial-guide`)
 
-Hekim olmayan bir yazarın araştırma ve editoryal sentezle pratik bir konuyu açıkladığı ara türdür. Yaşıt ses korunur; tıbbi iddialar bilimsel editör tarafından kontrol edilir. Kaynaklar gerektiğinde görünür, fakat metin akademik kaynak yığınına dönmez. SSS yalnızca gerçek okur sorularına değer katıyorsa kullanılır.
+Hekim olmayan bir yazarın veya kurumsal editoryal imzanın araştırma ve editoryal sentezle pratik bir konuyu açıkladığı klinik olmayan türdür. Yazar hekim/klinisyen otoritesi kurmaz. Tıbbi iddialar ayrı bilimsel editör sorumluluğunda kontrol edilir; kaynaklar gerektiğinde görünür, fakat metin akademik kaynak yığınına dönmez. SSS yalnızca gerçek okur sorularına değer katıyorsa kullanılır. Schema `Article + BreadcrumbList` ile sınırlıdır.
 
 ## Yayın öncesi ortak kontrol
 
-- Tür, yazarın unvanına değil yazının vaadine göre seçildi mi?
+- Yazarın yetki hattı tür seçiminden önce kontrol edildi mi?
+- Hekim olmayan isimli bir yazar yanlışlıkla `clinical-guide` / `expert-essay` olarak işaretlendi mi?
 - Görünür yazar/inceleyen/tarihler/görsel ile JSON-LD aynı mı?
 - Klinik sahne anonim mi; temsiliyse açıkça belirtildi mi?
 - Tekil deneyim bilimsel kanıt veya tedavi başarısı gibi sunuluyor mu?

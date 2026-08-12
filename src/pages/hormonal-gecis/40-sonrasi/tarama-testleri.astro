@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -41,6 +41,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '5 Mayıs 2026',
   pathname: articlePath,
   articleSection: 'Hormonal Geçiş',
@@ -79,6 +80,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
+        articleType="clinical-guide"
         publishedDate="5 Mayıs 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/hg-tarama-testleri.webp"

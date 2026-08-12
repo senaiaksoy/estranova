@@ -41,6 +41,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '20 Nisan 2026',
   modifiedDate: '16 Haziran 2026',
   pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
@@ -82,6 +83,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
+        articleType="clinical-guide"
         publishedDate="20 Nisan 2026"
         readingMinutes={7}
         imageSrc="/images/library/editorial/hg-hormon-tedavisi-karar.webp"

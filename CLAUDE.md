@@ -87,7 +87,7 @@ Humanize tek başına AI-tell'leri kelime düzeyinde temizler; ama metin **yapı
 
 #### FAQ disiplini (HARD CONSTRAINT)
 
-- Makale türü önce `docs/ARTICLE-TEMPLATES.md` karar ağacıyla belirlenir. `clinical-guide` için SSS **önerilir ama otomatik zorunlu değildir**; `expert-essay`, `experience-essay` ve `editorial-guide` için varsayılan olarak eklenmez. Yalnızca okurun gerçek sorularına ek değer katıyorsa kullanılır.
+- Makale türü önce yazarın yetki hattı, sonra `docs/ARTICLE-TEMPLATES.md` karar ağacıyla belirlenir. Hekim olmayan isimli yazar `clinical-guide` / `expert-essay` kullanamaz. `clinical-guide` için SSS **önerilir ama otomatik zorunlu değildir**; `expert-essay`, `experience-essay` ve `editorial-guide` için varsayılan olarak eklenmez. Yalnızca okurun gerçek sorularına ek değer katıyorsa kullanılır.
 - SSS kullanılıyorsa **3–5** adet **konuya özgü**, long-tail niteliğinde gerçek soru içerir; her yanıt **en az 2–3 cümle** derinlikte olmalıdır.
 - **Yasak:** jenerik meta sorular ("bu içerik kimler için", "tıbbi karar yerine geçer mi", "Türkiye bağlamı neden ayrı", "bu metin neyi netleştirir") — SEO şablonu / FAQ stuffing sinyali. Ayrıntı: `agents/writer_agent.md` + `agents/writer_agent.py` doğrulaması.
 - SSS kullanılıyorsa sayfada **tek görünür SSS yüzeyi** bulunur. Gövde içi SSS varsa ikinci `ArticleFAQ` eklenmez; `FAQPage` yalnızca görünür sorularla birebir aynı kaynaktan üretilir.

@@ -46,6 +46,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'cagri-sade',
+  articleType: 'clinical-guide',
   publishedDate,
   pathname,
   articleSection: 'Beden & Yakınlık',
@@ -89,6 +90,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="cagri-sade"
+        articleType="clinical-guide"
         publishedDate={publishedDate}
         readingMinutes={readingMinutes}
         imageSrc={bylineImage}

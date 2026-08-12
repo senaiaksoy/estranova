@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -45,6 +45,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'metin-alis',
+  articleType: 'clinical-guide',
   publishedDate: '8 Mayıs 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
@@ -86,6 +87,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="metin-alis"
+        articleType="clinical-guide"
         publishedDate="8 Mayıs 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/metin-alis-tiroid-menopoz-yorgunluk-uyku-byline.jpg"

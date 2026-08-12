@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -44,6 +44,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'bulent-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '1 Haziran 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
@@ -84,6 +85,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="bulent-aksoy"
+        articleType="clinical-guide"
         publishedDate="1 Haziran 2026"
         readingMinutes={7}
         imageSrc="/images/library/editorial/bulent-kemik-gucu-kirik-beklemeden-byline.webp"

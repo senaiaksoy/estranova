@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -44,6 +44,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '3 Mayıs 2026',
   pathname: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
   articleSection: 'Zamansız Yaşam',
@@ -84,6 +85,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
+        articleType="clinical-guide"
         publishedDate="3 Mayıs 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/zy-deneysel-tedavi-kanit-masasi.webp"

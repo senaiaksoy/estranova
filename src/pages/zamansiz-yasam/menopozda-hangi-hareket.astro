@@ -44,6 +44,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'anil-yalmaz',
+  articleType: 'editorial-guide',
   publishedDate: '18 Haziran 2026',
   pathname: pathname,
   articleSection: 'Zamansız Yaşam',
@@ -85,6 +86,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="anil-yalmaz"
+        articleType="editorial-guide"
         publishedDate="18 Haziran 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/anil-yalmaz-menopozda-hangi-hareket-byline.webp"

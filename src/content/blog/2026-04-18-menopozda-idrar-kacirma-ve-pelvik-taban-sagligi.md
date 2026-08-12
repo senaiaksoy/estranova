@@ -3,6 +3,7 @@ title: "Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı"
 description: "Gülerken, hapşırırken ya da merdiven inerken yaşanan o anlık kontrol kaybı — pek çoğumuz bunu kimseye söylemeden taşır. Menopoz geçişinde idrar kontrolündeki değişiklikler oldukça yaygın, ama nedenleri ve ne…"
 date: "2026-04-18"
 writerSlug: "berna-aksoy"
+articleType: "editorial-guide"
 imageSrc: "/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp"
 imageAlt: "Sun-lit İstanbul evi yoga köşesinde yan yana yoga matlarında oturmuş iki yaşıt kadın; pelvik taban farkındalığı ve idrar kontrolü temasını sakin, yargısız bir ev ritüeli içinde anlatan editoryal görsel"
 ---

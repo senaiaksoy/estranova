@@ -8,7 +8,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
@@ -42,6 +42,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'demet-kizilkaya',
+  articleType: 'experience-essay',
   publishedDate: '27 Nisan 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
@@ -83,6 +84,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="demet-kizilkaya"
+        articleType="experience-essay"
         publishedDate="27 Nisan 2026"
         readingMinutes={10}
         imageSrc="/images/library/editorial/hg-hrt-ilk-alti-ay.webp"
@@ -90,7 +92,7 @@ const articleSchemas = buildArticleSchemas({
         imagePosition="center center"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
         <p>
           Bu yazı bir başlangıç rehberi değil; 58 yaşında bir kadının hormon replasman tedavisinin ilk aylarına dair
           notları. Demet Kızılkaya, kararını uzun bir muhasebenin sonunda nasıl verdiğini, ilk iki ayın "şimdi her
@@ -101,7 +103,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="sabah-sahnesi">Sabah Sahnesi</h2>
         <p>
           Geçen pazartesi sabahı çayımı demlerken aklıma geldi: dört aydır küçük bir jel ve akşam alınan bir kapsül,
@@ -325,7 +327,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote class="mt-10">
+      <MedicalContextNote class="mt-10">
         <p>
           Hormon replasman tedavisi (HRT) menopoz döneminde uygun adaylarda etkili ve büyük ölçüde güvenli bir
           seçenek olabilir; ancak risk-fayda dengesi bireyseldir ve yıllar içinde yeniden değerlendirilir. Bu yazı
@@ -346,7 +348,7 @@ const articleSchemas = buildArticleSchemas({
           yoğun baş ağrısı, beklenmedik kanama, göğüste belirgin hassasiyet, nefes darlığı, bacakta şişlik) için
           planlı zamandan önce başvurmak her zaman güvenli tercihtir.
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
       <ArticleDisclaimer class="mt-10" />
     </SubmenuArticleBody>

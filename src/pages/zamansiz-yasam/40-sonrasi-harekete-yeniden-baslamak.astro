@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
@@ -46,6 +46,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'anil-yalmaz',
+  articleType: 'editorial-guide',
   publishedDate: '26 Mayıs 2026',
   modifiedDate: '13 Temmuz 2026',
   pathname: pathname,
@@ -87,6 +88,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="anil-yalmaz"
+        articleType="editorial-guide"
         publishedDate="26 Mayıs 2026"
         readingMinutes={7}
         imageSrc="/images/library/editorial/anil-yalmaz-harekete-yeniden-baslamak-byline.webp"

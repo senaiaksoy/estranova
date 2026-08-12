@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -90,6 +90,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="estranova-editorial"
+        articleType="editorial-guide"
         publishedDate={publishedDate}
         readingMinutes={readingMinutes}
         imageSrc="/images/library/editorial/perimenopozda-zihinsel-bulaniklik-byline.webp"

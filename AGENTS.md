@@ -230,7 +230,7 @@ Language and compliance:
 
 ### Article page layout (Astro — use for every new static article)
 
-The visual shell is **not** optional for new `.astro` articles under `src/pages/`. Before scaffolding, select `clinical-guide`, `expert-essay`, `experience-essay` or `editorial-guide` with [`docs/ARTICLE-TEMPLATES.md`](docs/ARTICLE-TEMPLATES.md). The common Estranova shell stays consistent; evidence, sources, TOC, FAQ, medical review and schema follow the selected type instead of a single universal checklist.
+The visual shell is **not** optional for new `.astro` articles under `src/pages/`. Before scaffolding, determine the writer authority track, then select an allowed `clinical-guide`, `expert-essay`, `experience-essay` or `editorial-guide` with [`docs/ARTICLE-TEMPLATES.md`](docs/ARTICLE-TEMPLATES.md). Named non-clinician writers cannot use `clinical-guide` or `expert-essay`. The common Estranova shell stays consistent; evidence, sources, TOC, FAQ, medical review and schema follow the selected type instead of a single universal checklist.
 
 Reuse these components so pages match the homepage / hub styling:
 

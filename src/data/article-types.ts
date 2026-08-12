@@ -1,3 +1,5 @@
+import type { Writer } from './writers';
+
 export const articleTypes = [
   'clinical-guide',
   'expert-essay',
@@ -6,6 +8,34 @@ export const articleTypes = [
 ] as const;
 
 export type ArticleType = (typeof articleTypes)[number];
+
+export type ArticleAuthorTrack = 'scientific' | 'non-clinical' | 'institutional';
+
+export const allowedArticleTypesByTrack: Record<ArticleAuthorTrack, readonly ArticleType[]> = {
+  scientific: ['clinical-guide', 'expert-essay'],
+  'non-clinical': ['experience-essay', 'editorial-guide'],
+  institutional: ['editorial-guide'],
+};
+
+export function getArticleAuthorTrack(
+  writer: Pick<Writer, 'category' | 'isInstitutionalByline' | 'articleAuthority'>,
+): ArticleAuthorTrack {
+  if (writer.isInstitutionalByline) return 'institutional';
+  if (writer.articleAuthority) return writer.articleAuthority;
+  return writer.category === 'scientific' ? 'scientific' : 'non-clinical';
+}
+
+export function assertArticleTypeForWriter(
+  writer: Pick<Writer, 'displayName' | 'category' | 'isInstitutionalByline' | 'articleAuthority'>,
+  articleType: ArticleType,
+): void {
+  const track = getArticleAuthorTrack(writer);
+  if (!allowedArticleTypesByTrack[track].includes(articleType)) {
+    throw new Error(
+      `Makale türü yazar yetkisiyle uyumsuz: ${writer.displayName} (${track}) -> ${articleType}`,
+    );
+  }
+}
 
 export const articleTypeLabels: Record<ArticleType, string> = {
   'clinical-guide': 'Klinik Rehber',

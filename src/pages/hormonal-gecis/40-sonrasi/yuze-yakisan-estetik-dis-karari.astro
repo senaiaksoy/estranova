@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -41,6 +41,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'duygu-karaosmanoglu',
+  articleType: 'clinical-guide',
   publishedDate: '11 Mayıs 2026',
   pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
   articleSection: 'Hormonal Geçiş',
@@ -82,6 +83,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="duygu-karaosmanoglu"
+        articleType="clinical-guide"
         publishedDate="11 Mayıs 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/duygu-karaosmanoglu-yuze-yakisan-byline.webp"

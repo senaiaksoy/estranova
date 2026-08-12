@@ -1,4 +1,4 @@
-﻿---
+---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -8,7 +8,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
@@ -40,6 +40,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
+  articleType: 'experience-essay',
   publishedDate: '29 Nisan 2026',
   pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
   articleSection: 'Hormonal Geçiş',
@@ -81,13 +82,14 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
+        articleType="experience-essay"
         publishedDate="29 Nisan 2026"
         readingMinutes={10}
         imageSrc="/images/library/editorial/hg-menopozda-hekim-hasta-iliskisi.webp"
         imageAlt="Sabah ışığında mutfakta güne hazırlanan kadın; menopozda hekim-hasta ilişkisi yazısı için editoryal görsel"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
 <p>
           Bu yazıyı yazmak benim için kolay değil. Eşim jinekolog ama beni takip eden hekim o değil — yakınlarını
           takip etmenin doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına devretti. Üstelik bu
@@ -99,7 +101,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="eski-resim">Eskinin Hekim-Hasta Resmi — Otoritenin Tek Sesi</h2>
         <p>
           Anne ve büyük teyzelerimin genç kadınlık yıllarında hekim "söz sahibi olan", hasta "dinleyen ve takip eden"di. Bu resim
@@ -311,7 +313,7 @@ const articleSchemas = buildArticleSchemas({
           ]}
         />
 
-      <ArticleEditorNote>
+      <MedicalContextNote>
 <p class="mb-3 leading-relaxed text-ink/80">
           Hekim-hasta ilişkisinin niteliği, menopoz gibi uzun süreli hormonal takip gerektiren süreçlerde
           klinik kararların güvenli ve sürdürülebilir biçimde alınmasında belirleyici bir parametredir. İlişkinin
@@ -338,7 +340,7 @@ const articleSchemas = buildArticleSchemas({
         <p class="text-sm italic text-primary">
           — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
        <ArticleDisclaimer>
 <p>

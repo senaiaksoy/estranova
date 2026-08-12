@@ -41,6 +41,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'estranova-editorial',
+  articleType: 'editorial-guide',
   publishedDate: '15 Temmuz 2026',
   modifiedDate: '16 Temmuz 2026',
   pathname,
@@ -84,6 +85,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="estranova-editorial"
+        articleType="editorial-guide"
         publishedDate="15 Temmuz 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/pair-window-cafe-reflection.webp"

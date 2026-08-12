@@ -17,10 +17,11 @@ Yazar atamadan ve taslak kurmadan önce [`ARTICLE-TEMPLATES.md`](ARTICLE-TEMPLAT
 
 - `clinical-guide`: sağlık sorusu + mekanizma + kanıt + seçenek + güvenlik;
 - `expert-essay`: uzmanın mesleki deneyiminden iletişim/karar/etik denemesi;
-- `experience-essay`: kişisel hayat ve yaşıt deneyimi ana değer;
-- `editorial-guide`: hekim olmayan yazarın araştırmalı editoryal rehberi.
+- `experience-essay`: hekim olmayan yaşıt yazarın kişisel hayatı ve deneyimi ana değer;
+- `editorial-guide`: hekim olmayan yazarın veya kurumsal imzanın klinik otorite kurmayan araştırmalı editoryal rehberi.
 
-Tür yazarın unvanından otomatik türetilmez. Bir hekim `expert-essay`, hekim olmayan yazar `editorial-guide` yazabilir. Seçilen tür makale loguna ve yeni sayfalarda `buildArticleSchemas({ articleType })` çağrısına yazılır.
+Tür seçiminde önce yazarın yetki hattı doğrulanır. `scientific` yazar yalnız `clinical-guide` / `expert-essay`; `lifestyle` yazar yalnız `experience-essay` / `editorial-guide`; kurumsal imza yalnız `editorial-guide` kullanır. Seçilen tür makale loguna ve `buildArticleSchemas({ articleType })` çağrısına açıkça yazılır.
+Doktor olmayan alan uzmanları kurulda bilimsel uzman grubunda listelense bile makale yetkisi `non-clinical` olarak ayrıca tanımlanır ve `editorial-guide` kullanır.
 
 ### 1.1 Konu kabul kontrolü
 

@@ -12,6 +12,7 @@ const blog = defineCollection({
     imageSrc: z.string().optional(),
     imageAlt: z.string().optional(),
     writerSlug: z.string().optional(),
+    articleType: z.enum(['clinical-guide', 'expert-essay', 'experience-essay', 'editorial-guide']),
     faqItems: z
       .array(
         z.object({

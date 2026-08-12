@@ -38,6 +38,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
   publishedDate: '28 Nisan 2026',
   pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
   articleSection: 'Zihin & Denge',
@@ -69,6 +70,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="senai-aksoy"
+        articleType="clinical-guide"
         publishedDate="28 Nisan 2026"
         readingMinutes={6}
         imageSrc="/images/library/editorial/zd-gece-terlemesi-uyku-utancsiz.webp"

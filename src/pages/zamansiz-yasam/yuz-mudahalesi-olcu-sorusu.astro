@@ -45,6 +45,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'cagri-sade',
+  articleType: 'clinical-guide',
   publishedDate: '10 Mayıs 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
@@ -86,6 +87,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="cagri-sade"
+        articleType="clinical-guide"
         publishedDate="10 Mayıs 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu-byline.webp"

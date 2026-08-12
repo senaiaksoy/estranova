@@ -1,7 +1,7 @@
 import { writers, type Writer } from '../data/writers';
 import { submenuHeroByRoute, articleCardImageByRoute } from '../data/submenu-heroes';
 import type { ArticleFaqItem } from '../data/article-faqs';
-import type { ArticleType } from '../data/article-types';
+import { assertArticleTypeForWriter, type ArticleType } from '../data/article-types';
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -13,11 +13,8 @@ export interface BuildArticleSchemaOptions {
   title: string;
   description: string;
   writerSlug: Writer['slug'];
-  /**
-   * Eski sayfaları geriye dönük bozmamak için varsayılan clinical-guide'dır.
-   * Yeni makalelerde tür açıkça geçilmelidir.
-   */
-  articleType?: ArticleType;
+  /** Yazar yetkisiyle uyumlu tür her makalede açıkça belirtilir. */
+  articleType: ArticleType;
   publishedDate: string; // "14 Nisan 2026" veya ISO
   modifiedDate?: string; // revizyonda güncellenir; verilmezse publishedDate'e eşitlenir
   pathname: string; // örn. "/zihin-denge/duygusal-denge/ruh-hali-degisimleri-menopoz/" (leading slash)
@@ -80,7 +77,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     title,
     description,
     writerSlug,
-    articleType = 'clinical-guide',
+    articleType,
     publishedDate,
     modifiedDate,
     pathname,
@@ -92,6 +89,9 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     citation,
     siteUrl: rawSiteUrl,
   } = opts;
+
+  const writer = getWriter(writerSlug);
+  assertArticleTypeForWriter(writer, articleType);
 
   // Tıbbi inceleyici default: Doç. Dr. Senai Aksoy tüm yazarların makalelerini
   // inceler — AMA kendi makalesini inceleyemez. Senai yazar olduğunda denetleyici
@@ -119,7 +119,6 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
     : undefined;
   const resolvedImage = image ? (image.startsWith('http') ? image : joinUrl(siteUrl, image)) : heroAbsolute;
 
-  const writer = getWriter(writerSlug);
   const isoDate = toISODate(publishedDate);
   // dateModified: revizyon tarihi verilmişse onu kullan; yoksa yayın tarihine eşitle.
   // Bir makale içerikçe güncellendiğinde modifiedDate geçilmeli (tazelik sinyali).

@@ -10,7 +10,9 @@ const PAGES_DIR = path.join(ROOT, 'src/pages');
 const APPROVALS_FILE = path.join(ROOT, 'src/data/article-approvals.ts');
 const STATIC_ARTICLES_FILE = path.join(ROOT, 'src/data/static-articles.ts');
 const SUB_HUBS_FILE = path.join(ROOT, 'src/data/sub-hubs.ts');
+const WRITERS_FILE = path.join(ROOT, 'src/data/writers.ts');
 const strict = process.argv.includes('--strict');
+const APPROVAL_OPTIONAL_PREFIXES = ['/editorun-kosesi/'];
 
 const EXCLUDED_BASENAMES = new Set([
   'index.astro',
@@ -46,8 +48,9 @@ function resolveStringOrVar(fm, propName) {
   const direct = fm.match(new RegExp(`${propName}:\\s*['"\`]([^'"\`]+)['"\`]`));
   if (direct) return direct[1];
   const ref = fm.match(new RegExp(`${propName}:\\s*([a-zA-Z_$][\\w$]*)`));
-  if (!ref) return null;
-  const varName = ref[1];
+  const shorthand = fm.match(new RegExp(`\\b${propName}\\s*,`));
+  if (!ref && !shorthand) return null;
+  const varName = ref?.[1] ?? propName;
   const varDef = fm.match(new RegExp(`const\\s+${varName}\\s*=\\s*['"\`]([^'"\`]+)['"\`]`));
   return varDef ? varDef[1] : null;
 }
@@ -60,6 +63,7 @@ function parseFrontmatter(astroSource) {
   return {
     pathname: resolveStringOrVar(fm, 'pathname'),
     writerSlug: resolveStringOrVar(fm, 'writerSlug'),
+    articleType: resolveStringOrVar(fm, 'articleType'),
   };
 }
 
@@ -77,9 +81,78 @@ async function findStaticArticlePages(dir, results = []) {
     if (!source.includes('buildArticleSchemas(')) continue;
     const fm = parseFrontmatter(source);
     if (!fm?.pathname || !fm.writerSlug) continue;
-    results.push({ pathname: fm.pathname, file: path.relative(ROOT, full) });
+    results.push({
+      pathname: fm.pathname,
+      writerSlug: fm.writerSlug,
+      articleType: fm.articleType,
+      source,
+      file: path.relative(ROOT, full),
+    });
   }
   return results;
+}
+
+async function loadWriterTracks() {
+  const source = await fs.readFile(WRITERS_FILE, 'utf8');
+  const starts = [...source.matchAll(/^\s{4}slug:\s*'([^']+)',/gm)];
+  const writersArrayEnd = source.indexOf('\n];', starts[0]?.index ?? 0);
+  const tracks = new Map();
+  for (let index = 0; index < starts.length; index += 1) {
+    const current = starts[index];
+    const next = starts[index + 1];
+    const block = source.slice(current.index, next?.index ?? writersArrayEnd);
+    const track = block.includes('isInstitutionalByline: true')
+      ? 'institutional'
+      : block.includes("articleAuthority: 'non-clinical'")
+        ? 'non-clinical'
+        : block.includes("category: 'scientific'")
+        ? 'scientific'
+        : 'non-clinical';
+    tracks.set(current[1], track);
+  }
+  return tracks;
+}
+
+function findArticleAuthorityIssues(articlePages, writerTracks) {
+  const allowed = {
+    scientific: new Set(['clinical-guide', 'expert-essay']),
+    'non-clinical': new Set(['experience-essay', 'editorial-guide']),
+    institutional: new Set(['editorial-guide']),
+  };
+  const issues = [];
+
+  for (const page of articlePages) {
+    const track = writerTracks.get(page.writerSlug);
+    if (!track) {
+      issues.push(`${page.pathname} -> yazar yetki hattı bulunamadı (${page.writerSlug})`);
+      continue;
+    }
+    if (!page.articleType) {
+      issues.push(`${page.pathname} -> articleType açıkça belirtilmemiş`);
+      continue;
+    }
+    if (!allowed[track].has(page.articleType)) {
+      issues.push(`${page.pathname} -> ${track} yazar ${page.articleType} kullanamaz`);
+    }
+
+    const bylineType = page.source.match(/<ArticleAuthorBlock[\s\S]*?articleType="([^"]+)"[\s\S]*?\/>/)?.[1];
+    if (bylineType !== page.articleType) {
+      issues.push(`${page.pathname} -> yazar kartı türü schema türüyle eşleşmiyor`);
+    }
+
+    if (page.articleType === 'experience-essay') {
+      if (!page.source.includes('ArticleProsePanel mode="experience"')) {
+        issues.push(`${page.pathname} -> deneyim gövdesinde mode="experience" yok`);
+      }
+      if (page.source.includes('<ArticleEditorNote')) {
+        issues.push(`${page.pathname} -> deneyim yazısında ArticleEditorNote yerine MedicalContextNote kullanılmalı`);
+      }
+      if (page.source.includes('title="Kısa Klinik Yanıt"')) {
+        issues.push(`${page.pathname} -> deneyim yazısı klinik özet etiketi taşıyor`);
+      }
+    }
+  }
+  return issues;
 }
 
 async function loadApprovedPathnames() {
@@ -184,9 +257,15 @@ async function main() {
   const approved = await loadApprovedPathnames();
   const staticPaths = await loadStaticArticlePaths();
   const menuCoverageIssues = await findMenuCoverageIssues();
+  const writerTracks = await loadWriterTracks();
+  const articleAuthorityIssues = findArticleAuthorityIssues(articlePages, writerTracks);
 
   const publishedWithoutApproval = articlePages
-    .filter((page) => !approved.has(page.pathname))
+    .filter(
+      (page) =>
+        !approved.has(page.pathname) &&
+        !APPROVAL_OPTIONAL_PREFIXES.some((prefix) => page.pathname.startsWith(prefix)),
+    )
     .map((page) => `${page.pathname} (${page.file})`);
   const staticWithoutApproval = staticPaths.filter((pathname) => !approved.has(pathname));
   const approvedMissingFromStatic = [...approved].filter((pathname) => !staticPaths.includes(pathname));
@@ -200,9 +279,13 @@ async function main() {
   printSection('RSS manifestinde olup approval kaydi olmayan yollar', staticWithoutApproval);
   printSection('Approval kaydi olup RSS manifestinde bulunmayan yollar', approvedMissingFromStatic);
   printSection('Alt menu/listede gorunmeyen statik makaleler', menuCoverageIssues);
+  printSection('Yazar yetkisi / makale turu uyumsuzluklari', articleAuthorityIssues);
 
   const hasIssues =
-    publishedWithoutApproval.length > 0 || staticWithoutApproval.length > 0 || menuCoverageIssues.length > 0;
+    publishedWithoutApproval.length > 0 ||
+    staticWithoutApproval.length > 0 ||
+    menuCoverageIssues.length > 0 ||
+    articleAuthorityIssues.length > 0;
   if (!hasIssues) {
     console.log('\nYayin butunlugu temiz.');
     return;

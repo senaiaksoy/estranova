@@ -8,7 +8,7 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import Evidence from '../../../components/site/Evidence.astro';
@@ -42,6 +42,7 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'basak-pelister',
+  articleType: 'experience-essay',
   publishedDate: '16 Temmuz 2026',
   pathname,
   articleSection: 'Zihin & Denge',
@@ -82,6 +83,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="basak-pelister"
+        articleType="experience-essay"
         publishedDate="16 Temmuz 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/basak-olcu-panigi-beden-algisi-byline.webp"
@@ -89,7 +91,7 @@ const articleSchemas = buildArticleSchemas({
         imagePosition="center"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Bu yazıya başlarken">
         <p>
           Tartı bazen aynı rakamı gösterir; bazen hiç göstermese de zihnimizdeki ses devam eder. Bu yazı kilo
           vermeyi, diyet yapmayı ya da tek bir yöntemi anlatmıyor. Başak Pelister, menopoz yıllarında ölçüye,
@@ -98,7 +100,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleSummary>
 
-      <ArticleProsePanel>
+      <ArticleProsePanel mode="experience">
         <h2 id="acilıs">Aslında her şey çok masum başlıyor</h2>
         <p>
           Yıllarca bir denge arayışı içindeydim; bazen tartıda, bazen aynada, bazen de dolabın kapağını açtığım o
@@ -310,7 +312,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote class="mt-10">
+      <MedicalContextNote class="mt-10">
         <p>
           Bu yazı, kilo yönetimi veya tedavi önerisi sunmaz; beden algısı, ölçü kaygısı ve menopoz dönemindeki öznel
           beden deneyimini editoryal bir yaklaşımla ele alır. Hormonal geçiş yıllarında vücut kompozisyonu, yağ
@@ -322,7 +324,7 @@ const articleSchemas = buildArticleSchemas({
           yaşamı zorlaması durumunda bireysel tıbbi değerlendirme önemlidir. Okur için güvenli yol şudur: rakamı da
           hissi de küçümsemeden, gerekirse hekim ve uygun uzman desteğiyle birlikte okumak.
         </p>
-      </ArticleEditorNote>
+      </MedicalContextNote>
 
       <ArticleDisclaimer class="mt-10" />
     </SubmenuArticleBody>
