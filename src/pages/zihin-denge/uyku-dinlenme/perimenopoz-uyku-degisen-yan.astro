@@ -5,7 +5,6 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
@@ -13,9 +12,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/']!;
@@ -27,7 +24,6 @@ const tocEntries = [
   { id: 'gecici-kalici', label: 'Geçici mi, Yeni Düzen mi' },
   { id: 'ne-yardim', label: 'Üç Başlıkta Yardım' },
   { id: 'ne-zaman', label: 'Ne Zaman Hekim' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
@@ -35,7 +31,6 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Perimenopozda Uykunun Gerçekten Değişen Yanı';
 const articleDescription =
   'Perimenopozda uyku neden değişiyor? Östrojen ve progesteron hangi evreye dokunuyor, gece uyanmaları nasıl okunmalı — sakin bir yaşıt perspektifinden.';
-const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -46,7 +41,6 @@ const articleSchemas = buildArticleSchemas({
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
   keywords: ['perimenopoz', 'uyku', 'uyku evresi', 'östrojen', 'progesteron', 'REM', 'NREM', 'CBT-I', 'menopoz uyku'],
-  faqItems,
 
   siteUrl,
 });
@@ -69,7 +63,6 @@ const articleSchemas = buildArticleSchemas({
       compact
     />
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
         articleType="experience-essay"
@@ -268,7 +261,7 @@ const articleSchemas = buildArticleSchemas({
           donanımım yok.
         </p>
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <h2 id="uykuyu-okurken">Uykuyu Okurken Aklımda Kalanlar</h2>
         <h3>Perimenopoz ne zaman başlıyor, uykuya hemen dokunuyor mu?</h3>
         <p>
           Perimenopoz çoğunlukla kırklı yaşların başında, bazen daha erken başlıyor; ortalama olarak menopozdan
@@ -329,8 +322,6 @@ const articleSchemas = buildArticleSchemas({
           Her gece aynı saatte uyumak gerekmez; aynı saatte uyanmaya niyet etmek, ritmi kendiliğinden yapılandırır.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

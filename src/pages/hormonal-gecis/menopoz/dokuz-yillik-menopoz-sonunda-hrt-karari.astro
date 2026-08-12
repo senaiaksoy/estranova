@@ -5,17 +5,14 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/';
@@ -33,10 +30,8 @@ const tocEntries = [
   { id: 'hekim-karari', label: 'Uzun Tanışıklık ve Karar' },
   { id: 'uc-kusak', label: 'Üç Kuşak Aynı Masada' },
   { id: 'kapanis', label: 'Bu Hikaye Ne Söyler' },
-  { id: 'sss', label: 'Sık Sorulanlar' },
 ];
 
-const faqItems = articleFaqs[pathname] ?? [];
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -58,7 +53,6 @@ const articleSchemas = buildArticleSchemas({
     'sıcak basması',
     'menopozda hekim kararı',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -81,7 +75,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="basak-pelister"
         articleType="experience-essay"
@@ -230,14 +223,6 @@ const articleSchemas = buildArticleSchemas({
           yolum oldu. Sizinki daha kısa, daha uzun ya da bambaşka olabilir.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ
-        id="sss"
-        class="mt-10"
-        items={faqItems}
-        title="Bu Yazıdan Sonra Akla Gelen Sorular"
-        intro="Kişisel bir HRT güncesi okunduğunda en çok geri dönülen soruları burada kısa ve net biçimde topladık."
-      />
 
       <RelatedReadings
         class="mt-10"

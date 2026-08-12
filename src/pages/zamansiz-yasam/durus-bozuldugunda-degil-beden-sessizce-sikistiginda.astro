@@ -5,13 +5,11 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../utils/article-schema';
@@ -34,30 +32,6 @@ const tocEntries = [
   { id: 'sert-duzeltmeler-yerine', label: 'Sert Düzeltmeler Yerine' },
   { id: 'ne-zaman-gecilmemeli', label: 'Ne Zaman Geçilmemeli?' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sss', label: 'Sık Sorulanlar' },
-];
-
-const faqItems = [
-  {
-    question: 'Beden gerginliği her zaman ağrıya dönüşür mü?',
-    answer:
-      'Hayır. Bazen önce omuzların yükselmesi, çenenin sıkılması, nefesin kısalması ya da gün sonunda açıklaması zor bir yorgunluk hissiyle başlar. Ağrı bazen daha sonra gelir; bazen de hiç gelmeden bedenin taşıdığı yükü hissettirir.',
-  },
-  {
-    question: 'Kötü duruş demek neden bazen yetersiz kalır?',
-    answer:
-      'Çünkü beden yalnızca bir fotoğraf karesi değildir. Günün temposu, ekran karşısında kalma süresi, bekleme hali, kaygı, uykusuzluk ve nefes alışkanlığı da bedenin taşıdığı gerginliği etkiler. Bu yüzden mesele çoğu zaman yalnızca nasıl oturduğunuz değil, nasıl yaşadığınızdır.',
-  },
-  {
-    question: 'Bu tablo için hemen egzersiz ya da postür düzeltmesi mi gerekir?',
-    answer:
-      'Her zaman değil. Bazen önce fark etmek, adını koymak ve bedeni yargısız biçimde dinlemek gerekir. Sert düzeltmeler ya da sürekli kendini kontrol etme hali bazı kadınlarda gerginliği daha da görünür hale getirebilir.',
-  },
-  {
-    question: 'Ne zaman profesyonel değerlendirme düşünmek gerekir?',
-    answer:
-      'Gerginlik yoğun ağrıya, uyuşmaya, baş dönmesine, çene kilitlenmesine, kol-bacak güçsüzlüğüne ya da günlük işlevi belirgin bozan bir tabloya dönüşüyorsa beklememek gerekir. Bu yazı farkındalık zemini sunar; tanı ya da tedavi yerine geçmez.',
-  },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -79,7 +53,6 @@ const articleSchemas = buildArticleSchemas({
     'sahne disiplini',
     'beden farkındalığı',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -102,7 +75,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="isik-selin-gunce"
         articleType="experience-essay"
@@ -233,8 +205,6 @@ const articleSchemas = buildArticleSchemas({
           susturmak değil; biraz daha dikkatle dinlemek.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-10"

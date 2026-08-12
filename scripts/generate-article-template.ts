@@ -1,6 +1,6 @@
 // Estranova article template generator.
 import { mkdir, writeFile } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { dirname, relative, resolve } from 'node:path';
 import { getWriterStyleSummary } from '../src/utils/writer-style';
 import { writers } from '../src/data/writers';
 import {
@@ -12,7 +12,11 @@ import {
 type Args = {
   writer?: string;
   title?: string;
+  hub?: string;
   section?: string;
+  sectionPath?: string;
+  sectionLabel?: string;
+  related?: string;
   out?: string;
   date?: string;
   type?: string;
@@ -24,7 +28,7 @@ function parseArgs(argv: string[]): Args {
     const key = argv[i];
     const value = argv[i + 1];
     if (!key.startsWith('--')) continue;
-    const k = key.slice(2) as keyof Args;
+    const k = key.slice(2).replace(/-([a-z])/g, (_, character: string) => character.toUpperCase()) as keyof Args;
     if (value && !value.startsWith('--')) {
       args[k] = value;
       i += 1;
@@ -49,10 +53,23 @@ function slugify(input: string): string {
     .replaceAll(/\s+/g, '-');
 }
 
+function importPath(fromDirectory: string, target: string): string {
+  const value = relative(fromDirectory, target).replaceAll('\\', '/');
+  return value.startsWith('.') ? value : `./${value}`;
+}
+
+const sectionLabels: Record<string, string> = {
+  'hormonal-gecis': 'Hormonal Geçiş',
+  'bilimsel-pencere': 'Bilimsel Pencere',
+  'zamansiz-yasam': 'Zamansız Yaşam',
+  'zihin-denge': 'Zihin & Denge',
+  'beden-yakinlik': 'Beden & Yakınlık',
+};
+
 function usage(): string {
   return [
     'Usage:',
-    '  npm run article:template -- --writer <writer-slug> --title "<Baslik>" --type <article-type> [--section perimenopoz] [--date "25 Nisan 2026"] [--out "src/pages/.../yeni-yazi.astro"]',
+    '  npm run article:template -- --writer <writer-slug> --title "<Baslik>" --type <article-type> --related "/ilgili-1/,/ilgili-2/" [--hub hormonal-gecis] [--section menopoz] [--section-path /bilimsel-pencere/yeni-arastirmalar] [--section-label "Bilimsel Pencere"] [--date "25 Nisan 2026"] [--out "src/pages/.../yeni-yazi.astro"]',
     '',
     `Article types: ${articleTypes.join(', ')}`,
     '',
@@ -68,17 +85,22 @@ function buildTemplate(input: {
   publishedDate: string;
   stylePrompt: string;
   pathname: string;
+  hubPath: string;
+  articleSection: string;
+  relatedPaths: string[];
+  imports: Record<string, string>;
   articleType: ArticleType;
 }): string {
   const description = `${input.title} başlığını sade, güvenli ve okur dostu bir dille ele alan rehber.`;
   const isClinical = input.articleType === 'clinical-guide';
   const isExperience = input.articleType === 'experience-essay';
+  const isExpert = input.articleType === 'expert-essay';
   const summaryTitle = isClinical
     ? 'Kısa Klinik Yanıt'
     : isExperience
       ? 'Bu yazıya başlarken'
       : 'Kısa Özet';
-  const tocEntries = isExperience
+  const tocEntries = isExperience || isExpert
     ? ''
     : `const tocEntries = [
   { id: 'acilis', label: 'Açılış' },
@@ -86,27 +108,20 @@ function buildTemplate(input: {
   { id: 'ana-baslik-2', label: 'Ana Başlık 2' },
   { id: 'kapanis', label: 'Kapanış' },
 ];`;
-  const tocRender = isExperience ? '' : '      <ArticleTOC slot="toc" entries={tocEntries} />\n';
-  const tocImport = isExperience
+  const tocRender = isExperience || isExpert ? '' : '      <ArticleTOC slot="toc" entries={tocEntries} />\n';
+  const tocImport = isExperience || isExpert
     ? ''
-    : `import ArticleTOC from '../../../components/site/ArticleTOC.astro';`;
+    : `import ArticleTOC from '${input.imports.components}/ArticleTOC.astro';`;
   const clinicalImports = isClinical
-    ? `import Evidence from '../../../components/site/Evidence.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';`
-    : isExperience
-      ? `import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';`
-      : '';
+    ? `import Evidence from '${input.imports.components}/Evidence.astro';
+import ArticleEditorNote from '${input.imports.components}/ArticleEditorNote.astro';`
+    : '';
   const articleTail = isClinical
     ? `
       <ArticleEditorNote>
         <p>Bilimsel inceleyen tarafından yazılacak kısa, nötr değerlendirme.</p>
       </ArticleEditorNote>`
-    : isExperience
-      ? `
-      <MedicalContextNote>
-        <p>Yalnızca yazıda tıbbi bir iddia varsa, deneyimden ayrı tutulan kaynaklı ve nötr bağlam.</p>
-      </MedicalContextNote>`
-      : '';
+    : '';
   const disclaimerText = isExperience
     ? 'Bu yazı kişisel deneyimi aktarır; bilimsel kanıt, tanı veya kişiye özel sağlık önerisi değildir.'
     : 'Bu içerik genel bilgilendirme amaçlıdır; kişisel tıbbi değerlendirme veya tanı yerine geçmez.';
@@ -126,7 +141,7 @@ import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro'
         <h2 id="kapanis">Kaynaklar</h2>
         <p>Yalnızca iddiaları gerçekten destekleyen seçilmiş kaynaklar.</p>
         <ol>
-          <li id="kaynak-1"><a href="https://example.org/" rel="noopener noreferrer">Kaynak başlığı</a>.</li>
+          <li id="kaynak-1"><a href="REPLACE_WITH_VERIFIED_SOURCE_URL" rel="noopener noreferrer">Doğrulanmış kaynak başlığı</a>.</li>
         </ol>`
     : isExperience
       ? `        <h2 id="acilis">Açılış Sahnesi</h2>
@@ -155,23 +170,27 @@ import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro'
         <p>Okura açılan, vaat vermeyen kapanış.</p>`;
 
   return `---
-import SiteLayout from '../../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../../components/site/SiteFooter.astro';
-import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SiteLayout from '${input.imports.layout}';
+import SiteNavbar from '${input.imports.components}/SiteNavbar.astro';
+import SiteFooter from '${input.imports.components}/SiteFooter.astro';
+import SubmenuHero from '${input.imports.components}/SubmenuHero.astro';
+import SubmenuArticleBody from '${input.imports.components}/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '${input.imports.components}/ArticleAuthorBlock.astro';
 ${tocImport}
-import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
-import ArticleSummary from '../../../components/site/ArticleSummary.astro';
-import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleProsePanel from '${input.imports.components}/ArticleProsePanel.astro';
+import ArticleSummary from '${input.imports.components}/ArticleSummary.astro';
+import RelatedReadings from '${input.imports.components}/RelatedReadings.astro';
+import ArticleDisclaimer from '${input.imports.components}/ArticleDisclaimer.astro';
 ${clinicalImports}
-import { buildArticleSchemas } from '../../../utils/article-schema';
-import { resolveSiteUrl } from '../../../utils/seo';
+import { buildArticleSchemas } from '${input.imports.utils}/article-schema';
+import { resolveSiteUrl } from '${input.imports.utils}/seo';
+import { submenuHeroByRoute } from '${input.imports.data}/submenu-heroes';
 
 ${tocEntries}
 
 const siteUrl = resolveSiteUrl(Astro.site);
+const hero = submenuHeroByRoute['${input.hubPath}/'];
+if (!hero) throw new Error('Şablon için alt menü hero görseli bulunamadı: ${input.hubPath}/');
 const articleTitle = '${input.title.replaceAll("'", "\\'")}';
 const articleDescription =
   '${description.replaceAll("'", "\\'")}';
@@ -182,8 +201,8 @@ const articleSchemas = buildArticleSchemas({
   articleType: '${input.articleType}',
   publishedDate: '${input.publishedDate}',
   pathname: '${input.pathname}',
-  articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis',
+  articleSection: '${input.articleSection}',
+  sectionPath: '${input.hubPath}',
   keywords: ['menopoz', 'perimenopoz', 'kadın sağlığı'],
   siteUrl,
 });
@@ -196,9 +215,18 @@ ${input.stylePrompt}
 -->
 
 <SiteLayout title={\`\${articleTitle} - Estranova\`} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
-  <SiteNavbar currentPath="/hormonal-gecis" />
+  <SiteNavbar currentPath="${input.hubPath}" />
 
-  <main id="main-content" class="pt-24 text-[#2D2D2D]">
+  <main id="main-content" class="text-[#2D2D2D]">
+    <SubmenuHero
+      eyebrow="${input.articleSection}"
+      title={articleTitle}
+      lede={articleDescription}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
     <SubmenuArticleBody>
 ${tocRender}
       <ArticleAuthorBlock
@@ -208,20 +236,16 @@ ${tocRender}
         readingMinutes={5}
       />
 
-      <header class="mb-10">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#D81B60]">Hormonal Geçiş</p>
-        <h1 class="font-serif text-4xl leading-tight md:text-6xl">{articleTitle}</h1>
-      </header>
-
       <ArticleSummary title="${summaryTitle}">
         <p>Bu türün amacına uygun, kendi başına anlaşılan kısa açılış.</p>
       </ArticleSummary>
 
-      <ArticleProsePanel mode="${isExperience ? 'experience' : 'scientific'}">
+      <ArticleProsePanel mode="${isExperience ? 'experience' : isClinical ? 'scientific' : 'editorial'}">
 ${bodySections}
       </ArticleProsePanel>
 
-      <RelatedReadings paths={[]} />
+      <RelatedReadings paths={${JSON.stringify(input.relatedPaths)}} />
+      <!-- Deneyim metnine tıbbi iddia eklenirse, kişisel anlatıdan ayrı kaynaklı bir bağlam ve uygun inceleme paneli ekleyin. -->
 ${articleTail}
 
       <ArticleDisclaimer>
@@ -246,13 +270,25 @@ async function main() {
   const writer = writers.find((item) => item.slug === style.writerSlug);
   if (!writer) throw new Error(`Writer not found: ${style.writerSlug}`);
   assertArticleTypeForWriter(writer, args.type as ArticleType);
-  const section = args.section ?? 'perimenopoz';
+  const hub = (args.hub ?? 'hormonal-gecis').replace(/^\/+|\/+$/g, '');
+  const routePrefix = (args.sectionPath ?? `/${hub}/${args.section ?? 'perimenopoz'}`).replace(/\/+$/, '');
+  const hubPath = `/${routePrefix.split('/').filter(Boolean)[0]}`;
   const date = args.date ?? '25 Nisan 2026';
   const titleSlug = slugify(args.title);
-  const pathname = `/hormonal-gecis/${section}/${titleSlug}`;
+  const pathname = `${routePrefix}/${titleSlug}`;
   const out =
     args.out ??
-    `src/pages/hormonal-gecis/${section}/${titleSlug}.astro`;
+    `src/pages${routePrefix}/${titleSlug}.astro`;
+  const absOut = resolve(process.cwd(), out);
+  const outputDirectory = dirname(absOut);
+  const articleSection = args.sectionLabel ?? sectionLabels[hub] ?? hub;
+  const relatedPaths = (args.related ?? '')
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  if (!relatedPaths.length || relatedPaths.some((item) => !item.startsWith('/'))) {
+    throw new Error('--related zorunludur ve virgülle ayrılmış, / ile başlayan gerçek makale yolları içermelidir.');
+  }
 
   const template = buildTemplate({
     title: args.title,
@@ -261,10 +297,18 @@ async function main() {
     publishedDate: date,
     stylePrompt: style.promptBlock,
     pathname,
+    hubPath,
+    articleSection,
+    imports: {
+      layout: importPath(outputDirectory, resolve(process.cwd(), 'src/layouts/SiteLayout.astro')),
+      components: importPath(outputDirectory, resolve(process.cwd(), 'src/components/site')),
+      utils: importPath(outputDirectory, resolve(process.cwd(), 'src/utils')),
+      data: importPath(outputDirectory, resolve(process.cwd(), 'src/data')),
+    },
+    relatedPaths,
     articleType: args.type as ArticleType,
   });
 
-  const absOut = resolve(process.cwd(), out);
   await mkdir(dirname(absOut), { recursive: true });
   await writeFile(absOut, template, 'utf8');
 
@@ -276,4 +320,3 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
-

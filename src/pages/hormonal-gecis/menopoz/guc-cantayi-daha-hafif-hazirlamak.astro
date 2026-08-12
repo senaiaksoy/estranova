@@ -7,22 +7,18 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
 import ReadingControls from '../../../components/site/ReadingControls.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
-import { articleFaqs } from '../../../data/article-faqs';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/';
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
-const faqItems = articleFaqs[pathname] ?? [];
 
 const tocEntries = [
   { id: 'canta', label: 'Çanta' },
@@ -31,7 +27,6 @@ const tocEntries = [
   { id: 'anne-kiz', label: 'Anne Kız' },
   { id: 'self-care', label: 'Kendine Bakım' },
   { id: 'bedenle-anlasma', label: 'Bedenle Anlaşma' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -57,7 +52,6 @@ const articleSchemas = buildArticleSchemas({
     'beden farkındalığı',
     'günlük hayat',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -80,7 +74,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="basak-pelister"
         articleType="experience-essay"
@@ -209,8 +202,6 @@ const articleSchemas = buildArticleSchemas({
           kalmalı? Ve inanın, bazen bir çantayı hafifletmek bile bütün güne başka bir omuz verir.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

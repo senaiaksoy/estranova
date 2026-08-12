@@ -5,17 +5,14 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/';
@@ -33,10 +30,8 @@ const tocEntries = [
   { id: 'su-ana-kadar', label: 'Şu Ana Kadar — Yerleşen Denge' },
   { id: 'aile-es-kiz', label: 'Aile, Eş, Kız — Görünmeyen Etki' },
   { id: 'hala-acik-sorular', label: 'Hâlâ Açık Olan Sorular' },
-  { id: 'sss', label: 'Sık Sorulanlar' },
 ];
 
-const faqItems = articleFaqs[pathname] ?? [];
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -58,7 +53,6 @@ const articleSchemas = buildArticleSchemas({
     '58 yaş HRT',
     'yaşıt hikayesi',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -81,7 +75,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="demet-kizilkaya"
         articleType="experience-essay"
@@ -309,14 +302,6 @@ const articleSchemas = buildArticleSchemas({
           benimkinden farklı olabilir — ve farklı olması doğaldır.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ
-        id="sss"
-        class="mt-10"
-        items={faqItems}
-        title="Bu Yazıdan Sonra Akla Gelen Sorular"
-        intro="Bir yaşıtın HRT güncesi okunduktan sonra okurların en çok dönüp baktığı soruları kısa ve sade biçimde topladık."
-      />
 
       <RelatedReadings
         class="mt-10"

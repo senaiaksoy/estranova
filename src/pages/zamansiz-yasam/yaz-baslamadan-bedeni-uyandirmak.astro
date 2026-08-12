@@ -8,22 +8,18 @@ import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
 import ReadingControls from '../../components/site/ReadingControls.astro';
 import RedFlagBox from '../../components/site/RedFlagBox.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
-import { articleFaqs } from '../../data/article-faqs';
 import { buildArticleSchemas } from '../../utils/article-schema';
 import { resolveSiteUrl } from '../../utils/seo';
 
 const pathname = '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/';
 const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
-const faqItems = articleFaqs[pathname] ?? [];
 
 const tocEntries = [
   { id: 'yaz-oncesi', label: 'Yaz Öncesi' },
@@ -32,7 +28,6 @@ const tocEntries = [
   { id: 'nefes-isi', label: 'Nefes ve Isı' },
   { id: 'kucuk-plan', label: 'Küçük Plan' },
   { id: 'durulacak-yer', label: 'Durulacak Yer' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -59,7 +54,6 @@ const articleSchemas = buildArticleSchemas({
     'devamlılık',
     'beden farkındalığı',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -82,7 +76,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="alara-baykent"
         articleType="experience-essay"
@@ -214,8 +207,6 @@ const articleSchemas = buildArticleSchemas({
           nazik bir yere oturur.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

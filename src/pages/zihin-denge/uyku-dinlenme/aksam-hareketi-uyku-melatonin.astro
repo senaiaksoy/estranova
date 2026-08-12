@@ -8,7 +8,6 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
 import ReadingControls from '../../../components/site/ReadingControls.astro';
 import RedFlagBox from '../../../components/site/RedFlagBox.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
@@ -16,9 +15,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
@@ -32,7 +29,6 @@ const tocEntries = [
   { id: 'uc-zamanlama', label: 'Üç Zamanlama' },
   { id: 'ne-denenir', label: 'Ne Denenir' },
   { id: 'ne-zaman', label: 'Ne Zaman Dikkat' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
@@ -40,7 +36,6 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?';
 const articleDescription =
   'Akşam yürüyüşü uykuyu bozar mı, toparlar mı? Melatonin ve perimenopozda uyku ilişkisini Alara Baykent performans baskısı yaratmadan anlatıyor.';
-const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -63,7 +58,6 @@ const articleSchemas = buildArticleSchemas({
     'sürdürülebilir egzersiz',
     'Alara Baykent',
   ],
-  faqItems,
 
   siteUrl,
 });
@@ -86,7 +80,6 @@ const articleSchemas = buildArticleSchemas({
       compact
     />
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="alara-baykent"
         articleType="experience-essay"
@@ -238,7 +231,7 @@ const articleSchemas = buildArticleSchemas({
           footnote="Akşam hareketi çoğu kişi için güvenli bir alışkanlık olabilir; ama eşlik eden hastalıklar ve yoğun semptomlar varsa plan kişiye göre kurulmalıdır."
         />
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <h2 id="geceye-gecis-notlari">Geceye Geçişte Aklımda Kalanlar</h2>
 
         <h3>Akşam yürüyüşü melatonini (uyku hormonu) olumsuz etkiler mi?</h3>
         <p>

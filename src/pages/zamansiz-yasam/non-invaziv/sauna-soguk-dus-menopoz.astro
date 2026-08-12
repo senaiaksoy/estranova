@@ -8,7 +8,6 @@ import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astr
 import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
 import ReadingControls from '../../../components/site/ReadingControls.astro';
 import RedFlagBox from '../../../components/site/RedFlagBox.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
@@ -16,9 +15,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero =
@@ -32,7 +29,6 @@ const tocEntries = [
   { id: 'bilim-sauna', label: 'Bilim Ne Diyor: Sauna' },
   { id: 'bilim-soguk', label: 'Bilim Ne Diyor: Soğuk' },
   { id: 'pratik-notlar', label: 'Kim İçin, Nasıl?' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
@@ -41,7 +37,6 @@ const articleTitle = 'Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağı
 const seoTitle = 'Sauna ve Soğuk Duş Menopozda';
 const articleDescription =
   'Sporcu olarak sauna ve soğuk maruziyet deneyimim, çevremdeki kadınların sıcak basmasını izlerken öğrendiklerim ve bilim ne diyor — yaşıt bir kuşak köprüsü.';
-const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -62,7 +57,6 @@ const articleSchemas = buildArticleSchemas({
     'kuşak gözlemi',
     'iyi olma',
   ],
-  faqItems,
 
   siteUrl,
 });
@@ -85,7 +79,6 @@ const articleSchemas = buildArticleSchemas({
       compact
     />
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="alara-baykent"
         articleType="experience-essay"
@@ -305,7 +298,7 @@ Bilimin söyleyebildikleri bir cevaptan çok bir <em>bakış</em>:
           footnote="Bu liste teşhis amaçlı değil; sauna veya soğuk maruziyet düşünülürken bir hekimle konuşmaya değer durumların hatırlatıcısıdır."
         />
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
+        <h2 id="sicaklikla-pazarlik">Bedenin Sıcaklıkla Pazarlığı</h2>
 
         <h3>Sıcak basması yaşayan biri sauna yapabilir mi?</h3>
         <p>
@@ -380,8 +373,6 @@ olmayan bir şey bende var: dürüst bir bilimsel bakış ve
           yakındaki bir kadından öğrenmek için zaman.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"

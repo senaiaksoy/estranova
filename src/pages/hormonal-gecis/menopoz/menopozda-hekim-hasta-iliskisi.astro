@@ -5,7 +5,6 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
@@ -13,9 +12,7 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/']!;
@@ -26,7 +23,6 @@ const tocEntries = [
   { id: 'dort-profil', label: 'Çevremdeki Dört Hekim Profili' },
   { id: 'esim-hekim', label: 'Eşim Hekim ama Hekimim Değil' },
   { id: 'annenin-paradoksu', label: 'Annenin Paradoksu' },
-  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
@@ -35,7 +31,6 @@ const articleTitle = 'Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz T
 const seoTitle = 'Menopozda Hekim–Hasta İlişkisi';
 const articleDescription =
   'Hekim-hasta ilişkisinin yıllar içinde nasıl olgunlaştığına dair kişisel notlar. Menopoz takibinde doktor arayışı ve paydaş karar vermenin önemi.';
-const faqItems = articleFaqs['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -56,7 +51,6 @@ const articleSchemas = buildArticleSchemas({
     'hormon tedavisi',
     'jinekolog',
   ],
-  faqItems,
 
   siteUrl,
 });
@@ -79,7 +73,6 @@ const articleSchemas = buildArticleSchemas({
       compact
     />
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
         articleType="experience-essay"
@@ -253,7 +246,7 @@ const articleSchemas = buildArticleSchemas({
           hem güzel — ve bu yorgun yer aslında çoğu kadının zaten içinden geçtiği bir eşik.
         </p>
 
-        <h2 id="sss">Sıkça Sorulan Sorular</h2>
+        <h2 id="kendi-yolumdan-notlar">Kendi Yolumdan Notlar</h2>
         <p>
           Aşağıdaki sorular bana farklı arkadaşlarımdan ve okurlardan geldi; her birinin cevabı kendi yolumdaki
           notum.
@@ -302,8 +295,6 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-
-      <ArticleFAQ items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

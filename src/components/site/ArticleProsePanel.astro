@@ -4,7 +4,7 @@
  */
 interface Props {
   class?: string;
-  mode?: 'scientific' | 'experience';
+  mode?: 'scientific' | 'experience' | 'editorial';
 }
 
 const { class: className, mode = 'scientific' } = Astro.props;
@@ -24,6 +24,7 @@ const { class: className, mode = 'scientific' } = Astro.props;
     class:list={[
       'prose prose-lg prose-estranova relative max-w-none',
       mode === 'experience' && 'prose-estranova-experience',
+      mode === 'editorial' && 'prose-estranova-editorial',
     ]}
   >
     <slot />

@@ -12,6 +12,8 @@ const STATIC_ARTICLES_FILE = path.join(ROOT, 'src/data/static-articles.ts');
 const SUB_HUBS_FILE = path.join(ROOT, 'src/data/sub-hubs.ts');
 const WRITERS_FILE = path.join(ROOT, 'src/data/writers.ts');
 const strict = process.argv.includes('--strict');
+const strictTemplates = process.argv.includes('--strict-templates');
+const strictSources = process.argv.includes('--strict-sources');
 const APPROVAL_OPTIONAL_PREFIXES = ['/editorun-kosesi/'];
 
 const EXCLUDED_BASENAMES = new Set([
@@ -155,6 +157,66 @@ function findArticleAuthorityIssues(articlePages, writerTracks) {
   return issues;
 }
 
+function findTemplateIssues(articlePages) {
+  const issues = [];
+
+  for (const page of articlePages) {
+    const bylineReviewer = page.source.match(
+      /<ArticleAuthorBlock[\s\S]*?medicalReviewer="([^"]+)"[\s\S]*?\/>/,
+    )?.[1];
+    const schemaBlock = page.source.match(/buildArticleSchemas\(\{[\s\S]*?\}\);/i)?.[0] ?? '';
+    const schemaReviewer = schemaBlock.match(/medicalReviewer:\s*['"`]([^'"`]+)['"`]/)?.[1];
+
+    if (schemaReviewer && schemaReviewer !== bylineReviewer) {
+      issues.push(`${page.pathname} -> görünür inceleyen (${bylineReviewer ?? 'varsayılan'}) JSON-LD inceleyen (${schemaReviewer}) ile eşleşmiyor`);
+    }
+
+    if (page.articleType === 'experience-essay' && page.source.includes('<ArticleTOC')) {
+      issues.push(`${page.pathname} -> deneyim yazısında ArticleTOC varsayılanı kullanılmamalı`);
+    }
+
+    if (page.articleType === 'experience-essay' && page.source.includes('<ArticleFAQ')) {
+      issues.push(`${page.pathname} -> deneyim yazısında ArticleFAQ varsayılanı kullanılmamalı`);
+    }
+
+    if (page.articleType === 'experience-essay' && schemaBlock.includes('faqItems')) {
+      issues.push(`${page.pathname} -> deneyim yazısında FAQPage üretimi varsayılanı kullanılmamalı`);
+    }
+
+    if (page.articleType === 'expert-essay' && page.source.includes('<ArticleTOC')) {
+      issues.push(`${page.pathname} -> uzman denemesinde ArticleTOC varsayılanı kullanılmamalı`);
+    }
+
+    if (page.source.includes('REPLACE_WITH_VERIFIED_SOURCE_URL') || page.source.includes('example.org')) {
+      issues.push(`${page.pathname} -> doğrulanmamış/yer tutucu kaynak bağlantısı bulunuyor`);
+    }
+
+    if (page.source.includes('<RelatedReadings paths={[]}')) {
+      issues.push(`${page.pathname} -> RelatedReadings boş yol listesiyle bırakılmış`);
+    }
+  }
+
+  return issues;
+}
+
+function findSourceIssues(articlePages) {
+  const issues = [];
+
+  for (const page of articlePages) {
+    if (page.articleType !== 'clinical-guide') continue;
+    const schemaBlock = page.source.match(/buildArticleSchemas\(\{[\s\S]*?\}\);/i)?.[0] ?? '';
+    const hasCitation = /\bcitation\s*:/.test(schemaBlock);
+    const hasVisibleExternalSource = /<a[^>]+href=["']https?:\/\//i.test(page.source);
+    const hasVisibleSourceList = /id=["']kaynak[-_]|<ArticleSources\b|>Kaynaklar</i.test(page.source);
+
+    if (!hasCitation && !hasVisibleExternalSource && !hasVisibleSourceList) {
+      issues.push(`${page.pathname} -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor`);
+    }
+  }
+
+  return issues;
+}
+
 async function loadApprovedPathnames() {
   const source = await fs.readFile(APPROVALS_FILE, 'utf8');
   return new Set([...source.matchAll(/pathname:\s*['"`]([^'"`]+)['"`]/g)].map((m) => m[1]));
@@ -259,6 +321,8 @@ async function main() {
   const menuCoverageIssues = await findMenuCoverageIssues();
   const writerTracks = await loadWriterTracks();
   const articleAuthorityIssues = findArticleAuthorityIssues(articlePages, writerTracks);
+  const templateIssues = findTemplateIssues(articlePages);
+  const sourceIssues = findSourceIssues(articlePages);
 
   const publishedWithoutApproval = articlePages
     .filter(
@@ -280,12 +344,16 @@ async function main() {
   printSection('Approval kaydi olup RSS manifestinde bulunmayan yollar', approvedMissingFromStatic);
   printSection('Alt menu/listede gorunmeyen statik makaleler', menuCoverageIssues);
   printSection('Yazar yetkisi / makale turu uyumsuzluklari', articleAuthorityIssues);
+  printSection('Sablon sozlesmesi uyarilari', templateIssues);
+  if (strictSources) printSection('Klinik kaynak uyarilari', sourceIssues);
 
   const hasIssues =
     publishedWithoutApproval.length > 0 ||
     staticWithoutApproval.length > 0 ||
     menuCoverageIssues.length > 0 ||
-    articleAuthorityIssues.length > 0;
+    articleAuthorityIssues.length > 0 ||
+    (strictTemplates && templateIssues.length > 0) ||
+    (strictSources && sourceIssues.length > 0);
   if (!hasIssues) {
     console.log('\nYayin butunlugu temiz.');
     return;

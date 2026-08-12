@@ -5,13 +5,11 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import RelatedReadings from '../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
 import Evidence from '../../components/site/Evidence.astro';
 import { submenuHeroByRoute } from '../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../utils/article-schema';
@@ -31,30 +29,6 @@ const tocEntries = [
   { id: 'cihaz-verisi', label: 'Cihaz Verisi' },
   { id: 'hekim-yorumu', label: 'Hekim Yorumu' },
   { id: 'sade-soru', label: 'Daha Sade Soru' },
-  { id: 'sss', label: 'Sık Sorulanlar' },
-];
-
-const faqItems = [
-  {
-    question: 'Yapay zekâ destekli sağlık asistanlarına ne kadar güvenilmeli?',
-    answer:
-      'Başlangıç noktası olarak değerli olabilirler; yaygın tetikleyicileri, araştırma başlıklarını ve genel çerçeveyi toparlarlar. Ama kişisel karar aracı değillerdir. Sizin geçmiş öykünüzü, risk profilinizi ve o haftaki yaşam değişikliklerinizi bilmedikleri için cevabın son halkası olamazlar.',
-  },
-  {
-    question: 'Dijital takip verisini hekime götürmek anlamlı mı?',
-    answer:
-      'Evet, eğer veriyi tanı yerine gözlem olarak sunuyorsanız anlamlı olabilir. “Son üç haftadır şu kalıp dikkatimi çekti” demek, görüşmeyi daha somut hale getirebilir. Cihaz teşhis koymaz; ama ortak bir konuşma zemini açabilir.',
-  },
-  {
-    question: 'Yapay zekâya sorduğum soruyu hekime nasıl taşımalıyım?',
-    answer:
-      'En pratik yol üç parçalı bir nottur: yapay zekânın ne söylediği, sizin ne gözlemlediğiniz ve asıl neyi merak ettiğiniz. Böylece görüşme “bunu internette okudum” seviyesinde kalmaz; daha kişisel ve daha işe yarar bir soru haline gelir.',
-  },
-  {
-    question: 'Yapay zekâ yanlış ya da eksik cevap verirse ne yapmak gerekir?',
-    answer:
-      'Tek bir kaynağa güvenmemek gerekir. Yapay zekâ, cihaz verisi ve hekim yorumu yan yana geldiğinde eksik ya da fazla iddialı bilginin ayıklanması kolaylaşır. Özellikle ilaç başlama, kesme ya da tedavi değiştirme gibi kararlar yalnızca dijital yanıtlarla verilmemelidir.',
-  },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -75,7 +49,6 @@ const articleSchemas = buildArticleSchemas({
     'post-menopoz',
     'sağlık okuryazarlığı',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -98,7 +71,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="rima-erdemir"
         articleType="experience-essay"
@@ -208,8 +180,6 @@ const articleSchemas = buildArticleSchemas({
           yolum bu; sizinki daha sessiz, daha hızlı ya da bambaşka olabilir.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-10"

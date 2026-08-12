@@ -5,7 +5,6 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
@@ -14,7 +13,6 @@ import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/';
@@ -33,10 +31,8 @@ const tocEntries = [
   { id: 'durmak', label: 'Didinmenin Sonunda Kalan Soru' },
   { id: 'beden-algisi', label: 'Tartı Susunca Kalan' },
   { id: 'sakinlesenler', label: 'İyi Gelmeyenler, Sakinleştirenler' },
-  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
 ];
 
-const faqItems = articleFaqs[pathname] ?? [];
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -57,7 +53,6 @@ const articleSchemas = buildArticleSchemas({
     'üç kuşak',
     'duygusal denge',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -80,7 +75,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="basak-pelister"
         articleType="experience-essay"
@@ -262,8 +256,8 @@ const articleSchemas = buildArticleSchemas({
           Sizin için sırası farklı olabilir.
         </p>
 
-        <h2 id="sss">Sıkça Sorulan Sorular</h2>
-        <p>Ölçü paniği konuşulurken en çok geri dönülen soruları burada kısa ve net topladım.</p>
+        <h2 id="olcuyu-yeniden-kurmak">Ölçüyle İlişkimi Yeniden Kurarken</h2>
+        <p>Ölçü paniğini konuşurken kendi notlarımda dönüp baktığım ayrımları burada kısa ve net topladım.</p>
 
         <h3>Tartıya her sabah çıkmak beden algısını neden bu kadar zorlar?</h3>
         <p>

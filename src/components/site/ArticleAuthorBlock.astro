@@ -1,7 +1,7 @@
 ---
 import { writers } from '../../data/writers';
 import { getSubmenuHeroImage } from '../../data/submenu-heroes';
-import { getArticleAuthorTrack, type ArticleType } from '../../data/article-types';
+import { getArticleAuthorTrack, getDefaultMedicalReviewer, type ArticleType } from '../../data/article-types';
 
 interface Props {
   authorSlug: string;
@@ -21,7 +21,7 @@ const {
   publishedDate,
   lastUpdated,
   readingMinutes,
-  medicalReviewer = 'Doç. Dr. Senai Aksoy',
+  medicalReviewer,
   imageSrc,
   imageAlt,
   imagePosition = 'center',
@@ -37,9 +37,18 @@ if (!writer) {
 const routeHero = getSubmenuHeroImage(Astro.url.pathname);
 const authorTrack = getArticleAuthorTrack(writer);
 const isExperience = articleType === 'experience-essay';
+const isExpert = articleType === 'expert-essay';
 const isEditorial = articleType === 'editorial-guide' || authorTrack === 'institutional';
+const resolvedMedicalReviewer = medicalReviewer ?? getDefaultMedicalReviewer(authorSlug).name;
 const resolvedEyebrow =
-  eyebrow ?? (isExperience ? 'Deneyim yazısı' : isEditorial ? 'Editoryal rehber' : 'Bilimsel makale');
+  eyebrow ??
+  (isExperience
+    ? 'Deneyim yazısı'
+    : isExpert
+      ? 'Uzman görüşü'
+      : isEditorial
+        ? 'Editoryal rehber'
+        : 'Bilimsel makale');
 const reviewLabel = authorTrack === 'scientific' ? 'Bilimsel inceleme' : 'Tıbbi bilgi kontrolü';
 const bylineLabel = writer.isInstitutionalByline ? 'Hazırlayan' : 'Yazan';
 const coverSrc = imageSrc ?? routeHero?.src;
@@ -92,9 +101,9 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
           {bylineLabel} : <span class="font-black">{writer.displayName}</span>
         </p>
         {
-          medicalReviewer && medicalReviewer !== 'Yok' && (
+          resolvedMedicalReviewer && resolvedMedicalReviewer !== 'Yok' && (
             <p class="mt-2 text-[11px] font-black uppercase tracking-[0.16em] text-ink">
-              {reviewLabel} : <span class="font-black">{medicalReviewer}</span>
+              {reviewLabel} : <span class="font-black">{resolvedMedicalReviewer}</span>
             </p>
           )
         }
@@ -148,7 +157,7 @@ const authorProfileLabel = writer.isInstitutionalByline ? 'Yayın ilkeleri' : 'Y
             <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">Editoryal not</p>
             <p class="mt-2 text-sm leading-relaxed text-ink/72">
               Bu içerik Estranova editörleri tarafından hazırlanmış kurumsal editoryal içeriktir ve yayın öncesinde
-              <span class="font-semibold text-ink"> {medicalReviewer}</span> tarafından bilimsel uygunluk, terminoloji
+              <span class="font-semibold text-ink"> {resolvedMedicalReviewer}</span> tarafından bilimsel uygunluk, terminoloji
               ve kanıt dengesi açısından gözden geçirilir.
             </p>
           </div>

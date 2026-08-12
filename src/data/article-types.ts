@@ -11,6 +11,17 @@ export type ArticleType = (typeof articleTypes)[number];
 
 export type ArticleAuthorTrack = 'scientific' | 'non-clinical' | 'institutional';
 
+export interface DefaultMedicalReviewer {
+  name: string;
+  title: string;
+}
+
+export function getDefaultMedicalReviewer(writerSlug: string): DefaultMedicalReviewer {
+  return writerSlug === 'senai-aksoy'
+    ? { name: 'Dr. Alper Mumcu', title: 'Kadın Hastalıkları ve Doğum Uzmanı' }
+    : { name: 'Doç. Dr. Senai Aksoy', title: 'Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör' };
+}
+
 export const allowedArticleTypesByTrack: Record<ArticleAuthorTrack, readonly ArticleType[]> = {
   scientific: ['clinical-guide', 'expert-essay'],
   'non-clinical': ['experience-essay', 'editorial-guide'],

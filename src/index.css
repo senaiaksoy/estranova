@@ -176,15 +176,18 @@
 
 /* Aynı editoryal tipografi sistemi içinde kişisel deneyim yazıları klinik
    bölüm sayacı taşımaz. Başlık, lede, bağlantı ve erişilebilirlik ritmi korunur. */
-.prose-estranova.prose-estranova-experience {
+.prose-estranova.prose-estranova-experience,
+.prose-estranova.prose-estranova-editorial {
   counter-reset: none;
 }
 
-.prose-estranova.prose-estranova-experience h2 {
+.prose-estranova.prose-estranova-experience h2,
+.prose-estranova.prose-estranova-editorial h2 {
   counter-increment: none;
 }
 
-.prose-estranova.prose-estranova-experience h2::before {
+.prose-estranova.prose-estranova-experience h2::before,
+.prose-estranova.prose-estranova-editorial h2::before {
   content: none;
 }
 

@@ -5,17 +5,14 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const tocEntries = [
@@ -27,7 +24,6 @@ const tocEntries = [
   { id: 'tarama-cercevesi', label: 'Tarama Takvimi' },
   { id: 'hekimle-paylasim', label: 'Hekimle Paylaşım' },
   { id: 'baslangic-30-gun', label: 'İlk 30 Gün' },
-  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
 ];
 
@@ -38,7 +34,6 @@ const articleDescription =
   'Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo ve aile öyküsünü hekime götürülebilecek sade bir kişisel referans dosyasına dönüştürme rehberi.';
 const pathname = '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/';
 const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/hormonal-gecis/menopoza-hazirlik/']!;
-const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -57,7 +52,6 @@ const articleSchemas = buildArticleSchemas({
     'vital göstergeler',
     'aile öyküsü',
   ],
-  faqItems,
 
   siteUrl,
 });
@@ -81,7 +75,6 @@ const articleSchemas = buildArticleSchemas({
     />
 
     <SubmenuArticleBody>
-      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
         articleType="experience-essay"
@@ -249,7 +242,7 @@ Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağ�
       </ArticleProsePanel>
 
       <ArticleProsePanel mode="experience" class="mt-10">
-        <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
+        <h2 id="takip-notlarim">Takip Notlarım</h2>
         <h3>Belirtim yok, yine de bu kadar şey takip etmem gerekir mi?</h3>
         <p>
           Belirti olmaması, takip için ideal başlangıç noktasıdır. Çünkü kişisel "normal" aralığını ancak
@@ -290,8 +283,6 @@ Bu kadar başlık bir arada gelince "nereden başlamalı" sorusu doğal. Aşağ�
         niyetiyle yerleştirebilirim? Karar kendi kararınız, sorumluluğu da size ait. Tuttuğunuz her küçük not, ileride bir hekim odasında size güç veren bir dosyaya dönüşür.
         </p>
       </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"

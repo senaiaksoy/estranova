@@ -1,7 +1,11 @@
 import { writers, type Writer } from '../data/writers';
 import { submenuHeroByRoute, articleCardImageByRoute } from '../data/submenu-heroes';
 import type { ArticleFaqItem } from '../data/article-faqs';
-import { assertArticleTypeForWriter, type ArticleType } from '../data/article-types';
+import {
+  assertArticleTypeForWriter,
+  getDefaultMedicalReviewer,
+  type ArticleType,
+} from '../data/article-types';
 
 type JsonLdSchema = Record<string, unknown>;
 
@@ -98,13 +102,9 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
   // aynı branştan (kadın hastalıkları ve doğum) Dr. Alper Mumcu olur. Çağıran
   // taraf explicit `medicalReviewer` geçerse her zaman ona öncelik verilir.
   const isSenaiAuthor = writerSlug === 'senai-aksoy';
-  const medicalReviewer =
-    opts.medicalReviewer ?? (isSenaiAuthor ? 'Dr. Alper Mumcu' : 'Doç. Dr. Senai Aksoy');
-  const medicalReviewerTitle =
-    opts.medicalReviewerTitle ??
-    (isSenaiAuthor
-      ? 'Kadın Hastalıkları ve Doğum Uzmanı'
-      : 'Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör');
+  const defaultReviewer = getDefaultMedicalReviewer(writerSlug);
+  const medicalReviewer = opts.medicalReviewer ?? defaultReviewer.name;
+  const medicalReviewerTitle = opts.medicalReviewerTitle ?? defaultReviewer.title;
 
   const siteUrl = rawSiteUrl.replace(/\/+$/, '');
   const url = joinUrl(siteUrl, pathname);
@@ -141,7 +141,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         jobTitle: writer.role,
         description: writer.publicBio,
         ...(writer.portrait ? { image: joinUrl(siteUrl, writer.portrait) } : {}),
-        url: joinUrl(siteUrl, '/yayin-kurulu/'),
+        url: joinUrl(siteUrl, `/yazarlar/${writer.slug}/`),
       };
 
   // Medical reviewer canonical Person @id — Dr. Aksoy bilim editörü/inceleyici
@@ -157,7 +157,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         name: medicalReviewer,
         jobTitle: medicalReviewerTitle,
         ...(reviewerWriter?.portrait ? { image: joinUrl(siteUrl, reviewerWriter.portrait) } : {}),
-        ...(reviewerWriter ? { url: joinUrl(siteUrl, '/yayin-kurulu/') } : {}),
+        ...(reviewerWriter ? { url: joinUrl(siteUrl, `/yazarlar/${reviewerWriter.slug}/`) } : {}),
       };
 
   const medicalWebPageSchema: JsonLdSchema = {
