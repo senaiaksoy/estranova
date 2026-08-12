@@ -14,6 +14,7 @@
   counter-reset: estranova-chapter;
 
   & h2 {
+    scroll-margin-top: 7rem;
     counter-increment: estranova-chapter;
     font-family: var(--font-serif);
     font-size: clamp(2.15rem, 4vw, 3.15rem);
