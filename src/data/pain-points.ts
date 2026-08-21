@@ -28,7 +28,7 @@ export const painPoints: PainPoint[] = [
     title: 'Uyku ve gece uyanmaları',
     userQuestion: 'Gece uyanmam hormonal geçişle ilişkili olabilir mi?',
     shortDescription:
-      'Gece uyanmalarını, uyku düzenindeki değişimleri ve eşlik eden belirtileri daha sakin bir çerçevede okumaya yardımcı olur.',
+      'Gece uyanmalarını, uyku düzenindeki değişimleri ve eşlik eden belirtileri daha sakin bir bakışla okumaya yardımcı olur.',
     relatedSymptoms: ['uyku-bozuklugu', 'sicak-basmasi', 'ruh-hali'],
     articleRoutes: [
       '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
@@ -110,7 +110,7 @@ export const painPoints: PainPoint[] = [
     title: 'Kilo ve vücut kompozisyonundaki değişimler',
     userQuestion: 'Yaşamım çok değişmediği hâlde vücudum neden farklılaşıyor?',
     shortDescription:
-      'Kilo, bel çevresi, kas kütlesi, uyku ve hareket arasındaki ilişkiyi daha geniş bir çerçevede okumaya yardımcı olur.',
+      'Kilo, bel çevresi, kas kütlesi, uyku ve hareket arasındaki ilişkiyi daha geniş bir zeminde okumaya yardımcı olur.',
     relatedSymptoms: ['kilo', 'eklem'],
     articleRoutes: [
       '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
@@ -338,4 +338,3 @@ export const painPointTopics = painPoints.map(({ id, title, userQuestion, shortD
 }));
 
 export default painPoints;
-
