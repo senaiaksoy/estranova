@@ -22,6 +22,11 @@ rag/chroma_db/
 # Yazara redline icin uretilen Word taslaklari (yayinlanmamis icerik; repoya girmesin)
 article-drafts/
 
+# Kamusal olmayan yazar anıları ve kurgu taslak seed'leri.
+# Bu klasör Git'e ASLA eklenmez; daha güçlü koruma için
+# ESTRANOVA_PRIVATE_WRITER_CONTEXT_DIR ile repo dışı bir dizin kullanın.
+/private-writer-context/
+
 # Yazar onay paketlerinde HTML/ZIP ana kaynak tutulur; kopya build assetleri repoya girmesin.
 icerik/yazar-onaylari/**/_astro/
 icerik/yazar-onaylari/**/images/

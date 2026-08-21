@@ -15,8 +15,8 @@
 
 ## Bağlı dosyalar (klasör dışında)
 
-- **`../gamze-cizreli-alintilar.md`** — TAM korpus (~79 KB, 241 unique alıntı)
-- **`../gamze-cizreli-aphorism-pool.md`** — distile aforizma havuzu (~29 KB, 56 cümle)
+- **`../_archive/gamze-cizreli-alintilar.md`** — TAM korpus (~79 KB, 241 unique alıntı)
+- **`../_archive/gamze-cizreli-aphorism-pool.md`** — distile aforizma havuzu (~29 KB, 56 cümle)
 - **`../gamze-cizreli-article-log.md`** — akümülatif makale logu (Writer Dynamics Framework Katman B; cooldown hesabı)
 
 ## Akış (her makale öncesi)

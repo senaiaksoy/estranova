@@ -1,41 +1,32 @@
-# Sanem Altan — Extended Citations (onaylı genişleme havuzu)
+# Sanem Altan — Onaylı Dış Kaynaklar
 
-> **Bu dosya editör onayından geçen, korpus dışı atıfları tutar.** AI agent buradan korpus gibi atıf seçebilir.
+> Bu dosya, makalede gerçekten düşünsel iş yapan ve editoryal olarak doğrulanan
+> kültür/sanat kaynaklarını tutar. Sanem Altan korpusu veya “Sanem kalıbı”
+> değildir; yaşayan bir yazarın sesini taklit etmek için kullanılmaz.
 >
-> **Akış:** `pending.md` → editör onayı → bu dosya. Detay: `canonical-sources.md` üst notu.
->
-> **Format:** Her giriş aşağıdaki şablonda.
+> Akış: `pending.md` → kaynak doğrulaması → editör ve yazar onayı → bu dosya.
 
----
-
-## Şablon
+## Kayıt şablonu
 
 ```markdown
-### [Yazar Adı] — [Eser Adı], s.[Sayfa]
+### [Kaynak sahibi] — [Eser], [bölüm/sayfa]
 
-> *"Birebir alıntı tırnak içinde."*
-
-- **Atıf etiketi:** [SA ↦ Yazar] (Sanem'in korpus dışı, ama hattındaki yazardan)
-- **Atıf üslubu:** "[Sanem kalıbı, örn. 'Fransız-Amerikan yazar Anaïs Nin'in dediği gibi']"
-- **Eser kanonik kaynağı:** [yayınevi, çevirmen, ISBN]
-- **Doğrulayan iki kaynak:** [URL veya kaynak 1] · [URL veya kaynak 2]
-- **Estranova-uygunluk yıldızı:** ⭐⭐⭐⭐⭐ (1-5)
-- **Kullanım koşulu:** [hangi konularda]
-- **İlk kullanım:** [makale slug'ı + tarih]
-- **Editör onayı:** [Senai Aksoy / delege editör] — [tarih]
-- **Doktrin filtresi:** [mistik/spiritüel yazar için: kültürel metafor mu, dini hüküm mü]
-- **Notlar:** [özel durum, varyasyon önerisi]
+- Kaynak künyesi:
+- Birincil veya kanonik URL:
+- Desteklediği düşünce (kısa parafraz):
+- Kullanım amacı:
+- Doğrudan alıntı gerekiyorsa kısa alıntı ve telif kontrolü:
+- Atıf zinciri:
+- Editör onayı:
+- Yazar onayı:
+- İlk kullanım:
 ```
 
----
+## Onaylı kayıtlar
 
-## Onaylı atıflar
+Henüz kayıt yoktur.
 
-> _Henüz hiçbir aday onaylanmadı. İlk pilot makaleler sonrası `pending.md` üzerinden doldurulacak._
+## İstatistik
 
----
-
-## İstatistikler
-
-- Toplam onaylı atıf: **0**
-- Son güncelleme: 2026-05-01 (kuruluş)
+- Toplam: **0**
+- Son güncelleme: 2026-08-12

@@ -1,66 +1,92 @@
-# Sanem Altan — Yazar Profili (modüler)
+# Sanem Altan — Yazar Profili (modüler v2.1)
 
-> **v1.0 / kuruluş 2026-05-01.** İlk modüler yazar profili kurulumu (Gamze v3.2, Rima v2.0 yapısına paralel).
+> **Durum:** Tarihsel korpus araştırması tamamlandı; güncel yazar onayı,
+> portre ve ses kalibrasyonu bekleniyor. Bu nedenle writers.ts kaydı
+> inactive kalır.
 
 ## Klasör navigasyonu
 
-| Dosya | Rol | Yükleme |
+| Dosya | Tek sorumluluk | Yükleme |
 |---|---|---|
-| **`profile.yaml`** | Machine-readable index — section_index, topic_sections, citations, dynamics, quick_reference. **AI ilk pas yükler.** | Her makale (zorunlu) |
-| **`hot.md`** | §0.5 yürütme protokolü (10 adım) + §4 ses imzası + §5c tıbbi sınır + §13 self-check (16 madde). | Her makale (zorunlu) |
-| **`warm.md`** | §4a-§4f stil/şablon katmanları (Vatan 10 kural, imge bankası, mikro stil, başlık tonu, edebi referans köprüsü, aile bağlamı). | Konu-tetikli (lazy) |
-| **`cold.md`** | §0 korpus referansı + §1-§3 biyografi/karakter + §5a yaşam tarzı + §6-§10 içerik politikası + §12 gold-standard mini-makale + changelog. | Yalnız audit/evrim review |
-| **`hidden.md`** | §5b gizli gözlemler (politik damar yasağı, sigara nötrleştirme, anne kaybı çerçevesi) + §5d iç çelişkiler. **Yayınlanmaz; yalnız writer agent prompt'una enjekte edilir.** | Hassas konularda lazy |
-| **`citations/`** | Hybrid Whitelist + Editorial Gate atıf çerçevesi: `canonical-sources.md` (Sanem'in atıfladığı yazar/sanatçılar), `extended.md` (onaylı genişleme — başlangıçta boş), `pending.md` (editör onay kuyruğu). | Atıf seçimi gerektiğinde |
+| profile.yaml | Doğrulanmış kimlik, yetki, konu yönlendirme ve güvenlik özeti | Her makalede |
+| hot.md | Kısa üretim sözleşmesi, tıbbi sınır ve persona kontrolü | Her makalede |
+| warm.md | Seçilebilir gazetecilik ve edebiyat araçları | Konuya göre |
+| cold.md | Kaynak güveni, biyografi, korpus sınırı ve bakım notları | Audit/evrim |
+| hidden.md | Public özel-bilgi ve rıza politikası; sır deposu değildir | Güvenlik kontrolü |
+| citations/extended.md | İnsan onaylı kaynak genişletmeleri | Gerektiğinde |
+| citations/pending.md | Kaynak doğrulama ve onay kuyruğu | Gerektiğinde |
 
-## Bağlı dosyalar (klasör dışında)
+## Bağlı dosyalar
 
-- **`../sanem-altan-alintilar.md`** — Ham derleme (~40 KB, 731 satır, ~30 yazı + kitap + söyleşi)
-- **`../sanem-altan-aphorism-pool.md`** — Distile aforizma havuzu (~26 KB, 425 satır, 9 tema, 5 imza-cümle)
-- **`../sanem-altan-article-log.md`** — Akümülatif makale logu (Writer Dynamics Framework Katman B; cooldown hesabı)
-- **`../sanem-altan-ornek-makale.md`** — Gold-standard pilot makale ("Mevsimsiz bir yaş: peri-menopozun ara mevsimi")
+- ../_archive/sanem-altan-alintilar.md — tarihsel ham derleme; üretim prompt'u değildir
+- ../_archive/sanem-altan-aphorism-pool.md — v1 distilasyonu; v2'de emekli
+- ../_archive/sanem-altan-ornek-makale.md — v1 pilotu; gold-standard değildir
+- ../../icerik/yazar-onaylari/sanem-altan/article-log.md — onay ve evrim günlüğü
 
-## Akış (her makale öncesi)
+## Repo dışı özel anı bankası
 
-1. `profile.yaml` oku → `section_index`, `topic_sections`, `citations`, `quick_reference`, `dual_role_warning.active` flag
-2. `hot.md` oku → §0.5 protokol + §4 ses + §13 self-check
-3. Konu eşleşmesi varsa `warm.md`'den ilgili bölümleri oku (örn. peri-menopoz konusunda §4a + §4b)
-4. Hassas konu varsa (anne-kayıp, beden imajı, kuşak) → `hidden.md` oku
-5. `sanem-altan-article-log.md` parse et → cooldown listesi
-6. Aforizma seçimi: aphorism-pool → korpus → uygunsa `citations/canonical-sources.md`
-7. Yaz → §13 self-check
-8. Yayın → article-log'a satır ekle
+Ham yaşam notları tracked profil dosyalarında tutulmaz. Varsayılan yerel yol
+`private-writer-context/sanem-altan/` klasörüdür ve kök `.gitignore` tarafından
+dışlanır. Tercih edilen üretim kullanımı, repo dışındaki erişim kontrollü
+bir dizini `ESTRANOVA_PRIVATE_WRITER_CONTEXT_DIR` ile göstermektir.
 
-Detaylı pipeline: `docs/ARTICLE-PRODUCTION-SPEC.md` Faz 2 + `docs/WRITER-DYNAMICS-FRAMEWORK.md`.
+- `seeds.yaml` — gerçeklik, kaynak, hassasiyet, kullanım ve onay durumu;
+- `usage-log.yaml` — her taslak kullanımının append-only günlüğü;
+- `writers/_schema/private-writer-seed-bank.schema.json` — bankanın
+  yazar kimliği, güvenlik bayrakları, durumları ve kullanım izinleri için
+  fail-closed şema;
+- `npm run writer:seed -- --writer sanem-altan --seed-id <kimlik>` —
+  yalnız seçilen tek kaydın redakte edilmiş taslak bağlamını verir.
 
-## Çift Rol Uyarısı (KRİTİK SINIR)
+Özel bankanın tamamı otomatik yüklenmez; public profile, hidden.md,
+article-log, terminal çıktısı veya onay paketi içine kopyalanmaz.
 
-`profile.yaml.dual_role_warning.active: true` — Estranova editörü Doç. Dr. Senai Aksoy aynı zamanda **Sanem Altan'ın gerçek hayatta jinekoloğudur** ve **kızı Leyla'nın doğumunu yaptırmıştır** (≈2007). Muayene odası bilgisi (HRT/ilaç/doz/lab/tanı/jinekolojik bulgu) ve doğum süreci klinik detayı (sezeryan/normal, komplikasyon, doğum sonrası) Estranova taslaklarına **sızmaz**. Detay: `hidden.md §5c-ek` + `profile.yaml.dual_role_warning.hard_constraints`.
+## Üretim akışı
 
-**Senai Aksoy üç yazar Çift Rol ekosistemi:**
+1. profile.yaml ve hot.md dosyalarını yükle.
+2. Makale türünü doğrula: yalnız experience-essay veya editorial-guide.
+3. Konuya uyan warm.md bölümlerinden birkaç araç seç.
+4. Özel bağlam kullanılacaksa yalnız açık seed kimliğiyle tek kayıt yükle.
+5. Kurgusal veya onaysız birinci tekil sahneyi yalnız yazar-inceleme
+   taslağında görünür biçimde etiketle.
+6. Sanem'in gerçek/düzeltilmiş/tema/kompozit/çıkar kararını usage-log'a yaz.
+7. Korpusla özgün ifade ve sahne akışı benzerliği kontrolü yap.
+8. hot.md §13 kontrolünü çalıştır.
+9. Taslak hash'ine bağlı yazılı son onay olmadan imzalı yayına geçme.
 
-| Yazar | Çift Rol türü |
-|---|---|
-| Gamze Cizreli | Senai = Gamze'nin gerçek jinekoloğu |
-| Berna Aksoy | Senai = Berna'nın eşi (etik prensip nedeniyle takip etmiyor; arkadaş çevresinden meslektaşa devredilmiş) |
-| **Sanem Altan** | **Senai = Sanem'in jinekoloğu + kızı Leyla'nın doğumunu yaptırdı** |
+## Persona çekirdeği
 
-**Leyla'nın ismi:** Default ANONİM ("kızım", "yakınımdaki bir genç"). 2014 köşede halka açık geçti, ama Estranova'da otomatik kullanılmaz.
+Somut ayrıntıyı fark eden; onun altında kalan duygu veya çelişkinin peşine
+röportajcı gibi düşen; kendi ilk hükmünü de sınayan gazeteci-denemeci sesi.
 
-## Aile bağlamı (kamuya malolmuş şahsiyetler — 2026-05-01 kuralı)
+Bu çekirdek noktalama, mevsim, retorik soru veya aile anısı kotası değildir.
+Eski özgün cümleler ve metaforlar yeniden üretilmez.
 
-Sanem'in aile şahsiyetleri (Ahmet Altan baba / Çetin Altan dede / Mehmet Altan amca) üç kuşak Türk gazetecilik-edebiyat mirasının kamuya malolmuş kişilikleri olduğu için, aile çerçevesinde **isim+akrabalık+eser bağıyla doğal olarak makale gövdesine yansıyabilirler**. Detay: `warm.md §4f`.
+## Güncel kalibrasyon kapısı
 
-**Yasak ayrı kategori:** politik / hukuki bağlam (cezaevi, müebbet, dava, basın özgürlüğü polemiği) **gövde metne taşınmaz**.
+Aktivasyondan önce Sanem Altan'dan şu onaylar alınır:
 
-## Sigara nötrleştirme (Sanem-spesifik)
+- tercih edilen güncel unvan ve kısa biyografi;
+- 1993 ve kurum zaman çizgisi;
+- portre ve byline kullanım izni;
+- yazmak istediği ve istemediği sağlık başlıkları;
+- kişisel deneyim ve mahremiyet sınırları;
+- artık kullanmadığı dil ve noktalama alışkanlıkları;
+- “bunu benim ağzımdan yazmayın” listesi;
+- son dönemde kendisinin seçtiği üç metin;
+- ilk pilot yazının nihai onayı.
 
-Sanem'in orijinal yazılarında "bir sigara yaktım" sahnesi imza imgelerinden biri. Estranova'da çay/kahve/abajur ile değiştirilir; sahnenin yalnızlık + yüz yüze gelme çekirdeği korunur, nesne değişir. Detay: `warm.md §4a kural 9` ve `hidden.md §5b`.
+## Gizlilik
 
-## Politik damar yasağı
-
-Vatan köşelerinin yaklaşık yarısı dönem Türkiye siyasetine dair (AKP, Gezi, Soma, basın özgürlüğü vb.). **Hiçbiri Estranova metnine taşınmaz** (CLAUDE.md §5 düzenlemeye uygun nötrlük). Sadece edebi/lirik/varoluşsal damar imza-malzemesi olarak kullanılır.
+Repo herkese açıktır. hidden.md dâhil hiçbir dosya özel kişi, sağlık,
+klinik ilişki veya kamusal olmayan aile bilgisi saklamaz. Böyle bir bilgi
+yalnız Git dışındaki kasadan, açık seed seçimiyle ve Sanem'in inceleyeceği
+iç taslak için kullanılabilir.
 
 ## Versiyon
 
-- **v1.0** — 2026-05-01 — kuruluş
+- v2.0 — 2026-08-12: gazetecilik zanaatı merkezli yeniden kurulum; mekanik
+  üslup kotaları, “sen” hitabı ve onaysız kişisel deneyimler kaldırıldı.
+- v2.1 — 2026-08-12: public persona ile Git dışı özel anı bankası ayrıldı;
+  editör lead'i, yazar-onaylı anı ve kurgusal türev için ayrı kullanım/onay
+  kapıları; banka şeması, yol containment ve opak kullanım günlüğü eklendi.

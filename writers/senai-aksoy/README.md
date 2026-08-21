@@ -27,13 +27,17 @@ writers/senai-aksoy/
 
 ## Çift Rol KRİTİK — EŞSİZ MİMARİ
 
-> **Senai için Çift Rol AKTİF + EŞSİZ:** Estranova kadrosundaki tüm aktif yazarların hem **uzun süreli arkadaşı** hem **gerçek jinekoloğu** (memory: `feedback_dual_role_universal_2026_05_01.md`).
+> **Çift rol ilkesi aktiftir:** Geçmiş kişisel veya hekim–hasta ilişkileri
+> varsa bunların kimliği ve klinik ayrıntıları Git'te izlenen persona
+> dosyalarında tutulmaz.
 
 3 eksen + 4 hassas katman:
 
 - **Eksen 1:** Berna Aksoy ile evli — yakın aileyi takip etmeme etik prensibi (başka meslektaşa devredilmiş); Berna ile evlilik bağı yazıya GİRMEZ ("eşim" YASAK)
-- **Eksen 2:** 8 Estranova yazarının (Alara/Başak/Duygu/Gamze/Işık/Özlem/Rima/Sanem) gerçek jinekoloğu — muayene odası bilgisi MUTLAK SIZMAZ
-- **Eksen 3:** Sanem Altan özel — Senai Sanem'in kızı Leyla'nın doğumunu yaptırdı (≈2007); doğum süreci klinik detayı MUTLAK YASAK
+- **Eksen 2:** Bir Estranova yazarıyla hekim–hasta ilişkisi varsa muayene
+  odası bilgisi MUTLAK SIZMAZ; kişinin adı kamusal persona kuralına yazılmaz
+- **Eksen 3:** Yazarların ve yakınlarının doğum/tedavi geçmişi klinik anekdot
+  kaynağı yapılmaz
 - **Hassas katmanlar:** kendi muayenehanesi pazarlama YASAK + hasta öyküsü anekdot anonimlik + tedavi pazarlaması YASAK + promosyonel başhekim vitrini gövdede YASAK
 
 Detay: `hidden.md §5c-ek` + `profile.yaml dual_role_warning.description`.
@@ -44,4 +48,6 @@ Detay: `hidden.md §5c-ek` + `profile.yaml dual_role_warning.description`.
 - **Manifesto cümlesi:** *"Bilgi, belirsizliğin panzehiridir"* [SA-K] — TEMEL felsefe direği
 - **Kategori imzaları:** `bilimsel-pencere` (5/5 çekirdek), `editorun-kosesi` (5/5 çekirdek), `beden-yakinlik` (5/5 mahrem klinik), `hormonal-gecis/menopoz` (4/5 lokal HRT), `hormonal-gecis/40-sonrasi` (4/5 pelvik fonksiyon)
 - **Çekirdek konular:** İdrar kaçırma / GSM / vajinal atrofi / pelvik organ prolapsusu / cinsel ağrı (disparoni) / vajinismus / vajinoplasti-labiaplasti fonksiyonel zemin / lokal HRT / yerel uygulamalar (lazer/RF/PRP) / cerrahi menopoz / erken menopoz/POI / endometriyoz-miyom-adenomyozis 40+ / 40+ STD / hekim-hasta iletişimi rehberi / editöryal manifesto köşesi
-- **Kaçınılan eksenler:** IVF/tüp bebek (Estranova menopoz ekseninde), yaşıt yazar lifestyle tonu (diğer 8 yazar alanı), beslenme/sporcu/finansal/üç kuşak/editör yaşıt perspektifi
+- **Kaçınılan eksenler:** IVF/tüp bebek (Estranova menopoz ekseninde), yaşıt
+  yazar lifestyle tonu (klinik olmayan yazarların alanı),
+  beslenme/sporcu/finansal/üç kuşak/editör yaşıt perspektifi

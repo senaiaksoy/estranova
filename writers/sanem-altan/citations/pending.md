@@ -1,47 +1,43 @@
-# Sanem Altan — Pending Citations (editör onay kuyruğu)
+# Sanem Altan — Dış Kaynak Doğrulama Kuyruğu
 
-> **Bu dosya korpus dışı atıf adaylarını tutar.** AI agent yeni bir atıf gerektiğinde aday burada toplanır; **insan editör onayından önce makalede kullanılmaz**.
->
-> **Akış:**
-> 1. Korpusta (`../../sanem-altan-aphorism-pool.md`) uygun cümle yok
-> 2. AI bu dosyaya aday düşürür: yazar+eser+çekirdek cümle+gerekçe
-> 3. Editör (Senai Aksoy / delege) haftalık batch'te değerlendirir
-> 4. Onaylanan → `extended.md`'ye geçer, gelecekte korpus gibi kullanılır
-> 5. Reddedilen → bu dosyada arşivlenir; gerekçe ile
+> Bu dosya yalnız kültür/sanat kaynağı adaylarını doğrulama kuyruğunda tutar.
+> Adaylar onaylanmadan makaleye girmez; tam korpus veya imza cümlesi havuzu
+> oluşturulmaz.
 
----
+## Akış
 
-## Şablon
+1. Kaynağın makaledeki düşünsel işlevi açıklanır.
+2. Eser, baskı, sayfa/bölüm ve atıf zinciri birincil veya kanonik kaynaktan doğrulanır.
+3. Yakın taklit, telif, doktrin ve sağlık-iddiası riskleri değerlendirilir.
+4. Editör ve Sanem Altan yazılı olarak onaylarsa kısa parafraz `extended.md`ye geçer.
+5. Reddedilen kayıt, gerekçesiyle aşağıdaki arşivde kalır.
+
+## Aday şablonu
 
 ```markdown
-### [Yazar Adı] — [Eser Adı, sayfa/dize]
+### [Kaynak sahibi] — [Eser]
 
-- **Aday cümle:** *"birebir cümle"*
-- **Atıf üslubu önerisi:** "[Sanem kalıbı]"
-- **Kullanım niyeti:** [hangi makalede, hangi temada]
-- **Doğrulama:** [iki bağımsız kaynak]
-- **Doktrin filtresi:** [varsa]
-- **Eklenme tarihi:** [YYYY-MM-DD]
-- **Editör kararı:** [bekliyor / onaylandı → extended / reddedildi (gerekçe)]
+- Kısa parafraz:
+- Makaledeki işlev:
+- Kanonik kaynak:
+- Atıf zinciri:
+- Telif ve benzerlik kontrolü:
+- Doktrin/sağlık iddiası kontrolü:
+- Eklenme tarihi:
+- Karar ve gerekçe:
 ```
-
----
 
 ## Bekleyen adaylar
 
-> _Henüz hiçbir aday düşürülmedi._
+Henüz kayıt yoktur.
 
----
+## Reddedilenler
 
-## Reddedilenler arşivi
+Henüz kayıt yoktur.
 
-> _Henüz hiçbir aday reddedilmedi._
-
----
-
-## İstatistikler
+## İstatistik
 
 - Bekleyen: **0**
-- Onaylanmış (extended'e geçen): **0**
+- Onaylanan: **0**
 - Reddedilen: **0**
-- Son güncelleme: 2026-05-01 (kuruluş)
+- Son güncelleme: 2026-08-12

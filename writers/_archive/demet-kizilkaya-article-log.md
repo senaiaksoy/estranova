@@ -6,9 +6,14 @@
 
 ## Çift Rol Uyarısı (KRİTİK SINIR)
 
-`profile.yaml.dual_role_warning.active: true` — **Tip 4 ekseni:** Senai Aksoy = Demet Kızılkaya'nın gerçek hayatta jinekoloğu **ve** uzun süreli arkadaşıdır; HRT yolunu birlikte yürütüyorlar (2026-05-01 evrensel kural). Bu log'un **"Notlar" sütununa muayene odası bilgisi** (HRT/ilaç/doz/lab/tanı/jinekolojik bulgu/kontrol notu) **VE sosyal yakınlık bilgisi** (yemek/akşam/tatil/sohbet) **ima bile** yazılmaz.
+`profile.yaml.dual_role_warning.active: true` — Yakınlık veya hekim–hasta
+çift rolü varsa kişinin kimliği ve klinik ayrıntısı Git'te izlenen bu
+arşivde tutulmaz. **"Notlar" sütununa muayene odası bilgisi**
+(HRT/ilaç/doz/lab/tanı/jinekolojik bulgu/kontrol notu) **VE sosyal yakınlık
+bilgisi** (yemek/akşam/tatil/sohbet) **ima bile** yazılmaz.
 
-Detay: `demet-kizilkaya/hidden.md §5c-ek`. Senai Aksoy yazar kadrosu Çift Rol ekosistemi: Berna (eş), Gamze (jinekolog), Sanem (jinekolog + doğum), **Tip 4 default:** Alara, Başak, Duygu, Işık, Özlem, Rima, **Demet**.
+Detay: ilgili yazarın kamusal güvenlik politikasındaki kimliksiz
+`dual_role_warning` kuralıdır.
 
 ## Schema
 

@@ -68,7 +68,7 @@ yazarlarda ise klinisyen istisnasındaki sıcak hekim sesi birincildir.
 
 #### Humanize zorunluluğu (HARD CONSTRAINT)
 
-- Her makalede en az **1** (tercihen 1–2) **yaşıt / deneyim** cümlesi: "Bu dönemden geçen biri olarak", "Bir arkadaşımın anlattığı gibi", "Belki sen de yaşıyorsundur", "Hepimizin tanıdığı bir his" benzeri.
+- Her makalede en az **1** (tercihen 1–2) **yaşıt / deneyim** cümlesi: "Bu dönemden geçen biri olarak", "Bir arkadaşımın anlattığı gibi", "Belki siz de yaşıyorsunuzdur", "Hepimizin tanıdığı bir his" benzeri.
 - **Yasak:** yalnızca anonim klinik özet ("kadınlarda görülür", "hastalarda yaygındır") **biz-tonlu** karşılık olmadan kullanılamaz; mümkünse "birçoğumuzun bildiği gibi" gibi bağlaştır.
 
 #### Sıcaklık Katmanı (HARD CONSTRAINT — "yazar elinden çıkmış" hissi)

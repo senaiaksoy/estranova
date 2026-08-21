@@ -27,10 +27,41 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
+import Ajv from 'ajv';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
+const PROFILE_SCHEMA_PATH = path.join(
+  REPO_ROOT,
+  'writers',
+  '_schema',
+  'profile.schema.json',
+);
+
+function fail(message) {
+  console.error('HATA: ' + message);
+  process.exit(1);
+}
+
+function isWithin(base, target) {
+  const rel = path.relative(base, target);
+  return rel === '' || (!rel.startsWith('..') && !path.isAbsolute(rel));
+}
+
+function resolveContained(base, from, configuredPath, label) {
+  if (typeof configuredPath !== 'string' || !configuredPath.trim()) {
+    fail(label + ' yolu eksik veya string değil.');
+  }
+  if (path.isAbsolute(configuredPath)) {
+    fail(label + ' mutlak yol olamaz.');
+  }
+  const resolved = path.resolve(from, configuredPath);
+  if (!isWithin(path.resolve(base), resolved)) {
+    fail(label + ' izin verilen kökün dışına çıkamaz.');
+  }
+  return resolved;
+}
 
 // ---- args ----
 const { values } = parseArgs({
@@ -57,9 +88,18 @@ if (values.help || !values.writer || !values.topic) {
   process.exit(values.help ? 0 : 1);
 }
 
-const writerSlug = values.writer;
+const writerSlug = values.writer.trim();
 const topic = values.topic.toLowerCase().trim();
-const writerDir = path.join(REPO_ROOT, 'writers', writerSlug);
+if (!/^[a-z0-9-]+$/.test(writerSlug)) fail('Geçersiz yazar slug.');
+if (!topic || topic.length > 160) fail('Geçersiz konu değeri.');
+
+const writersRoot = path.join(REPO_ROOT, 'writers');
+const writerDir = resolveContained(
+  writersRoot,
+  writersRoot,
+  writerSlug,
+  'Yazar klasörü',
+);
 
 // ---- existence check ----
 if (!fs.existsSync(writerDir)) {
@@ -85,6 +125,31 @@ try {
 }
 
 const profile = yaml.load(fs.readFileSync(profileYamlPath, 'utf8'));
+if (profile?.private_seed_policy || writerSlug === 'sanem-altan') {
+  const profileSchema = JSON.parse(
+    fs.readFileSync(PROFILE_SCHEMA_PATH, 'utf8'),
+  );
+  const validateProfile = new Ajv({ allErrors: true, strict: false }).compile(
+    profileSchema,
+  );
+  if (!validateProfile(profile)) {
+    const details = (validateProfile.errors || [])
+      .map(
+        (error) =>
+          (error.instancePath || '/') + ' ' + error.message,
+      )
+      .join('; ');
+    fail('profile.schema doğrulaması başarısız: ' + details);
+  }
+}
+if (profile?.slug !== writerSlug) {
+  fail('Profil slug değeri istenen yazarla eşleşmiyor.');
+}
+
+const resolveWriterPath = (configuredPath, label) =>
+  resolveContained(writerDir, writerDir, configuredPath, label);
+const resolveRepoPathFromWriter = (configuredPath, label) =>
+  resolveContained(REPO_ROOT, writerDir, configuredPath, label);
 
 // ---- topic eşleme ----
 const topicSections = profile.topic_sections || {};
@@ -110,6 +175,9 @@ for (const sec of sectionsToLoad) {
     continue;
   }
   const file = entry.file;
+  if (!profile.file_layout?.[file] && !['hot', 'warm', 'cold', 'hidden'].includes(file)) {
+    fail('section_index.' + sec + ' geçersiz dosya anahtarı içeriyor.');
+  }
   if (!filesToLoad.has(file)) filesToLoad.set(file, []);
   filesToLoad.get(file).push({ section: sec, anchor: entry.anchor, title: entry.title });
 }
@@ -125,7 +193,7 @@ if (dualRoleActive && !filesToLoad.has('hidden')) {
 
 // ---- article log → cooldown ----
 const logPath = profile.dynamics?.log_path
-  ? path.resolve(writerDir, profile.dynamics.log_path)
+  ? resolveRepoPathFromWriter(profile.dynamics.log_path, 'dynamics.log_path')
   : path.join(REPO_ROOT, 'icerik', 'yazar-onaylari', writerSlug, 'article-log.md');
 
 let cooldown = {
@@ -143,7 +211,11 @@ if (fs.existsSync(logPath)) {
   // Tablo satırlarını parse et (pipe-delimited)
   const tableLines = logContent
     .split('\n')
-    .filter((l) => l.startsWith('|') && !l.includes('---') && !l.match(/^\|\s*#\s*\|/));
+    .filter((line) => {
+      if (!line.startsWith('|') || line.includes('---')) return false;
+      const cells = line.split('|').map((cell) => cell.trim()).filter(Boolean);
+      return /^\d+$/.test(cells[0] || '');
+    });
 
   // Schema: # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar
   const recentRows = tableLines.slice(-10); // son 10 satır
@@ -193,21 +265,45 @@ if (fs.existsSync(logPath)) {
 // ---- citations paths ----
 const citations = {
   canonical_sources: profile.citations?.canonical_sources
-    ? path.resolve(writerDir, profile.citations.canonical_sources)
+    ? resolveWriterPath(
+        profile.citations.canonical_sources,
+        'citations.canonical_sources',
+      )
     : null,
   extended: profile.citations?.extended
-    ? path.resolve(writerDir, profile.citations.extended)
+    ? resolveWriterPath(profile.citations.extended, 'citations.extended')
     : null,
   pending: profile.citations?.pending
-    ? path.resolve(writerDir, profile.citations.pending)
+    ? resolveWriterPath(profile.citations.pending, 'citations.pending')
     : null,
   frequency_rule: profile.citations?.frequency_rule || null,
 };
 
 // ---- Aphorism pool path (filtreleme AI'a bırakılır v0'da) ----
 const aphorismPoolPath = profile.file_layout?.aphorism_pool
-  ? path.resolve(writerDir, profile.file_layout.aphorism_pool)
+  ? resolveWriterPath(
+      profile.file_layout.aphorism_pool,
+      'file_layout.aphorism_pool',
+    )
   : null;
+
+// ---- private seed policy (notice only; raw bank is NEVER auto-loaded) ----
+const privateSeedPolicy = profile.private_seed_policy || null;
+if (privateSeedPolicy?.enabled === true && privateSeedPolicy.auto_load !== false) {
+  console.error('HATA: private_seed_policy.auto_load false olmalı. Özel banka otomatik yüklenemez.');
+  process.exit(1);
+}
+if (privateSeedPolicy?.enabled === true) {
+  if (
+    privateSeedPolicy.draft_mode !== 'internal_author_review_only' ||
+    privateSeedPolicy.publication_gate !== 'explicit_author_approval' ||
+    privateSeedPolicy.synthetic_first_person !== 'internal_draft_only' ||
+    privateSeedPolicy.third_party_consent_required !== true ||
+    privateSeedPolicy.public_log_detail !== 'opaque_ids_and_status_only'
+  ) {
+    fail('private_seed_policy güvenlik kapıları eksik veya geçersiz.');
+  }
+}
 
 // ---- output ----
 const result = {
@@ -224,7 +320,7 @@ const result = {
       file,
       {
         path: profile.file_layout?.[file]
-          ? path.resolve(writerDir, profile.file_layout[file])
+          ? resolveWriterPath(profile.file_layout[file], 'file_layout.' + file)
           : path.join(writerDir, `${file}.md`),
         sections,
       },
@@ -232,7 +328,10 @@ const result = {
   ),
   always_load: {
     profile_yaml: profileYamlPath,
-    hot: path.resolve(writerDir, profile.file_layout?.hot || './hot.md'),
+    hot: resolveWriterPath(
+      profile.file_layout?.hot || './hot.md',
+      'file_layout.hot',
+    ),
   },
   cooldown,
   dual_role_warning: {
@@ -241,10 +340,26 @@ const result = {
       ? `KRİTİK SINIR: ${
           profile.dual_role_warning?.description
             ? profile.dual_role_warning.description.trim().replace(/\s+/g, ' ')
-            : 'Editör bu yazarın gerçek hekimidir/yakınıdır.'
-        } Muayene odası bilgisi taslağa SIZMAZ. hidden.md §5c-ek detayı.`
+            : 'Kamusal olmayan özel bilgi yalnız kontrollü yazar-inceleme akışında kullanılabilir.'
+        } Tam özel banka otomatik yüklenmez. hidden.md §5c-ek detayı.`
       : null,
   },
+  private_seed_policy: privateSeedPolicy?.enabled === true
+    ? {
+        enabled: true,
+        auto_load: false,
+        draft_mode: privateSeedPolicy.draft_mode,
+        publication_gate: privateSeedPolicy.publication_gate,
+        loader_command:
+          'npm run writer:seed -- --writer ' + writerSlug + ' --seed-id <kimlik>',
+        notice:
+          'Yalnız açıkça seçilen tek redakte seed iç yazar-inceleme taslağına alınabilir; ' +
+          'ham banka, özel ayrıntı ve banka yolu bu bağlama eklenmez.',
+      }
+    : {
+        enabled: false,
+        auto_load: false,
+      },
   citations,
   aphorism_pool: aphorismPoolPath,
   article_log: logPath,
@@ -256,7 +371,12 @@ const result = {
     `writers/${writerSlug}/hidden.md (Çift Rol aktifse)`,
     `icerik/yazar-onaylari/${writerSlug}/article-log.md (cooldown)`,
     ...(aphorismPoolPath ? [`${path.relative(REPO_ROOT, aphorismPoolPath).replace(/\\/g, '/')} (aforizma havuzu)`] : []),
-    `writers/${writerSlug}/citations/canonical-sources.md (atıf çerçevesi)`,
+    ...(citations.canonical_sources
+      ? [`${path.relative(REPO_ROOT, citations.canonical_sources).replace(/\\/g, '/')} (atıf çerçevesi)`]
+      : []),
+    ...(citations.extended
+      ? [`${path.relative(REPO_ROOT, citations.extended).replace(/\\/g, '/')} (onaylı dış kaynaklar)`]
+      : []),
   ],
 };
 
@@ -287,6 +407,12 @@ if (values.json) {
   if (result.dual_role_warning.active) {
     console.log('## ⚠ Çift Rol Uyarısı AKTİF');
     console.log(result.dual_role_warning.notice);
+    console.log('');
+  }
+  if (result.private_seed_policy.enabled) {
+    console.log('## Özel seed kapısı');
+    console.log(result.private_seed_policy.notice);
+    console.log('- Açık seçim: ' + result.private_seed_policy.loader_command);
     console.log('');
   }
   console.log('## Atıf çerçevesi');

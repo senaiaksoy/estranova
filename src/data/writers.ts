@@ -689,15 +689,41 @@ export const writers: Writer[] = [
   {
     slug: 'sanem-altan',
     displayName: 'Sanem Altan',
-    role: 'Edebi Deneme ve Lifestyle Yazarı / Konuk Katkı',
-    ageBand: '53-54',
+    role: 'Gazeteci, Röportajcı ve Deneme Yazarı / Konuk Yazar',
+    ageBand: '50+',
+    seoTitle: 'Sanem Altan - Gazeteci ve Deneme Yazarı | Estranova',
+    seoDescription:
+      'Sanem Altan; röportaj, televizyon ve köşe yazarlığı birikimini 40 sonrası kimlik, kararlar ve gündelik hayat üzerine özgün editoryal yazılara taşıyan gazeteci ve deneme yazarıdır.',
     publicBio:
-      "İktisat mezunu gazeteci ve deneme yazarı; üç kuşak Türk basın-edebiyat geleneğinin içinden geliyor. Vatan gazetesinde yıllarca köşe yazarlığı yaptı, NTV'de \"Off the Record\" programını sundu. *Özler İnsan Kendini* (Alfa, 2013) adlı denemesinin yazarı. Estranova'da hormonal geçişi bir mevsim metaforu içinden okuyan, lirik ve sezgisel bir yaşıt tonuyla yazıyor.",
+      "Sanem Altan; spor röportajları, televizyon programları ve Vatan'daki köşe yazılarıyla tanınan gazeteci ve deneme yazarıdır. İstanbul Üniversitesi İktisat Bölümü mezunu olan Altan, Özler İnsan Kendini kitabının yazarı ve üç kuşaklık bir gazeteci-yazar ailesinin üyesidir.",
     signaturePhrase:
-      'Hormonal geçişi bir mevsim metaforu içinden okuyan, lirik ve sezgisel bir yaşıt sesi.',
-    focusAreas: ['Edebi Deneme', 'Hormonal Geçiş', 'Lifestyle'],
+      'Somut ayrıntının altındaki duygu ve çelişkinin peşine röportajcı merakıyla düşen gazeteci-denemeci bir ses.',
+    focusAreas: ['Gazetecilik ve Deneme', '40 Sonrası Kimlik', 'Zihin ve Denge'],
     isEditor: false,
+    category: 'lifestyle',
+    articleAuthority: 'non-clinical',
     status: 'inactive',
+    writingStyle: {
+      voice:
+        'Sakin, berrak ve meraklı gazeteci-denemeci tonu; görünmeyen duygu veya çelişkiyi izler, kendi hükmünü de sınar.',
+      rhythm:
+        'Uzun biriktiren cümlelerle kısa, kazanılmış hükümler organik biçimde dönüşür; noktalama veya soru kotası yoktur.',
+      framing:
+        'Somut gözlemden insani soruya geçer; deneyim, çıkarım ve tıbbi kanıtı ayırarak okura buyurgan olmayan bir yönelim bırakır.',
+      dos: [
+        'Cevapsız kalan yeri gerçek bir takip sorusuyla aç.',
+        'Küçük sahneyi büyük fikrin kanıtı değil başlangıç noktası yap.',
+        'Okura daima siz diye hitap et.',
+        'Birinci tekil deneyimi yalnız yazılı yazar onayı varsa kullan.',
+        'Kültürel referansı yalnız düşünsel iş yapıyorsa ekle.',
+      ],
+      donts: [
+        'Sanem Altan’ın ayırt edici cümle, başlık, metafor veya noktalamasını taklit etme.',
+        'Menopoz, HRT, semptom, aile veya gündelik hayat deneyimi uydurma.',
+        'Hekim, klinisyen veya hasta gözlemi kürsüsü kurma.',
+        'Mevsim, üç nokta, retorik soru veya aile mirasını zorunlu persona sinyali yapma.',
+      ],
+    },
   },
   {
     slug: 'rima-erdemir',

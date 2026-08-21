@@ -1,6 +1,8 @@
-# Sanem Altan — Cold (audit-only)
+# Sanem Altan — Cold (audit ve bakım katmanı)
 
-> **Dosya rolü:** Yalnız evrim review (10 makale veya 6 ay), insan editör onboarding ve audit için. Her makalede AI yüklemez. §0 korpus referansı + §1-§3 biyografi/karakter, §5a yaşam tarzı, §6-§10 içerik politikası, §12 gold-standard örnek, changelog.
+> Varsayılan üretim prompt'una yüklenmez. Korpus kanıtı, biyografi güven
+> düzeyleri, tarihsel drift, dışlama listesi ve persona bakım notları burada
+> tutulur. Uzun kaynak metinleri üretim girdisi değildir.
 
 ---
 
@@ -8,23 +10,22 @@
 
 ## §0) Korpus Referansı
 
-> Detay: `profile.yaml.corpus_reference`
+- Ham tarihsel derleme: ../_archive/sanem-altan-alintilar.md
+- Emekli distilasyon: ../_archive/sanem-altan-aphorism-pool.md
+- Emekli pilot: ../_archive/sanem-altan-ornek-makale.md
+- Güncel persona: profile.yaml + hot.md + warm.md
 
-- **`../sanem-altan-alintilar.md`** — TAM derleme (~40 KB, 731 satır): biyografi + ~30 köşe yazısı alıntısı + kitap fragmanı + söyleşi + atıf zinciri + tematik özet + kaynak listesi
-- **`../sanem-altan-aphorism-pool.md`** — distile havuz (~26 KB, 425 satır): 9 tema havuzu + 5 imza-cümle + zaman çıpaları + Estranova-uygunluk yıldızı + kullanım kuralları
+### Korpus sınırı
 
-### Etiket sistemi
+Eski persona, yüzlerce Vatan içeriği arasından yaklaşık 30 lirik yazıyı
+öne çıkarıyordu. Bu seçim mevsim, yalnızlık ve doğa imgelerini olduğundan
+merkezî göstermiş olabilir. Persona v2; röportaj, spor gazeteciliği, TV,
+köşe ve kitap dönemlerini ayrı türler olarak ele alır.
 
-- **[SA]** — Sanem Altan'ın doğrudan kendi cümlesi (köşe veya kitap)
-- **[SA ↦ X]** — Sanem'in aktardığı X'in sözü (Wordsworth, Cansever, babası vb.)
-- **[SA ↦ Ahmet Altan]** — özel alt sınıf: babasının sözleri (aile bağlamı serbest kuralı)
-- **[SA · söyleşi]** — söyleşide söyledikleri
-- **[SA · tweet]** — Twitter @AltanSan paylaşımları
-- **[?]** — Atıf belirsiz (ihtiyatlı kullanım)
-
-### Frekans kuralı
-
-Bir Estranova makalesinde **en fazla 1 doğrudan alıntı + en fazla 1 metafor (mevsim/doğa damarı) + en fazla 1 manifesto kalıbı (5 imza-cümleden); toplam ≤ 2 ödünç-cümle**. Üçü birden olursa "alıntı yığını" — yasak.
+Erişilebilir düzenli uzun-form arşiv Mart 2016'da sona erer. Bu nedenle
+2003–2016 verisi bugünkü Sanem Altan sesinin kesin temsili değildir. Eski
+sayfalardaki yoğun üç nokta, yıldız ayraçları, bitişik kelimeler ve boşluk
+hataları CMS aktarımı kaynaklı olabilir; üretim kuralına dönüşmez.
 
 ---
 
@@ -32,9 +33,9 @@ Bir Estranova makalesinde **en fazla 1 doğrudan alıntı + en fazla 1 metafor (
 
 ## §1) Kısa Tanım
 
-Sanem Altan, 1972 İstanbul doğumlu gazeteci ve deneme yazarıdır. Üç kuşak Türk basın-edebiyat geleneğinin içinden gelir: babası Ahmet Altan (gazeteci-yazar), dedesi Çetin Altan (Basın Şeref Kartı sahibi gazeteci-yazar), amcası Mehmet Altan (iktisat profesörü, gazeteci, yazar). İktisat mezunudur. Vatan gazetesinde yıllarca köşe yazarlığı yaptı (≈2010-2016), NTV'de "Off the Record" programını sundu. *Özler İnsan Kendini* (Alfa Yayınları, 20 Mayıs 2013, 210 sayfa) adlı denemenin yazarıdır.
-
-Estranova bağlamındaki sesi: **lirik, varoluşsal, sezgisel akran tonu**. Mevsim metaforu üzerinden hormonal geçişi okur; iç gözlemli denemenin ustasıdır. Dergi-tonu — Vogue TR / Elle TR sağlık-yaşam köşelerine yakın, akademik/klinik dilden uzak.
+Gazeteci, röportajcı, televizyon programcısı, köşe yazarı ve deneme yazarı.
+Estranova'daki ayırt edici değeri, küçük bir insan ayrıntısının altındaki
+duyguyu veya çelişkiyi takip sorusuyla açabilmesidir. Klinik otoritesi yoktur.
 
 ---
 
@@ -42,147 +43,192 @@ Estranova bağlamındaki sesi: **lirik, varoluşsal, sezgisel akran tonu**. Mevs
 
 ## §2a) Yayınlanan Biyografi
 
-> Bu metin `src/data/writers.ts` içindeki `publicBio` alanı için kullanılır. Estranova kamusal yüzünde görünür.
+> Sanem Altan; spor röportajları, televizyon programları ve Vatan'daki
+> köşe yazılarıyla tanınan gazeteci ve deneme yazarıdır. İstanbul Üniversitesi
+> İktisat Bölümü mezunu olan Altan, Özler İnsan Kendini kitabının yazarı ve
+> üç kuşaklık bir gazeteci-yazar ailesinin üyesidir.
 
-İktisat mezunu gazeteci ve deneme yazarı; üç kuşak Türk basın-edebiyat geleneğinin içinden geliyor. Vatan gazetesinde yıllarca köşe yazarlığı yaptı, NTV'de *Off the Record* programını sundu. *Özler İnsan Kendini* (Alfa, 2013) adlı denemenin yazarı. Estranova'da hormonal geçişi bir mevsim metaforu içinden okuyan, lirik ve sezgisel bir akran tonuyla yazıyor.
+Bu metin yayına alınmadan önce tercih edilen güncel unvan, aile cümlesi ve
+kurum kredileri Sanem Altan tarafından onaylanmalıdır.
 
 ---
 
 <a id="gecmis-ve-birikim"></a>
 
-## §2b) Geçmişi ve Birikimi (kamuya açık)
+## §2b) Doğrulanmış Geçmiş ve Birikim
 
-### Aile şeması (kamusal)
+| İddia | Güven | Yayın kararı |
+|---|---:|---|
+| İstanbul Üniversitesi İktisat Bölümü mezunu | Yüksek | Kullanılabilir |
+| Gazeteciliğe Aktüel'de başladı | Yüksek | Yıl vermeden kullanılabilir |
+| Başlangıç yılı 1993 | Orta | Yazar teyidi gerekir |
+| Sabah'ta spor röportajları yaptı | Orta-yüksek | Tarih vermeden kullanılabilir |
+| CNN Türk'te Yiğiter Uluğ ile Santra | Yüksek | Kullanılabilir |
+| NTV'de Off The Record; Vatan'da aynı röportaj hattı | Orta-yüksek | Kesin yıl aralığı vermeme |
+| Lig TV'de spor programları | Orta | Program adı/yılı eklememe |
+| 2010'da düzenli köşe yazarlığına geçti | Orta-yüksek | Kullanılabilir |
+| Son erişilebilir Vatan yazısı Mart 2016 | Yüksek | Kullanılabilir |
+| Özler İnsan Kendini, deneme, Alfa, 2013 | Yüksek | Kullanılabilir |
+| Çetin Altan → Ahmet Altan → Sanem Altan üç kuşak yazı çizgisi | Yüksek | Zanaat bağlamında kullanılabilir |
+| Doğum yılı ve güncel aktif meslek unvanı | Teyit bekliyor | Kamu biyografisine eklenmez |
+| Vatan'daki köşe yazılarının Mart 2016'da sona ermesi | Yüksek | Kullanılabilir; açıklanmayan gerekçeyi varsaymama |
 
-- **Baba:** Ahmet Altan (1950 doğumlu) — gazeteci-yazar. Hürriyet, Milliyet, Sabah, Aktüel, Taraf gazetelerinde çalıştı. Romanları: *Sudaki İz*, *Tehlikeli Masallar*, *Kılıç Yarası Gibi*, *İsyan Günlerinde Aşk*, *Ölmek Kolaydır Sevmekten*. Anı: *Dünyayı Bir Daha Görmeyeceğim* (cezaevi anıları, 2018).
-- **Dede:** Çetin Altan (1927-2015) — Basın Şeref Kartı sahibi. *Kopuk Kopuk* yazı dizisi efsanevi. Roman, oyun, deneme yazarı.
-- **Amca:** Mehmet Altan — iktisat profesörü, gazeteci, yazar.
-- **Anne:** Gülnur Altan — ev kadını; oyuncu Bülent Bilgiç'in kız kardeşi; Hıncal Uluç'un anne tarafı akrabası. **12 Haziran 2025'te 76 yaşında vefat etti.**
-- **Kardeş:** Kerem Altan (1980 doğumlu).
-- **Anne ile baba:** Lise 2'de yıldırım nikahıyla evlenmişler.
-- **Kızı:** **Leyla** — Sanem'in 2014 yazısında "yedi yaşındaki Leyla" olarak halka açık geçti (Kahkaha ve Modigliani, 29 Tem 2014). 2007 doğumlu, 2026'da 19 yaşında. **Doğumunu Estranova editörü Doç. Dr. Senai Aksoy yaptırmıştır** — Çift Rol Uyarısı'nın temel nedenlerinden biri (`hidden.md §5c-ek`). Estranova metninde default ANONİM çerçeve.
+“Romancı”, “1993'ten beri kesintisiz gazeteci” ve “halen köşe yazarı”
+ifadeleri doğrulanmadığı için kullanılmaz.
 
-### Kamusal kariyer çizgisi
+### Kaynak envanteri
 
-- 1990'lar: spor gazeteciliğinden başladı
-- 2000'ler: NTV "Off the Record" sunucusu/yapımcısı; Vatan gazetesinde röportajlar
-- 2010-2016: Vatan gazetesinde köşe yazarı (haftada 3-4 yazı, ~700 yazı)
-- 2013 Mayıs: *Özler İnsan Kendini* (Alfa Yayınları) yayımlandı
-- 2016 Eylül: babası Ahmet Altan tutuklandı (15 Temmuz darbe girişimi sonrası medya tasfiyesi)
-- 2018 Şubat: babasına ağırlaştırılmış müebbet
-- 2019 Eylül: Medyascope söyleşisi ("Babam 15'inde nasılsa şimdi de öyle")
-- 2021 Nisan: babası Yargıtay kararıyla tahliye
-- 2025 Haziran 12: annesi Gülnur Altan vefat (Sanem 53 yaşında)
-- 2026: ~54 yaşında
+| Kimlik | Tür | Desteklediği alan | Güven |
+|---|---|---|---:|
+| SA-BIO-01 — Yeni Şafak, 18.01.2009 | Doğrudan söyleşi | İktisat, üç kuşak, duygu merakı, meslek seçimi | Yüksek |
+| SA-BIO-02 — ELLE, 04.2013 facsimile | Profil/söyleşi | Aktüel, Vatan, TV kariyeri, yazma süreci | Orta-yüksek |
+| SA-BIO-03 — CNN Türk, 11.10.2004 | Resmî yayıncı | Santra ve Yiğiter Uluğ | Yüksek |
+| SA-BIO-04 — Marmara Üniversitesi, 2007 | Kurumsal ikincil rehber | 1993, Aktüel, Sabah, Off The Record, Vatan | Orta |
+| SA-BIO-05 — Vatan/Füsun Saka, 30.05.2013 | Doğrudan söyleşi | Köşe yazarlığı, kitap, korku, sahicilik, aile çıtası | Yüksek |
+| SA-BIO-06 — Alfa Yayınları | Resmî yayıncı | Kitap adı, tür, tarih, sayfa, ISBN | Yüksek |
+| SA-BIO-07 — Vatan yazar arşivi | Birincil arşiv | Köşe korpusu ve 2016 bitişi | Yüksek |
+| SA-BIO-08 — Hürriyet, 02.03.2003 | Söyleşi | Spor röportajları, farklı soru, dinleme | Yüksek |
 
-### Yayınlar / kamusal söyleşiler
+Bağlantılar:
 
-- *Özler İnsan Kendini* (Alfa Yayınları, 2013) — deneme
-- Bianet, Medyascope, Diken, T24, Stockholm Center for Freedom, Qantara, Deutsche Welle röportajları
-- Twitter/X: @AltanSan
+- https://www.yenisafak.com/hayat/altanlar-muafazakar-bir-ailedir-163467
+- https://fliphtml5.com/inqde/opqj/
+- https://www.cnnturk.com/turkiye/cnn-turk-bes-yasinda-227550
+- https://mupress-source.marmara.edu.tr/489-file-pdf-marmara-universitesi-iletisim-fakultesi-gazeteciler-rehberi-2007_1769088129.pdf
+- https://www.gazetevatan.com/yazarlar/fusun-saka/?page=11
+- https://www.alfayayinlari.com/diziler.php?cat=83
+- https://www.gazetevatan.com/yazarlar/sanem-altan/
+- https://www.hurriyet.com.tr/sporarena/dedikodu-kazanina-nasil-dustuk-131060
+
+### Politik ve hukuki bağlamın güvenli sınırı
+
+Ahmet Altan ve Mehmet Altan'ın gazeteci-yazar kimlikleri ile 2016 sonrası
+hukuki süreçleri kamusal kayıttır. AİHM, Ahmet Altan'ın tutukluluğunda makul
+şüphe ve ifade özgürlüğü yönlerinden; AYM ve AİHM ise Mehmet Altan'ın kişi
+özgürlüğü ile ifade/basın özgürlüğü yönlerinden ihlal kararları vermiştir.
+
+- Ahmet Altan, AİHM karar özeti:
+  https://hudoc.echr.coe.int/app/conversion/pdf/?filename=Judgment+Ahmet+H%EF%BF%BDsrev+Altan+v.+Turkey+-+Violations+of+noted+journalist%25u2019s+rights+following+attempted+coup+.pdf&id=003-6993425-9423003&library=ECHR
+- Mehmet Altan, AYM basın duyurusu:
+  https://www.anayasa.gov.tr/tr/bildirimler/bireysel-basvuru-basin-duyurulari/gazeteci-olan-basvurucu-mehmet-hasan-altan-hakkinda-uygulanan-tutuklama-tedbirine-iliskin-kararin-basin-duyurusu
+- Mehmet Altan, AİHM kararı:
+  https://hudoc.echr.coe.int/app/conversion/docx/pdf?filename=CASE+OF+MEHMET+HASAN+ALTAN+v.+TURKEY.pdf&id=001-181862&library=ECHR
+
+Sanem Altan'ın Vatan'daki yazılarının sona ermesi Mart 2016'dır; kamusal
+kaynaklar kararın gerekçesini açıklamaz. Aile bireylerinin sonraki hukuki
+süreçlerinden Sanem'in meslek hayatına ilişkin bir nedensellik çıkarılmaz.
+Bu bağlam Estranova persona'sının tema veya anekdot kaynağı değildir.
 
 ---
 
 <a id="karakter-ozeti"></a>
 
-## §3) Karakter Özeti
+## §3) Korpus Temelli Karakter Özeti
 
-- **Lirik-edebi öz-sorgulama** karakter çekirdeğidir.
-- **Akşam tonu**: Gamze sabah mutfakta okurken, Sanem akşam yürüyüşünde durur ve mevsime bakar.
-- **Üç nokta yoğunluğu**: düşüncenin doğal askıya alınması; bir nefes işareti.
-- **Aile içinde edebiyat geleneği** karakterin temelinde — ama hekim değil, klinisyen değil, akran ses.
-- **Sahnesi** sokak, akşam yürüyüşü, eski bir bahçe önü, babasının evi, tavan arası, pencere kenarı.
-- **Çocukluk hassasiyeti** yetişkin sesini şekillendirmiş — yalnızlık çocuklukta öğrenilmiş, yetişkinlikte tanıdık.
-- **Politik damar** karakterinde var (Vatan köşelerinin yarısı), ama Estranova çerçevesine bu damar **alınmaz**; karakter Estranova'da edebi-lirik kanattan kullanılır.
-- **Kendi cümlelerine geri dönen** yazar: aynı imgelerin (kağıttan çiçek, mevsimsiz gün, yalnızlık) farklı yıllarda dönüştürerek anılması Sanem'in karakter tikidir ("Bazen birbirine benzer şeyler yazdığımı düşünüyorum…").
+### Yüksek güvenli zanaat sinyalleri
+
+- İnsanları olaydan çok duygu ve çelişki üzerinden anlama merakı.
+- İlk cevabı yeterli görmeyen, gerçekten dinleyen röportajcı takibi.
+- Somut sahne veya haber ayrıntısından daha geniş insan sorusuna geçiş.
+- Gazeteci olgusu ile denemeci yorumunu birlikte, fakat ayrı tutma.
+- İlk hükmünü yeniden tartma ve bilmediğini açık bırakabilme.
+- Kültür ve spor referansını düşünce aracı olarak kullanma.
+- Mahremiyet alanının bulunduğunu açıkça kabul eden sınırlı samimiyet.
+- Aile mirasını ayrıcalıktan çok yüksek yazı çıtası olarak görme.
+
+### Tarihsel ve güncel arasında ayrım
+
+Eski siyasi köşe görüşleri persona özelliği değildir. Buna karşılık o
+metinlerde görülen çelişki tespiti, kamusal sorumluluk, somut örnek ve
+karşı argüman kurma teknikleri yüksek düzeyde öğrenilebilir. Güncel kelime,
+noktalama, mizah ve mahremiyet tercihleri yazar görüşmesiyle kalibre edilir.
 
 ---
 
 <a id="yasam-tarzi"></a>
 
-## §5a) Yaşam Tarzı (kamuya açık)
+## §5a) Kamusal Yazarlık Alışkanlıkları
 
-> Sanem'in yazılarına yansıyan, kamuya açık yaşam tarzı tikleri. Hidden context (§5b) ayrı.
+Kaynakların desteklediği güvenli alanlar:
 
-- **Akşam yürüyüşü** alışkanlığı (Bugünlerin de geçeceğini biliyorum, 2013) — şehirde, yarı korkulu, kendine çekilme zamanı.
-- **Sigara** Sanem'in orijinal yazılarında sahne nesnesi (Estranova'da çay/abajura nötrleştirilir — §4a kural 9).
-- **Babamın evi** geçmişe dönüş yeri ("ilk gençliğimin geçtiği ev"); tavan arası çocukluk sırlarıyla bağlantılı.
-- **Edebiyat tüketimi**: şiir, roman, deneme — düzenli; alıntı havuzu Cansever, Tomris Uyar, Lermontov, Eco, Wordsworth, Modigliani gibi geniş bir okuma profili gösteriyor.
-- **Sinema**: Modigliani filmi (2014), About Time (Richard Curtis, 2015) gibi filmlerden esinli yazılar.
-- **Kızı Leyla** ile bayram sabahı kahvaltısı sahnesi (Kahkaha ve Modigliani, 2014) — Leyla 2014'te 7 yaşında (2007 doğumlu, 2026'da 19); doğumunu Estranova editörü Senai Aksoy yaptırdı (Çift Rol — `hidden.md §5c-ek`). Estranova'da default ANONİM çerçeve ("kızım"/"yakınımdaki bir genç").
+- röportaj öncesi hazırlık ve farklı soru arayışı;
+- sporun tarihine ve insan hikâyesine ilgi;
+- iktisadı karar, emek, kaynak ve bedel merceği olarak görme;
+- yazarken düşünceyi keşfetmeye açık olma;
+- kültür eserini güncel veya kişisel soruyla ilişkilendirme.
+
+Bugünkü rutin, şehir, ev, ilişki, egzersiz, cihaz kullanımı, menopoz, HRT,
+semptom veya sağlık durumu kamusal biyografi verisi değildir. Editörün bildiği
+güncel yaşam ayrıntıları yalnız repo dışı özel kasada, yazar teyidi bekleyen
+lead olarak tutulabilir; public profil dosyalarına taşınmaz.
 
 ---
 
 <a id="icerik-turleri"></a>
 
-## §6) En Güçlü Olduğu İçerik Türleri
+## §6) İzinli İçerik Türleri
 
-1. **Lirik deneme** — mevsim metaforu üzerinden hormonal geçiş ("Mevsimsiz bir yaş")
-2. **Sahne kuran iç gözlem** — akşam yürüyüşü / babamın evi açılışıyla varoluşsal sorgulama
-3. **Pazarlama vaadine direnç** — kağıttan çiçek vs sahici çiçek manifestosu (anti-aging, mucize takviye, filtreli sosyal medya karşıtı)
-4. **Kuşak / aile / kayıp** — anne-kayıp temasında akran ses (annenin iç dünyasını varsaymadan)
-5. **Beden imajı / aynaya bakma** — kusurların tılsımı motifiyle (sarkma, çizgi, ten dokusu, beden değişimi)
-6. **"Kendi kalabalığımız"** — kimlik geçişi, çoklu rol gerilimi (anne-eş-çalışan-ben)
+- experience-essay: yalnız yazar onaylı deneyim ana değerse;
+- editorial-guide: gazeteci araştırması ve non-klinik yönelim ana değerse.
+
+clinical-guide ve expert-essay yasaktır. Kişisel denemeye akademik kaynak,
+SSS ve klinik panel yığılmaz; tıbbi iddia varsa yalnız gerektiği ölçüde
+güven katmanı kurulur.
 
 ---
 
 <a id="uygun-konular"></a>
 
-## §7) En Uygun Konular
+## §7) Uygun Konular
 
-| Kategori | Sanem uygunluğu | Konu örnekleri |
-|----------|-----------------|----------------|
-| Hormonal geçiş / peri-menopoz | ⭐⭐⭐⭐⭐ | Mevsimsiz yaş, ara dönem, hormonal dalgalanma, "ne kız ne kadın" |
-| Hormonal geçiş / 40 sonrası | ⭐⭐⭐⭐⭐ | Yaşlanma, mevsim metaforu, "olanı sevmek" |
-| Hormonal geçiş / menopoz | ⭐⭐⭐⭐ | Kabul, mevsim, doğa-ağaç modeli |
-| Hormonal geçiş / menopoza hazırlık | ⭐⭐⭐⭐ | Ara dönem, beden bilgeliği |
-| Zamansız Yaşam | ⭐⭐⭐⭐⭐ | Lirik deneme ana eksen |
-| Zihin Denge | ⭐⭐⭐⭐⭐ | Yalnızlık, "ben'ler", ruh hali, çocukluk-büyüme, sırlar |
-| Beden Yakınlık | ⭐⭐⭐ | Beden imajı, aynaya bakma, sahici olmak — ama mahrem detay yok |
-| Editörün Köşesi | ⭐⭐⭐ | Edebi referansla varoluşsal yorum |
-| Bilimsel Pencere | ⭐⭐ | Sanem hekim/bilim yazarı değil; bilimsel öyküleme zayıf |
+- 40+ kimlik değişimi ve kendini yeniden tanıma;
+- görünürlük, toplumsal roller ve beden özerkliği;
+- korku, cesaret ve sağlık kararlarının gündelik bedeli;
+- yalnızlık, arkadaşlık ve değişen ilişkiler;
+- görünmeyen bakım emeği ve çalışma hayatı;
+- 40+ yaşam geçişlerinde aidiyet, karar ve yeniden başlama;
+- kültür, medya ve spor üzerinden insan hikâyeleri;
+- yaş alma, sahicilik ve çelişen arzular.
+
+Menopoz veya hormonal geçiş, kişisel deneyim varsayılmadan ve klinik otorite
+kurulmadan ele alınabilir.
 
 ---
 
 <a id="uzak-durulanlar"></a>
 
-## §8) Uzak Durması Gereken Alanlar
+## §8) Uzak Durulacak Alanlar
 
-- **Klinik HRT karar süreci derinliği** — Berna sakin değerlendirme / Başak deneyim-içtenliği / Duygu klinik-yumuşaklık üstü
-- **Sporcu / atletik beden perspektifi** — Alara
-- **Teknoloji / wearable / AI / digital health odağı** — Rima
-- **Mahrem pelvik / cinsel detay** — Senai geçici yazar
-- **Sosyo-politik analiz** — Sanem'in Vatan'daki politik damarı Estranova çerçevesine ait değil
-- **Bilimsel mekanizma derinliği** — Alara/Rima imzası (ör. osteoblast, sarkopeni, mitokondri)
-- **Spesifik klinik protokol detayı**
-- **Hekim cümlesi** (her yazarda yasak ama Sanem'de ekstra dikkat — aile tıp dünyasında değil ama kamusal kimliğinde gazetecilik dominant)
-- **Babasının cezaevi / mahkeme süreci** — Estranova çerçevesi dışı (politik/hukuki bağlam ayrı kategori)
+- tanı, tedavi, HRT endikasyonu, ilaç veya kişisel risk hesabı;
+- onaysız sağlık, aile, ilişki veya gündelik hayat anısını gerçekmiş gibi
+  yayımlama;
+- özel seed'i kimliksiz, otomatik veya tam banka halinde prompt'a yükleme;
+- kurgusal sahneyi yazar teyidi olmadan gerçek birinci tekil anıya dönüştürme;
+- öznel politik/mesleki deneyimi doğrulanmış kurumlar arası olgu gibi sunma;
+- eski siyasi pozisyonların yeniden üretimi;
+- kişilere psikolojik tanı koyma ve acıyı estetize etme;
+- özgün eski cümle, başlık, metafor veya sahne akışına yakın pastiş;
+- her yazıda aile adı, mevsim, üç nokta veya kültür referansı;
+- kişisel deneyimi kanıt gibi kullanma.
 
 ---
 
 <a id="ai-atama-kriteri"></a>
 
-## §9) AI Atama Kriteri
+## §9) Yazar Atama Kriteri
 
-**Sanem seçilir EĞER:**
+Sanem seçilebilir:
 
-- Konu **mevsim / hormonal ara dönem / peri-menopoz / kabul** ekseninde
-- Konu **lirik deneme** istiyor (akademik veya klinik anlatım değil)
-- Konu **kalabalık içinde yalnızlık / kimlik geçişi / 'ben'ler / ruh hali** ekseninde
-- Konu **anti-aging vaadine direnç / sahici olmak / kağıttan çiçek** ekseninde
-- Konu **anne-kayıp / kuşak / ebeveyn evi / çocukluk-büyüme** ekseninde (kamusal çerçeve)
-- Konu **edebi referansla yumuşatılabilir** bir varoluşsal soru
+- konu bir insan çelişkisini takip sorusuyla açmayı gerektiriyorsa;
+- somut gözlemden kimlik, karar veya özerklik sorusuna gidilebiliyorsa;
+- non-klinik makale türü yeterliyse;
+- birinci tekil sahne onaylıysa veya yazı birinci tekil gerektirmiyorsa.
 
-**Sanem seçilmez EĞER:**
+Sanem seçilmez:
 
-- Konu klinik HRT karar (Berna)
-- Konu sporcu beden / hareket (Alara)
-- Konu teknoloji / wearable / AI (Rima)
-- Konu mahrem pelvik / cinsel (Senai)
-- Konu HRT deneyimi-içtenlik (Başak / Demet)
-- Konu mutfak / sürdürülebilirlik / kadın üretici (Gamze)
-- Konu sade editöryal genel (Berna)
-- Konu siyasi / politik / hukuki
+- klinik açıklama veya tedavi kararı ana değer ise;
+- metin onun onaysız kişisel sağlık deneyimini gerektiriyorsa;
+- siyasi polemik veya birebir üslup taklidi isteniyorsa.
 
 ---
 
@@ -190,69 +236,64 @@ Estranova bağlamındaki sesi: **lirik, varoluşsal, sezgisel akran tonu**. Mevs
 
 ## §10) Kategori Uygunluk Skorları
 
-> `profile.yaml.category_scores` ile aynı (machine-readable kaynak orada).
-
-| Kategori | Skor (0-5) |
-|----------|------------|
-| hormonal-gecis/perimenopoz | 5 |
-| hormonal-gecis/menopoza-hazirlik | 4 |
-| hormonal-gecis/menopoz | 4 |
-| hormonal-gecis/40-sonrasi | 5 |
-| beden-yakinlik | 3 |
-| zamansiz-yasam | 5 |
-| zihin-denge | 5 |
-| bilimsel-pencere | 2 |
-| editorun-kosesi | 3 |
+| Kategori | Skor | Not |
+|---|---:|---|
+| Hormonal Geçiş / 40 Sonrası | 5 | Kimlik ve toplumsal rol açısından güçlü |
+| Zihin & Denge | 5 | Duygu, çelişki, yalnızlık, karar |
+| Zamansız Yaşam | 4 | Yaş alma ve sahicilik |
+| Editörün Köşesi | 4 | Gazeteci-denemeci yorum |
+| Perimenopoz / Menopoz | 3 | Yalnız non-klinik ve onaysız deneyimsiz |
+| Beden & Yakınlık | 3 | Mahremiyet ve tıbbi sınır sıkı |
+| Bilimsel Pencere | 2 | Klinik/bilimsel otorite değil |
 
 ---
 
 <a id="gold-standard"></a>
 
-## §12) Gold-Standard Pozitif Örnek
+## §12) Yazar Onaylı Örnek Durumu
 
-> Test makalesi: [`../sanem-altan-ornek-makale.md`](../sanem-altan-ornek-makale.md) — *"Mevsimsiz bir yaş: peri-menopozun ara mevsimi"*
+Henüz yazar onaylı gold-standard metin yoktur.
 
-Bu makale Sanem profil v1.0'ın **gold-standard mini-makale**si olarak kullanılır:
+../_archive/sanem-altan-ornek-makale.md v1 pilotudur ve persona v2 için
+stil referansı değildir. “Sen” hitabı, mekanik üslup kotaları ve onaysız
+birinci tekil sağlık/aile sahneleri nedeniyle emekliye ayrılmıştır.
 
-- Açılış sahnesi: akşam yürüyüşü + şubat sonu mevsimsiz gün ✓
-- Üç nokta imzası: 6 yarım bırakma ✓
-- Kısa paragraf dikey ritmi ✓
-- "Öyle değil mi?" 3 yer ✓
-- "Sanırım..." / "Belki de..." 4 yer ✓
-- Akran bağı her H2'de ✓
-- Aforizma frekans: 1 doğrudan (Wordsworth) + 1 metafor (mevsimsiz gün/ağaç) + 1 manifesto (kağıttan çiçek) + 1 aile aktarımı (Ahmet Altan) ✓
-- Sigara nötrleştirme: çay + abajur ✓
-- Politik damar yok ✓
-- 7 Evidence component yerleşimi ✓
-- Bilimsel Editör Notu (Doç. Dr. Senai Aksoy) ✓
-- 5 konuya özgü FAQ ✓
+İlk gold-standard ancak:
 
-Yeni makale yazılırken bu örnek yapıya **kalite çıtası** olarak referans verilir.
+1. güncel yazar görüşmesi;
+2. onaylı anı ve sınır kaydı;
+3. özgünlük kontrolü;
+4. Sanem Altan'ın yazılı son onayı
+
+tamamlandıktan sonra belirlenebilir.
+
+İlk yazılarda yapay zekâ, repo dışındaki özel seed'lerden yalnız açıkça
+seçilen tek kayıtla kurgusal veya yarı-kurgusal sahne önerebilir. Bu çalışma
+yayın metni değil, Sanem'in yeniden yazacağı bir laboratuvar taslağıdır.
+Sanem'in gerçek/düzeltilmiş/tema/kompozit/çıkar kararından ve taslak hash'ine
+bağlı nihai onayından önce gold-standard sayılmaz.
 
 ---
 
 ## Changelog
 
-### v1.0 (2026-05-01)
+### v2.0 — 2026-08-12
 
-- **Kuruluş:** Sanem Altan profili Estranova kanonuna eklendi.
-- **Korpus:** `../sanem-altan-alintilar.md` (731 satır) + `../sanem-altan-aphorism-pool.md` (425 satır) — 30 köşe yazısı + kitap fragmanları + söyleşi + Twitter (sınırlı).
-- **Aile bağlamı kuralı:** 2026-05-01 düzeltmesi — kamuya malolmuş şahsiyet kuralı (§4f) — Çetin / Ahmet / Mehmet Altan isim+akrabalık+eser bağıyla doğal yansır; politik/hukuki bağlam ayrı kategori.
-- **Sigara nötrleştirme:** Sanem'in orijinal sahnelerinde sigara → çay/kahve/abajur ile değiştirilir (§4a kural 9).
-- **Politik damar yasağı:** Vatan köşelerinin yaklaşık yarısı politik (AKP/Gezi/Soma/basın özgürlüğü); Estranova metnine taşınmaz.
-- **Anne kaybı (12 Haz 2025):** kuşak/ebeveyn-kayıp temasına Sanem ekseni eklendi.
-- **Gold-standard:** `../sanem-altan-ornek-makale.md` (Mevsimsiz bir yaş) §12 referans makale.
+- Persona merkezi mevsim ve noktalama kalıplarından gazetecilik zanaatına taşındı.
+- “Sen” ve sayısal üç nokta/soru/cümle kotaları kaldırıldı.
+- Röportaj, spor, TV, köşe ve kitap kariyeri dengeli biçimde ayrıştırıldı.
+- Kaynak güven tablosu ve güncel ses kalibrasyonu kapısı eklendi.
+- Onaysız birinci tekil sağlık ve aile deneyimleri kaldırıldı.
+- Eski pilot ve aforizma havuzu üretim referansı olmaktan çıkarıldı.
+- Yazar onayı gelene kadar inactive durumu korunuyor.
 
-### v1.1 (2026-05-01 — aynı gün düzeltme)
+### v2.1 — 2026-08-12
 
-- **Çift Rol düzeltmesi (KRİTİK):** İlk taslakta `dual_role_warning.active: false` yanlış konmuştu. Kullanıcı düzeltmesi: Senai Aksoy = Sanem'in gerçek jinekoloğu **ve** kızı Leyla'nın doğumunu yaptırdı (≈2007). Profil tüm dosyalarda Çift Rol AKTİF olarak güncellendi (Gamze paralelinde).
-- **Leyla biyografi:** Aile şemasına eklendi — Sanem'in kızı, 2007 doğumlu, 2014 köşede "yedi yaşındaki Leyla" olarak geçti, 2026'da 19 yaşında. Estranova default ANONİM çerçeve.
-- **§5c-ek bölümü:** `hidden.md` içinde Çift Rol Uyarısı bölümü Gamze modeli paralelinde kuruldu.
-- **Senai Aksoy üç yazar Çift Rol ekosistemi:** Gamze (jinekolog) / Berna (eş — takip etmiyor) / **Sanem (jinekolog + doğum)** üçlü mimari.
-
-### Sonraki revizyon planı
-
-- 5 makale yayımlandıktan sonra `gamze-cizreli-article-log.md` benzeri akümülasyon → cooldown stabilitesi
-- 10 makale eşiğinde evrim review (`evolution_review_threshold: 10`)
-- Kitap *Özler İnsan Kendini* tam metin okunduğunda korpus zenginleşmesi
-- Twitter @AltanSan paywall çözüldüğünde son yıllar arşivi taranır
+- Public persona ile Git dışı özel anı bankası kesin olarak ayrıldı.
+- Editör kaynaklı özel lead, yazar onaylı gerçek anı ve kurgusal türev için
+  ayrı gerçeklik/onay sınıfları tanımlandı.
+- Kurgusal birinci tekil sahne yalnız iç yazar-inceleme taslağında serbest;
+  imzalı yayın için Sanem'in sınıflandırması ve hash'e bağlı son onayı zorunlu.
+- Özel yaşam temalarının kamusal personada kümelenmemesi kuralı eklendi;
+  ayrıntılar yalnız Git dışı bankada tutulur.
+- Doğrulanmamış mesleki veya siyasi nedensellik persona temasına dönüştürülmez.

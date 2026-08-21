@@ -41,6 +41,9 @@ Doktor olmayan alan uzmanları kurulda bilimsel uzman grubunda listelense bile m
 **Yaşam tarzı yazarları:**
 - **Gamze** ⭐ v3.2 — Anadolu/mevsim mutfağı + sabah ritmi + sürdürülebilir günlük pratik (imza eksen)
 - **Özlem** — finansal köprü, soru-açılış imzası
+- **Sanem** — gazeteci takip sorusu + görünmeyen duygu/çelişki + somut
+  ayrıntıdan insani soruya geçiş. Yalnız experience-essay/editorial-guide;
+  güncel yazar onayı tamamlanana kadar inactive.
 
 **Diğer:**
 - **Alara** — sporcu/atletik beden perspektifi
@@ -154,7 +157,8 @@ writers/<slug>/
   hot.md            §0.5 protokolü + §4 ses + §5c tıbbi sınır + §13 self-check (her makalede zorunlu)
   warm.md           §4a-§4f stil/şablon katmanları (konu-tetikli lazy-load)
   cold.md           §0 + §1-§3 + §5a + §6-§10 + §12 gold-standard + changelog (audit-only)
-  hidden.md         §5b gizli gözlemler + §5c-ek Çift Rol + §5d iç çelişkiler (yayınlanmaz; dual_role_warning aktifse zorunlu)
+  hidden.md         §5b/§5c-ek/§5d güvenlik ve hassas bağlam politikası
+                    (tracked ise gizli değildir; dual_role_warning aktifse zorunlu)
   README.md         klasör navigasyonu
   citations/
     canonical-sources.md   yazara özel atıf whitelist'i
@@ -176,7 +180,8 @@ writers/<slug>-alintilar.md         korpus (varsa)
 writers/<slug>-aphorism-pool.md     aforizma havuzu (varsa)
 ```
 
-**Şu an modüler formatta:** `gamze-cizreli` (pilot, v3.2).
+**Şu an modüler formatta:** `gamze-cizreli` (pilot, v3.2) ve
+`sanem-altan` (persona v2.1; güncel yazar onayı bekliyor, inactive).
 **Şu an legacy formatta:** `berna-aksoy`, `basak-pelister`, `duygu-karaosmanoglu`, `ozlem-denizmen`, `alara-baykent`, `isik-selin-gunce`, `rima-erdemir` (Aşama 2 rollout bekliyor).
 
 **Backward compatibility:** AI agent legacy yazarlar için tek-dosya okumaya devam eder; modüler yazarlar paralel çalışır. Aşama 2 rollout'u tamamlanana kadar hibrit dönem sürer.
@@ -198,6 +203,26 @@ Pre-script şunları yapar:
 6. Atıf çerçevesi referanslarını ekle (canonical/extended/pending path'leri + frekans kuralı)
 7. Çelişki çözüm zincirini sırasıyla yazdır
 
+**Özel seed istisnası:** `article-context-build.mjs` özel anı bankasını
+otomatik yüklemez. Sanem gibi kontrollü taslak laboratuvarı açık bir yazarda
+tek bir redakte edilmiş kayıt ancak açık seçimle alınır:
+
+```bash
+npm run writer:seed -- --writer sanem-altan --seed-id <kimlik>
+```
+
+Ham banka Git dışındadır; profile, hidden.md, article-log, terminal özeti veya
+genel prompt bağlamına kopyalanmaz. Kurgusal ya da editör kaynaklı lead yalnız
+yazar-inceleme taslağında kullanılabilir ve imzalı yayın için yazarın metin
+hash'ine bağlı açık onayı gerekir.
+
+Loader, bankayı
+`writers/_schema/private-writer-seed-bank.schema.json` ile doğrular; yazar
+slug'ı ile `author_id` eşleşmezse, güvenlik bayrakları kapalıysa, durum açık
+allowlist'te değilse, yol repo/harici kasa kökünden çıkıyorsa veya
+symlink/junction içeriyorsa fail-closed durur. Kullanım günlüğü ham bağlam
+değil yalnız opak seed/kullanım kimliği, taslak hash'i ve karar durumu taşır.
+
 **Çıktı modları:**
 - Default (`--writer X --topic Y`): markdown (insan-okur, AI prompt'a manuel kopya)
 - `--json`: yapısal JSON (programatik enjekte için)
@@ -213,6 +238,7 @@ Atanan yazarın profiline gir, varsa **§0.5 Yürütme Protokolü**'nü uygula:
 | Yazar | Format | Protokol versiyonu | §0.5 konumu |
 |---|---|---|---|
 | Gamze Cizreli | **modüler** | **v3.2 ✅** (12 adım, korpus + manifesto kalıpları + Mevlana mimarisi + Erken/Olgun sentezi) | `writers/gamze-cizreli/hot.md §0.5` |
+| Sanem Altan | **modüler** | **v3.2 / persona v2.1** (gazetecilik zanaatı + özel-seed/kurgu onay kapısı; inactive) | `writers/sanem-altan/hot.md §0.5` |
 | Berna, Özlem | legacy | v2.1 — §3 ses + §4 stil; §0.5 yok (v3.2'ye taşıma sırası bekliyor) | — |
 | Duygu, Başak, Alara, Rima, Işık | legacy | v2 | — |
 
@@ -602,6 +628,8 @@ Detaylı prosedür: Framework Katman D.
 - **docs/WRITER-DYNAMICS-FRAMEWORK.md** — yazar dinamizm mimarisi (5 katman: DNA / log / temporal / evrim / cross-link)
 - **docs/HANDOFF-modular-writer-profiles.md** — modüler profil mimari geçişi (Aşama 1-3 rollout planı)
 - **writers/_schema/profile.schema.json** — modüler `profile.yaml` JSON Schema (zorunlu alanlar + section_index + citations)
+- **writers/_schema/private-writer-seed-bank.schema.json** — Git dışı özel
+  seed bankası için fail-closed kimlik, izin ve durum şeması
 - **icerik/yazar-onaylari/<yazar>/article-log.md** — per-writer akümülatif log (Katman B)
 - **writers/gamze-cizreli/** — modüler v3.2 protokol (`profile.yaml` + `hot.md §0.5/§4/§5c/§13` + `warm.md` + `cold.md §12 gold-standard` + `hidden.md §5c-ek`)
 - **scripts/article-context-build.mjs** — pre-script: konu+yazar → yüklenecek dosya listesi + cooldown + Çift Rol bayrağı + atıf çerçevesi

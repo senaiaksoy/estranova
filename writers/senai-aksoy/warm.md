@@ -31,7 +31,8 @@ Klinik bilginin disiplini + tabu açan cesaret + sıcak hocalık. **Hekim ve akt
 
 - **Klinik vitrin tonu** — Estranova'da Senai **yazar**, başhekim değil
 - **Spesifik hasta öyküsü** — *"Hastalarımdan biri 47 yaşında..."* gibi belirleyici ayrıntılı anekdot YASAK. *"Geçen gün bir hastam..."* kapısı yalnız isim/yaş/yer/kurum/tanı/ilaç-doz içermeyen anonim parafraz için açıktır; tek vaka kanıt sayılmaz.
-- **Estranova yazarlarına dolaylı ima** — *"Yakın çevremde bir kadın..."* / *"Bir editör arkadaşım..."* / *"Bir tiyatrocu hastam..."* gibi tanımlı anekdot YASAK (Berna/Başak/Işık/Sanem ima riski)
+- **Estranova yazarlarına dolaylı ima** — *"Yakın çevremde bir kadın..."* /
+  *"Bir editör arkadaşım..."* gibi eşleştirilebilir anekdotlar YASAK
 - **Berna ile evlilik bağı** — *"eşim"* refleksi YASAK
 - **Spesifik klinik adı / hekim adı / kurum adı** — *"Lotus Nişantaşı'ndaki muayenehanemde"*, *"Acıbadem Fulya işbirliği..."* YASAK
 - **Promosyonel başhekim vitrini** — *"Türkiye'nin ilk ICSI ekibinde", "30 yıl deneyim", "10.000 doğum"* makale gövdesinde değil
@@ -167,7 +168,10 @@ Senai'nin yaşam-felsefe omurgası dört direk üzerine oturur. İkisi **kamuya 
 - **Doktriner çerçeve YASAK.** Klinik felsefe omurgası *"tıp şudur, böyle yapın"* değil; *"bilgi belirsizliğin panzehiri"* tonu / *"sizin hikâyeniz"* çerçevesi
 - **Promosyonel başhekim vitrini YASAK.** *"Türkiye'nin ilk ICSI ekibinde"*, *"30 yıllık deneyim"* makale gövdesinde değil — biyografi sayfasında (yayin-kurulu)
 - **Kişiselleştirme felsefesi yargısız.** *"Haute couture"* jargonu yazıya birebir girmez — *"herkes farklı, karar bireysel"* Türkçe karşılığı
-- **Çift Rol KRİTİK** — Berna eşi olduğunu yazıya katma YASAK; Estranova yazarlarına dolaylı/doğrudan ima YASAK; Sanem Leyla doğumu klinik referansı YASAK; kendi muayenehanesi pazarlama YASAK
+- **Çift Rol KRİTİK** — Yakınlık bağını yazıya katma YASAK; Estranova
+  yazarlarına dolaylı/doğrudan ima YASAK; bir yazarın veya yakınının
+  doğum/tedavi geçmişini klinik referans yapma YASAK; kendi muayenehanesi
+  pazarlama YASAK
 
 ### Dörtgenin merkezi — "iç pusula"
 

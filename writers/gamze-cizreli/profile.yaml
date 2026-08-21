@@ -28,8 +28,8 @@ file_layout:
   cold: "./cold.md"
   hidden: "./hidden.md"
   readme: "./README.md"
-  corpus: "../gamze-cizreli-alintilar.md"
-  aphorism_pool: "../gamze-cizreli-aphorism-pool.md"
+  corpus: "../_archive/gamze-cizreli-alintilar.md"
+  aphorism_pool: "../_archive/gamze-cizreli-aphorism-pool.md"
   article_log: "../../icerik/yazar-onaylari/gamze-cizreli/article-log.md"
   citations_dir: "./citations/"
 
@@ -475,11 +475,11 @@ closing_pattern:
 
 corpus_reference:
   files:
-    - path: "../gamze-cizreli-alintilar.md"
+    - path: "../_archive/gamze-cizreli-alintilar.md"
       size_kb: 79
       lines: 1554
       content: "241 unique alıntı (195 Ateşle Oynayanlar + 46 Hürriyet); 9 tematik bölüm"
-    - path: "../gamze-cizreli-aphorism-pool.md"
+    - path: "../_archive/gamze-cizreli-aphorism-pool.md"
       size_kb: 29
       lines: 536
       content: "10 tema havuzu, 56 distile cümle, Estranova-uygunluk yıldızı + atıf çerçevesi"

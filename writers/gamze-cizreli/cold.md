@@ -10,8 +10,8 @@
 
 > Detay: `profile.yaml.corpus_reference`
 
-- **`../gamze-cizreli-alintilar.md`** — TAM derleme (~79 KB, 1554 satır, 241 unique alıntı: 195 *Ateşle Oynayanlar* + 46 Hürriyet)
-- **`../gamze-cizreli-aphorism-pool.md`** — distile havuz (~29 KB, 56 distile cümle, Estranova-uygunluk yıldızı + atıf çerçevesi)
+- **`../_archive/gamze-cizreli-alintilar.md`** — TAM derleme (~79 KB, 1554 satır, 241 unique alıntı: 195 *Ateşle Oynayanlar* + 46 Hürriyet)
+- **`../_archive/gamze-cizreli-aphorism-pool.md`** — distile havuz (~29 KB, 56 distile cümle, Estranova-uygunluk yıldızı + atıf çerçevesi)
 
 Etiket sistemi:
 

@@ -1,0 +1,350 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://estranova.com/schemas/private-writer-seed-bank.json",
+  "title": "Estranova Private Writer Seed Bank",
+  "description": "Git dışında tutulan, yalnız iç yazar incelemesi için kullanılan özel seed bankasının fail-closed şeması.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "classification",
+    "author_id",
+    "public_git_allowed",
+    "auto_load",
+    "captured_at",
+    "provenance_note",
+    "seeds"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "classification": { "const": "restricted_personal" },
+    "author_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "public_git_allowed": { "const": false },
+    "auto_load": { "const": false },
+    "captured_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "provenance_note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/seed"
+      }
+    }
+  },
+  "definitions": {
+    "seed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "status",
+        "truth_status",
+        "topic",
+        "sanitized_context",
+        "sensitivity",
+        "use_policy",
+        "approvals",
+        "fictionalization"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z0-9-]{8,80}$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "editor_provided_private_lead",
+            "author_confirmed_private_seed",
+            "fictionalized_draft_seed",
+            "editor_speculation"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending_author_confirmation",
+            "author_approved",
+            "draft_allowed",
+            "blocked",
+            "revoked"
+          ]
+        },
+        "truth_status": {
+          "type": "string",
+          "enum": [
+            "unverified_editor_report",
+            "unverified_causality_claim",
+            "speculation_not_fact",
+            "fictional_construct",
+            "author_confirmed"
+          ]
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_note": { "type": "string" },
+        "sanitized_context": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2400
+        },
+        "author_confirmed": { "type": "boolean" },
+        "draft_label": { "type": "string" },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z0-9-]{8,80}$"
+          }
+        },
+        "sensitivity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["level", "temporal", "third_party_subjects"],
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": ["low", "medium", "high", "critical"]
+            },
+            "temporal": { "type": "boolean" },
+            "third_party_subjects": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "use_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "internal_author_review_draft",
+            "first_person_draft",
+            "fictionalization_allowed",
+            "public_attribution",
+            "published_first_person"
+          ],
+          "properties": {
+            "internal_author_review_draft": { "type": "boolean" },
+            "first_person_draft": { "type": "boolean" },
+            "fictionalization_allowed": { "type": "boolean" },
+            "public_attribution": { "const": false },
+            "published_first_person": { "const": false },
+            "third_party_consent_required": { "type": "boolean" }
+          }
+        },
+        "approvals": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "blocked",
+              "undecided",
+              "approved",
+              "denied",
+              "revoked"
+            ]
+          }
+        },
+        "fictionalization": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "forbidden_details"],
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "deidentified_draft",
+                "deidentified_composite",
+                "fictional_theme_only",
+                "theme_only",
+                "blocked"
+              ]
+            },
+            "required_label": { "type": "string" },
+            "forbidden_details": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "pending_author_confirmation" } },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "kind": { "const": "editor_provided_private_lead" },
+              "truth_status": { "const": "unverified_editor_report" },
+              "author_confirmed": { "const": false },
+              "approvals": {
+                "properties": {
+                  "fact_confirmation": { "const": "pending" },
+                  "draft_use": { "const": "pending" },
+                  "author_draft_use": { "const": "pending" }
+                },
+                "required": ["fact_confirmation"],
+                "anyOf": [
+                  { "required": ["draft_use"] },
+                  { "required": ["author_draft_use"] }
+                ]
+              },
+              "fictionalization": {
+                "properties": {
+                  "mode": {
+                    "enum": [
+                      "deidentified_draft",
+                      "deidentified_composite",
+                      "fictional_theme_only",
+                      "theme_only"
+                    ]
+                  }
+                }
+              }
+            },
+            "required": ["author_confirmed"]
+          }
+        },
+        {
+          "if": {
+            "properties": { "status": { "const": "draft_allowed" } },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "kind": { "const": "fictionalized_draft_seed" },
+              "truth_status": { "const": "fictional_construct" },
+              "author_confirmed": { "const": false },
+              "use_policy": {
+                "properties": { "fictionalization_allowed": { "const": true } }
+              },
+              "approvals": {
+                "properties": {
+                  "author_review": { "enum": ["pending", "undecided"] }
+                },
+                "required": ["author_review"]
+              },
+              "fictionalization": {
+                "properties": {
+                  "mode": {
+                    "enum": [
+                      "deidentified_draft",
+                      "deidentified_composite",
+                      "fictional_theme_only",
+                      "theme_only"
+                    ]
+                  }
+                }
+              }
+            },
+            "required": ["author_confirmed"]
+          }
+        },
+        {
+          "if": {
+            "properties": { "status": { "const": "author_approved" } },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "kind": { "const": "author_confirmed_private_seed" },
+              "truth_status": { "const": "author_confirmed" },
+              "author_confirmed": { "const": true },
+              "approvals": {
+                "properties": {
+                  "fact_confirmation": { "const": "approved" },
+                  "draft_use": { "const": "approved" },
+                  "author_draft_use": { "const": "approved" },
+                  "author_review": { "const": "approved" }
+                },
+                "required": ["fact_confirmation"],
+                "anyOf": [
+                  { "required": ["draft_use"] },
+                  { "required": ["author_draft_use"] },
+                  { "required": ["author_review"] }
+                ]
+              },
+              "fictionalization": {
+                "properties": {
+                  "mode": {
+                    "enum": [
+                      "deidentified_draft",
+                      "deidentified_composite",
+                      "fictional_theme_only",
+                      "theme_only"
+                    ]
+                  }
+                }
+              }
+            },
+            "required": ["author_confirmed"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": { "enum": ["blocked", "revoked"] }
+            },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "fictionalization": {
+                "properties": { "mode": { "const": "blocked" } }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "pending_author_confirmation",
+                  "author_approved",
+                  "draft_allowed"
+                ]
+              },
+              "sensitivity": {
+                "properties": {
+                  "third_party_subjects": { "minItems": 1 }
+                },
+                "required": ["third_party_subjects"]
+              }
+            },
+            "required": ["status", "sensitivity"]
+          },
+          "then": {
+            "properties": {
+              "use_policy": {
+                "properties": {
+                  "third_party_consent_required": { "const": true }
+                },
+                "required": ["third_party_consent_required"]
+              },
+              "approvals": {
+                "required": ["third_party_consent"]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

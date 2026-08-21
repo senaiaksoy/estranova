@@ -1,12 +1,18 @@
-# Sanem Altan — Aphorism Pool (Estranova writer agent için tematik tasnif)
+# Sanem Altan — Emekli v1 Aforizma Havuzu
 
-> **Kaynak:** `sanem-altan-alintilar.md` — ~30 köşe yazısı + 1 kitap ön-örneği + söyleşi + sosyal medya derlemesinden tematik olarak yeniden tasnif edilmiş alıntı havuzu.
-> **Statü (2026-04-30):** Sanem Altan henüz Estranova kanon yazarı değildir. Bu havuz, yazar profili oluşturulduğunda **profile.yaml `aphorism_pool` referansı** olarak kullanılacak hazırlık dosyasıdır.
-> **Genel ilke:** Yazar profili v3 mantığıyla birlikte kullanılır; **birebir kopya yasaktır, gevşek uyarlama serbesttir.**
+> **Durum (2026-08-12): RETIRED / AUDIT-ONLY.** Bu dosya persona v1'in
+> tarihsel kaydıdır; üretim promptuna yüklenmez ve profil tarafından referans
+> verilmez.
+>
+> Özgün cümleler, metaforlar, başlıklar ve sahne akışları yalnız yakın
+> benzerliği engelleyen bir dışlama envanteridir. Birebir kopya, yakın parafraz,
+> “gevşek uyarlama”, rotasyon veya yazar adına yeni anı üretme yasaktır.
+> Aşağıdaki eski operasyonel yönergeler persona v2 tarafından geçersiz
+> kılınmıştır; tarihsel denetim izi olarak korunur.
 
 ---
 
-## Kullanım Kuralları (HARD CONSTRAINTS)
+## Emekli v1 kullanım notları (uygulanmaz)
 
 ### Atıf çerçevesi
 
@@ -45,8 +51,8 @@ Hangi alıntı seçilirse seçilsin:
 - **Aile bağlamı SERBEST** *(önemli — kuralın 2026-05-01 düzeltmesi)*: Çetin Altan (dede), Ahmet Altan (baba), Mehmet Altan (amca) **üç kuşaklık Türk gazetecilik-edebiyat mirasının kamuya malolmuş şahsiyetleridir**; aile çerçevesinde makale gövdesine **doğal olarak yansıyabilirler**. Sanem'in kendi yazım kalıbı zaten böyle: *"babamın evi"*, *"babamın bir cümlesi"*, *"dedemin **Kopuk Kopuk** yazı dizisinde"*, *"amcam"*. Bu doğallık korunur — yapay bir mesafe ("ailemden biri") ile silinmez. **Atıf çerçevesi:** birinci kişi yazıyorsa *"babam"* / *"dedem"* / *"amcam"*; üçüncü kişiden aktarımda *"Ahmet Altan'ın bir köşe yazısında"* / *"Çetin Altan'ın **Kopuk Kopuk**'unda"* gibi isim+bağlam zinciri korunur. Yasak olan **politik / hukuki bağlam** (cezaevi, müebbet, davalar) ayrı kategoridir; aile şahsiyetlerinin **edebi-gazetecilik mirası** ile **siyasi süreç** karıştırılmaz.
 - **Hekim / klinisyen personası YASAK** (CLAUDE.md §3): Sanem hekim değil. Yazılarında bu damar zaten yok.
 - **Doktrin önerisi YASAK:** Osho / Wordsworth / tasavvuf metaforları kalır, ama "şunu yapın / oruç tutun / meditasyon kuralı" YASAK.
-- **ÇİFT ROL UYARISI (KRİTİK SINIR — 2026-05-01 düzeltmesi):** Estranova editörü Doç. Dr. Senai Aksoy = Sanem'in gerçek jinekoloğu **ve** kızı Leyla'nın doğumunu yaptırdı (≈2007). Muayene odası bilgisi (HRT/ilaç/doz/lab/tanı/jinekolojik bulgu) ve doğum süreci klinik detayı (sezeryan/normal, komplikasyon, doğum sonrası) Estranova taslaklarına **sızmaz**. Bu havuzdan seçilen aforizma "Sanem'in kişisel deneyimi olarak" çerçevelenirken klinik detay eklenmez. Detay: `sanem-altan/hidden.md §5c-ek`.
-- **Leyla — kızının ismi default ANONİM:** "Kahkaha ve Modigliani" 2014 yazısındaki bayram kahvaltısı sahnesi (waffle, çilek, muz, kahkaha) gibi anekdotal-duygusal detaylar Estranova'da **anonim çerçeve** ("kızım", "yakınımdaki bir genç") ile taşınır. İsim yalnızca Sanem birinci kişi yazıyorsa **VE** Leyla 18+ kendi rızası dosyalanmışsa kullanılır. Doğum süreci klinik detayı YASAK.
+- **Özel bilgi güvenlik duvarı:** Kamusal kaynak dışında bilinen kişisel veya klinik bilgi hiçbir arşive, prompta ya da taslağa yazılmaz.
+- **Rıza kapısı:** Sağlık, aile, kayıp ve gündelik hayat sahneleri ancak Sanem Altan'ın konuya özgü yazılı onayıyla kullanılabilir; kamusal oluşları birinci tekil kullanım izni vermez.
 
 ### Frekans kuralı
 
@@ -275,9 +281,8 @@ Estranova'ya taşırken: 1 ve 2 olduğu gibi alınır; 3 → "bir kahve hazırla
 
 > *"Zaman tüneline girmek gibi kapısından girdiğim anda yürüdükçe eskiye gidiyordum…"*
 
-- **Estranova-uygunluk:** ⭐⭐⭐⭐ — annenin/babanın evine gitmek, çocukluk evi, bakım yükü ziyareti
-- **Kullanım koşulu:** Anne-baba evi, kuşaklar arası ziyaret, eski fotoğraflar, sandık
-- **Sigara yumuşatma:** Sanem'in orijinal sahnesinde "bir sigara yaktım" var; Estranova'da "bir bardak su doldurdum / pencereyi araladım / abajurun ışığında oturdum" gibi nötrleştirilir.
+- **AUDIT-ONLY:** Güncel ev, aile veya bakım sahnesi üretmek için kullanılamaz.
+  Orijinal sahne yalnız tarihsel korpus ve yakın benzerlik denetiminde kalır.
 
 ---
 
@@ -367,8 +372,7 @@ Estranova'ya taşırken: 1 ve 2 olduğu gibi alınır; 3 → "bir kahve hazırla
 
 > *"Yatılı okulda okumadım ama yatılı okul akşamlarının sessizliğini hep duydum içimde nedense…"*
 
-- **Estranova-uygunluk:** ⭐⭐⭐⭐ — çocukluk akşam yalnızlığı, anne-evden-uzaklaşma
-- **Kullanım koşulu:** "İlk yalnızlık" tema sahnesi
+- **AUDIT-ONLY:** Güncel aile veya çocukluk anısı üretmek için kullanılamaz.
 
 **9.2 — `[SA]` "Sırrın zıt anlamlısı..." — 10 Ara 2011**
 
@@ -383,30 +387,25 @@ Estranova'ya taşırken: 1 ve 2 olduğu gibi alınır; 3 → "bir kahve hazırla
 
 ---
 
-## Zaman Çıpaları (Sanem'in kendi yazılarında geçen tarihler)
+## Mesleki zaman çıpaları
 
-Sanem'in kişisel zaman çıpaları (yazılarında geçen, doğrulanabilir):
+Bu arşiv yalnız korpusun dönemini gösteren mesleki tarihleri tutar:
 
-- **1972** — doğum
-- **1980** — kardeşi Kerem'in doğumu (Sanem 8 yaşında)
-- **1998** — 26 yaşında, *Hürriyet Kelebek* "Bir zamanlar bitirimdi" yazısında biyografisi geçer
-- **2010 Mart** — Ara Güler ile ilk röportaj (~38 yaşında); babasının ölmüş, dedesinin Ara Güler ile 41 yıl önceki yazı dizisini hatırlatır
-- **2010–2016** — Vatan'da köşe yazarlığı en yoğun dönem (38–44 yaş)
-- **2013 Mayıs** — *Özler İnsan Kendini* yayımlanır (41 yaşında)
-- **2016 Eylül** — babası Ahmet Altan tutuklanır (Sanem 44 yaşında)
-- **2018 Şubat** — babasına ağırlaştırılmış müebbet (Sanem 46 yaşında)
-- **2019 Eylül** — Medyascope söyleşisi (Sanem 47 yaşında)
-- **2021 Nisan** — babası tahliye olur (Sanem 49 yaşında)
-- **2025 Haziran 12** — annesi Gülnur Altan vefat eder (Sanem 53 yaşında)
-- **2026** — şu anki yaş ~54
+- **1998** — *Hürriyet Kelebek* biyografik söyleşisi
+- **2010–2016** — erişilebilir Vatan köşe yazısı korpusu
+- **2013 Mayıs** — *Özler İnsan Kendini* yayımlanır
+- **2016 Mart** — erişilebilir son Vatan köşe yazısı
 
-> **Estranova kullanımı:** Sanem profilinde sahne kurarken bu zaman çıpaları kullanılabilir; ama **politik dönem (2016–2021)** Estranova damarına alınmaz — sadece **anne kaybı (2025), 40'lardan 50'lere geçiş, kitap yazma** gibi hormonal-geçiş-eksenel olaylar.
+> **Persona v2 kullanımı:** Bu tarihler sahne kurmak, yaş çıkarmak veya kişisel
+> deneyim üretmek için kullanılamaz. Yalnız korpusun dönemini ve güncellik
+> sınırını gösterir.
 
 ---
 
-## Özet — Sanem'in 5 imza-cümlesi (Estranova için en kullanışlı)
+## İmza dışlama kaydı — emekli v1
 
-Bir Sanem Altan yazısı yazılırken bu beş cümle **çekirdek motif havuzu** olarak işler:
+Aşağıdaki beş cümle üretim motifi değildir; yalnız yakın örtüşmeyi engellemek
+için korunur:
 
 1. **"Sonbahar hep bir aşka benziyor çünkü… İçinde ne taşıdığını, sana ne getirdiğini pek bilemiyorsun."** [SA, 2 Eyl 2015]
 2. **"Mevsimsiz bir gün gibi olmak istiyorsun… Bu sükunete bırakmak istiyorsun kendini…"** [SA, 13 Şub 2016]
@@ -414,7 +413,7 @@ Bir Sanem Altan yazısı yazılırken bu beş cümle **çekirdek motif havuzu** 
 4. **"Ancak birbirimizi kusur ve eksiklerimizle gördüğümüzde birbirimizi gerçekten sevebiliriz."** [SA, 5 Şub 2015]
 5. **"Bugünün sonsuz olmadığını, bugünün de geçeceğini biliyorum. Dün geçtiği gibi bugün de geçecek."** [SA, 31 Oca 2013]
 
-Bunlar **rotasyonla** kullanılır; aynı makalede ikiden fazlası birikmemelidir (frekans kuralı).
+Bunlar rotasyonla kullanılmaz, uyarlanmaz ve üretim promptuna taşınmaz.
 
 ---
 
@@ -424,4 +423,6 @@ Bunlar **rotasyonla** kullanılır; aynı makalede ikiden fazlası birikmemelidi
 2. **Twitter @AltanSan arşivi:** X paywall sebebiyle bu derlemede yalnız bir tweet alındı; Sanem'in son yıllardaki sözlü kayıtları için ek alıntı taraması yapılabilir.
 3. **Söyleşiler (videoda):** Medyascope (YouTube), Deutsche Welle, Qantara röportajlarında **transkript olmayan ama videoda söylediği** cümleler ek alıntı kaynağı olabilir.
 4. **2010 öncesi:** Vatan arşivinin 96. sayfası 2010'a kadar gidiyor; Sanem'in **NTV "Off the Record"** dönemi (2000'ler ortası) için ayrı arşiv aranabilir.
-5. **Yazar profili kararı:** Sanem Altan Estranova kanon yazarı olacaksa `writers/sanem-altan/profile.yaml` + `writers/sanem-altan-article-log.md` kurulur ve bu havuz `aphorism_pool` referansı olarak işlenir.
+5. **Persona v2 bakımı:** Bu havuz audit-only kalır; yeni kaynaklar kısa
+   parafrazla `cold.md`ye, yalnız tekrar eden ve yazarca onaylanan yüksek
+   düzey zanaat ilkeleri `warm.md`ye alınır.

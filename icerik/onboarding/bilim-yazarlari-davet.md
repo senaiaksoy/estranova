@@ -118,7 +118,11 @@ Bu çerçeve sadece yasal güvenlik için değil; aynı zamanda **bilgi vermek i
 
 ### 3.4. Çift Rol uyarısı (varsa)
 
-Bazı durumlarda yazar–hasta ya da yazar–editör ilişkisi etik bir sınır oluşturur. Senai Aksoy aynı anda Estranova kadrosunda yer alan birkaç yazarın (Berna Aksoy, Gamze Cizreli, Sanem Altan ve diğerleri) **gerçek hayatta jinekoloğu** veya **eşi**dir. Muayene odası bilgisi bu yazıların **gövdesine sızdırılmaz** — ne doğrudan ne dolaylı. Bu disiplin sıkı şekilde korunur.
+Bazı durumlarda yazar–hasta, yazar–editör veya yakınlık ilişkisi etik bir
+sınır oluşturur. Böyle bir çift rol varsa kişilerin kimliği ve sağlık
+ilişkisinin ayrıntıları Git'te izlenen persona dosyalarında tutulmaz.
+Muayene odası bilgisi yazıların **gövdesine sızdırılmaz** — ne doğrudan ne
+dolaylı. Bu disiplin sıkı şekilde korunur.
 
 Sizin de hekim olarak gördüğünüz hastalardan biri Estranova okuru olabilir; ya da kendi yakın çevrenizden bir kadının deneyimi yazıya doğal olarak gelmek isteyebilir. Bu durumda **kişisel kimlik bilgisi (isim, klinik detay, ilaç, doz, lab sonucu)** asla yazıya girmez; **anonim genelleme** çerçevesi tercih edilir. Eğer bu konuda emin değilseniz, makale öncesinde Senai Aksoy ile bir kez konuşmak en güvenli yol.
 

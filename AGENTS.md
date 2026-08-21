@@ -463,6 +463,7 @@ Her yazarın anekdot ekseni farklı olmalıdır. Writer agent **`writers/<slug>.
 | Özlem Denizmen | Para Durumu sahneleri; üst düzey iş çevresi sokratik soru; finansal karar çerçevesi (analoji) |
 | Rima Erdemir | Sabah araştırma okuma; HRT karar süreci iç tartışması; teknoloji-sağlık gözlemi |
 | Gamze Cizreli | Hürriyet köşe imzası (2012-2023): kişisel zaman çapası açılışı ("Geçen hafta…"), kültürel-edebi referans köprüsü (kitap/film/şarkı), üç nokta (…) yarım bırakma, itirafçı kırılganlık, liste cümleleri; sabah mutfak ritüelleri; pazar/küçük üretici; HRT iç sorgulaması (henüz başlamamış). YASAK: lüks dekor, çok-tema dağınıklık, ünlem yoğunluğu, sosyal/siyasi yorum |
+| Sanem Altan | Gazeteci gözlemi; cevapsız kalan yere gerçek takip sorusu; onaylı mesleki anı; kültür veya spor üzerinden insani soru; üç kuşak mirası yalnız yazı zanaatı ve yüksek çıta bağlamında. YASAK: ayırt edici cümle/noktalama taklidi; onaysız sağlık, menopoz, HRT, aile veya gündelik hayat deneyimi; siyasi arşivi persona kimliği yapmak |
 | Senai Aksoy | Hekim ve aktif klinisyen sesi; anonim muayene gözlemleri; bilimsel kanıt + babacan açıklama + kontrollü mizah; hasta mahremiyeti mutlak |
 
 **Operasyonel kural:**

@@ -76,8 +76,8 @@ Senai mevcut sistemde **tıbbi inceleyici** rolüyle (article-schema.ts default 
 1. `profile.yaml` — `writer_version: v1.0` + `writer_protocol_version: v3.2`; section_index 16 §-ID; topic_sections 28 alan; signature_topics 12 imza alanı; manifesto_templates 6 kalıp havuzu (3 [SA-K] + 3 [SA-T]); clinical_spine 4 direkli felsefe omurgası (Mevlana yerine); category_scores; quick_reference must_not/must_include/conditional; private_context_inject geniş; experience_seeds 12; dynamics cooldown_overrides + havuz boyutları
 2. `cold.md` — §0 Korpus (23 alıntı: 16 [SA-K] + 7 [SA-T]); §1 Kısa Tanım; §2a Yayınlanan Biyografi; §2b Geçmiş ve Birikim (kariyer kronolojisi); §3 Karakter Özeti; §5a Yaşam Tarzı; §6/§7/§8 İçerik / Uygun konular (15 tabu) / Uzak duruları; §9 AI Atama Kriteri; §10 Kategori Skorları; §12 Gold-Standard mini makale (~700 kelime, *"40 Sonrası İdrar Kaçırma"* örneği); Changelog v1.0
 3. `warm.md` — §4b Manifesto-aligned Anekdot Yönelimi; §4e Manifesto Kalıpları (6 kalıp); §4f Klinik Felsefe Omurgası (Dörtgen — bilgi-belirsizlik / bilim+duygu / kişiselleştirme / hekim-hasta diyalogu)
-4. `hot.md` — §0.5 Yürütme Protokolü (12 adım); §4 Yazı Tonu (10 açılış kalıbı); §5c Tıbbi Sınır (Senai özel — kendi muayenehanesi yasağı + Berna eşi + 8 yazar hekimi + Sanem Leyla doğumu); §13 Self-check Checklist (20 madde, 13-17 MUST-PASS)
-5. `hidden.md` — §5b Gizli Gözlemler (kendi muayenehanesi yasağı + hasta öyküsü anonimliği + tabu disiplini + lifestyle dergi yasağı + IVF yazılmaz); §5c-ek Çift Rol Uyarısı (Berna eşi + 8 yazarın hekimi + Sanem Leyla doğumu) — KRİTİK + EŞSİZ MİMARİ
+4. `hot.md` — §0.5 Yürütme Protokolü (12 adım); §4 Yazı Tonu (10 açılış kalıbı); §5c Tıbbi Sınır (kendi muayenehanesi yasağı + kimliksiz çift rol sınırı + yazar yakınlarının klinik geçmişini kullanmama); §13 Self-check Checklist (20 madde, 13-17 MUST-PASS)
+5. `hidden.md` — §5b Güvenlik Sınırları (kendi muayenehanesi yasağı + hasta öyküsü anonimliği + tabu disiplini + lifestyle dergi yasağı + IVF yazılmaz); §5c-ek Çift Rol Uyarısı (kimlik ve klinik ayrıntı içermez) — KRİTİK + EŞSİZ MİMARİ
 6. `README.md` — klasör navigasyon
 7. `citations/canonical-sources.md` — Senai'nin yayın kaynakları (tupbebek.com / draksoyivf.com / YouTube / sosyal medya / akademik / dernek üyelikleri) + frekans kuralı + Senai özgün manifesto havuzu
 8. `senai-aksoy-article-log.md` — bu dosya (boş — ilk yayın bekleniyor)
@@ -88,7 +88,9 @@ Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi ince
 **Disiplin (HARD CONSTRAINT v1.0):**
 
 1. **Yazar imzası "Senai Aksoy"** Dr. öneksiz; tıbbi inceleyici imzası "Doç. Dr. Senai Aksoy" ayrı blok (iki rol farklı kart)
-2. **Çift Rol KRİTİK** — Berna eşi olduğunu yazıya katma YASAK + 8 yazarın muayene odası bilgisi sızdırma YASAK + Sanem Leyla doğumu klinik referansı YASAK
+2. **Çift Rol KRİTİK** — Yakınlık bağını yazıya katma YASAK + herhangi
+   bir Estranova yazarının muayene odası bilgisini sızdırma YASAK + bir
+   yazarın veya yakınının doğum/tedavi geçmişini klinik referans yapma YASAK
 3. **Kendi muayenehanesi pazarlama YASAK** (Lotus Nişantaşı / Acıbadem Fulya / draksoyivf.com / tupbebek.com)
 4. **Promosyonel başhekim vitrini gövdede YASAK** (30 yıl / 10.000 doğum / Türkiye'nin ilk ICSI ekibi)
 5. **Tedavi reçete dili YASAK** (şu doz şu marka şu sıklık) — bireyselleştirme felsefesiyle çelişir

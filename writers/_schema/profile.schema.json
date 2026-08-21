@@ -56,7 +56,7 @@
         "hot": { "type": "string", "description": "Her makalede AI'nın yüklediği zorunlu çekirdek (§0.5 protokol + §4 ses + §13 self-check)." },
         "warm": { "type": "string", "description": "Konu-tetikli yüklenen stil/şablon katmanları (§4a-§4f)." },
         "cold": { "type": "string", "description": "Yalnız audit/evrim review (§1-§3 biyografi + §6-§10 + §12 + changelog)." },
-        "hidden": { "type": "string", "description": "private_context_inject — §5b + §5c-ek + §5d. Yayınlanmaz; yalnız writer agent prompt'una enjekte edilir." },
+        "hidden": { "type": "string", "description": "Git'te izlenebilen KAMUSAL güvenlik politikası (§5b + §5c-ek + §5d). Sır, hasta bilgisi veya ham özel seed içermez." },
         "readme": { "type": "string", "description": "Klasör navigasyonu (5-10 satır)." },
         "corpus": { "type": "string", "description": "Tam alıntı korpusu (örn. gamze-cizreli-alintilar.md)." },
         "aphorism_pool": { "type": "string", "description": "Distile aforizma havuzu (örn. gamze-cizreli-aphorism-pool.md)." },
@@ -173,7 +173,42 @@
 
     "private_context_inject": {
       "type": "string",
-      "description": "Yayınlanmaz; yalnız writer agent prompt'una enjekte edilir. Hidden context'in serbest-form özetlemesi."
+      "description": "Git'te izlenebilen kamusal güvenlik özeti. Sır, hasta bilgisi, özel yaşam ayrıntısı veya ham seed içermez."
+    },
+    "private_seed_policy": {
+      "type": "object",
+      "description": "Private anecdote and fictional draft seed gate. Raw private data must not be stored here.",
+      "additionalProperties": false,
+      "required": ["enabled", "storage", "environment_variable", "default_local_path", "auto_load", "draft_mode", "publication_gate", "synthetic_first_person", "third_party_consent_required", "public_log_detail"],
+      "properties": {
+        "enabled": { "const": true },
+        "storage": {
+          "type": "string",
+          "enum": ["local_ignored_or_external", "external_only"]
+        },
+        "environment_variable": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z0-9_]+$"
+        },
+        "default_local_path": {
+          "type": "string",
+          "pattern": "^private-writer-context/[a-z0-9-]+$"
+        },
+        "auto_load": { "const": false },
+        "draft_mode": {
+          "const": "internal_author_review_only"
+        },
+        "publication_gate": {
+          "const": "explicit_author_approval"
+        },
+        "synthetic_first_person": {
+          "const": "internal_draft_only"
+        },
+        "third_party_consent_required": { "const": true },
+        "public_log_detail": {
+          "const": "opaque_ids_and_status_only"
+        }
+      }
     },
     "experience_seeds": {
       "type": "array",
@@ -272,5 +307,18 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "slug": { "const": "sanem-altan" }
+        },
+        "required": ["slug"]
+      },
+      "then": {
+        "required": ["private_seed_policy"]
+      }
+    }
+  ]
 }

@@ -2,7 +2,10 @@
 
 > **Derleme tarihi:** 2026-04-30
 > **Derleyici:** Estranova araştırma — derin web taraması (yazar profili Faz 0 hazırlığı)
-> **Statü:** Sanem Altan henüz Estranova writers/ kanonunda **yazar değil**; bu dosya yazar profili oluşturulmadan önceki **kaynak derlemesi**dir.
+> **Statü (2026-08-12): AUDIT-ONLY HAM ARŞİV.** Sanem Altan'ın site kaydı
+> inactive durumdadır. Bu dosya persona v2 üretim promptuna yüklenmez; yalnız
+> kaynak denetimi, tarihsel bağlam ve yakın benzerlik kontrolünde kullanılır.
+> Tam cümleler, kişisel sahneler ve eski operasyonel öneriler üretim izni vermez.
 
 ---
 
@@ -10,17 +13,11 @@
 
 **Sanem Altan** — gazeteci, deneme yazarı, TV programcısı.
 
-- **Doğum:** 1972 (2026 itibariyle ~54 yaşında — Estranova hedef bandı 40+ ile uyumlu)
-- **Eğitim:** İktisat (babası Ahmet Altan ile aynı fakülte)
-- **Aile (kanıtlı, kamuya açık kaynak):**
-  - Baba: Ahmet Altan (gazeteci-yazar; 23 Eylül 2016'da tutuklandı, 16 Şubat 2018'de ağırlaştırılmış müebbet, 14 Nisan 2021'de tahliye)
-  - Anne: Gülnur Altan (ev kadını; sıcak, koruyucu, sevecen — çok sevilen biri olarak anılıyor; **12 Haziran 2025'te 76 yaşında vefat etti**)
-  - Dede (baba tarafı): Çetin Altan — Basın Şeref Kartı sahibi, gazeteci-yazar
-  - Amca: Mehmet Altan — iktisat profesörü, gazeteci, yazar
-  - Kardeş: Kerem Altan (1980 doğumlu, 8 yaş arayla)
-  - Anne tarafı: Bülent Bilgiç (oyuncu) Sanem'in dayısı; Hıncal Uluç anne tarafından akrabası
-  - Anne ile baba: Lise 2'de yıldırım nikahıyla evlenmiş (kaçarak)
-  - Kızı: **Leyla** — Sanem'in 2014 köşesinde "yedi yaşındaki Leyla" olarak halka açık geçti (Kahkaha ve Modigliani, 29 Tem 2014). 2007 doğumlu, 2026'da 19 yaşında. **Doğumunu Estranova editörü Doç. Dr. Senai Aksoy yaptırmıştır** — Çift Rol Uyarısı'nın temel nedenlerinden biri (`sanem-altan/hidden.md §5c-ek`).
+- **Doğum yılı:** Kamu biyografisi için yazar teyidi bekliyor.
+- **Eğitim:** İstanbul Üniversitesi İktisat Bölümü.
+- **Yazı ailesi:** Çetin Altan → Ahmet Altan → Sanem Altan biçimindeki
+  üç kuşak gazeteci-yazar çizgisi doğrudan söyleşilerle doğrulanır. Persona
+  için anlamı özel hayat ayrıntısı değil, yüksek zanaat çıtasıdır.
 - **Kariyer:**
   - Spor gazeteciliğinden başladı
   - NTV'de **"Off the Record"** programının sunucusu ve yapımcısı
@@ -287,7 +284,7 @@
 
 #### 29 Temmuz 2014 — *"Kahkaha ve Modigliani…"* — [SA]
 
-> Yedi yaşındaki Leyla ile bayram sabahı kahvaltı.
+> Kamusal bir aile sahnesi; kişisel ayrıntılar üretim tohumu değildir.
 
 > Sosyal medyada arkadaşlarına: **"Kahkaha gerçek dindir."** [SA ↦ Osho]
 
@@ -682,11 +679,11 @@
 ### V.3 — Sınırlar ve dikkat noktaları (Estranova bağlamı)
 
 - **Politik damar:** Yazılarının önemli bir kısmı 2010–2016 Türkiye siyasetine dair (AKP, Gezi, Kobani, Soma, mülteci, basın özgürlüğü vb.). **Estranova bu damarı ALMAZ** — siyasi pozisyon yazma yasağı (CLAUDE.md §5 "düzenlemeye uygun nötrlük"). Sadece edebi/lirik/varoluşsal damar kullanılabilir.
-- **Aile bağlamı (kamuya malolmuş şahsiyetler) — SERBEST:** Çetin Altan (dede), Ahmet Altan (baba), Mehmet Altan (amca) **üç kuşaklık Türk gazetecilik-edebiyat mirasının kamuya malolmuş şahsiyetleridir** ve Sanem'in yazım kalıbında *"babamın evi"*, *"babamın bir cümlesi"*, *"dedemin **Kopuk Kopuk**'undan"* gibi aile çerçevesi olarak doğal şekilde geçer — Estranova metninde de **bu doğallık korunur**, isimler aile bağlamında yansıyabilir. Yapay bir mesafe ("ailemden biri", "yakınım") ile silinmez.
+- **Üç kuşak bağlamı:** Çetin Altan → Ahmet Altan → Sanem Altan hattı yalnız doğrulanmış kamusal biyografi ve zanaat çıtası olarak kullanılabilir. Aile sahnesi, diyalog veya anı üretme izni vermez.
 - **Politik / hukuki bağlam — AYRI KATEGORİ, ALMAYIZ:** Babasının cezaevi süreci, ağırlaştırılmış müebbet, Silivri, mahkeme kararları, yargı-Saray çerçevesi Sanem'in kamusal kimliğinin önemli bir parçası ama **Estranova hormonal geçiş / 40+ kadın sağlığı temasına** uzak ve siyasi nötrlük gereği gövde metne taşınmaz. Aile şahsiyetlerinin **edebi-gazetecilik mirası** (yazılar, kitaplar, deneyim aktarımı) ile **siyasi-hukuki bağlam** karıştırılmaz — biri serbest, diğeri yasak.
 - **Sigara:** Yazılarında "bir sigara yaktım" sahnesi var (Sırrın zıt anlamlısı). Estranova editöryal politikasına göre **sigara romantizasyonu sızdırılmaz**; yazar sahne kurarken çay/kahve veya nötrleştirilmiş bir alternatife taşınır.
-- **Anne kaybı (12 Haz 2025, 76 yaşında):** Sanem'in 53 yaşında annesini kaybetmiş olması Estranova'nın "kuşak / bakım yükü / ebeveyn kaybı" temalarıyla doğrudan örtüşür. Yazar profilinde bu bilgi rıza/ifşa kuralları (CLAUDE.md `docs/editorial-rules-disability-visibility.md`) çerçevesinde kullanılır — annenin iç dünyası varsayım olarak temsil edilemez, sadece Sanem'in dışarıdan yaşadığı kayıp tecrübesi.
-- **Çift Rol Uyarısı (KRİTİK SINIR — 2026-05-01 düzeltmesi):** Estranova editörü Doç. Dr. Senai Aksoy aynı zamanda **Sanem'in gerçek hayatta jinekoloğudur** ve **kızı Leyla'nın doğumunu yaptırmıştır** (≈2007). Bu Gamze Cizreli ekseniyle paralel bir editöryal-etik sınır yaratır: muayene odası bilgisi (HRT/ilaç/doz/lab/tanı/jinekolojik bulgu) ve doğum süreci klinik detayı (sezeryan/normal, komplikasyon, doğum sonrası) Estranova taslaklarına **sızmaz**. Detay: `sanem-altan/hidden.md §5c-ek` + `sanem-altan/profile.yaml.dual_role_warning.hard_constraints`. **Leyla'nın ismi:** default ANONİM çerçeve ("kızım" / "yakınımdaki bir genç"); 2014 köşede halka açık geçti diye Estranova'da otomatik kullanılmaz — istisna ancak Sanem birinci kişi yazıyorsa **VE** Leyla 18+ kendi rızası dosyalanmışsa.
+- **Rıza kapısı:** Sağlık, kayıp, aile ve gündelik hayat deneyimi kamusal bir habere dayanarak birinci tekilleştirilemez; açık yazar onayı gerekir.
+- **Özel bilgi güvenlik duvarı:** Editöryal ekibin kamusal kaynak dışında bildiği hiçbir kişisel veya klinik bilgi bu arşive, persona promptuna ya da taslağa girmez.
 
 ---
 
@@ -706,15 +703,14 @@
 - **t24:** https://t24.com.tr/haber/ahmet-altan-in-kizi-sanem-altan-babam-mahkemede-bir-tiyatro-seyrettigini-biliyor-guluyordu,842983
 - **Stockholm Center for Freedom (EN):** https://stockholmcf.org/jailed-turkish-journalists-daughter-sanem-altan-says-justice-determined-in-the-presidential-palace/
 - **Qantara.de (EN/AR):** https://qantara.de/en/article/interview-sanem-altan-daughter-turkish-detainee-ahmet-altan-%E2%80%B3-rule-law-disappearing%E2%80%B3
-- **Hürriyet "Bir zamanlar bitirimdi" (1998):** Sanem 26 yaşında, biyografik kontekst — https://www.hurriyet.com.tr/kelebek/bir-zamanlar-bitirimdi-39018301
+- **Hürriyet "Bir zamanlar bitirimdi" (1998):** tarihsel biyografik bağlam — https://www.hurriyet.com.tr/kelebek/bir-zamanlar-bitirimdi-39018301
 
-### Aile / kişisel bağlam (kanıtlı, kamuya açık)
+### Aile bağlamı (yalnız zanaat için)
 
-- **Anne Gülnur Altan vefatı (12 Haziran 2025, 76 yaşında):**
-  - https://www.cumhuriyet.com.tr/yasam/ahmet-altan-in-esi-gulnur-altan-kimdir-gulnur-altan-neden-oldu-2408769
-  - https://www.gazetebirlik.com/genel/gulnur-altan-kimdir-neden-vefat-etti-ahmet-altanin-esi-gulnur-altan-kac-yasindaydi-hastaligi-neydi/939645
-- **Aile şeması (Çetin → Ahmet → Sanem):** https://en.wikipedia.org/wiki/Ahmet_Altan
-- **Anne tarafı (Bülent Bilgiç dayı, Hıncal Uluç anne tarafı akrabalık):** https://www.gazetebirlik.com/yasam/ahmet-altan-evli-mi-esi-karisi-kim-kac-cocugu-var/939982
+- Üç kuşak yazı geleneği yalnız doğrulanmış kamusal biyografi ve zanaat
+  çıtası olarak tutulur.
+- Kayıp, sağlık, yaş ve geniş aile ayrıntıları persona üretimi için gerekli
+  değildir; bu ham arşivde saklanmaz ve anekdot kaynağı sayılmaz.
 
 ### Erişim engelli (bu derlemede tam okunamadı)
 
@@ -727,8 +723,8 @@
 
 ## Sonraki adımlar (yazar profili Faz 0 → Faz 1)
 
-1. **Yazar profili oluşturma kararı:** Sanem Altan Estranova kanonuna eklenecekse → `writers/sanem-altan/` dizini, profile.yaml, hidden.md, public.md, meta.md.
-2. **Atıf çerçevesi netleştirme:** Sanem'in **kendi cümlesi** ile **aktardığı söz** arasındaki sınır titizlikle korunmalı (Gamze Cizreli profilindeki [GC] vs [GC ↦ X] mantığı).
+1. **Güncel kalibrasyon:** Persona v2 kurulmuştur; aktivasyondan önce doğrudan yazar görüşmesi ve güncel metin fark analizi tamamlanır.
+2. **Atıf çerçevesi:** Sanem'in kendi cümlesi ile aktardığı söz arasındaki sınır denetim için korunur; ikisi de üretim kalıbı değildir.
 3. **Politik damar filtreleme:** 700 köşe yazısının siyasi olanları profile alınmaz; sadece lirik/varoluşsal/edebi damar imza-malzemesi olarak kullanılır.
-4. **Anne kaybı temasının rıza çerçevesi:** Eğer Sanem profilinde "annesini kaybetmiş kadın" eksen olacaksa CLAUDE.md disability/visibility kuralları çerçevesinde (`docs/editorial-rules-disability-visibility.md`) rıza kanıtı işaretlenmeli.
-5. **Aphorism pool:** Bu derlemenin yan dosyası `sanem-altan-aphorism-pool.md` — Estranova writer agent için tematik tasnif.
+4. **Kişisel deneyim rızası:** Sağlık, aile, kayıp ve gündelik yaşam sahnesi ancak konuya özgü yazılı yazar onayıyla kullanılabilir.
+5. **Emekli havuz:** `sanem-altan-aphorism-pool.md` yalnız audit ve benzerlik dışlama kaydıdır; üretim promptuna yüklenmez.
