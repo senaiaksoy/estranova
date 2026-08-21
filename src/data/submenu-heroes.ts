@@ -482,7 +482,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Yumuşak sabah ışığında uyku günlüğü, çay bardağı ve başucu masası; menopozda uyku bozukluğu yazısı için kart görseli',
   },
   '/zamansiz-yasam/beslenme-yaslanma/': {
-    src: '/images/library/editorial/zy-beslenme-yaslanma-kahvalti.webp',
+    src: '/images/library/editorial/beslenme-yaslanma.webp',
     alt: 'Sade kahvaltı hazırlığı ve gerçek besinlerle düzenlenmiş masa; beslenme ve yaşlanma yazısı için kart görseli',
   },
   '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': {

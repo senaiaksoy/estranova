@@ -33,6 +33,7 @@ const tocEntries = [
   { id: 'ek-takviyeler', label: 'Takviye Kararı' },
   { id: 'kisisellestirme', label: 'Kişiselleştirilmiş Yaklaşım' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
@@ -47,7 +48,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'berna-aksoy',
   articleType: 'editorial-guide',
   publishedDate: '9 Mart 2026',
-  modifiedDate: '7 Ağustos 2026',
+  modifiedDate: '21 Ağustos 2026',
   pathname: '/zamansiz-yasam/beslenme-yaslanma/',
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
@@ -61,6 +62,7 @@ const articleSchemas = buildArticleSchemas({
   title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
+  image="/images/library/editorial/beslenme-yaslanma.webp"
   jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/zamansiz-yasam/" />
@@ -79,11 +81,11 @@ const articleSchemas = buildArticleSchemas({
           authorSlug="berna-aksoy"
         articleType="editorial-guide"
           publishedDate="9 Mart 2026"
-          lastUpdated="7 Ağustos 2026"
+          lastUpdated="21 Ağustos 2026"
           medicalReviewer="Doç. Dr. Senai Aksoy"
           readingMinutes={5}
-          imageSrc="/images/library/editorial/still-life-eggs-oil-walnuts.webp"
-          imageAlt="Açık ahşap tezgâhta sabah beslenme natürmortu — krem seramik kapta yumurtalar, etiketsiz cam yağ cruet, dilimlenmiş portakal, bütün cevizler ve maydanoz; metabolik denge ve gerçek besin temasını sade editöryal tonla taşıyan dosya görseli"
+          imageSrc="/images/library/editorial/beslenme-yaslanma-byline.webp"
+          imageAlt="Pencere önündeki kahvaltı masasında oturan kadın; tabakta yumurta, peynir, zeytin ve sebzeler, yanında kahve ile açık bir defter"
         />
 
          <ArticleSummary title="Kısa Özet">
@@ -100,20 +102,21 @@ const articleSchemas = buildArticleSchemas({
           <h2 id="neden-degisir">40+ Yaşta Beslenme Neden Değişir?</h2>
           <p>
             Uzun süre şöyle sandım: aynı yemekler, aynı porsiyonlar, aynı saatler hep aynı sonucu verir. Sonra fark
-            ettim ki bedenim artık aynı şekilde cevap vermiyor; mesele disiplinimin azalması değil, zeminin değişiyor
+            ettim ki bedenim artık aynı şekilde cevap vermiyor; mesele disiplinimin azalması değil, zeminin değişmiş
             olmasıydı.
           </p>
           <p>
-            40 yaşından sonra temel metabolik hız (bazal metabolizma) yavaşlar, kas kütlesinin doğal kaybı hızlanır
-            ve hormon üretimi dalgalanmaya başlar <Evidence level={5} />. Sindirim sistemi de aynı zamanda yaşlanmayı
-            sürdürür; bazı kadınlar laktoz toleransında düşüş veya B12 emilim sıkıntısı yaşayabilir
-            <Evidence level={4} />.
+            40 yaşından sonra vücudun enerji kullanımı tek bir düğmeye basılmış gibi yavaşlamaz. Yağsız kütleye
+            göre düzeltilmiş toplam ve bazal enerji harcaması, büyük bir yaşam boyu veri setinde 20–60 yaş arasında
+            görece sabit görünür <sup><a href="#kaynak-1" aria-label="1 numaralı kaynağa git">[1]</a></sup>
+            <Evidence level={4} />. Menopoz geçişinde ise hormon düzeyleri, kas kütlesi, aktivite ve yağ
+            dağılımındaki değişimler kişisel enerji ihtiyacını etkileyebilir.
           </p>
           <p>
-            Menopoz dönemindeki hormon değişiklikleri yağ depolanma yerlerini, enerji harcamasını ve besin
-            tercihlerini etkiler <Evidence level={5} />. Aktivite seviyesi de çoğu zaman sessizce düşer; aynı kiloda
-            kalsan bile kalori ihtiyacı azalabiliyor <Evidence level={5} />. Bu nedenle eski alışkanlıkların artık
-            "tam oturmaması" garip değil; seçimlerimizin biraz daha bilinçli olması gerekiyor.
+            Menopoz dönemindeki hormon değişiklikleri yağ dağılımını ve besin tercihlerini etkileyebilir
+            <Evidence level={4} />. Aktivite veya kas kütlesi azaldığında enerji ihtiyacı da değişebilir; bunu
+            yalnızca “metabolizma yavaşladı” diye açıklamak eksik kalır. Bu nedenle eski alışkanlıkların artık
+            “tam oturmaması” garip değil; seçimlerimizin biraz daha bilinçli olması gerekiyor.
           </p>
 
           <h2 id="makronutrientler">Makro Besinler: Protein, Yağ, Karbonhidrat</h2>
@@ -123,19 +126,22 @@ const articleSchemas = buildArticleSchemas({
             başladım.
           </p>
           <p>
-            Protein, bu dönemde tabağında daha bilinçli yer açmak isteyeceğin besinlerden. Kas kaybı, doku sağlığı,
-            kemik bütünlüğü ve metabolik işlevler yeterli protein alımıyla yakından ilişkili <Evidence level={5} />.
+            Protein, bu dönemde tabağınızda daha bilinçli yer açabileceğiniz besinlerden biri. Kas kaybı, doku sağlığı,
+            kemik bütünlüğü ve metabolik işlevler yeterli protein alımıyla yakından ilişkili <Evidence level={4} />.
             Sağlıklı ileri yaştaki yetişkinler için bazı kılavuzlarda geçen kilogram başına `1.0–1.2 g` protein aralığı,
             daha ileri yaşlarda başvurulabilecek bir referans olabilir; 40+ yaş grubunun tamamı için otomatik bir hedef
-            değildir <Evidence level={5} />. Kişinin kilosu, böbrek fonksiyonu, aktivite düzeyi ve eşlik eden hastalıkları
+            değildir <sup><a href="#kaynak-2" aria-label="2 numaralı kaynağa git">[2]</a></sup>
+            <Evidence level={4} />. Kişinin kilosu, böbrek fonksiyonu, aktivite düzeyi ve eşlik eden hastalıkları
             bu hedefi biçimlendirir. Benim
             için daha güvenli yol şu: her ana öğünde güvenilir bir protein kaynağı düşünmek, sayı hedefini ise
             gerekiyorsa diyetisyen veya hekimle netleştirmek.
           </p>
           <p>
             Yağlara gelince, doymuş ve doymamış yağ dengesi önemli <Evidence level={5} />. Omega-3 yağ asitleri
-            (balık, chia tohumu, ceviz, keten tohumu) iltihabi yükü azaltmaya ve beyin sağlığına katkıda
-            bulunabiliyor. Karbonhidrat seçimi kaliteli olmalı: tam tahıllar, sebzeler ve meyveler tercih edilir;
+            hücre zarlarının bir parçasıdır; balık ve deniz ürünleri EPA ve DHA sağlar. Beyin sağlığıyla ilişkisi
+            araştırılıyor, ancak bu alandaki sonuçlar bütün çalışmalar arasında tutarlı değil
+            <sup><a href="#kaynak-3" aria-label="3 numaralı kaynağa git">[3]</a></sup> <Evidence level={3} />.
+            Karbonhidrat seçimi kaliteli olmalı: tam tahıllar, sebzeler ve meyveler tercih edilir;
             şeker ve beyaz tahıl sınırlanır <Evidence level={5} />. Lif, sindirim sağlığı ve doygunluk açısından
             kritik bir başlık.
           </p>
@@ -149,13 +155,19 @@ const articleSchemas = buildArticleSchemas({
             B vitaminleri (B6, B12, folat) enerji üretimi, beyin sağlığı ve hücre bölünmesi için önemli
             <Evidence level={5} />. Özellikle 50 yaş sonrasında bazı kişilerde, mide asidindeki azalma veya başka emilim
             sorunları nedeniyle doğal besinlerle alınan B12'nin emilimi güçleşebilir; bu, hekimle konuşmaya değer bir
-            başlıktır <Evidence level={5} />. Et, balık, yumurta ve süt ürünleri başlıca kaynaklar arasındadır. Demir
+            başlıktır <sup><a href="#kaynak-4" aria-label="4 numaralı kaynağa git">[4]</a></sup>
+            <Evidence level={5} />. Et, balık, yumurta ve süt ürünleri başlıca kaynaklar arasındadır. Demir
             ihtiyacı menopoz sonrası dönemde kanamalar durduğu için azalabilir; yine de eksiklik şüphesi varsa karar kan
             tetkikiyle verilmelidir <Evidence level={5} />.
           </p>
           <p>
-            Çinko bağışıklık sistemi ve cilt sağlığı açısından değerli <Evidence level={5} />. Magnezyum uyku, kas
-            esnekliği ve kemik sağlığı zemininde konuşulabilir <Evidence level={5} />. Kalsiyum ihtiyacı ise yaş gruplarına göre ayrılır: 19–50 yaş arası kadınlar için günlük 1000 mg hedefi öne çıkarken, 51 yaş ve sonrasında bu miktar günlük 1200 mg düzeyine ulaşır <Evidence level={5} />. D vitamini düzeyi, kalsiyum ihtiyacı ve takviye gerekip gerekmediği kişisel tetkiklerle değerlendirilmelidir.
+            Çinko bağışıklık sistemi ve cilt sağlığı açısından değerli <Evidence level={4} />. Magnezyum kas ve sinir
+            işlevleri ile kemik yapımında rol oynar <sup><a href="#kaynak-6" aria-label="6 numaralı kaynağa git">[6]</a></sup>
+            <Evidence level={5} />; uyku desteği olarak kullanımı ise ayrı ve daha sınırlı bir kanıt sorusudur.
+            Kalsiyum ihtiyacı yaş gruplarına göre ayrılır: 19–50 yaş arası kadınlar için günlük 1000 mg, 51 yaş ve
+            sonrasında günlük 1200 mg önerilir <sup><a href="#kaynak-5" aria-label="5 numaralı kaynağa git">[5]</a></sup>
+            <Evidence level={5} />. D vitamini düzeyi, kalsiyum ihtiyacı ve takviye gerekip gerekmediği kişisel
+            değerlendirmeyle ele alınmalıdır.
           </p>
 
           <h2 id="antioksidanlar">Antioksidanlar ve Bitkisel Besin Bileşenleri</h2>
@@ -164,17 +176,19 @@ const articleSchemas = buildArticleSchemas({
             "ne kadar çok renk?" diye düşünmeye başladığımda her şey biraz değişti.
           </p>
           <p>
-            Renkli sebzeler (sarı, kırmızı, yeşil, mor) farklı antioksidanlar içerir ve iltihabi yükü dengelemeye
-            yardımcı olabiliyor <Evidence level={5} />. Meyveler (özellikle yaban mersini, çilek) hücre hasarına
-            karşı koruyucu bileşenler sağlıyor <Evidence level={5} />. Yeşil ve siyah çay, polifenoller gibi
-            bileşiklerle sağlıklı yaş alma sürecine katkıda bulunabiliyor <Evidence level={5} />. Zerdeçal gibi
-            baharatlar, kurkumin içeriğiyle iltihabi yanıtı azaltmaya yardımcı olabiliyor <Evidence level={4} />.
+            Renkli sebze ve meyveler, lif ve farklı bitkisel bileşenleri öğünlere taşır; bu çeşitlilik sağlıklı
+            beslenme düzeninin bir parçasıdır <Evidence level={4} />. Antioksidan başlığını tek başına “hücreleri
+            koruyan” bir vaat gibi okumamak gerekir. Yeşil ve siyah çay ile zerdeçal gibi ürünlerde bazı biyolojik
+            etkiler araştırılmış olsa da, bunları menopoz belirtilerini veya iltihabı tedavi eden seçenekler gibi
+            sunmak doğru olmaz <Evidence level={3} />.
           </p>
 
           <h2 id="ogun-modeli">Beslenme Alışkanlıkları ve Öğün Modeli</h2>
           <p>
-            Gün içinde enerjinin hızla düşüp yükselmesi çok tanıdık bir his. Düzenli öğünler kan şekeri ve enerji
-            seviyesini dengelemeye yardımcı oluyor <Evidence level={5} />. Sabit uyku-uyanış saati ve beslenme
+            Gün içinde enerjinin hızla düşüp yükselmesi çok tanıdık bir his. Ancak öğün sayısını artırmanın kan
+            şekerini otomatik olarak daha iyi dengelediği gösterilmiş değil
+            <sup><a href="#kaynak-7" aria-label="7 numaralı kaynağa git">[7]</a></sup> <Evidence level={2} />.
+            Öğün düzeni açlık, günlük ritim, ilaçlar ve metabolik durumla birlikte kişiselleştirilmeli. Sabit uyku-uyanış saati ve beslenme
             ritmi biyolojik ritmi yumuşak tutuyor <Evidence level={4} />. Su tüketimi kişisel ihtiyaca göre
             planlanmalı; yaşla birlikte susama hissi azalabildiği için bilinçli su içmek önem kazanıyor
             <Evidence level={5} />.
@@ -190,16 +204,20 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="beslenme-sekilleri">Beslenme Şekilleri: Hangisi Uygun?</h2>
           <p>
-            Beslenme modeli seçerken amaç kendini sıkıştırmak değil, sürdürebileceğin bir ritim bulmak. Uzun süre
+            Beslenme modeli seçerken amaç kendinizi sıkıştırmak değil, sürdürebileceğiniz bir ritim bulmak. Uzun süre
             şöyle sandım: bir "doğru" plan vardır, onu bulan kazanır. Sonra anladım ki bunlar planlardan çok
 yaklaşımlar.
           </p>
           <p>
-            Akdeniz tipi beslenme, menopoz döneminde güçlü kanıta sahip yaklaşımlardan biri <Evidence level={5} />.
-            Balık, zeytinyağı, sebzeler ve tam tahıl ağırlıklı olan bu yaklaşımın kalp ve beyin sağlığı yararları
-            geniş çalışmalarla gösterilmiş durumda. DASH yaklaşımı (kan basıncını destekleyen sebze-meyve-tam tahıl
-odaklı bir yaklaşım) hipertansiyon ve kalp damar sağlığı için tasarlanmış; menopoz döneminde de etkili
-            olabiliyor <Evidence level={5} />.
+            Akdeniz tipi beslenme, menopoz döneminde özellikle kardiyometabolik göstergeler açısından araştırılmış,
+            makul ve sürdürülebilir yaklaşımlardan biridir. Menopozdaki kadınları içeren yedi müdahale çalışmasının
+            sistematik derlemesi kilo, kan basıncı ve bazı kan yağlarında olumlu sonuçlar bildirmiştir; ancak çalışma
+            sayısı sınırlıdır <sup><a href="#kaynak-8" aria-label="8 numaralı kaynağa git">[8]</a></sup>
+            <Evidence level={3} />. Balık, zeytinyağı, sebzeler ve
+            tam tahıl ağırlıklı bu yaklaşımın genel kalp sağlığıyla ilişkisi araştırılmıştır. DASH yaklaşımı (kan
+            basıncını destekleyen sebze-meyve-tam tahıl odaklı bir yaklaşım) hipertansiyon ve kalp damar sağlığı
+            için tasarlanmıştır; menopoz döneminde kullanılabilecek bir beslenme yaklaşımı olabilir, fakat
+            “menopoza özgü etkili plan” gibi okunmamalıdır <Evidence level={3} />.
           </p>
           <p>
             Vejetaryen ve vegan yaklaşımlar mümkün ama B12, demir ve protein kaynakları açısından dikkatli planlama
@@ -215,7 +233,7 @@ yarattı. Bu yaklaşımlar birer plandan çok birer rota; rotanın doğru olup o
             sonra netleşiyor. Bu benim yolum; sizinki başka olabilir — ve olmalı da.
           </p>
 
-          <h2 id="tercih-sinirla">Yiyecekler: Tercih Et, Sınırla</h2>
+          <h2 id="tercih-sinirla">Yiyecekler: Tercih ve Sınırlandırma</h2>
           <p>
             Alışveriş sepetini sadeleştirmek iyi bir başlangıç. Tercih ettiğim gıdalar: tam tahıllar, balık, tavuk,
             yumurta, baklagiller, yeşil yapraklı sebzeler, meyveler, kuruyemişler ve tohumlar. Sınırlandırmaya değer
@@ -223,15 +241,18 @@ yarattı. Bu yaklaşımlar birer plandan çok birer rota; rotanın doğru olup o
           </p>
           <p>
             Kafein ve alkol için ayrı bir not: kafein uyku kalitesini bozabiliyor — öğleden sonra ikiden sonra
-            sınırlamak benim için iyi geldi. Alkol, sıcak basması ve uyku bölünmesini artırabiliyor; miktarı
-            azaltmak birçok kişi için daha güvenli bir yaklaşım <Evidence level={5} />. Bunu söylemek alkolü hayattan
+            sınırlamak benim için iyi geldi. Alkol bazı kadınlarda sıcak basması veya uykunun bölünmesiyle ilişkili
+            olabilir; bunu herkes için geçerli bir neden-sonuç kuralı gibi sunmamak gerekir. Kendi belirtilerinizle
+            ilişkisini gözlemlemek ve tüketimi azaltmayı düşünmek daha temkinli bir yaklaşımdır
+            <sup><a href="#kaynak-9" aria-label="9 numaralı kaynağa git">[9]</a></sup> <Evidence level={3} />.
+            Bunu söylemek alkolü hayattan
         çıkarmak değil; sadece bedeninizin size ne dediğini dinlemek.
           </p>
 
           <h2 id="ek-takviyeler">Takviye Kararı: Raf Değil, Değerlendirme</h2>
           <p>
             Takviye rafı kalabalık görünebilir; bunu kendi mutfak dolabımda da yıllar içinde yaşadım. Önce gerçekten
-            neye ihtiyacın olduğunu anlamak, rafı sadeleştirmenin en sade yolu.
+            neye ihtiyacınız olduğunu anlamak, rafı sadeleştirmenin en sade yolu.
           </p>
           <p>
             D vitamini, özellikle kış aylarında veya kapalı ortamlarda uzun saat geçirenlerde gündeme gelebilir
@@ -242,7 +263,7 @@ yarattı. Bu yaklaşımlar birer plandan çok birer rota; rotanın doğru olup o
             yerini tutmaz <Evidence level={4} />.
           </p>
           <p>
-            Hekimimle bir konuşmamızda magnezyum gündeme gelmişti; "ihtiyacının ne olduğunu önce kayıttan görelim,
+            Hekimimle bir konuşmamızda magnezyum gündeme gelmişti; "ihtiyacınızın ne olduğunu önce kayıttan görelim,
             sonra tabakla karşılayabiliyor muyuz bakalım" demişti. Bir arkadaşım bana benzer bir gözlemi
             anlatmıştı — yıllar boyu "uyku için magnezyum" diye duymuş, sonunda hekimle konuştuğunda kan tetkikleri,
             ilaçları ve böbrek fonksiyonuyla birlikte planlamak farklı bir konfor sağlamış. Benim için takviye kararı
@@ -257,8 +278,8 @@ yarattı. Bu yaklaşımlar birer plandan çok birer rota; rotanın doğru olup o
           <p>
             Beslenme ihtiyaçları kişiden kişiye değişir; kronik hastalık (diyabet, hipertansiyon), ilaçlar,
 sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) yolu şekillendiriyor. Bir
-            diyetisyen veya beslenme danışmanından tavsiye almak — özellikle kronik hastalık varsa — kişiye
-        uygun bir plan oluşturmayı kolaylaştırıyor. Geri kalanı zamanın ve bedeninizin size verdiği geri
+            diyetisyenden destek almak; özellikle kronik hastalık varsa bunu hekiminizle birlikte planlamak kişiye
+        uygun bir düzen oluşturmayı kolaylaştırıyor. Geri kalanı zamanın ve bedeninizin size verdiği geri
             bildirimin işi.
           </p>
 
@@ -269,13 +290,31 @@ sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) yolu şe
           <p>
             Yıllar içinde benim için ortaya çıkan en sade gerçek şu: dengeli beslenmenin sırrı katı bir plan
             değil, haftaya yayılan küçük tutarlılıklar. Bir akşam zeytinyağıyla pişmiş sebze, ertesi sabah
-            yumurta-yoğurt-tam tahıl üçlüsü, gün içinde bir avuç kuruyemiş, akşam masasına oturduğunda
-            telefonu uzaklaştırmak. Bunların hiçbiri kahramanlık değil; kendine ayrılmış küçük zaman dilimleri.
+            yumurta-yoğurt-tam tahıl üçlüsü, gün içinde bir avuç kuruyemiş, akşam masasına oturduğunuzda
+            telefonu uzaklaştırmak. Bunların hiçbiri kahramanlık değil; kendinize ayrılmış küçük zaman dilimleri.
           </p>
           <p>
             Belki şu soru yardımcı olur: bu hafta tabağa hangi rengi yargılamadan, sadece ekleme niyetiyle
-        koyabilirim? Karar kendi kararınız, sorumluluğu da size ait. Tabağa hangi rengi ekleyeceğini bilmek; o tabağı zorlamaktan çok daha sürdürülebilir bir başlangıçtır.
+        koyabilirim? Karar kendi kararınız, sorumluluğu da size ait. Tabağa hangi rengi ekleyeceğinizi bilmek; o tabağı zorlamaktan çok daha sürdürülebilir bir başlangıçtır.
           </p>
+
+          <h2 id="kaynaklar">Kaynaklar</h2>
+          <p>
+            Bu yazıdaki enerji harcaması, protein, mikro besinler, öğün düzeni ve menopozda beslenme iddiaları
+            aşağıdaki kaynaklarla birlikte değerlendirilmiştir. Kaynaklar son olarak 21 Ağustos 2026 tarihinde
+            gözden geçirilmiştir.
+          </p>
+          <ol class="mt-4 space-y-3 text-sm leading-relaxed text-ink/80">
+            <li id="kaynak-1"><strong>1.</strong> Pontzer H ve ark. <em>Daily energy expenditure through the human life course.</em> Science. 2021. <a href="https://pubmed.ncbi.nlm.nih.gov/34385400/" target="_blank" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+            <li id="kaynak-2"><strong>2.</strong> Bauer J ve ark. <em>Evidence-based recommendations for optimal dietary protein intake in older people: a position paper from the PROT-AGE Study Group.</em> 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23867520/" target="_blank" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+            <li id="kaynak-3"><strong>3.</strong> NIH Office of Dietary Supplements. <em>Omega-3 Fatty Acids — Consumer Fact Sheet.</em> <a href="https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/" target="_blank" rel="noopener noreferrer">NIH kaynak kaydı</a>.</li>
+            <li id="kaynak-4"><strong>4.</strong> NIH Office of Dietary Supplements. <em>Vitamin B12 — Consumer Fact Sheet.</em> <a href="https://ods.od.nih.gov/factsheets/VitaminB12-Consumer/" target="_blank" rel="noopener noreferrer">NIH kaynak kaydı</a>.</li>
+            <li id="kaynak-5"><strong>5.</strong> NIH Office of Dietary Supplements. <em>Calcium — Health Professional Fact Sheet.</em> <a href="https://ods.od.nih.gov/factsheets/Calcium-HealthProfessional/" target="_blank" rel="noopener noreferrer">NIH kaynak kaydı</a>.</li>
+            <li id="kaynak-6"><strong>6.</strong> NIH Office of Dietary Supplements. <em>Magnesium — Consumer Fact Sheet.</em> <a href="https://ods.od.nih.gov/factsheets/Magnesium-Consumer/" target="_blank" rel="noopener noreferrer">NIH kaynak kaydı</a>.</li>
+            <li id="kaynak-7"><strong>7.</strong> Abdollahi S ve ark. <em>The effect of meal frequency on biochemical cardiometabolic factors: a systematic review and meta-analysis of randomized controlled trials.</em> 2021. <a href="https://pubmed.ncbi.nlm.nih.gov/33485709/" target="_blank" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+            <li id="kaynak-8"><strong>8.</strong> Gonçalves C, Moreira H, Santos R. <em>Systematic review of Mediterranean diet interventions in menopausal women.</em> 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38617417/" target="_blank" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+            <li id="kaynak-9"><strong>9.</strong> The Menopause Society. <em>Hot Flashes.</em> <a href="https://menopause.org/patient-education/menopause-topics/hot-flashes" target="_blank" rel="noopener noreferrer">Hasta bilgilendirme kaydı</a>.</li>
+          </ol>
         </ArticleProsePanel>
 
       <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
@@ -293,15 +332,14 @@ sindirim başlıkları veya belirli kısıtlamalar (alerji, intolerans) yolu şe
 
         <ArticleEditorNote>
 <p class="mb-3 leading-relaxed text-ink/80">
-            40 sonrası ve menopoz geçişindeki beslenme stratejisi, bazal metabolizma yavaşlaması, sarkopenik
-            eğilim, östrojen düşüşüne bağlı yağ dağılımı kayması ve mikro besin emilim dinamiklerindeki
-            değişimler birlikte değerlendirilerek kurulur. Tek bir diyet modeli evrensel doğru değildir;
-            mekanizma çoklu eksenlidir.
+            40 sonrası ve menopoz geçişindeki beslenme, enerji ihtiyacındaki değişim, kas kaybı eğilimi, östrojen
+            düzeylerindeki değişim ve bazı besinlerin emilimi birlikte düşünülerek ele alınır. Tek bir diyet modeli
+            herkes için doğru değildir; ihtiyaçlar birden fazla etkene göre değişir.
           </p>
           <p class="mb-3 leading-relaxed text-ink/80">
-Akdeniz tipi yaklaşım, kardiyovasküler sağlık, kemik koruma ve nörobilişsel parametreler üzerinde en
-            tutarlı kanıt seviyesine sahip yaklaşımdır. Yeterli protein alımı, kaliteli yağ asidi profili (omega-3
-            dengesi), tam tahıl ve sebze ağırlıklı lif tüketimi temel sütunlardır; ancak gram/kilogram protein hedefi
+            Akdeniz tipi yaklaşım, özellikle kalp-damar sağlığı ve genel beslenme kalitesi açısından araştırılmış
+            seçeneklerden biridir. Yeterli protein, doymamış yağ kaynakları, tam tahıl ve sebze ağırlıklı lif
+            tüketimi temel başlıklardır; ancak gram/kilogram protein hedefi
             klinik durum, böbrek fonksiyonu, aktivite düzeyi ve beslenme düzenine göre hekim veya diyetisyenle
             kişiselleştirilmelidir.
           </p>
