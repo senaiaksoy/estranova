@@ -1,0 +1,28 @@
+{
+  "writer": {
+    "slug": "cagri-sade",
+    "name": "Op. Dr. Çağrı Sade"
+  },
+  "article": {
+    "slug": "menopoz-sonrasi-kilo-vucut-sekillendirme",
+    "title": "Menopoz Sonrası Vücut Şekillendirme: Liposuction Size Uygun mu?",
+    "previewUrl": "https://estranova.com.tr/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/",
+    "publishedPath": "/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/"
+  },
+  "package": {
+    "createdAt": "2026-09-21T15:20:45.242Z",
+    "deadline": "2026-09-28T15:20:45.242Z",
+    "status": "published",
+    "approvalGate": "author-and-medical-approval-complete",
+    "authorApprovedOn": "2026-09-21",
+    "publishedOn": "2026-09-21",
+    "medicalReview": {
+      "reviewer": "Doç. Dr. Senai Aksoy",
+      "status": "approved",
+      "approvedOn": "2026-09-21"
+    },
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}

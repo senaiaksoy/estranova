@@ -237,6 +237,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/': {
+    src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-kilo-vucut-sekillendirme.webp',
+    alt: "Gün ışığı alan sakin bir evde ayna karşısında duran 50'li yaşlarda kadın; menopoz sonrası beden kompozisyonu ve vücut şekillendirme kararını anlatan editoryal portre",
+  },
   '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/': {
     src: '/images/library/editorial/zy-kreatin-menopoz.webp',
     alt: "Gün ışığı alan sakin bir egzersiz köşesinde, su bardağı ve dambıl yanında oturan 50'li yaşlarında kadın; menopozda kreatin, kas gücü ve sağlıklı yaş alma yazısı için yatay editoryal kart görseli",

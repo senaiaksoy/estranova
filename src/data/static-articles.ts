@@ -18,6 +18,27 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/',
+    title: 'Menopoz Sonrası Vücut Şekillendirme: Liposuction Size Uygun mu?',
+    description:
+      'Menopoz sonrası karın bölgesindeki değişim liposuction ile giderilebilir mi? Op. Dr. Çağrı Sade, işlemin sınırlarını ve karar ölçütlerini anlatıyor.',
+    publishedDate: '21 Eylül 2026',
+    writerSlug: 'cagri-sade',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik/',
+    keywords: [
+      'menopoz sonrası liposuction',
+      'menopoz sonrası vücut şekillendirme',
+      'karın bölgesi liposuction',
+      'liposuction kimlere uygundur',
+      'liposuction kilo verdirir mi',
+      'cilt altı yağ ve visseral yağ',
+      'lazer liposuction',
+      'ultrason yardımlı liposuction',
+      '40 sonrası beden',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
     title: 'Kreatin Menopozda Ne İşe Yarar? Kas, Kemik ve Beyin İçin Kanıt Ne Diyor?',
     description:

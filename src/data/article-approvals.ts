@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/',
+    writerSlug: 'cagri-sade',
+    approvedAt: '2026-09-21',
+    note: 'Op. Dr. Çağrı Sade yazar onayı ve Doç. Dr. Senai Aksoy tıbbi onayı 21 Eylül 2026 tarihinde teyit edildi. Metin, kaynakça düzeltmesiyle birlikte yayımlandı; PubMed PMID 33085282 künyesi Bartow, Szymanski ve Raggio olarak doğrulandı. Özel byline ve kart görselleri bağlandı; üst hero parent Beden & Yakınlık olarak korundu.',
+  },
+  {
     pathname: '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-08-08',

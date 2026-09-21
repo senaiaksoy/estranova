@@ -10,6 +10,10 @@ Estranova yazar onay arşivi.
 - [`onay-bekleyen/`](./onay-bekleyen/) — yazara gönderilmiş, yanıt bekleyen paketler
 - [`onaylanan/`](./onaylanan/) — onay almış makale paketleri ve onay belgeleri
 
+### Onaylanmış son paket
+
+- [`Menopoz Sonrası Vücut Şekillendirme: Liposuction Size Uygun mu?`](./onaylanan/2026-09-21_menopoz-sonrasi-kilo-vucut-sekillendirme/) — yazar ve tıbbi onay tamam; yayın akışında.
+
 ## Profile
 
 Detay yazar profili (varsa): `writers/cagri-sade/` veya `writers/cagri-sade.md`.
