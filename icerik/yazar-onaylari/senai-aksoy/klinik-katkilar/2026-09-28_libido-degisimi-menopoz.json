@@ -1,0 +1,19 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/",
+  "answeredAt": "2026-09-28",
+  "source": "Kullanıcının bu sohbet içindeki doğrudan yanıtı",
+  "question": "“Libidom azaldı” diye gelen bir hastayla konuşurken ilk hangi soruyu sorarsınız; yanıtı görüşmenin yönünü nasıl değiştirir? Kısa yanıtınızı “Görüşmede Üzerinde Duracağımız Noktalar” bölümünde kullanabilirim.",
+  "answer": "İlk sorum şu olur: “İsteğinizdeki azalmayı siz nasıl yaşıyorsunuz; sizi en çok ne rahatsız ediyor?” Çünkü cinsel isteğin herkes için geçerli bir “normal” düzeyi yok. Kişi kendi isteğinden memnunsa ama partneriyle beklentileri farklıysa, görüşmede iletişime ve ilişki dinamiklerine odaklanırım. Azalma kişinin kendisini rahatsız ediyorsa ne zamandır sürdüğünü, her durumda olup olmadığını; ağrı, kuruluk, stres, uyku, ruh hâli ve kullanılan ilaçlar gibi olası etkenleri sorarım. Böylece bir hormon sonucuna bakıp hemen tedavi önermek yerine, değişimin nedenini birlikte anlamaya başlarız.",
+  "targetSection": "degerlendirme",
+  "localEditedText": [
+    "İlk sorum şu olur: “İsteğinizdeki azalmayı siz nasıl yaşıyorsunuz; sizi en çok ne rahatsız ediyor?” Çünkü cinsel isteğin herkes için geçerli bir “normal” düzeyi yok.",
+    "Kendi isteğinizden memnunsanız ama partnerinizle beklentileriniz farklıysa, görüşmede iletişime ve ilişki dinamiklerine odaklanırım. Azalma sizi rahatsız ediyorsa ne zamandır sürdüğünü ve her durumda olup olmadığını sorarım. Ağrı, kuruluk, stres, uyku, ruh hâli ve kullandığınız ilaçları da birlikte ele alırız.",
+    "Böylece bir hormon sonucuna bakıp hemen tedavi önermek yerine, değişimin nedenini birlikte anlamaya başlarız."
+  ],
+  "status": "Konuya özgü yanıt humanize revizyonuna işlendi; kullanıcı 28 Eylül 2026 tarihinde tıbbi onayı tamamladığını bildirdi.",
+  "approvedAt": "2026-09-28",
+  "approvalSource": "Kullanıcının bu sohbet içindeki doğrudan onayı",
+  "approvalMessage": "senai-humanize skill kullanıldı mı? tıbbi onay tamam commit push deploy",
+  "publicationApproval": "Bu makalenin humanize revizyonu için commit, push ve deploy kullanıcı tarafından açıkça yetkilendirildi."
+}

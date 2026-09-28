@@ -290,8 +290,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: production route ve static manifest eslestirildi; Dr. Senai Aksoy klinik yazar imzasiyla approved olarak kayda alindi.',
+    approvedAt: '2026-09-28',
+    note: 'KC editör bu sohbet içinde humanize revizyonunun tıbbi onayını tamamladığını bildirdi ve commit, push, deploy yetkisi verdi. Konuya özgü yazar yanıtı ve doğrudan onay icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-28_libido-degisimi-menopoz.json dosyasında kayıtlıdır.',
   },
   {
     pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
