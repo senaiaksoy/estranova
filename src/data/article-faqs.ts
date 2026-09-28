@@ -613,22 +613,22 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'NMN veya NR kullanmak kandaki NAD+ düzeyini gerçekten yükseltir mi?',
       answer:
-        'Kısa süreli insan çalışmalarında NMN ve NR gibi öncüllerin kandaki NAD+ göstergelerini artırabildiği görülüyor. Ama okuyanın asıl sorusu genellikle bu değil; "bu bende neyi değiştirir?" sorusudur. Bugün için biyobelirteç artışı, kas gücü, biliş, metabolizma veya uzun yaşam gibi klinik sonuçların da iyileştiği anlamına gelmez.',
+        'Kısa süreli insan çalışmalarında NMN ve NR gibi öncüllerin kandaki NAD+ göstergelerini artırabildiği görülüyor. Bu artışın kas gücü, düşünme ve hafıza, metabolizma veya uzun yaşam gibi sonuçlara da yansıdığı ise henüz gösterilmedi. Kandaki sayı yükselebilir; bunun sağlığınızda neyi değiştirdiği hâlâ açık bir soru.',
     },
     {
       question: 'NAD+ yükselirse yaşlanma yavaşlar mı?',
       answer:
-        'Bugün için bunu söylemek fazla iddialı olur. NAD+ hücresel enerji ve onarım yollarında önemli bir moleküldür; bu nedenle bilimsel merakı hak eder. Fakat insanda yaşlanmayı yavaşlattığını veya ömrü uzattığını gösteren güçlü, uzun dönem klinik veri henüz yoktur.',
+        'Bugün için bunu söylemek fazla iddialı olur. NAD+ hücresel enerji ve onarım yollarında önemli bir molekül ve bilimsel merakı hak ediyor. Fakat insanda yaşlanmayı yavaşlattığını veya ömrü uzattığını gösteren güçlü, uzun dönem klinik veri henüz yok.',
     },
     {
-      question: 'NAD+ öncüleri yumurta kalitesini veya gebelik şansını artırır mı?',
+      question: 'NAD+ öncülleri yumurta kalitesini veya gebelik şansını artırır mı?',
       answer:
-        'Fare ve laboratuvar düzeyindeki insan yumurta hücresi çalışmalarında ilginç sinyaller vardır. Yine de bu başlıkta dili özellikle yavaşlatmak gerekir; umut eden bir kadına mekanizma, klinik sonuç gibi sunulmamalıdır. Haziran 2026 itibarıyla, kadına NMN veya NR verildiğinde gebelik ya da canlı doğum şansını artırdığını gösteren tamamlanmış ve güçlü insan çalışması yoktur.',
+        'Fare çalışmalarında ve insandan alınmış yumurta hücreleriyle yapılan laboratuvar çalışmalarında ilgi çekici sinyaller var. Ancak bunlar, takviyeyi ağızdan alan bir kadında gebelik şansının arttığını göstermiyor. Haziran 2026 itibarıyla, kadına NMN veya NR verildiğinde gebelik ya da canlı doğum şansını artırdığını gösteren tamamlanmış ve güçlü bir insan çalışması yok. Gebelik planlıyorsanız bu konuyu kadın hastalıkları ve doğum uzmanınızla konuşmanız iyi olur.',
     },
     {
-      question: 'Ürün kalitesi neden bu kadar vurgulanıyor?',
+      question: 'Aldığım ürünün etikette yazan içeriği gerçekten taşıdığını nasıl anlarım?',
       answer:
-        'Çünkü bazı çevrimiçi ürünlerde etiket iddiası ile gerçek içerik arasında ciddi uyumsuzluklar bildirilmiştir. Kutu parlak görünebilir; ama bu, içeriğin doğru olduğu anlamına gelmez. Bu yüzden ürün kalitesi, lot numarası, analiz sertifikası, üçüncü taraf test ve yerel yasal durum, molekül seçimi kadar önemli bir güvenlik başlığıdır.',
+        'Çevrimiçi satılan bazı NMN ve NAD+ ürünlerinde etiket iddiası ile gerçek içerik arasında ciddi uyumsuzluklar bildirildi; bazılarında iddia edilen miktarın çok azı bulundu, bazılarında hedef bileşik hiç saptanmadı. Lot numarası, analiz sertifikası, üçüncü taraf testi ve üreticinin şeffaflığı bu konuda önemli ipuçları verir. Türkiye’de ürünün takviye edici gıda statüsü ve resmî bildirimi de ayrıca doğrulanmalı.',
     },
   ],
   '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': [

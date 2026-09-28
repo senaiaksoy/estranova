@@ -320,8 +320,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: canli route current writer signature ile eslestirildi ve approval kaydi production envanterine eklendi.',
+    approvedAt: '2026-09-28',
+    note: 'KC editör bu sohbet içinde humanize revizyonunun tıbbi onayını verdi; tıbbi denetleyici Dr. Alper Mumcu olarak belirlendi; kaynak bölümü eklendi; commit, push ve deploy yetkisi verildi. Konuya özgü iki yazar yanıtı ve doğrudan onay icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-28_nad-plus-hucresel-yaslanma.json dosyasında kayıtlıdır.',
   },
   {
     pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',

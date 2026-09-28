@@ -1,0 +1,45 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/",
+  "answeredAt": "2026-09-28",
+  "source": "Kullanıcının bu sohbet içindeki doğrudan yanıtı",
+  "contributions": [
+    {
+      "question": "NAD+ takviyesini soran hastalarınız bu konuda en çok neyi yanlış biliyor, onlara ne söylüyorsunuz?",
+      "answer": "Bu hastalarda en sık duyduğum yanılgı, “NAD+’ı artırırsam yaşlanmayı geri çevirir, menopoz belirtilerimi de düzeltirim” düşüncesi. NMN ve NR, NAD+ üretiminde kullanılan maddeler ve kan düzeylerini artırabiliyorlar. Ancak bunun enerji, uyku veya menopoz yakınmalarında güvenilir ve kalıcı bir iyileşme sağladığı henüz gösterilmiş değil. Hastama, neyi düzeltmesini umduğunu sorarım; örneğin ateş basması ya da uykusuzluk yaşıyorsa bunları ayrıca değerlendiririz. Takviyeyi kan tahlilindeki bir sayıya veya “gençleşme” vaadine göre önermem.",
+      "targetSections": [
+        "nmn-nr",
+        "kisa-ozet (öncül tanımı)"
+      ],
+      "localEditedText": [
+        "NMN ve NR gibi NAD+ öncülleri (vücudun NAD+ üretirken kullandığı maddeler)",
+        "Bu takviyeyi soran hastalarımdan en sık duyduğum yanılgı şu: “NAD+'ı artırırsam yaşlanmayı geri çeviririm, menopoz belirtilerimi de düzeltirim.” NMN ve NR kandaki NAD+ düzeyini artırabiliyor. Ancak bunun enerji, uyku veya menopoz yakınmalarında güvenilir ve kalıcı bir iyileşme sağladığı henüz gösterilmiş değil. Takviyeyi de kan tahlilindeki bir sayıya ya da “gençleşme” vaadine göre önermem."
+      ],
+      "overlapNote": "“Neyi düzeltmesini umduğunu sorarım” ve “ateş basması / uykusuzluk ayrıca değerlendirilir” kısımları 2. yanıttan karar bölümünde zaten yer aldığı için ikinci kez eklenmedi."
+    },
+    {
+      "question": "Kısa süreli bir deneme konuşulduğunda, denemenin bitmesi gerektiğine hangi gözlemle karar verirsiniz?",
+      "answer": "Haklısınız, burada fertiliteyi ölçüt almam. Menopoz öncesi veya menopozdaki hastaya önce “Bu takviyeden hangi değişikliği bekliyorsunuz?” diye sorarım. Örneğin enerji veya günlük işlevsellik için kısa bir deneme düşünüyorsa, başlangıçtaki durumunu birlikte kaydederiz. Önceden kararlaştırdığımız birkaç hafta sonunda kendisi için belirgin bir fark yoksa denemeyi bitiririm; yan etki olursa daha erken bırakırız. Kan NAD+ düzeyindeki artışı tek başına devam gerekçesi saymam, çünkü insan çalışmalarında bu artışın hissedilir sağlık yararına dönüşmesi tutarlı biçimde gösterilmedi. Ateş basması veya uyku sorunu belirginse bunları ayrıca değerlendiririm",
+      "targetSections": [
+        "karar"
+      ],
+      "localEditedText": [
+        "Menopoz öncesinde ya da menopozda bu takviyeyi soran hastama ilk sorum şudur: “Bu takviyeden hangi değişikliği bekliyorsunuz?”",
+        "Klinik pratiğimde bu denemeyi şöyle kurarım: Hasta örneğin enerji veya günlük işlevsellik için kısa bir deneme düşünüyorsa, başlangıçtaki durumunu birlikte kaydederiz. Önceden kararlaştırdığımız birkaç haftanın sonunda kendisi için belirgin bir fark yoksa denemeyi bitiririm; yan etki olursa daha erken bırakırız. Kandaki NAD+ artışını tek başına devam gerekçesi saymam, çünkü insan çalışmalarında bu artışın hissedilir bir sağlık yararına dönüştüğü tutarlı biçimde gösterilmedi. Ateş basması veya uyku sorunu belirginse, bunları ayrıca değerlendiririm."
+      ]
+    }
+  ],
+  "status": "Konuya özgü iki yanıt humanize revizyonuna işlendi; kullanıcı 28 Eylül 2026 tarihinde tıbbi onayı verdi ve tıbbi denetleyiciyi Dr. Alper Mumcu olarak belirledi.",
+  "approvedAt": "2026-09-28",
+  "approvalSource": "Kullanıcının bu sohbet içindeki doğrudan onayı",
+  "publicationApproval": "Bu makalenin humanize revizyonu için commit, push ve deploy kullanıcı tarafından açıkça yetkilendirildi.",
+  "withdrawnAnswers": [
+    {
+      "withdrawnAt": "2026-09-28",
+      "note": "Yazar 1. yanıtını değiştirdi; doğurganlık odaklı önceki yanıttan metne giren tüm cümleler (fertilite bölümü ve SSS) kaldırıldı.",
+      "answer": "Hastaların en sık yanıldığı nokta şu: “NAD+ düzeyim artarsa yumurtalarım gençleşir” diye düşünüyorlar. NMN ve NR, NAD+ üretiminde kullanılan maddeler; hayvan çalışmalarında yumurta kalitesiyle ilgili umut verici sonuçlar var. Ancak bunların insanlarda AMH’yi, embriyo kalitesini veya canlı doğum şansını artırdığı henüz güvenilir biçimde gösterilmiş değil. Kan NAD+ düzeyinin yükselmesi de tek başına gebelik yararı anlamına gelmiyor. PubMed. Hastama kullandığı ürünü ve dozu sorarım; özellikle gebelik planında güvenlik verilerinin sınırlı olduğunu konuşurum. Sırf NMN veya NR kullanmak için gerekli fertilite değerlendirmesini ya da IVF’yi ertelemeyi önermem."
+    }
+  ],
+  "approvalMessage": "tıbbi onay tamam commit push deploy. tıbbi kontrol dr alper mumcu olacak. kaynak bölümü ekle",
+  "medicalReviewer": "Dr. Alper Mumcu"
+}
