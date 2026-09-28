@@ -21,15 +21,15 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/']!;
 
 const tocEntries = [
-  { id: 'karar-konusma', label: 'Karar Değil, Konuşma' },
-  { id: 'hormon-tedavisi-nedir', label: 'Adı Bir, Yolları Çok' },
-  { id: 'vucutta-ne-oluyor', label: 'Östrojen Düşünce' },
-  { id: 'bilim-ne-diyor', label: 'Bilim Ne Diyor?' },
-  { id: 'turkiye-notlari', label: 'Türkiye Notları' },
+  { id: 'karar-konusma', label: 'Önce Sizi Zorlayan Yakınma' },
+  { id: 'hormon-tedavisi-nedir', label: 'Sistemik ve Lokal Tedavi' },
+  { id: 'vucutta-ne-oluyor', label: 'Östrojen Azalınca Neler Değişir' },
+  { id: 'bilim-ne-diyor', label: 'Yarar, Risk ve Zamanlama' },
+  { id: 'turkiye-notlari', label: 'Biyo-özdeş Hormon Ne Demek?' },
   { id: 'karar-plani', label: 'Karar Planı' },
+  { id: 'karari-sakin-birakirken', label: 'Görüşmeye Hazırlık' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
-  { id: 'karari-sakin-birakirken', label: 'Kararı Sakin Bırakırken' },
-  { id: 'sss', label: 'Sıkça Sorulan Sorular' },
+  { id: 'sss', label: "Dr. Aksoy'a Sorular" },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -98,211 +98,303 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Hormon tedavisi (HRT / menopozal hormon tedavisi), özellikle sıcak basması ve gece terlemeleri gibi
-          vazomotor yakınmalarda kanıtı en güçlü tıbbi seçenektir. 60 yaşın altında ve menopozun ilk 10 yılı içinde
-          başlandığında fayda-risk dengesi kadınların büyük çoğunluğunda olumludur. Karar tek bir reçete değil;
-          yaşınıza, belirtilerin şiddetine ve kişisel sağlık geçmişinize göre hekiminizle birlikte kurulan sakin bir yol haritasıdır.
+          Menopozal hormon tedavisi, sıcak basması ve gece terlemesi için kanıtı güçlü bir seçenektir.
+          Yakınmaları belirgin ve tedaviye engeli olmayan kadınlarda, özellikle 60 yaşından önce ve menopozdan
+          sonraki ilk 10 yıl içinde başlandığında yarar-risk dengesi genellikle daha elverişlidir.
+          Yaş ve geçen süre, sağlık geçmişinizle birlikte değerlendirilir; bunlar tek başına bir başlama veya
+          bırakma kuralı değildir. Yalnızca vajinal yakınmalar için düşük doz lokal tedavi yeterli olabilir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="karar-konusma">Karar Değil, Konuşma</h2>
+        <h2 id="karar-konusma">Önce Sizi Zorlayan Yakınma</h2>
         <p>
-          Hormon tedavisi sorusu çoğu zaman doğru cevabı tek olan bir sınav gibi yaşanıyor. Oysa burada peşin hükümlü
-          bir reçete yok; belirtiler, kişisel riskler ve hayatınızın ritmi yan yana konduğunda şekillenen dürüst bir diyalog var.
+          Muayene odasında iki kaygıyla sık karşılaşırım: hormon kullanmak zorunda hissetmek ve hormondan
+          mutlaka uzak durmak gerektiğini düşünmek. İkisi de anlaşılır.
         </p>
         <p>
-          Muayene odasında yıllardır aynı iki uç cümleyi çok sık duyarım: <em>"Bunu almak zorunda mıyım?"</em> ve <em>"Bundan
-          kesinlikle uzak durmalı mıyım?"</em> İkisi de aceleyle verilmiş yanıtlardır. Hormon tedavisi ne her kadına
-          otomatik dağıtılacak bir rutin, ne de konuşulmadan üzeri çizilecek bir tehlikedir.
+          Bu yüzden konuşmaya çoğu zaman şöyle başlarım: “Burada sizi hormon kullanmaya ikna etmeye de
+          hormondan uzak tutmaya da çalışmıyorum. Önce sizi neyin zorladığını konuşalım; sonra seçeneklerin
+          yararlarını ve risklerini birlikte değerlendirip size uygun kararı verelim.”
         </p>
         <p>
-          Seçenek tek değil. Masada sizin hikâyeniz var.
+          “Bu tedaviyi almak zorunda değilsiniz” dediğimde hastanın rahatladığını sık görürüm. Baskı kalkınca
+          asıl sorulara geçebiliriz. Sıcak basması ya da gece terlemesi uykunuzu bölüyor mu? Ertesi gün işinizi
+          nasıl etkiliyor? Sizde ya da ailenizde hangi hastalıklar var?
         </p>
         <p>
-          O zaman biz ne yapıyoruz? Önce belirtinin uykuyu, iş temposunu ve gündelik huzuru ne kadar zorladığını anlamaya
-          çalışıyoruz. Ardından kişisel sağlık geçmişinizi ve aile tablonuzu çıkarıyoruz. En son basamakta ise seçeneklerin
-          hangisinin sizin yaşamınıza denk düştüğünü birlikte değerlendiriyoruz. Güvenli karar, soruların sırasını
-          doğru kurmakla başlar.
-        </p>
-
-        <h2 id="hormon-tedavisi-nedir">Adı Bir, Yolları Çok</h2>
-        <p>
-          Aynı başlığın altında birden çok seçenek toplanır: farklı uygulama yolları, farklı dozlar ve bambaşka hedefler.
-          Bu ayrımı baştan yapmak kafa karışıklığını hızla yatıştırır.
-        </p>
-        <p>
-          Temel mekanizma oldukça sade: Menopoz sürecinde yumurtalıkların üretimini azalttığı östrojeni ve gereğinde
-          progesteronu dışarıdan yerine koyuyoruz. Tıbbi adıyla menopozal hormon tedavisi (MHT) ya da günlük dildeki
-          kullanımıyla HRT. İkisi de aynı klinik alanı anlatır.
-        </p>
-        <p>
-          Ancak uygulama yolu tablonun rengini tamamen değiştirebilir. Ağızdan alınan bir hap ile ciltten yapıştırılan
-          bir bant ya da sürülen jel aynı biyolojik rotayı izlemez. Karaciğeri ilk geçişte baypas eden transdermal
-          seçenekler (jel veya bant), damar içi pıhtılaşma riski açısından çoğu zaman daha elverişli bir güvenlik profili sunar.
-        </p>
-        <p>
-          Rahmi olan bir kadında östrojenin yanına mutlaka progesteron eklemek gerekir. Bu bir tercih değil, rahim iç
-          tabakasını (endometrium) kalınlaşmaya karşı koruyan temel bir güvenlik kuralıdır. Rahmi cerrahiyle alınmış
-          kadınlarda ise genellikle tek başına östrojen yeterli olur. Sadece kuruluk ve ilişkide ağrı için kullanılan
-          lokal vajinal östrojen ise bambaşka bir başlıktır; kana belirgin biçimde karışmaz ve sistemik tedavinin taşıdığı
-          risklerin çoğunu barındırmaz. Kısacası, tek tip bir hormon tedavisi yoktur.
+          Aynı yaştaki iki kadın bu sorulara farklı yanıtlar verip farklı kararlara varabilir. Beklediğiniz yarar,
+          kabul edilebilir bulduğunuz riskler ve tedavi isteyip istemediğiniz bu kararın parçasıdır.
         </p>
 
-        <h2 id="vucutta-ne-oluyor">Östrojen Düşünce</h2>
+        <h2 id="hormon-tedavisi-nedir">Sistemik ve Lokal Tedavi</h2>
         <p>
-          Yumurtalıkların östrojen üretimi menopozla birlikte belirgin biçimde geri çekilir. Bu düşüş yalnızca adet
-          kanamalarını bitirmez; beynin ısı merkezini, uyku kalitesini, doku esnekliğini ve kemik yapımını da doğrudan etkiler.
+          Hormon tedavisinde ilk ayrım, ilacın bütün vücudu mu yoksa ağırlıklı olarak vajinal dokuyu mu etkilediğidir.
+          Kullanılan hormon, doz ve uygulama yolu bu ayrımla birlikte seçilir.
         </p>
         <p>
-          Östrojen seviyesi dalgalanıp azaldığında hipotalamustaki termostat aralığı daralır. Beden küçük bir ısı artışında
-          bile acil soğutma alarmı vererek ani sıcak basmaları ve gece terlemeleri üretir. Buna uykunun sık sık bölünmesi,
-          sabah yorgun uyanma ve vajinal dokunun incelmesi eşlik edebilir. Her kadın bu süreci aynı şiddette yaşamaz.
-          Kimi dönemi hafif bir ısı hissiyle atlatırken, kimi gecede üç kez kıyafet değiştirmek zorunda kalır.
+          Menopozal hormon tedavisi (MHT), menopozla azalan östrojenin dışarıdan verilmesine dayanır.
+          HRT kısaltması da aynı tedavi alanı için kullanılır. Sistemik tedavide östrojen ağızdan tabletle
+          veya ciltten bant, jel ya da spreyle verilebilir; dolaşıma geçerek tüm vücudu etkiler.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
         </p>
         <p>
-          Önce şunu söyleyeyim: Bu belirtileri yaşamanız bir zaaf ya da hastalık değil; biyolojik bir geçiştir.
+          Ağızdan ve ciltten kullanımın güvenlik özellikleri aynı değildir. Ciltten verilen östrojen karaciğerden
+          ilk geçişe uğramaz. Özellikle toplardamarda pıhtı oluşması riski açısından ağızdan kullanıma göre
+          daha elverişli olabilir; bu farkın önemli bir bölümü gözlemsel verilere dayanır.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
         </p>
+        <h3>Rahim iç tabakasının korunması</h3>
         <p>
-          Hormon tedavisi, yerine konan östrojenle bu biyolojik termostatı yeniden dengeler. Özellikle sıcak basmaları
-          ve gece terlemelerinde klinik etkisi tartışmasız derecede yüksektir; haftalık belirti sıklığını üçte ikiden
-          fazla azaltabildiği randomize çalışmalarda gösterilmiştir <Evidence level={5} />. Kemik erimesini yavaşlatması
-          ve ürogenital dokuyu canlandırması da belgelenmiş faydaları arasındadır. Tedavi mucizevi bir iksir değildir;
-          ancak doğru endikasyonda gerçek bir rahatlama sağlar.
+          Rahminiz varsa sistemik östrojenle birlikte rahim iç tabakasını, yani endometriumu koruyan bir tedavi
+          gerekir. Genellikle progesteron veya aynı koruyucu etkiyi sağlayan başka bir progestojen kullanılır.
+          Bu koruma, östrojenin rahim iç tabakasında aşırı kalınlaşma ve kanser riskini artırmasını önlemek içindir
+          <Evidence level={5} />. Rahmi tamamen alınmış kadınlarda ise çoğunlukla yalnız östrojen kullanılır.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-2">[2]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
-
-        <h2 id="bilim-ne-diyor">Bilim Ne Diyor?</h2>
+        <h3>Düşük doz vajinal östrojenin farkı</h3>
         <p>
-          Kanıt tablosu son yirmi yılda çok daha berrak bir zemine oturdu. Yine de bu alanda toptancı genellemeler yapmak
-          daima yanıltır; çünkü zamanlama, yaş ve kişisel geçmiş klinik tabloyu baştan aşağı yeniler.
-        </p>
-        <p>
-          Uluslararası menopoz kılavuzlarının bugün birleştiği temel bir zemin var: 60 yaşın altında olan ve menopozun
-          üzerinden on yıldan az süre geçmiş kadınlarda, belirgin yakınma varsa hormon tedavisinin fayda-risk dengesi
-          açıkça olumludur <Evidence level={5} />. Tıpta buna "fırsat penceresi" diyoruz. Bu zaman aralığında damar yapısı
-          henüz esnekliğini korurken ve hücreler östrojene duyarlıyken başlanan tedavi, hem yaşam kalitesini hızla yükseltir
-          hem de kemik kütlesini korur.
-        </p>
-        <p>
-          Zamanlama burada her şeydir.
-        </p>
-        <p>
-          Pencere kapandıktan sonra — yani 60 yaşın üzerinde ya da menopozdan on yıldan fazla zaman geçtikten sonra ilk kez
-          başlandığında — denkleme yeni riskler eklenir. Damar tıkanıklığı, inme ve kalp yükü gibi olasılıklar artabilir.
-          Bu nedenle yaş ve geçen süre kararın merkezinde durur.
-        </p>
-        <p>
-          Meme kanseri tartışması ise muayene odasında en çok duyduğum endişedir. 2000'li yılların başındaki ilk büyük çalışma
-          sonuçlarının yarattığı korku dalgası günümüzde hâlâ hissediliyor. Oysa güncel uzun dönem takip verileri, mutlak
-          risk artışının sanılandan çok daha sınırlı olduğunu ortaya koymaktadır <Evidence from={4} to={5} />. Özellikle
-          rahmi olmayıp yalnızca östrojen kullanan kadınlarda ek bir meme kanseri artışı gözlenmemiştir. Kombine tedavideki
-          küçük risk artışı ise yaşam tarzı değişkenleriyle (örneğin düzenli alkol kullanımı veya kilo artışı) kıyaslanabilecek
-          seviyededir. Elbette aile öyküsü, kişisel meme biyopsisi geçmişi ve yıllık mamografi takibi atlanamaz.
+          Vajinal kuruluk, yanma veya ilişkide ağrı ön plandaysa düşük doz vajinal östrojen ayrı değerlendirilir.
+          Kana geçen miktar sistemik tedaviye göre çok daha azdır ve bu düşük doz lokal kullanımda genellikle
+          ek progestojen gerekmez. Meme kanseri öyküsü ve yeni vajinal kanama ise lokal tedavide de ayrıca ele alınmalıdır.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
 
-        <h2 id="turkiye-notlari">Türkiye Notları</h2>
+        <h2 id="vucutta-ne-oluyor">Östrojen Azalınca Neler Değişir</h2>
         <p>
-          Türkiye'de onaylı hormon preparatlarına eczaneler üzerinden erişim mümkündür; ancak bu alandaki bilgi kirliliği
-          ve eski korkular seçeneklerin sağlıklı konuşulmasını hâlâ gölgeleyebiliyor.
+          Gece terlemesiyle bölünen uyku, sabah yorgunluğu ve vajinal kuruluk aynı dönemde ortaya çıkabilir.
+          Östrojen değişimi bunların bir kısmını açıklar; yine de her yeni yakınmayı menopoza bağlamamak gerekir.
         </p>
         <p>
-          Pratikte iki farklı uç tabloyla karşılaşıyorum. İlki, pek çok kadının yirmi yıl önceki gazete manşetlerinin
-          etkisiyle bu seçeneği hekimine hiç sormadan peşinen reddetmesi; iş ve aile hayatını felç eden sıcak basmalarını
-          çaresizce kabullenmesi. İkincisi ise bunun tam tersi: "Biyo-özdeş, tamamen doğal, size özel formül" sloganıyla
-          sunulan, ruhsatsız ve denetimsiz eczane karışımlarına yönelinmesi.
+          Menopoz geçişindeki hormonal değişimler beynin ısı düzenleme sistemini etkiler. Vücut küçük bir ısı
+          değişimine terleme ve sıcak basmasıyla yanıt verebilir. Östrojen azalması vajinal dokuda incelmeyle
+          ve kemik kaybının hızlanmasıyla da ilişkilidir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
         </p>
         <p>
-          Bu noktada net bir ayrım yapmak gerekir. Bir tarafta Sağlık Bakanlığı ve uluslararası otoritelerce onaylanmış,
-          dozu standart, içeriği sabit ve güvenliği binlerce kadında izlenmiş preparatlar vardır. Diğer tarafta ise tükürük
-          testlerine dayandırılarak laboratuvarda karıştırılan, doz tutarlılığı ve uzun dönem güvenliği belgelenmemiş
-          formüller yer alır. Menopoz alanındaki uzman dernekler, bu ikinci grubun kullanılmaması gerektiği konusunda
-          kesin bir uzlaşıya sahiptir <Evidence level={5} />.
+          Yakınmaların şiddeti kişiden kişiye çok değişir. Kimi kadın gün içinde kısa, hafif sıcaklık dalgaları
+          hisseder; kimi gece terlemesi yüzünden çarşaf değiştirmek zorunda kalır. Tedavi kararında belirtinin adı kadar
+          hayatınızda kapladığı yer de önemlidir.
+        </p>
+
+        <h2 id="bilim-ne-diyor">Yarar, Risk ve Zamanlama</h2>
+        <p>
+          Hormon tedavisinin en sağlam yararı sıcak basması ve gece terlemesi üzerindedir. Risk tarafı ise
+          kullanılan hormona, uygulama yoluna ve tedaviye ne zaman başlandığına göre değişir.
+        </p>
+        <h3>Sıcak basması ve kemik</h3>
+        <p>
+          Hormon tedavisinin sıcak basmalarını ve gece terlemelerini azaltabildiğine ilişkin kanıt güçlüdür
+          <Evidence level={5} />. Ağızdan östrojen veya östrojen-progestojen kullanılan randomize çalışmaların
+          bir derlemesinde, sıcak basması sıklığı plaseboya göre ortalama üçte ikiden fazla azalmıştır.
+          Bu, farklı tedavileri birleştiren eski bir derlemenin grup sonucudur; her kadında veya her uygulama
+          yolunda aynı azalma beklenmez.<sup><a href="#kaynak-10">[10]</a></sup>
         </p>
         <p>
-          Türkiye'de güvenli bir tedavi arayışındaysanız, hekiminizle ruhsatlı ve izlenebilir seçenekleri masaya yatırmak
-          en akılcı yoldur. "Tükürüğünüzden kişiye özel sihirli doz çıkaralım" vaadi duyduğunuzda temkinli kalmanız sağlığınız
-          için kritik bir reflekstir.
+          Sistemik tedavi kullanım sırasında kemik kaybını ve kırık riskini de azaltabilir.
+          Bu yararlar, herkesin koruyucu amaçla hormon kullanması gerektiği anlamına gelmez.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
+        </p>
+        <h3>Yaş ve menopozdan beri geçen süre</h3>
+        <p>
+          Yakınmaları belirgin, tedaviye engeli olmayan bir kadında 60 yaşından önce ve menopozdan sonraki
+          ilk 10 yıl içinde başlandığında yarar-risk dengesi genellikle daha elverişlidir. Bu ilk yıllar bazen
+          “fırsat penceresi” diye anılır. Pencere ise belirli bir doğum gününde birden kapanmaz.<sup><a href="#kaynak-1">[1]</a></sup>
+        </p>
+        <p>
+          Tedaviye ilk kez 60 yaşından sonra veya menopozdan 10 yıldan fazla zaman geçince başlamak,
+          koroner kalp hastalığı, inme ve toplardamar pıhtısı gibi sorunların mutlak riskini artırabilir.
+          Böyle bir başvuruda riskleri daha dikkatli tartar, hormon dışı seçenekleri de konuşurum.
+          Başlamak ile sürdürmek ise ayrı kararlardır: Yararını gören bir kadında tedaviyi sürdürürken yaşa değil,
+          belirtilere, yarara ve yeni gelişen risklere bakarım.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
+        </p>
+        <p>
+          Menopoz 40 yaşından önce gelmişse, yani erken yumurtalık yetmezliği söz konusuysa hesap farklıdır.
+          Özel bir engel yoksa hormon tedavisi genellikle en azından olağan menopoz yaşına kadar önerilir;
+          bu kadınlarda “ilk 10 yıl” ölçüsü aynı biçimde uygulanmaz.<sup><a href="#kaynak-3">[3]</a></sup>
+        </p>
+        <h3>Meme kanseri riskini ayırarak konuşmak</h3>
+        <p>
+          Meme kanseri, bu görüşmelerde en sık karşılaştığım endişelerden biridir. Burada yalnız östrojenle
+          östrojen-progestojen birlikteliğini ayırmak gerekir; bu iki tedavinin verileri aynı değildir.
+        </p>
+        <p>
+          Rahmi alınmış kadınların katıldığı büyük bir randomize çalışmada, ortanca yaklaşık yedi yıl ağızdan
+          konjuge at östrojeni kullanılmıştır. Bu, belirli bir östrojen karışımıdır. Uzun dönem izlemde meme
+          kanseri görülme sıklığı plasebo grubundan daha düşük bulunmuştur <Evidence level={4} />.
+          Bulguyu her östrojen türüne veya kullanım süresine genelleyemeyiz; östrojen meme kanserinden korunmak
+          amacıyla kullanılmaz.<sup><a href="#kaynak-4">[4]</a></sup>
+        </p>
+        <p>
+          Kombine östrojen-progestojen tedavisinde ise meme kanseri riski artabilir ve artış kullanım süresiyle
+          ilişkilidir. Kişisel risk konuşulurken aile öyküsü ve geçirilmiş meme biyopsileri de dikkate alınır;
+          meme taraması yaşa ve kişisel riske göre planlanır.<sup><a href="#kaynak-3">[3]</a></sup><sup><a href="#kaynak-4">[4]</a></sup>
+        </p>
+        <p>
+          Mikronize progesteron bazı durumlarda tercih edilebilir; ancak diğer progestojenlere göre meme kanseri
+          riskinin daha düşük olduğunu kesinleştirecek kanıt yeterli değildir.<sup><a href="#kaynak-3">[3]</a></sup>
+        </p>
+
+        <h2 id="turkiye-notlari">Biyo-özdeş Hormon Ne Demek?</h2>
+        <p>
+          “Doğal” veya “kişiye özel” sözcükleri bir hormon ürününün güvenliğini açıklamaz.
+          Hekiminizle konuşurken ürünün ruhsatını, içeriğini ve dozunun nasıl belirlendiğini sorabilirsiniz.
+        </p>
+        <p>
+          Ruhsatlı östradiol ve mikronize progesteron gibi ilaçlarla, kişiye özel hazırlanan hormon karışımlarını
+          ayırmak gerekir. “Biyo-özdeş” adı her ikisi için de kullanılabilir. Bu ad tek başına, bir karışımın
+          ruhsatlı ilaçtan daha güvenli veya etkili olduğunu göstermez. Vücudun ürettiği hormonla aynı yapıdaki
+          ruhsatlı bir ilacın da kendine özgü riskleri vardır.<sup><a href="#kaynak-7">[7]</a></sup>
+        </p>
+        <p>
+          Onaylı ve uygun seçenekler mevcutken kişiye özel hormon karışımlarının rutin kullanımı önerilmez.
+          İçerik ve doz tutarlılığı ile uzun dönem güvenlik konusunda belirsizlikler vardır. Tükürük testlerine
+          göre hormon dozu ayarlanması da önerilen bir yöntem değildir.<sup><a href="#kaynak-7">[7]</a></sup>
+          Türkiye'deki belirli bir ürünün ruhsat ve erişim durumu, hekim ve eczacıyla güncel olarak doğrulanmalıdır.
         </p>
 
         <h2 id="karar-plani">Karar Planı</h2>
         <p>
-          Karar süreci "hormon almalı mıyım?" ikilemiyle değil, "benim hayatımda ve bedenimde hangi adım anlamlı?"
-          sorusuyla başlar. Bu yaklaşım, görüşmeyi tedirginlikten çıkarıp karşılıklı güvene dayalı bir plana dönüştürür.
+          Plan, açılıştaki sorunun devamıdır: Sizi en çok ne zorluyor, sağlık geçmişiniz hangi seçenekleri
+          sınırlıyor ve siz hormon kullanmak istiyor musunuz?
+        </p>
+        <h3>Önce yakınma ve güvenlik</h3>
+        <p>
+          Sıcak basmaları uykunuzu mu bölüyor, yoksa tek yakınmanız vajinal kuruluk ve ilişkide ağrı mı?
+          Yalnızca vajinal yakınmalar varsa sistemik tedaviye ihtiyaç olmayabilir. Nemlendirici, kayganlaştırıcı
+          ve gerektiğinde düşük doz vajinal östrojen gibi lokal seçenekler konuşulabilir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
         <p>
-          İlk adım, yakınmalarınızın şiddetini netleştirmektir. Sıcak basmaları uykunuzu bölüyor mu, gün içindeki odaklanmanızı
-          ve enerjinizi tüketiyor mu? Eğer tek yakınmanız vajinal kuruluk veya ilişkide acı hissi ise, tüm vücudu sistemik
-          hormonla tanıştırmaya gerek kalmaz; düşük dozlu lokal bir vajinal krem ya da fitil genellikle tek başına yeterlidir.
+          Açıklanamayan vajinal kanama, meme kanseri öyküsü, aktif karaciğer hastalığı, geçirilmiş kalp krizi veya
+          inme ve pıhtı öyküsü sistemik tedavi kararında özellikle önemlidir. Açıklanamayan kanamanın nedeni
+          tedaviden önce araştırılır. Meme kanseri öyküsünde sistemik hormon tedavisi genel olarak önerilmez.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
+        </p>
+        <h3>Pıhtı öyküsünde uzman değerlendirmesi</h3>
+        <p>
+          Aktif pıhtı veya geçirilmiş toplardamar pıhtısı varsa hormon kararı rutin bir başlangıç gibi verilmez.
+          Kılavuzlar geçmiş pıhtı konusunda tamamen aynı yaklaşımı benimsemiyor: bazıları bunu sistemik tedaviye
+          engel sayarken, daha yeni bir Avrupa kılavuzu ayrıntılı kişisel değerlendirmeden sonra seçilmiş
+          durumlarda düşük doz ciltten östrojeni ele alıyor. Bu istisna, bant veya jelin pıhtı öyküsü olan
+          herkeste güvenli olduğu şeklinde okunmamalı; karar ilgili uzmanlarla birlikte verilmelidir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
+        </p>
+        <h3>Meme kanseri sonrası vajinal yakınmalar</h3>
+        <p>
+          Meme kanseri geçirmiş kadınlarda vajinal yakınmalar için ilk seçenekler hormonsuz nemlendiriciler
+          ve kayganlaştırıcılardır. Yakınmalar bunlara rağmen sürüyorsa düşük doz vajinal östrojenin olası
+          yararları ve belirsizlikleri konuşulabilir. Kanserin tekrarlama riski üzerindeki etkisi kesin olarak
+          bilinmiyor.<sup><a href="#kaynak-3">[3]</a></sup><sup><a href="#kaynak-6">[6]</a></sup>
         </p>
         <p>
-          İkinci adım, tıbbi engelleri (kontrendikasyonları) gözden geçirmektir. Geçirilmiş meme kanseri, aktif damar içi
-          pıhtılaşma (tromboembolizm), nedeni saptanmamış vajinal kanama ya da aktif karaciğer hastalığı varsa sistemik
-          hormon tedavisi verilmez. Buna karşılık migren, iyi kontrol edilen tansiyon ya da hafif kolesterol yüksekliği
-          kapıyı tamamen kapatmaz; sadece ağızdan hap yerine cilt üzerinden jel kullanımını gerektirir.
+          Tamoksifen kullanırken de bu seçenek değerlendirilebilir. Aromataz inhibitörü adı verilen diğer
+          meme kanseri ilaçlarında ise kararı siz, kadın hastalıkları uzmanınız ve sizi izleyen onkolog
+          birlikte verirsiniz. Her iki durumda da kanserin özellikleri, kullanılan tedavi ve yakınmanın şiddeti
+          dikkate alınır.<sup><a href="#kaynak-6">[6]</a></sup>
+        </p>
+        <h3>Migren, tansiyon ve kan yağları</h3>
+        <p>
+          Migren veya iyi kontrol edilen tansiyon tek başına bütün seçenekleri ortadan kaldırmaz; ama uygulama
+          yolunu seçerken bunlara bakarım. Auralı migrende, yani baş ağrısına geçici görme veya duyu
+          belirtilerinin eşlik ettiği migrende, uygun hastalarda ciltten östradiolü tercih ederim. Aura tek başına
+          menopoz hormon tedavisine engel sayılmaz; bu gruptaki güvenlik verileri yine de sınırlıdır <Evidence level={2} />.<sup><a href="#kaynak-8">[8]</a></sup>
         </p>
         <p>
-          Üçüncü adım doz ve süre disiplinidir. Temel klinik kuralımız "en düşük etkili doz ve düzenli yıllık değerlendirme"dir.
-          Hormon tedavisi ömür boyu çıkılamayan bir tünel değildir. Yılda bir kez bir araya gelir, belirtilerin seyrine
-          ve sağlık durumunuza bakar, gerekiyorsa dozu azaltarak kesme planı yaparız.
+          Tansiyon kontrol altındaysa veya trigliserid adı verilen kan yağları yüksekse de genellikle ciltten
+          östradiolü tercih ederim. Kontrolsüz tansiyonda ise önce tansiyonun düzenlenmesi gerekir; uygulama
+          yolu seçilirken toplam kalp-damar riski de hesaba katılır.<sup><a href="#kaynak-5">[5]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
+        </p>
+        <h3>Doz, süre ve ilk kontrol</h3>
+        <p>
+          Amaç, yakınmayı azaltan en düşük etkili dozu bulmaktır. Başlangıçtan yaklaşık üç ay sonra tedavinin
+          yararı ve yan etkileri değerlendirilir; ardından genellikle yılda bir kontrol yapılır.
+          Yan etki, yeni kanama veya yetersiz rahatlama varsa yıllık kontrol beklenmez.<sup><a href="#kaynak-3">[3]</a></sup>
         </p>
         <p>
-          Son adım ise alternatifleri bilmektir. Hormon tedavisi almamak da son derece meşru ve bilimsel bir tercihtir.
-          Yaşam tarzı adımları, bilişsel davranışçı terapi ve son yıllarda onay alan hormonsuz hedefli ilaç seçenekleri
-          de kanıtlı alternatifler sunar <Evidence level={4} />. "Hayır" demek bir çaresizlik değil, farklı bir sağlık
-          hattını tercih etmektir.
+          Herkes için aynı bırakma tarihi yoktur. Devam eden yakınmalar, kişisel riskler ve tercihiniz birlikte
+          değerlendirilir. Bırakma kararı verilirse dozu azaltarak veya doğrudan kesme seçenekleri konuşulabilir;
+          tedaviyi sürdürmek de bırakmak da yeniden gözden geçirilebilir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
+        </p>
+        <h3>Hormon kullanmak istemiyorsanız</h3>
+        <p>
+          Hormon kullanmama tercihiniz de görüşmenin bir parçasıdır. Menopoza yönelik bilişsel davranışçı terapi,
+          belirtilerle baş etmeye ve uyku sorunlarına yardımcı olabilir. Sıcak basmaları için kanıtı bulunan
+          hormonsuz ilaç seçenekleri de vardır; uygunlukları, yan etkileri ve Türkiye'deki erişimleri ayrıca
+          değerlendirilir <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup><sup><a href="#kaynak-9">[9]</a></sup>
+        </p>
+        <p>
+          Hareket, uyku düzeni ve dengeli beslenme genel sağlık için değerlidir. Sıcak basmalarını azaltmada ise
+          kanıtlı ilaçlar kadar etkili oldukları gösterilmemiştir.<sup><a href="#kaynak-9">[9]</a></sup>
+        </p>
+
+        <h2 id="karari-sakin-birakirken">Görüşmeye Hazırlık</h2>
+        <p>
+          Görüşme öncesinde aşağıdaki soruların yanıtlarını not edebilir, elinizdeki sağlık kayıtlarını
+          yanınıza alabilirsiniz.
+        </p>
+        <ul>
+          <li>Gündelik hayatınızı en çok etkileyen belirti hangisi ve ne zamandır sürüyor?</li>
+          <li>Son adetiniz ne zamandı; yeni veya açıklanamayan kanamanız var mı?</li>
+          <li>Sizde veya ailenizde meme kanseri ya da pıhtı öyküsü var mı; başka hangi hastalıklarınız bulunuyor?</li>
+          <li>Düzenli olarak hangi ilaçları kullanıyorsunuz?</li>
+          <li>Tedaviden en çok hangi yararı umuyor, en çok hangi riskten kaygı duyuyorsunuz?</li>
+        </ul>
+        <p>
+          Tedaviye karar verirseniz, yararını ne zaman değerlendireceğinizi ve hangi değişiklikte haber
+          vereceğinizi hekiminizle birlikte netleştirin.
+        </p>
+        <p>
+          Kararı bugün vermek zorunda değilsiniz. Hormon kullanmayı seçseniz de seçmeseniz de bu karar,
+          yakınmalarınız ve sağlık durumunuz değiştikçe yeniden gözden geçirilebilir.
         </p>
 
         <h2 id="kaynaklar">Kaynaklar</h2>
         <p>
-          Bu rehberdeki zamanlama penceresi, fayda-risk dengesi, transdermal güvenlik ve kontrendikasyon
-          verileri aşağıdaki temel uluslararası klinik kılavuzlar ve uzun dönem takip çalışmalarıyla desteklenmektedir.
+          Metindeki numaralar, ilgili açıklamanın dayandığı kaynağa götürür.
         </p>
-        <ol class="mt-4 space-y-3 text-sm leading-relaxed text-ink/80">
+        <ol>
           <li id="kaynak-1">
-            <strong>1.</strong> The North American Menopause Society (NAMS). <em>The 2022 hormone therapy position statement of The North American Menopause Society.</em> Menopause. 2022;29(7):767-794.{' '}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed Kaydı (NAMS 2022)</a>
+            The North American Menopause Society (NAMS). <em>The 2022 hormone therapy position statement of The North American Menopause Society.</em> Menopause. 2022;29(7):767–794.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" target="_blank" rel="noopener noreferrer">Hormon tedavisi: yarar, risk ve lokal kullanım</a>.
           </li>
           <li id="kaynak-2">
-            <strong>2.</strong> Baber RJ, Panay N, Fenton A; IMS Writing Group. <em>2016 IMS Recommendations on women's midlife health and menopause hormone therapy.</em> Climacteric. 2016;19(2):109-150.{' '}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/26879875/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed Kaydı (IMS 2016)</a>
+            Baber RJ, Panay N, Fenton A; IMS Writing Group. <em>2016 IMS Recommendations on women's midlife health and menopause hormone therapy.</em> Climacteric. 2016;19(2):109–150.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/26872610/" target="_blank" rel="noopener noreferrer">Hormon tedavisi ve endometriumun korunması</a>.
           </li>
           <li id="kaynak-3">
-            <strong>3.</strong> National Institute for Health and Care Excellence (NICE). <em>Menopause: identification and management (NICE Guideline NG23).</em> 2015 (Son güncelleme 2024).{' '}
-            <a href="https://www.nice.org.uk/guidance/ng23" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NICE NG23 Kılavuz Kaydı</a>
+            National Institute for Health and Care Excellence (NICE). <em>Menopause: identification and management.</em> NG23; son güncelleme 15 Nisan 2026.
+            <a href="https://www.nice.org.uk/guidance/ng23/chapter/Recommendations" target="_blank" rel="noopener noreferrer">Riskler, vajinal yakınmalar ve izlem önerileri</a>.
           </li>
           <li id="kaynak-4">
-            <strong>4.</strong> Manson JE, Aragaki AK, Bassuk SS, et al. <em>Menopausal Hormone Therapy and Health Outcomes During the Intervention and Extended Poststopping Phases of the Women's Health Initiative Randomized Trials.</em> JAMA. 2024;331(18):1548-1560.{' '}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/38691368/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed Kaydı (WHI JAMA 2024)</a>
+            Chlebowski RT, Anderson GL, Aragaki AK, et al. <em>Association of Menopausal Hormone Therapy With Breast Cancer Incidence and Mortality During Long-term Follow-up of the Women's Health Initiative Randomized Clinical Trials.</em> JAMA. 2020;324(4):369–380.
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7388026/" target="_blank" rel="noopener noreferrer">Yalnız östrojen ve kombine tedavinin uzun dönem meme kanseri verileri</a>.
           </li>
           <li id="kaynak-5">
-            <strong>5.</strong> Stuenkel CA, Davis SR, Gompel A, et al. <em>Treatment of Symptoms of the Menopause: An Endocrine Society Clinical Practice Guideline.</em> J Clin Endocrinol Metab. 2015;100(11):3975-4011.{' '}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/26444994/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed Kaydı (Endocrine Society)</a>
+            Stuenkel CA, Davis SR, Gompel A, et al. <em>Treatment of Symptoms of the Menopause: An Endocrine Society Clinical Practice Guideline.</em> J Clin Endocrinol Metab. 2015;100(11):3975–4011.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/26444994/" target="_blank" rel="noopener noreferrer">Kalp-damar riski ve uygulama yolu seçimi</a>.
           </li>
           <li id="kaynak-6">
-            <strong>6.</strong> American College of Obstetricians and Gynecologists (ACOG). <em>Clinical Practice Guideline: Management of Menopausal Symptoms.</em> Obstet Gynecol. 2014 (Reaffirmed 2023).{' '}
-            <a href="https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2014/01/management-of-menopausal-symptoms" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">ACOG Klinik Kılavuz Kaydı</a>
+            American College of Obstetricians and Gynecologists (ACOG). <em>Treatment of Urogenital Symptoms in Individuals With a History of Estrogen-dependent Breast Cancer.</em> Clinical Consensus No. 2; 2021.
+            <a href="https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2021/12/treatment-of-urogenital-symptoms-in-individuals-with-a-history-of-estrogen-dependent-breast-cancer" target="_blank" rel="noopener noreferrer">Meme kanseri sonrası lokal tedavi değerlendirmesi</a>.
+          </li>
+          <li id="kaynak-7">
+            ACOG. <em>Compounded Bioidentical Menopausal Hormone Therapy.</em> Clinical Consensus No. 6; 2023.
+            <a href="https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2023/11/compounded-bioidentical-menopausal-hormone-therapy" target="_blank" rel="noopener noreferrer">Kişiye özel karışımlar ve hormon testlerinin sınırları</a>.
+          </li>
+          <li id="kaynak-8">
+            European Society of Endocrinology. <em>Clinical practice guideline for evaluation and management of menopause and the perimenopause.</em> Eur J Endocrinol. 2025;193(4):G49–G81.
+            <a href="https://doi.org/10.1093/ejendo/lvaf206" target="_blank" rel="noopener noreferrer">Pıhtı öyküsü, migren, tansiyon ve tedaviyi sürdürme</a>.
+          </li>
+          <li id="kaynak-9">
+            NAMS. <em>The 2023 nonhormone therapy position statement of The North American Menopause Society.</em> Menopause. 2023;30(6):573–590.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37252752/" target="_blank" rel="noopener noreferrer">Hormonsuz tedavilerde kanıt düzeyi</a>.
+          </li>
+          <li id="kaynak-10">
+            MacLennan AH, Broadbent JL, Lester S, Moore V. <em>Oral oestrogen and combined oestrogen/progestogen therapy versus placebo for hot flushes.</em> Cochrane Database Syst Rev. 2004;(4):CD002978.
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7004247/" target="_blank" rel="noopener noreferrer">Ağızdan hormon tedavisinin sıcak basması sıklığına etkisi</a>.
           </li>
         </ol>
-
-        <h2 id="karari-sakin-birakirken">Kararı Sakin Bırakırken</h2>
-        <p>
-          Hormon tedavisi kararı aceleyle değil, sakin bir zihinle olgunlaşır. Doğru bilgi gereksiz korkuyu dağıtır;
-          güvenli bir hekim iletişimi ise yolunuzu aydınlatır.
-        </p>
-        <p>
-          Hekiminizle görüşmeye giderken çantanıza onlarca sayfa tahlil doldurmanız gerekmez. Şu dört sorunun cevabını
-          bir kâğıda not etmeniz konuşmayı son derece verimli kılar: En çok hangi belirti gündelik hayatınızı zorlaştırıyor?
-          Ne kadar süredir devam ediyor? Ailenizde ya da sizde meme kanseri veya damar tıkanıklığı öyküsü var mı? Düzenli
-          kullandığınız ilaçlar hangileri? Bu sade hazırlık, görüşmeyi soyut kaygılardan somut bir klinik plana taşır.
-        </p>
-        <p>
-          Son olarak şunu hatırlatmak isterim: HRT bir inanç ya da zorunluluk bayrağı değildir; doğru kadında, doğru
-          zamanlamayla ve yakın takip altında yaşam konforunu yeniden kazandıran kanıtlı bir tıbbi araçtır. Karar her zaman
-          sizin hikâyenizle başlar ve sizin onayınızla ilerler.
-        </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
+      <ArticleFAQ
+        id="sss"
+        title="Dr. Aksoy'a Sorular"
+        intro="Doç. Dr. Senai Aksoy tedavi seçimi, başlama ve sürdürme kararı, hormon istemeyenler için seçenekler ve lokal tedavi hakkındaki soruları yanıtlıyor."
+        items={faqItems}
+        class="mt-10"
+      />
 
       <RelatedReadings
         class="mt-14"
@@ -314,31 +406,21 @@ const articleSchemas = buildArticleSchemas({
       />
 
       <ArticleEditorNote title="Bağımsız Tıbbi İnceleme">
-        <p class="mb-4 text-lg font-semibold text-ink">
-          Genel kanıt düzeyi: <Evidence from={4} to={5} />
-        </p>
         <div class="space-y-3 leading-relaxed text-ink/80">
-          <p class="italic">
-            Bir hekim kendi yazdığı klinik rehberi bizzat denetleyemez; bu nedenle Doç. Dr. Senai Aksoy'un bu yazısını
-            meslektaşı olarak bağımsız bir gözle inceledim. Hormon tedavisi kararı, kadın sağlığında hekim ile danışan
-            arasındaki en hassas ortak karar alanlarından biridir.
+          <p>
+            Hormon tedavisinin sıcak basması ve gece terlemesi üzerindeki yararı güçlü kanıta dayanır.
+            Güvenlik değerlendirmesi ise kullanılan hormon, uygulama yolu, süre ve kişisel sağlık geçmişine
+            göre değişir; bütün tedavilere tek bir risk düzeyi atamak uygun değildir.<sup><a href="#kaynak-1">[1]</a></sup>
           </p>
           <p>
-            <strong class="text-primary">Fırsat penceresi ve endikasyon:</strong> Rehberde vurgulanan 60 yaş altı ve
-            menopozun ilk on yılı kuralı uluslararası kılavuzların ortak omurgasıdır. Özellikle yaşam kalitesini bozan
-            vazomotor belirtilerde hormon tedavisi kanıtı en güçlü seçenektir; ancak belirtisi olmayan kadınlarda
-            yalnızca koruyucu amaçla rutin başlanması önerilmez.
+            Rahmi olan kadınlarda sistemik östrojen kullanırken rahim iç tabakasının korunması gerekir; düşük doz vajinal östrojen
+            bu açıdan ayrı değerlendirilir. Mikronize progesteronun diğer progestojenlere göre meme kanseri
+            açısından daha güvenli olduğunu kesinleştirecek kanıt yeterli değildir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
           </p>
           <p>
-            <strong class="text-primary">Güvenlik ve uygulama yolu:</strong> Transdermal östrojen (jel veya bant), oral
-            tabletlerin karaciğer ilk geçiş etkisinden kaçındığı için venöz tromboembolizm riski açısından daha güvenli
-            bir zemin sunar. Rahmi olan kadınlarda endometriumu korumak için doğal mikronize progesteron tercihi meme
-            ve metabolik güvenlik açısından klinik pratikte öne çıkmaktadır.
-          </p>
-          <p>
-            <strong class="text-primary">Kontrendikasyon ve alternatifler:</strong> Geçirilmiş meme kanseri, açıklanamayan
-            vajinal kanama veya aktif tromboembolizm sistemik hormon için kesin engeldir. Bu durumlarda ya da hormon
-            tercih etmeyen kadınlarda non-hormonal farmakolojik seçenekler ve yaşam tarzı müdahaleleri devreye girmelidir.
+            Meme kanseri veya pıhtı öyküsünde genel öneriler kişisel değerlendirme yerine geçmez.
+            Geçirilmiş pıhtıda kılavuzların ayrıldığı noktalar, lokal vajinal tedavinin sınırları ve
+            hormonsuz seçenekler ilgili uzmanlarla birlikte ele alınmalıdır.<sup><a href="#kaynak-6">[6]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
             — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 28 Eylül 2026

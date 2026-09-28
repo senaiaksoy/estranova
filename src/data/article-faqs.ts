@@ -904,29 +904,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/': [
     {
-      question: 'HRT herkes için aynı formda mı planlanır?',
+      question: 'Hormonun türünü ve dozunu nasıl seçiyorsunuz?',
       answer:
-        'Hayır. Uygulama yolu, doz, progesteron ihtiyacı ve hedeflenen yakınma kişisel tabloya göre değişir. Aynı başlık altında konuşulan iki tedavi aslında çok farklı rejimler olabilir.',
+        'Yalnızca vajinal kuruluk varsa lokal tedavi yeterli olabilir; sıcak basması gibi genel belirtilerde sistemik tedaviyi değerlendiririm. Rahim yerindeyse sistemik östrojene rahim iç tabakasını koruyacak bir progestojen eklerim; rahim alınmışsa çoğunlukla yalnız östrojen kullanılır.\n\nAuralı migren, kontrollü hipertansiyon veya trigliserid yüksekliğinde genellikle ciltten östradiolü tercih ederim. Dozu belirtileri kontrol eden en düşük düzeyden başlatır, yanıta ve yan etkilere göre ayarlarım. Kararı tek bir hormon kan sonucuna bağlamam.',
     },
     {
-      question: 'Karar verirken en kritik üç başlık nedir?',
+      question: 'Kararda hangi üç başlığa bakıyorsunuz?',
       answer:
-        'Belirtinin hayatı ne kadar etkilediği, kişisel risk profili ve menopozdan bu yana geçen süre en kritik üç başlıktır. Bu üçlü konuşulmadan yalnızca korku veya umut üzerinden karar vermek sağlıklı olmaz.',
+        'Önce yakınma ve hedef: Sizi en çok ne zorluyor, tedaviden ne bekliyorsunuz?\n\nİkinci başlık kişisel risk. Yaşınız, menopozdan beri geçen süre; meme kanseri, pıhtı ve kalp-damar hastalığı öyküsü tedavinin uygunluğunu belirler.\n\nÜçüncüsü tedavi planı. Sağlık bulgularınıza göre hormonun türünü ve uygulama yolunu seçer, yararı ve yan etkileri birlikte izleriz.',
     },
     {
-      question: 'HRT düşünmüyorsam seçenekler bitmiş mi sayılır?',
+      question: 'Hormon kullanmak istemeyen bir kadına seçenekleri nasıl anlatıyorsunuz?',
       answer:
-        'Hayır. Yakınmanın türüne göre yaşam tarzı düzenlemeleri, davranışsal yaklaşımlar, hormonsuz seçenekler veya lokal çözümler gündeme gelebilir. “Hayır” demek çoğu zaman boşluk değil, farklı yol anlamına gelir.',
+        'Önce kararına saygı duyar, “Sizi en çok hangi belirti zorluyor?” diye sorarım. Sıcak basması ve gece terlemesi için menopoza yönelik bilişsel davranışçı terapiyi; belirgin yakınmalarda ise kişiye göre bazı antidepresanları, gabapentini veya uygun ve erişilebilir olduğunda diğer hormon dışı reçeteli seçenekleri konuşuruz.\n\nYalnızca vajinal kuruluk varsa düzenli nemlendirici ve ilişki sırasında kayganlaştırıcıyla başlayabiliriz. Uyku, hareket ve sigara gibi genel sağlık etkenlerini de ele alırım.\n\nHiçbirini “HRT ile tamamen aynı etkiyi sağlar” diye sunmam; seçtiğimiz yöntemin işe yarayıp yaramadığını birlikte değerlendiririz. Hormon istememesi, yakınmalarıyla tek başına baş etmesi gerektiği anlamına gelmez.',
     },
     {
-      question: 'HRT için en uygun zaman ne zaman?',
+      question: 'Hormon tedavisine başlamakla devam etmek aynı karar mı?',
       answer:
-        'Kanıt, 60 yaş altında ve menopozdan sonraki ilk on yıl içinde başlanan tedavide fayda-risk dengesinin çoğu kadın için daha olumlu olduğunu gösteriyor; bu aralık bazen “fırsat penceresi” olarak anılır. Pencerenin dışında yeni başlatmada bazı riskler artabildiği için yaş ve menopozdan bu yana geçen süre konuşmanın merkezinde olur.',
+        'İlk kez sistemik hormon tedavisine başlarken yaşa ve menopozdan beri geçen süreye birlikte bakarım. Yakınmaları belirgin, tedaviye engeli olmayan bir kadında 60 yaşından önce ve menopozdan sonraki ilk 10 yıl içinde başlandığında yarar-risk dengesi genellikle daha elverişlidir. Daha geç başvuruda “Artık kesinlikle kullanamazsınız” demem; fakat kalp-damar hastalığı, inme ve pıhtı riskini daha dikkatli değerlendirir, hormon dışı seçenekleri de konuşurum.\n\nDevam kararı farklıdır. Tedaviye daha erken başlamış bir kadın 60 veya 65 yaşına geldi diye ilacı otomatik kesmem. Belirtiler hâlâ tedavi gerektiriyor mu, yarar görüyor mu, yeni bir risk gelişti mi diye düzenli olarak yeniden değerlendiririm. 65 yaşında ilk kez başlamakla, 65 yaşında işe yarayan bir tedaviye devam etmek aynı karar değildir.',
     },
     {
-      question: 'Vajinal östrojen sistemik hormon tedavisinden farklı mı?',
+      question: 'Düşük doz vajinal östrojenin farkı nedir; meme kanseri öyküsünde nasıl değerlendiriyorsunuz?',
       answer:
-        'Evet. Yalnızca vajinal kuruluk gibi lokal yakınmalar için kullanılan düşük doz vajinal östrojen, tüm vücudu etkileyen sistemik tedaviden ayrı değerlendirilir ve genellikle çok daha güvenli bir kategori olarak görülür. Sistemik bir gerekçe yoksa lokal seçenek tek başına yeterli olabilir.',
+        'Sistemik hormon tedavisinin kana geçerek sıcak basması ve gece terlemesi gibi genel yakınmaları hedeflediğini anlatırım. Düşük doz vajinal östrojen ise esas olarak kuruluk, yanma ve ilişki sırasında ağrı için vajinaya uygulanır. Kana geçişi genellikle çok azdır, ama “Hiç emilmez” demem; sıcak basmasını da tedavi etmesini beklemem.\n\nMeme kanseri öyküsünde önce hormon içermeyen nemlendirici ve kayganlaştırıcıları denerim. Bunlar yetmez ve yakınma belirginse düşük doz vajinal östrojeni, olası yarar ve belirsizlikleri anlatarak değerlendirebiliriz. Tamoksifen kullananlarda bu görüşme yapılabilir; aromataz inhibitörü kullananlarda ise karara hastayı izleyen onkoloğu mutlaka dahil ederim.',
     },
   ],
   '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/': [

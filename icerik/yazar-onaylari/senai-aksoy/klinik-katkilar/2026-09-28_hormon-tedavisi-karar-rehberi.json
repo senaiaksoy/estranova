@@ -1,0 +1,113 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/",
+  "answeredAt": "2026-09-28",
+  "source": "Kullanıcının bu sohbet içindeki doğrudan yanıtı",
+  "question": "Makaledeki “Dr. Alper Mumcu tarafından bağımsız tıbbi inceleme: 28 Eylül 2026” kaydı, gerçekten yapılmış bir incelemeye mi dayanıyor? İncelemenin hangi metni kapsadığını belirtmeniz yeterli; düzeltmeleri bu yanıtı beklemeden hazırlıyorum.",
+  "answer": "tüm metni kapsıyor",
+  "status": "Mevcut metnin bağımsız tıbbi inceleme kapsamı kullanıcı tarafından teyit edildi. İnceleyici ve mevcut inceleme tarihi korundu.",
+  "revisionScope": "Kaynak eşleştirmeleri, progesteron ve lokal östrojen ayrımı, meme kanseri ve pıhtı riskleri, izlem, iddia-atıf ilişkisi, gövde ve SSS dili düzeltildi. Bu düzeltmeler mevcut inceleme kaydının teyidinden sonra hazırlanmıştır; teyit yeni revizyonun tıbbi onayı olarak kaydedilmemiştir.",
+  "publicationApproval": "Bu turda commit, push veya deploy yetkisi verilmedi.",
+  "faqConversionStatus": "5/5 gerçek yanıt alındı ve yerel SSS metnine işlendi.",
+  "faqQuestionsAsked": [
+    "Hormonun türünü, dozunu ve uygulama yolunu seçerken nelere bakıyorsunuz?",
+    "Hormon tedavisi kararında öncelik verdiğiniz üç başlık nedir?",
+    "Hormon kullanmak istemeyen bir kadına seçenekleri nasıl anlatıyorsunuz?",
+    "Hormon tedavisine ilk kez başlama zamanını nasıl değerlendiriyorsunuz? Yaş ve menopozdan beri geçen süre, tedaviye devam etme kararından nasıl ayrılıyor?",
+    "Düşük doz vajinal östrojenin sistemik tedaviden farkını nasıl anlatıyorsunuz? Meme kanseri öyküsünde yaklaşımınız nedir?"
+  ],
+  "faqQuestionsRemaining": [],
+  "faqResponses": [
+    {
+      "question": "Hormonun türünü ve dozunu nasıl seçiyorsunuz?",
+      "answer": "Önce hangi yakınmayı tedavi ettiğimize bakarım: yalnızca vajinal kuruluk varsa lokal tedavi yeterli olabilir; ateş basması gibi genel belirtilerde sistemik tedaviyi değerlendiririm. Rahim yerindeyse östrojene rahim iç tabakasını koruyacak bir progestojen eklerim; rahim alınmışsa çoğunlukla yalnız östrojen kullanılır. Yaş, menopozdan beri geçen süre, meme kanseri ve pıhtı öyküsü, migren aurası, tansiyon ve özellikle trigliserid düzeyi uygulama yolunu etkiler. Auralı migren, kontrollü hipertansiyon veya trigliserid yüksekliğinde genellikle ciltten östradiolü tercih ederim. Dozu belirtileri kontrol eden en düşük düzeyden başlatır, yanıt ve yan etkilere göre ayarlarım; kararı tek bir hormon kan sonucuna bağlamam.",
+      "localEditedText": "Yalnızca vajinal kuruluk varsa lokal tedavi yeterli olabilir; sıcak basması gibi genel belirtilerde sistemik tedaviyi değerlendiririm. Rahim yerindeyse sistemik östrojene rahim iç tabakasını koruyacak bir progestojen eklerim; rahim alınmışsa çoğunlukla yalnız östrojen kullanılır.\n\nAuralı migren, kontrollü hipertansiyon veya trigliserid yüksekliğinde genellikle ciltten östradiolü tercih ederim. Dozu belirtileri kontrol eden en düşük düzeyden başlatır, yanıta ve yan etkilere göre ayarlarım. Kararı tek bir hormon kan sonucuna bağlamam.",
+      "questionAsked": "Hormonun türünü, dozunu ve uygulama yolunu seçerken nelere bakıyorsunuz?",
+      "answeredAt": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı",
+      "status": "Düzeltme talebi kapsamında yerel metne işlendi; nihai tıbbi ve yayın onayı olarak kaydedilmedi."
+    },
+    {
+      "question": "Kararda hangi üç başlığa bakıyorsunuz?",
+      "answer": "Menopozda hormon tedavisi kararında üç başlığa öncelik veririm:\n1. Yakınma ve hedef: Hastayı en çok ne zorluyor? Yalnızca vajinal kuruluk varsa lokal tedavi yeterli olabilir.\n2. Kişisel risk: Yaş, menopozdan beri geçen süre; meme kanseri, pıhtı ve kalp damar hastalığı öyküsü tedavinin uygunluğunu belirler.\n3. Tedavi planı: Rahmin olup olmamasına, migren, tansiyon ve trigliserid gibi bulgulara göre hormonun türünü ve uygulama yolunu seçerim. En düşük etkili dozla başlayıp yararı ve yan etkileri birlikte izleriz.",
+      "localEditedText": "Önce yakınma ve hedef: Sizi en çok ne zorluyor, tedaviden ne bekliyorsunuz?\n\nİkinci başlık kişisel risk. Yaşınız, menopozdan beri geçen süre; meme kanseri, pıhtı ve kalp-damar hastalığı öyküsü tedavinin uygunluğunu belirler.\n\nÜçüncüsü tedavi planı. Sağlık bulgularınıza göre hormonun türünü ve uygulama yolunu seçer, yararı ve yan etkileri birlikte izleriz.",
+      "questionAsked": "Hormon tedavisi kararında öncelik verdiğiniz üç başlık nedir?",
+      "answeredAt": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı",
+      "status": "Düzeltme talebi kapsamında yerel metne işlendi; nihai tıbbi ve yayın onayı olarak kaydedilmedi."
+    },
+    {
+      "question": "Hormon kullanmak istemeyen bir kadına seçenekleri nasıl anlatıyorsunuz?",
+      "answer": "Önce kararına saygı duyar, “Sizi en çok hangi belirti zorluyor?” diye sorarım. Ateş basması ve gece terlemesi için menopoza yönelik bilişsel davranışçı terapiyi; belirgin yakınmalarda ise kişiye göre bazı antidepresanları, gabapentini veya uygun ve erişilebilir olduğunda diğer hormon dışı reçeteli seçenekleri konuşuruz. Yalnızca vajinal kuruluk varsa düzenli nemlendirici ve ilişki sırasında kayganlaştırıcıyla başlayabiliriz. Uyku, hareket ve sigara gibi genel sağlık etkenlerini de ele alırım. Hiçbirini “HRT ile tamamen aynı etkiyi sağlar” diye sunmam; seçtiğimiz yöntemin işe yarayıp yaramadığını birlikte değerlendiririz. Hormon istememesi, yakınmalarıyla tek başına baş etmesi gerektiği anlamına gelmez",
+      "localEditedText": "Önce kararına saygı duyar, “Sizi en çok hangi belirti zorluyor?” diye sorarım. Sıcak basması ve gece terlemesi için menopoza yönelik bilişsel davranışçı terapiyi; belirgin yakınmalarda ise kişiye göre bazı antidepresanları, gabapentini veya uygun ve erişilebilir olduğunda diğer hormon dışı reçeteli seçenekleri konuşuruz.\n\nYalnızca vajinal kuruluk varsa düzenli nemlendirici ve ilişki sırasında kayganlaştırıcıyla başlayabiliriz. Uyku, hareket ve sigara gibi genel sağlık etkenlerini de ele alırım.\n\nHiçbirini “HRT ile tamamen aynı etkiyi sağlar” diye sunmam; seçtiğimiz yöntemin işe yarayıp yaramadığını birlikte değerlendiririz. Hormon istememesi, yakınmalarıyla tek başına baş etmesi gerektiği anlamına gelmez.",
+      "answeredAt": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı",
+      "status": "Düzeltme talebi kapsamında yerel metne işlendi; nihai tıbbi ve yayın onayı olarak kaydedilmedi."
+    },
+    {
+      "question": "Hormon tedavisine başlamakla devam etmek aynı karar mı?",
+      "questionAsked": "Hormon tedavisine ilk kez başlama zamanını nasıl değerlendiriyorsunuz? Yaş ve menopozdan beri geçen süre, tedaviye devam etme kararından nasıl ayrılıyor?",
+      "answer": "İlk kez **sistemik hormon tedavisine başlarken** yaşa ve menopozdan beri geçen süreye birlikte bakarım. Yakınmaları belirgin, engeli olmayan bir kadında tedaviye **60 yaşından önce ve menopozdan sonraki ilk 10 yıl içinde** başlandığında yarar–risk dengesi genellikle daha elverişlidir. Daha geç başvuruda “artık kesinlikle kullanamazsınız” demem; fakat kalp damar hastalığı, inme ve pıhtı riskini daha dikkatli değerlendirir, hormon dışı seçenekleri de konuşurum. [PubMed](https://pubmed.ncbi.nlm.nih.gov/35797481/?utm_source=chatgpt.com)\n**Devam kararı farklıdır:** Tedaviye daha erken başlamış bir kadın 60 veya 65 yaşına geldi diye ilacı otomatik kesmem. Belirtiler hâlâ tedavi gerektiriyor mu, yarar görüyor mu, arada yeni bir risk gelişti mi diye düzenli olarak yeniden değerlendiririm. **65 yaşında ilk kez başlamakla, 65 yaşında işe yarayan tedaviye devam etmek aynı karar değildir.**",
+      "localEditedText": "İlk kez sistemik hormon tedavisine başlarken yaşa ve menopozdan beri geçen süreye birlikte bakarım. Yakınmaları belirgin, tedaviye engeli olmayan bir kadında 60 yaşından önce ve menopozdan sonraki ilk 10 yıl içinde başlandığında yarar-risk dengesi genellikle daha elverişlidir. Daha geç başvuruda “Artık kesinlikle kullanamazsınız” demem; fakat kalp-damar hastalığı, inme ve pıhtı riskini daha dikkatli değerlendirir, hormon dışı seçenekleri de konuşurum.\n\nDevam kararı farklıdır. Tedaviye daha erken başlamış bir kadın 60 veya 65 yaşına geldi diye ilacı otomatik kesmem. Belirtiler hâlâ tedavi gerektiriyor mu, yarar görüyor mu, yeni bir risk gelişti mi diye düzenli olarak yeniden değerlendiririm. 65 yaşında ilk kez başlamakla, işe yarayan tedaviye devam etmek aynı karar değildir.",
+      "answeredAt": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı",
+      "status": "Düzeltme talebi kapsamında yerel metne işlendi; nihai tıbbi ve yayın onayı olarak kaydedilmedi."
+    },
+    {
+      "question": "Düşük doz vajinal östrojenin farkı nedir; meme kanseri öyküsünde nasıl değerlendiriyorsunuz?",
+      "questionAsked": "Düşük doz vajinal östrojenin sistemik tedaviden farkını nasıl anlatıyorsunuz? Meme kanseri öyküsünde yaklaşımınız nedir?",
+      "answer": "Hastaya şöyle anlatırım: **Sistemik hormon tedavisi** kana geçerek ateş basması ve gece terlemesi gibi genel yakınmaları hedefler. **Düşük doz vajinal östrojen** ise esas olarak kuruluk, yanma ve ilişki sırasında ağrı için vajinaya uygulanır. Kana geçişi genellikle çok azdır, ama “hiç emilmez” demem; ateş basmasını da tedavi etmesini beklemem. [www.acog.org](https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2021/12/treatment-of-urogenital-symptoms-in-individuals-with-a-history-of-estrogen-dependent-breast-cancer?utm_source=chatgpt.com)\nMeme kanseri öyküsünde önce hormon içermeyen nemlendirici ve kayganlaştırıcıları denerim. Bunlar yetmez ve yakınma belirginse düşük doz vajinal östrojeni, olası yarar ve belirsizlikleri anlatarak değerlendirebiliriz. **Tamoksifen kullananlarda** bu görüşme yapılabilir; **aromataz inhibitörü kullananlarda** ise karara hastayı izleyen onkoloğu mutlaka dahil ederim.",
+      "localEditedText": "Sistemik hormon tedavisinin kana geçerek sıcak basması ve gece terlemesi gibi genel yakınmaları hedeflediğini anlatırım. Düşük doz vajinal östrojen ise esas olarak kuruluk, yanma ve ilişki sırasında ağrı için vajinaya uygulanır. Kana geçişi genellikle çok azdır, ama “Hiç emilmez” demem; sıcak basmasını da tedavi etmesini beklemem.\n\nMeme kanseri öyküsünde önce hormon içermeyen nemlendirici ve kayganlaştırıcıları denerim. Bunlar yetmez ve yakınma belirginse düşük doz vajinal östrojeni, olası yarar ve belirsizlikleri anlatarak değerlendirebiliriz. Tamoksifen kullananlarda bu görüşme yapılabilir; aromataz inhibitörü kullananlarda ise karara hastayı izleyen onkoloğu mutlaka dahil ederim.",
+      "answeredAt": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı",
+      "status": "Düzeltme talebi kapsamında yerel metne işlendi; nihai tıbbi ve yayın onayı olarak kaydedilmedi."
+    }
+  ],
+  "secondHumanizeRevision": {
+    "date": "2026-09-28",
+    "scope": "Giriş, karar planı ve kapanış tekrarları ayrıldı. İlk iki SSS kısaltılıp odakları ayrıldı; uzun yanıtlar paragraflandı. Gerçek yanıtların karar anlatımı gövdeye aktarıldı. Başlık ve gramer düzeltildi.",
+    "timingMeaning": "Yazarın 60 yaşından önce VE menopozdan sonraki ilk 10 yıl içinde başlama örneği gövde ve özetle hizalandı. Bu iki koşulun birlikte bulunduğu elverişli grup anlatılıyor; kılavuzun VEYA ifadesinin birebir alıntısı olduğu iddia edilmiyor. Daha geç başlangıçta değerlendirme ve yaş nedeniyle otomatik kesmeme açıklamaları korunuyor.",
+    "retainedSafety": "Sistemik-lokal ayrımı, endometrium koruması, kanser/pıhtı istisnaları, migren kanıt sınırı, kontrolsüz tansiyon, üç aylık/yıllık izlem ve hormon dışı seçenekler korunuyor.",
+    "approval": "Düzenleme yetkisi mevcut; yeni tıbbi veya yayın onayı kaydedilmedi."
+  },
+  "bodyContributions": [
+    {
+      "question": "Hormon tedavisi konuşmasında hastanın rahatladığını gördüğünüz tipik bir an var mı?",
+      "answer": "“Bu tedaviyi almak zorunda değilsiniz; isterseniz sizin yakınmalarınıza ve sağlık durumunuza göre seçenekleri birlikte değerlendirebiliriz” dediğimde hastanın rahatladığını sık görüyorum.",
+      "usedIn": "#karar-konusma, 3. paragraf (parafraz: alıntının ilk cümlesi + rahatlama gözlemi)",
+      "answeredAt": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı"
+    },
+    {
+      "question": "Açılıştaki hormon kullanmak zorunda hissetmek / hormondan mutlaka kaçmak ikiliğine muayene odasında ilk olarak ne söylersiniz?",
+      "answer": "“Burada sizi hormon kullanmaya ikna etmeye de hormondan uzak tutmaya da çalışmıyorum. Önce sizi neyin zorladığını konuşalım; sonra seçeneklerin yararlarını ve risklerini birlikte değerlendirip size uygun kararı verelim.”",
+      "usedIn": "#karar-konusma, 2. paragraf (birebir)",
+      "answeredAt": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı"
+    }
+  ],
+  "thirdHumanizeRevision": {
+    "date": "2026-09-28",
+    "authorization": "Kullanıcı audit sonrası öncelik listesinin (1–6) uygulanmasını onayladı.",
+    "scope": "Açılış gerçek hekim yanıtlarıyla yeniden kuruldu; yarar paragrafları Yarar, Risk ve Zamanlama bölümüne taşındı; biyo-özdeş cümlesi kendi bölümüne alındı; soru biçimli H2 sayısı 1e indi; Evidence 7→5; tekrarlar ve olumsuzlama kalıpları azaltıldı; sakin kapanış eklendi; SSS 4 son cümlesi özgün yanıta döndürüldü.",
+    "medicalChanges": "LDL kolesterol ifadesi hekim yanıtında ve kaynakta doğrulanmadığı için çıkarıldı. Erken yumurtalık yetmezliği (40 yaş öncesi menopoz) istisnası eklendi [3]; yazar tarafından onaylandı. Sürekli/döngüsel kullanım cümlesi içeriksiz olduğu için çıkarıldı.",
+    "reviewStatus": "Dr. Alper Mumcu teyidi bu revizyondan öncedir; yeni revizyonun bağımsız tıbbi incelemesi kaydedilmedi.",
+    "approval": "Commit yetkisi verildi; push ve deploy yetkisi verilmedi.",
+    "authorConfirmation": {
+      "date": "2026-09-28",
+      "respondent": "Doç. Dr. Senai Aksoy",
+      "confirmed": [
+        "Erken yumurtalık yetmezliği (40 yaş öncesi menopoz) istisnası paragrafı",
+        "Kapanış cümlesi: Kararı bugün vermek zorunda değilsiniz…"
+      ],
+      "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı"
+    }
+  }
+}
