@@ -75,6 +75,11 @@ function getCanonical(html) {
   return null;
 }
 
+function getTitle(html) {
+  const match = html.match(/<title>([^<]*)<\/title>/iu);
+  return match ? match[1].trim() : null;
+}
+
 function getMetaContent(html, name) {
   const metas = html.match(/<meta\b[^>]*>/giu) ?? [];
   for (const meta of metas) {
@@ -222,6 +227,13 @@ async function main() {
     if (!canonicalValue) {
       fail(`${pathname} canonical etiketi icermiyor`);
       continue;
+    }
+
+    const titleValue = getTitle(html);
+    if (!titleValue) {
+      fail(`${pathname} <title> etiketi icermiyor`);
+    } else if (titleValue.length > 60) {
+      fail(`${pathname} <title> etiketi 60 karakterden uzun (${titleValue.length} karakter): "${titleValue}"`);
     }
 
     const canonical = normalizeAbsoluteUrl(canonicalValue);

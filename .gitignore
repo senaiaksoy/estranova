@@ -57,3 +57,4 @@ writers/**/citations/**/._*
 # Test ve geçici çalıştırma kalıntıları
 test-results/
 .hermes/
+.claude/data/
