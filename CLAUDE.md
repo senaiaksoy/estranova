@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+## Humanize komutu
+
+`humanize` istendiğinde [AGENTS.md içindeki kapsamlı humanize ve gerçek hekim yanıtları kurallarını](AGENTS.md#humanize-komutu--kapsamlı-düzenleme-ve-gerçek-hekim-yanıtları) oku ve uygula. Bu akış tüm metni kapsar; SSS yanıtları Dr. Aksoy'dan alınır. Ayrıntılar tek yerde, AGENTS.md'de tutulur.
+
 ## Belge amacı ve üst kural statüsü
 
 Bu dosya (**`CLAUDE.md`**) Estranova ekosistemindeki **tüm ajan ve üretim hatları** için **üst kural setidir**: Research, Writer, Medical / Fact-check, Compliance, Publisher, Orchestrator ve repo içi otomasyonlar bu kurallara tabidir.
@@ -73,7 +77,7 @@ yazarlarda ise klinisyen istisnasındaki sıcak hekim sesi birincildir.
 
 #### Sıcaklık Katmanı (HARD CONSTRAINT — "yazar elinden çıkmış" hissi)
 
-Humanize tek başına AI-tell'leri kelime düzeyinde temizler; ama metin **yapısal olarak** soğuk kalabilir. Sıcaklık, kelime değiştirmekle değil, aşağıdaki 7 yapısal kuralla gelir. Her metin üreten/revize eden ajan bunları uygular; mekanik/tekdüze çıktı bu maddelerle düzeltilir veya reddedilir.
+Humanize, AGENTS.md’de tanımlandığı gibi metnin tamamını kelime, paragraf ve bölüm yapısı düzeyinde kapsamlı inceler ve düzenler. Sıcaklık, kelime değiştirmekle değil, aşağıdaki 7 yapısal kuralla gelir. Her metin üreten/revize eden ajan bunları uygular; mekanik/tekdüze çıktı bu maddelerle düzeltilir veya reddedilir.
 
 1. **Ritim kırma (burstiness):** Her makalede en az **3–4 kısa vurgu cümlesi** (≤6 kelime) bulunur; **3+ ardışık eş-uzunlukta cümle yasak**. Tekdüze cümle uzunluğu AI'ın en güçlü tell'idir. Devrik ve kısa ara cümleler serbest.
 2. **Somut > soyut:** Her `##` bölümünde en az bir **yaşanmış/duyusal detay** (bir jest, odada söylenen gerçek bir cümle, kadının tam ifadesi, somut bir sahne) olur; soyut "tablo / durum / süreç" tek başına yetmez.
