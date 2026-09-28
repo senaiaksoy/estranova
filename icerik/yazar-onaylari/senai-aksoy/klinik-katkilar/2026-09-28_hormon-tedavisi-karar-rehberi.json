@@ -98,7 +98,7 @@
     "authorization": "Kullanıcı audit sonrası öncelik listesinin (1–6) uygulanmasını onayladı.",
     "scope": "Açılış gerçek hekim yanıtlarıyla yeniden kuruldu; yarar paragrafları Yarar, Risk ve Zamanlama bölümüne taşındı; biyo-özdeş cümlesi kendi bölümüne alındı; soru biçimli H2 sayısı 1e indi; Evidence 7→5; tekrarlar ve olumsuzlama kalıpları azaltıldı; sakin kapanış eklendi; SSS 4 son cümlesi özgün yanıta döndürüldü.",
     "medicalChanges": "LDL kolesterol ifadesi hekim yanıtında ve kaynakta doğrulanmadığı için çıkarıldı. Erken yumurtalık yetmezliği (40 yaş öncesi menopoz) istisnası eklendi [3]; yazar tarafından onaylandı. Sürekli/döngüsel kullanım cümlesi içeriksiz olduğu için çıkarıldı.",
-    "reviewStatus": "Dr. Alper Mumcu teyidi bu revizyondan öncedir; yeni revizyonun bağımsız tıbbi incelemesi kaydedilmedi.",
+    "reviewStatus": "Dr. Alper Mumcu revizyonun güncel sürümünü (commit 05b8f48) gördü ve onayladı. Onay, kullanıcı tarafından bu sohbette 2026-09-28 tarihinde iletildi. Görünür inceleme imzası (28 Eylül 2026) güncel metni kapsıyor.",
     "approval": "Commit yetkisi verildi; push ve deploy yetkisi verilmedi.",
     "authorConfirmation": {
       "date": "2026-09-28",
@@ -108,6 +108,13 @@
         "Kapanış cümlesi: Kararı bugün vermek zorunda değilsiniz…"
       ],
       "source": "Bu sohbet içindeki doğrudan kullanıcı yanıtı"
+    },
+    "independentMedicalReview": {
+      "reviewer": "Dr. Alper Mumcu",
+      "date": "2026-09-28",
+      "coveredVersion": "05b8f48",
+      "status": "Onaylandı",
+      "source": "Kullanıcının bu sohbetteki bildirimi"
     }
   }
 }
