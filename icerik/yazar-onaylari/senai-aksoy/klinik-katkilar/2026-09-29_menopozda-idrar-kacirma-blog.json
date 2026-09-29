@@ -136,5 +136,13 @@
         "source": "Kullanıcının bu sohbetteki doğrudan yanıtı"
       }
     }
-  ]
+  ],
+  "medicalReviewRecord": {
+    "reviewer": "Dr. Alper Mumcu",
+    "reviewedAt": "2026-09-29",
+    "source": "Kullanıcının bu sohbetteki beyanı: 'dr alper mumcu bugün'",
+    "scopeNote": "Beyanda kapsam ayrıca belirtilmedi; kayıt, incelemenin güncel sürüm (e10d6ca: birleştirme, humanize, hekim gövde katkıları, cerrahi/cihaz bölümü, genişletilmiş kırmızı bayraklar) için yapıldığı varsayımıyla tutuldu. Mumcu'nun kendi yazılı onayı veya notu bu kayıtta yoktur.",
+    "supersedes": "Önceki 'inceleyen adı belirtilmedi' notu"
+  },
+  "approvalBoundary": "Tıbbi inceleme: Dr. Alper Mumcu, 29 Eylül 2026 (kullanıcı beyanı). Yayın/deploy onayı verilmemiştir."
 }
