@@ -767,27 +767,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopozda uykusuzluk yalnızca sıcak basmasına mı bağlıdır?',
       answer:
-        'Hayır. Sıcak basması önemli bir neden olsa da anksiyete, erken uyanma, düzensiz uyku saati, horlama ve bacak huzursuzluğu gibi başka başlıklar da tabloyu besleyebilir. İyi uyku için önce hangi kapının öne çıktığını görmek gerekir.',
+        'Hayır. Sıcak basması önemli bir neden olabilir, ama stres, ağrı, gece idrara kalkma, huzursuz bacak veya uyku apnesi de uykuyu bölebilir. Hastaya önce "Sizi ne uyandırıyor?" diye sorarım; her uyanmayı menopoza bağlamam.',
     },
     {
       question: 'Gece sık uyanıp tekrar uyuyabiliyorsam yine de bunu önemsemeli miyim?',
       answer:
-        'Evet, çünkü uykunun kalitesi yalnızca toplam saatle ilgili değildir. Tekrarlayan bölünmeler ertesi gün zihinsel dayanıklılığı, ruh halini ve beden enerjisini belirgin biçimde etkileyebilir.',
+        'Gece kısa süre uyanıp tekrar uyumak tek başına hastalık belirtisi değildir. Benim için belirleyici olan bunun ne kadar sık olduğu ve sabah dinlenmiş kalkıp kalkmadığınız, gün içinde yorgunluk veya dikkat sorunu yaşayıp yaşamadığınızdır. Belirgin horlama ya da nefes durması anlatılıyorsa, tekrar uyuyabiliyor olsanız da ayrıca değerlendiririm.',
     },
     {
       question: 'Uyku günlüğü tutmak gerçekten işe yarar mı?',
       answer:
-        'Birçok kadın için sorunun ritmini görmeyi kolaylaştırır. Yatma-kalkma saatleri, gece uyanma sayısı, alkol-kafein, egzersiz ve sıcak basması notları tabloyu daha okunur hale getirir; iki hafta tutup hekim görüşmesine götürmek yeterli bir başlangıçtır.',
+        'Evet, ama günlüğü bir sınav gibi tutmanızı istemem. Bir–iki hafta boyunca yatış saatinizi, gece uyanmalarınızı, sıcak basmasını ve ertesi gün nasıl hissettiğinizi kısaca yazmanız yeterli. Bu kayıt sorunun seyrini görmemize yardımcı olur; tek başına bir tedavi değildir.',
     },
     {
       question: 'CBT-I nedir, uykusuzlukta neden gündeme geliyor?',
       answer:
-        'CBT-I, uykusuzluk için uyarlanmış bilişsel davranışçı terapidir; uyku düzenini ve uykuyla ilgili düşünceleri hedefleyen yapılandırılmış bir programdır. Menopozdaki kadınlarda yapılan randomize çalışmaları birleştiren bir meta-analizde uyku kalitesini ve uykusuzluk şiddetini iyileştirdiği görülmüştür; yüz yüze ve uzaktan uygulamada benzer sonuçlar bildirilmiştir. Kimin için uygun olduğuna hekiminizle birlikte karar verilir.',
+        'CBT-I, uykusuzluk için geliştirilmiş yapılandırılmış bir bilişsel davranışçı terapidir. Uyku saatlerini ve yatakta geçirilen zamanı düzenlemeyi, uykuyla ilgili kaygıyı azaltmayı öğretir. Uykusuzluk sıklaşıp gündüz yaşamınızı etkiliyorsa, özellikle uzun süredir devam ediyorsa gündeme getiririm; yalnızca "erken yatın" demekten ibaret değildir.',
     },
     {
       question: 'Sıcak basması gece uykumu bölüyorsa hormon tedavisi (HRT) seçenekler arasında mı?',
       answer:
-        'Sıcak basmasının uykuyu bölmede baskın olduğu kadınlarda hormon tedavisi hekimle tartışılabilecek seçeneklerden biridir; hormon dışı ilaç seçenekleri de vardır. Karar kişisel sağlık öyküsüne, hormon tedavisini kullanmanıza engel olabilecek durumlara ve önceliklerinize göre verilir. Bu yazı bireysel bir tedavi önerisi değildir; kararı hekiminizle birlikte vermelisiniz.',
+        'Evet, gece terlemesi ve sıcak basması uykunuzu belirgin biçimde bölüyorsa hormon tedavisi seçeneklerden biridir. Kararı yaşınıza, menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm. Sıcak basması olmadan yalnızca uykusuzluk varsa, HRT\'yi otomatik olarak uyku ilacı gibi önermem; önce uykusuzluğun nedenini değerlendiririm.',
     },
   ],
   '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/': [
