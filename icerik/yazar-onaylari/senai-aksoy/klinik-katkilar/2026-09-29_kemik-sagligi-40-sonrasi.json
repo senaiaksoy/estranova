@@ -110,5 +110,32 @@
       "newClaims": "Yok; yalnızca sayı azaltıldı. Kaynak zinciri [10-13] değişmedi.",
       "reviewNote": "Dr. Mumcu incelemesi (2026-09-29) bu sadeleştirmeden önce yapıldı."
     }
+  },
+  "imageProvenance": {
+    "files": [
+      "public/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi-byline.webp",
+      "public/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi.webp"
+    ],
+    "origin": "Yapay zekâ üretimi",
+    "reportedBy": "Dr. Aksoy",
+    "reportedAt": "2026-09-29",
+    "tool": "Bildirilmedi (araç/model bilinmiyor)",
+    "note": "Kart görseli, dikey kaynaktan yapılan yatay kırpmadır; aynı kaynağın türevidir."
+  },
+  "bhofSourceVerification": {
+    "verifiedAt": "2026-09-29",
+    "site": "bonehealthandosteoporosis.org (bu ortamdan erişilemedi: ağ engeli 403)",
+    "verifiedVia": "BHOF Klinisyen Rehberi'nin hakemli yayımı, PubMed 35478046, doi 10.1007/s00198-021-05900-y",
+    "reference": "Ref 14: LeBoff MS ve ark. Osteoporos Int 2022;33(10):2049-2102",
+    "supportsFromAbstract": [
+      "Osteoporoz kırık gelişene kadar belirti vermez (subklinik) -> Sessiz Kayıp bölümü ve Dr. Aksoy'un SSS 1 fikri",
+      "50 yaş üstü her yeni kırık sonraki kırıklar için yüksek risk göstergesi (sentinel olay) -> risk listesinde önceki kırık",
+      "Omurga kırıkları (klinik veya subklinik) ek omurga kırığı riskini 5 kat artırır -> Dr. Mumcu'nun 'fark edilmemiş omurga kırığı' sözü (BEN)"
+    ],
+    "citedInBody": [
+      "Sessiz Kayıp bölümü, 'kayıp çok daha önce başlamış olabilir'",
+      "Risk listesi, 'küçük bir düşmede kırık geçirmiş olmak'"
+    ],
+    "notCited": "Tıbbi Seçenekler lede'i ('kararı en çok değiştiren bulgudur'): özet 'en çok' üstünlüğünü doğrulamadığı için atıf verilmedi. DXA tarama yaşı için BHOF eşiği özette yer almadığından kullanılmadı."
   }
 }
