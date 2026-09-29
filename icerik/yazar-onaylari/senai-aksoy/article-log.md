@@ -137,3 +137,4 @@ Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi ince
 - Tıbbi onay (2026-09-29): Dr. Alper Mumcu onayı tamamlandı (KC beyanı: "dr mumcu onayı tamam"); önceki inceleme kaydı onaya çevrildi. Yazılı Mumcu notu kayıtta yok.
 
 - Cinsellikte ağrı ikinci tur (2026-09-29): /makale-denetle → /makale-humanize, audit maddeleri 2–7 (hero kapsam dışı). 6 H2 (girişte/derinde ağrı ayrıldı), tekrarlar temizlendi, Evidence [5] 4 → 3–4, okuma süresi 5 dk, anahtar kelimeler hizalandı. Hekim gözlemi (bu sohbet): acı korkusu libidoyu olumsuz etkiliyor; ters yön tartılamıyor — korku paragrafına 'bilmiyorum anı' olarak işlendi. H0 korundu. Onay: "onaylıyorum, commit edip push et". Bu tur için ayrı Mumcu teyidi yok.
+- Cinsellikte ağrı ikinci tur tıbbi onay (2026-09-29): Dr. Alper Mumcu onayı tamamlandı (KC beyanı: "dr mumcu onayı tamam"); Evidence [5] 3–4 ve hekim gözlemi dahil. Yazılı Mumcu notu kayıtta yok.
