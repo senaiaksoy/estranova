@@ -43,6 +43,28 @@
       "note": "Dr. Aksoy kendi gözlemi olduğunu teyit etti."
     }
   ],
-  "pastedResidueNotes": "Yanıtlarla birlikte gelen 'bonehealthandosteoporosis.org' ve 'uspreventiveservicestaskforce.org' satırları yapıştırma kalıntısı sayıldı; metne ve kaynakçaya alınmadı. USPSTF zaten [4]. BHOF kaynağı doğrulanıp iddiayı desteklediği görülmeden eklenmeyecek.",
-  "faqUseApprovedAt": "2026-09-29"
+  "pastedResidueNotes": "Yanıtlarla birlikte gelen 'bonehealthandosteoporosis.org' ve 'uspreventiveservicestaskforce.org' satırları yapıştırma kalıntısı sayıldı; metne ve kaynakçaya alınmadı. USPSTF zaten [4]. BHOF kaynağı doğrulanıp iddiayı desteklediği görülmeden eklenmeyecek. Dr. Mumcu yanıtlarının altındaki 'Springer Nature Link' satırı da yapıştırma kalıntısı sayıldı; kaynakçaya alınmadı.",
+  "faqUseApprovedAt": "2026-09-29",
+  "independentMedicalReview": {
+    "reviewer": "Dr. Alper Mumcu",
+    "date": "2026-09-29",
+    "coveredVersion": "eb41be3",
+    "scope": "Tüm metin",
+    "status": "Yapıldı",
+    "source": "Kullanıcının bu sohbetteki bildirimi (2026-09-29)"
+  },
+  "editorNoteContribution": {
+    "contributor": "Dr. Alper Mumcu",
+    "providedAt": "2026-09-29",
+    "source": "Dr. Aksoy'un bu sohbette ilettiği Dr. Mumcu yanıtları",
+    "placement": "Bilimsel Editör Notu: açılış (yanlış anlama) + iki klinik karar paragrafı (osteopenide ilaç kararı; hormon tedavisi ve kemik)",
+    "questionsAsked": [
+      "Osteopeni düzeyinde ölçümde ilaç kararı",
+      "Kemik korumasıyla hormon tedavisi",
+      "Kadınların kemik konusunda en sık yanlış anladığı nokta"
+    ],
+    "editing": "Yanıtlar dil düzeltmesi dışında birebir alındı; yeni gerekçe, oran veya tavsiye eklenmedi.",
+    "pending": "Notun makaleye giren hâli Dr. Mumcu'ya ayrıca gösterilmedi; yanıtlar kendi sözleri olduğundan değişiklik beklenmiyor."
+  },
+  "kcEditorApproval": "Kullanıcı 'KC editör onayı tamam' dedi; tarih ve kayıt biçimi belirtilmediği için article-approvals.ts'e işlenmedi."
 }
