@@ -261,7 +261,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-05-04',
-    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT, gabapentin, CBT-I, apne, polisomnografi ve uyku tıbbı değerlendirmesi doktor uzmanlık alanı gerektirdiği için klinik sesle revize edildi; URL korundu.',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT, gabapentin, CBT-I, apne, polisomnografi ve uyku tıbbı değerlendirmesi doktor uzmanlık alanı gerektirdiği için klinik sesle revize edildi; URL korundu. 2026-09-29: geniş audit revizyonu (PR #29): TOC hizası, anekdot anlatımı (klinik birleşik gözlem), kadans/antitez temizliği, numaralı atıf [1-4] ve künyeli kaynaklar (PMID doğrulandı), Bilimsel Editör Notu 3 katmana indirildi, SSS 3\'ten 5 soruya çıkarıldı, terminoloji Türkçeleştirildi; modifiedDate 29 Eylül 2026. KC editör (Dr. Senai Aksoy) bu sohbette şu üç noktanın onaylandığını bildirdi (kullanıcının bu sohbetteki bildirimi; tarih bildirim gününe göre kaydedildi): (1) Dr. Alper Mumcu\'nun bağımsız tıbbi incelemesi (Bilimsel Editör Notu imzası ve şema reviewedBy), (2) yeni ve düzeltilen SSS yanıtlarının Dr. Aksoy tarafından doğrulanması (yanıtlar makale gövdesinden türetilmişti; birebir yanıt kaydı dosyası oluşturulmadı), (3) Bilimsel Editör Notu\'nun klinik gözden geçirmesi.',
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
