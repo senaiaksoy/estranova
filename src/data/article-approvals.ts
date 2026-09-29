@@ -236,8 +236,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-02',
-    note: 'KC editör kararıyla makale Dr. Senai Aksoy imzasına taşındı ve gövde metni Senai klinik yazı sesiyle yeniden yazıldı. Production article metadata, approval kaydı ve RSS manifesti Senai imzasına hizalandı; URL korundu.',
+    approvedAt: '2026-09-29',
+    note: 'KC editör kararıyla makale Dr. Senai Aksoy imzasına taşındı ve gövde metni Senai klinik yazı sesiyle yeniden yazıldı. Production article metadata, approval kaydı ve RSS manifesti Senai imzasına hizalandı; URL korundu (2026-05-02). 2026-09-29: KC editör (Dr. Senai Aksoy) bu revizyon için doğrudan onay verdi (bu sohbetteki bildirim). Revizyon: humanize, kaynak düzeltmeleri, T/Z-skoru tablosu, Dr. Aksoy\'un gerçek SSS yanıtları (3/3, kullanım onaylı) ve Dr. Alper Mumcu\'nun bağımsız tıbbi incelemesi (2026-09-29, tüm metin) ile Bilimsel Editör Notu katkısı. Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-29_kemik-sagligi-40-sonrasi.json.',
   },
   {
     pathname: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',

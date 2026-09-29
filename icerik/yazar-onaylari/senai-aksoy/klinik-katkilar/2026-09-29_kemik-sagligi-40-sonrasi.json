@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/kemik-sagligi-40-sonrasi/",
   "answeredAt": "2026-09-29",
   "source": "Dr. Aksoy'un bu sohbet içindeki doğrudan yanıtları (2026-09-29)",
-  "status": "Tamamlandı: 3/3 gerçek yanıt alındı, makale SSS'sine işlendi ve Dr. Aksoy makaleye giren hâlleri onayladı (2026-09-29). Yayın onayı (Dr. Mumcu incelemesi, KC editör) ayrıca gereklidir.",
+  "status": "Tamamlandı: 3/3 SSS yanıtı işlendi ve onaylandı; Dr. Mumcu bağımsız incelemesi (2026-09-29, tüm metin) ve KC editör onayı (2026-09-29) kaydedildi. Birleştirme/yayın kararı ayrıca verilecek.",
   "revisionScope": "Gövde humanize edildi (ses, ritim, başlıklar, lede çeşitliliği), kaynak-iddia eşleşmeleri düzeltildi, tıbbi eksikler kaynaklı olarak tamamlandı. Bu kayıt yeni revizyonun tıbbi onayı değildir; Dr. Alper Mumcu incelemesi ve KC editör onayı ayrıca gereklidir.",
   "publicationApproval": "Bu turda commit, push veya deploy yetkisi verilmedi.",
   "faqConversionStatus": "3/3 gerçek yanıt alındı ve yerel SSS metnine işlendi (başlık: Dr. Aksoy'a Sorular; 'en sık' nitelemesi doğrulanmadığı için kullanılmadı).",
@@ -66,5 +66,11 @@
     "editing": "Yanıtlar dil düzeltmesi dışında birebir alındı; yeni gerekçe, oran veya tavsiye eklenmedi.",
     "pending": "Notun makaleye giren hâli Dr. Mumcu'ya ayrıca gösterilmedi; yanıtlar kendi sözleri olduğundan değişiklik beklenmiyor."
   },
-  "kcEditorApproval": "Kullanıcı 'KC editör onayı tamam' dedi; tarih ve kayıt biçimi belirtilmediği için article-approvals.ts'e işlenmedi."
+  "kcEditorApproval": {
+    "approver": "KC editör (Dr. Senai Aksoy)",
+    "date": "2026-09-29",
+    "scope": "Bu revizyon",
+    "recordedIn": "src/data/article-approvals.ts",
+    "source": "Kullanıcının bu sohbetteki bildirimi (2026-09-29)"
+  }
 }
