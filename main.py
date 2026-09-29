@@ -97,6 +97,27 @@ def build_graph() -> Any:
     return graph.compile()
 
 
+# CLAUDE.md §3 klinisyen istisnasi (category: 'scientific'): kanitli atif rejimi.
+# Yeni klinik yazar eklendiginde CLAUDE.md listesi ile birlikte guncellenir.
+SCIENTIFIC_WRITER_SLUGS: frozenset[str] = frozenset(
+    {
+        "senai-aksoy",
+        "bulent-aksoy",
+        "metin-alis",
+        "gonca-gokdemir",
+        "ersin-sarac",
+        "cagri-sade",
+        "alp-aslan-eryilmaz",
+        "alper-mumcu",
+    }
+)
+
+
+def resolved_writer_category(writer_slug: str | None) -> str:
+    """Yazar slug'indan atif rejimi: 'scientific' (klinisyen) veya '' (yasit / dergi, varsayilan)."""
+    return "scientific" if (writer_slug or "").strip().lower() in SCIENTIFIC_WRITER_SLUGS else ""
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Estranova LangGraph multi-agent simulation")
     parser.add_argument(
@@ -115,6 +136,12 @@ def parse_args() -> argparse.Namespace:
         help="Konu metni (pozisyon argümanı yerine veya birlikte)",
     )
     parser.add_argument("--audience", default="40+ kadinlar")
+    parser.add_argument(
+        "--writer",
+        default=None,
+        metavar="SLUG",
+        help="Yazar slug'i (orn. senai-aksoy). Klinisyen ise kanitli atif rejimi; verilmezse yasit (dergi) rejimi",
+    )
     parser.add_argument(
         "--content-goal",
         default="bilgilendirici makale + sosyal medya + bulten + publisher paketi",
@@ -637,6 +664,7 @@ def main() -> None:
         content_goal=args.content_goal,
         risk_level=args.risk_level,
         user_context=args.user_context or "",
+        writer_category=resolved_writer_category(args.writer),
     )
     result: EstranovaState = app.invoke(initial_state)
     if args.category is not None:
