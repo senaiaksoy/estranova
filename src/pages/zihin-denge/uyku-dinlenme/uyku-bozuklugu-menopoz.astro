@@ -110,10 +110,10 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
 <p>
-          Menopozda uykusuzluk genellikle birkaç nedenin üst üste gelmesiyle ortaya çıkar. Sıcak basması, hormon
-          dalgalanması ve ruh hâli değişimleri birleştiğinde, sabah gözünüzü açtığınızda sanki gece hiç
-          dinlenmemişsiniz gibi hissedebilirsiniz. Bu rehber, kusursuz bir çözüm aramak yerine birkaç sade adımı hayatınıza yerleştirmenin
-          yollarını anlatıyor.
+          Sabah gözünüzü açtığınızda gece hiç dinlenmemiş gibi hissediyorsanız, geceyi bölen şey bazen sıcak basması,
+          bazen hormon dalgalanması, bazen ruh hâlidir; çoğu kez de bunlardan birkaçı birlikte çalışır. Bu rehber,
+          önce geceyi neyin böldüğünü ayırmayı, sonra sade alışkanlıkları ve ne zaman hekimle konuşmak gerektiğini
+          anlatıyor.
         </p>
       </ArticleSummary>
 
@@ -149,8 +149,9 @@ const articleSchemas = buildArticleSchemas({
           eklenebilir.
         </p>
         <p>
-          Bazen insan tek bir neden arıyor: "Şu düzelse uykum da düzelir." Oysa çoğu gecede birkaç etken aynı anda
-          devrede. Bu yüzden planı birkaç küçük alışkanlığa yaymak daha gerçekçi.
+          Bazen insan tek bir neden arıyor: "Şu düzelse uykum da düzelir." Çoğu gecede birkaç etken aynı anda
+          devrede. Bu yüzden önce geceyi en çok neyin böldüğünü ayırmak gerekir: sıcak basması mı, uykuya dalamama
+          mı, erken uyanma mı, yoksa apne gibi başka bir sorun mu?
         </p>
 
         <h2 id="uyku-nedenleri-tablo">Uyku Bozukluğu Nedenleri ve Konuşulabilecek Adımlar</h2>
@@ -160,30 +161,26 @@ const articleSchemas = buildArticleSchemas({
           <table class="w-full text-left border-collapse text-sm">
             <thead>
               <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
-                <th class="p-3 font-semibold">Tetikleyici / Neden</th>
-                <th class="p-3 font-semibold">Biyolojik Mekanizma</th>
-                <th class="p-3 font-semibold">Görülen Uyku Sorunu</th>
-                <th class="p-3 font-semibold">Hekimle Konuşulabilecek Adımlar</th>
+                <th class="p-3 font-semibold">Neden</th>
+                <th class="p-3 font-semibold">Gece ne olabilir?</th>
+                <th class="p-3 font-semibold">Hekimle konuşulabilecekler</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-primary/10">
               <tr>
-                <td class="p-3 font-medium">Gece sıcak basması ve terleme (vazomotor belirtiler)</td>
-                <td class="p-3">Vücut ısısını düzenleyen sistemdeki değişim ve gece terlemesi uykuyu bölebilir.</td>
-                <td class="p-3">Sık gece uyanması, sırılsıklam uyanıp üşüme.</td>
-                <td class="p-3">Serin oda, katmanlı nevresim; gerekirse hekimle hormon tedavisi (HRT) veya hormon dışı ilaç seçeneklerini konuşma.</td>
+                <td class="p-3 font-medium">Sıcak basması ve gece terlemesi (vazomotor belirtiler)</td>
+                <td class="p-3">Sırılsıklam uyanıp üşümek, gece boyunca sık uyanmak.</td>
+                <td class="p-3">Serin oda, katmanlı nevresim; gerekirse hekimle HRT veya hormon dışı ilaç seçenekleri.</td>
               </tr>
               <tr>
-                <td class="p-3 font-medium">Progesteron Düşüşü</td>
-                <td class="p-3">Hormonal geçiş, uyku düzenleme ve sıcaklık kontrolünü etkileyebilir.</td>
-                <td class="p-3">Uykuya dalmakta zorlanma, zihni susturamama.</td>
-                <td class="p-3">Uyku düzenini değerlendirme; gerekirse hekimle hormon tedavisi ve uykusuzluk için bilişsel davranışçı terapi (CBT-I) seçeneklerini konuşma.</td>
+                <td class="p-3 font-medium">Hormonal geçiş</td>
+                <td class="p-3">Bazı kadınlarda uykuya dalmak zorlaşır, bazılarında gece ortasında ya da sabaha karşı uyanma öne çıkar.</td>
+                <td class="p-3">Sıcak basması, ruh hâli, uyku düzeni ve eşlik eden etkenleri birlikte değerlendirmek; gerekirse CBT-I.</td>
               </tr>
               <tr>
-                <td class="p-3 font-medium">Melatonin Ritim Kayması</td>
-                <td class="p-3">Işık, uyku saatleri, yaş ve hormonal geçiş sirkadiyen ritmi (iç saati) etkileyebilir.</td>
-                <td class="p-3">Erken saatte uyanma (gece 03:00-04:00).</td>
-                <td class="p-3">Akşam mavi ışık kısıtlaması, düzenli sabah güneşi maruziyeti.</td>
+                <td class="p-3 font-medium">İç saat (sirkadiyen ritim) kayması</td>
+                <td class="p-3">Gece 03:00-04:00 gibi erken uyanıp tekrar uyuyamamak.</td>
+                <td class="p-3">Akşam ışığı kısmak, sabah güneş ışığı almak, sabit saat.</td>
               </tr>
             </tbody>
           </table>
@@ -249,24 +246,20 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="tibbi-tedavi">Tıbbi Destek Seçenekleri — Karar Süreci</h2>
         <p>
-          Yaşam tarzı adımlarına rağmen uykusuzluk sürüyorsa bunu bir irade meselesi gibi görmeyin. Seçenekleri bir
-          sağlık profesyoneliyle masaya koymak daha yararlı olur. Uyku tedavisinde tek bir "doğru" protokol yoktur.
-          İlk iş, şikâyetin önde gelen iki-üç bileşenini ayırmaktır: sıcak basması mı, uykusuzluk mu, apne mi,
-          huzursuz bacak mı, duygu durum mu?
+          Yaşam tarzı adımlarına rağmen uykusuzluk sürüyorsa bunu bir irade meselesi gibi görmeyin. Muayenede ilk
+          sorum şudur: sizi ne uyandırıyor? Her uyanmayı menopoza bağlamam; önce nedeni değerlendiririm.
         </p>
         <p>
-          Bu tabloda sıcak basması ve gece terlemesinin yönetimi, uykusuzluk için bilişsel davranışçı terapi (CBT-I)
-          ve bazı kişilerde ilaç seçenekleri gündeme gelebilir. CBT-I, uykusuzluk için uyarlanmış yapılandırılmış
-          bir programdır ve kanıt tabanı güçlü yöntemlerden biridir. Menopozdaki kadınlarda yapılan 11 randomize
-          çalışmayı (toplam 973 katılımcı) birleştiren bir meta-analizde uyku kalitesinin ve uykusuzluk şiddetinin
-          düzeldiği görülmüştür <Evidence level={5} /><sup><a href="#kaynak-2">[2]</a></sup><sup><a href="#kaynak-4">[4]</a></sup>. Hormon tedavisi (HRT), sıcak basmasının uykuyu
-          bölmede baskın olduğu kadınlarda ek bir seçenek olarak tartışılabilir<sup><a href="#kaynak-3">[3]</a></sup>. Bu kararda kişisel sağlık
-          öyküsü, hormon tedavisini kullanmanıza engel olabilecek durumlar ve sizin öncelikleriniz belirleyicidir.
+          CBT-I, uykusuzluk için uyarlanmış yapılandırılmış bir programdır. Uykusuzluk sıklaşıp gündüz yaşamınızı
+          etkiliyorsa, özellikle uzun süredir sürüyorsa gündeme getiririm. Kanıt tabanı da güçlüdür: menopozdaki
+          kadınlarda yapılan 11 randomize çalışmayı (toplam 973 katılımcı) birleştiren bir meta-analizde uyku
+          kalitesinin ve uykusuzluk şiddetinin düzeldiği görülmüştür <Evidence level={5} /><sup><a href="#kaynak-2">[2]</a></sup><sup><a href="#kaynak-4">[4]</a></sup>. HRT ise gece
+          terlemesi ve sıcak basması uykuyu belirgin biçimde bölüyorsa seçeneklerden biridir; kararı yaşınıza,
+          menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm<sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
         <p>
-          Tedavi seçimi kişiye özgüdür. Aynı belirtiye sahip iki kadında bile hedef farklı olabilir: birinde gece
-          uyanmalarını azaltmak, diğerinde kaygıyı yönetmek öne çıkabilir. Plan; belirti şiddeti, yaşam düzeni ve
-          sizinle hekiminiz arasındaki konuşmayla şekillenir.
+          Aynı şikâyetle gelen iki kadında hedef farklı olabilir: birinde gece uyanmalarını azaltmak, diğerinde
+          uykuyla ilgili kaygıyı yönetmek öne çıkar. Plan buna göre kurulur.
         </p>
 
         <h2 id="uzman-ne-zaman">Uyku Uzmanına Danışmayı Düşündüren İşaretler</h2>
@@ -293,10 +286,6 @@ const articleSchemas = buildArticleSchemas({
           footnote="Bu liste teşhis amaçlı değil; bir hekimle konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
         />
         <p>
-          Küçük ama tutarlı adımlar bu dönemde gerçekçi bir başlangıçtır. Bu yazıdan tek bir not alacaksanız şu
-          olsun: önce sabit saat, sonra serin oda, sonra hekiminizle bir sohbet.
-        </p>
-        <p>
           Aynı yaşta, benzer hormonal tabloda iki kadından birinde apne sessiz seyrederken diğerinde gündüz
           uykululuğuyla erken belli olabilir. Hangisinin hangisi olduğunu yalnızca konuşarak bilemem; tahmin
           yürütmek yerine klinik değerlendirme, gerekirse polisomnografi ve uyku uzmanı izlemi isterim.
@@ -314,15 +303,14 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="kapanis">Kapanış</h2>
         <p>
           Bu yazıdan aklınızda üç şey kalsın: sabit bir yatma-kalkma saati, serin bir yatak odası ve akşamın son iki
-          saatini kendinize ayırmak. Gerisi bu zeminin üzerine oturur. Sıcak basması gecelerinizi bölüyorsa ya da
-          uykusuzluk haftalardır sürüyorsa HRT veya CBT-I gibi seçenekleri hekiminizle konuşabilirsiniz. Önce zemin,
-          sonra üst yapı. Bir cihazın gösterdiği rakam haftalık bir eğilim verir; bir gecenin ayrıntısını tam
-          göstermeyebilir. Apne, huzursuz bacak ve üç aydan uzun süren ağır uykusuzluk ise "menopoz uykusu" diye
-          geçiştirilmemeli; bunlar için erken değerlendirme en doğru adımdır.
+          saatini kendinize ayırmak. Sıcak basması gecelerinizi bölüyorsa ya da uykusuzluk haftalardır sürüyorsa HRT
+          veya CBT-I gibi seçenekleri hekiminizle konuşabilirsiniz. Horlama, nefes durması, huzursuz bacak ya da üç
+          aydan uzun süren ağır uykusuzluk varsa "menopoz uykusu" deyip beklemeyin; erken değerlendirme en doğru
+          adımdır. Bir cihazın gösterdiği rakam haftalık bir eğilim verir, bir gecenin ayrıntısını tam
+          göstermeyebilir.
         </p>
         <p>
-          Uyku bozukluğu görünmez bir yük olabilir. Doğru sorularla bakıldığında tablo daha anlaşılır olur ve bir
-          sonraki adım biraz daha seçilebilir hale gelir.
+          Uyku bozukluğu görünmez bir yük olabilir. Nedeni ayrıldığında ise bir sonraki adım çok daha net görünür.
         </p>
       </ArticleProsePanel>
 
