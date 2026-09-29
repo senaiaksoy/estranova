@@ -491,7 +491,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': {
     src: '/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi.webp',
-    alt: 'Aydınlık bir alanda kontrollü direnç hareketi yapan kadın; 40 sonrası kemik sağlığı yazısı için kart görseli',
+    alt: 'Aydınlık bir oturma odasında iki kadın direnç bandı ve defterdeki hareket planı üzerine sohbet ediyor; 40 sonrası kemik sağlığı yazısı için kart görseli',
   },
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
