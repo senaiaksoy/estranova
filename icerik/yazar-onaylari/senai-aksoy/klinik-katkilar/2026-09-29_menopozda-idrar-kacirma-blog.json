@@ -89,5 +89,17 @@
     "authorization": "Kullanıcının 'iki makaleyi birleştirelim' talebi",
     "summary": "Statik hub sayfası ile blog kopyası tek kanonik rotada birleştirildi. Kanonik URL hub rotasıdır; içerik denetlenmiş blog kaynağından render edilir; eski /blog/ URL'si yönlendirilir. Statik sayfadaki kaynaksız yayılım, tekil hasta alıntısı ve çelişen SSS/kanıt ifadeleri taşınmadı. Statik sayfadan cerrahi/cihaz kanıt sınırı (yeni kaynak: Lukanović 2026 meta-analizi), pelvik organ sarkması ve nörolojik kırmızı bayrak eklendi.",
     "approvalBoundary": "Yeni eklenen cerrahi/cihaz bölümü ve kırmızı bayrak cümlesi ayrıca hekim incelemesine tabidir; inceleme gerçekleşmiş gibi gösterilmemiştir."
+  },
+  "humanizeRevision": {
+    "date": "2026-09-29",
+    "authorization": "Kullanıcının 'humanize turunu şimdi yap' talebi",
+    "changes": [
+      "Tüm gövde senai-humanize akışıyla elden geçirildi: yol haritası cümlesi kaldırıldı, edilgen yığın ve tekdüze ritim azaltıldı, tür tanımları listeye çevrildi, kırmızı bayrak cümlesi bölündü, hekime sorular listeye alındı.",
+      "Birleştirme turunda eklenen, kayıtlı hekim yanıtına dayanmayan 'Muayene odasında sık duyduğum' cümlesi kaldırıldı.",
+      "Gövdedeki birinci tekil cümle SSS 2. yanıttan kısaltıldı ('Bu yüzden ilk sorum, kaçırmanın nasıl ve ne zaman olduğudur'); SSS yanıtları değiştirilmedi.",
+      "Cochrane kanıt cümlesine 'stres tipi kaçırması olan kadınlar' popülasyonu eklendi (derlemedeki yüksek kalite derecesi bu alt gruba aittir).",
+      "Atıf eklemeleri: kırmızı bayraklara [3], cerrahi seçeneklere [6], mesane günlüğüne [7]. Özete cihaz kanıt sınırı cümlesi eklendi."
+    ],
+    "approvalBoundary": "Dil düzenlemesidir; yeni hekim incelemesi veya yayın onayı gerçekleşmiş gibi gösterilmemiştir."
   }
 }

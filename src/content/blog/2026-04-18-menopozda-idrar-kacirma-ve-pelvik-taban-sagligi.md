@@ -3,7 +3,7 @@ title: "Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı"
 description: "Menopoz döneminde idrar kaçırmanın türleri, pelvik taban kas eğitiminin yeri ve hangi belirtilerde değerlendirme gerektiği üzerine sade bir hekim rehberi."
 date: "2026-04-18"
 modifiedDate: "2026-09-29"
-summary: "Menopoz döneminde ortaya çıkan idrar kaçırmayı yalnızca hormonlara bağlamak doğru olmaz. Doğum öyküsü, yaşla değişen dokular, kabızlık, kilo ve eşlik eden hastalıklar da değerlendirilir. Öksürürken kaçırma ile ani sıkışma sonrası tuvalete yetişememe farklı yaklaşımlar gerektirebilir. Pelvik taban kas eğitimi ve mesane eğitimi, kaçırmanın türüne göre ilk seçenekler arasındadır. Menopoza bağlı vajinal ve idrar yolu yakınmaları varsa lokal östrojen ayrıca değerlendirilebilir. Belirtileri hekiminizle konuşmak için ağırlaşmalarını beklemeniz gerekmez; idrarda kan, idrar yapamama veya ateşle birlikte idrar yakınmaları gecikmeden değerlendirilmelidir."
+summary: "Menopoz döneminde ortaya çıkan idrar kaçırmayı yalnızca hormonlara bağlamak doğru olmaz. Doğum öyküsü, yaşla değişen dokular, kabızlık, kilo ve eşlik eden hastalıklar da değerlendirilir. Öksürürken kaçırma ile ani sıkışma sonrası tuvalete yetişememe farklı yaklaşımlar gerektirebilir. Pelvik taban kas eğitimi ve mesane eğitimi, kaçırmanın türüne göre ilk seçenekler arasındadır. Menopoza bağlı vajinal ve idrar yolu yakınmaları varsa lokal östrojen ayrıca değerlendirilebilir. Vajinal lazer ve radyofrekans uygulamalarında kanıt şimdilik sınırlıdır. Belirtileri hekiminizle konuşmak için ağırlaşmalarını beklemeniz gerekmez; idrarda kan, idrar yapamama veya ateşle birlikte idrar yakınmaları gecikmeden değerlendirilmelidir."
 medicalEditorNote: "Bu rehberde genel araştırma bulguları ile kişiye özel değerlendirme birbirinden ayrılmıştır. Dr. Aksoy'a Sorular bölümü, Dr. Senai Aksoy'un bu yazı için verdiği gerçek yanıtlardan hazırlanmıştır. Pelvik taban egzersizlerine ilişkin araştırmalar yalnızca menopoz dönemindeki kadınları kapsamamaktadır; sonuçlar her yaş ve kaçırma türü için aynı kesinlikte değildir."
 disclaimer: "Bu içerik yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Tıbbi tanı, tedavi önerisi ya da kişisel sağlık kararı yerine geçmez. Belirtilerinizle ilgili değerlendirme için bir sağlık profesyoneliyle görüşmeniz önerilir."
 relatedPaths:
@@ -31,87 +31,93 @@ imageAlt: "Gün ışığı alan bir evin yoga köşesinde yan yana oturan iki ka
 
 ## Tanıdık Ama Sessiz Kalan Bir Durum
 
-Bir kahkaha sırasında birkaç damla kaçırmak, yürüyüşe çıkmadan önce tuvaletleri düşünmek, çantaya yedek iç çamaşırı koymak. İdrar kaçırma bazen günlük hayatınıza böyle yerleşir.
+Bir kahkaha sırasında birkaç damla kaçırmak, yürüyüşe çıkmadan önce yol üstündeki tuvaletleri düşünmek, çantaya yedek iç çamaşırı koymak. İdrar kaçırma günlük hayata çoğu zaman böyle, sessizce yerleşir.
 
-Utanmanız anlaşılır. Ama bu şikâyeti anlatabilmek, sağlık görüşmesinin doğal bir parçasıdır. Belirtileriniz yürüyüşünüzü, uykunuzu ya da sosyal hayatınızı etkiliyorsa bunlar değerlendirmede dikkate alınır; kaçırdığınız miktarın az olması, yaşadığınız güçlüğü önemsiz kılmaz.
+Utanmanız anlaşılır. Ama bu şikâyeti anlatmak, sağlık görüşmesinin doğal bir parçasıdır. Kaçırdığınız miktar az olabilir; yürüyüşünüzü, uykunuzu ya da sosyal hayatınızı etkiliyorsa yaşadığınız güçlük yine önemlidir.
 
-Bu yazıda önce kaçırmanın türlerini ayıralım, sonra menopozun rolünü ve seçenekleri konuşalım. İdrar kaçırmanın tıbbi adı üriner inkontinanstır. Nedenini anlamak için belirtileriniz ve sağlık geçmişiniz birlikte değerlendirilir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a>
+İdrar kaçırmanın tıbbi adı üriner inkontinanstır. Nedenini anlamak için belirtilerinizi ve sağlık geçmişinizi birlikte ele almak gerekir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a>
 
 <span id="bu-değişiklik-neden-menopozla-birlikte-geliyor"></span>
 
 ## Menopozun Etkisi ve Diğer Nedenler
 
-Şikâyetiniz menopoz döneminde başlamış olabilir. Yine de zamanlaması, nedenini tek başına açıklamaz.
+Şikâyetiniz menopoz döneminde başlamış olabilir. Yine de zamanlama, nedeni tek başına açıklamaz.
 
-Pelvik taban, leğen kemiğinin alt bölümündeki kas ve bağ dokusu ağıdır. Mesane, rahim ve bağırsakların desteğinde; idrarın tutulmasında ve boşaltılmasında rol oynar. Doğumlar, yaşla değişen dokular ve bu bölgeye binen yükler işlevini etkileyebilir. Kabızlık, fazla kilo ve bazı hastalıklar da idrar kontrolündeki değişime katkıda bulunabilir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a>
+Pelvik taban, leğen kemiğinin alt bölümündeki kas ve bağ dokusu ağıdır. Mesaneyi, rahmi ve bağırsakları alttan destekler; idrarı tutmada ve boşaltmada rol oynar. Doğumlar, yaşla değişen dokular ve yıllar içinde bu bölgeye binen yük işlevini etkileyebilir. Kabızlık, fazla kilo ve bazı hastalıklar da idrar kontrolünü zorlaştırabilir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a>
 
-Menopozla birlikte azalan östrojen, özellikle vajina ve idrar yolu çevresindeki dokularda değişikliklere yol açabilir. Kuruluk, yanma ve bazı idrar yakınmaları birlikte görülebilir. Bunlar menopozun genitoüriner sendromu adı altında değerlendirilir. Ancak her idrar kaçırma bu sendroma bağlı değildir; enfeksiyon gibi farklı nedenler de araştırılır. <a href="#kaynak-2" aria-label="Kaynak 2">[2]</a> <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+Menopozla azalan östrojen, özellikle vajina ve idrar yolu çevresindeki dokuları değiştirebilir. Kuruluk, yanma ve bazı idrar yakınmaları bir arada görülebilir; buna menopozun genitoüriner sendromu denir. Ancak her idrar kaçırma bu sendromdan kaynaklanmaz. Enfeksiyon gibi başka nedenler de araştırılır. <a href="#kaynak-2" aria-label="Kaynak 2">[2]</a> <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
-Bu yüzden “menopozdandır” deyip geçmeden, kaçırmanın nasıl ve ne zaman olduğunu sorarım. Yanıtınız, değerlendirmeyi hangi yönde sürdüreceğimizi anlamamıza yardımcı olur.
+Bu yüzden ilk sorum, kaçırmanın nasıl ve ne zaman olduğudur. Verdiğiniz yanıt, değerlendirmenin yönünü gösterir.
 
 <span id="vücudunuzda-arka-planda-ne-oluyor"></span>
 
 ## Kaçırmanın Türünü Ayırmak
 
-Öksürürken kaçırmakla tuvalete yetişememek size benzer bir kontrol kaybı yaşatabilir. Tedaviyi konuşurken bu ayrımı yapmak gerekir.
+Öksürürken kaçırmak ile tuvalete yetişememek size aynı kontrol kaybını yaşatabilir. Tedavide ise farklı adımlarla başlanabilir.
 
-**Stres tipi idrar kaçırma:** Öksürme, hapşırma, gülme veya egzersizle karın içi basıncı arttığında kaçırma olur. Buradaki “stres”, duygusal gerginliği değil, fiziksel basıncı anlatır.
+- **Stres tipi idrar kaçırma:** Öksürme, hapşırma, gülme veya egzersizle karın içi basınç arttığında kaçırma olur. Buradaki “stres” duygusal gerginliği değil, fiziksel basıncı anlatır.
+- **Sıkışma tipi idrar kaçırma:** Ani ve güçlü bir idrar yapma isteğinin ardından, tuvalete yetişmeden kaçırma yaşanır. Sık idrara çıkma da eşlik edebilir.
+- **Karışık tip idrar kaçırma:** İki belirti bir aradadır.
 
-**Sıkışma tipi idrar kaçırma:** Ani ve güçlü bir idrar yapma isteğinin ardından, tuvalete yetişmeden kaçırma yaşanır. Sık idrara çıkma da eşlik edebilir.
-
-**Karışık tip idrar kaçırma:** Her iki belirti bir aradadır. Sizi daha çok zorlayan bileşen, planın önceliğini etkiler. Bunlar başlıca türlerdir; belirtilerinizi yalnızca bu üç tanımdan birine uydurmaya çalışmanız gerekmez. Tanı, görüşme ve muayeneyle netleşir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a> <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+Sizi en çok zorlayan bileşen, planın nereden başlayacağını etkiler. Belirtilerinizi bu üç tanımdan birine uydurmaya çalışmanız gerekmez; tür, görüşme ve muayeneyle netleşir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a> <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
 <span id="bilim-ne-söylüyor-nerede-duruyor"></span>
 
 ## Pelvik Taban ve Mesane Eğitiminin Yeri
 
-Egzersiz önerildiğinde, neyi nasıl çalıştıracağınızı bilmeniz gerekir. Pelvik taban kas eğitimi de doğru tekniği öğrenmekle başlar.
+Kas eğitimi, adının düşündürdüğü kadar basit değildir. Doğru kası bulmakla başlar.
 
-Kegel adıyla bildiğiniz egzersizler, pelvik taban kaslarını kasmayı ve ardından gevşetmeyi içerir. Karın veya kalça kaslarını sıkmak aynı işi yapmaz. Bu alanda eğitimli bir fizyoterapist, kasları doğru kullanıp kullanmadığınızı değerlendirebilir ve programı size uyarlayabilir. <a href="#kaynak-4" aria-label="Kaynak 4">[4]</a>
+Kegel adıyla bildiğiniz egzersizler, pelvik taban kaslarını kasıp ardından gevşetmeye dayanır. Karnı ya da kalçayı sıkmak aynı işi görmez. Bu alanda eğitimli bir fizyoterapist, kasları doğru kullanıp kullanmadığınızı değerlendirebilir ve programı size göre ayarlayabilir. <a href="#kaynak-4" aria-label="Kaynak 4">[4]</a>
 
-Pelvik taban kas eğitimi, stres tipi kaçırmada yardımcı olabilir. Bir sistematik derlemede, tedavi sonunda kadınların kaçırmanın tamamen düzeldiğini bildirmesine ilişkin kanıt güçlü bulunmuştur <span data-article-evidence="5"></span>. Kaçırmanın düzelmesi veya azalması birlikte değerlendirildiğinde ise kanıt orta düzeydedir <span data-article-evidence="3"></span>. Bu araştırmalar yalnızca menopoz dönemindeki kadınları kapsamamaktadır. <a href="#kaynak-5" aria-label="Kaynak 5">[5]</a>
+Kanıtın en güçlü olduğu yer stres tipi kaçırmadır. Bir sistematik derlemede, stres tipi kaçırması olan kadınların kas eğitimi sonunda kaçırmanın tamamen geçtiğini bildirmesine ilişkin kanıt güçlü bulundu <span data-article-evidence="5"></span>. Düzelme ya da azalma birlikte ele alındığında kanıt orta düzeydeydi <span data-article-evidence="3"></span>. Derlemedeki kadınların hepsi menopoz döneminde değildi. <a href="#kaynak-5" aria-label="Kaynak 5">[5]</a>
 
-Stres veya karışık tipte, gözetim altında en az üç aylık kas eğitimi ilk seçenekler arasındadır. Düzenli uygulama ve doğru teknik önemlidir; üçüncü ayda herkesin kaçırmasının bitmesi beklenmez. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+Stres veya karışık tipte, gözetim altında en az üç aylık kas eğitimi ilk seçenekler arasındadır. Düzen ve doğru teknik burada önemlidir. Üçüncü ayın sonunda herkesin kaçırmasının bitmesi beklenmez. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
-Ani sıkışma ön plandaysa mesane eğitimi de gündeme gelir. Tuvalete gitme aralıklarını, belirtilerinize uygun biçimde kademeli düzenlemeyi içerir. Kılavuzlarda sıkışma veya karışık tip için en az altı haftalık bir program önerilir. İzlemde yalnızca kaçırma sayısına değil, günlük hayatınızda neyin değiştiğine de bakılır. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+Ani sıkışma öndeyse mesane eğitimi gündeme gelir. Amaç, tuvalete gitme aralıklarını belirtilerinize uygun biçimde, adım adım uzatmaktır. Kılavuzlar sıkışma veya karışık tip için en az altı haftalık bir program önerir. İzlemde yalnızca kaçırma sayısına değil, günlük hayatınızda neyin değiştiğine de bakılır. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
 <span id="türkiyede-bu-konuya-nasıl-yaklaşılıyor"></span>
 
 ## Günlük Alışkanlıklar ve Lokal Östrojen
 
-Kaçırmayı azaltmak için su içmekten kaçınıyor olabilirsiniz. Sıvı alışkanlığınızı, kafeini ve kabızlığı birlikte gözden geçirmek daha uygun bir başlangıçtır.
+Kaçırmamak için su içmeyi azaltmış olabilirsiniz. Oysa sıvıyı, kafeini ve kabızlığı birlikte gözden geçirmek daha iyi bir başlangıçtır.
 
-Kafeini azaltmak bazı mesane yakınmalarında yardımcı olabilir. Sıvının gereğinden az veya fazla alınması, kabızlık ve fazla kilo da planın parçası olarak değerlendirilir. Herkese aynı miktarda su veya aynı egzersiz listesi verilmez; eşlik eden hastalıklarınız ve günlük koşullarınız dikkate alınır. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-6" aria-label="Kaynak 6">[6]</a>
+Kafeini azaltmak bazı mesane yakınmalarına iyi gelebilir. Sıvıyı gereğinden az ya da fazla almak, kabızlık ve fazla kilo da plana dahil edilir. Herkese aynı miktarda su ya da aynı egzersiz listesi verilmez; eşlik eden hastalıklarınız ve gündelik koşullarınız hesaba katılır. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-6" aria-label="Kaynak 6">[6]</a>
 
-Kuruluk ve yanma gibi menopoza bağlı yakınmalar da varsa, düşük doz vajinal östrojen ayrıca konuşulabilir. Etkisi ağırlıklı olarak uygulandığı bölgededir; sistemik hormon tedavisiyle aynı kullanım değildir. Kana geçen miktar düşüktür. Uygunluğu sağlık geçmişinizle birlikte değerlendirilir; özellikle meme kanseri öyküsünde karar, kullanılan tedaviler de dikkate alınarak ilgili hekimlerle birlikte verilir. <a href="#kaynak-2" aria-label="Kaynak 2">[2]</a>
+Kuruluk ve yanma gibi menopoza bağlı yakınmalar da varsa düşük doz vajinal östrojen ayrıca konuşulabilir. Etkisi büyük ölçüde uygulandığı bölgededir ve kana geçen miktar düşüktür; bu yüzden sistemik hormon tedavisiyle aynı şey sayılmaz. Uygun olup olmadığına sağlık geçmişinize bakılarak karar verilir. Meme kanseri öyküsü varsa karar, kullanılan tedaviler de dikkate alınarak ilgili hekimlerle birlikte verilir. <a href="#kaynak-2" aria-label="Kaynak 2">[2]</a>
 
-Lokal östrojen her tür kaçırmanın ortak çözümü değildir. Sıkışma ve menopoza bağlı vajinal-idrar yolu belirtileri birlikte olduğunda yeri olabilir. Sistemik hormon tedavisi ise idrar kaçırmayı tedavi etmek amacıyla önerilmez. İlk adımlar yeterli gelmezse kaçırmanın türüne göre ilaç veya cerrahi seçenekler ayrıca değerlendirilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-6" aria-label="Kaynak 6">[6]</a>
+Lokal östrojen her kaçırmanın ortak çözümü değildir. Yeri, sıkışma yakınması ile menopoza bağlı vajinal ve idrar yolu belirtileri birlikte olduğunda öne çıkar. Sistemik hormon tedavisi ise idrar kaçırmayı tedavi etmek için önerilmez. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-6" aria-label="Kaynak 6">[6]</a>
 
 ## Cerrahi ve Cihaz Uygulamaları
 
-Muayene odasında sık duyduğum sorulardan biri şu: "Lazerle bu iş çözülür mü?" Kısa yanıt: kanıt henüz bu kadar güçlü değil.
+İlk adımlar yetmediğinde seçenekler bitmez. Ama her yöntemin arkasında aynı güçte kanıt yoktur.
 
-Stres tipinde kas eğitimi ve gerekli düzenlemeler yeterli gelmezse cerrahi seçenekler, örneğin orta üretral askı ameliyatları, yarar ve riskleriyle birlikte konuşulur. Karar; kaçırmanın türüne, eşlik eden hastalıklara, doğum planına ve beklentilerinize göre verilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+Kaçırmanın türüne göre ilaç ya da cerrahi seçenekler konuşulabilir. Stres tipinde kas eğitimi ve gerekli düzenlemeler yeterli gelmezse, örneğin orta üretral askı ameliyatları yarar ve riskleriyle birlikte ele alınır. Karar; kaçırmanın türüne, eşlik eden hastalıklara, doğum planına ve beklentilerinize göre verilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-6" aria-label="Kaynak 6">[6]</a>
 
-Vajinal lazer ve radyofrekans cihazları ise reklamlarda sık karşınıza çıkar. Sahte uygulamalı (sham) kontrollü çalışmaların 2026 tarihli bir derlemesinde stres tipi kaçırmada yarar küçük ve kısa süreli bulundu. Radyofrekans için kanıt yetersiz kaldı; bazı kadınlarda hiç fayda görülmemesi de olasıydı <span data-article-evidence="2"></span>. Bu yüzden cihaza karar vermeden önce kas eğitimi denenmiş mi, türünüz netleşmiş mi, lokal östrojen konuşulmuş mu diye bakmak yerinde olur. <a href="#kaynak-9" aria-label="Kaynak 9">[9]</a>
+Vajinal lazer ve radyofrekans uygulamaları reklamlarda sık karşınıza çıkabilir. Sahte uygulamalı (sham) kontrollü çalışmaları bir araya getiren 2026 tarihli bir derlemede, stres tipi kaçırmadaki yarar küçük ve kısa süreliydi <span data-article-evidence="2"></span>. Radyofrekans için kanıt yetersiz kaldı; bazı kadınlarda hiç fayda görülmemesi de olasıydı. <a href="#kaynak-9" aria-label="Kaynak 9">[9]</a>
+
+Bir cihaza karar vermeden önce üç şeye bakmak yerinde olur. Kas eğitimi denendi mi? Kaçırmanın türü netleşti mi? Lokal östrojen konuşuldu mu?
 
 <span id="ne-zaman-bir-uzmana-danışmak-anlamlı-olabilir"></span>
 
 ## Değerlendirmeyi Ertelememek Gereken Durumlar
 
-Yürüyüşü yarıda kesiyor, egzersizden kaçınıyor veya sürekli koruyucu ürün kullanıyorsanız şikâyetiniz konuşulmaya değerdir. Destek almak için daha fazla kaçırmayı beklemeniz gerekmez.
+Yürüyüşü yarıda kesiyor, egzersizden kaçınıyor ya da sürekli koruyucu ped kullanıyorsanız bu konuşulmaya değer. Destek almak için kaçırmanın artmasını beklemeniz gerekmez.
 
-Kadın hastalıkları ve doğum veya üroloji uzmanı değerlendirme yapabilir; gerektiğinde ürojinekoloji ve pelvik taban fizyoterapisi desteği planlanır. İlk görüşmede belirtilerin ne zaman başladığı, hangi durumlarda olduğu ve kullandığınız ilaçlar konuşulur. İdrar testi ve muayene, enfeksiyon veya eşlik eden sorunları ayırt etmeye yardımcı olabilir. <a href="#kaynak-7" aria-label="Kaynak 7">[7]</a>
+Kadın hastalıkları ve doğum ya da üroloji uzmanı bu değerlendirmeyi yapabilir; gerekirse ürojinekoloji ve pelvik taban fizyoterapisi desteği eklenir. İlk görüşmede şikâyetin ne zaman başladığı, hangi durumlarda olduğu ve kullandığınız ilaçlar konuşulur. İdrar testi ve muayene, enfeksiyonu ya da eşlik eden başka bir sorunu ayırt etmeye yardımcı olabilir. <a href="#kaynak-7" aria-label="Kaynak 7">[7]</a>
 
-**İdrarda kan görürseniz, idrar yapamıyorsanız ya da ateş ve yan ağrısıyla birlikte idrar yakınmanız varsa gecikmeden tıbbi değerlendirme alın.** Yanma, ağrı veya yakınmaların belirgin değişmesi de değerlendirilmelidir; bunları menopozla açıklayıp geçiştirmeyin. Vajinada dolgunluk veya sarkma hissi, bel ya da bacaklarda yeni uyuşma ve güçsüzlükle birlikte idrar tutamama da bekletilmeden değerlendirilmelidir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a> <a href="#kaynak-8" aria-label="Kaynak 8">[8]</a>
+**Şu durumlarda gecikmeden tıbbi değerlendirme alın:** idrarda kan görmek, idrar yapamamak ya da ateş veya yan ağrısıyla birlikte idrar yakınması. Vajinada dolgunluk veya sarkma hissi, bel ya da bacaklarda yeni başlayan uyuşma ve güçsüzlükle birlikte idrar tutamama da bekletilmemelidir. Yanma, ağrı veya yakınmalarınızın belirgin biçimde değişmesi de değerlendirilmelidir; bunları menopozla açıklayıp geçiştirmeyin. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a> <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-8" aria-label="Kaynak 8">[8]</a>
 
-Görüşmeye hazırlanırken kaçırmanın ne zaman olduğunu ve sizi nasıl etkilediğini not edebilirsiniz. Hekiminize şu soruları yöneltin: “Kaçırmam hangi tipe uyuyor?”, “İlk adımın faydasını nasıl takip edeceğiz?”, “Yeterli gelmezse hangi seçenekleri konuşacağız?”
+Görüşmeden önce birkaç gün boyunca kaçırmanın ne zaman olduğunu ve sizi nasıl etkilediğini not etmek işinizi kolaylaştırır; buna mesane günlüğü denir. <a href="#kaynak-7" aria-label="Kaynak 7">[7]</a> Hekiminize şunları sorabilirsiniz:
+
+- “Kaçırmam hangi tipe uyuyor?”
+- “İlk adımın faydasını nasıl takip edeceğiz?”
+- “Yeterli gelmezse hangi seçenekleri konuşacağız?”
 
 ## Sessiz Kalmak Zorunda Değilsiniz
 
-İdrar kaçırmayı konuşmak, değerlendirmeye başlamak için yeterlidir. İlk görüşmede her seçeneği kararlaştırmanız gerekmez.
+İdrar kaçırmayı dile getirmek, değerlendirmeyi başlatmak için yeterlidir. İlk görüşmede her seçeneğe karar vermeniz gerekmez.
 
-İzlemde, seçilen yöntemin size ne kazandırdığını ve hangi yakınmaların sürdüğünü konuşabilirsiniz. Plan, bu yanıta göre yeniden değerlendirilebilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+İzlemde, seçilen yöntemin size ne kazandırdığını ve hangi yakınmaların sürdüğünü konuşursunuz. Plan bu yanıta göre yeniden düzenlenebilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
 ## Kaynaklar ve Kanıtın Sınırları
 
