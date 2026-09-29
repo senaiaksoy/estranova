@@ -97,7 +97,7 @@ Kaçırmanın türüne göre ilaç ya da cerrahi seçenekler konuşulabilir. Str
 
 Vajinal lazer ve radyofrekans uygulamaları reklamlarda sık karşınıza çıkabilir. Sahte uygulamalı (sham) kontrollü çalışmaları bir araya getiren 2026 tarihli bir derlemede, stres tipi kaçırmadaki yarar küçük ve kısa süreliydi <span data-article-evidence="2"></span>. Radyofrekans için kanıt yetersiz kaldı; bazı kadınlarda hiç fayda görülmemesi de olasıydı. <a href="#kaynak-9" aria-label="Kaynak 9">[9]</a>
 
-Lazer veya radyofrekans sorulduğunda önce kaçırmanın tipini ve şiddetini belirlerim. Lazeri kalıcı bir çözüm olarak anlatmam; radyofrekans için de aynı sonucu veya süreyi varsaymam. İki yöntemde de uzun dönem kanıtın sınırlı olduğunu hastayla açıkça konuşurum.
+Lazer veya radyofrekans sorulduğunda önce kaçırmanın tipini ve şiddetini belirlerim. Hafif ve orta derecede stres tipi kaçırması olan bazı hastalarımda vajinal lazerle iyi sonuçlar gördüm; yine de tek tek gözlemler araştırma kanıtının yerine geçmez. Lazeri kalıcı bir çözüm olarak anlatmam; radyofrekans için de aynı sonucu veya süreyi varsaymam. İki yöntemde de uzun dönem kanıtın sınırlı olduğunu hastayla açıkça konuşurum.
 
 Bir cihaza karar vermeden önce üç şeye bakmak yerinde olur. Kas eğitimi denendi mi? Kaçırmanın türü netleşti mi? Lokal östrojen konuşuldu mu?
 

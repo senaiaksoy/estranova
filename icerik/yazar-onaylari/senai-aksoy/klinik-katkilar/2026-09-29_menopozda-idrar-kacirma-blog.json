@@ -126,10 +126,15 @@
       "targetSection": "Cerrahi ve Cihaz Uygulamaları",
       "answeredAt": "2026-09-29",
       "answer": "Önce idrar kaçırmanın tipini ve şiddetini belirlerim. Hafif ve orta derecede stres tipi idrar kaçırması olan bazı hastalarımda vajinal lazerle iyi sonuçlar gördüm; ancak bunu kalıcı bir çözüm olarak anlatmam. Benim gözlemimde etki çoğu zaman yaklaşık 1–1,5 yıl sürüyor, kişiden kişiye değişebiliyor. Radyofrekans için aynı sonucu veya süreyi varsaymam; her iki yöntemde de uzun dönem kanıtların sınırlı olduğunu hastayla açıkça konuşurum.",
-      "localEditedText": "Lazer veya radyofrekans sorulduğunda önce kaçırmanın tipini ve şiddetini belirlerim. Lazeri kalıcı bir çözüm olarak anlatmam; radyofrekans için de aynı sonucu veya süreyi varsaymam. İki yöntemde de uzun dönem kanıtın sınırlı olduğunu hastayla açıkça konuşurum.",
-      "heldBack": "'Bazı hastalarımda iyi sonuçlar gördüm' ve '1–1,5 yıl' gözlemi, kaynak 9 (etki küçük ve kısa süreli; tahmin aralığı faydasızlığı içeriyor) ve profil kuralı (lazer/RF'de umut etiketi yasak; kaynaksız sayı yok) ile gerilim nedeniyle hekim kararına bırakıldı.",
-      "status": "Kısmen gövdeye işlendi; tutulan kısım hekim kararı bekliyor",
-      "approvedAt": null
+      "localEditedText": "Lazer veya radyofrekans sorulduğunda önce kaçırmanın tipini ve şiddetini belirlerim. Hafif ve orta derecede stres tipi kaçırması olan bazı hastalarımda vajinal lazerle iyi sonuçlar gördüm; yine de tek tek gözlemler araştırma kanıtının yerine geçmez. Lazeri kalıcı bir çözüm olarak anlatmam; radyofrekans için de aynı sonucu veya süreyi varsaymam. İki yöntemde de uzun dönem kanıtın sınırlı olduğunu hastayla açıkça konuşurum.",
+      "heldBack": "Yalnızca '1–1,5 yıl' süre gözlemi eklenmedi (kaynaksız sayı; kaynak 9 ile gerilim).",
+      "status": "Gövdeye işlendi (hekim seçimi: seçenek 2); süre gözlemi dışarıda",
+      "approvedAt": null,
+      "decision": {
+        "date": "2026-09-29",
+        "choice": "Seçenek 2: 'bazı hastalarımda iyi sonuç' gözlemi, tek tek gözlemlerin kanıt yerine geçmediği notuyla eklensin",
+        "source": "Kullanıcının bu sohbetteki doğrudan yanıtı"
+      }
     }
   ]
 }
