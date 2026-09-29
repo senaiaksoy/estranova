@@ -777,7 +777,17 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Uyku günlüğü tutmak gerçekten işe yarar mı?',
       answer:
-        'Evet, özellikle sorunun ritmini görmek için çok işe yarar. Yatma-kalkma saatleri, gece uyanma sayısı, alkol-kafein, egzersiz ve sıcak basması notları tabloyu daha okunur hale getirir.',
+        'Birçok kadın için sorunun ritmini görmeyi kolaylaştırır. Yatma-kalkma saatleri, gece uyanma sayısı, alkol-kafein, egzersiz ve sıcak basması notları tabloyu daha okunur hale getirir; iki hafta tutup hekim görüşmesine götürmek yeterli bir başlangıçtır.',
+    },
+    {
+      question: 'CBT-I nedir, uykusuzlukta neden gündeme geliyor?',
+      answer:
+        'CBT-I, uykusuzluk için uyarlanmış bilişsel davranışçı terapidir; uyku düzenini ve uykuyla ilgili düşünceleri hedefleyen yapılandırılmış bir programdır. Menopozdaki kadınlarda yapılan randomize çalışmaları birleştiren bir meta-analizde uyku kalitesini ve uykusuzluk şiddetini iyileştirdiği görülmüştür; yüz yüze ve uzaktan uygulamada benzer sonuçlar bildirilmiştir. Kimin için uygun olduğuna hekiminizle birlikte karar verilir.',
+    },
+    {
+      question: 'Sıcak basması gece uykumu bölüyorsa hormon tedavisi (HRT) seçenekler arasında mı?',
+      answer:
+        'Sıcak basmasının uykuyu bölmede baskın olduğu kadınlarda hormon tedavisi hekimle tartışılabilecek seçeneklerden biridir; hormon dışı ilaç seçenekleri de vardır. Karar kişisel sağlık öyküsüne, hormon tedavisini kullanmanıza engel olabilecek durumlara ve önceliklerinize göre verilir. Bu yazı bireysel bir tedavi önerisi değildir; kararı hekiminizle birlikte vermelisiniz.',
     },
   ],
   '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/': [
