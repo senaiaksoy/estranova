@@ -297,7 +297,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-09-29',
-    note: 'Prelaunch envanter onayı 2026-05-04. 2026-09-29: humanize revizyonu (gövde, 3 gerçek SSS yanıtı, kanıt-kapsam düzeltmeleri, Bilimsel Editör Notu) KC editör/yazar Dr. Senai Aksoy tarafından onaylandı; commit ve push yetkisi verildi. Dr. Alper Mumcu tıbbi incelemesi KC beyanıyla teyit edildi (yazılı not kayıtta yok). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-29_cinsellikte-agri-menopoz.json.',
+    note: 'Prelaunch envanter onayı 2026-05-04. 2026-09-29: humanize revizyonu (gövde, 3 gerçek SSS yanıtı, kanıt-kapsam düzeltmeleri, Bilimsel Editör Notu) KC editör/yazar Dr. Senai Aksoy tarafından onaylandı; commit ve push yetkisi verildi. Dr. Alper Mumcu tıbbi incelemesi KC beyanıyla teyit edildi (yazılı not kayıtta yok). Aynı gün ikinci tur (audit 2–7: 6 H2, tekrar temizliği, Evidence [5] 3–4, hekim gözlemi) Dr. Aksoy tarafından onaylandı; bu tur için ayrı Mumcu teyidi yok. Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-29_cinsellikte-agri-menopoz.json (revision2).',
   },
   {
     pathname: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',

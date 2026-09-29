@@ -102,5 +102,24 @@
     "status": "İncelendi — 2026-09-29",
     "source": "KC beyanı (bu sohbet): Mumcu bu yeni sürümü inceledi. Yazılı Mumcu notu kayıtta yok.",
     "scopeRequired": "Gövde, yeni SSS, kanıt-kapsam düzeltmeleri ve düzenlenen bilimsel editör notu"
+  },
+  "revision2": {
+    "date": "2026-09-29",
+    "trigger": "/makale-denetle geniş audit → /makale-humanize; Dr. Aksoy 2–7 arası maddeleri onayladı, hero ve görsel kırpmaları kapsam dışı bırakıldı (\"Hero kalsın\").",
+    "changes": [
+      "Alt-tipler bölümü 'Girişte Hissedilen Ağrı' ve 'Derinde Hissedilen Ağrı' olarak ikiye ayrıldı (H2 5 → 6); TOC güncellendi.",
+      "Tekrarlar temizlendi: 'kremle yetinmek yerine' ×2, değerlendirme lede'sinin SSS-2 ile birebir çakışması (SSS yanıtına dokunulmadı), alt-tipler bölümündeki mükerrer lokal östrojen cümlesi + Evidence 5, GSM/pH üçlü anlatımı.",
+      "Teselli anı ve okur çerçeveli somut ayrıntılar eklendi; muayene anekdotu uydurulmadı.",
+      "Kaynak-5 Evidence 4 → from 3 to 4 (tek RCT, vajinismus dışlanmış, menopoza özgü değil).",
+      "Bağlaç düzeltmesi (emilim cümlesi: 'ancak' → 'bu yüzden'); 'vajinal giriş derinleştikçe' → 'penetrasyon derinleştikçe'.",
+      "readingMinutes 8 → 5; şema ve manifest anahtar kelimeleri hizalandı, metinde geçmeyen 'vulvodini' çıkarıldı."
+    ],
+    "authorObservation": {
+      "verbatim": "acı korkusunun libido üzerine olumsuz etki ettiğini görüyorum. ama libido düşmesinin kuruluk veya acı oluşması üzerindeki etkisini tartamıyorum",
+      "editedForArticle": "Muayenede şunu görüyorum: Acı korkusu cinsel isteği de olumsuz etkiliyor. Tersini, yani isteğin azalmasının kuruluğa ya da ağrıya ne kadar katkı yaptığını ise aynı netlikte tartamıyorum.",
+      "targetSection": "tedavi-haritasi (korku paragrafı)"
+    },
+    "publicationApproval": "2026-09-29: Dr. Aksoy (yazar + KC editör) bu sohbette \"onaylıyorum, commit edip push et\" dedi; gözlem aynı mesajda verildi.",
+    "medicalReviewNote": "Dr. Alper Mumcu incelemesi önceki revizyon içindir; bu ikinci tur (Evidence düzeyi değişikliği ve yeni hekim gözlemi dahil) için ayrı Mumcu teyidi kayıtta yok."
   }
 }

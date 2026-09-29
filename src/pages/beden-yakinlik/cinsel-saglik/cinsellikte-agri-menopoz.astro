@@ -25,7 +25,8 @@ const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'Ağrıyı Konuşmak ve Adlandırmak' },
-  { id: 'alt-tipler', label: 'Ağrının Yeri ve Olası Nedenleri' },
+  { id: 'alt-tipler', label: 'Girişte Hissedilen Ağrı' },
+  { id: 'derin-agri', label: 'Derinde Hissedilen Ağrı' },
   { id: 'degerlendirme', label: 'Muayenede Adım Adım Değerlendirme' },
   { id: 'tedavi-haritasi', label: 'Nedene Göre Tedavi Seçenekleri' },
   { id: 'iletisim-sureci', label: 'Tedavi Sürecinde Partner ve Hekimle İletişim' },
@@ -49,7 +50,7 @@ const articleSchemas = buildArticleSchemas({
   pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik/',
-  keywords: ['cinsellikte ağrı', 'disparoni', 'dispareuni', 'vajinismus', 'GSM', 'menopoz', 'pelvik taban disfonksiyonu', 'vulvodini', 'lokal östrojen'],
+  keywords: ['cinsellikte ağrı', 'cinsel ilişkide ağrı', 'disparoni', 'dispareuni', 'menopoz', 'vajinal kuruluk', 'GSM', 'vajinismus', 'pelvik taban', 'lokal östrojen'],
   faqItems,
   siteUrl,
 });
@@ -78,7 +79,7 @@ const articleSchemas = buildArticleSchemas({
         articleType="clinical-guide"
         publishedDate="2 Mayıs 2026"
         lastUpdated="29 Eylül 2026"
-        readingMinutes={8}
+        readingMinutes={5}
         imageSrc="/images/library/editorial/by-vajinal-saglik.webp"
         imageAlt="Keten örtü üzerinde çiçek, su bardağı ve pamuklu dokular; menopozda cinsellikte ağrı yazısı için editoryal görsel"
       />
@@ -102,76 +103,78 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="isim-koymak">Ağrıyı Konuşmak ve Adlandırmak</h2>
         <p>
-          Cinsel ilişkide ağrıyı konuşmak sizi utandırabilir; yine de bu, tek başınıza çözmeniz gereken bir sorun değildir.
-          Hekiminizle ağrının nerede ve ne zaman başladığını konuşabilirsiniz.
+          Cinsel ilişkide ağrıyı dile getirmek sizi utandırabilir. Bu utanç çok anlaşılır, ama sessiz kalmanızı gerektirmez.
+        </p>
+        <p>
+          Belki ilişkiden sonra tuvalette bir yanma fark ediyorsunuz. Belki de bir süredir yakınlaşmayı sessizce erteliyorsunuz.
+          Önce şunu söyleyeyim: Bu konuyu açtığınızda karşınızdaki hekim şaşırmaz. Menopozda cinsel ilişkide ağrı,
+          jinekoloji muayenesinde konuşulan yakınmalardan biridir. Ağrının nerede ve ne zaman başladığını anlatmanız iyi bir başlangıçtır.
         </p>
         <p>
           Bu ağrının tıbbi adı <strong>disparoni</strong>. Her ağrılı ilişki aynı nedenden kaynaklanmaz.
-          Vajinal kuruluk, doku hassasiyeti ve pelvik taban kaslarındaki gerilim farklı değerlendirmeler gerektirebilir.
-          Nedeni ayırt etmek, yalnızca bir kremle yetinmek yerine size uygun seçenekleri konuşmayı sağlar.
+          Vajinal kuruluk, doku hassasiyeti ve pelvik taban kaslarındaki gerilim ayrı ayrı değerlendirilir.
+          Nedeni ayırt etmek, size uygun seçenekleri konuşmanın ilk adımıdır.
         </p>
 
-        <h2 id="alt-tipler">Ağrının Yeri ve Olası Nedenleri</h2>
+        <h2 id="alt-tipler">Girişte Hissedilen Ağrı</h2>
         <p>
-          Ağrıyı vajina girişinde mi, daha derinde mi hissediyorsunuz? Ne zaman ortaya çıktığı da olası nedenleri ayırt etmeye yardımcı olur.
+          Ağrı ilk temas anında, vajina girişinde başlıyorsa buna yüzeysel disparoni denir. Yeri, nedeni ararken ilk ipucudur.
         </p>
         <p>
-          <strong>Yüzeysel disparoni:</strong> Ağrının vajina girişinde veya dış genital bölgede hissedilmesidir. Menopozda
-          doku incelmesi, kuruluk ve idrar yakınmalarıyla seyreden genitoüriner sendrom (GSM)<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>,
-          cilt hassasiyetleri veya giriş bölgesindeki enfeksiyonlar olası nedenlerdir.
-        </p>
-        <p>
-          <strong>Derin disparoni:</strong> Ağrının alt karında, vajinal giriş derinleştikçe veya ilişki sonrasında
-          hissedilmesidir. Endometriozis (rahim içini döşeyen dokuya benzer dokunun rahim dışında bulunması), miyomlar,
-          adenomyozis (benzer dokunun rahmin kas tabakası içinde bulunması) ya da pelvik taban kaslarındaki
-          kronik gerginlik değerlendirmede ele alınan nedenler arasındadır.
-        </p>
-        <p>
-          <strong>Menopoz sonrası doku değişimleri:</strong> Östrojen seviyelerinin
-          düşmesiyle vajinal dokular incelir, elastikiyetini kaybedebilir ve ilişki sırasında doku hassasiyeti ile yüzeysel
-          çatlaklara yatkınlık artabilir. Bu aşamada lokal vajinal östrojen uygulamaları, kanıtlarla desteklenen tedavi
-          seçenekleri arasında yer alır
-          <Evidence level={5} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
-        </p>
-        <p>
-          <strong>Sonradan gelişen vajinismus:</strong> Vajinismus, giriş denemesinde pelvik taban kaslarının istemsizce kasılmasıyla ilişkilidir.
-          Menopoz sonrasında kuruluk ve ağrıya eşlik eden koruyucu kasılmalar da değerlendirmede ele alınır.
-        </p>
-        <p>
-          Östrojenin azalmasıyla vajinal pH daha yüksek,
-          yani daha alkali bir aralığa kayabilir<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
+          Östrojen seviyeleri düştükçe vajinal dokular incelir ve esnekliğini kaybedebilir. İlişki sırasında hassasiyet
+          ve küçük yüzeysel çatlaklara yatkınlık artabilir. Kuruluk, doku incelmesi ve idrar yakınmalarının birlikte görüldüğü
+          bu tabloya genitoüriner sendrom (GSM) denir<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
+          Aynı dönemde vajinal pH daha yüksek, yani daha alkali bir aralığa kayabilir<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
           Bu değişimler ağrıya ve idrar yakınmalarına eşlik edebilir; enfeksiyon şüphesinde ayrıca değerlendirme gerekir.
-          Ağrı beklentisine kasların istemsiz kasılması da eşlik edebilir. Doku değişimleriyle kas gerilimi bir aradaysa,
-          yalnızca lokal kremlerle yetinmek yerine bu nedenleri birlikte ele almak gerekir.
+        </p>
+        <p>
+          GSM tek olasılık değil. Cilt hassasiyetleri ve giriş bölgesindeki enfeksiyonlar da girişte ağrıya yol açabilir.
+        </p>
+        <p>
+          Ağrı beklentisi de işin içine girer. Canınızın yanacağını düşündükçe pelvik taban kasları istemsizce kasılabilir.
+          Giriş denemesinde görülen bu kasılma vajinismusla ilişkilidir; menopoz sonrasında kuruluk ve ağrıya eşlik eden
+          koruyucu kasılmalar da değerlendirmede ele alınır. Doku değişimi ile kas gerilimi bir aradaysa ikisini birlikte ele almak gerekir.
+        </p>
+
+        <h2 id="derin-agri">Derinde Hissedilen Ağrı</h2>
+        <p>
+          Ağrı içeride, penetrasyon derinleştikçe ya da ilişkiden sonra alt karında hissediliyorsa buna derin disparoni denir.
+        </p>
+        <p>
+          Burada bakılacak nedenler başkadır. Endometriozis (rahim içini döşeyen dokuya benzer dokunun rahim dışında bulunması),
+          miyomlar, adenomyozis (benzer dokunun rahmin kas tabakası içinde bulunması) ya da pelvik taban kaslarındaki
+          kronik gerginlik değerlendirmede ele alınan nedenler arasındadır. Kuruluk bu ağrıyı tek başına açıklamayabilir.
+          Bu yüzden değerlendirme de farklı ilerler.
         </p>
 
         <h2 id="degerlendirme">Muayenede Adım Adım Değerlendirme</h2>
         <p>
-          Ağrının vajina girişinde mi yoksa daha derinde mi olduğunu, ilişki dışında yanma veya hassasiyet bulunup bulunmadığını sorarım.
-          Her ağrıyı otomatik olarak kuruluğa bağlamam.
+          Muayene, sizin anlatımınızla başlar. Ağrının yeri, başlangıcı ve süresi hangi incelemenin gerekeceğini belirler.
         </p>
         <p>
-          <strong>Öykü:</strong> Görüşme öncesinde ağrının yerini, başlangıcını ve ne kadar süredir devam ettiğini not edebilirsiniz.
-          Kuruluk, idrar yakınmaları veya kanama varsa bunları da belirtmeniz değerlendirmeye yardımcı olur.
+          Görüşmeden önce birkaç not almanız işinizi kolaylaştırır: Ağrı nerede, ne zaman başladı, ne kadar sürüyor?
+          Kuruluk, idrar yakınması veya kanama varsa onları da ekleyin. İlişki dışında da yanma ya da hassasiyet
+          hissediyorsanız bunu mutlaka söyleyin; değerlendirme buna göre şekillenir.
         </p>
         <p>
-          <strong>Kademeli fizik muayene:</strong> Kendinizi güvende ve rahat hissedebilmeniz için muayenenin kademeli ilerlemesi önemlidir.
-          Dış genital bölgede dokunun incelmesi, cilt değişiklikleri ve küçük çatlaklar incelenir.
-          Vajinal pH ölçümü değerlendirmede kullanılabilir. Derin ağrı varsa, ultrasonografiyle pelvisteki organlar değerlendirilebilir.
+          Muayene acele etmeden, adım adım ilerler. Kendinizi güvende ve rahat hissetmeniz bunun için önemlidir;
+          rahatsız olduğunuzda ara verilmesini isteyebilirsiniz. Önce dış genital bölgeye bakılır: dokunun incelmesi,
+          cilt değişiklikleri ve küçük çatlaklar. Vajinal pH ölçümü yardımcı olabilir. Derin ağrı varsa ultrasonografiyle
+          pelvisteki organlar değerlendirilir.
         </p>
         <p>
-          <strong>Hedefe yönelik incelemeler:</strong> Belirtilere ve muayene bulgularına göre idrar tahlili veya derin ağrı için MR görüntüleme düşünülebilir.
-          Dış genital bölgede şüpheli bir doku değişikliği varsa biyopsi, yani doku örneği alınması gerekebilir.
+          Belirtilere ve bulgulara göre idrar tahlili ya da derin ağrı için MR görüntüleme istenebilir.
+          Dış genital bölgede şüpheli bir doku değişikliği görülürse biyopsi, yani küçük bir doku örneği alınır.
         </p>
 
         <h2 id="tedavi-haritasi">Nedene Göre Tedavi Seçenekleri</h2>
         <p>
-          Tedavi seçimi ağrının nedenine bağlıdır. Doku hassasiyeti, kas gerilimi ve ağrıya eşlik eden korku için birden fazla destek gerekebilir.
+          Tedavi, ağrının nedenine göre seçilir. Doku, kas ve korku bir aradaysa destekler de birlikte planlanır.
         </p>
         <p>
           <strong>Doku incelmesi ve kuruluk için:</strong> Menopoz sonrası doku incelmesine bağlı ağrıda,
           hekim kontrolünde uygulanan lokal vajinal östrojenler (krem, tablet veya halka) sık değerlendirilen tedavi seçeneklerinden
-          biridir <Evidence level={5} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>. Lokal uygulamalarda sistemik emilim genellikle düşüktür; ancak
+          biridir <Evidence level={5} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>. Lokal uygulamalarda sistemik emilim genellikle düşüktür; bu yüzden
           sistemik hormon tedavisiyle aynı değerlendirme ölçütleri kullanılmaz. Özellikle hormon-duyarlı
           meme kanseri öyküsü olan kadınlarda düşük doz lokal vajinal östrojen kullanımı, hormon dışı seçeneklere yanıt alınamadığında
           jinekoloji ve onkoloji ekiplerinin ortak değerlendirmesiyle planlanmalıdır<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
@@ -181,16 +184,18 @@ const articleSchemas = buildArticleSchemas({
           <strong>Kas gerilimi için:</strong> Pelvik taban kasları ağrıya katkıda bulunuyorsa, bu alanda uzmanlaşmış fizyoterapistlerin
           uyguladığı gevşeme egzersizleri ve elle uygulanan teknikler tedavi planına eklenebilir.
           Kas kaynaklı disparonide pelvik taban rehabilitasyonunu inceleyen bir çalışma yarar bildirmiştir
-          <Evidence level={4} /><sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
+          <Evidence from={3} to={4} /><sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
           Bu çalışma vajinismusu dışlamıştır ve menopoz sonrası kadınlara özgü bir araştırma değildir.
         </p>
         <p>
-          <strong>Ağrıya eşlik eden korku için:</strong> Ağrının uzun süre devam etmesiyle yerleşen korku-ağrı
-          döngülerini ele almak için bazı kişilerde cinsel terapi veya psikolojik destek sürece eklenebilir.
+          <strong>Ağrıya eşlik eden korku için:</strong> Ağrı uzun sürdükçe bir sonraki ilişkiden önce kaygı başlayabilir.
+          Kaygı kasları gerer, gerilen kaslar ağrıyı artırır. Muayenede şunu görüyorum: Acı korkusu cinsel isteği de olumsuz etkiliyor.
+          Tersini, yani isteğin azalmasının kuruluğa ya da ağrıya ne kadar katkı yaptığını ise aynı netlikte tartamıyorum.
+          Bu korku-ağrı döngüsünü ele almak için bazı kişilerde cinsel terapi veya psikolojik destek sürece eklenebilir.
         </p>
         <p>
           Derin ağrının altında endometriozis veya miyom gibi bir sorun varsa, bu nedene yönelik tıbbi ya da cerrahi seçenekler değerlendirilir.
-          Sizin için uygun plan belirtilerinizle muayene bulguları birlikte ele alınarak belirlenir.
+          Sizin için uygun plan, belirtilerinizle muayene bulguları birlikte ele alınarak belirlenir.
         </p>
 
         <h2 id="iletisim-sureci">Tedavi Sürecinde Partner ve Hekimle İletişim</h2>
@@ -198,8 +203,8 @@ const articleSchemas = buildArticleSchemas({
           Ağrı cinsel ilişkinizi de etkileyebilir. Partnerinizle ne hissettiğinizi konuşmak, bu dönemi birlikte anlamanıza yardımcı olabilir.
         </p>
         <p>
-          Tedavi süresince vajinal giriş içermeyen cinsel yakınlık yollarını konuşabilirsiniz.
-          Hekiminizle görüşürken de şu sorular size yol gösterebilir:
+          Bazen tek bir cümle yeter: "Şu an canım yanıyor, biraz yavaşlayalım." Tedavi süresince vajinal giriş içermeyen
+          cinsel yakınlık yollarını da konuşabilirsiniz. Hekiminizle görüşürken şu sorular size yol gösterebilir:
         </p>
         <ul>
           <li>Ağrının özellikleri hangi nedenleri düşündürüyor?</li>

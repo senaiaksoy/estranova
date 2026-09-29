@@ -1042,7 +1042,7 @@ export const staticArticles: StaticArticleEntry[] = [
     writerSlug: 'senai-aksoy',
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik/',
-    keywords: ['cinsellikte ağrı', 'cinsel ilişkide ağrı', 'disparoni', 'dispareuni', 'menopoz', 'mahrem bölge', 'vajinal kuruluk', 'hormon'],
+    keywords: ['cinsellikte ağrı', 'cinsel ilişkide ağrı', 'disparoni', 'dispareuni', 'menopoz', 'vajinal kuruluk', 'GSM', 'vajinismus', 'pelvik taban', 'lokal östrojen'],
   },
   {
     path: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
