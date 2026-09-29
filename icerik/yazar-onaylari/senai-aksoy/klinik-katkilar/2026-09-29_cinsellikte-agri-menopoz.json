@@ -121,5 +121,12 @@
     },
     "publicationApproval": "2026-09-29: Dr. Aksoy (yazar + KC editör) bu sohbette \"onaylıyorum, commit edip push et\" dedi; gözlem aynı mesajda verildi.",
     "medicalReviewNote": "Dr. Alper Mumcu ikinci turu (Evidence [5] 3–4 değişikliği ve yeni hekim gözlemi dahil) onayladı — 2026-09-29, KC beyanı: \"dr mumcu onayı tamam\". Yazılı Mumcu notu kayıtta yok."
+  },
+  "revision3": {
+    "date": "2026-09-29",
+    "commit": "2aab1be",
+    "scope": "Dil rötuşu: Kısa Klinik Yanıt yeniden yazıldı (disparoni terimi korundu); partner bölümünde terapötik cümle sadeleşti, \"mutlaka\" kaldırıldı; tedavi lede'si \"aynı kadında birden fazla neden\" biçimine çekildi. Yeni tıbbi iddia yok.",
+    "publicationApproval": "2026-09-29: Dr. Aksoy (yazar + KC editör) \"onaylıyorum, commit edip push et\".",
+    "medicalReviewNote": "Dr. Alper Mumcu yayındaki son hali (2aab1be; üçüncü tur dil rötuşu dahil) onayladı — 2026-09-29, KC beyanı: \"mumcu son hali de onayladı\". Yazılı Mumcu notu kayıtta yok."
   }
 }
