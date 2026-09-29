@@ -1,24 +1,42 @@
 {
   "writerSlug": "senai-aksoy",
   "pathname": "/zamansiz-yasam/kemik-sagligi-40-sonrasi/",
-  "answeredAt": null,
-  "source": "Humanize geçişi (2026-09-29) — sorular sohbette Dr. Aksoy'a yöneltildi",
-  "status": "Gerçek yanıt bekleniyor. Mevcut model yazımı SSS yayında kalıyor; hekim yanıtları gelmeden 'Dr. Aksoy'a sorular' bölümüne dönüştürülmeyecek.",
+  "answeredAt": "2026-09-29",
+  "source": "Dr. Aksoy'un bu sohbet içindeki doğrudan yanıtları (2026-09-29)",
+  "status": "Kısmi: 3 sorunun 2'si yanıtlandı. 3. yanıt bekleniyor. SSS dönüşümü 3/3 tamamlanana kadar mevcut SSS yerinde kalır; düzenlenmiş hâller Dr. Aksoy'a gösterilecek.",
   "revisionScope": "Gövde humanize edildi (ses, ritim, başlıklar, lede çeşitliliği), kaynak-iddia eşleşmeleri düzeltildi, tıbbi eksikler kaynaklı olarak tamamlandı. Bu kayıt yeni revizyonun tıbbi onayı değildir; Dr. Alper Mumcu incelemesi ve KC editör onayı ayrıca gereklidir.",
-  "bodyVoiceToConfirm": [
-    "Muayene odasında en sık duyduğum cümlelerden biri “Ben sadece biraz zayıfım, başka riskim yok” oluyor. (2026-05-02 onaylı sürümden geri alındı; hekim kendi gözlemi olarak teyit etmeli.)"
-  ],
   "publicationApproval": "Bu turda commit, push veya deploy yetkisi verilmedi.",
-  "faqConversionStatus": "0/3 gerçek yanıt alındı.",
+  "faqConversionStatus": "2/3 gerçek yanıt alındı; makale SSS'sine henüz işlenmedi (3. yanıt bekleniyor).",
   "faqQuestionsAsked": [
     "Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?",
     "DXA ölçümü herkese 40 yaşında gerekli midir?",
     "Kemik sağlığı için yürüyüş tek başına yeterli olur mu?"
   ],
   "faqQuestionsRemaining": [
-    "Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?",
-    "DXA ölçümü herkese 40 yaşında gerekli midir?",
     "Kemik sağlığı için yürüyüş tek başına yeterli olur mu?"
   ],
-  "faqResponses": []
+  "faqResponses": [
+    {
+      "question": "Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?",
+      "answer": "Çünkü kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.",
+      "editedForArticle": "Kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.",
+      "answeredAt": "2026-09-29",
+      "useApproval": "Dr. Aksoy'a düzenlenmiş hâli gösterilecek"
+    },
+    {
+      "question": "DXA ölçümü herkese 40 yaşında gerekli midir?",
+      "answer": "Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.",
+      "editedForArticle": "Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.",
+      "answeredAt": "2026-09-29",
+      "useApproval": "Dr. Aksoy'a düzenlenmiş hâli gösterilecek"
+    }
+  ],
+  "bodyVoiceConfirmed": [
+    {
+      "sentence": "Muayene odasında en sık duyduğum cümlelerden biri “Ben sadece biraz zayıfım, başka riskim yok” oluyor.",
+      "confirmedAt": "2026-09-29",
+      "note": "Dr. Aksoy kendi gözlemi olduğunu teyit etti."
+    }
+  ],
+  "pastedResidueNotes": "Yanıtlarla birlikte gelen 'bonehealthandosteoporosis.org' ve 'uspreventiveservicestaskforce.org' satırları yapıştırma kalıntısı sayıldı; metne ve kaynakçaya alınmadı. USPSTF zaten [4]. BHOF kaynağı doğrulanıp iddiayı desteklediği görülmeden eklenmeyecek."
 }
