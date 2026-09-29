@@ -250,8 +250,19 @@ class WriterAgent(PromptBackedAgent):
                     approved_sources = list(approved_sources) + [syn]
                     existing_ids.add(str(syn["id"]))
 
+        clinician = str(state.get("writer_category", "") or "").strip().lower() == "scientific"
+        citation_regime = (
+            "klinisyen: kanitli rejim. clinical-guide turunde secilmis Kaynaklar bolumu, iddiaya bagli "
+            "dipnot ve dogrulanmis dis baglanti kullanilabilir; baglanti ve kurulus adi yalnizca "
+            "Kaynaklar bolumunde. Anlati govdesinde otorite isimleri yigilmaz."
+            if clinician
+            else "yasit: dergi rejimi. Govdede kaynakca/Kaynaklar bolumu, dipnot, DOI, PMID, PubMed, "
+            "dergi-yil atfi, harici link ve kurulus adi YAZMA; yalnizca anonim yumusak referans kullan."
+        )
+
         user_payload = {
             "topic": topic,
+            "citation_regime": citation_regime,
             "audience": audience,
             "content_goal": content_goal,
             "risk_level": risk_level,

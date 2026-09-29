@@ -105,6 +105,7 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
   - YANLIS: "Sicak basmasi menopoz geciginin sik belirtilerindendir. Bu metin, sicak basmasinin nasil olustugunu sade bir dille acikar."
   - DOGRU: "Saatin gece ucu olmus. Boyunda yayilan o tanidik isi. Vucut bir sey soyluyor — peki tam olarak ne? Sicak basmasinin arkasindaki gercek mekanizma ve ne zaman uzmanla konusmanin anlamli oldugu."
 - **Estranova SEO — Linking / Atif rejimi (HARD, CLAUDE.md §4 — yazar grubuna gore):**
+  - Girdideki `citation_regime` alani hangi rejimin gecerli oldugunu belirtir (pipeline `--writer` bayragindan gelir); bos/eksikse yasit rejimi uygula.
   - **Yasit yazar ve Estranova Editorleri (dergi rejimi, VARSAYILAN):** Makale govdesinde harici URL link, `[aciklama](url)` markdown linki, PubMed/DOI/PMID, dergi-yil-yazar atfi, "Kaynaklar/Kaynakca" bolumu, dipnot ve kanit tablosu YAZMA. Bilimsel bilgiye atif gerekirse **isim vermeden**: "son donemde yapilan arastirmalar gosteriyor", "uzmanlar genellikle belirtiyor", "menopoz alaninda calisan dernekler oneriyor". Icerik bir saglik-magazin dergisi gibi akar; kanit izi gorunmez katmanda (`claim_trace`, brief, article-log) kalir.
   - **Klinisyen yazar (`category: 'scientific'`, kanitli rejim):** `clinical-guide` turunde secilmis Kaynaklar bolumu, iddiaya bagli dipnot ve dogrulanmis dis baglanti kullanilabilir (klinik rehberde zorunlu); baglanti/kurulus adi yalnizca bu bolumde. Anlati govdesine otorite isimleri yigilmaz; ust kuralda "yaşıt sohbeti" cumlesi klinisyene uygulanmaz.
 
