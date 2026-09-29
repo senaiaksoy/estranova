@@ -1,0 +1,40 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/",
+  "answeredAt": "2026-09-29",
+  "source": "Kullanıcının bu sohbet içindeki doğrudan yanıtı",
+  "targetSection": "sik-sorulanlar",
+  "answers": [
+    {
+      "no": 1,
+      "question": "Uyku günlüğü tutmak gerçekten işe yarar mı?",
+      "answer": "Evet, ama günlüğü bir sınav gibi tutmanızı istemem. Bir–iki hafta boyunca yatış saatinizi, gece uyanmalarınızı, sıcak basmasını ve ertesi gün nasıl hissettiğinizi kısaca yazmanız yeterli. Bu kayıt sorunun seyrini görmemize yardımcı olur; tek başına bir tedavi değildir."
+    },
+    {
+      "no": 2,
+      "question": "CBT-I nedir, uykusuzlukta neden gündeme geliyor?",
+      "answer": "CBT-I, uykusuzluk için geliştirilmiş yapılandırılmış bir bilişsel davranışçı terapidir. Uyku saatlerini ve yatakta geçirilen zamanı düzenlemeyi, uykuyla ilgili kaygıyı azaltmayı öğretir. Uykusuzluk sıklaşıp gündüz yaşamınızı etkiliyorsa, özellikle uzun süredir devam ediyorsa gündeme getiririm; yalnızca \"erken yatın\" demekten ibaret değildir."
+    },
+    {
+      "no": 3,
+      "question": "Sıcak basması gece uykumu bölüyorsa hormon tedavisi (HRT) seçenekler arasında mı?",
+      "answer": "Evet, gece terlemesi ve sıcak basması uykunuzu belirgin biçimde bölüyorsa hormon tedavisi seçeneklerden biridir. Kararı yaşınıza, menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm. Sıcak basması olmadan yalnızca uykusuzluk varsa, HRT'yi otomatik olarak uyku ilacı gibi önermem; önce uykusuzluğun nedenini değerlendiririm."
+    },
+    {
+      "no": 4,
+      "question": "Menopozda uykusuzluk yalnızca sıcak basmasına mı bağlıdır?",
+      "answer": "Hayır. Sıcak basması önemli bir neden olabilir, ama stres, ağrı, gece idrara kalkma, huzursuz bacak veya uyku apnesi de uykuyu bölebilir. Hastaya önce \"Sizi ne uyandırıyor?\" diye sorarım; her uyanmayı menopoza bağlamam."
+    },
+    {
+      "no": 5,
+      "question": "Gece sık uyanıp tekrar uyuyabiliyorsam yine de bunu önemsemeli miyim?",
+      "answer": "Gece kısa süre uyanıp tekrar uyumak tek başına hastalık belirtisi değildir. Benim için belirleyici olan bunun ne kadar sık olduğu ve sabah dinlenmiş kalkıp kalkmadığınız, gün içinde yorgunluk veya dikkat sorunu yaşayıp yaşamadığınızdır. Belirgin horlama ya da nefes durması anlatılıyorsa, tekrar uyuyabiliyor olsanız da ayrıca değerlendiririm."
+    }
+  ],
+  "editNote": "Yanıtlar anlamı değişmeden aktarıldı. Tek değişiklik: birinci yanıttaki \"örüntüsünü\" sözcüğü editorial-lexicon hard_ban listesinde olduğu için \"seyrini\" yapıldı. Yapıştırma sırasında gelen '::: :chatgpt-content-reference' satırları metne alınmadı. Düzenlenmiş hâl kullanıcıya gösterildi ve onaylandı.",
+  "status": "Yanıtlar makalenin SSS bloğuna işlendi (önceki model yazımı yanıtların yerine geçti).",
+  "approvedAt": "2026-09-29",
+  "approvalSource": "Kullanıcının bu sohbet içindeki doğrudan onayı",
+  "approvalMessage": "Evet, bu hâlleriyle işle",
+  "publicationApproval": "Yanıtların makalede kullanımı kullanıcı tarafından açıkça onaylandı."
+}
