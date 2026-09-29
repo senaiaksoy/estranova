@@ -116,3 +116,11 @@ Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi ince
 - anecdote_door: 10
 - signature_closing: 6
 - humor: 6 (Senai için "humor" değil "hocalık sıcaklığı" — kavramsal eşleştirme)
+
+## 2026-09-29 — Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı (blog revizyonu)
+
+- KC editör doğrudan yayın onayı: kullanıcının “commit push deploy” talebi.
+- Kullanıcı, makalenin tıbbi incelemesinin yapıldığını teyit etti; bu onay önceki inceleme kaydından ayrı, bugünkü kapsamlı audit düzeltmeleriyle birlikte okunmalıdır.
+- Dört SSS, Dr. Senai Aksoy'un 29 Eylül 2026 tarihli özgün yanıtlarından türetildi ve tek görünür SSS/FAQPage kaynağına taşındı.
+- Audit düzeltmeleri: kanıt düzeyleri sonuca göre ayrıldı, ateş/yan ağrısı için NIDDK kaynağı eklendi, altı eski bölüm kimliği korundu, tekrarlar azaltıldı, güncelleme tarihi/görsel ve klinik şablon yüzeyleri bağlandı.
+- Yayın yolu: `/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/`.

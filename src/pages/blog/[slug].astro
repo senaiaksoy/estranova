@@ -11,6 +11,9 @@ import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
 import ArticleSummary from '../../components/site/ArticleSummary.astro';
 import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
 import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import Evidence, { type EvidenceLevel } from '../../components/site/Evidence.astro';
 import { buildArticleSchemas } from '../../utils/article-schema';
 import type { Writer } from '../../data/writers';
 
@@ -27,7 +30,27 @@ interface Props {
 }
 
 const { post } = Astro.props as Props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const faqItems = post.data.faqItems ?? [];
+// Markdown markers keep evidence beside its claim while reusing the canonical component.
+const evidenceMarker = /<span data-article-evidence="([1-5])"><\/span>/g;
+const renderedHtml = post.rendered?.html;
+const bodyParts: Array<{ html: string; level?: undefined } | { html?: undefined; level: EvidenceLevel }> = [];
+if (renderedHtml?.includes('data-article-evidence')) {
+  let start = 0;
+  for (const match of renderedHtml.matchAll(evidenceMarker)) {
+    bodyParts.push({ html: renderedHtml.slice(start, match.index) });
+    bodyParts.push({ level: Number(match[1]) as EvidenceLevel });
+    start = match.index! + match[0].length;
+  }
+  bodyParts.push({ html: renderedHtml.slice(start) });
+}
+const tocEntries = post.data.summary && post.data.articleType === 'clinical-guide'
+  ? [
+      ...headings.filter((heading) => heading.depth === 2).map((heading) => ({ id: heading.slug, label: heading.text })),
+      ...(faqItems.length && post.data.faqId ? [{ id: post.data.faqId, label: post.data.faqTitle ?? 'Sorular' }] : []),
+    ]
+  : [];
 
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(
@@ -38,7 +61,6 @@ const siteUrl = (Astro.site ? Astro.site.toString() : 'https://estranova.com').r
 const pageUrl = `${siteUrl}/blog/${post.id}`;
 
 const writerSlug = post.data.writerSlug as Writer['slug'] | undefined;
-const faqItems = post.data.faqItems ?? [];
 
 const jsonLd = writerSlug
   ? buildArticleSchemas({
@@ -47,6 +69,8 @@ const jsonLd = writerSlug
       writerSlug,
       articleType: post.data.articleType,
       publishedDate: post.data.date,
+      modifiedDate: post.data.modifiedDate,
+      image: post.data.imageSrc,
       pathname: `/blog/${post.id}/`,
       faqItems,
       siteUrl,
@@ -67,12 +91,14 @@ const jsonLd = writerSlug
   description={post.data.description}
   canonical={pageUrl}
   ogType="article"
+  image={post.data.imageSrc}
   jsonLd={jsonLd}
 >
   <SiteNavbar currentPath="/blog/" />
 
   <main id="main-content" class="pt-24">
     <SubmenuArticleBody>
+      {tocEntries.length > 0 && <ArticleTOC slot="toc" entries={tocEntries} />}
       <a
         href="/blog/"
         class="inline-flex text-sm font-semibold text-primary border-b border-primary/30 pb-1 hover:border-primary mb-10"
@@ -101,6 +127,7 @@ const jsonLd = writerSlug
             authorSlug={writerSlug}
             articleType={post.data.articleType}
             publishedDate={publishedDate}
+            lastUpdated={post.data.modifiedDate ? formatDate(post.data.modifiedDate) : undefined}
             readingMinutes={5}
             imageSrc={post.data.imageSrc}
             imageAlt={post.data.imageAlt}
@@ -108,11 +135,36 @@ const jsonLd = writerSlug
         </div>
       )}
 
+      {post.data.summary && (
+        <ArticleSummary title={post.data.articleType === 'clinical-guide' ? 'Kısa Klinik Yanıt' : 'Kısa Özet'} class="mb-10">
+          <p>{post.data.summary}</p>
+        </ArticleSummary>
+      )}
+
       <ArticleProsePanel>
-        <Content />
+        {bodyParts.length > 0
+          ? bodyParts.map((part) => part.level !== undefined
+            ? <Evidence level={part.level} />
+            : <Fragment set:html={part.html} />)
+          : <Content />}
       </ArticleProsePanel>
 
-      {faqItems.length > 0 && <ArticleFAQ items={faqItems} class="mt-10" />}
+      {faqItems.length > 0 && (
+        <ArticleFAQ
+          items={faqItems}
+          title={post.data.faqTitle}
+          intro={post.data.faqIntro}
+          id={post.data.faqId}
+          class="mt-10"
+        />
+      )}
+      {post.data.relatedPaths?.length && <RelatedReadings paths={post.data.relatedPaths} class="mt-10" />}
+      {post.data.medicalEditorNote && (
+        <ArticleEditorNote class="mt-10"><p>{post.data.medicalEditorNote}</p></ArticleEditorNote>
+      )}
+      {post.data.disclaimer && (
+        <ArticleDisclaimer class="mt-10"><p>{post.data.disclaimer}</p></ArticleDisclaimer>
+      )}
     </SubmenuArticleBody>
   </main>
 
