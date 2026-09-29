@@ -114,7 +114,7 @@
 
 | # | Filtre |
 |---|---|
-| 1 | Inline harici URL gövdede YOK |
+| 1 | Inline harici URL gövdede YOK *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)* |
 | 2 | Uluslararası kuruluş/yayın adı YOK (NAMS/NICE/JAMA/Lancet/NEJM/WHO/CDC/FDA/Mayo/ACOG) — *"uzman dernekler / uluslararası kılavuzlar"* anonim yumuşatma |
 | 3 | Spesifik HRT marka / vajinal östrojen marka / yerel cihaz marka adı YOK |
 | 4 | **Kendi muayenehanesi yönlendirme YASAK** (Lotus Nişantaşı / Acıbadem Fulya / draksoyivf.com / tupbebek.com) — MUTLAK |
@@ -196,13 +196,13 @@
 - *"Bizim ekibimiz Türkiye'nin ilk ICSI..."* / *"30 yıllık deneyimim..."* — promosyonel başhekim vitrini gövdede
 - Tedavi reçete dili (*"şu marka şu doz şu sıklık"*)
 - Spesifik HRT / vajinal östrojen / yerel cihaz marka adı
-- Uluslararası kuruluş adı (NAMS / NICE / JAMA / WHO / ACOG) gövdede — anonim *"uzman dernekler"* yumuşaması
+- Uluslararası kuruluş adı (NAMS / NICE / JAMA / WHO / ACOG) gövdede — anonim *"uzman dernekler"* yumuşaması *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 - Mucize / zafer / kesin çözüm / *"en iyi"* dili
 - Korku dili (*"sessiz tehlike"*) / aciliyet (*"hemen başvurun"*)
 - IVF / tüp bebek promosyonel içerik
 - Yaşıt yazar pozu — *"bizim kuşağımız 40 sonrası..."* gibi (Senai erkek, kategori farklı)
 - Hashtag formatı / sosyal medya jargonu
-- Inline harici URL / markdown link gövdede
+- Inline harici URL / markdown link gövdede *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 - Spesifik oyun / sahne / klinik / hastane adı
 
 ---
@@ -259,7 +259,7 @@
 
 ### Yasak Filtreleri (5 madde, MUST-PASS)
 
-13. ☐ **Inline harici URL YOK** mu? Markdown link gövdede YOK?
+13. ☐ **Inline harici URL YOK** mu? Markdown link gövdede YOK? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 14. ☐ **Uluslararası kuruluş adı / spesifik marka / klinik adı / hekim adı** gövdede YOK mu? Senai'nin kendi adı imza dışında gövdeye sokulmadı mı?
 15. ☐ **Tıbbi otorite kibirli çıkışı** YOK mu? (*"Doçent olarak söylerim ki / Tıbben kesindir / Kliniğimde"*) **Yazar imzası Dr. öneksiz** ("Senai Aksoy") mü? **Tıbbi inceleyici imzası Doç. Dr. Senai Aksoy AYRI blok** olarak görünüyor mu (Bilimsel Editör Notu)?
 16. ☐ **Çift Rol KRİTİK** — Yakınlık bağını yazıya katma YOK?

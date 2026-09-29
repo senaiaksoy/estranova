@@ -104,6 +104,7 @@ Doktor adı **YASAK** (CLAUDE.md HARD CONSTRAINT). Anonim çerçeve **anılır**
 - hashtag formatı (#X tarzı)
 - akademik makale doğrudan alıntısı
 - uluslararası kuruluş/yayın adı (NAMS, NICE, JAMA, Lancet, NEJM, Mayo, ACOG, WHO, CDC, FDA, PubMed)
+- kaynakça / dipnot / DOI / PMID / dergi-yıl atfı (dergi rejimi — CLAUDE.md §4)
 - Türkiye-Batı kıyaslama hiyerarşisi
 
 ---

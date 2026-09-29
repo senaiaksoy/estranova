@@ -273,6 +273,7 @@ Gamze yazıları **kişisel zaman çapası** ile başlar:
 ### Yasak Filtreleri (5 madde, MUST-PASS)
 
 13. ☐ **Inline harici URL YOK** mu? Markdown link gövdede YOK?
+    ☐ **Atıf rejimi (dergi):** kaynakça/dipnot/PubMed/DOI/PMID/dergi-yıl atfı YOK mu? (CLAUDE.md §4)
 14. ☐ **Uluslararası kuruluş/yayın adı** ve **vakıf/dernek** gövdede YOK mu?
 15. ☐ **Spesifik restoran/marka/şirket/banka/gıda/takviye** adı YOK mu? **Aile soy markası** YOK mu? **Aile gerçek ismi** anonimleştirilmiş mi?
 16. ☐ **Spesifik HRT/ilaç/doz/marka** adı YOK mu? **Hekim cümlesi** YOK mu? **Çift Rol** — muayene odası bilgisi sızmadı mı?

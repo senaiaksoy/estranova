@@ -28,6 +28,7 @@ Semantic versioning + tarih etiketi.
 - `main.py` CLI: `--category` (writer önerisinin üzerine yazılır).
 - `docs/PIPELINE.md`: "Konu → Kategori Yönlendirmesi (Routing)" alt bölümü.
 - Compliance DNA deterministik proxy: yaşıt-ses, humanize, yumusak bilim sinyalleri (`compliance_master_validation._dna_signal_count`); harici URL sinyali kaldırıldı.
+- Compliance: yazar grubuna göre atıf rejimi — yaşıt/kurumsal byline'da kaynakça, dipnot, DOI, PMID, PubMed bağlantısı critical `regulation_risk` (`strict.no_reference_apparatus_peer`); klinisyen (`writer_category: scientific`) makalesinde kaynak bölümü serbest, link/kuruluş adı denetimi yalnızca anlatı gövdesine uygulanır.
 - Compliance: inline harici URL ve adlı kuruluş atıfları için deterministik **critical `regulation_risk`** (`compliance_expert_agent.FORBIDDEN_SRC_ORG_MARKERS`).
 - `docs/style-rules-map.md` — stil/dil kurallarının CLAUDE / writer / validator / compliance’taki konum haritası.
 - Writer prompt’a few-shot örnek (açılış + mekanizma + kanıt bölümleri).

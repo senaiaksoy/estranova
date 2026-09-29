@@ -51,7 +51,7 @@
 - **"Önce / sonra" anlatımı — MUTLAK YASAK.**
 - **Spor klübü tabipliği referansı — MUTLAK YASAK** ("Efes Pilsen ile çalıştığım yıllar / Galatasaray ile").
 - **Spesifik protez / implant / cerrahi cihaz markası — MUTLAK YASAK.**
-- Uluslararası kuruluş adı (AAOS/EFORT/SICOT) gövdede.
+- Uluslararası kuruluş adı (AAOS/EFORT/SICOT) gövdede. *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 - Hasta hikayesi anekdot detayı.
 - "Memorial'da / Amerikan Hastanesi'nde / muayenehanemde" — klinik tanıtımı YASAK.
 - "Yıllık X protez ameliyatım" — sayısal başarı vitrini YASAK.

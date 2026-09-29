@@ -31,7 +31,7 @@
 - [ ] Hitap "siz"; "sen" sızıntısı yok.
 - [ ] Klinik birinci tekil mütevazı; anekdot klinik çerçeveli + anonim ("bir hastam", detay yok).
 - [ ] Promosyon yok: mumcu.com / hastane / "en kapsamlı" gövdede geçmiyor.
-- [ ] Uluslararası kuruluş adı (NAMS/ACOG/WHO…) gövdede yok; inline harici URL yok.
+- [ ] Uluslararası kuruluş adı (NAMS/ACOG/WHO…) gövdede yok; inline harici URL yok. *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 - [ ] Korku/aciliyet/mucize/"en iyi" dili yok.
 - [ ] Eksen karışmadı: mahrem-tabu derinliği (Senai) / endokrin teknik (Metin) gövdeye sızmadı.
 - [ ] `<Evidence level={N} />` her bilimsel iddianın yanında.

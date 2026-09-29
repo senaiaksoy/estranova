@@ -18,6 +18,7 @@
 
 - Yalnız experience-essay veya editorial-guide.
 - clinical-guide ve expert-essay bu yazar için yasaktır.
+- **Atıf rejimi (dergi):** Kaynakça/Kaynaklar bölümü, dipnot, PubMed/DOI/PMID ve dergi-yıl atfı gövdede YOK (CLAUDE.md §4; kanıt izi `article-log.md` / brief'te kalır).
 - Makale çalışmasına başlamadan önce AGENTS.md'deki zorunlu kanonik stil
   rehberi okunur ve proje preflight cümlesi yazılır.
 - Konu Sanem'in kişisel sağlık, menopoz, HRT, ilaç, aile veya ilişki

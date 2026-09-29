@@ -34,6 +34,34 @@ FORBIDDEN_SRC_ORG_MARKERS: tuple[tuple[str, str], ...] = (
     (r"Cleveland\s+Clinic", "Cleveland Clinic"),
 )
 
+# Kaynak bolumu basligi (klinisyen rejiminde kaynak listesi bu basliktan sonra baslar).
+SOURCE_SECTION_HEADING_RE = re.compile(
+    r"^\s{0,3}(?:#{1,6}\s*|\*\*)\s*(?:Se[cç]ilmi[sş]\s+)?(?:Kaynak(?:[cç]a|lar)?|Referanslar|Dipnotlar?)\b",
+    flags=re.IGNORECASE | re.MULTILINE,
+)
+
+# Yasit rejimi (dergi): kaynakca / atif aparatı deterministik isaretleri.
+PEER_REFERENCE_APPARATUS_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (SOURCE_SECTION_HEADING_RE, "Kaynak/Kaynakca/Dipnot bolumu"),
+    (re.compile(r"\bPMID\b", re.IGNORECASE), "PMID"),
+    (re.compile(r"\bdoi(?:\.org|:)|\b10\.\d{4,9}/\S+", re.IGNORECASE), "DOI"),
+    (re.compile(r"pubmed\.ncbi|ncbi\.nlm\.nih\.gov", re.IGNORECASE), "PubMed baglantisi"),
+)
+
+
+def _is_clinician_regime(state: Any) -> bool:
+    """Klinisyen (category: 'scientific') yazar mi? Belirtilmemisse yasit (siki) rejim."""
+    return str(state.get("writer_category", "")).strip().lower() == "scientific"
+
+
+def _split_source_section(article: str) -> tuple[str, str]:
+    """Makaleyi (anlati govdesi, kaynak bolumu) olarak ayirir; bolum yoksa ikincisi bos."""
+    m = SOURCE_SECTION_HEADING_RE.search(article or "")
+    if not m:
+        return article or "", ""
+    return article[: m.start()], article[m.start():]
+
+
 # CLAUDE / AGENTS — plaza ve is Ingilizcesi (deterministik tespit; skor dusurulur).
 PLAZA_LANGUAGE_SUBSTRINGS: tuple[str, ...] = (
     "aksiyon al",
@@ -142,12 +170,21 @@ class ComplianceExpertAgent(PromptBackedAgent):
         newsletter = draft.get("newsletter", "")
         all_text = "\n".join([article, social_post, newsletter])
 
+        # Atif rejimi (CLAUDE.md §4): yasit=dergi (hicbir atif aparati yok),
+        # klinisyen=kanitli (kaynak bolumu/dipnot/dis link yalniz kaynak bolumunde serbest).
+        clinician = _is_clinician_regime(state)
+        if clinician:
+            article_body, _article_sources = _split_source_section(article)
+            scan_text = "\n".join([article_body, social_post, newsletter])
+        else:
+            scan_text = all_text
+
         auto_reject = False
         score = int(result.get("compliance_score", 0))
         if result.get("score") is not None:
             score = int(result["score"])
 
-        if re.search(r"\[[^\]]+\]\(https?://", all_text, flags=re.IGNORECASE):
+        if re.search(r"\[[^\]]+\]\(https?://", scan_text, flags=re.IGNORECASE):
             auto_reject = True
             score = min(score, 65)
             violations.append(
@@ -157,16 +194,17 @@ class ComplianceExpertAgent(PromptBackedAgent):
                     text_ref="inline_external_url",
                     rule_id="strict.no_external_markdown_links",
                     fix_suggestion=(
-                        "Makale/sosyal/bultende harici `[metin](http...)` markdown linki yasak; "
+                        "Makale govdesi/sosyal/bultende harici `[metin](http...)` markdown linki yasak "
+                        "(klinisyen yazarda yalniz Kaynaklar bolumunde serbest); "
                         "yumusak referans ('arastirmalar gosteriyor', 'uzmanlar belirtiyor') kullanin."
                     ),
                 )
             )
             required_fixes.append(
-                "Harici URL markdown linki kaldirilmali (yaşıt tonu; hekim atif sistemi yok)."
+                "Harici URL markdown linki govdeden kaldirilmali (kaynak listesi yalniz klinisyen rejiminde, Kaynaklar bolumunde)."
             )
 
-        org_hits = [lab for pat, lab in FORBIDDEN_SRC_ORG_MARKERS if re.search(pat, all_text, flags=re.IGNORECASE)]
+        org_hits = [lab for pat, lab in FORBIDDEN_SRC_ORG_MARKERS if re.search(pat, scan_text, flags=re.IGNORECASE)]
         if org_hits:
             auto_reject = True
             score = min(score, 65)
@@ -184,6 +222,28 @@ class ComplianceExpertAgent(PromptBackedAgent):
                 )
             )
             required_fixes.append(f"Kaldirilmali / anonimlestirilmeli: {uniq}")
+
+        if not clinician:
+            apparatus_hits = [
+                lab for pat, lab in PEER_REFERENCE_APPARATUS_PATTERNS if pat.search(all_text)
+            ]
+            if apparatus_hits:
+                auto_reject = True
+                score = min(score, 65)
+                uniq_app = ", ".join(dict.fromkeys(apparatus_hits))
+                violations.append(
+                    Violation(
+                        type="regulation_risk",
+                        severity="critical",
+                        text_ref=uniq_app[:240],
+                        rule_id="strict.no_reference_apparatus_peer",
+                        fix_suggestion=(
+                            "Yasit yazar makalesi dergi rejimindedir: kaynakca bolumu, dipnot, DOI, PMID ve "
+                            "PubMed baglantisi yazilmaz; anonim yumusak referans kullanin (CLAUDE.md §4)."
+                        ),
+                    )
+                )
+                required_fixes.append(f"Yasit makalesinden kaldirilmali: {uniq_app}")
 
         master_violations, master_score_cap = run_estranova_master_checks(article)
         for mv in master_violations:

@@ -300,5 +300,6 @@ Berna'nın kişisel HRT, supplement, peptid deneyimi **yazara renk verir, okuyuc
 - Modern yaşıt-anekdot kalıbı (`agents/writer_agent.md` → "Yazar deneyim ekseni") Berna'nın doğal sesidir: araştırma + Google/ChatGPT okuma + doktorla doğrulama izi makale içinde organik gelir.
 - **Yasak:** Tedavi protokolü, doz, marka adı, "kimler kullanmalı" içeriği.
 - **CLAUDE.md §4** tıbbi sınır ve **§4** yasak referans biçimleri **her koşulda** uygulanır.
+- **Atıf rejimi (dergi):** Kaynakça/Kaynaklar bölümü, dipnot, PubMed/DOI/PMID ve dergi-yıl atfı gövdede YOK (CLAUDE.md §4; kanıt izi `article-log.md` / brief'te kalır).
 
 > **Çift Rol kritik bağı:** Senai Aksoy = Berna'nın eşi (ama hekimi değil — etik prensip gereği). Asıl jinekoloğu eşinin meslektaşı = arkadaş çevresinden biri. Bu çift ayrıcalık nedeniyle standart hasta sahneleri (bekleme odası, sıra kuyruğu, "ilk muayene endişesi") Berna'ya yazılmaz. Detay: `hidden.md §5c-ek` + `profile.yaml dual_role_warning`. Pre-script (`article-context-build.mjs`) `dual_role_warning.active=true` olduğunda hidden.md'yi otomatik yükleme listesine ekler.

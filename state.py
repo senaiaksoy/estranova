@@ -146,6 +146,7 @@ class EstranovaState(TypedDict, total=False):
     topic: str
     output_slug: str
     audience: str
+    writer_category: str  # 'scientific' = klinisyen (kanitli rejim); bos/diger = yasit (dergi rejimi)
     content_goal: str
     risk_level_initial: RiskLevel
     risk_level_current: RiskLevel

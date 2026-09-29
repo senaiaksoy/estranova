@@ -60,7 +60,7 @@
 - "Doğal sonuç garantilidir" — kontrol edilemez vaat.
 - **"Önce / sonra" anlatımı — MUTLAK YASAK.**
 - Marka adı (dolgu / botoks / cihaz / lazer / iplik / krem) gövdede.
-- Uluslararası kuruluş adı (ASPS/ISAPS/IPRAS) gövdede — anonim "uluslararası uzman dernekler" yumuşaması.
+- Uluslararası kuruluş adı (ASPS/ISAPS/IPRAS) gövdede — anonim "uluslararası uzman dernekler" yumuşaması. *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 - Hasta hikayesi anekdot detayı (yaş / yer / tarih / hangi işlem).
 
 ### Geçiş kalıpları
@@ -99,8 +99,8 @@
 11. [ ] 3-bölüm yapısı (tablo → mekanizma → karar zinciri)?
 12. [ ] Klinik jargon ilk geçtiği yerde Türkçe karşılığıyla mı verilmiş?
 13. [ ] Marka adı (dolgu/botoks/cihaz/lazer/iplik/krem) gövdede YOK mu?
-14. [ ] Uluslararası kuruluş adı (ASPS/ISAPS/IPRAS) gövdede YOK mu?
-15. [ ] Inline harici URL / markdown link gövdede YOK mu?
+14. [ ] Uluslararası kuruluş adı (ASPS/ISAPS/IPRAS) gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
+15. [ ] Inline harici URL / markdown link gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 16. [ ] **Önce-sonra anlatımı YOK mu? Hasta hikayesi anekdot detayı YOK mu? Vitrin (25 yıl / Aston / binlerce hasta) gövdede YOK mu?**
 17. [ ] Tedavi/işlem reçete dili YOK ("Cerrahınızla değerlendirin" var)?
 

@@ -52,7 +52,7 @@
 - "Pürüzsüz cilt garanti" — kontrol edilemez vaat.
 - **"Önce / sonra" anlatımı — MUTLAK YASAK.**
 - **Spesifik kozmetik / dermokozmetik / cihaz marka adı — MUTLAK YASAK.**
-- Uluslararası kuruluş adı (AAD/EADV/IADVL) gövdede — anonim "uluslararası dermatoloji dernekleri" yumuşaması.
+- Uluslararası kuruluş adı (AAD/EADV/IADVL) gövdede — anonim "uluslararası dermatoloji dernekleri" yumuşaması. *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 - Geçmiş kozmetik marka danışmanlığı ilişkisi.
 - Hasta hikayesi anekdot detayı (yaş / yer / tarih).
 
@@ -90,8 +90,8 @@
 9. [ ] 3-bölüm yapısı (tablo → mekanizma → karar zinciri)?
 10. [ ] Klinik jargon ilk geçtiği yerde Türkçe karşılığıyla mı verilmiş?
 11. [ ] **Spesifik kozmetik / dermokozmetik / cihaz marka adı gövdede YOK mu?**
-12. [ ] Uluslararası kuruluş adı (AAD/EADV/IADVL) gövdede YOK mu?
-13. [ ] Inline harici URL / markdown link gövdede YOK mu?
+12. [ ] Uluslararası kuruluş adı (AAD/EADV/IADVL) gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
+13. [ ] Inline harici URL / markdown link gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 14. [ ] **Önce-sonra anlatımı YOK mu? Hasta hikayesi anekdot detayı YOK mu?**
 15. [ ] Tedavi reçete dili YOK ("Dermatoloğunuza danışın" var)?
 
