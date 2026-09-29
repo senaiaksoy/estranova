@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/kemik-sagligi-40-sonrasi/",
   "answeredAt": "2026-09-29",
   "source": "Dr. Aksoy'un bu sohbet içindeki doğrudan yanıtları (2026-09-29)",
-  "status": "Tamamlandı: 3/3 SSS yanıtı işlendi ve onaylandı; Dr. Mumcu bağımsız incelemesi (2026-09-29, tüm metin) ve KC editör onayı (2026-09-29) kaydedildi. Birleştirme/yayın kararı ayrıca verilecek.",
+  "status": "Tamamlandı: 3/3 SSS yanıtı, Dr. Mumcu incelemesi (tüm metin + Türkiye bölümü) ve KC editör onayı kaydedildi (2026-09-29).",
   "revisionScope": "Gövde humanize edildi (ses, ritim, başlıklar, lede çeşitliliği), kaynak-iddia eşleşmeleri düzeltildi, tıbbi eksikler kaynaklı olarak tamamlandı. Bu kayıt yeni revizyonun tıbbi onayı değildir; Dr. Alper Mumcu incelemesi ve KC editör onayı ayrıca gereklidir.",
   "publicationApproval": "Bu turda commit, push veya deploy yetkisi verilmedi.",
   "faqConversionStatus": "3/3 gerçek yanıt alındı ve yerel SSS metnine işlendi (başlık: Dr. Aksoy'a Sorular; 'en sık' nitelemesi doğrulanmadığı için kullanılmadı).",
@@ -83,13 +83,21 @@
       "Samanci 2026 BMC Public Health 26 (PMID 41652560)"
     ],
     "verification": "Kaynaklar PubMed'de doğrulandı; sayılar özet metinlerindeki değerlerle eşleştirildi. Kanıtsız Türkiye iddiası eklenmedi; kurum/dernek adı gövdeye alınmadı.",
-    "reviewStatus": "KC editör onayı verildi (2026-09-29). Dr. Mumcu bağımsız incelemesi bu bölüm için henüz kaydedilmedi; imzadaki 29 Eylül 2026 tarihi yeni bölümü kapsamıyor.",
+    "reviewStatus": "KC editör onayı (2026-09-29) ve Dr. Mumcu bağımsız inceleme onayı (2026-09-29) kaydedildi. İmzadaki 'Bağımsız tıbbi inceleme: 29 Eylül 2026' artık eklenen bölümü de kapsıyor.",
     "limitations": "FRACTURK verisi 2009'a ait; D vitamini çalışmaları hastane başvurusu olan kişilere dayanıyor ve toplumu temsil etmiyor. Metin bunu belirtiyor.",
     "kcEditorApproval": {
       "approver": "KC editör (Dr. Senai Aksoy)",
       "date": "2026-09-29",
       "source": "Kullanıcının bu sohbetteki 'onay' yanıtı",
       "recordedIn": "src/data/article-approvals.ts"
+    },
+    "independentMedicalReview": {
+      "reviewer": "Dr. Alper Mumcu",
+      "date": "2026-09-29",
+      "scope": "Türkiye bağlamı bölümü (ref 10-13)",
+      "coveredVersion": "2d0e538",
+      "status": "Onaylandı",
+      "source": "Kullanıcının bu sohbetteki bildirimi ('mumcu onay tamam'); tarih bildirim günü olarak kaydedildi"
     }
   }
 }
