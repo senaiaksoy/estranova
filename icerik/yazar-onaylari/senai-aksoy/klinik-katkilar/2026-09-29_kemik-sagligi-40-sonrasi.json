@@ -83,7 +83,13 @@
       "Samanci 2026 BMC Public Health 26 (PMID 41652560)"
     ],
     "verification": "Kaynaklar PubMed'de doğrulandı; sayılar özet metinlerindeki değerlerle eşleştirildi. Kanıtsız Türkiye iddiası eklenmedi; kurum/dernek adı gövdeye alınmadı.",
-    "reviewStatus": "Bu bölüm 29 Eylül Dr. Mumcu incelemesinden SONRA eklendi; incelemenin (coveredVersion eb41be3) kapsamında değil. Dr. Mumcu incelemesi ve KC editör onayı bekliyor.",
-    "limitations": "FRACTURK verisi 2009'a ait; D vitamini çalışmaları hastane başvurusu olan kişilere dayanıyor ve toplumu temsil etmiyor. Metin bunu belirtiyor."
+    "reviewStatus": "KC editör onayı verildi (2026-09-29). Dr. Mumcu bağımsız incelemesi bu bölüm için henüz kaydedilmedi; imzadaki 29 Eylül 2026 tarihi yeni bölümü kapsamıyor.",
+    "limitations": "FRACTURK verisi 2009'a ait; D vitamini çalışmaları hastane başvurusu olan kişilere dayanıyor ve toplumu temsil etmiyor. Metin bunu belirtiyor.",
+    "kcEditorApproval": {
+      "approver": "KC editör (Dr. Senai Aksoy)",
+      "date": "2026-09-29",
+      "source": "Kullanıcının bu sohbetteki 'onay' yanıtı",
+      "recordedIn": "src/data/article-approvals.ts"
+    }
   }
 }
