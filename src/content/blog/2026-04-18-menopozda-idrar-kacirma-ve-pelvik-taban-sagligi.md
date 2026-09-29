@@ -47,7 +47,7 @@ Pelvik taban, leğen kemiğinin alt bölümündeki kas ve bağ dokusu ağıdır.
 
 Menopozla azalan östrojen, özellikle vajina ve idrar yolu çevresindeki dokuları değiştirebilir. Kuruluk, yanma ve bazı idrar yakınmaları bir arada görülebilir; buna menopozun genitoüriner sendromu denir. Ancak her idrar kaçırma bu sendromdan kaynaklanmaz. Enfeksiyon gibi başka nedenler de araştırılır. <a href="#kaynak-2" aria-label="Kaynak 2">[2]</a> <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
-Bu yüzden ilk sorum, kaçırmanın nasıl ve ne zaman olduğudur. Verdiğiniz yanıt, değerlendirmenin yönünü gösterir.
+Bu yüzden önce kaçırmanın ne zaman başladığını ve nasıl ortaya çıktığını sorarım. Birden başlaması ve idrar yaparken yanmanın eşlik etmesi enfeksiyonu düşündürür; idrarda kan varsa bu ayrıca değerlendirilir. Böyle bir durumda yakınmayı doğrudan menopoza bağlamam, idrar testiyle başlarım. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-7" aria-label="Kaynak 7">[7]</a>
 
 <span id="vücudunuzda-arka-planda-ne-oluyor"></span>
 
@@ -67,11 +67,13 @@ Sizi en çok zorlayan bileşen, planın nereden başlayacağını etkiler. Belir
 
 Kas eğitimi, adının düşündürdüğü kadar basit değildir. Doğru kası bulmakla başlar.
 
-Kegel adıyla bildiğiniz egzersizler, pelvik taban kaslarını kasıp ardından gevşetmeye dayanır. Karnı ya da kalçayı sıkmak aynı işi görmez. Bu alanda eğitimli bir fizyoterapist, kasları doğru kullanıp kullanmadığınızı değerlendirebilir ve programı size göre ayarlayabilir. <a href="#kaynak-4" aria-label="Kaynak 4">[4]</a>
+Kegel adıyla bildiğiniz egzersizler, pelvik taban kaslarını kasıp ardından gevşetmeye dayanır. Bu alanda eğitimli bir fizyoterapist, kasları doğru kullanıp kullanmadığınızı değerlendirebilir ve programı size göre ayarlayabilir. <a href="#kaynak-4" aria-label="Kaynak 4">[4]</a>
+
+En sık gördüğüm hata, pelvik tabanı çalıştırdığını sanırken karın ve kalça kaslarını sıkmak ya da nefesi tutmak. Bu yüzden doğru hareketi önce birlikte kontrol etmek önemlidir. Egzersiz yapmak için idrar akışını sürekli durdurmayı da önermem.
 
 Kanıtın en güçlü olduğu yer stres tipi kaçırmadır. Bir sistematik derlemede, stres tipi kaçırması olan kadınların kas eğitimi sonunda kaçırmanın tamamen geçtiğini bildirmesine ilişkin kanıt güçlü bulundu <span data-article-evidence="5"></span>. Düzelme ya da azalma birlikte ele alındığında kanıt orta düzeydeydi <span data-article-evidence="3"></span>. Derlemedeki kadınların hepsi menopoz döneminde değildi. <a href="#kaynak-5" aria-label="Kaynak 5">[5]</a>
 
-Stres veya karışık tipte, gözetim altında en az üç aylık kas eğitimi ilk seçenekler arasındadır. Düzen ve doğru teknik burada önemlidir. Üçüncü ayın sonunda herkesin kaçırmasının bitmesi beklenmez. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+Stres veya karışık tipte, gözetim altında en az üç aylık kas eğitimi ilk seçenekler arasındadır. Düzenli ve doğru yapılan egzersizin etkisini görmek zaman alır. Üçüncü ayın sonunda herkesin kaçırmasının bitmesi beklenmez. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
 Ani sıkışma öndeyse mesane eğitimi gündeme gelir. Amaç, tuvalete gitme aralıklarını belirtilerinize uygun biçimde, adım adım uzatmaktır. Kılavuzlar sıkışma veya karışık tip için en az altı haftalık bir program önerir. İzlemde yalnızca kaçırma sayısına değil, günlük hayatınızda neyin değiştiğine de bakılır. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
 
@@ -94,6 +96,8 @@ Lokal östrojen her kaçırmanın ortak çözümü değildir. Yeri, sıkışma y
 Kaçırmanın türüne göre ilaç ya da cerrahi seçenekler konuşulabilir. Stres tipinde kas eğitimi ve gerekli düzenlemeler yeterli gelmezse, örneğin orta üretral askı ameliyatları yarar ve riskleriyle birlikte ele alınır. Karar; kaçırmanın türüne, eşlik eden hastalıklara, doğum planına ve beklentilerinize göre verilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-6" aria-label="Kaynak 6">[6]</a>
 
 Vajinal lazer ve radyofrekans uygulamaları reklamlarda sık karşınıza çıkabilir. Sahte uygulamalı (sham) kontrollü çalışmaları bir araya getiren 2026 tarihli bir derlemede, stres tipi kaçırmadaki yarar küçük ve kısa süreliydi <span data-article-evidence="2"></span>. Radyofrekans için kanıt yetersiz kaldı; bazı kadınlarda hiç fayda görülmemesi de olasıydı. <a href="#kaynak-9" aria-label="Kaynak 9">[9]</a>
+
+Lazer veya radyofrekans sorulduğunda önce kaçırmanın tipini ve şiddetini belirlerim. Lazeri kalıcı bir çözüm olarak anlatmam; radyofrekans için de aynı sonucu veya süreyi varsaymam. İki yöntemde de uzun dönem kanıtın sınırlı olduğunu hastayla açıkça konuşurum.
 
 Bir cihaza karar vermeden önce üç şeye bakmak yerinde olur. Kas eğitimi denendi mi? Kaçırmanın türü netleşti mi? Lokal östrojen konuşuldu mu?
 

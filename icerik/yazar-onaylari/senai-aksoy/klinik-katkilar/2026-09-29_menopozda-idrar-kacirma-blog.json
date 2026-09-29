@@ -101,5 +101,35 @@
       "Atıf eklemeleri: kırmızı bayraklara [3], cerrahi seçeneklere [6], mesane günlüğüne [7]. Özete cihaz kanıt sınırı cümlesi eklendi."
     ],
     "approvalBoundary": "Dil düzenlemesidir; yeni hekim incelemesi veya yayın onayı gerçekleşmiş gibi gösterilmemiştir."
-  }
+  },
+  "bodyContributions": [
+    {
+      "question": "İdrar kaçırmayla gelen bir kadında, menopozun dışında başka bir neden düşündüren ilk bulgu genellikle nedir?",
+      "targetSection": "Menopozun Etkisi ve Diğer Nedenler",
+      "answeredAt": "2026-09-29",
+      "answer": "Önce kaçırmanın ne zaman başladığını ve nasıl ortaya çıktığını sorarım. Özellikle birden başlaması ve idrar yaparken yanmanın eşlik etmesi enfeksiyonu düşündürür; idrarda kan varsa ayrıca değerlendirilmesi gerekir. Bu durumda yakınmayı doğrudan menopoza bağlamam, idrar testiyle başlarım. NICE",
+      "localEditedText": "Bu yüzden önce kaçırmanın ne zaman başladığını ve nasıl ortaya çıktığını sorarım. Birden başlaması ve idrar yaparken yanmanın eşlik etmesi enfeksiyonu düşündürür; idrarda kan varsa bu ayrıca değerlendirilir. Böyle bir durumda yakınmayı doğrudan menopoza bağlamam, idrar testiyle başlarım. [3] [7]",
+      "status": "Gövdeye işlendi; yanıttaki NICE atfı mevcut kaynak 3 (NICE NG123) ile eşleştirildi; düzenlenmiş hali hekime sunuldu",
+      "approvedAt": null
+    },
+    {
+      "question": "Kadınlar pelvik taban egzersizlerinde en çok neyi yanlış yapıyor ya da yanlış biliyor?",
+      "targetSection": "Pelvik Taban ve Mesane Eğitiminin Yeri",
+      "answeredAt": "2026-09-29",
+      "answer": "En sık gördüğüm hata, pelvik tabanı çalıştırdığını sanırken karın ve kalça kaslarını sıkmak ya da nefesini tutmak. Doğru hareketi önce birlikte kontrol etmek önemlidir; ayrıca egzersiz yapmak için idrar akışını sürekli durdurmalarını önermem. Düzenli ve doğru yapılan egzersizin etkisini görmek zaman alır.",
+      "localEditedText": "En sık gördüğüm hata, pelvik tabanı çalıştırdığını sanırken karın ve kalça kaslarını sıkmak ya da nefesi tutmak. Bu yüzden doğru hareketi önce birlikte kontrol etmek önemlidir. Egzersiz yapmak için idrar akışını sürekli durdurmayı da önermem. / Düzenli ve doğru yapılan egzersizin etkisini görmek zaman alır. (üç aylık program paragrafında)",
+      "status": "Gövdeye işlendi; düzenlenmiş hali hekime sunuldu",
+      "approvedAt": null
+    },
+    {
+      "question": "Lazer veya radyofrekans soran bir hastaya genel olarak ne söylüyorsunuz?",
+      "targetSection": "Cerrahi ve Cihaz Uygulamaları",
+      "answeredAt": "2026-09-29",
+      "answer": "Önce idrar kaçırmanın tipini ve şiddetini belirlerim. Hafif ve orta derecede stres tipi idrar kaçırması olan bazı hastalarımda vajinal lazerle iyi sonuçlar gördüm; ancak bunu kalıcı bir çözüm olarak anlatmam. Benim gözlemimde etki çoğu zaman yaklaşık 1–1,5 yıl sürüyor, kişiden kişiye değişebiliyor. Radyofrekans için aynı sonucu veya süreyi varsaymam; her iki yöntemde de uzun dönem kanıtların sınırlı olduğunu hastayla açıkça konuşurum.",
+      "localEditedText": "Lazer veya radyofrekans sorulduğunda önce kaçırmanın tipini ve şiddetini belirlerim. Lazeri kalıcı bir çözüm olarak anlatmam; radyofrekans için de aynı sonucu veya süreyi varsaymam. İki yöntemde de uzun dönem kanıtın sınırlı olduğunu hastayla açıkça konuşurum.",
+      "heldBack": "'Bazı hastalarımda iyi sonuçlar gördüm' ve '1–1,5 yıl' gözlemi, kaynak 9 (etki küçük ve kısa süreli; tahmin aralığı faydasızlığı içeriyor) ve profil kuralı (lazer/RF'de umut etiketi yasak; kaynaksız sayı yok) ile gerilim nedeniyle hekim kararına bırakıldı.",
+      "status": "Kısmen gövdeye işlendi; tutulan kısım hekim kararı bekliyor",
+      "approvedAt": null
+    }
+  ]
 }
