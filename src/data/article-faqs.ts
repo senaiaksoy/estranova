@@ -699,19 +699,19 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/': [
     {
-      question: 'Menopozda cinsellikte ağrı normalleşmesi gereken bir durum mu?',
+      question: 'Menopozda cinsel ilişkide ağrı yaşlanmanın doğal bir sonucu mu?',
       answer:
-        'Hayır. Sık görülmesi, normalleştirilmesi gerektiği anlamına gelmez. Ağrı, kuruluk, doku hassasiyeti ya da pelvik taban gerilimi gibi başlıkların işareti olabilir ve konuşulmayı hak eder.',
+        'Bu dönemde sık görülebilir ama katlanmanız gereken bir durum değil. Menopozla ilişkili doku değişiklikleri ağrıya yol açabilir ve nedeni belirlendiğinde yardımcı olabilecek tedaviler vardır.',
     },
     {
       question: 'Ağrı her zaman yalnızca vajinal kuruluğa mı bağlıdır?',
       answer:
-        'Hayır. Kuruluk önemli bir neden olsa da enfeksiyon, cilt sorunları, pelvik taban spazmı, korku-anksiyete döngüsü ve farklı yapısal nedenler de rol oynayabilir. Bu yüzden tek açıklamaya sıkışmamak gerekir.',
+        'Ağrının vajina girişinde mi yoksa daha derinde mi olduğunu, ilişki dışında yanma veya hassasiyet bulunup bulunmadığını sorarım. Muayenede kurulukla birlikte enfeksiyon, vulva cildinde (dış genital bölgede) bir hastalık veya pelvik taban kaslarında ağrı gibi başka nedenleri de değerlendiririm; her ağrıyı otomatik olarak kuruluğa bağlamam.',
     },
     {
-      question: 'Ne zaman değerlendirme bekletilmemeli?',
+      question: 'Hangi belirtilerde değerlendirme ertelenmemeli?',
       answer:
-        'Ağrı yeni başladıysa, giderek artıyorsa veya kanama eşlik ediyorsa değerlendirmeyi ertelememek gerekir. Ağrı yakınlığı ve gündelik konforu etkiliyorsa bunu da hekimle paylaşmak önemlidir.',
+        'Özellikle menopozdan sonra herhangi bir kanama, ilişki sonrası lekelenme, yeni başlayan şiddetli ağrı, kötü kokulu akıntı veya vulvada (dış genital bölgede) yeni bir yara ya da görünüm değişikliği varsa muayeneyi ertelememenizi söylerim. Kanama çok az olsa bile “sürtünmedendir” diye varsaymadan nedenine bakmak gerekir.',
     },
   ],
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': [

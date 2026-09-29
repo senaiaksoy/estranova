@@ -24,20 +24,20 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/']!;
 
 const tocEntries = [
-  { id: 'isim-koymak', label: 'Disparoni Tek Bir Tablo Değil' },
-  { id: 'alt-tipler', label: 'Dört Alt-Tip ve Biyolojik Nedenleri' },
+  { id: 'isim-koymak', label: 'Ağrıyı Konuşmak ve Adlandırmak' },
+  { id: 'alt-tipler', label: 'Ağrının Yeri ve Olası Nedenleri' },
   { id: 'degerlendirme', label: 'Muayenede Adım Adım Değerlendirme' },
-  { id: 'tedavi-haritasi', label: 'Tedavi Haritası — Üç Temel Kapı' },
+  { id: 'tedavi-haritasi', label: 'Nedene Göre Tedavi Seçenekleri' },
   { id: 'iletisim-sureci', label: 'Tedavi Sürecinde Partner ve Hekimle İletişim' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular" },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Cinsellikte Ağrı — Menopozda Disparoni Rehberi';
 const seoTitle = 'Cinsellikte Ağrı — Menopozda Disparoni Rehberi';
 const articleDescription =
-  'Menopozda cinsel ilişkide ağrı (disparoni) ve alt-tipleri, vajinal kuruluk ile pelvik taban tedavilerini içeren sade klinik rehber.';
+  'Menopozda cinsel ilişkide ağrının (disparoni) olası nedenleri, muayenede değerlendirme ve lokal tedavi ile pelvik taban fizyoterapisi seçenekleri.';
 const faqItems = articleFaqs['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -45,7 +45,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '2 Mayıs 2026',
-  modifiedDate: '3 Ağustos 2026',
+  modifiedDate: '29 Eylül 2026',
   pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik/',
@@ -77,7 +77,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="2 Mayıs 2026"
-        lastUpdated="3 Ağustos 2026"
+        lastUpdated="29 Eylül 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/by-vajinal-saglik.webp"
         imageAlt="Keten örtü üzerinde çiçek, su bardağı ve pamuklu dokular; menopozda cinsellikte ağrı yazısı için editoryal görsel"
@@ -93,131 +93,127 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Menopozda cinsel ilişkide ağrı sık karşılaştığımız bir durumdur; ancak kesinlikle normalleştirilip
-          kabullenilmesi gerekmez. Tıbbi adıyla disparoni olarak bilinen bu tablo, yüzeysel ya da derin
-          farklı alt-tiplere ayrılır. Altta yatan östrojen düşüşü, pelvik taban gerilimi gibi nedenleri doğru
-          teşhis ederek kişiye özel lokal tedaviler ve pelvik taban fizyoterapisi tedavi seçenekleri arasında yer alabilir.
+          Menopozda cinsel ilişkide ağrı görülebilir; bunu yaşlanmanın kaçınılmaz bir parçası sayıp kabullenmeniz gerekmez.
+          Tıbbi adı disparoni olan bu ağrı, vajina girişinde ya da daha derinde hissedilebilir.
+          Tedavi altta yatan nedene göre seçilir; lokal tedaviler ve pelvik taban fizyoterapisi seçenekler arasındadır.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="isim-koymak">Disparoni Tek Bir Tablo Değil — İsim Koymak</h2>
+        <h2 id="isim-koymak">Ağrıyı Konuşmak ve Adlandırmak</h2>
         <p>
-          Klinik deneyimlerimizde sıklıkla karşılaştığımız üzere, cinsel ilişkide ağrı şikâyetinin muayene odasında
-          kapıdan çıkarken en son dile getirilen konulardan biri olduğunu gözlemliyoruz. Pek çok kadın bu sorunu
-          tek başına çözmesi gereken bir yük ya da yaşlanmanın kaçınılmaz bir parçası gibi görüp sessizce kabulleniyor.
-          Oysa tıbbi adı olan, türleri belirlenmiş ve farklı yaklaşımlarla yönetilebilen bir tablodan bahsediyoruz:
-          <strong>disparoni</strong>.
+          Cinsel ilişkide ağrıyı konuşmak sizi utandırabilir; yine de bu, tek başınıza çözmeniz gereken bir sorun değildir.
+          Hekiminizle ağrının nerede ve ne zaman başladığını konuşabilirsiniz.
         </p>
         <p>
-          Sorunu açıkça adlandırmadığımız sürece çözüm yollarını da konuşamıyoruz. En sık karşılaştığım yanılgı, tüm ağrılı
-          ilişki şikâyetlerini tek bir nedene bağlamaktır. Oysa disparoninin en az dört farklı alt-tipi bulunur ve her birinin
-          tedavi kapısı ayrıdır. Hangi alt-tipte olduğunuzu netleştirmek, tedavinin en önemli basamağıdır; çünkü tek başına
-          lokal kremler yazmak her zaman doğru yanıtı vermez.
+          Bu ağrının tıbbi adı <strong>disparoni</strong>. Her ağrılı ilişki aynı nedenden kaynaklanmaz.
+          Vajinal kuruluk, doku hassasiyeti ve pelvik taban kaslarındaki gerilim farklı değerlendirmeler gerektirebilir.
+          Nedeni ayırt etmek, yalnızca bir kremle yetinmek yerine size uygun seçenekleri konuşmayı sağlar.
         </p>
 
-        <h2 id="alt-tipler">Dört Alt-Tip ve Biyolojik Nedenleri</h2>
+        <h2 id="alt-tipler">Ağrının Yeri ve Olası Nedenleri</h2>
         <p>
-          Tedaviye başlarken ilk yaptığımız şey, ağrının tam olarak nerede ve ne zaman hissedildiğini anlamaktır. Bu iki basit
-          soru, bize sorunun biyolojik haritasını çıkarır.
+          Ağrıyı vajina girişinde mi, daha derinde mi hissediyorsunuz? Ne zaman ortaya çıktığı da olası nedenleri ayırt etmeye yardımcı olur.
         </p>
         <p>
           <strong>Yüzeysel disparoni:</strong> Ağrının vajina girişinde veya dış genital bölgede hissedilmesidir. Menopozda
-          sıklıkla karşılaştığımız doku incelmesi ve kurulukla seyreden genitoüriner sendrom (GSM)<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>,
-          lokal cilt hassasiyetleri veya giriş bölgesindeki enfeksiyonlar bu tabloya yol açar.
+          doku incelmesi, kuruluk ve idrar yakınmalarıyla seyreden genitoüriner sendrom (GSM)<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>,
+          cilt hassasiyetleri veya giriş bölgesindeki enfeksiyonlar olası nedenlerdir.
         </p>
         <p>
-          <strong>Derin disparoni:</strong> Ağrının pelvisin derinliklerinde, penetrasyon ilerledikçe veya ilişki sonrasında
-          hissedilmesidir. Endometriozis (çikolata kisti hastalığı), miyomlar, adenomyozis ya da pelvik taban kaslarındaki
-          kronik gerginlik öncelikli şüphelilerimiz arasındadır.
+          <strong>Derin disparoni:</strong> Ağrının alt karında, vajinal giriş derinleştikçe veya ilişki sonrasında
+          hissedilmesidir. Endometriozis (rahim içini döşeyen dokuya benzer dokunun rahim dışında bulunması), miyomlar,
+          adenomyozis (benzer dokunun rahmin kas tabakası içinde bulunması) ya da pelvik taban kaslarındaki
+          kronik gerginlik değerlendirmede ele alınan nedenler arasındadır.
         </p>
         <p>
-          <strong>Postmenopozal disparoni:</strong> Vajina girişindeki ağrının menopoza özel formudur. Östrojen seviyelerinin
+          <strong>Menopoz sonrası doku değişimleri:</strong> Östrojen seviyelerinin
           düşmesiyle vajinal dokular incelir, elastikiyetini kaybedebilir ve ilişki sırasında doku hassasiyeti ile yüzeysel
           çatlaklara yatkınlık artabilir. Bu aşamada lokal vajinal östrojen uygulamaları, kanıtlarla desteklenen tedavi
           seçenekleri arasında yer alır
           <Evidence level={5} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
         </p>
         <p>
-          <strong>Sekonder Vajinismus:</strong> Giriş denemesinde pelvik taban kaslarının istemsizce ve refleks olarak kasılmasıdır.
-          Postmenopozal dönemde bu durum, genellikle tedavi edilmemiş kuruluk ve ağrıya karşı bedenin geliştirdiği koruyucu
-          bir savunma refleksi olarak sonradan ortaya çıkar.
+          <strong>Sonradan gelişen vajinismus:</strong> Vajinismus, giriş denemesinde pelvik taban kaslarının istemsizce kasılmasıyla ilişkilidir.
+          Menopoz sonrasında kuruluk ve ağrıya eşlik eden koruyucu kasılmalar da değerlendirmede ele alınır.
         </p>
         <p>
-          Bu biyolojik değişimlerin temelinde hormon ritmindeki farklılaşma yatar. Östrojenin azalmasıyla vajinal pH daha yüksek,
+          Östrojenin azalmasıyla vajinal pH daha yüksek,
           yani daha alkali bir aralığa kayabilir<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
-          Bu değişimler ağrıya ve üriner yakınmalara eşlik edebilir; enfeksiyon şüphesinde ayrıca değerlendirme gerekir. Ağrı beklentisi zamanla pelvik
-          taban kaslarında refleks bir spazm yaratır. Bu kas-zihin zincirini kırmak için sadece kremler yeterli olmaz;
-          bütüncül yaklaşımlara ihtiyaç duyarız.
+          Bu değişimler ağrıya ve idrar yakınmalarına eşlik edebilir; enfeksiyon şüphesinde ayrıca değerlendirme gerekir.
+          Ağrı beklentisine kasların istemsiz kasılması da eşlik edebilir. Doku değişimleriyle kas gerilimi bir aradaysa,
+          yalnızca lokal kremlerle yetinmek yerine bu nedenleri birlikte ele almak gerekir.
         </p>
 
         <h2 id="degerlendirme">Muayenede Adım Adım Değerlendirme</h2>
         <p>
-          Klinik değerlendirmede disparoni şikâyeti üç temel aşamada ele alınır: öykü, kademeli fiziksel muayene ve hedefe
-          yönelik ek incelemeler.
+          Ağrının vajina girişinde mi yoksa daha derinde mi olduğunu, ilişki dışında yanma veya hassasiyet bulunup bulunmadığını sorarım.
+          Her ağrıyı otomatik olarak kuruluğa bağlamam.
         </p>
         <p>
-          <strong>Öykü:</strong> Muayeneye gelmeden önce ağrının yerini (girişte mi, derinde mi), ne zaman başladığını, ne kadar
-          süredir devam ettiğini ve eşlik eden diğer belirtileri (kuruluk, idrar yakınmaları, kanama) kendiniz için netleştirmeniz
-          tanı sürecimizi oldukça kolaylaştırır.
+          <strong>Öykü:</strong> Görüşme öncesinde ağrının yerini, başlangıcını ve ne kadar süredir devam ettiğini not edebilirsiniz.
+          Kuruluk, idrar yakınmaları veya kanama varsa bunları da belirtmeniz değerlendirmeye yardımcı olur.
         </p>
         <p>
-          <strong>Kademeli fizik muayene:</strong> Muayene sırasında hastanın kendini güvende ve rahat hissetmesi önceliğimizdir.
-          Muayenenin güvenli, rahat ve kademeli ilerlemesi değerlendirmenin en önemli kısmıdır. Dış genital bölgede epitel atrofisi,
-          cilt değişiklikleri veya mikro çatlaklar incelenir. Vajinal pH ölçümü tanı için pratik bir göstergedir. Derin ağrı
-          şüphesi varsa, ultrasonografi ile pelvik patolojiler değerlendirilebilir.
+          <strong>Kademeli fizik muayene:</strong> Kendinizi güvende ve rahat hissedebilmeniz için muayenenin kademeli ilerlemesi önemlidir.
+          Dış genital bölgede dokunun incelmesi, cilt değişiklikleri ve küçük çatlaklar incelenir.
+          Vajinal pH ölçümü değerlendirmede kullanılabilir. Derin ağrı varsa, ultrasonografiyle pelvisteki organlar değerlendirilebilir.
         </p>
         <p>
-          <strong>Hedefe yönelik incelemeler:</strong> Belirtilere göre idrar tahlili, derin pelvik ağrılarda MR görüntüleme
-          veya şüpheli lezyonlarda vulva biyopsisi gibi ek adımlar plana dahil edilebilir.
+          <strong>Hedefe yönelik incelemeler:</strong> Belirtilere ve muayene bulgularına göre idrar tahlili veya derin ağrı için MR görüntüleme düşünülebilir.
+          Dış genital bölgede şüpheli bir doku değişikliği varsa biyopsi, yani doku örneği alınması gerekebilir.
         </p>
 
-        <h2 id="tedavi-haritasi">Tedavi Haritası — Üç Temel Kapı</h2>
+        <h2 id="tedavi-haritasi">Nedene Göre Tedavi Seçenekleri</h2>
         <p>
-          Ağrılı ilişkinin tedavisi saptadığımız alt-tipe göre değişir ve genellikle üç ana yaklaşımdan birini veya birkaçını
-          içerir.
+          Tedavi seçimi ağrının nedenine bağlıdır. Doku hassasiyeti, kas gerilimi ve ağrıya eşlik eden korku için birden fazla destek gerekebilir.
         </p>
         <p>
-          <strong>Birinci kapı — Lokal medikal destekler ve nemlendiriciler:</strong> Postmenopozal atrofi zeminindeki tablolarda,
+          <strong>Doku incelmesi ve kuruluk için:</strong> Menopoz sonrası doku incelmesine bağlı ağrıda,
           hekim kontrolünde uygulanan lokal vajinal östrojenler (krem, tablet veya halka) sık değerlendirilen tedavi seçeneklerinden
           biridir <Evidence level={5} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>. Lokal uygulamalarda sistemik emilim genellikle düşüktür; ancak
           sistemik hormon tedavisiyle aynı değerlendirme ölçütleri kullanılmaz. Özellikle hormon-duyarlı
-          meme kanseri öyküsü olan kadınlarda düşük doz lokal vajinal östrojen kullanımı, nonhormonal seçeneklere yanıt alınamadığında
+          meme kanseri öyküsü olan kadınlarda düşük doz lokal vajinal östrojen kullanımı, hormon dışı seçeneklere yanıt alınamadığında
           jinekoloji ve onkoloji ekiplerinin ortak değerlendirmesiyle planlanmalıdır<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
-          Hormon dışı nemlendiriciler ve kayganlaştırıcılar da konforu artırmada pratik yardımlar sunar.
+          Hormon dışı nemlendiriciler ve kayganlaştırıcılar da konforu artırmaya yardımcı olabilir.
         </p>
         <p>
-          <strong>İkinci kapı — Pelvik taban fizyoterapisi:</strong> Pelvik taban kaslarında spazm veya vajinismus reaksiyonu
-          varsa, bu alanda uzmanlaşmış fizyoterapistlerce uygulanan gevşeme egzersizleri ve manuel terapiler uygun kişilerde
-          tedavi planının önemli bir parçası olabilir <Evidence level={4} /><sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
+          <strong>Kas gerilimi için:</strong> Pelvik taban kasları ağrıya katkıda bulunuyorsa, bu alanda uzmanlaşmış fizyoterapistlerin
+          uyguladığı gevşeme egzersizleri ve elle uygulanan teknikler tedavi planına eklenebilir.
+          Kas kaynaklı disparonide pelvik taban rehabilitasyonunu inceleyen bir çalışma yarar bildirmiştir
+          <Evidence level={4} /><sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
+          Bu çalışma vajinismusu dışlamıştır ve menopoz sonrası kadınlara özgü bir araştırma değildir.
         </p>
         <p>
-          <strong>Üçüncü kapı — Cinsel terapi ve psikolojik destek:</strong> Ağrının uzun süre devam etmesiyle yerleşen korku-ağrı
+          <strong>Ağrıya eşlik eden korku için:</strong> Ağrının uzun süre devam etmesiyle yerleşen korku-ağrı
           döngülerini ele almak için bazı kişilerde cinsel terapi veya psikolojik destek sürece eklenebilir.
         </p>
         <p>
-          Derin disparoniye yol açan çikolata kisti veya miyom gibi altta yatan organik sorunlarda ise tıbbi veya cerrahi müdahaleler
-          öncelik kazanır. Tedavi planı, kişinin belirtilerine ve muayene bulgularına göre bireyselleştirilir.
+          Derin ağrının altında endometriozis veya miyom gibi bir sorun varsa, bu nedene yönelik tıbbi ya da cerrahi seçenekler değerlendirilir.
+          Sizin için uygun plan belirtilerinizle muayene bulguları birlikte ele alınarak belirlenir.
         </p>
 
         <h2 id="iletisim-sureci">Tedavi Sürecinde Partner ve Hekimle İletişim</h2>
         <p>
-          Ağrılı ilişki tek başınıza taşıyacağınız bir sır değildir; doğrudan ilişkinin dinamiklerini etkiler. Partnerinizle
-          ağrıyı gizlemeden, hislerinizi açık ve nazikçe paylaşmanız iyileşme sürecinin görünmez ama belirleyici bir parçasıdır.
+          Ağrı cinsel ilişkinizi de etkileyebilir. Partnerinizle ne hissettiğinizi konuşmak, bu dönemi birlikte anlamanıza yardımcı olabilir.
         </p>
         <p>
-          Tedavi süresince penetrasyon dışı yakınlık yollarını denemek, bedensel bağı koparmadan süreci yönetmenize yardımcı olur.
-          İletişimi hekim boyutunda da doğru kurmak gerekir. Randevunuz sırasında hekiminize şu temel soruları yöneltebilirsiniz:
-          Ağrımın özellikleri hangi alt-tipe işaret ediyor? Tedavide hangi yöntemleri, ne kadar süreyle uygulayacağız? Takip aralığı
-          kullanılan yönteme, belirtilerin seyrine ve hekimin değerlendirmesine göre değişir. Altta yatan diğer organik nedenler ekarte edildi mi?
+          Tedavi süresince vajinal giriş içermeyen cinsel yakınlık yollarını konuşabilirsiniz.
+          Hekiminizle görüşürken de şu sorular size yol gösterebilir:
         </p>
+        <ul>
+          <li>Ağrının özellikleri hangi nedenleri düşündürüyor?</li>
+          <li>Hangi yöntemleri, ne kadar süreyle uygulayacağız?</li>
+          <li>Altta yatan diğer nedenler değerlendirildi mi?</li>
+        </ul>
         <p>
-          Tedavi sürecinde planlanan adımları hekiminizin önerdiği sıklıkta takip etmek, belirtilerin seyrini izlemeye ve tedavi planını gerektiğinde yeniden değerlendirmeye yardımcı olur.
+          Takip aralığı kullanılan yönteme, belirtilerin seyrine ve hekiminizin değerlendirmesine göre değişir.
+          Ağrının nasıl değiştiğini paylaşmanız, gerektiğinde tedavi planını yeniden ele almayı sağlar.
         </p>
       </ArticleProsePanel>
 
-      <ArticleProsePanel class="mt-10">
-        <h2 id="kaynaklar" style="counter-increment: none;">Kaynaklar</h2>
+      <ArticleProsePanel mode="editorial" class="mt-10">
+        <h2 id="kaynaklar">Kaynaklar</h2>
         <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
           <li id="kaynak-1">
             Portman DJ, Gass ML. "Genitourinary syndrome of menopause: new terminology for vulvovaginal atrophy from the International Society for the Study of Women's Sexual Health and the North American Menopause Society."
@@ -247,24 +243,25 @@ const articleSchemas = buildArticleSchemas({
             Ghaderi F et al. "Pelvic floor rehabilitation in the treatment of women with dyspareunia: a randomized controlled clinical trial."
             <em>Int Urogynecol J</em>. 2019;30(11):1849–1855.
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31286158/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">31286158</a>
-            <span class="block mt-0.5 text-ink/50">(Disparonide pelvik taban fizyoterapisi, gevşeme egzersizleri ve manuel terapilerin etkinliğini gösteren klinik çalışma.)</span>
+            <span class="block mt-0.5 text-ink/50">(Kas kaynaklı disparonide pelvik taban rehabilitasyonunu inceleyen randomize çalışma; vajinismus dışlanmıştır, menopoz sonrası kadınlara özgü değildir.)</span>
           </li>
         </ol>
       </ArticleProsePanel>
 
       <RedFlagBox
         markers={[
-          'Cinsel ilişki sonrası tekrarlayan kanamalar',
+          'Cinsel ilişki sonrası lekelenme veya tekrarlayan kanamalar',
           'Postmenopozal vajinal kanama (miktarı az olsa bile, nedeninin değerlendirilmesi için jinekolojik inceleme yapılmalıdır)',
           'Yan ağrısı veya ateşle birlikte görülen ağrılı ilişki şikâyeti',
           'Derin pelvik ağrı, adet sancısı ve kronik bağırsak/idrar yakınmalarının eşlik etmesi',
           'Vulva bölgesinde yeni ortaya çıkan lezyonlar, beyaz lekeler veya doku kalınlaşması',
+          'Kötü kokulu akıntı veya dış genital bölgede yeni bir yara',
           'Lokal tedaviye rağmen belirtilerin devam etmesi veya kötüleşmesi (ayırıcı tanı tekrar değerlendirilmelidir)',
         ]}
         footnote="Bu liste teşhis amaçlı olmayıp, bir hekimle vakit kaybetmeden görüşülmesi gereken durumları hatırlatmak amacıyla hazırlanmıştır."
       />
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a sorular" intro="Dr. Senai Aksoy, cinsel ilişkide ağrı hakkında üç soruyu yanıtlıyor." items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"
@@ -280,22 +277,19 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-4 text-lg font-semibold text-ink">Bilimsel Değerlendirme ve İnceleme</p>
         <div class="space-y-3 leading-relaxed text-ink/80 text-sm">
           <p>
-            Disparoni (cinsel ilişkide ağrı), postmenopozal dönemdeki kadınların yaşam kalitesini ve psikososyal iyilik
-            halini doğrudan etkileyen, yaygınlığı %20-40 arasında tahmin edilen<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>
-            ancak klinikte yetersiz bildirilen önemli bir sağlık konusudur.
+            Cinsel ilişkide ağrı, menopoz sonrası dönemde yaşam kalitesini ve duygusal iyilik halini etkileyebilir.
+            Doku değişimleriyle ilişkili ağrı, genitoüriner sendromun belirtileri arasındadır<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
           </p>
           <p>
-            Atrofiye bağlı yüzeysel disparonide temel mekanizma, östrojen eksikliği sonucu vajinal epitelin
-            incelmesi, kollajen kaybı ve vajinal pH değerinin alkali seviyelere kaymasıdır. Biyolojik tablo,
-            lokal vajinal östrojen gibi düşük sistemik emilimli hormonal tedavilere yanıt verebilir.
-            Derin disparonide ise endometriozis, adenomyozis veya kronik pelvik taban kas spazmları gibi organik
-            faktörlerin jinekolojik değerlendirme ve görüntüleme yöntemleriyle ayırt edilmesi esastır.
+            Östrojen azalmasıyla vajinal dokuda incelme, kollajen kaybı ve pH yükselmesi görülebilir.
+            Buna bağlı yüzeysel ağrıda, düşük sistemik emilimli lokal vajinal östrojen tedavisi bir seçenek olabilir.
+            Derin ağrıda ise endometriozis, adenomyozis veya pelvik taban kaslarındaki gerilim gibi nedenler
+            jinekolojik değerlendirme ve gerektiğinde görüntülemeyle araştırılır.
           </p>
           <p>
-            Cinsel ilişkiden kaçınma veya ağrıya rağmen devam etme davranışları, pelvik taban kaslarında koruyucu
-            spazmları ve anksiyete döngülerini pekiştirebilir. Dirençli tablolarda pelvik taban
-            fizyoterapisi ya da cinsel terapi gibi destekler, uygun kişilerde tedavi planına eklenebilir. Kırmızı bayrak
-            olarak tanımlanan postmenopozal kanama veya lokal tedavilere yanıtsızlık durumlarında ileri incelemeler ihmal edilmemelidir.
+            Ağrıya eşlik eden korku ve koruyucu kasılmaların da değerlendirilmesi gerekir. Belirtiler sürüyorsa pelvik taban
+            fizyoterapisi ya da cinsel terapi, uygun kişilerde tedavi planına eklenebilir.
+            Menopoz sonrası kanama veya lokal tedaviye rağmen süren yakınmalar, nedenin yeniden değerlendirilmesini gerektirir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-xs italic text-primary">
             — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı

@@ -1037,7 +1037,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
     title: 'Cinsellikte Ağrı — Menopozda Disparoni Rehberi',
-    description: 'Menopozda cinsel ilişkide ağrı (disparoni) ve alt-tipleri, vajinal kuruluk ile pelvik taban tedavilerini içeren sade klinik rehber.',
+    description: 'Menopozda cinsel ilişkide ağrının (disparoni) olası nedenleri, muayenede değerlendirme ve lokal tedavi ile pelvik taban fizyoterapisi seçenekleri.',
     publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Beden & Yakınlık',
