@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/kemik-sagligi-40-sonrasi/",
   "answeredAt": "2026-09-29",
   "source": "Dr. Aksoy'un bu sohbet içindeki doğrudan yanıtları (2026-09-29)",
-  "status": "Tamamlandı: 3/3 gerçek yanıt alındı ve makale SSS'sine işlendi. Yayın onayı (Dr. Mumcu incelemesi, KC editör) ayrıca gereklidir.",
+  "status": "Tamamlandı: 3/3 gerçek yanıt alındı, makale SSS'sine işlendi ve Dr. Aksoy makaleye giren hâlleri onayladı (2026-09-29). Yayın onayı (Dr. Mumcu incelemesi, KC editör) ayrıca gereklidir.",
   "revisionScope": "Gövde humanize edildi (ses, ritim, başlıklar, lede çeşitliliği), kaynak-iddia eşleşmeleri düzeltildi, tıbbi eksikler kaynaklı olarak tamamlandı. Bu kayıt yeni revizyonun tıbbi onayı değildir; Dr. Alper Mumcu incelemesi ve KC editör onayı ayrıca gereklidir.",
   "publicationApproval": "Bu turda commit, push veya deploy yetkisi verilmedi.",
   "faqConversionStatus": "3/3 gerçek yanıt alındı ve yerel SSS metnine işlendi (başlık: Dr. Aksoy'a Sorular; 'en sık' nitelemesi doğrulanmadığı için kullanılmadı).",
@@ -19,21 +19,21 @@
       "answer": "Çünkü kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.",
       "editedForArticle": "Kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.",
       "answeredAt": "2026-09-29",
-      "useApproval": "Dr. Aksoy'a düzenlenmiş hâli gösterilecek"
+      "useApproval": "Dr. Aksoy makaleye giren hâli kullanılabilir buldu ve onayladı (2026-09-29)"
     },
     {
       "question": "DXA ölçümü herkese 40 yaşında gerekli midir?",
       "answer": "Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.",
       "editedForArticle": "Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.",
       "answeredAt": "2026-09-29",
-      "useApproval": "Dr. Aksoy'a düzenlenmiş hâli gösterilecek"
+      "useApproval": "Dr. Aksoy makaleye giren hâli kullanılabilir buldu ve onayladı (2026-09-29)"
     },
     {
       "question": "Kemik sağlığı için yürüyüş tek başına yeterli olur mu?",
       "answer": "Yürüyüş iyi bir başlangıç, ama kemik sağlığı için tek başına yeterli görmem. Yanına kişiye uygun kas güçlendirme ve denge egzersizleri eklemeyi öneririm. Osteoporozu veya geçirilmiş kırığı olan birinde hareketlerin güvenli biçimde seçilmesi gerekir.",
       "editedForArticle": "Yürüyüş iyi bir başlangıç, ama kemik sağlığı için tek başına yeterli görmem. Yanına kişiye uygun kas güçlendirme ve denge egzersizleri eklemeyi öneririm. Osteoporozu veya geçirilmiş kırığı olan birinde hareketlerin güvenli biçimde seçilmesi gerekir.",
       "answeredAt": "2026-09-29",
-      "useApproval": "Yanıtlar SSS için verildi; makaleye giren hâller Dr. Aksoy'a bildirilecek"
+      "useApproval": "Dr. Aksoy makaleye giren hâli kullanılabilir buldu ve onayladı (2026-09-29)"
     }
   ],
   "bodyVoiceConfirmed": [
@@ -43,5 +43,6 @@
       "note": "Dr. Aksoy kendi gözlemi olduğunu teyit etti."
     }
   ],
-  "pastedResidueNotes": "Yanıtlarla birlikte gelen 'bonehealthandosteoporosis.org' ve 'uspreventiveservicestaskforce.org' satırları yapıştırma kalıntısı sayıldı; metne ve kaynakçaya alınmadı. USPSTF zaten [4]. BHOF kaynağı doğrulanıp iddiayı desteklediği görülmeden eklenmeyecek."
+  "pastedResidueNotes": "Yanıtlarla birlikte gelen 'bonehealthandosteoporosis.org' ve 'uspreventiveservicestaskforce.org' satırları yapıştırma kalıntısı sayıldı; metne ve kaynakçaya alınmadı. USPSTF zaten [4]. BHOF kaynağı doğrulanıp iddiayı desteklediği görülmeden eklenmeyecek.",
+  "faqUseApprovedAt": "2026-09-29"
 }
