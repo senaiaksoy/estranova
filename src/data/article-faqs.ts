@@ -1017,33 +1017,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Sorunun yalnızca “az uyumak” değil, uykunun yapısının değişmesi olduğunu görmek önemlidir. Bu bakış, çözümü de daha gerçekçi kurmaya yardım eder.',
     },
   ],
-  '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/': [
-    {
-      question: 'Kegel egzersizleri gerçekten işe yarıyor mu, ne kadar sürede etki gösterir?',
-      answer:
-        'Doğru yapılan ve düzenli sürdürülen pelvik taban kas eğitimi stres tipi idrar kaçırmada en güçlü kanıt tabanına sahip ilk basamak yaklaşımdır. Egzersiz yararlıdır ancak hepsi aynı değildir; en kritik nokta doğru yapılmasıdır. Belirgin fark genellikle 8-12 hafta düzenli uygulamadan sonra hissediliyor; tutarlı yapıldığında iyileşmeler 6 ay sonunda da artmaya devam edebiliyor. Bir pelvik taban fizyoterapistiyle başlangıç birkaç seans yapmak, kalan süreyi evde doğru bir şekilde sürdürmenizi sağlıyor.',
-    },
-    {
-      question: 'Lokal östrojen sistemik HRT mi, güvenli mi?',
-      answer:
-        'Vajinal yoldan uygulanan düşük doz östrojen lokal etkili olacak biçimde tasarlanır ve sistemik dolaşıma geçen miktar oldukça düşüktür. Bu yüzden sistemik HRT\'nin kontrendike olduğu birçok kadında bile lokal östrojen değerlendirilebilir; ancak meme kanseri öyküsü gibi belirli durumlarda karar mutlaka onkolog ve jinekoloğun ortak değerlendirmesiyle verilir. Aynı kelime başka şeyi anlatabiliyor — netleştirme önemlidir.',
-    },
-    {
-      question: 'Cerrahi nasıl bir karar, kimler için uygun?',
-      answer:
-        'Mid-uretral sling (askı) cerrahisi stres tipi inkontinansta en yaygın ve en kanıtlı seçenektir. Davranışsal adımların yetmediği veya yaşam kalitesini belirgin etkileyen olgularda gündeme gelir. Doğum planı olmayan kadınlar için aday profili daha nettir; eşlik eden tıbbi durumlar, geçirilmiş cerrahiler, beklenti ve risk-fayda dengesi değerlendirmenin parçasıdır. Karar tek seans değil, bir süreçtir.',
-    },
-    {
-      question: 'Yerel lazer veya radyofrekans, kanıt durumu nedir?',
-      answer:
-        'Stres tipi idrar kaçırma için yerel lazer ve radyofrekans uygulamalarının kanıt seviyesi sınırlı kalmaktadır ve uzun dönem ile karşılaştırmalı veriler henüz yeterli değildir. Davranışsal adımlar ve belgeli seçenekler atlanarak bu uygulamalara geçmek çoğu zaman beklenen faydayı vermez. Karar öncesinde sıralamayı doğru kurmak hem bütçeyi hem beklentiyi korur.',
-    },
-    {
-      question: 'İdrar kaçırma menopozdan sonra ortaya çıktıysa geçici midir?',
-      answer:
-        'Postmenopozal dönemde idrar kaçırma çoğunlukla geçici bir tablo değildir; östrojen düşüşü ve birikmiş pelvik taban yıpranmasıyla sürebilen bir durumdur. Sürdürülebilir tedavi seçenekleri vardır ve büyük çoğunluk kadında belirgin iyileşme mümkündür. Erken değerlendirme şikâyetin yıllar içinde sessizce büyümesinin önüne geçer.',
-    },
-  ],
   '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/': [
     {
       question: 'İkinci kuşak mı, üçüncü kuşak mı “daha iyi”?',

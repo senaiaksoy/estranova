@@ -128,3 +128,5 @@ Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi ince
 - Dört SSS, Dr. Senai Aksoy'un 29 Eylül 2026 tarihli özgün yanıtlarından türetildi ve tek görünür SSS/FAQPage kaynağına taşındı.
 - Audit düzeltmeleri: kanıt düzeyleri sonuca göre ayrıldı, ateş/yan ağrısı için NIDDK kaynağı eklendi, altı eski bölüm kimliği korundu, tekrarlar azaltıldı, güncelleme tarihi/görsel ve klinik şablon yüzeyleri bağlandı.
 - Yayın yolu: `/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/`.
+
+- Birleştirme (2026-09-29): statik hub sayfası ve blog kopyası tek kanonik rotada toplandı: `/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/`. `/blog/2026-04-18-…/` bu rotaya yönlendirilir; `article-faqs.ts` içindeki eski çelişkili SSS kaldırıldı. Yeni eklenen cerrahi/cihaz bölümü ve kırmızı bayrak cümlesi henüz ayrıca hekim incelemesinden geçmedi.

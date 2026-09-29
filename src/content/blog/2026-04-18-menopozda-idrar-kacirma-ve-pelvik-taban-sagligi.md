@@ -8,6 +8,8 @@ medicalEditorNote: "Bu rehberde genel araştırma bulguları ile kişiye özel d
 disclaimer: "Bu içerik yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Tıbbi tanı, tedavi önerisi ya da kişisel sağlık kararı yerine geçmez. Belirtilerinizle ilgili değerlendirme için bir sağlık profesyoneliyle görüşmeniz önerilir."
 relatedPaths:
   - "/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/"
+  - "/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/"
+  - "/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/"
 faqTitle: "Dr. Aksoy'a Sorular"
 faqIntro: "Bu yanıtlar genel bilgi verir; sizin için uygun adımları belirlemek ayrıca değerlendirme gerektirir."
 faqId: "sık-sorulan-sorular"
@@ -22,6 +24,7 @@ faqItems:
     answer: "Pelvik taban fizyoterapisti önce idrar kaçırmanın ne zaman olduğunu ve pelvik taban kaslarını doğru çalıştırıp çalıştıramadığınızı değerlendirir. Size uygun egzersizleri öğretir, ilerlemenizi izler; gerekirse mesane eğitimi de planlar. İç muayene her hastada zorunlu değildir; gerekli görülürse açıklama yapılarak sizin onayınızla uygulanır."
 writerSlug: "senai-aksoy"
 articleType: "clinical-guide"
+canonicalPath: "/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/"
 imageSrc: "/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp"
 imageAlt: "Gün ışığı alan bir evin yoga köşesinde yan yana oturan iki kadın; pelvik taban farkındalığı için sakin bir editoryal görsel"
 ---
@@ -84,6 +87,14 @@ Kuruluk ve yanma gibi menopoza bağlı yakınmalar da varsa, düşük doz vajina
 
 Lokal östrojen her tür kaçırmanın ortak çözümü değildir. Sıkışma ve menopoza bağlı vajinal-idrar yolu belirtileri birlikte olduğunda yeri olabilir. Sistemik hormon tedavisi ise idrar kaçırmayı tedavi etmek amacıyla önerilmez. İlk adımlar yeterli gelmezse kaçırmanın türüne göre ilaç veya cerrahi seçenekler ayrıca değerlendirilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a> <a href="#kaynak-6" aria-label="Kaynak 6">[6]</a>
 
+## Cerrahi ve Cihaz Uygulamaları
+
+Muayene odasında sık duyduğum sorulardan biri şu: "Lazerle bu iş çözülür mü?" Kısa yanıt: kanıt henüz bu kadar güçlü değil.
+
+Stres tipinde kas eğitimi ve gerekli düzenlemeler yeterli gelmezse cerrahi seçenekler, örneğin orta üretral askı ameliyatları, yarar ve riskleriyle birlikte konuşulur. Karar; kaçırmanın türüne, eşlik eden hastalıklara, doğum planına ve beklentilerinize göre verilir. <a href="#kaynak-3" aria-label="Kaynak 3">[3]</a>
+
+Vajinal lazer ve radyofrekans cihazları ise reklamlarda sık karşınıza çıkar. Sahte uygulamalı (sham) kontrollü çalışmaların 2026 tarihli bir derlemesinde stres tipi kaçırmada yarar küçük ve kısa süreli bulundu. Radyofrekans için kanıt yetersiz kaldı; bazı kadınlarda hiç fayda görülmemesi de olasıydı <span data-article-evidence="2"></span>. Bu yüzden cihaza karar vermeden önce kas eğitimi denenmiş mi, türünüz netleşmiş mi, lokal östrojen konuşulmuş mu diye bakmak yerinde olur. <a href="#kaynak-9" aria-label="Kaynak 9">[9]</a>
+
 <span id="ne-zaman-bir-uzmana-danışmak-anlamlı-olabilir"></span>
 
 ## Değerlendirmeyi Ertelememek Gereken Durumlar
@@ -92,7 +103,7 @@ Yürüyüşü yarıda kesiyor, egzersizden kaçınıyor veya sürekli koruyucu �
 
 Kadın hastalıkları ve doğum veya üroloji uzmanı değerlendirme yapabilir; gerektiğinde ürojinekoloji ve pelvik taban fizyoterapisi desteği planlanır. İlk görüşmede belirtilerin ne zaman başladığı, hangi durumlarda olduğu ve kullandığınız ilaçlar konuşulur. İdrar testi ve muayene, enfeksiyon veya eşlik eden sorunları ayırt etmeye yardımcı olabilir. <a href="#kaynak-7" aria-label="Kaynak 7">[7]</a>
 
-**İdrarda kan görürseniz, idrar yapamıyorsanız ya da ateş ve yan ağrısıyla birlikte idrar yakınmanız varsa gecikmeden tıbbi değerlendirme alın.** Yanma, ağrı veya yakınmaların belirgin değişmesi de değerlendirilmelidir; bunları menopozla açıklayıp geçiştirmeyin. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a> <a href="#kaynak-8" aria-label="Kaynak 8">[8]</a>
+**İdrarda kan görürseniz, idrar yapamıyorsanız ya da ateş ve yan ağrısıyla birlikte idrar yakınmanız varsa gecikmeden tıbbi değerlendirme alın.** Yanma, ağrı veya yakınmaların belirgin değişmesi de değerlendirilmelidir; bunları menopozla açıklayıp geçiştirmeyin. Vajinada dolgunluk veya sarkma hissi, bel ya da bacaklarda yeni uyuşma ve güçsüzlükle birlikte idrar tutamama da bekletilmeden değerlendirilmelidir. <a href="#kaynak-1" aria-label="Kaynak 1">[1]</a> <a href="#kaynak-8" aria-label="Kaynak 8">[8]</a>
 
 Görüşmeye hazırlanırken kaçırmanın ne zaman olduğunu ve sizi nasıl etkilediğini not edebilirsiniz. Hekiminize şu soruları yöneltin: “Kaçırmam hangi tipe uyuyor?”, “İlk adımın faydasını nasıl takip edeceğiz?”, “Yeterli gelmezse hangi seçenekleri konuşacağız?”
 
@@ -115,4 +126,5 @@ Bu yazıdaki seçenekler genel bilgi verir; sizin için uygun yöntemi belirleye
 <li id="kaynak-6"><a href="https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-control-problems/treatment" target="_blank" rel="noopener noreferrer">NIDDK: İdrar kontrolü sorunlarında tedavi seçenekleri</a>. Günlük alışkanlıklar ve kaçırmanın türüne göre değerlendirilen seçenekler.</li>
 <li id="kaynak-7"><a href="https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-control-problems/diagnosis" target="_blank" rel="noopener noreferrer">NIDDK: İdrar kontrolü sorunlarının değerlendirilmesi</a>. Öykü, muayene, mesane günlüğü ve temel testler.</li>
 <li id="kaynak-8"><a href="https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-infection-pyelonephritis/symptoms-causes" target="_blank" rel="noopener noreferrer">NIDDK: Böbrek enfeksiyonunda belirtiler ve nedenler</a>. Ateş, yan ağrısı ve idrar yakınmalarında gecikmeden değerlendirme gereği.</li>
+<li id="kaynak-9"><a href="https://doi.org/10.1007/s00192-026-06604-9" target="_blank" rel="noopener noreferrer">Lukanović ve ark.: Stres tipi idrar kaçırmada enerji temelli cihazlar</a> (Int Urogynecol J, 2026). Sham kontrollü rastgele çalışmaların sistematik derlemesi ve meta-analizi; etkiler küçük ve kısa süreli, radyofrekans için kanıt yetersiz.</li>
 </ol>

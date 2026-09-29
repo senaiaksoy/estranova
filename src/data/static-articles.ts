@@ -807,9 +807,9 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
-    title: 'Konuşmadığımız Şey — 40 Sonrası İdrar Kaçırma',
-    description: '40 sonrası kadınların önemli bir kısmı idrar kaçırma yaşıyor ama çoğu kimseye söylemiyor. İki ana tip, pelvik taban anatomisi, davranışsal adımlar, medikal-cerrahi seçenekler ve doktora hangi soruları sormak gerektiği — sade bir klinik bakış.',
-    publishedDate: '2 Mayıs 2026',
+    title: 'Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı',
+    description: 'Menopozda idrar kaçırmanın türleri, pelvik taban ve mesane eğitiminin yeri, lokal östrojen, cerrahi ve cihaz uygulamalarının kanıt sınırı ve hangi belirtilerde değerlendirme gerektiği — sade bir hekim rehberi.',
+    publishedDate: '18 Nisan 2026',
     writerSlug: 'senai-aksoy',
     section: 'Beden & Yakınlık',
     sectionPath: '/beden-yakinlik/',
