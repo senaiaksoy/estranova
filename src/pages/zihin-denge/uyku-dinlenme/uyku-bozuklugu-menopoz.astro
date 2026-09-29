@@ -24,17 +24,17 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/']!;
 
 const tocEntries = [
-  { id: 'uyku-mimarisi', label: 'Uyku Mimarisi' },
-  { id: 'neden-bozulur', label: 'Menopozda Uyku Neden Bozulur' },
+  { id: 'uyku-mimarisi', label: 'Uyku Aslında Düz Bir Çizgi Değil' },
+  { id: 'neden-bozulur', label: 'Menopozda Uyku Neden Bozulur?' },
   { id: 'uyku-nedenleri-tablo', label: 'Uyku Bozukluğu Nedenleri ve Çözüm Adımları' },
-  { id: 'yaygin-sorunlar', label: 'Yaygın Uyku Sorunları' },
-  { id: 'uyku-hijyeni', label: 'Uyku Hijyeni' },
-  { id: 'dogal-destekler', label: 'Doğal Destekler ve Takviyeler' },
-  { id: 'tibbi-tedavi', label: 'Tıbbi Tedavi Seçenekleri' },
-  { id: 'uzman-ne-zaman', label: 'Ne Zaman Uzmana Başvurmalı' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'yaygin-sorunlar', label: 'Yaygın Olarak Anlatılan Tablo' },
+  { id: 'uyku-hijyeni', label: 'Uyku Hijyeni — Sade ve Tutarlı Adımlar' },
+  { id: 'dogal-destekler', label: 'Doğal Destekler ve Takviyeler — Aceleci Olmadan' },
+  { id: 'tibbi-tedavi', label: 'Tıbbi Destek Seçenekleri — Karar Süreci' },
+  { id: 'uzman-ne-zaman', label: 'Ne Zaman Bir Uyku Uzmanı Düşünmeli?' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -49,7 +49,9 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '12 Mart 2026',
-  modifiedDate: '3 Ağustos 2026',
+  modifiedDate: '29 Eylül 2026',
+  medicalReviewer: 'Dr. Alper Mumcu',
+  medicalReviewerTitle: 'Kadın Hastalıkları ve Doğum Uzmanı',
   pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
@@ -93,6 +95,7 @@ const articleSchemas = buildArticleSchemas({
         articleType="clinical-guide"
         publishedDate="12 Mart 2026"
         readingMinutes={6}
+        medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/zd-uyku-bozuklugu-byline.webp"
         imageAlt="Yumuşak sabah ışığında uyku günlüğü, çay bardağı ve başucu masası; menopozda uyku bozukluğu için editoryal görsel"
       />
@@ -118,9 +121,9 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="uyku-mimarisi">Uyku Aslında Düz Bir Çizgi Değil</h2>
         <p>Menopozda uykusuzluk tek bir mekanizmayla açıklanmaz. Sıcak basmaları ve gece terlemeleri, hormonal geçişin uyku düzenine etkisi, ruh hâli değişimleri ve menopozdan bağımsız uyku sorunları aynı tabloya birlikte katkıda bulunabilir.</p>
         <p>
-          Yıllar içinde farklı kadınlardan aynı cümleyi duydum: "Aynı saatte yatıyorum ama bazı sabahlar iyi,
-          bazı sabahlar tükenmiş kalkıyorum." Uykunun düz bir çizgi olmadığını hatırlamak bu soruyu anlamayı
-          kolaylaştırıyor. Beden gece boyunca kendi ritmini kuruyor; bu nedenle saate bakmak tek başına yeterli değil.
+          Muayene odasında aynı tarifi farklı ağızlardan sık duyarım: aynı saatte yatılıyor, ama bazı sabahlar
+          iyi kalkılıyor, bazı sabahlar tükenmiş. Uykunun düz bir çizgi olmadığını hatırlamak bu soruyu anlamayı
+          kolaylaştırıyor. Uyku gece boyunca birkaç evreden geçer; bu nedenle saate bakmak tek başına yeterli değil.
         </p>
         <p>
           Uyku NREM ve REM döngülerinin tekrarladığı dinamik bir süreçtir. NREM evrelerinde fiziksel onarım ve
@@ -188,10 +191,9 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="yaygin-sorunlar">Yaygın Olarak Anlatılan Tablo</h2>
         <p>
-          Bir hastam bunu şöyle anlatmıştı: "Yatağa girer girmez uyuyamıyorum; uyusam bile gece üçte
-          gözlerim kendiliğinden açılıyor; sonra saatlerce tavana bakıyorum." Muayene odasında benzerini sık
-          duyarım — sahne aynı, paylaşan çok. Yalnız olunmadığını fark etmek küçük ama gerçek bir
-          rahatlama olabiliyor.
+          Muayene odasında sık duyduğum bir tarif var: yatağa girer girmez uyku gelmiyor, gelse bile gece üçe
+          doğru göz kendiliğinden açılıyor, sonra saatlerce tavan. Sahne aynı, paylaşan çok. Yalnız olmadığınızı
+          bilmek küçük ama gerçek bir rahatlama olabiliyor.
         </p>
         <p>
           Menopoz döneminde sık görülen üç tablo: uykuya dalmada güçlük, gece içinde sık uyanma ve erken saatte
@@ -290,8 +292,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Aynı yaşta, benzer hormonal tabloda iki kadından birinde apne sessiz seyrederken diğerinde gündüz
-          uykululuğuyla erken görünür olabilir. Bu ayrımı tahminle değil, klinik değerlendirme, gerekirse
-          polisomnografi ve uyku uzmanı izlemiyle yapmak gerekir.
+          uykululuğuyla erken belli olabilir. Hangisinin hangisi olduğunu yalnızca konuşarak bilemem; tahmin
+          yürütmek yerine klinik değerlendirme, gerekirse polisomnografi ve uyku uzmanı izlemi isterim.
         </p>
 
         <h2 id="kaynaklar">Kaynaklar</h2>
@@ -368,7 +370,7 @@ const articleSchemas = buildArticleSchemas({
             zaman daha yararlıdır.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · bu yazının bağımsız tıbbi incelemesi
           </p>
       </ArticleEditorNote>
 
