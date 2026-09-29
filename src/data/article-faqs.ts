@@ -493,27 +493,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopozda libido azalması herkeste olur mu?',
       answer:
-        'Bu soruyu sormanız çok kıymetli; çünkü poliklinikte en sık karşılaştığımız ama kadınların dile getirmekte en çok tereddüt ettiği konulardan biri bu. Öncelikle bilin ki yalnız değilsiniz, ancak bu durum menopoza giren her kadının yaşamak ‘zorunda’ olduğu bir kural da değildir.',
+        'Hayır. Menopozda cinsel istekte azalma sık görülür ama her kadının yaşamak zorunda olduğu bir kural değildir. Poliklinikte en sık karşılaştığımız, ama kadınların dile getirmekte en çok tereddüt ettiği konulardan biri bu. İsteğin azalması tek başına bir hastalık anlamına gelmez; benim için önemli olan, bu değişimin sizi rahatsız edip etmediğidir.',
     },
     {
       question: 'Vajinal östrojenin tüm vücuda etkisi var mı, güvenli mi?',
       answer:
-        'Sizi çok iyi anlıyorum; ‘östrojen’ veya ‘hormon’ adını duymak haklı olarak sizde bir çekince yaratıyor. Ancak sistemik hormon hapları ile bu lokal tedavinin farkını şöyle düşünebilirsiniz: Gözünüzde bir enfeksiyon veya kuruluk olduğunda tüm vücudunuza antibiyotik hap almazsınız; doğrudan göz damlası damlatırsınız ve o damla sadece gözünüzde çalışır. Vajinal östrojen de böyledir: Vücudunuzun geneline değil, esas olarak kuruyan, incelen vajina ve idrar yolu dokusuna etki eden bir ‘lokal bakım’dır. Doz o kadar küçüktür ki, en düşük dozlu vajinal tabletleri bir yıl boyunca aralıksız kullansanız dahi alacağınız toplam hormon miktarı, eskiden kadınların aldığı tek bir menopoz hapının içindeki hormona ancak denk gelir. Kana geçen miktar çok düşüktür; düşük dozlarda rahminizi kalınlaştırdığı ya da damarlarınızda pıhtı riskini artırdığı gösterilmemiştir. Amacımız sizi gençlik hormonlarınıza boğmak değil; yalnızca canınızı yakan dokunun elastikiyetini ve nemini geri kazandırmaktır. Östrojene duyarlı meme kanseri geçirdiyseniz, bu tedaviye onkoloğunuzla birlikte karar veririz.',
+        'Düşük doz vajinal östrojen ile sistemik hormon hapları aynı şey değildir. Göz kuruluğunda hap yerine göz damlası kullanmak gibi, vajinal östrojen de esas olarak kuruyan ve incelen vajina ile idrar yolu dokusuna lokal olarak etki eder. En düşük dozlu vajinal tabletlerde bir yıllık toplam hormon miktarı, tek bir menopoz hapındakine ancak denk gelir. Kana geçen miktar çok düşüktür; düşük dozlarda rahim iç zarını kalınlaştırdığı ya da pıhtı riskini artırdığı gösterilmemiştir. Amaç, canınızı yakan dokunun esnekliğini ve nemini geri kazandırmaktır. Östrojene duyarlı meme kanseri geçirdiyseniz kararı daha dikkatli verir, onkoloğunuzla birlikte değerlendiririz.',
     },
     {
       question: 'Antidepresan kullanıyorum, libido azlığını ona mı bağlamalıyım?',
       answer:
-        'Hissettiğiniz bu isteksizlik kesinlikle sizin bir eksikliğiniz veya partnerinize olan sevginizin bitmesiyle ilgili değil. Bazı antidepresanlar beyninizdeki kaygıyı ve üzüntüyü yatıştırırken, ne yazık ki arzu ve heyecanla ilişkili dopamin gibi kimyasalların sesini de kısabiliyor. Ancak burada çok önemli bir kuralımız var: İlacınızı cinselliğiniz etkilendi diye kendi kendinize aniden kesmemelisiniz. Çünkü ilacı aniden bırakmak hem çekilme belirtilerine hem de depresyonun çok daha şiddetli geri dönmesine yol açabilir. Ruh sağlığınızı korurken cinsel hayatınızı da feda etmek zorunda değiliz; bu durum için ilacınızı yazan hekiminizle iş birliği içinde çözüm ararız.',
+        'Olabilir. Bazı antidepresanlar kaygıyı ve üzüntüyü yatıştırırken, arzu ve heyecanla ilişkili dopamin gibi kimyasalların etkisini de azaltabilir. Değişim ilaca başladıktan ya da doz değiştikten sonra ortaya çıktıysa bu olasılığı düşünürüz. Ancak ilacı kendi başınıza aniden kesmeyin; aniden bırakmak çekilme belirtilerine ve depresyonun daha şiddetli geri dönmesine yol açabilir. Ruh sağlığınızı korurken cinsel hayatınızı feda etmek zorunda değilsiniz; bunu ilacınızı yazan hekiminizle birlikte ele alırız.',
     },
     {
       question: 'Partnerimle bunu nasıl konuşurum?',
       answer:
-        'Konuşmaya doğrudan “Cinsel isteğim bitti” diyerek başlarsanız partneriniz savunmaya geçebilir veya içine kapanabilir. Önce ilişkinin ve sevginin sağlam olduğunu teyit edin, ardından problemi vücudun kimyasına devredin. Örnek cümle: “Sana olan sevgim, bağlılığım ya da seni ne kadar çekici bulduğumla ilgili hiçbir şey değişmedi. Ama son zamanlarda bedenimde kontrol edemediğim bazı biyolojik değişimler oluyor. Bu durumun seni kırabileceğinden ya da yanlış anlayabileceğinden endişelendiğim için açıkça konuşmak istedim.”',
+        'Konuşmaya “Cinsel isteğim bitti” diye başlamak partnerinizi savunmaya itebilir ya da içine kapanmasına yol açabilir. Önce ona olan sevginizin ve bağlılığınızın değişmediğini söylemek, sonra bedeninizde ve isteğinizde fark ettiğiniz değişimi anlatmak çoğu zaman daha açıklayıcı olur. Örneğin: “Sana olan sevgim ya da seni çekici bulmam değişmedi. Ama bedenimde ve isteğimde bir değişiklik fark ediyorum; bunu birlikte anlamak istiyorum.”',
     },
     {
       question: 'Partnerim yoksa cinsel sağlıkla ilgilenmem gerekir mi?',
       answer:
-        'Vajina ve idrar yolları sağlığı sadece bir partnerle cinsel ilişki yaşamak için gerekli bir alan değildir; tamamen sizin kendi konforunuz, rahat idrar yapabilmeniz ve enfeksiyon kapmamanız içindir. Östrojen azaldığında o doku korumasız kalır. Cinsel hayatınız şu an olmasa bile; dokunuzun büzüşmemesi, vajina kanalının daralmaması, ileride yapacağımız rutin sağlık kontrollerinde canınızın yanmaması ve en önemlisi tekrarlayan idrar yolu iltihaplarıyla uğraşmamanız için burayı nemli ve canlı tutmak önemlidir. Tıpkı cildimiz kuruduğunda kremliyor, dişlerimizi kaybetmemek için fırçalıyorsak; ürogenital dokuyu da nemlendiricilerle, gerektiğinde düşük doz lokal tedavilerle beslemek sizin en temel öz bakımınızdır.',
+        'Evet. Vajina ve idrar yollarının sağlığı yalnızca cinsel ilişki için değil; kendi konforunuz, rahat idrar yapabilmeniz ve enfeksiyonlardan korunmanız için de önemlidir. Menopozla gelişen doku değişiklikleri kuruluk, hassasiyet, idrar yakınmaları ve tekrarlayan idrar yolu enfeksiyonlarıyla ilişkili olabilir; ileride yapılacak rutin muayeneleri de ağrılı hâle getirebilir. Belirtileriniz varsa nemlendiriciler ya da gerektiğinde düşük doz lokal tedavi, cildinize ya da dişlerinize gösterdiğiniz özen gibi temel öz bakımın parçasıdır.',
     },
   ],
   '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': [
