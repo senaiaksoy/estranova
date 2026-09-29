@@ -17,6 +17,8 @@ const blog = defineCollection({
     faqIntro: z.string().optional(),
     faqId: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    /** Yazının kanonik yolu başka bir rotadaysa (birleştirilmiş yinelenen içerik) /blog/ rotası üretilmez. */
+    canonicalPath: z.string().optional(),
     imageSrc: z.string().optional(),
     imageAlt: z.string().optional(),
     writerSlug: z.string().optional(),

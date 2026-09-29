@@ -38,6 +38,9 @@ export default defineConfig({
   // (3 hub Tip A mimarisine geçiş — 2026-04-26).
   redirects: {
     '/authors/': '/yazarlar/',
+    // Menopozda idrar kaçırma DUPLICATE birleştirmesi: blog kopyası hub rotasına taşındı (2026-09-29).
+    '/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/':
+      '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
     // GSC 404 hayaletleri — yeniden adlandırılan eski URL'ler (2026-06-15).
     '/bilimsel-pencere/arastirma/': '/bilimsel-pencere/yeni-arastirmalar/',
     '/zamansiz-yasam/non-invaziv/cilt-cihazlari-rehberi/':

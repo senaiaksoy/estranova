@@ -141,7 +141,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Sessiz konu',
         title: '40 Sonrası İdrar Kaçırma',
         excerpt:
-          'Çevremizdeki kadınların önemli bir kısmı yaşıyor ama çoğu kimseye söylemiyor. İki tip ayrımı + üç kapılı tedavi haritası.',
+          'Öksürürken kaçırma ile tuvalete yetişememe farklı yaklaşımlar gerektirir. Türler, pelvik taban ve mesane eğitimi, lokal östrojen ve değerlendirme zamanı.',
         href: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
         readingMinutes: 7,
       },

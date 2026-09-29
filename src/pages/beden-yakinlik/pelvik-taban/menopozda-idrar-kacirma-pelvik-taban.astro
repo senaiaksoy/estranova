@@ -1,4 +1,5 @@
 ---
+import { getEntry, render } from 'astro:content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import SiteNavbar from '../../../components/site/SiteNavbar.astro';
 import SiteFooter from '../../../components/site/SiteFooter.astro';
@@ -7,56 +8,71 @@ import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astr
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
 import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
 import ReadingControls from '../../../components/site/ReadingControls.astro';
-import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
-import { submenuHeroByRoute } from '../../../data/submenu-heroes';
-import Evidence from '../../../components/site/Evidence.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import Evidence, { type EvidenceLevel } from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
+import type { Writer } from '../../../data/writers';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/']!;
+// Kanonik makale: içerik src/content/blog altındaki denetlenmiş kaynaktan gelir;
+// eski /blog/ rotası bu sayfaya yönlendirilir (astro.config.mjs).
+const pathname = '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/';
+const post = await getEntry('blog', '2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi');
+if (!post) throw new Error('Menopozda idrar kaçırma içeriği bulunamadı.');
+const { Content, headings } = await render(post);
+const hero = submenuHeroByRoute[pathname]!;
+const faqItems = post.data.faqItems ?? [];
+
+const evidenceMarker = /<span data-article-evidence="([1-5])"><\/span>/g;
+const renderedHtml = post.rendered?.html;
+const bodyParts: Array<{ html: string; level?: undefined } | { html?: undefined; level: EvidenceLevel }> = [];
+if (renderedHtml?.includes('data-article-evidence')) {
+  let start = 0;
+  for (const match of renderedHtml.matchAll(evidenceMarker)) {
+    bodyParts.push({ html: renderedHtml.slice(start, match.index) });
+    bodyParts.push({ level: Number(match[1]) as EvidenceLevel });
+    start = match.index! + match[0].length;
+  }
+  bodyParts.push({ html: renderedHtml.slice(start) });
+}
 
 const tocEntries = [
-  { id: 'isim-koymak', label: 'İsim Koymak: İki Tip Var' },
-  { id: 'pelvik-taban', label: 'Bedenin Söylediği Şey' },
-  { id: 'davranissal', label: 'Davranışsal Adımlar' },
-  { id: 'medikal-cerrahi', label: 'Medikal ve Cerrahi Seçenekler' },
-  { id: 'kanit-siniri', label: 'Yerel Lazer ve RF — Kanıt Sınırı' },
-  { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
-  { id: 'kapanis', label: 'Kapanış: Bilgi, Belirsizliğin Panzehiridir' },
+  ...headings.filter((heading) => heading.depth === 2).map((heading) => ({ id: heading.slug, label: heading.text })),
+  ...(faqItems.length && post.data.faqId ? [{ id: post.data.faqId, label: post.data.faqTitle ?? 'Sorular' }] : []),
 ];
 
-const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Konuşmadığımız Şey — 40 Sonrası İdrar Kaçırma';
-const articleDescription =
-  '40 sonrası kadınların önemli bir kısmı idrar kaçırma yaşıyor ama söylemiyor. İki ana tip ve pelvik taban anatomisi — sade bir klinik bakış.';
-const faqItems = articleFaqs['/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/'] ?? [];
-const articleSchemas = buildArticleSchemas({
-  title: articleTitle,
-  description: articleDescription,
-  writerSlug: 'senai-aksoy',
-  articleType: 'clinical-guide',
-  publishedDate: '2 Mayis 2026',
-  pathname: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
-  articleSection: 'Beden & Yakinlik',
-  sectionPath: '/beden-yakinlik/',
-  keywords: ['idrar kaçirma', 'üriner inkontinans', 'pelvik taban', 'stres tipi', 'urge tipi', 'menopoz', 'kadin sağliği'],
-  faqItems,
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(value));
 
+const siteUrl = resolveSiteUrl(Astro.site);
+const writerSlug = post.data.writerSlug as Writer['slug'];
+const articleSchemas = buildArticleSchemas({
+  title: post.data.title,
+  description: post.data.description,
+  writerSlug,
+  articleType: post.data.articleType,
+  publishedDate: post.data.date,
+  modifiedDate: post.data.modifiedDate,
+  image: post.data.imageSrc,
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  keywords: ['idrar kaçırma', 'üriner inkontinans', 'pelvik taban', 'stres tipi', 'sıkışma tipi', 'menopoz', 'kadın sağlığı'],
+  faqItems,
   siteUrl,
 });
 ---
 
 <SiteLayout
-  title={`${articleTitle} - Estranova`}
-  description={articleDescription}
+  title={`${post.data.title} - Estranova`}
+  description={post.data.description}
   ogType="article"
   jsonLd={articleSchemas}
 >
@@ -64,8 +80,8 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Beden & Yakinlik · Pelvik Taban"
-      title="Konuşmadiğimiz Şey — 40 Sonrasi İdrar Kaçirma"
+      eyebrow="Beden & Yakınlık · Pelvik Taban"
+      title={post.data.title}
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -73,222 +89,53 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
-        authorSlug="senai-aksoy"
-        articleType="clinical-guide"
-        publishedDate="2 Mayis 2026"
-        readingMinutes={7}
-        imageSrc="/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp"
-        imageAlt="Evde sakin hareket ve beden farkindaliği atmosferi; idrar kaçirma ve pelvik taban sağliği için editoryal görsel"
+        authorSlug={writerSlug}
+        articleType={post.data.articleType}
+        publishedDate={formatDate(post.data.date)}
+        lastUpdated={post.data.modifiedDate ? formatDate(post.data.modifiedDate) : undefined}
+        readingMinutes={6}
+        imageSrc={post.data.imageSrc}
+        imageAlt={post.data.imageAlt}
       />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
-        <SaveForLaterButton
-          slug="/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/"
-          title={articleTitle}
-        />
+        <SaveForLaterButton slug={pathname} title={post.data.title} />
       </div>
 
-      <ArticleSummary title="Kisa Özet">
-        <p>
-          Çevremizdeki kadinlarin önemli bir kismi bir biçimde idrar kaçirma yaşiyor — ama çoğu kimseye söylemiyor.
-          Çoğu kadin yillarca isim koyamadiği için sessiz kaliyor; bu yüzden ilk işimiz konuya isim koymak.
-          İki ana tip var, mekanizmalari farkli, tedavi yollari farkli. Bu yazi tabloyu netleştiriyor;
-          davranişsal-medikal-cerrahi seçeneklerin haritasini ve doktorunuza ne sormaniz gerektiğini
-          birlikte koyuyor — promosyon değil, eğitim.
-        </p>
-      </ArticleSummary>
+      {post.data.summary && (
+        <ArticleSummary title="Kısa Klinik Yanıt">
+          <p>{post.data.summary}</p>
+        </ArticleSummary>
+      )}
 
       <ArticleProsePanel>
-        <h2 id="isim-koymak">İsim Koymak: İki Tip Var, İkisi de Konuşulmaz</h2>
-        <p>
-          Hastalarimin çok büyük bir kismi yillardir söyleyemediği şeyi sonunda söylediğinde, ilk
-          söyledikleri <em>"bunu kimseye anlatamadim"</em> oluyor. Oysa bu konu çevremizde —en yakin dost sohbetlerinde bile— saklanan, söylenmeyen bir sessizlik alani <Evidence level={5} />. İsmi konulmayan bir meselenin çözümü de konuşulamiyor — bu yüzden ilk adimimiz, her şeyi bir kenara birakip konunun adini dürüstçe koymak.
-        </p>
-        <p>
-          İdrar kaçirma "yaşlanmanin kaçinilmaz bir faturasi" değil; ismi olan, türleri olan, kanitli tedavi yollari bulunan bir tibbi durumdur. Hangi tipin yaşandiğini net bir şekilde bilmek, aslinda doğru bir çözümün yarisidir — çünkü izlenecek yol tipe göre tamamen farklilaşir.
-        </p>
-        <p>
-          Klinikte karşilaştiğimiz iki ana tip var. <strong>Stres tipi</strong>: öksürürken, gülerken, ağir bir şey kaldirirken yaşanan ufak kaçirmalar; burada karin içi basincin aniden artmasi, idrar tutma mekanizmasinin yetersiz kalmasina yol açiyor. <strong>Sikişma (urge) tipi</strong>: tuvalete gitme isteği aniden öyle güçlü gelir ki yetiştiremezsiniz; burada mesane kasinin erken aktive olmasi söz konusudur. Bir de bu ikisinin bir arada görüldüğü karişik (mixed) tablolar var. Hangisinde olduğumuzu netleştirmek, doğru bir adimi seçebilmenin temel koşuludur <Evidence level={5} />.
-        </p>
-
-        <h2 id="pelvik-taban">Bedenin Söylediği Şey: Pelvik Taban Anatomisi</h2>
-        <p>
-          Pelvik tabanimizin da kalbimiz veya bacak kaslarimiz gibi kendine has bir gücü ve ritmi var; ama çoğumuz ellili yaşlara gelene kadar onun varliğini bile fark etmiyoruz. Oysa o kaslar da bizimle birlikte yaş aliyor, hormonal değişimlerden etkileniyor, geçirdiğimiz doğumlardan ve yillarin getirdiği kümülatif yüklerden payini aliyor.
-        </p>
-        <p>
-          Pelvik taban — kasik kemikleri arasinda, mesaneyi ve rahmi alttan bir hamak gibi tutan kas ve bağ dokusu aği. Menopozda östrojen düşüşü bu dokunun esnekliğini ve dolgunluğunu azaltiyor; doğumlar, kronik öksürük, ağir kaldirma ve kabizlik yillarca bu kaslara sessizce yük bindiriyor <Evidence level={5} />. Bedenimizin hormonal değişimi ile yillarin birikmiş bu yükü birleştiğinde, belirtiler artik saklanamaz hale geliyor.
-        </p>
-        <p>
-          Bu bir yaş hatasi değil, biyolojik bir gerçek. Bedeniniz size bir bilgi veriyor — dinlemek tedavinin ilk adimi. Hekim odasinda önümüze çikacak ilk sorulara hazirlikli olmak, hikâyemizi doğru kurmak için kiymetli: şikâyet ne zaman başladi, hangi durumlarda oluyor, gün içinde kaç kez yaşiyorsunuz, gece de uykudan uyandiriyor mu, doğumlarinizin sayisi ve şekli neydi? Bu bilgiler, klinik diyalogu kuracak ilk tuğlalardir.
-        </p>
-
-        <h2 id="davranissal">Davranişsal Adimlar — Ne Gerçekten Çalişiyor?</h2>
-        <p>
-          Hemen cerrahi seçeneklere yönelip acele etmeden önce, günlük hayatimiza katabileceğimiz basit ama kararli adimlarin ne kadar büyük yollar açabileceğini görmek gerekiyor. Çünkü bu fiziksel-davranişsal adimlar hem yan etkisiz hem de bilimsel olarak en güçlü şekilde belgelenmiş olanlardir — özellikle stres tipinde tedavinin temelidir.
-        </p>
-        <p>
-          <strong>Pelvik taban kas eğitimi (Kegel)</strong> doğru yapildiğinda stres tipi idrar kaçirmada en güçlü kanit tabanina sahip ilk basamak yaklaşimdir <Evidence level={5} />. Burada kritik nokta <em>"doğru yapmak"</em>: karin, bacak ve kalça kaslarini sikmadan, sadece pelvik taban kasini kasip gevşetebilmek. Çoğu kadin ilk denemelerinde yanliş kaslari çaliştiriyor — bu yüzden bir pelvik taban fizyoterapistinin rehberliği, tedavinin etkisini belirgin ölçüde artiriyor. Pelvik taban kas eğitimi, mesane eğitimi ve günlük alışkanlıklar hakkında pratik bilgiler içeren <a href="/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/" class="font-semibold text-primary underline decoration-gold/40 underline-offset-4 hover:decoration-primary">Menopozda İdrar Kaçırma ve Pelvik Taban Sağlığı</a> başlıklı blog yazımızı da inceleyebilirsiniz. <strong>Mesane eğitimi</strong> ise aniden gelen sikişma tipinde tedavinin adeta omurgasidir: tuvalete gitme araliklarinizi kademeli olarak uzatan küçük bir takvim, mesane refleksini sakinleştiriyor ve ona kontrolü yeniden öğretiyor.
-        </p>
-        <p>
-          Yük faktörlerini azaltmak da düşünüldüğünden çok daha etkili. Kilo yönetimi, sigarayi birakma (kronik öksürük zinciri), kabizliği çözme ve mümkün olduğunda ağir kaldirma sıklığını azaltma — bu dört adim birlikte düşünüldüğünde belirgin fark yaratiyor <Evidence level={4} />. Tek başina her biri küçük bir kazançtir; birlikte uygulandiklarinda ise belirti şiddeti pek çok kadinda hissedilir düzeyde azaliyor.
-        </p>
-
-        <h2 id="medikal-cerrahi">Medikal ve Cerrahi Seçenekler</h2>
-        <p>
-          Tüm bu davranişsal adimlari denediğiniz halde günlük yaşaminizdaki o tedirginlik hissi geçmiyor ve şikâyetiniz sürüyorsa, bunu asla bir irade meselesi ya da kabullenilmesi gereken bir kader gibi görmeyin. Masaya diğer seçenekleri de sakince ve birlikte koyma zamani gelmiştir. Tedavi plani tamamen yaşadiğiniz tipe göre şekillenir.
-        </p>
-        <p>
-          Sikişma tipinde mesane kasinin aşiri uyarilmasini yumuşatan reçeteli ilaç seçeneklerimiz var; bunlarin etki ve yan etki profilleri kişiselleştirilerek değerlendiriliyor <Evidence level={4} />. Postmenopozal dönemde <strong>lokal vajinal östrojen tedavisi</strong> (krem, halka veya tablet) idrar yolu dokusunu da besliyor; bu yüzden sikişma bileşeni olan tablolarda ek bir destek olabiliyor <Evidence level={5} />. Lokal östrojen, sistemik HRT'nin küçük ve bölgesel bir alt kümesidir — vücudunuzun geri kalanina yük bindirmeden hedef dokuyu korur.
-        </p>
-        <p>
-          Stres tipinde ve şiddetli olgularda <strong>cerrahi seçenekler</strong> gündeme gelebiliyor: mid-uretral sling (aski) operasyonu en güçlü kanit tabanina sahip cerrahi seçenektir <Evidence level={5} />. Cerrahi her hasta için uygun değildir; eşlik eden tibbi durumlar, doğum planlari, beklentiler ve bireysel risk-fayda dengesi hekiminizle detaylica konuşulmali. Karmaşik olgularda ürodinami denilen test, mesane fonksiyonunu detaylica haritaliyor — gereksiz bir zahmet değil, doğru karari kuran bilimsel bir adimdir.
-        </p>
-
-        <h2 id="kanit-siniri">Yerel Lazer ve RF — Umut Etiketi vs Klinik Gerçekler</h2>
-        <p>
-          Son yillarda yerel lazer ve radyofrekans uygulamalari idrar kaçirma için çok sik duyduğunuz, reklam panolarinda veya sosyal medyada önünüze çikan seçenekler arasinda. Burada muayenehanede de hastalarima söylediğim o dürüst cümleyi kurayim: bu uygulamalarin stres tipi idrar kaçirmadaki kanit seviyesi sinirlidir; elimizde uzun vadeli ve geniş katilimli veriler henüz yeterli değildir <Evidence from={2} to={3} />. Bazı çalişmalarda kisa vadeli geçici iyileşmeler bildirilmiş olsa da, hangi hastada ne kadar süreyle etkili olduğu sorusu hâlâ açiktir.
-        </p>
-        <p>
-          Bunu kestirme bir çözüm yerine, bilimin ve klinik tecrübenin süzgecinden geçmiş bir gerçek olarak okumak en doğrusudur: karar vermeden önce davranişsal adimlar denenmiş mi, doğru tip belirlenmiş mi, lokal östrojen gibi belgeli seçeneklerin yeri konuşulmuş mu? Bu sıralamayi atlayarak doğrudan yerel cihaz uygulamalarina yönelmek, çoğu zaman beklenen faydayi vermez. Sıralamayi doğru kurmak hem bütçenizi hem de en önemlisi duygusal beklentinizi korur.
-        </p>
-
-        <h2 id="iletisim">Doktora Hangi Sorulari Sormali?</h2>
-        <p>
-          Yillar önce kliniğe gelen bir kadinin şu sözünü hiç unutmam: <em>"Söyleyemiyorum doktor bey, çocuklarimin yaninda bile üstümü değiştirmek zorunda kaliyorum."</em> Oysa bu sikintiyi sesli olarak kurabilmek bile iyileşme yolunun yarisidir. Hekim odasinda yargilanmaya değil, bilgiye ulaşiyorsunuz — ve orada soracağiniz doğru sorular, alacağiniz desteğin kalitesini doğrudan belirler.
-        </p>
-        <p>
-          Görüşmeye giderken şu üç soruyu yaninizda götürün: <strong>Birincisi</strong> — <em>"Bende hangi tip idrar kaçırma var — stres mi, sikişma mi, karişik mi? Bunu netleştirmek için ürodinami gibi bir test gerekir mi?"</em> Bu soru, planin en baştan doğru yola girmesini sağlar. <strong>İkincisi</strong> — <em>"Benim profilime uygun davranişsal ve fiziksel adimlar hangileridir, bunlarin etkisini ne kadar sürede ve nasil ölçeceğiz?"</em> Bu, tedaviyi 8-12 haftalik bir takip takvimine bağlar. <strong>Üçüncüsü</strong> — <em>"Eğer bu ilk adimlar yetersiz kalirsa, bir sonraki aşamada bizi hangi medikal veya cerrahi seçenekler bekliyor; bunlarin riskleri nelerdir?"</em> Bu da sürecin tek seferlik bir karar değil, bir yolculuk olduğunu netleştirir.
-        </p>
-
-        <RedFlagBox
-          markers={[
-            'İdrarda kan görmek (gözle görülür kanama)',
-            'Yan ağri, ateş ya da titremeyle birlikte idrar yakinmalari (üst idrar yolu enfeksiyonu şüphesi)',
-            'Aniden başlayan ve şiddeti hizla artan idrar tutamama',
-            'İdrar yaparken belirgin yanma + sik tekrarlayan idrar yolu enfeksiyonlari',
-            'Pelvik bölgede sarkma hissi, dolgunluk, ağirlik duygusu (organ prolapsusu)',
-            'Bel bölgesi veya bacaklarda yeni ortaya çikan güçsüzlük / uyuşma + idrar tutamama (nörolojik aciliyet)',
-          ]}
-          footnote="Bu liste teşhis amaçli değil; bir hekimle vakit kaybetmeden konuşmaya değer kabul edilen durumlarin hatirlaticisidir."
-        />
-
-        <h2 id="sik-sorulanlar">Sikça Sorulanlar</h2>
-
-        <h3>Kegel egzersizleri gerçekten işe yariyor mu, ne kadar sürede etki gösterir?</h3>
-        <p>
-          Doğru yapilan ve düzenli sürdürülen pelvik taban kas eğitimi stres tipi idrar kaçirmada en güçlü kanit tabanina sahip ilk basamak yaklaşimdir <Evidence level={5} />. Egzersiz yararlidir ancak hepsi ayni değildir; en kritik nokta doğru yapilmasidir. Belirgin fark genellikle 8-12 hafta düzenli uygulamadan sonra hissediliyor; tutarli yapildiğinda iyileşmeler 6 ay sonunda da artmaya devam edebiliyor. Bir pelvik taban fizyoterapistiyle başlangiç birkaç seans yapmak, kalan süreyi evde doğru bir şekilde sürdürmenizi sağliyor.
-        </p>
-
-        <h3>Lokal östrojen sistemik HRT mi, güvenli mi?</h3>
-        <p>
-          Vajinal yoldan uygulanan düşük doz östrojen lokal etkili olacak biçimde tasarlanir ve sistemik dolaşima geçen miktar oldukça düşüktür <Evidence level={5} />. Bu yüzden sistemik HRT'nin kontrendike olduğu birçok kadinda bile lokal östrojen değerlendirilebilir; ancak meme kanseri öyküsü gibi belirli durumlarda karar mutlaka onkolog ve jinekoloğun ortak değerlendirmesiyle verilir. Aynı kelime başka şeyi anlatabiliyor — netleştirme önemlidir.
-        </p>
-
-        <h3>Cerrahi nasil bir karar, kimler için uygun?</h3>
-        <p>
-          Mid-uretral sling (aski) cerrahisi stres tipi inkontinansta en yaygin ve en kanitli seçenektir <Evidence level={5} />. Davranişsal adimlarin yetmediği veya yaşam kalitesini belirgin etkileyen olgularda gündeme gelir. Doğum plani olmayan kadinlar için aday profili daha nettir; eşlik eden tibbi durumlar, geçirilmiş cerrahiler, beklenti ve risk-fayda dengesi değerlendirmenin parçasidir. Karar tek seans değil, bir süreçtir.
-        </p>
-
-        <h3>Yerel lazer veya radyofrekans, kanit durumu nedir?</h3>
-        <p>
-          Stres tipi idrar kaçırma için yerel lazer ve radyofrekans uygulamalarinin kanit seviyesi sinirli kalmaktadir ve uzun dönem ile karşilaştirmali veriler henüz yeterli değildir <Evidence from={2} to={3} />. Davranişsal adimlar ve belgeli seçenekler atlanarak bu uygulamalara geçmek çoğu zaman beklenen faydayi vermez. Karar öncesinde sıralamayi doğru kurmak hem bütçeyi hem beklentiyi korur.
-        </p>
-
-        <h3>İdrar kaçırma menopozdan sonra ortaya çiktiysa geçici midir?</h3>
-        <p>
-          Postmenopozal dönemde idrar kaçırma çoğunlukla geçici bir tablo değildir; östrojen düşüşü ve birikmiş pelvik taban yipranmasiyla sürebilen bir durumdur <Evidence level={4} />. Sürdürülebilir tedavi seçenekleri vardir ve büyük çoğunluk kadinda belirgin iyileşme mümkündür. Erken değerlendirme şikâyetin yillar içinde sessizce büyümesinin önüne geçer.
-        </p>
-
-        <h2 id="kapanis">Kapanış: Bilgi, Belirsizliğin Panzehiridir</h2>
-        <p>
-          İdrar kaçırma 40 sonrası kadinlarin önemli bir kisminin yaşadiği, ama büyük bir kisminin kimseye
-          söylemediği bir tablo. Bilgi belirsizliğin panzehiridir — bu konuda da öyle. Önce konuya isim
-          koymak: stres mi, sikişma mi, karişik mi? Sonra davranişsal adimlar — pelvik taban kas eğitimi
-          ve mesane eğitimi tedavinin temeli. Üzerine gerektiğinde lokal vajinal östrojen, reçeteli ilaç
-          ve seçilmiş olgularda cerrahi seçenekler hekiminizle birlikte değerlendiriliyor. Yerel lazer
-          ve RF gibi cihaz tabanli uygulamalarda kanit siniri dürüstçe söylenmeli — umut etiketinin
-          yerine bilgi koymak, hem bütçeyi hem zamani koruyor.
-        </p>
-        <p>
-          Burada açikça söylemem gereken bir şey daha var: bu konuda <em>"şu sizde işe yarar"</em> diyebilen
-          tek bir reçete yok. İki kadin ayni belirtiyi yaşar ama iki farkli seçenek doğru olabilir;
-          bedeniniz, geçmişiniz, hayat tercihleriniz hepsi hesaba katilir. Görüşmeye giderken üç temel soru çantanizda olsun —
-          tipiniz, davranişsal adimlarin etkisi nasil ölçülecek, bir sonraki adim ne olacak. Sorunun
-          kendisi cevabin yarisidir; bu yarisini siz koyarsaniz, kalani klinik diyalogun parçasi oluyor.
-        </p>
+        {bodyParts.length > 0
+          ? bodyParts.map((part) => part.level !== undefined
+            ? <Evidence level={part.level} />
+            : <Fragment set:html={part.html} />)
+          : <Content />}
       </ArticleProsePanel>
 
-      <RelatedReadings
-        class="mt-14"
-        paths={[
-          '/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/',
-          '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
-          '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
-          '/hormonal-gecis/menopoz/menopoz-nedir/',
-          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
-          '/library/',
-        ]}
-      />
+      {faqItems.length > 0 && (
+        <ArticleFAQ
+          items={faqItems}
+          title={post.data.faqTitle}
+          intro={post.data.faqIntro}
+          id={post.data.faqId}
+          class="mt-10"
+        />
+      )}
 
-      <ArticleEditorNote>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanit Düzeyi: <Evidence from={4} to={5} /></p>
-        <div class="space-y-3 leading-relaxed text-ink/80">
-          <p class="italic">
-            Bu yazida klinik tarafi bilinçle kisa tuttum; ayni konuyu — yazar değil, kadin hastaliklari
-            uzmani olarak — burada biraz daha açayim.
-          </p>
-          <p>
-            <strong class="text-primary">Klinik not:</strong> Üriner inkontinans postmenopozal
-            kadinlarda kliniğimde de en sik karşilaştiğim — ama en az dile getirilen — tablolardan biri.
-            Yaklaşik %30-50 yayginlik literatürde geçer; utanma kaynakli bildirim eksikliği nedeniyle
-            gerçek sikliği muhtemelen daha yüksek. Tip ayrimi (stres / urge / mixed) tedavi yolunu
-            belirler; ürodinami gibi spesifik testler karişik olgularda altin standart değerlendirme
-            aracidir.
-          </p>
-          <p>
-            <strong class="text-primary">Mekanizma notu:</strong> Stres tipinde uretra-pelvik taban
-            destek mekanizmasinin yetersizliği; urge tipinde detrüsör kasinin erken/aşiri aktivitesi
-            söz konusu. Östrojen düşüşü vajinal-üriner epitel atrofisine yol açiyor; bu hem urge hem
-            tekrarlayan idrar yolu enfeksiyonu zemini oluşturuyor. Doğum sayisi ve şekli, kronik öksürük,
-            obezite, kabizlik ve ağir kaldirma kümülatif risk faktörleri.
-          </p>
-          <p>
-            <strong class="text-primary">Klinik kirmizi bayraklar:</strong> Hematüri, ateşle birlikte
-            idrar yakinmalari, aniden başlayan ve şiddeti hizla artan idrar tutamama, eşlik eden nörolojik defisit,
-            pelvik organ prolapsusu bulgulari — tabloyu menopoz yorumuyla geçiştirilemez. Erken
-            ürolojik/jinekolojik değerlendirme ayirici tanida esastir.
-          </p>
-          <p>
-            <strong class="text-primary">Pratik bütünleşim:</strong> Tedavi plani bir hiyerarşi izler ve
-            bu sıralama klinikte titizlikle korunan bir disiplindir:
-            (1) tip ayrimi + öykü + temel idrar tetkikleri; (2) davranişsal-fiziksel basamak (pelvik taban
-            kas eğitimi, mesane eğitimi, yük faktörü düzenlemesi, lokal vajinal östrojen); (3) medikal
-            tedavi (urge tipinde antimuskariniks/beta-3 agonist gibi seçenekler bireysel değerlendirilir);
-            (4) cerrahi (mid-uretral sling stres tipinde altin standart). Karmaşik olgularda ürodinami
-            ve multidisipliner değerlendirme. Yerel lazer/RF uygulamalarinin kanit seviyesi sinirli
-            (Düzey 2-3); standart tedavi öncesi alternatif olarak değil, seçilmiş olgularda araştirma
-            içinde değerlendirilebilir.
-          </p>
-          <p>
-            <strong class="text-primary">Bireysellik vurgusu:</strong> Yukarıda paylaştiğim — hem
-            yazida hem bu notta — genel popülasyon yaklaşimidir; sizin tablonuzdaki tip ayrimi, eşlik
-            eden tibbi durumlar (kalp yetersizliği, diyabet, nörolojik tablolar), kullandiğiniz ilaçlar,
-            doğum öyküsü ve laboratuvar değerleri tedavi seçimine yön verir. Burada okuduğunuz bir
-            başlangiç rehberidir, karar değil; sizin için uygun adimlari kendi hekiminizle birebir
-            değerlendirmeniz önemlidir.
-          </p>
-          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Doç. Dr. Senai Aksoy, Kadin Hastaliklari ve Doğum Uzmani, Estranova Bilimsel Editörü
-          </p>
-        </div>
-      </ArticleEditorNote>
+      {post.data.relatedPaths?.length && <RelatedReadings paths={post.data.relatedPaths} class="mt-14" />}
 
-      <ArticleDisclaimer>
-        <p>
-          Bu içerik genel bilgi amaçlidir ve bireysel tibbi değerlendirme yerine geçmez. Tani ve tedavi kararlari için sağlik profesyoneline başvurunuz.
-        </p>
-      </ArticleDisclaimer>
+      {post.data.medicalEditorNote && (
+        <ArticleEditorNote class="mt-10"><p>{post.data.medicalEditorNote}</p></ArticleEditorNote>
+      )}
+
+      {post.data.disclaimer && (
+        <ArticleDisclaimer class="mt-10"><p>{post.data.disclaimer}</p></ArticleDisclaimer>
+      )}
     </SubmenuArticleBody>
   </main>
 

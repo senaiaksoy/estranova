@@ -128,3 +128,8 @@ Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi ince
 - Dört SSS, Dr. Senai Aksoy'un 29 Eylül 2026 tarihli özgün yanıtlarından türetildi ve tek görünür SSS/FAQPage kaynağına taşındı.
 - Audit düzeltmeleri: kanıt düzeyleri sonuca göre ayrıldı, ateş/yan ağrısı için NIDDK kaynağı eklendi, altı eski bölüm kimliği korundu, tekrarlar azaltıldı, güncelleme tarihi/görsel ve klinik şablon yüzeyleri bağlandı.
 - Yayın yolu: `/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/`.
+
+- Birleştirme (2026-09-29): statik hub sayfası ve blog kopyası tek kanonik rotada toplandı: `/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/`. `/blog/2026-04-18-…/` bu rotaya yönlendirilir; `article-faqs.ts` içindeki eski çelişkili SSS kaldırıldı. Yeni eklenen cerrahi/cihaz bölümü ve kırmızı bayrak cümlesi henüz ayrıca hekim incelemesinden geçmedi.
+- Humanize (2026-09-29): gövde senai-humanize akışıyla düzenlendi; kayıtlı yanıta dayanmayan birinci tekil cümle kaldırıldı, SSS yanıtları korunarak gövdedeki tekrar kısaltıldı, kırmızı bayrak ve kanıt cümleleri netleştirildi. Mizah H0. Yeni hekim incelemesi yok.
+- Hekim gövde katkısı (2026-09-29): üç soruya verilen yanıtlar Menopozun Etkisi, Pelvik Taban ve Cerrahi-Cihaz bölümlerine işlendi; lazer için kişisel sonuç/süre gözlemi kaynakla gerilim nedeniyle hekim kararına bırakıldı. Kayıt: klinik-katkilar/2026-09-29_menopozda-idrar-kacirma-blog.json.
+- Tıbbi inceleme (2026-09-29): inceleyen Dr. Alper Mumcu, tarih 29 Eylül 2026 (KC beyanı: "dr alper mumcu bugün"); kapsam güncel sürüm varsayıldı, Mumcu'nun yazılı notu kayıtta yok. schema `reviewedBy` (otomatik Mumcu) artık kayıtla uyumlu.

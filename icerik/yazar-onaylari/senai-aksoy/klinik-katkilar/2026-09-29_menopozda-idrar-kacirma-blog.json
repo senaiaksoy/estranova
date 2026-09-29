@@ -1,6 +1,6 @@
 {
   "writerSlug": "senai-aksoy",
-  "pathname": "/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/",
+  "pathname": "/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/",
   "answeredAt": "2026-09-29",
   "source": "Kullanıcının bu sohbet içindeki doğrudan hekim yanıtları",
   "request": "Berna Aksoy imzalı yazıyı Dr. Senai Aksoy imzalı olarak tekrar yaz",
@@ -59,7 +59,7 @@
     "Sıklık verisi bulunmadığından başlık Dr. Aksoy'a Sorular olarak seçildi.",
     "Yazar profili örnekleri gerçek hasta sözü veya klinik deneyim olarak kullanılmadı.",
     "Birinci tekil sorarım cümlesi bu oturumdaki gerçek yanıttan gövdeye aktarıldı; program öneririm ifadesi SSS yanıtında korundu.",
-    "SSS gövdede tek yüzey olarak kaldı; ayrı faqItems veya FAQPage oluşturulmadı."
+    "SSS frontmatter faqItems olarak tek görünür yüzeydir; ArticleFAQ ve FAQPage şeması aynı kaynaktan üretilir."
   ],
   "meaningReview": [
     "Menopoz tek başına neden gibi sunulmaktan çıkarıldı; çok etkenli değerlendirme NIDDK ve NICE kaynaklarıyla açıklandı.",
@@ -83,5 +83,66 @@
     ],
     "approvalBoundary": "Önceki tıbbi inceleme teyidi ve tarihi korunmuştur. Sonraki audit düzeltmeleri ayrıca kaydedilmiş olup yeni bir hekim incelemesi veya yayın onayı gerçekleşmiş gibi gösterilmemiştir."
   },
-  "baseline": "Başlangıçta hedef dosya temizdi; f96fa86 son dosya değişikliğiyle mevcut sürüm arasında fark yoktu. Blog için ayrı son tıbbi onay kaydı bulunmadı; mevcut sürüm onaylı sayılmadı."
+  "baseline": "Başlangıçta hedef dosya temizdi; f96fa86 son dosya değişikliğiyle mevcut sürüm arasında fark yoktu. Blog için ayrı son tıbbi onay kaydı bulunmadı; mevcut sürüm onaylı sayılmadı.",
+  "mergeRevision": {
+    "date": "2026-09-29",
+    "authorization": "Kullanıcının 'iki makaleyi birleştirelim' talebi",
+    "summary": "Statik hub sayfası ile blog kopyası tek kanonik rotada birleştirildi. Kanonik URL hub rotasıdır; içerik denetlenmiş blog kaynağından render edilir; eski /blog/ URL'si yönlendirilir. Statik sayfadaki kaynaksız yayılım, tekil hasta alıntısı ve çelişen SSS/kanıt ifadeleri taşınmadı. Statik sayfadan cerrahi/cihaz kanıt sınırı (yeni kaynak: Lukanović 2026 meta-analizi), pelvik organ sarkması ve nörolojik kırmızı bayrak eklendi.",
+    "approvalBoundary": "Yeni eklenen cerrahi/cihaz bölümü ve kırmızı bayrak cümlesi ayrıca hekim incelemesine tabidir; inceleme gerçekleşmiş gibi gösterilmemiştir."
+  },
+  "humanizeRevision": {
+    "date": "2026-09-29",
+    "authorization": "Kullanıcının 'humanize turunu şimdi yap' talebi",
+    "changes": [
+      "Tüm gövde senai-humanize akışıyla elden geçirildi: yol haritası cümlesi kaldırıldı, edilgen yığın ve tekdüze ritim azaltıldı, tür tanımları listeye çevrildi, kırmızı bayrak cümlesi bölündü, hekime sorular listeye alındı.",
+      "Birleştirme turunda eklenen, kayıtlı hekim yanıtına dayanmayan 'Muayene odasında sık duyduğum' cümlesi kaldırıldı.",
+      "Gövdedeki birinci tekil cümle SSS 2. yanıttan kısaltıldı ('Bu yüzden ilk sorum, kaçırmanın nasıl ve ne zaman olduğudur'); SSS yanıtları değiştirilmedi.",
+      "Cochrane kanıt cümlesine 'stres tipi kaçırması olan kadınlar' popülasyonu eklendi (derlemedeki yüksek kalite derecesi bu alt gruba aittir).",
+      "Atıf eklemeleri: kırmızı bayraklara [3], cerrahi seçeneklere [6], mesane günlüğüne [7]. Özete cihaz kanıt sınırı cümlesi eklendi."
+    ],
+    "approvalBoundary": "Dil düzenlemesidir; yeni hekim incelemesi veya yayın onayı gerçekleşmiş gibi gösterilmemiştir."
+  },
+  "bodyContributions": [
+    {
+      "question": "İdrar kaçırmayla gelen bir kadında, menopozun dışında başka bir neden düşündüren ilk bulgu genellikle nedir?",
+      "targetSection": "Menopozun Etkisi ve Diğer Nedenler",
+      "answeredAt": "2026-09-29",
+      "answer": "Önce kaçırmanın ne zaman başladığını ve nasıl ortaya çıktığını sorarım. Özellikle birden başlaması ve idrar yaparken yanmanın eşlik etmesi enfeksiyonu düşündürür; idrarda kan varsa ayrıca değerlendirilmesi gerekir. Bu durumda yakınmayı doğrudan menopoza bağlamam, idrar testiyle başlarım. NICE",
+      "localEditedText": "Bu yüzden önce kaçırmanın ne zaman başladığını ve nasıl ortaya çıktığını sorarım. Birden başlaması ve idrar yaparken yanmanın eşlik etmesi enfeksiyonu düşündürür; idrarda kan varsa bu ayrıca değerlendirilir. Böyle bir durumda yakınmayı doğrudan menopoza bağlamam, idrar testiyle başlarım. [3] [7]",
+      "status": "Gövdeye işlendi; yanıttaki NICE atfı mevcut kaynak 3 (NICE NG123) ile eşleştirildi; düzenlenmiş hali hekime sunuldu",
+      "approvedAt": null
+    },
+    {
+      "question": "Kadınlar pelvik taban egzersizlerinde en çok neyi yanlış yapıyor ya da yanlış biliyor?",
+      "targetSection": "Pelvik Taban ve Mesane Eğitiminin Yeri",
+      "answeredAt": "2026-09-29",
+      "answer": "En sık gördüğüm hata, pelvik tabanı çalıştırdığını sanırken karın ve kalça kaslarını sıkmak ya da nefesini tutmak. Doğru hareketi önce birlikte kontrol etmek önemlidir; ayrıca egzersiz yapmak için idrar akışını sürekli durdurmalarını önermem. Düzenli ve doğru yapılan egzersizin etkisini görmek zaman alır.",
+      "localEditedText": "En sık gördüğüm hata, pelvik tabanı çalıştırdığını sanırken karın ve kalça kaslarını sıkmak ya da nefesi tutmak. Bu yüzden doğru hareketi önce birlikte kontrol etmek önemlidir. Egzersiz yapmak için idrar akışını sürekli durdurmayı da önermem. / Düzenli ve doğru yapılan egzersizin etkisini görmek zaman alır. (üç aylık program paragrafında)",
+      "status": "Gövdeye işlendi; düzenlenmiş hali hekime sunuldu",
+      "approvedAt": null
+    },
+    {
+      "question": "Lazer veya radyofrekans soran bir hastaya genel olarak ne söylüyorsunuz?",
+      "targetSection": "Cerrahi ve Cihaz Uygulamaları",
+      "answeredAt": "2026-09-29",
+      "answer": "Önce idrar kaçırmanın tipini ve şiddetini belirlerim. Hafif ve orta derecede stres tipi idrar kaçırması olan bazı hastalarımda vajinal lazerle iyi sonuçlar gördüm; ancak bunu kalıcı bir çözüm olarak anlatmam. Benim gözlemimde etki çoğu zaman yaklaşık 1–1,5 yıl sürüyor, kişiden kişiye değişebiliyor. Radyofrekans için aynı sonucu veya süreyi varsaymam; her iki yöntemde de uzun dönem kanıtların sınırlı olduğunu hastayla açıkça konuşurum.",
+      "localEditedText": "Lazer veya radyofrekans sorulduğunda önce kaçırmanın tipini ve şiddetini belirlerim. Hafif ve orta derecede stres tipi kaçırması olan bazı hastalarımda vajinal lazerle iyi sonuçlar gördüm; yine de tek tek gözlemler araştırma kanıtının yerine geçmez. Lazeri kalıcı bir çözüm olarak anlatmam; radyofrekans için de aynı sonucu veya süreyi varsaymam. İki yöntemde de uzun dönem kanıtın sınırlı olduğunu hastayla açıkça konuşurum.",
+      "heldBack": "Yalnızca '1–1,5 yıl' süre gözlemi eklenmedi (kaynaksız sayı; kaynak 9 ile gerilim).",
+      "status": "Gövdeye işlendi (hekim seçimi: seçenek 2); süre gözlemi dışarıda",
+      "approvedAt": null,
+      "decision": {
+        "date": "2026-09-29",
+        "choice": "Seçenek 2: 'bazı hastalarımda iyi sonuç' gözlemi, tek tek gözlemlerin kanıt yerine geçmediği notuyla eklensin",
+        "source": "Kullanıcının bu sohbetteki doğrudan yanıtı"
+      }
+    }
+  ],
+  "medicalReviewRecord": {
+    "reviewer": "Dr. Alper Mumcu",
+    "reviewedAt": "2026-09-29",
+    "source": "Kullanıcının bu sohbetteki beyanı: 'dr alper mumcu bugün'",
+    "scopeNote": "Beyanda kapsam ayrıca belirtilmedi; kayıt, incelemenin güncel sürüm (e10d6ca: birleştirme, humanize, hekim gövde katkıları, cerrahi/cihaz bölümü, genişletilmiş kırmızı bayraklar) için yapıldığı varsayımıyla tutuldu. Mumcu'nun kendi yazılı onayı veya notu bu kayıtta yoktur.",
+    "supersedes": "Önceki 'inceleyen adı belirtilmedi' notu"
+  },
+  "approvalBoundary": "Tıbbi inceleme: Dr. Alper Mumcu, 29 Eylül 2026 (kullanıcı beyanı). Yayın/deploy onayı verilmemiştir."
 }
