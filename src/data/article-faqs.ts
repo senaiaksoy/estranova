@@ -821,17 +821,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: '40 yaş sonrasında beslenmede en çok hangi başlıklar önem kazanır?',
       answer:
-        'Protein, lif, kemik sağlığını destekleyen besinler ve genel enerji dengesi daha görünür hale gelir. Ama mesele yalnızca eksik tamamlamak değil, sürdürülebilir bir tabak düzeni kurmaktır.',
+        'Protein, lif, kemik sağlığı için kalsiyum ve D vitamini ile B12 gibi emilimi yaşla değişebilen besinler daha görünür hale gelir. Enerji dengesi de bu dönemde kas kütlesi, hareket ve hormon değişimiyle birlikte yeniden şekillenir. Amaç eksik tamamlamak kadar sürdürülebilir bir tabak düzeni kurmaktır.',
     },
     {
       question: 'Tek bir “mükemmel menopoz diyeti” var mı?',
       answer:
-        'Hayır. Kültür, yaşam ritmi, sağlık durumu ve hedefler çok farklıdır. En iyi plan, uzun vadede sürdürülebilen ve bedeni daha dengeli hissettiren plandır.',
+        'Hayır. Kültür, yaşam ritmi, sağlık durumu ve hedefler çok farklı olduğu için herkese uyan tek bir plan yok. Akdeniz tipi beslenme menopozdaki kadınlarda en çok araştırılan yaklaşımlardan biridir, ama çalışma sayısı sınırlıdır. Uzun vadede sürdürülebilen ve size iyi gelen düzen çoğu zaman daha değerlidir.',
     },
     {
       question: 'Takviye almak yerine önce sofraya bakmak neden önemli?',
       answer:
-        'Çünkü birçok beslenme hedefi önce günlük düzen içinde karşılanabilir. Takviye bazen gerekli olabilir ama iyi bir temel olmadan üzerine eklenen kısa yol gibi kalır.',
+        'Çünkü birçok beslenme hedefi önce günlük düzen içinde karşılanabilir. Takviye bazen gerekli olabilir; ancak doz ve süre kan düzeyi, ilaçlar ve kişisel risklerle birlikte belirlenir. Eksiklik ya da açık bir klinik gerekçe yoksa raf alışkanlığı kararın yerini tutmaz.',
+    },
+    {
+      question: 'Menopozda kalsiyum ihtiyacı yaşa göre değişir mi?',
+      answer:
+        'Evet. Genel başvuru değerleri 19–50 yaş arası kadınlar için günde yaklaşık 1000 mg, 51 yaş ve sonrası için 1200 mg’dır. Tabaktan gelen kalsiyum da bu hesabın parçasıdır. Takviye gerekip gerekmediği; D vitamini düzeyi, böbrek taşı öyküsü ve kemik riskiyle birlikte hekiminizle değerlendirilmelidir.',
+    },
+    {
+      question: '50 yaşından sonra B12 emilimi neden konuşuluyor?',
+      answer:
+        'Yaşla birlikte mide asidi azalabildiği için doğal besinlerdeki B12’nin emilimi bazı kişilerde zorlaşabilir. Et, balık, yumurta ve süt ürünleri başlıca kaynaklardır; vejetaryen ve vegan beslenenlerde bu başlık daha da önem kazanır. Yorgunluk ya da unutkanlık tek başına B12 eksikliği anlamına gelmez; şüphe varsa karar kan tetkikiyle verilir.',
     },
   ],
   '/zamansiz-yasam/kilo-artisi-menopoz/': [
