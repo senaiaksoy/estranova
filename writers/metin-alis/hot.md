@@ -61,7 +61,7 @@ Her Metin Alış makalesi için AI agent şu sırayla ilerler:
 - "Vücudunu kandır" / "Metabolizmanızı sıfırlayın" — wellness-pop pazarlama.
 - "n=X hasta", "p<0.05", "tabela kararı" — klinik dergi tonu.
 - Marka adı (HRT / takviye / cihaz / klinik / hastane) gövdede.
-- Uluslararası kuruluş adı (NAMS/NICE/JAMA/WHO/ACOG/ESE/ASE/Mayo) gövdede — anonim "uluslararası uzman dernekler" yumuşaması.
+- Uluslararası kuruluş adı (NAMS/NICE/JAMA/WHO/ACOG/ESE/ASE/Mayo) gövdede — anonim "uluslararası uzman dernekler" yumuşaması. *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 
 ---
 
@@ -92,8 +92,8 @@ Her makale yayın öncesi bu kontrolden geçer. Tek "hayır" varsa **revizyon te
 9. [ ] 3-bölüm yapısı (durum → mekanizma → karar zinciri) makale akışında okunuyor mu?
 10. [ ] Klinik jargon ilk geçtiği yerde Türkçe karşılığıyla mı verilmiş?
 11. [ ] Marka adı (HRT/takviye/cihaz/klinik/hastane) gövdede YOK mu?
-12. [ ] Uluslararası kuruluş adı (NAMS/NICE/JAMA/WHO/ACOG/ESE/ASE/Mayo) gövdede YOK mu?
-13. [ ] Inline harici URL / markdown link gövdede YOK mu?
+12. [ ] Uluslararası kuruluş adı (NAMS/NICE/JAMA/WHO/ACOG/ESE/ASE/Mayo) gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
+13. [ ] Inline harici URL / markdown link gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 14. [ ] Korku/panik dili ("sessiz tehlike", "hemen başvurun") YOK mu?
 15. [ ] Tedavi reçete dili YOK mu (Doktorunuza danışın çerçevesi var mı)?
 

@@ -148,6 +148,7 @@ Bu cümle dergisel olabilir; ama panik kurmaz, satış yapmaz, teşhis koymaz.
 - Korku dili: “risk altındasınız”, “geç kalmayın”, “tehlikeli”
 - Tedavi / satış CTA'sı
 - Harici URL ve uluslararası kuruluş adı
+- **Atıf rejimi (dergi):** Kaynakça/Kaynaklar bölümü, dipnot, PubMed/DOI/PMID ve dergi-yıl atfı gövdede YOK (CLAUDE.md §4; kanıt izi `article-log.md` / brief'te kalır).
 
 ## 9. Kilo / Beden / Kompozisyon Konuları
 

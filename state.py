@@ -146,6 +146,7 @@ class EstranovaState(TypedDict, total=False):
     topic: str
     output_slug: str
     audience: str
+    writer_category: str  # 'scientific' = klinisyen (kanitli rejim); bos/diger = yasit (dergi rejimi)
     content_goal: str
     risk_level_initial: RiskLevel
     risk_level_current: RiskLevel
@@ -213,6 +214,7 @@ def initialize_state(
     article_angle: ArticleAngle | str = "",
     content_emphasis: list[str] | None = None,
     internal_link_suggestions: str = "",
+    writer_category: str = "",
 ) -> EstranovaState:
     timestamp = now_iso()
     emphasis = list(content_emphasis) if content_emphasis else []
@@ -224,6 +226,7 @@ def initialize_state(
         topic=topic,
         output_slug=slugify_topic(topic),
         audience=audience,
+        writer_category=writer_category,
         content_goal=content_goal,
         risk_level_initial=risk_level,
         risk_level_current=risk_level,

@@ -52,7 +52,7 @@
 - "X günde sıfır ağrı" / "Hızlı toparlanma" — wellness-pop pazarlama.
 - **"Önce / sonra" anlatımı — MUTLAK YASAK.**
 - **Spesifik alet / cihaz / takviye / kineziyolojik bant markası — MUTLAK YASAK.**
-- Uluslararası kuruluş adı (WCPT/IFOMPT/APTA) gövdede.
+- Uluslararası kuruluş adı (WCPT/IFOMPT/APTA) gövdede. *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 - Hasta hikayesi anekdot detayı.
 - "Kliniğimde / Pain Free'de" — klinik tanıtımı YASAK.
 

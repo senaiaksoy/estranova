@@ -279,6 +279,7 @@ Doktor olmayan kadın yazarların ortak atmosfer katmanıdır. Işık'ın kendi 
 ### Yasak Filtreleri (5 madde, MUST-PASS)
 
 13. ☐ **Inline harici URL YOK** mu? Markdown link gövdede YOK?
+    ☐ **Atıf rejimi (dergi):** kaynakça/dipnot/PubMed/DOI/PMID/dergi-yıl atfı YOK mu? (CLAUDE.md §4)
 14. ☐ **Uluslararası kuruluş/yayın adı** gövdede YOK mu? **Spesifik marka/restoran/ürün** YOK mu?
 15. ☐ **Tıbbi otorite kalıbı** YOK mu? **Sanat otoritesi** (*"tiyatrocu olarak"*) YOK mu?
 16. ☐ **Aile isim YASAĞI** geçti mi? Ablanın ismi / tanı yılı tam tarih / tedavi detayı / klinik adı YOK; eşi (Yunus Günce) ismi YOK; **Karı Koca İşleri parodisi yazıya kaynak DEĞİL**; **Yıldız Kenter doğrudan adı YOK** (*"bir hocam"* çerçevesi)?

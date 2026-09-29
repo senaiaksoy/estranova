@@ -49,6 +49,7 @@ Dosya: **`agents/writer_agent.md`**
 | Uzun cümle `style_risk` | `agents/compliance_expert_agent.py` — `_find_long_sentences` + ihlal ekleme (~L197–220) |
 | Eşikler ve token tavanları | `config/pipeline_limits.py` — `COMPLIANCE_SCORE_PUBLISH_OK` (85), `COMPLIANCE_LONG_SENTENCE_WORDS`, `WRITER_MAX_OUTPUT_TOKENS`, skor sabitleri |
 | Yaşıt tonu: harici markdown URL + adlı kuruluş | `agents/compliance_expert_agent.py` — `FORBIDDEN_SRC_ORG_MARKERS` + `strict.no_external_markdown_links` |
+| Atıf rejimi: yaşıt=dergi (kaynakça/DOI/PMID/PubMed yok), klinisyen=kanıtlı (kaynak bölümü serbest) | `agents/compliance_expert_agent.py` — `writer_category` (`state.py`), `strict.no_reference_apparatus_peer`, kaynak-bölümü ayrımı |
 | DNA sinyal sayımı (master) | `agents/compliance_master_validation.py` — `_dna_signal_count` |
 
 ## Nerede NE eklenir?

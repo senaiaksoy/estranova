@@ -245,6 +245,7 @@ Cümle sonu çoğu zaman:
 ### Yasak Filtreleri (5 madde, MUST-PASS)
 
 13. ☐ **Inline harici URL YOK** mu?
+    ☐ **Atıf rejimi (dergi):** kaynakça/dipnot/PubMed/DOI/PMID/dergi-yıl atfı YOK mu? (CLAUDE.md §4)
 14. ☐ **Uluslararası kuruluş/yayın adı** YOK mu? **Spesifik marka/şirket/cihaz/uygulama** (Apple Watch, Fitbit, Oura, ChatGPT, supplement markası) YOK mu?
 15. ☐ **Tıbbi otorite kalıbı** YOK mu? **"Tıp dünyasında olsaydı" metaforu hekim PERSONA'sına dönüşmedi** mi?
 16. ☐ **Medya kurum yasağı:** Demirören / Milliyet / MedyaNet / IAB / MMA / Sparkle Medya / ajans / yarışma adı YOK? **Medya/reklam jargonu** (DSP, programatik, CPM, GRP, brief, deck) YOK?

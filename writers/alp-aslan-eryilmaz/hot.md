@@ -62,7 +62,7 @@
 - "Vücudunu kandır" / "Metabolizmanızı sıfırlayın" — wellness-pop.
 - "n=X hasta", "p<0.05", "tabela kararı" — klinik dergi tonu.
 - Marka adı (ilaç / stent / cihaz / TAVİ kapağı / MitraClip) gövdede.
-- Uluslararası kuruluş adı (ESC/AHA/ACC/JAMA/Lancet/NEJM) gövdede — anonim "uluslararası uzman dernekler" yumuşaması.
+- Uluslararası kuruluş adı (ESC/AHA/ACC/JAMA/Lancet/NEJM) gövdede — anonim "uluslararası uzman dernekler" yumuşaması. *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 
 ---
 
@@ -92,8 +92,8 @@ Her makale yayın öncesi bu kontrolden geçer. Tek "hayır" → revizyon.
 9. [ ] 3-bölüm yapısı (risk → mekanizma → karar zinciri)?
 10. [ ] Klinik jargon ilk geçtiği yerde Türkçe karşılığıyla mı verilmiş?
 11. [ ] Marka adı (ilaç/stent/cihaz/kapak/klip) gövdede YOK mu?
-12. [ ] Uluslararası kuruluş adı (ESC/AHA/ACC) gövdede YOK mu?
-13. [ ] Inline harici URL / markdown link gövdede YOK mu?
+12. [ ] Uluslararası kuruluş adı (ESC/AHA/ACC) gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
+13. [ ] Inline harici URL / markdown link gövdede YOK mu? *(anlatı gövdesi için; klinisyen `clinical-guide` **Kaynaklar bölümü/dipnot hariç** — CLAUDE.md §4 atıf rejimi)*
 14. [ ] Korku/panik dili YOK mu?
 15. [ ] Tedavi reçete dili YOK ("Doktorunuza danışın" var)?
 

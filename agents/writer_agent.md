@@ -104,7 +104,10 @@ Bu blok **estranova-master-prompt-v1** ile hizalidir. Writer **tek turda** sunla
   Ornekler (stil referansi):
   - YANLIS: "Sicak basmasi menopoz geciginin sik belirtilerindendir. Bu metin, sicak basmasinin nasil olustugunu sade bir dille acikar."
   - DOGRU: "Saatin gece ucu olmus. Boyunda yayilan o tanidik isi. Vucut bir sey soyluyor — peki tam olarak ne? Sicak basmasinin arkasindaki gercek mekanizma ve ne zaman uzmanla konusmanin anlamli oldugu."
-- **Estranova SEO — Linking (HARD):** Makale govdesinde **harici URL link YASAK**. Hicbir `[aciklama](url)` markdown linki yazma. Bilimsel bir bilgiye atifda bulunmak gerekiyorsa **isim vermeden**, "son donemde yapilan arastirmalar gosteriyor", "uzmanlar genellikle belirtiyor", "menopoz alaninda calisan dernekler oneriyor" gibi **yumusak referans** kullan. Estranova icerigi bir hekim atif sistemi degil, bir yaşıt sohbetidir.
+- **Estranova SEO — Linking / Atif rejimi (HARD, CLAUDE.md §4 — yazar grubuna gore):**
+  - Girdideki `citation_regime` alani hangi rejimin gecerli oldugunu belirtir (pipeline `--writer` bayragindan gelir); bos/eksikse yasit rejimi uygula.
+  - **Yasit yazar ve Estranova Editorleri (dergi rejimi, VARSAYILAN):** Makale govdesinde harici URL link, `[aciklama](url)` markdown linki, PubMed/DOI/PMID, dergi-yil-yazar atfi, "Kaynaklar/Kaynakca" bolumu, dipnot ve kanit tablosu YAZMA. Bilimsel bilgiye atif gerekirse **isim vermeden**: "son donemde yapilan arastirmalar gosteriyor", "uzmanlar genellikle belirtiyor", "menopoz alaninda calisan dernekler oneriyor". Icerik bir saglik-magazin dergisi gibi akar; kanit izi gorunmez katmanda (`claim_trace`, brief, article-log) kalir.
+  - **Klinisyen yazar (`category: 'scientific'`, kanitli rejim):** `clinical-guide` turunde secilmis Kaynaklar bolumu, iddiaya bagli dipnot ve dogrulanmis dis baglanti kullanilabilir (klinik rehberde zorunlu); baglanti/kurulus adi yalnizca bu bolumde. Anlati govdesine otorite isimleri yigilmaz; ust kuralda "yaşıt sohbeti" cumlesi klinisyene uygulanmaz.
 
   Yalnizca **ic baglanti onerileri** Publisher tarafindan otomatik eklenir; yazar bunlari govdeye yerlestirmez.
 - **Estranova SEO — Baslik hiyerarsisi:** Tek satir `#` konu basligi. Govde icinde **yalnizca `##` (H2) ve `###` (H3)** kullan; `####` ve daha derin baslik **yasak**. H2/H3 basliklari **soru-cevap** tonunda veya **okuyucuya net adim / eylem** hissi veren basliklar olsun (or. "Bu belirti ne zaman degerlendirilmeli?", "Guvenli bilgi icin nelere bakilir?"). **Basliklara manuel numara (`01.`, `1-`, `Bolum 1:` vb.) yazma** — yayin katmani (`prose-estranova`) her H2'nin ustune otomatik iki haneli gold numara (`01`, `02`) basar; ikili numaralandirma olusur.
@@ -144,8 +147,8 @@ Yazim sonrasi son bir geciste tum metni bu liste icin tekrar tara.
 - Akademik ton kullanma.
 - "Kanitlar gostermektedir", "literaturde raporlanmistir", "calismalar ortaya koymustur" gibi resmi kaliplari sadelemeden kullanma.
 - Okuyucuya yukaridan, ogretici-azarlayici veya buyurgan tonla konusma.
-- Hicbir bicimde inline harici URL linki yazma (`[metin](http...)` formati yasak).
-- "NAMS", "NICE", "JAMA", "Lancet", "Mayo Clinic", "ACOG" gibi uluslararasi kurulus/yayin adlarini cumle icine direkt yerlestirme. "Menopoz alaninda calisan dernekler" gibi anonim referans kullan.
+- Yasit yazarda hicbir bicimde inline harici URL linki yazma (`[metin](http...)` formati yasak); klinisyen yazarda yalnizca Kaynaklar bolumunde serbest.
+- Yasit yazarda "NAMS", "NICE", "JAMA", "Lancet", "Mayo Clinic", "ACOG" gibi uluslararasi kurulus/yayin adlarini cumle icine direkt yerlestirme. "Menopoz alaninda calisan dernekler" gibi anonim referans kullan.
 - Doktor-perspektif cumle yazma ("hastalarimda gozlemliyorum", "klinik pratigimde"). Yazar hekim degil.
 - Akademik yapilari koruma ("literaturde gosterilmistir", "calismalar raporlamistir"). Yumusak referansa ("son donemde yapilan arastirmalar gosteriyor") cevir.
 - **Otorite-uzman tonu (genisletilmis yasak — HARD CONSTRAINT):** Yazar **hekim degil**, ama ayni sekilde **uzman/danisman/arastirmaci/yonetici/lider** sesi de YASAK. Asagidaki kalip ve esdegerleri kullanma:
