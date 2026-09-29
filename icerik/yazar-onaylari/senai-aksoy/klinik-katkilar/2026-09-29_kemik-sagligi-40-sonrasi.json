@@ -1,0 +1,76 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/zamansiz-yasam/kemik-sagligi-40-sonrasi/",
+  "answeredAt": "2026-09-29",
+  "source": "Dr. Aksoy'un bu sohbet içindeki doğrudan yanıtları (2026-09-29)",
+  "status": "Tamamlandı: 3/3 SSS yanıtı işlendi ve onaylandı; Dr. Mumcu bağımsız incelemesi (2026-09-29, tüm metin) ve KC editör onayı (2026-09-29) kaydedildi. Birleştirme/yayın kararı ayrıca verilecek.",
+  "revisionScope": "Gövde humanize edildi (ses, ritim, başlıklar, lede çeşitliliği), kaynak-iddia eşleşmeleri düzeltildi, tıbbi eksikler kaynaklı olarak tamamlandı. Bu kayıt yeni revizyonun tıbbi onayı değildir; Dr. Alper Mumcu incelemesi ve KC editör onayı ayrıca gereklidir.",
+  "publicationApproval": "Bu turda commit, push veya deploy yetkisi verilmedi.",
+  "faqConversionStatus": "3/3 gerçek yanıt alındı ve yerel SSS metnine işlendi (başlık: Dr. Aksoy'a Sorular; 'en sık' nitelemesi doğrulanmadığı için kullanılmadı).",
+  "faqQuestionsAsked": [
+    "Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?",
+    "DXA ölçümü herkese 40 yaşında gerekli midir?",
+    "Kemik sağlığı için yürüyüş tek başına yeterli olur mu?"
+  ],
+  "faqQuestionsRemaining": [],
+  "faqResponses": [
+    {
+      "question": "Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?",
+      "answer": "Çünkü kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.",
+      "editedForArticle": "Kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.",
+      "answeredAt": "2026-09-29",
+      "useApproval": "Dr. Aksoy makaleye giren hâli kullanılabilir buldu ve onayladı (2026-09-29)"
+    },
+    {
+      "question": "DXA ölçümü herkese 40 yaşında gerekli midir?",
+      "answer": "Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.",
+      "editedForArticle": "Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.",
+      "answeredAt": "2026-09-29",
+      "useApproval": "Dr. Aksoy makaleye giren hâli kullanılabilir buldu ve onayladı (2026-09-29)"
+    },
+    {
+      "question": "Kemik sağlığı için yürüyüş tek başına yeterli olur mu?",
+      "answer": "Yürüyüş iyi bir başlangıç, ama kemik sağlığı için tek başına yeterli görmem. Yanına kişiye uygun kas güçlendirme ve denge egzersizleri eklemeyi öneririm. Osteoporozu veya geçirilmiş kırığı olan birinde hareketlerin güvenli biçimde seçilmesi gerekir.",
+      "editedForArticle": "Yürüyüş iyi bir başlangıç, ama kemik sağlığı için tek başına yeterli görmem. Yanına kişiye uygun kas güçlendirme ve denge egzersizleri eklemeyi öneririm. Osteoporozu veya geçirilmiş kırığı olan birinde hareketlerin güvenli biçimde seçilmesi gerekir.",
+      "answeredAt": "2026-09-29",
+      "useApproval": "Dr. Aksoy makaleye giren hâli kullanılabilir buldu ve onayladı (2026-09-29)"
+    }
+  ],
+  "bodyVoiceConfirmed": [
+    {
+      "sentence": "Muayene odasında en sık duyduğum cümlelerden biri “Ben sadece biraz zayıfım, başka riskim yok” oluyor.",
+      "confirmedAt": "2026-09-29",
+      "note": "Dr. Aksoy kendi gözlemi olduğunu teyit etti."
+    }
+  ],
+  "pastedResidueNotes": "Yanıtlarla birlikte gelen 'bonehealthandosteoporosis.org' ve 'uspreventiveservicestaskforce.org' satırları yapıştırma kalıntısı sayıldı; metne ve kaynakçaya alınmadı. USPSTF zaten [4]. BHOF kaynağı doğrulanıp iddiayı desteklediği görülmeden eklenmeyecek. Dr. Mumcu yanıtlarının altındaki 'Springer Nature Link' satırı da yapıştırma kalıntısı sayıldı; kaynakçaya alınmadı.",
+  "faqUseApprovedAt": "2026-09-29",
+  "independentMedicalReview": {
+    "reviewer": "Dr. Alper Mumcu",
+    "date": "2026-09-29",
+    "coveredVersion": "eb41be3",
+    "scope": "Tüm metin",
+    "status": "Yapıldı",
+    "source": "Kullanıcının bu sohbetteki bildirimi (2026-09-29)"
+  },
+  "editorNoteContribution": {
+    "contributor": "Dr. Alper Mumcu",
+    "providedAt": "2026-09-29",
+    "source": "Dr. Aksoy'un bu sohbette ilettiği Dr. Mumcu yanıtları",
+    "placement": "Bilimsel Editör Notu: açılış (yanlış anlama) + iki klinik karar paragrafı (osteopenide ilaç kararı; hormon tedavisi ve kemik)",
+    "questionsAsked": [
+      "Osteopeni düzeyinde ölçümde ilaç kararı",
+      "Kemik korumasıyla hormon tedavisi",
+      "Kadınların kemik konusunda en sık yanlış anladığı nokta"
+    ],
+    "editing": "Yanıtlar dil düzeltmesi dışında birebir alındı; yeni gerekçe, oran veya tavsiye eklenmedi.",
+    "pending": "Notun makaleye giren hâli Dr. Mumcu'ya ayrıca gösterilmedi; yanıtlar kendi sözleri olduğundan değişiklik beklenmiyor."
+  },
+  "kcEditorApproval": {
+    "approver": "KC editör (Dr. Senai Aksoy)",
+    "date": "2026-09-29",
+    "scope": "Bu revizyon",
+    "recordedIn": "src/data/article-approvals.ts",
+    "source": "Kullanıcının bu sohbetteki bildirimi (2026-09-29)"
+  }
+}

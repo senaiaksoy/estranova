@@ -855,17 +855,17 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?',
       answer:
-        'Çünkü kemik kaybı çoğu zaman sessiz ilerler ve ilk güçlü işaretini yıllar sonra kırık riskiyle verir. Koruyucu yaklaşım, ağrı beklemeden risk faktörlerini ve tarama zamanını düşünmeyi gerektirir.',
+        'Kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.',
     },
     {
       question: 'DXA ölçümü herkese 40 yaşında gerekli midir?',
       answer:
-        'Hayır. Yaş, kırık öyküsü, aile öyküsü, steroid kullanımı, erken menopoz ve eşlik eden hastalıklar gibi riskler ölçüm zamanını değiştirir. Doğru zamanlama kişisel risk tablosuna göre belirlenir.',
+        'Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.',
     },
     {
       question: 'Kemik sağlığı için yürüyüş tek başına yeterli olur mu?',
       answer:
-        'Yürüyüş değerli bir temel ama her zaman tek başına yeterli olmayabilir. Kemik ve kas için yük taşıyan, dengeyi ve direnç kapasitesini geliştiren hareketlerin de plana girmesi çoğu zaman daha güçlü sonuç verir.',
+        'Yürüyüş iyi bir başlangıç, ama kemik sağlığı için tek başına yeterli görmem. Yanına kişiye uygun kas güçlendirme ve denge egzersizleri eklemeyi öneririm. Osteoporozu veya geçirilmiş kırığı olan birinde hareketlerin güvenli biçimde seçilmesi gerekir.',
     },
   ],
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': [
