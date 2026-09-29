@@ -1087,7 +1087,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/beslenme-yaslanma/',
     title: 'Beslenme ve Yaşlanma — 40+ Kadınlar için Beslenme Rehberi',
     description: 'Menopoz döneminde protein, vitaminler ve antioksidanları tabakta daha bilinçli konumlandırırken kişisel hedefleri hekim veya diyetisyenle netleştirmeyi hatırlatan rehber.',
-    publishedDate: '9 Mart 2026',
+    publishedDate: '14 Nisan 2026',
     writerSlug: 'berna-aksoy',
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam/',
