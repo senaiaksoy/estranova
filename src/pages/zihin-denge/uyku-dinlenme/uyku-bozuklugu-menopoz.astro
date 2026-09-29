@@ -34,7 +34,7 @@ const tocEntries = [
   { id: 'uzman-ne-zaman', label: 'Uyku Uzmanına Danışmayı Düşündüren İşaretler' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular" },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -61,8 +61,7 @@ const articleSchemas = buildArticleSchemas({
     'menopozda gece uyanması',
     'menopozda uykuya dalamama',
     'perimenopoz uyku',
-    'insomnia',
-    'progesteron uyku',
+    'CBT-I',
     'sıcak basması',
     'uyku hijyeni',
   ],
@@ -119,10 +118,10 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleProsePanel>
         <h2 id="uyku-mimarisi">Uyku Gece Boyunca Evre Evre İlerler</h2>
-        <p>Menopozda uykusuzluğu tek bir mekanizmayla açıklayamayız. Sıcak basmaları, gece terlemeleri, ruh hâli değişimleri ve menopozdan bağımsız uyku sorunları aynı tabloya birlikte katkıda bulunabilir.</p>
+        <p>Uyku gece boyunca aynı derinlikte ilerlemez; birkaç evreden geçer ve her evrenin işi ayrıdır.</p>
         <p>
-          Muayene odasında aynı tarifi farklı ağızlardan sık duyarım: aynı saatte yatılıyor, ama bazı sabahlar
-          iyi kalkılıyor, bazı sabahlar tükenmiş. Uykunun düz bir çizgi olmadığını hatırlamak bu soruyu anlamayı
+          Hastalarımdan en sık duyduğum şaşkınlıklardan biri şu: aynı saatte yatılıyor, ama bazı sabahlar iyi
+          kalkılıyor, bazı sabahlar tükenmiş. Uykunun düz bir çizgi olmadığını hatırlamak bu soruyu anlamayı
           kolaylaştırıyor. Uyku gece boyunca birkaç evreden geçer; bu nedenle saate bakmak tek başına yeterli değil.
         </p>
         <p>
@@ -145,7 +144,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           En sık nedenlerden biri gece ortaya çıkan sıcak basması ve terleme belirtileridir <Evidence level={4} /><sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>.
           Beden ısısındaki ani değişimler uyku bütünlüğünü bozarak sık uyanmaya yol açabilir. Buna östrojen ve
-          progesteron dalgalanmaları, ruh hâli değişimleri, artan kaygı, horlama ve uyku apnesi riskindeki kayma da
+          progesteron dalgalanmaları, ruh hâli değişimleri, artan kaygı, horlama ve uyku apnesi de tabloya
           eklenebilir.
         </p>
         <p>
@@ -170,12 +169,12 @@ const articleSchemas = buildArticleSchemas({
               <tr>
                 <td class="p-3 font-medium">Sıcak basması ve gece terlemesi (vazomotor belirtiler)</td>
                 <td class="p-3">Sırılsıklam uyanıp üşümek, gece boyunca sık uyanmak.</td>
-                <td class="p-3">Serin oda, katmanlı nevresim; gerekirse hekimle HRT veya hormon dışı ilaç seçenekleri.</td>
+                <td class="p-3">Serin oda, katmanlı nevresim; gerekirse hekimle hormon tedavisi (HRT) veya hormon dışı ilaç seçenekleri.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Hormonal geçiş</td>
                 <td class="p-3">Bazı kadınlarda uykuya dalmak zorlaşır, bazılarında gece ortasında ya da sabaha karşı uyanma öne çıkar.</td>
-                <td class="p-3">Sıcak basması, ruh hâli, uyku düzeni ve eşlik eden etkenleri birlikte değerlendirmek; gerekirse CBT-I.</td>
+                <td class="p-3">Sıcak basması, ruh hâli, uyku düzeni ve eşlik eden etkenleri birlikte değerlendirmek; gerekirse uykusuzluk için bilişsel davranışçı terapi (CBT-I).</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">İç saat (sirkadiyen ritim) kayması</td>
@@ -189,9 +188,11 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="yaygin-sorunlar">Yaygın Olarak Anlatılan Tablo</h2>
         <p>
           Muayene odasında sık duyduğum bir tarif var: yatağa girer girmez uyku gelmiyor, gelse bile gece üçe
-          doğru göz kendiliğinden açılıyor, sonra saatlerce tavan. Sahne aynı, paylaşan çok. Üçte tavana bakan kişi
-          kendini dünyadaki tek uyanık insan sanır; bu, yalnızlığın en sade hali. Oysa aynı saatte aynı tavana bakan
-          çok kadın var. Bunu bilmek küçük ama gerçek bir rahatlama olabiliyor.
+          doğru göz kendiliğinden açılıyor, sonra saatlerce tavan. Sahne aynı, paylaşan çok.
+        </p>
+        <p>
+          Üçte tavana bakan kişi kendini dünyadaki tek uyanık insan sanır. Oysa aynı saatte aynı tavana bakan çok
+          kadın var. Bunu bilmek küçük ama gerçek bir rahatlama olabiliyor.
         </p>
         <p>
           Menopoz döneminde sık görülen üç tablo var: uykuya dalmada güçlük, gece içinde sık uyanma ve erken saatte
@@ -206,14 +207,18 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="uyku-hijyeni">Uyku Hijyeni — Sade ve Tutarlı Adımlar</h2>
         <p>
           Başlangıç için en sıradan görünen adım çoğu zaman işe yarayanıdır: mümkün olduğunca sabit saatlerde yatıp
-          kalkmak. Hafta içi ve hafta sonu arasındaki farkı küçültmek iç saatinizi destekleyebilir. Telefon uygulaması
-          sekiz saat uyuduğunuzu söyleyebilir; siz yine de sabah toplantısına yorgun girebilirsiniz. Uyku süresi ile
-          dinlendirici uyku aynı ölçüt sayılmaz.
+          kalkmak. Hafta içi ve hafta sonu arasındaki farkı küçültmek iç saatinizi destekleyebilir.
+        </p>
+        <p>
+          Telefon uygulaması sekiz saat uyuduğunuzu söyleyebilir; siz yine de sabah toplantısına yorgun
+          girebilirsiniz. Saat tutar, ama dinlenmişliği ölçmez.
         </p>
         <p>
           Yatak odasını serin, karanlık ve sessiz tutmak sıcak basması olan kişilerde gece konforunu artırabilir
           <Evidence level={3} />. Akşam saatlerinde kafeini sınırlamak, yatmadan 2-3 saat önce ağır yemekten
-          uzaklaşmak, ekran ışığını yumuşatmak ve kısa bir kapanış rutini kurmak da yardımcı olabilir.
+          uzaklaşmak, ekran ışığını yumuşatmak ve kısa bir kapanış rutini kurmak da yardımcı olabilir. Yine de uzun
+          süren uykusuzlukta bu alışkanlıklar tek başına çoğu zaman yetmez; uyku kılavuzları da uyku hijyenini tek
+          başına bir tedavi olarak önermiyor<sup><a href="#kaynak-2">[2]</a></sup>.
         </p>
         <p>
           Uyku hazırlığı yatağa girdiğiniz anda başlamaz; akşamın son bölümünde başlar. Işığı biraz kısmak, telefonu
@@ -234,14 +239,10 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Melatonin ve diğer takviyelerin etkisi kişiden kişiye değişir; menopozal uykusuzluk için rutin ve herkese
-          uygun bir takviye formülü olduğu söylenemez <Evidence from={2} to={3} />. Düzenli ilaç kullanımı,
-          karaciğer veya böbrek hastalığı, gebelik olasılığı ya da bağışıklık sistemiyle ilgili bir durum varsa
-          takviye kararını hekim veya eczacıyla konuşun.
-        </p>
-        <p>
-          Düzenli ilaç kullananlar için en önemli nokta etkileşim. Kronik hastalık varsa bir takviyeye başlamadan
-          önce hekim görüşü almak güvenlik gereğidir. "Doğal" etiketi taşıyan destekler de ilaçlarla etkileşebilir;
-          güvenlik değerlendirmesi tedavi planının parçasıdır.
+          uygun bir takviye formülü olduğu söylenemez <Evidence from={2} to={3} />. Düzenli ilaç kullanıyorsanız,
+          gebelik olasılığınız varsa ya da karaciğer, böbrek veya bağışıklık sistemiyle ilgili bir durumunuz varsa,
+          "doğal" etiketli ürünlerin de ilaçlarla etkileşebileceğini unutmayın; takviye kararını hekim veya eczacıyla
+          birlikte verin.
         </p>
 
         <h2 id="tibbi-tedavi">Tıbbi Destek Seçenekleri — Karar Süreci</h2>
@@ -255,7 +256,7 @@ const articleSchemas = buildArticleSchemas({
           kadınlarda yapılan 11 randomize çalışmayı (toplam 973 katılımcı) birleştiren bir meta-analizde uyku
           kalitesinin ve uykusuzluk şiddetinin düzeldiği görülmüştür <Evidence level={5} /><sup><a href="#kaynak-2">[2]</a></sup><sup><a href="#kaynak-4">[4]</a></sup>. HRT ise gece
           terlemesi ve sıcak basması uykuyu belirgin biçimde bölüyorsa seçeneklerden biridir; kararı yaşınıza,
-          menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm<sup><a href="#kaynak-3">[3]</a></sup>.
+          menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm.
         </p>
         <p>
           Aynı şikâyetle gelen iki kadında hedef farklı olabilir: birinde gece uyanmalarını azaltmak, diğerinde
@@ -268,8 +269,9 @@ const articleSchemas = buildArticleSchemas({
           konforu hem güvenliği korur.
         </p>
         <p>
-          Şiddetli horlama, nefes durması şüphesi, bacaklarda huzursuzluk hissi, gündüz belirgin uyku hali ve üç
-          aydan uzun süren uyku bozukluğunda uyku tıbbı değerlendirmesi gerekir<sup><a href="#kaynak-3">[3]</a></sup>. Gerektiğinde polisomnografi
+          Üç aydan uzun süren uykusuzlukta önce kendim değerlendiririm. Şiddetli horlama, nefes durması şüphesi,
+          bacaklarda huzursuzluk ya da gündüz belirgin uyku hali varsa uyku tıbbı değerlendirmesi de isterim.
+          Gerektiğinde polisomnografi
           gibi testlerle uyku ayrıntılı incelenebilir. Bu test gecenizi sizin adınıza kaydeden, bilgilendirici bir
           adımdır.
         </p>
@@ -291,11 +293,11 @@ const articleSchemas = buildArticleSchemas({
           yürütmek yerine klinik değerlendirme, gerekirse polisomnografi ve uyku uzmanı izlemi isterim.
         </p>
 
-        <h2 id="kaynaklar">Kaynaklar</h2>
+        <h2 id="kaynaklar" style="counter-increment: none;">Kaynaklar</h2>
         <p>Bu rehberdeki klinik çerçeveyi oluşturan başlıca kaynaklar; metindeki numaralar bu listeye bağlanır:</p>
         <ol>
           <li id="kaynak-1">Türkiye Endokrinoloji ve Metabolizma Derneği. <a href="https://temd.org.tr/halk/hastaliklar/menopoz" target="_blank" rel="noopener noreferrer">Menopoz hakkında bilgilendirme notu</a>.</li>
-          <li id="kaynak-2">American Academy of Sleep Medicine. <a href="https://aasm.org/new-guideline-supports-behavioral-psychological-treatments-for-insomnia/" target="_blank" rel="noopener noreferrer">Kronik uykusuzlukta davranışsal ve psikolojik tedaviler kılavuzu</a>.</li>
+          <li id="kaynak-2">Edinger JD ve ark. Yetişkinlerde kronik uykusuzluğun davranışsal ve psikolojik tedavisi: Amerikan Uyku Tıbbı Akademisi klinik uygulama kılavuzu. J Clin Sleep Med. 2021;17(2):255-262. <a href="https://pubmed.ncbi.nlm.nih.gov/33164742/" target="_blank" rel="noopener noreferrer">PMID: 33164742</a>.</li>
           <li id="kaynak-3">Silvestri R ve ark. Menopozal uyku bozukluklarının tedavisine ilişkin İtalyan Uyku Tıbbı Derneği görüş bildirisi ve kılavuzu (sistematik derleme). Maturitas. 2019;129:30-39. <a href="https://pubmed.ncbi.nlm.nih.gov/31547910/" target="_blank" rel="noopener noreferrer">PMID: 31547910</a>.</li>
           <li id="kaynak-4">Moon HJ, Yu SN, Hur MH. Menopozal uykusuzlukta bilişsel davranışçı terapinin uyku kalitesi ve uykusuzluk şiddeti üzerine etkisi: sistematik derleme ve meta-analiz. Womens Health Nurs. 2025;31(4):304-319. <a href="https://pubmed.ncbi.nlm.nih.gov/41531400/" target="_blank" rel="noopener noreferrer">PMID: 41531400</a>.</li>
         </ol>
@@ -310,11 +312,11 @@ const articleSchemas = buildArticleSchemas({
           göstermeyebilir.
         </p>
         <p>
-          Uyku bozukluğu görünmez bir yük olabilir. Nedeni ayrıldığında ise bir sonraki adım çok daha net görünür.
+          Uyku bozukluğu görünmez bir yük olabilir. Hekiminize anlatmaya değer.
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a Sorular" items={faqItems} class="mt-10" />
 
       <RelatedReadings
           class="mt-14"
