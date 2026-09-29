@@ -1091,7 +1091,7 @@ export const staticArticles: StaticArticleEntry[] = [
     writerSlug: 'berna-aksoy',
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam/',
-    keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'anti-inflamatuar'],
+    keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'antioksidan'],
   },
   {
     path: '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
