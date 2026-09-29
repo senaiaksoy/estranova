@@ -72,5 +72,18 @@
     "scope": "Bu revizyon",
     "recordedIn": "src/data/article-approvals.ts",
     "source": "Kullanıcının bu sohbetteki bildirimi (2026-09-29)"
+  },
+  "turkiyeBaglami": {
+    "addedAt": "2026-09-29",
+    "section": "turkiye-baglami (Türkiye’de Kemik Sağlığı Nasıl Görünüyor)",
+    "sources": [
+      "Tuzun 2012 Osteoporos Int 23:949 (PMID 21594756)",
+      "Kirazlı 2020 Arch Osteoporos 15:137 (PMID 32860546)",
+      "Semiz 2025 Med Sci Monit 31:e948436 (PMID 40491031)",
+      "Samanci 2026 BMC Public Health 26 (PMID 41652560)"
+    ],
+    "verification": "Kaynaklar PubMed'de doğrulandı; sayılar özet metinlerindeki değerlerle eşleştirildi. Kanıtsız Türkiye iddiası eklenmedi; kurum/dernek adı gövdeye alınmadı.",
+    "reviewStatus": "Bu bölüm 29 Eylül Dr. Mumcu incelemesinden SONRA eklendi; incelemenin (coveredVersion eb41be3) kapsamında değil. Dr. Mumcu incelemesi ve KC editör onayı bekliyor.",
+    "limitations": "FRACTURK verisi 2009'a ait; D vitamini çalışmaları hastane başvurusu olan kişilere dayanıyor ve toplumu temsil etmiyor. Metin bunu belirtiyor."
   }
 }

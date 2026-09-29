@@ -25,6 +25,7 @@ const tocEntries = [
   { id: 'kemik-taramasi', label: 'DXA Taraması' },
   { id: 'beslenme-destegi', label: 'Beslenme Desteği' },
   { id: 'hareket-plani', label: 'Hareket' },
+  { id: 'turkiye-baglami', label: 'Türkiye Bağlamı' },
   { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
   { id: 'kapanis', label: 'Üç Soru' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
@@ -78,7 +79,7 @@ const articleSchemas = buildArticleSchemas({
         publishedDate="1 Mart 2026"
         lastUpdated="29 Eylül 2026"
         medicalReviewer="Dr. Alper Mumcu"
-        readingMinutes={8}
+        readingMinutes={9}
         imageSrc="/images/library/editorial/pillar-standing-burgundy-art.webp"
         imageAlt="46 yaşlarında profesyonel duruşlu kadın yarı-gövde portresi — krem kazak, bej kargo pantolon, eller cepte, profilden duvar/sütun yanında, arka planda bordo çerçeveli sanat işi güçlü palet aksanı; 40 sonrası kemik sağlığı ve uzun vadeli koruyucu duruş temasını editöryal kariyer-sağlık tonuyla taşıyan dosya görseli"
       />
@@ -188,6 +189,23 @@ const articleSchemas = buildArticleSchemas({
           Sigaradan uzak durmak, alkolü sınırlamak ve uzun oturma sürelerini bölmek de bu planın parçası. En sık yapılan hata, birkaç hafta çok yoğun çalışıp sonra tamamen bırakmaktır. Kemik sabırlıdır. Ona iyi gelen, haftaya yayılan ve yıllarca sürdürebileceğiniz bir düzendir.
         </p>
 
+        <h2 id="turkiye-baglami">Türkiye’de Kemik Sağlığı Nasıl Görünüyor</h2>
+        <p>
+          Kılavuzların çoğu başka ülkelerde yazılıyor. Kendi ülkemizin verisine de bakmakta fayda var.
+        </p>
+        <p>
+          Türkiye’de 2009’da yapılan bir kalça kırığı çalışması, 50 yaş ve üzerindeki kadınların üçte birinde (%33,3) kalça bölgesinde osteoporoz buldu. Aynı çalışmaya göre 50 yaşındaki bir kadının yaşamı boyunca kalça kırığı geçirme olasılığı %14,6, erkeklerde %3,5 idi <sup><a href="#ref-10">[10]</a></sup>. O tarihte Türkiye, kalça kırığı oranı düşük Avrupa ülkeleri arasındaydı; ama oran 1988–89’a göre belirgin biçimde artmıştı. Veriler eski olduğu için bugünkü tabloyu birebir yansıtmayabilir. Bu rakamlar sizi korkutmak için burada değil; ölçümün ve erken konuşmanın neden değerli olduğunu göstermek için.
+        </p>
+        <p>
+          Kırık riskini hesaplayan FRAX aracının Türkiye’ye özgü bir modeli var. Ulusal uzlaşı raporu da DXA erişimini ve FRAX kullanımını ülkemizin güçlü yanları arasında sayıyor <sup><a href="#ref-11">[11]</a></sup>. Ölçmek mümkün. Asıl eksik, sonrası: aynı rapor, kırık geçirdikten sonra ilaç tedavisi almayan hastaların oranını %75–90, osteoporoz tanı oranını yaklaşık %25 olarak tahmin ediyor <sup><a href="#ref-11">[11]</a></sup>. Sonucunuzu aldığınızda “şimdi ne yapacağız?” diye sormanız bu yüzden önemli.
+        </p>
+        <p>
+          D vitamini düşüklüğü Türkiye’de sık bildiriliyor. Beş büyük ilde 44.592 kadının sonuçlarına bakan bir çalışmada (2011–2017) D vitamini eksikliği (20 ng/mL altı) Diyarbakır’da %78,7, İstanbul’da %50,5 bulundu <sup><a href="#ref-12">[12]</a></sup>. Düzce’de 85.892 yetişkinle yapılan başka bir çalışmada eksiklik kadınlarda %68,6, erkeklerde %61,3’tü; düzeyler yazın en yüksek, kışın en düşüktü <sup><a href="#ref-13">[13]</a></sup>. İki çalışma da hastaneye başvurup D vitamini baktıran kişilere dayanıyor; bu yüzden tüm toplumu temsil etmiyor.
+        </p>
+        <p>
+          Bu veriler kılavuzun söylediğini değiştirmiyor: belirgin bir gerekçe yoksa rutin D vitamini testi önerilmiyor <sup><a href="#ref-6">[6]</a></sup>. Yine de düşük düzeyin sık görüldüğü bir ülkede yaşıyorsanız, özellikle kış aylarında güneşlenme ve beslenme alışkanlıklarınızı hekiminizle konuşmanız yerinde olur. Test ve takviye kararı kişisel riskinize göre verilir.
+        </p>
+
         <h2 id="tibbi-secenekler">Tıbbi Seçenekler ve Sınırlar</h2>
         <p>
           Ölçümünüz belirgin düşükse ya da daha önce kırık geçirdiyseniz, yaşam tarzı adımlarının yanına ilaç seçenekleri de eklenebilir.
@@ -247,6 +265,18 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li id="ref-9">
             <strong>9.</strong> American College of Obstetricians and Gynecologists (ACOG). <em lang="en">Clinical Practice Guideline No. 2: Management of Postmenopausal Osteoporosis</em>. Obstet Gynecol. 2022. <a href="https://www.acog.org/clinical/clinical-guidance/clinical-practice-guideline/articles/2022/04/management-of-postmenopausal-osteoporosis" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Kılavuz metni</a>
+          </li>
+          <li id="ref-10">
+            <strong>10.</strong> Tuzun S ve ark. <em lang="en">Incidence of hip fracture and prevalence of osteoporosis in Turkey: the FRACTURK study</em>. Osteoporos Int. 2012;23(3):949–955. <a href="https://pubmed.ncbi.nlm.nih.gov/21594756/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-11">
+            <strong>11.</strong> Kirazlı Y ve ark. <em lang="en">Updated approach for the management of osteoporosis in Turkey: a consensus report</em>. Arch Osteoporos. 2020;15(1):137. <a href="https://pubmed.ncbi.nlm.nih.gov/32860546/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-12">
+            <strong>12.</strong> Semiz A ve ark. <em lang="en">Vitamin D Levels and Prevalence of Vitamin D Deficiency in Turkish Women According to Regions and Age Groups</em>. Med Sci Monit. 2025;31:e948436. <a href="https://pubmed.ncbi.nlm.nih.gov/40491031/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-13">
+            <strong>13.</strong> Samanci R. <em lang="en">How deficient are we? A retrospective analysis of vitamin D status in 85,892 Turkish adults</em>. BMC Public Health. 2026;26(1). <a href="https://pubmed.ncbi.nlm.nih.gov/41652560/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
           </li>
         </ol>
       </ArticleProsePanel>
