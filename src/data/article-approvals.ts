@@ -356,8 +356,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi.',
+    approvedAt: '2026-09-29',
+    note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi. 2026-09-29: ters ölçekli kanıt etiketleri site ölçeğine çevrildi (statin ve migren orta, kalp yetmezliği ve ubiquinol sınırlı) ve kaynak numaralarına bağlandı; Dr. Aksoy onayı, tıbbi onay KC beyanı (yazılı Mumcu notu yok).',
   },
   {
     pathname: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
