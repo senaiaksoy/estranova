@@ -142,7 +142,14 @@
     "reviewedAt": "2026-09-29",
     "source": "Kullanıcının bu sohbetteki beyanı: 'dr alper mumcu bugün'",
     "scopeNote": "Beyanda kapsam ayrıca belirtilmedi; kayıt, incelemenin güncel sürüm (e10d6ca: birleştirme, humanize, hekim gövde katkıları, cerrahi/cihaz bölümü, genişletilmiş kırmızı bayraklar) için yapıldığı varsayımıyla tutuldu. Mumcu'nun kendi yazılı onayı veya notu bu kayıtta yoktur.",
-    "supersedes": "Önceki 'inceleyen adı belirtilmedi' notu"
+    "supersedes": "Önceki 'inceleyen adı belirtilmedi' notu",
+    "approval": {
+      "status": "Onaylandı",
+      "approver": "Dr. Alper Mumcu",
+      "source": "Kullanıcının bu sohbetteki beyanı: 'dr mumcu onayı tamam'",
+      "recordedAt": "2026-09-29",
+      "note": "Onay beyanı kullanıcıdan gelir; Mumcu'nun kendi yazılı notu kayıtta yoktur. Kapsam önceki kayıttaki gibi güncel (birleştirilmiş) sürüm için tutulur."
+    }
   },
-  "approvalBoundary": "Tıbbi inceleme: Dr. Alper Mumcu, 29 Eylül 2026 (kullanıcı beyanı). Yayın/deploy onayı verilmemiştir."
+  "approvalBoundary": "Tıbbi inceleme ve onay: Dr. Alper Mumcu, 29 Eylül 2026 (kullanıcı beyanı). Yayın/deploy onayı bu kayıtla verilmiş sayılmaz."
 }
