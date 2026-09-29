@@ -98,6 +98,17 @@
       "coveredVersion": "2d0e538",
       "status": "Onaylandı",
       "source": "Kullanıcının bu sohbetteki bildirimi ('mumcu onay tamam'); tarih bildirim günü olarak kaydedildi"
+    },
+    "simplification": {
+      "date": "2026-09-29",
+      "authorization": "Dr. Aksoy: 'Türkiye bölümünü sadeleştirip PR aç'",
+      "changes": [
+        "Kalça kırığı cümlesinden erkek oranı (%3,5) çıkarıldı",
+        "Düzce çalışmasından erkek oranı (%61,3) çıkarıldı",
+        "D vitamini paragrafına tek köprü cümlesi eklendi"
+      ],
+      "newClaims": "Yok; yalnızca sayı azaltıldı. Kaynak zinciri [10-13] değişmedi.",
+      "reviewNote": "Dr. Mumcu incelemesi (2026-09-29) bu sadeleştirmeden önce yapıldı."
     }
   }
 }
