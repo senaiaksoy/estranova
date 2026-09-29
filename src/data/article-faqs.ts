@@ -493,27 +493,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopozda libido azalması herkeste olur mu?',
       answer:
-        'Hayır. Menopozda herkesin cinsel isteği azalmaz; araştırmaların bildirdiği oranlar da isteğin nasıl ölçüldüğüne göre değişir. Daha az istek duymanızdan çok, bunun sizde sıkıntı yaratıp yaratmadığı ve yaşamınızı nasıl etkilediği değerlendirmede belirleyicidir. Düşük istek tek başına bir bozukluk sayılmaz.',
+        'Bu soruyu sormanız çok kıymetli; çünkü poliklinikte en sık karşılaştığımız ama kadınların dile getirmekte en çok tereddüt ettiği konulardan biri bu. Öncelikle bilin ki yalnız değilsiniz, ancak bu durum menopoza giren her kadının yaşamak ‘zorunda’ olduğu bir kural da değildir.',
     },
     {
       question: 'Vajinal östrojenin tüm vücuda etkisi var mı, güvenli mi?',
       answer:
-        'Düşük doz vajinal östrojen, menopoza bağlı vajinal ve idrar yolu belirtilerinde etkilidir. Kana geçen miktarı düşüktür. Östrojene duyarlı meme kanseri geçirdiyseniz veya bu nedenle tedavi görüyorsanız, sizin için uygun olup olmadığı onkoloğunuz ve ilgili hekiminizle yarar ve riskler değerlendirilerek kararlaştırılır.',
+        'Sizi çok iyi anlıyorum; ‘östrojen’ veya ‘hormon’ adını duymak haklı olarak sizde bir çekince yaratıyor. Ancak sistemik hormon hapları ile bu lokal tedavinin farkını şöyle düşünebilirsiniz: Gözünüzde bir enfeksiyon veya kuruluk olduğunda tüm vücudunuza antibiyotik hap almazsınız; doğrudan göz damlası damlatırsınız ve o damla sadece gözünüzde çalışır. Vajinal östrojen de böyledir: Vücudunuzun geneline değil, esas olarak kuruyan, incelen vajina ve idrar yolu dokusuna etki eden bir ‘lokal bakım’dır. Doz o kadar küçüktür ki, en düşük dozlu vajinal tabletleri bir yıl boyunca aralıksız kullansanız dahi alacağınız toplam hormon miktarı, eskiden kadınların aldığı tek bir menopoz hapının içindeki hormona ancak denk gelir. Kana geçen miktar çok düşüktür; düşük dozlarda rahminizi kalınlaştırdığı ya da damarlarınızda pıhtı riskini artırdığı gösterilmemiştir. Amacımız sizi gençlik hormonlarınıza boğmak değil; yalnızca canınızı yakan dokunun elastikiyetini ve nemini geri kazandırmaktır. Östrojene duyarlı meme kanseri geçirdiyseniz, bu tedaviye onkoloğunuzla birlikte karar veririz.',
     },
     {
       question: 'Antidepresan kullanıyorum, libido azlığını ona mı bağlamalıyım?',
       answer:
-        'İlacın etkisi olabilir; bazı antidepresanlar isteği ve uyarılmayı azaltabilir. Değişimi ilaca başladıktan veya doz değiştikten sonra fark ettiyseniz bunu reçete eden hekiminize anlatın. Ağrı, uyku, ruh hâli ve ilişkinizde yaşadıklarınız da birlikte ele alınır. İlacı kendi başınıza kesmeyin.',
+        'Hissettiğiniz bu isteksizlik kesinlikle sizin bir eksikliğiniz veya partnerinize olan sevginizin bitmesiyle ilgili değil. Bazı antidepresanlar beyninizdeki kaygıyı ve üzüntüyü yatıştırırken, ne yazık ki arzu ve heyecanla ilişkili dopamin gibi kimyasalların sesini de kısabiliyor. Ancak burada çok önemli bir kuralımız var: İlacınızı cinselliğiniz etkilendi diye kendi kendinize aniden kesmemelisiniz. Çünkü ilacı aniden bırakmak hem çekilme belirtilerine hem de depresyonun çok daha şiddetli geri dönmesine yol açabilir. Ruh sağlığınızı korurken cinsel hayatınızı da feda etmek zorunda değiliz; bu durum için ilacınızı yazan hekiminizle iş birliği içinde çözüm ararız.',
     },
     {
       question: 'Partnerimle bunu nasıl konuşurum?',
       answer:
-        'Sizi zorlayan şeyi kendi deneyiminiz üzerinden anlatabilirsiniz. Ağrıdan çekiniyorsanız bunu, yorgunsanız yorgunluğunuzu söyleyin; partnerinizi suçlamadan ne yaşadığınızı paylaşmakla başlayabilirsiniz. Önce hekiminizle konuşmak da anlatacaklarınızı netleştirebilir. Hangi konuşmanın önce geleceğine siz karar verebilirsiniz.',
+        'Konuşmaya doğrudan “Cinsel isteğim bitti” diyerek başlarsanız partneriniz savunmaya geçebilir veya içine kapanabilir. Önce ilişkinin ve sevginin sağlam olduğunu teyit edin, ardından problemi vücudun kimyasına devredin. Örnek cümle: “Sana olan sevgim, bağlılığım ya da seni ne kadar çekici bulduğumla ilgili hiçbir şey değişmedi. Ama son zamanlarda bedenimde kontrol edemediğim bazı biyolojik değişimler oluyor. Bu durumun seni kırabileceğinden ya da yanlış anlayabileceğinden endişelendiğim için açıkça konuşmak istedim.”',
     },
     {
       question: 'Partnerim yoksa cinsel sağlıkla ilgilenmem gerekir mi?',
       answer:
-        'Evet, partneriniz olmasa da bu belirtilerle ilgilenebilirsiniz. Vajinal kuruluk, doku hassasiyeti ve ağrı günlük rahatlığınızı ve idrar yolu sağlığınızı etkileyebilir. Yeni bir belirtiyi değerlendirmek için cinsel ilişkinizin olması gerekmez; bunu hekiminizle konuşabilirsiniz.',
+        'Vajina ve idrar yolları sağlığı sadece bir partnerle cinsel ilişki yaşamak için gerekli bir alan değildir; tamamen sizin kendi konforunuz, rahat idrar yapabilmeniz ve enfeksiyon kapmamanız içindir. Östrojen azaldığında o doku korumasız kalır. Cinsel hayatınız şu an olmasa bile; dokunuzun büzüşmemesi, vajina kanalının daralmaması, ileride yapacağımız rutin sağlık kontrollerinde canınızın yanmaması ve en önemlisi tekrarlayan idrar yolu iltihaplarıyla uğraşmamanız için burayı nemli ve canlı tutmak önemlidir. Tıpkı cildimiz kuruduğunda kremliyor, dişlerimizi kaybetmemek için fırçalıyorsak; ürogenital dokuyu da nemlendiricilerle, gerektiğinde düşük doz lokal tedavilerle beslemek sizin en temel öz bakımınızdır.',
     },
   ],
   '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': [

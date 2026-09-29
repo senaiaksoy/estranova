@@ -31,7 +31,7 @@ const tocEntries = [
   { id: 'secenekler', label: 'Sizi Zorlayan Belirtiye Göre Destek' },
   { id: 'testosteron', label: 'Testosteron Hakkında Net Sınırlar' },
   { id: 'ne-zaman-hekime', label: 'Değerlendirme Gerektiren Belirtiler' },
-  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular" },
   { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
 ];
 
@@ -47,7 +47,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '27 Nisan 2026',
-  modifiedDate: '28 Eylül 2026',
+  modifiedDate: '29 Eylül 2026',
   pathname: route,
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik/',
@@ -80,7 +80,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="27 Nisan 2026"
-        lastUpdated="28 Eylül 2026"
+        lastUpdated="29 Eylül 2026"
         readingMinutes={10}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/libido-degisimi-menopoz-byline.webp"
@@ -100,15 +100,15 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="acilis">Libido Azalması Ne Zaman Sorundur?</h2>
         <p>Eskisi kadar istek duymadığınızda, bunun yaşınızla mı, yorgunlukla mı, ilişkinizle mi ilgili olduğunu ayırmak zor gelebilir. Önce yaşadığınızı anlatabilmeniz gerekir.</p>
         <p>
-          Muayene odasında bu konu çoğu zaman görüşmenin sonunda açılır. Hasta kalkmak üzereyken durur;
-          sormak istediği, ama nasıl dile getireceğini bilemediği bir konu daha vardır. Burada tek bir
-          hastayı değil, yıllar içinde karşılaştığım benzer görüşmeleri anlatıyorum.
+          Cinsel isteğinizdeki değişimi konuşmak istiyor, fakat nasıl dile getireceğinizi bilemiyor
+          olabilirsiniz. Söze nereden başlayacağınızı bulmak için önce sizi neyin zorladığını düşünmek
+          yardımcı olabilir.
         </p>
         <p>
           Bu konuda soru sormaktan çekinmenizi istemem. Daha az istek duymakla bundan sıkıntı duymak ayrı
-          şeylerdir. Bir değerlendirmede değişimin ne kadar sürdüğüne, sizi rahatsız edip etmediğine ve
-          yaşamınızdaki etkisine bakarız
-          <Evidence level={3} />.<sup><a href="#kaynak-1">[1]</a></sup>
+          şeylerdir <Evidence level={3} /> <sup><a href="#kaynak-1">[1]</a></sup>.
+          Bir değerlendirmede değişimin ne kadar sürdüğüne, sizi rahatsız edip etmediğine ve
+          yaşamınızdaki etkisine bakarız <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
 
         <h2 id="uc-ayri-soru">İstek, Uyarılma ve Ağrı Aynı Şey Değil</h2>
@@ -119,23 +119,23 @@ const articleSchemas = buildArticleSchemas({
           <li><strong>Ağrı ve konfor:</strong> Kuruluk, yanma ya da ağrı yüzünden cinsel yakınlıktan kaçınıyorsunuz.</li>
         </ul>
         <p>
-          Bir kez ağrı yaşadıktan sonra, yeniden olacağından çekinebilirsiniz. Bu kaygıyla cinsel ilişkiden
-          kaçındıkça isteğiniz de azalabilir. Önce ağrının nedenine ve vajinal kuruluk gibi yakınmalara bakmak gerekir
-          <Evidence level={5} />.<sup><a href="#kaynak-2">[2]</a></sup>
+          Ağrı nedeniyle cinsel yakınlıktan uzak duruyorsanız, bunu yalnızca istek azalması olarak
+          değerlendirmemek gerekir. Ağrının nedenini ve vajinal kuruluk gibi eşlik eden yakınmaları da
+          ele alırız <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
 
         <h2 id="nedenler">Hormonlar, Uyku, İlaçlar ve İlişkiniz</h2>
-        <p>Uykunuz bölünüyorsa, yorgunsanız veya ilişkinizde gerilim varsa bunlar da cinsel isteğinizi etkileyebilir. Hormonlarla birlikte yaşamınızda neler değiştiğine bakarız.</p>
+        <p>Uykunuz, gün içindeki enerjiniz ve ilişkinizde yaşadıklarınız da cinsel isteğinizle bağlantılı olabilir. Hormonlarla birlikte yaşamınızda neler değiştiğine bakarız.</p>
         <p>
           Östrojen azalması vajinal kuruluk ve hassasiyetle ilişkili olabilir. Testosteron da cinsel istekte
           rol oynar
-          <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
+          <Evidence level={4} /> <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
         <p>
-          Geceleri sık uyanıyor, sıcak basmalarıyla uğraşıyorsanız cinsel isteğiniz de etkilenebilir.
-          Depresyon, kaygı, bedeninizi nasıl gördüğünüz ve ilişkinizdeki gerilim de etkili olabilir.
-          Bazı antidepresanlar başta olmak üzere kimi ilaçlar ise
-          isteği, uyarılmayı veya orgazmı etkileyebilir <sup><a href="#kaynak-3">[3]</a></sup>.
+          Geceleri sık uyanmak, sıcak basmalarıyla uğraşmak ve yorgunluk cinsel isteğinizi etkileyebilir.
+          Depresyon, kaygı, bedeninizi nasıl gördüğünüz ve ilişkinizdeki gerilim de birlikte değerlendirilir.
+          Bazı antidepresanlar başta olmak üzere kimi ilaçları kullanırken
+          istekte azalma, uyarılma veya orgazm güçlüğü yaşanabilir <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
         <p>
           İlaç kullanıyorsanız değişimin ne zaman başladığını düşünün. İlaca başladıktan veya doz
@@ -162,13 +162,13 @@ const articleSchemas = buildArticleSchemas({
         <ul>
           <li>Değişimin aniden mi, yavaş yavaş mı başladığı</li>
           <li>Uyarılma veya orgazm güçlüğünün eşlik edip etmediği</li>
-          <li>Vajinal yanma, kanama veya idrar yakınmaları</li>
-          <li>Sıcak basmaları ve gün boyunca enerjiniz</li>
+          <li>Vajinal yanma, kanama veya idrar yakınmalarının bulunup bulunmadığı</li>
+          <li>Sıcak basmalarının sıklığı ve gün boyunca enerjiniz</li>
           <li>Belirtilerle ilaç başlangıcı veya doz değişikliği arasındaki zaman ilişkisi</li>
-          <li>İlişkinizde kendinizi güvende hissedip hissetmediğiniz ve neyin değişmesini istediğiniz</li>
+          <li>İlişkinizde kendinizi güvende hissedip hissetmediğiniz ve nelerin değişmesini istediğiniz</li>
         </ul>
         <p>
-          Bu konuşmanın sonunda ilaç başlanması gerekmeyebilir. Bazen önce yaşadığınıza bir ad koyar,
+          Bu konuşmanın sonunda ilaç başlanması gerekmeyebilir. Bazen önce yaşadığınıza bir ad koyup
           neyin sizi kaygılandırdığını netleştiririz. Sonraki adımı, sizin neye ihtiyaç duyduğunuza göre konuşuruz.
         </p>
 
@@ -180,21 +180,22 @@ const articleSchemas = buildArticleSchemas({
             kayganlaştırıcılar ilk seçenekler arasında yer alır. Menopoza bağlı vajinal ve idrar yolu
             yakınmaları birlikte genitoüriner menopoz belirtileri olarak adlandırılır. Bu belirtiler
             sürüyorsa düşük doz vajinal östrojen
-            değerlendirilebilir <Evidence level={5} />.<sup><a href="#kaynak-2">[2]</a></sup> <sup><a href="#kaynak-5">[5]</a></sup>
+            değerlendirilebilir <Evidence level={5} /> <sup><a href="#kaynak-2">[2]</a></sup> <sup><a href="#kaynak-5">[5]</a></sup>.
           </li>
           <li>
             <strong>Sıcak basması ve uyku bölünmesi öndeyse:</strong> Tüm vücutta etkili olan sistemik menopoz
             hormon tedavisi (HRT), uygun kişide bu belirtileri azaltabilir. Uyku ve günlük rahatlık
-            düzeldiğinde cinsel isteğe dolaylı yararı olabilir; ancak isteği doğrudan artıracağı öngörülemez <Evidence level={4} />.
-            <sup><a href="#kaynak-2">[2]</a></sup>
+            düzeldiğinde cinsel isteğe dolaylı yararı olabilir; ancak isteği doğrudan artıracağı öngörülemez <Evidence level={4} /> <sup><a href="#kaynak-2">[2]</a></sup>.
           </li>
           <li>
             <strong>İlişkisel veya psikolojik etkenler öndeyse:</strong> Cinsel terapi, bireysel psikolojik destek
-            veya çift görüşmeleri bazı kişiler için daha uygun bir başlangıç olabilir <sup><a href="#kaynak-3">[3]</a></sup>.
+            veya çift görüşmeleri bazı kişiler için uygun bir başlangıç olabilir <sup><a href="#kaynak-3">[3]</a></sup>.
           </li>
           <li>
-            <strong>Pelvik taban gerginliği veya ağrı varsa:</strong> Uygun değerlendirme sonrasında pelvik taban
-            fizyoterapisi destek seçeneklerinden biri olabilir <sup><a href="#kaynak-2">[2]</a></sup>.
+            <strong>Pelvik taban gerginliği veya ağrı varsa:</strong> Muayenede kasların ağrıya katkısı
+            saptanırsa pelvik taban fizyoterapisi değerlendirilebilir. Kas kaynaklı cinsel ağrıda yarar
+            bildiren bir çalışma vardır; ancak bu çalışma menopoz dönemine özgü değildir
+            <sup><a href="#kaynak-6">[6]</a></sup>.
           </li>
         </ul>
         <p>
@@ -209,24 +210,32 @@ const articleSchemas = buildArticleSchemas({
           Sizde belirgin sıkıntı yaratan düşük cinsel istek, hipoaktif cinsel istek bozukluğu (HSDD) açısından
           değerlendirilebilir. Bu tanı kan testosteron düzeyine dayanmaz. Menopozla ilişkili HSDD'de testosteron
           tedavisi düşünülmeden önce ağrı, vajinal kuruluk, ilaç etkisi, ruh hâli ve ilişkiyle ilgili etkenler ele alınır
-          <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
+          <Evidence level={4} /> <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
         <p>
-          Tedavi uygun bulunursa deriden uygulanan, yani transdermal yol kullanılır. Takipte testosteron
-          düzeyinin kadınlarda normal kabul edilen aralıkta kalmasına dikkat edilir.
+          Tedavi uygun bulunursa deriden uygulanan, yani transdermal yol kullanılır. Kan ölçümleri,
+          düzeyin menopoz öncesi kadınlar için kabul edilen fizyolojik aralığın üst sınırını aşmamasını
+          izlemek içindir. Cinsel isteği artırmak için ulaşılması gereken bir kan testosteron hedefi yoktur
+          <sup><a href="#kaynak-3">[3]</a></sup>.
+        </p>
+        <p>
+          Takipte isteğinizde ve yaşadığınız sıkıntıda anlamlı bir düzelme olup olmadığına, akne veya
+          kıllanma artışı gibi yan etkilere de bakılır. Anlamlı yarar görülmezse tedaviyi sürdürmek yerine
+          nedenler ve tedavinin devamı hekiminizle yeniden değerlendirilir
+          <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
         <p>
           Deri altına yerleştirilen peletler, enjeksiyonlar ve kişiye özel hazırlanan ürünler önerilmez.
           Bunlarda hormon düzeyi gereğinden fazla yükselebilir ya da doz güvenilir biçimde ayarlanamayabilir.
           Uzun süreli kullanımın güvenliği hakkındaki veriler de sınırlıdır; karar verirken bu belirsizliği
-          konuşmak gerekir <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup>
+          konuşmak gerekir <Evidence level={4} /> <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
 
         <h2 id="ne-zaman-hekime">Değerlendirme Gerektiren Belirtiler</h2>
         <p>Ağrı yaşıyorsanız, isteğiniz aniden değiştiyse veya bu durum sizi belirgin biçimde üzüyorsa görüşmek için daha da kötüleşmesini beklemeniz gerekmez.</p>
         <ul>
           <li>Cinsel ilişkide ısrarlı ağrı veya yanma</li>
-          <li>Menopoz sonrası herhangi bir vajinal kanama — gecikmeden değerlendirilmelidir</li>
+          <li>Menopoz sonrası herhangi bir vajinal kanama — gecikmeden değerlendirilmelidir <sup><a href="#kaynak-2">[2]</a></sup></li>
           <li>İdrar yolu enfeksiyonlarında belirgin artış</li>
           <li>Libido azlığının ilişkide veya ruh hâlinde belirgin sıkıntıya yol açması</li>
           <li>Antidepresan veya başka ilaç kullanırken cinsel istekte ani ve belirgin değişim</li>
@@ -236,7 +245,7 @@ const articleSchemas = buildArticleSchemas({
           ayıramıyorum,” diyebilirsiniz. Bu kadarıyla başlayabiliriz.
         </p>
 
-        <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
+        <h2 id="sik-sorulanlar">Dr. Aksoy'a Sorular</h2>
         <p>Görüşmenin dışında, ilacınızla veya partnerinizle ilgili bir soruyu nereden başlayarak ele alacağınızı da merak edebilirsiniz.</p>
 
         {faqItems.map((item) => (
@@ -251,7 +260,7 @@ const articleSchemas = buildArticleSchemas({
           Klinik ayrımlar, tedavi seçenekleri ve güvenlik sınırları aşağıdaki kılavuzlar ve temel çalışma
           üzerinden gözden geçirildi. Kaynak taraması: 2 Ağustos 2026.
         </p>
-        <p>28 Eylül 2026: Anlatım düzenlendi; değerlendirme bölümüne Senai Aksoy'un konuya özgü yanıtı eklendi. Kaynak taraması tarihi değişmedi.</p>
+        <p>28 Eylül 2026: Değerlendirme bölümüne Dr. Senai Aksoy'un gerçek klinik yanıtı eklendi. 29 Eylül 2026: İddia ve kaynak eşleşmeleri yeniden kontrol edildi; pelvik taban fizyoterapisi için kaynak ve çalışmanın kapsamı belirtildi, testosteron takip açıklaması netleştirildi ve dil düzenlendi. Bu kontrol, 2 Ağustos 2026 tarihli genel kaynak taramasından ayrı bir güncellemedir.</p>
         <ol>
           <li id="kaynak-1">
             West SL ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/18625925/" rel="noopener noreferrer">Menopoz durumu ve düşük cinsel istek üzerine toplum temelli çalışma</a>. 2008.
@@ -267,6 +276,9 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li id="kaynak-5">
             NICE. <a href="https://www.nice.org.uk/guidance/ng23/chapter/Recommendations" rel="noopener noreferrer">Menopoz: tanıma ve yönetim önerileri</a>. 2024, 2026 güncellemesi.
+          </li>
+          <li id="kaynak-6">
+            Ghaderi F ve arkadaşları. <a href="https://link.springer.com/article/10.1007/s00192-019-04019-3" rel="noopener noreferrer">Cinsel ilişkide kas kaynaklı ağrı için pelvik taban rehabilitasyonu: randomize kontrollü çalışma</a>. 2019. Menopoz dönemine özgü bir çalışma değildir.
           </li>
         </ol>
       </ArticleProsePanel>

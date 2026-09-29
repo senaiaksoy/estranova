@@ -290,8 +290,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-09-28',
-    note: 'KC editör bu sohbet içinde humanize revizyonunun tıbbi onayını tamamladığını bildirdi ve commit, push, deploy yetkisi verdi. Konuya özgü yazar yanıtı ve doğrudan onay icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-28_libido-degisimi-menopoz.json dosyasında kayıtlıdır.',
+    approvedAt: '2026-09-29',
+    note: 'KC editör bu sohbet içinde humanize revizyonunun tıbbi onayını tamamladığını bildirdi ve commit, push, deploy yetkisi verdi. Konuya özgü yazar yanıtı ve doğrudan onay icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-28_libido-degisimi-menopoz.json dosyasında kayıtlıdır. 2026-09-29: kaynak/kanıt düzeltmeleri, testosteron takibi ve 5 gerçek SSS yanıtı (Dr. Aksoy SSS bölümü) Dr. Aksoy tarafından onaylandı; Dr. Alper Mumcu tıbbi incelemesi KC beyanıyla tamamlandı (yazılı not yok). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-29_libido-degisimi-menopoz.json.',
   },
   {
     pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
