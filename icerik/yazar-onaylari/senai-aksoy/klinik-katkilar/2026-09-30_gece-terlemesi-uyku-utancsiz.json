@@ -49,11 +49,11 @@
     }
   ],
   "frequencyConfirmed": false,
-  "status": "Dört gerçek hekim yanıtı taslağa aktarıldı; soru-cevap dönüşümü tamamlandı. Dördüncü yanıtın yalnızca Markdown vurguları kaldırıldı, sözcükleri korunarak kullanıcıya sunuldu. Son revizyonun yayın ve bağımsız tıbbi onayı henüz verilmedi.",
+  "status": "Dört gerçek hekim yanıtı yayında; ikinci humanize geçişi yapıldı. KC editör/yazar onayı ve Dr. Alper Mumcu bağımsız tıbbi onayı 2026-09-30 tamamlandı.",
   "pendingQuestions": [],
   "independentReview": {
     "reviewer": "Dr. Alper Mumcu",
-    "status": "Bu revizyon için onay bekleniyor; otomatik reviewedBy ataması gerçek inceleme teyidi değildir."
+    "status": "Onaylandı (2026-09-30, KC beyanı; yazılı not yok). Kapsam: iki humanize geçişi ve dört SSS yanıtı dahil son metin."
   },
   "audit": {
     "approvalBaseline": {
@@ -104,5 +104,11 @@
     "secondaryCitation": "Genel tıbbi açıklamalar ilgili kaynak ve sınırlarıyla alıntılanabilir; hekim yanıtları uzman görüşüdür, bilimsel kaynak yerine geçmez.",
     "release": "Commit/push/deploy yapılmadı; görsellere dokunulmadı; mevcut onaylar yenilenmedi.",
     "humor": "H0; mahremiyet ve güvenlik odaklı."
+  },
+  "secondPass": {
+    "date": "2026-09-30",
+    "scope": "Tereddüt seyreltme, klinisyen sesi, somut sahneler, özet kısaltma, duş maddesi SSS ile hizalama; tıbbi iddia/kaynak/Evidence değişmedi.",
+    "confirmedByAuthor": "Ben ikisini birlikte duymak isterim — Dr. Aksoy teyit etti.",
+    "commit": "01b9e58"
   }
 }

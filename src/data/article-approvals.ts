@@ -386,8 +386,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: canli route static manifest ve schema metadata ile birlikte editorial launch setine dahil edildi.',
+    approvedAt: '2026-09-30',
+    note: 'Prelaunch envanter onayı 2026-05-04. 2026-09-30: audit/humanize revizyonu (iki geçiş: kaynak/kanıt düzeltmeleri, tereddüt seyreltme, klinisyen sesi, dört gerçek Dr. Aksoy SSS yanıtı; commit 01b9e58) KC editör/yazar Dr. Senai Aksoy tarafından onaylandı; "Ben ikisini birlikte duymak isterim" cümlesini kendisi teyit etti. Dr. Alper Mumcu bu revizyonun bağımsız tıbbi incelemesini onayladı (KC beyanı, bu sohbetteki bildirim; yazılı not yok). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-30_gece-terlemesi-uyku-utancsiz.json. Bu kayıt push/deploy yetkisi değildir.',
   },
   {
     pathname: '/hormonal-gecis/40-sonrasi/tarama-testleri/',
