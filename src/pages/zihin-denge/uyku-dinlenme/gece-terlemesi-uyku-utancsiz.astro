@@ -21,18 +21,19 @@ import { resolveSiteUrl } from '../../../utils/seo';
 const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/']!;
 
 const tocEntries = [
-  { id: 'o-an', label: 'O An — Hepimiz' },
-  { id: 'ne-oluyor', label: 'Vücut Ne Yapıyor' },
-  { id: 'utanc', label: 'Utanç Yan' },
-  { id: 'ne-yapilabilir', label: 'Açık Liste — Pratik' },
-  { id: 'hekim', label: 'Ne Zaman Hekim' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'o-an', label: 'Terleyerek uyanınca' },
+  { id: 'ne-oluyor', label: 'Isı ayarı nasıl değişiyor' },
+  { id: 'utanc', label: 'Terlemeyi konuşmak' },
+  { id: 'ne-yapilabilir', label: 'Geceyi kolaylaştıran hazırlıklar' },
+  { id: 'hekim', label: 'Hekimle görüşme zamanı' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sik-sorulanlar', label: 'Dr. Aksoy’a sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Gece Terlemesi ve Uyku: Utançsız Bir Bakış';
 const articleDescription =
-  'Gece yarısı sırılsıklam uyanmak, sessizce çarşafı değiştirmek — hepimizin yaşadığı ama zor konuşulan bir an. Yargısız, jargonsuz, açık bir rehber.';
+  'Menopozda gece terlemesi uykuyu bölebilir. Konfor sağlayan hazırlıkları, tedavi seçeneklerini ve hangi belirtilerde hekim değerlendirmesi gerektiğini okuyun.';
 const faqItems = articleFaqs['/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -40,12 +41,17 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '28 Nisan 2026',
+  modifiedDate: '30 Eylül 2026',
   pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
   keywords: ['gece terlemesi', 'menopoz', 'uyku', 'sıcak basması', 'mahrem sağlık', 'çarşaf', 'yatak takımı'],
   faqItems,
-
+  citation: [
+    'https://menopause.org/patient-education/menopause-topics/hot-flashes',
+    'https://pubmed.ncbi.nlm.nih.gov/37252752/',
+    'https://www.nhs.uk/symptoms/night-sweats/',
+  ],
   siteUrl,
 });
 ---
@@ -72,189 +78,171 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="28 Nisan 2026"
+        lastUpdated="30 Eylül 2026"
         readingMinutes={6}
         imageSrc="/images/library/editorial/zd-gece-terlemesi-uyku-utancsiz.webp"
         imageAlt="Serin sabah öncesi ışığında sade yatak odası ve su bardağı; gece terlemesi ve uyku yazısı için editoryal görsel"
       />
 
-      <ArticleSummary title="Kısa Özet">
-<p>
-          Gece yarısı sırılsıklam uyanmak, sessizce çarşafı değiştirmek, partneri uyandırmamak için nefesini
-          tutmak. Bu hepimizin yaşadığı bir an, ama nedense kapı arkasında bile zor konuşulan bir yan var. Bu yazı
-          size bir şey öğretmeye değil, tanıdık bir sahneyi yargısızca anlatmaya geldi: ne oluyor, neden bu kadar
-          zor, ve geceyi biraz daha hafif geçirmek için ne deneyebilirsiniz.
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Gece terlemesi, perimenopoz ve menopozdaki sıcak basmalarının uykuda yaşanan biçimi olabilir;
+          ancak her gece terlemesi menopozdan kaynaklanmaz. Serin bir oda, hafif giysiler ve yatak başında
+          yedek çarşaf geceyi kolaylaştırabilir; bunların atak sıklığını azalttığı gösterilmiş değildir.
+          Terleme uykunuzu sık bölüyor ya da gündüz sizi belirgin biçimde yoruyorsa hekiminizle konuşun.
+          Ateş veya açıklanamayan kilo kaybı eşlik ediyorsa başka nedenler de değerlendirilmelidir.
+          Tedavi gerekirse hormon tedavisi ve hormon dışı seçenekler, sağlık geçmişiniz ve tercihlerinizle
+          birlikte görüşülür.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="o-an">O An — Hepimizin Yaşadığı</h2>
+        <h2 id="o-an">Gece terleyerek uyanınca</h2>
         <p>
-          Saat üçü biraz geçiyor. Gözlerinizi açtığınızda ensenizde ıslaklık var, sırtınız yapışmış, yastığınızın bir yanı
-          soğumaya başlamış bile. Yan tarafınızda uyuyan biri varsa, ilk düşünceniz onun değil; çıkarsanız zemin gıcırdar
-          mı, dolaptan temiz pijamayı sessizce alabilir misiniz, çarşafı sabaha kadar idare edebilir misiniz.
-          <Evidence level={2} />
+          Gecenin ortasında ensenizdeki ıslaklıkla uyanmış, temiz bir pijama ararken uykunuzun iyice açıldığını
+          fark etmiş olabilirsiniz. Yanınızda biri uyuyorsa bir de onu uyandırmama telaşı eklenir; ışığı
+          yakmadan, el yordamıyla dolap kapağını ararsınız.
         </p>
         <p>
-          Bu sahneyi yaşayan tek kişi siz değilsiniz. Perimenopoz ve menopoz döneminden geçen kadınların büyük çoğunluğu,
-          bir şekilde bu geceyle tanışıyor. <Evidence level={4} /> Bazısı için ayda bir, bazısı için neredeyse her
-          gece. Ortak olan şey çoğu zaman ter değil aslında — onun arkasındaki o küçük, sessiz utanç. "Yine mi",
-          "bu kadar mı", "ben mi tuhafım" duygusu. Yalnız değilsiniz; bu duygu da en az terleme kadar yaygın.
-        </p>
-
-        <h2 id="ne-oluyor">Vücut Tam Olarak Ne Yapıyor</h2>
-        <p>
-          Mekanizmayı kısaca anlatayım: vücudun ısı ayarı bu dönemde biraz alıngan
-          oluyor. Beyindeki "termostat" hormonal dalgalanmaya daha duyarlı hale gelince, normalde fark
-          edilmeyecek küçük bir ısı yükselişini "acilen soğumalıyım" sinyali olarak okuyor. <Evidence level={4} />
+          Önce şunu söyleyeyim: Bu, utanılacak bir şey değil. Sıcak basması ve gece terlemesi menopoz
+          geçişinde yaygındır; şiddeti ve sıklığı kişiden kişiye değişir. Uykuyu böldüğünde ertesi günün
+          yorgunluğuna da katkıda bulunabilir. <Evidence level={4} /> <a href="#kaynak-1">[1]</a>
         </p>
         <p>
-          Sonuç: aniden açılan damarlar, hızla yükselen cilt sıcaklığı, ardından gelen bol ter ve ter buharlaştıkça
-          üşüme. Hepsi birkaç dakika sürüyor ama uyku ortasında olduğu için sizi tamamen uyandırıyor. Bedenin
-          yanlış bir şey yapmıyor; sadece eski ayarlarla yeni hormonal dengeyi uzlaştırmaya çalışıyor.
+          Bir ayrımı da baştan yapalım. Tekrarlayan terlemeyi yalnızca yaşınıza bakarak menopoza bağlamak
+          doğru olmaz; başka nedenleri yazının sonunda ayrıca ele alıyorum. <a href="#kaynak-3">[3]</a>
         </p>
 
-        <h2 id="utanc">Utanç Yan — Konuşulmayan Kısım</h2>
+        <h2 id="ne-oluyor">Isı ayarı bu dönemde değişebilir</h2>
         <p>
-          Asıl yorucu olan çoğu zaman terleme değil, etrafındaki sessiz hesaplar. Yanındaki insan uyanmasın diye
-          yorganı yavaşça kaldırmak. Sabah çarşafı değiştirirken kimse uyanmadan halletmek. Yakın bir arkadaşa
-          anlatırken sesin biraz alçalması, sanki söylenmemesi gereken bir şey söylüyormuşsun gibi.
+          Gece sıcak basması çoğu zaman şöyle ilerler: önce yoğun bir sıcaklık, ardından terleme, sonra
+          üşüme. Yorganı üstünüzden atarsınız; birkaç dakika sonra aynı yorganı geri çekersiniz.
         </p>
         <p>
-          Bunu konuşmamızın zor olması garip değil; kültürel olarak kadın bedeninin "fark edilmeden" işlemesi
-          gerektiği fikriyle büyüdük. Ter, koku, ıslaklık — hep "saklanması" gereken şeyler olarak öğretildi. Oysa
-          burada saklanacak hiçbir şey yok. Vücudunuz bir geçiş yaşıyor, siz de o geçişi taşıyorsunuz. Partnerinize, kız
-          kardeşinize, yakın arkadaşınıza bunu sade bir cümleyle söylemek çoğu zaman düşündüğünüzden daha rahatlatıcı
-          oluyor: "Geceleri terliyorum, bu dönemin bir parçası, bazen kalkıp üstümü değiştirmem gerekebilir." Bu
-          kadar. Drama gerekmiyor, özür de gerekmiyor.
+          Bu sıra, vücudun ısı düzenlemesindeki değişiklikle ilişkilidir. Menopozdaki hormon değişiklikleri
+          beyindeki ısı düzenleme sistemini etkiler. Sıcak basması sırasında cilde kan akımı ve terleme
+          artar; atak geçince titreme veya üşüme gelebilir. Ataklar genellikle birkaç dakika sürer ve her
+          biri aynı şiddette olmaz. Uykuda yaşandığında sizi uyandırabilir.
+          <Evidence level={4} /> <a href="#kaynak-1">[1]</a>
         </p>
 
-        <h2 id="ne-yapilabilir">Geceyi Daha Az Zor Geçirmek — Açık Liste</h2>
+        <h2 id="utanc">Terlemeyi konuşmak zor gelebilir</h2>
         <p>
-          Her gece terlemesini kökten önlemek elimizde değil, ama gecenin "yönetilebilir" olması ile "yıpratıcı"
-          olması arasındaki farkı küçük seçimler belirliyor. Burada gizleyecek bir şey yok; çoğu kadının dener
-          dener bulduğu pratikleri açıkça sıralayayım.
+          Gece üst değiştirmek yorar. Bunu evdekilerden saklamaya çalışmak ise ayrı bir yük olur.
+        </p>
+        <p>
+          Mahcubiyet hissediyorsanız uzun bir açıklama yapmanız gerekmez; partnerinize birkaç sade cümle
+          yeter: “Geceleri terleyerek uyanıyorum; bazen üstümü ya da çarşafı değiştirmem gerekiyor.” Oda
+          sıcaklığını ve yorganı birlikte konuşmak da ihtiyacınızı anlatmanın bir yolu. Özür borcunuz yok.
+        </p>
+
+        <h2 id="ne-yapilabilir">Geceyi kolaylaştıran küçük hazırlıklar</h2>
+        <p>
+          Yatağın yanında duran yedek bir tişört, gece dolap arama telaşını azaltır. Bu bölümdeki
+          hazırlıkların amacı basit: terlediğinizde daha rahat etmeniz.
+        </p>
+        <p>
+          Burada dürüst olmam gerekiyor. Serinleme yöntemlerinin ve tetikleyici sanılan yiyeceklerden
+          kaçınmanın, sıcak basmalarını azaltan bir tedavi olduğuna dair yeterli kanıt yok. Konfor sağlayan
+          bir alışkanlık ile atak sıklığını azaltan tedaviyi ayrı tutmak gerekir.
+          <Evidence level={2} /> <a href="#kaynak-2">[2]</a>
         </p>
         <ul>
           <li>
-            <strong>Yatak takımı:</strong> Pamuk, keten ya da bambu gibi nefes alan kumaşlar, sentetik saten
-            alternatiflere göre belirgin biçimde rahatlatabilir. İki takım çarşafı yatağın yanına katlı koymak,
-            gece kalkıp aramak zorunda kalmamak demek.
+            <strong>Yatak takımı:</strong> Hafif, size rahat gelen çarşaf ve örtüler seçin. Yedek bir
+            çarşafı el altında tutmak, gece değiştirmeyi kolaylaştırır.
           </li>
           <li>
-            <strong>Oda ısısı:</strong> Yatak odasını biraz serin tutmak (yaklaşık 18 derece civarı) işe
-            yarayabilir. Klima yoksa pencereyi gece başında biraz aralık bırakmak ya da ince bir vantilatör de
-            yeterli olabilir.
+            <strong>Oda ısısı:</strong> Sizi üşütmeyen, rahat bulduğunuz serinliği deneyin. Herkes için
+            geçerli tek bir derece yok; birlikte uyuduğunuz kişinin ihtiyacını da hesaba katın.
           </li>
           <li>
-            <strong>Pijama:</strong> İnce, hafif, geniş kesim pamuklu tercih edin; "termal" denen nefessiz kumaşlar
-            geceyi ağırlaştırıyor. Bazı kadınlar için tek parça yerine üst-alt ayrı tercih, gece yarısı sadece üstü
-            değiştirebilmek demek.
+            <strong>Pijama seçimi:</strong> Hafif ve geniş kesimli giysiler daha rahat gelebilir.
+            Üst-alt ayrı bir takımda yalnızca ıslanan parçayı değiştirirsiniz.
           </li>
           <li>
-            <strong>Yatak başında küçük hazırlık:</strong> Bir bardak ılık su, ince bir havlu, yedek bir tişört.
-            Hepsi yastığınızın yanında olunca gece dolaşmak zorunda kalmıyorsunuz, partneriniz de daha az uyanıyor.
+            <strong>Yatak başı hazırlığı:</strong> Su, küçük bir havlu ve temiz bir tişört uzanınca
+            ulaşabileceğiniz yerde dursun. Gece evin içinde bir şey aramanız gerekmez.
           </li>
           <li>
-            <strong>Akşam yemeği:</strong> Çok baharatlı, çok yağlı veya çok geç yenen yemekler bazı kadınlarda
-            gece terini belirginleştiriyor. Yatmadan en az iki-üç saat önce yemek bitmiş olsun.
+            <strong>Akşam yemeği:</strong> Geç veya baharatlı yemeklerden sonra rahatsızlık fark
+            ediyorsanız bunu not edin. Bu sizin kişisel gözleminizdir; herkese aynı yiyecekleri
+            yasaklamayı gerektirmez.
           </li>
           <li>
-            <strong>Alkol ve kafein:</strong> Akşam kahvesi ve özellikle akşam içkisi, gece terlemesini ve
-        uyanmaları artırabilir. Bir hafta deneyip kendi bedeninizde farkı izlemek genelde çok öğretici oluyor.
-            <Evidence level={3} />
+            <strong>Alkol ve kafein:</strong> Akşam içtikleriniz ile gece uyanmalarınız arasında bir
+            bağlantı görüp görmediğinizi izleyin. Bunları azaltmanın menopozdaki sıcak basmalarını
+            mutlaka azaltacağı söylenemez. <a href="#kaynak-2">[2]</a>
           </li>
           <li>
-            <strong>Ilık duş:</strong> Yatmadan önce çok soğuk değil, ılık bir duş — vücut ısısının yumuşakça
-            düşmesine yardımcı olabilir. Soğuk duş tam tersine bedeni "uyanık" moda alabiliyor.
+            <strong>Duş:</strong> Gece duşunun artısı da eksisi de var; ayrıntısını aşağıdaki sorularda
+            yanıtladım. Duşu terlemeyi durduran bir yöntem olarak düşünmeyin.
           </li>
           <li>
-            <strong>Soğutucu yardımcılar:</strong> Soğutucu jel yastık kılıfları, ince bambu örtüler, gece
-            komodininde küçük bir el yelpazesi. Hepsi büyülü değil, ama küçük bir konfor farkı yaratabilir.
+            <strong>Serinletici yardımcılar:</strong> Yelpaze ya da serin bir yastık bazı kişilere iyi
+            gelir. Özel bir ürün almanız şart değil; fiyatın yüksek olması tedavi etkisi olduğunu göstermez.
           </li>
         </ul>
         <p>
-          Hepsini birden değiştirmek gerekmiyor. Bir hafta bir maddeyi deneyin, fark edip etmediğinizi izleyin, sonra bir
-          sonrakine geçin. Kendi bedeninizi tanımanın en sakin yolu bu.
+          Hepsini birden değiştirmeniz gerekmiyor. Önce sizi en çok uğraştıranı seçin: ıslak giysi mi,
+          çarşaf mı, oda sıcaklığı mı? Bunlar yetmiyorsa kusur sizde değil; bu hazırlıklar zaten tedavi
+          yerine geçmez.
         </p>
 
-        <h2 id="hekim">Ne Zaman Hekimden Söz Etmek</h2>
+        <h2 id="hekim">Hekimle görüşme zamanı</h2>
         <p>
-          Yukarıdaki düzenlemeler birçok kadın için geceyi belirgin biçimde hafifletebiliyor. Ama bazı durumlarda
-          küçük ayarlar yetmiyor ve bunda da utanılacak hiçbir şey yok.
+          Terleme uykunuzu sık bölüyorsa, gündüz sizi yoruyorsa ya da kaygılandırıyorsa hekiminizle
+          konuşun. Bütün ev düzenlemelerini önce denemiş olmanız gerekmez.
         </p>
         <p>
-          Eğer terleme gecede birkaç kez sizi uyandırıyorsa, gündüz işlevini ciddi biçimde etkiliyorsa, haftalardır
-          uyku borcu birikiyorsa ya da yanında çarpıntı, beklenmedik kilo değişimi, ateş gibi başka belirtiler
-          varsa, bunu kadın hastalıkları veya aile hekiminizle konuşmak için iyi bir zaman. Konuşulan şey illa "ilaç
-          başlamak" demek değil; çoğu zaman görüşmenin kendisi seçenekleri açıyor. <Evidence level={4} />
+          Ateş, açıklanamayan kilo kaybı veya başka yeni belirtiler eşlik ediyorsa terlemeyi yalnızca
+          menopoza bağlamayın. Çarpıntı ve beklenmedik kilo değişimini de görüşmede söyleyin. Bazı
+          ilaçlar, kan şekeri düşüklüğü ve başka durumlar da gece terlemesine yol açabilir; hekim
+          değerlendirmesi bu nedenleri ayırmaya yardımcı olur. <a href="#kaynak-3">[3]</a>
         </p>
         <p>
-          Hormon tedavisi (HRT), uygun adaylar için gece terlemesinde etkili seçenekler arasında biliniyor; bunu
-          tercih etmeyenler veya uygun olmayanlar için hormonal olmayan başka yaklaşımlar da var.
-          <Evidence level={4} /> Hangisinin size uygun olduğu, sizinle hekiminizin birlikte konuşacağı bir karar — burada
-          "doğru cevap" tek tip değil. Önemli olan, bu konuyu utanılacak değil, üzerinde sakince konuşulabilecek
-          bir başlık olarak masaya getirmeniz.
+          Menopoza bağlı sıcak basması ve gece terlemesinde hormon tedavisinin etkisi güçlü kanıtla
+          desteklenir. <Evidence level={5} /> <a href="#kaynak-1">[1]</a> Uygunluğu sağlık geçmişiniz,
+          riskleriniz ve tercihlerinizle birlikte değerlendirilir. Hormon kullanamayan veya istemeyenler
+          için de kanıtlı hormon dışı seçenekler vardır; bunların yararları ve yan etkileri ayrı ayrı
+          görüşülür. <a href="#kaynak-2">[2]</a>
         </p>
-
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
-
-        <h3>Partnerimi rahatsız etmemek için ne yapabilirim?</h3>
         <p>
-          En çok yardımcı olan şey aslında konuşmak. Kısa, sade bir cümle çoğu zaman yeterli: "Bu dönemde geceleri
-          terliyorum, bazen üstümü değiştirmem gerekiyor, siz rahat uyumaya devam edin." Pratik tarafta ise yatağın
-          sizin tarafınıza ekstra çarşaf, yedek tişört ve ince havlu bırakmak; oda ısısını ortak konuşup biraz daha
-          serin tutmak; iki kişilik tek yorgan yerine her birine ayrı ince yorgan denemek çoğu çiftin işine
-          yarıyor.
+          Görüşmeye giderken terlemenin ne zamandır sürdüğünü, uykunuzu nasıl böldüğünü ve kullandığınız
+          ilaçları not edin. Çarşafı kaç kez değiştirdiğiniz kadar sabah nasıl uyandığınız da önemli.
+          Ben ikisini birlikte duymak isterim.
         </p>
 
-        <h3>Yatağı çıkıp duş almak yanlış mı, gece kalkmamalıyım mı?</h3>
-        <p>
-          Yanlış değil. Sırılsıklam çarşafta uyumaya çalışmak çoğu zaman uykuyu daha çok bölüyor. Hızlı bir ılık
-          (sıcak değil) suyla yıkanma, kuru bir tişört ve serin bir yastık, bedenin ısısını yumuşakça düşürüp
-          tekrar uykuya geçmenize yardımcı olabilir. Önemli olan parlak ışık yakmamak, telefona uzanmamak; banyoda
-          mümkünse loş bir ışık kullanmak. Böylece beden "sabah oldu" sinyalini almıyor.
-        </p>
-
-        <h3>Klima açmak yardımcı oluyor ama eklem ağrım artıyor — ne yapayım?</h3>
-        <p>
-          Bu çok yaygın bir denge sorunu. Klimayı doğrudan üstüne üfletmek yerine odanın bir köşesine yönlendirmek,
-          yatağa girmeden önce odayı serinletip uyurken kapatmak ya da daha yumuşak bir alternatif olarak tavan
-          vantilatörü ile pencereyi hafif aralık bırakmayı deneyebilirsiniz. İnce bir hırka veya pamuklu çorap yatak
-          başında dururken, gece üşüdüğünüz anda hızlıca giyebilmek de eklemleri rahatlatabilir.
-        </p>
-
-        <h3>Soğuk yastık, jel mat gibi ürünler gerçekten işe yarıyor mu?</h3>
-        <p>
-          Etkileri kişiden kişiye değişiyor, ama yastık üst kısmının serin kalması bazı kadınlarda gece
-          terlemesinin "uyandırıcı" yanını gerçekten yumuşatabiliyor. Çok pahalı yatak sistemlerine yatırım
-          yapmadan önce, ucuz bir soğutucu jel yastık kılıfı veya bambu örtü ile bir-iki hafta denemek mantıklı.
-          Eğer fark hissetmiyorsanız, asıl odağı yatak takımı kumaşına, oda ısısına ve akşam alışkanlıklarına vermek
-          genellikle daha kalıcı bir rahatlama sağlıyor.
-        </p>
+        <h2 id="kaynaklar">Kaynaklar ve ileri okuma</h2>
+        <p>Belirtiler, konfor ile tedavi arasındaki fark ve değerlendirme gerektiren durumlar için kullanılan kaynaklar.</p>
+        <ol>
+          <li id="kaynak-1"><a href="https://menopause.org/patient-education/menopause-topics/hot-flashes" target="_blank" rel="noopener noreferrer">The Menopause Society — Sıcak basmaları ve gece terlemesi</a>. Belirtiler ve hormon tedavisi hakkında hasta bilgilendirmesi.</li>
+          <li id="kaynak-2"><a href="https://pubmed.ncbi.nlm.nih.gov/37252752/" target="_blank" rel="noopener noreferrer">North American Menopause Society — Hormon dışı tedaviler hakkında 2023 görüş bildirisi</a>. Menopause, 2023;30(6):573–590. Hormon dışı tedavilerin ve serinleme yöntemlerinin kanıt değerlendirmesi.</li>
+          <li id="kaynak-3"><a href="https://www.nhs.uk/symptoms/night-sweats/" target="_blank" rel="noopener noreferrer">NHS — Gece terlemesi</a>. Diğer nedenler ve hekim değerlendirmesi gerektiren belirtiler.</li>
+        </ol>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy’a sorular" intro="Gece hazırlığı, duş ve serinleme hakkında Dr. Senai Aksoy’un yanıtları." items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"
         paths={[
           '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
-          '/dosya/2026-05-uyuyamadigimiz-geceler/',
-          '/library/',
+          '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
+          '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
         ]}
       />
 
       <ArticleEditorNote>
-<p>
-          Gece terlemesi, perimenopoz ve menopozda yaygın bir vazomotor belirti. Yatak odası düzenlemeleri ve akşam
-          alışkanlıkları çoğu kadında geceyi belirgin biçimde hafifletebilir; sıklığı yüksek ve gündüz işlevini
-          etkileyen tablolarda hekim değerlendirmesi anlamlıdır. Hormon temelli ve hormonal olmayan seçenekler
-          birey bazında, hekimle birlikte planlanmalıdır.
+        <p>
+          Serinleme ve gece hazırlığı konfor amacı taşır; atak sıklığını azaltan tedavilerle aynı
+          kanıt düzeyinde değildir. Tekrarlayan terlemenin nedeni ve günlük yaşama etkisi değerlendirilir.
+          Tedavi gerektiğinde yarar, risk ve kişisel tercihler birlikte ele alınır.
         </p>
       </ArticleEditorNote>
 
-       <ArticleDisclaimer>
-<p>
+      <ArticleDisclaimer>
+        <p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları
           için sağlık profesyoneline başvurunuz.
         </p>

@@ -1333,19 +1333,24 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/': [
     {
-      question: 'Gece terlemesi neden bu kadar utanç duygusuyla birlikte yaşanabiliyor?',
+      question: 'Partnerimi rahatsız etmemek için ne yapabilirim?',
       answer:
-        'Çünkü çok mahrem bir anda, kontrol dışında gelişir ve çoğu kadın bunu sessizce yönetmeye çalışır. Oysa bu yakınma yalnız yaşanan bir tuhaflık değil, menopoz geçişinin sık bir parçasıdır.',
+        'Partnerinizle açıkça konuşmak ve aynı yatakta farklı ısı ihtiyaçlarının normal olabileceğini kabul etmek işe yarar. Ayrı yorgan, ince ve nefes alan çarşaflar veya yatağın iki tarafında farklı örtüler kullanmak uykuyu koruyabilir. Gerekirse kısa süreli ayrı uyuma düzeni de düşünülebilir; bunu ilişki sorunu gibi görmemek gerekir.',
     },
     {
-      question: 'Yatak odası düzeni gerçekten fark yaratır mı?',
+      question: 'Gece kalkıp duş almak doğru mu, uykuyu daha çok böler mi?',
       answer:
-        'Evet, bazen düşündüğümüzden daha çok fark yaratır. Oda ısısı, katmanlı giyinme ve yatak tekstili gibi basit düzenlemeler geceyi tamamen çözmese bile yükünü azaltabilir.',
+        'Duş bazı kişileri rahatlatırken bazılarını tamamen uyandırabilir. Duş alacaksanız kısa ve ılık olması, çok sıcak veya çok soğuk sudan kaçınmanız ve ardından serin, kuru kıyafetlerle yatağa dönmeniz daha uygundur. Hafif terlemede çoğu zaman kıyafet veya çarşaf değiştirmek duş almaktan daha az uykuyu böler.',
     },
     {
-      question: 'Ne zaman bu tabloyu yalnızca “alışırım” diye geçmemek gerekir?',
+      question: 'Klima açmak terlemeyi hafifletiyor ama eklem ağrısını artırıyor; ne yapabilirim?',
       answer:
-        'Gece uyanmaları ertesi gün zihni, işi, ilişkiyi veya genel dayanıklılığı etkilemeye başladıysa daha fazla sessiz kalmamak gerekir. Çünkü mesele yalnızca terlemek değil, dinlenmenin bozulmasıdır.',
+        'Ortamı çok soğutmak yerine ılımlı ve sabit bir sıcaklık, doğrudan hava akımından kaçınma ve ince katmanlı giyinme öneririm. Klima tek başına eklem hastalığı oluşturmaz; soğuk hava kas ve eklem sertliğini daha belirgin hissettirebilir. Ağrı sürekliyse, şişlikle veya belirgin hareket kısıtlılığıyla birlikteyse bunu yalnızca klimaya bağlamamak gerekir.',
+    },
+    {
+      question: 'Soğutucu yastık ve jel mat gibi ürünler gerçekten işe yarıyor mu?',
+      answer:
+        'Soğutucu yastıklar, jel matlar veya nefes alan yatak ürünleri bazı kadınlarda gece sıcaklık hissini azaltıp yeniden uykuya dönmeyi kolaylaştırabilir; özellikle hafif-orta gece terlemelerinde konfor açısından yararlı olabilirler. Ancak bunlar menopozdaki vazomotor semptomun nedenini tedavi etmez, etkileri kişiden kişiye değişir ve çoğu ürün için güçlü klinik kanıt sınırlıdır. Çok soğuk yüzeyler bazı kişilerde üşüme, kas-eklem rahatsızlığı veya uykunun bölünmesine yol açabileceğinden amaç yatağı buz gibi yapmak değil, ısı birikimini azaltmak olmalıdır. Gece terlemeleri sık ve uykuyu belirgin bozuyorsa yalnızca bu ürünlere güvenmek yerine menopoz tedavi seçeneklerini de değerlendirmek daha doğru olur.',
     },
   ],
 };

@@ -886,7 +886,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
     title: 'Gece Terlemesi ve Uyku: Utançsız Bir Bakış',
-    description: 'Gece yarısı sırılsıklam uyanmak, sessizce çarşafı değiştirmek, partneri uyandırmamak için nefesini tutmak — hepimizin yaşadığı ama zor konuşulan bir an. Yargısız, jargonsuz, açık bir rehber.',
+    description: 'Menopozda gece terlemesi uykuyu bölebilir. Konfor sağlayan hazırlıkları, tedavi seçeneklerini ve hangi belirtilerde hekim değerlendirmesi gerektiğini okuyun.',
     publishedDate: '28 Nisan 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zihin & Denge',
