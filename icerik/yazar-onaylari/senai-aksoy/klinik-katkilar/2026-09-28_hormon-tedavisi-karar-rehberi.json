@@ -142,5 +142,11 @@
     "scope": "currentAuditRevision + fifthHumanizeRevision değişiklikleri",
     "status": "Onaylandı",
     "source": "Kullanıcının bu sohbetteki bildirimi"
+  },
+  "sixthStyleRevision": {
+    "date": "2026-09-30",
+    "authorization": "Kullanıcı onayı (bu sohbet)",
+    "scope": "Dış editoryal değerlendirme üzerine üslup düzeltmesi: Kısa Klinik Yanıt klinisyen birinci tekiline çevrildi; gövdede \"birlikte değerlendirilir\" tekrarı 3→0 (hekim alıntısı hariç) aktif birinci tekil ifadelerle değiştirildi; Görüşmeye Hazırlık girişi doğallaştırıldı.",
+    "fidelity": "Yeni tıbbi iddia yok; eşikler (60 yaş, ilk 10 yıl), kanıt düzeyleri, kaynaklar ve SSS yanıtları değişmedi."
   }
 }
