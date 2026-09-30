@@ -1350,7 +1350,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Soğutucu yastık ve jel mat gibi ürünler gerçekten işe yarıyor mu?',
       answer:
-        'Soğutucu yastıklar, jel matlar veya nefes alan yatak ürünleri bazı kadınlarda gece sıcaklık hissini azaltıp yeniden uykuya dönmeyi kolaylaştırabilir; özellikle hafif-orta gece terlemelerinde konfor açısından yararlı olabilirler. Ancak bunlar menopozdaki vazomotor semptomun nedenini tedavi etmez, etkileri kişiden kişiye değişir ve çoğu ürün için güçlü klinik kanıt sınırlıdır. Çok soğuk yüzeyler bazı kişilerde üşüme, kas-eklem rahatsızlığı veya uykunun bölünmesine yol açabileceğinden amaç yatağı buz gibi yapmak değil, ısı birikimini azaltmak olmalıdır. Gece terlemeleri sık ve uykuyu belirgin bozuyorsa yalnızca bu ürünlere güvenmek yerine menopoz tedavi seçeneklerini de değerlendirmek daha doğru olur.',
+        'Bazı kadınlarda rahatlatabilirler, ama vazomotor semptomu tedavi etmezler. Rahatlatıyorsa kullanılabilir; belirgin gece terlemesi varsa asıl tedavi seçeneklerini ayrıca konuşmak gerekir.',
     },
   ],
 };

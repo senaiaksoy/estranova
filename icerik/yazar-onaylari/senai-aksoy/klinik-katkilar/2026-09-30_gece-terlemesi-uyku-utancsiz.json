@@ -45,7 +45,7 @@
     {
       "no": 4,
       "question": "Soğutucu yastık ve jel mat gibi ürünler gerçekten işe yarıyor mu?",
-      "answer": "Soğutucu yastıklar, jel matlar veya nefes alan yatak ürünleri bazı kadınlarda gece sıcaklık hissini azaltıp yeniden uykuya dönmeyi kolaylaştırabilir; özellikle hafif-orta gece terlemelerinde konfor açısından yararlı olabilirler. Ancak bunlar menopozdaki vazomotor semptomun nedenini tedavi etmez, etkileri kişiden kişiye değişir ve çoğu ürün için güçlü klinik kanıt sınırlıdır. Çok soğuk yüzeyler bazı kişilerde üşüme, kas-eklem rahatsızlığı veya uykunun bölünmesine yol açabileceğinden amaç yatağı buz gibi yapmak değil, ısı birikimini azaltmak olmalıdır. Gece terlemeleri sık ve uykuyu belirgin bozuyorsa yalnızca bu ürünlere güvenmek yerine menopoz tedavi seçeneklerini de değerlendirmek daha doğru olur."
+      "answer": "Bazı kadınlarda rahatlatabilirler, ama vazomotor semptomu tedavi etmezler. Rahatlatıyorsa kullanılabilir; belirgin gece terlemesi varsa asıl tedavi seçeneklerini ayrıca konuşmak gerekir."
     }
   ],
   "frequencyConfirmed": false,
@@ -110,5 +110,15 @@
     "scope": "Tereddüt seyreltme, klinisyen sesi, somut sahneler, özet kısaltma, duş maddesi SSS ile hizalama; tıbbi iddia/kaynak/Evidence değişmedi.",
     "confirmedByAuthor": "Ben ikisini birlikte duymak isterim — Dr. Aksoy teyit etti.",
     "commit": "01b9e58"
+  },
+  "thirdPass": {
+    "date": "2026-09-30",
+    "source": "Dr. Aksoy'un bu sohbetteki doğrudan düzeltmeleri (dış değerlendirme üzerine, düzeltmeler kendisine ait)",
+    "changes": [
+      "Gece hazırlıkları listesi 8 maddeden 4 gruba indirildi (yatak ve giysi, oda sıcaklığı, akşam alışkanlıkları, duş ve serinletici yardımcılar); içerik ve [2] atfı korundu.",
+      "'Bunlar yetmiyorsa kusur sizde değil…' cümlesi Dr. Aksoy'un metniyle değiştirildi: 'Bunlar yetmiyorsa, sorun artık yalnızca gece düzeniyle çözülecek düzeyde olmayabilir.'",
+      "SSS 4 yanıtı Dr. Aksoy'un kısaltılmış metniyle birebir değiştirildi; özgün uzun yanıt originalResponses içinde korunuyor."
+    ],
+    "medicalReview": "KC (Dr. Aksoy) bildirimi, 2026-09-30: bu geçiş Dr. Alper Mumcu'nun mevcut yazılı onayının kapsamında sayılır."
   }
 }

@@ -387,7 +387,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-09-30',
-    note: 'Prelaunch envanter onayı 2026-05-04. 2026-09-30: audit/humanize revizyonu (iki geçiş: kaynak/kanıt düzeltmeleri, tereddüt seyreltme, klinisyen sesi, dört gerçek Dr. Aksoy SSS yanıtı; commit 01b9e58) KC editör/yazar Dr. Senai Aksoy tarafından onaylandı; "Ben ikisini birlikte duymak isterim" cümlesini kendisi teyit etti. Dr. Alper Mumcu bu revizyonun bağımsız tıbbi incelemesini onayladı (yazılı onayı mevcut — KC bildirimi, 2026-09-30; belge repoda değil). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-30_gece-terlemesi-uyku-utancsiz.json. Bu kayıt push/deploy yetkisi değildir.',
+    note: 'Prelaunch envanter onayı 2026-05-04. 2026-09-30: audit/humanize revizyonu (iki geçiş: kaynak/kanıt düzeltmeleri, tereddüt seyreltme, klinisyen sesi, dört gerçek Dr. Aksoy SSS yanıtı; commit 01b9e58) KC editör/yazar Dr. Senai Aksoy tarafından onaylandı; "Ben ikisini birlikte duymak isterim" cümlesini kendisi teyit etti. Dr. Alper Mumcu bu revizyonun bağımsız tıbbi incelemesini onayladı (yazılı onayı mevcut — KC bildirimi, 2026-09-30; belge repoda değil). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-30_gece-terlemesi-uyku-utancsiz.json. Aynı gün üçüncü geçiş (Dr. Aksoy'un kendi düzeltmeleri: hazırlık listesi 4 gruba, kapanış cümlesi, kısaltılmış SSS 4 yanıtı) KC bildirimiyle Mumcu yazılı onayı kapsamında sayıldı. Bu kayıt push/deploy yetkisi değildir.',
   },
   {
     pathname: '/hormonal-gecis/40-sonrasi/tarama-testleri/',
