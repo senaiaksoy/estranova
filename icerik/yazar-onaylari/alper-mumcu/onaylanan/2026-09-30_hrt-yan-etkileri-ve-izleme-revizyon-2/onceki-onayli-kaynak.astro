@@ -1,0 +1,328 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const route = '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/';
+const hero = submenuHeroByRoute[route]!;
+
+const tocEntries = [
+  { id: 'acilis', label: 'İzlem Defteriyle Başlamak' },
+  { id: 'ilk-haftalar', label: 'İlk Haftalarda Neler Değişebilir?' },
+  { id: 'yumusak-yan-etkiler', label: 'Hafif Yan Etkilerle Baş Etmek' },
+  { id: 'kanama-duzeni', label: 'Kanama Düzenindeki Değişimler' },
+  { id: 'ruh-hali-uyku', label: 'Ruh Hali, Baş Ağrısı ve Uyku' },
+  { id: 'izleme-takvimi', label: 'İlk Kontrol ve Yıllık Değerlendirme' },
+  { id: 'ne-zaman-hekime', label: 'Kontrolü Beklememeniz Gereken Belirtiler' },
+  { id: 'sik-sorulanlar', label: 'Dr. Aksoy’a Sorular' },
+  { id: 'kapanis', label: 'Kontrol Görüşmesine Hazırlanmak' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?';
+const seoTitle = 'HRT Yan Etkileri ve İzleme';
+const articleDescription =
+  'HRT\'nin ilk aylarında yan etkiler, kanama ve kontrol takvimi: hangi belirtileri not etmeli, ne zaman hekime danışmalı, hangi durumda acil yardım almalısınız?';
+const faqItems = articleFaqs[route] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'alper-mumcu',
+  articleType: 'clinical-guide',
+  publishedDate: '27 Nisan 2026',
+  modifiedDate: '30 Eylül 2026',
+  pathname: route,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/',
+  keywords: [
+    'HRT',
+    'hormon tedavisi yan etkileri',
+    'meme hassasiyeti',
+    'baş ağrısı',
+    'kanama düzensizliği',
+    'menopoz',
+    'izleme takvimi',
+    '3 aylık kontrol',
+    'alarm belirtileri',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz · HRT"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="alper-mumcu"
+        articleType="clinical-guide"
+        publishedDate="27 Nisan 2026"
+        lastUpdated="30 Eylül 2026"
+        readingMinutes={8}
+        imageSrc="/images/library/editorial/introspective-clasped-hands.webp"
+        imageAlt="Sabah ışığında birleşmiş eller ve açık not defteri; HRT yan etkileri ve izleme yazısı için editoryal görsel"
+      />
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Menopozal hormon tedavisinin (HRT) ilk haftalarında meme hassasiyeti, bulantı ve hafif baş ağrısı
+          görülebilir; bunlar zamanla azalabilir. Kanama ise kullanılan tedavi düzenine, başlangıç tarihine
+          ve kişisel risklere göre değerlendirilir. İlk kontrol yaklaşık üçüncü ayda, sonrasında en az yılda
+          bir planlanır; rahatsız edici belirtiler için bu tarihi beklemeniz gerekmez. Yoğun veya uzun süren
+          kanamayı hekiminize bildirin. Göğüs ağrısına nefes darlığı eşlik ediyorsa ya da ani konuşma bozukluğu
+          veya tek taraflı güçsüzlük varsa 112'yi arayın. Doz ve uygulama yolu değişikliklerini hekiminizle
+          birlikte değerlendirin; hafif yan etki yaşamak, tedavinin size uygun olup olmadığını tek başına belirlemez.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="acilis">İzlem Defteriyle Başlamak</h2>
+        <p>
+          HRT'ye başladıktan sonra fark ettiğiniz bir belirti, aklınıza hemen aynı soruyu getirebilir:
+          “Bu beklenen bir yan etki mi?” Yanıtı ararken belirtinin ne zaman başladığı, şiddeti ve nasıl
+          değiştiği önemlidir.
+        </p>
+        <p>
+          Telefonunuza düşeceğiniz kısa bir not yeterli olabilir: “İki gündür meme hassasiyeti var”,
+          “Bu hafta iki kez lekelenme oldu” veya “Gece terlemesi azaldı.” Kanama günlerini ayrıca
+          işaretleyin. İlaca başladığınız ya da dozun değiştiği tarihi de kaydedin.
+        </p>
+        <p>
+          Bu notları kontrol görüşmesine götürün. Hekiminiz belirtilerin tedaviyle ilişkisini ve doz ya da
+          uygulama yolunda değişiklik gerekip gerekmediğini değerlendirir. Kayıt tutmak tanı koymaz;
+          konuşmayı somutlaştırır. Aşağıdaki güvenlik belirtilerinden biri ortaya çıkarsa not almakla
+          yetinmeyin, uygun tıbbi yardıma başvurun.
+        </p>
+
+        <h2 id="ilk-haftalar">İlk Haftalarda Neler Değişebilir?</h2>
+        <p>
+          İlk günlerde belirgin bir değişiklik hissetmemeniz, tedavinin etkisiz kaldığını göstermez.
+          Belirtilerdeki düzelme ve yan etkilerin seyri kişiden kişiye değişir.
+        </p>
+        <p>
+          Bazı kişiler hiçbir yan etki yaşamaz. Bazılarında meme hassasiyeti, bulantı, baş ağrısı veya
+          ruh hali değişiklikleri görülür. Hafif belirtiler birkaç hafta içinde azalabilir; rahatsız edici
+          olanlar veya üç aydan uzun sürenler hekimle görüşülmelidir. Şiddetli bir belirti için üç ay
+          beklenmez <Evidence level={4} /> <a href="#kaynak-2">[2]</a>.
+        </p>
+        <p>
+          Menopoz belirtileriyle ilaç yan etkileri birbirine benzeyebilir. Yeni bir şikâyeti otomatik olarak
+          “hormonlara alışıyorum” diye açıklamak yerine, başlangıcını ve günlük yaşamınıza etkisini
+          hekiminize anlatın. Üçüncü ay kontrolü, tedavinin yararını ve tolere edilip edilmediğini birlikte
+          değerlendirmek için planlanır <a href="#kaynak-1">[1]</a>.
+        </p>
+
+        <h2 id="yumusak-yan-etkiler">Hafif Yan Etkilerle Baş Etmek</h2>
+        <p>
+          Meme hassasiyeti veya bulantı hafif olsa da gününüzü zorlaştırabilir.
+          Rahatsızlığı hekiminize anlatmak için şiddetlenmesini beklemeniz gerekmez.
+        </p>
+        <p>
+          <strong>Meme hassasiyeti</strong> birkaç hafta içinde hafifleyebilir. Sizi rahatsız ediyorsa veya
+          geçmiyorsa hekiminizle konuşun. Memede yeni kitle, meme başında akıntı ya da değişiklik veya ciltte çekinti
+          fark etmek, genel hassasiyetten ayrı değerlendirilir <Evidence level={4} /> <a href="#kaynak-3">[3]</a>.
+        </p>
+        <p>
+          <strong>Bulantı</strong> için ağızdan alınan östrojen tabletini yemekle almak yardımcı olabilir;
+          kendi ilacınızın kullanım talimatını esas alın. Bir haftadan uzun sürerse veya belirginse
+          hekiminize bildirin. Gerekirse doz, ilaç türü veya uygulama yolu yeniden değerlendirilir
+          <a href="#kaynak-3">[3]</a>. Jel ya da bant herkes için otomatik olarak daha uygun değildir.
+        </p>
+        <p>
+          <strong>Şişkinlik veya hafif şişme</strong> fark ederseniz, ne zaman başladığını ve gün içinde
+          nasıl değiştiğini kaydedin. Bir bacakta ağrı, kızarıklık ve şişlik varsa bunu sıradan sıvı
+          tutulması saymayın; aynı gün tıbbi değerlendirme gerekir <a href="#kaynak-3">[3]</a>.
+        </p>
+
+        <h2 id="kanama-duzeni">Kanama Düzenindeki Değişimler</h2>
+        <p>
+          Kanamayı değerlendirirken yalnız miktarına değil, tedavinin hangi aşamasında olduğuna da bakılır.
+          Hekiminize başlangıç tarihini, kanama günlerini ve kullandığınız tedavi düzenini birlikte anlatın.
+        </p>
+        <p>
+          Rahmi olan kişilerde sistemik HRT'nin ilk altı ayında veya doz ya da ilaç değişikliğini izleyen
+          üç ayda lekelenme görülebilir. Döngüsel kombine tedavide progestojen döneminin sonunda beklenen
+          çekilme kanaması olabilir; sürekli kombine tedavideki beklenmedik kanama farklı değerlendirilir
+          <Evidence level={4} /> <a href="#kaynak-1">[1]</a> <a href="#kaynak-2">[2]</a>.
+        </p>
+        <p>
+          <strong>Yoğun veya uzun süren kanamayı, tedaviye ne zaman başlamış olursanız olun, planlı kontrolü
+          beklemeden bildirin.</strong> Tedavi başladıktan altı aydan sonra ilk kez ortaya çıkan ya da
+          doz/ilaç değişikliğinden üç aydan sonra görülen beklenmedik kanama da gecikmeden değerlendirilir.
+          Hekim kanama öyküsü ve kişisel risklere göre muayene, ultrason ve gerektiğinde ek inceleme planlar
+          <a href="#kaynak-4">[4]</a>.
+        </p>
+        <p>
+          HRT kullanmıyorsanız, son adetinizden en az bir yıl sonra ortaya çıkan kanamayı da hekiminize
+          bildirin. HRT kullanırken ise “menopozdayım” veya “ilk aylardayım” bilgisi tek başına karar
+          vermeye yetmez. İlk aylardaki kanama da kişisel risklere göre daha erken inceleme gerektirebilir
+          <a href="#kaynak-4">[4]</a>.
+        </p>
+
+        <h2 id="ruh-hali-uyku">Ruh Hali, Baş Ağrısı ve Uyku</h2>
+        <p>
+          Sıcak basmalarınız azalırken uykunuz veya ruh haliniz aynı hızda düzelmeyebilir.
+          Bu değişimleri ayrı ayrı kaydetmeniz, kontrolde neyin sürdüğünü anlatmanızı kolaylaştırır.
+        </p>
+        <p>
+          Ruh hali değişiklikleri hem menopoz döneminde hem de HRT kullanırken görülebilir. Keyifsizlik
+          veya duygusal dalgalanma günlük yaşamınızı zorlaştırıyorsa hekiminize anlatın. Bunları yalnızca
+          “uyum dönemi” diyerek geçiştirmeyin <a href="#kaynak-2">[2]</a> <a href="#kaynak-3">[3]</a>.
+        </p>
+        <p>
+          Hafif baş ağrısı başlangıçta görülebilir. Bir haftadan uzun sürüyorsa veya şiddetliyse hekimle
+          görüşün <a href="#kaynak-3">[3]</a>. Migreniniz varsa ağrının alışılmış biçiminden farklı olup
+          olmadığını ve görme değişikliği eşlik edip etmediğini de belirtin. Ani, çok şiddetli ağrı veya
+          nörolojik belirtiler aşağıdaki acil değerlendirme sınırına girer.
+        </p>
+        <p>
+          Uykuyu değerlendirirken gece terlemesiyle uyanmayı, uykuya dalma güçlüğünü ve ertesi günkü
+          yorgunluğu ayırarak not edebilirsiniz. Her belirti için “ikinci ayda düzelir” gibi sabit bir
+          süre vermek doğru olmaz. Kontrolde, tedavinin hedeflediği yakınmalarda ne kadar değişiklik
+          olduğunu konuşun <a href="#kaynak-1">[1]</a>.
+        </p>
+
+        <h2 id="izleme-takvimi">İzleme Takvimi: İlk Kontrol ve Yıllık Değerlendirme</h2>
+        <p>
+          İlk kontrol yaklaşık üçüncü ayda, sonrasında en az yılda bir yapılır.
+          Yan etkiler veya yeterince düzelmeyen belirtiler varsa daha erken görüşme planlanır.
+        </p>
+        <p>
+          Üçüncü ayda sıcak basmaları, gece terlemeleri, kanama ve yan etkiler birlikte gözden geçirilir.
+          İlacı nasıl kullandığınız da konuşulur. Doz veya uygulama yolunda değişiklik gerekip gerekmediği
+          bu bilgilerle değerlendirilir. Altıncı ay kontrolü herkes için zorunlu bir basamak değildir;
+          ihtiyaç varsa eklenir <Evidence level={4} /> <a href="#kaynak-1">[1]</a>.
+        </p>
+        <p>
+          Yıllık görüşmede yeni sağlık sorunları, tedavinin yararı, olası riskler ve tansiyon gibi temel
+          sağlık kontrolleri ele alınır. Ulusal tarama programları sürdürülür. HRT kullanmak tek başına
+          herkese aynı kan testi, ultrason veya kemik yoğunluğu ölçümü listesini gerektirmez; gerekli
+          incelemeler kişisel bulgular ve risklerle belirlenir <a href="#kaynak-1">[1]</a>.
+        </p>
+        <p>
+          Türkiye'deki ulusal meme kanseri tarama programında, belirtisi olmayan 40–69 yaş arası kadınlar
+          için iki yılda bir mamografi önerilir <a href="#kaynak-5">[5]</a>. Kişisel riskleriniz veya
+          yeni bir meme bulgusu varsa hekiminiz farklı bir değerlendirme planlayabilir. Tarama takvimi,
+          yeni bir kitleyi bildirmek için bekleme süresi değildir.
+        </p>
+
+        <h2 id="ne-zaman-hekime">Planlı Kontrolü Beklememeniz Gereken Belirtiler</h2>
+        <p>
+          Bazı belirtiler aynı gün değerlendirme, bazıları acil yardım gerektirir.
+          Hangi gruba girdiğini bilmek, yardım ararken zaman kaybetmenizi önler.
+        </p>
+        <ul>
+          <li><strong>112'yi arayın:</strong> Göğüs ağrısına nefes darlığı eşlik ediyorsa ya da ani konuşma
+            bozukluğu, yüzde kayma veya kol/bacakta tek taraflı güçsüzlük varsa. Acile kendiniz araç
+            kullanarak gitmeyin <a href="#kaynak-3">[3]</a>.</li>
+          <li><strong>Acil değerlendirme alın:</strong> Ani görme kaybı veya aniden başlayan, alışılmışın
+            dışında çok şiddetli baş ağrısı varsa; bunları sıradan migren veya ilaç yan etkisi saymayın <a href="#kaynak-6">[6]</a>.</li>
+          <li><strong>Aynı gün değerlendirme alın:</strong> Bir bacakta şişlik, kızarıklık veya baldır ağrısı
+            varsa. Bunlar damar içinde pıhtı belirtisi olabilir <a href="#kaynak-3">[3]</a>.</li>
+          <li><strong>Kontrol tarihini beklemeden bildirin:</strong> Yoğun veya uzun süren kanama,
+            tedavinin başlangıcından altı ay sonra ya da doz değişikliğinden üç ay sonra beklenmedik
+            kanama varsa <a href="#kaynak-4">[4]</a>.</li>
+          <li><strong>Tarama tarihini beklemeden bildirin:</strong> Memede yeni kitle, meme başında
+            değişiklik veya ciltte çekinti varsa <a href="#kaynak-3">[3]</a>.</li>
+        </ul>
+        <p>
+          Şiddetli karın ağrısı, göz aklarında ya da ciltte sararma, koyu idrar veya açıklanamayan yeni çarpıntı gibi belirtileri de gecikmeden
+          değerlendirtin. Bu liste bütün olası yan etkileri içermez; kendi ilacınızın kullanma talimatındaki
+          uyarıları da izleyin.
+        </p>
+
+        <h2 id="sik-sorulanlar">Dr. Aksoy’a sorular</h2>
+        <p>Bu bölüm, Dr. Senai Aksoy’un bu yazı için verdiği beş gerçek yanıttan düzenlenmiş uzman katkısıdır. Tedaviyle ilgili değişiklikler kendi hekiminizle birlikte değerlendirilir.</p>
+        {faqItems.map(({ question, answer }, index) => (
+          <>
+            <h3>{question}</h3>
+            <p><strong>Dr. Aksoy’un yanıtı:</strong></p>
+            <p>{answer}</p>
+            {index !== 3 && <p><a href={index === 1 ? '#kaynak-4' : '#kaynak-1'}>İlgili kaynak</a></p>}
+          </>
+        ))}
+
+        <h2 id="kapanis">Kontrol Görüşmesine Hazırlanmak</h2>
+        <p>
+          Kontrole giderken kısa belirti notlarınızı ve kullandığınız ilaçların listesini yanınıza alın.
+          Sizi en çok rahatsız eden belirtiyi önce söyleyin.
+        </p>
+        <p>
+          Hekiminize “Tedaviden beklediğimiz yararı görüyor muyum?”, “Bu belirti için doz veya uygulama
+          yolunu gözden geçirelim mi?” ve “Bir sonraki kontrolü beklemeden hangi durumda size ulaşmalıyım?”
+          diye sorabilirsiniz. İlk haftalarla ilgili kaygı duymanız anlaşılır. Her ayrıntıyı kendi başınıza
+          çözmeniz gerekmez; önemli olan rahatsızlığı açıkça anlatmak ve güvenlik belirtilerinde beklememektir.
+        </p>
+
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p>Yan etkiler, kanama değerlendirmesi ve takip planı için kullanılan seçilmiş kaynaklar:</p>
+        <ol>
+          <li id="kaynak-1"><a href="https://www.nice.org.uk/guidance/ng23/chapter/Recommendations" target="_blank" rel="noopener noreferrer">NICE NG23 — Menopoz: tanı ve yönetim; 1.8.4 ve 1.9, 2026 güncellemesi</a>. İlk kontrol, yıllık izlem ve kanama değerlendirme süreleri.</li>
+          <li id="kaynak-2"><a href="https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/side-effects-of-hormone-replacement-therapy-hrt/" target="_blank" rel="noopener noreferrer">NHS — Hormon tedavisinin yan etkileri</a>. Genel yan etkiler ve tedavi düzenine göre kanama.</li>
+          <li id="kaynak-3"><a href="https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/oestrogen-tablets-patches-gel-and-spray/side-effects-of-oestrogen-tablets-patches-gel-and-spray/" target="_blank" rel="noopener noreferrer">NHS — Östrojen tabletleri, bantları, jel ve spreylerin yan etkileri</a>. Belirtiye göre yardım arama sınırları.</li>
+          <li id="kaynak-4"><a href="https://thebms.org.uk/publications/bms-guidelines/management-of-unscheduled-bleeding-on-hormone-replacement-therapy-hrt/" target="_blank" rel="noopener noreferrer">British Menopause Society — HRT sırasında beklenmedik kanamanın yönetimi; Mayıs 2026'da gözden geçirilen ortak kılavuz</a>. Kanama süresi, miktarı ve kişisel risklere göre inceleme.</li>
+          <li id="kaynak-5"><a href="https://www.saglik.gov.tr/TR-100021/ekim-ayi-tum-dunyada-meme-kanseri-farkindalik-ayidir.html" target="_blank" rel="noopener noreferrer">T.C. Sağlık Bakanlığı — Meme kanseri farkındalığı ve ulusal tarama aralığı</a>. 40–69 yaşta iki yılda bir mamografi.</li>
+        <li id="kaynak-6"><a href="https://www.nhs.uk/conditions/stroke/symptoms/" target="_blank" rel="noopener noreferrer">NHS — İnme belirtileri</a>. Ani görme kaybı, şiddetli baş ağrısı ve acil yardım gerektiren nörolojik belirtiler.</li>
+        </ol>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
+          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
+        ]}
+      />
+
+      <ArticleEditorNote title="Bilimsel Editör Notu">
+        <p>Hafif yan etkiler, beklenmedik kanama ve acil belirtiler ayrı değerlendirilir.
+          İlk kontrol üçüncü ayda, sonraki görüşmeler en az yılda bir; ek kontroller klinik ihtiyaca göre planlanır.
+          Rutin tarama ile yeni bir belirti için yapılan inceleme birbirinden ayrılmalıdır.</p>
+<p class="text-sm italic text-primary">— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü</p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+<p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+          Hormon tedavisi başlama, doz ayarlama, izleme ve sonlandırma kararları kendi hekiminizle birlikte
+          değerlendirilir. Beklenmedik belirti durumunda planlı kontrolden önce hekiminizle iletişime geçmeniz
+          güvenli tercihtir.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

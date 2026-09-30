@@ -1,0 +1,423 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { articleFaqs } from '../../../data/article-faqs';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const route = '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/';
+const hero = submenuHeroByRoute[route]!;
+
+const tocEntries = [
+  { id: 'acilis', label: 'İzlem Defteriyle Başlamak' },
+  { id: 'ilk-haftalar', label: 'İlk Haftaların Hisleri' },
+  { id: 'yumusak-yan-etkiler', label: 'Yumuşak ve Geçici Olan' },
+  { id: 'kanama-duzeni', label: 'Kanama Düzenindeki Değişimler' },
+  { id: 'ruh-hali-uyku', label: 'Ruh Hali, Baş Ağrısı ve Uyku' },
+  { id: 'izleme-takvimi', label: 'İzleme Takvimi: 3, 6, 12 Ay' },
+  { id: 'ne-zaman-hekime', label: 'Ne Zaman Hekime Başvurmak Anlamlı?' },
+  { id: 'sik-sorulanlar', label: 'Sık Sorulanlar' },
+  { id: 'kapanis', label: 'Kapanış' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?';
+const seoTitle = 'HRT Yan Etkileri ve İzleme';
+const articleDescription =
+  'Hormon tedavisinin ilk haftalarında görülebilecek geçici yan etkileri, izleme takvimini ve gecikmeden hekime danışılması gereken alarm belirtilerini ele alan sakin bir hekim rehberi.';
+const faqItems = articleFaqs[route] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'alper-mumcu',
+  articleType: 'clinical-guide',
+  publishedDate: '27 Nisan 2026',
+  modifiedDate: '16 Haziran 2026',
+  pathname: route,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/',
+  keywords: [
+    'HRT',
+    'hormon tedavisi yan etkileri',
+    'meme hassasiyeti',
+    'baş ağrısı',
+    'kanama düzensizliği',
+    'menopoz',
+    'izleme takvimi',
+    '3 aylık kontrol',
+    'alarm belirtileri',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz · HRT"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="alper-mumcu"
+        articleType="clinical-guide"
+        publishedDate="27 Nisan 2026"
+        lastUpdated="16 Haziran 2026"
+        readingMinutes={10}
+        imageSrc="/images/library/editorial/introspective-clasped-hands.webp"
+        imageAlt="Sabah ışığında birleşmiş eller ve açık not defteri; HRT yan etkileri ve izleme yazısı için editoryal görsel"
+      />
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Hormon tedavisinin ilk haftalarında meme hassasiyeti, hafif baş ağrısı veya ödem görülebilir.
+          Kanama düzenindeki dalgalanmalar da klinik pratikte sık karşılaştığımız, beklenen tablolardır.
+          Bu belirtilerin büyük kısmı vücut yeni hormonal dengeye uyum sağlarken ortaya çıkar ve ilk birkaç ay
+          içinde kendiliğinden geriler. Ancak hangi belirtinin olağan bir adaptasyon, hangisinin gecikmeden hekime
+          danışılması gereken bir alarm işareti olduğunu bilmek kritik önem taşır. Bu rehber; 3, 6 ve 12. ay
+          izleme takvimini, doz ve form ayarlama süreçlerini ve ne zaman muayeneye başvurulması gerektiğini
+          sakin ve güvenli bir hekim çerçevesinde ele alıyor.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="acilis">İzlem Defteriyle Başlamak</h2>
+        <p>
+          Hormon tedavisine başlayan kadınların ilk haftalarda en sık sorduğu soru genellikle aynıdır: "Bu hissettiklerim
+          normal mi, yoksa bir şeyler ters mi gidiyor?" Muayene odasında bu soruya verdiğim yanıt da değişmez: İlk haftaları
+          kesin bir hükme varmak için değil, bedenin verdiği yanıtı sakin bir dikkatle izlemek için kullanırız.
+        </p>
+        <p>
+          Tedavinin başlangıcı; küçük bedensel sinyallerin, akla takılan soruların ve ufak doz ayarlamalarının bir arada
+          yürüdüğü bir adaptasyon evresidir. Bu dönemde tutulacak bir izlem kaydı, karmaşık bir tıbbi dosya olmak zorunda
+          değildir. Telefonda haftalık tek bir cümlelik not, kanama günlerinin takvimde işaretlenmesi ya da meme hassasiyetinin
+          kaç gün sürdüğünün yazılması çoğu zaman fazlasıyla yeterlidir.
+        </p>
+        <p>
+          Üçüncü ay kontrolüne geldiğinizde bu kısa notlar, hekiminizle birlikte "Tedavi uyumsuz mu, yoksa beden yeni
+          hormon seviyelerine henüz mü yerleşiyor?" sorusuna berrak bir yanıt bulmanızı sağlar. İlk aylarda neyin olağan,
+          neyin dikkat gerektiren bir durum olduğunu bilmek, gereksiz paniği önlediği gibi asıl önemli sinyallerin de
+          gözden kaçmasını engeller. Bireysel doz, form ve süre kararı muayene odasında verilir; ancak izleme disiplini
+          süreci güvenli kılar.
+        </p>
+
+        <h2 id="ilk-haftalar">İlk Haftaların Hisleri</h2>
+        <p>
+          Hormon tedavisine başladığınız ilk günlerde her şeyin anında değişmesini bekleyebilirsiniz; oysa vücudun
+          biyolojik ritmi genellikle çok daha kademeli ilerler.
+        </p>
+        <p>
+          Bazı kadınlarda ilk birkaç hafta şaşırtıcı bir sessizlik içinde geçer; muayenede "Hapı aldım ama hiçbir şey
+          hissetmedim, acaba etki etmiyor mu?" sorusuyla çok sık karşılaşırım. Bu durum tamamen doğaldır. Bazı kadınlarda
+          ise hafif bir baş ağrısı, sabahları kısa süren bir mide hassasiyeti ya da memelerde dolgunluk hissi görülebilir.
+          Bunların büyük kısmı, reseptörlerin yeni hormon düzeylerine uyum sağlama sürecinin olağan bir yansımasıdır
+          <Evidence level={5} />.
+        </p>
+        <p>
+          İlk haftalarda yaşanan hafif bir baş ağrısı tedavinin size uymadığını göstermediği gibi, sıcak basmalarının ilk
+          günlerde tamamen kaybolmaması da ilacın yetersiz kaldığına işaret etmez. Hormon dengesi saatler içinde değil,
+          dokuların cevabıyla haftalar içinde oturur. Bu nedenle klinik pratikte tedavinin asıl etkinliğini ve toleransını
+          değerlendirmek için acele etmez, üçüncü ayı temel referans noktası kabul ederiz.
+        </p>
+        <p class="rounded-[18px] bg-cream-soft p-5 text-secondary md:p-6">
+          <strong>Klinik gözlem:</strong> İlk iki haftada hafif belirtiler hissetmek de hiçbir değişiklik fark etmemek de
+          aynı tablonun olağan parçalarıdır. Bu erken dönem kesin bir sonuca varmak için erken, bedeni dinlemek için en doğru zamandır.
+        </p>
+
+        <h2 id="yumusak-yan-etkiler">Yumuşak ve Geçici Olan</h2>
+        <p>
+          Klinik pratikte "hafif ve geçici" olarak sınıflandırdığımız belirtiler, hormon düzeylerindeki değişime
+          dokuların verdiği ilk yanıtlardır ve büyük çoğunlukla vücut alıştıkça kendiliğinden yatışır.
+        </p>
+        <p>
+          Bu belirtilerin başında <strong>meme hassasiyeti</strong> gelir. Memelerde dolgunluk, bazen hafif bir
+          sızlama ya da sabahları giysinin temas ettiği noktada belirginleşen bir gerginlik hissi, östrojen reseptörlerinin
+          yeniden uyarılmasıyla doğrudan ilişkilidir. Genellikle ilk iki ila üç ay içinde hafifleyerek kaybolur. Bu süreçte
+          balensiz, rahat iç giyim tercih etmek ve uyku pozisyonunu buna göre ayarlamak belirgin bir rahatlama sağlar.
+        </p>
+        <p>
+          <strong>Hafif ödem ve sıvı tutulumu</strong> da sık rastlanan bir diğer durumdur. Bedenin su ve tuz dengesi
+          östrojen ve progesteron düzeylerine oldukça duyarlıdır. Yüzüklerin parmağı biraz sıkması veya çorap lastiğinin
+          ayak bileğinde hafif iz bırakması çoğunlukla geçicidir. Günlük beslenmede aşırı tuzu ve işlenmiş gıdaları sınırlamak,
+          yeterli miktarda su tüketmek ve hareketli kalmak dolaşımı destekleyerek bu hissi hafifletir.
+        </p>
+        <p>
+          <strong>Mide hassasiyeti</strong> ise özellikle ağızdan alınan (oral) tablet tedavilerinin ilk haftalarında
+          aralıklı olarak ortaya çıkabilir. İlacı sabahları hafif bir atıştırmalıkla birlikte almak çoğu zaman bu rahatsızlığı
+          ortadan kaldırır. Şikayet devam ederse üçüncü ay kontrolünde hekiminizle form değişikliğini görüşebilirsiniz;
+          cilt üzerinden uygulanan transdermal jel veya bantlar karaciğer ilk geçiş etkisini devre dışı bıraktığı için mide
+          açısından genellikle çok daha konforlu bir seçenek sunar.
+        </p>
+
+        <h2 id="kanama-duzeni">Kanama Düzenindeki Değişimler</h2>
+        <p>
+          Hormon tedavisine başlayan kadınların zihnini en çok meşgul eden ve en dikkatli takibi gerektiren konu,
+          kanama düzeninde ortaya çıkan dalgalanmalardır.
+        </p>
+        <p>
+          Tedaviye başlandıktan sonra düzensiz kanamalarla karşılaşmak oldukça yaygındır; özellikle rahmi olan ve kombine
+          tedavi (östrojen + progesteron) alan kadınlarda, ilk üç ila altı ay boyunca ara lekelenmeler veya beklenmedik hafif
+          kanamalar görülebilir <Evidence level={5} />. Bu tablo, rahim iç tabakasının (endometrium) değişen hormon ritmine
+          biyolojik uyum sürecinden kaynaklanır ve vakaların büyük çoğunluğunda altıncı aydan sonra kendiliğinden düzene girer.
+        </p>
+        <p>
+          Ancak kanamayla ilgili her tabloyu bu geçici uyum süreciyle açıklamak doğru değildir. Menopoz kesinleştikten sonra
+          (son adetin üzerinden en az bir yıl geçtikten sonra) aniden başlayan kanamalar özel dikkat ister. Alışılmış
+          lekelenmelerden çok daha yoğun seyreden ya da altıncı aydan sonra devam eden kanamalar da gecikmeden bir kadın
+          hastalıkları ve doğum uzmanı tarafından değerlendirilmelidir. Ultrasonografi ile endometrium kalınlığının ölçülmesi
+          ve nedenin araştırılması standart ve güvenli bir takip adımıdır.
+        </p>
+        <p class="rounded-[18px] bg-cream-soft p-5 text-secondary md:p-6">
+          <strong>Önemli güvenlik sınırı:</strong> İlk 3–6 aydaki hafif lekelenmeler beklenen adaptasyonun parçasıyken;
+          yoğun, pıhtılı, uzun süren veya menopozdan aylar/yıllar sonra aniden başlayan kanamalar asla "nasılsa geçer" diye
+          beklenmemeli, planlı kontrol tarihi beklenmeden hekime iletilmelidir.
+        </p>
+
+        <h2 id="ruh-hali-uyku">Ruh Hali, Baş Ağrısı ve Uyku</h2>
+        <p>
+          Hormon düzeylerinin yeniden dengelenmesi yalnızca bedensel dokuları değil; duygudurumu, baş ağrısı
+          eğilimini ve gece uykusunun mimarisini de doğrudan etkiler.
+        </p>
+        <p>
+          Muayene odasında bir hastam şöyle ifade etmişti: "Sıcak basmalarım azaldı ama ilk haftalarda kendimi
+          duygusal olarak biraz yorgun hissettim." Bu hissin altında çoğunlukla iki biyolojik etken yatar. Birincisi,
+          yıllardır dalgalanan hormon seviyelerinden yeni bir dengeye geçiş zihinsel bir uyum enerjisi gerektirir.
+          İkincisi ise uyku mimarisinin ilk günlerde hemen oturmamasıdır. İkinci ve üçüncü aydan itibaren kadınların
+          büyük bir kısmı bu dalgalanmanın yerini sakin bir dengeye bıraktığını belirtir.
+        </p>
+        <p>
+          <strong>Baş ağrısı</strong> da ilk haftalarda karşılaşılan yaygın geçici etkilerdendir. Genellikle hafif,
+          alında ve şakaklarda gerilim tipi bir ağırlık hissi şeklindedir ve vücut alıştıkça seyrekleşir. Ancak geçmişinde
+          migren öyküsü bulunan ya da auralı migren atakları yaşayan kadınlarda baş ağrısı daha titiz bir dikkat ister.
+          İlk kez ortaya çıkan görme bozukluklarıyla (aura) birlikte gelen baş ağrıları dikkatle incelenmelidir. Alışılmış
+          ağrı karakterinden belirgin biçimde farklı ve şiddetli bir tablo yaşanırsa, durum gecikmeden hekime bildirilmelidir.
+        </p>
+        <p>
+          <strong>Uyku kalitesi</strong> açısından ilk haftalar inişli çıkışlı seyredebilir. Gece terlemelerinin seyrekleşmesi
+          çoğunlukla ikinci aydan itibaren belirginleşir ve bu durum derin uyku sürelerini hızla toparlar. Fakat uyku döngüsündeki
+          düzelme her zaman doğrusal ilerlemez; stres, iş yükü ve yaşam temposu araya girdiğinde dalgalanmalar yaşanabilir.
+          Bu nedenle ilk üç ayda duygusal değişimleri hemen ilaca bağlamak yerine genel kalıbı izlemek gerekir. Belirtinin
+          ne zaman başladığını ve günlük yaşamı nasıl etkilediğini gözlemlemek, hekiminizle yapacağınız değerlendirmeyi çok
+          daha verimli kılar.
+        </p>
+
+        <h2 id="izleme-takvimi">İzleme Takvimi: 3, 6, 12 Ay</h2>
+        <p>
+          Hormon tedavisi başladığında süreç kendi haline bırakılmaz; planlı ve düzenli aralıklarla yapılan kontroller
+          tedavinin en güvenilir güvenlik ağıdır.
+        </p>
+        <p>
+          Tedavinin ilk yılında belirtilere verilen yanıt, kanama düzeni, kan basıncı (tansiyon) seyri ve olası yan etkiler
+          bir arada izlendiği için takip aralıkları daha sık tutulur. Bu takvim kişisel tahminlerle değil, uluslararası klinik
+          güvenlik protokolleriyle şekillenir.
+        </p>
+        <p>
+          Klinik pratikte HRT başlandıktan sonraki ilk yıl, genellikle üç aylık periyotlarla takip öneririz. <strong>Üçüncü ay</strong>
+          kontrolü ilk temel dönüm noktasıdır; sıcak basmaları ve gece terlemelerinin ne ölçüde gerilediği ve rahatsız edici bir
+          yan etkinin bulunup bulunmadığı bu görüşmede netleşir. İhtiyaç halinde dozun hafifçe ayarlanması veya tablet formundan
+          jel/bant formuna geçiş bu vizitte kararlaştırılır <Evidence level={5} />.
+        </p>
+        <p>
+          <strong>Altıncı ayda</strong> hormonal dengenin oturup oturmadığı, kanama düzeninin yerleşmesi ve uyku kalitesi yeniden
+          gözden geçirilir. <strong>Birinci yılın sonunda</strong> ise daha kapsamlı bir değerlendirme yapılır. Tansiyon takibi,
+          jinekolojik muayene, rutin kan biyokimyası, mamografi taraması ve klinik gerekçeye göre kemik yoğunluğu ölçümü (DEXA)
+          değerlendirilir. Yıllık mamografi ve meme muayenesi 40 yaş üzeri her kadın için zaten temel koruyucu sağlık adımıdır;
+          hormon tedavisi bu takvimi aksatmadan sürdürmenin önemini bir kez daha pekiştirir.
+        </p>
+        <p>
+          İlk yıl sorunsuz tamamlandıktan sonra, klinik tablo dengeli seyrettiği müddetçe kontroller altı aylık ya da yıllık
+          aralıklara genişletilebilir. Bu durum takibin bittiği anlamına gelmez; hormon tedavisi dinamik bir süreçtir ve
+          yıllar içinde değişen ihtiyaçlara göre hekiminizle birlikte düzenli olarak yeniden gözden geçirilir.
+        </p>
+        <p class="rounded-[18px] bg-cream-soft p-5 text-secondary md:p-6">
+          <strong>Takvim özeti:</strong> İlk yıl genellikle 3, 6 ve 12. ay kontrolleri; sonrasında stabil seyirde yılda bir rutin takip.
+          Rutin taramalar HRT'ye özgü ek bir yük değil, her kadının koruyucu sağlık ajandasında zaten yer alması gereken adımlardır.
+        </p>
+
+        <h2 id="ne-zaman-hekime">Ne Zaman Hekime Başvurmak Anlamlı?</h2>
+        <p>
+          Süreci güvenle yönetmenin en önemli kuralı, olağan ve geçici uyum belirtileriyle acil tıbbi değerlendirme
+          gerektiren alarm bulgularını birbirinden net biçimde ayırabilmektir.
+        </p>
+        <p>
+          Aşağıdaki belirtilerden herhangi biriyle karşılaşıldığında, planlı randevu tarihini beklemeksizin gecikmeden
+          hekiminizle iletişime geçmeniz gerekir:
+        </p>
+        <ul>
+          <li>
+            <strong>Bacakta tek taraflı şişlik, kızarıklık veya ısrarlı baldır ağrısı</strong> — derin ven trombozu (damar içi pıhtılaşma)
+            açısından nadir fakat acil değerlendirme gerektiren bir durumun işareti olabilir <Evidence level={5} />.
+          </li>
+          <li>
+            <strong>Göğüste baskı tarzında şiddetli ağrı, nefes darlığı veya ani çarpıntı</strong> — kardiyovasküler açıdan derhal
+            incelenmesi zorunlu bir tablodur.
+          </li>
+          <li>
+            <strong>Ani başlayan görme bozuklukları</strong> — görme alanında kayıp, kararma veya bulanıklık; özellikle ilk kez ortaya
+            çıkan migren auraları titizlikle incelenmelidir.
+          </li>
+          <li>
+            <strong>Karakteri değişen veya alışılmışın dışında çok şiddetli baş ağrısı</strong> — özellikle daha önce yaşanmamış bir
+            şiddette ve ani başlangıçlı ise hekime danışılmalıdır.
+          </li>
+          <li>
+            <strong>Menopoz kesinleştikten sonra başlayan kanama</strong> ya da ilk altı aydan sonra hâlâ devam eden yoğun, uzun süreli
+            ve pıhtılı kanamalar <Evidence level={5} />.
+          </li>
+          <li>
+            <strong>Memede yeni ele gelen kitle, meme başında akıntı veya ciltte çekinti</strong> — yıllık tarama zamanı beklenmeden
+            muayene ve görüntüleme gerektirir.
+          </li>
+          <li>
+            <strong>Şiddetli karın ağrısı, ciltte veya göz aklarında sararma, koyu renkli idrar</strong> — karaciğer fonksiyonlarının
+            ve safra yollarının acilen değerlendirilmesini gerektiren bulgulardır.
+          </li>
+        </ul>
+        <p>
+          Bu maddeler bir endişe listesi değil; güvenli ve bilinçli bir takip kılavuzudur. Kadınların çok büyük bir bölümünde
+          hormon tedavisi yıllar boyu son derece sakin ve sorunsuz ilerler. Temel kural, hangi sınırda planlı kontrolü beklemeden
+          hekimle temas kuracağını bilmektir.
+        </p>
+
+        <h2 id="sik-sorulanlar">Sık Sorulanlar</h2>
+
+        <h3>Yan etkilerin büyük kısmı ne zamana kadar geçer?</h3>
+        <p>
+          Hafif ve yaygın yan etkilerin büyük kısmı (meme hassasiyeti, hafif ödem, hafif baş ağrıları ve lekelenmeler) ilk üç ila altı
+          ay içinde belirgin biçimde azalır. Üçüncü ay, çoğu klinik durumda ilk gerçek değerlendirme noktası kabul edilir.
+          İlk haftalarda yaşanan geçici bir belirti üzerinden tedaviyi yargılamak genellikle erken bir karardır. Altıncı ayın
+          sonunda hâlâ rahatsız edici bir şikâyet devam ediyorsa, doz veya form değişikliği hekimle birlikte değerlendirilebilir.
+        </p>
+
+        <h3>İlk haftalarda kanama olması her zaman endişe verici mi?</h3>
+        <p>
+          Hayır. Özellikle rahmi olan ve kombine tedavi (östrojen + progesteron) alan kadınlarda ilk üç ila altı ay boyunca aralıklı
+          küçük lekelenmeler veya beklenmedik kısa kanamalar görülmesi beklenen bir uyum tablosudur. Ancak yoğun, uzun süren kanamalar,
+          menopoz kesinleştikten (son adetten en az bir yıl geçtikten) sonra aniden başlayan kanamalar veya altıncı aydan sonra
+          düzene girmeyen kanamalar mutlaka hekim tarafından değerlendirilmelidir.
+        </p>
+
+        <h3>Hekimle ne sıklıkta görüşmek anlamlı?</h3>
+        <p>
+          Tedavinin ilk yılında genellikle üç aylık aralıklarla izlem önerilir; takip eden yıllarda klinik seyir stabil olduğunda
+          kontroller altı ay ila bir yıla açılabilir. Yıllık mamografi, jinekolojik kontrol ve kan tetkikleri standart izlemin
+          vazgeçilmez parçalarıdır. Beklenmedik bir alarm belirtisi fark edildiğinde planlı kontrol tarihini beklemeden hekime
+          başvurmak her zaman en güvenli yaklaşımdır; "üç ayım dolmadı" diye beklemek doğru bir refleks değildir.
+        </p>
+
+        <h3>Ev ortamında neyi izlemek anlamlı?</h3>
+        <p>
+          Karmaşık ve yorucu bir takip sistemi kurmanız gerekmez. Telefonda veya küçük bir not defterinde haftada bir cümle —
+          örneğin "bu hafta uyku kalitesi iyiydi, meme hassasiyeti azaldı, iki gün hafif lekelenme oldu" şeklinde — üçüncü ayda
+          hekiminizle görüştüğünüzde en değerli başvuru kaynağı haline gelir. Düzenli belirti notları, kontrolde hangi hissin
+          tedaviye hangi hissin günlük yaşam temposuna bağlı olduğunun net biçimde ayrıştırılmasını sağlar.
+        </p>
+
+        <h3>Yan etkiler bana uymadığını mı gösterir?</h3>
+        <p>
+          Çoğu zaman hayır. İlk haftalarda yaşanan hafif yan etkiler tedavinin size uymadığı anlamına gelmez; dokuların yeni
+          hormon seviyelerine adaptasyon gösterdiğine işaret eder. Üçüncü ayın sonunda hâlâ konforunuzu bozan bir tablo varsa,
+          doktorunuzla birlikte doz ayarlaması ya da form değişikliği (oral tabletten transdermal jel veya banta geçiş) gündeme
+          gelebilir. Bazen aynı etken maddenin farklı bir uygulama yoluyla alınması çok daha rahat bir kullanım sağlar. Hormon
+          tedavisi tek seferlik katı bir karar değil, zaman içinde hekiminizle birlikte şekillenen dinamik bir süreçtir.
+        </p>
+
+        <h2 id="kapanis">Kapanış</h2>
+        <p>
+          Başlangıçta bahsettiğimiz o küçük izlem notları, aslında tedaviyi tek başınıza taşımak zorunda olmadığınızı
+          hatırlatan en sade ve etkili araçtır.
+        </p>
+        <p>
+          Yan etkilerin sakinlikle karşılanması, gerekirse dozun veya kullanım formunun değiştirilmesi dışarıdan büyük
+          ve karmaşık tıbbi adımlar gibi görünebilir. Oysa bu sürecin temelinde çok basit bir alışkanlık yatar: Haftada
+          bir cümlelik dürüst bir gözlem. Bu kısa kayıtlar, sizi hem gereksiz bir telaştan korur hem de olası bir risk
+          durumunda gecikmenizi önler.
+        </p>
+        <p>
+          İlk ayların temel hedefi mucizevi bir kusursuzluk değil, güvenli bir izlem zemini kurmaktır. Geçici adaptasyon
+          belirtileriyle gerçek alarm bulgularını birbirinden ayırmak, hormon tedavisini kaygıdan uzaklaştırıp bilinçli bir
+          sağlık kararına dönüştürür.
+        </p>
+        <p>
+          Aklınıza takılan her bedensel hissi kısa kısa not edin. Üçüncü ay kontrolüne gittiğinizde doktorunuzla şu iki temel
+          sorunun yanıtını netleştirmek süreci çok daha ferah kılacaktır: <em>"Yaşadığım bu belirtiler vücudumun beklenen uyum
+          sürecine mi ait?"</em> ve <em>"Mevcut doz ve kullanım şekli benim için en konforlu seçenek mi?"</em> Bu açık iletişim,
+          hormon tedavisini hekiminizle yan yana yürüttüğünüz güvenli bir yolculuk haline getirir.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
+          '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
+        ]}
+      />
+
+      <ArticleEditorNote>
+<p class="mb-3 leading-relaxed text-ink/80">
+          Menopozal hormon tedavisinin ilk haftalarında görülen yumuşak yan etkiler (meme hassasiyeti, hafif
+          ödem, gerilim tipi baş ağrısı, kanama düzensizliği) büyük çoğunlukla bedenin yeni hormonal dengeye
+          yerleşme sürecinin parçasıdır. Endometrial uyum, sıvı dengesi ve vasküler tonus üzerindeki erken
+          etkiler ilk üç–altı ayda dengelenmeye eğilimlidir.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Klinik kanıt yumuşak yan etkilerin büyük kısmının üçüncü aya kadar belirgin biçimde gerilediğini,
+          altıncı aya kadar kanama düzeninin yerleşmesinin beklendiğini ortaya koymaktadır. Bu süreçte
+          tedavinin yargılanması yerine düzenli gözlem önerilir.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Bireysel doz, form (oral / transdermal / vajinal) ve izlem kararları her zaman ilgili hekim
+          tarafından klinik duruma göre verilir. İlk yıl üç aylık aralıklarla görüşme; sonraki yıllarda klinik
+tabloya göre altı ay–yıllık görüşme ve yıllık mamografi standart izlemin parçasıdır.
+        </p>
+        <p class="mb-3 leading-relaxed text-ink/80">
+          Bacakta tek taraflı şişlik veya ısrarlı baldır ağrısı, göğüste yoğun ağrı, açıklanamayan nefes
+          darlığı, ani görme bozukluğu, aurayla başlayan veya karakteri değişen şiddetli baş ağrısı,
+          postmenopoz döneminde açıklanamayan kanama, memede yeni kitle ya da şiddetli karın ağrısı / sarılık
+          tablosu gecikmeden değerlendirilmelidir.
+        </p>
+        <p class="text-sm italic text-primary">
+          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+<p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+          Hormon tedavisi başlama, doz ayarlama, izleme ve sonlandırma kararları kendi hekiminizle birlikte
+          değerlendirilir. Beklenmedik belirti durumunda planlı kontrolden önce hekiminizle iletişime geçmeniz
+          güvenli tercihtir.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

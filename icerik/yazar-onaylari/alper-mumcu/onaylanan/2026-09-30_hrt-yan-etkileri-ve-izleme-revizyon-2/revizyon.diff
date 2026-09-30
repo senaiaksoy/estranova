@@ -1,0 +1,228 @@
+diff --git a/icerik/yazar-onaylari/alper-mumcu/onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/onceki-onayli-kaynak.astro b/icerik/yazar-onaylari/alper-mumcu/onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/makale-kaynak.astro
+index 0bbb646..fa2bff3 100644
+--- a/icerik/yazar-onaylari/alper-mumcu/onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/onceki-onayli-kaynak.astro
++++ b/icerik/yazar-onaylari/alper-mumcu/onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/makale-kaynak.astro
+@@ -26,10 +26,9 @@ const tocEntries = [
+   { id: 'yumusak-yan-etkiler', label: 'Hafif Yan Etkilerle Baş Etmek' },
+   { id: 'kanama-duzeni', label: 'Kanama Düzenindeki Değişimler' },
+   { id: 'ruh-hali-uyku', label: 'Ruh Hali, Baş Ağrısı ve Uyku' },
+-  { id: 'izleme-takvimi', label: 'İlk Kontrol ve Yıllık Değerlendirme' },
+-  { id: 'ne-zaman-hekime', label: 'Kontrolü Beklememeniz Gereken Belirtiler' },
++  { id: 'izleme-takvimi', label: 'İzleme Takvimi ve Kontrole Hazırlık' },
+   { id: 'sik-sorulanlar', label: 'Dr. Aksoy’a Sorular' },
+-  { id: 'kapanis', label: 'Kontrol Görüşmesine Hazırlanmak' },
++  { id: 'ne-zaman-hekime', label: 'Planlı Kontrolü Beklememeniz Gereken Belirtiler' },
+   { id: 'kaynaklar', label: 'Kaynaklar' },
+ ];
+ 
+@@ -109,49 +108,53 @@ const articleSchemas = buildArticleSchemas({
+       <ArticleProsePanel>
+         <h2 id="acilis">İzlem Defteriyle Başlamak</h2>
+         <p>
+-          HRT'ye başladıktan sonra fark ettiğiniz bir belirti, aklınıza hemen aynı soruyu getirebilir:
+-          “Bu beklenen bir yan etki mi?” Yanıtı ararken belirtinin ne zaman başladığı, şiddeti ve nasıl
+-          değiştiği önemlidir.
++          Sabah ilacınızı aldınız, öğleden sonra memenizde bir hassasiyet fark ettiniz. Aklınıza gelen ilk
++          soru belli: “Bu normal mi?”
+         </p>
+         <p>
+-          Telefonunuza düşeceğiniz kısa bir not yeterli olabilir: “İki gündür meme hassasiyeti var”,
+-          “Bu hafta iki kez lekelenme oldu” veya “Gece terlemesi azaldı.” Kanama günlerini ayrıca
+-          işaretleyin. İlaca başladığınız ya da dozun değiştiği tarihi de kaydedin.
++          HRT'ye yeni başlamış biri için çok doğal bir soru bu. Yanıtlarken üç şeye bakarım: Belirti ne zaman
++          başladı, ne kadar şiddetli ve zamanla nasıl değişiyor?
+         </p>
+         <p>
+-          Bu notları kontrol görüşmesine götürün. Hekiminiz belirtilerin tedaviyle ilişkisini ve doz ya da
+-          uygulama yolunda değişiklik gerekip gerekmediğini değerlendirir. Kayıt tutmak tanı koymaz;
+-          konuşmayı somutlaştırır. Aşağıdaki güvenlik belirtilerinden biri ortaya çıkarsa not almakla
+-          yetinmeyin, uygun tıbbi yardıma başvurun.
++          Bunun için karmaşık bir sistem gerekmez. Telefonunuza düşeceğiniz kısa bir not yeter:
++          “İki gündür meme hassasiyeti var”, “Bu hafta iki kez lekelenme oldu” veya “Gece terlemesi azaldı.”
++          Kanama günlerini ayrıca işaretleyin. İlaca başladığınız ve dozun değiştiği tarihi de yazın.
++        </p>
++        <p>
++          Bu notları kontrol görüşmesine getirin. Hekiminiz belirtilerin tedaviyle ilişkisini ve doz ya da
++          uygulama yolunda değişiklik gerekip gerekmediğini bu notlarla daha kolay değerlendirir. Kayıt tutmak
++          tanı koymaz; konuşmayı somutlaştırır. Aşağıdaki güvenlik belirtilerinden biri ortaya çıkarsa not
++          almakla yetinmeyin, uygun tıbbi yardıma başvurun.
+         </p>
+ 
+         <h2 id="ilk-haftalar">İlk Haftalarda Neler Değişebilir?</h2>
+         <p>
+-          İlk günlerde belirgin bir değişiklik hissetmemeniz, tedavinin etkisiz kaldığını göstermez.
+-          Belirtilerdeki düzelme ve yan etkilerin seyri kişiden kişiye değişir.
++          Önce şunu söyleyeyim: İlk günlerde belirgin bir değişiklik hissetmemeniz, tedavinin etkisiz kaldığını
++          göstermez.
+         </p>
+         <p>
+-          Bazı kişiler hiçbir yan etki yaşamaz. Bazılarında meme hassasiyeti, bulantı, baş ağrısı veya
+-          ruh hali değişiklikleri görülür. Hafif belirtiler birkaç hafta içinde azalabilir; rahatsız edici
+-          olanlar veya üç aydan uzun sürenler hekimle görüşülmelidir. Şiddetli bir belirti için üç ay
+-          beklenmez <Evidence level={4} /> <a href="#kaynak-2">[2]</a>.
++          Belirtilerdeki düzelme de yan etkilerin seyri de kişiden kişiye değişir. Bazı kadınlar hiçbir yan
++          etki yaşamaz. Bazılarında meme hassasiyeti, bulantı, baş ağrısı veya ruh hali değişiklikleri görülür.
++          Hafif belirtiler birkaç hafta içinde azalabilir. Rahatsız edici olanları ya da üç aydan uzun
++          sürenleri hekiminizle konuşun. Şiddetli bir belirti için üç ay beklenmez <Evidence level={4} /> <a href="#kaynak-2">[2]</a>.
+         </p>
+         <p>
+-          Menopoz belirtileriyle ilaç yan etkileri birbirine benzeyebilir. Yeni bir şikâyeti otomatik olarak
+-          “hormonlara alışıyorum” diye açıklamak yerine, başlangıcını ve günlük yaşamınıza etkisini
+-          hekiminize anlatın. Üçüncü ay kontrolü, tedavinin yararını ve tolere edilip edilmediğini birlikte
+-          değerlendirmek için planlanır <a href="#kaynak-1">[1]</a>.
++          Menopoz belirtileriyle ilaç yan etkileri birbirine benzeyebilir. Bu yüzden yeni bir şikâyeti hemen
++          “hormonlara alışıyorum” diye açıklamayın. Ne zaman başladığını ve gününüzü nasıl etkilediğini
++          hekiminize anlatın. Üçüncü ay kontrolü tam da bunun için planlanır: tedavinin yararını ve nasıl
++          tolere edildiğini birlikte değerlendirmek <a href="#kaynak-1">[1]</a>.
+         </p>
+ 
+         <h2 id="yumusak-yan-etkiler">Hafif Yan Etkilerle Baş Etmek</h2>
+         <p>
+-          Meme hassasiyeti veya bulantı hafif olsa da gününüzü zorlaştırabilir.
+-          Rahatsızlığı hekiminize anlatmak için şiddetlenmesini beklemeniz gerekmez.
++          Hafif bir yan etki de gününüzü bozabilir. Bulantıyla güne başlamak ya da giysinin bile rahatsız
++          ettiği bir meme hassasiyeti küçük bir dert sayılmaz.
+         </p>
++        <p>Bunu hekiminize söylemek için şiddetlenmesini beklemeyin.</p>
+         <p>
+           <strong>Meme hassasiyeti</strong> birkaç hafta içinde hafifleyebilir. Sizi rahatsız ediyorsa veya
+-          geçmiyorsa hekiminizle konuşun. Memede yeni kitle, meme başında akıntı ya da değişiklik veya ciltte çekinti
+-          fark etmek, genel hassasiyetten ayrı değerlendirilir <Evidence level={4} /> <a href="#kaynak-3">[3]</a>.
++          geçmiyorsa hekiminizle konuşun. Memede yeni kitle, meme başında akıntı ya da değişiklik veya ciltte
++          çekinti fark etmek, genel hassasiyetten ayrı değerlendirilir <Evidence level={4} /> <a href="#kaynak-3">[3]</a>.
+         </p>
+         <p>
+           <strong>Bulantı</strong> için ağızdan alınan östrojen tabletini yemekle almak yardımcı olabilir;
+@@ -167,11 +170,12 @@ const articleSchemas = buildArticleSchemas({
+ 
+         <h2 id="kanama-duzeni">Kanama Düzenindeki Değişimler</h2>
+         <p>
+-          Kanamayı değerlendirirken yalnız miktarına değil, tedavinin hangi aşamasında olduğuna da bakılır.
+-          Hekiminize başlangıç tarihini, kanama günlerini ve kullandığınız tedavi düzenini birlikte anlatın.
++          Kanama görmek insanı haklı olarak tedirgin eder. Değerlendirirken miktarı kadar, tedavinin hangi
++          aşamasında olduğunuz da önemlidir.
+         </p>
+         <p>
+-          Rahmi olan kişilerde sistemik HRT'nin ilk altı ayında veya doz ya da ilaç değişikliğini izleyen
++          Hekiminize başlangıç tarihini, kanama günlerini ve kullandığınız tedavi düzenini birlikte anlatın.
++          Rahmi olan kadınlarda sistemik HRT'nin ilk altı ayında veya doz ya da ilaç değişikliğini izleyen
+           üç ayda lekelenme görülebilir. Döngüsel kombine tedavide progestojen döneminin sonunda beklenen
+           çekilme kanaması olabilir; sürekli kombine tedavideki beklenmedik kanama farklı değerlendirilir
+           <Evidence level={4} /> <a href="#kaynak-1">[1]</a> <a href="#kaynak-2">[2]</a>.
+@@ -192,13 +196,17 @@ const articleSchemas = buildArticleSchemas({
+ 
+         <h2 id="ruh-hali-uyku">Ruh Hali, Baş Ağrısı ve Uyku</h2>
+         <p>
+-          Sıcak basmalarınız azalırken uykunuz veya ruh haliniz aynı hızda düzelmeyebilir.
+-          Bu değişimleri ayrı ayrı kaydetmeniz, kontrolde neyin sürdüğünü anlatmanızı kolaylaştırır.
++          Sıcak basmalarınız azaldı ama gece yine uyanıyorsunuz. Bu çelişki insanın kafasını karıştırır.
++        </p>
++        <p>
++          Uykunuz ve ruh haliniz, sıcak basmalarla aynı hızda düzelmeyebilir. Bu değişimleri ayrı ayrı
++          kaydetmeniz, kontrolde neyin sürdüğünü anlatmanızı kolaylaştırır.
+         </p>
+         <p>
+           Ruh hali değişiklikleri hem menopoz döneminde hem de HRT kullanırken görülebilir. Keyifsizlik
+-          veya duygusal dalgalanma günlük yaşamınızı zorlaştırıyorsa hekiminize anlatın. Bunları yalnızca
+-          “uyum dönemi” diyerek geçiştirmeyin <a href="#kaynak-2">[2]</a> <a href="#kaynak-3">[3]</a>.
++          veya duygusal dalgalanma günlük yaşamınızı zorlaştırıyorsa hekiminize anlatın. “Abartıyor muyum?”
++          diye düşünüp susmayın. Bunları yalnızca “uyum dönemi” diyerek geçiştirmek de doğru olmaz
++          <a href="#kaynak-2">[2]</a> <a href="#kaynak-3">[3]</a>.
+         </p>
+         <p>
+           Hafif baş ağrısı başlangıçta görülebilir. Bir haftadan uzun sürüyorsa veya şiddetliyse hekimle
+@@ -208,15 +216,15 @@ const articleSchemas = buildArticleSchemas({
+         </p>
+         <p>
+           Uykuyu değerlendirirken gece terlemesiyle uyanmayı, uykuya dalma güçlüğünü ve ertesi günkü
+-          yorgunluğu ayırarak not edebilirsiniz. Her belirti için “ikinci ayda düzelir” gibi sabit bir
+-          süre vermek doğru olmaz. Kontrolde, tedavinin hedeflediği yakınmalarda ne kadar değişiklik
+-          olduğunu konuşun <a href="#kaynak-1">[1]</a>.
++          yorgunluğu ayırarak not edin. Her belirti için “ikinci ayda düzelir” gibi sabit bir
++          süre vermem; bu dürüst bir söz olmaz. Kontrolde, tedavinin hedeflediği yakınmalarda ne kadar
++          değişiklik olduğunu konuşun <a href="#kaynak-1">[1]</a>.
+         </p>
+ 
+-        <h2 id="izleme-takvimi">İzleme Takvimi: İlk Kontrol ve Yıllık Değerlendirme</h2>
++        <h2 id="izleme-takvimi">İzleme Takvimi ve Kontrole Hazırlık</h2>
+         <p>
+-          İlk kontrol yaklaşık üçüncü ayda, sonrasında en az yılda bir yapılır.
+-          Yan etkiler veya yeterince düzelmeyen belirtiler varsa daha erken görüşme planlanır.
++          Takvim aslında basit. İlk kontrol yaklaşık üçüncü ayda, sonrasında en az yılda bir yapılır; yan
++          etkiler veya yeterince düzelmeyen belirtiler varsa görüşme öne alınır.
+         </p>
+         <p>
+           Üçüncü ayda sıcak basmaları, gece terlemeleri, kanama ve yan etkiler birlikte gözden geçirilir.
+@@ -236,11 +244,31 @@ const articleSchemas = buildArticleSchemas({
+           yeni bir meme bulgusu varsa hekiminiz farklı bir değerlendirme planlayabilir. Tarama takvimi,
+           yeni bir kitleyi bildirmek için bekleme süresi değildir.
+         </p>
++        <p>
++          Kontrole giderken kısa notlarınızı ve kullandığınız ilaçların listesini yanınıza alın. Benim ilk
++          sorum genellikle şudur: “Sizi en çok ne rahatsız ediyor?” O belirtiyi ilk sırada söyleyin.
++        </p>
++        <p>
++          Hekiminize şu üç soruyu da sorabilirsiniz: “Tedaviden beklediğimiz yararı görüyor muyum?”, “Bu
++          belirti için doz veya uygulama yolunu gözden geçirelim mi?” ve “Bir sonraki kontrolü beklemeden
++          hangi durumda size ulaşmalıyım?”
++        </p>
++
++        <h2 id="sik-sorulanlar">Dr. Aksoy’a Sorular</h2>
++        <p>Bu bölüm, Dr. Senai Aksoy’un bu yazı için verdiği beş gerçek yanıttan düzenlenmiş uzman katkısıdır. Tedaviyle ilgili değişiklikler kendi hekiminizle birlikte değerlendirilir.</p>
++        {faqItems.map(({ question, answer }, index) => (
++          <>
++            <h3>{question}</h3>
++            <p><strong>Dr. Aksoy’un yanıtı:</strong></p>
++            <p>{answer}</p>
++            {index !== 3 && <p><a href={index === 1 ? '#kaynak-4' : '#kaynak-1'}>İlgili kaynak</a></p>}
++          </>
++        ))}
+ 
+         <h2 id="ne-zaman-hekime">Planlı Kontrolü Beklememeniz Gereken Belirtiler</h2>
+         <p>
+-          Bazı belirtiler aynı gün değerlendirme, bazıları acil yardım gerektirir.
+-          Hangi gruba girdiğini bilmek, yardım ararken zaman kaybetmenizi önler.
++          Bu listeyi korkmanız için değil, gerektiğinde tereddüt etmemeniz için yazıyorum. Bazı belirtiler
++          aynı gün değerlendirme, bazıları acil yardım gerektirir.
+         </p>
+         <ul>
+           <li><strong>112'yi arayın:</strong> Göğüs ağrısına nefes darlığı eşlik ediyorsa ya da ani konuşma
+@@ -257,32 +285,14 @@ const articleSchemas = buildArticleSchemas({
+             değişiklik veya ciltte çekinti varsa <a href="#kaynak-3">[3]</a>.</li>
+         </ul>
+         <p>
+-          Şiddetli karın ağrısı, göz aklarında ya da ciltte sararma, koyu idrar veya açıklanamayan yeni çarpıntı gibi belirtileri de gecikmeden
+-          değerlendirtin. Bu liste bütün olası yan etkileri içermez; kendi ilacınızın kullanma talimatındaki
+-          uyarıları da izleyin.
+-        </p>
+-
+-        <h2 id="sik-sorulanlar">Dr. Aksoy’a sorular</h2>
+-        <p>Bu bölüm, Dr. Senai Aksoy’un bu yazı için verdiği beş gerçek yanıttan düzenlenmiş uzman katkısıdır. Tedaviyle ilgili değişiklikler kendi hekiminizle birlikte değerlendirilir.</p>
+-        {faqItems.map(({ question, answer }, index) => (
+-          <>
+-            <h3>{question}</h3>
+-            <p><strong>Dr. Aksoy’un yanıtı:</strong></p>
+-            <p>{answer}</p>
+-            {index !== 3 && <p><a href={index === 1 ? '#kaynak-4' : '#kaynak-1'}>İlgili kaynak</a></p>}
+-          </>
+-        ))}
+-
+-        <h2 id="kapanis">Kontrol Görüşmesine Hazırlanmak</h2>
+-        <p>
+-          Kontrole giderken kısa belirti notlarınızı ve kullandığınız ilaçların listesini yanınıza alın.
+-          Sizi en çok rahatsız eden belirtiyi önce söyleyin.
++          Şiddetli karın ağrısı, göz aklarında ya da ciltte sararma, koyu idrar veya açıklanamayan yeni
++          çarpıntı gibi belirtileri de gecikmeden değerlendirtin. Bu liste bütün olası yan etkileri içermez;
++          kendi ilacınızın kullanma talimatındaki uyarıları da izleyin.
+         </p>
+         <p>
+-          Hekiminize “Tedaviden beklediğimiz yararı görüyor muyum?”, “Bu belirti için doz veya uygulama
+-          yolunu gözden geçirelim mi?” ve “Bir sonraki kontrolü beklemeden hangi durumda size ulaşmalıyım?”
+-          diye sorabilirsiniz. İlk haftalarla ilgili kaygı duymanız anlaşılır. Her ayrıntıyı kendi başınıza
+-          çözmeniz gerekmez; önemli olan rahatsızlığı açıkça anlatmak ve güvenlik belirtilerinde beklememektir.
++          İlk aylarda kaygı duymanız çok anlaşılır. Her ayrıntıyı kendi başınıza çözmeniz gerekmez.
++          Rahatsızlığınızı açıkça anlatın, güvenlik belirtilerinde beklemeyin. Gerisini hekiminizle
++          birlikte konuşursunuz.
+         </p>
+ 
+         <h2 id="kaynaklar">Kaynaklar</h2>

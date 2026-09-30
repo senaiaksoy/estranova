@@ -1,0 +1,27 @@
+'/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': [
+    {
+      question: 'Yan etkilerin büyük kısmı ne zamana kadar geçer?',
+      answer:
+        'Hafif ve yaygın yan etkilerin büyük kısmı (meme hassasiyeti, hafif ödem, hafif baş ağrıları ve lekelenmeler) ilk üç ila altı ay içinde belirgin biçimde azalır. Üçüncü ay, çoğu klinik durumda ilk gerçek değerlendirme noktası kabul edilir. İlk haftalarda yaşanan geçici bir belirti üzerinden tedaviyi yargılamak genellikle erken bir karardır. Altıncı ayın sonunda hâlâ rahatsız edici bir şikâyet devam ediyorsa, doz veya form değişikliği hekimle birlikte değerlendirilebilir.',
+    },
+    {
+      question: 'İlk haftalarda kanama olması her zaman endişe verici mi?',
+      answer:
+        'Hayır. Özellikle rahmi olan ve kombine tedavi (östrojen + progesteron) alan kadınlarda ilk üç ila altı ay boyunca aralıklı küçük lekelenmeler veya beklenmedik kısa kanamalar görülmesi beklenen bir uyum tablosudur. Ancak yoğun, uzun süren kanamalar, menopoz kesinleştikten (son adetten en az bir yıl geçtikten) sonra aniden başlayan kanamalar veya altıncı aydan sonra düzene girmeyen kanamalar mutlaka hekim tarafından değerlendirilmelidir.',
+    },
+    {
+      question: 'Hekimle ne sıklıkta görüşmek anlamlı?',
+      answer:
+        'Tedavinin ilk yılında genellikle üç aylık aralıklarla izlem önerilir; takip eden yıllarda klinik seyir stabil olduğunda kontroller altı ay ila bir yıla açılabilir. Yıllık mamografi, jinekolojik kontrol ve kan tetkikleri standart izlemin vazgeçilmez parçalarıdır. Beklenmedik bir alarm belirtisi fark edildiğinde planlı kontrol tarihini beklemeden hekime başvurmak her zaman en güvenli yaklaşımdır; “üç ayım dolmadı” diye beklemek doğru bir refleks değildir.',
+    },
+    {
+      question: 'Ev ortamında neyi izlemek anlamlı?',
+      answer:
+        'Karmaşık ve yorucu bir takip sistemi kurmanız gerekmez. Telefonda veya küçük bir not defterinde haftada bir cümle — örneğin “bu hafta uyku kalitesi iyiydi, meme hassasiyeti azaldı, iki gün hafif lekelenme oldu” şeklinde — üçüncü ayda hekiminizle görüştüğünüzde en değerli başvuru kaynağı haline gelir. Düzenli belirti notları, kontrolde hangi hissin tedaviye hangi hissin günlük yaşam temposuna bağlı olduğunun net biçimde ayrıştırılmasını sağlar.',
+    },
+    {
+      question: 'Yan etkiler bana uymadığını mı gösterir?',
+      answer:
+        'Çoğu zaman hayır. İlk haftalarda yaşanan hafif yan etkiler tedavinin size uymadığı anlamına gelmez; dokuların yeni hormon seviyelerine adaptasyon gösterdiğine işaret eder. Üçüncü ayın sonunda hâlâ konforunuzu bozan bir tablo varsa, doktorunuzla birlikte doz ayarlaması ya da form değişikliği (oral tabletten transdermal jel veya banta geçiş) gündeme gelebilir. Bazen aynı etken maddenin farklı bir uygulama yoluyla alınması çok daha rahat bir kullanım sağlar. Hormon tedavisi tek seferlik katı bir karar değil, zaman içinde hekiminizle birlikte şekillenen dinamik bir süreçtir.',
+    },
+  ],

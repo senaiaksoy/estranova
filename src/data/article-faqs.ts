@@ -517,32 +517,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     },
   ],
   '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': [
-    {
-      question: 'Yan etkilerin büyük kısmı ne zamana kadar geçer?',
-      answer:
-        'Yumuşak ve yaygın yan etkilerin büyük kısmı (meme hassasiyeti, hafif ödem, küçük baş ağrıları, kanama düzensizliği) ilk üç–altı ay içinde belirgin biçimde azalır. Üçüncü ay çoğu durumda ilk gerçek değerlendirme noktasıdır; ilk haftalarda yaşanan bir belirti üzerinden tedaviyi yargılamak çoğu zaman erken bir karardır. Altıncı ayda hâlâ belirgin bir rahatsızlık varsa, doz veya form ayarı hekimle birlikte konuşulabilir.',
-    },
-    {
-      question: 'İlk haftalarda kanama olması her zaman endişe verici mi?',
-      answer:
-        'Hayır. Özellikle kombine tedavide (östrojen + progesteron) ilk üç–altı ay boyunca arada gelen küçük lekelenmeler ya da kısa beklenmedik kanamalar görülebilir; bu uyum dönemine ait yaygın bir tablodur. Ancak yoğun ya da uzun süreli kanama, postmenopoz döneminde açıklanamayan kanama veya altıncı aydan sonra hâlâ düzene oturmamış kanama her zaman hekimle değerlendirilir.',
-    },
-    {
-      question: 'Hekimle ne sıklıkta görüşmek anlamlı?',
-      answer:
-        'İlk yıl genellikle üç aylık aralıklarla; sonraki yıllarda klinik tabloya göre altı ay–yıllık. Yıllık mamografi, kan tetkikleri ve gerektiğinde kemik yoğunluğu ölçümü standart izlemin parçasıdır. Beklenmedik bir belirti olduğunda planlı zamandan önce iletişime geçmek her zaman güvenli tercihtir.',
-    },
-    {
-      question: 'Ev ortamında neyi izlemek anlamlı?',
-      answer:
-        'Çok karmaşık bir takip sistemi gerekmiyor. Telefonda veya küçük bir defterde haftada bir cümle — “bu hafta uyku iyiydi, meme hassasiyeti azaldı, lekelenme oldu” gibi — üç ay sonra hekimle oturulduğunda en değerli kaynak hâline gelir. Belirti günlüğü, neyin tedaviye neyin yaşam tarzına bağlı olduğunun ayrıştırılmasını da kolaylaştırır.',
-    },
-    {
-      question: 'Yan etkiler bana uymadığını mı gösterir?',
-      answer:
-        'Çoğu zaman hayır. İlk haftalarda yaşanan yumuşak yan etkiler tedavinin “uymadığı” anlamına gelmez; vücut yeni dengeye yerleşirken gelir. Üç ayın sonunda hâlâ rahatsız edici bir tablo varsa, hekimle birlikte doz veya form (oral, transdermal jel, bant) değişikliği gündeme gelebilir.',
-    },
-  ],
+  {
+    "question": "HRT’nin hafif yan etkileri ne kadar sürebilir?",
+    "answer": "Meme hassasiyeti, şişkinlik, baş ağrısı, bulantı ve lekelenme gibi hafif yan etkiler çoğunlukla ilk 2–3 ay içinde azalır. Tolere edilebiliyorsa bir süre izlemek veya doz ya da ilaç türünü ayarlamak mümkündür. Ancak şiddetli veya giderek artan baş ağrısı, göğüs ağrısı ya da nefes darlığı, tek taraflı bacak şişliği, sarılık veya belirgin ve yoğun vajinal kanamada beklemeyi önermem; değerlendirme gerekir. Tedavinin etkinliği ve tolere edilip edilmediği yaklaşık üçüncü ayda yeniden değerlendirilir."
+  },
+  {
+    "question": "HRT’nin ilk aylarındaki kanamayı nasıl değerlendirirsiniz?",
+    "answer": "HRT’nin tipi önemlidir. Döngüsel (sekansiyel) tedavide progesteron döneminden sonra düzenli çekilme kanaması beklenebilir. Sürekli kombine HRT’de ise ilk aylarda düzensiz lekelenme sık görülür ve çoğu kez 4–6 ay içinde azalır. Kanamanın miktarını ve düzenini, HRT’ye ne zaman başlandığını, progesteronun dozunu ve düzenli kullanılıp kullanılmadığını, rahim iç tabakası (endometrium) kanseri açısından kişisel riskleri birlikte değerlendiririm. Kanama HRT başladıktan sonra altı aydan uzun süre devam ediyorsa, tedavi değişikliğinden üç ay sonra hâlâ sürüyorsa veya başlangıçtan itibaren çok yoğun ya da uzamışsa ultrason ve gerektiğinde ileri değerlendirme yapılmalıdır."
+  },
+  {
+    "question": "HRT’de kontrol sıklığını ve gerekli tetkikleri nasıl belirlersiniz?",
+    "answer": "Genellikle HRT’ye başladıktan veya önemli bir değişiklik yaptıktan üç ay sonra, ardından sorun yoksa yılda en az bir kez kontrol yeterlidir. Kontrolde belirtilerin ne kadar düzeldiğini, yan etkileri, kanama düzenini, tansiyonu, kiloyu ve beden kitle indeksini (BMI), yeni gelişen riskleri değerlendiririm. Her kontrolde rutin hormon düzeyi ölçmek gerekmez. Kan yağları, kan şekeri/HbA1c, karaciğer veya tiroid testleri yaşa, önceki sonuçlara, kullanılan tedaviye ve kişisel risklere göre istenir. Mamografi, rahim ağzı taraması ve diğer koruyucu kontroller de HRT nedeniyle daha sık yapılmaz; yaşa ve kişisel risklere uygun programda sürdürülür."
+  },
+  {
+    "question": "Evde hangi belirtileri, nasıl kaydetmek yararlı olur?",
+    "answer": "Evde çok ayrıntılı bir günlük tutmak gerekmez. Kanama ve lekelenme günlerini ve miktarını; sıcak basması, gece terlemesi, uyku, baş ağrısı, meme hassasiyeti, şişkinlik ve ruh halindeki değişiklikleri kısa notlarla kaydedebilirsiniz. Tedavinin belirtilerinize etkisini de not edin. Özellikle yeni başlayan veya giderek artan belirtilerin tarihi önemlidir. Böylece yan etkinin gerçekten HRT ile ilişkili olup olmadığını ve zaman içinde azalıp azalmadığını daha iyi değerlendiririz."
+  },
+  {
+    "question": "Yan etki geliştiğinde tedavinin uygunluğunu ve değişiklik ihtiyacını nasıl değerlendirirsiniz?",
+    "answer": "Yan etki geliştiğinde önce hangi hormonun, dozun ve uygulama yolunun sorumlu olabileceğine bakarım. Östrojen dozu fazla geliyorsa azaltmak, progesterona bağlı şikâyetlerde progesteron tipini veya kullanım şeklini değiştirmek, ağızdan alınan tedavide sorun varsa cilt yoluyla uygulamaya geçmek düşünülebilir. Aynı zamanda tedavinin hâlâ gerekli olup olmadığını, belirtilere ne kadar fayda sağladığını ve kişinin damar içinde pıhtı (tromboz), migren, karaciğer hastalığı, meme ve rahim iç tabakası (endometrium) açısından risklerini yeniden değerlendiririm. Amaç yan etkiyi tolere ettirmek değil, en düşük etkili dozla kişiye en uygun ilaç türünü ve uygulama yolunu bulmaktır."
+  }
+],
   '/zamansiz-yasam/deneysel/nad-plus-takviyesi/': [
     {
       question: 'NAD+ takviyeleri menopozda enerji için kanıtlı bir çözüm müdür?',

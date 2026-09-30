@@ -1,0 +1,499 @@
+{
+  "originalPath": "icerik/yazar-onaylari/alper-mumcu/onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme/baslangic-metin.md",
+  "revisedPath": "icerik/yazar-onaylari/alper-mumcu/onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme/revize-metin.md",
+  "locale": "tr",
+  "status": "review_changes",
+  "differences": {
+    "numbers": [
+      {
+        "value": "1",
+        "beforeCount": 0,
+        "afterCount": 5,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 37,
+            "column": 32
+          },
+          {
+            "line": 65,
+            "column": 2
+          },
+          {
+            "line": 95,
+            "column": 19
+          },
+          {
+            "line": 105,
+            "column": 25
+          },
+          {
+            "line": 110,
+            "column": 55
+          }
+        ]
+      },
+      {
+        "value": "1.8.4",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 177,
+            "column": 39
+          }
+        ]
+      },
+      {
+        "value": "1.9",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 177,
+            "column": 48
+          }
+        ]
+      },
+      {
+        "value": "112",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 6,
+            "column": 34
+          },
+          {
+            "line": 122,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "value": "12",
+        "beforeCount": 3,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 5,
+            "column": 93
+          },
+          {
+            "line": 110,
+            "column": 26
+          },
+          {
+            "line": 134,
+            "column": 42
+          }
+        ],
+        "afterLocations": []
+      },
+      {
+        "value": "2",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 32,
+            "column": 13
+          },
+          {
+            "line": 65,
+            "column": 6
+          },
+          {
+            "line": 85,
+            "column": 38
+          }
+        ]
+      },
+      {
+        "value": "2026",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 177,
+            "column": 53
+          },
+          {
+            "line": 180,
+            "column": 81
+          }
+        ]
+      },
+      {
+        "value": "3",
+        "beforeCount": 4,
+        "afterCount": 8,
+        "beforeLocations": [
+          {
+            "line": 5,
+            "column": 85
+          },
+          {
+            "line": 82,
+            "column": 29
+          },
+          {
+            "line": 110,
+            "column": 20
+          },
+          {
+            "line": 134,
+            "column": 34
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 46,
+            "column": 56
+          },
+          {
+            "line": 51,
+            "column": 2
+          },
+          {
+            "line": 55,
+            "column": 59
+          },
+          {
+            "line": 85,
+            "column": 42
+          },
+          {
+            "line": 88,
+            "column": 10
+          },
+          {
+            "line": 124,
+            "column": 22
+          },
+          {
+            "line": 128,
+            "column": 54
+          },
+          {
+            "line": 133,
+            "column": 39
+          }
+        ]
+      },
+      {
+        "value": "4",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 2
+          },
+          {
+            "line": 76,
+            "column": 2
+          },
+          {
+            "line": 131,
+            "column": 15
+          }
+        ]
+      },
+      {
+        "value": "40",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 127,
+            "column": 53
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 112,
+            "column": 72
+          },
+          {
+            "line": 181,
+            "column": 77
+          }
+        ]
+      },
+      {
+        "value": "5",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 113,
+            "column": 40
+          }
+        ]
+      },
+      {
+        "value": "6",
+        "beforeCount": 4,
+        "afterCount": 1,
+        "beforeLocations": [
+          {
+            "line": 5,
+            "column": 88
+          },
+          {
+            "line": 82,
+            "column": 31
+          },
+          {
+            "line": 110,
+            "column": 23
+          },
+          {
+            "line": 134,
+            "column": 37
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 126,
+            "column": 94
+          }
+        ]
+      },
+      {
+        "value": "69",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 112,
+            "column": 75
+          },
+          {
+            "line": 181,
+            "column": 80
+          }
+        ]
+      }
+    ],
+    "timeAndDenominators": [
+      {
+        "value": "12 Ay",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 110,
+            "column": 26
+          }
+        ],
+        "afterLocations": []
+      }
+    ],
+    "ranges": [
+      {
+        "value": "3–6",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 82,
+            "column": 29
+          }
+        ],
+        "afterLocations": []
+      },
+      {
+        "value": "40–69",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 112,
+            "column": 72
+          },
+          {
+            "line": 181,
+            "column": 77
+          }
+        ]
+      }
+    ],
+    "numericCitations": [
+      {
+        "value": "[1]",
+        "beforeCount": 0,
+        "afterCount": 5,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 37,
+            "column": 31
+          },
+          {
+            "line": 65,
+            "column": 1
+          },
+          {
+            "line": 95,
+            "column": 18
+          },
+          {
+            "line": 105,
+            "column": 24
+          },
+          {
+            "line": 110,
+            "column": 54
+          }
+        ]
+      },
+      {
+        "value": "[2]",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 32,
+            "column": 12
+          },
+          {
+            "line": 65,
+            "column": 5
+          },
+          {
+            "line": 85,
+            "column": 37
+          }
+        ]
+      },
+      {
+        "value": "[3]",
+        "beforeCount": 0,
+        "afterCount": 8,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 46,
+            "column": 55
+          },
+          {
+            "line": 51,
+            "column": 1
+          },
+          {
+            "line": 55,
+            "column": 58
+          },
+          {
+            "line": 85,
+            "column": 41
+          },
+          {
+            "line": 88,
+            "column": 9
+          },
+          {
+            "line": 124,
+            "column": 21
+          },
+          {
+            "line": 128,
+            "column": 53
+          },
+          {
+            "line": 133,
+            "column": 38
+          }
+        ]
+      },
+      {
+        "value": "[4]",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 1
+          },
+          {
+            "line": 76,
+            "column": 1
+          },
+          {
+            "line": 131,
+            "column": 14
+          }
+        ]
+      },
+      {
+        "value": "[5]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 113,
+            "column": 39
+          }
+        ]
+      },
+      {
+        "value": "[6]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 126,
+            "column": 93
+          }
+        ]
+      }
+    ]
+  },
+  "frontmatterChanged": false,
+  "coverage": {
+    "before": {
+      "blocks": 65,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "after": {
+      "blocks": 53,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    }
+  },
+  "limitations": [
+    "Counts are global: values swapped between outcomes or claims can escape detection.",
+    "Negation, certainty, population and causal meaning require the manual meaning record.",
+    "Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.",
+    "Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.",
+    "Number formatting is not silently converted between locales. No tracked changes is not clinical approval."
+  ]
+}

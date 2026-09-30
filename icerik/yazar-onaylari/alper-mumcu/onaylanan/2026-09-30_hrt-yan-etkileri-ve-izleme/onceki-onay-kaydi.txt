@@ -1,0 +1,4 @@
+pathname: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-05-04',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. Yan etki, doz/form ayarı ve izlem takvimi doktor uzmanlık alanı gerektirdiği için klinik eğitim tonunda yeniden yazıldı; URL korundu.',

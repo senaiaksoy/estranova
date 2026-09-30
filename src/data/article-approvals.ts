@@ -193,9 +193,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
-    writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. Yan etki, doz/form ayarı ve izlem takvimi doktor uzmanlık alanı gerektirdiği için klinik eğitim tonunda yeniden yazıldı; URL korundu.',
+    writerSlug: 'alper-mumcu',
+    approvedAt: '2026-09-30',
+    note: 'Kullanıcı bu sohbette yazar ve tıbbi inceleme onaylarının tamamlandığını bildirdi. Kapsam: Dr. Alper Mumcu yazarlı 30 Eylül 2026 audit/humanize revizyonu, Dr. Senai Aksoy tıbbi incelemesi, kaynaklı izlem/kanama/tarama düzeltmeleri ve beş gerçek Dr. Aksoy yanıtı. Önceki 4 Mayıs 2026 Senai imzasına geçiş kaydı pakette korundu. Aynı gün revizyon 2 (8 H2, sıcaklık katmanı, üç birinci tekil Mumcu yaklaşım cümlesi) için yazar ve tıbbi inceleme onayı da kullanıcı tarafından bildirildi; paket onaylanan/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/. Bu kayıt commit/push/deploy yetkisi değildir.',
   },
   {
     pathname: '/zamansiz-yasam/beslenme-yaslanma/',

@@ -1,0 +1,172 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://estranova.com/#website",
+    "name": "Estranova",
+    "url": "https://estranova.com/",
+    "inLanguage": "tr-TR",
+    "description": "HRT'nin ilk aylarında yan etkiler, kanama ve kontrol takvimi: hangi belirtileri not etmeli, ne zaman hekime danışmalı, hangi durumda acil yardım almalısınız?",
+    "publisher": {
+      "@id": "https://estranova.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "@id": "https://estranova.com/#organization",
+    "name": "Estranova",
+    "alternateName": "Eşik",
+    "url": "https://estranova.com/",
+    "logo": "https://estranova.com/favicon.svg",
+    "description": "40+ kadın sağlığına odaklanan bağımsız editoryal sağlık platformu.",
+    "foundingDate": "2026",
+    "knowsAbout": [
+      "Perimenopoz",
+      "Menopoz",
+      "Postmenopoz",
+      "Hormon replasman tedavisi",
+      "40 sonrası kadın sağlığı",
+      "Hormonal geçiş"
+    ],
+    "publishingPrinciples": "https://estranova.com/editoryal-politika/",
+    "sameAs": [
+      "https://www.instagram.com/estranovaofficial/",
+      "https://www.wikidata.org/wiki/Q140051019",
+      "https://senaiaksoy.net"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://senaiaksoy.net/#person",
+    "name": "Doç. Dr. Senai Aksoy",
+    "jobTitle": "Kadın Hastalıkları ve Doğum Uzmanı",
+    "url": "https://senaiaksoy.net",
+    "image": "https://estranova.com/images/writers/senai-aksoy.webp",
+    "knowsAbout": [
+      "Menopoz",
+      "Perimenopoz",
+      "Hormon replasman tedavisi",
+      "Jinekoloji",
+      "40 sonrası kadın sağlığı"
+    ],
+    "sameAs": [
+      "https://senaiaksoy.net"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?",
+    "description": "HRT'nin ilk aylarında yan etkiler, kanama ve kontrol takvimi: hangi belirtileri not etmeli, ne zaman hekime danışmalı, hangi durumda acil yardım almalısınız?",
+    "url": "https://estranova.com/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/",
+    "inLanguage": "tr-TR",
+    "datePublished": "2026-04-27",
+    "dateModified": "2026-09-30",
+    "reviewedBy": {
+      "@id": "https://senaiaksoy.net/#person"
+    },
+    "image": "https://estranova.com/images/library/editorial/introspective-clasped-hands.webp"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?",
+    "description": "HRT'nin ilk aylarında yan etkiler, kanama ve kontrol takvimi: hangi belirtileri not etmeli, ne zaman hekime danışmalı, hangi durumda acil yardım almalısınız?",
+    "datePublished": "2026-04-27",
+    "dateModified": "2026-09-30",
+    "inLanguage": "tr-TR",
+    "mainEntityOfPage": "https://estranova.com/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/",
+    "articleSection": "Hormonal Geçiş",
+    "keywords": "HRT, hormon tedavisi yan etkileri, meme hassasiyeti, baş ağrısı, kanama düzensizliği, menopoz, izleme takvimi, 3 aylık kontrol, alarm belirtileri",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Alper Mumcu",
+      "jobTitle": "Kadın Hastalıkları ve Doğum / Jinekoloji Bilimsel Yazarı",
+      "description": "Kadın hastalıkları ve doğum uzmanı bir hekim. 1998'den bu yana kadın sağlığı ve gebelik konularında Türkçe'nin en köklü başvuru kaynaklarından birini yürütüyor; kadınların yıllardır sorduğu soruları sade, anlaşılır ve içini ferahlatan bir dille yanıtlamasıyla tanınıyor. Amerikan Hastanesi Üreme Sağlığı Birimi'nde çalıştı, yurt dışında üreme tıbbı ve yumurtalık kanserlerinin erken tanısı üzerine araştırmalara katıldı. Estranova'da hormonal geçiş, jinekoloji ve üreme sağlığı başlıklarını \"okurun gerçek sorusuna\" cevap veren bir referans hekim tonuyla açıyor.",
+      "image": "https://estranova.com/images/writers/alper-mumcu.webp",
+      "url": "https://estranova.com/yazarlar/alper-mumcu/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Estranova",
+      "url": "https://estranova.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://estranova.com/favicon.svg"
+      }
+    },
+    "image": "https://estranova.com/images/library/editorial/introspective-clasped-hands.webp"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Anasayfa",
+        "item": "https://estranova.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Hormonal Geçiş",
+        "item": "https://estranova.com/hormonal-gecis/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?",
+        "item": "https://estranova.com/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "HRT’nin hafif yan etkileri ne kadar sürebilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Meme hassasiyeti, şişkinlik, baş ağrısı, bulantı ve lekelenme gibi hafif yan etkiler çoğunlukla ilk 2–3 ay içinde azalır. Tolere edilebiliyorsa bir süre izlemek veya doz ya da ilaç türünü ayarlamak mümkündür. Ancak şiddetli veya giderek artan baş ağrısı, göğüs ağrısı ya da nefes darlığı, tek taraflı bacak şişliği, sarılık veya belirgin ve yoğun vajinal kanamada beklemeyi önermem; değerlendirme gerekir. Tedavinin etkinliği ve tolere edilip edilmediği yaklaşık üçüncü ayda yeniden değerlendirilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "HRT’nin ilk aylarındaki kanamayı nasıl değerlendirirsiniz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HRT’nin tipi önemlidir. Döngüsel (sekansiyel) tedavide progesteron döneminden sonra düzenli çekilme kanaması beklenebilir. Sürekli kombine HRT’de ise ilk aylarda düzensiz lekelenme sık görülür ve çoğu kez 4–6 ay içinde azalır. Kanamanın miktarını ve düzenini, HRT’ye ne zaman başlandığını, progesteronun dozunu ve düzenli kullanılıp kullanılmadığını, rahim iç tabakası (endometrium) kanseri açısından kişisel riskleri birlikte değerlendiririm. Kanama HRT başladıktan sonra altı aydan uzun süre devam ediyorsa, tedavi değişikliğinden üç ay sonra hâlâ sürüyorsa veya başlangıçtan itibaren çok yoğun ya da uzamışsa ultrason ve gerektiğinde ileri değerlendirme yapılmalıdır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "HRT’de kontrol sıklığını ve gerekli tetkikleri nasıl belirlersiniz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Genellikle HRT’ye başladıktan veya önemli bir değişiklik yaptıktan üç ay sonra, ardından sorun yoksa yılda en az bir kez kontrol yeterlidir. Kontrolde belirtilerin ne kadar düzeldiğini, yan etkileri, kanama düzenini, tansiyonu, kiloyu ve beden kitle indeksini (BMI), yeni gelişen riskleri değerlendiririm. Her kontrolde rutin hormon düzeyi ölçmek gerekmez. Kan yağları, kan şekeri/HbA1c, karaciğer veya tiroid testleri yaşa, önceki sonuçlara, kullanılan tedaviye ve kişisel risklere göre istenir. Mamografi, rahim ağzı taraması ve diğer koruyucu kontroller de HRT nedeniyle daha sık yapılmaz; yaşa ve kişisel risklere uygun programda sürdürülür."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Evde hangi belirtileri, nasıl kaydetmek yararlı olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evde çok ayrıntılı bir günlük tutmak gerekmez. Kanama ve lekelenme günlerini ve miktarını; sıcak basması, gece terlemesi, uyku, baş ağrısı, meme hassasiyeti, şişkinlik ve ruh halindeki değişiklikleri kısa notlarla kaydedebilirsiniz. Tedavinin belirtilerinize etkisini de not edin. Özellikle yeni başlayan veya giderek artan belirtilerin tarihi önemlidir. Böylece yan etkinin gerçekten HRT ile ilişkili olup olmadığını ve zaman içinde azalıp azalmadığını daha iyi değerlendiririz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Yan etki geliştiğinde tedavinin uygunluğunu ve değişiklik ihtiyacını nasıl değerlendirirsiniz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yan etki geliştiğinde önce hangi hormonun, dozun ve uygulama yolunun sorumlu olabileceğine bakarım. Östrojen dozu fazla geliyorsa azaltmak, progesterona bağlı şikâyetlerde progesteron tipini veya kullanım şeklini değiştirmek, ağızdan alınan tedavide sorun varsa cilt yoluyla uygulamaya geçmek düşünülebilir. Aynı zamanda tedavinin hâlâ gerekli olup olmadığını, belirtilere ne kadar fayda sağladığını ve kişinin damar içinde pıhtı (tromboz), migren, karaciğer hastalığı, meme ve rahim iç tabakası (endometrium) açısından risklerini yeniden değerlendiririm. Amaç yan etkiyi tolere ettirmek değil, en düşük etkili dozla kişiye en uygun ilaç türünü ve uygulama yolunu bulmaktır."
+        }
+      }
+    ]
+  }
+]

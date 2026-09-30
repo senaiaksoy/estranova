@@ -1,0 +1,22 @@
+{
+  "filePath": "icerik/yazar-onaylari/alper-mumcu/onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme/revize-metin.md",
+  "locale": "tr",
+  "findings": [],
+  "coverage": {
+    "blocks": 53,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Advisory lexical/structural candidates, not authorship detection or clinical approval.",
+    "Semantic repetition and medication-section equivalence still need whole-text editorial reading.",
+    "Frontmatter summaries/FAQs and JSX props/expressions require separate visible-text inspection.",
+    "Block quotations are excluded from editorial suggestions; punctuation and passive voice are not banned."
+  ]
+}

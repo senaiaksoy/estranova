@@ -1,0 +1,43 @@
+{
+  "writer": {
+    "slug": "alper-mumcu",
+    "name": "Dr. Alper Mumcu"
+  },
+  "article": {
+    "slug": "hrt-yan-etkileri-ve-izleme",
+    "title": "HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?",
+    "previewUrl": "./makale-onizleme.html",
+    "livePath": "/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/"
+  },
+  "package": {
+    "createdAt": "2026-09-30T14:52:15.085Z",
+    "deadline": "2026-10-07T14:52:15.085Z",
+    "status": "approved",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "revision": 2,
+    "supersedesApprovedPackage": "../../onaylanan/2026-09-30_hrt-yan-etkileri-ve-izleme/",
+    "sourceFile": "./makale-kaynak.astro",
+    "diffFile": "./revizyon.diff",
+    "requestedBy": "Kullanıcı, 30 Eylül 2026: \"1–3'ü uygula, yeni onay paketi hazırla\""
+  },
+  "medicalReview": {
+    "reviewer": "Doç. Dr. Senai Aksoy",
+    "required": true,
+    "reason": "Metin değişti; tıbbi iddia/kaynak/SSS değişmedi ama bölüm sırası ve hekim sesi cümleleri yeni."
+  },
+  "status": "approved",
+  "sentAt": null,
+  "approvalConfirmation": {
+    "date": "2026-09-30",
+    "source": "Bu sohbette kullanıcı beyanı",
+    "originalMessage": "yazar ve tıbbi inceleme onayları tamam",
+    "scope": "Revizyon 2 (8 H2 yapısı, sıcaklık katmanı, üç birinci tekil hekim cümlesi dahil)",
+    "author": "Dr. Alper Mumcu",
+    "medicalReviewer": "Doç. Dr. Senai Aksoy",
+    "signedAuthorFormReceived": false
+  },
+  "approvedSourceSha256": "b0e1eb0c663431408c1c172c2a36dbd255386585b750a2b44027ec546bba3f2b"
+}

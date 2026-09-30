@@ -429,11 +429,7 @@ export const staticArticles: StaticArticleEntry[] = [
       'hormon replasman tedavisi',
       'menopoz',
       'menopoz HRT deneyimi',
-      'üç ayın muhasebesi',
-      'aile bağı menopoz',
-      'transdermal östrojen',
-      '58 yaş HRT',
-      'yaşıt hikayesi',
+      'yaşıt hikâyesi',
     ],
   },
   {
@@ -912,7 +908,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
     title: 'HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?',
     description:
-      'Hormon tedavisinin ilk haftalarında ve aylarında karşılaşılabilecek yumuşak yan etkiler, ne zaman geçici sayıldıkları, hekimle birlikte kurulan izleme takvimi ve hangi belirtilerin gecikmeden değerlendirilmesi gerektiği üzerine sakin bir rehber.',
+      'HRT’nin ilk aylarında yan etkiler, kanama ve kontrol takvimi: hangi belirtileri not etmeli, ne zaman hekime danışmalı, hangi durumda acil yardım almalısınız?',
     publishedDate: '27 Nisan 2026',
     writerSlug: 'alper-mumcu',
     section: 'Hormonal Geçiş',

@@ -38,3 +38,16 @@
 - Eksen ayrımı (kritik): Mumcu = köklü başvuru hekimi sesi; mahrem-tabu derinliği Senai'de, endokrin teknik Metin'de kalır.
 - Klinisyen istisnası: anekdot klinik çerçeveli + anonim ("bir hastam", detay yok).
 - Çift Rol Uyarısı default kapalı; meslektaş bağı kullanıcıyla netleşince güncellenir.
+
+
+## 30 Eylül 2026 — HRT yan etkileri ve izleme
+
+30 Eylül 2026 kullanıcı mesajı: “yazar ve tıbbi inceleme onayları  tamam”. Onay, son önizlemedeki tam revizyona ve beş gerçek hekim yanıtına uygulanmıştır. Dr. Alper Mumcu yazar onayı ve Dr. Senai Aksoy tıbbi incelemesinin tamamlandığı kullanıcı tarafından bildirildi; ayrı imzalı form alınmış gibi kaydedilmedi. Kaynak aktarımı yapıldı; commit/push/deploy yapılmadı.
+
+H0; motif kısa belirti kaydı, kapanış kontrol görüşmesi soruları; üretilmiş klinik anekdot yok. Başlık Dr. Aksoy’a sorular, sıklık iddiası yok. Paket: onaylanan/2026-09-30_hrt-yan-etkileri-ve-izleme/.
+
+## 30 Eylül 2026 — HRT yan etkileri ve izleme, revizyon 2 (onaylandı)
+
+Kullanıcı denetimden sonra düzeltme 1–3'ü istedi. Onaylı sürüme yalnız İçindekiler etiket eşitlemesi uygulandı (metin değişmedi). Sıcaklık katmanı ve 8 H2 yapısı `onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/` paketinde; Dr. Mumcu yazar onayı + Dr. Aksoy tıbbi incelemesi bekleniyor. Kalıp seçimi: açılış = gündelik sahne + "bu normal mi?" sorusu; hekim çerçevesi = mütevazı yaklaşım beyanı ("üç şeye bakarım", "ilk sorum"), klinik anekdot yok; teselli = "Önce şunu söyleyeyim"; kapanış = güvenlik listesi + sakin iki parçalı kapanış; imza kapanış cümlesi yok; mizah H0.
+
+30 Eylül 2026 kullanıcı mesajı: “yazar ve tıbbi inceleme onayları tamam”. Revizyon 2 site kaynağına aktarıldı; paket onaylanan/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/ altına taşındı. Stil sinyali: mütevazı birinci tekil yaklaşım cümleleri (üç şeye bakarım / ilk sorum) yazar tarafından kabul edildi; anekdotsuz hekim sesi bu yazar için kullanılabilir bir varyant. Commit/push/deploy yok.
