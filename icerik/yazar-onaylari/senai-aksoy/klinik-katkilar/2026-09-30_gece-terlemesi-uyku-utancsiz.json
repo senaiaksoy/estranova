@@ -120,5 +120,18 @@
       "SSS 4 yanıtı Dr. Aksoy'un kısaltılmış metniyle birebir değiştirildi; özgün uzun yanıt originalResponses içinde korunuyor."
     ],
     "medicalReview": "KC (Dr. Aksoy) bildirimi, 2026-09-30: bu geçiş Dr. Alper Mumcu'nun mevcut yazılı onayının kapsamında sayılır."
+  },
+  "fourthPass": {
+    "date": "2026-09-30",
+    "source": "Dış değerlendirme önerileri; Dr. Aksoy ilk ikisini onayladı",
+    "changes": [
+      "H2: 'Geceyi kolaylaştıran küçük hazırlıklar' → 'Geceyi kolaylaştıran pratik hazırlıklar' (site geneli 'küçük' tekrarı).",
+      "'Burada dürüst olmam gerekiyor.' → 'Burada önemli bir ayrım var:' (ikinci geçişte eklenen LLM geçiş kalıbı)."
+    ],
+    "notApplied": [
+      "HRT uygunluk cümlesi korundu (hasta tercihi karar etkeni).",
+      "Bilimsel Editör Notu değişmedi (Mumcu onaylı metin)."
+    ],
+    "medicalReview": "Tıbbi içerik değişmedi; Mumcu yazılı onayı kapsamında."
   }
 }
