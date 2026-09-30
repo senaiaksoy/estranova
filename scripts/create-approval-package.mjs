@@ -50,7 +50,7 @@ const TEMPLATES_DIR = path.join(ROOT, 'templates');
 const APPROVAL_ROOT = path.join(ROOT, 'icerik/yazar-onaylari');
 
 const DEFAULT_TARGET_EMAIL = 'drsenaiaksoy@gmail.com';
-const DEFAULT_SITE = 'https://estranova.com.tr';
+const DEFAULT_SITE = 'https://estranova.com';
 const DEFAULT_DAYS = 7;
 const DIRECT_EDITOR_APPROVAL_WRITERS = new Set(['berna-aksoy', 'alara-baykent', 'senai-aksoy', 'estranova-editorial']);
 
