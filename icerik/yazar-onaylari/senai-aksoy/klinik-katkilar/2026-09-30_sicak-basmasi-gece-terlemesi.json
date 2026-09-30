@@ -1,0 +1,153 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/",
+  "answeredAt": "2026-09-30",
+  "source": "Kullanıcının bu sohbetteki doğrudan hekim yanıtları",
+  "targetSection": "sik-sorulanlar",
+  "originalResponses": [
+    {
+      "questions": [
+        1,
+        2,
+        3
+      ],
+      "answer": "Sıcak basması ve gece terlemesi aslında aynı **vazomotor semptomların** farklı zamanlarda ortaya çıkmasıdır; gece uykuda olan sıcak basmaları çoğu zaman yoğun terleme ve uyanma şeklinde hissedilir. Menopozda sıcak basmalarına serin ortam, kat kat giyinme, alkol, çok sıcak içecekler ve baharat gibi kişisel tetikleyicilerden kaçınma yardımcı olabilir; ancak orta-ağır şikâyetlerde en etkili tedavi, uygun hastalarda **menopozal hormon tedavisidir**. Hormon kullanamayan veya istemeyenlerde bazı SSRI/SNRI’lar, gabapentin ve fezolinetant gibi hormonal olmayan seçenekler değerlendirilebilir. Gece daha şiddetli hissedilmesinin nedeni, gece boyunca vücut ısısının doğal olarak değişmesi, menopozda termoregülasyon eşiğinin daralması ve yatak/oda sıcaklığının ısı kaybını zorlaştırabilmesidir. Gece terlemesine ateş, açıklanamayan kilo kaybı veya menopozla uyumsuz başka belirtiler eşlik ediyorsa başka nedenler de araştırılmalıdır."
+    },
+    {
+      "questions": [
+        4
+      ],
+      "answer": "Hormon tedavisi dışında da seçenekler var. Orta-ağır sıcak basması ve gece terlemelerinde bazı SSRI/SNRI grubu ilaçlar, gabapentin ve uygun hastalarda fezolinetant gibi hormonal olmayan tedaviler kullanılabilir. Bunun yanında kilo kontrolü, serin yatak odası, kişisel tetikleyicilerden kaçınma ve özellikle bilişsel davranışçı terapi bazı hastalarda semptomların yarattığı sıkıntıyı azaltabilir; bitkisel ürünlerin etkinliği ise daha belirsizdir."
+    },
+    {
+      "questions": [
+        5
+      ],
+      "answer": "Gece terlemesini her zaman menopoza bağlamamak gerekir. Terlemeler yeni başlamışsa, çok şiddetliyse veya ateş, açıklanamayan kilo kaybı, çarpıntı, titreme, belirgin halsizlik, lenf bezi şişliği ya da gündüzleri de yoğun terleme eşlik ediyorsa başka nedenler araştırılmalıdır. Tiroid hastalıkları, enfeksiyonlar, bazı ilaçlar, hipoglisemi, uyku apnesi ve daha nadiren hematolojik hastalıklar benzer tabloya yol açabilir."
+    }
+  ],
+  "answers": [
+    {
+      "no": 1,
+      "question": "Sıcak basması ile gece terlemesi aynı şey mi?",
+      "answer": "Sıcak basması ve gece terlemesi, aynı vazomotor belirtilerin farklı zamanlarda ortaya çıkmasıdır. Uykuda olan sıcak basmaları yoğun terleme ve uyanma şeklinde hissedilebilir.",
+      "originalResponse": 0
+    },
+    {
+      "no": 2,
+      "question": "Menopozda sıcak basmasına ne iyi gelir?",
+      "answer": "Serin ortam, katmanlı giyinme ve alkol, çok sıcak içecekler veya baharat gibi kişisel tetikleyicilerden kaçınma konfor sağlayabilir. Orta-ağır şikâyetlerde uygun hastalar için menopoz hormon tedavisi değerlendirilir. Hormon kullanamayan veya istemeyenlerde bazı SSRI/SNRI grubu ilaçlar, gabapentin ve fezolinetant gibi hormon dışı seçenekler vardır.",
+      "originalResponse": 0
+    },
+    {
+      "no": 3,
+      "question": "Sıcak basması neden gece daha şiddetli olabilir?",
+      "answer": "Gece boyunca vücut ısısı doğal olarak değişir; menopozda ısı düzenleme eşiği daralır. Yatak ve oda sıcaklığı da ısı kaybını zorlaştırabildiği için belirtiler gece daha şiddetli hissedilebilir.",
+      "originalResponse": 0
+    },
+    {
+      "no": 4,
+      "question": "Hormon tedavisi dışında seçenekler var mı?",
+      "answer": "Orta-ağır sıcak basması ve gece terlemelerinde bazı SSRI/SNRI grubu ilaçlar, gabapentin ve uygun hastalarda fezolinetant gibi hormon dışı tedaviler kullanılabilir. Kilo kontrolü, serin yatak odası, kişisel tetikleyicilerden kaçınma ve özellikle bilişsel davranışçı terapi bazı hastalarda belirtilerin yarattığı sıkıntıyı azaltabilir. Bitkisel ürünlerin etkinliği ise daha belirsizdir.",
+      "originalResponse": 1
+    },
+    {
+      "no": 5,
+      "question": "Gece terlemesi ne zaman yalnızca menopoza bağlanmamalı?",
+      "answer": "Terlemeler yeni başlamışsa, çok şiddetliyse veya ateş, açıklanamayan kilo kaybı, çarpıntı, titreme, belirgin halsizlik, lenf bezi şişliği ya da gündüzleri yoğun terleme eşlik ediyorsa başka nedenler araştırılmalıdır. Tiroid hastalıkları, enfeksiyonlar, bazı ilaçlar, hipoglisemi, uyku apnesi ve daha nadiren hematolojik hastalıklar benzer belirtilere yol açabilir.",
+      "originalResponse": 2
+    }
+  ],
+  "editNote": "Serinleme konfor desteği olarak sınırlandı; hormonal/nonhormonal sadeleştirildi. Birinci yanıt üç soruya bölündü. HRT üstünlük ifadesi site diline göre değerlendirilir biçiminde sunuldu ve kullanıcı bu karşılığı açıkça onayladı. Özgün yanıta klinik gerekçe veya deneyim eklenmedi. Karaciğer güvenliği uyarısı gövdede ayrı bilimsel kaynakla eklendi; hekim yanıtlarına eklenmedi.",
+  "frequencyConfirmed": false,
+  "status": "Beş düzenlenmiş yanıt kullanıcıya gösterildi ve makalede kullanım için onaylandı.",
+  "approvedAt": "2026-09-30",
+  "approvalSource": "Kullanıcının bu sohbetteki doğrudan onayı",
+  "approvalMessage": "Bu karşılıkları makalede kullan",
+  "publicationApproval": "SSS yanıtlarının görünür kullanımına izin; commit/push/deploy veya tüm revizyonun bağımsız tıbbi incelemesi değildir.",
+  "independentReview": {
+    "reviewer": "Dr. Alper Mumcu",
+    "date": "2026-09-30",
+    "status": "Onaylandı",
+    "scope": "Revizyonun tamamı (özet, gövde, tablo, SSS kullanımı, kaynaklar) + humanizeRevision",
+    "source": "Kullanıcının bu sohbetteki bildirimi: \"alper mumcu onay tamam\""
+  },
+  "audit": {
+    "scope": "Makalenin tamamı, kullanıcıya ait başlangıç farkı, özet, gövde, tablo, SSS, kaynaklar, TOC ve üretilen HTML/JSON-LD.",
+    "approvalBaseline": {
+      "commit": "ce7dd1f",
+      "date": "2026-05-04",
+      "limitation": "article-approvals.ts kaydı byline değişimini onaylar; 3 Ağustos ve bu revizyon için bağımsız klinik onay yerine geçmez."
+    },
+    "meaningChecks": [
+      {
+        "topic": "Süre",
+        "before": "Ortanca 7,4 yıl sonraki paragrafta ortalama diye anılmıştı.",
+        "after": "Sık vazomotor belirti bildiren kadınlarda toplam ortanca 7,4 yıl; iki haftanın en az altı günü ölçütü ve bireysel takvim olmadığı açık.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/25686030/"
+      },
+      {
+        "topic": "Serinleme",
+        "before": "Tabloda destekleyici kanıt 2-3 ve tetikleyicileri azaltır ifadesi vardı.",
+        "after": "Konfor desteği; belirti sıklığını azaltan tedavi olarak yeterli kanıt yok.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/37252752/"
+      },
+      {
+        "topic": "HRT güvenliği",
+        "before": "Bazı kanserler açısından riskler meme sağlığına daraltılmıştı.",
+        "after": "Pıhtılaşma, kalp-damar hastalığı ve hormona duyarlı kanser öyküsü; rahim, yaş, menopozdan geçen süre ve tercihler korundu.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35797481/"
+      },
+      {
+        "topic": "BDT",
+        "before": "Bedensel dalgayı sıfırlamasa ifadesi belirsiz sonuç ayrımı taşıyordu.",
+        "after": "Belirti sıkıntısı/günlük etki ile fiziksel sıklık ayrı sonuçlar olarak açıklandı.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/37252752/"
+      },
+      {
+        "topic": "İlaç güvenliği",
+        "before": "NK3 ilaç sınıfı için yalnız genel yan etki uyarısı vardı.",
+        "after": "Karaciğer hasarı ve kan testi izlemi resmi kaynaktan eklendi; tüm hormon dışı ilaçlara genellenmedi.",
+        "source": "https://www.fda.gov/drugs/drug-safety-communications/fda-adds-warning-about-rare-occurrence-serious-liver-injury-use-veozah-fezolinetant-hot-flashes-due"
+      },
+      {
+        "topic": "Klinik gözlem",
+        "before": "Yıllardır yüzlerce kadından ifadesi ve doğrudan hasta alıntısı.",
+        "after": "Kullanıcıya ait ortak klinik anlatım anonim parafraz edildi; nicelik çıkarıldı, yeni deneyim üretilmedi."
+      },
+      {
+        "topic": "Güvenlik",
+        "before": "Göğüs ağrısı, ani nefes darlığı ve bayılma uyarısı.",
+        "after": "Acil değerlendirme uyarısı korundu ve doğrudanlaştırıldı; model bunu SSS hekim yanıtına eklemedi."
+      }
+    ],
+    "editorialFindings": {
+      "grammar": "Ortanca sürenin sürdüğü ve terlemeyi başlatıp ısı kaybetmeye çalışır yapıları sadeleştirildi.",
+      "localExpression": "Menopozal geçiş, fizyolojik frekans, münferit ve medikal ifadeleri doğal Türkçeye çekildi.",
+      "humanization": "Tekrarlanan dayanıklılık ve panzehir kapanışları çıkarıldı; bölüm açılışları çeşitlendirildi, tek soru H2 kaldı; anonim muayene gözlemi korundu."
+    },
+    "checks": {
+      "lint": "Geçti",
+      "compliance": "Geçti; başka makalede uzun cümle uyarısı",
+      "articleIntegrity": "Geçti",
+      "templates": "Geçti",
+      "astroBuild": "npx astro build geçti, 143 sayfa",
+      "seoOutput": "Geçti, 163 sayfa",
+      "html": "Tek H1, benzersiz ID, kırık anchor yok, SSS-FAQPage 5/5 eşleşiyor, modifiedDate ve MedicalWebPage reviewedBy uyumlu.",
+      "editorialCheck": "Statik Astro metninden çıkarılan Markdown üzerinde aday yok; dinamik SSS ayrıca elle ve HTML ile incelendi.",
+      "fidelity": "Mayıs byline onay commitinden çıkarılan statik Markdown ile karşılaştırma çalıştı; uzun dönem sayı, kaynak ve tarih değişiklikleri var. Anlam eşitliği veya yeni tıbbi onay kanıtı değildir.",
+      "fullBuildCi": "Kapsam dışındaki koruyucu-saglik-kayitlari dosyasında lastUpdated/modifiedDate uyumsuzluğu prebuild aşamasını durdurdu; dosyaya dokunulmadı.",
+      "browser": "Chrome yerel önizlemede görünür metin, tablo, TOC ve SSS incelendi."
+    },
+    "patientEducation": "Mekanizma, süre, konfor/tedavi ayrımı ve görüşmeye hazırlık açısından yararlı; kişisel tanı veya ilaç reçetesi değildir.",
+    "secondaryCitation": "Kaynaklı süre ve genel seçenek açıklamaları kapsamıyla alıntılanabilir. Hekim SSS yanıtları uzman görüşüdür; kaynak yerine geçmez. Türkiye ilaç erişimi teyit edilmiş gibi sunulmaz.",
+    "release": "Yalnızca bu makale commit edildi; push/deploy yapılmadı."
+  },
+  "humanizeRevision": {
+    "date": "2026-09-30",
+    "authorization": "Kullanıcı audit humanize fix talebi",
+    "scope": "Açılıştaki çekince cümlesi (tek hastanın birebir alıntısı değil) muayene odasında sık duyulan birleşik gözleme çevrildi; mahcubiyet duygu cümlesi eklendi; günlük adımlara tek hafif mizah dokunuşu (yelpaze) eklendi ve kanıt cümlesi sadeleştirildi; tedavi kararı bölümüne soruları not alma önerisi eklendi; hormon dışı seçenekler lede cümlesi sıcaklaştırıldı.",
+    "fidelity": "Yeni tıbbi iddia veya anekdot eklenmedi; SSS hekim yanıtları, kanıt düzeyleri, kaynaklar ve hero görseli değişmedi.",
+    "checks": "lexicon:check hard_ban 0; build:ci geçti (143 sayfa, SEO 163 sayfa)."
+  }
+}

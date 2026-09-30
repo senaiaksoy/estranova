@@ -586,27 +586,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Sıcak basması ile gece terlemesi aynı şey mi?',
       answer:
-        'İkisi de beynin ısı düzenleme merkezindeki dalgalanmadan kaynaklanan vazomotor belirtilerdir. Sıcak basması genellikle gündüz aniden gelen bir sıcaklık dalgası ve kızarma şeklinde hissedilirken; gece terlemesi aynı mekanizmanın uyku sırasında ortaya çıkarak uykuyu bölmesi durumudur.',
+        'Sıcak basması ve gece terlemesi, aynı vazomotor belirtilerin farklı zamanlarda ortaya çıkmasıdır. Uykuda olan sıcak basmaları yoğun terleme ve uyanma şeklinde hissedilebilir.',
     },
     {
       question: 'Menopozda sıcak basmasına ne iyi gelir?',
       answer:
-        'Serin ortam, katmanlı giyinmek, kişisel tetikleyicileri izlemek ve düzenli uyku-hareket ritmi konfor sağlayabilir. Belirtiler uykuyu veya gündelik hayatı belirgin etkiliyorsa hormon tedavisi ve hormon dışı seçenekler kişisel sağlık öykünüzle birlikte hekim tarafından değerlendirilir.',
+        'Serin ortam, katmanlı giyinme ve alkol, çok sıcak içecekler veya baharat gibi kişisel tetikleyicilerden kaçınma konfor sağlayabilir. Orta-ağır şikâyetlerde uygun hastalar için menopoz hormon tedavisi değerlendirilir. Hormon kullanamayan veya istemeyenlerde bazı SSRI/SNRI grubu ilaçlar, gabapentin ve fezolinetant gibi hormon dışı seçenekler vardır.',
     },
     {
       question: 'Sıcak basması neden gece daha şiddetli olabilir?',
       answer:
-        'Gece boyunca vücut ısısının doğal değişimi, oda sıcaklığı, kalın örtüler, akşam alkolü veya ağır yemek terlemeyi daha fark edilir kılabilir. Oda serinliği ve katmanlı nevresim uykunun bölünmesini azaltabilir.',
+        'Gece boyunca vücut ısısı doğal olarak değişir; menopozda ısı düzenleme eşiği daralır. Yatak ve oda sıcaklığı da ısı kaybını zorlaştırabildiği için belirtiler gece daha şiddetli hissedilebilir.',
     },
     {
       question: 'Hormon tedavisi dışında seçenekler var mı?',
       answer:
-        'Evet. Bazı antidepresan grupları, gabapentin, bilişsel davranışçı terapi ve kılavuzlarda yer alan diğer hormon dışı tedaviler değerlendirilebilir. Karar bireysel öykü ve yan etki profiline göre verilir.',
+        'Orta-ağır sıcak basması ve gece terlemelerinde bazı SSRI/SNRI grubu ilaçlar, gabapentin ve uygun hastalarda fezolinetant gibi hormon dışı tedaviler kullanılabilir. Kilo kontrolü, serin yatak odası, kişisel tetikleyicilerden kaçınma ve özellikle bilişsel davranışçı terapi bazı hastalarda belirtilerin yarattığı sıkıntıyı azaltabilir. Bitkisel ürünlerin etkinliği ise daha belirsizdir.',
     },
     {
       question: 'Gece terlemesi ne zaman yalnızca menopoza bağlanmamalı?',
       answer:
-        'Gece terlemesine açıklanamayan kilo kaybı, yüksek ateş, sürekli çarpıntı, titreme veya göğüs ağrısı gibi alışılmadık yakınmalar eşlik ediyorsa başka biyolojik nedenler de değerlendirilmelidir; tabloyu bekleyerek geçiştirmemek gerekir.',
+        'Terlemeler yeni başlamışsa, çok şiddetliyse veya ateş, açıklanamayan kilo kaybı, çarpıntı, titreme, belirgin halsizlik, lenf bezi şişliği ya da gündüzleri yoğun terleme eşlik ediyorsa başka nedenler araştırılmalıdır. Tiroid hastalıkları, enfeksiyonlar, bazı ilaçlar, hipoglisemi, uyku apnesi ve daha nadiren hematolojik hastalıklar benzer belirtilere yol açabilir.',
     },
   ],
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': [
