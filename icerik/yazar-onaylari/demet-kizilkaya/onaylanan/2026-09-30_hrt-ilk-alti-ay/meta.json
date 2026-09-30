@@ -1,0 +1,27 @@
+{
+  "writer": {
+    "slug": "demet-kizilkaya",
+    "name": "Demet Kızılkaya"
+  },
+  "article": {
+    "slug": "hrt-ilk-alti-ay",
+    "title": "HRT — İlk Ayların Notları",
+    "previewUrl": "./makale-onizleme.html",
+    "sourcePath": "makale-kaynak.astro",
+    "liveUrl": "https://estranova.com/hormonal-gecis/menopoz/hrt-ilk-alti-ay/"
+  },
+  "package": {
+    "createdAt": "2026-09-30T13:45:26.446Z",
+    "deadline": "2026-10-07T13:45:26.446Z",
+    "status": "approved",
+    "approvedAt": "2026-09-30",
+    "authorDecision": "ONAYLIYORUM (KC aracılığıyla, sohbet notu 2026-09-30)",
+    "medicalReviewer": "Doç. Dr. Senai Aksoy",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "sentAt": null,
+    "medicalReviewStatus": "approved"
+  }
+}

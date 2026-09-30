@@ -417,9 +417,9 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/',
-    title: 'HRT — İlk Altı Ayın Notları',
+    title: 'HRT — İlk Ayların Notları',
     description:
-      'Hormon replasman tedavisine başlayan 58 yaşında bir kadının ilk aylarından bir yazı: karar süreci, üç ayın muhasebesi, beklentilerle gerçeğin örtüştüğü ve örtüşmediği yerler, aile bağı.',
+      'Demet Kızılkaya, hormon replasman tedavisinin ilk dört ayını anlatıyor: beklentileri, fark ettiği değişimler ve henüz yanıtlayamadığı sorular.',
     publishedDate: '27 Nisan 2026',
     writerSlug: 'demet-kizilkaya',
     section: 'Hormonal Geçiş · Menopoz',

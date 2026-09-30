@@ -1,0 +1,56 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "HRT — İlk Ayların Notları",
+    "description": "Demet Kızılkaya, hormon replasman tedavisinin ilk dört ayını anlatıyor: beklentileri, fark ettiği değişimler ve henüz yanıtlayamadığı sorular.",
+    "datePublished": "2026-04-27",
+    "dateModified": "2026-09-30",
+    "inLanguage": "tr-TR",
+    "mainEntityOfPage": "https://estranova.com/hormonal-gecis/menopoz/hrt-ilk-alti-ay/",
+    "articleSection": "Hormonal Geçiş",
+    "keywords": "HRT, hormon replasman tedavisi, menopoz, menopoz HRT deneyimi, yaşıt hikâyesi",
+    "author": {
+      "@type": "Person",
+      "name": "Demet Kızılkaya",
+      "jobTitle": "Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı",
+      "description": "Uzun yıllar Türkiye-Japonya hattında çalışmış, iki kültürü yakından gözlemlemiş bir yazar. Estranova'da menopoz deneyimi, Japon kültürü ve gündelik nezaket başlıklarını HRT yolunu da saklamadan, ölçülü bir yaşıt tonuyla yazıyor. Aile sıcaklığını ve sakin gözlemi metne taşıyan candan bir sesi var.",
+      "image": "https://estranova.com/images/writers/demet-kizilkaya.webp",
+      "url": "https://estranova.com/yazarlar/demet-kizilkaya/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Estranova",
+      "url": "https://estranova.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://estranova.com/favicon.svg"
+      }
+    },
+    "image": "https://estranova.com/images/library/editorial/hg-hrt-ilk-alti-ay.webp"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Anasayfa",
+        "item": "https://estranova.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Hormonal Geçiş",
+        "item": "https://estranova.com/hormonal-gecis/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HRT — İlk Ayların Notları",
+        "item": "https://estranova.com/hormonal-gecis/menopoz/hrt-ilk-alti-ay/"
+      }
+    ]
+  }
+]

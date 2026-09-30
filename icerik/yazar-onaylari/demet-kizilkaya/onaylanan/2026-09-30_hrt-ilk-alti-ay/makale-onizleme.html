@@ -1,64 +1,10 @@
----
-import SiteLayout from '../../../layouts/SiteLayout.astro';
-import SiteNavbar from '../../../components/site/SiteNavbar.astro';
-import SiteFooter from '../../../components/site/SiteFooter.astro';
-import SubmenuHero from '../../../components/site/SubmenuHero.astro';
-import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
-import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
-import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
-import ArticleSummary from '../../../components/site/ArticleSummary.astro';
-import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import Evidence from '../../../components/site/Evidence.astro';
-import { submenuHeroByRoute } from '../../../data/submenu-heroes';
-import { buildArticleSchemas } from '../../../utils/article-schema';
-import { resolveSiteUrl } from '../../../utils/seo';
-
-const pathname = '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/';
-const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
-const articleTitle = 'HRT — İlk Ayların Notları';
-const articleDescription =
-  'Demet Kızılkaya, hormon replasman tedavisinin ilk dört ayını anlatıyor: beklentileri, fark ettiği değişimler ve henüz yanıtlayamadığı sorular.';
-const siteUrl = resolveSiteUrl(Astro.site);
-const articleSchemas = buildArticleSchemas({
-  title: articleTitle,
-  description: articleDescription,
-  writerSlug: 'demet-kizilkaya',
-  articleType: 'experience-essay',
-  publishedDate: '27 Nisan 2026',
-  modifiedDate: '30 Eylül 2026',
-  pathname,
-  articleSection: 'Hormonal Geçiş',
-  sectionPath: '/hormonal-gecis/',
-  keywords: ['HRT', 'hormon replasman tedavisi', 'menopoz', 'menopoz HRT deneyimi', 'yaşıt hikâyesi'],
-  siteUrl,
-});
----
-
-<SiteLayout title={`${articleTitle} - Estranova`} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
-  <SiteNavbar currentPath="/hormonal-gecis/" />
-  <main id="main-content" class="text-ink">
-    <SubmenuHero eyebrow="Hormonal Geçiş · Menopoz" title={articleTitle} imageSrc={hero.src} imageAlt={hero.alt} compact />
-    <SubmenuArticleBody>
-      <ArticleAuthorBlock
-        authorSlug="demet-kizilkaya"
-        articleType="experience-essay"
-        publishedDate="27 Nisan 2026"
-        lastUpdated="30 Eylül 2026"
-        readingMinutes={6}
-        imageSrc="/images/library/editorial/hg-hrt-ilk-alti-ay.webp"
-        imageAlt="Sabah ışığında mutfakta çay hazırlayan bir kadın"
-        imagePosition="center center"
-      />
-      <ArticleSummary title="Bu yazıya başlarken">
+<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HRT — İlk Ayların Notları — onay önizlemesi</title><style>body{margin:0;background:#faf6f2;color:#2d2d2d;font:18px/1.75 system-ui}main{max-width:760px;margin:auto;padding:40px 24px}h1{font-size:40px;line-height:1.2}h2{margin-top:2.5em;font-size:26px}h2+p{color:#a8174b;font-style:italic}aside,section{background:white;padding:24px;border-radius:20px;margin:28px 0}.draft{color:#a8174b;border:1px solid}a{color:#a8174b}</style><main><aside class="draft">Onay bekleyen revizyon · 30 Eylül 2026. Yazar ve tıbbi not onayı alınmadı. Bu önizleme yayındaki sayfa değildir.</aside><h1>HRT — İlk Ayların Notları</h1><p>Demet Kızılkaya · İlk yayın: 27 Nisan 2026 · Revizyon: 30 Eylül 2026</p><section><h2>Bu yazıya başlarken</h2>
         <p>
           Hormon replasman tedavisine (HRT) 58 yaşında başladım; bu yazıda ilk dört ayın notlarını paylaşıyorum.
           Beklentilerimi, bedenimde fark ettiğim değişimleri ve ailemin gördüklerini anlatırken,
           henüz yanıtlayamadığım soruları da açık bırakıyorum. Sizin yolunuz farklı olabilir.
         </p>
-      </ArticleSummary>
-      <ArticleProsePanel mode="experience">
+      </section>
         <h2 id="sabah-sahnesi">Sabah çayında aklıma gelen</h2>
         <p>
           Geçen pazartesi sabahı çayımı demlerken aklıma geldi: tedaviye başlayalı dört ay olmuş.
@@ -67,19 +13,18 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Bu yazıyı yazmaya o anda karar verdim. Başlamadan önce tıbbi bilgiye ulaşabiliyordum;
           benim merak ettiğim, karardan sonra gündelik hayatın nasıl hissedileceğiydi.
-          Üçüncü, dördüncü ayda nerede duruyor olacaktım? Belki siz de şu an o eşikte aynı şeyi merak ediyorsunuz.
-          Ben şimdi tam o yerdeyim. Sıcağı sıcağına anlatabilirim.
+          Üçüncü, dördüncü ayda nerede duruyor olacaktım? Şimdi kendi cevabımı anlatabilecek bir yerdeyim.
         </p>
 
         <h2 id="neden-karar-verdim">Karara gelene kadar</h2>
         <p>
-          Kararı vermek kolay olmadı. Menopozun ilk yıllarında uykum zaman zaman bölünüyor,
-          gün ortasında yorgunluk bastırıyordu; önce bunları yaşımın doğal akışı olarak gördüm.
+          Menopozun ilk yıllarında uykum zaman zaman bölünüyor, gün ortasında yorgunluk bastırıyordu.
+          Önce bunları yaşımın doğal akışı olarak gördüm.
         </p>
         <p>
-          Bir süre öyle yaşadım. Sonra eşimle bir akşam yemeğinde, kızımın yoğun bir haftasında,
-          annemin bakım rutininde hep aynı şeyi fark ettim: kısık ateşte yanan bir yorgunluğun altındaydım.
-          Belki siz de bu kısık ateşi tanıyorsunuzdur. Günlük hayatımda neyin değiştiğini hekimimle konuşmak istedim.
+          Bir süre öyle yaşadım. Sonra eşimle akşam yemeğinde, kızımın yoğun bir haftasında,
+          annemin bakım rutininde aynı yorgunluğu taşımaya başladığımı fark ettim.
+          Günlük hayatımda neyin değiştiğini hekimimle konuşmak istedim.
         </p>
         <p>
           Hekimimle daha önce de HRT hakkında konuşmuştuk; o zaman başlamamıştım.
@@ -103,7 +48,6 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Birinci ayın sonunda hekimimle kısa bir görüşme yaptık. Henüz belirgin bir değişim
           hissetmediğimi, ama kötü de olmadığımı anlattım. Beklentilerimi konuşmak içimi rahatlattı.
-          İlk haftalarda hiçbir şey hissetmiyorsanız, merak etmeyin diye yazıyorum: bende de öyle oldu.
         </p>
         <p>
           İkinci ayın sonunda daha somut bir fark vardı: gece terlemelerim azalmıştı.
@@ -113,12 +57,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="uc-dort-ay">Üçüncü ayın muhasebesi</h2>
         <p>
-          Üçüncü ayın sonunda belirti listesini hekimimle madde madde okuduk.
-          Neredeyse her satırda içimden "ya bu da geçmiş aslında" dedim.
-        </p>
-        <p>
-          Belirtilerinizi bir yere not ediyorsanız bu anı tanırsınız: gündelik telaşta kaçırdığınız
-          değişimler, liste önünüze konunca birden görünür oluyor.
+          Üçüncü ayın sonunda hekimimle daha uzun bir kontrol yaptık.
+          Belirtileri tek tek gözden geçirirken, gündelik hayatta farkına varmadığım değişimleri gördüm.
         </p>
         <p>
           Gün ortası yorgunluğum hafiflemişti. Cildimdeki kuruluk daha az dikkatimi çekiyor,
@@ -142,8 +82,7 @@ const articleSchemas = buildArticleSchemas({
           Küçük, ama benim için fark edilir bir andı.
         </p>
         <p>
-          Yıl başında bunu sık yaşıyordum. Kelime dilimin ucunda kalıyor, cümleyi başka türlü kuruyordum;
-          o anı birçoğumuz biliyoruz.
+          Yıl başında bunu sık yaşıyordum. Kelimeyi bulamayınca cümleyi başka türlü kuruyordum.
           Son haftalarda daha az yaşadığımı fark ettim. Yine olur mu, bilmiyorum;
           şimdilik konuşmanın eskisi gibi aktığı anlardan memnunum.
         </p>
@@ -154,7 +93,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Günlük 10–12 bin adımlık yürüyüşüm ve yeniden başladığım pilates devam ediyordu.
           Hareket ve beslenme alışkanlıklarımı da hekimimle konuştum.
-          Bunlar benim rutinimin parçaları, bir öneri değil.
+          Bunlar benim rutinimin parçaları; sizin günlük hayatınıza uygun olanlar farklı olabilir.
         </p>
         <p>
           İlk aylardaki baş ağrısı dışında belirgin bir yan etki yaşamadım.
@@ -164,8 +103,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="aile-es-kiz">Evdekilerin gördüğü</h2>
         <p>
-          Farkı ilk söyleyen ben olmadım. Belki sizin evinizde de öyle olur:
-          eşim ve kızımın söyledikleri, kendi notlarıma başka bir açı ekledi.
+          Eşim ve kızım da bendeki değişimleri fark ediyordu.
+          Onların söyledikleri, kendi notlarıma başka bir açı ekledi.
         </p>
         <p>
           Eşim başlangıçta doğru karar verip vermediğimden endişe ediyordu.
@@ -187,7 +126,6 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Dört ay, uzun vadeli sorulara cevap vermek için kısa bir süre.
           Ne kadar kullanacağımı ve ileride nasıl hissedeceğimi hâlâ bilmiyorum.
-          Bu eşikten geçmeyi düşünen birçoğumuzun aklında da aynı sorular dolaşıyor.
         </p>
         <p>
           Tedavinin bana nasıl geldiğini hekimimle düzenli görüşmelerde yeniden değerlendireceğiz.
@@ -198,19 +136,17 @@ const articleSchemas = buildArticleSchemas({
           Bu ilk dört ay, bedenimde olup bitenleri biraz daha dikkatli fark etmemi sağladı.
           Önümüzdeki aylar başka şeyler öğretecek. Altıncı ayın sonunda tekrar yazarım belki.
         </p>
-      </ArticleProsePanel>
-
-      <MedicalContextNote class="mt-10">
+      <section><h2>Tıbbi bilgi notu — inceleme bekliyor</h2>
         <p>
           HRT, menopoza bağlı sıcak basmaları ve gece terlemelerini azaltmak için kullanılan bir tedavi seçeneğidir
-          <Evidence level={5} />. Uygunluğu ve risk-fayda dengesi sağlık öyküsüne göre değerlendirilir.
+          <em>(güçlü kanıt)</em>. Uygunluğu ve risk-fayda dengesi sağlık öyküsüne göre değerlendirilir.
           Bu yazıdaki hafıza, cilt, ağrı ve sakinlik gözlemleri kişisel deneyimdir; tedavinin bu alanlarda
           herkeste aynı etkiyi göstereceğine kanıt oluşturmaz.
         </p>
         <p>
           Tedavi başlangıcından yaklaşık üç ay sonra ve ardından genellikle yılda bir değerlendirme önerilir;
           belirtiler, yan etkiler veya başka sağlık sorunları daha erken kontrol gerektirebilir.
-          Mamografi, kemik yoğunluğu ölçümü ve kan tetkikleri herkes için aynı yıllık liste değildir;
+          Mamografi, kemik yoğunluğu ölçümü ve kan tetkikleri herkes için aynı yıllık paket değildir;
           tarama ve tetkik planı yaşa, risklere ve klinik gereksinime göre belirlenir.
         </p>
         <p>
@@ -224,14 +160,4 @@ const articleSchemas = buildArticleSchemas({
           ani konuşma bozukluğu, yüzün bir yanında düşme ya da kol veya bacakta güçsüzlük olduğunda
           planlı kontrol beklenmemeli, <strong>112 aranmalıdır</strong>.
         </p>
-      </MedicalContextNote>
-      <RelatedReadings class="mt-10" paths={[
-        '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
-        '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
-        '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',
-      ]} />
-      <ArticleDisclaimer class="mt-10" />
-    </SubmenuArticleBody>
-  </main>
-  <SiteFooter />
-</SiteLayout>
+      </section><p>Bu yazı kişisel deneyim ve genel bilgi aktarır; bireysel tıbbi değerlendirme, tanı veya tedavi yerine geçmez.</p><p><a href="./kontrol-formu.html">Yazar kontrol formu</a></p></main></html>

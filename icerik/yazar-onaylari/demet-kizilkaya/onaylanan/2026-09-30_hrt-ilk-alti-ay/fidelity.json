@@ -1,0 +1,128 @@
+{
+  "originalPath": "icerik/yazar-onaylari/demet-kizilkaya/onay-bekleyen/2026-09-30_hrt-ilk-alti-ay/onayli-metin.md",
+  "revisedPath": "icerik/yazar-onaylari/demet-kizilkaya/onay-bekleyen/2026-09-30_hrt-ilk-alti-ay/revize-metin.md",
+  "locale": "tr",
+  "status": "review_changes",
+  "differences": {
+    "numbers": [
+      {
+        "value": "112",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 178,
+            "column": 31
+          }
+        ]
+      },
+      {
+        "value": "12",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 105,
+            "column": 12
+          }
+        ]
+      },
+      {
+        "value": "12.000",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 140,
+            "column": 72
+          }
+        ],
+        "afterLocations": []
+      },
+      {
+        "value": "2002",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 43,
+            "column": 51
+          }
+        ],
+        "afterLocations": []
+      },
+      {
+        "value": "50",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 142,
+            "column": 94
+          }
+        ],
+        "afterLocations": []
+      }
+    ],
+    "ranges": [
+      {
+        "value": "10–12",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 105,
+            "column": 9
+          }
+        ]
+      },
+      {
+        "value": "10–12.000",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 140,
+            "column": 69
+          }
+        ],
+        "afterLocations": []
+      }
+    ]
+  },
+  "frontmatterChanged": false,
+  "coverage": {
+    "before": {
+      "blocks": 43,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "after": {
+      "blocks": 38,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    }
+  },
+  "limitations": [
+    "Counts are global: values swapped between outcomes or claims can escape detection.",
+    "Negation, certainty, population and causal meaning require the manual meaning record.",
+    "Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.",
+    "Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.",
+    "Number formatting is not silently converted between locales. No tracked changes is not clinical approval."
+  ]
+}
