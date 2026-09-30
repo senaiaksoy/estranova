@@ -995,19 +995,20 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/': [
     {
-      question: 'Koruyucu sağlık kaydı tutmak neden bu dönemde daha değerli hale gelir?',
-      answer:
-        'Çünkü belirtiler, taramalar ve aile öyküsü aynı anda önem kazanmaya başlar. Dağınık bilgiler yazıya döküldüğünde hem siz hem de hekim için daha okunur bir başlangıç haritası oluşur.',
+      question: "Belirtisi olmayan bir kadın menopoza hazırlıkta hangi sağlık kayıtlarını tutmalı?",
+      answer: "Belirtisi olmayan bir kadında menopoza hazırlık için en yararlı kayıtlar, adet tarihleri ve adet aralıklarındaki değişiklikler, kilo ve bel çevresi, tansiyon, kullanılan ilaçlar, sigara/alkol durumu, egzersiz düzeyi, uyku, ailede erken kalp-damar hastalığı, osteoporoz ve meme veya yumurtalık kanseri öyküsüdür. Ayrıca son mamografi, rahim ağzı taraması, kemik yoğunluğu ölçümü yapılmışsa sonucu ve önceki önemli kan tahlillerini tek yerde tutmak ileride karşılaştırmayı kolaylaştırır.",
     },
     {
-      question: 'Bu kayda yalnızca tahlil sonuçları mı yazılmalı?',
-      answer:
-        'Hayır. Adet düzeni, uyku, sıcak basması, ruh hali, tansiyon, kullanılan ilaçlar ve önemli aile öyküleri de en az sonuçlar kadar değerlidir. Bazen kararı sayılar değil, hikâye tamamlar.',
+      question: "Kan tahlillerinin gerekliliğini ve tekrar sıklığını nasıl belirlersiniz?",
+      answer: "Kan tahlillerini yaşa göre otomatik değil, risk profiline göre isterim. Kan yağlarını gösteren lipid profili, açlık glukozu veya son birkaç aylık kan şekeri hakkında bilgi veren HbA1c, gerektiğinde karaciğer-böbrek fonksiyonları ve tiroid testleri; kişinin kilosu, aile öyküsü, tansiyonu, kullandığı ilaçlar ve önceki sonuçlarına göre planlanır. Normal sonuçları olan düşük riskli bir kişide her birkaç ayda bir test tekrarı gerekmez; sınırda veya anormal sonuçlarda, tedavi başlanmışsa ya da yeni belirti gelişmişse daha sık kontrol edilir. Menopoz tanısı tipik yaş ve belirtilerle çoğu zaman hormon testleriyle konmaz.",
     },
     {
-      question: 'Ne kadar ayrıntı fazla olur?',
-      answer:
-        'Her günü dakikası dakikasına tutmak yerine eğilimleri görmek yeterlidir. Kısa, düzenli ve sürdürülebilir kayıt; çok ayrıntılı ama çabuk bırakılan kayıttan daha işlevseldir.',
+      question: "Ev tipi tansiyon cihazı seçimi ve ölçüm kayıtları konusunda ne önerirsiniz?",
+      answer: "Ev tipi tansiyon cihazında tercihim, doğrulanmış bir model olan, üst koldan ölçen otomatik cihazdır; bilekten ölçen cihazları genellikle önermem. Manşet kol çevresine uygun olmalı. Ölçümden önce 5 dakika dinlenmek, sırt ve kolu desteklemek, ayakları yere basmak, konuşmamak gerekir. İlk değerlendirmede sabah ve akşam, 1 dakika arayla ikişer ölçümü 5–7 gün kaydetmek çok yararlıdır; tek tek yüksek değerlerden çok ortalamaya bakarım. Sürekli yüksek ölçümler varsa cihazı da muayeneye getirip klinik cihazla karşılaştırmak iyi olur.",
+    },
+    {
+      question: "Menopoza hazırlıkta belirti günlüğüne ne kadar zaman ayırmak gerekir; hangi ayrıntıları kaydetmek yararlıdır?",
+      answer: "Belirti günlüğü için uzun uzun not tutmak gerekmez; günde 1–2 dakika, özellikle birkaç hafta düzenli kayıt çoğu zaman yeterlidir. Adet tarihleri ve kanama miktarı, sıcak basması/gece terlemesi, uyku kalitesi, çarpıntı, baş ağrısı, ruh hali, vajinal kuruluk, idrar yakınmaları, cinsel istek, kullanılan ilaçlar ve belirtileri artırdığını düşündüğünüz alkol, kafein, stres veya sıcak ortam gibi tetikleyiciler kaydedilebilir. Amaç her belirtinin peşine düşmek değil; zaman içindeki seyri görmek, hangi şikâyetin gerçekten sıklaştığını ve günlük yaşamı ne kadar etkilediğini anlamaktır.",
     },
   ],
   '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/': [

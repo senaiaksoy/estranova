@@ -1,0 +1,93 @@
+{
+  "writerSlug": "berna-aksoy",
+  "contributor": "Doç. Dr. Senai Aksoy",
+  "pathname": "/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/",
+  "answeredAt": "2026-09-30",
+  "source": "Bu sohbet içindeki doğrudan hekim yanıtları",
+  "status": "4/4 gerçek yanıt işlendi. İkinci tur denetim + humanize revizyonu 2026-09-30 tarihinde KC “onay” beyanıyla onaylandı ve commit edildi. Push/deploy yapılmadı.",
+  "frequencyConfirmed": false,
+  "publicationApproval": "2026-09-30: KC önce “editör/tıbbi onayı tamam” dedi (ilk revizyon, sha256 7871bb2e54e0…). Aynı gün ikinci tur denetim + humanize revizyonu için “onay, kayıtları güncelle ve commit et” dedi. Push/deploy talimatı verilmedi.",
+  "faqResponses": [
+    {
+      "question": "Belirtisi olmayan bir kadın menopoza hazırlıkta hangi sağlık kayıtlarını tutmalı?",
+      "answer": "Belirtisi olmayan bir kadında menopoza hazırlık için en yararlı kayıtlar, adet tarihleri ve siklus değişiklikleri, kilo ve bel çevresi, tansiyon, kullanılan ilaçlar, sigara/alkol durumu, egzersiz düzeyi, uyku, ailede erken kalp-damar hastalığı, osteoporoz ve meme/over kanseri öyküsüdür. Ayrıca son mamografi, servikal tarama, kemik yoğunluğu ölçümü yapılmışsa sonucu ve önceki önemli kan tahlillerini tek yerde tutmak ileride karşılaştırmayı kolaylaştırır.",
+      "editedForArticle": "Belirtisi olmayan bir kadında menopoza hazırlık için en yararlı kayıtlar, adet tarihleri ve adet aralıklarındaki değişiklikler, kilo ve bel çevresi, tansiyon, kullanılan ilaçlar, sigara/alkol durumu, egzersiz düzeyi, uyku, ailede erken kalp-damar hastalığı, osteoporoz ve meme veya yumurtalık kanseri öyküsüdür. Ayrıca son mamografi, rahim ağzı taraması, kemik yoğunluğu ölçümü yapılmışsa sonucu ve önceki önemli kan tahlillerini tek yerde tutmak ileride karşılaştırmayı kolaylaştırır.",
+      "answeredAt": "2026-09-30",
+      "useApproval": "Gerçek yanıttan düzenlenen makale karşılığı, 2026-09-30 tarihli “editör/tıbbi onayı tamam” beyanıyla onaylandı."
+    },
+    {
+      "question": "Kan tahlillerinin gerekliliğini ve tekrar sıklığını nasıl belirlersiniz?",
+      "answer": "Kan tahlillerini yaşa göre otomatik değil, risk profiline göre isterim. Lipid profili, açlık glukozu veya HbA1c, gerektiğinde karaciğer-böbrek fonksiyonları ve tiroid testleri; kişinin kilosu, aile öyküsü, tansiyonu, kullandığı ilaçlar ve önceki sonuçlarına göre planlanır. Normal sonuçları olan düşük riskli bir kişide her birkaç ayda bir test tekrarı gerekmez; sınırda veya anormal sonuçlarda, tedavi başlanmışsa ya da yeni semptom gelişmişse daha sık kontrol edilir. Menopoz tanısı tipik yaş ve belirtilerle çoğu zaman hormon testleriyle konmaz.",
+      "editedForArticle": "Kan tahlillerini yaşa göre otomatik değil, risk profiline göre isterim. Kan yağlarını gösteren lipid profili, açlık glukozu veya son birkaç aylık kan şekeri hakkında bilgi veren HbA1c, gerektiğinde karaciğer-böbrek fonksiyonları ve tiroid testleri; kişinin kilosu, aile öyküsü, tansiyonu, kullandığı ilaçlar ve önceki sonuçlarına göre planlanır. Normal sonuçları olan düşük riskli bir kişide her birkaç ayda bir test tekrarı gerekmez; sınırda veya anormal sonuçlarda, tedavi başlanmışsa ya da yeni belirti gelişmişse daha sık kontrol edilir. Menopoz tanısı tipik yaş ve belirtilerle çoğu zaman hormon testleriyle konmaz.",
+      "answeredAt": "2026-09-30",
+      "useApproval": "Gerçek yanıttan düzenlenen makale karşılığı, 2026-09-30 tarihli “editör/tıbbi onayı tamam” beyanıyla onaylandı."
+    },
+    {
+      "question": "Ev tipi tansiyon cihazı seçimi ve ölçüm kayıtları konusunda ne önerirsiniz?",
+      "answer": "Ev tipi tansiyon cihazında tercihim, doğrulanmış bir model olan, üst koldan ölçen otomatik cihazdır; bilekten ölçen cihazları genellikle önermem. Manşet kol çevresine uygun olmalı. Ölçümden önce 5 dakika dinlenmek, sırt ve kolu desteklemek, ayakları yere basmak, konuşmamak gerekir. İlk değerlendirmede sabah ve akşam, 1 dakika arayla ikişer ölçümü 5–7 gün kaydetmek çok yararlıdır; tek tek yüksek değerlerden çok ortalamaya bakarım. Sürekli yüksek ölçümler varsa cihazı da muayeneye getirip klinik cihazla karşılaştırmak iyi olur.",
+      "editedForArticle": "Ev tipi tansiyon cihazında tercihim, doğrulanmış bir model olan, üst koldan ölçen otomatik cihazdır; bilekten ölçen cihazları genellikle önermem. Manşet kol çevresine uygun olmalı. Ölçümden önce 5 dakika dinlenmek, sırt ve kolu desteklemek, ayakları yere basmak, konuşmamak gerekir. İlk değerlendirmede sabah ve akşam, 1 dakika arayla ikişer ölçümü 5–7 gün kaydetmek çok yararlıdır; tek tek yüksek değerlerden çok ortalamaya bakarım. Sürekli yüksek ölçümler varsa cihazı da muayeneye getirip klinik cihazla karşılaştırmak iyi olur.",
+      "answeredAt": "2026-09-30",
+      "useApproval": "Gerçek yanıttan düzenlenen makale karşılığı, 2026-09-30 tarihli “editör/tıbbi onayı tamam” beyanıyla onaylandı."
+    },
+    {
+      "question": "Menopoza hazırlıkta belirti günlüğüne ne kadar zaman ayırmak gerekir; hangi ayrıntıları kaydetmek yararlıdır?",
+      "answer": "Belirti günlüğü için uzun uzun not tutmak gerekmez; günde 1–2 dakika, özellikle birkaç hafta düzenli kayıt çoğu zaman yeterlidir. Adet tarihleri ve kanama miktarı, sıcak basması/gece terlemesi, uyku kalitesi, çarpıntı, baş ağrısı, ruh hali, vajinal kuruluk, idrar yakınmaları, libido, kullanılan ilaçlar ve belirtileri artırdığını düşündüğünüz alkol, kafein, stres veya sıcak ortam gibi tetikleyiciler kaydedilebilir. Amaç her belirtinin peşine düşmek değil; zaman içindeki paterni görmek, hangi şikâyetin gerçekten sıklaştığını ve günlük yaşamı ne kadar etkilediğini anlamaktır.",
+      "editedForArticle": "Belirti günlüğü için uzun uzun not tutmak gerekmez; günde 1–2 dakika, özellikle birkaç hafta düzenli kayıt çoğu zaman yeterlidir. Adet tarihleri ve kanama miktarı, sıcak basması/gece terlemesi, uyku kalitesi, çarpıntı, baş ağrısı, ruh hali, vajinal kuruluk, idrar yakınmaları, cinsel istek, kullanılan ilaçlar ve belirtileri artırdığını düşündüğünüz alkol, kafein, stres veya sıcak ortam gibi tetikleyiciler kaydedilebilir. Amaç her belirtinin peşine düşmek değil; zaman içindeki seyri görmek, hangi şikâyetin gerçekten sıklaştığını ve günlük yaşamı ne kadar etkilediğini anlamaktır.",
+      "answeredAt": "2026-09-30",
+      "useApproval": "Gerçek yanıttan düzenlenen makale karşılığı, 2026-09-30 tarihli “editör/tıbbi onayı tamam” beyanıyla onaylandı."
+    }
+  ],
+  "faqQuestionsRemaining": [],
+  "approvalBaseline": {
+    "comparisonCommit": "f5002da",
+    "record": "article-approvals.ts: 2026-05-01 ve 2026-05-04 revizyon notu",
+    "limitation": "Onay kaydı içerik hash’i içermiyor; tarihsel snapshot karşılaştırıldı, kesin onaylı hash sayılmadı."
+  },
+  "meaningReview": [
+    "Sen/siz karışıklığı giderildi; kişisel beden takip anlatıları azaltıldı, kayıtlı arkadaş sahnesi korundu.",
+    "Aç karnına haftalık ölçüm ve yıllık ortalamaya dayalı genel takip önerisi kaldırıldı; gerçek üçüncü yanıttaki ilk değerlendirme koşulu, 5 dakika, 1 dakika, ikişer ölçüm, sabah/akşam ve 5–7 gün aynen korundu.",
+    "Belirti yokken kişisel normal ancak belirlenebilir iddiası kaldırıldı; belirti günlüğü tanı aracı olarak sunulmuyor.",
+    "FSH/östradiol tek başına tanı değildir sınırı korundu. Hormonların kalp riski ve aile öyküsünün erken menopozla ilişkisi üzerine kaynak izi olmayan yan iddialar, kayıt düzeni odağını korumak için kaldırıldı; genel risk inkâr edilmedi.",
+    "Kan yağları/HbA1c açıklamaları sadeleştirme; over → yumurtalık, servikal → rahim ağzı, libido → cinsel istek, siklus → adet aralığı, patern → seyir. Yeni tavsiye eklenmedi.",
+    "Eski imzalı nottaki yıllık ortalama/longitudinal trend/erken saptama genellemesi çıkarıldı; kayıt odağı ve gerçek ikinci yanıta bağlı nötr not kullanıldı."
+  ],
+  "sourcesVerified": [
+    "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations",
+    "https://www.nice.org.uk/guidance/ng136/chapter/recommendations",
+    "https://professional.heart.org/en/science-news/measurement-of-blood-pressure-in-humans/top-things-to-know"
+  ],
+  "sourceLimit": "NICE evde ölçüm için en az 4, ideal 7 gün belirtir; hekimin 5–7 günlük önerisi uyumlu aralık içinde. Rehberdeki ilk günü çıkarma ayrıntısı özgün yanıtta bulunmadığından hekim sözüne eklenmedi.",
+  "validation": {
+    "buildCi": "Geçti: lint, compliance, strict integrity, strict templates, encoding, tokenlar, lexicon, tarihler, Astro 143 sayfa, SEO 163 çıktı.",
+    "warningsOutsideTarget": "Epitalon uzun cümle; vücut şekillendirme soft-ban.",
+    "renderedHtml": "1 H1; tek SSS; 4/4 kayıtlı yanıt = görünür HTML = FAQPage. Berna byline ve revizyon tarihi doğru.",
+    "fidelity": "Statik Astro paragrafları Markdown olarak çıkarıldı. 10 dakikalık kişisel hazırlık süresi ve 40+ perimenopoz öncesi genellemesi çıkarıldı. Hekim yanıtları ayrı satır satır karşılaştırıldı; 5 dakika, 1 dakika, ikişer ölçüm, sabah/akşam, 5–7 gün, 1–2 dakika ve birkaç hafta korunuyor.",
+    "editorialCheck": "39 gövde bloğunda 0 aday; SSS ve meta elle ayrıca okundu.",
+    "scope": "Hedef sayfa, hedef FAQ girdisi ve katkı kaydı. Önceden kirli sıcak basması sayfası ve aynı FAQ dosyasındaki onun değişiklikleri korundu. Commit/push/deploy yok."
+  },
+  "articleType": "editorial-guide",
+  "typeRationale": "Kişisel beden takibi anlatıları kaldırıldı; ana değer kayıt düzenini açıklayan editoryal sentez. Berna byline ve hekim olmayan yetki hattı korundu.",
+  "medicalReview": {
+    "reviewer": "Doç. Dr. Senai Aksoy",
+    "status": "Tamamlandı — 2026-09-30",
+    "source": "Bu sohbet: KC beyanı “editör/tıbbi onayı tamam”.",
+    "scope": "Tüm makale revizyonu, editorial-guide türü, tıbbi bilgi notu ve dört gerçek SSS yanıtının düzenlenmiş karşılığı."
+  },
+  "approvedRevision": {
+    "articleSha256": "573a214dd9b7822079d813b268cd2c87b933bc9ba295b4b25c4941eefce81e17",
+    "faqAnswersSha256": "40b65e2c19f5d6c5457e4ba935ad3badbca882b89d13f80a091f8e3d2a408732",
+    "articleHashNote": "LF satır sonlu commit edilen dosya baytlarının sha256'sı."
+  },
+  "secondRevision": {
+    "date": "2026-09-30",
+    "scope": "Yalnız makale gövdesi ve hero kaynağı. SSS yanıtları, tıbbi bilgi notu ve uyarı metni değişmedi; yeni tıbbi iddia eklenmedi.",
+    "changes": [
+      "Soru-başlıklı H2 3→1: 'Neden Bu Evrede Kayıt?' → 'Dağınık Raporlardan Tek Dosyaya'; 'Tarama Takvimini Nasıl Konuşmalı?' → 'Tarama Takvimini Konuşmak' (anchor id'ler korundu).",
+      "Sıcaklık Katmanı: mahcubiyet duygu beat'i, iki teselli cümlesi, somut sahneler (çekmece, e-posta eki, telefon galerisi, bayram ziyareti), kısa vurgu cümleleri, çeşitlenmiş lede'ler, açılış sorusunun kapanışta geri çağrılması.",
+      "Berna v2.5 humor #4 (soru-yağmurluğu) 'Kayıtları Hekimle Paylaşmak' bölümüne eklendi.",
+      "submenuHeroByRoute makale-path kaydı silindi; sayfa parent hub hero'sunu (/hormonal-gecis/menopoza-hazirlik/) kullanıyor."
+    ],
+    "previousArticleSha256": "7871bb2e54e05a0768d6dd66e8b4b64868f3b973e7fba5990543466dd8675dd4",
+    "validation": "lexicon:check hard_ban 0; build:ci geçti (SEO 163 sayfa); render: 1 H1, 1 FAQPage."
+  }
+}
