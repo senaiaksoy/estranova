@@ -4,9 +4,9 @@
   "pathname": "/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/",
   "answeredAt": "2026-09-30",
   "source": "Bu sohbet içindeki doğrudan hekim yanıtları",
-  "status": "4/4 gerçek yanıt işlendi. İkinci tur denetim + humanize revizyonu 2026-09-30 tarihinde KC “onay” beyanıyla onaylandı ve commit edildi. Push/deploy yapılmadı.",
+  "status": "4/4 gerçek yanıt işlendi. Üçüncü tur revizyon 2026-09-30 tarihinde KC “onay” beyanıyla onaylandı; commit ve push talimatı verildi.",
   "frequencyConfirmed": false,
-  "publicationApproval": "2026-09-30: KC önce “editör/tıbbi onayı tamam” dedi (ilk revizyon, sha256 7871bb2e54e0…). Aynı gün ikinci tur denetim + humanize revizyonu için “onay, kayıtları güncelle ve commit et” dedi. Push/deploy talimatı verilmedi.",
+  "publicationApproval": "2026-09-30: KC önce “editör/tıbbi onayı tamam” dedi (ilk revizyon, sha256 7871bb2e54e0…). Aynı gün ikinci tur denetim + humanize revizyonu için “onay, kayıtları güncelle ve commit et” dedi. Push/deploy talimatı verilmedi. Üçüncü tur (İlk 30 Gün + “küçük” tekrarı) için “onay, kayıtları güncelle, commit ve push et” dedi.",
   "faqResponses": [
     {
       "question": "Belirtisi olmayan bir kadın menopoza hazırlıkta hangi sağlık kayıtlarını tutmalı?",
@@ -74,7 +74,7 @@
     "scope": "Tüm makale revizyonu, editorial-guide türü, tıbbi bilgi notu ve dört gerçek SSS yanıtının düzenlenmiş karşılığı."
   },
   "approvedRevision": {
-    "articleSha256": "573a214dd9b7822079d813b268cd2c87b933bc9ba295b4b25c4941eefce81e17",
+    "articleSha256": "667e8ac583504b40de0bb59d20660e0b97e4af2a0b4227f416797da55a8965c2",
     "faqAnswersSha256": "40b65e2c19f5d6c5457e4ba935ad3badbca882b89d13f80a091f8e3d2a408732",
     "articleHashNote": "LF satır sonlu commit edilen dosya baytlarının sha256'sı."
   },
@@ -89,5 +89,16 @@
     ],
     "previousArticleSha256": "7871bb2e54e05a0768d6dd66e8b4b64868f3b973e7fba5990543466dd8675dd4",
     "validation": "lexicon:check hard_ban 0; build:ci geçti (SEO 163 sayfa); render: 1 H1, 1 FAQPage."
+  },
+  "thirdRevision": {
+    "date": "2026-09-30",
+    "trigger": "Dış AI-iz değerlendirmesi (büyük kısmı eski sürüme aitti; yalnız iki madde güncel metne uyuyordu).",
+    "scope": "Yalnız 'İlk 30 Gün' bölümünün iki paragrafı ve kapanışın ilk cümlesi. SSS, tıbbi bilgi notu ve uyarı değişmedi; yeni tıbbi iddia veya ölçüm önerisi eklenmedi.",
+    "changes": [
+      "Haftalık program (İlk/İkinci/Üçüncü/Dördüncü hafta) kaldırıldı; eski raporlar + tarama tarihleri → belirtiler ve sorular → aile öyküsü şeklinde organik sıralama.",
+      "“küçük” tekrarı 4→2 ('Başlangıcı küçük tutun' ve kapanıştaki 'kadar küçük olabilir' çıkarıldı)."
+    ],
+    "previousArticleSha256": "573a214dd9b7822079d813b268cd2c87b933bc9ba295b4b25c4941eefce81e17",
+    "validation": "lexicon:check hata 0; build:ci geçti (SEO 163 sayfa)."
   }
 }
