@@ -74,10 +74,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/by-libido-degisimi.webp',
     alt: 'Bahçe terasında sakin bir sohbet paylaşan iki olgun kadın',
   },
-  '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/': {
-    src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
-    alt: 'İstanbul Boğaz sahil promenadında geç öğleden sonra altın saat ışığında yan yana yürüyen iki yaşıt kadın (50-54); soldaki warm dark mahogany shoulder dalgalı saç, modest cream cashmere V-neck kazak ve warm camel keten-pamuk wide-leg pant ile bordo ipek shawl-scarf gevşek omuza dökülmüş, slim leather tote elinde, mid-conversation thoughtful sharing arkadaşına; sağdaki warm chestnut polished saç, navy keten button-down ve cream tailored pant ile soft cream cashmere kazak boyna sarılmış casual, küçük katlı dergi elinde, leaning slightly toward dinleyen küçük composed gülümseme; bakımlı boyalı saçlar, modest tam kapalı yaka, mature graceful natural cilt; arka planda Boğaz mavi-yeşil su bokeh + uzakta yelkenli + İstanbul silüeti haze + sahil bench partially visible, sağda oleander hedge soft bokeh; warm cream stone sahil pavement; HRT bilgilendirilmiş karar sürecini iki olgun arkadaşla yürüyerek düşünme teması',
-  },
   '/hormonal-gecis/40-sonrasi/': {
     src: '/images/library/editorial/journey-40-sonrasi.webp',
     alt: 'İstanbul Boğaz sahilinde altın saat ışığında enerjik tempolu yan yana yürüyen üç yaşıt kadın (40-45); navy zip-up ve cream wide-leg pant giyen dark brown uzun saçlı kadın kahkahayla arkadaşına dönüyor, bordo zip-up ve camel jogger giyen chestnut saçlı kadın su şişesi elinde kararlı adımlarla öne bakıyor, cream zip-up ve dark kahverengi tayt giyen auburn saçlı kadın hafif öne eğilmiş arkadaşını dinliyor; bakımlı boyalı saçlar, fit ve aktif beden dili, doğal minimal makyaj; arka planda Boğaz mavi-yeşil su ve İstanbul silüeti bokeh, sahil promenad taş zemini; 40 sonrası hareket güç ve sosyal vitalite teması',
