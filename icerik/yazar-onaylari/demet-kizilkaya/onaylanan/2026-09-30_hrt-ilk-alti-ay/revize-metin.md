@@ -137,9 +137,10 @@
  Üçümüz arasındaki bu farkı düşünmek bana iyi geliyor.
  
  
- Japon kültüründeki ma kavramı da bu aylarda aklıma geldi:
- iki şey arasındaki anlamlı aralık. İki nota arasındaki sessizlik ya da bir cümlenin içindeki durak.
- Kendi yaşadıklarımı anlamak için de böyle bir aralığa ihtiyacım vardı.
+ Japonya'da sık karşılaştığım ma kavramını bu aylarda birkaç kez düşündüm.
+ İki şey arasındaki anlamlı aralığı, bir geçişe ayrılan alanı anlatıyor.
+ İlk aylar bana biraz böyle geldi: ne eski hâlimdeydim ne de yeni düzenim tam oturmuştu.
+ Kendimi bir geçişin ortasında görmek, bir sonuca varmış gibi davranmaktan daha dürüst geliyor.
  
 
  
