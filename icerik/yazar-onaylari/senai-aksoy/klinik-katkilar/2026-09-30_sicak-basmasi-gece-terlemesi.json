@@ -149,5 +149,12 @@
     "scope": "Açılıştaki çekince cümlesi (tek hastanın birebir alıntısı değil) muayene odasında sık duyulan birleşik gözleme çevrildi; mahcubiyet duygu cümlesi eklendi; günlük adımlara tek hafif mizah dokunuşu (yelpaze) eklendi ve kanıt cümlesi sadeleştirildi; tedavi kararı bölümüne soruları not alma önerisi eklendi; hormon dışı seçenekler lede cümlesi sıcaklaştırıldı.",
     "fidelity": "Yeni tıbbi iddia veya anekdot eklenmedi; SSS hekim yanıtları, kanıt düzeyleri, kaynaklar ve hero görseli değişmedi.",
     "checks": "lexicon:check hard_ban 0; build:ci geçti (143 sayfa, SEO 163 sayfa)."
+  },
+  "secondHumanizeRevision": {
+    "date": "2026-09-30",
+    "authorization": "Kullanıcı dış değerlendirme sonrası önerilen üç düzeltmeyi onayladı: \"uygula, mumcu onayı gerekmez\"",
+    "scope": "Kısa Klinik Yanıt 6 cümleden 4 cümleye sadeleştirildi (serinlemenin sıklığı azalttığı gösterilmemiş ayrımı ve HRT güçlü kanıt ifadesi korundu; en etkili ifadesi kullanılmadı). Tedavi kararı liste cümlesi klinisyen birinci tekiline çevrildi (Tedavi kararını yalnızca sıcak basmasının sayısına göre vermem ... aynı tedaviyi önermek zorunda değiliz). Hormon dışı seçim cümlesi ve üç tablo hücresi edilgen değerlendirilir kalıbından doğrudan dile çekildi.",
+    "fidelity": "Yeni tıbbi iddia eklenmedi; SSS, kanıt düzeyleri, kaynaklar ve hero değişmedi.",
+    "medicalReview": "Kullanıcı bu tur için Dr. Alper Mumcu onayının gerekmediğini belirtti."
   }
 }
