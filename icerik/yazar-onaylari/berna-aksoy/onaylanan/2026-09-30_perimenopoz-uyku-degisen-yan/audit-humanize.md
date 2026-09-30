@@ -37,3 +37,6 @@ Tıbbi iddia, SSS yanıtları, Tıbbi Bilgi Notu ve Evidence değişmedi; yeni k
 - article-faqs.ts içindeki kullanılmayan, revizyonla çelişen eski 3 soruluk kayıt kaldırıldı.
 - npm run build:ci başarılı; lexicon hard_ban 0.
 KC kararları (2026-09-30): hero değişmeyecek; Evidence eklendi (Ritim alışkanlıkları 3, hormon tedavisi uyku bölen vazomotor belirtilerde 3–4; toplam 3); SSS düzenlenmiş hâlleri onaylandı; yazar ve tıbbi onay tamam.
+
+## Üçüncü geçiş — dış değerlendirme rötuşu (30 Eylül 2026)
+KC talimatıyla ("uygula commit push deploy"): teselli girişi "Merak etmeyin diye baştan yazıyorum" kaldırıldı (cümle korundu); "Belirsizlik kaygı yaratabilir…" → "Hekimle konuşurken yalnızca geceyi değil, ertesi gün neyin zorlaştığını da anlatmak daha yararlı olur."; hormonlar bölümündeki arkadaş anekdotu tek cümleye indirildi. "Herkesin gecesi başka" yaşıt sesi gereği korundu. Tıbbi içerik değişmedi.
