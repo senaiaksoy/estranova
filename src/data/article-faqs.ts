@@ -1006,23 +1006,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       answer: "Belirti günlüğü için uzun uzun not tutmak gerekmez; günde 1–2 dakika, özellikle birkaç hafta düzenli kayıt çoğu zaman yeterlidir. Adet tarihleri ve kanama miktarı, sıcak basması/gece terlemesi, uyku kalitesi, çarpıntı, baş ağrısı, ruh hali, vajinal kuruluk, idrar yakınmaları, cinsel istek, kullanılan ilaçlar ve belirtileri artırdığını düşündüğünüz alkol, kafein, stres veya sıcak ortam gibi tetikleyiciler kaydedilebilir. Amaç her belirtinin peşine düşmek değil; zaman içindeki seyri görmek, hangi şikâyetin gerçekten sıklaştığını ve günlük yaşamı ne kadar etkilediğini anlamaktır.",
     },
   ],
-  '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/': [
-    {
-      question: 'Perimenopozda uyku sorunu neden bazen hiçbir sebep yokmuş gibi başlar?',
-      answer:
-        'Çünkü hormonal dalgalanma önce beden ritmini değiştirir ve bu değişim her zaman gündüz çok görünür olmayabilir. Gece ise daha sık uyanma, erken uyanma veya hafif uyku olarak kendini gösterebilir.',
-    },
-    {
-      question: 'Yatağa yorgun girmek ama yine de uyuyamamak bu dönemde sık mıdır?',
-      answer:
-        'Evet, oldukça sık tarif edilir. Yorgunluk ile uykuya geçiş kapasitesi aynı şey değildir; beden bitkin olsa bile zihin ve sinir sistemi geceyi kolay bırakmayabilir.',
-    },
-    {
-      question: 'Bu dönemde en işe yarar ilk farkındalık ne olabilir?',
-      answer:
-        'Sorunun yalnızca “az uyumak” değil, uykunun yapısının değişmesi olduğunu görmek önemlidir. Bu bakış, çözümü de daha gerçekçi kurmaya yardım eder.',
-    },
-  ],
   '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/': [
     {
       question: 'İkinci kuşak mı, üçüncü kuşak mı “daha iyi”?',

@@ -9,39 +9,43 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
+import { perimenopozUykuFaqs as faqItems } from '../../../data/perimenopoz-uyku-faqs';
 
 const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/']!;
-
-const tocEntries = [
-  { id: 'uyku-mimarisi', label: 'Uyku Tek Bir Şey Değil' },
-  { id: 'hormonal-dalga', label: 'Östrojen ve Progesteron' },
-  { id: 'evre-degisimi', label: 'Hangi Evre Değişiyor' },
-  { id: 'gecici-kalici', label: 'Geçici mi, Yeni Düzen mi' },
-  { id: 'ne-yardim', label: 'Üç Başlıkta Yardım' },
-  { id: 'ne-zaman', label: 'Ne Zaman Hekim' },
-  { id: 'kapanis', label: 'Kapanış' },
-];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Perimenopozda Uykunun Gerçekten Değişen Yanı';
 const articleDescription =
-  'Perimenopozda uyku neden değişiyor? Östrojen ve progesteron hangi evreye dokunuyor, gece uyanmaları nasıl okunmalı — sakin bir yaşıt perspektifinden.';
+  'Perimenopozda uyku bölünmeleri ve sabah yorgunluğu: geceyi anlamak, alışkanlıkları gözden geçirmek ve ne zaman yardım istemek gerektiği.';
+const tocEntries = [
+  { id: 'uyku-mimarisi', label: 'Sekiz saat, iki sabah' },
+  { id: 'hormonal-dalga', label: 'Hormonlar ve gece' },
+  { id: 'evre-degisimi', label: 'Sabah yorgunluğu' },
+  { id: 'gecici-kalici', label: 'Kötü gece ve sonrası' },
+  { id: 'ne-yardim', label: 'Akşamı gözden geçirmek' },
+  { id: 'ne-zaman', label: 'Yardım istemek' },
+  { id: 'uykuyu-okurken', label: "Dr. Aksoy'a sorular" },
+  { id: 'kapanis', label: 'Sabaha kalan soru' },
+];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'berna-aksoy',
-  articleType: 'experience-essay',
+  articleType: 'editorial-guide',
   publishedDate: '28 Nisan 2026',
+  modifiedDate: '30 Eylül 2026',
   pathname: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
   keywords: ['perimenopoz', 'uyku', 'uyku evresi', 'östrojen', 'progesteron', 'REM', 'NREM', 'CBT-I', 'menopoz uyku'],
 
+  faqItems,
   siteUrl,
 });
 ---
@@ -63,264 +67,70 @@ const articleSchemas = buildArticleSchemas({
       compact
     />
     <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
       <ArticleAuthorBlock
         authorSlug="berna-aksoy"
-        articleType="experience-essay"
+        articleType="editorial-guide"
         publishedDate="28 Nisan 2026"
-        readingMinutes={8}
+        lastUpdated="30 Eylül 2026"
+        readingMinutes={7}
         imageSrc="/images/library/editorial/zd-perimenopoz-uyku-sabah-defter.webp"
         imageAlt="Erken sabah ışığında uyku günlüğüne not alan kadın; perimenopozda uyku değişimi için editoryal görsel"
       />
 
-      <ArticleSummary title="Bu yazıya başlarken">
-<p>
-          Perimenopozda uyku, "bir kötü gece"den çok daha fazlasıdır; geceyi taşıyan iç düzen yavaşça yeniden
-          kuruluyor. Bu rehber; östrojen ve progesteronun uyku mimarisine nasıl dokunduğunu, hangi değişimin
-          geçici dalgalanma, hangisinin yeni bir düzen olduğunu sakin bir yaşıt perspektifinden anlatıyor. Panik
-          diline ve tek doğru çözüm vaadine yer yok; bilime saygılı, uygulanabilir bir bakış var. "Mayıs 2026 —
-          Uyuyamadığımız Geceler" dosyasının zemin yazısı.
-        </p>
+      <ArticleSummary title="Kısa Özet">
+        <p>Uyumuş olmakla dinlenmiş kalkmak her zaman aynı şey değil. Perimenopozda gece uyanmaları ve sabah yorgunluğu, hormon değişimlerinin yanında gündelik alışkanlıklarla ve başka sağlık sorunlarıyla da ilişkili olabilir. Mayıs dosyasının bu yazısında, geceyi tek bir nedene bağlamadan anlamaya çalışıyorum.</p>
       </ArticleSummary>
 
-      <ArticleProsePanel mode="experience">
-        <h2 id="uyku-mimarisi">Uyku Aslında Tek Bir Şey Değil</h2>
-        <p>
-          Bu konuya ilk girdiğimde sandım ki uyku, "uyuyamadım — uyudum" diye işleyen ikili bir kapı. Oysa gece
-          boyunca sessizce çalışan, iç içe geçmiş bir mimari var; o mimari tanınmadan perimenopozda neyin
-          değiştiği de anlaşılmıyor.
-        </p>
-        <p>
-          Beden gece boyunca iki temel evre arasında gidip geliyor: NREM, derin ve dingin uyku evresi; ve REM, göz
-          hareketlerinin hızlandığı, rüyaların yoğunlaştığı evre. Sağlıklı bir gecede bu iki evre, yaklaşık doksan
-          dakikada bir tekrar eden uyku turları hâlinde sıralanıyor; bir gecede dört ile altı arasında tur yaşanır.
-          <Evidence level={4} />
-        </p>
-        <p>
-          Derin NREM uykusu bedenin onarım vardiyası gibi: kas dokusu yenileniyor, bağışıklık sessizce çalışıyor,
-          beyin biriktirdiği gün artığını temizliyor. REM ise daha çok zihnin atölyesi; duyguları tasnif ediyor,
-          öğrendiklerini yerli yerine koyuyor. Pek çok kadının "kötü uyudum" dediği gecelerde olan şey, çoğu zaman
-          bu uyku turlarının bölünmesi ya da derin evrelerin kısalması. <Evidence from={4} to={5} />
-        </p>
-        <p>
-          Bu bilgiyi neden başa aldım? Çünkü perimenopozda uyku şikâyeti çoğunlukla "uyuyamıyorum"dan değil,
-          "uyuyorum ama dinlenmiş kalkamıyorum"dan geliyor. Sebep, mimariyi anlayınca daha az ürkütücü görünüyor.
-        </p>
+      <ArticleProsePanel>
+        <h2 id="uyku-mimarisi">Aynı sekiz saat, iki farklı sabah</h2>
+        <p>Bu konuya ilk girdiğimde uykuyu bir elektrik düğmesi gibi düşünüyordum: ya açık ya kapalı. Sonra aynı saatte yatıp aynı saatte kalkan iki kişinin sabaha bambaşka yüzlerle başlayabildiğini gördüm.</p>
+        <p>Gece boyunca NREM ve REM adı verilen uyku evreleri birbirini izliyor. NREM hafif uykuyu da derin uykuyu da kapsıyor; REM ise hızlı göz hareketleriyle tanımlanan, canlı rüyaların sık görüldüğü evre. Bir gece, bu evrelerin birkaç kez tekrarından oluşuyor.</p>
+        <p>Şikâyetin de kendi türleri var. Uykuya dalmakta zorlanmak, gece sık uyanmak ve sabah dinlenmemiş kalkmak ayrı durumlar. Hepsini “kötü uyudum” diye özetlediğinizde geceye ilişkin önemli ayrıntılar kayboluyor. Ben bu konuyu anlamaya o ayrıntıları ayırarak başladım; sizin için de iyi bir ilk adım olabilir.</p>
 
-        <h2 id="hormonal-dalga">Östrojen ve Progesteron — Uykunun İki Kontrol Düğmesi</h2>
-        <p>
-          Perimenopozda uykuya dokunan en güçlü iki hormon, östrojen ve progesteron. İkisi de düşmüyor; düzensiz,
-          dalgalı ve öngörülemez biçimde iniyor-çıkıyor. Bedeni asıl yoran kısım da bu dalgalanma.
-        </p>
-        <p>
-          Östrojen, bedenin gece boyunca ısı ayarını yapan, ruh hâlini dengeleyen ve REM uykusunun akıcılığına
-          katkıda bulunan bir hormon. Östrojen seviyesi düştüğünde ya da hızla dalgalandığında; gece terlemesi, ani
-          sıcak basmaları ve yüzeysel REM uykusu daha sık görülüyor. <Evidence level={4} />
-        </p>
-        <p>
-          Progesteron ise içimizdeki sakinleştirici düğme gibi anılır; uykuya dalmayı kolaylaştıran, derin NREM
-          evresine geçişe yardımcı olabilen bir hormon. Perimenopozda yumurtlama düzensizleştikçe progesteron
-          üretimi de değişiyor; bu da pek çok kadının "akşamları zihnim duramıyor, uykuya geç dalıyorum" dediği
-          döneme denk düşüyor. <Evidence level={4} />
-        </p>
-        <p>
-          Bir arkadaşım bu iki düğmenin nasıl bağımsız çalıştığını şöyle anlatmıştı: "Bir hafta uykuya kolay
-          dalıyordum ama gecenin ortasında uyandığımı hissediyordum; başka bir hafta tam tersi — yatağa geç giriyor,
-          bir kez uyuduğumda sabaha kadar açmıyordum gözümü. Anladım ki tek bir 'uyku problemim' yokmuş;
-          farklı dönemlerde farklı katmanlar yorgun oluyormuş." Bu ayrım, çözüm aramaya başlamadan önce kurulması
-          gereken zihinsel zemin: sorun "uyku" değil; uykunun farklı katmanları farklı zamanlarda etkileniyor.
-        </p>
+        <h2 id="hormonal-dalga">Hormonlar değişirken gece de değişebilir</h2>
+        <p>Perimenopozda östrojen ve progesteron düz bir çizgide inmiyor; iniş çıkışlarla ilerliyor. Yine de gecenin bütün hesabını bu iki hormona kesmek eksik kalıyor.</p>
+        <p>Sıcak basması ve gece terlemesi uykuyu bölebiliyor. Stres, ağrı, gündelik yük ve değişen uyku saatleri de bu tabloya eklenebiliyor. Bu yüzden bir hormonun hangi evreyi etkilediğini tahmin etmeden önce daha basit bir soru işe yarıyor: Sizi gece ne uyandırdı?</p>
+        <p>Bir arkadaşım bir hafta kolayca uykuya daldığını, ama gecenin ortasında gözlerinin açıldığını anlatmıştı. Başka bir hafta tablo tersine dönmüş: Uykuya dalmak zorlaşmış, uyuduktan sonra sabaha kadar uyanmamış. Aynı kadın, iki ayrı gece. Bu anlatı hangi hormonun değiştiğini göstermiyor; aynı kişinin bile farklı gecelerde farklı bir sorun yaşayabildiğini hatırlatıyor.</p>
 
-        <h2 id="evre-degisimi">Hangi Evre Daha Çok Değişiyor</h2>
-        <p>
-          Perimenopozda her evre eşit ölçüde sarsılmıyor; iki belirli yerde ağırlık birikiyor. Bu noktayı görmek,
-          kendi gecemizi okumamızı kolaylaştırıyor.
-        </p>
-        <p>
-          Birincisi, derin NREM uykusunun süresi. Yaşla birlikte zaten kısalan derin uyku, perimenopozda hormonal
-          dalgalanmanın da etkisiyle daha belirgin biçimde geriliyor; uyandığında "saatlerce uyudum ama
-          dinlenmedim" hissinin arkasındaki sessiz neden çoğu kez burası. <Evidence level={4} />
-        </p>
-        <p>
-          İkincisi, REM uykusunun bütünlüğü. Östrojen dalgalanması, REM evrelerini bölen mikro-uyanmalara zemin
-          hazırlıyor; bu uyanmalar genelde o kadar kısa ki sabah hatırlamıyorsunuz, ama uyku akışı yine de bölünüyor.
-          Saatte bir-iki kez "düşer gibi" olup tekrar uyumak, bu mikro-uyanmaların tipik yansıması.
-          <Evidence from={3} to={4} />
-        </p>
-        <p>
-          Bir de gecenin ikinci yarısında, sabaha doğru görülen uyanmalar var; bu, dosyanın bir başka yazısında
-          ayrıca işlenecek bir başlık. Burada bilmek faydalı olan şu: erken saat uyanması çoğu zaman saf bir
-          "uykusuzluk" değil; bölünmüş REM ile kortizolün erken yükselişinin kesişimi. Yani beden kötü çalışmıyor;
-          farklı bir tempoya geçiş yapıyor.
-        </p>
+        <h2 id="evre-degisimi">Sabah yorgunluğu neyi gösterir?</h2>
+        <p>“Saatlerce uyudum, yine de dinlenemedim.” Bu cümleyi kendinize söylediğiniz bir sabah, akla ilk gelen açıklama derin uykunun azaldığı oluyor.</p>
+        <p>Araştırmalarda kadınların bildirdiği uyku güçlükleriyle uyku laboratuvarında ölçülen değişiklikler her zaman örtüşmüyor. Perimenopozda derin uykunun herkeste azaldığını ya da REM uykusunun aynı biçimde bölündüğünü söylemek mümkün görünmüyor. Yaşın ve eşlik eden sorunların payını ayrıca düşünmek gerekiyor.</p>
+        <p>Başucundaki saate bakıp aynı rakamı üçüncü gece üst üste görmek, insanı kolayca bir teoriye iter. Bu tekrar sessiz bir kızgınlık da bırakabiliyor: kendinize, bedeninize, geceye. Oysa sabaha karşı uyanmak tek başına bir uyku evresine ya da kortizole bağlanamıyor. Saatten çok, sizi neyin uyandırdığına ve ertesi gün nasıl hissettiğinize bakmak daha anlamlı.</p>
 
-        <h2 id="gecici-kalici">Geçici Bir Dalgalanma mı, Yeni Bir Düzen mi</h2>
-        <p>
-          Bu sorunun cevabı, perimenopoz boyunca pek çok kadının en çok merak ettiği şey. Cevap, ikisi birden —
-          ama farklı zaman dilimlerinde.
-        </p>
-        <p>
-          Perimenopozun ilk evresi, çoğunlukla akut bir dalgalanma dönemi gibi yaşanıyor: hormonlar haftadan
-          haftaya, hatta günden güne değişiyor; uyku da onların ritmine uyup belirsiz iniş-çıkışlar gösteriyor. Bu
-          evrede yaşanan uykusuzluk dönemleri çoğu kadında geçici, ama kalıcı bir hasar bırakmıyor.
-          <Evidence level={3} />
-        </p>
-        <p>
-          Menopoza ve sonrasına geçildiğinde tablo değişiyor. Östrojen düşük ve nispeten sabit bir bantta
-          yerleştiğinde, beden yeni bir baz çizgisine alışıyor; bazı kadınlar bu evrede uykunun "oturduğunu"
-          söylüyor, bazıları için ise daha hafif ve daha kolay bölünen bir uyku kalıbı kalıcı hâle geliyor. Yani
-          değişimin bir kısmı geçici dalga, bir kısmı ise yeni bir düzen. <Evidence from={3} to={4} />
-        </p>
-        <p>
-          Bunun pratik anlamı: bu yıl yaşadığınız uyku kalıbının üç yıl sonraki kalıbınız olacağını varsaymak
-          gerekmiyor. Aynı şekilde, "geçer, beklerim" demek de her zaman doğru bir strateji değil — özellikle
-          gündüz işlevini bozan, aylarca süren uyku şikâyetleri için. Acele bir karar yerine planlı bir takip, bu
-          noktada en sağlıklısı.
-        </p>
+        <h2 id="gecici-kalici">Bir kötü gece ve gelecek yıllar</h2>
+        <p>Merak etmeyin diye baştan yazıyorum: Bugünkü kötü geceden bütün gelecek yıllar için sonuç çıkarmanız gerekmiyor. Düzelmesini beklerken gündüzünüzün ne kadar etkilendiğini de gözden kaçırmayın.</p>
+        <p>Bazı kadınlarda şikâyetler dönem dönem artıp azalıyor, bazılarında daha uzun sürüyor. Menopozdan sonra uykunun kendiliğinden düzeleceğini veya kalıcı olarak bozulacağını önceden söylemek mümkün değil.</p>
+        <p>Benzer yaşta iki kadının neden farklı biçimde etkilendiği benim için hâlâ açık bir soru. Gündelik stres, sağlık geçmişi, alışkanlıklar; hiçbiri birbirinin aynısı olmuyor. Kişisel okumamın sınırı da burası. Bir başkasının yaşadığından kendi gecenizin geleceğini çıkarmak güç. Belirsizlik kaygı yaratabilir; hekimle konuşurken gündüz neyin değiştiğini anlatmak, bu kaygıyı daha somut bir yere taşır.</p>
 
-        <h2 id="ne-yardim">Bedenin Yeni Düzenine Yardım — Üç Başlıkta</h2>
-        <p>
-          Uykuya iyi gelen onlarca öneri arasında kaybolmamak için, perimenopozda işe yarayan müdahaleleri üç
-          başlık altında topluyorum. Bu üçü, neredeyse her uyku planının zeminini kuruyor.
-        </p>
-        <p>
-          <strong>Birincisi, ritim.</strong> Yatış ve kalkış saatinin hafta sonu dahil benzer bir aralıkta
-          tutulması, bedenin iç saatine "ne zaman uyanacağını, ne zaman dinleneceğini" hatırlatıyor. Sabah ışığına
-          kısa bir maruziyet — pencere kenarında bir kahve bile — gece melatonin salınımına yardımcı olabiliyor.
-          Bu küçük disiplin, tek başına bir tedavi değil; ama her şeyin üzerine kurulduğu zemindir.
-        </p>
-        <p>
-          <strong>İkincisi, ısı.</strong> Östrojen dalgalanmasıyla birlikte beden ısısı düzeni değişiyor; serin
-          tutulan bir yatak odası, ince katlı yatak kıyafeti ve hızlı emici nevresim seçimi, gece terlemesi
-        yaşıyorsanız fark yaratabiliyor. Akşamın son saatlerinde ılık duş, sonrasında bedenin doğal soğuma eğrisini
-          taklit ettiği için uykuya geçişe yardımcı olabilir. <Evidence level={3} />
-        </p>
-        <p>
-          <strong>Üçüncüsü, akşamın son iki saati.</strong> Yatmadan önceki bu pencere, perimenopozda altın
-          değerinde. Yoğun kafein, geç saatte alkol, yataktan iki saat önce ağır yemek; üçü de uykunun ilk derin
-          evresini bölmeye eğilimli. Onun yerine ışığı kısmak, ekrandan uzaklaşmaya yakın bir aralık bırakmak ve
-          zihni "yarına aktarma" rutini — kısa not, üç madde plan — pek çok kadının fayda gördüğü, sade alışkanlıklar.
-        </p>
-        <p>
-          Eğer sorun birkaç kötü geceden çıkıp yatağa kaygıyla girilen, gece uyanınca tekrar uykuya dönmenin
-          zorlaştığı bir kısır tekrara dönüştüyse, mesele yalnızca "uyku hijyeni" olmayabilir. CBT-I, yani uykusuzluk için
-          bilişsel-davranışçı yaklaşım, yatak-uyku bağını yeniden kurmayı, yatakta uyanık kalma süresini yönetmeyi ve
-          "bu gece de uyuyamayacağım" düşüncesinin yarattığı alarmı azaltmayı hedefler. Bu, rahatlatıcı bir tavsiye
-          listesi değildir. Yapılandırılmış, disiplin isteyen ve etkisi güçlü bir davranışsal omurgadır.
-          <Evidence level={5} />
-        </p>
-        <p>
-          Bir arkadaşım bu son iki saatlik pencereyle ilgili gülerek anlatmıştı: "Akşam onda yatağa girmek
-          için planı yapıyorum; on birde elimde kitap, 'bir bölüm daha kalmış' oluyor; on iki yarımda hâlâ 'şu
-          paragrafı bitireyim' diyorum. Sabah dinlenmemiş kalkmamın sebebini hormonlara değil, kitabın iki sayfa
-          daha çekici olmasına yıkmam gerekiyor." Bu satırı kendisinden işittiğimde tanıdık geldi — pek çok kadın
-          için "akşamın son iki saati" hormonal bir mesele olduğu kadar bir sınır kurma meselesi.
-        </p>
-        <p>
-          Hormon takviyesi (HRT) bu üç başlığın yerine değil, gerektiğinde yanına eklenen bir seçenek. Gece terlemesi
-          ve sıcak basması uykuyu belirgin biçimde bölüyorsa, uygun adaylarda uyku kalitesine dolaylı katkı sağlayabilir.
-          Ama tek başına "uyku ilacı" gibi düşünülmez. Karar; sağlık öykün, kontrendikasyonların ve önceliklerin
-        üzerinden hekiminizle birlikte değerlendirilir. Tek bir reçete yoktur. Sizin için doğru olanı, yine sizinle
-          ilgilenen hekim ve kendi öncelikler haritan birlikte söyleyecektir. <Evidence level={4} />
-        </p>
+        <h2 id="ne-yardim">Akşamı gözden geçirmek için üç durak</h2>
+        <p>Uyku önerileri uzayıp gidince, dinlenmek de yapılacaklar listesine dönüşebiliyor. Ben bu listeyi büyütmek yerine ritim, oda konforu ve akşam alışkanlıkları üzerinde durmayı daha anlaşılır buluyorum.</p>
+        <p><strong>Ritim.</strong> Benzer saatlerde kalkmak ve sabah gün ışığı görmek, uyku-uyanıklık düzeni için yararlı alışkanlıklar olabilir. <Evidence level={3} /> Her gece kendinizi belirli bir saatte uyumaya zorlamak ise ayrı bir baskı yaratabilir.</p>
+        <p><strong>Oda konforu.</strong> Serin bir oda, hafif yatak kıyafetleri ve terleme sonrası kolayca değiştirilebilen çarşaflar geceyi daha rahat geçirmeye yardımcı olabilir. Konfor sağlamakla gece terlemesini tedavi etmek farklı şeyler.</p>
+        <p><strong>Akşam alışkanlıkları.</strong> Kafein, alkol, geç ve ağır yemekler ya da yatma saatini sürekli ertelemek uykuyu etkileyebilir. Herkes için geçerli bir “son iki saat” kuralı yerine, kendi akşamınızda neyin tekrar ettiğine bakabilirsiniz. Işığı azaltmak, ekran kullanımını sınırlamak veya ertesi güne kalan işleri kısa bir notla bırakmak da akşamı sakinleştirmeye yardımcı olabilir.</p>
+        <p>Bir arkadaşımın kitapla ilgili anlattığı sahne aklımda: Erken yatmak için kitabı eline alıyor, sonra “bir bölüm daha” derken gece yarısını buluyordu. Kitap suçlu değildi elbette. Ama bu tanıdık gecikme, hormonların yanında akşamın nasıl geçtiğini de hesaba katmayı hatırlatıyor.</p>
+        <p>Uzun süren uykusuzlukta bu düzenlemeler yetmeyebilir. Uykusuzluk için bilişsel davranışçı terapi, kısaca CBT-I, yalnızca gevşeme önerileri vermekle sınırlı değil; uyku saatlerini, yatakta geçirilen zamanı ve uykuya ilişkin kaygıyı birlikte ele alan bir yaklaşım. Hormon tedavisinin yeri ise özellikle sıcak basması ve gece terlemesiyle birlikte değerlendirilir. Bu karar, kişisel sağlık geçmişini bilen hekimle konuşulur.</p>
 
-        <h2 id="ne-zaman">Ne Zaman Hekim Devreye Girmeli</h2>
-        <p>
-          Perimenopozda her uyku şikâyeti tıbbi değerlendirme gerektirmiyor; ama bazı işaretler, beklemek yerine
-        bir uzmanla konuşmayı işaret ediyor. Aşağıdaki bayrakların biri ya da birkaçı sizinle ilgiliyse,
-          hekiminizle bir görüşme planlamak iyi olur.
-        </p>
+        <h2 id="ne-zaman">Beklemek yerine yardım istemek</h2>
+        <p>Uykusuzluk gündüz dikkatinizi, işinizi veya ruh hâlinizi etkiliyorsa yardım istemek için ayların dolmasını beklemeniz gerekmiyor. Bazı belirtiler ayrıca değerlendirme gerektiriyor.</p>
         <ul>
-          <li>Üç ayı aşan ya da gündüz işlev kaybına yol açan tekrarlayıcı uykusuzluk.</li>
-          <li>
-            Yatağa çekildikten kısa süre sonra ya da gece tekrar tekrar yaşanan, nefes kesilmesi ya da yüksek
-            horlama tarifi.
-          </li>
-          <li>Sabahları geçmeyen yorgunluk, baş ağrısı ya da gün içinde direksiyonda uyuklama hissi.</li>
-          <li>
-            Uyku şikâyetiyle birlikte gelen, iki haftadan uzun süren belirgin mutsuzluk hali, yoğun kaygı ya da panik atak
-            benzeri tablolar.
-          </li>
-          <li>Gece terlemelerinin yatak çarşafını ıslatacak yoğunlukta ve sık yaşanması.</li>
-          <li>
-            Yeni başlayan belirgin çarpıntı, açıklanamayan kilo değişimi, demir eksikliği ya da tiroid bozukluğu
-            şüphesi.
-          </li>
-          <li>
-            Bacaklarda gece yatağa girince başlayan rahatsız edici his, hareket etme zorunluluğu duygusu.
-          </li>
+          <li>Tekrarlayan, uzayan veya gündüz yaşamını belirgin şekilde bozan uykusuzluk.</li>
+          <li>Yüksek sesli horlama, uykuda nefes durması ya da boğulur gibi uyanma.</li>
+          <li>Geçmeyen sabah yorgunluğu, baş ağrısı veya gündüz aşırı uykululuk.</li>
+          <li>İki haftadan uzun süren belirgin mutsuzluk hali, yoğun kaygı ya da panik benzeri yakınmalar.</li>
+          <li>Çarşafı ıslatacak kadar yoğun ve sık gece terlemesi.</li>
+          <li>Yeni başlayan belirgin çarpıntı, açıklanamayan kilo değişimi, demir eksikliği veya tiroid sorunu şüphesi.</li>
+          <li>Yatağa girince bacaklarda rahatsızlık ve hareket ettirme ihtiyacı.</li>
         </ul>
-        <p>
-          Bu liste sizi telaşlandırmak için değil; hangi durumda "bekleyelim, geçer" demenin doğru olmadığını
-          netleştirmek için. Doğru zamanda doğru kapıyı çalmak, çoğu zaman geceye en büyük iyiliktir.
-        </p>
-        <p>
-          Şunu hâlâ sormaya devam ediyorum kendime; cevabını bulamadım: aynı yaşta, benzer hormonal tabloda iki
-          kadından birinin uyku mimarisi niçin daha çabuk toparlanıyor, diğerinin niçin uzun süre dalgalı bir bantta
-          kalıyor? Genetik, gündüz hayatı, stres yükü, kafein eşiği, aile öyküsü — bunların hangisinin ne kadar pay
-          aldığı kişiden kişiye farklı. Bu noktada okuduğumun ötesine geçemem; bu eşiği önceden çizebilecek bir
-          donanımım yok.
-        </p>
+        <p>Direksiyonda uyuklama varsa araç kullanmaya devam etmeyin; bu durum gecikmeden değerlendirilmelidir. Diğer yakınmaları da yalnızca perimenopoza bağlamadan hekiminizle paylaşmanız iyi olur.</p>
 
-        <h2 id="uykuyu-okurken">Uykuyu Okurken Aklımda Kalanlar</h2>
-        <h3>Perimenopoz ne zaman başlıyor, uykuya hemen dokunuyor mu?</h3>
-        <p>
-          Perimenopoz çoğunlukla kırklı yaşların başında, bazen daha erken başlıyor; ortalama olarak menopozdan
-          önceki yedi-on yıllık geçiş dönemi olarak tanımlanıyor. Uyku değişimi her kadında aynı anda gelmiyor —
-          bazılarında ilk işaret bu olurken, bazılarında âdet düzensizliği ya da ruh hâlindeki dalgalanma daha önce
-          fark ediliyor. Yani "perimenopoza girdim, uykum hemen bozulacak" diye bir kural yok; ancak gece
-          dinlenmeniz son birkaç yıldır farklı geliyorsa, bu dönemin işareti olabilir.
-        </p>
-        <h3>Her gece üçte uyanmak perimenopoz belirtisi mi?</h3>
-        <p>
-          Olabilir, ama tek açıklama bu değildir. Perimenopozda gece uyanmaları özellikle sıcak basması, gece
-          terlemesi ve stres sistemi devredeyse sıklaşabilir. Aynı tablo alkol, geç yemek, erken kortizol yükselişi,
-          uyku apnesi, huzursuz bacak, kaygı ya da depresif belirtilerle de ilişkili olabilir. Bu tablo üç ayı aşıyor ve
-          gündüz işlevini bozuyorsa, bunu yalnızca "yaş dönemi" diye taşımamak iyi olur.
-        </p>
-        <h3>CBT-I tam olarak nedir?</h3>
-        <p>
-          CBT-I, uykusuzluk için yapılandırılmış bilişsel-davranışçı yaklaşımdır. Uyku hijyeninden daha fazlasıdır:
-          yatak-uyku bağını, yatakta uyanık kalma süresini, uykuya dair kaygılı düşünceleri ve uyku ritmini birlikte
-          ele alır. Etkisi genellikle uygulandıkça, birkaç hafta içinde daha net fark edilir; hızlı bir gevşeme
-          önerisi değil, düzenli uygulama isteyen bir yeniden öğrenme sürecidir.
-        </p>
-        <h3>Uyku takip cihazı (akıllı saat) bana ne söyler, ne söylemez?</h3>
-        <p>
-          Akıllı saatler ve yüzükler, hareket ve nabız üzerinden uykunun kabaca süresini, kesintilerini ve genel
-          ritmini gösterebiliyor; bu da haftalık eğilimi görmek için faydalı. Ancak derin uyku ve REM evrelerini
-          kesin biçimde ayırt edemiyorlar — bunun için tıbbi uyku çalışması gerekiyor. Cihazın "derin uyku %12"
-          dediği gece tedirginleşmek yerine, iki-üç haftalık genel kalıba, kalkış hissine ve gündüz enerjine
-          bakmak daha gerçekçi bir okuma.
-        </p>
-        <h3>HRT'siz dönemde ne kadar uyku iyileşmesi mümkün?</h3>
-        <p>
-          Birçok kadın, HRT olmadan da ritim, ısı ve akşamın son iki saati üzerinde çalışarak gözle görülür bir
-          iyileşme yaşayabiliyor; özellikle uykuya dalma süresi ve gece uyanma sayısı bu yaklaşımlarla
-          yumuşayabiliyor. Etki büyüklüğü kişiden kişiye değişiyor; gece terlemesinin yoğun olduğu ve gündüz
-          işlevini ciddi biçimde aksattığı tablolarda yalnızca yaşam tarzı düzenlemesi yetmeyebilir. Bu durumda
-          HRT, davranışsal yaklaşımlar ya da diğer seçenekler hekiminizle birlikte değerlendirilebilir.
-        </p>
-        <h3>Uyku değişikliği bende geçici mi olacak, yoksa kalıcı mı kuruluyor?</h3>
-        <p>
-          Cevap çoğunlukla "ikisi birden" oluyor: perimenopozun dalgalı evresinde yaşanan uykusuzluk dönemleri
-          büyük ölçüde geçici, hormonal denge bir noktaya oturduğunda yumuşama eğiliminde. Ancak menopoz
-          sonrasında uykunun biraz daha hafif ve daha kolay bölünebilen bir karaktere yerleşmesi, pek çok kadın
-          için yeni bir baz çizgisi olabiliyor. Yani değişim hem geçer hem de kalır; iyi haber şu ki bu yeni düzen,
-          doğru alışkanlıklarla yine dinlendirici bir uyku yaşamana izin veriyor.
-        </p>
+        <h2 id="uykuyu-okurken">Dr. Aksoy'a sorular</h2>
+        <p>Geceyi anlamaya çalışırken akılda kalan beş soruyu Dr. Aksoy'un yanıtlarıyla bir araya getirdim. Bu bölüm onun ayrı uzman katkısıdır.</p>
+        {faqItems.map((item) => (<><h3>{item.question}</h3><p>{item.answer}</p></>))}
 
-        <h2 id="kapanis">Kapanış</h2>
-        <p>
-          Perimenopozda uyku şikâyeti çoğu zaman "uyuyamamak" değil, uyumakla dinlenmek arasındaki bağın
-          incelmesidir. Uyku mimarisinin hangi katmanı bölünüyorsa, çözüm yolu da o katmana göre farklılaşır —
-          tek bir reçete yok. Geçici dalgalanma ile yeni bir düzen birbirinden ayrı; ilk evrede beklemek
-          mantıklıdır, ama haftaları aşan ve gündüz işlevini bozan bir uykusuzluk için "geçer" demek artık
-          doğru bir strateji değildir. Bunu söylerken kesinlik iddia etmiyorum; sadece kendi okumamın getirdiği
-          çerçeveyi paylaşıyorum.
-        </p>
-        <p>
-          Her gece aynı saatte uyumak gerekmez; aynı saatte uyanmaya niyet etmek, ritmi kendiliğinden yapılandırır.
-        </p>
+        <h2 id="kapanis">Sabaha kalan soru</h2>
+        <p>Bu yazıdan bende kalan ayrım basit: Uyku süresi ile dinlenmiş uyanmak her zaman aynı şey olmuyor. Aynı sekiz saat, iki farklı sabah. Gecenin hangi saatte bölündüğünden önce, sizi neyin uyandırdığına ve gündüz neyin zorlaştığına bakmak yararlı olabilir.</p>
+        <p>Burada paylaştığım, kendi okumalarımdan süzülen bir bakış; herkesin gecesi başka. Bir sonraki görüşmede “uyuyamıyorum” demekle kalmayıp o gecenin nasıl geçtiğini anlatabilmek, konuşmayı daha somut bir yerden başlatır.</p>
       </ArticleProsePanel>
 
       <RelatedReadings
@@ -328,53 +138,18 @@ const articleSchemas = buildArticleSchemas({
         paths={[
           '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
           '/dosya/2026-05-uyuyamadigimiz-geceler/',
-          '/library/',
+          '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
         ]}
       />
 
       <MedicalContextNote>
-<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
-        <div class="space-y-3 leading-relaxed text-ink/80">
-          <p>
-            <strong class="text-primary">Klinik not:</strong> Perimenopozal geçişte uyku mimarisi tek tip değil,
-            çok katmanlı bir biçimde değişir. Östrojen ve progesteron dalgalanması, uyku-uyanıklık ekseninin merkezi
-            sinir sistemi düzenlemesinde, termoregülasyonda ve serotonerjik–GABA-erjik dengede aynı anda yansır.
-            Bu nedenle "perimenopozda uyku" tek bir tabloyu değil; uykuya geçiş, derin NREM süresi ve REM bütünlüğü
-            olmak üzere üç ayrı katmanı kapsar.
-          </p>
-          <p>
-            <strong class="text-primary">Mekanizma notu:</strong> Östrojen, REM uykusunun sürekliliğine ve serotonerjik
-            tonusa katkıda bulunur; düşüşü hem mikro-uyanmaları hem de gece terlemesini artırma yönünde işler.
-            Progesteronun sedatif metaboliti allopregnanolon GABA-A reseptörü üzerinden uykuya geçişi kolaylaştırır;
-            geç luteal evrede progesteron üretimindeki düzensizleşme, uykuya dalma süresini uzatabilir.
-            Sabaha doğru uyanmaların önemli bir bileşeni de kortizol akrofazının erken kaymasıdır.
-          </p>
-          <p>
-            <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Üç haftadan uzun süren ve gündüz işlevini
-            bozan uykusuzluk; nefes kesilmesi tarifi (apne şüphesi); ısrarlı sabah baş ağrısı; günde uyuklama
-            atakları; iki haftadan uzun süren belirgin mutsuzluk hali; huzursuz bacak hissi — bu tablolar yalnızca menopoz
-            yorumuyla geçiştirilemez, bireysel tıbbi değerlendirme gerektirir.
-          </p>
-          <p>
-            <strong class="text-primary">Pratik bütünleşim:</strong> Düzenli uyku-uyanıklık ritmi, sabah ışığına
-            erken maruziyet, akşam serin yatak odası, son iki saatin yapılandırılması ve gerektiğinde uykusuzluk için
-            bilişsel-davranışçı terapi (CBT-I) — birlikte uygulandığında çoğu kişide tek bir müdahalenin
-            yapamayacağı bir tampon oluşturur. HRT, vazomotor şikâyetin uykuyu bölmede baskın olduğu olgularda
-            ek bir seçenek olarak hekiminizle değerlendirilir; tek başına uyku ilacı olarak konumlandırılmaz.
-          </p>
-          <p>
-            <strong class="text-primary">Bireysellik vurgusu:</strong> Uyku şikâyetinin altında yalnızca hormonal
-            değişim olmayabilir; eşlik eden tiroid bozukluğu, anemi, depresyon, kronik ağrı, ilaç yan etkileri
-            ya da uyku apnesi gibi durumlar tabloyu değiştirir. Bu nedenle "perimenopoz uykusu" ayırıcı tanı eşliğinde
-            değerlendirilir; bireyin kendi mekanizmasını anlaması, doğru yardım yolunu da kısaltır.
-          </p>
-          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
-          </p>
+        <p><strong>Uyku evreleri:</strong> NREM uykusu üç evreden oluşur; yalnızca üçüncü evre derin uykudur. Menopoz geçişiyle ölçülen uyku evreleri arasındaki ilişki araştırmalarda tutarlı değildir. Dinlenmemiş uyanmak, belirli bir evrenin azaldığını kanıtlamaz.</p>
+        <p><strong>Değerlendirme:</strong> Gece terlemesi ve sıcak basmasının yanında uyku apnesi, huzursuz bacak, ağrı, depresif belirtiler, tiroid sorunları, anemi ve ilaç etkileri de dikkate alınır. Gündüz yaşamı etkileniyorsa değerlendirme için sabit bir süre beklemek gerekmez.</p>
+        <p><strong>Seçenekler:</strong> CBT-I, uzun süren uykusuzlukta değerlendirilen yapılandırılmış bir tedavidir. <Evidence level={4} /> Hormon tedavisi özellikle uykuyu bölen sıcak basması ve gece terlemesi için, yarar ve riskler kişiye göre tartılarak gündeme gelebilir <Evidence from={3} to={4} />; yalnızca uykusuzluk bulunması otomatik olarak hormon tedavisi gerektiğini göstermez.</p>
       </MedicalContextNote>
 
-       <ArticleDisclaimer>
-<p>
+      <ArticleDisclaimer>
+        <p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları
           için sağlık profesyoneline başvurunuz.
         </p>

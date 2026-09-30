@@ -876,7 +876,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
     title: 'Perimenopozda Uykunun Gerçekten Değişen Yanı',
-    description: 'Perimenopozda uyku neden değişiyor? Östrojen ve progesteron uykunun hangi evresine dokunuyor, gece uyanmaları nasıl okunmalı, hangi destekler gerçekten anlamlı — sakin bir yaşıt perspektifinden.',
+    description: 'Perimenopozda uyku bölünmeleri ve sabah yorgunluğu: geceyi anlamak, alışkanlıkları gözden geçirmek ve ne zaman yardım istemek gerektiği.',
     publishedDate: '28 Nisan 2026',
     writerSlug: 'berna-aksoy',
     section: 'Zihin & Denge',
