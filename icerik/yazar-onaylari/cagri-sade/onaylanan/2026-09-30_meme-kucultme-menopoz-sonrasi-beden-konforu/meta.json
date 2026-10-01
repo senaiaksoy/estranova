@@ -1,0 +1,21 @@
+{
+  "writer": {
+    "slug": "cagri-sade",
+    "name": "Op. Dr. Çağrı Sade"
+  },
+  "article": {
+    "slug": "meme-kucultme-menopoz-sonrasi-beden-konforu",
+    "title": "Menopoz Sonrası Meme Küçültme: Ne Zaman Konfor Meselesi?",
+    "previewUrl": "makale-onizleme.html",
+    "liveUrl": "https://estranova.com/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/"
+  },
+  "package": {
+    "createdAt": "2026-09-30T17:33:02.414Z",
+    "deadline": "2026-10-07T17:33:02.414Z",
+    "status": "approved",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  }
+}

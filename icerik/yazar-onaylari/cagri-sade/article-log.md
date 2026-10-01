@@ -55,3 +55,17 @@
 - Yeni makale **estetik-karar-kriterleri** ekseninden geliyorsa: bu satırdaki açılış / dengeleyici / kapanış varyantlarından **farklı** seç. Cooldown 4-6 makale.
 - Manifesto: aynı 4 kalıptan farklı bir kalıbı sırada kullan; aynı kalıp 4 makale ardışık yasak.
 - "Bir hekim olarak" çerçevesi: bu yazıda 3 yerde kullanıldı — sıradaki makalede yoğunluğu azalt (1-2 kullanım yeter).
+
+
+## 30 Eylül 2026 — Meme küçültme: gerçek klinik katkı, onay bekleyen revizyon
+
+Kullanıcı üç yanıtın Çağrı Sade’ye ait olduğunu teyit etti; gerçek yanıt tarihi belirtilmedi. Özgün yanıtlar ve düzenlenmiş karşılıkları `onay-bekleyen/2026-09-30_meme-kucultme-menopoz-sonrasi-beden-konforu/klinik-katki-kaydi.md` içinde. Üç yeni gövde bölümü, seçilmiş kaynaklar, tam metin önizlemesi ve yeni kontrol formu hazırlandı. Tartışmalı düzelme-beklenti cümlesi açıklama bekliyor. Yazarın düzenlenmiş metin onayı ve yeni bağımsız tıbbi inceleme bekleniyor; canlı rota/manifest/onay kaydı/inceleme tarihleri değiştirilmedi. Profil öğrenmesi veya yayın yapılmadı.
+
+
+## 30 Eylül 2026 — Meme küçültme revizyonu onaylandı
+
+Kullanıcı bu sohbette yazar ve tıbbi onayın tamamlandığını teyit etti. Önceki bekleyen revizyon kaydı tarihsel olarak korunur. Paket `onaylanan/2026-09-30_meme-kucultme-menopoz-sonrasi-beden-konforu/` altına taşındı; kaynak canlı rota ağacına aktarıldı ve görünür/şema son güncelleme 30 Eylül 2026 olarak eşitlendi. İlk yayın tarihi, yazar/inceleyen, mevcut SSS ve görseller korundu. Commit/push/deploy yapılmadı.
+
+## 1 Ekim 2026 — Meme küçültme humanize revizyonu onaylandı
+
+Kullanıcı “çağrı onayı tamam. tıbbi onay tamam” diyerek mevcut humanize revizyonunu teyit etti. Paket `onaylanan/2026-10-01_meme-kucultme-menopoz-sonrasi-beden-konforu-humanize/` altına taşındı. Onaylı kaynak, güncelleme tarihi ve manifest açıklaması eşitlendi. Dr. Aksoy SSS dönüşümü yeni yazar kuralıyla uygulanmadı. Commit/push/deploy yapılmadı.

@@ -1,0 +1,28 @@
+{
+  "writer": {
+    "slug": "cagri-sade",
+    "name": "Op. Dr. Çağrı Sade"
+  },
+  "article": {
+    "slug": "meme-kucultme-menopoz-sonrasi-beden-konforu",
+    "title": "Menopoz Sonrası Meme Küçültme: Ne Zaman Konfor Meselesi?",
+    "previewUrl": "makale-onizleme.html"
+  },
+  "package": {
+    "createdAt": "2026-09-30T17:46:17.348Z",
+    "deadline": "2026-10-07T17:46:17.348Z",
+    "status": "approved",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com"
+  },
+  "previewUrl": "makale-onizleme.html",
+  "revisionReason": "Kapsamlı humanize; önceki onay sonraki revizyona aktarılmadı",
+  "approval": {
+    "receivedAt": "2026-10-01",
+    "userStatement": "çağrı onayı tamam. tıbbi onay tamam",
+    "scope": "Humanize revizyonunun yazar ve tıbbi onayı",
+    "recordType": "Kullanıcının bu sohbetteki teyidi"
+  }
+}

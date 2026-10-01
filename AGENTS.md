@@ -21,15 +21,16 @@ Bu erişim sırası, aşağıdaki “dosya okunamıyorsa dur” kuralından önc
 - `audit humanize` / `incele` salt okunur kapsamlı bulgular üretir; ayrıca düzeltme yetkisi verilmedikçe dosyayı değiştirme. Geniş inceleme başka yazılara/dillere, yeni araştırmaya veya dış dedektör taramasına kendiliğinden kapsam genişletmez.
 - Kanonik stil rehberi preflight'ını, bu sitenin dil/byline/uyum kurallarını ve gerekli testlerini uygula. Sayı, popülasyon, sonuç/payda, nedensellik, belirsizlik, güvenlik uyarısı, kaynak ve gerçek alıntıları koru; deneyim, klinik katkı veya onay uydurma. İçindekiler, bölüm bağlantıları ve görünür metin/şema tutarlılığını koru.
 
-### SSS: Dr. Aksoy'un gerçek yanıtları
+### SSS: yazar kimliği ve gerçek yanıtlar
 
-- Mevcut veya kapsam içinde istenen SSS, Dr. Aksoy'a yöneltilen sorular ve **onun gerçek yanıtlarından** hazırlanır. SSS olmayan her metne bölüm ekleme; makale türü ve site kuralları geçerlidir.
+- **Başka yazarların makalelerinde Dr. Aksoy adına SSS bölümü bulunmaz.** Bu yazılara “Dr. Aksoy'a sorular” veya “Dr. Aksoy'a en sık sorulan sorular” ekleme; mevcut SSS'yi onun adına dönüştürme ve bu dönüşüm için ondan yanıt isteme. Dr. Aksoy'un tıbbi denetçi olması bu kuralı değiştirmez. Başka yazarın kendi SSS'si, makale türü ve mevcut gerçek yanıt/onay koşullarıyla korunabilir.
+- Aşağıdaki Dr. Aksoy yanıt akışı **yalnızca `senai-aksoy` byline'lı makaleler** içindir. Bu makalelerde mevcut veya kapsam içinde istenen SSS, Dr. Aksoy'a yöneltilen sorular ve **onun gerçek yanıtlarından** hazırlanır. SSS olmayan her metne bölüm ekleme; makale türü ve site kuralları geçerlidir.
 - Her sorunun yanıtını Dr. Aksoy'dan al. Aynı soruya önceden verilmiş, bağlama uygun kayıtlı yanıtı kullan; tekrar isteme. Eksik yanıtları en fazla üçer soruluk gruplarla sor; daha çok soru varsa hepsini takip et. Hazır cevap önererek yalnızca onay isteme; modeli hekim yerine konuşturma.
 - Tercih edilen başlık **“Dr. Aksoy'a en sık sorulan sorular”**, ilgili dilde doğal karşılığıdır. “En sık” nitelemesi Dr. Aksoy tarafından doğrulanmamışsa **“Dr. Aksoy'a sorular”** kullan. Eski model cevaplarının üzerine hekim adı koymak bu koşulu karşılamaz.
 - Soru, özgün yanıt, gerçek yanıt tarihi, makaleye girecek düzenlenmiş karşılığı ve kullanım/onay durumu mevcut editoryal kayıt düzeninde izlenir. Yeni frontmatter alanı veya sahte tarih üretme. Genel makale onayı, tüm cevapların hekim tarafından verildiği anlamına gelmez.
 - Yanıtı anlamını değiştirmeden kısalt, dilini düzelt veya yerelleştir; yeni gerekçe, deneyim, oran ya da tavsiye ekleme. Düzenlenmiş halini Dr. Aksoy'a göster, mevcut geçerli kullanım yetkisini yeniden isteme; sitenin tıbbi/dil/yayın onay koşulları ayrıca geçerlidir. Uzman görüşü bilimsel kaynak yerine geçmez; kaynakla çelişkiyi bildirmeden yayıma hazır sayma.
 - Yanıt beklerken bağımsız düzenlemeleri sürdür; mevcut yayımlanmış SSS'yi silme. Gerçek yanıtı ve gerekli kullanım/onayı bulunmayan cevapları yeni hekim bölümüne taşıma; dönüşümü tamamlanmış diye bildirme. Boş cevap veya taslak soru listesini yayımlama.
-- Başka yazarlı makalede soru-cevap kısmını Dr. Aksoy'un ayrı uzman katkısı olarak belirt; byline'ı veya bütün gövdenin sesini değiştirme. Tek görünür SSS yüzeyi ve varsa FAQ şeması aynı soru-cevapları taşımalı. Diğer dillere uyarlama aynı gerçek yanıtı kullanır.
+- Byline'ı veya bütün gövdenin sesini SSS gerekçesiyle değiştirme. Tek görünür SSS yüzeyi ve varsa FAQ şeması aynı soru-cevapları taşımalı. Diğer dillere uyarlama aynı gerçek yanıtı kullanır.
 
 Dedektör skoru kalite veya insan yazarlığı kanıtı değildir; “%100 insan” sonucu vaat etme. `humanize` komutu kendi başına commit, push, deploy veya yayın yetkisi vermez.
 

@@ -1,0 +1,196 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/';
+const hero = submenuHeroByRoute['/beden-yakinlik/']!;
+const articleTitle = 'Menopoz Sonrası Meme Küçültme: Ne Zaman Konfor Meselesi?';
+const seoTitle = 'Menopoz Sonrası Meme Küçültme';
+const articleDescription =
+  'Menopoz sonrası meme küçültme ne zaman değerlendirilebilir? Günlük yaşamı zorlayan yakınmalar, cerrahi dışı seçenekler, riskler ve iyileşme süreci.';
+const publishedDate = '30 Mayıs 2026';
+const readingMinutes = 8;
+const articleImage = '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu.webp';
+const bylineImage = '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu-byline.webp';
+
+const tocEntries = [
+  { id: 'beden-yuku', label: 'Günlük hayattaki yük' },
+  { id: 'menopoz-sonrasi-yuk', label: 'Ağırlık nasıl hissedilir?' },
+  { id: 'estetikten-fazlasi', label: 'Hareket ve rahatlık' },
+  { id: 'karar-sorulari', label: 'Görüşmeye hazırlık' },
+  { id: 'ameliyat-degerlendirmesi', label: 'Değerlendirme ölçütleri' },
+  { id: 'cerrahi-disi', label: 'Cerrahi dışı seçenekler' },
+  { id: 'risk-iyilesme', label: 'Riskler ve iyileşme' },
+  { id: 'daha-rahat', label: 'Kişisel beklentiler' },
+  { id: 'konusmak', label: 'Yakınmaları anlatmak' },
+  { id: 'sss', label: 'Sorular ve yanıtlar' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  articleType: 'clinical-guide',
+  publishedDate,
+  modifiedDate: '1 Ekim 2026',
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  image: `${siteUrl}${articleImage}`,
+  keywords: [
+    'menopoz sonrası meme küçültme',
+    'menopoz sonrası büyük göğüs',
+    'meme küçültme',
+    'reduction mammoplasty',
+    'beden konforu',
+    'omuz sırt ağrısı',
+    'meme altı tahriş',
+    'menopoz sonrası beden',
+    'estetik cerrahi karar süreci',
+    '40 sonrası beden farkındalığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/beden-yakinlik/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Beden Konforu"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        articleType="clinical-guide"
+        publishedDate={publishedDate}
+        lastUpdated="1 Ekim 2026"
+        readingMinutes={readingMinutes}
+        imageSrc={bylineImage}
+        imageAlt="İstanbul evinde pencere ve ayna yanında omzuna nazikçe dokunan, krem kazaklı ve bordo hırka detaylı 50'li yaşlarda kadın; menopoz sonrası beden konforu ve omuz-duruş farkındalığı temasını taşıyan editoryal portre"
+        imagePosition="center top"
+      />
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>Büyük memeler boyun, sırt ve omuz ağrısı, tekrarlayan meme altı tahrişi veya hareket güçlüğüyle birlikte günlük yaşamı zorlaştırabilir. Meme küçültme, bu yakınmaların nedenleri ve cerrahi dışı seçenekler değerlendirildikten sonra konuşulabilecek bir ameliyattır. Karar; beklenen fayda, kişisel sağlık durumu, riskler ve iyileşme süresi birlikte ele alınarak verilir.</p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="beden-yuku">Günlük Hayatta Hissedilen Yük</h2>
+        <p>Sütyeninizi çıkardığınızda omuzlarınızda kalan izler, yürüyüşte hissettiğiniz ağırlık ya da yazın meme altında oluşan tahriş, bu konuyu düşünmenize neden olabilir.</p>
+        <p>Aynı sütyen ve aynı yürüyüş mesafesi birkaç yıl sonra farklı hissettirebilir. Menopoz sonrası beden değişimlerini konuşurken uyku, sıcak basması ve kilo kadar bu gündelik güçlükleri de dikkate almak gerekir.</p>
+        <p>Meme büyüklüğünden rahatsız olmanız, mutlaka ameliyat olmanız gerektiği anlamına gelmez. Önce sizi neyin zorladığını ve bunun günlük yaşamınızda ne kadar yer tuttuğunu anlamak gerekir.</p>
+        <h2 id="menopoz-sonrasi-yuk">Aynı Ağırlık Neden Daha Fazla Hissedilebilir?</h2>
+        <p>Yaşla birlikte cilt, bağ dokusu ve kas desteği değişebilir. Kilo dağılımı ve duruş da bedenin ağırlığı taşıma biçimini etkileyebilir.</p>
+        <p>Bu değişimler bir araya geldiğinde, daha önce rahat taşıdığınız meme ağırlığı omuz, sırt ve boyunda daha belirgin hissedilebilir. Meme dokusunun aşağı doğru yer değiştirmesi ve meme altındaki tahriş de rahatsızlığı artırabilir <Evidence level={3} />.</p>
+        <p>Yine de menopoz sonrası başlayan bir ağrının nedenini yalnızca meme büyüklüğüyle açıklamak yeterli değildir. Ağrının kaynağı ayrıca değerlendirilmelidir.</p>
+        <h2 id="estetikten-fazlasi">Görünümün Yanında Hareket ve Rahatlık</h2>
+        <p>Meme küçültme düşüncesi kıyafet seçimiyle, hareket ederken zorlanmayla veya uzun süredir devam eden fiziksel rahatsızlıkla ilişkili olabilir.</p>
+        <p>Görünüm beklentinizi ve bedeninizde hissettiğiniz güçlüğü birlikte konuşabilirsiniz. Her büyük meme sorun yaratmaz; her rahatsızlık da cerrahi gerektirmez.</p>
+        <p>Ameliyattan beklenen fayda kişiye göre değişir. Ağrının kesin geçeceği ya da sonucun sizi mutlaka memnun edeceği söylenemez; sağlık durumunuz, beklentiniz ve iyileşme süreciniz birlikte değerlendirilir <Evidence level={4} />.</p>
+        <h2 id="karar-sorulari">Değerlendirmeye Hazırlanırken</h2>
+        <p>Hekiminizle konuşmadan önce sizi zorlayan durumları somutlaştırmak yararlı olabilir. Ne zaman ağrı duyduğunuzu ve hangi hareketlerden kaçındığınızı düşünün.</p>
+        <p>Aşağıdaki sorular bir ameliyat kararı vermek için değil, yakınmalarınızı anlatabilmek için bir başlangıçtır.</p>
+        <ul><li>Sırt, boyun veya omuz ağrısı günlük hayatınızı nasıl etkiliyor?</li><li>Sütyen askıları omuzlarınızda baskı veya iz bırakıyor mu?</li><li>Yürüyüş, egzersiz, uyku veya kıyafet seçimi zorlaşıyor mu?</li><li>Meme altında tahriş tekrarlıyor mu?</li><li>Görünüm ve rahatlık açısından nasıl bir değişiklik bekliyorsunuz?</li><li>Bu isteğiniz kendi ihtiyacınızdan mı geliyor, çevrenizin yorumlarından mı?</li></ul>
+        <p>Meme ölçüsü bu görüşmenin yalnızca bir parçasıdır. Cilt ve dolaşım durumu, eşlik eden hastalıklar, kullanılan ilaçlar ve yara iyileşmesi de cerrahi planlamada dikkate alınır.</p>
+
+
+
+<h2 id="ameliyat-degerlendirmesi">Meme Küçültmeyi Değerlendirmeye Değer Kılan Yakınmalar</h2>
+<p>Meme büyüklüğü günlük yaşamınızı belirgin biçimde zorlaştırıyorsa cerrahi seçeneği değerlendirmek anlamlı olabilir. Kararı yalnızca sütyen ölçüsüne göre vermeyiz.</p>
+<p>Sürekli boyun, sırt veya omuz ağrısı; sütyen askılarının omuzlarda bıraktığı izler; meme altında tekrarlayan pişik veya enfeksiyon ve hareket kısıtlılığı bu değerlendirmede önemlidir. Yürüyüş ya da egzersiz sırasında yaşadığınız güçlük de konuşulması gereken bir yakınmadır.<sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
+<p>Ancak menopoz sonrası ortaya çıkan her sırt veya omuz ağrısını meme ağırlığına bağlamam. Omurga ve kas-iskelet sistemi, osteoporoz, kilo artışı ve duruş gibi başka nedenleri de değerlendiririm. Önce yakınmanın hangi nedenle ilişkili olduğunu anlamak gerekir.</p>
+
+<h2 id="cerrahi-disi">Ameliyat Öncesinde Cerrahi Dışı Seçenekler</h2>
+<p>Rahatsızlığınız için ameliyat dışındaki destekleri de değerlendirebiliriz. Hafif veya orta düzeydeki yakınmalarda bunlar yeterli olabilir.</p>
+<p>Doğru ölçülmüş destekleyici bir sütyen, kilo fazlası varsa kilo kontrolü, fizyoterapi ve duruş çalışmaları, uygun egzersiz ve gerektiğinde hekim değerlendirmesiyle ağrı tedavisi seçenekler arasındadır.<sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup></p>
+<p>Çok büyük ve ağır memelerle birlikte kronik ağrı, tekrarlayan cilt sorunları veya belirgin hareket kısıtlılığı varsa bu yöntemlerin etkisi sınırlı kalabilir. Hangi desteğin size yeterli geldiği, cerrahi seçeneğin değerlendirilmesinde dikkate alınır.</p>
+
+<h2 id="risk-iyilesme">Meme Küçültmede Riskler ve İyileşme Süreci</h2>
+<p>Meme küçültme büyük bir ameliyattır. Beklenen faydayı konuşurken riskleri ve iyileşmeye ayıracağınız zamanı da birlikte değerlendirmeliyiz.</p>
+<p>İz kalması, asimetri, yara iyileşmesinde gecikme, enfeksiyon, kanama ve meme başı duyusunda azalma görülebilir. Meme başı veya cildin kan dolaşımıyla ilgili sorunlar da olası komplikasyonlar arasındadır.<sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
+<p>İlk haftalarda şişlik ve hassasiyet yaşanabilir. Günlük etkinliklere dönüş birkaç hafta sürebilir; ağır egzersiz ve yük kaldırma için yaklaşık altı haftalık bir kısıtlama gerekebilir. Bunlar genel sürelerdir: sizin için uygun takvim yara iyileşmenize ve cerrahınızın değerlendirmesine göre belirlenir. Şişliğin azalması ve memenin son şeklini alması daha uzun sürebilir.<sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
+<p>Ameliyat öncesinde sigara kullanımı, kilo ve beden kitle indeksi, diyabet, hipertansiyon, kalp-damar hastalıkları ve pıhtılaşma öyküsü gözden geçirilir. Kullanılan ilaçlar ve hormon replasman tedavisi (HRT), önceki meme hastalıkları ve yaşa uygun mamografi ya da tarama durumu da değerlendirmeye dahildir.</p>
+<p>Amaç, beklenen faydanın kişisel cerrahi riskin karşısında anlamlı olup olmadığını değerlendirmektir.</p>
+        <h2 id="daha-rahat">Beklentiniz Size Ait Olsun</h2>
+        <p>Ameliyatla nasıl görünmek ve nasıl hissetmek istediğinizi kendi sözcüklerinizle anlatabilmeniz önemlidir.</p>
+        <p>Daha rahat hareket etmek, kıyafet içinde kendinizi daha az ayarlamak veya gün sonunda daha az yük hissetmek isteyebilirsiniz. Görünüm beklentiniz de olabilir. Bunları bir güzellik standardına uydurmadan, sağlık durumunuzla birlikte konuşabilirsiniz.</p>
+        <p>Amaç mümkün olan en küçük ölçüye ulaşmak değil, bedeninize ve beklentinize uygun bir plan yapmaktır. Cerrahi dışı destekler yeterli geliyorsa ameliyat seçeneği öncelik kazanmayabilir.</p>
+        <h2 id="konusmak">Rahatsızlığınızı Açıkça Anlatın</h2>
+        <p>Omuz ağrısını, tekrarlayan tahrişi veya hareket etmekte zorlanmayı dile getirmek için yakınmanızın başkalarınca önemli bulunmasını beklemeniz gerekmez.</p>
+        <p>Görüşmede ne zamandır rahatsızlık yaşadığınızı, günlük hayatınızın nasıl etkilendiğini ve hangi destekleri denediğinizi anlatabilirsiniz. Sosyal medyadaki görüntüler veya çevrenizin “yaptır, rahatlarsın” yorumları kişisel değerlendirme yerine geçmez.</p>
+        <p>Önce yakınmanın kaynağı, ardından size yardımcı olabilecek seçenekler ele alınır. Cerrahi düşünülüyorsa beklenen fayda, riskler ve iyileşme süresi açıkça konuşulmalıdır.</p>
+
+
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sss"
+        class="mt-10"
+        items={faqItems}
+        title="Bu Yazıdan Sonra Akla Gelen Sorular"
+        intro="Meme küçültme kararına ilişkin sorular ve kısa yanıtlar."
+      />
+
+      <ArticleProsePanel class="mt-10">
+<h2 id="kaynaklar">Kaynaklar</h2>
+<p>Değerlendirme, cerrahi dışı seçenekler ve iyileşme bilgileri için seçilmiş kaynaklar aşağıdadır. Genel meme küçültme bilgileri, menopoz sonrası kadınlara özgü araştırma sonuçları olarak yorumlanmamalıdır.</p>
+<ol>
+<li id="kaynak-1"><a href="https://www.nhs.uk/tests-and-treatments/cosmetic-procedures/cosmetic-surgery/breast-reduction-female/" target="_blank" rel="noopener noreferrer">NHS — Kadınlarda meme küçültme: değerlendirme, riskler ve iyileşme</a>. Son inceleme: 19 Eylül 2023; erişim: 30 Eylül 2026.</li>
+<li id="kaynak-2"><a href="https://www.hweclinicalguidance.nhs.uk/all-clinical-areas-documents/surgery-general-plastic/breast-reduction-surgery/" target="_blank" rel="noopener noreferrer">Hertfordshire and West Essex — Meme küçültme politikası</a>. Cerrahi dışı destekler için kullanıldı. İngiltere'ye ait hizmet uygunluk ölçütleri Türkiye için ameliyat koşulları olarak aktarılmadı. Site 31 Mart 2026'dan beri güncellenmiyor; erişim: 30 Eylül 2026.</li>
+</ol>
+
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/',
+          '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>Menopoz sonrası sırt ve omuz ağrısının farklı nedenleri olabilir. Meme küçültme kararı öncesinde yakınmaların kaynağı, meme tarama durumu, eşlik eden hastalıklar ve kullanılan ilaçlar değerlendirilmelidir. Cerrahiye ilişkin genel iyileşme süreleri kişisel bir takvim veya sonuç garantisi değildir.</p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10" />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

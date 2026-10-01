@@ -312,7 +312,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
     title: 'Menopoz Sonrası Meme Küçültme: Ne Zaman Konfor Meselesi?',
     description:
-      'Menopoz sonrası büyük göğüsler omuz, sırt ve duruşu nasıl etkiler? Op. Dr. Çağrı Sade, meme küçültme kararını acele etmeden beden konforu ekseninde anlatıyor.',
+      'Menopoz sonrası meme küçültme ne zaman değerlendirilebilir? Günlük yaşamı zorlayan yakınmalar, cerrahi dışı seçenekler, riskler ve iyileşme süreci.',
     publishedDate: '30 Mayıs 2026',
     writerSlug: 'cagri-sade',
     section: 'Beden & Yakınlık',
