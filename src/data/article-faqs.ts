@@ -18,7 +18,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Kreatin beyin sisi için kullanılabilir mi?',
       answer:
-        'Burada daha ilginç ama henüz kesin olmayan veriler var. Genel erişkin çalışmalarında hafıza ve bazı bilişsel alanlarda küçük yararlar bildirilirken, başka sistematik değerlendirmeler kanıtın tutarsız olduğunu vurguluyor. Perimenopoz ve menopozdaki yalnızca 36 kadını içeren küçük bir randomize çalışma, 8 haftalık kreatin hidroklorür kullanımında reaksiyon zamanında ve beyin kreatin düzeyinde iyileşme gösterdi; ancak bunu “menopozal beyin sisinin kanıtlanmış tedavisi” olarak kabul etmek için henüz erken.',
+        'İlginç ama henüz kesin olmayan veriler var. Genel erişkin çalışmalarında hafıza ve bazı bilişsel alanlarda küçük yararlar bildirilse de sonuçlar tutarsız. Menopoz dönemindeki yalnızca 36 kadını içeren bir çalışmada kreatin hidroklorürle reaksiyon zamanında iyileşme görüldü; bunu beyin sisinin kanıtlanmış tedavisi saymak için henüz erken.',
     },
     {
       question: 'Kreatin kullanırken direnç egzersizi şart mı?',
@@ -28,7 +28,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Kreatin kullanmaya başlamadan önce neyi konuşmalıyım?',
       answer:
-        'Başlamadan önce özellikle böbrek hastalığı öyküsü, kullanılan ilaçlar, hipertansiyon, diyabet ve başka takviyeler konuşulmalıdır. Sağlıklı erişkinlerde en çok kullanılan yaklaşım günlük 3–5 g kreatin monohidrattır; yükleme yapmak şart değildir. Başlangıçta bir miktar su tutulumuna bağlı kilo artışı olabilir. Böbrek hastalığı olanlarda veya böbrek fonksiyonunu etkileyebilecek ilaç kullananlarda hekime danışmadan başlanmasını önermem.',
+        'Böbrek hastalığı öyküsü, kullanılan ilaçlar, hipertansiyon, diyabet ve diğer takviyeler konuşulmalıdır. Başlangıçta su tutulumuna bağlı hafif kilo artışı olabilir. Böbrek hastalığı olanlarda veya böbrek işlevini etkileyebilecek ilaç kullananlarda hekime danışmadan başlanmasını önermem.',
     },
   ],
   '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': [

@@ -45,7 +45,7 @@
     {
       "no": 3,
       "question": "Kreatin beyin sisi için kullanılabilir mi?",
-      "answer": "Burada daha ilginç ama henüz kesin olmayan veriler var. Genel erişkin çalışmalarında hafıza ve bazı bilişsel alanlarda küçük yararlar bildirilirken, başka sistematik değerlendirmeler kanıtın tutarsız olduğunu vurguluyor. Perimenopoz ve menopozdaki yalnızca 36 kadını içeren küçük bir randomize çalışma, 8 haftalık kreatin hidroklorür kullanımında reaksiyon zamanında ve beyin kreatin düzeyinde iyileşme gösterdi; ancak bunu “menopozal beyin sisinin kanıtlanmış tedavisi” olarak kabul etmek için henüz erken."
+      "answer": "İlginç ama henüz kesin olmayan veriler var. Genel erişkin çalışmalarında hafıza ve bazı bilişsel alanlarda küçük yararlar bildirilse de sonuçlar tutarsız. Menopoz dönemindeki yalnızca 36 kadını içeren bir çalışmada kreatin hidroklorürle reaksiyon zamanında iyileşme görüldü; bunu beyin sisinin kanıtlanmış tedavisi saymak için henüz erken."
     },
     {
       "no": 4,
@@ -55,7 +55,7 @@
     {
       "no": 5,
       "question": "Kreatin kullanmaya başlamadan önce neyi konuşmalıyım?",
-      "answer": "Başlamadan önce özellikle böbrek hastalığı öyküsü, kullanılan ilaçlar, hipertansiyon, diyabet ve başka takviyeler konuşulmalıdır. Sağlıklı erişkinlerde en çok kullanılan yaklaşım günlük 3–5 g kreatin monohidrattır; yükleme yapmak şart değildir. Başlangıçta bir miktar su tutulumuna bağlı kilo artışı olabilir. Böbrek hastalığı olanlarda veya böbrek fonksiyonunu etkileyebilecek ilaç kullananlarda hekime danışmadan başlanmasını önermem."
+      "answer": "Böbrek hastalığı öyküsü, kullanılan ilaçlar, hipertansiyon, diyabet ve diğer takviyeler konuşulmalıdır. Başlangıçta su tutulumuna bağlı hafif kilo artışı olabilir. Böbrek hastalığı olanlarda veya böbrek işlevini etkileyebilecek ilaç kullananlarda hekime danışmadan başlanmasını önermem."
     }
   ],
   "frequencyConfirmed": false,
@@ -116,7 +116,9 @@
     "edits": [
       "S1: kitlesine → kütlesine (yazım)",
       "S5: monohidrat’tır → monohidrattır (yazım)",
-      "S3: kreatin kullanımında → kreatin hidroklorür kullanımında (çalışmadaki form, gövdeyle uyum)"
+      "S3: kreatin kullanımında → kreatin hidroklorür kullanımında (çalışmadaki form, gövdeyle uyum)",
+      "S3 kısaltıldı (Dr. Aksoy onayı, 2026-10-01): 8 hafta/randomize/beyin kreatin düzeyi çıktı, gövdede duruyor; \"yalnızca 36\" ve \"henüz erken\" korundu",
+      "S5 kısaltıldı, seçenek B (Dr. Aksoy onayı, 2026-10-01): 3–5 g doz cümlesi SSS’den çıktı (gövdede kaynak [14] ile duruyor); \"bir miktar\" → \"hafif\""
     ]
   }
 }
