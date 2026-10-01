@@ -164,3 +164,5 @@ Yazar imzası *"Senai Aksoy"* (Dr. öneksiz, komşu sıcaklığı) / Tıbbi ince
 - Kreatin dış değerlendirme rötuşu Mumcu kapsamı (2026-10-01): KC bildirimiyle bu dil düzeyindeki rötuş Dr. Alper Mumcu'nun 1 Ekim onayı kapsamında sayıldı.
 - Kreatin SSS kısaltma (2026-10-01): Dr. Aksoy onayıyla S3 kısa hâli ve S5 seçenek B (doz cümlesi SSS'den çıktı, gövdede [14] ile duruyor; 'bir miktar' → 'hafif'). Özgün yanıtlar JSON originalResponses'ta korunuyor.
 - Kreatin SSS kısaltma Mumcu kapsamı (2026-10-01): KC bildirimiyle S3/S5 kısaltması Dr. Alper Mumcu'nun 1 Ekim onayı kapsamında sayıldı.
+
+- D vitamini rehberi doğrudan editör onayı (2026-10-01): kapsamlı humanize ve kaynak düzeltmeleri sonrasında KC kullanıcı talimatı: "commit push deploy". Bağımsız tıbbi inceleme beklediği bildirilmişti; görünür bekleyen inceleme notu korunarak yayın yetkisi kaydedildi. Mumcu incelemesi tamamlanmış sayılmadı. Kayıt: klinik-katkilar/2026-10-01_d-vitamini-rehberi.json.

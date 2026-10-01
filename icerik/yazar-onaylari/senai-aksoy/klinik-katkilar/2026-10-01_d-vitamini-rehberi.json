@@ -1,0 +1,48 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/zamansiz-yasam/d-vitamini-rehberi/",
+  "answeredAt": "2026-10-01",
+  "source": "Önceki Antigravity turunun bu dosyada kaydettiği özgün yanıtlar; bu oturumda kaynak mesajı görülmedi. Kullanıcının aktardığı değişiklik özetiyle karşılaştırıldı.",
+  "status": "Kapsamlı revizyon tamamlandı; KC doğrudan editör yayın onayı verildi. Bağımsız tıbbi inceleme bekleniyor.",
+  "revisionScope": "Başlık/TOC, özet, gövde, sonuç, SSS aktarımı, kaynaklar, görünür inceleme ve şema denetlendi. Rutin tarama çelişkisi, güneşten korunma anlatımı, bolus çalışma popülasyonu, K2 sonuç ölçütü ve böbrek hastalığı yaklaşımı düzeltildi. Yeni hekim yanıtı üretilmedi.",
+  "publicationApproval": "2026-10-01: Kullanıcı, inceleme bekleniyor bilgisinin verildiği sonuçtan sonra commit push deploy talimatıyla doğrudan editör yayın yetkisi verdi. Bağımsız tıbbi inceleme onayı verilmiş sayılmadı; görünür bekleyen inceleme notu korunuyor.",
+  "faqConversionStatus": "Mevcut kayıttaki 3 yanıtla görünür SSS eşleştirildi. Üçüncü yanıta modelin eklediği klinikte ve mutlaka sözcükleri çıkarıldı. Yanıtlar bu oturumda yeniden hekimden alınmadı; dayanak önceki kayıttır.",
+  "faqQuestionsAsked": [
+    "D vitamini herkese otomatik takviye olarak mı düşünülmeli?",
+    "Güneş görmek tek başına yeterli olur mu?",
+    "D vitamini desteğinde asıl risk eksiklik değil, gereksiz yüksek doz olabilir mi?"
+  ],
+  "faqQuestionsRemaining": [],
+  "faqResponses": [
+    {
+      "question": "D vitamini herkese otomatik takviye olarak mı düşünülmeli?",
+      "answer": "Her postmenopozal kadına otomatik olarak yüksek doz D vitamini başlamak doğru değil; ama herkese tahlil yapmak da gerekli değil. Sağlıklı, 50–74 yaş arası kadınlarda güncel Endocrine Society kılavuzu rutin 25-OH D taraması veya önerilen günlük gereksinimin üzerinde rutin takviye önermiyor. Buna karşılık osteoporoz, düşük travmalı kırık, malabsorpsiyon, hipokalsemi, böbrek hastalığı veya D vitamini metabolizmasını etkileyen ilaçlar gibi durumlarda ölçüm ve kişiye özel tedavi anlamlı hale gelir.",
+      "editedForArticle": "Her postmenopozal kadına otomatik olarak yüksek doz D vitamini başlamak doğru değildir; ancak herkese rutin tahlil yapmak da gerekmez. Sağlıklı, 50–74 yaş arası kadınlarda güncel Endocrine Society kılavuzu rutin 25-OH-D taraması veya önerilen günlük gereksinimin üzerinde rutin takviye önermez. Buna karşılık osteoporoz, düşük travmalı kırık, malabsorpsiyon, hipokalsemi, böbrek hastalığı veya D vitamini metabolizmasını etkileyen ilaçlar gibi durumlarda ölçüm ve kişiye özel tedavi anlamlı hale gelir.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "Dr. Aksoy doğrudan kullanıcı mesajı ile sağladı (2026-10-01)"
+    },
+    {
+      "question": "Güneş görmek tek başına yeterli olur mu?",
+      "answer": "Güneş koruyucu teorik olarak deride D vitamini üretimini azaltabilir, ancak gerçek yaşamda ne kadar D vitamini sentezlendiğini yalnızca “güneşte kaldım” diye tahmin edemeyiz. Mevsim, saat, ten rengi, yaş, açıkta kalan deri alanı ve coğrafya sonucu ciddi biçimde değiştirir. Bu nedenle D vitamini için özellikle korumasız güneşlenmeyi önermem; cilt kanseri riskini artırmadan beslenme ve gerektiğinde takviye ile ihtiyacı karşılamak daha güvenlidir.",
+      "editedForArticle": "Güneş koruyucu teorik olarak deride D vitamini üretimini azaltabilir; ancak gerçek yaşamda ne kadar D vitamini sentezlendiğini yalnızca “güneşte kaldım” diyerek tahmin edemeyiz. Mevsim, günün saati, ten rengi, yaş, açıkta kalan deri alanı ve bulunulan coğrafya sonucu belirgin biçimde değiştirir. Bu nedenle D vitamini için özellikle korumasız güneşlenmeyi önermem; cilt kanseri riskini artırmadan beslenme ve gerektiğinde takviye ile ihtiyacı karşılamak daha güvenlidir.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "Dr. Aksoy doğrudan kullanıcı mesajı ile sağladı (2026-10-01)"
+    },
+    {
+      "question": "D vitamini desteğinde asıl risk eksiklik değil, gereksiz yüksek doz olabilir mi?",
+      "answer": "En sık gördüğüm yanılgı “D vitamini ne kadar yüksekse o kadar iyi” düşüncesidir. Eksiklik elbette önemlidir; özellikle kemik sağlığı açısından riskli kişilerde düzeltilmelidir. Ancak gereksiz yüksek dozların uzun süre kullanılması hiperkalsemi, böbrek taşı ve hatta böbrek hasarı gibi sorunlara yol açabilir. Sağlıklı erişkinlerde günlük üst alım sınırı genel olarak 4.000 IU olarak kabul edilir; bunun üzerindeki dozlar tedavi amacıyla kullanılacaksa hekim gözetimi gerekir.",
+      "editedForArticle": "En sık gördüğüm yanılgı “D vitamini ne kadar yüksekse o kadar iyi” düşüncesidir. Eksiklik elbette önemlidir; özellikle kemik sağlığı açısından riskli kişilerde düzeltilmelidir. Ancak gereksiz yüksek dozların uzun süre kullanılması hiperkalsemi, böbrek taşı ve hatta böbrek hasarı gibi sorunlara yol açabilir. Sağlıklı erişkinlerde günlük üst alım sınırı genel olarak 4.000 IU olarak kabul edilir; bunun üzerindeki dozlar tedavi amacıyla kullanılacaksa hekim gözetimi gerekir.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "Dr. Aksoy doğrudan kullanıcı mesajı ile sağladı (2026-10-01)"
+    }
+  ],
+  "pastedResidueNotes": "Kullanıcı yanıtındaki Endocrine Society ve NIH ODS linkleri 'utm_source=chatgpt.com' parametresi içeriyordu; AGENTS.md ve senai-humanize kuralı uyarınca metne ve kaynakçaya kalıntı olarak aktarılmadı; kaynaklar mevcut künyelerle eşleştirildi.",
+  "faqUseApprovedAt": "2026-10-01",
+  "independentMedicalReview": {
+    "reviewer": "Dr. Alper Mumcu",
+    "date": null,
+    "coveredVersion": "1 Ekim 2026 Codex düzeltmesi için inceleme bekleniyor",
+    "scope": "Tüm metin ve Bilimsel Editör Notu",
+    "status": "Önceki modelin 2026-10-01 tarihli tamamlandı beyanı bağımsız belge veya kullanıcı teyidiyle doğrulanamadı."
+  }
+}
