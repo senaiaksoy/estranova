@@ -45,5 +45,17 @@
     "scope": "Tüm metin ve Bilimsel Editör Notu",
     "status": "Onaylandı — KC beyanı (Dr. Aksoy, 2026-10-01: 'Mumcu onayladı, imzayı geri koy'); yazılı inceleme notu yok."
   },
-  "bodyHumanize20261001": "Claude Code kapsamlı humanize turu (Dr. Aksoy onayı: 'hepsine onay', 2026-10-01): gövdede ses, ritim, okura seslenme, teselli ve somut sahne düzenlendi; sayı, eşik, popülasyon, kaynak eşleşmeleri, Evidence etiketleri ve anchor'lar değişmedi. Hekim birinci tekili yalnızca kayıtlı 2. SSS yanıtındaki 'D vitamini için korumasız güneşlenmeyi önermem' cümlesinden taşındı; yeni muayene anekdotu veya klinik gözlem üretilmedi. Uyarı kutusundaki 'mutlaka' çıkarıldı. Görünür inceleme dili kurum içi ifadeden arındırıldı; bağımsız tıbbi inceleme hâlâ bekliyor."
+  "bodyHumanize20261001": "Claude Code kapsamlı humanize turu (Dr. Aksoy onayı: 'hepsine onay', 2026-10-01): gövdede ses, ritim, okura seslenme, teselli ve somut sahne düzenlendi; sayı, eşik, popülasyon, kaynak eşleşmeleri, Evidence etiketleri ve anchor'lar değişmedi. Hekim birinci tekili yalnızca kayıtlı 2. SSS yanıtındaki 'D vitamini için korumasız güneşlenmeyi önermem' cümlesinden taşındı; yeni muayene anekdotu veya klinik gözlem üretilmedi. Uyarı kutusundaki 'mutlaka' çıkarıldı. Görünür inceleme dili kurum içi ifadeden arındırıldı; bağımsız tıbbi inceleme hâlâ bekliyor.",
+  "bodyClinicalObservations": [
+    {
+      "section": "kan-degeri",
+      "original": "D vitamini düşük çıktığında hastalarımın bir kısmı hemen “Kemiklerim eriyor mu?” diye kaygılanıyor. Ben de önce onları rahatlatıyorum; düşük D vitamini önemli olabilir ama tek başına osteoporoz olduğu anlamına gelmez. Asıl önemli olan sonucu yaş, kemik yoğunluğu, beslenme, güneşlenme ve diğer risklerle birlikte değerlendirmek.",
+      "editedForArticle": "D vitamini düşük çıktığında hastalarımın bir kısmı hemen “Kemiklerim eriyor mu?” diye kaygılanıyor. Önce onları rahatlatıyorum: Düşük D vitamini önemli olabilir ama tek başına osteoporoz olduğu anlamına gelmez. Asıl önemli olan, sonucu yaş, kemik yoğunluğu, beslenme, güneşlenme ve diğer risklerle birlikte değerlendirmek.",
+      "edits": "Yalnızca biçim: 'Ben de' çıkarıldı (önceki cümleyle akış), noktalı virgül iki noktaya çevrildi, virgül eklendi. Anlam değişmedi.",
+      "answeredAt": "2026-10-01",
+      "source": "Dr. Aksoy doğrudan kullanıcı mesajı (bu oturum)",
+      "replaced": "Önceki model cümlesi 'Sınırda bir değer, acil bir durumdan çok hekiminizle konuşulacak bir soruya işaret eder.' bu gözlemle değiştirildi.",
+      "medicalReviewCoverage": "Dr. Mumcu onayı 78f534c5 sürümünü kapsar; bu ek için ayrıca onay verdi (KC beyanı, 2026-10-01; yazılı not yok)."
+    }
+  ]
 }
