@@ -50,3 +50,15 @@ Hasta eğitimi değeri: rutin tarama–gereksinim–eksiklik tedavisi ayrımı, 
 ## Sonraki yayın yetkisi
 
 1 Ekim 2026: Kullanıcı yerel inceleme sonuçlarını ve bağımsız tıbbi incelemenin beklediğini bildiren yanıttan sonra "commit push deploy" talimatı verdi. KC doğrudan editör onayı article-approvals.ts, article-log.md ve klinik katkı kaydına işlendi. Bu yayın yetkisi bağımsız tıbbi inceleme teyidi değildir; bekleyen inceleme notu görünür kalır. Main push Cloudflare otomatik dağıtımını başlatır; dağıtım sonucu commit check-run ve önbellek atlayan özel alan adı üzerinden doğrulanacaktır.
+
+## İkinci tur — Claude Code humanize ve SSS birebir düzeltmesi (1 Ekim 2026)
+
+Dr. Aksoy, Codex turunun denetim bulgularını okuduktan sonra tüm düzeltmeleri onayladı ("hepsine onay") ve push yetkisi verdi.
+
+- **SSS:** 1. ve 2. yanıt, kayıtlı özgün yanıtlara karakter düzeyinde döndürüldü. Codex turu bu iki yanıtta biçim dışı kelime değişikliği yapmıştı (ör. "rutin" eklemesi, "ciddi biçimde" → "belirgin biçimde"). 3. yanıt zaten birebirdi. Betikle 3/3 eşleşme doğrulandı.
+- **Gövde humanize:** Codex turu doğruluk açısından güçlüydü ama ses soğumuştu. Bu turda her H2'ye okura seslenme eklendi. Teselli ve duygu anı "Kan Değeri" bölümüne konuldu. Somut sahneler eklendi: laboratuvar raporu, ofis penceresi, eczane rafı. Kısa vurgu cümleleri 2'den 5'e çıktı. "…değildir / göstermez" inkâr kalıpları azaltıldı. Bölüm girişleri çeşitlendi: sahne, soru, doğrudan cevap, alıntı.
+- **Değişmeyenler:** Sayılar, eşikler, popülasyonlar, kaynak numaraları, Evidence etiketleri, anchor'lar ve TOC.
+- **Hekim sesi:** Yeni anekdot veya klinik gözlem üretilmedi. Tek klinik birinci tekil, kayıtlı 2. SSS yanıtından alınan "D vitamini için korumasız güneşlenmeyi önermem" cümlesidir.
+- **Görünür inceleme dili:** "Yerel editoryal revizyon" ve "İnceleme Bekliyor" ifadeleri kaldırıldı. İmza "Estranova Editörleri · 1 Ekim 2026 güncellemesinin bağımsız tıbbi incelemesi sürüyor" oldu. Yazar kutusunda "Bilimsel inceleme: Sürüyor — 1 Ekim 2026 güncellemesi" yazıyor. Şemada `reviewedBy` alanı, inceleme tamamlanana kadar boş kalmaya devam ediyor.
+- **Açık iş:** Dr. Alper Mumcu incelemesi bekleniyor. İnceleme tamamlanınca editör notu imzası ve `reviewedBy` geri konacak.
+- **Kapsam dışı (değişmedi):** Sayfa hero'yu makale yolundan okuyor (`submenuHeroByRoute['/zamansiz-yasam/d-vitamini-rehberi/']`); kural üst hub hero'sudur. Bu durum önceden de vardı.

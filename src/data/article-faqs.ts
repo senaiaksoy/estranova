@@ -679,12 +679,12 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'D vitamini herkese otomatik takviye olarak mı düşünülmeli?',
       answer:
-        'Her postmenopozal kadına otomatik olarak yüksek doz D vitamini başlamak doğru değildir; ancak herkese rutin tahlil yapmak da gerekmez. Sağlıklı, 50–74 yaş arası kadınlarda güncel Endocrine Society kılavuzu rutin 25-OH-D taraması veya önerilen günlük gereksinimin üzerinde rutin takviye önermez. Buna karşılık osteoporoz, düşük travmalı kırık, malabsorpsiyon, hipokalsemi, böbrek hastalığı veya D vitamini metabolizmasını etkileyen ilaçlar gibi durumlarda ölçüm ve kişiye özel tedavi anlamlı hale gelir.',
+        'Her postmenopozal kadına otomatik olarak yüksek doz D vitamini başlamak doğru değil; ama herkese tahlil yapmak da gerekli değil. Sağlıklı, 50–74 yaş arası kadınlarda güncel Endocrine Society kılavuzu rutin 25-OH D taraması veya önerilen günlük gereksinimin üzerinde rutin takviye önermiyor. Buna karşılık osteoporoz, düşük travmalı kırık, malabsorpsiyon, hipokalsemi, böbrek hastalığı veya D vitamini metabolizmasını etkileyen ilaçlar gibi durumlarda ölçüm ve kişiye özel tedavi anlamlı hale gelir.',
     },
     {
       question: 'Güneş görmek tek başına yeterli olur mu?',
       answer:
-        'Güneş koruyucu teorik olarak deride D vitamini üretimini azaltabilir; ancak gerçek yaşamda ne kadar D vitamini sentezlendiğini yalnızca “güneşte kaldım” diyerek tahmin edemeyiz. Mevsim, günün saati, ten rengi, yaş, açıkta kalan deri alanı ve bulunulan coğrafya sonucu belirgin biçimde değiştirir. Bu nedenle D vitamini için özellikle korumasız güneşlenmeyi önermem; cilt kanseri riskini artırmadan beslenme ve gerektiğinde takviye ile ihtiyacı karşılamak daha güvenlidir.',
+        'Güneş koruyucu teorik olarak deride D vitamini üretimini azaltabilir, ancak gerçek yaşamda ne kadar D vitamini sentezlendiğini yalnızca “güneşte kaldım” diye tahmin edemeyiz. Mevsim, saat, ten rengi, yaş, açıkta kalan deri alanı ve coğrafya sonucu ciddi biçimde değiştirir. Bu nedenle D vitamini için özellikle korumasız güneşlenmeyi önermem; cilt kanseri riskini artırmadan beslenme ve gerektiğinde takviye ile ihtiyacı karşılamak daha güvenlidir.',
     },
     {
       question: 'D vitamini desteğinde asıl risk eksiklik değil, gereksiz yüksek doz olabilir mi?',
