@@ -49,3 +49,12 @@ Genel meta soruya yakın SSS 5 ("Karar verirken en önemli soru nedir?") kaldır
 ## 1 Ekim 2026 — SSS 4 düzeltmesi (onaylandı)
 
 "Her büyük göğüs ameliyat gerektirir mi?" gövdedeki "Her büyük meme sorun yaratmaz" cümlesini ve cerrahi dışı seçenekler bölümünü tekrar ediyordu. Yerine "Meme küçültme ameliyatından sonra ne zaman egzersize dönebilirim?" geldi. Yanıt, Çağrı Sade'nin risk/iyileşme yanıtındaki ve gövdedeki onaylı sürelere dayanıyor: günlük etkinlikler birkaç hafta, ağır egzersiz ve yük kaldırma için yaklaşık altı hafta, son şekil daha uzun; kişisel takvimi cerrah belirler. Yeni tıbbi iddia eklenmedi. Onay (1 Ekim 2026): “çağrı onayı tamam. tıbbi onay tamam” — SSS 4 değişikliği için ayrı teyit.
+
+## 1 Ekim 2026 — Dış değerlendirme rötuşu (onaylandı)
+
+Dış değerlendirme, `763560bb` öncesindeki eski sürümü okumuştu; alıntıladığı cümlelerden yalnızca "Her büyük meme sorun yaratmaz" güncel metinde vardı. Güncel metne uyan iki öneri uygulandı:
+
+1. "Değerlendir-" kökü özet ve gövdede 15 → 10. Kalan 10 kullanım Çağrı Sade'nin üç gerçek yanıt bölümünde; bunlara dokunulmadı. Değişenler: Kısa Klinik Yanıt'ta iki fiil ("ele alındıktan", "tartılarak"), Evidence 4 cümlesinde fiil ("göz önüne alınır" — iddia ve kanıt etiketi aynı), H2 "Değerlendirmeye Hazırlanırken" → "Görüşmeye Hazırlanırken", H2 "Meme Küçültmeyi Değerlendirmeye Değer Kılan Yakınmalar" → "Meme Küçültmeyi Gündeme Getiren Yakınmalar" (id korundu; TOC etiketi güncellendi), "kişisel değerlendirmenin" → "sizi muayene eden hekimin görüşünün".
+2. Hazırlık listesi 6 → 4 madde ve uzunlukları çeşitlendirildi. Çevre yorumu maddesi, hemen altındaki "yaptır, rahatlarsın" paragrafıyla çakıştığı için çıkarıldı; görünüm beklentisi maddesi "Ameliyattan sonra gününüzde en çok neyin değişmesini istersiniz?" oldu.
+
+Yeni tıbbi iddia yok. Onay (1 Ekim 2026): “çağrı onayı tamam. tıbbi onay tamam” — bu rötuş için ayrı teyit.

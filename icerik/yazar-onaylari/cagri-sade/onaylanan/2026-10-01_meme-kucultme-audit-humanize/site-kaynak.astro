@@ -34,7 +34,7 @@ const tocEntries = [
   { id: 'menopoz-sonrasi-yuk', label: 'Ağırlık nasıl hissedilir?' },
   { id: 'estetikten-fazlasi', label: 'Hareket ve rahatlık' },
   { id: 'karar-sorulari', label: 'Görüşmeye hazırlık' },
-  { id: 'ameliyat-degerlendirmesi', label: 'Değerlendirme ölçütleri' },
+  { id: 'ameliyat-degerlendirmesi', label: 'Ameliyatı gündeme getiren yakınmalar' },
   { id: 'cerrahi-disi', label: 'Cerrahi dışı seçenekler' },
   { id: 'risk-iyilesme', label: 'Riskler ve iyileşme' },
   { id: 'daha-rahat', label: 'Kişisel beklentiler' },
@@ -104,7 +104,7 @@ const articleSchemas = buildArticleSchemas({
       />
 
       <ArticleSummary title="Kısa Klinik Yanıt">
-        <p>Büyük memeler boyun, sırt ve omuz ağrısı, tekrarlayan meme altı tahrişi veya hareket güçlüğüyle birlikte günlük yaşamı zorlaştırabilir. Meme küçültme, bu yakınmaların nedenleri ve cerrahi dışı seçenekler değerlendirildikten sonra konuşulabilecek bir ameliyattır. Karar; beklenen fayda, kişisel sağlık durumu, riskler ve iyileşme süresi birlikte ele alınarak verilir.</p>
+        <p>Büyük memeler boyun, sırt ve omuz ağrısı, tekrarlayan meme altı tahrişi veya hareket güçlüğüyle birlikte günlük yaşamı zorlaştırabilir. Meme küçültme, bu yakınmaların nedenleri ve cerrahi dışı seçenekler ele alındıktan sonra konuşulabilecek bir ameliyattır. Karar; beklenen fayda, kişisel sağlık durumu, riskler ve iyileşme süresi birlikte tartılarak verilir.</p>
       </ArticleSummary>
 
       <ArticleProsePanel>
@@ -119,15 +119,15 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="estetikten-fazlasi">Görünümün Yanında Hareket ve Rahatlık</h2>
         <p>Düğmelerinin arasında boşluk açılan bir gömlek, koşu yerine seçilen yavaş yürüyüş, sırf rahat ettiği için giyilen bol kazak. Meme küçültme düşüncesi bazen bu küçük vazgeçişlerin toplamından doğar.</p>
         <p>Görünümle ilgili beklentinizi saklamanız gerekmez; onu da bedeninizde hissettiğiniz güçlükle birlikte konuşuruz. Her büyük meme sorun yaratmaz. Her rahatsızlık da ameliyat gerektirmez.</p>
-        <p>Ameliyattan beklenen fayda kişiye göre değişir. Ağrının kesin geçeceği ya da sonucun sizi mutlaka memnun edeceği söylenemez; sağlık durumunuz, beklentiniz ve iyileşme süreciniz birlikte değerlendirilir <Evidence level={4} />.</p>
-        <h2 id="karar-sorulari">Değerlendirmeye Hazırlanırken</h2>
+        <p>Ameliyattan beklenen fayda kişiye göre değişir. Ağrının kesin geçeceği ya da sonucun sizi mutlaka memnun edeceği söylenemez; sağlık durumunuz, beklentiniz ve iyileşme süreciniz birlikte göz önüne alınır <Evidence level={4} />.</p>
+        <h2 id="karar-sorulari">Görüşmeye Hazırlanırken</h2>
         <p>Görüşmeye örneklerle gelmeniz işimizi kolaylaştırır. Ne zaman ağrı duyduğunuzu, hangi hareketlerden kaçındığınızı not edin.</p>
         <p>Aşağıdaki sorular bir karar listesi sayılmaz; yakınmalarınızı anlatmanız için bir başlangıçtır.</p>
-        <ul><li>Sırt, boyun veya omuz ağrısı günlük hayatınızı nasıl etkiliyor?</li><li>Sütyen askıları omuzlarınızda baskı veya iz bırakıyor mu?</li><li>Yürüyüş, egzersiz, uyku veya kıyafet seçimi zorlaşıyor mu?</li><li>Meme altında tahriş tekrarlıyor mu?</li><li>Görünüm ve rahatlık açısından nasıl bir değişiklik bekliyorsunuz?</li><li>Bu isteğiniz kendi ihtiyacınızdan mı geliyor, çevrenizin yorumlarından mı?</li></ul>
-        <p>Bunları dile getirmek bazen utandırabilir; yakınmanız “nasılsa estetik” diye hafife alınacakmış gibi gelebilir. Omuz ağrısını, tekrarlayan tahrişi ya da hareket etmekte zorlanmayı anlatmak için kimsenin onayını beklemeniz gerekmez. Ne zamandır sürdüğünü ve hangi destekleri denediğinizi de söyleyin. Çevrenizin “yaptır, rahatlarsın” yorumu ise kişisel değerlendirmenin yerini tutmaz.</p>
+        <ul><li>Sırt, boyun veya omuz ağrısı hangi işlerde, günün hangi saatinde artıyor?</li><li>Askılar iz bırakıyor mu, meme altında tahriş tekrarlıyor mu?</li><li>Yürümek, spor yapmak, uyumak ya da giyinmek zorlaşıyor mu?</li><li>Ameliyattan sonra gününüzde en çok neyin değişmesini istersiniz?</li></ul>
+        <p>Bunları dile getirmek bazen utandırabilir; yakınmanız “nasılsa estetik” diye hafife alınacakmış gibi gelebilir. Omuz ağrısını, tekrarlayan tahrişi ya da hareket etmekte zorlanmayı anlatmak için kimsenin onayını beklemeniz gerekmez. Ne zamandır sürdüğünü ve hangi destekleri denediğinizi de söyleyin. Çevrenizin “yaptır, rahatlarsın” yorumu ise sizi muayene eden hekimin görüşünün yerini tutmaz.</p>
         <p>Meme ölçüsü bu görüşmenin yalnızca bir parçasıdır. Cilt ve dolaşım durumu, eşlik eden hastalıklar, kullanılan ilaçlar ve yara iyileşmesi de cerrahi planlamada dikkate alınır.</p>
 
-<h2 id="ameliyat-degerlendirmesi">Meme Küçültmeyi Değerlendirmeye Değer Kılan Yakınmalar</h2>
+<h2 id="ameliyat-degerlendirmesi">Meme Küçültmeyi Gündeme Getiren Yakınmalar</h2>
 <p>Meme büyüklüğü günlük yaşamınızı belirgin biçimde zorlaştırıyorsa cerrahi seçeneği değerlendirmek anlamlı olabilir. Kararı yalnızca sütyen ölçüsüne göre vermeyiz.</p>
 <p>Sürekli boyun, sırt veya omuz ağrısı; sütyen askılarının omuzlarda bıraktığı izler; meme altında tekrarlayan pişik veya enfeksiyon ve hareket kısıtlılığı bu değerlendirmede önemlidir. Yürüyüş ya da egzersiz sırasında yaşadığınız güçlük de konuşulması gereken bir yakınmadır.<sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup></p>
 <p>Ancak menopoz sonrası ortaya çıkan her sırt veya omuz ağrısını meme ağırlığına bağlamam. Omurga ve kas-iskelet sistemi, osteoporoz, kilo artışı ve duruş gibi başka nedenleri de değerlendiririm. Önce yakınmanın hangi nedenle ilişkili olduğunu anlamak gerekir.</p>

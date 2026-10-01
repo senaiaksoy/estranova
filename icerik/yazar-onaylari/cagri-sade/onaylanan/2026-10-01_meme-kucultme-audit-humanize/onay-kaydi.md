@@ -11,3 +11,7 @@ Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu ikinci teyit, SS
 ## SSS 4 onayı — 1 Ekim 2026
 
 Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu üçüncü teyit, SSS 4 değişikliğinin (egzersize dönüş sorusu) Çağrı Sade yazar onayını ve tıbbi onayını kapsar.
+
+## Dış değerlendirme rötuşu onayı — 1 Ekim 2026
+
+Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu dördüncü teyit, "değerlendir-" azaltımı, iki H2 yeniden adlandırması ve hazırlık listesinin 4 maddeye inmesi için Çağrı Sade yazar onayını ve tıbbi onayını kapsar.

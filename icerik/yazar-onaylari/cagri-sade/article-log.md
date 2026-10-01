@@ -77,3 +77,5 @@ Kullanıcı “çağrı onayı tamam. tıbbi onay tamam” diyerek mevcut humani
 SSS 5 düzeltmesi (1 Ekim 2026, onaylandı — “çağrı onayı tamam. tıbbi onay tamam”): meta soru → HRT kullanımı sorusu; yanıt Çağrı'nın değerlendirme listesine dayanıyor, yeni tıbbi iddia yok.
 
 SSS 4 düzeltmesi (1 Ekim 2026, onaylandı — “çağrı onayı tamam. tıbbi onay tamam”): tekrar eden "her büyük göğüs ameliyat gerektirir mi" → egzersize dönüş sorusu; yanıt onaylı iyileşme sürelerine dayanıyor, yeni tıbbi iddia yok.
+
+Dış değerlendirme rötuşu (1 Ekim 2026, onaylandı — “çağrı onayı tamam. tıbbi onay tamam”): "değerlendir-" 15 → 10 (Çağrı bölümleri korundu), iki H2 yeniden adlandırıldı, hazırlık listesi 6 → 4. Yeni tıbbi iddia yok.
