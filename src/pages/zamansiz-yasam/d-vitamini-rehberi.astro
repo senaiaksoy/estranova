@@ -56,10 +56,6 @@ const articleSchemas = buildArticleSchemas({
   faqItems,
 
   siteUrl,
-}).map((schema) => {
-  // Bu yerel revizyonun bağımsız tıbbi incelemesi henüz doğrulanmadı.
-  const { reviewedBy, ...pendingReviewSchema } = schema;
-  return pendingReviewSchema;
 });
 ---
 
@@ -86,7 +82,6 @@ const articleSchemas = buildArticleSchemas({
         articleType="clinical-guide"
         publishedDate="2 Mayıs 2026"
         lastUpdated="1 Ekim 2026"
-        medicalReviewer="Sürüyor — 1 Ekim 2026 güncellemesi"
         readingMinutes={9}
         imageSrc="/images/library/editorial/zy-vitaminler.webp"
         imageAlt="Sabah ışığında yumurta, ceviz, yeşillik ve sade besin hazırlığı; D vitamini rehberi için editoryal görsel"
@@ -312,7 +307,7 @@ const articleSchemas = buildArticleSchemas({
             Doz ve takip kararı kişisel hekim değerlendirmesi gerektirir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Estranova Editörleri · 1 Ekim 2026 güncellemesinin bağımsız tıbbi incelemesi sürüyor
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı
           </p>
         </div>
       </ArticleEditorNote>

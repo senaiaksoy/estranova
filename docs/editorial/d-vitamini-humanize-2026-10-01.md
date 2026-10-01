@@ -62,3 +62,7 @@ Dr. Aksoy, Codex turunun denetim bulgularını okuduktan sonra tüm düzeltmeler
 - **Görünür inceleme dili:** "Yerel editoryal revizyon" ve "İnceleme Bekliyor" ifadeleri kaldırıldı. İmza "Estranova Editörleri · 1 Ekim 2026 güncellemesinin bağımsız tıbbi incelemesi sürüyor" oldu. Yazar kutusunda "Bilimsel inceleme: Sürüyor — 1 Ekim 2026 güncellemesi" yazıyor. Şemada `reviewedBy` alanı, inceleme tamamlanana kadar boş kalmaya devam ediyor.
 - **Açık iş:** Dr. Alper Mumcu incelemesi bekleniyor. İnceleme tamamlanınca editör notu imzası ve `reviewedBy` geri konacak.
 - **Kapsam dışı (değişmedi):** Sayfa hero'yu makale yolundan okuyor (`submenuHeroByRoute['/zamansiz-yasam/d-vitamini-rehberi/']`); kural üst hub hero'sudur. Bu durum önceden de vardı.
+
+## Bağımsız tıbbi inceleme kapandı (1 Ekim 2026)
+
+Dr. Aksoy, Dr. Alper Mumcu'nun onay verdiğini bildirdi ("Mumcu onayladı, imzayı geri koy"). Onay KC beyanıdır; yazılı inceleme notu yoktur. Kapsadığı sürüm `78f534c5` olarak kaydedildi. Bilimsel Editör Notu imzası Dr. Alper Mumcu oldu. Yazar kutusu varsayılan inceleyiciye döndü. Sayfada `reviewedBy` alanını çıkaran kod kaldırıldı ve şema yeniden Mumcu'yu inceleyici olarak taşıyor.

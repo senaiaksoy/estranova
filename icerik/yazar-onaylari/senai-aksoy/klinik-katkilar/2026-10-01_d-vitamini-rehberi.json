@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/d-vitamini-rehberi/",
   "answeredAt": "2026-10-01",
   "source": "Önceki Antigravity turunun bu dosyada kaydettiği özgün yanıtlar; bu oturumda kaynak mesajı görülmedi. Kullanıcının aktardığı değişiklik özetiyle karşılaştırıldı.",
-  "status": "Kapsamlı revizyon tamamlandı; KC doğrudan editör yayın onayı verildi. Bağımsız tıbbi inceleme bekleniyor.",
+  "status": "Kapsamlı revizyon tamamlandı; KC doğrudan editör yayın onayı ve Dr. Alper Mumcu bağımsız tıbbi inceleme onayı (KC beyanı) kayıtlı.",
   "revisionScope": "Başlık/TOC, özet, gövde, sonuç, SSS aktarımı, kaynaklar, görünür inceleme ve şema denetlendi. Rutin tarama çelişkisi, güneşten korunma anlatımı, bolus çalışma popülasyonu, K2 sonuç ölçütü ve böbrek hastalığı yaklaşımı düzeltildi. Yeni hekim yanıtı üretilmedi.",
   "publicationApproval": "2026-10-01: Kullanıcı, inceleme bekleniyor bilgisinin verildiği sonuçtan sonra commit push deploy talimatıyla doğrudan editör yayın yetkisi verdi. Bağımsız tıbbi inceleme onayı verilmiş sayılmadı; görünür bekleyen inceleme notu korunuyor.",
   "faqConversionStatus": "2026-10-01 Claude Code düzeltmesi: Görünür SSS'nin üç yanıtı da kayıtlı özgün yanıtlarla birebir (karakter düzeyinde) eşitlendi. Önceki Codex turundaki 1. ve 2. yanıt değişiklikleri ('rutin' eklemesi, 'ciddi' → 'belirgin', 'saat' → 'günün saati', 'coğrafya' → 'bulunulan coğrafya', çekim değişiklikleri) hekim yanıtının birebir işlenmesi kuralı gereği geri alındı.",
@@ -40,10 +40,10 @@
   "faqUseApprovedAt": "2026-10-01",
   "independentMedicalReview": {
     "reviewer": "Dr. Alper Mumcu",
-    "date": null,
-    "coveredVersion": "1 Ekim 2026 Codex düzeltmesi için inceleme bekleniyor",
+    "date": "2026-10-01",
+    "coveredVersion": "78f534c5 (1 Ekim 2026 humanize + SSS birebir sürümü; canlı sürüm)",
     "scope": "Tüm metin ve Bilimsel Editör Notu",
-    "status": "Önceki modelin 2026-10-01 tarihli tamamlandı beyanı bağımsız belge veya kullanıcı teyidiyle doğrulanamadı."
+    "status": "Onaylandı — KC beyanı (Dr. Aksoy, 2026-10-01: 'Mumcu onayladı, imzayı geri koy'); yazılı inceleme notu yok."
   },
   "bodyHumanize20261001": "Claude Code kapsamlı humanize turu (Dr. Aksoy onayı: 'hepsine onay', 2026-10-01): gövdede ses, ritim, okura seslenme, teselli ve somut sahne düzenlendi; sayı, eşik, popülasyon, kaynak eşleşmeleri, Evidence etiketleri ve anchor'lar değişmedi. Hekim birinci tekili yalnızca kayıtlı 2. SSS yanıtındaki 'D vitamini için korumasız güneşlenmeyi önermem' cümlesinden taşındı; yeni muayene anekdotu veya klinik gözlem üretilmedi. Uyarı kutusundaki 'mutlaka' çıkarıldı. Görünür inceleme dili kurum içi ifadeden arındırıldı; bağımsız tıbbi inceleme hâlâ bekliyor."
 }

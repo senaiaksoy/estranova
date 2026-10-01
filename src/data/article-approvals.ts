@@ -351,7 +351,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/d-vitamini-rehberi/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-10-01',
-    note: 'Önceki prelaunch envanter onayı: 2026-05-04. KC editör doğrudan onayı — 2026-10-01 — kapsamlı humanize ve kaynak düzeltmesi sonrası kullanıcı commit push deploy talimatı verdi. Bağımsız tıbbi incelemenin beklediği önceki sonuçta bildirildi; görünür bekleyen inceleme notu korunarak yayın yetkisi kaydedildi. Bu talimat Dr. Alper Mumcu incelemesinin tamamlandığına dair teyit değildir. Klinik katkı kaydı: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-01_d-vitamini-rehberi.json. İkinci tur (2026-10-01): gövde humanize + SSS 1–2 kayıtlı özgün yanıtlara birebir dönüş; Dr. Aksoy doğrudan onayı (“hepsine onay”). Bağımsız tıbbi inceleme hâlâ bekliyor.',
+    note: 'Önceki prelaunch envanter onayı: 2026-05-04. KC editör doğrudan onayı — 2026-10-01 — kapsamlı humanize ve kaynak düzeltmesi sonrası kullanıcı commit push deploy talimatı verdi. Bağımsız tıbbi incelemenin beklediği önceki sonuçta bildirildi; görünür bekleyen inceleme notu korunarak yayın yetkisi kaydedildi. Bu talimat Dr. Alper Mumcu incelemesinin tamamlandığına dair teyit değildir. Klinik katkı kaydı: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-01_d-vitamini-rehberi.json. İkinci tur (2026-10-01): gövde humanize + SSS 1–2 kayıtlı özgün yanıtlara birebir dönüş; Dr. Aksoy doğrudan onayı (“hepsine onay”). Dr. Alper Mumcu bağımsız tıbbi inceleme onayı: 2026-10-01, 78f534c5 sürümü (KC beyanı; yazılı not yok).',
   },
   {
     pathname: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
