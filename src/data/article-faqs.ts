@@ -126,7 +126,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Meme küçültme yalnızca estetik bir işlem midir?',
       answer:
-        'Hayır. Bazı kadınlarda beden konforu ve günlük yaşam dengesiyle ilişkili bir cerrahi seçenek olarak değerlendirilebilir. Ancak bu, işlemin herkese uygun olduğu anlamına gelmez; kişisel tıbbi değerlendirme gerekir.',
+        'Hayır. Bazı kadınlarda asıl amaç görünümden çok ağrıyı, meme altı tahrişini veya hareket güçlüğünü azaltmaktır. Ancak bu, işlemin herkese uygun olduğu anlamına gelmez; kişisel tıbbi değerlendirme gerekir.',
     },
     {
       question: 'Meme küçültme ameliyatından sonra ne zaman egzersize dönebilirim?',

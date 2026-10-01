@@ -15,3 +15,7 @@ Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu üçüncü teyit
 ## Dış değerlendirme rötuşu onayı — 1 Ekim 2026
 
 Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu dördüncü teyit, "değerlendir-" azaltımı, iki H2 yeniden adlandırması ve hazırlık listesinin 4 maddeye inmesi için Çağrı Sade yazar onayını ve tıbbi onayını kapsar.
+
+## İkinci dış değerlendirme mikro rötuşu onayı — 1 Ekim 2026
+
+Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu beşinci teyit, kapanış cümlesi ve SSS 3 yanıtı değişikliği için Çağrı Sade yazar onayını ve tıbbi onayını kapsar.

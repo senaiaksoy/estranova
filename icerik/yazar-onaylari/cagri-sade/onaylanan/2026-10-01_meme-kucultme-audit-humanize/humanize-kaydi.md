@@ -58,3 +58,12 @@ Dış değerlendirme, `763560bb` öncesindeki eski sürümü okumuştu; alıntı
 2. Hazırlık listesi 6 → 4 madde ve uzunlukları çeşitlendirildi. Çevre yorumu maddesi, hemen altındaki "yaptır, rahatlarsın" paragrafıyla çakıştığı için çıkarıldı; görünüm beklentisi maddesi "Ameliyattan sonra gününüzde en çok neyin değişmesini istersiniz?" oldu.
 
 Yeni tıbbi iddia yok. Onay (1 Ekim 2026): “çağrı onayı tamam. tıbbi onay tamam” — bu rötuş için ayrı teyit.
+
+## 1 Ekim 2026 — İkinci dış değerlendirme mikro rötuşu (onaylandı)
+
+Değerlendirici bu kez güncel metni okudu (AI izi tahmini %10–15). Önerdiği iki rötuş, kendi alternatifleri birebir alınmadan uygulandı:
+
+1. Kapanış: "Karar sizin bedeninizde yaşanacak. Acele etmeden verilmeyi hak ediyor." → "Bu karar için acele etmenize gerek yok." Önerilen alternatif, önceki cümledeki fayda/risk/iyileşme üçlüsünü tekrar ettiği ve "değerlendir-" kökünü geri getirdiği için kullanılmadı.
+2. SSS 3: "beden konforu ve günlük yaşam dengesiyle ilişkili bir cerrahi seçenek olarak değerlendirilebilir" → "asıl amaç görünümden çok ağrıyı, meme altı tahrişini veya hareket güçlüğünü azaltmaktır". Önerilen alternatifteki "X değil, Y" yapısı kullanılmadı.
+
+Yeni tıbbi iddia yok. Onay (1 Ekim 2026): “çağrı onayı tamam. tıbbi onay tamam” — bu rötuş için ayrı teyit.
