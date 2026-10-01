@@ -842,7 +842,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
     title: 'Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor',
-    description: 'Hekim-hasta ilişkisinin yıllar içinde nasıl olgunlaştığına dair kişisel notlar. Modern kadının menopoz takibinde dört doktor profili karşısındaki arayışı, paydaş karar verme ve etik bir mesafenin önemi.',
+    description: 'Eşi hekim olan Berna Aksoy’dan menopoz takibinde dinlenmek, birlikte karar vermek ve aile ile hekimlik arasındaki sınır üzerine kişisel notlar.',
     publishedDate: '29 Nisan 2026',
     writerSlug: 'berna-aksoy',
     section: 'Hormonal Geçiş',

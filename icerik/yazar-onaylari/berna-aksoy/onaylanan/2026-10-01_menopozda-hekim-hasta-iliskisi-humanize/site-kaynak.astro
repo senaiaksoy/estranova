@@ -1,0 +1,279 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/']!;
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor';
+const seoTitle = 'Menopozda Hekim–Hasta İlişkisi';
+const articleDescription =
+  'Eşi hekim olan Berna Aksoy’dan menopoz takibinde dinlenmek, birlikte karar vermek ve aile ile hekimlik arasındaki sınır üzerine kişisel notlar.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'berna-aksoy',
+  articleType: 'experience-essay',
+  publishedDate: '29 Nisan 2026',
+  modifiedDate: '1 Ekim 2026',
+  pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/menopoz/',
+  keywords: [
+    'menopoz',
+    'hekim seçimi',
+    'hekim-hasta ilişkisi',
+    'HRT',
+    'paydaş karar verme',
+    'shared decision making',
+    'menopoz takibi',
+    'hormon tedavisi',
+    'jinekolog',
+  ],
+
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title="Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleAuthorBlock
+        authorSlug="berna-aksoy"
+        articleType="experience-essay"
+        publishedDate="29 Nisan 2026"
+        lastUpdated="1 Ekim 2026"
+        readingMinutes={7}
+        imageSrc="/images/library/editorial/hg-menopozda-hekim-hasta-iliskisi.webp"
+        imageAlt="Sabah ışığında mutfakta güne hazırlanan kadın; menopozda hekim-hasta ilişkisi yazısı için editoryal görsel"
+      />
+
+      <ArticleSummary title="Bu yazıya başlarken">
+        <p>
+          Eşim jinekolog, ama beni takip eden hekim başka biri; üstelik arkadaş çevremizden.
+          Bu ayrıcalıklı konumdan bakarken herkesin muayene deneyimini bildiğimi söyleyemem.
+          Çevremdeki kadınları dinledikçe kendime şu soruyu soruyorum: menopoz takibinde bir hekimden ne bekliyoruz?
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel mode="experience">
+        <h2 id="eski-resim">Hekimin Sözü Son Sözken</h2>
+        <p>
+          Annemin hekimle kurduğu ilişkiyi düşündüğümde, en çok sormadığı sorular aklıma geliyor.
+          Hekimin sözüne güvenirdi; kendi hissettiğini anlatmaya ise aynı rahatlıkla başlayamazdı.
+        </p>
+        <p>
+          Annemden ve teyzelerimden duyduklarımda hekim konuşur, hasta dinleyip uygulardı.
+          Sorular varsa da çekinerek sorulurdu. Bir şikâyet için geçer ya da dayanılır dendiğinde,
+          konuşma çoğu zaman orada biterdi.
+        </p>
+        <p>
+          Annem kendi menopozunu neredeyse hiç soru sormadan geçirdi. Bunu bir zayıflık olarak görmüyorum.
+          Kendi şikâyetini öne çıkarmamaya alışmıştı. Hissettiği şeyin sebebini sormak bile ona kolay gelmiyordu.
+        </p>
+        <p>
+          Bugün çevremde hâlâ çok soru sormanın ayıp olacağını düşünen kadınlar var.
+          Siz de görüşmeden sonra aklınızda kalan bir soruyu söylemeye çekiniyorsanız, bu tereddüdü anlayabiliyorum.
+        </p>
+
+        <h2 id="modern-arayis">Muayeneden Önce Açılan Onca Sekme</h2>
+        <p>
+          Bir görüşmeye gitmeden önce telefonunuzda kaç farklı açıklama okumuş oluyorsunuz?
+          Bazen araştırdıkça sorular azalacağına çoğalıyor.
+        </p>
+        <p>
+          Çevremdeki kadınlar forumları okuyor, sosyal medyadaki açıklamaları karşılaştırıyor,
+          yapay zekâya soruyor, arkadaşlarıyla konuşuyor. Sonra hekime okuduklarını götürüyorlar.
+          Benim de istediğim, bu bilgileri tek tek tartabileceğim bir konuşma.
+        </p>
+        <p>
+          Bilgi çok. Hangisine güveneceğini seçmek yorucu.
+          Sosyal medyada bir akşamda okuduğum altı farklı içerik birbiriyle taban tabana zıt olabiliyor.
+          Telefonumun arama geçmişine baksam aynı hafta içinde hem "goji berry yararları" hem "goji berry zararları"
+          aradığımı görürüm. Bazen kendi telaşım da bu kalabalığı büyütüyor.
+        </p>
+        <p>
+          Bir okur yorumunda, hekiminden hem yol göstermesini hem de kendisini dinlemesini bekleyen bir kadının
+          bunun fazla bir istek olup olmadığını sorduğunu görmüştüm. Bence çok anlaşılır bir beklenti.
+          Sorunuzu sormaktan çekinmeyin. Dinlenmek istemek, hekimin bilgisine güvenmediğiniz anlamına gelmez.
+        </p>
+
+        <h2 id="dort-profil">Çevremdeki Dört Hekim Profili</h2>
+        <p>
+          Çevremdeki kadınların anlattıklarında dört farklı yaklaşım dikkatimi çekiyor.
+          Bunlar benim kişisel gözlemlerim; hekimleri sınıflandıran bir ölçüt değil.
+        </p>
+        <p>
+          <strong>Klasik otorite.</strong> Hızlı, kararlı, tartışmaya pek alan bırakmayan bir tavır.
+          Bazı kadınlar kararı hekimin vermesinden rahatlık duyuyor. Bazılarıysa sorularının yarısını
+          soramadan kalktıklarını anlatıyor. Aynı yaklaşım iki kişide bambaşka duygular bırakabiliyor.
+        </p>
+        <p>
+          <strong>Temkinli, izlemeyi tercih eden.</strong> Sonuçlar normal aralıktaysa izleyelim diyen hekim.
+          Bir arkadaşım, sonuçları normal bulunmasına rağmen kendisini iyi hissetmediğini anlatmıştı.
+          Onu yoran, hissettikleriyle tahlil kâğıdı arasındaki farkı konuşamamalarıydı.
+          Sonunda başka bir hekime gitti.
+        </p>
+        <p>
+          <strong>Bilgiyi sunup seçimi hastaya bırakan.</strong> Seçenekleri ayrıntısıyla anlatan, broşürler veren
+          yaklaşım. Daha çok bilgi isteyen biri için yararlı. Ama zaten açıklamalar arasında yorulmuşsanız,
+          seçimin size bırakılması yalnızlık hissi de verebilir. Hekimin o seçenekleri sizinle birlikte tartmasına
+          ihtiyaç duyabilirsiniz.
+        </p>
+        <p>
+          <strong>Birlikte düşünen.</strong> Seçenekleri anlatırken hastanın ne hissettiğini ve neyi önemsediğini
+          de soran hekim. Çevremde bu yaklaşımı arayan kadınlar var. Ben de kendime en yakın bunu buluyorum:
+          mesleki bilgiyle yol gösteren, sorulara yer açan, karar sırasında yanınızda kalan biri.
+        </p>
+        <p>
+          Siz daha kısa ve net bir açıklamayla rahat ediyor olabilirsiniz; bir başkası ayrıntı isteyebilir.
+          İletişim biçimi değişebilir. Soruların geçiştirilmesini ise kişisel tercih farkı olarak kabul etmekte zorlanıyorum.
+        </p>
+
+        <h2 id="esim-hekim">Eşim Hekim ama Hekimim Değil</h2>
+        <p>
+          Eşim yakınlarını takip etmenin hekimlik tarafsızlığını zedeleyebileceğini düşünür.
+          Benim kontrollerimi de güvendiği bir meslektaşına devretti; bu sınıra saygı duyuyorum.
+        </p>
+        <p>
+          Asıl hekimim aynı zamanda arkadaş çevremizden biri. Kontrole gittiğimde bekleme salonunda beklemiyorum;
+          sohbet havasında karşılanıyorum. Bunun sağladığı kolaylığı inkâr edemem.
+          Sırasını beklerken kaygılanan bir kadının deneyimini kendi yaşamışlığım gibi anlatamam.
+        </p>
+        <p>
+          Evdeyse sağlık konuları sık sık mutfak masasına geliyor. Akşam yemeğinde söylenen bir cümle,
+          kafamdaki bir soruya başka açıdan bakmamı sağlayabiliyor. Ama bu sohbet muayene yerine geçmiyor.
+          Sağlığımla ilgili kararları beni takip eden hekimle konuşuyorum.
+        </p>
+        <p>
+          Tıbbi terimlere ve soru sorma alışkanlığına ulaşmak benim için daha kolay oldu.
+          Çevremdeki kadınlar aynı bilgiyi araştırarak, okuyarak, görüşmelerde kendilerine yer açarak edinmeye çalışıyor.
+          Onları dinlerken aramızdaki bu farkı aklımda tutuyorum.
+        </p>
+        <p>
+          Bu kolaylıklar olmasaydı nasıl bir hekim arardım? Büyük ihtimalle birlikte düşünebileceğim birini.
+          Ama o arayışın yoruculuğunu tam olarak tartamıyorum. Bilmediğim bir alan var.
+          Belki siz, bir görüşmeden diğerine giderken neyi aradığınızı benden çok daha iyi biliyorsunuz.
+        </p>
+        <p>
+          İkinci görüş almak da eşimle aramızda bir tartışma konusu olmadı; zaten beni takip eden hekim o değil.
+          Böyle bir ihtiyaç olursa ev sofrasından bağımsız karar verebilirim.
+          Akşam yemeğinde bugün hekimime ne sorduğum sorulduğunda bazen bilerek cevap vermiyorum.
+          Bu küçük özerklik alanı evde bir aile şakasına da dönüştü.
+        </p>
+
+        <h2 id="annenin-paradoksu">Annemin Kendisi İçin Sormadığı Sorular</h2>
+        <p>
+          Annem kendi sağlığı söz konusu olduğunda sessizken, aileden birinin görüşmesinde en çok soruyu soran kişi olabiliyordu.
+          Bu farkı uzun süre anlayamadım.
+        </p>
+        <p>
+          Bir yakını için açıklama istemek, gerekirse itiraz etmek ona doğal geliyordu.
+          Kendi menopozundan söz etmek ise zordu. Sonradan bunu tutarsızlıktan çok,
+          başkasını gözetmeye alışmış olmasıyla ilişkilendirdim. Kendisi için aynı rahatlıkla konuşamıyordu.
+        </p>
+        <p>
+          Çevremde bugün de yakınının sağlığı için her ayrıntıyı sorup kendi görüşmesinde susan kadınlar var.
+          Siz de bu farkı kendinizde görüyorsanız, başkası için sorduğunuz bir soruyu kendiniz için sormayı düşünmek
+          iyi bir başlangıç olabilir. Benim annemden kalan sorum bu.
+        </p>
+
+        <h2 id="kendi-yolumdan-notlar">Kendi Yolumdan Notlar</h2>
+        <p>
+          Arkadaşlarımdan ve okurlardan gelen bu soruların yanına kendi notlarımı koyuyorum.
+          Bunlar hekim seçimi için bir reçete değil; bir ilişkiden ne beklediğimi anlamama yardım eden düşünceler.
+        </p>
+        <p>
+          <strong>Hekim seçerken neye bakmalıyım?</strong> Ben, zaman içinde güven kurabileceğim,
+          sorularımı geçiştirmeyen birini arardım. İkinci görüş almak istediğimde bunu rahatça söyleyebilmek de benim için önemli.
+          Başka bir meslektaşa danışma isteğimi konuşabilmek isterim.
+        </p>
+        <p>
+          <strong>Dört profil arasından nasıl seçim yapmalıyım?</strong> Bu dört yaklaşımın herkes için geçerli olduğunu söyleyemem.
+          Ama ne kadar ayrıntı istediğinizi, karar sırasında nasıl bir yardıma ihtiyaç duyduğunuzu düşünmek yararlı olabilir.
+          Beklentileriniz zamanla da değişebilir.
+        </p>
+        <p>
+          <strong>Hekimim "her şey normal" diyor ama ben kendimi iyi hissetmiyorsam?</strong>
+          Ben, normal aralık derken hangi sonuçtan söz edildiğini ve bunun şikâyetimle ilişkisini sormak isterdim.
+          Ne hissettiğinizi, hangi saatlerde ve ne sıklıkta ortaya çıktığını anlatabilmek konuşmayı somutlaştırabilir.
+          Şikâyetiniz sürüyorsa bunu yeniden hekimle görüşmek gerekir; buradan bir tahlili yorumlamak mümkün değil.
+        </p>
+        <p>
+          <strong>Hormon tedavisi konusunda hekimimden ne beklemeliyim?</strong> Benim beklentim,
+          seçenekleri ve fayda-risk dengesini anlamama yardım etmesi. Endişelerimi söyleyebileceğim,
+          kararı birlikte değerlendirebileceğimiz bir konuşma isterim. Hangi tedavinin uygun olduğuna ilişkin
+          değerlendirme ise kişisel sağlık geçmişimle birlikte yapılmalı.
+        </p>
+
+        <h2 id="kapanis">Bir Sonraki Görüşmede</h2>
+        <p>
+          Benim için güven, bir sonraki görüşmede aklımdaki soruyu rahatça sorabileceğimi bilmekle ilgili.
+        </p>
+        <p>
+          Eşimin hekim olması pek çok şeyi kolaylaştırıyor; yine de kendi hekimimle kurduğum ilişkinin yerini almıyor.
+          Çevremdeki kadınları dinledikçe, aynı görüşmeden ne kadar farklı beklentilerle çıkılabildiğini görüyorum.
+        </p>
+        <p>
+          Sizin için belki kısa bir açıklama, belki bir seçeneğin daha ayrıntılı konuşulması önemli.
+          Benim aklımda kalan soru şu: bu hekimle bir sonraki görüşmede, bugün söyleyemediğim şeyi konuşabilir miyim?
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+        ]}
+      />
+
+      <MedicalContextNote>
+        <p>
+          Menopoz takibinde ortak karar verme, seçeneklerin olası faydaları, riskleri ve kişinin önceliklerinin
+          hekimle birlikte değerlendirilmesidir. Hormon tedavisi kararı da sağlık geçmişi ve kişisel tercihler
+          dikkate alınarak ele alınır. Karara katılmak, tıbbi değerlendirme sorumluluğunu hastanın tek başına taşıması değildir.
+        </p>
+        <p>
+          Hekimlerin yakın aile üyelerini tedavi etmesi; tarafsızlık, mahremiyet ve kişinin rahatça tercih belirtmesi
+          açısından güçlükler yaratabilir. Genel etik yaklaşım, bu bakımı başka bir hekimin üstlenmesidir;
+          acil durumlar veya kısa süreli küçük sorunlar gibi sınırlı istisnalar bulunabilir.
+        </p>
+      </MedicalContextNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

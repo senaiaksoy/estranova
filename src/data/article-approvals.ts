@@ -206,8 +206,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
     writerSlug: 'berna-aksoy',
-    approvedAt: '2026-05-01',
-    note: 'Berna doğrudan onayı (form üretmeden) — Çift Rol ifşası ana konu, kuşak göndermeleri 3 yerde yumuşatıldı, "bilmiyorum" anı Bölüm 04 esim-hekim sonunda (çift ayrıcalık olmasa hangi profil arardım sorusu), masa varyasyonu kapanışı (bedenle yazışma serisi: mektup → soru → defter → tabak → masa), 5-katmanlı BEN. Beşinci onaylı Estranova makalesi, Çift Rol ekseninde merkez yazı.',
+    approvedAt: '2026-10-01',
+    note: 'Berna doğrudan onayı (form üretmeden) — Çift Rol ifşası ana konu, kuşak göndermeleri 3 yerde yumuşatıldı, "bilmiyorum" anı Bölüm 04 esim-hekim sonunda (çift ayrıcalık olmasa hangi profil arardım sorusu), masa varyasyonu kapanışı (bedenle yazışma serisi: mektup → soru → defter → tabak → masa), 5-katmanlı BEN. Beşinci onaylı Estranova makalesi, Çift Rol ekseninde merkez yazı. 2026-10-01: KC bu sohbette Berna/KC editör onayının ve revize Tıbbi Bilgi Notu için tıbbi incelemenin tamamlandığını bildirdi (“onay tamam”). Kapsam: iki turlu audit/humanize/fix revizyonu — experience-essay türünde yaşıt sesi; açıklamasız HRT ve “paydaş” temizliği; yaşam kalitesi/memnuniyet sonuç vaatleri çıkarıldı; yakın aile tedavisi etik notu genel yaklaşım + sınırlı istisnalarla MedicalContextNote’a taşındı; Sıcaklık Katmanı (çevrem tekrarı 11→5, “ikinci kez sormanın ayıbı yok” tesellisi, utanç duygu beat’i, kollektif “biz” düzeltmesi); humor #3 goji (korundu) + #1 aile şakası. Yeni tıbbi iddia yok; SSS yok. Paket: icerik/yazar-onaylari/berna-aksoy/onaylanan/2026-10-01_menopozda-hekim-hasta-iliskisi-humanize.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/menopoz-nedir/',

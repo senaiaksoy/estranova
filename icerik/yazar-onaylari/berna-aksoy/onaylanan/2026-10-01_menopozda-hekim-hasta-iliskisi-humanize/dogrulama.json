@@ -1,0 +1,33 @@
+{
+  "h1": 1,
+  "anchors_preserved": true,
+  "duplicate_ids": [],
+  "broken_local_fragments": [],
+  "types": [
+    "WebSite",
+    "NewsMediaOrganization",
+    "Person",
+    "Article",
+    "BreadcrumbList"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Berna Aksoy",
+    "jobTitle": "Yönetici Editör / Ana Yazar",
+    "description": "Kurumsal hayatın ardından kendi işini kurmuş, kararlarını aceleyle değil veriyle veren bir yönetici. Estranova'da yayın çizgisini, içerik önceliklerini ve önleyici sağlık başlıklarını şekillendiriyor. Telaşı sevmeyen, resmi sadeleştirip okura yön duygusu veren bir yaşıt.",
+    "image": "https://estranova.com/images/writers/berna-aksoy.webp",
+    "url": "https://estranova.com/yazarlar/berna-aksoy/"
+  },
+  "datePublished": "2026-04-29",
+  "dateModified": "2026-10-01",
+  "description_matches_schema": true,
+  "new_opening_in_built_html": true,
+  "note_once": true,
+  "live": {
+    "status": 200,
+    "h1": 1,
+    "new_opening_present": false,
+    "old_opening_present": true,
+    "note_direct_effect_claim_present": true
+  }
+}
