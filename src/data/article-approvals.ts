@@ -302,8 +302,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: production route ve static article metadata dogrulandi; current Senai signature ile approval kaydi eklendi.',
+    approvedAt: '2026-10-01',
+    note: 'Prelaunch inventory reconciliation (2026-05-04): production route ve static article metadata dogrulandi; current Senai signature ile approval kaydi eklendi. 2026-10-01: Codex audit/humanize revizyonu (beş gerçek Dr. Aksoy SSS yanıtı, kaynak 1–10 düzeltmeleri, Bilimsel Editör Notu) ve Claude kontrol turu (H2 lede, pH cümlesi, pelvik taban fizyoterapisi + kaynak 11) için Dr. Alper Mumcu bağımsız tıbbi inceleme onayı verdi (KC bildirimi, 2026-10-01; yazılı not repoda değil). Aynı revizyonu KC editör/yazar Dr. Senai Aksoy da doğrudan onayladı (KC bildirimi, 2026-10-01). Aynı gün ikinci tur: Dr. Aksoy’un üç gerçek gövde yanıtı (belirtiler, lokal-sistemik, lazer), kaynak 12 (Lumowa 2026, PMID 42530648) ve Dr. Aksoy’un istediği biyopsi cümlesi düzeltmesi; bu tur için de KC editör/yazar Dr. Senai Aksoy ve Dr. Alper Mumcu onayı verildi (KC bildirimi, 2026-10-01; Mumcu yazılı notu repoda değil). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-01_mahrem-bolge-degisimleri-menopoz.json. Bu kayıt commit/push/deploy yetkisi değildir.',
   },
   {
     pathname: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',

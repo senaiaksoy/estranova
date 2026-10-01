@@ -711,29 +711,29 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': [
     {
-      question: 'Lokal vajinal östrojen ne kadar sürede etki gösterir?',
+      question: 'Lokal vajinal östrojenin etkisi ne kadar sürede hissedilir?',
       answer:
-        'Lokal östrojenin tipik kullanım rejimi başlangıçta 2 hafta günlük, sonra haftada 2 gün idame; belirgin iyileşme genellikle 4-12 hafta içinde fark ediliyor. Bazı kadınlarda ilk değişiklik daha erken hissedilir, tam doku iyileşmesi birkaç ayı bulabilir. Sürdürülen bir plandır; bırakıldığında belirtiler 1-3 ay içinde geri dönebilir.',
+        'Bazı kadınlar ilk 2–4 hafta içinde kuruluk, yanma ve ilişki sırasında rahatsızlıkta azalma hisseder. Dokuların toparlanması ve tam etkinin ortaya çıkması ise 2–3 ayı bulabilir. GSM kronik bir durum olduğu için tedavi kesildiğinde belirtiler zamanla yeniden ortaya çıkabilir.',
     },
     {
-      question: 'Meme kanseri öykülü kadında lokal östrojen kullanılabilir mi?',
+      question: 'Meme kanseri geçmişi olan kadınlarda lokal östrojen kullanılabilir mi?',
       answer:
-        'Meme kanseri öyküsü olan kadında lokal östrojen kararı onkolog ve jinekolog ortak değerlendirmesi gerektirir. Hormon reseptörü durumu ve tedavi öyküsü hesaba katılarak karar verilir; bazı durumlarda hormon dışı seçenekler öncelik kazanabilir.',
+        'Meme kanseri öyküsünde önce nemlendirici, kayganlaştırıcı ve hyalüronik asit gibi hormon dışı seçenekleri denerim. Bunlar yetersiz kalırsa düşük doz lokal vajinal östrojen yarar ve riskler konuşularak değerlendirilebilir. Tamoksifen kullananlarda bu seçeneği daha rahat tartışabilirim; aromataz inhibitörü kullananlarda onkologla ortak karar vermeyi tercih ederim. Gözlemsel veriler, meme kanseri öyküsü olan kadınların genelinde düşük doz lokal vajinal östrojenin nüks riskini belirgin artırdığını göstermiyor. Ancak bu bulgu aromataz inhibitörü alanlara genellenemez: Danimarka çalışmasında genel grupta artış saptanmazken bu alt grupta artış sinyali görüldü. Özellikle aromataz inhibitörü alanlarda semptomların şiddeti, hormon dışı seçeneklerin yetersizliği ve onkolojik risk birlikte değerlendirilmelidir.',
     },
     {
-      question: 'Tekrarlayan idrar yolu enfeksiyonum var, GSM ile bağı ne?',
+      question: 'Menopozda sık tekrarlayan idrar yolu enfeksiyonlarının GSM ile ilişkisi nedir?',
       answer:
-        'Postmenopozal kadında tekrarlayan idrar yolu enfeksiyonu sıklıkla GSM’in üriner kanadıyla ilişkilidir; vajinal pH yükselmesi ve mikrobiyota değişimi koruyucu zemini zayıflatır. Sadece antibiyotik geçici rahatlama sağlasa da altta yatan zemine dokunmaz; lokal östrojen bu zemini iyileştirebilir.',
+        'Menopozla östrojen azalınca yalnızca vajina değil, üretra ve mesane çevresindeki dokular da etkilenir; epitel incelir, vajinal pH yükselir ve koruyucu laktobasiller azalır. Bu ortam bazı kadınlarda tekrarlayan idrar yolu enfeksiyonlarına yatkınlığı artırabilir. Postmenopozal dönemde tekrarlayan idrar yolu enfeksiyonu varsa GSM’yi özellikle sorgularım. Uygun hastalarda lokal vajinal östrojen enfeksiyonların tekrarını azaltmaya da yardımcı olabilir.',
     },
     {
-      question: 'Hyaluronik asit, polikarbofil veya doğal içerikli vajinal ürünler işe yarar mı?',
+      question: 'Hyalüronik asit veya polikarbofil içeren hormon dışı vajinal ürünler ne kadar etkilidir?',
       answer:
-        'Hormon dışı vajinal nemlendiriciler (hyaluronik asit veya polikarbofil bazlı) günlük konforu artırabilir; bazı kadınlarda düzenli kullanımda fayda sağlar. Özellikle hormon kullanamayan veya tercih etmeyen kadınlarda ilk basamak seçenektir.',
+        'Hyalüronik asit veya polikarbofil içeren vajinal nemlendiriciler özellikle hafif–orta derecede kuruluk, yanma ve ilişki sırasında rahatsızlıkta yararlı olabilir. Düzenli kullanıldıklarında, yalnızca ilişki sırasında kullanılan kayganlaştırıcılardan farklı olarak birkaç gün süren nemlendirme sağlarlar. Menopoz geçişindeki küçük bir karşılaştırmalı çalışmada iki ürünle de semptomlarda ve vajinal sağlık ölçütlerinde düzelme görüldü; belirgin üstünlük saptanmadı. Hyalüronik asit için 2026 tarihli bir meta-analiz postmenopozal kadınlarda kuruluk, yaşam kalitesi ve cinsel işlevde anlamlı iyileşme bildirdi; ürünler ve kullanım protokolleri arasında farklılıklar var. Küçük bir randomize çalışmada 12 haftada vajinal östrojenle benzer semptom düzelmesi görüldü. Bu sonuçlar, vajinal östrojen kadar güçlü veya uzun dönemli bir kanıt tabanı olduğu anlamına gelmez. Hormon kullanmak istemeyen, kullanamayan veya belirtileri hafif olan kadınlarda ilk seçeneklerden biri olarak düşünülebilir. Belirgin atrofi, sık idrar yolu enfeksiyonu veya ciddi ilişki ağrısında nemlendirici tek başına yetersiz kalabilir; lokal östrojen veya diğer GSM tedavileri ayrıca değerlendirilmelidir.',
     },
     {
-      question: 'Cinsel ilişkide ağrı sürekli; ne kadar süre denemeden hekime başvurmalı?',
+      question: 'Cinsel ilişkide ağrı varsa hangi belirtilerde değerlendirme ertelenmemeli?',
       answer:
-        'Lokal nemlendirici ve yağlayıcı kullanımıyla 4-6 hafta içinde belirgin fark gözlenmiyorsa jinekolog değerlendirmesi gereklidir; lokal östrojen veya pelvik taban fizyoterapisi gibi adımlar gündeme gelir.',
+        'Özellikle menopozdan sonra herhangi bir kanama, ilişki sonrası lekelenme, yeni başlayan şiddetli ağrı, kötü kokulu akıntı veya vulvada (dış genital bölgede) yeni bir yara ya da görünüm değişikliği varsa muayeneyi ertelememenizi söylerim. Kanama çok az olsa bile “sürtünmedendir” diye varsaymadan nedenine bakmak gerekir.',
     },
   ],
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': [

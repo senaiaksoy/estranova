@@ -1043,7 +1043,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
     title: 'Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM',
-    description: 'Postmenopozal kadınlarda GSM belirtileri sık görülür; oran, kullanılan tanım ve ölçüm yöntemine göre değişebilir. Lokal östrojen, günlük bakım ve doktora ne sorulmalı, sade bir rehber.',
+    description: 'Menopozda vajinal kuruluk ve idrar yolu yakınmaları GSM ile ilişkili olabilir. Belirtiler, lokal östrojenin sınırları, günlük bakım ve hekimle görüşme rehberi.',
     publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Beden & Yakınlık',

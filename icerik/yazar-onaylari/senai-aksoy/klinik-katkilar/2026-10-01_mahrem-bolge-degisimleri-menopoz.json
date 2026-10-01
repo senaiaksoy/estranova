@@ -1,0 +1,189 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/",
+  "answeredAt": "2026-09-29",
+  "source": "2026-09-29_cinsellikte-agri-menopoz.json kayıtlı güvenlik/gövde katkısı; 1 Ekim 2026 bu konuşmada verilen dört GSM yanıtı ve meme kanseri kaynak sınırı açıklaması.",
+  "status": "5/5 SSS ve üç gövde yanıtı gerçek Dr. Aksoy yanıtlarına dayanıyor. 2026-10-01 revizyonunun iki turu da KC editör/yazar ve Dr. Alper Mumcu tarafından onaylandı. Commit/push/deploy yetkisi verilmedi.",
+  "revisionScope": "Başlık/özet, tüm gövde, kapanış, ortak SSS, bilimsel not, kaynaklar, TOC/DOM, şema ve manifest incelendi. Desteksiz hasta sözü/klinik gözlem, başarı vaadi, reçete takvimi, pH eşikleri ve ağrıda bekleme yönlendirmesi düzeltildi. Görseller korundu.",
+  "publicationApproval": "İki tur için KC editör/yazar ve Dr. Alper Mumcu onayı 2026-10-01 kayıtlı. Onay commit/push/deploy yetkisi değildir.",
+  "faqConversionStatus": "Tamamlandı: beş görünür yanıt gerçek hekimin bağlama uygun cevaplarına dayanıyor; en sık nitelemesi doğrulanmadığı için Dr. Aksoy’a sorular başlığı seçildi.",
+  "faqQuestionsAsked": [],
+  "faqQuestionsRemaining": [],
+  "faqResponses": [
+    {
+      "question": "Cinsel ilişkide ağrı yaşayan bir kadında hangi belirtiler değerlendirmeyi ertelememeyi gerektirir?",
+      "answer": "Özellikle menopozdan sonra herhangi bir kanama, ilişki sonrası lekelenme, yeni başlayan şiddetli ağrı, kötü kokulu akıntı veya vulvada yeni bir yara ya da görünüm değişikliği varsa muayeneyi ertelememelerini söylerim. Kanama çok az olsa bile “sürtünmedendir” diye varsaymadan nedenine bakmak gerekir.",
+      "articleQuestion": "Cinsel ilişkide ağrı varsa hangi belirtilerde değerlendirme ertelenmemeli?",
+      "editedForArticle": "Özellikle menopozdan sonra herhangi bir kanama, ilişki sonrası lekelenme, yeni başlayan şiddetli ağrı, kötü kokulu akıntı veya vulvada (dış genital bölgede) yeni bir yara ya da görünüm değişikliği varsa muayeneyi ertelememenizi söylerim. Kanama çok az olsa bile “sürtünmedendir” diye varsaymadan nedenine bakmak gerekir.",
+      "answeredAt": "2026-09-29",
+      "useApproval": "Bağlama uygun kayıtlı gerçek yanıttan kullanım; kaynak kayıtta kullanım/onay mevcut. GSM revizyonunun son yayın ve tıbbi onayı ayrıca bekleniyor."
+    },
+    {
+      "question": "Lokal vajinal östrojenin etkisi ne kadar sürede hissedilir?",
+      "answer": "Bazı kadınlar ilk 2–4 hafta içinde kuruluk, yanma ve ilişki sırasında rahatsızlıkta azalma hisseder; fakat dokuların toparlanması ve tam etkinin ortaya çıkması 2–3 ayı bulabilir. GSM kronik bir durum olduğu için tedavi kesildiğinde belirtiler zamanla yeniden ortaya çıkabilir.",
+      "sourceUrl": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/vaginal-oestrogen/common-questions-about-vaginal-oestrogen/",
+      "editedForArticle": "Bazı kadınlar ilk 2–4 hafta içinde kuruluk, yanma ve ilişki sırasında rahatsızlıkta azalma hisseder. Dokuların toparlanması ve tam etkinin ortaya çıkması ise 2–3 ayı bulabilir. GSM kronik bir durum olduğu için tedavi kesildiğinde belirtiler zamanla yeniden ortaya çıkabilir.",
+      "sourceReview": "NHS genel sayfası üç aya kadar tam etki ve bırakınca yineleme bilgisini destekliyor; 2–4 hafta için ayrıca UHB NHS yerel östrojen hasta bilgi belgesi kontrol edildi: https://www.uhb.nhs.uk/media/mwjbacc4/pi-urogynaecology-local-oestrogen-therapy.pdf",
+      "answeredAt": "2026-10-01",
+      "useApproval": "İstenen SSS için kullanıcı tarafından verilen gerçek yanıt; yerel aktarım. Düzenlenmiş metin kullanıcıya sunuldu; yeni nihai makale/tıbbi onayı sayılmaz."
+    },
+    {
+      "question": "Meme kanseri öyküsü olan kadınlarda lokal östrojeni nasıl değerlendiririm?",
+      "answer": "Önce nemlendirici, kayganlaştırıcı ve hyalüronik asit gibi hormonal olmayan seçenekleri denerim. Bunlar yetersizse düşük doz lokal vajinal östrojen tamamen yasak bir seçenek değildir; risk–yarar konuşularak değerlendirilebilir. Tamoksifen kullananlarda bu daha rahat tartışılabilir; aromataz inhibitörü kullananlarda ise onkologla birlikte ortak karar vermeyi tercih ederim. Mevcut veriler düşük doz lokal kullanımda belirgin bir nüks artışı göstermemiş olsa da, özellikle hormon duyarlı hastalıkta kararı bireyselleştirmek gerekir.",
+      "sourceUrl": "https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2021/12/treatment-of-urogenital-symptoms-in-individuals-with-a-history-of-estrogen-dependent-breast-cancer",
+      "editedForArticle": "Meme kanseri öyküsünde önce nemlendirici, kayganlaştırıcı ve hyalüronik asit gibi hormon dışı seçenekleri denerim. Bunlar yetersiz kalırsa düşük doz lokal vajinal östrojen yarar ve riskler konuşularak değerlendirilebilir. Tamoksifen kullananlarda bu seçeneği daha rahat tartışabilirim; aromataz inhibitörü kullananlarda onkologla ortak karar vermeyi tercih ederim. Gözlemsel veriler, meme kanseri öyküsü olan kadınların genelinde düşük doz lokal vajinal östrojenin nüks riskini belirgin artırdığını göstermiyor. Ancak bu bulgu aromataz inhibitörü alanlara genellenemez: Danimarka çalışmasında genel grupta artış saptanmazken bu alt grupta artış sinyali görüldü. Özellikle aromataz inhibitörü alanlarda semptomların şiddeti, hormon dışı seçeneklerin yetersizliği ve onkolojik risk birlikte değerlendirilmelidir.",
+      "sourceReview": "ACOG seçenek/ortak karar çerçevesi ve PMID 35854422 gözlemsel Danimarka kohortu karşılaştırıldı. Genel nüks riski ile aromataz inhibitörü alt grup sinyali ayrıldı; alt grup bulgusu nedensellik kanıtı diye sunulmadı.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "Gerçek hekim yanıtı ve bu turdaki gerçek kaynak sınırı açıklamasıyla yerel SSS aktarımı. Düzenlenmiş biçim hekim incelemesine gösterildi; bağımsız tıbbi/yayın onayı ayrıca gerekir.",
+      "clarificationAnswer": "Mevcut gözlemsel veriler, meme kanseri öyküsü olan kadınların genelinde düşük doz lokal vajinal östrojen kullanımının nüks riskini belirgin olarak artırdığını göstermiyor. Ancak bu güvenlik cümlesini aromataz inhibitörü kullanan hastalara aynı şekilde genellememek gerekir. Danimarka çalışmasında genel grupta nüks artışı saptanmazken, aromataz inhibitörü kullanan alt grupta artış sinyali görülmüştür. Bu nedenle özellikle aromataz inhibitörü alan kadınlarda lokal östrojen kararı, semptomların şiddeti, hormonal olmayan seçeneklerin yetersizliği ve hastanın onkolojik risk profili birlikte değerlendirilerek, tercihen onkologla ortak karar şeklinde verilmelidir.",
+      "clarificationAnsweredAt": "2026-10-01"
+    },
+    {
+      "question": "Tekrarlayan idrar yolu enfeksiyonları GSM ile nasıl ilişkili?",
+      "answer": "Menopozla östrojen azalınca yalnızca vajina değil, üretra ve mesane çevresindeki dokular da etkilenir; epitel incelir, vajinal pH yükselir ve koruyucu laktobasiller azalır. Bu ortam bazı kadınlarda tekrarlayan İYE’ye yatkınlığı artırabilir. Bu nedenle postmenopozal dönemde tekrarlayan İYE varsa GSM’yi özellikle sorgularım; uygun hastalarda lokal vajinal östrojen enfeksiyonların tekrarını azaltmaya da yardımcı olabilir.",
+      "sourceUrl": "https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/GSM%20Unabridged%202025.pdf",
+      "editedForArticle": "Menopozla östrojen azalınca yalnızca vajina değil, üretra ve mesane çevresindeki dokular da etkilenir; epitel incelir, vajinal pH yükselir ve koruyucu laktobasiller azalır. Bu ortam bazı kadınlarda tekrarlayan idrar yolu enfeksiyonlarına yatkınlığı artırabilir. Postmenopozal dönemde tekrarlayan idrar yolu enfeksiyonu varsa GSM’yi özellikle sorgularım. Uygun hastalarda lokal vajinal östrojen enfeksiyonların tekrarını azaltmaya da yardımcı olabilir.",
+      "sourceReview": "Kullanıcının genel AUA indeks bağlantısı ilgili mevcut 2025 GSM kılavuzuyla eşleştirildi. Resmi indeksli kılavuz metninde pH/laktobasil değişimi ve tekrarlayan İYE önerisi; PDF tam erişim sınırlılığı korunuyor.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "İstenen SSS için kullanıcı tarafından verilen gerçek yanıt; yerel aktarım. Düzenlenmiş metin kullanıcıya sunuldu; yeni nihai makale/tıbbi onayı sayılmaz."
+    },
+    {
+      "question": "Hyalüronik asit veya polikarbofil içeren hormon dışı vajinal ürünler ne kadar etkilidir?",
+      "answer": "Hyalüronik asit veya polikarbofil içeren vajinal nemlendiriciler, özellikle hafif–orta derecede vajinal kuruluk, yanma ve ilişki sırasında rahatsızlıkta gerçekten yararlı olabilir. Düzenli kullanıldıklarında sadece ilişki sırasında kullanılan kayganlaştırıcılardan farklı olarak birkaç gün süren nemlendirme sağlarlar. Çalışmalarda hem hyalüronik asit hem polikarbofil ile vajinal sağlık ve semptomlarda düzelme gösterilmiş; küçük karşılaştırmalı çalışmalarda birbirlerine belirgin üstünlük saptanmamıştır. Hyalüronik asit için son çalışmalar daha da olumlu: 2026 tarihli meta-analizde kuruluk, yaşam kalitesi ve cinsel fonksiyonda anlamlı iyileşme bildirilmiş, ancak ürünler ve kullanım protokolleri arasında önemli farklılıklar olduğu vurgulanmıştır. Küçük bir randomize çalışmada da 12 haftada vajinal östrojene benzer semptom düzelmesi görülmüştür; bununla birlikte bu veriler vajinal östrojen kadar güçlü ve uzun dönemli bir kanıt tabanı olduğu anlamına gelmez. Pratikte hormon kullanmak istemeyen, kullanamayan veya semptomları hafif olan kadınlarda ilk seçeneklerden biri olarak düşünülebilir. Ancak belirgin atrofi, sık idrar yolu enfeksiyonu veya ciddi disparoni varsa nemlendirici tek başına yetersiz kalabilir; bu durumda lokal östrojen veya diğer GSM tedavilerini ayrıca değerlendirmek gerekir.",
+      "answeredAt": "2026-10-01",
+      "sourceUrls": [
+        "https://pubmed.ncbi.nlm.nih.gov/35131532/",
+        "https://pubmed.ncbi.nlm.nih.gov/41773428/",
+        "https://pubmed.ncbi.nlm.nih.gov/39042017/"
+      ],
+      "editedForArticle": "Hyalüronik asit veya polikarbofil içeren vajinal nemlendiriciler özellikle hafif–orta derecede kuruluk, yanma ve ilişki sırasında rahatsızlıkta yararlı olabilir. Düzenli kullanıldıklarında, yalnızca ilişki sırasında kullanılan kayganlaştırıcılardan farklı olarak birkaç gün süren nemlendirme sağlarlar. Menopoz geçişindeki küçük bir karşılaştırmalı çalışmada iki ürünle de semptomlarda ve vajinal sağlık ölçütlerinde düzelme görüldü; belirgin üstünlük saptanmadı. Hyalüronik asit için 2026 tarihli bir meta-analiz postmenopozal kadınlarda kuruluk, yaşam kalitesi ve cinsel işlevde anlamlı iyileşme bildirdi; ürünler ve kullanım protokolleri arasında farklılıklar var. Küçük bir randomize çalışmada 12 haftada vajinal östrojenle benzer semptom düzelmesi görüldü. Bu sonuçlar, vajinal östrojen kadar güçlü veya uzun dönemli bir kanıt tabanı olduğu anlamına gelmez. Hormon kullanmak istemeyen, kullanamayan veya belirtileri hafif olan kadınlarda ilk seçeneklerden biri olarak düşünülebilir. Belirgin atrofi, sık idrar yolu enfeksiyonu veya ciddi ilişki ağrısında nemlendirici tek başına yetersiz kalabilir; lokal östrojen veya diğer GSM tedavileri ayrıca değerlendirilmelidir.",
+      "sourceReview": "PMID 35131532: menopoz geçişindeki 53 kişilik 30 günlük açık etiketli randomize karşılaştırma; postmenopozal genelleme yapılmadı. PMID 41773428: postmenopozal kadınlarda 2026 RCT meta-analizi, heterojenlik ve farklı GRADE güven düzeyleri var. 12 haftalık pilot karşılaştırma PMID 39042017 ile ayrıca doğrulandı; uzun dönem eşdeğerlik sonucu çıkarılmadı.",
+      "useApproval": "Kullanıcının doğrudan verdiği gerçek hekim yanıtından yerel SSS aktarımı; düzenlenmiş biçim hekim incelemesine gösterildi; bağımsız tıbbi/yayın onayı ayrıca gerekir."
+    }
+  ],
+  "bodyVoiceConfirmed": [
+    {
+      "sentence": "Muayenede kurulukla birlikte enfeksiyon, vulva cildinde bir hastalık veya pelvik taban kaslarında ağrı gibi başka nedenleri de değerlendiririm; her ağrıyı otomatik olarak kuruluğa bağlamam.",
+      "targetSection": "belirtiler",
+      "sourceResponse": "2026-09-29_cinsellikte-agri-menopoz.json: faqResponses[1].answer",
+      "note": "Özgün ikinci yanıtın ikinci cümlesi aynen aktarıldı; yeni deneyim yok."
+    },
+    {
+      "question": "Kuruluk şikâyetinde ilk neye bakarım?",
+      "originalAnswer": "Önce yalnızca “menopoz kuruluğu” deyip geçmem; vulvayı dikkatle değerlendiririm. GSM’de daha çok soluk-incelmiş doku, elastikiyet ve kıvrımlarda azalma, vajinal girişte daralma ve hassasiyet görürüz. Buna karşılık belirgin akıntı, kötü koku ve yoğun kızarıklık enfeksiyonu; beyaz plaklar, çatlaklar, erozyonlar veya vulva anatomisinde değişiklik ise liken skleroz gibi bir cilt hastalığını düşündürür. Gerektiğinde enfeksiyon testi veya şüpheli vulvar lezyondan biyopsi gerekir; GSM tanısı diğer nedenler dışlandıktan sonra konur.",
+      "targetSection": "belirtiler",
+      "answeredAt": "2026-10-01",
+      "source": "Dr. Aksoy bu sohbette verdi (yanıttaki chatgpt utm bağlantıları taşınmadı).",
+      "note": "Soru bağlamı için cümle başına \"Kuruluk şikâyetiyle gelen bir kadında\" eklendi; \"liken skleroz\" sayfadaki terimle eşitlenerek \"liken sklerozus\" yazıldı. Kaynak [4]. Dr. Aksoy isteğiyle: \"Gerektiğinde enfeksiyon testi veya … biyopsi gerekir\" → \"Gerektiğinde enfeksiyon testi yapılır veya … biyopsi alınır\"."
+    },
+    {
+      "question": "“Hormon kullanmak istemiyorum” diyen hastaya ne söylerim?",
+      "originalAnswer": "Önce lokal östrojen ile sistemik hormon tedavisinin aynı şey olmadığını anlatırım. Düşük doz vajinal östrojen esas olarak vajina ve çevresindeki dokularda etki eder ve kana geçen miktar sistemik HRT’ye göre çok düşüktür. Bu nedenle sıcak basması için verilen sistemik hormon tedavisinin risklerini birebir lokal tedaviye taşımamak gerekir. Yine de hasta istemiyorsa zorlamam; nemlendiriciler, kayganlaştırıcılar ve diğer hormon dışı seçenekleri konuşuruz. Meme kanseri öyküsü, özellikle aromataz inhibitörü kullanımı varsa değerlendirmeyi ayrıca bireyselleştiririm.",
+      "targetSection": "lokal-sistemik",
+      "answeredAt": "2026-10-01",
+      "source": "Dr. Aksoy bu sohbette verdi (yanıttaki chatgpt utm bağlantıları taşınmadı).",
+      "note": "Soru cümleye dönüştürüldü: \"“Hormon kullanmak istemiyorum” diyen hastama önce…\". Yanıttaki The Menopause Society bağlantısı (utm_source kalıntılı) taşınmadı; kaynak [5]."
+    },
+    {
+      "question": "Lazer veya radyofrekans sorulduğunda ne söylüyorum?",
+      "originalAnswer": "Bazı hastalar bu uygulamalardan yarar gördüklerini bildiriyor ve bazı küçük çalışmalar olumlu sonuçlar gösteriyor; ancak daha kaliteli, sham kontrollü çalışmaların sonuçları tutarlı değil. 2025 AUA/SUFU/AUGS kılavuzu bugün için CO₂ lazer, Er:YAG lazer veya radyofrekansın GSM tedavisindeki etkinliğini destekleyecek yeterli kanıt olmadığını ve bunların klinik çalışmalar dışında deneysel kabul edilmesi gerektiğini belirtiyor. Radyofrekans için veri lazerden de daha sınırlı; 2026’da olumlu yeni çalışmalar yayımlansa da henüz yaklaşımı değiştirecek düzeyde değil. Bu nedenle bunları lokal östrojen veya iyi çalışılmış diğer tedavilere eşdeğer, kanıtlanmış bir seçenek gibi sunmam.",
+      "targetSection": "umut-vs-kanit",
+      "answeredAt": "2026-10-01",
+      "source": "Dr. Aksoy bu sohbette verdi (yanıttaki chatgpt utm bağlantıları taşınmadı).",
+      "note": "\"sham\" için \"(etkisiz uygulamayla karşılaştırılan)\" açıklaması, CO₂ → CO2. Kaynak [4]; 2026 cümlesi PMID 42530648 (Lumowa 2026 meta-analizi, kaynak 12) ile bağlandı. Bölümdeki tekrarlanan model cümleleri (deneysel kabul, sham belirsizliği) çıkarıldı."
+    }
+  ],
+  "approvalBaseline": {
+    "record": "src/data/article-approvals.ts: 2026-05-04 prelaunch envanter mutabakatı",
+    "comparisonCommit": "a12c44435fa71fdd329ecde1e872b1955378a5c1",
+    "limitation": "Onayda içerik hash'i yok; tarih sonu snapshot'ı kesin onaylı sürüm diye sunulamaz. HEAD ab993908 ve Antigravity kirli değişiklikleri ayrıca incelendi.",
+    "snapshot": "%TEMP%/estranova-gsm-codex-20261001/"
+  },
+  "meaningReview": [
+    {
+      "location": "Kaynak-3",
+      "before": "34794172 lösemi çalışmasına gider.",
+      "after": "ACOG konsensüsü PMID 34794166."
+    },
+    {
+      "location": "Kaynak-4",
+      "before": "J Urol DOI'si ile Urogynecology Executive Summary PMID'si eşleşmiyordu.",
+      "after": "DOI 10.1097/JU.0000000000004589, PMID 40298120, J Urol 2025;214(3):242–250."
+    },
+    {
+      "location": "Özet/lokal östrojen",
+      "before": "Risksiz emilim, altın standart ve yüksek başarı iması.",
+      "after": "Düşük ama sıfır olmayan emilim, kişiye göre seçenek; aromataz inhibitöründe ortak karar."
+    },
+    {
+      "location": "Lazer",
+      "after": "Rutin kullanım kanıtı yetersiz; deneysel CO2 lazerde seçilmiş kişiler için kılavuz istisnası aktarıldı, kanıtlanmış yarar diye sunulmadı."
+    },
+    {
+      "location": "Zaman/SSS",
+      "before": "İki hafta günlük/haftada iki idame genellemesi; ağrıda 4–6 hafta bekleme.",
+      "after": "Ürün/hekime bağlı kullanım; NHS üç aya kadar tam etki; güvenlik sorusu kayıtlı gerçek yanıttan."
+    },
+    {
+      "location": "pH/enfeksiyon",
+      "before": "pH 5.0 ve üzeri alkali gibi sunuluyordu; tanı/antibiyotik genellenmişti.",
+      "after": "Asitliğin azalması ve pH yükselmesi; tek ölçümle tanı konmaması; bakteriyel enfeksiyon ile GSM ayrımı."
+    },
+    {
+      "location": "Korunan",
+      "after": "%27–84 postmenopozal popülasyon ve yöntem farkı; lokal/sistemik ayrımı; kanama/cilt/ateş/yan ağrısı/prolapsus uyarıları; 8–12 hafta takip uyarısı, kötüleşmede beklememe sınırıyla."
+    }
+  ],
+  "editorialReview": "Gramer/sentaks, doğal Türkçe, ritim/akış ayrı okundu. H0: mizah yok. Kapanış tekrarı/vaatler çıkarıldı. Kaynak 00 sayacı editorial modla kaldırıldı; kaynak/SSS TOC numaraları navigasyon sırasıdır.",
+  "previousTurnAudit": "Önceki üç soru mevcut beş SSS'yi karşılamıyordu. Hekim sesi ve sayılar birebir korundu iddiaları doğrulama sayılmaz. Önceki rapor ve JSON düzenleme öncesi yedeklendi.",
+  "validation": {
+    "buildCi": "passed: 143 built routes, SEO 163 outputs",
+    "rendered": "1 H1; 5/5 FAQ visible/schema parity; no duplicate IDs or missing local anchors",
+    "editorialCheck": "52 blocks, 0 candidates; not authorship/clinical proof",
+    "fidelity": "review_changes; source/numeric corrections manually reviewed; dynamic FAQ/RedFlagBox and metadata checked separately",
+    "sourceAudit": "exit 1: 21 other clinical pages with missing visible source traces; target not flagged",
+    "live": "Old version observed; no deployment",
+    "latestResponseUpdate": {
+      "buildCi": "passed after final 5/5 source and wording edits",
+      "rendered": {
+        "h1": 1,
+        "visibleCount": 5,
+        "schemaCount": 5,
+        "visibleSchemaParity": true,
+        "physicianAnswerParity": true,
+        "heading": true,
+        "toc": true,
+        "sourceIds": true,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "utmResidue": false
+      },
+      "sourceAudit": "exit 1 from 21 unrelated clinical pages; target not listed",
+      "scope": "five real FAQ answers, 7–10 sources and matched visible heading/TOC"
+    }
+  },
+  "faqSourceClarification": {
+    "question": "Meme kanseri yanıtında genel nüks artışı yok ifadesi, AI alt grup sinyaliyle nasıl sınırlandırılmalı?",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/35854422/",
+    "status": "1 Ekim 2026 hekim yanıtıyla çözüldü; genel grup ve aromataz inhibitörü alt grup ayrımı görünür yanıta aktarıldı."
+  },
+  "medicalReviewApproval": {
+    "reviewer": "Dr. Alper Mumcu",
+    "approvedAt": "2026-10-01",
+    "source": "KC bildirimi (Dr. Senai Aksoy, bu sohbet); yazılı not repoda değil.",
+    "scope": "Codex revizyonu + Claude kontrol turu gövde düzeltmeleri ve kaynak 11. Sonradan eklenecek gövde cümleleri kapsam dışıdır."
+  },
+  "editorApproval": {
+    "approver": "Dr. Senai Aksoy (KC editör/yazar)",
+    "approvedAt": "2026-10-01",
+    "source": "KC doğrudan onayı, bu sohbet.",
+    "scope": "Codex revizyonu + Claude kontrol turu (SSS Codex sürümüyle). Sonradan eklenecek gövde cümleleri kapsam dışıdır."
+  },
+  "secondRoundApproval": {
+    "scope": "Üç gövde yanıtı, kaynak 12, biyopsi cümlesi düzeltmesi",
+    "editor": "Dr. Senai Aksoy (KC)",
+    "medicalReviewer": "Dr. Alper Mumcu",
+    "approvedAt": "2026-10-01",
+    "source": "KC bildirimi, bu sohbet; Mumcu yazılı notu repoda değil."
+  }
+}
