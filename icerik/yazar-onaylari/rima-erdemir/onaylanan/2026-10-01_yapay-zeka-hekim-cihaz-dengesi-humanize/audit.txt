@@ -78,3 +78,4 @@ Açık iş: Rima için revizyon onay formu (standart yazar; 7 Mayıs onayı yeni
 Durum güncellemesi 2026-10-01: Rima revizyon onayı KC aracılığıyla alındı; paket onaylanan/ altına taşındı. Commit + push yapıldı.
 Tıbbi editör kararı 2026-10-01: Dr. Aksoy, gövdedeki Evidence 3–4 etiketlerinin kaldırılmış kalmasını onayladı. Açık tıbbi iş kalmadı.
 Rötuş 2026-10-01: Dış değerlendirme sonrası Mayıs onaylı iki cümle geri kondu (KC talebi): “O cevap aydınlatıcıydı, ama bana ait değildi.” ve “Bir uygulamanın benden fazla şey bildiğini sanacak kadar aceleci davranmak istemiyorum artık.” Yeni iddia yok.
+Rötuş 2026-10-01 (ikinci dış değerlendirme, KC talebi): teselli cümlesi somutlaştı — “İçiniz rahat olsun: Böyle bir not için tıbbi terim bilmeniz gerekmiyor.” Teselli anı korundu; italik spotlar ve kapanış geri çağrısı bilinçli olarak değiştirilmedi.
