@@ -754,12 +754,12 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',
     title: 'Menopozal Kilo İçin GLP-1 Analogları: Abartısız Klinik Karar',
-    description: 'Semaglutid ve tirzepatid menopozal kilo değişimi için kanıtlanmış araçlar; ama tek başına çözüm değildir. Tip 2 diyabet ve obezite endikasyonunda güçlü kanıt; estetik kilo verme alanında belirgin sınır. Postmenopozal alt-grup verileri, sarkopeni ve kemik endişesi, HRT etkileşimi, uzun dönem belirsizlik — pazarlama vaadi ile klinik karar arasındaki dürüst rehber.',
+    description: 'Menopozda GLP-1 ilaçları: obezitedeki kilo kaybı verileri, kas ve kemik sağlığı, hormon tedavisiyle kullanım ve güvenlik sınırları.',
     publishedDate: '3 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',
     sectionPath: '/bilimsel-pencere/',
-    keywords: ['GLP-1 analogları', 'semaglutid', 'tirzepatid', 'menopozal kilo', 'obezite tedavisi', 'STEP çalışması', 'SURMOUNT çalışması', 'visceral adipoz', 'sarkopeni', 'HRT etkileşimi'],
+    keywords: ['GLP-1 analogları', 'semaglutid', 'tirzepatid', 'menopozal kilo', 'obezite tedavisi', 'STEP çalışması', 'SURMOUNT çalışması', 'viseral yağ', 'sarkopeni', 'HRT etkileşimi'],
   },
   {
     path: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',

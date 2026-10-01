@@ -332,8 +332,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi.',
+    approvedAt: '2026-10-01',
+    note: 'Önceki prelaunch envanter onayı: 2026-05-04. 2026-10-01 revizyonu: Codex kaynak/güvenlik düzeltmeleri + Claude Code humanize, SSS birebir dönüş ve Bilimsel Editör Notu; Dr. Aksoy doğrudan onayı (“onay 3ünüde yap”). Dr. Alper Mumcu bağımsız tıbbi inceleme onayı: 2026-10-01, bu revizyonun commit öncesi çalışma ağacı sürümü (KC beyanı; yazılı not yok). Klinik katkı kaydı: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-01_glp1-analoglari-menopozal-kilo.json.',
   },
   {
     pathname: '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/',

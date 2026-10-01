@@ -1,0 +1,106 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/",
+  "answeredAt": "2026-10-01",
+  "source": "Bu sohbet içinde Dr. Aksoy'un üç doğrudan kullanıcı yanıtı. Üçüncü sorunun ilk gönderimi yalnızca soru tekrarıydı; takip sorusuna verilen gerçek açıklama kaydedildi.",
+  "status": "Kapsamlı revizyon tamamlandı; Dr. Aksoy doğrudan onayı ve Dr. Alper Mumcu bağımsız tıbbi inceleme onayı (KC beyanı) kayıtlı. Commit/push/deploy ayrı talimat bekliyor.",
+  "frequencyConfirmed": false,
+  "faqTitle": "Dr. Aksoy'a sorular",
+  "searchEvidence": {
+    "source": "Google Search Console görünür Performans/Sorgular ve Sayfa sayısı tabloları",
+    "siteUrl": "https://estranova.com/",
+    "searchType": "Web",
+    "startDate": "2026-06-29",
+    "endDate": "2026-09-28",
+    "observedAt": "2026-10-01",
+    "pageFilter": "URL contains glp1-analoglari-menopozal-kilo; Sayfa sayısı tablosunda tek eşleşme tam hedef URL olarak doğrulandı",
+    "clicks": 0,
+    "impressions": 36,
+    "ctr": 0,
+    "averagePosition": 53.7,
+    "queries": [
+      {
+        "query": "kilo kontrolünde klinik olarak en başarılı sonuçlar veren glp-1 reseptör agonisti seçenekleri hangileridir?",
+        "clicks": 0,
+        "impressions": 7
+      },
+      {
+        "query": "glp 1 during menopause",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "query": "does glp 1 work for menopause",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "query": "glp 1 analoğu",
+        "clicks": 0,
+        "impressions": 1
+      }
+    ],
+    "limitations": "Görünür sorguların toplamı 10 gösterimdir; sayfanın 36 gösterimine eşit değildir. Gizlenen sorgular hakkında çıkarım yapılmadı. Düşük hacim ve hekim sıklık teyidi yokluğu nedeniyle 'en sık' başlığı kullanılmadı. İngilizce sorgular Türkçe soru niyetine yerelleştirildi."
+  },
+  "faqResponses": [
+    {
+      "question": "Semaglutid, liraglutid ve tirzepatid arasında kilo kontrolü açısından nasıl bir fark var; ilaç seçimini ne belirler?",
+      "answer": "Kilo kaybı açısından üçü de etkili, ancak etkileri aynı düzeyde değil. **Liraglutid** günlük enjeksiyonla kullanılan daha eski bir GLP-1 agonisti ve çalışmalarda ortalama kilo kaybı yaklaşık %8 düzeyindeydi. **Semaglutid** haftalık kullanılıyor ve obezitesi olan, diyabeti bulunmayan kişilerde yaklaşık %15’e varan ortalama kayıplar gösterdi. **Tirzepatid** ise hem GIP hem GLP-1 reseptörlerini etkiliyor ve güncel verilerde en yüksek ortalama kilo kaybını sağlıyor; 2025’teki doğrudan karşılaştırmada 72 haftada tirzepatid ile ortalama **%20,2**, semaglutid ile **%13,7** kilo kaybı görüldü. :chatgpt-content-reference{index=\"0\"}\r\n\r\nAma ilaç seçimini yalnızca “hangisi daha çok zayıflatıyor?” diye yapmam. **Hedeflenen kilo kaybı, diyabet/prediyabet, kalp-damar hastalığı, uyku apnesi, gastrointestinal tolerans, safra kesesi ve pankreas öyküsü, kullanılan diğer ilaçlar, gebelik planı, uygulama sıklığı, maliyet ve ilaca erişim** birlikte değerlendirilir. Örneğin semaglutidin, bilinen kardiyovasküler hastalığı olan aşırı kilolu veya obez kişilerde majör kardiyovasküler olay riskini azaltmaya yönelik doğrudan sonuç verisi ve onayı bulunuyor; tirzepatidin ise obeziteyle birlikte orta-ağır obstrüktif uyku apnesinde ayrıca onayı var. :chatgpt-content-reference{index=\"1\"} Bu nedenle benim için doğru ilaç, yalnızca tartıda en fazla düşüşü sağlayan değil, **hastanın metabolik ve tıbbi profiline en uygun olan ilaçtır.**",
+      "editedForArticle": "Üçü de etkili, ancak ortalama kilo kayıpları aynı değil. Günlük kullanılan liraglutidle yaklaşık %8, haftalık semaglutidle obezitesi olup diyabeti olmayan kişilerde yaklaşık %15 ortalama kayıp bildirildi. 2025'teki doğrudan karşılaştırmada 72 haftada tirzepatid ile %20,2, semaglutid ile %13,7 kayıp görüldü. Bunlar çalışma ortalamalarıdır.\n\nİlaç seçimini yalnızca “hangisi daha çok zayıflatıyor?” diye yapmam. Kilo hedefi, diyabet/prediyabet, kalp-damar hastalığı, uyku apnesi, sindirim sistemi toleransı, safra kesesi ve pankreas öyküsü, diğer ilaçlar, gebelik planı, uygulama sıklığı, maliyet ve erişim birlikte değerlendirilir. Semaglutidin bilinen kalp-damar hastalığıyla birlikte fazla kilosu veya obezitesi olan kişilerde kalp-damar olaylarını azaltmaya yönelik verisi; tirzepatidin ise obeziteyle birlikte orta-ağır obstrüktif uyku apnesinde onayı bulunuyor. Burada söz edilen onaylar ABD kapsamındadır. Benim için doğru ilaç, hastanın metabolik ve tıbbi profiline en uygun olandır.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "SSS için doğrudan kullanıcı yanıtı; bu kullanım kapsamı mevcut. Yeni nihai metin onayı verilmiş sayılmadı.",
+      "shortenedApproval": "Düzenlenmiş karşılık denetim raporunda gösterildi; ayrıca nihai onay henüz yok.",
+      "editNotes": "Eski ifadesi çıkarıldı; gastrointestinal sadeleştirildi. 'En yüksek' bütün ilaç sınıflarına taşınmadı, doğrulanmış doğrudan karşılaştırma korundu. Çalışma ortalaması ve ABD onay kapsamı kaynak doğrulamasıyla açıklandı; kişisel garanti/Türkiye onayı ima edilmedi.",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/26132939/",
+        "https://pubmed.ncbi.nlm.nih.gov/33567185/",
+        "https://pubmed.ncbi.nlm.nih.gov/40353578/",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215256s030lbl.pdf",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-first-medication-obstructive-sleep-apnea"
+      ],
+      "publishedForm": "Özgün answer birebir; yalnızca chatgpt-content-reference işaretleri ve ** vurguları kaldırıldı (2026-10-01 Claude Code, Dr. Aksoy onayı: \"onay 3ünüde yap\"). editedForArticle alanı kullanılmıyor."
+    },
+    {
+      "question": "GLP-1 ilaçları menopoz döneminde kilo vermeye yardımcı olur mu; menopozda olmak tek başına kullanım gerekçesi midir?",
+      "answer": "GLP-1 temelli ilaçlar menopoz dönemindeki kadınlarda da kilo vermeye yardımcı olabilir; menopoz bu ilaçların etkisini ortadan kaldırmaz. Ancak **menopozda olmak tek başına kullanım gerekçesi değildir**. Karar, kişinin obezite veya fazla kilo açısından tedavi kriterlerini karşılayıp karşılamadığına, eşlik eden diyabet, hipertansiyon, uyku apnesi veya kardiyovasküler risklere ve daha önceki kilo verme girişimlerine göre verilir. Menopoz döneminde yağ dağılımı değişebilir ve özellikle karın çevresinde kilo artışı belirginleşebilir; bu nedenle uygun hastalarda GLP-1/GIP temelli ilaçlar yararlı olabilir. Güncel çalışmalar ayrıca menopoz hormon tedavisi kullanan bazı postmenopozal kadınlarda semaglutid veya tirzepatid ile kilo kaybının biraz daha fazla olabileceğini düşündürüyor, ancak bu henüz hormon tedavisini kilo vermek amacıyla başlatmak için yeterli bir gerekçe değildir. :chatgpt-content-reference{index=\"0\"}",
+      "editedForArticle": "Yardımcı olabilir; menopoz bu ilaçların etkisini ortadan kaldırmaz. Ancak menopozda olmak tek başına kullanım gerekçesi değildir. Obezite veya fazla kilo için tedavi kriterleri, eşlik eden diyabet, hipertansiyon, uyku apnesi ve kalp-damar riskleri ile önceki kilo verme girişimleri değerlendirilir. Menopozda yağ dağılımı ve karın çevresi değişebilir; uygun hastalarda bu ilaçlar yararlı olabilir.\n\nHormon tedavisi kullanan bazı postmenopozal kadınlarda semaglutid veya tirzepatid ile daha fazla kilo kaybı olabileceğini düşündüren erken veriler var. Bunlar hormon tedavisini kilo vermek amacıyla başlatmak için yeterli gerekçe değildir.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "SSS için doğrudan kullanıcı yanıtı; yeni nihai metin onayı verilmiş sayılmadı.",
+      "shortenedApproval": "Düzenlenmiş karşılık denetim raporunda gösterildi; ayrıca nihai onay henüz yok.",
+      "editNotes": "Tekrarlı kullanım cümlesi kısaltıldı; belirsizlik ve HRT başlatmama sınırı korundu. Gövdede semaglutid geriye dönük kohortu ile tirzepatid toplantı özeti ayrı kanıt türleri olarak açıklandı.",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/38446869/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12544038/"
+      ],
+      "publishedForm": "Özgün answer birebir; yalnızca chatgpt-content-reference işaretleri ve ** vurguları kaldırıldı (2026-10-01 Claude Code, Dr. Aksoy onayı: \"onay 3ünüde yap\"). editedForArticle alanı kullanılmıyor."
+    },
+    {
+      "question": "GLP-1 analoğu nedir, vücutta nasıl çalışır?",
+      "answer": "GLP-1 analogları, bağırsaktan yemek sonrası salgılanan **GLP-1 hormonunun etkisini taklit eden ilaçlardır**. Beyindeki iştah merkezlerini etkileyerek açlığı ve yeme isteğini azaltır, mide boşalmasını yavaşlatarak daha uzun süre tokluk sağlar ve kan şekeri yükseldiğinde pankreastan insülin salınımını artırırken glukagonu azaltır. Bu nedenle hem **tip 2 diyabet tedavisinde** hem de uygun hastalarda **kilo kontrolünde** kullanılırlar. Etkileri yalnızca “iştah kapatmak” değildir; beyin, mide-bağırsak sistemi ve pankreas üzerinden birlikte çalışırlar.",
+      "editedForArticle": "GLP-1 analogları, yemek sonrası bağırsaktan salgılanan GLP-1 hormonunun etkisini taklit eden ilaçlardır. Beyindeki iştah merkezleri üzerinden açlığı azaltır, mide boşalmasını yavaşlatarak tokluğu uzatır. Kan şekeri yükseldiğinde insülin salgısını artırırken glukagonu azaltır. Bu nedenle tip 2 diyabet tedavisinde ve uygun hastalarda kilo kontrolünde kullanılırlar. Etkileri yalnızca iştahı azaltmakla sınırlı değildir; beyin, sindirim sistemi ve pankreas birlikte rol oynar.",
+      "answeredAt": "2026-10-01",
+      "useApproval": "Takip sorusuna doğrudan kullanıcı yanıtı; yeni nihai metin onayı verilmiş sayılmadı.",
+      "shortenedApproval": "Düzenlenmiş karşılık denetim raporunda gösterildi; ayrıca nihai onay henüz yok.",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/29364588/"
+      ],
+      "publishedForm": "Özgün answer birebir; yalnızca chatgpt-content-reference işaretleri ve ** vurguları kaldırıldı (2026-10-01 Claude Code, Dr. Aksoy onayı: \"onay 3ünüde yap\"). editedForArticle alanı kullanılmıyor."
+    }
+  ],
+  "bodyClinicalContribution": {
+    "section": "kanit-haritasi",
+    "originalResponse": "faqResponses[0].answer",
+    "use": "İlaç seçimini yalnızca kilo kaybı sıralamasına göre yapmama cümlesi ve karar etkenleri gövdeye taşındı. Yeni klinik gözlem veya hasta anekdotu üretilmedi."
+  },
+  "independentMedicalReview": {
+    "reviewer": "Dr. Alper Mumcu",
+    "date": "2026-10-01",
+    "coveredVersion": "1 Ekim 2026 Claude Code düzeltme turu sürümü (SSS birebir + humanize + Bilimsel Editör Notu; commit öncesi çalışma ağacı)",
+    "scope": "Tüm metin, SSS ve Bilimsel Editör Notu",
+    "status": "Onaylandı — KC beyanı (Dr. Aksoy, 2026-10-01: \"Mumcu onayladı, imzayı geri koy\"); yazılı inceleme notu yok."
+  },
+  "pastedResidueNotes": "Özgün answer alanları aynen korundu. chatgpt-content-reference işaretleri ve Markdown vurguları görünür SSS'ye taşınmadı. Atıf indexleri kaynak sayılmadı; bilimsel kayıtlar ayrıca doğrulandı.",
+  "faqConversionStatus": "2026-10-01 Claude Code düzeltmesi: Görünür SSS ve FAQPage, kayıtlı özgün yanıtlarla birebir eşitlendi. Önceki Codex turunun kısaltmaları ve eklediği cümleler (\"Bunlar çalışma ortalamalarıdır.\", \"Burada söz edilen onaylar ABD kapsamındadır.\", \"biraz\" sözcüğünün silinmesi vb.) hekim yanıtının birebir işlenmesi kuralı gereği geri alındı. ABD onay kapsamı SSS altındaki kaynak notunda ([9], [14]) kalıyor; hekim metnine eklenmedi.",
+  "bodyHumanize20261001": "Claude Code Sıcaklık Katmanı turu (Dr. Aksoy onayı, 2026-10-01): soru biçimli H2 sayısı 3 → 1; açılışa somut sahne (pantolon beli), utanç beat'i ve teselli (\"Önce şunu söyleyeyim: Bunda utanılacak bir şey yok.\"); H2 lede'leri çeşitlendi (sahne, doğrudan hitap, kısa vurgu); kısa vurgu cümleleri eklendi. Mizah H0 (ilaç/HRT konusu). Ben çapası 3 (söyleyeyim, kayıtlı yanıttan yapmam/değerlendiririm, yazıyorum). Yeni muayene anekdotu veya klinik gözlem üretilmedi. Sayı, popülasyon, kaynak eşleşmesi, Evidence etiketleri ve anchor'lar değişmedi.",
+  "editorNote20261001": "Bilimsel Editör Notu kanıt düzeyiyle (Evidence 2–5) geri kondu: üç katman (güçlü kanıt / sınırlı kanıt / güvenlik ve izlem), yalnızca gövdedeki kaynaklı iddialardan; imza Mumcu onayına kadar \"Estranova Editörleri · 1 Ekim 2026 güncellemesinin bağımsız tıbbi incelemesi sürüyor\". Eski nottaki doğrulanmamış klinik gözlem geri getirilmedi. Mumcu onayı sonrası imza Dr. Alper Mumcu olarak geri kondu."
+}

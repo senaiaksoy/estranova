@@ -27,21 +27,22 @@ const hero =
 
 const tocEntries = [
   { id: 'neden-zorlu', label: 'Menopozal Kilo Neden Zorlu?' },
-  { id: 'mekanizma', label: 'GLP-1 Analogları Nasıl Çalışıyor?' },
+  { id: 'mekanizma', label: 'GLP-1 Analoglarının Etkisi' },
   { id: 'kanit-haritasi', label: 'Kanıt Haritası' },
-  { id: 'menopoz-uc-soru', label: 'Menopoz İçin Üç Soru' },
+  { id: 'menopoz-uc-soru', label: 'Yağ, Kas ve Kemik' },
   { id: 'hrt-etkilesim', label: 'HRT Kullananlar İçin' },
-  { id: 'pratik-notlar', label: 'Pratik Notlar' },
+  { id: 'pratik-notlar', label: 'Pratik Notlar ve Güvenlik' },
   { id: 'doktora-uc-soru', label: 'Doktora Üç Soru' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular" },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozal Kilo İçin GLP-1 Analogları: Abartısız Klinik Karar';
 const seoTitle = 'Menopozal Kilo İçin GLP-1 Analogları';
 const articleDescription =
-'Semaglutid ve tirzepatid menopozal kilo için kanıtlanmış araçlar ama tek başına çözüm değil. Kanıt sınırları ve HRT etkileşimi dürüst bir rehberle anlatılıyor.';
+  'Menopozda GLP-1 ilaçları: obezitedeki kilo kaybı verileri, kas ve kemik sağlığı, hormon tedavisiyle kullanım ve güvenlik sınırları.';
 const faqItems = articleFaqs['/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -49,6 +50,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '3 Mayıs 2026',
+  modifiedDate: '1 Ekim 2026',
   pathname: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -60,12 +62,11 @@ const articleSchemas = buildArticleSchemas({
     'obezite tedavisi',
     'STEP çalışması',
     'SURMOUNT çalışması',
-    'visceral adipoz',
+    'viseral yağ',
     'sarkopeni',
     'HRT etkileşimi',
   ],
   faqItems,
-
   siteUrl,
 });
 ---
@@ -92,6 +93,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="3 Mayıs 2026"
+        lastUpdated="1 Ekim 2026"
         readingMinutes={11}
         imageSrc="/images/library/editorial/scholar-portrait-direct-gaze.webp"
         imageAlt="Bağımsız bir kitabevi-kafede tek başına okuma anı — açık ciltli kitap, yanında dolma kalem, kapalı tablet, kömür-krem-lacivert paletinde ince çerçeveli gözlüğüyle; sosyal medya bilgisinin ötesine geçen eleştirel okuma ve bilimsel pencereden GLP-1 analoglarını değerlendirme temasını sade editöryal tonla taşıyan dosya görseli"
@@ -105,466 +107,421 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
-<p>
-          Son birkaç yılda <strong>semaglutid</strong> ve <strong>tirzepatid</strong>
-          obezite ve diyabet tedavisi sahnesini ciddi biçimde değiştirdi; sosyal
-          medyada ise menopozal kilo değişiminin <em>"sihirli çözümü"</em> olarak
-          pazarlandı. Bu yazı moleküllerin gerçek klinik yerini özetliyor: tip 2
-          diyabet ve obezite endikasyonunda <em>güçlü kanıt</em>; estetik kilo
-          verme alanında <em>belirgin sınır</em>. Menopoz dönemine özel üç soru
-          (visceral adipoz dönüşümü, sarkopeni, kemik kaybı), HRT etkileşimi,
-uzun dönem güvenlik belirsizliği — pazarlama dili yerine kanıt düzeyi.
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Semaglutid ve tirzepatid, uygun tıbbi koşullarda kilo yönetimine yardımcı olabilir; menopozda
+          olmak tek başına kullanım gerekçesi değildir. Güçlü kilo kaybı verileri obezitesi olan veya
+          fazla kiloya eşlik eden sağlık sorunu bulunan yetişkinlerden gelir. Bu çalışmalardaki ortalamalar,
+          menopozdaki her kadının ne kadar kilo vereceğini söylemez. Tedavi düşünülüyorsa kas gücü,
+          kemik sağlığı, kullanılan hormonlar ve ilacı bırakma sonrası izlem birlikte ele alınmalıdır.
+          Özellikle ağızdan progesteron kullananlarda hormon tedavisinin gözden geçirilmesi önemlidir.
+          Birkaç kilo verme isteğiyle ilaç kullanmak yerine, önce tıbbi gerekliliği ve uzun dönem planı
+          hekiminizle konuşmanız gerekir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-<h2 id="neden-zorlu">Menopozal Kilo Neden Zorlu? Yeni Bir Bakış Gerekli mi?</h2>
+        <h2 id="neden-zorlu">Menopozal Kilo Neden Zorlu?</h2>
         <p>
-          Kırklı yaşların ortasından sonra çok yaygın olan ama az dürüst konuşulan
-          bir şey var: menopozal kilo değişimi. Eskisi kadar yemediği halde tartının
-          yukarı doğru gittiğini söyleyen kadınların büyük çoğunluğu için bu his
-          gerçek bir biyolojiye dayanıyor — eksik veya yetersiz çaba değil.
+          Tartı yerinden pek oynamamıştır, ama en sevdiğiniz pantolonun beli artık eskisi gibi oturmaz.
+          Menopoz geçişinde yalnızca kilo değil, vücut bileşimi de değişebilir.
         </p>
         <p>
-          Hormonal geçişle birlikte üç şey eşzamanlı değişir: <strong>bazal
-          metabolizma yavaşlar</strong>, <strong>kas kütlesi azalır</strong>
-          (sarkopenik eğilim), <strong>vücut yağ dağılımı değişir</strong>
-          (gluteofemoral'den abdominal/visceral'e kayış) <Evidence level={4} />.
-          Bu üç değişim aynı kalori alımında bile kilo birikimini ve metabolik
-          riski arttırır. Yani menopozal kilo basitçe <em>"daha az ye, daha çok
-hareket et"</em> formülünün son adresi olduğu eski bakışın dışında
-          bir konu — hormonal-metabolik bir geçiş.
+          Uzun süreli bir kadın sağlığı kohortunda menopoz geçişiyle yağ kütlesindeki artış hızlanırken
+          yağsız kütle azaldı. Buna karşılık toplam kilo artışının hızı bu geçişin başlangıcında artmadı
+          <Evidence level={4} /> <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
+          Kilo değişimini yalnızca östrojene bağlamak bu ayrımı kaçırır. Yaşlanma ve yaşam alışkanlıkları
+          da değerlendirilmelidir; tartı, yağ ve kas dokusundaki değişimi tek başına göstermez.
         </p>
         <p>
-          Bu zeminde son birkaç yılda gündeme oturan <strong>GLP-1 reseptör
-          agonistleri</strong> (semaglutid, liraglutid) ve daha yenisi <strong>GLP-1
-          / GIP dual agonisti</strong> (tirzepatid) ciddi bir tartışma başlattı.
-          <em>Menopozal kilo için bu moleküller bir kapı mı, yoksa pazarlama
-          balonu mu?</em> Cevap ikisi arasında bir yerde. Endikasyona, hastaya
-          ve beklentiye göre değişiyor. Bu yazıda <em>"yolun sonu değil, yeni
-bir strateji adımı"</em> diye okuyacağız.
+          Bu fark, birçok kadının sessizce taşıdığı bir utanca dönüşebilir; sanki bir yerde hata
+          yapmışsınız gibi. Önce şunu söyleyeyim: Bunda utanılacak bir şey yok.
+        </p>
+        <p>
+          <strong>GLP-1 reseptör agonistleri</strong> olan semaglutid ve liraglutid ile
+          <strong>GIP ve GLP-1 reseptörlerini birlikte uyaran tirzepatid</strong> bu nedenle ilgi görüyor.
+          İki soruyu ayrı tutmak işe yarar: Kilo kaybı araştırmalarda ne kadar etkili?
+          Bu tedavi sizin sağlık durumunuza uygun mu?
         </p>
 
-        <h2 id="mekanizma">GLP-1 Analogları Nasıl Çalışıyor? — Kısa Mekanizma</h2>
+        <h2 id="mekanizma">GLP-1 Analoglarının Vücuttaki Etkisi</h2>
         <p>
-          GLP-1 (glucagon-like peptide 1) bağırsaktan yemek sonrası salgılanan
-          doğal bir inkretin hormonudur. Kandaki etki süresi çok kısadır
-          (2-3 dakika). Sentetik <strong>GLP-1 analogları</strong> molekülün
-          uzun ömürlü versiyonlarıdır; haftalık tek doz ile etkilidir.
+          Sofradan kalkarken hissettiğiniz tokluğu yalnızca mideniz belirlemez; bağırsaktan salınan
+          hormonlar da beyne haber taşır. GLP-1 bunlardan biridir.
         </p>
         <p>
-          Etki dört ana kanaldan akar <Evidence level={5} />: <em>(1)</em> pankreasta
-          glukoz-bağımlı insülin sekresyonunu artırır (kan şekeri yüksekken çalışır,
-          düşükken çalışmaz — bu nedenle hipoglisemi riski düşüktür); <em>(2)</em>
-          glukagon sekresyonunu baskılar; <em>(3)</em> mide boşalmasını yavaşlatır
-          (tokluk hissini uzatır); <em>(4)</em> beyinde iştah merkezleri (POMC/CART
-          yolakları) üzerinden subjektif açlık hissini ve "yemek isteği" sinyallerini
-          azaltır.
+          GLP-1, yemek sonrası insülin salgısında ve iştahın düzenlenmesinde rol oynar.
+          Bu hormonun etkisini taklit eden ilaçlar, doğal hormondan daha uzun süre etki gösterir.
+          GLP-1'in açılımı glukagon benzeri peptid-1'dir. Bir inkretindir; yani yemek sonrası insülin
+          salgısını artıran hormonlardan biridir. Doğal hormonun kandaki yarılanma ömrü yaklaşık
+          2–3 dakikadır. İlaçların kullanım sıklığı ise aynı değildir: liraglutid enjeksiyonu günlük,
+          burada ele alınan semaglutid ve tirzepatid enjeksiyonları haftalıktır
+          <sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup>.
         </p>
         <p>
-          <strong>Tirzepatid</strong> bir adım daha ileri gider — hem GLP-1 hem
-          GIP (glucose-dependent insulinotropic polypeptide) reseptörlerini birlikte
-          uyarır. Klinik çalışmalarda tirzepatidin kilo verme etkisi semaglutidten
-          belirgin biçimde daha güçlü çıkmıştır; bu fark "ikili reseptör"
-          aktivasyonunun mekanik bir sonucu.
+          Etki temelde dört ana mekanizmayla gerçekleşir <Evidence level={5} /> <sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>:
+          <em>(1)</em> Pankreasta glukoza bağımlı insülin salgısını artırır (tek başına hipoglisemi riski düşüktür; insülin veya bazı diyabet ilaçlarıyla birlikte risk artabilir);
+          <em>(2)</em> glukagon hormonunu baskılayarak karaciğerin gereksiz şeker üretimini frenler;
+          <em>(3)</em> mide boşalma hızını yavaşlatıp tokluk hissini uzatır;
+          <em>(4)</em> beyindeki hipotalamik iştah merkezleri üzerinden açlık hissini ve zihinsel yemek arayışını yatıştırır.
         </p>
         <p>
-          Bu mekanizmaları bilmek bütün tartışmanın zeminini kuruyor: bu moleküller
-          <em>bir kalori sayma yardımcısı</em> değil — hormonal-metabolik bir tedavi.
-          Yan etki profili, etkileşim listesi ve kullanım kuralları da bu doğadan
-          gelir.
+          <strong>Tirzepatid</strong> ise hem GLP-1 hem de GIP (glukoza bağımlı insülinotropik polipeptid)
+          reseptörlerini birlikte uyarır. Bu mekanizma onu yalnızca GLP-1 reseptörünü uyaran ilaçlardan ayırır.
+          Farklı çalışmaların kilo kaybı ortalamalarını yan yana koymak ise doğrudan ilaç karşılaştırması değildir.
+        </p>
+        <p>
+          İştahın azalması daha az yemeyi kolaylaştırabilir. Yavaşlayan mide tokluğu uzatır.
+          Bulantıya da katkıda bulunabilir. Aynı mekanizmalar ilaç etkileşimleri açısından da önem taşır;
+          kullanım kararı yalnızca kilo hedefiyle verilmez.
         </p>
 
-        <h2 id="kanit-haritasi">Kanıt Haritası: Nerede Güçlü, Nerede Sınırlı?</h2>
+        <h2 id="kanit-haritasi">Kanıt Haritası: Güçlü ve Sınırlı Alanlar</h2>
         <p>
-          Bilim diliyle söylersek — GLP-1 analogları ve tirzepatid için elimizdeki
-          kanıt tek bir hikâye değil; üç farklı endikasyona oturan üç farklı kanıt
-          gücü var.
+          Bir arkadaşınızın “ben şu kadar verdim” demesi, sizin için ne olacağını söylemez.
+          Bir araştırmayı okurken de önce katılımcıların kim olduğuna ve tedavinin hangi amaçla verildiğine bakmak gerekir.
         </p>
         <p>
-          <strong>Tip 2 diyabet:</strong> Bu moleküllerin onay aldığı ve en güçlü
-          kanıtın bulunduğu alan. HbA1c'de anlamlı düşüş, kardiyovasküler olaylarda
-          azalma (özellikle yüksek riskli hastalarda), bazı moleküllerde böbrek
-          koruyucu etki gösterilmiştir <Evidence level={5} />. Klinik kılavuzlarda
-          uzun süredir yer alıyor; menopozal kadınlarda diyabet tedavisinin standart
-          parçası.
+          <strong>Tip 2 diyabet:</strong> Bu moleküllerin ilk onay aldığı ve kanıtın en sağlam olduğu alandır.
+          Kan şekeri kontrolündeki yarar iyi belgelenmiştir; bazı GLP-1 ilaçlarında yüksek riskli
+          diyabet hastaları için kalp-damar yararı da gösterilmiştir <Evidence level={5} />
+          <sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
+          Bu sonuçlar her ilaca ve her hastaya aynı ölçüde genellenmez.
         </p>
         <p>
-          <strong>Obezite (BMI ≥30, ya da BMI ≥27 + kilo ile bağlantılı eşlik
-          eden hastalık):</strong> Son birkaç yılda yapılan büyük randomize
-          çalışmalar güçlü bir tablo gösterdi. Semaglutid için STEP, tirzepatid
-          için SURMOUNT serilerinde menopozal kadınlar da büyük oranda yer aldı.
-          Bu örneklemlerde %15-20'lere ulaşan ortalama kilo kayıpları bildirildi
-          <Evidence from={4} to={5} />. Bu büyüklükte kilo kaybı önceki
-          farmakolojik tedavilerle elde edilemiyordu; kanıt zemini güçlü ve etki
-          büyüklüğü klinik olarak anlamlı.
+          <strong>Obezite veya sağlık sorununun eşlik ettiği fazla kilo:</strong>
+          Temel çalışmalara vücut kitle indeksi (VKİ) ≥30 kg/m² olan yetişkinler alındı.
+          VKİ ≥27 kg/m² olanlarda ise kiloyla ilişkili en az bir sağlık sorunu arandı
+          <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a>, <a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
+          Diyabeti olmayan yetişkinlerde semaglutid çalışmasının 68. haftasında ortalama kilo kaybı %14,9'du.
+          Tirzepatid çalışmasında 72. haftadaki ortalamalar doz grubuna göre %15,0–%20,9 arasında değişti
+          <Evidence level={5} />. Her iki çalışmada da yaşam tarzı desteği verildi.
         </p>
         <p>
-          Postmenopozal alt-grup analizleri de etkinin bu yaş grubunda da
-          korunduğunu gösteriyor; ancak bazı çalışmalarda postmenopozal kadınlarda
-          kilo kaybının daha yavaş seyrettiği veya plato dönemlerinin daha erken
-          görüldüğü bildirilmiştir <Evidence level={3} />. Bu fark anlamlı ama
-          klinik kararı alt üst etmiyor — endikasyon korunur, beklenti kalibre
-          edilir.
+          Bunlar menopozdaki kadınlara özel sonuçlar değil, çalışma gruplarının ortalamalarıdır.
+          Bu iki yayın, menopozun ilaç yanıtını ne kadar değiştirdiğini veya kilo platosuna ne zaman
+          ulaşılacağını tek başına yanıtlamaz. Menopozda olmak da tek başına ilaç endikasyonu oluşturmaz.
         </p>
         <p>
-          <strong>Estetik / yaşam tarzı kilo verme (BMI &lt;27, kilo ile
-          bağlantılı eşlik eden hastalık yok):</strong> Burada tablo farklı.
-Endikasyon dışı (off-label) kullanım yaygınlaştı; ama bu tabloda
-          uzun dönem güvenlik, sürdürülebilirlik ve maliyet/yarar dengesi
-          <em>henüz net değerlendirilemez</em> <Evidence level={2} />. Pazarlama
-          mesajları çoğu zaman tip 2 diyabet ve obezite kanıtını estetik
-          kullanıma genişletir; bilimsel olarak bu sıçrama zayıftır.
+          <strong>İlaçları doğrudan karşılaştıran veri:</strong> 2025 tarihli randomize çalışmada,
+          diyabeti olmayan ve obezitesi bulunan yetişkinlerde 72 haftalık ortalama kilo kaybı
+          tirzepatid ile %20,2, semaglutid ile %13,7 idi <Evidence level={5} />
+          <sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup>.
+          Bu sonuç, çalışmada kullanılan ve tolere edilen dozlara aittir; bütün dozlar için sabit bir fark değildir.
+          Liraglutidin ayrı bir çalışmadaki ortalama kaybı ise 56 haftada yaklaşık %8'di
+          <sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a></sup>.
+        </p>
+        <p>
+          İlaç seçimini yalnızca “hangisi daha çok zayıflatıyor?” diye yapmam. Hedeflenen kilo kaybı,
+          diyabet veya prediyabet, kalp-damar hastalığı ve uyku apnesini birlikte değerlendiririm.
+          Sindirim sistemi toleransı, safra kesesi ve pankreas öyküsü, diğer ilaçlar ve gebelik planı da
+          seçimi etkiler. Uygulama sıklığı, maliyet ve erişim ise tedavinin sürdürülebilmesi açısından önemlidir.
+        </p>
+        <p>
+          <strong>Estetik ve yaşam tarzı amaçlı kilo verme (VKİ &lt;27 kg/m², eşlik eden hastalık yok):</strong>
+          Burada söz edilen, diyabet veya başka bir tıbbi kullanım gerekçesi olmadan birkaç kilo verme isteğidir.
+          Hesap burada değişir. Obezite araştırmalarının sonuçları bu gruba doğrudan uygulanamaz.
+          Yan etki yükü ve uzun dönem kullanım gereksinimi, küçük bir kilo hedefinden daha geniş bir karar ister.
         </p>
         <p>
           <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">
-            Aynı sayıdaki deneysel tedaviyi okuma kılavuzu
+            Deneysel tedavileri okuma rehberimizde
           </a>
-          burada da geçerli: <em>aynı molekül farklı endikasyonda farklı kanıt
-          seviyesindedir</em>. GLP-1 analogları diyabet ve obezite endikasyonunda
-          klinik karar, estetik kilo verme alanında henüz pazarlama vaadidir.
+          anlattığımız gibi, bir kullanım alanındaki güçlü kanıt başka bir kullanım alanına otomatik olarak taşınmaz.
         </p>
 
-        <h2 id="menopoz-uc-soru">Menopoz Dönemi İçin Önemli Üç Soru: Visceral, Sarkopeni, Kemik</h2>
+        <h2 id="menopoz-uc-soru">Menopoz Dönemi İçin Üç Kritik Eksen: Viseral Yağ, Kas ve Kemik</h2>
         <p>
-          Menopozal kadınlarda GLP-1 tedavisi düşünülürken üç ek soruyu masaya
-          koymak gerekir — bunlar diyabetli genç hastada o kadar ön planda olmayabilir,
-          ama bu yaş grubunda klinik kararı şekillendirir.
+          Bel çevreniz, merdiven çıkarken bacaklarınızdaki güç ve kemiklerinizin sağlamlığı da kilo verme
+          hesabının parçasıdır. Menopoz geçişi bu üç başlığı birlikte düşünmek için ek bir nedendir.
         </p>
 
-        <h3>1. Visceral adipoz dönüşümü</h3>
+        <h3>1. Viseral (karın içi) yağlanma ve metabolik risk</h3>
         <p>
-          Menopozda yağ dağılımının kalça/uyluktan karın bölgesine kayması metabolik
-          riskin asıl kaynağıdır. GLP-1 analogları kilonun yanı sıra <em>visceral
-          adipoz dokuyu da</em> belirgin biçimde azaltır <Evidence level={4} />.
-          Bu özellik basit kilo değişiminden öte; karaciğer yağlanması, insülin
-          direnci, kardiyovasküler risk profili açısından ek değer taşır.
+          Viseral yağ, karın içindeki organların çevresinde bulunan yağ dokusudur.
+          Semaglutid çalışmasında kilo kaybına bel çevresinde azalma ve bazı metabolik göstergelerde
+          iyileşme eşlik etti <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+          Bel çevresindeki değişim, viseral yağın doğrudan ölçümü veya tek başına kalp-damar olaylarının
+          azalacağının kanıtı değildir.
         </p>
 
-        <h3>2. Sarkopeni (kas kaybı) endişesi</h3>
+        <h3>2. Sarkopeni (kas kaybı) riski</h3>
         <p>
-          Hızlı kilo verme dönemlerinde kayıp sadece yağdan değildir; <em>kas
-          kütlesinden de pay</em> alır. Menopozal kadınlarda zaten sarkopenik
-          eğilim varken, GLP-1 tedavisiyle birlikte ek kas kaybı uzun vadeli
-          fonksiyonel risk yaratabilir. Bu nedenle tedaviye <strong>protein alımı
-          (gün başına 1.2-1.6 g/kg ideal kilo)</strong> ve <strong>düzenli direnç
-          antrenmanı</strong> eklenmesi sadece <em>tavsiye</em> değil, klinik
-          kararın bir parçasıdır <Evidence level={3} />.
+          Hızlı kilo kaybı süreçlerinde kaybedilen doku yalnızca yağdan ibaret değildir; kas dokusu da bu kayıptan
+          payını alabilir. Genel kilo kaybı araştırmalarında toplam kaybın yaklaşık %20–30'u yağsız
+          kütleden gelebilir; bu oran her GLP-1 kullanıcısı için sabit değildir
+          <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
+          Yağsız kütle yalnızca kası içermez; bu ölçümden doğrudan sarkopeni tanısı çıkarılamaz.
+          Kas gücü ve günlük işlev de değerlendirilmelidir. <strong>Yeterli protein alımı</strong> ve
+          <strong>direnç egzersizi</strong> kasın korunmasına yardımcı olabilir <Evidence level={3} />.
+          Protein hedefi sağlık durumu ve beslenme değerlendirmesine göre kişiselleştirilir.
         </p>
 
-        <h3>3. Kemik kaybı endişesi</h3>
+        <h3>3. Kemik mineral yoğunluğu hassasiyeti</h3>
         <p>
-          Hızlı kilo verme dönemlerinde kemik mineral yoğunluğunda düşüş
-          gözlemlenebilir; menopozal dönemde bu hassasiyet zaten yüksek
-          <Evidence from={2} to={3} />. Tedavi süresince yeterli kalsiyum, D
-          vitamini ve yük taşıyan egzersiz desteği devre dışı bırakılmaz. Tedavi
-          öncesi kemik mineral yoğunluğu (KMD) değerlendirmesi özellikle 65+
-          yaş, ailede osteoporoz öyküsü ya da daha önce kırığı olan kadınlarda
-          mantıklıdır.
-        </p>
-
-        <p>
-          Bu üç ek değerlendirme menopozal hastayı genç diyabetik hastadan ayıran
-          klinik karar zemini. Tedavi planı bu üç ekseni hesaba katmadan kurulduğunda
-          kilo iniyor ama uzun vadeli sağlık parametreleri zarar görebilir.
+          Hızlı kilo kaybı kemik mineral yoğunluğunda düşüşe yol açabilir; menopoz sonrası dönemde kemik döngüsü
+          hızlandığı için bu risk daha belirgindir <Evidence from={2} to={3} /> <sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup>.
+          Tedavi sürecinde yeterli kalsiyum, D vitamini ve yük taşıyan egzersizler ihmal edilmemelidir. Özellikle
+          ileri yaş veya kırık öyküsü gibi riskler varsa kemik yoğunluğu ölçümü (DXA) gereksinimi hekimle
+          değerlendirilir. Bu, her GLP-1 kullanıcısına otomatik ölçüm önerisi değildir.
         </p>
 
         <h2 id="hrt-etkilesim">HRT Kullananlar İçin Özel Notlar</h2>
         <p>
-          Hormon replasman tedavisi (HRT) alan menopozal kadınlarda GLP-1 tedavisi
-          <em>kontrendike değildir</em>; ama birkaç pratik nokta birlikte değerlendirilir.
+          Menopoz hormon tedavisi (HRT) kullanıyorsanız, bu tek başına kilo yönetimi ilacına engel değildir;
+          ikisi birlikte kullanılabilir. Ağızdan aldığınız bir hormon varsa ilaç listenizi hekiminizle birlikte gözden geçirin.
         </p>
         <p>
-          <strong>Oral östrojen emilimi:</strong> GLP-1 analogları mide boşalmasını
-          yavaşlatır; teorik olarak oral östrojenin emilim hızını ve zamanlamasını
-          etkileyebilir. Klinik anlamı genelde küçüktür; ama oral HRT alan
-          hastalarda transdermal forma geçiş alternatif olarak değerlendirilebilir
-          <Evidence level={2} />. Bu konuda kanıt henüz sınırlı; karar
-          bireyselleştirilir.
+          <strong>Ağızdan progesteron ve rahim iç tabakasının korunması:</strong> Mide boşalmasının
+          yavaşlaması ağızdan alınan hormonların emilimini etkileyebilir. Özellikle rahmi olan ve östrojenle
+          birlikte progesteron veya progestojen kullanan kadınlarda, rahim iç tabakasının yeterince korunması
+          değerlendirilmelidir <Evidence level={2} />
+          <sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup>.
+          Bu etkileşimin HRT üzerindeki klinik boyutunu belirleyen doğrudan veriler sınırlıdır.
         </p>
         <p>
-          <strong>Kilo kaybı sonrası HRT dozu:</strong> Belirgin kilo kaybı sonrası
-          metabolik profil değiştiği için HRT dozunun yeniden değerlendirilmesi
-          mantıklıdır — bu standart bir adımdır.
+          <strong>Uygulama yolu ve izlem:</strong> Bant veya jel biçimindeki östrojen sindirim sistemi
+          emilimine bağlı değildir. Ancak östrojeni cilt yoluyla almak, ağızdan kullanılan progesteronun
+          değerlendirilmesi gereğini ortadan kaldırmaz. Uygulama yolu ve doz değişikliği hekime aittir.
+          Beklenmedik vajinal kanama olursa bunu yalnızca ilaca bağlamadan değerlendirme isteyin
+          <sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup>.
         </p>
         <p>
-          <strong>Menopozal semptomlara doğrudan etki yok:</strong> GLP-1 tedavisi
-          sıcak basması, gece terlemesi veya uyku bozulması gibi vasomotor
-          belirtileri doğrudan iyileştirmez. Kilo kaybı dolaylı olarak bazı
-          belirtileri yumuşatabilir; ama vasomotor belirti yönetimi için ayrı bir
-          plana ihtiyaç vardır (HRT, non-hormonal seçenekler, davranışsal yaklaşımlar).
+          <strong>Sıcak basması ve gece terlemesi:</strong> Bu ilaçlar menopoz belirtilerinin yerleşik
+          tedavisi değildir. Sıcak basması, gece terlemesi ve uyku yakınmaları ayrıca değerlendirilmelidir;
+          kilo tedavisi hormon tedavisinin yerine geçirilmez.
+        </p>
+        <p>
+          <strong>HRT kullananlarda kilo kaybı:</strong> Geriye dönük bir semaglutid kohortunda,
+          HRT kullanan postmenopozal kadınlarda daha fazla kilo kaybı görüldü
+          <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup>.
+          Tirzepatid için de benzer bir ilişki bildiren gözlemsel toplantı özeti bulunuyor
+          <sup><a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup>.
+          Gruplar rastgele oluşturulmadığı için, farkın hormon tedavisinden kaynaklandığı söylenemez
+          <Evidence level={2} />. Bu veriler kilo vermek amacıyla HRT başlatmak için yeterli gerekçe değildir.
         </p>
 
-        <h2 id="pratik-notlar">Pratik Notlar: Yan Etki, Maliyet, Erişim, Tedavi Süresi</h2>
+        <h2 id="pratik-notlar">Pratik Notlar: Yan Etki, Güvenlik, Maliyet ve Tedavi Süresi</h2>
         <p>
-          GLP-1 tedavisini düşünüyorsanız işinize yarayacak pratik notlar.
+          Bu ilaçlar günlük hayatınıza haftalarca, çoğu zaman aylarca sürecek bir takvimle girer.
+          Yan etkileri, maliyeti ve bırakma planını en başta konuşmak bu yüzden önemlidir;
+          araştırmalardaki kilo kaybı yüzdesi bu görüşmenin yalnızca bir parçasıdır.
         </p>
         <p>
-          <strong>Yan etki profili:</strong> En sık görülen yan etkiler bulantı,
-          ishal, kabızlık, geğirme, hafif baş ağrısı; çoğu hastada doz artışına
-          bağlı olarak ilk haftalarda belirgindir, sonra azalır. Yavaş doz titrasyonu
-          tolerabiliteyi belirgin biçimde artırır.
+          <strong>Mide-bağırsak yan etkileri:</strong> En sık görülen yan etkiler bulantı, ishal, kabızlık, geğirme ve
+          baş ağrısıdır. Bu yakınmalar özellikle doz artışında görülebilir. Şiddetli veya süren kusma,
+          sıvı alamama ve susuzluk belirtileri değerlendirme gerektirir. Doz artırma planına toleransa göre
+          hekim karar verir <sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
         </p>
         <p>
-          <strong>Pankreatit riski:</strong> Akut pankreatit nadir ama bildirilen
-          bir yan etkidir. Pankreatit öyküsü olan hastalarda kontrendikedir; karın
-          ağrısı + kusma birlikteliği gelişen hastalarda derhal tedavi durdurulup
-          değerlendirme yapılır.
+          <strong>Pankreatit uyarısı:</strong> Pankreas iltihabı ciddi bir güvenlik başlığıdır.
+          Pankreatit öyküsü otomatik olarak bütün ilaçlar için mutlak kontrendikasyon sayılmaz;
+          ilaç seçilmeden önce ayrıca değerlendirilir. Süren şiddetli karın ağrısı, özellikle sırta yayılıyorsa,
+          kusma eşlik etmese de acil değerlendirme gerektirir. Pankreatit şüphesinde tedavi durdurulur
+          <sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
         </p>
         <p>
-          <strong>Tiroid kanseri uyarısı:</strong> Hayvan çalışmalarında medüller
-          tiroid karsinom (MTC) riski gösterilmiş; insan verisi belirsiz. Yine de
-          MTC veya çoklu endokrin neoplazi tip 2 (MEN2) öyküsü olan hastalarda
-          kontrendikedir.
+          <strong>Tiroid uyarısı:</strong> Kemirgen çalışmalarında medüller tiroid karsinomu (MTC) riski gösterilmiş
+          olsa da insanlardaki risk tablosu netleşmemiştir. Yine de kişide veya ailesinde MTC veya MEN2 (çoklu endokrin
+          neoplazi tip 2) öyküsü varsa bu bilgi mutlaka paylaşılmalıdır. Burada kaynak verilen ABD semaglutid
+          ürün bilgisinde bu durumlar kontrendikasyon olarak yer alır; kullanılan ürünün Türkiye'deki
+          güncel bilgisi ayrıca kontrol edilmelidir
+          <sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
         </p>
         <p>
-          <strong>Tedavi süresi ve sürdürülebilirlik:</strong> En zor sorulardan
-          biri. Tedavi durdurulduğunda kilonun büyük bölümü 1-2 yıl içinde geri
-          gelir <Evidence level={3} />; bu, moleküllerin başarısızlığı değil,
-          obezitenin kronik bir hastalık olmasının doğal bir sonucudur. Tedaviye
-başlarken bu yolu netleştirmek hayal kırıklığını azaltır:
-          <em>uzun süreli kullanım söz konusu olabilir</em>; "üç ay deneyip
-          bırakırım" yaklaşımı farmakolojik olarak gerçekçi değil.
+          <strong>Tedavi süresi ve bırakınca kilo seyri:</strong> Semaglutid çalışmasının uzatma izleminde,
+          ilaç ve yapılandırılmış yaşam tarzı desteği kesildikten sonraki bir yılda, verilen kilonun ortalama
+          yaklaşık üçte ikisi geri alındı <Evidence level={3} />
+          <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>.
+          Bu sonuç her kişide aynı miktarda geri dönüş olacağını söylemez. Bu bilgiyi korkutmak için
+          değil, plan yapabilmeniz için yazıyorum: Tedavinin ne kadar sürdürüleceği ve olası bırakma
+          sonrası destek, başlangıçta konuşulabilir.
         </p>
         <p>
-          <strong>Maliyet ve erişim:</strong> Türkiye'de bu moleküller diyabet
-          endikasyonunda geri ödeme kapsamındadır; obezite endikasyonunda erişim
-          ve sosyal güvenlik kapsamı sınırlıdır. Aylık maliyet ciddi; estetik
-          kullanım için bütçe planı bu moleküllerin uzun süreli kullanım gerektirebileceği
-          gerçeğiyle birlikte yapılır.
+          <strong>Maliyet ve erişim:</strong> Geri ödeme ve bulunabilirlik ilaca, kullanım gerekçesine ve
+          güncel kurallara göre kontrol edilmelidir. Uzun süreli kullanım olasılığı tedaviyi sürdürme
+          kararına dahil edilmelidir.
         </p>
         <p>
-          <strong>Uzun dönem güvenlik:</strong> 5+ yıl düzenli kullanımın güvenlik
-          profili henüz tam haritalanmış değil <Evidence from={1} to={2} />.
-          Erken çalışmalar olumlu, ancak uzun süreli izlem verileri birikiyor.
+          <strong>Uzun dönem izlem:</strong> Buradaki temel kilo kaybı çalışmaları her ilacın bütün
+          uzun dönem sonuçlarını kapsamaz. Güvenlik ve yarar, kullanılan ilaca ve kişinin sağlık durumuna
+          göre izlenir.
         </p>
 
         <RedFlagBox
           markers={[
-            'Akut veya kronik pankreatit öyküsü — kontrendike',
-            'Medüller tiroid kanseri (MTC) veya çoklu endokrin neoplazi tip 2 (MEN2) öyküsü — kontrendike',
-            'Aktif yeme bozukluğu (anoreksiya, bulimiya) öyküsü — değerlendirme şart, riski yüksek',
-            'Hamilelik veya emzirme — uygun değil',
-            'Tip 1 diyabet — endikasyon dışı, hipoglisemi/diyabetik ketoasidoz riski',
-            'İleri retinopati — agresif glikoz düşüşü retinopatiyi geçici kötüleştirebilir, oftalmoloji kontrolü',
-            'Sarkopeni riski yüksek (zayıf, kas kütlesi düşük): protein + direnç antrenmanı eklenmeden uygulamak uygun değil',
-            'Menopozal hızlı kilo kaybı sırasında kalsiyum + D vitamini + yük taşıyan egzersiz desteği atlanmaz',
-            'Tedaviyi 3 ay deneyip bırakma yaklaşımı — kilonun geri geleceği gerçeği başta paylaşılır',
-            '"Sihirli iğne" pazarlama mesajları — bilimsel temel yok, klinik karar değil',
+            'Şiddetli ve süren karın ağrısı, sırta yayılım veya inatçı kusma — acil değerlendirme gerekir',
+            'Pankreatit öyküsü — ilaç seçilmeden önce hekimle değerlendirilir',
+            'Kişisel veya ailevi MTC öyküsü ya da MEN2 — kullanılan ürünün kontrendikasyonları kontrol edilir',
+            'Aktif yeme bozukluğu veya geçmişte anoreksiya/bulimiya — tedavi öncesinde değerlendirilir',
+            'Gebelik veya gebelik planı — kilo kaybı tedavisi için kullanılmaz; bırakma zamanı hekimle konuşulur',
+            'Emzirme — ürünün güncel bilgisine göre ayrıca değerlendirilir',
+            'Tip 1 diyabet — bu ilaçlar insülinin yerine kullanılmaz',
+            'İleri diyabetik retinopati — hızlı glukoz düşüşü retinopatiyi geçici alevlendirebilir, göz kontrolü gerekir',
+            'Kas gücünde azalma, yetersiz beslenme veya kırık öyküsü — kas ve kemik izlem planı görüşülür',
+            'Hormon tedavisi sırasında beklenmedik vajinal kanama — değerlendirme gerekir',
           ]}
-          footnote="Bu liste teşhis amaçlı değil; GLP-1 tedavisi değerlendirilirken bir hekimle konuşmaya değer durumların hatırlatıcısıdır."
+          footnote="Bu liste teşhis amaçlı değil; GLP-1 tedavisi değerlendirilirken hekimle konuşulması gereken durumların hatırlatıcısıdır."
         />
 
         <h2 id="doktora-uc-soru">Doktora Sorabileceğiniz Üç Soru</h2>
         <p>
-          O zaman biz ne yapıyoruz? GLP-1 tedavisini düşünüyorsanız hekim odasına
-          üç soruyla girilirse görüşme bambaşka bir yere taşınır.
+          Görüşmeye bu üç soruyu telefonunuzun notlarına yazarak gidebilirsiniz. Yalnızca kaç kilo
+          verebileceğinizi konuşmak zorunda değilsiniz; bu sorular tedavinin size uygunluğunu ve izlem
+          planını netleştirmeye yardımcı olabilir.
         </p>
         <p>
           <strong>Birincisi:</strong>
-          <em>"Ben hangi endikasyonda yer alıyorum — tip 2 diyabet, obezite (BMI ≥30
-          ya da BMI ≥27 + komorbidite), yoksa estetik kilo verme isteği? Bu
-          endikasyonlarda kanıt seviyesi nasıl farklı?"</em> Bu soru, üç farklı
-          klinik kararın hangisinde olduğunuzu netleştirir. Bilen bir hekim
-          <em>"size endikasyon-dışı kalıyor"</em> demekten çekinmez; bu cümle
-          güven sinyalidir.
+          <em>"Ben hangi klinik gruptayım? Tip 2 diyabet mi, klinik obezite mi, yoksa endikasyon dışı bir kilo hedefi mi?
+          Bu durumlarda kanıtlar ne söylüyor?"</em>
         </p>
         <p>
           <strong>İkincisi:</strong>
-          <em>"Tedaviye sarkopeni, kemik kaybı ve uzun dönem sürdürülebilirlik
-          eksenlerinden birlikte bakacak mıyız? Protein alımı, direnç antrenmanı,
-          KMD takibi planı ne olacak?"</em> Bu soru tedaviyi tek bir iğne kararından
-          çıkarır, kapsamlı bir hormonal-metabolik plana çevirir. Menopozal hasta
-          için bu üç eksen ihmal edildiğinde kilo iniyor ama uzun vadeli sağlık
-          parametreleri zarar görebilir.
+          <em>"Kas kütlemi ve kemik yoğunluğumu korumak için nasıl bir eşlikçi plan kuruyoruz? Protein hedefim,
+          direnç antrenmanı ve kemik yoğunluğu izlemim nasıl olacak?"</em>
         </p>
         <p>
           <strong>Üçüncüsü:</strong>
-          <em>"Tedaviye ne kadar süre devam etmeyi öngörüyorsunuz, durdurulduğunda
-          ne bekliyoruz? HRT veya başka kullandığım ilaçlarla etkileşim var mı?"</em>
-          Bu soru tedavinin <em>kronik bir tedavi</em> olabileceği gerçeğini
-          baştan netleştirir; "üç ay deneyim, bırakırım" planı yerine sürdürülebilir
-          bir karar zemini kurar. HRT etkileşimi için doz ve form değerlendirmesi
-          de aynı görüşmede konuşulabilir.
+          <em>"Bu tedaviyi ne kadar süre sürdürmeyi öngörüyoruz, ilacı bıraktığımızda kilo seyrini nasıl yöneteceğiz
+          ve HRT dahil kullandığım diğer ilaçlarla bir etkileşim var mı?"</em>
         </p>
 
-        <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
-
-        <h3>Kilo veren herkes için GLP-1 mantıklı mı?</h3>
+        <h2 id="kapanis">Kararı Tartının Ötesinde Düşünmek</h2>
         <p>
-          Hayır. Klinik endikasyon belirli kriterlerde tanımlıdır: <em>tip 2 diyabet</em>,
-          <em>BMI ≥30</em> ya da <em>BMI ≥27 + kilo ile bağlantılı eşlik eden
-          hastalık</em> (hipertansiyon, dislipidemi, uyku apnesi vb.). Bu kriterlerin
-          dışında kilo verme isteği için kullanım <em>endikasyon dışıdır</em>;
-          kanıt zemini, uzun dönem güvenlik ve maliyet/yarar dengesi farklı
-          değerlendirilir. <em>"Birkaç kilo verseydim"</em> motivasyonuyla
-          başlanan kullanımın klinik karar zemini belirsizdir.
+          Tartı bir ölçüdür. Tek ölçü değildir.
+        </p>
+        <p>
+          Menopozda kilo yönetimi için ilaç düşünüyorsanız, kilo hedefinin yanında kas gücünüzü, kemik
+          sağlığınızı ve kullandığınız tedavileri de konuşun. Tartı ilerlemeyi gösterebilir; tedavinin
+          size uygun olup olmadığını tek başına söyleyemez. Hekiminizle üzerinde anlaşacağınız hedef ve izlem planı, bir yüzde beklentisinden daha işe yarar
+          bir başlangıçtır.
         </p>
 
-        <h3>Tedavi durdurulduğunda kilo geri gelir mi?</h3>
-        <p>
-          Çalışmalara göre <em>evet, büyük bölümü 1-2 yıl içinde geri gelir</em>
-          <Evidence level={3} />. Bu, moleküllerin başarısızlığı değil; obezitenin
-          kronik bir tıbbi tablo olduğu gerçeğinin sonucu. Hipertansiyon ilacı
-          bırakıldığında tansiyonun geri yükselmesinin tıbbi başarısızlık
-sayılmadığı gibi. Tedaviye başlarken bu yolu netleştirmek
-          beklenti yönetimini sağlıklı tutar.
-        </p>
-
-        <h3>HRT ile birlikte kullanılabilir mi?</h3>
-        <p>
-          <em>Evet, kontrendike değil</em>; ama oral HRT alan hastalarda mide
-          boşalması yavaşlamasının emilime teorik etkisi nedeniyle transdermal
-          forma geçiş alternatif olarak konuşulabilir <Evidence level={2} />.
-          Belirgin kilo kaybı sonrası HRT dozu yeniden değerlendirilir; bu
-          standart bir adımdır. GLP-1 tedavisi vasomotor belirtileri (sıcak
-          basması, gece terlemesi) doğrudan iyileştirmez — bu belirtiler için
-          ayrı bir plan korunur.
-        </p>
-
-        <h3>Kas kaybı ve kemik kaybı endişesi ne kadar gerçek?</h3>
-        <p>
-          Gerçek bir endişe ama yönetilebilir. Çalışmalarda hızlı kilo veren
-          hastalarda kas kütlesi ve kemik mineral yoğunluğunda azalma
-          gösterilmiştir <Evidence level={3} />. Menopozal kadınlarda zaten
-          sarkopenik eğilim ve kemik hassasiyeti olduğundan bu endişe daha
-          önemlidir. <em>Yeterli protein alımı (1.2-1.6 g/kg ideal kilo),
-          düzenli direnç antrenmanı, kalsiyum + D vitamini desteği, yük taşıyan
-          egzersiz</em> tedaviyle birlikte planlanmalıdır. Bu adımlar atılırsa
-          kas ve kemik kaybı belirgin biçimde sınırlandırılabilir.
-        </p>
-
-        <h3>Türkiye'de erişim ve maliyet durumu nedir?</h3>
-        <p>
-          Türkiye'de bu moleküller <em>tip 2 diyabet endikasyonunda geri ödeme
-          kapsamındadır</em>; obezite endikasyonunda geri ödeme ve erişim
-          sınırlıdır, çoğu durumda hasta tarafından karşılanır. Aylık maliyet
-          ciddi; estetik kullanım için bütçe planı uzun süreli kullanım gerektirebileceği
-          gerçeğiyle birlikte yapılır. Pazardaki erişim koşulları zaman zaman
-          değişiyor; güncel duruma hekiminizden ya da eczacınızdan ulaşmak
-          mantıklı.
-        </p>
-
-        <h2 id="kapanis">Kapanış</h2>
-        <p>
-          GLP-1 analogları (semaglutid, liraglutid) ve tirzepatid menopozal kilo
-          değişiminde önemli bir araç sınıfı; ama tek başına çözüm değil. Tip 2 diyabet ve
-          obezite endikasyonunda <em>kanıtlı klinik karar</em>; estetik kilo verme
-          alanında <em>henüz pazarlama vaadi</em>. Aynı molekül, aynı isim — ama
-          karar her endikasyon için ayrı verilir, üstelik menopozal kadınlarda
-          ek üç eksen (visceral adipoz, sarkopeni, kemik) hesaba katılır.
-        </p>
-        <p>
-          Hekim görüşmesine şu üç soruyla girin: <em>"Hangi endikasyondayım, kanıt nerede?"</em>,
-          <em>"Sarkopeni, kemik, sürdürülebilirlik için planım ne?"</em>, <em>"Ne
-          kadar süre, durduğunda ne olur, HRT ile etkileşim var mı?"</em>. Bu üç
-          soru tedaviyi tek bir iğne kararından çıkarır, klinik bir plana çevirir.
-        </p>
-        <p>
-          Bilgi belirsizliğin panzehiridir — bu konuda da öyle. Sosyal medyada
-          sihirli iğne gibi tanıtılan bir tedavi, dürüst yorumda kanıtın güçlü
-          olduğu ve sınırlı kaldığı yerleri görerek başkalaşıyor. Yolun sonu
-          değil, stratejinin yeniden kurgulandığı bir durak.
-        </p>
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol class="list-none space-y-4 text-sm text-ink/80">
+          <li id="kaynak-1">
+            <strong>1.</strong> Greendale GA ve ark. <em>Changes in body composition and weight during the menopause transition.</em> JCI Insight. 2019;4(5):e124865.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30843880/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(SWAN kohortu; toplam kilo, yağ ve yağsız kütle değişimlerinin ayrımı.)</span>
+          </li>
+          <li id="kaynak-2">
+            <strong>2.</strong> Nauck MA ve ark. <em>Incretin hormones: Their role in health and disease.</em> Diabetes Obes Metab. 2018;20(Suppl 1):5–21.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29364588/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(İnkretin fizyolojisi, GLP-1 mekanizmaları ve tip 2 diyabet klinik kanıtları derlemesi.)</span>
+          </li>
+          <li id="kaynak-3">
+            <strong>3.</strong> Jastreboff AM ve ark. <em>Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1).</em> N Engl J Med. 2022;387(3):205–216.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Çift etkili GIP/GLP-1 reseptör agonisti tirzepatid ile obezite faz 3 randomize kontrollü çalışma sonuçları.)</span>
+          </li>
+          <li id="kaynak-4">
+            <strong>4.</strong> Wilding JPH ve ark. <em>Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1).</em> N Engl J Med. 2021;384(11):989–1002.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Semaglutid 2,4 mg; diyabeti olmayan yetişkinlerde 68 haftalık kilo kaybı çalışması.)</span>
+          </li>
+          <li id="kaynak-5">
+            <strong>5.</strong> Cava E ve ark. <em>Preserving Healthy Muscle during Weight Loss.</em> Adv Nutr. 2017;8(3):511–519.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28507015/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Genel kilo kaybında yağsız kütle ve kas korunumu derlemesi; GLP-1'e özgü oran çalışması değildir.)</span>
+          </li>
+          <li id="kaynak-6">
+            <strong>6.</strong> Shapses SA, Sukumar D. <em>Bone Metabolism in Obesity and Weight Loss.</em> Annu Rev Nutr. 2012;32:287–309.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/22809104/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Kilo kaybı ve kemik metabolizması derlemesi; GLP-1'e özgü kırık riski kanıtı değildir.)</span>
+          </li>
+          <li id="kaynak-7">
+            <strong>7.</strong> Wilding JPH ve ark. <em>Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension.</em> Diabetes Obes Metab. 2022;24(8):1553–1564.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35441470/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(İlacın kesilmesinden sonra kilonun geri kazanımı ve kardiyometabolik parametrelerin seyri.)</span>
+          </li>
+          <li id="kaynak-8">
+            <strong>8.</strong> British Menopause Society. <em>Use of incretin-based therapies in women using hormone replacement therapy (HRT).</em> 2025.{' '}
+            <a href="https://thebms.org.uk/wp-content/uploads/2025/05/23-BMS-TfC-Use-of-incretin-based-therapies-APRIL2025-E.pdf" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Klinisyen rehberi</a>.
+            <span class="block mt-0.5 text-ink/50">(HRT ile kullanım; oral progestojen emilimi ve rahim iç tabakasının korunması konusunda sınırlı veri.)</span>
+          </li>
+          <li id="kaynak-9">
+            <strong>9.</strong> FDA. <em>Wegovy (semaglutide) prescribing information.</em> 2026.{' '}
+            <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215256s030lbl.pdf" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Resmî ürün bilgisi</a>.
+            <span class="block mt-0.5 text-ink/50">(ABD semaglutid ürün bilgisi; Türkiye ruhsatı veya geri ödeme belgesi değildir.)</span>
+          </li>
+          <li id="kaynak-10">
+            <strong>10.</strong> Aronne LJ ve ark. <em>Tirzepatide as Compared with Semaglutide for the Treatment of Obesity.</em> N Engl J Med. 2025;393:26–36.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/40353578/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Diyabeti olmayan, obezitesi bulunan yetişkinlerde 72 haftalık doğrudan karşılaştırma.)</span>
+          </li>
+          <li id="kaynak-11">
+            <strong>11.</strong> Pi-Sunyer X ve ark. <em>A Randomized, Controlled Trial of 3.0 mg of Liraglutide in Weight Management.</em> N Engl J Med. 2015;373:11–22.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/26132939/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Liraglutid; diyabeti olmayan yetişkinlerde 56 haftalık çalışma.)</span>
+          </li>
+          <li id="kaynak-12">
+            <strong>12.</strong> Hurtado MD ve ark. <em>Weight loss response to semaglutide in postmenopausal women with and without hormone therapy use.</em> Menopause. 2024.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38446869/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Geriye dönük kohort; hormon tedavisiyle ilişki, nedensellik kanıtı değildir.)</span>
+          </li>
+          <li id="kaynak-13">
+            <strong>13.</strong> <em>SAT-688 One-Year Real-World Weight Loss Outcomes with Tirzepatide in Postmenopausal Women with and without Hormone Therapy.</em> Journal of the Endocrine Society. 2025; toplantı özeti.{' '}
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12544038/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Özet kaydı</a>.
+            <span class="block mt-0.5 text-ink/50">(Gözlemsel, erken bulgu; tam makale veya randomize hormon tedavisi çalışması değildir.)</span>
+          </li>
+          <li id="kaynak-14">
+            <strong>14.</strong> FDA. <em>FDA Approves First Medication for Obstructive Sleep Apnea.</em> 20 Aralık 2024.{' '}
+            <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-medication-obstructive-sleep-apnea" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Resmî onay açıklaması</a>.
+            <span class="block mt-0.5 text-ink/50">(ABD'de tirzepatidin obeziteli yetişkinlerde orta-ağır obstrüktif uyku apnesi endikasyonu.)</span>
+          </li>
+        </ol>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} title="Dr. Aksoy'a sorular"
+        intro="GLP-1 ilaçları, menopozda kullanım ve ilaç seçimi hakkında Dr. Senai Aksoy'un yanıtları."
+        class="mt-10" />
+      <p class="mt-4 text-sm leading-relaxed text-ink/75">
+        SSS kaynakları: ilaç karşılaştırması ve liraglutid verisi <a href="#kaynak-10">[10]</a>,
+        <a href="#kaynak-11">[11]</a>; kalp-damar ve uyku apnesi endikasyonlarının ABD kapsamı
+        <a href="#kaynak-9">[9]</a>, <a href="#kaynak-14">[14]</a>;
+        HRT ile kilo kaybı ilişkisi <a href="#kaynak-12">[12]</a>, <a href="#kaynak-13">[13]</a>;
+        mekanizma <a href="#kaynak-2">[2]</a>.
+      </p>
 
       <RelatedReadings
         class="mt-14"
         paths={[
-          '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
+          '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
           '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
-          '/zamansiz-yasam/d-vitamini-rehberi/',
+          '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+          '/hormonal-gecis/menopoz/menopoz-nedir/',
         ]}
       />
 
       <ArticleEditorNote>
-<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={5} /></p>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={5} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
-          <p class="italic">
-            Menopozal kilo değişimi yazılırken hem hastanın psikolojik utancını hem
-            klinik kararın somut adımlarını bir arada tutmak gerekiyordu; yazıyı bu
-            dengede bıraktım, bu notu klinik kararın iskeletini biraz daha doğrudan
-            açmak için kullanıyorum — uzman olarak.
+          <p>
+            <strong class="text-primary">Kanıtın güçlü olduğu yer:</strong> Tip 2 diyabette kan şekeri
+            kontrolü ve obezitesi olan ya da kiloya eşlik eden sağlık sorunu bulunan yetişkinlerde kilo kaybı,
+            randomize çalışmalarla gösterilmiştir. Bu çalışmalar menopozdaki kadınlara özel değildir;
+            sonuçlar grup ortalamasıdır <sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a>, <a href="#kaynak-3" class="text-primary hover:underline">[3]</a>, <a href="#kaynak-4" class="text-primary hover:underline">[4]</a>, <a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup>.
           </p>
           <p>
-            <strong class="text-primary">Klinik not:</strong> GLP-1 analogları
-            ve tirzepatid kliniğimde son iki yılda en sık konuşulan moleküller arasına
-            girdi — soruların büyük çoğunluğu üç farklı motivasyondan geliyor:
-            tip 2 diyabet kontrolü için aktif kullanım, postmenopozal obezite
-            endikasyonu için değerlendirme ve sosyal medyadan etkilenmiş "birkaç
-            kilo verme" isteği. Bu üç soru aynı molekülü konuşur ama farklı klinik
-            karara oturur. Hastanın hangi grupta olduğunu netleştirmek görüşmenin
-            ilk adımıdır.
+            <strong class="text-primary">Kanıtın sınırlı kaldığı yer:</strong> Menopozun ilaç yanıtını ne
+            kadar değiştirdiği, hormon tedavisiyle görülen ek kilo kaybının nedeni ve kas ile kemik üzerindeki
+            uzun dönem etkiler henüz net değildir. Hormon tedavisiyle ilgili veriler gözlemseldir ve HRT başlatma
+            gerekçesi sayılmaz <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a>, <a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup>.
           </p>
           <p>
-            <strong class="text-primary">Mekanizma notu:</strong> GLP-1 reseptör
-            agonistleri pankreasta glukoz-bağımlı insülin sekresyonunu artırır,
-            glukagonu baskılar, gastrik boşalmayı yavaşlatır ve hipotalamik iştah
-            merkezlerinde (POMC/CART aktivasyonu, NPY/AgRP supresyonu) tokluk
-            sinyalini güçlendirir. Tirzepatid ek olarak GIP reseptör agonistidir;
-            bu ikili reseptör aktivasyonu adipoz doku duyarlılığı ve insülin
-            sekresyonu üzerinde semaglutidi aşan kilo etkisi üretir. Postmenopozal
-            kadınlarda etkinin korunması alt-grup analizlerinde gösterilmiştir;
-            ancak östrojen düşüşüne bağlı azalmış kas oranı + visceral adipoz
-            yeniden dağılımı bu yaş grubunda klinik değerlendirmenin omurgasını
-            oluşturur. Hızlı kilo kaybı dönemlerinde yağsız kütle kaybı %20-30 civarı
-            olabilir; protein alımı (1.2-1.6 g/kg ideal kilo) ve direnç antrenmanı
-            bu kaybı belirgin biçimde sınırlar.
-          </p>
-          <p>
-            <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Akut
-            veya kronik pankreatit öyküsü, medüller tiroid kanseri / MEN2 öyküsü,
-            aktif yeme bozukluğu, hamilelik / laktasyon — kontrendikasyon ya da
-            mutlak kaçınma alanları. İleri diyabetik retinopatide hızlı glikoz
-            düşüşü retinopati progresyonu yapabilir; oftalmoloji takibi planlanır.
-            Tip 1 diyabette endikasyon yok — hipoglisemi ve diyabetik ketoasidoz
-            riski. Sarkopenik tabloyla başvuran zayıf hastalarda protein + direnç
-            antrenmanı planı kurulmadan tedavi başlanmaz. Postmenopozal hızlı kilo
-            kaybı sürecinde kalsiyum + D vitamini + yük taşıyan egzersiz desteği
-            atlanmaz; KMD baseline değerlendirmesi 65+ yaş, ailede osteoporoz
-          öyküsü ya da daha önce kırığı olan hastalarda mantıklıdır. <em>"Sihirli
-          iğne / tek hamlede çözüm"</em> pazarlama mesajları — bilimsel zemini yok,
-            klinik karar değil.
-          </p>
-          <p>
-            <strong class="text-primary">Pratik bütünleşim:</strong> Klinikte yeni
-            bir hastayla GLP-1 değerlendirirken birlikte oturup şu basamakları
-            izlemeye özen gösteririm: (1) endikasyon netleştirme — tip 2 diyabet,
-            obezite (BMI ≥30 ya da BMI ≥27 + komorbidite) yoksa endikasyon dışı
-            estetik istek; (2) kontrendikasyon ve risk taraması — pankreatit / MTC
-            / yeme bozukluğu / hamilelik / retinopati; (3) hedef belirleme ve
-            beklenti kalibrasyonu — kilo kaybı %15-20 ortalaması ve uzun süreli
-            kullanım gerekliliği baştan paylaşılır; (4) menopoz-spesifik plan —
-            protein 1.2-1.6 g/kg + direnç antrenmanı 2-3 gün/hafta + Ca/D vit
-            takviyesi + KMD baseline (uygun hastada); (5) etkileşim değerlendirmesi
-            — oral HRT alan hastada transdermal forma geçiş düşünülebilir, diğer
-            ilaçların emilimi gözden geçirilir; (6) ölçülebilir takvim ve takip —
-            doz titrasyonu yavaş, 3 ayda bir kilo + bel çevresi + lab takibi,
-            6-12 ayda yeniden plan değerlendirmesi. Bu altı basamak tek başına
-            kilo verme tedavisini hormonal-metabolik bir plana dönüştürür.
-          </p>
-          <p>
-            <strong class="text-primary">Bireysellik vurgusu:</strong> Yukarıda
-paylaştıklarım — hem yazıda hem bu notta — genel popülasyon yaklaşımıdır;
-            sizin tablonuzdaki BMI, eşlik eden tıbbi durumlar (diyabet, kalp,
-            böbrek, tiroid), kullandığınız ilaçlar, hormonal durum, kas/kemik
-            profili, beklentiniz ve uzun süreli motivasyonunuz GLP-1 kararına yön
-verir. Burada okuduğunuz bir başlangıç rehberidir, karar değil;
-            sizin için uygun adımları kendi hekiminizle birebir değerlendirmeniz
-            önemlidir — özellikle aynı molekülün üç farklı klinik kararı destekleyebildiği
-            ve menopozal bedenin ek üç ekseni hesaba katmayı gerektirdiği bu
-            kadar nüanslı bir alanda.
+            <strong class="text-primary">Güvenlik ve izlem:</strong> Ağızdan progesteron kullanan, rahmi olan
+            kadınlarda rahim iç tabakasının korunması; pankreatit ve tiroid öyküsü; ilacı bırakma sonrası
+            kilo seyri tedavi planına baştan dahil edilir <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a>, <a href="#kaynak-8" class="text-primary hover:underline">[8]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
+            Kişisel karar, hekim değerlendirmesi gerektirir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı
           </p>
+        </div>
       </ArticleEditorNote>
 
-       <ArticleDisclaimer>
-<p>
+      <ArticleDisclaimer>
+        <p>
           Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine
           geçmez. Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz.
         </p>
@@ -574,4 +531,3 @@ verir. Burada okuduğunuz bir başlangıç rehberidir, karar değil;
 
   <SiteFooter />
 </SiteLayout>
-

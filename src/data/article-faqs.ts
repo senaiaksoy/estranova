@@ -1030,19 +1030,19 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': [
     {
-      question: 'GLP-1 analogları menopozda kilo için sihirli çözüm mü?',
+      question: 'Semaglutid, liraglutid ve tirzepatid arasında kilo kontrolü açısından nasıl bir fark var; ilaç seçimini ne belirler?',
       answer:
-        'Hayır. Bazı kadınlarda güçlü sonuçlar sağlayabilir ama bu ilaçlar yaşam tarzı, kas korunumu ve uzun dönem planın yerini tutmaz. Beklentiyi gerçekçi kurmak çok önemlidir.',
+        'Kilo kaybı açısından üçü de etkili, ancak etkileri aynı düzeyde değil. Liraglutid günlük enjeksiyonla kullanılan daha eski bir GLP-1 agonisti ve çalışmalarda ortalama kilo kaybı yaklaşık %8 düzeyindeydi. Semaglutid haftalık kullanılıyor ve obezitesi olan, diyabeti bulunmayan kişilerde yaklaşık %15’e varan ortalama kayıplar gösterdi. Tirzepatid ise hem GIP hem GLP-1 reseptörlerini etkiliyor ve güncel verilerde en yüksek ortalama kilo kaybını sağlıyor; 2025’teki doğrudan karşılaştırmada 72 haftada tirzepatid ile ortalama %20,2, semaglutid ile %13,7 kilo kaybı görüldü.\n\nAma ilaç seçimini yalnızca “hangisi daha çok zayıflatıyor?” diye yapmam. Hedeflenen kilo kaybı, diyabet/prediyabet, kalp-damar hastalığı, uyku apnesi, gastrointestinal tolerans, safra kesesi ve pankreas öyküsü, kullanılan diğer ilaçlar, gebelik planı, uygulama sıklığı, maliyet ve ilaca erişim birlikte değerlendirilir. Örneğin semaglutidin, bilinen kardiyovasküler hastalığı olan aşırı kilolu veya obez kişilerde majör kardiyovasküler olay riskini azaltmaya yönelik doğrudan sonuç verisi ve onayı bulunuyor; tirzepatidin ise obeziteyle birlikte orta-ağır obstrüktif uyku apnesinde ayrıca onayı var. Bu nedenle benim için doğru ilaç, yalnızca tartıda en fazla düşüşü sağlayan değil, hastanın metabolik ve tıbbi profiline en uygun olan ilaçtır.',
     },
     {
-      question: 'Bu ilaçlarla kas kaybı konuşmak neden önemli?',
+      question: 'GLP-1 ilaçları menopoz döneminde kilo vermeye yardımcı olur mu; menopozda olmak tek başına kullanım gerekçesi midir?',
       answer:
-        'Çünkü hızlı kilo kaybı her zaman yalnızca yağ dokusundan olmaz. Menopoz geçişinde kas zaten hassas bir başlık olduğu için hareket ve protein desteği daha da önemli hale gelir.',
+        'GLP-1 temelli ilaçlar menopoz dönemindeki kadınlarda da kilo vermeye yardımcı olabilir; menopoz bu ilaçların etkisini ortadan kaldırmaz. Ancak menopozda olmak tek başına kullanım gerekçesi değildir. Karar, kişinin obezite veya fazla kilo açısından tedavi kriterlerini karşılayıp karşılamadığına, eşlik eden diyabet, hipertansiyon, uyku apnesi veya kardiyovasküler risklere ve daha önceki kilo verme girişimlerine göre verilir. Menopoz döneminde yağ dağılımı değişebilir ve özellikle karın çevresinde kilo artışı belirginleşebilir; bu nedenle uygun hastalarda GLP-1/GIP temelli ilaçlar yararlı olabilir. Güncel çalışmalar ayrıca menopoz hormon tedavisi kullanan bazı postmenopozal kadınlarda semaglutid veya tirzepatid ile kilo kaybının biraz daha fazla olabileceğini düşündürüyor, ancak bu henüz hormon tedavisini kilo vermek amacıyla başlatmak için yeterli bir gerekçe değildir.',
     },
     {
-      question: 'Menopozal kilo yakınması olan herkes bu tedavi için aday mıdır?',
+      question: 'GLP-1 analoğu nedir, vücutta nasıl çalışır?',
       answer:
-        'Hayır. Eşlik eden hastalıklar, beden kitle durumu, metabolik risk ve beklenti hattı birlikte değerlendirilir. Klinik karar, yalnızca tartıdan değil bütün sağlık resminden çıkar.',
+        'GLP-1 analogları, bağırsaktan yemek sonrası salgılanan GLP-1 hormonunun etkisini taklit eden ilaçlardır. Beyindeki iştah merkezlerini etkileyerek açlığı ve yeme isteğini azaltır, mide boşalmasını yavaşlatarak daha uzun süre tokluk sağlar ve kan şekeri yükseldiğinde pankreastan insülin salınımını artırırken glukagonu azaltır. Bu nedenle hem tip 2 diyabet tedavisinde hem de uygun hastalarda kilo kontrolünde kullanılırlar. Etkileri yalnızca “iştah kapatmak” değildir; beyin, mide-bağırsak sistemi ve pankreas üzerinden birlikte çalışırlar.',
     },
   ],
   '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/': [
@@ -1267,17 +1267,17 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Bir tedaviye “deneysel” denmesi tam olarak ne anlama gelir?',
       answer:
-        'Genellikle etkinlik ve güvenlik verisinin henüz sınırlı olduğu, kullanım yerinin tam netleşmediği anlamına gelir. Bu kelime bazen umut çağrıştırsa da aslında belirsizliğin de adıdır.',
+        'Bir tedaviye “deneysel” denmesi, etkinliği ve güvenliği konusunda henüz yeterli ve kaliteli klinik kanıt bulunmadığı; standart tedavi olarak kabul edilmediği anlamına gelir. Bu, mutlaka işe yaramadığı demek değildir ama beklenen yarar, riskler ve hangi hastanın gerçekten fayda göreceği konusunda belirsizlik daha fazladır.',
     },
     {
       question: 'Off-label kullanım ile deneysel yaklaşım aynı şey midir?',
       answer:
-        'Hayır. Off-label kullanım, onaylı bir ilacın farklı bir endikasyonda kullanılması olabilir; deneysel yaklaşım ise çoğu zaman daha az veri ve daha fazla belirsizlik taşır. İkisini aynı torbaya koymamak gerekir.',
+        'Off-label kullanım ile deneysel tedavi aynı şey değildir. Off-label, ruhsatlı bir ilacın onaylanmış endikasyonu, dozu, yaş grubu veya kullanım şekli dışında kullanılmasıdır; bazı off-label uygulamaların güçlü bilimsel kanıtı ve kılavuz desteği olabilir. Deneysel yaklaşımda ise kanıt düzeyi genellikle daha düşüktür ve yöntemin klinik değeri henüz netleşmemiştir.',
     },
     {
-      question: 'Deneysel bir seçenek konuşulurken en doğru üç soru nedir?',
+      question: 'Deneysel bir seçenek konuşulurken hekime sorulacak üç temel soru nedir?',
       answer:
-        'Ne kadar insan verisi olduğu, beklenen faydanın ne kadar somut olduğu ve standart seçeneklerin neden yeterli görülmediği iyi üç başlangıç sorusudur. Bu sorular pazarlama ile klinik kararı ayırmaya yardım eder.',
+        'Deneysel bir seçenek konuşulurken hekime üç temel soru sorulabilir: “Bu tedavinin benim durumumda işe yaradığını gösteren ne kadar güçlü kanıt var?”, “Bilinen ve henüz bilinmeyen riskleri neler?” ve “Bunu yaptırmazsam elimizde kanıtı daha güçlü hangi standart seçenekler var?” Bu üç soru, yeni veya çekici görünen bir tedavinin gerçekten anlamlı olup olmadığını çoğu zaman oldukça iyi ortaya koyar.',
     },
   ],
   '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/': [
