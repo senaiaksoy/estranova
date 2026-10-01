@@ -9,6 +9,7 @@
 | # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 2026-05-07 | `yapay-zeka-hekim-cihaz-dengesi` | Zamansız Yaşam / dijital sağlık | v2.0 | — | Kalıp 1 + Kalıp 6 izi | Sabah okuma + post-menopoz gece uyanışı | “Geçen ay bir gece...” | tireli iki bölümlü | ilkbahar | Onaylı PDF’den son stil/Türkçe temizliği yapıldı. İngilizce “AI/wearable” dili Türkçeleştirildi; hitap tamamen “siz” standardına çekildi; route-ready Astro ve HTML önizleme paketi oluşturuldu. |
+| 1a | 2026-10-01 | `yapay-zeka-hekim-cihaz-dengesi` (revizyon) | Zamansız Yaşam / dijital sağlık | v2.0 | — | Kalıp 6 izi korundu | Post-menopoz gece uyanışı (değişmedi) | “Geçen ay bir gece...” (korundu) | tireli iki bölümlü (korundu) | sonbahar | Audit + humanize revizyonu (Codex + Claude). Stil sinyali: Rima’nın o gecedeki duygusu “merak” (tedirginlik değil) — yazar kendisi verdi; kapanışta geri çağrıldı. Ders veren uzman cümleleri ve “beden ritmi” mecazı çıkarıldı; her bölüme siz bağı. Rima onayı KC aracılığıyla 2026-10-01. |
 
 ## Sütun anahtarı
 

@@ -152,8 +152,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi/',
     writerSlug: 'rima-erdemir',
-    approvedAt: '2026-05-07',
-    note: 'Rima Erdemir author approval received from icerik/yazar-onaylari/rima-erdemir/onaylanan/2026-05-07_yapay-zeka-hekim-cihaz-dengesi paketi. Approved draft, Turkish terminology and Estranova article shell kurallarına hizalanarak canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı.',
+    approvedAt: '2026-10-01',
+    note: 'Rima Erdemir author approval received from icerik/yazar-onaylari/rima-erdemir/onaylanan/2026-05-07_yapay-zeka-hekim-cihaz-dengesi paketi. Approved draft, Turkish terminology and Estranova article shell kurallarına hizalanarak canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı. 2026-10-01: KC bu sohbette Rima’nın revizyon onayını bildirdi (“Rima onay tamam”). Kapsam: Codex audit/fix (spot yeniden yazıldı, uyku evresi uygulama tahmini olarak netleşti, gövdedeki genel yarar Evidence 3–4 etiketleri çıkarıldı, uyku sınırlaması MedicalContextNote’ta 3/5 ile toplandı) + Claude sıcaklık turu (Rima’nın “merak” yanıtıyla duygu anı, 1. ve 4. bölüme siz bağı, 4. bölüm tekrarı birleştirildi, teselli anı, yaş alma satırı ve merak geri çağırması). Yeni tıbbi iddia yok; SSS yok. Paket: icerik/yazar-onaylari/rima-erdemir/onaylanan/2026-10-01_yapay-zeka-hekim-cihaz-dengesi-humanize.',
   },
   {
     pathname: '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/',

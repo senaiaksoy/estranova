@@ -1,0 +1,78 @@
+Rima Erdemir — Yapay Zekâ, Hekim ve Cihaz Dengesi
+İnceleme tarihi: 1 Ekim 2026
+Durum: Editoryal düzeltme; yeni yazar/tıbbi onay ve yayın yapılmadı.
+
+Kapsam ve başlangıç
+Başlık, SEO açıklaması, spot, beş gövde bölümü, tıbbi bilgi notu, bağlantılar ve şema incelendi.
+Yazar: rima-erdemir. Tür: experience-essay. Hekim sesi/SSS eklenmedi.
+Onay tabanı: icerik/yazar-onaylari/rima-erdemir/onaylanan/2026-05-07_yapay-zeka-hekim-cihaz-dengesi/.
+Paket meta.json: approved-final-polished, Rima'nın PDF onayı. İlk yayın commit'i: 5a86b4a4.
+git diff 5a86b4a4 ile şablon, görsel, canonical/SEO ve sonraki yerel metin farkları incelendi.
+FAQ ve TOC Ağustos tür refaktöründe kaldırılmış; bu turda yeniden eklenmedi.
+Ana checkout'ta işe başlamadan önce hedef dosya değişikti; before.astro bu metni korur.
+Dosyanın başka oturumda hâlâ düzenlenip düzenlenmediği bilinmediğinden düzeltme ayrı kopyada hazırlandı.
+
+Bulgular ve düzeltmeler
+Gramer: “küçük işaretlerin belleğinden” tamlaması ve uzun isim zincirleri sadeleştirildi.
+Yerel ifade: post-menopoz spotta “menopoz sonrası dönem” oldu; sayfa/şema anahtarları korunuyor.
+Humanizasyon: harita/ritim/bedenin konuşması ailesi, aforistik lede'ler ve üç kaynağın rollerinin tekrarı azaltıldı.
+Spot iki cümlelik deneyim girişine dönüştürüldü; ana başlık ve SEO alanları korundu.
+H2'ler somut deneyime bağlandı, mevcut beş anchor korundu. Kullanılmayan tocEntries kaldırıldı.
+Yapay zekâ yararı kişisel gözlem olarak anlatıldı; genel yarar iddiasına eklenen 3–4/5 etiketleri çıkarıldı.
+Kişisel bilgiyi hiçbir koşulda bilmez iddiası, genel bir soruda bilgilerin kendiliğinden yer almayacağı sınırına çekildi.
+“Yapay zekâ kararı buradan ver demiyor” cümlesi yerine yazarın kararını yanıta bırakmaması anlatıldı.
+Uyku evresi çıktıları gerçek ölçüm yerine uygulamanın tahmini olarak açıklaştırıldı.
+Tıbbi bağlamdaki uyku sınırlaması ve mevcut 3/5 etiketi ayrı MedicalContextNote içinde toplandı.
+Tüm tüketici takip cihazlarının tanı koyamayacağı genellemesi, yazıdaki takip uygulaması bağlamına daraltıldı.
+
+Anlam kaydı
+Gece uyanışı, sıcak basmasının son haftalarda yoğun hissedilmesi, son üç haftada kahve artışı ve ailede uyku bölünmesi korunuyor.
+Yapay zekâ çıktısındaki tetikleyici listesi, bir klinik öneri olarak doğrulanmadan, kayıttaki asistan yanıtı olarak korunuyor.
+Uygulamada hafif uykunun daha uzun/derin uykunun daha kısa görünmesi korunuyor; gerçek uyku evresi değişikliği kanıtı sayılmıyor.
+İki değişken, bir kontrol ve birkaç hafta sonra yeniden konuşma korunuyor; kontrol türü/tedavi/doz eklenmedi.
+Yazarın hekime yazdığı iki alıntı anlamı ve sözleriyle korunuyor. Yeni hekim yanıtı, deneyim veya onay üretilmedi.
+Nedensellik kurulmadı; birlikte ortaya çıkan kahve/uyku/sıcak basması gözlemleri soru olarak kalıyor.
+Kişisel yolun farklı olabileceği kapanış ve bireysel değerlendirme sınırı korunuyor.
+Yazar, yayın tarihi, görseller, canonical, iç linkler ve Article şema türü korunuyor.
+
+Kaynak izi (görünmez editoryal katman)
+WHO, 18 Ocak 2024: sağlık yanıtlarında yanlış, eksik bilgi ve otomasyona aşırı güven riski.
+https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models
+AASM 2018 position statement: tüketici uyku takibi tıbbi değerlendirmeyi ikame etmez; cihaz doğrulaması gerekir.
+https://aasm.org/advocacy/position-statements/consumer-sleep-technology/
+Chinoy ve ark., SLEEP 2021, doi:10.1093/sleep/zsaa291: yedi tüketici cihazının PSG ile karşılaştırılması; uyku evreleri tutarsız.
+https://academic.oup.com/sleep/article/44/5/zsaa291/6055610
+Çalışmanın genç sağlıklı yetişkin grubu menopoz sonrası kadına özel doğruluk oranı sağlamaz; böyle bir oran eklenmedi.
+Bu kaynaklar üçlü dengenin tamamına 3–4/5 yarar derecesi veya bu yazarın kişisel nedenlerini doğrulamaz.
+
+Sınırlar ve açık işler
+Metin gramer, yerel ifade ve ritim için üç ayrı okumadan geçti.
+Astro compiler transform: sıfır diagnostic.
+Plain-text çıkarımlarda hem başlangıç hem onaylı paketle fidelity: no_tracked_changes; editorial-check: bulgu yok.
+Bu kontroller Evidence, props, şema ve frontmatter anlamını ölçmez; bunlar elle incelendi.
+Yeni spot ve tıbbi bilgi notu 7 Mayıs onayının kapsamına kendiliğinden girmez; yayın öncesi ilgili yazar/tıbbi inceleme gerekir.
+Kişisel deneyim, veri yorumlama ve hekime soru hazırlama açısından yararlıdır. Tanı/tedavi veya yapay zekâ-cihaz doğruluğu için klinik referans sayılmaz.
+Canlı sayfa bu turda okundu: eski mecazlar/kanıt etiketleri mevcut. Düzeltilmiş kopya henüz yayında değil.
+Commit, push, deploy yapılmadı.
+
+Son teknik doğrulama
+Ayrı yönetilen worktree: C:/Users/KC3/.codex/worktrees/rima-humanize/Estranova.
+Lint, compliance, strict article integrity, strict templates, encoding/color/lexicon/date gates ve Astro build tamamlandı.
+SEO output audit: 163 sayfa geçti. Hedef dışı iki mevcut uyarı: epitalon uzun cümleleri; vücut şekillendirme yazısında “çerçevesi”.
+Derlenmiş hedef HTML: tek H1, beş mevcut anchor, Rima Erdemir Article şeması; FAQPage/MedicalWebPage yok.
+Yeni spot ve uyku tahmini cümlesi derlenmiş HTML'de mevcut; eski orta–iyi kanıt etiketi yok.
+Tarayıcıda tüm görünür metin ve giriş/gövde tipografisi incelendi. Yerel önizleme: http://127.0.0.1:4323/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi/.
+Ana checkout'taki hedef dosya, işe başlarken alınan before.astro ile byte düzeyinde aynı; önceki çalışma korunuyor.
+git diff --check temiz. Çalışma kopyasında yalnız hedef Astro ve bu inceleme kaydı değişti.
+
+Claude Code sıcaklık turu (1 Ekim 2026, ana repo)
+Taban: Codex worktree sürümü (ana repoya alındı; 12:22 tarihli kaydedilmemiş ara tur scratchpad'e yedeklendi ve terk edildi).
+Yazar girdisi (KC aracılığıyla): "O gece telefona uzanırken ne hissettiniz?" → "merak". Duygu beat'i yalnız bu yanıtla kuruldu; başka duygu eklenmedi.
+Değişiklikler: 1. ve 4. bölüme "siz" yaşıt bağı; 4. bölümde tekrar eden lede ile not paragrafı birleştirildi;
+4. bölüme teselli anı ("İçiniz rahat olsun…", tıbbi iddia içermez); 5. bölüme "yaş almanın iyi taraflarından biri" satırı sadeleştirilerek geri geldi;
+kapanışta açılıştaki merak geri çağrıldı. modifiedDate + byline lastUpdated: 1 Ekim 2026.
+Yeni tıbbi iddia yok. Codex'in gövdeden kaldırdığı Evidence 3–4 etiketleri kaldırılmış kaldı (tıbbi editör onayı bekler).
+Tell: "değil;/," 1 · beden-ritim 0 · soru-H2 0 · "bir hastam" 0 · her H2'de siz bağı ≥1.
+lexicon:check hard_ban 0 · build:ci geçti (SEO audit 163 sayfa).
+Açık iş: Rima için revizyon onay formu (standart yazar; 7 Mayıs onayı yeni spotu/MedicalContextNote'u kapsamaz). Commit/push/deploy yapılmadı.
+Durum güncellemesi 2026-10-01: Rima revizyon onayı KC aracılığıyla alındı; paket onaylanan/ altına taşındı. Commit + push yapıldı.

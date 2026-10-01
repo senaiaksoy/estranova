@@ -23,14 +23,6 @@ const seoTitle = 'Yapay Zekâ, Hekim ve Cihaz Dengesi';
 const articleDescription =
   'Yapay zekâ asistanı, kişisel takip verisi ve hekim yorumu aynı masada nasıl durur? Rima Erdemir, üç bilgi kaynağının birbirini nasıl tamamladığını anlatıyor.';
 
-const tocEntries = [
-  { id: 'gece-sorusu', label: 'Gece Sorusu' },
-  { id: 'yapay-zeka-siniri', label: 'Yapay Zekânın Sınırı' },
-  { id: 'cihaz-verisi', label: 'Cihaz Verisi' },
-  { id: 'hekim-yorumu', label: 'Hekim Yorumu' },
-  { id: 'sade-soru', label: 'Daha Sade Soru' },
-];
-
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -38,6 +30,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'rima-erdemir',
   articleType: 'experience-essay',
   publishedDate: '29 Nisan 2026',
+  modifiedDate: '1 Ekim 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
@@ -75,6 +68,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="rima-erdemir"
         articleType="experience-essay"
         publishedDate="29 Nisan 2026"
+        lastUpdated="1 Ekim 2026"
         readingMinutes={8}
         imageSrc="/images/library/editorial/rima-erdemir-yapay-zeka-hekim-cihaz-byline.jpg"
         imageAlt="Çalışma masasında tablet ve sağlık notları yanında düşünen 50+ kadın portresi; yapay zekâ, hekim yorumu ve kişisel takip verisi dengesini sakin editoryal bir tonla anlatan dosya görseli"
@@ -83,101 +77,109 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Bu yazıya başlarken">
         <p>
-          Yapay zekâ asistanları, kişisel takip verileri ve hekim yorumu artık aynı sağlık cümlesinin içinde yer
-          alıyor. Ama bu üç kaynağın hiçbirini ötekinin yerine koymak gerekmiyor <Evidence from={3} to={4} />. Bu yazı,
-          post-menopoz döneminde bedenini biraz daha dikkatli dinlemeye çalışan bir kadının gözünden, dijital bilginin
-          ancak kişisel öykü ve hekim yorumu ile birlikte anlam kazandığını anlatıyor.
+          Bir gece yapay zekâya sıcak basmalarımı sordum; sabah hekimime kendi gözlemlerimi yazdım.
+          Menopoz sonrası dönemde uyku takibime de bakarken, bu üç bilgi kaynağından ne beklediğimi yeniden düşündüm.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel mode="experience">
-        <h2 id="gece-sorusu">Bir Gece Sorulan Soru, Sabah Başka Bir Cümleye Dönüştü</h2>
+        <h2 id="gece-sorusu">Gece Sorduğum Soruyu Sabah Yeniden Düşündüm</h2>
         <p>
-          Bazen cevap gece gelir sanırsınız; sabah olunca onun aslında yalnızca iyi kurulmuş bir soru olduğunu anlarsınız.
+          Gece telefonda okuduğum yanıt uzundu. Sabah hekimime yazacağım not ise birkaç cümleye sığdı.
         </p>
         <p>
-          Geçen ay bir gece sıcak basmasıyla uyandım. Böyle geceler benim için yeni değil; ama bu kez bedenim aynı cümleyi
-          biraz daha yüksek sesle söylüyor gibiydi. Telefona uzandım, yapay zekâ asistanına gece sıcak basmasının son
-          haftalarda neden daha yoğun hissedilebileceğini sordum. Karşıma uzun bir liste çıktı: akşam yemeği saati, oda
-          ısısı, stres, kahve, bazı ilaç etkileşimleri, uyku düzeni.
+          Geçen ay bir gece sıcak basmasıyla uyandım. Böyle geceler benim için yeni değil; ama son haftalarda
+          sıcak basmalarını daha yoğun hissediyordum. Telefona uzandım. İçimde tuhaf bir merak vardı. Yapay zekâ
+          asistanına bunun neden olabileceğini sordum. Karşıma uzun bir liste çıktı: akşam yemeği saati, oda
+          sıcaklığı, stres, kahve, bazı ilaç etkileşimleri, uyku düzeni.
         </p>
         <p>
-          O cevap aydınlatıcıydı, ama bana ait değildi. Yapay zekâ son üç haftadır kahveyi biraz artırdığımı bilmiyordu.
-          Aile içinde uykunun bölündüğü bir döneme girdiğimizi bilmiyordu. Benim tarama geçmişimi, bedenimin yıllardır
-          verdiği küçük işaretleri bilmiyordu. Sabah hekimime not düşerken listeyi değil, gözlemimi yazdım: “Şu üç
-          değişiklik oldu; sizce bunların bir anlamı var mı?”
+          Liste bazı olasılıkları düşünmeme yardımcı oldu. Ama yapay zekâ son üç haftadır kahveyi biraz artırdığımı
+          bilmiyordu. Aile içinde uykunun bölündüğü bir döneme girdiğimizi de bilmiyordu. Sağlık taramalarımın geçmişi
+          de o yanıtın içinde yoktu.
+        </p>
+        <p>
+          Siz de gece yarısı bir soruyu telefona emanet ettiyseniz, sabah o yanıtın size ne kadar az şey sorduğunu
+          fark etmiş olabilirsiniz. Ben hekimime not düşerken kendi gözlemimi yazdım: “Şu üç değişiklik oldu;
+          sizce bunların bir anlamı var mı?”
         </p>
 
-        <h2 id="yapay-zeka-siniri">Yapay Zekânın Söyleyebildiği ile Söyleyemediği Arasında Fark Var</h2>
+        <h2 id="yapay-zeka-siniri">Yapay Zekânın Yanıtını Bir Başlangıç Olarak Okuyorum</h2>
         <p>
-          Yapay zekâ hızlı bir yol arkadaşı olabilir; ama yolun nereye döndüğünü hâlâ sizin öykünüz belirliyor.
+          Bir konuya nereden bakacağınızı ararken kısa bir özet işe yarayabilir. O özeti kendi sağlığımla
+          ilgili bir karara dönüştürürken duruyorum.
         </p>
         <p>
-          Yapay zekâ destekli sağlık asistanları geniş bir bilgi havuzundan kısa özetler çıkarma konusunda oldukça işe
-          yarar. Yaygın tetikleyicileri sıralar, bir konuyu ilk kez düşünürken aklı toparlar, bazen de doğru başlığı
-          bulmanıza yardım eder <Evidence from={3} to={4} />. Ama klinik karar aracı değildir; çünkü kişisel risk
-          profilinizi, aile öykünüzü, o hafta yaşadığınız değişiklikleri ve bedeninizin eski alışkanlıklarını bilmez.
+          Benim için yapay zekânın yararlı tarafı, dağınık soruları toparlamaya yardım etmesi. Bir başlığı daha
+          anlaşılır hâle getirebiliyor, üzerinde düşünmek istediğim olasılıkları sıralayabiliyor. Kişisel öykümün
+          yanıta ne kadar yansıdığı ise ayrı bir mesele. Aile öyküsü, sağlık riskleri ve o hafta yaşanan değişiklikler,
+          genel bir sorunun yanıtında kendiliğinden yer almıyor.
         </p>
         <p>
           Uzun yıllar bilgi gürültüsünün içinde çalıştığım için manşet ile anlam arasındaki boşluğu sezmeye alışığım.
-          Bugün aynı refleksi sağlık bilgisinde de kullanıyorum. Yapay zekâ bana çoğu zaman “buraya bakmaya değer” diyor;
-          ama “kararı buradan ver” demiyor. Bilim bu alanda hızlı ilerliyor; şunu biliyoruz, şu hâlâ belirsiz.
+          Bugün aynı refleksi sağlık bilgisinde de kullanıyorum: akıcı bir yanıtın doğruluğunu ayrıca sorgulamak
+          gerekiyor. Yapay zekânın yazdıklarını, hekimime soracağım konuları belirlemek için okuyorum.
+          Son kararı o yanıta bırakmıyorum.
         </p>
 
-        <h2 id="cihaz-verisi">Takip Verisi Bazen Yalnızca Bir Kalıbı Görünür Kılar</h2>
+        <h2 id="cihaz-verisi">Uyku Takibindeki Değişiklik Notuma Girdi</h2>
         <p>
-          Verinin büyüsü, onu yorumlamaya başladığınız anda azalıyor; ama tam o noktada işe yaramaya başlıyor.
+          Siz de bir uyku uygulamasına bakıyorsanız, ekrandaki değişiklik ile o sabah nasıl hissettiğinizi
+          yan yana düşünmüş olabilirsiniz. Benim dikkatimi de bu ikisi çekti.
         </p>
         <p>
-          Uyku takip uygulamam son haftalarda bir değişim işaret ediyordu: hafif uyku uzuyor, derin uyku kısalıyordu. İlk
-          anda bunu fazla ciddiye almadım. Bir uygulamanın benden fazla şey bildiğini sanacak kadar aceleci davranmak
-          istemiyorum artık. Ama aynı dönemde gece sıcak basmaları da belirginleşince, veri birden anlamlı bir arka plan
-          oldu.
+          Uyku takip uygulamam son haftalarda hafif uyku süresini daha uzun, derin uyku süresini daha kısa
+          gösteriyordu. Bunlar uygulamanın tahminleriydi. İlk anda üzerinde fazla durmadım;
+          ekrandaki sonuca bakarak uykum hakkında acele bir yargıya varmak istemiyordum. Aynı dönemde gece
+          sıcak basmaları da belirginleşince, bu değişikliği hekimime yazacağım nota ekledim.
         </p>
         <p>
-          Takip cihazları tanı koymaz. Uyku evresi sınıflandırmalarında sınırlı kalabildiklerini biliyoruz
-          <Evidence level={3} />. Yine de bir kalıbı görünür hale getirebilirler. Benim için işe yarayan taraf da bu:
-          hekimle konuşurken yalnızca “son günlerde biraz kötü uyuyorum” demek yerine, “şu dönemde ritim böyle değişti”
-          diyebilmek.
+          Uygulamanın gösterdiklerini kendi uyku gözlemimle birlikte ele aldım. “Son günlerde biraz kötü uyuyorum”
+          derken hangi dönemi kastettiğimi anlatmamı kolaylaştırdı. Uyku evrelerinin gerçekten değişip değişmediğini
+          ise bu veriden çıkaramazdım.
         </p>
         <p>
-          Cihaz tek başına cevap değil; ama doğru soruyu sormaya yardım ediyor. Bence dijital sağlık alanındaki çoğu
-          vaadi sakinleştiren cümle de tam olarak bu.
+          Cihazdan beklediğim de buydu: fark ettiğim değişikliği konuşabilmek. Bana bir tanı vermesini beklemiyordum.
         </p>
 
-        <h2 id="hekim-yorumu">Üçüncü Ses Hâlâ Hekim Yorumu</h2>
+        <h2 id="hekim-yorumu">Hekimimle Konuşurken Kendi Gözlemim Öne Çıktı</h2>
         <p>
-          Yapay zekâ geniş haritayı çıkarıyor, veri ritmi işaret ediyor, hekim ise bunların hangisinin size ait bir anlam
-          taşıdığını ayırıyor.
+          Hekiminize yazarken insan her şeyi bir arada anlatmak istiyor. Ben de öyle yaptım.
         </p>
         <p>
-          Sabah hekimime yazdığım notun tonu oldukça sadeydi: “Son haftalarda gece sıcak basmaları arttı. Yapay zekâ
+          Yapay zekânın listesini, uygulamadaki değişikliği ve kendi fark ettiklerimi aynı notta topladım. Notun tonu
+          oldukça sadeydi: “Son haftalarda gece sıcak basmaları arttı. Yapay zekâ
           asistanı birkaç olası tetikleyici sıraladı. Uyku takibimde de ritim değişiyor. Ben ayrıca kahve miktarımın
           arttığını fark ettim. Sizce bunların arasında nasıl bir bağ olabilir?”
         </p>
         <p>
+          İçiniz rahat olsun diye ekliyorum: Böyle bir not için uzman olmanız gerekmiyor. Değişikliğin ne zaman
+          başladığını ve sizi en çok neyin rahatsız ettiğini yazmak iyi bir başlangıç.
+        </p>
+        <p>
           Gelen yanıt, yapay zekâ cevabından daha kısaydı; ama daha kişiseldi. İki değişken öne çıktı, bir kontrol
-          önerildi, birkaç hafta sonra yeniden konuşma planlandı. O anda fark ettiğim şey çok basitti: üç kaynak aynı şeyi
-          söylemek zorunda değil. Zaten değerleri de orada. Biri genişletiyor, biri görünür kılıyor, biri yorumluyor.
+          önerildi, birkaç hafta sonra yeniden konuşma planlandı. Benim için fark burada belirginleşti:
+          konuşma, genel bir olasılık listesinden kendi yaşadığım değişikliklere geldi. Hangi gözlemin üzerinde
+          duracağımızı hekimimle birlikte değerlendirdik.
         </p>
 
         <h2 id="sade-soru">Bilgi Çoğaldıkça Daha Sade Soru Sormayı Öğreniyorum</h2>
         <p>
-          Çok bilgi bazen daha karmaşık bir zihin değil, daha sade bir soru istiyor.
+          Telefonumdaki aramalara dönüp baktığımda, aynı konu çevresinde ne kadar dolaştığımı görüyorum.
         </p>
         <p>
-          Geçmişe dönüp telefonumdaki aramalara baksam, aynı başlık etrafında ne kadar çok dolaştığımı görürüm. Uyku,
-          sıcak basması, uyku takip verisi, yapay zekâ, hormonal geçiş. Bir süre bunun beni daha güçlü
-          kıldığını sanıyordum. Oysa zamanla öğrendiğim şey şu oldu: bilgi arttıkça soru kısalmalı.
+          Uyku, sıcak basması, uyku takip verisi, yapay zekâ, hormonal geçiş. Başlıklar çoğaldıkça konuyu daha iyi
+          anladığımı sanıyordum. Oysa hekimime yazarken beni en çok ilgilendiren değişikliği birkaç cümlede
+          anlatabilmek daha yararlı oldu.
         </p>
         <p>
-          Şimdi kendime daha dar sorular soruyorum. “Bu veri hangi kalıbı gösteriyor?” “Bu değişiklik ne zaman başladı?”
-          “Bunu kendi beden öykümle birlikte düşündüğümde ne anlam çıkıyor?” Belki de yaş almanın iyi taraflarından biri
-          bu: daha çok şey bilirken daha az kelimeyle konuşmayı öğrenmek.
+          Şimdi kendime daha yalın sorular soruyorum: “Bu veri hangi kalıbı gösteriyor?” “Bu değişiklik ne zaman başladı?”
+          “Bunu kendi sağlık öykümle birlikte düşündüğümde ne anlam çıkıyor?” Hepsinin yanıtını kendim bulmam gerekmiyor.
+          Belki yaş almanın iyi taraflarından biri de bu: daha çok şey bilip daha az kelimeyle sormak.
         </p>
         <p>
-          Hâlâ her şey net değil. Ama artık belirsizliğin kendisini panik değil, çalışma alanı olarak okuyorum. Benim
-          yolum bu; sizinki daha sessiz, daha hızlı ya da bambaşka olabilir.
+          Hâlâ her şey net değil. O gece beni telefona uzandıran merak da geçmedi. Artık onu uzun bir liste yerine,
+          sabah hekimime yazacağım birkaç cümleye taşıyorum. Benim yolum bu; sizin bilgiye ulaşma ve hekiminizle konuşma biçiminiz farklı olabilir.
         </p>
       </ArticleProsePanel>
 
@@ -192,14 +194,14 @@ const articleSchemas = buildArticleSchemas({
 
       <MedicalContextNote class="mt-10">
         <p>
-          Yapay zekâ destekli sağlık asistanları ve kişisel takip araçları, sağlık bilgisi okuryazarlığını
-          destekleyen yardımcı kaynaklar olarak değerlidir. Ancak bu araçlar klinik karar verme süreçlerinin yerine geçmez.
-          Tanı ve tedavi planlaması bireysel öykü, muayene ve hekim değerlendirmesi gerektirir.
+          Genel amaçlı yapay zekâ asistanlarının sağlık yanıtları yanlış veya eksik bilgi içerebilir.
+          Kişisel öykü paylaşılmış olsa da bu yanıtlar bireysel tanı ve tedavi değerlendirmesinin yerini tutmaz.
+          Tanı ve tedavi planlaması kişisel öykü, muayene ve hekim değerlendirmesi gerektirir.
         </p>
         <p>
-          Bu araçlardan gelen veriler bazı kalıpları görünür hale getirebilir; fakat özellikle uyku evresi ya da beden
-          ritmi yorumlarında sınırlı kalabilirler. Bu nedenle dijital veriyi mutlak sonuç gibi değil, görüşmeyi zenginleştiren
-          bir gözlem aracı gibi okumak daha doğrudur.
+          Tüketici tipi uyku takip araçları, zaman içindeki değişiklikleri konuşmaya yardımcı olabilir;
+          uyku evresi tahminleri ise kesin ölçüm gibi yorumlanmamalıdır <Evidence level={3} />.
+          Bu yazıda anlatılan takip uygulaması, tıbbi uyku değerlendirmesinin yerine geçmez.
         </p>
       </MedicalContextNote>
 
