@@ -8,27 +8,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Kreatin menopoz belirtilerini azaltır mı?',
       answer:
-        'Bugün için kreatinin sıcak basmasını, gece terlemesini veya menopozun diğer temel belirtilerini azalttığını söyleyemeyiz. Kas gücüyle ilgili olumlu bulgular var; ancak bunlar kreatini genel bir menopoz tedavisine dönüştürmüyor.',
+        'Sıcak basması, gece terlemesi gibi klasik menopoz belirtilerini azalttığını gösteren yeterli kanıt yok. Buna karşılık kreatinin özellikle direnç egzersiziyle birlikte kas gücü ve yağsız vücut kütlesine küçük katkıları olabilir; perimenopoz/menopoz dönemine özgü çalışmalar ise hâlâ sınırlı.',
     },
     {
       question: 'Kreatin kemik erimesini önler mi?',
       answer:
-        'Mevcut çalışmalar kemik mineral yoğunluğunda genel bir artış göstermiyor. Bazı kemik geometrisi ölçümlerinde olumlu sinyaller var; fakat buradan osteoporozu önlediği, tedavi ettiği veya kırığı azalttığı sonucuna geçemeyiz.',
+        'Bugünkü verilere göre kreatini osteoporozu önleyen bir tedavi olarak görmemek gerekir. İki yıllık randomize çalışmalarda kemik mineral yoğunluğunda belirgin yarar gösterilmedi; bazı çalışmalar direnç egzersiziyle birlikte kemik geometrisi ve mekanik dayanıklılık göstergelerinde olumlu değişiklikler bildirmiş olsa da, toplam kanıt kemik yoğunluğunu koruduğunu kesin olarak göstermiyor.',
     },
     {
       question: 'Kreatin beyin sisi için kullanılabilir mi?',
       answer:
-        'Bugün için rutin kullanımı destekleyen yeterli veri yok. Küçük çalışmalar araştırmaya değer sinyaller veriyor; daha büyük ve uzun süreli çalışmaları görmemiz gerekiyor. Yeni veya belirgin zihinsel yakınmaları da yalnızca menopoza bağlamamak önemli.',
+        'Burada daha ilginç ama henüz kesin olmayan veriler var. Genel erişkin çalışmalarında hafıza ve bazı bilişsel alanlarda küçük yararlar bildirilirken, başka sistematik değerlendirmeler kanıtın tutarsız olduğunu vurguluyor. Perimenopoz ve menopozdaki yalnızca 36 kadını içeren küçük bir randomize çalışma, 8 haftalık kreatin hidroklorür kullanımında reaksiyon zamanında ve beyin kreatin düzeyinde iyileşme gösterdi; ancak bunu “menopozal beyin sisinin kanıtlanmış tedavisi” olarak kabul etmek için henüz erken.',
     },
     {
       question: 'Kreatin kullanırken direnç egzersizi şart mı?',
       answer:
-        'Menopoz sonrası kadınlarda en tutarlı kas ve güç sonuçları direnç egzersiziyle birlikte görülüyor. Egzersiz olmadan düşük doz kreatin kullanılan çalışmalarda aynı ölçüde yarar saptanmamış. Bu nedenle kreatini egzersizin yerine değil, uygun olduğunda yanına konabilecek bir seçenek olarak düşünmek gerekir.',
+        'Kreatin kullanırken direnç egzersizi şart değildir, ancak özellikle kas gücü ve kas kütlesi açısından en belirgin yarar genellikle kreatin + direnç egzersizi birlikte olduğunda görülür. Egzersiz yapmadan da kas kreatin depoları artar; fakat menopoz döneminde asıl hedef kas kaybını önlemekse kreatini egzersizin yerine değil, egzersize destek olarak görmek daha doğru olur.',
     },
     {
       question: 'Kreatin kullanmaya başlamadan önce neyi konuşmalıyım?',
       answer:
-        'Önce hedefinizi konuşun: kas gücü mü, egzersiz kapasitesi mi, yoksa başka bir yakınma mı? Mevcut hastalıklarınız, kullandığınız ilaç ve takviyeler, egzersiz planınız ve ürünün içeriği de değerlendirmeye katılmalı. Özellikle böbrek hastalığı, gebelik, emzirme veya çoklu ilaç kullanımı varsa kişisel değerlendirme gerekir.',
+        'Başlamadan önce özellikle böbrek hastalığı öyküsü, kullanılan ilaçlar, hipertansiyon, diyabet ve başka takviyeler konuşulmalıdır. Sağlıklı erişkinlerde en çok kullanılan yaklaşım günlük 3–5 g kreatin monohidrattır; yükleme yapmak şart değildir. Başlangıçta bir miktar su tutulumuna bağlı kilo artışı olabilir. Böbrek hastalığı olanlarda veya böbrek fonksiyonunu etkileyebilecek ilaç kullananlarda hekime danışmadan başlanmasını önermem.',
     },
   ],
   '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': [

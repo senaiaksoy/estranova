@@ -50,8 +50,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-08-08',
-    note: 'KC editör doğrudan onayı ve Dr. Alper Mumcu bağımsız tıbbi inceleme onayı — 8 Ağustos 2026. Ekli araştırmadan hazırlanan kreatin-menopoz klinik rehberinde sonuç bazlı çalışma paydaları, kanıt sınırları, sektör ilişkileri, NHANES eşik yorumu, güvenlik sınırları ve kontrollü H2 mizah bütçesi doğrulandı. Özel byline/kart görselleri üretildi; üst hero parent Vitaminler görseli olarak korundu.',
+    approvedAt: '2026-10-01',
+    note: 'KC editör doğrudan onayı ve Dr. Alper Mumcu bağımsız tıbbi inceleme onayı — 8 Ağustos 2026. Ekli araştırmadan hazırlanan kreatin-menopoz klinik rehberinde sonuç bazlı çalışma paydaları, kanıt sınırları, sektör ilişkileri, NHANES eşik yorumu, güvenlik sınırları ve kontrollü H2 mizah bütçesi doğrulandı. Özel byline/kart görselleri üretildi; üst hero parent Vitaminler görseli olarak korundu. 2026-10-01: iki geçişli audit/humanize revizyonu (soru-başlıklı H2 7→1, antitez seyreltme, teselli/duygu cümlesi, beş gerçek Dr. Aksoy SSS yanıtı ve onaylı üç küçük düzeltme) KC editör/yazar Dr. Senai Aksoy tarafından onaylandı; Dr. Alper Mumcu bu revizyonun bağımsız tıbbi incelemesini onayladı (KC bildirimi, 2026-10-01; belge repoda değil). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-01_kreatin-menopozda-ne-ise-yarar.json. Bu kayıt push/deploy yetkisi değildir.',
   },
   {
     pathname: '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/',
