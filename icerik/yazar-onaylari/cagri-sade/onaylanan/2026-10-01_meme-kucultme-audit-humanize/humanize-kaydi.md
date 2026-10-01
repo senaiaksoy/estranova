@@ -40,8 +40,12 @@ Yeni tıbbi iddia eklenmedi. Muayene anekdotu uydurulmadı. Mizah H0.
 
 ## Açık bulgu (değiştirilmedi)
 
-SSS 5 ("Karar verirken en önemli soru nedir?") genel bir meta soruya yakın ve SSS 4 gövdedeki "Her büyük meme sorun yaratmaz" cümlesini tekrar ediyor. SSS verisi koruma bandında olduğu için ellenmedi; ayrı bir karar gerekiyor. SSS 5 kısmı aşağıda çözüldü; SSS 4 tekrarı açık.
+SSS 5 ("Karar verirken en önemli soru nedir?") genel bir meta soruya yakın ve SSS 4 gövdedeki "Her büyük meme sorun yaratmaz" cümlesini tekrar ediyor. SSS verisi koruma bandında olduğu için ellenmedi; ayrı bir karar gerekiyor. SSS 5 ve SSS 4 aşağıda ayrı ayrı çözüldü.
 
 ## 1 Ekim 2026 — SSS 5 düzeltmesi (onaylandı)
 
 Genel meta soruya yakın SSS 5 ("Karar verirken en önemli soru nedir?") kaldırıldı. Yerine "Hormon tedavisi (HRT) kullanıyorsam meme küçültmeyi konuşabilir miyim?" geldi. Yanıt, Çağrı Sade'nin risk/iyileşme yanıtındaki değerlendirme listesine dayanıyor (HRT kullanımı, ilaçlar, önceki meme hastalıkları, yaşa uygun tarama). HRT'yi sürdürme ya da bırakma önerisi eklenmedi. Görünür SSS ve FAQPage aynı kaynaktan geliyor. Onay (1 Ekim 2026): “çağrı onayı tamam. tıbbi onay tamam” — SSS 5 değişikliği için ayrı teyit.
+
+## 1 Ekim 2026 — SSS 4 düzeltmesi (onaylandı)
+
+"Her büyük göğüs ameliyat gerektirir mi?" gövdedeki "Her büyük meme sorun yaratmaz" cümlesini ve cerrahi dışı seçenekler bölümünü tekrar ediyordu. Yerine "Meme küçültme ameliyatından sonra ne zaman egzersize dönebilirim?" geldi. Yanıt, Çağrı Sade'nin risk/iyileşme yanıtındaki ve gövdedeki onaylı sürelere dayanıyor: günlük etkinlikler birkaç hafta, ağır egzersiz ve yük kaldırma için yaklaşık altı hafta, son şekil daha uzun; kişisel takvimi cerrah belirler. Yeni tıbbi iddia eklenmedi. Onay (1 Ekim 2026): “çağrı onayı tamam. tıbbi onay tamam” — SSS 4 değişikliği için ayrı teyit.

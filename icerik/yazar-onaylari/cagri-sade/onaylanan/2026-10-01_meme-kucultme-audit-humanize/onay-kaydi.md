@@ -7,3 +7,7 @@ Bu teyit, audit + humanize revizyonunun Çağrı Sade yazar onayını ve tıbbi 
 ## SSS 5 onayı — 1 Ekim 2026
 
 Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu ikinci teyit, SSS 5 değişikliğinin (HRT kullanımı sorusu) Çağrı Sade yazar onayını ve tıbbi onayını kapsar.
+
+## SSS 4 onayı — 1 Ekim 2026
+
+Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam”. Bu üçüncü teyit, SSS 4 değişikliğinin (egzersize dönüş sorusu) Çağrı Sade yazar onayını ve tıbbi onayını kapsar.

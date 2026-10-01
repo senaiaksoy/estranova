@@ -129,9 +129,9 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Hayır. Bazı kadınlarda beden konforu ve günlük yaşam dengesiyle ilişkili bir cerrahi seçenek olarak değerlendirilebilir. Ancak bu, işlemin herkese uygun olduğu anlamına gelmez; kişisel tıbbi değerlendirme gerekir.',
     },
     {
-      question: 'Her büyük göğüs ameliyat gerektirir mi?',
+      question: 'Meme küçültme ameliyatından sonra ne zaman egzersize dönebilirim?',
       answer:
-        'Hayır. Her büyük göğüs fiziksel sorun yaratmaz. Bazı kadınlarda doğru sütyen desteği, postür çalışmaları, kilo dengesi, cilt bakım önlemleri veya yaşam tarzı düzenlemeleri yeterli olabilir.',
+        'Günlük etkinliklere dönüş çoğunlukla birkaç hafta sürer. Ağır egzersiz ve yük kaldırma için yaklaşık altı haftalık bir kısıtlama gerekebilir; şişliğin azalması ve memenin son şeklini alması daha uzun sürebilir. Bunlar genel sürelerdir; sizin takviminiz yara iyileşmenize göre cerrahınızla birlikte belirlenir.',
     },
     {
       question: 'Hormon tedavisi (HRT) kullanıyorsam meme küçültmeyi konuşabilir miyim?',
