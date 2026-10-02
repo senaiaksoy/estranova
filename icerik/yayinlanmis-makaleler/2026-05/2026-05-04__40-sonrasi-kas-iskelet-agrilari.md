@@ -1,14 +1,14 @@
 ---
 title: "40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek"
-description: "40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge, ağrı sinyali ve fizyoterapi desteği üzerinden anlatan sade rehber."
+description: "40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge ve fizyoterapi desteği üzerinden anlatan sade rehber."
 writer: ersin-sarac
 publishedDate: "4 Mayıs 2026"
 publishedDateIso: 2026-05-04
-url: /zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari
+url: /zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/
 section: "Zamansız Yaşam"
-sectionPath: /zamansiz-yasam
+sectionPath: /zamansiz-yasam/
 keywords: ["40 sonrası hareket", "bel ağrısı", "diz ağrısı", "kalça ağrısı", "kas-iskelet sağlığı", "fizyoterapi", "denge egzersizi"]
-exportedAt: 2026-05-11
+exportedAt: 2026-10-02
 ---
 
 # 40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek
@@ -126,7 +126,7 @@ Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
 
-Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğin durumlardır.
+Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğiniz durumlardır.
 
 -   Düşme, çarpma veya burkulma sonrası üzerine basamama ya da belirgin şekil bozukluğu
 -   Bacakta ilerleyen güç kaybı, uyuşma veya ayak bileğini kaldıramama

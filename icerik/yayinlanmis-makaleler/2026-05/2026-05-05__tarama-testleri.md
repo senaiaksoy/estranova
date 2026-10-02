@@ -4,11 +4,11 @@ description: "40 sonrası tarama planını kemik, metabolik ve kadın sağlığ�
 writer: senai-aksoy
 publishedDate: "5 Mayıs 2026"
 publishedDateIso: 2026-05-05
-url: /hormonal-gecis/40-sonrasi/tarama-testleri
+url: /hormonal-gecis/40-sonrasi/tarama-testleri/
 section: "Hormonal Geçiş"
-sectionPath: /hormonal-gecis/40-sonrasi
+sectionPath: /hormonal-gecis/40-sonrasi/
 keywords: ["40 sonrası tarama", "koruyucu sağlık", "kemik yoğunluğu", "metabolik izlem", "menopoz", "kadın sağlığı kontrolleri"]
-exportedAt: 2026-05-11
+exportedAt: 2026-10-02
 ---
 
 # 40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?
@@ -103,7 +103,7 @@ Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
 
-Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğin durumlardır.
+Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğiniz durumlardır.
 
 -   Ani ve açıklanamayan kilo kaybı, gece terlemesi veya uzamış halsizlik
 -   Düşük travmayla gelişen kırık (özellikle kalça, omurga, el bileği)

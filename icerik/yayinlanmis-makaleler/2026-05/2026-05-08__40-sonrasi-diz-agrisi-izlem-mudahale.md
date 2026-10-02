@@ -1,14 +1,14 @@
 ---
 title: "40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?"
-description: "40 sonrası diz ağrısında MR raporuna sıkışmadan; ağrının şiddeti, süresi, işlev kaybı, izlem planı, kırmızı bayraklar ve müdahale eşikleri üzerinden karar vermeyi anlatan ortopedik takip rehberi."
+description: "40 sonrası diz ağrısında MR raporuna sıkışmadan; şiddet, süre, işlev kaybı ve müdahale eşikleri üzerinden karar vermeyi anlatan ortopedik takip rehberi."
 writer: bulent-aksoy
 publishedDate: "8 Mayıs 2026"
 publishedDateIso: 2026-05-08
-url: /zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale
+url: /zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/
 section: "Zamansız Yaşam"
-sectionPath: /zamansiz-yasam
+sectionPath: /zamansiz-yasam/
 keywords: ["40 sonrası diz ağrısı", "diz ağrısı izlem", "diz ağrısı müdahale", "diz osteoartriti", "menisküs yırtığı", "konservatif tedavi", "ortopedik takip", "diz ağrısı kırmızı bayrak"]
-exportedAt: 2026-05-11
+exportedAt: 2026-10-02
 ---
 
 # 40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?
@@ -95,7 +95,7 @@ Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
 
-Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğin durumlardır.
+Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğiniz durumlardır.
 
 -   Travma sonrası üzerine basamama
 -   Dizde kısa sürede artan şişlik ve belirgin ısı artışı

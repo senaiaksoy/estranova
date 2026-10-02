@@ -1,188 +1,149 @@
 ---
 title: "Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor"
-description: "Hekim-hasta ilişkisinin yıllar içinde nasıl olgunlaştığına dair kişisel notlar. Modern kadının menopoz takibinde dört doktor profili karşısındaki arayışı, paydaş karar verme ve etik bir mesafenin önemi."
+description: "Eşi hekim olan Berna Aksoy’dan menopoz takibinde dinlenmek, birlikte karar vermek ve aile ile hekimlik arasındaki sınır üzerine kişisel notlar."
 writer: berna-aksoy
 publishedDate: "29 Nisan 2026"
 publishedDateIso: 2026-04-29
-url: /hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi
+url: /hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/
 section: "Hormonal Geçiş"
-sectionPath: /hormonal-gecis/menopoz
-keywords: ["menopoz", "hekim seçimi", "hekim-hasta ilişkisi", "HRT", "paydaş karar verme", "shared decision making", "menopoz takibi", "hormon tedavisi", "jinekolog"]
-exportedAt: 2026-05-11
+sectionPath: /hormonal-gecis/menopoz/
+keywords: ["menopoz", "hekim seçimi", "hekim-hasta ilişkisi", "HRT", "ortak karar verme", "menopoz takibi", "hormon tedavisi", "jinekolog"]
+exportedAt: 2026-10-02
 ---
 
 # Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor
 
-## Eskinin Hekim-Hasta Resmi — Otoritenin Tek Sesi
+## Hekimin Sözü Son Sözken
 
-Anne ve büyük teyzelerimin genç kadınlık yıllarında hekim "söz sahibi olan", hasta "dinleyen ve takip eden"di. Bu resim
-sade ama tek başına yeterli değildi.
+Annemin hekimle kurduğu ilişkiyi düşündüğümde, en çok sormadığı sorular aklıma geliyor.
+Hekimin sözüne güvenirdi; kendi hissettiğini anlatmaya ise aynı rahatlıkla başlayamazdı.
 
-Annemin dönemindeki çoğu kadının hekim ilişkisi büyük ölçüde tek yönlüydü. Hekim söylerdi, hasta
-uygulardı. Soru sorulurdu ama az; hekimin söylediği genellikle son sözdü. Bedenle ilgili karmaşık bir şey
-yaşandığında "geçer" ya da "dayanılır"dı; daha ileri gidilmezdi. Bu form bir döneme yetti — ama aynı dönemin
-bazı kadınları için iç sıkıntısının ana kaynağı oldu.
+Annemden ve teyzelerimden duyduklarımda hekim konuşur, hasta dinleyip uygulardı.
+Sorular varsa da çekinerek sorulurdu. Bir şikâyet için geçer ya da dayanılır dendiğinde,
+konuşma çoğu zaman orada biterdi.
 
-Annem kendi hormonal geçişini sessiz geçirdi. Kendi bedeniyle ilgili sormadığı çok şey vardı. Bu sessizlik
-onun zayıflığı değildi, yetiştiği alışkanlıkların ortak bir sonucuydu. Hekime "ben şunu hissediyorum, sebebi ne olabilir"
-demek ailede iki nesil önce çok yaygın bir alışkanlık değildi.
+Annem kendi menopozunu neredeyse hiç soru sormadan geçirdi. Bunu bir zayıflık olarak görmüyorum.
+Kendi şikâyetini öne çıkarmamaya alışmıştı. Hissettiği şeyin sebebini sormak bile ona kolay gelmiyordu.
 
-Bu sessiz form bugüne aynen taşınmadı — ama eski reflekslerin izi hâlâ var. Çoğumuz bir hekim
-karşısında oturduğumuzda hâlâ otomatikman "ona güvenmem gerekir, çok soru sormak ayıp olur" düşüncesinin
-geç yansımalarını yaşıyoruz.
+Bugün de çok soru sormayı ayıp sayan kadınlar tanıyorum.
+Görüşmeden sonra aklınızda kalan bir soruyu söylemeye çekiniyorsanız, bu tereddüdü anlıyorum.
+Yine de şunu bilmenizi isterim: aynı soruyu ikinci kez sormanın hiçbir ayıbı yok.
 
-## Modern Kadın Bilgi Seli İçinde Ne Arıyor
+## Muayeneden Önce Açılan Onca Sekme
 
-Bugün hasta sandalyesinde oturan kadın çoğu zaman hekimden önce kendi araştırmasını yapmış oluyor. Bu hem
-güç veriyor hem de yorgunluk.
+Bir görüşmeye gitmeden önce telefonunuzda kaç farklı açıklama okumuş oluyorsunuz?
+Bazen araştırdıkça sorular azalacağına çoğalıyor.
 
-Yıllar içinde kadınların hekim sandalyesindeki konumu farklılaştı. Bir görüşmeye gitmeden önce
-çevrimiçi forumları okumuş, sosyal medyada kıyaslamalar yapmış, yapay zekâya soru sormuş,
-arkadaşlarıyla konuşmuş bir kadın oturuyor masanın karşısında. Hekimine "ben şunu okudum, siz ne
-diyorsunuz" diyebiliyor. Bu sade değişim son yıllarda kayda değer bir konum farkı yarattı. Üstelik
-hekim-hasta paylaşımının klinik karar süreçlerinde aktif rol oynaması, jinekoloji ve menopoz
-literatüründe paydaş karar verme (shared decision-making) modeli olarak tartışılıyor
+Arkadaşlarım forumları okuyor, sosyal medyadaki açıklamaları karşılaştırıyor,
+yapay zekâya soruyor, arkadaşlarıyla konuşuyor. Sonra hekime okuduklarını götürüyorlar.
+Benim de istediğim, bu bilgileri tek tek tartabileceğim bir konuşma.
 
-(iyi kanıt)
-.
+Bilgi çok. Hangisine güveneceğini seçmek yorucu.
+Bir akşamda okuduğum altı içeriğin üçü bir şey, üçü tam tersini söyleyebiliyor.
+Telefonumun arama geçmişine baksam aynı hafta içinde hem "goji berry yararları" hem "goji berry zararları"
+aradığımı görürüm. Bazen kendi telaşım da bu kalabalığı büyütüyor.
 
-Ama aynı zamanda bir tükenmişlik de var. Çok fazla bilgi var, kanaat kalabalığı içinde "doğru" cümleyi
-bulmak zor. Sosyal medyada bir akşam okuduğum yarım düzine içerik birbiriyle çelişebiliyor. Bu yüzden
-modern kadın hekiminden tek bir şey beklemiyor — ama eskinin "söyle ben uygulayayım" tutumundan da uzakta.
-Telefonumun arama geçmişine bakarsam aynı hafta içinde hem "goji berry yararı" hem "goji berry zararı"
-aramışım; kanaat kalabalığı dediğimiz şey aslında biraz da kendi içimizden geliyor.
-
-Bir okurun yorumunda gördüm geçenlerde: "Hekimimden hem söyleyen hem dinleyen olmasını istiyorum, ama bu
-çok mu fazla?" diyordu. Hayır, fazla değil — aslında modern bir ilişkinin temel beklentisi. Sadece bunu
-açıkça talep etmeyi henüz öğreniyoruz.
+Bir okur yorumunda, hekiminden hem yol göstermesini hem de kendisini dinlemesini bekleyen bir kadının
+bunun fazla bir istek olup olmadığını sorduğunu görmüştüm. Bence çok anlaşılır bir beklenti.
+Sorunuzu sormaktan çekinmeyin. Dinlenmek istemek, hekimin bilgisine güvenmediğiniz anlamına gelmez.
 
 ## Çevremdeki Dört Hekim Profili
 
-Yakın çevremdeki kadınların anlattıklarını bir kâğıda yazsam, hekim profilleri dört temel konuma ayrılıyor.
-Hiçbiri tek başına doğru ya da yanlış değil; her birinin uyduğu bir kadın profili var.
+Okurların ve arkadaşlarımın anlattıklarında dört farklı yaklaşım dikkatimi çekiyor.
+Bunlar benim kişisel gözlemlerim; hekimleri sınıflandıran bir ölçüt değil.
 
-**Klasik otorite.** "Yaşın bu, normal bu, başka bir şey gerek yok." Hızlı, kararlı, tartışmaya
-pek açık olmayan. Bazı kadınlar için bu tutum *rahatlatıcı*: kararı hekim versin, ben uygulayayım.
-Bazıları için ise *kapatıcı*: sorularımın yarısı söylenmeden kalkıp gidiyorum, sonra evde uyku
-tutmuyor. Aynı hekim profili, iki kadın için iki ayrı sonuç doğuruyor.
+**Klasik otorite.** Hızlı, kararlı, tartışmaya pek alan bırakmayan bir tavır.
+Bazı kadınlar kararı hekimin vermesinden rahatlık duyuyor. Bazılarıysa sorularının yarısını
+soramadan kalktıklarını anlatıyor. Aynı yaklaşım iki kişide bambaşka duygular bırakabiliyor.
 
-**"Her şey normal" diyen temkinli.** Tahliller iyiyse müdahale önermeyen, "izleyelim" diyen.
-Bu bazen gerçek bilgelik, bazen tedirginliği bastırma. Bir arkadaşım anlattı: hekimi her seferinde "normal
-aralıkta" diyordu; o ise kendi bedeninde başka bir şey hissediyordu. İki kavram arasında köprü
-kurulmamıştı — aralarındaki boşluk arkadaşımı bir başka hekime yönlendirdi sonunda.
+**Temkinli, izlemeyi tercih eden.** Sonuçlar normal aralıktaysa izleyelim diyen hekim.
+Bir arkadaşım, sonuçları normal bulunmasına rağmen kendisini iyi hissetmediğini anlatmıştı.
+Onu yoran, hissettikleriyle tahlil kâğıdı arasındaki farkı konuşamamalarıydı.
+Sonunda başka bir hekime gitti.
 
-**Bilgi yığan.** Her seçeneği uzun uzun anlatan, broşür veren, "kararı siz verin" diyen. Eğitici
-ve şeffaf — ama bilginin altında zaten yorgun bir kadın için ezici. Çünkü ev hayatından bunalmış birinin
-sandalyesine oturup "siz seçin" denmesi, bağımsızlık değil yalnızlık verebiliyor.
+**Bilgiyi sunup seçimi hastaya bırakan.** Seçenekleri ayrıntısıyla anlatan, broşürler veren
+yaklaşım. Daha çok bilgi isteyen biri için yararlı. Ama zaten açıklamalar arasında yorulmuşsanız,
+seçimin size bırakılması insanı yalnız hissettirebiliyor. O noktada aradığınız şey,
+seçenekleri sizinle birlikte tartacak biri.
 
-**Paydaş, birlikte düşünen.** "Şu seçenekler var, siz ne hissediyorsunuz, neyi denemek
-istiyorsunuz?" Hem otoritesi var hem dinliyor; karar verirken hastayı yanına alıyor. Çevremdeki
-kadınların büyük çoğunluğunun aradığı tablo bu — ama bulması zor, ve bulduktan sonra korumak da çaba
-ister. Çünkü aynı hekimin her gün aynı sabırla aynı paydaşlık tonunu sürdürmesi gerekiyor.
+**Birlikte düşünen.** Seçenekleri anlatırken hastanın ne hissettiğini ve neyi önemsediğini
+de soran hekim. Kendime en yakın bulduğum yaklaşım bu:
+mesleki bilgiyle yol gösteren, sorulara yer açan, karar sırasında yanınızda kalan biri.
 
-Bu dört profilin hiçbiri tek başına "iyi" ya da "kötü" değil. Bir kadına klasik otorite uyabilir; başka
-birine paydaş hekim daha doğru gelebilir. Önemli olan kadının kendi pozisyonunu ve neyle rahat ettiğini
-önce kendine sorabilmesi.
+Belki siz kısa ve net bir açıklamayla rahat edersiniz; bir başkası her ayrıntıyı ister. Bu fark doğal.
+Soruların geçiştirilmesini ise kişisel tercih farkı olarak görmekte zorlanıyorum.
 
-## Eşim Hekim ama Hekimim Değil — Etik Bir Sınırın İçinden Bakmak
+## Eşim Hekim ama Hekimim Değil
 
-Eşim jinekolog ama beni takip eden hekim o değil. Bu, etik bir tercih — ve onun da, benim de saygı
-duyduğumuz bir sınır.
+Eşim yakınlarını takip etmenin hekimlik tarafsızlığını zedeleyebileceğini düşünür.
+Benim kontrollerimi de güvendiği bir meslektaşına devretti; bu sınıra saygı duyuyorum.
 
-Benim durumum biraz özel, bunu en başta söylemem gerek. Eşim jinekolog. Ama jinekolog takibimi o yapmıyor —
-kendisi yakınlarını takip etmenin doğru olmadığını düşünür ve takiplerimi güvendiği bir meslektaşına
-devretmiştir. Bu prensibe içtenlikle saygı duyuyorum. Çünkü iki ilişki (bir eş ile bir hekim ile)
-birbirini bozmadan yan yana var olacaksa, aralarına etik bir mesafe konması gerek — tıp etiği literatüründe
-yakın aile bireylerinin tedavi edilmemesi yaygın bir meslek normu olarak kabul edilir
-(güçlü kanıt)
-.
-Bu mesafe ilişkiyi soğutmuyor; aksine, ikisinin de kendi sınırlarında kalmasını sağlıyor.
+Asıl hekimim aynı zamanda arkadaş çevremizden biri. Kontrole gittiğimde bekleme salonunda beklemiyorum;
+sohbet havasında karşılanıyorum. Bu kolaylığı inkâr edemem; yazarken biraz utandığımı da söyleyeyim.
+Sırasını beklerken kaygılanan bir kadının yaşadığını kendi deneyimimmiş gibi anlatamam.
 
-Bu durum bana *iki katmanlı* bir konum yarattı — ama her iki katman da, açıkça söyleyeyim, sıra dışı
-koşullarda akıyor. Birinci katman klinik: asıl hekimim hem eşimin meslektaşı hem de arkadaş çevremizden.
-Bu nedenle ben kontrole gittiğimde bekleme salonunda beklemiyorum, sıramı kuyrukta tutmuyorum, sohbet
-havasında karşılanıyorum. Bu durum bana sıradan bir hastanın deneyimini içeriden anlama imkânı bırakmıyor —
-aksine. İkinci katman ev içi: eşim jinekolog olduğu için tıbbi bir konu evde gündeme gelmeden geçen gün az.
-Akşam yemeğinde bir cümle açılıyor; bir başka açıdan bakmama yardımcı oluyor. Ama bu paylaşım,
-konsültasyon değil. Karar her zaman benim ile asıl hekimim arasında kurulur.
+Evdeyse sağlık konuları sık sık mutfak masasına geliyor. Akşam yemeğinde söylenen bir cümle,
+kafamdaki bir soruya başka açıdan bakmamı sağlayabiliyor. Ama bu sohbet muayene yerine geçmiyor.
+Sağlığımla ilgili kararları beni takip eden hekimle konuşuyorum.
 
-Bu çift ayrıcalığın (eş hekim + arkadaş hekim) bir kazanımı var, kabul ediyorum. Tıbbi perspektif eve
-sızıyor; sözcükler, sorular, soru sorma alışkanlığı evimin içinde olgunlaşıyor. Çevremdeki çoğu kadın bu
-pozisyona araştırarak, okuyarak, kendine yer açarak ulaşıyor; ben kısmen daha kolay yere geldim. Bunun
-farkındayım — ve bu farkındalık beni sıradan bir hastanın deneyimini kendi sözüm gibi anlatmaktan
-alıkoyuyor.
+Tıbbi terimlere ve soru sorma alışkanlığına ulaşmak benim için daha kolay oldu.
+Çevremdeki kadınlar aynı bilgiyi araştırarak, okuyarak, görüşmelerde kendilerine yer açarak edinmeye çalışıyor.
+Onları dinlerken aramızdaki bu farkı aklımda tutuyorum.
 
-Bir körlük de var, hatta tam tersini söyleyeyim: körlüğüm önde geliyor, ayrıcalığım onun ardından. Çünkü
-çevremdeki kadınların yaşadığı bekleme odası tedirginliğini, "doktor ne diyecek" gerginliğini, dönüş
-yolunda aklın bin parçaya bölünmesini ben içeriden bilmiyorum. Bu yüzden çevremdeki kadınların
-anlattıklarını çok dinliyorum. Onların deneyimi benim öğretmenim oluyor; bu yazıyı yazma sebebim de büyük
-ölçüde bu.
+Bu kolaylıklar olmasaydı nasıl bir hekim arardım? Büyük ihtimalle birlikte düşünebileceğim birini.
+Ama o arayışın yoruculuğunu tam olarak tartamıyorum. Bilmediğim bir alan var.
+Belki siz, bir görüşmeden diğerine giderken neyi aradığınızı benden çok daha iyi biliyorsunuz.
 
-Burada açık tuttuğum bir soru var: bu çift ayrıcalığım olmasaydı kendi hekimimi seçerken hangi profili
-arar olurdum? Bunun cevabını net veremem. İhtimal güçlü bir paydaş hekim arıyor olurdum; ama
-arayışın yorgunluğunu ve sonuçta kim olursa olsun "ona güvenmem gerekir" düşüncesinin ardında
-gizlenen tedirginliği tam ölçemiyorum. Bilmediğim bir kısım hâlâ var.
+İkinci görüş almak da eşimle aramızda bir tartışma konusu olmadı; zaten beni takip eden hekim o değil.
+Böyle bir ihtiyaç olursa ev sofrasından bağımsız karar verebilirim.
+Akşam yemeğinde bugün hekimime ne sorduğum sorulduğunda bazen bilerek cevap vermiyorum.
+Bu küçük sır payı evde bir aile şakasına dönüştü.
 
-Bir de etik soru var: hekim eşinizse, ona "ikinci görüş alacağım" demek zor olmaz mı? Olmadı, çünkü zaten o
-ben olmadığım için bu soru baştan tartışmadan dışındaydı. İkinci görüş, asıl hekimimin meslektaşlarından
-biri olabilir; ev sofrasından bağımsız bir karar. Bu sınırı baştan çekmiş olmak ilişkiyi koruyor — her
-ikisini de. Akşam yemeğinde "bugün hekimine ne sordun" sorusuna hâlâ kendiliğinden cevap vermiyorum;
-bu hem küçük bir özerklik hem de evde bir aile şakasına dönüştü.
+## Annemin Kendisi İçin Sormadığı Sorular
 
-## Annemin Paradoksu — İki Ses Arasında
+Annem kendi sağlığı söz konusu olduğunda sessizken, aileden birinin görüşmesinde en çok soruyu soran kişi olabiliyordu.
+Bu farkı uzun süre anlayamadım.
 
-Annem kendi bedeninde sessiz, başkalarının bedeninde sesli bir kadındı. Bu paradoksu uzun yıllar
-anlamadım; sonra anladım ki bu da büyüdüğü evin diliyle ilgili bir şey.
+Bir yakını için açıklama istemek, gerekirse itiraz etmek ona doğal geliyordu.
+Kendi menopozundan söz etmek ise zordu. Sonradan bunu tutarsızlıktan çok,
+başkasını gözetmeye alışmış olmasıyla ilişkilendirdim. Kendisi için aynı rahatlıkla konuşamıyordu.
 
-Annem bir taraftan kendi menopozunu hiç sormadan geçiriyordu. Bir taraftan da yakınlarımızdan birinin
-muayenesinde en çok soran o olabilirdi. Yıllarca bu paradoksu tutarsızlık zannettim. Sonra şunu fark
-ettim: annem kendi bedeniyle ilgili sormaya *izinli hissetmiyordu*, ama başkasının bedeni adına
-soru sormak ona doğal geliyordu. Bu, alıştığı düzenin kalıbıydı — kadının kendisi için değil, başkası için ses
-çıkarması.
+Bugün de yakınının sağlığı için her ayrıntıyı sorup kendi görüşmesinde susan kadınlar tanıyorum.
+Bu farkı kendinizde görüyorsanız, başkası için sorduğunuz bir soruyu kendiniz için sormayı düşünmek
+iyi bir başlangıç olabilir. Benim annemden kalan sorum bu.
 
-Bugün kadınların önemli bir kısmı bu kalıbı kırmaya çalışıyor. Kendimiz için de soruyoruz; ama hâlâ
-rahat değiliz. Belki kızımın yaşında bu daha kolay kurulacak. Durduğum yer hem yorgun
-hem güzel — ve bu yorgun yer aslında çoğu kadının zaten içinden geçtiği bir eşik.
+## Kendi Yolumdan Notlar
 
-## Sıkça Sorulan Sorular
+Arkadaşlarımdan ve okurlardan sık sık şu dört soruyu duyuyorum. Yanlarına kendi notlarımı koydum.
+Reçete gibi okumayın lütfen; bir ilişkiden ne beklediğimi anlamaya çalışırken tuttuğum notlar bunlar.
 
-Aşağıdaki sorular bana farklı arkadaşlarımdan ve okurlardan geldi; her birinin cevabı kendi yolumdaki
-notum.
+**Hekim seçerken neye bakmalıyım?** Ben, zaman içinde güven kurabileceğim,
+sorularımı geçiştirmeyen birini arardım. İkinci görüş almak istediğimde bunu rahatça söyleyebilmek de benim için önemli.
+Başka bir meslektaşa danışma isteğimi konuşabilmek isterim.
 
-**Hekim seçerken neye bakmalıyım?** İlk olarak ilişkinin sürekli olabilirliğine — yıllarla
-derinleşecek bir bağ olup olamayacağına. İkincisi, hekimin sorularımı kabaca cevaplama eğiliminde olup
-olmadığı; "bu yaşta bu normal" demek yerine "haydi birlikte bakalım" diyen bir tutum aradım kendim için.
-Üçüncüsü, ikinci görüş almama açık olması — gerçekten güçlü bir hekim, başka bir hekime danışmaktan
-rahatsız olmaz.
+**Dört profil arasından nasıl seçim yapmalıyım?** Bu dört yaklaşım herkes için aynı anlama gelmiyor.
+Ne kadar ayrıntı istediğinizi ve karar anında nasıl bir yardıma ihtiyaç duyduğunuzu düşünmek seçimi kolaylaştırır.
+Beklentiniz zamanla da değişebilir.
 
-**Dört profil arasından nasıl seçim yapmalıyım?** Önce kendi pozisyonunuzu tanıyın: kararı sizin
-için verilmesini mi istiyorsunuz, yoksa karara katılmak mı? Bilgi seli içinde rahat etmiyor musunuz, yoksa çok
-bilgi size güç mü veriyor? Bu soruların cevabı sizin için doğru hekim profilini gösteriyor. Tek bir doğru
-profil yok; size uygun olan var. Zaman içinde değişebilir de — gençken klasik otorite işinize yarayan biri
-kırk beş yaşında paydaş hekim arıyor olabilir.
+**Hekimim "her şey normal" diyor ama ben kendimi iyi hissetmiyorsam?**
+Ben, normal aralık derken hangi sonuçtan söz edildiğini ve bunun şikâyetimle ilişkisini sormak isterdim.
+Ne hissettiğinizi, hangi saatlerde ve ne sıklıkta ortaya çıktığını anlatabilmek konuşmayı somutlaştırabilir.
+Şikâyetiniz sürüyorsa bunu yeniden hekimle görüşmek gerekir; buradan bir tahlili yorumlamak mümkün değil.
 
-**Hekimim "her şey normal" diyor ama ben kendimi iyi hissetmiyorsam?** Bu durumda iki şey
-yapılabilir: hekiminizle "normal aralık" cümlesinin altında ne anladığını konuşmak — *sizin* için
-neyin normal olduğunu birlikte tanımlamak. İkincisi, ne hissettiğinizi daha somut anlatmaya çalışmak: hangi
-saatlerde, hangi durumlarda, ne sıklıkta. Tahliller bir şey söyler, sözleriniz başka bir şey söyler. İki
-anlatı birleştiğinde tablo netleşir. Bu çabaya açık olmayan bir hekimle uzun yola çıkmak zor olur.
+**Hormon tedavisi konusunda hekimimden ne beklemeliyim?** Benim beklentim,
+seçenekleri ve fayda-risk dengesini anlamama yardım etmesi. Endişelerimi söyleyebileceğim,
+kararı birlikte değerlendirebileceğimiz bir konuşma isterim. Hangi tedavinin uygun olduğuna ilişkin
+değerlendirme ise kişisel sağlık geçmişimle birlikte yapılmalı.
 
-**HRT konusunda hekimimden tam olarak ne beklemeliyim?** Kararın yükünü tek başınıza taşımanızı
-değil, sizinle birlikte düşünmesini. "Şu ilacı kullanın" cümlesinden çok "şu seçenekler var, siz ne
-hissediyorsunuz?" cümlesini duymak istiyorsanız, bu beklenti sizi yalnız bırakacak bir hekim değil — paydaş
-bir hekim arıyorsunuz demektir. Bu beklentinin altını çizmek sizin hakkınız; ifade etmek de sizin
-sorumluluğunuz.
+## Bir Sonraki Görüşmede
 
-## Kapanış
+Benim için güven, bir sonraki görüşmede aklımdaki soruyu rahatça sorabileceğimi bilmekle ilgili.
 
-Hekimle aranızdaki masa, aslında bir konuşmanın açıldığı sade bir yer.
+Eşimin hekim olması pek çok şeyi kolaylaştırıyor; yine de kendi hekimimle kurduğum ilişkinin yerini almıyor.
+Okurlardan gelen notları okudukça, aynı görüşmeye ne kadar farklı beklentilerle girildiğini görüyorum.
 
-Cevabı bulmak değil, doğru soruyu sormaya alışmak — son birkaç yıl bana bunu öğretti. Hekim de tek bir
-şey olamıyor; modern kadın da hekiminden tek bir şey aramıyor. Önemli olan kadının kendi pozisyonunu
-tanıması, ve bu pozisyona uyacak hekimle yıllar içinde olgunlaşacak bir bağ kurabilmesi.
-
-Belki şu soru yardımcı olur: bu hekimle bir yıl sonra hâlâ konuşmaya değer bulduğum bir şey kalır mı?
-Karar kendi kararınız, sorumluluğu da size ait. O sandalyede oturduğunuzda sorduğunuz her sorunun bir karşılığı olduğunu hatırlamak, konuşmayı kuran ilk cümleyi sizin elinize verir.
+Sizin için belki kısa bir açıklama, belki bir seçeneğin daha ayrıntılı konuşulması önemli.
+Benim aklımda kalan soru şu: bu hekimle bir sonraki görüşmede, bugün söyleyemediğim şeyi konuşabilir miyim?
 
 Tıbbi Not
 

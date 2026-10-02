@@ -1,14 +1,14 @@
 ---
 title: "Peptidler Menopozda Gerçekten Ne Vaat Ediyor?"
-description: "Peptid başlığı altında dolaşan kilo kaybı, kas toparlanması, doku onarımı, enerji ve anti-aging iddiaları aynı kanıt gücüne sahip değil. Bu dosya, GLP-1 hattını kısa bir referans olarak ayırıp GLP-1 dışı peptid kullanımlarını kanıt, güvenlik ve reklam dili açısından sakin biçimde değerlendirir."
+description: "Peptid başlığı altında dolaşan kilo kaybı ve kas toparlanması iddiaları aynı kanıt gücüne sahip değil. Kanıt ve güvenlik açısından değerlendiriyoruz."
 writer: senai-aksoy
 publishedDate: "6 Mayıs 2026"
 publishedDateIso: 2026-05-06
-url: /zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz
+url: /zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/
 section: "Zamansız Yaşam · Deneysel"
-sectionPath: /zamansiz-yasam
+sectionPath: /zamansiz-yasam/
 keywords: ["peptid", "menopoz", "BPC-157", "TB-500", "GHK-Cu", "MOT-C", "thymosin beta-4", "ipamorelin", "AOD-9604", "epitalon", "anti-aging", "takviye güvenliği"]
-exportedAt: 2026-05-11
+exportedAt: 2026-10-02
 ---
 
 # Peptidler Menopozda Gerçekten Ne Vaat Ediyor?
@@ -239,7 +239,7 @@ Dikkat çekmek istediğimiz
 
 ###  Hekiminize danışmanın anlamlı olduğu durumlar
 
-Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğin durumlardır.
+Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğiniz durumlardır.
 
 -   Ürün için net üretici bilgisi, içerik doğrulaması veya saflık belgesi gösterilemiyorsa
 -   Öneri, GLP-1 verisini başka peptidlere otomatik olarak taşıyormuş gibi sunuyorsa

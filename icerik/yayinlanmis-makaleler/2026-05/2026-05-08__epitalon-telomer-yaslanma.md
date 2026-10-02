@@ -1,14 +1,14 @@
 ---
 title: "Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar"
-description: "Epitalon, pineal bez ekstraktından elde edilen küçük bir peptid; sağlıklı hücrelerde telomeraz aktivitesini destekleyebilirken kanser hücrelerinde farklı bir telomer onarım yolunu (ALT) tetikleyebileceği gösterilmiş. Bu yazı telomer biyolojisini sade açıyor; Epitalon'un sağlıklı hücre ile kanser hücresinde neden farklı çalıştığını anlatıyor; kanıt düzeyini dürüstçe yorumluyor; ve klinik karşılığı için pratik sınırları çiziyor — pazarlama değil, yapılandırılmış bilgi."
+description: "Epitalon, sağlıklı hücrede telomerazı destekleyebilirken kanser hücresinde farklı bir onarım yolu tetikleyebilir. Kanıt düzeyi dürüstçe yorumlanıyor."
 writer: senai-aksoy
 publishedDate: "8 Mayıs 2026"
 publishedDateIso: 2026-05-08
-url: /bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma
+url: /bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/
 section: "Bilimsel Pencere"
-sectionPath: /bilimsel-pencere
+sectionPath: /bilimsel-pencere/
 keywords: ["Epitalon", "epithalon", "telomer", "telomeraz", "hTERT", "ALT", "pineal bez", "hücresel yaşlanma", "anti-aging", "menopoz"]
-exportedAt: 2026-05-11
+exportedAt: 2026-10-02
 ---
 
 # Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar

@@ -1,268 +1,227 @@
 ---
 title: "HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?"
-description: "Hormon tedavisinin ilk haftalarında ve aylarında karşılaşılabilecek yumuşak yan etkiler, ne zaman geçici sayıldıkları, hekimle birlikte kurulan izleme takvimi ve hangi belirtilerin gecikmeden değerlendirilmesi gerektiği üzerine sakin bir rehber."
-writer: senai-aksoy
+description: "HRT\\'nin ilk aylarında yan etkiler, kanama ve kontrol takvimi: hangi belirtileri not etmeli, ne zaman hekime danışmalı, hangi durumda acil yardım almalısınız?"
+writer: alper-mumcu
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
-url: /hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme
+url: /hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/
 section: "Hormonal Geçiş"
-sectionPath: /hormonal-gecis
+sectionPath: /hormonal-gecis/
 keywords: ["HRT", "hormon tedavisi yan etkileri", "meme hassasiyeti", "baş ağrısı", "kanama düzensizliği", "menopoz", "izleme takvimi", "3 aylık kontrol", "alarm belirtileri"]
-exportedAt: 2026-05-11
+exportedAt: 2026-10-02
 ---
 
 # HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?
 
-## Tezgâhın Köşesindeki Defter
+## İzlem Defteriyle Başlamak
 
-HRT'ye başlayan her hastaya aynı cümleyi söylemem: "İlk haftaları hüküm vermek için değil, izlemek için
-kullanacağız." Çünkü tedavinin ilk dönemi çoğu zaman küçük belirtilerin, soruların ve ayarlamaların
-bir arada yürüdüğü dönemdir.
+Sabah ilacınızı aldınız, öğleden sonra memenizde bir hassasiyet fark ettiniz. Aklınıza gelen ilk
+soru belli: “Bu normal mi?”
 
-İzlem defteri gerçek bir defter olmak zorunda değil. Telefonda haftalık kısa bir not, kanama günlerinin
-takvimde işaretlenmesi, baş ağrısı ya da meme hassasiyetinin süresinin yazılması çoğu zaman yeterlidir.
-Üçüncü ay kontrolünde bu notlar, "tedavi uymadı mı, yoksa beden yeni dengeye mi yerleşiyor?" sorusunu
-daha güvenli cevaplamamıza yardım eder.
+HRT'ye yeni başlamış biri için çok doğal bir soru bu. Yanıtlarken üç şeye bakarım: Belirti ne zaman
+başladı, ne kadar şiddetli ve zamanla nasıl değişiyor?
 
-Bu yazı, HRT'nin ilk haftalarında ve aylarında neyle karşılaşmanın yaygın olduğunu anlatır. Hangi belirtinin
-büyük ihtimalle geçici sayıldığını ve hangisinin gecikmeden değerlendirilmesi gerektiğini ayırır. Hekimle
-birlikte nasıl bir izleme takvimi kurulacağını da gösterir. Ama bireysel doz, form ve süre kararı muayene
-odasında verilir.
+Bunun için karmaşık bir sistem gerekmez. Telefonunuza düşeceğiniz kısa bir not yeter:
+“İki gündür meme hassasiyeti var”, “Bu hafta iki kez lekelenme oldu” veya “Gece terlemesi azaldı.”
+Kanama günlerini ayrıca işaretleyin. İlaca başladığınız ve dozun değiştiği tarihi de yazın.
 
-## İlk Haftaların Hisleri
+Bu notları kontrol görüşmesine getirin. Hekiminiz belirtilerin tedaviyle ilişkisini ve doz ya da
+uygulama yolunda değişiklik gerekip gerekmediğini bu notlarla daha kolay değerlendirir. Kayıt tutmak
+tanı koymaz; konuşmayı somutlaştırır. Aşağıdaki güvenlik belirtilerinden biri ortaya çıkarsa not
+almakla yetinmeyin, uygun tıbbi yardıma başvurun.
 
-İlk hafta beklediğimiz gibi geçmeyebilir — çoğu zaman da öyle olmaz.
+## İlk Haftalarda Neler Değişebilir?
 
-Bazı kadınlarda ilk birkaç gün şaşırtıcı bir sessizlik içinde geçer; "bekledim ama bir şey hissetmedim"
-cümlesi yaygındır ve tamamen normaldir. Bazılarında ise hafif bir baş ağrısı, sabahları küçük bir mide
-rahatsızlığı, memelerde dolgunluk hissi görülebilir. Bunların büyük kısmı vücudun yeni dengeye uyum
-sağlama döneminin parçası olarak okunur
-(güçlü kanıt)
-.
+Önce şunu söyleyeyim: İlk günlerde belirgin bir değişiklik hissetmemeniz, tedavinin etkisiz kaldığını
+göstermez.
 
-Önemli olan, bu ilk haftaları tek başına bir "yargı" olarak okumamak. Üç gün hafif baş ağrısı yaşamak
-tedavinin "uymadığı" anlamına gelmez; tıpkı ilk hafta sıcak basmalarının azalmaması da "işe yaramıyor"
-demek değildir. Hormonal denge dakika dakika kurulan bir şey değil; bedenin yavaşça yeniden müzakere
-ettiği bir aralık. Üç ay, çoğu kadında ilk gerçek değerlendirme noktası olarak kabul edilir
-
-(iyi–güçlü kanıt)
-.
-
-**Kısa not:** İlk iki haftada çok hafif belirtiler yaşamak veya hiçbir şey hissetmemek
-aynı tabloda normal sayılır. Yargı için erken; gözlem için tam zamanı.
-
-## Yumuşak ve Geçici Olan
-
-Bazı belirtiler "yumuşak" sınıfında konuşulur — yaygındır, vücut alıştıkça geriler.
-
-Bunların başında **meme hassasiyeti** gelir. Memelerde dolgunluk, bazen ufak bir
-karıncalanma, bazen sabah uyandığında giysinin üzerine bastığı yerde belirginleşen bir his —
-hormon dengesinin yeniden kurulduğu dönemde sık görülen bir tablodur. Çoğunlukla ilk iki–üç ay içinde
-azalır
-(güçlü kanıt)
-. Yatakta poza dikkat etmek, gevşek iç giyim seçmek bu dönemde küçük ama
-işe yarayan bir çapadır.
-
-**Hafif ödem ve kilo dengesinde küçük dalgalanma** — bedenin sıvı dengesi hormonlara
-duyarlıdır. Yüzükte, çorap lastiğinde, ayak bileğinde bir gün belirginleşen, ertesi gün yumuşayan bir
-his olabilir. Bu da büyük ölçüde geçicidir
-(orta–iyi kanıt)
-. Tuz ve işlenmiş gıda alımına
-dikkat etmek, su tüketimini yumuşak biçimde dengelemek bu dönemde küçük rahatlık sağlayabilir; ama
-bu önerinin bireysel sınırları kişiden kişiye farklıdır.
-
-**Hafif mide rahatsızlığı** bazı kadınlarda ilk haftalarda görülebilir, özellikle oral
-formda. Sabah aç karna değil, az miktarda yiyecekle birlikte alındığında bu his çoğu zaman yumuşar.
-Hekimle ilk üç aylık görüşmede formun değiştirilmesi de gündeme gelebilir — oral, transdermal jel
-veya bant gibi farklı yollar mevcut, vücut bazılarına diğerlerinden daha sakin yanıt verir
-
+Belirtilerdeki düzelme de yan etkilerin seyri de kişiden kişiye değişir. Bazı kadınlar hiçbir yan
+etki yaşamaz. Bazılarında meme hassasiyeti, bulantı, baş ağrısı veya ruh hali değişiklikleri görülür.
+Hafif belirtiler birkaç hafta içinde azalabilir. Rahatsız edici olanları ya da üç aydan uzun
+sürenleri hekiminizle konuşun. Şiddetli bir belirti için üç ay beklenmez
 (iyi kanıt)
-.
+[[2]](#kaynak-2).
+
+Menopoz belirtileriyle ilaç yan etkileri birbirine benzeyebilir. Bu yüzden yeni bir şikâyeti hemen
+“hormonlara alışıyorum” diye açıklamayın. Ne zaman başladığını ve gününüzü nasıl etkilediğini
+hekiminize anlatın. Üçüncü ay kontrolü tam da bunun için planlanır: tedavinin yararını ve nasıl
+tolere edildiğini birlikte değerlendirmek [[1]](#kaynak-1).
+
+## Hafif Yan Etkilerle Baş Etmek
+
+Hafif bir yan etki de gününüzü bozabilir. Bulantıyla güne başlamak ya da giysinin bile rahatsız
+ettiği bir meme hassasiyeti küçük bir dert sayılmaz.
+
+Bunu hekiminize söylemek için şiddetlenmesini beklemeyin.
+
+**Meme hassasiyeti** birkaç hafta içinde hafifleyebilir. Sizi rahatsız ediyorsa veya
+geçmiyorsa hekiminizle konuşun. Memede yeni kitle, meme başında akıntı ya da değişiklik veya ciltte
+çekinti fark etmek, genel hassasiyetten ayrı değerlendirilir
+(iyi kanıt)
+[[3]](#kaynak-3).
+
+**Bulantı** için ağızdan alınan östrojen tabletini yemekle almak yardımcı olabilir;
+kendi ilacınızın kullanım talimatını esas alın. Bir haftadan uzun sürerse veya belirginse
+hekiminize bildirin. Gerekirse doz, ilaç türü veya uygulama yolu yeniden değerlendirilir
+[[3]](#kaynak-3). Jel ya da bant herkes için otomatik olarak daha uygun değildir.
+
+**Şişkinlik veya hafif şişme** fark ederseniz, ne zaman başladığını ve gün içinde
+nasıl değiştiğini kaydedin. Bir bacakta ağrı, kızarıklık ve şişlik varsa bunu sıradan sıvı
+tutulması saymayın; aynı gün tıbbi değerlendirme gerekir [[3]](#kaynak-3).
 
 ## Kanama Düzenindeki Değişimler
 
-Bu başlık çoğu kadın için en kafa karıştırıcı olanı — ve en çok gözlem isteyeni.
+Kanama görmek insanı haklı olarak tedirgin eder. Değerlendirirken miktarı kadar, tedavinin hangi
+aşamasında olduğunuz da önemlidir.
 
-HRT'ye başladıktan sonra kanama düzeninde değişim yaşamak yaygındır; özellikle kombine tedavi (östrojen
-+ progesteron) alındığında, ilk üç–altı ay boyunca arada gelen küçük lekelenmeler, beklenmedik kısa
-kanamalar görülebilir
-(güçlü kanıt)
-. Bu, bedenin yeni hormon ritmiyle endometriumun (rahim iç
-tabakası) müzakeresinin parçasıdır. Genellikle altıncı aydan sonra düzene oturur.
+Hekiminize başlangıç tarihini, kanama günlerini ve kullandığınız tedavi düzenini birlikte anlatın.
+Rahmi olan kadınlarda sistemik HRT'nin ilk altı ayında veya doz ya da ilaç değişikliğini izleyen
+üç ayda lekelenme görülebilir. Döngüsel kombine tedavide progestojen döneminin sonunda beklenen
+çekilme kanaması olabilir; sürekli kombine tedavideki beklenmedik kanama farklı değerlendirilir
 
-*Ama* — ve bu "ama" önemli — kanamayla ilgili her durum yumuşak kategoride değildir. Postmenopoz
-(son adetinden bir yıl sonra) ya da süre geçtikten sonra HRT alıyorken yaşanan açıklanamayan, yoğun
-ya da uzun süren kanama her zaman hekimle paylaşılmalıdır. Endometrium kalınlığının ve kanama
-karakterinin değerlendirilmesi standart bir izlem adımıdır
-(güçlü kanıt)
-.
+(iyi kanıt)
+[[1]](#kaynak-1) [[2]](#kaynak-2).
 
-**Kısa not:** İlk üç–altı ayda küçük lekelenmeler genellikle uyum sürecinin parçasıdır;
-ancak yoğun, uzun ya da postmenopoz döneminde ortaya çıkan kanama her zaman değerlendirilir. Süre
-geçtikten sonra ortaya çıkan kanamayı sessizce geçirmek doğru tercih değildir.
+**Yoğun veya uzun süren kanamayı, tedaviye ne zaman başlamış olursanız olun, planlı kontrolü
+beklemeden bildirin.** Tedavi başladıktan altı aydan sonra ilk kez ortaya çıkan ya da
+doz/ilaç değişikliğinden üç aydan sonra görülen beklenmedik kanama da gecikmeden değerlendirilir.
+Hekim kanama öyküsü ve kişisel risklere göre muayene, ultrason ve gerektiğinde ek inceleme planlar
+[[4]](#kaynak-4).
+
+HRT kullanmıyorsanız, son adetinizden en az bir yıl sonra ortaya çıkan kanamayı da hekiminize
+bildirin. HRT kullanırken ise “menopozdayım” veya “ilk aylardayım” bilgisi tek başına karar
+vermeye yetmez. İlk aylardaki kanama da kişisel risklere göre daha erken inceleme gerektirebilir
+[[4]](#kaynak-4).
 
 ## Ruh Hali, Baş Ağrısı ve Uyku
 
-Hormonal dalgalanmanın zihne yansıması, ilk haftalarda en çok şaşırtan başlık olabiliyor.
+Sıcak basmalarınız azaldı ama gece yine uyanıyorsunuz. Bu çelişki insanın kafasını karıştırır.
 
-Bir okurun yorumda paylaştığı bir cümle vardı: "Sıcak basmaları azaldı; ama ilk ay duygusal olarak
-biraz yorgundum." Bu hissin altında çoğunlukla iki şey yatar: birincisi vücudun hormonal dengeye
-yerleşme süreci kendisi enerji ister; ikincisi uyku düzeninde ilk haftalarda hâlâ küçük dalgalanmalar
-olabiliyor, bu da gündüz ruh halini etkiliyor. İkinci–üçüncü aydan itibaren çoğu kadın bu eksenin
-dengelenmeye başladığını fark ediyor
-(orta–iyi kanıt)
-.
+Uykunuz ve ruh haliniz, sıcak basmalarla aynı hızda düzelmeyebilir. Bu değişimleri ayrı ayrı
+kaydetmeniz, kontrolde neyin sürdüğünü anlatmanızı kolaylaştırır.
 
-**Baş ağrısı** da yaygın gözlenen yumuşak yan etkilerden biri. Genellikle hafif,
-gerilim tipi bir karaktere yakın; çoğunlukla ilk haftalarda görülüp sonra yumuşuyor. Ama eski tip
-migrenleri olan ya da migrenle aurası olan biri için baş ağrısı tablosu farklı bir dikkat ister; bu
-tablo hekimle başlangıçta zaten konuşulan bir başlıktır. Yeni bir aurayla beraber gelen ya da karakteri
-değişen baş ağrısı her zaman değerlendirilir
-(güçlü kanıt)
-.
+Ruh hali değişiklikleri hem menopoz döneminde hem de HRT kullanırken görülebilir. Keyifsizlik
+veya duygusal dalgalanma günlük yaşamınızı zorlaştırıyorsa hekiminize anlatın. “Abartıyor muyum?”
+diye düşünüp susmayın. Bunları yalnızca “uyum dönemi” diyerek geçiştirmek de doğru olmaz
+[[2]](#kaynak-2) [[3]](#kaynak-3).
 
-**Uyku** tarafında ilk birkaç hafta inişli çıkışlı olabilir. Gece terlemelerindeki azalma
-genellikle ikinci aydan itibaren belirgin hâle gelir; bu, uyku kalitesini doğrudan etkileyen en güzel
-değişimlerden biridir. Ama uyku iyileşmesi her zaman lineer değil — bazen iki adım ileri, bir adım
-geri ilerler. Uyku-stres-vazomotor üçgeni birbirine sıkı bağlıdır; bir köşedeki yumuşama, diğerlerini
-de yumuşatır.
+Hafif baş ağrısı başlangıçta görülebilir. Bir haftadan uzun sürüyorsa veya şiddetliyse hekimle
+görüşün [[3]](#kaynak-3). Migreniniz varsa ağrının alışılmış biçiminden farklı olup
+olmadığını ve görme değişikliği eşlik edip etmediğini de belirtin. Ani, çok şiddetli ağrı veya
+nörolojik belirtiler aşağıdaki acil değerlendirme sınırına girer.
 
-İlk üç ayda yaşanan duygusal yorgunluğun ne kadarının tedaviye, ne kadarının uyku, stres ve yaşam
-ritmine ait olduğunu bazen tek cümlede ayırmak mümkün değildir. Bu yüzden klinik izlemde "belirtiyi
-etiketlemek" yerine kalıbı izlemek daha güvenlidir: ne zaman başladı, ne kadar sürdü, neyle birlikte
-arttı, günlük işlevi etkiledi mi?
+Uykuyu değerlendirirken gece terlemesiyle uyanmayı, uykuya dalma güçlüğünü ve ertesi günkü
+yorgunluğu ayırarak not edin. Her belirti için “ikinci ayda düzelir” gibi sabit bir
+süre vermem; bu dürüst bir söz olmaz. Kontrolde, tedavinin hedeflediği yakınmalarda ne kadar
+değişiklik olduğunu konuşun [[1]](#kaynak-1).
 
-## İzleme Takvimi: 3, 6, 12 Ay
+## İzleme Takvimi ve Kontrole Hazırlık
 
-Bir tedaviyi taşımak, onu yalnız taşımamak demek değil — düzenli kontroller en sade güvenlik ağıdır.
+Takvim aslında basit. İlk kontrol yaklaşık üçüncü ayda, sonrasında en az yılda bir yapılır; yan
+etkiler veya yeterince düzelmeyen belirtiler varsa görüşme öne alınır.
 
-İzlem takvimi kişisel deneyimden değil, klinik güvenlikten doğar. Tedaviye başlandıktan sonra ilk yıl
-daha yakın takip edilmesinin nedeni budur: belirti yanıtı, kanama düzeni, yan etkiler, tansiyon,
-meme taraması ve gerekirse laboratuvar kontrolleri aynı tabloda değerlendirilir.
-
-Çoğu klinik durumda HRT başlandıktan sonra ilk yıl, üç aylık aralıklarla bir izleme önerilir. Üçüncü
-ayda genellikle iki temel soru oturur: belirtiler beklendiği gibi yumuşadı mı, ve ortaya çıkan
-herhangi bir yan etki var mı? Bu görüşmede dozun ya da formun ufak ayarlanması gündeme gelebilir
-
-(güçlü kanıt)
-.
-
-Altıncı ayda dengenin oturup oturmadığı, kanama düzeninin yerleşip yerleşmediği, ruh hali ve uyku
-tablosunun nereye geldiği birlikte değerlendirilir. Birinci yılda ise daha kapsamlı bir izlem masaya
-gelir: tansiyon, kan tetkikleri, mamografi planı ve klinik karara göre kemik yoğunluğu ölçümü. Yıllık
-mamografi takvimi pek çok kadın için zaten standart koruyucu sağlık adımıdır; HRT bu adımı değiştirmez,
-aksaklık olmamasını bir kez daha önemli kılar
-(güçlü kanıt)
-.
-
-Birinci yıldan sonra, tablo dengeli giderse görüşmeler altı aylık ya da yıllık aralıklara çekilebilir.
-Önemli olan bu noktayı bir "bitiş" olarak değil, bir "denge" olarak okumak — HRT bireyseldir, yıllar
-içinde yeniden değerlendirilen bir karardır.
-
-**Kısa not:** İlk yıl üç aylık görüşmeler, sonraki yıllarda altı ay–yıllık. Yıllık
-mamografi ve gerekli tetkikler standart koruyucu sağlık izleminin parçasıdır; HRT'ye özel ek bir
-yük değil, zaten orada olan bir takvim.
-
-## Ne Zaman Hekime Başvurmak Anlamlı?
-
-Yumuşak yan etkilerle alarm belirtileri arasındaki çizgiyi okumayı bilmek, kararı taşımayı kolaylaştıran
-en önemli alışkanlıktır.
-
-Aşağıdaki belirtilerden biri yaşandığında, planlı kontrolden önce hekimle iletişime geçmek anlamlıdır:
-
--  **Bacakta tek taraflı şişlik, kızarıklık veya ısrarlı ağrı** — özellikle baldırda
-yoğunlaşan bir his; tromboembolik bir tablonun nadir ama önemli işareti olabilir
-(güçlü kanıt)
-.
-
--  **Göğüste yoğun ağrı, nefes darlığı, açıklanamayan çarpıntı** — gecikmeden
-değerlendirilmesi gereken bir tablodur.
-
--  **Ani başlayan görme bozukluğu** — bulanıklık, görme alanında karartı; özellikle migren
-aurası geçmişi olan biri için ek dikkat ister.
-
--  **Karakteri değişen veya ilk kez aurayla gelen şiddetli baş ağrısı** — alıştığınız bir
-ağrı paterninin dışında bir tabloysa konuşulması gerekir.
-
--  **Postmenopoz döneminde açıklanamayan kanama** ya da ilk altı aydan sonra düzene
-oturmamış yoğun, uzun kanama
-(güçlü kanıt)
-.
-
--  **Memede yeni ortaya çıkan, kaybolmayan kitle veya ciltte değişim** — yıllık mamografi
-takviminden bağımsız olarak değerlendirilir.
-
--  **Şiddetli karın ağrısı, açıklanamayan sarılık ya da koyu idrar** — karaciğer
-fonksiyonlarının kontrol edilmesi gerekebilir.
-
-Bunların hiçbiri "panik" listesi değildir; dikkat listesidir. Çoğu kadında HRT yıllarca sakin geçer.
-Önemli olan bu çizgiyi baştan bilmek ve gerektiğinde planlı kontrolü beklemeden hekime ulaşmaktır
-
-(güçlü kanıt)
-.
-
-## Sık Sorulanlar
-
-### Yan etkilerin büyük kısmı ne zamana kadar geçer?
-
-Yumuşak ve yaygın yan etkilerin büyük kısmı (meme hassasiyeti, hafif ödem, küçük baş ağrıları, kanama
-düzensizliği) ilk üç–altı ay içinde belirgin biçimde azalır
-(iyi–güçlü kanıt)
-. Üçüncü ay
-çoğu klinik durumda ilk gerçek değerlendirme noktası olarak kabul edilir. İlk haftalarda yaşanan bir
-belirti üzerinden tedaviyi yargılamak çoğu zaman erken bir karardır. Altıncı ayda hâlâ belirgin bir
-rahatsızlık varsa, doz veya form ayarı hekimle birlikte konuşulabilir.
-
-### İlk haftalarda kanama olması her zaman endişe verici mi?
-
-Hayır. Özellikle kombine tedavide (östrojen + progesteron) ilk üç–altı ay boyunca arada gelen küçük
-lekelenmeler ya da kısa beklenmedik kanamalar görülebilir; bu uyum dönemine ait yaygın bir tablodur
-
-(güçlü kanıt)
-. Ancak yoğun, uzun süreli kanama, postmenopoz döneminde (son adetten bir yıldan
-uzun süre sonra) açıklanamayan kanama veya altıncı aydan sonra hâlâ düzene oturmamış kanama her zaman
-hekimle değerlendirilir. Süre geçtikten sonra ortaya çıkan kanama özellikle önemlidir.
-
-### Hekimle ne sıklıkta görüşmek anlamlı?
-
-İlk yıl genellikle üç aylık aralıklarla; sonraki yıllarda klinik tabloya göre altı ay–yıllık. Yıllık
-mamografi, kan tetkikleri ve gerektiğinde kemik yoğunluğu ölçümü standart izlemin
-parçasıdır
-(güçlü kanıt)
-. Beklenmedik bir belirti olduğunda planlı zamandan önce iletişime
-geçmek her zaman güvenli tercihtir; "üç ayım dolmadı" diye beklemek doğru bir refleks değil.
-
-### Ev ortamında neyi izlemek anlamlı?
-
-Çok karmaşık bir takip sistemi gerekmiyor. Telefonda veya küçük bir defterde haftada bir cümle —
-"bu hafta uyku iyiydi, meme hassasiyeti azaldı, lekelenme oldu" gibi — üç ay sonra hekimle oturduğunda
-en değerli kaynak hâline geliyor. Belirti günlüğü, kontrol görüşmesinde "şu kadarı tedaviye bağlı, şu
-kadarı yaşam tarzına" sorusunun ayrıştırılmasını da kolaylaştırır
+Üçüncü ayda sıcak basmaları, gece terlemeleri, kanama ve yan etkiler birlikte gözden geçirilir.
+İlacı nasıl kullandığınız da konuşulur. Doz veya uygulama yolunda değişiklik gerekip gerekmediği
+bu bilgilerle değerlendirilir. Altıncı ay kontrolü herkes için zorunlu bir basamak değildir;
+ihtiyaç varsa eklenir
 (iyi kanıt)
-. Akıllı saat
-uyku verisi, adet takibi uygulamaları, kan basıncı ölçümü gibi araçlar yardımcı olabilir; ama temel
-olan kalemle yazılmış kısa bir cümledir.
+[[1]](#kaynak-1).
 
-### Yan etkiler bana uymadığını mı gösterir?
+Yıllık görüşmede yeni sağlık sorunları, tedavinin yararı, olası riskler ve tansiyon gibi temel
+sağlık kontrolleri ele alınır. Ulusal tarama programları sürdürülür. HRT kullanmak tek başına
+herkese aynı kan testi, ultrason veya kemik yoğunluğu ölçümü listesini gerektirmez; gerekli
+incelemeler kişisel bulgular ve risklerle belirlenir [[1]](#kaynak-1).
 
-Çoğu zaman hayır. İlk haftalarda yaşanan yumuşak yan etkiler tedavinin "uymadığı" anlamına gelmez;
-vücut yeni dengeye yerleşirken gelir. Üç ayın sonunda hâlâ rahatsız edici bir tablo varsa, hekimle
-birlikte doz veya form (oral, transdermal jel, bant) değişikliği gündeme gelebilir
-(iyi kanıt)
-.
-Bazen aynı etken maddenin farklı bir formu, tamamen farklı bir konfor sağlar. Tedavi tek bir karar değil;
-birlikte güncellenen bir konuşma.
+Türkiye'deki ulusal meme kanseri tarama programında, belirtisi olmayan 40–69 yaş arası kadınlar
+için iki yılda bir mamografi önerilir [[5]](#kaynak-5). Kişisel riskleriniz veya
+yeni bir meme bulgusu varsa hekiminiz farklı bir değerlendirme planlayabilir. Tarama takvimi,
+yeni bir kitleyi bildirmek için bekleme süresi değildir.
 
-## Kapanış
+Kontrole giderken kısa notlarınızı ve kullandığınız ilaçların listesini yanınıza alın. Benim ilk
+sorum genellikle şudur: “Sizi en çok ne rahatsız ediyor?” O belirtiyi ilk sırada söyleyin.
 
-Tezgâhın köşesindeki defter, aslında bedeniyle kurulan sade bir yazışmanın aracı.
+Hekiminize şu üç soruyu da sorabilirsiniz: “Tedaviden beklediğimiz yararı görüyor muyum?”, “Bu
+belirti için doz veya uygulama yolunu gözden geçirelim mi?” ve “Bir sonraki kontrolü beklemeden
+hangi durumda size ulaşmalıyım?”
 
-Yan etkilerin kategorize edilmesi, dozun ayarlanması, gerektiğinde formun değiştirilmesi büyük kararlar
-gibi görünür; ama temelinde çoğu zaman küçük bir alışkanlık vardır: haftada bir cümlelik kayıt. Bu kayıt,
-hem gereksiz paniği hem de gereksiz gecikmeyi azaltır.
+## Dr. Aksoy’a Sorular
 
-İlk ayların amacı kusursuz hissetmek değil, güvenli izlem kurmaktır. Beklenen hafif belirtilerle alarm
-bulgularını ayırmak, HRT kararını daha sakin ve daha tıbbi bir zemine taşır.
+Bu bölüm, Dr. Senai Aksoy’un bu yazı için verdiği beş gerçek yanıttan düzenlenmiş uzman katkısıdır. Tedaviyle ilgili değişiklikler kendi hekiminizle birlikte değerlendirilir.
+
+### HRT’nin hafif yan etkileri ne kadar sürebilir?
+
+**Dr. Aksoy’un yanıtı:**
+
+Meme hassasiyeti, şişkinlik, baş ağrısı, bulantı ve lekelenme gibi hafif yan etkiler çoğunlukla ilk 2–3 ay içinde azalır. Tolere edilebiliyorsa bir süre izlemek veya doz ya da ilaç türünü ayarlamak mümkündür. Ancak şiddetli veya giderek artan baş ağrısı, göğüs ağrısı ya da nefes darlığı, tek taraflı bacak şişliği, sarılık veya belirgin ve yoğun vajinal kanamada beklemeyi önermem; değerlendirme gerekir. Tedavinin etkinliği ve tolere edilip edilmediği yaklaşık üçüncü ayda yeniden değerlendirilir.
+
+[İlgili kaynak](#kaynak-1)
+
+### HRT’nin ilk aylarındaki kanamayı nasıl değerlendirirsiniz?
+
+**Dr. Aksoy’un yanıtı:**
+
+HRT’nin tipi önemlidir. Döngüsel (sekansiyel) tedavide progesteron döneminden sonra düzenli çekilme kanaması beklenebilir. Sürekli kombine HRT’de ise ilk aylarda düzensiz lekelenme sık görülür ve çoğu kez 4–6 ay içinde azalır. Kanamanın miktarını ve düzenini, HRT’ye ne zaman başlandığını, progesteronun dozunu ve düzenli kullanılıp kullanılmadığını, rahim iç tabakası (endometrium) kanseri açısından kişisel riskleri birlikte değerlendiririm. Kanama HRT başladıktan sonra altı aydan uzun süre devam ediyorsa, tedavi değişikliğinden üç ay sonra hâlâ sürüyorsa veya başlangıçtan itibaren çok yoğun ya da uzamışsa ultrason ve gerektiğinde ileri değerlendirme yapılmalıdır.
+
+[İlgili kaynak](#kaynak-4)
+
+### HRT’de kontrol sıklığını ve gerekli tetkikleri nasıl belirlersiniz?
+
+**Dr. Aksoy’un yanıtı:**
+
+Genellikle HRT’ye başladıktan veya önemli bir değişiklik yaptıktan üç ay sonra, ardından sorun yoksa yılda en az bir kez kontrol yeterlidir. Kontrolde belirtilerin ne kadar düzeldiğini, yan etkileri, kanama düzenini, tansiyonu, kiloyu ve beden kitle indeksini (BMI), yeni gelişen riskleri değerlendiririm. Her kontrolde rutin hormon düzeyi ölçmek gerekmez. Kan yağları, kan şekeri/HbA1c, karaciğer veya tiroid testleri yaşa, önceki sonuçlara, kullanılan tedaviye ve kişisel risklere göre istenir. Mamografi, rahim ağzı taraması ve diğer koruyucu kontroller de HRT nedeniyle daha sık yapılmaz; yaşa ve kişisel risklere uygun programda sürdürülür.
+
+[İlgili kaynak](#kaynak-1)
+
+### Evde hangi belirtileri, nasıl kaydetmek yararlı olur?
+
+**Dr. Aksoy’un yanıtı:**
+
+Evde çok ayrıntılı bir günlük tutmak gerekmez. Kanama ve lekelenme günlerini ve miktarını; sıcak basması, gece terlemesi, uyku, baş ağrısı, meme hassasiyeti, şişkinlik ve ruh halindeki değişiklikleri kısa notlarla kaydedebilirsiniz. Tedavinin belirtilerinize etkisini de not edin. Özellikle yeni başlayan veya giderek artan belirtilerin tarihi önemlidir. Böylece yan etkinin gerçekten HRT ile ilişkili olup olmadığını ve zaman içinde azalıp azalmadığını daha iyi değerlendiririz.
+
+### Yan etki geliştiğinde tedavinin uygunluğunu ve değişiklik ihtiyacını nasıl değerlendirirsiniz?
+
+**Dr. Aksoy’un yanıtı:**
+
+Yan etki geliştiğinde önce hangi hormonun, dozun ve uygulama yolunun sorumlu olabileceğine bakarım. Östrojen dozu fazla geliyorsa azaltmak, progesterona bağlı şikâyetlerde progesteron tipini veya kullanım şeklini değiştirmek, ağızdan alınan tedavide sorun varsa cilt yoluyla uygulamaya geçmek düşünülebilir. Aynı zamanda tedavinin hâlâ gerekli olup olmadığını, belirtilere ne kadar fayda sağladığını ve kişinin damar içinde pıhtı (tromboz), migren, karaciğer hastalığı, meme ve rahim iç tabakası (endometrium) açısından risklerini yeniden değerlendiririm. Amaç yan etkiyi tolere ettirmek değil, en düşük etkili dozla kişiye en uygun ilaç türünü ve uygulama yolunu bulmaktır.
+
+[İlgili kaynak](#kaynak-1)
+
+## Planlı Kontrolü Beklememeniz Gereken Belirtiler
+
+Bu listeyi korkmanız için değil, gerektiğinde tereddüt etmemeniz için yazıyorum. Bazı belirtiler
+aynı gün değerlendirme, bazıları acil yardım gerektirir.
+
+- **112'yi arayın:** Göğüs ağrısına nefes darlığı eşlik ediyorsa ya da ani konuşma
+bozukluğu, yüzde kayma veya kol/bacakta tek taraflı güçsüzlük varsa. Acile kendiniz araç
+kullanarak gitmeyin [[3]](#kaynak-3).
+- **Acil değerlendirme alın:** Ani görme kaybı veya aniden başlayan, alışılmışın
+dışında çok şiddetli baş ağrısı varsa; bunları sıradan migren veya ilaç yan etkisi saymayın [[6]](#kaynak-6).
+- **Aynı gün değerlendirme alın:** Bir bacakta şişlik, kızarıklık veya baldır ağrısı
+varsa. Bunlar damar içinde pıhtı belirtisi olabilir [[3]](#kaynak-3).
+- **Kontrol tarihini beklemeden bildirin:** Yoğun veya uzun süren kanama,
+tedavinin başlangıcından altı ay sonra ya da doz değişikliğinden üç ay sonra beklenmedik
+kanama varsa [[4]](#kaynak-4).
+- **Tarama tarihini beklemeden bildirin:** Memede yeni kitle, meme başında
+değişiklik veya ciltte çekinti varsa [[3]](#kaynak-3).
+
+Şiddetli karın ağrısı, göz aklarında ya da ciltte sararma, koyu idrar veya açıklanamayan yeni
+çarpıntı gibi belirtileri de gecikmeden değerlendirtin. Bu liste bütün olası yan etkileri içermez;
+kendi ilacınızın kullanma talimatındaki uyarıları da izleyin.
+
+İlk aylarda kaygı duymanız çok anlaşılır. Her ayrıntıyı kendi başınıza çözmeniz gerekmez.
+Rahatsızlığınızı açıkça anlatın, güvenlik belirtilerinde beklemeyin. Gerisini hekiminizle
+birlikte konuşursunuz.
+
+## Kaynaklar
+
+Yan etkiler, kanama değerlendirmesi ve takip planı için kullanılan seçilmiş kaynaklar:
+
+- [NICE NG23 — Menopoz: tanı ve yönetim; 1.8.4 ve 1.9, 2026 güncellemesi](https://www.nice.org.uk/guidance/ng23/chapter/Recommendations). İlk kontrol, yıllık izlem ve kanama değerlendirme süreleri.
+- [NHS — Hormon tedavisinin yan etkileri](https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/side-effects-of-hormone-replacement-therapy-hrt/). Genel yan etkiler ve tedavi düzenine göre kanama.
+- [NHS — Östrojen tabletleri, bantları, jel ve spreylerin yan etkileri](https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/oestrogen-tablets-patches-gel-and-spray/side-effects-of-oestrogen-tablets-patches-gel-and-spray/). Belirtiye göre yardım arama sınırları.
+- [British Menopause Society — HRT sırasında beklenmedik kanamanın yönetimi; Mayıs 2026'da gözden geçirilen ortak kılavuz](https://thebms.org.uk/publications/bms-guidelines/management-of-unscheduled-bleeding-on-hormone-replacement-therapy-hrt/). Kanama süresi, miktarı ve kişisel risklere göre inceleme.
+- [T.C. Sağlık Bakanlığı — Meme kanseri farkındalığı ve ulusal tarama aralığı](https://www.saglik.gov.tr/TR-100021/ekim-ayi-tum-dunyada-meme-kanseri-farkindalik-ayidir.html). 40–69 yaşta iki yılda bir mamografi.
+- [NHS — İnme belirtileri](https://www.nhs.uk/conditions/stroke/symptoms/). Ani görme kaybı, şiddetli baş ağrısı ve acil yardım gerektiren nörolojik belirtiler.
 
 Tıbbi Not
 
