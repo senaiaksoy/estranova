@@ -32,7 +32,12 @@
 
 ## Onay Kayıtları
 
+- 2026-10-02 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` audit revizyonu KC doğrudan editör onayıyla (“onaylandı”) onaylandı. Kapsam ve stil sinyalleri aşağıdaki revizyon notunda; paket `onaylanan/2026-10-02_sauna-soguk-dus-menopoz-audit-revizyon`.
 - 2026-05-04 — `/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin` KC doğrudan editör onayıyla onaylandı. Alara Baykent istisna yazar olduğu için 5 dakikalık dış yazar formu zorunlu değil; stil kontrol paketi ve kaynak kopyası `onaylanan/2026-05-04_aksam-hareketi-uyku-melatonin` altında onay izi olarak korunur.
+
+## Revizyon notları
+
+- **2026-10-02 — #1 sauna/soğuk duş, audit revizyonu.** Antigravity humanize geçişi denetlendi ve düzeltildi. Kalıp seçimi: açılış `opening_pattern` 2 (“Atımla sabah ahırda”) korundu; kapanış `closing_pattern` 8 (“Sabah ahırda her şey sakinken bu cümleyi yazdım”) — önceki kapanış varyant 1'di; `balance_phrase` 1 (“Ben yaşamadım ama yakından gördüm”); anekdot kapısı “yakın bir aile dostumuz” (söz tırnaksız, dolaylı anlatım). **Stil sinyalleri:** (a) Alara metninde aktarılan söz uydurulmaz, süslenmez; doğrulanmamış söz tırnaksız aktarılır. (b) Yaşıt yazar gövdesinde sıklık/süre “güvenli aralık” veya “önerilir” diye verilmez; doz kararı Bilimsel Editör Notu ve hekime bırakılır. (c) Kısa cümle ağırlıklı, enerjik ses; resmî bağlaç yığını (“Dolayısıyla”, “Ne var ki”) ve “bedenle diyalog / bedenin sesi” kişileştirmesi yok. **Log düzeltmesi:** #1 satırındaki “anne neslinin / Annem mutfakta” ifadeleri yayın öncesi taslağa aittir; 2026-05-03'te anne anekdotu yasağıyla “yakın bir aile dostu” çerçevesine çevrilmişti. Satır tarihsel kayıt olarak korunuyor.
 
 ## Retrofit özet (pre-framework yayınlar — 2026-04-29 öncesi)
 

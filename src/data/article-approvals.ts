@@ -392,8 +392,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/',
     writerSlug: 'alara-baykent',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: Alara imzali canli route approval setine dahil edildi; manifest ve export zinciriyle uyum saglandi.',
+    approvedAt: '2026-10-02',
+    note: 'Prelaunch envanter onayı 2026-05-04. 2026-10-02: audit revizyonu (Antigravity humanize geçişinin denetimi ve düzeltmesi: aile dostu alıntısı dolaylı anlatıma çevrildi, “güvenli aralık” doz dili kaldırılıp Finlandiya kohortu gözlemsel ve erkek ağırlıklı veri olarak aktarıldı, abartılı kanıt dili ve beden kişileştirmeleri temizlendi, Alara sesi ve imza açılışı geri getirildi, Bilimsel Editör Notunda “kesin kontrendikasyon” yumuşatıldı) KC editör/bilimsel editör Dr. Senai Aksoy tarafından “onaylandı” beyanıyla doğrudan onaylandı; Alara Baykent yazar formu istisnasında. Kayıt: icerik/yazar-onaylari/alara-baykent/onaylanan/2026-10-02_sauna-soguk-dus-menopoz-audit-revizyon/onay-kaydi.md.',
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',

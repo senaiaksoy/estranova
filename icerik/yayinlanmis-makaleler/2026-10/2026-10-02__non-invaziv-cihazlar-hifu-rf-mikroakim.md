@@ -29,7 +29,7 @@ Bu yazıda yalnızca yüz ve boyun cildini ele alıyoruz. Aynı cihaz adları v�
 
 ## Üç Yöntem, Üç Ayrı Enerji
 
-Banyo rafındaki küçük bir ev cihazı ile klinikte kullanılan bir ultrason sistemi, aynı reklam cümlesinde yan yana anılabiliyor. Oysa üçü de dokuya enerjiyi farklı yollarla iletir.
+Banyo rafındaki küçük bir ev cihazı ile klinikte kullanılan bir ultrason sistemi, aynı reklam cümlesinde yan yana anılabiliyor. HIFU, RF ve mikroakım dokuya enerjiyi farklı yollarla iletir.
 
 ### HIFU: odaklanmış ultrason
 
@@ -39,7 +39,7 @@ HIFU, yüksek yoğunluklu odaklanmış ultrason demektir. Ses dalgaları cildin 
 
 Radyofrekans, kısaca RF, elektrik enerjisiyle dokuda ısı oluşturur. Cilt yüzeyinden uygulanan sistemlerde hedef, kolajen ve bağ dokusunun bu ısıya verdiği yanıtla ciltte toparlanma sağlamaktır. Isının hangi derinlikte oluşacağını cihazın yapısı ve enerji ayarları belirler.<sup>[[2]](#kaynak-2)</sup>
 
-Burada önemli bir ayrım var: **İğneli radyofrekans cilt yüzeyini geçer; ameliyatsızdır ama yüzeyden yapılan RF ile aynı işlem sayılmaz.** Size “RF” önerildiğinde iğneli mi, yüzeyden mi olduğunu baştan sorun; risk konuşması da buna göre değişir.
+**İğneli radyofrekans cilt yüzeyini geçer; ameliyatsızdır ama yüzeyden yapılan RF ile aynı işlem sayılmaz.** Size “RF” önerildiğinde iğneli mi, yüzeyden mi olduğunu baştan sorun; risk konuşması da buna göre değişir.
 
 ### Mikroakım: düşük düzeyde elektrik akımı
 
@@ -51,33 +51,33 @@ Mikroakım cihazları cilde çok düşük düzeyde elektrik akımı verir ve ev 
 
 ## Araştırmaların Söyledikleri ve Söylemedikleri
 
-İyi haber şu: bazı uygulamalarda ölçülebilir bir değişim var. Asıl soru, bu değişimin size yetip yetmeyeceği.
+Bazı uygulamalarda ölçülebilir bir değişim bildiriliyor. Karar verirken bu değişimin büyüklüğü ve sizin beklentiniz birlikte düşünülmeli.
 
-**Mikroodaklı ultrason:** 42 çalışmayı bir araya getiren bir sistematik derleme ve meta-analiz, yüz ve boyunda genel görünümde ve cilt kalitesinde iyileşme bildiriyor
+**Mikroodaklı ultrason:** 42 çalışmayı bir araya getiren bir sistematik derleme ve meta-analiz, yüz ve boyun uygulamalarında genel görünümde iyileşme bildiriyor
 (orta kanıt)
-. Yazarlar, bazı çalışmalarda hastaların “ne iyi ne kötü” yanıtlarının olumlu sayılmış olabileceğini ve bunun sonucu olduğundan iyi gösterebileceğini de not ediyor.<sup>[[1]](#kaynak-1)</sup>
+. Yazarlar, değerlendirme formunda “ne iyi ne kötü” seçeneği sunulmadığında bazı hastaların memnun olarak sınıflandırılmış olabileceğini belirtiyor. Bu durum memnuniyeti olduğundan yüksek gösterebilir.<sup>[[1]](#kaynak-1)</sup>
 
-**Radyofrekans:** Yüz ve boyunda gevşeklik, esneklik ve genel görünümde olumlu bulgular var
+**Radyofrekans:** Ölçülü bir toparlanma bekleyenlerde memnuniyet daha yüksek bulunmuş. Yüz ve boyunda gevşeklik, esneklik ve genel görünümde olumlu bulgular var
 (sınırlı–orta kanıt)
-. Memnuniyet, ölçülü bir toparlanma bekleyenlerde daha yüksek bulunmuş. Çalışmalarda farklı cihazlar bir arada incelendiği için RF'yi HIFU'dan üstün ya da zayıf ilan eden bir sıralama yapılamıyor.<sup>[[2]](#kaynak-2)</sup>
+. Derleme farklı RF uygulamalarını kapsıyor; bütün sonuçlar yalnızca cilt yüzeyinden yapılan RF'ye ait değil. HIFU ile doğrudan bir üstünlük karşılaştırması da sunmuyor.<sup>[[2]](#kaynak-2)</sup>
 
-**Mikroakım:** Tek başına ev tipi mikroakımın uzun süreli etkisine dair veri çok sınırlı
+**Mikroakım:** Bir ev cihazı çalışmasında 36 sağlıklı Koreli kadın, sekiz hafta boyunca ışık, RF, mikroakım ve ultrasonu birlikte kullandı. Bildirilen değişimin ne kadarının mikroakımdan geldiğini ayıramıyoruz; sekiz haftalık izlem de uzun süreli kalıcılığı göstermiyor. Tek başına ev tipi mikroakım için uzun süreli veri çok sınırlı
 (zayıf–sınırlı kanıt)
-. Bu alandaki çalışmalardan birinde 36 kadın, birden çok enerji kullanan bir ev cihazını sekiz hafta boyunca denedi. Böyle kısa bir araştırma, mikroakımın tek başına ne yaptığını göstermiyor.<sup>[[3]](#kaynak-3)</sup>
+.<sup>[[3]](#kaynak-3)</sup>
 
 *“Peki bu değişim benim için yeterli olur mu?”* Bir araştırmada değerlendirme formundaki “hafif iyileşme” kutusunun işaretlenmesi, sabah aynasında sizin fark edeceğiniz değişimle aynı ölçü sayılmaz.
 
-Bu yöntemleri ne bütünüyle değersiz saymak ne de cerrahi yüz germeyle eşitlemek doğru olur. Bu çalışmaların hiçbiri cerrahiyle eşdeğer bir sonuç göstermiyor.<sup>[[1]](#kaynak-1)</sup><sup>[[2]](#kaynak-2)</sup>
+Bildirilen iyileşmeler, bu yöntemleri cerrahi yüz germeyle eşitlemek için yeterli değil.<sup>[[1]](#kaynak-1)</sup><sup>[[2]](#kaynak-2)</sup>
 
-Seans sayısı için de herkese uyan bir takvim yok. Bazı ultrason çalışmaları tek uygulamayı incelerken RF ve ev cihazlarının protokolleri birbirinden çok farklı. Size önerilen yöntemin kendi verisini sormak en sağlıklısı.
+Seans sayısı için de herkese uyan bir takvim yok. Bazı ultrason çalışmaları tek uygulamayı incelerken RF ve ev cihazlarının protokolleri birbirinden çok farklı. Önerilen seans sayısının hangi araştırmaya veya cihaz protokolüne dayandığını sorun.
 
 ## Menopoz Sonrası Cilt ve Beklenti
 
-Önce şunu söyleyeyim: menopozdan sonra bu yöntemlerin işe yaramayacağını gösteren bir bulgu yok. Eksik olan, bu soruyu doğrudan inceleyen çalışmalar.
+Menopozdan sonra bu yöntemlerin etkisinin nasıl değiştiğini kesin söyleyemiyoruz. Sonuçları menopoz durumuna göre ayrı değerlendiren çalışmalar az.
 
-Çoğumuz bu dönemde benzer şeyler fark ederiz: yıllardır kullandığımız krem artık yetmez, yüz öğleden sonra gerginleşir. Östrojen azaldıkça cildin nemi, kalınlığı ve esnekliği değişebilir; güneş, sigara, genel sağlık ve cildin başlangıçtaki durumu da bu tabloya eklenir.<sup>[[5]](#kaynak-5)</sup>
+Bu dönemde yıllardır kullandığınız kremin artık yetmediğini veya yüzünüzün öğleden sonra gerildiğini fark edebilirsiniz. Östrojen azaldıkça cildin nemi, kalınlığı ve esnekliği değişebilir; güneş, sigara, genel sağlık ve cildin başlangıçtaki durumu da bu tabloya eklenir.<sup>[[5]](#kaynak-5)</sup>
 
-Estetik çalışmaların çok azı sonuçları menopoz durumuna göre ayrı inceliyor. Bu yüzden beklentiyi yalnızca yaşa ya da adetlerin bitmiş olmasına göre kurmak yerine, cildin bugünkü durumu ve hedefiniz üzerinden konuşmak daha doğru olur.<sup>[[5]](#kaynak-5)</sup>
+Bu nedenle yalnızca yaşınıza veya adetlerinizin bitmiş olmasına bakarak bir cihaz seçmek doğru olmaz.<sup>[[5]](#kaynak-5)</sup>
 
 Hormon tedavisi de bir cihaz uygulamasına hazırlık olarak başlanmaz. Ciltte olumlu etkileri bildirilse de kılavuzlar onu yalnızca cilt yaşlanması için önermiyor; menopoza ilişkin yararı ve riskleri ayrı bir konu olarak hekiminizle konuşulmalı.<sup>[[5]](#kaynak-5)</sup>
 
@@ -85,24 +85,28 @@ Kuruluk ve hassasiyet de kendi bakımını ister. Cihaz, günlük bakımın yeri
 
 ## Ağrı, Yan Etkiler ve Kimlerde Uygulanmaz
 
-Bu bölüm biraz kuru gelebilir; yine de karar verirken en çok işinize yarayacak kısım burası. Ciltte kesi olmaması, derinde bir etki olmadığını göstermez.
+Ciltte kesi olmadan yapılan bir uygulama da ağrıya ve yan etkilere yol açabilir. Riskler kullanılan enerjiye, cihaza ve uygulama bölgesine göre değişir.
 
-İşlem sırasında ağrı olabilir. Mikroodaklı ultrason çalışmalarında hastalar ağrıyı ortalama olarak orta düzeyde tarif etmiş.<sup>[[1]](#kaynak-1)</sup> Birçoğumuz “abartıyorum” diye düşünüp ağrıyı söylemekten çekinir, hatta biraz utanırız. Ağrınızı söylemek sizin hakkınız; uygulayan kişinin de bunu bilmesi gerekir.
+İşlem sırasında ağrı olabilir. Mikroodaklı ultrason çalışmalarında hastalar ağrıyı ortalama olarak orta düzeyde tarif etmiş.<sup>[[1]](#kaynak-1)</sup> Ağrı duyduğunuzda bunu açıkça söyleyin. Uygulayan kişinin ağrınızı bilmesi gerekir.
 
-İşlemden sonra kızarıklık, şişlik, hafif morarma ve hassasiyet sık görülür; bunlar çoğunlukla hafif ya da orta düzeydedir.<sup>[[1]](#kaynak-1)</sup> Daha ciddi sorunlar arasında yanık, su toplaması, ciltte renk değişikliği, iz, istenmeyen yağ dokusu kaybı ve sinir etkilenmesi sayılır. Bunların olasılığı cihaza ve enerji türüne göre değişir.<sup>[[2]](#kaynak-2)</sup><sup>[[4]](#kaynak-4)</sup>
+Mikroodaklı ultrason çalışmalarında bildirilen kızarıklık, şişlik, hafif morarma ve hassasiyet çoğunlukla hafif ya da orta düzeydedir.<sup>[[1]](#kaynak-1)</sup> Daha ciddi sorunlar arasında yanık, su toplaması, ciltte renk değişikliği, iz, istenmeyen yağ dokusu kaybı ve sinir etkilenmesi sayılır. Bunların olasılığı cihaza ve enerji türüne göre değişir.<sup>[[2]](#kaynak-2)</sup><sup>[[4]](#kaynak-4)</sup>
 
 Hacim kaybından rahatsız olduğunuz bir yüzde yağ dokusunun azalması, istediğinizin tersine bir sonuç verebilir. “Sıkılaştırma” denilen uygulamanın hangi dokuyu etkileyeceğini bu yüzden açıkça sorun.
 
-Kalp pili veya implante defibrilatör gibi aktif bir implantınız varsa bu uygulamalar yapılmamalıdır. Deri altında bir implanttan ya da yaralanmadan kalan metal ve uygulama bölgesindeki açık yara da aynı listede yer alır.<sup>[[4]](#kaynak-4)</sup> Uygulama bölgesinde kalıcı makyaj ya da dövme varsa, RF öncesinde mürekkebin metal parçacık içerip içermediği konuşulmalıdır.<sup>[[4]](#kaynak-4)</sup> Gebelik veya emzirme, geçirilmiş işlemler ve kullandığınız ilaçlar da uygulama öncesinde paylaşılmalı.
+Kalp pili veya vücuda yerleştirilmiş defibrilatör gibi aktif bir implantınız varsa RF ve tedavi amacıyla kullanılan ultrason uygulanmamalıdır. Deri altında bir implanttan ya da yaralanmadan kalan metal de bu uygulamalara engeldir. Uygulama bölgesinde açık yara veya ciltte bütünlük kaybı varsa ultrason yapılmamalıdır.<sup>[[4]](#kaynak-4)</sup>
 
-Ev cihazlarında da talimattaki süreyi ve sıklığı aşmayın.
+Kalıcı makyaj ya da dövme olan bölgede mürekkebin metal içerip içermediği kontrol edilmelidir. Metal içeren dövme mürekkebi bulunan bölgeye RF uygulanmamalıdır.<sup>[[4]](#kaynak-4)</sup>
+
+Gebelik veya emzirme, geçirilmiş işlemler ve kullandığınız ilaçlar da uygulama öncesinde paylaşılmalı.
+
+Bu liste vücut şekillendirme uygulamaları için hazırlanmıştır. Yüz uygulamasında ve mikroakımda, kullanılacak cihazın güvenlik talimatını ayrıca hekimle birlikte gözden geçirin. Ev cihazlarında da talimattaki süreyi ve sıklığı aşmayın.
 
 <p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
-###  Hekiminize danışmanın anlamlı olduğu durumlar
+###  Gecikmeden değerlendirilmesi gereken belirtiler
 
-Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğiniz durumlardır.
+Uygulama sonrasında aşağıdaki belirtiler gelişirse gecikmeden tıbbi değerlendirme alın.
 
 -   Uygulama sonrasında şiddetlenen ağrı, su toplaması veya yanık görünümü
 -   Yeni gelişen uyuşma, kas güçsüzlüğü ya da yüz hareketlerinde asimetri
@@ -110,7 +114,7 @@ Aşağıdaki belirtiler tek başına bir tanı anlamına gelmez; ama hekim değe
 
 Bu belirtiler oluşursa uygulayıcı hekimle gecikmeden görüşün; belirgin veya hızla ilerleyen belirtilerde acil tıbbi değerlendirme alın.
 
-İğneli RF için yanık, iz, yağ kaybı, şekil bozukluğu ve sinir hasarı gibi ciddi komplikasyon bildirimleri yayımlandı.<sup>[[6]](#kaynak-6)</sup> Bu bildirimler iğneli uygulamaya aittir; yine de size önerilen işlemin hangisi olduğunu baştan netleştirmenin bir nedeni de budur.
+İğneli RF için yanık, iz, yağ kaybı, şekil bozukluğu ve sinir hasarı gibi ciddi komplikasyon bildirimleri yayımlandı.<sup>[[6]](#kaynak-6)</sup> Bu bildirimler iğneli uygulamaya aittir; yüzeyden RF'nin risk sıklığını göstermez. İğneli RF evde uygulanmamalıdır.
 
 ## Görüşmeye Hangi Sorularla Gitmeli?
 
@@ -129,15 +133,13 @@ Görüşmeden önce telefonunuzun not uygulamasına üç satır yazmanızı öne
 
 Size bir seans takvimi sunulduysa, tekrarın neden gerektiğini de sorun.
 
-Kararı o odada vermek zorunda değilsiniz. Düşünmek için zaman istemek ya da hiç işlem yaptırmamayı seçmek de bu görüşmenin iyi sonuçlarından biri olabilir. Bunu bilmek çoğu zaman insanı rahatlatır.
+Kararı o odada vermek zorunda değilsiniz. Düşünmek için zaman isteyebilir ya da hiç işlem yaptırmamayı seçebilirsiniz.
 
 ## Sonuç Olarak
 
-Üç yöntem, üç ayrı kanıt düzeyi. HIFU ve radyofrekansın belirli uygulamalarında sıkılaşma yönünde klinik bulgular var; mikroakımın kalıcı etkisi ise hâlâ belirsiz.
+Benim için asıl ölçü, önerilen uygulamanın sizi rahatsız eden değişime karşılık vermesi. Cihaz adını bilmek, bu soruyu yanıtlamaya yetmez.
 
-Benim için asıl ölçü, cihaz seçimiyle hedefiniz arasındaki bağın açık olması. Cildinizde neyin değiştiğini, ne beklediğinizi ve hangi riski kabul edebileceğinizi bilmeden yalnızca cihaz adına bakarak karar vermek zor.
-
-Aynada çene hattını yukarı çektiğiniz o an, bir sorunun başlangıcı. Acele etmeyin. O sorunun cevabı, sizin neyi önemsediğinizde saklı.
+Görüşmeden, hangi değişimin beklenebileceğini ve hangi riskleri taşıdığını anlayarak ayrılın; karar vermek için zaman isteyebilirsiniz.
 
 Tıbbi Not
 
