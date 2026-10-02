@@ -1,0 +1,110 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/",
+  "answeredAt": "2026-10-01",
+  "source": "Bu sohbette sorulan üç soruya kullanıcının doğrudan ilettiği Dr. Aksoy yanıtları.",
+  "targetSection": "sik-sorulanlar",
+  "originalResponses": [
+    {
+      "no": 1,
+      "question": "Bir tedaviye “deneysel” denmesi tam olarak ne anlama gelir?",
+      "answer": "Bir tedaviye **“deneysel”** denmesi, etkinliği ve güvenliği konusunda henüz yeterli ve kaliteli klinik kanıt bulunmadığı; standart tedavi olarak kabul edilmediği anlamına gelir. Bu, mutlaka işe yaramadığı demek değildir ama beklenen yarar, riskler ve hangi hastanın gerçekten fayda göreceği konusunda belirsizlik daha fazladır."
+    },
+    {
+      "no": 2,
+      "question": "Off-label kullanım ile deneysel yaklaşım aynı şey midir?",
+      "answer": "**Off-label kullanım ile deneysel tedavi aynı şey değildir.** Off-label, ruhsatlı bir ilacın onaylanmış endikasyonu, dozu, yaş grubu veya kullanım şekli dışında kullanılmasıdır; bazı off-label uygulamaların güçlü bilimsel kanıtı ve kılavuz desteği olabilir. Deneysel yaklaşımda ise kanıt düzeyi genellikle daha düşüktür ve yöntemin klinik değeri henüz netleşmemiştir."
+    },
+    {
+      "no": 3,
+      "question": "Deneysel bir seçenek konuşulurken hekime sorulacak üç temel soru nedir?",
+      "answer": "Deneysel bir seçenek konuşulurken hekime üç temel soru sorulabilir: **“Bu tedavinin benim durumumda işe yaradığını gösteren ne kadar güçlü kanıt var?”, “Bilinen ve henüz bilinmeyen riskleri neler?” ve “Bunu yaptırmazsam elimizde kanıtı daha güçlü hangi standart seçenekler var?”** Bu üç soru, yeni veya çekici görünen bir tedavinin gerçekten anlamlı olup olmadığını çoğu zaman oldukça iyi ortaya koyar."
+    }
+  ],
+  "answers": [
+    {
+      "no": 1,
+      "question": "Bir tedaviye “deneysel” denmesi tam olarak ne anlama gelir?",
+      "answer": "Bir tedaviye “deneysel” denmesi, etkinliği ve güvenliği konusunda henüz yeterli ve kaliteli klinik kanıt bulunmadığı; standart tedavi olarak kabul edilmediği anlamına gelir. Bu, mutlaka işe yaramadığı demek değildir ama beklenen yarar, riskler ve hangi hastanın gerçekten fayda göreceği konusunda belirsizlik daha fazladır."
+    },
+    {
+      "no": 2,
+      "question": "Off-label kullanım ile deneysel yaklaşım aynı şey midir?",
+      "answer": "Off-label kullanım ile deneysel tedavi aynı şey değildir. Off-label, ruhsatlı bir ilacın onaylanmış endikasyonu, dozu, yaş grubu veya kullanım şekli dışında kullanılmasıdır; bazı off-label uygulamaların güçlü bilimsel kanıtı ve kılavuz desteği olabilir. Deneysel yaklaşımda ise kanıt düzeyi genellikle daha düşüktür ve yöntemin klinik değeri henüz netleşmemiştir."
+    },
+    {
+      "no": 3,
+      "question": "Deneysel bir seçenek konuşulurken hekime sorulacak üç temel soru nedir?",
+      "answer": "Deneysel bir seçenek konuşulurken hekime üç temel soru sorulabilir: “Bu tedavinin benim durumumda işe yaradığını gösteren ne kadar güçlü kanıt var?”, “Bilinen ve henüz bilinmeyen riskleri neler?” ve “Bunu yaptırmazsam elimizde kanıtı daha güçlü hangi standart seçenekler var?” Bu üç soru, yeni veya çekici görünen bir tedavinin gerçekten anlamlı olup olmadığını çoğu zaman oldukça iyi ortaya koyar."
+    }
+  ],
+  "frequencyConfirmed": false,
+  "status": "Gerçek SSS yanıtları işlendi; Dr. Aksoy üç ek gövde yanıtı verdi ve işlendi (aşağıda). Kapsamlı humanize tamamlandı. Dr. Alper Mumcu bağımsız tıbbi inceleme onayı KC beyanıyla, eklemeler dahil (2026-10-02) kayıtlı (yazılı not yok).",
+  "pendingQuestions": [],
+  "audit": {
+    "approvalBaseline": {
+      "approvedAt": "2026-05-04",
+      "scope": "Prelaunch inventory reconciliation; yeni revizyonu kapsamaz.",
+      "gitComparison": "Hedef dosyanın son commit’i f96fa86b; oturum HEAD’i c34d3d1f1511df665f473642aa0f5e2b1ee12563. Onaylı metin hash bağlantısı kayıtta yok."
+    },
+    "revisionScope": "Antigravity turunun kaynak/iddia, SSS kökeni, reviewer, gramer, doğal ifade ve akış denetimi; Codex düzeltmeleri.",
+    "thirdRound": "Claude audit/humanize turu ve Evidence/hekim yanıtı turu: docs/editorial/deneysel-tedaviyi-okuma-kilavuzu-humanize-2026-10-01.md."
+  },
+  "independentMedicalReview": {
+    "reviewer": "Dr. Alper Mumcu",
+    "date": "2026-10-01",
+    "coveredVersion": "İki aşama (KC beyanı, yazılı not yok): (1) 2026-10-01 \"Mumcu teyidi tamam\" — bu turun çalışma ağacı sürümü; (2) 2026-10-02 \"mumcu tamam\" — teyit sonrası eklenen içeriği kapsar: Cochrane 2010 ve 2026 CO2 lazer meta-analizi cümleleri, Evidence etiketleri, Bilimsel Editör Notu metni ve üç hekim gövde pasajı. Kapsadığı sürüm: commit öncesi çalışma ağacı (2026-10-02).",
+    "scope": "Tüm metin ve Bilimsel Editör Notu",
+    "status": "Onaylandı — KC beyanı; yazılı inceleme notu yok.",
+    "confirmedAdditionsAt": "2026-10-02"
+  },
+  "bodyClinicalObservations": [
+    {
+      "section": "pazarlama-bilim",
+      "question": "Deneysel bir yönteme umutla gelen kişilerin en sık yanlış anladığı nokta nedir, onlara ne söylersiniz?",
+      "original": "En sık yanlış anlaşılan nokta, “yapılıyor” ile “işe yaradığı kanıtlandı” arasındaki farktır. Özellikle deneysel tedavilerde erken çalışmalar, küçük hasta serileri veya laboratuvar bulguları pazarlama dilinde olduğundan daha güçlü gösterilebilir. Hastaya, biyolojik olarak mantıklı olmasının veya bazı kişilerde olumlu sonuç bildirilmesinin, gebelik, canlı doğum ya da uzun dönem sağlık sonucu gibi gerçekten önemli sonlanımları iyileştirdiği anlamına gelmediğini anlatırım.",
+      "editedForArticle": "Bu konuda en sık yanlış anlaşılan nokta, \"yapılıyor\" ile \"işe yaradığı kanıtlandı\" arasındaki farktır. Özellikle deneysel tedavilerde erken çalışmalar, küçük hasta serileri veya laboratuvar bulguları pazarlama dilinde olduğundan daha güçlü gösterilebilir. Hastaya, biyolojik olarak mantıklı olmasının veya bazı kişilerde olumlu sonuç bildirilmesinin, uzun dönem sağlık sonucu gibi gerçekten önemli sonlanımları iyileştirdiği anlamına gelmediğini anlatırım.",
+      "edits": "Başa bağlayıcı \"Bu konuda\" eklendi; \"gebelik, canlı doğum ya da\" Estranova bağlamına (menopoz/40+ yayını) uymadığı için çıkarıldı. Başka anlam değişikliği yok. Geri almak istenirse özgün cümle aynen kullanılabilir.",
+      "answeredAt": "2026-10-01",
+      "source": "Dr. Aksoy doğrudan kullanıcı mesajı (bu oturum; numaralı yanıt 1)"
+    },
+    {
+      "section": "off-label",
+      "question": "Bir hasta \"yurt dışında yapılıyor\" diye bir yöntem getirdiğinde, konuşmaya başlarken ilk neyi netleştirirsiniz?",
+      "original": "Bir hasta “yurt dışında yapılıyor” diye bir yöntem getirdiğinde önce o yöntemin gerçekten hangi amaçla uygulandığını ve hangi hasta grubunda çalışıldığını netleştiririm. Bir işlemin başka bir ülkede yapılıyor olması, onun standart tedavi olduğu anlamına gelmez; ruhsat durumu, kılavuzlardaki yeri ve klinik kanıt düzeyi ayrı ayrı değerlendirilmelidir.",
+      "editedForArticle": "Bir hasta \"yurt dışında yapılıyor\" diye bir yöntem getirdiğinde önce o yöntemin gerçekten hangi amaçla uygulandığını ve hangi hasta grubunda çalışıldığını netleştiririm. Bir işlemin başka bir ülkede yapılıyor olması, onun standart tedavi olduğu anlamına gelmez; ruhsat durumu, kılavuzlardaki yeri ve klinik kanıt düzeyi ayrı ayrı değerlendirilmelidir.",
+      "edits": "Yanıt aynen alındı. Ardından editoryal okur cümleleri geldi (\"Siz de aynı soruları sorabilirsiniz…\"; Türkiye koşulları); bunlar hekim yanıtı değildir.",
+      "answeredAt": "2026-10-01",
+      "source": "Dr. Aksoy doğrudan kullanıcı mesajı (bu oturum; numarasız ilk yanıt)"
+    },
+    {
+      "section": "uc-soru",
+      "question": "\"Kanıt henüz yok ama deneyebiliriz\" demek için hangi koşulların oluşmasını beklersiniz?",
+      "original": "“Kanıt henüz yok ama deneyebiliriz” diyebilmem için standart ve daha güçlü kanıtlı seçeneklerin değerlendirilmiş olması, yöntemin makul bir biyolojik temeli ve en azından temel güvenlik verisi bulunması, hastaya belirsizliklerin açıkça anlatılması ve uygulanmasının daha etkili bir tedaviyi geciktirmemesi gerekir. Ayrıca maliyet, olası zarar ve hastanın beklentisi de konuşulmalıdır. Deneysel bir yöntemi ancak hasta bunun kanıtlanmış bir tedavi değil, belirsizliği olan bir seçenek olduğunu gerçekten anlıyorsa tartışmayı doğru bulurum.",
+      "editedForArticle": "\"Kanıt henüz yok ama deneyebiliriz\" diyebilmem için standart ve daha güçlü kanıtlı seçeneklerin değerlendirilmiş olması, yöntemin makul bir biyolojik temeli ve en azından temel güvenlik verisi bulunması, hastaya belirsizliklerin açıkça anlatılması ve uygulamanın daha etkili bir tedaviyi geciktirmemesi gerekir. Ayrıca maliyet, olası zarar ve hastanın beklentisi de konuşulmalıdır. Deneysel bir yöntemi ancak hasta bunun kanıtlanmış bir tedavi değil, belirsizliği olan bir seçenek olduğunu gerçekten anlıyorsa tartışmayı doğru bulurum.",
+      "edits": "Yalnızca \"uygulanmasının\" → \"uygulamanın\" (akıcılık). Anlam değişmedi.",
+      "answeredAt": "2026-10-01",
+      "source": "Dr. Aksoy doğrudan kullanıcı mesajı (bu oturum; numaralı yanıt 2)"
+    }
+  ],
+  "evidenceLabels": {
+    "note": "Evidence etiketleri 1 Ekim 2026 Dr. Aksoy talimatıyla eklendi. Rehber tek bir tedaviyi derecelendirmez; derece yalnızca iki bulguya verildi ve dayanakları kayıtlı.",
+    "items": [
+      {
+        "location": "pazarlama-bilim, plasebo paragrafı",
+        "claim": "Beklenti ve bağlam, kişinin bildirdiği rahatlamayı etkileyebilir",
+        "level": 3,
+        "label": "orta kanıt",
+        "basis": "Hróbjartsson & Gøtzsche, Cochrane 2010 (PMID 20091554): 234 randomize plasebo çalışması; genel olarak klinik açıdan önemli etki yok, hasta bildirimli sonuçlarda (ağrı, bulantı) sınırlı ve değişken etki; yalnızca 16 çalışmada (%8) yanlılık riski düşük. Moerman & Jonas 2002 (PMID 11900500) kavramsal perspektif olarak eşlik eder, derecelendirmeye dayanak değildir."
+      },
+      {
+        "location": "off-label, lazer paragrafı",
+        "claim": "Fraksiyonel CO2 lazerin GSM’de kısa vadeli cinsel işlev yararı; sham kontrollü çalışmalarda küçülür, kesinlik sınırlı",
+        "level": 2,
+        "label": "sınırlı kanıt",
+        "basis": "Zulfikaroglu & Zulfikaroglu, Int Urogynecol J 2026 (PMID 42593504, DOI 10.1007/s00192-026-06821-2): 36 klinik çalışma, 11 RCT, 9 CO2-only RCT meta-analizi; yazarlar GRADE ile kesinliği sınırlı değerlendirdi. Yalnızca PubMed özeti okundu; tam metin okunmadı. Kapsam GSM ve CO2 lazerdir; RF ve estetik amaç kapsam dışıdır."
+      }
+    ],
+    "editorNote": "Bilimsel Editör Notu Kanıt Düzeyi aralığı 2–3 (sınırlı–orta) bu iki dereceden türetildi."
+  }
+}

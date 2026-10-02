@@ -362,8 +362,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi.',
+    approvedAt: '2026-10-01',
+    note: 'Önceki prelaunch envanter onayı: 2026-05-04. 2026-10-01 revizyonu: Codex kaynak/SSS düzeltmeleri + Claude Code kaynak denetimi, humanize, Evidence etiketleri ve Dr. Aksoy hekim gövde yanıtları (üç soru); SSS 3/3 kayıtlı gerçek yanıtlarla birebir. Dr. Alper Mumcu bağımsız tıbbi inceleme onayı: 2026-10-01, bu revizyonun commit öncesi çalışma ağacı sürümü; Evidence etiketleri, Bilimsel Editör Notu ve hekim gövde pasajlarını içeren eklemeler için ayrıca teyit: 2026-10-02 (KC beyanı; yazılı not yok). Klinik katkı kaydı: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-01_deneysel-tedaviyi-okuma-kilavuzu.json.',
   },
   {
     pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',

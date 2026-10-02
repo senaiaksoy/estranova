@@ -774,7 +774,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
     title: 'Deneysel Tedaviyi Okuma Kılavuzu',
-    description: 'Bir tedaviye "deneysel" demek ne anlama gelir? Kanıt seviyesi nasıl okunur? Pazarlamayı bilimden hangi sinyaller ayırır? Off-label kullanım ile deneysel uygulama farkı; doktora sorabileceğiniz üç somut soru — sınır bilen sakin editöryal bir rehber.',
+    description: 'Deneysel tedavi ile endikasyon dışı kullanım arasındaki farkı, araştırma kanıtını nasıl okuyacağınızı ve hekime sorabileceğiniz üç soruyu inceleyin.',
     publishedDate: '3 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
