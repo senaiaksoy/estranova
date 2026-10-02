@@ -27,6 +27,7 @@ const PAGES_DIR = path.join(ROOT, 'src/pages');
 const DIST_DIR = path.join(ROOT, 'dist');
 const ARSIV_DIR = path.join(ROOT, 'icerik/yayinlanmis-makaleler');
 const APPROVALS_FILE = path.join(ROOT, 'src/data/article-approvals.ts');
+const MANIFEST_FILE = path.join(ROOT, 'src/data/static-articles.ts');
 const VAULT_DIR =
   process.env.ESTRANOVA_VAULT_ARTICLES_DIR ||
   'D:/A-klasör/obsidian-vaults/draksoyivf-knowledge/wiki/sites/estranova/articles';
@@ -66,7 +67,9 @@ const EVIDENCE_LABELS = {
 
 function parseTrDate(str) {
   if (!str) return null;
-  const m = str.toLowerCase().match(/(\d+)\s+(\S+)\s+(\d{4})/);
+  const iso = str.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (iso) return iso[0];
+  const m = str.toLocaleLowerCase('tr').match(/(\d+)\s+(\S+)\s+(\d{4})/);
   if (!m) return null;
   const day = m[1].padStart(2, '0');
   const month = TR_MONTHS[m[2]];
@@ -89,7 +92,27 @@ async function findAstroArticles(dir, results = []) {
 
 async function loadApprovedPathnames() {
   const src = await fs.readFile(APPROVALS_FILE, 'utf-8');
-  return new Set([...src.matchAll(/pathname:\s*['"`]([^'"`]+)['"`]/g)].map((m) => m[1]));
+  return new Set([...src.matchAll(/pathname:\s*['"`]([^'"`]+)['"`]/g)].map((m) => normalizePathname(m[1])));
+}
+
+// Kaynakta okunamayan yazar/tarih için yedek: static-articles manifesti (path → writerSlug, publishedDate).
+let manifestCache = null;
+async function loadManifest() {
+  if (manifestCache) return manifestCache;
+  const src = await fs.readFile(MANIFEST_FILE, 'utf-8');
+  manifestCache = new Map();
+  for (const chunk of src.split(/\n\s*path:\s*/).slice(1)) {
+    const p = chunk.match(/^['"`]([^'"`]+)['"`]/);
+    if (!p) continue;
+    const field = (name) => (chunk.match(new RegExp(`${name}:\\s*['"\`]([^'"\`]+)['"\`]`)) || [])[1] || null;
+    manifestCache.set(normalizePathname(p[1]), { writerSlug: field('writerSlug'), publishedDate: field('publishedDate') });
+  }
+  return manifestCache;
+}
+
+// '/a/b' ile '/a/b/' aynı rota sayılır (site trailing-slash kanonik).
+function normalizePathname(p) {
+  return p.replace(/\/+$/, '') + '/';
 }
 
 function extractFrontmatterField(fm, regex) {
@@ -112,8 +135,8 @@ function resolveStringOrVar(fm, propName) {
   if (direct) return direct[1];
   // Try variable reference: `propName: someVar`, then resolve `const someVar = '...'`
   const ref = fm.match(new RegExp(`${propName}:\\s*([a-zA-Z_$][\\w$]*)`));
-  if (!ref) return null;
-  const varName = ref[1];
+  // Shorthand property (`{ pathname, ... }`) → aynı adlı `const pathname = '...'` tanımı
+  const varName = ref ? ref[1] : propName;
   const varDef = fm.match(new RegExp(`const\\s+${varName}\\s*=\\s*['"\`]([^'"\`]+)['"\`]`));
   return varDef ? varDef[1] : null;
 }
@@ -326,7 +349,14 @@ async function exportArticle(astroPath) {
     }
   }
 
-  const isoDate = parseTrDate(fm.publishedDate) || new Date().toISOString().slice(0, 10);
+  const manifestEntry = (await loadManifest()).get(normalizePathname(fm.pathname));
+  if (manifestEntry) {
+    fm.writerSlug = fm.writerSlug || manifestEntry.writerSlug;
+    if (!parseTrDate(fm.publishedDate)) fm.publishedDate = manifestEntry.publishedDate || fm.publishedDate;
+  }
+  const parsedDate = parseTrDate(fm.publishedDate);
+  if (!parsedDate) console.warn(`[tarih] ${fm.pathname}: yayın tarihi okunamadı, bugünün tarihi kullanılıyor`);
+  const isoDate = parsedDate || new Date().toISOString().slice(0, 10);
   const yearMonth = isoDate.slice(0, 7);
   const slug = path.basename(fm.pathname);
   const fileName = `${isoDate}__${slug}.md`;
@@ -450,7 +480,7 @@ async function main() {
         console.log(`SKIP  ${rel}  (${result.reason})`);
         continue;
       }
-      if (!approvedPathnames.has(result.fm.pathname)) {
+      if (!approvedPathnames.has(normalizePathname(result.fm.pathname))) {
         skipped.push({ rel, reason: 'approval kaydi yok' });
         console.log(`SKIP  ${rel}  (approval kaydi yok)`);
         continue;

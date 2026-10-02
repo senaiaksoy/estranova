@@ -73,3 +73,7 @@ Berna Aksoy'a atanmış yayınlanmış makaleler (writerSlug: 'berna-aksoy' ile 
 **Toplam: 11 makale** (HRT primary yazar, çok aktif). Detaylı log retrofit yapılmadı; cooldown ve evrim review framework başlangıcından itibaren çalışır.
 
 **Not (2026-07-15):** `hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu.astro` da (04-29 retrofit taramasından sonra yayınlandığı için yukarıdaki listede yer almıyordu) aynı KC talimatıyla Estranova Editörleri imzasına devredildi (bkz. `estranova-editorial/article-log.md` #1). Berna'nın aktif makale sayısı fiilen 9'a düştü.
+
+## 2 Ekim 2026 — Mayıs ve Haziran 2026 Sıcacık Köşe: onay kaydı tamamlandı
+
+`/editorun-kosesi/mayis-2026/` (1 Mayıs 2026) ve `/editorun-kosesi/haziran-2026/` (1 Haziran 2026) canlıda ve sayı sayfalarına bağlıydı, ancak `article-approvals.ts` ve `static-articles.ts` kayıtları eksikti. KC 2 Ekim 2026'da iki yazının da doğrudan editör onayıyla yayımlandığını teyit etti; onay kaydı ve manifest girdisi geriye dönük eklendi. Metinler değişmedi. Temmuz köşesi en yeni olduğu için anasayfa "Son yazısı" kartı etkilenmez.

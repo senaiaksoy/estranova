@@ -39,3 +39,7 @@
 4. `manifesto_templates.templates` doldurulur.
 5. `writer_version` v0.1 → v0.2.
 6. Bu log'un ilk satırı doldurulur.
+
+## 2 Ekim 2026 — Menopozda Cilt Değişimleri: onay kaydı düzeltmesi
+
+`/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/` 18 Mayıs 2026'da (commit 8043985d) Estranova Editörleri imzasından Prof. Dr. Gonca Gökdemir imzasına geçirildi; o tarihte yazar onayı `article-approvals.ts` veya bu log'a işlenmemişti. KC 2 Ekim 2026'da Gonca Gökdemir'in metni onayladığını teyit etti; onay kaydı `gonca-gokdemir` olarak güncellendi. Metin değişmedi. Kalıp kaydı geriye dönük çıkarılmadı; havuzlar hâlâ v0.1 lazy aktivasyon durumunda.

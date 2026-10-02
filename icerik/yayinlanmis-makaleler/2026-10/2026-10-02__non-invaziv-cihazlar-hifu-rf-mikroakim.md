@@ -2,6 +2,7 @@
 title: "HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?"
 description: "HIFU, radyofrekans ve mikroakımın farkları, yüz ve boyunda kanıt sınırları, menopoz sonrası beklentiler ve karar öncesinde konuşulması gereken riskler."
 writer: cagri-sade
+publishedDate: "2 Ekim 2026"
 publishedDateIso: 2026-10-02
 url: /zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/
 section: "Zamansız Yaşam"

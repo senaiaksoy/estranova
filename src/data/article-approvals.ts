@@ -60,6 +60,18 @@ export const approvedArticles: ArticleApproval[] = [
     note: 'Başak Pelister author approval received (KC: onay ok). Package moved from onay-bekleyen to onaylanan/2026-07-16_olcu-panigi-beden-algisi-menopoz. Eşik Sayı 03 Kapak 4 published with live route, FAQ schema, static manifest, dossier href and byline/card imagery.',
   },
   {
+    pathname: '/editorun-kosesi/mayis-2026/',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-10-02',
+    note: 'KC editör doğrudan onayı (Berna Aksoy istisnası): Eşik Sayı 01 · Geceler için 1 Mayıs 2026’da yayımlanan Mayıs 2026 Sıcacık Köşe yazısı. Yayın sırasında onay kaydı eklenmemişti; KC 2 Ekim 2026’da yazının onaylı yayımlandığını teyit etti ve kayıt geriye dönük işlendi.',
+  },
+  {
+    pathname: '/editorun-kosesi/haziran-2026/',
+    writerSlug: 'berna-aksoy',
+    approvedAt: '2026-10-02',
+    note: 'KC editör doğrudan onayı (Berna Aksoy istisnası): Eşik Sayı 02 · Güç Eşiği için 1 Haziran 2026’da yayımlanan Haziran 2026 Sıcacık Köşe yazısı. Yayın sırasında onay kaydı eklenmemişti; KC 2 Ekim 2026’da yazının onaylı yayımlandığını teyit etti ve kayıt geriye dönük işlendi.',
+  },
+  {
     pathname: '/editorun-kosesi/temmuz-2026/',
     writerSlug: 'berna-aksoy',
     approvedAt: '2026-07-16',
@@ -169,9 +181,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
-    writerSlug: 'estranova-editorial',
-    approvedAt: '2026-05-06',
-    note: 'KC editor direct approval: Cilt & Gorunum bolumundeki long-read boslugunu kapatmak icin Yasit Editor tonu ile hazirlandi; kozmetik vaat yerine bariyer, kolajen, gunes korumasi ve dermatolojik degerlendirme cercevesiyle canli envantere alindi.',
+    writerSlug: 'gonca-gokdemir',
+    approvedAt: '2026-10-02',
+    note: 'KC editor direct approval: Cilt & Gorunum bolumundeki long-read boslugunu kapatmak icin Yasit Editor tonu ile hazirlandi; kozmetik vaat yerine bariyer, kolajen, gunes korumasi ve dermatolojik degerlendirme cercevesiyle canli envantere alindi. 18 Mayıs 2026’da byline Prof. Dr. Gonca Gökdemir’e geçirildi; yazar onayı o tarihte kayda geçirilmemişti. KC 2 Ekim 2026’da Gonca Gökdemir’in metni onayladığını teyit etti ve kayıt yazar adına güncellendi.',
   },
   {
     pathname: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/',
