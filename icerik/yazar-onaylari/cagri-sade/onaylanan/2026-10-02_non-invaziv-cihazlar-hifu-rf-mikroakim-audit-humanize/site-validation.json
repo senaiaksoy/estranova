@@ -1,0 +1,15 @@
+{
+  "oneH1": true,
+  "uniqueIds": true,
+  "allFragmentLinksResolve": true,
+  "faqSchemaVisibleParity": 4,
+  "modifiedDate": "2026-10-02",
+  "baselineUnchanged": true,
+  "lint": "passed",
+  "compliance": "passed (one unrelated warning)",
+  "strictArticleIntegrity": "passed",
+  "strictTemplates": "passed",
+  "build": "passed (141 pages)",
+  "seoAudit": "passed (161 pages)",
+  "deployment": "not performed"
+}

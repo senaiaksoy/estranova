@@ -1,0 +1,34 @@
+{
+  "writer": {
+    "slug": "cagri-sade",
+    "name": "Op. Dr. Çağrı Sade"
+  },
+  "article": {
+    "slug": "non-invaziv-cihazlar-hifu-rf-mikroakim",
+    "title": "HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?",
+    "previewUrl": "makale-onizleme.html",
+    "description": "HIFU, radyofrekans ve mikroakımın farkları, yüz ve boyunda kanıt sınırları, menopoz sonrası beklentiler ve karar öncesinde konuşulması gereken riskler.",
+    "existingLiveUrl": "https://estranova.com/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/",
+    "articleType": "clinical-guide",
+    "plannedPublishDate": "2026-10-02",
+    "datePolicy": "Çağrı Sade imzalı yeni yayın: datePublished yayın günü (onay başka günde gelirse o gün); önceki 3 Mayıs 2026 Senai Aksoy sürümü görünür yeniden yazım notunda anılır."
+  },
+  "package": {
+    "status": "approved",
+    "createdAt": "2026-10-02T18:21:47.935073+03:00",
+    "revisionId": "audit-humanize-3",
+    "authorApprovalReceived": true,
+    "medicalApprovalReceived": true,
+    "medicalReviewStatus": "approved",
+    "approvalGate": "revision-approved-local-source",
+    "baselineCommit": "17ea6324",
+    "baselinePackage": "icerik/yazar-onaylari/cagri-sade/onaylanan/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim",
+    "baselineApprovalNote": "Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam” (2 Ekim 2026). Onay, dört önerilen ses cümlesini, dört SSS cevabını ve Bilimsel Editör Notu taslağını kapsar.",
+    "revisionNote": "Yazar kimliği, kaynak kapsamı, güvenlik ayrımları ve dil/akış düzeltmeleri. Önceki onay yeni metnin onayı sayılmadı. Son editoryal geçiş: mekanik ritim, tekrarlar, resmî güvenlik dili, duygu atfı ve kapanış sadeleştirildi.",
+    "approvedAt": "2026-10-02",
+    "approvalStatement": "revizyon onay tamam",
+    "approvalSource": "Kullanıcının bu sohbetteki doğrudan beyanı",
+    "approvalRecordedAt": "2026-10-02T19:06:29.784469+03:00",
+    "integratedSourceSha256": "cf1514d7bb6ecc19fd7f2e72be46365afa1d6164d6db98f1b76ec4be5a91850b"
+  }
+}

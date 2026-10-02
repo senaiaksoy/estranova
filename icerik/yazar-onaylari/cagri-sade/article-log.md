@@ -95,3 +95,8 @@ Kullanıcı “çağrı onayı tamam. tıbbi onay tamam” dedi. Onay dört öne
 | # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 05 | 2026-10-02 | [HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?](/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/) | non-invaziv-mekanizma + kanit-siniri | v0.2 | — | "size uygun mu" (ayrım ilk H2'de) | Anekdot yok; "biz" sahneleri: ayna jesti, "tek seans" videosu, banyo rafındaki cihaz | Aynada çene hattını iki parmakla yukarı çekme + telefondaki video | "Sonuç Olarak"; açılıştaki ayna jestine geri çağırma, "Acele etmeyin." | — | Humor H1 (açılışta "Reklam videosunda her şey otuz saniyede bitiyor."); ben-anchor 4; italik soru 3; Senai imzalı yazının yeniden yazımı |
+
+
+## 2 Ekim 2026 — HIFU, RF ve mikroakım audit/humanize revizyonu onaylandı
+
+Kullanıcı “revizyon onay tamam” diyerek audit-humanize-3 sürümünü onayladı. Kaynak kapsamı, implant/güvenlik ayrımları, paragraf akışı, tekrarlar ve kapanış düzeltildi; yazar sesi, dört mevcut editoryal SSS, altı kaynak ve görseller korundu. Kapanıştaki ayna geri çağırması kaldırıldı; duygu atfı ve mekanik simetri azaltıldı. Önceki onaylı paket korunarak revizyon `onaylanan/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim-audit-humanize/` altına alındı ve yerel rota kaynağına aktarıldı. Profil değiştirilmedi. Commit/push/deploy yapılmadı.

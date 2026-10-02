@@ -387,7 +387,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
     writerSlug: 'cagri-sade',
     approvedAt: '2026-10-02',
-    note: 'Çağrı Sade imzalı yeniden yazım: kullanıcı onayı “çağrı onayı tamam. tıbbi onay tamam” (2 Ekim 2026). Önceki sürüm 3 Mayıs 2026 Senai Aksoy imzasıyla yayımlanmıştı; görünür yeniden yazım notu eklendi.',
+    note: 'Çağrı Sade imzalı yeniden yazım: kullanıcı onayı “çağrı onayı tamam. tıbbi onay tamam” (2 Ekim 2026). Önceki sürüm 3 Mayıs 2026 Senai Aksoy imzasıyla yayımlanmıştı; görünür yeniden yazım notu eklendi. Aynı gün audit-humanize-3 revizyonu kullanıcı tarafından “revizyon onay tamam” beyanıyla onaylandı. Kayıt: icerik/yazar-onaylari/cagri-sade/onaylanan/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim-audit-humanize/onay-kaydi.md. Bu kayıt commit/push/deploy yetkisi değildir.',
   },
   {
     pathname: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/',

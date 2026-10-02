@@ -1,0 +1,18 @@
+{
+  "filePath": "icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim/karsilastirma-sonra.txt",
+  "locale": "tr",
+  "findings": [],
+  "coverage": {
+    "blocks": 131,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "none: plain text input"
+    ]
+  },
+  "limitations": [
+    "Advisory lexical/structural candidates, not authorship detection or clinical approval.",
+    "Semantic repetition and medication-section equivalence still need whole-text editorial reading.",
+    "Frontmatter summaries/FAQs and JSX props/expressions require separate visible-text inspection.",
+    "Block quotations are excluded from editorial suggestions; punctuation and passive voice are not banned."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "originalPath": "icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim/karsilastirma-once.txt",
+  "revisedPath": "icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim/karsilastirma-sonra.txt",
+  "locale": "tr",
+  "status": "no_tracked_changes",
+  "differences": {},
+  "frontmatterChanged": false,
+  "coverage": {
+    "before": {
+      "blocks": 132,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "none: plain text input"
+      ]
+    },
+    "after": {
+      "blocks": 131,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "none: plain text input"
+      ]
+    }
+  },
+  "limitations": [
+    "Counts are global: values swapped between outcomes or claims can escape detection.",
+    "Negation, certainty, population and causal meaning require the manual meaning record.",
+    "Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.",
+    "Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.",
+    "Number formatting is not silently converted between locales. No tracked changes is not clinical approval."
+  ]
+}
