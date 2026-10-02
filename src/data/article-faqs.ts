@@ -1282,19 +1282,24 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/': [
     {
-      question: 'Non-invaziv cihazlar cerrahi sonuçla aynı etkiyi verir mi?',
+      question: 'HIFU mu radyofrekans mı, hangisi daha iyi?',
       answer:
-        'Genellikle hayır. Bazı cihazlarda sınırlı ya da orta düzey iyileşme görülebilir ama beklentiyi cerrahi sonuç düzeyine taşımak çoğu zaman gerçekçi değildir.',
+        'Herkes için daha iyi olan bir yöntem yok. HIFU odaklanmış ses dalgalarıyla belirli derinliklerde, radyofrekans ise elektrik enerjisiyle dokuda ısı oluşturur. İkisini doğrudan karşılaştıran güçlü veri sınırlı olduğu için seçim; hedeflenen doku, cildinizin bugünkü durumu ve kullanılacak cihazın kendi verisi üzerinden yapılır.',
     },
     {
-      question: 'Bu cihazlarda en çok hangi yanılgı oluşuyor?',
+      question: 'HIFU ya da radyofrekans uygulaması acıtır mı?',
       answer:
-        'En sık yanılgı, teknoloji isminin kanıt gücü sanılmasıdır. Oysa HIFU, RF veya mikroakım demek tek başına güçlü veri demek değildir; uygulama alanı ve çalışma kalitesi çok değişir.',
+        'Ağrı kişiye ve cihaza göre değişir. Mikroodaklı ultrason çalışmalarında hastalar ağrıyı ortalama olarak orta düzeyde tarif etmiş. Uygulama öncesinde ağrı konusunda neler yapılabileceğini sormanız, uygulama sırasında da ağrınızı açıkça söylemeniz önemlidir.',
     },
     {
-      question: 'Postmenopozal ciltte neden beklenti daha dikkatli kurulmalı?',
+      question: 'Ev tipi mikroakım cihazları kalıcı yüz germe etkisi sağlar mı?',
       answer:
-        'Çünkü doku kalitesi, kollajen yanıtı ve iyileşme temposu değişebilir. Aynı cihaz daha genç ciltte farklı, postmenopozal zeminde daha sınırlı bir karşılık verebilir.',
+        'Kalıcı yüz germe etkisi gösterilmiş değil. Bu alandaki araştırmaların bir kısmı mikroakımı ışık, radyofrekans ve ultrasonla birlikte kullanan cihazları incelediği için, bildirilen değişim yalnızca mikroakıma bağlanamıyor. Ev cihazı kullanıyorsanız talimattaki süreyi ve sıklığı aşmamak, beklentiyi de profesyonel bir uygulama ya da cerrahiyle eşitlememek gerekir.',
+    },
+    {
+      question: 'Menopozdan sonra bu cihazlar daha az mı etkili olur?',
+      answer:
+        'Bunu bütün kişiler ve cihazlar için söyleyemeyiz. Menopoz cildin nemini, kalınlığını ve esnekliğini değiştirebilir; ancak estetik çalışmaların çok azı sonuçları menopoz durumuna göre ayrı inceliyor. Beklentiyi yaş etiketi yerine cildinizin bugünkü durumu ve hedeflediğiniz değişim belirler.',
     },
   ],
   '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/': [

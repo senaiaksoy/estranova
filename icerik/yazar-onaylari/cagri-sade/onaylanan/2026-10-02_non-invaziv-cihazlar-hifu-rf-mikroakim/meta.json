@@ -1,0 +1,32 @@
+{
+  "writer": {
+    "slug": "cagri-sade",
+    "name": "Op. Dr. Çağrı Sade"
+  },
+  "article": {
+    "slug": "non-invaziv-cihazlar-hifu-rf-mikroakim",
+    "title": "HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?",
+    "previewUrl": "makale-onizleme.html",
+    "description": "HIFU, radyofrekans ve mikroakımın farkları, yüz ve boyunda kanıt sınırları, menopoz sonrası beklentiler ve karar öncesinde konuşulması gereken riskler.",
+    "existingLiveUrl": "https://estranova.com/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/",
+    "articleType": "clinical-guide",
+    "plannedPublishDate": "2026-10-02",
+    "datePolicy": "Çağrı Sade imzalı yeni yayın: datePublished yayın günü (onay başka günde gelirse o gün); önceki 3 Mayıs 2026 Senai Aksoy sürümü görünür yeniden yazım notunda anılır."
+  },
+  "package": {
+    "createdAt": "2026-10-02T14:33:19.471Z",
+    "deadline": "2026-10-09T14:33:19.471Z",
+    "status": "approved",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "medicalReviewStatus": "approved",
+    "authorApprovalReceived": true,
+    "medicalApprovalReceived": true,
+    "revisedAt": "2026-10-02",
+    "revisionNote": "Claude audit düzeltmeleri: FDA kontrendikasyon ifadesi, Evidence yerleşimi, Sıcaklık Katmanı, SSS yenilendi, BEN taslağı, form yazar-içeriği alanları.",
+    "approvedAt": "2026-10-02",
+    "approvalNote": "Kullanıcı: “çağrı onayı tamam. tıbbi onay tamam” (2 Ekim 2026). Onay, dört önerilen ses cümlesini, dört SSS cevabını ve Bilimsel Editör Notu taslağını kapsar."
+  }
+}

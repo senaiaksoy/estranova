@@ -373,9 +373,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
-    writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi.',
+    writerSlug: 'cagri-sade',
+    approvedAt: '2026-10-02',
+    note: 'Çağrı Sade imzalı yeniden yazım: kullanıcı onayı “çağrı onayı tamam. tıbbi onay tamam” (2 Ekim 2026). Önceki sürüm 3 Mayıs 2026 Senai Aksoy imzasıyla yayımlanmıştı; görünür yeniden yazım notu eklendi.',
   },
   {
     pathname: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/',

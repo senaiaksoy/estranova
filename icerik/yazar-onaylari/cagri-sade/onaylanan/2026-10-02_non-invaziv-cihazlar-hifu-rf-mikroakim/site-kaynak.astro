@@ -16,7 +16,6 @@ import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 // Üst hero değişmez: mevcut rota eşlemesi korunur.
@@ -62,9 +61,28 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = "HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?";
 const seoTitle = "HIFU, RF ve Mikroakım: Ne Beklenmeli?";
 const articleDescription = "HIFU, radyofrekans ve mikroakımın farkları, yüz ve boyunda kanıt sınırları, menopoz sonrası beklentiler ve karar öncesinde konuşulması gereken riskler.";
-// Çağrı Sade imzalı yeniden yazımın yayın tarihi; önceki Senai Aksoy sürümü (3 Mayıs 2026) görünür notta anılır.
+// Yayın tarihi: Çağrı Sade imzalı yeniden yazımın tarihi. Onay başka bir günde gelirse yayın günü olarak güncellenir.
 const publishedDate = "2 Ekim 2026";
-const faqItems = articleFaqs['/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/'] ?? [];
+// Taslak sorular ve editoryal cevaplar: yazar onayı bekler. Onay sonrası article-faqs.ts'e taşınır.
+const faqItems = [
+  {
+    "question": "HIFU mu radyofrekans mı, hangisi daha iyi?",
+    "answer": "Herkes için daha iyi olan bir yöntem yok. HIFU odaklanmış ses dalgalarıyla belirli derinliklerde, radyofrekans ise elektrik enerjisiyle dokuda ısı oluşturur. İkisini doğrudan karşılaştıran güçlü veri sınırlı olduğu için seçim; hedeflenen doku, cildinizin bugünkü durumu ve kullanılacak cihazın kendi verisi üzerinden yapılır."
+  },
+  {
+    "question": "HIFU ya da radyofrekans uygulaması acıtır mı?",
+    "answer": "Ağrı kişiye ve cihaza göre değişir. Mikroodaklı ultrason çalışmalarında hastalar ağrıyı ortalama olarak orta düzeyde tarif etmiş. Uygulama öncesinde ağrı konusunda neler yapılabileceğini sormanız, uygulama sırasında da ağrınızı açıkça söylemeniz önemlidir."
+  },
+  {
+    "question": "Ev tipi mikroakım cihazları kalıcı yüz germe etkisi sağlar mı?",
+    "answer": "Kalıcı yüz germe etkisi gösterilmiş değil. Bu alandaki araştırmaların bir kısmı mikroakımı ışık, radyofrekans ve ultrasonla birlikte kullanan cihazları incelediği için, bildirilen değişim yalnızca mikroakıma bağlanamıyor. Ev cihazı kullanıyorsanız talimattaki süreyi ve sıklığı aşmamak, beklentiyi de profesyonel bir uygulama ya da cerrahiyle eşitlememek gerekir."
+  },
+  {
+    "question": "Menopozdan sonra bu cihazlar daha az mı etkili olur?",
+    "answer": "Bunu bütün kişiler ve cihazlar için söyleyemeyiz. Menopoz cildin nemini, kalınlığını ve esnekliğini değiştirebilir; ancak estetik çalışmaların çok azı sonuçları menopoz durumuna göre ayrı inceliyor. Beklentiyi yaş etiketi yerine cildinizin bugünkü durumu ve hedeflediğiniz değişim belirler."
+  }
+];
+// Yayın onayı sonrası SiteLayout jsonLd prop'una bağlanacak; taslakta inceleme şeması basılmaz.
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -80,13 +98,14 @@ const articleSchemas = buildArticleSchemas({
   siteUrl,
 });
 ---
-<SiteLayout title={seoTitle + ' - Estranova'} description={articleDescription} ogType="article" jsonLd={articleSchemas}>
+<SiteLayout title={seoTitle + ' - Estranova'} description={articleDescription} ogType="article">
 <SiteNavbar currentPath="/zamansiz-yasam/" />
 <main id="main-content" class="text-ink">
 <SubmenuHero eyebrow="Zamansız Yaşam · Ameliyatsız Uygulamalar" title={articleTitle} imageSrc={hero.src} imageAlt={hero.alt} compact />
 <SubmenuArticleBody>
 <ArticleTOC slot="toc" entries={tocEntries} />
-<ArticleAuthorBlock authorSlug="cagri-sade" articleType="clinical-guide" publishedDate={publishedDate} readingMinutes={8} imageSrc="/images/library/editorial/mindful-self-attention-profile.webp" imageAlt="Terasta sakin bir kişisel bakım anı" />
+<p role="status">Yazar ve tıbbi inceleme onayı bekleyen taslak — bu isimle yayınlanmamıştır.</p>
+<ArticleAuthorBlock authorSlug="cagri-sade" articleType="clinical-guide" publishedDate={publishedDate} readingMinutes={8} medicalReviewer="Tıbbi inceleme bekliyor" imageSrc="/images/library/editorial/mindful-self-attention-profile.webp" imageAlt="Terasta sakin bir kişisel bakım anı" />
 <p class="mt-4 text-sm leading-relaxed text-ink/70">Yeniden yazım notu: Bu yazının önceki sürümü 3 Mayıs 2026’da Doç. Dr. Senai Aksoy imzasıyla yayımlandı. 2 Ekim 2026’da Op. Dr. Çağrı Sade tarafından güncel kaynaklarla yeniden yazıldı; yüz ve boyun dışındaki uygulamalar bu sürümün kapsamında değildir.</p>
 <ArticleSummary title="Kısa Klinik Yanıt"><p>HIFU ve cilt yüzeyinden uygulanan radyofrekans, bazı kişilerde yüz ve boyun cildinin gevşekliğinde sınırlı iyileşme sağlayabilir; cerrahi yüz germeyle eşdeğer sonuç göstermezler. Mikroakımın, özellikle ev cihazlarının uzun süreli etkisi için kanıt çok daha sınırlıdır. Cihaz seçimi cildin bugünkü durumu, hedefiniz ve riskler üzerinden yapılmalı; menopoz tek başına sonucu belirleyen bir ölçüt sayılmamalıdır.</p></ArticleSummary>
 <ArticleProsePanel><h2 id="degisimi-anlamak">Önce Aynadaki Değişim</h2>
@@ -170,10 +189,10 @@ const articleSchemas = buildArticleSchemas({
 <p>Benim için asıl ölçü, cihaz seçimiyle hedefiniz arasındaki bağın açık olması. Cildinizde neyin değiştiğini, ne beklediğinizi ve hangi riski kabul edebileceğinizi bilmeden yalnızca cihaz adına bakarak karar vermek zor.</p>
 <p>Aynada çene hattını yukarı çektiğiniz o an, bir sorunun başlangıcı. Acele etmeyin. O sorunun cevabı, sizin neyi önemsediğinizde saklı.</p>
 </ArticleProsePanel>
-<ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+<ArticleFAQ id="sik-sorulanlar" items={faqItems} title="Sıkça Sorulanlar" intro="Editoryal cevap taslakları; yazar onayı bekleniyor." class="mt-10" />
 <ArticleProsePanel class="mt-10"><h2 id="kaynaklar">Kaynaklar</h2><p>Kaynaklar, incelenen cihaz ve uygulama alanıyla birlikte okunmalıdır.</p><ol><li id="kaynak-1"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11834976/" target="_blank" rel="noopener noreferrer">Amiri M ve ark. Görüntüleme eşliğinde mikroodaklı ultrason: etkinlik ve güvenlik üzerine sistematik derleme ve meta-analiz. Aesthetic Surgery Journal, 2025.</a></li><li id="kaynak-2"><a href="https://pubmed.ncbi.nlm.nih.gov/34923652/" target="_blank" rel="noopener noreferrer">Austin GK ve ark. Yüz ve boyun için radyofrekansın etkinliği ve güvenliği: sistematik derleme. Lasers in Surgery and Medicine, 2022.</a></li><li id="kaynak-3"><a href="https://pubmed.ncbi.nlm.nih.gov/38236440/" target="_blank" rel="noopener noreferrer">Choi S ve ark. Birden fazla enerji kullanan ev tipi el cihazının etkinliği ve güvenliği: randomize yarım yüz çalışması. Lasers in Medical Science, 2024.</a></li><li id="kaynak-4"><a href="https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/non-invasive-body-contouring-technologies" target="_blank" rel="noopener noreferrer">FDA: Non-invaziv vücut şekillendirme teknolojileri — enerji türlerine bağlı riskler ve kullanılmaması gereken durumlar.</a></li><li id="kaynak-5"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12374573/" target="_blank" rel="noopener noreferrer">Viscomi B ve ark. Menopozdaki cilt değişimleri ve hormon tedavisinin rolü: anlatı derlemesi. Journal of Cosmetic Dermatology, 2025.</a></li><li id="kaynak-6"><a href="https://www.fda.gov/medical-devices/safety-communications/potential-risks-certain-uses-radiofrequency-rf-microneedling-fda-safety-communication" target="_blank" rel="noopener noreferrer">FDA: İğneli radyofrekansın belirli kullanımlarındaki riskler — güvenlik bildirimi, 15 Ekim 2025.</a></li></ol><p>FDA’nın vücut şekillendirme belgesi enerji türlerine bağlı riskler ve kullanılmaması gereken durumlar için kullanılmıştır; yüzde etkinlik veya risk oranı kanıtı değildir. İğneli RF bildirimi yalnız o uygulamaya ilişkindir.</p></ArticleProsePanel>
 <RelatedReadings class="mt-14" paths={['/zamansiz-yasam/non-invaziv/','/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/','/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/']} />
-<ArticleEditorNote class="mt-10">
+<ArticleEditorNote title="Bilimsel Editör Notu — Dr. Aksoy onayı bekleyen taslak">
 <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
 <p>Yüz ve boyunda enerji tabanlı cihazlar için en tutarlı veri, belirli mikroodaklı ultrason sistemlerinden ve cilt yüzeyinden uygulanan radyofrekans çalışmalarından geliyor. İki grupta da ölçülebilir bir değişim bildiriliyor; ancak bu değişim cerrahi yüz germeyle karşılaştırılabilir değildir ve çalışmalar farklı ölçüm yöntemleri kullandığı için büyüklüğü kişiden kişiye öngörülemez. Tek başına mikroakım için uzun süreli veri çok sınırlıdır.</p>
 <p>Menopoz sonrası beklentiyi kurarken yaş ya da hormon durumu tek başına belirleyici değildir; estetik çalışmaların çok azı sonuçları menopoz durumuna göre ayırır. Hormon tedavisi yalnızca cilt için başlanmaz. Aktif implantı olanlarda bu cihazlar uygulanmamalı; işlem sonrasında artan ağrı, su toplaması, uyuşma veya yüz hareketlerinde asimetri gecikmeden değerlendirilmelidir.</p>

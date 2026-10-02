@@ -81,3 +81,17 @@ SSS 4 düzeltmesi (1 Ekim 2026, onaylandı — “çağrı onayı tamam. tıbbi 
 Dış değerlendirme rötuşu (1 Ekim 2026, onaylandı — “çağrı onayı tamam. tıbbi onay tamam”): "değerlendir-" 15 → 10 (Çağrı bölümleri korundu), iki H2 yeniden adlandırıldı, hazırlık listesi 6 → 4. Yeni tıbbi iddia yok.
 
 İkinci dış değerlendirme mikro rötuşu (1 Ekim 2026, onaylandı — “çağrı onayı tamam. tıbbi onay tamam”): kapanış sloganı sadeleşti, SSS 3 yanıtı somut yakınmalarla yeniden yazıldı. Yeni tıbbi iddia yok.
+
+## 2 Ekim 2026 — HIFU, radyofrekans ve mikroakım yeniden yazımı: onay bekliyor
+
+Kullanıcı mevcut Dr. Aksoy imzalı yazıyı Çağrı Sade yazısı olarak yeniden yazmamızı istedi. `clinical-guide` taslağı ve standart onay formu `onay-bekleyen/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim/` altında hazırlandı. Yedi ana bölüm, dört editoryal SSS taslağı, altı seçilmiş kaynak; önceki canlı sürüm pakette saklı. Kalıp kaydı: açılış cihaz araştırma refleksi; anekdot yok; hekim sesi üç öneri cümlesi; dengeleyici müdahale zorunluluğu olmaması; belirsizlik menopoz alt grubu ve tek başına mikroakım verisi; kapanış hedefe dönüş; imza aforizma yok; humor H0. Profil havuzlarının onaylı aktivasyonu tamamlanmış sayılmadı, profil değiştirilmedi. Yazar onayı ve bağımsız tıbbi inceleme bekliyor; canlı rota, manifest, ortak SSS, görseller ve yayın onay kayıtları değişmedi. Metin/kanıt kararları ve kontroller `editoryal-kayit.md` içinde.
+
+Audit düzeltmesi (2 Ekim 2026, onay bekliyor): FDA kontrendikasyon ifadesi netleşti, Evidence yerleşimi düzeltildi, soru-H2 4 → 1, her bölüme somut sahne, utanç/rahatlama anları, SSS yenilendi, BEN kanıt sentezine çevrildi. Tarih kararı (kullanıcı): yayın tarihi 2 Ekim 2026 + görünür yeniden yazım notu. Kalıp kaydı güncellendi: açılış ayna jesti + "tek seans" videosu; kapanış açılışa geri çağırma; humor H1 (açılışta tek dokunuş); ben-anchor 4 (formda onaya sunuldu). Ayrıntı `editoryal-kayit.md`.
+
+## 2 Ekim 2026 — HIFU, RF ve mikroakım yeniden yazımı onaylandı
+
+Kullanıcı “çağrı onayı tamam. tıbbi onay tamam” dedi. Onay dört önerilen ses cümlesini, dört SSS cevabını ve Bilimsel Editör Notunu kapsar. Paket `onaylanan/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim/` altına taşındı; canlı rota, ortak SSS, onay kaydı ve manifest güncellendi. Yayın tarihi 2 Ekim 2026; önceki Senai Aksoy sürümü (3 Mayıs 2026) görünür yeniden yazım notunda anılır. Görseller değişmedi.
+
+| # | Tarih | Konu | Kategori | Yazar v. | Aforizma | Manifesto | Anekdot | Açılış | Başlık tipi | Mevsim | Notlar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 05 | 2026-10-02 | [HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?](/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/) | non-invaziv-mekanizma + kanit-siniri | v0.2 | — | "size uygun mu" (ayrım ilk H2'de) | Anekdot yok; "biz" sahneleri: ayna jesti, "tek seans" videosu, banyo rafındaki cihaz | Aynada çene hattını iki parmakla yukarı çekme + telefondaki video | "Sonuç Olarak"; açılıştaki ayna jestine geri çağırma, "Acele etmeyin." | — | Humor H1 (açılışta "Reklam videosunda her şey otuz saniyede bitiyor."); ben-anchor 4; italik soru 3; Senai imzalı yazının yeniden yazımı |

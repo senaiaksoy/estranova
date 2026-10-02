@@ -783,13 +783,13 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
-    title: 'HIFU, Radyofrekans ve Mikroakım — Non-İnvaziv Cihazların Kanıt Sınırı',
-    description: 'HIFU, radyofrekans ve mikroakım cihazları "ameliyatsız yüz germe" vaadiyle yoğun pazarlanıyor; oysa kanıt cerrahi sonuçtan belirgin biçimde uzakta. HIFU yüz germede orta kanıt, RF cilt sıkılaştırma ve pelvik uygulamalar zayıf-orta kanıt, mikroakım ve LED ev cihazları sınırlı. Postmenopozal cilt zemini, beklenti yönetimi ve klinik karar için dürüst rehber.',
-    publishedDate: '3 Mayıs 2026',
-    writerSlug: 'senai-aksoy',
+    title: 'HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?',
+    description: 'HIFU, radyofrekans ve mikroakımın farkları, yüz ve boyunda kanıt sınırları, menopoz sonrası beklentiler ve karar öncesinde konuşulması gereken riskler.',
+    publishedDate: '2 Ekim 2026',
+    writerSlug: 'cagri-sade',
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam/',
-    keywords: ['HIFU', 'radyofrekans', 'mikroakım', 'non-invaziv estetik', 'cilt sıkılaştırma', 'yüz germe', 'pelvik radyofrekans', 'postmenopozal cilt', 'kanıt seviyesi', 'LED ışık tedavisi'],
+    keywords: ['HIFU', 'radyofrekans', 'mikroakım', 'cilt sıkılaştırma', 'yüz germe', 'menopoz sonrası cilt'],
   },
   {
     path: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/',
