@@ -1302,23 +1302,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Bunu bütün kişiler ve cihazlar için söyleyemeyiz. Menopoz cildin nemini, kalınlığını ve esnekliğini değiştirebilir; ancak estetik çalışmaların çok azı sonuçları menopoz durumuna göre ayrı inceliyor. Beklentiyi yaş etiketi yerine cildinizin bugünkü durumu ve hedeflediğiniz değişim belirler.',
     },
   ],
-  '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/': [
-    {
-      question: 'Sauna sıcak basması yaşayan biri için her zaman iyi gelir mi?',
-      answer:
-        'Hayır. Bazı kadınlar gevşeme hissi yaşarken, bazıları için ısı yükü yakınmayı artırabilir. Burada “iyi gelir” sorusunun yanıtı oldukça kişiseldir.',
-    },
-    {
-      question: 'Soğuk duş dayanıklılık antrenmanı gibi mi düşünülmeli?',
-      answer:
-        'Hayır, özellikle menopoz yakınmaları olan biri için bu yaklaşım fazla sert olabilir. Amaç performans göstermek değil, bedenin neye nasıl yanıt verdiğini sakin biçimde anlamaktır.',
-    },
-    {
-      question: 'Kimler daha dikkatli olmalı?',
-      answer:
-        'Kalp-damar hastalığı, tansiyon düzensizliği, bayılma eğilimi veya belirgin ısı hassasiyeti olan kadınlar daha dikkatli olmalıdır. Çünkü iyi olma aracı olarak düşünülen şey bazen bedene fazla yük binebilir.',
-    },
-  ],
   '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/': [
     {
       question: 'Partnerimi rahatsız etmemek için ne yapabilirim?',
