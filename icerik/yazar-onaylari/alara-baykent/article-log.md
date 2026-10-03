@@ -32,6 +32,7 @@
 
 ## Onay Kayıtları
 
+- 2026-10-03 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` üçüncü geçiş (üç küçük bilimsel rötuş: vagus → otonom sinir sistemi, iltihap paragrafı tek cümle, kırmızı bayrakta “özellikle postmenopozal” kaldırıldı) KC doğrudan onayıyla (“onaylandı”) onaylandı. Ayrı paket açılmadı; değişiklik 3 satır, kaynak git geçmişinde.
 - 2026-10-03 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` ikinci revizyonu ve yeni Bilimsel Editör Notu KC doğrudan onayıyla (“notu onaylıyorum”) onaylandı. Paket `onaylanan/2026-10-03_sauna-soguk-dus-menopoz-revizyon-2`.
 - 2026-10-03 — `/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/` revizyonu KC doğrudan editör onayıyla (“onaylandı”) onaylandı. Paket `onaylanan/2026-10-03_aksam-hareketi-uyku-melatonin-revizyon`.
 - 2026-10-02 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` audit revizyonu KC doğrudan editör onayıyla (“onaylandı”) onaylandı. Kapsam ve stil sinyalleri aşağıdaki revizyon notunda; paket `onaylanan/2026-10-02_sauna-soguk-dus-menopoz-audit-revizyon`.
