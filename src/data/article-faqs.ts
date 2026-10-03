@@ -31,33 +31,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Böbrek hastalığı öyküsü, kullanılan ilaçlar, hipertansiyon, diyabet ve diğer takviyeler konuşulmalıdır. Başlangıçta su tutulumuna bağlı hafif kilo artışı olabilir. Böbrek hastalığı olanlarda veya böbrek işlevini etkileyebilecek ilaç kullananlarda hekime danışmadan başlanmasını önermem.',
     },
   ],
-  '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/': [
-    {
-      question: 'Tartıya her sabah çıkmak beden algısını neden bu kadar zorlar?',
-      answer:
-        'Her sabah tartılmak bazı kişilerde kontrol hissi verebilir; ama bazı kişilerde günün duygusunu tek bir rakama teslim eder. Özellikle hormonal geçiş döneminde su tutma, uyku, stres ve bağırsak düzeni gibi günlük değişkenler rakamı oynatabilir. Eğer tartı gününüzü belirlemeye başladıysa, ölçme sıklığını hekiminizle veya güvendiğiniz bir uzmanla konuşmak iyi bir başlangıç olabilir.',
-    },
-    {
-      question: 'Kıyafetlerin birden dar gelmesi panik midir, yoksa bedenin değiştiğini mi söyler?',
-      answer:
-        'İkisi de olabilir. Kıyafetin dar gelmesi gerçek bir beden değişimini gösterebilir; ama o değişime verdiğiniz tepki bazen fiziksel durumdan daha büyük olur. Burada iyi soru şudur: Bu değişimi sağlık, hareket, uyku ve enerjiyle birlikte mi okuyorsunuz, yoksa yalnızca kendinizi suçlamak için mi kullanıyorsunuz?',
-    },
-    {
-      question: 'Annem ve kızım aynı ölçü dilini konuşurken ben neden boğuluyorum?',
-      answer:
-        'Çünkü kuşaklar beden hakkında farklı cümleler taşır. Bir kuşak dayanmayı, bir kuşak incelmeyi, bir kuşak görünmeyi daha çok duymuş olabilir. Sizin sıkışmanız anlaşılır; bu sıkışmayı fark etmek bile aile içinde başka bir dil kurmanın ilk adımı olabilir.',
-    },
-    {
-      question: 'Beden algısı bozulunca hekime ne götürülür: tartı mı, his mi?',
-      answer:
-        'İkisi de götürülebilir. Tartı, bel çevresi, kan değerleri ve tıbbi öykü hekimin işine yarar; ama sizin nasıl hissettiğiniz de resmin parçasıdır. "Kendimi eski bedenimde hissetmiyorum", "aynaya bakmak beni zorluyor", "bu kaygı günümü kaplıyor" gibi cümleler de konuşmaya değerdir.',
-    },
-    {
-      question: '"Tartı susunca" ne demek; tartıyı atmak mı, başka bir ölçü mü kurmak?',
-      answer:
-        'Herkes için tartıyı tamamen bırakmak doğru olmayabilir. Bazı tıbbi durumlarda düzenli izlem gerekir. Buradaki "susmak", rakamın tek otorite olmaması demek: enerji, güç, uyku, kıyafetle rahatlık, ruh hali ve kendinize konuşma biçiminiz de ölçünün parçası olabilir.',
-    },
-  ],
   '/beden-yakinlik/menopoz-sonrasi-karin-germe/': [
     {
       question: 'Menopoz sonrası karın bölgesindeki değişim yalnızca kilo almakla mı ilgilidir?',
@@ -279,55 +252,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       question: 'Karar verirken kendime hangi soruyu sormalıyım?',
       answer:
         'Tek bir soru: "Bu kararı kim soruyor — ben mi, yoksa duyduğum cümleler mi?" Cevap "ben" ise, hekiminizle yapılacak görüşmenin zemini sağlam. Cevap belirsizse, kararı bir süre daha taşımak ve yüzünüzle daha uzun bir konuşma yapmak çoğu zaman daha doğru oluyor.',
-    },
-  ],
-  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/': [
-    {
-      question: 'HRT\'nin etkisi ne kadar sürede başlar?',
-      answer:
-        'Bireysel deneyim büyük ölçüde değişir. Bazı kadınlarda ilk iki–dört hafta içinde hafif değişimler görülebilir; ancak gerçek dengelenmenin oturması genellikle iki–üç ay sürer. İlk hafta hiçbir şey hissetmemek de tamamen normal; sabırla beklemek ve hekimle düzenli iletişim genellikle daha iyi bir yol haritası verir.',
-    },
-    {
-      question: 'İlk aylarda yan etki yaşamak yaygın mı?',
-      answer:
-        'Evet, hafif yan etkiler ilk iki–üç ayda görülebilir: hafif baş ağrısı, hassasiyet, hafif şişkinlik gibi. Bunların büyük kısmı vücut alıştıkça geriler. Şiddetli veya beklenmedik bir belirti — örneğin yoğun baş ağrısı, beklenmedik kanama, göğüste belirgin hassasiyet — yaşanırsa hekime başvurmak gerekir.',
-    },
-    {
-      question: 'HRT kullanırken günlük yaşam alışkanlıkları neden hâlâ önemli?',
-      answer:
-        'Hormon tedavisi tek bir müdahaledir; ancak hareket, beslenme, uyku ve stres yönetimi gibi yaşam alışkanlıkları da menopoz dönemindeki bedensel ve zihinsel iyi oluş için kritik kalır. HRT bir köprü kurar; günlük alışkanlıklar bu köprünün dayandığı zemini oluşturur. İkisi birbirinin yerine değil, tamamlayıcısıdır.',
-    },
-    {
-      question: 'Hekimle ne sıklıkta görüşmek anlamlı?',
-      answer:
-        'İlk yıl genellikle 3 aylık aralıklarla, sonrasında klinik duruma göre 6 ay–yıllık aralıklarla. Yıllık mamografi, kan tetkikleri ve kemik yoğunluğu takibi (klinik karara göre) standart izlem çerçevesinin parçasıdır. Beklenmedik bir belirti olduğunda planlı zamandan önce başvurmak her zaman güvenli tercihtir.',
-    },
-    {
-      question: 'Aile içinde "doğru karar mı?" kuşkusu olduğunda nasıl konuşulur?',
-      answer:
-        'Eşin, kızın veya kardeşin sessiz bir endişesi normaldir; çoğu zaman bilgisizlikten değil, sevgiden gelir. Erken aşamada paylaşılabilecek üç şey var: kararın hekimle birlikte alındığı, takvimin nasıl kurulduğu (üç ay sonra muhasebe), ve hangi belirtilerin "hemen ara" sinyali olduğu. Süreç zaman ilerledikçe çoğu zaman onların ölçümleri — "daha az yorgunsun", "daha az gergin görünüyorsun" gibi — yazılı bir rapordan daha güvenilir bir geri bildirim kaynağı olur.',
-    },
-  ],
-  '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/': [
-    {
-      question: 'Dokuz yıl sonra HRT başlamak otomatik olarak geç kalınmış bir karar mı sayılır?',
-      answer:
-        'Hayır. Bu başlıkta tek başına takvime bakmak çoğu zaman yeterli değildir; belirtilerin yükü, menopoza giriş yaşı, kişisel riskler ve hekimle kurulan izlem planı birlikte değerlendirilir. Aynı soru iki farklı kadın için iki farklı yanıta dönüşebilir.',
-    },
-    {
-      question: 'Ailede osteoporoz öyküsü HRT kararını tek başına belirler mi?',
-      answer:
-        'Hayır. Aile öyküsü önemli bir veri sunar ama kararın tamamı onun üstüne kurulmaz. Kemik sağlığı, mevcut tarama sonuçları, başka risk faktörleri ve genel sağlık zemini birlikte okunur.',
-    },
-    {
-      question: 'Uzun yıllardır tanıdığınız bir hekimle karar vermek daha mı güvenlidir?',
-      answer:
-        'Tanışıklık güven duygusunu güçlendirebilir; ama klinik kararın yerini tutmaz. Asıl önemli olan, kişisel öykünün dikkatle dinlenmesi ve izlem planının açık biçimde kurulmasıdır.',
-    },
-    {
-      question: 'Bu tür kişisel bir HRT deneyimi herkese örnek alınacak bir yol haritası sunar mı?',
-      answer:
-        'Hayır. Kişisel anlatılar yalnızca bir deneyimin nasıl yaşandığını görünür kılar. Tedavi kararı ise her zaman kişisel belirtiler, risk-fayda dengesi ve hekim değerlendirmesiyle ayrı ayrı verilir.',
     },
   ],
   '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/': [
@@ -785,33 +709,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Evet, gece terlemesi ve sıcak basması uykunuzu belirgin biçimde bölüyorsa hormon tedavisi seçeneklerden biridir. Kararı yaşınıza, menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm. Sıcak basması olmadan yalnızca uykusuzluk varsa, HRT\'yi otomatik olarak uyku ilacı gibi önermem; önce uykusuzluğun nedenini değerlendiririm.',
     },
   ],
-  '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/': [
-    {
-      question: 'Akşam yürüyüşü melatonini (uyku hormonu) olumsuz etkiler mi?',
-      answer:
-        'Genellikle hayır. Loş ışıkta, çok geçe kalmadan yapılan hafif tempolu bir yürüyüş melatonin salgılanmasını engellemez; aksine günün stresini zihnimizden düşürerek uykuya geçişi destekler. Ancak parlak sokak lambaları altında veya elinizde telefon ekranıyla yürüyorsanız, mavi ışık maruziyeti nedeniyle uykunuz kaçabilir.',
-    },
-    {
-      question: 'Yatmadan hemen önce pilates veya yoga yapmak doğru mu?',
-      answer:
-        'Eğer seansınız yumuşak esneme hareketlerinden oluşuyorsa evet; ancak kasları yakan yoğun bir performans dersiyse hayır. Akşam rutini terlemekten ziyade eklemleri açmalı, omurgayı rahatlatmalı ve nefesi uzatmalıdır. \'Daha çok kalori yakayım\' hırsı, geceye yaklaşırken uykunun en büyük düşmanına dönüşebilir.',
-    },
-    {
-      question: 'Gece terlemesi yaşayan kadınlar akşam hareketinden uzak mı durmalı?',
-      answer:
-        'Uzak durmak şart değildir; fakat saati ve yoğunluğu çok daha dikkatli ayarlamak gerekir. Akşam geç vakitte yapılan sert antrenmanlar beden ısısını aşırı yükselterek gece terlemelerini tetikleyebilir. Hafif bir eklem mobilitesi başlangıç için en güvenli yoldur. Eğer terlemeleriniz artıyorsa, küçük bir semptom günlüğü tutarak tetikleyicileri takip edebilirsiniz.',
-    },
-    {
-      question: 'Sabah hareketi mi, akşam hareketi mi daha faydalı?',
-      answer:
-        'Bu sorunun tek bir doğrusu yoktur; belirleyici olan kendi bedeninizin verdiği yanıttır. Sabah saatlerindeki hareket sirkadiyen ritmi (iç saatimizi) güçlendirirken, akşam hareketi günün birikmiş gerilimini boşaltır. Eğer akşam hareketinden sonra uykunuzun kaçtığını fark ediyorsanız, antrenman yoğunluğunu azaltmayı veya rutini 2 saat öne çekmeyi deneyebilirsiniz.',
-    },
-    {
-      question: 'Hiç hareket edemeyecek kadar yorgun hissettiğimde ne yapmalıyım?',
-      answer:
-        'Böyle akşamlarda \'egzersiz\' kelimesini tamamen zihninizden çıkarın. Sadece iki dakika omuzlarınızı geriye doğru çevirmek, üç dakika bacaklarınızı duvara yaslamak veya loş ışıkta nefesinizi yavaşlatmak bile bedene dinlenme sinyali gönderir. Unutmayın, sürdürülebilirlik bazen en küçük adımları bile küçümsememekten başlar.',
-    },
-  ],
   '/zamansiz-yasam/beslenme-yaslanma/': [
     {
       question: '40 yaş sonrasında beslenmede en çok hangi başlıklar önem kazanır?',
@@ -942,23 +839,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       question: 'Düşük doz vajinal östrojenin farkı nedir; meme kanseri öyküsünde nasıl değerlendiriyorsunuz?',
       answer:
         'Sistemik hormon tedavisinin kana geçerek sıcak basması ve gece terlemesi gibi genel yakınmaları hedeflediğini anlatırım. Düşük doz vajinal östrojen ise esas olarak kuruluk, yanma ve ilişki sırasında ağrı için vajinaya uygulanır. Kana geçişi genellikle çok azdır, ama “Hiç emilmez” demem; sıcak basmasını da tedavi etmesini beklemem.\n\nMeme kanseri öyküsünde önce hormon içermeyen nemlendirici ve kayganlaştırıcıları denerim. Bunlar yetmez ve yakınma belirginse düşük doz vajinal östrojeni, olası yarar ve belirsizlikleri anlatarak değerlendirebiliriz. Tamoksifen kullananlarda bu görüşme yapılabilir; aromataz inhibitörü kullananlarda ise karara hastayı izleyen onkoloğu mutlaka dahil ederim.',
-    },
-  ],
-  '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/': [
-    {
-      question: 'Menopoz takibinde iyi hekim-hasta ilişkisini ne belirler?',
-      answer:
-        'En çok belirleyen şey, kadının sorularını küçültmeden dinleyen ve kararı birlikte kuran bir yaklaşım olmasıdır. Bilgi kadar üslup ve güven hissi de bu süreçte çok önemlidir.',
-    },
-    {
-      question: 'İkinci görüş istemek güvensizlik anlamına mı gelir?',
-      answer:
-        'Hayır. Özellikle büyük kararlar söz konusuysa ikinci görüş bazen zihni sakinleştirir ve seçenekleri daha net görmeyi sağlar. Bu, ilişkiyi bozmak değil, tabloyu olgunlaştırmak olabilir.',
-    },
-    {
-      question: 'Görüşmeye gitmeden önce hangi soruları hazırlamak iyi olur?',
-      answer:
-        'Belirtilerin ne kadar sürdüğü, en çok neyi zorladığı, hangi riski merak ettiğiniz ve hangi hedefe ulaşmak istediğiniz iyi bir başlangıçtır. Net soru, daha net konuşma demektir.',
     },
   ],
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/': [
@@ -1190,60 +1070,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       question: 'D vitamini düşüklüğü bütün yorgunluğu açıklar mı?',
       answer:
         'Tek başına her zaman açıklamaz. D vitamini düşüklüğü önemli olabilir; ama yorgunlukta demir, B12, tiroid, uyku, metabolik durum ve eşlik eden hastalıklar da dosyaya girer. Tek değere fazla anlam yüklememek gerekir.',
-    },
-  ],
-  '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/': [
-    {
-      question: 'Yaz öncesi harekete yürüyüşle başlamak yeterli mi?',
-      answer:
-        'Yürüyüş çok iyi bir başlangıç olabilir; özellikle ritim, nefes ve dayanıklılık için. Yine de yazı daha rahat taşımak istiyorsanız zamanla kas gücü, denge ve hareket açıklığı için güvenli ek çalışmalar da işe yarar.',
-    },
-    {
-      question: 'Her gün egzersiz yapmak gerekir mi?',
-      answer:
-        'Her gün aynı şeyi yapmak gerekmez. Bir gün yürüyüş, bir gün hafif güçlenme, bir gün esneme, bir gün yalnızca toparlanma olabilir. Devam eden ritim, kusursuz takvimden daha değerlidir.',
-    },
-    {
-      question: 'Sıcak havada hareket ederken nelere dikkat edilmeli?',
-      answer:
-        'Sabah erken saatler, gölge, yeterli sıvı ve daha yumuşak tempo iyi başlangıçtır. Nefesiniz sertleşiyor, başınız dönüyor, bulantı ya da çarpıntı geliyorsa “biraz daha dayanayım” demek iyi bir fikir değildir.',
-    },
-    {
-      question: 'Ağrı varken hareket tamamen bırakılmalı mı?',
-      answer:
-        'Her ağrı hareketi tamamen yasaklamaz. Ama keskinleşen, artan, ekleme binen, topallatan ya da birkaç gün içinde yatışmayan ağrı “duy beni” diyen bir işarettir. O noktada kişisel değerlendirme daha güvenlidir.',
-    },
-    {
-      question: 'Yaz hedefi kilo vermek olmak zorunda mı?',
-      answer:
-        'Hayır. Yaz hedefi tartı olmak zorunda değil. Daha rahat yürümek, daha iyi uyumak, daha dengeli hissetmek, kası ve kemiği korumak da gayet gerçek hedeflerdir.',
-    },
-  ],
-  '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/': [
-    {
-      question: 'Menopozda güç yalnızca egzersizle mi ilgilidir?',
-      answer:
-        'Hayır. Egzersiz kas ve kemik için çok değerli; ama günlük güç bazen uykuya sahip çıkmak, yük paylaşmak, sınır koymak ya da “bugün bunu taşımayayım” diyebilmekten de geçer.',
-    },
-    {
-      question: 'HRT kararı kişisel deneyime bakarak verilebilir mi?',
-      answer:
-        'Hayır. Başkasının deneyimi yalnızca soru sormayı kolaylaştırır; kararın kendisi olmaz. HRT kişisel yakınmalar, sağlık geçmişi, riskler, muayene ve takip planıyla konuşulmalıdır.',
-    },
-    {
-      question: 'Menopozda yorgunluk normal kabul edilip geçiştirilmeli mi?',
-      answer:
-        'Geçiştirilmemeli. Uyku bölünmesi, sıcak basması ve hormonal geçiş yorgunluğu artırabilir; ama tiroid, demir depoları, metabolizma, ilaçlar ve başka sağlık başlıkları da tabloya karışabilir.',
-    },
-    {
-      question: 'Günlük yükü hafifletmek sağlık açısından gerçekten anlamlı mı?',
-      answer:
-        'Evet, bazı kadınlar için çok anlamlıdır. Çanta, takvim, merdiven, uzun ayakta kalma ve uykusuzluk birikince beden bunu hisseder. Küçük düzenlemeler tedavi değildir; ama günün yükünü daha taşınabilir kılabilir.',
-    },
-    {
-      question: 'Deneyim yazıları tıbbi öneri yerine geçer mi?',
-      answer:
-        'Geçmez. Deneyim yazıları “yalnız değilim” duygusu verebilir ve iyi soru sordurabilir. Tanı, tedavi ve takip kararı ise kişisel tıbbi değerlendirme ister.',
     },
   ],
   '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': [
