@@ -19,9 +19,11 @@ Başak'ın imzasını kuran şey okurla sürekli diyalog kuran sorular. **Her b�
 > "Ama egomuz buna izin veriyor mu?"
 > "Sizce de öyle değil mi?" / "Hiç düşündünüz mü?"
 
-### 2. Üç nokta (…) çok sık
+**v2.2 (2026-10-03) — soru bölümü sesi:** Soru-cevap imzası öncelikle gövdedeki doğal sorularla taşınır. Makalenin sonunda ayrı bir soru bölümü kullanılırsa cevaplar da Başak'ın birinci tekil sesiyle yazılır (*"Ben ikisini de götürmeyi öğrendim."*); kişisiz danışman diline (*"Her sabah tartılmak bazı kişilerde…"*) geçilmez ve gövdede zaten anlatılan bir soru tekrar edilmez. Deneme yazısında böyle bir bölüm varsayılan değildir (`docs/ARTICLE-TEMPLATES.md`). Kaynak: ölçü paniği revizyonu, yazar onaylı.
 
-*"Bir tartışma, bir fikir ayrılığı..."* / *"İşte bütün mesele burada başlıyor..."* — bir makalede **3-4 yer** uygun. Diğer yazarlarda 2-3 önerilirken Başak'ta serbest. (Berna'dan farklı: Berna'da çok seyrek, Gamze'de imza ama farklı kullanım.)
+### 2. Üç nokta (…) — imza, ölçülü
+
+*"Bir tartışma, bir fikir ayrılığı..."* / *"İşte bütün mesele burada başlıyor..."* — bir makalede **2-4 yer** uygun (v2.2: 3-4'ten genişletildi; onaylı ölçü paniği revizyonunda 2 kaldı). Açılış imzası (*"Aslında her şey çok masum başlıyor..."*) korunur; cümle sonlarında art arda yığılmaz. (Berna'dan farklı: Berna'da çok seyrek, Gamze'de imza ama farklı kullanım.)
 
 ### 3. Soru başlıklı bölümler
 
