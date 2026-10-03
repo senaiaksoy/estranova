@@ -32,11 +32,14 @@
 
 ## Onay Kayıtları
 
+- 2026-10-03 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` ikinci revizyonu ve yeni Bilimsel Editör Notu KC doğrudan onayıyla (“notu onaylıyorum”) onaylandı. Paket `onaylanan/2026-10-03_sauna-soguk-dus-menopoz-revizyon-2`.
 - 2026-10-03 — `/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/` revizyonu KC doğrudan editör onayıyla (“onaylandı”) onaylandı. Paket `onaylanan/2026-10-03_aksam-hareketi-uyku-melatonin-revizyon`.
 - 2026-10-02 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` audit revizyonu KC doğrudan editör onayıyla (“onaylandı”) onaylandı. Kapsam ve stil sinyalleri aşağıdaki revizyon notunda; paket `onaylanan/2026-10-02_sauna-soguk-dus-menopoz-audit-revizyon`.
 - 2026-05-04 — `/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin` KC doğrudan editör onayıyla onaylandı. Alara Baykent istisna yazar olduğu için 5 dakikalık dış yazar formu zorunlu değil; stil kontrol paketi ve kaynak kopyası `onaylanan/2026-05-04_aksam-hareketi-uyku-melatonin` altında onay izi olarak korunur.
 
 ## Revizyon notları
+
+- **2026-10-03 — #1 sauna/soğuk duş, ikinci revizyon.** KC'nin paylaştığı dış değerlendirme üzerine: başlık “Sauna, Soğuk Duş ve Sıcak Basmaları — Bir Sporcunun Merakı” oldu (eski tireli iki bölümlü başlık ilk okumada anlaşılmıyordu). Kanıt etiketleri iddiaya özgü hale getirildi (genel popülasyon ≠ menopoz); kalp kontrendikasyonları dekompanse/kararsız/yakın zamanlı tablolarla sınırlandı; gebelik maddesi yumuşatıldı; Bilimsel Editör Notu kısaltıldı. **Stil sinyalleri:** (a) “gerçek duygu beat'i” kuralı bağlamda karşılığı olmayan bir duyguyla (“utanılacak bir şey yok”) doldurulmaz — duygu sahneye uymalı; (b) “köprü”, “kuşak köprüsü”, “ince bir konuya dönüşüyor” gibi parlatılmış soyutlamalar yerine düz cümle; (c) başlık ilk okumada anlaşılır olmalı.
 
 - **2026-10-03 — #2 akşam hareketi, revizyon.** 13 Temmuz revizyonunda kalan *“annemin ve çevremdeki kadınların ‘yorgunluktan ölüyorum ama uyuyamıyorum’ dediği geceler”* cümlesi anne+menopoz anekdot yasağını ihlal ediyordu; “çevremdeki kadınlardan sık duyduğum” çerçevesine çevrildi. Gövde içi 5 soruluk SSS kaldırıldı (3'ü gövdeyi tekrar ediyordu); gece terlemesi ve “çok yorgunum” soruları “Bu Akşam Ne Denenir?” bölümüne katıldı. “Damar genişlemesi melatonin üretimini destekler” iddiası düzeltildi (el-ayak damar genişlemesi/ısı kaybı uykuya dalma hızıyla ilişkili; Kräuchi 2000, doi:10.1152/ajpregu.2000.278.3.R741). Akşam egzersizi bölümü meta-analizle hizalandı (Stutz 2019, doi:10.1007/s40279-018-1015-0). Kalıp seçimi: kapanış `closing_pattern` 9 (“Yarın yine sahaya çıkacağım…”); `balance_phrase` 1 + 4. **Stil sinyalleri:** (a) “harika”, “mutlaka”, “her zaman” ve “konuşan beden/melatonin” kişileştirmesi kullanılmaz; (b) egzersiz listesi buyurgan değil, “menü” diliyle verilir; (c) deneme yazısında SSS yerine sorular gövdeye katılır.
 

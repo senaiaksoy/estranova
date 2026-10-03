@@ -813,8 +813,8 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/',
-    title: 'Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına',
-    description: 'Sporcu olarak sauna ve soğuk maruziyet deneyimim, çevremdeki kadınların sıcak basmasını izlerken öğrendiklerim ve bilim ne diyor — kuşaklar arası mütevazı bir köprü.',
+    title: 'Sauna, Soğuk Duş ve Sıcak Basmaları — Bir Sporcunun Merakı',
+    description: 'Bir sporcunun sauna ve soğuk duş deneyimi, çevresindeki kadınların sıcak basmasına dair gözlemleri ve bilimin menopoz için bugün söyleyebildikleri.',
     publishedDate: '3 Mayıs 2026',
     writerSlug: 'alara-baykent',
     section: 'Zamansız Yaşam',
