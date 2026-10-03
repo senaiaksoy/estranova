@@ -290,8 +290,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/',
     writerSlug: 'estranova-editorial',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch editoryal reconciliation: site route, RSS manifest ve production build icin editorial desk onayi ile canli envantere alindi.',
+    approvedAt: '2026-10-03',
+    note: 'Prelaunch editoryal reconciliation: site route, RSS manifest ve production build icin editorial desk onayi ile canli envantere alindi (2026-05-04). 2026-10-03: audit + humanize revizyonu (bölüm açılışları çeşitlendi, “tablo→resim” kalıp göçü temizlendi, Kısa Özet başlıktaki soruyu yanıtlayacak biçimde yeniden kuruldu, SSS dil düzeltmeleri; yeni tıbbi iddia yok, Evidence konumları ve Bilimsel Editör Notu korundu) KC editör doğrudan onayıyla (“onaylandı”) onaylandı. Kayıt: icerik/yazar-onaylari/estranova-editorial/article-log.md #7.',
   },
   {
     pathname: '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',

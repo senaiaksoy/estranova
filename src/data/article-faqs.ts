@@ -354,19 +354,19 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/': [
     {
-      question: 'Menopoza yaklaşırken herkese geniş hormon paneli gerekir mi?',
+      question: 'Menopoza yaklaşırken herkese geniş bir hormon paneli gerekir mi?',
       answer:
-        'Hayır. Yakınmayı, adet düzenini ve kişisel risk öyküsünü anlamadan yalnızca sayıyı büyütmek çoğu zaman daha fazla netlik sağlamaz. Çekirdek kontroller çoğu kadında daha değerlidir; ileri testler ise belirli bir soru varsa anlam kazanır.',
+        'Hayır. Yakınmaları, adet düzenini ve kişisel risk öyküsünü anlamadan test sayısını artırmak çoğu zaman daha fazla netlik sağlamaz. Çekirdek kontroller çoğu kadında daha değerlidir; ileri testler ise belirli bir soru varsa anlam kazanır.',
     },
     {
-      question: 'FSH yüksek çıktıysa bu tek başına menopoza girdiğim anlamına gelir mi?',
+      question: 'FSH yüksek çıktıysa bu tek başına menopoza girdiğim anlamına mı gelir?',
       answer:
-        'Hayır. FSH, özellikle perimenopozda dalgalanabilir ve tek başına bütün tabloyu anlatmaz. Adet düzeni, yaş, belirtiler ve bazen tekrar ölçüm ihtiyacı birlikte değerlendirilir.',
+        'Hayır. FSH özellikle perimenopozda dalgalanabilir ve tek başına bütün resmi anlatmaz. Adet düzeni, yaş, belirtiler ve bazen tekrar ölçüm ihtiyacı birlikte değerlendirilir.',
     },
     {
       question: 'Kontrol dosyasına hangi notları eklemek görüşmeyi kolaylaştırır?',
       answer:
-        'Adet tarihi değişimleri, sıcak basması sıklığı, uyku bölünmeleri, kullanılan ilaç ve takviyeler, aile öyküsü ve son tarama tarihleri görüşmeyi çok kolaylaştırır. Bu küçük notlar çoğu zaman ekstra tahlilden daha yol gösterici olur.',
+        'Adet tarihlerindeki değişimler, sıcak basmasının sıklığı, uyku bölünmeleri, kullandığınız ilaç ve takviyeler, aile öyküsü ve son tarama tarihleri görüşmeyi çok kolaylaştırır. Bu küçük notlar çoğu zaman fazladan bir tahlilden daha yol gösterici olur.',
     },
   ],
   '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/': [
