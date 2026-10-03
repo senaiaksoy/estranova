@@ -25,6 +25,4 @@ const tooltip = isRange
 const displayLevel = isRange ? to! : level!;
 ---
 
-<span class="evidence" data-level={displayLevel} title={tooltip} aria-label={tooltip}>
-  (<span class="evidence-label">{displayLabel}</span>)
-</span>
+<span class="evidence" data-level={displayLevel} title={tooltip} aria-label={tooltip}>(<span class="evidence-label">{displayLabel}</span>)</span>

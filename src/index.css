@@ -146,7 +146,7 @@
   }
   & .evidence {
     display: inline;
-    margin: 0 0.15em;
+    margin: 0 0 0 0.15em;
     color: #000000;
     font-size: 0.85em;
     cursor: help;
@@ -259,7 +259,7 @@
    */
   .evidence {
     display: inline;
-    margin: 0 0.15em;
+    margin: 0 0 0 0.15em;
     color: #000000;
     font-size: 0.85em;
     cursor: help;
