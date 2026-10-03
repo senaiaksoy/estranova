@@ -356,17 +356,17 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopoza yaklaşırken herkese geniş bir hormon paneli gerekir mi?',
       answer:
-        'Hayır. Yakınmaları, adet düzenini ve kişisel risk öyküsünü anlamadan test sayısını artırmak çoğu zaman daha fazla netlik sağlamaz. Çekirdek kontroller çoğu kadında daha değerlidir; ileri testler ise belirli bir soru varsa anlam kazanır.',
+        'Hayır. Hangi testin gerektiği yaşınıza, adet düzeninize, belirtilerinize ve sağlık öykünüze göre belirlenir. Başka bir sağlık sorunu olmayan, tipik menopoz belirtileri yaşayan 45 yaş ve üzerindeki kadınlarda değerlendirme genellikle hormon testi olmadan yapılabilir.',
     },
     {
       question: 'FSH yüksek çıktıysa bu tek başına menopoza girdiğim anlamına mı gelir?',
       answer:
-        'Hayır. FSH özellikle perimenopozda dalgalanabilir ve tek başına bütün resmi anlatmaz. Adet düzeni, yaş, belirtiler ve bazen tekrar ölçüm ihtiyacı birlikte değerlendirilir.',
+        'Hayır. FSH özellikle menopoza geçiş döneminde dalgalanabilir. Sonuç yaşınız, adet düzeniniz, belirtileriniz ve kullandığınız hormonal ilaçlarla birlikte yorumlanır; başka bir ölçüm gerekip gerekmediğine hekiminiz karar verir.',
     },
     {
       question: 'Kontrol dosyasına hangi notları eklemek görüşmeyi kolaylaştırır?',
       answer:
-        'Adet tarihlerindeki değişimler, sıcak basmasının sıklığı, uyku bölünmeleri, kullandığınız ilaç ve takviyeler, aile öyküsü ve son tarama tarihleri görüşmeyi çok kolaylaştırır. Bu küçük notlar çoğu zaman fazladan bir tahlilden daha yol gösterici olur.',
+        'Adet tarihlerindeki değişimleri, sıcak basmasının sıklığını, uyku bölünmelerini, kullandığınız ilaç ve takviyeleri not edebilirsiniz. Aile öykünüzü ve son tarama tarihlerinizi de ekleyin. Belirtilerin ne zaman başladığını ve günlük hayatınızı nasıl etkilediğini yazmanız, görüşmede ayrıntıları hatırlamanızı kolaylaştırır.',
     },
   ],
   '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/': [

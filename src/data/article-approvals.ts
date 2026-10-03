@@ -291,7 +291,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/',
     writerSlug: 'estranova-editorial',
     approvedAt: '2026-10-03',
-    note: 'Prelaunch editoryal reconciliation: site route, RSS manifest ve production build icin editorial desk onayi ile canli envantere alindi (2026-05-04). 2026-10-03: audit + humanize revizyonu (bölüm açılışları çeşitlendi, “tablo→resim” kalıp göçü temizlendi, Kısa Özet başlıktaki soruyu yanıtlayacak biçimde yeniden kuruldu, SSS dil düzeltmeleri; yeni tıbbi iddia yok, Evidence konumları ve Bilimsel Editör Notu korundu) KC editör doğrudan onayıyla (“onaylandı”) onaylandı. Kayıt: icerik/yazar-onaylari/estranova-editorial/article-log.md #7.',
+    note: 'Prelaunch editoryal reconciliation: site route, RSS manifest ve production build icin editorial desk onayi ile canli envantere alindi (2026-05-04). 2026-10-03: ilk audit + humanize revizyonu KC editör doğrudan onayıyla (“onaylandı”) onaylandı; kayıt article-log.md #7. Aynı gün ikinci kapsamlı audit/humanize revizyonu (FSH yaş/klinik bağlamı, D vitamini rutin ölçüm sınırı, terim açıklamaları, tarama ayrımı, özet/kapanış ve üç SSS) için KC doğrudan editör ve Dr. Aksoy tıbbi onayı alındı: “Evet, editör ve tıbbi onay veriyorum; yayımla”. Mevcut Bilimsel Editör Notu korundu. Kayıt: icerik/yazar-onaylari/estranova-editorial/onaylanan/2026-10-03_ilk-kontrol-ikinci-audit/onay-kaydi.md.',
   },
   {
     pathname: '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
