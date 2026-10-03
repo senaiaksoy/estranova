@@ -56,8 +56,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/',
     writerSlug: 'basak-pelister',
-    approvedAt: '2026-07-16',
-    note: 'Başak Pelister author approval received (KC: onay ok). Package moved from onay-bekleyen to onaylanan/2026-07-16_olcu-panigi-beden-algisi-menopoz. Eşik Sayı 03 Kapak 4 published with live route, FAQ schema, static manifest, dossier href and byline/card imagery.',
+    approvedAt: '2026-10-03',
+    note: 'Başak Pelister author approval received (KC: onay ok). Package moved from onay-bekleyen to onaylanan/2026-07-16_olcu-panigi-beden-algisi-menopoz. Eşik Sayı 03 Kapak 4 published with live route, FAQ schema, static manifest, dossier href and byline/card imagery. 2026-10-03: revizyon (son soru bölümü 5→3 ve yazar sesiyle yeniden yazıldı, “X değil, Y” ve üç nokta seyreltildi, self-care Türkçeleştirildi) için yazar onayı KC bildirimiyle alındı (“başak onayladı”, sohbet; form JSON yanıtı yok). Paket: onaylanan/2026-10-03_olcu-panigi-beden-algisi-menopoz.',
   },
   {
     pathname: '/editorun-kosesi/mayis-2026/',
@@ -278,8 +278,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
     writerSlug: 'alara-baykent',
-    approvedAt: '2026-05-04',
-    note: 'KC editor direct approval for Alara exception author. Pending package icerik/yazar-onaylari/alara-baykent/onay-bekleyen/2026-05-04_aksam-hareketi-uyku-melatonin moved to onaylanan; style-control package preserved as approval trace.',
+    approvedAt: '2026-10-03',
+    note: 'KC editor direct approval for Alara exception author (2026-05-04). Pending package icerik/yazar-onaylari/alara-baykent/onay-bekleyen/2026-05-04_aksam-hareketi-uyku-melatonin moved to onaylanan; style-control package preserved as approval trace. 2026-10-03: revizyon (anne+menopoz anekdot yasağı ihlali giderildi, gövde içi SSS kaldırılıp iki soru gövdeye katıldı, melatonin–damar genişlemesi iddiası kaynakla düzeltildi, abartı/kişileştirme dili temizlendi) KC editör doğrudan onayıyla (“onaylandı”) onaylandı. Kayıt: icerik/yazar-onaylari/alara-baykent/onaylanan/2026-10-03_aksam-hareketi-uyku-melatonin-revizyon/onay-kaydi.md.',
   },
   {
     pathname: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',

@@ -1,0 +1,32 @@
+{
+  "writer": {
+    "slug": "basak-pelister",
+    "name": "Başak Pelister"
+  },
+  "article": {
+    "slug": "olcu-panigi-beden-algisi-menopoz",
+    "title": "Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?",
+    "previewUrl": "./revizyon-onizleme.html",
+    "liveUrl": "https://estranova.com/zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/"
+  },
+  "package": {
+    "createdAt": "2026-10-03T07:26:39.013Z",
+    "deadline": "2026-10-10T07:26:39.013Z",
+    "status": "approved-published",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "approvedAt": "2026-10-03",
+    "approvalSource": "KC bildirimi (sohbet): başak onayladı"
+  },
+  "revision": {
+    "type": "revision-of-published-article",
+    "basedOn": "onaylanan/2026-07-16_olcu-panigi-beden-algisi-menopoz",
+    "sourceFile": "site-kaynak.astro",
+    "previousSourceFile": "onceki-kaynak.astro",
+    "changeSummary": "degisiklik-ozeti.md",
+    "liveRouteUntouched": true,
+    "onApproval": "site-kaynak.astro canlı rotaya kopyalanır; modifiedDate/lastUpdated yayın gününe çekilir; article-approvals.ts + article-log.md güncellenir; paket onaylanan/ altına taşınır."
+  }
+}
