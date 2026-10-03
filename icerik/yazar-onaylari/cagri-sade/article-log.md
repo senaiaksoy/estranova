@@ -100,3 +100,7 @@ Kullanıcı “çağrı onayı tamam. tıbbi onay tamam” dedi. Onay dört öne
 ## 2 Ekim 2026 — HIFU, RF ve mikroakım audit/humanize revizyonu onaylandı
 
 Kullanıcı “revizyon onay tamam” diyerek audit-humanize-3 sürümünü onayladı. Kaynak kapsamı, implant/güvenlik ayrımları, paragraf akışı, tekrarlar ve kapanış düzeltildi; yazar sesi, dört mevcut editoryal SSS, altı kaynak ve görseller korundu. Kapanıştaki ayna geri çağırması kaldırıldı; duygu atfı ve mekanik simetri azaltıldı. Önceki onaylı paket korunarak revizyon `onaylanan/2026-10-02_non-invaziv-cihazlar-hifu-rf-mikroakim-audit-humanize/` altına alındı ve yerel rota kaynağına aktarıldı. Profil değiştirilmedi. Commit/push/deploy yapılmadı.
+
+## 3 Ekim 2026 — HIFU audit-humanize-3: yazar onayı teyit edildi
+
+Kullanıcı “çağrı onayı tamam” dedi. 2 Ekim 2026'da “revizyon onay tamam” beyanıyla yayına alınan audit-humanize-3 revizyonu için Çağrı Sade'nin açık yazar onayı kayda geçti. Metin değişmedi.

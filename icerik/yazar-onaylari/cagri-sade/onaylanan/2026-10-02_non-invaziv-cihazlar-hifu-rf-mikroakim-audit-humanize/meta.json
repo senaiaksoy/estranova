@@ -29,6 +29,8 @@
     "approvalStatement": "revizyon onay tamam",
     "approvalSource": "Kullanıcının bu sohbetteki doğrudan beyanı",
     "approvalRecordedAt": "2026-10-02T19:06:29.784469+03:00",
-    "integratedSourceSha256": "cf1514d7bb6ecc19fd7f2e72be46365afa1d6164d6db98f1b76ec4be5a91850b"
+    "integratedSourceSha256": "cf1514d7bb6ecc19fd7f2e72be46365afa1d6164d6db98f1b76ec4be5a91850b",
+    "authorApprovalStatement": "çağrı onayı tamam",
+    "authorApprovalConfirmedAt": "2026-10-03"
   }
 }
