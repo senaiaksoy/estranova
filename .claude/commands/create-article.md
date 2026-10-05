@@ -50,15 +50,16 @@ Estranova için yeni bir makale üret. Bu komut kuralları **tekrarlamaz, bağla
 - Zorunlu yüzeyler: `ArticleSummary` (Kısa Özet) · tek görünür SSS (3–5 konuya özgü soru, jenerik meta soru yasak) ·
   `ArticleAuthorBlock` (writers.ts'ten, byline dikey 4:5) · `RelatedReadings` 3–5 (parent hub + komşu kategori) · `ArticleDisclaimer`.
 - **Hero ASLA değişmez:** `const hero = submenuHeroByRoute['/<parent-hub>']!`. Makale görseli yalnız byline + `articleCardImageByRoute` (yatay 2.4:1).
-- **JSON-LD:** `buildArticleSchemas()` → `MedicalWebPage` + `Article` + `BreadcrumbList` + `FAQPage` (schema, görünür SSS ile aynı kaynak).
+- **JSON-LD:** `buildArticleSchemas()` → `MedicalWebPage` + `Article` + `BreadcrumbList`. `FAQPage` yalnızca makalede hekim tarafından yanıtlanmış gerçek bir SSS bölümü varsa eklenir (schema, görünür SSS ile aynı kaynak); Google FAQ zengin sonuçlarını 2026-06-15'te kaldırdı.
 
 ### GEO / AI-alıntı optimizasyonu (AI Overviews · ChatGPT · Perplexity)
 
 AI motorları passage-level "doğrudan cevap" çeker. Marka kuralları (gövdede dış URL/kuruluş adı yasak, §4 yumuşatma, "siz") korunarak:
 
-- **Kısa Özet = doğrudan cevap, ~40–55 kelime, tek paragraf.** İlk cümle soruyu doğrudan yanıtlar; veri yığını/uzun girişle açılmaz. AI Overview'lerin tercih ettiği uzunluk.
+- **Kısa Özet = doğrudan cevap, ~40–55 kelime, tek paragraf.** İlk cümle soruyu doğrudan yanıtlar; veri yığını/uzun girişle açılmaz. Amaç okurun cevabı ilk paragrafta bulmasıdır.
 - **SSS uzun-kuyruk + sayısal çapa:** 3–5 konuya özgü soru; mümkünse en az biri "ne zaman / hangi durumda / X ile Y farkı" kalıbında. Cevaplar gövdedeki iddialara dayanır, **yeni iddia eklemez**.
 - **Sayısal çapa cümleleri:** somut sayı/eşik (yaş aralığı, oran, süre) içeren cümleler AI tarafından daha sık alıntılanır; gövdede ve Kısa Özet'te en az bir kez geçsin (klinik doğruluk + Evidence ile uyumlu).
+- Metin AI sistemleri için parçalanmaz veya yeniden yazılmaz; sabit kelime sayılı "answer-first" blok yoktur (Google, "Optimizing for generative AI features", 2026-07).
 - Kanonik kural: `docs/ARTICLE-PRODUCTION-SPEC.md` §4.8.
 
 ## Faz 5 — Pre-publish kapısı (13–20 must-pass)

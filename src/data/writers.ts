@@ -25,6 +25,8 @@ export interface Writer {
   seoTitle?: string;
   /** SERP meta description override — verilmezse publicBio kullanılır. */
   seoDescription?: string;
+  // Herkese açık profil URL'leri (LinkedIn, Instagram vb.); yalnızca yazarın açık rızasıyla ve hesabın ona ait olduğu doğrulanarak eklenir.
+  sameAs?: string[];
   writingStyle?: {
     voice: string;
     rhythm: string;

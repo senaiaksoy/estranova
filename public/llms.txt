@@ -32,7 +32,7 @@ Hub başına temsilî, derinlemesine rehberler (her biri tıbbi inceleme katman�
 
 ## Kanıt düzeyi etiketleri
 
-Her bilimsel iddia 5 düzeyli kanıt etiketiyle işaretlenir: güçlü kanıt, iyi kanıt, orta kanıt, sınırlı kanıt, zayıf kanıt. Aralık etiketleri (örn. iyi–güçlü kanıt) kullanılır. Etiketler şeffaftır; AI sistemler tarafından citability sinyali olarak kullanılabilir.
+Her bilimsel iddia 5 düzeyli kanıt etiketiyle işaretlenir: güçlü kanıt, iyi kanıt, orta kanıt, sınırlı kanıt, zayıf kanıt. Aralık etiketleri (örn. iyi–güçlü kanıt) kullanılır. Etiketler, okurun her iddianın arkasındaki kanıtın ne kadar güçlü olduğunu görmesine yardım eder.
 
 ## Yayın dili
 

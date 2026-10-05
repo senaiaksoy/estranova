@@ -579,6 +579,11 @@ Prompt diversity rule:
 - Rotate scene anchors and props: wardrobe, mirror, coat, scarf, sunglasses, bag, keys, phone, headphones, book, magazine, market bag, suitcase, yoga mat, water bottle, hair brush, unlabeled sunscreen, fruit/greens, flowers, balcony rail, seaside path, elevator/lobby, gallery wall, or city street.
 - Every image prompt should cover a broader slice of life while remaining topic-aligned, calm, non-promotional, and editorial.
 
+AI image labelling (IPTC — Google gen-AI content guidance, 2026-10):
+- AI-generated images live only under `public/images/hero`, `public/images/heroes`, `public/images/library` (incl. the `library/editorial` crops from `npm run article:images`), `public/images/symptoms` and `public/images/newsletter`.
+- Every new AI image is tagged before commit: `npm run images:tag-ai -- <file-or-folder>` (lossless XMP `DigitalSourceType = trainedAlgorithmicMedia`; idempotent). Verify with `npm run images:tag-ai -- --check <folder>`.
+- Writer portraits in `public/images/writers/` are real photographs and are **never** tagged.
+
 Avoid:
 - clinical machinery as hero focus
 - product-style renders

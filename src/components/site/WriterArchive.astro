@@ -20,6 +20,7 @@ import {
 import { magazineConfig } from '../../data/magazine-config';
 import { publishedStaticArticles as staticArticles } from '../../data/static-articles';
 import { toISODate } from '../../utils/article-schema';
+import { profileLinkLabel, writerSameAs } from '../../utils/writer-profiles';
 
 interface Props {
   writer: Writer;
@@ -84,6 +85,9 @@ const issuesWithWriter = issues
   })
   .filter((entry) => entry.roles.length > 0)
   .sort((a, b) => b.issue.number - a.issue.number);
+
+// Yazarın rızasıyla eklenmiş herkese açık profilleri (boşsa bölüm basılmaz)
+const profileLinks = writerSameAs(writer).map((url) => ({ url, label: profileLinkLabel(url) }));
 
 // Bilimsel editör (Doç. Dr. Senai Aksoy) için akademik ön ekli görünüm
 const displayWithTitle =
@@ -152,6 +156,27 @@ const displayWithTitle =
           </span>
         ))}
       </div>
+    )}{/* Profiller: boşken çıktıya boşluk bile eklememek için önceki ifadeye bitişik */}{profileLinks.length > 0 && (
+      <nav aria-label={`${writer.displayName} profilleri`} class="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+        <p class="mr-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
+          Profiller
+        </p>
+        <ul class="flex flex-wrap items-center gap-x-1">
+          {profileLinks.map(({ url, label }) => (
+            <li>
+              <a
+                href={url}
+                rel="me noopener noreferrer"
+                target="_blank"
+                aria-label={`${writer.displayName}: ${label} profili (yeni sekmede açılır)`}
+                class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded px-2 text-sm text-ink/70 underline decoration-primary/30 underline-offset-4 transition hover:text-primary hover:decoration-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     )}
   </div>
 </section>
