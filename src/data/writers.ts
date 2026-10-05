@@ -527,6 +527,8 @@ export const writers: Writer[] = [
     slug: 'anil-yalmaz',
     displayName: 'Anıl Yalmaz',
     role: 'Hareket & Egzersiz Bilimsel Yazarı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@anilyalmaz; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/anilyalmaz/'],
     ageBand: 'Belirtilmedi',
     seoDescription:
       "Anıl Yalmaz, hareket ve egzersiz bilimsel yazarı. Estranova'da 40+ kadın bedeninde güç, denge ve sürdürülebilir egzersizi performans baskısı kurmadan anlatıyor.",
