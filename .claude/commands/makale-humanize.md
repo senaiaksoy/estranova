@@ -47,6 +47,10 @@ CLAUDE.md §3 **Sıcaklık Katmanı**'nın 7 kuralını uygula (burada tekrar et
 
 Humanize gövdeyi gerçekten değiştirdiyse, makalenin `buildArticleSchemas(...)` çağrısına **`modifiedDate: '<revizyon günü>'`** eklenir (zaten varsa bugüne çekilir). Verilmezse `datePublished`'a eşitlenir ve bot içeriği "güncellenmemiş" görür — YMYL tazelik sinyali kaybı. Kanonik kural: `CLAUDE.md` §6 (`dateModified` tazeliği). `datePublished` ve yazar `@id`/Person düğümüne dokunulmaz.
 
+## 4c. Arama yüzeyi kontrolü (Google üretken AI içerik rehberi, 2026-10-01)
+
+Humanize sırasında başlık, `articleDescription`, görsel alt metinleri, görsel alt yazıları ve JSON-LD alanları da kontrol edilir. Bu, üslup için yeniden yazmak değildir; görünür metinle aynı bilgiyi taşıyıp taşımadıklarına bakılır (4. maddedeki "JSON-LD'ye dokunma" kuralı geçerlidir; uyumsuzluk varsa bildirilir). Alt metin ve alt yazı, AI ile üretilmiş görseli bir hekimin çizimi ya da gerçek bir okur, hasta veya sonuç gibi sunmaz. Kanonik kural: stil rehberi "Google Arama Güncellemeleri Kaydı (2026)".
+
 ## 5. Doğrulama (yeniden ölç)
 
 1. `npm run lexicon:check` — `hard_ban` 0.
