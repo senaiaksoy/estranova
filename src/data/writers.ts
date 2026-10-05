@@ -737,6 +737,8 @@ export const writers: Writer[] = [
     slug: 'rima-erdemir',
     displayName: 'Rima Erdemir',
     role: 'Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@rimaerdemir; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/rimaerdemir/'],
     ageBand: '55-56',
     seoDescription:
       "Rima Erdemir, araştırma yazarı ve editöryal süreç danışmanı. Estranova'da bilim ve teknoloji başlıklarını kaynak disipliniyle, meraklı bir titizlikle yazıyor.",
