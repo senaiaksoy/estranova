@@ -67,7 +67,7 @@ Otomatik düzenleme yapılmaz (editöryal karar). Onay sonrası Streamlit başar
 
 Google YMYL kategorisinde yer alan estranova icerigi icin asagidaki katmanlar **planlanmistir** ama henuz uygulanmamistir:
 
-1. **FAQPage JSON-LD schema markup** — yalnizca makalede hekim tarafindan yanitlanmis gercek bir SSS bolumu varsa, gorunur SSS ile ayni kaynaktan uretilir. Google FAQ zengin sonuclarini 15 Haziran 2026'da tamamen kaldirdi; bu isaretleme siralama veya AI-alinti amaciyla eklenmez.
+1. **FAQPage JSON-LD schema markup** — yalnizca makalede okurun gordugu gercek bir SSS bolumu varsa, gorunur SSS ile ayni kaynaktan uretilir. Google FAQ zengin sonuclarini 15 Haziran 2026'da tamamen kaldirdi; bu isaretleme siralama veya AI-alinti amaciyla eklenmez.
 2. **Author bio + medical reviewer signature** — Her makalenin altinda yazar profili + "Last reviewed by Dr. X" imzasi (EEAT sinyali).
 3. **Last updated date** — frontmatter'a `updated` alani; Astro'da "Son guncelleme: tarih" goster (Google saglik icerigi icin guncellige onem verir).
 4. **Article schema markup (NewsArticle / MedicalWebPage)** — makale tipini structured data ile bildirme.
