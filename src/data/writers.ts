@@ -184,6 +184,8 @@ export const writers: Writer[] = [
     slug: 'basak-pelister',
     displayName: 'Başak Pelister',
     role: 'Araştırma Yazarı / Konuk Katkı — Üç Kuşaklı Tanıklık',
+    // Editör onayı 2026-10-05: kişisel Instagram (@bassuka; marka ve deneyim tasarımı geçmişi biyografiyle eşleşiyor)
+    sameAs: ['https://www.instagram.com/bassuka/'],
     ageBand: '55-57',
     seoDescription:
       "Başak Pelister, dokuz yıllık menopoz deneyimini ve HRT yolculuğunu üç kuşaklı bir bakışla anlatan araştırmacı. Estranova'da samimi, ölçülü bir yaşıt sesi.",
