@@ -9,4 +9,5 @@ Use this command for every article-writing task in Estranova.
 5. Keep Estranova’s default voice as “Yaşıt Editör”, not a doctor voice, unless the assigned author is an explicit clinical exception.
 6. Use clear Turkish, magazine-quality warmth, and respectful “siz” address.
 7. Do not use promotional language, success guarantees, “mucize”, “kesin çözüm”, or “en iyi”.
-8. If the style guide cannot be read, stop and report the blocker.
+8. Before handoff, human-check the title, `articleDescription`, image alt text and JSON-LD as well as the body; put a new AI image only in the AI image folders and tag it with `npm run images:tag-ai -- <file>` (never writer portraits). See the style guide section "Google Arama Güncellemeleri Kaydı (2026)".
+9. If the style guide cannot be read, stop and report the blocker.
