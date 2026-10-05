@@ -889,6 +889,8 @@ export const writers: Writer[] = [
     slug: 'demet-kizilkaya',
     displayName: 'Demet Kızılkaya',
     role: 'Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@demetkizilkaya; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/demetkizilkaya/'],
     ageBand: '58',
     seoDescription:
       "Demet Kızılkaya, yaşam tarzı ve kültür yazarı. Estranova'da menopoz deneyimini, Japon kültürünü ve gündelik nezaketi ölçülü bir yaşıt tonuyla anlatıyor.",
