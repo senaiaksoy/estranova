@@ -1,4 +1,4 @@
-# Işık Selin Günce — Warm (konu-tetikli stil katmanları)
+# Işık Selin Günçe — Warm (konu-tetikli stil katmanları)
 
 > **Bu dosya:** Konu-tetikli yüklenen stil ve şablon katmanları.
 > **Kapsam:** §4b Manifesto-aligned Anekdot Yönelimi + §4e Manifesto Kalıpları (6 kalıp havuzu) + §4f Yaşam Felsefesi Omurgası (Dörtgen Mimari).

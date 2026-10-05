@@ -87,6 +87,8 @@ export const writers: Writer[] = [
     slug: 'berna-aksoy',
     displayName: 'Berna Aksoy',
     role: 'Yönetici Editör / Ana Yazar',
+    // Editör onayı 2026-10-05: kişisel Instagram (@nbernaa; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/nbernaa/'],
     ageBand: '55-56',
     seoTitle: 'Berna Aksoy | Estranova Yönetici Editör',
     seoDescription:
@@ -119,6 +121,8 @@ export const writers: Writer[] = [
     slug: 'alara-baykent',
     displayName: 'Alara Baykent',
     role: 'Sağlık Yazarı / Konuk Katkı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@alara.baykent; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/alara.baykent/'],
     ageBand: '30-31',
     seoDescription:
       "Alara Baykent, eski profesyonel windsurfer ve sağlık yazarı. Estranova'da hareketi ve sürdürülebilir egzersizi performans baskısı kurmadan yazan genç bir yaşıt.",
@@ -153,6 +157,8 @@ export const writers: Writer[] = [
     slug: 'bahar-ozeray',
     displayName: 'Bahar Özeray',
     role: 'Hukuk ve Yaşam Tarzı Yazarı / Konuk Katkı',
+    // Editör onayı 2026-10-05: büro avukat profili (aile bürosu ve şirket danışmanlığı biyografiyle eşleşiyor)
+    sameAs: ['https://ozeray.com/tr/avukatlarimiz-3/index.html'],
     ageBand: '47',
     publicBio:
       "İstanbul Barosu'na kayıtlı avukat ve sicilli arabulucu; aile bürosunda yerli ve yabancı şirketlere danışmanlık veriyor. Estranova'da hak, sınır, karar ve gündelik yaşam dengesi başlıklarında yaşıt perspektifiyle yazıyor. Uzlaşmayı önemseyen titiz bir hukukçu; iyi yemek ve seçici bir estetik gözle gündelik neşesini koruyan bir yaşıt.",
@@ -182,6 +188,8 @@ export const writers: Writer[] = [
     slug: 'basak-pelister',
     displayName: 'Başak Pelister',
     role: 'Araştırma Yazarı / Konuk Katkı — Üç Kuşaklı Tanıklık',
+    // Editör onayı 2026-10-05: kişisel Instagram (@bassuka; marka ve deneyim tasarımı geçmişi biyografiyle eşleşiyor)
+    sameAs: ['https://www.instagram.com/bassuka/'],
     ageBand: '55-57',
     seoDescription:
       "Başak Pelister, dokuz yıllık menopoz deneyimini ve HRT yolculuğunu üç kuşaklı bir bakışla anlatan araştırmacı. Estranova'da samimi, ölçülü bir yaşıt sesi.",
@@ -519,6 +527,8 @@ export const writers: Writer[] = [
     slug: 'anil-yalmaz',
     displayName: 'Anıl Yalmaz',
     role: 'Hareket & Egzersiz Bilimsel Yazarı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@anilyalmaz; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/anilyalmaz/'],
     ageBand: 'Belirtilmedi',
     seoDescription:
       "Anıl Yalmaz, hareket ve egzersiz bilimsel yazarı. Estranova'da 40+ kadın bedeninde güç, denge ve sürdürülebilir egzersizi performans baskısı kurmadan anlatıyor.",
@@ -567,6 +577,8 @@ export const writers: Writer[] = [
     slug: 'ersin-sarac',
     displayName: 'Fzt. Ersin Saraç',
     role: 'Fizyoterapi & Rehabilitasyon Bilimsel Yazarı',
+    // Editör onayı 2026-10-05: kişisel Instagram (klinik sitesi bu hesabı onun kişisel hesabı olarak gösteriyor); klinik hesabı bilinçli olarak eklenmedi
+    sameAs: ['https://www.instagram.com/ersinnsarac/'],
     ageBand: '33',
     seoDescription:
       'Fzt. Ersin Saraç, fizyoterapi bilimsel yazarı. Estranova\'da postmenopozal kas-iskelet sağlığını "bedeni dinleyerek ilerlemek" felsefesiyle yazıyor.',
@@ -731,6 +743,8 @@ export const writers: Writer[] = [
     slug: 'rima-erdemir',
     displayName: 'Rima Erdemir',
     role: 'Araştırma Yazarı & Editöryal Süreç Danışmanı / Konuk Katkı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@rimaerdemir; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/rimaerdemir/'],
     ageBand: '55-56',
     seoDescription:
       "Rima Erdemir, araştırma yazarı ve editöryal süreç danışmanı. Estranova'da bilim ve teknoloji başlıklarını kaynak disipliniyle, meraklı bir titizlikle yazıyor.",
@@ -772,6 +786,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/gamze-cizreli.webp',
     focusAreas: ['Beslenme & Mutfak', 'Sürdürülebilirlik', 'Sabah Rutini'],
     isEditor: false,
+    status: 'inactive',
     writingStyle: {
       voice: 'Sıcak, sofraya yakın, günlük yaşama temas eden yalın ama kişisel bir ses; itirafçı kırılganlık ve olgunluk bir arada.',
       rhythm: 'Kısa paragraflar; üç nokta (…) ile yarım bırakma; ekonomik liste cümleleri ("Bir sonbahar sabahı: çay, ekmek, peynir, narın ilki."); ünlem MIN.',
@@ -801,11 +816,13 @@ export const writers: Writer[] = [
   },
   {
     slug: 'isik-selin-gunce',
-    displayName: 'Işık Selin Günce',
+    displayName: 'Işık Selin Günçe',
     role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
-    seoTitle: 'Işık Selin Günce | Estranova Yazarı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@isikselin; tiyatro oyuncusu profili ad ve meslekle eşleşiyor)
+    sameAs: ['https://www.instagram.com/isikselin/'],
+    seoTitle: 'Işık Selin Günçe | Estranova Yazarı',
     seoDescription:
-      "Işık Selin Günce, tiyatro sanatçısı ve kadın sağlığı yazarı. Estranova'da perimenopoz ve menopozu sahici, sıcak bir yaşıt sesiyle sadeleştiriyor.",
+      "Işık Selin Günçe, tiyatro sanatçısı ve kadın sağlığı yazarı. Estranova'da perimenopoz ve menopozu sahici, sıcak bir yaşıt sesiyle sadeleştiriyor.",
     ageBand: 'Belirtilmedi',
     publicBio:
       'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı yazıya taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurun hissini önce normalize ederek yazıyor. Panik değil yön duygusu veren sıcak bir yaşıt sesi var.',
@@ -872,6 +889,8 @@ export const writers: Writer[] = [
     slug: 'demet-kizilkaya',
     displayName: 'Demet Kızılkaya',
     role: 'Yaşam Tarzı ve Kültür Yazarı / Konuk Katkı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@demetkizilkaya; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/demetkizilkaya/'],
     ageBand: '58',
     seoDescription:
       "Demet Kızılkaya, yaşam tarzı ve kültür yazarı. Estranova'da menopoz deneyimini, Japon kültürünü ve gündelik nezaketi ölçülü bir yaşıt tonuyla anlatıyor.",
@@ -951,7 +970,7 @@ export const writers: Writer[] = [
   },
 ];
 
-export const inactiveWriterSlugs =['bahar-ozeray', 'elif-ozcan-dulundu', 'ozlem-denizmen', 'sanem-altan'] as const;
+export const inactiveWriterSlugs =['bahar-ozeray', 'elif-ozcan-dulundu', 'gamze-cizreli', 'ozlem-denizmen', 'sanem-altan'] as const;
 
 export const activeWriters = writers.filter((w) => w.status !== 'inactive');
 

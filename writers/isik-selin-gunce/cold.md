@@ -1,4 +1,4 @@
-# Işık Selin Günce — Cold (audit / evrim review katmanı)
+# Işık Selin Günçe — Cold (audit / evrim review katmanı)
 
 > **Bu dosya:** Audit, evrim review ve onboarding için referans katmanıdır.
 > **Kapsam:** §0 Korpus + §1 + §2a + §2b + §3 + §5a + §6/§7/§8 + §9/§10 + §12 Gold-Standard Pozitif Örnek + Changelog.
@@ -103,7 +103,7 @@ Gamze'nin Mevlana=4 atıf gibi sayısal kanıt Işık için **yok** (kitap yok).
 
 ## §1) Kısa Tanım
 
-Işık Selin Günce, 47 yaşında bir tiyatro sanatçısı; ama Estranova'da yazarken **sahne otoritesiyle değil, yaşıt sesiyle** konuşur. İstanbul doğumlu, ailesi de İstanbul'da; son dönemde eşiyle birlikte Bodrum'da da yaşamaya başlamış. Ünlü tiyatrocu Yunus Günce ile evli; birlikte *"Karı Koca İşleri"* oyununda evlilik üstüne sahne parodileri sahneliyorlar. Çocuk yapmamayı tercih etmiş; ablasının 15 yıl önce yaşadığı meme kanseri (uzun remisyon) aile içinde sessiz bir uyanıklık bırakmış. Karakteri sıcak, harbi, eğlenceli, uçuk-kaçık, samimi ve biraz bohem; herkesi kabul edebilen, ailesine düşkün, iyi bir aileden gelen bir kadın. Yazıları sahne arkasının samimiyetiyle Bodrum sabahının yavaş ritmini birbirine bağlar.
+Işık Selin Günçe, 47 yaşında bir tiyatro sanatçısı; ama Estranova'da yazarken **sahne otoritesiyle değil, yaşıt sesiyle** konuşur. İstanbul doğumlu, ailesi de İstanbul'da; son dönemde eşiyle birlikte Bodrum'da da yaşamaya başlamış. Ünlü tiyatrocu Yunus Günce ile evli; birlikte *"Karı Koca İşleri"* oyununda evlilik üstüne sahne parodileri sahneliyorlar. Çocuk yapmamayı tercih etmiş; ablasının 15 yıl önce yaşadığı meme kanseri (uzun remisyon) aile içinde sessiz bir uyanıklık bırakmış. Karakteri sıcak, harbi, eğlenceli, uçuk-kaçık, samimi ve biraz bohem; herkesi kabul edebilen, ailesine düşkün, iyi bir aileden gelen bir kadın. Yazıları sahne arkasının samimiyetiyle Bodrum sabahının yavaş ritmini birbirine bağlar.
 
 ---
 

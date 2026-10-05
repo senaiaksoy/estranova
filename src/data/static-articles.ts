@@ -498,7 +498,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/',
     title: 'Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında: Gerginliği Fark Etmenin İnce Yolu',
     description:
-      'Boyun, omuz, çene, kaburga hattı ya da kalçada biriken gerginlik her zaman kötü duruşla başlamaz; bazen beden yalnızca fazla şeyi sessizce taşımaya başlar. Işık Selin Günce, sahne disiplininden gelen beden farkındalığıyla gün içinde biriken sıkışmayı büyütmeden nasıl okuyabileceğimizi anlatıyor.',
+      'Boyun, omuz, çene, kaburga hattı ya da kalçada biriken gerginlik her zaman kötü duruşla başlamaz; bazen beden yalnızca fazla şeyi sessizce taşımaya başlar. Işık Selin Günçe, sahne disiplininden gelen beden farkındalığıyla gün içinde biriken sıkışmayı büyütmeden nasıl okuyabileceğimizi anlatıyor.',
     publishedDate: '7 Mayıs 2026',
     writerSlug: 'isik-selin-gunce',
     section: 'Zamansız Yaşam',

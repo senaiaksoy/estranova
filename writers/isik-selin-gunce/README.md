@@ -1,4 +1,4 @@
-# Işık Selin Günce — Yazar Profili (modüler)
+# Işık Selin Günçe — Yazar Profili (modüler)
 
 > **v2.0 / modüler dönüşüm 2026-04-30 (Aşama 2 rollout 6/7).** Eski tek-dosya `legacy/writers/isik-selin-gunce.md` 30 gün rollback için saklanır.
 > **Işık v2.0 yapısal note:** Gamze v3.2 paritesine en yakın profil — §0 + §0.5 + §4e + §4f + §12 + §13 hepsi var; §4a/§4c/§4d YOK.

@@ -1,4 +1,4 @@
-# Işık Selin Günce — Pending Citations (editör onay kuyruğu)
+# Işık Selin Günçe — Pending Citations (editör onay kuyruğu)
 
 > **Bu dosya AI agent'ın korpus dışı önerdiği, editör onayı bekleyen atıfları tutar.** Akış: AI aday önerir → bu dosyaya yazar → editör inceler → onaylananlar `extended.md`'ye taşınır.
 >

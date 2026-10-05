@@ -1,4 +1,4 @@
-# Işık Selin Günce — Canonical Sources (atıf yapmama disiplini + sahne/Bodrum merceği)
+# Işık Selin Günçe — Canonical Sources (atıf yapmama disiplini + sahne/Bodrum merceği)
 
 > **Bu dosya whitelist DEĞİLDİR.** Işık doğrudan akademik atıf yapmaz; sesi *sahne arkası samimiyeti + Bodrum sabahı + çocuksuz olgunluk + 6 manifesto kalıbı* üzerinden kurulur. Korpus mütevazı; tam liste `cold.md §0`.
 >
