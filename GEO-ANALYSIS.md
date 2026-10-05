@@ -121,6 +121,8 @@ Referans iki uçta da gerçek bir entity'ye çözülüyor; portföy birleştirme
 
 ## 6. Passage-Level Citability (134-167 kelime blokları)
 
+> **Not (2026-10-05):** Bu bölüm ve ona dayanan öneriler (answer-first kelime blokları, §9-A; FAQ/FAQPage'i AI-alıntı aracı olarak kullanma) Google'ın 2026-07 "Optimizing for generative AI features" rehberiyle geçersiz kalmıştır: içerik AI için parçalara bölünmez veya yeniden yazılmaz. Güncel kural `docs/ARTICLE-PRODUCTION-SPEC.md` §4.8'dedir. Aşağıdaki analiz tarihsel kayıt olarak korunmuştur.
+
 İncelenen örnek: `/hormonal-gecis/menopoz/menopoz-nedir`
 
 **Güçlü:**

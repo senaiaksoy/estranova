@@ -11,6 +11,8 @@ import { isProductionLaunch } from '../utils/launch';
 import { featureFlags } from '../utils/feature-flags';
 import CookieBanner from '../components/site/CookieBanner.astro';
 import { isPathScheduled } from '../data/scheduled-releases';
+import { writers } from '../data/writers';
+import { mergeSameAs } from '../utils/writer-profiles';
 
 
 type JsonLdSchema = Record<string, unknown>;
@@ -117,8 +119,9 @@ const drAksoyPersonSchema: JsonLdSchema = {
     'Jinekoloji',
     '40 sonrası kadın sağlığı',
   ],
-  // sameAs — yalnızca doğrulanmış kanonik kimlik (yanlış hesap = yanlış entity birleşmesi)
-  sameAs: ['https://senaiaksoy.net'],
+  // sameAs — yalnızca doğrulanmış kanonik kimlik (yanlış hesap = yanlış entity birleşmesi);
+  // writers.ts'te rızayla eklenen profil URL'leri tekrarsız birleştirilir.
+  sameAs: mergeSameAs(['https://senaiaksoy.net'], writers.find((w) => w.slug === 'senai-aksoy')),
 };
 
 const additionalSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];

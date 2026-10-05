@@ -1,6 +1,7 @@
 import { writers, type Writer } from '../data/writers';
 import { submenuHeroByRoute, articleCardImageByRoute } from '../data/submenu-heroes';
 import type { ArticleFaqItem } from '../data/article-faqs';
+import { writerSameAs } from './writer-profiles';
 import {
   assertArticleTypeForWriter,
   getDefaultMedicalReviewer,
@@ -142,6 +143,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         description: writer.publicBio,
         ...(writer.portrait ? { image: joinUrl(siteUrl, writer.portrait) } : {}),
         url: joinUrl(siteUrl, `/yazarlar/${writer.slug}/`),
+        ...(writerSameAs(writer).length ? { sameAs: writerSameAs(writer) } : {}),
       };
 
   // Medical reviewer canonical Person @id — Dr. Aksoy bilim editörü/inceleyici
@@ -158,6 +160,7 @@ export function buildArticleSchemas(opts: BuildArticleSchemaOptions): JsonLdSche
         jobTitle: medicalReviewerTitle,
         ...(reviewerWriter?.portrait ? { image: joinUrl(siteUrl, reviewerWriter.portrait) } : {}),
         ...(reviewerWriter ? { url: joinUrl(siteUrl, `/yazarlar/${reviewerWriter.slug}/`) } : {}),
+        ...(writerSameAs(reviewerWriter).length ? { sameAs: writerSameAs(reviewerWriter) } : {}),
       };
 
   const medicalWebPageSchema: JsonLdSchema = {

@@ -45,7 +45,7 @@ Sonunda **YZ/insan kadansı tahmini** ver — ölçüm değil editöryal yargı;
 - **Evidence** 2–3 (max 4–5), `<Evidence .../>` ile; literal `[●●●●○]` yok
 - **Bilimsel Editör Notu** (Doç. Dr. Senai Aksoy imzalı); Senai kendi yazdıysa 1. şahıs istisnası
 - **Tek görünür SSS yüzeyi** (3–5 konuya özgü, jenerik meta soru yok); schema ile aynı kaynak
-- **JSON-LD**: MedicalWebPage + Article + BreadcrumbList + FAQPage (`buildArticleSchemas`)
+- **JSON-LD**: MedicalWebPage + Article + BreadcrumbList (`buildArticleSchemas`); `FAQPage` yalnızca görünür, gerçek bir SSS bölümü varsa, görünür SSS ile aynı kaynaktan
 - `ArticleAuthorBlock` (writers.ts), `RelatedReadings` 3–5, `ArticleDisclaimer` görünür
 - **Hero** parent hub'tan (`submenuHeroByRoute['/<parent-hub>']`), makale-path entry yok / değişmemiş
 

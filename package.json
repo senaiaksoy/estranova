@@ -17,6 +17,7 @@
     "compliance": "node scripts/compliance-check.mjs",
     "article:template": "tsx scripts/generate-article-template.ts",
     "article:images": "npm exec --yes --package=sharp -- node scripts/make-article-images.mjs",
+    "images:tag-ai": "node scripts/tag-ai-images.mjs",
     "articles:export": "node scripts/export-published-articles.mjs",
     "articles:status": "node scripts/list-article-approvals.mjs",
     "articles:audit": "node scripts/check-published-content-integrity.mjs",
