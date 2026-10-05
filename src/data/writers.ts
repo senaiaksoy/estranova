@@ -87,6 +87,8 @@ export const writers: Writer[] = [
     slug: 'berna-aksoy',
     displayName: 'Berna Aksoy',
     role: 'Yönetici Editör / Ana Yazar',
+    // Editör onayı 2026-10-05: kişisel Instagram (@nbernaa; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/nbernaa/'],
     ageBand: '55-56',
     seoTitle: 'Berna Aksoy | Estranova Yönetici Editör',
     seoDescription:
