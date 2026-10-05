@@ -1,4 +1,4 @@
-# Işık Selin Günce — Hot (her makalede yüklenen çekirdek)
+# Işık Selin Günçe — Hot (her makalede yüklenen çekirdek)
 
 > **Bu dosya:** Işık sesinin **olmazsa olmaz çekirdeği**. AI agent her makalede `profile.yaml` ile birlikte bunu yükler.
 > **Kapsam:** §0.5 12 adımlı Yürütme Protokolü + §4 Yazı Tonu + §5c Tıbbi Sınır Uyarısı + §13 Self-check Checklist (20 madde).

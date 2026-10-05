@@ -1,4 +1,4 @@
-# Işık Selin Günce
+# Işık Selin Günçe
 
 Estranova yazar onay arşivi.
 

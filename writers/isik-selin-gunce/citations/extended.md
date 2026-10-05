@@ -1,4 +1,4 @@
-# Işık Selin Günce — Extended Citations (onaylı genişleme havuzu)
+# Işık Selin Günçe — Extended Citations (onaylı genişleme havuzu)
 
 > **Bu dosya editör onayından geçen, korpus dışı atıfları tutar.** Akış: `pending.md` → editör onayı → bu dosya.
 >

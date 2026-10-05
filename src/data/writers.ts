@@ -806,11 +806,13 @@ export const writers: Writer[] = [
   },
   {
     slug: 'isik-selin-gunce',
-    displayName: 'Işık Selin Günce',
+    displayName: 'Işık Selin Günçe',
     role: 'Tiyatro Sanatçısı ve Kadın Sağlığı İçerik Yazarı / Konuk Katkı',
-    seoTitle: 'Işık Selin Günce | Estranova Yazarı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@isikselin; tiyatro oyuncusu profili ad ve meslekle eşleşiyor)
+    sameAs: ['https://www.instagram.com/isikselin/'],
+    seoTitle: 'Işık Selin Günçe | Estranova Yazarı',
     seoDescription:
-      "Işık Selin Günce, tiyatro sanatçısı ve kadın sağlığı yazarı. Estranova'da perimenopoz ve menopozu sahici, sıcak bir yaşıt sesiyle sadeleştiriyor.",
+      "Işık Selin Günçe, tiyatro sanatçısı ve kadın sağlığı yazarı. Estranova'da perimenopoz ve menopozu sahici, sıcak bir yaşıt sesiyle sadeleştiriyor.",
     ageBand: 'Belirtilmedi',
     publicBio:
       'Tiyatro sanatçısı; sahne disiplinini ve sahici anlatımı yazıya taşıyan bir yazar. Estranova\'da perimenopoz, menopoz ve iyi yaşam başlıklarını sade dille, okurun hissini önce normalize ederek yazıyor. Panik değil yön duygusu veren sıcak bir yaşıt sesi var.',

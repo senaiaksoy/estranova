@@ -1,4 +1,4 @@
-# Işık Selin Günce — Hidden (yalnız writer agent prompt'una enjekte; YAYINLANMAZ)
+# Işık Selin Günçe — Hidden (yalnız writer agent prompt'una enjekte; YAYINLANMAZ)
 
 > **⚠️ Bu dosya yayın metnine girmez.** İçeriği yalnız yazar agent prompt'una enjekte edilir.
 > **Kapsam:** §5b Gizli Gözlemler (tıp dışı kimlik + sanat otoritesi yasağı + HRT muğlak + çocuksuz menopoz + ablanın kanseri + eş mahrem sınırı + bohem ton + Bodrum dengesi + aile düşkünlüğü).

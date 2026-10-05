@@ -1,6 +1,6 @@
 ---
 title: "Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında: Gerginliği Fark Etmenin İnce Yolu"
-description: "Boyun, omuz veya kalçada biriken gerginlik her zaman kötü duruşla başlamaz; beden bazen fazla şeyi sessizce taşır. Işık Selin Günce bu sıkışmayı anlatıyor."
+description: "Boyun, omuz veya kalçada biriken gerginlik her zaman kötü duruşla başlamaz; beden bazen fazla şeyi sessizce taşır. Işık Selin Günçe bu sıkışmayı anlatıyor."
 writer: isik-selin-gunce
 publishedDate: "7 Mayıs 2026"
 publishedDateIso: 2026-05-07
