@@ -579,6 +579,8 @@ Prompt diversity rule:
 - Rotate scene anchors and props: wardrobe, mirror, coat, scarf, sunglasses, bag, keys, phone, headphones, book, magazine, market bag, suitcase, yoga mat, water bottle, hair brush, unlabeled sunscreen, fruit/greens, flowers, balcony rail, seaside path, elevator/lobby, gallery wall, or city street.
 - Every image prompt should cover a broader slice of life while remaining topic-aligned, calm, non-promotional, and editorial.
 
+Google 2026 updates (canonical record): the verified date table and AI-assisted content rules live in Senai-Wiki stil rehberi, "Google Arama Güncellemeleri Kaydı (2026)" (`wiki/brand/senai-aksoy-makale-stil-rehberi.md`). Summary: FAQ rich results gone since 7 May 2026; before publishing, a human checks the title, `articleDescription`, image alt text and JSON-LD as well as the body; a new Google change becomes a rule only after it is verified in a primary source (Search Central changelog, Search Status Dashboard).
+
 AI image labelling (IPTC — Google gen-AI content guidance, 2026-10):
 - AI-generated images live only under `public/images/hero`, `public/images/heroes`, `public/images/library` (incl. the `library/editorial` crops from `npm run article:images`), `public/images/symptoms` and `public/images/newsletter`.
 - Every new AI image is tagged before commit: `npm run images:tag-ai -- <file-or-folder>` (lossless XMP `DigitalSourceType = trainedAlgorithmicMedia`; idempotent). Verify with `npm run images:tag-ai -- --check <folder>`.
