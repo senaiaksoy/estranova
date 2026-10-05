@@ -121,6 +121,8 @@ export const writers: Writer[] = [
     slug: 'alara-baykent',
     displayName: 'Alara Baykent',
     role: 'Sağlık Yazarı / Konuk Katkı',
+    // Editör onayı 2026-10-05: kişisel Instagram (@alara.baykent; adres editör tarafından verildi, profil adı eşleşiyor)
+    sameAs: ['https://www.instagram.com/alara.baykent/'],
     ageBand: '30-31',
     seoDescription:
       "Alara Baykent, eski profesyonel windsurfer ve sağlık yazarı. Estranova'da hareketi ve sürdürülebilir egzersizi performans baskısı kurmadan yazan genç bir yaşıt.",
