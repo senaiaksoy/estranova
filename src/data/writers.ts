@@ -153,6 +153,8 @@ export const writers: Writer[] = [
     slug: 'bahar-ozeray',
     displayName: 'Bahar Özeray',
     role: 'Hukuk ve Yaşam Tarzı Yazarı / Konuk Katkı',
+    // Editör onayı 2026-10-05: büro avukat profili (aile bürosu ve şirket danışmanlığı biyografiyle eşleşiyor)
+    sameAs: ['https://ozeray.com/tr/avukatlarimiz-3/index.html'],
     ageBand: '47',
     publicBio:
       "İstanbul Barosu'na kayıtlı avukat ve sicilli arabulucu; aile bürosunda yerli ve yabancı şirketlere danışmanlık veriyor. Estranova'da hak, sınır, karar ve gündelik yaşam dengesi başlıklarında yaşıt perspektifiyle yazıyor. Uzlaşmayı önemseyen titiz bir hukukçu; iyi yemek ve seçici bir estetik gözle gündelik neşesini koruyan bir yaşıt.",
@@ -567,6 +569,8 @@ export const writers: Writer[] = [
     slug: 'ersin-sarac',
     displayName: 'Fzt. Ersin Saraç',
     role: 'Fizyoterapi & Rehabilitasyon Bilimsel Yazarı',
+    // Editör onayı 2026-10-05: kişisel Instagram (klinik sitesi bu hesabı onun kişisel hesabı olarak gösteriyor); klinik hesabı bilinçli olarak eklenmedi
+    sameAs: ['https://www.instagram.com/ersinnsarac/'],
     ageBand: '33',
     seoDescription:
       'Fzt. Ersin Saraç, fizyoterapi bilimsel yazarı. Estranova\'da postmenopozal kas-iskelet sağlığını "bedeni dinleyerek ilerlemek" felsefesiyle yazıyor.',
@@ -772,6 +776,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/gamze-cizreli.webp',
     focusAreas: ['Beslenme & Mutfak', 'Sürdürülebilirlik', 'Sabah Rutini'],
     isEditor: false,
+    status: 'inactive',
     writingStyle: {
       voice: 'Sıcak, sofraya yakın, günlük yaşama temas eden yalın ama kişisel bir ses; itirafçı kırılganlık ve olgunluk bir arada.',
       rhythm: 'Kısa paragraflar; üç nokta (…) ile yarım bırakma; ekonomik liste cümleleri ("Bir sonbahar sabahı: çay, ekmek, peynir, narın ilki."); ünlem MIN.',
@@ -951,7 +956,7 @@ export const writers: Writer[] = [
   },
 ];
 
-export const inactiveWriterSlugs =['bahar-ozeray', 'elif-ozcan-dulundu', 'ozlem-denizmen', 'sanem-altan'] as const;
+export const inactiveWriterSlugs =['bahar-ozeray', 'elif-ozcan-dulundu', 'gamze-cizreli', 'ozlem-denizmen', 'sanem-altan'] as const;
 
 export const activeWriters = writers.filter((w) => w.status !== 'inactive');
 
