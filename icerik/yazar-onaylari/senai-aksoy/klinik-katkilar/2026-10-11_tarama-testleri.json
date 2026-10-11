@@ -3,7 +3,7 @@
   "pathname": "/hormonal-gecis/40-sonrasi/tarama-testleri/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası sorulan üç gövde sorusuna Dr. Aksoy'un yazılı yanıtları (iki yanıt + üçüncü soruya 'tek dosya, net soru benim cümlem değil' cevabı).",
-  "status": "Tamamlandı: Dr. Aksoy yanıt aktarımı ve dil düzenlemeleri, Dr. Mumcu bağımsız tıbbi inceleme ve KC yayın onayı 2026-10-11 kayıtlı.",
+  "status": "2026-10-11 ilk revizyon onaylı ve yayında (3ccc6000). Dış değerlendirme düzeltmeleri worktree tarama-dd’de; Dr. Aksoy ve Dr. Mumcu yeniden onayı bekleniyor.",
   "revisionScope": "Audit (2026-10-11) bulgularına göre: başlıktaki 'ne zaman / ne sıklıkla' sorusu yaş ve aralık tablosuyla karşılandı; Türkiye ulusal kanser tarama programı (HSGM) eklendi; kalın bağırsak taraması ve kan basıncı eklendi; tiroid/inflamatuvar belirteç listesi düzeltildi; DXA bölümü USPSTF 2025 ile hizalandı; dayanaksız Evidence etiketleri kaldırıldı/yeniden bağlandı; numaralı kaynaklar bölümü (8 kaynak) eklendi; Bilimsel Editör Notu imzası Dr. Alper Mumcu'ya çevrildi; tek kelimelik H2 ve soru başlığı yoğunluğu düzeltildi; tekrarlar birleştirildi; kırmızı bayrak kutusu düzeltildi; modifiedDate/lastUpdated 11 Ekim 2026. Hero görseli değişmedi. SSS eklenmedi (Estranova'da zorunlu değil; mevcut SSS yoktu).",
   "faqConversionStatus": "Uygulanmaz: makalede SSS yok.",
   "faqQuestionsAsked": [],
@@ -49,5 +49,25 @@
   ],
   "independentMedicalReview": "2026-10-11: Dr. Alper Mumcu revizyonun ve Bilimsel Editör Notu metninin bağımsız tıbbi incelemesini onayladı (KC bildirimi; yazılı belge repoda değil).",
   "publicationApproval": "2026-10-11: KC editör/yazar Dr. Senai Aksoy yayın onayı verdi (\"mumcu onayı ve benim onayım tamam\").",
-  "authorEditApproval": "2026-10-11: Dr. Aksoy düzenlenmiş aktarımdaki dört dil değişikliğini onayladı (\"dört değişikliği onaylıyorum\"): başlayabiliriz→başlarız; Hastalar→Muayenede ... kadınlar; kişisel plan bağlantı cümlesi; dikkate alırım→hesaba girer."
+  "authorEditApproval": "2026-10-11: Dr. Aksoy düzenlenmiş aktarımdaki dört dil değişikliğini onayladı (\"dört değişikliği onaylıyorum\"): başlayabiliriz→başlarız; Hastalar→Muayenede ... kadınlar; kişisel plan bağlantı cümlesi; dikkate alırım→hesaba girer.",
+  "externalReview20261011": {
+    "source": "Kullanıcının yapıştırdığı dış değerlendirme (2026-10-11), main 3ccc6000 sürümüne göre satır numaralı; sürümle eşleşti.",
+    "applied": [
+      "Kemik: 'herkes için 65 yaşında başlar' → '65 yaş ve üzerindeki kadınlarda önerilir'; Dr. Aksoy yanıtı korunarak kırılganlık kırığı / kortizon / ikincil kemik kaybının tarama kapsamı dışında olduğu ayrı paragrafla belirtildi (USPSTF 2025 kapsamı doğrulandı).",
+      "Rahim ağzı: program yaş aralığı ile taramayı bırakma yaşı ayrıldı; yeterli önceki tarama, ileri derece lezyon/kanser öyküsü ve rahim ağzının alındığı ameliyat USPSTF 2018 [9] ile eklendi; HPV Evidence 5 artık [9]'a bağlı.",
+      "Kan basıncı: tarama yararı (yüksek kesinlik) ile yıllık aralığın sınırlı kanıtı ayrıldı (USPSTF 2021 sayfası: 'evidence on optimal screening intervals is limited').",
+      "Kan testi açılışı 'iki soru yeterlidir' → 'iki temel başlığa odaklanıyoruz'; statin cümlesi 'bu hesap belirler' → 'diğer risk etkenleriyle birlikte önemli bir yer tutar'.",
+      "Kanser bölümü: korku genellemesi ve 'sonucu iyi olsun diye' güvence çağrışımı ölçülü ifadeyle değiştirildi.",
+      "Kapanış: 'yeter' / 'ibarettir' mutlaklığı kaldırıldı; yeni belirti, anormal sonuç, değişen aile öyküsü koşulu eklendi; H2 'Tarihi Bilmek, Değişikliği Fark Etmek' (anchor kapanis korundu).",
+      "HbA1c ve TSH kısa açıklamaları; Dr. Aksoy'un FSH/estradiol/AMH cümlesi birebir korunup arkasına NICE NG23 1.3.4/1.3.6 [10] kapsam cümlesi eklendi (40–45 yaş belirtili ve 40 altı ayrı durum).",
+      "Özet etiketi 'Kısa Klinik Yanıt' (klinik rehber standardı); og:image makale görseline bağlandı."
+    ],
+    "notApplied": [
+      "Ayrı 4:5 byline (1200×1500) ve 2.4:1 kart (2400×1000) kırpımları: mevcut kaynak 1800×1000; büyütme gerekeceği için üretilmedi. Kural gereği editörden özel görsel istenecek. Aynı görsel menopoza-hazirlik-ilk-kontrol-dosyasi kartında da kullanılıyor."
+    ],
+    "reviewerNotesNotActioned": [
+      "Canlı site 403: 2026-10-11 curl ile 200 alındı, yeni metin canlıda doğrulandı; 403 dış aracın bot engellemesi olabilir. Yerel noindex lansman ayarı."
+    ],
+    "approvalStatus": "Değişen metin Mumcu ve KC onayından sonra yazıldı; yeniden onay gerekiyor."
+  }
 }

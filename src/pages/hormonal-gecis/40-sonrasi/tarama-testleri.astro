@@ -35,6 +35,7 @@ const seoTitle = '40 Sonrası Tarama Testleri';
 const articleDescription =
   'Mamografi, HPV testi, kalın bağırsak taraması, kemik ölçümü ve kan testleri: 40 sonrası hangi yaşta, ne sıklıkla? Türkiye programıyla sade takvim.';
 const articlePath = '/hormonal-gecis/40-sonrasi/tarama-testleri/';
+const articleImage = '/images/library/editorial/hg-tarama-testleri.webp';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -62,6 +63,7 @@ const articleSchemas = buildArticleSchemas({
 <SiteLayout
   title={`${seoTitle} - Estranova`}
   description={articleDescription}
+  image={articleImage}
   ogType="article"
   jsonLd={articleSchemas}
 >
@@ -88,7 +90,7 @@ const articleSchemas = buildArticleSchemas({
         imageAlt="Sabah ışığında açık takvim, not defteri ve çay fincanı; 40 sonrası tarama testleri için sakin takip görseli"
       />
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           40 sonrasında belirtisi olmayan bir kadın için takvimin omurgası şudur: yılda bir kan basıncı ölçümü;
           40–69 yaş arasında iki yılda bir mamografi; 30–65 yaş arasında beş yılda bir HPV testi;
@@ -171,6 +173,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Tabloda kan basıncının en üstte durması tesadüf değil. Ucuzdur, birkaç dakika sürer ve yararı yüksek kesinlikle gösterilmiştir
           <Evidence level={5} /> <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+          Yıllık aralık ise uzman önerisidir; en uygun ölçüm aralığına dair kanıt sınırlıdır <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
           Muayenehanede yüksek çıkan bir değer, ilaç başlamadan önce evde veya 24 saatlik ölçümle doğrulanır.
         </p>
 
@@ -188,9 +191,13 @@ const articleSchemas = buildArticleSchemas({
           Raporunuzda "yoğun meme dokusu" yazıyorsa ek ultrason veya MR'ın herkese yararı henüz gösterilemedi; bunu hekiminizle konuşun.
         </p>
         <p>
-          <strong>Rahim ağzı:</strong> 30–65 yaş arasında beş yılda bir HPV testi yapılır <Evidence level={5} />
-          <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
-          Menopoza girmek bu testi bırakmanın nedeni değildir; program 65 yaşına kadar sürer.
+          <strong>Rahim ağzı:</strong> Türkiye programında 30–65 yaş arasında beş yılda bir HPV testi yapılır <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
+          Bu yaş grubunda beş yılda bir HPV testinin yararı güçlü kanıtla gösterilmiştir <Evidence level={5} />
+          <sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
+          Menopoza girmek bu testi bırakmanın nedeni değildir. Programın 65 yaşta bitmesi ise herkesin o yaşta taramayı
+          bırakabileceği anlamına gelmez: bunun için önceki taramalarınızın düzenli ve temiz olması gerekir. Geçmişte rahim ağzında
+          ileri derecede hücre değişikliği ya da kanser öyküsü varsa tarama 65 yaşından sonra da sürebilir. Rahminiz rahim ağzıyla
+          birlikte alındıysa ve bu ameliyat bir ön kanser ya da kanser nedeniyle yapılmadıysa tarama genellikle gerekmez <sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
         </p>
         <p>
           <strong>Kalın bağırsak:</strong> Türkiye programı 50 yaşında iki yılda bir dışkıda gizli kan testiyle başlar;
@@ -201,13 +208,13 @@ const articleSchemas = buildArticleSchemas({
           Annenizde, babanızda ya da kardeşinizde kalın bağırsak kanseri öyküsü varsa başlangıç yaşınızı hekiminizle ayrıca konuşun.
         </p>
         <p>
-          Bu üç randevuyu erteleyen birçok kadının içinde aslında korku vardır. Sonucu duymaktan çekinmek çok insani bir duygu.
-          Ama tarama, tam da sonucu iyi olsun diye erken yapılır.
+          Sonucu öğrenmekten çekinmek, bu randevuları ertelemenin nedenlerinden biri olabilir. Bu çok insani bir duygu.
+          Taramanın amacı ise bir sorunu belirti vermeden, erken bir evrede saptayıp gerekli değerlendirmeyi zamanında başlatmaktır.
         </p>
 
         <h2 id="kemik-yogunlugu">Kemik Ölçümü Ne Zaman Gündeme Gelir?</h2>
         <p>
-          Kemik yoğunluğu ölçümü herkes için 65 yaşında başlar. Daha genç ama menopoza girmiş bir kadında ise kırık riski
+          Kemik yoğunluğu taraması 65 yaş ve üzerindeki kadınlarda önerilir. Daha genç ama menopoza girmiş bir kadında ise kırık riski
           yüksek görünüyorsa öne alınır <Evidence level={4} />
           <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>.
         </p>
@@ -223,6 +230,10 @@ const articleSchemas = buildArticleSchemas({
           aynı şekilde değerlendirmem.
         </p>
         <p>
+          Bu durumların bir kısmı aslında tarama takviminin dışında kalır. Basit bir düşmeyle kırık geçirmiş, uzun süre kortizon
+          kullanan ya da kemik kaybına yol açan bir hastalığı olan bir kadında ölçüm, sıradan taramanın değil, o duruma yönelik
+          değerlendirmenin parçasıdır <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>.
+        <p>
           Benim için belirleyici olan takvim yaşı değil, kemik kaybı ve kırık riskidir. Risk yüksekse ölçümü erkene alırım.
           Risk düşükse ölçümü gereksiz yere tekrarlamak yerine beslenmeye, yeterli kalsiyuma, direnç egzersizlerine ve diğer koruyucu
           önlemlere ağırlık veririm. İlk ölçüm normal çıktığında testin ne zaman tekrarlanacağına dair kanıt da zaten sınırlıdır
@@ -232,21 +243,24 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="metabolik-izlem">Kan Testlerinde Daha Uzun Liste Daha İyi Sonuç Demek Değil</h2>
         <p>
-          Kan testlerinde iki soru yeterlidir: şekeriniz yükseliyor mu ve kalp-damar riskiniz ne düzeyde?
+          Bu bölümde iki temel başlığa odaklanıyoruz: şekeriniz yükseliyor mu ve kalp-damar riskiniz ne düzeyde?
         </p>
         <p>
-          Fazla kilonuz varsa 35 yaşından itibaren açlık şekeri veya HbA1c ölçülür. Sonuç normalse üç yılda bir tekrarlamak
+          Fazla kilonuz varsa 35 yaşından itibaren açlık şekeri veya HbA1c (son iki-üç ayın ortalama kan şekerini gösteren test) ölçülür. Sonuç normalse üç yılda bir tekrarlamak
           makul bir aralıktır <Evidence level={4} /> <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
           Kolesterol tek başına bir not gibi okunmaz. Kan basıncı, sigara ve şekerle birlikte on yıllık kalp-damar riskinizi
-          hesaplamaya yarar; ilaç kararını da bu hesap belirler <sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup>.
+          hesaplamaya yarar. Kolesterol düşürücü ilaç kararında bu hesap, diğer risk etkenleriyle birlikte önemli bir yer tutar <sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup>.
         </p>
         <p>
           Muayenede bazen hiçbir şikâyeti olmayan kadınlar bütün hormonlarına, tiroidlerine, vitaminlerine ve tümör belirteçlerine
           bakılmasını istiyor. Oysa çok sayıda test yapmak mutlaka daha iyi bir sağlık kontrolü anlamına gelmiyor.
           Tiroid hastalığını düşündüren bir belirti veya risk faktörü yoksa her kadına rutin olarak geniş bir tiroid paneli istemem;
-          gerektiğinde önce TSH ölçümüyle başlarız. Belirtisi olmayan erişkinde rutin tiroid taramasının yararı da gösterilemedi
+          gerektiğinde önce TSH (tiroid uyarıcı hormon) ölçümüyle başlarız. Belirtisi olmayan erişkinde rutin tiroid taramasının yararı da gösterilemedi
           <sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup>.
           Benzer şekilde, yalnızca menopoz yaklaşıyor diye FSH, estradiol veya AMH ölçmenin çoğu kadında bir yararı yok.
+          Bu, belirtisi olmayan bir kadında rutin test beklentisi için geçerlidir. 40–45 yaşlarında adet düzeni değişen ve menopoz
+          belirtileri başlayan bir kadında ya da 40 yaşından önce erken menopoz düşünülen bir kadında FSH ölçümü değerlendirmenin
+          parçası olabilir <sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup>.
           Çarpıntı, belirgin yorgunluk ya da açıklanamayan kilo değişimi varsa test zaten tarama olmaktan çıkar; belirtiye
           yönelik bir sorudur. Menopozun bazı belirtileri tiroid sorunlarıyla karışabildiği için bu ayrım muayenede yapılır.
         </p>
@@ -299,13 +313,14 @@ const articleSchemas = buildArticleSchemas({
           footnote="Bu maddeler tanı koymaz; tarama sırasını beklemeden hekim değerlendirmesi gerektirebilecek durumları hatırlatır. Ani ve şiddetli göğüs ağrısı veya nefes darlığında 112'yi arayın."
         />
 
-        <h2 id="kapanis">Bir Sonraki Tarihi Bilmek Yeter</h2>
+        <h2 id="kapanis">Tarihi Bilmek, Değişikliği Fark Etmek</h2>
         <p>
-          İyi bir tarama planını ezberlemeniz gerekmez; bir sonraki tarihi bilmeniz yeter.
+          İyi bir tarama planını ezberlemeniz gerekmez; bir sonraki tarihi bilmeniz işinizi çok kolaylaştırır.
         </p>
         <p>
-          Takviminiz bir kez çıkarıldıktan sonra iş, tarihleri kaçırmamaktan ibarettir.
-          Listenin dışında kalan her test için sorulacak soru ise hep aynıdır: Sonucu bende neyi değiştirecek?
+          Takvim, her şey yolundayken işe yarar. Yeni bir belirti, anormal bir sonuç ya da ailenizde yeni öğrendiğiniz bir hastalık
+          planı değiştirir; böyle bir durumda sıranızı beklemeyin. Listenin dışında kalan her test için sorulacak soru ise hep aynıdır:
+          Sonucu bende neyi değiştirecek?
         </p>
 
         <h2 id="kaynaklar">Kaynaklar</h2>
@@ -345,6 +360,14 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-8">
             <strong>8.</strong> US Preventive Services Task Force. <em>Screening for Thyroid Dysfunction: Recommendation Statement.</em> Ann Intern Med. 2015;162(9):641-650.{' '}
             <a href="https://pubmed.ncbi.nlm.nih.gov/25798805/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-9">
+            <strong>9.</strong> US Preventive Services Task Force. <em>Screening for Cervical Cancer: Recommendation Statement.</em> JAMA. 2018;320(7):674-686.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30140884/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-10">
+            <strong>10.</strong> National Institute for Health and Care Excellence (NICE). <em>Menopause: identification and management (NG23), öneri 1.3.4 ve 1.3.6.</em> 2015, güncelleme 2024.{' '}
+            <a href="https://www.nice.org.uk/guidance/ng23/chapter/Recommendations" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Kılavuz sayfası</a>.
           </li>
         </ol>
       </ArticleProsePanel>
