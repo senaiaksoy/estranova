@@ -40,7 +40,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Östrojen Biyolojisi ve Sağlık — Tek Hormon Değil, Bir Aile';
 const seoTitle = 'Östrojen Biyolojisi — Tek Hormon Değil';
-const articleImage = '/images/library/editorial/bp-estrogen-biyolojisi.webp';
+const articleImage = '/images/library/editorial/bp-estrogen-biyolojisi-muze.webp';
 const articleDescription =
   'Östrojen tek bir hormon değil, E1–E4 ailesi. Dokuya göre değişen etkiler, yaşam boyu değişim, hormon tedavisi ve kanser ilişkisi kaynaklarıyla.';
 const faqItems = articleFaqs['/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/'] ?? [];
@@ -87,8 +87,8 @@ const articleSchemas = buildArticleSchemas({
         lastUpdated="11 Ekim 2026"
         readingMinutes={10}
         medicalReviewer="Dr. Alper Mumcu"
-        imageSrc="/images/library/editorial/bp-estrogen-biyolojisi.webp"
-        imageAlt="Akademik çalışma masasında biyoloji notları, kitap ve çay bardağı; östrojen biyolojisi yazısı için editoryal görsel"
+        imageSrc="/images/library/editorial/bp-estrogen-biyolojisi-muze-byline.webp"
+        imageAlt="Aydınlık bir bilim müzesinde soyut bir molekül heykeline bakan iki arkadaş; biri yukarıyı işaret ediyor, diğeri gülümsüyor"
       />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
@@ -284,8 +284,10 @@ const articleSchemas = buildArticleSchemas({
         <p>
           <strong>Yumurtalık kanserinde</strong> 52 çalışmayı birleştiren analiz küçük ama belirgin bir artış buldu.
           50 yaş civarında 5 yıl kullanan her 1000 kadında yaklaşık bir ek vaka görülür <sup><a href="#kaynak-10">[10]</a></sup>
-          <Evidence level={4} />. <strong>Kalın bağırsak kanseri</strong> için bazı çalışmalarda risk azalması bildirilmiş
-          olsa da bu bulgu tedavi kararını tek başına belirlemez. Hormon tedavisi kanserden korunmak için kullanılmaz.
+          <Evidence level={4} />. <strong>Kalın bağırsak kanseri</strong> ise daha az görüldü: büyük bir randomize çalışmada
+          östrojen-progestin alan kadınlarda bu kanser plaseboya göre daha seyrekti, ama saptanan kanserler daha ileri
+          evredeydi <sup><a href="#kaynak-14">[14]</a></sup> <Evidence level={4} />. Bu bulgu tedavi kararını tek başına
+          belirlemez; hormon tedavisi kanserden korunmak için kullanılmaz.
         </p>
         <p>
           Hormon reseptörü pozitif meme kanseri öyküsü olan kadınlarda sistemik hormon tedavisi genellikle önerilmez.
@@ -362,6 +364,7 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-11">Barrett-Connor E, Mosca L, Collins P ve ark. <em>Effects of raloxifene on cardiovascular events and breast cancer in postmenopausal women.</em> N Engl J Med. 2006;355(2):125-137. <a href="https://pubmed.ncbi.nlm.nih.gov/16837676/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-12">Franco OH, Chowdhury R, Troup J ve ark. <em>Use of Plant-Based Therapies and Menopausal Symptoms: A Systematic Review and Meta-analysis.</em> JAMA. 2016;315(23):2554-2563. <a href="https://pubmed.ncbi.nlm.nih.gov/27327802/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-13">Harlow SD, Gass M, Hall JE ve ark. <em>Executive summary of the Stages of Reproductive Aging Workshop + 10: addressing the unfinished agenda of staging reproductive aging.</em> J Clin Endocrinol Metab. 2012;97(4):1159-1168. <a href="https://pubmed.ncbi.nlm.nih.gov/22344196/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-14">Chlebowski RT, Wactawski-Wende J, Ritenbaugh C ve ark. <em>Estrogen plus progestin and colorectal cancer in postmenopausal women.</em> N Engl J Med. 2004;350(10):991-1004. <a href="https://pubmed.ncbi.nlm.nih.gov/14999111/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
         </ol>
       </ArticleProsePanel>
 

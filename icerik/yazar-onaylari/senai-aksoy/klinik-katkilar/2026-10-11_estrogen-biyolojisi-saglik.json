@@ -3,7 +3,7 @@
   "pathname": "/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code audit + revizyon (worktree claude/estrojen-revizyon).",
-  "status": "Tamamlandı: hekim yanıtları, not teyidi, Dr. Mumcu incelemesi ve KC yayın onayı 2026-10-11 kayıtlı. Açık: byline/kart ayrı kırpımları; kolon kanseri cümlesine kaynak.",
+  "status": "3ea3c2da yayında. Kolon kanseri kaynağı ve özel görseller taslakta (worktree es2).",
   "baselineApproval": "article-approvals.ts: yalnızca 2026-05-04 prelaunch envanter mutabakatı. 2026-08-06 esaslı güncellemenin (commit a46ee7d1) tıbbi inceleme veya onay kaydı yok; byline/şemadaki Mumcu inceleyen bilgisi kayıtla desteklenmiyordu.",
   "revisionScope": [
     "[5] künyesi: 'Lobo RA ve arkadaşları' yanlıştı → Battipaglia C, Genazzani AD, Nappi RE, La Marca A. Minerva Obstet Gynecol 2024;76(6):590-603 (PMID 39283289).",
@@ -68,5 +68,10 @@
   ],
   "independentMedicalReview": "2026-10-11: Dr. Alper Mumcu revizyonun ve kendi imzalı Bilimsel Editör Notu metninin bağımsız tıbbi incelemesini onayladı (KC bildirimi; yazılı belge repoda değil).",
   "publicationApproval": "2026-10-11: KC editör/yazar Dr. Senai Aksoy yayın onayı verdi (\"mumcu onayı ve benim onayım tamam\").",
-  "faqConversionStatus": "Tamamlandı: 5/5 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı."
+  "faqConversionStatus": "Tamamlandı: 5/5 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı.",
+  "followUp20261011": {
+    "colonCancer": "Kaynaksız \"bazı çalışmalarda risk azalması\" cümlesi WHI E+P randomize çalışmasıyla kaynaklandı: kalın bağırsak kanseri daha seyrek (43 vs 72; HR 0,56), ancak saptanan kanserler daha ileri evrede (Chlebowski 2004 NEJM, PMID 14999111) [14]; Evidence 4.",
+    "images": "Byline 4:5 (1200×1500) ve kart 2.4:1 (2400×1000) yazıya özel AI görselleri: bilim müzesinde soyut molekül heykeline bakan iki arkadaş (50–54, boyalı saç). Higgsfield GPT Image 2.5, kart job 01c03c6b, byline job 8558a4a6 (kart referanslı); IPTC trainedAlgorithmicMedia etiketli; npm run article:images (centre). Hero değişmedi.",
+    "approvalStatus": "KC görsel onayı ve kolon cümlesi için Dr. Mumcu onayı bekleniyor."
+  }
 }

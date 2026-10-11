@@ -486,8 +486,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Aydınlık bir oturma odasında iki kadın direnç bandı ve defterdeki hareket planı üzerine sohbet ediyor; 40 sonrası kemik sağlığı yazısı için kart görseli',
   },
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': {
-    src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
-    alt: 'Akademik çalışma masasında biyoloji notları, kitap ve çay bardağı; östrojen biyolojisi yazısı için kart görseli',
+    src: '/images/library/editorial/bp-estrogen-biyolojisi-muze.webp',
+    alt: 'Boğaz manzaralı aydınlık bir bilim müzesinde pirinç, krem ve gül tonlu soyut bir molekül heykeline bakan iki arkadaş; bordo elbiseli kadın yukarıyı işaret ediyor, krem ceketli arkadaşı gülüyor',
   },
   '/hormonal-gecis/menopoz/menopoz-nedir/': {
     src: '/images/library/editorial/hg-menopoz-nedir.webp',
