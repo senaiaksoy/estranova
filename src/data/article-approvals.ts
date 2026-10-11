@@ -404,8 +404,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/40-sonrasi/tarama-testleri/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-07',
-    note: 'KC editor direct approval: audit reconciliation icin canli schema kullanan tarama testleri route production approval setine eklendi; mevcut Senai klinik yazari, static manifest ve article schema ile hizalandi.',
+    approvedAt: '2026-10-11',
+    note: 'Prelaunch envanter onayı 2026-05-07 (audit mutabakatı). 2026-10-11: audit + revizyon (yaş/aralık tablosu, Türkiye ulusal kanser tarama programı, kalın bağırsak taraması ve kan basıncı, tiroid/inflamatuvar belirteç düzeltmesi, USPSTF 2025 kemik ölçümü, 8 numaralı kaynak, dayanaksız Evidence etiketleri kaldırıldı, Bilimsel Editör Notu Dr. Alper Mumcu imzasına çevrildi; Dr. Aksoy’un iki gerçek gövde yanıtı işlendi, “tek dosya, net soru” cümlesi kendisine ait olmadığı için kaldırıldı) KC editör/yazar Dr. Senai Aksoy tarafından onaylandı; dört dil düzenlemesini ayrıca onayladı. Dr. Alper Mumcu revizyonun ve Bilimsel Editör Notu metninin bağımsız tıbbi incelemesini onayladı (KC bildirimi, 2026-10-11; belge repoda değil). Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-11_tarama-testleri.json.',
   },
   {
     pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',

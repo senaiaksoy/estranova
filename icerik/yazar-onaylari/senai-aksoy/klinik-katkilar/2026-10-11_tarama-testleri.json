@@ -3,7 +3,7 @@
   "pathname": "/hormonal-gecis/40-sonrasi/tarama-testleri/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası sorulan üç gövde sorusuna Dr. Aksoy'un yazılı yanıtları (iki yanıt + üçüncü soruya 'tek dosya, net soru benim cümlem değil' cevabı).",
-  "status": "Gövde revizyonu: Dr. Aksoy yanıt aktarımını 2026-10-11 onayladı. Dr. Alper Mumcu bağımsız tıbbi incelemesi (revizyon + Bilimsel Editör Notu metni) ve KC yayın onayı bekleniyor. Commit/push/deploy yetkisi verilmedi.",
+  "status": "Tamamlandı: Dr. Aksoy yanıt aktarımı ve dil düzenlemeleri, Dr. Mumcu bağımsız tıbbi inceleme ve KC yayın onayı 2026-10-11 kayıtlı.",
   "revisionScope": "Audit (2026-10-11) bulgularına göre: başlıktaki 'ne zaman / ne sıklıkla' sorusu yaş ve aralık tablosuyla karşılandı; Türkiye ulusal kanser tarama programı (HSGM) eklendi; kalın bağırsak taraması ve kan basıncı eklendi; tiroid/inflamatuvar belirteç listesi düzeltildi; DXA bölümü USPSTF 2025 ile hizalandı; dayanaksız Evidence etiketleri kaldırıldı/yeniden bağlandı; numaralı kaynaklar bölümü (8 kaynak) eklendi; Bilimsel Editör Notu imzası Dr. Alper Mumcu'ya çevrildi; tek kelimelik H2 ve soru başlığı yoğunluğu düzeltildi; tekrarlar birleştirildi; kırmızı bayrak kutusu düzeltildi; modifiedDate/lastUpdated 11 Ekim 2026. Hero görseli değişmedi. SSS eklenmedi (Estranova'da zorunlu değil; mevcut SSS yoktu).",
   "faqConversionStatus": "Uygulanmaz: makalede SSS yok.",
   "faqQuestionsAsked": [],
@@ -47,7 +47,7 @@
       "answeredAt": "2026-10-11"
     }
   ],
-  "independentMedicalReview": "Bekliyor: Dr. Alper Mumcu (Senai kendi makalesini inceleyemez). Bilimsel Editör Notu taslağı Mumcu imzasıyla yazıldı; metni Mumcu onayına sunulacak.",
-  "publicationApproval": "Bekliyor.",
+  "independentMedicalReview": "2026-10-11: Dr. Alper Mumcu revizyonun ve Bilimsel Editör Notu metninin bağımsız tıbbi incelemesini onayladı (KC bildirimi; yazılı belge repoda değil).",
+  "publicationApproval": "2026-10-11: KC editör/yazar Dr. Senai Aksoy yayın onayı verdi (\"mumcu onayı ve benim onayım tamam\").",
   "authorEditApproval": "2026-10-11: Dr. Aksoy düzenlenmiş aktarımdaki dört dil değişikliğini onayladı (\"dört değişikliği onaylıyorum\"): başlayabiliriz→başlarız; Hastalar→Muayenede ... kadınlar; kişisel plan bağlantı cümlesi; dikkate alırım→hesaba girer."
 }
