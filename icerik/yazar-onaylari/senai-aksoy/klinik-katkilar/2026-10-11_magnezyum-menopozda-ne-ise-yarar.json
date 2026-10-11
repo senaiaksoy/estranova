@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası Dr. Aksoy'a yöneltilen ilk üç SSS sorusunun yazılı yanıtları.",
-  "status": "1cd2e2af yayında. Geniş audit düzeltmeleri taslakta (worktree mg-a5); Dr. Mumcu ve KC onayı bekleniyor.",
+  "status": "Tamamlandı: beş tur da onaylı (2026-10-11). Açık: Mumcu notundaki oksit cümlesi (Mumcu kararı); SSS klinik görüşleri için kaynak (Dr. Aksoy kararı); NIH ODS tarihi.",
   "revisionScope": "Kaynak düzeltmeleri: [10] yanlış PMID 2246470 (AIDS makalesi) → Zehender 1997 MAGICA PMID 9120155, cümle eşleşmesi düzeltildi; [8] Belsey 2010 (gerçek konu: kabızlıkta yaşam kalitesi) → Bharucha & Lacy 2020 PMID 31945360; [3] başlık ve makale no (125) düzeltildi; [7] sitrat cümlesinden ayrıldı, glisinat tolerans iddiası kaynaksız olduğu için gövdeden çıkarıldı (hekim yanıtında); [9] 'düşük-orta' → 'düşük' (Boyle: poor quality); [11] çalışma grubu (155 sağlıklı erişkin, 18–65, 4 hafta) eklendi; kramp Evidence 2 → 4 (Cochrane orta/yüksek kesinlikte yararsızlık). Kısa Klinik Yanıt doğrudan cevaba çevrildi; 6 soru-H2'nin 5'i ve tek kelimelik Kapanış başlığı düz cümleye çevrildi (anchor'lar korundu); Kaynaklar Kapanış'tan sonraya alındı; tekrarlar birleştirildi; kırmızı bayrak kutusundan uyarı olmayan madde çıkarıldı; inceleme notundaki yazar sesi cümlesi düzeltildi; og:image eklendi; modifiedDate 11 Ekim 2026. Doz üst sınırı eklenmedi: NIH ODS ve NCBI Bookshelf bot doğrulaması nedeniyle birincil kaynak okunamadı.",
   "faqConversionStatus": "Tamamlandı: 4/4 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı.",
   "faqQuestionsAsked": [
@@ -115,6 +115,6 @@
       "SSS yanıtlarında kaynakçada karşılığı olmayan klinik görüşler (sitrat emilimi, sıcak basması, osteoporoz ilacı, glisinat \"bazı çalışmalar\") — Dr. Aksoy kararı; yanıtlar değişmedi.",
       "[1]/[12] aynı NIH sayfası ve tarih; [15] yeniden paketleyici etiketi — kapsam dışında bırakıldı."
     ],
-    "approvalStatus": "Dr. Mumcu incelemesi ve KC yayın onayı bekleniyor."
+    "approvalStatus": "2026-10-11: Dr. Alper Mumcu ve KC (Dr. Aksoy) onayladı (\"mumcu onayı ve benim onayım tamam\")."
   }
 }
