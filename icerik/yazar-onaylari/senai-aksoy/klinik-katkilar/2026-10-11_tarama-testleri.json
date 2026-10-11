@@ -1,0 +1,52 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/hormonal-gecis/40-sonrasi/tarama-testleri/",
+  "answeredAt": "2026-10-11",
+  "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası sorulan üç gövde sorusuna Dr. Aksoy'un yazılı yanıtları (iki yanıt + üçüncü soruya 'tek dosya, net soru benim cümlem değil' cevabı).",
+  "status": "Gövde revizyonu taslak. Dr. Aksoy'un düzenlenmiş yanıt aktarımını görmesi, Dr. Alper Mumcu bağımsız tıbbi incelemesi ve KC yayın onayı bekleniyor. Commit/push/deploy yetkisi verilmedi.",
+  "revisionScope": "Audit (2026-10-11) bulgularına göre: başlıktaki 'ne zaman / ne sıklıkla' sorusu yaş ve aralık tablosuyla karşılandı; Türkiye ulusal kanser tarama programı (HSGM) eklendi; kalın bağırsak taraması ve kan basıncı eklendi; tiroid/inflamatuvar belirteç listesi düzeltildi; DXA bölümü USPSTF 2025 ile hizalandı; dayanaksız Evidence etiketleri kaldırıldı/yeniden bağlandı; numaralı kaynaklar bölümü (8 kaynak) eklendi; Bilimsel Editör Notu imzası Dr. Alper Mumcu'ya çevrildi; tek kelimelik H2 ve soru başlığı yoğunluğu düzeltildi; tekrarlar birleştirildi; kırmızı bayrak kutusu düzeltildi; modifiedDate/lastUpdated 11 Ekim 2026. Hero görseli değişmedi. SSS eklenmedi (Estranova'da zorunlu değil; mevcut SSS yoktu).",
+  "faqConversionStatus": "Uygulanmaz: makalede SSS yok.",
+  "faqQuestionsAsked": [],
+  "faqQuestionsRemaining": [],
+  "faqResponses": [],
+  "removedUnverifiedVoice": [
+    {
+      "original": "Klinik pratikte en işe yarayan yaklaşım “tek dosya, net soru” yöntemi oluyor: her kontrolde aynı anda çok başlık açmak yerine öncelikli iki soruya odaklanmak.",
+      "decision": "Kaldırıldı. Dr. Aksoy 2026-10-11: 'tek dosya, net soru benim cümlem değil'."
+    }
+  ],
+  "bodyClinicalObservations": [
+    {
+      "section": "tarama-ne-demek",
+      "question": "40'lı yaşlarda belirtisi olmayan bir kadının tarama planını kurarken ilk neye bakarsınız? Genellikle istemediğiniz ama sık talep edilen test var mı?",
+      "original": "Hastalar bazen hiçbir şikâyetleri olmasa bile bütün hormonlarına, tiroidlerine, vitaminlerine ve tümör belirteçlerine bakılmasını istiyor. Oysa çok sayıda test yapmak mutlaka daha iyi bir sağlık kontrolü anlamına gelmiyor. [...] Benim yaklaşımım, mümkün olduğunca çok test istemek değil, gerçekten gerekli taramaları zamanında yapmaktır. Gereksiz tetkikler bazen hastayı korumak yerine, önemsiz sonuçlar nedeniyle yeni incelemelere ve endişelere yol açabiliyor.",
+      "editedForArticle": "Gereksiz tetkikler bazen hastayı korumak yerine, önemsiz sonuçlar nedeniyle yeni incelemelere ve endişelere yol açabiliyor. Benim yaklaşımım, mümkün olduğunca çok test istemek değil, gerçekten gerekli taramaları zamanında yapmaktır.",
+      "edits": "İki cümlenin sırası değişti (bölüm akışı için); kelimeler aynı.",
+      "answeredAt": "2026-10-11"
+    },
+    {
+      "section": "metabolik-izlem",
+      "original": "Hastalar bazen hiçbir şikâyetleri olmasa bile bütün hormonlarına, tiroidlerine, vitaminlerine ve tümör belirteçlerine bakılmasını istiyor. Oysa çok sayıda test yapmak mutlaka daha iyi bir sağlık kontrolü anlamına gelmiyor. Örneğin tiroid hastalığını düşündüren bir belirti veya risk faktörü yoksa her kadına rutin olarak geniş bir tiroid paneli istemem. Gerektiğinde önce TSH ölçümüyle değerlendirmeye başlayabiliriz. Benzer şekilde, yalnızca menopoz yaklaşıyor diye FSH, estradiol veya AMH ölçmenin çoğu kadında bir yararı yok.",
+      "editedForArticle": "Muayenede bazen hiçbir şikâyeti olmayan kadınlar bütün hormonlarına, tiroidlerine, vitaminlerine ve tümör belirteçlerine bakılmasını istiyor. Oysa çok sayıda test yapmak mutlaka daha iyi bir sağlık kontrolü anlamına gelmiyor. Tiroid hastalığını düşündüren bir belirti veya risk faktörü yoksa her kadına rutin olarak geniş bir tiroid paneli istemem; gerektiğinde önce TSH ölçümüyle başlarız. Belirtisi olmayan erişkinde rutin tiroid taramasının yararı da gösterilemedi [8]. Benzer şekilde, yalnızca menopoz yaklaşıyor diye FSH, estradiol veya AMH ölçmenin çoğu kadında bir yararı yok.",
+      "edits": "'Hastalar' → 'Muayenede ... kadınlar' (okur hitabı); 'Örneğin' çıkarıldı; iki cümle noktalı virgülle birleşti; 'değerlendirmeye başlayabiliriz' → 'başlarız' (kısaltma — Dr. Aksoy teyidi bekleniyor); arasına USPSTF 2015 kaynaklı cümle [8] eklendi (hekim sözü değil, kaynak cümlesi).",
+      "answeredAt": "2026-10-11"
+    },
+    {
+      "section": "kisisel-plan",
+      "original": "Ben öncelikle hastanın yaşına, kişisel ve ailevi hastalık öyküsüne, adet düzenine ve daha önce yaptırdığı taramalara bakarım. Çünkü kırklı yaşlara giren her kadına aynı testleri yapmak doğru değil. Özellikle ailesinde erken yaşta meme, yumurtalık veya kalın bağırsak kanseri olup olmadığını öğrenmek isterim. Tansiyon, kilo, sigara kullanımı ve diyabet gibi kalp-damar hastalığı risklerini de değerlendiririm. [...] Kişisel veya ailesel risk varsa bu programı değiştirmek gerekebilir.",
+      "editedForArticle": "Kırklı yaşlarında hiçbir şikâyeti olmayan bir kadının planını kurarken önce yaşına, kendisinin ve ailesinin hastalık öyküsüne, adet düzenine ve daha önce yaptırdığı taramalara bakarım. Çünkü kırklı yaşlara giren her kadına aynı testleri yapmak doğru değil. Ailesinde erken yaşta meme, yumurtalık veya kalın bağırsak kanseri olup olmadığını özellikle öğrenmek isterim. Tansiyon, kilo, sigara ve diyabet gibi kalp-damar risklerini de aynı görüşmede değerlendiririm. Kişisel veya ailesel risk varsa ulusal programdaki takvimi değiştirmek gerekebilir; o zaman \"herkes için\" yazılmış tablo size yetmez, kendi takviminizi birlikte çıkarırız.",
+      "edits": "Soru bağlamı cümleye taşındı; 'aynı görüşmede' ve son yarım cümle ('o zaman ... birlikte çıkarırız') bağlantı için eklendi — yeni klinik içerik değil, Dr. Aksoy teyidi bekleniyor. Yanıttaki 40–69 mamografi / 30–65 HPV rakamları HSGM sayfasıyla eşleşti; tabloda zaten var, burada tekrar edilmedi.",
+      "answeredAt": "2026-10-11"
+    },
+    {
+      "section": "kemik-yogunlugu",
+      "question": "65 yaşından önce hangi kadınlarda kemik yoğunluğu ölçümü istersiniz?",
+      "original": "Kemik yoğunluğu ölçümü için her kadının 65 yaşına gelmesini beklemem. Ancak yalnızca 40 veya 50 yaşına girdiği için de herkesten bu testi istemem. Özellikle erken menopoza giren kadınlarda kemik sağlığını daha dikkatli değerlendiririm. Çünkü östrojen hormonunun beklenenden erken azalması kemik kaybını hızlandırabilir. Bunun dışında daha önce basit bir düşmeyle kemik kırığı geçirmiş olması, uzun süre kortizon kullanması, çok düşük vücut ağırlığı veya anne ya da babasında kalça kırığı öyküsü bulunması kararımı etkiler. Sigara, aşırı alkol tüketimi ve kemik kaybına yol açabilecek bazı kronik hastalıkları da dikkate alırım. Örneğin 43 yaşında menopoza girmiş bir kadınla, 53 yaşında hâlâ düzenli adet gören ve hiçbir ek risk faktörü bulunmayan bir kadını aynı şekilde değerlendirmem. Benim için belirleyici olan hastanın takvim yaşı değil, kemik kaybı ve kırık riskidir. Risk yüksekse kemik yoğunluğu ölçümünü erkene alırım. Risk düşükse gereksiz yere tekrarlanan ölçümler yapmak yerine beslenme, yeterli kalsiyum alımı, direnç egzersizleri ve diğer koruyucu önlemlere ağırlık veririm.",
+      "editedForArticle": "Ben her kadının 65 yaşına gelmesini beklemem; ama yalnızca 40 ya da 50 yaşına girdi diye de herkesten bu testi istemem. Erken menopoza giren kadınlarda kemik sağlığını daha dikkatli değerlendiririm, çünkü östrojenin beklenenden erken azalması kemik kaybını hızlandırabilir. Daha önce basit bir düşmeyle kırık geçirmiş olmak, uzun süre kortizon kullanmak, çok düşük vücut ağırlığı ya da anne veya babada kalça kırığı öyküsü kararımı etkiler. Sigara, aşırı alkol ve kemik kaybına yol açabilen bazı kronik hastalıklar da hesaba girer. 43 yaşında menopoza girmiş bir kadınla, 53 yaşında hâlâ düzenli adet gören ve başka risk taşımayan bir kadını aynı şekilde değerlendirmem. Benim için belirleyici olan takvim yaşı değil, kemik kaybı ve kırık riskidir. Risk yüksekse ölçümü erkene alırım. Risk düşükse ölçümü gereksiz yere tekrarlamak yerine beslenmeye, yeterli kalsiyuma, direnç egzersizlerine ve diğer koruyucu önlemlere ağırlık veririm. İlk ölçüm normal çıktığında testin ne zaman tekrarlanacağına dair kanıt da zaten sınırlıdır [7].",
+      "edits": "Kısaltma ve akış: 'Kemik yoğunluğu ölçümü için' (bölüm başlığından anlaşıldığı için) ve 'Örneğin' çıkarıldı; cümleler birleştirildi; 'hastanın' çıkarıldı; 'dikkate alırım' → 'hesaba girer'. Son cümle hekim sözü değil, USPSTF 2025 kaynak cümlesi [7]. Anlam değişmedi; Dr. Aksoy teyidi bekleniyor. Önceki metindeki 'küçük bir düşmede kırık → tarama değil doğrudan değerlendirme' cümlesi, Dr. Aksoy yanıtıyla örtüştüğü için kaldırıldı.",
+      "answeredAt": "2026-10-11"
+    }
+  ],
+  "independentMedicalReview": "Bekliyor: Dr. Alper Mumcu (Senai kendi makalesini inceleyemez). Bilimsel Editör Notu taslağı Mumcu imzasıyla yazıldı; metni Mumcu onayına sunulacak.",
+  "publicationApproval": "Bekliyor."
+}

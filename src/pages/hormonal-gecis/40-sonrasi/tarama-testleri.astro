@@ -10,51 +10,51 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
 import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const hero = submenuHeroByRoute['/hormonal-gecis/40-sonrasi/tarama-testleri/']!;
 const tocEntries = [
   { id: 'tarama-ne-demek', label: 'Tarama Ne Demek?' },
-  { id: 'temel-bes-baslik', label: '40 Sonrasında Temel Başlıklar' },
-  { id: 'kemik-yogunlugu', label: 'Kemik Sağlığı ve DXA' },
-  { id: 'metabolik-izlem', label: 'Metabolik İzlem ve Kan Testleri' },
-  { id: 'kadina-ozgu-izlem', label: 'Kadına Özgü İzlem Hattı' },
-  { id: 'kisisel-plan', label: 'Kişisel Plan Nasıl Kurulur?' },
-  { id: 'hekim-gorusmesi', label: 'Hekim Görüşmesine Hazırlık' },
+  { id: 'temel-bes-baslik', label: '40 Sonrası Takvim' },
+  { id: 'kadina-ozgu-izlem', label: 'Meme, Rahim Ağzı, Kalın Bağırsak' },
+  { id: 'kemik-yogunlugu', label: 'Kemik Ölçümü' },
+  { id: 'metabolik-izlem', label: 'Kan Testleri' },
+  { id: 'kisisel-plan', label: 'Planı Kişiye Göre Kurmak' },
+  { id: 'hekim-gorusmesi', label: 'Görüşmeye Hazırlık' },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
 ];
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = '40 Sonrası Tarama Testleri — Ne Zaman, Neden, Ne Sıklıkla?';
 const seoTitle = '40 Sonrası Tarama Testleri';
 const articleDescription =
-  '40 sonrası tarama planını kemik, metabolik ve kadın sağlığı başlıklarında sade bir yaklaşımla ele alan başlangıç rehberi.';
+  'Mamografi, HPV testi, kalın bağırsak taraması, kemik ölçümü ve kan testleri: 40 sonrası hangi yaşta, ne sıklıkla? Türkiye programıyla sade takvim.';
 const articlePath = '/hormonal-gecis/40-sonrasi/tarama-testleri/';
-const faqItems = articleFaqs[articlePath] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '5 Mayıs 2026',
+  modifiedDate: '11 Ekim 2026',
   pathname: articlePath,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/40-sonrasi/',
   keywords: [
     '40 sonrası tarama',
-    'koruyucu sağlık',
+    'mamografi',
+    'HPV testi',
+    'kalın bağırsak kanseri taraması',
     'kemik yoğunluğu',
-    'metabolik izlem',
+    'kan basıncı',
+    'koruyucu sağlık',
     'menopoz',
-    'kadın sağlığı kontrolleri',
   ],
-  faqItems,
   siteUrl,
 });
 ---
@@ -71,7 +71,7 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuHero
       eyebrow="Hormonal Geçiş · 40 Sonrası"
       title={articleTitle}
-      lede="Bilgilendirme amaçlıdır; kişisel tarama planı hekiminizle belirlenir."
+      lede="Hangi test, hangi yaşta, ne sıklıkla: Türkiye programı ve güncel kılavuzlar üzerinden sade bir takvim."
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -82,178 +82,302 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="5 Mayıs 2026"
-        readingMinutes={8}
+        lastUpdated="11 Ekim 2026"
+        readingMinutes={9}
         imageSrc="/images/library/editorial/hg-tarama-testleri.webp"
         imageAlt="Sabah ışığında açık takvim, not defteri ve çay fincanı; 40 sonrası tarama testleri için sakin takip görseli"
       />
 
       <ArticleSummary title="Kısa Özet">
         <p>
-          Tarama testleri, belirti başlamadan riski erken yakalamak için kullanılır; yani korku listesi değil, yol haritasıdır.
-          40 sonrasında bu plan; kemik sağlığı, metabolik göstergeler ve kadın sağlığı başlıklarını birlikte düşünmeyi gerektirir
-          <Evidence level={5} />.
-          Tek bir “herkese uyan liste” yoktur; doğru plan kişisel risk profiliyle ve hekim görüşmesiyle belirlenir.
+          40 sonrasında belirtisi olmayan bir kadın için takvimin omurgası şudur: yılda bir kan basıncı ölçümü;
+          40–69 yaş arasında iki yılda bir mamografi; 30–65 yaş arasında beş yılda bir HPV testi;
+          50 yaşından itibaren kalın bağırsak taraması. Kemik ölçümü 65 yaşında, risk varsa daha önce gündeme gelir.
+          Türkiye'de bu üç kanser taraması aile sağlığı merkezlerinde ve Kanser Erken Teşhis, Tarama ve Eğitim Merkezlerinde (KETEM)
+          ücretsizdir <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+          Aile öyküsü ve kişisel risk bu takvimi öne çekebilir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="tarama-ne-demek">Tarama Testi Ne Demek, Neyi Değiştirir?</h2>
+        <h2 id="tarama-ne-demek">Tarama, Belirti Yokken Sorulan Sorudur</h2>
         <p>
-          Tarama, şikayet başladıktan sonra yapılan test değil; şikayet yokken riski erken yakalama yaklaşımıdır.
+          Tarama testi, hiçbir şikâyetiniz yokken gizli bir sorunu erken yakalamak için yapılır.
+          Şikâyet başladıktan sonra yapılan test ise tanı testidir; ikisinin kuralları farklıdır.
         </p>
         <p>
-          Çoğu kadın taramayı “hasta olunca yapılan kontrol” gibi algılar. Oysa koruyucu sağlıkta tarama, tam tersine,
-          henüz belirti yokken potansiyel riskleri yakalamaya çalışır. Amaç bir etiket koymak değil; müdahale penceresini erken açmaktır.
+          Bu ayrım küçük görünür ama çok şey değiştirir. Göğsünüzde yeni bir sertlik fark ettiyseniz iki yıllık mamografi
+          sıranızı beklemezsiniz; aynı gün hekime gidersiniz. Tarama takvimi, kendinizi iyi hissettiğiniz yıllar içindir.
         </p>
         <p>
-          40 sonrası dönemde hormonal geçişe eşlik eden metabolik ve iskelet sistemi değişiklikleri, tarama planını daha anlamlı hale getirir.
-          Bu planın doğru kurulması, yalnızca bugün için değil gelecek 10-20 yıl için de yaşam kalitesi farkı yaratabilir <Evidence level={4} />.
-        </p>
-
-        <h2 id="temel-bes-baslik">40 Sonrasında Neden Beş Başlık Birlikte Düşünülür?</h2>
-        <p>
-          İyi bir tarama planı tek testten oluşmaz; birbirini tamamlayan bir başlık setiyle çalışır.
-        </p>
-        <p>
-          Pratikte en sık konuştuğumuz alanlar şunlardır: kemik sağlığı, metabolik riskler, kardiyovasküler göstergeler,
-          kadın sağlığı kontrolleri ve yaşam tarzı belirteçleri. Bu başlıkların her biri farklı uzmanlık alanına temas etse de
-          kişide tek bir sağlık hikayesi içinde birleşir.
-        </p>
-        <p>
-          Burada kritik nokta şudur: test sayısı arttıkça sağlık yönetimi otomatik olarak iyileşmez. Gereksiz test yoğunluğu,
-          kaygıyı artırabilir ve anlamlı takibi zorlaştırabilir. Bu yüzden “çok test” değil, “doğru zamanda doğru test” yaklaşımı gerekir.
+          Uzun bir tahlil listesi insana güven verir. Ne yazık ki güven ile fayda her zaman aynı sütunda durmaz.
+          Gereksiz tetkikler bazen hastayı korumak yerine, önemsiz sonuçlar nedeniyle yeni incelemelere ve endişelere yol açabiliyor.
+          Benim yaklaşımım, mümkün olduğunca çok test istemek değil, gerçekten gerekli taramaları zamanında yapmaktır.
         </p>
 
-        <h2 id="kemik-yogunlugu">Kemik Sağlığı Taramasında DXA Ne Zaman Masaya Gelir?</h2>
+        <h2 id="temel-bes-baslik">40 Sonrası Takvimin Omurgası</h2>
         <p>
-          Kemik yoğunluğu ölçümü her kadın için aynı yaşta başlanacak tek bir protokol değildir.
+          Aşağıdaki tablo, ortalama risk taşıyan ve belirtisi olmayan kadınlar içindir. Aile öyküsü veya önceki bir sonuç
+          sizi bu tablonun dışına çıkarabilir.
         </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Ne?</th>
+                <th class="p-3 font-semibold">Kimin için?</th>
+                <th class="p-3 font-semibold">Ne sıklıkla?</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Kan basıncı ölçümü</td>
+                <td class="p-3">40 yaş ve üstü herkes</td>
+                <td class="p-3">Yılda bir <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Mamografi</td>
+                <td class="p-3">40–69 yaş arası kadınlar</td>
+                <td class="p-3">İki yılda bir; ayrıca yılda bir klinik meme muayenesi <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">HPV testi (rahim ağzı)</td>
+                <td class="p-3">30–65 yaş arası kadınlar</td>
+                <td class="p-3">Beş yılda bir <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kalın bağırsak taraması</td>
+                <td class="p-3">50–70 yaş arası kadın ve erkekler</td>
+                <td class="p-3">İki yılda bir dışkıda gizli kan testi; on yılda bir kolonoskopi <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kan şekeri (açlık şekeri veya HbA1c)</td>
+                <td class="p-3">35–70 yaş arası, fazla kilolu kişiler</td>
+                <td class="p-3">Sonuç normalse üç yılda bir makul <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kan yağları (kolesterol)</td>
+                <td class="p-3">40–75 yaş arası</td>
+                <td class="p-3">Kalp-damar riski hesabının parçası; aralık riske göre belirlenir <sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kemik yoğunluğu ölçümü (DXA)</td>
+                <td class="p-3">65 yaş ve üstü; risk taşıyorsanız menopozdan sonra daha erken</td>
+                <td class="p-3">Tekrar aralığı ilk sonuca göre belirlenir <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p>
-          DXA ölçümü, kırık riskini öngörmede değerli bir araçtır; ancak zamanlama kişisel risklere göre değişir.
-          Ortalama riskte ileri yaşta rutin tarama öne çıkarken, erken menopoz, düşük travmayla kırık öyküsü, ailede kalça kırığı,
-          uzun süreli kortikosteroid kullanımı gibi durumlarda daha erken değerlendirme gündeme gelebilir <Evidence level={5} />.
-        </p>
-        <p>
-          Ölçüm sonucunu tek başına okumak yerine, düşme riski, kas gücü, günlük yaşam kapasitesi ve diğer klinik verilerle birlikte yorumlamak gerekir.
-          Sayıyı değil, toplam kırık riskini yönetmek asıl hedeftir.
+          Tabloda kan basıncının en üstte durması tesadüf değil. Ucuzdur, birkaç dakika sürer ve yararı yüksek kesinlikle gösterilmiştir
+          <Evidence level={5} /> <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+          Muayenehanede yüksek çıkan bir değer, ilaç başlamadan önce evde veya 24 saatlik ölçümle doğrulanır.
         </p>
 
-        <h2 id="metabolik-izlem">Metabolik İzlemde Hangi Testler Sık Konuşulur?</h2>
+        <h2 id="kadina-ozgu-izlem">Meme, Rahim Ağzı ve Kalın Bağırsak İçin Üç Randevu</h2>
         <p>
-          Metabolik izlem bir “check-list” değil, riske göre seçilen bir paneldir.
+          Kanser taramalarında takvim nettir ve Türkiye'de üçü de ücretsizdir.
+          Aile sağlığı merkezinize, bir KETEM'e ya da mobil tarama aracına başvurabilirsiniz <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
         </p>
         <p>
-          Açlık glukozu, HbA1c, lipid profili, karaciğer enzimleri, tiroid fonksiyonları ve gerektiğinde inflamatuvar belirteçler
-          40 sonrası değerlendirmelerde sık gündeme gelir. Ancak hangi testin hangi aralıkla tekrarlanacağı; aile öyküsü, kilo dağılımı,
-          eşlik eden hastalıklar ve kullanılan tedavilere göre değişir.
+          <strong>Meme:</strong> 40–69 yaş arasında iki yılda bir mamografi çekilir. Bu yaş grubunda iki yılda bir mamografinin
+          yararının zararlarından ağır bastığı gösterilmiştir <Evidence level={4} />
+          <sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
+          Bazı uluslararası kılavuzlar taramayı 74 yaşına kadar sürdürür; 75 yaş sonrası için kanıt henüz yetersizdir
+          <sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
+          Raporunuzda "yoğun meme dokusu" yazıyorsa ek ultrason veya MR'ın herkese yararı henüz gösterilemedi; bunu hekiminizle konuşun.
         </p>
         <p>
-          Burada amaç “normal aralığa bakıp geçmek” değildir. Değerlerin zaman içindeki eğilimi, tek bir ölçümden çoğu zaman daha öğreticidir.
-          Yıllık takipte küçük kaymaların yönünü görmek, ileri risklerin erken yönetimini kolaylaştırabilir <Evidence from={4} to={5} />.
-        </p>
-
-        <h2 id="kadina-ozgu-izlem">Kadına Özgü İzlem Başlıklarında Neyi Atlamamak Gerekir?</h2>
-        <p>
-          Tarama planında kadın sağlığına özgü başlıklar, genel metabolik testlerin yanında ayrı bir sütun oluşturur.
+          <strong>Rahim ağzı:</strong> 30–65 yaş arasında beş yılda bir HPV testi yapılır <Evidence level={5} />
+          <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
+          Menopoza girmek bu testi bırakmanın nedeni değildir; program 65 yaşına kadar sürer.
         </p>
         <p>
-          Servikal tarama, meme sağlığı izlemi ve jinekolojik değerlendirme; yaş, önceki sonuçlar, aile öyküsü ve bireysel risk
-          durumuna göre kişiselleştirilir. “Geçen yıl normalse bu yıl gerekmez” yaklaşımı her zaman doğru değildir;
-          aynı şekilde “her yıl her test” yaklaşımı da gereksiz yük yaratabilir.
+          <strong>Kalın bağırsak:</strong> Türkiye programı 50 yaşında iki yılda bir dışkıda gizli kan testiyle başlar;
+          on yılda bir kolonoskopi de seçenekler arasındadır <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
+          50–75 yaş arasında taramanın yararı güçlü kanıtla gösterilmiştir <Evidence level={5} />
+          <sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
+          Bazı kılavuzlar 45 yaşında başlamayı önerir <sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
+          Annenizde, babanızda ya da kardeşinizde kalın bağırsak kanseri öyküsü varsa başlangıç yaşınızı hekiminizle ayrıca konuşun.
         </p>
         <p>
-          Menopoz geçişinde uykusuzluk, ruh hali dalgalanması, kilo değişimi ve kas-iskelet yakınmaları da bu görüşmelerde
-          konuşulmalıdır. Çünkü tarama yalnızca laboratuvar kağıdı değil, günlük yaşam etkisini de kapsayan bir izlem konuşmasıdır.
-        </p>
-
-        <h2 id="kisisel-plan">Kişisel Tarama Planı Nasıl Kurulur, Nasıl Sürdürülür?</h2>
-        <p>
-          Planın sürdürülebilir olması, planın mükemmel olmasından daha değerlidir.
-        </p>
-        <p>
-          Çoğu zaman güçlü bir başlangıç, son bir yılda yaptırılan testleri tek sayfada toplamakla olur: tarih, sonuç, hekim notu ve
-          bir sonraki adım. Bu küçük düzen, dağınık sağlık bilgisini yönetilebilir hale getirir.
-        </p>
-        <p>
-          Klinik pratikte en işe yarayan yaklaşım “tek dosya, net soru” yöntemi oluyor: her kontrolde aynı anda çok başlık açmak yerine
-          öncelikli iki soruya odaklanmak. Bu yaklaşımla görüşmeler daha verimli, kararlar daha uygulanabilir hale geliyor.
+          Bu üç randevuyu erteleyen birçok kadının içinde aslında korku vardır. Sonucu duymaktan çekinmek çok insani bir duygu.
+          Ama tarama, tam da sonucu iyi olsun diye erken yapılır.
         </p>
 
-        <h2 id="hekim-gorusmesi">Hekim Görüşmesine Gitmeden Önce Hangi Üç Soru Hazır Olsun?</h2>
+        <h2 id="kemik-yogunlugu">Kemik Ölçümü Ne Zaman Gündeme Gelir?</h2>
         <p>
-          Hazırlıklı görüşme, gereksiz test talebini azaltır ve daha kişisel karar üretir.
+          Kemik yoğunluğu ölçümü herkes için 65 yaşında başlar. Daha genç ama menopoza girmiş bir kadında ise kırık riski
+          yüksek görünüyorsa öne alınır <Evidence level={4} />
+          <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>.
         </p>
         <p>
-          Görüşme öncesi şu üç soru netleştirilebilir:
+          Ben her kadının 65 yaşına gelmesini beklemem; ama yalnızca 40 ya da 50 yaşına girdi diye de herkesten bu testi istemem.
+          Erken menopoza giren kadınlarda kemik sağlığını daha dikkatli değerlendiririm, çünkü östrojenin beklenenden erken azalması
+          kemik kaybını hızlandırabilir.
         </p>
         <p>
-          1) Benim yaş ve öyküme göre bu yıl öncelikli tarama başlıklarım neler?<br />
-          2) Hangi testleri şimdi, hangilerini izleyerek daha sonra yapmalıyız?<br />
-          3) Sonuçlar normal gelse bile hangi belirtilerde daha erken kontrol planlamalıyım?
+          Daha önce basit bir düşmeyle kırık geçirmiş olmak, uzun süre kortizon kullanmak, çok düşük vücut ağırlığı ya da anne veya
+          babada kalça kırığı öyküsü kararımı etkiler. Sigara, aşırı alkol ve kemik kaybına yol açabilen bazı kronik hastalıklar da
+          hesaba girer. 43 yaşında menopoza girmiş bir kadınla, 53 yaşında hâlâ düzenli adet gören ve başka risk taşımayan bir kadını
+          aynı şekilde değerlendirmem.
         </p>
         <p>
-          Bu sorular, “her şeyi yaptıralım” telaşını “bana uygun planı kuralım” sakinliğine çevirir.
-          Bu da takip uyumunu güçlendirir.
+          Benim için belirleyici olan takvim yaşı değil, kemik kaybı ve kırık riskidir. Risk yüksekse ölçümü erkene alırım.
+          Risk düşükse ölçümü gereksiz yere tekrarlamak yerine beslenmeye, yeterli kalsiyuma, direnç egzersizlerine ve diğer koruyucu
+          önlemlere ağırlık veririm. İlk ölçüm normal çıktığında testin ne zaman tekrarlanacağına dair kanıt da zaten sınırlıdır
+          <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>.
+          Ayrıntıları <a href="/zamansiz-yasam/kemik-sagligi-40-sonrasi/" class="text-primary hover:underline">kemik sağlığı rehberinde</a> bulabilirsiniz.
+        </p>
+
+        <h2 id="metabolik-izlem">Kan Testlerinde Daha Uzun Liste Daha İyi Sonuç Demek Değil</h2>
+        <p>
+          Kan testlerinde iki soru yeterlidir: şekeriniz yükseliyor mu ve kalp-damar riskiniz ne düzeyde?
+        </p>
+        <p>
+          Fazla kilonuz varsa 35 yaşından itibaren açlık şekeri veya HbA1c ölçülür. Sonuç normalse üç yılda bir tekrarlamak
+          makul bir aralıktır <Evidence level={4} /> <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
+          Kolesterol tek başına bir not gibi okunmaz. Kan basıncı, sigara ve şekerle birlikte on yıllık kalp-damar riskinizi
+          hesaplamaya yarar; ilaç kararını da bu hesap belirler <sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup>.
+        </p>
+        <p>
+          Muayenede bazen hiçbir şikâyeti olmayan kadınlar bütün hormonlarına, tiroidlerine, vitaminlerine ve tümör belirteçlerine
+          bakılmasını istiyor. Oysa çok sayıda test yapmak mutlaka daha iyi bir sağlık kontrolü anlamına gelmiyor.
+          Tiroid hastalığını düşündüren bir belirti veya risk faktörü yoksa her kadına rutin olarak geniş bir tiroid paneli istemem;
+          gerektiğinde önce TSH ölçümüyle başlarız. Belirtisi olmayan erişkinde rutin tiroid taramasının yararı da gösterilemedi
+          <sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup>.
+          Benzer şekilde, yalnızca menopoz yaklaşıyor diye FSH, estradiol veya AMH ölçmenin çoğu kadında bir yararı yok.
+          Çarpıntı, belirgin yorgunluk ya da açıklanamayan kilo değişimi varsa test zaten tarama olmaktan çıkar; belirtiye
+          yönelik bir sorudur. Menopozun bazı belirtileri tiroid sorunlarıyla karışabildiği için bu ayrım muayenede yapılır.
+        </p>
+        <p>
+          Tek bir sonuçtan çok, yıllar içindeki yön önemlidir. Geçen yılki değerlerinizi yanınıza almanız, bu yüzden yeni bir testten
+          daha çok iş görebilir.
+        </p>
+
+        <h2 id="kisisel-plan">Planı Kendi Öykünüze Göre Kurmak</h2>
+        <p>
+          Tablodaki yaşlar ortalama riski anlatır. Takviminizi öne çeken şey çoğu zaman aile öykünüzdür.
+        </p>
+        <p>
+          Kırklı yaşlarında hiçbir şikâyeti olmayan bir kadının planını kurarken önce yaşına, kendisinin ve ailesinin hastalık öyküsüne,
+          adet düzenine ve daha önce yaptırdığı taramalara bakarım. Çünkü kırklı yaşlara giren her kadına aynı testleri yapmak doğru değil.
+        </p>
+        <p>
+          Ailesinde erken yaşta meme, yumurtalık veya kalın bağırsak kanseri olup olmadığını özellikle öğrenmek isterim.
+          Tansiyon, kilo, sigara ve diyabet gibi kalp-damar risklerini de aynı görüşmede değerlendiririm.
+          Kişisel veya ailesel risk varsa ulusal programdaki takvimi değiştirmek gerekebilir; o zaman "herkes için" yazılmış tablo
+          size yetmez, kendi takviminizi birlikte çıkarırız.
+        </p>
+        <p>
+          Planı yürütmenin en kolay yolu, son testlerinizi tek sayfada toplamaktır: tarih, sonuç ve bir sonraki adım.
+          Bu sayfayı nasıl tutabileceğinizi <a href="/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/" class="text-primary hover:underline">koruyucu sağlık kayıtları yazısında</a> bulabilirsiniz.
+        </p>
+
+        <h2 id="hekim-gorusmesi">Görüşmeye Üç Soruyla Gitmek</h2>
+        <p>
+          Hazırlıklı gittiğiniz görüşme kısa sürer ve size özel bir plan çıkarır.
+        </p>
+        <ol>
+          <li>Yaşıma ve aile öyküme göre bu yıl hangi taramalar sırada?</li>
+          <li>Takvimimi değiştiren bir risk var mı; varsa hangi testi ne zaman öne almalıyız?</li>
+          <li>Sonuçlar normal gelse bile hangi belirtide sırayı beklemeden gelmeliyim?</li>
+        </ol>
+        <p>
+          Bu üç soru, "her şeye bakalım" telaşını bir takvime dönüştürür.
         </p>
 
         <RedFlagBox
           markers={[
-            'Ani ve açıklanamayan kilo kaybı, gece terlemesi veya uzamış halsizlik',
-            'Düşük travmayla gelişen kırık (özellikle kalça, omurga, el bileği)',
-            'Şiddetli, yeni başlayan göğüs ağrısı, nefes darlığı veya çarpıntı yakınması',
+            'Memede yeni ele gelen sertlik, meme ucundan kanlı akıntı veya meme derisinde çekinti',
             'Adet kesildikten sonra vajinal kanama ya da lekelenme',
-            'Açlık şekeri, HbA1c veya lipid değerlerinde kısa sürede belirgin bozulma',
-            'Aile öyküsü güçlü olup tarama takvimi uzun süredir ertelenmiş olması',
+            'Dışkıda kan, dışkılama alışkanlığında haftalardır süren değişiklik',
+            'Ani ve açıklanamayan kilo kaybı, gece terlemesi veya uzamış halsizlik',
+            'Küçük bir düşmede kırık (özellikle kalça, omurga, el bileği)',
+            'Yeni başlayan göğüs ağrısı, nefes darlığı veya çarpıntı',
           ]}
-          footnote="Bu maddeler tanı koymaz; gecikmeden hekim değerlendirmesi gerektirebilecek durumları hatırlatır."
+          footnote="Bu maddeler tanı koymaz; tarama sırasını beklemeden hekim değerlendirmesi gerektirebilecek durumları hatırlatır. Ani ve şiddetli göğüs ağrısı veya nefes darlığında 112'yi arayın."
         />
 
-        <h2 id="kapanis">Kapanış</h2>
+        <h2 id="kapanis">Bir Sonraki Tarihi Bilmek Yeter</h2>
         <p>
-          Tarama testleri bir korku listesi değil, geleceğe dönük bir netlik aracıdır.
+          İyi bir tarama planını ezberlemeniz gerekmez; bir sonraki tarihi bilmeniz yeter.
         </p>
         <p>
-          40 sonrası dönemde güçlü plan, çok test yaptırmakla değil; doğru sırayı kurmakla oluşur.
-          Kemik, metabolik ve kadın sağlığı başlıklarını birlikte ama sade bir takvimle yönetmek,
-          uzun vadede daha güvenli bir yol sunar.
+          Takviminiz bir kez çıkarıldıktan sonra iş, tarihleri kaçırmamaktan ibarettir.
+          Listenin dışında kalan her test için sorulacak soru ise hep aynıdır: Sonucu bende neyi değiştirecek?
         </p>
-        <p>
-          Bu yazı bir başlangıç haritasıdır; kişisel kararınız kendi risk profiliniz ve hekiminizle yaptığınız
-          bireysel değerlendirme üzerinden şekillenir.
-        </p>
-      </ArticleProsePanel>
 
-      <ArticleFAQ items={faqItems} class="mt-10" />
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p>
+          Bu rehberdeki yaş aralıkları ve tarama sıklıkları aşağıdaki resmî program ve kılavuzlara dayanır.
+          Türkiye programı ile uluslararası kılavuzlar arasındaki farklar metinde belirtilmiştir.
+        </p>
+        <ol class="mt-4 space-y-3 text-sm leading-relaxed text-ink/80">
+          <li id="kaynak-1">
+            <strong>1.</strong> T.C. Sağlık Bakanlığı Halk Sağlığı Genel Müdürlüğü. <em>Kanser Taramaları.</em> Erişim: 11 Ekim 2026.{' '}
+            <a href="https://hsgm.saglik.gov.tr/tr/kanser-taramalari" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Bakanlık sayfası</a>.
+          </li>
+          <li id="kaynak-2">
+            <strong>2.</strong> US Preventive Services Task Force. <em>Screening for Breast Cancer: Recommendation Statement.</em> JAMA. 2024;331(22):1918-1930.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38687503/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-3">
+            <strong>3.</strong> US Preventive Services Task Force. <em>Screening for Colorectal Cancer: Recommendation Statement.</em> JAMA. 2021;325(19):1965-1977.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/34003218/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-4">
+            <strong>4.</strong> US Preventive Services Task Force. <em>Screening for Hypertension in Adults: Reaffirmation Recommendation Statement.</em> JAMA. 2021;325(16):1650-1656.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33904861/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-5">
+            <strong>5.</strong> US Preventive Services Task Force. <em>Screening for Prediabetes and Type 2 Diabetes: Recommendation Statement.</em> JAMA. 2021;326(8):736-743.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/34427594/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-6">
+            <strong>6.</strong> US Preventive Services Task Force. <em>Statin Use for the Primary Prevention of Cardiovascular Disease in Adults: Recommendation Statement.</em> JAMA. 2022;328(8):746-753.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35997723/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-7">
+            <strong>7.</strong> US Preventive Services Task Force. <em>Screening for Osteoporosis to Prevent Fractures: Recommendation Statement.</em> JAMA. 2025;333(6):498-508.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/39808425/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+          <li id="kaynak-8">
+            <strong>8.</strong> US Preventive Services Task Force. <em>Screening for Thyroid Dysfunction: Recommendation Statement.</em> Ann Intern Med. 2015;162(9):641-650.{' '}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/25798805/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>.
+          </li>
+        </ol>
+      </ArticleProsePanel>
 
       <RelatedReadings
         class="mt-14"
         paths={[
           '/hormonal-gecis/40-sonrasi/',
           '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
-          '/zamansiz-yasam/d-vitamini-rehberi/',
           '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
           '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
         ]}
       />
 
-      <ArticleEditorNote>
-        <p class="mb-3 leading-relaxed text-ink/80">
-          Bu yazı, 40 sonrası tarama yaklaşımını genel bir bakışla özetleyen editoryal bir değerlendirmedir;
-          bireysel tanı ve tedavi önerisi yerine geçmez.
-        </p>
-        <p class="mb-3 leading-relaxed text-ink/80">
-          Klinik pratiğe göre tarama planı; yaş, aile öyküsü, eşlik eden hastalıklar, kullanılan tedaviler ve
-          önceki test sonuçlarının eğilimiyle birlikte belirlenmelidir. Kemik yoğunluğu, metabolik testler ve
-          kadın sağlığı kontrolleri tek tek değil, bütüncül risk hattında değerlendirilir.
-        </p>
-        <p class="mb-3 leading-relaxed text-ink/80">
-          Özellikle erken menopoz, düşük travma kırığı, hızlı metabolik değişim, belirgin semptom yükü veya
-          aile öyküsü bulunan kişilerde tarama sıklığı standart takvimden farklılaşabilir. Bu nedenle kişisel
-          planı hekiminizle birlikte belirlemeniz en güvenli yaklaşımdır.
-        </p>
-        <p class="text-sm italic text-primary">
-          — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
-        </p>
+      <ArticleEditorNote title="Bilimsel Editör Notu">
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p>
+            Bu rehberdeki yaş aralıkları ortalama risk taşıyan, belirtisi olmayan kadınlar içindir. Ailede genç yaşta meme, yumurtalık
+            veya kalın bağırsak kanseri öyküsü olanlarda tarama daha erken yaşta ve farklı yöntemlerle planlanabilir.
+          </p>
+          <p>
+            Anormal bir tarama sonucu tanı anlamına gelmez; tanıyı netleştirmek için yapılan ileri incelemenin başlangıcıdır.
+            Tarama aralıkları da yalnızca önceki sonucun normal olduğu durumlar için geçerlidir.
+          </p>
+          <p>
+            Ülke programları ile uluslararası kılavuzlar zaman zaman farklı yaş sınırları önerir. Hangisinin size uygun olduğu kişisel
+            risk değerlendirmesiyle belirlenir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı
+          </p>
+        </div>
       </ArticleEditorNote>
 
       <ArticleDisclaimer>
