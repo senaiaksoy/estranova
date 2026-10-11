@@ -3,7 +3,7 @@
   "pathname": "/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code audit + revizyon (worktree claude/estrojen-revizyon).",
-  "status": "Taslak. Bekleyen: 5. SSS (kemik) yanıtı; notun iki paragrafının çıkarılmasına Dr. Aksoy onayı; Dr. Mumcu not metni ve tıbbi inceleme onayı; KC yayın onayı.",
+  "status": "Taslak tamam. Bekleyen: Dr. Mumcu not metni ve bağımsız tıbbi inceleme onayı; KC yayın onayı.",
   "baselineApproval": "article-approvals.ts: yalnızca 2026-05-04 prelaunch envanter mutabakatı. 2026-08-06 esaslı güncellemenin (commit a46ee7d1) tıbbi inceleme veya onay kaydı yok; byline/şemadaki Mumcu inceleyen bilgisi kayıtla desteklenmiyordu.",
   "revisionScope": [
     "[5] künyesi: 'Lobo RA ve arkadaşları' yanlıştı → Battipaglia C, Genazzani AD, Nappi RE, La Marca A. Minerva Obstet Gynecol 2024;76(6):590-603 (PMID 39283289).",
@@ -20,9 +20,7 @@
     "Soya, isoflavon, fitoöstrojen gerçekten östrojen yerine geçer mi?",
     "Perimenopozda ruh hâli neden değişiyor; östrojenle ilişkisi ne?"
   ],
-  "faqQuestionsRemaining": [
-    "Östrojen düşüşü kemik kaybını neden hızlandırır?"
-  ],
+  "faqQuestionsRemaining": [],
   "faqResponses": [
     {
       "question": "Biyoözdeş hormonlar daha mı güvenli?",
@@ -51,10 +49,17 @@
       "originalAnswer": "Perimenopoz döneminde bazı kadınlar kendilerini eskisinden daha tahammülsüz, kaygılı veya duygusal hissedebiliyor. Bazen daha önce kolayca başa çıktıkları olaylara çok daha güçlü tepkiler verdiklerini anlatıyorlar.\n\nBunun nedenlerinden biri hormonların değişmesi. Ancak burada önemli bir ayrıntı var: **Sorun yalnızca östrojenin azalması değil, bazen çok yükselip bazen hızla düşmesi.**\n\nPerimenopozda yumurtalıkların hormon üretimi düzensizleşiyor. Östrojen bir ay yüksekken başka bir ay oldukça düşük olabilir. Bu dalgalanmalar, beyinde ruh hâlinin düzenlenmesinde rol oynayan serotonin gibi sistemleri etkileyebiliyor.\n\nÜstelik her kadın bu değişikliklere aynı şekilde tepki vermiyor. Özellikle geçmişte adet öncesi belirgin ruh hâli değişiklikleri veya doğum sonrası depresyon yaşamış kadınlar, hormonal dalgalanmalara daha duyarlı olabilir.\n\nBir de uyku sorunu var. Gece sıcak basmaları nedeniyle sık sık uyanan bir kadının ertesi gün yorgun, sinirli ve tahammülsüz olması şaşırtıcı değil. Ancak her ruh hâli değişikliğini yalnızca hormonlara veya uykusuzluğa bağlamak da doğru değil.\n\nBen hastalarıma önce şikâyetlerinin ne zaman başladığını, uykularının nasıl olduğunu, günlük yaşamlarının ne kadar etkilendiğini ve daha önce benzer sorunlar yaşayıp yaşamadıklarını sorarım.\n\nEğer ruh hâli değişikliklerine sıcak basmaları ve diğer menopoz belirtileri eşlik ediyorsa, uygun hastalarda hormon tedavisi yardımcı olabilir. Ancak belirgin depresyon veya anksiyete varsa bunu yalnızca menopozun doğal bir sonucu olarak kabul etmem. Gerektiğinde psikolojik destek, psikoterapi veya ilaç tedavisini de değerlendiririm.\n\n**Benim için önemli olan hastaya yalnızca östrojeniniz azalmış demek değil, yaşadığı değişikliklerin ne kadarının hormonlarla ilişkili olduğunu ve yaşamını nasıl etkilediğini anlamak.**\n\nÇünkü perimenopozda görülen ruh hâli değişiklikleri gerçek ve tedavi edilebilir sorunlar olabilir. Ama her kadında ortaya çıkmaları da kaçınılmaz değildir.",
       "editedForArticle": "Birebir; yalnızca kalın işaretleri (**) kaldırıldı, paragraflar korundu.",
       "sourceCheck": "Dalgalanma STRAW+10 [13] ile, vazomotor belirtilerle birlikte hormon tedavisinin yardımı NAMS 2022 [1] ile uyumlu; PMDD/doğum sonrası depresyon öyküsü duyarlılığı kaynakçada ayrıca yok (hekim görüşü)."
+    },
+    {
+      "question": "Östrojen düşüşü kemik kaybını neden hızlandırır?",
+      "answeredAt": "2026-10-11",
+      "originalAnswer": "Kemiklerimizi çoğu zaman değişmeyen, sert yapılar olarak düşünüyoruz. Oysa kemiklerimiz canlı dokulardır. Hayatımız boyunca eski kemik dokusu yıkılır ve yerine yenisi yapılır. Sağlıklı bir kemikte bu iki işlem arasında bir denge vardır.\n\n**Östrojen hormonunun önemli görevlerinden biri de bu dengeyi korumaktır.**\n\nKemiklerimizde eski dokuyu yıkan hücreler ve yeni kemik yapan hücreler bulunur. Östrojen, özellikle kemik yıkımından sorumlu hücrelerin faaliyetini kontrol altında tutar.\n\nMenopozla birlikte östrojen azaldığında bu kontrol zayıflar. Kemik yıkımı hızlanır, ancak yeni kemik yapımı aynı hızda artamaz. Sonuçta her yenilenme döngüsünde biraz daha fazla kemik kaybedilir.\n\nÜstelik yalnızca kemik yoğunluğu azalmaz. Kemiğin içindeki ince destek yapıları da zamanla zayıflar. Bu nedenle kemikler dışarıdan normal görünse bile kırılmaya daha yatkın hâle gelebilir.\n\n**Kemik kaybının özellikle menopozdan sonraki ilk yıllarda hızlanmasının temel nedeni budur.** Sorun yalnızca yaşlanma değil, östrojenin kemik üzerindeki koruyucu etkisinin azalmasıdır.\n\nBenim hastalarıma özellikle hatırlattığım nokta şu: Kemik kaybı genellikle ağrı yapmaz. Kadın kendini tamamen sağlıklı hissederken de kemik yoğunluğu azalıyor olabilir.\n\nBu nedenle menopoz döneminde kemik sağlığını değerlendirirken yalnızca şikâyetlere değil, yaşa, menopozun ne zaman başladığına, önceki kırıklara ve diğer risk faktörlerine bakarım.\n\nDüzenli direnç egzersizleri, yeterli protein ve kalsiyum alımı, D vitamini yeterliliği ve gerektiğinde uygun tedavilerle kemik kaybını yavaşlatmak ve kırık riskini azaltmak mümkündür.\n\n**Benim için amaç, kemik erimesi ortaya çıktıktan sonra müdahale etmekten çok, kemik sağlığını henüz belirgin bir kayıp oluşmadan korumaktır.**",
+      "editedForArticle": "Birebir; yalnızca kalın işaretleri (**) kaldırıldı, paragraflar korundu.",
+      "sourceCheck": "Östrojenin kemik yıkımını sınırlaması gövde ve NAMS 2022 [1] (kemik kaybı ve kırığın önlenmesi) ile uyumlu; tarama kararı USPSTF 2025 [4] ile çelişmiyor."
     }
   ],
   "pendingBodyConfirmation": {
-    "editorNote": "Dr. Aksoy 2026-10-11 teyit etti: 5 basamaklı yaklaşım ve not metni kendisine ait ('1 benim'). Kural gereği (kendi yazısında editör notu Mumcu imzalı) metin gövdede 'Muayenede Östrojen Kararını Nasıl Kuruyorum' bölümüne aynen taşındı: Klinik not ilk iki cümlesi, 5 basamak (liste), Klinik kırmızı bayraklar. Notun 'Mekanizma notu', 'Bireysellik vurgusu' ve giriş cümlesi gövdeyi tekrar ettiği için çıkarıldı (Dr. Aksoy onayı bekleniyor). Yeni Bilimsel Editör Notu Dr. Mumcu imzalı taslak (Mumcu onayı bekleniyor); genel 'Kanıt Düzeyi 2–5' satırı kaldırıldı.",
+    "editorNote": "Dr. Aksoy 2026-10-11 teyit etti: 5 basamaklı yaklaşım ve not metni kendisine ait ('1 benim'). Kural gereği (kendi yazısında editör notu Mumcu imzalı) metin gövdede 'Muayenede Östrojen Kararını Nasıl Kuruyorum' bölümüne aynen taşındı: Klinik not ilk iki cümlesi, 5 basamak (liste), Klinik kırmızı bayraklar. Notun 'Mekanizma notu', 'Bireysellik vurgusu' ve giriş cümlesi gövdeyi tekrar ettiği için çıkarıldı (Dr. Aksoy onayı bekleniyor). Yeni Bilimsel Editör Notu Dr. Mumcu imzalı taslak (Mumcu onayı bekleniyor); genel 'Kanıt Düzeyi 2–5' satırı kaldırıldı. Dr. Aksoy 2026-10-11 'Mekanizma notu' ve 'Bireysellik vurgusu' paragraflarının çıkarılmasını onayladı ('Onay').",
     "careerSentence": "'Otuz yıllık jinekolog kariyerimin…' gövdede korundu (1994’ten beri pratik, draksoyivf kaydında doğrulanmış)."
   },
   "notApplied": [
@@ -62,5 +67,6 @@
     "Kalın bağırsak kanseri risk azalması cümlesi kaynaksız bırakıldı (kanıt etiketi kaldırıldı); kaynak eklenmesi açık iş."
   ],
   "independentMedicalReview": "Bekliyor: Dr. Alper Mumcu.",
-  "publicationApproval": "Bekliyor."
+  "publicationApproval": "Bekliyor.",
+  "faqConversionStatus": "Tamamlandı: 5/5 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı."
 }
