@@ -30,6 +30,7 @@ const tocEntries = [
   { id: 'metabolizma', label: 'Karaciğer ve Bağırsak Bakterileri' },
   { id: 'endojen-eksojen', label: 'İlaç Olarak Östrojen' },
   { id: 'kanser', label: 'Östrojen ve Kanser' },
+  { id: 'muayenede-karar', label: 'Muayenede Karar' },
   { id: 'iletisim', label: 'Doktora Hangi Soruları Sormalı?' },
   { id: 'kapanis', label: 'Mekanizmadan Karara' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
@@ -292,6 +293,31 @@ const articleSchemas = buildArticleSchemas({
           ortak değerlendirmesiyle gündeme gelebilir <sup><a href="#kaynak-2">[2]</a></sup> <Evidence level={4} />.
         </p>
 
+        <h2 id="muayenede-karar">Muayenede Östrojen Kararını Nasıl Kuruyorum</h2>
+        <p>
+          Östrojen biyolojisi muayene odasında en sık konuştuğum ama her hasta için yeniden öğrenmeyi gerektiren bir konu.
+          <em>“Östrojen düşüyor, HRT verelim”</em> denklemi günümüzde bu kadar düz kurulmuyor — formülasyon, uygulama yolu,
+          eşlik eden durumlar, kanser öykü ve risk profili kararı kişiselleştirilmiş bir denkleme çeviriyor.
+        </p>
+        <p>
+          Pratikte östrojen kararını birlikte değerlendirirken şu basamakları izlerim:
+        </p>
+        <ol>
+          <li>Endikasyon ve hedef belirleme — hangi belirtileri (vasomotor, GSM, kemik koruması, ruh hali) hedefliyoruz;</li>
+          <li>Risk profili — yaş, menopoz başlangıç zamanı, KV risk faktörleri, kanser öyküsü, tromboembolizm öyküsü, eşlik eden tıbbi durumlar ve ilaçlar;</li>
+          <li>Form ve doz seçimi — sadece GSM ise lokal vajinal yeterli; sistemik belirti baskınsa transdermal seçenek düşünülebilir; uterusu olanda uygun progestajen seçimi;</li>
+          <li>Değerlendirme takvimi — ilk 3-6 ay yan etki ve etki takibi, sonra yıllık değerlendirme;</li>
+          <li>Durdurma kriteri ve yeniden değerlendirme — tedavi açık uçlu değil, periyodik yeniden karar.</li>
+        </ol>
+        <p>
+          <strong>Klinik kırmızı bayraklar:</strong> Postmenopozal kanama (herhangi miktar) — endometrium kanseri ekartasyonu
+          zorunlu; HRT öncesi ve süresince kontrol noktası. Hormon reseptörü pozitif meme kanseri öyküsü — sistemik HRT
+          genellikle önerilmez, lokal vajinal östrojen ise multidisipliner karar gerektirebilir. Tromboembolik olay öyküsü,
+          bilinen kalıtsal koagülasyon bozukluğu — oral östrojen yerine transdermal seçenek bazı kişilerde
+          değerlendirilebilir. Aktif karaciğer hastalığı, açıklanamayan vajinal kanama, uzun-süre kontrolsüz HRT — durum
+          yeniden değerlendirilmeli.
+        </p>
+
         <h2 id="iletisim">Doktora Hangi Soruları Sormalı?</h2>
         <p>
           Östrojenle ilgili kararlar bilim derinleştikçe daha incelikli hale geliyor. Görüşmeye şu üç soruyla gidebilirsiniz:
@@ -358,70 +384,25 @@ const articleSchemas = buildArticleSchemas({
           ]}
         />
 
-      <ArticleEditorNote>
-<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={2} to={5} /></p>
+      <ArticleEditorNote title="Bilimsel Editör Notu">
         <div class="space-y-3 leading-relaxed text-ink/80">
-          <p class="italic">
-            Yazı bilim yazısı oldu; bu notu klinikte bu bilgiyi pratik karara nasıl çevirdiğimi
-            paylaşmak için kullanıyorum — uzman olarak.
+          <p>
+            Yazı, östrojenin dokuya göre değişen etkilerini ve hormon tedavisinin yarar-risk dengesini güncel kaynaklarla
+            aktarıyor. Tedavi kararı belirtilerin şiddetine, yaşa, menopozdan bu yana geçen süreye ve kişisel risklere göre
+            verilir.
           </p>
           <p>
-            <strong class="text-primary">Klinik not:</strong> Östrojen biyolojisi muayene
-            odasında en sık konuştuğum ama her hasta için yeniden öğrenmeyi gerektiren bir
-            konu. <em>"Östrojen düşüyor, HRT verelim"</em> denklemi günümüzde bu kadar düz
-            kurulmuyor — formülasyon, uygulama yolu, eşlik eden durumlar, kanser öykü ve
-            risk profili kararı kişiselleştirilmiş bir denkleme çeviriyor. Yazıda paylaştığım
-            mekanik açıklama sağlam zemine oturuyor; ama klinik karar bu zeminin üstünde inşa
-            ediliyor — ve her hastada farklı bir bina çıkıyor.
+            Meme ve yumurtalık kanserine ilişkin oranlar topluluk verisidir; kişisel riski aile öyküsü, kilo, tedavinin
+            türü ve süresi birlikte belirler.
           </p>
           <p>
-            <strong class="text-primary">Mekanizma notu:</strong> Östrojenin etkilerinin
-            doku-spesifik olması (ER-α / ER-β dağılımı, koregülatör profili) tek başına
-            <em>"genel etki"</em> beklentisini geçersiz kılıyor. SERM'lerin yeri tam burada:
-            Tamoksifen postmenopozal meme kanserinde antagonist etki sağlarken kemik koruyucu
-            agonist etkiyi koruyor; raloksifen osteoporoz tedavisinde memeyi koruyarak kemiği
-            destekliyor; ospemifen postmenopozal disparoni endikasyonuyla vajinal dokuya
-            yöneliyor. Karaciğer ve estrobolome metabolizması ise tek aynı dozun farklı
-            kadınlarda farklı kan düzeyleri yaratmasının fizyolojik nedeni — bu gerçek
-            <em>"neden aynı tedavi farklı sonuç verir"</em> sorusunun cevabı.
-          </p>
-          <p>
-            <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Postmenopozal
-            kanama (herhangi miktar) — endometrium kanseri ekartasyonu zorunlu; HRT öncesi
-            ve süresince kontrol noktası. Hormon reseptörü pozitif meme kanseri öyküsü —
-            sistemik HRT genellikle önerilmez, lokal vajinal östrojen ise multidisipliner
-            karar gerektirebilir. Tromboembolik olay öyküsü, bilinen kalıtsal koagülasyon
-            bozukluğu — oral östrojen yerine transdermal seçenek bazı kişilerde
-            değerlendirilebilir. Aktif
-            karaciğer hastalığı, açıklanamayan vajinal kanama, uzun-süre kontrolsüz HRT —
-            durum yeniden değerlendirilmeli.
-          </p>
-          <p>
-            <strong class="text-primary">Pratik bütünleşim:</strong> Pratikte östrojen
-            kararını birlikte değerlendirirken şu basamakları izlerim: (1) endikasyon
-            ve hedef belirleme — hangi belirtileri (vasomotor, GSM, kemik koruması, ruh
-            hali) hedefliyoruz; (2) risk profili — yaş, menopoz başlangıç zamanı, KV risk
-            faktörleri, kanser öyküsü, tromboembolizm öyküsü, eşlik eden tıbbi durumlar
-            ve ilaçlar; (3) form ve doz seçimi — sadece GSM ise lokal vajinal yeterli;
-            sistemik belirti baskınsa transdermal seçenek düşünülebilir; uterusu olanda
-            uygun progestajen seçimi; (4) değerlendirme takvimi — ilk 3-6 ay
-            yan etki ve etki takibi, sonra yıllık değerlendirme; (5) durdurma kriteri ve
-            yeniden değerlendirme — tedavi açık uçlu değil, periyodik yeniden karar.
-          </p>
-          <p>
-            <strong class="text-primary">Bireysellik vurgusu:</strong> Yukarıda paylaştıklarım
-            — hem yazıda hem bu notta — genel popülasyon ve mekanik bakıştır; sizin
-            tablonuzdaki yaş ve menopoz başlangıç zamanı, eşlik eden tıbbi durumlar (özellikle
-            KV risk faktörleri, meme/endometrium öyküsü, tromboembolizm öyküsü, karaciğer
-            durumu), kullandığınız ilaçlar (özellikle anti-konvülsan, anti-retroviral,
-            antikoagülan) ve hedef belirtilerin önceliği tedavi seçimine yön verir. Burada
-            okuduğunuz bir başlangıç haritasıdır, karar değil; sizin için uygun adımları
-            kendi hekiminizle birebir değerlendirmeniz önemlidir — özellikle östrojen-temelli
-            kararlar düzenli yeniden değerlendirmeyi gerektiren süreçler.
+            Menopozdan sonra görülen her vajinal kanama, hormon tedavisi kullanılsın ya da kullanılmasın değerlendirme
+            gerektirir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı
           </p>
+        </div>
       </ArticleEditorNote>
 
        <ArticleDisclaimer>
