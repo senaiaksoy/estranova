@@ -338,8 +338,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Açık renkli bir iç mekanda pencere yanında duran, bordo hırkalı düşünceli kadın portresi; peptid kullanımları yazısı için editoryal kart görseli',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri/': {
-    src: '/images/library/editorial/hg-tarama-testleri.webp',
-    alt: 'Sabah ışığında açık takvim, not defteri, çay fincanı ve çiçeklerle düzenlenmiş masa; 40 sonrası tarama testlerini sakin bir takip ritmiyle ele alan kart görseli',
+    src: '/images/library/editorial/hg-tarama-testleri-vapur.webp',
+    alt: 'Güneşli bir sonbahar sabahı Boğaz vapurunun güvertesinde gülen iki arkadaş; pembe ipek başörtülü kadın telefonundaki takvimi gösteriyor, kızıl saçlı arkadaşı bir tarihi işaret ediyor, arkada Galata Kulesi',
   },
   '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/': {
     src: '/images/library/editorial/senai-hrt-meme-kanseri-author-block-v2.png',
