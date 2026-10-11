@@ -1,0 +1,39 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/",
+  "answeredAt": null,
+  "source": "11 Ekim 2026 Claude Code audit + revizyon (worktree claude/estrojen-revizyon).",
+  "status": "Taslak. Bekleyen: editör notundaki birinci tekil 5 basamaklı yaklaşımın Dr. Aksoy teyidi; 5 SSS sorusunun gerçek Dr. Aksoy yanıtları; Dr. Alper Mumcu bağımsız tıbbi inceleme ve imzalı Bilimsel Editör Notu; KC yayın onayı. Yanıtlar gelmeden yayımlanamaz. Commit/push/deploy yetkisi verilmedi.",
+  "baselineApproval": "article-approvals.ts: yalnızca 2026-05-04 prelaunch envanter mutabakatı. 2026-08-06 esaslı güncellemenin (commit a46ee7d1) tıbbi inceleme veya onay kaydı yok; byline/şemadaki Mumcu inceleyen bilgisi kayıtla desteklenmiyordu.",
+  "revisionScope": [
+    "[5] künyesi: 'Lobo RA ve arkadaşları' yanlıştı → Battipaglia C, Genazzani AD, Nappi RE, La Marca A. Minerva Obstet Gynecol 2024;76(6):590-603 (PMID 39283289).",
+    "E4 kaynağı: 'plasenta kaynaklı fetal hormon' yanlıştı → yalnızca gebelikte fetal karaciğerde üretilir, anneye plasenta yoluyla geçer (Holinka 2008, PMID 18462934) [7].",
+    "Yeni doğrulanmış kaynaklar: NAMS 2022 (PMID 35797481) [1], Vinogradova 2019 BMJ (PMID 30626577) [8], CGHFBC 2019 Lancet (PMID 31474332) [9], CGESOC 2015 Lancet (PMID 25684585) [10], RUTH/Barrett-Connor 2006 NEJM (PMID 16837676) [11], Franco 2016 JAMA (PMID 27327802) [12], STRAW+10 Harlow 2012 (PMID 22344196) [13]. ACOG hasta SSS sayfası (bot engeli, içerik doğrulanamadı) kaynakçadan çıkarıldı.",
+    "İçerik düzeltmeleri: yumurtalık kanseri 'bazı çalışmalar nötr' → 52 çalışma meta-analizinde belirgin artış (5 yıl kullanımda ~1/1000); meme kanseri riskinde 'başlangıç zamanına göre değişir' → süre ve progestajenle artar, vajinal östrojende artış yok, mutlak örnek CGHFBC'den; raloksifen RUTH sonuçları (koroner etki yok, invaziv meme kanseri ve omurga kırığı azalır, tromboz ve ölümcül inme artar); E2 zirvesi 'ovülasyonda' → yumurtlamadan hemen önce; 'E1 HRT kararlarının temeli' abartısı kaldırıldı; cilt 'baş aktörü' → yaş ve güneşle birlikte önemli nedenlerden biri; serviks kanseri kaynaksız iddiası çıkarıldı.",
+    "Yapı: gövdedeki 5 soruluk 'Sıkça Sorulanlar' bölümü ile alttaki 3 soruluk SSS bileşeni (iki yüzey) kaldırıldı; gövdedeki kaynaklı bilgiler (biyoözdeş, testler, fitoöstrojen, ruh hâli, kemik taraması) ilgili gövde bölümlerine taşındı; SSS tek yüzey 'Dr. Aksoy’a sorular' olarak Dr. Aksoy yanıtlarını bekliyor (veri boş). Model yazımı 3 eski SSS yanıtı silindi (Dr. Aksoy’a ait değildi).",
+    "Kısa Klinik Yanıt doğrudan cevaba çevrildi; kendini tanıtan 'pazarlama değil … eğitim' cümlesi çıkarıldı. Kapanış H2 'Kapanış' → 'Mekanizmadan Karara'; vecizeler ('Bilgi belirsizliğin panzehiridir', 'Doğru sorular cevabın yarısını kurar') ve üçüncü 'üç soru' tekrarı kaldırıldı. Kaynaklar kapanıştan sonraya alındı. 'Bioidentik/biyoözdeş' tutarlı; 'Endojen vs Eksojen' → 'Vücudun Östrojeni ve İlaç Olarak Östrojen'. 25+ sözcüklük cümleler 16 → 1.",
+    "Hero alt metni (görsel üretim talimatı ve İngilizce sözcükler) natürmort tanımıyla değiştirildi; görsel değişmedi. og:image makale görseline bağlandı. Manifest açıklaması sayfa açıklamasıyla eşitlendi. modifiedDate 11 Ekim 2026."
+  ],
+  "faqQuestionsAsked": [
+    "Biyoözdeş hormonlar daha mı güvenli?",
+    "Östrojen testleri nasıl yorumlanır; kandan ölçüm anlamlı mı?"
+  ],
+  "faqQuestionsRemaining": [
+    "Biyoözdeş hormonlar daha mı güvenli?",
+    "Östrojen testleri nasıl yorumlanır; kandan ölçüm anlamlı mı?",
+    "Soya, isoflavon, fitoöstrojen gerçekten östrojen yerine geçer mi?",
+    "Perimenopozda ruh hâli neden değişiyor; östrojenle ilişkisi ne?",
+    "Östrojen düşüşü kemik kaybını neden hızlandırır?"
+  ],
+  "faqResponses": [],
+  "pendingBodyConfirmation": {
+    "editorNote": "Bilimsel Editör Notu’ndaki birinci tekil 'Pratikte östrojen kararını … şu basamakları izlerim' (5 basamak, '3–6 ay takip, sonra yıllık', 'sistemik belirti baskınsa transdermal'), 'her hastada farklı bir bina çıkıyor' ifadeleri kayıtlı Dr. Aksoy yanıtı değil. Teyit bekleniyor; değilse not Dr. Mumcu imzasıyla yeniden kurulacak. Not ayrıca kendi yazısında Senai imzalı (kural: Mumcu) ve tek genel 'Kanıt Düzeyi 2–5' satırı taşıyor.",
+    "careerSentence": "'Otuz yıllık jinekolog kariyerimin…' gövdede korundu (1994’ten beri pratik, draksoyivf kaydında doğrulanmış)."
+  },
+  "notApplied": [
+    "Byline 4:5 ve kart 2.4:1 ayrı kırpımları: kaynak 1800×1000; özel görsel üretimi ayrıca sorulacak.",
+    "Kalın bağırsak kanseri risk azalması cümlesi kaynaksız bırakıldı (kanıt etiketi kaldırıldı); kaynak eklenmesi açık iş."
+  ],
+  "independentMedicalReview": "Bekliyor: Dr. Alper Mumcu.",
+  "publicationApproval": "Bekliyor."
+}

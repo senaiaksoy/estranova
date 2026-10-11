@@ -1124,7 +1124,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
     title: 'Östrojen Biyolojisi ve Sağlık',
-    description: 'Östrojenin kemik, kalp, beyin ve metabolizma üzerindeki etkilerini bilimsel bir dille açıklayan rehber.',
+    description: 'Östrojen tek bir hormon değil, E1–E4 ailesi. Dokuya göre değişen etkiler, yaşam boyu değişim, hormon tedavisi ve kanser ilişkisi kaynaklarıyla.',
     publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',

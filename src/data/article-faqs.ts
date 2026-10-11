@@ -781,21 +781,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     },
   ],
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': [
-    {
-      question: 'Östrojen neden yalnızca üreme hormonu gibi düşünülmemeli?',
-      answer:
-        'Çünkü etkisi yalnızca adet döngüsüyle sınırlı değildir. Kemik, damar, beyin, cilt ve metabolizma gibi birçok sistem bu hormondaki değişimlerden pay alır.',
-    },
-    {
-      question: 'Östrojenin azalması herkeste aynı sonuçları mı doğurur?',
-      answer:
-        'Hayır. Aynı biyolojik değişim farklı bedenlerde farklı önceliklerle görünür; birinde sıcak basması, diğerinde uyku, başka birinde kemik veya doku konforu öne çıkabilir.',
-    },
-    {
-      question: 'Bu biyolojiyi bilmek günlük yaşam açısından neden değerli?',
-      answer:
-        'Çünkü dağınık görünen yakınmaları tek tek değil, ortak bir bakışla okumayı kolaylaştırır. Böylece bedenin verdiği sinyaller daha az şaşırtıcı, daha çok anlaşılır hale gelir.',
-    },
   ],
   '/hormonal-gecis/menopoz/menopoz-nedir/': [
     {

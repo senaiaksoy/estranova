@@ -212,7 +212,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
-    alt: 'Akademisyen ev çalışma odasında pencere kenarında sıcak cream damarlı mermer masada saf natürmort (kişi yok); ortada açık leather-bound akademik not defteri üzerinde elle çizilmiş soyut biyolojik akış diyagramı (organik eğriler ve daireler, etiketsiz) ve dolma kalem, solda açık ciltli akademik kitap ve seramik vazoda peony ile magnolia dalı (botanik aksan), sağda buharlı klasik Türk çay bardağı altın tabakta, brass-rimmed okuma gözlüğü, brass orb paperweight; bordo kadife perde edge, sheer keten perde, dışarıda yumuşak yeşil bokeh, brass yeşil camlı banker abajur warm focused light; estrogen biyolojisinin sağlıkla ilişkisini doğal-akademik bir pencereden okumak teması',
+    alt: 'Pencere kenarında mermer çalışma masasında açık not defteri, el çizimi soyut bir diyagram, kitap, çiçekler, çay bardağı ve okuma gözlüğü; östrojen biyolojisi yazısı için natürmort',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
