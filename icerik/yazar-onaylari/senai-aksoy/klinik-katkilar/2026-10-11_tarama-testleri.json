@@ -3,7 +3,7 @@
   "pathname": "/hormonal-gecis/40-sonrasi/tarama-testleri/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası sorulan üç gövde sorusuna Dr. Aksoy'un yazılı yanıtları (iki yanıt + üçüncü soruya 'tek dosya, net soru benim cümlem değil' cevabı).",
-  "status": "2026-10-11 ilk revizyon onaylı ve yayında (3ccc6000). Dış değerlendirme düzeltmeleri worktree tarama-dd’de; Dr. Aksoy ve Dr. Mumcu yeniden onayı bekleniyor.",
+  "status": "2026-10-11 iki tur da onaylı. Açık iş: byline 4:5 ve kart 2.4:1 için editörden özel görsel.",
   "revisionScope": "Audit (2026-10-11) bulgularına göre: başlıktaki 'ne zaman / ne sıklıkla' sorusu yaş ve aralık tablosuyla karşılandı; Türkiye ulusal kanser tarama programı (HSGM) eklendi; kalın bağırsak taraması ve kan basıncı eklendi; tiroid/inflamatuvar belirteç listesi düzeltildi; DXA bölümü USPSTF 2025 ile hizalandı; dayanaksız Evidence etiketleri kaldırıldı/yeniden bağlandı; numaralı kaynaklar bölümü (8 kaynak) eklendi; Bilimsel Editör Notu imzası Dr. Alper Mumcu'ya çevrildi; tek kelimelik H2 ve soru başlığı yoğunluğu düzeltildi; tekrarlar birleştirildi; kırmızı bayrak kutusu düzeltildi; modifiedDate/lastUpdated 11 Ekim 2026. Hero görseli değişmedi. SSS eklenmedi (Estranova'da zorunlu değil; mevcut SSS yoktu).",
   "faqConversionStatus": "Uygulanmaz: makalede SSS yok.",
   "faqQuestionsAsked": [],
@@ -68,6 +68,6 @@
     "reviewerNotesNotActioned": [
       "Canlı site 403: 2026-10-11 curl ile 200 alındı, yeni metin canlıda doğrulandı; 403 dış aracın bot engellemesi olabilir. Yerel noindex lansman ayarı."
     ],
-    "approvalStatus": "Değişen metin Mumcu ve KC onayından sonra yazıldı; yeniden onay gerekiyor."
+    "approvalStatus": "2026-10-11: Dr. Aksoy ve Dr. Alper Mumcu ikinci tur metni onayladı (KC bildirimi: \"mumcu onayı ve benim onayım tamam\")."
   }
 }
