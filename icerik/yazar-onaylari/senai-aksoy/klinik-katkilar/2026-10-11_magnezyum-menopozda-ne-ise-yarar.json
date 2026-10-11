@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası Dr. Aksoy'a yöneltilen ilk üç SSS sorusunun yazılı yanıtları.",
-  "status": "Tamamlandı: hekim yanıtları, Dr. Mumcu incelemesi ve KC yayın onayı 2026-10-11 kayıtlı. Açık iş: doz üst sınırı (birincil kaynak okunamadı).",
+  "status": "2026-10-11 ilk revizyon yayında (df6884eb). Üst sınır eki taslakta (worktree mg-ul); Dr. Mumcu incelemesi ve KC yayın onayı bekleniyor.",
   "revisionScope": "Kaynak düzeltmeleri: [10] yanlış PMID 2246470 (AIDS makalesi) → Zehender 1997 MAGICA PMID 9120155, cümle eşleşmesi düzeltildi; [8] Belsey 2010 (gerçek konu: kabızlıkta yaşam kalitesi) → Bharucha & Lacy 2020 PMID 31945360; [3] başlık ve makale no (125) düzeltildi; [7] sitrat cümlesinden ayrıldı, glisinat tolerans iddiası kaynaksız olduğu için gövdeden çıkarıldı (hekim yanıtında); [9] 'düşük-orta' → 'düşük' (Boyle: poor quality); [11] çalışma grubu (155 sağlıklı erişkin, 18–65, 4 hafta) eklendi; kramp Evidence 2 → 4 (Cochrane orta/yüksek kesinlikte yararsızlık). Kısa Klinik Yanıt doğrudan cevaba çevrildi; 6 soru-H2'nin 5'i ve tek kelimelik Kapanış başlığı düz cümleye çevrildi (anchor'lar korundu); Kaynaklar Kapanış'tan sonraya alındı; tekrarlar birleştirildi; kırmızı bayrak kutusundan uyarı olmayan madde çıkarıldı; inceleme notundaki yazar sesi cümlesi düzeltildi; og:image eklendi; modifiedDate 11 Ekim 2026. Doz üst sınırı eklenmedi: NIH ODS ve NCBI Bookshelf bot doğrulaması nedeniyle birincil kaynak okunamadı.",
   "faqConversionStatus": "Tamamlandı: 4/4 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı.",
   "faqQuestionsAsked": [
@@ -45,5 +45,19 @@
     "decision": "Dr. Aksoy 2026-10-11 teyit etti (\"benim ifadem\"); gövdede kaldı."
   },
   "independentMedicalReview": "2026-10-11: Dr. Alper Mumcu revizyonun ve inceleme notundaki cümle değişikliğinin bağımsız tıbbi incelemesini onayladı (KC bildirimi; yazılı belge repoda değil). İmza tarihi 11 Ekim 2026.",
-  "publicationApproval": "2026-10-11: KC editör/yazar Dr. Senai Aksoy yayın onayı verdi (\"mumcu onayı ve benim onayım tamam\")."
+  "publicationApproval": "2026-10-11: KC editör/yazar Dr. Senai Aksoy yayın onayı verdi (\"mumcu onayı ve benim onayım tamam\").",
+  "doseUpperLimitAddition20261011": {
+    "source": "Dr. Aksoy'un 2026-10-11 yapıştırdığı üst sınır notu (sohbet aracı kalıntısı 'European Food Safety Authority +1' metne taşınmadı).",
+    "verified": [
+      "ABD 350 mg/gün besin dışı magnezyum, kritik etki ishal: IOM 1997 DRI, Bölüm 6 (National Academies read/5776/chapter/8) [13].",
+      "Avrupa 250 mg/gün kolay çözünen magnezyum tuzları (takviye, su, eklenmiş gıda), besindeki magnezyum hariç: SCF/CS/NUT/UPPLEV/54 Final, 11 Ekim 2001 [14].",
+      "Kadın RDA 19–30 yaş 310 mg, 31+ yaş 320 mg: National Academies DRI tablosu."
+    ],
+    "authorDecisions": [
+      "'yaklaşık 310–320 mg' → 'yaklaşık 320 mg' (31+ yaş kaynak değeri; 310 mg 19–30 yaş). Dr. Aksoy 2026-10-11 öneriyi onayladı ('önerilerini yap').",
+      "'genellikle günlük 100–200 mg elementel magnezyumla başlanabilir' cümlesi CLAUDE.md §4 (bireysel doz/reçete dili) nedeniyle metne alınmadı. Dr. Aksoy 2026-10-11 onayladı."
+    ],
+    "usedVerbatim": "Hekim önerisi olmadan Avrupa’nın 250 mg sınırını aşmamayı tercih ederim. Özellikle böbrek yetmezliğinde daha düşük dozlar bile riskli olabilir. Ayrıca etikette yazan magnezyum sitrat 1.000 mg ile elementel magnezyum 1.000 mg aynı şey değildir. Bu değer, takviye olarak alınması gereken doz değildir.",
+    "approvalStatus": "Dr. Mumcu incelemesi ve KC yayın onayı bekleniyor."
+  }
 }
