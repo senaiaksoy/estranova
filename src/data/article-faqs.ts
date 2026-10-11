@@ -256,24 +256,19 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/': [
     {
-      question: 'Magnezyum menopozda herkese gerekli bir takviye midir?',
+      question: "Magnezyum menopozda herkese gerekli bir takviye midir?",
       answer:
-        'Hayır. Bazı kadınlarda uyku, kabızlık ya da belirli eksiklik riski nedeniyle anlamlı olabilir; ama herkese otomatik olarak gerekliymiş gibi konuşmak doğru olmaz. Asıl soru, hangi yakınma için ve hangi gerekçeyle düşünüldüğüdür.',
+        "Hayır. Menopoza giren her kadının magnezyum takviyesi kullanması gerektiğini düşünmüyorum. Magnezyum kasların, sinir sisteminin ve kemiklerin sağlıklı çalışması için önemli bir mineral. Ancak menopoz başlaması, tek başına magnezyum eksikliği olduğu anlamına gelmez.\n\nBen önce hastanın nasıl beslendiğine bakarım. Yeşil yapraklı sebzeler, kuru baklagiller, kuruyemişler ve tam tahıllar magnezyum açısından zengin besinlerdir. Beslenmeyle yeterli miktarda alınıyorsa ayrıca takviye kullanmak çoğu zaman gerekli değildir.\n\nAncak yetersiz beslenen, bağırsaklardan emilim sorunu olan veya magnezyum düzeyini etkileyebilecek bazı ilaçları uzun süre kullanan kadınlarda takviye düşünülebilir.\n\nMagnezyumu menopozun standart bir tedavisi olarak görmüyorum. Sıcak basmalarını, gece terlemelerini veya menopozun diğer belirtilerini belirgin biçimde azalttığına ilişkin güçlü kanıtlarımız yok.\n\nBenim yaklaşımım, menopozdaki her kadına bir takviye listesi vermek yerine gerçekten neye ihtiyacı olduğunu değerlendirmek.",
     },
     {
-      question: 'Uyku için magnezyum gerçekten işe yarar mı?',
+      question: "Uyku için magnezyum gerçekten işe yarar mı?",
       answer:
-        'Uyku tarafında bazı kadınlarda fayda hissi olabilir; ancak kanıt bütün uyku sorunları için aynı güçte değildir. Özellikle uyku bozukluğunun nedeni sıcak basması, anksiyete, uyku apnesi ya da gece bölünmesi ise magnezyum tek başına bütün tabloyu çözmez.',
+        "Menopoz döneminde uyku sorunu yaşayan kadınlardan magnezyumla ilgili çok soru alıyorum. Bazı hastalar kullandıklarında daha rahat uyuduklarını söylüyor. Bunun mümkün olduğunu düşünüyorum, ancak bilimsel araştırmalar henüz herkese önerebileceğimiz kadar güçlü sonuçlar vermiyor.\n\nÖzellikle magnezyum glisinatla yapılan bazı çalışmalarda uyku şikâyetlerinde küçük iyileşmeler gösterildi. Ancak diğer araştırmalarda aynı sonuçlar elde edilemedi.\n\nBenim için burada asıl soru, kadının neden uyuyamadığıdır. Gece sıcak basması nedeniyle mi uyanıyor? Kaygı mı yaşıyor? Yoksa uzun süredir devam eden bağımsız bir uykusuzluk sorunu mu var?\n\nÖrneğin gece terlemeleri nedeniyle defalarca uyanan bir kadında yalnızca magnezyum vermek yerine, öncelikle menopoz belirtilerini tedavi etmeyi düşünürüm.\n\nBeslenmeyle yeterince magnezyum alamayan veya eksiklik riski bulunan bir kadında takviye uygun olabilir. Ancak magnezyumu uyku ilacının yerine geçen, etkisi kanıtlanmış bir tedavi olarak sunmam.\n\nÖzellikle uzun süren uykusuzlukta önemli olan, doğru magnezyumu seçmekten önce uykuyu bozan nedeni bulmaktır.",
     },
     {
-      question: 'Hangi magnezyum formu daha iyi sorusunun tek cevabı var mı?',
+      question: "Hangi magnezyum formu daha iyi? Glisinat mı, sitrat mı?",
       answer:
-        'Hayır. Form seçimi çoğu zaman hedefe göre anlam kazanır: kabızlıkta sitrat daha pratik olabilirken, mide-barsak hassasiyetinde başka formlar daha iyi tolere edilebilir. “En iyi form” yerine “hangi amaç için” sorusu daha doğru bir başlangıç sağlar.',
-    },
-    {
-      question: 'Magnezyum zararsız diye düşünmek doğru mu?',
-      answer:
-        'Her zaman değil. Özellikle böbrek hastalığı olanlarda, bazı ilaçları kullananlarda ya da yüksek dozları uzun süre alanlarda daha dikkatli olunmalıdır. Takviyenin sıradan görünmesi, herkes için risksiz olduğu anlamına gelmez.',
+        "Bu sorunun herkes için geçerli tek bir cevabı yok. Çünkü farklı magnezyum formlarının emilimi, bağırsaklar üzerindeki etkileri ve kullanım amaçları birbirinden farklı.\n\nÖrneğin magnezyum sitrat, emilimi iyi olan formlardan biridir. Ancak bazı hastalarda bağırsak hareketlerini artırabilir ve ishale neden olabilir. Kabızlığı olan bir hastada bu özellik bazen avantaj sağlayabilirken, hassas bağırsakları bulunan bir kadında sorun yaratabilir.\n\nMagnezyum glisinat ise genellikle bağırsaklar açısından daha iyi tolere edilen seçeneklerden biridir. Bu nedenle takviye gerektiğinde, özellikle sindirim sistemi şikâyetleri olan hastalarda değerlendirebilirim. Ancak glisinatın diğer formlardan daha iyi uyku sağladığı kesin olarak gösterilmiş değil.\n\nMagnezyum oksit de yaygın kullanılıyor, fakat diğer bazı formlara göre emilimi daha düşüktür ve bağırsak yan etkileri görülebilir.\n\nPiyasada beyin sağlığı, hafıza veya uyku için özellikle önerilen başka magnezyum çeşitleri de var. Ancak bunlarla ilgili pazarlama iddiaları, çoğu zaman elimizdeki bilimsel kanıtlardan daha ileri gidiyor.\n\nBen magnezyum seçerken yalnızca ürünün adına değil, içerdiği gerçek magnezyum miktarına, hastanın böbrek fonksiyonlarına, kullandığı ilaçlara ve takviyeyi neden kullanacağına bakarım.\n\nÇünkü gereğinden fazla magnezyum almak da zararsız değildir. Özellikle böbrek fonksiyonu bozuk olan hastalarda dikkatli olmak gerekir.\n\nBenim için en iyi magnezyum, en pahalı veya en çok reklamı yapılan ürün değil; gerçekten ihtiyacı olan hastanın uygun dozda ve iyi tolere edebileceği formdur.",
     },
   ],
   '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/': [

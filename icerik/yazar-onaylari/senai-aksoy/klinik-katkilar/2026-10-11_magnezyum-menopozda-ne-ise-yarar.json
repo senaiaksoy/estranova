@@ -1,0 +1,45 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/",
+  "answeredAt": "2026-10-11",
+  "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası Dr. Aksoy'a yöneltilen ilk üç SSS sorusunun yazılı yanıtları.",
+  "status": "Taslak (worktree claude/magnezyum-revizyon). Bekleyen: 4. SSS yanıtı (zararsızlık), gövdedeki 'Muayene odasında sık gördüğüm karışıklık…' cümlesinin teyidi, Dr. Alper Mumcu bağımsız tıbbi incelemesi ve KC yayın onayı. Commit/push/deploy yetkisi verilmedi.",
+  "revisionScope": "Kaynak düzeltmeleri: [10] yanlış PMID 2246470 (AIDS makalesi) → Zehender 1997 MAGICA PMID 9120155, cümle eşleşmesi düzeltildi; [8] Belsey 2010 (gerçek konu: kabızlıkta yaşam kalitesi) → Bharucha & Lacy 2020 PMID 31945360; [3] başlık ve makale no (125) düzeltildi; [7] sitrat cümlesinden ayrıldı, glisinat tolerans iddiası kaynaksız olduğu için gövdeden çıkarıldı (hekim yanıtında); [9] 'düşük-orta' → 'düşük' (Boyle: poor quality); [11] çalışma grubu (155 sağlıklı erişkin, 18–65, 4 hafta) eklendi; kramp Evidence 2 → 4 (Cochrane orta/yüksek kesinlikte yararsızlık). Kısa Klinik Yanıt doğrudan cevaba çevrildi; 6 soru-H2'nin 5'i ve tek kelimelik Kapanış başlığı düz cümleye çevrildi (anchor'lar korundu); Kaynaklar Kapanış'tan sonraya alındı; tekrarlar birleştirildi; kırmızı bayrak kutusundan uyarı olmayan madde çıkarıldı; inceleme notundaki yazar sesi cümlesi düzeltildi; og:image eklendi; modifiedDate 11 Ekim 2026. Doz üst sınırı eklenmedi: NIH ODS ve NCBI Bookshelf bot doğrulaması nedeniyle birincil kaynak okunamadı.",
+  "faqConversionStatus": "Kısmi: 3/4 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığına geçti; 4. soru (Magnezyum zararsız diye düşünmek doğru mu?) yanıt bekliyor ve yayımlanacak listeden çıkarıldı. 'En sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı.",
+  "faqQuestionsAsked": [
+    "Magnezyum menopozda herkese gerekli bir takviye midir?",
+    "Uyku için magnezyum gerçekten işe yarar mı?",
+    "Hangi magnezyum formu daha iyi? Glisinat mı, sitrat mı?",
+    "Magnezyum zararsız diye düşünmek doğru mu?"
+  ],
+  "faqQuestionsRemaining": [
+    "Magnezyum zararsız diye düşünmek doğru mu?"
+  ],
+  "faqResponses": [
+    {
+      "question": "Magnezyum menopozda herkese gerekli bir takviye midir?",
+      "answeredAt": "2026-10-11",
+      "editedForArticle": "Birebir; yalnızca kalın işaretleri (**) kaldırıldı ve paragraflar korundu.",
+      "sourceCheck": "Sıcak basmasında güçlü kanıt yok ifadesi kaynaklarla çelişmiyor."
+    },
+    {
+      "question": "Uyku için magnezyum gerçekten işe yarar mı?",
+      "answeredAt": "2026-10-11",
+      "editedForArticle": "Birebir; yalnızca kalın işaretleri kaldırıldı.",
+      "sourceCheck": "Glisinatla küçük iyileşme Schuster 2025 (d=0,2) ile, diğer çalışmalarda tutarsızlık Mah & Pitre 2021 ile uyumlu."
+    },
+    {
+      "question": "Hangi magnezyum formu daha iyi? Glisinat mı, sitrat mı?",
+      "answeredAt": "2026-10-11",
+      "editedForArticle": "Birebir; yalnızca kalın işaretleri kaldırıldı.",
+      "sourceCheck": "Gövdedeki 'formlar arasında üstünlük gösterilmedi' ve 'glisinat uyku etkisi küçük' ile uyumlu; oksit emilimi düşük ifadesi hekim görüşü olarak kaldı."
+    }
+  ],
+  "pendingBodyConfirmation": {
+    "sentence": "Muayene odasında sık gördüğüm karışıklık, “iyi hissetmek” ile “eksikliği düzeltmek” ifadelerinin birbirine karışmasıdır.",
+    "origin": "8 Ağustos 2026 humanize commit f9f58a5b; Dr. Aksoy kaynağı kayıtlı değil.",
+    "decision": "Teyit bekleniyor; Dr. Aksoy'un değilse kaldırılacak."
+  },
+  "independentMedicalReview": "Bekliyor: Dr. Alper Mumcu (8 Ağustos 2026 onayı değişen metni kapsamaz).",
+  "publicationApproval": "Bekliyor."
+}
