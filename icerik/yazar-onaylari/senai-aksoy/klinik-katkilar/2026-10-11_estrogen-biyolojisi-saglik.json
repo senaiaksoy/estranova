@@ -73,5 +73,18 @@
     "colonCancer": "Kaynaksız \"bazı çalışmalarda risk azalması\" cümlesi WHI E+P randomize çalışmasıyla kaynaklandı: kalın bağırsak kanseri daha seyrek (43 vs 72; HR 0,56), ancak saptanan kanserler daha ileri evrede (Chlebowski 2004 NEJM, PMID 14999111) [14]; Evidence 4.",
     "images": "Byline 4:5 (1200×1500) ve kart 2.4:1 (2400×1000) yazıya özel AI görselleri: bilim müzesinde soyut molekül heykeline bakan iki arkadaş (50–54, boyalı saç). Higgsfield GPT Image 2.5, kart job 01c03c6b, byline job 8558a4a6 (kart referanslı); IPTC trainedAlgorithmicMedia etiketli; npm run article:images (centre). Hero değişmedi.",
     "approvalStatus": "2026-10-11: Dr. Alper Mumcu (kolon cümlesi) ve KC (görseller ve yayın) onayladı (\"mumcu onayı ve benim onayım tamam\")."
+  },
+  "externalReview20261011": {
+    "source": "Kullanıcının yapıştırdığı dış değerlendirme (2026-10-11). \"Canlıda 13 kaynak/eski görsel\" bulgusu dağıtım gecikmesine aitti (1b5ec998 canlıda doğrulandı).",
+    "appliedNonPhysicianText": [
+      "Meme kanseri: CGHFBC tahmini \"nedensellik varsayımıyla, 50–69 yaş arası 20 yıl\" olarak netleştirildi; WHI 20+ yıl izlemi eklendi [15] (Chlebowski 2020 JAMA, PMID 32721007: yalnız CEE HR 0,78; CEE+MPA HR 1,28), gözlemsel/randomize ayrımı yazıldı.",
+      "Yaş/zaman cümlesine \"uygun bir nedeni olan ve kontrendikasyonu bulunmayan\" koşulu (NAMS 2022 metni); vajinal \"kana çok az geçer\" düşük dozlu lokal ürünlerle sınırlandı (NAMS: low-dose vaginal estradiol minimal systemic absorption).",
+      "Kaynaksız mekanizma cümlelerinden (reseptör, damar, beyin, cilt, metabolizma, CYP, estrobolome) kanıt etiketleri kaldırıldı; bunların mekanizma bilgisi olduğu, klinik yarar anlamına gelmediği yazıldı.",
+      "Vinogradova [8] tasarımı: 80.396 VTE vakası ve 391.494 kontrol, gözlemsel vaka-kontrol; nedensellik sınırı yazıldı. RUTH [11] nüfusu: 10.101 kadın, ort. yaş 67,5, koroner hastalık veya çoklu risk etkeni.",
+      "Soya ve meme kanseri sonrası: Nechuta 2012 [16] (9.514 kadın, nüks artışı yok) gövdeye eklendi — Dr. Aksoy SSS yanıtının bilimsel dayanağı.",
+      "Şema görseli makale görseline bağlandı (estrogen + tarama-testleri; og:image ile aynı)."
+    ],
+    "pendingPhysicianText": "Klinik kırmızı bayraklar (VTE/kalıtsal trombofili, karaciğer hastalığı, açıklanamayan kanama) NAMS 2022 kontrendikasyon listesiyle çelişiyor; 3–6 ay kontrol NICE 1.9.2 (3. ay, sonra yıllık) ile; \"sadece GSM ise lokal vajinal yeterli\" kesinliği; \"kanser öykü\" dil hatası ve kısaltmalar. Önerilen metin Dr. Aksoy onayına sunuldu.",
+    "approvalStatus": "Dr. Aksoy (kendi metni) ve Dr. Mumcu onayı bekleniyor."
   }
 }

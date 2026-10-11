@@ -52,6 +52,7 @@ const articleSchemas = buildArticleSchemas({
   publishedDate: '2 Mayıs 2026',
   modifiedDate: '11 Ekim 2026',
   pathname: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
+  image: articleImage,
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
   keywords: ['östrojen', 'estradiol', 'estron', 'estriol', 'estetrol', 'ER-alfa', 'ER-beta', 'GSM', 'hormon tedavisi', 'estrobolome', 'menopoz'],
@@ -141,14 +142,15 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           <strong>ER-α</strong> ve <strong>ER-β</strong> (östrojen reseptörü alfa ve beta) aynı hormonu farklı dokularda
-          farklı biçimde okur <Evidence level={5} />. Reseptörlerin oranı ve hücre içindeki yardımcı proteinler dokuya göre
+          farklı biçimde okur. Reseptörlerin oranı ve hücre içindeki yardımcı proteinler dokuya göre
           değişir. Bu yüzden meme, kemik, beyin veya vajinal dokudaki sonucu tek bir reseptörle açıklamak doğru olmaz.
         </p>
         <p>
           Dokuya özgü tedavi mantığı bu dağılıma dayanır. <strong>SERM</strong> adı verilen seçici östrojen reseptörü
           düzenleyicileri (tamoksifen, raloksifen, ospemifen) bazı dokularda reseptörü uyarır, bazılarında engeller.
-          Raloksifen kadınlarda invaziv meme kanseri ve omurga kırığı riskini azaltmış, ama koroner olayları azaltmamış;
-          tromboz ve ölümcül inme riskini ise artırmıştır <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={5} />. Bu yüzden kalp-damar
+          Koroner hastalığı ya da birden fazla risk etkeni olan, yaş ortalaması 67,5 olan 10.101 kadında raloksifen invaziv
+          meme kanseri ve omurga kırığı riskini azaltmış, ama koroner olayları azaltmamış; tromboz ve ölümcül inme riskini
+          ise artırmıştır <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={5} />. Bu yüzden kalp-damar
           hastalığından korunmak için kullanılmaz. Ospemifen, vajinal dokuda östrojen benzeri etki gösteren ve menopoza
           bağlı vajinal yakınmalarda kullanılan ağızdan bir seçenektir <sup><a href="#kaynak-1">[1]</a></sup>.
         </p>
@@ -189,25 +191,27 @@ const articleSchemas = buildArticleSchemas({
           GSM yazısına</a> bakabilirsiniz.
         </p>
         <p>
-          <strong>Damarlarda</strong> östrojen nitrik oksit üretimini artırabilir, kan yağları ve damar düz kası üzerinde
-          etkili olabilir <Evidence level={4} />. Kalp-damar riskindeki yaş ve cinsiyet farkı ise yalnızca östrojenle
-          açıklanamaz; tansiyon, kan yağları, hareket, sigara ve yaş birlikte rol oynar. Hormon tedavisine 60 yaşından önce
-          ya da menopozdan sonraki ilk 10 yıl içinde başlayanlarda yarar-risk dengesi daha elverişlidir. Daha geç
+          Bu bölümdeki damar, beyin, cilt ve metabolizma etkileri çoğunlukla laboratuvar ve fizyoloji çalışmalarından gelen
+          mekanizma bilgileridir; hastada klinik yarar anlamına gelmez. <strong>Damarlarda</strong> östrojen nitrik oksit
+          üretimini artırabilir, kan yağları ve damar düz kası üzerinde etkili olabilir. Kalp-damar riskindeki yaş ve cinsiyet farkı ise yalnızca östrojenle
+          açıklanamaz; tansiyon, kan yağları, hareket, sigara ve yaş birlikte rol oynar. Uygun bir nedeni olan ve
+          kontrendikasyonu bulunmayan kadınlarda, hormon tedavisine 60 yaşından önce ya da menopozdan sonraki ilk 10 yıl
+          içinde başlandığında yarar-risk dengesi daha elverişlidir. Daha geç
           başlayanlarda koroner hastalık, inme, tromboz ve bunama riskleri nedeniyle denge daha az elverişli görünür <sup><a href="#kaynak-1">[1]</a></sup>. Bu, hormon
           tedavisinin kalp-damar hastalığından korunmak için başlanacağı anlamına gelmez.
         </p>
         <p>
           <strong>Beyinde</strong> östrojen reseptörleri hipokampus ve prefrontal kortekste bulunur; öğrenme ve bellekle
-          ilişkili biyolojik etkiler gösterilmiştir <Evidence level={4} />. Bu, hormon tedavisinin bilişsel gerilemeyi
+          ilişkili biyolojik etkiler gösterilmiştir. Bu, hormon tedavisinin bilişsel gerilemeyi
           önlediği anlamına gelmez. Perimenopozdaki “beyin sisinin” bir kısmı hormon dalgalanmasıyla ilişkili olabilir.
           Östrojen serotonin ve dopamin sistemleriyle de etkileşir; perimenopozdaki dalgalanma ruh hâli değişimlerine katkıda
           bulunabilir. Ancak depresif belirtiler yalnızca östrojenle açıklanamaz ve ayrıca değerlendirilir.
         </p>
         <p>
           <strong>Ciltte</strong> östrojen kollajen üretimini ve dermis kalınlığını destekler; menopozda kollajenin azalması,
-          yaş ve güneş hasarıyla birlikte cilt incelmesinin önemli nedenlerinden biridir <Evidence level={4} />.
+          yaş ve güneş hasarıyla birlikte cilt incelmesinin önemli nedenlerinden biridir.
           <strong>Metabolizmada</strong> insülin duyarlılığını ve yağ dağılımını etkiler; menopoz sonrası bel çevresindeki
-          yağ artışının bir kısmı bu değişimle ilişkilidir <Evidence level={4} />.
+          yağ artışının bir kısmı bu değişimle ilişkilidir.
         </p>
 
         <h2 id="metabolizma">Metabolizma: Karaciğer ve Bağırsak Bakterileri</h2>
@@ -218,12 +222,12 @@ const articleSchemas = buildArticleSchemas({
           Karaciğerde CYP enzim ailesi östrojeni farklı ara ürünlere (2-, 4- ve 16-hidroksi metabolitlere) çevirir. Bu
           metabolitlerin laboratuvardaki etkileri farklı olabilir; ama 2-hidroksi metabolitleri klinik olarak “daha güvenli”
           saymak doğru değildir. 4-hidroksi metabolitlerin DNA hasarıyla ilişkisi kanser araştırmalarında inceleniyor; bu
-          bulgu tek başına kişisel kanser riski göstermez <Evidence level={2} />.
+          bulgu tek başına kişisel kanser riski göstermez.
         </p>
         <p>
           Son yıllarda <strong>estrobolome</strong> adı verilen alan, yani östrojen ile bağırsak bakterileri arasındaki
           etkileşim ilgi çekiyor. Karaciğerde işaretlenip safrayla bağırsağa atılan östrojenin bir kısmı, bazı bakterilerin
-          enzimleri sayesinde yeniden emilebilir <Evidence level={3} />. Bunun kişisel tedavi kararına nasıl yansıyacağı
+          enzimleri sayesinde yeniden emilebilir. Bunun kişisel tedavi kararına nasıl yansıyacağı
           henüz bilinmiyor.
         </p>
 
@@ -235,13 +239,15 @@ const articleSchemas = buildArticleSchemas({
         <p>
           <strong>Ağızdan alınan östrojen</strong> karaciğerden ilk geçişte yoğun biçimde işlenir; pıhtılaşma faktörlerini ve
           trigliseritleri etkiler. <strong>Deriden emilen östrojen</strong> (bant, jel) bu ilk geçişi atlar. İngiltere’de
-          80 binden fazla kadını kapsayan gözlemsel bir çalışmada ağızdan östrojen toplardamar pıhtısı riskini artırmış,
-          deriden emilen formlarda ise artış görülmemiştir <sup><a href="#kaynak-8">[8]</a></sup> <Evidence level={4} />. Bu, her kadına otomatik olarak deriden
+          toplardamar pıhtısı geçiren 80.396 kadının 391.494 kontrolle karşılaştırıldığı gözlemsel bir vaka-kontrol
+          çalışmasında ağızdan östrojen kullanımı daha yüksek pıhtı riskiyle ilişkili bulundu; deriden emilen formlarda
+          böyle bir ilişki görülmedi <sup><a href="#kaynak-8">[8]</a></sup> <Evidence level={4} />. Gözlemsel bir çalışma olduğu için bu bulgu kesin bir
+          neden-sonuç ilişkisi göstermez. Bu, her kadına otomatik olarak deriden
           form seçileceği anlamına gelmez.
         </p>
         <p>
-          <strong>Vajinal östrojen</strong> (krem, halka, tablet) lokal yakınmalarda kullanılır ve kana çok az geçer
-          <sup><a href="#kaynak-1">[1]</a></sup>. Meme kanseri öyküsü varsa onkolog ve ilgili hekimle birlikte değerlendirilir <sup><a href="#kaynak-2">[2]</a></sup>. Ayrıntılar için
+          <strong>Vajinal östrojen</strong> (krem, halka, tablet) lokal yakınmalarda kullanılır; düşük dozlu lokal ürünler
+          kana çok az geçer <sup><a href="#kaynak-1">[1]</a></sup>. Meme kanseri öyküsü varsa onkolog ve ilgili hekimle birlikte değerlendirilir <sup><a href="#kaynak-2">[2]</a></sup>. Ayrıntılar için
           <a href="/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/" class="font-semibold text-primary underline decoration-gold/40 underline-offset-4 hover:decoration-primary">
           GSM yazısına</a> bakabilirsiniz.
         </p>
@@ -262,7 +268,9 @@ const articleSchemas = buildArticleSchemas({
           belirtilere bakılarak değerlendirilir. Tükürük veya saç testlerinin klinik geçerliliği zayıftır <sup><a href="#kaynak-6">[6]</a></sup>
           <Evidence level={4} />. Soya ve kırmızı yonca gibi bitkisel östrojenler sıcak basmalarında küçük bir azalma
           sağlayabilir. Ancak çalışmaların çoğunda yanlılık riski yüksektir ve bu ürünler hormon tedavisinin yerini tutmaz
-          <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={3} />.
+          <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={3} />. Besinle alınan soya için ise meme kanseri geçirmiş 9.514 kadını izleyen kohort
+          analizinde nüks riskinde artış görülmedi; daha yüksek tüketim daha düşük nüks oranıyla ilişkiliydi <sup><a href="#kaynak-16">[16]</a></sup>
+          <Evidence level={3} />.
         </p>
 
         <h2 id="kanser">Östrojen ve Kanser: Karmaşık Bir Tablo</h2>
@@ -273,8 +281,16 @@ const articleSchemas = buildArticleSchemas({
           <strong>Memede</strong> östrojen ER-α üzerinden hücre çoğalmasını destekler. Dünya genelindeki verileri birleştiren
           analizde vajinal östrojen dışındaki tüm hormon tedavisi türleri meme kanseri riskinde artışla ilişkili bulundu.
           Artış kullanım süresiyle büyüdü ve östrojen-progestajen kombinasyonunda yalnız östrojene göre daha yüksekti <sup><a href="#kaynak-9">[9]</a></sup>
-          <Evidence level={4} />. Analizin hesabına göre 50 yaşında başlayıp 5 yıl östrojenle birlikte her gün progestajen
-          kullanan yaklaşık 50 kadından birinde, 50–69 yaşları arasında fazladan bir meme kanseri gelişir <sup><a href="#kaynak-9">[9]</a></sup>.
+          <Evidence level={4} />. İlişkinin nedensel olduğu varsayımıyla yapılan tahmine göre, 50 yaşında başlayıp 5 yıl östrojenle
+          birlikte her gün progestajen kullanan yaklaşık 50 kadından birinde, 50–69 yaşları arasındaki 20 yılda fazladan bir
+          meme kanseri gelişir <sup><a href="#kaynak-9">[9]</a></sup>.
+        </p>
+        <p>
+          Bu sonuç gözlemsel verilere dayanır ve her tedavi türüne aynı biçimde genellenemez. Randomize WHI çalışmalarının
+          20 yılı aşan izleminde, rahmi alınmış kadınlarda yalnız östrojen (konjuge östrojen) meme kanseri sıklığını
+          plaseboya göre azalttı; rahmi olan kadınlarda östrojen-MPA kombinasyonu ise artırdı <sup><a href="#kaynak-15">[15]</a></sup> <Evidence level={5} />.
+          Çalışmaya katılan kadınların yaş ortalaması 63 idi ve kullanılan ilaçlar bugün tercih edilen preparatların hepsini
+          temsil etmez.
         </p>
         <p>
           <strong>Rahim iç zarında</strong> sistemik östrojen tek başına aşırı kalınlaşmaya yol açabilir; progestajen bu riski
@@ -365,6 +381,8 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-12">Franco OH, Chowdhury R, Troup J ve ark. <em>Use of Plant-Based Therapies and Menopausal Symptoms: A Systematic Review and Meta-analysis.</em> JAMA. 2016;315(23):2554-2563. <a href="https://pubmed.ncbi.nlm.nih.gov/27327802/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-13">Harlow SD, Gass M, Hall JE ve ark. <em>Executive summary of the Stages of Reproductive Aging Workshop + 10: addressing the unfinished agenda of staging reproductive aging.</em> J Clin Endocrinol Metab. 2012;97(4):1159-1168. <a href="https://pubmed.ncbi.nlm.nih.gov/22344196/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-14">Chlebowski RT, Wactawski-Wende J, Ritenbaugh C ve ark. <em>Estrogen plus progestin and colorectal cancer in postmenopausal women.</em> N Engl J Med. 2004;350(10):991-1004. <a href="https://pubmed.ncbi.nlm.nih.gov/14999111/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-15">Chlebowski RT, Anderson GL, Aragaki AK ve ark. <em>Association of Menopausal Hormone Therapy With Breast Cancer Incidence and Mortality During Long-term Follow-up of the Women's Health Initiative Randomized Clinical Trials.</em> JAMA. 2020;324(4):369-380. <a href="https://pubmed.ncbi.nlm.nih.gov/32721007/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-16">Nechuta SJ, Caan BJ, Chen WY ve ark. <em>Soy food intake after diagnosis of breast cancer and survival: an in-depth analysis of combined evidence from cohort studies of US and Chinese women.</em> Am J Clin Nutr. 2012;96(1):123-132. <a href="https://pubmed.ncbi.nlm.nih.gov/22648714/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
         </ol>
       </ArticleProsePanel>
 
