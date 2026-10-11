@@ -85,6 +85,7 @@
       "Şema görseli makale görseline bağlandı (estrogen + tarama-testleri; og:image ile aynı)."
     ],
     "pendingPhysicianText": "Klinik kırmızı bayraklar (VTE/kalıtsal trombofili, karaciğer hastalığı, açıklanamayan kanama) NAMS 2022 kontrendikasyon listesiyle çelişiyor; 3–6 ay kontrol NICE 1.9.2 (3. ay, sonra yıllık) ile; \"sadece GSM ise lokal vajinal yeterli\" kesinliği; \"kanser öykü\" dil hatası ve kısaltmalar. Önerilen metin Dr. Aksoy onayına sunuldu.",
-    "approvalStatus": "Dr. Aksoy (kendi metni) ve Dr. Mumcu onayı bekleniyor."
+    "approvalStatus": "Dr. Aksoy metin onayı alındı; Dr. Mumcu onayı bekleniyor.",
+    "physicianTextEdits": "Dr. Aksoy 2026-10-11 beş öneriyi onayladı (\"onay\"): pıhtı cümlesi NAMS 2022 kontrendikasyonlarına göre (sistemik HRT genellikle önerilmez, istisnada hematoloji ile uzman değerlendirmesi); karaciğer/açıklanamayan kanama \"nedeni netleşmeden sistemik HRT başlanmaz\"; takvim NICE 1.9.2 (3. ay, sonra yıllık) [2]; \"yalnızca GSM varsa çoğu zaman düşük doz lokal vajinal tedavi yeterli\"; \"kanser öyküsü\", kısaltma açılımları (HRT, GSM, KV), \"ekartasyonu zorunlu\" → \"dışlanması gerekir\". Kırmızı bayraklara NAMS [1] atfı eklendi."
   }
 }
