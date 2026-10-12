@@ -1,0 +1,16 @@
+{
+  "pathname": "/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/",
+  "writerSlug": "senai-aksoy",
+  "revisionDate": "2026-10-12",
+  "baselineCommit": "f0d9fc17",
+  "status": "release-authorized-independent-medical-review-pending",
+  "previousApprovalPreserved": true,
+  "newMedicalApproval": false,
+  "newIndependentReview": false,
+  "publishAuthorized": true,
+  "releaseAuthorization": "KC doğrudan editör/yayın talimatı, 12 Ekim 2026: Commit, push, deploy.",
+  "faqAnswersUnchanged": true,
+  "previousReviewerNoteUnchanged": true,
+  "authorFormRequired": false,
+  "reason": "KC doğrudan yayın yetkisi verdi; yeni bağımsız tıbbi inceleme tamamlanmış sayılmadı ve sayfada bekleyen inceleme notu görünür."
+}

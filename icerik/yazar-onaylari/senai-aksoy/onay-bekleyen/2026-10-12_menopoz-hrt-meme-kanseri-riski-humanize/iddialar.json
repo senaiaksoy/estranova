@@ -1,0 +1,18 @@
+[
+  {
+    "id": "kombine",
+    "pattern": "kombine sistemik tedavide risk artışı|kombine sistemik hormon tedavisi meme kanseri|kombine tedavilerde risk artışı|kombine sistemik tedavide kullanım uzadıkça"
+  },
+  {
+    "id": "sure",
+    "pattern": "kullanım uzadıkça|süre uzadıkça|kısa süre ayrı|uzun süre kullananlarda"
+  },
+  {
+    "id": "yol",
+    "pattern": "meme kanseri açısından oral ve transdermal|uygulama yolunun meme|meme kanseri riskinin daha düşük|Meme kanseriyle ilişki ağızdan|meme kanseri açısından aynı avantaj"
+  },
+  {
+    "id": "ostrojen",
+    "pattern": "yalnızca östrojen|yalnızca konjuge östrojen|yalnızca östrojende|yalnızca östrojeni"
+  }
+]

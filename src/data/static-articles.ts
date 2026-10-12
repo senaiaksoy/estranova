@@ -643,7 +643,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/',
     title: 'Menopozda Hormon Tedavisi ve Meme Kanseri Riski: Yeni Veriler Gerçekten Neyi Değiştirdi?',
     description:
-      'Menopozda hormon tedavisi ile meme kanseri riski arasındaki ilişki siyah-beyaz değil. Yeni veriler; yaş, başlama zamanı, tedavi kombinasyonu, süre ve kişisel öykünün neden birlikte okunması gerektiğini daha net gösteriyor.',
+      'Menopozda hormon tedavisi ve meme kanseri riski: kombine tedavi, yalnızca östrojen, uygulama yolu ve kullanım süresine ilişkin veriler ne söylüyor?',
     publishedDate: '6 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',

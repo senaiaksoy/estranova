@@ -1,0 +1,853 @@
+{
+  "originalPath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_menopoz-hrt-meme-kanseri-riski-humanize/once.md",
+  "revisedPath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_menopoz-hrt-meme-kanseri-riski-humanize/sonra.md",
+  "locale": "tr",
+  "status": "review_changes",
+  "differences": {
+    "numbers": [
+      {
+        "value": "1",
+        "beforeCount": 2,
+        "afterCount": 4,
+        "beforeLocations": [
+          {
+            "line": 95,
+            "column": 217
+          },
+          {
+            "line": 200,
+            "column": 135
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 58,
+            "column": 33
+          },
+          {
+            "line": 110,
+            "column": 3
+          },
+          {
+            "line": 128,
+            "column": 15
+          },
+          {
+            "line": 248,
+            "column": 135
+          }
+        ]
+      },
+      {
+        "value": "10",
+        "beforeCount": 1,
+        "afterCount": 3,
+        "beforeLocations": [
+          {
+            "line": 197,
+            "column": 179
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 63
+          },
+          {
+            "line": 151,
+            "column": 68
+          },
+          {
+            "line": 245,
+            "column": 179
+          }
+        ]
+      },
+      {
+        "value": "2",
+        "beforeCount": 2,
+        "afterCount": 3,
+        "beforeLocations": [
+          {
+            "line": 95,
+            "column": 311
+          },
+          {
+            "line": 198,
+            "column": 137
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 114,
+            "column": 30
+          },
+          {
+            "line": 128,
+            "column": 17
+          },
+          {
+            "line": 246,
+            "column": 137
+          }
+        ]
+      },
+      {
+        "value": "2012",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 200,
+            "column": 127
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 125,
+            "column": 1
+          },
+          {
+            "line": 248,
+            "column": 127
+          }
+        ]
+      },
+      {
+        "value": "2014",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 198,
+            "column": 128
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 118,
+            "column": 1
+          },
+          {
+            "line": 246,
+            "column": 128
+          }
+        ]
+      },
+      {
+        "value": "2017",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 197,
+            "column": 171
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 111,
+            "column": 1
+          },
+          {
+            "line": 245,
+            "column": 171
+          }
+        ]
+      },
+      {
+        "value": "2018",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 196,
+            "column": 147
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 108,
+            "column": 1
+          },
+          {
+            "line": 244,
+            "column": 147
+          }
+        ]
+      },
+      {
+        "value": "2019",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 202,
+            "column": 217
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 174,
+            "column": 24
+          },
+          {
+            "line": 250,
+            "column": 217
+          }
+        ]
+      },
+      {
+        "value": "2020",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 199,
+            "column": 202
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 41,
+            "column": 1
+          },
+          {
+            "line": 247,
+            "column": 202
+          }
+        ]
+      },
+      {
+        "value": "2026",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 36,
+            "column": 35
+          }
+        ]
+      },
+      {
+        "value": "3",
+        "beforeCount": 5,
+        "afterCount": 8,
+        "beforeLocations": [
+          {
+            "line": 95,
+            "column": 102
+          },
+          {
+            "line": 98,
+            "column": 235
+          },
+          {
+            "line": 98,
+            "column": 264
+          },
+          {
+            "line": 139,
+            "column": 406
+          },
+          {
+            "line": 212,
+            "column": 29
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 59,
+            "column": 32
+          },
+          {
+            "line": 81,
+            "column": 12
+          },
+          {
+            "line": 82,
+            "column": 32
+          },
+          {
+            "line": 110,
+            "column": 32
+          },
+          {
+            "line": 122,
+            "column": 13
+          },
+          {
+            "line": 122,
+            "column": 42
+          },
+          {
+            "line": 181,
+            "column": 32
+          },
+          {
+            "line": 260,
+            "column": 29
+          }
+        ]
+      },
+      {
+        "value": "5",
+        "beforeCount": 12,
+        "afterCount": 11,
+        "beforeLocations": [
+          {
+            "line": 46,
+            "column": 39
+          },
+          {
+            "line": 46,
+            "column": 41
+          },
+          {
+            "line": 54,
+            "column": 17
+          },
+          {
+            "line": 54,
+            "column": 19
+          },
+          {
+            "line": 95,
+            "column": 104
+          },
+          {
+            "line": 98,
+            "column": 129
+          },
+          {
+            "line": 98,
+            "column": 266
+          },
+          {
+            "line": 98,
+            "column": 381
+          },
+          {
+            "line": 139,
+            "column": 29
+          },
+          {
+            "line": 139,
+            "column": 408
+          },
+          {
+            "line": 212,
+            "column": 31
+          },
+          {
+            "line": 212,
+            "column": 33
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 45,
+            "column": 32
+          },
+          {
+            "line": 45,
+            "column": 34
+          },
+          {
+            "line": 59,
+            "column": 34
+          },
+          {
+            "line": 82,
+            "column": 34
+          },
+          {
+            "line": 110,
+            "column": 34
+          },
+          {
+            "line": 122,
+            "column": 44
+          },
+          {
+            "line": 127,
+            "column": 31
+          },
+          {
+            "line": 128,
+            "column": 19
+          },
+          {
+            "line": 181,
+            "column": 34
+          },
+          {
+            "line": 260,
+            "column": 31
+          },
+          {
+            "line": 260,
+            "column": 33
+          }
+        ]
+      },
+      {
+        "value": "6",
+        "beforeCount": 2,
+        "afterCount": 8,
+        "beforeLocations": [
+          {
+            "line": 68,
+            "column": 117
+          },
+          {
+            "line": 118,
+            "column": 195
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 28,
+            "column": 30
+          },
+          {
+            "line": 75,
+            "column": 35
+          },
+          {
+            "line": 89,
+            "column": 3
+          },
+          {
+            "line": 105,
+            "column": 3
+          },
+          {
+            "line": 147,
+            "column": 3
+          },
+          {
+            "line": 153,
+            "column": 13
+          },
+          {
+            "line": 161,
+            "column": 20
+          },
+          {
+            "line": 219,
+            "column": 3
+          }
+        ]
+      },
+      {
+        "value": "7",
+        "beforeCount": 2,
+        "afterCount": 5,
+        "beforeLocations": [
+          {
+            "line": 139,
+            "column": 230
+          },
+          {
+            "line": 201,
+            "column": 143
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 59,
+            "column": 3
+          },
+          {
+            "line": 82,
+            "column": 3
+          },
+          {
+            "line": 181,
+            "column": 3
+          },
+          {
+            "line": 189,
+            "column": 3
+          },
+          {
+            "line": 249,
+            "column": 143
+          }
+        ]
+      }
+    ],
+    "timeAndDenominators": [
+      {
+        "value": "10 yıl",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 63
+          }
+        ]
+      },
+      {
+        "value": "5 yıl",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 139,
+            "column": 29
+          }
+        ],
+        "afterLocations": []
+      }
+    ],
+    "ranges": [
+      {
+        "value": "1–2",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 128,
+            "column": 15
+          }
+        ]
+      },
+      {
+        "value": "4–5",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 54,
+            "column": 15
+          }
+        ],
+        "afterLocations": []
+      }
+    ],
+    "numericCitations": [
+      {
+        "value": "[1]",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 95,
+            "column": 216
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 58,
+            "column": 32
+          },
+          {
+            "line": 110,
+            "column": 2
+          }
+        ]
+      },
+      {
+        "value": "[3]",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 98,
+            "column": 234
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 81,
+            "column": 11
+          },
+          {
+            "line": 122,
+            "column": 12
+          }
+        ]
+      },
+      {
+        "value": "[4]",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 46,
+            "column": 9
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 45,
+            "column": 2
+          },
+          {
+            "line": 188,
+            "column": 14
+          }
+        ]
+      },
+      {
+        "value": "[6]",
+        "beforeCount": 2,
+        "afterCount": 8,
+        "beforeLocations": [
+          {
+            "line": 68,
+            "column": 116
+          },
+          {
+            "line": 118,
+            "column": 194
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 28,
+            "column": 29
+          },
+          {
+            "line": 75,
+            "column": 34
+          },
+          {
+            "line": 89,
+            "column": 2
+          },
+          {
+            "line": 105,
+            "column": 2
+          },
+          {
+            "line": 147,
+            "column": 2
+          },
+          {
+            "line": 153,
+            "column": 12
+          },
+          {
+            "line": 161,
+            "column": 19
+          },
+          {
+            "line": 219,
+            "column": 2
+          }
+        ]
+      },
+      {
+        "value": "[7]",
+        "beforeCount": 1,
+        "afterCount": 4,
+        "beforeLocations": [
+          {
+            "line": 139,
+            "column": 229
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 59,
+            "column": 2
+          },
+          {
+            "line": 82,
+            "column": 2
+          },
+          {
+            "line": 181,
+            "column": 2
+          },
+          {
+            "line": 189,
+            "column": 2
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "value": "#kaynak-1",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 95,
+            "column": 215
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 58,
+            "column": 31
+          },
+          {
+            "line": 110,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-3",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 98,
+            "column": 233
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 81,
+            "column": 10
+          },
+          {
+            "line": 122,
+            "column": 11
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-4",
+        "beforeCount": 1,
+        "afterCount": 2,
+        "beforeLocations": [
+          {
+            "line": 46,
+            "column": 8
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 45,
+            "column": 1
+          },
+          {
+            "line": 188,
+            "column": 13
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-6",
+        "beforeCount": 2,
+        "afterCount": 8,
+        "beforeLocations": [
+          {
+            "line": 68,
+            "column": 115
+          },
+          {
+            "line": 118,
+            "column": 193
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 28,
+            "column": 28
+          },
+          {
+            "line": 75,
+            "column": 33
+          },
+          {
+            "line": 89,
+            "column": 1
+          },
+          {
+            "line": 105,
+            "column": 1
+          },
+          {
+            "line": 147,
+            "column": 1
+          },
+          {
+            "line": 153,
+            "column": 11
+          },
+          {
+            "line": 161,
+            "column": 18
+          },
+          {
+            "line": 219,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-7",
+        "beforeCount": 1,
+        "afterCount": 4,
+        "beforeLocations": [
+          {
+            "line": 139,
+            "column": 228
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 59,
+            "column": 1
+          },
+          {
+            "line": 82,
+            "column": 1
+          },
+          {
+            "line": 181,
+            "column": 1
+          },
+          {
+            "line": 189,
+            "column": 1
+          }
+        ]
+      }
+    ]
+  },
+  "frontmatterChanged": false,
+  "coverage": {
+    "before": {
+      "blocks": 44,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "after": {
+      "blocks": 48,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    }
+  },
+  "limitations": [
+    "Counts are global: values swapped between outcomes or claims can escape detection.",
+    "Negation, certainty, population and causal meaning require the manual meaning record.",
+    "Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.",
+    "Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.",
+    "Number formatting is not silently converted between locales. No tracked changes is not clinical approval."
+  ]
+}

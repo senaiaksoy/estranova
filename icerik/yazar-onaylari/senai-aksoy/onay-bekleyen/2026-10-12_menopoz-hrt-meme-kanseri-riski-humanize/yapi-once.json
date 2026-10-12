@@ -1,0 +1,155 @@
+{
+  "filePath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_menopoz-hrt-meme-kanseri-riski-humanize/once.md",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "short-closer",
+      "count": 5,
+      "locations": [
+        {
+          "line": 28,
+          "column": 1,
+          "excerpt": "Önce şunu söyleyeyim: korku da bilgiyle yatışır."
+        },
+        {
+          "line": 144,
+          "column": 1,
+          "excerpt": "Onu kendi bağlamına geri yerleştirmek oluyor."
+        },
+        {
+          "line": 196,
+          "column": 1,
+          "excerpt": "2019;394(10204):1159-1168."
+        },
+        {
+          "line": 216,
+          "column": 1,
+          "excerpt": "Doğru yer ikisinin arasıdır."
+        },
+        {
+          "line": 221,
+          "column": 1,
+          "excerpt": "Bu ayrım hâlâ işin temel taşı."
+        }
+      ],
+      "message": "5 of 23 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information."
+    },
+    {
+      "id": "repeated-phrase",
+      "count": 1,
+      "phrases": [
+        {
+          "phrase": "kanıt düzeyi 3 5",
+          "count": 4
+        }
+      ],
+      "message": "Four-word sequences used 4+ times. A fixed technical term is fine; a repeated list or a calque repeated verbatim is a candidate."
+    },
+    {
+      "id": "claim-kombine",
+      "count": 2,
+      "locations": [
+        {
+          "line": 3,
+          "column": 23,
+          "excerpt": "kombine sistemik tedavide risk artışı"
+        },
+        {
+          "line": 73,
+          "column": 30,
+          "excerpt": "kombine sistemik tedavide kullanım uzadıkça"
+        }
+      ],
+      "message": "Stated 2 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 2
+    },
+    {
+      "id": "claim-sure",
+      "count": 2,
+      "locations": [
+        {
+          "line": 73,
+          "column": 56,
+          "excerpt": "kullanım uzadıkça"
+        },
+        {
+          "line": 182,
+          "column": 7,
+          "excerpt": "kısa süre ayrı"
+        }
+      ],
+      "message": "Stated 2 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 2
+    },
+    {
+      "id": "claim-yol",
+      "count": 2,
+      "locations": [
+        {
+          "line": 95,
+          "column": 1,
+          "excerpt": "meme kanseri açısından oral ve transdermal"
+        },
+        {
+          "line": 229,
+          "column": 60,
+          "excerpt": "uygulama yolunun meme"
+        }
+      ],
+      "message": "Stated 2 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 2
+    },
+    {
+      "id": "claim-ostrojen",
+      "count": 4,
+      "locations": [
+        {
+          "line": 139,
+          "column": 168,
+          "excerpt": "yalnızca östrojen"
+        },
+        {
+          "line": 162,
+          "column": 49,
+          "excerpt": "yalnızca östrojen"
+        },
+        {
+          "line": 181,
+          "column": 47,
+          "excerpt": "yalnızca östrojen"
+        },
+        {
+          "line": 223,
+          "column": 42,
+          "excerpt": "yalnızca östrojen"
+        }
+      ],
+      "message": "Stated 4 times across 4 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 4
+    }
+  ],
+  "rhythm": {
+    "sentences": 98,
+    "meanWords": 15.4,
+    "sdWords": 9.6,
+    "shareUpTo8Words": 0.32,
+    "longestShortRun": 4
+  },
+  "coverage": {
+    "blocks": 44,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+    "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+    "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+    "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+  ]
+}

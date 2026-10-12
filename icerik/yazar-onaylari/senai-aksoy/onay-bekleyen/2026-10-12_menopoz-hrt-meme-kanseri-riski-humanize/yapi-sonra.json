@@ -1,0 +1,175 @@
+{
+  "filePath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_menopoz-hrt-meme-kanseri-riski-humanize/sonra.md",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "short-closer",
+      "count": 3,
+      "locations": [
+        {
+          "line": 244,
+          "column": 1,
+          "excerpt": "2019;394(10204):1159-1168."
+        },
+        {
+          "line": 264,
+          "column": 1,
+          "excerpt": "Doğru yer ikisinin arasıdır."
+        },
+        {
+          "line": 269,
+          "column": 1,
+          "excerpt": "Bu ayrım hâlâ işin temel taşı."
+        }
+      ],
+      "message": "3 of 33 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information."
+    },
+    {
+      "id": "repeated-phrase",
+      "count": 1,
+      "phrases": [
+        {
+          "phrase": "kanıt düzeyi 3 5",
+          "count": 6
+        }
+      ],
+      "message": "Four-word sequences used 4+ times. A fixed technical term is fine; a repeated list or a calque repeated verbatim is a candidate."
+    },
+    {
+      "id": "claim-kombine",
+      "count": 3,
+      "locations": [
+        {
+          "line": 1,
+          "column": 32,
+          "excerpt": "kombine sistemik hormon tedavisi meme kanseri"
+        },
+        {
+          "line": 55,
+          "column": 26,
+          "excerpt": "kombine tedavilerde risk artışı"
+        },
+        {
+          "line": 78,
+          "column": 1,
+          "excerpt": "Kombine sistemik tedavide kullanım uzadıkça"
+        }
+      ],
+      "message": "Stated 3 times across 3 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 3
+    },
+    {
+      "id": "claim-sure",
+      "count": 3,
+      "locations": [
+        {
+          "line": 2,
+          "column": 22,
+          "excerpt": "kullanım uzadıkça"
+        },
+        {
+          "line": 78,
+          "column": 27,
+          "excerpt": "kullanım uzadıkça"
+        },
+        {
+          "line": 79,
+          "column": 30,
+          "excerpt": "uzun süre kullananlarda"
+        }
+      ],
+      "message": "Stated 3 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 2
+    },
+    {
+      "id": "claim-yol",
+      "count": 2,
+      "locations": [
+        {
+          "line": 109,
+          "column": 1,
+          "excerpt": "Meme kanseriyle ilişki ağızdan"
+        },
+        {
+          "line": 277,
+          "column": 60,
+          "excerpt": "uygulama yolunun meme"
+        }
+      ],
+      "message": "Stated 2 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 2
+    },
+    {
+      "id": "claim-ostrojen",
+      "count": 8,
+      "locations": [
+        {
+          "line": 2,
+          "column": 61,
+          "excerpt": "Yalnızca östrojen"
+        },
+        {
+          "line": 26,
+          "column": 55,
+          "excerpt": "yalnızca östrojen"
+        },
+        {
+          "line": 44,
+          "column": 12,
+          "excerpt": "yalnızca konjuge östrojen"
+        },
+        {
+          "line": 50,
+          "column": 39,
+          "excerpt": "yalnızca östrojen"
+        },
+        {
+          "line": 178,
+          "column": 25,
+          "excerpt": "Yalnızca östrojen"
+        },
+        {
+          "line": 184,
+          "column": 1,
+          "excerpt": "Yalnızca östrojen"
+        },
+        {
+          "line": 211,
+          "column": 45,
+          "excerpt": "yalnızca östrojen"
+        },
+        {
+          "line": 271,
+          "column": 42,
+          "excerpt": "yalnızca östrojen"
+        }
+      ],
+      "message": "Stated 8 times across 6 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 6
+    }
+  ],
+  "rhythm": {
+    "sentences": 115,
+    "meanWords": 13.5,
+    "sdWords": 6.6,
+    "shareUpTo8Words": 0.23,
+    "longestShortRun": 4
+  },
+  "coverage": {
+    "blocks": 48,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+    "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+    "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+    "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+  ]
+}

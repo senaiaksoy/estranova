@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "h1": 1,
+  "faqParity": "4/4",
+  "unchangedPhysicianAnswers": true,
+  "unchangedPriorReviewerNote": true,
+  "sourcesCited": "7/7",
+  "anchors": "all resolved",
+  "schemaOgBylineImage": "https://estranova.com/images/library/editorial/senai-hrt-meme-kanseri-hero.webp",
+  "author": {
+    "@id": "https://senaiaksoy.net/#person"
+  },
+  "reviewer": "Dr. Alper Mumcu",
+  "liveHasPriorUnsafeSentence": true,
+  "liveHasLocalRevisedSentence": false,
+  "browserVisualCheck": "blocked: native bridge unavailable; local navigation ERR_BLOCKED_BY_CLIENT"
+}

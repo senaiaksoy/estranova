@@ -1,0 +1,52 @@
+{
+  "target": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_menopoz-hrt-meme-kanseri-riski-humanize/live-once.html",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "repeated-disclaimer",
+      "count": 2,
+      "items": [
+        "Hekiminize danışmanın anlamlı olduğu durumlar",
+        "Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için sağlık pro…"
+      ],
+      "message": "The same disclaimer is shown more than once inside the page body. One clear instance is enough (the footer is not counted)."
+    },
+    {
+      "id": "review-anonymous",
+      "count": 1,
+      "items": [
+        "tıbbi incelemesi"
+      ],
+      "message": "A review line names no person. Name the reviewer who actually did it, or do not show the line; never invent one."
+    },
+    {
+      "id": "uncited-source",
+      "count": 7,
+      "items": [
+        "Brusselaers N, Tamimi RM, Konings P, Rosner B, Adami HO, Lagergren J. Different menopausal hormone regimens a…",
+        "Crandall CJ ve ark. Comparison of clinical outcomes among users of oral and transdermal estrogen therapy in t…",
+        "Fournier A ve ark. Risk of breast cancer after stopping menopausal hormone therapy in the E3N cohort. Breast …",
+        "Chlebowski RT ve ark. Association of Menopausal Hormone Therapy With Breast Cancer Incidence and Mortality Du…",
+        "Ruan X, Seeger H, Mueck AO. Breast cancer risk during hormone therapy: experimental versus clinical data. Min…",
+        "The North American Menopause Society. The 2022 hormone therapy position statement of The North American Menop…",
+        "Collaborative Group on Hormonal Factors in Breast Cancer. Type and timing of menopausal hormone therapy and b…"
+      ],
+      "message": "Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it."
+    }
+  ],
+  "coverage": {
+    "characters": 14444,
+    "images": 2,
+    "headings": 15,
+    "collapsibles": 4,
+    "roles": [
+      "author: Yazan : → Doç. Dr. Senai Aksoy",
+      "review: tıbbi inceleme → (no person named)"
+    ]
+  },
+  "limitations": [
+    "Reads one built page as served; a page behind a consent wall or rendered client-side may be incomplete.",
+    "Name, role and reference matching are heuristics: every item is a candidate to look at, not a verdict.",
+    "Template findings (review line, og:type, repeated boxes) belong to the site layout; report them, do not rewrite article text to hide them."
+  ]
+}
