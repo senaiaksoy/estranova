@@ -3,7 +3,7 @@
   "pathname": "/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code audit + revizyon (worktree claude/estrojen-revizyon).",
-  "status": "Tamamlandı: tüm turlar onaylı (2026-10-11).",
+  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12).",
   "baselineApproval": "article-approvals.ts: yalnızca 2026-05-04 prelaunch envanter mutabakatı. 2026-08-06 esaslı güncellemenin (commit a46ee7d1) tıbbi inceleme veya onay kaydı yok; byline/şemadaki Mumcu inceleyen bilgisi kayıtla desteklenmiyordu.",
   "revisionScope": [
     "[5] künyesi: 'Lobo RA ve arkadaşları' yanlıştı → Battipaglia C, Genazzani AD, Nappi RE, La Marca A. Minerva Obstet Gynecol 2024;76(6):590-603 (PMID 39283289).",
@@ -85,7 +85,7 @@
       "Şema görseli makale görseline bağlandı (estrogen + tarama-testleri; og:image ile aynı)."
     ],
     "pendingPhysicianText": "Klinik kırmızı bayraklar (VTE/kalıtsal trombofili, karaciğer hastalığı, açıklanamayan kanama) NAMS 2022 kontrendikasyon listesiyle çelişiyor; 3–6 ay kontrol NICE 1.9.2 (3. ay, sonra yıllık) ile; \"sadece GSM ise lokal vajinal yeterli\" kesinliği; \"kanser öykü\" dil hatası ve kısaltmalar. Önerilen metin Dr. Aksoy onayına sunuldu.",
-    "approvalStatus": "Dr. Aksoy metin onayı alındı; Dr. Mumcu onayı bekleniyor.",
+    "approvalStatus": "2026-10-12: Dr. Alper Mumcu ve KC (Dr. Aksoy) onayladı (\"mumcu onayı ve benim onayım tamam\").",
     "physicianTextEdits": "Dr. Aksoy 2026-10-11 beş öneriyi onayladı (\"onay\"): pıhtı cümlesi NAMS 2022 kontrendikasyonlarına göre (sistemik HRT genellikle önerilmez, istisnada hematoloji ile uzman değerlendirmesi); karaciğer/açıklanamayan kanama \"nedeni netleşmeden sistemik HRT başlanmaz\"; takvim NICE 1.9.2 (3. ay, sonra yıllık) [2]; \"yalnızca GSM varsa çoğu zaman düşük doz lokal vajinal tedavi yeterli\"; \"kanser öyküsü\", kısaltma açılımları (HRT, GSM, KV), \"ekartasyonu zorunlu\" → \"dışlanması gerekir\". Kırmızı bayraklara NAMS [1] atfı eklendi."
   }
 }
