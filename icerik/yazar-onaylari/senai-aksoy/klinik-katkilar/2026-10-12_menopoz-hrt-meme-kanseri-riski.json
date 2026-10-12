@@ -1,0 +1,27 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/",
+  "answeredAt": "2026-10-12",
+  "source": "12 Ekim 2026 Claude Code oturumu: HRT meme kanseri riski makalesi kaynak ve kanıt turu (dal hrt-kaynak-2026-10-12).",
+  "status": "Tamamlandı: Dr. Alper Mumcu incelemesi ve onayı, Dr. Senai Aksoy klinik onayı (2026-10-12).",
+  "sssAnswers": {
+    "note": "Dört SSS yanıtı Dr. Aksoy'un kendi yanıtlarıdır; bu tur değiştirilmedi.",
+    "questions": [
+      "Ailede meme kanseri öyküsü varsa hormon tedavisi tamamen kapanır mı?",
+      "Kısa süreli kullanım ile uzun süreli kullanım arasında meme riski farkı var mı?",
+      "Transdermal östrojen meme açısından daha güvenli mi?",
+      "Hormon tedavisine hiç başlamamak her zaman daha mı güvenlidir?"
+    ]
+  },
+  "sourceAndTextChanges": [
+    "Kaynakça (7 kayıt, PubMed/DOI ile doğrulandı): Brusselaers 2018 [1], Crandall 2017 [2], Fournier 2014 E3N [3], WHI Chlebowski 2020 [4], Ruan 2012 derleme [5], NAMS 2022 [6], CGHFBC 2019 [7].",
+    "Transdermal iddiası: İsveç kohortunda oral ve deri yoluyla uygulama benzer bulundu [1]; WHI indeksi benzer [2]; daha düşük risk iddiası kaldırıldı.",
+    "Progesteron iddiası: E3N'de progesteron/dihidrojesteron kısa dönemde belirgin artış göstermedi [3]; doğal progesteronun daha düşük riskli olabileceği yalnızca derleme hipotezi [5].",
+    "Zamanlama ve kontrendikasyon: NAMS 2022'ye göre 60 yaş altı ve menopozdan sonraki 10 yıl içinde yarar-risk oranı uygun; kontrendikasyonu olmayanlar için [6].",
+    "Mutlak risk: 50 yaşında başlayıp 5 yıl östrojen ve günlük progestajen kullanımında 50–69 yaş arasında yaklaşık 50 kullanıcıdan 1; yalnızca östrojende yaklaşık 200'de 1; nedensellik varsayımıyla [7].",
+    "Kanıt etiketleri: gözlemsel veriler 3, WHI randomize veri 5, derleme hipotezi 1–2 olarak yeniden hesaplandı.",
+    "modifiedDate ve lastUpdated 12 Ekim 2026."
+  ],
+  "medicalReview": "Dr. Alper Mumcu incelemesi ve onayı (KC bildirimi: 'Mumcu onayı var' ve 'Mumcu inceledi, onay verdi').",
+  "clinicalApproval": "Dr. Senai Aksoy klinik onayı: 'Ben de klinik onay veriyorum' (2026-10-12)."
+}
