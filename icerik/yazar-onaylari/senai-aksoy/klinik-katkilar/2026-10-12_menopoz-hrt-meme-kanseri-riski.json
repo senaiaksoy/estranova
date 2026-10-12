@@ -3,7 +3,7 @@
   "pathname": "/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/",
   "answeredAt": "2026-10-12",
   "source": "12 Ekim 2026 Claude Code oturumu: HRT meme kanseri riski makalesi kaynak ve kanıt turu (dal hrt-kaynak-2026-10-12).",
-  "status": "Tamamlandı: Codex revizyonu dahil Dr. Mumcu onaylı (2026-10-12). Mumcu notundaki oral kombinasyon cümlesi güncelleme bekliyor.",
+  "status": "Tamamlandı: Codex revizyonu ve editör notu güncellemesi dahil Dr. Mumcu onaylı (2026-10-12).",
   "sssAnswers": {
     "note": "Dört SSS yanıtı Dr. Aksoy'un kendi yanıtlarıdır; bu tur değiştirilmedi.",
     "questions": [
@@ -29,5 +29,9 @@
     "note": "Codex audit/humanize/fix revizyonu (kayıt: icerik/yazar-onaylari/senai-aksoy/onaylanan/2026-10-12_menopoz-hrt-meme-kanseri-riski-humanize/). Claude Code geniş audit: kaynaklar ve NAMS 2022 tam metni doğrulandı.",
     "followUp": "Görünür 'inceleme bekleniyor' notu kaldırıldı; kontrendikasyon cümlesi NAMS 2022 listesine göre açıklaştırıldı (pıhtı, inme, kalp krizi/koroner hastalık, karaciğer hastalığı, kalıtsal yüksek pıhtı riski).",
     "approvalStatus": "2026-10-12: Dr. Alper Mumcu revizyonu onayladı (KC bildirimi: 'Mumcu onayı tamam'). Dr. Aksoy klinik onayı önceki turda verildi."
+  },
+  "mumcuNoteEdit20261012": {
+    "change": "Editör notu: 've bazı oral kombinasyonlar' ifadesi çıkarıldı; gövdedeki oral/ciltten benzer bulgu ile uyumlu.",
+    "approvalStatus": "2026-10-12: Dr. Alper Mumcu onayladı (KC bildirimi: 'Okey onaylıyor')."
   }
 }
