@@ -521,16 +521,3 @@ const articleSchemas = buildArticleSchemas({
   <SiteFooter />
 </SiteLayout>
 
-<style>
-  /* Clip decoration without creating a scroll container that disables sticky TOC. */
-  main#main-content :global(article.relative.isolate) {
-    overflow: clip;
-  }
-
-  @media (min-width: 1024px) {
-    main#main-content :global([data-toc]) {
-      max-height: calc(100dvh - 7rem);
-      overflow-y: auto;
-    }
-  }
-</style>
