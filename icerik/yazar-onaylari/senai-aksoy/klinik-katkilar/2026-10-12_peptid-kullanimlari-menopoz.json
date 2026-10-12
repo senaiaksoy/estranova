@@ -1,0 +1,28 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/",
+  "answeredAt": "2026-10-12",
+  "source": "12 Ekim 2026 Claude Code oturumu: peptid makalesi kaynak ve SSS turu (worktree peptid-sss).",
+  "status": "Tamamlandı: Dr. Mumcu ve KC onayı (2026-10-12). SSS yanıtları Dr. Aksoy'un kendi metinleridir.",
+  "sssAnswers": {
+    "note": "Dört SSS yanıtı Dr. Aksoy tarafından 'benim yanıtlarım' ile teyit edildi; birebir girildi (yalnızca ** işaretleri silindi).",
+    "questions": [
+      "Peptid denince neden tek bir ürün grubundan söz edemiyoruz?",
+      "Menopozda peptidler kilo kaybı veya kas korunması için kanıtlı bir seçenek midir?",
+      "BPC-157, thymosin beta-4 ya da ipamorelin gibi isimlerde en büyük belirsizlik nedir?",
+      "Bir peptid iddiasını reklam dili olmadan değerlendirmek için ilk bakılacak şey nedir?"
+    ]
+  },
+  "sourceAndTextChanges": [
+    "Kaynakça: 11 kayıt, PubMed metadata ile doğrulandı: STEP 1 [1], SURMOUNT-1 [2], CJC-1295 insan RCT [3], ipamorelin önklinik [4], TB4 göz damlası faz 2 [5][6], BPC-157 önklinik derleme [7], enjekte peptid güvenlik derlemesi [8], MOTS-c derlemesi [9], epitalon Rusça kaynaklar [10][11].",
+    "İpamorelin ve CJC-1295 ayrımı: CJC-1295 için insan verisi, ipamorelin için yalnızca hayvan verisi.",
+    "TB-500 / timosin beta-4: insan çalışmaları göz damlası formuyla sınırlı ve küçük.",
+    "AOD-9604 ve MOT-C: kaynaksız iddialar yumuşatıldı; AOD-9604 için yayımlanmış insan çalışması bulunamadı.",
+    "Editör notu imzası Dr. Alper Mumcu olarak değiştirildi; metin üçüncü şahıs anlatıma çevrildi.",
+    "modifiedDate ve lastUpdated 12 Ekim 2026."
+  ],
+  "openItems": [
+    "GHK-Cu için insan verisi kaynağı bulunamadı; 'sınırlı insan verisi' ifadesi kaynaksız kaldı.",
+    "Kanıt etiketleri tam olarak yeniden hesaplanmadı; yalnızca kaynağı kaldırılan AOD-9604 ve MOT-C etiketleri çıkarıldı."
+  ]
+}

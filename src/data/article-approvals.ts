@@ -411,7 +411,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-05-07',
-    note: 'KC editor direct approval: audit reconciliation icin canli deneysel peptid route production approval setine eklendi; static manifest, schema ve Senai klinik yazari uyumu dogrulandi.',
+    note: '2026-10-12 peptid makalesi kaynak ve SSS turu: 11 PubMed doğrulamalı kaynak eklendi, ipamorelin ve CJC-1295 ayrımı, TB-500 insan veri durumu, AOD-9604 ve MOT-C yumuşatması, editör notu Dr. Alper Mumcu imzasına çevrildi. Dr. Alper Mumcu onayladı (KC bildirimi, 2026-10-12). Dr. Aksoy dört SSS yanıtını kendi metinleri olarak teyit etti ve birebir girildi (kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-12_peptid-kullanimlari-menopoz.json). Bu kayıt push/deploy yetkisi değildir. KC editor direct approval: audit reconciliation icin canli deneysel peptid route production approval setine eklendi; static manifest, schema ve Senai klinik yazari uyumu dogrulandi.',
   },
   {
     pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
