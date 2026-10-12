@@ -26,12 +26,13 @@ const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/bilimsel-pence
 const articleTitle = 'GHK-Cu ve Menopoz: Bakır Peptid, Cilt Yaşlanması ve Kanıt Sınırı';
 const seoTitle = 'GHK-Cu ve Menopoz: Kanıt Sınırı';
 const articleDescription =
-  'GHK-Cu, kolajen ve onarım biyolojisi açısından ilgi çekici bir bakır peptid; ancak menopoz cildi ve longevity iddiaları için insan kanıtı hâlâ sınırlı.';
+  'GHK-Cu, kolajen ve onarım biyolojisi açısından ilgi çekici bir bakır peptid; ancak menopoz cildi ve uzun ömür iddiaları için insan kanıtı hâlâ sınırlı.';
 const publishedDate = '5 Haziran 2026';
+const modifiedDate = '12 Ekim 2026';
 const readingMinutes = 17;
 
 const tocEntries = [
-  { id: 'ghk-cu-nedir', label: 'GHK-Cu Nedir?' },
+  { id: 'ghk-cu-nedir', label: 'GHK-Cu, Küçük Bir Peptid' },
   { id: 'yasla-azalma-iddiasi', label: 'Yaşla Azalma İddiası' },
   { id: 'onarim-biyolojisi', label: 'Onarım Biyolojisi' },
   { id: 'menopoz-cildi', label: 'Menopoz Cildiyle Bağlantı' },
@@ -43,7 +44,8 @@ const tocEntries = [
   { id: 'pazarlama', label: 'Pazarlama Dili' },
   { id: 'pratik-okuma', label: 'Pratik Okuma' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+  { id: 'kaynak-listesi', label: 'Kaynaklar' },
 ];
 
 const faqItems = articleFaqs[pathname] ?? [];
@@ -54,6 +56,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate,
+  modifiedDate,
   pathname,
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -78,6 +81,7 @@ const articleSchemas = buildArticleSchemas({
 <SiteLayout
   title={`${seoTitle} - Estranova`}
   description={articleDescription}
+  image={hero.src}
   ogType="article"
   jsonLd={articleSchemas}
 >
@@ -98,10 +102,11 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate={publishedDate}
+        lastUpdated={modifiedDate}
         readingMinutes={readingMinutes}
-        imageSrc="/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg"
+        imageSrc="/images/library/editorial/ghk-cu-menopoz-cilt-byline.webp"
         imageAlt="Aydınlık bir tekstil atölyesinde transparan kumaş ve bakır tonlu iplikleri inceleyen 50 yaş civarı kadın; GHK-Cu, kolajen ve menopozda cilt biyolojisi temasını editoryal bir dille taşıyan görsel"
-        imagePosition="56% center"
+        imagePosition="center"
       />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
@@ -109,11 +114,11 @@ const articleSchemas = buildArticleSchemas({
         <SaveForLaterButton slug={pathname} title={articleTitle} />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           GHK-Cu, vücutta doğal olarak bulunan GHK adlı küçük bir peptidin bakırla kurduğu kompleks olarak tanımlanır.
           Laboratuvar ve hayvan verilerinde kolajen, yara iyileşmesi, inflamasyon ve gen ifadesi üzerinde ilgi çekici
-          sinyaller vardır <Evidence from={2} to={3} />. Ancak menopoz cildinde doğrudan denenmiş, güçlü ve bağımsız
+          sinyaller vardır. Ancak menopoz cildinde doğrudan denenmiş, güçlü ve bağımsız
           insan çalışmaları yoktur <Evidence level={1} />. Bugünkü dürüst okuma şudur: GHK-Cu topikal kozmetik içerik
           olarak makul ve genellikle iyi tolere edilen bir destek olabilir; enjeksiyon, sistemik gençleşme, genetik
           reset ve menopoz cildini belirgin biçimde geri çevirme iddiaları ise verinin önüne geçer.
@@ -121,68 +126,68 @@ const articleSchemas = buildArticleSchemas({
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="ghk-cu-nedir">GHK-Cu Nedir?</h2>
+        <h2 id="ghk-cu-nedir">GHK-Cu, küçük bir peptid</h2>
         <p>
-          GHK-Cu kulağa yeni bir güzellik kelimesi gibi gelebilir; aslında hikayesi biyokimyanın daha sessiz bir yerinden
-          başlar. Molekülü anlamak, onu ne fazla büyütmek ne de bütünüyle küçümsemek için iyi bir başlangıçtır.
+          GHK-Cu kulağa yeni bir güzellik kelimesi gibi gelebilir. Oysa hikâyesi biyokimyanın daha sessiz bir köşesinde
+          başlar. Molekülü anlamak, onu ne fazla büyütmek ne de küçümsemek için iyi bir başlangıçtır.
         </p>
         <p>
           GHK, glisin, histidin ve lizinden oluşan üç aminoasitli küçük bir peptiddir. İnsan plazması, tükürük ve idrarında
-          tanımlanmıştır; kollajen ve bazı bağ doku proteinlerinden de proteoliz yoluyla açığa çıkabileceği düşünülür
-          <Evidence level={4} />. Bakırla bağlandığında GHK-Cu adı verilen kompleks oluşur. Bu kompleksin ilgi çekici
-          tarafı, bakırı serbest ve oksidatif olarak hırçın bir formda bırakmadan taşıyabilmesidir.
+          tanımlanmıştır; kolajen ve bazı bağ doku proteinlerinden de proteoliz yoluyla açığa çıkabileceği düşünülür.
+          Bakırla bağlandığında GHK-Cu adı verilen kompleks oluşur <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Bu kompleksin ilgi çekici tarafı,
+          bakırı serbest ve oksidatif olarak hırçın bir formda bırakmadan taşıyabilmesidir.
         </p>
         <p>
-          Bakır vücutta küçük ama kritik işlerin kofaktörüdür: kollajenin çapraz bağlanmasında rol alan enzimler, enerji
-          metabolizması ve antioksidan savunma sistemleri bu minerale temas eder <Evidence level={4} />. Bu nedenle
-          GHK-Cu anlatısı cilt, yara iyileşmesi ve doku onarımı çevresinde kolayca büyür. Biyolojik çekicilik buradan
-          gelir; klinik kanıtın daha mütevazı kalması ise hikayenin ikinci yarısıdır.
+          Bakır vücutta küçük ama kritik işlerin kofaktörüdür: kolajenin çapraz bağlanmasında rol alan enzimler, enerji
+          metabolizması ve antioksidan savunma sistemleri bu minerale temas eder. Bu nedenle GHK-Cu anlatısı cilt, yara
+          iyileşmesi ve doku onarımı çevresinde kolayca büyür. Biyolojik çekicilik buradan gelir; klinik kanıtın daha
+          mütevazı kalması ise hikâyenin ikinci yarısıdır.
         </p>
         <p>
-          Bilimsel pencere yazılarında bana en sık gelen soru genellikle şudur: "Peki bunu denemeye değer mi?" Bu soruyu
+          Bilimsel pencere yazılarında bana en sık gelen soru şudur: "Peki bunu denemeye değer mi?" Bu soruyu
           küçümsemem; merak iyi bir başlangıçtır. Ama merakın yanına bir ikinci cümle daha koymak gerekir: Bu molekül
           nerede gösterildi, hangi yolla kullanıldı, hangi insanda ve ne kadar süre izlendi? GHK-Cu için doğru okuma tam
           bu sakin ayrımla başlar.
         </p>
 
-        <h2 id="yasla-azalma-iddiasi">Yaşla Azalma İddiası Ne Kadar Sağlam?</h2>
+        <h2 id="yasla-azalma-iddiasi">Yaşla azalma iddiasının sağlamlığı</h2>
         <p>
           GHK-Cu pazarlamasında sık duyulan bir cümle var: genç yaşta yüksek, ileri yaşta belirgin düşük düzeyler. Bu cümle
           ilk bakışta menopoz anlatısına çok uygun görünür; ama kaynak zinciri sanıldığı kadar sağlam değildir.
         </p>
         <p>
-          Çevrimiçi metinlerde sık tekrarlanan iddia, GHK düzeyinin 20 yaş civarında yaklaşık 200 ng/mL iken 60 yaş civarında
-          yaklaşık 80 ng/mL düzeyine indiği yönündedir. Bu sayı çoğu yerde neredeyse temel gerçek gibi kullanılır. Ancak
-          kaynak zinciri izlendiğinde, bunun geniş örneklemli, hakemli ve bağımsız bir insan kohortu çalışmasına dayanmadığı
-          görülür <Evidence level={1} />.
+          Pickart ve Margolina'nın 2021 tarihli makalesi, UCSF'deki erkek tıp öğrencilerinde (ortalama yaş 25)
+          plazma GHK düzeyini 200 ng/mL, erkek öğretim üyelerinde (ortalama yaş 60) 80 ng/mL olarak aktarıyor.
+          Bu aktarım için Pickart'ın 1973 tarihli tezine atıf veriliyor
+          <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>. Sonraki derlemelerde sık tekrarlanan
+          bu değerler, menopozdaki kadınlarda ölçülmüş bir GHK azalmasını göstermiyor.
         </p>
         <p>
-          Daha sorunlu nokta şu: bu iddianın tarihsel kökeni yayımlanmamış bir doktora tezine kadar uzanır ve birim
-          dönüşümlerinde de tutarsızlıklar bildirilmiştir. Bu, GHK'nin yaşla hiç değişmediği anlamına gelmez; yalnızca
-          elimizde sık kullanılan sayısal formülü güvenle tekrar etmeye yetecek bir veri zemini olmadığını gösterir.
+          Atıf verilen özgün ölçümün örneklem büyüklüğünü, yöntemini ve sonuç tablosunu henüz doğrulayamadık.
+          Bu nedenle bu iki değeri yaşla değişimin herkes için geçerli bir ölçüsü veya yerine konması gereken
+          bir eksikliğin kanıtı olarak kullanamayız. Bu sınır, GHK'nin yaşla hiç değişmediği anlamına gelmez.
         </p>
         <p>
-          Bilgi belirsizliği azaltır; pazarlama ise bazen belirsizliği parlak bir cümleyle örter. Bu ayrım küçük görünebilir
+          Bilgi belirsizliği azaltır; pazarlama ise belirsizliği parlak bir cümleyle örter. Bu ayrım küçük görünebilir
           ama pratikte önemlidir. Eğer bir ürün size "vücudunuzda zaten azalan molekülü yerine koyuyoruz" diyorsa, önce bu
           azalmanın nasıl ölçüldüğünü ve hangi insan çalışmasıyla doğrulandığını sormak gerekir. Menopozda östrojen azalması
           için elimizde güçlü fizyolojik ve klinik veri vardır; GHK-Cu için aynı netlik yoktur.
         </p>
 
-        <h2 id="onarim-biyolojisi">Onarım Biyolojisinde Neler Gösterildi?</h2>
+        <h2 id="onarim-biyolojisi">Onarım biyolojisinde gösterilenler</h2>
         <p>
-          GHK-Cu'yu tamamen pazarlama icadı saymak doğru olmaz; molekülün biyolojik zemini gerçek. Asıl iş, bu zeminin ne kadarının
-          insan cildinde ölçülebilir faydaya dönüştüğünü ayırabilmekte.
+          Biyolojik zemin gerçek; GHK-Cu'yu pazarlama icadı saymak doğru olmaz. Asıl soru, bu zeminin ne kadarının insan
+          cildinde ölçülebilir bir faydaya dönüştüğü.
         </p>
         <p>
-          Hücre kültürü ve hayvan çalışmalarında GHK-Cu'nun kollajen, elastin, glikozaminoglikanlar ve proteoglikanlar gibi
-          bağ dokusu yapı taşlarına dair sinyalleri etkileyebildiği gösterilmiştir <Evidence level={3} />. Bazı deneylerde
+          Hücre kültürü ve hayvan çalışmalarında GHK-Cu'nun kolajen, elastin, glikozaminoglikanlar ve proteoglikanlar gibi
+          bağ dokusu yapı taşlarına dair sinyalleri etkileyebildiği gösterilmiştir <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Bazı deneylerde
           yara iyileşmesi, inflamasyon yanıtı, anjiyogenez ve matriks yeniden düzenlenmesi üzerinde olumlu işaretler görülür.
-          Bu alan molekülün en tutarlı göründüğü bölgedir.
         </p>
         <p>
           Bir başka ilgi çekici başlık gen ifadesidir. Bazı analizlerde GHK'nin hücrelerde çok sayıda genin ifade düzenini
-          değiştirdiği, hatta belirli hastalık imzalarını laboratuvar ortamında ters yöne çevirebildiği gösterilmiştir
-          <Evidence from={2} to={3} />. Bu bilgi bilimsel olarak dikkat çekicidir; ama doğrudan "genleri gençleştirir" ya da
+          değiştirdiği bildirilmiştir
+          <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Bu bilgi bilimsel olarak dikkat çekicidir; ama doğrudan "genleri gençleştirir" ya da
           "bedeni resetler" demek için yeterli değildir.
         </p>
         <p>
@@ -191,95 +196,111 @@ const articleSchemas = buildArticleSchemas({
           kullanım vaadini tek başına doğrulamaz. GHK-Cu anlatısında en sık atlanan nokta tam da budur.
         </p>
 
-        <h2 id="menopoz-cildi">Menopoz Cildiyle Bağlantı Nerede Başlıyor, Nerede Duruyor?</h2>
+        <h2 id="menopoz-cildi">Menopoz cildiyle bağlantı nerede başlıyor, nerede duruyor</h2>
         <p>
           Menopoz sonrası cilt değişimi gerçektir; bu konuda bilim GHK-Cu'ya göre çok daha sağlam konuşur. Ama gerçek bir
           menopoz cildi sorusunu, GHK-Cu için doğrudan kanıt varmış gibi kullanmak başka bir adımdır.
         </p>
         <p>
+          Cildinizde gördüğünüz değişikliği küçümsemenize gerek yok. Bu konudaki kaygı anlaşılır bir duygu; ama kaygı, bir
+          ürünün vaadini sorgusuz kabul etmek için yeterli bir gerekçe değildir.
+        </p>
+        <p>
           Östrojen azalmasıyla ciltte nem tutma, bariyer konforu, dermal kalınlık, kolajen düzeni, elastikiyet ve iyileşme
           temposu etkilenebilir <Evidence level={4} />. Postmenopozal ilk yıllarda kolajen kaybının belirginleşebildiğini
           gösteren klasik çalışmalar vardır; bu kayıp kronolojik yaştan çok östrojen eksikliği süresiyle ilişkilendirilebilir
-          <Evidence level={4} />.
+          <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>. Hormon replasmanının etkisini inceleyen, 41 postmenopozal kadının katıldığı küçük bir
+          randomize çalışmada altı ay sonunda üst kol biyopsisindeki kolajen içeriği yalnızca hormon grubunda arttı
+          (yaklaşık %6,5) <sup><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>. Bu sonuç, hormon tedavisine yalnızca cilt görünümü için başlama önerisi değildir.
         </p>
         <p>
-          İşte GHK-Cu'nun menopoz sohbetine girdiği yer burasıdır: madem menopozda kollajen ve onarım dili değişiyor, madem
+          İşte GHK-Cu'nun menopoz sohbetine girdiği yer burasıdır: madem menopozda kolajen ve onarım dili değişiyor, madem
           GHK-Cu laboratuvarda onarım sinyalleri gösteriyor, o halde menopoz cildine iyi gelebilir mi? Bu soru mantıklıdır.
-          Ama mantıklı soru, kanıtlanmış cevap demek değildir.
+          Ama mantıklı bir soru, kanıtlanmış bir cevabın yerini tutmaz.
         </p>
         <p>
           Şu anda GHK-Cu'nun östrojen eksikliği olan postmenopozal ciltte, bağımsız ve güçlü klinik çalışmalarla denenmiş
-          bir müdahale olduğunu söyleyemeyiz <Evidence level={1} />. Dolayısıyla GHK-Cu, menopoz cildini hedefleyen bir
-          "tedavi" gibi değil; cilt bakımında biyolojik zemini olan ama klinik etkisi sınırlı ve dolaylı okunan bir kozmetik
-          içerik gibi konumlanmalıdır.
+          bir müdahale olduğunu söyleyemeyiz <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. Dolayısıyla GHK-Cu'yu menopoz cildini hedefleyen bir
+          "tedavi" olarak değil; cilt bakımında biyolojik zemini olan ama klinik etkisi sınırlı ve dolaylı okunan bir kozmetik
+          içerik olarak görmek daha doğrudur.
         </p>
 
-        <h2 id="insan-kaniti">İnsan Kanıtı Neden Hâlâ Zayıf?</h2>
+        <h2 id="insan-kaniti">İnsan kanıtı hâlâ zayıf</h2>
         <p>
           GHK-Cu hakkında çok şey yazılır; ama insan çalışmaları bölümüne gelindiğinde sayfa incelir. Referans bir yazı
           için en önemli gerçeklerden biri budur.
         </p>
         <p>
-          İnsan verisinin büyük kısmı küçük kozmetik çalışmalar, kısa süreli gözlemler ve çoğu zaman endüstriyle ilişkili
-          araştırmalar etrafında toplanır <Evidence level={2} />. Örneklemler küçük, süreler genellikle 8-12 hafta, sonlanımlar
-          ise çoğu zaman görünüm, kırışıklık hacmi, sıkılık veya yarı öznel değerlendirmeler üzerinedir. Bu tür çalışmalar
-          sinyal yakalayabilir; ancak referans klinik karar için yeterli sağlamlıkta değildir.
+          İnsan verisinin büyük kısmı küçük kozmetik çalışmalar, kısa süreli gözlemler ve endüstriyle ilişkili araştırmalar
+          etrafında toplanır <Evidence level={2} />. Örneklemler küçük olabiliyor; sonlanımlar ise çoğu zaman görünüm,
+          kırışıklık hacmi, sıkılık veya yarı öznel değerlendirmeler üzerinedir. Bu tür çalışmalar sinyal yakalayabilir;
+          ancak referans klinik karar için yeterli sağlamlıkta değildir.
         </p>
         <p>
-          Raporun özellikle önemli bir uyarısı var: 2009 tarihli ve sık alıntılanan bir yaşlanma karşıtı serum çalışması,
-          bazen yanlışlıkla GHK-Cu kanıtı gibi sunulur. O çalışmada değerlendirilen ürünün içinde GHK-Cu yoktur; farklı
-          vitamin, bitkisel öz ve peptid kombinasyonları vardır <Evidence level={4} />. Dolayısıyla o çalışma, GHK-Cu'nun
-          tek başına etkisini kanıtlamaz.
+          Bu konuda bulunabilen randomize çalışma sayısı çok azdır. Lazerle yüzey yenileme uygulanan 13 hastada yapılan
+          bir çalışmada GHK-Cu içeren bakım rutini ile kontrol grubu karşılaştırıldı; değerlendirme 12. haftada yapıldı.
+          Kırışıklık ve genel cilt kalitesi gibi objektif değerlendirmelerde gruplar arasında anlamlı fark bulunmadı; yalnızca
+          hastaların memnuniyeti GHK-Cu grubunda anlamlı biçimde yüksekti <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>.
         </p>
         <p>
-          Bu ayrım pazarlama metinlerinde kolayca kaybolur. "Peptid içeren bir serum çalışması" ile "GHK-Cu'nun bağımsız,
-          kontrollü, menopoz cildinde test edilmiş etkisi" aynı şey değildir. Güvenilir okuma, bu iki cümlenin arasına
-          mesafe koyabilmektir.
+          Pazarlama metinlerinde kolayca kaybolan ayrım şudur: "peptid içeren bir serum çalışması" ile "GHK-Cu'nun bağımsız,
+          kontrollü, menopoz cildinde test edilmiş etkisi" aynı şey değildir. Bu ayrımı korumak için ürünün içeriğini
+          ve çalışmanın kimlerde yapıldığını kontrol edin.
         </p>
         <p>
           Bugün en dürüst sonuç şudur: GHK-Cu'nun topikal cilt bakımında sınırlı ve olası bir görünüm faydası olabilir
-          <Evidence level={2} />. Ancak bunun büyüklüğü, süresi, menopoz cildine özgü karşılığı ve retinoidler, güneş
+          <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. Ancak bunun büyüklüğü, süresi, menopoz cildine özgü karşılığı ve retinoidler, güneş
           koruması, dermatolojik tedaviler veya hormon ekseniyle kıyaslandığında yeri hâlâ net değildir.
         </p>
 
-        <h2 id="topikal-kullanim">Topikal Kullanımda Asıl Engel Nedir?</h2>
+        <h2 id="topikal-kullanim">Topikal kullanımda asıl engel</h2>
         <p>
           Cilt bakımında iyi bir molekül bulmak yetmez; o molekülün cildin doğru katmanına ulaşması gerekir. GHK-Cu için
           topikal kullanımın en pratik sorusu budur.
         </p>
         <p>
           GHK-Cu molekülünün ağırlığı teorik olarak cilt geçişi için çok büyük değildir; ancak hidrofildir ve bakırla
-          kompleks oluşturduğu için yük ve hidrasyon özellikleri pasif geçişi zorlaştırabilir <Evidence from={2} to={3} />.
-          Cildin en dış tabakası yağdan zengin bir bariyer gibi çalışır. Bu bariyer, su seven ve yüklü moleküllerin dermise
-          kolayca ulaşmasını sınırlayabilir.
+          kompleks oluşturduğu için yük ve hidrasyon özellikleri pasif geçişi zorlaştırabilir. Cildin en dış tabakası yağdan
+          zengin bir bariyer gibi çalışır. Bu bariyer, su seven ve yüklü moleküllerin dermise kolayca ulaşmasını sınırlayabilir.
         </p>
         <p>
           Bu yüzden bazı çalışmalar lipozom, nano taşıyıcı veya mikroiğneleme gibi taşıma yöntemlerine ilgi duyar. Burada
-          da dikkatli olmak gerekir: taşıyıcı teknoloji kullanılması, her ürünün aynı etkiyi göstereceği anlamına gelmez.
-          Formül, pH, stabilite, konsantrasyon, ambalaj ve cilt bariyerinin durumu gerçek sonucu değiştirir.
+          da dikkatli olmak gerekir: aynı taşıyıcı teknolojiyi kullanan ürünlerin etkisi bile farklı olabilir.
+          Formül, pH, stabilite, konsantrasyon, ambalaj ve cilt bariyerinin durumu gerçek sonucu değiştirir. Cilt bariyerinin
+          etkisini iki laboratuvar çalışması gösteriyor: sağlam insan cildinde GHK-Cu neredeyse hiç geçmedi; mikroiğne ön
+          uygulaması ise geçişi belirgin biçimde artırdı <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>. Üst
+          katmanları ayrılarak inceltilmiş insan cildi örneğinde ise bakır tripeptid geçti ve dokuda tutuldu
+          <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>.
         </p>
         <p>
           Topikal GHK-Cu için makul cümle şudur: iyi formüle edilmiş bir kozmetik üründe, cilt görünümünü ve bakım hissini
-          destekleyen yardımcı bir içerik olabilir. Veri aşan cümle ise şudur: menopozla azalan kolajeni geri kurar, cildi
-          gençlik seviyesine taşır veya sistemik onarım sağlar. İlk cümle temkinli; ikincisi pazarlamadır.
+          destekleyen yardımcı bir içerik olabilir. Menopozla azalan kolajeni geri kurduğu, cildi gençlik seviyesine
+          taşıdığı veya sistemik onarım sağladığı ise gösterilmiş değildir.
         </p>
 
-        <h2 id="enjeksiyon">Enjeksiyon Meselesi Neden Ayrı Bir Uyarı İster?</h2>
+        <h2 id="enjeksiyon">Enjeksiyon ayrı bir uyarı gerektirir</h2>
         <p>
-          GHK-Cu'nun en problemli alanı enjeksiyon anlatısıdır. Çünkü burada kozmetik içerik okumasından çıkıp, insan verisi
+          GHK-Cu'nun en sorunlu alanı enjeksiyon anlatısıdır. Çünkü burada kozmetik içerik okumasından çıkıp, insan verisi
           olmadan bedene verilen deneysel bir molekül alanına girilir.
         </p>
         <p>
-          Biohacking çevrelerinde GHK-Cu'nun deri altı enjeksiyon protokolleri konuşulur; ancak yayımlanmış güçlü insan
-          klinik çalışması, insan farmakokinetik verisi ve uzun dönem güvenlik haritası yoktur <Evidence level={1} />.
+          Bedenini daha iyi "ayarlamaya" çalışan çevrelerde GHK-Cu'nun deri altı enjeksiyon protokolleri konuşulur; ancak
+          yayımlanmış güçlü insan klinik çalışması, insan farmakokinetik verisi ve uzun dönem güvenlik haritası yoktur
+          <Evidence level={1} />. Bu konudaki genel değerlendirme de insan verisinin sınırlı olduğunu söyler <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>.
           Hücre kültüründe etkili görünen konsantrasyonları insan bedenindeki enjeksiyon dozlarına çevirmek doğrudan ve
           güvenilir bir yol değildir.
         </p>
         <p>
-          Enjeksiyon tarafında molekülün kendisinden bağımsız bir kalite sorunu da vardır. Gri kanaldan edinilen peptidlerde
-          sterilite, endotoksin, ağır metal, solvent kalıntısı, yanlış sekans, doz sapması ve saklama koşulu gibi başlıklar
-          klinik risk yaratabilir <Evidence level={2} />. "Yüksek saflık" ifadesi tek başına sterilite anlamına gelmez.
-          Saflık, endotoksin ve enjeksiyona uygun üretim standardı ayrı sorulardır.
+          Enjeksiyon tarafında molekülün kendisinden bağımsız bir kalite sorusu da vardır. Ürünün sterilite, endotoksin ve
+          doz doğruluğu açısından test edildiği gösterilemiyorsa, ortaya çıkabilecek riskin ölçüsü bilinmez. "Yüksek saflık"
+          ifadesi steriliteyi kanıtlamaz. Saflık, endotoksin ve enjeksiyona uygun üretim standardı ayrı
+          sorulardır.
+        </p>
+        <p>
+          FDA, enjeksiyon yoluyla GHK-Cu içeren hazırlanmış ilaçlarda peptidlerin kümelenmesi ve peptidle ilişkili
+          safsızlıklar nedeniyle istenmeyen bağışıklık yanıtı riski olabileceğini bildiriyor. İnsan güvenlik verisinin
+          sınırlı olduğunu da vurguluyor <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>. Bu uyarı
+          her enjeksiyonun ciddi zarar verdiğini göstermez; güvenli olduğunu söylemeye yetecek verinin olmadığını gösterir.
         </p>
         <p>
           Hekim odasında bu tür başlıklarda sorduğum ilk soru genellikle "bedenin geri kalanında neler oluyor?" sorusudur.
@@ -292,7 +313,7 @@ const articleSchemas = buildArticleSchemas({
           intro="Aşağıdaki başlıklar tek başına tanı veya karar değildir; ancak GHK-Cu enjeksiyonu gibi veri zayıf bir alanda daha dikkatli değerlendirme gerektirir."
           markers={[
             'Ürün enjeksiyon için onaylı, steril ve farmasötik standartta olduğunu kanıtlayamıyorsa',
-            'Fayda cümlesi cilt, saç, enerji, eklem, bağışıklık ve longevity vaatlerini aynı anda taşıyorsa',
+            'Fayda cümlesi cilt, saç, enerji, eklem, bağışıklık ve uzun ömür vaatlerini aynı anda taşıyorsa',
             'Doz, süre, bırakma kriteri ve yan etki takibi net biçimde konuşulmuyorsa',
             'Aktif kanser, kanser öyküsü, karaciğer veya böbrek hastalığı, gebelik ya da emzirme varsa',
             'Eş zamanlı hormon, retinoid, yoğun takviye veya başka deneysel peptid kullanımı varsa',
@@ -301,78 +322,81 @@ const articleSchemas = buildArticleSchemas({
           footnote="Amaç korkutmak değil; topikal kozmetik içerik ile enjeksiyon yoluyla deneysel kullanım arasındaki farkı görünür kılmaktır."
         />
 
-        <h2 id="guvenlik">Güvenlik İçin Ne Biliyoruz, Ne Bilmiyoruz?</h2>
+        <h2 id="guvenlik">Güvenlik: ne biliyoruz, ne bilmiyoruz</h2>
         <p>
           GHK-Cu güvenlik konuşmasında yol ve ürün standardı her şeyi değiştirir. Topikal kozmetik ile enjeksiyon aynı
           güvenlik cümlesini paylaşamaz.
         </p>
         <p>
-          Kozmetik güvenlik değerlendirmelerinde Copper Tripeptide-1, mevcut kozmetik kullanım pratikleri ve konsantrasyonları
-          içinde genel olarak güvenli kabul edilmiştir <Evidence level={4} />. Bu, her üründe hiçbir yan etki olmaz anlamına
-          gelmez; ama topikal kullanımın güvenlik alanı enjeksiyon yoluna göre çok daha anlaşılırdır. Olası yan etkiler
-          daha çok kızarıklık, batma, kaşıntı, hassasiyet veya tahriş gibi lokal reaksiyonlardır.
+          Kozmetik güvenlik değerlendirmesinde Copper Tripeptide-1, raporda incelenen kullanım biçimleri ve
+          konsantrasyonlar kapsamında güvenli kabul edilmiştir <sup><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>. Raporda tipik kullanım konsantrasyonları
+          10 ppm'nin altında tanımlanır. Bu değerlendirme, daha yüksek konsantrasyonlu her serumun veya enjeksiyonun
+          güvenli olduğunu göstermez. Bir ürünün güvenliğini değerlendirirken etkin madde miktarı ile hazır karışımın
+          yüzdesini de ayırmak gerekir; ambalajdaki yüzde tek başına bu ayrımı açıklamayabilir.
         </p>
         <p>
-          Bakır toksisitesi teorik olarak önemlidir; serbest bakır fazlası oksidatif stres yaratabilir. Ama topikal kozmetik
-          ürünlerde sistemik bakır yükü genellikle ana kaygı değildir <Evidence level={3} />. Yine de bakır metabolizmasıyla
-          ilgili özel hastalığı olanlar, bakır alerjisi öyküsü bulunanlar veya hamilelik gibi veri boşluğu olan dönemlerde
-          daha dikkatli değerlendirme gerekir.
+          Bakır dengesinin bozulması oksidatif stresle birlikte tartışılır
+          <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Fazla bakır karaciğer hasarına yol açabilir;
+          Wilson hastalığında bakırın vücuttan uzaklaştırılması bozulduğu için toksisite riski özellikle önemlidir
+          <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Bu genel bakır toksisitesi bilgisi,
+          uygun bir topikal GHK-Cu ürününün zehirlenmeye yol açtığını gösteren veri değildir. Bakır metabolizması
+          bozukluğu veya karaciğer hastalığı olanlarda ürün ve kullanım yolu ayrıca değerlendirilmelidir.
         </p>
         <p>
           Enjeksiyon için ise aynı rahatlık yoktur. Uzun dönem insan güvenliği, tekrarlayan kullanım, bağışıklık yanıtı,
-          karaciğer-böbrek etkileri ve farklı ilaçlarla etkileşim açısından veri çok sınırlıdır <Evidence level={1} />.
+          karaciğer-böbrek etkileri ve farklı ilaçlarla etkileşim açısından veri çok sınırlıdır <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>.
           Bu nedenle GHK-Cu enjeksiyonunu "topikalde güvenli bulundu, o halde enjeksiyon da güvenlidir" diye okumak hatalıdır.
         </p>
 
-        <h2 id="regulasyon">Regülasyon Tablosu Bize Ne Söylüyor?</h2>
+        <h2 id="regulasyon">Regülasyon tablosunun söyledikleri</h2>
         <p>
           Regülasyon, bir molekülün bilimsel değerini tek başına belirlemez; ama ürünün hangi hatta konuşulduğunu anlamak
           için iyi bir pusuladır. GHK-Cu'da bu pusula iki ayrı yön gösterir.
         </p>
         <p>
-          Copper Tripeptide-1 adıyla kozmetik içerik olarak kullanımı, birçok pazarda cilt bakım ürünü alanında yer alır
-          <Evidence level={4} />. Bu, onun bir ilaç olduğu anlamına gelmez; kozmetik ürünlerde cilt görünümü ve bakım desteği
-          gibi daha sınırlı bir iddia alanı vardır. Menopoz cildini tedavi etme, hormon eksikliğini düzeltme veya hastalık
-          sonucu değiştirme iddiası bu alanı aşar.
+          Copper Tripeptide-1 adıyla kozmetik içerik olarak kullanımı, birçok pazarda cilt bakım ürünü alanında yer alır.
+          Kozmetik içerik statüsü ilaç onayı değildir; kozmetik ürünlerde cilt görünümü ve bakım desteği gibi daha sınırlı bir
+          iddia alanı vardır. Menopoz cildini tedavi etme, hormon eksikliğini düzeltme veya hastalık sonucu değiştirme
+          iddiası bu alanı aşar.
         </p>
         <p>
-          Mayıs 2026 itibarıyla ABD'deki 503A değerlendirme listesinde GHK-Cu'nun enjeksiyon dışı yolları yeniden değerlendirme
-          altında görünür; enjeksiyon yoluyla kullanım ise bu hattan ayrı tutulmuştur <Evidence level={4} />. Ayrıca bazı
-          peptidler için 2026 yazında danışma komitesi değerlendirmeleri planlanmıştır; GHK-Cu için enjeksiyon dışı statü ve
-          kalıcı liste kararı hâlâ süreç içindedir.
+          FDA'nın 503A madde listesinin 14 Mayıs 2026 tarihli güncellemesine göre GHK-Cu, enjeksiyon dışı kullanım için
+          değerlendirme altındaki listede yer alıyor; enjeksiyon yoluyla kullanım ise bu listeden ayrı tutulmuş durumda
+          <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>. FDA, GHK-Cu'nun listeye alınıp alınmayacağını danışma komitesinde 2027 Şubat sonundan önce
+          görüşmeyi planladığını açıkladı. Kalıcı karar bu nedenle hâlâ bekleniyor.
         </p>
         <p>
-          Bu bilgi pratikte şu anlama gelir: GHK-Cu topikal kozmetik içerik olarak konuşulabilir; enjeksiyon veya sistemik
-          kullanım ise onaylı, standardize, kanıtlı bir menopoz müdahalesi gibi sunulmamalıdır. Regülasyon dili burada
-          pazarlama cümlesinin freni olmalıdır.
+          Bu bilgi pratikte şöyle okunur: GHK-Cu topikal kozmetik içerik olarak konuşulabilir. Enjeksiyon veya sistemik
+          kullanım ise onaylı, standart ve kanıtlanmış bir menopoz müdahalesi gibi anlatılamaz. Bu yüzden bir ürünü
+          değerlendirirken kullanım yoluna ve onay durumuna birlikte bakmak gerekir.
         </p>
 
-        <h2 id="pazarlama">Pazarlama Dili En Çok Nerede Veriyi Aşıyor?</h2>
+        <h2 id="pazarlama">Pazarlama dilinin veriyi aştığı yerler</h2>
         <p>
-          GHK-Cu'nun en güçlü kısmı biyolojik hikayesi; en zayıf kısmı da bu hikayenin bazen klinik sonuç gibi satılması.
-          Özellikle "reset", "gençleştirme" ve "longevity" kelimeleri burada dikkat ister.
+          GHK-Cu'nun en güçlü kısmı biyolojik hikâyesi; en zayıf kısmı da bu hikâyenin bazen klinik sonuç gibi satılması.
+          Özellikle "reset", "gençleştirme" ve "uzun ömür" kelimeleri burada dikkat ister.
         </p>
         <p>
           "Gen ifadesini değiştirir" cümlesi bilimsel olarak doğru olabilir; ama "genlerinizi gençliğe döndürür" cümlesi
-          başka bir iddiadır <Evidence from={1} to={2} />. Hücre kültüründe binlerce genin ifade düzeyi değişebilir; bu
-          değişimin yaşayan bir insanda cilt kalitesi, kas gücü, enerji, bağışıklık veya yaşam süresi anlamına geldiğini
-          göstermek için ayrı çalışmalar gerekir.
+          başka bir iddiadır <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Hücre kültüründe binlerce genin ifade düzeyi değişebilir; bu değişimin yaşayan
+          bir insanda cilt kalitesi, kas gücü, enerji, bağışıklık veya yaşam süresi anlamına geldiğini göstermek için ayrı
+          çalışmalar gerekir.
         </p>
         <p>
-          "Kolajeni artırır" cümlesinde de benzer bir sorun vardır. Bir hücre hattında kollajen sentezi sinyali görmek ile
+          "Kolajeni artırır" cümlesinde de benzer bir sorun vardır. Bir hücre hattında kolajen sentezi sinyali görmek ile
           postmenopozal bir kadında dermal yoğunluğun, elastikiyetin ve kırışıklık görünümünün uzun vadede klinik anlamlı
-          değişmesi aynı şey değildir. Kanıt hiyerarşisi bu iki seviyeyi ayırmak için vardır.
+          değişmesi aynı şey değildir.
         </p>
         <p>
           Üçüncü sorun, topikal ve enjeksiyon verilerinin birbirine karıştırılmasıdır. Topikal bir kozmetik içerik için
-          güvenlik değerlendirmesi varsa, bu enjeksiyonun güvenli veya etkili olduğu anlamına gelmez. GHK-Cu pazarlamasında
-          bu geçiş çoğu zaman sessiz yapılır; iyi okur bu sessiz geçişi fark eder.
+          güvenlik değerlendirmesi yalnızca incelenen kullanım yolunu kapsar. Enjeksiyon için ayrıca insan güvenliği
+          ve etkinlik verisi gerekir.
         </p>
 
-        <h2 id="pratik-okuma">Bir GHK-Cu Ürününü veya Önerisini Nasıl Okumalı?</h2>
+        <h2 id="pratik-okuma">GHK-Cu ürününü veya önerisini okumak</h2>
         <p>
           Bu konuya merakla yaklaşmak mümkün; ama merakı karar disipliniyle birlikte taşımak gerekir. Özellikle 40 sonrası
-          ciltte daha doğru soru "ne kadar yeni" değil, "hangi kanıtla ve hangi sınırla" sorusudur.
+          ciltte daha doğru soru şudur: hangi kanıtla ve hangi sınırla?
         </p>
         <p>
           Eğer ürün topikal bir serum veya krem ise önce iddianın diline bakın. "Cilt görünümünü destekler", "bakım rutininin
@@ -381,41 +405,39 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           İkinci soru formül sorusudur. GHK-Cu hangi konsantrasyonda, hangi taşıyıcı sistemle, hangi pH aralığında ve hangi
-          stabilite bilgisiyle sunuluyor? Bu sorular marka merakı değil; molekülün ciltte ne kadar anlamlı olabileceğini
-          belirleyen pratik ayrıntılardır.
+          stabilite bilgisiyle sunuluyor? Bu sorular molekülün ciltte ne kadar anlam taşıyabileceğini belirleyen pratik
+          ayrıntılardır.
         </p>
         <p>
           Üçüncü soru, sizin cilt zemininizdir. Bariyeriniz hassassa, rosacea eğiliminiz varsa, retinoid veya asitlerle
-          zaten yoğun bir rutin kullanıyorsanız, yeni bir aktif madde tahrişi artırabilir. Menopoz döneminde cilt bazen
-          daha çok uyarana değil, daha iyi seçilmiş ve daha sade bir ritme ihtiyaç duyar.
+          zaten yoğun bir rutin kullanıyorsanız, yeni bir aktif madde tahrişi artırabilir. Menopoz döneminde cilt, daha fazla
+          uyarandan çok iyi seçilmiş ve sade bir rutine ihtiyaç duyabilir.
         </p>
         <p>
-          O zaman biz ne yapıyoruz? Önce yolu ayırıyoruz: topikal kozmetik mi, enjeksiyon mu, yoksa sistemik gençleşme vaadi mi?
-          Sonra beklentiyi küçültmeden, ama yerli yerine koyarak konuşuyoruz. Bir içerik yardımcı olabilir; bu, onun temel
-          bakımın ya da tıbbi değerlendirmenin yerine geçeceği anlamına gelmez.
+          O zaman biz ne yapıyoruz? Önce yolu ayırıyoruz: topikal kozmetik mi, enjeksiyon mu, yoksa sistemik gençleşme vaadi
+          mi? Sonra beklentiyi küçültmeden, ama yerli yerine koyarak konuşuyoruz. Bir içerik yardımcı olabilir; ama
+          temel bakımın ya da tıbbi değerlendirmenin yerini tuttuğu gösterilmemiştir.
         </p>
         <p>
-          Dördüncü soru karşılaştırma sorusudur. Günlük güneş koruması, retinoid toleransı, bariyer bakımı, sigara içmemek,
-          yeterli protein, uyku ve gerektiğinde dermatoloji değerlendirmesi kurulmadan GHK-Cu'ya büyük beklenti yüklemek
-          gerçekçi değildir <Evidence from={3} to={5} />. Yardımcı içerikler, temel adımların yerine geçtiğinde değil,
-          onların üstüne ölçülü eklendiğinde anlam kazanır.
+          Dördüncü nokta, temel adımlarla olan ilişkidir. Günlük güneş koruması, retinoid toleransı, bariyer bakımı, sigara
+          içmemek, yeterli protein, uyku ve gerektiğinde dermatoloji değerlendirmesi kurulmadan GHK-Cu'ya büyük beklenti
+          yüklemek gerçekçi değildir. Yardımcı içerikler, temel adımların üstüne ölçülü eklendiğinde anlam kazanır.
         </p>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
           GHK-Cu'nun iyi tarafı şu: biyolojik zemini gerçek, kozmetik kullanımda güvenlik alanı görece sakin ve cilt
-          bakımında yardımcı içerik olarak konuşulmaya değer. Kötü tarafı ise aynı hikayenin enjeksiyon, longevity ve
+          bakımında yardımcı içerik olarak konuşulmaya değer. Kötü tarafı ise aynı hikâyenin enjeksiyon, uzun ömür ve
           menopoz cildini geri çevirme iddialarıyla çok hızlı büyütülmesi.
         </p>
         <p>
-          Bu nedenle GHK-Cu için Estranova'nın referans cümlesi temkinli olmalı: topikal kozmetik destek olarak makul,
-          menopoz cildi için doğrudan kanıtı sınırlı, enjeksiyon ve sistemik gençleşme iddiaları için yetersiz. Sizin için
-          en güvenli okuma, molekülün parlaklığını değil kanıtın nerede durduğunu izlemektir. İyi sağlık bilgisi bazen
-          yeni bir şey eklemekten çok, abartılı bir cümleyi yerli yerine koyar.
+          Bu nedenle GHK-Cu hakkındaki özetim şu: topikal kozmetik destek olarak makul, menopoz cildi için doğrudan kanıtı
+          sınırlı, enjeksiyon ve sistemik gençleşme iddiaları için yetersiz. Sizin için en güvenli okuma, kanıtın nerede
+          durduğuna bakmaktır. İyi sağlık bilgisi yeni bir şey eklemekten çok, abartılı bir cümleyi yerli yerine koyar.
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a sorular" intro="Bu bölümde GHK-Cu'nun kanıt sınırı ve kullanım yollarıyla ilgili sorulara kendi yanıtlarımı veriyorum." items={faqItems} class="mt-10" />
 
       <RelatedReadings
         class="mt-14"
@@ -430,16 +452,11 @@ const articleSchemas = buildArticleSchemas({
       <ArticleEditorNote>
         <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
         <p class="italic text-ink/80">
-          Bu yazıda klinik tarafı bilinçle kısa tuttum; aynı konuyu, yazar değil kadın hastalıkları uzmanı olarak, burada
-          biraz daha net ayırayım.
+          Yazının gövdesinde kanıtı bölüm bölüm tarttım. Bu notta, o kanıtı klinik değerlendirmede nasıl sıraladığımı
+          kısaca toparlıyorum.
         </p>
         <p>
-          GHK-Cu için klinik ayrımın özü, topikal kozmetik kullanım ile enjeksiyon veya sistemik kullanımın aynı kanıt
-          cümlesini paylaşmamasıdır. Topikal Copper Tripeptide-1 için kozmetik güvenlik alanı görece olgun; menopoz
-          cildine özgü etkinlik ve enjeksiyon güvenliği için insan verisi ise sınırlıdır.
-        </p>
-        <p>
-          Mekanizma verileri kollajen sentezi, matriks düzenlenmesi, yara iyileşmesi ve gen ifadesi açısından araştırmaya
+          Mekanizma verileri kolajen sentezi, matriks düzenlenmesi, yara iyileşmesi ve gen ifadesi açısından araştırmaya
           değer bir zemin sunar. Ancak bu verilerin büyük kısmı hücre kültürü ve hayvan çalışması düzeyindedir; postmenopozal
           ciltte objektif dermal yoğunluk, elastikiyet, biyopsi veya görüntüleme sonlanımlarıyla yapılmış güçlü bağımsız
           çalışmalar yoktur.
@@ -450,14 +467,95 @@ const articleSchemas = buildArticleSchemas({
           sistemik onarım veya yaşlanma karşıtı amaçla önermek için mevcut veri yeterli değildir.
         </p>
         <p>
-          Klinik değerlendirmede titizlikle koruduğum sıra şudur: güneş koruması, bariyer dostu bakım, retinoid/aktif madde toleransının kişisel
-          değerlendirilmesi, dermatolojik risklerin taranması ve hormon ekseniyle ilişkili cilt değişimlerinin hekimle
-          konuşulması. GHK-Cu topikal olarak bu zeminin üstüne, beklentisi sınırlı bir yardımcı içerik olarak düşünülebilir.
+          Klinik değerlendirmede titizlikle koruduğum sıra şudur: güneş koruması, bariyer dostu bakım, retinoid/aktif madde
+          toleransının kişisel değerlendirilmesi, dermatolojik risklerin taranması ve hormon ekseniyle ilişkili cilt
+          değişimlerinin hekimle konuşulması. GHK-Cu topikal olarak bu zeminin üstüne, beklentisi sınırlı bir yardımcı içerik
+          olarak düşünülebilir.
         </p>
         <p class="text-sm italic text-primary">
-          — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+          Yazarın klinik değerlendirmesi: Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı
+        </p>
+        <p class="text-sm text-ink/80">
+          Bağımsız tıbbi inceleme: Dr. Alper Mumcu — 12 Ekim 2026.
         </p>
       </ArticleEditorNote>
+
+      <section id="kaynak-listesi" class="mt-10">
+        <h2 class="mb-4 text-lg font-semibold text-ink">Kaynaklar</h2>
+        <ol class="list-decimal space-y-3 pl-5 text-sm leading-relaxed text-ink/80">
+          <li id="kaynak-1">
+            Pickart L, Vasquez-Soltero JM, Margolina A. The human tripeptide GHK-Cu in prevention of oxidative stress and
+            degenerative conditions of aging: implications for cognitive health. <em>Oxid Med Cell Longev.</em> 2012;2012:324832.
+            <a href="https://doi.org/10.1155/2012/324832">doi:10.1155/2012/324832</a>
+          </li>
+          <li id="kaynak-2">
+            Luansritisakul C, Chiang MC, Burns SL, Fonseca ACG. Peptides in Regenerative Medicine: A Comprehensive Review of
+            Clinical Applications in Tissue Repair and Chronic Pain Management. <em>Curr Pain Headache Rep.</em> 2026;30(1):109.
+            <a href="https://doi.org/10.1007/s11916-026-01542-z">doi:10.1007/s11916-026-01542-z</a>
+          </li>
+          <li id="kaynak-3">
+            Miller TR, Wagner JD, Baack BR, Eisbach KJ. Effects of topical copper tripeptide complex on CO2 laser-resurfaced
+            skin. <em>Arch Facial Plast Surg.</em> 2006;8(4):252-259.
+            <a href="https://doi.org/10.1001/archfaci.8.4.252">doi:10.1001/archfaci.8.4.252</a>
+          </li>
+          <li id="kaynak-4">
+            Hall G, Phillips TJ. Estrogen and skin: the effects of estrogen, menopause, and hormone replacement therapy on the
+            skin. <em>J Am Acad Dermatol.</em> 2005;53(4):555-568.
+            <a href="https://doi.org/10.1016/j.jaad.2004.08.039">doi:10.1016/j.jaad.2004.08.039</a>
+          </li>
+          <li id="kaynak-5">
+            Affinito P, Palomba S, Sorrentino C, Di Carlo C, Bifulco G, Arienzo MP, Nappi C. Effects of postmenopausal
+            hypoestrogenism on skin collagen. <em>Maturitas.</em> 1999;33(3):239-247.
+            <a href="https://doi.org/10.1016/s0378-5122(99)00077-8">doi:10.1016/s0378-5122(99)00077-8</a>
+          </li>
+          <li id="kaynak-6">
+            Sauerbronn AV, Fonseca AM, Bagnoli VR, Saldiva PH, Pinotti JA. The effects of systemic hormonal replacement therapy
+            on the skin of postmenopausal women. <em>Int J Gynaecol Obstet.</em> 2000;68(1):35-41.
+            <a href="https://doi.org/10.1016/s0020-7292(99)00166-6">doi:10.1016/s0020-7292(99)00166-6</a>
+          </li>
+          <li id="kaynak-7">
+            Li H, Low YSJ, Chong HP, Zin MT, Lee CY, Li B, Leolukman M, Kang L. Microneedle-Mediated Delivery of Copper Peptide
+            Through Skin. <em>Pharm Res.</em> 2015;32(8):2678-2689.
+            <a href="https://doi.org/10.1007/s11095-015-1652-z">doi:10.1007/s11095-015-1652-z</a>
+          </li>
+          <li id="kaynak-8">
+            Hostynek JJ, Dreher F, Maibach HI. Human skin retention and penetration of a copper tripeptide in vitro as function
+            of skin layer towards anti-inflammatory therapy. <em>Inflamm Res.</em> 2010;59(11):983-988.
+            <a href="https://doi.org/10.1007/s00011-010-0214-4">doi:10.1007/s00011-010-0214-4</a>
+          </li>
+          <li id="kaynak-9">
+            Johnson W Jr, Bergfeld WF, Belsito DV, ve ark. Safety Assessment of Tripeptide-1, Hexapeptide-12, Their Metal Salts
+            and Fatty Acyl Derivatives, and Palmitoyl Tetrapeptide-7 as Used in Cosmetics. <em>Int J Toxicol.</em>
+            2018;37(3 Suppl):90S-102S.
+            <a href="https://doi.org/10.1177/1091581818807863">doi:10.1177/1091581818807863</a>
+          </li>
+          <li id="kaynak-10">
+            U.S. Food and Drug Administration. Bulk Drug Substances Nominated for Use in Compounding Under Section 503A of the
+            FD&amp;C Act (güncelleme: 14 Mayıs 2026).
+            <a href="https://www.fda.gov/media/94155/download">fda.gov/media/94155/download</a>
+          </li>
+          <li id="kaynak-11">
+            U.S. Food and Drug Administration. Certain Bulk Drug Substances for Use in Compounding that May Present
+            Significant Safety Risks. GHK-Cu: enjeksiyon yoluyla kullanım (erişim: 12 Ekim 2026).
+            <a href="https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks">FDA güvenlik değerlendirmesi</a>
+          </li>
+          <li id="kaynak-12">
+            National Institutes of Health, Office of Dietary Supplements. Copper — Health Professional Fact Sheet.
+            Bakır toksisitesi ve Wilson hastalığı (güncelleme: 18 Ekim 2022; erişim: 12 Ekim 2026).
+            <a href="https://ods.od.nih.gov/factsheets/Copper-HealthProfessional/">NIH bakır bilgi notu</a>
+          </li>
+          <li id="kaynak-13">
+            Pickart L, Margolina A. Modulation of Gene Expression in Human Breast Cancer MCF7 and Prostate Cancer PC3
+            Cells by the Human Copper-Binding Peptide GHK-Cu. <em>OBM Genetics.</em> 2021;5(2):128.
+            Girişteki tarihsel plazma değerlerinin aktarımı; menopoz cildi etkinlik çalışması değildir.
+            <a href="https://doi.org/10.21926/obm.genet.2102128">doi:10.21926/obm.genet.2102128</a>
+          </li>
+        </ol>
+        <p class="mt-4 text-xs text-ink/60">
+          Kaynak ve güvenlik bilgileri 12 Ekim 2026'da gözden geçirildi. Kozmetik güvenlik değerlendirmesinin sonucu,
+          raporda incelenen kullanım biçimleri ve konsantrasyonlarla sınırlıdır.
+        </p>
+      </section>
 
       <ArticleDisclaimer class="mt-10">
         <p>

@@ -1,0 +1,566 @@
+{
+  "filePath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_ghk-cu-genis-audit/qa-after.md",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "short-closer",
+      "count": 17,
+      "locations": [
+        {
+          "line": 360,
+          "column": 1,
+          "excerpt": "Topikal kozmetik ile enjeksiyon aynı güvenlik cümlesini paylaşamaz."
+        },
+        {
+          "line": 422,
+          "column": 1,
+          "excerpt": "Kalıcı karar bu nedenle hâlâ bekleniyor."
+        },
+        {
+          "line": 609,
+          "column": 1,
+          "excerpt": "Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı"
+        },
+        {
+          "line": 616,
+          "column": 1,
+          "excerpt": "Alper Mumcu — 12 Ekim 2026."
+        },
+        {
+          "line": 628,
+          "column": 1,
+          "excerpt": "doi:10.1155/2012/324832"
+        },
+        {
+          "line": 633,
+          "column": 1,
+          "excerpt": "doi:10.1007/s11916-026-01542-z"
+        },
+        {
+          "line": 638,
+          "column": 1,
+          "excerpt": "doi:10.1001/archfaci.8.4.252"
+        },
+        {
+          "line": 643,
+          "column": 1,
+          "excerpt": "doi:10.1016/j.jaad.2004.08.039"
+        },
+        {
+          "line": 648,
+          "column": 1,
+          "excerpt": "doi:10.1016/s0378-5122(99)00077-8"
+        },
+        {
+          "line": 653,
+          "column": 1,
+          "excerpt": "doi:10.1016/s0020-7292(99)00166-6"
+        },
+        {
+          "line": 658,
+          "column": 1,
+          "excerpt": "doi:10.1007/s11095-015-1652-z"
+        },
+        {
+          "line": 663,
+          "column": 1,
+          "excerpt": "doi:10.1007/s00011-010-0214-4"
+        },
+        {
+          "line": 668,
+          "column": 1,
+          "excerpt": "doi:10.1177/1091581818807863"
+        },
+        {
+          "line": 674,
+          "column": 1,
+          "excerpt": "fda.gov/media/94155/download"
+        },
+        {
+          "line": 679,
+          "column": 1,
+          "excerpt": "FDA güvenlik değerlendirmesi"
+        },
+        {
+          "line": 684,
+          "column": 1,
+          "excerpt": "NIH bakır bilgi notu"
+        },
+        {
+          "line": 689,
+          "column": 1,
+          "excerpt": "doi:10.21926/obm.genet.2102128"
+        }
+      ],
+      "message": "17 of 72 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information."
+    },
+    {
+      "id": "space-before-punctuation",
+      "count": 22,
+      "locations": [
+        {
+          "line": 24,
+          "column": 24,
+          "excerpt": "r ."
+        },
+        {
+          "line": 49,
+          "column": 60,
+          "excerpt": "] ."
+        },
+        {
+          "line": 92,
+          "column": 4,
+          "excerpt": "] ."
+        },
+        {
+          "line": 132,
+          "column": 76,
+          "excerpt": "] ."
+        },
+        {
+          "line": 142,
+          "column": 3,
+          "excerpt": "] ."
+        },
+        {
+          "line": 180,
+          "column": 21,
+          "excerpt": "r ."
+        },
+        {
+          "line": 182,
+          "column": 7,
+          "excerpt": "] ."
+        },
+        {
+          "line": 184,
+          "column": 19,
+          "excerpt": "] ."
+        },
+        {
+          "line": 201,
+          "column": 42,
+          "excerpt": "] ."
+        },
+        {
+          "line": 223,
+          "column": 18,
+          "excerpt": "r ."
+        },
+        {
+          "line": 235,
+          "column": 67,
+          "excerpt": "] ."
+        },
+        {
+          "line": 252,
+          "column": 7,
+          "excerpt": "] ."
+        },
+        {
+          "line": 285,
+          "column": 35,
+          "excerpt": "] ."
+        },
+        {
+          "line": 286,
+          "column": 3,
+          "excerpt": "] ."
+        },
+        {
+          "line": 316,
+          "column": 80,
+          "excerpt": "] ."
+        },
+        {
+          "line": 337,
+          "column": 35,
+          "excerpt": "] ."
+        },
+        {
+          "line": 369,
+          "column": 56,
+          "excerpt": "] ."
+        },
+        {
+          "line": 380,
+          "column": 3,
+          "excerpt": "] ."
+        },
+        {
+          "line": 382,
+          "column": 4,
+          "excerpt": "] ."
+        },
+        {
+          "line": 392,
+          "column": 89,
+          "excerpt": "] ."
+        },
+        {
+          "line": 424,
+          "column": 4,
+          "excerpt": "] ."
+        },
+        {
+          "line": 454,
+          "column": 22,
+          "excerpt": "] ."
+        }
+      ],
+      "message": "Space before a full stop or comma."
+    },
+    {
+      "id": "claim-menopoz",
+      "count": 14,
+      "locations": [
+        {
+          "line": 23,
+          "column": 25,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 26,
+          "column": 10,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 158,
+          "column": 4,
+          "excerpt": "Menopoz cild"
+        },
+        {
+          "line": 164,
+          "column": 1,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 192,
+          "column": 60,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 200,
+          "column": 44,
+          "excerpt": "postmenopozal cilt"
+        },
+        {
+          "line": 201,
+          "column": 66,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 243,
+          "column": 12,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 252,
+          "column": 42,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 414,
+          "column": 21,
+          "excerpt": "Menopoz cild"
+        },
+        {
+          "line": 544,
+          "column": 1,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 551,
+          "column": 79,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 591,
+          "column": 97,
+          "excerpt": "menopoz cild"
+        },
+        {
+          "line": 691,
+          "column": 50,
+          "excerpt": "menopoz cild"
+        }
+      ],
+      "message": "Stated 14 times across 6 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 6
+    },
+    {
+      "id": "claim-topikal",
+      "count": 8,
+      "locations": [
+        {
+          "line": 24,
+          "column": 63,
+          "excerpt": "topikal kozmetik"
+        },
+        {
+          "line": 360,
+          "column": 73,
+          "excerpt": "Topikal kozmetik"
+        },
+        {
+          "line": 432,
+          "column": 40,
+          "excerpt": "topikal kozmetik"
+        },
+        {
+          "line": 520,
+          "column": 49,
+          "excerpt": "topikal kozmetik"
+        },
+        {
+          "line": 531,
+          "column": 29,
+          "excerpt": "Yardımcı içerik"
+        },
+        {
+          "line": 543,
+          "column": 11,
+          "excerpt": "yardımcı içerik"
+        },
+        {
+          "line": 551,
+          "column": 41,
+          "excerpt": "topikal kozmetik"
+        },
+        {
+          "line": 601,
+          "column": 101,
+          "excerpt": "yardımcı içerik"
+        }
+      ],
+      "message": "Stated 8 times across 5 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 5
+    },
+    {
+      "id": "claim-enjeksiyon",
+      "count": 31,
+      "locations": [
+        {
+          "line": 25,
+          "column": 67,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 25,
+          "column": 79,
+          "excerpt": "sistemik gençleşme"
+        },
+        {
+          "line": 301,
+          "column": 4,
+          "excerpt": "Enjeksiyon"
+        },
+        {
+          "line": 306,
+          "column": 29,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 314,
+          "column": 72,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 317,
+          "column": 69,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 325,
+          "column": 1,
+          "excerpt": "Enjeksiyon"
+        },
+        {
+          "line": 327,
+          "column": 55,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 335,
+          "column": 6,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 338,
+          "column": 5,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 360,
+          "column": 94,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 370,
+          "column": 95,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 391,
+          "column": 1,
+          "excerpt": "Enjeksiyon"
+        },
+        {
+          "line": 393,
+          "column": 19,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 393,
+          "column": 69,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 422,
+          "column": 81,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 423,
+          "column": 45,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 432,
+          "column": 86,
+          "excerpt": "Enjeksiyon"
+        },
+        {
+          "line": 472,
+          "column": 26,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 473,
+          "column": 69,
+          "excerpt": "Enjeksiyon"
+        },
+        {
+          "line": 495,
+          "column": 2,
+          "excerpt": "sistemik gençleşme"
+        },
+        {
+          "line": 495,
+          "column": 28,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 520,
+          "column": 70,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 520,
+          "column": 91,
+          "excerpt": "sistemik gençleşme"
+        },
+        {
+          "line": 543,
+          "column": 84,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 552,
+          "column": 10,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 552,
+          "column": 24,
+          "excerpt": "sistemik gençleşme"
+        },
+        {
+          "line": 590,
+          "column": 1,
+          "excerpt": "Enjeksiyon"
+        },
+        {
+          "line": 591,
+          "column": 83,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 680,
+          "column": 35,
+          "excerpt": "enjeksiyon"
+        },
+        {
+          "line": 709,
+          "column": 48,
+          "excerpt": "enjeksiyon"
+        }
+      ],
+      "message": "Stated 31 times across 8 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 8
+    },
+    {
+      "id": "claim-gen",
+      "count": 6,
+      "locations": [
+        {
+          "line": 22,
+          "column": 76,
+          "excerpt": "gen ifadesi"
+        },
+        {
+          "line": 140,
+          "column": 30,
+          "excerpt": "gen ifadesi"
+        },
+        {
+          "line": 142,
+          "column": 64,
+          "excerpt": "genleri gençleştir"
+        },
+        {
+          "line": 453,
+          "column": 2,
+          "excerpt": "Gen ifadesi"
+        },
+        {
+          "line": 453,
+          "column": 73,
+          "excerpt": "genlerinizi"
+        },
+        {
+          "line": 580,
+          "column": 79,
+          "excerpt": "gen ifadesi"
+        }
+      ],
+      "message": "Stated 6 times across 4 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 4
+    }
+  ],
+  "rhythm": {
+    "sentences": 229,
+    "meanWords": 12.7,
+    "sdWords": 7,
+    "shareUpTo8Words": 0.32,
+    "longestShortRun": 7
+  },
+  "coverage": {
+    "blocks": 87,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+    "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+    "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+    "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+  ]
+}

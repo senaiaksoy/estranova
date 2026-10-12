@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const dir = path.dirname(fileURLToPath(import.meta.url));
+const root = path.resolve(dir, '../../../../..');
+const recordPath = path.join(root, 'icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-12_ghk-cu-menopoz-cilt.json');
+const record = JSON.parse(fs.readFileSync(recordPath, 'utf8'));
+const source = fs.readFileSync(path.join(root, 'src/data/article-faqs.ts'), 'utf8');
+const section = source.split("'/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': [")[1].split('\n  ],')[0];
+// These five fields are single-quoted literals without escapes in this scoped source section.
+const questions = [...section.matchAll(/question: '(.+)',/g)].map(m => m[1]);
+const answers = [...section.matchAll(/answer:\s*'(.+)',/g)].map(m => m[1]);
+if (questions.length !== 5 || answers.length !== 5) throw new Error('Expected five FAQ items.');
+const originals = fs.readFileSync(path.join(dir, 'sss-3-5-ozgun.txt'), 'utf8').split(/\r?\n\s*===YANIT===\s*\r?\n/).map(s => s.trim());
+if (originals.length !== 3) throw new Error('Expected three original responses.');
+record.faqResponses = record.faqResponses.slice(0, 2);
+for (let i = 2; i < 5; i++) record.faqResponses.push({question: questions[i], answer: originals[i - 2], answeredAt: '2026-10-12', useApproval: 'Kullanıcı, makalenin SSS dönüşümü için doğrudan sağladı. Yayın onayı değildir.', shortenedApproval: 'Kısa hali inceleme dosyasında gösterildi; ayrıca onaylandığı iddia edilmiyor.', editedForArticle: answers[i]});
+record.faqResponses.forEach((r, i) => { r.question = questions[i]; r.editedForArticle = answers[i]; });
+record.status = '5/5 gerçek SSS yanıtı alındı ve anlamı korunarak kısaltıldı. Son metin incelemeye sunuldu; yayın onayı yok.';
+record.faqQuestionsRemaining = [];
+fs.writeFileSync(recordPath, JSON.stringify(record, null, 2) + '\n');
+fs.writeFileSync(path.join(dir, 'hekim-yanitlari-duzenlenmis.md'), '# Dr. Aksoy’a sorular — makaleye giren kısa karşılıklar\n\n12 Ekim 2026. Beş özgün yanıt klinik katkı kaydında saklandı. Aşağıdaki metin ortak görünür SSS/FAQ şeması kaynağıdır. Yeni doz, deneyim veya tavsiye eklenmedi. Yayın onayı verilmiş sayılmadı.\n\n' + questions.map((q, i) => `## ${i + 1}. ${q}\n\n${answers[i]}\n`).join('\n'));
+console.log('Five original responses and article counterparts recorded.');

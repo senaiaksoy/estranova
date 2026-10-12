@@ -1,0 +1,21 @@
+
+> estranova@0.0.0 articles:audit:sources
+> node scripts/check-published-content-integrity.mjs --strict --strict-sources
+
+Estranova yayin butunlugu denetimi
+- buildArticleSchemas kullanan statik makale sayfasi: 67
+- approval kaydi: 68
+- staticArticles manifest girdisi: 68
+
+Klinik kaynak uyarilari
+- /beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /beden-yakinlik/menopoz-sonrasi-genital-estetik/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /beden-yakinlik/menopoz-sonrasi-karin-germe/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /zamansiz-yasam/glp1-istah-metabolizma-menopoz/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor
+- /zihin-denge/duygusal-denge/stres-yonetimi-menopoz/ -> klinik rehberde görünür, doğrulanabilir kaynak izi bulunmuyor

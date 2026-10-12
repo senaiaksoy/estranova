@@ -1,0 +1,242 @@
+
+> estranova@0.0.0 build:ci
+> astro sync && npm run lint && npm run compliance && npm run articles:audit:strict && npm run articles:audit:templates && npm run build && npm run seo:audit
+
+21:25:12 [content] Syncing content
+21:25:12 [content] Synced content
+21:25:12 [types] Generated 317ms
+
+> estranova@0.0.0 lint
+> tsc --noEmit
+
+
+> estranova@0.0.0 compliance
+> node scripts/compliance-check.mjs
+
+Compliance check passed for 180 audited file(s).
+
+> estranova@0.0.0 articles:audit:strict
+> node scripts/check-published-content-integrity.mjs --strict
+
+Estranova yayin butunlugu denetimi
+- buildArticleSchemas kullanan statik makale sayfasi: 67
+- approval kaydi: 68
+- staticArticles manifest girdisi: 68
+
+Yayin butunlugu temiz.
+
+> estranova@0.0.0 articles:audit:templates
+> node scripts/check-published-content-integrity.mjs --strict --strict-templates
+
+Estranova yayin butunlugu denetimi
+- buildArticleSchemas kullanan statik makale sayfasi: 67
+- approval kaydi: 68
+- staticArticles manifest girdisi: 68
+
+Yayin butunlugu temiz.
+
+> estranova@0.0.0 prebuild
+> node scripts/check-encoding.mjs && node scripts/check-color-tokens.mjs && node scripts/check-editorial-lexicon.mjs && node scripts/check-article-dates.mjs
+
+Encoding check passed for 324 file(s).
+check-color-tokens: OK (0 marka hex arbitrary value).
+WARN: src/pages/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme.astro [çerçevesi] -> yaklaşımı, bakışı, hattı
+  L324: Bartow MJ, Szymanski KD, Raggio BS. Liposuction: endikasyonlar, hasta seçimi ve güvenlik çerçevesi; StatPearls güncel klinik özeti.
+WARN: docs/editorial/deneysel-tedaviyi-okuma-kilavuzu-humanize-2026-10-01.md [bağlam] -> zemin, durum, arka plan
+  L19: 4. **Plasebo kaynağı:** Moerman–Jonas yazısının doğru kaydı [PMID 11900500](https://pubmed.ncbi.nlm.nih.gov/11900500/). Perspektif yazısıdır, meta-analiz değildir. Genel %30 yanıt 
+  L99: - *Orta (3):* beklenti/bağlam kişinin bildirdiği sonuçları etkileyebilir. Dayanak: Hróbjartsson & Gøtzsche, Cochrane 2010 (PMID 20091554) — 234 randomize plasebo çalışması; genel o
+check-editorial-lexicon: 2 warning bulundu. Soft ban kelimeleri mümkünse önerilen karşılıklarla değiştirin.
+check-article-dates: 68 makale tutarlı.
+
+> estranova@0.0.0 build
+> astro build
+
+21:25:17 [content] Syncing content
+21:25:17 [content] Synced content
+21:25:17 [types] Generated 294ms
+21:25:17 [build] output: "static"
+21:25:17 [build] mode: "static"
+21:25:17 [build] directory: D:\A-klasör\Estranova\dist\
+21:25:17 [build] Collecting build info...
+21:25:17 [build] ✓ Completed in 320ms.
+21:25:17 [build] Building static entrypoints...
+21:25:20 [vite] ✓ built in 2.39s
+21:25:20 [vite] ✓ built in 465ms
+21:25:20 [build] Rearranging server assets...
+
+ generating static routes 
+21:25:21   ├─ /404.html (+12ms) 
+21:25:21   ├─ /abone-ol/index.html (+4ms) 
+21:25:21   ├─ /authors/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/index.html (+11ms) 
+21:25:21   ├─ /beden-yakinlik/cilt-gorunum/index.html (+9ms) 
+21:25:21   ├─ /beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/index.html (+9ms) 
+21:25:21   ├─ /beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/index.html (+5ms) 
+21:25:21   ├─ /beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/index.html (+6ms) 
+21:25:21   ├─ /beden-yakinlik/cinsel-saglik/vajinal-saglik-menopoz/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/cinsel-saglik/yakinlik-agrisi-menopoz/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/cinsel-saglik/index.html (+3ms) 
+21:25:21   ├─ /beden-yakinlik/intim-saglik/vajinal-saglik-menopoz/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/intim-saglik/yakinlik-agrisi-menopoz/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/intim-saglik/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/index.html (+5ms) 
+21:25:21   ├─ /beden-yakinlik/menopoz-sonrasi-genital-estetik/index.html (+6ms) 
+21:25:21   ├─ /beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/index.html (+5ms) 
+21:25:21   ├─ /beden-yakinlik/menopoz-sonrasi-karin-germe/index.html (+5ms) 
+21:25:21   ├─ /beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/index.html (+5ms) 
+21:25:21   ├─ /beden-yakinlik/menopozda-cilt-degisimleri/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/menopozda-idrar-kacirma-pelvik-taban/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/index.html (+5ms) 
+21:25:21   ├─ /beden-yakinlik/pelvik-taban/index.html (+3ms) 
+21:25:21   ├─ /beden-yakinlik/vajinal-saglik-menopoz/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/yakinlik-agrisi-menopoz/index.html (+1ms) 
+21:25:21   ├─ /beden-yakinlik/index.html (+6ms) 
+21:25:21   ├─ /belirti-degerlendirme/index.html (+5ms) 
+21:25:21   ├─ /bilimsel-editor-mektubu/index.html (+3ms) 
+21:25:21   ├─ /bilimsel-pencere/arastirma/index.html (+1ms) 
+21:25:21   ├─ /bilimsel-pencere/estrogen-biyolojisi-saglik/index.html (+1ms) 
+21:25:21   ├─ /bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/index.html (+6ms) 
+21:25:21   ├─ /bilimsel-pencere/hormonlarin-bilimi/index.html (+2ms) 
+21:25:21   ├─ /bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/index.html (+5ms) 
+21:25:21   ├─ /bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/index.html (+7ms) 
+21:25:21   ├─ /bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/index.html (+6ms) 
+21:25:21   ├─ /bilimsel-pencere/hucreler-ve-yaslanma/index.html (+3ms) 
+21:25:21   ├─ /bilimsel-pencere/nad-plus-hucresel-yaslanma/index.html (+1ms) 
+21:25:21   ├─ /bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/index.html (+6ms) 
+21:25:21   ├─ /bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/index.html (+5ms) 
+21:25:21   ├─ /bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/index.html (+5ms) 
+21:25:21   ├─ /bilimsel-pencere/yeni-arastirmalar/index.html (+3ms) 
+21:25:21   ├─ /bilimsel-pencere/index.html (+3ms) 
+21:25:21   ├─ /blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/index.html (+1ms) 
+21:25:21   ├─ /blog/index.html (+3ms) 
+21:25:21   ├─ /cerez-politikasi/index.html (+3ms) 
+21:25:21   ├─ /dosya/2026-07-tarti-susunca/index.html (+4ms) 
+21:25:21   ├─ /dosya/2026-05-uyuyamadigimiz-geceler/index.html (+2ms) 
+21:25:21   ├─ /dosya/2026-06-guc-esigi/index.html (+2ms) 
+21:25:21   ├─ /dosya/index.html (+3ms) 
+21:25:21   ├─ /editorun-kosesi/haziran-2026/index.html (+4ms) 
+21:25:21   ├─ /editorun-kosesi/mayis-2026/index.html (+3ms) 
+21:25:21   ├─ /editorun-kosesi/temmuz-2026/index.html (+3ms) 
+21:25:21   ├─ /editoryal-ilkeler/index.html (+3ms) 
+21:25:21   ├─ /editoryal-politika/nasil-arastiriyoruz/index.html (+3ms) 
+21:25:21   ├─ /editoryal-politika/index.html (+3ms) 
+21:25:21   ├─ /giris/index.html (+3ms) 
+21:25:21   ├─ /gizlilik/index.html (+3ms) 
+21:25:21   ├─ /hakkimizda/index.html (+3ms) 
+21:25:21   ├─ /hesabim/index.html (+2ms) 
+21:25:21   ├─ /hormonal-gecis/40-sonrasi/tarama-testleri/index.html (+5ms) 
+21:25:21   ├─ /hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/index.html (+5ms) 
+21:25:21   ├─ /hormonal-gecis/40-sonrasi/index.html (+3ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/index.html (+5ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/index.html (+5ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/hrt-ilk-alti-ay/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/menopoz-nedir/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoz/index.html (+3ms) 
+21:25:21   ├─ /hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/index.html (+6ms) 
+21:25:21   ├─ /hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/index.html (+4ms) 
+21:25:21   ├─ /hormonal-gecis/menopoza-hazirlik/index.html (+3ms) 
+21:25:21   ├─ /hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/index.html (+6ms) 
+21:25:21   ├─ /hormonal-gecis/perimenopoz/perimenopozda-beyin-sisi-odaklanma-rehberi/index.html (+1ms) 
+21:25:21   ├─ /hormonal-gecis/perimenopoz/index.html (+3ms) 
+21:25:21   ├─ /hormonal-gecis/index.html (+2ms) 
+21:25:21   ├─ /iletisim/index.html (+3ms) 
+21:25:21   ├─ /kullanim-kosullari/index.html (+3ms) 
+21:25:21   ├─ /kvkk/index.html (+3ms) 
+21:25:21   ├─ /library/index.html (+4ms) 
+21:25:21   ├─ /manifesto/index.html (+3ms) 
+21:25:21   ├─ /mektup/index.html (+3ms) 
+21:25:21   ├─ /okuma-paneli/index.html (+3ms) 
+21:25:21   ├─ /robots.txt (+2ms) 
+21:25:21   ├─ /rss.xml (+34ms) 
+21:25:21   ├─ /sayi/03-temmuz-2026-tarti-susunca/index.html (+4ms) 
+21:25:21   ├─ /sayi/02-haziran-2026-guc-esigi/index.html (+2ms) 
+21:25:21   ├─ /sayi/01-mayis-2026-geceler/index.html (+2ms) 
+21:25:21   ├─ /sayi/index.html (+3ms) 
+21:25:21   ├─ /search-index.json (+3ms) 
+21:25:21   ├─ /sonra-oku/index.html (+3ms) 
+21:25:21   ├─ /symptoms/index.html (+4ms) 
+21:25:21   ├─ /tibbi-sorumluluk/index.html (+3ms) 
+21:25:21   ├─ /yayin-kurulu/index.html (+5ms) 
+21:25:21   ├─ /yazarlar/estranova-editorial/index.html (+3ms) 
+21:25:21   ├─ /yazarlar/berna-aksoy/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/alara-baykent/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/basak-pelister/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/gonca-gokdemir/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/cagri-sade/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/alp-aslan-eryilmaz/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/metin-alis/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/bulent-aksoy/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/anil-yalmaz/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/ersin-sarac/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/duygu-karaosmanoglu/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/rima-erdemir/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/isik-selin-gunce/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/senai-aksoy/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/demet-kizilkaya/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/alper-mumcu/index.html (+2ms) 
+21:25:21   ├─ /yazarlar/index.html (+3ms) 
+21:25:21   ├─ /zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/beslenme-yaslanma/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/d-vitamini-rehberi/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/deneysel/nad-plus-takviyesi/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/deneysel/index.html (+3ms) 
+21:25:21   ├─ /zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/index.html (+9ms) 
+21:25:21   ├─ /zamansiz-yasam/glp1-istah-metabolizma-menopoz/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/kemik-sagligi-40-sonrasi/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/kilo-artisi-menopoz/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/menopozda-hangi-hareket/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/non-invaziv/cilt-cihazlari-rehberi/index.html (+1ms) 
+21:25:21   ├─ /zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/non-invaziv/index.html (+2ms) 
+21:25:21   ├─ /zamansiz-yasam/vitaminler/d-vitamini-rehberi/index.html (+1ms) 
+21:25:21   ├─ /zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/index.html (+5ms) 
+21:25:21   ├─ /zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/index.html (+6ms) 
+21:25:21   ├─ /zamansiz-yasam/vitaminler/index.html (+3ms) 
+21:25:21   ├─ /zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/index.html (+4ms) 
+21:25:21   ├─ /zamansiz-yasam/index.html (+3ms) 
+21:25:21   ├─ /zihin-denge/bellek-odaklanma-menopoz/index.html (+1ms) 
+21:25:21   ├─ /zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/index.html (+4ms) 
+21:25:21   ├─ /zihin-denge/bilissel-saglik/index.html (+2ms) 
+21:25:21   ├─ /zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/index.html (+5ms) 
+21:25:21   ├─ /zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/index.html (+6ms) 
+21:25:21   ├─ /zihin-denge/duygusal-denge/stres-yonetimi-menopoz/index.html (+4ms) 
+21:25:21   ├─ /zihin-denge/duygusal-denge/index.html (+3ms) 
+21:25:21   ├─ /zihin-denge/ruh-hali-degisimleri-menopoz/index.html (+1ms) 
+21:25:21   ├─ /zihin-denge/stres-yonetimi-menopoz/index.html (+1ms) 
+21:25:21   ├─ /zihin-denge/uyku-bozuklugu-menopoz/index.html (+1ms) 
+21:25:21   ├─ /zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/index.html (+4ms) 
+21:25:21   ├─ /zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/index.html (+5ms) 
+21:25:21   ├─ /zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/index.html (+4ms) 
+21:25:21   ├─ /zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/index.html (+4ms) 
+21:25:21   ├─ /zihin-denge/uyku-dinlenme/index.html (+2ms) 
+21:25:21   ├─ /zihin-denge/index.html (+2ms) 
+21:25:21   ├─ /index.html (+6ms) 
+21:25:21 ✓ Completed in 684ms.
+
+21:25:21 [build] ✓ Completed in 3.73s.
+21:25:21 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+21:25:21 [build] 140 page(s) built in 4.19s
+21:25:21 [build] Complete!
+
+> estranova@0.0.0 seo:audit
+> node scripts/check-seo-output.mjs
+
+SEO output audit passed for 160 built page(s).

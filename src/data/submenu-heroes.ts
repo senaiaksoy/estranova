@@ -450,7 +450,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
-    src: '/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg',
+    src: '/images/library/editorial/ghk-cu-menopoz-cilt-card.webp',
     alt: 'Aydınlık tekstil atölyesinde transparan kumaş ve bakır iplikleri inceleyen olgun kadın; GHK-Cu ve menopoz cildi yazısı için kart görseli',
   },
   '/zamansiz-yasam/d-vitamini-rehberi/': {

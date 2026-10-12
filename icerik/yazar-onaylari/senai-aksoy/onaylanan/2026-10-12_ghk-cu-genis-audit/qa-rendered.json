@@ -1,0 +1,39 @@
+{
+  "target": "dist/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/index.html",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "uncited-source",
+      "count": 11,
+      "items": [
+        "Luansritisakul C, Chiang MC, Burns SL, Fonseca ACG. Peptides in Regenerative Medicine: A Comprehensive Review…",
+        "Miller TR, Wagner JD, Baack BR, Eisbach KJ. Effects of topical copper tripeptide complex on CO2 laser-resurfa…",
+        "Hall G, Phillips TJ. Estrogen and skin: the effects of estrogen, menopause, and hormone replacement therapy o…",
+        "Affinito P, Palomba S, Sorrentino C, Di Carlo C, Bifulco G, Arienzo MP, Nappi C. Effects of postmenopausal hy…",
+        "Sauerbronn AV, Fonseca AM, Bagnoli VR, Saldiva PH, Pinotti JA. The effects of systemic hormonal replacement t…",
+        "Li H, Low YSJ, Chong HP, Zin MT, Lee CY, Li B, Leolukman M, Kang L. Microneedle-Mediated Delivery of Copper P…",
+        "Hostynek JJ, Dreher F, Maibach HI. Human skin retention and penetration of a copper tripeptide in vitro as fu…",
+        "Johnson W Jr, Bergfeld WF, Belsito DV, ve ark. Safety Assessment of Tripeptide-1, Hexapeptide-12, Their Metal…",
+        "U.S. Food and Drug Administration. Bulk Drug Substances Nominated for Use in Compounding Under Section 503A o…",
+        "U.S. Food and Drug Administration. Certain Bulk Drug Substances for Use in Compounding that May Present Signi…",
+        "National Institutes of Health, Office of Dietary Supplements. Copper — Health Professional Fact Sheet. Bakır …"
+      ],
+      "message": "Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it."
+    }
+  ],
+  "coverage": {
+    "characters": 28006,
+    "images": 2,
+    "headings": 19,
+    "collapsibles": 5,
+    "roles": [
+      "author: Yazan : → Doç. Dr. Senai Aksoy",
+      "review: tıbbi inceleme: → Dr. Alper Mumcu"
+    ]
+  },
+  "limitations": [
+    "Reads one built page as served; a page behind a consent wall or rendered client-side may be incomplete.",
+    "Name, role and reference matching are heuristics: every item is a candidate to look at, not a verdict.",
+    "Template findings (review line, og:type, repeated boxes) belong to the site layout; report them, do not rewrite article text to hide them."
+  ]
+}
