@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası Dr. Aksoy'a yöneltilen ilk üç SSS sorusunun yazılı yanıtları.",
-  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12, SSS sitrat cevabı dahil). Açık madde kalmadı.",
+  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12, SSS kaynak kontrolü dahil).",
   "revisionScope": "Kaynak düzeltmeleri: [10] yanlış PMID 2246470 (AIDS makalesi) → Zehender 1997 MAGICA PMID 9120155, cümle eşleşmesi düzeltildi; [8] Belsey 2010 (gerçek konu: kabızlıkta yaşam kalitesi) → Bharucha & Lacy 2020 PMID 31945360; [3] başlık ve makale no (125) düzeltildi; [7] sitrat cümlesinden ayrıldı, glisinat tolerans iddiası kaynaksız olduğu için gövdeden çıkarıldı (hekim yanıtında); [9] 'düşük-orta' → 'düşük' (Boyle: poor quality); [11] çalışma grubu (155 sağlıklı erişkin, 18–65, 4 hafta) eklendi; kramp Evidence 2 → 4 (Cochrane orta/yüksek kesinlikte yararsızlık). Kısa Klinik Yanıt doğrudan cevaba çevrildi; 6 soru-H2'nin 5'i ve tek kelimelik Kapanış başlığı düz cümleye çevrildi (anchor'lar korundu); Kaynaklar Kapanış'tan sonraya alındı; tekrarlar birleştirildi; kırmızı bayrak kutusundan uyarı olmayan madde çıkarıldı; inceleme notundaki yazar sesi cümlesi düzeltildi; og:image eklendi; modifiedDate 11 Ekim 2026. Doz üst sınırı eklenmedi: NIH ODS ve NCBI Bookshelf bot doğrulaması nedeniyle birincil kaynak okunamadı.",
   "faqConversionStatus": "Tamamlandı: 4/4 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı.",
   "faqQuestionsAsked": [
@@ -135,5 +135,16 @@
     "change": "Sitrat cevabı: 'bağırsak hareketlerini artırabilir ve ishale neden olabilir' yerine 'bağırsakta su tutarak etki eden bir laksatif olduğu için bazı hastalarda bağırsak hareketlerini artırabilir'. İshal iddiası için doğrudan yetişkin kanıtı bulunamadı; mekanizma Bharucha & Lacy 2020 [8] ile kaynaklı.",
     "sıcakBasmasıCevabı": "Değiştirilmedi. 'Güçlü kanıt yok' ifadesi Park 2015 [20] ile uyumlu; karşı kanıt olarak kontrolsüz Park 2011 pilotu (PMID 21271347) not edildi.",
     "approvalStatus": "2026-10-12: Dr. Alper Mumcu onayladı (KC bildirimi: 'mumcu onay tamam'). Dr. Aksoy değişikliği 'öneriler onay' ile onayladı."
+  },
+  "sssKaynakPass20261012": {
+    "source": "12 Ekim 2026 Claude Code oturumu: kaynakla kontrol sonrası Dr. Aksoy'un onayladığı öneriler (worktree magnezyum-sss2).",
+    "changes": [
+      "Q2 glisinat: 'bazı çalışmalarda küçük iyileşmeler' yerine glisinat çalışma sayısının az olduğu ve tek randomize çalışmada küçük iyileşme görüldüğü yazıldı; diğer magnezyum tuzlarıyla sonuçlar tek yönde değil.",
+      "Q3 oksit: 'emilimi daha düşüktür' yerine oksit emilimi için çalışmaların tutarlı olmadığı ve tek bir formun üstün sayılmadığı yazıldı; bağırsak yan etkisi cümlesi korundu. Onaylı gövdeyle uyumlu hâle getirildi.",
+      "Q4 etkileşimler: 'magnezyum içeren antasitler' antibiyotik emilimini, magnezyum tiroid ilaçlarıyla osteoporoz ilaçlarının emilimini azaltabilir.",
+      "Gövde: ilaç etkileşimi paragrafına Gugler & Allgayer 1990 [21] (PMID 1969784) ve Itoh ve ark. 2016 [22] (PMID 26934925) eklendi."
+    ],
+    "sıcakBasmasıCevabı": "Değiştirilmedi; Park 2015 [20] ile uyumlu.",
+    "approvalStatus": "2026-10-12: Dr. Alper Mumcu onayladı (KC bildirimi: 'mumcu onay tamam'). Dr. Aksoy önerileri 'öneriler onay' ile onayladı."
   }
 }
