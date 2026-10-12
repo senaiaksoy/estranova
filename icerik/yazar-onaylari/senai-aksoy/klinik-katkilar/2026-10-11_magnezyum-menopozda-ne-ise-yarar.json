@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası Dr. Aksoy'a yöneltilen ilk üç SSS sorusunun yazılı yanıtları.",
-  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12, editoryal düzeltme turu). Açık madde kalmadı; SSS klinik görüşleri Dr. Aksoy'un kararına bağlı olarak kayıtta duruyor.",
+  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12, SSS sitrat cevabı dahil). Açık madde kalmadı.",
   "revisionScope": "Kaynak düzeltmeleri: [10] yanlış PMID 2246470 (AIDS makalesi) → Zehender 1997 MAGICA PMID 9120155, cümle eşleşmesi düzeltildi; [8] Belsey 2010 (gerçek konu: kabızlıkta yaşam kalitesi) → Bharucha & Lacy 2020 PMID 31945360; [3] başlık ve makale no (125) düzeltildi; [7] sitrat cümlesinden ayrıldı, glisinat tolerans iddiası kaynaksız olduğu için gövdeden çıkarıldı (hekim yanıtında); [9] 'düşük-orta' → 'düşük' (Boyle: poor quality); [11] çalışma grubu (155 sağlıklı erişkin, 18–65, 4 hafta) eklendi; kramp Evidence 2 → 4 (Cochrane orta/yüksek kesinlikte yararsızlık). Kısa Klinik Yanıt doğrudan cevaba çevrildi; 6 soru-H2'nin 5'i ve tek kelimelik Kapanış başlığı düz cümleye çevrildi (anchor'lar korundu); Kaynaklar Kapanış'tan sonraya alındı; tekrarlar birleştirildi; kırmızı bayrak kutusundan uyarı olmayan madde çıkarıldı; inceleme notundaki yazar sesi cümlesi düzeltildi; og:image eklendi; modifiedDate 11 Ekim 2026. Doz üst sınırı eklenmedi: NIH ODS ve NCBI Bookshelf bot doğrulaması nedeniyle birincil kaynak okunamadı.",
   "faqConversionStatus": "Tamamlandı: 4/4 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı.",
   "faqQuestionsAsked": [
@@ -129,5 +129,11 @@
     "faqNotChanged": "SSS yanıtları değiştirilmedi.",
     "checks": "build:ci, seo:audit, articles:audit:sources (bu makale için uyarı yok) geçti.",
     "approvalStatus": "2026-10-12: Dr. Alper Mumcu onayladı (KC bildirimi: 'mumcu onay tamam'). KC (Dr. Aksoy) onayı, 'A' seçeneğinin seçilmesiyle verildi: seçenek A bu düzeltmelerin tamamını kapsıyordu."
+  },
+  "sssSitratPass20261012": {
+    "source": "12 Ekim 2026 Claude Code oturumu: magnezyum SSS sitrat cevabı, Dr. Aksoy onayıyla değiştirildi.",
+    "change": "Sitrat cevabı: 'bağırsak hareketlerini artırabilir ve ishale neden olabilir' yerine 'bağırsakta su tutarak etki eden bir laksatif olduğu için bazı hastalarda bağırsak hareketlerini artırabilir'. İshal iddiası için doğrudan yetişkin kanıtı bulunamadı; mekanizma Bharucha & Lacy 2020 [8] ile kaynaklı.",
+    "sıcakBasmasıCevabı": "Değiştirilmedi. 'Güçlü kanıt yok' ifadesi Park 2015 [20] ile uyumlu; karşı kanıt olarak kontrolsüz Park 2011 pilotu (PMID 21271347) not edildi.",
+    "approvalStatus": "2026-10-12: Dr. Alper Mumcu onayladı (KC bildirimi: 'mumcu onay tamam'). Dr. Aksoy değişikliği 'öneriler onay' ile onayladı."
   }
 }
