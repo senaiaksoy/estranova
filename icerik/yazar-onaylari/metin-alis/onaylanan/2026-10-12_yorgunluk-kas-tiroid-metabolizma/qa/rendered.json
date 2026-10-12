@@ -1,0 +1,38 @@
+{
+  "target": "dist/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/index.html",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "uncited-source",
+      "count": 11,
+      "items": [
+        "Latimer KM, Gunther A, Kopec M. Erişkinlerde yorgunluk: değerlendirme ve yönetim [Fatigue in Adults: Evaluati…",
+        "American Thyroid Association. Tiroidin az çalışması [Hypothyroidism]. Hasta bilgilendirmesi; belirtiler ve ta…",
+        "American Thyroid Association. Tiroidin fazla çalışması [Hyperthyroidism]. Hasta bilgilendirmesi; belirtiler v…",
+        "American Thyroid Association. Tiroid işlev testleri [Thyroid Function Tests]. Normal TSH, serbest hormonlar v…",
+        "NICE. Tiroid hastalığı: değerlendirme ve yönetim, NG145. 2019; güncelleme 2023. Öneriler 1.2.8–1.2.11: TSH, f…",
+        "NIDDK. İnsülin direnci ve prediyabet. Belirti yokluğu, riskler ve kan şekeri testleri.",
+        "Greendale GA, Sternfeld B, Huang M ve ark. Menopoz geçişinde vücut kompozisyonu ve kilo değişimleri [Changes …",
+        "Cruz-Jentoft AJ, Bahat G, Bauer J ve ark. Sarkopeni: tanım ve tanı üzerine güncellenmiş Avrupa uzlaşısı [Sarc…",
+        "MSD/Merck Manual, profesyonel sürüm. Yorgunluk. Klinik değerlendirme, koşullu testler ve uyarıcı bulgular.",
+        "NIDDK. Kan şekeri düşüklüğü: hipoglisemi. Diyabet ve ilaç kullanımı bağlamında belirtiler ve acil durumlar.",
+        "NHLBI. Kalp krizi belirtileri ve acil yardım. Göğüs ağrısı, nefes darlığı ve eşlik eden belirtiler."
+      ],
+      "message": "Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it."
+    }
+  ],
+  "coverage": {
+    "characters": 13018,
+    "images": 2,
+    "headings": 14,
+    "collapsibles": 5,
+    "roles": [
+      "author: Yazan : → Dr. Metin Alış"
+    ]
+  },
+  "limitations": [
+    "Reads one built page as served; a page behind a consent wall or rendered client-side may be incomplete.",
+    "Name, role and reference matching are heuristics: every item is a candidate to look at, not a verdict.",
+    "Template findings (review line, og:type, repeated boxes) belong to the site layout; report them, do not rewrite article text to hide them."
+  ]
+}

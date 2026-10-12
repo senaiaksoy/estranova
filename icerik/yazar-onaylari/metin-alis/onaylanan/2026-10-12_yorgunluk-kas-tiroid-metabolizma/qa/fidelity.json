@@ -1,0 +1,975 @@
+{
+  "originalPath": "C:\\Users\\KC3\\AppData\\Local\\Temp\\estranova-yorgunluk-20261012/head.md",
+  "revisedPath": "C:\\Users\\KC3\\AppData\\Local\\Temp\\estranova-yorgunluk-20261012/after.md",
+  "locale": "tr",
+  "status": "review_changes",
+  "differences": {
+    "numbers": [
+      {
+        "value": "1",
+        "beforeCount": 0,
+        "afterCount": 6,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 11,
+            "column": 309
+          },
+          {
+            "line": 13,
+            "column": 177
+          },
+          {
+            "line": 49,
+            "column": 169
+          },
+          {
+            "line": 77,
+            "column": 307
+          },
+          {
+            "line": 83,
+            "column": 221
+          },
+          {
+            "line": 97,
+            "column": 254
+          }
+        ]
+      },
+      {
+        "value": "1.2.11",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 91,
+            "column": 164
+          }
+        ]
+      },
+      {
+        "value": "1.2.8",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 91,
+            "column": 158
+          }
+        ]
+      },
+      {
+        "value": "10",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 151
+          }
+        ]
+      },
+      {
+        "value": "10.1093",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 97,
+            "column": 268
+          }
+        ]
+      },
+      {
+        "value": "10.1172",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 95,
+            "column": 261
+          }
+        ]
+      },
+      {
+        "value": "108",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 83,
+            "column": 217
+          }
+        ]
+      },
+      {
+        "value": "11",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 58
+          }
+        ]
+      },
+      {
+        "value": "12",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 129,
+            "column": 16
+          }
+        ]
+      },
+      {
+        "value": "124865",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 95,
+            "column": 281
+          }
+        ]
+      },
+      {
+        "value": "16",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 97,
+            "column": 257
+          }
+        ]
+      },
+      {
+        "value": "2",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 19,
+            "column": 225
+          }
+        ]
+      },
+      {
+        "value": "2019",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 91,
+            "column": 126
+          },
+          {
+            "line": 95,
+            "column": 238
+          },
+          {
+            "line": 97,
+            "column": 246
+          }
+        ]
+      },
+      {
+        "value": "2023",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 83,
+            "column": 212
+          },
+          {
+            "line": 91,
+            "column": 143
+          }
+        ]
+      },
+      {
+        "value": "2026",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 129,
+            "column": 24
+          }
+        ]
+      },
+      {
+        "value": "3",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 19,
+            "column": 397
+          }
+        ]
+      },
+      {
+        "value": "31",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 97,
+            "column": 260
+          }
+        ]
+      },
+      {
+        "value": "4",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 23,
+            "column": 225
+          },
+          {
+            "line": 95,
+            "column": 243
+          }
+        ]
+      },
+      {
+        "value": "40",
+        "beforeCount": 5,
+        "afterCount": 4,
+        "beforeLocations": [
+          {
+            "line": 3,
+            "column": 16
+          },
+          {
+            "line": 5,
+            "column": 1
+          },
+          {
+            "line": 15,
+            "column": 1
+          },
+          {
+            "line": 37,
+            "column": 1
+          },
+          {
+            "line": 99,
+            "column": 1
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 3,
+            "column": 16
+          },
+          {
+            "line": 5,
+            "column": 1
+          },
+          {
+            "line": 39,
+            "column": 312
+          },
+          {
+            "line": 127,
+            "column": 244
+          }
+        ]
+      },
+      {
+        "value": "48",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 97,
+            "column": 251
+          }
+        ]
+      },
+      {
+        "value": "5",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 21,
+            "column": 357
+          },
+          {
+            "line": 23,
+            "column": 366
+          },
+          {
+            "line": 95,
+            "column": 245
+          }
+        ]
+      },
+      {
+        "value": "58",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 83,
+            "column": 224
+          }
+        ]
+      },
+      {
+        "value": "6",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 29,
+            "column": 279
+          },
+          {
+            "line": 31,
+            "column": 303
+          }
+        ]
+      },
+      {
+        "value": "69",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 83,
+            "column": 227
+          }
+        ]
+      },
+      {
+        "value": "7",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 33,
+            "column": 274
+          }
+        ]
+      },
+      {
+        "value": "8",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 39,
+            "column": 297
+          },
+          {
+            "line": 41,
+            "column": 195
+          }
+        ]
+      },
+      {
+        "value": "9",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 47,
+            "column": 252
+          },
+          {
+            "line": 71,
+            "column": 101
+          }
+        ]
+      }
+    ],
+    "ranges": [
+      {
+        "value": "1.2.8–1.2.11",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 91,
+            "column": 158
+          }
+        ]
+      },
+      {
+        "value": "16–31",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 97,
+            "column": 257
+          }
+        ]
+      },
+      {
+        "value": "58–69",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 83,
+            "column": 224
+          }
+        ]
+      }
+    ],
+    "numericCitations": [
+      {
+        "value": "[10]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 150
+          }
+        ]
+      },
+      {
+        "value": "[11]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 57
+          }
+        ]
+      },
+      {
+        "value": "[1]",
+        "beforeCount": 0,
+        "afterCount": 4,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 11,
+            "column": 308
+          },
+          {
+            "line": 13,
+            "column": 176
+          },
+          {
+            "line": 49,
+            "column": 168
+          },
+          {
+            "line": 77,
+            "column": 306
+          }
+        ]
+      },
+      {
+        "value": "[2]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 19,
+            "column": 224
+          }
+        ]
+      },
+      {
+        "value": "[3]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 19,
+            "column": 396
+          }
+        ]
+      },
+      {
+        "value": "[4]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 23,
+            "column": 224
+          }
+        ]
+      },
+      {
+        "value": "[5]",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 21,
+            "column": 356
+          },
+          {
+            "line": 23,
+            "column": 365
+          }
+        ]
+      },
+      {
+        "value": "[6]",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 29,
+            "column": 278
+          },
+          {
+            "line": 31,
+            "column": 302
+          }
+        ]
+      },
+      {
+        "value": "[7]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 33,
+            "column": 273
+          }
+        ]
+      },
+      {
+        "value": "[8]",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 39,
+            "column": 296
+          },
+          {
+            "line": 41,
+            "column": 194
+          }
+        ]
+      },
+      {
+        "value": "[9]",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 47,
+            "column": 251
+          },
+          {
+            "line": 71,
+            "column": 100
+          }
+        ]
+      }
+    ],
+    "identifiers": [
+      {
+        "value": "10.1093/ageing/afy169",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 97,
+            "column": 268
+          }
+        ]
+      },
+      {
+        "value": "10.1172/jci.insight.124865",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 95,
+            "column": 261
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "value": "#kaynak-1",
+        "beforeCount": 0,
+        "afterCount": 4,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 11,
+            "column": 308
+          },
+          {
+            "line": 13,
+            "column": 176
+          },
+          {
+            "line": 49,
+            "column": 168
+          },
+          {
+            "line": 77,
+            "column": 306
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-10",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 150
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-11",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 71,
+            "column": 57
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-2",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 19,
+            "column": 224
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-3",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 19,
+            "column": 396
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-4",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 23,
+            "column": 224
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-5",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 21,
+            "column": 356
+          },
+          {
+            "line": 23,
+            "column": 365
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-6",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 29,
+            "column": 278
+          },
+          {
+            "line": 31,
+            "column": 302
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-7",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 33,
+            "column": 273
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-8",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 39,
+            "column": 296
+          },
+          {
+            "line": 41,
+            "column": 194
+          }
+        ]
+      },
+      {
+        "value": "#kaynak-9",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 47,
+            "column": 251
+          },
+          {
+            "line": 71,
+            "column": 100
+          }
+        ]
+      },
+      {
+        "value": "https://insight.jci.org/articles/view/124865",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 95,
+            "column": 46
+          }
+        ]
+      },
+      {
+        "value": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6322506/",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 97,
+            "column": 45
+          }
+        ]
+      },
+      {
+        "value": "https://www.aafp.org/afp/2023/0700/fatigue-adults",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 83,
+            "column": 35
+          }
+        ]
+      },
+      {
+        "value": "https://www.merckmanuals.com/professional/special-subjects/nonspecific-symptoms/fatigue",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 99,
+            "column": 40
+          }
+        ]
+      },
+      {
+        "value": "https://www.nhlbi.nih.gov/health/heart-attack/symptoms",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 103,
+            "column": 10
+          }
+        ]
+      },
+      {
+        "value": "https://www.nice.org.uk/guidance/NG145/chapter/recommendations",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 91,
+            "column": 9
+          }
+        ]
+      },
+      {
+        "value": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 101,
+            "column": 10
+          }
+        ]
+      },
+      {
+        "value": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 93,
+            "column": 10
+          }
+        ]
+      },
+      {
+        "value": "https://www.thyroid.org/hyperthyroidism/",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 87,
+            "column": 33
+          }
+        ]
+      },
+      {
+        "value": "https://www.thyroid.org/hypothyroidism/",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 85,
+            "column": 33
+          }
+        ]
+      },
+      {
+        "value": "https://www.thyroid.org/thyroid-function-tests/",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 89,
+            "column": 33
+          }
+        ]
+      }
+    ]
+  },
+  "frontmatterChanged": false,
+  "coverage": {
+    "before": {
+      "blocks": 54,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "after": {
+      "blocks": 66,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    }
+  },
+  "limitations": [
+    "Counts are global: values swapped between outcomes or claims can escape detection.",
+    "Negation, certainty, population and causal meaning require the manual meaning record.",
+    "Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.",
+    "Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.",
+    "Number formatting is not silently converted between locales. No tracked changes is not clinical approval."
+  ]
+}

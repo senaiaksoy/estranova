@@ -206,7 +206,7 @@ export const dossiers: MonthlyDossier[] = [
         writerSlug: 'metin-alis',
         status: 'published',
         href: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
-        readingMinutes: 8,
+        readingMinutes: 9,
       },
       {
         title: 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık',

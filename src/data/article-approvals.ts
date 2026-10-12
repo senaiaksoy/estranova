@@ -116,8 +116,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
     writerSlug: 'metin-alis',
-    approvedAt: '2026-06-01',
-    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; 40 sonrasi alt hub arsiv baglantisi, static manifest ve production route uyumu dogrulandi.',
+    approvedAt: '2026-10-12',
+    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; 40 sonrasi alt hub arsiv baglantisi, static manifest ve production route uyumu dogrulandi. 12 Ekim 2026 revizyonu (Codex audit/humanize + ikinci geçiş: inkâr çerçevesinin azaltılması, editör notu imzası, kırmızı bayrak atıfları, NG23 menopoz–uyku bağlantısı; Dr. Metin Alış’ın üç soruya yanıtlarının gövdeye işlenmesi; kansızlıksız demir eksikliği için Vaucher 2012 ve Houston 2018 kaynakları; toplam 14 kaynak, 5 SSS): kullanıcı (Dr. Senai Aksoy) bu sohbette “Metin Bey’in ve bilimsel editör onayları tamam.” diyerek Dr. Metin Alış yazar onayını ve bilimsel editör onayını teyit etti. Paket icerik/yazar-onaylari/metin-alis/onaylanan/2026-10-12_yorgunluk-kas-tiroid-metabolizma altına taşındı.',
   },
   {
     pathname: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',

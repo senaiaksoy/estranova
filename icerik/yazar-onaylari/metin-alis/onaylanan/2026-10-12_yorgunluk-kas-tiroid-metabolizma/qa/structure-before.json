@@ -1,0 +1,111 @@
+{
+  "filePath": "C:\\Users\\KC3\\AppData\\Local\\Temp\\estranova-yorgunluk-20261012/before.md",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "family-negative-frame",
+      "count": 4,
+      "locations": [
+        {
+          "line": 9,
+          "column": 94,
+          "excerpt": "tek başına bu his bir alarm değildir"
+        },
+        {
+          "line": 13,
+          "column": 221,
+          "excerpt": "tek başına tanı koydurmaz"
+        },
+        {
+          "line": 29,
+          "column": 136,
+          "excerpt": "anlamına gelmez"
+        },
+        {
+          "line": 31,
+          "column": 234,
+          "excerpt": "tek başına yeterli değildir"
+        }
+      ],
+      "message": "negative frame (anlamına gelmez / demek değildir): 4 times in the document, 1 of 28 paragraphs end with it. One use is fine. Keep the instances that add a distinct condition; say the rest directly or merge them.",
+      "paragraphEndings": 1
+    },
+    {
+      "id": "short-closer",
+      "count": 5,
+      "locations": [
+        {
+          "line": 13,
+          "column": 1,
+          "excerpt": "Ama hekime anlatılacak hikayeyi somutlaştırır."
+        },
+        {
+          "line": 73,
+          "column": 1,
+          "excerpt": "Bu notu hekime götürmek değerlendirmeyi hızlandırabilir."
+        },
+        {
+          "line": 103,
+          "column": 1,
+          "excerpt": "Kas azaldığında aynı gün daha ağır yaşanabilir."
+        },
+        {
+          "line": 107,
+          "column": 1,
+          "excerpt": "Tek değere fazla anlam yüklememek gerekir."
+        },
+        {
+          "line": 113,
+          "column": 1,
+          "excerpt": "Yukarıdaki işaretlerden biri varsa değerlendirme ertelenmemelidir."
+        }
+      ],
+      "message": "5 of 28 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information."
+    },
+    {
+      "id": "claim-normal-tsh",
+      "count": 0,
+      "locations": [],
+      "message": "Stated 0 times across 0 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 0
+    },
+    {
+      "id": "claim-ir-belirtisiz",
+      "count": 0,
+      "locations": [],
+      "message": "Stated 0 times across 0 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 0
+    },
+    {
+      "id": "claim-yagsiz-kutle",
+      "count": 0,
+      "locations": [],
+      "message": "Stated 0 times across 0 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 0
+    }
+  ],
+  "rhythm": {
+    "sentences": 91,
+    "meanWords": 12.2,
+    "sdWords": 6.1,
+    "shareUpTo8Words": 0.29,
+    "longestShortRun": 3
+  },
+  "coverage": {
+    "blocks": 60,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+    "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+    "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+    "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+  ]
+}

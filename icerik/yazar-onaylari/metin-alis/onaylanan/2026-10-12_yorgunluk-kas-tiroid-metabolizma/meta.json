@@ -1,0 +1,22 @@
+{
+  "writer": {
+    "slug": "metin-alis",
+    "name": "Dr. Metin Alış"
+  },
+  "article": {
+    "slug": "yorgunluk-kas-tiroid-metabolizma",
+    "title": "Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?",
+    "previewUrl": "./revize-metin.html"
+  },
+  "package": {
+    "createdAt": "2026-10-12T12:15:14.747Z",
+    "deadline": "2026-10-19T12:15:14.747Z",
+    "status": "approved",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "approvedAt": "2026-10-12",
+    "approvalNote": "Dr. Metin Alış yazar onayı ve bilimsel editör onayı; kullanıcı (Dr. Senai Aksoy) teyidi, 12 Ekim 2026."
+  }
+}

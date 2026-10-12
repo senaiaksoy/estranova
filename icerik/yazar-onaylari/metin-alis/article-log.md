@@ -49,3 +49,19 @@ Revizyon: tüm metin audit/humanize/fix; normal TSH–subklinik ayrımı, koşul
 ## 12 Ekim 2026 — revizyon onayları tamamlandı
 
 Kullanıcı bu sohbette “Metin alış ve bilimsel editör inceleme onayları tamam.” diye teyit etti. Bir önceki revizyonun gövde, SSS ve BEN onay kapısı tamamlandı. Merkezi SSS ve site kaynağı güncellendi. Form/stil geri bildirimi bildirilmedi; profil değişikliği yapılmadı. Commit/push/deploy yapılmadı.
+
+## 12 Ekim 2026 — Yorgunluk / kas / tiroid / metabolizma, onay bekliyor
+
+`/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/` için tekrar audit ve kapsamlı humanize/fix. Koşullu tiroid/test seçimi, çoğunlukla belirtisiz insülin direnci/prediyabet, yağsız kütle–kas gücü–yorgunluk ayrımı ve yardım zamanı düzeltildi. 11 kaynak; 5 SSS aynı şema kaynağında. H0; gardırop günlük hayat gözlemi, uydurulmuş hekim/hasta anekdotu değil. Yeni klinik alıntı, deneyim veya onay üretilmedi. Kanıt kapsamı ve bekleyen inceleme durumu görünür notta. Standart yerel onay paketi `onay-bekleyen/2026-10-12_yorgunluk-kas-tiroid-metabolizma/` altında; gönderilmedi. Yazar ve bilimsel editör onayı bu revizyon için bekleniyor; yukarıdaki ayrı tiroid yazısı onayı aktarılmadı. Tam build:ci ve yerel masaüstü/mobil QA geçti. Site genelinde sources kapısı başka 13 makalenin eksiğiyle başarısız; hedefte kaynak uyarısı yok. Profil veya eski onay kaydı değiştirilmedi. Ayrıntı paketteki audit-kaynak-izi.md dosyasında.
+
+## 12 Ekim 2026 — Yorgunluk / kas / tiroid / metabolizma, ikinci geçiş (onay bekliyor)
+
+Codex revizyonu tekrar audit/humanize/fix edildi: inkâr çerçevesi azaltıldı, editör notundaki okura görünen onay-durumu notu kaldırıldı ve Senai imzası geri geldi, kırmızı bayrak atıfları cümlelere taşındı, NG23 ile menopoz–uyku bağlantısı eklendi (12 kaynak). Kalıp kaydı: açılış = gündelik sahne (gardırop) + utancı adlandıran teselli; humor H0; hekim anekdotu yok. Ayrıntı paketteki audit-kaynak-izi.md "İkinci geçiş" bölümünde. Yazar ve bilimsel editör onayı bekleniyor; gönderim, commit, push yapılmadı.
+
+## 12 Ekim 2026 — Yorgunluk / kas / tiroid / metabolizma, yazar yanıtları işlendi (onay bekliyor)
+
+Üç soruya Metin Alış yanıtı gövdeye girdi (giriş: vitamin/hormon beklentisi ve menopozda yorgunluğun kaçınılmaz olmadığı; tiroid: TSH'yi öne almadığı/aldığı durumlar ve geniş panel karşıtlığı; test: kanaması yoğun kadında hemoglobin–ferritin önceliği). Stil sinyali: yazar kısa, kararlı birinci tekil kullanıyor ("düşünürüm", "istemem", "doğru bulmuyorum"); kalın vurgulu tek cümlelik ilke cümleleri kuruyor; anekdot yerine tip-hasta örneği ("yoğun adet kanaması olan bir kadında") veriyor. Profil değişikliği editör onayı olmadan işlenmedi. Ham yanıtlar: `onay-bekleyen/2026-10-12_yorgunluk-kas-tiroid-metabolizma/yazar-yanitlari.md`.
+
+## 12 Ekim 2026 — Yorgunluk / kas / tiroid / metabolizma, revizyon onaylandı
+
+Kullanıcı bu sohbette “Metin Bey’in ve bilimsel editör onayları tamam.” diye teyit etti. Revizyon (yazar yanıtları + kansızlıksız demir eksikliği kaynakları dahil) onaylandı; paket `onaylanan/2026-10-12_yorgunluk-kas-tiroid-metabolizma` altına taşındı ve `article-approvals.ts` kaydı 2026-10-12 olarak güncellendi. Form/stil geri bildirimi ayrıca iletilmedi; profil değişikliği yapılmadı. Commit ve push kullanıcı izniyle yapıldı.

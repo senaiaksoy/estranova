@@ -252,7 +252,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
     title: 'Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?',
     description:
-      'Sabah ağır gelen bedeni tek kelimeyle kapatmadan; tiroid, kas kütlesi, uyku, insülin direnci ve laboratuvar okumasını yan yana getiren bir endokrin yazısı.',
+      '40 sonrası yorgunlukta tiroid, kas gücü ve kan şekeri nasıl değerlendirilir? Hangi testin neden istendiği ve beklenmemesi gereken belirtiler.',
     publishedDate: '1 Haziran 2026',
     writerSlug: 'metin-alis',
     section: 'Hormonal Geçiş · 40 Sonrası',

@@ -1066,27 +1066,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Yorgunluk varsa önce tiroid testi mi yapılmalı?',
       answer:
-        'Tiroid sık akla gelir, haklı olarak da önemli bir başlıktır. Ama yorgunluğu tek testle kapatmak çoğu zaman yetmez. Süre, uyku, kilo değişimi, menopoz durumu, demir depoları, B12, D vitamini ve glikoz metabolizması da aynı hikayeye dahil olabilir.',
+        'Üşüme, kabızlık ya da çarpıntı gibi belirtiler veya öykünüz tiroidi düşündürüyorsa test gündeme gelebilir. İlk adım ise yakınmanın süresini, eşlik eden belirtileri, uykuyu, kullandığınız ilaçları ve muayeneyi değerlendirmektir. Tiroid düşünülüyorsa ve hipofiz sorunu şüphesi yoksa değerlendirme genellikle TSH ölçümüyle başlar.',
     },
     {
       question: 'TSH normal çıkarsa tiroid tamamen dışlanır mı?',
       answer:
-        'Normal TSH çoğu zaman rahatlatıcıdır; yine de her sorunun kapağını tek başına kapatmaz. Yakınmaların biçimi, fT4, ilaç kullanımı, tiroid antikorları ve öykü bazı kişilerde ek bakışı gerekli kılabilir.',
+        'Normal TSH çoğu kişide tiroidin düzgün çalıştığını düşündürür. Hipofiz hastalığı şüphesi gibi özel durumlarda TSH, fT4 ile birlikte değerlendirilir. Antikor testi ise tiroid hastalığının nedenini araştırmak içindir; hormon değerleri normalse yorgunluğun açıklaması başka yerde aranır.',
     },
     {
       question: 'Yemekten sonra gelen uyku hali metabolik bir işaret olabilir mi?',
       answer:
-        'Olabilir. Özellikle yemekten sonra gözlerin kapanması, tatlı isteği, karın çevresinde artış ve ailede diyabet öyküsü aynı tabloda buluşuyorsa glikoz metabolizmasına ayrıca bakmak anlamlıdır.',
+        'Bu his tek başına insülin direnci ya da prediyabet göstergesi sayılmaz; iki durum da çoğunlukla sessiz seyreder. Ailede diyabet öyküsü veya bel çevresinde artış gibi riskler varsa açlık kan şekeri ya da HbA1c istenebilir. Yemek sonrası uyku hâlinin ne zaman başladığını ve ne kadar sürdüğünü anlatmanız da yararlıdır.',
     },
     {
       question: 'Kas kütlesi azalması gerçekten yorgunluk yapar mı?',
       answer:
-        'Evet, kas yalnızca spor salonunun konusu değildir. Merdiven, çanta taşıma, uzun yürüyüş ve sabah yataktan kalkış bile kas kalitesinden etkilenir. Kas azaldığında aynı gün daha ağır yaşanabilir.',
+        'Kas gücündeki azalma merdiven çıkmak, sandalyeden kalkmak gibi günlük işleri zorlaştırabilir. Kas kütlesi, kas gücü ve genel yorgunluk ise ayrı ayrı ölçülür; aradaki bağı hekiminiz muayene ve gerektiğinde güç testleriyle değerlendirir. Hangi işin zorlaştığını somut anlatmanız bu değerlendirmeyi kolaylaştırır.',
     },
     {
       question: 'D vitamini düşüklüğü bütün yorgunluğu açıklar mı?',
       answer:
-        'Tek başına her zaman açıklamaz. D vitamini düşüklüğü önemli olabilir; ama yorgunlukta demir, B12, tiroid, uyku, metabolik durum ve eşlik eden hastalıklar da dosyaya girer. Tek değere fazla anlam yüklememek gerekir.',
+        'Düşük bir sonuç, yorgunluğun tek açıklaması olarak okunmaz. Sonuç yakınmalarınız ve muayene bulgularınızla birlikte yorumlanır. Uyku sorunları, kansızlık, tiroid bozukluğu ya da ilaç etkisi gibi başka nedenler de aynı görüşmede gözden geçirilir.',
     },
   ],
   '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': [

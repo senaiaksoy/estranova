@@ -1,0 +1,22 @@
+{
+  "filePath": "C:\\Users\\KC3\\AppData\\Local\\Temp\\estranova-yorgunluk-20261012/after.md",
+  "locale": "tr",
+  "findings": [],
+  "coverage": {
+    "blocks": 66,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Advisory lexical/structural candidates, not authorship detection or clinical approval.",
+    "Semantic repetition and medication-section equivalence still need whole-text editorial reading.",
+    "Frontmatter summaries/FAQs and JSX props/expressions require separate visible-text inspection.",
+    "Block quotations are excluded from editorial suggestions; punctuation and passive voice are not banned."
+  ]
+}
