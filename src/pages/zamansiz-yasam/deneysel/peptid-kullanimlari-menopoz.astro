@@ -33,6 +33,7 @@ const tocEntries = [
   { id: 'enerji-uyku-longevity', label: 'Enerji ve Longevity' },
   { id: 'guvenlik-standardizasyon', label: 'Güvenlik ve Standardizasyon' },
   { id: 'uc-soru', label: 'Doktora Üç Soru' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
   { id: 'kapanis', label: 'Kapanış' },
 ];
@@ -49,6 +50,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '6 Mayıs 2026',
+  modifiedDate: '12 Ekim 2026',
   pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
   articleSection: 'Zamansız Yaşam · Deneysel',
   sectionPath: '/zamansiz-yasam/',
@@ -93,6 +95,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="6 Mayıs 2026"
+        lastUpdated="12 Ekim 2026"
         readingMinutes={10}
         imageSrc="/images/library/editorial/zy-peptid-kullanimlari-menopoz-window-card.png"
         imageAlt="Açık renkli bir iç mekanda pencere yanında duran, bordo hırkalı düşünceli kadın portresi"
@@ -162,7 +165,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           GLP-1 analogları ve ilgili inkretin hattı, kilo yönetimi ve metabolik sağlık için
-          randomize kontrollü çalışmalarla desteklenen ayrı bir tedavi ailesidir
+          randomize kontrollü çalışmalarla desteklenen ayrı bir tedavi ailesidir <sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-2">[2]</a></sup>
           <Evidence level={5} />. Bu grup menopozdaki kilo değişimi açısından ayrıca
           tartışılabilir; nitekim Estranova'da bunun için ayrı bir dosya var. Buradaki önemli
           nokta şu: GLP-1 için var olan klinik veri yoğunluğunu, GLP-1 dışı peptidlerin
@@ -193,7 +196,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           BPC-157 için konuşulan ana vaat, doku iyileşmesini hızlandırma ve inflamasyon yükünü
           azaltma yönünde. Laboratuvar ve hayvan verilerinde tendon, bağ ve bağırsak yüzeyi
-          gibi alanlarda ilginç sinyaller var <Evidence level={2} />; ama menopozdaki kadınlarda
+          gibi alanlarda ilginç sinyaller var <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={2} />; ama menopozdaki kadınlarda
           egzersiz sonrası toparlanmayı, eklem yakınmalarını ya da cerrahi dışı yumuşak doku
           iyileşmesini belirgin biçimde iyileştirdiğini gösteren güçlü insan verisi şu an yok.
           Buradaki boşluk yalnızca birkaç iyi çalışma eksikliği değil; standardize ürün,
@@ -204,7 +207,7 @@ const articleSchemas = buildArticleSchemas({
           TB-500 adı pratikte çoğu zaman thymosin beta-4 ekseninin daha ticari, daha
           dolaşımda olan yüzü gibi konuşuluyor. Burada da yara iyileşmesi, hareket rahatlığı
           ve toparlanma üzerine erken dönem mekanistik ilgi var <Evidence level={2} />; fakat
-          insan çalışmalarındaki netlik hâlâ zayıf. Menopoz bağlamında bunu düzenli hareket
+          insan çalışmaları göz damlası formuyla sınırlı, küçük ve birincil sonucu her zaman karşılamamış çalışmalardır <sup><a href="#kaynak-5">[5]</a></sup><sup><a href="#kaynak-6">[6]</a></sup>. Menopoz bağlamında bunu düzenli hareket
           sonrası daha hızlı iyileşme ya da kas-iskelet yakınmalarında klinik bir araç gibi
           sunmak için elimizde yeterli veri bulunmuyor.
         </p>
@@ -220,8 +223,7 @@ const articleSchemas = buildArticleSchemas({
         <h3>GH prekürsörleri: CJC-1295, Ipamorelin ve benzeri hat</h3>
         <p>
           Kas hattında ise CJC-1295 ve ipamorelin gibi GH prekürsörleri ya da daha geniş adıyla
-          GH-secretagogue çizgisi öne çıkıyor. Teorik zemin, büyüme hormonu ve IGF-1 eksenini
-          uyararak kas yapımı veya toparlanma dinamiklerini etkilemek <Evidence from={1} to={2} />.
+          GH-secretagogue çizgisi öne çıkıyor. Sağlıklı yetişkinlerde CJC-1295 ile büyüme hormonu ve IGF-1 artışını gösteren randomize bir çalışma var <sup><a href="#kaynak-3">[3]</a></sup>; ipamorelin için ise yayımlanmış veriler yalnızca sıçan ve domuz deneylerine dayanıyor <sup><a href="#kaynak-4">[4]</a></sup>. Bu, kas yapımı ya da toparlanma üzerinde klinik fayda gösterildiği anlamına gelmez <Evidence from={1} to={2} />.
           Bu mekanizma kâğıt üzerinde ilginç; ancak menopozda rutin kas koruma aracı olarak
           yerleşmiş değil. Orta yaşta kas kaybı yaşayan pek çok kadın için asıl belirleyici
           faktörler hâlâ direnç egzersizi, yeterli protein alımı, uyku düzeni, ilaç yan etkileri
@@ -245,8 +247,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           GLP-1 hattını kenara koyduğumuzda, kilo ve yağ kütlesi için en sık anılan peptid
           isimlerinden biri AOD-9604 oluyor. Pazarlama dili bunu bazen yağ yakımına odaklı,
-          bazen de büyüme hormonu etkilerinden ayrışan bir seçenek gibi sunuyor. Oysa insan
-          verisi sınırlı ve sonuçlar tutarlı değil <Evidence level={2} />. Menopozal kilo
+          bazen de büyüme hormonu etkilerinden ayrışan bir seçenek gibi sunuyor. Oysa bu konuda yayımlanmış bir insan çalışması bulamadık. Menopozal kilo
           artışı, visseral yağlanma veya bel çevresi için standart, güçlü ve tekrar edilmiş
           fayda gösteren bir veri setinden söz etmek şu an mümkün görünmüyor.
         </p>
@@ -254,8 +255,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           MOT-C daha çok mitokondri, egzersiz verimliliği ve metabolik esneklik etrafında
           konuşulan bir peptid. Bu başlık menopoz için çekici geliyor; çünkü enerji düşüşü,
-          yağ dağılımı ve hareket kapasitesi aynı anda etkilenebiliyor. Ama MOT-C için insan
-          verisi çok erken evrede <Evidence from={1} to={2} /> ve menopozdaki kadınlarda kilo
+          yağ dağılımı ve hareket kapasitesi aynı anda etkilenebiliyor. Ama MOT-C için insan verisi çok erken evrede <sup><a href="#kaynak-9">[9]</a></sup> ve menopozdaki kadınlarda kilo
           yönetimi ya da metabolik dengeyi doğrudan iyileştirdiğini gösteren güçlü klinik
           veri yok.
         </p>
@@ -284,7 +284,7 @@ const articleSchemas = buildArticleSchemas({
           Epithalon ya da daha sık görülen yazımıyla epitalon bu başlıkta en çok geçen
           örneklerden biri. Longevity, sirkadiyen ritim ve hücresel yaşlanma anlatısında sık
           yer alıyor; fakat insan çalışmalarının sayısı az, örneklemleri küçük ve uzun dönem
-          sonuçları belirsiz <Evidence from={1} to={2} />. Uykuya yardımcı olur, biyolojik yaşı
+          sonuçları belirsiz <sup><a href="#kaynak-10">[10]</a></sup><sup><a href="#kaynak-11">[11]</a></sup> <Evidence from={1} to={2} />. Uykuya yardımcı olur, biyolojik yaşı
           geri çevirir ya da menopozdaki enerji düşüşünü belirgin biçimde düzeltir demek için
           elimizde yeterli veri yok. Bu alanda mekanizma anlatısı, kanıtın önüne çok kolay
           geçiyor.
@@ -321,7 +321,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           GLP-1 dışındaki peptidlerin önemli bir kısmı için piyasadaki ürünlerin kalite
-          standardı, saflık doğrulaması ve düzenli farmakovijilans takibi belirsizdir
+          standardı, saflık doğrulaması ve düzenli farmakovijilans takibi belirsizdir <sup><a href="#kaynak-8">[8]</a></sup>
           <Evidence level={2} />. Bu da teorik yan etki listesinden daha büyük bir sorun
           yaratır: kişi yalnızca molekülün biyolojisini değil, ürünün kendisini de satın
           almış olur. Kontaminasyon, doz sapması, içerik uyumsuzluğu ya da soğuk zincir
@@ -397,6 +397,20 @@ const articleSchemas = buildArticleSchemas({
           hem bedeninizi hem beklentinizi korur. Bir molekülün ilginç olması başka, sizin için
           doğru ve güvenli bir seçenek olması başka şeydir.
         </p>
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol>
+          <li id="kaynak-1">Wilding JPH ve ark. <em>Once-Weekly Semaglutide in Adults with Overweight or Obesity.</em> N Engl J Med. 2021;384(11):989-1002. <a href="https://doi.org/10.1056/NEJMoa2032183" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-2">Jastreboff AM ve ark. <em>Tirzepatide Once Weekly for the Treatment of Obesity.</em> N Engl J Med. 2022;387(3):205-216. <a href="https://doi.org/10.1056/NEJMoa2206038" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-3">Teichman SL ve ark. <em>Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone, in healthy adults.</em> J Clin Endocrinol Metab. 2006;91(3):799-805. <a href="https://doi.org/10.1210/jc.2005-1536" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-4">Raun K ve ark. <em>Ipamorelin, the first selective growth hormone secretagogue.</em> Eur J Endocrinol. 1998;139(5):552-561. <a href="https://doi.org/10.1530/eje.0.1390552" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-5">Sosne G, Dunn SP, Kim C. <em>Thymosin β4 significantly improves signs and symptoms of severe dry eye in a phase 2 randomized trial.</em> Cornea. 2015;34(5):491-496. <a href="https://doi.org/10.1097/ICO.0000000000000379" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-6">Sosne G, Ousler GW. <em>Thymosin beta 4 ophthalmic solution for dry eye: a randomized, placebo-controlled, Phase II clinical trial conducted using the controlled adverse environment (CAE) model.</em> Clin Ophthalmol. 2015;9:877-884. <a href="https://doi.org/10.2147/OPTH.S80954" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-7">Demirtaş H. <em>BPC 157 in Rodent Ischemia-Reperfusion Injury: A Critical Review of Preclinical Evidence.</em> Int J Mol Sci. 2026;27(18). <a href="https://doi.org/10.3390/ijms27188344" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-8">Moiz A, O'Keefe EL, O'Keefe JH. <em>Dangers of Injectable Peptides and Other Unregulated "Biohacking" Drugs.</em> Mo Med. 2026;123(4):337-343. <a href="https://pubmed.ncbi.nlm.nih.gov/42757290/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-9">Zheng Y, Wei Z, Wang T. <em>MOTS-c: A promising mitochondrial-derived peptide for therapeutic exploitation.</em> Front Endocrinol. 2023;14:1120533. <a href="https://doi.org/10.3389/fendo.2023.1120533" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-10">Korkushko OV ve ark. <em>[Normalizing effect of the pineal gland peptides on the daily melatonin rhythm in old monkeys and elderly people].</em> Adv Gerontol. 2007;20(1):74-85. Rusça. <a href="https://pubmed.ncbi.nlm.nih.gov/17969590/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-11">Khavinson VK, Golubev AG. <em>[Aging of the pineal gland].</em> Adv Gerontol. 2002;9:67-72. Rusça. <a href="https://pubmed.ncbi.nlm.nih.gov/12096440/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+        </ol>
       </ArticleProsePanel>
 
       <ArticleFAQ id="sik-sorulanlar" items={faqItems} title="Dr. Aksoy'a sorular" class="mt-10" />
@@ -414,8 +428,8 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
           <p class="italic">
-            Yazının ana gövdesinde özellikle reklam dili ile kanıt dili arasındaki farkı öne
-            çıkardım; bu notta ise klinik ayrımı daha doğrudan anlatıyorum.
+            Yazının ana gövdesinde özellikle reklam dili ile kanıt dili arasındaki fark öne
+            çıkarılıyor; bu notta ise klinik ayrım daha doğrudan anlatılıyor.
           </p>
           <p>
             <strong class="text-primary">Klinik not:</strong> Menopoz döneminde peptid
@@ -458,7 +472,7 @@ const articleSchemas = buildArticleSchemas({
             açabilir. Bu nedenle karar, mutlaka bireysel değerlendirmeyle netleştirilmelidir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı
           </p>
         </div>
       </ArticleEditorNote>
