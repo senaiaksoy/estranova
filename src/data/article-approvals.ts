@@ -153,7 +153,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
     writerSlug: 'metin-alis',
     approvedAt: '2026-05-08',
-    note: 'Dr. Metin Alış author approval received after v2/v3 medical-editorial cleanup. Pending package icerik/yazar-onaylari/metin-alis/onay-bekleyen/2026-05-04_tiroid-menopoz-yorgunluk-uyku was updated for FSH/estradiol testing scope, fT3 routine-panel language, oral/transdermal estrogen distinction, TSH variability wording and red-flag alignment; approved package then moved to onaylanan and live route/static manifest restored.',
+    note: 'Dr. Metin Alış author approval received after v2/v3 medical-editorial cleanup. 12 Ekim 2026 revizyonu (humanize, SSS şeması ile görünür SSS eşitlemesi, levotiroksin ve kalsiyum/demir aralığı düzeltmesi, kaynaksız sayıların kaldırılması): yazar onayı ve kullanıcı (Dr. Senai Aksoy) onayı teyit edildi. Pending package icerik/yazar-onaylari/metin-alis/onay-bekleyen/2026-05-04_tiroid-menopoz-yorgunluk-uyku was updated for FSH/estradiol testing scope, fT3 routine-panel language, oral/transdermal estrogen distinction, TSH variability wording and red-flag alignment; approved package then moved to onaylanan and live route/static manifest restored.',
   },
   {
     pathname: '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/',

@@ -38,7 +38,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni';
 const seoTitle = 'Tiroid mi Menopoz mu?';
 const articleDescription =
-  'Yorgunluk, kilo artışı ve uyku bozukluğu tiroid, hormonal geçiş ve metabolizmanın kesişiminde okunur. Hashimoto ve perimenopoz nasıl ayrılır, klinik rehber.';
+  'Yorgunluk, kilo artışı ve uyku bozukluğu tiroid ve hormonal geçişle birlikte nasıl okunur? Hashimoto ile perimenopoz nasıl ayrılır, TSH neyi söyler?';
 const pathname = '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/';
 const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
@@ -47,6 +47,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'metin-alis',
   articleType: 'clinical-guide',
   publishedDate: '8 Mayıs 2026',
+  modifiedDate: '12 Ekim 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
@@ -89,6 +90,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="metin-alis"
         articleType="clinical-guide"
         publishedDate="8 Mayıs 2026"
+        lastUpdated="12 Ekim 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/metin-alis-tiroid-menopoz-yorgunluk-uyku-byline.jpg"
         imageAlt="Boğaz manzaralı aydınlık bir odada, açık defterine not alırken pencereden dışarı bakan 40+ kadın portresi; tiroid, menopoz ve uyku yorgunluğu temasını sakin editoryal bir tonla taşır"
@@ -105,35 +107,21 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
         <p>
-          Yorgunluk, kilo artışı ve uyku bozukluğu üçlüsü 40+ kadın
-          polikliniğinde en sık duyduğumuz şikayetlerin başında gelir. Bu
-          üçlü çoğu zaman <strong>tiroid disfonksiyonu</strong>,
-          <strong>perimenopozal hormonal geçiş</strong> ve
-          <strong>metabolik değişim</strong> üç ekseninde birden okunur;
-          birini diğeri sanmak yaygın bir kafa karışıklığıdır. Bu yazı
-          tiroid hormonunun ve menopozun aynı belirtilere nasıl yol
-          açtığını, TSH'nin ne söylediğini ve neyi söylemediğini, Hashimoto
-          ile perimenopozun klinik ayrımının nasıl yapıldığını ve hekim
-          görüşmesine üç sade soruyla nasıl hazırlanılacağını
-          netleştirmeye çalışıyor — panik değil bilgi tonuyla.
+          Yorgunluk, kilo artışı ve uyku bozukluğu 40+ kadın polikliniğinde en sık duyduğumuz şikayetlerin başında gelir. Bu üçlü çoğu zaman üç ekseninde birlikte okunur: <strong>tiroid disfonksiyonu</strong>, <strong>perimenopozal hormonal geçiş</strong> ve <strong>metabolik değişim</strong>. Birini diğeriyle karıştırmak yaygın bir kafa karışıklığıdır. Bu yazı, tiroid hormonu ile menopozun aynı belirtilere nasıl yol açtığını anlatır. TSH'nin neyi söylediğini ve neyi söylemediğini, Hashimoto ile perimenopozun nasıl ayrıldığını ve hekim görüşmesine nasıl hazırlanılacağını ele alır. Amaç korkutmak değil, tabloyu sakin biçimde okumaktır.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="uclu-sikayet">"Yorgunum, Kilo Aldım, Uykum Bozuk" — Üçlü Şikayetin Üç Ekseni</h2>
         <p>
-          Yorgunum, kilo aldım, uykum bozuk üçlüsü polikliniğe en sık
-          gelen şikayettir; ve bu üçlü 40+ kadında <em>üç ayrı eksen
-          birden bakılması gereken</em> bir tablodur.
+          Yorgunum, kilo aldım, uykum bozuk. Polikliniğe en sık gelen şikayet bu üçlüdür ve insanı hem bedenen hem moralen yorar.
         </p>
         <p>
-          Bu üç eksen şudur: <strong>tiroid hormonu</strong> (özellikle
+          40+ kadında bu tablo üç ayrı eksene birden bakılmasını gerektirir. Bu eksenler şunlardır: <strong>tiroid hormonu</strong> (özellikle
           hipotiroidizm ve Hashimoto tiroiditi), <strong>perimenopozal
           hormonal geçiş</strong> (östrojen-progesteron dalgalanması) ve
           <strong>metabolik değişim</strong> (insülin direnci, viseral
-          yağ artışı, glikoz toleransı). Üçü de aynı semptom paketini
-          üretebilir; bu yüzden tek başına hiçbiri tabloyu tek başına
-          açıklamaz.
+          yağ artışı, glikoz toleransı). Üçü de aynı semptom paketini üretebilir; bu yüzden hiçbiri tek başına tabloyu açıklamaz.
         </p>
         <p>
           Tiroid hormonu eksikliği <strong>düşük metabolik hız</strong>
@@ -147,12 +135,7 @@ const articleSchemas = buildArticleSchemas({
           beraberinde getirir <Evidence level={4} />.
         </p>
         <p>
-          Klinikte sıklıkla şu tabloya rastlıyoruz: bir kadın "sürekli
-          yorgunum, demir mi düşük" diye gelir; laboratuvar testleri çıkar,
-          ferritin normal, hemoglobin normal — ama yorgunluk devam eder.
-          Çünkü yorgunluğun kaynağı tek bir eksende değildir; tiroid,
-          hormonal geçiş ve metabolik değişim üçü birden konuşmaktadır.
-          Birini diğerine indirgemek <em>yarım kalır</em>.
+          Klinikte sık karşılaştığımız bir tablo var. Yorgunluğunu demir eksikliğine bağlayan bir hastada ferritin ve hemoglobin normal çıkar; yine de yorgunluk sürer. Yorgunluğun kaynağı tek bir eksende olmayabilir; tiroid, hormonal geçiş ve metabolik değişim birlikte etkili olabilir. Birini diğerine indirgemek <em>yarım kalır</em>.
         </p>
 
         <h2 id="mekanizma">Tiroid Hormonu Nasıl Çalışır, Menopoz Nasıl Karışır — Kısa Mekanizma</h2>
@@ -173,36 +156,29 @@ const articleSchemas = buildArticleSchemas({
           ise hipertiroidizmin (aşırı tiroid) sinyalidir.
         </p>
         <p>
-          Perimenopozda tiroid sinyalini neden karıştırır? Birkaç
-          nedenden dolayı. Bir, özellikle oral östrojen tiroid bağlayıcı
+          Perimenopozda tiroid sinyali neden karışır? Birkaç nedeni var. Birincisi, özellikle oral östrojen tiroid bağlayıcı
           globulini (TBG) etkileyebilir — bu etki total tiroid hormon
           ölçümlerinde daha belirgindir; serbest hormonlar genellikle
-          daha stabildir <Evidence from={3} to={4} />. İki,
-          perimenopozun belirti haritası (yorgunluk, uyku bozukluğu,
+          daha stabildir <Evidence from={3} to={4} />. İkincisi, perimenopozun belirti haritası (yorgunluk, uyku bozukluğu,
           ısı düzensizlikleri, ruh hali değişimleri) hipotiroidizmin
-          haritasıyla <em>belirgin bir kesişim</em> gösterir. Üç,
-          Hashimoto tiroiditi otoimmün bir hastalıktır ve
+          haritasıyla <em>belirgin bir kesişim</em> gösterir. Üçüncüsü, Hashimoto tiroiditi otoimmün bir hastalıktır ve
           perimenopozdaki hormonal kayma otoimmün dengeyi şekillendirir
           <Evidence level={3} />; bu yıllarda Hashimoto tanısı
           konulması yaygındır.
         </p>
         <p>
-          Yani tiroid ve menopoz aynı odadaysa, sesi karıştırmadan
-          ayırmak hekimliğin ilk işidir.
+          Tiroid ile menopoz aynı tabloda göründüğünde, ilk klinik iş ikisini birbirinden ayırmaktır.
         </p>
 
         <h2 id="tsh-yetmez">TSH Tek Başına Yetmez — Laboratuvar Okuma Kültürü</h2>
         <p>
-          Tiroid değerlendirmesi yapılacaksa <strong>tek başına TSH
-          değeri</strong> bir cümledir; klinik tablo bu cümlenin etrafına
-          serpilen paragraftır. Cümleyi paragrafsız okumak yanıltır.
+          Tiroid değerlendirmesinde <strong>tek başına TSH değeri</strong> kısa bir cümleye benzer; asıl anlamı klinik tablo verir. Bu cümleyi bağlamından koparmak yanıltır.
         </p>
         <p>
-          Bir tiroid panelinin sade okuması şu üç-dört değer üzerinden
-          ilerler:
+          Bir tiroid panelinin sade okuması genellikle şu değerlerle ilerler:
         </p>
         <ul>
-          <li><strong>TSH</strong> — hipofiz bezinin tiroide gönderdiği uyarı sinyali; geri bildirim döngüsünün kalbi.</li>
+          <li><strong>TSH</strong> — hipofiz bezinin tiroide gönderdiği uyarı sinyali; geri bildirim döngüsünün merkezindeki ölçüdür.</li>
           <li><strong>fT4 (serbest tiroksin)</strong> — tiroidin asıl ürettiği hormon, kanda dolaşan aktif düzey.</li>
           <li><strong>fT3 (serbest triiyodotironin)</strong> — daha aktif tiroid hormonu; bazı tablolarda anahtar.</li>
           <li><strong>Anti-TPO ve Anti-Tg</strong> — tiroid otoimmünite belirteçleri; Hashimoto tanısının yanında bulunur.</li>
@@ -216,23 +192,18 @@ const articleSchemas = buildArticleSchemas({
           planına göre verilir <Evidence from={3} to={4} />.
         </p>
         <p>
-          Bunun tersi de doğrudur: TSH'nin laboratuvar referans aralığı
-          geniştir ve perimenopoz dinamizmi içinde aynı kişide birkaç
-          ay arayla <strong>0,5 ile 4 mIU/L arasında dalgalı değerler</strong>
+          Tersi de geçerlidir: TSH'nin laboratuvar referans aralığı geniştir ve perimenopozda aynı kişide birkaç ay arayla <strong>dalgalı TSH değerleri</strong>
           görülebilir. Bu yüzden bir tiroid kararı tek bir ölçümden
           çıkmaz; gerekirse 6-8 hafta arayla tekrar bakılır ve eşlik
           eden klinik tablo değerlendirmeye katılır.
         </p>
         <p>
-          Tek bir rakama bakıp karar vermek yerine değer + tablo + zaman
-          eksenli okumak — bu üç-ayaklı yaklaşım perimenopoz dinamizmi
-          içinde tiroidin sesini doğru duymanın yoludur.
+          Kararı tek bir rakama değil; değere, klinik tabloya ve zamana birlikte bakarak vermek, perimenopoz döneminde tiroid sinyalini doğru okumanın yoludur.
         </p>
 
         <h2 id="ayirma">Hashimoto mu Perimenopoz mu? — Klinik Ayırma Adımları</h2>
         <p>
-          Klinik ayırma sade bir akıl yürütmeyle ilerler. Üç sorudan
-          başlanır.
+          Klinik ayırım sade bir akıl yürütmeyle ilerler; bunun için üç soruya bakarız.
         </p>
         <p>
           <strong>Soru 1 — Belirtinin kalıbı hangisine daha çok
@@ -267,14 +238,12 @@ const articleSchemas = buildArticleSchemas({
           birinin tedavisi diğerinin tablosunu gizlemez.
         </p>
         <p>
-          Polikliniğe başvuran kadınlarda Hashimoto'nun perimenopoz
-          dinamiği içinde "dinamik bir gölge" gibi durduğunu sıklıkla
-          görürüz; ikisini ayrı okumadan plan kurmak güçtür.
+          Polikliniğe başvuran kadınlarda Hashimoto, perimenopoz tablosunun içinde sıklıkla ayrı bir etken olarak durur. İkisini ayrı okumadan plan kurmak zordur.
         </p>
 
         <RedFlagBox
           title="Klinik değerlendirmeyi öncelikli kılan bulgular"
-          intro="Aşağıdaki tablolar tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğiniz durumlardır."
+          intro="Aşağıdaki durumlar bir tanı değildir; hekim değerlendirmesinden fayda görebileceğiniz işaretlerdir."
           markers={[
             'TSH belirgin yüksek + ileri yorgunluk + bilişsel yavaşlama — açık hipotiroidizm tablosu',
             'TSH baskılanmış + çarpıntı + kilo kaybı + tremor — hipertiroidizm değerlendirmesi anlamlı',
@@ -289,10 +258,7 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="hekim-iletisim">Hekim-Hasta İletişimi: Üç Soruyla Görüşmeye Hazırlık</h2>
         <p>
-          Klinik karar için hekim görüşmesi en değerli adımdır; iyi
-          hazırlanmış bir görüşme tabloyu birkaç dakikada
-          netleştirebilir. Görüşmeye giderken şu üç soruyla gitmek
-          işinizi kolaylaştırır.
+          Klinik kararda en değerli adım hekim görüşmesidir. İyi hazırlanmış bir görüşme tabloyu birkaç dakikada netleştirebilir. Görüşmeye şu üç soruyla gitmek işinizi kolaylaştırır.
         </p>
         <ol>
           <li>
@@ -318,9 +284,7 @@ const articleSchemas = buildArticleSchemas({
           </li>
         </ol>
         <p>
-          Bu üç soru görüşmenin niteliğini değiştirir; rakamı görmenin
-          ötesinde tablonun okunmasına yer açar. Kılavuz adımı
-          gösterir, sizinle hekiminiz birlikte yolu özelleştirir.
+          Kılavuzlar genel yolu gösterir; sizin için hangi adımın uygun olduğunu hekiminizle birlikte belirlersiniz.
         </p>
 
         <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
@@ -347,22 +311,19 @@ const articleSchemas = buildArticleSchemas({
           tek başına tedavi kararı getirmez — TSH ve fT4 normalken
           klinik durum genellikle <em>izlem</em> ile yönetilir.
           Yıllar içinde otoimmün süreç tiroid fonksiyonunu
-          etkilemeye başlayabilir; bu yüzden TSH 6-12 ayda bir
-          tekrarlanır. Ailede Hashimoto öyküsü varsa veya
-          belirtiler ilerlerse takip aralığı sıkılaştırılabilir.
+          etkilemeye başlayabilir; bu yüzden TSH düzenli aralıklarla izlenir; aralığı hekim belirler. Ailede Hashimoto öyküsü varsa veya belirtiler ilerlerse izlem sıklaştırılabilir.
         </p>
 
         <h3>Hormon replasman tedavisi (HRT) tiroid takibimi değiştirir mi?</h3>
         <p>
           Özellikle oral östrojen tedavisi tiroid bağlayıcı globulini
-          (TBG) bir miktar arttırabilir; bu da total T4 düzeyini
+          (TBG) bir miktar artırabilir; bu da total T4 düzeyini
           yükseltebilir ama serbest fT4 genellikle daha stabil kalır.
           Transdermal östrojen formlarında bu etki daha sınırlı olabilir.
           Halihazırda tiroid ilacı (levotiroksin) kullanan kadınlarda
           HRT başlandıktan 6-8 hafta sonra TSH'nin tekrar bakılması
           uygun pratiktir; bazı kadınlarda tiroid ilaç dozunun küçük
-          ayarlanması gerekebilir. Bu konuyu mutlaka tedaviyi
-          başlatan hekiminizle konuşunuz.
+          ayarlanması gerekebilir. Bu konuyu tedaviyi başlatan hekiminizle konuşmanız en doğrusudur.
         </p>
 
         <h3>Perimenopozda TSH neden değişken çıkıyor?</h3>
@@ -378,36 +339,15 @@ const articleSchemas = buildArticleSchemas({
 
         <h3>Tiroid ilacı ile menopoz ilaçları aynı anda alınabilir mi?</h3>
         <p>
-          Genel olarak evet, ancak <strong>levotiroksin alımının
-          aç karna olması</strong> ve diğer ilaçlardan en az 30-60
-          dakika önce alınması önerilir; çünkü bazı mineraller
-          (kalsiyum, demir) ve yiyecekler emilimi azaltır. HRT
-          oral formunda ise sabah levotiroksinden ayrı bir saatte
-          alınması yeterlidir. Spesifik ilaç etkileşimi planını
-          eczacı ve hekiminizle birlikte yapmanız en güvenli
-          yoldur.
+          Genel olarak evet, ama zamanlama önemlidir. Levotiroksin <strong>aç karnına, kahvaltıdan en az 30-60 dakika önce</strong> alınır. Kalsiyum ve demir içeren ürünler emilimi azalttığı için bunları levotiroksinden en az <strong>4 saat ara ile</strong> almak gerekir. Diğer ilaçların zamanlaması için eczacınız ve hekiminizle birlikte bir plan yapmanız en güvenli yoldur.
         </p>
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          Yorgunluk, kilo artışı ve uyku bozukluğu üçlüsü 40+
-          kadında nadiren tek bir kaynaktan beslenir. Tiroid,
-          hormonal geçiş ve metabolik değişim üç ekseni birlikte
-          konuşur; üçünü ayrı ayrı duymak ve birini diğerinin
-          gölgesinde bırakmamak klinik değerlendirmenin temel adımıdır.
-          Bu üçlüye panik penceresinden değil, izlem penceresinden
-          bakmak — rakamı klinik tabloya bağlayarak okumak — gözden
-          kaçabilecek tabloların fark edilmesine yardımcı olur, gereksiz
-          tedavi ihtimalini azaltır ve gerçekten değiştirilmesi gereken
-          alana enerji ayırmanıza yer açar.
+          Kapanışta şunu vurgulamak isterim: bu üç belirti tek başına bir hastalığı kanıtlamaz, ama açıklanmadan bırakılması da doğru değildir. Yorgunluk, kilo artışı ve uyku bozukluğu 40 sonrasında nadiren tek bir nedenden kaynaklanır. Tiroid, hormonal geçiş ve metabolizma birlikte konuşur; üçünü ayrı ayrı dinlemek ve birini diğerinin gölgesinde bırakmamak klinik değerlendirmenin temelidir. Bu tabloya panikle değil izlemle bakmak, rakamı klinik tabloya bağlayarak okumak; gözden kaçabilecek bulguları fark etmenize yardım eder ve gereksiz tedavi riskini azaltır.
         </p>
         <p>
-          Hekiminize gittiğinizde üç sade soruyla gidin: belirtilerim
-          hangi eksenden okunmalı, TSH tek başına yetmiyorsa hangi
-          değerler eklenmeli, tedavi başlatılırsa nasıl bir takip
-          ritminde olacağız. Bu üç soru görüşmenin niteliğini
-          değiştirir; tablonun doğru okunması, doğru tanının
-          gecikmemesi anlamına gelir.
+          Hekiminize giderken üç soruyu yanınızda götürün: belirtilerim hangi eksenden okunmalı, TSH tek başına yetmiyorsa hangi değerler eklenmeli, tedavi başlarsa takip ritmi nasıl olacak. Bu sorular tablonun doğru okunmasına ve doğru tanının gecikmemesine yardım eder.
         </p>
       </ArticleProsePanel>
 
