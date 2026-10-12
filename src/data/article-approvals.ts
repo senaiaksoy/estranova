@@ -339,7 +339,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-05-08',
-    note: 'KC editor direct approval (Senai default): Hucreler ve Yaslanma hub icin Epitalon ve telomer biyolojisi derlemesi; saglikli hucre vs kanser hucresi iki yolak ayrimi (telomeraz vs ALT), in vitro 2D kanit sinirliligi ve insan klinik kanit yoklugu dengesi ekseninde yayina alindi; static route, FAQ schema, RSS manifesti ve kategori vitriniyle hizalandi.',
+    note: 'KC editor direct approval (Senai default): Hucreler ve Yaslanma hub icin Epitalon ve telomer biyolojisi derlemesi; saglikli hucre vs kanser hucresi iki yolak ayrimi (telomeraz vs ALT), in vitro 2D kanit sinirliligi ve insan klinik kanit yoklugu dengesi ekseninde yayina alindi; static route, FAQ schema, RSS manifesti ve kategori vitriniyle hizalandi. 2026-10-12 revizyonu: audit/humanize; tek gorunur SSS yuzeyi (ArticleFAQ kaldirildi, FAQPage yok); SSS 5 soru Dr. Aksoy yanitlariyla (KC bildirimi) "Dr. Aksoy\'a sorular" basligina alindi; gövde disi kurum adlari genel ifadeye cevrildi (kaynak izi klinik-katkilar kaydinda). Editor notu imzasi Dr. Alper Mumcu, inceleme ve onay KC bildirimi 2026-10-12; metin uc uncu sahis anlatima cevrildi. Yeni KC dogrudan editor onayi: 2026-10-12. Kayit: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-12_epitalon-telomer-yaslanma.json.',
   },
   {
     pathname: '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',

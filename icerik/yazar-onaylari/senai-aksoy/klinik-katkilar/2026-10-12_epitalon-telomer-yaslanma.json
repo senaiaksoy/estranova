@@ -1,0 +1,33 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/",
+  "answeredAt": "2026-10-12",
+  "source": "12 Ekim 2026 Claude Code oturumu: Epitalon makalesi audit/humanize revizyonu; KC tarafından iletilen SSS yanıtları ve Mumcu inceleme bildirimi.",
+  "status": "SSS yanıtları KC bildirimiyle girildi; editör notu imzası Dr. Alper Mumcu (inceleme ve onay KC bildirimi, 2026-10-12). Yeni KC doğrudan editör onayı: 2026-10-12.",
+  "sssAnswers": {
+    "heading": "Dr. Aksoy'a sorular",
+    "note": "Beş SSS yanıtı KC tarafından iletilen Dr. Aksoy metinleridir; birebir girildi. Yalnızca başlıklar ve sayfa biçimi değişti (kalın işaretler <strong> olarak yazıldı). 'Anti-aging' 'yaşlanma karşıtı' yapıldı.",
+    "questions": [
+      "Epitalon menopozu geciktirir veya hormonal geçişi yumuşatır mı?",
+      "Telomeraz aktivasyonu kanser riskini artırır mı?",
+      "İnternetten Epitalon enjeksiyonu satın almak güvenli mi?",
+      "Telomer uzunluğunu ölçtürmek anlamlı mı?",
+      "Epitalon ve telomerlerle ilgilenen birine nasıl bir okuma yolu önerirsiniz?"
+    ]
+  },
+  "sourceAndTextChanges": [
+    "Gövde dışı kurum adları kaldırıldı: 'ABD Gıda ve İlaç Dairesi' → 'Düzenleyici kurumlar'; 'ABD Ulusal Kanser Enstitüsü' → 'ulusal kanser kurumları'; 'The Menopause Society' → 'menopoz alanındaki uzman dernekler'; 'California Üniversitesi San Francisco' → 'üniversite tıp merkezleri'. Kaynak izi bu kayıtta tutuluyor; Estranova gövde kuralı gereği kurum adı yığılmadı.",
+    "Yanıtlardaki 'anti-aging' 'yaşlanma karşıtı' yapıldı.",
+    "Başlık 'Sıkça Sorulanlar' → 'Dr. Aksoy'a sorular' (arama verisi veya Dr. Aksoy doğrulaması olmadığı için 'en sık' nitelemesi kullanılmadı).",
+    "ArticleFAQ bileşeni ve articleFaqs kaydı sayfada kullanılmıyor; FAQPage şeması üretilmiyor.",
+    "Bilimsel Editör Notu imzası Dr. Alper Mumcu; metin üçüncü şahıs anlatıma çevrildi ('kliniğimde' → 'klinik pratikte'). Anlam değiştirilmedi.",
+    "Evidence etiketleri (1, 4, 2, 2) SSS'deki karşılık gelen iddialara yeniden bağlandı; toplam 21 etiket, seviyeler önceki sürümle aynı."
+  ],
+  "openItems": [],
+  "resolvedItems": [
+    "Dr. Alper Mumcu incelemesi ve onayı (KC bildirimi, 2026-10-12): JSON-LD reviewedBy ve görünür imza tutarlı.",
+    "Klinik birinci tekil cümleler (editör notu ve SSS yanıtları) KC tarafından doğru olarak teyit edildi; metinde korundu.",
+    "SSS yanıtlarındaki dil düzeltmeleri (\"anlamına gelmez\" kalıplarının olumlu ifadelere çevrilmesi; soru dizisinin tespit cümlesine çevrilmesi; anlamın korunması) KC tarafından onaylandı (2026-10-12).",
+    "SSS yanıtları yalnızca Dr. Aksoy'un gerçek yanıtlarından oluşuyor; modelin yazdığı önceki cevaplar kaldırıldı."
+  ]
+}
