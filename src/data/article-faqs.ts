@@ -1,6 +1,8 @@
 export interface ArticleFaqItem {
   question: string;
   answer: string;
+  /** Sayfadaki kaynak listesinde bu yanıtı destekleyen numara (isteğe bağlı). */
+  sourceRef?: number;
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
@@ -158,29 +160,34 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/': [
     {
-      question: "TSH normal ama yorgunum, başka ne bakılmalı?",
+      question: 'TSH normal ama yorgunum, başka ne bakılmalı?',
       answer:
-        "TSH normal sınırlardayken yorgunluğun nedeni birden fazla olabilir. Sade bir genişletilmiş değerlendirme genellikle fT4, Anti-TPO (otoimmün izlem için), ferritin (demir depoları), B12, D vitamini, açlık glikozu, HbA1c (uzun dönem glikoz) ve gerekirse açlık insülini üzerinden ilerler; fT3 daha çok seçilmiş durumlarda hekimin kararıyla eklenir. Perimenopoz ekseninde FSH ve östradiol her kadında rutin bir gereklilik değildir; yaş, döngü düzeni, belirtilerin kalıbı ve klinik belirsizlik varsa anlam kazanır. Hekiminizle bu testlerin sizin için anlamlı olanlarını birlikte konuşabilirsiniz.",
+        'Normal TSH, hipofiz hastalığı şüphesi olmayan bir yetişkinde tiroid işlevi açısından çoğunlukla güven vericidir. Yorgunluk sürüyorsa uyku, adet kanaması, kullanılan ilaçlar ve diğer belirtiler değerlendirilir; fT4, kan sayımı, ferritin veya glikoz gibi testler bu bulgulara göre seçilir. Anti-TPO, fT3, vitaminler ve açlık insülini herkese gereken bir yorgunluk paneli değildir. 45 yaş ve üzerinde tipik perimenopoz belirtilerini açıklamak için rutin FSH ve östradiol ölçümü gerekmez.',
+      sourceRef: 7,
     },
     {
       question: "Anti-TPO pozitif çıktı ama tiroid hormonum normal — Hashimoto'm var mı?",
       answer:
-        "Anti-TPO yüksekliği tiroid bezine karşı otoantikor varlığını gösterir; bu Hashimoto tiroiditinin immünolojik işaretidir. Ancak otoantikor pozitifliği tek başına tedavi kararı getirmez — TSH ve fT4 normalken klinik durum genellikle izlem ile yönetilir. Yıllar içinde otoimmün süreç tiroid fonksiyonunu etkilemeye başlayabilir; bu yüzden TSH düzenli aralıklarla izlenir; aralığı hekim belirler. Ailede Hashimoto öyküsü varsa veya belirtiler ilerlerse izlem sıklaştırılabilir.",
+        'Anti-TPO pozitifliği tiroid bezine karşı gelişen otoantikorları gösterir ve Hashimoto tiroiditiyle uyumlu olabilir. TSH ve fT4 normal olduğunda sırf antikor pozitif diye tiroid hormonu tedavisi başlanmaz. İzlemde asıl bakılan tiroidin çalışmasıdır; antikor düzeyini tekrar tekrar ölçmek genellikle gerekmez. TSH kontrolünün aralığı önceki sonuçlara ve belirtilere göre belirlenir.',
+      sourceRef: 1,
     },
     {
-      question: "Hormon replasman tedavisi (HRT) tiroid takibimi değiştirir mi?",
+      question: 'Hormon replasman tedavisi (HRT) tiroid takibimi değiştirir mi?',
       answer:
-        "Özellikle oral östrojen tedavisi tiroid bağlayıcı globulini (TBG) bir miktar artırabilir; bu da total T4 düzeyini yükseltebilir ama serbest fT4 genellikle daha stabil kalır. Transdermal östrojen formlarında bu etki daha sınırlı olabilir. Halihazırda tiroid ilacı (levotiroksin) kullanan kadınlarda HRT başlandıktan 6-8 hafta sonra TSH'nin tekrar bakılması uygun pratiktir; bazı kadınlarda tiroid ilaç dozunun küçük ayarlanması gerekebilir. Bu konuyu tedaviyi başlatan hekiminizle konuşmanız en doğrusudur.",
+        'Özellikle ağızdan alınan östrojen, tiroid hormonunu taşıyan TBG proteinini artırır. Levotiroksin kullanan bazı kadınlarda fT4 azalabilir, TSH yükselebilir ve dozun yeniden değerlendirilmesi gerekebilir. Deriden uygulanan östrojende bu etki daha sınırlıdır. Tiroid ilacı kullanıyorsanız hormon tedavisine başlarken veya uygulama yolu değişirken kontrol zamanını hekiminizle belirleyin; dozu kendiniz değiştirmeyin.',
+      sourceRef: 6,
     },
     {
-      question: "Perimenopozda TSH neden değişken çıkıyor?",
+      question: 'Perimenopozda TSH neden değişken çıkıyor?',
       answer:
-        "Perimenopoz hormonal dalgalanmaların yoğun olduğu bir dönemdir; östrojen-progesteron dengesi tek bir doğrultuda ilerlemez. Bu dönem tiroid belirtileriyle karışabilir; TSH değerlerinde küçük dalgalanmalar ise ölçüm zamanı, laboratuvar değişkenliği, eşlik eden hastalıklar, ilaçlar ve tiroid eksenindeki gerçek değişimlerle ilişkili olabilir. Bu yüzden tek bir değer üzerinden hızlı karar verilmez; gerekirse 6-8 hafta arayla tekrar bakılır.",
+        'TSH günün saati, laboratuvar ölçümü, eşlik eden hastalıklar ve ilaçlardan etkilenebilir. Değişen bir sonucu doğrudan perimenopoza bağlamak yerine önce bu koşullar ve tiroid işlevi değerlendirilir. Biyotin içeren takviyeleri de hekiminize bildirin; bazı ölçümleri yanıltabilirler. Testin tekrarı gerekiyorsa zamanı bulguya göre seçilir; her değişken sonuç aynı kontrol takvimini gerektirmez.',
+      sourceRef: 7,
     },
     {
-      question: "Tiroid ilacı ile menopoz ilaçları aynı anda alınabilir mi?",
+      question: 'Tiroid ilacı ile menopoz ilaçları aynı anda alınabilir mi?',
       answer:
-        "Genel olarak evet, ama zamanlama önemlidir. Levotiroksin aç karnına, kahvaltıdan en az 30-60 dakika önce alınır. Kalsiyum ve demir içeren ürünler emilimi azalttığı için bunları levotiroksinden en az 3-4 saat ara ile almak gerekir. Diğer ilaçların zamanlaması için eczacınız ve hekiminizle birlikte bir plan yapmanız en güvenli yoldur.",
+        'Aynı tedavi döneminde kullanılabilirler; ancak bu, bütün ilaçların aynı saatte alınacağı anlamına gelmez. Levotiroksin için yaygın kullanım aç karnına, kahvaltıdan 30–60 dakika öncedir. Kalsiyum ve demir içeren ürünlerle en az 4 saat ara gerekir; bunlar ilacın emilimini azaltabilir. Kullandığınız ürünün talimatına uyun ve diğer ilaçların saatlerini hekim veya eczacınızla planlayın.',
+      sourceRef: 9,
     },
   ],
   '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/': [

@@ -295,7 +295,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/': {
     src: '/images/library/editorial/metin-alis-tiroid-menopoz-yorgunluk-uyku-byline.jpg',
-    alt: 'Boğaz manzaralı aydınlık bir odada, açık defterine not alırken pencereden dışarı bakan 40+ kadın portresi; tiroid, menopoz ve uyku yorgunluğu yazısı için sakin editoryal kart görseli',
+    alt: 'Boğaz manzaralı bir odada, açık defterine not alırken pencereden dışarı bakan kadın',
   },
   '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/': {
     src: '/images/library/editorial/duygu-karaosmanoglu-yuze-yakisan-card.webp',

@@ -476,7 +476,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
     title: 'Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni',
     description:
-      'Yorgunluk, kilo artışı ve uyku bozukluğu üçlüsü 40+ kadında tiroid disfonksiyonu, hormonal geçiş ve metabolik değişimin üç ekseninde okunur. Hashimoto ve perimenopozun benzer belirtileri nasıl ayrılır, TSH ve fT4 hangi soruyu cevaplar, hangisini cevaplamaz — bir endokrinolog gözüyle yanlış anlaşılan tabloyu açan klinik ayırma rehberi.',
+      'Yorgunluk, kilo artışı ve uyku bozukluğu tiroid ve hormonal geçişle birlikte nasıl okunur? Hashimoto ile perimenopoz nasıl ayrılır, TSH neyi söyler?',
     publishedDate: '8 Mayıs 2026',
     writerSlug: 'metin-alis',
     section: 'Hormonal Geçiş · 40 Sonrası',
