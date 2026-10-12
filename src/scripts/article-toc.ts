@@ -32,11 +32,26 @@ function initToc(): void {
 
   if (headings.length === 0) return;
 
+  // lg+ TOC viewport yüksekliğiyle sınırlı ve kendi içinde kayar; aktif
+  // link görünür alanın dışına düşerse yalnızca TOC'yi kaydır (sayfayı değil).
+  const keepLinkVisible = (link: HTMLElement) => {
+    if (toc.scrollHeight <= toc.clientHeight) return;
+    const tocRect = toc.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const margin = 16;
+    if (linkRect.top < tocRect.top + margin) {
+      toc.scrollTop -= tocRect.top + margin - linkRect.top;
+    } else if (linkRect.bottom > tocRect.bottom - margin) {
+      toc.scrollTop += linkRect.bottom - (tocRect.bottom - margin);
+    }
+  };
+
   // Active highlight
   const setActive = (id: string | null) => {
     links.forEach((link) => {
       if (id && link.dataset.tocLink === id) {
         link.dataset.active = 'true';
+        keepLinkVisible(link);
       } else {
         delete link.dataset.active;
       }

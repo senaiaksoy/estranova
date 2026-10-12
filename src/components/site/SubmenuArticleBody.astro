@@ -2,6 +2,7 @@
 /**
  * Alt menü / makale gövdesi: hero altında gradient arka plan, okunabilir iç sütun.
  * İsteğe bağlı `slot="toc"` ile lg+ iki sütun (sticky TOC).
+ * `overflow-clip` bilinçli: `overflow-hidden` scroll container yaratıp sticky TOC'yi bozar.
  */
 import PreferredSourceCTA from './PreferredSourceCTA.astro';
 
@@ -9,7 +10,7 @@ const hasTOC = Astro.slots.has('toc');
 ---
 
 <article
-  class="relative isolate overflow-hidden border-t border-primary/10 bg-white text-ink"
+  class="relative isolate overflow-clip border-t border-primary/10 bg-white text-ink"
 >
   <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
   <div class="pointer-events-none absolute left-[-12rem] top-20 h-96 w-96 rounded-full bg-gold/10 blur-3xl"></div>
