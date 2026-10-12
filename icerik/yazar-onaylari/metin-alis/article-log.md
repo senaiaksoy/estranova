@@ -44,8 +44,8 @@
 
 ## 12 Ekim 2026 — Tiroid / menopoz revizyonu, onay bekliyor
 
-`onay-bekleyen/2026-10-12_tiroid-menopoz-yorgunluk-uyku/` paketi: tüm metin audit/humanize/fix; normal TSH–subklinik ayrımı, koşullu test seçimi, oral östrojen/levotiroksin etkileşimi, en az 4 saat kalsiyum/demir aralığı, FSH/östradiol sınırı ve kaynak izi düzeltildi. D1+D3 odağı, H0; yeni deneyim/alıntı/aforizma eklenmedi. Doğrulanmamış hasta sahnesi çıkarıldı. BEN 3 katmanlı revizyon taslağı; yeni hekim onayı verilmiş sayılmadı. Yazar ve bilimsel editör incelemesi bekleniyor; yayın kaynakları ve önceki onay değişmedi. Ham form yanıtı henüz yok, kalıcı profil değişikliği yapılmadı. Tam build:ci geçti; görsel mobil QA tarayıcı erişim engeli nedeniyle yapılamadı. Ayrıntı: paket/AUDIT.md.
+Revizyon: tüm metin audit/humanize/fix; normal TSH–subklinik ayrımı, koşullu test seçimi, oral östrojen/levotiroksin etkileşimi, en az 4 saat kalsiyum/demir aralığı, FSH/östradiol sınırı ve kaynak izi düzeltildi. D1+D3 odağı, H0; yeni deneyim/alıntı/aforizma eklenmedi. Doğrulanmamış hasta sahnesi çıkarıldı. BEN 3 katmanlı revizyon taslağı; yeni hekim onayı verilmiş sayılmadı. Yazar ve bilimsel editör incelemesi bekleniyor; yayın kaynakları ve önceki onay değişmedi. Ham form yanıtı henüz yok, kalıcı profil değişikliği yapılmadı. Tam build:ci geçti; görsel mobil QA tarayıcı erişim engeli nedeniyle yapılamadı.
 
 ## 12 Ekim 2026 — revizyon onayları tamamlandı
 
-Kullanıcı bu sohbette “Metin alış ve bilimsel editör inceleme onayları tamam.” diye teyit etti. Bir önceki revizyonun gövde, SSS ve BEN onay kapısı tamamlandı; paket `onaylanan/2026-10-12_tiroid-menopoz-yorgunluk-uyku/` altına taşındı. Merkezi SSS ve site kaynağı güncellendi. Form/stil geri bildirimi bildirilmedi; profil değişikliği yapılmadı. Commit/push/deploy yapılmadı.
+Kullanıcı bu sohbette “Metin alış ve bilimsel editör inceleme onayları tamam.” diye teyit etti. Bir önceki revizyonun gövde, SSS ve BEN onay kapısı tamamlandı. Merkezi SSS ve site kaynağı güncellendi. Form/stil geri bildirimi bildirilmedi; profil değişikliği yapılmadı. Commit/push/deploy yapılmadı.
