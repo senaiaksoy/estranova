@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/",
   "answeredAt": "2026-10-12",
   "source": "12 Ekim 2026 Claude Code oturumu: peptid makalesi kaynak ve SSS turu (worktree peptid-sss).",
-  "status": "2026-10-12 güvenlik turu Dr. Mumcu onayı bekliyor. Önceki turlar onaylı. SSS yanıtları Dr. Aksoy'un kendi metinleridir.",
+  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12 güvenlik turu). SSS yanıtları Dr. Aksoy'un kendi metinleridir.",
   "sssAnswers": {
     "note": "Dört SSS yanıtı Dr. Aksoy tarafından 'benim yanıtlarım' ile teyit edildi; birebir girildi (yalnızca ** işaretleri silindi).",
     "questions": [
@@ -32,8 +32,9 @@
       "note": "Codex geniş audit/humanize revizyonu: kaynak sayısı 17'ye çıktı (12 FDA güvenlik değerlendirmesi, 13 ipamorelin insan çalışması, 14 timosin beta-4 venöz ülser, 15 FDA AOD-9604 dosyası, 16 GHK-Cu topikal çalışma, 17 BPC-157 diz dosya incelemesi), kanıt etiketleri kalibre edildi. Kayıt: icerik/yazar-onaylari/senai-aksoy/onaylanan/2026-10-12_peptid-audit-humanize-fix.md."
     },
     {
-      "commit": "(bu tur)",
-      "note": "Claude Code geniş audit sonrası güvenlik turu: FDA [12] uyarıları metne alındı (ipamorelin damardan verildiğinde ölüm dahil ciddi yan etkiler; CJC-1295 ile kalp hızı artışı ve damar genişlemesi tepkisi), ipamorelin insan çalışmasında [13] ana sonuçta anlamlı fark olmadığı eklendi, BPC-157 diz çalışmasında [17] 4 kişinin timosin beta-4 de aldığı belirtildi, editör notunda 'thymosin' yerine 'timosin' yazıldı. FDA ifadeleri sayfadan birebir doğrulandı; kaynak 13, 14, 16, 17 PubMed metadata ile, kaynak 15 FDA PDF metniyle doğrulandı."
+      "commit": "58303c59 + fcc31eb5",
+      "note": "Claude Code geniş audit sonrası güvenlik turu: FDA [12] uyarıları metne alındı (ipamorelin damardan verildiğinde ölüm dahil ciddi yan etkiler; CJC-1295 ile kalp hızı artışı ve damar genişlemesi tepkisi), ipamorelin insan çalışmasında [13] ana sonuçta anlamlı fark olmadığı eklendi, BPC-157 diz çalışmasında [17] 4 kişinin timosin beta-4 de aldığı belirtildi, editör notunda 'thymosin' yerine 'timosin' yazıldı. FDA ifadeleri sayfadan birebir doğrulandı; kaynak 13, 14, 16, 17 PubMed metadata ile, kaynak 15 FDA PDF metniyle doğrulandı.",
+      "approvalStatus": "2026-10-12: Dr. Aksoy onayladı ('evet yap', 'evet onları da ele al'); Dr. Alper Mumcu editör notu değişikliği dahil onayladı (KC bildirimi: 'Mumcu onayı tamam')."
     }
   ],
   "resolvedItems": [
