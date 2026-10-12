@@ -1,0 +1,18 @@
+[
+  {
+    "id": "klinik-kanit",
+    "pattern": "klinik (kanıt|veri)|insan (klinik |güvenlik |)kanıt|insanlarda.*(güvenli|yaşlanma)|laboratuvar.*klinik"
+  },
+  {
+    "id": "alt",
+    "pattern": "(?<![\\p{L}])ALT(?![\\p{L}])"
+  },
+  {
+    "id": "urun",
+    "pattern": "saflık|saf olup|sterilite|safsızlık|içerik.*(belirsiz|emin|güven)"
+  },
+  {
+    "id": "menopoz",
+    "pattern": "menopozu geciktir|menopoz başlangıcını|menopoz yaşını"
+  }
+]

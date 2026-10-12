@@ -200,7 +200,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
-    alt: 'İstanbul evi cam tavanlı winter garden öğleden sonra ışığında üç yaşıt kadın (62-68) yaşam dolu olgunluk sahnesi; soldaki warm honey-blonde dalgalı saç, soft cream cashmere ve camel pant içinde küçük terracotta saksıda orkide ile özenle ilgileniyor; ortadaki koyu kestane chignon, sage-green ipek bluz ve cream linen pant içinde elinde cam çay bardağı warm gülümsüyor; sağdaki warm mahogany medium-length wavy bob, bordo cashmere kazak içinde kucağında açık botanik dergisi parmak sayfada konuşuyor; bakımlı boyalı saçlar (gri/silver YOK), graceful natural mature cilt; walnut yan masada porselen Türk kahvesi ve tabaklarda lokum + halved nar + incir, cam tavandan dappled afternoon sunlight, fiddle leaf fig + monstera + birds-of-paradise + pampas grass + terracotta saksılar, white-cream wicker mobilya + sage yastıklar; doğa içinde olgun yaş alma ve hücresel yaşlanma teması',
+    alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
   },
   '/bilimsel-pencere/yeni-arastirmalar/': {
     src: '/images/heroes/bilimsel-pencere.webp',
@@ -216,11 +216,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
-    alt: 'İstanbul evi cam tavanlı winter garden öğleden sonra ışığında üç yaşıt kadın (62-68) yaşam dolu olgunluk sahnesi; soldaki warm honey-blonde dalgalı saç, soft cream cashmere ve camel pant içinde küçük terracotta saksıda orkide ile özenle ilgileniyor; ortadaki koyu kestane chignon, sage-green ipek bluz ve cream linen pant içinde elinde cam çay bardağı warm gülümsüyor; sağdaki warm mahogany medium-length wavy bob, bordo cashmere kazak içinde kucağında açık botanik dergisi parmak sayfada konuşuyor; bakımlı boyalı saçlar (gri/silver YOK), graceful natural mature cilt; walnut yan masada porselen Türk kahvesi ve tabaklarda lokum + halved nar + incir, cam tavandan dappled afternoon sunlight, fiddle leaf fig + monstera + birds-of-paradise + pampas grass + terracotta saksılar, white-cream wicker mobilya + sage yastıklar; NAD+ ve hücresel yaşlanmaya doğa içinde uzun vadeli sağlık teması',
-  },
-  '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/': {
-    src: '/images/library/editorial/bp-nad-plus.webp',
-    alt: 'İstanbul evi cam tavanlı winter garden öğleden sonra ışığında üç yaşıt kadın (62-68) yaşam dolu olgunluk sahnesi; soldaki warm honey-blonde dalgalı saç, soft cream cashmere ve camel pant içinde küçük terracotta saksıda orkide ile özenle ilgileniyor; ortadaki koyu kestane chignon, sage-green ipek bluz ve cream linen pant içinde elinde cam çay bardağı warm gülümsüyor; sağdaki warm mahogany medium-length wavy bob, bordo cashmere kazak içinde kucağında açık botanik dergisi parmak sayfada konuşuyor; bakımlı boyalı saçlar (gri/silver YOK), graceful natural mature cilt; walnut yan masada porselen Türk kahvesi ve tabaklarda lokum + halved nar + incir, cam tavandan dappled afternoon sunlight, fiddle leaf fig + monstera + birds-of-paradise + pampas grass + terracotta saksılar, white-cream wicker mobilya + sage yastıklar; Epitalon, telomer biyolojisi ve hücresel yaşlanma yorumu için doğa içinde olgun yaş alma teması',
+    alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
     src: '/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg',
@@ -450,8 +446,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Cam tavanlı kış bahçesinde olgun kadınların doğayla iç içe sohbeti; NAD+ ve hücresel yaşlanma yazısı için kart görseli',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/': {
-    src: '/images/library/editorial/bp-nad-plus.webp',
-    alt: 'Kış bahçesinde olgun yaş alma ve doğayla bağ atmosferi; epitalon ve telomer biyolojisi yazısı için kart görseli',
+    src: '/images/library/editorial/epitalon-telomer-yaslanma.webp',
+    alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
     src: '/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg',

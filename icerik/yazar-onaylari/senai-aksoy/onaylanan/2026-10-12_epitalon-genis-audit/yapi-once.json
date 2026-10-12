@@ -1,0 +1,234 @@
+{
+  "filePath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_epitalon-genis-audit/once.md",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "short-closer",
+      "count": 5,
+      "locations": [
+        {
+          "line": 57,
+          "column": 1,
+          "excerpt": "Sakin okuma bu ikisinin arasında bir yerde duruyor."
+        },
+        {
+          "line": 89,
+          "column": 1,
+          "excerpt": "Ancak işin başka bir tarafı var."
+        },
+        {
+          "line": 91,
+          "column": 1,
+          "excerpt": "Bunların en önemlilerinden biri telomerazdır."
+        },
+        {
+          "line": 143,
+          "column": 1,
+          "excerpt": "Ancak ben okumaya doğrudan deneysel peptidlerden başlamayı önermem."
+        },
+        {
+          "line": 183,
+          "column": 1,
+          "excerpt": "Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz."
+        }
+      ],
+      "message": "5 of 49 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information."
+    },
+    {
+      "id": "claim-klinik-kanit",
+      "count": 10,
+      "locations": [
+        {
+          "line": 1,
+          "column": 137,
+          "excerpt": "laboratuvar verisi ilginç bir ayrım gösteriyor: sağlıklı hücrelerde telomeri uzatan enzim telomerazın aktiv…"
+        },
+        {
+          "line": 39,
+          "column": 339,
+          "excerpt": "laboratuvar düzeyinde bir güvenlik işareti; insan klinik"
+        },
+        {
+          "line": 59,
+          "column": 261,
+          "excerpt": "klinik kanıt"
+        },
+        {
+          "line": 63,
+          "column": 186,
+          "excerpt": "laboratuvarda rahatlatıcı olsa da insan güvenlik verisi yerine geçmez. Aktif kanseri olmayan ama dikkatle d…"
+        },
+        {
+          "line": 97,
+          "column": 150,
+          "excerpt": "klinik veri"
+        },
+        {
+          "line": 105,
+          "column": 140,
+          "excerpt": "insanlarda kullanılmak üzere onaylandığını ya da güvenli"
+        },
+        {
+          "line": 165,
+          "column": 19,
+          "excerpt": "laboratuvarda umut verici, hayvan modellerinde kısmen ilerlemiş, insan klinik"
+        },
+        {
+          "line": 171,
+          "column": 324,
+          "excerpt": "klinik kanıt"
+        },
+        {
+          "line": 173,
+          "column": 137,
+          "excerpt": "laboratuvarda net gösterildi. Hücre tipine göre bu kadar ayrışan bir etki farmakolojide sık görülen bir tab…"
+        },
+        {
+          "line": 177,
+          "column": 141,
+          "excerpt": "klinik kanıt"
+        }
+      ],
+      "message": "Stated 10 times across 6 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 6
+    },
+    {
+      "id": "claim-alt",
+      "count": 10,
+      "locations": [
+        {
+          "line": 1,
+          "column": 304,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 25,
+          "column": 132,
+          "excerpt": "alt"
+        },
+        {
+          "line": 27,
+          "column": 248,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 31,
+          "column": 4,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 33,
+          "column": 57,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 37,
+          "column": 52,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 37,
+          "column": 137,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 63,
+          "column": 173,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 161,
+          "column": 162,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 173,
+          "column": 108,
+          "excerpt": "ALT"
+        }
+      ],
+      "message": "Stated 10 times across 5 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 5
+    },
+    {
+      "id": "claim-urun",
+      "count": 4,
+      "locations": [
+        {
+          "line": 59,
+          "column": 471,
+          "excerpt": "saflık"
+        },
+        {
+          "line": 111,
+          "column": 131,
+          "excerpt": "saf olup"
+        },
+        {
+          "line": 115,
+          "column": 45,
+          "excerpt": "safsızlık"
+        },
+        {
+          "line": 177,
+          "column": 798,
+          "excerpt": "saflık"
+        }
+      ],
+      "message": "Stated 4 times across 3 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 3
+    },
+    {
+      "id": "claim-menopoz",
+      "count": 4,
+      "locations": [
+        {
+          "line": 67,
+          "column": 14,
+          "excerpt": "menopozu geciktir"
+        },
+        {
+          "line": 69,
+          "column": 24,
+          "excerpt": "menopozu geciktir"
+        },
+        {
+          "line": 77,
+          "column": 57,
+          "excerpt": "menopoz yaşını"
+        },
+        {
+          "line": 79,
+          "column": 27,
+          "excerpt": "menopozu geciktir"
+        }
+      ],
+      "message": "Stated 4 times across 1 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 1
+    }
+  ],
+  "rhythm": {
+    "sentences": 175,
+    "meanWords": 14.5,
+    "sdWords": 6.5,
+    "shareUpTo8Words": 0.18,
+    "longestShortRun": 4
+  },
+  "coverage": {
+    "blocks": 92,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+    "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+    "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+    "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+  ]
+}

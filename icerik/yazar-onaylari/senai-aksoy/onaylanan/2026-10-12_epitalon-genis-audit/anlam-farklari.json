@@ -1,0 +1,661 @@
+{
+  "originalPath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_epitalon-genis-audit/once.md",
+  "revisedPath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_epitalon-genis-audit/sonra.md",
+  "locale": "tr",
+  "status": "review_changes",
+  "differences": {
+    "numbers": [
+      {
+        "value": "1",
+        "beforeCount": 2,
+        "afterCount": 4,
+        "beforeLocations": [
+          {
+            "line": 59,
+            "column": 52
+          },
+          {
+            "line": 177,
+            "column": 109
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 7,
+            "column": 309
+          },
+          {
+            "line": 9,
+            "column": 316
+          },
+          {
+            "line": 63,
+            "column": 84
+          },
+          {
+            "line": 63,
+            "column": 154
+          }
+        ]
+      },
+      {
+        "value": "10",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 33,
+            "column": 125
+          }
+        ],
+        "afterLocations": []
+      },
+      {
+        "value": "12",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 165,
+            "column": 77
+          }
+        ]
+      },
+      {
+        "value": "1688",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 171,
+            "column": 66
+          }
+        ]
+      },
+      {
+        "value": "1695",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 171,
+            "column": 71
+          }
+        ]
+      },
+      {
+        "value": "178",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 169,
+            "column": 69
+          }
+        ]
+      },
+      {
+        "value": "1980",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 15,
+            "column": 115
+          }
+        ],
+        "afterLocations": []
+      },
+      {
+        "value": "2",
+        "beforeCount": 4,
+        "afterCount": 10,
+        "beforeLocations": [
+          {
+            "line": 47,
+            "column": 139
+          },
+          {
+            "line": 59,
+            "column": 178
+          },
+          {
+            "line": 175,
+            "column": 113
+          },
+          {
+            "line": 177,
+            "column": 235
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 1,
+            "column": 646
+          },
+          {
+            "line": 9,
+            "column": 320
+          },
+          {
+            "line": 25,
+            "column": 248
+          },
+          {
+            "line": 27,
+            "column": 228
+          },
+          {
+            "line": 35,
+            "column": 219
+          },
+          {
+            "line": 37,
+            "column": 279
+          },
+          {
+            "line": 43,
+            "column": 271
+          },
+          {
+            "line": 63,
+            "column": 87
+          },
+          {
+            "line": 63,
+            "column": 158
+          },
+          {
+            "line": 179,
+            "column": 269
+          }
+        ]
+      },
+      {
+        "value": "2015",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 171,
+            "column": 58
+          }
+        ]
+      },
+      {
+        "value": "2017",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 177,
+            "column": 37
+          }
+        ]
+      },
+      {
+        "value": "2025",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 23,
+            "column": 1
+          },
+          {
+            "line": 169,
+            "column": 61
+          },
+          {
+            "line": 169,
+            "column": 156
+          }
+        ]
+      },
+      {
+        "value": "2026",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 45,
+            "column": 8
+          },
+          {
+            "line": 165,
+            "column": 85
+          },
+          {
+            "line": 173,
+            "column": 19
+          }
+        ]
+      },
+      {
+        "value": "23",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 173,
+            "column": 6
+          }
+        ]
+      },
+      {
+        "value": "24",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 173,
+            "column": 9
+          }
+        ]
+      },
+      {
+        "value": "26",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 169,
+            "column": 66
+          }
+        ]
+      },
+      {
+        "value": "3",
+        "beforeCount": 4,
+        "afterCount": 3,
+        "beforeLocations": [
+          {
+            "line": 49,
+            "column": 164
+          },
+          {
+            "line": 59,
+            "column": 252
+          },
+          {
+            "line": 173,
+            "column": 338
+          },
+          {
+            "line": 177,
+            "column": 387
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 11,
+            "column": 343
+          },
+          {
+            "line": 25,
+            "column": 28
+          },
+          {
+            "line": 177,
+            "column": 28
+          }
+        ]
+      },
+      {
+        "value": "4",
+        "beforeCount": 2,
+        "afterCount": 10,
+        "beforeLocations": [
+          {
+            "line": 59,
+            "column": 365
+          },
+          {
+            "line": 177,
+            "column": 561
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 1,
+            "column": 650
+          },
+          {
+            "line": 17,
+            "column": 388
+          },
+          {
+            "line": 19,
+            "column": 265
+          },
+          {
+            "line": 37,
+            "column": 283
+          },
+          {
+            "line": 45,
+            "column": 397
+          },
+          {
+            "line": 47,
+            "column": 168
+          },
+          {
+            "line": 53,
+            "column": 233
+          },
+          {
+            "line": 63,
+            "column": 125
+          },
+          {
+            "line": 63,
+            "column": 162
+          },
+          {
+            "line": 179,
+            "column": 273
+          }
+        ]
+      },
+      {
+        "value": "44",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 171,
+            "column": 63
+          }
+        ]
+      },
+      {
+        "value": "5",
+        "beforeCount": 1,
+        "afterCount": 3,
+        "beforeLocations": [
+          {
+            "line": 177,
+            "column": 734
+          }
+        ],
+        "afterLocations": [
+          {
+            "line": 53,
+            "column": 237
+          },
+          {
+            "line": 63,
+            "column": 130
+          },
+          {
+            "line": 63,
+            "column": 166
+          }
+        ]
+      },
+      {
+        "value": "6",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 63,
+            "column": 92
+          },
+          {
+            "line": 63,
+            "column": 170
+          }
+        ]
+      }
+    ],
+    "percentages": [
+      {
+        "value": "%10",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 33,
+            "column": 124
+          }
+        ],
+        "afterLocations": []
+      }
+    ],
+    "ranges": [
+      {
+        "value": "10-15",
+        "beforeCount": 1,
+        "afterCount": 0,
+        "beforeLocations": [
+          {
+            "line": 33,
+            "column": 125
+          }
+        ],
+        "afterLocations": []
+      },
+      {
+        "value": "1688–1695",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 171,
+            "column": 66
+          }
+        ]
+      },
+      {
+        "value": "23–24",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 173,
+            "column": 6
+          }
+        ]
+      }
+    ],
+    "numericCitations": [
+      {
+        "value": "[1]",
+        "beforeCount": 0,
+        "afterCount": 3,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 7,
+            "column": 308
+          },
+          {
+            "line": 9,
+            "column": 315
+          },
+          {
+            "line": 63,
+            "column": 153
+          }
+        ]
+      },
+      {
+        "value": "[2]",
+        "beforeCount": 0,
+        "afterCount": 9,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 1,
+            "column": 645
+          },
+          {
+            "line": 9,
+            "column": 319
+          },
+          {
+            "line": 25,
+            "column": 247
+          },
+          {
+            "line": 27,
+            "column": 227
+          },
+          {
+            "line": 35,
+            "column": 218
+          },
+          {
+            "line": 37,
+            "column": 278
+          },
+          {
+            "line": 43,
+            "column": 270
+          },
+          {
+            "line": 63,
+            "column": 157
+          },
+          {
+            "line": 179,
+            "column": 268
+          }
+        ]
+      },
+      {
+        "value": "[3]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 11,
+            "column": 342
+          }
+        ]
+      },
+      {
+        "value": "[4]",
+        "beforeCount": 0,
+        "afterCount": 9,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 1,
+            "column": 649
+          },
+          {
+            "line": 17,
+            "column": 387
+          },
+          {
+            "line": 19,
+            "column": 264
+          },
+          {
+            "line": 37,
+            "column": 282
+          },
+          {
+            "line": 45,
+            "column": 396
+          },
+          {
+            "line": 47,
+            "column": 167
+          },
+          {
+            "line": 53,
+            "column": 232
+          },
+          {
+            "line": 63,
+            "column": 161
+          },
+          {
+            "line": 179,
+            "column": 272
+          }
+        ]
+      },
+      {
+        "value": "[5]",
+        "beforeCount": 0,
+        "afterCount": 2,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 53,
+            "column": 236
+          },
+          {
+            "line": 63,
+            "column": 165
+          }
+        ]
+      },
+      {
+        "value": "[6]",
+        "beforeCount": 0,
+        "afterCount": 1,
+        "beforeLocations": [],
+        "afterLocations": [
+          {
+            "line": 63,
+            "column": 169
+          }
+        ]
+      }
+    ]
+  },
+  "frontmatterChanged": false,
+  "coverage": {
+    "before": {
+      "blocks": 92,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "after": {
+      "blocks": 94,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    }
+  },
+  "limitations": [
+    "Counts are global: values swapped between outcomes or claims can escape detection.",
+    "Negation, certainty, population and causal meaning require the manual meaning record.",
+    "Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.",
+    "Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.",
+    "Number formatting is not silently converted between locales. No tracked changes is not clinical approval."
+  ]
+}

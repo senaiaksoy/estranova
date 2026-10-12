@@ -1,0 +1,16 @@
+{
+  "h1": 1,
+  "sources": 6,
+  "physicianAnswers": 5,
+  "physicianAnswersMeaningPreserved": true,
+  "physicianAnswerLanguageEdit": "Q5: en iyi yolu -> uygun yolu; compliance wording only",
+  "faqPage": 0,
+  "image": "https://estranova.com/images/library/editorial/bp-nad-plus.webp",
+  "reviewer": "Dr. Alper Mumcu",
+  "dateModified": "2026-10-12",
+  "anchors": "all present",
+  "baselineCommit": "ad79f5d9",
+  "currentRevisionApproval": "pending; previous approval does not cover changed body/editor note",
+  "evidenceTagsBefore": 21,
+  "evidenceTagsAfter": 17
+}

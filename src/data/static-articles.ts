@@ -1037,8 +1037,8 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',
-    title: 'Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar',
-    description: 'Epitalon peptidi, telomer biyolojisi ve telomeraz/ALT mekanizma ayrımı; sağlıklı hücre ile kanser hücresinde farklı çalışan etki ve insan klinik kanıtının erken aşamadaki sınırları üzerine bilimsel derleme.',
+    title: 'Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaat ve Klinik Sınırlar',
+    description: 'Epitalon yaşlanmayı veya menopozu geciktirir mi? Telomer araştırmaları, ALT bulguları ve insanlarda etkinlik ile güvenlik kanıtının sınırları.',
     publishedDate: '8 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',

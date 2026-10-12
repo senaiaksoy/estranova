@@ -28,6 +28,9 @@
     "Dr. Alper Mumcu incelemesi ve onayı (KC bildirimi, 2026-10-12): JSON-LD reviewedBy ve görünür imza tutarlı.",
     "Klinik birinci tekil cümleler (editör notu ve SSS yanıtları) KC tarafından doğru olarak teyit edildi; metinde korundu.",
     "SSS yanıtlarındaki dil düzeltmeleri (\"anlamına gelmez\" kalıplarının olumlu ifadelere çevrilmesi; soru dizisinin tespit cümlesine çevrilmesi; anlamın korunması) KC tarafından onaylandı (2026-10-12).",
-    "SSS yanıtları yalnızca Dr. Aksoy'un gerçek yanıtlarından oluşuyor; modelin yazdığı önceki cevaplar kaldırıldı."
+    "SSS yanıtları yalnızca Dr. Aksoy'un gerçek yanıtlarından oluşuyor; modelin yazdığı önceki cevaplar kaldırıldı.",
+    "Yanıt 5: 'en iyi yolu' → 'sağlam yolu' (compliance yasaklı ifade; Cursor commit e3e64ccf). KC editör onayıyla kabul edildi (2026-10-12).",
+    "Yanıt 5: \"üniversite tıp merkezlerinin açıklamaları\" ifadesi [6] Lai, Wright, Shay 2018 (PubMed doğrulandı) ile desteklendi. UCSF kaynağı bot koruması nedeniyle doğrulanamadığı için kaynak listesinden çıkarıldı (2026-10-12).",
+    "İkinci revizyon (gövde, özet, kaynaklar, editör notu) için KC editör onayı ve Dr. Alper Mumcu tıbbi onayı: 2026-10-12 (KC bildirimi)."
   ]
 }

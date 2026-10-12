@@ -18,30 +18,33 @@ import Evidence from '../../../components/site/Evidence.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/']!;
+const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/']!;
 
 const tocEntries = [
   { id: 'telomer-temel', label: 'Telomerler ve Hücresel Yaşlanma — Kromozom Uçlarındaki Sayaç' },
   { id: 'epitalon-nedir', label: 'Epitalon Nedir, Pineal Bez Bağlantısı Nereden Geliyor?' },
-  { id: 'iki-mekanizma', label: 'Yeni Veriler — Sağlıklı Hücre ve Kanser Hücresi Ayrımı' },
-  { id: 'guvenlik-profili', label: 'ALT Mekanizması ve Güvenlik Profili — Önemli Olan Ayrım' },
-  { id: 'kanit-duzeyi', label: "Mevcut Kanıt Düzeyi — In Vitro'dan İnsana Uzun Yol" },
-  { id: 'pratik-sinirlar', label: 'Pratik Sınırlar — Yaşlanma Karşıtı Vaadlere Sakin Bir Bakış' },
+  { id: 'iki-mekanizma', label: 'Yeni Veriler — Normal Hücre ve Kanser Hücresi Ayrımı' },
+  { id: 'guvenlik-profili', label: 'ALT ve Güvenlik Sorusu' },
+  { id: 'kanit-duzeyi', label: 'Mevcut Kanıt Düzeyi — Laboratuvardan İnsana Uzun Yol' },
+  { id: 'pratik-sinirlar', label: 'Enjeksiyon Ürünleri ve Ruhsat Sınırları' },
   { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
   { id: 'kapanis', label: 'Kapanış' },
+  { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar';
+const articleTitle = 'Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaat ve Klinik Sınırlar';
 const seoTitle = 'Epitalon ve Telomer: Klinik Sınırlar';
 const articleDescription =
-  'Epitalon sağlıklı hücrede telomerazı destekleyebilirken kanser hücresinde ALT yolunu tetikleyebiliyor. Laboratuvar bulgusu ile insan kanıtı arasındaki farkı anlatıyoruz.';
+  'Epitalon yaşlanmayı veya menopozu geciktirir mi? Telomer araştırmaları, ALT bulguları ve insanlarda etkinlik ile güvenlik kanıtının sınırları.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '8 Mayıs 2026',
+  modifiedDate: '12 Ekim 2026',
+  image: '/images/library/editorial/bp-nad-plus.webp',
   pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -53,6 +56,7 @@ const articleSchemas = buildArticleSchemas({
 <SiteLayout
   title={`${seoTitle} - Estranova`}
   description={articleDescription}
+  image="/images/library/editorial/bp-nad-plus.webp"
   ogType="article"
   jsonLd={articleSchemas}
 >
@@ -61,7 +65,7 @@ const articleSchemas = buildArticleSchemas({
   <main id="main-content" class="text-ink">
     <SubmenuHero
       eyebrow="Bilimsel Pencere · Hücreler ve Yaşlanma"
-      title="Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar"
+      title="Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaat ve Klinik Sınırlar"
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
@@ -72,9 +76,10 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="8 Mayıs 2026"
+        lastUpdated="12 Ekim 2026"
         readingMinutes={10}
-        imageSrc="/images/library/editorial/bp-nad-plus.webp"
-        imageAlt="Kış bahçesinde sakin bir an; epitalon ve telomer yazısı için editoryal görsel"
+        imageSrc="/images/library/editorial/epitalon-telomer-yaslanma-byline.webp"
+        imageAlt="Kış bahçesinde hasır koltukta çay bardağıyla gülümseyen kadın"
       />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
@@ -85,198 +90,154 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Epitalon, pineal bezden tanımlanan dört aminoasitli küçük bir peptid. Son yıllarda
-          yaşlanma karşıtı tartışmalarda sık adı geçiyor. Yeni laboratuvar verisi ilginç bir
-          ayrım gösteriyor: sağlıklı hücrelerde telomeri uzatan enzim telomerazın aktivitesini
-          destekleyebiliyor, kanser hücrelerinde ise telomeri ALT adlı <em>başka</em> bir onarım
-          yolundan uzatıyor. Bu ayrım bir yandan teorik bir güvenlik kapısı açıyor, öte yandan
-          insan kanıtının ne kadar erken aşamada olduğunu gösteriyor. Yazı telomer biyolojisini
-          sade anlatıyor, Epitalon'un iki yüzünü ele alıyor ve <em>"laboratuvardan klinik
-          karara"</em> uzanan yolun hangi aşamasında olduğumuzu gösteriyor. Genel hücresel
-          yaşlanma için
-          <a href="/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/" class="font-semibold text-primary underline decoration-gold/40 underline-offset-4 hover:decoration-primary">
-          NAD+ ve hücresel yaşlanma yazısı</a> tamamlayıcı okuma olabilir.
+          Epitalon, telomerler üzerindeki etkileri araştırılan sentetik bir peptid. İnsanlarda
+          yaşlanmayı ya da menopozu geciktirdiğine dair güvenilir klinik kanıt yok; güvenli doz ve
+          uzun dönem etkiler de bilinmiyor. Hücre deneylerinde görülen telomer uzaması ölçülebilir
+          bir hücre değişikliği, insanın daha sağlıklı ya da daha uzun yaşayacağına dair bir sonuç
+          değil. Aynı deneylerde kanser hücrelerinde telomerleri uzatan ALT yolunun uyarılması ise
+          yanıtı henüz olmayan bir güvenlik sorusu. Bu yazıda molekülün ne olduğunu, laboratuvar
+          bulgularının neyi anlattığını ve enjeksiyon ürünleriyle telomer testlerine neden temkinli
+          yaklaştığımı anlatıyorum.
+          <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="telomer-temel">Telomerler ve Hücresel Yaşlanma — Kromozom Uçlarındaki Sayaç</h2>
         <p>
-          Otuz yıldır kadın sağlığının içindeyim ama hâlâ şaşırdığım bir şey var: hücremizin en
-          küçük yapıları bedenin en büyük sorularına nasıl bağlanıyor. Telomerler tam da bu
-          türden yapılar; kromozomlarımızın iki ucunda duran, onları yıpranmaktan ve birbirine
-          yapışmaktan koruyan tekrar dizileri <Evidence level={5} />.
+          Otuz yıldır kadın sağlığının içindeyim ve hâlâ şaşırdığım bir şey var: hücremizin en küçük
+          yapıları, bedenin en büyük sorularına nasıl bağlanıyor. Bir ürün kutusunda “telomerleri
+          uzatır” yazısını gördüğünüzde akla gelmesi gereken ilk soru da buradan çıkıyor: telomer
+          tam olarak ne iş yapar?
         </p>
         <p>
-          Sade bir benzetmeyle: ayakkabı bağcığının ucundaki plastik parça neyse, telomer de
-          kromozomun ucunda odur; yapının dağılmaması için orada durur. Telomerler yaşlanma
-          biyolojisinin merkezinde, çünkü sağlıklı erişkin hücrelerinin çoğunda telomeri yeniden
-          uzatan enzim, yani telomeraz aktif değil. Hücre her bölündüğünde telomerler biraz
-          kısalır <Evidence level={5} />. Yeterince kısaldıklarında hücre bölünmeyi durdurur ve
-          <em>senesens</em> denen bir <em>"emekli olma"</em> evresine girer; klasik biyolojide bu
-          sınıra <strong>Hayflick limiti</strong> deniyor. Son otuz yılın yaşlanma araştırmalarının
-          önemli bir kısmı, bu sınırın esnetilip esnetilemeyeceği sorusuna yöneliyor.
+          Telomerler, kromozomların uçlarını koruyan tekrarlı DNA dizileridir. Ayakkabı bağcığının
+          ucundaki plastik parça gibi, uçların zarar görmesini ve birbirine yapışmasını önlemeye
+          yardımcı olurlar. Hücre bölündükçe kısalabilirler; telomeraz adlı enzim ise bazı
+          hücrelerde bu dizileri yeniden uzatır. <Evidence level={5} /> <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>
         </p>
         <p>
-          Postmenopozal dönemde telomer kısalması hızlanıyor; bunda özellikle oksidatif stres ve
-          östrojenin geri çekilmesinin payı var. Bu, hücresel yaşlanma alanının bilinen
-          olgularından biri <Evidence level={3} />. Yaşlanma karşıtı pazarlama tam bu noktada
-          kırklı yaşların ortasındaki kadınlara yöneliyor; oysa biyolojinin kendisi, pazarlamanın
-          anlattığından çok daha katmanlı.
+          Telomerlerin çok kısalması, hücrenin bölünmeyi durdurmasına katkıda bulunabilir. Bu
+          duruma hücresel yaşlanma, yani <em>senesens</em> deniyor; pek çok normal hücrenin
+          ancak sınırlı sayıda bölünebilmesi de Hayflick limiti olarak biliniyor. Yine de bedenin
+          yaşlanması tek bir hücresel sayaçla açıklanamayacak kadar çok etkenli bir süreç.
+          <Evidence level={4} /> <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
+        </p>
+        <p>
+          Menopozla telomerler arasındaki ilişki de sanıldığı kadar düz değil. Danimarka ikiz kaydındaki kadınları ortalama 12 yıl izleyen bir araştırmada beyaz kan hücrelerinin telomerleri menopozdan önce daha
+          hızlı kısaldı; “östrojen azalınca telomer kısalması hızlanır” açıklaması bu veride karşılık
+          bulmuyor. Üstelik kan hücresindeki ölçüm, yumurtalıkların ne hızla yaşlandığını söylemez.
+          <Evidence level={2} /> <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>
         </p>
 
         <h2 id="epitalon-nedir">Epitalon Nedir, Pineal Bez Bağlantısı Nereden Geliyor?</h2>
         <p>
-          Epitalon, dört aminoasitten (alanin, glutamik asit, aspartik asit ve glisin) oluşan, AEDG
-          kısaltmasıyla da bilinen küçük bir tetrapeptid <Evidence level={5} />.
+          Adının pineal bezle birlikte anılması, Epitalon'un vücuttan elde edilen doğal bir hormon
+          olduğu izlenimini verebiliyor. Oysa araştırmalarda kullanılan Epitalon, laboratuvarda
+          üretilen sentetik bir molekül.
         </p>
         <p>
-          Bu molekül, beynin ortasında küçük bir endokrin organ olan pineal bezden elde edilen
-          peptid ekstraktları üzerinde 1980'lerden başlayan bir araştırma hattında tanımlandı.
-          Pineal bez melatonin üretimiyle bilinir, ama asıl önemi biyolojik ritmin merkezinde
-          durmasıdır. Bu yüzden bu bezden çıkan moleküllerin yaşlanmayı yavaşlatabileceği fikri
-          uzun süredir tartışılıyor.
+          Dört aminoasitten oluşur: alanin, glutamik asit, aspartik asit ve glisin. Bu yüzden
+          tetrapeptid diye anılır; AEDG kısaltması da bu diziden gelir. Beyinde melatonin üreten
+          pineal bezin özütleri üzerine yapılan araştırmalardan geliştirilmiştir. Bu özütlerden biri
+          olan <strong>Epithalamin ile Epitalon aynı madde değildir</strong>; birine ait bir araştırma
+          sonucu diğerine otomatik olarak aktarılamaz. <Evidence level={4} /> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
         </p>
         <p>
-          Hayvan modellerinde, özellikle farelerde, Epitalon bazı yaşlanma parametrelerinde ve
-          ortalama yaşam süresinde mütevazı uzamalar göstermiş <Evidence level={3} />. Pineal
-          kalsifikasyonunu yavaşlattığı ve melatonin ritmini koruduğu yönündeki etkiler de tarif
-          edilmiş. Ama hayvan verisi bir araştırma alanını başlatmaya yeter, insanda klinik kazanım
-          göstermeye yetmez; bu çeviri sorunu Epitalon'a özgü değil, yaşlanma karşıtı
-          araştırmaların büyük kısmı aynı engelle uğraşıyor.
-        </p>
-        <p>
-          Türkçe'de güvenilir kaynak az olduğundan Epitalon adı okura çoğu zaman iki uçtan
-          ulaşıyor. Bir yanda internet sitelerinin <em>"yaşlanmayı geri çevirir"</em> başlıklı
-          sayfaları var; öbür yanda ise klinik tıp eğitiminde pek ele alınmadığı için sessiz kalan
-          bir konu. Bilimsel kaynakları orijinal dilleriyle ve Türkçesiyle yıllarca yan yana okudum.
-          Şunu öğrendim: aynı araştırma farklı dillerde farklı seslerle anlatılabiliyor; asıl iş,
-          içlerinden dürüst olanı ayırmak.
+          Hayvan deneylerinde yaşam süresi ve biyolojik ritimlerle ilgili etkiler araştırıldı;
+          bulgular kullanılan maddeye ve deney modeline göre değişiyor. Bir hayvan deneyindeki
+          sonuçtan sizin yaşam sürenize ya da menopoz yaşınıza dair bir hesap çıkmaz.
+          <Evidence level={1} /> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
         </p>
 
-        <h2 id="iki-mekanizma">Yeni Veriler — Sağlıklı Hücre ve Kanser Hücresi Ayrımı</h2>
+        <h2 id="iki-mekanizma">Yeni Veriler — Normal Hücre ve Kanser Hücresi Ayrımı</h2>
         <p>
-          Yakın zamanda yapılan kapsamlı bir laboratuvar çalışması, Epitalon'un farklı hücre
-          tiplerinde <em>tamamen farklı</em> mekanizmalarla çalıştığını gösterdi
-          <Evidence level={3} />. Bu ayrım hem teorik olarak ilginç, hem de güvenlik tartışmasının
-          merkezinde.
+          2025'te yayımlanan bir çalışma, Epitalon'un laboratuvarda normal hücrelerle meme kanseri
+          hücrelerinde farklı telomer uzatma yollarını etkileyebildiğini bildirdi. Bu sonucu okurken
+          ilk bakılacak şey, hangi hücrelerde elde edildiği.
         </p>
         <p>
-          <strong>Sağlıklı hücrelerde:</strong> Sağlıklı insan fibroblast (bağ dokusu hücresi) ve
-          epitel hücrelerinde Epitalon, telomeraz enziminin katalitik alt birimini kodlayan
-          <em>hTERT</em> geninin ifadesini artırdı. Bu sayede telomeraz aktivitesi doğrudan
-          desteklendi ve telomerlerde uzama gözlemlendi <Evidence level={3} />. Etkinin görülmesi
-          yaklaşık üç haftalık bir inkübasyon gerektirdi; yani etki hızlı değil, birikerek ortaya
-          çıkan bir biyolojik yanıt.
+          Normal hücre modeli olarak bağ dokusu hücreleri (IBR.3) ve meme epitel hücreleri (HMEC)
+          kullanıldı. Üç haftalık uygulamadan sonra bu hücrelerde telomerler uzadı, telomeraz
+          aktivitesi arttı; telomerazın katalitik alt birimini kodlayan <em>hTERT</em> geninin
+          ifadesi de yükseldi. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
-          <strong>Kanser hücrelerinde:</strong> Aynı çalışmada meme kanseri hücre hatlarında
-          Epitalon yine <em>hTERT</em> ifadesini artırdı; ancak telomeraz enzim aktivitesinde
-          anlamlı bir yükseliş ölçülmedi <Evidence level={3} />. Telomer uzaması, bunun yerine,
-          telomerazdan bağımsız bir onarım yolu olan <strong>ALT (Alternatif Telomer
-          Uzaması)</strong> mekanizmasının güçlü biçimde tetiklenmesiyle gerçekleşti. Kanser
-          hücreleri sinyale başka bir kapıdan yanıt verdi; sağlıklı hücrelerin kullandığı kapıdan
-          değil.
+          21NT ve BT474 meme kanseri hücre hatlarında ise dört günlük uygulama sonrasında
+          telomerler uzadı. Bu hücrelerde <em>hTERT</em> ifadesi artsa da telomeraz aktivitesi anlamlı
+          biçimde artmadı; bunun yerine telomerazdan bağımsız <strong>alternatif telomer uzaması (ALT)</strong> yoluna ait
+          işaretler (C-halkaları ve PML cisimcikleri) arttı. Tedavi edilmemiş kanser hücrelerinde de PML
+          cisimcikleri vardı; yani Epitalon ALT'yi başlatmadı, var olanı artırdı. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
-          Telomeraz aktivitesini destekleyen bir molekülün kanser hücresinde ölümsüzlük benzeri
-          bir telomer uzaması yaratmaması biyolojik olarak dikkat çekici. Hücre tipine göre farklı
-          yollardan çalışan moleküller ilaç biliminde sık görülmediği için araştırma topluluğunun
-          ilgisini çekiyor.
+          Bu deneyde kimseye tedavi verilmedi; ölçülen şey, hücrelerin telomerlerini nasıl
+          koruduğuydu. Hastalık, yaşam kalitesi ya da yaşam süresi ölçülmedi.
         </p>
 
-        <h2 id="guvenlik-profili">ALT Mekanizması ve Güvenlik Profili — Önemli Olan Ayrım</h2>
+        <h2 id="guvenlik-profili">ALT ve Güvenlik Sorusu</h2>
         <p>
-          Yeni verilerin en çok tartışılan kısmı güvenlik tarafı. ALT, yani Alternatif Telomer
-          Uzaması, kanser hücrelerinin yaklaşık %10-15'inde telomerleri uzatmak için kullandığı,
-          telomerazdan bağımsız bir onarım yolu <Evidence level={4} />.
+          Güvenlik sorusu tam bu noktada başlıyor. ALT, kanserlerin yaklaşık %10–15'inde telomerleri
+          koruyan yol; Epitalon'un bu yolu kanser hücrelerinde uyarması bu yüzden bir güvence değil,
+          bir çekince. <Evidence level={4} /> <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>
         </p>
         <p>
-          Bu, <em>"sağlıksız bir hücre kendine ölümsüzlük yaratıyor"</em> fikrinin bilinen
-          mekanizmalarından biri.
+          Çalışmada C-halkası testiyle ölçülen ALT işareti 21NT hücrelerinde yaklaşık on kat, BT474
+          hücrelerinde yaklaşık üç kat arttı; yazarlar bu testin artışı olduğundan büyük
+          gösterebileceğini de not ediyor. Normal hücre modellerinde anlamlı bir ALT artışı saptanmadı. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
-          Söz konusu çalışmada Epitalon, kanser hücrelerinde ALT aktivitesini on kata kadar
-          tetikleyebiliyor. Aynı koşullarda sağlıklı hücrelerde ALT mekanizması aktive olmuyor
-          <Evidence level={3} />. Sağlıklı hücrelerdeki telomeraz aktivitesinin de kanser
-          hücrelerindeki ölümsüzlük düzeyine hiçbir zaman ulaşmadığı gösterildi.
-        </p>
-        <p>
-          Sağlıklı bir hücrenin kanserleşmesi için tümör baskılayıcı genlerin (P53, RB gibi)
-          hasarlanması ve birden çok genetik kontrol noktasının devre dışı kalması gerekiyor
-          <Evidence level={5} />. Yalnızca telomer uzatma kapasitesinin artması, sağlıklı hücrenin
-          tümör baskılayıcı korumasıyla birlikte okunduğunda, kanserojen bir risk olarak
-          yorumlanmıyor. Yine de bu, laboratuvar düzeyinde bir güvenlik işareti; insan klinik
-          güvenlik verisinin yerini tutmuyor. Bu iki şeyi birbirinden ayırmak pratik karar için
-          şart.
-        </p>
-        <p>
-          Bilimsel olarak bu ayrım umut verici; klinik olarak ise yalnızca bir başlangıç noktası.
-          İki düzeyi birbirine karıştırdığımızda <em>"umut etiketi"</em> dili başlıyor.
+          Bir hücre deneyi, Epitalon'un insanlarda kanser riskini artırdığını gösteremez, bu riski dışlayamaz
+          da; bunun için uzun süreli klinik araştırmalar gerekir.
+          <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
         </p>
 
-        <h2 id="kanit-duzeyi">Mevcut Kanıt Düzeyi — In Vitro'dan İnsana Uzun Yol</h2>
+        <h2 id="kanit-duzeyi">Mevcut Kanıt Düzeyi — Laboratuvardan İnsana Uzun Yol</h2>
         <p>
-          Bu çalışma, Epitalon'un temel bilim düzeyindeki kanıtını ciddi biçimde yukarı taşıdı.
-          Gen ifadesi (qPCR), enzim aktivitesi (TRAP testi) ve hücre içi telomer onarım izleri
-          (C-halkası, immünofloresan PML cisimcikleri) aynı çalışmada birlikte doğrulandı.
+          Bu bulguların insan sağlığı için ne anlama geldiğini, deneyin nasıl yapıldığı belirliyor.
+          Hücredeki bir değişim ile insanın sağlığına gelen yarar ayrı şeylerdir.
         </p>
         <p>
-          Mekanizma tarafı, sınırları içinde okunduğunda sağlam <Evidence level={3} />; ama bu
-          sınırlar önemli. Çalışmanın temel kısıtı, sonuçların insan hücre hatlarıyla 2 boyutlu
-          (2D) <em>in vitro</em> ortamda elde edilmiş olması <Evidence level={3} />. Petri
-          kabındaki bir hücre hattı ile yaşayan bir insan bedeni birbirinden çok uzak iki ortam.
-          Dokudaki hücreler komşularıyla, bağışıklık sistemiyle ve hormonal sinyal ağlarıyla sürekli
-          iletişim halinde; petri kabında bunların çoğu yok.
+          Buradaki deneyler düz kültür kaplarında, yani iki boyutlu hücre kültürlerinde yapıldı.
+          Kaptaki hücre maddeyle doğrudan karşılaşır; vücutta ise madde önce emilir, dağılır ve
+          parçalanır. Üç haftalık bir hücre deneyinden insanlar için bir kullanım süresi de
+          çıkarılamaz. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
-          Epitalon'un yaşlanma karşıtı bir takviye ya da tedavi olarak gerçek potansiyelini görmek
-          için üç basamak daha gerekiyor: hücresel ortamı daha gerçekçi taklit eden
-          <strong>3 boyutlu (3D) hücre kültürleri</strong>, <strong>canlı organizmalarda
-          (<em>in vivo</em>)</strong> kontrollü çalışmalar ve ardından geniş örneklemli, plasebo
-          kontrollü <strong>insan klinik araştırmaları</strong> <Evidence level={4} />.
+          Bir ilaç düzenleme kurumunun Temmuz 2026'daki danışma kurulu toplantısı için hazırladığı
+          değerlendirmede,
+          Epitalon'un insanlarda güvenliğini inceleyen klinik çalışma bulunamadığı belirtiliyor.
+          Uykusuzluk için önerilen kullanımın etkinliğini destekleyen yeterli veri de saptanmamış. Bu
+          değerlendirme her olası kullanımı aynı ayrıntıda ele almıyor; uzun ömür ya da menopozu
+          geciktirme iddiaları için ayrıca doğrudan insan kanıtı gerekir.
+          <Evidence level={1} /> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
         </p>
         <p>
-          Mevcut insan literatürü, Rusya kaynaklı bazı küçük seriler ve gözlem niteliğindeki
-          öykülerden oluşuyor. Modern klinik araştırma metodolojisinin gerektirdiği büyüklük ve
-          titizlikte bir insan verisi henüz yok <Evidence level={1} />.
-        </p>
-        <p>
-          Bu tablo, <em>"belki yararlı, ama henüz bilemiyoruz"</em> demektir; bilimsel dürüstlük de
-          bu cümleyi olduğu gibi tutmayı gerektirir.
+          Yan etki bildiriminin az olması da güvenli kullanımın kanıtı sayılmaz. Güvenlik, kimlerin ne
+          kadar süre ve hangi sonuçlar açısından izlendiği bilinen araştırmalarla anlaşılır.
+          <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
         </p>
 
-        <h2 id="pratik-sinirlar">Pratik Sınırlar — Yaşlanma Karşıtı Vaadlere Sakin Bir Bakış</h2>
+        <h2 id="pratik-sinirlar">Enjeksiyon Ürünleri ve Ruhsat Sınırları</h2>
         <p>
-          Epitalon'un internetteki sunumu iki uçta toplanıyor: bir yanda <em>"yaşlanmayı geri
-          çeviren güçlü molekül"</em> başlıklı sayfalar, öbür yanda klinik tıbbın sessiz kaldığı bir
-          köşe. Sakin okuma bu ikisinin arasında bir yerde duruyor.
+          Enjeksiyon olarak satılan ürünlerde, molekülün kendisine ait belirsizliğe bir de ürünün
+          içeriğine dair belirsizlik ekleniyor.
         </p>
         <p>
-          Bugün elimizde olanı dört cümlede toplayabiliriz: (1) Mekanizma kısmen sağlam. Sağlıklı
-          hücre ile kanser hücresinin farklı yollardan yanıt vermesi bilimsel olarak ilgi çekici.
-          (2) Hayvan verileri umut veriyor, ama insana aktarımı henüz tamamlanmadı. (3) İnsan
-          klinik kanıtı, ilaç onay süreçlerinin istediği düzeyin çok altında; uzun dönem güvenlik
-          haritalanmadı. (4) Türkiye dahil birçok ülkede Epitalon onaylı bir ilaç değil; gri
-          kanaldan edinilen bir peptid. Bu yolun saflık, doz ve içerik tutarlılığı açısından
-          kendine özgü sorunları var.
+          Bu ürünlerde saflık, sterilite ve içeriğin doğru tanımlanması belirleyici. Epitalon içeren
+          hazırlamalar için peptid safsızlıkları ve moleküllerin kümelenmesine bağlı bağışıklık
+          tepkisi riskine dair resmî uyarılar var.
+          <Evidence level={2} /> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup> <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>
         </p>
         <p>
-          Bu konuda yapay bir aciliyet yok; yaşlanma biyolojisinde büyük değişimler yıllar içinde
-          olur, haftalar içinde değil. Kanıtı en sağlam olan temel, sıkıcı ama işe yarayan
-          olanlardır: düzenli aerobik ve direnç egzersizi, makul kalori alımı, kaliteli uyku, stres
-          yönetimi ve gerektiğinde kanıtlı eksiklik takviyeleri (D vitamini ve B12 gibi)
-          <Evidence level={4} />. Bu temel yokken deneysel bir peptide yönelmek de mantıklı değil.
-          Zemin sağlam değilse üstüne ne koyduğunuzun etkisini ayırt etmek çok zor.
+          Türkiye'de satılan bir ürünün güncel ruhsat durumunu bu yazıdan çıkarmayın; ürün tanıtımı ile
+          resmî ruhsat kaydı ayrı şeyler. “Araştırma amaçlıdır” etiketi de yalnızca araştırma
+          kullanımını tanımlar, insanda tedavi amaçlı kullanım izni vermez.
         </p>
         <p>
-          Kendi yaklaşımım şöyle: kanser öyküsü, aktif malignite ya da kanser için artmış riski olan
-          birinde, telomer uzatma yollarıyla etkileşebilecek deneysel bir peptidi önermem. ALT
-          verileri laboratuvarda rahatlatıcı olsa da insan güvenlik verisi yerine geçmez. Aktif
-          kanseri olmayan ama dikkatle değerlendirilmesi gereken kişiler için de acele edilecek bir
-          konu değil; bu alan hâlâ erken aşamada bir araştırma sorusu, klinik bir karar değil.
+          Deneysel bir ürün kullanıyorsanız ya da kullanmayı düşünüyorsanız, adını diğer ilaç ve
+          takviyelerinizle birlikte hekiminize söyleyin.
         </p>
 
         <h2 id="sik-sorulanlar">Dr. Aksoy'a sorular</h2>
@@ -327,7 +288,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           <strong>Kanser hücrelerinin büyük çoğunluğu, çoğalmaya devam edebilmek için telomerlerini
           koruyan mekanizmaları yeniden etkinleştirir.</strong> <Evidence level={4} /> Bunların en
-          önemlilerinden biri telomerazdır.
+          önemlilerinden biri telomerazdır. <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>
         </p>
         <p>
           Bu nedenle telomeraz aktivasyonunu koşulsuz olarak yararlı kabul edemeyiz.
@@ -371,7 +332,7 @@ const articleSchemas = buildArticleSchemas({
           riski söz konusu olabilir.
         </p>
         <p>
-          Düzenleyici kurumlar da bu tür hazırlamalarda güvenlik belirsizliklerine dikkat çekiyor.
+          Düzenleyici kurumlar da bu tür hazırlamalarda güvenlik belirsizliklerine dikkat çekiyor. <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup> <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>
         </p>
         <p>
           <strong>Benim yaklaşımım, etkinliği henüz kanıtlanmamış bir maddeyi, içeriği ve güvenliği de
@@ -390,7 +351,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Çünkü telomer uzunluğu yaşla ilişkili olsa da aynı yaştaki insanlarda oldukça farklı olabiliyor.
           Ayrıca ölçüm sonuçları kullanılan laboratuvar yöntemine ve incelenen hücrelere göre değişebiliyor.
-          <Evidence level={2} />
+          <Evidence level={2} /> <sup><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>
         </p>
         <p>
           Örneğin telomerleri kendi yaş grubunun ortalamasından kısa çıkan bir kadının daha erken menopoza gireceği ya da daha kısa yaşayacağı, bu tek ölçümden kesin olarak çıkarılamaz.
@@ -426,16 +387,16 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Önce telomerlerin ne olduğunu ve hücrelerde nasıl görev yaptığını anlamak daha yararlı. Bunun için
-          ulusal kanser kurumlarının telomer ve telomeraz hakkındaki açıklamaları iyi bir başlangıç.
+          ulusal kanser kurumlarının telomer ve telomeraz hakkındaki açıklamaları iyi bir başlangıç. <sup><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>
         </p>
         <p>
           Ardından menopozun biyolojisine bakmak gerekir. Çünkü hücresel yaşlanma ile yumurtalıkların
           yaşlanması aynı şey değil. Menopoz alanındaki uzman derneklerin hasta bilgilendirme kaynakları bu
-          ayrımı anlamak için yararlı.
+          ayrımı anlamak için yararlı. <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>
         </p>
         <p>
           Daha sonra telomer ölçümlerinin ne anlama geldiğini öğrenmek için üniversite tıp merkezlerinin
-          telomer testleri hakkındaki açıklamalarını okumayı öneririm.
+          telomer testleri hakkındaki açıklamalarını okumayı öneririm. <sup><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>
         </p>
         <p>
           Son aşamada Epitalon araştırmalarına geçilebilir. Ancak burada özellikle insan çalışmalarına,
@@ -457,23 +418,56 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kapanis">Kapanış</h2>
         <p>
-          Epitalon'un hikâyesi bilimsel olarak ilgi çekici: pineal bezden gelen küçük bir peptid
-          sağlıklı hücrelerde telomerazı destekleyebiliyor, kanser hücrelerinde ise ALT yolunu
-          tetikliyor, ama sağlıklı hücreleri aynı yola itmiyor.
+          Epitalon'un hikâyesi bugün bir laboratuvar hikâyesi: hücrelerde ölçülebilir ve ilginç
+          değişiklikler var, insanda ise yararını ya da güvenliğini gösteren bir çalışma henüz yok.
         </p>
         <p>
-          Bu hücre tipine özgü davranış,
-          uzun ömür biyolojisinin ileride önemli bir sayfası olabilir. Yine de yeni bir keşif ile
-          insan klinik kararı arasında uzun bir yol var ve bu yol adım adım kat ediliyor.
+          Bu konuda bir haber okuduğunuzda üç şeye birlikte bakmanızı öneririm: çalışma hücrede mi,
+          hayvanda mı, insanda mı yapıldı; kullanılan madde Epitalon mu, pineal özüt mü; ölçülen
+          sonuç telomer uzunluğu mu, yoksa gerçekten yaşam kalitesi mi? Bu üç soru, merakınızı
+          korurken kararınızı kanıta bağlamaya yeter.
         </p>
+
+        <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
         <p>
-          Bugünkü tablo şu: laboratuvarda umut verici, hayvan modellerinde kısmen ilerlemiş, insan
-          klinik kanıtında ise hâlâ başlangıçta. Yaşlanma karşıtı pazarlama bu üç düzeyi tek
-          cümlede birleştiriyor; oysa bilim için üçü ayrı dünyalar. Bilgi belirsizliğin panzehiridir
-          ve bu alanda o bilgi, üç düzeyi birbirinden ayırabilmekten geçiyor. <em>"Size özel"</em>
-          diye sunulan her yaklaşım, bilimsel olarak gerçekten size özel olduğunu göstermiş değildir.
-          Bu cümleyi Epitalon gibi alanlarda iki kez düşünmek gerekir.
+          Gövdedeki numaralı atıflar aşağıdaki kaynaklara bağlanıyor. Kanıt taraması 12 Ekim 2026'da
+          yapıldı; temel hücre çalışmasının 15 Kasım 2025 tarihli düzeltmesi de okundu (yalnızca
+          şekiller değişti, sonuçlar aynı kaldı).
         </p>
+        <ol>
+          <li id="kaynak-1">National Human Genome Research Institute.
+            <a href="https://www.genome.gov/genetics-glossary/Telomere" target="_blank" rel="noopener noreferrer">Telomerlerin yapısı ve görevi</a>.
+          </li>
+          <li id="kaynak-2">Al-dulaimi S, Thomas R, Matta S, Roberts T. Biogerontology. 2025;26:178.
+            <a href="https://doi.org/10.1007/s10522-025-10315-x" target="_blank" rel="noopener noreferrer">Epitalon'un insan hücre hatlarında telomeraz ve ALT üzerindeki etkileri</a>.
+            <a href="https://doi.org/10.1007/s10522-025-10326-8" target="_blank" rel="noopener noreferrer">15 Kasım 2025 tarihli şekil düzeltmesi</a>.
+          </li>
+          <li id="kaynak-3">Dalgård C ve ark. International Journal of Epidemiology. 2015;44:1688–1695.
+            <a href="https://doi.org/10.1093/ije/dyv165" target="_blank" rel="noopener noreferrer">Beyaz kan hücrelerinde telomer kısalması: menopoz ve yaş etkileri</a>.
+          </li>
+          <li id="kaynak-4">FDA. 23–24 Temmuz 2026 danışma kurulu bilgilendirme dosyası.
+            <a href="https://www.fda.gov/media/193345/download" target="_blank" rel="noopener noreferrer">Epitalon'un kimliği, etkinliği ve güvenliği hakkında değerlendirme</a>.
+            Bu dosya danışma kurulu için hazırlanmıştır; tek başına nihai düzenleyici karar değildir.
+          </li>
+          <li id="kaynak-5">FDA.
+            <a href="https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks" target="_blank" rel="noopener noreferrer">Bileşik hazırlamada güvenlik riski taşıyabilecek maddeler; Epitalon girdisi</a>.
+          </li>
+          <li id="kaynak-6">Lai TP, Wright WE, Shay JW. Philosophical Transactions of the Royal Society B. 2018;373:20160451.
+            <a href="https://doi.org/10.1098/rstb.2016.0451" target="_blank" rel="noopener noreferrer">Telomer uzunluğu ölçüm yöntemlerinin karşılaştırılması</a>.
+          </li>
+          <li id="kaynak-7">Cesare AJ, Reddel RR. Nature Reviews Genetics. 2010;11:319–330.
+            <a href="https://doi.org/10.1038/nrg2763" target="_blank" rel="noopener noreferrer">Alternatif telomer uzaması (ALT): modeller, mekanizmalar ve sonuçları</a>.
+          </li>
+          <li id="kaynak-8">MedlinePlus Genetics (ABD Ulusal Tıp Kütüphanesi).
+            <a href="https://medlineplus.gov/genetics/gene/tert/" target="_blank" rel="noopener noreferrer">TERT geni ve telomerazın kanser hücrelerindeki etkinliği</a>.
+          </li>
+          <li id="kaynak-9">National Cancer Institute.
+            <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/telomerase" target="_blank" rel="noopener noreferrer">Kanser terimleri sözlüğü: telomeraz</a>.
+          </li>
+          <li id="kaynak-10">The Menopause Society.
+            <a href="https://menopause.org/patient-education/menopause-glossary" target="_blank" rel="noopener noreferrer">Menopoz sözlüğü: menopozun tanımı ve yumurtalık işlevi</a>.
+          </li>
+        </ol>
       </ArticleProsePanel>
 
       <RelatedReadings
@@ -488,56 +482,27 @@ const articleSchemas = buildArticleSchemas({
         />
 
       <ArticleEditorNote>
-        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={2} /></p>
         <div class="space-y-3 leading-relaxed text-ink/80">
-          <p class="italic">
-            Epitalon gibi konularda en zor iş, bilimin nerede bittiğini net çizmek. Yazıda mekanizma sade
-            anlatıldı, klinik yansıması sınırlı tutuldu. Bu notta klinik kararın somut adımları daha
-            doğrudan ele alınıyor.
+          <p>
+            <strong class="text-primary">Güvenlik sınırı:</strong> Normal hücrelerle kanser
+            hücrelerinde farklı telomer uzatma yollarının gözlenmesi bir laboratuvar bulgusudur;
+            klinik kullanımın güvenliği ancak insanlarda yapılacak uzun dönem araştırmalarla
+            gösterilebilir. Kanser hücrelerinde ALT işaretlerinin artması, bu araştırmaları daha da
+            gerekli kılıyor. <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
           </p>
           <p>
-            <strong class="text-primary">Klinik zemin:</strong> Yaşlanma karşıtı peptidlere dair sorular
-            klinik pratikte son birkaç yılda belirgin biçimde arttı. Soruların büyük bölümü kırklı yaşların
-            ortasından sonraki kadınlardan geliyor. Bilgi genellikle iki yerden besleniyor: yüksek vaatli
-            internet sayfaları ve çevreden duyulan deneyimler. İki kaynağın ortak eksiği, klinik kanıt
-            düzeyini hiç değerlendirmemiş olmaları.
+            <strong class="text-primary">Klinik dikkat:</strong> Kanser öyküsü, bilinen kalıtsal
+            kanser riski ya da süren onkolojik tedavi varsa deneysel peptidler özellikle dikkat
+            gerektirir. Bağışıklığı baskılayan tedavilerle etkileşim, gebelik ve emzirme için yeterli
+            güvenlik verisi yok. Bir risk değerlendirmesi yapılmış olması, Epitalon'u kanıtlı bir
+            tedavi hâline getirmez.
           </p>
           <p>
-            <strong class="text-primary">Mekanizma notu:</strong> Epitalon'un sağlıklı hücrede hTERT üzerinden
-            telomerazı destekleyen, kanser hücresinde ise ALT yolunu tetikleyen etkisi laboratuvarda net
-            gösterildi. Hücre tipine göre bu kadar ayrışan bir etki farmakolojide sık görülen bir tablo değil;
-            ilginç olmasının nedeni de bu. Ama "laboratuvardan klinik karara" giden yolda bugün 3 boyutlu
-            kültür, canlı hayvan ve geniş ölçekli insan araştırması adımlarının büyük kısmı henüz tamamlanmadı.
-            Mekanizma sağlam; yine de bu, klinik bir öneri için yeterli zemin değil.
-          </p>
-          <p>
-            <strong class="text-primary">Klinik kırmızı bayraklar:</strong> Aktif malignitesi, kanser öyküsü ya
-            da yüksek kanser riski olanlarda (özellikle BRCA1/2 gibi yüksek penetranslı mutasyonlarda) deneysel
-            peptid önerilmez; telomer uzatma yollarının kanser biyolojisindeki rolü bunun nedeni. Aktif onkolojik
-            tedavi alan ya da immünsüpresif tedavideki kişiler için etkileşim verisi yok. Hamilelikte ve
-            emzirmede güvenlik verisi yok. Onaylı olmayan kanallardan alınan ürünlerin saflığı ve dozu belirsiz;
-            bilinmeyen bir maddeyle yapılan kişisel deneme klinik karar yerine geçmez. Açıklanamayan büyüme,
-            hızla büyüyen kitle, sebepsiz kilo kaybı ya da ailesel kanser kümelenmesi varsa deneysel peptide
-            başlanmaz; önce ayrıntılı tıbbi değerlendirme yapılır.
-          </p>
-          <p>
-            <strong class="text-primary">Pratik bütünleşim:</strong> Klinik değerlendirmede deneysel peptid soruları
-            birlikte ele alınırken şu sıra izlenir: (1) Bilimsel mekanizma düzeyiyle klinik kanıt düzeyinin farkının
-            açıkça konuşulması. Bu fark, alanda en sık atlanan noktadır. (2) Yaşam tarzı temelinin (egzersiz, uyku,
-            beslenme, stres yönetimi) kurulu olup olmadığına bakılması; bu zemin yokken deneysel bir adım anlam
-            taşımaz. (3) Hekim değerlendirmesinden sonra saptanmış mikro besin eksikliklerinin (D vitamini, B12,
-            demir, magnezyum) önce hedefli takviyeyle ele alınması; bunun kanıt düzeyi güçlü. (4) Deneysel peptid
-            sorusunun "araştırma aşamasında bir molekül" olarak çerçevelenmesi; deneme düşünülüyorsa kanser öyküsü
-            ve risk değerlendirmesi netleşmeden başlanmaması. (5) Onaylı olmayan kanallardan alınan ürünlerden
-            uzak durulması; saflık ve doz belirsizliği klinik karar açısından kabul edilemez. Bu disiplin pratikte
-            <em>"yavaşlatan"</em> değil, kişinin kendi sağlık verisini <em>"savunan"</em> bir yaklaşımdır.
-          </p>
-          <p>
-            <strong class="text-primary">Bireysellik vurgusu:</strong> Yukarıda anlatılanlar, hem yazıda hem bu notta,
-            genel popülasyon ve mekanizma yaklaşımıdır. Sizin sağlık öykünüz, ailesel kanser geçmişiniz, kullandığınız
-            ilaçlar, mevcut takviyeleriniz ve hangi yaşlanma sorusuyla bu konuya geldiğiniz, tedavi kararına yön verir.
-            Burada okuduğunuz bir başlangıç rehberidir, karar değil. Sizin için uygun adımları kendi hekiminizle
-            birlikte değerlendirmeniz önemli; özellikle kanıt seviyesinin bu kadar erken olduğu bir alanda.
+            <strong class="text-primary">Değerlendirme önceliği:</strong> Açıklanamayan kitle,
+            istemsiz kilo kaybı ya da ailede birden fazla kanser öyküsü gibi bulgularda öncelik,
+            deneysel ürünlerden önce tıbbi değerlendirmedir. Besin eksikliği saptanmışsa tedavi o
+            eksikliğe yöneliktir; takviyeler genel bir telomer uzatma yöntemi olarak düşünülmez.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
             — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı
@@ -555,3 +520,17 @@ const articleSchemas = buildArticleSchemas({
 
   <SiteFooter />
 </SiteLayout>
+
+<style>
+  /* Clip decoration without creating a scroll container that disables sticky TOC. */
+  main#main-content :global(article.relative.isolate) {
+    overflow: clip;
+  }
+
+  @media (min-width: 1024px) {
+    main#main-content :global([data-toc]) {
+      max-height: calc(100dvh - 7rem);
+      overflow-y: auto;
+    }
+  }
+</style>

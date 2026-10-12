@@ -1,0 +1,274 @@
+{
+  "filePath": "icerik/yazar-onaylari/senai-aksoy/onay-bekleyen/2026-10-12_epitalon-genis-audit/sonra.md",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "short-closer",
+      "count": 14,
+      "locations": [
+        {
+          "line": 5,
+          "column": 1,
+          "excerpt": "Önce telomerlerin görevini anlamak gerekir."
+        },
+        {
+          "line": 11,
+          "column": 1,
+          "excerpt": "Kan hücrelerindeki ölçümden yumurtalıkların yaşlanma hızını doğrudan çıkaramayız."
+        },
+        {
+          "line": 15,
+          "column": 1,
+          "excerpt": "Araştırmalarda kullanılan Epitalon sentetik bir moleküldür."
+        },
+        {
+          "line": 17,
+          "column": 1,
+          "excerpt": "Birine ait araştırma sonucu diğerine otomatik olarak aktarılamaz."
+        },
+        {
+          "line": 35,
+          "column": 1,
+          "excerpt": "Bunlar, belirli deney koşullarındaki hücre sonuçlarıdır."
+        },
+        {
+          "line": 51,
+          "column": 1,
+          "excerpt": "Ürünle ilgili belirsizlik, molekülün etkileriyle ilgili belirsizliğe ekleniyor."
+        },
+        {
+          "line": 63,
+          "column": 1,
+          "excerpt": "[1] [2] [4] [5] [6]"
+        },
+        {
+          "line": 87,
+          "column": 1,
+          "excerpt": "Ancak işin başka bir tarafı var."
+        },
+        {
+          "line": 89,
+          "column": 1,
+          "excerpt": "Bunların en önemlilerinden biri telomerazdır."
+        },
+        {
+          "line": 141,
+          "column": 1,
+          "excerpt": "Ancak ben okumaya doğrudan deneysel peptidlerden başlamayı önermem."
+        },
+        {
+          "line": 167,
+          "column": 1,
+          "excerpt": "Telomerlerin yapısı ve görevi."
+        },
+        {
+          "line": 169,
+          "column": 1,
+          "excerpt": "15 Kasım 2025 tarihli şekil düzeltmesi."
+        },
+        {
+          "line": 177,
+          "column": 1,
+          "excerpt": "Telomer testlerinin yorumlanması ve ölçüm sınırları."
+        },
+        {
+          "line": 187,
+          "column": 1,
+          "excerpt": "Tanı ve tedavi kararları için sağlık profesyoneline başvurunuz."
+        }
+      ],
+      "message": "14 of 53 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information."
+    },
+    {
+      "id": "claim-klinik-kanit",
+      "count": 7,
+      "locations": [
+        {
+          "line": 1,
+          "column": 145,
+          "excerpt": "klinik kanıt"
+        },
+        {
+          "line": 45,
+          "column": 62,
+          "excerpt": "insanlarda güvenli"
+        },
+        {
+          "line": 45,
+          "column": 374,
+          "excerpt": "insan kanıt"
+        },
+        {
+          "line": 55,
+          "column": 121,
+          "excerpt": "insanlarda tedavi amacıyla kullanım izni sağlamaz. Ürün tanıtımıyla resmî ruhsat ve güvenli"
+        },
+        {
+          "line": 95,
+          "column": 150,
+          "excerpt": "klinik veri"
+        },
+        {
+          "line": 103,
+          "column": 140,
+          "excerpt": "insanlarda kullanılmak üzere onaylandığını ya da güvenli"
+        },
+        {
+          "line": 179,
+          "column": 195,
+          "excerpt": "insanlarda uzun dönem güvenli"
+        }
+      ],
+      "message": "Stated 7 times across 6 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 6
+    },
+    {
+      "id": "claim-alt",
+      "count": 8,
+      "locations": [
+        {
+          "line": 1,
+          "column": 409,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 27,
+          "column": 194,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 31,
+          "column": 4,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 33,
+          "column": 121,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 35,
+          "column": 11,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 35,
+          "column": 138,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 169,
+          "column": 122,
+          "excerpt": "ALT"
+        },
+        {
+          "line": 179,
+          "column": 168,
+          "excerpt": "ALT"
+        }
+      ],
+      "message": "Stated 8 times across 4 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 4
+    },
+    {
+      "id": "claim-urun",
+      "count": 5,
+      "locations": [
+        {
+          "line": 53,
+          "column": 24,
+          "excerpt": "saflık"
+        },
+        {
+          "line": 53,
+          "column": 32,
+          "excerpt": "sterilite"
+        },
+        {
+          "line": 53,
+          "column": 122,
+          "excerpt": "safsızlık"
+        },
+        {
+          "line": 109,
+          "column": 131,
+          "excerpt": "saf olup"
+        },
+        {
+          "line": 113,
+          "column": 45,
+          "excerpt": "safsızlık"
+        }
+      ],
+      "message": "Stated 5 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 2
+    },
+    {
+      "id": "claim-menopoz",
+      "count": 7,
+      "locations": [
+        {
+          "line": 1,
+          "column": 102,
+          "excerpt": "menopozu geciktir"
+        },
+        {
+          "line": 45,
+          "column": 323,
+          "excerpt": "menopozu geciktir"
+        },
+        {
+          "line": 59,
+          "column": 35,
+          "excerpt": "menopozu geciktir"
+        },
+        {
+          "line": 65,
+          "column": 14,
+          "excerpt": "menopozu geciktir"
+        },
+        {
+          "line": 67,
+          "column": 24,
+          "excerpt": "menopozu geciktir"
+        },
+        {
+          "line": 75,
+          "column": 57,
+          "excerpt": "menopoz yaşını"
+        },
+        {
+          "line": 77,
+          "column": 27,
+          "excerpt": "menopozu geciktir"
+        }
+      ],
+      "message": "Stated 7 times across 4 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+      "sections": 4
+    }
+  ],
+  "rhythm": {
+    "sentences": 167,
+    "meanWords": 11.4,
+    "sdWords": 5.6,
+    "shareUpTo8Words": 0.34,
+    "longestShortRun": 7
+  },
+  "coverage": {
+    "blocks": 94,
+    "dynamicExpressions": 0,
+    "excluded": [
+      "frontmatter (reported separately by fidelity check)",
+      "imports/code/inline code",
+      "JSX attributes and expressions",
+      "raw HTML (Markdown input)",
+      "image alt text"
+    ]
+  },
+  "limitations": [
+    "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+    "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+    "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+    "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+  ]
+}

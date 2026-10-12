@@ -1,0 +1,34 @@
+{
+  "target": "dist/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/index.html",
+  "locale": "tr",
+  "findings": [
+    {
+      "id": "uncited-source",
+      "count": 6,
+      "items": [
+        "National Human Genome Research Institute. Telomerlerin yapısı ve görevi.",
+        "Al-dulaimi S, Thomas R, Matta S, Roberts T. Biogerontology. 2025;26:178. Epitalon'un insan hücre hatlarında t…",
+        "Dalgård C ve ark. International Journal of Epidemiology. 2015;44:1688–1695. Beyaz kan hücrelerinde telomer kı…",
+        "FDA. 23–24 Temmuz 2026 danışma kurulu bilgilendirme dosyası. Epitalon'un kimliği, etkinliği ve güvenliği hakk…",
+        "FDA. Epitalon içeren hazırlamalarda güvenlik belirsizlikleri.",
+        "Epel E, Blackburn E. UCSF, 3 Temmuz 2017. Telomer testlerinin yorumlanması ve ölçüm sınırları."
+      ],
+      "message": "Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it."
+    }
+  ],
+  "coverage": {
+    "characters": 17810,
+    "images": 2,
+    "headings": 18,
+    "collapsibles": 0,
+    "roles": [
+      "author: Yazan : → Doç. Dr. Senai Aksoy",
+      "author: yazan → (no person named)"
+    ]
+  },
+  "limitations": [
+    "Reads one built page as served; a page behind a consent wall or rendered client-side may be incomplete.",
+    "Name, role and reference matching are heuristics: every item is a candidate to look at, not a verdict.",
+    "Template findings (review line, og:type, repeated boxes) belong to the site layout; report them, do not rewrite article text to hide them."
+  ]
+}
