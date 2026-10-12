@@ -180,7 +180,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: "Tiroid ilacı ile menopoz ilaçları aynı anda alınabilir mi?",
       answer:
-        "Genel olarak evet, ama zamanlama önemlidir. Levotiroksin aç karnına, kahvaltıdan en az 30-60 dakika önce alınır. Kalsiyum ve demir içeren ürünler emilimi azalttığı için bunları levotiroksinden en az 4 saat ara ile almak gerekir. Diğer ilaçların zamanlaması için eczacınız ve hekiminizle birlikte bir plan yapmanız en güvenli yoldur.",
+        "Genel olarak evet, ama zamanlama önemlidir. Levotiroksin aç karnına, kahvaltıdan en az 30-60 dakika önce alınır. Kalsiyum ve demir içeren ürünler emilimi azalttığı için bunları levotiroksinden en az 3-4 saat ara ile almak gerekir. Diğer ilaçların zamanlaması için eczacınız ve hekiminizle birlikte bir plan yapmanız en güvenli yoldur.",
     },
   ],
   '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/': [
