@@ -48,6 +48,9 @@ Sonunda **YZ/insan kadansı tahmini** ver — ölçüm değil editöryal yargı;
 - **JSON-LD**: MedicalWebPage + Article + BreadcrumbList (`buildArticleSchemas`); `FAQPage` yalnızca görünür, gerçek bir SSS bölümü varsa, görünür SSS ile aynı kaynaktan
 - `ArticleAuthorBlock` (writers.ts), `RelatedReadings` 3–5, `ArticleDisclaimer` görünür
 - **Hero** parent hub'tan (`submenuHeroByRoute['/<parent-hub>']`), makale-path entry yok / değişmemiş
+- **Arama yüzeyi:** başlık, `articleDescription`, görsel alt metinleri/alt yazıları ve JSON-LD alanları görünür metinle aynı bilgiyi taşıyor; insan kontrolünden geçmemiş alan raporlanır
+- **AI görsel etiketi:** makalenin AI görselleri `npm run images:tag-ai -- --check <dosya>` ile `trainedAlgorithmicMedia` etiketli; gerçek portre/fotoğraf etiketlenmemiş, AI görseli hekime veya gerçek hastaya atfedilmiyor
+- Kanonik kaynak: Senai-Wiki stil rehberi, "Google Arama Güncellemeleri Kaydı (2026)"
 
 ## 4. Yasak taraması (§4)
 
