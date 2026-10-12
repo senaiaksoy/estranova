@@ -50,7 +50,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '2 Mayıs 2026',
-  modifiedDate: '11 Ekim 2026',
+  modifiedDate: '12 Ekim 2026',
   pathname: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
   image: articleImage,
   articleSection: 'Bilimsel Pencere',
@@ -85,7 +85,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="2 Mayıs 2026"
-        lastUpdated="11 Ekim 2026"
+        lastUpdated="12 Ekim 2026"
         readingMinutes={10}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/bp-estrogen-biyolojisi-muze-byline.webp"
@@ -123,12 +123,11 @@ const articleSchemas = buildArticleSchemas({
         <p>
           E2 üreme çağının baskın ve en etkili formudur; yumurtalıklarda üretilir. Menopozdan sonra baskın form E1 olur:
           yumurtalıklar artık ana kaynak değildir ve E1 büyük ölçüde yağ dokusunda, androjenlerden aromataz enzimiyle
-          üretilir. E3 gebelikte plasentada yoğun olarak üretilir. E4 ise yalnızca gebelikte, bebeğin karaciğerinde
+          üretilir. E3 gebelikte plasenta ile bebeğin karaciğerinin birlikte çalışmasıyla oluşur ve gebeliğin son döneminde baskın östrojendir <sup><a href="#kaynak-17">[17]</a></sup>. E4 ise yalnızca gebelikte, bebeğin karaciğerinde
           üretilir ve anneye plasenta yoluyla geçer <sup><a href="#kaynak-7">[7]</a></sup>.
         </p>
         <p>
-          E4’ün menopozda hormon tedavisindeki yeri hâlâ araştırılıyor; ilaç olarak geliştirilmesi ileri klinik
-          aşamalarda <sup><a href="#kaynak-5">[5]</a></sup> <Evidence from={2} to={3} />. Bazı dokularda farklı yanıtlar oluşturabileceği düşünülse de bunu
+          E4’ün menopozda hormon tedavisindeki yeri hâlâ araştırılıyor; ilaç olarak geliştirilmesi 2024 itibarıyla ileri klinik aşamalarda <sup><a href="#kaynak-5">[5]</a></sup> <Evidence from={2} to={3} />. Bazı dokularda farklı yanıtlar oluşturabileceği düşünülse de bunu
           güvenlik ya da etkinlik üstünlüğü olarak yorumlamak için veri henüz yeterli değil.
         </p>
         <p>
@@ -148,9 +147,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Dokuya özgü tedavi mantığı bu dağılıma dayanır. <strong>SERM</strong> adı verilen seçici östrojen reseptörü
           düzenleyicileri (tamoksifen, raloksifen, ospemifen) bazı dokularda reseptörü uyarır, bazılarında engeller.
-          Koroner hastalığı ya da birden fazla risk etkeni olan, yaş ortalaması 67,5 olan 10.101 kadında raloksifen invaziv
-          meme kanseri ve omurga kırığı riskini azaltmış, ama koroner olayları azaltmamış; tromboz ve ölümcül inme riskini
-          ise artırmıştır <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={5} />. Bu yüzden kalp-damar
+          Koroner hastalığı ya da birden fazla risk etkeni olan 10.101 kadında (ortalama yaş 67,5) raloksifen invaziv meme kanseri ve omurga kırığını azalttı, koroner olayları azaltmadı. Tromboz ve ölümcül inme riskini ise artırdı <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={5} />. Bu yüzden kalp-damar
           hastalığından korunmak için kullanılmaz. Ospemifen, vajinal dokuda östrojen benzeri etki gösteren ve menopoza
           bağlı vajinal yakınmalarda kullanılan ağızdan bir seçenektir <sup><a href="#kaynak-1">[1]</a></sup>.
         </p>
@@ -194,18 +191,17 @@ const articleSchemas = buildArticleSchemas({
           Bu bölümdeki damar, beyin, cilt ve metabolizma etkileri çoğunlukla laboratuvar ve fizyoloji çalışmalarından gelen
           mekanizma bilgileridir; hastada klinik yarar anlamına gelmez. <strong>Damarlarda</strong> östrojen nitrik oksit
           üretimini artırabilir, kan yağları ve damar düz kası üzerinde etkili olabilir. Kalp-damar riskindeki yaş ve cinsiyet farkı ise yalnızca östrojenle
-          açıklanamaz; tansiyon, kan yağları, hareket, sigara ve yaş birlikte rol oynar. Uygun bir nedeni olan ve
-          kontrendikasyonu bulunmayan kadınlarda, hormon tedavisine 60 yaşından önce ya da menopozdan sonraki ilk 10 yıl
-          içinde başlandığında yarar-risk dengesi daha elverişlidir. Daha geç
-          başlayanlarda koroner hastalık, inme, tromboz ve bunama riskleri nedeniyle denge daha az elverişli görünür <sup><a href="#kaynak-1">[1]</a></sup>. Bu, hormon
-          tedavisinin kalp-damar hastalığından korunmak için başlanacağı anlamına gelmez.
+          açıklanamaz; tansiyon, kan yağları, hareket, sigara ve yaş birlikte rol oynar.
+        </p>
+        <p>
+          Hormon tedavisinde zamanlama da önemlidir. Uygun bir nedeni olan ve kontrendikasyonu bulunmayan kadınlarda 60 yaşından önce ya da menopozdan sonraki ilk 10 yılda başlanırsa yarar-risk dengesi daha elverişlidir. Daha geç başlayanlarda koroner hastalık, inme, tromboz ve bunama riskleri nedeniyle denge daha az elverişli görünür <sup><a href="#kaynak-1">[1]</a></sup>. Hormon tedavisi kalp-damar hastalığından korunmak için başlanmaz.
         </p>
         <p>
           <strong>Beyinde</strong> östrojen reseptörleri hipokampus ve prefrontal kortekste bulunur; öğrenme ve bellekle
           ilişkili biyolojik etkiler gösterilmiştir. Bu, hormon tedavisinin bilişsel gerilemeyi
           önlediği anlamına gelmez. Perimenopozdaki “beyin sisinin” bir kısmı hormon dalgalanmasıyla ilişkili olabilir.
           Östrojen serotonin ve dopamin sistemleriyle de etkileşir; perimenopozdaki dalgalanma ruh hâli değişimlerine katkıda
-          bulunabilir. Ancak depresif belirtiler yalnızca östrojenle açıklanamaz ve ayrıca değerlendirilir.
+          bulunabilir. Ancak depresif belirtiler yalnızca östrojenle açıklanamaz ve ayrıca değerlendirilir. Adet öncesi ruh hâli bozukluğu ya da doğum sonrası depresyon öyküsü olan kadınlarda menopoz geçişindeki depresif belirtiler daha belirgin olabilir <sup><a href="#kaynak-18">[18]</a></sup> <Evidence level={2} />.
         </p>
         <p>
           <strong>Ciltte</strong> östrojen kollajen üretimini ve dermis kalınlığını destekler; menopozda kollajenin azalması,
@@ -219,9 +215,7 @@ const articleSchemas = buildArticleSchemas({
           Östrojenin nasıl üretildiği kadar nasıl yıkıldığı da önemlidir.
         </p>
         <p>
-          Karaciğerde CYP enzim ailesi östrojeni farklı ara ürünlere (2-, 4- ve 16-hidroksi metabolitlere) çevirir. Bu
-          metabolitlerin laboratuvardaki etkileri farklı olabilir; ama 2-hidroksi metabolitleri klinik olarak “daha güvenli”
-          saymak doğru değildir. 4-hidroksi metabolitlerin DNA hasarıyla ilişkisi kanser araştırmalarında inceleniyor; bu
+          Karaciğerde CYP enzim ailesi östrojeni farklı ara ürünlere (2-, 4- ve 16-hidroksi metabolitlere) çevirir. Bu metabolitlerin laboratuvardaki etkileri farklı olabilir. Yine de 2-hidroksi metabolitleri klinik olarak “daha güvenli” saymak doğru değildir. 4-hidroksi metabolitlerin DNA hasarıyla ilişkisi kanser araştırmalarında inceleniyor; bu
           bulgu tek başına kişisel kanser riski göstermez.
         </p>
         <p>
@@ -237,13 +231,7 @@ const articleSchemas = buildArticleSchemas({
           ve uygulama yolunun seçileceği klinik tabloya göre değişir <sup><a href="#kaynak-1">[1]</a></sup>.
         </p>
         <p>
-          <strong>Ağızdan alınan östrojen</strong> karaciğerden ilk geçişte yoğun biçimde işlenir; pıhtılaşma faktörlerini ve
-          trigliseritleri etkiler. <strong>Deriden emilen östrojen</strong> (bant, jel) bu ilk geçişi atlar. İngiltere’de
-          toplardamar pıhtısı geçiren 80.396 kadının 391.494 kontrolle karşılaştırıldığı gözlemsel bir vaka-kontrol
-          çalışmasında ağızdan östrojen kullanımı daha yüksek pıhtı riskiyle ilişkili bulundu; deriden emilen formlarda
-          böyle bir ilişki görülmedi <sup><a href="#kaynak-8">[8]</a></sup> <Evidence level={4} />. Gözlemsel bir çalışma olduğu için bu bulgu kesin bir
-          neden-sonuç ilişkisi göstermez. Bu, her kadına otomatik olarak deriden
-          form seçileceği anlamına gelmez.
+          <strong>Ağızdan alınan östrojen</strong> karaciğerden ilk geçişte yoğun biçimde işlenir. <strong>Deriden emilen östrojen</strong> (bant, jel) bu ilk geçişi atlar. İngiltere’de toplardamar pıhtısı geçiren 80.396 kadın ile 391.494 kontrolün karşılaştırıldığı gözlemsel bir çalışmada ağızdan östrojen daha yüksek pıhtı riskiyle ilişkili bulundu. Deriden emilen formlarda böyle bir ilişki görülmedi <sup><a href="#kaynak-8">[8]</a></sup> <Evidence level={4} />. Gözlemsel bir çalışma olduğu için bulgu neden-sonuç ilişkisini kanıtlamaz ve her kadına otomatik olarak deriden form seçilmesini gerektirmez.
         </p>
         <p>
           <strong>Vajinal östrojen</strong> (krem, halka, tablet) lokal yakınmalarda kullanılır; düşük dozlu lokal ürünler
@@ -268,8 +256,7 @@ const articleSchemas = buildArticleSchemas({
           belirtilere bakılarak değerlendirilir. Tükürük veya saç testlerinin klinik geçerliliği zayıftır <sup><a href="#kaynak-6">[6]</a></sup>
           <Evidence level={4} />. Soya ve kırmızı yonca gibi bitkisel östrojenler sıcak basmalarında küçük bir azalma
           sağlayabilir. Ancak çalışmaların çoğunda yanlılık riski yüksektir ve bu ürünler hormon tedavisinin yerini tutmaz
-          <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={3} />. Besinle alınan soya için ise meme kanseri geçirmiş 9.514 kadını izleyen kohort
-          analizinde nüks riskinde artış görülmedi; daha yüksek tüketim daha düşük nüks oranıyla ilişkiliydi <sup><a href="#kaynak-16">[16]</a></sup>
+          <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={3} />. Besinle alınan soya için ise meme kanseri geçirmiş 9.514 kadını izleyen kohort analizinde nüks riskinde artış görülmedi. Daha yüksek tüketim daha düşük nüks oranıyla ilişkiliydi <sup><a href="#kaynak-16">[16]</a></sup>
           <Evidence level={3} />.
         </p>
 
@@ -281,14 +268,10 @@ const articleSchemas = buildArticleSchemas({
           <strong>Memede</strong> östrojen ER-α üzerinden hücre çoğalmasını destekler. Dünya genelindeki verileri birleştiren
           analizde vajinal östrojen dışındaki tüm hormon tedavisi türleri meme kanseri riskinde artışla ilişkili bulundu.
           Artış kullanım süresiyle büyüdü ve östrojen-progestajen kombinasyonunda yalnız östrojene göre daha yüksekti <sup><a href="#kaynak-9">[9]</a></sup>
-          <Evidence level={4} />. İlişkinin nedensel olduğu varsayımıyla yapılan tahmine göre, 50 yaşında başlayıp 5 yıl östrojenle
-          birlikte her gün progestajen kullanan yaklaşık 50 kadından birinde, 50–69 yaşları arasındaki 20 yılda fazladan bir
-          meme kanseri gelişir <sup><a href="#kaynak-9">[9]</a></sup>.
+          <Evidence level={4} />. İlişkinin nedensel olduğu varsayılırsa, 50 yaşında başlayıp 5 yıl östrojen ve her gün progestajen kullanan yaklaşık 50 kadından birinde fazladan bir meme kanseri gelişir. Bu, 50–69 yaşları arasındaki 20 yıl için yapılmış bir tahmindir <sup><a href="#kaynak-9">[9]</a></sup>.
         </p>
         <p>
-          Bu sonuç gözlemsel verilere dayanır ve her tedavi türüne aynı biçimde genellenemez. Randomize WHI çalışmalarının
-          20 yılı aşan izleminde, rahmi alınmış kadınlarda yalnız östrojen (konjuge östrojen) meme kanseri sıklığını
-          plaseboya göre azalttı; rahmi olan kadınlarda östrojen-MPA kombinasyonu ise artırdı <sup><a href="#kaynak-15">[15]</a></sup> <Evidence level={5} />.
+          Bu sonuç gözlemsel verilere dayanır ve her tedavi türüne aynı biçimde genellenemez. Randomize WHI çalışmalarının 20 yılı aşan izleminde yalnız östrojen (konjuge östrojen), rahmi alınmış kadınlarda meme kanseri sıklığını plaseboya göre azalttı. Rahmi olan kadınlarda östrojen-MPA kombinasyonu ise artırdı <sup><a href="#kaynak-15">[15]</a></sup> <Evidence level={5} />.
           Çalışmaya katılan kadınların yaş ortalaması 63 idi ve kullanılan ilaçlar bugün tercih edilen preparatların hepsini
           temsil etmez.
         </p>
@@ -300,7 +283,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           <strong>Yumurtalık kanserinde</strong> 52 çalışmayı birleştiren analiz küçük ama belirgin bir artış buldu.
           50 yaş civarında 5 yıl kullanan her 1000 kadında yaklaşık bir ek vaka görülür <sup><a href="#kaynak-10">[10]</a></sup>
-          <Evidence level={4} />. <strong>Kalın bağırsak kanseri</strong> ise daha az görüldü: büyük bir randomize çalışmada
+          <Evidence level={4} />. <strong>Kalın bağırsak kanseri</strong> ise daha az görüldü. Büyük bir randomize çalışmada
           östrojen-progestin alan kadınlarda bu kanser plaseboya göre daha seyrekti, ama saptanan kanserler daha ileri
           evredeydi <sup><a href="#kaynak-14">[14]</a></sup> <Evidence level={4} />. Bu bulgu tedavi kararını tek başına
           belirlemez; hormon tedavisi kanserden korunmak için kullanılmaz.
@@ -314,8 +297,7 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="muayenede-karar">Muayenede Östrojen Kararını Nasıl Kuruyorum</h2>
         <p>
           Östrojen biyolojisi muayene odasında en sık konuştuğum ama her hasta için yeniden öğrenmeyi gerektiren bir konu.
-          <em>“Östrojen düşüyor, HRT (hormon tedavisi) verelim”</em> denklemi günümüzde bu kadar düz kurulmuyor — formülasyon,
-          uygulama yolu, eşlik eden durumlar, kanser öyküsü ve risk profili kararı kişiselleştirilmiş bir denkleme çeviriyor.
+          <em>“Östrojen düşüyor, HRT (hormon tedavisi) verelim”</em> denklemi günümüzde bu kadar düz kurulmuyor. Formülasyon, uygulama yolu, eşlik eden durumlar, kanser öyküsü ve risk profili kararı kişiselleştirilmiş bir denkleme çeviriyor.
         </p>
         <p>
           Pratikte östrojen kararını birlikte değerlendirirken şu basamakları izlerim:
@@ -323,7 +305,7 @@ const articleSchemas = buildArticleSchemas({
         <ol>
           <li>Endikasyon ve hedef belirleme — hangi belirtileri (vasomotor, GSM yani genitoüriner menopoz sendromu, kemik koruması, ruh hali) hedefliyoruz;</li>
           <li>Risk profili — yaş, menopoz başlangıç zamanı, KV (kalp-damar) risk faktörleri, kanser öyküsü, tromboembolizm öyküsü, eşlik eden tıbbi durumlar ve ilaçlar;</li>
-          <li>Form ve doz seçimi — yalnızca GSM varsa çoğu zaman düşük doz lokal vajinal tedavi yeterli; sistemik belirti baskınsa transdermal seçenek düşünülebilir; uterusu olanda uygun progestajen seçimi;</li>
+          <li>Form ve doz seçimi — yalnızca GSM varsa çoğu zaman düşük doz vajinal tedavi yeterli; sistemik belirti baskınsa transdermal seçenek düşünülebilir; rahmi olanda progestajen eklenir;</li>
           <li>Değerlendirme takvimi — ilk kontrol genellikle 3. ayda (etki ve yan etki), sonra yıllık değerlendirme <sup><a href="#kaynak-2">[2]</a></sup>;</li>
           <li>Durdurma kriteri ve yeniden değerlendirme — tedavi açık uçlu değil, periyodik yeniden karar.</li>
         </ol>
@@ -331,8 +313,7 @@ const articleSchemas = buildArticleSchemas({
           <strong>Klinik kırmızı bayraklar:</strong> Postmenopozal kanama (herhangi miktar) — endometrium kanserinin
           dışlanması gerekir; HRT öncesi ve süresince kontrol noktası. Hormon reseptörü pozitif meme kanseri öyküsü — sistemik HRT
           genellikle önerilmez, lokal vajinal östrojen ise multidisipliner karar gerektirebilir. Tromboembolik olay öyküsü
-          veya kalıtsal yüksek pıhtılaşma riski — sistemik HRT (ağızdan ya da deriden) genellikle önerilmez; olayın nedenine
-          göre istisnai durumlarda hematoloji ile birlikte uzman değerlendirmesi gerekir. Aktif karaciğer hastalığı veya
+          veya kalıtsal yüksek pıhtılaşma riski — sistemik HRT (ağızdan ya da deriden) genellikle önerilmez. Olayın nedenine göre istisnai durumlarda hematoloji ile birlikte uzman değerlendirmesi gerekir. Aktif karaciğer hastalığı veya
           açıklanamayan vajinal kanama — nedeni netleşmeden sistemik HRT başlanmaz. Uzun süreli ve kontrolsüz HRT kullanımı
           ise yeniden değerlendirilmelidir <sup><a href="#kaynak-1">[1]</a></sup>.
         </p>
@@ -364,16 +345,15 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kaynaklar">Kaynaklar</h2>
         <p>
-          Bu makaledeki hormon tedavisi, meme ve yumurtalık güvenliği, tromboz, hormon testleri, kemik taraması ve E4
-          bilgilerine ilişkin kaynak taraması: 11 Ekim 2026.
+          Bu makaledeki hormon tedavisi, meme ve yumurtalık güvenliği, tromboz, hormon testleri, kemik taraması, E4, gebelikte östrojen üretimi ve ruh hâli bilgilerine ilişkin kaynak taraması: 12 Ekim 2026.
         </p>
         <ol>
           <li id="kaynak-1">The North American Menopause Society. <em>The 2022 hormone therapy position statement of The North American Menopause Society.</em> Menopause. 2022;29(7):767-794. <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
-          <li id="kaynak-2">National Institute for Health and Care Excellence. <em>Menopause: identification and management (NG23) — Recommendations.</em> <a href="https://www.nice.org.uk/guidance/ng23/chapter/Recommendations" rel="noopener noreferrer">Kılavuz sayfası</a>.</li>
+          <li id="kaynak-2">National Institute for Health and Care Excellence. <em>Menopause: identification and management (NG23) — Recommendations.</em> Son güncelleme: 2024. <a href="https://www.nice.org.uk/guidance/ng23/chapter/Recommendations" rel="noopener noreferrer">Kılavuz sayfası</a>.</li>
           <li id="kaynak-3">American College of Obstetricians and Gynecologists. <em>Compounded Bioidentical Menopausal Hormone Therapy.</em> Clinical Consensus. 2023. <a href="https://www.acog.org/clinical/clinical-guidance/clinical-consensus/articles/2023/11/compounded-bioidentical-menopausal-hormone-therapy" rel="noopener noreferrer">ACOG kaydı</a>.</li>
           <li id="kaynak-4">U.S. Preventive Services Task Force. <em>Osteoporosis to Prevent Fractures: Screening.</em> 2025. <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening" rel="noopener noreferrer">USPSTF önerisi</a>.</li>
           <li id="kaynak-5">Battipaglia C, Genazzani AD, Nappi RE, La Marca A. <em>Insights on estetrol, the native estrogen: from contraception to hormone replacement therapy.</em> Minerva Obstet Gynecol. 2024;76(6):590-603. <a href="https://pubmed.ncbi.nlm.nih.gov/39283289/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
-          <li id="kaynak-6">American College of Obstetricians and Gynecologists. <em>Should I have hormone testing before starting hormone therapy?</em> <a href="https://www.acog.org/womens-health/experts-and-stories/ask-acog/hormone-testing-before-hormone-therapy" rel="noopener noreferrer">ACOG sayfası</a>.</li>
+          <li id="kaynak-6">American College of Obstetricians and Gynecologists. <em>Should I have hormone testing before starting hormone therapy?</em> Erişim: 12 Ekim 2026. <a href="https://www.acog.org/womens-health/experts-and-stories/ask-acog/hormone-testing-before-hormone-therapy" rel="noopener noreferrer">ACOG sayfası</a>.</li>
           <li id="kaynak-7">Holinka CF, Diczfalusy E, Coelingh Bennink HJT. <em>Estetrol: a unique steroid in human pregnancy.</em> J Steroid Biochem Mol Biol. 2008;110(1-2):138-143. <a href="https://pubmed.ncbi.nlm.nih.gov/18462934/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-8">Vinogradova Y, Coupland C, Hippisley-Cox J. <em>Use of hormone replacement therapy and risk of venous thromboembolism: nested case-control studies using the QResearch and CPRD databases.</em> BMJ. 2019;364:k4810. <a href="https://pubmed.ncbi.nlm.nih.gov/30626577/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-9">Collaborative Group on Hormonal Factors in Breast Cancer. <em>Type and timing of menopausal hormone therapy and breast cancer risk: individual participant meta-analysis of the worldwide epidemiological evidence.</em> Lancet. 2019;394(10204):1159-1168. <a href="https://pubmed.ncbi.nlm.nih.gov/31474332/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
@@ -384,6 +364,8 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-14">Chlebowski RT, Wactawski-Wende J, Ritenbaugh C ve ark. <em>Estrogen plus progestin and colorectal cancer in postmenopausal women.</em> N Engl J Med. 2004;350(10):991-1004. <a href="https://pubmed.ncbi.nlm.nih.gov/14999111/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-15">Chlebowski RT, Anderson GL, Aragaki AK ve ark. <em>Association of Menopausal Hormone Therapy With Breast Cancer Incidence and Mortality During Long-term Follow-up of the Women's Health Initiative Randomized Clinical Trials.</em> JAMA. 2020;324(4):369-380. <a href="https://pubmed.ncbi.nlm.nih.gov/32721007/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-16">Nechuta SJ, Caan BJ, Chen WY ve ark. <em>Soy food intake after diagnosis of breast cancer and survival: an in-depth analysis of combined evidence from cohort studies of US and Chinese women.</em> Am J Clin Nutr. 2012;96(1):123-132. <a href="https://pubmed.ncbi.nlm.nih.gov/22648714/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-17">Raeside JI. <em>A Brief Account of the Discovery of the Fetal/Placental Unit for Estrogen Production in Equine and Human Pregnancies: Relation to Human Medicine.</em> Yale J Biol Med. 2017;90(3):449-461. <a href="https://pubmed.ncbi.nlm.nih.gov/28955183/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-18">Schipper M, Morssinkhof MWL, van Dijken DKE ve ark. <em>Prior reproductive and non-reproductive depression, and depressive symptoms in menopausal transition.</em> J Affect Disord. 2026;414:122361. <a href="https://pubmed.ncbi.nlm.nih.gov/42571793/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
         </ol>
       </ArticleProsePanel>
 

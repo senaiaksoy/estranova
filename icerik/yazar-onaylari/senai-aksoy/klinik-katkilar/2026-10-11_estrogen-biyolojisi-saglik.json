@@ -3,7 +3,7 @@
   "pathname": "/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code audit + revizyon (worktree claude/estrojen-revizyon).",
-  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12).",
+  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12, editoryal düzeltme turu).",
   "baselineApproval": "article-approvals.ts: yalnızca 2026-05-04 prelaunch envanter mutabakatı. 2026-08-06 esaslı güncellemenin (commit a46ee7d1) tıbbi inceleme veya onay kaydı yok; byline/şemadaki Mumcu inceleyen bilgisi kayıtla desteklenmiyordu.",
   "revisionScope": [
     "[5] künyesi: 'Lobo RA ve arkadaşları' yanlıştı → Battipaglia C, Genazzani AD, Nappi RE, La Marca A. Minerva Obstet Gynecol 2024;76(6):590-603 (PMID 39283289).",
@@ -87,5 +87,20 @@
     "pendingPhysicianText": "Klinik kırmızı bayraklar (VTE/kalıtsal trombofili, karaciğer hastalığı, açıklanamayan kanama) NAMS 2022 kontrendikasyon listesiyle çelişiyor; 3–6 ay kontrol NICE 1.9.2 (3. ay, sonra yıllık) ile; \"sadece GSM ise lokal vajinal yeterli\" kesinliği; \"kanser öykü\" dil hatası ve kısaltmalar. Önerilen metin Dr. Aksoy onayına sunuldu.",
     "approvalStatus": "2026-10-12: Dr. Alper Mumcu ve KC (Dr. Aksoy) onayladı (\"mumcu onayı ve benim onayım tamam\").",
     "physicianTextEdits": "Dr. Aksoy 2026-10-11 beş öneriyi onayladı (\"onay\"): pıhtı cümlesi NAMS 2022 kontrendikasyonlarına göre (sistemik HRT genellikle önerilmez, istisnada hematoloji ile uzman değerlendirmesi); karaciğer/açıklanamayan kanama \"nedeni netleşmeden sistemik HRT başlanmaz\"; takvim NICE 1.9.2 (3. ay, sonra yıllık) [2]; \"yalnızca GSM varsa çoğu zaman düşük doz lokal vajinal tedavi yeterli\"; \"kanser öyküsü\", kısaltma açılımları (HRT, GSM, KV), \"ekartasyonu zorunlu\" → \"dışlanması gerekir\". Kırmızı bayraklara NAMS [1] atfı eklendi."
+  },
+  "editorialPass20261012": {
+    "source": "12 Ekim 2026 Claude Code geniş denetim raporunun P2/P3 bulguları (worktree estrojen-duzeltme).",
+    "changes": [
+      "Hedef Organlar: NAMS 2022'ye dayanan zamanlama cümleleri (60 yaş / ilk 10 yıl) mekanizma paragrafından ayrı paragrafa alındı; 'anlamına gelmez' kalıbı azaltıldı.",
+      "25 sözcüğü aşan cümleler bölündü/kısaltıldı (RUTH, Vinogradova, WHI, Nechuta, meme kanseri mutlak risk tahmini, kalın bağırsak, metabolitler). Dr. Aksoy bölümünde: 'Östrojen düşüyor, HRT verelim' cümlesi, tromboembolik kırmızı bayrak cümlesi ve form/doz liste maddesi (uterusu olanda uygun progestajen seçimi → rahmi olanda progestajen eklenir).",
+      "E4: 'ileri klinik aşamalarda' ifadesine '2024 itibarıyla' eklendi.",
+      "E3: 'plasentada üretilir' → plasenta ve fetal karaciğerin birlikte çalışmasıyla oluşur, gebeliğin son döneminde baskın östrojen; kaynak 17 Raeside 2017 Yale J Biol Med (PMID 28955183, PubMed metadata ile doğrulandı).",
+      "'Ağızdan östrojen pıhtılaşma faktörlerini ve trigliseritleri etkiler' cümlesi NAMS tam metni doğrulanamadığı için kaynaksız kalmasın diye çıkarıldı; pıhtı riski farkı Vinogradova [8] ile kaynaklı kaldı.",
+      "Ruh hâli: adet öncesi ruh hâli bozukluğu / doğum sonrası depresyon öyküsü ile menopoz geçişinde daha belirgin depresif belirti ilişkisi gövdeye eklendi; kaynak 18 Schipper ve ark. J Affect Disord 2026;414:122361 (PMID 42571793, PubMed metadata ile doğrulandı; kesitsel, n=180; kanıt etiketi sınırlı). SSS yanıtına dokunulmadı.",
+      "Pıhtı paragrafındaki art arda iki inkâr cümlesi birleştirildi; NICE NG23 künyesine 'Son güncelleme: 2024', ACOG test sayfasına erişim tarihi eklendi.",
+      "Kaynak tarama tarihi, modifiedDate ve lastUpdated 12 Ekim 2026."
+    ],
+    "checks": "build:ci, check-editorial-lexicon, seo:audit, articles:audit:sources (bu makale için uyarı yok), senai-humanize editorial-check (0 aday) geçti.",
+    "approvalStatus": "2026-10-12: Dr. Alper Mumcu ve KC (Dr. Aksoy) onayladı (\"mumcu onayı ve benim onayım tamam\"). Dr. Aksoy'un kendi bölümündeki cümle düzeltmeleri ve PMDD kaynağının gövdeye eklenmesi onayı dahildir."
   }
 }
