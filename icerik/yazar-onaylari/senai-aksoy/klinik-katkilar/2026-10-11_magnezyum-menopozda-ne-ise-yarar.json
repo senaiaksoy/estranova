@@ -3,7 +3,7 @@
   "pathname": "/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/",
   "answeredAt": "2026-10-11",
   "source": "11 Ekim 2026 Claude Code oturumu: audit sonrası Dr. Aksoy'a yöneltilen ilk üç SSS sorusunun yazılı yanıtları.",
-  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12, SSS kaynak kontrolü dahil).",
+  "status": "Tamamlandı: tüm turlar onaylı (son: 2026-10-12, audit ve humanize revizyonu dahil).",
   "revisionScope": "Kaynak düzeltmeleri: [10] yanlış PMID 2246470 (AIDS makalesi) → Zehender 1997 MAGICA PMID 9120155, cümle eşleşmesi düzeltildi; [8] Belsey 2010 (gerçek konu: kabızlıkta yaşam kalitesi) → Bharucha & Lacy 2020 PMID 31945360; [3] başlık ve makale no (125) düzeltildi; [7] sitrat cümlesinden ayrıldı, glisinat tolerans iddiası kaynaksız olduğu için gövdeden çıkarıldı (hekim yanıtında); [9] 'düşük-orta' → 'düşük' (Boyle: poor quality); [11] çalışma grubu (155 sağlıklı erişkin, 18–65, 4 hafta) eklendi; kramp Evidence 2 → 4 (Cochrane orta/yüksek kesinlikte yararsızlık). Kısa Klinik Yanıt doğrudan cevaba çevrildi; 6 soru-H2'nin 5'i ve tek kelimelik Kapanış başlığı düz cümleye çevrildi (anchor'lar korundu); Kaynaklar Kapanış'tan sonraya alındı; tekrarlar birleştirildi; kırmızı bayrak kutusundan uyarı olmayan madde çıkarıldı; inceleme notundaki yazar sesi cümlesi düzeltildi; og:image eklendi; modifiedDate 11 Ekim 2026. Doz üst sınırı eklenmedi: NIH ODS ve NCBI Bookshelf bot doğrulaması nedeniyle birincil kaynak okunamadı.",
   "faqConversionStatus": "Tamamlandı: 4/4 soru Dr. Aksoy'un gerçek yanıtlarıyla 'Dr. Aksoy’a sorular' başlığında; 'en sık' nitelemesi arama verisiyle doğrulanmadığı için kullanılmadı.",
   "faqQuestionsAsked": [
@@ -146,5 +146,19 @@
     ],
     "sıcakBasmasıCevabı": "Değiştirilmedi; Park 2015 [20] ile uyumlu.",
     "approvalStatus": "2026-10-12: Dr. Alper Mumcu onayladı (KC bildirimi: 'mumcu onay tamam'). Dr. Aksoy önerileri 'öneriler onay' ile onayladı."
+  },
+  "auditHumanizePass20261012": {
+    "source": "12 Ekim 2026 Claude Code oturumu: magnezyum audit ve humanize revizyonu (WIP dalından alındı; kayıt: icerik/yazar-onaylari/senai-aksoy/onaylanan/2026-10-12_magnezyum-audit-humanize-fix.md).",
+    "changes": [
+      "Ağızdan alınan bisfosfonatlar: çok değerlikli katyon ürünlerin emilimi azaltması ve alendronattan sonra en az yarım saat beklenmesi, DailyMed alendronat etiketi (kaynak 22) ile desteklendi. Hayvan kaynağı (eski 22) çıkarıldı.",
+      "NIH ODS [12] bağlantısı ana daldaki haline döndü; sayfa botlara kapalı, doğrulanamadı.",
+      "Park 2015 popülasyonu (meme kanseri öyküsü, postmenopozal) ve oksit miktarının bileşik dozu olduğu belirtildi.",
+      "Kabızlık kanıt etiketi 2/5'ten 1/5'e (çok düşük kesinlik).",
+      "Çarpıntı: magnezyum+potasyum çalışmasında plaseboya göre ek düzelme olmadığı açıkça yazıldı.",
+      "Tarihler 12 Ekim 2026; görsel alt metni görülen sahneye göre değiştirildi.",
+      "Giriş, form, güvenlik ve kapanış bölümlerinde editoryal düzenleme; ilaç ve kanıt iddiaları değişmedi."
+    ],
+    "medicalNote": "Dr. Alper Mumcu incelemesi ve onayı: 12 Ekim 2026 (KC bildirimi: 'Mumcu da onay verdi'). Dr. Mumcu'nun 11 Ekim tarihli inceleme notu tarihsel olarak korunmuştur.",
+    "approvalStatus": "2026-10-12: Dr. Aksoy ('Onaylar tamam') ve Dr. Alper Mumcu onayladı."
   }
 }

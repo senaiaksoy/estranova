@@ -51,7 +51,8 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '7 Mayıs 2026',
-  modifiedDate: '11 Ekim 2026',
+  modifiedDate: '12 Ekim 2026',
+  image: articleImage,
   medicalReviewer: 'Dr. Alper Mumcu',
   pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
   articleSection: 'Zamansız Yaşam · Vitaminler',
@@ -97,10 +98,10 @@ const articleSchemas = buildArticleSchemas({
         articleType="clinical-guide"
         medicalReviewer="Dr. Alper Mumcu"
         publishedDate="7 Mayıs 2026"
-        lastUpdated="11 Ekim 2026"
+        lastUpdated="12 Ekim 2026"
         readingMinutes={9}
         imageSrc="/images/library/editorial/zy-magnezyum-menopoz-byline.webp"
-        imageAlt="Açık renkli bir iç mekanda su şişesiyle duran, krem tonlarda giyinmiş düşünceli kadın; menopoz döneminde gündelik ritim ve beden farkındalığı hissi"
+        imageAlt="Aydınlık bir iç mekânda, elinde metal su matarası tutan ve krem renkli palto giyen kadın"
         imagePosition="78% center"
       />
 
@@ -124,13 +125,13 @@ const articleSchemas = buildArticleSchemas({
       <ArticleProsePanel>
         <h2 id="neden-bu-kadar-konusuluyor">Magnezyum Neden Bu Kadar Sık Konuşuluyor?</h2>
         <p>
-          Magnezyum küçük bir mineral ama vücutta geniş bir iş yükü taşır. Adının bu kadar çok yakınmanın yanında geçmesi
-          bundandır.
+          Uyku, kramp, kabızlık… Magnezyumla ilgili önerilere bakınca aynı mineralin bütün sorunlara yetişmesi bekleniyor.
+          Oysa sizin hangi yakınma için düşündüğünüz, yanıtı değiştirir.
         </p>
         <p>
           Vücutta yüzlerce enzim tepkimesine katılır <sup><a href="#kaynak-1">[1]</a></sup> <Evidence level={5} />. Kas kasılmasından sinir iletimine,
-          enerji üretiminden kalp ritmine kadar uzanan bir rolü vardır. Biyolojik önemi büyük olsa da bu, her belirtiyi
-          açıkladığı ya da her kadında aynı yararı sağladığı anlamına gelmez.
+          enerji üretiminden kalp ritmine kadar uzanan bir rolü vardır. Eksikliği düzeltmenin yararıyla, eksikliği olmayan
+          bir kişide takviyenin belirli bir şikâyete etkisi ayrı sorulardır.
         </p>
         <p>
           Menopozda uykunun bölünmesi, kas gerginliği, gece krampları, bağırsak düzenindeki değişiklik ya da stres daha
@@ -146,8 +147,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="uyku-icin-kanit">Uykuda Kanıt Zayıf</h2>
         <p>
-          Uyku bozulduğunda magnezyum sık akla gelir. Önce uykunun neden bozulduğunu ayırmak gerekir: sıcak basması mı,
-          gece uyanmaları mı, kaygı mı, uyku apnesi mi?
+          Gece tekrar tekrar uyanıyorsanız magnezyum önerisi cazip gelebilir. Uykuda bildirilen yarar sınırlı;
+          sıcak basması, kaygı veya uyku apnesi gibi nedenleri de ayırmak gerekir.
         </p>
         <p>
           Yaşlı erişkinlerde yapılan üç küçük randomize çalışmanın derlemesinde magnezyum uykuya dalma süresini kısaltmış
@@ -163,12 +164,18 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Menopozda uykuyu bozan en önemli etkenlerden biri sıcak basmasıdır. Depresyon, uyku apnesi gibi solunum sorunları,
           huzursuz bacak gibi hareket bozuklukları ve yaşam alışkanlıkları da uykuyu etkileyebilir <sup><a href="#kaynak-4">[4]</a></sup> <Evidence level={3} />.
-          Magnezyumun sıcak basmasına bağlı uykusuzlukta işe yaradığı gösterilmiş değil; bu durumda önce uykuyu bozan menopoz belirtisi değerlendirilir. Oksit 800–1.200 mg ile yapılan randomize bir çalışmada sıcak basmaları da azalmadı <sup><a href="#kaynak-20">[20]</a></sup> <Evidence level={2} />.
+        </p>
+        <p>
+          Magnezyumun sıcak basmasına bağlı uykusuzlukta işe yaradığı gösterilmiş değil; bu durumda önce uykuyu bozan menopoz belirtisi değerlendirilir.
+          Meme kanseri öyküsü olan menopoz sonrası kadınlarda yapılan randomize çalışmada, günlük 800–1.200 mg
+          magnezyum oksit sıcak basmalarını plaseboya göre azaltmadı <sup><a href="#kaynak-20">[20]</a></sup> <Evidence level={2} />.
+          Bu miktar magnezyum oksit bileşiğine aittir; elementel magnezyum dozu veya kullanım önerisi değildir.
         </p>
 
         <h2 id="kramp-ve-gerginlik">Gece Kramplarında Yarar Gösterilemedi</h2>
         <p>
-          Gece krampları magnezyumla en çok eşleştirilen yakınmadır. Ne var ki veriler bu eşleşmeyi desteklemiyor.
+          Baldırınıza gece giren krampı yalnızca mineral eksikliğiyle açıklamak kolaydır. Bu yakınmada asıl ayrım,
+          krampın nedeninin belli olup olmadığıdır.
         </p>
         <p>
           Nedeni belli olmayan gece krampları yaşayan, çoğu 60’lı yaşlardaki erişkinlerde magnezyum, kramp sıklığını ve
@@ -190,7 +197,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Erişkinlerde nedeni bilinmeyen uzun süreli kabızlık için hazırlanan kılavuz, magnezyum oksidi koşullu olarak önerir;
-          dayandığı kanıtın kesinliği çok düşüktür <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={2} />. Diğer magnezyum formları bu kılavuzda
+          dayandığı kanıtın kesinliği çok düşüktür <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={1} />. Diğer magnezyum formları bu kılavuzda
           değerlendirilmedi. Magnezyumun kabızlıkta kullanımı, kanıtı sınırlı olsa da yerleşik bir
           uygulamadır <sup><a href="#kaynak-2">[2]</a></sup>.
         </p>
@@ -206,31 +213,37 @@ const articleSchemas = buildArticleSchemas({
           ve kaygı tek bir mineralin açıklayabileceğinden daha geniştir.
         </p>
         <p>
-          Kaygıya yatkın gruplarda yapılan çalışmaları toplayan derleme olumlu bir eğilim buldu, ama kanıt kalitesini düşük
+          Kaygıya yatkın gruplarda yapılan çalışmaları toplayan derleme bazı olumlu bulgular bildirdi, ama kanıt kalitesini düşük
           olarak değerlendirdi <sup><a href="#kaynak-9">[9]</a></sup> <Evidence level={2} />. Yoğun kaygı, panik atak veya depresif belirtilerde
-          magnezyum bir çözüm değildir; bu durumlar ayrıca değerlendirilir.
+          magnezyuma güvenerek değerlendirmeyi ertelemeyin; bu belirtiler için ayrıca yardım almak gerekir.
         </p>
         <p>
           Çarpıntıda daha temkinli olmak gerekir. Bir çalışmada sık ventrikül ekstra atımı (kalbin alt odacıklarından kaynaklanan
           erken vuruşlar) olan hastalara magnezyum ve potasyum birlikte verildi. Ekstra atımlar azaldı, ama hastaların
-          yakınmaları değişmedi <sup><a href="#kaynak-10">[10]</a></sup> <Evidence level={2} />.
+          yakınmalarında plaseboya göre ek bir düzelme olmadı <sup><a href="#kaynak-10">[10]</a></sup> <Evidence level={2} />.
           Günlük hayatta hissedilen çarpıntının ardında menopoz, kaygı, kafein, tiroid bozukluğu, kansızlık ya da gerçek bir
           ritim sorunu olabilir; bu yüzden önce neden ayrılır.
         </p>
 
         <h2 id="formlar">Glisinat, Sitrat, Oksit: Form Amaca Göre Seçilir</h2>
         <p>
-          Tek bir doğru form yoktur. Emilim çalışmaları da birbirini tutmuyor. Gönüllülerde yapılan küçük bir çalışmada magnezyum oksidin emilimi düşük (yaklaşık %4) bulundu <sup><a href="#kaynak-16">[16]</a></sup> <Evidence level={2} />; daha yeni çalışmalarda ise oksit, sitrat ve amino asit şelatları arasında farklı sonuçlar çıktı <sup><a href="#kaynak-18">[18]</a></sup><sup><a href="#kaynak-19">[19]</a></sup>.
-          Ancak uyku ya da menopoz yakınmalarında bir formun klinik olarak diğerinden üstün olduğu gösterilmiş değil.
+          Kutudaki glisinat, sitrat veya oksit adı size tek başına bir seçim yaptırmaz. Uyku ya da menopoz yakınmalarında
+          bir formun klinik olarak diğerinden üstün olduğu gösterilmiş değil.
+        </p>
+        <p>
+          Emilim çalışmaları da birbirini tutmuyor. Gönüllülerde yapılan küçük bir çalışmada magnezyum oksidin emilimi
+          düşük (yaklaşık %4) bulundu <sup><a href="#kaynak-16">[16]</a></sup> <Evidence level={2} />.
+          Başka çalışmalarda oksit, sitrat ve amino asit şelatları arasında farklı sonuçlar çıktı
+          <sup><a href="#kaynak-18">[18]</a></sup><sup><a href="#kaynak-19">[19]</a></sup>.
+          Emilim ölçümü, bir yakınmanın ne kadar hafiflediğini ölçmez.
         </p>
         <p>
           Kabızlıkta bağırsak etkisi belirgin formlar, hassas bağırsakta ise daha iyi tolere edilen formlar öne çıkar.
-          Uyku şikâyeti olan sağlıklı erişkinlerde yapılan glisinat çalışmasında etki küçüktü <sup><a href="#kaynak-11">[11]</a></sup>. Formlar arasındaki pratik farkları aşağıdaki
-          sorular bölümünde ayrıntılı bulabilirsiniz.
+          Formlar arasındaki pratik farkları aşağıdaki sorular bölümünde ayrıntılı bulabilirsiniz.
         </p>
         <p>
           Etiketteki form adı çoğu zaman ürünün en büyük harfle yazılmış vaadidir. Asıl önemli rakam ise arka yüzdeki
-          elementel magnezyum miktarıdır; doz ve kullanım saati de form kadar belirleyicidir.
+          elementel magnezyum miktarıdır: bileşiğin içerdiği magnezyum miktarı. Doz ve kullanım saati de seçimde önemlidir.
         </p>
 
         <h2 id="kimler-dikkatli-olmali">Böbrek Hastalığı ve İlaçlar Varsa Kendi Başınıza Başlamayın</h2>
@@ -239,7 +252,12 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Böbrek işlevi bozuk olanlar, çok sayıda ilaç kullananlar, bazı antibiyotikleri kullananlar
-          ve yüksek dozları uzun süre düşünenler daha dikkatli olmalıdır <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={4} />. Magnezyum bazı ilaçların emilimini azaltabilir; bu yüzden ilaçlarla arasındaki süre önemlidir. Antasitlerin bazı antibiyotiklerin emilimini düşürdüğü <sup><a href="#kaynak-21">[21]</a></sup>, çok değerlikli katyonların ise osteoporoz ilaçlarının emilimini azaltabildiği bildirilmiştir <sup><a href="#kaynak-22">[22]</a></sup>. Tiroid hormonu ilacı
+          ve yüksek dozları uzun süre düşünenler daha dikkatli olmalıdır <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={4} />.
+        </p>
+        <p>
+          Ağızdan alınan bisfosfonatlarda (osteoporoz ilaçlarının bir grubu), çok değerlikli katyon içeren ürünlerin emilimi azalttığı ve alendronattan sonra diğer ağızdan ilaçlar için en az yarım saat beklenmesi gerektiği etikette yazılıdır <sup><a href="#kaynak-22">[22]</a></sup>.
+          Magnezyum içeren antasitler de bazı antibiyotiklerle etkileşebilir <sup><a href="#kaynak-21">[21]</a></sup>.
+          Kullanım saatlerini hekiminiz veya eczacınızla ilaç özelinde netleştirin. Tiroid hormonu ilacı
           levotiroksinin prospektüsü, magnezyum içeren mide asidi ilaçlarıyla (antasitler) arasında en az 4 saat
           bırakılmasını önerir <sup><a href="#kaynak-15">[15]</a></sup>.
         </p>
@@ -250,8 +268,8 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Takviye olarak alınan magnezyum için günlük üst sınır Avrupa’da 250 mg <sup><a href="#kaynak-14">[14]</a></sup>, ABD’de 350 mg’dır <sup><a href="#kaynak-13">[13]</a></sup>
           <Evidence level={4} />. Avrupa’daki sınır takviyelerde, suda ve gıdalara eklenen kolay çözünen magnezyum
-          tuzlarını kapsar. İki sınır da elementel magnezyum (bileşiğin içerdiği magnezyum miktarı) içindir ve normal
-          besinlerle alınan magnezyumu kapsamaz; aşıldığında ilk görülen sorun genellikle ishaldir.
+          tuzlarını ve magnezyum oksit gibi bileşikleri kapsar. İki sınır da elementel magnezyum içindir ve normal
+          besinlerle alınan magnezyumu kapsamaz. Üst sınırlar ishal riskine dayanır; herkeste aynı dozda yan etki beklenmez.
         </p>
         <p>
           31 yaş ve üzerindeki kadınların günlük magnezyum ihtiyacı ise besinler dahil yaklaşık 320 mg’dır <sup><a href="#kaynak-13">[13]</a></sup>.
@@ -261,6 +279,8 @@ const articleSchemas = buildArticleSchemas({
           1.000 mg aynı şey değildir.
         </p>
         <RedFlagBox
+          title="Magnezyum Başlamadan Önce Hekiminizle Konuşun"
+          intro="Böbrek hastalığınız, düzenli ilaç kullanımınız veya açıklanamayan yeni bir yakınmanız varsa takviye kararını bunlarla birlikte değerlendirin."
           markers={[
             'Böbrek hastalığı veya böbrek fonksiyonunda bozulma öyküsü varsa',
             'Tiroid ilacı, bazı antibiyotikler veya çoklu düzenli ilaç kullanımı söz konusuysa',
@@ -268,7 +288,7 @@ const articleSchemas = buildArticleSchemas({
             'Uzun süren, açıklanamayan kabızlık veya bağırsak alışkanlığında belirgin değişiklik olduysa',
             'Yüksek dozları uzun süre kendi başına kullanma eğilimi varsa',
           ]}
-          footnote="Bu maddeler magnezyumu tehlikeli göstermek için değil; hangi durumlarda daha dikkatli ve daha hedefli konuşulması gerektiğini görünür kılmak için yer alıyor."
+          footnote="Görüşmeye tüm ilaç ve takviyelerinizin listesini götürün; farklı ürünlerdeki magnezyum miktarları birlikte değerlendirilir."
         />
         <p>
           <strong>Acil durum:</strong> Çarpıntı geçmiyorsa ya da göğüs ağrısı, nefes darlığı, bayılma veya bayılacak gibi
@@ -277,7 +297,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="doktora-uc-soru">Görüşmeye Götürülecek Üç Soru</h2>
         <p>
-          Magnezyum konuşulurken en yararlı başlangıç, hedefi netleştirmektir.
+          Görüşmeye kullandığınız ilaçların ve takviyelerin adlarını götürün. Magnezyumu konuşurken şu üç soru,
+          beklentinizi ve olası riskleri netleştirmeye yardımcı olur.
         </p>
         <ol>
           <li>Magnezyumu hangi yakınma için düşünüyoruz: uyku, kabızlık, kas gerginliği ya da olası bir eksiklik mi?</li>
@@ -287,13 +308,12 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kapanis">Amacı Belli Bir Araç</h2>
         <p>
-          Erişkinlerde uzun süren kabızlıkta magnezyum oksit, kılavuzda koşullu bir seçenek olarak yer alır. Uykuda bazı
-          çalışmalarda küçük bir iyileşme bildirilmiş, kaygıda yarar belirsiz; yaşlı erişkinlerin gece kramplarında ise
-          yarar gösterilemedi.
+          Magnezyum için karar verirken başlangıç noktası, hangi yakınmayı ele aldığınızdır. Kabızlık, uyku ve gece
+          krampları aynı kanıtla değerlendirilemez.
         </p>
         <p>
           Hangi belirtiyi ele aldığınızı, hangi formu neden düşündüğünüzü ve başka nedenler olup olmadığını ayırdığınızda
-          karar daha sakin ve daha güvenli hale gelir.
+          karar daha anlaşılır hale gelir. Takviye kullanmamak da değerlendirme sonunda varılabilecek bir karardır.
         </p>
 
         <h2 id="kaynaklar">Kaynaklar</h2>
@@ -323,7 +343,7 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-19">Ivanovic ND, Radosavljevic B, Zekovic M ve ark. <em>Effects of short-term magnesium supplementation on ionized, total magnesium and other relevant electrolytes levels.</em> Biometals. 2022;35(2):267-283. <a href="https://pubmed.ncbi.nlm.nih.gov/35041150/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-20">Park H, Qin R, Smith TJ ve ark. <em>North Central Cancer Treatment Group N10C2 (Alliance): a double-blind placebo-controlled study of magnesium supplements to reduce menopausal hot flashes.</em> Menopause. 2015;22(6):627-632. <a href="https://pubmed.ncbi.nlm.nih.gov/25423327/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-21">Gugler R, Allgayer H. <em>Effects of antacids on the clinical pharmacokinetics of drugs. An update.</em> Clin Pharmacokinet. 1990;18(3):210-219. <a href="https://pubmed.ncbi.nlm.nih.gov/1969784/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
-          <li id="kaynak-22">Itoh A, Akagi Y, Shimomura H, Aoyama T. <em>Interaction between Bisphosphonates and Mineral Water: Study of Oral Risedronate Absorption in Rats.</em> Biol Pharm Bull. 2016;39(3):323-328. <a href="https://pubmed.ncbi.nlm.nih.gov/26934925/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-22">U.S. National Library of Medicine, DailyMed. <em>Alendronate sodium tablet — Prescribing Information</em> (Bölüm 2.6 ve 7.1). Erişim: 12 Ekim 2026. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b63421af-ec03-1de7-e053-2a95a90abec6" rel="noopener noreferrer">DailyMed kaydı</a>.</li>
         </ol>
       </ArticleProsePanel>
 
