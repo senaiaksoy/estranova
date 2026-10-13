@@ -1114,11 +1114,11 @@ const showEditorialDigest = featureFlags.editorialDigestVisible;
   // (yaşam yazarları + bilim yazarları). Her birinin track / prev / next /
   // dots elemanları kendi carousel scope'unda yer alır; JS hepsini forEach
   // ile bağımsız initialize eder.
-  function initWritersCarousel(carousel) {
-    const track = carousel.querySelector('[data-writers-track]');
-    const prevBtn = carousel.querySelector('[data-writers-prev]');
-    const nextBtn = carousel.querySelector('[data-writers-next]');
-    const dotsContainer = carousel.querySelector('[data-writers-dots]');
+  function initWritersCarousel(carousel: Element) {
+    const track = carousel.querySelector<HTMLElement>('[data-writers-track]');
+    const prevBtn = carousel.querySelector<HTMLButtonElement>('[data-writers-prev]');
+    const nextBtn = carousel.querySelector<HTMLButtonElement>('[data-writers-next]');
+    const dotsContainer = carousel.querySelector<HTMLElement>('[data-writers-dots]');
     if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
     const items = Array.from(track.querySelectorAll(':scope > li'));

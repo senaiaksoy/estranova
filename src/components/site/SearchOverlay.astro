@@ -73,7 +73,7 @@
 <script>
   const searchOverlay = document.getElementById('search-overlay');
   const searchBackdrop = document.getElementById('search-backdrop');
-  const searchInput = document.getElementById('search-input');
+  const searchInput = document.querySelector<HTMLInputElement>('#search-input');
   const searchDefault = document.getElementById('search-default');
   const searchFiltered = document.getElementById('search-filtered');
   const searchEmpty = document.getElementById('search-empty');
@@ -138,7 +138,7 @@
   function renderDefault() {
     if (!items) return;
     searchDefault.innerHTML = '';
-    const groups = {};
+    const groups: Record<string, NonNullable<typeof items>> = {};
     items.forEach((item) => {
       if (!groups[item.category]) groups[item.category] = [];
       groups[item.category].push(item);
@@ -257,7 +257,7 @@
   });
 
   searchInput.addEventListener('input', (e) => {
-    const q = e.target.value.trim();
+    const q = searchInput.value.trim();
     activeIndex = -1;
     if (!q) {
       searchDefault.classList.remove('hidden');
