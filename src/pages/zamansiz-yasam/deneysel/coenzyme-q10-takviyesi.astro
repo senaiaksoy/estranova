@@ -31,7 +31,7 @@ const tocEntries = [
   { id: 'anti-aging', label: 'Anti-Aging ve Menopoz İddiaları' },
   { id: 'pratik-notlar', label: 'Ubiquinone, Ubiquinol, Doz' },
   { id: 'uc-soru', label: 'Doktora Üç Soru' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar', numbered: false },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -360,8 +360,8 @@ const articleSchemas = buildArticleSchemas({
               ]}
             />
 
-            <ArticleProsePanel class="mt-10">
-              <h2 id="kaynaklar" style="counter-increment: none;">Kaynaklar</h2>
+            <ArticleProsePanel class="mt-10 prose-estranova-references">
+              <h2 id="kaynaklar">Kaynaklar</h2>
               <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
                 <li id="kaynak-1">
                   Hua Qu, Ming Guo, Hua Chai et al. "Effects of Coenzyme Q10 on Statin-Induced Myopathy: An Updated Meta-Analysis of Randomized Controlled Trials."

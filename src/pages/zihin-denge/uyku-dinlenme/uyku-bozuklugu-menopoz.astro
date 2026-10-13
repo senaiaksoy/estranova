@@ -32,9 +32,9 @@ const tocEntries = [
   { id: 'dogal-destekler', label: 'Doğal Destekler ve Takviyeler — Aceleci Olmadan' },
   { id: 'tibbi-tedavi', label: 'Tıbbi Destek Seçenekleri — Karar Süreci' },
   { id: 'uzman-ne-zaman', label: 'Uyku Uzmanına Danışmayı Düşündüren İşaretler' },
-  { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular" },
+  { id: 'kaynaklar', label: 'Kaynaklar', numbered: false },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular", numbered: false },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -294,15 +294,6 @@ const articleSchemas = buildArticleSchemas({
           yürütmek yerine klinik değerlendirme, gerekirse polisomnografi ve uyku uzmanı izlemi isterim.
         </p>
 
-        <h2 id="kaynaklar" style="counter-increment: none;">Kaynaklar</h2>
-        <p>Bu rehberdeki klinik çerçeveyi oluşturan başlıca kaynaklar; metindeki numaralar bu listeye bağlanır:</p>
-        <ol>
-          <li id="kaynak-1">Türkiye Endokrinoloji ve Metabolizma Derneği. <a href="https://temd.org.tr/halk/hastaliklar/menopoz" target="_blank" rel="noopener noreferrer">Menopoz hakkında bilgilendirme notu</a>.</li>
-          <li id="kaynak-2">Edinger JD ve ark. Yetişkinlerde kronik uykusuzluğun davranışsal ve psikolojik tedavisi: Amerikan Uyku Tıbbı Akademisi klinik uygulama kılavuzu. J Clin Sleep Med. 2021;17(2):255-262. <a href="https://pubmed.ncbi.nlm.nih.gov/33164742/" target="_blank" rel="noopener noreferrer">PMID: 33164742</a>.</li>
-          <li id="kaynak-3">Silvestri R ve ark. Menopozal uyku bozukluklarının tedavisine ilişkin İtalyan Uyku Tıbbı Derneği görüş bildirisi ve kılavuzu (sistematik derleme). Maturitas. 2019;129:30-39. <a href="https://pubmed.ncbi.nlm.nih.gov/31547910/" target="_blank" rel="noopener noreferrer">PMID: 31547910</a>.</li>
-          <li id="kaynak-4">Moon HJ, Yu SN, Hur MH. Menopozal uykusuzlukta bilişsel davranışçı terapinin uyku kalitesi ve uykusuzluk şiddeti üzerine etkisi: sistematik derleme ve meta-analiz. Womens Health Nurs. 2025;31(4):304-319. <a href="https://pubmed.ncbi.nlm.nih.gov/41531400/" target="_blank" rel="noopener noreferrer">PMID: 41531400</a>.</li>
-        </ol>
-
         <h2 id="kapanis">Kapanış</h2>
         <p>
           Bu yazıdan aklınızda üç şey kalsın: sabit bir yatma-kalkma saati, serin bir yatak odası ve akşamın son iki
@@ -315,6 +306,17 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Uyku bozukluğu görünmez bir yük olabilir. Hekiminize anlatmaya değer.
         </p>
+      </ArticleProsePanel>
+
+      <ArticleProsePanel class="mt-10 prose-estranova-references">
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p>Bu rehberdeki klinik çerçeveyi oluşturan başlıca kaynaklar; metindeki numaralar bu listeye bağlanır:</p>
+        <ol>
+          <li id="kaynak-1">Türkiye Endokrinoloji ve Metabolizma Derneği. <a href="https://temd.org.tr/halk/hastaliklar/menopoz" target="_blank" rel="noopener noreferrer">Menopoz hakkında bilgilendirme notu</a>.</li>
+          <li id="kaynak-2">Edinger JD ve ark. Yetişkinlerde kronik uykusuzluğun davranışsal ve psikolojik tedavisi: Amerikan Uyku Tıbbı Akademisi klinik uygulama kılavuzu. J Clin Sleep Med. 2021;17(2):255-262. <a href="https://pubmed.ncbi.nlm.nih.gov/33164742/" target="_blank" rel="noopener noreferrer">PMID: 33164742</a>.</li>
+          <li id="kaynak-3">Silvestri R ve ark. Menopozal uyku bozukluklarının tedavisine ilişkin İtalyan Uyku Tıbbı Derneği görüş bildirisi ve kılavuzu (sistematik derleme). Maturitas. 2019;129:30-39. <a href="https://pubmed.ncbi.nlm.nih.gov/31547910/" target="_blank" rel="noopener noreferrer">PMID: 31547910</a>.</li>
+          <li id="kaynak-4">Moon HJ, Yu SN, Hur MH. Menopozal uykusuzlukta bilişsel davranışçı terapinin uyku kalitesi ve uykusuzluk şiddeti üzerine etkisi: sistematik derleme ve meta-analiz. Womens Health Nurs. 2025;31(4):304-319. <a href="https://pubmed.ncbi.nlm.nih.gov/41531400/" target="_blank" rel="noopener noreferrer">PMID: 41531400</a>.</li>
+        </ol>
       </ArticleProsePanel>
 
       <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a Sorular" items={faqItems} class="mt-10" />

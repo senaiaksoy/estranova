@@ -18,6 +18,9 @@
 export interface TOCEntry {
   id: string;
   label: string;
+  // Kaynaklar ve SSS gibi anlatı dışı bölümler false verir: gövdedeki
+  // chapter counter'ı bu başlıklarda numara basmaz, TOC de basmamalı.
+  numbered?: boolean;
 }
 
 interface Props {
@@ -25,6 +28,11 @@ interface Props {
 }
 
 const { entries } = Astro.props;
+
+let chapter = 0;
+const markers = entries.map((entry) =>
+  entry.numbered === false ? null : String(++chapter).padStart(2, '0'),
+);
 ---
 
 <nav
@@ -60,7 +68,7 @@ const { entries } = Astro.props;
             class="group grid grid-cols-[2rem_1fr] gap-2 rounded-2xl border border-transparent px-2 py-1.5 text-ink/70 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 hover:bg-cream-soft/35 hover:text-primary data-[active=true]:border-gold/30 data-[active=true]:bg-cream-soft/45 data-[active=true]:font-semibold data-[active=true]:text-primary"
           >
             <span class="font-serif tabular-nums text-gold transition group-data-[active=true]:text-primary">
-              {String(i + 1).padStart(2, '0')}
+              {markers[i] ?? <span aria-hidden="true">—</span>}
             </span>
             <span class="group-hover:underline group-hover:decoration-primary/40 group-hover:underline-offset-2 group-data-[active=true]:underline group-data-[active=true]:decoration-primary/60 group-data-[active=true]:underline-offset-4">
               {entry.label}

@@ -25,7 +25,7 @@ const tocEntries = [
   { id: 'belirtiler', label: 'Belirtiler ve postmenopoz dönemi' },
   { id: 'saglik-gundemi', label: 'Uzun vadeli sağlık ve izlem' },
   { id: 'iyi-olus', label: 'İyi oluşu destekleyen alışkanlıklar' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar', numbered: false },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -269,8 +269,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <ArticleProsePanel class="mt-10">
-        <h2 id="kaynaklar" style="counter-increment: none;">Kaynaklar</h2>
+      <ArticleProsePanel class="mt-10 prose-estranova-references">
+        <h2 id="kaynaklar">Kaynaklar</h2>
         <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
           <li id="kaynak-1">
             Harlow SD et al. "Executive summary of the Stages of Reproductive Aging Workshop + 10: addressing the unfinished agenda of staging reproductive aging."
