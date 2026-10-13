@@ -157,6 +157,8 @@ function parseFrontmatter(astroSource) {
     description: extractFrontmatterField(fm, /(?:const\s+)?articleDescription\s*=\s*\n?\s*['"`]([\s\S]*?)['"`];?\s*\n/),
     writerSlug: resolveStringOrVar(fm, 'writerSlug'),
     publishedDate: resolveStringOrVar(fm, 'publishedDate'),
+    modifiedDate: resolveStringOrVar(fm, 'modifiedDate'),
+    medicalReviewer: resolveStringOrVar(fm, 'medicalReviewer'),
     pathname: resolveStringOrVar(fm, 'pathname'),
     articleSection: resolveStringOrVar(fm, 'articleSection'),
     sectionPath: resolveStringOrVar(fm, 'sectionPath'),
@@ -175,7 +177,7 @@ function extractArticleBodyFromHtml(html) {
   const parts = [];
 
   // 1. Kısa Özet
-  const ozetRe = /<section\s+class="[^"]*from-white\s+to-cream-soft[^"]*"[^>]*>([\s\S]*?)<\/section>/;
+  const ozetRe = /<section\s+class="[^"]*(?:from-white\s+to-cream-soft|article-export-summary)[^"]*"[^>]*>([\s\S]*?)<\/section>/;
   const ozetMatch = html.match(ozetRe);
   if (ozetMatch) parts.push(ozetMatch[0]);
 
@@ -188,6 +190,10 @@ function extractArticleBodyFromHtml(html) {
   const benRe = /<section\s+class="[^"]*border-l-gold[^"]*"[^>]*>([\s\S]*?)<\/section>/;
   const benMatch = html.match(benRe);
   if (benMatch) parts.push(benMatch[0]);
+
+  // Deneyim yazısının ayrı tıbbi notu; sayfa bu yüzeyi açıkça işaretler.
+  const medicalMatch = html.match(/<section\s+class="[^"]*article-export-medical-context[^"]*"[^>]*>[\s\S]*?<\/section>/);
+  if (medicalMatch) parts.push(medicalMatch[0]);
 
   // 4. Disclaimer (border-dashed kart)
   const dscRe = /<section\s+class="[^"]*border-dashed[^"]*"[^>]*>([\s\S]*?)<\/section>/;
@@ -274,6 +280,9 @@ function buildYamlFrontmatter(fm, isoDate) {
   if (fm.writerSlug) lines.push(`writer: ${fm.writerSlug}`);
   if (fm.publishedDate) lines.push(`publishedDate: ${JSON.stringify(fm.publishedDate)}`);
   if (isoDate) lines.push(`publishedDateIso: ${isoDate}`);
+  if (fm.modifiedDate) lines.push(`modifiedDate: ${JSON.stringify(fm.modifiedDate)}`);
+  if (fm.medicalReviewer) lines.push(`medicalReviewer: ${JSON.stringify(fm.medicalReviewer)}`);
+  lines.push('exportScope: local-build');
   if (fm.pathname) lines.push(`url: ${fm.pathname}`);
   if (fm.articleSection) lines.push(`section: ${JSON.stringify(fm.articleSection)}`);
   if (fm.sectionPath) lines.push(`sectionPath: ${fm.sectionPath}`);
@@ -446,6 +455,11 @@ function generateReadme(exported) {
 }
 
 async function main() {
+  const articleFlag = process.argv.indexOf('--article');
+  const requestedArticle = articleFlag < 0 ? null : process.argv[articleFlag + 1];
+  if (articleFlag >= 0 && (!requestedArticle || !requestedArticle.startsWith('/') || requestedArticle.includes('..'))) {
+    throw new Error('--article için / ile başlayan makale rotası gerekir.');
+  }
   console.log('Estranova makale arşiv export başlıyor...');
   console.log(`  ROOT  : ${ROOT}`);
   console.log(`  PAGES : ${PAGES_DIR}`);
@@ -462,7 +476,11 @@ async function main() {
     process.exit(1);
   }
 
-  const articles = await findAstroArticles(PAGES_DIR);
+  const allArticles = await findAstroArticles(PAGES_DIR);
+  const articles = requestedArticle
+    ? allArticles.filter((ap) => normalizePathname('/' + path.relative(PAGES_DIR, ap).replace(/\\/g, '/').replace(/\.astro$/, '')) === normalizePathname(requestedArticle))
+    : allArticles;
+  if (requestedArticle && articles.length !== 1) throw new Error('İstenen tek makale bulunamadı.');
   const approvedPathnames = await loadApprovedPathnames();
   console.log(`Bulunan Astro page: ${articles.length}\n`);
 
@@ -497,8 +515,10 @@ async function main() {
   }
 
   // README üret + her iki yere yaz
-  const readme = generateReadme(exported);
-  await writeBoth('README.md', readme);
+  if (!requestedArticle) {
+    const readme = generateReadme(exported);
+    await writeBoth('README.md', readme);
+  }
 
   console.log('');
   console.log('━'.repeat(60));

@@ -221,6 +221,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/': {
+    src: '/images/library/editorial/basak-pelister-hrt-karari.webp',
+    alt: 'Deniz manzaralı bir balkonda bordo şal içinde kahvesini tutan, uzağa bakan bir kadın.',
+  },
   '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-kilo-vucut-sekillendirme.webp',
     alt: 'Şehir manzaralı bir yatak odasında boy aynasının önünde pantolonunun belini düzelten bir kadın.',
@@ -300,10 +304,6 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/': {
     src: '/images/library/editorial/ersin-sarac-belden-gelen-agri-byline.jpg',
     alt: 'Oturma odasında bir pufun üzerinde otururken eliyle belini tutan bir kadın.',
-  },
-  '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/': {
-    src: '/images/library/editorial/basak-pelister-hrt-karari-byline.jpg',
-    alt: 'Deniz manzaralı bir balkonda kahvesini yudumlayıp uzağa bakan bordo şallı bir kadın.',
   },
   '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/': {
     src: '/images/library/editorial/hg-hrt-ilk-alti-ay.webp',

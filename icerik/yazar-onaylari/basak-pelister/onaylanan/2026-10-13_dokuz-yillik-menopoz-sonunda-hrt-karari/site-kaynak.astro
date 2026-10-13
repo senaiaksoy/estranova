@@ -1,0 +1,248 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/';
+const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
+
+const articleTitle = 'Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı';
+const seoTitle = 'Dokuz Yıllık Menopoz ve HRT Kararı';
+const articleDescription =
+  'Başak Pelister, kırk altı yaşında başladığı menopozdan dokuz yıl sonra HRT kararına nasıl geldiğini; aile öyküsü ve hekimle kurulan güveni anlatıyor.';
+const articleImage = '/images/library/editorial/basak-pelister-hrt-karari.webp';
+const bylineImage = '/images/library/editorial/basak-pelister-hrt-karari-byline.webp';
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'basak-pelister',
+  articleType: 'experience-essay',
+  publishedDate: '7 Mayıs 2026',
+  pathname,
+  articleSection: 'Hormonal Geçiş',
+  sectionPath: '/hormonal-gecis/',
+  keywords: [
+    'menopoz',
+    'HRT',
+    'hormon tedavisi',
+    'kişisel karar',
+    'menopoz güncesi',
+    'aile öyküsü',
+    'osteoporoz',
+    'sıcak basması',
+    'menopozda hekim kararı',
+  ],
+  modifiedDate: '13 Ekim 2026',
+  medicalReviewer: 'Dr. Alper Mumcu',
+  medicalReviewerTitle: 'Kadın Hastalıkları ve Doğum Uzmanı',
+  image: articleImage,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/hormonal-gecis/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Hormonal Geçiş · Menopoz"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleAuthorBlock
+        authorSlug="basak-pelister"
+        articleType="experience-essay"
+        publishedDate="7 Mayıs 2026"
+        lastUpdated="13 Ekim 2026"
+        medicalReviewer="Dr. Alper Mumcu"
+        readingMinutes={7}
+        imageSrc={bylineImage}
+        imageAlt="Deniz manzaralı bir balkonda bordo şal içinde kahvesini tutan, uzağa bakan bir kadın; dosya görseli"
+        imagePosition="center center"
+      />
+
+      <ArticleSummary title="Bu yazıya başlarken">
+        <p>
+          Bu yazı bir öneri listesinden çok, uzun bir bekleyişten sonra verilmiş kişisel bir kararın güncesi. Başak
+          Pelister, kırk altı yaşında başladığı menopozdan dokuz yıl sonra hormon tedavisine (HRT) başlama kararına nasıl geldiğini;
+          ailedeki osteoporoz öyküsü, otuz yıllık hekim tanışıklığı, kendi bedenini yıllarca dinlemek ve kızıyla
+          kurduğu kuşaklar arası konuşma dili üzerinden anlatıyor. Asıl mesele “geç mi, erken mi?” sorusundan çok,
+          hangi kararın kimin hayatında hangi zeminde anlam kazandığını dürüstçe ayırabilmek.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel mode="experience">
+        <h2 id="dokuz-yil">Dokuz yıl yalnız bedenimle konuştum</h2>
+        <p>
+          Bazı kararlar tek bir randevuda verilmez. Yıllarca bedeninizle yaptığınız sessiz konuşmalar, o kısa görüşmeden çok daha belirleyici olur.
+        </p>
+        <p>
+          Kırk altı yaşında menopoza girdiğimde önümde açılan yol bugünkü kadar net değildi. O yıllarda hormon tedavisine (HRT)
+          daha temkinli ve daha sınırlı bir dille bakılıyordu. Ben de bu yüzden kendimi uzun bir bekleme odasında
+          buldum: sıcak basmalarını, bölünen uykuyu, ruh halindeki dalgaları ve kendi bedenimi daha dikkatli dinlediğim
+          bir bekleme odası.
+        </p>
+        <p>
+          Bekar bir kadın olarak bu dönemi yaşamak bana başka bir soru da açtı: kendi başına kalmak ile kendi kendine olgunlaşmak aynı şey mi? Bence değil. İlkinde bir eksiklik duygusu var; ikincisinde insanın kendine
+          yavaş yavaş yaklaşması. Yıllar geçtikçe menopozu yalnızlık başlığı altında düşünmeyi bıraktım; kendimi biraz
+          daha iyi tanıdığım bir dönem olarak görmeye başladım.
+        </p>
+        <p>
+          O yıllarda okuduklarım da değişti. İlk başta kesin cümleler arıyordum; sonra en dürüst kaynakların, bilmediklerini de açıkça
+          söyleyenler olduğunu fark ettim. Bir yazı umut verici görünüyorsa hemen heyecanlanmak yerine,
+          “burada gerçekten ne kadar kanıt var?” diye sormayı öğrendim. O refleks, kararın kendisinden önce geldi.
+        </p>
+
+        <h2 id="anne-oykusu">Annemin osteoporoz öyküsü bana tek bir cevap vermedi</h2>
+        <p>
+          Aile öyküsü bazen yön gösterir, ama sizin adınıza karar vermez. Aynı kapıdan iki kuşak geçse bile eşiğin
+          yüksekliği aynı olmayabilir.
+        </p>
+        <p>
+          Annem yıllarca bir HRT seçeneği kullandı; buna rağmen zaman içinde kemiklerinde incelme gelişti. Peki bu
+          bilgi bana ne söyledi? Kendiliğinden bir “başlama” ya da “başlamama” kararı üretmedi; daha çok şunu gösterdi:
+          HRT, kemik sağlığında bazı kadınlar için anlamlı destek sağlayabilir, ama onu herkese aynı sonucu veren bir
+          emniyet ağı gibi okumak doğru olmaz <Evidence level={4} />.
+        </p>
+        <p>
+          Annemin öyküsü bende bir dikkat notu olarak kaldı: risk-fayda dengesini konuşurken masada duran bir veri.
+        </p>
+        <p>
+          Erkek kardeşim geçen ay bana çok sade bir cümle kurdu: “Sen bu soruyu fazla uzun zamandır tek başına
+          taşıyorsun.” Bazen en açıklayıcı cümle, dışarıdan bakan en sade sesten geliyor.
+        </p>
+
+        <h2 id="rehberler">Bilgi değiştikçe kararın da değişebilmesi normal</h2>
+        <p>
+          Aynı kadın, aynı beden ve aynı hekimle bambaşka bir zamanda oturduğunuzda karar da değişebilir.
+        </p>
+        <p>
+          Dokuz yıl önce HRT’ye başlamamak benim için daha uygun görünüyordu. Bugün başlamak da yine benim için makul
+          bulundu. Dışarıdan bakınca bu iki cümle birbiriyle çelişiyormuş gibi görünebilir; oysa arada geçen zaman,
+          güncellenen bilgi birikimi ve değişen kişisel tablo bu farkı açıklıyor <Evidence from={3} to={4} />.
+        </p>
+        <p>
+          “Geç mi başlıyorum?” sorusu, menopoz çevresinde kadınların kendi kendine en sık sorduğu sorulardan biri.
+          Bu sorunun cevabı yalnızca yaşa bakarak verilmiyor. Menopozdan bu yana geçen süre, belirtilerin ağırlığı,
+          mevcut sağlık zemini ve aile öyküsü birlikte tartılıyor. Araştırmalar, menopozun ilk on yılı içinde ya da
+          altmış yaşından önce başlanan tedavide yarar ile risk dengesinin genellikle daha olumlu olduğunu gösteriyor
+          <Evidence level={4} />. Benim için cevap dokuz yıl sonra geldi; bir başkası için daha erken ya da hiç
+          gelmeyebilir. İçiniz rahat olsun diye ekliyorum: soru hangi yaşta gelirse gelsin, hekiminizle konuşmak için
+          uygun bir sorudur.
+        </p>
+        <p>
+          Sağlık başlıklarında heyecan verici yeni söylemler her zaman olacak. Ama benim kendi yolumda asıl işe yarayan
+          şey, yeni bir başlığa hemen bağlanmak değil, onun ne kadarının sağlam, ne kadarının gürültü olduğunu biraz
+          daha sabırla ayırmak oldu.
+        </p>
+
+        <h2 id="hekim-karari">Otuz yıllık bir tanışıklığın içinden gelen “evet” neyi değiştirdi?</h2>
+        <p>
+          Bir kararın ağırlığını yalnızca kendisi belirlemiyor; onu kimin ve nasıl söylediği de belirliyor.
+        </p>
+        <p>
+          Otuz yıllık arkadaşım olan hekimim “evet, sizin için uygun” dediğinde duyduğum şey yalnızca teknik bir onay
+          değildi. O cümlede yıllardır tanınmanın, geçmiş hikâyenin ve bedensel deneyimin bir araya gelişi vardı. Yine
+          de bunun kişisel bir karar olduğunu özellikle ayırmak isterim: bu yakınlık, klinik standardın yerine geçmiyor;
+          sadece konuşmanın tonunu daha sakin hale getiriyor.
+        </p>
+        <p>
+          Benim için kararın düzeni netti: bireysel değerlendirme, bireysel karar ve düzenli izlem. İlk haftalarda
+          fark edilen küçük değişimleri hemen büyük bir sonuca çevirmemek de bu disiplinin parçası. Şu an elimde abartılı bir dönüşüm hikâyesi yok; dikkatle izlenen bir başlangıç var.
+        </p>
+        <p>
+          Açık söyleyeyim: “Ben başladım, siz de başlayın” demiyorum. Yalnızca yıllarca
+          beklediğim bir “evet” cümlesinin bende nasıl bir his bıraktığını anlatıyorum. Minnet, dikkat ve sevinç aynı
+          sabahın içine sığabiliyor.
+        </p>
+
+        <h2 id="uc-kusak">Kızımın sorusu bu hikâyeyi başka bir yere taşıdı</h2>
+        <p>
+          Bir makalenin gerçek açılışı bazen akşam yemeğinde gelir. Genç bir kızın sorduğu sade
+          soru, yıllardır yaşadığınız şeyi başka bir dilden anlatmanızı ister.
+        </p>
+        <p>
+          Geçen akşam kızım sofrada bana “Sıcak basması nasıl bir his?” diye sordu. O anda durup düşündüm… Yıllardır
+          yaşadığınız bir şeyi bir gence nasıl anlatırsınız? “İçeriden gelen bir dalga gibi,” dedim. “Önceden
+          haber vermez ama geçip gider.” Sonra ekledim: “Bu korkulacak değil, dinlenmesi gereken bir değişim.”
+        </p>
+        <p>
+          O an annemle aramızdaki eski sessizlikleri de düşündüm. Annemin bana söylemediği bazı şeyleri ben kızıma
+          söyleyebiliyorum. Arada belki büyük bir bilgi sıçraması olmadı; ama dildeki utanç biraz daha çözüldü.
+          Üç kuşağın aynı masada durduğu anlarda, bilginin tek başına yetmediğini; tanıklık ve aktarımın da ayrı bir
+          emek olduğunu daha iyi anlıyorum.
+        </p>
+        <p>
+          Bu yüzden yazı yalnızca HRT kararını anlatmıyor. Aynı zamanda kadınların bedensel değişimi aile içinde nasıl konuştuğuyla, hangi sessizlikleri kırabildiğiyle ve hangi kelimeleri birbirine devredebildiğiyle de
+          ilgili.
+        </p>
+
+        <h2 id="kapanis">Bu hikâyeden çıkarılacak sonuç, tek bir formül değil</h2>
+        <p>
+          Bende anlam kazanan bir karar, sizin için de aynı kapıyı açar mı? Belki açar, belki hiç açmaz.
+        </p>
+        <p>
+          Dokuz yıl HRT’siz yaşayıp sonra başlamak benim kişisel yolum oldu. Bu yolun içinde aile öyküsü vardı, uzun
+          bir hekim tanışıklığı vardı, üç kuşaklı kadın konuşması vardı ve en önemlisi yıllarca ertelenmiş bir iç
+          sorunun olgunlaşması vardı. Başka bir kadın aynı soruyu daha erken sorabilir; bir başkası bu kararı hiç almak istemeyebilir; kimi için de asıl rahatlık bambaşka bir destek planında olabilir.
+        </p>
+        <p>
+          Ben kendi masamda şunu öğrendim: bedenle konuşmak bazen cevap bulmaktan daha uzun sürüyor. Neden böyle olduğunu hâlâ tam
+          bilmiyorum… Ama cevap
+          geldiğinde onu büyük bir bayrak gibi sallamak yerine biraz daha dikkatle elde tutmak gerekiyor. Bu benim
+          yolum oldu. Sizinki daha kısa, daha uzun ya da bambaşka olabilir.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+          '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/',
+        ]}
+      />
+
+      <MedicalContextNote class="mt-10">
+        <p>
+          HRT kararı; menopoza giriş yaşı, menopozdan bu yana geçen süre, belirti yükü, kardiyometabolik zemin, aile
+          öyküsü ile meme, endometriyum, pıhtılaşma ve inme açısından kişisel riskler birlikte değerlendirilerek
+          verilir. Aynı kişi için farklı yıllarda farklı kararların
+          verilmesi, tıbbi bilginin ve bireysel tablonun zaman içinde değişebilmesiyle uyumludur.
+        </p>
+        <p>
+          Bu yazıdaki kişisel anlatı bir genel öneri yerine geçmez. HRT başlama, sürdürme ya da bırakma kararı kendi
+          hekiminizle, düzenli izlem planı içinde ele alınmalıdır.
+        </p>
+      </MedicalContextNote>
+
+      <ArticleDisclaimer class="mt-10" />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

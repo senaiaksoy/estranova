@@ -73,8 +73,8 @@ function parseArgs(argv) {
 
 function resolvePosition(pos) {
   const p = (pos || 'attention').toLowerCase();
-  if (SMART.has(p)) return { strategy: sharp.strategy[p] };
-  if (GRAVITY.has(p)) return { gravity: p === 'center' ? 'centre' : p };
+  if (SMART.has(p)) return { position: sharp.strategy[p] };
+  if (GRAVITY.has(p)) return { position: p === 'center' ? 'centre' : p };
   throw new Error(`Geçersiz position: ${pos}`);
 }
 

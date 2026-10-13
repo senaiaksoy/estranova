@@ -176,8 +176,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
     writerSlug: 'basak-pelister',
-    approvedAt: '2026-05-07',
-    note: 'Başak Pelister author approval received from icerik/yazar-onaylari/basak-pelister/onaylanan/basak-test-makale (1).pdf. Approved editorial test draft publication kurallarina hizalanarak site rotasi, FAQ schema ve static manifest ile canli envantere alindi.',
+    approvedAt: '2026-10-13',
+    note: 'Başak Pelister author approval received from icerik/yazar-onaylari/basak-pelister/onaylanan/basak-test-makale (1).pdf. Approved editorial test draft publication kurallarina hizalanarak site rotasi, FAQ schema ve static manifest ile canli envantere alindi. 2026-10-13: geniş audit revizyonu (dil düzeltmeleri, tekrar azaltma, “X değil, Y” ~8→3, menopozdan geçen süre bilgisi ve tıbbi nota pıhtılaşma/inme, Başak imzası için soru/üç nokta/itiraf) için yazar onayı KC bildirimiyle alındı (sohbet; form JSON yanıtı yok). Tıbbi bilgi kontrolü Dr. Alper Mumcu (incelendi, onaylandı; yazarın hekimi Senai Aksoy olduğu için varsayılan inceleyici değiştirildi). Paket: onaylanan/2026-10-13_dokuz-yillik-menopoz-sonunda-hrt-karari. 2026-10-13 ikinci revizyon (medeni durum ifadesi çıkarıldı, genel tıbbi bilgi ve Evidence ayrı tıbbi nota taşındı, geçmiş karar gerekçesi tahmini kaldırıldı): yazar onayı ve Dr. Alper Mumcu tıbbi not onayı KC bildirimiyle alındı (sohbet; form JSON yanıtı yok). Paket: onaylanan/2026-10-13_dokuz-yillik-menopoz-sonunda-hrt-karari-rev2.',
   },
   {
     pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',

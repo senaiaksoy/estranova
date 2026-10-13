@@ -1,0 +1,33 @@
+{
+  "writer": {
+    "slug": "basak-pelister",
+    "name": "Başak Pelister"
+  },
+  "article": {
+    "slug": "dokuz-yillik-menopoz-sonunda-hrt-karari",
+    "title": "Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı",
+    "previewUrl": "./revizyon-onizleme.html",
+    "liveUrl": "https://estranova.com/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/"
+  },
+  "package": {
+    "createdAt": "2026-10-13T07:11:14.713Z",
+    "deadline": "2026-10-20T07:11:14.713Z",
+    "status": "approved-awaiting-publication",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "approvedAt": "2026-10-13",
+    "approvalSource": "KC bildirimi (sohbet): yazar onay verdi",
+    "medicalReview": "Dr. Alper Mumcu — incelendi ve onaylandı, 2026-10-13 (KC bildirimi, sohbet)"
+  },
+  "revision": {
+    "type": "revision-of-published-article",
+    "basedOn": "onaylanan/basak-test-makale (1).pdf (30 Nisan 2026 test taslağı; 7 Mayıs yayın metni bu taslaktan uyarlanmıştı)",
+    "sourceFile": "site-kaynak.astro",
+    "previousSourceFile": "onceki-kaynak.astro",
+    "changeSummary": "degisiklik-ozeti.md",
+    "liveRouteUntouched": false,
+    "onApproval": "İlk revizyon onaylandı ve yerel site kaynağına alındı; commit, push ve deploy yapılmadı. Canlı sayfa önceki sürümdedir."
+  }
+}

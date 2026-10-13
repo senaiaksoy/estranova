@@ -1,0 +1,23 @@
+{
+  "writer": {
+    "slug": "basak-pelister",
+    "name": "Başak Pelister"
+  },
+  "article": {
+    "slug": "dokuz-yillik-menopoz-sonunda-hrt-karari",
+    "title": "Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı",
+    "pathname": "/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/"
+  },
+  "decision": "ONAYLIYORUM",
+  "approvedAt": "2026-10-13",
+  "source": "KC: yazar onay verdi, Başak onayı var (chat)",
+  "formType": "standard",
+  "formResponseJson": false,
+  "medicalReview": {
+    "reviewer": "Dr. Alper Mumcu",
+    "decision": "approved",
+    "reviewedAt": "2026-10-13",
+    "source": "KC: Mumcu inceledi, onay verdi (chat)"
+  },
+  "note": "Revizyon onayı ve tıbbi bilgi kontrolü onayı KC tarafından sohbette bildirildi; doldurulmuş form yanıtı (JSON) pakete gelmedi. Paket onaylanan altına taşındı, revize kaynak canlı rotaya alındı."
+}

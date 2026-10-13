@@ -535,7 +535,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
     title: 'Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı',
     description:
-      'Başak Pelister, kırk altı yaşında başladığı menopozdan dokuz yıl sonra HRT kararına nasıl geldiğini; aile öyküsü, hekimle kurulan güven, üç kuşaklı kadın bağı ve kişisel risk-fayda dengesi üzerinden anlatıyor.',
+      'Başak Pelister, kırk altı yaşında başladığı menopozdan dokuz yıl sonra HRT kararına nasıl geldiğini; aile öyküsü ve hekimle kurulan güveni anlatıyor.',
     publishedDate: '7 Mayıs 2026',
     writerSlug: 'basak-pelister',
     section: 'Hormonal Geçiş',
