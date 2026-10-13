@@ -30,7 +30,7 @@ export const homePageHero: SubmenuHeroImage & {
     '/images/hero/home-hero-luxury-editorial-1920.webp 1920w',
   ].join(', '),
   sizes: '100vw',
-  alt: 'Zarif bir girişte gün ışığına doğru yürüyen, krem elbise ve camel palto içindeki 40+ kadın; menopoz ve hormonal geçiş dönemini sakin, güçlü ve editoryal bir yaşam sahnesiyle anlatan ana sayfa görseli',
+  alt: 'Deniz kenarındaki bir binanın aydınlık girişinde, krem elbise ve deve tüyü paltoyla yürüyen bir kadın.',
 };
 
 export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
@@ -40,27 +40,27 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/': {
     src: '/images/heroes/hormonal-gecis.webp',
-    alt: 'Sabah ışığında bir İstanbul mutfak adası etrafında üç kuşak Türk kadın (38, 48, 58) kahve sohbeti; biri açık sağlık defterine notlar tutuyor, ortadaki kahve fincanını iki elle tutarken paylaşıyor, en olgun olan espresso ve sıcak gülümseme ile dinliyor; bakımlı boyalı saçlar (kestane düz / auburn chignon / mahogany dalga), ivory + bordo + brass paleti, mermer ada üstünde incir-ceviz tabağı + bal kavanozu + lavanta + açık dergi; hormonal geçişin kuşaklar arası paylaşımı ve bilgi köprüsü teması',
+    alt: 'Mutfak tezgâhında kahve içip sohbet eden farklı yaşlardan üç kadın; biri defterine not alıyor.',
   },
   '/hormonal-gecis/perimenopoz/': {
     src: '/images/library/editorial/journey-perimenopoz.webp',
-    alt: 'Aydınlık bir İstanbul kafesinin pencere kenarında karşılıklı oturan iki yaşıt kadın (40-44); birinin önünde açık deri not defteri ve dolma kalem, diğerinin elinde latte sanatlı cappuccino; bakımlı boyalı saçlar (koyu kestane bob ve sıcak kahve dalga), ivory keten gömlek ve dusty pink ipek bluz, mermer masada espresso fincanı ve seramik vazoda dahlia, yanında croissant tabağı; perimenopoza birlikte fark etme ve erken farkındalık teması',
+    alt: 'Bir kafenin pencere kenarında defter ve kahveyle sohbet eden iki kadın.',
   },
   '/hormonal-gecis/menopoza-hazirlik/': {
     src: '/images/library/editorial/journey-menopoza-hazirlik.webp',
-    alt: 'Sıcak bir İstanbul evinin çalışma köşesinde walnut masada karşılıklı çalışan iki yaşıt kadın (45-48); biri açık deri planner üstünde dolma kalemle yazıyor, diğeri eli çenede ilgiyle eğilmiş kibar gülümseme; bakımlı boyalı saçlar (koyu kestane dalga ve açık kestane bob), oatmeal cashmere kazak ve cream ipek bluz bordo eşarp boyunda; brass-burnished abajur, walnut kitaplık bokesi, peony pembe vazoda, masada espresso fincanı ve sade kitap yığını; menopoza birlikte hazırlık ve ortak plan teması',
+    alt: 'Kitaplıklı bir odada masada not alan bir kadın ve onu dinleyen arkadaşı.',
   },
   '/hormonal-gecis/menopoz/': {
     src: '/images/library/editorial/journey-menopoz.webp',
-    alt: 'Yaz akşamı İstanbul terasında üç yaşıt kadın (50-55) dolu bir sohbet anında; soldaki klasik Türk çay bardağını altın detaylı tabakta tutarak gülerek dinliyor, ortadaki ivory ipek yelpazeyi hafifçe açmış (sıcak basma referansı subtle), sağdaki porselen Türk kahvesi fincanını tabakta lokumla tutuyor; bakımlı boyalı saçlar (kestane chignon, dalgalı auburn, mahogany), ivory + dusty-rose + bordo paleti, jasmine ve wisteria sarmalı pergola, masada incir ve halved nar, golden hour Boğaz silueti boke; menopoz döneminin canlı yaşandığı arkadaşlık ve dolu bir akşam teması',
+    alt: 'İstanbul manzaralı bir terasta çay ve kahve eşliğinde gülerek sohbet eden üç kadın; biri yelpazeyle serinliyor.',
   },
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/': {
     src: '/images/library/editorial/pair-window-cafe-reflection.webp',
-    alt: 'Aydınlık bir kafenin pencere kenarında karşılıklı oturan iki yaşıt kadın; birinin elinde çay fincanı, diğerinin önünde açık not defteri ve dolma kalem; bakımlı boyalı saçlar, ivory kazak ve bordo ipek bluz, mermer masada espresso ve tek dahlia; arkada ağaçlı sokak boke; tartı sayılarının ötesinde vücut kompozisyonunu yakın bir arkadaşla sakin konuşarak anlamlandırma teması',
+    alt: 'Ağaçlı bir sokağa bakan kafe penceresinin önünde karşılıklı oturup konuşan iki kadın.',
   },
   '/hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/': {
     src: '/images/library/editorial/hg-menopozda-hekim-hasta-iliskisi.webp',
-    alt: 'Sun-lit İstanbul evi mutfak adasında sabah ışığında solo kahvaltı hazırlığında bir yaşıt kadın (50-55); warm chestnut shoulder dalgalı saç, modest cream keten button-down ve warm camel keten pant ile delicate altın kolye, mermer mutfak adasında ayakta mid-action taze meyve dilimliyor (incir, halved nar), küçük seramik kasede yoğurt-bal ve cam sürahide fresh-squeezed portakal suyu; composed thoughtful gentle ifade eyes on task ile quiet mid-internal-thought softness (kendi için hazırlanıyor); counter kenarında kapalı sade kapaklı sağlık-yaşam dergisi ve küçük soft leather handbag (subtle randevu hazırlık ipucu); bakımlı boyalı saçlar, modest tam kapalı yaka, mature graceful natural cilt; arka planda walnut mutfak rafları soft bokeh (kavanozlar ve baharatlar generic), cream mermer backsplash, pale oak floor, sheer keten perde tall pencerden warm morning daylight, sağ pencerde apartman skyline ve yeşillik bokeh; hekimle yapılacak konuşmaya günlük yaşam içinde bedeniyle ilgilenerek soluk almak ve soruları olgunlaştırma teması',
+    alt: 'Aydınlık bir mutfakta kahvaltı için incir ve nar dilimleyen bir kadın.',
   },
   '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/': {
     src: '/images/library/editorial/journey-menopoz.webp',
@@ -68,7 +68,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/': {
     src: '/images/library/editorial/introspective-clasped-hands.webp',
-    alt: '46 yaş kadın portresi: çene altında kenetlenmiş eller, cream keten gömlek, arka planda yumuşak bordo vazo bokeh; HRT ilk aylarında sakin dikkat, beden takibi ve izleme defteri yaklaşımı teması.',
+    alt: 'Elini omzuna koymuş, sakin bir ifadeyle bakan koyu saçlı bir kadının portresi.',
   },
   '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/': {
     src: '/images/library/editorial/by-libido-degisimi.webp',
@@ -76,11 +76,11 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/hormonal-gecis/40-sonrasi/': {
     src: '/images/library/editorial/journey-40-sonrasi.webp',
-    alt: 'İstanbul Boğaz sahilinde altın saat ışığında enerjik tempolu yan yana yürüyen üç yaşıt kadın (40-45); navy zip-up ve cream wide-leg pant giyen dark brown uzun saçlı kadın kahkahayla arkadaşına dönüyor, bordo zip-up ve camel jogger giyen chestnut saçlı kadın su şişesi elinde kararlı adımlarla öne bakıyor, cream zip-up ve dark kahverengi tayt giyen auburn saçlı kadın hafif öne eğilmiş arkadaşını dinliyor; bakımlı boyalı saçlar, fit ve aktif beden dili, doğal minimal makyaj; arka planda Boğaz mavi-yeşil su ve İstanbul silüeti bokeh, sahil promenad taş zemini; 40 sonrası hareket güç ve sosyal vitalite teması',
+    alt: 'İstanbul Boğazı kıyısındaki sahil yolunda yan yana yürüyen üç kadın.',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri/': {
     src: '/images/library/editorial/hg-tarama-testleri.webp',
-    alt: 'Sabah ışığında ahşap masada açık takvim sayfası, çay fincanı, açık not defteri, cam vazoda pembe gül ve bordo ciltli ajanda; kişisel düzenli sağlık takibi teması',
+    alt: 'Pencere kenarındaki ahşap masada takvim, açık defter, bir fincan çay ve vazoda pembe gül.',
   },
   '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/': {
     src: '/images/library/editorial/introspective-clasped-hands.webp',
@@ -88,15 +88,15 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zamansiz-yasam/': {
     src: '/images/heroes/zamansiz-yasam.webp',
-    alt: 'Akdeniz longevity temalı geç-sabah brunch sofrası — taş duvarlı bir bahçe terasında zeytin dalları altında üç yaşıt Türk kadın (46-52) yavaş yemek paylaşımı; solda yoğurta bal damlatan kestane ponytail, ortada terracotta wrap içinde portakal suyu tutan gülen yüz, sağda cream kaftan içinde şeftali dilimleyen koyu auburn; bakımlı boyalı saçlar, eskimiş rustik ahşap masada incir + nar + üzüm + zeytin + ceviz + ekmek + zeytinyağı + Türk kahvesi; honey-toned taş duvar + bougainvillea bokeh; uzun vadeli yaşam ve sosyal yavaş yaşam teması',
+    alt: 'Zeytin ağacının altında meyve ve kahvaltılıklarla dolu bir sofrada sohbet eden üç kadın.',
   },
   '/zamansiz-yasam/vitaminler/': {
     src: '/images/library/editorial/zy-vitaminler.webp',
-    alt: 'Ahşap tahta üzerinde sabah ışığında yumurtalar, portakal dilimleri, çiğ badem ve ceviz, etiketsiz zeytinyağı; vitamin kaynakları gerçek besinlerle temalandırılmış',
+    alt: 'Ahşap tahta üzerinde yumurta, portakal dilimleri, badem, ceviz, maydanoz ve zeytinyağı.',
   },
   '/zamansiz-yasam/d-vitamini-rehberi/': {
     src: '/images/library/editorial/zy-vitaminler.webp',
-    alt: 'Sabah ışığında ahşap masada yumurtalar, portakal dilimleri, çiğ ceviz ve mavi-yeşil yapraklı sebze; etiketsiz zeytinyağı yanında; D vitamini için besin, güneş ve takviye üçgenini sade sağlık okumasıyla değerlendirme teması',
+    alt: 'Ahşap tahta üzerinde yumurta, portakal dilimleri, badem, ceviz, maydanoz ve zeytinyağı.',
   },
   '/zamansiz-yasam/deneysel/': {
     src: '/images/library/editorial/zy-deneysel.webp',
@@ -104,15 +104,15 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zamansiz-yasam/kilo-artisi-menopoz/': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
-    alt: 'Sun-lit İstanbul evi balkon herb garden inde geç sabah ışığında solo aktif gardening sahnesinde bir yaşıt kadın (46-50); warm honey-chestnut shoulder dalgalı saç, thick cream speckled chunky knit cardigan ve cream cotton gömlek altında ile warm camel canvas-linen apron belde, soft canvas pant; ahşap balkon masası önünde ayakta mid-action terracotta saksıdan taze rosemary topluyor sağ el dalında, sol el küçük seramik tabakta yeni-toplanmış mevsim sebze (yeşil fasulye, taze maydanoz, küçük cherry tomato) tutuyor; composed present-moment ifade eyes on herbs ve soft small smile peaceful task focus; bakımlı boyalı saç (gri/silver YOK), modest tam kapalı yaka, mature graceful natural cilt; etrafında terracotta saksılarda rosemary, basil, mint, thyme, parsley ve oregano kümeleri (küçük ev herb garden), geniş yapraklı yeşillik fiddle leaf fig soft bokeh, küçük cam su sürahisi ahşap üzerinde, warm pale wooden balkon zemin, sheer white perde subtle uçuşlu sağ pencerden, uzakta İstanbul çatıları haze bokeh; menopoz döneminde kilo değişimini diyet kültüründen uzak yargısız doğal beslenme ve toprakla bağ ile karşılama teması',
+    alt: 'Balkondaki saksılardan taze ot toplayan, elinde sebze tabağı tutan önlüklü bir kadın.',
   },
   '/zamansiz-yasam/non-invaziv/': {
     src: '/images/library/editorial/zy-non-invaziv.webp',
-    alt: 'Ahşap masada keten örtü üzerinde cam sürahi, açık pembe çiçek, seramik kasede pürüzsüz taş ve katlı pamuklu havlu; bordo arka plan — pürüzsüzlük, yenilenme ve zaman metaforu',
+    alt: 'Ahşap masada cam su sürahisi, pembe bir çiçek, kasede düz bir taş ve katlanmış havlu.',
   },
   '/beden-yakinlik/': {
     src: '/images/heroes/beden-yakinlik.webp',
-    alt: 'Yavaş bir sabah banyosunun ardından bir ev-spa terasında iki yaşıt yakın arkadaş (48-52) sessiz bir konuşmada; solda cream waffle bornoz içinde rattan sandalyede bir bacak altına kıvrılmış terakota fincan tutan kadın, sağda dusty-rose linen bornoz içinde loveseat üstünde mid-sentence half-smile; bornozlar tam kapalı, banyo sonrası dingin polished saçlar, no-makeup makyaj; küçük dark wood masada iki fincan + tek peony vazo + cucumber-mint su sürahisi; tall arched window sheer linen perde + honey-toned plaster duvar + fiddle leaf fig; bedenle barışma ve yargısız mahrem konuşma teması',
+    alt: 'Aydınlık bir odada, krem ve pembe bornozlarıyla karşılıklı oturup sohbet eden iki kadın.',
   },
   '/beden-yakinlik/cilt-gorunum/': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
@@ -120,7 +120,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
-    alt: 'Menopozda cilt kuruluğu, kolajen ve bariyer değişimi temasını sakin, doğal ve premium editoryal bir bakım sahnesiyle taşıyan 45-55 yaş arası kadınlar',
+    alt: 'Aynalı bir makyaj masasında bornozla oturup yüzüne dokunan bir kadın ve yanında gülümseyen arkadaşı.',
   },
   '/beden-yakinlik/cinsel-saglik/': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
@@ -128,7 +128,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/pelvik-taban/': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Sun-lit İstanbul evi yoga köşesinde pale oak yer üzerinde yan yana yoga matlarında oturmuş iki yaşıt kadın (48-52); soldaki warm honey-chestnut shoulder dalgalı saç ile soft sage-green long-sleeve activewear ve camel full-length leggings içinde knees-up cross-legged easy pose, bir el karın-alt bölgesinde nazik mindful öz-farkındalık jesti, eyes softly closed dingin ifade; sağdaki koyu kestane medium ponytail ile dusty rose long-sleeve top ve cream full-length leggings içinde kendi mat üzerinde yan yana cross-legged, bir el dizinde küçük composed gülümseme arkadaşına yan bakış; bakımlı boyalı saçlar (gri/silver YOK), modest tam kapalı activewear, mature graceful natural cilt; mat yanında cam su bardağı, walnut yan masada küçük seramik vazoda lavanta dalı, açık deri kapaklı not defteri ve dolma kalem; large monstera ve peace lily yeşilliği soft bokeh, sheer keten perde sabah ışığı, brass-burnished floor lamp warm subtle light köşeden; ev içinde arkadaşla birlikte yargısız sakin pelvik taban farkındalığı rituali teması',
+    alt: 'Yoga matında bağdaş kurmuş, elleri karnında nefes çalışması yapan bir kadın ve yanında oturan bir kadın.',
   },
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
@@ -136,63 +136,63 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/': {
     src: '/images/library/editorial/introspective-burgundy-accent.webp',
-    alt: 'Sıcak bir İstanbul evinin yatak odası okuma köşesinde akşam üstü warm ışıkta saf natürmort (kişi yok); chaise üstünde cream ipek modest yastık ve üzerine yumuşak katlanmış bordo silk-knit şal (subtle bordo aksanı), walnut yan masada açık deri kapaklı not defteri ve dolma kalem (his günlüğü), küçük seramik vazoda 2-3 cream-blush peony, klasik Türk çay bardağı altın tabakta buharlı, kapalı hardcover şiir kitabı sade kapak; sağda küçük cam votive mumluk içinde tek yumuşak yanan mum, sheer keten perde tall pencerden warm evening light, mahogany floor ve Persian rug edge, brass-burnished abajur warm focused light cream yastık ve bordo şala düşüyor; iç dünyaya dönen sakin akşam ve bedenle iletişim teması',
+    alt: 'Loş ışıklı bir okuma köşesinde yastık ve bordo şal; yan sehpada açık defter, çay bardağı ve şakayıklar.',
   },
   '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Sun-lit İstanbul evi yoga köşesinde pale oak yer üzerinde yan yana yoga matlarında oturmuş iki yaşıt kadın (48-52); soldaki warm honey-chestnut shoulder dalgalı saç ile soft sage-green long-sleeve activewear ve camel full-length leggings içinde knees-up cross-legged easy pose, bir el karın-alt bölgesinde nazik mindful öz-farkındalık jesti, eyes softly closed dingin ifade; sağdaki koyu kestane medium ponytail ile dusty rose long-sleeve top ve cream full-length leggings içinde kendi mat üzerinde yan yana cross-legged, bir el dizinde küçük composed gülümseme arkadaşına yan bakış; bakımlı boyalı saçlar (gri/silver YOK), modest tam kapalı activewear, mature graceful natural cilt; mat yanında cam su bardağı, walnut yan masada küçük seramik vazoda lavanta dalı, açık deri kapaklı not defteri ve dolma kalem; large monstera ve peace lily yeşilliği soft bokeh, sheer keten perde sabah ışığı, brass-burnished floor lamp warm subtle light köşeden; menopoz döneminde idrar kaçırma ve pelvik taban farkındalığını arkadaşla birlikte yargısız bedeni dinleme teması',
+    alt: 'Yoga matında bağdaş kurmuş, elleri karnında nefes çalışması yapan bir kadın ve yanında oturan bir kadın.',
   },
   '/zihin-denge/': {
     src: '/images/heroes/zihin-denge.webp',
-    alt: 'Sabah pilates sınıfı sonrası zarif bir İstanbul stüdyosunda üç yaşıt Türk kadın (48-54) post-flow dinginlikte sakin sohbet; solda mat üstünde bağdaş kurmuş cam su şişesiyle, ortada pilates Wunda chair yanında pink yoga block elinde, sağda matını topluyor; bakımlı boyalı saçlar (kestane / auburn topknot / auburn high ponytail), sage green + dusty rose + soft black + taupe paleti, pale oak zemin, pampas + areca palm + sheer linen perdeler; zihin-beden bütünlüğü ve sosyal sakin bir an teması',
+    alt: 'Aydınlık bir pilates stüdyosunda dersten sonra sohbet eden üç kadın.',
   },
   '/zihin-denge/uyku-dinlenme/': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; uyku ve dinlenme bütününe sakin natürmort yaklaşım teması',
+    alt: 'Yatağın yanındaki ahşap sehpada açık defter, çay bardağı, kol saati ve vazoda lavanta dalı.',
   },
   '/zihin-denge/duygusal-denge/': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
-    alt: 'Sıcak bir İstanbul evinin oturma odasında sabah ışığında iki yaşıt kadın (47-52) duygusal sohbet anında; soldaki cream cashmere kazak ve camel pant içinde divanda kucağında açık ciltli kitap, ruh halinden bahsediyor; sağdaki dusty rose ipek bluz ve cream pant içinde tan deri koltukta eli saç altında empatik dinliyor; bakımlı boyalı saçlar (koyu kestane dalga ve warm chestnut bob), mahogany yan masada klasik Türk çay bardağı altın tabakta, porselen espresso fincan, peony pembe vazoda, açık deri not defteri ve dolma kalem; brass-burnished abajur warm light, walnut kitaplık bokesi, sheer keten perde; ruh hali sohbeti ve duygusal denge teması',
+    alt: 'Oturma odasında koltuklarda karşılıklı oturup sohbet eden iki kadın; aradaki sehpada çay, defter ve şakayıklar.',
   },
   '/zihin-denge/bilissel-saglik/': {
     src: '/images/library/editorial/zd-bellek-odaklanma.webp',
-    alt: 'Sıcak bir İstanbul evinin küçük kütüphanesinde walnut masada birlikte çalışan iki yaşıt kadın (49-52); soldaki oatmeal cashmere kazak ve camel pant içinde açık ciltli kitap üzerine işaret parmağıyla bir kelimeyi gösteriyor, sağdaki cream ipek bluz ve bordo eşarp boyunda ahşap yan kollu sandalyede dolma kalemle açık deri kapaklı not defterine yazıyor; bakımlı boyalı saçlar (koyu kestane dalga ve koyu kestane bob), masada klasik Türk çay bardağı altın tabakta, porselen espresso fincan, seramik vazoda tek dahlia, sade lokum tabakta; brass yeşil camlı reading lamp warm focused light, walnut floor-to-ceiling kitaplıklar bokesi, sheer keten perde geç-sabah ışığı; aktif birlikte öğrenme ve bilişsel sağlık teması',
+    alt: 'Kitaplıklı bir odada masada birlikte kitap okuyup not alan iki kadın.',
   },
   '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/': {
     src: '/images/library/editorial/zd-bellek-odaklanma.webp',
-    alt: 'Sıcak bir İstanbul evinin küçük kütüphanesinde walnut masada birlikte çalışan iki yaşıt kadın (49-52); soldaki oatmeal cashmere kazak ve camel pant içinde açık ciltli kitap üzerine işaret parmağıyla bir kelimeyi gösteriyor, sağdaki cream ipek bluz ve bordo eşarp boyunda ahşap yan kollu sandalyede dolma kalemle açık deri kapaklı not defterine yazıyor; bakımlı boyalı saçlar, yumuşak sabah ışığı, çay bardağı ve açık not defteri eşliğinde perimenopozda odak ve bellek dalgalanmasını sakin biçimde okuma teması',
+    alt: 'Kitaplıklı bir odada masada birlikte kitap okuyup not alan iki kadın.',
   },
   '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/': {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Pencereden süzülen yumuşak ışıkta oak ahşap bedside masada açık deri uyku günlüğü ve dolma kalem, buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda lavanta dalı, ince deri kayışlı minimalist saat, yeşil kapak ciltli kitap; solda dağınık beyaz keten yatak, sağda terracotta saksıda sage-green herb ve sheer linen perde; menopoz döneminde uyku düzenini yeniden kurma sabah ritüeli teması',
+    alt: 'Yatağın yanındaki ahşap sehpada açık defter, çay bardağı, kol saati ve vazoda lavanta dalı.',
   },
   '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/': {
     src: '/images/library/editorial/zd-perimenopoz-uyku-sabah-defter.webp',
-    alt: 'Erken sabah ışığında İstanbul evinin yatak odası bitişiği pencere köşesinde 47-52 yaşında bakımlı Türk kadın; koyu kestane omuz dalga saç (gri yok), cream cashmere modest gecelik ve warm taupe linen pant, mahogany yan masada açık deri kapaklı uyku günlüğüne dolma kalemle yazıyor, sol elinde buharlı klasik Türk çay bardağı altın detaylı tabakta, küçük seramik vazoda tek peony, kapalı brass okuma lambası ve açık ciltli kitap; sheer keten perde arkasından soft predawn-to-early-morning natural light; perimenopozda uykunun değişen yanını yargısız fark etme ve sabah günce kaydı teması',
+    alt: 'Pencere kenarında elinde çay bardağıyla defterine not alırken dışarı bakan bir kadın.',
   },
   '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/': {
     src: '/images/library/editorial/zd-gece-terlemesi-uyku-utancsiz.webp',
-    alt: 'Predawn cool-blue ışığında İstanbul evi sade yatak odası natürmort (kişi yok); beyaz keten yatak takımı ve kenara çekilmiş sage-green ince örtü hafif buruşuk, oak ahşap bedside masada porselen su sürahisi ve cam bardak, ince keten mendil hafif katlanmış, küçük seramik vazoda solmaya başlamış lavanta dalı, kapalı deri uyku günlüğü, ince deri kayışlı minimalist saat 04:12, kapalı brass-burnished bedside lamp; sağda yarı açık ahşap pencere ve serin esintiyle yumuşakça hareketlenen ince beyaz keten perde, dışarıda soft predawn cool blue-violet natural light ve uzakta İstanbul Boğaz silueti bokeh; gece terlemesi sonrası sakin dengelenme ve mahrem uyku deneyiminin yargısız kaydı teması',
+    alt: 'Yeşil örtülü bir yatak; komodinde lamba, gözlük, defter ve kurutulmuş lavanta.',
   },
   '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/': {
     src: '/images/library/editorial/zd-aksam-hareketi-uyku-melatonin.webp',
-    alt: 'Akşam alacakaranlık ışığında İstanbul evi salon köşesinde 47-52 yaşında bakımlı Türk kadın geniş pencere önünde nazik beden hareketi yapıyor; warm mahogany low loose ponytail (gri yok), soft cream cotton uzun kollu modest hareket bluzu ve warm taupe linen wide-leg loose pant, ¾ profil görünüm, sakin ifade — boyun ve omuz yumuşak esneme veya gentle forward fold akışı; ince doğal renkli ev matı, küçük seramik vazoda kuru pampas ve tek peony, walnut floor-to-ceiling kitaplık bokesi, brass-burnished floor lamp arkadan warm subtle backlight, walnut yan masada açık not defteri ve dolma kalem; pencere arkasında akşam alacakaranlık (sky soft pink-warm üst, dusty blue alt), sun ufkun ardına çekilmiş; performans baskısı değil geceye geçiş ritüeli teması',
+    alt: 'Şehir manzaralı bir odada koltukta oturup boynunu ve omzunu esneten bir kadın.',
   },
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': {
     src: '/images/library/editorial/zd-stres-yonetimi.webp',
-    alt: 'Sun-lit İstanbul evinin botanik dolu sıcak conservatory köşesinde sabah ışığında yan yana cream-cushioned wicker armchair lerde oturan iki yaşıt kadın (47-52); soldaki warm chestnut tied-back low ponytail, soft cream cashmere oversize kazak ve warm taupe linen wide-leg pant içinde eli kucağında composed peaceful presence ile dingin gülümseme arkadaşına; sağdaki chestnut shoulder dalgalı saç, dusty sage ipek bluz, cream linen pant ve slim brass-gold pendant kolye ile elinde klasik Türk çay bardağı altın detaylı tabakta buharlı, warm gülümseme arkadaşına; bakımlı boyalı saçlar (gri/silver YOK), modest tam kapalı yaka, mature graceful natural cilt; aralarında küçük walnut yan masa üstünde küçük seramik vazoda fresh white peony ve lavanta dalı, açık deri kapaklı not defteri ve dolma kalem, kapalı yeşil cilt sade kapaklı kitap, porselen Türk kahvesi fincan ve seramik tabakta sade lokum ile nar tanesi; arkada peace lily, palm yaprakları ve fiddle leaf fig yeşilliği soft bokeh, sheer keten perde sabah ışığı, brass-burnished floor lamp warm subtle light köşeden; arkadaşla birlikte sakin nefes ve stres azaltma rituali teması',
+    alt: 'Bitkilerle dolu aydınlık bir odada hasır koltuklarda çay içip sohbet eden iki kadın.',
   },
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': {
     src: '/images/library/editorial/morning-window-reader-ai.webp',
-    alt: 'Sabah ışığında İstanbul evinde iki yaşıt kadının sakin sohbet anı; açık not defteri, çay ve yumuşak yüz ifadeleri eşliğinde perimenopozda kaygı artışını yargısız konuşma teması',
+    alt: 'Oturma odasında koltuklarda karşılıklı oturup sohbet eden iki kadın; aradaki sehpada çay, defter ve şakayıklar.',
   },
   '/bilimsel-pencere/': {
     src: '/images/heroes/bilimsel-pencere.webp',
-    alt: 'Yavaş bir hafta içi öğleden sonrası zarif bir ev kitaplığında iki yaşıt entelektüel Türk kadın (50-54) gerçek bir tartışma anında; solda bordo ipek bluz + cream tailored pantolon içinde tan leather wingback armchair üzerinde açık hardcover kitap parmakla işaretlenmiş, sağda navy linen blazer + ivory silk + cream wide-leg pants içinde antika writing desk köşesine dayanmış porcelain coffee fincanı + tablet, başı hafif eğik dinleyen-considering ifade; bakımlı boyalı saçlar (kestane polished bob / mahogany omuz dalga), walnut floor-to-ceiling kitaplıklar + brass green-shaded lamp + magnolia branch + Persian rug; tall arched window arkasında İstanbul silueti minareler + sheer linen perdeler; gerçek akademik tartışma ve eleştirel bilgi okuryazarlığı teması',
+    alt: 'Kitaplarla dolu bir çalışma odasında kitap ve kahve eşliğinde sohbet eden iki kadın.',
   },
   '/bilimsel-pencere/hormonlarin-bilimi/': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
-    alt: 'Akademisyen ev çalışma odasında pencere kenarında sıcak cream damarlı mermer masada saf natürmort (kişi yok); ortada açık leather-bound akademik not defteri üzerinde elle çizilmiş soyut biyolojik akış diyagramı (organik eğriler ve daireler, etiketsiz) ve dolma kalem, solda açık ciltli akademik kitap ve seramik vazoda peony ile magnolia dalı (botanik aksan), sağda buharlı klasik Türk çay bardağı altın tabakta, brass-rimmed okuma gözlüğü, brass orb paperweight; bordo kadife perde edge, sheer keten perde, dışarıda yumuşak yeşil bokeh, brass yeşil camlı banker abajur warm focused light; biyoloji ile doğal güzelliğin kesişiminde hormonların bilimi teması',
+    alt: 'Mermer masada elle çizilmiş bir şema bulunan açık defter, dolma kalem, çay bardağı ve vazoda şakayık.',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
@@ -204,11 +204,11 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
-    alt: 'Güneş alan ev balkonunda taze otlar ve sade beslenme hazırlığıyla ilgilenen yaşıt kadın; menopozal kilo, metabolik sağlık ve yeni ilaç sınıflarını dengeli değerlendirme teması',
+    alt: 'Balkondaki saksılardan taze ot toplayan, elinde sebze tabağı tutan önlüklü bir kadın.',
   },
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
-    alt: 'Pencere kenarında mermer çalışma masasında açık not defteri, el çizimi soyut bir diyagram, kitap, çiçekler, çay bardağı ve okuma gözlüğü; östrojen biyolojisi yazısı için natürmort',
+    alt: 'Mermer masada elle çizilmiş bir şema bulunan açık defter, dolma kalem, çay bardağı ve vazoda şakayık.',
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
@@ -216,18 +216,18 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
     src: '/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg',
-    alt: 'Aydınlık bir tekstil atölyesinde transparan kumaş ve bakır tonlu iplikleri inceleyen 50 yaş civarı kadın; GHK-Cu, kolajen ve menopozda cilt biyolojisi temasını editoryal bir dille taşıyan görsel',
+    alt: 'Aydınlık bir atölyede pencere önündeki ince kumaşı eliyle inceleyen kıvırcık saçlı bir kadın.',
   },
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-kilo-vucut-sekillendirme.webp',
-    alt: "Gün ışığı alan sakin bir evde ayna karşısında duran 50'li yaşlarda kadın; menopoz sonrası beden kompozisyonu ve vücut şekillendirme kararını anlatan editoryal portre",
+    alt: 'Şehir manzaralı bir yatak odasında boy aynasının önünde pantolonunun belini düzelten bir kadın.',
   },
   '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/': {
     src: '/images/library/editorial/zy-kreatin-menopoz.webp',
-    alt: "Gün ışığı alan sakin bir egzersiz köşesinde, su bardağı ve dambıl yanında oturan 50'li yaşlarında kadın; menopozda kreatin, kas gücü ve sağlıklı yaş alma yazısı için yatay editoryal kart görseli",
+    alt: 'Aydınlık bir odada yerde oturan, elinde su bardağı tutan spor kıyafetli bir kadın.',
   },
   '/editorun-kosesi/temmuz-2026/': {
     src: '/images/library/editorial/temmuz-2026-sicacik-kose.webp',
@@ -239,51 +239,51 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/': {
     src: '/images/library/editorial/glp1-istah-metabolizma-menopoz.webp',
-    alt: 'Güneş alan mutfakta yarı yenmiş balık, nohut ve yeşillik tabağı önünde duran 40+ kadın; GLP-1, iştah sinyali ve metabolizma yazısı için editoryal kart görseli',
+    alt: 'Mutfak masasında ızgara balık, nohut, yeşillik ve salatalıklı tabağına bakan gülümseyen bir kadın; yanında kiraz.',
   },
   '/beden-yakinlik/menopoz-sonrasi-karin-germe/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-karin-germe.webp',
-    alt: "Gün ışığı alan sakin bir evde ayna yanında duran 50'li yaşlarda kadın; menopoz sonrası karın bölgesi değişimlerini beden hissi, kıyafet ve acele etmeyen karar diliyle ele alan editoryal kart görseli",
+    alt: 'Boy aynasının yanında, eli belinde pencereye bakan pembe kazaklı bir kadın.',
   },
   '/beden-yakinlik/menopoz-sonrasi-genital-estetik/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-genital-estetik.webp',
-    alt: "Gün ışığı alan evde ayna ve keten perdeler yanında duran 50'li yaşlarda kadın; menopoz sonrası genital estetik kararını mahremiyet, beden konforu ve acele etmeyen değerlendirme diliyle ele alan editoryal kart görseli",
+    alt: 'Aydınlık bir odada oval aynanın yanında, eli karnında pencereden dışarı bakan bornozlu bir kadın.',
   },
   '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/': {
     src: '/images/library/editorial/menopoz-sonrasi-goguslerdeki-degisim.webp',
-    alt: "Güneş ışığı alan aydınlık bir odada pencere kenarında duran 50'li yaşlarda kadın; menopoz sonrası göğüs değişimleri ve cerrahi karar süreci yazısı için sakin editoryal kart görseli",
+    alt: 'Oturma odasında pencerenin önünde durup dışarı bakan bir kadın.',
   },
   '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/': {
     src: '/images/library/editorial/cagri-sade-meme-kucultme-beden-konforu.webp',
-    alt: "İstanbul evinde ayna ve pencere yanında omzuna nazikçe dokunan 50'li yaşlarda kadın; menopoz sonrası beden konforu, duruş ve omuz farkındalığı yazısı için sakin editoryal kart görseli",
+    alt: 'Şehir manzaralı bir odada boy aynasının karşısında omzuna dokunan bir kadın.',
   },
   '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/': {
     src: '/images/library/editorial/basak-guc-canta-hafifletmek.webp',
-    alt: 'Sıcak doğal ışıkta evde çantasını hazırlayan 50+ kadın; menopoz deneyimi, günlük güç ve çantayı hafifletme yazısı için sevimli editoryal kart görseli',
+    alt: 'Pencere kenarında gardırobun önünde gülümseyerek kıyafet seçen bir kadın; yerde deri bir çanta.',
   },
   '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/': {
     src: '/images/library/editorial/alara-yaz-baslamadan-bedeni-uyandirmak.webp',
-    alt: 'Sahil yolunda mat ve çantasıyla sakin yürüyen 40+ kadın; yaz öncesi bedeni performans baskısı olmadan uyandırma yazısı için editoryal kart görseli',
+    alt: 'Deniz kenarında omzunda bir matla yürüyüp uzağa bakan bir kadın.',
   },
   '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/': {
     src: '/images/library/editorial/metin-yorgunluk-kas-tiroid-metabolizma.webp',
-    alt: 'Aydınlık yatak odasında gardırop yanında güne hazırlanırken durup beden enerjisini fark eden 50+ kadın; yorgunluk, tiroid, metabolizma ve kas kütlesi yazısı için sakin editoryal kart görseli',
+    alt: 'Gardırobun yanında ceketini giyerken bir an durup kendini dinleyen bir kadın.',
   },
   '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/': {
     src: '/images/library/editorial/ersin-denge-ayak-kalca-govde.webp',
-    alt: 'Ev koridorunda duvara hafifçe temas ederek dengesini fark eden 40+ kadın; ayak, kalça ve gövde hattını yeniden duyma yazısı için sakin editoryal kart görseli',
+    alt: 'Ev koridorunda eliyle duvara dokunarak dengesini yoklayan bir kadın.',
   },
   '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/': {
     src: '/images/library/editorial/bulent-kemik-gucu-kirik-beklemeden.webp',
-    alt: 'Aydınlık bir evde pencere yanında oturan 50+ kadın; kemik gücü, kırık riski ve koruyucu ortopedik takip yazısı için sakin editoryal kart görseli',
+    alt: 'Deniz manzaralı bir pencerenin yanında elinde havluyla duran bordo bluzlu bir kadın.',
   },
   '/hormonal-gecis/40-sonrasi/menopozdan-sonra-kalp-sagligina-neden-daha-dikkatli-bakiyorum/': {
     src: '/images/library/editorial/alp-aslan-eryilmaz-menopoz-kalp-byline.png',
-    alt: 'Krem trençkot ve bordo fular detayıyla apartman girişinde kısa bir duraklama anında görülen orta yaşlı kadın; menopoz sonrası kalp sağlığı yazısı için sakin editoryal kart görseli',
+    alt: 'Apartman girişinde trençkotuyla, eli göğsünde kısa bir an duraklayan bir kadın.',
   },
   '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/': {
     src: '/images/library/editorial/zy-diz-agrisi-ortopedik-takip.png',
-    alt: 'Premium editoryal tonda, sakin bir iç mekanda diz sağlığı ve ortopedik takip temasını taşıyan olgun kadın portresi; 40 sonrası diz ağrısını izlem ve müdahale dengesiyle okuma görseli',
+    alt: 'Boğaz manzaralı pencerenin önünde koltukta oturup dışarı bakan bir kadın; masada bir bardak çay.',
   },
   '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/': {
     src: '/images/library/editorial/metin-alis-tiroid-menopoz-yorgunluk-uyku-byline.jpg',
@@ -295,27 +295,27 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/': {
     src: '/images/library/editorial/isik-selin-gunce-durus-beden-farkindaligi-byline.jpg',
-    alt: 'Aydınlık bir pencere önünde boynunu ve omuzlarını nazikçe esneten kadın; beden farkındalığı, duruş ve günlük gerginlik yazısı için sakin editoryal kart görseli',
+    alt: 'Aydınlık bir odada pencerenin önünde boynunu nazikçe esneten bir kadın.',
   },
   '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/': {
     src: '/images/library/editorial/ersin-sarac-belden-gelen-agri-byline.jpg',
-    alt: 'Aydınlık bir odada bel ve kalça hattındaki gerilimi fark eder gibi duran kadın; belden kasık ve genital bölgeye yansıyan ağrı yazısı için sakin editoryal kart görseli',
+    alt: 'Oturma odasında bir pufun üzerinde otururken eliyle belini tutan bir kadın.',
   },
   '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/': {
     src: '/images/library/editorial/basak-pelister-hrt-karari-byline.jpg',
-    alt: 'Balkonda kahvesiyle oturan, şehir ışıklarına doğru düşünen 50+ kadın portresi; menopoz sonrası HRT kararı yazısı için sakin editoryal kart görseli',
+    alt: 'Deniz manzaralı bir balkonda kahvesini yudumlayıp uzağa bakan bordo şallı bir kadın.',
   },
   '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/': {
     src: '/images/library/editorial/hg-hrt-ilk-alti-ay.webp',
-    alt: 'Sabah ışığında mutfak tezgâhının yanında çayını demleyen, sade ve düşünceli 58 yaşında kadın portresi; HRT yolunda ilk altı ayın gözlemlerini ölçülü bir yaşıt tonuyla anlatan kart görseli',
+    alt: 'Mutfak masasında elindeki fincana bakan düşünceli bir kadın.',
   },
   '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/': {
     src: '/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu.webp',
-    alt: "Sabah ışığında pencere kenarındaki sade bir masada otururken pencereye doğru bakan, önünde küçük oval ayna ve açık bir defter duran, bordo ipek bluzlu, omuz hizasında kahverengi saçlı 50'li yaşlarında bir kadının yatay editöryal sahnesi; arkada okaliptüs dalı, krem perde ve porselen kahve fincanı — 'aynaya yeniden bakmak' atmosferi taşıyan kart görseli",
+    alt: 'Pencere kenarındaki masada, önünde açık defter, el aynası ve fincanla dışarı bakan bir kadın.',
   },
   '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi/': {
     src: '/images/library/editorial/rima-erdemir-yapay-zeka-hekim-cihaz-byline.jpg',
-    alt: 'Çalışma masasında tablet ve sağlık notları yanında düşünen 50+ kadın portresi; yapay zekâ, hekim yorumu ve kişisel takip verisi dengesi yazısı için sakin editoryal kart görseli',
+    alt: 'Çalışma masasında tablet ekranına bakan bir kadın; yanında akıllı saat, defter ve çay.',
   },
   '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/': {
     src: '/images/library/editorial/senai-hrt-avantajlari-window-card.webp',
@@ -323,15 +323,15 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/': {
     src: '/images/library/editorial/zy-magnezyum-menopoz.webp',
-    alt: 'Açık renkli bir iç mekanda su şişesiyle duran, krem tonlarda giyinmiş düşünceli kadın portresi; magnezyum yazısı için sakin editoryal kart görseli',
+    alt: 'Aydınlık bir iç mekânda elinde su şişesi, omzunda çanta ve paltoyla duran bir kadın.',
   },
   '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/': {
     src: '/images/library/editorial/zy-peptid-kullanimlari-menopoz-window-card.png',
-    alt: 'Açık renkli bir iç mekanda pencere yanında duran, bordo hırkalı düşünceli kadın portresi; peptid kullanımları yazısı için editoryal kart görseli',
+    alt: 'Şehir manzaralı geniş pencerenin önünde eli çenesinde düşünen bordo hırkalı bir kadın.',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri/': {
     src: '/images/library/editorial/hg-tarama-testleri-vapur.webp',
-    alt: 'Güneşli bir sonbahar sabahı Boğaz vapurunun güvertesinde gülen iki arkadaş; pembe ipek başörtülü kadın telefonundaki takvimi gösteriyor, kızıl saçlı arkadaşı bir tarihi işaret ediyor, arkada Galata Kulesi',
+    alt: 'Vapur güvertesinde telefondaki takvime bakıp gülen iki kadın; yanlarında simit.',
   },
   '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/': {
     src: '/images/library/editorial/senai-hrt-meme-kanseri-author-block-v2.png',
@@ -367,7 +367,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/': {
     src: '/images/library/editorial/anil-yalmaz-harekete-yeniden-baslamak-byline.webp',
-    alt: 'İstanbul manzaralı sıcak bir evde, mat üzerinde kontrollü step-up hazırlığında duran 40+ kadın; harekete yeniden başlama, denge ve sürdürülebilir güçlenme yazısı için kart görseli',
+    alt: 'Deniz manzaralı oturma odasında bir ayağını step basamağına koymuş, egzersize hazırlanan bir kadın.',
   },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
@@ -459,7 +459,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': {
     src: '/images/library/editorial/mahrem-bolge-degisimleri-menopoz.webp',
-    alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su, katlı pamuklu bez ve açık bir defter; menopozda mahrem bölge değişimleri editoryal kart görseli',
+    alt: 'Keten örtü üzerinde bir bardak su, katlanmış havlu, şakayık ve kalem.',
   },
   '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': {
     src: '/images/library/editorial/zd-stres-yonetimi.webp',
@@ -475,11 +475,11 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': {
     src: '/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi.webp',
-    alt: 'Aydınlık bir oturma odasında iki kadın direnç bandı ve defterdeki hareket planı üzerine sohbet ediyor; 40 sonrası kemik sağlığı yazısı için kart görseli',
+    alt: 'Aydınlık bir oturma odasında yan yana oturup bir defteri birlikte inceleyen iki kadın.',
   },
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi-muze.webp',
-    alt: 'Boğaz manzaralı aydınlık bir bilim müzesinde pirinç, krem ve gül tonlu soyut bir molekül heykeline bakan iki arkadaş; bordo elbiseli kadın yukarıyı işaret ediyor, krem ceketli arkadaşı gülüyor',
+    alt: 'Boğaz manzaralı bir müze salonunda tavandan sarkan molekül heykelini gösteren iki kadın.',
   },
   '/hormonal-gecis/menopoz/menopoz-nedir/': {
     src: '/images/library/editorial/hg-menopoz-nedir.webp',
