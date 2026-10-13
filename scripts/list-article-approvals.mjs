@@ -69,8 +69,8 @@ function resolveStringOrVar(fm, propName) {
   const direct = fm.match(new RegExp(`${propName}:\\s*['"\`]([^'"\`]+)['"\`]`));
   if (direct) return direct[1];
   const ref = fm.match(new RegExp(`${propName}:\\s*([a-zA-Z_$][\\w$]*)`));
-  if (!ref) return null;
-  const varName = ref[1];
+  // Kısa yazım (`buildArticleSchemas({ pathname, ... })`): değer aynı adlı const'tan gelir.
+  const varName = ref ? ref[1] : propName;
   const varDef = fm.match(new RegExp(`const\\s+${varName}\\s*=\\s*['"\`]([^'"\`]+)['"\`]`));
   return varDef ? varDef[1] : null;
 }
@@ -109,9 +109,11 @@ async function findAstroArticles(dir, results = []) {
 }
 
 async function loadApprovals() {
-  const src = await fs.readFile(APPROVALS_FILE, 'utf-8');
-  // approvedArticles array'inden pathname + approvedAt + writerSlug + note çek
-  const arrayMatch = src.match(/export const approvedArticles[^=]*=\s*\[([\s\S]*?)\];/);
+  const src = normalizeSource(await fs.readFile(APPROVALS_FILE, 'utf-8'));
+  // approvedArticles array'inden pathname + approvedAt + writerSlug + note çek.
+  // Dizi sonu satır başındaki `];` ile aranır: notlarda geçen "[kaynak];" gibi
+  // ifadeler diziyi erken kapatıp sonraki kayıtları onaysız göstermesin.
+  const arrayMatch = src.match(/export const approvedArticles[^=]*=\s*\[([\s\S]*?)\n\];/);
   if (!arrayMatch) return new Map();
   const body = arrayMatch[1];
   const approvals = new Map();
