@@ -300,7 +300,12 @@ export const writers: Writer[] = [
     signaturePhrase:
       'Yüz ve cilt yaşlanması 40+ ekseninde "size uygun mu" karar hattını birinci ağızdan açan; doğal yaşlanma kabulü ile müdahale dengesini danışman sıcaklığıyla anlatan klinisyen.',
     portrait: '/images/writers/cagri-sade.webp',
-    focusAreas: ['Yüz Yaşlanması & Menopoz', 'Estetik Karar Süreci', 'Non-İnvaziv Bilgi Haritası'],
+    focusAreas: [
+      'Yüz Yaşlanması & Menopoz',
+      'Menopoz Sonrası Vücut Şekillendirme',
+      'Estetik Karar Süreci',
+      'Non-İnvaziv Bilgi Haritası',
+    ],
     isEditor: false,
     category: 'scientific',
     writingStyle: {
@@ -326,7 +331,7 @@ export const writers: Writer[] = [
         'Hasta hikayesi anekdot detayı (yaş/yer/tarih/işlem).',
         'Yaşıt yazar pozu — Çağrı Sade ~56, erkek, hekim.',
         'Mahrem (Senai — labiaplasti) / endokrin (Metin) / kardiyo (Alp) eksen karışıklığı.',
-        'Vücut estetiği geneli (BBL / liposuction) — menopoz odağı dışı.',
+        'Menopozla ilişkisi kurulmayan vücut estetiği (BBL / genel estetik vitrin). Menopoz sonrası vücut şekillendirme (liposuction, karın germe) kapsam içinde.',
       ],
     },
   },

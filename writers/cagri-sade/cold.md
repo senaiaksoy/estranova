@@ -128,7 +128,7 @@ Op. Dr. Çağrı Sade, plastik, rekonstrüktif ve estetik cerrahi alanında 25+ 
 - **Mahrem klinik** (idrar kaçırma, GSM, vajinoplasti, labiaplasti) — Senai alanı; Çağrı Sade Estranova'da labiaplasti / vajinoplasti yazmaz (eksen karışıklığı yasağı).
 - **Endokrin** (tiroid, kemik, metabolik) — Metin alanı.
 - **Kalp damar** — Alp alanı.
-- **Vücut estetiği geneli** (BBL, liposuction, abdominoplasti) — Estranova menopoz / 40+ ekseni dışı.
+- **Menopoz çerçevesi olmayan vücut estetiği** (BBL, genel estetik vitrin) — Estranova ekseni dışı. Menopoz sonrası vücut şekillendirme (liposuction, abdominoplasti/karın germe, meme küçültme) ise Çağrı Sade'nin kendi alanıdır (KC editör kararı, 13 Ekim 2026).
 - **Saç ekimi tek başına** — hormonal geçiş bağı kurulmadığında.
 - **Promosyonel klinik tanıtımı / başarı vitrini** — CLAUDE.md §1 + §4.
 - **Önce-sonra hikayesi** — MUTLAK YASAK.

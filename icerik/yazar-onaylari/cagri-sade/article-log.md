@@ -104,3 +104,13 @@ Kullanıcı “revizyon onay tamam” diyerek audit-humanize-3 sürümünü onay
 ## 3 Ekim 2026 — HIFU audit-humanize-3: yazar onayı teyit edildi
 
 Kullanıcı “çağrı onayı tamam” dedi. 2 Ekim 2026'da “revizyon onay tamam” beyanıyla yayına alınan audit-humanize-3 revizyonu için Çağrı Sade'nin açık yazar onayı kayda geçti. Metin değişmedi.
+
+## 13 Ekim 2026 — Menopoz sonrası vücut şekillendirme: audit + humanize (onaylandı)
+
+> Sonraki teknik doğrulama: PMID 33085282 NCBI EFetch kaydıyla doğrulandı. Kullanıcının "Değişiklikleri yap" talebi üzerine görünür güncelleme tarihi, Kaynaklar bölüm numarası, şema görsel URL'si ve kaynak 6/10 yayın yılları düzeltildi; kaynak 8 künyesi sadeleştirildi. İlk onaylı kopya pakette `onayli-surum-duzeltme-oncesi.astro` olarak korundu, güncel `site-kaynak.astro` yerel rota ile eşitlendi. Klinik gövde, SSS cevapları, kanıt düzeyleri ve editör notu aynı kaldı. Aşağıdaki "doğrulanamadı" ifadesi önceki oturumun tarihsel sonucudur. Commit/push/deploy yapılmadı.
+
+Paket `onaylanan/2026-10-13_menopoz-sonrasi-kilo-vucut-sekillendirme-audit-humanize/` altında. Yazar onayı (Çağrı Sade) ve tıbbi onay (Senai Aksoy) 13 Ekim 2026 tarihinde alındı; canlı rota bu metinle güncellendi. Commit/push yapılmadı. Başlıca düzeltmeler: kaynak 5 (PubMed 37990743) yanlış atıf olarak işaretlendi ve kaldırıldı; "liposuction insülin direncini tedavi etmez" ifadesi kanıtla uyumlu hale getirildi (kısa süreli küçük iyileşmeler bildirildi, uzun dönem fayda gösterilmedi); PMID 33085282 doğrulanamadı; atıf sırası düzeltildi; içindekiler etiketleri başlıklarla eşitlendi; "X değil, Y" kalıbı 19'dan 5'e indi. Kalıp seçimi: açılış sahnesi (kıyafet/tartı) korundu; yeni kalıp eklenmedi.
+
+## 13 Ekim 2026 — Menopoz sonrası vücut şekillendirme: ikinci audit (onaylandı)
+
+Paket `onaylanan/2026-10-13_menopoz-sonrasi-kilo-vucut-sekillendirme-audit-2/`. StatPearls (kaynak 8) içeriği NCBI'de okunarak doğrulandı (6-12 ay kilo stabilitesi dahil). Kanıt düzeyi tutarlılığı (derlemeler 3), H2 girişleri ≤2 cümle, "kontur/lokalize" açıklamaları, tekrar eden benzetme, byline alt metni, okuma süresi ve görünür inceleyen imzası (Doç. Dr. Senai Aksoy). Profil kapsamı KC kararıyla güncellendi: menopoz sonrası vücut şekillendirme Çağrı Sade'nin alanı. Yazar ve tıbbi onay KC bildirimiyle. Kalıp seçimi değişmedi. Commit/push yapılmadı.

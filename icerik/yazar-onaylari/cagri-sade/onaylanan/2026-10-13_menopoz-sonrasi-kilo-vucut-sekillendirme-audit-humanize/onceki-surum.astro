@@ -1,0 +1,378 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/';
+// Üst hero parent hub'dan gelir; özel makale görseli yalnızca byline + kart yüzeylerine bağlanır.
+const hero = submenuHeroByRoute['/beden-yakinlik/']!;
+const articleTitle = 'Menopoz Sonrası Vücut Şekillendirme: Liposuction Size Uygun mu?';
+const seoTitle = 'Menopoz Sonrası Liposuction Size Uygun mu?';
+const articleDescription =
+  'Menopoz sonrası karın bölgesindeki değişim liposuction ile giderilebilir mi? Op. Dr. Çağrı Sade, işlemin sınırlarını ve karar ölçütlerini anlatıyor.';
+const publishedDate = '21 Eylül 2026';
+const readingMinutes = 9;
+const articleImage =
+  '/images/library/editorial/cagri-sade-menopoz-sonrasi-kilo-vucut-sekillendirme.webp';
+const bylineImage =
+  '/images/library/editorial/cagri-sade-menopoz-sonrasi-kilo-vucut-sekillendirme-byline.webp';
+
+const tocEntries = [
+  { id: 'tarti-tek-basina-yetmez', label: 'Tartı Tek Başına Yetmez' },
+  { id: 'neden-degisir', label: 'Kilo ve Dağılım Neden Değişir?' },
+  { id: 'once-saglik', label: 'Önce Sağlık Zemini' },
+  { id: 'liposuction-ne-degildir', label: 'Liposuction Ne Değildir?' },
+  { id: 'hangi-sorun-konusuluyor', label: 'Hangi Sorun Konuşuluyor?' },
+  { id: 'teknik-ve-iyilesme', label: 'Teknik ve İyileşme' },
+  { id: 'sonuc-olarak', label: 'Sonuç Olarak' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sss', label: 'Sık Sorulanlar' },
+];
+
+const faqItems = [
+  {
+    question: 'Menopoz sonrası karın bölgesindeki her yağlanma liposuction ile giderilebilir mi?',
+    answer:
+      'Hayır. Görünümdeki değişim cilt altı yağından, iç organların çevresindeki visseral yağdan, deri fazlalığından veya karın duvarı gevşekliğinden kaynaklanabilir. Liposuction yalnızca belirli cilt altı yağ birikimleri için değerlendirilir; diğer nedenleri tedavi etmez.',
+  },
+  {
+    question: 'Liposuction menopoz sonrası kilo vermeye yardımcı olur mu?',
+    answer:
+      'Liposuction bir obezite veya kilo verme tedavisi değildir. Amaç, genel sağlık ve kilo yönetimi ayrıca ele alındıktan sonra belirli bölgelerdeki cilt altı yağ dokusunun vücut konturu açısından değerlendirilmesidir.',
+  },
+  {
+    question: 'Lazer ya da ultrason yardımlı liposuction daha hızlı iyileşme sağlar mı?',
+    answer:
+      'Bunu herkes için geçerli bir vaat gibi söylemek doğru olmaz. Kullanılan teknik kadar işlemin kapsamı, uygulanan bölge, genel sağlık, sigara kullanımı ve kişisel iyileşme yanıtı da süreci etkiler. Yardımcı tekniklerin kendilerine özgü riskleri de vardır.',
+  },
+  {
+    question: 'Kilo sabitlenmeden vücut şekillendirme ameliyatı düşünülür mü?',
+    answer:
+      'Devam eden belirgin kilo değişimi sonucun öngörülebilirliğini ve iyileşme planını etkileyebilir. Bu nedenle karar, hedef kilodan çok kilo seyrinin dengesi, metabolik durum, doku yapısı ve kişinin genel sağlığı birlikte değerlendirilerek verilir.',
+  },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  articleType: 'clinical-guide',
+  publishedDate,
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  image: `${siteUrl}${articleImage}`,
+  keywords: [
+    'menopoz sonrası liposuction',
+    'menopoz sonrası vücut şekillendirme',
+    'karın bölgesi liposuction',
+    'liposuction kimlere uygundur',
+    'liposuction kilo verdirir mi',
+    'cilt altı yağ ve visseral yağ',
+    'lazer liposuction',
+    'ultrason yardımlı liposuction',
+    '40 sonrası beden',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/beden-yakinlik/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Beden Konforu"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        articleType="clinical-guide"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc={bylineImage}
+        imageAlt="Gün ışığı alan sakin bir evde ayna karşısında duran 50'li yaşlarda kadın; menopoz sonrası beden kompozisyonu ve vücut şekillendirme kararını anlatan editoryal portre"
+        imagePosition="center top"
+      />
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Menopoz sonrasında karın bölgesindeki her değişim aynı dokudan kaynaklanmaz. Liposuction kilo verme
+          yöntemi değil, uygun kişilerde belirli cilt altı yağ birikimleri için değerlendirilen bir vücut
+          şekillendirme işlemidir. Bu nedenle önce değişimin kaynağını, metabolik riskleri, kilo seyrini ve
+          iyileşme koşullarını birlikte ayırırız. Asıl soru
+          <em>“Hangi işlem yapılabilir?” değil, “Bu işlem gerçekten size uygun mu?”</em> olmalıdır.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="tarti-tek-basina-yetmez">Tartıdaki Sayı Bütün Hikâyeyi Anlatmaz</h2>
+        <p>
+          Kıyafetlerinizin belde farklı durduğunu hissedip tartıya çıktığınızda sayının neredeyse aynı
+          kaldığını görebilirsiniz. Şaşırtıcıdır; ama çelişki değildir.
+        </p>
+        <p>
+          Menopoz geçişinde kilo, yağ kütlesi, kas kütlesi ve yağın bedendeki yeri aynı yönde hareket etmek
+          zorunda değildir. Uzun süreli SWAN verileri, geçiş başladığında yağ kazanımının hızlanabildiğini ve
+          yağsız kütlenin azalabildiğini; buna karşılık toplam kilo artışının menopoz başlangıcında ayrıca
+          hızlanmadığını gösteriyor <Evidence level={4} /><sup><a href="#kaynak-1">[1]</a></sup>.
+        </p>
+        <p>
+          Bu ayrım rahatlatıcı olabilir. Çünkü mesele her zaman “daha çok yedim” kadar basit değildir.
+          Tartı toplamı verir; dağılımı ve dokunun niteliğini vermez.
+        </p>
+        <p>
+          Bana bu konuyla gelen kadınlarda önce üç şeyi birlikte ayırırız: Kilo mu değişti, beden kompozisyonu
+          mu, yoksa belirli bir bölgedeki doku mu? Aynı görünen yakınmanın altından farklı cevaplar çıkabilir.
+        </p>
+
+        <h2 id="neden-degisir">Menopozdan Sonra Kilo ve Yağ Dağılımı Neden Değişir?</h2>
+        <p>
+          Tek bir suçlu aramak kolay, doğru değil. Yaş alma, hormonal geçiş, kas kaybı, günlük hareket,
+          uyku ve beslenme aynı masada oturur.
+        </p>
+        <p>
+          Orta yaşta toplam kilo artışında kronolojik yaşlanmanın payı büyüktür. Menopoz ise özellikle
+          yağın karın çevresinde toplanması ve beden kompozisyonunun değişmesiyle ilişkilidir <Evidence
+            level={4}
+          /><sup><a href="#kaynak-2">[2]</a></sup>. Östrojen azalırken kalça ve uylukta depolanmaya daha yatkın
+          olan yağ dağılımı, bazı kadınlarda karın bölgesine doğru kayabilir.
+        </p>
+        <p>
+          Buradaki ikinci ayrım cilt altı yağ ile iç organların çevresindeki visseral yağdır. Visseral yağ artışı
+          metabolik ve kalp-damar riskiyle ilişkilidir. SWAN Heart çalışmasında bu artışın son adetten yaklaşık
+          iki yıl önce hızlandığı gözlendi <Evidence level={4} /><sup><a href="#kaynak-3">[3]</a></sup>.
+          Liposuction ise cilt altı yağ dokusunu hedefler; visseral yağı veya ona eşlik eden metabolik riski tedavi
+          eden bir yöntem değildir <Evidence level={4} /><sup><a href="#kaynak-5">[5]</a></sup>.
+        </p>
+        <p>
+          <em>“Karın çevrem arttı; o halde sorun yalnızca cilt altı yağ mı?”</em>
+        </p>
+        <p>
+          Her zaman değil. İşte bu nedenle estetik bir işlemi konuşmadan önce sağlık zeminini konuşmak
+          gerekir.
+        </p>
+
+        <h2 id="once-saglik">Estetik Karardan Önce Sağlık Zemini Gelir</h2>
+        <p>
+          Hızlı veya açıklanamayan kilo değişimi, yalnızca beden konturu başlığına sığmaz. Önce nedenin
+          anlaşılması gerekir.
+        </p>
+        <p>
+          Kilo artışının seyri, bel çevresi, tansiyon, kan şekeri ve kan yağları gibi metabolik göstergeler;
+          kullanılan ilaçlar, uyku kalitesi, fiziksel aktivite ve gerektiğinde tiroid gibi başka nedenler birlikte
+          değerlendirilir. Menopoz her değişimi açıklayan tek etiket değildir.
+        </p>
+        <p>
+          Orta yaşta kilo yönetiminin temeli dengeli beslenme, kası koruyan hareket, uyku ve uygun tıbbi
+          değerlendirmedir. Güncel hasta bilgilendirmeleri de yaş almayı kilo artışının ana sürücüsü, menopozu
+          ise karın yağının dağılımında önemli bir etken olarak ayırıyor <Evidence level={4} /><sup><a
+              href="#kaynak-4">[4]</a></sup>.
+        </p>
+        <p>
+          İçiniz rahat olsun diye söylüyorum: Önce metabolik değerlendirme istemek, estetik kaygınızı
+          küçümsemek değildir. Tam tersine, bedeninize tek bir açıdan bakmamaktır.
+        </p>
+
+        <h2 id="liposuction-ne-degildir">Liposuction Kilo Verme Yöntemi Değildir</h2>
+        <p>
+          Bu cümle kısa ve nettir. Liposuction obeziteyi, insülin direncini veya menopozla ilişkili metabolik
+          değişimi tedavi etmez <Evidence level={4} /><sup><a href="#kaynak-5">[5]</a></sup>.
+        </p>
+        <p>
+          Liposuction, uygun kişilerde belirli bölgelerdeki cilt altı yağ dokusunu azaltarak vücut konturunu
+          değiştirmeyi amaçlar <Evidence level={4} /><sup><a href="#kaynak-6">[6]</a></sup>. Kilosu hâlâ belirgin
+          biçimde değişen, ana sorunu visseral yağ olan veya deri fazlalığı ve karın duvarı gevşekliği bulunan bir
+          kişide aynı beklentiyle ele alınamaz.
+        </p>
+        <p>
+          <em>“Peki yapılabilir mi?”</em>
+        </p>
+        <p>
+          Teknik olarak yapılabilir olması, size uygun olduğu anlamına gelmez. Biz önce hangi dokunun sorun
+          yarattığını konuşuruz. Benim için daha önemli soru, seçilen işlemin o soruna gerçekten karşılık verip
+          vermediğidir.
+        </p>
+        <p>
+          Kilo seyri dengelenmeden ve genel sağlık zemini netleşmeden verilen bir kontur kararının sonucu daha
+          az öngörülebilir olabilir <Evidence level={4} /><sup><a href="#kaynak-6">[6]</a></sup>. Beklemek bazen
+          kararı ertelemek değil, kararı olgunlaştırmaktır.
+        </p>
+
+        <h2 id="hangi-sorun-konusuluyor">Yağ, Deri ve Karın Duvarı Aynı Sorun Değildir</h2>
+        <p>
+          Aynada tek bir bölge görürüz. Cerrahi değerlendirmede ise o bölgenin katmanları ayrı ayrı okunur.
+        </p>
+        <p>
+          Lokalize cilt altı yağ baskınsa liposuction konuşulabilir. Belirgin deri fazlalığı veya zayıf cilt
+          elastikiyeti varsa yalnızca yağ azaltmak derinin beklenen biçimde toparlanmasını sağlamayabilir
+          <Evidence level={4} /><sup><a href="#kaynak-6">[6]</a></sup>. Karın duvarında gevşeklik veya kaslar
+          arasında ayrışma varsa sorun yine başka bir katmandadır.
+        </p>
+        <p>
+          Aynı şekilde şişkinlik hissi, sindirim sistemi yakınmaları veya visseral yağ artışı da cilt altı yağla
+          karıştırılmamalıdır. Bir işlemin sınırını bilmek, yararını anlatmak kadar önemlidir.
+        </p>
+        <p>
+          Karar öncesinde şu beş başlık yeterli bir başlangıç verir:
+        </p>
+        <ul>
+          <li><strong>Kilo seyri.</strong> Son aylarda dengeli mi, değişmeye devam mı ediyor?</li>
+          <li><strong>Doku.</strong> Ana mesele cilt altı yağ, deri fazlalığı veya karın duvarı mı?</li>
+          <li><strong>Sağlık.</strong> Metabolik riskler, ilaçlar, sigara ve dolaşım durumu değerlendirildi mi?</li>
+          <li><strong>Beklenti.</strong> Amaç kilo vermek mi, sınırlı bir kontur değişikliği mi?</li>
+          <li><strong>İyileşme.</strong> Dinlenme, hareket kısıtı ve destek ihtiyacı gerçekçi mi?</li>
+        </ul>
+
+        <h2 id="teknik-ve-iyilesme">Teknik Adı İyileşme Takvimi Değildir</h2>
+        <p>
+          Lazer veya ultrason yardımlı liposuction gibi adlar kulağa bir iyileşme vaadi gibi gelebilir. Oysa
+          teknik ile kişisel iyileşme süresi aynı cümle değildir.
+        </p>
+        <p>
+          Yardımcı teknikleri klasik liposuctionla karşılaştıran literatür vardır; ancak güncel değerlendirmeler
+          bu yöntemlerin genel olarak daha iyi sonuç verdiğini gösteren güçlü kanıt bulunmadığını bildiriyor <Evidence
+            from={2}
+            to={3}
+          /><sup><a href="#kaynak-7">[7]</a></sup>. Uygulanan alan, alınan yağ miktarı, eşlik eden işlemler,
+          doku kalitesi ve genel sağlık sonucu etkiler.
+        </p>
+        <p>
+          Liposuction sonrasında kontur düzensizliği, sıvı birikimi, kanama, enfeksiyon ve his değişikliği gibi
+          komplikasyonlar görülebilir; enerji destekli yöntemlerde cilt yanığı da bildirilen riskler arasındadır
+          <Evidence level={4} /><sup><a href="#kaynak-8">[8]</a></sup><sup><a href="#kaynak-7">[7]</a></sup>.
+          Korse kullanımı ve işe dönüş süresi kişiye ve işlemin kapsamına göre değişir
+          <sup><a href="#kaynak-9">[9]</a></sup>. Bu nedenle “dört hafta korse” veya “on günde
+          sosyal hayata dönüş” gibi tek bir takvim herkes için doğru değildir.
+        </p>
+        <p>
+          <em>“Hangi teknik daha iyi?”</em>
+        </p>
+        <p>
+          Bence soru biraz erken geliyor. Biz önce hangi dokuyu ele aldığımızı, sonra bu hedef için tekniği neden
+          seçtiğimizi ve son olarak risklerin sizin sağlık durumunuzda nasıl değiştiğini konuşuruz.
+        </p>
+
+        <h2 id="sonuc-olarak">Sonuç Olarak</h2>
+        <p>
+          Menopoz sonrası beden değişikliğini tek kelimeyle “kilo” diye adlandırmak, bazen en önemli ayrıntıyı
+          kaçırır. Değişen şey toplam ağırlık, kas-yağ dengesi, yağın yeri, deri veya karın duvarı olabilir.
+        </p>
+        <p>
+          Plastik cerrahinin rolü, kilo yönetiminin yerine geçmek değil; genel sağlık ve kilo seyri uygun
+          biçimde ele alındıktan sonra kalan lokalize doku sorununu gerçekçi sınırlarla değerlendirmektir. Biz
+          önce sorunu doğru katmanda tanımlarız. Bazen
+          liposuction konuşulur. Bazen deri fazlalığı veya karın duvarı için farklı bir yol gerekir. Bazen de en
+          doğru karar, hiçbir işlemi aceleye getirmemektir.
+        </p>
+        <p>
+          Amaç bedeninizi başka bir bedene benzetmek olmamalı. Amaç, sizde neyin değiştiğini doğru adlandırmak
+          ve bir müdahale düşünüyorsanız kararın gerçekten size ait, bilgili ve ölçülü olmasıdır.
+        </p>
+
+        <h2 id="kaynaklar" style="counter-increment: none;">Kaynaklar</h2>
+        <ol>
+          <li id="kaynak-1">
+            Greendale GA ve ark. Menopoz geçişinde beden kompozisyonu ve kilo değişimi, SWAN kohortu.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30843880/" target="_blank" rel="noopener noreferrer">PMID: 30843880</a>.
+          </li>
+          <li id="kaynak-2">
+            Davis SR ve ark. Menopozda kilo artışını anlamak: kilo ile yağ dağılımının ayrımı.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/22978257/" target="_blank" rel="noopener noreferrer">PMID: 22978257</a>.
+          </li>
+          <li id="kaynak-3">
+            Samargandy S ve ark. Menopoz geçişinde visseral yağ ve subklinik ateroskleroz, SWAN Heart.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33651741/" target="_blank" rel="noopener noreferrer">PMID: 33651741</a>.
+          </li>
+          <li id="kaynak-4">
+            The Menopause Society. Orta yaşta kilo artışı hasta bilgilendirme notu.
+            <a href="https://menopause.org/wp-content/uploads/for-women/MenoNote-Weight-Gain.pdf" target="_blank" rel="noopener noreferrer">PDF</a>.
+          </li>
+          <li id="kaynak-5">
+            Bays HE ve ark. Obezite tedavisinde kozmetik uygulamalar ve subkutan yağın cerrahi olarak çıkarılmasının metabolik sınırları; OMA klinik uygulama bildirisi.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37990743/" target="_blank" rel="noopener noreferrer">PMID: 37990743</a>.
+          </li>
+          <li id="kaynak-6">
+            Bartow MJ, Szymanski KD, Raggio BS. Liposuction: endikasyonlar, hasta seçimi ve güvenlik çerçevesi; StatPearls güncel klinik özeti.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33085282/" target="_blank" rel="noopener noreferrer">PMID: 33085282</a>.
+          </li>
+          <li id="kaynak-7">
+            Teknoloji destekli liposuction yöntemlerinin etkinlik ve güvenliğine ilişkin güncel literatür değerlendirmesi.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41495547/" target="_blank" rel="noopener noreferrer">PMID: 41495547</a>.
+          </li>
+          <li id="kaynak-8">
+            Liposuction komplikasyonları: 60 çalışma ve 21.776 hastayı kapsayan sistematik derleme ve meta-analiz.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38433796/" target="_blank" rel="noopener noreferrer">PMID: 38433796</a>.
+          </li>
+          <li id="kaynak-9">
+            American Society of Plastic Surgeons. Lazer ve ultrason yardımlı liposuction sonrası iyileşme ve riskler.
+            <a href="https://www.plasticsurgery.org/cosmetic-procedures/liposuction-assisted/recovery" target="_blank" rel="noopener noreferrer">Hasta bilgilendirme sayfası</a>.
+          </li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sss"
+        class="mt-10"
+        items={faqItems}
+        title="Bu Yazıdan Sonra Akla Gelen Sorular"
+        intro="Kilo değişimi ile vücut şekillendirme kararını birbirinden ayırırken en sık sorulan dört noktaya kısa yanıtlar."
+      />
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/zamansiz-yasam/kilo-artisi-menopoz/',
+          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+          '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Menopoz sonrası kilo değişimi ile yağ dağılımının değişmesi ayrı klinik başlıklardır. Visseral
+          yağ artışı metabolik ve kalp-damar riski açısından değerlendirilirken, liposuction yalnızca belirli cilt
+          altı yağ birikimlerinin konturunu değiştirmeyi amaçlar. Hızlı veya açıklanamayan kilo değişimi,
+          belirgin metabolik risk ya da devam eden kilo seyri varsa estetik karardan önce ilgili tıbbi değerlendirme
+          tamamlanmalıdır.
+        </p>
+        <p>
+          Yardımcı liposuction teknikleri için iyileşme süresi ve sonuç kişiye göre değişir. Belirli bir teknik,
+          korse süresi veya işe dönüş takvimi genel vaat olarak sunulmamalıdır.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10" />
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

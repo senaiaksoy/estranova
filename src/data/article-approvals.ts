@@ -44,8 +44,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/',
     writerSlug: 'cagri-sade',
-    approvedAt: '2026-09-21',
-    note: 'Op. Dr. Çağrı Sade yazar onayı ve Doç. Dr. Senai Aksoy tıbbi onayı 21 Eylül 2026 tarihinde teyit edildi. Metin, kaynakça düzeltmesiyle birlikte yayımlandı; PubMed PMID 33085282 künyesi Bartow, Szymanski ve Raggio olarak doğrulandı. Özel byline ve kart görselleri bağlandı; üst hero parent Beden & Yakınlık olarak korundu.',
+    approvedAt: '2026-10-13',
+    note: 'Op. Dr. Çağrı Sade yazar onayı ve Doç. Dr. Senai Aksoy tıbbi onayı 21 Eylül 2026 tarihinde teyit edildi. Metin, kaynakça düzeltmesiyle birlikte yayımlandı; PubMed PMID 33085282 künyesi Bartow, Szymanski ve Raggio olarak doğrulandı. Özel byline ve kart görselleri bağlandı; üst hero parent Beden & Yakınlık olarak korundu. 2026-10-13: audit + humanize revizyonu (kaynak 5 PubMed 37990743 yanlış atfı kaldırıldı; liposuction-insülin ifadesi kanıtla uyumlu hale getirildi; atıf sırası ve içindekiler düzeltildi) Op. Dr. Çağrı Sade yazar onayı ve Doç. Dr. Senai Aksoy tıbbi onayı ile yayına alındı. Paket: icerik/yazar-onaylari/cagri-sade/onaylanan/2026-10-13_menopoz-sonrasi-kilo-vucut-sekillendirme-audit-humanize/. 2026-10-13 ikinci audit: kanıt düzeyleri, H2 girişleri, terim açıklamaları, byline alt metni ve görünür inceleyen imzası; StatPearls içeriği doğrulandı. Yazar ve tıbbi onay KC bildirimiyle. Paket: icerik/yazar-onaylari/cagri-sade/onaylanan/2026-10-13_menopoz-sonrasi-kilo-vucut-sekillendirme-audit-2/. Bu kayıt push/deploy yetkisi değildir.',
   },
   {
     pathname: '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
@@ -369,7 +369,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-09-29',
-    note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi. 2026-09-29: ters ölçekli kanıt etiketleri site ölçeğine çevrildi (statin ve migren orta, kalp yetmezliği ve ubiquinol sınırlı) ve kaynak numaralarına bağlandı; Dr. Aksoy onayı, tıbbi onay KC beyanı (yazılı Mumcu notu yok).',
+    note: 'Prelaunch inventory reconciliation: static page, schema metadata ve production launch listesi uyumlu hale getirildi. 2026-09-29: ters ölçekli kanıt etiketleri site ölçeğine çevrildi (statin ve migren orta, kalp yetmezliği ve ubiquinol sınırlı) ve kaynak numaralarına bağlandı; Dr. Aksoy onayı, tıbbi onay KC beyanı (yazılı Mumcu notu yok). 2026-10-13: Kaynaklar paneli numarasız referans paneline alındı, içindekilerde SSS numarasız (yalnızca sunum; metin değişmedi); KC onayı (KC bildirimi, 2026-10-13).',
   },
   {
     pathname: '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',

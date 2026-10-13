@@ -227,7 +227,7 @@ avoid:
   - "Mahrem klinik (Senai — labiaplasti / vajinoplasti) — eksen karışıklığı"
   - "Kalp damar (Alp) / endokrin (Metin) eksen karışıklığı"
   - "Saç ekimi tek başına eksen — Estranova menopoz çerçevesinde olmadıkça (saç dökülmesi + hormonal geçiş bağı kurulduysa OK)"
-  - "Vücut estetiği genel (BBL / liposuction / karın germe) — Estranova menopoz / 40+ ekseni dışında. Postmenopoz vücut kompozisyon değişimi konusunda (Berna alanı), Çağrı Sade NÖTR BİLGİ olarak destekleyebilir"
+  - "Menopoz çerçevesi olmayan vücut estetiği (BBL / genel estetik vitrin) — Estranova ekseni dışında. Menopoz sonrası vücut şekillendirme (liposuction, karın germe, meme küçültme) Çağrı Sade'nin kendi alanıdır (KC editör kararı, 13 Ekim 2026); kilo/beslenme yönetimi anlatısı Berna alanında kalır"
 
 thematic_axes:
   - "Yüz yaşlanması mekanizması (kollajen / yağ rezorpsiyon / kemik kaybı)"
@@ -263,7 +263,7 @@ selection_criteria_exclude:
   - "Mahrem klinik (Senai — labiaplasti / vajinoplasti — fonksiyonel zemin)"
   - "Endokrin (Metin) — tiroid / kemik / metabolik"
   - "Kalp damar (Alp) — kardiyovasküler"
-  - "Vücut estetiği geneli (BBL / liposuction) — Estranova menopoz çerçevesi dışı"
+  - "Menopoz çerçevesi olmayan vücut estetiği (BBL / genel estetik vitrin) — menopoz sonrası vücut şekillendirme (liposuction, karın germe) ise kapsam içinde (13 Ekim 2026)"
   - "Saç ekimi tek başına — hormonal geçiş bağı kurulmadığında"
   - "Promosyonel klinik tanıtımı / başarı vitrini"
   - "Önce-sonra hikayesi"
@@ -390,7 +390,7 @@ quick_reference:
     - "Hasta hikayesi anekdot detayı"
     - "Yaşıt yazar pozu — Çağrı Sade ~56, erkek, hekim"
     - "Mahrem (Senai — labiaplasti) / endokrin (Metin) / kardiyo (Alp) eksen karışıklığı"
-    - "Vücut estetiği geneli (BBL / liposuction) — menopoz çerçevesi dışı"
+    - "Menopoz çerçevesi olmayan vücut estetiği (BBL / genel estetik vitrin) — menopoz sonrası liposuction / karın germe kapsam içinde"
     - "Saç ekimi tek başına — hormonal geçiş bağı kurulmadığında"
   must_include:
     - "Birinci tekil danışman sesi — 'ben yıllar içinde fark ettim', 'bana gelen kadınların çoğu', 'size hep söylüyorum', 'benim için asıl soru' (HARD; v0.4)"
@@ -459,7 +459,8 @@ private_context_inject: |
   - Yaşıt yazar pozu YASAK
   - Mahrem (Senai — labiaplasti) / endokrin (Metin) / kardiyo (Alp)
     eksen karışıklığı YASAK
-  - Vücut estetiği geneli (BBL/liposuction) menopoz dışı YASAK
+  - Menopoz çerçevesi olmayan vücut estetiği (BBL / genel estetik vitrin) YASAK;
+    menopoz sonrası vücut şekillendirme (liposuction, karın germe) kapsam içinde
   - Saç ekimi tek başına — hormonal geçiş bağı kurulmadığında YASAK
 
   ZORUNLU YAPISAL ÖGELER (HARD MUST-CHECK):
