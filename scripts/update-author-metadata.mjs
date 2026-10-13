@@ -13,7 +13,6 @@ const updates = [
   { file: 'src/pages/hormonal-gecis/perimenopoz/perimenopoz-nedir.astro', date: '17 Şubat 2026', mins: 3 },
   { file: 'src/pages/hormonal-gecis/menopoz/menopoz-nedir.astro',         date: '21 Şubat 2026', mins: 4 },
   { file: 'src/pages/bilimsel-pencere/estrogen-biyolojisi-saglik.astro',  date: '25 Şubat 2026', mins: 5 },
-  { file: 'src/pages/zamansiz-yasam/kemik-sagligi-40-sonrasi.astro',      date: '1 Mart 2026',   mins: 3 },
   { file: 'src/pages/zamansiz-yasam/hareket-saglik-menopoz.astro',        date: '5 Mart 2026',   mins: 4 },
   { file: 'src/pages/zamansiz-yasam/beslenme-yaslanma.astro',             date: '9 Mart 2026',   mins: 4 },
   { file: 'src/pages/zihin-denge/uyku-bozuklugu-menopoz.astro',           date: '12 Mart 2026',  mins: 3 },

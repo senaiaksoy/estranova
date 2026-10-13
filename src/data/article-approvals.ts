@@ -104,8 +104,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
     writerSlug: 'bulent-aksoy',
-    approvedAt: '2026-06-01',
-    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; static manifest ve production route uyumu dogrulandi.',
+    approvedAt: '2026-10-13',
+    note: 'Kullanici bildirimi (13 Ekim 2026): Prof. Dr. Bulent Aksoy ve Dr. Alper Mumcu onaylari son surumu kapsiyor. Kayit: icerik/yazar-onaylari/bulent-aksoy/onaylanan/2026-10-13_kemik-gucu-son-surum/. Kemik sagligi-40-sonrasi (Senai) birlestirilip yonlendirildi. Onceki kayit: 2026-06-01 Prelaunch.',
   },
   {
     pathname: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',

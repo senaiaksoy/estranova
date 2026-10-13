@@ -745,23 +745,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Çünkü tartı toplam kütleyi gösterir, dağılımı göstermez. Bel çevresi, visseral yağ artışına dair daha doğrudan bir sinyal taşıdığı için kilo değerinden bağımsız bir risk göstergesi olarak değerlendiriliyor.',
     },
   ],
-  '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': [
-    {
-      question: 'Kemik kaybı ağrı yapmıyorsa neden erken düşünmek gerekir?',
-      answer:
-        'Kemik kaybını çoğu zaman hissetmeyiz; ilk belirti bir kırık olabilir. Özellikle menopozdan sonra riskleri erkenden konuşmamın amacı, kırık oluşmadan önce önlem alabilmektir.',
-    },
-    {
-      question: 'DXA ölçümü herkese 40 yaşında gerekli midir?',
-      answer:
-        'Hayır, 40 yaş her kadın için otomatik DXA yaşı değildir. Erken menopoz, düşük travmayla kırık, uzun süreli kortizon kullanımı veya başka önemli riskler varsa daha genç yaşta isterim. Risk yoksa ölçüm zamanını yaşa ve kişisel öyküye göre belirlerim.',
-    },
-    {
-      question: 'Kemik sağlığı için yürüyüş tek başına yeterli olur mu?',
-      answer:
-        'Yürüyüş iyi bir başlangıç, ama kemik sağlığı için tek başına yeterli görmem. Yanına kişiye uygun kas güçlendirme ve denge egzersizleri eklemeyi öneririm. Osteoporozu veya geçirilmiş kırığı olan birinde hareketlerin güvenli biçimde seçilmesi gerekir.',
-    },
-  ],
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': [
     {
       question: "Biyoözdeş hormonlar daha mı güvenli?",
@@ -986,28 +969,23 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/': [
     {
       question: 'Kemik ölçümü normal çıktıysa kırık riski tamamen biter mi?',
-      answer:
-        'Tamamen kapanmaz. Kemik yoğunluğu iyi bir haber olabilir; yine de düşme riski, önceki kırık, aile öyküsü, kas gücü ve eşlik eden hastalıklar tabloya eklenir. Rapor rahatlatır, ama bütün hikayeyi tek başına anlatmaz.',
+      answer: 'Normal bir sonuç sevindiricidir, ancak kırık riskini sıfırlamaz. Önceki kırıklar, düşme riski, kas gücü, aile öyküsü ve eşlik eden hastalıklar da değerlendirmeye katılır. Ölçüm sonucu bu bilgilerle birlikte okunur.',
     },
     {
       question: 'Osteopeni mutlaka ilaç kullanmak anlamına mı gelir?',
-      answer:
-        'Hayır, bu otomatik bir eşik değildir. Osteopenide yaş, kırık öyküsü, düşme riski ve aile öyküsü birlikte okunur. Bazı kadınlarda izlem ve yaşam düzeni yeterli olurken, bazı kadınlarda dosyayı biraz daha yakından açmak gerekir.',
+      answer: 'Osteopeni, otomatik olarak ilaç başlanması anlamına gelmez. Yaş, kırık öyküsü ve diğer risk etkenleri birlikte değerlendirilir. Bazı kadınlarda izlem ve yaşam alışkanlıklarında değişiklik yeterli olabilir; kırık riski yüksekse ilaç seçenekleri de konuşulur.',
     },
     {
       question: 'Kemik için yürüyüş yeterli mi?',
-      answer:
-        'Yürüyüş iyi bir kapı açar; ritim, dolaşım ve denge için değerlidir. Ama kemik ve kas yalnızca adım sayısıyla güçlenmez. Zamanla güvenli direnç egzersizleri ve denge çalışmaları da konuşmaya katılabilir.',
+      answer: 'Yürüyüş, ağırlık taşıyan bir hareket olarak kemik sağlığına katkı sağlayabilir. Kas gücü ve denge için güvenli direnç ve denge çalışmaları da önemlidir. Egzersizlerin seçimi mevcut ağrılara, kırık öyküsüne ve hareket kapasitesine göre yapılır.',
     },
     {
       question: 'D vitamini takviyesine herkes başlamalı mı?',
-      answer:
-        'Rastgele başlamak iyi fikir değildir. D vitamini düzeyi, beslenme, güneşle temas, kemik riski ve mevcut hastalıklar aynı kişide farklı bir yanıt verebilir. Bu yüzden “herkese aynı doz” yerine ölçülü bir değerlendirme daha güvenlidir.',
+      answer: 'Herkes için aynı takviye veya doz uygun değildir. Beslenme, güneşle temas, kemik riski ve mevcut hastalıklar birlikte değerlendirilir. Belirgin bir tıbbi gerekçe bulunmayan sağlıklı yetişkinlerde rutin D vitamini testi önerilmez.',
     },
     {
       question: 'Düşme sonrası ağrı azaldıysa yine de kontrol gerekir mi?',
-      answer:
-        'Ağrının azalması rahatlatır ama kırığı tamamen dışlamaz. Kalça, kasık, bel, omurga veya el bileği hattında basmayı, yürümeyi ya da günlük işi bozan ağrı varsa “geçer” diye beklememek daha doğru olur.',
+      answer: 'Ağrının azalması kırığı dışlamaz. Kalça, kasık, bel veya el bileğinde yürümeyi, üzerine basmayı ya da günlük işleri bozan ağrı sürüyorsa değerlendirme gerekir. Şiddetli ağrı veya üzerine basamama varsa beklemeden tıbbi yardım alınmalıdır.',
     },
   ],
   '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/': [

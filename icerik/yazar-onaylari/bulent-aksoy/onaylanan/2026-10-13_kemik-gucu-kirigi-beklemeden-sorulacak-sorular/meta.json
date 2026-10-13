@@ -1,0 +1,21 @@
+{
+  "writer": {
+    "slug": "bulent-aksoy",
+    "name": "Prof. Dr. Bülent Aksoy"
+  },
+  "article": {
+    "slug": "kemik-gucu-kirigi-beklemeden-sorulacak-sorular",
+    "title": "Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular",
+    "previewUrl": "https://estranova.com/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular"
+  },
+  "package": {
+    "createdAt": "2026-10-13T14:37:21.779Z",
+    "deadline": "2026-10-20T14:37:21.779Z",
+    "status": "author-approval-reported",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "approvalRecord": "onay-bildirimi.json"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-13",
+  "mode": "Geçici ayrı Astro projesinde hedef makale derlemesi; tam site regresyonu değil",
+  "h1": 1,
+  "tocTargets": 12,
+  "sourceTargets": 15,
+  "faqVisible": 5,
+  "faqSchema": 5,
+  "faqParity": true,
+  "draftLexicon": "Aynı hard_ban/soft_ban sözlüğüne göre kaynakta 0 eşleşme",
+  "author": "Prof. Dr. Bülent Aksoy",
+  "publishedDate": "2026-06-01",
+  "modifiedDate": "2026-10-13",
+  "medicalReviewClaim": "Yeni Mumcu incelemesi veya tarihi eklenmedi",
+  "preview": "makale-onizleme.html"
+}

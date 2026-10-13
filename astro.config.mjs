@@ -33,6 +33,8 @@ export default defineConfig({
   // (3 hub Tip A mimarisine geçiş — 2026-04-26).
   redirects: {
     '/authors/': '/yazarlar/',
+    // Kemik sağlığı iki makalesi birleştirildi (2026-10-13): eski Senai makalesi Bülent makalesine yönlendirilir.
+    '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
     // Menopozda idrar kaçırma DUPLICATE birleştirmesi: blog kopyası hub rotasına taşındı (2026-09-29).
     '/blog/2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi/':
       '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',

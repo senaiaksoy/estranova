@@ -473,10 +473,6 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/beslenme-yaslanma.webp',
     alt: 'Sade kahvaltı hazırlığı ve gerçek besinlerle düzenlenmiş masa; beslenme ve yaşlanma yazısı için kart görseli',
   },
-  '/zamansiz-yasam/kemik-sagligi-40-sonrasi/': {
-    src: '/images/library/editorial/zy-kemik-sagligi-direnc-egzersizi.webp',
-    alt: 'Aydınlık bir oturma odasında yan yana oturup bir defteri birlikte inceleyen iki kadın.',
-  },
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': {
     src: '/images/library/editorial/bp-estrogen-biyolojisi-muze.webp',
     alt: 'Boğaz manzaralı bir müze salonunda tavandan sarkan molekül heykelini gösteren iki kadın.',

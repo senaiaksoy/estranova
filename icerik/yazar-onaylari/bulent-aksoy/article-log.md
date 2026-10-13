@@ -40,3 +40,11 @@
 5. `writer_version` v0.1 → v0.2.
 6. Bu log'un ilk satırı doldurulur.
 7. **Soyad benzerliği:** kullanıcı aile bağını doğrularsa `dual_role_warning.active=true`.
+
+## 13 Ekim 2026 — Kemik gücü birleşik taslağı: onay bildirimi ve geniş edit
+
+- Kullanıcının aynen bildirimi: **“Onay geldi. makaleyi tekrar geniş edit yap.”** Önceki birleşik sürümün onayı kullanıcı bildirimiyle kaydedildi; yazarın ham form yanıtı bu sohbete verilmedi, form yanıtı veya stil puanı üretilmedi.
+- Bildirimin kapsadığı kaynak, `onaylanan/2026-10-13_kemik-gucu-kirigi-beklemeden-sorulacak-sorular/makale-kaynak.astro` içinde değiştirilmeden saklandı. SHA-256: `a8058d5e1b45f83edc82c1d21289113972dc4c6810dd01a3ecb518a869df328d`. Kullanıcı bildirimi `onay-bildirimi.json`, o sürümün ortak SSS kopyası `sss-kaynak.json` içindedir.
+- Sonraki geniş edit `onay-bekleyen/2026-10-13_kemik-gucu-kirigi-beklemeden-sorulacak-sorular/` içinde yapıldı: giriş/lede, tekrarlar, terim açıklamaları, özet, beş SSS, kaynak bağlantısı ve TOC sırası birlikte ele alındı. Onaylı kaynakla anlam ve sayısal fark karşılaştırıldı; ayrıntılar `genis-edit-notu.md` içindedir.
+- Yazarın mevcut ortopedik yaklaşımı ve birinci tekil görüşleri korundu; yeni hasta sahnesi, deneyim, alıntı veya Senai adına SSS eklenmedi. H0, mizah eklenmedi. Motif: günlük bağımsız hareket; merak motorları: rapor–risk ayrımı ve sonraki görüşmeye hazırlanma. Yeni imza havuzu veya kalıcı profil değişikliği yapılmadı.
+- Bu turda tıbbi açıklama ve SSS değişiklikleri de bulunduğundan önceki onay yeni revizyonun onayı olarak işaretlenmedi. Mumcu incelemesi tamamlanmış sayılmadı. Canlı rota kaynakları ve `article-approvals.ts` geçmiş kaydı korunuyor; geçiş/yönlendirme ve yayın uygulanmadı.

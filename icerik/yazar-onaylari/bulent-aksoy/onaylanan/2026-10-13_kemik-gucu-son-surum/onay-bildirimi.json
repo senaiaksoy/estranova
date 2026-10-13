@@ -1,0 +1,17 @@
+{
+  "recordedDate": "2026-10-13",
+  "source": "Kullanıcı bu sohbette bildirdi.",
+  "exactUserMessage": "mumcu ve bülent onayları tamam. diğer düzeltmeleri yap",
+  "authorApproval": {
+    "person": "Prof. Dr. Bülent Aksoy",
+    "status": "user-reported",
+    "rawFormResponseProvided": false
+  },
+  "medicalReview": {
+    "person": "Dr. Alper Mumcu",
+    "status": "user-reported",
+    "rawReviewRecordProvided": false
+  },
+  "scopeOpen": "Bildirim, yazara gösterilen sürümü (e991c661…) mi yoksa 13 Ekim ikinci tur düzeltmelerinden sonraki sürümü (1bd88483…) mi kapsıyor, belirtilmedi. Kullanıcı teyit etmeli.",
+  "notYetDone": ["onaylanan/ klasörüne taşıma", "canlı rota, yönlendirme ve sibling kaldırma", "commit/push/deploy", "önizleme ve kontrol formu yeniden üretimi"]
+}

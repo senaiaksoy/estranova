@@ -210,7 +210,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
     title: 'Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular',
     description:
-      '40 sonrası kemik gücünü kırık yaşanmadan önce konuşmak: tarama, düşme riski, kas gücü, D vitamini, beslenme ve ortopedik izlem aynı hayatın içinde buluşuyor.',
+      '40 sonrası kemik sağlığı: osteopeni ve osteoporoz farkı, DXA taramasının zamanı, kas gücü, düşme riski, beslenme ve tedavi seçenekleri.',
     publishedDate: '1 Haziran 2026',
     writerSlug: 'bulent-aksoy',
     section: 'Zamansız Yaşam',
@@ -1113,16 +1113,6 @@ export const staticArticles: StaticArticleEntry[] = [
     section: 'Zamansız Yaşam',
     sectionPath: '/zamansiz-yasam/',
     keywords: ['menopoz', 'beslenme', 'protein', 'kalsiyum', 'omega-3', 'antioksidan'],
-  },
-  {
-    path: '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
-    title: '40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber',
-    description: '40 yaş sonrası kemik sağlığını desteklemek için tarama, beslenme, hareket ve tıbbi seçenekleri anlatan kapsamlı rehber.',
-    publishedDate: '1 Mart 2026',
-    writerSlug: 'senai-aksoy',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam/',
-    keywords: ['kemik sağlığı', 'osteoporoz', 'menopoz', 'kalsiyum', 'direnç egzersizi', 'D vitamini'],
   },
   {
     path: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Kemik ölçümü normal çıktıysa kırık riski tamamen biter mi?",
+    "answer": "Tamamen kapanmaz. Kemik yoğunluğu iyi bir haber olabilir; yine de düşme riski, önceki kırık, aile öyküsü, kas gücü ve eşlik eden hastalıklar tabloya eklenir. Rapor rahatlatır, ama bütün hikayeyi tek başına anlatmaz."
+  },
+  {
+    "question": "Osteopeni mutlaka ilaç kullanmak anlamına mı gelir?",
+    "answer": "Hayır, bu otomatik bir eşik değildir. Osteopenide yaş, kırık öyküsü, düşme riski ve aile öyküsü birlikte okunur. Bazı kadınlarda izlem ve yaşam düzeni yeterli olurken, bazı kadınlarda dosyayı biraz daha yakından açmak gerekir."
+  },
+  {
+    "question": "Kemik için yürüyüş yeterli mi?",
+    "answer": "Yürüyüş iyi bir kapı açar; ritim, dolaşım ve denge için değerlidir. Ama kemik ve kas yalnızca adım sayısıyla güçlenmez. Zamanla güvenli direnç egzersizleri ve denge çalışmaları da konuşmaya katılabilir."
+  },
+  {
+    "question": "D vitamini takviyesine herkes başlamalı mı?",
+    "answer": "Rastgele başlamak iyi fikir değildir. D vitamini düzeyi, beslenme, güneşle temas, kemik riski ve mevcut hastalıklar aynı kişide farklı bir yanıt verebilir. Bu yüzden “herkese aynı doz” yerine ölçülü bir değerlendirme daha güvenlidir."
+  },
+  {
+    "question": "Düşme sonrası ağrı azaldıysa yine de kontrol gerekir mi?",
+    "answer": "Ağrının azalması rahatlatır ama kırığı tamamen dışlamaz. Kalça, kasık, bel, omurga veya el bileği hattında basmayı, yürümeyi ya da günlük işi bozan ağrı varsa “geçer” diye beklememek daha doğru olur."
+  }
+]

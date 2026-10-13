@@ -1,0 +1,30 @@
+{
+  "writer": {
+    "slug": "bulent-aksoy",
+    "name": "Prof. Dr. Bülent Aksoy"
+  },
+  "article": {
+    "slug": "kemik-gucu-kirigi-beklemeden-sorulacak-sorular",
+    "title": "Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular",
+    "previewUrl": "./makale-onizleme.html"
+  },
+  "package": {
+    "createdAt": "2026-10-13T14:37:21.779Z",
+    "deadline": "2026-10-20T14:37:21.779Z",
+    "status": "approved-published-locally",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "revision": "2026-10-13 geniş edit + audit düzeltmeleri; önceki onaylı sürümden sonraki revizyon",
+    "previousDraftSha256": "e991c6619046d2a627885b2054e5e9bd3edeec23ed8124cd693bb0ac04265052",
+    "previewStale": false,
+    "pendingAuthorQuestions": "./bulent-teyit-sorusu.md",
+    "previousApprovedPackage": "../../onaylanan/2026-10-13_kemik-gucu-kirigi-beklemeden-sorulacak-sorular",
+    "medicalReviewStatus": "user-reported-complete",
+    "sourceSha256": "1bd88483d5a49134d202a277138f90aaa8e6651dec4ff04b39b50975a376e206",
+    "authorApprovalStatus": "user-reported-pending-scope-confirmation",
+    "publishState": "working-tree; commit/push/deploy bekliyor",
+    "livePageSha256Prefix": "40f5b381"
+  }
+}

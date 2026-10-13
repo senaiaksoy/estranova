@@ -1,0 +1,516 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+// Revizyona ait SSS; onay beklerken yayımlanan ortak veri kaynağını değiştirmez.
+const faqItems = [
+  {
+    question: 'Kemik ölçümü normal çıktıysa kırık riski tamamen biter mi?',
+    answer: 'Normal bir sonuç sevindiricidir, ancak kırık riskini sıfırlamaz. Önceki kırıklar, düşme riski, kas gücü, aile öyküsü ve eşlik eden hastalıklar da değerlendirmeye katılır. Ölçüm sonucu bu bilgilerle birlikte okunur.',
+  },
+  {
+    question: 'Osteopeni mutlaka ilaç kullanmak anlamına mı gelir?',
+    answer: 'Osteopeni, otomatik olarak ilaç başlanması anlamına gelmez. Yaş, kırık öyküsü ve diğer risk etkenleri birlikte değerlendirilir. Bazı kadınlarda izlem ve yaşam alışkanlıklarında değişiklik yeterli olabilir; kırık riski yüksekse ilaç seçenekleri de konuşulur.',
+  },
+  {
+    question: 'Kemik için yürüyüş yeterli mi?',
+    answer: 'Yürüyüş, ağırlık taşıyan bir hareket olarak kemik sağlığına katkı sağlayabilir. Kas gücü ve denge için güvenli direnç ve denge çalışmaları da önemlidir. Egzersizlerin seçimi mevcut ağrılara, kırık öyküsüne ve hareket kapasitesine göre yapılır.',
+  },
+  {
+    question: 'D vitamini takviyesine herkes başlamalı mı?',
+    answer: 'Herkes için aynı takviye veya doz uygun değildir. Beslenme, güneşle temas, kemik riski ve mevcut hastalıklar birlikte değerlendirilir. Belirgin bir tıbbi gerekçe bulunmayan sağlıklı yetişkinlerde rutin D vitamini testi önerilmez.',
+  },
+  {
+    question: 'Düşme sonrası ağrı azaldıysa yine de kontrol gerekir mi?',
+    answer: 'Ağrının azalması kırığı dışlamaz. Kalça, kasık, bel veya el bileğinde yürümeyi, üzerine basmayı ya da günlük işleri bozan ağrı sürüyorsa değerlendirme gerekir. Şiddetli ağrı veya üzerine basamama varsa beklemeden tıbbi yardım alınmalıdır.',
+  },
+];
+
+const tocEntries = [
+  { id: 'sessiz-baslar', label: 'Sessiz Başlar' },
+  { id: 'osteopeni-osteoporoz', label: 'Rapor ve Osteopeni' },
+  { id: 'risk-faktorleri', label: 'Risk Etkenleri' },
+  { id: 'kemik-taramasi', label: 'DXA Taraması' },
+  { id: 'kas-denge', label: 'Kas ve Denge' },
+  { id: 'beslenme', label: 'Beslenme ve D Vitamini' },
+  { id: 'turkiye-baglami', label: 'Türkiye Verileri' },
+  { id: 'tibbi-secenekler', label: 'Tıbbi Seçenekler' },
+  { id: 'kirmizi-bayraklar', label: 'Kırmızı Bayraklar' },
+  { id: 'karar-zinciri', label: 'Karar Zinciri' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sik-sorulanlar', label: 'Kemik Sağlığı Hakkında Sorular' },
+];
+
+// Tıbbi inceleyici: Dr. Alper Mumcu. Onay bildirimi kullanıcı tarafından 13 Ekim 2026'da iletildi;
+// ham inceleme kaydı paket içinde yoktur. Yayın kararı ayrıca kullanıcıya aittir.
+const medicalReviewer = 'Dr. Alper Mumcu';
+const medicalReviewerTitle = 'Kadın Hastalıkları ve Doğum Uzmanı';
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular';
+const articleDescription =
+  '40 sonrası kemik sağlığı: osteopeni ve osteoporoz farkı, DXA taramasının zamanı, kas gücü, düşme riski, beslenme ve tedavi seçenekleri.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'bulent-aksoy',
+  articleType: 'clinical-guide',
+  publishedDate: '1 Haziran 2026',
+  modifiedDate: '13 Ekim 2026',
+  medicalReviewer,
+  medicalReviewerTitle,
+  pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'kemik gücü',
+    '40 sonrası kemik sağlığı',
+    'osteoporoz',
+    'kırık riski',
+    'düşme riski',
+    'direnç egzersizi',
+    'D vitamini',
+    'ortopedik takip',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Kemik Sağlığı"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="bulent-aksoy"
+        articleType="clinical-guide"
+        publishedDate="1 Haziran 2026"
+        lastUpdated="13 Ekim 2026"
+        medicalReviewer={medicalReviewer}
+        readingMinutes={12}
+        imageSrc="/images/library/editorial/bulent-kemik-gucu-kirik-beklemeden-byline.webp"
+        imageAlt="Aydınlık bir evde pencere yanında oturan 50+ kadın; kemik gücü, kırık riski ve koruyucu ortopedik takip temasını taşıyan sakin editoryal görsel"
+        imagePosition="50% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Kemik kaybı ağrı vermeden ilerleyebilir. Kırık riskini anlamak için kemik yoğunluğu ölçümü, yaşınız, önceki
+          kırıklarınız, kullandığınız ilaçlar ve düşme riskinizle birlikte değerlendirilir. Osteopeni osteoporozla aynı
+          şey olmadığı gibi tek başına ilaç başlamak için yeterli sayılmaz; korunmanın temeli kas gücü, denge, yeterli
+          beslenme ve doğru zamanda taramadır, kırık riski yüksekse ilaç seçenekleri de konuşulur.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="sessiz-baslar">Kemik Kaybı Çoğu Zaman Sessiz Başlar</h2>
+        <p>
+          Beliniz ağrımıyor, rahat yürüyorsunuz; kemik sağlığı bu yüzden aklınıza gelmeyebilir. Oysa kemik kaybı uzun
+          süre belirti vermeden ilerleyebilir <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+        <p>
+          Kemik canlı bir dokudur; yapım ve yıkım dengesi içinde sürekli yenilenir. Menopoz geçişiyle östrojen
+          düzeyindeki azalma, bazı kadınlarda kemik yıkımını hızlandırabilir <Evidence level={5} />. Menopozdan sonraki
+          ilk 5–10 yılda kemik mineral yoğunluğundaki düşüş hızlanabilir <sup><a href="#ref-1">[1]</a></sup>. Bu yüzden
+          ölçümün yanında, ileride kendi başınıza hareket edebilmenizi koruyacak adımları da konuşuruz.
+        </p>
+        <p>
+          Ortopedide benim önemsediğim çizgi, hastayı ameliyat masasından önce hayata yönlendirebilmektir. Kemik
+          sağlığında bunun karşılığı, kırık olduktan sonra telaşla konuşmaya başlamak yerine riskleri kırık gelmeden
+          görünür kılmaktır. Bu, günlük hareketten evdeki düşme riskine kadar uzanan bir yaklaşım gerektirir.
+        </p>
+        <p>
+          Asansör çalışmadığında iki kat çıkmak, mutfakta üst rafa uzanmak ya da kaldırım kenarında bir an duraksamak,
+          kas gücü ve dengenin günlük hayattaki yerini hatırlatır. Bu hareketleri rahat yapabilmeniz iyi bir işarettir;
+          kemik yoğunluğunuz ölçümle, kırık riskiniz ise ölçüm ve sağlık öykünüzle birlikte belirlenir.
+        </p>
+
+        <h2 id="osteopeni-osteoporoz">Rapor Ne Söyler: Osteopeni ve Osteoporoz</h2>
+        <p>
+          Raporda "osteopeni" ya da "osteoporoz" yazdığını görünce kaygılanabilirsiniz. Önce bu iki terimin ne
+          söylediğini ayıralım; ikisi aynı durumu anlatmaz.
+        </p>
+        <p>
+          En sık yanlış anlaşılan nokta, raporda osteopeni yazmasının ciddi bir kemik hastalığı sanılmasıdır. Örneğin
+          T-skorunun −1,8 olduğunu gören bir kadın, kemiklerinin artık kolayca kırılacağını düşünebiliyor. Oysa osteopeni
+          yalnızca kemik yoğunluğunun normalden düşük olduğunu gösterir.
+        </p>
+        <p>
+          Kemik mineral yoğunluğunu ölçen DXA testinin raporunda iki ayrı skor yer alabilir. T-skoru genç erişkinlerle,
+          Z-skoru ise yaşıtlarınızla karşılaştırmayı gösterir; hangisinin esas alınacağı yaşınıza ve menopoz durumunuza
+          bağlıdır <sup><a href="#ref-2">[2]</a></sup>.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Skor</th>
+              <th scope="col">Kimde esas alınır?</th>
+              <th scope="col">Nasıl okunur?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="whitespace-nowrap">T-skoru</td>
+              <td>Menopoz sonrası kadınlar; 50 yaş ve üzeri erkekler</td>
+              <td>−1,0'ın altında ve −2,5'in üzerinde: osteopeni; −2,5 ve altı: osteoporoz</td>
+            </tr>
+            <tr>
+              <td class="whitespace-nowrap">Z-skoru</td>
+              <td>Menopoz öncesi kadınlar</td>
+              <td>−2,0 ve altı: "yaşa göre beklenenin altında"; altta yatan nedenler klinik değerlendirmeyle araştırılır</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Menopoz geçişindeki kadınlarda T-skoruna dayalı sınıflama da kullanılabilir. Tablodaki sınırlar, uygun
+          bölgelerden yapılan DXA ölçümünün yorumuna aittir; tanı ve kırık riski değerlendirmesi aynı işlem değildir
+          <sup><a href="#ref-2">[2]</a></sup>.
+        </p>
+        <p>
+          Ben kemik yoğunluğu sonucunu hiçbir zaman tek başına değerlendirmem. Hastanın yaşına, menopoz süresine, daha
+          önce kırık geçirip geçirmediğine, kullandığı ilaçlara ve diğer risk etkenlerine de bakarım. Gerektiğinde FRAX ile
+          önümüzdeki 10 yıllık kırık riskini hesaplarım. FRAX, yaş ve sağlık öyküsü gibi bilgileri kullanarak bu riski
+          tahmin eden bir araçtır <sup><a href="#ref-3">[3]</a></sup>.
+        </p>
+        <p>
+          Bunun tersi de mümkündür. Ölçümü çok kötü görünmeyen bir kadında, özellikle daha önce düşük travmalı bir kırık
+          varsa, önemli bir kırık riski bulunabilir. Küçük bir düşmede kalça ya da omurga kırığı geçirmişseniz osteoporoz
+          tanısı T-skorundan bağımsız olarak konabilir <sup><a href="#ref-1">[1]</a></sup>.
+        </p>
+        <p>
+          <strong>Hastalarıma anlatmak istediğim şu: Kemik yoğunluğu ölçümündeki tek bir rakam, kemiklerimizin ne kadar
+          sağlam olduğunu veya gelecekte kırık yaşayıp yaşamayacağımızı tek başına söylemez.</strong>
+        </p>
+
+        <h2 id="risk-faktorleri">Riskinizi Belirleyen Etkenler</h2>
+        <p>
+          Aynı yaştaki iki kadının kemik riski birbirinden çok farklı olabilir. Risk listesine bakmanın amacı, kimin ne
+          zaman daha yakından izlenmesi gerektiğini belirlemektir.
+        </p>
+        <p>
+          Öne çıkan etkenlerden biri, daha önce küçük bir düşmede kırık geçirmiş olmaktır <Evidence from={4} to={5} />
+          <sup><a href="#ref-3">[3]</a></sup><sup><a href="#ref-14">[14]</a></sup>. Erken menopoz (45 yaş öncesi), düşük
+          vücut kitle indeksi (VKİ), ailede kalça kırığı öyküsü ve sigara da bu listededir. Yüksek alkol
+          tüketimi ve hareketsiz yaşam riski artırır. Yetersiz protein ve kalsiyum alımı, belirgin D vitamini eksikliği ve
+          üç aydan uzun süren kortikosteroid kullanımı da değerlendirilir
+          <sup><a href="#ref-3">[3]</a></sup>.
+        </p>
+        <p>
+          Kemik erimesi riskini değerlendirirken sigara ve alkol tüketimini de sorarım. Bunu hastaya suçluluk
+          hissettirmek için değil, değiştirebileceğimiz risk etkenlerini belirlemek için yaparım. Sigara kullanımı kemik kaybı ve kırık riskinin artmasıyla ilişkilidir;
+          aşırı alkol tüketimi ise hem kemik sağlığını olumsuz etkileyebilir hem de düşme riskini artırabilir
+          <sup><a href="#ref-3">[3]</a></sup>. Menopozun getirdiği hormonal değişiklikleri tamamen önleyemeyiz; ama
+          sigarayı bırakmak, alkol tüketimini azaltmak, kas güçlendirici ve ağırlık taşıyan egzersizler yapmak gibi
+          önlemlerle kemik sağlığını korumaya katkıda bulunabiliriz.
+        </p>
+        <p>
+          Hipertiroidi başta olmak üzere tiroid bozuklukları, romatoid artrit, emilim sorunları ve kronik böbrek hastalığı
+          da kemik metabolizmasını etkileyebilir <sup><a href="#ref-3">[3]</a></sup>. Düzenli kullandığınız ilaçları ve
+          mevcut hastalıklarınızı değerlendirmeye getirmeniz, bu nedenlerin gözden kaçmamasına yardımcı olur.
+        </p>
+
+        <h2 id="kemik-taramasi">DXA Taraması: Ne Zaman, Hangi Sıklıkta</h2>
+        <p>
+          Kemik ölçümünün zamanı yaşınıza ve risk etkenlerinize bağlıdır. 40 yaşını geçmiş olmak tek başına herkese
+          aynı tarama takvimini gerektirmez.
+        </p>
+        <p>
+          2025 tarihli tarama önerisi, 65 yaş ve üzeri kadınlarda osteoporoz taramasını öneriyor. 65 yaşın altındaki
+          menopoz sonrası kadınlarda ise klinik risk değerlendirmesiyle artmış kırık riski saptanırsa tarama öneriliyor
+          <sup><a href="#ref-4">[4]</a></sup>.
+        </p>
+        <p>
+          Bu öneri, bilinen osteoporozu veya düşük travmalı kırığı olmayan kişilerde tarama içindir. Erken menopoz,
+          küçük bir düşmede kırık, uzun süreli steroid kullanımı veya belirgin zayıflık varsa değerlendirme daha erken
+          gerekebilir; kırık öyküsü ve ilaçlara bağlı kemik kaybı ayrıca ele alınır <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+        <p>
+          İlk DXA ölçümü kişisel başlangıç çizginizi gösterir. Sonraki ölçümün zamanı bu sonuca ve izlem planına göre
+          belirlenir; her yıl otomatik olarak tekrarlamak gerekmez. Ölçüm yorumuna ilişkin 2023 önerileri ve 2024
+          osteoporoz kılavuzu da izlemin kişisel risk ve tedaviye göre planlanmasını vurgular
+          <sup><a href="#ref-2">[2]</a></sup><sup><a href="#ref-15">[15]</a></sup>.
+        </p>
+
+        <h2 id="kas-denge">Kemik Gücü, Kas ve Dengeyle Birlikte Konuşulur</h2>
+        <p>
+          Yürüyüş yapıyor olabilirsiniz; kas gücü ve denge de hareket planınızın parçası mı? Kemik sağlığını korurken
+          düşme olasılığını azaltacak çalışmaları da düşünmek gerekir.
+        </p>
+        <p>
+          Tempolu yürüyüş ve merdiven çıkma gibi ağırlık taşıyan hareketler ile ağırlık ya da direnç bandıyla kademeli
+          yapılan direnç çalışmaları kemik yoğunluğunun korunmasına katkı sağlayabilir <Evidence level={4} />
+          <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+        <p>
+          "Direnç egzersizi" herkes için aynı programı anlatmaz. Diz, kalça, bel, omuz ve denge geçmişi göz önünde
+          bulundurularak güvenli bir başlangıç gerekir. Direnç çalışmaları kas gücüne ve dengeye de katkı sağlayabilir;
+          bu da düşme riskini azaltmaya yardımcı olabilir <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+        <p>
+          Kas gücü sessizce azalabilir. Azaldığında düşme riski artabilir; düşme riski arttığında kırık ihtimali büyür.
+          Merdivende kendinizi güvende hissetmeniz, sandalyeden kalkarken kullandığınız kuvvet, kalça çevresi kasları
+          ve ayak bileği kontrolü bu nedenle önemlidir. Ev içindeki aydınlatma da düşme olasılığını etkileyen günlük
+          ayrıntılardan biridir <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+        <p>
+          Birkaç hafta yoğun çalışmak yerine haftaya yayılan, sürdürebileceğiniz bir düzen kurmak daha gerçekçidir.
+          Başlangıç noktanız, mevcut ağrılarınız ve kırık öykünüzle uyumlu olmalıdır; herkes için aynı ağırlık veya hareket
+          seçilmez <sup><a href="#ref-8">[8]</a></sup>.
+        </p>
+
+        <h2 id="beslenme">Beslenme ve D Vitamininde Ölçülü Yaklaşım</h2>
+        <p>
+          Takviye kutusundan önce günlük sofranıza bakmak işe yarar. Kalsiyum, protein ve D vitamini için aynı soruyu
+          sorarız: yeterli alım var mı, ayrıca değerlendirilmesi gereken bir eksiklik var mı?
+        </p>
+        <p>
+          Beslenme referans değerlerine göre kadınlarda kalsiyum ihtiyacı yaşla artar: <strong>19–50 yaş arasında günde
+          1000 mg</strong>, <strong>51 yaş ve üzerinde günde 1200 mg</strong> <sup><a href="#ref-5">[5]</a></sup>. Bu miktarlar,
+          besinlerden ve varsa takviyeden gelen kalsiyumun toplamıdır. Yoğurt,
+          ayran, kefir ve peynirin yanı sıra susam, tahin, badem ve bazı yeşil yapraklı sebzeler de alıma katkıda bulunabilir.
+          Besinlerin kalsiyum miktarı ve emilimi farklıdır <sup><a href="#ref-5">[5]</a></sup>.
+        </p>
+        <p>
+          Protein, kas ve kemik sağlığını birlikte ilgilendirir. 50 yaş sonrası menopoz dönemindeki kadınların
+          kas-iskelet sağlığına odaklanan uzman uzlaşısında, günlük vücut ağırlığının kilogramı başına
+          <strong>1,0–1,2 g protein</strong> önerilir <sup><a href="#ref-7">[7]</a></sup>. 70 kilo bir kadın için bu,
+          yaklaşık 70–84 gramdır. Kendi hedefiniz ise yaşınıza ve kişisel beslenme gereksiniminize göre belirlenir.
+        </p>
+        <p>
+          D vitamini kemik metabolizmasında önemli bir rol oynar. Yine de güncel kılavuz, belirgin bir gerekçe yoksa
+          sağlıklı yetişkinlerde rutin 25(OH)D, yani kandaki D vitamini düzeyi testini önermiyor
+          <sup><a href="#ref-6">[6]</a></sup>. Osteoporoz, kırık veya D vitamini metabolizmasını etkileyen bir hastalık
+          nedeniyle yapılan değerlendirme bu genel tarama önerisinden ayrıdır. Test ve takviye gereksinimi bu ayrım
+          gözetilerek belirlenir <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+
+        <h2 id="turkiye-baglami">Türkiye'de Kemik Sağlığı Nasıl Görünüyor</h2>
+        <p>
+          Türkiye'deki çalışmalar kemik sağlığına ilişkin yerel bilgi verir. Rakamları okurken verinin hangi yıldan
+          ve hangi kişilerden geldiğine de bakalım.
+        </p>
+        <p>
+          2009 verilerine dayanan bir çalışmada, kemik yoğunluğu ölçülen 50 yaş ve üzeri kadınların %33,3'ünde femur
+          boynunda, yani uyluk kemiğinin kalçaya yakın bölümünde osteoporoz saptandı. Çalışmada 50 yaşındaki bir kadının
+          kalan yaşamı boyunca kalça kırığı geçirme olasılığı %14,6 olarak hesaplandı
+          <sup><a href="#ref-10">[10]</a></sup>. O tarihte Türkiye, kalça kırığı
+          oranı düşük Avrupa ülkeleri arasındaydı; ama oran 1988–89'a göre belirgin biçimde artmıştı. Veriler eski olduğu
+          için bugünkü durumu birebir yansıtmayabilir. Kişisel riskiniz ise kendi ölçümünüz ve öykünüzle hesaplanır.
+        </p>
+        <p>
+          Kırık riskini hesaplayan FRAX aracının Türkiye'ye özgü bir modeli var. Ulusal uzlaşı raporu da DXA erişimini ve
+          FRAX kullanımını ülkemizin güçlü yanları arasında sayıyor. Buna karşılık 2020 tarihli bu rapor, kırık sonrası
+          yeni kırıkları önlemek için ilaç tedavisi almayan hastaların oranını %75–90, osteoporoz tanı oranını yaklaşık
+          %25 olarak tahmin ediyor <sup><a href="#ref-11">[11]</a></sup>. Bu oranlar raporun yazıldığı döneme ait tahminlerdir.
+          Ölçüm sonucunu aldıktan sonra izlem planını da netleştirmek gerekir.
+        </p>
+        <p>
+          D vitamini düşüklüğü Türkiye'de sık bildiriliyor. İstanbul, Ankara, Antalya, Kayseri ve Diyarbakır'da yaşayan 44.592 kadının sonuçlarına bakan bir çalışmada
+          (2011–2017) D vitamini eksikliği (20 ng/mL altı) Diyarbakır'da %78,7, İstanbul'da %50,5 bulundu <sup><a href="#ref-12">[12]</a></sup>.
+          Düzce'de 2016–2025 yıllarında D vitamini ölçülen 85.892 yetişkinin kayıtlarını inceleyen başka bir çalışmada,
+          kadınlarda eksiklik oranı %68,6'ydı; ortalama düzeyler yazın en yüksek, kışın en düşüktü
+          <sup><a href="#ref-13">[13]</a></sup>. İki çalışma da hastane kayıtlarına dayanıyor;
+          bu yüzden tüm toplumu temsil etmiyor ve düşüklüğün kırığa neden olduğunu göstermiyor.
+        </p>
+        <p>
+          Yüksek oranlara rağmen test ve takviye kararı kişiseldir. Beslenme, güneşle temas ve sağlık riskleriniz, bir
+          önceki bölümdeki test–takviye ayrımıyla birlikte ele alınır
+          <sup><a href="#ref-6">[6]</a></sup>.
+        </p>
+
+        <h2 id="tibbi-secenekler">Tıbbi Seçenekler ve Sınırlar</h2>
+        <p>
+          Ölçümünüz belirgin düşükse ya da daha önce kırık geçirdiyseniz, yaşam tarzı adımlarının yanına ilaç seçenekleri
+          de eklenebilir. Önceki düşük travmalı kırıklar, ilaç kararında özellikle önemli bulgulardır
+          <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+        <p>
+          Menopozal hormon tedavisi (MHT), uygun kadınlarda osteoporozun önlenmesine katkı sağlayabilir <Evidence level={5} />
+          <sup><a href="#ref-9">[9]</a></sup>. Sıcak basması gibi menopoz belirtileri ya da erken menopoz varsa bu seçenek
+          ayrıca konuşulur. Karar, yaşınız ve menopozdan bu yana geçen süreyle birlikte verilir. Pıhtı öyküsü (venöz tromboembolizm) ve meme kanseri gibi tedaviyi engelleyebilecek durumlar da ayrıca değerlendirilir.
+        </p>
+        <p>
+          Diğer seçenekler arasında kemik yıkımını azaltan ilaçlar (bifosfonatlar ve denosumab) ile östrojen
+          reseptörlerine seçici etki eden raloksifen bulunur. Çok yüksek riskli seçilmiş durumlarda kemik yapımını
+          artıran (anabolik) tedaviler de gündeme gelir <sup><a href="#ref-1">[1]</a></sup>. Bifosfonat öncesinde böbreklerin kanı süzme işlevi ve ağız-diş sağlığı
+          değerlendirilir.
+        </p>
+        <p>
+          Denosumab kullanılıyorsa bırakma kararı da planlanır. İlaç plansız kesildiğinde kemik kaybı hızla geri dönebilir
+          ve omurga kırığı riski artabilir; bu nedenle genellikle başka bir ilaçla geçiş yapılır <sup><a href="#ref-1">[1]</a></sup>.
+          Bütün bu seçeneklerde asıl hedef kırık riskini azaltmaktır. Hangisinin size uygun olduğuna hekiminizle birlikte
+          karar verilir.
+        </p>
+
+        <h2 id="kirmizi-bayraklar">Beklemeden Değerlendirilmesi Gereken Durumlar</h2>
+        <p>
+          Kemik sağlığı çoğunlukla aylar ve yıllar içinde izlenir. Aşağıdaki işaretlerden birini fark ederseniz bir
+          sonraki kontrol randevusunu beklemeyin.
+        </p>
+
+        <RedFlagBox
+          title="Kemik ve kırık riski açısından geciktirilmemesi gereken işaretler"
+          intro="Aşağıdaki durumlar kişisel izlem planından önce daha hızlı ortopedik veya tıbbi değerlendirme gerektirebilir."
+          markers={[
+            'Düşme sonrası kalça, kasık, bel veya el bileğinde şiddetli ağrı ve üzerine basamama',
+            'Yeni gelişen belirgin sırt ağrısı, boy kısalması hissi veya omurgada çökme şüphesi',
+            'Ateş, belirgin şişlik, kızarıklık veya eklemde hızlı artan hareket kısıtlılığı',
+            'Uyuşma, güç kaybı, idrar-dışkı kontrolünde yeni sorun veya giderek artan gece ağrısı',
+          ]}
+          footnote="Bu liste tanı koymaz; daha hızlı değerlendirme gerektirebilecek işaretleri görünür kılar."
+        />
+
+        <h2 id="karar-zinciri">Sakin Bir Karar Zinciri Kurmak</h2>
+        <p>
+          Bir sonraki görüşmeye yalnızca DXA raporunuzla gitmek zorunda değilsiniz. Önceki kırıklarınızı, ilaçlarınızı
+          ve günlük harekette zorlandığınız noktaları not etmek de konuşmayı somutlaştırır.
+        </p>
+        <p>
+          Görüşmeyi şu sorularla açabilirsiniz: "Kırık riskim ortalamanın üstünde mi?", "DXA için doğru zamanda mıyım?"
+          ve "Yaşam tarzı adımları bana yeter mi, yoksa tıbbi seçenekleri de konuşmalı mıyız?" Ev içi düşme riski, kas
+          güçsüzlüğü, görme sorunu, beslenme eksiklikleri ve ilaçların etkileri de bu değerlendirmeye girer
+          <sup><a href="#ref-14">[14]</a></sup>.
+        </p>
+        <p>
+          Görüşmeden; bir sonraki ölçümün zamanını, hangi belirtilerde daha erken başvuracağınızı ve varsa tedavinizin
+          nasıl izleneceğini bilerek çıkmanız iyi bir başlangıçtır. İçiniz rahat olsun: kemik sağlığını konuşmak için
+          ağrınızın veya bir kırığınızın olması gerekmez.
+        </p>
+        <p>
+          Cerrahi seçenekler ortopedide doğru zamanlandığında değer kazanır; fakat kemik sağlığında temel hedef, mümkün
+          olduğunca kırığı ve düşmeyi önlemektir. Sakin bir ortopedik karar bazen en büyük etkisini ameliyattan çok önce
+          gösterir. Kemiği konuşmak için kemiğin kırılmasını beklemek gerekmez.
+        </p>
+
+        <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
+        <p>
+          Bu rehberdeki bilgiler aşağıdaki kılavuz ve kanıt kaynaklarına dayanır. Numaralar metindeki atıflarla eşleşir.
+        </p>
+        <ol class="mt-4 space-y-3 text-sm leading-relaxed text-ink/80">
+          <li id="ref-1">
+            <strong>1.</strong> The North American Menopause Society (NAMS; bugünkü adıyla The Menopause Society). <em lang="en">Management of Osteoporosis in Postmenopausal Women: The 2021 Position Statement</em>. Menopause. 2021;28(9):973–997. <a href="https://pubmed.ncbi.nlm.nih.gov/34448749/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-2">
+            <strong>2.</strong> International Society for Clinical Densitometry (ISCD). <em lang="en">2023 ISCD Official Positions – Adult</em>. <a href="https://iscd.org/official-positions-2023/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Resmî pozisyon metni</a>
+          </li>
+          <li id="ref-3">
+            <strong>3.</strong> Kanis JA ve ark. (ESCEO/IOF). <em lang="en">European Guidance for the Diagnosis and Management of Osteoporosis in Postmenopausal Women</em>. Osteoporos Int. 2019;30(1):3–44. <a href="https://pubmed.ncbi.nlm.nih.gov/30324412/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-4">
+            <strong>4.</strong> U.S. Preventive Services Task Force (USPSTF). <em lang="en">Screening for Osteoporosis to Prevent Fractures: US Preventive Services Task Force Recommendation Statement</em>. JAMA. 2025;333(6):498–508. PMID: 39808425. <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Öneri metni</a>
+          </li>
+          <li id="ref-5">
+            <strong>5.</strong> National Institutes of Health (NIH) Office of Dietary Supplements. <em lang="en">Calcium Fact Sheet for Health Professionals</em>. 2023. <a href="https://ods.od.nih.gov/factsheets/Calcium-HealthProfessional/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Bilgi notu</a>
+          </li>
+          <li id="ref-6">
+            <strong>6.</strong> Demay MB ve ark. <em lang="en">Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline</em>. J Clin Endocrinol Metab. 2024;109(8):1907–1947. <a href="https://pubmed.ncbi.nlm.nih.gov/38828931/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-7">
+            <strong>7.</strong> Rizzoli R ve ark. (ESCEO). <em lang="en">The role of dietary protein and vitamin D in maintaining musculoskeletal health in postmenopausal women: a consensus statement</em>. Maturitas. 2014;79(1):122–132. <a href="https://pubmed.ncbi.nlm.nih.gov/25082206/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-8">
+            <strong>8.</strong> International Osteoporosis Foundation (IOF). <em lang="en">Exercise</em>. <a href="https://www.osteoporosis.foundation/patients/prevention/exercise" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Egzersiz rehberi</a>
+          </li>
+          <li id="ref-9">
+            <strong>9.</strong> American College of Obstetricians and Gynecologists (ACOG). <em lang="en">Clinical Practice Guideline No. 2: Management of Postmenopausal Osteoporosis</em>. Obstet Gynecol. 2022. <a href="https://www.acog.org/clinical/clinical-guidance/clinical-practice-guideline/articles/2022/04/management-of-postmenopausal-osteoporosis" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Kılavuz metni</a>
+          </li>
+          <li id="ref-10">
+            <strong>10.</strong> Tuzun S ve ark. <em lang="en">Incidence of hip fracture and prevalence of osteoporosis in Turkey: the FRACTURK study</em>. Osteoporos Int. 2012;23(3):949–955. <a href="https://pubmed.ncbi.nlm.nih.gov/21594756/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-11">
+            <strong>11.</strong> Kirazlı Y ve ark. <em lang="en">Updated approach for the management of osteoporosis in Turkey: a consensus report</em>. Arch Osteoporos. 2020;15(1):137. <a href="https://pubmed.ncbi.nlm.nih.gov/32860546/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-12">
+            <strong>12.</strong> Semiz A ve ark. <em lang="en">Vitamin D Levels and Prevalence of Vitamin D Deficiency in Turkish Women According to Regions and Age Groups</em>. Med Sci Monit. 2025;31:e948436. <a href="https://pubmed.ncbi.nlm.nih.gov/40491031/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-13">
+            <strong>13.</strong> Samanci R. <em lang="en">How deficient are we? A retrospective analysis of vitamin D status in 85,892 Turkish adults</em>. BMC Public Health. 2026;26(1). doi:10.1186/s12889-026-26583-2. <a href="https://pubmed.ncbi.nlm.nih.gov/41652560/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-14">
+            <strong>14.</strong> LeBoff MS ve ark. (Bone Health &amp; Osteoporosis Foundation). <em lang="en">The clinician's guide to prevention and treatment of osteoporosis</em>. Osteoporos Int. 2022;33(10):2049–2102. <a href="https://pubmed.ncbi.nlm.nih.gov/35478046/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PubMed kaydı</a>
+          </li>
+          <li id="ref-15">
+            <strong>15.</strong> Gregson CL, Compston J ve ark. (NOGG). <em lang="en">The 2024 UK clinical guideline for the prevention and treatment of osteoporosis</em>. Archives of Osteoporosis. 2025. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12417299/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PMC kaydı</a>
+          </li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" title="Kemik Sağlığı Hakkında Sorular" intro="Ölçüm, hareket, takviye ve düşme sonrası değerlendirmeye ilişkin sorular." items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
+          '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14">
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={4} to={5} /></p>
+        <p>
+          Menopoz sonrası kemik kaybı, düşme riski ve kırık önleme başlıkları güçlü bilimsel zemin taşıyan koruyucu
+          sağlık alanlarıdır. DXA ölçümü, kırık öyküsü, aile öyküsü, altta yatan nedenler ve düşme riski birlikte
+          değerlendirildiğinde karar daha güvenilir hale gelir.
+        </p>
+        <p>
+          <strong>Günlük hayata yansıması:</strong> Kemik sağlığını kalsiyum veya ölçüm sonucuyla sınırlı okumak yerine kas gücü,
+          denge, ev güvenliği, beslenme ve izlem ritmiyle birlikte düşünmek kırık önleme açısından daha anlamlıdır.
+        </p>
+        <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+          — Estranova Bilimsel Editör Notu
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır. Tanı, tedavi, cerrahi karar veya kişisel egzersiz programı yerine
+          geçmez. Kemik yoğunluğu sonucunuz, kırık öykünüz, mevcut hastalıklarınız veya düzenli ilaç kullanımınız
+          varsa kişisel planınızı sağlık profesyoneliyle birlikte değerlendirin.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

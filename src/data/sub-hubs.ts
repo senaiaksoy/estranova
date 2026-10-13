@@ -54,7 +54,7 @@ export const subHubs: SubHubConfig[] = [
       '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
       '/hormonal-gecis/40-sonrasi/tarama-testleri/',
       '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
-      '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+      '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
       '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/',
     ],
   },

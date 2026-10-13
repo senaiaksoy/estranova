@@ -97,7 +97,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         title: '40 Sonrası Kemik Sağlığı',
         excerpt:
           'Kemik yoğunluğu yıllarca sessizce değişir; ne zaman dikkat etmek gerekir, hangi alışkanlıklar kemik dostu?',
-        href: '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+        href: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
         readingMinutes: 9,
       },
       {

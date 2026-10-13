@@ -116,7 +116,7 @@ export const painPoints: PainPoint[] = [
       '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
       '/zamansiz-yasam/kilo-artisi-menopoz/',
       '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
-      '/zamansiz-yasam/kemik-sagligi-40-sonrasi/',
+      '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
     ],
     articleTitles: [
       'Tartı yatışınca: vücut kompozisyonu',

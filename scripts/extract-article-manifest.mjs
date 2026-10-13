@@ -18,7 +18,6 @@ const files = [
   'src/pages/beden-yakinlik/vajinal-saglik-menopoz.astro',
   'src/pages/beden-yakinlik/yakinlik-agrisi-menopoz.astro',
   'src/pages/zamansiz-yasam/hareket-saglik-menopoz.astro',
-  'src/pages/zamansiz-yasam/kemik-sagligi-40-sonrasi.astro',
   'src/pages/zamansiz-yasam/beslenme-yaslanma.astro',
   'src/pages/zamansiz-yasam/d-vitamini-rehberi.astro',
   'src/pages/zamansiz-yasam/vitaminler/d-vitamini-rehberi.astro',
