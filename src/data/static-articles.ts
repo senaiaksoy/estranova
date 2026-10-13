@@ -994,9 +994,9 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
-    title: 'NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı',
+    title: 'NAD+ Takviyesi — Umut Etiketi ve Kanıt Sınırı',
     description:
-      'Anti-aging takviyeleri arasında NAD+ öncüleri (NMN, NR; aramalarda NAD Plus diye de geçer) yoğun pazarlanıyor. Kanıt seviyesi, güvenlik ve hekimle konuşulacak sorular — promosyon değil, dürüst yorumlama.',
+      'NAD+ öncülleri NMN ve NR için insan çalışmaları ne gösteriyor? Menopozda beklenen yararı, güvenlik sınırlarını ve hekimle konuşulacak soruları inceliyoruz.',
     publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',

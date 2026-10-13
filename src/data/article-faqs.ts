@@ -471,19 +471,16 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
 ],
   '/zamansiz-yasam/deneysel/nad-plus-takviyesi/': [
     {
-      question: 'NAD+ takviyeleri menopozda enerji için kanıtlı bir çözüm müdür?',
-      answer:
-        'Şu an için böyle net bir cümle kurmak zor. Mekanizma ilgisi yüksek olsa da insan çalışmalarındaki klinik fayda henüz sınırlı ve tutarsız. Pazarlama dili çoğu zaman bilimin önünde gidiyor.',
+      question: "NAD+ takviyeleri menopozda enerji için kanıtlı bir çözüm müdür?",
+      answer: "Benim için ilk soru, NAD+ düzeyini artırmanın hastaya gerçekten ne kazandıracağıdır. Bir maddenin kandaki veya hücrelerdeki NAD+ düzeyini yükseltmesi, kişinin daha enerjik olacağı, daha yavaş yaşlanacağı veya menopoz belirtilerinin düzeleceği anlamına gelmiyor.\n\nNR ve NMN gibi takviyelerin biyolojik etkilerini gösteren çalışmalar var. Ancak insanlarda yorgunluğu azalttıkları, kas gücünü korudukları veya sağlıklı yaşam süresini uzattıkları henüz güvenilir biçimde kanıtlanmış değil. Bugünkü kanıtlarla NAD+ takviyelerini menopoz veya yaşlanma karşıtı tedavinin rutin bir parçası olarak önermiyorum.",
     },
     {
-      question: 'Laboratuvar mantıklı görünüyorsa takviye otomatik olarak güvenli sayılır mı?',
-      answer:
-        'Hayır. Bir mekanizmanın biyolojik olarak ilginç olması, uzun dönem kullanımın güvenli ve etkili olduğu anlamına gelmez. Özellikle doz, ürün standardı ve ilaç etkileşimleri netleşmeden temkinli olmak gerekir.',
+      question: "Bir takviyenin NAD+ düzeyini artırması güvenli olduğunu gösterir mi?",
+      answer: "Hayır. Bir takviyenin kandaki NAD+ düzeyini artırması, hem yararlı hem de güvenli olduğunu göstermez. Kısa süreli araştırmalarda NMN ve NR genel olarak iyi tolere ediliyor; yıllarca kullanıldıklarında neler olacağını henüz yeterince bilmiyoruz.\n\nKullanmak isteyen hastada diğer ilaç ve takviyeleri, karaciğer ve böbrek hastalığı olup olmadığını, kanser öyküsünü ve gebelik planını değerlendiririm. Aktif kanser tedavisi görenlerde daha temkinli olurum. NAD+ hücrelerin enerji üretimi ve onarımında rol oynuyor; bu süreçleri artırmanın kanser üzerindeki uzun dönem etkilerini henüz yeterince bilmiyoruz. Bu, NMN veya NR'nin insanlarda kansere neden olduğunun kanıtlandığı anlamına gelmez. Gebelik planlayan, hamile veya emziren kadınlarda kanıtlanmış bir ihtiyaç olmadan bu ürünleri önermem.\n\nÜrünün içeriğinin doğrulanması ve üretim kalitesinin denetlenmesi de önemli. NMN veya NR yazan her kutunun aynı kaliteye, saflığa ve güvenilirliğe sahip olduğunu varsayamam. Araştırmalarda kullanılan miktarların üzerinde almanın daha fazla yarar sağladığı gösterilmiş değil; uzun süreli yüksek dozların güvenliği hakkında da yeterli bilgi yok.\n\nBenim yaklaşımım, hastaya yalnızca takviyenin ne yapabildiğini değil, henüz neleri bilmediğimizi de anlatmak.",
     },
     {
-      question: 'Bu tür takviyelerde en doğru başlangıç sorusu ne olmalı?',
-      answer:
-        'En doğru soru genellikle “Hangi somut hedef için düşünüyorum ve bunun için daha kanıtlı bir seçenek var mı?” olur. Hedef netleşmeden takviyeye yönelmek çoğu zaman beklentiyi üründen büyük yapar.',
+      question: "NMN veya NR kullanmayı düşünürken ilk hangi soruyu sorarsınız?",
+      answer: "Ben önce hastanın neden bu takviyeyi kullanmak istediğini anlamaya çalışırım. Yorgunluk mu yaşıyor, uyku sorunu mu var, yoksa yaşlanmayı geciktirmek mi istiyor? Öncelikle bu sorunların nedenlerini ve etkinliği gösterilmiş tedavi seçeneklerini değerlendiririm.\n\nBenim için tedavinin başarısı bir laboratuvar değerinin yükselmesi değil, hastanın sağlığında ölçülebilir ve anlamlı bir iyileşme sağlamasıdır.",
     },
   ],
   '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/': [

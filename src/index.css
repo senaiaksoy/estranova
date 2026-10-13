@@ -3,6 +3,14 @@
 
 @plugin "@tailwindcss/typography";
 
+/* Kaynak listesi, makalenin numaralı anlatı bölümlerinden ayrı okunur. */
+.prose-estranova-references .prose-estranova h2 {
+  counter-increment: none;
+}
+.prose-estranova-references .prose-estranova h2::before {
+  content: none;
+}
+
 @utility prose-estranova {
   --tw-prose-body: #2D2D2D;
   --tw-prose-headings: #2D2D2D;
