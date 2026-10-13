@@ -3,12 +3,19 @@
  * Makale sonu bilimsel editör notu.
  * Klinik güven katmanını promosyon diline düşmeden premium bir kutuya taşır.
  */
+import { getDefaultMedicalReviewer } from '../../data/article-types';
+
 interface Props {
   title?: string;
   class?: string;
+  // Verilirse görünür inceleme imzası basılır. İnceleyen, şemadaki
+  // reviewedBy ile aynı kuraldan gelir (Senai yazarsa Mumcu).
+  reviewerForWriter?: string;
+  reviewedDate?: string;
 }
 
-const { title = 'Bilimsel Editör Notu', class: className } = Astro.props;
+const { title = 'Bilimsel Editör Notu', class: className, reviewerForWriter, reviewedDate } = Astro.props;
+const reviewer = reviewerForWriter ? getDefaultMedicalReviewer(reviewerForWriter) : undefined;
 ---
 
 <section
@@ -27,4 +34,16 @@ const { title = 'Bilimsel Editör Notu', class: className } = Astro.props;
   <div class="relative max-w-3xl space-y-3 border-t border-gold/25 pt-5 leading-relaxed text-ink/80 [&_strong]:font-semibold [&_strong]:text-primary">
     <slot />
   </div>
+  {
+    reviewer && (
+      <p class="relative mt-5 border-t border-gold/20 pt-4 font-sans text-sm text-ink/70">
+        İnceleyen:{' '}
+        <a href={`/yazarlar/${reviewer.slug}/`} class="font-semibold text-primary hover:underline">
+          {reviewer.name}
+        </a>
+        <span> · {reviewer.title}</span>
+        {reviewedDate && <span> · {reviewedDate}</span>}
+      </p>
+    )
+  }
 </section>
