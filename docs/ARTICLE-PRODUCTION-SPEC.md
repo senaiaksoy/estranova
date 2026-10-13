@@ -467,9 +467,9 @@ Hero ve kart görselleri aynı yüzey değildir:
 ### 4.7 JSON-LD (zorunlu — non-optional)
 
 `src/utils/article-schema.ts → buildArticleSchemas()` helper. Her yayın makalesinde:
-- `MedicalWebPage` (üst tip)
-- `Article` (yazar + reviewedBy)
-- `BreadcrumbList` (kategoriden makaleye yol)
+- `Article` (yazar) — tüm türlerde
+- `BreadcrumbList` (kategoriden makaleye yol) — tüm türlerde
+- `MedicalWebPage` (`reviewedBy` dahil) — **yalnızca `clinical-guide`**; deneyim yazısı, uzman denemesi ve editoryal rehberde üretilmez, inceleyici görünür byline'da ("Tıbbi bilgi kontrolü") yer alır
 - `FAQPage` — **opsiyonel:** yalnızca makalede okurun gördüğü gerçek bir soru-cevap bölümü varsa ve görünür SSS ile aynı `faqItems` kaynağından üretiliyorsa. Google 7 Mayıs 2026'da FAQ zengin sonuçlarını tamamen kaldırdı; `FAQPage` bir sıralama ya da AI-alıntı kaldıracı değildir, yalnızca sayfada görünen soru-cevabı doğru tarif eder.
 
 **Tek SSS yüzeyi kuralı:** Yayında yalnızca bir görünür SSS yüzeyi olmalı. SSS ana gövde içinde `ArticleProsePanel` akışında H2/H3 olarak yazıldıysa ayrıca `ArticleFAQ` eklenmez. Gövdede görünür SSS yoksa `ArticleFAQ` ana gövdeden sonra, `RelatedReadings` öncesinde kullanılır. Her iki durumda da `FAQPage` schema aynı soru-cevap kaynağıyla beslenir.
@@ -516,7 +516,7 @@ Marka kuralları (gövdede inline dış URL / uluslararası kuruluş adı yasak 
 | 8 | ArticleAuthorBlock — writers.ts'ten | ☐ |
 | 9 | RelatedReadings 3-5 link (parent hub + komşu kategori) | ☐ |
 | 10 | Hero image — vault catalog veya yeni üretim, archetype çerçevesi | ☐ |
-| 11 | JSON-LD: MedicalWebPage + Article + BreadcrumbList (`buildArticleSchemas`); `FAQPage` yalnızca görünür, gerçek bir SSS bölümü varsa, görünür SSS ile aynı kaynaktan | ☐ |
+| 11 | JSON-LD: Article + BreadcrumbList, yalnızca `clinical-guide` için ayrıca MedicalWebPage (`buildArticleSchemas`); `FAQPage` yalnızca görünür, gerçek bir SSS bölümü varsa, görünür SSS ile aynı kaynaktan | ☐ |
 | 11b | `@id` referanslı yazar/inceleyici için inline `Person` düğümü sayfada çözülebilir (Dr. Aksoy → SiteLayout site-geneli); revize makalede `modifiedDate` revizyon gününe çekildi | ☐ |
 | 11c | Okur-öncelikli yapı (§4.8): Kısa Özet ~40–55 kelime doğrudan-cevap; SSS varsa ≥1 long-tail soru; ≥1 sayısal çapa cümlesi | ☐ |
 | 11d | Okur-öncelikli yapı (§4.8, flagship makalelerde): konuya uygunsa en az bir karşılaştırma/veri tablosu; sabit kelimeli answer-first paragraf aranmaz | ☐ |

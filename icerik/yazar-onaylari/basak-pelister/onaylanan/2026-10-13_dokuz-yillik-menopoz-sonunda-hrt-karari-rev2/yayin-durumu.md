@@ -5,3 +5,5 @@
 Commit, push ve deploy yapılmadı. Canlı sayfa hâlâ eski sürümdedir. Arşiv `local-build` kapsamındadır; canlı yayın kanıtı değildir.
 
 Sapma: compliance kapısı (yasaklı "garanti") nedeniyle site kaynağında tek ifade değişti: "aynı sonucu garanti etmez" → "aynı sonucu vermeyebilir" (anlam aynı). Onaylı paket dosyası `site-kaynak.astro` değiştirilmedi; Mumcu bu ifadeyi ayrıca teyit etmeli.
+
+Güncelleme (13 Ekim 2026): Dr. Alper Mumcu "aynı sonucu vermeyebilir" ifadesini teyit etti (KC bildirimi, sohbet). Sürüm b5840a3d ile canlıya alındı; canlı doğrulama: iki Mumcu satırı, doğru OG görseli, dateModified 2026-10-13, yeni tıbbi not.
