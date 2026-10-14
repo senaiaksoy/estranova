@@ -1,0 +1,58 @@
+{
+  "writer": {
+    "slug": "ersin-sarac",
+    "name": "Fzt. Ersin Saraç"
+  },
+  "article": {
+    "slug": "40-sonrasi-kas-iskelet-agrilari",
+    "title": "40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek",
+    "previewUrl": "./makale.html"
+  },
+  "package": {
+    "createdAt": "2026-10-14T13:26:25.010Z",
+    "deadline": "2026-10-21T13:26:25.010Z",
+    "status": "pending-author-approval",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "deliveryStatus": "prepared-locally-not-sent"
+  },
+  "previewUrl": "./makale.html",
+  "medicalReviewStatus": "pending-revision-review",
+  "releaseAuthorized": false,
+  "sourceFile": "makale-kaynak.astro",
+  "revision": 6,
+  "sourceSha256": "f6559071cff751f62dc7422f02144787d92b16df315c4b04e26c78ce59edc603",
+  "revision3Changes": [
+    "byline görseli 4:5 kas-iskelet-yuruyus-byline.webp ile değişti (OG/şema görseli introspective-khaki-wrap.webp olarak kaldı)",
+    "kanıt etiketi 118 satır 4->3, 127 satır 3->2, 167 satır 4->3",
+    "byline alt metni güncellendi"
+  ],
+  "revision4Changes": [
+    "Kırmızı bayrak tekrarı azaltıldı: hareket bölümü artık aşağıdaki kutuya yönlendiriyor (ani ağrıda beklememe cümlesi korundu)",
+    "Belirsiz \"Türkiye'de...\" cümlesi yeniden yazıldı",
+    "medicalReviewer=\"Yok\" bilinçli bırakıldı; açıklayıcı Astro yorumu eklendi"
+  ],
+  "revision5Changes": [
+    "Kaynak [2] etiketi düzeltildi: \"NICE NG59, 2016; güncelleme 2020\" -> \"NICE NG59, 2016; son güncelleme 2026\" (NICE güncelleme bilgisi: 29 Temmuz 2026)",
+    "Kırmızı bayrak maddesinden kaynakta desteklenmeyen \"gece terlemesi\" çıkarıldı; madde: açıklanamayan kilo kaybı, ateş veya kanser öyküsü",
+    "Kaynak [8] eklendi: Verhagen ve ark., Eur Spine J 2016, doi:10.1007/s00586-016-4684-0 (açık erişim); kutu dipnotu [6, 7, 8]",
+    "[3] Greendale 2019 için kanıt düzeyi 2/5 korundu (tek gözlemsel kohort; metin 'bir çalışmada' diyor)",
+    "NHS sayfalarına (6, 7) verilen 4/5 etiketi Dr. Aksoy kararıyla korundu"
+  ],
+  "revision6Changes": [
+    "Geniş audit (genis-audit-revizyon-5.md) maddeleri 1-7 uygulandı; kullanıcı onayı 14 Ekim 2026",
+    "Hareket bölümü Ersin Saraç'ın kayıtlı yanıtına (yazar-katkisi.json) yakın birinci tekile çevrildi; yeni klinik deneyim eklenmedi",
+    "Evidence etiketi 9 -> 5 (119, 132, 167, 188. satırlardaki etiketler kaldırıldı; atıflar korundu)",
+    "Soru başlıklı H2 3 -> 1; 'X değil, Y' kalıbı 10 -> 2; 'değildir' 5 -> 0",
+    "Denge bölümüne duygu cümlesi, kapanışa kaynaklı [2, 5] güvence cümlesi eklendi",
+    "Tekrar budandı: üç ay tanımı gövdeden çıktı (SSS 5'te duruyor), BEN'den idrar-dışkı ve 'kişiye uyarlanmış' çıktı",
+    "Ritim: 3+ eş-uzunluk dizisi 4 -> 1, ≤6 kelimelik cümle 4 -> 8; H2 anchor'ları korundu"
+  ],
+  "medicalReviewer": {
+    "status": "pending",
+    "assignedTo": "Dr. Senai Aksoy",
+    "note": "İnceleme henüz yapılmadı. İnceleyici adı ve tarihi, inceleme tamamlanınca yazılır."
+  }
+}
