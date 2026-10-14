@@ -1,0 +1,19 @@
+{
+  "recordedDate": "2026-10-14",
+  "source": "Kullanıcı bu sohbet içinde onayın geldiğini ve bilimsel incelemeyi kendisinin yapacağını bildirdi.",
+  "exactUserMessage": "revizyon 7 için onaylandı.",
+  "approvedRevision": "2026-10-14-audit-fix-v7",
+  "approvedSourceSha256": "c9642e1219bf8cfde0b1437980b0351848ee1f007ca2504abf9f747b217e273c",
+  "scope": "Yalnızca revizyon 7 gövde metni. Revizyon 1-6 kapsanmaz.",
+  "originalAuthorResponseProvided": false,
+  "medicalReview": {
+    "reviewer": "Doç. Dr. Senai Aksoy",
+    "reviewerTitle": "Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör",
+    "date": "2026-10-14",
+    "outcome": "Revizyon 7 onaylandı (düzeltme istenmedi).",
+    "userMessageSummary": "1) evet (onaylandı) 2) aynı isim 3) bugün",
+    "recordedFrom": "Kullanıcı bildirimi."
+  },
+  "liveRouteChanged": false,
+  "notes": "Künye ve reviewedBy etkinleştirildi; gövde metni değişmedi. Canlıya alma için ayrı izin gerekiyor."
+}

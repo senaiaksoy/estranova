@@ -1,0 +1,120 @@
+{
+  "revision": "2026-10-14-audit-fix-v7",
+  "structure": {
+    "filePath": "input.md",
+    "locale": "tr",
+    "findings": [
+      {
+        "id": "family-negative-frame",
+        "count": 3,
+        "locations": [
+          {
+            "line": 108,
+            "column": 31,
+            "excerpt": "anlamına gelmez"
+          },
+          {
+            "line": 146,
+            "column": 31,
+            "excerpt": "demek değildir"
+          },
+          {
+            "line": 243,
+            "column": 188,
+            "excerpt": "anlamına gelmez"
+          }
+        ],
+        "message": "negative frame (anlamına gelmez / demek değildir): 3 times in the document, 1 of 24 paragraphs end with it. One use is fine. Keep the instances that add a distinct condition; say the rest directly or merge them.",
+        "paragraphEndings": 1
+      }
+    ],
+    "rhythm": {
+      "sentences": 85,
+      "meanWords": 13.5,
+      "sdWords": 4.6,
+      "shareUpTo8Words": 0.13,
+      "longestShortRun": 3
+    },
+    "coverage": {
+      "blocks": 60,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "limitations": [
+      "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+      "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+      "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+      "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+    ]
+  },
+  "editorial": {
+    "filePath": "input.md",
+    "locale": "tr",
+    "findings": [],
+    "coverage": {
+      "blocks": 60,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "limitations": [
+      "Advisory lexical/structural candidates, not authorship detection or clinical approval.",
+      "Semantic repetition and medication-section equivalence still need whole-text editorial reading.",
+      "Frontmatter summaries/FAQs and JSX props/expressions require separate visible-text inspection.",
+      "Block quotations are excluded from editorial suggestions; punctuation and passive voice are not banned."
+    ]
+  },
+  "rendered": {
+    "findings": [
+      {
+        "id": "uncited-source",
+        "count": 9,
+        "items": [
+          "NICE. Osteoarthritis in over 16s: diagnosis and management. NG226, 2022. Tanı, egzersiz, kilo yönetimi, enjek…",
+          "NHS. Knee pain. Diz ağrısında değerlendirme ve acil uyarı belirtileri; son inceleme 21 Aralık 2023.",
+          "NHS. DVT (deep vein thrombosis). Tek taraflı bacak belirtileri ve nefes darlığında acil değerlendirme; son in…",
+          "AAOS. Management of Acute Isolated Meniscal Pathology. Klinik uygulama kılavuzu, 10 Haziran 2024. Akut izole …",
+          "Siemieniuk RAC ve ark. Arthroscopic surgery for degenerative knee arthritis and meniscal tears: a clinical pr…",
+          "Critchlow AJ ve ark. The role of estrogen in female skeletal muscle aging: A systematic review. Maturitas. 20…",
+          "Lawford BJ ve ark. Exercise for osteoarthritis of the knee. Cochrane Database of Systematic Reviews. 2024;12:…",
+          "T.C. İçişleri Bakanlığı. 112 Acil Çağrı Merkezi. Türkiye’de acil çağrılar için tek numara.",
+          "NHS. Symptoms of a stroke. Ani tek taraflı güç kaybı ve diğer nörolojik belirtilerde acil yardım; son incelem…"
+        ],
+        "message": "Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it."
+      }
+    ],
+    "coverage": {
+      "characters": 14117,
+      "images": 2,
+      "headings": 18,
+      "collapsibles": 0,
+      "roles": [
+        "author: Yazan : → Prof. Dr. Bülent Aksoy"
+      ]
+    }
+  },
+  "manual": {
+    "isolatedAstroBuild": "passed",
+    "h1": 1,
+    "faqParity": "4/4",
+    "sourceCitations": "9/9",
+    "brokenAnchors": 0,
+    "brokenImages": 0,
+    "mobileOverflow": false,
+    "pendingReviewVisible": true,
+    "reviewedByOmittedWhilePending": true,
+    "formHashMatches": true,
+    "liveTrackedDiff": false
+  }
+}

@@ -146,8 +146,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/',
     writerSlug: 'bulent-aksoy',
-    approvedAt: '2026-05-08',
-    note: 'Prof. Dr. Bülent Aksoy author approval received for icerik/yazar-onaylari/bulent-aksoy/onay-bekleyen/2026-05-05_40-sonrasi-diz-agrisi-izlem-mudahale. Approval package was corrected for Turkish PDF headers, conservative follow-up wording, personalized 8-12 week framing, injection expectation language, DVT red-flag coverage and surgery wording; live route/static manifest restored and package moved to onaylanan.',
+    approvedAt: '2026-10-14',
+    note: 'Prof. Dr. Bülent Aksoy author approval received for icerik/yazar-onaylari/bulent-aksoy/onay-bekleyen/2026-05-05_40-sonrasi-diz-agrisi-izlem-mudahale. Approval package was corrected for Turkish PDF headers, conservative follow-up wording, personalized 8-12 week framing, injection expectation language, DVT red-flag coverage and surgery wording; live route/static manifest restored and package moved to onaylanan. 14 Ekim 2026 revizyonu (revizyon 7, kaynak SHA-256 c9642e12…): yazar onayı kullanıcı bildirimiyle kaydedildi; bilimsel inceleme Doç. Dr. Senai Aksoy tarafından 14 Ekim 2026 tarihinde tamamlandı (düzeltme istenmedi). Kaynak doğrulaması NICE NG226, BMJ 2017, Cochrane 2024, AAOS 2024, NHS ve Maturitas (Critchlow 2023) üzerinden yapıldı. Kayıt: icerik/yazar-onaylari/bulent-aksoy/onaylanan/2026-10-14_40-sonrasi-diz-agrisi-izlem-mudahale/.',
   },
   {
     pathname: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',

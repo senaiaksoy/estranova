@@ -1,0 +1,32 @@
+{
+  "slug": "40-sonrasi-diz-agrisi-izlem-mudahale",
+  "pathname": "/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/",
+  "writerSlug": "bulent-aksoy",
+  "articleType": "clinical-guide",
+  "createdAt": "2026-10-14",
+  "status": "yazar-ve-bilimsel-inceleme-onayli-canliya-alma-izni-bekliyor",
+  "candidate": "site-kaynak.astro",
+  "liveRouteUnchanged": "src/pages/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale.astro",
+  "revision": "2026-10-14-review-ready-v8",
+  "sourceSha256": "510c81822a0e453793d5b3cdf0195804c907b60ae440f856ac3fcdbf5879dbe5",
+  "approvedRevision": "2026-10-14-audit-fix-v7",
+  "approvedBodySha256": "c9642e1219bf8cfde0b1437980b0351848ee1f007ca2504abf9f747b217e273c",
+  "approvedDeltaNote": "Revizyon 8, revizyon 7 ile gövde metni bakımından aynıdır. Fark yalnızca inceleme künyesi: medicalReviewer varsayılanı (Doç. Dr. Senai Aksoy) etkinleştirildi, 'inceleme bekliyor' ifadeleri ve reviewedBy silme döngüsü kaldırıldı, Bilimsel Editör Notu başlığı ve tarihi güncellendi.",
+  "preview": "makale-onizleme.html",
+  "approvalForm": "kontrol-formu.html (revizyon 7 hash'ine bağlı; yazar onayı bu sürümde alındı)",
+  "previousRevision": "revizyon-7/site-kaynak.astro",
+  "editorAuthorization": "Kullanıcı ayrıntılı audit sonrasında düzeltme yetkisi verdi.",
+  "authorApprovalStatus": "approved",
+  "authorApprovalRecordedAt": "2026-10-14",
+  "medicalReviewStatus": "approved",
+  "medicalReviewer": "Doç. Dr. Senai Aksoy",
+  "medicalReviewerTitle": "Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör",
+  "medicalReviewDate": "2026-10-14",
+  "medicalReviewRecordedBy": "Kullanıcı bildirimi: 'incelemeyi ben yapacağım'; sonuç: revizyon 7 onaylı, inceleyen Doç. Dr. Senai Aksoy, tarih bugün.",
+  "requiredBeforePublish": [
+    "Canlı rota, paylaşılan article-faqs.ts ve article-approvals.ts için açık kullanıcı izni",
+    "Commit/push/deploy için açık kullanıcı izni"
+  ],
+  "notes": "Canlı rota, paylaşılan veri ve onay kaydı henüz değişmedi. Commit/push/deploy yapılmadı.",
+  "sentAt": null
+}

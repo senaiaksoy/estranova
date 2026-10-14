@@ -194,22 +194,22 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Dizimde ağrı varken yürüyüş yapabilir miyim?',
       answer:
-        'Çoğu hastada evet; ancak süre ve tempo kişiye göre ayarlanmalıdır. Ağrıyı artıran uzun yürüyüşler yerine kısa ve düzenli yürüyüşler tercih edilir.',
+        'Diz osteoartritinde hareket ve egzersiz, kişiye uygun süre ve yükle planlanır; başlangıçta bir miktar ağrı olabilir. Yeni travma, belirgin şişlik, kilitlenme veya üzerine basamama varsa önce değerlendirme gerekir. Yürüyüş süresini ve temponuzu mevcut tanınız ve egzersiz planınıza göre belirleyin.',
     },
     {
       question: "MR'da menisküs yırtığı yazıyorsa ameliyat şart mı?",
       answer:
-        'Hayır. Menisküs bulgusu klinik muayene ve işlev kaybı ile birlikte değerlendirilir. Her menisküs bulgusu cerrahi gerektirmez.',
+        'Hayır; rapordaki bulgu tek başına ameliyat kararı verdirmez. Yaşla ilişkili dejeneratif yırtıklarla yeni travma sonrası oluşan akut yırtıklar aynı şekilde değerlendirilmez. Diziniz gerçekten kilitlenmiş ve açılamıyorsa, genel izlem süresinin dolmasını beklemeden değerlendirme alınmalıdır.',
     },
     {
       question: 'Kilo vermek gerçekten diz ağrısını azaltır mı?',
       answer:
-        'Çoğu hastada evet. Vücut ağırlığındaki azalma diz eklemine binen yükü azaltır ve hareket toleransını artırır.',
+        'Diz osteoartriti olan ve fazla kilo ya da obeziteyle yaşayan kişilerde kilo yönetimi ağrı ve işlev açısından yarar sağlayabilir. Bu öneri, normal kilodaki herkesin kilo vermesi gerektiği anlamına gelmez. Diz ağrısının nedeni ve size uygun hedef birlikte değerlendirilir.',
     },
     {
       question: 'Ne kadar süre konservatif plan denenmeli?',
       answer:
-        'Genellikle 8-12 hafta. Bu sürede ölçülebilir iyileşme yoksa müdahale basamakları yeniden değerlendirilir.',
+        'Cerrahi dışı tedavi için bütün diz ağrılarına uyan tek bir süre yoktur. Kontrol zamanı tanıya, belirtilere ve tedaviye yanıta göre belirlenir. Yeni kilitlenme, hızla artan şişlik veya belirgin kötüleşme olduğunda planlanan kontrol tarihini beklemeyin.',
     },
   ],
   '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/': [

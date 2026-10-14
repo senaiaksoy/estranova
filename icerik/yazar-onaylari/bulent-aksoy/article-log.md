@@ -48,3 +48,16 @@
 - Sonraki geniş edit `onay-bekleyen/2026-10-13_kemik-gucu-kirigi-beklemeden-sorulacak-sorular/` içinde yapıldı: giriş/lede, tekrarlar, terim açıklamaları, özet, beş SSS, kaynak bağlantısı ve TOC sırası birlikte ele alındı. Onaylı kaynakla anlam ve sayısal fark karşılaştırıldı; ayrıntılar `genis-edit-notu.md` içindedir.
 - Yazarın mevcut ortopedik yaklaşımı ve birinci tekil görüşleri korundu; yeni hasta sahnesi, deneyim, alıntı veya Senai adına SSS eklenmedi. H0, mizah eklenmedi. Motif: günlük bağımsız hareket; merak motorları: rapor–risk ayrımı ve sonraki görüşmeye hazırlanma. Yeni imza havuzu veya kalıcı profil değişikliği yapılmadı.
 - Bu turda tıbbi açıklama ve SSS değişiklikleri de bulunduğundan önceki onay yeni revizyonun onayı olarak işaretlenmedi. Mumcu incelemesi tamamlanmış sayılmadı. Canlı rota kaynakları ve `article-approvals.ts` geçmiş kaydı korunuyor; geçiş/yönlendirme ve yayın uygulanmadı.
+
+## 14 Ekim 2026 — 40 Sonrası Diz Ağrısı: onay bildirimi (revizyon 7)
+
+- Kullanıcı bildirimi: "revizyon 7 için onaylandı." Kayıt: `onaylanan/2026-10-14_40-sonrasi-diz-agrisi-izlem-mudahale/onay-bildirimi.json`.
+- Kapsam: yalnızca revizyon 7 (SHA-256 `c9642e12…`). Revizyon 1–6 kapsanmaz.
+- Bilimsel inceleme (reviewedBy ve görünür inceleyen satırı) tamamlanmadı; canlı rota, paylaşılan FAQ verisi ve `article-approvals.ts` değiştirilmedi. Commit/push/deploy yapılmadı.
+
+## 14 Ekim 2026 — 40 Sonrası Diz Ağrısı: bilimsel inceleme (revizyon 7)
+
+- Yazar onayı: revizyon 7 için onaylandı (kullanıcı bildirimi). Kapsam yalnızca revizyon 7 gövde metni.
+- Bilimsel inceleme: Doç. Dr. Senai Aksoy (Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör), 14 Ekim 2026, düzeltme istenmedi.
+- Aday (revizyon 8, `510c8182…`): gövde metni revizyon 7 ile aynı; değişen yalnızca inceleme künyesi (reviewedBy etkinleştirildi, "bekleniyor" ifadeleri kaldırıldı).
+- Canlı rota, `article-faqs.ts` ve `article-approvals.ts` değişmedi. Commit, push ve deploy yapılmadı; canlıya alma için ayrı izin gerekiyor.
