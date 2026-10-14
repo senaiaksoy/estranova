@@ -61,31 +61,31 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     },
   ],
   '/beden-yakinlik/menopoz-sonrasi-genital-estetik/': [
-      {
-        question: 'Menopoz sonrası genital bölgede değişim olması normal mi?',
-        answer:
-          'Evet, bazı kadınlarda doku incelmesi, elastikiyet azalması, hacim kaybı veya sürtünmeye daha açık bir yapı görülebilir. Burada ilk ayrım şudur: Bu yalnızca alışık olduğunuz görünümden bir fark mı, yoksa yürürken, spor yaparken, otururken ya da yakınlık sırasında konforunuzu etkileyen bir rahatsızlık mı?',
-      },
-      {
-        question: 'Her genital bölge değişimi labioplasti gerektirir mi?',
-        answer:
-          'Hayır. Labioplasti belirli anatomik ve fiziksel rahatsızlık durumlarında konuşulabilecek cerrahi bir seçenektir; her görünüm farkının karşılığı değildir. Kuruluk, yanma, ilişki sırasında ağrı veya hassasiyet varsa çoğu zaman ilk adım cerrahi değil, jinekolojik değerlendirmedir.',
-      },
-      {
-        question: 'Labioplasti yalnızca estetik bir işlem midir?',
-        answer:
-          'Her zaman değil. Bazı kadınlarda kıyafet, spor, bisiklet, yürüyüş veya oturma sırasında sürtünme ve çekilme hissi gibi fiziksel konfor başlıkları da tabloya eklenir. Yine de kararın merkezinde “yapılabilir mi?” değil, “sizin için gerçekten neyi rahatlatması bekleniyor?” sorusu olmalıdır.',
-      },
-      {
-        question: 'Büyük dudaklarda hacim kaybı için cerrahi dışında seçenek var mı?',
-        answer:
-          'Hacim kaybı, küçük dudak fazlalığından farklı bir başlıktır; bu ayrımı bilmek bile konuşmayı sadeleştirir. Bazı kişilerde yağ enjeksiyonu gibi seçenekler gündeme gelebilir, ancak tutulum oranı, zaman içindeki değişim ve iyileşme süreci kişiden kişiye farklıdır. Bu nedenle parlak vaatler yerine ölçülü ve gerçekçi bir konuşma daha güvenlidir.',
-      },
-      {
-        question: 'Bu konuda ilk görüşmede hangi soruyu sormak gerekir?',
-        answer:
-          'En sade başlangıç şudur: “Bu değişim günlük hayatımda neyi etkiliyor?” Yanıt yalnızca görüntüyle ilgili olabilir; sürtünme, ağrı, kuruluk, hassasiyet veya cinsel konforla da ilgili olabilir. Bu ayrım netleştiğinde cerrahi ve cerrahi dışı seçenekleri daha doğru, daha sakin ve daha kişisel bir yerden konuşmak mümkün olur.',
-      },
+    {
+      question: 'Menopoz sonrası genital bölgede değişim olması normal mi?',
+      answer:
+        'Bazı kadınlarda doku incelmesi, elastikiyet azalması veya hacim kaybı görülebilir. Vulvanın şekli ve büyüklüğü de kişiden kişiye değişir; tek bir doğru görünüm yoktur. Yeni yara, kitle, geçmeyen kaşıntı ya da kanama varsa bunu olağan yaşlanmaya bağlamadan hekim değerlendirmesi alın.',
+    },
+    {
+      question: 'Her genital bölge değişimi labioplasti gerektirir mi?',
+      answer:
+        'Hayır. Görünüm farkı ameliyat gerekliliğini göstermez. Kuruluk, yanma veya ilişki sırasında ağrı varsa önce yakınmanın nedeni araştırılır; cerrahi ancak belirli bir anatomik rahatsızlık için yararları, riskleri ve alternatifleri değerlendirilerek konuşulur.',
+    },
+    {
+      question: 'Labioplasti yalnızca estetik bir işlem midir?',
+      answer:
+        'Görünüm isteğinin yanında, bazı kişilerde kıyafet veya spor sırasında sürtünme ve çekilme gibi fiziksel yakınmalar da değerlendirmeye alınır. Bu yakınmanın hangi dokudan kaynaklandığı muayenede araştırılmalıdır. Beklenen yarar, yakınmanın nedeni ve işlemin riskleriyle birlikte değerlendirilir.',
+    },
+    {
+      question: 'Büyük dudaklarda hacim kaybı için yağ enjeksiyonu nasıl bir seçenektir?',
+      answer:
+        'Kişinin kendi yağ dokusunun alınarak büyük dudaklara aktarılması, hacim kazandırmayı amaçlayan cerrahi bir girişimdir. Aktarılan yağın bir kısmı zamanla azalabilir; sonuç ve iyileşme kişiden kişiye değişir. Çalışmalar az sayıda ve çoğunlukla gözlemseldir; özellikle menopoz sonrası kadınlarda uzun dönem yarar ve güvenlik konusunda veriler sınırlıdır.',
+    },
+    {
+      question: 'Bu konuda ilk görüşmede hangi soruyu sormak gerekir?',
+      answer:
+        '“Bu değişim günlük hayatımda neyi etkiliyor?” sorusuyla başlayabilirsiniz. Yakınmanın ne zaman başladığını, hangi hareketlerde arttığını ve kuruluk ya da ağrı eşlik edip etmediğini anlatın. Ardından önerilen seçeneğin hangi yakınmayı hedeflediğini, alternatiflerini ve risklerini sorun.',
+    },
   ],
   '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/': [
     {

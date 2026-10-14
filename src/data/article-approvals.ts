@@ -86,8 +86,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/beden-yakinlik/menopoz-sonrasi-genital-estetik/',
     writerSlug: 'cagri-sade',
-    approvedAt: '2026-06-29',
-    note: 'KC editor direct approval: Cagri Sade tarafindan iletilen "Menopoz Sonrasi Genital Estetik" metni Estranova makale sablonuna kalibre edildi. "Her degisim ameliyat gerektirmez" cercevesi korundu; garanti/vaat, klinik funnel, kesin tedavi dili ve operasyon superlatifleri temizlendi. Labioplasti, labium majus hacim kaybi, cerrahi disi jinekolojik secenekler ve karar sorulari neutral bilgi diliyle ayrildi. 2026-06-29 Higgsfield Nano Banana Pro ile makale kart/byline gorseli uretildi ve articleCardImageByRoute + ArticleAuthorBlock imageSrc yuzeylerine baglandi; ust hero parent Beden & Yakinlik olarak korundu.',
+    approvedAt: '2026-10-14',
+    note: 'Çağrı Sade yazar onayı ve tıbbi onay 14 Ekim 2026 tarihinde sözlü olarak (KC) revize metin için alındı. Revizyon kapsamı: beş kaynak ve iddiaya bağlı atıflar, cerrahi riskler ve kanıt sınırlılığı, yeni yara/kitle/geçmeyen kaşıntı/menopoz sonrası kanama için değerlendirme uyarısı, yağ aktarımının cerrahi girişim olduğu (SSS 4 dahil), lazer/RF’nin deneysel niteliği, tekrar azaltma, dolu tıbbi uyarı ve şema görsel adresi düzeltmesi. SSS beş soru olarak article-faqs.ts içinde güncellendi. Önceki onay (29 Haziran 2026): KC editor direct approval: Cagri Sade tarafindan iletilen "Menopoz Sonrasi Genital Estetik" metni Estranova makale sablonuna kalibre edildi. "Her degisim ameliyat gerektirmez" cercevesi korundu; garanti/vaat, klinik funnel, kesin tedavi dili ve operasyon superlatifleri temizlendi. Labioplasti, labium majus hacim kaybi, cerrahi disi jinekolojik secenekler ve karar sorulari neutral bilgi diliyle ayrildi. 2026-06-29 Higgsfield Nano Banana Pro ile makale kart/byline gorseli uretildi ve articleCardImageByRoute + ArticleAuthorBlock imageSrc yuzeylerine baglandi; ust hero parent Beden & Yakinlik olarak korundu.',
   },
   {
     pathname: '/zamansiz-yasam/menopozda-hangi-hareket/',
