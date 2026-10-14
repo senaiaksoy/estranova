@@ -1,0 +1,271 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+
+import { resolveSiteUrl } from '../../utils/seo';
+
+const tocEntries = [
+  { id: 'isim-koymak', label: 'Ağrıya İsim Koymak' },
+  { id: 'yasla-degisen', label: 'Yaşla Değişen Sistem' },
+  { id: 'bel-diz-kalca', label: 'Bel, Diz ve Kalça' },
+  { id: 'hareket-haritasi', label: 'Hareket Haritası' },
+  { id: 'denge-guven', label: 'Denge ve Güven' },
+  { id: 'ne-zaman-destek', label: 'Ne Zaman Destek?' },
+  { id: 'kapanis', label: 'Bir Sonraki Görüşmeye Hazırlık' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sik-sorulanlar', label: 'Sıkça Sorulan Sorular' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = '40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek';
+const seoTitle = '40 Sonrası Diz, Kalça ve Bel Ağrısı';
+const articleDescription =
+  '40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge ve fizyoterapi desteği üzerinden anlatan sade rehber.';
+const articlePath = '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/';
+const hero = submenuHeroByRoute[articlePath] ?? submenuHeroByRoute['/zamansiz-yasam/']!;
+const faqItems = [
+  { question: '40 yaş sonrası diz, kalça ve bel ağrısı kaçınılmaz mı?', answer: 'Yaşla birlikte kas gücü ve hareket alışkanlıkları değişebilir; ağrı yine de değerlendirilmesi gereken bir yakınmadır. Günlük yaşamı kısıtlayan veya tekrarlayan ağrıyı yaşınıza bağlayıp geçmeyin. Muayene, olası nedenleri ve uygun desteği ayırmaya yardımcı olur.' },
+  { question: 'Ağrım varken tamamen dinlenmeli miyim?', answer: 'Travma veya acil belirti varsa önce tıbbi değerlendirme gerekir. Bunlar dışlandığında bel ağrısı ve eklem kireçlenmesinde, kapasitenize göre ayarlanmış hareket genellikle bakımın parçasıdır. Egzersiz sırasında belirgin kötüleşme ya da yeni güç kaybı olursa hareketi sürdürmeye zorlamayın.' },
+  { question: 'Yürüyüş kas güçlendirme çalışmasının yerini tutar mı?', answer: 'Yürüyüş genel dayanıklılık için bir başlangıç olabilir. Yetişkinler için fiziksel aktivite önerileri, aerobik hareketin yanında kas güçlendirmeyi de kapsar. Mevcut ağrı veya denge sorunu varsa hangi çalışmanın uygun olduğu ayrıca değerlendirilir.' },
+  { question: 'MR raporunda fıtık veya kireçlenme yazması ağrıyı açıklar mı?', answer: 'Rapordaki bulgu, şikâyetiniz ve muayeneyle birlikte yorumlanır. Bel ağrısında görüntüleme rutin olarak istenmez; uzman değerlendirmesinde sonucu bakım planını değiştirecekse düşünülür. Yeni idrar-dışkı kontrol sorunu veya kasık çevresinde his kaybı varsa acil servise başvurun. Bacakta ilerleyen güç kaybında beklemeden tıbbi değerlendirme gerekir.' },
+  { question: 'Fizyoterapi için üç ay beklemem gerekir mi?', answer: 'Hayır. Üç ay, kronik bel ağrısını tanımlarken kullanılan süredir; yardım istemek için bekleme süresi değildir. Ağrı yürüyüşünüzü, uykunuzu veya işinizi kısıtlıyorsa daha erken değerlendirme alabilirsiniz.' },
+];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'ersin-sarac',
+  articleType: 'editorial-guide',
+  publishedDate: '4 Mayıs 2026',
+  modifiedDate: '14 Ekim 2026',
+  image: '/images/library/editorial/introspective-khaki-wrap.webp',
+  pathname: articlePath,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: ['40 sonrası hareket', 'bel ağrısı', 'diz ağrısı', 'kalça ağrısı', 'kas-iskelet sağlığı', 'fizyoterapi', 'denge egzersizi'],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image="/images/library/editorial/introspective-khaki-wrap.webp"
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Hareket"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      {/* medicalReviewer="Yok": inceleme bekleniyor. Gerçek inceleyici adı ve tarihi, inceleme tamamlanınca yazılır. */}
+      <ArticleAuthorBlock
+        authorSlug="ersin-sarac"
+        articleType="editorial-guide"
+        medicalReviewer="Yok"
+        publishedDate="4 Mayıs 2026"
+        readingMinutes={7}
+        lastUpdated="14 Ekim 2026"
+        imageSrc="/images/library/editorial/kas-iskelet-yuruyus-byline.webp"
+        imageAlt="Sabah ağaçlı bir İstanbul parkında yürüyen, krem eşarplı, boyalı saçlı orta yaşlı bir kadının temsili portresi"
+      />
+
+      <p class="mt-4 text-sm text-ink/75"><strong>Tıbbi inceleme:</strong> Bu revizyon için bekleniyor.</p>
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={articlePath} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>Muayene, 40 sonrasında diz, kalça veya bel ağrısının olası nedenlerini ayırt etmeye yardımcı olur. Günlük yaşamı kısıtlayan
+          ağrıyı yalnızca yaşa ya da menopoza bağlamayın. Ciddi nedenler dışlandığında, kapasitenize göre
+          ayarlanan hareket bel ağrısı ve eklem kireçlenmesinde bakımın parçası olabilir. Yeni idrar-dışkı
+          kontrol sorunu veya kasık çevresinde his kaybı varsa acil değerlendirme gerekir.</p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="isim-koymak">Ağrıya İsim Koymak: Nerede, Ne Zaman, Neyi Zorlaştırıyor</h2>
+        <p>Sandalyeden kalkarken diziniz sızlıyor, yürüyüşte kalçanız rahatsız oluyor ya da gün sonunda
+          beliniz tutuluyor olabilir. Nerede ağrıdığı kadar, ne zaman başladığı ve neleri zorlaştırdığı da önemlidir.</p>
+        <p>Bel ağrısı, eklem kireçlenmesi ve bir yaralanma farklı yollar izler; bu yüzden egzersiz seçmeden
+          önce tabloyu tanımak gerekir. Öykü ve muayene bu ayrımı kurar. Günlük hareketiniz, uykunuz ve
+          ağrıyla ilgili kaygılarınız da muayeneye girer <sup>[1, 2]</sup>.</p>
+        <p>Bedeni dinleyerek ilerlemek, hangi hareketten sonra ne olduğunu fark etmekle başlar.
+          Kaç dakika yürüyebildiğinizi, merdivende zorlanıp zorlanmadığınızı ve ağrının dinlenince azalıp
+          azalmadığını bir kenara not edin; görüşmede “ağrım 6” demekten çok daha fazlasını anlatır bu notlar.</p>
+
+        <h2 id="yasla-degisen">Yaşla Birlikte Kas, Eklem ve Dengede Değişenler</h2>
+        <p>Değişim yavaş gelir ve tek bir nedene bağlanamaz. Yaş alma, hareket alışkanlıkları ve menopoz
+          geçişi farklı katkılar yapabilir.</p>
+        <p>Menopoz geçişini izleyen bir çalışmada yağ kütlesinde artış, yağsız kütlede ise azalma gözlenmiştir
+          <Evidence level={2} /> <sup>[3]</sup>. Yağsız kütle, kası da içine alan daha geniş bir ölçümdür.
+          Bu bulgu bir grubun ortalamasını anlatır; bir kişinin diz ya da bel ağrısının nedenini göstermez.
+          Yeni başlayan ağrıya bu yüzden kendi öyküsü ve muayenesiyle ayrıca bakılır.</p>
+        <p>Dengeyi görme, iç kulak, ayaklardan gelen duyular ve kaslar birlikte sağlar. Yetişkinler için
+          genel fiziksel aktivite önerileri, aerobik hareketin yanında kas güçlendirmeyi de güçlü biçimde
+          önerir <sup>[4]</sup>. Ağrılı bir eklem içinse bu genel önerinin üstüne kişisel bir plan kurulur.</p>
+
+        <h2 id="bel-diz-kalca">Bel, Diz ve Kalça Ağrısı Aynı Yolu İzlemez</h2>
+        <p>Komşunuzun bel ağrısına iyi gelen hareket sizin dizinize uymayabilir. Hareketin yararı ve
+          güvenli sınırı, ağrının nedenine göre değişir.</p>
+        <p>Ciddi bir hastalığa bağlı olmayan kronik primer bel ağrısında yapılandırılmış egzersiz, bakımın
+          bir parçası olarak sunulabilir. Bu öneri koşulludur ve kanıt kesinliği düşüktür
+          <Evidence level={2} /> <sup>[1]</sup>. Yarar kişiden kişiye değişir; egzersiz, bilgilendirme ve
+          günlük işlevinizi gözeten bir planın içinde anlam kazanır.</p>
+        <p>Diz ve kalça osteoartritinde, yani eklem kireçlenmesinde, kişiye göre ayarlanmış egzersiz ve
+          bilgilendirme temel yaklaşımdır <Evidence level={4} /> <sup>[5]</sup>. Kilo yönetimi ise fazla
+          kilosu veya obezitesi olan kişilerde gündeme gelir. Ağrısı olan herkese kilo hedefi konmaz. Egzersize
+          başlarken ağrı biraz artabilir. Yeni şişlik ya da belirgin işlev kaybı olursa plan yeniden
+          gözden geçirilir.</p>
+        <p>Bel ağrısında MR ya da röntgen rutin ilk adım sayılmaz; uzman değerlendirmesinde, sonuç bakım
+          planını değiştirecekse düşünülebilir <Evidence level={4} /> <sup>[2]</sup>. Raporda yazan bulgu,
+          şikâyetiniz ve muayeneyle birlikte okunur.</p>
+
+        <h2 id="hareket-haritasi">Güvenli Hareket Haritası: Ağrıyı Susturmak Değil, Yanıtı Okumak</h2>
+        <p>Bir hareketi değerlendirirken ağrının şiddetine bakarım. Ama karakteri, egzersizle nasıl
+          değiştiği ve ne kadar sürdüğü de belirleyicidir.</p>
+        <p>Ciddi bir neden dışlandıktan sonra başlangıç noktası, bugün rahatça yapabildiklerinizdir.
+          Hareket sırasında ne hissettiğinizi, sonrasında ağrının ne kadar sürede yatıştığını ve ertesi gün
+          yürüyüşünüzü ya da işinizi nasıl etkilediğini izleyin.</p>
+        <p>Hafif, hareketle artmayan ve dinlenince geçen bir ağrıda egzersizi tamamen bırakmanızı istemem.
+          Tempoyu, süreyi ya da yükü azaltmayı öneririm. Ağrı giderek artıyor, hareketinizi kısıtlıyor ya da
+          ertesi gün de belirgin sürüyorsa bunu basit bir egzersiz ağrısı saymam. Zorlamayın.</p>
+        <p>Eklemde şişlik ya da kızarıklık, gece ağrısı, uyuşma veya güç kaybı varsa hekim değerlendirmesi
+          gerekir. Ani ve şiddetli ağrıda beklemeden tıbbi değerlendirme alın; acil belirtiler aşağıdaki
+          kutuda. Benim yaklaşımım sizi ağrıya rağmen zorlamak değil, güvenli hareket sınırınızı bulmaktır
+          <sup>[6, 7]</sup>.</p>
+        <p>Yürüyüş, güçlendirme ve eklem hareket açıklığı çalışmaları farklı ihtiyaçlara karşılık gelir;
+          genel hareket önerileri ile ağrıya yönelik plan yan yana yürüyebilir <sup>[2, 4, 5]</sup>.
+          Fizyoterapistinizle hangi günlük işi daha rahat yapmak istediğinizi konuşun: evden durağa yürümek,
+          merdiven inmek ya da sandalyeden kalkmak gibi.</p>
+        <p>Küçük adımların gücü, sürdürebildiğiniz bir başlangıçtadır. Yük, ağrınızın ve işlevinizin
+          verdiği yanıta bakılarak artırılır.</p>
+
+        <h2 id="denge-guven">Denge, Düşme Korkusu ve Günlük Yaşam</h2>
+        <p>Düşmekten korkmak anlaşılır bir duygudur; utanılacak bir yanı yoktur. Bu korkuyu görüşmede
+          adıyla söyleyin.</p>
+        <p>Denge kaygısıyla gelen birine ilk olarak çok basit bir şey sorarım: “Pantolonunuzu ayakta, bir
+          yere tutunmadan giyebiliyor musunuz?” Tek ayak üzerinde durmak, günlük yaşamda dengeyi anlamak
+          için güzel bir örnektir. Ardından merdiven inerken zorlanıp zorlanmadığınızı, son zamanlarda
+          tökezleyip tökezlemediğinizi ya da düşüp düşmediğinizi sorarım. Aradığım şey, dengeden endişe
+          etmek ile gerçekten denge kaybı yaşamak arasındaki farktır.</p>
+        <p>Kas gücündeki azalma ve hareketsizlik önemli olabilir. Ama özellikle yeni başlayan ya da giderek
+          artan dengesizliği yalnızca yaşa veya menopoza bağlamam; önce altında başka bir sağlık sorunu
+          olup olmadığını değerlendiririm.</p>
+        <p>Düşmeyi önlemek için denge ve kuvvet içeren çok bileşenli aktivite önerileri özellikle 65 yaş ve
+          üzerindeki yetişkinlere yöneliktir. Bu güçlü öneri orta kesinlikte kanıta dayanır
+          <Evidence level={3} /> <sup>[4]</sup>. Düşme riski 40 yaşından sonra kişiden kişiye değişir;
+          bunu kişisel denge ve işlev değerlendirmesi gösterir.</p>
+        <p>Yürürken güvensiz hissediyorsanız ya da bir yere tutunma ihtiyacınız arttıysa bunu da görüşmede
+          söyleyin. Güç, denge ve evinizin düzeni birlikte ele alınabilir. Pantolon sorusunun yanıtını
+          öğrenmek için kendinizi evde sınamanız gerekmez; düşme tehlikesine girmeden, bildiğiniz kadarını
+          anlatın.</p>
+
+        <h2 id="ne-zaman-destek">Ne Zaman Fizyoterapi veya Hekim Desteği Gerekir?</h2>
+        <p>Ağrı yürüyüşünüzü, uykunuzu ya da işinizi kısıtlıyorsa değerlendirme için üç ay beklemeyin;
+          bazı yeni belirtiler ise doğrudan acil başvuru gerektirir.</p>
+        <p>Giderek artan, tekrar eden veya günlük yaşamı daraltan ağrıda hekim ya da fizyoterapi
+          görüşmesi erken yapılabilir <sup>[6, 7]</sup>. Ağrıya travma eşlik ediyorsa ya da aşağıdaki
+          belirtilerden biri varsa önce tıbbi değerlendirme alın.</p>
+        <p><strong>Bel ağrısıyla birlikte yeni idrar yapamama, idrar-dışkı kontrolünde kayıp, kasık veya
+          makat çevresinde his kaybı ya da iki bacakta yeni güçsüzlük varsa acil servise başvurun.</strong>
+          Bu belirtilerde rutin fizyoterapi görüşmesini beklemeyin <sup>[6]</sup>.</p>
+        <RedFlagBox
+          markers={[
+            'Düşme, çarpma veya burkulma sonrası üzerine basamama ya da belirgin şekil bozukluğu: acil değerlendirme',
+            'Yeni başlayan veya ilerleyen bacak güç kaybı, uyuşma ya da ayak bileğini kaldıramama: gecikmeden tıbbi değerlendirme',
+            'İdrar yapamama, idrar-dışkı kontrolünde yeni kayıp veya kasık-makat çevresinde his kaybı: acil değerlendirme',
+            'Sıcak ve şiş eklem, özellikle ateş ya da genel durum bozukluğuyla birlikte: aynı gün tıbbi değerlendirme',
+            'Ağrıyla birlikte açıklanamayan kilo kaybı, ateş veya kanser öyküsü: gecikmeden hekim değerlendirmesi',
+            'Gece uykudan uyandıran, pozisyonla rahatlamayan ve giderek artan ağrı: hekim değerlendirmesi',
+          ]}
+          footnote="Bu bulgular tanı koymaz. Acil olarak belirtilen durumlarda acil servise başvurun; diğerlerinde değerlendirme zamanını sağlık profesyoneliyle netleştirin. Kaynaklar: [6, 7, 8]."
+        />
+
+        <h2 id="kapanis">Bir Sonraki Görüşmeye Hazırlık</h2>
+        <p>Görüşmeye ağrının yerini, başlangıcını ve zorlaştırdığı günlük işleri not ederek gidin.
+          Bir de hedef seçin: daha uzun yürümek ya da merdiveni daha rahat inmek gibi.</p>
+        <p>İçiniz rahat olsun diye ekleyeyim: ciddi bir neden dışlandığında, bel ağrısında olağan günlük
+          işlerinizi sürdürmeniz, kireçlenmede ise düzenli egzersiz önerilen yaklaşımın parçasıdır
+          <sup>[2, 5]</sup>.</p>
+        <p>Fizyoterapistinize şu soruyu yöneltebilirsiniz: “Hangi değişiklikte hareketi azaltmalıyım,
+          hangi belirtide hekim değerlendirmesi almalıyım?” Böylece bedeni dinleyerek ilerlemek,
+          belirsiz bir öneriden günlük yaşamda kullanabileceğiniz bir plana dönüşür.</p>
+
+        <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
+        <p>Numaralı atıflar, genel hareket önerilerini ağrıya özgü kılavuzlardan ayırır.
+          Kaynakların kapsadığı yaş grubu ve hastalık, metindeki sınırlarla birlikte okunmalıdır.</p>
+        <ol>
+          <li>WHO, 2023. Kronik primer bel ağrısında cerrahi dışı bakım; egzersiz için koşullu öneri ve düşük kanıt kesinliği. <a href="https://www.ncbi.nlm.nih.gov/books/NBK599210/table/fm-ch2.tab1/" target="_blank" rel="noopener noreferrer">Öneri tablosu</a>.</li>
+          <li>NICE NG59, 2016; son güncelleme 2026. Bel ağrısı ve siyatikte değerlendirme, egzersiz ve görüntüleme. <a href="https://www.nice.org.uk/guidance/ng59/chapter/recommendations" target="_blank" rel="noopener noreferrer">Kılavuz önerileri</a>.</li>
+          <li>Greendale ve ark., 2019. Menopoz geçişinde vücut kompozisyonunu izleyen gözlemsel çalışma. <a href="https://doi.org/10.1172/jci.insight.124865" target="_blank" rel="noopener noreferrer">Çalışmanın tam metni</a>.</li>
+          <li>WHO, 2020. Fiziksel aktivite ve hareketsiz davranış kılavuzu; yetişkinler ve 65 yaş üzeri için ayrı öneriler. <a href="https://www.ncbi.nlm.nih.gov/books/NBK566046/" target="_blank" rel="noopener noreferrer">Yaş gruplarına göre öneriler</a>.</li>
+          <li>NICE NG226, 2022. Osteoartritte kişiye uyarlanmış egzersiz, eğitim ve uygun kişilerde kilo yönetimi. <a href="https://www.nice.org.uk/guidance/ng226/chapter/recommendations" target="_blank" rel="noopener noreferrer">Osteoartrit önerileri</a>.</li>
+          <li>NHS. Bel ağrısında değerlendirme ve acil belirtiler. <a href="https://www.nhs.uk/conditions/back-pain/" target="_blank" rel="noopener noreferrer">Bel ağrısı güvenlik bilgisi</a>.</li>
+          <li>NHS. Eklem ağrısında değerlendirme, travma ve sıcak-şiş eklem uyarıları. <a href="https://www.nhs.uk/symptoms/joint-pain/" target="_blank" rel="noopener noreferrer">Eklem ağrısı güvenlik bilgisi</a>.</li>
+          <li>Verhagen ve ark., 2016. Bel ağrısı kılavuzlarındaki kırmızı bayrakları karşılaştıran derleme; kanser öyküsü, istemsiz kilo kaybı ve ateş en sık yer alan uyarılar arasında. <a href="https://doi.org/10.1007/s00586-016-4684-0" target="_blank" rel="noopener noreferrer">Derlemenin tam metni</a>.</li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" items={faqItems} title="Sıkça Sorulan Sorular" intro="Hareket, görüntüleme ve değerlendirme zamanına ilişkin kısa yanıtlar." class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+          '/zamansiz-yasam/kilo-artisi-menopoz/',
+          '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
+          '/hormonal-gecis/40-sonrasi/tarama-testleri/',
+          '/zamansiz-yasam/d-vitamini-rehberi/',
+        ]}
+      />
+
+      <ArticleEditorNote title="Bilimsel Editör Notu — inceleme taslağı">
+        <p><strong>Bu revizyonun tıbbi incelemesi bekleniyor.</strong> Aşağıdaki metin bilimsel editörün
+          onayına sunulacak taslaktır; onaylanmış bir hekim görüşü olarak sunulmaz.</p>
+        <p>Egzersizle ilgili kanıtı tek düzeyde toplamak yanıltıcıdır. Kronik primer bel ağrısında
+          yapılandırılmış egzersiz için öneri koşullu, kanıt kesinliği düşüktür. Diz ve kalça
+          osteoartritinde egzersiz ve bilgilendirme temel bakımın parçasıdır.
+          Denge ve kuvvetle düşmeyi önleme önerilerinin yaş kapsamı özellikle 65 yaş üzeridir.</p>
+        <p>Fizyoterapi hareket ve işlevin incelenmesine katkı sağlar. Travma, sıcak ve şiş eklem ya da
+          ilerleyen güç kaybında tıbbi değerlendirme önceliklidir; acil belirtiler yukarıdaki kutudadır.
+          İlgili kaynaklar: [1, 4, 5, 6, 7].</p>
+      </ArticleEditorNote>
+
+       <ArticleDisclaimer>
+<p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı, tedavi ve egzersiz planı için sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

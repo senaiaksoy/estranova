@@ -1,5 +1,5 @@
 {
-  "revision": 7,
+  "revision": 8,
   "generatedAt": "2026-10-14",
   "h1": 1,
   "faqCount": 5,
@@ -25,7 +25,7 @@
   },
   "articleSchema": true,
   "medicalWebPage": false,
-  "sourceSha256": "87df42e7f4d53896eb13bf1428c27831509f21f736dafd4079909a15bf6eeb7b",
+  "sourceSha256": "931ff8e49e6dc91bd05eea1f34a693cd1b1830b51317d5a8c7dc97a1b2d4baea",
   "baselineSha256": "f63ab447d632735fb0c85eec5649dfe9e30f554ca32a2c39b1638b0a4bedded0",
   "productionSourceUnchanged": true,
   "productionSourceCheck": "src/pages/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari.astro sha256 = baselineSha256 (14 Ekim 2026)",
@@ -53,5 +53,6 @@
     "httpStatus": 200,
     "faqDetails": 8,
     "faqAnchorOccurrences": 2
-  }
+  },
+  "medicalReviewRecorded": "14 Ekim 2026, Doç. Dr. Senai Aksoy (künye ve Bilimsel Editör Notu güncellendi; gövde metni değişmedi)"
 }

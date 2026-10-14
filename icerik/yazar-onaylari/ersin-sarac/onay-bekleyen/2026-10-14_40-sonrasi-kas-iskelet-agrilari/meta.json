@@ -19,11 +19,11 @@
     "deliveryStatus": "author-read-outside-form"
   },
   "previewUrl": "./makale.html",
-  "medicalReviewStatus": "pending-revision-review",
+  "medicalReviewStatus": "approved",
   "releaseAuthorized": false,
   "sourceFile": "makale-kaynak.astro",
-  "revision": 7,
-  "sourceSha256": "87df42e7f4d53896eb13bf1428c27831509f21f736dafd4079909a15bf6eeb7b",
+  "revision": 8,
+  "sourceSha256": "931ff8e49e6dc91bd05eea1f34a693cd1b1830b51317d5a8c7dc97a1b2d4baea",
   "revision3Changes": [
     "byline görseli 4:5 kas-iskelet-yuruyus-byline.webp ile değişti (OG/şema görseli introspective-khaki-wrap.webp olarak kaldı)",
     "kanıt etiketi 118 satır 4->3, 127 satır 3->2, 167 satır 4->3",
@@ -56,9 +56,13 @@
     "Okurun pantolon sorusunu evde kendi üzerinde sınamaması için güvenlik cümlesi bölüm sonuna bağlandı"
   ],
   "medicalReviewer": {
-    "status": "pending",
-    "assignedTo": "Dr. Senai Aksoy",
-    "note": "İnceleme henüz yapılmadı. İnceleyici adı ve tarihi, inceleme tamamlanınca yazılır."
+    "status": "approved",
+    "reviewer": "Doç. Dr. Senai Aksoy",
+    "reviewerTitle": "Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör",
+    "date": "2026-10-14",
+    "outcome": "Onaylandı (düzeltme istenmedi)",
+    "recordedFrom": "Kullanıcı bildirimi",
+    "note": "Künye, Bilimsel Editör Notu ve reviewerForWriter yayın kaynağında güncellendi; gövde metni revizyon 7 ile aynı."
   },
   "approvalForm": {
     "revision": 7,
@@ -78,5 +82,9 @@
     "date": "2026-10-14",
     "recordedFrom": "Kullanıcı bildirimi",
     "record": "onay-bildirimi.json"
-  }
+  },
+  "revision8Changes": [
+    "Tıbbi inceleme kaydı: künyede 'Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy', Bilimsel Editör Notu imzalı (14 Ekim 2026), 'bekleniyor' ve 'taslak' ifadeleri kaldırıldı",
+    "Gövde metni revizyon 7 ile aynı; yazar onayı revizyon 7 kapsamında kalır"
+  ]
 }

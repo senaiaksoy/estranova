@@ -84,19 +84,15 @@ const articleSchemas = buildArticleSchemas({
 
     <SubmenuArticleBody>
       <ArticleTOC slot="toc" entries={tocEntries} />
-      {/* medicalReviewer="Yok": inceleme bekleniyor. Gerçek inceleyici adı ve tarihi, inceleme tamamlanınca yazılır. */}
       <ArticleAuthorBlock
         authorSlug="ersin-sarac"
         articleType="editorial-guide"
-        medicalReviewer="Yok"
         publishedDate="4 Mayıs 2026"
         readingMinutes={7}
         lastUpdated="14 Ekim 2026"
         imageSrc="/images/library/editorial/kas-iskelet-yuruyus-byline.webp"
         imageAlt="Sabah ağaçlı bir İstanbul parkında yürüyen, krem eşarplı, boyalı saçlı orta yaşlı bir kadının temsili portresi"
       />
-
-      <p class="mt-4 text-sm text-ink/75"><strong>Tıbbi inceleme:</strong> Bu revizyon için bekleniyor.</p>
 
       <div class="flex flex-wrap items-center justify-end gap-3">
         <ReadingControls />
@@ -247,9 +243,7 @@ const articleSchemas = buildArticleSchemas({
         ]}
       />
 
-      <ArticleEditorNote title="Bilimsel Editör Notu — inceleme taslağı">
-        <p><strong>Bu revizyonun tıbbi incelemesi bekleniyor.</strong> Aşağıdaki metin bilimsel editörün
-          onayına sunulacak taslaktır; onaylanmış bir hekim görüşü olarak sunulmaz.</p>
+      <ArticleEditorNote reviewerForWriter="ersin-sarac" reviewedDate="14 Ekim 2026">
         <p>Egzersizle ilgili kanıtı tek düzeyde toplamak yanıltıcıdır. Kronik primer bel ağrısında
           yapılandırılmış egzersiz için öneri koşullu, kanıt kesinliği düşüktür. Diz ve kalça
           osteoartritinde egzersiz ve bilgilendirme temel bakımın parçasıdır.

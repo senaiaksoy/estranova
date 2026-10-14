@@ -36,3 +36,10 @@ Revizyon 6 notunda önerilen soru ("Denge kaygısıyla gelen 40+ bir kadına ilk
 - Tıbbi inceleme bekleniyor.
 
 Revizyon 5–7 metni `592bf5e8` ile commit edildi (push yok). Form dosyaları bu commit'ten sonra üretildi. Yayın yapılmadı; `releaseAuthorized: false`.
+
+## Tıbbi inceleme (14 Ekim 2026) — revizyon 8
+
+- İnceleyen: Doç. Dr. Senai Aksoy (Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör). Sonuç: onaylandı, düzeltme istenmedi. Kayıt kullanıcı bildirimi.
+- Değişen yalnızca künye ve Bilimsel Editör Notu: "Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy", not imzalı, "bekleniyor" ve "taslak" ifadeleri kaldırıldı.
+- Gövde metni revizyon 7 ile aynı. Yazar onayı revizyon 7 kapsamında kalır. Yeni kaynak hash'i: `makale-kaynak.astro` için `meta.json` ve `teknik-kontrol.json` güncel değerini taşır; revizyon 7 kopyası `revizyon-7/` altında.
+- Hâlâ açık: yayın entegrasyonu (src/pages, article-approvals.ts, ortak FAQ, manifest), şema görseli, byline IPTC etiketi, okuma süresi. Yayın için ayrı izin gerekir.

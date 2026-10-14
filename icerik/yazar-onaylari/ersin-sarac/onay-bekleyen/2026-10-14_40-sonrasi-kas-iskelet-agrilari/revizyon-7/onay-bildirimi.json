@@ -1,0 +1,19 @@
+{
+  "recordedDate": "2026-10-14",
+  "source": "Kullanıcı (Dr. Senai Aksoy) bu sohbette yazarın metni okuyup onay verdiğini bildirdi.",
+  "exactUserMessage": "ersin okudu onay veriyor",
+  "decision": "approved",
+  "approvedRevision": 7,
+  "approvedSourceSha256": "87df42e7f4d53896eb13bf1428c27831509f21f736dafd4079909a15bf6eeb7b",
+  "revisionAssumption": "Okunan sürüm bildirimde belirtilmedi; bildirim anındaki güncel paket (revizyon 7) kabul edildi. Farklıysa bu kayıt düzeltilmeli.",
+  "scope": "Yalnızca revizyon 7 gövde metni. Revizyon 1-6 kapsanmaz.",
+  "originalAuthorResponseProvided": false,
+  "formResponse": null,
+  "firstPersonContributions": "Hareket ve denge bölümlerindeki birinci tekil aktarımlar ile kapanış güvence cümlesi revizyon 7 metninin parçası; ayrı katkiAktarimi yanıtı alınmadı, genel onay kapsamında sayıldı.",
+  "medicalReview": {
+    "status": "pending",
+    "assignedTo": "Dr. Senai Aksoy"
+  },
+  "liveRouteChanged": false,
+  "notes": "src/pages, article-approvals.ts, ortak FAQ ve manifest değiştirilmedi. Yayın için tıbbi inceleme ve ayrı yayın izni gerekiyor."
+}
