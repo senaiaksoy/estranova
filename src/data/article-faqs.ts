@@ -923,21 +923,11 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     },
   ],
   '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/': [
-    {
-      question: '40 yaş sonrası diz, kalça ve bel ağrısı yaşlanmanın kaçınılmaz parçası mı?',
-      answer:
-        'Hayır. Yaşla birlikte bazı yapılar daha hassas hale gelse de ağrıyı otomatik kader gibi görmek doğru değildir. Kas gücü, yüklenme biçimi, uyku ve iyileşme ritmi tabloyu ciddi biçimde değiştirir.',
-    },
-    {
-      question: 'Ağrı varken tamamen dinlenmek en doğru yaklaşım mı?',
-      answer:
-        'Her zaman değil. Bazı durumlarda kısa süreli koruma gerekir ama çoğu tabloda iyi ayarlanmış hareket iyileşmenin parçasıdır. Mesele hiç hareket etmemek değil, ağrıyla kavga etmeyen doz bulmaktır.',
-    },
-    {
-      question: 'Ne zaman görüntüleme veya ayrıntılı değerlendirme düşünmek gerekir?',
-      answer:
-        'Gece uykudan uyandıran ağrı, travma öyküsü, güç kaybı, ilerleyen şişlik ya da nörolojik yakınmalar varsa daha hızlı değerlendirme gerekir. Çünkü bazı durumlarda mesele yalnızca yüklenme değildir.',
-    },
+  { question: '40 yaş sonrası diz, kalça ve bel ağrısı kaçınılmaz mı?', answer: 'Yaşla birlikte kas gücü ve hareket alışkanlıkları değişebilir; ağrı yine de değerlendirilmesi gereken bir yakınmadır. Günlük yaşamı kısıtlayan veya tekrarlayan ağrıyı yaşınıza bağlayıp geçmeyin. Muayene, olası nedenleri ve uygun desteği ayırmaya yardımcı olur.' },
+  { question: 'Ağrım varken tamamen dinlenmeli miyim?', answer: 'Travma veya acil belirti varsa önce tıbbi değerlendirme gerekir. Bunlar dışlandığında bel ağrısı ve eklem kireçlenmesinde, kapasitenize göre ayarlanmış hareket genellikle bakımın parçasıdır. Egzersiz sırasında belirgin kötüleşme ya da yeni güç kaybı olursa hareketi sürdürmeye zorlamayın.' },
+  { question: 'Yürüyüş kas güçlendirme çalışmasının yerini tutar mı?', answer: 'Yürüyüş genel dayanıklılık için bir başlangıç olabilir. Yetişkinler için fiziksel aktivite önerileri, aerobik hareketin yanında kas güçlendirmeyi de kapsar. Mevcut ağrı veya denge sorunu varsa hangi çalışmanın uygun olduğu ayrıca değerlendirilir.' },
+  { question: 'MR raporunda fıtık veya kireçlenme yazması ağrıyı açıklar mı?', answer: 'Rapordaki bulgu, şikâyetiniz ve muayeneyle birlikte yorumlanır. Bel ağrısında görüntüleme rutin olarak istenmez; uzman değerlendirmesinde sonucu bakım planını değiştirecekse düşünülür. Yeni idrar-dışkı kontrol sorunu veya kasık çevresinde his kaybı varsa acil servise başvurun. Bacakta ilerleyen güç kaybında beklemeden tıbbi değerlendirme gerekir.' },
+  { question: 'Fizyoterapi için üç ay beklemem gerekir mi?', answer: 'Hayır. Üç ay, kronik bel ağrısını tanımlarken kullanılan süredir; yardım istemek için bekleme süresi değildir. Ağrı yürüyüşünüzü, uykunuzu veya işinizi kısıtlıyorsa daha erken değerlendirme alabilirsiniz.' },
   ],
   '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/': [
     {

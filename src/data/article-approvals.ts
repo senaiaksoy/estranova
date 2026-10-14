@@ -356,8 +356,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
     writerSlug: 'ersin-sarac',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch editoryal reconciliation: pending package bulunmasina ragmen route zaten production envanterinde oldugu icin launch auditini kapatmak uzere editor direct approval ile kayda alindi.',
+    approvedAt: '2026-10-14',
+    note: 'Yazar onayı (Fzt. Ersin Saraç, revizyon 7, kullanıcı bildirimi 2026-10-14; kayıt: icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/onay-bildirimi.json). Tıbbi inceleme: Doç. Dr. Senai Aksoy, 14 Ekim 2026, onaylandı. Önceki 2026-05-04 prelaunch kaydı yerine geçer.',
   },
   {
     pathname: '/zamansiz-yasam/d-vitamini-rehberi/',

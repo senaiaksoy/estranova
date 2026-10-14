@@ -769,7 +769,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
     title: '40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek',
-    description: '40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge, ağrı sinyali ve fizyoterapi desteği üzerinden anlatan sade rehber.',
+    description: '40 sonrası diz, kalça ve bel ağrısını tek bir egzersize indirgemeden; kas gücü, eklem yükü, denge ve fizyoterapi desteği üzerinden anlatan sade rehber.',
     publishedDate: '4 Mayıs 2026',
     writerSlug: 'ersin-sarac',
     section: 'Zamansız Yaşam',
