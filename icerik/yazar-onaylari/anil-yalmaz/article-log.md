@@ -17,6 +17,8 @@
 
 ## Yayın / Onay İzleri
 
+- **2026-10-14 — humanize ikinci geçiş (commit yok).** `/zamansiz-yasam/menopozda-hangi-hareket/`. Soru başlıklı H2 altıdan 1'e indi (`Hangi Gün Hangisi Daha Uygun?`); TOC etiketleri başlıklarla eşitlendi, id'ler korundu. Tekrarlanan iki paragraf birleşti (ertesi sabah / kas hassasiyeti). "değil" antitezi 2'ye, "olabilir" 6'dan 4'e indi; inkâr kalıpları seyreltildi. Tıbbi iddialar, Evidence seviyeleri (3, 3, 4, 4), RedFlagBox ve güvenlik metni değişmedi. `dateModified` 14 Ekim 2026. Kalıp seçim notu: kapanış "Önce küçük başlayın, sonra ritmi koruyun." (experience seed); açılış mat sahnesi.
+
 - **2026-06-18 — ilk yayın.** `/zamansiz-yasam/menopozda-hangi-hareket/` onaylı sürümle yayımlandı. Bu yazı önceki kayıtta "geri çekildi" diye işaretlenmişti; o ifade tarihsel olarak geçersizdir, canlı route 2026-06-18'den beri vardı.
 - **2026-10-14 — revizyon.** Kapsamlı audit ve humanize geçişi. Kaynak: `docs/editorial/menopozda-hangi-hareket-audit-humanize-2026-10-14.md`. Yazar onayı ve kontrol (tıbbi, KC) onayı sözlü alındı ve KC tarafından teyit edildi; onay kaydı `src/data/article-approvals.ts` içinde. Görseller: byline 1200×1500, kart 2400×1000; üst hero parent Zamansız Yaşam'da korundu. Commit/push/deploy bu kayıtla yapılmadı.
 

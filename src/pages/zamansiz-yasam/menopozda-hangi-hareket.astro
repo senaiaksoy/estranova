@@ -23,12 +23,12 @@ const pathname = '/zamansiz-yasam/menopozda-hangi-hareket/';
 const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const tocEntries = [
-  { id: 'hangi-hareket-sorusu', label: 'Hangi Hareket Sorusu' },
-  { id: 'her-biri-ne-anlatir', label: 'Her Biri Bedene Ne Anlatır?' },
-  { id: 'menopozda-beden', label: 'Menopozda Bedenin Cevabı' },
-  { id: 'hangi-gun-hangisi', label: 'Hangi Gün Hangisi?' },
-  { id: 'ortam-farki', label: 'Ortam Fark Eder mi?' },
-  { id: 'ne-zaman-daha-az', label: 'Ne Zaman Daha Az?' },
+  { id: 'hangi-hareket-sorusu', label: 'Matın Başında Dört Seçenek' },
+  { id: 'her-biri-ne-anlatir', label: 'Her Birinin İşi Ayrı' },
+  { id: 'menopozda-beden', label: 'Aynı Hareket, Farklı Gün' },
+  { id: 'hangi-gun-hangisi', label: 'Hangi Gün Hangisi Daha Uygun?' },
+  { id: 'ortam-farki', label: 'Evde, Stüdyoda, Dışarıda' },
+  { id: 'ne-zaman-daha-az', label: 'Yavaşlamak ve Destek Almak' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -107,120 +107,114 @@ const articleSchemas = buildArticleSchemas({
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="hangi-hareket-sorusu">Hangi Hareket Sorusu Neden Bu Kadar Karmaşık?</h2>
+        <h2 id="hangi-hareket-sorusu">Matın Başında Dört Seçenek</h2>
         <p>
-          Matınızı serdiniz; aklınızda yürüyüş de var, bir güç çalışması da. "Bugün hangisini seçsem?"
-          sorusuna cevap verirken geçen geceki uykunuz ve eklemlerinizin nasıl hissettiği de hesaba giriyor.
+          Matınızı serdiniz, aklınızda yürüyüş var, bir de güç çalışması. "Bugün hangisini seçsem?"
+          diye düşünürken geçen geceki uykunuz ve eklemlerinizin nasıl hissettiği de işin içine giriyor.
         </p>
         <p>
-          Bence sık karıştırılan nokta, egzersizin etkili olması için mutlaka yorucu olması gerektiği.
-          Bir çalışmadan bitkin çıkmak, onun size uygun olduğunu göstermez. Küçük bir başlangıç da değerlidir.
+          Sık yapılan bir hata var: etkili olmanın mutlaka yorucu olması gerektiğini sanmak. Bitkin
+          çıkmak, çalışmanın size uygun olduğunu gösteren bir ölçüt değil. Küçük bir başlangıç da
+          değerlidir; önemli olan bugün rahatça sürdürebileceğiniz bir adımı seçmek.
         </p>
         <p>
-          Önce hareketten ne beklediğinizi ayırmak işi kolaylaştırır: esneklik mi, güç mü, kondisyon mu?
-          Bu hedefler birbirine yakın görünse de aynı çalışmayla aynı ölçüde karşılanmaz.
-          Sevdiğiniz bir hareketi seçerken diğer ihtiyaçlarınıza da yer açabilirsiniz.
+          Önce hareketten ne beklediğinize karar verin: esneklik mi, güç mü, kondisyon mu? Bu hedefler
+          birbirine yakın görünse de tek bir çalışmayla aynı ölçüde karşılanmaz. Sevdiğiniz bir
+          hareketi seçmek de sağlam bir başlangıçtır.
         </p>
 
-        <h2 id="her-biri-ne-anlatir">Yoga, Pilates, HIIT, Direnç: Her Biri Bedene Ne Anlatır?</h2>
+        <h2 id="her-biri-ne-anlatir">Her Birinin İşi Ayrı</h2>
         <p>
-          Esnemek, merdiven çıkmak ve bir bavulu kaldırmak farklı beceriler ister.
-          Bu dört hareket biçimini de sizin hangi beceriye ihtiyaç duyduğunuz üzerinden ayırabiliriz.
+          Esnemek, merdiven çıkmak ve bir bavulu kaldırmak farklı beceriler ister. Dört hareket
+          biçimini de hangi beceriye ihtiyacınız olduğu üzerinden ayırabiliriz.
         </p>
         <p>
-          <strong>Yoga</strong>, duruşları, nefes çalışmalarını ve dikkati bir araya getirir; her yoga
-          çalışması aynı yoğunlukta değildir. Menopoz dönemindeki bazı çalışmalarda uykusuzluk
-          yakınmalarında küçük bir azalma görülmüştür <Evidence level={3} />.
-          Bu bulgu, sıcak basması ve gece terlemesini giderdiği anlamına gelmez.
+          <strong>Yoga</strong>, duruşları, nefes çalışmasını ve dikkati bir araya getirir. Her yoga
+          dersi aynı yoğunlukta değildir. Menopoz dönemindeki bazı çalışmalarda uykusuzluk
+          yakınmalarında küçük bir azalma gözlenmiş <Evidence level={3} />. Bu bulgu, sıcak basması
+          ve gece terlemesinin de geçeceği anlamına gelmez.
         </p>
         <p>
-          <strong>Pilates</strong>, gövde kontrolüne, hareketin koordinasyonuna ve kasların kontrollü
-          çalışmasına odaklanır. İleri yaştaki kadınlarda bazı güç ve esneklik ölçümlerinde yarar
-          bildiren çalışmalar vardır; sonuçlar her ölçümde aynı değildir <Evidence level={3} />.
-          Ağrı veya osteoporoz varsa hareketin biçimi ve yükü kişiye göre uyarlanmalıdır.
+          <strong>Pilates</strong>, gövde kontrolüne, koordinasyona ve kasların kontrollü çalışmasına
+          odaklanır. İleri yaştaki kadınlarda bazı güç ve esneklik ölçümlerinde yarar bildiren
+          çalışmalar var; sonuçlar ölçüme göre değişiyor <Evidence level={3} />. Ağrınız ya da
+          osteoporozunuz varsa hareketin biçimini ve yükünü kendinize göre ayarlayın.
         </p>
         <p>
-          <strong>HIIT</strong>, yüksek yoğunluklu aralıklı çalışmadır: yoğun hareket aralarının ardından
-          daha hafif hareket veya dinlenme gelir. Orta ve ileri yaştaki kadınlarda kalp ve solunum
-          kondisyonuna katkı sağlayabilir <Evidence level={4} />. Ancak bu sonuç, herkesin HIIT ile
-          başlaması gerektiğini söylemez. Yoğunluk, egzersiz geçmişiniz ve sağlık durumunuzla birlikte seçilir.
+          <strong>HIIT</strong>, yoğun hareket aralarının ardından hafif hareket ya da dinlenme gelen
+          aralıklı bir çalışma. Orta ve ileri yaştaki kadınlarda kalp ve solunum kondisyonuna katkı
+          sağlayabiliyor <Evidence level={4} />. Yine de herkesin HIIT ile başlaması gerekmez; yoğunluğu
+          geçmişinize ve sağlık durumunuza göre seçin.
         </p>
         <p>
           <strong>Direnç çalışması</strong>, kasları bir yüke karşı çalıştırır; bu yük kendi vücut
-          ağırlığınız da olabilir. Menopoz sonrası kadınlarda kas gücü açısından iyi kanıt
-          vardır <Evidence level={4} />. Sandalyeden doğrulmak veya market poşetini taşımak, bu gücün
-          gündelik karşılığıdır. Kemik sağlığına katkı ise uygulanan yüke ve hareket türüne göre değişir;
-          her direnç çalışması aynı etkiyi yaratmaz.
+          ağırlığınız da olabilir. Menopoz sonrası kadınlarda kas gücü için güçlü bir kanıt var
+          <Evidence level={4} />. Sandalyeden doğrulmak ya da market poşetini taşımak bu gücün gündelik
+          karşılığı. Kemik sağlığına katkı ise uygulanan yüke ve hareketin türüne bağlı; her direnç
+          çalışması aynı etkiyi yaratmaz.
         </p>
 
-        <h2 id="menopozda-beden">Menopoz Geçişinde Bedenin Cevabı Neden Değişir?</h2>
+        <h2 id="menopozda-beden">Aynı Hareket, Farklı Gün</h2>
         <p>
-          Dün rahat yaptığınız bir hareket bugün daha zor gelebilir. Menopoz geçişindeki uyku
-          sorunları, yorgunluk ve kas-eklem yakınmaları egzersiz deneyiminizi etkileyebilir.
+          Dün rahat yaptığınız bir hareket bugün zor gelebilir. Menopoz geçişindeki uyku sorunları,
+          yorgunluk ve kas-eklem yakınmaları egzersiz deneyiminizi etkileyebilir.
         </p>
         <p>
-          Perimenopoz, menopoza geçiş dönemidir. Bu dönemdeki yakınmaların
-          yanında yaş, önceki hareket alışkanlığı ve mevcut hastalıklar da önem taşır.
-          Yeni bir eklem ağrısını yalnızca hormonlara bağlayıp geçmeyin.
+          Perimenopoz dönemindeki yakınmaların yanında yaş, önceki hareket alışkanlığı ve mevcut
+          hastalıklar da rol oynar. Yeni bir eklem ağrısını yalnızca hormonlara bağlayıp geçmeyin.
         </p>
         <p>
-          Dambılı eskisi kadar rahat kaldıramadığınızda hayal kırıklığı hissedebilirsiniz.
-          Tek bir zor gün bütün ilerlemenizi silmez. Güçlenmeyi düşünürken başlangıç yükünü,
-          hareket tekniğini ve toparlanma için bıraktığınız zamanı birlikte ele almak daha anlamlıdır.
+          Dambılı eskisi kadar rahat kaldıramadığınız bir gün hayal kırıklığı verebilir. Ama tek bir
+          zor gün ilerlemenizi silmez. Güçlenirken başlangıç yükünü, tekniği ve toparlanma süresini
+          birlikte ayarlamak en sağlıklısı.
         </p>
 
         <h2 id="hangi-gun-hangisi">Hangi Gün Hangisi Daha Uygun?</h2>
         <p>
-          Gece birkaç kez uyandıysanız, sabahki çalışmanın süresini veya yoğunluğunu azaltabilirsiniz.
-          Alıştığınız hareketi daha hafif yapmak da bir seçenektir.
+          Gece birkaç kez uyandıysanız sabahki çalışmanın süresini ya da yoğunluğunu azaltın. Alıştığınız
+          hareketi biraz daha hafif yapmak da iyi bir seçenek.
         </p>
         <p>
-          Yoga veya pilates adı tek başına bir çalışmanın hafif olduğunu göstermez. Nasıl uygulandığına,
-          hareketi ne kadar rahat yapabildiğinize ve sonrasındaki yorgunluğunuza bakın.
-          Kendinizi dinç hissetmeniz de daha önce denemediğiniz yoğun bir çalışmaya hazır olduğunuzu kanıtlamaz.
+          Yoga ya da pilatesi hafif olduğu için değil, nasıl uygulandığı ve sonrasında nasıl hissettirdiği
+          için değerlendirin. Dinç hissetmek, yeni ve yoğun bir çalışmaya geçmek için tek ölçüt olmamalı.
         </p>
         <p>
-          Ben ertesi sabah nasıl hissettiğinize de bakmanızı öneririm. Hafif kas yorgunluğu olağan
-          olabilir; ama merdiven çıkmakta zorlanıyor, eklem ağrısı yaşıyor veya aşırı bitkin
-          hissediyorsanız yükü fazla artırmış olabilirsiniz. Bu belirtileri daha çok çalışmak için
-          bir işaret saymayın; sürüyorsa değerlendirme alın.
+          Ertesi sabah nasıl hissettiğiniz ilk kontroldür. Alışık olmadığınız bir çalışmadan sonra kas
+          hassasiyeti 24–72 saat içinde belirginleşebilir; hafif yorgunluk olağandır. Ama merdiven çıkmakta
+          zorlanıyor, eklem ağrısı yaşıyor ya da aşırı bitkin hissediyorsanız yükü fazla artırmış olabilirsiniz.
+          Bu belirtiyi daha çok çalışmak için bir işaret saymayın; sürüyorsa değerlendirme alın.
         </p>
         <p>
-          Ertesi sabah nasıl hissettiğiniz ilk kontroldür. Alışık olmadığınız bir çalışmanın ardından
-          kas hassasiyeti 24–72 saat içinde belirginleşebilir; bu yüzden takip eden günlerdeki ağrıyı
-          ve günlük hareket rahatlığınızı da gözlemleyin.
-        </p>
-        <p>
-          Yürüyüş, seçenekler arasında kaybolduğunuzda alışık olduğunuz tempoda başlayabileceğiniz
-          bir hareket olabilir. Günlük hayatın içine yerleştirmek de daha kolay gelebilir.
-          Kemik sağlığı için gereken güç ve denge çalışmalarının tamamını yürüyüşten beklemeyin.
+          Yürüyüş, seçenekler arasında kaybolduğunuzda alışık olduğunuz tempoda başlayabileceğiniz bir
+          hareket. Günlük hayatın içine yerleştirmek de kolay. Kemik sağlığı için gereken güç ve denge
+          çalışmalarının tamamını yürüyüşten beklemeyin.
         </p>
 
-        <h2 id="ortam-farki">Evde, Stüdyoda, Dışarıda: Ortam Fark Eder mi?</h2>
+        <h2 id="ortam-farki">Evde, Stüdyoda, Dışarıda</h2>
         <p>
-          Evde matı sermek size daha rahat geliyor olabilir; başka biri dışarı çıkınca hareket
-          etmeye daha kolay başlar. Düzenli devam edebildiğiniz ortamı seçmek işinizi kolaylaştırır.
+          Evde matı sermek bazılarınıza daha rahat gelir; başka biri dışarı çıkınca harekete başlamak
+          daha kolay olabilir. Düzenli sürdürebildiğiniz ortamı seçin.
         </p>
         <p>
-          Açık havada kısa bir yürüyüş, evdeki çalışmanın yanına eklenebilir. Türkiye'de yazın sıcak,
-          kışın kaygan zemin veya yaşadığınız yerdeki yürüyüş alanları da bu seçimi etkiler.
-          Uygun bir alan bulamadığınız günlerde evde hareket etmek geçerli bir seçenektir.
+          Açık havada kısa bir yürüyüş, evdeki çalışmanın yanına eklenebilir. Türkiye'de yaz sıcakları,
+          kışın kaygan zeminler ve yaşadığınız yerdeki yürüyüş alanları bu seçimi etkiler. Uygun bir alan
+          bulamadığınız günlerde evde hareket etmek de geçerli bir seçenek.
         </p>
         <p>
           Bir eğitmenle çalışıyorsanız hareketi anlayacağınız biçimde açıklamasını ve gerektiğinde
-          uyarlamasını isteyebilirsiniz. Ağrınızı söyleyebilmelisiniz. Sürekli yetişmeye veya kendinizi
-          kanıtlamaya çalıştığınız bir ortam, hareketi sürdürmeyi zorlaştırabilir.
+          uyarlamasını isteyin. Ağrınızı rahatça söyleyebilmelisiniz. Kendinizi kanıtlamaya çalıştığınız
+          bir ortam, hareketi sürdürmeyi zorlaştırır.
         </p>
 
-        <h2 id="ne-zaman-daha-az">Ne Zaman Daha Az Yapmalı, Ne Zaman Destek Almalı?</h2>
+        <h2 id="ne-zaman-daha-az">Yavaşlamak ve Destek Almak</h2>
         <p>
-          Keskin ağrı, yeni uyuşma, baş dönmesi, bayılacak gibi olma veya olağandışı nefes darlığında çalışmayı sürdürmeyin.
-          Bu belirtiler, hareketin yükünü artırmadan önce sağlık değerlendirmesi gerektirir.
+          Keskin ağrı, yeni uyuşma, baş dönmesi, bayılacak gibi olma ya da olağandışı nefes darlığında
+          çalışmaya devam etmeyin. Bu belirtiler, yükü artırmadan önce sağlık değerlendirmesi ister.
         </p>
         <p>
-          Yeni bir çalışmanın ardından hafif kas hassasiyeti olabilir. Eklem ağrısı, giderek artan
-          ağrı veya günlük işlerinizi engelleyen bitkinlik ise ayrı değerlendirilmelidir.
-          Merdivendeki zorlanmayı veya ağrının ne zaman başladığını not etmek, durumu anlatmanızı kolaylaştırır.
+          Yeni bir çalışmanın ardından hafif kas hassasiyeti olabilir. Eklem ağrısı, giderek artan ağrı ya
+          da günlük işlerinizi aksatan bitkinlik ise ayrıca değerlendirilmeli. Merdivendeki zorlanmayı ve
+          ağrının ne zaman başladığını not edin; anlatmak kolaylaşır.
         </p>
 
         <RedFlagBox
@@ -237,14 +231,14 @@ const articleSchemas = buildArticleSchemas({
         />
 
         <p>
-          Kontrolsüz tansiyon, bilinen kalp-damar hastalığı veya osteoporoz varsa yeni bir yoğunluğa
-          geçmeden önce hekiminizle egzersiz seçimini konuşun. Bu durumlarda kişiye uygun bir plan
-          gerekir; hareketin tamamını bırakmak otomatik bir sonuç değildir.
+          Kontrolsüz tansiyonunuz, bilinen kalp-damar hastalığınız ya da osteoporozunuz varsa yeni bir
+          yoğunluğa geçmeden önce hekiminizle egzersiz seçimini konuşun. Bu durumda kişiye uygun bir plan
+          gerekir; hareketi tamamen bırakmak otomatik bir sonuç değildir.
         </p>
         <p>
-          Benim için iyi bir çalışma, ertesi gün yeniden hareket edebilmenize alan bırakır.
-          Bugün rahatça sürdürebildiğiniz bir başlangıç seçin; sonraki günlerde yükü ve toparlanmayı
-          birlikte gözden geçirin.
+          Benim için iyi bir çalışma, ertesi gün yeniden hareket edebilmenize alan bırakır. Bugün rahatça
+          sürdürebildiğiniz bir başlangıç seçin, sonraki günlerde yükü ve toparlanmayı birlikte gözden
+          geçirin. Önce küçük başlayın, sonra ritmi koruyun.
         </p>
       </ArticleProsePanel>
 
