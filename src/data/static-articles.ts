@@ -189,7 +189,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/menopozda-hangi-hareket/',
     title: 'Menopozda Hangi Hareket? Yoga, Pilates, HIIT ve Direnç Arasında Bir Rehber',
     description:
-      'Menopoz döneminde yoga, pilates, HIIT ve direnç çalışmasını karşılaştıran, kişisel reçete vermeden doğru sorularla seçim yapmayı kolaylaştıran bir hareket rehberi.',
+      'Menopozda yoga, pilates, HIIT ve direnç çalışması arasında seçim: hareketin amacı, günlük yorgunluk, toparlanma ve güvenlik sınırları üzerine bir rehber.',
     publishedDate: '18 Haziran 2026',
     writerSlug: 'anil-yalmaz',
     section: 'Zamansız Yaşam',

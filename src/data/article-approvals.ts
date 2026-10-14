@@ -92,8 +92,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/menopozda-hangi-hareket/',
     writerSlug: 'anil-yalmaz',
-    approvedAt: '2026-06-18',
-    note: 'Anıl Yalmaz author approval registered. Warm movement guide article addressing yoga, pilates, HIIT, and resistance training humanized, banned words (\'en iyi\') cleaned, and published to live route with staticArticles manifest and FAQ schema aligned.',
+    approvedAt: '2026-10-14',
+    note: 'Anıl Yalmaz author approval and medical/control approval received 14 Ekim 2026 (sözlü, KC) for the revised text. Revision covers the full audit and humanize pass: pilates and HIIT claims narrowed to evidence-specific outcomes, emergency neurological red flags clarified, recovery-over-following-days guidance added, Markdown and template residue removed, and no FAQ section (no SSS data or schema). Byline and card visuals bound to ArticleAuthorBlock and articleCardImageByRoute; hero stays with the Zamansız Yaşam parent. Original 18 Haziran 2026 approval covered the earlier version only.',
   },
   {
     pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/',
