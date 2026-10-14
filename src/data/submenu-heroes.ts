@@ -362,8 +362,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Akşam ışığında evde nazik beden hareketi yapan kadın; uyku, melatonin ve akşam hareketi yazısı için kart görseli',
   },
   '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/': {
-    src: '/images/library/editorial/zy-kas-iskelet-agrilari-esneme.webp',
-    alt: 'Aydınlık bir ev köşesinde nazik esneme yapan olgun kadın; 40 sonrası kas-iskelet ağrıları yazısı için kart görseli',
+    src: '/images/library/editorial/kas-iskelet-yuruyus-kart.webp',
+    alt: 'Ağaçlı bir parkta sabah yürüyüşü yapan, yeşil bluz ve krem eşarplı orta yaşlı bir kadın; 40 sonrası kas-iskelet ağrıları yazısı için kart görseli',
   },
   '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/': {
     src: '/images/library/editorial/anil-yalmaz-harekete-yeniden-baslamak-byline.webp',
