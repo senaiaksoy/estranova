@@ -36,7 +36,7 @@
 ### 14 Ekim 2026 — ilk makalenin kapsamlı revizyonu, onay bekliyor
 
 - Hedef: `40-sonrasi-kas-iskelet-agrilari`; tür `editorial-guide`, yazar kimliği değişmedi.
-- Paket: `onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/`. Yeni yazar formu hazır; henüz gönderilmedi, yazar kararı alınmadı. Mevcut site rotası ve yayın kaydı değiştirilmedi.
+- Paket: `onaylanan/2026-10-14_40-sonrasi-kas-iskelet-agrilari/`. Yeni yazar formu hazır; henüz gönderilmedi, yazar kararı alınmadı. Mevcut site rotası ve yayın kaydı değiştirilmedi.
 - Açılış: sandalyeden kalkma / yürüyüş / gün sonunda bel tutulması; hasta hikâyesi veya yazarın kişisel deneyimi olarak sunulmayan gündelik durum. Kapanış: görüşmeye günlük işlev hedefiyle hazırlanma. İmza çerçeveleri: bedeni dinleyerek ilerlemek ve küçük adımların gücü; H0 mizah. Yeni aforizma/manifesto veya profil havuzu üretilmedi.
 - KC'nin bu sohbette Ersin'e yöneltilen karar sorusuna ilettiği yanıt, pakette `yazar-katkisi.json` içinde ham olarak saklandı. Alınma günü 2026-10-14; özgün yazar yanıt tarihi ayrıca doğrulanmadı. Yük azaltma / hekim / acil değerlendirme ayrımı hareket bölümüne anlamı korunarak uyarlandı; yazar onayı bekliyor.
 - Klinik düzeltmeler: kronik primer bel ağrısında koşullu öneri ve düşük kanıt kesinliği, osteoartritte kilo yönetiminin popülasyon sınırı, 65+ düşme önerileri, acil belirtiler ve üç aylık kroniklik süresinin başvuru eşiği olmaması.
@@ -53,7 +53,7 @@
 
 ## 14 Ekim 2026 — 40 Sonrası kas-iskelet: yazar onayı (revizyon 7)
 
-- Kullanıcı bildirimi: "ersin okudu onay veriyor". Kayıt: `onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/onay-bildirimi.json`.
+- Kullanıcı bildirimi: "ersin okudu onay veriyor". Kayıt: `onaylanan/2026-10-14_40-sonrasi-kas-iskelet-agrilari/onay-bildirimi.json`.
 - Kapsam: revizyon 7 (SHA-256 `87df42e7…eeb7b`); okunan sürüm bildirimde ayrıca belirtilmedi, güncel paket kabul edildi. Form yanıtı yok; likert ve kontrol alanları doldurulmadı.
 - Ersin'in iki katkısı (`yazar-katkisi.json`, `yazar-katkisi-2.json`) makalede birinci tekil kullanıldı ve onay kapsamında. Ayrı `katkiAktarimi` yanıtı alınmadı.
 - Stil sinyali (profil değişikliği önerisi, editör onayı bekler): klinisyen birinci tekil sesi bu makalede onaylandı. Gerçek görüşme sorusu olarak "Pantolonunuzu ayakta, bir yere tutunmadan giyebiliyor musunuz?" Ersin'e ait bir sahne; ileride `experience_seeds` için aday, aynı makale dışında tekrar kullanılmamalı.
