@@ -1,0 +1,35 @@
+diff --git a/src/pages/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri.astro b/src/pages/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri.astro
+--- a/src/pages/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri.astro
++++ b/src/pages/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri.astro
+@@ -13,7 +13,7 @@
+ import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+ import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+ import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+-import { submenuHeroByRoute } from '../../../data/submenu-heroes';
++import { articleCardImageByRoute, submenuHeroByRoute } from '../../../data/submenu-heroes';
+ import { buildArticleSchemas } from '../../../utils/article-schema';
+ import { articleFaqs } from '../../../data/article-faqs';
+ import { resolveSiteUrl } from '../../../utils/seo';
+@@ -21,5 +21,6 @@
+ const pathname = '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/';
+ const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/']!;
++const articleImage = articleCardImageByRoute[pathname]?.src ?? hero.src;
+ const articleTitle = 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak';
+ const seoTitle = 'Menopozda Cilt Değişimleri';
+ const articleDescription =
+@@ -50,7 +51,7 @@
+   pathname,
+   articleSection: 'Beden & Yakınlık',
+   sectionPath: '/beden-yakinlik/',
+-  image: hero.src.startsWith('http') ? hero.src : `${siteUrl}${hero.src}`,
++  image: new URL(articleImage, siteUrl).href,
+   keywords: [
+     'menopoz',
+     'cilt değişimleri',
+@@ -73,5 +74,6 @@
+   title={`${seoTitle} - Estranova`}
+   description={articleDescription}
++  image={articleImage}
+   ogType="article"
+   jsonLd={articleSchemas}
+ >

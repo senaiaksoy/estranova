@@ -312,29 +312,19 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': [
     {
-      question: 'Menopozda cilt değişimi yalnızca yaşlanma mı?',
+      question: 'Menopozda cilt kuruluğu ve hassasiyet artabilir mi?',
       answer:
-        'Hayır. Yaş alma, güneş geçmişi, genetik yapı, uyku, stres ve bakım alışkanlıkları etkilidir; fakat menopoz döneminde östrojen azalması da cildin nem, kolajen ve bariyer ritmini değiştirebilir. Ben bu tabloyu tek nedenle açıklamam; hormon, UV, melanin, bariyer ve kişisel cilt öyküsü birlikte değerlendirilmelidir.',
+        'Evet, özellikle kuruluk belirginleşebilir. Nemlendiriciyi banyodan sonra ve gün içinde cildiniz kurudukça kullanmak yardımcı olabilir; buna rağmen süren kurulukta nedenin değerlendirilmesi gerekir.',
     },
     {
-      question: 'Cilt kuruluğu ve hassasiyet bu dönemde artabilir mi?',
+      question: 'Güneş koruyucuyu kışın da kullanmak gerekir mi?',
       answer:
-        'Evet, bazı kadınlarda cilt daha kuru, daha gergin veya daha kolay kızaran bir hale gelebilir. Sert temizleyiciler, sıcak su, yoğun peeling ve üst üste aktif içerik denemeleri bu hassasiyeti artırabilir; önce bariyeri sakinleştirmek çoğu zaman daha doğru bir başlangıçtır.',
-    },
-    {
-      question: 'Menopozda cilt için kanıtı güçlü günlük adım nedir?',
-      answer:
-        'Düzenli güneş koruması hâlâ kanıtı güçlü temel adımlardan biridir. Leke, elastikiyet, ince çizgi, kolajen kaybı ve genel cilt sağlığı açısından gösterişli olmayan ama uzun vadede çok belirleyici bir alışkanlıktır.',
+        'Evet, güneş koruması yalnızca yaz tatiline ait bir alışkanlık değildir. Kışın da dışarı çıkmadan önce giysinin örtmediği yüz, boyun ve el üstü gibi alanları korumak gerekir.',
     },
     {
       question: 'Kolajen takviyesi herkes için gerekli midir?',
       answer:
-        'Hayır. Kolajen takviyeleri için bazı sınırlı olumlu veriler olsa da her kadına genellenebilecek zorunlu bir öneri değildir. Protein alımı, uyku, direnç egzersizi, güneşten korunma, sigaradan uzak durma ve kişisel sağlık durumu birlikte düşünülmelidir.',
-    },
-    {
-      question: 'Ne zaman dermatolojik değerlendirme geciktirilmemeli?',
-      answer:
-        'Yeni veya hızla büyüyen leke, şekli değişen ben, kanayan ya da kabuklanan alan, geçmeyen yara, yoğun kaşıntı, belirgin yanma, ani saç dökülmesi veya tırnak değişikliği varsa bekletmemek gerekir. Bu belirtiler kozmetik bakım konusu gibi değil, dermatolojik değerlendirme gerektiren işaretler olarak ele alınmalıdır.',
+        'Hayır, rutin kullanımını önermek için yeterli kanıt yoktur. Önerilen bir takviyeyi değerlendirirken ürünün hangi sonuç için incelendiğini ve araştırmanın ne kadar güvenilir olduğunu sorabilirsiniz; bu ayrımı yazının kolajen bölümünde açıklıyorum.',
     },
   ],
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': [

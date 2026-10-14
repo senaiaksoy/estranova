@@ -43,3 +43,9 @@
 ## 2 Ekim 2026 — Menopozda Cilt Değişimleri: onay kaydı düzeltmesi
 
 `/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/` 18 Mayıs 2026'da (commit 8043985d) Estranova Editörleri imzasından Prof. Dr. Gonca Gökdemir imzasına geçirildi; o tarihte yazar onayı `article-approvals.ts` veya bu log'a işlenmemişti. KC 2 Ekim 2026'da Gonca Gökdemir'in metni onayladığını teyit etti; onay kaydı `gonca-gokdemir` olarak güncellendi. Metin değişmedi. Kalıp kaydı geriye dönük çıkarılmadı; havuzlar hâlâ v0.1 lazy aktivasyon durumunda.
+
+## 14 Ekim 2026 — Menopozda Cilt Değişimleri: revizyon onayı ve canlı rota
+
+Revizyon (audit + humanize, iki tur) için yazar onayı ve Doç. Dr. Senai Aksoy tıbbi onayı KC bildirimiyle sözlü alındı. Form, JSON yanıtı veya onay paketi üretilmedi. Kapsam: `icerik/taslaklar/menopozda-cilt-degisimleri.md` son sürümü; canlı rota `src/pages/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri.astro` bu sürümle yenilendi. SSS 3 soruya indirildi ve `src/data/article-faqs.ts` tek kaynağından hem görünür SSS hem FAQPage'e bağlandı. OG kart görseli patch ile bağlandı; üst hero değişmedi. `dateModified` 14 Ekim 2026. Önceki 2 Ekim 2026 onayı bu revizyonu kapsamaz.
+
+Açık not: `articleCardImageByRoute` girdisi bu makalede hâlâ 4:5 byline görselini gösteriyor; kart için 2.4:1 crop ayrıca üretilmeli.

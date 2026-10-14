@@ -182,8 +182,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
     writerSlug: 'gonca-gokdemir',
-    approvedAt: '2026-10-02',
-    note: 'KC editor direct approval: Cilt & Gorunum bolumundeki long-read boslugunu kapatmak icin Yasit Editor tonu ile hazirlandi; kozmetik vaat yerine bariyer, kolajen, gunes korumasi ve dermatolojik degerlendirme cercevesiyle canli envantere alindi. 18 Mayıs 2026’da byline Prof. Dr. Gonca Gökdemir’e geçirildi; yazar onayı o tarihte kayda geçirilmemişti. KC 2 Ekim 2026’da Gonca Gökdemir’in metni onayladığını teyit etti ve kayıt yazar adına güncellendi.',
+    approvedAt: '2026-10-14',
+    note: 'Prof. Dr. Gonca Gökdemir yazar onayı ve Doç. Dr. Senai Aksoy tıbbi onayı KC bildirimiyle sözlü alındı (14 Ekim 2026; form, JSON yanıtı veya onay paketi yok). Onaylanan kapsam: 14 Ekim 2026 revizyonu — melanin/melanosit ayrımı, kolajen takviyesi netleştirmesi, retinoid tanımı ve gebelik uyarısı, güneş koruması (UVA/UVB, SPF 30), sigara/kaş-kirpik/tırnak kaynak ayrımı, işlem sonrası uyarılar, SSS 3 soruya indirildi, 11 girdilik Kaynaklar bölümü, OG kart görseli bağlantısı. Bilimsel Editör Notu korundu. Önceki 2 Ekim 2026 onayı bu revizyonu kapsamaz. Kaynak 8 ve 11 iki bağlantı içerir.',
   },
   {
     pathname: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/',
