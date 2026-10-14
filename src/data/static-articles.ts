@@ -373,7 +373,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
     title: 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak',
     description:
-      'Prof. Dr. Gonca Gökdemir, menopoz döneminde ciltte kuruluk, hassasiyet, leke eğilimi ve kolajen değişimini hormon, UV, melanin ve bariyer biyolojisi üzerinden anlatıyor.',
+      'Prof. Dr. Gonca Gökdemir, menopozda ciltte kuruluk, hassasiyet, leke eğilimi ve kolajen değişimini hormon, UV ve bariyer biyolojisi üzerinden anlatıyor.',
     publishedDate: '18 Mayıs 2026',
     writerSlug: 'gonca-gokdemir',
     section: 'Beden & Yakınlık',

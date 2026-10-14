@@ -118,10 +118,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
     alt: 'Menopozda cilt değişimleri temasını sakin, doğal ve premium editoryal bir bakım sahnesiyle taşıyan 45-55 yaş arası kadınlar',
   },
-  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': {
-    src: '/images/library/editorial/by-cilt-degisimleri.webp',
-    alt: 'Aynalı bir makyaj masasında bornozla oturup yüzüne dokunan bir kadın ve yanında gülümseyen arkadaşı.',
-  },
   '/beden-yakinlik/cinsel-saglik/': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
     alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su ve katlı pamuklu bez; cinsel sağlık ve özenli bakım teması',
@@ -343,7 +339,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': {
     src: '/images/library/editorial/menopozda-cilt-degisimleri-card.webp',
-    alt: 'Doğal ışıkta cilt değişimini sakin ve özenli biçimde taşıyan olgun kadın portresi; menopozda cilt değişimleri yazısı için kart görseli',
+    alt: 'Akşamüstü ışığında taş binalı bir sokakta, krem trençkot ve bordo fularla duran olgun bir kadın; solda vitrin camında yansıması görünüyor',
   },
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': {
     src: '/images/library/editorial/perimenopozda-kaygi-artisi-byline.webp',

@@ -20,7 +20,7 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/';
-const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/']!;
 const articleImage = articleCardImageByRoute[pathname]?.src ?? hero.src;
 const articleTitle = 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak';
 const seoTitle = 'Menopozda Cilt Değişimleri';
@@ -31,12 +31,12 @@ const modifiedDate = '14 Ekim 2026';
 const readingMinutes = 9;
 
 const tocEntries = [
-  { id: 'cildi-nasil-okurum', label: 'Cildi nasıl okurum?' },
+  { id: 'cildi-nasil-okurum', label: 'Önce neyin değiştiğini ayırmak' },
   { id: 'ostrojen-bariyer', label: 'Östrojen, bariyer ve nem' },
-  { id: 'kolajen-elastikiyet', label: 'Kolajen ve elastikiyet' },
+  { id: 'kolajen-elastikiyet', label: 'Kolajen, esneklik ve takviye' },
   { id: 'leke-melanin', label: 'Leke, melanin ve güneş geçmişi' },
   { id: 'bakim-ritmi', label: 'Bakım ritmini sadeleştirmek' },
-  { id: 'aktif-madde', label: 'Aktif maddeleri nasıl düşünmeli?' },
+  { id: 'aktif-madde', label: 'Aktif maddeleri mekanizmasıyla okumak' },
   { id: 'degerlendirme', label: 'Ne zaman değerlendirme gerekir?' },
   { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
@@ -106,19 +106,24 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Özet">
         <p>
-          Menopoz geçişinde östrojen azalması cildin nemini, kalınlığını ve esnekliğini etkileyebilir. Kuruluk ve çizgiler
-          belirginleşebilir; güneş geçmişi ve kullandığınız ürünler de bu değişime katkıda bulunur.<sup>[<a href="#kaynak-1">1</a>]</sup>
-          Bakımda nazik temizleme, nemlendirme ve güneşten korunma temel adımlardır. Yanma veya kızarıklık varsa yeni ürünler
-          eklemek tahrişi artırabilir. Kolajen takviyelerinin yararı ise kesinleşmiş değildir.<sup>[<a href="#kaynak-4">4</a>]</sup>
-          Yeni veya değişen bir ben, kanayan alan ya da iyileşmeyen yara varsa dermatolojik değerlendirmeyi geciktirmeyin.<sup>[<a href="#kaynak-6">6</a>]</sup>
+          Menopoz geçişinde östrojen azalması cildin nemini, kalınlığını ve esnekliğini etkileyebilir; güneş geçmişi ve
+          kullandığınız ürünler de bu değişime katılır.<sup>[<a href="#kaynak-1">1</a>]</sup> Temel bakım nazik temizleme,
+          nemlendirme ve güneşten korunmadır. Yanma varken yeni ürün eklemek tahrişi artırabilir. Kolajen takviyesinin yararı
+          kesin değildir.<sup>[<a href="#kaynak-4">4</a>]</sup> Yeni ya da değişen bir ben, kanayan veya iyileşmeyen bir yara
+          ise muayene gerektirir.<sup>[<a href="#kaynak-6">6</a>]</sup>
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
-        <h2 id="cildi-nasil-okurum">Cildi nasıl okurum?</h2>
+        <h2 id="cildi-nasil-okurum">Önce neyin değiştiğini ayırmak</h2>
         <p>
           Aynı nemlendiriciyi kullanırken yüzünüzün daha gergin olduğunu, makyajın eskisi gibi durmadığını fark
           edebilirsiniz. Bu değişimi anlamak için hemen yeni bir ürün aramanız gerekmiyor.
+        </p>
+        <p>
+          Polikliniğe bu dönemde gelen kadınlardan sık duyduğum bir yakınma var: Banyo rafı her ay biraz daha doluyor, cilt
+          ise bir türlü eski hâline dönmüyor. Bunu anlatırken çoğunun sesinde hafif bir mahcubiyet olur. Sanki bir şeyi yanlış
+          yapmışlar gibi.
         </p>
         <p>
           Cilt; hormonlardan, güneşten ve zaman içinde biriken etkilerden payını alan canlı bir dokudur. Östrojen, kolajen ve
@@ -128,10 +133,12 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Benim durduğum yer trendlerin değil, cildin tarafıdır. Yeni bir serum veya işlem konuşmadan önce neyin değiştiğini
           ayırmak isterim: Kuruluk mu baskın, yanma mı, yoksa yeni fark ettiğiniz bir leke mi? Her biri aynı bakımı gerektirmez.
-          Cildinizin değişmesi, ona yanlış baktığınız anlamına gelmez.
+        </p>
+        <p>
+          Önce şunu söyleyeyim: Cildinizin değişmesi bir bakım hatası değildir. Mahcup olmanızı gerektiren bir şey yok.
         </p>
 
-        <h2 id="ostrojen-bariyer">Östrojen, bariyer ve nem ilişkisi neden önemli?</h2>
+        <h2 id="ostrojen-bariyer">Östrojen, bariyer ve nem</h2>
         <p>
           Yüzünüzü yıkadıktan sonra beliren gerginlik, cildin nem ihtiyacını daha görünür kılabilir. Menopoz geçişindeki
           hormonal değişim bu ihtiyacın nedenlerinden biridir.<sup>[<a href="#kaynak-1">1</a>]</sup>
@@ -143,18 +150,20 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Her kuruluğun nedeni menopoz değildir. Sıcak su, sert temizleyiciler, parfümlü ürünler ve sık peeling cildi tahriş
-          edebilir. Egzama, bazı ilaçlar ve tiroid hastalıkları da değerlendirmede dikkate alınır.<sup>[<a href="#kaynak-7">7</a>]</sup>
+          edebilir.<sup>[<a href="#kaynak-1">1</a>,<a href="#kaynak-7">7</a>,<a href="#kaynak-11">11</a>]</sup> Egzama, bazı
+          ilaçlar ve tiroid hastalıkları da değerlendirmede dikkate alınır.<sup>[<a href="#kaynak-7">7</a>]</sup>
           Bu yüzden kullandığınız ürünleri ve şikâyetin ne zaman başladığını birlikte düşünmek, yalnızca nemlendiriciyi
           değiştirmekten daha açıklayıcı olabilir.
         </p>
 
-        <h2 id="kolajen-elastikiyet">Kolajen ve elastikiyet meselesi nasıl okunmalı?</h2>
+        <h2 id="kolajen-elastikiyet">Kolajen, esneklik ve takviye</h2>
         <p>
-          Kolajen, cilde dayanıklılık kazandıran yapısal bir proteindir. Kolajen içeren bir takviyenin etkisi ise ayrıca
-          klinik çalışmalarla değerlendirilir.
+          Eczane rafında üzerinde “kolajen” yazan kutular göze kolayca çarpar. Kolajenin ciltteki rolü ile bir takviyenin
+          etkisi ise iki ayrı sorudur.
         </p>
         <p>
-          Menopozdan sonra ciltte kolajen azalması ve esneklik kaybı belirginleşebilir. İnce çizgiler, el üstlerinde incelme
+          Kolajen, cilde dayanıklılık kazandıran yapısal bir proteindir. Menopozdan sonra ciltte kolajen azalması ve
+          esneklik kaybı belirginleşebilir. İnce çizgiler, el üstlerinde incelme
           veya boyun bölgesinde gevşeklik fark edebilirsiniz. Görünümü hormonlarla birlikte yılların güneş maruziyeti de
           etkiler.<Evidence level={4} /><sup>[<a href="#kaynak-1">1</a>,<a href="#kaynak-2">2</a>]</sup>
         </p>
@@ -169,7 +178,7 @@ const articleSchemas = buildArticleSchemas({
           arasındadır.<sup>[<a href="#kaynak-7">7</a>]</sup>
         </p>
 
-        <h2 id="leke-melanin">Leke, melanin ve güneş geçmişi neden menopozda daha görünür olabilir?</h2>
+        <h2 id="leke-melanin">Leke, melanin ve güneş geçmişi</h2>
         <p>
           Elinizin üstündeki bir lekeyi yeni fark etmeniz, onun yalnızca menopoz nedeniyle oluştuğunu göstermez. Yılların
           güneş maruziyetiyle gelişen lekeler bu yaşlarda daha dikkat çekici olabilir.<sup>[<a href="#kaynak-1">1</a>]</sup>
@@ -189,14 +198,14 @@ const articleSchemas = buildArticleSchemas({
           hormonal kolajen kaybının tümünü önleme vaadi olarak okunamaz.<Evidence level={4} /><sup>[<a href="#kaynak-3">3</a>]</sup>
         </p>
 
-        <h2 id="bakim-ritmi">Bakım ritmini sadeleştirmek neden iyi bir başlangıçtır?</h2>
+        <h2 id="bakim-ritmi">Bakım ritmini sadeleştirmek</h2>
         <p>
           Lavabo kenarında birkaç şişe biriktiğinde, hangisinin cildinize iyi geldiğini ayırt etmek zorlaşabilir. Özellikle
           yanma ve pullanma başladıysa önce rutininizi gözden geçirmek işe yarar.
         </p>
         <p>
-          Ben bakım planında “ne ekleyelim?” sorusuyla birlikte “neyi azaltırsak cilt rahatlar?” sorusuna da bakarım. Yanma
-          ve kızarıklık varken yeni ürünleri üst üste denemek, hangisinin tahriş yaptığını ayırt etmeyi zorlaştırır.
+          Ben bakım planında “ne ekleyelim?” sorusuyla birlikte “neyi azaltırsak cilt rahatlar?” sorusuna da bakarım. Liste
+          kısaldıkça cildi okumak kolaylaşır.
         </p>
         <ul>
           <li>Birkaç gün cildinizin nasıl hissettiğini izleyin: Yıkama sonrasında geriliyor mu, bir ürün sürünce yanıyor mu?</li>
@@ -210,13 +219,12 @@ const articleSchemas = buildArticleSchemas({
           tahriş bakım planını değiştirebilir.
         </p>
 
-        <h2 id="aktif-madde">Aktif maddeleri nasıl düşünmeli?</h2>
+        <h2 id="aktif-madde">Aktif maddeleri mekanizmasıyla okumak</h2>
         <p>
-          Bir ürünün etiketini okurken önce hangi şikâyete yönelik olduğuna bakın. İçerik listesi kadar, cildinizin ürünü
-          tolere edip etmediği de önemlidir.
+          Etiketteki uzun içerik listesi göz korkutabilir. Başlangıç için tek bir soru yeter: Bu ürün hangi şikâyet için?
         </p>
         <p>
-          Retinoidler, A vitamini türevi maddelerin genel adıdır; retinol de bu gruptadır. Cilde uygulanan bazı retinoidler
+          İçerik listesi kadar, cildinizin ürünü tolere edip etmediği de önemlidir. Retinoidler, A vitamini türevi maddelerin genel adıdır; retinol de bu gruptadır. Cilde uygulanan bazı retinoidler
           ince çizgi ve pigment düzensizliklerinde yararlı olabilir. Ancak kuru, kızarık veya hassas ciltte tahriş yapabilirler.
           Retinol içeren her kozmetik ürünün etkisi reçeteli retinoidlerle eşit kabul edilemez.<Evidence level={3} /><sup>[<a href="#kaynak-5">5</a>]</sup>
         </p>
@@ -232,23 +240,19 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="degerlendirme">Ne zaman dermatolojik değerlendirme gerekir?</h2>
         <p>
-          Yeni veya değişen bir ben, kanayan alan ya da iyileşmeyen yara varsa bakım rutininin sonucunu beklemeyin.
-          Dermatolojik değerlendirme alın.<sup>[<a href="#kaynak-6">6</a>]</sup>
-        </p>
-        <h3>Geciktirilmemesi gereken cilt değişiklikleri</h3>
-        <ul>
-          <li>Yeni çıkan, büyüyen veya rengi belirgin değişen ben ya da leke.</li>
-          <li>Kanayan, kabuklanan, iyileşmeyen veya tekrarlayan yara.</li>
-          <li>Asimetrik, sınırları düzensiz ya da birden fazla renge sahip ben.<sup>[<a href="#kaynak-6">6</a>]</sup></li>
-        </ul>
-        <p>
-          Bu işaretler kendi başına kanser tanısı değildir; nedeni muayeneyle ayırt edilir. Ben takibinin gerekliliği ve
-          sıklığı kişisel risklerinize göre belirlenir.
+          Yeni veya değişen bir ben, kanayan alan ya da iyileşmeyen yara varsa bakım rutininin sonucunu beklemeyin; bu
+          değişikliği bir dermatoloğa gösterin.<sup>[<a href="#kaynak-6">6</a>]</sup>
         </p>
         <p>
-          Yoğun kaşıntı, belirgin yanma, yaygın kızarıklık veya bir üründen sonra uzayan tahriş de değerlendirme gerektirir.<sup>[<a href="#kaynak-5">5</a>,<a href="#kaynak-7">7</a>]</sup>
-          İşlem sonrası uzayan tahriş, yanık hissi veya yeni lekelenme varsa dermatoloğunuzla görüşün. Özellikle peeling
-          sonrasında yanma, kaşıntı veya şişlik olduğunda işlemi uygulayan hekime haber verin.<sup>[<a href="#kaynak-11">11</a>]</sup>
+          Bazen böyle bir değişikliği siz değil, bir başkası fark eder: ensenize bakan kuaför ya da sırtınızı gösteren bir
+          tatil fotoğrafı. Asimetrik, sınırları düzensiz veya birden fazla renk taşıyan benler de bu gruba girer.<sup>[<a href="#kaynak-6">6</a>]</sup>
+          Aşağıdaki kutudaki işaretler kendi başına kanser tanısı değildir; nedeni muayeneyle ayırt edilir. Ben takibinin
+          gerekliliği ve sıklığı kişisel risklerinize göre belirlenir.
+        </p>
+        <p>
+          Yoğun kaşıntı, belirgin yanma, yaygın kızarıklık veya bir üründen sonra uzayan tahriş de muayene gerektirir.<sup>[<a href="#kaynak-5">5</a>,<a href="#kaynak-7">7</a>]</sup>
+          Peeling gibi bir işlemden sonra yanma, kaşıntı, şişlik ya da yeni lekelenme olursa işlemi uygulayan hekime haber
+          verin.<sup>[<a href="#kaynak-11">11</a>]</sup>
         </p>
         <p>
           Ani saç dökülmesini yalnızca menopozla açıklamayın; farklı nedenleri olabilir.<sup>[<a href="#kaynak-1">1</a>]</sup>

@@ -314,7 +314,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopozda cilt kuruluğu ve hassasiyet artabilir mi?',
       answer:
-        'Evet, özellikle kuruluk belirginleşebilir. Nemlendiriciyi banyodan sonra ve gün içinde cildiniz kurudukça kullanmak yardımcı olabilir; buna rağmen süren kurulukta nedenin değerlendirilmesi gerekir.',
+        'Evet, özellikle kuruluk belirginleşebilir; cilt daha kolay tahriş olabilir ve kızarıklık ya da döküntü eğilimi artabilir. Nemlendiriciyi banyodan sonra ve gün içinde cildiniz kurudukça kullanmak, parfümsüz ürünler seçmek yardımcı olabilir. Buna rağmen süren kuruluk veya tahrişte nedenin değerlendirilmesi gerekir.',
     },
     {
       question: 'Güneş koruyucuyu kışın da kullanmak gerekir mi?',
