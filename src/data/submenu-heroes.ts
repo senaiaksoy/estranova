@@ -221,6 +221,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/zamansiz-yasam/menopozda-hangi-hareket/': {
+    src: '/images/library/editorial/menopozda-hangi-hareket.webp',
+    alt: 'Gün ışığı alan bir odada, kollarını iki yana açarak yoga duruşu yapan kadın',
+  },
   '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/': {
     src: '/images/library/editorial/basak-pelister-hrt-karari.webp',
     alt: 'Deniz manzaralı bir balkonda bordo şal içinde kahvesini tutan, uzağa bakan bir kadın.',
@@ -338,7 +342,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Krem tonlu aydınlık bir odada düşünen olgun kadın portresi; HRT ve meme kanseri riski yazısı için sakin editoryal kart görseli',
   },
   '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': {
-    src: '/images/library/editorial/menopozda-cilt-degisimleri-byline.webp',
+    src: '/images/library/editorial/menopozda-cilt-degisimleri-card.webp',
     alt: 'Doğal ışıkta cilt değişimini sakin ve özenli biçimde taşıyan olgun kadın portresi; menopozda cilt değişimleri yazısı için kart görseli',
   },
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': {
