@@ -171,7 +171,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/',
     writerSlug: 'ersin-sarac',
     approvedAt: '2026-05-07',
-    note: 'Ersin Saraç author approval received from icerik/yazar-onaylari/ersin-sarac/onaylanan/2026-05-07_belden-gelen-agri-kasik-genital-bolge paketi. Onaylanan taslak temiz UTF-8 yayın kopyasına çevrilip canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı.',
+    note: 'Ersin Saraç author approval received from icerik/yazar-onaylari/ersin-sarac/onaylanan/2026-05-07_belden-gelen-agri-kasik-genital-bolge paketi. Onaylanan taslak temiz UTF-8 yayın kopyasına çevrilip canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı. 2026-10-14 revizyon 9 (commit e94acaf9, audit ve humanizasyon): yazar onayı KC bildirimiyle alındı (sohbet; form JSON yanıtı yok). Tıbbi onay Doç. Dr. Senai Aksoy tarafından 2026-10-14 tarihinde verildi. Yayın için dal birleştirme ayrıca beklemededir.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
