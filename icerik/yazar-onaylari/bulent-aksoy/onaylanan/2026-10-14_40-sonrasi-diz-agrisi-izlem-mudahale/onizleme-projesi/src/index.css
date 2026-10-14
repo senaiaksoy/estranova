@@ -1,0 +1,440 @@
+@import "./styles/fonts.css";
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+/* Kaynak listesi, makalenin numaralı anlatı bölümlerinden ayrı okunur. */
+.prose-estranova-references .prose-estranova h2 {
+  counter-increment: none;
+}
+.prose-estranova-references .prose-estranova h2::before {
+  content: none;
+}
+
+@utility prose-estranova {
+  --tw-prose-body: #2D2D2D;
+  --tw-prose-headings: #2D2D2D;
+  --tw-prose-links: #D81B60;
+  --tw-prose-bullets: #000000;
+  --tw-prose-quotes: #D81B60;
+  --tw-prose-quote-borders: #000000;
+
+  counter-reset: estranova-chapter;
+
+  & h2 {
+    scroll-margin-top: 7rem;
+    counter-increment: estranova-chapter;
+    font-family: var(--font-serif);
+    font-size: clamp(2.15rem, 4vw, 3.15rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 620;
+    margin-top: 4rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+  & h2:first-child {
+    margin-top: 0.35rem;
+  }
+  & h2::before {
+    content: counter(estranova-chapter, decimal-leading-zero);
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    color: #000000;
+    margin-bottom: 0.75rem;
+    font-feature-settings: "tnum";
+  }
+  & h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    background: #000000;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  & h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    line-height: 1.18;
+    letter-spacing: -0.018em;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  & p {
+    font-size: calc(17.5px * var(--reader-scale, 1));
+    line-height: 1.78;
+    letter-spacing: 0.002em;
+    max-width: 64ch;
+  }
+  & strong {
+    color: #D81B60;
+    font-weight: 650;
+  }
+  & ul,
+  & ol {
+    max-width: 62ch;
+  }
+  & li::marker {
+    color: #000000;
+  }
+  & h2 + p {
+    font-family: var(--font-sans);
+    font-style: italic;
+    font-size: 1.18rem;
+    line-height: 1.64;
+    letter-spacing: 0.003em;
+    font-weight: 400;
+    color: #D81B60;
+    max-width: 58ch;
+  }
+  & blockquote {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) top left / 6rem 1px no-repeat,
+      linear-gradient(135deg, rgba(253, 248, 240, 0.96), rgba(248, 238, 240, 0.68));
+    border: 1px solid rgba(216, 27, 96, 0.12);
+    border-left: 4px solid #000000;
+    border-radius: 1.9rem;
+    box-shadow:
+      0 24px 70px -48px rgba(80, 8, 36, 0.36),
+      inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    font-family: var(--font-sans);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.3rem, 2.1vw, 1.78rem);
+    line-height: 1.52;
+    margin: 3rem 0;
+    max-width: 52rem;
+    padding: 1.6rem 1.8rem 1.7rem;
+    position: relative;
+  }
+  & blockquote::before {
+    content: "“";
+    position: absolute;
+    right: 1.35rem;
+    top: -0.25rem;
+    font-family: var(--font-sans);
+    font-size: 4.75rem;
+    line-height: 1;
+    color: rgba(216, 27, 96, 0.08);
+  }
+  & blockquote p {
+    font-size: inherit;
+    line-height: inherit;
+    max-width: 46rem;
+  }
+  & blockquote p:first-child {
+    margin-top: 0;
+  }
+  & blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  & table {
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid rgba(216, 27, 96, 0.12);
+    border-radius: 1.25rem;
+    box-shadow: 0 18px 42px -34px rgba(80, 8, 36, 0.28);
+  }
+  & thead {
+    background: #f8eef0;
+  }
+  & th {
+    color: #D81B60;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  & td {
+    border-top: 1px solid rgba(216, 27, 96, 0.1);
+  }
+  & .evidence {
+    display: inline;
+    margin: 0 0 0 0.15em;
+    color: #000000;
+    font-size: 0.85em;
+    cursor: help;
+    white-space: nowrap;
+  }
+  & .evidence-label {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: #000000;
+  }
+  & .evidence[data-level="5"] .evidence-label {
+    color: #D81B60;
+  }
+  & .evidence[data-level="4"] .evidence-label {
+    color: #D81B60;
+  }
+  & .evidence[data-level="1"] {
+    opacity: 0.8;
+  }
+  & a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(216, 27, 96, 0.35);
+  }
+  & a:hover {
+    border-bottom-color: #D81B60;
+  }
+}
+
+/* Aynı editoryal tipografi sistemi içinde kişisel deneyim yazıları klinik
+   bölüm sayacı taşımaz. Başlık, lede, bağlantı ve erişilebilirlik ritmi korunur. */
+.prose-estranova.prose-estranova-experience,
+.prose-estranova.prose-estranova-editorial {
+  counter-reset: none;
+}
+
+.prose-estranova.prose-estranova-experience h2,
+.prose-estranova.prose-estranova-editorial h2 {
+  counter-increment: none;
+}
+
+.prose-estranova.prose-estranova-experience h2::before,
+.prose-estranova.prose-estranova-editorial h2::before {
+  content: none;
+}
+
+@theme {
+  /* Live typography invariant (2026-06-02): font-serif = Manrope, font-sans = Kulim Park. */
+  --font-serif: "Manrope", sans-serif;
+  --font-sans: "Kulim Park", sans-serif;
+
+  --color-primary: #D81B60;
+  --color-primary-container: #D81B60;
+  --color-secondary: #D81B60;
+  --color-surface: #fffdf9;
+  --color-surface-container: #f7f1ea;
+  --color-charcoal: #1c1c19;
+
+  /* Editöryal palet — Pink 600 ana ton, siyah accent.
+     Aktif palet Pink 600, siyah accent, krem ve mürekkep tonlarından oluşur. */
+  --color-ink: #2d2d2d;
+  --color-gold: #000000;
+  --color-gold-bronze: #2d2d2d;
+  --color-cream-soft: #fffdf9;
+  --color-cream-warm: #f7f1ea;
+
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-surface text-charcoal font-sans antialiased;
+    /* Accessibility: Sufficient contrast, line-height, and font-size */
+    @apply text-[17px] leading-[1.72];
+    font-weight: 400;
+    letter-spacing: 0.002em;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary rounded;
+  }
+
+  /* Remove outline for mouse users, keep for keyboard */
+  :where(a, button, [tabindex]):focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    font-weight: 620;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+  }
+
+  ::selection {
+    background: rgba(216, 27, 96, 0.15);
+    color: #2D2D2D;
+  }
+}
+
+@layer components {
+  /*
+   * Evidence label: mirrors prose-estranova & .evidence so <Evidence /> renders
+   * on hub tables and cards outside ArticleProsePanel.
+   */
+  .evidence {
+    display: inline;
+    margin: 0 0 0 0.15em;
+    color: #000000;
+    font-size: 0.85em;
+    cursor: help;
+    white-space: nowrap;
+  }
+  .evidence-label {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: #000000;
+  }
+  .evidence[data-level='5'] .evidence-label {
+    color: #D81B60;
+  }
+  .evidence[data-level='4'] .evidence-label {
+    color: #D81B60;
+  }
+  .evidence[data-level='1'] {
+    opacity: 0.8;
+  }
+
+  /* Interactive elements */
+  .interactive:focus-visible {
+    @apply outline-2 outline-offset-[2px] outline-primary rounded-lg;
+  }
+
+  /* Link hover and focus states */
+  a:hover {
+    @apply transition-colors;
+  }
+
+  a:focus-visible {
+    @apply outline-2 outline-offset-[2px] outline-primary rounded;
+  }
+
+  /* Button accessibility */
+  button:focus-visible,
+  .button:focus-visible {
+    @apply outline-2 outline-offset-[2px] outline-primary rounded-lg ring-2 ring-primary/50;
+  }
+
+  /* Skip to main content link */
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    @apply not-sr-only fixed top-4 left-4 z-[100] px-4 py-3 rounded-lg bg-primary text-white shadow-lg ring-2 ring-primary/50;
+  }
+}
+
+@layer utilities {
+  /* Visibility utilities for screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only-focusable:focus,
+  .sr-only-focusable:focus-visible {
+    clip: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    white-space: normal;
+    position: static;
+    margin: 0;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: more) {
+    body {
+      @apply bg-white text-black;
+    }
+
+    a,
+    button {
+      @apply underline decoration-2;
+    }
+  }
+
+  @media (forced-colors: active) {
+    * {
+      forced-color-adjust: auto;
+    }
+
+    .skip-link {
+      @apply sr-only;
+    }
+
+    .skip-link:focus,
+    .skip-link:focus-visible {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      clip: auto;
+      width: auto;
+      height: auto;
+      white-space: normal;
+      border: 2px solid CanvasText;
+      padding: 0.75rem 1rem;
+      background: Canvas;
+      color: CanvasText;
+      z-index: 100;
+    }
+  }
+
+  /* Dark mode support (optional) */
+  @media (prefers-color-scheme: dark) {
+    body[data-theme="dark"] {
+      @apply bg-charcoal text-surface;
+    }
+  }
+}
+
+.editorial-shadow {
+  box-shadow: 0 4px 20px -2px rgba(216, 27, 96, 0.08);
+}
+
+/* Magazine drop-cap — applied to a paragraph; first letter floats in italic emphasis */
+.editorial-dropcap::first-letter {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.65rem;
+  line-height: 0.9;
+  color: #D81B60;
+  float: left;
+  margin: 0.38rem 0.62rem -0.16rem 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .editorial-dropcap::first-letter {
+    font-size: 5.35rem;
+    margin-right: 0.7rem;
+  }
+}
+
+.gold-border {
+  border-color: #b07683;
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #D81B60 0%, #D81B60 100%);
+}

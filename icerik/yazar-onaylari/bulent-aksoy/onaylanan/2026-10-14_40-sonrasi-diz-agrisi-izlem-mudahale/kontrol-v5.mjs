@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import {checkEditorial} from 'file:///C:/Users/KC3/.codex/skills/senai-humanize/scripts/editorial-check.mjs';
+import {checkStructure} from 'file:///C:/Users/KC3/.codex/skills/senai-humanize/scripts/structure-check.mjs';
+import {renderedFindings} from 'file:///C:/Users/KC3/.codex/skills/senai-humanize/scripts/rendered-check.mjs';
+const b=new URL('./',import.meta.url);
+let s=await fs.readFile(new URL('site-kaynak.astro',b),'utf8');
+const faq=Function('return '+s.match(/const faqItems = (\[[\s\S]*?\]);/)[1])();
+s=s.replace(/\{faqItems\.map\(\(item\) => \([\s\S]*?\)\)\}/,faq.map(x=>'\n<h3>'+x.question+'</h3><p>'+x.answer+'</p>').join('\n'));
+const prose=s.slice(s.indexOf('<ArticleSummary')).replace(/<RelatedReadings[\s\S]*?\/>/g,'').replace(/<RedFlagBox[\s\S]*?\/>/g,'').replace(/<h2 id="kaynaklar">[\s\S]*?<\/ArticleProsePanel>/g,'').replace(/<sup>[\s\S]*?<\/sup>/g,'').replace(/<Evidence[^>]*\/>/g,'').replace(/<h2[^>]*>/g,'\n## ').replace(/<h3[^>]*>/g,'\n### ').replace(/<li[^>]*>/g,'\n- ').replace(/<p[^>]*>/g,'\n\n').replace(/<[^>]+>/g,'').replace(/\{[^}]*\}/g,'').replace(/[ \t]+/g,' ').replace(/\n[ \t]+/g,'\n').replace(/ +([.,])/g,'$1').trim();
+const results={revision:'2026-10-14-audit-fix-v5',structure:await checkStructure(prose,{locale:'tr',filePath:'input.md'}),editorial:await checkEditorial(prose,{locale:'tr',filePath:'input.md'}),rendered:renderedFindings(await fs.readFile(new URL('makale-onizleme.html',b),'utf8'),'tr'),manual:{isolatedAstroBuild:'passed',h1:1,faqParity:'4/4',sourceCitations:'9/9',brokenAnchors:0,brokenImages:0,mobileOverflow:false,pendingReviewVisible:true,reviewedByOmittedWhilePending:true,formHashMatches:true,liveTrackedDiff:false}};
+await fs.writeFile(new URL('kontrol-sonuclari.json',b),JSON.stringify(results,null,2)+'\n');
+console.log(JSON.stringify(results));

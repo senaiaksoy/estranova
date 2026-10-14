@@ -1,0 +1,30 @@
+﻿---
+/**
+ * Makale kartlarının altındaki küçük editöryel meta satırı.
+ * "8 dk okuma · Kanıt: Orta · Güncel: Şub 2026"
+ * Manrope 11px tracked, ortadaki gold middle-dots, "Kanıt" değeri bordo.
+ */
+interface Props {
+  readingMinutes: number;
+  evidence?: 'Sınırlı' | 'Orta' | 'Güçlü';
+  updated?: string;
+}
+
+const { readingMinutes, evidence, updated } = Astro.props;
+---
+
+<p class="font-sans text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink/55 md:text-[11px]">
+  <span class="tabular-nums">{readingMinutes} dk okuma</span>
+  {evidence && (
+    <>
+      <span class="mx-2 text-gold">·</span>
+      <span>Kanıt: <span class="text-primary">{evidence}</span></span>
+    </>
+  )}
+  {updated && (
+    <>
+      <span class="mx-2 text-gold">·</span>
+      <span>Güncel: {updated}</span>
+    </>
+  )}
+</p>

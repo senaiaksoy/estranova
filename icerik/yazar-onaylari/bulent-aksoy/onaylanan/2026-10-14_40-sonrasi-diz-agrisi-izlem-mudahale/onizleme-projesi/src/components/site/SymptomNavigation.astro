@@ -1,0 +1,189 @@
+﻿---
+/**
+ * SymptomNavigation — anasayfa "Belirti Bazlı Navigasyon" bölümü.
+ *
+ * Editöryel belirti atlası: öne çıkan bir kapak kartı,
+ * ikincil atlas kartı ve kısa okuma rotaları.
+ *
+ * Veri kaynağı: src/data/symptoms.ts (anasayfa bento ve /symptoms
+ * rehber sayfası için tek kaynak).
+ *
+ * Fotoğraflar: public/images/symptoms/*.webp
+ */
+
+import { symptoms } from '../../data/symptoms';
+
+interface Props {
+  sectionNumber?: string;
+}
+
+const { sectionNumber = '05' } = Astro.props;
+const featured = symptoms.filter((s) => s.featured);
+const rest = symptoms.filter((s) => !s.featured);
+const primary = featured[0];
+const secondary = featured[1];
+---
+
+<section class="relative isolate overflow-hidden border-t border-primary/10 bg-white px-6 py-16 md:py-24">
+  <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
+  <div class="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute right-0 top-12 hidden font-serif text-[12rem] italic leading-none tracking-[-0.08em] text-primary/[0.04] lg:block">
+    atlas
+  </div>
+
+  <div class="mx-auto max-w-6xl">
+    <header class="mb-12 grid gap-8 md:grid-cols-[0.82fr_1.18fr] md:items-end">
+      <div>
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-primary">
+          <span class="font-serif font-normal tabular-nums text-gold">{sectionNumber}</span>
+          <span class="mx-2 text-gold">—</span>
+          Belirti Atlası
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="/belirti-degerlendirme/"
+            class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-[0_16px_44px_-34px_rgba(44,22,28,0.45)] transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/30"
+          >
+            <span>Bu normal mi?</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a
+            href="/symptoms/"
+            class="inline-flex items-center gap-2 rounded-full border border-primary/14 bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-primary shadow-[0_16px_44px_-34px_rgba(44,22,28,0.45)] transition hover:border-cream-warm/45 hover:bg-cream-soft/35 focus:outline-none focus:ring-2 focus:ring-primary/30"
+          >
+            <span>Belirti rehberini aç</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h2 class="mb-5 max-w-3xl font-serif text-4xl leading-[0.98] tracking-[-0.035em] text-ink md:text-6xl">
+          Bedenin nereden ses veriyor?
+        </h2>
+        <p class="max-w-2xl border-l border-gold/55 pl-5 font-serif text-xl italic leading-relaxed text-primary/82">
+          Bir belirtiden başlamak bazen en dürüst başlangıçtır. Burada amaç hızlı cevap vermek değil; bedenin işaretini sakin bir okuma rotasına çevirmek.
+        </p>
+      </div>
+    </header>
+
+    <div class="grid gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+      {
+        primary && (
+          <a
+            href={primary.href}
+            class="group relative min-h-[540px] overflow-hidden rounded-[42px] border border-primary/14 bg-ink shadow-[0_44px_132px_-72px_rgba(44,24,28,0.62)] ring-1 ring-white/80 transition duration-300 hover:-translate-y-1 hover:border-cream-warm/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
+            aria-label={`${primary.title} rehberini oku`}
+          >
+            <img
+              src={primary.image}
+              alt={primary.alt}
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/86 via-[#1c1412]/34 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1c1412]/28 via-transparent to-transparent"></div>
+            <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cream-warm/80 to-transparent"></div>
+            <div class="relative flex h-full min-h-[540px] flex-col justify-end p-7 md:p-10">
+              <div class="mb-7 flex flex-wrap items-center gap-3">
+                <span class="rounded-full border border-white/35 bg-white/14 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-white backdrop-blur-md">
+                  Ana işaret
+                </span>
+              </div>
+              <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-cream-warm/95">
+                Atlas kapağı
+              </p>
+              <h3 class="mb-5 max-w-[9ch] font-serif text-5xl leading-[0.9] tracking-[-0.05em] text-white md:text-7xl">
+                {primary.title}
+              </h3>
+              <p class="max-w-xl border-l border-cream-warm/70 pl-5 font-serif text-xl italic leading-relaxed text-white/86">
+                {primary.caption}
+              </p>
+              <div class="mt-8 flex items-center justify-between border-t border-white/18 pt-5 text-white/76">
+                <span class="text-xs font-bold uppercase tracking-[0.18em]">Okuma rotasını aç</span>
+                <span class="font-serif text-3xl text-cream-warm transition group-hover:translate-x-1" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        )
+      }
+
+      <div class="grid gap-5">
+        {
+          secondary && (
+            <a
+              href={secondary.href}
+              class="group relative overflow-hidden rounded-[34px] border border-primary/14 bg-white shadow-[0_30px_96px_-62px_rgba(44,22,28,0.36)] ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-0.5 hover:border-cream-warm/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
+              aria-label={`${secondary.title} rehberini oku`}
+            >
+              <div class="grid gap-0 md:grid-cols-[0.9fr_1.1fr] lg:grid-cols-1 xl:grid-cols-[0.85fr_1.15fr]">
+                <div class="relative min-h-56 overflow-hidden">
+                  <img
+                    src={secondary.image}
+                    alt={secondary.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/44 via-transparent to-transparent"></div>
+                </div>
+                <div class="relative p-7">
+                  <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-gold-bronze">
+                    İkinci okuma
+                  </p>
+                  <h3 class="mb-3 max-w-[10ch] font-serif text-4xl leading-[0.96] tracking-[-0.035em] text-ink transition group-hover:text-primary">
+                    {secondary.title}
+                  </h3>
+                  <p class="font-serif text-lg italic leading-relaxed text-primary/78">
+                    {secondary.caption}
+                  </p>
+                  <div class="mt-6 flex items-center justify-between border-t border-primary/12 pt-4 text-xs font-bold uppercase tracking-[0.18em] text-primary/75">
+                    <span>Okuma rotasını aç</span>
+                    <span class="font-serif text-2xl text-cream-warm transition group-hover:translate-x-1" aria-hidden="true">→</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          )
+        }
+
+        <div class="overflow-hidden rounded-[34px] border border-primary/12 bg-white shadow-[0_24px_80px_-60px_rgba(44,22,28,0.3)] ring-1 ring-black/[0.04]">
+          <div class="border-b border-primary/10 px-6 py-4">
+            <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-primary/70">Atlas indeksi</p>
+          </div>
+          {rest.map((s, index) => (
+            <a
+              href={s.href}
+              class="group grid gap-4 border-t border-primary/10 px-5 py-5 transition hover:bg-cream-soft/35 first:border-t-0 md:grid-cols-[72px_1fr_auto] md:items-center md:px-6"
+              aria-label={`${s.title} okuma rotasını aç`}
+            >
+              <div class="relative h-20 overflow-hidden rounded-[20px]">
+                <img
+                  src={s.image}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.045]"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1c1412]/26 via-transparent to-transparent"></div>
+              </div>
+              <div>
+                <p class="mb-1 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-gold-bronze">
+                  {String(index + 3).padStart(2, '0')} · {s.category} · {s.evidence}
+                </p>
+                <h3 class="mb-1 font-serif text-2xl leading-tight tracking-[-0.02em] text-ink transition group-hover:text-primary">
+                  {s.title}
+                </h3>
+                <p class="max-w-2xl text-sm leading-relaxed text-ink/70">{s.desc}</p>
+              </div>
+              <div class="flex items-center justify-between gap-5 border-t border-primary/10 pt-3 text-xs font-bold uppercase tracking-[0.17em] text-primary/72 md:border-t-0 md:pt-0">
+                <span>Rota</span>
+                <span class="font-serif text-2xl text-cream-warm transition group-hover:translate-x-1" aria-hidden="true">→</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

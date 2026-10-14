@@ -1,0 +1,525 @@
+{
+  "structure": [
+    {
+      "filePath": "input.md",
+      "locale": "tr",
+      "findings": [
+        {
+          "id": "space-before-punctuation",
+          "count": 1,
+          "locations": [
+            {
+              "line": 46,
+              "column": 71,
+              "excerpt": "r ."
+            }
+          ],
+          "message": "Space before a full stop or comma."
+        },
+        {
+          "id": "claim-general-wait",
+          "count": 3,
+          "locations": [
+            {
+              "line": 75,
+              "column": 32,
+              "excerpt": "8-12 hafta"
+            },
+            {
+              "line": 113,
+              "column": 1,
+              "excerpt": "8-12 hafta"
+            },
+            {
+              "line": 219,
+              "column": 12,
+              "excerpt": "8-12 hafta"
+            }
+          ],
+          "message": "Stated 3 times across 3 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+          "sections": 3
+        },
+        {
+          "id": "claim-first-line",
+          "count": 4,
+          "locations": [
+            {
+              "line": 5,
+              "column": 23,
+              "excerpt": "ilk güçlü adım"
+            },
+            {
+              "line": 68,
+              "column": 25,
+              "excerpt": "ilk yaklaşım"
+            },
+            {
+              "line": 232,
+              "column": 26,
+              "excerpt": "en güvenli yaklaşım"
+            },
+            {
+              "line": 260,
+              "column": 38,
+              "excerpt": "ilk basamak yaklaşım"
+            }
+          ],
+          "message": "Stated 4 times across 3 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+          "sections": 3
+        },
+        {
+          "id": "claim-mri",
+          "count": 3,
+          "locations": [
+            {
+              "line": 15,
+              "column": 16,
+              "excerpt": "rapor sonucu değil"
+            },
+            {
+              "line": 23,
+              "column": 1,
+              "excerpt": "görüntüleme değil"
+            },
+            {
+              "line": 267,
+              "column": 57,
+              "excerpt": "tek başına değil"
+            }
+          ],
+          "message": "Stated 3 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+          "sections": 2
+        }
+      ],
+      "rhythm": {
+        "sentences": 66,
+        "meanWords": 13.1,
+        "sdWords": 5.5,
+        "shareUpTo8Words": 0.14,
+        "longestShortRun": 2
+      },
+      "coverage": {
+        "blocks": 61,
+        "dynamicExpressions": 0,
+        "excluded": [
+          "frontmatter (reported separately by fidelity check)",
+          "imports/code/inline code",
+          "JSX attributes and expressions",
+          "raw HTML (Markdown input)",
+          "image alt text"
+        ]
+      },
+      "limitations": [
+        "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+        "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+        "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+        "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+      ]
+    },
+    {
+      "filePath": "input.md",
+      "locale": "tr",
+      "findings": [
+        {
+          "id": "family-negative-frame",
+          "count": 3,
+          "locations": [
+            {
+              "line": 102,
+              "column": 31,
+              "excerpt": "anlamına gelmez"
+            },
+            {
+              "line": 140,
+              "column": 31,
+              "excerpt": "demek değildir"
+            },
+            {
+              "line": 226,
+              "column": 188,
+              "excerpt": "anlamına gelmez"
+            }
+          ],
+          "message": "negative frame (anlamına gelmez / demek değildir): 3 times in the document, 1 of 25 paragraphs end with it. One use is fine. Keep the instances that add a distinct condition; say the rest directly or merge them.",
+          "paragraphEndings": 1
+        },
+        {
+          "id": "space-before-punctuation",
+          "count": 1,
+          "locations": [
+            {
+              "line": 99,
+              "column": 7,
+              "excerpt": "r ."
+            }
+          ],
+          "message": "Space before a full stop or comma."
+        },
+        {
+          "id": "claim-general-wait",
+          "count": 0,
+          "locations": [],
+          "message": "Stated 0 times across 0 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+          "sections": 0
+        },
+        {
+          "id": "claim-first-line",
+          "count": 0,
+          "locations": [],
+          "message": "Stated 0 times across 0 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+          "sections": 0
+        },
+        {
+          "id": "claim-mri",
+          "count": 2,
+          "locations": [
+            {
+              "line": 22,
+              "column": 94,
+              "excerpt": "tek başına tedavi"
+            },
+            {
+              "line": 221,
+              "column": 24,
+              "excerpt": "tek başına ameliyat"
+            }
+          ],
+          "message": "Stated 2 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.",
+          "sections": 2
+        }
+      ],
+      "rhythm": {
+        "sentences": 83,
+        "meanWords": 12.8,
+        "sdWords": 4.6,
+        "shareUpTo8Words": 0.19,
+        "longestShortRun": 4
+      },
+      "coverage": {
+        "blocks": 60,
+        "dynamicExpressions": 0,
+        "excluded": [
+          "frontmatter (reported separately by fidelity check)",
+          "imports/code/inline code",
+          "JSX attributes and expressions",
+          "raw HTML (Markdown input)",
+          "image alt text"
+        ]
+      },
+      "limitations": [
+        "Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.",
+        "Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.",
+        "Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.",
+        "Rhythm figures describe the text; they are not a target, a quota or an authorship score."
+      ]
+    }
+  ],
+  "editorial": {
+    "filePath": "input.md",
+    "locale": "tr",
+    "findings": [],
+    "coverage": {
+      "blocks": 60,
+      "dynamicExpressions": 0,
+      "excluded": [
+        "frontmatter (reported separately by fidelity check)",
+        "imports/code/inline code",
+        "JSX attributes and expressions",
+        "raw HTML (Markdown input)",
+        "image alt text"
+      ]
+    },
+    "limitations": [
+      "Advisory lexical/structural candidates, not authorship detection or clinical approval.",
+      "Semantic repetition and medication-section equivalence still need whole-text editorial reading.",
+      "Frontmatter summaries/FAQs and JSX props/expressions require separate visible-text inspection.",
+      "Block quotations are excluded from editorial suggestions; punctuation and passive voice are not banned."
+    ]
+  },
+  "fidelity": {
+    "originalPath": "live.md",
+    "revisedPath": "candidate.md",
+    "locale": "tr",
+    "status": "review_changes",
+    "differences": {
+      "numbers": [
+        {
+          "value": "112",
+          "beforeCount": 0,
+          "afterCount": 1,
+          "beforeLocations": [],
+          "afterLocations": [
+            {
+              "line": 165,
+              "column": 12
+            }
+          ]
+        },
+        {
+          "value": "12",
+          "beforeCount": 3,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 75,
+              "column": 34
+            },
+            {
+              "line": 113,
+              "column": 3
+            },
+            {
+              "line": 219,
+              "column": 14
+            }
+          ],
+          "afterLocations": []
+        },
+        {
+          "value": "2",
+          "beforeCount": 1,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 165,
+              "column": 7
+            }
+          ],
+          "afterLocations": []
+        },
+        {
+          "value": "3",
+          "beforeCount": 1,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 165,
+              "column": 9
+            }
+          ],
+          "afterLocations": []
+        },
+        {
+          "value": "40",
+          "beforeCount": 4,
+          "afterCount": 2,
+          "beforeLocations": [
+            {
+              "line": 1,
+              "column": 1
+            },
+            {
+              "line": 35,
+              "column": 4
+            },
+            {
+              "line": 232,
+              "column": 1
+            },
+            {
+              "line": 260,
+              "column": 13
+            }
+          ],
+          "afterLocations": [
+            {
+              "line": 1,
+              "column": 1
+            },
+            {
+              "line": 37,
+              "column": 4
+            }
+          ]
+        },
+        {
+          "value": "8",
+          "beforeCount": 3,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 75,
+              "column": 32
+            },
+            {
+              "line": 113,
+              "column": 1
+            },
+            {
+              "line": 219,
+              "column": 12
+            }
+          ],
+          "afterLocations": []
+        }
+      ],
+      "timeAndDenominators": [
+        {
+          "value": "12 hafta",
+          "beforeCount": 1,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 219,
+              "column": 14
+            }
+          ],
+          "afterLocations": []
+        },
+        {
+          "value": "3 ay",
+          "beforeCount": 1,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 165,
+              "column": 9
+            }
+          ],
+          "afterLocations": []
+        }
+      ],
+      "ranges": [
+        {
+          "value": "2-3",
+          "beforeCount": 1,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 165,
+              "column": 7
+            }
+          ],
+          "afterLocations": []
+        },
+        {
+          "value": "8-12",
+          "beforeCount": 3,
+          "afterCount": 0,
+          "beforeLocations": [
+            {
+              "line": 75,
+              "column": 32
+            },
+            {
+              "line": 113,
+              "column": 1
+            },
+            {
+              "line": 219,
+              "column": 12
+            }
+          ],
+          "afterLocations": []
+        }
+      ]
+    },
+    "frontmatterChanged": false,
+    "coverage": {
+      "before": {
+        "blocks": 61,
+        "dynamicExpressions": 0,
+        "excluded": [
+          "frontmatter (reported separately by fidelity check)",
+          "imports/code/inline code",
+          "JSX attributes and expressions",
+          "raw HTML (Markdown input)",
+          "image alt text"
+        ]
+      },
+      "after": {
+        "blocks": 60,
+        "dynamicExpressions": 0,
+        "excluded": [
+          "frontmatter (reported separately by fidelity check)",
+          "imports/code/inline code",
+          "JSX attributes and expressions",
+          "raw HTML (Markdown input)",
+          "image alt text"
+        ]
+      }
+    },
+    "limitations": [
+      "Counts are global: values swapped between outcomes or claims can escape detection.",
+      "Negation, certainty, population and causal meaning require the manual meaning record.",
+      "Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.",
+      "Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.",
+      "Number formatting is not silently converted between locales. No tracked changes is not clinical approval."
+    ]
+  },
+  "rendered": {
+    "findings": [
+      {
+        "id": "uncited-source",
+        "count": 7,
+        "items": [
+          "NICE. Osteoarthritis in over 16s: diagnosis and management. NG226, 2022. Tanı, egzersiz, kilo yönetimi, enjek…",
+          "NHS. Knee pain. Diz ağrısında değerlendirme ve acil uyarı belirtileri; son inceleme 21 Aralık 2023.",
+          "NHS. DVT (deep vein thrombosis). Tek taraflı bacak belirtileri ve nefes darlığında acil değerlendirme; son in…",
+          "AAOS. Management of Acute Isolated Meniscal Pathology. Klinik uygulama kılavuzu, 10 Haziran 2024. Akut yırtık…",
+          "Siemieniuk RAC ve ark. Arthroscopic surgery for degenerative knee arthritis and meniscal tears: a clinical pr…",
+          "The role of estrogen in female skeletal muscle aging: A systematic review. 2023. Menopoz sonrası kas kütlesi …",
+          "T.C. İçişleri Bakanlığı. 112 Acil Çağrı Merkezi. Türkiye’de acil çağrılar için tek numara."
+        ],
+        "message": "Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it."
+      }
+    ],
+    "coverage": {
+      "characters": 13210,
+      "images": 2,
+      "headings": 18,
+      "collapsibles": 0,
+      "roles": [
+        "author: Yazan : → Prof. Dr. Bülent Aksoy"
+      ]
+    }
+  },
+  "parity": [
+    {
+      "question": "Dizimde ağrı varken yürüyüş yapabilir miyim?",
+      "answerMatches": true
+    },
+    {
+      "question": "MR'da menisküs yırtığı yazıyorsa ameliyat şart mı?",
+      "answerMatches": true
+    },
+    {
+      "question": "Kilo vermek gerçekten diz ağrısını azaltır mı?",
+      "answerMatches": true
+    },
+    {
+      "question": "Ne kadar süre konservatif plan denenmeli?",
+      "answerMatches": true
+    }
+  ],
+  "h1Count": 1,
+  "missingAnchors": [],
+  "uncitedRefs": [],
+  "lexicon": {
+    "hard_ban": [],
+    "soft_ban": []
+  },
+  "summaryWords": 74,
+  "browser": {
+    "desktop": {
+      "viewport": 1440,
+      "scrollWidth": 1425
+    },
+    "mobile": {
+      "viewport": 390,
+      "scrollWidth": 390,
+      "faqParity": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "brokenImages": 0,
+      "sources": 8,
+      "bodyFont": "Kulim Park",
+      "headingFont": "Manrope"
+    },
+    "screenshotStatus": "native save denied; inline capture did not return; crop files visually inspected"
+  },
+  "scratchCleanup": "Recursive scratch removal rejected by tool policy; onizleme-projesi retained"
+}

@@ -1,0 +1,38 @@
+---
+/**
+ * Kişisel deneyim yazılarında tıbbi bağlamı yazarın anlatısından ayırır.
+ * Bu kutu deneyimi bilimsel kanıt gibi sunmaz; yalnız kaynaklı ve nötr sağlık
+ * bilgisinin sorumluluğunu görünür kılar.
+ */
+interface Props {
+  title?: string;
+  reviewer?: string;
+  class?: string;
+}
+
+const {
+  title = 'Tıbbi Bilgi Notu',
+  reviewer = 'Doç. Dr. Senai Aksoy',
+  class: className,
+} = Astro.props;
+---
+
+<section
+  class:list={[
+    'relative overflow-hidden rounded-[38px] border border-primary/14 bg-white p-7 shadow-[0_30px_82px_-52px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] md:p-9',
+    className,
+  ]}
+>
+  <div class="pointer-events-none absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-gold via-primary/45 to-transparent"></div>
+  <div class="pointer-events-none absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-primary/[0.05]"></div>
+  <p class="relative mb-3 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.26em] text-primary">
+    <span class="h-px w-10 bg-gold/80"></span>
+    <span>{title}</span>
+  </p>
+  <p class="relative text-[11px] font-bold uppercase tracking-[0.16em] text-ink/58">
+    Tıbbi bilgi kontrolü: {reviewer}
+  </p>
+  <div class="relative mt-4 max-w-3xl space-y-3 border-t border-gold/25 pt-5 leading-relaxed text-ink/80 [&_strong]:font-semibold [&_strong]:text-primary">
+    <slot />
+  </div>
+</section>

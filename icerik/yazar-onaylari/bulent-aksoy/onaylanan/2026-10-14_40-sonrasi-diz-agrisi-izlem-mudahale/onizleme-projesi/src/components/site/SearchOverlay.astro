@@ -1,0 +1,289 @@
+﻿---
+---
+
+<div id="search-overlay" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Site içinde ara">
+  <div id="search-backdrop" class="absolute inset-0 bg-secondary/64 backdrop-blur-md"></div>
+
+  <div class="absolute inset-0 flex items-start justify-center px-4 pt-[10vh] pointer-events-none">
+    <div
+      id="search-panel"
+      class="relative flex max-h-[76vh] w-full max-w-3xl flex-col overflow-hidden rounded-[38px] border border-primary/14 bg-white shadow-[0_44px_140px_-74px_rgba(20,10,12,0.70)] ring-1 ring-black/[0.06] pointer-events-auto"
+    >
+      <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-gold/16 blur-3xl"></div>
+      <div class="pointer-events-none absolute bottom-3 right-6 hidden font-serif text-[7rem] italic leading-none tracking-[-0.08em] text-primary/[0.045] md:block">
+        ara
+      </div>
+
+      <div class="relative border-b border-primary/10 px-6 pb-5 pt-6 md:px-8 md:pt-7">
+        <div class="mb-5 flex items-center justify-between gap-4">
+          <div>
+            <p class="text-[0.64rem] font-bold uppercase tracking-[0.26em] text-gold-bronze">Arama masası</p>
+            <p class="mt-1 font-serif text-2xl italic leading-tight text-primary">Konuyu sakince bulun.</p>
+          </div>
+          <kbd class="hidden rounded-full border border-primary/12 bg-cream-soft/30 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/38 md:inline-flex">
+            ESC
+          </kbd>
+        </div>
+
+        <label class="flex items-center gap-4 rounded-full border border-primary/12 bg-white px-5 py-4 shadow-[0_18px_70px_-62px_rgba(44,22,28,0.42)] ring-1 ring-black/[0.04]">
+          <span class="sr-only">Arama terimi</span>
+          <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-primary/52" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Konu, belirti, yazar veya dosya ara..."
+            autocomplete="off"
+            class="min-w-0 flex-1 bg-transparent text-lg text-ink outline-none placeholder:text-ink/32"
+          />
+        </label>
+      </div>
+
+      <div id="search-results" class="relative overflow-y-auto overscroll-contain px-4 py-4 md:px-5 md:py-5">
+        <div id="search-default" class="space-y-5"></div>
+        <div id="search-filtered" class="hidden space-y-2"></div>
+        <div id="search-empty" class="hidden py-14 text-center">
+          <p class="font-serif text-3xl italic text-primary">Sonuç bulunamadı.</p>
+          <p class="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-ink/52">
+            Daha kısa bir kelime deneyin ya da belirti, dönem veya yazar adıyla yeniden arayın.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative flex flex-col gap-3 border-t border-primary/8 bg-cream-soft/18 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-8">
+        <div class="flex flex-wrap items-center gap-4 text-[11px] font-medium text-ink/38">
+          <span class="flex items-center gap-1">
+            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-primary/12 bg-white/58 text-[10px]">&uarr;</kbd>
+            <kbd class="inline-flex h-5 w-5 items-center justify-center rounded border border-primary/12 bg-white/58 text-[10px]">&darr;</kbd>
+            gezin
+          </span>
+          <span class="flex items-center gap-1">
+            <kbd class="inline-flex h-5 min-w-5 items-center justify-center rounded border border-primary/12 bg-white/58 px-1 text-[10px]">&crarr;</kbd>
+            aç
+          </span>
+        </div>
+        <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bronze">Estranova</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const searchOverlay = document.getElementById('search-overlay');
+  const searchBackdrop = document.getElementById('search-backdrop');
+  const searchInput = document.querySelector<HTMLInputElement>('#search-input');
+  const searchDefault = document.getElementById('search-default');
+  const searchFiltered = document.getElementById('search-filtered');
+  const searchEmpty = document.getElementById('search-empty');
+
+  /** @type {Array<{title:string,description:string,href:string,category:string}>|null} */
+  let items = null;
+  let itemsPromise = null;
+  let activeIndex = -1;
+  let visibleItems = [];
+
+  const categoryMeta = {
+    Sayfa: { color: 'bg-primary/10 text-primary', label: 'Sayfa' },
+    Kategori: { color: 'bg-gold/14 text-gold-bronze', label: 'Kategori' },
+    Semptom: { color: 'bg-primary/8 text-primary', label: 'Belirti' },
+    Makale: { color: 'bg-ink/5 text-ink/64', label: 'Makale' },
+    Sayı: { color: 'bg-gold/16 text-gold-bronze', label: 'Sayı' },
+    Yazar: { color: 'bg-primary/12 text-primary', label: 'Yazar' },
+  };
+
+  function metaFor(item) {
+    return categoryMeta[item.category] || { color: 'bg-ink/5 text-ink/55', label: item.category };
+  }
+
+  function loadItems() {
+    if (items) return Promise.resolve(items);
+    if (itemsPromise) return itemsPromise;
+    itemsPromise = fetch('/search-index.json')
+      .then((res) => {
+        if (!res.ok) throw new Error('search-index fetch failed');
+        return res.json();
+      })
+      .then((data) => {
+        items = Array.isArray(data) ? data : [];
+        return items;
+      })
+      .catch(() => {
+        itemsPromise = null;
+        items = [];
+        return items;
+      });
+    return itemsPromise;
+  }
+
+  function createResultItem(item, idx) {
+    const meta = metaFor(item);
+    const a = document.createElement('a');
+    a.href = item.href;
+    a.dataset.idx = idx;
+    a.className =
+      'search-result-item group flex items-start gap-4 rounded-[22px] border border-transparent px-4 py-3.5 transition hover:border-primary/10 hover:bg-white/74 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35';
+    a.innerHTML = `
+      <span class="mt-0.5 hidden font-serif text-2xl leading-none text-gold sm:block">${String(idx + 1).padStart(2, '0')}</span>
+      <span class="min-w-0 flex-1">
+        <span class="block truncate font-serif text-xl leading-tight text-ink group-hover:text-primary">${item.title}</span>
+        <span class="mt-1.5 block line-clamp-1 text-sm leading-relaxed text-ink/52">${item.description}</span>
+      </span>
+      <span class="mt-0.5 shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] ${meta.color}">${meta.label}</span>
+    `;
+    return a;
+  }
+
+  function renderDefault() {
+    if (!items) return;
+    searchDefault.innerHTML = '';
+    const groups: Record<string, NonNullable<typeof items>> = {};
+    items.forEach((item) => {
+      if (!groups[item.category]) groups[item.category] = [];
+      groups[item.category].push(item);
+    });
+
+    let globalIdx = 0;
+    Object.entries(groups).forEach(([cat, catItems]) => {
+      const section = document.createElement('section');
+      section.innerHTML = `<p class="px-4 pb-2 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/42">${metaFor({ category: cat }).label}</p>`;
+      const list = document.createElement('div');
+      list.className = 'space-y-1';
+      catItems.forEach((item) => {
+        list.appendChild(createResultItem(item, globalIdx));
+        globalIdx++;
+      });
+      section.appendChild(list);
+      searchDefault.appendChild(section);
+    });
+    visibleItems = items.map((item, i) => ({ ...item, _idx: i }));
+  }
+
+  function renderFiltered(query) {
+    if (!items) return;
+    const q = normalize(query);
+    const matched = items.filter(
+      (item) =>
+        normalize(item.title).includes(q) ||
+        normalize(item.description).includes(q) ||
+        normalize(item.category).includes(q),
+    );
+
+    searchFiltered.innerHTML = '';
+    if (matched.length === 0) {
+      searchDefault.classList.add('hidden');
+      searchFiltered.classList.add('hidden');
+      searchEmpty.classList.remove('hidden');
+      visibleItems = [];
+      return;
+    }
+
+    searchEmpty.classList.add('hidden');
+    searchDefault.classList.add('hidden');
+    searchFiltered.classList.remove('hidden');
+
+    matched.forEach((item, idx) => {
+      searchFiltered.appendChild(createResultItem(item, idx));
+    });
+    visibleItems = matched;
+  }
+
+  function normalize(str) {
+    return String(str)
+      .toLocaleLowerCase('tr-TR')
+      .replace(/ı/g, 'i')
+      .replace(/ö/g, 'o')
+      .replace(/ü/g, 'u')
+      .replace(/ş/g, 's')
+      .replace(/ç/g, 'c')
+      .replace(/ğ/g, 'g');
+  }
+
+  function setActive(idx) {
+    const allItems = document.querySelectorAll('.search-result-item');
+    allItems.forEach((el) => el.classList.remove('border-primary/18', 'bg-white/86'));
+    activeIndex = idx;
+    if (idx >= 0 && idx < allItems.length) {
+      allItems[idx].classList.add('border-primary/18', 'bg-white/86');
+      allItems[idx].scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  async function openSearch() {
+    searchOverlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    searchInput.value = '';
+    activeIndex = -1;
+    searchDefault.classList.remove('hidden');
+    searchFiltered.classList.add('hidden');
+    searchEmpty.classList.add('hidden');
+    await loadItems();
+    renderDefault();
+    requestAnimationFrame(() => searchInput.focus());
+  }
+
+  function closeSearch() {
+    searchOverlay.classList.add('hidden');
+    document.body.style.overflow = '';
+    searchInput.value = '';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      openSearch();
+    }
+    if (e.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) {
+      e.preventDefault();
+      openSearch();
+    }
+  });
+
+  document.querySelectorAll('[data-search-trigger]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openSearch();
+    });
+  });
+
+  searchBackdrop.addEventListener('click', closeSearch);
+
+  searchOverlay.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeSearch();
+    }
+  });
+
+  searchInput.addEventListener('input', (e) => {
+    const q = searchInput.value.trim();
+    activeIndex = -1;
+    if (!q) {
+      searchDefault.classList.remove('hidden');
+      searchFiltered.classList.add('hidden');
+      searchEmpty.classList.add('hidden');
+      renderDefault();
+    } else {
+      renderFiltered(q);
+    }
+  });
+
+  searchInput.addEventListener('keydown', (e) => {
+    const allItems = document.querySelectorAll('.search-result-item');
+    const count = allItems.length;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActive(activeIndex < count - 1 ? activeIndex + 1 : 0);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActive(activeIndex > 0 ? activeIndex - 1 : count - 1);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeIndex >= 0 && allItems[activeIndex]) {
+        window.location.href = allItems[activeIndex].getAttribute('href');
+      }
+    }
+  });
+</script>

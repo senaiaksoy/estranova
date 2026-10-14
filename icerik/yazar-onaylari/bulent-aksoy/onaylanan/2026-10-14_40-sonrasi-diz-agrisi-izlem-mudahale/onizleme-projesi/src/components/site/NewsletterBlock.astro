@@ -1,0 +1,143 @@
+﻿---
+/**
+ * NewsletterBlock — kompakt haftalık bülten abonelik bloğu.
+ *
+ * EditorialDigestStrip'ten (aylık, geniş yatay strip) farklıdır:
+ * - Haftalık ritim
+ * - Makale-içi veya sidebar gibi dar konteynerlerde çalışır
+ * - İki varyant: inline (geniş, form yatay) | compact (dar, form dikey)
+ */
+
+import { randomUUID } from 'node:crypto';
+
+interface Props {
+  variant?: 'inline' | 'compact';
+  heading?: string;
+  description?: string;
+  ctaLabel?: string;
+  /** Çoklu instance için benzersiz ID; verilmezse otomatik üretilir. */
+  formId?: string;
+  class?: string;
+}
+
+const {
+  variant = 'inline',
+  heading = 'Haftalık bilim özeti',
+  description = 'Perimenopoz ve menopoz üzerine kanıt-temelli bir okuma seçkisi, her cuma sabahı. Satış yok, promosyon yok.',
+  ctaLabel = 'Abone ol',
+  formId = `newsletter-${randomUUID().slice(0, 8)}`,
+  class: className,
+} = Astro.props;
+
+const isCompact = variant === 'compact';
+---
+
+<section
+  class:list={[
+    'rounded-[28px] border border-primary/12 bg-white ring-1 ring-black/[0.04] shadow-[0_18px_56px_-44px_rgba(44,22,28,0.24)]',
+    isCompact ? 'p-6 md:p-7' : 'p-7 md:p-10',
+    className,
+  ]}
+  aria-labelledby={`${formId}-heading`}
+>
+  <!-- Eyebrow with brand spark -->
+  <p class="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-gold">
+    <svg class="h-3 w-3 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
+      <polygon
+        fill="#000000"
+        points="100,10 111.31,88.69 190,100 111.31,111.31 100,190 88.69,111.31 10,100 88.69,88.69"
+      ></polygon>
+    </svg>
+    <span>BÜLTEN · HAFTALIK</span>
+  </p>
+
+  <h3
+    id={`${formId}-heading`}
+    class:list={[
+      'font-serif italic leading-tight text-secondary',
+      isCompact ? 'mb-3 text-2xl' : 'mb-4 text-3xl md:text-4xl',
+    ]}
+  >
+    {heading}
+  </h3>
+
+  <p
+    class:list={[
+      'leading-relaxed text-ink/80',
+      isCompact ? 'mb-5 text-sm' : 'mb-6 max-w-[52ch] text-base',
+    ]}
+  >
+    {description}
+  </p>
+
+  <!-- Faz 2 öncesi: localStorage tabanlı bekleme listesi. Resend/Mailchimp
+       bağlandığında newsletter-signup.ts script'i endpoint çağrısına geçer. -->
+  <form
+    method="post"
+    action="#"
+    name={formId}
+    aria-describedby={`${formId}-kvkk`}
+    data-newsletter-form="weekly"
+    class:list={[
+      'flex gap-3',
+      isCompact ? 'flex-col' : 'flex-col sm:flex-row sm:items-stretch',
+    ]}
+  >
+    <label for={`${formId}-email`} class="sr-only">E-posta</label>
+    <input
+      id={`${formId}-email`}
+      name="email"
+      type="email"
+      inputmode="email"
+      autocomplete="email"
+      required
+      placeholder="ornek@eposta.com"
+      class="min-h-[48px] w-full min-w-0 flex-1 rounded-xl border border-gold/45 bg-white px-4 text-sm text-ink outline-none transition placeholder:text-ink/40 focus:border-primary/55 focus:ring-2 focus:ring-gold/35"
+    />
+    <button
+      type="submit"
+      class="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-xl bg-secondary px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/40"
+    >
+      {ctaLabel}
+    </button>
+  </form>
+
+  <div
+    data-newsletter-success
+    hidden
+    role="status"
+    aria-live="polite"
+    class="rounded-xl border border-gold/40 bg-white px-5 py-4 text-sm leading-relaxed text-ink/80"
+  >
+    <p class="mb-1 font-serif text-base italic text-secondary">Liste hazır.</p>
+    <p>
+      Estranova Mektubu yola çıkmaya hazırlanırken adresini sakin bir şekilde
+          kaydettik. İlk mektup yayına girdiğinde gelen kutunuza düşecek; istediğiniz an
+          ayrılabilirsiniz.
+    </p>
+  </div>
+
+  <!-- Trust line + KVKK -->
+  <p
+    id={`${formId}-kvkk`}
+    class:list={[
+      'mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-gold/30 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-gold-bronze/85',
+      isCompact ? 'text-[10px]' : 'text-[10px] sm:text-[11px]',
+    ]}
+  >
+    <svg class="h-2.5 w-2.5 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
+      <polygon
+        fill="#000000"
+        points="100,10 111.31,88.69 190,100 111.31,111.31 100,190 88.69,111.31 10,100 88.69,88.69"
+      ></polygon>
+    </svg>
+        <span>SPAM YOK · İSTEDİĞİNİZ AN AYRILIRSINIZ</span>
+    <span class="text-gold">·</span>
+    <a
+      href="/kvkk/"
+      class="underline decoration-gold-bronze/30 underline-offset-2 transition hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
+    >
+      KVKK
+    </a>
+  </p>
+</section>

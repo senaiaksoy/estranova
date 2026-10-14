@@ -1,0 +1,168 @@
+﻿---
+/**
+ * /sayi sayfası — sayı arşivi kapak grid'i.
+ *
+ * Geçmiş ve mevcut sayıları "kapak grid" olarak gösterir. Her kart:
+ *   - kapak görseli (4:5 dikey orantı, dergi rafı hissi)
+ *   - sayı no + tarih
+ *   - tema (büyük tipografi)
+ *   - kısa lede
+ *
+ * Sayı 0 (Arşiv) kart sonunda ayrı yerleşim: "Önceki tüm yazılar
+ * kütüphanede ve hub sayfalarında okunmaya devam eder."
+ */
+
+import type { Issue } from '../../data/issues';
+import { currentIssue, formatIssuePad } from '../../data/issues';
+import { magazineConfig } from '../../data/magazine-config';
+
+interface Props {
+  issues: Issue[];
+  /** "current" sayıyı vurgulayalım mı? */
+  highlightCurrent?: boolean;
+}
+
+const { issues, highlightCurrent = true } = Astro.props;
+
+// Numerik sayılar (1+) önce, arşiv (0) ayrı
+const numberedIssues = issues
+  .filter((i) => i.number > 0)
+  .sort((a, b) => b.monthYearISO.localeCompare(a.monthYearISO));
+
+const archiveIssue = issues.find((i) => i.number === 0);
+---
+
+<section class="relative isolate overflow-hidden bg-white px-6 py-12 md:py-16">
+  <div class="pointer-events-none absolute right-[-6rem] top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
+  <div class="mx-auto max-w-6xl">
+    <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+      {
+        numberedIssues.map((issue) => {
+          const issuePad = formatIssuePad(issue.number);
+          const isCurrent = issue.number === currentIssue.number;
+          return (
+            <li>
+              <article
+                class:list={[
+                  'group relative flex h-full flex-col overflow-hidden rounded-[34px] border bg-white shadow-[0_28px_88px_-62px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] transition',
+                  highlightCurrent && isCurrent
+                    ? 'border-primary/35 ring-2 ring-primary/20'
+                    : 'border-primary/12',
+                ]}
+              >
+                <a
+                  href={`/sayi/${issue.slug}/`}
+                  class="flex flex-1 flex-col focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
+                >
+                <span class="pointer-events-none absolute inset-x-6 top-0 z-10 h-px bg-cream-warm/60"></span>
+                <div class="relative aspect-[4/5] w-full overflow-hidden">
+                  <img
+                    src={issue.coverImage.src}
+                    alt={issue.coverImage.alt}
+                    width="600"
+                    height="750"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.04]"
+                  />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1c1412]/55 via-[#1c1412]/15 to-transparent"></div>
+                  <div class="pointer-events-none absolute inset-x-4 top-4 flex items-center justify-between text-cream-soft/80">
+                    <span class="text-[9px] font-semibold uppercase tracking-[0.24em]">Kapak</span>
+                    <span class="font-serif text-xl italic text-cream-warm">No {issuePad}</span>
+                  </div>
+                  <div class="absolute bottom-5 left-5 right-5 text-cream-soft">
+                    <p class="text-[9px] font-semibold uppercase tracking-[0.32em] text-cream-warm/95">
+                      {magazineConfig.subtitle}
+                    </p>
+                    <p class="mt-1 font-serif text-4xl leading-none">{magazineConfig.name}</p>
+                    <p class="mt-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-cream-soft/85">
+                      Sayı {issuePad} · {issue.monthYear}
+                    </p>
+                  </div>
+                  {isCurrent && (
+                    <span class="absolute right-4 top-4 rounded-full bg-primary/95 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-cream-soft">
+                      Yeni sayı
+                    </span>
+                  )}
+                </div>
+                <div class="relative flex flex-1 flex-col bg-white p-6">
+                  <span class="pointer-events-none absolute right-5 top-4 font-serif text-5xl italic leading-none text-gold/12">
+                    {issuePad}
+                  </span>
+                  <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">
+                    {issue.theme}
+                  </p>
+                  <h3 class="mb-3 font-serif text-2xl leading-snug text-ink group-hover:underline group-hover:decoration-primary/35">
+                    {issue.coverHeadline}
+                  </h3>
+                  <p class="mb-5 flex-1 text-sm leading-relaxed text-ink/70">{issue.lede}</p>
+                  <span class="text-sm font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition group-hover:decoration-primary">
+                    Sayıyı oku →
+                  </span>
+                </div>
+                </a>
+                {issue.editorColumnSlug && (
+                  <div class="border-t border-primary/10 bg-cream-soft/40 px-6 py-3">
+                    <a
+                      href={`/editorun-kosesi/${issue.editorColumnSlug}/`}
+                      class="text-xs font-semibold uppercase tracking-[0.16em] text-primary/85 underline decoration-primary/30 underline-offset-4 transition hover:text-primary hover:decoration-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35"
+                    >
+                      Sıcacık Köşe — {issue.monthYear}
+                    </a>
+                  </div>
+                )}
+              </article>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    {archiveIssue && (
+      <div class="relative mt-12 overflow-hidden rounded-[34px] border border-gold/30 bg-white p-8 shadow-[0_28px_90px_-66px_rgba(44,22,28,0.30)] ring-1 ring-black/[0.04] md:p-10">
+        <span class="pointer-events-none absolute right-8 top-2 font-serif text-8xl italic leading-none text-primary/6">
+          00
+        </span>
+        <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+          Sayı 0 · Arşiv
+        </p>
+        <h3 class="mb-3 font-serif text-2xl leading-snug text-ink md:text-3xl">
+          Eşik dergi serisi açılmadan önce yer alan rehberler
+        </h3>
+        <p class="mb-6 max-w-2xl text-base leading-relaxed text-ink/75">
+          {archiveIssue.lede}
+        </p>
+
+        <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/75">
+          Bölümlere göre gez
+        </p>
+        <ul class="mb-7 flex flex-wrap gap-2">
+          {[
+            { label: 'Hormonal Geçiş', href: '/hormonal-gecis/' },
+            { label: 'Zamansız Yaşam', href: '/zamansiz-yasam/' },
+            { label: 'Beden & Yakınlık', href: '/beden-yakinlik/' },
+            { label: 'Zihin & Denge', href: '/zihin-denge/' },
+            { label: 'Bilimsel Pencere', href: '/bilimsel-pencere/' },
+          ].map((hub) => (
+            <li>
+              <a
+                href={hub.href}
+                  class="inline-flex items-center rounded-full border border-primary/20 bg-cream-soft/18 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary/85 transition hover:border-primary/45 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/35"
+              >
+                {hub.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="/library/"
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition hover:decoration-primary"
+        >
+          Kütüphaneye git
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    )}
+  </div>
+</section>

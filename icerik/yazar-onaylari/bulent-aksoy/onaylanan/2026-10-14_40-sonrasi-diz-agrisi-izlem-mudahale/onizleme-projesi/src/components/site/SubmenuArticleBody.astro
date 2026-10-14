@@ -1,0 +1,38 @@
+﻿---
+/**
+ * Alt menü / makale gövdesi: hero altında gradient arka plan, okunabilir iç sütun.
+ * İsteğe bağlı `slot="toc"` ile lg+ iki sütun (sticky TOC).
+ * `overflow-clip` bilinçli: `overflow-hidden` scroll container yaratıp sticky TOC'yi bozar.
+ */
+import PreferredSourceCTA from './PreferredSourceCTA.astro';
+
+const hasTOC = Astro.slots.has('toc');
+---
+
+<article
+  class="relative isolate overflow-clip border-t border-primary/10 bg-white text-ink"
+>
+  <div class="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent"></div>
+  <div class="pointer-events-none absolute left-[-12rem] top-20 h-96 w-96 rounded-full bg-gold/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute right-[-14rem] top-[34rem] h-[28rem] w-[28rem] rounded-full bg-primary/[0.035] blur-3xl"></div>
+  {
+    hasTOC ? (
+      <div class="relative z-10 mx-auto max-w-6xl px-6 py-14 md:py-20 lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-12 xl:gap-16">
+        <aside class="hidden lg:block">
+          <div class="sticky top-24">
+            <slot name="toc" />
+          </div>
+        </aside>
+        <div class="min-w-0 space-y-10 md:space-y-12">
+          <slot />
+          <PreferredSourceCTA />
+        </div>
+      </div>
+    ) : (
+      <div class="relative z-10 mx-auto max-w-4xl space-y-10 px-6 py-14 md:space-y-12 md:py-20">
+        <slot />
+        <PreferredSourceCTA />
+      </div>
+    )
+  }
+</article>

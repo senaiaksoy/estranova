@@ -1,0 +1,1 @@
+import {defineConfig} from 'astro/config';import react from '@astrojs/react';import tailwind from '@tailwindcss/vite';export default defineConfig({site:'https://estranova.com',trailingSlash:'always',build:{format:'directory'},integrations:[react()],vite:{plugins:[tailwind()]}});

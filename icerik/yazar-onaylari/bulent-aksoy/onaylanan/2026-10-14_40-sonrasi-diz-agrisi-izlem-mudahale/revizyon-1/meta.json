@@ -1,0 +1,18 @@
+{
+  "slug": "40-sonrasi-diz-agrisi-izlem-mudahale",
+  "pathname": "/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/",
+  "writerSlug": "bulent-aksoy",
+  "articleType": "clinical-guide",
+  "createdAt": "2026-10-14",
+  "status": "onay-bekliyor",
+  "candidate": "site-kaynak.astro",
+  "liveRouteUnchanged": "src/pages/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale.astro",
+  "requiredBeforePublish": [
+    "Yazar onayı (ONAYLIYORUM) — bulent-aksoy standart yazar akışı",
+    "src/data/article-faqs.ts SSS senkronu (genis-edit-notu.md §5)",
+    "Kaynak bölümü ve dipnotlar (clinical-guide kanıtlı rejim)",
+    "Kilo SSS nitelemesi için yazar onayı (B8)",
+    "Görsel köken kaydı kontrolü (B16)"
+  ],
+  "notes": "Canlı rota değiştirilmedi. Commit, push ve deploy yapılmadı."
+}

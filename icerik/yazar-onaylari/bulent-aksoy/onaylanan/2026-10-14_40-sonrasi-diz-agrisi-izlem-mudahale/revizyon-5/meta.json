@@ -1,0 +1,28 @@
+{
+  "slug": "40-sonrasi-diz-agrisi-izlem-mudahale",
+  "pathname": "/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/",
+  "writerSlug": "bulent-aksoy",
+  "articleType": "clinical-guide",
+  "createdAt": "2026-10-14",
+  "status": "onay-bekliyor",
+  "candidate": "site-kaynak.astro",
+  "liveRouteUnchanged": "src/pages/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale.astro",
+  "requiredBeforePublish": [
+    "Bu sürüm ve kaynak/SSS değişiklikleri için Bülent Aksoy yazar onayı",
+    "Revizyona özgü bağımsız bilimsel inceleme ve son notun onayı",
+    "Onaylı adayı canlı kaynağa ve SSS verisine eşleme; aynı veri kaynağını koruma",
+    "Paket görsellerini public altına taşıma; yalnız kart ve byline eşleme, üst hero değişmez",
+    "Entegrasyon sonrası sitenin yayın kontrolleri ve açık yayın yetkisi",
+    "Gerçek bilimsel inceleme kaydı sonrası görünür inceleyen satırı ve MedicalWebPage reviewedBy alanını birlikte geri ekleme"
+  ],
+  "notes": "Canlı rota, shared data, eski onay ve özgün PNG korunmuştur. Form hazırlanmış fakat gönderilmemiştir. Commit/push/deploy yapılmadı.",
+  "revision": "2026-10-14-audit-fix-v5",
+  "sourceSha256": "6178d962a3090587a0e2798bf90ea7c91b945765a8234dffdb72030334280bdb",
+  "preview": "makale-onizleme.html",
+  "approvalForm": "kontrol-formu.html",
+  "previousRevision": "revizyon-4/site-kaynak.astro",
+  "editorAuthorization": "Kullanıcı ayrıntılı audit sonrasında onay verdi; düzeltme yetkisi. Bülent Aksoy yazar onayı olarak kaydedilmedi.",
+  "authorApprovalStatus": "pending",
+  "medicalReviewStatus": "pending",
+  "sentAt": null
+}

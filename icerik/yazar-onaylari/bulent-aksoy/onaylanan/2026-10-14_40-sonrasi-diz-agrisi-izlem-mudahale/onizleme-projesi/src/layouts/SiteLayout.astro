@@ -1,0 +1,220 @@
+---
+import '../index.css';
+import mobileMenuScript from '../components/site/mobile-menu.js?url';
+import {
+  resolveCanonicalUrl,
+  resolveSiteUrl,
+  resolveSocialImageUrl,
+  type OgType,
+} from '../utils/seo';
+import { isProductionLaunch } from '../utils/launch';
+import { featureFlags } from '../utils/feature-flags';
+import CookieBanner from '../components/site/CookieBanner.astro';
+import { isPathScheduled } from '../data/scheduled-releases';
+import { writers } from '../data/writers';
+import { mergeSameAs } from '../utils/writer-profiles';
+
+
+type JsonLdSchema = Record<string, unknown>;
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  ogType?: OgType;
+  jsonLd?: JsonLdSchema | JsonLdSchema[];
+  allowIndexing?: boolean;
+  /** LCP görseli — ana sayfa / hero sayfalarında erken preload için */
+  preloadLcpImage?: {
+    href: string;
+    imagesrcset?: string;
+    imagesizes?: string;
+  };
+}
+
+const {
+  title,
+  description = 'Estranova - Perimenopoz, menopoz ve 40+ kadın sağlığı için editoryal bilgi platformu.',
+  canonical,
+  image,
+  ogType = 'website',
+  jsonLd,
+  allowIndexing = isProductionLaunch() && !isPathScheduled(Astro.url.pathname),
+  preloadLcpImage,
+} = Astro.props;
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const canonicalUrl = resolveCanonicalUrl({
+  siteUrl,
+  pathname: Astro.url.pathname,
+  canonical,
+});
+const socialImageUrl = resolveSocialImageUrl({ siteUrl, image });
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+
+const DR_AKSOY_PERSON_ID = 'https://senaiaksoy.net/#person';
+
+// Schema @id ve entity URL'leri için trailing-slash'siz kanonik taban.
+// (siteUrl `.../` ile biter; `${siteUrl}/#id` çift slash üretirdi ve
+// senaiaksoy.net'in referans verdiği @id ile birebir eşleşmezdi.)
+const siteBase = siteUrl.replace(/\/+$/, '');
+
+const webSiteSchema: JsonLdSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteBase}/#website`,
+  name: 'Estranova',
+  url: siteUrl,
+  inLanguage: 'tr-TR',
+  description,
+  publisher: { '@id': `${siteBase}/#organization` },
+};
+
+const organizationSchema: JsonLdSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsMediaOrganization',
+  '@id': `${siteBase}/#organization`,
+  name: 'Estranova',
+  alternateName: 'Eşik',
+  url: siteUrl,
+  logo: `${siteBase}/favicon.svg`,
+  description: '40+ kadın sağlığına odaklanan bağımsız editoryal sağlık platformu.',
+  foundingDate: '2026',
+  knowsAbout: [
+    'Perimenopoz',
+    'Menopoz',
+    'Postmenopoz',
+    'Hormon replasman tedavisi',
+    '40 sonrası kadın sağlığı',
+    'Hormonal geçiş',
+  ],
+  publishingPrinciples: `${siteBase}/editoryal-politika/`,
+  // sameAs — yalnızca doğrulanmış resmi hesaplar (yanlış hesap = yanlış AI entity birleşmesi)
+  sameAs: [
+    'https://www.instagram.com/estranovaofficial/',
+    'https://www.wikidata.org/wiki/Q140051019',
+    'https://senaiaksoy.net',
+  ],
+  // GSC: Organization üzerinde reviewedBy / inLanguage Schema.org domain'inde değil.
+  // Dil → WebSite.inLanguage; tıbbi inceleme → MedicalWebPage.reviewedBy.
+};
+
+// Dr. Aksoy Person entity — MedicalWebPage.reviewedBy @id referansları
+// site içinde çözülebilsin diye her sayfada bir kez tanımlanır.
+// Kanonik @id senaiaksoy.net'tedir; aynı @id + tutarlı isim/sameAs ile siteler
+// arası entity birleşmesini güçlendirir (E-E-A-T / AI-search yazar otoritesi).
+const drAksoyPersonSchema: JsonLdSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': DR_AKSOY_PERSON_ID,
+  name: 'Doç. Dr. Senai Aksoy',
+  jobTitle: 'Kadın Hastalıkları ve Doğum Uzmanı',
+  url: 'https://senaiaksoy.net',
+  image: `${siteBase}/images/writers/senai-aksoy.webp`,
+  knowsAbout: [
+    'Menopoz',
+    'Perimenopoz',
+    'Hormon replasman tedavisi',
+    'Jinekoloji',
+    '40 sonrası kadın sağlığı',
+  ],
+  // sameAs — yalnızca doğrulanmış kanonik kimlik (yanlış hesap = yanlış entity birleşmesi);
+  // writers.ts'te rızayla eklenen profil URL'leri tekrarsız birleştirilir.
+  sameAs: mergeSameAs(['https://senaiaksoy.net'], writers.find((w) => w.slug === 'senai-aksoy')),
+};
+
+const additionalSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const allSchemas = [webSiteSchema, organizationSchema, drAksoyPersonSchema, ...additionalSchemas];
+---
+
+<!doctype html>
+<html lang="tr-TR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta
+      name="robots"
+      content={allowIndexing ? 'index, follow, max-image-preview:large' : 'noindex, nofollow'}
+    />
+    <meta name="theme-color" content="#D81B60" />
+    {googleSiteVerification && (
+      <meta name="google-site-verification" content={googleSiteVerification} />
+    )}
+    <link rel="alternate" type="application/rss+xml" title="Estranova — Editöryal Yayın" href="/rss.xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    {preloadLcpImage && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadLcpImage.href}
+        imagesrcset={preloadLcpImage.imagesrcset}
+        imagesizes={preloadLcpImage.imagesizes}
+        fetchpriority="high"
+      />
+    )}
+    <slot name="head" />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:site_name" content="Estranova" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:url" content={canonicalUrl} />
+
+    <title>{title}</title>
+
+    {allSchemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+  </head>
+  <body class="bg-surface text-charcoal font-sans antialiased" data-theme="light">
+    <a
+      href="#main-content"
+      class="skip-link"
+      tabindex="0"
+    >
+      İçeriğe doğrudan geç
+    </a>
+
+    <script src={mobileMenuScript} defer></script>
+
+    <slot />
+
+    {featureFlags.cookieBannerEnabled && <CookieBanner />}
+
+    <script>
+      import '../scripts/save-for-later';
+      import '../scripts/reading-controls';
+      import '../scripts/article-toc';
+      import '../scripts/newsletter-signup';
+      import '../scripts/preferred-source';
+
+      // Email link deobfuscation (bypasses Cloudflare obfuscation and intermediate comment stripping)
+      document.querySelectorAll('.email-link').forEach((el) => {
+        const u = el.getAttribute('data-u');
+        const d = el.getAttribute('data-d');
+        if (u && d) {
+          (el as HTMLAnchorElement).href = `mailto:${u}@${d}`;
+          el.textContent = `${u}@${d}`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+﻿---
+import { mainNav, isNavActive } from '../../data/navigation';
+import SearchOverlay from './SearchOverlay.astro';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const linkBase =
+  'relative whitespace-nowrap rounded-full px-2.5 py-2 text-[0.72rem] font-bold uppercase tracking-[0.1em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50';
+
+const mobileLinkBase =
+  'text-base font-serif py-3 px-4 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50';
+---
+
+<nav
+  aria-label="Ana navigasyon menüsü"
+  role="navigation"
+  class="fixed left-0 right-0 top-0 z-50 border-b border-primary/10 bg-white px-4 py-3 shadow-[0_18px_60px_-48px_rgba(44,24,28,0.72)] focus-within:ring-2 focus-within:ring-primary/20 md:px-6"
+>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent"></div>
+
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
+    <a
+      href="/"
+      class="group flex items-center gap-3 rounded px-2 py-1 text-left text-2xl font-serif font-bold tracking-[-0.04em] text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 md:text-3xl"
+      aria-label="ESTRANOVA Ana Sayfası"
+    >
+      <span class="flex h-11 w-11 shrink-0 items-center justify-center md:h-12 md:w-12">
+        <img
+          src="/favicon.svg"
+          width="48"
+          height="48"
+          alt=""
+          aria-hidden="true"
+          class="h-full w-full transition duration-300 group-hover:rotate-45"
+        />
+      </span>
+      <span>
+        <span>ESTRANOVA</span>
+        <span class="mt-1 block text-[9px] font-sans font-semibold tracking-[0.22em] text-secondary"
+          >EDİTORYAL SAĞLIK PLATFORMU</span
+        >
+        <span class="mt-2 block h-px w-10 bg-gold/55 transition group-hover:w-16"></span>
+      </span>
+    </a>
+
+    <nav
+      aria-label="Ana menü"
+      class="hidden items-center gap-1 rounded-full border border-primary/10 bg-cream-warm p-1 shadow-[0_14px_56px_-48px_rgba(44,24,28,0.64)] min-[1440px]:flex"
+    >
+      {
+        mainNav.map((item) => {
+          const active = isNavActive(currentPath, item);
+          const activeClass = active ? 'bg-primary text-cream-soft shadow-sm' : 'text-charcoal/58 hover:bg-primary/6 hover:text-primary';
+
+          if (!item.children) {
+            return (
+              <a
+                href={item.href}
+                class:list={[linkBase, activeClass]}
+                aria-current={active ? 'page' : undefined}
+                title={item.label}
+              >
+                {item.name}
+              </a>
+            );
+          }
+
+          return (
+            <div class="group relative">
+              <span class="flex items-center gap-0.5">
+                <a
+                  href={item.href}
+                  class:list={[linkBase, activeClass]}
+                  aria-current={active ? 'page' : undefined}
+                  title={item.label}
+                >
+                  {item.name}
+                </a>
+                <span
+                  class:list={[
+                    'pointer-events-none -ml-2 inline-flex h-8 w-5 shrink-0 items-center justify-center rounded-full text-charcoal/38 group-hover:text-primary',
+                    active ? 'text-cream-soft/80' : '',
+                  ]}
+                  aria-hidden="true"
+                >
+                  <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden="true">
+                    <path d="M1 4l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+                  </svg>
+                </span>
+              </span>
+              <div
+                class="invisible absolute left-0 top-full z-[60] min-w-[13.5rem] pt-2 opacity-0 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+                role="group"
+                aria-label={`${item.name} alt menü`}
+              >
+                <div class="overflow-hidden rounded-[26px] border border-primary/15 bg-white p-2 shadow-[0_28px_90px_-32px_rgba(44,24,28,0.42)] ring-1 ring-white/80">
+                  {
+                    item.children.map((child) => {
+                      const subActive =
+                        currentPath === child.href || currentPath.startsWith(`${child.href}/`);
+                      return (
+                        <a
+                          href={child.href}
+                          class:list={[
+                            'block rounded-2xl px-4 py-2.5 text-sm transition-colors',
+                            subActive
+                              ? 'bg-primary/10 font-semibold text-primary'
+                              : 'text-charcoal/78 hover:bg-primary/6 hover:text-primary',
+                          ]}
+                          aria-current={subActive ? 'page' : undefined}
+                        >
+                          {child.name}
+                        </a>
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+
+      <!-- Desktop search trigger (nav'ın sağ ucu) -->
+      <button
+        type="button"
+        data-search-trigger
+        class="ml-1 hidden items-center gap-2 rounded-full border border-primary/12 bg-cream-warm px-2.5 py-2 text-xs font-semibold text-charcoal/58 transition-colors hover:border-primary/30 hover:bg-white hover:text-primary md:flex"
+        aria-label="Sitede ara (Ctrl+K)"
+      >
+        <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <span class="hidden 2xl:inline">Ara</span>
+        <kbd class="hidden 2xl:inline-block rounded border border-charcoal/12 bg-cream-soft/68 px-1.5 py-0.5 text-[9px] font-bold tracking-wider text-charcoal/30">⌘K</kbd>
+      </button>
+
+      <!-- Sonra Oku (kayıtlı yazı listesi) — sadece liste boş değilse görünür -->
+      <a
+        href="/sonra-oku/"
+        data-save-counter-link
+        hidden
+        class="ml-1 hidden items-center gap-1.5 rounded-full border border-primary/15 bg-gold/10 px-3 py-2 text-xs font-semibold text-primary transition-colors hover:border-primary/40 hover:bg-gold/16 md:flex"
+        aria-label="Sonra Oku listenizi aç"
+        title="Sonra Oku — kaydettiğiniz yazılar"
+      >
+        <svg viewBox="0 0 14 14" class="h-3.5 w-3.5 fill-current" aria-hidden="true">
+          <path d="M3.5 1.5h7a1 1 0 0 1 1 1v10l-4.5-3-4.5 3v-10a1 1 0 0 1 1-1z" />
+        </svg>
+        <span>Listenizde</span>
+        <span data-save-counter class="tabular-nums">0</span>
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-2 min-[1440px]:hidden">
+      <!-- Mobile search trigger -->
+      <button
+        type="button"
+        data-search-trigger
+        class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary/65 transition-colors hover:bg-white hover:text-primary"
+        aria-label="Sitede ara"
+      >
+        <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </button>
+
+      <!-- Mobile Sonra Oku link — sadece liste boş değilse görünür -->
+      <a
+        href="/sonra-oku/"
+        data-save-counter-link
+        hidden
+        class="relative flex h-10 w-10 items-center justify-center rounded-full border border-primary/15 bg-gold/10 text-primary/85 transition-colors hover:border-primary/35 hover:bg-gold/16"
+          aria-label="Sonra Oku listenizi aç"
+      >
+        <svg viewBox="0 0 14 14" class="h-4 w-4 fill-current" aria-hidden="true">
+          <path d="M3.5 1.5h7a1 1 0 0 1 1 1v10l-4.5-3-4.5 3v-10a1 1 0 0 1 1-1z" />
+        </svg>
+        <span
+          data-save-counter
+          class="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[9px] font-bold tabular-nums text-cream-soft"
+          hidden
+        >0</span>
+      </a>
+
+      <button
+        type="button"
+        class="rounded-full bg-white p-2 text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+        aria-label="Menüyü aç/kapat"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        onclick="mobileMenu.toggle(this)"
+      >
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="absolute left-0 right-0 top-full hidden max-h-[min(80vh,560px)] flex flex-col gap-0 overflow-y-auto overscroll-contain [&>*]:shrink-0 border-y border-primary/10 bg-white p-3 shadow-xl backdrop-blur-md min-[1440px]:hidden"
+      role="menu"
+      aria-hidden="true"
+    >
+      {
+        mainNav.map((item) => {
+          const active = isNavActive(currentPath, item);
+
+          if (!item.children) {
+            return (
+              <a
+                href={item.href}
+                class:list={[
+                  mobileLinkBase,
+                  active ? 'text-primary font-semibold' : 'text-charcoal hover:text-primary',
+                ]}
+                role="menuitem"
+                aria-current={active ? 'page' : undefined}
+              >
+                {item.name}
+              </a>
+            );
+          }
+
+          return (
+            <details class="overflow-hidden bg-white" open={active}>
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between bg-white px-4 py-3 font-serif font-medium text-charcoal hover:text-primary [&::-webkit-details-marker]:hidden"
+              >
+                <span>{item.name}</span>
+                <span class="text-charcoal/40 text-xs" aria-hidden="true">
+                  ▼
+                </span>
+              </summary>
+              <div class="flex flex-col bg-white py-1" role="group">
+                <a
+                  href={item.href}
+                  class:list={[
+                    'text-sm py-2.5 px-4',
+                    currentPath === item.href
+                      ? 'font-semibold text-primary'
+                      : 'text-charcoal/90 hover:text-primary',
+                  ]}
+                  role="menuitem"
+                >
+                  Tümü — {item.name}
+                </a>
+                {
+                  item.children.map((child) => {
+                    const subActive =
+                      currentPath === child.href || currentPath.startsWith(`${child.href}/`);
+                    return (
+                      <a
+                        href={child.href}
+                        class:list={[
+                          'text-sm py-2.5 px-4 pl-6',
+                          subActive
+                            ? 'font-semibold text-primary'
+                            : 'text-charcoal/85 hover:text-primary',
+                        ]}
+                        role="menuitem"
+                        aria-current={subActive ? 'page' : undefined}
+                      >
+                        {child.name}
+                      </a>
+                    );
+                  })
+                }
+              </div>
+            </details>
+          );
+        })
+      }
+    </div>
+  </div>
+</nav>
+
+<SearchOverlay />
