@@ -517,7 +517,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/',
     title: 'Belden Gelen Ağrı Her Zaman Belde Kalmaz: Kasık ve Genital Bölgeye Vuran Ağrıyı Nasıl Okumalı?',
     description:
-      'Kasıkta, alt karında ya da genital bölgede hissedilen ağrı her zaman jinekolojik bir nedenden kaynaklanmaz. Kimi kadınlarda bel, sakroiliak eklem, kalça çevresi kasları ya da sinir hassasiyeti bu bölgelere yansıyan ağrı yaratabilir. Bu yazı, bel kaynaklı yansıyan ağrının hangi işaretlerle düşünülebileceğini, ne zaman pelvik taban hattının devreye girdiğini ve hangi durumlarda farklı branş değerlendirmesinin öne çıktığını sade bir dille ayırır.',
+      'Kasık ve genital bölge ağrısında bel, kalça, sinir ve pelvik tabanın olası rolü; hareketle değişimin sınırları ve değerlendirme gerektiren belirtiler.',
     publishedDate: '7 Mayıs 2026',
     writerSlug: 'ersin-sarac',
     section: 'Zamansız Yaşam',
