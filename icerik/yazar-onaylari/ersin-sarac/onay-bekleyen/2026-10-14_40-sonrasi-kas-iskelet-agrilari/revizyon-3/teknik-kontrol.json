@@ -1,0 +1,38 @@
+{
+  "h1": 1,
+  "faqCount": 5,
+  "faqParity": true,
+  "duplicateIds": [],
+  "missingAnchors": [],
+  "datePublished": "2026-05-04",
+  "dateModified": "2026-10-14",
+  "image": "https://estranova.com/images/library/editorial/introspective-khaki-wrap.webp",
+  "ogImage": "https://estranova.com/images/library/editorial/introspective-khaki-wrap.webp",
+  "ogSchemaImageParity": true,
+  "upperReviewPending": true,
+  "oldReviewLabelHidden": true,
+  "sourceCount": 7,
+  "articleSchema": true,
+  "medicalWebPage": false,
+  "sourceSha256": "ab8e010fa5e7f4d0a360b5414834a0ce51a59e4a67e16a41dedbb2edc13b9ebf",
+  "baselineSha256": "f63ab447d632735fb0c85eec5649dfe9e30f554ca32a2c39b1638b0a4bedded0",
+  "productionSourceUnchanged": true,
+  "mobile": {
+    "viewport": 390,
+    "documentWidth": 375,
+    "horizontalOverflow": false,
+    "imagesLoaded": 2
+  },
+  "desktop": {
+    "viewport": 891,
+    "documentWidth": 876,
+    "horizontalOverflow": false
+  },
+  "existingSiteBuildCi": "passed: 179 compliance files, 139 generated pages, 160 SEO pages",
+  "draftBuild": "passed: isolated Astro project, two pages (draft and baseline)",
+  "liveBaseline": {
+    "httpStatus": 200,
+    "faqDetails": 8,
+    "faqAnchorOccurrences": 2
+  }
+}

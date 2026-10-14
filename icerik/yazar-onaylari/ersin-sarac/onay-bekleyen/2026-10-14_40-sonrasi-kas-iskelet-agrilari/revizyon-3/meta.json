@@ -1,0 +1,32 @@
+{
+  "writer": {
+    "slug": "ersin-sarac",
+    "name": "Fzt. Ersin Saraç"
+  },
+  "article": {
+    "slug": "40-sonrasi-kas-iskelet-agrilari",
+    "title": "40 Sonrası Diz, Kalça ve Bel Ağrısı — Bedeni Dinleyerek Hareket Etmek",
+    "previewUrl": "./makale.html"
+  },
+  "package": {
+    "createdAt": "2026-10-14T13:26:25.010Z",
+    "deadline": "2026-10-21T13:26:25.010Z",
+    "status": "pending-author-approval",
+    "approvalGate": "publish-after-author-approval",
+    "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
+    "estimatedFormDuration": "5 dakika",
+    "targetEmail": "drsenaiaksoy@gmail.com",
+    "deliveryStatus": "prepared-locally-not-sent"
+  },
+  "previewUrl": "./makale.html",
+  "medicalReviewStatus": "pending-revision-review",
+  "releaseAuthorized": false,
+  "sourceFile": "makale-kaynak.astro",
+  "revision": 3,
+  "sourceSha256": "4c869345dbcc5bcad54c50f0d4f948a83084ab480befedd6a4dacf0976d0da90",
+  "revision3Changes": [
+    "byline görseli 4:5 kas-iskelet-yuruyus-byline.webp ile değişti (OG/şema görseli introspective-khaki-wrap.webp olarak kaldı)",
+    "kanıt etiketi 118 satır 4->3, 127 satır 3->2, 167 satır 4->3",
+    "byline alt metni güncellendi"
+  ]
+}

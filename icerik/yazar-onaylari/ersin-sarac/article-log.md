@@ -33,6 +33,16 @@
 
 ## Aktivasyon notu (v0.2'ye geçiş)
 
+### 14 Ekim 2026 — ilk makalenin kapsamlı revizyonu, onay bekliyor
+
+- Hedef: `40-sonrasi-kas-iskelet-agrilari`; tür `editorial-guide`, yazar kimliği değişmedi.
+- Paket: `onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/`. Yeni yazar formu hazır; henüz gönderilmedi, yazar kararı alınmadı. Mevcut site rotası ve yayın kaydı değiştirilmedi.
+- Açılış: sandalyeden kalkma / yürüyüş / gün sonunda bel tutulması; hasta hikâyesi veya yazarın kişisel deneyimi olarak sunulmayan gündelik durum. Kapanış: görüşmeye günlük işlev hedefiyle hazırlanma. İmza çerçeveleri: bedeni dinleyerek ilerlemek ve küçük adımların gücü; H0 mizah. Yeni aforizma/manifesto veya profil havuzu üretilmedi.
+- KC'nin bu sohbette Ersin'e yöneltilen karar sorusuna ilettiği yanıt, pakette `yazar-katkisi.json` içinde ham olarak saklandı. Alınma günü 2026-10-14; özgün yazar yanıt tarihi ayrıca doğrulanmadı. Yük azaltma / hekim / acil değerlendirme ayrımı hareket bölümüne anlamı korunarak uyarlandı; yazar onayı bekliyor.
+- Klinik düzeltmeler: kronik primer bel ağrısında koşullu öneri ve düşük kanıt kesinliği, osteoartritte kilo yönetiminin popülasyon sınırı, 65+ düşme önerileri, acil belirtiler ve üç aylık kroniklik süresinin başvuru eşiği olmaması.
+- Önceki imzalı bilimsel not baseline kaynak kopyasında korundu; yeni BEN imzasız inceleme taslağıdır. Bilimsel inceleme bekliyor. Bu kayıt stil öğrenme/onay ilanı değildir; yazar profili değiştirilmedi.
+- Aynı gün ikinci audit sonrası `fix`: iki 5/5 etiketi 3/5'e çekildi, öneri gücü/kanıt kesinliği ayrıldı; üst künye inceleme beklediğini açıkça gösteriyor. Başvuru düzeyi gövde/SSS'de hizalandı, özet kesinliği azaltıldı ve OG görseli şemayla eşleşti. Revizyon 1 saklandı; yeni form revizyon 2 kaynak hash'ine bağlı. Yeni yazar kararı veya tıbbi onay yok.
+
 İlk makale üretilince:
 1. AI agent kullanıcıya 4-6 manifesto + 10/10/6 varyant havuzu önerir.
 2. Onay sonrası `writers/ersin-sarac/hot.md §4` ve `warm.md §4e` güncellenir.

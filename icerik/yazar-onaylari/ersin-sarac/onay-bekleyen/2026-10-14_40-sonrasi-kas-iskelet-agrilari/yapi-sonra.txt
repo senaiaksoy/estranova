@@ -1,0 +1,48 @@
+
+[short-closer] 13 of 43 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:88:2  Yeni başlayan ağrının ayrıca değerlendirilmesi gerekir.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:116:2  Raporda yazan bulgu, şikâyetiniz ve muayeneyle birlikte yorumlanır.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:124:2  Başlangıç noktası, günlük yaşamda yapabildiklerinizdir.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:161:2  Dengeyi sınamak için kendinizi düşme tehlikesine sokmanız gerekmez.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:169:2  Bazı yeni belirtiler ise doğrudan acil değerlendirme gerektirir.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:177:2  Bu belirtilerde rutin fizyoterapi görüşmesini beklemeyin [6].
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:203:2  Kaynaklar: [6, 7].
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:227:2  Çalışmanın tam metni.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:229:2  Yaş gruplarına göre öneriler.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:233:2  Bel ağrısı güvenlik bilgisi.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:235:2  Eklem ağrısı güvenlik bilgisi.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:267:1  Bacakta ilerleyen güç kaybında beklemeden tıbbi değerlendirme gerekir.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:301:2  İlgili kaynaklar: [1, 4, 5, 6, 7].
+
+[repeated-phrase] Four-word sequences used 4+ times. A fixed technical term is fine; a repeated list or a calque repeated verbatim is a candidate.
+  4× yeni idrar dışkı kontrol sorunu
+
+[claim-kisisel-hareket] Stated 6 times across 6 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:62:80  kapasitenize göre
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:110:60  kişiye uyarlanmış
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:124:65  kapasitenize göre
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:231:34  kişiye uyarlanmış
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:255:124  kapasitenize göre
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:298:18  kişiye uyarlanmış
+
+[claim-goruntuleme-siniri] Stated 3 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:116:32  rutin bir ilk adım
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:118:2  Raporda yazan
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:267:79  görüntüleme rutin
+
+[claim-acil-idrar-barsak] Stated 9 times across 6 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:63:87  idrar-dışkı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:64:22  kasık çevresinde his kaybı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:137:53  idrar-dışkı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:177:30  idrar yapamama, idrar-dışkı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:195:18  idrar-dışkı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:195:58  kasık-makat çevresinde his kaybı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:267:191  idrar-dışkı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:267:223  kasık çevresinde his kaybı
+  icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md:302:33  idrar-dışkı
+
+5 structure candidates. Sentences: 163, mean 10 words (sd 5.2), 38% of 8 words or fewer, longest run of short sentences: 15.
+Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.
+Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.
+Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.
+Rhythm figures describe the text; they are not a target, a quota or an authorship score.

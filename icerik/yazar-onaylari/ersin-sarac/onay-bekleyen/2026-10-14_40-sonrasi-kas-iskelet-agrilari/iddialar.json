@@ -1,0 +1,5 @@
+[
+  {"id":"kisisel-hareket","pattern":"kişiye göre|kişiye uyarlanmış|kapasitenize göre|kişisel yüklenme|dozunu ve biçimini"},
+  {"id":"goruntuleme-siniri","pattern":"görüntüleme bulguları|görüntüleme raporuna|raporda görünen|raporda yazan|rutin (bir )?ilk adım|görüntüleme rutin|görüntüleme sonucundan"},
+  {"id":"acil-idrar-barsak","pattern":"idrar.{0,30}dışkı|kasık.{0,30}(uyuşma|his kaybı)"}
+]

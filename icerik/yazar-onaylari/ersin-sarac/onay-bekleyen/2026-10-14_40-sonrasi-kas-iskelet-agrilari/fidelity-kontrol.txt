@@ -1,0 +1,34 @@
+review_changes: icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/onceki-gorunur.md -> icerik/yazar-onaylari/ersin-sarac/onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/duzenlenmis-metin.md
+numbers: 09 (0 -> 1); before -; after 27
+numbers: 1 (0 -> 4); before -; after 75,107,173,303
+numbers: 14 (0 -> 1); before -; after 39
+numbers: 2 (0 -> 3); before -; after 75,117,143
+numbers: 2016 (0 -> 1); before -; after 225
+numbers: 2019 (0 -> 1); before -; after 227
+numbers: 2020 (0 -> 2); before -; after 225,229
+numbers: 2022 (0 -> 1); before -; after 231
+numbers: 2023 (0 -> 1); before -; after 223
+numbers: 2026 (1 -> 2); before 37; after 37,39
+numbers: 3 (0 -> 1); before -; after 89
+numbers: 4 (1 -> 5); before 37; after 37,94,143,158,303
+numbers: 40 (8 -> 6); before 5,60,76,90,163,290,340,353; after 5,61,83,85,158,287
+numbers: 5 (0 -> 3); before -; after 111,143,303
+numbers: 6 (0 -> 5); before -; after 139,174,179,203,303
+numbers: 65 (0 -> 3); before -; after 157,229,299
+numbers: 7 (0 -> 5); before -; after 39,139,174,203,303
+numbers: 8 (1 -> 0); before 39; after -
+numericCitations: [1, 2] (0 -> 1); before -; after 75
+numericCitations: [1, 4, 5, 6, 7] (0 -> 1); before -; after 303
+numericCitations: [1] (0 -> 2); before -; after 107,173
+numericCitations: [2, 4, 5] (0 -> 1); before -; after 143
+numericCitations: [2] (0 -> 1); before -; after 117
+numericCitations: [3] (0 -> 1); before -; after 89
+numericCitations: [4] (0 -> 2); before -; after 94,158
+numericCitations: [5] (0 -> 1); before -; after 111
+numericCitations: [6, 7] (0 -> 3); before -; after 139,174,203
+numericCitations: [6] (0 -> 1); before -; after 179
+Counts are global: values swapped between outcomes or claims can escape detection.
+Negation, certainty, population and causal meaning require the manual meaning record.
+Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.
+Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.
+Number formatting is not silently converted between locales. No tracked changes is not clinical approval.

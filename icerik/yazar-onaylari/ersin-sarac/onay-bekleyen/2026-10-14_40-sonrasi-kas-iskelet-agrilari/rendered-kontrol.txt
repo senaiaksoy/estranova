@@ -1,0 +1,26 @@
+
+[repeated-disclaimer] The same disclaimer is shown more than once inside the page body. One clear instance is enough (the footer is not counted).
+  Dengeyi görme, iç kulak, ayaklardan gelen duyular ve kasların birlikte çalışması sağlar. Yetişkinler için genel fizikse…
+  Hekiminize danışmanın anlamlı olduğu durumlar
+  Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı, tedavi ve egzersiz planı için sağl…
+
+[review-anonymous] A review line names no person. Name the reviewer who actually did it, or do not show the line; never invent one.
+  Tıbbi inceleme: Bu revizyon için bekleniyor.
+  tıbbi incelemesi bekleniyor. Aşağıdaki metin bilimsel editörün onayına sunulacak taslaktır; onaylanmış bir he…
+
+[uncited-source] Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it.
+  WHO, 2023. Kronik primer bel ağrısında cerrahi dışı bakım; egzersiz için koşullu öneri ve düşük kanıt kesinli…
+  NICE NG59, 2016; güncelleme 2020. Bel ağrısı ve siyatikte değerlendirme, egzersiz ve görüntüleme. Kılavuz öne…
+  WHO, 2020. Fiziksel aktivite ve hareketsiz davranış kılavuzu; yetişkinler ve 65 yaş üzeri için ayrı öneriler.…
+  NICE NG226, 2022. Osteoartritte kişiye uyarlanmış egzersiz, eğitim ve uygun kişilerde kilo yönetimi. Osteoart…
+  NHS. Bel ağrısında değerlendirme ve acil belirtiler. Bel ağrısı güvenlik bilgisi.
+  NHS. Eklem ağrısında değerlendirme, travma ve sıcak-şiş eklem uyarıları. Eklem ağrısı güvenlik bilgisi.
+
+3 rendered-page candidates; 12825 characters, 2 images, 5 collapsible boxes inspected.
+  author: Yazan : → (no person named)
+  author: yazan → (no person named)
+  review: Tıbbi inceleme: → (no person named)
+  review: tıbbi inceleme → (no person named)
+Reads one built page as served; a page behind a consent wall or rendered client-side may be incomplete.
+Name, role and reference matching are heuristics: every item is a candidate to look at, not a verdict.
+Template findings (review line, og:type, repeated boxes) belong to the site layout; report them, do not rewrite article text to hide them.
