@@ -1,7 +1,10 @@
 {
+  "revision": 7,
+  "generatedAt": "2026-10-14",
   "h1": 1,
   "faqCount": 5,
   "faqParity": true,
+  "faqParityMethod": "5 soru metni: sayfada görünür 1 kez + JSON-LD FAQPage 1 kez",
   "duplicateIds": [],
   "missingAnchors": [],
   "datePublished": "2026-05-04",
@@ -9,27 +12,43 @@
   "image": "https://estranova.com/images/library/editorial/introspective-khaki-wrap.webp",
   "ogImage": "https://estranova.com/images/library/editorial/introspective-khaki-wrap.webp",
   "ogSchemaImageParity": true,
+  "schemaImageVisibleOnPage": false,
+  "bylineImage": "/images/library/editorial/kas-iskelet-yuruyus-byline.webp",
+  "bylineImageIptcAiTag": false,
   "upperReviewPending": true,
   "oldReviewLabelHidden": true,
-  "sourceCount": 7,
+  "sourceCount": 8,
+  "evidence": {
+    "2/5": 2,
+    "3/5": 1,
+    "4/5": 2
+  },
   "articleSchema": true,
   "medicalWebPage": false,
-  "sourceSha256": "ab8e010fa5e7f4d0a360b5414834a0ce51a59e4a67e16a41dedbb2edc13b9ebf",
+  "sourceSha256": "87df42e7f4d53896eb13bf1428c27831509f21f736dafd4079909a15bf6eeb7b",
   "baselineSha256": "f63ab447d632735fb0c85eec5649dfe9e30f554ca32a2c39b1638b0a4bedded0",
   "productionSourceUnchanged": true,
+  "productionSourceCheck": "src/pages/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari.astro sha256 = baselineSha256 (14 Ekim 2026)",
   "mobile": {
     "viewport": 390,
-    "documentWidth": 375,
+    "documentWidth": 390,
     "horizontalOverflow": false,
-    "imagesLoaded": 2
+    "imagesLoaded": "ölçülmedi: önizleme data: anlık görüntüsünde göreli görseller yüklenmez; dosyalar pakette mevcut"
   },
   "desktop": {
-    "viewport": 891,
-    "documentWidth": 876,
+    "viewport": 1280,
+    "documentWidth": 1265,
     "horizontalOverflow": false
   },
-  "existingSiteBuildCi": "passed: 179 compliance files, 139 generated pages, 160 SEO pages",
-  "draftBuild": "passed: isolated Astro project, two pages (draft and baseline)",
+  "lexicon": "0 hard_ban, 0 soft_ban",
+  "editorialCheck": "0 aday",
+  "draftBuild": "passed: article-drafts/kas-iskelet-preview2 (astro build), revizyon 7",
+  "existingSiteBuildCi": "revizyon 7 için çalıştırılmadı: taslak src/pages dışında; canlı kaynak değişmedi",
+  "openIntegrationItems": [
+    "Şema/OG görseli sayfada görünmüyor; yayın entegrasyonunda görünür görselle eşlenecek",
+    "Byline görseli IPTC trainedAlgorithmicMedia etiketi taşımıyor",
+    "static-articles.ts açıklaması ve readingMinutes güncellenecek"
+  ],
   "liveBaseline": {
     "httpStatus": 200,
     "faqDetails": 8,

@@ -31,7 +31,8 @@ Revizyon 6 notunda önerilen soru ("Denge kaygısıyla gelen 40+ bir kadına ilk
 
 ## Açık işler
 
-- Yazar formunda bu iki paragraf, Ersin'in özgün yanıtıyla yan yana gösterilmeli.
-- Tıbbi inceleme; kontrol formu, `teknik-kontrol.json` ve `makale.html` revizyon 7 hash'iyle yeniden üretilmeli.
+- Yazar formunun 3. bölümünde iki yanıt ve kapanış güvence cümlesi özgün/uyarlanmış yan yana gösteriliyor; zorunlu `katkiAktarimi` sorusu eklendi.
+- Kontrol formu, `teknik-kontrol.json` ve `makale.html` revizyon 7 hash'iyle yeniden üretildi (14 Ekim 2026); form gönderilmedi.
+- Tıbbi inceleme bekleniyor.
 
-Commit, push ve yayın yapılmadı. `releaseAuthorized: false`.
+Revizyon 5–7 metni `592bf5e8` ile commit edildi (push yok). Form dosyaları bu commit'ten sonra üretildi. Yayın yapılmadı; `releaseAuthorized: false`.

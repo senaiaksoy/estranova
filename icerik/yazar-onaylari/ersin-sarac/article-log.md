@@ -50,3 +50,11 @@
 4. `manifesto_templates.templates` doldurulur.
 5. `writer_version` v0.1 → v0.2.
 6. Bu log'un ilk satırı doldurulur.
+
+## 14 Ekim 2026 — 40 Sonrası kas-iskelet: yazar onayı (revizyon 7)
+
+- Kullanıcı bildirimi: "ersin okudu onay veriyor". Kayıt: `onay-bekleyen/2026-10-14_40-sonrasi-kas-iskelet-agrilari/onay-bildirimi.json`.
+- Kapsam: revizyon 7 (SHA-256 `87df42e7…eeb7b`); okunan sürüm bildirimde ayrıca belirtilmedi, güncel paket kabul edildi. Form yanıtı yok; likert ve kontrol alanları doldurulmadı.
+- Ersin'in iki katkısı (`yazar-katkisi.json`, `yazar-katkisi-2.json`) makalede birinci tekil kullanıldı ve onay kapsamında. Ayrı `katkiAktarimi` yanıtı alınmadı.
+- Stil sinyali (profil değişikliği önerisi, editör onayı bekler): klinisyen birinci tekil sesi bu makalede onaylandı. Gerçek görüşme sorusu olarak "Pantolonunuzu ayakta, bir yere tutunmadan giyebiliyor musunuz?" Ersin'e ait bir sahne; ileride `experience_seeds` için aday, aynı makale dışında tekrar kullanılmamalı.
+- Tıbbi inceleme bekleniyor. Canlı rota, `article-approvals.ts`, ortak FAQ ve manifest değiştirilmedi; paket henüz `onaylanan/` altına taşınmadı.

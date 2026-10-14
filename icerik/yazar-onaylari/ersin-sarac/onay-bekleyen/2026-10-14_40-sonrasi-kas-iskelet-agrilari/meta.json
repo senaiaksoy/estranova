@@ -11,12 +11,12 @@
   "package": {
     "createdAt": "2026-10-14T13:26:25.010Z",
     "deadline": "2026-10-21T13:26:25.010Z",
-    "status": "pending-author-approval",
+    "status": "author-approved-pending-medical-review",
     "approvalGate": "publish-after-author-approval",
     "styleLearning": "collect-response-summarize-to-article-log-editor-approved-profile-update",
     "estimatedFormDuration": "5 dakika",
     "targetEmail": "drsenaiaksoy@gmail.com",
-    "deliveryStatus": "prepared-locally-not-sent"
+    "deliveryStatus": "author-read-outside-form"
   },
   "previewUrl": "./makale.html",
   "medicalReviewStatus": "pending-revision-review",
@@ -59,5 +59,24 @@
     "status": "pending",
     "assignedTo": "Dr. Senai Aksoy",
     "note": "İnceleme henüz yapılmadı. İnceleyici adı ve tarihi, inceleme tamamlanınca yazılır."
+  },
+  "approvalForm": {
+    "revision": 7,
+    "sourceSha256": "87df42e7f4d53896eb13bf1428c27831509f21f736dafd4079909a15bf6eeb7b",
+    "generatedAt": "2026-10-14",
+    "files": [
+      "kontrol-formu.html",
+      "makale.html",
+      "teknik-kontrol.json"
+    ],
+    "addedField": "katkiAktarimi: Ersin'in iki yanıtı ve kapanış güvence cümlesi özgün/uyarlanmış yan yana; zorunlu onay sorusu",
+    "deliveryStatus": "not-sent-author-approved-via-user"
+  },
+  "authorApproval": {
+    "status": "approved",
+    "revision": 7,
+    "date": "2026-10-14",
+    "recordedFrom": "Kullanıcı bildirimi",
+    "record": "onay-bildirimi.json"
   }
 }
