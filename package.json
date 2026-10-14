@@ -29,7 +29,6 @@
     "article:context": "node scripts/article-context-build.mjs",
     "writer:seed": "node scripts/private-writer-seed.mjs",
     "authors:init-folders": "node scripts/init-author-folders.mjs",
-    "author:send-for-approval": "node scripts/create-approval-package.mjs",
     "writers:lint": "node scripts/check-writer-profile-consistency.mjs",
     "encoding:check": "node scripts/check-encoding.mjs",
     "tokens:check": "node scripts/check-color-tokens.mjs",

@@ -1,29 +1,21 @@
 # Yazar Onayları
 
-Bu klasör, Estranova yazar onay sürecinin tek kök arşividir.
+Bu klasör, Estranova yazar onay izlerinin kök arşividir.
 
-Her yazar için iki alt klasör kullanılır:
+> **Güncel kural (2026-10-14):** Yazar onayı ve tıbbi onay **Dr. Senai Aksoy (KC) tarafından sözlü verilir**. Yazar için onay formu, onay paketi veya onay e-postası **üretilmez**. `npm run author:send-for-approval` artık kullanılmaz.
 
-- `onay-bekleyen/`: Yazara gönderilmiş, yanıtı beklenen makale paketleri.
-- `onaylanan/`: Yazar onayı alınmış paketler ve onay kayıtları.
+Her yazar için iki alt klasör durabilir:
 
-Bir makale paketi kendi içinde bütün izleri birlikte tutar: makale PDF'i, onay formu PDF'i, tıklanabilir 5 dakikalık kontrol formu, önizleme HTML'i, `meta.json` ve onay geldikten sonra yazar yanıtı/karar kaydı.
+- `onay-bekleyen/`: Onay bekleyen eski paketler (2026-10-14 öncesi). Yeni paket açılmaz.
+- `onaylanan/`: Onayı alınmış paketler ve onay kayıtları.
 
-Yayın kapısı katıdır: yeni makale önce `onay-bekleyen/` altına girer ve yazar onayı gelmeden siteye yayınlanmaz. Yazar değişiklik isterse revizyon yapılır, revize makale + yeni 5 dakikalık form içeren yeni paket üretilir ve döngü tekrar eder. Yazar `ONAYLIYORUM` dediğinde yanıt pakete kaydedilir, paket `onaylanan/` altına taşınır ve yayın süreci ancak bundan sonra başlar.
+Yayın kapısı katıdır: makale, KC'nin sözlü onayı gelmeden siteye yayınlanmaz. Onay gelince `src/data/article-approvals.ts` kaydı ve `article-log.md` satırı tutulur; varsa paket `onaylanan/` altına taşınır.
 
-`onay-bekleyen/` statüsündeki bir yazı canlı sitede görünmemelidir: `src/pages/` altında rota dosyası, hub/sayı indeksi bağlantısı, RSS/static manifest kaydı veya `icerik/yayinlanmis-makaleler/` arşiv kaydı tutulmaz. Yayın kaynak kopyası gerekiyorsa aynı pakette `site-kaynak.astro` veya `makale-kaynak.astro` adıyla saklanır.
+`onay-bekleyen/` statüsündeki bir yazı canlı sitede görünmemelidir: `src/pages/` altında rota dosyası, hub/sayı indeksi bağlantısı, RSS/static manifest kaydı veya `icerik/yayinlanmis-makaleler/` arşiv kaydı tutulmaz. Kaynak kopya gerekiyorsa aynı pakette `site-kaynak.astro` veya `makale-kaynak.astro` adıyla saklanır.
 
-İstisna: `berna-aksoy`, `alara-baykent` ve `senai-aksoy` için 5 dakikalık yazar formu zorunlu değildir. Bu üç yazarın yazılarında KC editör doğrudan onayı yeterlidir; onay izi `article-approvals.ts`, varsa paket README'si ve/veya `article-log.md` içinde tutulur.
-
-Form yanıtları aynı zamanda yazar stilini geliştirmek için kullanılır. Ham JSON yanıtı paket klasöründe kalır; likert, toggle ve serbest yorumlardan çıkan stil sinyali `article-log.md` dosyasına özetlenir. Kalıcı `writers/<slug>/` profil değişiklikleri otomatik yapılmaz, editör onayı gerektirir.
+Sözlü geri bildirim stil öğrenme girdisidir; `article-log.md` dosyasına özetlenir. Kalıcı `writers/<slug>/` profil değişiklikleri KC onayı olmadan yapılmaz.
 
 Yazarın akümülatif üretim günlüğü varsa aynı yazar klasöründe `article-log.md` adıyla durur. Bu log, şablon cooldown ve yazar sesi sürekliliği için kullanılır.
-
-Yeni paket üretmek için:
-
-```bash
-npm run author:send-for-approval -- --slug <writer-slug> --article <article-pathname>
-```
 
 Yazar klasörlerini yeniden senkronize etmek için:
 

@@ -528,24 +528,20 @@ Marka kuralları (gövdede inline dış URL / uluslararası kuruluş adı yasak 
 | 16 | Tıbbi sorumluluk reddi `ArticleDisclaimer` ile görünür (CLAUDE.md §1) | ☐ |
 | 17 | Dil: %100 Türkçe (CLAUDE.md Dil politikası) | ☐ |
 | 17a | `npm run lexicon:check` temiz; `hard_ban` ihlali yok, `soft_ban` warning'leri gözden geçirildi | ☐ |
-| 18 | Yazar onayı yolu seçildi: standart yazar formu veya `berna-aksoy` / `alara-baykent` / `senai-aksoy` için KC editör doğrudan onayı | ☐ |
-| 19 | Standart yazarlar için 5 dakikalık onay paketi `onay-bekleyen/` altında; istisna yazarlar için KC doğrudan onay kaydı hazırlanmış | ☐ |
-| 20 | Form yanıtı veya KC doğrudan onay notu geldiğinde stil sinyallerinin `article-log.md`'a özetleneceği ve kalıcı profil değişikliğinin editör onayı gerektirdiği not edildi | ☐ |
+| 18 | Yazar ve tıbbi onay KC'ye doğrudan soruldu; sözlü onay alındı (form veya onay paketi üretilmez) | ☐ |
+| 19 | Onay alındığında `article-approvals.ts` kaydı ve `article-log.md` satırı (tarih, kapsam, sözlü onay notu) tutuldu | ☐ |
+| 20 | Sözlü geri bildirimden stil sinyallerinin `article-log.md`'a özetleneceği ve kalıcı profil değişikliğinin KC onayı gerektirdiği not edildi | ☐ |
 
 **13-20 herhangi birinde "hayır" → otomatik büyük revizyon veya yazar onay döngüsü.** Yayın engellenir.
 
 ### 5.1 Yazar Onay Döngüsü
 
-1. Makale taslağı tamamlanınca `npm run author:send-for-approval -- --slug <writer-slug> --article <article-pathname>` çalıştırılır.
-2. `berna-aksoy`, `alara-baykent`, `senai-aksoy` için form zorunlu değildir; KC doğrudan onay verirse `article-approvals.ts` kaydı ve `article-log.md` notu yeterlidir.
-3. Standart yazarlar için oluşan paket `icerik/yazar-onaylari/<slug>/onay-bekleyen/<YYYY-MM-DD>_<makale-slug>/` altında tutulur.
-4. Editör 5 dakikalık `kontrol-formu.html` dosyasını yazara gönderir.
-5. Yazar **DEĞİŞİKLİK İSTİYORUM** derse yanıt aynı pakete kaydedilir, makale revize edilir ve revizyon için yeni makale + yeni 5 dakikalık onay formu üretilir.
-6. Her form yanıtı veya KC doğrudan onay notu stil öğrenme girdisi olarak değerlendirilir: düşük puanlar kaçınılacak eğilimlere, yüksek puanlar güçlenen imzalara, serbest yorumlar/editör notları editöryal özete dönüştürülür.
-7. Stil sinyali `icerik/yazar-onaylari/<slug>/article-log.md` dosyasına yazılır; `writers/<slug>/` profil dosyalarına kalıcı değişiklik yalnızca editör onayıyla geçirilir.
-8. Standart yazarlarda döngü yazar **ONAYLIYORUM** diyene kadar sürer; istisna yazarlarda KC doğrudan onayı yeterlidir.
-9. Onay geldiğinde paket varsa `onaylanan/` altına taşınır ve ancak bundan sonra Faz 6 yayın adımları başlar.
-10. Onay bekleyen paketteki kaynak kopya gerekirse `site-kaynak.astro` / `makale-kaynak.astro` olarak saklanır; canlı rota için `src/pages/` altına ancak yayın kapısı açıldıktan sonra geri alınır.
+1. Makale taslağı tamamlanınca onay KC'ye (Dr. Senai Aksoy) doğrudan sorulur. Form, onay paketi veya onay e-postası üretilmez; `author:send-for-approval` çalıştırılmaz.
+2. Sözlü onay alınmadan makale yayınlanmaz; taslak `src/pages/` canlı rota ağacına girmez.
+3. **DEĞİŞİKLİK İSTENİRSE** makale düzeltilir ve yeniden sözlü onay sorulur.
+4. Sözlü geri bildirim (ses, ritim, kalıp, mizah, tıbbi not) stil öğrenme girdisidir; `icerik/yazar-onaylari/<slug>/article-log.md` dosyasına özetlenir. `writers/<slug>/` profil dosyalarına kalıcı değişiklik yalnızca KC onayıyla geçirilir.
+5. Onay geldiğinde `src/data/article-approvals.ts` kaydı girilir (note: onay tarihi + sözlü onay bağlamı), varsa paket `onaylanan/` altına taşınır ve ancak bundan sonra Faz 6 yayın adımları başlar.
+6. Onay bekleyen taslağın kaynak kopyası gerekirse `site-kaynak.astro` / `makale-kaynak.astro` olarak saklanır; canlı rota için `src/pages/` altına ancak yayın kapısı açıldıktan sonra geri alınır.
 
 ---
 
@@ -613,9 +609,9 @@ Detaylı prosedür: Framework Katman D.
 11. Görünür FAQ bloğu (`ArticleFAQ`) ekle; schema ile drift bırakma.
 12. `npm run lexicon:check` çalıştır; `hard_ban` sıfır olmalı.
 13. Pre-publish checklist 18+ madde — 13-18 must-pass.
-14. Yazar onay paketi oluştur: `author:send-for-approval` → `onay-bekleyen`.
-15. Yazar değişiklik isterse revizyon + yeni 5 dk form; onay gelene kadar tekrar.
-16. Yazar ONAYLIYORUM dedikten sonra paket `onaylanan` altına taşınır.
+14. KC'ye yazar ve tıbbi onay sor (sözlü; form üretilmez).
+15. Değişiklik istenirse revizyon + yeniden sözlü onay; onay gelene kadar tekrar.
+16. Sözlü onay alındıktan sonra `article-approvals.ts` kaydı girilir ve varsa paket `onaylanan` altına taşınır.
 17. Hub linkage. Compliance ≥85.
 18. Push → Cloudflare auto-deploy.
 19. Post-publish journal (Faz 7): log'a satır ekle + evrim review tetik kontrolü.

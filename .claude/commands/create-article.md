@@ -68,8 +68,7 @@ AI alıntılanması ayrı bir yazım tekniği değildir; aşağıdakiler okura y
 Spec Faz 5 tablosunu uygula. Kritik kapılar:
 - `npm run lexicon:check` temiz (`hard_ban` sıfır); compliance score ≥ 85.
 - Yasak filtreleri temiz; dil %100 Türkçe; disclaimer görünür.
-- **Yazar onay kapısı:** standart yazar **ONAYLIYORUM** demeden yayınlanmaz (`npm run author:send-for-approval`).
-  İstisna: `berna-aksoy` / `alara-baykent` / `senai-aksoy` → KC editör doğrudan onayı (`article-approvals.ts` + `article-log.md`).
+- **Yazar ve tıbbi onay kapısı:** onay KC'ye doğrudan sorulur ve sözlü alınır; yazar için form veya onay paketi üretilmez (`author:send-for-approval` kullanılmaz). Onay alınmadan yayınlanmaz; onay sonrası `article-approvals.ts` + `article-log.md` kaydı tutulur.
 
 **13–20 herhangi "hayır" → büyük revizyon veya onay döngüsü. Yayın engellenir.**
 
