@@ -28,7 +28,7 @@ const articleSchemas = buildArticleSchemas({
   articleType: 'experience-essay',
   publishedDate: '2026-06-01',
   modifiedDate: '2026-10-15',
-  image: issue?.coverImage.src,
+  image: '/images/library/editorial/haziran-2026-sicacik-kose.webp',
   pathname,
   articleSection: "Editörün Köşesi",
   sectionPath: '/sayi/',
@@ -50,7 +50,7 @@ const articleSchemas = buildArticleSchemas({
   title={`${articleTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
-  image={issue?.coverImage.src}
+  image="/images/library/editorial/haziran-2026-sicacik-kose.webp"
   jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath={pathname} />
@@ -79,7 +79,10 @@ const articleSchemas = buildArticleSchemas({
       </header>
 
       <ArticleAuthorBlock authorSlug="berna-aksoy"
-        articleType="experience-essay" publishedDate="1 Haziran 2026" lastUpdated="15 Ekim 2026" readingMinutes={3} medicalReviewer="Yok" />
+        articleType="experience-essay" publishedDate="1 Haziran 2026" lastUpdated="15 Ekim 2026" readingMinutes={3} medicalReviewer="Yok"
+        imageSrc="/images/library/editorial/haziran-2026-sicacik-kose-byline.webp"
+        imageAlt="Taş basamakların yanında güneş ışığında duran krem renkli bez çanta"
+        imagePosition="center" />
 
       <ArticleSummary title="Bu Sayıya Giriş">
         <p>

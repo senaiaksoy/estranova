@@ -233,6 +233,14 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/zy-kreatin-menopoz.webp',
     alt: 'Aydınlık bir odada yerde oturan, elinde su bardağı tutan spor kıyafetli bir kadın.',
   },
+  '/editorun-kosesi/mayis-2026/': {
+    src: '/images/library/editorial/mayis-2026-sicacik-kose.webp',
+    alt: 'Pencere kenarında sabah ışığı alan kıvrık keten yatak ve sandalyede katlanmış hırka; Geceler dosyası Sıcacık Köşe kart görseli',
+  },
+  '/editorun-kosesi/haziran-2026/': {
+    src: '/images/library/editorial/haziran-2026-sicacik-kose.webp',
+    alt: 'Taş merdivende krem renkli bez çanta taşıyan bir kadının elleri; Güç Eşiği Sıcacık Köşe kart görseli',
+  },
   '/editorun-kosesi/temmuz-2026/': {
     src: '/images/library/editorial/temmuz-2026-sicacik-kose.webp',
     alt: 'Yaz sabahı gardırop önünde keten bluz seçen kadın; Tartı Susunca Sıcacık Köşe kart görseli',
