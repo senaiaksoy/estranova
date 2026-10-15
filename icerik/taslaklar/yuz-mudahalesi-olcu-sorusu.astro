@@ -1,0 +1,352 @@
+---
+import SiteLayout from '../../src/layouts/SiteLayout.astro';
+import SiteNavbar from '../../src/components/site/SiteNavbar.astro';
+import SiteFooter from '../../src/components/site/SiteFooter.astro';
+import SubmenuHero from '../../src/components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../src/components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../src/components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../src/components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../src/components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../src/components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../src/components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../src/components/site/ArticleSummary.astro';
+import RelatedReadings from '../../src/components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../src/components/site/ArticleFAQ.astro';
+import Evidence from '../../src/components/site/Evidence.astro';
+import RedFlagBox from '../../src/components/site/RedFlagBox.astro';
+import { submenuHeroByRoute } from '../../src/data/submenu-heroes';
+import { buildArticleSchemas } from '../../src/utils/article-schema';
+import { resolveSiteUrl } from '../../src/utils/seo';
+
+const pathname = '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/';
+// CLAUDE.md §6 — makale üst hero görseli daima parent hub'dan gelir.
+// memory: feedback_makale_hero_degismez_2026_05_10
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+
+const articleTitle = "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'";
+const seoTitle = 'Hangi Yüz Müdahalesi Sizin İçin?';
+const articleDescription =
+  "Op. Dr. Çağrı Sade anlatıyor: 40 sonrası yüz müdahalelerinde 'yapılabilir mi' yerine 'size uygun mu' sorusu ve hekiminizle paylaşacağınız sorular.";
+
+const tocEntries = [
+  { id: 'aynanin-karsisinda', label: 'Aynanın Karşısındaki Soru' },
+  { id: 'dort-katman', label: 'Yüzünüzün Dört Katmanı' },
+  { id: 'olcu-sorusu', label: '"Size Uygun mu?" Sorusu' },
+  { id: 'mudahale-haritasi', label: 'Müdahale Haritası' },
+  { id: 'kabul-mudahale', label: 'Kabul ve Müdahale Dengesi' },
+  { id: 'cerrahla-konusmak', label: 'Doktorunuza Sorabileceğiniz Sorular' },
+  { id: 'sonuc', label: 'Sonuç Olarak' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sss', label: 'Sık Sorulanlar' },
+];
+
+// Taslak: KC yazar ve tıbbi onayı bekleniyor. Ortak SSS kaynağına henüz aktarılmadı.
+// Onay sonrası aynı faqItems görünür SSS ve FAQPage için article-faqs.ts'ye taşınacak.
+const faqItems = [
+  { question: 'Erken mi, geç mi kalıyorum?', answer: 'Tek bir yaş cevabı yok. Uygunluk, yüzünüzdeki değişime, beklentinize ve sağlık durumunuza bağlı. Bir işlemi yalnızca belirli bir yaşa geldiğiniz için yaptırmanız gerekmez.' },
+  { question: 'Arkadaşımda iyi sonuç veren işlem bende neden farklı sonuç verir?', answer: 'Cilt özellikleri, yağ ve kemik desteği, mimikler ve iyileşme süreci kişiden kişiye değişir. Başkasında gördüğünüz sonuç, sizin yüzünüzde elde edilecek sonucu göstermez.' },
+  { question: 'Daha az müdahaleyle daha iyi sonuç almak mümkün mü?', answer: 'Müdahale sayısı tek başına sonucu belirlemez. Önemli olan, düşündüğünüz işlemin hangi değişimi hedeflediği ve bu hedef için gerekli olup olmadığıdır. Küçük bir işlem de risk taşır; daha az işlem, herkes için daha iyi sonuç garantisi değildir.' },
+  { question: 'Müdahale yaptırmazsam yüzüm hızla kötüye gider mi?', answer: 'İşlem yaptırmamak, yüzünüzün hızla kötüye gideceği anlamına gelmez. Yaşlanma doğal biçimde devam eder; hız ve görünüm kişiden kişiye değişir. Müdahale yaptırmamayı seçebilirsiniz.' },
+  { question: 'Karar verirken kendime hangi soruyu sormalıyım?', answer: '“Bu kararı kim veriyor: ben mi, yoksa çevremden duyduğum yorumlar mı?” diye sorabilirsiniz. Ne istediğiniz henüz net değilse karar vermek için kendinize zaman tanıyın. Görüşmeye gitmek de işlem yaptırma zorunluluğu doğurmaz.' },
+];
+const manifestDescription = "40 sonrası yüz müdahalelerinde kişisel beklenti, seçeneklerin kanıt ve risk sınırları, müdahale yaptırmama tercihi ve hekiminizle konuşabileceğiniz dört soru.";
+// manifestDescription, yalnız onaydan sonra static-articles.ts içindeki hedef kayda aktarılacak.
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  articleType: 'clinical-guide',
+  publishedDate: '10 Mayıs 2026',
+  modifiedDate: '15 Ekim 2026',
+  pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    '40 sonrası estetik',
+    'yüz müdahalesi karar',
+    'yüz yaşlanması',
+    'non-invaziv yüz tedavileri',
+    'estetik karar kriterleri',
+    'doğal yaşlanma kabulü',
+    'menopozda cilt',
+    'estetik beklenti yönetimi',
+    'size uygun mu sorusu',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Yüz Yaşlanması"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        articleType="clinical-guide"
+        publishedDate="10 Mayıs 2026"
+        lastUpdated="15 Ekim 2026"
+        readingMinutes={9}
+        imageSrc="/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu-byline.webp"
+        imageAlt="Pencere kenarında küçük oval aynaya bakan bordo bluzlu bir kadın; temsili dosya görseli"
+        imagePosition="center top"
+      />
+
+      <p class="mb-6 text-sm text-primary" role="note">Taslak — 15 Ekim 2026 revizyonu için yazar ve tıbbi onay bekleniyor.</p>
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Yüzünüzde bir değişim fark ettiğinizde işlem yaptırıp yaptırmamak size ait bir karardır.
+          Bir müdahaleyi düşünüyorsanız önce sizi neyin rahatsız ettiğini, nasıl bir değişim
+          beklediğinizi ve hangi riskleri kabul edebileceğinizi netleştirin. Cilt, yağ, kas ve
+          kemik yapısı birlikte değiştiği için aynı işlem her yüzde aynı sonucu vermez.
+          Bakım, cihaz uygulamaları, enjeksiyonlar ve cerrahi farklı sorunlara yönelir;
+          bunların zorunlu bir sırası yoktur. Kararınızı verirken hekiminizle beklenen faydayı,
+          belirsizlikleri ve iyileşme sürecini konuşun. Hiçbir müdahale yaptırmamak da geçerli
+          bir tercihtir.<sup><a href="#kaynak-1">[1]</a><a href="#kaynak-10">[10]</a></sup>
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="aynanin-karsisinda">Aynanın Karşısındaki Soru</h2>
+        <p>
+          Bir sabah aynaya bakar ve yüzümüzdeki değişimi bir tür hoşnutsuzlukla fark ederiz. Sanki daha
+          yorgun, biraz düşmüş görünüyoruzdur.
+        </p>
+        <p>
+          Ve ertelediğimiz o aynı soru aklımıza geliverir: <em>"Acaba ne işlem yaptırmalıyım?"</em>
+        </p>
+        <p>
+          Bazen yüzümüzdeki değişimden çok, çevremizden duyduğumuz yorumlar canımızı sıkıyor. <em>"Yorgun görünüyorsun", "Bir şey yaptırsana"</em> gibi cümleler zamanla insanın
+          zihninde yer etmeye başlıyor. Böyle zamanlarda aynaya yeniden — bu kez kendi
+          gözümüzle — bakmak, ne istediğimizi ayırmamıza yardımcı olabilir.
+        </p>
+        <p>
+          İhtiyaçlar kişiye özel olduğundan, karar verirken yardımcı olabilecek birkaç ipucunu sizinle
+          paylaşmak istiyorum. Bana en sık sorulan sorulardan biri şu: <em>"Bu işlem yapılabilir mi?"</em>
+          Çoğu zaman cevabı evet. Ama benim için daha önemli olan soru hep şu: <em>"Gerçekten size uygun
+          mu?"</em>
+        </p>
+
+        <h2 id="dort-katman">Yüz Sadece Ciltten İbaret Değildir</h2>
+        <p>
+          Yüzümüzde zamanla değişen tek şey cildimiz değildir. Cilt, yağ dokusu, kaslar ve kemik yapısı
+          birlikte değişir.
+        </p>
+        <p>
+          Yaşla birlikte cildin nem tutma kapasitesi ve elastikiyeti azalabilir. Yüzdeki yağ
+          bölmelerinin hacmi ve konumu değişebilir; kemik yapısındaki değişimler de yüzün desteğini
+          etkiler. Mimik kaslarının hareketi ise bazı çizgilerin belirginleşmesinde rol oynar.
+          Bu değişimler aynı anda, herkeste aynı hızla gerçekleşmez <Evidence level={4} /><sup><a href="#kaynak-1">[1]</a></sup>.
+        </p>
+        <p>
+          Her insanda bu değişimlerin oranı farklıdır. Birinde cilt daha hızlı değişirken, başkasında
+          hacim kaybı öne çıkar; bazen yüz hattındaki ufak bir değişim çok daha belirleyici bir ifade
+          farkı yaratır.
+        </p>
+        <p class="border-l-2 border-gold/50 pl-4 italic text-ink/75">
+          Çoğumuz yüzdeki değişimi sadece "sarkma" olarak görürüz. Oysa sorun yalnızca ciltle sınırlı
+          olmayabilir; alttaki destek dokularının azalması da işin içine girdiğinde yüzeysel işlemler
+          herkeste aynı sonucu vermez.
+        </p>
+
+        <h2 id="olcu-sorusu">Yaptırmak İstediğiniz İşlem Gerçekten İhtiyacınız Olan Mı?</h2>
+        <p>
+          Bugün estetik alanında pek çok işlem yapılabiliyor. Ama bir şeyin yapılabilir olması, onun
+          herkes için doğru olduğu anlamına gelmiyor.
+        </p>
+        <p>
+          Karar verirken birkaç başlığı birlikte ele almakta fayda var:
+        </p>
+
+        <ul>
+          <li><strong>Yaş ve dönem.</strong></li>
+          <li><strong>Beklenti.</strong></li>
+          <li><strong>Yaşam tarzı.</strong></li>
+          <li><strong>Sağlık durumu.</strong></li>
+          <li>
+            <strong>Kararın gerçekten kimden çıktığı.</strong> Kendi istediğiniz değişimle,
+            çevrenizden duyduğunuz yorumları birbirinden ayırın.
+          </li>
+        </ul>
+
+        <p>
+          Bu başlıkları görüşmeden önce düşünmek, beklentinizi anlatmanızı kolaylaştırabilir.
+          “Çene hattım değişti” demekle “daha az yorgun görünmek istiyorum” demek aynı hedefi
+          tarif etmeyebilir. Görüşmede önce hedefin ne olduğunu konuşun.<sup><a href="#kaynak-10">[10]</a></sup>
+        </p>
+
+        <h2 id="mudahale-haritasi">Müdahaleler Tek Bir Basamaktan Oluşmuyor</h2>
+        <p>
+          Bakım, cihaz uygulaması, enjeksiyon ve cerrahi aynı işi yapmaz. Bunları sırayla çıkılması
+          gereken bir merdiven gibi düşünmek, ihtiyacınız olmayan bir işleme yöneltebilir.
+        </p>
+        <p>
+          Günlük bakımda güneşten korunmanın ayrı bir yeri var. Orta yaşlı yetişkinlerde yapılan
+          kontrollü bir çalışmada düzenli güneş koruyucu kullanımı, ciltte güneşe bağlı yaşlanmanın
+          ilerlemesini azaltmıştır <Evidence level={4} /><sup><a href="#kaynak-2">[2]</a></sup>.
+          Bu bulgu güneşe bağlı cilt değişimleriyle ilgilidir. Hacim kaybı ve doku sarkması
+          için ayrı bir değerlendirme gerekir.
+        </p>
+        <p>
+          Cildi delmeden yapılan ultrason ve radyofrekans uygulamaları, dokuyu ısıtarak kollajen
+          yanıtını uyarmayı amaçlar. Bazı çalışmalarda sıkılık ve görünümde iyileşme bildirilse de
+          sonuçlar cihaz, uygulama ve ölçüm yöntemine göre değişir <Evidence level={3} /><sup><a href="#kaynak-3">[3]</a><a href="#kaynak-4">[4]</a></sup>.
+          Görüntüleme eşliğinde mikroodaklı ultrason için elde edilen bulgular bütün ultrason
+          cihazlarına taşınamaz. Yüzeyden radyofrekans ile iğneli uygulamalar da aynı işlem değildir.
+        </p>
+        <p>
+          Lazer uygulamaları, kullanılan türe göre ince çizgileri ve bazı renk değişikliklerini
+          azaltmaya yönelik olabilir. Etki kadar iyileşme süresi ve iz kalması gibi riskler de
+          uygulamaya göre değişir.<sup><a href="#kaynak-5">[5]</a></sup>
+        </p>
+        <p>
+          Kas dinlendirici enjeksiyonlar belirli mimik kaslarının hareketini geçici olarak azaltır;
+          dolgu enjeksiyonları ise hacim ya da hat değişikliğini hedefler. Biri diğerinin yerine
+          geçmez. Etkinin süresi ve tekrar gereksinimi kullanılan yönteme bağlıdır.
+          Dolguların uzun yıllar boyunca tekrarlanan kullanımının güvenliği, kontrollü klinik çalışmalarla yeterince değerlendirilmemiştir.<sup><a href="#kaynak-6">[6]</a><a href="#kaynak-7">[7]</a></sup>
+        </p>
+        <p>
+          İpliklerle askılamada özellikle uzun vadeli etki ve kalıcılık konusunda güvenilir veri
+          sınırlıdır <Evidence level={2} /><sup><a href="#kaynak-8">[8]</a></sup>.
+          Yüz germe cerrahisi ise belirli sarkma ve doku yer değiştirmelerini ele alabilir;
+          her çizgiyi veya cilt değişikliğini düzeltmez. İyileşme süresi, anestezi, kanama,
+          enfeksiyon, iz ve sinir hasarı gibi riskler kararda yer alır. Cerrahi için de sonuç
+          garantisi yoktur.<sup><a href="#kaynak-9">[9]</a></sup>
+        </p>
+        <p>
+          Küçük görünen işlemler de tıbbi işlem riskleri taşır. Dolguda morarma ve şişliğin yanında
+          nadiren damar tıkanıklığı ve kalıcı hasar gelişebilir; lazerde ise iz gibi komplikasyonlar
+          görülebilir. Yöntemi konuşurken “hangi değişim bekleniyor?” sorusuna “hangi risk karşılığında?”
+          sorusunu da ekleyin.<sup><a href="#kaynak-5">[5]</a><a href="#kaynak-7">[7]</a></sup>
+        </p>
+        <RedFlagBox
+          title="İşlem sonrası beklenmemesi gereken belirtiler"
+          intro="Özellikle dolgu enjeksiyonu sırasında veya kısa süre sonrasında aşağıdaki belirtiler olursa planlı kontrolü beklemeyin; acil tıbbi değerlendirme alın."
+          markers={[
+            'Görmede ani değişiklik veya görme kaybı',
+            'Enjeksiyon bölgesinde olağandışı ağrı ya da ciltte beyaz, gri veya mavi renk değişikliği',
+          ]}
+          footnote="Bu belirtiler her işlemden sonra beklenen bir iyileşme bulgusu değildir. Kaynak: [7]."
+        />
+
+        <h2 id="kabul-mudahale">Doğal Yaşlanma ile Sürekli Müdahale Arasında Bir Denge Var</h2>
+        <p>
+          Yüzünüzdeki değişimi kabul edip hiçbir müdahale istemeyebilirsiniz. Bu tercih de,
+          belirli bir değişimi düşünmek kadar size aittir.
+        </p>
+        <p>
+          Karar vermek için bir takvime yetişmeniz gerekmez. Görüşme yapmak, işlem yaptırma
+          sözü vermek değildir; sonrasında da vazgeçebilirsiniz.<sup><a href="#kaynak-10">[10]</a></sup>
+        </p>
+        <p>
+          Karar verirken bazı cümleler beni hep durduruyor. <em>"Bunu yapmazsan geç kalırsın"</em> çoğu
+          zaman bilgiden değil, ticari bir aciliyetten geliyor. <em>"Şu an çok popüler"</em> modaya işaret
+          ediyor. Oysa moda değişiyor; yüzümüzün özellikleri bir trende sığmıyor. Bu cümleleri bir reklamda, bir
+          röportajda ya da görüşme odasında duyduğunuzda, bir adım geri durup zemini yeniden tartmak için
+          kendinize zaman verin.
+        </p>
+
+        <h2 id="cerrahla-konusmak">Doktorunuza Sorabileceğiniz Sorular</h2>
+        <p>
+          Aşağıdakiler bir test değil; bir görüşmeye sade bir başlangıç. Hekiminizin bunları doğal
+          karşılaması, zeminin sağlam olduğunun da güzel bir işareti.
+        </p>
+
+        <ul>
+          <li><strong>Bu işlem yüzümde tam olarak neyi değiştirir?</strong></li>
+          <li><strong>Daha hafif bir yöntemle benzer sonuç almak mümkün mü?</strong></li>
+          <li><strong>Etkisi ne kadar sürer?</strong></li>
+          <li><strong>Hiçbir şey yaptırmazsam ne olur?</strong></li>
+        </ul>
+
+        <p>
+          Bunlara kişisel risklerinizi, günlük hayatınıza dönüşü ve sorun yaşarsanız kime ulaşacağınızı
+          da ekleyin. Yanıtları duyduktan sonra düşünmek için zaman isteyebilirsiniz.<sup><a href="#kaynak-9">[9]</a><a href="#kaynak-10">[10]</a></sup>
+        </p>
+
+        <h2 id="sonuc">Sonuç Olarak</h2>
+        <p>
+          Estetik müdahalelerin amacı, bambaşka birine dönüşmek olmamalı.
+        </p>
+        <p>
+          Amaç, kişinin kendi yüz karakterini koruyarak daha iyi, daha dengeli ve kendisiyle daha uyumlu
+          hissetmesini desteklemek olmalı.
+        </p>
+        <p>
+          Aynaya yeniden baktığınızda hangi değişimi istediğinizi daha iyi biliyorsanız, görüşme
+          amacına yaklaşmıştır. O günkü kararınız beklemek de olabilir.
+        </p>
+
+        <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
+        <p>Kaynaklar, metindeki numaralı atıflarla eşleşir. Kanıt etiketi bir kişide elde edilecek sonucun garantisi değildir.</p>
+        <ol>
+          <li id="kaynak-1">Swift A ve ark. Yüz yaşlanmasının kemik, yağ, kas ve cilt katmanları. 2021. <a href="https://pubmed.ncbi.nlm.nih.gov/33325497/" target="_blank" rel="noopener noreferrer">Anatomik derleme</a>.</li>
+          <li id="kaynak-2">Hughes MCB ve ark. Güneş koruyucu ve cilt yaşlanmasının önlenmesi: randomize çalışma. 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23732711/" target="_blank" rel="noopener noreferrer">Kontrollü çalışma</a>.</li>
+          <li id="kaynak-3">Amiri M ve ark. Görüntüleme eşliğinde mikroodaklı ultrasonun etkililiği ve güvenliği. 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/39540440/" target="_blank" rel="noopener noreferrer">Sistematik derleme ve meta-analiz</a>.</li>
+          <li id="kaynak-4">Kumar N ve ark. Yüz için radyofrekans uygulamalarında etkililik, güvenlik ve kişi tarafından bildirilen sonuçlar. 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/41426292/" target="_blank" rel="noopener noreferrer">Radyofrekans sistematik derlemesi</a>.</li>
+          <li id="kaynak-5">Amerikan Dermatoloji Akademisi. Cilt sıkılaştırma ve lazer uygulamalarının sınırları. <a href="https://www.aad.org/public/cosmetic/younger-looking/firm-sagging-skin" target="_blank" rel="noopener noreferrer">Hasta bilgilendirmesi: cilt sıkılaştırma</a>.</li>
+          <li id="kaynak-6">Amerikan Dermatoloji Akademisi. Kas dinlendirici enjeksiyonların etkisi ve süresi. <a href="https://www.aad.org/public/cosmetic/wrinkles/botulinum-toxin-overview" target="_blank" rel="noopener noreferrer">Hasta bilgilendirmesi: kas dinlendirici enjeksiyonlar</a>.</li>
+          <li id="kaynak-7">FDA. Yumuşak doku dolgularının kullanım sınırları ve güvenlik uyarıları. <a href="https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/dermal-fillers-soft-tissue-fillers" target="_blank" rel="noopener noreferrer">Dolgu güvenliği</a>.</li>
+          <li id="kaynak-8">Atiyeh BS ve ark. İpliklerle yüz askılamada kanıt ve kalıcılık sınırları. 2021. <a href="https://pubmed.ncbi.nlm.nih.gov/33471152/" target="_blank" rel="noopener noreferrer">İplik askılama literatür değerlendirmesi</a>.</li>
+          <li id="kaynak-9">NHS. Yüz germe: kapsam, iyileşme ve riskler. <a href="https://www.nhs.uk/tests-and-treatments/cosmetic-procedures/cosmetic-surgery/facelift/" target="_blank" rel="noopener noreferrer">Yüz germe bilgilendirmesi</a>.</li>
+          <li id="kaynak-10">NHS. Estetik işlem öncesinde karar ve bilgilendirilmiş onam. <a href="https://www.nhs.uk/tests-and-treatments/cosmetic-procedures/advice/before-you-have-a-cosmetic-procedure/" target="_blank" rel="noopener noreferrer">Karar öncesi sorular</a>.</li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sss"
+        class="mt-10"
+        items={faqItems}
+        title="Bu Yazıdan Sonra Akla Gelen Sorular"
+        intro="Karar öncesinde aklınıza gelebilecek beş soruya kısa yanıtlar."
+      />
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
+          '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',
+          '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10" title="Bilimsel incelemeye sunulan not">
+        <p>
+          Yöntemler, hedeflenen değişim ve uygulanan bölge için ayrı ayrı değerlendirilir.
+          Cihaz araştırmalarında uygulama ve sonuç ölçümleri farklıdır; dolgu ve kas dinlendirici
+          enjeksiyonların hedefleri ayrıdır. Cerrahi de bu seçeneklerin zorunlu son basamağı değildir.
+        </p>
+        <p>
+          Kararda sağlık geçmişi, kullanılan ilaçlar, doku özellikleri, beklenen değişim ve kişisel
+          riskler birlikte ele alınır. İşlem öncesinde takip planı ve beklenmedik belirtilerde
+          ulaşılacak sağlık ekibi netleşmelidir.<sup><a href="#kaynak-7">[7]</a><a href="#kaynak-9">[9]</a><a href="#kaynak-10">[10]</a></sup>
+        </p>
+      </ArticleEditorNote>
+
+
+
+      <ArticleDisclaimer class="mt-10">
+        <p>Bu yazı genel bilgilendirme içindir; kişisel muayene, tanı veya tedavi önerisinin yerini tutmaz.
+        Bir müdahaleyi düşünüyorsanız size özgü fayda, risk ve alternatifleri yetkili bir hekimle değerlendirin.</p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

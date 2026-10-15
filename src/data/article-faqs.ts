@@ -233,27 +233,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Erken mi, geç mi kalıyorum?',
       answer:
-        'Bu soruyu çok duyuyorum. Tek bir yaş cevabı yok. Erken ya da geç olması, kendi yüzünüzde hangi katmanın konuştuğuna ve hangi beklentiyle baktığınıza bağlı. 35\'inde bir kadın için bazı uygulamalar erken, 60\'ında bir kadın için bazı cerrahi müdahaleler hâlâ uygun olabiliyor.',
+        'Tek bir yaş cevabı yok. Uygunluk, yüzünüzdeki değişime, beklentinize ve sağlık durumunuza bağlı. Bir işlemi yalnızca belirli bir yaşa geldiğiniz için yaptırmanız gerekmez.',
     },
     {
       question: 'Arkadaşımda iyi sonuç veren işlem bende neden farklı sonuç verir?',
       answer:
-        'Çünkü cilt zemini, yağ ve kemik desteği, mimik yapısı, iyileşme hızı ve yaşam tarzınız bambaşka. Aynı işlem aynı tabloya yerleşmiyor; bu yüzden başkasının sonucu üzerinden karar almak çoğu zaman beklenti hatasına yol açıyor.',
+        'Cilt özellikleri, yağ ve kemik desteği, mimikler ve iyileşme süreci kişiden kişiye değişir. Başkasında gördüğünüz sonuç, sizin yüzünüzde elde edilecek sonucu göstermez.',
     },
     {
       question: 'Daha az müdahaleyle daha iyi sonuç almak mümkün mü?',
       answer:
-        'Çoğu zaman evet — özellikle erken aşamada. Bakım katmanının ihmal edilmediği bir ciltte, küçük ve doğru zamanlanmış müdahaleler yıllar içinde bütünlüklü bir tablo veriyor. Ben bunu hep şöyle özetliyorum: "Daha çok değil, daha doğru."',
+        'Müdahale sayısı tek başına sonucu belirlemez. Önemli olan, düşündüğünüz işlemin hangi değişimi hedeflediği ve bu hedef için gerekli olup olmadığıdır. Küçük bir işlem de risk taşır; daha az işlem, herkes için daha iyi sonuç garantisi değildir.',
     },
     {
       question: 'Müdahale yaptırmazsam yüzüm hızla kötüye gider mi?',
       answer:
-        'Hayır. Doğal yaşlanma yıllar içinde ilerliyor; bir günde dramatik bir değişim olmaz. Müdahaleyi "olmazsa olmaz" değil, "ölçülü tercih" olarak gördüğünüzde panik dilinden uzaklaşıyor.',
+        'İşlem yaptırmamak, yüzünüzün hızla kötüye gideceği anlamına gelmez. Yaşlanma doğal biçimde devam eder; hız ve görünüm kişiden kişiye değişir. Müdahale yaptırmamayı seçebilirsiniz.',
     },
     {
       question: 'Karar verirken kendime hangi soruyu sormalıyım?',
       answer:
-        'Tek bir soru: "Bu kararı kim soruyor — ben mi, yoksa duyduğum cümleler mi?" Cevap "ben" ise, hekiminizle yapılacak görüşmenin zemini sağlam. Cevap belirsizse, kararı bir süre daha taşımak ve yüzünüzle daha uzun bir konuşma yapmak çoğu zaman daha doğru oluyor.',
+        '“Bu kararı kim veriyor: ben mi, yoksa çevremden duyduğum yorumlar mı?” diye sorabilirsiniz. Ne istediğiniz henüz net değilse karar vermek için kendinize zaman tanıyın. Görüşmeye gitmek de işlem yaptırma zorunluluğu doğurmaz.',
     },
   ],
   '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/': [
