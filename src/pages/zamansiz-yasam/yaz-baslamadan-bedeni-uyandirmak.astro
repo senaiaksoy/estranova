@@ -32,6 +32,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'alara-baykent',
   articleType: 'experience-essay',
   publishedDate: '1 Haziran 2026',
+  modifiedDate: '15 Ekim 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
@@ -71,6 +72,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="alara-baykent"
         articleType="experience-essay"
         publishedDate="1 Haziran 2026"
+        lastUpdated="15 Ekim 2026"
         readingMinutes={6}
         imageSrc="/images/library/editorial/alara-yaz-baslamadan-bedeni-uyandirmak-byline.webp"
         imageAlt="Sahil yolunda mat ve çantasıyla yürüyen kadın"
@@ -167,7 +169,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <MedicalContextNote class="mt-14">
+      <MedicalContextNote class="mt-14 article-export-medical-context">
         <p>
           <strong>Hareketin sağlık açısından yeri:</strong> Düzenli fiziksel aktivitenin yetişkinlerde
           kalp-damar ve metabolik sağlık açısından yararları vardır <Evidence level={5} />.
