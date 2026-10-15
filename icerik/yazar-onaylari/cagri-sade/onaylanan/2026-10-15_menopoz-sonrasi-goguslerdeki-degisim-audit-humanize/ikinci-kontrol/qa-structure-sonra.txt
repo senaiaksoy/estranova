@@ -1,0 +1,36 @@
+
+[short-closer] 9 of 36 paragraphs end on a sentence of 8 words or fewer. Read them in a row: if they are interchangeable verdicts, keep the strongest and let the other paragraphs end on their information.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:18:1  Bu değişim sizi rahatsız ediyorsa bunu dile getirebilirsiniz.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:31:1  Bu sorular bizi farklı değerlendirmelere götürür.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:84:1  Cerrahi dışı seçenekleri de bu ayrımla düşünmek gerekir.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:177:1  Aklınızdaki soruları yazıp yanınızda götürebilirsiniz.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:205:1  Riskleri ve iyileşme yükünü de aynı açıklıkla konuşabilmelisiniz.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:221:1  Yanıtınız, konuşmanın nereden başlayacağını belirler.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:236:1  Menopoz, süt bezleri ve destek dokusunun esnekliği.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:281:1  Günlük rahatlık ve hareket açısından yine değerli olabilir.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:289:1  Dikleştirme memeyi mutlaka küçültmez.
+
+[claim-cerrahi-zorunlu] Stated 2 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:5:360  ameliyat gerektirme
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:216:55  zorunluluğu
+
+[claim-spor-anatomi] Stated 3 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:92:170  cerrahi olarak düzenlemekle aynı
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:97:133  anatomik sarkma
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:281:182  yeniden şekillendirmez
+
+[claim-yag-ek-inceleme] Stated 2 times across 2 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:156:293  biyopsi gerek
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:285:283  biyopsi gerek
+
+[claim-protez-hacim] Stated 4 times across 3 sections. For each instance after the summary and one body location, note what it adds (new condition, exception, safety limit) or merge it.
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:112:22  yalnızca dikleştirme
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:122:133  protezsiz
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:185:21  yalnızca dikleştirme
+  icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md:289:52  yalnızca dikleştirme
+
+5 structure candidates. Sentences: 102, mean 11 words (sd 5), 36% of 8 words or fewer, longest run of short sentences: 5.
+Counts wording, not meaning: a conclusion restated in new words is found only through --claims or reading.
+Candidates, not errors. A family below its threshold is not reported; a reported one may be justified.
+Reads the same scope as editorial-check: frontmatter, JSX props and alt text are not covered. Use rendered-check.mjs on the built page.
+Rhythm figures describe the text; they are not a target, a quota or an authorship score.

@@ -311,7 +311,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/',
     title: 'Menopoz Sonrası Göğüslerdeki Değişim: Doğal Süreçler ve Cerrahi Karar Dengesi',
     description:
-      'Menopoz sonrası göğüslerde görülen hacim kaybı, sarkma ve dokusal değişimlerin nedenlerini; dikleştirme, protez ve yağ enjeksiyonu gibi cerrahi seçenekleri Çağrı Sade birinci ağızdan, gerçekçi beklentilerle anlatıyor.',
+      'Menopoz sonrası göğüslerde hacim ve şekil neden değişir? Çağrı Sade, değerlendirme gerektiren belirtileri ve cerrahi seçeneklerin sınırlarını anlatıyor.',
     publishedDate: '29 Temmuz 2026',
     writerSlug: 'cagri-sade',
     section: 'Beden & Yakınlık',

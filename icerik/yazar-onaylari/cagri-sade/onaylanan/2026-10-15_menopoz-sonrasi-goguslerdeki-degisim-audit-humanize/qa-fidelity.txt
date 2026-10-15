@@ -1,0 +1,21 @@
+review_changes: icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/onay-tabani.txt -> icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/sonra.txt
+numbers: 1 (0 -> 3); before -; after 5,43,81
+numbers: 2 (0 -> 4); before -; after 7,62,67,144
+numbers: 2026 (0 -> 1); before -; after 195
+numbers: 3 (0 -> 4); before -; after 48,81,100,102
+numbers: 4 (0 -> 2); before -; after 101,107
+numbers: 5 (0 -> 2); before -; after 101,114
+numbers: 6 (0 -> 1); before -; after 131
+numbers: 7 (0 -> 2); before -; after 134,139
+numericCitations: [1] (0 -> 3); before -; after 5,43,81
+numericCitations: [2] (0 -> 4); before -; after 7,62,67,144
+numericCitations: [3] (0 -> 4); before -; after 48,81,100,102
+numericCitations: [4] (0 -> 2); before -; after 101,107
+numericCitations: [5] (0 -> 2); before -; after 101,114
+numericCitations: [6] (0 -> 1); before -; after 131
+numericCitations: [7] (0 -> 2); before -; after 134,139
+Counts are global: values swapped between outcomes or claims can escape detection.
+Negation, certainty, population and causal meaning require the manual meaning record.
+Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.
+Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.
+Number formatting is not silently converted between locales. No tracked changes is not clinical approval.

@@ -1,0 +1,35 @@
+review_changes: icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/onay-tabani.md -> icerik/yazar-onaylari/cagri-sade/onay-bekleyen/2026-10-14_menopoz-sonrasi-goguslerdeki-degisim/ikinci-kontrol/sonra.md
+numbers: 1 (0 -> 2); before -; after 5,47
+numbers: 2 (0 -> 5); before -; after 5,68,73,92,166
+numbers: 2026 (0 -> 2); before -; after 161,254
+numbers: 3 (0 -> 3); before -; after 52,92,119
+numbers: 4 (0 -> 2); before -; after 122,127
+numbers: 5 (0 -> 2); before -; after 122,132
+numbers: 6 (0 -> 1); before -; after 156
+numbers: 7 (0 -> 2); before -; after 156,161
+numericCitations: [1] (0 -> 2); before -; after 5,47
+numericCitations: [2] (0 -> 5); before -; after 5,68,73,92,166
+numericCitations: [3] (0 -> 3); before -; after 52,92,119
+numericCitations: [4] (0 -> 2); before -; after 122,127
+numericCitations: [5] (0 -> 2); before -; after 122,132
+numericCitations: [6] (0 -> 1); before -; after 156
+numericCitations: [7] (0 -> 2); before -; after 156,161
+links: #kaynak-1 (0 -> 2); before -; after 5,47
+links: #kaynak-2 (0 -> 5); before -; after 5,68,73,92,166
+links: #kaynak-3 (0 -> 3); before -; after 52,92,119
+links: #kaynak-4 (0 -> 2); before -; after 122,127
+links: #kaynak-5 (0 -> 2); before -; after 122,132
+links: #kaynak-6 (0 -> 1); before -; after 156
+links: #kaynak-7 (0 -> 2); before -; after 156,161
+links: https://doi.org/10.1093/asj/sjag187 (0 -> 1); before -; after 254
+links: https://medlineplus.gov/ency/article/003999.htm (0 -> 1); before -; after 236
+links: https://www.cancer.gov/types/breast/breast-changes/understanding-breast-changes.pdf (0 -> 1); before -; after 239
+links: https://www.fda.gov/medical-devices/breast-implants/risks-and-complications-breast-implants (0 -> 1); before -; after 248
+links: https://www.plasticsurgery.org/cosmetic-procedures/breast-lift (0 -> 1); before -; after 242
+links: https://www.plasticsurgery.org/cosmetic-procedures/breast-lift/safety (0 -> 1); before -; after 245
+links: https://www.plasticsurgery.org/cosmetic-procedures/fat-transfer-breast-augmentation/safety/ (0 -> 1); before -; after 251
+Counts are global: values swapped between outcomes or claims can escape detection.
+Negation, certainty, population and causal meaning require the manual meaning record.
+Frontmatter changes require review, including legitimate title/summary edits; metadata is never rewritten.
+Dynamic JSX attributes/expressions, raw HTML and inline code need separate inspection.
+Number formatting is not silently converted between locales. No tracked changes is not clinical approval.

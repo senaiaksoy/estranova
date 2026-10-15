@@ -1,0 +1,5 @@
+
+> estranova@0.0.0 seo:audit
+> node scripts/check-seo-output.mjs
+
+SEO output audit passed for 160 built page(s).

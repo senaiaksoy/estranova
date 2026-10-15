@@ -116,24 +116,19 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   ],
   '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/': [
     {
-      question: 'Menopoz sonrası göğüslerdeki sarkma sporla tamamen düzeltilebilir mi?',
+      question: 'Meme dikleştirme ameliyatından sonra göğüsler yeniden sarkar mı?',
       answer:
-        'Hayır, egzersiz göğüs altındaki kas dokusunu (pektoral kaslar) güçlendirebilir ama meme dokusunun kendisinde kas lifi bulunmaz. Menopozda azalan bağ dokusu elastikiyeti ve gerileyen süt bezleri nedeniyle sarkan meme dokusunu sporla tamamen eski konumuna getirmek anatomik olarak mümkün değildir.',
+        'Evet, zaman içinde yeniden sarkma olabilir. Meme dikleştirme ameliyatı yaşlanmayı durdurmaz. Yerçekimi, cilt elastikiyetinin azalması, kilo değişiklikleri ve gebelik gibi faktörler memenin şeklini zamanla değiştirebilir. Ancak bu, mutlaka ameliyat öncesindeki kadar sarkacağı anlamına gelmez. Özellikle kilonun sabit tutulması, elde edilen sonucun daha uzun süre korunmasına yardımcı olur.',
     },
     {
-      question: 'Memeye yağ enjeksiyonunun mamografi ve MR takibinde ne gibi riskleri vardır?',
+      question: 'Silikon protezde yırtılma fark edilmeden gelişebilir mi?',
       answer:
-        'Enjekte edilen yağ dokusunun bir kısmı zamanla canlılığını kaybedebilir ve kireçlenmeye (kalsifikasyon) veya küçük yağ kistlerine yol açabilir. Deneyimli meme radyologları bu değişikliklerin çoğunu iyi huylu bulgular olarak ayırt edebilir; ancak bazı durumlarda ek görüntüleme veya biyopsi gerekebilir.',
-    },
-    {
-      question: 'Meme dikleştirme ameliyatından sonra mutlaka protez kullanılmalı mıdır?',
-      answer:
-        'Hayır, bu tamamen hastanın hacim beklentisine bağlıdır. Eğer sarkma giderildiğinde kalan doğal meme hacmi hasta için yeterliyse ve vücut oranlarıyla uyumluysa ek bir protez gerekmez; sadece dikleştirme (mastopeksi) yapılır. Hacim kaybı belirginse ve dolgunluk isteniyorsa protez veya yağ enjeksiyonu düşünülebilir.',
+        'Evet. Hatta silikon protez yırtılmalarının önemli bir bölümü hiçbir belirti vermeden gelişir. Buna sessiz yırtılma diyoruz. Meme şeklinde değişiklik, ağrı veya sertlik olmayabilir; muayenede bile fark edilmeyebilir. Bu nedenle FDA, silikon protezi olan kadınlara ameliyattan 5–6 yıl sonra ilk ultrason veya MR kontrolünü, ardından 2–3 yılda bir görüntülemeyi öneriyor. Şüpheli durumlarda ise özellikle kontrastsız MR tercih edilir. Yani protezde herhangi bir sorun hissetmemek, protezin mutlaka sağlam olduğu anlamına gelmez.',
     },
     {
       question: 'Menopoz sonrası estetik ameliyat kararı alırken yaş tek başına bir engel midir?',
       answer:
-        'Yaş tek başına bir engel değildir. Önemli olan kronolojik yaştan ziyade kişinin genel sağlık durumu, kronik hastalıklarının (diyabet, tansiyon vb.) kontrol altında olup olmaması, yara iyileşme kapasitesi ve anestezi alabilme durumudur.',
+        'Yaş tek başına bir engel değildir. Yaşın yanı sıra genel sağlık durumu, kronik hastalıkların kontrolü, yara iyileşmesi ve anestezi riskleri birlikte değerlendirilir.',
     },
   ],
   '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/': [

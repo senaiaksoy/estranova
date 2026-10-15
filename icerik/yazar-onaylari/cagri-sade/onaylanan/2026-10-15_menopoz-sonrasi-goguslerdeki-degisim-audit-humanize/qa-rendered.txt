@@ -1,0 +1,15 @@
+
+[uncited-source] Listed in the references but not named in the visible text above them. Cite it where it supports a claim, check whether it sits in a collapsed box, or drop it.
+  MedlinePlus: Yaşla birlikte meme dokusundaki değişimler. Menopoz, süt bezleri ve destek dokusunun esnekliği.
+  NCI: Meme değişimleri ve durumları hakkında hasta rehberi. Yeni belirtiler, tarama ile tanısal değerlendirme …
+  ASPS: Meme dikleştirmenin amacı ve sınırları.
+  ASPS: Meme dikleştirme riskleri.
+  FDA: Meme implantlarının riskleri ve komplikasyonları.
+  ASPS: Memeye yağ transferinin riskleri.
+  Memeye yağ transferi: Komplikasyonlar ve görüntüleme sonuçları üzerine sistematik derleme ve meta-analiz (202…
+
+1 rendered-page candidates; 10798 characters, 2 images, 4 collapsible boxes inspected.
+  author: Yazan : → Dr. Çağrı Sade
+Reads one built page as served; a page behind a consent wall or rendered client-side may be incomplete.
+Name, role and reference matching are heuristics: every item is a candidate to look at, not a verdict.
+Template findings (review line, og:type, repeated boxes) belong to the site layout; report them, do not rewrite article text to hide them.

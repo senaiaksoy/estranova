@@ -1,0 +1,13 @@
+
+> estranova@0.0.0 articles:audit:strict
+> node scripts/check-published-content-integrity.mjs --strict
+
+Estranova yayin butunlugu denetimi
+- buildArticleSchemas kullanan statik makale sayfasi: 66
+- approval kaydi: 68
+- staticArticles manifest girdisi: 67
+
+Approval kaydi olup RSS manifestinde bulunmayan yollar
+- /zamansiz-yasam/kemik-sagligi-40-sonrasi/
+
+Yayin butunlugu temiz.

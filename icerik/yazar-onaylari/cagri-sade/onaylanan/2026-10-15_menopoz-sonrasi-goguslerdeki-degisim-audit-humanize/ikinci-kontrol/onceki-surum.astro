@@ -1,0 +1,311 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../components/site/ArticleFAQ.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { articleFaqs } from '../../data/article-faqs';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/beden-yakinlik/menopoz-sonrasi-goguslerdeki-degisim/';
+const hero = submenuHeroByRoute['/beden-yakinlik/']!;
+const articleTitle = 'Menopoz Sonrası Göğüslerdeki Değişim: Doğal Süreçler ve Cerrahi Karar Dengesi';
+const seoTitle = 'Menopoz Sonrası Göğüslerdeki Değişim';
+const articleDescription =
+  'Menopoz sonrası göğüslerde hacim ve şekil neden değişir? Çağrı Sade, değerlendirme gerektiren belirtileri ve cerrahi seçeneklerin sınırlarını anlatıyor.';
+const publishedDate = '29 Temmuz 2026';
+const readingMinutes = 7;
+const articleImage = '/images/library/editorial/menopoz-sonrasi-goguslerdeki-degisim.webp';
+const bylineImage = '/images/library/editorial/menopoz-sonrasi-goguslerdeki-degisim-byline.webp';
+
+const tocEntries = [
+  { id: 'beden-hissi', label: 'Bedenin dönüşümü ve ayna ilişkisi' },
+  { id: 'dokusal-donusum', label: 'Meme dokusunun katmanlı değişimi' },
+  { id: 'degerlendirme', label: 'Hangi değişimler muayene gerektirir?' },
+  { id: 'destek-sinirlari', label: 'Cerrahi dışı çabalar nerede durur?' },
+  { id: 'cerrahi-secenekler', label: 'Duruş, hacim ve estetik kararlar' },
+  { id: 'yag-enjeksiyonu', label: 'Yağ transferi ve güvenlik takibi' },
+  { id: 'cerrahla-konusma', label: 'Muayene odasında sorulacak sorular' },
+  { id: 'kisisel-denge', label: 'Kendi bedeninizde rahat hissetmek' },
+  { id: 'sss', label: 'Bu yazıdan sonra akla gelen sorular' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  articleType: 'clinical-guide',
+  publishedDate,
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  image: new URL(articleImage, siteUrl).href,
+  keywords: [
+    'menopoz sonrası göğüs değişimi',
+    'meme dikleştirme',
+    'mastopeksi',
+    'memeye yağ enjeksiyonu',
+    'meme protezi',
+    'menopoz sonrası meme sarkması',
+    'göğüste hacim kaybı',
+    'estetik cerrahi karar süreci',
+    '40 sonrası beden farkındalığı',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/beden-yakinlik/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Beden Konforu"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        articleType="clinical-guide"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc={bylineImage}
+        imageAlt="Aydınlık bir odada pencere kenarında dışarıyı seyreden kadın; editoryal görsel"
+        imagePosition="center top"
+      />
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Menopoz sonrası meme dokusu daha az dolgun ve daha gevşek hissedilebilir; değişimin derecesi
+          herkeste aynı değildir <Evidence from={3} to={4} /> <a href="#kaynak-1">[1]</a>.
+          Yeni bir kitle, tek taraflı belirgin değişim veya meme başından kanlı akıntı varsa bunu menopozla
+          açıklayıp geçmeyin; tıbbi değerlendirme gerekir <a href="#kaynak-2">[2]</a>.
+          Görünüm değişikliği tek başına ameliyat gerektirmez. Dikleştirme ve protez farklı amaçlara hizmet
+          eder; yağ transferinin de kendine özgü riskleri vardır. Cerrahi düşünüyorsanız beklediğiniz
+          değişimi, iyileşme süresini ve uzun vadeli takibi birlikte ele almak gerekir.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="beden-hissi">Bedenin Dönüşümü ve Ayna İlişkisi</h2>
+        <p>
+          Göğüslerinizin eskisi kadar dolgun görünmediğini ya da sütyenin içinde farklı durduğunu
+          fark edebilirsiniz. Bunu dile getirirken çekinmeniz de anlaşılır.
+        </p>
+        <p><em>“Aynadaki bu değişim için bir şey yapmam gerekiyor mu?”</em></p>
+        <p>
+          Görünümünüzle ilgili rahatsızlığınızı konuşabilirsiniz; bu, ameliyat kararı verdiğiniz anlamına
+          gelmez. Benim için de bir işlemin yapılabilir olması kadar sizin beklentinize ve sağlık
+          durumunuza uygun olması önemlidir.
+        </p>
+        <p>
+          Önce değişimin ne olduğunu ayırmak gerekir: dolgunluk mu azaldı, cilt mi gevşedi, yoksa
+          yeni ve belirli bir bölgede hissedilen bir bulgu mu var? Bu sorular bizi farklı değerlendirmelere götürür.
+        </p>
+
+        <h2 id="dokusal-donusum">Meme Dokusunun Katmanlı Değişimi</h2>
+        <p>
+          Memede gördüğünüz değişimi yalnızca cilde bakarak açıklamak zor. Süt bezleri, yağ dokusu
+          ve destek dokuları birlikte şekli belirler.
+        </p>
+        <p>
+          Menopozla birlikte östrojen azalırken süt bezleri küçülebilir; memenin dolgunluğu ve dokununca
+          verdiği his değişebilir. Yaşla birlikte destek dokusunun esnekliği de azalabilir
+          <Evidence from={3} to={4} /> <a href="#kaynak-1">[1]</a>.
+        </p>
+        <p>
+          Kilo değişimleri, gebelik ve emzirme geçmişi, cilt yapısı ve yerçekimi de meme şekline katkıda
+          bulunur. Bu nedenle her sarkmayı yalnızca menopoza bağlamak doğru olmaz
+          <a href="#kaynak-3">[3]</a>. Sizdeki değişimin derecesi ve görünümü başka bir kadınınkiyle aynı olmayabilir.
+        </p>
+
+        <h2 id="degerlendirme">Hangi Değişimler Muayene Gerektirir?</h2>
+        <p>
+          Yavaş gelişen genel bir şekil değişikliği ile yeni bir kitleyi ayrı düşünmek gerekir.
+          Yeni bir bulgu fark ettiğinizde sıradaki tarama tarihinizi beklemeyin.
+        </p>
+        <p>
+          Memede veya koltuk altında yeni kitle, tek taraflı belirgin şekil değişikliği, ciltte yeni
+          çekinti ya da geçmeyen kızarıklık, meme başında yeni içe çekilme veya kanlı akıntı tıbbi
+          değerlendirme gerektirir. Bu bulgular iyi huylu nedenlerle de görülebilir; nedenini muayene
+          ve gerektiğinde görüntüleme ile ayırmak gerekir <a href="#kaynak-2">[2]</a>.
+        </p>
+        <p>
+          Düzenli tarama, belirti yokken yapılan kontroldür. Yeni bir yakınmayı araştırmak ise farklı
+          bir değerlendirmedir. Mamografi, ultrason veya MR seçimi bulguya ve kişisel riskinize göre yapılır;
+          her kadının rutin olarak hepsini yaptırması gerekmez <a href="#kaynak-2">[2]</a>.
+        </p>
+
+        <h2 id="destek-sinirlari">Cerrahi Dışı Çabalar Nerede Durur?</h2>
+        <p>
+          Sütyen desteği ve egzersiz günlük rahatlığınıza katkıda bulunabilir. Fakat bunlardan
+          sarkan meme dokusunu eski konumuna taşımasını beklemek farklı bir beklentidir.
+        </p>
+        <p><em>“Egzersizi artırsam bu sarkma toparlanır mı?”</em></p>
+        <p>
+          Meme hacmini oluşturan süt bezleri ve yağ dokusu, göğüs altındaki kaslardan farklıdır.
+          Egzersiz bu kasları çalıştırır; gevşeyen cilt ve destek dokusunu cerrahi dikleştirme gibi
+          yeniden şekillendirmez <a href="#kaynak-1">[1]</a> <a href="#kaynak-3">[3]</a>.
+          Egzersizin hareket ve günlük rahatlık açısından yararı, meme şeklinden ayrı değerlendirilir.
+        </p>
+        <p>
+          Kilonuzu dengede tutmak ve rahat bir sütyen seçmek, cerrahi istemediğinizde de konuşabileceğiniz
+          seçeneklerdir. Kozmetik bakımların anatomik sarkmayı tamamen ortadan kaldıracağına dair
+          vaatlere temkinli yaklaşın.
+        </p>
+
+        <h2 id="cerrahi-secenekler">Duruş, Hacim ve Estetik Kararlar</h2>
+        <p>
+          Memeyi dikleştirmek ile hacim eklemek aynı amaç değildir. Cerrahi düşünüyorsanız önce
+          hangi değişimi istediğinizi netleştirmek işe yarar.
+        </p>
+        <p><em>“Protez istemiyorsam yalnızca dikleştirme yapılabilir mi?”</em></p>
+        <p>Seçenekler bu ayrım üzerinden konuşulur:</p>
+        <ul>
+          <li><strong>Dikleştirme (mastopeksi):</strong> Fazla cilt çıkarılır, meme dokusu yeniden şekillendirilir ve meme başının konumu düzenlenir. Temel amaç şekil ve konumdur; belirgin hacim eklemek değildir <a href="#kaynak-3">[3]</a>.</li>
+          <li><strong>Protez (implant):</strong> Dolgunluk beklentisi varsa dikleştirmeye ek olarak düşünülebilir. Her dikleştirmede gerekli değildir; ayrı riskleri ve takip ihtiyaçları vardır <a href="#kaynak-4">[4]</a> <a href="#kaynak-5">[5]</a>.</li>
+          <li><strong>Kendi dokusuyla şekillendirme:</strong> Mevcut hacim beklentinizi karşılıyorsa protezsiz dikleştirme mümkün olabilir. Bu işlem memeyi mutlaka küçültmez; belirgin küçültme ayrı bir cerrahi hedeftir <a href="#kaynak-3">[3]</a>.</li>
+        </ul>
+        <p>
+          Dikleştirme kesi izi bırakır. Kanama, enfeksiyon, yara iyileşmesinde sorun, asimetri,
+          geçici veya kalıcı his değişikliği ve yeniden ameliyat ihtiyacı olası riskler arasındadır.
+          Anestezi ve pıhtı riskleri de değerlendirilir <a href="#kaynak-4">[4]</a>.
+          Beklenen şekil ya da konfor değişikliği kişiden kişiye farklılık gösterebilir.
+        </p>
+        <p>
+          Protezler ömür boyu sorunsuz kalacak cihazlar değildir. Çevresindeki kapsülün sertleşmesi,
+          yırtılma ve ileride değiştirme veya çıkarma ihtiyacı olabilir. Bazı implantlarla ilişkili
+          nadir lenfoma ve diğer kanser bildirimleri de bilgilendirilmiş kararın parçasıdır
+          <a href="#kaynak-5">[5]</a>.
+        </p>
+
+        <h2 id="yag-enjeksiyonu">Yağ Transferi ve Güvenlik Takibi</h2>
+        <p>
+          Kendi yağ dokunuzun kullanıldığı bir işlemde de riskler vardır.
+          Hacim beklentisinin yanında takipte nelerle karşılaşılabileceğini de bilmek gerekir.
+        </p>
+        <p><em>“Memeye yağ enjeksiyonuna neden temkinli yaklaşıyorsunuz?”</em></p>
+        <p>
+          Bu seçeneği genellikle tavsiye etmiyorum. Bu, benim klinik yaklaşımımdır; yöntemin her durumda
+          sakıncalı olduğu ya da meme taramasını mutlaka bozduğu anlamına gelmez.
+        </p>
+        <p>
+          Nakledilen yağın bir kısmı canlılığını kaybedebilir. Yağ kistleri, kalsifikasyon denilen
+          kireçlenmeler ve enfeksiyon oluşabilir <a href="#kaynak-6">[6]</a>.
+          Görüntüleme değişikliklerinin çoğu iyi huyludur ve deneyimli meme radyologları tarafından
+          ayırt edilebilir; belirsiz bir bulguda ek inceleme veya biyopsi gerekebilir
+          <Evidence level={3} /> <a href="#kaynak-7">[7]</a>.
+        </p>
+        <p>
+          Güncel araştırmalar bu değişikliklerin kanser saptamayı genel olarak bozduğunu göstermiyor.
+          Ancak veriler çoğunlukla gözlemsel çalışmalardan geliyor; farklı teknikler ve takip süreleri
+          sonuçları sınırlandırıyor <a href="#kaynak-7">[7]</a>.
+          Menopoz sonrasına özgü güvenlik sonuçları bu verilerden ayrıca çıkarılamaz.
+        </p>
+        <p>
+          Yağ transferi geçirdiyseniz işlemin tarihini ve kapsamını görüntüleme ekibine bildirin.
+          Önceki tetkikleri karşılaştırmaya sunmak takip planının bir parçasıdır <a href="#kaynak-2">[2]</a>.
+        </p>
+
+        <h2 id="cerrahla-konusma">Muayene Odamda Sorulacak Sorular</h2>
+        <p>
+          Muayeneye gitmek, ameliyat olmayı kabul etmek değildir. Aklınızdaki soruları yazıp
+          yanınızda götürebilirsiniz.
+        </p>
+        <p>Karar vermeden önce şu başlıkları konuşun:</p>
+        <ul>
+          <li>Mevcut doku yapımda yalnızca dikleştirmeden ne bekleyebilirim?</li>
+          <li>Kronik hastalıklarım, kullandığım ilaçlar ve meme görüntüleme geçmişim planı nasıl etkiler?</li>
+          <li>Protez düşünülüyorsa ek riskler ve uzun vadeli takip neler olacak?</li>
+          <li>İz, his değişikliği ve yeniden ameliyat olasılığını nasıl değerlendirmeliyim?</li>
+          <li>İşe, günlük hareketlere ve egzersize dönüşüm nasıl planlanacak?</li>
+          <li>Ameliyat sonrası meme taramam ile gerekiyorsa implant kontrolüm nasıl yürütülecek?</li>
+        </ul>
+        <p>
+          Benim için bu konuşmanın merkezinde, istediğiniz değişimin sağlık durumunuz ve günlük
+          hayatınızla uyuşması var. Riskleri ve iyileşme yükünü de aynı açıklıkla konuşabilmelisiniz.
+        </p>
+
+        <h2 id="kisisel-denge">Kendi Bedeninizde Rahat Hissetmek</h2>
+        <p>
+          Göğüslerinizin değişmiş olması, bir müdahale yaptırma zorunluluğu yaratmaz.
+          Nasıl hissettiğinizi ve ne istediğinizi düşünmek için zaman ayırabilirsiniz.
+        </p>
+        <p>
+          Kararsızsanız önce beklentinizi adlandırın: kıyafet içinde farklı bir duruş mu,
+          dolgunluk mu, yoksa yeni bir bulgunun nedenini öğrenmek mi istiyorsunuz?
+          Yanıtınız, konuşmanın nereden başlayacağını belirler.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sss"
+        class="mt-10"
+        items={faqItems}
+        title="Bu Yazıdan Sonra Akla Gelen Sorular"
+        intro="Egzersiz, protez ve görüntüleme takibiyle ilgili sorulara kısa yanıtlar."
+      />
+
+      <ArticleProsePanel class="mt-10" mode="editorial">
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol>
+          <li id="kaynak-1"><a href="https://medlineplus.gov/ency/article/003999.htm" target="_blank" rel="noopener noreferrer">MedlinePlus: Yaşla birlikte meme dokusundaki değişimler</a>. Menopoz, süt bezleri ve destek dokusunun esnekliği.</li>
+          <li id="kaynak-2"><a href="https://www.cancer.gov/types/breast/breast-changes/understanding-breast-changes.pdf" target="_blank" rel="noopener noreferrer">NCI: Meme değişimleri ve durumları hakkında hasta rehberi</a>. Yeni belirtiler, tarama ile tanısal değerlendirme ayrımı.</li>
+          <li id="kaynak-3"><a href="https://www.plasticsurgery.org/cosmetic-procedures/breast-lift" target="_blank" rel="noopener noreferrer">ASPS: Meme dikleştirmenin amacı ve sınırları</a>.</li>
+          <li id="kaynak-4"><a href="https://www.plasticsurgery.org/cosmetic-procedures/breast-lift/safety" target="_blank" rel="noopener noreferrer">ASPS: Meme dikleştirme riskleri</a>.</li>
+          <li id="kaynak-5"><a href="https://www.fda.gov/medical-devices/breast-implants/risks-and-complications-breast-implants" target="_blank" rel="noopener noreferrer">FDA: Meme implantlarının riskleri ve komplikasyonları</a>.</li>
+          <li id="kaynak-6"><a href="https://www.plasticsurgery.org/cosmetic-procedures/fat-transfer-breast-augmentation/safety/" target="_blank" rel="noopener noreferrer">ASPS: Memeye yağ transferinin riskleri</a>.</li>
+          <li id="kaynak-7"><a href="https://doi.org/10.1093/asj/sjag187" target="_blank" rel="noopener noreferrer">Memeye yağ transferi: Komplikasyonlar ve görüntüleme sonuçları üzerine sistematik derleme ve meta-analiz (2026)</a>. Çoğunlukla gözlemsel veriler; menopoz sonrasına özgü sonuç değildir.</li>
+        </ol>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/beden-yakinlik/meme-kucultme-menopoz-sonrasi-beden-konforu/',
+          '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
+          '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Çağrı Sade'nin yağ transferine yaklaşımı kişisel klinik görüşüdür. Kaynaklarda bildirilen
+          riskler ve belirsizlikler bu görüşten ayrı sunulmuştur; cerrahi seçenekler bireysel değerlendirme gerektirir.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>Bu yazı genel bilgilendirme amaçlıdır; bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.</p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

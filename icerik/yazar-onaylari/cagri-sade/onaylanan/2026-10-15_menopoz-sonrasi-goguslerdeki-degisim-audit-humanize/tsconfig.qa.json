@@ -1,0 +1,1 @@
+{"extends": "D:\\A-klasör\\Estranova\\tsconfig.json", "include": ["D:\\A-klasör\\Estranova\\src/**/*.ts", "D:\\A-klasör\\Estranova\\src/**/*.tsx"], "exclude": ["node_modules", "dist", "icerik"]}

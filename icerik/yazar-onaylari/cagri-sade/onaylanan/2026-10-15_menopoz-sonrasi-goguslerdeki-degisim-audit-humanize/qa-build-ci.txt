@@ -1,0 +1,18 @@
+
+> estranova@0.0.0 build:ci
+> astro sync && npm run lint && npm run compliance && npm run articles:audit:strict && npm run articles:audit:templates && npm run build && npm run seo:audit
+
+22:56:00 [content] Syncing content
+22:56:01 [content] Synced content
+22:56:01 [types] Generated 373ms
+
+> estranova@0.0.0 lint
+> tsc --noEmit
+
+article-drafts/kas-iskelet-preview2/src/data/data/static-articles.ts(1,38): error TS2307: Cannot find module '../utils/article-schema' or its corresponding type declarations.
+article-drafts/kas-iskelet-preview2/src/utils/utils/article-schema.ts(1,38): error TS2307: Cannot find module '../data/writers' or its corresponding type declarations.
+article-drafts/kas-iskelet-preview2/src/utils/utils/article-schema.ts(2,61): error TS2307: Cannot find module '../data/submenu-heroes' or its corresponding type declarations.
+article-drafts/kas-iskelet-preview2/src/utils/utils/article-schema.ts(3,37): error TS2307: Cannot find module '../data/article-faqs' or its corresponding type declarations.
+article-drafts/kas-iskelet-preview2/src/utils/utils/article-schema.ts(9,8): error TS2307: Cannot find module '../data/article-types' or its corresponding type declarations.
+article-drafts/kas-iskelet-preview2/src/utils/utils/writer-profiles.ts(1,29): error TS2307: Cannot find module '../data/writers' or its corresponding type declarations.
+article-drafts/kas-iskelet-preview2/src/utils/utils/writer-style.ts(1,38): error TS2307: Cannot find module '../data/writers' or its corresponding type declarations.

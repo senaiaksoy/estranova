@@ -1,0 +1,5 @@
+0 editorial candidates; 67 prose blocks inspected.
+Advisory lexical/structural candidates, not authorship detection or clinical approval.
+Semantic repetition and medication-section equivalence still need whole-text editorial reading.
+Frontmatter summaries/FAQs and JSX props/expressions require separate visible-text inspection.
+Block quotations are excluded from editorial suggestions; punctuation and passive voice are not banned.
