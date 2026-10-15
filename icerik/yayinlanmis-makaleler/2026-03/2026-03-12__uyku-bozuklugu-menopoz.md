@@ -4,14 +4,26 @@ description: "Menopozda uykusuzluk, gece uyanmaları ve sıcak basmaları arası
 writer: senai-aksoy
 publishedDate: "12 Mart 2026"
 publishedDateIso: 2026-03-12
+modifiedDate: "29 Eylül 2026"
+medicalReviewer: "Dr. Alper Mumcu"
+exportScope: local-build
 url: /zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/
 section: "Zihin & Denge"
 sectionPath: /zihin-denge/
 keywords: ["menopozda uykusuzluk", "menopozda uyku bozukluğu", "menopozda gece uyanması", "menopozda uykuya dalamama", "perimenopoz uyku", "CBT-I", "sıcak basması", "uyku hijyeni"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi
+
+Okumaya Başlamadan
+
+## Kısa Özet
+
+Sabah gözünüzü açtığınızda gece hiç dinlenmemiş gibi hissediyorsanız, geceyi bölen şey bazen sıcak basması,
+bazen hormon dalgalanması, bazen ruh hâlidir; çoğu kez de bunlardan birkaçı birlikte çalışır. Bu rehber,
+önce geceyi neyin böldüğünü ayırmayı, sonra sade alışkanlıkları ve ne zaman hekimle konuşmak gerektiğini
+anlatıyor.
 
 ## Uyku Gece Boyunca Evre Evre İlerler
 
@@ -26,9 +38,7 @@ REM evresinde duygu düzenleme ve bellek işleme devreye girer. Ortalama bir dö
 ve gece boyunca birkaç kez tekrarlanır.
 
 Menopoz döneminde toplam uyku süresi ve uyku derinliği azalabilir; gece sıcak basmaları da uykuyu
-bölebilir
-(iyi kanıt)
-<sup>[[3]](#kaynak-3)</sup>. Sabah dinlenmemiş uyanmanız yatakta geçirdiğiniz saatlerle
+bölebilir (iyi kanıt)<sup>[[3]](#kaynak-3)</sup>. Sabah dinlenmemiş uyanmanız yatakta geçirdiğiniz saatlerle
 açıklanamayabilir. Kendinizi suçlamanıza gerek yok.
 
 ## Menopozda Uyku Neden Bozulur?
@@ -37,9 +47,7 @@ Gece ansızın sıcak basmasıyla uyanan bir kadın yalnız değildir. Pek çok 
 serin bir oda, ince bir gecelik, sonra birden boğazdan yukarı bir dalga. Önce şunu söyleyeyim: bu sahne
 hormonal geçişin çok tanıdık bir yüzü.
 
-En sık nedenlerden biri gece ortaya çıkan sıcak basması ve terleme belirtileridir
-(iyi kanıt)
-<sup>[[1]](#kaynak-1)</sup><sup>[[3]](#kaynak-3)</sup>.
+En sık nedenlerden biri gece ortaya çıkan sıcak basması ve terleme belirtileridir (iyi kanıt)<sup>[[1]](#kaynak-1)</sup><sup>[[3]](#kaynak-3)</sup>.
 Beden ısısındaki ani değişimler uyku bütünlüğünü bozarak sık uyanmaya yol açabilir. Buna östrojen ve
 progesteron dalgalanmaları, ruh hâli değişimleri, artan kaygı, horlama ve uyku apnesi de tabloya
 eklenebilir.
@@ -78,9 +86,7 @@ Telefon uygulaması sekiz saat uyuduğunuzu söyleyebilir; siz yine de sabah top
 girebilirsiniz. Saat tutar, ama dinlenmişliği ölçmez.
 
 Yatak odasını serin, karanlık ve sessiz tutmak sıcak basması olan kişilerde gece konforunu artırabilir
-
-(orta kanıt)
-. Akşam saatlerinde kafeini sınırlamak, yatmadan 2-3 saat önce ağır yemekten
+(orta kanıt). Akşam saatlerinde kafeini sınırlamak, yatmadan 2-3 saat önce ağır yemekten
 uzaklaşmak, ekran ışığını yumuşatmak ve kısa bir kapanış rutini kurmak da yardımcı olabilir. Yine de uzun
 süren uykusuzlukta bu alışkanlıklar tek başına çoğu zaman yetmez; uyku kılavuzları da uyku hijyenini tek
 başına bir tedavi olarak önermiyor<sup>[[2]](#kaynak-2)</sup>.
@@ -100,9 +106,7 @@ birlikte değerlendirmek en güvenli yol. Bazı kadınlar fayda gördüğünü s
 sonucu verdiğini gösteren sağlam bir kanıt yok.
 
 Melatonin ve diğer takviyelerin etkisi kişiden kişiye değişir; menopozal uykusuzluk için rutin ve herkese
-uygun bir takviye formülü olduğu söylenemez
-(sınırlı–orta kanıt)
-. Düzenli ilaç kullanıyorsanız,
+uygun bir takviye formülü olduğu söylenemez (sınırlı–orta kanıt). Düzenli ilaç kullanıyorsanız,
 gebelik olasılığınız varsa ya da karaciğer, böbrek veya bağışıklık sistemiyle ilgili bir durumunuz varsa,
 "doğal" etiketli ürünlerin de ilaçlarla etkileşebileceğini unutmayın; takviye kararını hekim veya eczacıyla
 birlikte verin.
@@ -115,9 +119,7 @@ sorum şudur: sizi ne uyandırıyor? Her uyanmayı menopoza bağlamam; önce ned
 CBT-I, uykusuzluk için uyarlanmış yapılandırılmış bir programdır. Uykusuzluk sıklaşıp gündüz yaşamınızı
 etkiliyorsa, özellikle uzun süredir sürüyorsa gündeme getiririm. Kanıt tabanı da güçlüdür: menopozdaki
 kadınlarda yapılan 11 randomize çalışmayı (toplam 973 katılımcı) birleştiren bir meta-analizde uyku
-kalitesinin ve uykusuzluk şiddetinin düzeldiği görülmüştür
-(güçlü kanıt)
-<sup>[[2]](#kaynak-2)</sup><sup>[[4]](#kaynak-4)</sup>. HRT ise gece
+kalitesinin ve uykusuzluk şiddetinin düzeldiği görülmüştür (güçlü kanıt)<sup>[[2]](#kaynak-2)</sup><sup>[[4]](#kaynak-4)</sup>. HRT ise gece
 terlemesi ve sıcak basması uykuyu belirgin biçimde bölüyorsa seçeneklerden biridir; kararı yaşınıza,
 menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm.
 
@@ -155,15 +157,6 @@ Aynı yaşta, benzer hormonal tabloda iki kadından birinde apne sessiz seyreder
 uykululuğuyla erken belli olabilir. Hangisinin hangisi olduğunu yalnızca konuşarak bilemem; tahmin
 yürütmek yerine klinik değerlendirme, gerekirse polisomnografi ve uyku uzmanı izlemi isterim.
 
-## Kaynaklar
-
-Bu rehberdeki klinik çerçeveyi oluşturan başlıca kaynaklar; metindeki numaralar bu listeye bağlanır:
-
-- Türkiye Endokrinoloji ve Metabolizma Derneği. [Menopoz hakkında bilgilendirme notu](https://temd.org.tr/halk/hastaliklar/menopoz).
-- Edinger JD ve ark. Yetişkinlerde kronik uykusuzluğun davranışsal ve psikolojik tedavisi: Amerikan Uyku Tıbbı Akademisi klinik uygulama kılavuzu. J Clin Sleep Med. 2021;17(2):255-262. [PMID: 33164742](https://pubmed.ncbi.nlm.nih.gov/33164742/).
-- Silvestri R ve ark. Menopozal uyku bozukluklarının tedavisine ilişkin İtalyan Uyku Tıbbı Derneği görüş bildirisi ve kılavuzu (sistematik derleme). Maturitas. 2019;129:30-39. [PMID: 31547910](https://pubmed.ncbi.nlm.nih.gov/31547910/).
-- Moon HJ, Yu SN, Hur MH. Menopozal uykusuzlukta bilişsel davranışçı terapinin uyku kalitesi ve uykusuzluk şiddeti üzerine etkisi: sistematik derleme ve meta-analiz. Womens Health Nurs. 2025;31(4):304-319. [PMID: 41531400](https://pubmed.ncbi.nlm.nih.gov/41531400/).
-
 ## Kapanış
 
 Bu yazıdan aklınızda üç şey kalsın: sabit bir yatma-kalkma saati, serin bir yatak odası ve akşamın son iki
@@ -174,6 +167,66 @@ adımdır. Bir cihazın gösterdiği rakam haftalık bir eğilim verir, bir gece
 göstermeyebilir.
 
 Uyku bozukluğu görünmez bir yük olabilir. Hekiminize anlatmaya değer.
+
+## Kaynaklar
+
+Bu rehberdeki klinik çerçeveyi oluşturan başlıca kaynaklar; metindeki numaralar bu listeye bağlanır:
+
+- Türkiye Endokrinoloji ve Metabolizma Derneği. [Menopoz hakkında bilgilendirme notu](https://temd.org.tr/halk/hastaliklar/menopoz).
+- Edinger JD ve ark. Yetişkinlerde kronik uykusuzluğun davranışsal ve psikolojik tedavisi: Amerikan Uyku Tıbbı Akademisi klinik uygulama kılavuzu. J Clin Sleep Med. 2021;17(2):255-262. [PMID: 33164742](https://pubmed.ncbi.nlm.nih.gov/33164742/).
+- Silvestri R ve ark. Menopozal uyku bozukluklarının tedavisine ilişkin İtalyan Uyku Tıbbı Derneği görüş bildirisi ve kılavuzu (sistematik derleme). Maturitas. 2019;129:30-39. [PMID: 31547910](https://pubmed.ncbi.nlm.nih.gov/31547910/).
+- Moon HJ, Yu SN, Hur MH. Menopozal uykusuzlukta bilişsel davranışçı terapinin uyku kalitesi ve uykusuzluk şiddeti üzerine etkisi: sistematik derleme ve meta-analiz. Womens Health Nurs. 2025;31(4):304-319. [PMID: 41531400](https://pubmed.ncbi.nlm.nih.gov/41531400/).
+
+Pratik Sorular
+
+## Dr. Aksoy'a Sorular
+
+Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.
+
+### Menopozda uykusuzluk yalnızca sıcak basmasına mı bağlıdır?
+
+Hayır. Sıcak basması önemli bir neden olabilir, ama stres, ağrı, gece idrara kalkma, huzursuz bacak veya uyku apnesi de uykuyu bölebilir. Hastaya önce "Sizi ne uyandırıyor?" diye sorarım; her uyanmayı menopoza bağlamam.
+
+### Gece sık uyanıp tekrar uyuyabiliyorsam yine de bunu önemsemeli miyim?
+
+Gece kısa süre uyanıp tekrar uyumak tek başına hastalık belirtisi değildir. Benim için belirleyici olan bunun ne kadar sık olduğu ve sabah dinlenmiş kalkıp kalkmadığınız, gün içinde yorgunluk veya dikkat sorunu yaşayıp yaşamadığınızdır. Belirgin horlama ya da nefes durması anlatılıyorsa, tekrar uyuyabiliyor olsanız da ayrıca değerlendiririm.
+
+### Uyku günlüğü tutmak gerçekten işe yarar mı?
+
+Evet, ama günlüğü bir sınav gibi tutmanızı istemem. Bir–iki hafta boyunca yatış saatinizi, gece uyanmalarınızı, sıcak basmasını ve ertesi gün nasıl hissettiğinizi kısaca yazmanız yeterli. Bu kayıt sorunun seyrini görmemize yardımcı olur; tek başına bir tedavi değildir.
+
+### CBT-I nedir, uykusuzlukta neden gündeme geliyor?
+
+CBT-I, uykusuzluk için geliştirilmiş yapılandırılmış bir bilişsel davranışçı terapidir. Uyku saatlerini ve yatakta geçirilen zamanı düzenlemeyi, uykuyla ilgili kaygıyı azaltmayı öğretir. Uykusuzluk sıklaşıp gündüz yaşamınızı etkiliyorsa, özellikle uzun süredir devam ediyorsa gündeme getiririm; yalnızca "erken yatın" demekten ibaret değildir.
+
+### Sıcak basması gece uykumu bölüyorsa hormon tedavisi (HRT) seçenekler arasında mı?
+
+Evet, gece terlemesi ve sıcak basması uykunuzu belirgin biçimde bölüyorsa hormon tedavisi seçeneklerden biridir. Kararı yaşınıza, menopozdan beri geçen süreye, rahminizin olup olmadığına ve kişisel sağlık risklerinize göre veririm. Sıcak basması olmadan yalnızca uykusuzluk varsa, HRT'yi otomatik olarak uyku ilacı gibi önermem; önce uykusuzluğun nedenini değerlendiririm.
+
+Bilimsel Editör Notu
+
+Kanıt Düzeyi: (iyi–güçlü kanıt)
+
+**Klinik not:** Menopozal geçişte uyku bozukluğu çok faktörlüdür:
+sıcak basması ve gece terlemesi, hormonal geçiş, ruh hâli iniş-çıkışları ve obstrüktif uyku apnesi aynı
+gecede birlikte rol oynayabilir. Uyku şikâyetinin altında menopozdan bağımsız tablolar da olabilir:
+tiroid bozuklukları, kansızlık, demir eksikliği, depresyon, ilaç yan etkileri, kronik ağrı ve huzursuz
+bacak sendromu. Bu yüzden "menopoz uykusu" başlığı altındaki her şikâyet ayırıcı tanı gözüyle
+değerlendirilmelidir.
+
+**Kanıt notu:** Menopozal uyku bozukluklarına ilişkin sistematik
+derlemeye dayanan görüş bildirisi, hormon tedavisiyle sıcak basması, uykusuzluk ve ruh hâli
+şikâyetlerinde düzelme görüldüğünü bildiriyor; huzursuz bacakta hormon tedavisine ilişkin veriler ise
+çelişkili. Menopozdaki kadınlarda uykusuzluk için bilişsel davranışçı terapiyi inceleyen meta-analiz,
+yüz yüze ve uzaktan uygulamada uyku kalitesinde benzer düzelme bildiriyor. Takviyelerde kanıt sınırlıdır.
+
+**Pratik bütünleşim:** Plan, belirtinin kaynağına göre kurulur:
+uyku düzeni ve yatak odası koşulları, eşlik eden sıcak basmasının yönetimi, kronik uykusuzlukta CBT-I ve
+gerektiğinde hekim gözetiminde ilaç seçenekleri. Uyku ilacı veya takviyeyi uzun süre kendi başınıza
+sürdürmeyin; düzenli izlem gerekir. Bir takviye denemeden önce erken klinik değerlendirme çoğu zaman
+daha yararlıdır.
+
+— Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · bu yazının bağımsız tıbbi incelemesi
 
 Tıbbi Not
 

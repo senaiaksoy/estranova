@@ -16,6 +16,13 @@ exportedAt: 2026-10-15
 
 # Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır
 
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Menopozdan sonra güçten ne anladığım değişti. Her şeye yetişmeye çalışırken kendimden ne
+beklediğimi, neyi başkasına bırakabileceğimi de düşünmeye başladım.
+
 ## Aslında Her Şey Bir Çantayla Başladı...
 
 Hepimizin yaşadığı bir an vardır: evden çıkmadan önce çantaya bir şey daha koyarız. Sonra bir
@@ -74,6 +81,18 @@ Her gün iyi hissetmiyorum. Böyle günlerde kendime kızmadan bunu kabul etmeyi
 
 Bugün çantadan neyi çıkaracağımı biliyorum. Günün planından neyi çıkaracağımı bulmaksa
 bazen hâlâ daha zor.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Dr. Alper Mumcu
+
+40 yaş sonrasında fiziksel aktivite, menopoz döneminde de kas kütlesini ve gücünü korumaya yardımcı olur.
+Kemik sağlığı, metabolik sağlık, uyku ve enerjiyle ilgili yakınmalar, kişinin sağlık geçmişi ve mevcut
+durumuyla birlikte değerlendirilir.
+
+HRT kararı yakınmalar, yaş, menopozdan geçen süre ve kişisel riskler dikkate alınarak verilir.
+Meme sağlığı, rahmin bulunup bulunmaması, pıhtı riski ve kalp-damar öyküsü değerlendirmede önemlidir.
+Bu değerlendirme, kişiye uygun tedavi seçiminin ve takip planının temelini oluşturur.
 
 Tıbbi Not
 

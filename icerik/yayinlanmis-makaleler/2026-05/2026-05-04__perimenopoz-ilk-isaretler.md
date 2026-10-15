@@ -4,14 +4,25 @@ description: "Perimenopoz belirtileri nelerdir, kaç yaşında başlar? Adet dü
 writer: senai-aksoy
 publishedDate: "4 Mayıs 2026"
 publishedDateIso: 2026-05-04
+modifiedDate: "3 Ağustos 2026"
+exportScope: local-build
 url: /hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/
 keywords: ["perimenopoz belirtileri", "perimenopoz nedir", "perimenopoz kaç yaşında başlar", "erken menopoz belirtileri", "menopoz geçişi", "adet düzensizliği 40 yaş", "sıcak basması", "gece terlemesi", "uyku", "beyin sisi", "FSH"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Perimenopoz Belirtileri ve İlk İşaretler: 
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+Perimenopoz, yumurtalık fonksiyonunun düzensizleşmeye başladığı ve adet döngüsünün değiştiği geçiş dönemidir.
+45 yaş üzerinde yeni başlayan vazomotor belirtiler ve adet düzeni değişikliği çoğu zaman klinik tanı için
+yeterlidir; tek bir kan testi tabloyu netleştirmez. Bu yazı, belirtileri okuma ve hekim görüşmesine hazırlanma
+için klinik bir başlangıç çerçevesidir.
 
 ## İlk İşareti Nasıl Tanırız?
 
@@ -25,9 +36,7 @@ konduğunda anlam kazanan küçük notlar halinde.
 Tıbbi olarak perimenopoz, menopoza giden geçiş dönemidir. Yumurtlama düzensizleşir; östrojen ve progesteron
 tek çizgide azalmak yerine dalgalanır. Menopoz ise son adetten sonra 12 ay tamamlandığında geriye dönük
 olarak tanımlanır — yani perimenopoz hâlâ kanamanın sürdüğü, ama eski düzenin gevşediği dönemdir.
-
-(iyi kanıt)
-<sup>[[1]](#kaynak-1)</sup>
+(iyi kanıt)<sup>[[1]](#kaynak-1)</sup>
 
 ## Adet Takvimindeki Değişim
 
@@ -35,9 +44,7 @@ Perimenopozun en erken ve en görünür işareti adet düzenindeki değişimdir;
 
 Adet aralığı kısalabilir ya da uzayabilir; kanama miktarı daha hafif ya da daha yoğun olabilir. Bazı
 aylarda yumurtlama gerçekleşmeyebilir; bu da beklenen tarihin kaymasına, atlanan kanamalara ya da
-döngünün genel olarak değişken görünmesine yol açar.
-(iyi kanıt)
-<sup>[[1]](#kaynak-1)</sup>
+döngünün genel olarak değişken görünmesine yol açar. (iyi kanıt)<sup>[[1]](#kaynak-1)</sup>
 
 Klinik değerlendirmede tek bir aylık sapma değil, birkaç ay boyunca tekrar eden değişimler anlamlıdır.
 STRAW+10 sınıflandırma çerçevesine göre; adet aralığının birden fazla dönem boyunca yedi gün veya daha fazla
@@ -98,9 +105,7 @@ NICE kılavuzu ve uluslararası klinik rehberler açık: 45 yaş ve üzerindeki 
 klinik olarak tanınabilir. Aynı kılavuz, bu yaş grubunda estradiol, AMH, inhibinler ve antral folikül sayısı
 gibi testleri perimenopoz tanısı için rutin önermemektedir. FSH ise özellikle 40–45 yaş arası semptomatik
 kişilerde ya da 40 yaş altı erken yumurtalık yetmezliği şüphesinde daha anlamlı bir yere oturur.
-
-(güçlü kanıt)
-<sup>[[3]](#kaynak-3)</sup>
+(güçlü kanıt)<sup>[[3]](#kaynak-3)</sup>
 
 Bu, "test gereksizdir" demek değildir. Düzensiz kanama, tiroid bozukluğu, demir eksikliği veya gebelik
 şüphesi varsa elbette farklı testler gerekir. Perimenopozda iyi hekimlik, hangi soruya hangi testin cevap
@@ -147,6 +152,56 @@ Harlow SD ve arkadaşları. [Executive summary of the Stages of Reproductive Agi
 
 -
 National Institute for Health and Care Excellence (NICE). [Menopause: diagnosis and management — NG23](https://www.nice.org.uk/guidance/ng23). 2015, güncelleme 2019.
+
+Pratik Sorular
+
+## Sıkça Sorulan Sorular
+
+Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.
+
+### Perimenopoz kaç yaşında başlar?
+
+Çoğu kadında kırklı yaşlarda fark edilir; bazı kadınlarda otuzların sonlarında, bazılarında ellilere yakın başlayabilir. Aile öyküsü, sigara, bazı kanser tedavileri, yumurtalık cerrahisi ve bazı otoimmün durumlar zamanlamayı etkileyebilir. Yaştan çok gidişe bakmak gerekir.
+
+### Adet görüyorsam hâlâ gebe kalabilir miyim?
+
+Evet. Yumurtlama düzensizleşse de tamamen bitmiş sayılmaz. Gebelik istemiyorsanız, menopoz son adet üzerinden 12 ay geçerek netleşene kadar doğum kontrolü konusunu hekiminizle konuşmanız gerekir.
+
+### Her sıcak basması perimenopoz mudur?
+
+Hayır. Sıcak basması perimenopozda sık görülür, ama tiroid sorunları, bazı ilaçlar, enfeksiyonlar, stres sistemi ve başka tıbbi durumlar da benzer hisler yaratabilir. Yeni, şiddetli veya günlük hayatı bozan belirtilerde değerlendirme gerekir.
+
+### Beyin sisi kalıcı mı?
+
+Çoğu kadında hafif, dalgalı ve geçiş dönemine eşlik eden bir şikâyet olarak yaşanır. Uyku bozukluğu, stres, demir eksikliği, tiroid sorunları ve depresyon da tabloyu artırabilir. Korkuya kapılmadan, ama uzun sürerse görmezden gelmeden ele almak en sağlıklısıdır.
+
+### Hormon tedavisi bu dönemde şart mı?
+
+Hayır, şart değildir; ama bazı kadınlarda belirgin vazomotor belirtiler ve yaşam kalitesi etkilenmesi varsa seçeneklerden biri olabilir. Karar yaş, sağlık öyküsü, riskler, beklentiler ve kontrendikasyonlar birlikte değerlendirilerek hekimle verilir. Bu yazı karar rehberi değil, ilk işaretleri okuma rehberidir.
+
+Bilimsel Editör Notu
+
+**Tanıya yaklaşım:** NICE 2019 kılavuzuna göre 45 yaş üzerindeki
+sağlıklı kişilerde yeni başlayan vazomotor belirtiler ve adet düzeni değişikliği çoğu zaman klinik
+tanı için yeterlidir. Perimenopoz tanısı için tek bir hormon ölçümüne dayanmak genellikle yanıltıcıdır;
+östrojen ve FSH bu dönemde belirgin dalgalanır.
+
+**Kanama değişiminin önemi:** STRAW+10 sınıflandırmasına göre adet
+aralığının birden fazla dönem boyunca yedi gün veya daha fazla değişmesi erken geçişi, 60 gün ve üzeri
+aralıklar geç geçişi düşündürebilir. Yoğun, ara, ilişki sonrası veya postmenopozal kanama geçişten
+bağımsız olarak ayrıca değerlendirilmelidir.
+
+**Test kullanımı:** Estradiol, AMH ve antral folikül sayısı gibi testler
+perimenopoz tanısı için 45 yaş üzerindeki sağlıklı kişilerde rutin olarak önerilmemektedir. FSH;
+40–45 yaş arası semptomatik kişilerde veya 40 yaş altı erken yumurtalık yetmezliği şüphesinde
+anlamlı ek bilgi sağlayabilir.
+
+**Ayırıcı tanı:** Uyku, ruh hali, bilişsel yakınmalar ve vazomotor
+belirtiler perimenopozla ilişkili olabilir; ancak tiroid hastalığı, anemi, gebelik, ilaç etkisi, depresyon
+ve uyku apnesi ayırıcı tanıda akılda tutulmalıdır. Bu yazı genel bilgi niteliğindedir; kişisel klinik
+değerlendirmenin yerini almaz.
+
+— Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı
 
 Tıbbi Not
 

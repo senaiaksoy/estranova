@@ -11,12 +11,11 @@ url: /hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/
 keywords: ["menopoz", "HRT", "hormon tedavisi", "kişisel karar", "menopoz güncesi", "aile öyküsü", "osteoporoz", "sıcak basması", "menopozda hekim kararı"]
-exportedAt: 2026-10-13
+exportedAt: 2026-10-15
 ---
 
 # Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı
 
-not
 Okumaya Başlamadan
 
 ## Bu yazıya başlarken

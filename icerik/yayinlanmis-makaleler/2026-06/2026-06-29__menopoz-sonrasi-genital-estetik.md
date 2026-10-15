@@ -4,129 +4,115 @@ description: "Op. Dr. Çağrı Sade, menopoz sonrası genital bölge değişimle
 writer: cagri-sade
 publishedDate: "29 Haziran 2026"
 publishedDateIso: 2026-06-29
+modifiedDate: "14 Ekim 2026"
+exportScope: local-build
 url: /beden-yakinlik/menopoz-sonrasi-genital-estetik/
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik/
 keywords: ["menopoz sonrası genital estetik", "labioplasti", "genital bölge değişimleri", "menopozda mahrem bölge", "genital konfor", "labium minus", "labium majus", "cerrahi karar süreci", "40 sonrası beden farkındalığı"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Menopoz Sonrası Genital Estetik: Her Değişim Ameliyat Gerektirir mi?
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+Menopoz sonrası genital bölgede doku incelmesi, hassasiyet veya hacim kaybı görülebilir.
+Görünüm değişikliği tek başına ameliyat gerektirmez. Kuruluk, yanma ve ilişki sırasında ağrı varsa
+önce neden araştırılır; nemlendiriciler, kayganlaştırıcılar ve uygun kişide lokal hormonal tedaviler
+değerlendirilebilir (iyi kanıt)<sup>[[1]](#kaynak-1)</sup>.
+Labioplasti ve yağ aktarımı farklı amaçları olan cerrahi işlemlerdir; olası yararları kadar riskleri
+ve kanıt sınırları da konuşulmalıdır. Yeni yara, kitle, geçmeyen kaşıntı veya menopoz sonrası kanama
+ise estetik bir karar beklerken ertelenmemesi gereken değerlendirme nedenleridir.
 
 ## Mahrem Bölgedeki Her Değişim Ameliyat Anlamına Gelmez
 
 Menopoz denildiğinde çoğu kadının aklına sıcak basması, uykusuzluk veya cilt değişimleri gelir.
 Oysa hormonlardaki değişim, bedenin en az konuşulan bölgelerinde de zamanla hissedilebilir.
 
-Genital bölgedeki değişiklikler bazı kadınlarda yalnızca görünüm farkı olarak kalır. Bazılarında ise
-dar kıyafet, spor, yürüyüş, bisiklet, oturma konforu veya cinsel yaşam sırasında rahatsızlık duygusuna
-eşlik eder.
+İç çamaşırının sürtmesi, bisiklette rahatsızlık veya ilişki sırasında ağrı, görünüm kaygısından
+farklı sorular doğurur. Sizin için değişen şeyin ne olduğunu anlatmak, görüşmenin başlangıcı olabilir.
 
-Bu konu çoğu zaman yüksek sesle söylenmez; bazen bir cümlenin sonunda, bazen “aslında bir şey daha
-soracaktım” diye açılır. Bu çekingenlik çok anlaşılırdır. Yine de mahremiyet, konunun önemini azaltmaz;
-yalnızca daha özenli ve daha yargısız konuşulmasını gerektirir.
+Bu konuyu açarken çekinmeniz anlaşılır. Sorunuzu anlatmak için utanmanız veya önce bir işlem
+adı öğrenmeniz gerekmiyor.
 
-Böyle anlarda benim için en doğru tempo, konuyu hemen bir işlem adına bağlamamaktır. Önce dinlemek gerekir:
-ne zamandır fark ediliyor, neyi zorlaştırıyor, bedenin hangi anında kendini hatırlatıyor?
-
-Ben bu başlıkta ilk cümleyi hep sade tutmayı tercih ederim: Her değişim ameliyat gerektirmez. Önce
-yaşanan yakınmanın nedeni, sonra günlük yaşama etkisi, en son da kişinin kendi beklentisi birlikte
-anlaşılmalıdır.
+Böyle anlarda benim için en doğru tempo, konuyu hemen bir işlem adına bağlamamaktır.
+*“Ne zamandır fark ediyorsunuz, hangi hareketlerde rahatsız ediyor?”* Bu sorular,
+görünüm isteğiyle fiziksel yakınmayı ayırmaya yardımcı olur.
 
 ## Menopoz Genital Bölgeyi Nasıl Etkileyebilir?
 
-Östrojen azalması yalnızca yüz ve ciltte değil; vulva, vajina çevresi, deri, bağ dokusu ve yağ dokusu
-üzerinde de etkili olabilir. Bu etki her kadında aynı sırayla veya aynı şiddette görünmez.
+Östrojen azalması vajina ve dış genital bölgeyi, yani vulvayı etkileyebilir.
+Siz bu değişimi kuruluk veya dokunmaya hassasiyet olarak fark edebilirsiniz.
 
-Doku elastikiyetinin azalması, cilt incelmesi, hacim kaybı, sarkma hissi, renk tonunda değişiklik ve
-sürtünmeye daha açık bir yapı bazı kadınlarda belirginleşebilir
-(iyi kanıt)
-. Bazen mesele
-yalnızca aynada fark edilen yeni bir görüntüdür; bazen de iç çamaşırı, yürüyüş, spor veya yakınlık
-sırasında kendini hatırlatan fiziksel bir konfor meselesine dönüşür.
+Doku incelmesi ve elastikiyet azalması, bazı kadınlarda sürtünme ve ilişki sırasında rahatsızlığa
+eşlik eder (iyi kanıt)<sup>[[1]](#kaynak-1)</sup>.
+Vulvanın şekli, büyüklüğü ve rengi kişiden kişiye değişir. Küçük dudakların büyük dudakların
+dışına uzanması da tek başına bir bozukluk sayılmaz<sup>[[2]](#kaynak-2)</sup>.
 
-Bu ayrım önemlidir. Çünkü kuruluk, yanma, ilişki sırasında ağrı, tekrarlayan hassasiyet veya irritasyon
-gibi yakınmaların bir kısmı cerrahi başlığıyla değil, jinekolojik değerlendirme ve lokal bakım/tıbbi
-seçeneklerle konuşulur
-(güçlü kanıt)
-. Yani bazen doğru soru “hangi işlem?” değil, “önce dokunun
-sağlığı nasıl desteklenir?” sorusudur.
-
-İyi soru "görüntü değişti mi?" değil, "bu değişim günlük hayatımda gerçekten neyi etkiliyor?" sorusudur.
+Yeni yara, kitle, geçmeyen kaşıntı veya belirgin yeni cilt değişikliği varsa hekim değerlendirmesi
+alın. Bunların farklı nedenleri olabilir; yalnızca menopozla açıklanmamalıdır<sup>[[4]](#kaynak-4)</sup>.
+Menopozdan sonra kanama, az miktarda veya tek seferlik olsa bile araştırılmalıdır<sup>[[5]](#kaynak-5)</sup>.
 
 ## Labioplasti Ne Zaman Gündeme Gelebilir?
 
-Labioplasti, küçük dudakların (labium minus) kişiyi rahatsız eden fazla dokusunun doğal anatomiyi
-koruyacak şekilde yeniden düzenlenmesini amaçlayan cerrahi bir işlemdir. Burada ana fikir “küçültmek”
-değil, kişiyi gerçekten rahatsız eden dokuyu anatomiye saygılı biçimde ele almaktır; çünkü ihtiyaç,
-doku yapısı ve beklenti kişiden kişiye değişir.
+Labioplasti küçük dudakların (labia minora) boyutunu veya şeklini değiştiren bir ameliyattır.
+Sizin için değerlendirilirken, hangi yakınmayı hedeflediği açık olmalıdır.
 
-Toplumda sanıldığının aksine, genital estetik yalnızca görünüm değiştirme isteğiyle konuşulmaz. Bazı
-kadınlarda iç çamaşırı veya vücuda oturan kıyafetlerde sürtünme, spor sırasında çekilme hissi, bisiklet
-veya uzun yürüyüşte rahatsızlık gibi fiziksel başlıklar da masaya gelir.
+Spor veya kıyafet sırasında çekilme ve sürtünme gibi fiziksel yakınmalar değerlendirmeye alınabilir.
+Muayenede bu yakınmanın anatomiden mi, cilt hastalığı veya başka bir nedenden mi kaynaklandığı araştırılır.
+Beklenen yarar, yakınmanın nedeni ve işlemin riskleriyle birlikte değerlendirilir<sup>[[2]](#kaynak-2)</sup>.
 
-Yine de bu, labioplastinin hafif bir karar olduğu anlamına gelmez. Cerrahi kesidir, iyileşme süreci
-vardır, iz ve his değişikliği gibi kişiye göre değişebilen riskler taşır
-(orta kanıt)
-. Bu
-nedenle "yapılabilir mi?" sorusundan önce "gerçekten hangi yakınmayı çözmesi bekleniyor?" sorusu
-sorulmalıdır.
+Cerrahi işlem kesi ve iyileşme süreci içerir. Ağrı, kanama, enfeksiyon, iz, dokuların birbirine
+yapışması, his değişikliği, ilişki sırasında ağrı ve yeniden ameliyat gereksinimi gibi riskler
+konuşulmalıdır<sup>[[2]](#kaynak-2)</sup>.
 
-Bu iki soru birbirine benzer görünür, ama aynı değildir. İlki tekniği konuşur; ikincisi hayatınızdaki gerçek
-rahatsızlığı. Karar da çoğu zaman bu ikinci soruda netleşir.
-
-Burada kararın biraz yavaşlamasını değerli bulurum. Şikayet net değilse, beklenti yalnızca dışarıdan
-duyulan yorumlarla şekillenmişse veya temel yakınma kuruluk-ağrı-hassasiyet hattındaysa cerrahi karar
-aceleye gelmemelidir.
+Kozmetik genital cerrahinin yarar ve güvenliğini değerlendiren yüksek kaliteli veriler sınırlıdır
+(sınırlı kanıt)<sup>[[2]](#kaynak-2)</sup>.
+*“Bu işlem benim hangi yakınmamı gidermeyi amaçlıyor?”* Yanıtı, olası yararlarla riskleri
+birlikte tartışabilmeniz için yeterince somut olmalıdır.
 
 ## Bazen Sorun Sarkmadan Çok Hacim Kaybıdır
 
-Menopoz sonrası dönemde bazı kadınlarda büyük dudaklarda (labium majus) yağ dokusu azalabilir. Bölge
+Menopoz sonrası dönemde bazı kadınlarda büyük dudaklarda (labia majora) hacim kaybı fark edilebilir. Bölge
 daha içe çekilmiş, daha az dolgun veya kişinin alışık olduğu görünümden farklı hale gelebilir.
 
-Bu başlık labioplastiden ayrıdır. Küçük dudakların fazla dokusu ile büyük dudakların hacim kaybı aynı
-sorun değildir; aynı işlemle de ele alınmaz. Bunu ayırmak bazen başlı başına rahatlatıcıdır, çünkü “genital
-estetik” diye tek bir torbaya atılan konular aslında birbirinden oldukça farklı olabilir.
+Bu başlık labioplastiden ayrıdır. Küçük dudakların boyutunu değiştirmek ile büyük dudaklara hacim
+kazandırmak farklı işlemlerdir. Görünüm farkının sizi rahatsız edip etmediği ve eşlik eden fiziksel
+yakınma bulunup bulunmadığı ayrıca değerlendirilir.
 
-Uygun kişilerde kişinin kendi yağ dokusunun hazırlanarak ilgili bölgeye verilmesi gibi seçenekler
-konuşulabilir. Ancak burada da vaat dili doğru değildir. Yağ dokusunun tutulum oranı değişebilir, zaman
-içinde hacim azalabilir ve planlama kişinin anatomisine, beklentisine ve iyileşme zemininin uygunluğuna
-göre yapılmalıdır
-(sınırlı–orta kanıt)
-.
+Kişinin kendi yağ dokusunun alınarak büyük dudaklara aktarılması, hacim kazandırmayı amaçlayan
+cerrahi bir girişimdir. Cerrahi dışı bakım seçeneği olarak düşünülmemelidir. Aktarılan yağın bir kısmı
+zamanla azalabilir; sonuç ve iyileşme kişiden kişiye değişir.
 
-Mahrem bölgede "doğal görünüm" yalnızca estetik bir tercih değil, aynı zamanda ölçülü planlama meselesidir.
-Fazlası da azı kadar sorun yaratabilir.
+Bu alandaki çalışmalar az sayıda ve çoğunlukla gözlemseldir. Özellikle menopoz sonrası kadınlara
+özgü uzun dönem yarar ve güvenlik verileri sınırlıdır (sınırlı kanıt)<sup>[[3]](#kaynak-3)</sup>.
 
 ## Cerrahi Her Zaman İlk Seçenek Değildir
 
-Kuruluk, yanma, ilişki sırasında ağrı, hassasiyet veya tekrarlayan irritasyon gibi yakınmalarda ilk
-durak çoğu zaman cerrahi değildir. Bu yakınmalar vulvovajinal doku değişimi, pH farklılaşması, enfeksiyon,
-dermatolojik durumlar veya pelvik taban gerginliği gibi başka nedenlerle ilişkili olabilir; yani bedenin
-“bende ne değişti?” sorusunu bazen ameliyat başlığı değil, daha temel bir tıbbi değerlendirme yanıtlar.
+Kuruluk, yanma veya ilişki sırasında ağrı yaşıyorsanız ilk adım jinekolojik değerlendirmedir.
+Tedavi, yakınmanın nedenine göre seçilir.
 
-Jinekolojik değerlendirmede lokal nemlendiriciler, kayganlaştırıcılar, lokal hormonal seçenekler veya
-farklı tıbbi yaklaşımlar konuşulabilir
-(güçlü kanıt)
-. Enerji bazlı uygulamalar ise bazı merkezlerde
-gündeme gelse de burada frene basmak iyidir: kanıt, güvenlik ve doğru endikasyon açısından daha temkinli
-okunmalıdır
-(zayıf–sınırlı kanıt)
-.
+Menopoza bağlı doku değişimlerinin yanında enfeksiyon, cilt hastalığı veya pelvik taban kaslarındaki
+gerginlik de araştırılabilir. Nemlendiriciler, ilişki sırasında kayganlaştırıcılar ve uygun kişide
+düşük doz lokal vajinal östrojen gibi hormonal seçenekler değerlendirilir. Bu seçeneklerin her
+belirtiye etkisi ve kanıt gücü aynı değildir (orta–iyi kanıt)<sup>[[1]](#kaynak-1)</sup>.
 
-Bu yüzden doğru sıra önemlidir: Önce yakınmanın nedeni anlaşılır, sonra cerrahi dışı başlıkların yeri
-görülür, en son gerçekten anatomik-fiziksel bir rahatsızlık varsa cerrahi seçenek konuşulur. Bugün karar
-vermek zorunda değilsiniz; iyi bir karar çoğu zaman biraz bilgi, biraz zaman ve dürüst bir beden dinlemesi
-ister.
+Enerji bazlı uygulamalar, yani lazer ve radyofrekans, deneysel seçeneklerdir.
+Mevcut kanıt, menopoza bağlı genital yakınmalar için kullanımlarını desteklemiyor;
+bu, kesin etkisiz oldukları anlamına gelmez (zayıf–sınırlı kanıt). Araştırma dışında deneysel
+kabul edilirler. Önerildiklerinde belirsizlik, olası zararlar ve alternatifler hakkında bilgi isteyin<sup>[[1]](#kaynak-1)</sup>.
 
-## Kararı Beden Konforu, Sağlık Zemini ve Beklenti Birlikte Taşır
+## Karar İçin Sorulacak Sorular
 
-Genital estetik yalnızca menopozdaki kadınlara yönelik bir işlem değildir. Ancak menopoz sonrası dönemde
-doku değişimleri nedeniyle konu bazı kadınlarda daha görünür hale gelebilir.
+Görüşmeye, günlük hayatınızda sizi zorlayan şeyi anlatarak başlayabilirsiniz.
+Kıyafet sürtünmesiyle ilişki sırasında ağrı farklı değerlendirmeler gerektirebilir.
 
-Karar verilirken genel sağlık durumu, diyabet, dolaşım, sigara kullanımı, ilaçlar, yara iyileşmesi,
-enfeksiyon eğilimi, cinsel ağrı öyküsü ve jinekolojik değerlendirme birlikte ele alınmalıdır. Tek başına
-aynada görülen değişiklik yeterli bir karar zemini değildir.
+Genel sağlık durumu, diyabet, dolaşım sorunları, sigara kullanımı, ilaçlar, yara iyileşmesi,
+enfeksiyon eğilimi ve cinsel ağrı öyküsü değerlendirmede önem taşır. Menopoz durumu, bu kişisel
+etkenlerin yerini tutmaz.
 
 Görüşmeye hazırlık için uzun bir listeye gerek yok. Şu sorular çoğu zaman konuşmayı doğru yere taşır:
 
@@ -135,23 +121,75 @@ Görüşmeye hazırlık için uzun bir listeye gerek yok. Şu sorular çoğu zam
 - Kuruluk, yanma veya ilişki sırasında ağrı gibi jinekolojik değerlendirme isteyen belirtiler eşlik ediyor mu?
 - Bu karar kendi beden konforumdan mı geliyor, yoksa dışarıdan gelen yorumlardan mı?
 - Cerrahi dışı seçenekler gerçekten değerlendirilmiş mi?
+- Önerilen işlemin olası yararları, riskleri ve iyileşme süreci neler?
 
-Bu sorular karar verdirmez; kararın kimin, hangi ihtiyaçla ve hangi sağlık zemini üzerinde verildiğini
-netleştirir. Bazen yanıt “evet, bunu daha ayrıntılı konuşmak istiyorum” olur; bazen de “önce kuruluk ve
-ağrı tarafını çözmeliyim” olur. İkisi de geçerli bir başlangıçtır. Önemli olan, kararın utançtan veya
-dışarıdan gelen ölçülerden değil, sizin bedeninizde gerçekten yaşadığınız şeyden çıkmasıdır.
+Bu soruların yanıtları, sizin beklentinizle işlemin sağlayabileceği değişimin uyuşup uyuşmadığını
+görmenize yardımcı olur. Görünümünüz hakkındaki dış yorumlar bir tıbbi gereklilik oluşturmaz.
 
 ## Sonuç Olarak
 
-Kadınlar yüzlerinde, karınlarında veya kollarında zamanla oluşan değişimleri daha rahat konuşabiliyor.
-Genital bölge ise çoğu zaman sessiz kalıyor.
+Mahrem bölgenizde fark ettiğiniz değişimi anlatabilirsiniz.
+Utanmanız veya hemen bir işlem kararı vermeniz gerekmiyor.
 
-Oysa bedenin her bölgesi gibi bu bölge de yaş alır, hormonlardan etkilenir ve değişebilir. Bu değişimi
-konuşmak utanılacak bir şey değildir. Yalnız bu konuşmanın kusur arayan bir aynaya dönüşmemesi gerekir.
+Bir sonraki adım, değişimin ne zaman başladığını ve hayatınızı nasıl etkilediğini anlatmaktır.
+Böylece görüşme, sizin asıl sorunuza odaklanabilir. Yeni yara veya kanama gibi belirtiler varsa
+değerlendirmeyi ertelemeyin.
 
-Eğer yaşadığınız değişim günlük yaşamınızı, fiziksel konforunuzu veya kendinizi bedeninizin içinde iyi
-hissetmenizi etkiliyorsa, bunu plastik cerrahi ve kadın hastalıkları-doğum perspektifleriyle sakin
-biçimde değerlendirmek anlamlı olabilir. Ama amaç hiçbir zaman bir vaadin peşinden gitmek değildir; amaç,
-bedenin neye gerçekten ihtiyaç duyduğunu, sizin hızınıza saygı duyarak anlamaktır.
+## Kaynaklar ve İleri Okuma
+
+Metindeki numaralar, ilgili bilginin dayandığı kılavuz ve araştırmalara yönlendirir.
+
+- AUA/SUFU/AUGS. Menopozun genitoüriner sendromu kılavuzu, 2025. Tedavi seçenekleri ve enerji bazlı uygulamalar.
+[Kılavuzun tam metni](https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/GSM%20Unabridged%202025.pdf).
+- ACOG. Elektif kadın genital kozmetik cerrahisi, Komite Görüşü 795. Obstet Gynecol. 2020. Anatomik çeşitlilik, klinik endikasyonlar, kanıt sınırları ve cerrahi riskleri.
+[PMID: 31856125](https://pubmed.ncbi.nlm.nih.gov/31856125/).
+[Hasta bilgilendirme sayfası](https://www.acog.org/womens-health/faqs/vaginal-rejuvenation-labiaplasty-and-other-female-genital-cosmetic-surgery).
+- Jabbour S ve ark. Büyük dudaklara hacim kazandırılması: sistematik derleme. Aesthet Surg J. 2017;37(10):1157–1164. Az sayıda, çoğunlukla gözlemsel çalışma; menopoz sonrası kadınlara özgü güçlü sonuç kanıtı sağlamaz.
+[PMID: 28449124](https://pubmed.ncbi.nlm.nih.gov/28449124/).
+- NHS. Vulva kanserinde değerlendirme gerektiren belirtiler. 2025. Bu belirtiler farklı nedenlerle de görülebilir.
+[Belirti bilgisi](https://www.nhs.uk/conditions/vulval-cancer/symptoms/).
+- NHS. Menopoz sonrası kanama. 2026 güncellemesi.
+[Kanama değerlendirmesi](https://www.nhs.uk/symptoms/post-menopausal-bleeding/).
+
+Pratik Sorular
+
+## Bu Yazıdan Sonra Akla Gelen Sorular
+
+Görünüm değişikliği, fiziksel yakınma ve işlem seçenekleri hakkında kısa yanıtlar. Ayrıntılar ve kaynaklar ilgili bölümlerde yer alıyor.
+
+### Menopoz sonrası genital bölgede değişim olması normal mi?
+
+Bazı kadınlarda doku incelmesi, elastikiyet azalması veya hacim kaybı görülebilir. Vulvanın şekli ve büyüklüğü de kişiden kişiye değişir; tek bir doğru görünüm yoktur. Yeni yara, kitle, geçmeyen kaşıntı ya da kanama varsa bunu olağan yaşlanmaya bağlamadan hekim değerlendirmesi alın.
+
+### Her genital bölge değişimi labioplasti gerektirir mi?
+
+Hayır. Görünüm farkı ameliyat gerekliliğini göstermez. Kuruluk, yanma veya ilişki sırasında ağrı varsa önce yakınmanın nedeni araştırılır; cerrahi ancak belirli bir anatomik rahatsızlık için yararları, riskleri ve alternatifleri değerlendirilerek konuşulur.
+
+### Labioplasti yalnızca estetik bir işlem midir?
+
+Görünüm isteğinin yanında, bazı kişilerde kıyafet veya spor sırasında sürtünme ve çekilme gibi fiziksel yakınmalar da değerlendirmeye alınır. Bu yakınmanın hangi dokudan kaynaklandığı muayenede araştırılmalıdır. Beklenen yarar, yakınmanın nedeni ve işlemin riskleriyle birlikte değerlendirilir.
+
+### Büyük dudaklarda hacim kaybı için yağ enjeksiyonu nasıl bir seçenektir?
+
+Kişinin kendi yağ dokusunun alınarak büyük dudaklara aktarılması, hacim kazandırmayı amaçlayan cerrahi bir girişimdir. Aktarılan yağın bir kısmı zamanla azalabilir; sonuç ve iyileşme kişiden kişiye değişir. Çalışmalar az sayıda ve çoğunlukla gözlemseldir; özellikle menopoz sonrası kadınlarda uzun dönem yarar ve güvenlik konusunda veriler sınırlıdır.
+
+### Bu konuda ilk görüşmede hangi soruyu sormak gerekir?
+
+“Bu değişim günlük hayatımda neyi etkiliyor?” sorusuyla başlayabilirsiniz. Yakınmanın ne zaman başladığını, hangi hareketlerde arttığını ve kuruluk ya da ağrı eşlik edip etmediğini anlatın. Ardından önerilen seçeneğin hangi yakınmayı hedeflediğini, alternatiflerini ve risklerini sorun.
+
+Bilimsel Editör Notu
+
+Menopoz sonrası genital bölge değişimleri; vulvovajinal doku sağlığı, cilt-elastikiyet değişimi,
+irritasyon, cinsel ağrı, pelvik taban ve kişisel anatomi başlıklarıyla birlikte okunmalıdır.
+Cerrahi seçenekler yalnızca görünüm kaygısı üzerinden değil; fiziksel rahatsızlık, sağlık zemini,
+beklenti yönetimi ve cerrahi dışı seçeneklerin yeri görüldükten sonra konuşulmalıdır.
+
+Bu yazı işlem önerisi, sonuç vaadi veya yönlendirici tedavi metni değildir. Amaç; okurun mahrem
+bölge değişimlerini utanmadan, ama aceleci karar diline de kapılmadan değerlendirmesine yardımcı olmaktır.
+
+İnceleyen:  [ Doç. Dr. Senai Aksoy ](/yazarlar/senai-aksoy/)  · Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör
 
 Tıbbi Not
+
+Bu içerik genel bilgilendirme içindir; bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz.
+Yakınmalarınızın nedeni ve size uygun seçenekler, tıbbi öykünüz ve muayene bulgularınızla birlikte değerlendirilir.

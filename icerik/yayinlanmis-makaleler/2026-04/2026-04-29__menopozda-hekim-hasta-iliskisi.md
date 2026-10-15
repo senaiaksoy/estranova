@@ -4,14 +4,24 @@ description: "Eşi hekim olan Berna Aksoy’dan menopoz takibinde dinlenmek, bir
 writer: berna-aksoy
 publishedDate: "29 Nisan 2026"
 publishedDateIso: 2026-04-29
+modifiedDate: "1 Ekim 2026"
+exportScope: local-build
 url: /hormonal-gecis/menopoz/menopozda-hekim-hasta-iliskisi/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz/
 keywords: ["menopoz", "hekim seçimi", "hekim-hasta ilişkisi", "HRT", "ortak karar verme", "menopoz takibi", "hormon tedavisi", "jinekolog"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Eşim Hekim, Hekimim Başkası — Modern Kadın Menopoz Takibinde Ne Arıyor
+
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Eşim jinekolog, ama beni takip eden hekim başka biri; üstelik arkadaş çevremizden.
+Bu ayrıcalıklı konumdan bakarken herkesin muayene deneyimini bildiğimi söyleyemem.
+Çevremdeki kadınları dinledikçe kendime şu soruyu soruyorum: bir kadın menopoz takibinde hekiminden ne bekler?
 
 ## Hekimin Sözü Son Sözken
 
@@ -144,6 +154,18 @@ Okurlardan gelen notları okudukça, aynı görüşmeye ne kadar farklı beklent
 
 Sizin için belki kısa bir açıklama, belki bir seçeneğin daha ayrıntılı konuşulması önemli.
 Benim aklımda kalan soru şu: bu hekimle bir sonraki görüşmede, bugün söyleyemediğim şeyi konuşabilir miyim?
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+Menopoz takibinde ortak karar verme, seçeneklerin olası faydaları, riskleri ve kişinin önceliklerinin
+hekimle birlikte değerlendirilmesidir. Hormon tedavisi kararı da sağlık geçmişi ve kişisel tercihler
+dikkate alınarak ele alınır. Karara katılmak, tıbbi değerlendirme sorumluluğunu hastanın tek başına taşıması değildir.
+
+Hekimlerin yakın aile üyelerini tedavi etmesi; tarafsızlık, mahremiyet ve kişinin rahatça tercih belirtmesi
+açısından güçlükler yaratabilir. Genel etik yaklaşım, bu bakımı başka bir hekimin üstlenmesidir;
+acil durumlar veya kısa süreli küçük sorunlar gibi sınırlı istisnalar bulunabilir.
 
 Tıbbi Not
 

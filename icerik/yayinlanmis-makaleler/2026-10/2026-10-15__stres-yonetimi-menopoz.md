@@ -14,6 +14,12 @@ exportedAt: 2026-10-15
 
 # Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine
 
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Menopoz geçişinde aynı yük daha ağır gelebilir: uyku bölünür, sabahlar yorgun başlar, küçük şeyler daha çok yorar. Işık Selin Günçe, sahne öncesi nefesinden ve kendi sabahlarından yola çıkarak stresin bu dönemde neden başka hissettirdiğini, günlük hayatta neyin denenebileceğini ve hangi işaretlerin bekletilmemesi gerektiğini anlatıyor.
+
 ## Bodrum'a Taşınınca Stresin Biteceğini Sanmıştım
 
 Bitmedi. Sadece sesi değişti; İstanbul'un gürültüsünün yerini gece üçte gelen bir uyanıklık aldı.
@@ -83,6 +89,16 @@ Stresi tamamen yok etmek bana gerçekçi gelmiyor. Daha yakın bir hedef, onunla
 Ben kendi düzenimi böyle kuruyorum. Sizinki başka olacak. Doktorunuzla uyku bölünmelerini, gündelik yükü ve ruh halinizi birlikte konuşmak iyi bir başlangıç olabilir.
 
 Perde her gece yine açılıyor. Kalbim hâlâ ilk gecedeymiş gibi atıyor; artık en azından nedenini biliyorum…
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+Menopoz geçişinde uyku bölünmeleri sık görülür; sıcak basmaları ve gece terlemeleri bu bölünmeyi artırabilir (iyi kanıt). Stres yanıtında beyin, böbreküstü bezini kortizol salgılamaya yönlendirir; kısa süreli yükselme dikkat ve enerji sağlar (güçlü kanıt). Östrojen dalgalanmasının bu yanıtın büyüklüğünü ve süresini bazı kadınlarda değiştirebildiği düşünülmektedir (orta–iyi kanıt).
+
+Uzun süren yüksek stres uyku düzenini ve gün içindeki tahammülü olumsuz etkileyebilir (iyi kanıt). Düzenli ve hafif tempolu hareketin ruh hali ve uyku üzerinde olumlu etkisi olabilir (orta–iyi kanıt). Yazıdaki nefes, yürüyüş ve uyku düzeni yazarın kendi deneyimidir; bireysel öneri yerine geçmez.
+
+İki haftayı aşan ruh hali düşüklüğü, haftalarca süren uyku sorunu, sıklaşan panik atakları ya da kendine zarar verme düşünceleri hekim değerlendirmesi gerektirir; son durumda beklemeden acil yardım alınmalıdır.
 
 Tıbbi Not
 

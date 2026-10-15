@@ -4,14 +4,24 @@ description: "Boyun, omuz veya kalçada biriken gerginlik her zaman kötü duru�
 writer: isik-selin-gunce
 publishedDate: "7 Mayıs 2026"
 publishedDateIso: 2026-05-07
+exportScope: local-build
 url: /zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam/
 keywords: ["beden gerginliği", "duruş", "çene sıkma", "omuz gerginliği", "nefes farkındalığı", "sahne disiplini", "beden farkındalığı"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında: Gerginliği Fark Etmenin İnce Yolu
+
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Boyun, omuz, çene, kaburga hattı ya da kalçada biriken gerginlik her zaman kötü duruşla başlamaz. Bazen beden
+yalnızca fazla şeyi sessizce taşımaya başlar; biz de bunu ancak günün sonunda, yorgunlukla karışmış bir
+sıkışma hissi olarak fark ederiz (orta–iyi kanıt). Bu yazı, bedeni düzeltilecek bir proje gibi
+değil, dinlenmesi gereken bir eşlikçi gibi okumayı önerir.
 
 ## Beden Her Zaman Ağrıyla Konuşmaz
 
@@ -23,9 +33,7 @@ sanki göğsümün üst tarafında dolaşıp duruyordu. O an şunu düşündüm:
 da yavaşça sıkışmaya başlıyor.
 
 Pek çok kadın beden gerginliğini ancak baş ağrısı, omuz tutulması ya da gece diş sıkma gibi daha görünür bir
-eşikten sonra fark ediyor. Oysa öncesinde daha küçük işaretler olabiliyor
-(orta kanıt)
-. Koltuğa oturur
+eşikten sonra fark ediyor. Oysa öncesinde daha küçük işaretler olabiliyor (orta kanıt). Koltuğa oturur
 oturmaz bacakları toplamak, telefonu konuşurken omzu hafifçe yukarı çekmek, nefesi tam bırakamamak ya da akşam
 eve dönünce omurgayı sanki gün boyu ödünç taşımış gibi hissetmek bunlardan bazıları.
 
@@ -49,9 +57,7 @@ Beden bazen tek bir yerden değil, bir hat boyunca sıkışır; omuzdan çeneye,
 
 Omuzların hafifçe yukarı çıkması, çenenin gün içinde defalarca kapanıp sertleşmesi ve nefesin göğsün üst
 kısmında kalması birbirinden ayrı meseleler gibi görünse de çoğu zaman aynı hikayenin parçalarıdır
-
-(orta kanıt)
-. Özellikle tempo yükseldiğinde ya da zihinde bitmemiş bir cümle dolaşırken bu hat daha da
+(orta kanıt). Özellikle tempo yükseldiğinde ya da zihinde bitmemiş bir cümle dolaşırken bu hat daha da
 belirginleşebilir.
 
 Bunu bir oyuncu arkadaşımın yüzünde de görmüştüm. Perde açılmadan birkaç dakika önce çenesini hafifçe sağa sola
@@ -90,9 +96,7 @@ Bazen bedenin ihtiyacı disiplin değil, biraz nezakettir.
 
 Kendinizi sürekli kontrol etmek, her oturuşu düzeltmeye çalışmak ya da "yine kötü duruyorum" diye içten içe
 kızmak bazı kadınlarda gerginliği daha da görünür hale getirebilir. Oysa daha küçük farkındalıklar çoğu zaman
-daha işe yarar bir başlangıç sunar
-(orta kanıt)
-. Örneğin omuzları zorla aşağı çekmek yerine, nefesi bir
+daha işe yarar bir başlangıç sunar (orta kanıt). Örneğin omuzları zorla aşağı çekmek yerine, nefesi bir
 cümle boyunca biraz daha tam bırakmak. Çene hattını zorla yumuşatmaya çalışmak yerine dilin damaktaki yerini
 fark etmek. Oturuşu düzeltmek yerine kalçanın sandalyeye nasıl yerleştiğini bir kez dikkatle hissetmek.
 
@@ -104,9 +108,7 @@ da bu: bedenle mücadele etmeyi bırakıp onunla yeniden aynı tarafta durabilme
 Her sıkışma büyük bir sorun demek değildir; ama bazı eşikler vardır, orada yalnızca "biraz gerginim" deyip geçmemek gerekir.
 
 Yoğun ve kalıcı ağrı, kola ya da bacağa yayılan uyuşma, çene kilitlenmesi, belirgin baş dönmesi, güç kaybı ya da
-günlük işlevi bozan bir tablo varsa profesyonel değerlendirme düşünmek gerekir
-(iyi kanıt)
-. Bu yazı,
+günlük işlevi bozan bir tablo varsa profesyonel değerlendirme düşünmek gerekir (iyi kanıt). Bu yazı,
 beden farkındalığına daha nazik bir kapı açmak için var; tanı ya da tedavi yerine geçmek için değil.
 
 Bazen en doğru cümle "biraz daha dikkat edeyim" olur. Bazen de "buna tek başıma anlam vermek zorunda değilim."
@@ -122,6 +124,18 @@ biraz daha yumuşak bakmanız gerektiğini söyler.
 
 Sahne bana yıllar içinde şunu öğretti: Beden bazen en doğru cümleyi, herkes sustuktan sonra kurar. Mesele onu
 susturmak değil; biraz daha dikkatle dinlemek.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+Beden gerginliği çoğu zaman yaşam temposu, nefes alışkanlığı, kas yükü ve duygusal baskıların birlikte yarattığı
+bir tablo olarak ortaya çıkar. Bu nedenle her sıkışma hissini yalnızca "postür sorunu" diye okumak eksik
+kalabilir.
+
+Bununla birlikte yoğun ağrı, uyuşma, güç kaybı, çene kilitlenmesi ya da günlük işlevi belirgin bozan belirtiler
+daha dikkatli değerlendirme gerektirir. Farkındalık yazıları destekleyici olabilir; ama klinik değerlendirmenin
+yerini almaz.
 
 Tıbbi Not
 

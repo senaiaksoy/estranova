@@ -4,14 +4,25 @@ description: "Başak Pelister, menopoz yıllarında tartı, ayna ve kıyafet etr
 writer: basak-pelister
 publishedDate: "16 Temmuz 2026"
 publishedDateIso: 2026-07-16
+modifiedDate: "3 Ekim 2026"
+exportScope: local-build
 url: /zihin-denge/duygusal-denge/olcu-panigi-beden-algisi-menopoz/
 section: "Zihin & Denge"
 sectionPath: /zihin-denge
 keywords: ["ölçü paniği", "beden algısı", "menopoz", "tartı", "ayna", "kıyafet", "üç kuşak", "duygusal denge"]
-exportedAt: 2026-10-03
+exportedAt: 2026-10-15
 ---
 
 # Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?
+
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Tartı bazen aynı rakamı gösterir; bazen hiç göstermese de zihnimizdeki ses devam eder. Bu yazı kilo
+vermeyi, diyet yapmayı ya da tek bir yöntemi anlatmıyor. Başak Pelister, menopoz yıllarında ölçüye,
+aynaya, kıyafete ve üç kuşağın beden cümlelerine takılan paniği yaşıt sesiyle açıyor: utandırmadan,
+acele ettirmeden, reçete vermeden.
 
 ## Aslında her şey çok masum başlıyor
 
@@ -41,9 +52,7 @@ paniği ise biraz daha sinsi. Rakam değişmese bile "ben değiştim mi?", "çek
 eski ben değil miyim?" soruları gelir.
 
 Bunu yazarken çok dikkatliyim. Çünkü beden algısı estetikle sınırlı kalmıyor; ruh hali, uyku, hormonal
-geçiş, stres ve yaş alma deneyimiyle birlikte değişebilir
-(orta kanıt)
-. Her şeyi hormonlara
+geçiş, stres ve yaş alma deneyimiyle birlikte değişebilir (orta kanıt). Her şeyi hormonlara
 bağlamak da haksızlık olur, her şeyi iradeye yüklemek de.
 
 Siz hiç tartıya çıkmadan önce nefesinizi tuttuğunuzu fark ettiniz mi? Ben ettim. Bunu itiraf etmek biraz
@@ -67,9 +76,7 @@ soranı.
 
 Ama bedenin değişmesiyle bedenin "bozulduğu" hissi arasında ince bir çizgi var. Menopoz
 yıllarında yağ dağılımı, kas miktarı, uyku ve enerji değişebilir; bunun beden hissine yansıması şaşırtıcı
-değildir
-(orta kanıt)
-. Yine de her değişimi bir kayıp gibi okumak zorunda değiliz.
+değildir (orta kanıt). Yine de her değişimi bir kayıp gibi okumak zorunda değiliz.
 
 Peki bunu nasıl okuyacağız? Doğrusu ben de her gün yeniden öğreniyorum. Bazı sabahlar iyi gidiyor. Bazı
 sabahlar hiç.
@@ -118,9 +125,7 @@ susmaz. Çünkü bazen asıl yoran, ölçülmüş hissetmektir.
 Bir kadın kendini yalnızca tartıda ölçmez. Fotoğrafta ölçer. Kıyafetin oturuşunda ölçer. Bir davete
 hazırlanırken ölçer. Yazlık elbiseyi çıkarırken, merdiven çıkarken, eski bir fotoğrafa bakarken ölçer.
 
-Bu noktada içimi rahatlatan cümle şu oldu: beden algısı değişebilir ve yeniden kurulabilir
-(sınırlı kanıt)
-. Bunda sihir yok. Bir sabah uyanıp aynayla barışmak gibi de olmuyor. Ama
+Bu noktada içimi rahatlatan cümle şu oldu: beden algısı değişebilir ve yeniden kurulabilir  (sınırlı kanıt). Bunda sihir yok. Bir sabah uyanıp aynayla barışmak gibi de olmuyor. Ama
 tekrar eden küçük pratiklerle, daha yumuşak bir iç dille ve gerektiğinde uzman desteğiyle algı biraz
 esneyebilir.
 
@@ -174,5 +179,18 @@ zorluyor", "bu kaygı günümü kaplıyor" gibi cümleleri söylemekten çekinme
 Herkes için tartıyı tamamen bırakmak doğru olmayabilir; bazı tıbbi durumlarda düzenli izlem gerekir. Benim
 anladığım "susmak", rakamın tek söz sahibi olmaması. Enerji, güç, uyku, kıyafetle rahatlık, ruh hali ve
 kendinize konuşma biçiminiz de ölçünün parçası olabilir.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+Bu yazı, kilo yönetimi veya tedavi önerisi sunmaz; beden algısı, ölçü kaygısı ve menopoz dönemindeki öznel
+beden deneyimini editoryal bir yaklaşımla ele alır. Hormonal geçiş yıllarında vücut kompozisyonu, yağ
+dağılımı, uyku, stres ve ruh hali birlikte değişebilir; bu nedenle tartı tek başına yeterli bir
+değerlendirme aracı değildir.
+
+Kilo artışı, hızlı beden değişimi, iştah değişikliği, belirgin yorgunluk veya beden algısının günlük
+yaşamı zorlaması durumunda bireysel tıbbi değerlendirme önemlidir. Okur için güvenli yol şudur: rakamı da
+hissi de küçümsemeden, gerekirse hekim ve uygun uzman desteğiyle birlikte okumak.
 
 Tıbbi Not

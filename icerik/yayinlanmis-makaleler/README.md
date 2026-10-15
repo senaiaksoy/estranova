@@ -1,7 +1,7 @@
 # Estranova Yayınlanmış Makale Arşivi
 
-Toplam makale: **68**
-Son export: 2026-10-02
+Toplam makale: **67**
+Son export: 2026-10-15
 
 Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik üretilir. `src/pages/` altındaki Astro source'tan metadata, `dist/` altındaki build HTML'den gövde markdown'ına dönüştürülür. Aynı içerik aynı anda obsidian vault'a (`<VAULT>/articles/`) da yazılır.
 
@@ -29,6 +29,7 @@ npm run articles:export # markdown'a dök
 
 | Tarih | Yazar | Başlık | Bölüm |
 |---|---|---|---|
+| 2026-10-15 | isik-selin-gunce | [Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine](2026-10/2026-10-15__stres-yonetimi-menopoz.md) | Zihin & Denge |
 | 2026-10-02 | cagri-sade | [HIFU, Radyofrekans ve Mikroakım: Hangi Değişimi Bekleyebiliriz?](2026-10/2026-10-02__non-invaziv-cihazlar-hifu-rf-mikroakim.md) | Zamansız Yaşam |
 
 ### 2026-09
@@ -53,7 +54,6 @@ npm run articles:export # markdown'a dök
 | 2026-07-16 | basak-pelister | [Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?](2026-07/2026-07-16__olcu-panigi-beden-algisi-menopoz.md) | Zihin & Denge |
 | 2026-07-15 | estranova-editorial | [Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması](2026-07/2026-07-15__tarti-yatisinca-vucut-kompozisyonu.md) | Hormonal Geçiş |
 | 2026-07-15 | estranova-editorial | [Menopozda Kilo Artışı: Tartının Söylemediği Kısım](2026-07/2026-07-15__kilo-artisi-menopoz.md) | Zamansız Yaşam |
-| 2026-10-15 | isik-selin-gunce | [Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine](2026-10/2026-10-15__stres-yonetimi-menopoz.md) | Zihin & Denge |
 
 ### 2026-06
 
@@ -66,7 +66,7 @@ npm run articles:export # markdown'a dök
 | 2026-06-05 | senai-aksoy | [NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe](2026-06/2026-06-05__nad-plus-hucresel-yaslanma.md) | Bilimsel Pencere |
 | 2026-06-01 | berna-aksoy | [Sıcacık Köşe — Haziran 2026: Güç Eşiği](2026-06/2026-06-01__haziran-2026.md) | Editörün Köşesi |
 | 2026-06-01 | metin-alis | [Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?](2026-06/2026-06-01__yorgunluk-kas-tiroid-metabolizma.md) | Hormonal Geçiş |
-| 2026-06-01 | basak-pelister | [Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır](2026-06/2026-06-01__guc-cantayi-daha-hafif-hazirlamak.md) | Hormonal Geçiş |
+| 2026-06-01 | basak-pelister | [Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır](2026-06/2026-06-01__guc-cantayi-daha-hafif-hazirlamak.md) | Hormonal Geçiş · Menopoz |
 | 2026-06-01 | ersin-sarac | [Denge ve Ayak: Kalça ile Gövde Hattını Yeniden Duymak](2026-06/2026-06-01__denge-kaybolmadan-ayak-kalca-govde.md) | Zamansız Yaşam |
 | 2026-06-01 | bulent-aksoy | [Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular](2026-06/2026-06-01__kemik-gucu-kirigi-beklemeden-sorulacak-sorular.md) | Zamansız Yaşam |
 | 2026-06-01 | alara-baykent | [Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık](2026-06/2026-06-01__yaz-baslamadan-bedeni-uyandirmak.md) | Zamansız Yaşam |
@@ -81,7 +81,7 @@ npm run articles:export # markdown'a dök
 | 2026-05-11 | duygu-karaosmanoglu | [Yüzümüzle uyumlu gülüşün kararı](2026-05/2026-05-11__yuze-yakisan-estetik-dis-karari.md) | Hormonal Geçiş |
 | 2026-05-11 | estranova-editorial | [Menopoz Nedir? — Temel Rehber](2026-05/2026-05-11__menopoz-nedir.md) | Hormonal Geçiş |
 | 2026-05-10 | cagri-sade | [Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası ](2026-05/2026-05-10__yuz-mudahalesi-olcu-sorusu.md) | Zamansız Yaşam |
-| 2026-05-08 | senai-aksoy | [Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaad ve Klinik Sınırlar](2026-05/2026-05-08__epitalon-telomer-yaslanma.md) | Bilimsel Pencere |
+| 2026-05-08 | senai-aksoy | [Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaat ve Klinik Sınırlar](2026-05/2026-05-08__epitalon-telomer-yaslanma.md) | Bilimsel Pencere |
 | 2026-05-08 | metin-alis | [Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni](2026-05/2026-05-08__tiroid-menopoz-yorgunluk-uyku.md) | Hormonal Geçiş |
 | 2026-05-08 | bulent-aksoy | [40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?](2026-05/2026-05-08__40-sonrasi-diz-agrisi-izlem-mudahale.md) | Zamansız Yaşam |
 | 2026-05-07 | basak-pelister | [Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı](2026-05/2026-05-07__dokuz-yillik-menopoz-sonunda-hrt-karari.md) | Hormonal Geçiş |
@@ -101,12 +101,12 @@ npm run articles:export # markdown'a dök
 | 2026-05-03 | senai-aksoy | [Menopozal Kilo İçin GLP-1 Analogları: Abartısız Klinik Karar](2026-05/2026-05-03__glp1-analoglari-menopozal-kilo.md) | Bilimsel Pencere |
 | 2026-05-03 | senai-aksoy | [Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?](2026-05/2026-05-03__coenzyme-q10-takviyesi.md) | Zamansız Yaşam |
 | 2026-05-03 | senai-aksoy | [Deneysel Tedaviyi Okuma Kılavuzu](2026-05/2026-05-03__deneysel-tedaviyi-okuma-kilavuzu.md) | Zamansız Yaşam |
-| 2026-05-03 | alara-baykent | [Sauna ve Soğuk Duş — Sporcu Bedenden Önceki Kuşağın Sıcak Basmasına](2026-05/2026-05-03__sauna-soguk-dus-menopoz.md) | Zamansız Yaşam |
+| 2026-05-03 | alara-baykent | [Sauna, Soğuk Duş ve Sıcak Basmaları — Bir Sporcunun Merakı](2026-05/2026-05-03__sauna-soguk-dus-menopoz.md) | Zamansız Yaşam |
 | 2026-05-02 | senai-aksoy | [Cinsellikte Ağrı — Menopozda Disparoni Rehberi](2026-05/2026-05-02__cinsellikte-agri-menopoz.md) | Beden & Yakınlık |
 | 2026-05-02 | senai-aksoy | [Vajinal Kuruluk Yaşlanmanın Sürprizi Değil — Bir İsmi Var: GSM](2026-05/2026-05-02__mahrem-bolge-degisimleri-menopoz.md) | Beden & Yakınlık |
 | 2026-05-02 | senai-aksoy | [Östrojen Biyolojisi ve Sağlık — Tek Hormon Değil, Bir Aile](2026-05/2026-05-02__estrogen-biyolojisi-saglik.md) | Bilimsel Pencere |
 | 2026-05-02 | senai-aksoy | [D Vitamini Rehberi — Tarama, Dozaj ve Bireysel Karar](2026-05/2026-05-02__d-vitamini-rehberi.md) | Zamansız Yaşam |
-| 2026-05-02 | senai-aksoy | [NAD+ Takviyesi — Umut Etiketi vs Kanıt Sınırı](2026-05/2026-05-02__nad-plus-takviyesi.md) | Zamansız Yaşam |
+| 2026-05-02 | senai-aksoy | [NAD+ Takviyesi — Umut Etiketi ve Kanıt Sınırı](2026-05/2026-05-02__nad-plus-takviyesi.md) | Zamansız Yaşam |
 | 2026-05-01 | berna-aksoy | [Sıcacık Köşe — Mayıs 2026: Eşik](2026-05/2026-05-01__mayis-2026.md) | Editörün Köşesi |
 
 ### 2026-04
@@ -131,4 +131,3 @@ npm run articles:export # markdown'a dök
 | Tarih | Yazar | Başlık | Bölüm |
 |---|---|---|---|
 | 2026-03-12 | senai-aksoy | [Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi](2026-03/2026-03-12__uyku-bozuklugu-menopoz.md) | Zihin & Denge |
-| 2026-03-01 | senai-aksoy | [40 Yaşından Sonra Kemik Sağlığı — Koruyucu Rehber](2026-03/2026-03-01__kemik-sagligi-40-sonrasi.md) | Zamansız Yaşam |

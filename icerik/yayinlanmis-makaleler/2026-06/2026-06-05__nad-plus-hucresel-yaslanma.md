@@ -4,14 +4,28 @@ description: "NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, m
 writer: senai-aksoy
 publishedDate: "5 Haziran 2026"
 publishedDateIso: 2026-06-05
+modifiedDate: "28 Eylül 2026"
+exportScope: local-build
 url: /bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere/
 keywords: ["NAD+", "NMN", "NR", "sirtuin", "CD38", "mitokondri", "hücresel yaşlanma", "fertilite", "menopoz", "uzun yaşam"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe
+
+Okumaya Başlamadan
+
+## Kısa Özet
+
+NMN ve NR gibi NAD+ öncülleri (vücudun NAD+ üretirken kullandığı maddeler), insanda
+kandaki NAD+ düzeyini yükseltebilir. Bugün
+en sağlam bildiğimiz şey bu. Bu yükselmenin kas gücüne, metabolizmaya, düşünme ve
+hafızaya, uzun yaşama veya yumurta kalitesine tutarlı biçimde yansıdığını ise henüz
+bilmiyoruz. Bu yazıda mekanizmanın heyecanını küçümsemeden, pazarlama dilinin atladığı
+boşluğu açıyorum: Kandaki bir değerin yükselmesi ile sağlığınızın gerçekten kazanması
+iki ayrı soru.
 
 ## NAD+ — Hücrenin Enerji ve Onarım Koenzimi
 
@@ -24,9 +38,7 @@ molekül gençlik vaadine dönüşür. Bu alanda iddialar çok hızlı büyür.
 
 NAD+ (nikotinamid adenin dinükleotid), hücrenin enerji üretiminde ve onarım yollarında
 merkezi rol oynayan bir koenzimdir; enzimlerin çalışması için gereken yardımcı bir
-moleküldür
-(güçlü kanıt)
-.<sup>[[1]](#kaynak-1)</sup> Hücrenin enerji santrali olan mitokondride elektron
+moleküldür (güçlü kanıt).<sup>[[1]](#kaynak-1)</sup> Hücrenin enerji santrali olan mitokondride elektron
 taşıma zincirine katılır. DNA hasarına yanıt veren bazı enzimlere hammadde (substrat)
 olur. Sirtuin denen enzim ailesinin çalışması için de gereklidir. Yaşlanma biyolojisiyle
 uğraşan laboratuvarların NAD+ ile bu kadar ilgilenmesi şaşırtıcı değil.
@@ -42,17 +54,13 @@ Hücre biyolojisi tarafında tablo güçlü: NAD+; redoks dengesi, mitokondriyal
 onarımı ve enflamasyonla ilişkili pek çok yolda yer alır. Klinikte sorduğumuz soru ise
 daha sade ve daha zor: Bu molekül sizin sağlığınıza ölçülebilir bir katkı yapıyor mu?
 
-Tartışmanın üç ana kapısı var: sirtuinler, PARP enzimleri ve CD38
-(iyi kanıt)
-.<sup>[[1]](#kaynak-1)</sup>
+Tartışmanın üç ana kapısı var: sirtuinler, PARP enzimleri ve CD38 (iyi kanıt).<sup>[[1]](#kaynak-1)</sup>
 Sirtuinler metabolizmayla ve genlerin açılıp kapanmasını düzenleyen epigenetik
 mekanizmalarla ilişkilidir. PARP enzimleri DNA hasarına yanıt verirken NAD+ kullanır.
 CD38 ise NAD+ tüketen bir enzimdir; yaşlanma ve düşük düzeyli enflamasyon
 tartışmalarında sık anılır.
 
-Bu mekanizma hattı hayvan çalışmalarında etkileyici sonuçlar verdi
-(iyi kanıt)
-.<sup>[[1]](#kaynak-1)</sup>
+Bu mekanizma hattı hayvan çalışmalarında etkileyici sonuçlar verdi (iyi kanıt).<sup>[[1]](#kaynak-1)</sup>
 Yaşlı farelerde NAD+ öncülleriyle mitokondri, kas, metabolizma ve üreme hücresi
 kalitesinde olumlu sinyaller görüldü. Fareden insana geçerken ise yol kısalmıyor; daha
 dikkatli yürümemiz gerekiyor.
@@ -67,19 +75,13 @@ NAD+ reklamlarının en sık kurduğu akıl yürütme şu: Yaşla NAD+ düşer, 
 gerekir. Kulağa düzgün geliyor; insan verisi ise bu kadar düz ilerlemiyor.
 
 Kemirgen (fare ve sıçan) çalışmalarında yaşla birlikte dokulardaki NAD+ düzeyinin
-azaldığını gösteren veri güçlü
-(iyi kanıt)
-.<sup>[[1]](#kaynak-1)</sup> İnsanda da cilt, kas ve bazı
+azaldığını gösteren veri güçlü (iyi kanıt).<sup>[[1]](#kaynak-1)</sup> İnsanda da cilt, kas ve bazı
 dokularda düşüş sinyali görülebiliyor. Kandaki NAD+ ise, özellikle ölçüm yöntemi iyi
-standardize edildiğinde, yaşla her zaman belirgin biçimde düşmeyebilir
-(orta kanıt)
-.<sup>[[2]](#kaynak-2)</sup>
+standardize edildiğinde, yaşla her zaman belirgin biçimde düşmeyebilir (orta kanıt).<sup>[[2]](#kaynak-2)</sup>
 
 2026'da yayımlanan geniş bir insan kohortunun (belirli bir grubu zaman içinde izleyen
 çalışma) analizinde, tam kandaki NAD+ düzeyi yaş ilerledikçe ve bazı yaşam tarzı
-müdahalelerinden sonra beklenenden daha sabit kalabildi
-(orta kanıt)
-.<sup>[[2]](#kaynak-2)</sup> Aynı
+müdahalelerinden sonra beklenenden daha sabit kalabildi (orta kanıt).<sup>[[2]](#kaynak-2)</sup> Aynı
 çalışma, NR verildiğinde kandaki NAD+'ın arttığını da doğruladı. İki bulguyu birlikte
 okuyoruz: Kan NAD+'ı her zaman iyi bir yaşlanma saati olmayabilir, ama takviyeye yanıt
 olarak yükselebilir.
@@ -98,15 +100,11 @@ bir soru.
 NMN ile 250-2000 mg/gün aralığında dozlarla kısa süreli denemeler yapıldı. Genel tabloda
 kandaki NAD+ artışı gösterilebiliyor. Kan şekeri (glukoz), insülin, kan yağları
 (lipitler), vücut kompozisyonu ve kas işlevi gibi alanlarda ise sonuçlar küçük,
-çalışmadan çalışmaya değişen ve tutarsız
-(sınırlı–orta kanıt)
-.<sup>[[3]](#kaynak-3)</sup> <sup>[[4]](#kaynak-4)</sup> <sup>[[5]](#kaynak-5)</sup>
+çalışmadan çalışmaya değişen ve tutarsız (sınırlı–orta kanıt).<sup>[[3]](#kaynak-3)</sup> <sup>[[4]](#kaynak-4)</sup> <sup>[[5]](#kaynak-5)</sup>
 
 NR için de benzer bir ayrım var. Kısa vadeli insan çalışmalarında NAD+ metabolomunda
 (NAD+ ile ilişkili moleküllerin bütünü) artış görülüyor ve NR genel olarak iyi tolere
-ediliyor
-(orta kanıt)
-.<sup>[[7]](#kaynak-7)</sup> Kan basıncı, enflamasyon, kas dokusu ve sinir sistemiyle
+ediliyor (orta kanıt).<sup>[[7]](#kaynak-7)</sup> Kan basıncı, enflamasyon, kas dokusu ve sinir sistemiyle
 ilgili alanlarda bazı sinyaller de var. Ama bunlar henüz herkese önerilecek bir klinik
 uygulamaya dönüşecek büyüklükte değil.
 
@@ -132,25 +130,19 @@ Bu yüzden kelimeleri burada daha yavaş seçiyorum. Gebelik isteyen bir kadın�
 her cümle yalnızca bilgi taşımaz, beklenti de taşır.
 
 Fare çalışmalarında NMN ile yaşa bağlı yumurta kalitesi ve üreme kapasitesi üzerine
-olumlu sonuçlar bildirildi
-(iyi kanıt)
-.<sup>[[8]](#kaynak-8)</sup> Bilimsel olarak önemli bir veri. Fakat
+olumlu sonuçlar bildirildi (iyi kanıt).<sup>[[8]](#kaynak-8)</sup> Bilimsel olarak önemli bir veri. Fakat
 fare yumurtalığı ile insan doğurganlığı aynı klinik düzlemde durmuyor; konu gebelik ve
 canlı doğum olduğunda aradaki basamak çok büyük.
 
 İnsan tarafında elimizdeki veri büyük ölçüde laboratuvar düzeyinde. Örneğin insandan
 alınmış olgunlaşmamış yumurta hücrelerinin kültür ortamında NMN ile incelendiği
-çalışmalar var
-(sınırlı kanıt)
-.<sup>[[9]](#kaynak-9)</sup> Bu çalışmalar biyolojik bir olasılığı gösteriyor.
+çalışmalar var (sınırlı kanıt).<sup>[[9]](#kaynak-9)</sup> Bu çalışmalar biyolojik bir olasılığı gösteriyor.
 Bir kadına ağızdan NMN verildiğinde gebelik veya canlı doğum şansının arttığını ise
 göstermiyor.
 
 Haziran 2026 itibarıyla, kadınlara NMN veya NR verilerek gebelik ya da canlı doğum
 sonucunda belirgin artış gösteren tamamlanmış, hakemli ve randomize bir insan çalışması
-yok
-(sınırlı kanıt)
-. Umudu küçümsemiyorum. Ama umutla kanıtı karıştırmak, iyi
+yok (sınırlı kanıt). Umudu küçümsemiyorum. Ama umutla kanıtı karıştırmak, iyi
 niyetle bile olsa, karara gereğinden ağır bir yük bindirir. Gebelik planlıyorsanız bu
 konuyu takviyeye başlamadan önce kadın hastalıkları ve doğum uzmanınızla konuşun.
 
@@ -160,9 +152,7 @@ Kısa süreli insan çalışmalarında NMN ve NR genel olarak iyi tolere edilmi�
 Ancak birkaç haftalık sorunsuz kullanım ile yıllar süren kullanım aynı güvenlik bilgisini
 vermez.
 
-Mevcut çalışmalarda ciddi yan etki sinyali az
-(orta kanıt)
-.<sup>[[6]](#kaynak-6)</sup> Uzun dönem veri ise
+Mevcut çalışmalarda ciddi yan etki sinyali az (orta kanıt).<sup>[[6]](#kaynak-6)</sup> Uzun dönem veri ise
 sınırlı. "Ben kullandım, bir şey olmadı" deneyimi, toplum düzeyindeki güvenlik verisinin
 yerini tutmaz. Kanser öyküsü, aktif kanser, bağışıklığı baskılayan (immünsüpresif)
 tedavi, gebelik, emzirme ve gebelik arayışı gibi durumlarda "muhtemelen zararsızdır"
@@ -185,9 +175,7 @@ NAD+ alanında en az molekül kadar önemli bir soru daha var: Kutunun içinde g
 etikette yazan şey mi var? Bu, bilimsel meraktan çok tüketici güvenliğiyle ilgili.
 
 Bağımsız ve sektör kaynaklı analizlerde, çevrimiçi satılan bazı NMN ve NAD+ ürünlerinin
-etiketindeki iddia ile içeriği arasında ciddi uyumsuzluklar bildirildi
-(orta kanıt)
-.<sup>[[12]](#kaynak-12)</sup>
+etiketindeki iddia ile içeriği arasında ciddi uyumsuzluklar bildirildi (orta kanıt).<sup>[[12]](#kaynak-12)</sup>
 Bazı ürünlerde iddia edilen miktarın çok azı bulundu, bazılarında hedef bileşik hiç
 saptanmadı. Bu yüzden "hangi molekül?" sorusunun önüne "hangi kalite?" sorusu geçiyor.
 
@@ -210,9 +198,7 @@ karar birden daha insani hâle gelir.
 kullanmıyorsanız, kanıtlanmış bir faydadan geri kaldığınızı gösteren bir veri bugün yok.
 Uyku, direnç egzersizi, düzenli hareket, yeterli protein, alkolde ölçülü olmak,
 metabolik hastalıkların takibi ve eksikliklerin hedefli düzeltilmesi, uzun vadeli sağlık
-için çok daha sağlam bir zemine sahip
-(iyi kanıt)
-. NAD+ öncülleri bu zeminin
+için çok daha sağlam bir zemine sahip (iyi kanıt). NAD+ öncülleri bu zeminin
 yerine geçmez.
 
 Üçüncü adım: Hâlâ düşünüyorsanız, bunu açık bir hedefi olan kısa süreli bir deneme
@@ -288,6 +274,48 @@ ABD Gıda ve İlaç Dairesi (FDA). [NMN'nin takviye tanımı içindeki durumuna 
 
 -
 Sandalova E ve arkadaşları. [NMN ve ürolitin A ürünlerinde etkin madde miktarının etiketle karşılaştırılması](https://doi.org/10.1007/s11357-024-01257-2). GeroScience, 2024.
+
+Pratik Sorular
+
+## Sıkça Sorulan Sorular
+
+Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.
+
+### NMN veya NR kullanmak kandaki NAD+ düzeyini gerçekten yükseltir mi?
+
+Kısa süreli insan çalışmalarında NMN ve NR gibi öncüllerin kandaki NAD+ göstergelerini artırabildiği görülüyor. Bu artışın kas gücü, düşünme ve hafıza, metabolizma veya uzun yaşam gibi sonuçlara da yansıdığı ise henüz gösterilmedi. Kandaki sayı yükselebilir; bunun sağlığınızda neyi değiştirdiği hâlâ açık bir soru.
+
+### NAD+ yükselirse yaşlanma yavaşlar mı?
+
+Bugün için bunu söylemek fazla iddialı olur. NAD+ hücresel enerji ve onarım yollarında önemli bir molekül ve bilimsel merakı hak ediyor. Fakat insanda yaşlanmayı yavaşlattığını veya ömrü uzattığını gösteren güçlü, uzun dönem klinik veri henüz yok.
+
+### NAD+ öncülleri yumurta kalitesini veya gebelik şansını artırır mı?
+
+Fare çalışmalarında ve insandan alınmış yumurta hücreleriyle yapılan laboratuvar çalışmalarında ilgi çekici sinyaller var. Ancak bunlar, takviyeyi ağızdan alan bir kadında gebelik şansının arttığını göstermiyor. Haziran 2026 itibarıyla, kadına NMN veya NR verildiğinde gebelik ya da canlı doğum şansını artırdığını gösteren tamamlanmış ve güçlü bir insan çalışması yok. Gebelik planlıyorsanız bu konuyu kadın hastalıkları ve doğum uzmanınızla konuşmanız iyi olur.
+
+### Aldığım ürünün etikette yazan içeriği gerçekten taşıdığını nasıl anlarım?
+
+Çevrimiçi satılan bazı NMN ve NAD+ ürünlerinde etiket iddiası ile gerçek içerik arasında ciddi uyumsuzluklar bildirildi; bazılarında iddia edilen miktarın çok azı bulundu, bazılarında hedef bileşik hiç saptanmadı. Lot numarası, analiz sertifikası, üçüncü taraf testi ve üreticinin şeffaflığı bu konuda önemli ipuçları verir. Türkiye’de ürünün takviye edici gıda statüsü ve resmî bildirimi de ayrıca doğrulanmalı.
+
+Bilimsel Editör Notu
+
+Kanıt Düzeyi: (sınırlı–orta kanıt)
+
+NAD+ öncülleri (NMN ve NR) kandaki NAD+ göstergelerini artırabilir; ancak bu artışın kas, biliş,
+metabolizma, menopoz belirtileri veya canlı doğum gibi sonuçlarda iyileşmeye dönüştüğü gösterilmemiştir.
+Laboratuvarda yumurta hücresine eklenen NMN ile ağızdan alınan takviyenin klinik sonucu aynı kanıt
+düzeyinde değildir. Değerlendirme molekülden değil beklentiden başlar; her hedefin kanıt düzeyi farklıdır.
+
+Aktif kanser, kanser öyküsü, bağışıklığı baskılayan tedavi, gebelik, emzirme, gebelik arayışı ve düzenli
+çoklu ilaç kullanımı varsa bu takviyeler kendi başına denenecek bir alan olarak görülmemelidir. NAD+
+metabolizması tüm hücreler için önemli olduğundan, hızlı bölünen hücreler söz konusu olduğunda temkin daha
+da önem kazanır. Deneme düşünülüyorsa önce uyku, direnç egzersizi, metabolik sağlık ve eksikliklerin
+hedefli düzeltilmesi gözden geçirilir; hedef, süre, ürün kalitesi ve takip edilecek değişkenler baştan belirlenir.
+
+Bu not genel kanıt çerçevesini özetler. Sağlık öyküsü, kullanılan ilaçlar, aile öyküsü ve beklentiler kararı
+değiştirir; uygun adımlar kişinin kendi hekimiyle birlikte değerlendirilmelidir.
+
+— Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı
 
 Tıbbi Not
 

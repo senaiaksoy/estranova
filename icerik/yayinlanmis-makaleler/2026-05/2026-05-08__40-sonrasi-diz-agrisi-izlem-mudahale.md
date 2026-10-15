@@ -10,10 +10,21 @@ url: /zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam/
 keywords: ["40 sonrası diz ağrısı", "diz ağrısı izlem", "diz ağrısı müdahale", "diz osteoartriti", "menisküs yırtığı", "konservatif tedavi", "ortopedik takip", "diz ağrısı kırmızı bayrak"]
-exportedAt: 2026-10-14
+exportedAt: 2026-10-15
 ---
 
 # 40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+40 sonrası diz ağrısında karar, ağrının nedeni, muayene ve günlük yaşamınıza etkisiyle verilir; MR raporu tek
+başına yeterli değildir. Değerlendirme sonrasında cerrahi dışı tedavi uygun bulunursa hareketin düzenlenmesi
+ve kişiye uygun egzersizle aktif bir izlem planı kurulabilir. Bütün diz ağrıları için geçerli bir bekleme
+süresi yoktur. Yeni kilitlenme, üzerine basamama veya ateşle birlikte sıcak-şiş diz varsa gecikmeden
+değerlendirme gerekir. Tek taraflı bacak şişliğiyle birlikte nefes darlığı ya da göğüs ağrısı varsa acil
+yardım alınmalıdır.<sup>[[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3)</sup>
 
 ## Diz Ağrısını Tek Cümleye Sıkıştırmamak Neden Önemli?
 
@@ -196,6 +207,14 @@ Numaralar metindeki atıflarla eşleşir. Osteoartrit, akut menisküs yaralanmas
 - [Lawford BJ ve ark. Exercise for osteoarthritis of the knee. Cochrane Database of Systematic Reviews. 2024;12:CD004376. doi:10.1002/14651858.CD004376.pub4.](https://www.cochrane.org/evidence/CD004376_exercise-effective-therapy-treat-knee-osteoarthritis)
 - [T.C. İçişleri Bakanlığı. 112 Acil Çağrı Merkezi. Türkiye’de acil çağrılar için tek numara.](https://www.112.gov.tr/)
 - [NHS. Symptoms of a stroke. Ani tek taraflı güç kaybı ve diğer nörolojik belirtilerde acil yardım; son inceleme 12 Eylül 2024.](https://www.nhs.uk/conditions/stroke/symptoms/)
+
+Bilimsel Editör Notu
+
+**Klinik ayrım:** Aynı MR bulgusu, iki kişide aynı hareket kapasitesini
+veya aynı tedavi ihtiyacını göstermeyebilir. Burada osteoartrit için açıklanan seçenekler, yeni bir
+yaralanma veya acil belirti olduğunda farklı bir değerlendirme gerektirir.
+
+İnceleyen:  [ Doç. Dr. Senai Aksoy ](/yazarlar/senai-aksoy/)  · Kadın Hastalıkları ve Doğum Uzmanı · Tıbbi Editör  · 14 Ekim 2026
 
 Tıbbi Not
 

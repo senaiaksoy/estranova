@@ -4,14 +4,25 @@ description: "Akşam yürüyüşü uykuyu bozar mı, toparlar mı? Melatonin ve 
 writer: alara-baykent
 publishedDate: "4 Mayıs 2026"
 publishedDateIso: 2026-05-04
+modifiedDate: "3 Ekim 2026"
+exportScope: local-build
 url: /zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/
 section: "Zihin & Denge"
 sectionPath: /zihin-denge/
 keywords: ["akşam yürüyüşü", "akşam egzersizi", "uyku", "melatonin", "perimenopoz", "menopoz", "beden ısısı", "hafif hareket", "sürdürülebilir egzersiz", "Alara Baykent"]
-exportedAt: 2026-10-03
+exportedAt: 2026-10-15
 ---
 
 # Akşam Hareketi Uykuyu Bozar mı, Toparlar mı?
+
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Akşam saatlerindeki hareket uykuyu her zaman kaçırmaz. Bazen günü yavaşça geride bırakmanın bir yolu olur.
+Ama perimenopozda gece terlemeleri, beden ısısı dengesi ve uykuya dalış daha hassas hale geldiği için zamanlama
+ve yoğunluk daha çok önem kazanır. Bu yazıda akşam hareketini yasaklamak yerine, kısa bir yürüyüş dahil,
+hangi dozun geceye geçişi kolaylaştırabileceğine sporcu gözüyle bakıyorum.
 
 ## Rüzgârdan Dönen Akşam Bedeni
 
@@ -34,9 +45,7 @@ Bu cümleyi siz de duymuşsunuzdur. Araştırmalar ise çok daha yumuşak bir ta
 
 Sağlıklı yetişkinlerde yapılan çalışmaları bir araya getiren değerlendirmeler, akşam yapılan hafif ve orta
 yoğunlukta hareketin uykuyu genellikle bozmadığını gösteriyor. Bazı ölçümlerde derin uyku biraz artıyor bile
-
-(orta–iyi kanıt)
-. Uykuya dalmayı zorlaştırabilen şey, yatmaya bir saatten az kala biten yoğun
+(orta–iyi kanıt). Uykuya dalmayı zorlaştırabilen şey, yatmaya bir saatten az kala biten yoğun
 antrenman.
 
 Belirleyici olan yoğunluk. Geç saatte yapılan aralıklı sprintler, yarış temposunda koşu ya da ağır ağırlık
@@ -52,9 +61,7 @@ Tonunu akşama göre ayarlamak yeter.
 Melatonini çoğumuz yalnızca karanlıkla ilişkilendiririz. Hikâyenin bir de ısı tarafı var.
 
 Akşam saatlerinde melatonin yükselirken iç beden ısısı da yavaş yavaş düşer. Uykuya geçiş bu düşüşle yakından
-ilişkili
-(iyi kanıt)
-. El ve ayaklardaki damarlar genişler, vücut ısısını dışarı verir. Bazı
+ilişkili (iyi kanıt). El ve ayaklardaki damarlar genişler, vücut ısısını dışarı verir. Bazı
 laboratuvar çalışmalarında bu ısı kaybı, uykuya dalma hızıyla en yakından ilişkili işaret olarak öne çıkmış.
 Yatmadan önce ellerinizin ve ayaklarınızın ısındığını fark ettiyseniz, gördüğünüz şey bu sürecin bir parçası.
 
@@ -111,9 +118,7 @@ Hiç hareket edecek haliniz olmayan akşamlar da olacak. O akşamlar "egzersiz" 
 bırakabilirsiniz. İki dakika omuz çevirmek ya da loş ışıkta nefesi yavaşlatmak da sayılır. İçiniz rahat olsun:
 Bir akşamı atlamak yolunuzdan bir şey götürmez.
 
-Rutinin ardından ılık bir duş ve kısılan ışıklar geceye geçişi kolaylaştırabilir
-(orta kanıt)
-.
+Rutinin ardından ılık bir duş ve kısılan ışıklar geceye geçişi kolaylaştırabilir (orta kanıt).
 
 <p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
@@ -143,6 +148,36 @@ Ben yaşamadım ama yakından gördüm. Çevremdeki kadınların "yorgunum ama u
 gerek yok. Küçük bir deneme yeter; sonra nasıl uyuduğunuza bakarsınız.
 
 Yarın yine sahaya çıkacağım; bu hafta öğrendiğim cümleyi yanımda taşıyacağım.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+Kanıt Düzeyi: (orta–iyi kanıt)
+
+Bu yazı genel egzersiz-uyku literatürünü, perimenopozdaki ısı düzenleme hassasiyetiyle birlikte okuyan
+bilgilendirici bir rehberdir; kişisel tanı, tedavi veya egzersiz reçetesi yerine geçmez.
+
+**Klinik not:** Akşam egzersiziyle uyku ilişkisi uzun süre “geç saatte
+spor yapılmaz” cümlesine indirgenmiştir. Oysa güncel veriler, yatmadan hemen önce yapılan yüksek yoğunluklu
+egzersiz dışında, orta ve hafif yoğunluklu hareketin çoğu kişide uyku kalitesini bozmadığını gösterir.
+Perimenopozda gece terlemesi, sıcak basması ve uykunun bölünmesi bu genel kuralı kişiselleştirmeyi gerektirir.
+
+**Mekanizma notu:** Uykuya geçişte melatonin ritmi, ışık maruziyeti,
+sempatik aktivasyon ve beden ısısının akşam düşüşü birlikte çalışır. Hafif akşam hareketi sonrasında beden
+ısısının yumuşak düşüşü uykuya geçişi destekleyebilir; yoğun ve çok geç antrenman ise kalp atımı, adrenalin
+ve ısı yükünü uzatarak uyku başlangıcını zorlaştırabilir.
+
+**Pratik bütünleşim:** Klinik açıdan en güvenli yol; geç saatte yüksek
+yoğunluğu azaltmak, hareketi yatmadan 2-3 saat önce hafifletmek, son 60-90 dakikayı mobilite-nefes-yavaşlama
+alanı olarak kullanmak ve gece terlemesi yaşayan kadınlarda semptom günlüğüyle kişisel yanıtı izlemektir.
+
+**Bireyselleştirme uyarısı:** Sn. Baykent'in yazısındaki sporcu beden
+okuması sürdürülebilir hareket fikrini güçlendirir; ancak kalp hastalığı, kontrolsüz tansiyon, belirgin
+çarpıntı, yeni başlayan nefes darlığı veya uzun süren uykusuzluk varsa egzersiz planı hekim veya fizyoterapist
+ile birlikte değerlendirilmelidir.
+
+— Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
 
 Tıbbi Not
 

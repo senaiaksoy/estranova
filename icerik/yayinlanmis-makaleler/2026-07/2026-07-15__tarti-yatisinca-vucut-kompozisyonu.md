@@ -4,14 +4,24 @@ description: "Tartı sayısı uzun süre değişmese de beden değişmeye devam 
 writer: estranova-editorial
 publishedDate: "15 Temmuz 2026"
 publishedDateIso: 2026-07-15
+modifiedDate: "16 Temmuz 2026"
+exportScope: local-build
 url: /hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz/
 keywords: ["menopoz", "vücut kompozisyonu", "kas kaybı", "viseral yağ", "tartı", "BMI sınırlılığı", "menopozda kilo", "kompozisyon değişimi", "östrojen düşüşü", "direnç antrenmanı", "protein"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması
+
+Okumaya Başlamadan
+
+## Kısa Özet
+
+Tartı uzun süre aynı kalsa da beden değişmeye devam edebilir. Kas yavaşça azalır; yağ bazen başka bir
+yere yerleşir. Bu rehber bir reçete değil. Tartının yetmediği noktada nereye bakabileceğinize dair
+sakin bir bakış.
 
 ## Tartının yatıştığı yer
 
@@ -39,9 +49,7 @@ Altında neyin değiştiğini söylemez. Beden ağırlığı kabaca üç bileşe
 kalan (kemik, su, organlar, doku). Tartı bunları tek sayıda birleştirir; dengeyi göstermez. Bu yüzden
 iki kadın aynı kiloda olabilir, ama farklı bedenlerde durabilir. Vücut kütle endeksi (BMI) de aynı
 sınırlılığı taşır. Araştırmalar, kompozisyonu yok sayan ölçümlerin menopoz döneminde riski olduğundan
-eksik gösterebileceğini belirtiyor
-(iyi kanıt)
-.
+eksik gösterebileceğini belirtiyor (iyi kanıt).
 
 Sayı sabit kalır. Beden hareket hâlinde olabilir.
 
@@ -60,9 +68,7 @@ Menopoz tek bir günde bitmez. Bir geçiştir. Ve bedende sessiz bir aritmetik i
 zayıflar (sarkopeni eğilimi); yağ da farklı bir bölgeye — özellikle karın çevresine — yerleşmeye
 başlar (viseral yağa kayış). Toplam kilo aynı kalabilir. Kompozisyon değişmiş olabilir. Araştırmalar,
 östrojen düşüşünün kas–yağ dengesi üzerindeki etkisinin yalnızca yaşa bağlı genel kayışla
-açıklanamayabileceğini gösteriyor
-(iyi kanıt)
-. Menopoz, yaş almanın içinde ayrı bir
+açıklanamayabileceğini gösteriyor (iyi kanıt). Menopoz, yaş almanın içinde ayrı bir
 katmandır.
 
 Bunu duymak bazen rahatlatır. Bazen de omuzlara küçük bir yük biner. İkisi yan yana durabilir.
@@ -106,9 +112,7 @@ Bunlar reçete değil. Hekimle birlikte değerlendirilebilecek üç yaklaşımd�
 
 **Bir.** Direnç antrenmanı, kompozisyonu kasla destekleyen somut araçlardan biridir.
 Menopozdaki kadınlarda düzenli direnç antrenmanının kas kütlesini korumaya yardımcı olabileceğini
-gösteren çalışmalar artıyor
-(iyi kanıt)
-. Kritik kelime "düzenli"dir — ayda iki kez değil,
+gösteren çalışmalar artıyor (iyi kanıt). Kritik kelime "düzenli"dir — ayda iki kez değil,
 haftaya yerleşmiş bir ritim. Yürüyüş iyi bir çapa olabilir; haftada bir-iki gün ağırlık eklemek de
 zamanla fark bırakabilir.
 
@@ -167,6 +171,32 @@ Belki şu soru yardımcı olur: Bu altı ayda tartı dışında neyi, yargılama
 niyetiyle gözlemleyebilirsiniz? Bir pantolonun düşüşü. Merdivenin sonunda nefesin tonu. Sabah belin
 nasıl açıldığı. Tartı susar; bu ayrıntılar görünür kalır. Bu dönemde öğrenilebilecek en sade yön
 belki de budur.
+
+Bilimsel Editör Notu
+
+Menopoz dönemindeki vücut kompozisyonu değişimi — kas kütlesinin yavaşça azalması (sarkopenik
+eğilim) ve yağın özellikle karın çevresine yeniden dağılması (viseral kayış) — östrojen düşüşünün
+yaş alma sürecine eklediği ayrı bir katmandır. Araştırmalar, bu kayışın yalnızca yaşa bağlı genel
+düşüşle açıklanamayabileceğini gösteriyor (iyi kanıt).
+
+Vücut kütle endeksi (BMI) tek başına kompozisyonu yansıtmaz; aynı kilo değerinde farklı metabolik
+profilleri gizleyebilir. Özellikle viseral yağ oranı, kardiyovasküler ve metabolik risk
+değerlendirmesinde tartı veya BMI'den daha bilgilendirici olabilir (iyi kanıt). Bu nedenle
+ölçüm aracı tek başına yeterli değildir; kompozisyon ölçümleri ek bilgi sağlar.
+
+Düzenli direnç antrenmanının menopoz dönemindeki kadınlarda kas kütlesi korunmasına yardımcı
+olabileceğini ve yeterli protein alımının kompozisyon korumasına yardımcı olabileceğini gösteren
+veriler giderek güçlenmektedir (iyi kanıt). Antrenman tipi, sıklık ve yoğunluk bireysel ortopedik
+tabloya göre titrize edilir; protein hedefi ise böbrek fonksiyonu, mevcut hastalıklar ve ilaç
+kullanımıyla birlikte değerlendirilir.
+
+Ölçüm sıklığı, antrenman protokolü, beslenme planı ve kompozisyon takip yöntemi her bireyin sağlık
+geçmişine, mevcut tıbbi durumuna ve yaşam koşullarına göre kişiselleştirilmelidir. Bu yazıdaki
+gözlemler genel bir bilgilendirme amacı taşır; ölçüm sıklığında, antrenman tipinde ya da protein
+hedeflerinde belirgin değişiklik yapmadan önce mevcut sağlık durumu, ilaçlar ve laboratuvar
+değerleri hekimle birlikte gözden geçirilmelidir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
 
 Tıbbi Not
 

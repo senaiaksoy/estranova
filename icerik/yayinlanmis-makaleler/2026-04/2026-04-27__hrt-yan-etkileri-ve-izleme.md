@@ -4,14 +4,28 @@ description: "HRT\\'nin ilk aylarında yan etkiler, kanama ve kontrol takvimi: h
 writer: alper-mumcu
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
+modifiedDate: "30 Eylül 2026"
+exportScope: local-build
 url: /hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/
 keywords: ["HRT", "hormon tedavisi yan etkileri", "meme hassasiyeti", "baş ağrısı", "kanama düzensizliği", "menopoz", "izleme takvimi", "3 aylık kontrol", "alarm belirtileri"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # HRT Yan Etkileri ve İzleme — İlk Aylarda Neyi Bekleyelim, Neyi Soralım?
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+Menopozal hormon tedavisinin (HRT) ilk haftalarında meme hassasiyeti, bulantı ve hafif baş ağrısı
+görülebilir; bunlar zamanla azalabilir. Kanama ise kullanılan tedavi düzenine, başlangıç tarihine
+ve kişisel risklere göre değerlendirilir. İlk kontrol yaklaşık üçüncü ayda, sonrasında en az yılda
+bir planlanır; rahatsız edici belirtiler için bu tarihi beklemeniz gerekmez. Yoğun veya uzun süren
+kanamayı hekiminize bildirin. Göğüs ağrısına nefes darlığı eşlik ediyorsa ya da ani konuşma bozukluğu
+veya tek taraflı güçsüzlük varsa 112'yi arayın. Doz ve uygulama yolu değişikliklerini hekiminizle
+birlikte değerlendirin; hafif yan etki yaşamak, tedavinin size uygun olup olmadığını tek başına belirlemez.
 
 ## İzlem Defteriyle Başlamak
 
@@ -38,9 +52,7 @@ göstermez.
 Belirtilerdeki düzelme de yan etkilerin seyri de kişiden kişiye değişir. Bazı kadınlar hiçbir yan
 etki yaşamaz. Bazılarında meme hassasiyeti, bulantı, baş ağrısı veya ruh hali değişiklikleri görülür.
 Hafif belirtiler birkaç hafta içinde azalabilir. Rahatsız edici olanları ya da üç aydan uzun
-sürenleri hekiminizle konuşun. Şiddetli bir belirti için üç ay beklenmez
-(iyi kanıt)
-[[2]](#kaynak-2).
+sürenleri hekiminizle konuşun. Şiddetli bir belirti için üç ay beklenmez (iyi kanıt) [[2]](#kaynak-2).
 
 Menopoz belirtileriyle ilaç yan etkileri birbirine benzeyebilir. Bu yüzden yeni bir şikâyeti hemen
 “hormonlara alışıyorum” diye açıklamayın. Ne zaman başladığını ve gününüzü nasıl etkilediğini
@@ -56,9 +68,7 @@ Bunu hekiminize söylemek için şiddetlenmesini beklemeyin.
 
 **Meme hassasiyeti** birkaç hafta içinde hafifleyebilir. Sizi rahatsız ediyorsa veya
 geçmiyorsa hekiminizle konuşun. Memede yeni kitle, meme başında akıntı ya da değişiklik veya ciltte
-çekinti fark etmek, genel hassasiyetten ayrı değerlendirilir
-(iyi kanıt)
-[[3]](#kaynak-3).
+çekinti fark etmek, genel hassasiyetten ayrı değerlendirilir (iyi kanıt) [[3]](#kaynak-3).
 
 **Bulantı** için ağızdan alınan östrojen tabletini yemekle almak yardımcı olabilir;
 kendi ilacınızın kullanım talimatını esas alın. Bir haftadan uzun sürerse veya belirginse
@@ -78,9 +88,7 @@ Hekiminize başlangıç tarihini, kanama günlerini ve kullandığınız tedavi 
 Rahmi olan kadınlarda sistemik HRT'nin ilk altı ayında veya doz ya da ilaç değişikliğini izleyen
 üç ayda lekelenme görülebilir. Döngüsel kombine tedavide progestojen döneminin sonunda beklenen
 çekilme kanaması olabilir; sürekli kombine tedavideki beklenmedik kanama farklı değerlendirilir
-
-(iyi kanıt)
-[[1]](#kaynak-1) [[2]](#kaynak-2).
+(iyi kanıt) [[1]](#kaynak-1) [[2]](#kaynak-2).
 
 **Yoğun veya uzun süren kanamayı, tedaviye ne zaman başlamış olursanız olun, planlı kontrolü
 beklemeden bildirin.** Tedavi başladıktan altı aydan sonra ilk kez ortaya çıkan ya da
@@ -123,9 +131,7 @@ etkiler veya yeterince düzelmeyen belirtiler varsa görüşme öne alınır.
 Üçüncü ayda sıcak basmaları, gece terlemeleri, kanama ve yan etkiler birlikte gözden geçirilir.
 İlacı nasıl kullandığınız da konuşulur. Doz veya uygulama yolunda değişiklik gerekip gerekmediği
 bu bilgilerle değerlendirilir. Altıncı ay kontrolü herkes için zorunlu bir basamak değildir;
-ihtiyaç varsa eklenir
-(iyi kanıt)
-[[1]](#kaynak-1).
+ihtiyaç varsa eklenir (iyi kanıt) [[1]](#kaynak-1).
 
 Yıllık görüşmede yeni sağlık sorunları, tedavinin yararı, olası riskler ve tansiyon gibi temel
 sağlık kontrolleri ele alınır. Ulusal tarama programları sürdürülür. HRT kullanmak tek başına
@@ -222,6 +228,14 @@ Yan etkiler, kanama değerlendirmesi ve takip planı için kullanılan seçilmi�
 - [British Menopause Society — HRT sırasında beklenmedik kanamanın yönetimi; Mayıs 2026'da gözden geçirilen ortak kılavuz](https://thebms.org.uk/publications/bms-guidelines/management-of-unscheduled-bleeding-on-hormone-replacement-therapy-hrt/). Kanama süresi, miktarı ve kişisel risklere göre inceleme.
 - [T.C. Sağlık Bakanlığı — Meme kanseri farkındalığı ve ulusal tarama aralığı](https://www.saglik.gov.tr/TR-100021/ekim-ayi-tum-dunyada-meme-kanseri-farkindalik-ayidir.html). 40–69 yaşta iki yılda bir mamografi.
 - [NHS — İnme belirtileri](https://www.nhs.uk/conditions/stroke/symptoms/). Ani görme kaybı, şiddetli baş ağrısı ve acil yardım gerektiren nörolojik belirtiler.
+
+Bilimsel Editör Notu
+
+Hafif yan etkiler, beklenmedik kanama ve acil belirtiler ayrı değerlendirilir.
+İlk kontrol üçüncü ayda, sonraki görüşmeler en az yılda bir; ek kontroller klinik ihtiyaca göre planlanır.
+Rutin tarama ile yeni bir belirti için yapılan inceleme birbirinden ayrılmalıdır.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
 
 Tıbbi Not
 

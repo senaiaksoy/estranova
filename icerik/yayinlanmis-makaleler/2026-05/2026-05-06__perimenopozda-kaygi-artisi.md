@@ -4,14 +4,25 @@ description: "Perimenopoz döneminde kaygı, iç sıkışması ve bedensel alarm
 writer: estranova-editorial
 publishedDate: "6 Mayıs 2026"
 publishedDateIso: 2026-05-06
+exportScope: local-build
 url: /zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/
 section: "Zihin & Denge"
 sectionPath: /zihin-denge/
 keywords: ["perimenopoz", "kaygı", "anksiyete", "iç sıkışması", "duygusal denge", "uyku", "sıcak basması", "hormon dalgalanması", "40 sonrası sağlık"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Perimenopozda Kaygı Artışı: Her Şey Aynıyken Neden İçiniz Daralıyor Gibi Hissedebilirsiniz?
+
+Okumaya Başlamadan
+
+## Kısa Özet
+
+Perimenopozda kaygı artışı, çoğu zaman tek bir nedene bağlanmaz. Hormon dalgalanması, uyku bölünmesi,
+sıcak basması, gece terlemesi, yaşam yükü ve bedensel alarm sistemi aynı anda çalıştığında, daha önce
+rahat taşınan konular birden daha büyük hissedilebilir (orta–iyi kanıt). Bu tablo sık
+görülebilir; yine de kaygı günlük işlevi, uykuyu, ilişkileri veya güvenlik hissini belirgin etkiliyorsa
+daha dikkatli değerlendirme gerekir.
 
 ## Bu kaygı hissi neden tam da şimdi belirginleşebilir?
 
@@ -20,9 +31,7 @@ Bazen takvim değişmez, işler değişmez, evin sesi bile aynıdır; ama içini
 
 Bu dönemde östrojen ve progesteron düzeyleri düz bir çizgi gibi ilerlemez; dalgalanır. Beyin, özellikle
 uyku, duygu düzenleme, dikkat ve bedensel uyarılma sistemleri üzerinden bu dalgalanmaya duyarlıdır
-
-(iyi kanıt)
-. Bu yüzden bazı kadınlar kendilerini daha çabuk irkilir, daha kolay bunalan veya
+(iyi kanıt). Bu yüzden bazı kadınlar kendilerini daha çabuk irkilir, daha kolay bunalan veya
 sebepsiz yere içi sıkışan biri gibi hissedebilir.
 
 Burada önemli ayrım şudur: Kaygı hissi "karakteriniz değişti" anlamına gelmek zorunda değildir. Bazen
@@ -38,9 +47,7 @@ tetikte kalma hali gibi hissedilir. İkisi birbirine karışabilir, ama aynı ş
 Stres, teslim tarihi, aile sorumluluğu, sağlık kontrolü, ilişki gerilimi veya maddi plan gibi daha görünür
 bir nedene bağlanabilir. Kaygıda ise beden bazen neden henüz açık değilken alarm verir: göğüste sıkışma,
 mide düğümü, hızlı düşünce akışı, sabah erken uyanma veya "bir şey olacak" hissi öne çıkabilir
-
-(orta kanıt)
-.
+(orta kanıt).
 
 Perimenopoz bu iki alanı birbirine yaklaştırabilir. Uykusuz bir gece, ertesi gün iş yükünü daha ağır
 hissettirebilir; sıcak basması bedensel alarmı tetikleyebilir; yoğun bir hafta da hormon dalgalanmasının
@@ -53,9 +60,7 @@ Kaygının en zor taraflarından biri, yalnızca düşüncede kalmamasıdır. Be
 önce beden konuşur.
 
 Çarpıntı hissi, göğüs veya boğazda sıkışma, mide hassasiyeti, yüzeysel nefes, omuzlarda gerginlik ve
-ani terleme, kaygıya eşlik edebilen bedensel belirtilerdir
-(iyi kanıt)
-. Perimenopozda sıcak
+ani terleme, kaygıya eşlik edebilen bedensel belirtilerdir (iyi kanıt). Perimenopozda sıcak
 basması ve gece terlemesi de benzer bedensel duyumlar yaratabildiği için kadınlar bazen "kaygı mı başladı,
 sıcak basması mı geliyor?" ayrımını yapmakta zorlanabilir.
 
@@ -69,9 +74,7 @@ bazılarında midede, bazılarında ise zihnin hızlanmasında belirginleşir.
 Gece iyi kapanmayan bir sistem, sabah dünyayı daha gürültülü duyar. Perimenopozda kaygıyı anlamak için
 yalnızca gündüze değil, geceye de bakmak gerekir.
 
-Uyku bölündüğünde beyin ertesi gün duygusal uyaranlara daha hassas yanıt verebilir
-(iyi kanıt)
-.
+Uyku bölündüğünde beyin ertesi gün duygusal uyaranlara daha hassas yanıt verebilir (iyi kanıt).
 Sıcak basması ve gece terlemesi uykuyu kesintiye uğrattığında, dinlenme azalır; dinlenme azaldığında ise
 sabah daha çabuk irkilme, daha düşük tahammül ve daha yoğun kaygı hissi ortaya çıkabilir. Bu bir irade
 eksikliği değil, toparlanma kapasitesinin zorlanmasıdır.
@@ -88,9 +91,7 @@ olduğu anlamına da gelmez.
 
 Ara ara gelen iç sıkışması, sabahları daha huzursuz uyanma, kalabalık ortamlarda daha çabuk yorulma, küçük
 kararları gereğinden büyük hissetme, regl öncesi dönemde kaygının artması veya sıcak basmasıyla birlikte
-bedensel alarm yaşama perimenopozda görülebilen dalgalanmalardır
-(orta–iyi kanıt)
-.
+bedensel alarm yaşama perimenopozda görülebilen dalgalanmalardır (orta–iyi kanıt).
 
 Bu belirtileri izlerken üç soru işe yarar: Ne kadar sürüyor? Günlük hayatı ne kadar daraltıyor? Zamanla
 artıyor mu, dalga dalga mı geliyor? Bu üç soru, hem gereksiz paniği azaltır hem de "bunu artık konuşmak
@@ -104,9 +105,7 @@ telaş değil, tabloyu ciddiye alma biçimidir.
 Kaygı işinizi, uykunuzu, ilişkilerinizi veya dışarı çıkma rahatlığınızı belirgin biçimde etkiliyorsa;
 panik atak benzeri ataklar oluyorsa; çöküntü hali, umutsuzluk, yoğun suçluluk, kendinize zarar verme düşüncesi
 veya alkol/ilaçla baş etmeye çalışma eşlik ediyorsa profesyonel değerlendirme geciktirilmemelidir
-
-(güçlü kanıt)
-.
+(güçlü kanıt).
 
 Ayrıca tiroid düzensizlikleri, kansızlık, B12 eksikliği, bazı ilaçlar, yoğun yas veya uzun süren bakım yükü
 de kaygı benzeri bir tabloyu ağırlaştırabilir. Bu nedenle her şeyi yalnızca hormon geçişiyle açıklamak
@@ -120,9 +119,7 @@ sessizleştiren küçük düzenler daha güvenli bir zemin kurar.
 
 Düzenli uyku saati, sabah gün ışığı, gün içinde kısa yürüyüş, kafein saatini öne çekmek, akşam ekran
 geçişini yumuşatmak, nefesi uzatan kısa pratikler ve yapılacakları zihinde tutmak yerine yazıya dökmek
-bazı kadınlarda yükü azaltabilir
-(orta kanıt)
-. Burada amaç kaygıyı "kontrol etmek" değil, bedene
+bazı kadınlarda yükü azaltabilir (orta kanıt). Burada amaç kaygıyı "kontrol etmek" değil, bedene
 daha az alarm sebebi vermektir.
 
 - Sabah ilk 30 dakikada bedeninizi tarayın: çene, omuz, mide ve nefes nasıl?
@@ -144,6 +141,38 @@ Kendinizi son aylarda daha çabuk irkilir, daha kolay bunalan veya içi daha sı
 hissediyorsanız, bunu yalnızca karakter meselesi gibi okumayın. Ama bunu kendi başınıza taşımak zorunda
 olduğunuz bir sır gibi de düşünmeyin. Sık görülen bir dalga olabilir; günlük hayat alanınızı daraltmaya
 başladıysa, daha dikkatli değerlendirme iyi bir öz bakım adımıdır.
+
+Pratik Sorular
+
+## Sıkça Sorulan Sorular
+
+Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.
+
+### Perimenopozdaki kaygı artışı anksiyete bozukluğu anlamına gelir mi?
+
+Her zaman hayır. Perimenopozda kaygı dalgalanması hormon değişimi, uyku bölünmesi ve yaşam yüküyle ilişkili olabilir. Ama kaygı günlük işlevi belirgin bozuyorsa, panik atak benzeri ataklar oluyorsa veya çöküntü hali eşlik ediyorsa profesyonel değerlendirme iyi olur.
+
+### Kaygı hissi adet düzeni değişmeden de başlayabilir mi?
+
+Evet, bazı kadınlarda ruh hali, uyku veya bedensel alarm hissi adet düzenindeki belirgin değişimden önce fark edilebilir. Perimenopoz her kadında aynı sırayla ilerlemez; bu yüzden yalnızca takvime bakmak tabloyu eksik bırakabilir.
+
+### Gece uyanmaları kaygıyı gerçekten artırabilir mi?
+
+Evet. Uyku bölündüğünde ertesi gün sinir sistemi daha tetikte çalışabilir; küçük stresler daha büyük hissedilebilir. Sıcak basması ve gece terlemesi de bu döngüyü besleyebilir.
+
+### Ne zaman bunu yalnızca yoğunluk diye geçmemek gerekir?
+
+Kaygı işinizi, ilişkinizi, uykunuzu, dışarı çıkma rahatlığınızı veya güvenlik hissinizi belirgin etkiliyorsa ertelememek gerekir. Kendinize zarar verme düşüncesi, yoğun umutsuzluk veya panik atak benzeri ataklar varsa destek aramak acil önem taşır.
+
+Bilimsel Editör Notu
+
+Perimenopoz döneminde kaygı artışı, hormonal dalgalanmanın duygu düzenleme, uyku ve otonom sinir sistemi yanıtlarıyla kesiştiği bir alanda değerlendirilebilir.
+
+Uyku bölünmesi, vazomotor belirtiler, mevcut stres yükü, geçmiş kaygı öyküsü ve eşlik eden tıbbi durumlar tabloyu belirginleştirebilir; bu nedenle tek nedenli açıklama çoğu zaman yetersiz kalır.
+
+Günlük işlev kaybı, panik atak benzeri ataklar, uzun süren çöküntü hali, kendine zarar verme düşüncesi veya bedensel belirtilerin şiddetlenmesi durumunda bireysel değerlendirme geciktirilmemelidir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
 
 Tıbbi Not
 

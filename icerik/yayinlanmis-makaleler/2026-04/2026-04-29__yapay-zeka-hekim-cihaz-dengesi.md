@@ -4,14 +4,23 @@ description: "Yapay zekâ asistanı, kişisel takip verisi ve hekim yorumu aynı
 writer: rima-erdemir
 publishedDate: "29 Nisan 2026"
 publishedDateIso: 2026-04-29
+modifiedDate: "1 Ekim 2026"
+exportScope: local-build
 url: /zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi/
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam/
 keywords: ["yapay zekâ", "dijital sağlık", "dijital takip verisi", "menopoz", "post-menopoz", "sağlık okuryazarlığı"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Yapay Zekâya Sorduğum Bir Soru, Hekime Yazdığım Bir Not — Sağlık Bilgisinin Üçlü Dengesi
+
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Bir gece yapay zekâya sıcak basmalarımı sordum; sabah hekimime kendi gözlemlerimi yazdım.
+Menopoz sonrası dönemde uyku takibime de bakarken, bu üç bilgi kaynağından ne beklediğimi yeniden düşündüm.
 
 ## Gece Sorduğum Soruyu Sabah Yeniden Düşündüm
 
@@ -92,6 +101,18 @@ Belki yaş almanın iyi taraflarından biri de bu: daha çok şey bilip daha az 
 
 Hâlâ her şey net değil. O gece beni telefona uzandıran merak da geçmedi. Artık onu uzun bir liste yerine,
 sabah hekimime yazacağım birkaç cümleye taşıyorum. Benim yolum bu; sizin bilgiye ulaşma ve hekiminizle konuşma biçiminiz farklı olabilir.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+Genel amaçlı yapay zekâ asistanlarının sağlık yanıtları yanlış veya eksik bilgi içerebilir.
+Kişisel öykü paylaşılmış olsa da bu yanıtlar bireysel tanı ve tedavi değerlendirmesinin yerini tutmaz.
+Tanı ve tedavi planlaması kişisel öykü, muayene ve hekim değerlendirmesi gerektirir.
+
+Tüketici tipi uyku takip araçları, zaman içindeki değişiklikleri konuşmaya yardımcı olabilir;
+uyku evresi tahminleri ise kesin ölçüm gibi yorumlanmamalıdır (orta kanıt).
+Bu yazıda anlatılan takip uygulaması, tıbbi uyku değerlendirmesinin yerine geçmez.
 
 Tıbbi Not
 

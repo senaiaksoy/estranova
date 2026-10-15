@@ -4,14 +4,25 @@ description: "Menopoz nedir, kaç yaşında başlar, belirtileri nelerdir? Perim
 writer: estranova-editorial
 publishedDate: "11 Mayıs 2026"
 publishedDateIso: 2026-05-11
+modifiedDate: "3 Ağustos 2026"
+exportScope: local-build
 url: /hormonal-gecis/menopoz/menopoz-nedir/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/
 keywords: ["menopoz nedir", "menopoz belirtileri", "menopoz kaç yaşında başlar", "menopoz evreleri", "perimenopoz", "postmenopoz", "FSH", "östrojen"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Menopoz Nedir? — Temel Rehber
+
+Okumaya Başlamadan
+
+## Kısa Özet
+
+Menopoz, ardışık 12 ay adet görmeyince geriye dönük teyit edilen doğal bir eşiktir; ortalama
+yaşı 51–52 olarak bildiriliyor, ancak bu zaman çizgisi kişiden kişiye önemli ölçüde farklılaşıyor.
+Perimenopoz, menopoz ve postmenopoz her biri farklı bir gündem taşıyor; belirtiler değişirken
+uzun vadeli odak kemik ve kalp-metabolizma dengesine kayıyor.
 
 ## Geriye Dönük Netleşen Bir Eşik
 
@@ -58,12 +69,8 @@ Bu farkı bilmek, sağlık planını dönemlere göre kurabilmeyi kolaylaştır�
 anlamak, tek bir test sonucuna çok anlam yüklememek açısından önemli.
 
 Menopoz döneminde FSH ve LH düzeyleri yükselir; bu, yumurtalık yanıtının azalmasına bağlı
-tanınan bir biyolojik bulgudur
-(iyi kanıt)
-<sup>[[3]](#kaynak-3)</sup>. Östrojen ve progesteron düzeylerinde
-kalıcı bir düşüş gözlenir
-(iyi kanıt)
-<sup>[[3]](#kaynak-3)</sup>. Postmenopozda bu yeni denge daha stabil
+tanınan bir biyolojik bulgudur (iyi kanıt)<sup>[[3]](#kaynak-3)</sup>. Östrojen ve progesteron düzeylerinde
+kalıcı bir düşüş gözlenir (iyi kanıt)<sup>[[3]](#kaynak-3)</sup>. Postmenopozda bu yeni denge daha stabil
 hale gelir — dalgalanma hafifler, ama tüm belirtilerin birden bittiği anlamına gelmez.
 
 Hormon ölçümleri bu dönemde tek başına karar aracı değil. Klinik belirtiler, yaş, adet
@@ -77,9 +84,7 @@ Menopoz eşiğinde bazı sesler kısılır, bazıları ise daha görünür hale 
 ediyor mu?" diye ikiye ayırmak yerine bedenin yeni önceliklerini okumak çok daha gerçekçi.
 
 En sık yaşanan değişim, sıcak basması ve gece terlemesinin zamanla hafiflemesidir. Bu eğilim
-genel nüfus çalışmalarında gözlemleniyor — ama bireysel dağılım geniş
-(orta kanıt)
-<sup>[[2]](#kaynak-2)</sup>.
+genel nüfus çalışmalarında gözlemleniyor — ama bireysel dağılım geniş (orta kanıt)<sup>[[2]](#kaynak-2)</sup>.
 Kiminde yıllarca sürebilir, kiminde beklenenden erken geçer. Uyku kalitesindeki bozulma, cilt
 ve mukozalarda kuruluk, libido değişimi ya da odaklanma güçlüğü bazı kadınlarda bir süre
 daha eşlik edebilir.
@@ -90,9 +95,7 @@ yönetiminin yanında sağlık gündeminin yeni katmanlarını oluşturur<sup>[[
 
 Postmenopozun ilk yılları "artık bitti" değil; sağlık takvimini yeniden kurmak için iyi bir
 başlangıç noktası. Vücut yeni dengeye alışırken kemik kaybı görece hızlanabiliyor — bu
-gözlemsel verilerle destekleniyor
-(iyi kanıt)
-<sup>[[5]](#kaynak-5)</sup>. Düzenli hareket, yeterli protein,
+gözlemsel verilerle destekleniyor (iyi kanıt)<sup>[[5]](#kaynak-5)</sup>. Düzenli hareket, yeterli protein,
 kalsiyum ve D vitamini dengesi önem taşıyor. Kemik mineral yoğunluğu değerlendirmesinin
 zamanlaması ise kişisel öyküye ve hekimle yapılan plana göre şekilleniyor.
 
@@ -137,6 +140,66 @@ Adet belirsizliğinin sona ermesi, bazı kadınlar için zaman ve enerji yöneti
 sadeleştiriyor. Bedenle yeniden anlaşmak — kemik, kalp, beslenme, uyku üzerinden —
 bu eşiği bir kapanış yerine planlı bir başlangıca dönüştürebilir. Tek bir doğru yol yok;
 sürdürülebilir bir yol var.
+
+## Kaynaklar
+
+-
+Harlow SD et al. "Executive summary of the Stages of Reproductive Aging Workshop + 10: addressing the unfinished agenda of staging reproductive aging."
+*Menopause*. 2012;19(4):387–395.
+PMID: [22343510](https://pubmed.ncbi.nlm.nih.gov/22343510/) ·
+DOI: [10.1097/gme.0b013e31824d8f40](https://doi.org/10.1097/gme.0b013e31824d8f40) (STRAW+10 — menopoz evrelerinin uluslararası sınıflandırma referansı; ortalama yaş ve perimenopoz süresi.)
+-
+The NAMS 2022 Hormone Therapy Position Statement Advisory Panel. "The 2022 hormone therapy position statement of The Menopause Society."
+*Menopause*. 2022;29(7):767–794.
+PMID: [35797481](https://pubmed.ncbi.nlm.nih.gov/35797481/) ·
+DOI: [10.1097/GME.0000000000002028](https://doi.org/10.1097/GME.0000000000002028) (HRT karar rehberi, vazomotor belirti verileri, bireysel risk-fayda dengesi.)
+-
+Randolph JF Jr et al. "Change in follicle-stimulating hormone and estradiol across the menopausal transition."
+*J Clin Endocrinol Metab*. 2011;96(3):746–754.
+PMID: [21159842](https://pubmed.ncbi.nlm.nih.gov/21159842/) ·
+DOI: [10.1210/jc.2010-1746](https://doi.org/10.1210/jc.2010-1746) (FSH yükselişi ve östrojen düşüşünün longitudinal verileri.)
+-
+Greendale GA et al. "Changes in body composition and weight during the menopause transition."
+*JCI Insight*. 2019;4(5):e124865.
+PMID: [30843880](https://pubmed.ncbi.nlm.nih.gov/30843880/) ·
+DOI: [10.1172/jci.insight.124865](https://doi.org/10.1172/jci.insight.124865) (Perimenopoz–postmenopoz geçişinde metabolik ve vücut kompozisyonu değişimleri; SWAN kohort.)
+-
+Cauley JA. "Estrogen and bone health in men and women."
+*Steroids*. 2015;99(Pt A):11–15.
+PMID: [25555470](https://pubmed.ncbi.nlm.nih.gov/25555470/) ·
+DOI: [10.1016/j.steroids.2014.12.010](https://doi.org/10.1016/j.steroids.2014.12.010) (Östrojen düşüşü ve postmenopozal kemik kaybı mekanizması.)
+
+Pratik Sorular
+
+## Sıkça Sorulan Sorular
+
+Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.
+
+### Menopoz bir gün mü, bir süreç mi?
+
+Tıbbi tanım olarak tek bir eşik vardır ama yaşantı olarak bir süreçtir. Son adetten 12 ay sonra geriye dönük olarak netleşir; öncesindeki yıllar ise perimenopoz geçişidir.
+
+### Menopoz belirtileri son adetle birlikte hemen biter mi?
+
+Hayır. Bazı kadınlarda belirtiler bu eşiğin ardından da bir süre devam edebilir. Yakınmanın seyri kişiye göre değişir ve yalnızca takvime bakarak anlaşılmaz.
+
+### Menopoz sonrası dönemde en çok hangi sağlık başlıkları öne çıkar?
+
+Kemik sağlığı, kardiyometabolik denge, uyku, beden kompozisyonu ve ürogenital konfor daha görünür hale gelir. Bu yüzden dönem yalnızca “adet bitti” diye değil, yeni bir sağlık ajandası olarak okunmalıdır.
+
+Bilimsel Editör Notu
+
+Menopoz bir hastalık değil, yaşamın doğal evrelerinden biridir. Klinik tanım son adetin üzerinden
+on iki ay geçmesiyle geriye dönük olarak konulur; perimenopoz, menopoz ve postmenopoz aşamaları
+farklı hormonal dinamikler ve sağlık öncelikleri taşır. Ortalama görülme yaşı 51–52 olarak
+bildirilmekle birlikte bireysel zaman çizgisi kişiden kişiye önemli ölçüde farklılaşır.
+
+Hormonal değişim profili (FSH yükselişi, östrojen ve progesteron düşüşü) bu evrede sistematik
+olarak izlenir; ancak tek bir hormon ölçümü tanı için yeterli değildir ve klinik bulgu, yaş ile
+adet öyküsüyle birlikte bütünleşik biçimde değerlendirilir. Uzun vadeli sağlık izlemi ve yaşam
+tarzı planlamasının kapsamı kişisel risk öyküsüne göre şekillenir.
+
+— Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
 
 Tıbbi Not
 

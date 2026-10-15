@@ -15,6 +15,13 @@ exportedAt: 2026-10-15
 
 # Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık
 
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Yaz yaklaşırken “hızlıca forma girmeliyim” düşüncesi, hareket etme isteğinin önüne geçebiliyor.
+Spordan öğrendiğim devamlılığa, gündelik işlerde fark edilen güce ve dinlenmeye biraz yer açmak istiyorum.
+
 ## Denize Çıkmadan Önce
 
 Bir yaz sabahı denize çıkmadan önce rüzgârla birlikte kendime de bakmayı öğrenmiştim:

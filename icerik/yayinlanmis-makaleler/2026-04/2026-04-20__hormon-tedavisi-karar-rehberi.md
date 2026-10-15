@@ -4,14 +4,28 @@ description: "Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler i
 writer: senai-aksoy
 publishedDate: "20 Nisan 2026"
 publishedDateIso: 2026-04-20
+modifiedDate: "30 Eylül 2026"
+medicalReviewer: "Dr. Alper Mumcu"
+exportScope: local-build
 url: /hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/menopoz/
 keywords: ["hormon tedavisi", "HRT", "MHT", "menopoz", "östrojen", "progesteron", "sıcak basması", "karar verme"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+Menopozal hormon tedavisi, sıcak basması ve gece terlemesi için kanıtı güçlü bir seçenektir.
+Ama karar tek bir “kullanmalı mıyım?” sorusuna sığmaz. Ben önce hangi yakınmanın hayatınızı gerçekten
+zorladığına, tedaviye engel bir sağlık öyküsü olup olmadığına ve sistemik mi lokal mi bir tedavinin
+gerektiğine bakarım. Engeli olmayan bir kadında 60 yaşından önce ve menopozdan sonraki ilk 10 yıl
+içinde başlandığında yarar-risk dengesi genellikle daha elverişlidir; bu sınırlar yine de tek başına
+bir başlama veya bırakma kuralı değildir. Yalnızca vajinal yakınmalar için düşük doz lokal tedavi yeterli olabilir.<sup>[[1]](#kaynak-1)</sup><sup>[[3]](#kaynak-3)</sup>
 
 ## Önce Sizi Zorlayan Yakınma
 
@@ -47,9 +61,7 @@ daha elverişli olabilir; bu farkın önemli bir bölümü gözlemsel verilere d
 Rahminiz varsa sistemik östrojenle birlikte rahim iç tabakasını, yani endometriumu koruyan bir tedavi
 gerekir. Genellikle progesteron veya aynı koruyucu etkiyi sağlayan başka bir progestojen kullanılır.
 Bu koruma, östrojenin rahim iç tabakasında aşırı kalınlaşma ve kanser riskini artırmasını önlemek içindir
-
-(güçlü kanıt)
-. Rahmi tamamen alınmış kadınlarda ise çoğunlukla yalnız östrojen kullanılır.<sup>[[1]](#kaynak-1)</sup><sup>[[2]](#kaynak-2)</sup><sup>[[3]](#kaynak-3)</sup>
+(güçlü kanıt). Rahmi tamamen alınmış kadınlarda ise çoğunlukla yalnız östrojen kullanılır.<sup>[[1]](#kaynak-1)</sup><sup>[[2]](#kaynak-2)</sup><sup>[[3]](#kaynak-3)</sup>
 
 ### Düşük doz vajinal östrojenin farkı
 
@@ -78,9 +90,7 @@ kullanılan hormona, uygulama yoluna ve tedaviye ne zaman başlandığına göre
 ### Sıcak basması ve kemik
 
 Hormon tedavisinin sıcak basmalarını ve gece terlemelerini azaltabildiğine ilişkin kanıt güçlüdür
-
-(güçlü kanıt)
-. Ağızdan östrojen veya östrojen-progestojen kullanılan randomize çalışmaların
+(güçlü kanıt). Ağızdan östrojen veya östrojen-progestojen kullanılan randomize çalışmaların
 bir derlemesinde, sıcak basması sıklığı plaseboya göre ortalama üçte ikiden fazla azalmıştır.
 Bu, farklı tedavileri birleştiren eski bir derlemenin grup sonucudur; her kadında veya her uygulama
 yolunda aynı azalma beklenmez.<sup>[[10]](#kaynak-10)</sup>
@@ -113,9 +123,7 @@ soru bu. Burada yalnız östrojenle östrojen-progestojen birlikteliğini ayırm
 
 Rahmi alınmış kadınların katıldığı büyük bir randomize çalışmada, ortanca yaklaşık yedi yıl ağızdan
 konjuge at östrojeni kullanılmıştır. Bu, belirli bir östrojen karışımıdır. Uzun dönem izlemde meme
-kanseri görülme sıklığı plasebo grubundan daha düşük bulunmuştur
-(iyi kanıt)
-.
+kanseri görülme sıklığı plasebo grubundan daha düşük bulunmuştur (iyi kanıt).
 Bulguyu her östrojen türüne veya kullanım süresine genelleyemeyiz; östrojen meme kanserinden korunmak
 amacıyla kullanılmaz.<sup>[[4]](#kaynak-4)</sup>
 
@@ -181,9 +189,7 @@ dikkate alınır.<sup>[[6]](#kaynak-6)</sup>
 Migren veya iyi kontrol edilen tansiyon tek başına bütün seçenekleri ortadan kaldırmaz; ama uygulama
 yolunu seçerken bunlara bakarım. Auralı migrende, yani baş ağrısına geçici görme veya duyu
 belirtilerinin eşlik ettiği migrende, uygun hastalarda ciltten östradiolü tercih ederim. Aura tek başına
-menopoz hormon tedavisine engel sayılmaz; bu gruptaki güvenlik verileri yine de sınırlıdır
-(sınırlı kanıt)
-.<sup>[[8]](#kaynak-8)</sup>
+menopoz hormon tedavisine engel sayılmaz; bu gruptaki güvenlik verileri yine de sınırlıdır (sınırlı kanıt).<sup>[[8]](#kaynak-8)</sup>
 
 Tansiyon kontrol altındaysa veya trigliserid adı verilen kan yağları yüksekse de
 ciltten uygulamayı öne alırım. Kontrolsüz tansiyonda ise önce tansiyonun
@@ -204,9 +210,7 @@ kesmeyi birlikte planlarız.<sup>[[1]](#kaynak-1)</sup><sup>[[3]](#kaynak-3)</su
 Hormon kullanmama tercihiniz de görüşmenin bir parçasıdır. Menopoza yönelik bilişsel davranışçı terapi,
 belirtilerle baş etmeye ve uyku sorunlarına yardımcı olabilir. Sıcak basmaları için kanıtı bulunan
 hormonsuz ilaç seçenekleri de vardır; uygunlukları, yan etkileri ve Türkiye'deki erişimleri ayrıca
-değerlendirilir
-(iyi kanıt)
-.<sup>[[3]](#kaynak-3)</sup><sup>[[9]](#kaynak-9)</sup>
+değerlendirilir (iyi kanıt).<sup>[[3]](#kaynak-3)</sup><sup>[[9]](#kaynak-9)</sup>
 
 Hareket, uyku düzeni ve dengeli beslenme genel sağlık için değerlidir. Sıcak basmalarını azaltmada ise
 kanıtlı ilaçlar kadar etkili oldukları gösterilmemiştir.<sup>[[9]](#kaynak-9)</sup>
@@ -271,6 +275,62 @@ NAMS. *The 2023 nonhormone therapy position statement of The North American Meno
 -
 MacLennan AH, Broadbent JL, Lester S, Moore V. *Oral oestrogen and combined oestrogen/progestogen therapy versus placebo for hot flushes.* Cochrane Database Syst Rev. 2004;(4):CD002978.
 [Ağızdan hormon tedavisinin sıcak basması sıklığına etkisi](https://pmc.ncbi.nlm.nih.gov/articles/PMC7004247/).
+
+Pratik Sorular
+
+## Dr. Aksoy'a Sorular
+
+Doç. Dr. Senai Aksoy tedavi seçimi, başlama ve sürdürme kararı, hormon istemeyenler için seçenekler ve lokal tedavi hakkındaki soruları yanıtlıyor.
+
+### Hormonun türünü ve dozunu nasıl seçiyorsunuz?
+
+Yalnızca vajinal kuruluk varsa lokal tedavi yeterli olabilir; sıcak basması gibi genel belirtilerde sistemik tedaviyi değerlendiririm. Rahim yerindeyse sistemik östrojene rahim iç tabakasını koruyacak bir progestojen eklerim; rahim alınmışsa çoğunlukla yalnız östrojen kullanılır.
+
+Auralı migren, kontrollü hipertansiyon veya trigliserid yüksekliğinde genellikle ciltten östradiolü tercih ederim. Dozu belirtileri kontrol eden en düşük düzeyden başlatır, yanıta ve yan etkilere göre ayarlarım. Kararı tek bir hormon kan sonucuna bağlamam.
+
+### Kararda hangi üç başlığa bakıyorsunuz?
+
+Önce yakınma ve hedef: Sizi en çok ne zorluyor, tedaviden ne bekliyorsunuz?
+
+İkinci başlık kişisel risk. Yaşınız, menopozdan beri geçen süre; meme kanseri, pıhtı ve kalp-damar hastalığı öyküsü tedavinin uygunluğunu belirler.
+
+Üçüncüsü tedavi planı. Sağlık bulgularınıza göre hormonun türünü ve uygulama yolunu seçer, yararı ve yan etkileri birlikte izleriz.
+
+### Hormon kullanmak istemeyen bir kadına seçenekleri nasıl anlatıyorsunuz?
+
+Önce kararına saygı duyar, “Sizi en çok hangi belirti zorluyor?” diye sorarım. Sıcak basması ve gece terlemesi için menopoza yönelik bilişsel davranışçı terapiyi; belirgin yakınmalarda ise kişiye göre bazı antidepresanları, gabapentini veya uygun ve erişilebilir olduğunda diğer hormon dışı reçeteli seçenekleri konuşuruz.
+
+Yalnızca vajinal kuruluk varsa düzenli nemlendirici ve ilişki sırasında kayganlaştırıcıyla başlayabiliriz. Uyku, hareket ve sigara gibi genel sağlık etkenlerini de ele alırım.
+
+Hiçbirini “HRT ile tamamen aynı etkiyi sağlar” diye sunmam; seçtiğimiz yöntemin işe yarayıp yaramadığını birlikte değerlendiririz. Hormon istememesi, yakınmalarıyla tek başına baş etmesi gerektiği anlamına gelmez.
+
+### Hormon tedavisine başlamakla devam etmek aynı karar mı?
+
+İlk kez sistemik hormon tedavisine başlarken yaşa ve menopozdan beri geçen süreye birlikte bakarım. Yakınmaları belirgin, tedaviye engeli olmayan bir kadında 60 yaşından önce ve menopozdan sonraki ilk 10 yıl içinde başlandığında yarar-risk dengesi genellikle daha elverişlidir. Daha geç başvuruda “Artık kesinlikle kullanamazsınız” demem; fakat kalp-damar hastalığı, inme ve pıhtı riskini daha dikkatli değerlendirir, hormon dışı seçenekleri de konuşurum.
+
+Devam kararı farklıdır. Tedaviye daha erken başlamış bir kadın 60 veya 65 yaşına geldi diye ilacı otomatik kesmem. Belirtiler hâlâ tedavi gerektiriyor mu, yarar görüyor mu, yeni bir risk gelişti mi diye düzenli olarak yeniden değerlendiririm. 65 yaşında ilk kez başlamakla, 65 yaşında işe yarayan bir tedaviye devam etmek aynı karar değildir.
+
+### Düşük doz vajinal östrojenin farkı nedir; meme kanseri öyküsünde nasıl değerlendiriyorsunuz?
+
+Sistemik hormon tedavisinin kana geçerek sıcak basması ve gece terlemesi gibi genel yakınmaları hedeflediğini anlatırım. Düşük doz vajinal östrojen ise esas olarak kuruluk, yanma ve ilişki sırasında ağrı için vajinaya uygulanır. Kana geçişi genellikle çok azdır, ama “Hiç emilmez” demem; sıcak basmasını da tedavi etmesini beklemem.
+
+Meme kanseri öyküsünde önce hormon içermeyen nemlendirici ve kayganlaştırıcıları denerim. Bunlar yetmez ve yakınma belirginse düşük doz vajinal östrojeni, olası yarar ve belirsizlikleri anlatarak değerlendirebiliriz. Tamoksifen kullananlarda bu görüşme yapılabilir; aromataz inhibitörü kullananlarda ise karara hastayı izleyen onkoloğu mutlaka dahil ederim.
+
+Bağımsız Tıbbi İnceleme
+
+Hormon tedavisinin sıcak basması ve gece terlemesi üzerindeki yararı güçlü kanıta dayanır.
+Güvenlik değerlendirmesi ise kullanılan hormon, uygulama yolu, süre ve kişisel sağlık geçmişine
+göre değişir; bütün tedavilere tek bir risk düzeyi atamak uygun değildir.<sup>[[1]](#kaynak-1)</sup>
+
+Rahmi olan kadınlarda sistemik östrojen kullanırken rahim iç tabakasının korunması gerekir; düşük doz vajinal östrojen
+bu açıdan ayrı değerlendirilir. Mikronize progesteronun diğer progestojenlere göre meme kanseri
+açısından daha güvenli olduğunu kesinleştirecek kanıt yeterli değildir.<sup>[[1]](#kaynak-1)</sup><sup>[[3]](#kaynak-3)</sup>
+
+Meme kanseri veya pıhtı öyküsünde genel öneriler kişisel değerlendirme yerine geçmez.
+Geçirilmiş pıhtıda kılavuzların ayrıldığı noktalar, lokal vajinal tedavinin sınırları ve
+hormonsuz seçenekler ilgili uzmanlarla birlikte ele alınmalıdır.<sup>[[6]](#kaynak-6)</sup><sup>[[8]](#kaynak-8)</sup>
+
+— Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 30 Eylül 2026
 
 Tıbbi Not
 

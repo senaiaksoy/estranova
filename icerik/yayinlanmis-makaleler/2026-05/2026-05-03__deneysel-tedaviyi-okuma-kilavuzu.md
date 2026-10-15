@@ -4,14 +4,22 @@ description: "Deneysel tedavi ile endikasyon dışı kullanım arasındaki fark�
 writer: senai-aksoy
 publishedDate: "3 Mayıs 2026"
 publishedDateIso: 2026-05-03
+modifiedDate: "1 Ekim 2026"
+exportScope: local-build
 url: /zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/
 section: "Zamansız Yaşam"
 sectionPath: /zamansiz-yasam/
 keywords: ["deneysel tedavi", "kanıt seviyesi", "off-label kullanım", "klinik araştırma", "tedavi okuma kılavuzu", "hekim-hasta iletişimi", "menopoz", "anti-aging"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Deneysel Tedaviyi Okuma Kılavuzu
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+*Deneysel* bir yöntemde, belirli bir kullanım için etkinlik ve güvenlik sorularının yanıtı henüz yoktur. Onaylı bir ilacın endikasyon dışı kullanımı ile klinik araştırma ise farklı durumlardır. Size bir yöntem önerildiğinde dört şeye bakın: insanlarda ne gösterildiği, sizin için olası riskler, kanıtı daha güçlü standart seçenekler ve takip planı.
 
 ## Bir Tedaviye "Deneysel" Demek Ne Demek?
 
@@ -55,9 +63,7 @@ Açık bir anlatımda yöntemin nasıl çalışabileceği, hangi insan verisine 
 
 Bu konuda en sık yanlış anlaşılan nokta, "yapılıyor" ile "işe yaradığı kanıtlandı" arasındaki farktır. Özellikle deneysel tedavilerde erken çalışmalar, küçük hasta serileri veya laboratuvar bulguları pazarlama dilinde olduğundan daha güçlü gösterilebilir. Hastaya, biyolojik olarak mantıklı olmasının veya bazı kişilerde olumlu sonuç bildirilmesinin, uzun dönem sağlık sonucu gibi gerçekten önemli sonlanımları iyileştirdiği anlamına gelmediğini anlatırım.
 
-Beklenti ve tedavinin sunulduğu ortam, kişinin bildirdiği rahatlamayı etkileyebilir
-(orta kanıt)
-<sup>[[5]](#kaynak-5), [[6]](#kaynak-6)</sup>. Plasebo müdahalelerini inceleyen bir Cochrane derlemesi genel olarak klinik açıdan önemli bir etki bulmadı; ağrı ve bulantı gibi kişinin kendisinin bildirdiği sonuçlarda etki görülebiliyor, ancak bunu önyargılı bildirimden ayırmak zor <sup>[[6]](#kaynak-6)</sup>. Rahatlama hissi gerçek olabilir. Ancak kontrolsüz bir memnuniyet anlatısından yöntemin özgül etkisini ayıramayız; belirtilerin kendiliğinden dalgalanması da hesaba katılmalıdır.
+Beklenti ve tedavinin sunulduğu ortam, kişinin bildirdiği rahatlamayı etkileyebilir (orta kanıt) <sup>[[5]](#kaynak-5), [[6]](#kaynak-6)</sup>. Plasebo müdahalelerini inceleyen bir Cochrane derlemesi genel olarak klinik açıdan önemli bir etki bulmadı; ağrı ve bulantı gibi kişinin kendisinin bildirdiği sonuçlarda etki görülebiliyor, ancak bunu önyargılı bildirimden ayırmak zor <sup>[[6]](#kaynak-6)</sup>. Rahatlama hissi gerçek olabilir. Ancak kontrolsüz bir memnuniyet anlatısından yöntemin özgül etkisini ayıramayız; belirtilerin kendiliğinden dalgalanması da hesaba katılmalıdır.
 
 <p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
@@ -85,9 +91,7 @@ Kadın sağlığından bir örnek, enerji bazlı lazer ve radyofrekans cihazlar�
 
 ACOG hasta bilgilendirmesi aynı uyarıya yer verir: araştırma protokolleri dışında vajinal gençleştirme için kullanılan enerji bazlı uygulamalarla yanık, yara izi, cinsel ilişkide ağrı ve uzun süren ağrı gibi ciddi sorunlar bildirilmiştir <sup>[[8]](#kaynak-8)</sup>. Bu uyarılar riskleri anlatır; yararın ne kadar olduğu ayrı bir kanıt sorusudur. Önerilen cihazın güncel izin kapsamını, kullanım amacını ve sizin için risklerini ayrıca sorun.
 
-Bu alanda daha yeni veri de var. 2026'da yayımlanan bir sistematik derleme ve meta-analiz, genitoüriner menopoz sendromu (GSM; vajinal kuruluk ve ağrı ile idrar yakınmalarını kapsar) için fraksiyonel CO<sub>2</sub> lazeri inceledi. Kısa vadede cinsel işlev puanları kontrol gruplarına göre daha iyiydi; ancak sahte (sham) işlemli çalışmalarda fark daha küçüktü ve kanıtın kesinliği sınırlı kaldı
-(sınırlı kanıt)
-<sup>[[9]](#kaynak-9)</sup>. Bu çalışma radyofrekans cihazlarını ve estetik amaçlı kullanımı kapsamıyor. Yararın ne kadar sürdüğü, idrar yolu etkileri, kanserli kişilerdeki güvenlik ve düşük doz vajinal östrojenle karşılaştırma da henüz yeterince açık değil <sup>[[9]](#kaynak-9)</sup>.
+Bu alanda daha yeni veri de var. 2026'da yayımlanan bir sistematik derleme ve meta-analiz, genitoüriner menopoz sendromu (GSM; vajinal kuruluk ve ağrı ile idrar yakınmalarını kapsar) için fraksiyonel CO<sub>2</sub> lazeri inceledi. Kısa vadede cinsel işlev puanları kontrol gruplarına göre daha iyiydi; ancak sahte (sham) işlemli çalışmalarda fark daha küçüktü ve kanıtın kesinliği sınırlı kaldı (sınırlı kanıt) <sup>[[9]](#kaynak-9)</sup>. Bu çalışma radyofrekans cihazlarını ve estetik amaçlı kullanımı kapsamıyor. Yararın ne kadar sürdüğü, idrar yolu etkileri, kanserli kişilerdeki güvenlik ve düşük doz vajinal östrojenle karşılaştırma da henüz yeterince açık değil <sup>[[9]](#kaynak-9)</sup>.
 
 Bir hasta *"yurt dışında yapılıyor"* diye bir yöntem getirdiğinde önce o yöntemin gerçekten hangi amaçla uygulandığını ve hangi hasta grubunda çalışıldığını netleştiririm. Bir işlemin başka bir ülkede yapılıyor olması, onun standart tedavi olduğu anlamına gelmez; ruhsat durumu, kılavuzlardaki yeri ve klinik kanıt düzeyi ayrı ayrı değerlendirilmelidir. Siz de aynı soruları sorabilirsiniz: Ticari kullanım mı, belirli bir endikasyon için izin mi, yoksa klinik araştırma mı? Türkiye'deki uygulama koşulları ayrıca değerlendirilir; yurt dışındaki bir izin belgesinden burada kullanımın hukuki koşulları çıkarılamaz.
 
@@ -150,6 +154,38 @@ American College of Obstetricians and Gynecologists (ACOG). *Vaginal Rejuvenatio
 -
 Zulfikaroglu E, Zulfikaroglu B. *Fractional CO<sub>2</sub> Laser for Genitourinary Syndrome of Menopause: Comparator-Aware Systematic Review and Meta-Analysis.* Int Urogynecol J. 2026.  [Yayın kaydı](https://doi.org/10.1007/s00192-026-06821-2).
 (36 klinik çalışma, 9 randomize çalışma meta-analize girdi; kısa vadeli cinsel işlevde yarar sahte işlemli çalışmalarda daha küçük, kanıt kesinliği sınırlı.)
+
+Pratik Sorular
+
+## Dr. Aksoy'a sorular
+
+Doç. Dr. Senai Aksoy, deneysel tedavinin anlamını, endikasyon dışı kullanımla farkını ve hekime sorulacak soruları yanıtlıyor.
+
+### Bir tedaviye “deneysel” denmesi tam olarak ne anlama gelir?
+
+Bir tedaviye “deneysel” denmesi, etkinliği ve güvenliği konusunda henüz yeterli ve kaliteli klinik kanıt bulunmadığı; standart tedavi olarak kabul edilmediği anlamına gelir. Bu, mutlaka işe yaramadığı demek değildir ama beklenen yarar, riskler ve hangi hastanın gerçekten fayda göreceği konusunda belirsizlik daha fazladır.
+
+### Off-label kullanım ile deneysel yaklaşım aynı şey midir?
+
+Off-label kullanım ile deneysel tedavi aynı şey değildir. Off-label, ruhsatlı bir ilacın onaylanmış endikasyonu, dozu, yaş grubu veya kullanım şekli dışında kullanılmasıdır; bazı off-label uygulamaların güçlü bilimsel kanıtı ve kılavuz desteği olabilir. Deneysel yaklaşımda ise kanıt düzeyi genellikle daha düşüktür ve yöntemin klinik değeri henüz netleşmemiştir.
+
+### Deneysel bir seçenek konuşulurken hekime sorulacak üç temel soru nedir?
+
+Deneysel bir seçenek konuşulurken hekime üç temel soru sorulabilir: “Bu tedavinin benim durumumda işe yaradığını gösteren ne kadar güçlü kanıt var?”, “Bilinen ve henüz bilinmeyen riskleri neler?” ve “Bunu yaptırmazsam elimizde kanıtı daha güçlü hangi standart seçenekler var?” Bu üç soru, yeni veya çekici görünen bir tedavinin gerçekten anlamlı olup olmadığını çoğu zaman oldukça iyi ortaya koyar.
+
+Bilimsel Editör Notu
+
+Kanıt Düzeyi: (sınırlı–orta kanıt)
+
+**Bu rehberin kanıt yapısı:** Yazı tek bir tedaviyi değil, deneysel bir yöntemin nasıl okunacağını anlatır; bu yüzden tedaviye özgü tek bir kanıt derecesi taşımaz. Derece yalnızca iki bulguya verilmiştir.
+
+**Orta düzeyde kanıt:** Beklenti ve ortamın kişinin bildirdiği sonuçları etkileyebilmesi. Etki küçüktür, çalışmalar arasında değişir ve önyargılı bildirimden ayrılması zordur <sup>[[5]](#kaynak-5), [[6]](#kaynak-6)</sup>.
+
+**Sınırlı kanıt:** Enerji bazlı lazerin genitoüriner menopoz sendromunda kısa vadeli yararı. Fark sahte işlemli çalışmalarda küçülür; kalıcılık ve güvenlik soruları açıktır. Vajinal gençleştirme amacıyla kullanımı için 2018 tarihli FDA uyarısı ve ACOG bilgilendirmesi ciddi zarar bildirimlerine dikkat çeker <sup>[[7]](#kaynak-7), [[8]](#kaynak-8), [[9]](#kaynak-9)</sup>.
+
+Etik ve düzenleyici açıklamalar ülkeden ülkeye değişir. Kişisel karar, hekim değerlendirmesi gerektirir.
+
+— Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı
 
 Tıbbi Not
 

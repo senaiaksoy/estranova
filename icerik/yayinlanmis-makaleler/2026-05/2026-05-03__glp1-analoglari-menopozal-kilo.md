@@ -4,14 +4,29 @@ description: "Menopozda GLP-1 ilaçları: obezitedeki kilo kaybı verileri, kas 
 writer: senai-aksoy
 publishedDate: "3 Mayıs 2026"
 publishedDateIso: 2026-05-03
+modifiedDate: "1 Ekim 2026"
+exportScope: local-build
 url: /bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere/
 keywords: ["GLP-1 analogları", "semaglutid", "tirzepatid", "menopozal kilo", "obezite tedavisi", "STEP çalışması", "SURMOUNT çalışması", "viseral yağ", "sarkopeni", "HRT etkileşimi"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Menopozal Kilo İçin GLP-1 Analogları: Abartısız Klinik Karar
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+Semaglutid ve tirzepatid, uygun tıbbi koşullarda kilo yönetimine yardımcı olabilir; menopozda
+olmak tek başına kullanım gerekçesi değildir. Güçlü kilo kaybı verileri obezitesi olan veya
+fazla kiloya eşlik eden sağlık sorunu bulunan yetişkinlerden gelir. Bu çalışmalardaki ortalamalar,
+menopozdaki her kadının ne kadar kilo vereceğini söylemez. Tedavi düşünülüyorsa kas gücü,
+kemik sağlığı, kullanılan hormonlar ve ilacı bırakma sonrası izlem birlikte ele alınmalıdır.
+Özellikle ağızdan progesteron kullananlarda hormon tedavisinin gözden geçirilmesi önemlidir.
+Birkaç kilo verme isteğiyle ilaç kullanmak yerine, önce tıbbi gerekliliği ve uzun dönem planı
+hekiminizle konuşmanız gerekir.
 
 ## Menopozal Kilo Neden Zorlu?
 
@@ -20,9 +35,7 @@ Menopoz geçişinde yalnızca kilo değil, vücut bileşimi de değişebilir.
 
 Uzun süreli bir kadın sağlığı kohortunda menopoz geçişiyle yağ kütlesindeki artış hızlanırken
 yağsız kütle azaldı. Buna karşılık toplam kilo artışının hızı bu geçişin başlangıcında artmadı
-
-(iyi kanıt)
-<sup>[[1]](#kaynak-1)</sup>.
+(iyi kanıt) <sup>[[1]](#kaynak-1)</sup>.
 Kilo değişimini yalnızca östrojene bağlamak bu ayrımı kaçırır. Yaşlanma ve yaşam alışkanlıkları
 da değerlendirilmelidir; tartı, yağ ve kas dokusundaki değişimi tek başına göstermez.
 
@@ -47,9 +60,7 @@ salgısını artıran hormonlardan biridir. Doğal hormonun kandaki yarılanma �
 burada ele alınan semaglutid ve tirzepatid enjeksiyonları haftalıktır
 <sup>[[8]](#kaynak-8)</sup>.
 
-Etki temelde dört ana mekanizmayla gerçekleşir
-(güçlü kanıt)
-<sup>[[2]](#kaynak-2)</sup>:
+Etki temelde dört ana mekanizmayla gerçekleşir (güçlü kanıt) <sup>[[2]](#kaynak-2)</sup>:
 *(1)* Pankreasta glukoza bağımlı insülin salgısını artırır (tek başına hipoglisemi riski düşüktür; insülin veya bazı diyabet ilaçlarıyla birlikte risk artabilir);
 *(2)* glukagon hormonunu baskılayarak karaciğerin gereksiz şeker üretimini frenler;
 *(3)* mide boşalma hızını yavaşlatıp tokluk hissini uzatır;
@@ -70,9 +81,7 @@ Bir araştırmayı okurken de önce katılımcıların kim olduğuna ve tedavini
 
 **Tip 2 diyabet:** Bu moleküllerin ilk onay aldığı ve kanıtın en sağlam olduğu alandır.
 Kan şekeri kontrolündeki yarar iyi belgelenmiştir; bazı GLP-1 ilaçlarında yüksek riskli
-diyabet hastaları için kalp-damar yararı da gösterilmiştir
-(güçlü kanıt)
-<sup>[[2]](#kaynak-2)</sup>.
+diyabet hastaları için kalp-damar yararı da gösterilmiştir (güçlü kanıt) <sup>[[2]](#kaynak-2)</sup>.
 Bu sonuçlar her ilaca ve her hastaya aynı ölçüde genellenmez.
 
 **Obezite veya sağlık sorununun eşlik ettiği fazla kilo:**
@@ -81,9 +90,7 @@ VKİ ≥27 kg/m² olanlarda ise kiloyla ilişkili en az bir sağlık sorunu aran
 <sup>[[4]](#kaynak-4), [[3]](#kaynak-3)</sup>.
 Diyabeti olmayan yetişkinlerde semaglutid çalışmasının 68. haftasında ortalama kilo kaybı %14,9'du.
 Tirzepatid çalışmasında 72. haftadaki ortalamalar doz grubuna göre %15,0–%20,9 arasında değişti
-
-(güçlü kanıt)
-. Her iki çalışmada da yaşam tarzı desteği verildi.
+(güçlü kanıt). Her iki çalışmada da yaşam tarzı desteği verildi.
 
 Bunlar menopozdaki kadınlara özel sonuçlar değil, çalışma gruplarının ortalamalarıdır.
 Bu iki yayın, menopozun ilaç yanıtını ne kadar değiştirdiğini veya kilo platosuna ne zaman
@@ -91,9 +98,7 @@ ulaşılacağını tek başına yanıtlamaz. Menopozda olmak da tek başına ila
 
 **İlaçları doğrudan karşılaştıran veri:** 2025 tarihli randomize çalışmada,
 diyabeti olmayan ve obezitesi bulunan yetişkinlerde 72 haftalık ortalama kilo kaybı
-tirzepatid ile %20,2, semaglutid ile %13,7 idi
-(güçlü kanıt)
-<sup>[[10]](#kaynak-10)</sup>.
+tirzepatid ile %20,2, semaglutid ile %13,7 idi (güçlü kanıt) <sup>[[10]](#kaynak-10)</sup>.
 Bu sonuç, çalışmada kullanılan ve tolere edilen dozlara aittir; bütün dozlar için sabit bir fark değildir.
 Liraglutidin ayrı bir çalışmadaki ortalama kaybı ise 56 haftada yaklaşık %8'di
 <sup>[[11]](#kaynak-11)</sup>.
@@ -134,17 +139,13 @@ kütleden gelebilir; bu oran her GLP-1 kullanıcısı için sabit değildir
 <sup>[[5]](#kaynak-5)</sup>.
 Yağsız kütle yalnızca kası içermez; bu ölçümden doğrudan sarkopeni tanısı çıkarılamaz.
 Kas gücü ve günlük işlev de değerlendirilmelidir. **Yeterli protein alımı** ve
-**direnç egzersizi** kasın korunmasına yardımcı olabilir
-(orta kanıt)
-.
+**direnç egzersizi** kasın korunmasına yardımcı olabilir (orta kanıt).
 Protein hedefi sağlık durumu ve beslenme değerlendirmesine göre kişiselleştirilir.
 
 ### 3. Kemik mineral yoğunluğu hassasiyeti
 
 Hızlı kilo kaybı kemik mineral yoğunluğunda düşüşe yol açabilir; menopoz sonrası dönemde kemik döngüsü
-hızlandığı için bu risk daha belirgindir
-(sınırlı–orta kanıt)
-<sup>[[6]](#kaynak-6)</sup>.
+hızlandığı için bu risk daha belirgindir (sınırlı–orta kanıt) <sup>[[6]](#kaynak-6)</sup>.
 Tedavi sürecinde yeterli kalsiyum, D vitamini ve yük taşıyan egzersizler ihmal edilmemelidir. Özellikle
 ileri yaş veya kırık öyküsü gibi riskler varsa kemik yoğunluğu ölçümü (DXA) gereksinimi hekimle
 değerlendirilir. Bu, her GLP-1 kullanıcısına otomatik ölçüm önerisi değildir.
@@ -157,9 +158,7 @@ ikisi birlikte kullanılabilir. Ağızdan aldığınız bir hormon varsa ilaç l
 **Ağızdan progesteron ve rahim iç tabakasının korunması:** Mide boşalmasının
 yavaşlaması ağızdan alınan hormonların emilimini etkileyebilir. Özellikle rahmi olan ve östrojenle
 birlikte progesteron veya progestojen kullanan kadınlarda, rahim iç tabakasının yeterince korunması
-değerlendirilmelidir
-(sınırlı kanıt)
-<sup>[[8]](#kaynak-8)</sup>.
+değerlendirilmelidir (sınırlı kanıt) <sup>[[8]](#kaynak-8)</sup>.
 Bu etkileşimin HRT üzerindeki klinik boyutunu belirleyen doğrudan veriler sınırlıdır.
 
 **Uygulama yolu ve izlem:** Bant veya jel biçimindeki östrojen sindirim sistemi
@@ -178,9 +177,7 @@ HRT kullanan postmenopozal kadınlarda daha fazla kilo kaybı görüldü
 Tirzepatid için de benzer bir ilişki bildiren gözlemsel toplantı özeti bulunuyor
 <sup>[[13]](#kaynak-13)</sup>.
 Gruplar rastgele oluşturulmadığı için, farkın hormon tedavisinden kaynaklandığı söylenemez
-
-(sınırlı kanıt)
-. Bu veriler kilo vermek amacıyla HRT başlatmak için yeterli gerekçe değildir.
+(sınırlı kanıt). Bu veriler kilo vermek amacıyla HRT başlatmak için yeterli gerekçe değildir.
 
 ## Pratik Notlar: Yan Etki, Güvenlik, Maliyet ve Tedavi Süresi
 
@@ -208,9 +205,7 @@ güncel bilgisi ayrıca kontrol edilmelidir
 
 **Tedavi süresi ve bırakınca kilo seyri:** Semaglutid çalışmasının uzatma izleminde,
 ilaç ve yapılandırılmış yaşam tarzı desteği kesildikten sonraki bir yılda, verilen kilonun ortalama
-yaklaşık üçte ikisi geri alındı
-(orta kanıt)
-<sup>[[7]](#kaynak-7)</sup>.
+yaklaşık üçte ikisi geri alındı (orta kanıt) <sup>[[7]](#kaynak-7)</sup>.
 Bu sonuç her kişide aynı miktarda geri dönüş olacağını söylemez. Bu bilgiyi korkutmak için
 değil, plan yapabilmeniz için yazıyorum: Tedavinin ne kadar sürdürüleceği ve olası bırakma
 sonrası destek, başlangıçta konuşulabilir.
@@ -297,6 +292,47 @@ bir başlangıçtır.
 (Gözlemsel, erken bulgu; tam makale veya randomize hormon tedavisi çalışması değildir.)
 -  **14.** FDA. *FDA Approves First Medication for Obstructive Sleep Apnea.* 20 Aralık 2024.  [Resmî onay açıklaması](https://www.fda.gov/news-events/press-announcements/fda-approves-first-medication-obstructive-sleep-apnea).
 (ABD'de tirzepatidin obeziteli yetişkinlerde orta-ağır obstrüktif uyku apnesi endikasyonu.)
+
+Pratik Sorular
+
+## Dr. Aksoy'a sorular
+
+GLP-1 ilaçları, menopozda kullanım ve ilaç seçimi hakkında Dr. Senai Aksoy'un yanıtları.
+
+### Semaglutid, liraglutid ve tirzepatid arasında kilo kontrolü açısından nasıl bir fark var; ilaç seçimini ne belirler?
+
+Kilo kaybı açısından üçü de etkili, ancak etkileri aynı düzeyde değil. Liraglutid günlük enjeksiyonla kullanılan daha eski bir GLP-1 agonisti ve çalışmalarda ortalama kilo kaybı yaklaşık %8 düzeyindeydi. Semaglutid haftalık kullanılıyor ve obezitesi olan, diyabeti bulunmayan kişilerde yaklaşık %15’e varan ortalama kayıplar gösterdi. Tirzepatid ise hem GIP hem GLP-1 reseptörlerini etkiliyor ve güncel verilerde en yüksek ortalama kilo kaybını sağlıyor; 2025’teki doğrudan karşılaştırmada 72 haftada tirzepatid ile ortalama %20,2, semaglutid ile %13,7 kilo kaybı görüldü.
+
+Ama ilaç seçimini yalnızca “hangisi daha çok zayıflatıyor?” diye yapmam. Hedeflenen kilo kaybı, diyabet/prediyabet, kalp-damar hastalığı, uyku apnesi, gastrointestinal tolerans, safra kesesi ve pankreas öyküsü, kullanılan diğer ilaçlar, gebelik planı, uygulama sıklığı, maliyet ve ilaca erişim birlikte değerlendirilir. Örneğin semaglutidin, bilinen kardiyovasküler hastalığı olan aşırı kilolu veya obez kişilerde majör kardiyovasküler olay riskini azaltmaya yönelik doğrudan sonuç verisi ve onayı bulunuyor; tirzepatidin ise obeziteyle birlikte orta-ağır obstrüktif uyku apnesinde ayrıca onayı var. Bu nedenle benim için doğru ilaç, yalnızca tartıda en fazla düşüşü sağlayan değil, hastanın metabolik ve tıbbi profiline en uygun olan ilaçtır.
+
+### GLP-1 ilaçları menopoz döneminde kilo vermeye yardımcı olur mu; menopozda olmak tek başına kullanım gerekçesi midir?
+
+GLP-1 temelli ilaçlar menopoz dönemindeki kadınlarda da kilo vermeye yardımcı olabilir; menopoz bu ilaçların etkisini ortadan kaldırmaz. Ancak menopozda olmak tek başına kullanım gerekçesi değildir. Karar, kişinin obezite veya fazla kilo açısından tedavi kriterlerini karşılayıp karşılamadığına, eşlik eden diyabet, hipertansiyon, uyku apnesi veya kardiyovasküler risklere ve daha önceki kilo verme girişimlerine göre verilir. Menopoz döneminde yağ dağılımı değişebilir ve özellikle karın çevresinde kilo artışı belirginleşebilir; bu nedenle uygun hastalarda GLP-1/GIP temelli ilaçlar yararlı olabilir. Güncel çalışmalar ayrıca menopoz hormon tedavisi kullanan bazı postmenopozal kadınlarda semaglutid veya tirzepatid ile kilo kaybının biraz daha fazla olabileceğini düşündürüyor, ancak bu henüz hormon tedavisini kilo vermek amacıyla başlatmak için yeterli bir gerekçe değildir.
+
+### GLP-1 analoğu nedir, vücutta nasıl çalışır?
+
+GLP-1 analogları, bağırsaktan yemek sonrası salgılanan GLP-1 hormonunun etkisini taklit eden ilaçlardır. Beyindeki iştah merkezlerini etkileyerek açlığı ve yeme isteğini azaltır, mide boşalmasını yavaşlatarak daha uzun süre tokluk sağlar ve kan şekeri yükseldiğinde pankreastan insülin salınımını artırırken glukagonu azaltır. Bu nedenle hem tip 2 diyabet tedavisinde hem de uygun hastalarda kilo kontrolünde kullanılırlar. Etkileri yalnızca “iştah kapatmak” değildir; beyin, mide-bağırsak sistemi ve pankreas üzerinden birlikte çalışırlar.
+
+Bilimsel Editör Notu
+
+Kanıt Düzeyi: (sınırlı–güçlü kanıt)
+
+**Kanıtın güçlü olduğu yer:** Tip 2 diyabette kan şekeri
+kontrolü ve obezitesi olan ya da kiloya eşlik eden sağlık sorunu bulunan yetişkinlerde kilo kaybı,
+randomize çalışmalarla gösterilmiştir. Bu çalışmalar menopozdaki kadınlara özel değildir;
+sonuçlar grup ortalamasıdır <sup>[[2]](#kaynak-2), [[3]](#kaynak-3), [[4]](#kaynak-4), [[10]](#kaynak-10)</sup>.
+
+**Kanıtın sınırlı kaldığı yer:** Menopozun ilaç yanıtını ne
+kadar değiştirdiği, hormon tedavisiyle görülen ek kilo kaybının nedeni ve kas ile kemik üzerindeki
+uzun dönem etkiler henüz net değildir. Hormon tedavisiyle ilgili veriler gözlemseldir ve HRT başlatma
+gerekçesi sayılmaz <sup>[[12]](#kaynak-12), [[13]](#kaynak-13)</sup>.
+
+**Güvenlik ve izlem:** Ağızdan progesteron kullanan, rahmi olan
+kadınlarda rahim iç tabakasının korunması; pankreatit ve tiroid öyküsü; ilacı bırakma sonrası
+kilo seyri tedavi planına baştan dahil edilir <sup>[[7]](#kaynak-7), [[8]](#kaynak-8), [[9]](#kaynak-9)</sup>.
+Kişisel karar, hekim değerlendirmesi gerektirir.
+
+— Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Danışmanı
 
 Tıbbi Not
 

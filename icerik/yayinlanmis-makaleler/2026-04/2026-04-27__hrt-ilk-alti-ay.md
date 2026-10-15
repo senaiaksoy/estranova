@@ -4,14 +4,24 @@ description: "Demet Kızılkaya, hormon replasman tedavisinin ilk dört ayını 
 writer: demet-kizilkaya
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
+modifiedDate: "30 Eylül 2026"
+exportScope: local-build
 url: /hormonal-gecis/menopoz/hrt-ilk-alti-ay/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/
 keywords: ["HRT", "hormon replasman tedavisi", "menopoz", "menopoz HRT deneyimi", "yaşıt hikâyesi"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # HRT — İlk Ayların Notları
+
+Okumaya Başlamadan
+
+## Bu yazıya başlarken
+
+Hormon replasman tedavisine (HRT) 58 yaşında başladım; bu yazıda ilk dört ayın notlarını paylaşıyorum.
+Beklentilerimi, bedenimde fark ettiğim değişimleri ve ailemin gördüklerini anlatırken,
+henüz yanıtlayamadığım soruları da açık bırakıyorum. Sizin yolunuz farklı olabilir.
 
 ## Sabah çayında aklıma gelen
 
@@ -126,5 +136,28 @@ Bir gün ara vermek ya da bırakmak istersem bunu da birlikte konuşacağız.
 
 Bu ilk dört ay, bedenimde olup bitenleri biraz daha dikkatli fark etmemi sağladı.
 Önümüzdeki aylar başka şeyler öğretecek. Altıncı ayın sonunda tekrar yazarım belki.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+HRT, menopoza bağlı sıcak basmaları ve gece terlemelerini azaltmak için kullanılan bir tedavi seçeneğidir
+(güçlü kanıt). Uygunluğu ve risk-fayda dengesi sağlık öyküsüne göre değerlendirilir.
+Bu yazıdaki hafıza, cilt, ağrı ve sakinlik gözlemleri kişisel deneyimdir; tedavinin bu alanlarda
+herkeste aynı etkiyi göstereceğine kanıt oluşturmaz.
+
+Tedavi başlangıcından yaklaşık üç ay sonra ve ardından genellikle yılda bir değerlendirme önerilir;
+belirtiler, yan etkiler veya başka sağlık sorunları daha erken kontrol gerektirebilir.
+Mamografi, kemik yoğunluğu ölçümü ve kan tetkikleri herkes için aynı yıllık liste değildir;
+tarama ve tetkik planı yaşa, risklere ve klinik gereksinime göre belirlenir.
+
+Cilde uygulanan hormon ürünlerinde başka kişilere temas yoluyla geçiş riski vardır.
+Kuruma, el yıkama, uygulama bölgesini yıkama ve cilt temasıyla ilgili ürünün kendi kullanma talimatına
+uyulmalıdır; bu önlemler riski azaltır. Kullanım ayrıntıları ürünler arasında değişebilir.
+
+Beklenmedik kanama, yeni veya değişen baş ağrısı ve devam eden meme hassasiyeti hekimle görüşülmelidir.
+Tek bacakta ağrı ve şişlik acil değerlendirme gerektirir. Göğüs ağrısı ile nefes darlığı veya
+ani konuşma bozukluğu, yüzün bir yanında düşme ya da kol veya bacakta güçsüzlük olduğunda
+planlı kontrol beklenmemeli, **112 aranmalıdır**.
 
 Tıbbi Not

@@ -4,14 +4,22 @@ description: "Menopoza hazırlık döneminde tansiyon, kan değerleri, kilo ve a
 writer: berna-aksoy
 publishedDate: "25 Nisan 2026"
 publishedDateIso: 2026-04-25
+modifiedDate: "30 Eylül 2026"
+exportScope: local-build
 url: /hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/
 keywords: ["menopoza hazırlık", "koruyucu sağlık", "sağlık kayıtları", "semptom günlüğü", "tarama takvimi", "vital göstergeler", "aile öyküsü"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Koruyucu Sağlık Kayıtları: Menopoza Hazırlık Döneminde Ne İzlemeli?
+
+Okumaya Başlamadan
+
+## Kısa Özet
+
+Eski tahliller, tarama tarihleri ve akılda kalan birkaç belirti… Hekimle görüşürken bunların hepsini hatırlamak kolay olmayabiliyor. Menopoza hazırlanırken mevcut bilgileri sade bir dosyada toplamak, görüşmeye daha net sorularla gitmenize yardımcı olabilir.
 
 ## Dağınık Raporlardan Tek Dosyaya
 
@@ -82,6 +90,44 @@ Hepsini aynı anda yapmanız gerekmiyor. Aşağıdaki sıralama bir ölçüm vey
 Ben olsam işe eski raporlardan ve tarama tarihlerinden başlardım: çekmeceler, e-postalar, telefon galerisi. Sonra aklınızda dolaşan belirtileri ve hekime sormak istediğiniz soruları birkaç satırla ekleyin. Aile öyküsünü ise ilk fırsatta, bir akşam oturup tek sayfaya geçirmek yeterli.
 
 Bir ay sonunda bütün başlıkların dolması gerekmiyor. Eksik bilgiler de görüşmede sorulacaklar arasında yer alabilir; bundan sonraki takip planı hekiminizle birlikte şekillenir.
+
+## Bir Sonraki Görüşmeye Hazırlık
+
+İlk adım, elinizdeki tek bir raporu bulup tarihini not etmek olabilir.
+
+Dosyanız zamanla tamamlanır. Amaç bedeninizi sürekli ölçmek değil, sağlık görüşmesinde ihtiyaç duyacağınız bilgiyi daha kolay bulmak. Neyi izleyeceğiniz ve hangi sonucun değerlendirme gerektirdiği, hekiminizle konuşacağınız konular olarak kalsın.
+
+“Geçen yıl sonuç nasıldı?” sorusu yeniden geldiğinde, cevabı aramak için çekmeceyi karıştırmanız gerekmez.
+
+Pratik Sorular
+
+## Dr. Aksoy'a sorular
+
+Bu bölüm, Berna Aksoy'un yazısından ayrı olarak Dr. Senai Aksoy'un bu konuya ilişkin yanıtlarını içerir.
+
+### Belirtisi olmayan bir kadın menopoza hazırlıkta hangi sağlık kayıtlarını tutmalı?
+
+Belirtisi olmayan bir kadında menopoza hazırlık için en yararlı kayıtlar, adet tarihleri ve adet aralıklarındaki değişiklikler, kilo ve bel çevresi, tansiyon, kullanılan ilaçlar, sigara/alkol durumu, egzersiz düzeyi, uyku, ailede erken kalp-damar hastalığı, osteoporoz ve meme veya yumurtalık kanseri öyküsüdür. Ayrıca son mamografi, rahim ağzı taraması, kemik yoğunluğu ölçümü yapılmışsa sonucu ve önceki önemli kan tahlillerini tek yerde tutmak ileride karşılaştırmayı kolaylaştırır.
+
+### Kan tahlillerinin gerekliliğini ve tekrar sıklığını nasıl belirlersiniz?
+
+Kan tahlillerini yaşa göre otomatik değil, risk profiline göre isterim. Kan yağlarını gösteren lipid profili, açlık glukozu veya son birkaç aylık kan şekeri hakkında bilgi veren HbA1c, gerektiğinde karaciğer-böbrek fonksiyonları ve tiroid testleri; kişinin kilosu, aile öyküsü, tansiyonu, kullandığı ilaçlar ve önceki sonuçlarına göre planlanır. Normal sonuçları olan düşük riskli bir kişide her birkaç ayda bir test tekrarı gerekmez; sınırda veya anormal sonuçlarda, tedavi başlanmışsa ya da yeni belirti gelişmişse daha sık kontrol edilir. Menopoz tanısı tipik yaş ve belirtilerle çoğu zaman hormon testleriyle konmaz.
+
+### Ev tipi tansiyon cihazı seçimi ve ölçüm kayıtları konusunda ne önerirsiniz?
+
+Ev tipi tansiyon cihazında tercihim, doğrulanmış bir model olan, üst koldan ölçen otomatik cihazdır; bilekten ölçen cihazları genellikle önermem. Manşet kol çevresine uygun olmalı. Ölçümden önce 5 dakika dinlenmek, sırt ve kolu desteklemek, ayakları yere basmak, konuşmamak gerekir. İlk değerlendirmede sabah ve akşam, 1 dakika arayla ikişer ölçümü 5–7 gün kaydetmek çok yararlıdır; tek tek yüksek değerlerden çok ortalamaya bakarım. Sürekli yüksek ölçümler varsa cihazı da muayeneye getirip klinik cihazla karşılaştırmak iyi olur.
+
+### Menopoza hazırlıkta belirti günlüğüne ne kadar zaman ayırmak gerekir; hangi ayrıntıları kaydetmek yararlıdır?
+
+Belirti günlüğü için uzun uzun not tutmak gerekmez; günde 1–2 dakika, özellikle birkaç hafta düzenli kayıt çoğu zaman yeterlidir. Adet tarihleri ve kanama miktarı, sıcak basması/gece terlemesi, uyku kalitesi, çarpıntı, baş ağrısı, ruh hali, vajinal kuruluk, idrar yakınmaları, cinsel istek, kullanılan ilaçlar ve belirtileri artırdığını düşündüğünüz alkol, kafein, stres veya sıcak ortam gibi tetikleyiciler kaydedilebilir. Amaç her belirtinin peşine düşmek değil; zaman içindeki seyri görmek, hangi şikâyetin gerçekten sıklaştığını ve günlük yaşamı ne kadar etkilediğini anlamaktır.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+Bu yazının odağı, mevcut sonuçları ve sağlık öyküsünü bir araya getirmektir. Kayıt tutmak, herkes için aynı test ve ölçüm programını uygulamak anlamına gelmez.
+
+Dr. Aksoy'un yukarıdaki yanıtlarında açıkladığı gibi, kan tahlilleri kişisel risklere ve önceki sonuçlara göre planlanır. Ölçüm ve tarama takvimi de hekiminizle birlikte belirlenir.
 
 Tıbbi Not
 

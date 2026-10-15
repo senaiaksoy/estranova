@@ -4,14 +4,22 @@ description: "Perimenopozda uyku bölünmeleri ve sabah yorgunluğu: geceyi anla
 writer: berna-aksoy
 publishedDate: "28 Nisan 2026"
 publishedDateIso: 2026-04-28
+modifiedDate: "30 Eylül 2026"
+exportScope: local-build
 url: /zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/
 section: "Zihin & Denge"
 sectionPath: /zihin-denge/
 keywords: ["perimenopoz", "uyku", "uyku evresi", "östrojen", "progesteron", "REM", "NREM", "CBT-I", "menopoz uyku"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Perimenopozda Uykunun Gerçekten Değişen Yanı
+
+Okumaya Başlamadan
+
+## Kısa Özet
+
+Uyumuş olmakla dinlenmiş kalkmak her zaman aynı şey değil. Perimenopozda gece uyanmaları ve sabah yorgunluğu, hormon değişimlerinin yanında gündelik alışkanlıklarla ve başka sağlık sorunlarıyla da ilişkili olabilir. Mayıs dosyasının bu yazısında, geceyi tek bir nedene bağlamadan anlamaya çalışıyorum.
 
 ## Aynı sekiz saat, iki farklı sabah
 
@@ -49,9 +57,7 @@ Benzer yaşta iki kadının neden farklı biçimde etkilendiği benim için hâl
 
 Uyku önerileri uzayıp gidince, dinlenmek de yapılacaklar listesine dönüşebiliyor. Ben bu listeyi büyütmek yerine ritim, oda konforu ve akşam alışkanlıkları üzerinde durmayı daha anlaşılır buluyorum.
 
-**Ritim.** Benzer saatlerde kalkmak ve sabah gün ışığı görmek, uyku-uyanıklık düzeni için yararlı alışkanlıklar olabilir.
-(orta kanıt)
-Her gece kendinizi belirli bir saatte uyumaya zorlamak ise ayrı bir baskı yaratabilir.
+**Ritim.** Benzer saatlerde kalkmak ve sabah gün ışığı görmek, uyku-uyanıklık düzeni için yararlı alışkanlıklar olabilir. (orta kanıt) Her gece kendinizi belirli bir saatte uyumaya zorlamak ise ayrı bir baskı yaratabilir.
 
 **Oda konforu.** Serin bir oda, hafif yatak kıyafetleri ve terleme sonrası kolayca değiştirilebilen çarşaflar geceyi daha rahat geçirmeye yardımcı olabilir. Konfor sağlamakla gece terlemesini tedavi etmek farklı şeyler.
 
@@ -104,6 +110,16 @@ Evet, gece terlemesi ve sıcak basması uykunuzu belirgin biçimde bölüyorsa h
 Bu yazıdan bende kalan ayrım basit: Uyku süresi ile dinlenmiş uyanmak her zaman aynı şey olmuyor. Aynı sekiz saat, iki farklı sabah. Gecenin hangi saatte bölündüğünden önce, sizi neyin uyandırdığına ve gündüz neyin zorlaştığına bakmak yararlı olabilir.
 
 Burada paylaştığım, kendi okumalarımdan süzülen bir bakış; herkesin gecesi başka. Bir sonraki görüşmede “uyuyamıyorum” demekle kalmayıp o gecenin nasıl geçtiğini anlatabilmek, konuşmayı daha somut bir yerden başlatır.
+
+Tıbbi Bilgi Notu
+
+Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
+
+**Uyku evreleri:** NREM uykusu üç evreden oluşur; yalnızca üçüncü evre derin uykudur. Menopoz geçişiyle ölçülen uyku evreleri arasındaki ilişki araştırmalarda tutarlı değildir. Dinlenmemiş uyanmak, belirli bir evrenin azaldığını kanıtlamaz.
+
+**Değerlendirme:** Gece terlemesi ve sıcak basmasının yanında uyku apnesi, huzursuz bacak, ağrı, depresif belirtiler, tiroid sorunları, anemi ve ilaç etkileri de dikkate alınır. Gündüz yaşamı etkileniyorsa değerlendirme için sabit bir süre beklemek gerekmez.
+
+**Seçenekler:** CBT-I, uzun süren uykusuzlukta değerlendirilen yapılandırılmış bir tedavidir. (iyi kanıt) Hormon tedavisi özellikle uykuyu bölen sıcak basması ve gece terlemesi için, yarar ve riskler kişiye göre tartılarak gündeme gelebilir (orta–iyi kanıt); yalnızca uykusuzluk bulunması otomatik olarak hormon tedavisi gerektiğini göstermez.
 
 Tıbbi Not
 

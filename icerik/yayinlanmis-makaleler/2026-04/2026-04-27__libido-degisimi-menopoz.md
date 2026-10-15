@@ -4,14 +4,25 @@ description: "Menopozda libido azalması neden olur? Hormonların, vajinal kurul
 writer: senai-aksoy
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
+modifiedDate: "29 Eylül 2026"
+exportScope: local-build
 url: /beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/
 section: "Beden & Yakınlık"
 sectionPath: /beden-yakinlik/
 keywords: ["libido", "cinsel istek", "menopoz", "GSM", "lokal östrojen", "testosteron", "cinsel sağlık", "40+ kadın", "mahrem sağlık"]
-exportedAt: 2026-10-02
+exportedAt: 2026-10-15
 ---
 
 # Menopozda Libido Azalması: Nedenleri ve Ne Yapılabilir?
+
+Okumaya Başlamadan
+
+## Kısa Klinik Yanıt
+
+Menopozda cinsel istek, yani libido, azalabilir; bu her kadında olmaz ve tek başına bir hastalık
+sayılmaz. Değişim sizi rahatsız ediyorsa ağrı, uyarılma güçlüğü, uyku, ruh hâli, ilaçlar ve
+ilişkinizde yaşadıklarınız hormonlarla birlikte ele alınır. Sizi neyin zorladığı anlaşıldığında,
+destek seçeneklerini konuşmak da kolaylaşır.
 
 ## Libido Azalması Ne Zaman Sorundur?
 
@@ -22,9 +33,7 @@ sormak istediği, ama nasıl dile getireceğini bilemediği bir konu daha vardı
 hastayı değil, yıllar içinde karşılaştığım benzer görüşmeleri anlatıyorum.
 
 Bu konuda soru sormaktan çekinmenizi istemem. Daha az istek duymakla bundan sıkıntı duymak ayrı
-şeylerdir
-(orta kanıt)
-<sup>[[1]](#kaynak-1)</sup>.
+şeylerdir (orta kanıt) <sup>[[1]](#kaynak-1)</sup>.
 Bir değerlendirmede değişimin ne kadar sürdüğüne, sizi rahatsız edip etmediğine ve
 yaşamınızdaki etkisine bakarız <sup>[[3]](#kaynak-3)</sup>.
 
@@ -46,9 +55,7 @@ Uykunuz, gün içindeki enerjiniz ve ilişkinizde yaşadıklarınız da cinsel i
 
 Östrojen azalması vajinal kuruluk ve hassasiyetle ilişkili olabilir. Testosteron da cinsel istekte
 rol oynar
-
-(iyi kanıt)
-<sup>[[3]](#kaynak-3)</sup>.
+(iyi kanıt) <sup>[[3]](#kaynak-3)</sup>.
 
 Geceleri sık uyanmak, sıcak basmalarıyla uğraşmak ve yorgunluk cinsel isteğinizi etkileyebilir.
 Depresyon, kaygı, bedeninizi nasıl gördüğünüz ve ilişkinizdeki gerilim de birlikte değerlendirilir.
@@ -92,15 +99,11 @@ Ağrı nedeniyle cinsel ilişkiden kaçınıyorsanız önce rahatlığınızı e
 kayganlaştırıcılar ilk seçenekler arasında yer alır. Menopoza bağlı vajinal ve idrar yolu
 yakınmaları birlikte genitoüriner menopoz belirtileri olarak adlandırılır. Bu belirtiler
 sürüyorsa düşük doz vajinal östrojen
-değerlendirilebilir
-(güçlü kanıt)
-<sup>[[2]](#kaynak-2)</sup> <sup>[[5]](#kaynak-5)</sup>.
+değerlendirilebilir (güçlü kanıt) <sup>[[2]](#kaynak-2)</sup> <sup>[[5]](#kaynak-5)</sup>.
 
 -  **Sıcak basması ve uyku bölünmesi öndeyse:** Tüm vücutta etkili olan sistemik menopoz
 hormon tedavisi (HRT), uygun kişide bu belirtileri azaltabilir. Uyku ve günlük rahatlık
-düzeldiğinde cinsel isteğe dolaylı yararı olabilir; ancak isteği doğrudan artıracağı öngörülemez
-(iyi kanıt)
-<sup>[[2]](#kaynak-2)</sup>.
+düzeldiğinde cinsel isteğe dolaylı yararı olabilir; ancak isteği doğrudan artıracağı öngörülemez (iyi kanıt) <sup>[[2]](#kaynak-2)</sup>.
 
 -  **İlişkisel veya psikolojik etkenler öndeyse:** Cinsel terapi, bireysel psikolojik destek
 veya çift görüşmeleri bazı kişiler için uygun bir başlangıç olabilir <sup>[[3]](#kaynak-3)</sup>.
@@ -121,9 +124,7 @@ Testosteron, menopozda isteği azalan herkese verilen bir tedavi değildir. Kull
 Sizde belirgin sıkıntı yaratan düşük cinsel istek, hipoaktif cinsel istek bozukluğu (HSDD) açısından
 değerlendirilebilir. Bu tanı kan testosteron düzeyine dayanmaz. Menopozla ilişkili HSDD'de testosteron
 tedavisi düşünülmeden önce ağrı, vajinal kuruluk, ilaç etkisi, ruh hâli ve ilişkiyle ilgili etkenler ele alınır
-
-(iyi kanıt)
-<sup>[[3]](#kaynak-3)</sup>.
+(iyi kanıt) <sup>[[3]](#kaynak-3)</sup>.
 
 Tedavi uygun bulunursa deriden uygulanan, yani transdermal yol kullanılır. Kan ölçümleri,
 düzeyin menopoz öncesi kadınlar için kabul edilen fizyolojik aralığın üst sınırını aşmamasını
@@ -138,9 +139,7 @@ nedenler ve tedavinin devamı hekiminizle yeniden değerlendirilir
 Deri altına yerleştirilen peletler, enjeksiyonlar ve kişiye özel hazırlanan ürünler önerilmez.
 Bunlarda hormon düzeyi gereğinden fazla yükselebilir ya da doz güvenilir biçimde ayarlanamayabilir.
 Uzun süreli kullanımın güvenliği hakkındaki veriler de sınırlıdır; karar verirken bu belirsizliği
-konuşmak gerekir
-(iyi kanıt)
-<sup>[[3]](#kaynak-3)</sup>.
+konuşmak gerekir (iyi kanıt) <sup>[[3]](#kaynak-3)</sup>.
 
 ## Değerlendirme Gerektiren Belirtiler
 
@@ -203,6 +202,22 @@ NICE. [Menopoz: tanıma ve yönetim önerileri](https://www.nice.org.uk/guidance
 
 -
 Ghaderi F ve arkadaşları. [Cinsel ilişkide kas kaynaklı ağrı için pelvik taban rehabilitasyonu: randomize kontrollü çalışma](https://link.springer.com/article/10.1007/s00192-019-04019-3). 2019. Menopoz dönemine özgü bir çalışma değildir.
+
+Bilimsel Editör Notu
+
+Menopozda cinsel istek değişimi yaygındır ve çoğunlukla birden fazla etkenle ilişkilidir. Hormonlar,
+vajinal sağlık, uyku, ruh hâli, ilaçlar ve ilişki koşulları birlikte değerlendirilir. Düşük doz vajinal
+östrojen, menopoza bağlı vajinal ve idrar yolu belirtilerinde etkili bir seçenektir; kana geçişi düşüktür.
+Östrojene duyarlı meme kanseri öyküsünde ilgili hekimlerle ortak karar gerekir.
+
+Sistemik HRT'nin cinsel isteğe etkisi doğrudan ve öngörülebilir değildir. Testosteron yalnızca belirgin
+sıkıntı yaratan HSDD'de, kapsamlı değerlendirme ve takip koşuluyla gündeme alınmalıdır. Antidepresan
+kullanırken isteğin azalması, tek başına ilacı bırakma gerekçesi değildir; alternatifler hekimle birlikte planlanır.
+
+Cinsel ilişkide geçmeyen ağrı, menopoz sonrası herhangi bir vajinal kanama veya tekrarlayan idrar yolu
+enfeksiyonları varsa kadın hastalıkları ve doğum uzmanıyla görüşme geciktirilmemelidir.
+
+— Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı
 
 Tıbbi Not
 
