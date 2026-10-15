@@ -138,3 +138,10 @@ Sayım sözcük eşleşmesidir, bütün anlamsal tekrarların sayısı değildir
 - Onay; sözlü onay sonrası kaynak denetimini, geniş audit/humanize revizyonunu ve ikinci audit'in 8 düzeltmesini kapsar. Kaynaksız iki şeffaf plak cümlesi metinde olduğu gibi onaylandı.
 - `article-approvals.ts` içindeki "BEKLEYEN YENİDEN ONAY" notu kaldırıldı; approvedAt 2026-10-15 olarak kaldı.
 - Commit, push, deploy ve Chrome görsel kontrolü yapılmadı; canlı yayın için ayrı yetki gerekir.
+
+## 15 Ekim 2026 — açık kalan iki kaynak maddesi (ek revizyon)
+
+- KC'nin "yap" talimatıyla şeffaf plak bölümündeki kaynaksız "plakların düzenli takılması… sonucun korunması" cümlesi çıkarıldı. Kaynak aramasında (PubMed ve web) plak takma süresi/nüks için uygun kaynak bulunamadı; kaynak 7 yalnızca endikasyon ve sınırları kapsar.
+- "Dişler arasında yer açmak için mineden az miktarda alınabilir" cümlesi, Dahhas ve ark. (Cureus 2024; anlatısal derleme; [PMC11032144](https://pmc.ncbi.nlm.nih.gov/articles/PMC11032144/)) ile desteklendi: IPR geri dönüşsüz bir doku değişikliği ve dikkatli planlama gerektirir. Kaynak 12 olarak eklendi; atıf bölüme bitişik.
+- Doğrulama: derlenmiş sayfada 12 kaynak, 4 SSS/FAQPage, tek H1. Kalan rendered-check bulgusu (uncited-source) Estranova numaralı atıf düzeninde geçersiz; repeated-disclaimer şablon kaynaklı.
+- Son kaynak SHA-256: 14fcfd6b…. Yayın için commit, push ve canlı doğrulama ayrıca yapılır.
