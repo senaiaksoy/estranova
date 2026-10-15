@@ -32,6 +32,7 @@
 
 ## Onay Kayıtları
 
+- 2026-10-15 — `/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/` 15 Ekim 2026 yerel audit/humanize revizyonu KC (Dr. Senai Aksoy) sözlü onayıyla onaylandı: “Revizyon metnini ve değişen tıbbi notu onaylıyorum.” Kapsam: denize çıkmadan önce sahnesinin açılışa taşınması, MedicalContextNote, sıcakta 30 dakika/112 yönlendirmesi, acil belirtilerin ayrılması, manifest açıklaması. Açık noktalar onay metninde ele alınmadı ve kayda açık olarak geçti: “Hava da Planın Bir Parçası” bölümünde yaşıt bağı eksikliği; anne referanslarının teyidi. Paket ve kaynak kopyası açılmadı; commit/push/deploy yetkisi ayrıca istenecek.
 - 2026-10-03 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` üçüncü geçiş (üç küçük bilimsel rötuş: vagus → otonom sinir sistemi, iltihap paragrafı tek cümle, kırmızı bayrakta “özellikle postmenopozal” kaldırıldı) KC doğrudan onayıyla (“onaylandı”) onaylandı. Ayrı paket açılmadı; değişiklik 3 satır, kaynak git geçmişinde.
 - 2026-10-03 — `/zamansiz-yasam/non-invaziv/sauna-soguk-dus-menopoz/` ikinci revizyonu ve yeni Bilimsel Editör Notu KC doğrudan onayıyla (“notu onaylıyorum”) onaylandı. Paket `onaylanan/2026-10-03_sauna-soguk-dus-menopoz-revizyon-2`.
 - 2026-10-03 — `/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/` revizyonu KC doğrudan editör onayıyla (“onaylandı”) onaylandı. Paket `onaylanan/2026-10-03_aksam-hareketi-uyku-melatonin-revizyon`.

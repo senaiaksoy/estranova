@@ -122,8 +122,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
     writerSlug: 'alara-baykent',
-    approvedAt: '2026-06-01',
-    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; static manifest ve production route uyumu dogrulandi.',
+    approvedAt: '2026-10-15',
+    note: 'Kullanici (Dr. Senai Aksoy) 15 Ekim 2026 sohbetinde “Revizyon metnini ve degisen tibbi notu onayliyorum.” diyerek revizyon metnini ve degisen tibbi notu sozlu onayladi. Kapsam: 15 Ekim 2026 yerel audit/humanize revizyonu (denize cikmadan once sahnesi acilisa tasindi; MedicalContextNote; sicak havada 30 dakika/112 yonlendirmesi; acil belirtiler ayrildi; manifest aciklamasi). Onay kapsami disinda kalan acik noktalar: “Hava da Planin Bir Parcasi” bolumunde yasat bagi eksikligi; anne referanslarinin (“Annemin kusaginda…”, “Annemi ve cevremdeki kadinlari izlerken…”) teyidi. Eski 1 Haziran 2026 onayi bu revizyonu kapsamaz. Yayin, commit ve deploy bu kayitla yetkilendirilmis degildir.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',

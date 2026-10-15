@@ -272,7 +272,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
     title: 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık',
     description:
-      'Yaz öncesi hareketi hedef baskısı olmadan; 40 sonrası bedeni yavaşça uyandıran, sürdürülebilir ritim arayan sıcak bir hareket yazısı.',
+      'Yaz öncesi forma girme baskısı, gündelik hareket ve dinlenme üzerine Alara Baykent’in sporcu gözünden notları; 40 sonrası için ayrı bir tıbbi bilgi notuyla.',
     publishedDate: '1 Haziran 2026',
     writerSlug: 'alara-baykent',
     section: 'Zamansız Yaşam',
