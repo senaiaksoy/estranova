@@ -1,6 +1,6 @@
 ---
 title: "Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine"
-description: "Işık Selin Günçe, sahne öncesi nefesten Bodrum sabahlarına uzanan gözlemleriyle menopozda stresin neden daha ağır gelebileceğini ve hangi işaretlerde beklemeden hekime başvurulacağını yazıyor."
+description: "Işık Selin Günçe, sahne öncesi nefesten Bodrum sabahlarına uzanan gözlemleriyle menopozda stresin neden daha ağır gelebileceğini ve hangi belirtilerin yalnızca strese bağlanmaması gerektiğini yazıyor."
 writer: isik-selin-gunce
 publishedDate: "15 Ekim 2026"
 publishedDateIso: 2026-10-15
@@ -18,87 +18,88 @@ Okumaya Başlamadan
 
 ## Bu yazıya başlarken
 
-Menopoz geçişinde aynı yük daha ağır gelebilir: uyku bölünür, sabahlar yorgun başlar, küçük şeyler daha çok yorar. Işık Selin Günçe, sahne öncesi nefesinden ve kendi sabahlarından yola çıkarak stresin bu dönemde neden başka hissettirdiğini, günlük hayatta neyin denenebileceğini ve hangi işaretlerin bekletilmemesi gerektiğini anlatıyor.
+Menopoz geçişinde aynı yük daha ağır gelebilir: uyku bölünür, sabahlar yorgun başlar, küçük şeyler daha çok yorar. Işık Selin Günçe, sahne öncesi nefesinden ve kendi sabahlarından yola çıkarak bölünen uykunun ve üst üste binen gündelik işlerin stresi nasıl ağırlaştırdığını, kendisine neyin iyi geldiğini ve hangi belirtilerin yalnızca strese bağlanmaması gerektiğini anlatıyor.
 
 ## Bodrum'a Taşınınca Stresin Biteceğini Sanmıştım
 
 Bitmedi. Sadece sesi değişti; İstanbul'un gürültüsünün yerini gece üçte gelen bir uyanıklık aldı.
 
-Bodrum'a taşındığımızdan beri sabahlarım daha yavaş açılıyor. Pencereyi açıyorum, çay demleniyor, deniz her zamanki yerinde. Ama bazı sabahlar ben o manzaraya yetişemiyorum. Gece iki kez uyanmışım, gözlerim alarmdan önce açılmış, omuzlarım dünden kalma.
+Bodrum'a taşındığımızdan beri sabahlarım daha yavaş açılıyor. Pencereyi açıyorum, çay demleniyor, deniz her zamanki yerinde. Ama bazı sabahlar ben o manzaraya yetişemiyorum. Gece iki kez uyanmışım, gözlerim saat çalmadan açılmış, omuzlarım dünden kalma.
 
-Belki siz de tanıyorsunuz bu hali. Ne büyük bir olay olmuş, ne bir felaket. Yine de gün, başlamadan yorgun.
+Belki siz de tanıyorsunuz bu hâli. Ne büyük bir olay olmuş, ne bir felaket. Yine de gün, başlamadan yorgun.
 
-Menopoz geçişinde uyku bölünmeleri sık görülüyor ve sıcak basmaları bu bölünmeyi artırabiliyor. Parçalı geçen bir gecenin ertesinde stres daha kolay hissedilebiliyor. Telefonumdaki uyku uygulaması her sabah iyi uyuduğumu söylüyor. Ben ona pek inanmıyorum.
+Parçalı geçen bir gecenin ertesinde en sıradan işler bile gözümde büyüyor. Telefonumdaki uyku uygulaması her sabah iyi uyuduğumu söylüyor. Ben ona pek inanmıyorum.
 
-## Perdeden Önceki Çarpıntı Bana Alarmı Öğretti
+## Kulisteki Çarpıntıyla Eski Bir Tanışıklık
 
 Yaklaşık yirmi yıldır sahneye çıkıyorum ve perde açılmadan önceki o birkaç dakikada kalbim hâlâ ilk gecemmiş gibi atıyor.
 
-Kulis karanlıktır. Avuçlarım hafifçe terler, nefesim göğsümün üst tarafına tırmanır. Yıllar içinde bu anı sevmeyi öğrendim, çünkü o çarpıntı beni sahneye hazırlıyor: dikkatim toplanıyor, sesim açılıyor.
+Kulis karanlıktır. Avuçlarım hafifçe terler, nefesim göğsümün üst tarafına tırmanır. O birkaç dakikada nefesimi yavaşça, uzatarak veririm. Yıllar içinde bu dakikaları sevmeyi öğrendim, çünkü o çarpıntı beni sahneye hazırlar: dikkatim toplanır, sesim açılır.
 
-Sonradan okudukça anladım ki stres tam olarak böyle bir alarm. Yoğun bir yük algılandığında beyin, böbreküstü bezini kortizol salgılamaya yönlendiriyor. Kısa süreli bu yükselme dikkati topluyor ve enerji veriyor. Sorun, alarmın perde kapandıktan sonra da çalmaya devam etmesi. Belki sizin de böyle bir alarmınız vardır: bir toplantıdan, bir telefondan, bir hastane koridorundan önce.
+Bu hissi bir alarma benzetiyorum: Perde açılmadan önce işime yarıyor, kapandıktan sonra da sürerse yoruyor. Belki sizin de böyle bir alarmınız vardır: bir toplantıdan önce, bir telefonu beklerken ya da bir hastane koridorunda.
 
-Kırklı yaşlarımın sonunda fark ettiğim şey şu oldu: Uykusuz bir gecenin ardından aynı çarpıntı daha ağır geliyor, daha geç geçiyor. İlk zamanlar bundan biraz utandım; yıllardır sahneye çıkan biri nasıl olur da bir telefon görüşmesinden önce bu kadar gerilir? Bu dönemde östrojendeki dalgalanmanın, aynı olaya verilen iç tepkinin büyüklüğünü ve süresini bazı kadınlarda değiştirebildiğini öğrendim. İlk hissettiğim şey rahatlama oldu. Demek hayal görmüyordum.
+Kırklı yaşlarımın sonunda bir şey değişti: Uykusuz bir gecenin ardından aynı çarpıntı daha ağır geliyor, daha geç geçiyor. İlk zamanlar bundan biraz utandım; yıllardır sahneye çıkan biri nasıl olur da bir telefon görüşmesinden önce bu kadar gerilir? Menopoz geçişinde bazı kadınların strese daha duyarlı hissedebildiğini okumak beni rahatlattı. Bu bilgi çarpıntımın nedenini söylemiyordu ama kendime daha anlayışla bakmamı sağladı.
 
-## Küçük Yükler Üst Üste Binince Omuzlar Kalkmıyor
+## Küçük Yükler Üst Üste Binince Omuzlar Gevşemiyor
 
-Sizin listenizde de muhtemelen tek bir büyük dert yoktur; bir sürü küçük iş vardır.
+Sizin listenizde de muhtemelen tek bir büyük dert yoktur; bir sürü iş vardır ve hepsi aynı güne sığmaya çalışır.
 
-Bizim kuşağımızın listesi uzundur. İş, anne baba, ev, bir de bedenin bu dönemdeki kendi değişimleri. Hiçbiri tek başına büyük görünmez, ama aynı güne sığınca ağırlaşır.
+Bizim kuşağımızın listesi uzundur: iş, anne baba, ev, bir de bedenin bu dönemdeki kendi değişimleri.
 
-Uzun süre yüksek kalan stres uyku düzenini bozabiliyor, dinlenmeyi azaltabiliyor ve günün geri kalanında tahammülü düşürebiliyor. Gün biter, omuzlar kalkmaz. Akşam yemeğinde biri basit bir şey sorar, cevap vermek bile ağır gelir.
+Gün biter, omuzlar hâlâ gergindir. Akşam yemeğinde biri basit bir şey sorar, cevap vermek bile zor gelir.
 
-İçiniz rahat olsun diye yazıyorum: bu bir karakter zayıflığı sayılmaz. Uzun süre dolu çalışan bir sistem böyle davranıyor. Düzeni yeniden kurmak zaman alıyor. Ama mümkün.
+İçiniz rahat olsun diye yazıyorum: yorulmak bir karakter zayıflığı sayılmaz. O akşam soruya cevap verecek gücünüz kalmadıysa uzun bir günün sonundasınız demektir; karşınızdakine duyduğunuz sevgi yerinde duruyor.
 
 ## Herkesin Bir Reçetesi Var, Bende Üç Küçük Alışkanlık Kaldı
 
 Bir akşam stresle baş etmek üzerine art arda beş video izledim. Beşi beş ayrı yol gösterdi ve telefonu kapattığımda başladığımdan daha gergindim.
 
-O gece kendime şunu söyledim: başkasının reçetesini kendi bedenime giydirmeye çalışmayacağım. Ben hekim değilim, size de reçete yazmayacağım. Sadece bende işe yarayan küçük şeyleri anlatabilirim; hangisinin size uyacağını siz ve hekiminiz daha iyi bilirsiniz.
+O gece kendime şunu söyledim: başkasının reçetesini kendi bedenime giydirmeye çalışmayacağım. Ben hekim değilim, size de reçete yazmayacağım. Bende işe yarayan birkaç şeyi anlatabilirim; hangisinin size uyacağını siz ve hekiminiz daha iyi bilirsiniz.
 
-İlki nefes. Sahneye çıkmadan önce yaptığım şeyi artık akşamları evde de yapıyorum: birkaç dakika boyunca nefesi yavaşça, uzatarak vermek. Sorunu çözmüyor. Alarmın sesini biraz kısıyor.
+İlki nefes: Kulisteki o yavaş, uzun nefes vermeyi artık akşamları evde de birkaç dakika yapıyorum. Sorunu çözmüyor. Alarmın sesini biraz kısıyor.
 
-İkincisi yürümek. Bodrum'dayken sabah sahil boyunca yarım saat, İstanbul'dayken eve bir durak önce inip yürümek. Düzenli ve hafif tempolu hareketin ruh hali ve uyku üzerinde olumlu etkisi olabiliyor. Tempoyu ben seçiyorum, kimseyle yarışmıyorum.
+İkincisi yürümek: Bodrum'da sabahları sahil boyunca yarım saat yürüyorum, İstanbul'da eve dönerken bir durak önce iniyorum. Tempoyu ben seçiyorum, kimseyle yarışmıyorum.
 
-Üçüncüsü uyku saatini sabit tutmak. Sahne hayatı bunu kolaylaştırmıyor, itiraf edeyim; oyun geceleri yatağa geç giriyorum. Oyun olmayan gecelerde ise ışığı aynı saatte kapatmaya çalışıyorum. Bazı günler üçü de yetmiyor. O günler de olacak.
+Üçüncüsü uyku saatini sabit tutmak. Sahne hayatı bunu kolaylaştırmıyor, itiraf edeyim; oyun geceleri yatağa geç giriyorum. Oyun olmayan gecelerde ise ışığı aynı saatte kapatmaya çalışıyorum. Bazı günler üçü de yetmiyor.
 
-## Bazı İşaretler Beklemeye Gelmez
+## Her Belirtiyi Strese Yazmayın
 
-Önce şunu söyleyeyim: bu bölümü okurken korkmanıza gerek yok. Amaç, sıradan yorgunlukla dikkat isteyen tabloyu birbirinden ayırabilmek.
+Her yorgunluğu bu döneme, her çarpıntıyı heyecana bağlamak hepimize kolay gelir; aşağıdaki belirtilerde bu kolaylığa kapılmayın.
 
 <p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
 Dikkat çekmek istediğimiz
 
-###  Hekime hemen başvurmayı düşünmeniz gereken durumlar
+###  Hekim değerlendirmesi gerektiren belirtiler
 
-Bu maddeler tanı koymaz. Birini ya da birkaçını fark ederseniz beklemeden değerlendirme isteyin.
+Aşağıdakilerden biri varsa hekim değerlendirmesi isteyin; acil yardım gereken durumlar ilgili maddede ayrıca yazıyor.
 
--   İki haftayı geçen, günlük işlerinizi aksatan bir ruh hali düşüklüğü ya da hiçbir şeyden keyif alamama hâli.
--   Haftalarca süren ve gündüz işlevinizi ciddi biçimde bozan uyku sorunu.
--   Sık tekrarlayan panik atakların nefes darlığı ya da göğüs sıkışmasıyla birlikte artması.
--   Kendinize zarar verme ya da yaşamaya dair umutsuzluk düşünceleri. Bu durumda beklemeden acil servise (112) ya da bir ruh sağlığı uzmanına başvurun.
+-   İki haftayı geçen, günlük işlerinizi aksatan bir ruh hâli düşüklüğü ya da hiçbir şeyden keyif alamamak.
+-   Haftalarca süren ve gündüzleri işinizi gücünüzü ciddi biçimde etkileyen uyku sorunu.
+-   Sıklaşan ya da günlük hayatınızı aksatan panik ataklar.
+-   Yeni başlayan göğüs ağrısı ya da sıkışma için değerlendirme isteyin. Ağrı şiddetliyse ya da geçmiyorsa, göğsünüzde ağırlık ya da belirgin nefes darlığı varsa acil yardım alın; bunu panik atağa bağlamayın.
+-   Süren umutsuzluk ya da yaşama isteğinde azalma varsa bir ruh sağlığı uzmanıyla görüşmeyi ertelemeyin. Kendinize zarar verme düşünceniz varsa hemen profesyonel yardım alın. Kendinizi güvende tutamıyorsanız ya da kendinize zarar verdiyseniz 112’yi arayın veya en yakın acil servise gidin.
 
-Bunlardan biri sizde varsa kendinizi suçlamadan yardım isteyin. Karar hekim değerlendirmesiyle verilir; benim tek dileğim bu soruyu sormaktan çekinmemeniz.
+Bunlardan biri sizde varsa kendinizi suçlamadan yardım isteyin. Benim tek dileğim, bunu konuşmaktan çekinmemeniz.
 
 ## Perde Kapandıktan Sonra Kendime Söylediğim Cümle
 
 Oyun bittiğinde kulise dönüp makyajımı silerken kendime hep aynı şeyi söylerim: Bugün de bitti.
 
-Stresi tamamen yok etmek bana gerçekçi gelmiyor. Daha yakın bir hedef, onunla nasıl yaşadığımı değiştirmek. Bu dönem sizin için de belki biraz yavaş akacak; alarmı her gün baştan kurmak yerine, akşamınızı ve sabahınızı biraz daha kendinize göre ayarlamak mümkün.
+Stresi tamamen yok etmek bana gerçekçi gelmiyor. Daha ulaşılabilir bir hedef, onunla nasıl yaşadığımı değiştirmek. Sizin için de bu dönem belki biraz yavaşlamayı gerektirecek; akşamınızı ve sabahınızı kendinize göre ayarlamak mümkün.
 
-Ben kendi düzenimi böyle kuruyorum. Sizinki başka olacak. Doktorunuzla uyku bölünmelerini, gündelik yükü ve ruh halinizi birlikte konuşmak iyi bir başlangıç olabilir.
+Ben kendi düzenimi böyle kuruyorum; sizin gününüze başka bir düzen uyabilir. Uyku bölünmelerini, gündelik yükü ve ruh hâlinizi hekiminizle birlikte konuşmak iyi bir başlangıç olur.
 
-Perde her gece yine açılıyor. Kalbim hâlâ ilk gecedeymiş gibi atıyor; artık en azından nedenini biliyorum…
+Oyun gecelerinde perde yine açılıyor. Kalbim hâlâ ilk gecedeymiş gibi atıyor; ben de o birkaç dakikayı nefesime ayırıyorum…
 
 Tıbbi Bilgi Notu
 
 Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
 
-Menopoz geçişinde uyku bölünmeleri sık görülür; sıcak basmaları ve gece terlemeleri bu bölünmeyi artırabilir (iyi kanıt). Stres yanıtında beyin, böbreküstü bezini kortizol salgılamaya yönlendirir; kısa süreli yükselme dikkat ve enerji sağlar (güçlü kanıt). Östrojen dalgalanmasının bu yanıtın büyüklüğünü ve süresini bazı kadınlarda değiştirebildiği düşünülmektedir (orta–iyi kanıt).
+Menopoz geçişinde sıcak basmaları ve gece terlemeleri uykuyu bölebilir (iyi kanıt). Stres yanıtında adrenalin ve kortizol gibi hormonlar rol oynar (iyi kanıt); çarpıntı ya da gerginlik hissi, kortizol düzeyini veya belirtinin nedenini tek başına göstermez. Östrojen dalgalanmalarıyla strese duygusal duyarlılık arasında ilişki olabileceğini düşündüren çalışmalar vardır; bunlar her kadının aynı tepkiyi vereceğini veya kişisel belirtilerin nedenini göstermez (sınırlı kanıt).
 
-Uzun süren yüksek stres uyku düzenini ve gün içindeki tahammülü olumsuz etkileyebilir (iyi kanıt). Düzenli ve hafif tempolu hareketin ruh hali ve uyku üzerinde olumlu etkisi olabilir (orta–iyi kanıt). Yazıdaki nefes, yürüyüş ve uyku düzeni yazarın kendi deneyimidir; bireysel öneri yerine geçmez.
+Uzun süren stres uyku düzenini ve gün içindeki tahammülü olumsuz etkileyebilir (iyi kanıt). Egzersizin menopoz dönemindeki uyku sorunlarına etkisine ilişkin sonuçlar farklılık gösterir; hafif tempolu yürüyüşün herkesin uykusunu düzelteceği söylenemez (sınırlı kanıt). Yazıdaki nefes, yürüyüş ve uyku düzeni yazarın kendi deneyimidir; bireysel öneri yerine geçmez.
 
-İki haftayı aşan ruh hali düşüklüğü, haftalarca süren uyku sorunu, sıklaşan panik atakları ya da kendine zarar verme düşünceleri hekim değerlendirmesi gerektirir; son durumda beklemeden acil yardım alınmalıdır.
+Nefes çalışması sırasında baş dönmesi olursa durun; nefesi zorlamayın. Yürürken göğüs ağrısı, alışılmadık nefes darlığı ya da baş dönmesi gelişirse hareketi bırakıp değerlendirme isteyin; ağrı şiddetliyse ya da geçmiyorsa acil yardım alın.
 
 Tıbbi Not
 
