@@ -418,7 +418,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/',
     title: "Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası 'Ölçü Sorusu'",
     description:
-      "40 sonrası yüz müdahalelerinde kişisel beklenti, seçeneklerin kanıt ve risk sınırları, müdahale yaptırmama tercihi ve hekiminizle konuşabileceğiniz dört soru.",
+      "40 sonrası ve menopozda yüzün değişimi, kişisel beklenti, seçeneklerin kanıt ve risk sınırları, müdahale yaptırmama tercihi ve hekiminizle konuşabileceğiniz dört soru.",
     publishedDate: '10 Mayıs 2026',
     writerSlug: 'cagri-sade',
     section: 'Zamansız Yaşam · Yüz Yaşlanması',

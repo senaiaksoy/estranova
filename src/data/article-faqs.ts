@@ -243,17 +243,17 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Daha az müdahaleyle daha iyi sonuç almak mümkün mü?',
       answer:
-        'Müdahale sayısı tek başına sonucu belirlemez. Önemli olan, düşündüğünüz işlemin hangi değişimi hedeflediği ve bu hedef için gerekli olup olmadığıdır. Küçük bir işlem de risk taşır; daha az işlem, herkes için daha iyi sonuç garantisi değildir.',
+        'Müdahale sayısı tek başına sonucu belirlemez. Asıl soru, düşündüğünüz işlemin hangi değişimi hedeflediği ve bu hedef için gerekli olup olmadığıdır. Daha az işlem, herkes için daha iyi sonuç anlamına gelmez.',
     },
     {
       question: 'Müdahale yaptırmazsam yüzüm hızla kötüye gider mi?',
       answer:
-        'İşlem yaptırmamak, yüzünüzün hızla kötüye gideceği anlamına gelmez. Yaşlanma doğal biçimde devam eder; hız ve görünüm kişiden kişiye değişir. Müdahale yaptırmamayı seçebilirsiniz.',
+        'Yüzünüz değişmeye devam eder; bu değişimin hızı ve görünümü kişiden kişiye farklıdır. Menopozla birlikte bazı kadınlarda değişim birkaç yıl içinde daha belirgin hissedilebilir. İşlem yaptırmamak bu süreci hızlandırmaz.',
     },
     {
-      question: 'Karar verirken kendime hangi soruyu sormalıyım?',
+      question: 'Menopozda dolgu yaptırmak yüzü gençleştirir mi?',
       answer:
-        '“Bu kararı kim veriyor: ben mi, yoksa çevremden duyduğum yorumlar mı?” diye sorabilirsiniz. Ne istediğiniz henüz net değilse karar vermek için kendinize zaman tanıyın. Görüşmeye gitmek de işlem yaptırma zorunluluğu doğurmaz.',
+        'Kolajen desteği azalmış, incelmiş bir ciltte yalnızca yoğun dolguyla hacim eklemek yüzü gençleştirmeyebilir; taşıyıcı gücü azalmış doku daha ağır ve şiş görünebilir. Hacim kaybı ile cildin doku kalitesi farklı sorunlardır. Hangisinin ön planda olduğunu muayenede ayırmak gerekir.',
     },
   ],
   '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/': [
