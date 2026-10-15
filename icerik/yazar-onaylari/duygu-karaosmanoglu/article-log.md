@@ -145,3 +145,4 @@ Sayım sözcük eşleşmesidir, bütün anlamsal tekrarların sayısı değildir
 - "Dişler arasında yer açmak için mineden az miktarda alınabilir" cümlesi, Dahhas ve ark. (Cureus 2024; anlatısal derleme; [PMC11032144](https://pmc.ncbi.nlm.nih.gov/articles/PMC11032144/)) ile desteklendi: IPR geri dönüşsüz bir doku değişikliği ve dikkatli planlama gerektirir. Kaynak 12 olarak eklendi; atıf bölüme bitişik.
 - Doğrulama: derlenmiş sayfada 12 kaynak, 4 SSS/FAQPage, tek H1. Kalan rendered-check bulgusu (uncited-source) Estranova numaralı atıf düzeninde geçersiz; repeated-disclaimer şablon kaynaklı.
 - Son kaynak SHA-256: 14fcfd6b…. Yayın için commit, push ve canlı doğrulama ayrıca yapılır.
+- Onay kaydı: KC (Doç. Dr. Senai Aksoy) 14fcfd6b… SHA-256 metnini sohbette sözlü olarak yazar ve tıbbi onay olarak kabul etti. Form veya onay paketi üretilmedi.
