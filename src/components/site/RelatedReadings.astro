@@ -1,4 +1,4 @@
-﻿---
+---
 /**
  * RelatedReadings — makale altı "İlgili Okumalar" bloğu.
  *
@@ -11,6 +11,7 @@
  */
 
 import { publishedStaticArticles as staticArticles, type StaticArticleEntry } from '../../data/static-articles';
+import { releasedIssues } from '../../data/issues';
 
 interface Props {
   paths: string[];
@@ -52,6 +53,10 @@ const items: Item[] = paths.map((path): Item => {
   const entry: StaticArticleEntry | undefined = staticArticles.find((a) => a.path === path);
   if (entry) {
     return { href: entry.path, title: entry.title, section: entry.section };
+  }
+  const issue = releasedIssues.find((issue) => `/sayi/${issue.slug}` === path.replace(/\/$/, ''));
+  if (issue) {
+    return { href: path, title: issue.coverHeadline, section: 'Eşik · Sayılar' };
   }
   const fb = fallbackFromPath(path);
   return { href: path, title: fb.title, section: fb.section };

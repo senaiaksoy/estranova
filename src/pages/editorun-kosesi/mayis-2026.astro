@@ -28,6 +28,8 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'berna-aksoy',
   articleType: 'experience-essay',
   publishedDate: '1 Mayıs 2026',
+  modifiedDate: '2026-10-15',
+  image: issue?.coverImage.src,
   pathname,
   articleSection: 'Editörün Köşesi',
   sectionPath: '/sayi/',
@@ -49,6 +51,7 @@ const articleSchemas = buildArticleSchemas({
   title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
+  image={issue?.coverImage.src}
   jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath={pathname} />
@@ -71,7 +74,7 @@ const articleSchemas = buildArticleSchemas({
             Eşik'in İlk Sayısı
           </h1>
           <p class="mt-6 max-w-2xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
-            Her ay yeni bir sayıyı kapı aralayarak başlıyorum — site editörü Berna Aksoy
+            Eşik'in ilk sayısı uykuyla açılıyor. Bu köşede her ay, sayının yazılarını size tanıtacağım.
           </p>
         </div>
       </header>
@@ -80,87 +83,80 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="berna-aksoy"
         articleType="experience-essay"
         publishedDate="1 Mayıs 2026"
-        readingMinutes={6}
+        lastUpdated="15 Ekim 2026"
+        readingMinutes={3}
         medicalReviewer="Yok"
       />
 
       <ArticleSummary title="Bu Sayıya Giriş">
         <p>
           <strong>Eşik</strong>, Estranova'nın aylık dijital dergisi, Mayıs 2026'da ilk sayısıyla yayında.
-          <strong>Sayı 01 — "Geceler"</strong>: perimenopozda uykunun en sessiz değişiklikleri, üç farklı sesle.
-          Bu köşede her ay yeni bir sayıyı kapı aralayarak başlıyorum — neyi konuşuyoruz, kim hangi açıdan bakıyor,
-          hangi gece yeniden başlıyor.
+          <strong>Sayı 01 — Geceler</strong>, perimenopozda uyku, gece terlemesi ve akşam hareketini
+          üç yazarın bakışıyla ele alıyor. İlk köşede derginin adını ve bu sayının okuma sırasını anlatıyorum.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel mode="experience">
         <h2 id="esik-neden">Bir Derginin Adı Neden "Eşik"?</h2>
         <p>
-          Bir hâlden diğerine geçilen ara — antropolojide buna <em>liminal an</em> deniyor. Bir dakika önce
-          evdeydiniz, bir dakika sonra dışarısınız; arada o eşik var, kapının iki yanına da ait olmadığınız o iki saniye.
+          Kapıdan çıkarken bir an durursunuz; henüz sokağa adım atmamışsınızdır, evden de ayrılmak üzeresinizdir.
+          Derginin adı o kısa aradan geliyor.
         </p>
         <p>
-          Perimenopoz tam böyle bir şey. Bir sabah sıcak basıyor, bir başka sabah hayal kırıklığı; bir hafta uyku
-          düzgün, bir hafta saat üçte gözünüzü açıyorsunuz. Eskisi gibi değil — ama henüz yeni "normal" de oturmamış.
-          Eşik tam o aranın adı.
+          Perimenopozu, yani menopoza geçiş dönemini anlatırken de bu arada kalmışlık hissiyle karşılaşıyoruz.
+          Alıştığınız düzen değişirken yeni duruma bir ad koymak kolay olmayabiliyor. Eşik'i bu sorulara
+          yer açan bir dergi olarak düşündüm.
         </p>
         <p>
-          Dergi tek bir cevap üretmiyor. Soruları sakinleştirip bir sıraya koyuyor; her ay bir tema seçiyor;
-          birkaç sesi yan yana getiriyor. Niyeti, kapı eşiğine kadar gelmiş bir konuyu odaya almak — ders vererek değil,
-          birlikte oturarak.
+          Her ay bir konu seçip farklı yazarların bakışlarını yan yana getiriyoruz. Siz de aynı konuyu
+          hem gündelik hayatın içinden hem bilimsel açıklamasıyla okuyabiliyorsunuz.
         </p>
 
         <h2 id="sayi-01-geceler">Sayı 01 — Geceler</h2>
         <p>
-          Mayıs sayımız uykuyu masaya yatırıyor. Çünkü perimenopozun en sessiz belirtisi çoğu zaman uyku.
-          Gündüz yorgunluk olarak görünüyor; ama temel olay gecede başlıyor: hormonal dalga uyku mimarisini
-          değiştiriyor, gece terlemesi çarşafa siniyor, saat üçte göz açılıyor.
+          İlk sayının konusu uyku. Gece uyanmak, çarşaf değiştirmek, sabah dinlenememiş kalkmak gibi
+          ayrı ayrı yaşanan anları aynı dosyada ele alıyoruz.
         </p>
         <p>
-          Bu sayıda üç yazı, üç farklı kapı:
+          Sizi en çok ilgilendiren soruya göre üç yazıdan biriyle başlayabilirsiniz:
         </p>
         <ul>
           <li>
-            <strong>Berna Aksoy</strong> (kendim) — <em>Perimenopozda uykunun gerçekten değişen yanı:</em>
-            hormonal dalganın uykunun hangi evresine ne yaptığı, hangi değişimin geçici hangisinin kalıcı bir
-            düzen kurduğu.
+            <strong>Berna Aksoy</strong> — <em>Perimenopozda uykunun gerçekten değişen yanı:</em>
+            Bu yazımda hormonal geçiş ile uyku arasındaki ilişkiyi ve geceleri anlamaya çalışırken
+            sorulabilecek soruları ele alıyorum.
           </li>
           <li>
             <strong>Doç. Dr. Senai Aksoy</strong> — <em>Gece terlemesi ve uyku: utançsız bakış:</em>
-            gece yarısı uyanma, çarşaf değiştirme, sessizce yeniden uyumayı deneme. Mahrem yan, jargonsuz.
+            Gece yarısı uyanmanın, çarşaf değiştirmenin ve yeniden uyumaya çalışmanın mahrem yanını
+            tıbbi açıklamasıyla birlikte anlatıyor.
           </li>
           <li>
             <strong>Alara Baykent</strong> — <em>Akşam hareketi uykuyu bozar mı, toparlar mı?:</em>
-            sporcu beden okumasıyla akşam egzersizi, melatonin ve beden ısısı ilişkisi; performans baskısı değil,
-            geceye geçiş ritüeli.
+            Akşam egzersizi, uykuyla ilişkili melatonin hormonu ve beden ısısı arasındaki ilişkiye
+            sporcu deneyiminden bakıyor.
           </li>
         </ul>
         <p>
-          Üçü farklı sesler ama aynı geceyi konuşuyor. Hiçbiri tek başına çözüm değil; yan yana geldiklerinde
-          bir gece bir adımı denemek kolaylaşıyor.
+          Bu üç yazı aynı geceyi farklı yönleriyle anlatıyor. Birini okuduktan sonra diğerine geçmek,
+          aklınızdaki sorunun hangi yanının hâlâ açık kaldığını görmenizi sağlayabilir.
         </p>
 
-        <h2 id="kose-niyeti">Bu Köşede Her Ay Ne Yapıyorum?</h2>
+        <h2 id="kose-niyeti">Bu Köşede Her Ay Sayıyı Tanıtacağım</h2>
         <p>
-          Sıcacık Köşe, Eşik'in kapı önü. Her ay yeni bir sayı çıkıyor; ben de o sayıyı bir editör olarak —
-          ders veren biri değil, yan yana oturup sayfayı aralayan biri olarak — size tanıtmaya çalışıyorum.
-          Niyetim hiçbir zaman "şunu da bilin" listeleri olmadı; daha çok <em>bu ay neyi konuştuk, hangi soruyla
-          bağladık</em> sohbeti.
+          Sıcacık Köşe'de size sayının nasıl bir araya geldiğini anlatacağım. Hangi sorudan yola çıktık,
+          yazılar birbirini nerede tamamlıyor, okumaya nereden başlayabilirsiniz?
         </p>
         <p>
-          (Editör olarak ilk yazımda bile bir liste yazdığımı fark ediyorum. Eski alışkanlık.)
-        </p>
-        <p>
-          Bu köşenin amacı sayının özetini geçmek değil. Daha çok şunu yapmak: o ayın sorusunu sade bir
-          cümleyle ortaya koymak, kimin hangi açıdan baktığını söylemek, sizi okumaya davet etmek. Sonrası
-          sayıda — kendi adıma okuyor olacağım.
+          Benim buradaki yerim editör masası. Yazıların ayrıntısına girmeden önce size kısa bir giriş
+          sunmak istiyorum. Sayıyı bitirme telaşınız olmasın; o ay yalnızca bir yazı ilginizi çekerse de olur.
         </p>
 
-        <h2 id="nasil-baslanir">İlk Sayıya Nasıl Başlanır?</h2>
+        <h2 id="nasil-baslanir">İlk Sayı İçin Bir Okuma Sırası</h2>
         <p>
-          Tek oturuşta okumak gerek değil. Üç yazıyı sırayla deneyebilirsiniz; veya bir geceyi seçip sadece
-          o yazıyı okumayı deneyebilirsiniz. Saat üçte uyandıysanız — telefonun parlak ekranından önce, bir
-          paragraf bile yeter çoğu zaman.
+          Gece terlemesi aklınızı kurcalıyorsa o yazıyı açın; akşam yaptığınız hareketin uykuyla ilişkisini
+          merak ediyorsanız Alara'nın yazısına geçin. Baştan sona okumayı sevenler için sayı sayfasında
+          üçü de sıralı duruyor.
         </p>
         <p>
           Sayı sayfasından başlayabilirsiniz: <a href={issuePath}>Eşik · Sayı 01 — Mayıs 2026 · Geceler</a>.
@@ -168,7 +164,7 @@ const articleSchemas = buildArticleSchemas({
           geçiş için <a href="/editorun-kosesi/haziran-2026/">Haziran 2026 Sıcacık Köşe</a> de açık.
         </p>
         <p class="italic">
-          Bu sayıya hep birlikte giriyoruz. Bedenle yazışmanın ilk maddesi, bence, gecedir.
+          İlk sayıyı burada açıyorum. Sizin hangi yazıda daha uzun kalacağınızı merak ediyorum.
         </p>
         <p>— Berna Aksoy, Site Editörü</p>
       </ArticleProsePanel>

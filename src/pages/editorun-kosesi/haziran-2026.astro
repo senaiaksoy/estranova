@@ -27,6 +27,8 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'berna-aksoy',
   articleType: 'experience-essay',
   publishedDate: '2026-06-01',
+  modifiedDate: '2026-10-15',
+  image: issue?.coverImage.src,
   pathname,
   articleSection: "Editörün Köşesi",
   sectionPath: '/sayi/',
@@ -48,6 +50,7 @@ const articleSchemas = buildArticleSchemas({
   title={`${articleTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
+  image={issue?.coverImage.src}
   jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath={pathname} />
@@ -70,77 +73,72 @@ const articleSchemas = buildArticleSchemas({
             Güç Eşiği
           </h1>
           <p class="mt-6 max-w-2xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
-            Bu ay gücü daha sert olmak değil, bedeni daha iyi duymak olarak okuyoruz.
+            Merdiven çıkmak, çanta taşımak, dengede kalmak: bu ay güce gündelik hayatın içinden bakıyoruz.
           </p>
         </div>
       </header>
 
       <ArticleAuthorBlock authorSlug="berna-aksoy"
-        articleType="experience-essay" publishedDate="1 Haziran 2026" readingMinutes={5} medicalReviewer="Yok" />
+        articleType="experience-essay" publishedDate="1 Haziran 2026" lastUpdated="15 Ekim 2026" readingMinutes={3} medicalReviewer="Yok" />
 
       <ArticleSummary title="Bu Sayıya Giriş">
         <p>
-          <strong>Eşik · Sayı 02 — Güç Eşiği</strong>, 40 sonrasında gücü yalnızca kasla değil; kemik,
-          denge, enerji, uyku ve sürdürülebilir hareketle birlikte ele alıyor. Bu sayı, bedeni
-          zorlamadan yeniden duymanın daveti.
+          <strong>Eşik · Sayı 02 — Güç Eşiği</strong>, 40 sonrasında kas, kemik, denge, enerji ve uykuyu
+          birlikte ele alıyor. Altı yazar, hareketi gündelik hayatta nasıl sürdürebileceğimizden
+          yorgunluk hakkında hangi soruları sorabileceğimize kadar farklı konulara bakıyor.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel mode="experience">
         <h2 id="neden-guc">Bu Ay Neden Güç?</h2>
         <p>
-          Güç kelimesi çoğu zaman biraz sert duyulur; daha çok çalışmak, daha çok dayanmak, daha çok
-          sıkmak gibi. Oysa 40'tan sonra güç, benim için daha çok bedeni duyma biçimi.
+          Güç deyince aklınıza önce spor salonu gelebilir. Ben bu sayıda, merdiven çıkarken veya
+          alışveriş çantasını taşırken ihtiyaç duyduğumuz güce de yer açmak istedim.
         </p>
         <p>
-          Bir sabah merdiveni çıkarken dizinizi fark edersiniz; bir akşam çantayı taşırken omzunuzu.
-          Bazen tartı aynı kalır ama bedenin taşıma hissi değişir. Bazen de yorgunluk, takvimdeki
-          yoğunluktan çok daha derin bir yerden konuşur. İşte bu sayı, o işaretleri büyütmeden
-          ciddiye almak için hazırlandı.
+          Bir gün diziniz, başka bir gün omzunuz dikkatinizi çekebilir. Yorgunluğunuzu anlamaya çalışırken
+          de nereden başlayacağınızı bilemeyebilirsiniz. Haziran dosyasını bu gündelik sorular etrafında kurduk.
         </p>
         <p>
-          Ben bu dosyayı hazırlarken kendi sabah yürüyüşlerimde de aynı şeyi fark ettim: bazen saat ekranındaki
-          rakamdan çok, merdivenin sonunda nefesin nasıl döndüğü daha dürüst bir bilgi veriyor. Bu benim
-          editör notum; sizin bedeniniz aynı cümleyi başka bir anda, başka bir işaretle kurabilir.
+          Daha yoğun bir program hazırlama telaşınız olmasın. Bu sayının amacı, hareketle ilişkinizi
+          düşünürken kas, kemik, denge ve dinlenme için ayrı ayrı sorular sorabilmek.
         </p>
 
         <h2 id="sayi-02">Sayı 02 — Güç Eşiği</h2>
         <p>
-          Haziran sayısında gücü bir spor dosyası gibi değil, 40 sonrası sağlık okuryazarlığının
-          ana eksenlerinden biri gibi ele alıyoruz. Çünkü kas, kemik, denge ve metabolizma aynı
-          hikayenin farklı sayfaları.
+          Mayıs'ta gecelere bakmıştık; Haziran'da gündüz yaptığınız hareketlere geçiyoruz.
+          Bu sayının altı yazısı, gücün hayatın farklı anlarında neye karşılık geldiğini ele alıyor.
         </p>
-        <p>Bu ay altı yazı, altı farklı kapı açıyor:</p>
+        <p>Dosyada kim hangi soruya bakıyor?</p>
         <ul>
           <li>
-            <strong>Anıl Yalmaz</strong> hareketin başlangıç haritasını kuruyor: daha sert değil,
-            daha akıllı.
+            <strong>Anıl Yalmaz</strong> 40 sonrasında harekete yeniden başlarken nereden
+            başlanabileceğini anlatıyor.
           </li>
           <li>
-            <strong>Prof. Dr. Bülent Aksoy</strong> kemiği kırık sonrası değil, kırık oluşmadan
-            önce konuşmaya çağırıyor.
+            <strong>Prof. Dr. Bülent Aksoy</strong> kemik sağlığı hakkında kırık oluşmadan önce
+            sorulabilecek soruları ele alıyor.
           </li>
           <li>
-            <strong>Fzt. Ersin Saraç</strong> dengeyi ayak, kalça ve gövde hattında yeniden
-            duymayı anlatıyor.
+            <strong>Fzt. Ersin Saraç</strong> dengeyi ayak, kalça ve gövdenin birlikte çalışması
+            üzerinden açıklıyor.
           </li>
           <li>
-            <strong>Dr. Metin Alış</strong> yorgunluğu kas, tiroid ve metabolizma ekseninde ayırıyor.
+            <strong>Dr. Metin Alış</strong> yorgunluğu kas, tiroid ve metabolizma yönünden inceliyor.
           </li>
           <li>
-            <strong>Alara Baykent</strong> yaz başlarken hareketi performans değil, devamlılık
-            olarak ele alıyor.
+            <strong>Alara Baykent</strong> yaz başlarken hareketi günlük hayat içinde sürdürmeye odaklanıyor.
           </li>
           <li>
-            <strong>Başak Pelister</strong> kendi menopoz deneyiminden gelen sevimli bir denemeyle
-            gücü çanta, merdiven, anne-kız sohbeti ve küçük itiraflar üzerinden okuyor.
+            <strong>Başak Pelister</strong> kendi menopoz deneyimini çanta, merdiven ve anne-kız
+            sohbeti üzerinden anlatıyor.
           </li>
         </ul>
 
-        <h2 id="bu-sayiya-nasil-baslanir">Bu Sayıya Nasıl Başlanır?</h2>
+        <h2 id="bu-sayiya-nasil-baslanir">Merak Ettiğiniz Konudan Başlayın</h2>
         <p>
-          Tek oturuşta her şeyi okumak gerekmiyor. Bu sayıya, bedeninizin o hafta en çok ses verdiği
-          yerden başlayabilirsiniz: hareket, kemik, denge, yorgunluk ya da yaz ritmi.
+          O hafta hangi soruyla uğraşıyorsanız oradan başlayabilirsiniz. Harekete yeniden başlamak
+          istiyorsanız Anıl'ın, yorgunluğunuzu anlamaya çalışıyorsanız Metin Bey'in yazısını açabilirsiniz.
         </p>
         <p>
           Sayı sayfasından başlayabilirsiniz: <a href={issuePath}>Eşik · Sayı 02 — Haziran 2026 · Güç Eşiği</a>.
@@ -148,7 +146,8 @@ const articleSchemas = buildArticleSchemas({
           <a href="/editorun-kosesi/mayis-2026/">Mayıs 2026 Sıcacık Köşe</a>'ye de bakabilirsiniz.
         </p>
         <p class="italic">
-          Bu ay kendimize daha fazla yüklenmek yerine, bedenin taşıma biçimini yeniden dinleyelim.
+          Ben bu sayıyı günlük hayatta yaptığımız hareketleri düşünerek hazırladım. Sizin aklınıza
+          ilk hangi an geldi: merdiven, çanta, yürüyüş?
         </p>
         <p>— Berna Aksoy, Site Editörü</p>
       </ArticleProsePanel>
