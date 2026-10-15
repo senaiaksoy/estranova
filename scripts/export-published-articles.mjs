@@ -166,41 +166,62 @@ function parseFrontmatter(astroSource) {
   };
 }
 
+// Açılış etiketi koşulu sağlayan tüm <section> bloklarını iç içe <section> sayarak eksiksiz döndürür.
+function findSections(html, openTagTest) {
+  const found = [];
+  const openRe = /<section\b[^>]*>/g;
+  let m;
+  while ((m = openRe.exec(html))) {
+    if (!openTagTest(m[0])) continue;
+    const tagRe = /<section\b[^>]*>|<\/section>/g;
+    tagRe.lastIndex = m.index + m[0].length;
+    let depth = 1;
+    let t;
+    while (depth > 0 && (t = tagRe.exec(html))) depth += t[0] === '</section>' ? -1 : 1;
+    if (depth !== 0) continue;
+    found.push({ start: m.index, end: tagRe.lastIndex, html: html.slice(m.index, tagRe.lastIndex) });
+  }
+  return found;
+}
+
+const classOf = (tag) => (tag.match(/\sclass="([^"]*)"/) || [])[1] || '';
+
 function extractArticleBodyFromHtml(html) {
-  // Estranova makalesinde 4 ana bölüm var; sırasıyla extract edilir:
-  //   1. Kısa Özet (gold gradient kart) — "from-white to-cream-soft" class
-  //   2. ArticleProsePanel ana gövde — "prose-estranova" class (RedFlagBox dahil)
-  //   3. Bilimsel Editör Notu (gold border-left) — "border-l-gold" class
-  //   4. Disclaimer (dashed border) — "border-dashed" class
-  // Bulunanlar sıraya göre birleştirilir; eksik olanlar atlanır.
+  // Makale yüzeyleri bileşenlerdeki `article-export-*` işaret sınıflarıyla bulunur:
+  //   summary (Kısa Özet) · prose (her ArticleProsePanel; ek Kaynaklar paneli dahil) ·
+  //   faq (ArticleFAQ) · editor-note (Bilimsel Editör Notu) · medical-context · disclaimer
+  // ve sayfaya özgü `<section id="kaynak-listesi">`. Hepsi sayfadaki sırasıyla birleştirilir.
+  // İşaretsiz eski sayfalar için kategori başına eski sınıf kalıbı (ilk eşleşme) yedek olarak kalır.
+  const MARKERS = ['summary', 'prose', 'faq', 'editor-note', 'medical-context', 'disclaimer'];
+  const LEGACY = {
+    summary: (c) => /from-white\s+to-cream-soft/.test(c),
+    'editor-note': (c) => /border-l-gold/.test(c),
+    disclaimer: (c) => /border-dashed/.test(c),
+  };
 
   const parts = [];
+  for (const marker of MARKERS) {
+    const hits = findSections(html, (tag) => classOf(tag).split(/\s+/).includes(`article-export-${marker}`));
+    if (hits.length) parts.push(...hits);
+    else if (LEGACY[marker]) parts.push(...findSections(html, (tag) => LEGACY[marker](classOf(tag))).slice(0, 1));
+  }
+  parts.push(...findSections(html, (tag) => /\sid="kaynak-listesi"/.test(tag)));
 
-  // 1. Kısa Özet
-  const ozetRe = /<section\s+class="[^"]*(?:from-white\s+to-cream-soft|article-export-summary)[^"]*"[^>]*>([\s\S]*?)<\/section>/;
-  const ozetMatch = html.match(ozetRe);
-  if (ozetMatch) parts.push(ozetMatch[0]);
+  // İşaretsiz prose (ArticleProsePanel dışı eski gövde) yedeği
+  if (!parts.some((p) => /prose-estranova/.test(p.html))) {
+    for (const m of html.matchAll(/<div\s+class="[^"]*prose-estranova[^"]*"[^>]*>[\s\S]*?<\/div>\s*<\/section>/g)) {
+      parts.push({ start: m.index, end: m.index + m[0].length, html: m[0] });
+    }
+  }
 
-  // 2. ArticleProsePanel render edildiğinde "prose prose-lg prose-estranova" sınıflı bir div oluşur.
-  const proseRe = /<div\s+class="[^"]*prose-estranova[^"]*"[^>]*>([\s\S]*?)<\/div>\s*<\/section>/;
-  const proseMatch = html.match(proseRe);
-  if (proseMatch) parts.push(proseMatch[0]);
-
-  // 3. Bilimsel Editör Notu (border-l-gold gold accent kart)
-  const benRe = /<section\s+class="[^"]*border-l-gold[^"]*"[^>]*>([\s\S]*?)<\/section>/;
-  const benMatch = html.match(benRe);
-  if (benMatch) parts.push(benMatch[0]);
-
-  // Deneyim yazısının ayrı tıbbi notu; sayfa bu yüzeyi açıkça işaretler.
-  const medicalMatch = html.match(/<section\s+class="[^"]*article-export-medical-context[^"]*"[^>]*>[\s\S]*?<\/section>/);
-  if (medicalMatch) parts.push(medicalMatch[0]);
-
-  // 4. Disclaimer (border-dashed kart)
-  const dscRe = /<section\s+class="[^"]*border-dashed[^"]*"[^>]*>([\s\S]*?)<\/section>/;
-  const dscMatch = html.match(dscRe);
-  if (dscMatch) parts.push(dscMatch[0]);
-
-  if (parts.length > 0) return parts.join('\n\n');
+  // Sayfa sırası; başka bir yakalanan bölümün içinde kalanlar (ör. özet içindeki not) tekrar edilmez.
+  parts.sort((a, b) => a.start - b.start || b.end - a.end);
+  const kept = [];
+  for (const p of parts) {
+    if (kept.some((k) => p.start >= k.start && p.end <= k.end)) continue;
+    kept.push(p);
+  }
+  if (kept.length > 0) return kept.map((p) => p.html).join('\n\n');
 
   // Fallback: <main id="main-content"> içi (gürültülü ama içerik yine yakalanır)
   const mainRe = /<main\s+id="main-content"[^>]*>([\s\S]*?)<\/main>/;
@@ -234,6 +255,15 @@ function htmlToMarkdown(html) {
   // Yalnızca tagleri at, içerik kalsın
   md = md.replace(/<span\s+class="[^"]*evidence[^"]*"[^>]*>([\s\S]*?)<\/span>/g, '$1');
 
+  // Kartların yalnız görsel süsü (aria-hidden "E", "not", "Q", "+") metne karışmasın
+  md = md.replace(/<(div|span)\b[^>]*aria-hidden="true"[^>]*>[^<]*<\/\1>/g, '');
+
+  // SSS: <summary> içindeki sıra numarası atılır, soru alt başlık olur
+  md = md.replace(/<summary[^>]*>([\s\S]*?)<\/summary>/g, (_, inner) => {
+    const q = inner.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().replace(/^\d{1,2}\s+/, '');
+    return `\n\n### ${q}\n\n`;
+  });
+
   // Headings
   md = md.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/g, '\n\n# $1\n\n');
   md = md.replace(/<h2[^>]*>([\s\S]*?)<\/h2>/g, '\n\n## $1\n\n');
@@ -260,7 +290,7 @@ function htmlToMarkdown(html) {
   md = md.replace(/<br\s*\/?>/g, '\n');
 
   // Strip remaining structural tags
-  md = md.replace(/<\/?(div|span|section|article|nav|aside|header|footer|main|figure|figcaption|button|svg|path|g|line|circle|polygon|rect|defs|use|symbol|title|desc|clippath|mask|filter|fegaussianblur|feoffset|fecolormatrix|femerge|femergenode)[^>]*>/gi, '');
+  md = md.replace(/<\/?(div|span|section|article|nav|aside|header|footer|main|figure|figcaption|details|button|svg|path|g|line|circle|polygon|rect|defs|use|symbol|title|desc|clippath|mask|filter|fegaussianblur|feoffset|fecolormatrix|femerge|femergenode)[^>]*>/gi, '');
 
   // Decode entities
   md = decodeHtmlEntities(md);
