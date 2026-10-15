@@ -53,7 +53,7 @@ npm run articles:export # markdown'a dök
 | 2026-07-16 | basak-pelister | [Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?](2026-07/2026-07-16__olcu-panigi-beden-algisi-menopoz.md) | Zihin & Denge |
 | 2026-07-15 | estranova-editorial | [Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması](2026-07/2026-07-15__tarti-yatisinca-vucut-kompozisyonu.md) | Hormonal Geçiş |
 | 2026-07-15 | estranova-editorial | [Menopozda Kilo Artışı: Tartının Söylemediği Kısım](2026-07/2026-07-15__kilo-artisi-menopoz.md) | Zamansız Yaşam |
-| 2026-07-15 | metin-alis | [Kortizol Sadece Stres Hormonu Değil — Menopozda Ne Değişir?](2026-07/2026-07-15__stres-yonetimi-menopoz.md) | Zihin & Denge |
+| 2026-10-15 | isik-selin-gunce | [Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine](2026-10/2026-10-15__stres-yonetimi-menopoz.md) | Zihin & Denge |
 
 ### 2026-06
 
