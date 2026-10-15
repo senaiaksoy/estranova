@@ -396,7 +396,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
     title: 'Yüzümüzle uyumlu gülüşün kararı',
     description:
-      '40 sonrası estetik diş kararı: yüze yakışanı aramak, doğal görünümün üç ölçüsü, müdahale yelpazesinin sınırları ve ilk görüşmede sormanızı önerdiğim beş soru. Estetik diş hekimi gözüyle bir karar rehberi.',
+      '40 sonrası estetik diş kararında renk, şekil ve diziliş nasıl değerlendirilir? Beyazlatma, bonding, laminat ve ortodonti; görüşmede sorulacak sorular.',
     publishedDate: '11 Mayıs 2026',
     writerSlug: 'duygu-karaosmanoglu',
     section: 'Hormonal Geçiş · 40 Sonrası',

@@ -66,3 +66,75 @@
 4. `manifesto_templates.templates` doldurulur.
 5. `writer_version` v3.0 → v3.1.
 6. Bu log'un ilk satırı doldurulur.
+
+
+## 14 Ekim 2026 — yüze yakışan estetik diş kararı, audit sonrası yerel revizyon
+
+- Yetki: kullanıcı önce salt okunur audit, ardından “fix” istedi. Commit/push/deploy/yayın yetkisi yok.
+- Taban: 9d9e025bf76012ff3b12fe7c72e3e36f38962e18; rota gövdesi, Mayıs onaylanan paketindeki site-kaynak.astro ile karşılaştırıldı. Sonraki farklar URL, açıklama, tür ve görsel stil alanlarındaydı.
+- Eski onay arşivi korunmuştur. meta.json içindeki Analiz → Hazırlık → Prova revizyon notu, aynı paketin site-kaynak.astro ve makale-tam.html dosyalarındaki yedi bölümlü içerikle uyuşmuyor. Bu audit, tarif edilen revizyona yeni onay atfetmez.
+- Yeni revizyonun durumu: YAZAR ONAYI BEKLİYOR; TIBBİ İNCELEME/ONAY BEKLİYOR. Önceki onay bu yeni gövde, SSS ve Bilimsel Editör Notu'nu kapsamaz. Yeni inceleme tarihi veya onay üretilmedi; 14 Ekim görünen son güncelleme tarihidir.
+- Değişiklikler: tüm metinde tekrar/aforizma temizliği; kısa klinik yanıt; bonding ile kontur ayrımı; menopoz/osteoporoz/popülasyon sınırı; yüz şekli kuralının tercih olarak sınırlandırılması; beyazlatma yan etkilerinin açıklanması; kaynaksız 5 yıl ve tek/çok görüşme karşılaştırmasının çıkarılması. Şeffaf plaklarda mine azaltılması olasılığı ve bakım sınırı kaynaklandı.
+- BEN: eski metin arşivde kalır. Kaynaksız memnuniyetsizlik karşılaştırması ve genel hormon-yüz sonucu çıkarıldı; antiresorptif ilaç uyarısı kaynakla sınırlandırıldı. Yeni BEN, Dr. Senai Aksoy'un tıbbi onayına sunulacak editoryal revizyondur; yeni özgün hekim sözü değildir.
+- Byline korunmuştur: Dt. Duygu Karaosmanoğlu. Mevcut kişiselleştirme ve doku koruma yaklaşımı korundu; yeni hasta sözü, yaşanmış olay veya sıklık iddiası eklenmedi. Telefon/ayna sahnesi okura dönük genel düşünme örneği oldu. Mizah: H0; hassas risk bölümlerinde yok.
+- SSS: aynı dört konu, tek görünür yüzey ve aynı faqItems üzerinden FAQPage. Dt. Duygu Karaosmanoğlu'nun yazısına Dr. Aksoy adına SSS eklenmedi. Yeni cevaplar onay bekleyen editoryal uyarlamadır.
+- Kaynak eşlemesi: [1] PMID 37920517 osteoporozlu/osteoporozsuz postmenopoz karşılaştırması; [2] ADA whitening; [3] Cleveland Clinic dental bonding; [4] Cleveland Clinic enameloplasty; [5] ADA veneers; [6] PMID 33807504 laminat dayanıklılığı; [7] BOS clear aligners; [8] PMID 25411731 yüz/diş şekli; [9] ADA osteoporosis medications; [10] PMID 28967401 bruksizm ve seramik restorasyonlar. Kontrol tarihi: 14 Ekim 2026. Kanıt etiketleri kaynak türü ve belirsizlikle birlikte okunur; klinik tercihler bilimsel sonuç sayılmadı.
+- Güncel docs/AUTHOR-APPROVAL-WORKFLOW.md v2.0 uyarınca yeni onay formu, paket veya e-posta üretilmedi. Eski paketler ve article-approvals.ts değiştirilmedi. Kaynak ve doğrulama sonuçları bu revizyonun teknik kanıtıdır, insan onayı değildir.
+
+### Revizyon doğrulaması
+
+- [11] PMID 26535953 (2016), yaş ve cinsiyete göre dudak uzunluğu/kesici diş görünürlüğü araştırması, dudak hattı açıklamasına eklendi. Bireysel değişim ve estetik hedef ayrımı korunur. Kaynaklar gövdede numaralı, sonda tıklanabilir; citation şeması aynı 11 URL'den üretilir.
+- build:ci geçti: TypeScript, compliance (179 dosya), yayın bütünlüğü, şablon kontrolü, encoding/renk/lexicon/tarih kontrolleri, build (139 sayfa), SEO (160 sayfa). Hedefte lexicon uyarısı yok; farklı editoryal nottaki mevcut uyarı korunuyor.
+- articles:audit:sources hedef yazı için temiz; depo geneli 7 başka rotadaki mevcut kaynak eksikleri nedeniyle başarısız. Kapsam dışı yazılar değiştirilmedi.
+- Derlenmiş hedef: tek H1, 8 TOC/H2 eşleşmesi, 11 kaynak hedefi, FAQ 4/4 görünür metin–FAQPage eşitliği, 150 karakter meta açıklama. OG/Article görseli mevcut byline görseliyle hizalı; üst hero ve görsel dosyaları değişmedi.
+- Chrome görsel QA: 1440×1000 masaüstü ve 390×844 mobil; iki görsel yüklü, mobil document genişliği 390 (yatay taşma yok), tüm numaralı kaynak bağlantıları çözülüyor. Uygulama içi tarayıcı bağlantısı teknik nedenle kullanılamadı.
+- Yerel humanize araçları: editorial-check 0 aday. structure-check sayı/ifade sayımı tamamlandı; kaynak/kanıt bileşenleri metne çıkarılırken oluşan noktadan önce boşluk adayları gerçek HTML'de yok. rendered-check'in kaynak adı beklentisi Estranova numaralı atıf düzenine uygulanmadı; “birbirinin yerine geçmez” tıbbi disclaimer değildir, tek görünür sorumluluk reddi var.
+- check-fidelity: değişiklik adayları elle incelendi. Eski 5 yıl bekleme, 5–10/10–15 yıl karar ufku ve 25/55/18 yaş normları çıkarıldı; yeni sayılar numaralı atıflardır. Laminatlarda on yıl ve üzeri takip kaynaklı ve garanti verilmeden korundu. Bonding/kontur, menopoz–osteoporoz kapsamı, şeffaf plaklarda mine azaltılması ve ilaç uyarısı olgusal düzeltmelerdir, salt gramer değişikliği değildir.
+
+| Sonuç/ifade ailesi (özet + gövde + BEN; SSS hariç) | Önce | Sonra | Kalanın gerekçesi |
+|---|---:|---:|---|
+| Yüze uygunluk / kişiselleştirme | 17 | 6 | Özet, H2/TOC kimliği, ana değerlendirme ve kısa kapanış; yazar imzası |
+| Geri dönüş / mine aşındırma | 11 | 6 | Bonding–kontur–laminat farkı, görüşme sorusu, güvenlik |
+| Uzun dönem / sayısal karar ufku | 8 | 1 | Kaynaklı laminat takip süresi; bakım ihtiyacı başka sözcüklerle korunur |
+| Bekleme / müdahale yapmama | 7 | 1 | Otomatik kalıp sayımı; işlem yapmama seçeneği özet ve ilgili bölümde ayrıca korunur |
+
+Sayım sözcük eşleşmesidir, bütün anlamsal tekrarların sayısı değildir. Özet→gövde→SSS içinde gerekli güvenlik tekrarları ayrı okunan yüzeyleri tamamlar. Hastalarım ailesi 25→0; klinisyen ben yaklaşımı korunur. İncelemede kalan başlıklar eski SEO/anchor kimliğini korur.
+
+
+## 15 Ekim 2026 — tekrar kontrol sonrası dört bulgunun düzeltmesi
+
+- Kullanıcı “fix” yetkisiyle önceki turun dört bulgusu düzeltildi. Aynı izole çalışma kopyası kullanıldı; ana çalışma dizini ve diğer yazılar değiştirilmedi.
+- Kaynak kayması: düzeltilmiş `.astro` dosyası sonradan 14 Ekim sürümüne (SHA-256 571abe17…) dönmüştü; nedeni kayıtlı değildir. Düzeltme aynı metinle yeniden uygulandı, son kaynak SHA-256 5a548970… ile eşleşir ve build yeniden alındı.
+- PMID 28967401 tekrar doğrulandı: uyku bruksizmi–ön bölge seramik laminatlar alt grubundaki ilişki sinyali, tüm seramik restorasyonların genel analizindeki ilişki gösterilememesi ve GRADE toplam kanıt kesinliğinin çok düşük olması ayrı yazıldı. BEN etiketi 2/sınırlı yerine 1/zayıf olarak sınırlandırıldı; site etiketi ile çalışmanın kanıt kesinliği aynı ölçek diye sunulmadı.
+- Osteoporoz/periodontal/peroksit/bruksizm/osteonekroz ifadeleri okur için açıklaştırıldı. Kaynaklar girişindeki yazar/editör talimatı çıkarıldı. SSS anahtarlarının satır birleşmesi giderildi; dört cevap ve FAQ kaynağı korunuyor.
+- modifiedDate ve görünür lastUpdated gerçek içerik düzeltmesi nedeniyle 15 Ekim 2026 oldu. İlk yayın tarihi, yazar, reviewer, eski onay arşivi ve kaynak URL'leri korunuyor.
+- Yazar onayı ve Dr. Senai Aksoy tıbbi onayı 15 Ekim 2026'da KC tarafından sohbette sözlü verildi (form, JSON yanıtı veya onay paketi yok). Kayıt `article-approvals.ts` içinde tutulur. Commit, push, deploy veya yayın yapılmadı; canlı yayın için ayrı yetki gerekir.
+- Önceki 17→6 / 11→6 / 8→1 / 7→1 ifade ailesi sayımı bu dar düzeltmede değişmedi; bruksizm paragrafına eklenen cümleler alt grup, genel sonuç ve kanıt kesinliği ayrımlarını getiriyor.
+
+- Bu turun doğrulaması: build:ci geçti (139 sayfa derlendi, 160 çıktı SEO kontrolünden geçti); git diff --check temiz. Derlenmiş HTML: modifiedDate 2026-10-15, tek H1, 11 kaynak/citation, 4/4 görünür SSS–FAQPage eşitliği. Dört hedef bulgu kaynak ve HTML'de yeniden kontrol edildi.
+- Yerel araçlar: check-fidelity sayısal/atıf farkı bulmadı; olgusal anlam değişikliği (alt grup/genel sonuç/kanıt kesinliği) elle incelendi. editorial-check 0 aday. Structure ritmi 79 cümle/14.6 ortalama/7.1 sapmadan 82 cümle/14.5 ortalama/7.2 sapmaya geldi; ek cümleler farklı araştırma sonuçlarını ayırıyor. rendered-check'in iki aday ailesi önceki turdaki yanlış pozitifler: seçeneklerin birbirinin yerine geçmemesi disclaimer sayılmadı; numaralı kaynak atıfları kurumsal ad eşleştirmesiyle ölçülmedi.
+
+## 15 Ekim 2026 — sözlü onay sonrası kaynak denetimi ve geniş audit/humanize (yeniden onay bekliyor)
+
+- Onay sonrası kaynak denetimi (önceki oturum, devir notundan): "aşınma ve kapanış" maddesi ve yanlış [10] atfı kaldırıldı; kaynak 1 etiketi "dişeti hastalığı", kaynak 7 Delphi uzlaşı çalışması (Prog Orthod 2025), kaynak 8 etiketi "iki boyutlu radyografi ve model çalışması" oldu (SHA-256 c746cda5…).
+- Kaynak doğrulaması bu turda: [1] PMID 37920517 (Qi ve ark., Heliyon 2023; 28 gözlemsel çalışma) — osteoporoz grubunda CAL, cep derinliği, çekilme, kanama ve OHI-S daha yüksek; alveoler kemik yüksekliğinde anlamlı fark yok. Gövde bu ayrıma göre düzeltildi ("Dişeti ve kemik" → "Dişeti"). [2] ADA Whitening ve [5] MouthHealthy Veneers sayfaları açılıp iddialarla eşleştirildi. [6] PMID 33807504: on yıllık kümülatif sağkalım %95,5, en sık sorun kırılma, sonra yerinden çıkma — gövdeye sayısız biçimde eklendi. [8] Furtado ve ark., Indian J Dent Res 2014;25(2):178-183, 50 kişi, yüz ölçüleri kesici biçimini güvenilir göstermiyor. [11] PMID 26535953: yaşla üst dudak uzunluğu artar, üst kesici görünürlüğü azalır. [7] Delphi çalışması endikasyon/sınırları destekliyor; plak kullanımı, pekiştirme ve mine azaltma cümlelerini desteklemiyor → [7] yalnızca uygunluk cümlesine taşındı, diğer iki cümle KAYNAKSIZ (KC kararı bekliyor).
+- Humanize: "önce neyi değiştirmek istediğinizi tarif edin" sonucu 6 yerden 3'e (bölüm 1, bölüm 4 lede, SSS 2) indi; "ne kadar mine kaldırılacağı belirsiz kalmamalı" yinelemesi kaldırıldı; inkâr çerçevesi 3→1; birinci tekil "ben/benim yaklaşımım" 7→4 (onaylı cümlelerden; yeni klinik deneyim eklenmedi). Eklenenler: tek kontrollü espri + geri çağırma (fotoğrafın "prova geçmişi", H1 düzeyi), duygu beat'i ("utanmanız gerekmez"), teselli anı ("İçiniz rahat olsun"). H2 değişiklikleri (id'ler korundu): "İlk Görüşmemizde Sormanızı Önerdiğim" → "İlk Görüşmede Sorabileceğiniz" (okuru Duygu'nun hastası gibi konumlamaması için); "Bir Karar Değil, Bir Yol" → "Kendi Hızınızda" (makale başlığıyla çelişen antitez). Özetteki "Benim bu yazıda önemsediğim" meta cümlesi çıkarıldı. SSS ve Bilimsel Editör Notu değiştirilmedi.
+- Kalıp seçim kaydı: açılış = sahne (telefon fotoğrafı + ayna); espri = gözlemci, 1 adet + 1 geri çağırma; imza kapanış cümlesi yok; "yüze yakışanı arayan" imzası bölüm 1 ve 7'de.
+- Doğrulama: build:ci geçti (139 sayfa, 160 SEO); compliance 179 dosya; yayın bütünlüğü temiz; check-article-dates 67 tutarlı; lexicon hedefte uyarısız; git diff --check temiz. Derlenmiş HTML: tek H1, 11 kaynak, 4 SSS/FAQPage, dateModified 2026-10-15. structure-check: 3/9 kısa kapanış (farklı işlevli, kaldı); ritim 12.3/5.6 → 12.0/6.0. rendered-check: tekrar eden sorumluluk reddi ve "Yazan" satırı bulguları şablon kaynaklı/yanlış pozitif.
+- Son kaynak SHA-256: bce2b304…. Bu değişiklikler 15 Ekim sözlü onayından SONRA yapıldı; KC yeniden sözlü onayı gelene kadar yayına alınmaz. Commit/push/deploy yapılmadı.
+
+## 15 Ekim 2026 — ikinci audit/humanize turu: 8 bulgunun düzeltmesi (yeniden onay bekliyor)
+
+- Salt okunur ikinci audit'in 1-8 numaralı bulguları KC'nin "Bulguları düzelt" yetkisiyle uygulandı. Kaynaksız iki şeffaf plak cümlesi (plak kullanımı/pekiştirme, mine azaltma) KC talimatıyla değiştirilmedi; açık iş olarak kalıyor.
+- Kalıp göçü (önceki turun ürettiği): "bu yüzden" 4→0, "yine de" 4→1 (bonding'deki anlamlı kullanım kaldı). Bölüm 6'daki işlem yapmama tekrarı birleştirildi ("bu seçeneği de masada tutarım"); aile 4→3 (özet, bölüm 6 lede, özet son cümlesi).
+- Dil: bölüm 3 lede "birlikte bakıldığında" → "birlikte ele alındığında"; laminat "Sizdeki ömrü" → "Sizdeki laminatın ne kadar dayanacağı"; dişeti maddesi cep derinliği/kanama ifadesi düzeltildi, ağız hijyeni farkının yönü (osteoporozlu grupta daha kötü OHI-S) yazıldı.
+- Kaynak sadakati: [8] tek çalışma olduğu için "çalışmalar var" → "Elli kişilik bir çalışmada… bulunmamıştır"; [11] tek kesitsel çalışma için Evidence 3 → 2.
+- Doğrulama: build:ci geçti (139 sayfa, 160 SEO); compliance 179 dosya; yayın bütünlüğü temiz; tarih kontrolü 67 tutarlı; lexicon hedefte uyarısız; git diff --check temiz. editorial-check 0 aday; structure-check 3/9 kısa kapanış (farklı işlevli, kaldı), ritim 11.9/6.0. Derlenmiş HTML: tek H1, 11 kaynak, 4 SSS/FAQPage, dateModified 2026-10-15. rendered-check: repeated-disclaimer şablon/yanlış pozitif; uncited-source Estranova numaralı atıf düzeninde geçersiz.
+- Son kaynak SHA-256: 086af115…. Bu değişiklikler 15 Ekim sözlü onayından SONRA yapıldı; KC yeniden sözlü onayı gelene kadar yayına alınmaz. Commit/push/deploy yapılmadı.
+
+## 15 Ekim 2026 — yeniden sözlü onay
+
+- KC (Doç. Dr. Senai Aksoy), son metne (kaynak SHA-256 086af115…) yazar onayını ve tıbbi onayı sohbette sözlü verdi. Form, JSON yanıtı veya onay paketi yok. Onaydan önce dosya SHA-256'sı yeniden doğrulandı.
+- Onay; sözlü onay sonrası kaynak denetimini, geniş audit/humanize revizyonunu ve ikinci audit'in 8 düzeltmesini kapsar. Kaynaksız iki şeffaf plak cümlesi metinde olduğu gibi onaylandı.
+- `article-approvals.ts` içindeki "BEKLEYEN YENİDEN ONAY" notu kaldırıldı; approvedAt 2026-10-15 olarak kaldı.
+- Commit, push, deploy ve Chrome görsel kontrolü yapılmadı; canlı yayın için ayrı yetki gerekir.
