@@ -123,13 +123,13 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
     writerSlug: 'alara-baykent',
     approvedAt: '2026-10-15',
-    note: 'Kullanici (Dr. Senai Aksoy) 15 Ekim 2026 sohbetinde “Revizyon metnini ve degisen tibbi notu onayliyorum.” diyerek revizyon metnini ve degisen tibbi notu sozlu onayladi. Kapsam: 15 Ekim 2026 yerel audit/humanize revizyonu (denize cikmadan once sahnesi acilisa tasindi; MedicalContextNote; sicak havada 30 dakika/112 yonlendirmesi; acil belirtiler ayrildi; manifest aciklamasi). Anne referanslarinin teyidi kullanici tarafindan 15 Ekim 2026'da yapildi. Sonradan eklenen “Hava da Planin Bir Parcasi” bolumundeki yasat bagi cumlesi (“Belki siz de yuruyuse cikmadan once hava durumuna bakiyorsunuzdur.”) sozlu onayla henuz kapsanmiyor; kullanici tarafindan 15 Ekim 2026'da sozlu olarak onaylandi. Eski 1 Haziran 2026 onayi bu revizyonu kapsamaz. Yayin, commit ve deploy bu kayitla yetkilendirilmis degildir.',
+    note: 'Kullanici (Dr. Senai Aksoy) 15 Ekim 2026 sohbetinde “Revizyon metnini ve degisen tibbi notu onayliyorum.” diyerek revizyon metnini ve degisen tibbi notu sozlu onayladi. Kapsam: 15 Ekim 2026 yerel audit/humanize revizyonu (denize cikmadan once sahnesi acilisa tasindi; MedicalContextNote; sicak havada 30 dakika/112 yonlendirmesi; acil belirtiler ayrildi; manifest aciklamasi). Anne referanslarinin teyidi kullanici tarafindan 15 Ekim 2026’da yapildi. Sonradan eklenen “Hava da Planin Bir Parcasi” bolumundeki yasat bagi cumlesi (“Belki siz de yuruyuse cikmadan once hava durumuna bakiyorsunuzdur.”) sozlu onayla henuz kapsanmiyor; kullanici tarafindan 15 Ekim 2026’da sozlu olarak onaylandi. Eski 1 Haziran 2026 onayi bu revizyonu kapsamaz. Yayin, commit ve deploy bu kayitla yetkilendirilmis degildir.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',
     writerSlug: 'basak-pelister',
-    approvedAt: '2026-06-01',
-    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; menopoz alt hub otomatik arsiv kapsami, static manifest ve production route uyumu dogrulandi.',
+    approvedAt: '2026-10-15',
+    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; menopoz alt hub otomatik arsiv kapsami, static manifest ve production route uyumu dogrulandi. KC sozlu onayi — 15 Ekim 2026 — revizyon yayina alindi: canli metin revizyonla degistirildi (Self-care bolumu ve kapanis paragrafi kaldirildi; dort soru basligi duz cumleye cevrildi; kemik sagligi cumlesi icin kaynak NAMS 2022, PMID 35797481, audit kaydinda). Basak Pelister onay verdi (KC bildirdi: “Başak onaylıyor”); canli metin farki icerik/taslaklar/guc-cantayi-daha-hafif-hazirlamak-canli-fark.md dosyasinda. Tibbi inceleme Dr. Alper Mumcu tarafindan onaylandi (KC bildirdi, sozlu; 15 Ekim 2026). Reviewer gorunurlugu Dr. Alper Mumcu olarak guncellendi. approvedAt bu yayinla birlikte 2026-10-15 olarak guncellendi.',
   },
   {
     pathname: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',

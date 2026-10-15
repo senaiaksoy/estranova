@@ -292,7 +292,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',
     title: 'Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır',
     description:
-      'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini çanta, merdiven, anne-kız sohbeti ve HRT kararının içinden kendi sesiyle yeniden okuyor.',
+      'Başak Pelister, dokuz yıllık menopoz deneyiminden yola çıkarak güç, günlük yükler ve anne-kız konuşmaları üzerine düşünüyor.',
     publishedDate: '1 Haziran 2026',
     writerSlug: 'basak-pelister',
     section: 'Hormonal Geçiş · Menopoz',
