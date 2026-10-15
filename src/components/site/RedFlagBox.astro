@@ -44,15 +44,15 @@ const {
 ---
 
 <aside
-  class="relative my-10 overflow-hidden rounded-[30px] border border-gold/35 bg-white p-7 shadow-[0_24px_70px_-46px_rgba(44,22,28,0.26)] ring-1 ring-black/[0.04] md:my-12 md:p-8"
+  class="relative my-10 overflow-hidden rounded-[30px] border border-gold/35 bg-white p-5 shadow-[0_24px_70px_-46px_rgba(44,22,28,0.26)] ring-1 ring-black/[0.04] sm:p-7 md:my-12 md:p-8"
   role="complementary"
   aria-labelledby="red-flag-title"
 >
   <div class="pointer-events-none absolute right-0 top-0 h-28 w-28 rounded-bl-full bg-gold/14"></div>
   <div class="pointer-events-none absolute bottom-4 left-8 h-px w-32 bg-gradient-to-r from-gold/70 to-transparent"></div>
-  <div class="relative flex items-start gap-4">
+  <div class="relative flex flex-col items-start gap-4 md:flex-row">
     <span
-      class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-gold/45 bg-cream-soft/20 text-gold shadow-sm ring-1 ring-black/[0.03]"
+      class="flex h-10 w-10 shrink-0 md:mt-1 items-center justify-center rounded-2xl border border-gold/45 bg-cream-soft/20 text-gold shadow-sm ring-1 ring-black/[0.03]"
       aria-hidden="true"
     >
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -65,12 +65,12 @@ const {
         <circle cx="9" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6" />
       </svg>
     </span>
-    <div class="min-w-0 flex-1">
+    <div class="w-full min-w-0 md:flex-1">
       <p class="mb-2 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
         <span class="h-px w-8 bg-gold/80"></span>
         Dikkat çekmek istediğimiz
       </p>
-      <h3 id="red-flag-title" class="mb-3 font-serif text-2xl italic leading-snug text-secondary md:text-3xl">
+      <h3 id="red-flag-title" class="mb-3 break-words font-serif text-2xl italic leading-snug text-secondary hyphens-auto md:text-3xl">
         {title}
       </h3>
       <p class="mb-5 text-sm leading-relaxed text-ink/80 md:text-base">{intro}</p>
