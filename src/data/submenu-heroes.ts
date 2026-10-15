@@ -493,7 +493,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
 
 export function normalizePathname(pathname: string): string {
   if (!pathname || pathname === '/') return pathname;
-  return pathname.replace(/\/$/, '') || '/';
+  return `${pathname.replace(/\/+$/, '')}/`;
 }
 
 export function getSubmenuHeroImage(pathname: string): SubmenuHeroImage | undefined {
