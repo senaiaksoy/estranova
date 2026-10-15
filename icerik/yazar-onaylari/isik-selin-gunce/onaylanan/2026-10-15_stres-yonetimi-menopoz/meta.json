@@ -29,7 +29,7 @@
     "URL korunur; hero submenuHeroByRoute parent hub'dan gelir, değiştirilmez.",
     "Makale türü experience-essay (non-clinical track). MedicalWebPage üretilmez.",
     "Taslak canlı src/pages dosyasına yazılmadı. Yayın öncesi: sözlü onay (KC), Senai Aksoy tıbbi incelemesi ve Bilimsel Editör Notu zorunlu.",
-    "Kontrol edilmesi gereken olgu: 'yaklaşık yirmi yıldır sahneye çıkıyorum' — profil Ekol Drama 2006 başlangıcına dayanıyor; Selin'in kendisiyle doğrulanmalı.",
+    "Olgu doğrulandı: 'yaklaşık yirmi yıldır sahneye çıkıyorum' cümlesini Selin onayladı (KC iletti, 2026-10-15).",
     "Yayın anında yapılacaklar: src/data/article-approvals.ts kaydı, static-articles.ts manifest yazarı, article-faqs.ts içindeki mevcut Metin SSS'lerinin değiştirilmesi, submenu-heroes/hub-starting-paths referanslarının kontrolü, article-log.md satırı.",
     "hidden.md okunmadı; aile, eş, çocuksuzluk ve Bodrum advocacy sınırları taslakta açıkça dışarıda tutuldu."
   ]
