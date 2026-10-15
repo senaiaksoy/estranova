@@ -628,28 +628,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Özellikle menopozdan sonra herhangi bir kanama, ilişki sonrası lekelenme, yeni başlayan şiddetli ağrı, kötü kokulu akıntı veya vulvada (dış genital bölgede) yeni bir yara ya da görünüm değişikliği varsa muayeneyi ertelememenizi söylerim. Kanama çok az olsa bile “sürtünmedendir” diye varsaymadan nedenine bakmak gerekir.',
     },
   ],
-  '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/': [
-    {
-      question: 'Kortizol yüksekliği tek bir kan testiyle anlaşılır mı?',
-      answer:
-        'Genellikle hayır. Kortizol gün içinde belirli bir ritimle değişir; rastgele saatte alınan tek bir ölçüm yanıltıcı olabilir. Klinik şüphe varsa zamanlamaya duyarlı yöntemler (sabah kan kortizolü, tükürük örneklemesi, 24 saatlik idrar kortizolü gibi) tercih edilir.',
-    },
-    {
-      question: 'Menopozda stres eşiği neden daha düşük hissediliyor?',
-      answer:
-        'Östrojenin HPA ekseninin duyarlılığını bir ölçüde yumuşattığı düşünülür. Düzey dalgalandığında aynı yükün bedende bıraktığı kortizol yanıtı büyüklük ve süre olarak değişebilir; bu da aynı olayın daha ağır hissedilmesine yol açabilir.',
-    },
-    {
-      question: 'Kronik stres ile menopoz belirtileri birbirinden nasıl ayrılır?',
-      answer:
-        'Kesin bir çizgi çekmek zordur, çünkü ikisi birbirini besleyebilir. Uyku bölünmesi, sıcak basması ve gündelik yük aynı anda büyüdüğünde hangi eksenin ağır bastığını ayırmak hekimle birlikte yapılan bir değerlendirmeyi gerektirir.',
-    },
-    {
-      question: 'Ne zaman endokrinoloji değerlendirmesi gerekir?',
-      answer:
-        'Ay şeklinde yüz değişimi, mor renkli çatlaklar, açıklanamayan kilo kaybı veya kaybı, tuzlu gıdaya artan istek ya da panik atak sıklığında ani artış gibi bulgular eşlik ediyorsa değerlendirme öncelikli hale gelir.',
-    },
-  ],
   '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/': [
     {
       question: 'Menopozda uykusuzluk yalnızca sıcak basmasına mı bağlıdır?',

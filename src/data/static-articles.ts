@@ -1077,13 +1077,13 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
-    title: 'Kortizol Sadece Stres Hormonu Değil — Menopozda Ne Değişir?',
-    description: 'Kortizol yalnızca "stres hormonu" değildir; HPA ekseninin ürettiği bir metabolik düzenleyicidir. Menopozal geçişte östrojen dalgalanması bu ekseni nasıl etkiler, Dr. Metin Alış açıklıyor.',
-    publishedDate: '15 Temmuz 2026',
-    writerSlug: 'metin-alis',
+    title: 'Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine',
+    description: 'Işık Selin Günçe, sahne öncesi nefesten Bodrum sabahlarına uzanan gözlemleriyle menopozda stresin neden daha ağır gelebileceğini ve hangi işaretlerde beklemeden hekime başvurulacağını yazıyor.',
+    publishedDate: '15 Ekim 2026',
+    writerSlug: 'isik-selin-gunce',
     section: 'Zihin & Denge',
     sectionPath: '/zihin-denge/',
-    keywords: ['kortizol', 'HPA ekseni', 'kronik stres', 'menopoz', 'perimenopoz', 'adrenal bez'],
+    keywords: ['menopoz stres', 'menopoz uyku', 'stres yönetimi', 'gece uyanması', 'nefes', 'perimenopoz'],
   },
   {
     path: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',

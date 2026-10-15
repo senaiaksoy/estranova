@@ -177,9 +177,9 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Pratik',
         title: 'Menopozda Stres Yönetimi',
         excerpt:
-          'Stresle başa çıkmanın menopoz geçişine özgü pratik yolları — nefes, hareket, sınır koyma.',
+          'Sahne öncesi nefesten Bodrum sabahlarına: menopozda stresin neden ağırlaştığı ve küçük, sürdürülebilir adımlar.',
         href: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
-        readingMinutes: 6,
+        readingMinutes: 7,
       },
     ],
   },

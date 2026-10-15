@@ -5,61 +5,35 @@ import SiteFooter from '../../../components/site/SiteFooter.astro';
 import SubmenuHero from '../../../components/site/SubmenuHero.astro';
 import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
 import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
-import ArticleTOC from '../../../components/site/ArticleTOC.astro';
 import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
-import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import MedicalContextNote from '../../../components/site/MedicalContextNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import RedFlagBox from '../../../components/site/RedFlagBox.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
-import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
 import { buildArticleSchemas } from '../../../utils/article-schema';
-import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const pathname = '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/';
 const hero = submenuHeroByRoute[pathname]!;
 
-const tocEntries = [
-  { id: 'terim', label: 'Kortizol Yanlış Anlaşılan Bir Terim' },
-  { id: 'hpa-eksen', label: 'HPA Ekseni Nasıl Çalışır' },
-  { id: 'menopoz-kavsagi', label: 'Östrojen Düşünce Kortizol Yanıtı' },
-  { id: 'bedendeki-iz', label: 'Kronik Yüksekliğin Bedende Bıraktığı İz' },
-  { id: 'lab-okuma', label: 'Kortizol Testi Ne Söyler' },
-  { id: 'bireysellestirme', label: 'Aynı Tablo, Farklı Karar' },
-  { id: 'ne-zaman-degerlendirme', label: 'Ne Zaman Daha Yakından Bakılmalı' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
-  { id: 'kapanis', label: 'Kapanış' },
-];
-
 const siteUrl = resolveSiteUrl(Astro.site);
-const articleTitle = 'Kortizol Sadece Stres Hormonu Değil — Menopozda Ne Değişir?';
-const seoTitle = 'Kortizol ve Kronik Stres Menopozda';
+const articleTitle = 'Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine';
+const seoTitle = 'Menopozda Stres ve Yük';
 const articleDescription =
-  "Kortizol yalnızca 'stres hormonu' değildir; HPA ekseninin ürettiği metabolik bir düzenleyicidir. Dr. Metin Alış, menopozda bu ekseni klinik netlikle açıklıyor.";
-const faqItems = articleFaqs[pathname] ?? [];
+  'Işık Selin Günçe, sahne öncesi nefesten Bodrum sabahlarına uzanan gözlemleriyle menopozda stresin neden daha ağır gelebileceğini ve hangi işaretlerde beklemeden hekime başvurulacağını yazıyor.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
-  writerSlug: 'metin-alis',
-  articleType: 'clinical-guide',
-  publishedDate: '15 Temmuz 2026',
+  writerSlug: 'isik-selin-gunce',
+  articleType: 'experience-essay',
+  publishedDate: '15 Ekim 2026',
   pathname,
   articleSection: 'Zihin & Denge',
   sectionPath: '/zihin-denge/',
-  keywords: [
-    'kortizol',
-    'HPA ekseni',
-    'kronik stres',
-    'menopoz',
-    'perimenopoz',
-    'adrenal bez',
-    'stres hormonu',
-    'hormon testi',
-  ],
-  faqItems,
+  keywords: ['menopoz stres', 'menopoz uyku', 'stres yönetimi', 'gece uyanması', 'nefes', 'perimenopoz'],
   siteUrl,
 });
 ---
@@ -74,147 +48,146 @@ const articleSchemas = buildArticleSchemas({
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Zihin & Denge · Kortizol"
+      eyebrow="Zihin & Denge · Stres"
       title={articleTitle}
       imageSrc={hero.src}
       imageAlt={hero.alt}
       compact
     />
-    <SubmenuArticleBody>
-        <ArticleTOC slot="toc" entries={tocEntries} />
-        <ArticleAuthorBlock
-          authorSlug="metin-alis"
-        articleType="clinical-guide"
-          publishedDate="15 Temmuz 2026"
-          readingMinutes={8}
-        />
 
-         <ArticleSummary title="Kısa Özet">
-<p>
-            Kortizol yalnızca "stres hormonu" değildir; hipotalamus-hipofiz-adrenal (HPA) ekseninin ürettiği, güne yön veren bir metabolik düzenleyicidir. Menopozal geçişte östrojen dalgalanması bu ekseni etkiler ve aynı yük daha ağır hissedilebilir; kronik yükseklik kalp, uyku ve kemik sağlığını da ilgilendirir.
-          </p>
+    <SubmenuArticleBody>
+      <ArticleAuthorBlock
+        authorSlug="isik-selin-gunce"
+        articleType="experience-essay"
+        publishedDate="15 Ekim 2026"
+        readingMinutes={7}
+      />
+
+      <ArticleSummary title="Bu yazıya başlarken">
+        <p>
+          Menopoz geçişinde aynı yük daha ağır gelebilir: uyku bölünür, sabahlar yorgun başlar, küçük şeyler daha çok yorar. Işık Selin Günçe, sahne öncesi nefesinden ve kendi sabahlarından yola çıkarak stresin bu dönemde neden başka hissettirdiğini, günlük hayatta neyin denenebileceğini ve hangi işaretlerin bekletilmemesi gerektiğini anlatıyor.
+        </p>
       </ArticleSummary>
 
-        <ArticleProsePanel>
-          <h2 id="terim">Kortizol Kelimesini Duyunca Akla Gelen İlk Şey Genellikle Yanlıştır</h2>
-          <p>
-            "Kortizol" denince akla hemen "stres hormonu" gelir — ama bu tanım mekanizmanın yalnızca görünen yüzünü anlatır, geri kalanını gizler.
-          </p>
-          <p>
-            Kortizol, böbreküstü bezinin dış kabuğundan (adrenal korteks) salgılanan bir steroid hormondur; yalnızca tehdit anında değil, her gün belirli bir ritimle üretilir <Evidence level={5} />.
-            Sabaha uyanma enerjisini, kan şekerinin dengesini, bağışıklık yanıtının şiddetini ve iltihabi tepkinin sınırlarını birlikte düzenler <Evidence level={4} />.
-            Bu yüzden endokrin polikliniğinde iki ayrı yanlış anlama sık görülür: bir yanda her yorgunluğun kortizolden geldiği varsayımı, öbür yanda "kortizolüm normal" denince meselenin tamamen kapandığı düşüncesi. İkisi de eksik bir okuma.
-          </p>
+      <ArticleProsePanel mode="experience">
+        <h2 id="bodrum">Bodrum'a Taşınınca Stresin Biteceğini Sanmıştım</h2>
+        <p>
+          Bitmedi. Sadece sesi değişti; İstanbul'un gürültüsünün yerini gece üçte gelen bir uyanıklık aldı.
+        </p>
+        <p>
+          Bodrum'a taşındığımızdan beri sabahlarım daha yavaş açılıyor. Pencereyi açıyorum, çay demleniyor, deniz her zamanki yerinde. Ama bazı sabahlar ben o manzaraya yetişemiyorum. Gece iki kez uyanmışım, gözlerim alarmdan önce açılmış, omuzlarım dünden kalma.
+        </p>
+        <p>
+          Belki siz de tanıyorsunuz bu hali. Ne büyük bir olay olmuş, ne bir felaket. Yine de gün, başlamadan yorgun.
+        </p>
+        <p>
+          Menopoz geçişinde uyku bölünmeleri sık görülüyor ve sıcak basmaları bu bölünmeyi artırabiliyor. Parçalı geçen bir gecenin ertesinde stres daha kolay hissedilebiliyor. Telefonumdaki uyku uygulaması her sabah iyi uyuduğumu söylüyor. Ben ona pek inanmıyorum.
+        </p>
 
-          <h2 id="hpa-eksen">HPA Ekseni Nasıl Çalışır — Beyinden Böbreküstü Beze Bir Zincir</h2>
-          <p>
-            Hipotalamus-hipofiz-adrenal ekseni (HPA ekseni) kortizolün nereden çıkıp nereye gittiğini gösteren üç durak olarak düşünülebilir.
-          </p>
-          <p>
-            Hipotalamus, algılanan yüke göre CRH (kortikotropin salgılatıcı hormon) salgılar; bu sinyal hipofizi ACTH üretmeye yönlendirir, ACTH de adrenal korteksi kortizol salgılamaya çağırır <Evidence level={5} />.
-            Kortizol yeterli düzeye ulaştığında aynı zincire geri bildirimle "yeter" sinyali gönderir — sağlıklı bir sistemde bu döngü kendini kapatır <Evidence level={4} />.
-            Günlük ritim de bu ekseninin bir parçasıdır: kortizol sabaha karşı yükselir, gün boyunca kademeli düşer, gece en alçak noktasına iner <Evidence level={4} />.
-            Bu ritim bozulduğunda — geç yatma, düzensiz uyanma, kronik yük — eksen "yeter" sinyalini eskisi kadar net vermeyebilir.
-          </p>
+        <h2 id="perde-oncesi">Perdeden Önceki Çarpıntı Bana Alarmı Öğretti</h2>
+        <p>
+          Yaklaşık yirmi yıldır sahneye çıkıyorum ve perde açılmadan önceki o birkaç dakikada kalbim hâlâ ilk gecemmiş gibi atıyor.
+        </p>
+        <p>
+          Kulis karanlıktır. Avuçlarım hafifçe terler, nefesim göğsümün üst tarafına tırmanır. Yıllar içinde bu anı sevmeyi öğrendim, çünkü o çarpıntı beni sahneye hazırlıyor: dikkatim toplanıyor, sesim açılıyor.
+        </p>
+        <p>
+          Sonradan okudukça anladım ki stres tam olarak böyle bir alarm. Yoğun bir yük algılandığında beyin, böbreküstü bezini kortizol salgılamaya yönlendiriyor. Kısa süreli bu yükselme dikkati topluyor ve enerji veriyor. Sorun, alarmın perde kapandıktan sonra da çalmaya devam etmesi. Belki sizin de böyle bir alarmınız vardır: bir toplantıdan, bir telefondan, bir hastane koridorundan önce.
+        </p>
+        <p>
+          Kırklı yaşlarımın sonunda fark ettiğim şey şu oldu: Uykusuz bir gecenin ardından aynı çarpıntı daha ağır geliyor, daha geç geçiyor. İlk zamanlar bundan biraz utandım; yıllardır sahneye çıkan biri nasıl olur da bir telefon görüşmesinden önce bu kadar gerilir? Bu dönemde östrojendeki dalgalanmanın, aynı olaya verilen iç tepkinin büyüklüğünü ve süresini bazı kadınlarda değiştirebildiğini öğrendim. İlk hissettiğim şey rahatlama oldu. Demek hayal görmüyordum.
+        </p>
 
-          <h2 id="menopoz-kavsagi">Menopozal Geçişte Östrojen Düşünce Kortizol Yanıtı Neden Değişir</h2>
-          <p>
-            Östrojen ve kortizol aynı vücutta birbirinden bağımsız çalışan iki ayrı sistem değildir; biri değişince öbürünün yanıtı da şekil değiştirir.
-          </p>
-          <p>
-            Östrojenin HPA eksenindeki geri bildirim duyarlılığını bir ölçüde yumuşattığı düşünülür <Evidence level={3} to={4} />; düzey dalgalandığında aynı yükün bedende bıraktığı kortizol yanıtı büyüklük ve süre olarak değişebilir <Evidence level={3} to={4} />.
-            Bu, "eskiden atlattığım bir haberi şimdi neden daha ağır taşıyorum" hissinin klinik karşılığına yakın durur — beden aynı olayı değil, aynı olaya verdiği iç yanıtı farklı büyüklükte üretiyor olabilir.
-            Vazomotor belirtiler (sıcak basması, gece terlemesi) ve uyku bölünmesi de bu döngüye eklenip yükü büyütebilir <Evidence level={4} />.
-          </p>
+        <h2 id="kucuk-yukler">Küçük Yükler Üst Üste Binince Omuzlar Kalkmıyor</h2>
+        <p>
+          Sizin listenizde de muhtemelen tek bir büyük dert yoktur; bir sürü küçük iş vardır.
+        </p>
+        <p>
+          Bizim kuşağımızın listesi uzundur. İş, anne baba, ev, bir de bedenin bu dönemdeki kendi değişimleri. Hiçbiri tek başına büyük görünmez, ama aynı güne sığınca ağırlaşır.
+        </p>
+        <p>
+          Uzun süre yüksek kalan stres uyku düzenini bozabiliyor, dinlenmeyi azaltabiliyor ve günün geri kalanında tahammülü düşürebiliyor. Gün biter, omuzlar kalkmaz. Akşam yemeğinde biri basit bir şey sorar, cevap vermek bile ağır gelir.
+        </p>
+        <p>
+          İçiniz rahat olsun diye yazıyorum: bu bir karakter zayıflığı sayılmaz. Uzun süre dolu çalışan bir sistem böyle davranıyor. Düzeni yeniden kurmak zaman alıyor. Ama mümkün.
+        </p>
 
-          <h2 id="bedendeki-iz">Kronik Yüksekliğin Bedende Bıraktığı İz</h2>
-          <p>
-            Kısa süreli kortizol yükselmesi bedeni harekete geçirir; asıl mesele bu yanıt kapanması gerektiğinde kapanmadığında başlar.
-          </p>
-          <p>
-            Uzun süreli yüksek kortizol, karın çevresinde yağ birikimini ve insülin direncini destekleyen yönde işler <Evidence level={4} />; kalp atış hızı ve kan basıncı seyrini de etkileyebilir <Evidence level={4} />.
-            Uyku mimarisinde derin uyku oranını azaltabilir, bu da ertesi gün stres toleransını daha da düşürür — kendini besleyen bir döngü <Evidence level={4} />.
-            Kemik metabolizması da bu tablonun dışında kalmaz: kronik yükseklik, kemik yapımını yavaşlatıp yıkımı görece hızlandıran bir zeminde rol oynayabilir <Evidence level={3} to={4} />; bu, menopozda zaten izlenmesi gereken kemik yoğunluğu takibiyle aynı masaya oturur.
-          </p>
+        <h2 id="uc-aliskanlik">Herkesin Bir Reçetesi Var, Bende Üç Küçük Alışkanlık Kaldı</h2>
+        <p>
+          Bir akşam stresle baş etmek üzerine art arda beş video izledim. Beşi beş ayrı yol gösterdi ve telefonu kapattığımda başladığımdan daha gergindim.
+        </p>
+        <p>
+          O gece kendime şunu söyledim: başkasının reçetesini kendi bedenime giydirmeye çalışmayacağım. Ben hekim değilim, size de reçete yazmayacağım. Sadece bende işe yarayan küçük şeyleri anlatabilirim; hangisinin size uyacağını siz ve hekiminiz daha iyi bilirsiniz.
+        </p>
+        <p>
+          İlki nefes. Sahneye çıkmadan önce yaptığım şeyi artık akşamları evde de yapıyorum: birkaç dakika boyunca nefesi yavaşça, uzatarak vermek. Sorunu çözmüyor. Alarmın sesini biraz kısıyor.
+        </p>
+        <p>
+          İkincisi yürümek. Bodrum'dayken sabah sahil boyunca yarım saat, İstanbul'dayken eve bir durak önce inip yürümek. Düzenli ve hafif tempolu hareketin ruh hali ve uyku üzerinde olumlu etkisi olabiliyor. Tempoyu ben seçiyorum, kimseyle yarışmıyorum.
+        </p>
+        <p>
+          Üçüncüsü uyku saatini sabit tutmak. Sahne hayatı bunu kolaylaştırmıyor, itiraf edeyim; oyun geceleri yatağa geç giriyorum. Oyun olmayan gecelerde ise ışığı aynı saatte kapatmaya çalışıyorum. Bazı günler üçü de yetmiyor. O günler de olacak.
+        </p>
 
-          <h2 id="lab-okuma">Kortizol Testi Ne Söyler, Ne Söylemez</h2>
-          <p>
-            Tek bir kortizol ölçümü, günün hangi saatinde alındığına bağlı olarak çok farklı şeyler söyleyebilir.
-          </p>
-          <p>
-            Kortizol günlük ritimle değiştiği için rastgele saatte alınan tek bir kan değeri çoğu zaman yeterince bilgilendirici değildir <Evidence level={4} />.
-            Klinik şüphe belirginse sabah kan kortizolü, tükürük örneklemesi veya 24 saatlik idrar kortizolü gibi zamanlamaya duyarlı yöntemler tercih edilir; bu karar bireysel tabloya göre hekimle birlikte verilir.
-            "Kortizolümü ölçtürüp öğreneyim" refleksi anlaşılır, ama tek başına bir sayı, hikâyenin yalnızca bir cümlesidir — asıl bilgi klinik tabloyla birlikte okunduğunda ortaya çıkar.
-          </p>
-
-          <h2 id="bireysellestirme">Aynı Tablo, Farklı Karar</h2>
-          <p>
-            Kılavuzlar ortak bir yol haritası sunar; hangi adımın öncelikli olduğuna karar vermek bireysel kalır.
-          </p>
-          <p>
-            Yanlış anlaşılan endokrin tablo, doğru değerlendirmeyi geciktiren en sık nedenlerden biridir. Bir kadında tabloyu asıl besleyen şey uyku bölünmesiyken, bir başkasında gündelik yük, bir başkasında da tiroid ile örtüşen bir zemin olabilir.
-            Bu yüzden "herkes için aynı sıralama" yerine, hangi eksenin bireyde ağır bastığını hekimle birlikte ayırmak daha güvenilir bir yol sunar. Uyku düzeni, gündelik yük ve — gerekiyorsa — tiroid değerlendirmesi genellikle birlikte konuşulur.
-          </p>
-
-          <h2 id="ne-zaman-degerlendirme">Ne Zaman Daha Yakından Bakılmalı?</h2>
-          <p>
-            Çoğu zaman kortizol yükü hayatın temposuyla açıklanır; bazen ayırıcı değerlendirme gerektiren bir tablo eşlik eder.
-          </p>
-          <RedFlagBox
-            title="Klinik değerlendirmeyi öncelikli kılan bulgular"
-            intro="Aşağıdaki tablolar tek başına bir tanı anlamına gelmez; ama hekim değerlendirmesinde fayda görebileceğiniz durumlardır."
-            markers={[
-              'Ay şeklinde yüz değişimi, mor renkli çatlaklar ve belirgin kas güçsüzlüğünün birlikte görülmesi',
-              'Açıklanamayan kilo kaybı, tuzlu gıdaya artan istek ve tekrarlayan baş dönmesi',
-              'Panik atak sıklığında ani ve belirgin artış, hızlı çarpıntı ile birlikte seyretmesi',
-              'İki haftadan uzun süren işlevsel çöküş, anhedoni veya uyku düzeninde ağır bozulma',
-            ]}
-          />
-
-          <h2 id="kapanis">Kapanış</h2>
-          <p>
-            Kortizol düşman değil; meseleyi belirleyen şey miktarı değil, zamanlaması ve süresi. Menopozal geçişte östrojenin dalgalanması bu ekseni gerçekten etkiler — bu, "artık daha mı hassasım" sorusunun bilimsel karşılığına yakın durur.
-            Doktorunuza şunu sorabilirsiniz: uyku düzeni, gündelik yük ve — gerekiyorsa — tiroid değerlendirmesi birlikte mi ele alınmalı? Kılavuz ortak çerçeveyi verir; sıralamayı bireyselleştirmek hekim-hasta diyaloğunun işidir.
-          </p>
-        </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
-
-        <RelatedReadings
-          class="mt-14"
-          paths={[
-            '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/',
-            '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
-            '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
+        <h2 id="isaretler">Bazı İşaretler Beklemeye Gelmez</h2>
+        <p>
+          Önce şunu söyleyeyim: bu bölümü okurken korkmanıza gerek yok. Amaç, sıradan yorgunlukla dikkat isteyen tabloyu birbirinden ayırabilmek.
+        </p>
+        <RedFlagBox
+          title="Hekime hemen başvurmayı düşünmeniz gereken durumlar"
+          intro="Bu maddeler tanı koymaz. Birini ya da birkaçını fark ederseniz beklemeden değerlendirme isteyin."
+          markers={[
+            'İki haftayı geçen, günlük işlerinizi aksatan bir ruh hali düşüklüğü ya da hiçbir şeyden keyif alamama hâli.',
+            'Haftalarca süren ve gündüz işlevinizi ciddi biçimde bozan uyku sorunu.',
+            'Sık tekrarlayan panik atakların nefes darlığı ya da göğüs sıkışmasıyla birlikte artması.',
+            'Kendinize zarar verme ya da yaşamaya dair umutsuzluk düşünceleri. Bu durumda beklemeden acil servise (112) ya da bir ruh sağlığı uzmanına başvurun.',
           ]}
         />
+        <p>
+          Bunlardan biri sizde varsa kendinizi suçlamadan yardım isteyin. Karar hekim değerlendirmesiyle verilir; benim tek dileğim bu soruyu sormaktan çekinmemeniz.
+        </p>
 
-        <ArticleEditorNote>
-<p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={3} to={5} /></p>
-          <div class="space-y-3 leading-relaxed text-ink/80">
-            <p>
-              Bu yazı Dr. Metin Alış'ın endokrinolojik perspektifiyle hazırlanmış bir bilgilendirme metnidir; bireysel tıbbi değerlendirme veya tedavi önerisi olarak okunmamalıdır.
-            </p>
-            <p>
-            <strong class="text-primary">Klinik perspektif:</strong> Menopozal geçişte HPA ekseni duyarlılığının değişmesi kanıt-temelli bir mekanizmadır <Evidence level={4} />; ancak bireydeki büyüklüğü uyku kalitesi, tiroid işlevi ve gündelik yük gibi başka eksenlerle birlikte şekillenir.
-            </p>
-            <p>
-            <strong class="text-primary">Lab okuma notu:</strong> Tek bir kortizol ölçümü zamanlamaya duyarlıdır; klinik şüphe olmadan rutin tarama amaçlı ölçüm önerilmez <Evidence level={4} />. Değerlendirme gerektiğinde zamanlamaya duyarlı yöntemler ve klinik tabloyla birlikte yorum esastır.
-            </p>
-            <p>
-              <strong class="text-primary">Bireyselleştirme uyarısı:</strong> Dr. Alış'ın yazısında paylaştığı yaklaşım genel popülasyona yönelik bir bilgi haritasıdır; sizin tablonuzda hangi eksenin öncelikli olduğunu (uyku, tiroid, gündelik yük) kendi hekiminizle birlikte değerlendirmeniz önemlidir.
-            </p>
-            <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-              — Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı, Estranova Bilimsel Editörü
-            </p>
-          </div>
-      </ArticleEditorNote>
+        <h2 id="kapanis">Perde Kapandıktan Sonra Kendime Söylediğim Cümle</h2>
+        <p>
+          Oyun bittiğinde kulise dönüp makyajımı silerken kendime hep aynı şeyi söylerim: Bugün de bitti.
+        </p>
+        <p>
+          Stresi tamamen yok etmek bana gerçekçi gelmiyor. Daha yakın bir hedef, onunla nasıl yaşadığımı değiştirmek. Bu dönem sizin için de belki biraz yavaş akacak; alarmı her gün baştan kurmak yerine, akşamınızı ve sabahınızı biraz daha kendinize göre ayarlamak mümkün.
+        </p>
+        <p>
+          Ben kendi düzenimi böyle kuruyorum. Sizinki başka olacak. Doktorunuzla uyku bölünmelerini, gündelik yükü ve ruh halinizi birlikte konuşmak iyi bir başlangıç olabilir.
+        </p>
+        <p>
+          Perde her gece yine açılıyor. Kalbim hâlâ ilk gecedeymiş gibi atıyor; artık en azından nedenini biliyorum…
+        </p>
+      </ArticleProsePanel>
 
-         <ArticleDisclaimer>
-<p>
-            Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
-            kendi hekiminizle birlikte değerlendirme yapınız.
-          </p>
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/',
+          '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
+          '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
+        ]}
+      />
+
+      <MedicalContextNote class="mt-10">
+        <p>
+          Menopoz geçişinde uyku bölünmeleri sık görülür; sıcak basmaları ve gece terlemeleri bu bölünmeyi artırabilir <Evidence level={4} />. Stres yanıtında beyin, böbreküstü bezini kortizol salgılamaya yönlendirir; kısa süreli yükselme dikkat ve enerji sağlar <Evidence level={5} />. Östrojen dalgalanmasının bu yanıtın büyüklüğünü ve süresini bazı kadınlarda değiştirebildiği düşünülmektedir <Evidence from={3} to={4} />.
+        </p>
+        <p>
+          Uzun süren yüksek stres uyku düzenini ve gün içindeki tahammülü olumsuz etkileyebilir <Evidence level={4} />. Düzenli ve hafif tempolu hareketin ruh hali ve uyku üzerinde olumlu etkisi olabilir <Evidence from={3} to={4} />. Yazıdaki nefes, yürüyüş ve uyku düzeni yazarın kendi deneyimidir; bireysel öneri yerine geçmez.
+        </p>
+        <p>
+          İki haftayı aşan ruh hali düşüklüğü, haftalarca süren uyku sorunu, sıklaşan panik atakları ya da kendine zarar verme düşünceleri hekim değerlendirmesi gerektirir; son durumda beklemeden acil yardım alınmalıdır.
+        </p>
+      </MedicalContextNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme, tanı veya tedavinin yerini almaz. Sağlık kararlarınız için
+          kendi hekiminizle birlikte değerlendirme yapınız.
+        </p>
       </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>

@@ -62,6 +62,10 @@ Codex revizyonu tekrar audit/humanize/fix edildi: inkâr çerçevesi azaltıldı
 
 Üç soruya Metin Alış yanıtı gövdeye girdi (giriş: vitamin/hormon beklentisi ve menopozda yorgunluğun kaçınılmaz olmadığı; tiroid: TSH'yi öne almadığı/aldığı durumlar ve geniş panel karşıtlığı; test: kanaması yoğun kadında hemoglobin–ferritin önceliği). Stil sinyali: yazar kısa, kararlı birinci tekil kullanıyor ("düşünürüm", "istemem", "doğru bulmuyorum"); kalın vurgulu tek cümlelik ilke cümleleri kuruyor; anekdot yerine tip-hasta örneği ("yoğun adet kanaması olan bir kadında") veriyor. Profil değişikliği editör onayı olmadan işlenmedi. Ham yanıtlar: `onay-bekleyen/2026-10-12_yorgunluk-kas-tiroid-metabolizma/yazar-yanitlari.md`.
 
+## 15 Ekim 2026 — #2 kortizol/stres yazısı devredildi
+
+KC kararıyla `/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/` Işık Selin Günçe'ye devredildi ve yeniden yazıldı (konu stres yönetimi; Metin'in zihin-denge puanı 2/5). Metin'in #2 makalesi yayından kalktı; tablo satırı tarihsel kayıt olarak korunur, cooldown hesabı değişmez. Ayrıntı: `isik-selin-gunce/article-log.md` #3.
+
 ## 12 Ekim 2026 — Yorgunluk / kas / tiroid / metabolizma, revizyon onaylandı
 
 Kullanıcı bu sohbette “Metin Bey’in ve bilimsel editör onayları tamam.” diye teyit etti. Revizyon (yazar yanıtları + kansızlıksız demir eksikliği kaynakları dahil) onaylandı; paket `onaylanan/2026-10-12_yorgunluk-kas-tiroid-metabolizma` altına taşındı ve `article-approvals.ts` kaydı 2026-10-12 olarak güncellendi. Form/stil geri bildirimi ayrıca iletilmedi; profil değişikliği yapılmadı. Commit ve push kullanıcı izniyle yapıldı.

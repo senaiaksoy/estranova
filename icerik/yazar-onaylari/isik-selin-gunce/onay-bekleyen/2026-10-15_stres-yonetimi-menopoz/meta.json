@@ -1,0 +1,36 @@
+{
+  "writer": "isik-selin-gunce",
+  "title": "Perde Açılmadan Önce Bir Nefes… Menopozda Stres Üzerine",
+  "slug": "stres-yonetimi-menopoz",
+  "pathname": "/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/",
+  "articleType": "experience-essay",
+  "status": "yazar-onayi-alindi-tibbi-not-onayi-bekliyor",
+  "authorApproval": "Sözlü, 2026-10-15 (KC: 'Bu sürümü onaylıyorum; tıbbi inceleme ve yayın adımlarına geçilebilir.')",
+  "medicalApproval": "Bekliyor — MedicalContextNote metni Doç. Dr. Senai Aksoy onayına sunuldu",
+  "createdAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "replaces": "Dr. Metin Alış, 2026-07-15 'Kortizol Sadece Stres Hormonu Değil — Menopozda Ne Değişir?' (src/pages dosyası 2026-10-15'te değiştirildi; push yapılana kadar canlı sitede eski metin duruyor)",
+  "structuralFixes": "Yayın hazırlığında docs/ARTICLE-TEMPLATES.md experience-essay şablonuna uyum: ArticleEditorNote yerine MedicalContextNote, ArticleProsePanel mode=experience, TOC kaldırıldı, gövdedeki Evidence etiketleri tıbbi bilgi notuna taşındı, spot başlığı 'Bu yazıya başlarken'. Onaylanan gövde metni değişmedi.",
+  "personaChoices": {
+    "writerVersion": "v2.1",
+    "opening": "A2 — 'Bodrum'a taşındığımızdan beri sabahlarım...' (önceki iki yazıda A3 kullanıldı)",
+    "anecdote": "Sahnede beden — perde öncesi nefes ve çarpıntı (önceki iki yazıda T1 soyunma odası kullanıldı)",
+    "manifesto": "Kalıp 6 — kendi bedenime reçete (gevşek paraframe: art arda izlenen beş video)",
+    "pillars": ["Sahne disiplini", "Bodrum yavaşlığı"],
+    "titleType": "yarım bırakma üç nokta (önceki iki yazıda tireli iki bölümlü kullanıldı)",
+    "closing": "3 parçalı: kulis mikro-sahnesi + sessiz davet + açılış çarpıntısına geri çağırma ve üç nokta",
+    "humor": "H1, 1 dokunuş: uyku uygulaması cümlesi; kırmızı bayrak bölümünde mizah yok",
+    "emotionBeat": "utanç ve rahatlama adıyla anıldı",
+    "lyricDecor": "kullanılmadı"
+  },
+  "notes": [
+    "KC kararı (2026-10-15): konu Metin Alış'tan Işık Selin Günçe'ye devredildi; Metin'in zihin-denge puanı 2/5, Işık 5/5.",
+    "2026-10-15 ikinci geçiş: KC geri bildirimi ('yazı Selin'in personasına uygun olmalı') üzerine yeniden yazıldı. Beş soru başlıklı H2 kaldırıldı (kural: en fazla 1), madde listesi düzyazıya çevrildi, sahne/nefes ekseni ve 3 parçalı kapanış eklendi.",
+    "URL korunur; hero submenuHeroByRoute parent hub'dan gelir, değiştirilmez.",
+    "Makale türü experience-essay (non-clinical track). MedicalWebPage üretilmez.",
+    "Taslak canlı src/pages dosyasına yazılmadı. Yayın öncesi: sözlü onay (KC), Senai Aksoy tıbbi incelemesi ve Bilimsel Editör Notu zorunlu.",
+    "Kontrol edilmesi gereken olgu: 'yaklaşık yirmi yıldır sahneye çıkıyorum' — profil Ekol Drama 2006 başlangıcına dayanıyor; Selin'in kendisiyle doğrulanmalı.",
+    "Yayın anında yapılacaklar: src/data/article-approvals.ts kaydı, static-articles.ts manifest yazarı, article-faqs.ts içindeki mevcut Metin SSS'lerinin değiştirilmesi, submenu-heroes/hub-starting-paths referanslarının kontrolü, article-log.md satırı.",
+    "hidden.md okunmadı; aile, eş, çocuksuzluk ve Bodrum advocacy sınırları taslakta açıkça dışarıda tutuldu."
+  ]
+}

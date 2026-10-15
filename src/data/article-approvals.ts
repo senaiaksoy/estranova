@@ -259,9 +259,9 @@ export const approvedArticles: ArticleApproval[] = [
   },
   {
     pathname: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',
-    writerSlug: 'metin-alis',
-    approvedAt: '2026-07-15',
-    note: 'KC editör (Dr. Senai Aksoy) doğrudan talimatıyla makale Berna Aksoy imzasından Dr. Metin Alış imzasına taşındı; gövde metni tamamen Metin Alış endokrinolojik sesiyle yeniden yazıldı (kortizol/HPA ekseni eksen — profile.yaml signature_topics "kortizol-stres" ile uyum doğrulandı; Senai/Anıl/Ersin ekseni uyumsuz bulunup elendi). Açılış A9-stili yeni cümle (A3 cooldown\'da), manifesto M2 ("yanlış anlaşılan endokrin tablo, doğru tanıyı geciktiren en sık nedendir" — M3 cooldown\'da), klinik felsefe direkleri D2 (mekanizma→karar zinciri) + D4 (bireyselleştirme) kullanıldı (önceki makalede D1+D3 kullanılmıştı, çeşitlilik korundu). Anekdot yaklaşımı "klinik gözleminde" / "endokrin polikliniğinde" (önceki "klinikte sıklıkla" / "polikliniğe başvuran" cooldown\'da). RedFlagBox 4 madde (Cushing/Addison ayırıcı + panik atak artışı + 2 haftalık işlevsel çöküş). Kapanış 3-parçalı. FAQ tamamen yenilendi (4 soru, kortizol testi + menopoz eşiği + ayırt etme + endokrinoloji değerlendirmesi). BEN 4-katmanlı, Doç. Dr. Senai Aksoy imzalı, standart 3. şahıs şablonu ("Dr. Alış\'ın yazısında..."). publishedDate bugüne çekildi (yeniden yazım/yazar değişimi = fiilen yeni yayın). URL korundu; Berna\'nın bu makaledeki önceki onayı geçersiz kalır.',
+    writerSlug: 'isik-selin-gunce',
+    approvedAt: '2026-10-15',
+    note: 'KC editör (Dr. Senai Aksoy) kararıyla makale Dr. Metin Alış imzasından Işık Selin Günçe imzasına taşındı (Metin zihin-denge 2/5, Işık 5/5); gövde Işık’ın yaşıt sesiyle tamamen yeniden yazıldı ve ikinci geçişte persona uyumu güçlendirildi. Sözlü yazar onayı 2026-10-15 bu oturumda alındı. Tür experience-essay (non-clinical): MedicalContextNote, numarasız bölümler, TOC ve SSS yok (onaylanan 4 SSS şablon denetimi gereği çıkarıldı; metinleri onay paketinde sss-yayindan-cikarilan.md). Açılış A2 (Bodrum sabahı), anekdot sahne öncesi nefes/çarpıntı, manifesto Kalıp 6 (kendi bedenime reçete), direkler sahne + Bodrum, başlık yarım bırakma üç nokta, kapanış 3 parçalı. Mizah H1 tek dokunuş; RedFlagBox H0. publishedDate bugüne çekildi (yazar değişimi = fiilen yeni yayın, 2026-07-15 Berna→Metin emsali). URL korundu; Metin Alış’ın bu makaledeki önceki onayı geçersiz kalır.',
   },
   {
     pathname: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
