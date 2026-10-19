@@ -51,7 +51,7 @@ export const defaultPlannedSections: IssueSection[] = [
   {
     slot: 'reader-page',
     label: 'Okur Sayfası',
-    description: 'Gelen okur sorularına bilimsel editör tarafından yazılı yanıt',
+    description: 'Okurlardan gelen sorulara bilimsel editörün yazılı yanıtları',
     status: 'planned',
   },
   {
@@ -73,7 +73,7 @@ export const slotDefaults: Record<IssueSectionSlot, { label: string; description
   },
   'reader-page': {
     label: 'Okur Sayfası',
-    description: 'Gelen okur sorularına bilimsel editör tarafından yazılı yanıt',
+    description: 'Okurlardan gelen sorulara bilimsel editörün yazılı yanıtları',
   },
   'back-page': {
     label: 'Arka Sayfa',

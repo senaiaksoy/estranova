@@ -40,7 +40,7 @@ export const symptoms: Symptom[] = [
     slug: 'sicak-basmasi',
     category: 'Vazomotor',
     title: 'Sıcak basması',
-    desc: 'Aniden yükselen ısı, terleme ve kalp atışı — gece ya da gündüz, dakikalar içinde gelip geçen kısa dalgalar.',
+    desc: 'Aniden yükselen ısı, terleme ve hızlanan kalp atışı — gece ya da gündüz, dakikalar içinde gelip geçen kısa dalgalar.',
     longDesc:
       'Gün içinde ya da gece, dakikalar içinde gelip geçen ısı dalgaları; çoğu zaman terleme, ardından üşüme hissi eşlik eder. Sıklığı, süresi ve günün hangi saatinde yoğunlaştığı kişiden kişiye değişir.',
     caption: 'Geceyi ısı haritasıyla okumak.',
@@ -70,7 +70,7 @@ export const symptoms: Symptom[] = [
     slug: 'ruh-hali',
     category: 'Duygudurum',
     title: 'Ruh hali değişimi',
-    desc: 'Hormonal dalgalanmaların ruh halini, sabrı ve günlük tepkilerini sessizce yeniden ayarladığı bir dönem.',
+    desc: 'Ruh halinin, sabrın ve günlük tepkilerin değişebildiği bir dönem; hormonal dalgalanma bu tablonun bir parçası.',
     longDesc:
       'Sabır eşiğinde belirgin değişim, gerginlik, ağlamaklı anlar veya açıklanması zor bir kaygı hissi öne çıkabilir. Hormonal dalgalanma, uyku bozulması ve gündelik yük bir araya geldiğinde tablo daha yoğun hissedilebilir.',
     caption: 'Östrojen yankıyı kaybedince.',
@@ -84,9 +84,9 @@ export const symptoms: Symptom[] = [
     slug: 'hafiza',
     category: 'Bilişsel',
     title: 'Hafıza sorunları',
-    desc: 'Sözcüklerin ucundan kayması, isim hatırlama güçlüğü ve dikkatin sık dağılması.',
+    desc: 'Aranan sözcüğün dilin ucunda kalması, isim hatırlama güçlüğü ve dikkatin sık dağılması.',
     longDesc:
-      'Konsantrasyonun dağılması, kelimenin ucundan kayması, isim ve günlük detayları hatırlamakta gecikme biçiminde kendini gösterir. Çoğu zaman geçici bir tablodur; uyku, stres ve hormonal değişim ile yakın ilişkilidir.',
+      'Konsantrasyonun dağılması, aranan kelimenin dilin ucunda kalması, isim ve günlük ayrıntıları hatırlamakta gecikme biçiminde kendini gösterir. Çoğu zaman geçici bir tablodur; uyku, stres ve hormonal değişim ile yakın ilişkilidir.',
     caption: 'Sözcüklerin çıktığı eşikler.',
     evidence: 'Kanıt 3',
     articleCount: 0,
@@ -98,7 +98,7 @@ export const symptoms: Symptom[] = [
     slug: 'cilt',
     category: 'Dermatolojik',
     title: 'Cilt değişimleri',
-    desc: 'Kuruluk, incelme ve elastikiyet kaybı — kolajen ile östrojen arasındaki sessiz ilişki.',
+    desc: 'Kuruluk, incelme ve elastikiyet kaybı; kolajen ile östrojen arasındaki ilişkiye bağlı değişimler.',
     longDesc:
       'Kuruluk, incelme, elastikiyetin azalması ve daha hassas bir cilt dokusu öne çıkan değişimlerdir. Kolajen üretimi ile östrojen arasındaki ilişki nedeniyle bu değişimler menopoz geçişinde daha belirgin yaşanabilir.',
     caption: 'Kıvrımın hafızası.',
@@ -112,10 +112,10 @@ export const symptoms: Symptom[] = [
     slug: 'eklem',
     category: 'Kas-iskelet',
     title: 'Eklem ağrısı',
-    desc: 'Sabah tutukluğu, parmak ve diz eklemlerinde hassasiyet — vücudun yaydığı küçük bir haber.',
+    desc: 'Sabah tutukluğu, parmak ve diz eklemlerinde hassasiyet, harekete başlarken zorlanma.',
     longDesc:
       'Sabah tutukluğu, parmak ve diz eklemlerinde hassasiyet, hareket başlangıcında zorlanma şeklinde tarif edilir. Östrojen düşüşünün eklem ve bağ dokusu üzerindeki etkisiyle ilişkili olabilir; gün içi yorgunluk hissini de etkileyebilir.',
-    caption: 'Eklemden yayılan haber.',
+    caption: 'Sabahın ilk adımları.',
     evidence: 'Kanıt 3',
     articleCount: 0,
     href: '/zamansiz-yasam/',

@@ -233,7 +233,7 @@ export const painPoints: PainPoint[] = [
     id: 'skin-change-uncertainty',
     slug: 'cilt-degisimlerini-anlamak',
     title: 'Cilt değişimlerini anlamak',
-    userQuestion: 'Kuruluk, incelme ve elastikiyet değişimini nasıl daha güvenli okuyabilirim?',
+    userQuestion: 'Kuruluk, incelme ve elastikiyet değişimini nasıl daha doğru anlayabilirim?',
     shortDescription:
       'Ciltteki kuruluk, hassasiyet ve görünüm değişimlerini tek bir nedene bağlamadan ele almak için bir başlangıç rotası sunar.',
     relatedSymptoms: ['cilt'],

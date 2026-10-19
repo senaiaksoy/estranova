@@ -20,7 +20,7 @@ const analyticsActive = featureFlags.analyticsEnabled;
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-primary">YASAL BİLGİLENDİRME</p>
         <h1 class="mb-6 font-serif text-4xl leading-tight md:text-5xl">Çerez Politikası</h1>
         <p class="text-lg leading-relaxed text-ink/75">
-          Estranova; sade, sakin bir editöryal yayın olarak en az veri ile çalışmayı tercih eder.
+          Estranova sade ve sakin bir editöryal yayın olarak en az veriyle çalışmayı tercih eder.
           Bu sayfa, hangi tarayıcı depolamasının ve hangi çerezlerin kullanıldığını şeffaf biçimde özetler.
         </p>
       </header>
@@ -30,14 +30,14 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <h2 class="mb-3 font-serif text-2xl">Şu anki durum</h2>
           {bannerActive ? (
             <p class="leading-relaxed text-ink/75">
-              Estranova; sayfa kullanımını anonim olarak ölçmek için Google Analytics 4
+              Estranova sayfa kullanımını anonim olarak ölçmek için Google Analytics 4
               kullanabilir. Analitik çerezler yalnızca çerez tercih panelinden açıkça onay
-              vermeniz halinde açılır; reddederseniz site aynı şekilde çalışır ve yalnızca
+              verirseniz açılır; reddederseniz site aynı şekilde çalışır ve yalnızca
               çerezsiz, temel ziyaret ölçümü yapılır.
             </p>
           ) : (
             <p class="leading-relaxed text-ink/75">
-              Estranova şu an çerez kullanmamaktadır. Üçüncü taraf izleme aracı, reklam
+              Estranova şu an çerez kullanmıyor. Üçüncü taraf izleme aracı, reklam
               pikseli veya analiz çerezi yüklenmez. İlerleyen dönemde site kullanımını
               anlamak için isteğe bağlı analitik çerezler eklenirse, sayfanın altında
               kayan bir çerez bandı üzerinden onay sorulur ve kararınız 12 ay saklanır.
@@ -55,10 +55,10 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <ul class="mt-4 space-y-2 text-ink/75 list-disc list-inside leading-relaxed">
             <li>Yazı boyutu ve okuma tercihleri</li>
             <li>Kayıtlı makaleler (yer-imi)</li>
-            <li>Bülten kaydı (Faz 2'de gerçek e-posta hizmetine taşınacak)</li>
+            <li>Bülten kaydı (ileride bir e-posta gönderim hizmetine taşınacak)</li>
           </ul>
           <p class="mt-4 leading-relaxed text-ink/75">
-            Bu depolama, banner üzerinde <strong>Zorunlu</strong> kategori altında listelenir
+            Bu depolama, çerez bandında <strong>Zorunlu</strong> kategori altında listelenir
             ve ayrı bir onay gerektirmez; site işlevselliği için gereklidir.
           </p>
         </section>
@@ -74,7 +74,7 @@ const analyticsActive = featureFlags.analyticsEnabled;
             </p>
           ) : (
             <p class="leading-relaxed text-ink/75">
-              Henüz aktif değildir. Aşağıdaki ayarlar, aktivasyon anında geçerli olacak
+              Henüz etkin değildir. Aşağıdaki ayarlar, etkinleştirildiğinde geçerli olacak
               yapılandırmayı tanımlar.
             </p>
           )}
@@ -101,8 +101,8 @@ const analyticsActive = featureFlags.analyticsEnabled;
         <section>
           <h2 class="mb-3 font-serif text-2xl">Tercihinizi yönetme</h2>
           <p class="leading-relaxed text-ink/75">
-            Banner aktif olduğunda sayfanın altında her zaman görünür bir <strong>Çerez tercihleri</strong>
-            linki yer alır; bu link bandı yeniden açar ve kararınızı değiştirmenizi sağlar.
+            Çerez bandı etkin olduğunda sayfanın altında her zaman görünür bir <strong>Çerez tercihleri</strong>
+            bağlantısı yer alır; bu bağlantı bandı yeniden açar ve kararınızı değiştirmenizi sağlar.
             Tarayıcınızdan da depolanan tüm çerez ve localStorage verisini temizleyebilirsiniz.
           </p>
           {bannerActive && (
@@ -123,7 +123,7 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <p class="leading-relaxed text-ink/75">
             Çerez veya kişisel veri kullanımına ilişkin sorularınız için
             <a href="/iletisim/" class="underline decoration-gold-bronze/30 underline-offset-2 hover:text-secondary">iletişim</a>
-            sayfasından yazabilirsiniz. Geniş veri politikası için ayrıca
+            sayfasından yazabilirsiniz. Ayrıntılı veri politikası için
             <a href="/kvkk/" class="underline decoration-gold-bronze/30 underline-offset-2 hover:text-secondary">KVKK aydınlatma metni</a>'ne bakabilirsiniz.
           </p>
         </section>

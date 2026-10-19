@@ -25,7 +25,7 @@ export interface SearchItem {
 const staticPages: SearchItem[] = [
   {
     title: 'Anasayfa',
-    description: 'Estranova editöryel sağlık platformu — perimenopoz, menopoz ve 40+ kadın sağlığı.',
+    description: 'Estranova editoryal sağlık platformu — perimenopoz, menopoz ve 40+ kadın sağlığı.',
     href: '/',
     category: 'Sayfa',
   },
@@ -37,13 +37,13 @@ const staticPages: SearchItem[] = [
   },
   {
     title: 'Hakkımızda',
-    description: 'Estranova\'nın editöryel yaklaşımı, misyonu, değerleri.',
+    description: 'Estranova’nın editoryal yaklaşımı, amacı ve değerleri.',
     href: '/hakkimizda/',
     category: 'Sayfa',
   },
   {
     title: 'Yayın Kurulu',
-    description: 'Editörler, yazarlar, tıbbi danışmanlar ve danışman ekip.',
+    description: 'Editörler, yazarlar, tıbbi danışmanlar ve bilim kurulu.',
     href: '/yayin-kurulu/',
     category: 'Sayfa',
   },
@@ -55,7 +55,7 @@ const staticPages: SearchItem[] = [
   },
   {
     title: 'Yazarlar',
-    description: 'Estranova\'da yazan editörler ve konuk yazarların bibliyografisi.',
+    description: 'Estranova’da yazan editörler ve konuk yazarlar: profiller ve yazılar.',
     href: '/yazarlar/',
     category: 'Sayfa',
   },
@@ -73,7 +73,7 @@ const staticPages: SearchItem[] = [
   },
   {
     title: 'İletişim',
-    description: 'Estranova editöryel ekibiyle iletişim.',
+    description: 'Estranova editoryal ekibiyle iletişim.',
     href: '/iletisim/',
     category: 'Sayfa',
   },

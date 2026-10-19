@@ -33,19 +33,19 @@ const medicalAdvisors = [
   {
     name: 'Dr. Çağrı Sade',
     role: 'Tıbbi Danışman · Plastik Cerrahi',
-    bio: 'Plastik ve rekonstrüktif cerrahi alanında çalışan bir hekim. Estranova\'da estetik girişimler, gerçekçi beklenti yönetimi ve 40 sonrası bakım başlıklarında danışmanlık veriyor. Modaya değil yüze ve kişiye bakan ölçülü bir yaklaşımı var.',
+    bio: 'Plastik ve rekonstrüktif cerrahi alanında çalışan bir hekim. Estranova\'da estetik girişimler, gerçekçi beklenti yönetimi ve 40 sonrası bakım başlıklarında danışmanlık veriyor. Ölçülü çalışır; modaya değil, yüze ve kişiye bakar.',
     tags: ['Plastik Cerrahi', 'Rekonstrüktif Cerrahi', 'Estetik Cerrahi'],
   },
   {
     name: 'Dt. Duygu Karaosmanoğlu',
     role: 'Tıbbi Danışman · Diş Hekimliği',
-    bio: 'Estetik diş hekimliği alanında çalışan deneyimli bir diş hekimi. Estranova\'da ağız ve diş sağlığının hormonal geçişle ilişkisi başlıklarında danışmanlık veriyor. Doğal görünümü zorlamayan, yüze yakışanı arayan bir yaklaşımı var.',
+    bio: 'Estetik diş hekimliği alanında çalışan deneyimli bir diş hekimi. Estranova\'da ağız ve diş sağlığının hormonal geçişle ilişkisi başlıklarında danışmanlık veriyor. Doğal görünümü zorlamaz, yüze yakışanı arar.',
     tags: ['Estetik Diş Hekimliği', 'Porselen Laminalar', 'Dijital Diş Hekimliği'],
   },
   {
     name: 'Fzt. Ersin Saraç',
     role: 'Tıbbi Danışman · Fizyoterapi',
-    bio: 'Kas-iskelet rehabilitasyonu ve kadın sağlığı fizyoterapisi alanında çalışan bir fizyoterapist. Estranova\'da hareket, kronik ağrı ve doğum sonrası rehabilitasyon başlıklarında danışmanlık veriyor. Bedeni dinleyerek ilerlemeyi önemseyen, küçük adımları ciddiye alan bir uzman.',
+    bio: 'Kas-iskelet rehabilitasyonu ve kadın sağlığı fizyoterapisi alanında çalışan bir fizyoterapist. Estranova\'da hareket, kronik ağrı ve doğum sonrası rehabilitasyon başlıklarında danışmanlık veriyor. Acele etmeden ilerlemeyi önemseyen, küçük adımları ciddiye alan bir uzman.',
     tags: ['Fizyoterapi', 'Kadın Sağlığı Fizyoterapisi', 'Rehabilitasyon', 'Doğum Sonrası'],
   },
   {
@@ -94,8 +94,8 @@ const consultants = [
           <p class="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-primary">Yayın Kurulu</p>
           <h1 class="mb-7 font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-primary md:text-8xl">Editoryal ekip ve danışman kadro</h1>
           <p class="max-w-3xl border-l border-gold/60 pl-6 font-serif text-xl italic leading-relaxed text-ink/72 md:text-2xl">
-            Estranova içerikleri, editoryal ekip, yazarlar ve tıbbi danışmanların ortak çalışmasıyla hazırlanır. Bu yapı;
-            içeriklerin bilimsel doğruluk, dil sadeliği ve editoryal tarafsızlık ilkelerine göre yayımlanmasını destekler.
+            Estranova içerikleri editoryal ekip, yazarlar ve tıbbi danışmanların ortak çalışmasıyla hazırlanır. Her katkı,
+            yazının bilimsel doğruluk, dil sadeliği ve editoryal tarafsızlık ilkelerine uygun yayımlanmasına hizmet eder.
           </p>
         </header>
 
@@ -105,13 +105,13 @@ const consultants = [
           class="group relative mb-10 block overflow-hidden rounded-[34px] border border-primary/15 bg-white/84 p-8 shadow-[0_24px_70px_rgba(79,23,28,0.08)] ring-1 ring-gold/20 transition hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-[0_30px_80px_rgba(79,23,28,0.12)] md:p-10"
         >
           <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold via-primary/45 to-transparent"></div>
-          <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.28em] text-gold">Önce burayı okumanız tavsiye edilir</p>
+          <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.28em] text-gold">Kadroyu tanımadan önce</p>
           <h2 class="mb-4 font-serif text-3xl italic leading-snug text-primary md:text-4xl">Bu Masada Neden Varız</h2>
           <p class="mb-2 max-w-4xl leading-relaxed text-ink/75">
-            Estranova'da yazan kadınlar; ün, etki veya marka için değil, deneyim aktarmak için yazıyor. Burada bulunmalarının
+            Estranova'da yazan kadınlar ün, etki ya da marka için değil, deneyim aktarmak için yazıyor. Burada bulunmalarının
             nedeni yeni bir unvan eklemek değil; 40 yaş sonrasının bedensel ve zihinsel geçişlerini daha saygın, daha
-            gerçekçi ve daha iyi bilgiyle konuşulabilir kılmak. Estranova bir vitrin değil; kadınların birbirine iyi
-            düşünülmüş, sakin ve güvenilir notlar bıraktığı ortak bir masa.
+            gerçekçi ve daha iyi bilgiyle konuşulabilir kılmak. Estranova, kadınların birbirine iyi düşünülmüş, sakin ve
+            güvenilir notlar bıraktığı ortak bir masadır.
           </p>
           <span class="mt-3 inline-flex items-center gap-2 font-semibold text-primary group-hover:underline">
             Manifestonun tamamını oku
@@ -123,13 +123,13 @@ const consultants = [
           <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-gold via-primary/20 to-transparent"></div>
           <h2 class="mb-4 font-serif text-3xl text-ink">Yayın modeli</h2>
           <p class="leading-relaxed text-ink/70">
-            Estranova, bağımsız bir editoryal sağlık bilgi platformudur. Bu sayfadaki ekip yapısı, klinik tanıtımı için değil,
-            içerik üretim ve doğrulama süreçlerinin şeffaf biçimde paylaşılması amacıyla sunulmaktadır.
+            Estranova, bağımsız bir editoryal sağlık bilgi platformudur. Bu sayfadaki ekip yapısını klinik tanıtımı için değil,
+            içeriğin nasıl üretildiğini ve doğrulandığını açıkça göstermek için paylaşıyoruz.
           </p>
           <p class="mt-4 leading-relaxed text-ink/70">
             Editörler, yazarlar, tıbbi danışmanlar ve süreç destekçileri dahil bu sayfadaki tüm katkılar
-            <strong class="text-primary">gönüllülük esasıyla</strong> sağlanır; platform herhangi bir ticari ilişki veya
-            hekim/klinik tanıtımı değildir.
+            <strong class="text-primary">gönüllülük esasıyla</strong> verilir; platform ticari bir ilişkiye ya da
+            hekim veya klinik tanıtımına dayanmaz.
           </p>
           <p class="mt-4 leading-relaxed text-ink/70">
           Yayın felsefesi, üretim süreci, eser sahipliği ve yapay zekâ kullanım sınırlarına ilişkin ayrıntılı ilkeler için
@@ -143,14 +143,13 @@ const consultants = [
             <a href="#senai-aksoy" class="font-semibold text-primary hover:underline">Doç. Dr. Senai Aksoy</a>
             tarafından gözden geçirilir; konunun gerektirdiği uzmanlığa göre ilgili tıbbi danışmanın görüşü de alınır.
             Metindeki her iddia, yayın tarihinde erişilebilir en güncel bilimsel literatür, klinik rehber ve uzlaşı belgeleriyle
-            karşılaştırılır. Uyumsuz, eskimiş veya kanıtı yetersiz ifadeler düzeltilir ya da metinden çıkarılır. Yayımlanan
-            her makale, böylece yayın tarihindeki bilimsel verilerle uyumlu biçimde okuyucuya ulaşır.
+            karşılaştırılır. Uyumsuz, eskimiş veya kanıtı yetersiz ifadeler düzeltilir ya da metinden çıkarılır.
           </p>
 
           <h3 class="mt-8 mb-3 font-serif text-xl text-ink">Güncellik taahhüdü</h3>
           <p class="leading-relaxed text-ink/70">
             Estranova'da yayımlanan her metin, yayın tarihinde geçerli bilimsel uzlaşıyı yansıtacak biçimde hazırlanır.
-            Tıp bilgisi zamanla değişir; yeni kanıtlar önceki konsensüsü değiştirdiğinde metin güncellenir veya gerekirse
+            Tıp bilgisi zamanla değişir; yeni kanıtlar önceki uzlaşıyı değiştirdiğinde metin güncellenir veya gerekirse
             geri çekilir. Her makalede yayın tarihi ve son güncelleme tarihi şeffaf biçimde belirtilir.
           </p>
 
@@ -158,7 +157,7 @@ const consultants = [
           <p class="mb-5 leading-relaxed text-ink/70">
             Metin içindeki iddialar, kanıtın gücüne göre beş düzeyli bir ölçekle etiketlenir. Etiket cümlenin tamamını değil,
             üzerinde durulan iddiayı sınıflandırır; aralık gerektiğinde <em>orta–iyi kanıt</em> biçiminde birleşir. Etiketler
-            metin içinde italik parantezle gösterilir; örneğin <em>(güçlü kanıt)</em>. Sınıflama; kanıtın çalışma türü,
+            metin içinde italik parantezle gösterilir; örneğin <em>(güçlü kanıt)</em>. Sınıflama, kanıtın çalışma türü,
             örneklem büyüklüğü, bağımsız doğrulama sayısı ve klinik rehberlerde yerleşiklik düzeyi birlikte değerlendirilerek
             yapılır.
           </p>
@@ -231,10 +230,10 @@ const consultants = [
               </p>
               <h2 class="mb-3 font-serif text-3xl text-ink">Estranova Editörleri</h2>
               <p class="leading-relaxed text-ink/70">
-                Temel rehberler, hub tamamlayıcıları ve açıklayıcı sağlık haritaları için kullanılan
-                editöryal imza. Estranova Editorial Gloss tonuyla hazırlanır; her yazı bilimsel editör
-                Doç. Dr. Senai Aksoy gözden geçirmesinden geçer. Kişi değil, kurumsal kimliktir; bu
-                nedenle yazar kartlarında listelenmez.
+                Temel rehberler, konu sayfalarını tamamlayan yazılar ve açıklayıcı sağlık haritaları için
+                kullanılan editöryal imza. Estranova'nın kurumsal editöryal sesiyle hazırlanır; her yazıyı
+                bilimsel editör Doç. Dr. Senai Aksoy gözden geçirir. Bir kişiyi değil kurumu temsil ettiği
+                için yazar kartlarında listelenmez.
               </p>
             </div>
             <div class="md:justify-self-end">
@@ -255,9 +254,9 @@ const consultants = [
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Yazar Kadromuz</h2>
             <p class="leading-relaxed text-ink/70">
-              40+ kadın hayatının köşe yazarları; kendi uzmanlık alanları ile menopoz, perimenopoz ve hormonal geçiş
-              başlıklarının kesişiminde günlük gözlem, soru ve açmazları magazinsel bir tonla aktarıyorlar. Yazılar tıbbi
-          tavsiye değil; deneyim ve arka plan paylaşımıdır. Alfabetik sıralı.
+              40+ kadın hayatının köşe yazarları. Kendi uzmanlık alanlarını menopoz, perimenopoz ve hormonal geçişle
+              buluşturup gündelik gözlemlerini, sorularını ve açmazlarını bir dergi sıcaklığıyla aktarıyorlar. Yazıları tıbbi
+          tavsiye değil, deneyim ve arka plan paylaşımıdır. Alfabetik sıralıdır.
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -281,9 +280,9 @@ const consultants = [
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Bilimsel Yazarlar</h2>
             <p class="leading-relaxed text-ink/70">
-              Hekimler, klinik uzmanlar ve hareket alanı uzmanlarından oluşan bu kadro, kendi uzmanlık alanında
-              bilimsel doğruluğu öne çıkaran metinler kaleme alır. Konunun gerektirdiği kanıt düzeyi etiketlemesi ve
-              terminoloji denetimi bu yazılarda özellikle takip edilir. Alfabetik sıralı.
+              Hekimler, klinik uzmanlar ve hareket alanında çalışan uzmanlardan oluşan bu kadro, kendi alanında
+              bilimsel doğruluğu öne çıkaran metinler kaleme alır. Bu yazılarda kanıt düzeyi etiketlerine ve terim
+              tutarlılığına ayrıca dikkat edilir. Alfabetik sıralıdır.
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -315,8 +314,8 @@ const consultants = [
           <h2 class="mb-3 font-serif text-3xl">Editöryal süreç</h2>
           <p class="max-w-4xl leading-relaxed text-white/76">
             Metinler taslak, dil düzeni, kaynak kontrolü ve son okuma aşamalarından geçer; tıbbi terimler sade Türkçe ile
-            açıklanır. Okuyucuya yönelik ton, panik yaratmadan bilgilendirme ilkesiyle korunur — abartılı vaat ve alarmist
-            dilden uzak.
+            açıklanır. Ton, okuru paniğe sürüklemeden bilgilendirme ilkesine dayanır; abartılı vaatten ve telaş yaratan
+            dilden uzak durur.
           </p>
         </section>
 
@@ -347,7 +346,7 @@ const consultants = [
           <div class="mb-7 max-w-3xl">
             <h2 class="mb-3 font-serif text-3xl text-ink">Danışmanlar</h2>
             <p class="leading-relaxed text-ink/70">
-              İçerik erişilebilirliği, okuyucu deneyimi, yayın standardı ve yaşam tarzı perspektifi tarafında destek veren danışman ekip.
+              İçerik erişilebilirliği, okuyucu deneyimi, yayın standardı ve yaşam tarzı konularında destek veren danışman ekip.
             </p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">

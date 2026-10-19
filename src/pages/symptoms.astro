@@ -5,7 +5,7 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 import { symptoms } from '../data/symptoms';
 
 const howToUse = [
-  'Semptomun ne zaman ortaya çıktığını ve ne kadar sürdüğünü not edin.',
+  'Belirtinin ne zaman ortaya çıktığını ve ne kadar sürdüğünü not edin.',
   'Tek bir belirtiye değil, birlikte görülen değişimlerin toplam etkisine bakın.',
   'Uyku, stres, hareket ve adet düzeni gibi başlıkları birlikte değerlendirin.',
 ];
@@ -17,15 +17,15 @@ const relatedReading = [
 ] as const;
 
 const journalTemplate = [
-  'Semptomun başlangıç saati ve yaklaşık süresi',
+  'Belirtinin başlangıç saati ve yaklaşık süresi',
   'Eşlik eden durumlar (uyku, stres, yoğun iş günü, fiziksel aktivite)',
   'Günlük yaşam etkisi (iş, odaklanma, sosyal tempo)',
-  'Bir önceki haftaya göre artış/azalış gözlemi',
+  'Bir önceki haftaya göre artış ya da azalış',
 ] as const;
 
 const reviewSignals = [
   'Beklenmedik şekilde sıklaşan veya günlük işlevi belirgin bozan belirtiler',
-  'Uzun süren, tekrar eden ve kendi kendine gerilemeyen semptom gidişatı',
+  'Uzun süren, tekrar eden ve kendiliğinden gerilemeyen belirtiler',
   'Uyku, duygu durumu ve enerji alanlarını birlikte etkileyen dönemsel kötüleşme',
 ] as const;
 ---
@@ -113,7 +113,7 @@ const reviewSignals = [
             Belirti haritası
           </p>
           <h2 class="font-serif text-4xl leading-tight tracking-[-0.025em] text-ink md:text-5xl">
-            Önce adını koy, sonra okuma rotasına geç
+            Önce adını koyun, sonra okuma rotasına geçin
           </h2>
         </div>
 
@@ -192,10 +192,10 @@ const reviewSignals = [
 
         <section class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <article class="rounded-[34px] border border-primary/12 bg-white p-8 shadow-[0_24px_82px_-66px_rgba(44,22,28,0.32)] ring-1 ring-white/80">
-            <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Semptom Günlüğü</p>
+            <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Belirti Günlüğü</p>
             <h2 class="mb-5 font-serif text-3xl leading-tight tracking-[-0.02em] text-ink md:text-4xl">Pratik izlem şablonu</h2>
             <p class="mb-6 leading-relaxed text-ink/65">
-              Uzun ve ayrıntılı kayıt yerine kısa, düzenli ve karşılaştırılabilir notlar almak değerlendirme kalitesini artırır.
+              Uzun ve ayrıntılı kayıt yerine kısa, düzenli ve karşılaştırılabilir notlar, bir sağlık görüşmesinde durumunuzu anlatmayı kolaylaştırır.
             </p>
             <ul class="space-y-3">
               {journalTemplate.map((item) => (
@@ -211,7 +211,7 @@ const reviewSignals = [
             <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Değerlendirme Eşiği</p>
             <h2 class="mb-5 font-serif text-3xl leading-tight tracking-[-0.02em] text-ink md:text-4xl">Uzman değerlendirmesini ne zaman düşünmeli?</h2>
             <p class="mb-6 leading-relaxed text-ink/65">
-              Bu başlıklar tanı koydurmaz; ancak semptom gidişatının profesyonel değerlendirme ile ele alınmasının yararlı olabileceğini gösterir.
+              Bu başlıklar tanı koydurmaz; ancak belirtilerin gidişatını bir uzmanla konuşmanın yararlı olabileceğini gösterir.
             </p>
             <ul class="space-y-3 mb-8">
               {reviewSignals.map((item) => (

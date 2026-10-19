@@ -109,14 +109,14 @@ export const archiveIssue: Issue = {
   monthYear: 'Arşiv',
   theme: 'Arşiv',
   coverHeadline: 'Eşik · Sayı 0 · Arşiv',
-  lede: 'Eşik dergi serisi açılmadan önce yer alan rehberler ve uzun-form yazılar. Bu içerikler hub sayfalarında ve kütüphanede erişilebilir.',
+  lede: 'Dergiden önce yayımlanan rehberler ve uzun yazılar. Hepsi konu sayfalarında ve kütüphanede okunmaya devam ediyor.',
   coverImage: {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Estranova arşiv görseli — kütüphane sayfasının editöryal kapağı',
+    alt: 'Şafak ışığında yatak kenarında oturup pencereye bakan bir kadın',
   },
   editorLetter: {
     writerSlug: 'senai-aksoy',
-    body: 'Eşik dergi serisi, Estranova\'nın editöryal yapısının üzerine kuruluyor.\n\nBu arşiv, Sayı 1 öncesi yer alan rehberleri ve uzun-form yazıları ortak bir çatı altında topluyor. Yazılar hub sayfalarında ve kütüphanede erişilebilir.',
+    body: 'Eşik dergisi, Estranova\'nın editöryal yapısının üzerine kuruluyor.\n\nBu arşiv, Sayı 1\'den önce yayımlanan rehberleri ve uzun yazıları bir arada tutuyor. Yazıların hepsi konu sayfalarında ve kütüphanede okunabilir.',
   },
   releaseDate: '2024-01-01',
   status: 'archived',
@@ -136,16 +136,16 @@ export const issue01: Issue = {
   monthYear: 'Mayıs 2026',
   theme: 'Geceler',
   coverHeadline: 'Eşik · Sayı 01 — Mayıs 2026 · Geceler',
-  lede: 'Perimenopozun en sessiz belirtisi belki de uyku. İlk sayıda üç yazı, uykunun neden değiştiğini, gece terlemesinin mahrem yanını ve akşam hareketinin toparlayıcı gücünü yan yana koyuyor.',
+  lede: 'Perimenopozun en sessiz belirtisi belki de bozulan uyku. İlk sayıda üç yazı yan yana: uykunun neden değiştiği, gece terlemesinin mahrem yanı ve akşam hareketinin geceye geçişteki yeri.',
   seoDescription:
-    'Perimenopozun en sessiz belirtisi belki de uyku. İlk sayıda üç yazı, uykunun neden değiştiğini ve gece terlemesinin mahrem yanını yan yana koyuyor.',
+    'Perimenopozun en sessiz belirtisi belki de bozulan uyku. İlk sayıda üç yazı, uykunun neden değiştiğini ve gece terlemesinin mahrem yanını ele alıyor.',
   coverImage: {
     src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-    alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku, perimenopoz ve dinlenme teması',
+    alt: 'Şafak ışığında yatak kenarında oturup pencereye bakan bir kadın',
   },
   editorLetter: {
     writerSlug: 'senai-aksoy',
-    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz çünkü bu konu, hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBu sayıyı özellikle üç sesle kuruyoruz: Berna Aksoy uykunun hormonal zeminini sadeleştiriyor; Doç. Dr. Senai Aksoy gece terlemesinin mahrem ve klinik yanını utanmadan konuşuyor; Alara Baykent akşam hareketini performans baskısı değil, bedeni geceye hazırlayan küçük bir geçiş olarak okuyor. Hiçbir yazı tek başına çözüm değil; ama hep birlikte küçük bir gece denemesini kolaylaştırıyor.\n\nDergi serisinin amacı tam da bu: kanıt-temelli bilgiyi panik yaratmadan, yaşıt sesinde ve sakin bir editöryel düzende okurla buluşturmak.',
+    body: 'Eşik dergisinin ilk sayısında uykuyu masaya yatırıyoruz, çünkü bu konu hormonal geçişte en sık konuşulan ama en az anlaşılan başlıklardan biri.\n\nBu sayıyı üç yazıyla kuruyoruz. Berna Aksoy uykunun hormonal zeminini sadeleştiriyor; ben gece terlemesinin mahrem ve klinik yanını çekinmeden anlatıyorum; Alara Baykent de akşam hareketinin geceye geçişteki yerini sporcu gözüyle ele alıyor. Hiçbiri tek başına bir çözüm sunmuyor. Birlikte okunduklarında geceyi biraz daha anlaşılır kılıyorlar.\n\nBu dergiyle istediğimiz de bu: kanıta dayalı bilgiyi telaşa yer vermeden, yaşıt sesiyle ve sakin bir düzen içinde okura ulaştırmak.',
   },
   editorColumnSlug: 'mayis-2026',
   coverDossierSlug: '2026-05-uyuyamadigimiz-geceler',
@@ -173,11 +173,11 @@ export const issue02: Issue = {
     "40'tan sonra güç, daha fazla zorlanmak değil; kası, kemiği ve dengeyi yeniden duymak. Bu sayıda bedeni performans baskısı kurmadan okuyoruz.",
   coverImage: {
     src: '/images/library/editorial/zy-hareket-saglik.webp',
-    alt: "40 sonrası hareket ve güçlenme temasını taşıyan sakin editoryal sahne; bedeni zorlamadan yeniden kurma hissi",
+    alt: "Ağaçlıklı bir parkta, yürüyüş yolunun kenarında hafifçe gülümseyerek yere bakan bej kazaklı bir kadın",
   },
   editorLetter: {
     writerSlug: 'senai-aksoy',
-    body: "Bu ay güç kelimesini yalnızca kasla sınırlamıyoruz. Hormonal geçişte güç; kemik yoğunluğu, düşme riski, uyku kalitesi, kas kütlesi, metabolik denge ve günlük hareket güveniyle yan yana duran daha geniş bir sağlık başlığı.\n\nBu sayıda okuru daha sert bir programa çağırmıyoruz. Anıl Yalmaz hareketin başlangıç haritasını kuruyor; Prof. Dr. Bülent Aksoy kemiği kırığı beklemeden konuşmaya açıyor; Fzt. Ersin Saraç dengeyi ayak-kalça-gövde hattında okuyor; Dr. Metin Alış yorgunluğu tiroid, metabolizma ve kas ekseninde ayırıyor; Alara Baykent yaz başlarken hareketi performans değil devamlılık olarak ele alıyor; Başak Pelister de kendi menopoz deneyiminden gelen yaşıt sesiyle gücü daha kişisel bir yerden açıyor.\n\nGüç, bu yaş döneminde çoğu zaman daha fazlasını yapmak değil; bedene daha iyi kulak vererek daha sürdürülebilir bir zemin kurmaktır.",
+    body: "Bu ay güç kelimesini yalnızca kasla sınırlamıyoruz. Hormonal geçiş döneminde güç dediğimiz şey kemik yoğunluğunu, düşme riskini, uyku kalitesini, kas kütlesini, metabolik dengeyi ve gündelik hareketteki güveni birlikte ilgilendiren geniş bir sağlık başlığı.\n\nBu sayıda okuru daha sert bir programa çağırmıyoruz. Altı yazı gücü farklı yerlerinden ele alıyor: harekete yeniden başlamak, kırık oluşmadan kemiği konuşmak, dengeyi korumak, yorgunluğun olası nedenlerini ayırmak, yazın hareketi sürdürmek ve gücün kişisel bir menopoz deneyimindeki karşılığı.\n\nBu yaş döneminde güç çoğu zaman bedene daha iyi kulak vermekle ve sürdürülebilir bir zemin kurmakla başlıyor.",
   },
   editorColumnSlug: 'haziran-2026',
   coverDossierSlug: '2026-06-guc-esigi',
@@ -205,11 +205,11 @@ export const issue03: Issue = {
     'Tartının sesi kısıldığında geriye yalnızca bir rakam kalmaz. Bu sayı vücut kompozisyonunu ve beden algısını diyet kültürünün yargısından uzak ele alıyor.',
   coverImage: {
     src: '/images/library/editorial/pair-window-cafe-reflection.webp',
-    alt: 'Pencere kenarında sakin bir sohbeti paylaşan iki yaşıt kadın; tartı, vücut kompozisyonu ve beden algısını yargısız konuşma teması',
+    alt: 'Pencere kenarında oturmuş, sakin bir sohbeti paylaşan iki yaşıt kadın',
   },
   editorLetter: {
     writerSlug: 'senai-aksoy',
-    body: 'Menopoz yıllarında kilo ve beden ölçüsü konuşulurken tek bir rakama gereğinden fazla anlam yüklenebiliyor. Oysa kas kütlesi, yağ dağılımı, iştah sinyalleri, uyku, hareket ve metabolik sağlık birlikte değerlendirildiğinde daha açıklayıcı bir tablo ortaya çıkar.\n\nBu sayıda tartıyı bir hüküm aracı olarak değil, diğer verilerle birlikte okunması gereken sınırlı bir bilgi olarak ele alıyoruz. Vücut kompozisyonundaki değişimi, menopozda kilo artışını, GLP-1 ekseninde iştah ile metabolizmayı ve ölçü paniğinin beden algısındaki karşılığını sakin bir dille ayırıyoruz. Amaç bir beden ölçüsü dayatmak değil; hangi değişimin olağan dalgalanma, hangisinin kişisel değerlendirme gerektiren bir sağlık sorusu olduğunu daha açık görebilmek.',
+    body: 'Menopoz yıllarında kilo ve beden ölçüsü konuşulurken tek bir rakama gereğinden fazla anlam yüklenebiliyor. Oysa kas kütlesi, yağ dağılımı, iştah sinyalleri, uyku, hareket ve metabolik sağlık birlikte değerlendirildiğinde daha açıklayıcı bir tablo ortaya çıkar.\n\nBu sayıda tartıyı bir hüküm aracı olarak değil, diğer verilerle birlikte okunması gereken sınırlı bir bilgi olarak ele alıyoruz. Vücut kompozisyonundaki değişimi, menopozda kilo artışını, GLP-1 ekseninde iştah ile metabolizmayı ve ölçü paniğinin beden algısındaki karşılığını sakin bir dille ayırıyoruz. Burada kimseye hedef bir ölçü vermiyoruz. Amacımız, hangi değişimin olağan dalgalanma, hangisinin kişisel değerlendirme gerektiren bir sağlık sorusu olduğunu daha açık görebilmek.',
   },
   editorColumnSlug: 'temmuz-2026',
   coverDossierSlug: '2026-07-tarti-susunca',

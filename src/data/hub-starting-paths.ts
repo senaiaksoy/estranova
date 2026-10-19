@@ -42,9 +42,9 @@ export interface HubStartingPath {
 export const hubStartingPaths: Record<string, HubStartingPath> = {
   '/hormonal-gecis/': {
     kicker: 'Hormonal geçişe yeni misiniz?',
-    title: 'Bu hub\'da nereden başlamalıyım?',
+    title: 'Bu bölümde nereden başlamalı?',
     intro:
-    'Üç adımlık bir okuma yolu — önce genel bakış, sonra en sık karşılaşılan konu, sonunda karar verme. İstediğiniz zaman alt-bölümlere dağılabilirsiniz; bu yol sizi acele ettirmez.',
+    'Üç adımlık bir okuma yolu: önce genel bakış, sonra en sık karşılaşılan konu, en son karar. Alt başlıklara istediğiniz zaman geçebilirsiniz; bu yol sizi acele ettirmez.',
     steps: [
       {
         step: '01',
@@ -87,7 +87,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'Beslenme temeli',
         title: 'Beslenme & Yaşlanma — Sürdürülebilir Bir Tabak',
         excerpt:
-          'Diyet kültürünün uzağında, 40 sonrası bedeni destekleyen besin örüntülerini yaşıt tonuyla anlatan açılış rehberi.',
+          'Diyet kültürünün uzağında, 40 sonrası bedene iyi gelen beslenme alışkanlıklarını yaşıt tonuyla anlatan açılış rehberi.',
         href: '/zamansiz-yasam/beslenme-yaslanma/',
         readingMinutes: 8,
       },
@@ -123,7 +123,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'En sık konuşulan',
         title: 'Vajinal Kuruluk — GSM',
         excerpt:
-          'Postmenopozal kadınların yarısına yakını yaşıyor; isim koymakla başlar. Lokal vs sistemik, kanıt sınırı, günlük bakım.',
+          'Postmenopozal kadınların yarısına yakını yaşıyor; isim koymakla başlar. Lokal ve sistemik seçenekler, kanıt sınırı, günlük bakım.',
         href: '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
         readingMinutes: 7,
       },
@@ -159,14 +159,14 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
         label: 'En sık fark edilen',
         title: 'Menopozda Uykusuzluk',
         excerpt:
-          'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur? Hormonal geçişin içinden geçen bir yaşıt perspektifinden uyku rehberi.',
+          'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur? Bu dönemi yaşayan bir yaşıtın gözünden uyku rehberi.',
         href: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
         readingMinutes: 6,
       },
       {
         step: '02',
         label: 'Gece terlemesi',
-        title: 'Gece Terlemesi — Utancsız',
+        title: 'Gece Terlemesi — Utançsız',
         excerpt:
           'Gece terlemesinin uykuya etkisi ve nazik bir gece düzeni — yargısız bir yaklaşım.',
         href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
@@ -188,7 +188,7 @@ export const hubStartingPaths: Record<string, HubStartingPath> = {
       kicker: 'Bilimsel zemini merak ediyorsanız',
     title: 'Hormonal geçişe bilimin penceresinden bakmak',
     intro:
-      'Hormonların biyolojisinden hücresel yaşlanmaya, bilimin bugün ne biliyor — ne henüz bilmiyor. İki adımlık yol — temel biyoloji, hücresel mekanizma — kanıt disipliniyle başlayan bir okuma.',
+      'Hormonların biyolojisinden hücresel yaşlanmaya: bilimin bugün ne bildiği, neyi henüz bilmediği. İki adımlık yol — temel biyoloji, hücresel mekanizma — kanıt disipliniyle başlayan bir okuma.',
     steps: [
       {
         step: '01',

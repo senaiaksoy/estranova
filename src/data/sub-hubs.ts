@@ -13,21 +13,21 @@ export const subHubs: SubHubConfig[] = [
     path: '/hormonal-gecis/perimenopoz/',
     siteTitle: 'Perimenopoz Rehberi - Hormonal Geçiş - Estranova',
     description:
-      'Perimenopoz nedir, adet ve ruh hali nasıl okunur? Temel rehber, seçilmiş makaleler ve Zihin & Denge bağlantılarıyla hormonal geçişin ilk evresi.',
+      'Perimenopoz nedir, adet düzeni ve ruh hali bu dönemde nasıl değişebilir? Hormonal geçişin ilk evresi için temel rehber ve seçilmiş yazılar.',
     heroEyebrow: 'Hormonal Geçiş · İlk evre',
     heroTitle: 'Perimenopoz: menopoza giden geçiş yolu',
     heroLede:
-      'Üreme çağından menopoza uzanan bu süreçte hormonlar dalgalanır; burada amaç panik değil, neyin ne zaman normal sınırlarda okunabileceğini netleştirmektir.',
+      'Üreme çağından menopoza uzanan bu yıllarda hormonlar dalgalanır. Hangi değişimin olağan sayılabileceğini, hangisinin değerlendirme gerektirdiğini sakin bir dille ayırıyoruz.',
   },
   {
     path: '/hormonal-gecis/menopoza-hazirlik/',
     siteTitle: 'Menopoza Hazırlık - Estranova',
     description:
-      'Geçiş döneminde yaşam düzeni, izleme ve koruyucu adımlar; uyku, hareket ve beslenme başlıklarını birlikte ele alan rehber bağlantıları.',
+      'Geçiş döneminde yaşam düzeni, düzenli izleme ve koruyucu adımlar: uyku, hareket ve beslenmeyi birlikte ele alan rehberler.',
     heroEyebrow: 'Hormonal Geçiş · Menopoza Hazırlık',
     heroTitle: 'Menopoza Hazırlık',
     heroLede:
-      'Hazırlık tek bir liste değil; uyku, hareket, beslenme ve düzenli izleme gibi başlıkların birlikte ele alınmasıdır. Aşağıdaki rehberler bu geçişi daha anlaşılır kılmaya yardımcı olur.',
+      'Hazırlık tek bir kontrol listesiyle bitmez. Küçük alışkanlıklar ve düzenli kontroller birlikte düşünüldüğünde geçiş daha anlaşılır hale gelir.',
   },
   {
     path: '/hormonal-gecis/menopoz/',
@@ -37,7 +37,7 @@ export const subHubs: SubHubConfig[] = [
     heroEyebrow: 'Hormonal Geçiş · Menopoz',
     heroTitle: 'Menopoz',
     heroLede:
-      'Menopoz, son adetten sonra geriye dönük tanımlanan bir dönemdir; östrojen ve progesteron düzeninde kalıcı bir değişim yaşanır. Burada bulacağınız içerikler bu dönemi anlamayı, kendi sorularınıza daha net bir yön bulmayı kolaylaştırmak içindir.',
+      'Menopoz, son adetten sonra geriye dönük tanımlanan ve östrojenle progesteron düzeninin kalıcı olarak değiştiği bir dönemdir. Tanımı tek cümleye sığar; ardından gelen yılların soruları sığmaz.',
   },
   {
     path: '/hormonal-gecis/40-sonrasi/',
@@ -47,7 +47,7 @@ export const subHubs: SubHubConfig[] = [
     heroEyebrow: 'Hormonal Geçiş · 40 Sonrası Sağlık',
     heroTitle: '40 Sonrası Sağlık',
     heroLede:
-      'Kırktan sonra sağlık yalnızca belirti çıktığında bakılan bir alan değil; tarama takvimi, ağız-diş sağlığı, kemik, metabolizma ve günlük ritmin birlikte izlendiği uzun vadeli bir sağlık hattıdır.',
+      'Kırktan sonra sağlığa yalnızca belirti çıktığında bakmak yetmez. Kemik, metabolizma ve ağız sağlığı, hiçbir şikâyet yokken de izlenmeye değer.',
     articlePaths: [
       '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
       '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
@@ -61,11 +61,11 @@ export const subHubs: SubHubConfig[] = [
   {
     path: '/zamansiz-yasam/vitaminler/',
     siteTitle: 'Vitaminler ve Takviyeler - Estranova',
-    description: 'Vitaminler ve seçilmiş takviye başlıklarında kanıt odaklı zamansız yaşam içerikleri.',
+    description: 'D vitamini, magnezyum, kreatin ve seçilmiş takviyeler: menopozda ne işe yarayabilecekleri ve kanıtın nerede durduğu.',
     heroEyebrow: 'Zamansız Yaşam · Vitaminler',
     heroTitle: 'Vitaminler ve Takviyeler',
     heroLede:
-      'Bu alt başlıkta vitaminleri tek bir hap olarak değil, beslenme ve günlük alışkanlıkların bir parçası olarak okuyoruz. D vitamini, magnezyum ve seçilmiş takviye başlıklarını abartıdan ayıran sakin bir okuma ritmi kuruyoruz.',
+      'Vitaminleri tek başına bir hap olarak değil, beslenmenin ve günlük alışkanlıkların parçası olarak ele alıyoruz. Etiketteki iddia ile kanıtın söylediği her zaman aynı değildir.',
     articlePaths: [
       '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
       '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
@@ -76,41 +76,41 @@ export const subHubs: SubHubConfig[] = [
     path: '/zamansiz-yasam/deneysel/',
     siteTitle: 'Deneysel Yaklaşımlar - Estranova',
     description:
-      'Araştırma aşamasındaki yaklaşımlar hakkında kanıt düzeyiyle değerlendirilmiş zamansız yaşam içerikleri.',
+      'Henüz araştırma aşamasındaki yaklaşımlar: insanlarda ne kadar denendikleri ve kanıtın hangi düzeyde olduğu.',
     heroEyebrow: 'Zamansız Yaşam · Deneysel',
     heroTitle: 'Deneysel Yaklaşımlar',
     heroLede:
-      '“Deneysel” etiketi, bir yaklaşımın henüz herkes için standart öneri olmadığını hatırlatır. Bu sayfadaki içerikler güçlü kanıt ile sınırlı kanıt arasındaki farkı okumaya yardımcı olur.',
+      '“Deneysel” etiketi, bir yaklaşımın henüz herkes için standart öneri olmadığını hatırlatır. Umut verici bir laboratuvar bulgusuyla insanda gösterilmiş bir yarar arasındaki mesafe çoğu zaman sanıldığından uzundur.',
   },
   {
     path: '/zamansiz-yasam/non-invaziv/',
     siteTitle: 'Ameliyatsız Uygulamalar - Estranova',
     description:
-      'Cerrahi olmayan yaklaşımlar üzerine bağımsız editöryal içerikler; cilt, beden ve günlük iyi olma başlıklarında rehberler.',
+      'Ameliyat gerektirmeyen yaklaşımlar üzerine bağımsız editoryal rehberler: cilt, beden ve gündelik iyi oluş.',
     heroEyebrow: 'Zamansız Yaşam · Ameliyatsız',
     heroTitle: 'Ameliyatsız Uygulamalar',
     heroLede:
-      'Bu alt başlık altında ameliyat veya enjeksiyon gerektirmeyen yaklaşımları editöryal bir bakışla ele alıyoruz. Genel rehber yayında; başka başlıklar editoryal takvimde.',
+      'Ameliyat ya da enjeksiyon gerektirmeyen yaklaşımlar: cihaz uygulamalarından sauna ve soğuk suya, hangisinin ne kadar kanıta dayandığını ayırarak ele alıyoruz.',
   },
   {
     path: '/beden-yakinlik/cilt-gorunum/',
     siteTitle: 'Cilt & Görünüm - Beden & Yakınlık - Estranova',
     description:
-      'Menopozda cildin hormonal yaşlanması ve günlük bakım rehberi; kollajen, nem, bariyer ve klinik destek seçenekleri sade bir okuma.',
+      'Menopozda cildin hormonal yaşlanması ve günlük bakım: kollajen, nem, cilt bariyeri ve klinik destek seçenekleri üzerine sade rehberler.',
     heroEyebrow: 'Hormonun cilde dokunduğu yer',
     heroTitle: 'Cilt & Görünüm',
     heroLede:
-      'Menopozda cilt iki cephede değişir: hormonal, kollajen, elastin, nem ve biyolojik yaşlanma. Burada görünüm odaklı klişeyi değil, cildin kendi sağlığını desteklemenin sade yollarını buluyorsunuz.',
+      'Menopozda cilt iki yönden değişir: hormonal değişim kollajeni, elastini ve nemi etkiler; biyolojik yaşlanma da kendi hızında sürer. Odak, görünüm klişeleri yerine cildin kendi sağlığı ve sade bakım yollarıdır.',
   },
   {
     path: '/beden-yakinlik/cinsel-saglik/',
     siteTitle: 'Cinsel Sağlık - Beden & Yakınlık - Estranova',
     description:
-      'Vajinal kuruluk, cinsellikte ağrı ve libido değişimleri; menopozda en sessiz yaşanan başlıklara mahremiyetinizi yargılamayan bir okuma rehberi.',
+      'Vajinal kuruluk, cinsellikte ağrı ve libido değişimleri: menopozun en sessiz yaşanan konularına mahremiyetinize saygı duyan, yargısız bir rehber.',
     heroEyebrow: 'Beden & Yakınlık · Cinsel Sağlık',
     heroTitle: 'Cinsel Sağlık',
     heroLede:
-      'Vajinal kuruluk, cinsellikte ağrı, libido değişimleri; menopozda en az konuşulan ama en sık aranan başlıklar. Konuşulmaması, çözümsüz olması anlamına gelmez.',
+      'Bu konular nadiren yüksek sesle sorulur. Konuşulmamaları, çözümsüz oldukları anlamına gelmez.',
   },
   {
     path: '/beden-yakinlik/pelvik-taban/',
@@ -120,67 +120,67 @@ export const subHubs: SubHubConfig[] = [
     heroEyebrow: 'Sessiz çalışan kaslar',
     heroTitle: 'Pelvik Taban',
     heroLede:
-      'İdrar kontrolünde değişimler menopozda yaygın ama sessizce yaşanır. Pelvik taban; cinsel yaşam, duruş ve günlük rahatlık aynı sistemden geçer.',
+      'İdrar kontrolündeki değişimler menopozda yaygındır ama çoğu zaman sessizce yaşanır. Pelvik taban cinsel yaşamla, duruşla ve gün içindeki rahatlıkla da yakından ilişkilidir.',
   },
   {
     path: '/zihin-denge/uyku-dinlenme/',
     siteTitle: 'Uyku & Dinlenme - Zihin & Denge - Estranova',
     description:
-      'Menopozda uykunun neden zorlaştığı ve nasıl desteklenebileceği üzerine sade bir okuma rehberi; gece terlemesi, uyku bölünmesi ve dinlenme kalitesi.',
+      'Menopozda uyku neden zorlaşır, nasıl desteklenebilir? Gece terlemesi, bölünen uyku ve dinlenme kalitesi üzerine sade rehberler.',
     heroEyebrow: 'Gecenin ortasında uyanan kadın',
     heroTitle: 'Uyku & Dinlenme',
     heroLede:
-      'Menopozda uyku, çoğu zaman tek seferde kaybedilmez; her gece bir parçası eksilir. Önce ter, sonra düşünceler, sonra saat üçte tavana bakan o tuhaf uyanıklık.',
+      'Menopozda uyku çoğu zaman birkaç küçük kesintiyle bozulur. Önce ter, sonra düşünceler, sonra saat üçte tavana baktığınız o tuhaf uyanıklık.',
   },
   {
     path: '/zihin-denge/duygusal-denge/',
     siteTitle: 'Duygusal Denge - Zihin & Denge - Estranova',
     description:
-      'Menopozda ruh halinde dalgalanma, kaygı ve stres tepkisi; hormonların beyin kimyasıyla konuştuğu noktada mekanizma ve günlük yaşam stratejileri.',
+      'Menopozda ruh hali dalgalanmaları, kaygı ve stres tepkisi: hormonların beyin kimyasıyla ilişkisi ve gündelik hayatta işe yarayabilecek yollar.',
     heroEyebrow: 'İçerideki manzara',
     heroTitle: 'Duygusal Denge',
     heroLede:
-      'Ruh halinde dalgalanma, ani sinirlenme, kaygının artması; menopoz hormonları beyin kimyasıyla doğrudan konuşur. Bu sayfa hem mekanizmayı hem günlük stratejileri bir arada ele alır.',
+      'Ani sinirlenme, artan kaygı, gün içinde değişen ruh hali: menopozda değişen hormonlar beyin kimyasını doğrudan etkiler. Mekanizmayı bilmek, kendinize daha anlayışlı bakmayı kolaylaştırabilir.',
   },
   {
     path: '/zihin-denge/bilissel-saglik/',
     siteTitle: 'Bilişsel Sağlık - Zihin & Denge - Estranova',
     description:
-      'Menopozda beyin sisi, unutkanlık ve dikkat dağılması; ne kadarı normal seyir, ne kadarı izlenmeyi gerektirir? Bilişsel değişimleri okuma rehberi.',
+      'Menopozda beyin sisi, unutkanlık ve dikkat dağınıklığı: hangisi olağan seyrin parçası, hangisi izlenmeli?',
     heroEyebrow: 'Sınıflama yorgunluğu',
     heroTitle: 'Bilişsel Sağlık',
     heroLede:
-      'Beyin sisi, kelimeyi unutma, dikkat dağılması; menopozda “aklımı kaçırıyorum” hissi yaygın ama çoğu zaman geçicidir. Burada ne kadarı normal, ne kadarı dikkat ister yanıtları.',
+      'Aradığınız kelime dilinizin ucunda kalır, odaya neden girdiğinizi unutursunuz. Menopozda bu “aklımı kaçırıyorum” hissi yaygındır ama çoğu zaman geçicidir.',
   },
   {
     path: '/bilimsel-pencere/hormonlarin-bilimi/',
     siteTitle: 'Hormonların Bilimi - Bilimsel Pencere - Estranova',
     description:
-      'Östrojen, progesteron ve testosteronun temel mekanizmaları; vücudun her dokusuyla nasıl konuştuklarını sade bir dille açıklayan derlemeler.',
-    heroEyebrow: 'Bedenin sessiz dili',
+      'Östrojen, progesteron ve testosteronun temel mekanizmaları: farklı dokuları nasıl etkilediklerini sade bir dille açıklayan derlemeler.',
+    heroEyebrow: 'Haberci moleküller',
     heroTitle: 'Hormonların Bilimi',
     heroLede:
-      'Östrojen yalnızca bir üreme hormonu değildir; beyni, damarı, kemiği, cildi aynı anda dinleyen geniş bir orkestra şefidir. Onun çekilmesi bedeni tek bir noktadan değil, eş zamanlı olarak pek çok yerden değiştirir.',
+      'Östrojen yalnızca bir üreme hormonu değildir; beyinden damarlara, kemikten cilde kadar pek çok dokuda iş görür. Bu yüzden azaldığında değişim tek bir organla sınırlı kalmaz.',
   },
   {
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/',
     siteTitle: 'Hücreler ve Yaşlanma - Bilimsel Pencere - Estranova',
     description:
-      'NAD+, mitokondri, senesans ve telomer; hücresel yaşlanma biyolojisi için derlemeler ve erken evre insan araştırmalarının kanıt düzeyleri.',
+      'NAD+, mitokondri, senesans ve telomer: hücresel yaşlanma biyolojisi üzerine derlemeler ve erken evre insan araştırmalarında kanıtın düzeyi.',
     heroEyebrow: 'Onarımın yavaşladığı yer',
     heroTitle: 'Hücreler ve Yaşlanma',
     heroLede:
-      'NAD+, mitokondri, senesans, telomer; yaşlanma biyolojisinin son 20 yılda fişeklenen alanı. Hangi araştırma erken evre, hangi vaat henüz vaadinde, hangi uygulama bilime girmiş?',
+      'Hücresel yaşlanma, son 20 yılda biyolojinin en hızlı büyüyen alanlarından biri oldu. Hangi bulgu hâlâ erken evrede, hangi iddia henüz vaat düzeyinde, hangisi gerçekten kanıta dayanıyor?',
   },
   {
     path: '/bilimsel-pencere/yeni-arastirmalar/',
     siteTitle: 'Yeni Araştırmalar - Bilimsel Pencere - Estranova',
     description:
-      'Editoryal kuruldaki yeni çalışma derlemeleri ve meta-analizler için ayrılmış alan; menopoz ve 40+ kadın sağlığı literatüründen seçilmiş özetler.',
+      'Menopoz ve 40+ kadın sağlığı literatüründen seçilmiş yeni çalışmalar ve meta-analizler: bulgunun ne söylediği, neyi henüz söylemediği.',
     heroEyebrow: 'Daha iyi sorular',
     heroTitle: 'Yeni Araştırmalar',
     heroLede:
-      'Editoryal kuruldaki yeni çalışma derlemeleri ve meta-analizler için ayrılmış alan. Bilim, yanıt biriktirir; ama önce daha iyi sorular geliştirir.',
+      'Yeni bir çalışma manşete çıktığında sorulacak ilk şey, kimlerde neyi ve ne kadar süre ölçtüğüdür. Buradaki yazılar bulguyu bu sorularla okur.',
   },
 ];
 

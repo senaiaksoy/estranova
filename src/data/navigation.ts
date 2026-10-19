@@ -28,7 +28,7 @@ export const mainNav: NavLink[] = [
     label: 'Hormonal geçiş rehberi',
     children: [
       { name: 'Perimenopoz', href: '/hormonal-gecis/perimenopoz/' },
-      { name: 'Menopoza hazırlık', href: '/hormonal-gecis/menopoza-hazirlik/' },
+      { name: 'Menopoza Hazırlık', href: '/hormonal-gecis/menopoza-hazirlik/' },
       { name: 'Menopoz', href: '/hormonal-gecis/menopoz/' },
       { name: '40 Sonrası Sağlık', href: '/hormonal-gecis/40-sonrasi/' },
     ],
@@ -39,7 +39,7 @@ export const mainNav: NavLink[] = [
     label: 'Zamansız yaşam içerikleri',
     children: [
       { name: 'Vitaminler', href: '/zamansiz-yasam/vitaminler/' },
-      { name: 'Deneysel yaklaşımlar', href: '/zamansiz-yasam/deneysel/' },
+      { name: 'Deneysel Yaklaşımlar', href: '/zamansiz-yasam/deneysel/' },
       { name: 'Ameliyatsız', href: '/zamansiz-yasam/non-invaziv/' },
     ],
   },

@@ -17,9 +17,9 @@ export const homeJourneyIntro = {
   sectionLabel: 'Yolculuk Haritası',
   title: 'Hormonal geçiş için ilk okuma eşiği',
   lede:
-    'Döneminizi kabaca biliyorsanız bu dört kapıdan başlayın. Emin değilseniz bir alttaki belirti atlası daha iyi bir giriş sunar.',
+    'Hangi dönemde olduğunuzu kabaca biliyorsanız bu dört kapıdan birini seçin.',
   transitionNote:
-    'Belirti daha baskın görünüyorsa bir sonraki atlas daha doğru başlangıç olabilir.',
+    'Sizi bir dönemden çok bir belirti düşündürüyorsa, sıradaki belirti atlası daha iyi bir başlangıç olabilir.',
 };
 
 export const homeJourneyItems: HomeJourneyItem[] = [
@@ -28,7 +28,7 @@ export const homeJourneyItems: HomeJourneyItem[] = [
     eyebrow: 'Koruyucu yaklaşım',
     title: '40 Sonrası Sağlık',
     excerpt:
-      'Kemik, kas, uyku ve tarama başlıklarını tek dosyada okuyun; amaç görev listesi değil, sakin bir sağlık hattı.',
+      'Kemik, kas, uyku ve tarama başlıkları tek dosyada; uzun vadeli sağlığı bütün olarak düşünmek için.',
     href: '/hormonal-gecis/40-sonrasi/',
     imageKey: '/hormonal-gecis/40-sonrasi/',
     ctaLabel: 'İçeriği incele',
@@ -39,7 +39,7 @@ export const homeJourneyItems: HomeJourneyItem[] = [
     eyebrow: 'İlk kapı',
     title: 'Perimenopoz',
     excerpt:
-      'Adet düzeni değişmeye başladığında vücudunuzun neyi sessizce anlattığını birlikte okumak için sakin bir başlangıç rehberi.',
+      'Adet düzeni değişmeye başladığında neler olup bittiğini sırasıyla anlatan bir başlangıç rehberi.',
     href: '/hormonal-gecis/perimenopoz/',
     imageKey: '/hormonal-gecis/perimenopoz/',
     ctaLabel: 'Rotayı aç',
@@ -49,7 +49,7 @@ export const homeJourneyItems: HomeJourneyItem[] = [
     eyebrow: 'Geçişi anlamak',
     title: 'Menopoza Hazırlık',
     excerpt:
-      'Geçişe adım adım ısınırken günlük düzeninizi, takibinizi ve koruyucu alışkanlıklarınızı sabırla kurabilirsiniz.',
+      'Geçiş yaklaşırken günlük düzeninizi, takibinizi ve koruyucu alışkanlıklarınızı adım adım kurmak için.',
     href: '/hormonal-gecis/menopoza-hazirlik/',
     imageKey: '/hormonal-gecis/menopoza-hazirlik/',
     ctaLabel: 'Rotayı aç',
@@ -59,7 +59,7 @@ export const homeJourneyItems: HomeJourneyItem[] = [
     eyebrow: 'Ana dönem',
     title: 'Menopoz',
     excerpt:
-      'Sık karşılaştığımız belirtileri tanımanız ve günlük yaşamınızı biraz daha yumuşatmanız için sade bir rehber.',
+      'Bu dönemde sık görülen belirtileri tanımak ve gündelik hayatı biraz kolaylaştırmak için sade bir rehber.',
     href: '/hormonal-gecis/menopoz/',
     imageKey: '/hormonal-gecis/menopoz/',
     ctaLabel: 'Rotayı aç',

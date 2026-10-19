@@ -64,10 +64,10 @@ export const dossiers: MonthlyDossier[] = [
       'Tartının sesi kısıldığında vücut kompozisyonu, iştah, metabolizma ve beden algısı daha görünür hâle geliyor. Bu ay dört yazı, kilo konusunu diyet kültürünün yargısından uzak ve utandırmadan konuşuyor.',
     curatorSlug: 'berna-aksoy',
     editorNote:
-      'Yaz aylarında beden daha görünür olduğunda tartının sesi de yükselebiliyor. Oysa rakam aynı kalsa bile kas-yağ dengesi, kıyafetin oturuşu, iştah sinyalleri ve aynaya bakarken kurduğumuz cümle değişebiliyor. Bu dosya, ölçüyü tek otorite yapmadan geride kalan sorulara alan açıyor.\n\nDört yazı boyunca aynı konuya farklı kapılardan bakıyoruz: Estranova Editörleri vücut kompozisyonundaki sessiz değişimi ve menopozda kilo artışını iki ayrı yaklaşımla ele alıyor; Dr. Metin Alış GLP-1 eksenini iştah ve metabolizma üzerinden açıklıyor; Başak Pelister ise ölçü paniğinin beden algısındaki karşılığını yaşıt sesiyle açıyor.',
+      'Yaz aylarında beden daha görünür olduğunda tartının sesi de yükselebiliyor. Oysa rakam aynı kalsa bile kas-yağ dengesi, kıyafetin oturuşu, iştah sinyalleri ve insanın aynaya bakarken kurduğu cümle değişebiliyor. Bu dosya, ölçüyü tek otorite yapmadan rakamın cevaplamadığı soruları konuşuyor.\n\nDört yazı aynı konuya farklı yerlerden bakıyor: Estranova Editörleri vücut kompozisyonundaki sessiz değişimi ve menopozda kilo artışını iki ayrı yaklaşımla ele alıyor; Dr. Metin Alış GLP-1 eksenini iştah ve metabolizma üzerinden açıklıyor; Başak Pelister ise ölçü paniğinin beden algısındaki karşılığını yaşıt sesiyle açıyor.',
     heroImage: {
       src: '/images/library/editorial/pair-window-cafe-reflection.webp',
-      alt: 'Pencere kenarında sakin bir sohbeti paylaşan iki yaşıt kadın; tartı, vücut kompozisyonu ve beden algısını yargısız konuşma teması',
+      alt: 'Pencere kenarında oturmuş, sakin bir sohbeti paylaşan iki yaşıt kadın',
     },
     articles: [
       {
@@ -91,7 +91,7 @@ export const dossiers: MonthlyDossier[] = [
       {
         title: "GLP-1, İştah ve Metabolizma: Menopoz Yıllarında Neyi Değiştiriyor?",
         excerpt:
-          'GLP-1 eksenini bir kilo sloganına indirmeden; iştah sinyalleri, metabolik sağlık ve kuşak farkları üzerinden açıklayan klinik yaklaşım.',
+          'GLP-1 eksenini bir kilo sloganına indirmeden, iştah sinyalleri, metabolik sağlık ve kuşak farkları üzerinden açıklayan klinik yaklaşım.',
         writerSlug: 'metin-alis',
         status: 'published',
         href: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
@@ -116,19 +116,19 @@ export const dossiers: MonthlyDossier[] = [
     kicker: 'MAYIS 2026 · DOSYA',
     title: 'Uyuyamadığımız Geceler',
     subtitle: 'Perimenopozda uykunun değişen yanı',
-    lede: 'Perimenopozun en sessiz belirtisi belki de uyku. Bu ay üç yazı, uykunun neden değiştiğini, gece terlemesinin mahrem yanını ve akşam hareketinin toparlayıcı gücünü yan yana koyuyor.',
+    lede: 'Saat üçte açılan gözler, nemli çarşaflar, sabah gelmeyen dinlenmişlik hissi. Bu ay üç yazı, perimenopozda uykunun neden değiştiğini, gece terlemesinin mahrem yanını ve akşam hareketinin uykuyla ilişkisini yan yana koyuyor.',
     curatorSlug: 'isik-selin-gunce',
     editorNote:
   'Bir gece bir saat erken yatıyoruz, ertesi sabah daha yorgun kalkıyoruz. Saat üçte gözümüzü açıyoruz, sonra uyumayı beceremiyoruz. Bu dosyayı hazırlarken hep aynı cümleyi duydum: "Eskiden böyle değildi." Doğru — eskiden değildi. Şimdi başka bir şey oluyor; ama panik yapmadan, adım adım bakılabilir bir şey.\n\nÜç yazı boyunca uykuyu üç kapıdan açıyoruz: Berna Aksoy hormonal zemini ve uyku mimarisini kuruyor; Doç. Dr. Senai Aksoy gece terlemesinin mahrem ama konuşulabilir yanını açıyor; Alara Baykent akşam hareketini performans baskısı değil, geceye geçiş ritüeli olarak okuyor. Hiçbiri tek başına çözüm değil; ama yan yana geldiklerinde bir gece bir adımı denemek kolaylaşıyor.',
     heroImage: {
       src: '/images/library/editorial/zd-uyku-bozuklugu.webp',
-      alt: 'Şafak ışığında yatak kenarında oturmuş pencereye bakan kadın; uyku, perimenopoz ve dinlenme teması',
+      alt: 'Şafak ışığında yatak kenarında oturup pencereye bakan bir kadın',
     },
     articles: [
       {
         title: 'Perimenopozda uykunun gerçekten değişen yanı',
         excerpt:
-          'Genel resim: hangi hormonal dalga uykunun hangi evresine dokunuyor, ve hangi değişimler "geçici", hangileri kalıcı bir düzen kuruyor.',
+          'Hangi hormonal dalgalanma uykunun hangi evresine dokunuyor? Hangi değişimler geçici, hangileri kalıcı bir düzene dönüşüyor?',
         writerSlug: 'berna-aksoy',
         status: 'published',
         href: '/zihin-denge/uyku-dinlenme/perimenopoz-uyku-degisen-yan/',
@@ -137,7 +137,7 @@ export const dossiers: MonthlyDossier[] = [
       {
         title: 'Gece terlemesi ve uyku: utançsız bakış',
         excerpt:
-          'Konuşulması zor ama herkesin yaşadığı bir an: gece yarısı uyanma, çarşafı değiştirme, sessizce yeniden uyumayı deneme. Mahrem yan, jargonsuz.',
+          'Konuşulması zor ama birçok kadının yaşadığı bir an: gece yarısı uyanmak, çarşafı değiştirmek, sessizce yeniden uyumayı denemek. Mahrem yanıyla, jargonsuz.',
         writerSlug: 'senai-aksoy',
         status: 'published',
         href: '/zihin-denge/uyku-dinlenme/gece-terlemesi-uyku-utancsiz/',
@@ -146,7 +146,7 @@ export const dossiers: MonthlyDossier[] = [
       {
         title: 'Akşam hareketi uykuyu bozar mı, toparlar mı?',
         excerpt:
-          'Sporcu beden okumasıyla akşam egzersizi, melatonin ve beden ısısı ilişkisi: performans baskısı değil, geceye geçiş ritüeli.',
+          'Akşam egzersizi, melatonin ve beden ısısı arasındaki ilişkiye bir sporcunun gözüyle bakış; hareket burada geceye geçişin bir parçası.',
         writerSlug: 'alara-baykent',
         status: 'published',
         href: '/zihin-denge/uyku-dinlenme/aksam-hareketi-uyku-melatonin/',
@@ -169,7 +169,7 @@ export const dossiers: MonthlyDossier[] = [
       "Güç kelimesi bazen sert gelir: daha çok çalışmak, daha çok sıkmak, daha çok dayanmak. Oysa 40'tan sonra iyi soru çoğu zaman bu değil. İyi soru şu: hangi kas günlük hayatı daha rahat taşır, hangi eklem sessizce yardım ister, hangi kemik kaybı henüz görünmeden konuşulmalı, hangi yorgunluk yalnızca tembellik sanılmamalı?\n\nBu dosyada gücü tek bir egzersiz başlığına sıkıştırmıyoruz. Anıl Yalmaz hareketin başlangıç haritasını kuruyor; Prof. Dr. Bülent Aksoy kemiği ve kırık riskini daha erken konuşmaya çağırıyor; Fzt. Ersin Saraç dengeyi ayak-kalça-gövde hattında okuyor; Dr. Metin Alış yorgunluğu tiroid, metabolizma ve kas ekseninde ayırıyor; Alara Baykent yaz başlarken bedeni uyandırmayı performans değil devamlılık olarak ele alıyor; Başak Pelister ise gücü çanta, merdiven, anne-kız sohbeti ve kendi küçük itiraflarıyla daha kişisel bir yerden okuyor.",
     heroImage: {
       src: '/images/library/editorial/zy-hareket-saglik.webp',
-      alt: "40 sonrası hareket ve güçlenme temasını taşıyan sakin editoryal sahne; bedeni zorlamadan yeniden kurma hissi",
+      alt: "Ağaçlıklı bir parkta, yürüyüş yolunun kenarında hafifçe gülümseyerek yere bakan bej kazaklı bir kadın",
     },
     articles: [
       {
@@ -184,7 +184,7 @@ export const dossiers: MonthlyDossier[] = [
       {
         title: 'Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular',
         excerpt:
-          'Kemik sağlığı bir rapor satırından ibaret değil; düşme riski, aile öyküsü, D vitamini, direnç egzersizi ve izlem ritmi de konuşmaya katılıyor.',
+          'Kemik sağlığı konuşulurken rapordaki tek satırın yanına düşme riski, aile öyküsü, D vitamini, direnç egzersizi ve izlem sıklığı da ekleniyor.',
         writerSlug: 'bulent-aksoy',
         status: 'published',
         href: '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
@@ -211,7 +211,7 @@ export const dossiers: MonthlyDossier[] = [
       {
         title: 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık',
         excerpt:
-          'Mevsim değişirken hareketi hedef baskısı gibi değil, bedene yeniden ritim kazandıran sürdürülebilir bir hazırlık gibi düşünmek.',
+          'Mevsim değişirken hareketi bir hedef baskısına çevirmeden, bedene yeniden ritim kazandıran sürdürülebilir bir hazırlık olarak düşünmek.',
         writerSlug: 'alara-baykent',
         status: 'published',
         href: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
@@ -220,7 +220,7 @@ export const dossiers: MonthlyDossier[] = [
       {
         title: 'Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır',
         excerpt:
-          'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini spor cümlelerinden değil; çanta, merdiven ve anne-kız sohbeti içinden yeniden okuyor.',
+          'Başak Pelister, dokuz yıllık menopoz deneyiminden sonra güç fikrini spor cümlelerinin dışında, çanta, merdiven ve anne-kız sohbeti üzerinden yeniden düşünüyor.',
         writerSlug: 'basak-pelister',
         status: 'published',
         href: '/hormonal-gecis/menopoz/guc-cantayi-daha-hafif-hazirlamak/',

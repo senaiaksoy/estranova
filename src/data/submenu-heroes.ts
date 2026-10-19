@@ -100,7 +100,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/zamansiz-yasam/deneysel/': {
     src: '/images/library/editorial/zy-deneysel.webp',
-    alt: 'Seramik atölyesinde çömlekçi çarkında bir kap şekillendiren olgun kadın',
+    alt: 'Seramik atölyesinde çömlekçi çarkında bir kap şekillendiren olgun bir kadın.',
   },
   '/zamansiz-yasam/kilo-artisi-menopoz/': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',
@@ -116,11 +116,11 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/cilt-gorunum/': {
     src: '/images/library/editorial/by-cilt-degisimleri.webp',
-    alt: 'Menopozda cilt değişimleri temasını sakin, doğal ve premium editoryal bir bakım sahnesiyle taşıyan 45-55 yaş arası kadınlar',
+    alt: 'Krem rengi saten sabahlıklarla mermer bir tuvalet masasının aynası önünde iki kadın; biri yanağına dokunuyor, diğeri saçını düzeltiyor.',
   },
   '/beden-yakinlik/cinsel-saglik/': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
-    alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su ve katlı pamuklu bez; cinsel sağlık ve özenli bakım teması',
+    alt: 'Sabah ışığında keten örtü üzerinde şakayık, bir bardak su ve katlı pamuklu bez.',
   },
   '/beden-yakinlik/pelvik-taban/': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
@@ -192,11 +192,11 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/bilimsel-pencere/hucreler-ve-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
-    alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
+    alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor.',
   },
   '/bilimsel-pencere/yeni-arastirmalar/': {
     src: '/images/heroes/bilimsel-pencere.webp',
-    alt: 'Akademik çalışma odasında bilimsel kitap üzerine eğilmiş kadın; yeni araştırma derlemeleri teması',
+    alt: 'Kitaplarla dolu bir çalışma odasında, biri deri koltukta açık bir kitap tutan, diğeri elinde fincanla masaya yaslanan iki kadın.',
   },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',

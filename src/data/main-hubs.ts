@@ -12,31 +12,31 @@ export const mainHubs: MainHubConfig[] = [
     path: '/hormonal-gecis/',
     siteTitle: 'Hormonal Geçiş - Estranova',
     description:
-      'Perimenopozdan menopoza, hormonal geçiş sürecinizi anlamak için kapsamlı bilgi rehberleri. Bu bölümde geçiş dönemlerini adım adım inceleyebilir, her evreye dair sorulara sade ve dengeli bir yoldan ulaşabilirsiniz.',
+      'Perimenopozdan menopoza ve sonrasına, hormonal geçişin her evresi için sade ve dengeli rehberler. Hangi değişimin hangi döneme ait olduğunu adım adım izleyebilir, sorularınızın yanıtını evresine göre bulabilirsiniz.',
     heroEyebrow: 'Kategori',
     heroTitle: 'Hormonal Geçiş',
     heroLede:
-      'Perimenopozdan menopoza, hormonal geçiş sürecinizi anlamak için kapsamlı bilgi rehberleri. Bu bölümde geçiş dönemlerini adım adım inceleyebilir, her evreye dair sorulara sade ve dengeli bir yoldan ulaşabilirsiniz.',
+      'Hormonal geçiş yıllara yayılır ve her kadında farklı bir tempoda ilerler.',
   },
   {
     path: '/zamansiz-yasam/',
     siteTitle: 'Zamansız Yaşam - Estranova',
     description:
-      'Dinamik ve enerjik yaşlanmak için bilimsel bilgi. Vitaminlerden deneysel yaklaşımlara, kanıt düzeyiyle değerlendirilmiş içerikler. Bu bölüm, anti-aging ve longevity başlıklarını sade bir yerde toplar.',
+      'Vitaminlerden deneysel yaklaşımlara, iyi yaşlanma ve uzun ömür üzerine kanıt düzeyiyle değerlendirilmiş içerikler. Popüler iddiaları, araştırmanın gerçekte söyledikleriyle yan yana koyuyoruz.',
     heroEyebrow: 'Kategori',
     heroTitle: 'Zamansız Yaşam',
     heroLede:
-      'Dinamik ve enerjik yaşlanmak için bilimsel bilgi. Vitaminlerden deneysel yaklaşımlara, kanıt düzeyiyle değerlendirilmiş içerikler. Bu bölüm, anti-aging ve longevity başlıklarını sade bir yerde toplar.',
+      'Enerjik yaşlanmanın kısayolu yok; ama hangi yolun kanıtla desteklendiğini bilmek işe yarar.',
   },
   {
     path: '/beden-yakinlik/',
     siteTitle: 'Beden & Yakınlık - Estranova',
     description:
-      'Menopoz döneminde bedeniniz, cinsel sağlığınız ve cinsel yaşamınız hakkında bilimsel bilgi ve rehberlik. Bu bölüm, değişen beden deneyimini yargılamadan ele alır.',
+      'Menopozda cildiniz, pelvik tabanınız ve cinsel yaşamınızdaki değişimler üzerine bilimsel bilgi ve rehberlik. Değişen beden deneyimini yargılamadan, açık bir dille ele alıyoruz.',
     heroEyebrow: 'Kategori',
     heroTitle: 'Beden & Yakınlık',
     heroLede:
-      'Menopoz döneminde bedeniniz, cinsel sağlığınız ve cinsel yaşamınız hakkında bilimsel bilgi ve rehberlik. Bu bölüm, değişen beden deneyimini yargılamadan ele alır.',
+      'Bedeninizdeki değişimlerin bir adı ve bir açıklaması var; hepsi açıkça konuşulabilir.',
   },
   {
     path: '/zihin-denge/',
@@ -46,7 +46,7 @@ export const mainHubs: MainHubConfig[] = [
     heroEyebrow: 'Kategori',
     heroTitle: 'Zihin & Denge',
     heroLede:
-      'Hormonal değişimlerin zihinsel ve duygusal etkilerini anlamak, uyku ve ruh halini desteklemek için bilimsel rehberlik. Günlük dalgalanmaları sade bir dille ele alırız.',
+      'Bölünen uyku, gün içinde dalgalanan ruh hali, dağılan dikkat: hepsinin hormonlarla bir bağı olabilir.',
   },
   {
     path: '/bilimsel-pencere/',
@@ -56,7 +56,7 @@ export const mainHubs: MainHubConfig[] = [
     heroEyebrow: 'Kategori',
     heroTitle: 'Bilimsel Pencere',
     heroLede:
-      'Uzman görüşleri, güncel araştırma özetleri ve mitlerin bilimle karşılaştırılması. Tıbbi veriyi erişilebilir bir dille sunarız.',
+      'Mekanizmadan yeni çalışmalara, tıbbi bilginin arka planına açılan bir pencere.',
   },
 ];
 

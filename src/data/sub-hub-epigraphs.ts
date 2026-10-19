@@ -9,35 +9,35 @@
 
 export const subHubEpigraphs: Record<string, string> = {
   // Hub girişleri
-  '/hormonal-gecis/': 'Hormonal geçiş bir kayıp hikâyesi değil, yeniden ölçek alma hikâyesidir.',
-  '/zamansiz-yasam/': 'Yaşlanmamak değil iyi yaşlanmak; uzaktaki büyük cümle değil, bugünkü küçük doğru.',
-  '/beden-yakinlik/': 'Beden, hakkında konuştuğumuzda iyileşmeye başlar.',
+  '/hormonal-gecis/': 'Geçiş, yıllardır giydiğiniz bir kıyafetin ölçüsünü yeniden almaya benzer.',
+  '/zamansiz-yasam/': 'İyi yaşlanmak, büyük vaatlerden çok küçük ve tekrarlanan doğrulardan beslenir.',
+  '/beden-yakinlik/': 'Merak, utançtan daha iyi bir yol arkadaşıdır.',
   '/zihin-denge/': 'Zihin de bir doku gibidir; uykuyla, ışıkla ve sözle beslenir.',
-  '/bilimsel-pencere/': 'Bilimi sevmek, kesinlik değil; iyi soru sormayı sevmektir.',
+  '/bilimsel-pencere/': 'Bir bulgu, sınırlarıyla birlikte okunduğunda anlam kazanır.',
 
   // Hormonal Geçiş alt-hub'ları
-  '/hormonal-gecis/perimenopoz/': 'Geçiş bir sayfa değil, gizlice sahaya inen bir dönüştür.',
-  '/hormonal-gecis/menopoza-hazirlik/': 'Hazırlık, kaybı azaltmak için değil, gelmekte olanı tanımak içindir.',
-  '/hormonal-gecis/menopoz/': 'Menopoz bir son değil, bedenin uzun bir cümleyi yeniden noktalama anıdır.',
+  '/hormonal-gecis/perimenopoz/': 'Perimenopoz çoğu zaman kapıyı çalmadan gelir; fark ettiğinizde bir süredir buradadır.',
+  '/hormonal-gecis/menopoza-hazirlik/': 'Hazırlanmak, gelmekte olanı önceden tanımaktır.',
+  '/hormonal-gecis/menopoz/': 'Son adet bir tarihtir; ondan sonraki yıllar uzun ve sizindir.',
   '/hormonal-gecis/40-sonrasi/': 'Kırktan sonra zaman çoğalır; daha az gürültülü, daha geniş soluklu.',
 
   // Zamansız Yaşam
   '/zamansiz-yasam/vitaminler/': 'Tabak, hapın söyleyemediği şeyleri söyler.',
-  '/zamansiz-yasam/deneysel/': 'Bilim ne öğrendiğini değil, ne öğrenmediğini de söylemelidir.',
-  '/zamansiz-yasam/non-invaziv/': 'Bedeni dinlemek, ona dokunmadan da mümkündür.',
+  '/zamansiz-yasam/deneysel/': 'İyi bilim, ne öğrendiğini söylerken ne öğrenmediğini de saklamaz.',
+  '/zamansiz-yasam/non-invaziv/': 'Her değişim neşter istemez; bazen ilk adım daha az müdahaleyle atılır.',
 
   // Beden & Yakınlık
-  '/beden-yakinlik/cilt-gorunum/': 'Cilt yaşlanmaz; kendi biyografisini taşır.',
+  '/beden-yakinlik/cilt-gorunum/': 'Cilt, yılların kaydını herkesin görebileceği yerde tutar.',
   '/beden-yakinlik/cinsel-saglik/': 'Bedenin geri çekildiği yer, çoğu zaman cümlelerin de çekildiği yerdir.',
-  '/beden-yakinlik/pelvik-taban/': 'Bedenin sessizce çalışan kasları, sessizliği bırakınca konuşur.',
+  '/beden-yakinlik/pelvik-taban/': 'Pelvik taban kaslarının adını çoğu zaman ancak bir şey değiştiğinde duyarsınız.',
 
   // Zihin & Denge
   '/zihin-denge/uyku-dinlenme/': 'Uyku önce gürültüyle değil, sessiz bir aşınmayla kaybedilir.',
-  '/zihin-denge/duygusal-denge/': 'Hormon dalgaları kıyıyı değil, içerideki manzarayı şekillendirir.',
+  '/zihin-denge/duygusal-denge/': 'Hormon dalgaları dışarıdan görünmez; etkisi önce içerideki manzarada hissedilir.',
   '/zihin-denge/bilissel-saglik/': 'Unutmak çoğu zaman bir kayıp değil, sınıflama yorgunluğudur.',
 
   // Bilimsel Pencere
-  '/bilimsel-pencere/hormonlarin-bilimi/': 'Hormonlar bedenin gürültüsü değil, dilidir; menopoz o dilin yeniden öğrenilmesidir.',
-  '/bilimsel-pencere/hucreler-ve-yaslanma/': 'Yaşlanma, bedenin onarımını yavaşça unuttuğu yerdir.',
-  '/bilimsel-pencere/yeni-arastirmalar/': 'Bilim, yanıt biriktirir; ama önce daha iyi sorular geliştirir.',
+  '/bilimsel-pencere/hormonlarin-bilimi/': 'Hormonlar dokular arasında dolaşan mesajlardır; menopozda bu mesajlardan bazılarının sesi kısılır.',
+  '/bilimsel-pencere/hucreler-ve-yaslanma/': 'Hücre düzeyinde yaşlanma, onarımın yavaş yavaş geri kaldığı yerdir.',
+  '/bilimsel-pencere/yeni-arastirmalar/': 'Bilim yanıt biriktirir; ama önce daha iyi sorular geliştirir.',
 };
