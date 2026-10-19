@@ -1,5 +1,6 @@
 ---
-export type EvidenceLevel = 1 | 2 | 3 | 4 | 5;
+import { EVIDENCE_LABELS as LABELS, type EvidenceLevel } from '../../utils/evidence';
+export type { EvidenceLevel };
 
 interface Props {
   level?: EvidenceLevel;
@@ -8,14 +9,6 @@ interface Props {
 }
 
 const { level, from, to } = Astro.props;
-
-const LABELS: Record<EvidenceLevel, string> = {
-  5: 'güçlü',
-  4: 'iyi',
-  3: 'orta',
-  2: 'sınırlı',
-  1: 'zayıf',
-};
 
 const isRange = from !== undefined && to !== undefined;
 const displayLabel = isRange ? `${LABELS[from!]}–${LABELS[to!]} kanıt` : `${LABELS[level!]} kanıt`;

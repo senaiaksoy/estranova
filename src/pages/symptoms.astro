@@ -3,6 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import { symptoms } from '../data/symptoms';
+import { evidenceLabel, evidenceTooltip } from '../utils/evidence';
 
 const howToUse = [
   'Belirtinin ne zaman ortaya çıktığını ve ne kadar sürdüğünü not edin.',
@@ -11,9 +12,9 @@ const howToUse = [
 ];
 
 const relatedReading = [
-  'Perimenopozda hangi değişimler beklenebilir?',
-  'Uyku bozulması ile gece terlemesi nasıl ayrı okunur?',
-  'Belirti günlüğü tutarken hangi detaylar gereklidir?',
+  { label: 'Perimenopozda hangi değişimler beklenebilir?', href: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/' },
+  { label: 'Uyku bozulması ile gece terlemesi nasıl ayrı okunur?', href: '/zihin-denge/uyku-dinlenme/' },
+  { label: 'Belirti günlüğü tutarken hangi ayrıntılar gerekir?', href: '#belirti-gunlugu' },
 ] as const;
 
 const journalTemplate = [
@@ -115,6 +116,12 @@ const reviewSignals = [
           <h2 class="font-serif text-4xl leading-tight tracking-[-0.025em] text-ink md:text-5xl">
             Önce adını koyun, sonra okuma rotasına geçin
           </h2>
+          <p class="mt-4 text-sm leading-relaxed text-ink/65">
+            Kartlardaki etiket, o belirtiyle ilgili bilginin ne kadar güçlü kanıta dayandığını gösterir: güçlü, iyi, orta,
+            sınırlı ya da zayıf. Çalışmalar birbirinden farklı sonuç veriyorsa “karma kanıt” yazar. Ölçeğin nasıl kullanıldığını
+            <a href="/editoryal-politika/nasil-arastiriyoruz/" class="font-semibold text-primary underline decoration-primary/35 underline-offset-4 hover:decoration-primary">Nasıl Araştırıyoruz</a>
+            sayfasında anlatıyoruz.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.65fr_0.95fr]">
@@ -124,9 +131,12 @@ const reviewSignals = [
                 <div class="flex flex-col md:flex-row gap-0 md:gap-6">
                   <a href={symptom.href} class="relative md:w-[220px] md:shrink-0 aspect-[3/2] md:aspect-auto md:self-stretch overflow-hidden" aria-label={`${symptom.title} okuma rotasını aç`}>
                     <img src={symptom.image} alt={symptom.alt} loading="lazy" decoding="async" class="symptom-photo h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" />
-                    <span class="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/35 bg-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-sm">
+                    <span
+                      class="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/35 bg-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-sm"
+                      title={evidenceTooltip(symptom.evidence)}
+                    >
                       <span class="inline-block h-1.5 w-1.5 rounded-full bg-white"></span>
-                      {symptom.evidence}
+                      ({evidenceLabel(symptom.evidence)})
                     </span>
                   </a>
 
@@ -180,7 +190,11 @@ const reviewSignals = [
               <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">İlgili Başlıklar</p>
               <ul class="space-y-4 mb-8">
                 {relatedReading.map((item) => (
-                  <li class="border-b border-primary/10 pb-4 text-sm leading-relaxed text-ink/70 last:border-b-0 last:pb-0">{item}</li>
+                  <li class="border-b border-primary/10 pb-4 text-sm leading-relaxed last:border-b-0 last:pb-0">
+                    <a href={item.href} class="text-ink/75 underline decoration-primary/25 underline-offset-4 transition hover:text-primary hover:decoration-primary">
+                      {item.label}
+                    </a>
+                  </li>
                 ))}
               </ul>
               <a href="/library/" class="inline-flex text-sm font-semibold text-primary underline decoration-primary/35 underline-offset-4 hover:decoration-primary">
@@ -192,7 +206,7 @@ const reviewSignals = [
 
         <section class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <article class="rounded-[34px] border border-primary/12 bg-white p-8 shadow-[0_24px_82px_-66px_rgba(44,22,28,0.32)] ring-1 ring-white/80">
-            <p class="mb-3 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Belirti Günlüğü</p>
+            <p id="belirti-gunlugu" class="mb-3 scroll-mt-28 text-[11px] font-bold uppercase tracking-[0.24em] text-primary/80">Belirti Günlüğü</p>
             <h2 class="mb-5 font-serif text-3xl leading-tight tracking-[-0.02em] text-ink md:text-4xl">Pratik izlem şablonu</h2>
             <p class="mb-6 leading-relaxed text-ink/65">
               Uzun ve ayrıntılı kayıt yerine kısa, düzenli ve karşılaştırılabilir notlar, bir sağlık görüşmesinde durumunuzu anlatmayı kolaylaştırır.

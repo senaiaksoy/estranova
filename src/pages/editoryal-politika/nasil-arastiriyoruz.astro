@@ -11,10 +11,6 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
   <SiteNavbar currentPath="/editoryal-politika/nasil-arastiriyoruz/" />
 
   <main id="main-content" class="pt-24 text-ink">
-    <div class="bg-[#FFF8E1] px-6 py-3 text-center text-sm leading-snug text-ink/90">
-      Bu sayfa hazırlanıyor. İçerik yakında güncellenecek.
-    </div>
-
     <div class="mx-auto max-w-3xl px-6 py-16 md:py-20">
       <header class="mb-12">
         <p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-primary">EDİTÖRYAL SÜREÇ</p>
@@ -38,8 +34,11 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
         <section>
           <h2 class="mb-3 font-serif text-2xl">Kanıt düzeyi nasıl belirlenir</h2>
           <p class="leading-relaxed text-ink/75">
-            Her başlıkta kanıtın gücü, tüm yazılarda aynı biçimde kullanılan bir ölçüt setiyle özetlenir; böylece kanıtın
-            ne kadar sağlam olduğunu bir bakışta görebilirsiniz. Bu özet tıbbi karar yerine geçmez; bilgiyi zihninizde yerine oturtmanıza yardımcı olur.
+            Önemli bir sağlık iddiasının yanında, onu destekleyen kanıtın gücünü gösteren kısa bir etiket yer alır:
+            <em>(güçlü kanıt)</em>, <em>(iyi kanıt)</em>, <em>(orta kanıt)</em>, <em>(sınırlı kanıt)</em> ya da <em>(zayıf kanıt)</em>.
+            Kanıt iki düzey arasında kalıyorsa etiket <em>(orta–iyi kanıt)</em> gibi birleşik yazılır. Etiket, iddianın hangi tür
+            çalışmalara dayandığını özetler; bu ölçek tüm yazılarda aynıdır. Tıbbi kararın yerine geçmez, yalnızca bilginin ne kadar
+            sağlam zeminde durduğunu bir bakışta görmenizi sağlar.
           </p>
         </section>
 
@@ -47,18 +46,23 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
           <h2 class="mb-3 font-serif text-2xl">Güncelleme döngüsü</h2>
           <p class="leading-relaxed text-ink/75">
             İçerikler belirli aralıklarla gözden geçirilir; yeni bilimsel bulgular veya düzeltme gerektiren noktalar
-            editoryal takvime alınır. Yayın tarihi ve revizyon notları ilgili sayfalarda izlenebilir olacaktır.
+            editoryal takvime alınır. Bir yazı içerikçe güncellendiğinde güncelleme tarihi de değişir; yalnızca tarihi yenilemek
+            için yazıya dokunulmaz.
           </p>
         </section>
 
         <section>
           <h2 class="mb-3 font-serif text-2xl">Metin içinde kaynak anma biçimi</h2>
           <p class="leading-relaxed text-ink/75">
-            Okuma akışını kesmemek için makale gövdelerinde kuruluş veya dergi adlarını köşeli parantez içinde
-            tıklanabilir bağlantı olarak vermiyoruz; bu tercih düzenleyici risk ve okunabilirlik politikamızla uyumludur.
-            Metin içinde kaynağa genel ifadelerle (örneğin “uluslararası rehber özetleri”, “hakemli derlemeler”) değinilir,
-            doğrulama ise editoryal süreçte yapılır. Ayrıntılı kaynak listesi ve yöntem açıklamaları metodoloji
-            sayfalarında genişletilecektir.
+            Kaynakların metinde nasıl görüneceği yazarın kim olduğuna bağlıdır. Hekim olmayan yazarlarımızın ve Estranova
+            Editörleri imzalı yazıların gövdesinde dergi, kuruluş adı veya dış bağlantı yer almaz; kaynağa “araştırmalar”,
+            “uzmanlar” gibi genel ifadelerle değinilir. Bu yazılardaki iddialar da yayından önce kaynaklarıyla tek tek
+            doğrulanır ve kaynak kaydı editoryal dosyada tutulur; yalnızca okura görünmez.
+          </p>
+          <p class="mt-4 leading-relaxed text-ink/75">
+            Hekim ve uzman yazarlarımızın klinik rehber niteliğindeki yazılarında ise kaynaklar görünürdür: iddiaya bağlı dipnotlar
+            ve yazının sonunda seçilmiş bir kaynak bölümü bulunur. Bu bölümde güncel kılavuzlar, sistematik derlemeler ve temel
+            hakemli çalışmalar yer alır.
           </p>
         </section>
 
@@ -70,22 +74,32 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
               <h3 class="mb-2 font-serif text-xl">Kanıta dayalı seçki</h3>
               <p class="leading-relaxed text-ink/75">
                 Hakemli dergilerde yayımlanan ve güncel klinik kılavuzlarla uyumlu çalışmalar temel alınır. Spekülatif
-                yaklaşımlar ayıklanır.
+                yaklaşımlar ayıklanır. Literatürün ön taranmasında yapay zekâ araçlarından yardım alınabilir; hangi kaynağın
+                kullanılacağına editör ekibi ve hekim karar verir.
               </p>
             </div>
             <div>
               <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-primary">02</p>
               <h3 class="mb-2 font-serif text-xl">Yazı ve tıbbi denetim</h3>
               <p class="leading-relaxed text-ink/75">
-                Yazar ekibinin metinleri önce editoryal kontrolden geçer, ardından danışman doktor tarafından tıbbi doğruluk
-                açısından denetlenir.
+                Metin önce editoryal kontrolden, ardından bir hekimin tıbbi bilgi kontrolünden geçer. Bu kontrolü çoğunlukla
+                bilimsel editör Doç. Dr. Senai Aksoy yapar; Dr. Aksoy’un kendi yazılarını ve bağımsız bir inceleme gereken yazıları
+                Dr. Alper Mumcu inceler. İnceleyen hekimin adı yazının künyesinde görünür.
               </p>
             </div>
             <div>
               <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-primary">03</p>
-              <h3 class="mb-2 font-serif text-xl">Yayın onayı ve güncelleme</h3>
+              <h3 class="mb-2 font-serif text-xl">Yayın onayı</h3>
               <p class="leading-relaxed text-ink/75">
-                İçerikler periyodik olarak gözden geçirilir; yeni kanıtlar ortaya çıktığında sayfa revizyonu yapılır.
+                Yazının yayımlanması için hem yazarın hem tıbbi incelemenin onayı gerekir. Onay alınmadan hiçbir yazı yayına
+                alınmaz; revizyon istenirse metin düzeltilir ve yeniden onaya sunulur.
+              </p>
+            </div>
+            <div>
+              <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-primary">04</p>
+              <h3 class="mb-2 font-serif text-xl">Güncelleme</h3>
+              <p class="leading-relaxed text-ink/75">
+                Yeni kanıt ortaya çıktığında ya da bir düzeltme gerektiğinde yazı gözden geçirilir ve aynı denetimden yeniden geçer.
               </p>
             </div>
           </div>
@@ -94,18 +108,26 @@ import SiteFooter from '../../components/site/SiteFooter.astro';
         <section>
           <h2 class="mb-3 font-serif text-2xl">Roller ve yapı</h2>
           <div class="space-y-3 leading-relaxed text-ink/75">
-            <p><span class="font-semibold text-ink">Site yöneticisi:</span> Berna Aksoy</p>
-            <p><span class="font-semibold text-ink">Danışman doktor ve yazı denetleyici:</span> Doç. Dr. Senai Aksoy</p>
-            <p><span class="font-semibold text-ink">Yazarlar:</span> Alara Baykent, Başak Pelister</p>
-            <p><span class="font-semibold text-ink">Tıbbi kurul:</span> Dr. Metin Alış, Dr. Alp Aslan Eryılmaz</p>
+            <p><span class="font-semibold text-ink">Site editörü:</span> Berna Aksoy</p>
+            <p><span class="font-semibold text-ink">Bilimsel editör:</span> Doç. Dr. Senai Aksoy</p>
+            <p><span class="font-semibold text-ink">Bağımsız tıbbi inceleme:</span> Dr. Alper Mumcu</p>
+            <p>
+              Yazar kadrosunun tamamı
+              <a href="/yazarlar/" class="font-semibold text-primary underline decoration-primary/35 underline-offset-4 hover:decoration-primary">Yazarlar</a>,
+              tıbbi danışmanlar ve danışman ekip
+              <a href="/yayin-kurulu/" class="font-semibold text-primary underline decoration-primary/35 underline-offset-4 hover:decoration-primary">Yayın Kurulu</a>
+              sayfasında yer alır.
+            </p>
           </div>
         </section>
 
         <section>
           <h2 class="mb-3 font-serif text-2xl">Şeffaflık taahhüdü</h2>
           <p class="mb-6 leading-relaxed text-ink/75">
-            Kullandığımız kaynaklar makale sonlarında belirtilir. Yönetim ve denetim rolleri her sayfada açıkça
-            gösterilir.
+            Her yazıda yazarın ve tıbbi inceleyenin adı görünür. Yapay zekâyı hangi işlerde kullandığımızı ve hangi işlerde
+            kullanmadığımızı
+            <a href="/editoryal-ilkeler/" class="font-semibold text-primary underline decoration-primary/35 underline-offset-4 hover:decoration-primary">Editöryal İlkelerimiz</a>
+            sayfasında açıklıyoruz.
           </p>
           <a
             href="/library/"

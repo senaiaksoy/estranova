@@ -4,6 +4,7 @@ import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 import { featureFlags, isFeatureActive } from '../utils/feature-flags';
 import { magazineConfig } from '../data/magazine-config';
+import { currentIssue, formatIssuePad } from '../data/issues';
 
 const subscriptionActive = isFeatureActive('subscriptionEnabled');
 const membershipActive = isFeatureActive('membershipEnabled');
@@ -13,7 +14,7 @@ const pageTitle = subscriptionActive
   : `${magazineConfig.name} okurluğu yakında — Estranova`;
 const pageDescription = subscriptionActive
   ? `${magazineConfig.name} dergisinin aylık okurluğu için yayın seçenekleri.`
-  : `${magazineConfig.name} dergisinin aylık okurluğu yakında duyurulur. Bekleme listesine kaydolarak ilk haberi alabilirsiniz.`;
+  : `${magazineConfig.name} dergisinin aylık okurluğu yakında duyurulur. Açıldığında Mektup sayfasında duyurulur.`;
 ---
 
 <SiteLayout title={pageTitle} description={pageDescription} allowIndexing={false}>
@@ -53,21 +54,21 @@ const pageDescription = subscriptionActive
               Okurluğu açtığımızda ilk siz duyun
             </h2>
             <p class="mb-6 text-base leading-relaxed text-ink/75">
-              Estranova Mektubu'na kaydolursanız aylık okurluk açıldığında bunu ilk mektupta duyururuz.
-              Herhangi bir ödeme ya da taahhüt yok; adınız bekleme listesine yazılır ve istediğiniz an ayrılabilirsiniz.
+              Aylık okurluk açıldığında bunu Mektup sayfasında duyuracağız. Şu an bir kayıt, ödeme ya da taahhüt yok;
+              temel rehberlerin tamamı herkese açık.
             </p>
             <div class="flex flex-wrap gap-3">
               <a
                 href="/mektup/"
                 class="inline-flex items-center gap-1.5 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-primary/35"
               >
-                Mektuba kaydol
+                Mektup sayfası
               </a>
               <a
-                href={`/sayi/${magazineConfig.firstIssue.monthYearISO === '2026-05' ? '01-mayis-2026-geceler' : ''}/`}
+                href={`/sayi/${currentIssue.slug}/`}
                 class="inline-flex items-center gap-1.5 rounded-xl border-2 border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/35"
               >
-                İlk sayıya git
+                Güncel sayıyı oku (Sayı {formatIssuePad(currentIssue.number)})
               </a>
             </div>
           </div>

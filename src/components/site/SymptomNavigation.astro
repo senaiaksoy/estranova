@@ -12,6 +12,7 @@
  */
 
 import { symptoms } from '../../data/symptoms';
+import { evidenceLabel } from '../../utils/evidence';
 
 interface Props {
   sectionNumber?: string;
@@ -169,7 +170,7 @@ const secondary = featured[1];
               </div>
               <div>
                 <p class="mb-1 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-gold-bronze">
-                  {String(index + 3).padStart(2, '0')} · {s.category} · {s.evidence}
+                  {String(index + 3).padStart(2, '0')} · {s.category} · {evidenceLabel(s.evidence)}
                 </p>
                 <h3 class="mb-1 font-serif text-2xl leading-tight tracking-[-0.02em] text-ink transition group-hover:text-primary">
                   {s.title}

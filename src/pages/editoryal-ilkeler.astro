@@ -3,7 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteNavbar from '../components/site/SiteNavbar.astro';
 import SiteFooter from '../components/site/SiteFooter.astro';
 
-const lastUpdated = '5 Ekim 2026';
+const lastUpdated = '19 Ekim 2026';
 
 const productionSteps = [
   {
@@ -37,8 +37,11 @@ const productionSteps = [
 ];
 
 const aiUses = [
-  'Yazarın kendi stil profili çerçevesinde taslak metin üretiminde yardımcı olarak.',
-  'Çok dilli yayında çeviri desteği için.',
+  'Konuyla ilgili literatürün ön taranmasında ve özetlenmesinde; hangi kaynağın kullanılacağına editör ve hekim karar verir.',
+  'Yazarın kendi stil profili çerçevesinde taslak metin hazırlamada.',
+  'Taslakta olası tıbbi hataları, yasaklı ifadeleri ve yayın ilkelerimize aykırı dili önceden işaretlemede; son kararı insan verir.',
+  'Dil düzenlemesinde: gramer, akış ve gereksiz tekrarların sadeleştirilmesi.',
+  'Yazılara eşlik eden temsili görsellerin üretiminde (ayrıntısı aşağıda).',
 ];
 
 const aiLimits = [
@@ -71,8 +74,8 @@ const aiLimits = [
           </div>
           <h1 class="mb-6 font-serif text-6xl leading-[0.92] tracking-[-0.045em] text-primary md:text-8xl">Yayın felsefemiz</h1>
           <p class="max-w-3xl border-l border-gold/50 pl-5 font-serif text-xl italic leading-relaxed text-ink/76 md:text-2xl">
-            Estranova'da yayımlanan tüm tıbbi içerikler, alanında uzman hekimlerin bilgi birikimi ve klinik deneyimi temelinde hazırlanır.
-            Bilgi üretiminde modern teknolojilerden faydalanırken bilimsel doğruluk, etik bütünlük ve şeffaflık ilkelerinden taviz vermeyiz.
+            Estranova'da yayımlanan her sağlık içeriği, yayımlanmadan önce bir hekimin tıbbi bilgi kontrolünden geçer.
+            Yapay zekâ gibi araçlardan yararlanırken bilimsel doğruluk, etik bütünlük ve şeffaflık ilkelerinden taviz vermeyiz.
           </p>
         </header>
 

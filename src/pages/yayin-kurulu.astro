@@ -10,7 +10,7 @@ const medicalReviewer = {
   anchor: 'senai-aksoy',
   name: 'Doç. Dr. Senai Aksoy',
   role: 'Bilimsel Editör',
-  bio: 'Kadın sağlığı ve hormonal geçiş başlıklarında çalışan bir hekim. Estranova\'da makalelerin bilimsel doğruluk, kanıt düzeyi ve terminoloji tutarlılığı kendisinin denetiminden geçer. Karmaşık tabloları sadeleştirmeyi seven, soruyu küçümsemeyen sakin bir editör sesi var.',
+  bio: 'Kadın sağlığı ve hormonal geçiş başlıklarında çalışan bir hekim. Estranova\'da makalelerin büyük bölümünü bilimsel doğruluk, kanıt düzeyi ve terminoloji tutarlılığı açısından o inceler; kendi yazılarını ise Dr. Alper Mumcu inceler. Karmaşık tabloları sadeleştirmeyi seven, soruyu küçümsemeyen sakin bir editör sesi var.',
   portrait: '/images/writers/senai-aksoy.webp',
   tags: ['Tıbbi Denetim', 'Hormonal Geçiş', 'Kanıt Değerlendirmesi'],
 };
@@ -53,6 +53,12 @@ const medicalAdvisors = [
     role: 'Tıbbi Danışman · Ortopedi',
     bio: 'Ortopedi ve travmatoloji alanında çalışan deneyimli bir hekim. Estranova\'da kemik sağlığı, eklem ağrıları ve 40 sonrası ortopedik takip başlıklarında danışmanlık veriyor. Hastayı ameliyat masasından önce hayata yönlendirmeyi önemseyen sakin bir yaklaşımı var.',
     tags: ['Ortopedi', 'Travmatoloji', 'Artroplasti', 'Spor Hekimliği'],
+  },
+  {
+    name: 'Dr. Alper Mumcu',
+    role: 'Tıbbi Danışman · Kadın Hastalıkları ve Doğum',
+    bio: 'Kadın hastalıkları ve doğum uzmanı bir hekim. Estranova\'da Doç. Dr. Senai Aksoy\'un kendi yazılarını ve bağımsız bir inceleme gereken yazıları tıbbi doğruluk açısından inceliyor. Hormonal geçiş ve jinekoloji başlıklarında kendisi de yazıyor.',
+    tags: ['Jinekoloji', 'Hormonal Geçiş', 'Bağımsız Tıbbi İnceleme'],
   },
 ];
 
@@ -139,9 +145,10 @@ const consultants = [
 
           <h3 class="mt-10 mb-3 font-serif text-xl text-ink">Bilimsel doğrulama</h3>
           <p class="leading-relaxed text-ink/70">
-            Her makale, yayımlanmadan önce bilimsel editör
+            Her makale yayımlanmadan önce bir hekimin tıbbi bilgi kontrolünden geçer. Bu kontrolü çoğunlukla bilimsel editör
             <a href="#senai-aksoy" class="font-semibold text-primary hover:underline">Doç. Dr. Senai Aksoy</a>
-            tarafından gözden geçirilir; konunun gerektirdiği uzmanlığa göre ilgili tıbbi danışmanın görüşü de alınır.
+            yapar. Dr. Aksoy’un kendi yazılarını ve bağımsız bir inceleme gereken yazıları Dr. Alper Mumcu inceler. İnceleyen
+            hekimin adı her yazının künyesinde görünür; konunun gerektirdiği uzmanlığa göre ilgili tıbbi danışmanın görüşü de alınır.
             Metindeki her iddia, yayın tarihinde erişilebilir en güncel bilimsel literatür, klinik rehber ve uzlaşı belgeleriyle
             karşılaştırılır. Uyumsuz, eskimiş veya kanıtı yetersiz ifadeler düzeltilir ya da metinden çıkarılır.
           </p>
@@ -231,7 +238,7 @@ const consultants = [
               <h2 class="mb-3 font-serif text-3xl text-ink">Estranova Editörleri</h2>
               <p class="leading-relaxed text-ink/70">
                 Temel rehberler, konu sayfalarını tamamlayan yazılar ve açıklayıcı sağlık haritaları için
-                kullanılan editöryal imza. Estranova'nın kurumsal editöryal sesiyle hazırlanır; her yazıyı
+                kullanılan editöryal imza. Estranova'nın kurumsal editöryal sesiyle hazırlanır; bu yazıları
                 bilimsel editör Doç. Dr. Senai Aksoy gözden geçirir. Bir kişiyi değil kurumu temsil ettiği
                 için yazar kartlarında listelenmez.
               </p>

@@ -122,8 +122,8 @@ const pageDescription =
               data-panel-summary="mektup"
               class="mb-7 flex-1 text-base leading-relaxed text-white/76"
             >
-              Henüz mektup kaydınız yok. İsterseniz Estranova Mektubu'na şimdi
-              kaydolabilirsiniz.
+              Estranova Mektubu henüz gönderilmiyor. Kayıt formu açıldığında
+              bunu Mektup sayfasında duyuracağız.
             </p>
             <a
               href="/mektup/"
@@ -274,8 +274,8 @@ const pageDescription =
       const latest = pendingList[0];
       const emailEscaped = escapeHtml(latest.email);
       mektupSummary.innerHTML =
-        `Mektup için <strong class="font-semibold text-primary">${emailEscaped}</strong> adresini kaydettik. ` +
-        'Estranova Mektubu yayına girdiğinde gelen kutunuza düşecek; istediğiniz an ayrılabilirsiniz.';
+        `<strong class="font-semibold text-primary">${emailEscaped}</strong> adresini bu tarayıcıda not ettiniz. ` +
+        'Adres yalnızca burada duruyor, bize gönderilmedi. Estranova Mektubu gönderilmeye başladığında kayıt formunu Mektup sayfasında açacağız; adresinizi o zaman bırakabilirsiniz.';
     }
 
     // Okuma tercihi etiketi

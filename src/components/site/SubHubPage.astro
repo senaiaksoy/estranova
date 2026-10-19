@@ -163,12 +163,12 @@ const siblings = Object.values(chapterMap).filter(
             <h2 class="font-serif text-4xl leading-tight text-ink md:text-5xl">İlgili alt başlıklar</h2>
           </header>
           <div class="divide-y divide-primary/14 border-y border-primary/14">
-            {siblings.map((sibling, index) => (
+            {siblings.map((sibling) => (
               <a
                 href={sibling.href}
                 class="group grid gap-5 py-7 transition hover:bg-white/58 md:grid-cols-[88px_1fr_auto] md:items-center md:py-8"
               >
-                <span class="font-serif text-3xl italic text-gold">{String(index + 1).padStart(2, '0')}</span>
+                <span class="font-serif text-3xl italic text-gold">{sibling.number}</span>
                 <div>
                   <h3 class="mb-2 font-serif text-3xl leading-tight text-ink group-hover:text-primary">
                     {sibling.chapter}
