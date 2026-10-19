@@ -327,22 +327,22 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Perimenopozdaki kaygı artışı anksiyete bozukluğu anlamına gelir mi?',
       answer:
-        'Her zaman hayır. Perimenopozda kaygı dalgalanması hormon değişimi, uyku bölünmesi ve yaşam yüküyle ilişkili olabilir. Ama kaygı günlük işlevi belirgin bozuyorsa, panik atak benzeri ataklar oluyorsa veya çöküntü hali eşlik ediyorsa profesyonel değerlendirme iyi olur.',
+        'Hayır. Kaygı artışı tek başına bir anksiyete bozukluğu tanısı koydurmaz. Tanıda kaygının ne kadar sürdüğü, şiddeti, günlük hayatınıza etkisi ve başka olası nedenler birlikte değerlendirilir.',
     },
     {
       question: 'Kaygı hissi adet düzeni değişmeden de başlayabilir mi?',
       answer:
-        'Evet, bazı kadınlarda ruh hali, uyku veya bedensel alarm hissi adet düzenindeki belirgin değişimden önce fark edilebilir. Perimenopoz her kadında aynı sırayla ilerlemez; bu yüzden yalnızca takvime bakmak tabloyu eksik bırakabilir.',
+        'Olabilir; kaygı veya uyku değişikliklerini adet düzeninizde belirgin bir değişiklik olmadan da fark edebilirsiniz. Ancak kaygı tek başına perimenopoz tanısı koydurmaz. Yaşınız, adet öykünüz, sıcak basması gibi diğer belirtiler ve başka olası nedenler birlikte değerlendirilir.',
     },
     {
       question: 'Gece uyanmaları kaygıyı gerçekten artırabilir mi?',
       answer:
-        'Evet. Uyku bölündüğünde ertesi gün sinir sistemi daha tetikte çalışabilir; küçük stresler daha büyük hissedilebilir. Sıcak basması ve gece terlemesi de bu döngüyü besleyebilir.',
+        'Uyku kaybı ertesi gün kaygıyı artırabilir; kaygı da yeniden uykuya dalmayı zorlaştırabilir. Gece uyanmalarınıza terleme veya sıcak basması eşlik ediyorsa bunu not edin. Bu ayrıntı, görüşmede uyku sorununu ayrıca konuşmanıza yardımcı olur.',
     },
     {
       question: 'Ne zaman bunu yalnızca yoğunluk diye geçmemek gerekir?',
       answer:
-        'Kaygı işinizi, ilişkinizi, uykunuzu, dışarı çıkma rahatlığınızı veya güvenlik hissinizi belirgin etkiliyorsa ertelememek gerekir. Kendinize zarar verme düşüncesi, yoğun umutsuzluk veya panik atak benzeri ataklar varsa destek aramak acil önem taşır.',
+        'Kaygı işinizi, uykunuzu veya ilişkilerinizi etkiliyorsa; tekrarlayan panik benzeri ataklar ya da çöküntü hali varsa profesyonel değerlendirme isteyin. Kendinize zarar verme düşüncesi için gecikmeden yardım alın. Bir planınız varsa, kendinizi güvende tutamıyorsanız veya kendinize zarar verdiyseniz yalnız kalmayın; güvendiğiniz birini yanınıza çağırın ve acil sağlık yardımı alın.',
     },
   ],
   '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/': [

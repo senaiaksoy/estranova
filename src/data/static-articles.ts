@@ -664,7 +664,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/',
     title: 'Perimenopozda Kaygı Artışı: Her Şey Aynıyken Neden İçiniz Daralıyor Gibi Hissedebilirsiniz?',
     description:
-      'Perimenopoz döneminde kaygı, iç sıkışması, huzursuzluk ve bedensel alarm hissi neden artabilir? Bu rehber, hormon dalgalanması, uyku, sıcak basması ve yaşam yükünü sakin bir bakışla okur.',
+      'Perimenopozda kaygının hormonlar, uyku ve stresle ilişkisi; belirtileri izlemek, destek almak ve acil durumları ayırt etmek için sade bir rehber.',
     publishedDate: '6 Mayıs 2026',
     writerSlug: 'estranova-editorial',
     section: 'Zihin & Denge',

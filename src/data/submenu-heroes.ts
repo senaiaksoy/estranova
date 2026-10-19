@@ -350,8 +350,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Akşamüstü ışığında taş binalı bir sokakta, krem trençkot ve bordo fularla duran olgun bir kadın; solda vitrin camında yansıması görünüyor',
   },
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': {
-    src: '/images/library/editorial/perimenopozda-kaygi-artisi-byline.webp',
-    alt: 'Sabah ışığında içe dönük, sakin bir duruşla görülen kadın portresi; perimenopozda kaygı artışı yazısı için editoryal kart görseli',
+    src: '/images/library/editorial/perimenopozda-kaygi-artisi.webp',
+    alt: 'Pencere önünde birbirine dönerek sohbet eden iki kadın',
   },
   '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/': {
     src: '/images/library/editorial/hg-tarama-testleri.webp',

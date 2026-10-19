@@ -22,6 +22,12 @@
 
 Onaylı taban `ff4767c3` üzerine hedefin tamamı yeniden okundu. Teknik terimler açıklandı; testlerin rutin paket gibi okunması önlendi; FSH'nin yaş/klinik bağlamı ve D vitamini ölçümünün sağlıklı yetişkinlerdeki sınırı kaynakla netleştirildi. Kemik sağlığında ağrı çağrışımı giderildi, tarama/jinekolojik kontrol ayrıldı. Sonuç ve üç SSS somutlaştırıldı. Kurumsal byline, görseller, mevcut hekim notu ve tek FAQ kaynağı korundu. Mizah H1: mevcut telefon galerisi dokunuşu; yeni mizah/kişisel katkı yok. **KC doğrudan editör ve Dr. Aksoy tıbbi onayı — 3 Ekim 2026: “Evet, editör ve tıbbi onay veriyorum; yayımla”.** Önceki onay yeni revizyonu kapsıyor sayılmadı; ikinci onay ayrı kaydedildi. [Audit, anlam ve kaynak kaydı](onaylanan/2026-10-03_ilk-kontrol-ikinci-audit/audit.md), [gerçek onay kaydı](onaylanan/2026-10-03_ilk-kontrol-ikinci-audit/onay-kaydi.md). Commit/push/deploy kullanıcı tarafından yetkilendirildi; sonuçları ayrıca doğrulanacak.
 
+## 19 Ekim 2026 — Perimenopozda kaygı artışı revizyonu
+
+Kullanıcının geniş audit sonrası `düzelt` talimatıyla ayrı çalışma kopyasında hazırlandı. Kurumsal byline ve `editorial-guide` korundu. Göğüs/çarpıntı ve kendine zarar verme için güvenlik ayrımı; hormonal nedensellik sınırı; psikolojik destek; kaynak izi; gövde/SSS dili; kart kırpımı, alt metin ve metadata düzeltildi. Bilimsel Editör Notu ve önceki onay kaydı korundu. Mizah H0; gerçek okur sözü gibi duran kayıtsız cümle çıkarıldı, yeni deneyim/alıntı üretilmedi. **Durum: yeni editör ve tıbbi onay bekleniyor; yayın/commit/push/deploy yok.** [Kaynak ve düzeltme kaydı](../../../docs/editorial/perimenopozda-kaygi-artisi-fix-2026-10-19.md).
+
+19 Ekim 2026 tekrar kontrolde bildirilen üç açık nokta kaynak/düzeltme kaydında tutuldu. Kullanıcının sonraki `commit` talimatı yalnız yerel Git kaydı içindir; yeni metin için editör/tıbbi onay veya push/deploy yetkisi olarak kaydedilmedi.
+
 ## Stil Kuralları
 
 - Kişisel anekdot veya birinci tekil deneyim iddiası yok.
