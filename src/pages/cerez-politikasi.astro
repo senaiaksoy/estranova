@@ -30,10 +30,12 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <h2 class="mb-3 font-serif text-2xl">Şu anki durum</h2>
           {bannerActive ? (
             <p class="leading-relaxed text-ink/75">
-              Estranova sayfa kullanımını anonim olarak ölçmek için Google Analytics 4
-              kullanabilir. Analitik çerezler yalnızca çerez tercih panelinden açıkça onay
-              verirseniz açılır; reddederseniz site aynı şekilde çalışır ve yalnızca
-              çerezsiz, temel ziyaret ölçümü yapılır.
+              Estranova, sayfa kullanımını ölçmek için Google Analytics 4 kullanır. Kabul ederseniz
+              analitik çerezler açılır ve ziyaretiniz kimliğinizi doğrudan göstermeyen (takma adlı)
+              bir tanımlayıcıyla ölçülür. Reddederseniz site aynı şekilde çalışır ve çerez yazılmaz;
+              ancak Google'a çerezsiz, temel bir ölçüm sinyali yine gönderilir. Bu sinyal ziyaret
+              zamanını, tarayıcı bilgisini ve geldiğiniz sayfayı içerir; bağlantı gereği IP adresiniz
+              de Google sunucularına ulaşır.
             </p>
           ) : (
             <p class="leading-relaxed text-ink/75">
@@ -55,7 +57,7 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <ul class="mt-4 space-y-2 text-ink/75 list-disc list-inside leading-relaxed">
             <li>Yazı boyutu ve okuma tercihleri</li>
             <li>Kayıtlı makaleler (yer-imi)</li>
-            <li>Bülten kaydı (ileride bir e-posta gönderim hizmetine taşınacak)</li>
+            <li>Bülten kaydı (e-posta adresiniz yalnızca bu tarayıcıda durur; bize gönderilmez)</li>
           </ul>
           <p class="mt-4 leading-relaxed text-ink/75">
             Bu depolama, çerez bandında <strong>Zorunlu</strong> kategori altında listelenir
@@ -67,10 +69,9 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <h2 class="mb-3 font-serif text-2xl">Analitik çerezler — Google Analytics 4</h2>
           {analyticsActive ? (
             <p class="leading-relaxed text-ink/75">
-              Google Analytics 4, kararınıza uygun Consent Mode durumuyla yüklenir.
-              Onay verirseniz <em>analytics_storage</em> açık olur ve analitik çerezleri
-              kullanılabilir; reddederseniz <em>analytics_storage</em> kapalı kalır ve
-              yalnızca çerezsiz temel ölçüm pingleri gönderilir.
+              Google Analytics 4, çerez tercihinizi verdikten sonra yüklenir; karar vermeden önce
+              yüklenmez. Onay verirseniz analitik çerezler kullanılır. Reddederseniz çerez yazılmaz,
+              ancak yukarıda anlatılan çerezsiz temel ölçüm sinyali Google'a gönderilir.
             </p>
           ) : (
             <p class="leading-relaxed text-ink/75">
@@ -79,12 +80,12 @@ const analyticsActive = featureFlags.analyticsEnabled;
             </p>
           )}
           <ul class="mt-4 space-y-2 text-ink/75 list-disc list-inside leading-relaxed">
-            <li>Toplanan veri: anonim sayfa görüntüleme, oturum süresi, cihaz türü, tarayıcı dili</li>
-            <li>IP adresi: kısaltılmış (anonymize_ip) — kalıcı olarak saklanmaz</li>
+            <li>Toplanan veri: kimliğinizi doğrudan göstermeyen (takma adlı) sayfa görüntüleme, oturum süresi, cihaz türü, tarayıcı dili</li>
+            <li>IP adresi: Google'ın açıklamasına göre Google Analytics 4 IP adresini kaydetmez ve saklamaz; ancak bağlantı gereği IP adresiniz Google sunucularına ulaşır</li>
             <li>Google Signals (cihazlar arası takip): kapalı</li>
             <li>Reklam kişiselleştirme sinyalleri: kapalı</li>
-            <li>Veri saklama süresi: 14 ay; sonrasında otomatik silinir</li>
-            <li>Kullanım amacı: editöryal okuma alışkanlıklarını anonim olarak anlamak</li>
+            <li>Veri saklama süresi: Google Analytics panelinde tanımlı süre (en fazla 14 ay); sonrasında otomatik silinir</li>
+            <li>Kullanım amacı: okuma alışkanlıklarını toplu olarak görüp yayını buna göre geliştirmek</li>
           </ul>
         </section>
 
@@ -92,9 +93,9 @@ const analyticsActive = featureFlags.analyticsEnabled;
           <h2 class="mb-3 font-serif text-2xl">Üçüncü taraflar</h2>
           <p class="leading-relaxed text-ink/75">
             Estranova reklam pikseli, sosyal medya etiketleyicisi, ısı haritası aracı veya
-            A/B testi servisi kullanmaz. Şu an tek üçüncü taraf bağlantısı yazı tipi yüklemesi
-            için Google Fonts'tur; sayfa açıldığında Google sunucularından yazı tipi dosyaları
-            indirilir ve bu sırada IP adresiniz Google'a ulaşır. Bu bağlantı çerez kullanmaz.
+            A/B testi servisi kullanmaz. Yazı tipleri Estranova'nın kendi sunucusundan yüklenir;
+            Google Fonts kullanılmaz. Ölçüm için kullanılan tek üçüncü taraf hizmet, yukarıda
+            anlatılan Google Analytics 4'tür.
           </p>
         </section>
 
