@@ -622,7 +622,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',
     title: "Menopozda HRT'nin Avantajları: Hangi Faydalar Daha Net, Hangilerinde Daha Temkinli Olmalı?",
     description:
-      'Hormon tedavisi menopozda yalnızca sıcak basmasını azaltan bir seçenek değildir. Belirti rahatlaması, uyku, vajinal doku konforu, kemik sağlığı ve erken menopozdaki daha geniş koruma penceresi açısından hangi faydaların daha net, hangilerinin daha temkinli okunması gerektiğini bu derleme sakin bir dille ele alır.',
+      'Menopozda HRT hangi belirtileri azaltabilir? Uyku, vajinal yakınmalar ve kemik sağlığındaki yararlar; kalp, kilo, cilt ve saç için kanıtın sınırları.',
     publishedDate: '6 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',

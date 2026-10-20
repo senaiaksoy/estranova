@@ -422,8 +422,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-07',
-    note: 'KC editor direct approval: RSS manifestinde bulunan HRT avantajlari dosyasi production approval setine eklendi; Bilimsel Pencere manifest ve Senai klinik yazari uyumu tamamlandi.',
+    approvedAt: '2026-10-20',
+    note: '20 Ekim 2026: KC bu sohbette son audit/humanize/düzeltme sürümünün tıbbi incelemesinin tamamlandığını bildirdi ve commit, push, yayın talimatı verdi. Mevcut bağımsız incelemeci Dr. Alper Mumcu; yazılı inceleme belgesi repoda değil. Kapsam: bütün gövde, güvenlik ve kaynak düzeltmeleri, başlıklar ve beş gerçek Dr. Aksoy SSS yanıtı. Özgün yanıtlar ve önceki hekim notu korundu. KC doğrudan yazar/editör ve yayın onayı. Önceki kayıt (7 Mayıs 2026): KC editor direct approval: RSS manifestinde bulunan HRT avantajlari dosyasi production approval setine eklendi; Bilimsel Pencere manifest ve Senai klinik yazari uyumu tamamlandi.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/',

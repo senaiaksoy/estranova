@@ -1,294 +1,299 @@
 ---
 title: "Menopozda HRT"
-description: "Hormon tedavisi menopozda yalnızca sıcak basmasını azaltmaz. Belirti rahatlaması, uyku ve kemik sağlığı sakin bir dille ele alınıyor."
+description: "Menopozda HRT hangi belirtileri azaltabilir? Uyku, vajinal yakınmalar ve kemik sağlığındaki yararlar; kalp, kilo, cilt ve saç için kanıtın sınırları."
 writer: senai-aksoy
 publishedDate: "6 Mayıs 2026"
 publishedDateIso: 2026-05-06
-modifiedDate: "13 Temmuz 2026"
+modifiedDate: "20 Ekim 2026"
 exportScope: local-build
 url: /bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/
 section: "Bilimsel Pencere"
 sectionPath: /bilimsel-pencere/
 keywords: ["menopoz", "HRT", "hormon tedavisi", "menopozda hormon tedavisi", "sıcak basması", "kemik sağlığı", "vajinal kuruluk", "erken menopoz", "yaşam kalitesi", "kilo artışı", "bel çevresi", "vücut kompozisyonu", "cilt sağlığı", "saç dökülmesi", "yaşlanma karşıtı söylem"]
-exportedAt: 2026-10-15
+exportedAt: 2026-10-20
 ---
 
 # Menopozda HRT
 
 Okumaya Başlamadan
 
-## Kısa Özet
+## Kısa Klinik Yanıt
 
-Hormon tedavisinin en net avantajı, menopozun yaşam kalitesini bozan belirtilerini azaltmasıdır:
-özellikle sıcak basması, gece terlemesi ve bunlara bağlı uyku bölünmesi bu listenin başında gelir
-(güçlü kanıt).
+Hormon replasman tedavisi (HRT), sıcak basması ve gece terlemesini azaltabilir
+(güçlü kanıt).<sup>[[1]](#kaynak-1)</sup>
+Geceyi bu belirtiler bölüyorsa uyku da düzelebilir (orta kanıt).<sup>[[3]](#kaynak-3)</sup>
+Sistemik tedavi kemik kaybını ve kırık riskini azaltır; yalnızca vajinal kuruluk ve
+ilişkide ağrı içinse düşük doz lokal vajinal östrojen ayrıca değerlendirilir.<sup>[[2]](#kaynak-2)</sup>
 
-Vajinal kuruluk, ilişki sırasında rahatsızlık ve bazı idrar yolu yakınmaları için de önemli bir yarar
-alanı vardır; burada lokal östrojen seçenekleri ayrıca güçlü bir yere sahiptir
-(iyi–güçlü kanıt). Kemik kaybını yavaşlatma ve erken menopozda daha geniş koruyucu bir
-pencere sağlama tarafında da veri güçlüdür (güçlü kanıt).
+Seçim; yakınmalara, yaşa, menopozdan geçen süreye ve sağlık geçmişine bağlıdır.
+Erken yumurtalık yetmezliğinin yaklaşımı farklıdır. Olağan menopoz yaşında HRT, kilo verme, saç çıkarma,
+gençleşme veya kalp ve bellek hastalıklarından korunma amacıyla başlanacak bir tedavi değildir.
+Fayda ve risk, tedavinin türüyle birlikte değerlendirilir.<sup>[[1]](#kaynak-1)</sup><sup>[[4]](#kaynak-4)</sup><sup>[[5]](#kaynak-5)</sup>
 
-Kilo artışını doğrudan tersine çeviren bir tedavi gibi sunulmasa da, bazı kadınlarda yağ dağılımı ve bel
-çevresi üzerindeki menopoz ilişkili kaymayı daha nötr hale getirebilir (orta kanıt). Cilt
-kuruluğu, doku kalınlığı ve saç kalitesindeki değişimler açısından ise bazı kadınlarda destekleyici bir
-etki görülebilir; fakat burada kanıt daha sınırlıdır ve “gençleştirici” vaat dili doğru olmaz
-(sınırlı kanıt).
+## HRT kararına sizi zorlayan yakınmadan başlayın
 
-Kalp-damar, ruh hali, genel iyi oluş ya da bilişsel faydalar gibi başlıklarda cümle daha temkinli
-kurulmalıdır: zamanlama önemli, herkes için aynı sonuç beklenmez ve her fayda aynı netlikte kanıtlanmış
-değildir.
+Gece terleyerek uyanıyor, sabah dinlenememiş hissediyor ve hormon tedavisinin buna değip
+değmeyeceğini düşünüyorsanız, önce hangi yakınmanın hayatınızı zorladığını ayırmak gerekir.
 
-## Bu başlık neden yeniden konuşuluyor?
+Bu konuyu konuşurken kullandığım bir cümle var: “Önce sizi neyin zorladığını konuşalım;
+sonra seçeneklerin yararlarını ve risklerini birlikte değerlendirip size uygun kararı verelim.”
 
-HRT uzun süre ya fazla korkuyla ya da fazla parlak cümlelerle anlatıldı; muayene odasında bugün hâlâ en çok
-ihtiyaç duyduğumuz şey, faydayı da sınırı da aynı sakinlikte konuşabilmek.
+HRT, menopoz döneminde azalan hormonların yerine konmasını ifade eder. Sistemik tedavide
+hormon kana geçerek vücutta etki gösterir; tablet, bant veya jel bu gruptadır.
+Düşük doz vajinal östrojen ise esas olarak vajina ve çevresindeki yakınmaları hedefler;
+aynı başlık altında anılsalar da amaçları ve risk değerlendirmeleri farklıdır.<sup>[[1]](#kaynak-1)</sup>
 
-Birçok kadın bu konuya hâlâ tek bir soruyla geliyor: “Değer mi?” Bu soruyu küçümsemem; çünkü arkasında
-uykusuz geceler, ter içinde bölünen toplantılar, cinsellikte sessizce geri çekilme ve bazen de kemik
-sağlığına dair haklı bir endişe olur.
+İçiniz rahat olsun: HRT hakkında bir yanda korkutucu başlıklarla, diğer yanda çok iddialı
+vaatlerle karşılaştığınızda çekince ya da korku hissetmeniz son derece anlaşılır bir durum.
+Bu yazıda yararları kanıt gücüne göre tek tek ele alacağız: günlük hayatta fark
+edilebilen rahatlama, kemik sağlığı ve henüz yeterli kanıtı bulunmayan beklentiler; çünkü
+hepsine aynı ağırlığı vermek kararınızı zorlaştırır.
 
-Ama tek bir cevap yok. HRT’nin sağlayabileceği yarar; hangi belirti için düşünüldüğüne, menopozun hangi
-döneminde başlandığına, rahmin olup olmadığına ve kişisel risk tablosuna göre değişir. Yine de tabloyu
-dürüstçe okumak için şunu söylemek mümkün: bazı faydalar belirgin ve güçlü verilerle destekleniyor,
-bazıları ise daha sınırlı ve daha dikkatli konuşulmayı hak ediyor.
+## En belirgin yarar sıcak basması ve gece terlemesinde
 
-Görüşmede masaya çoğu zaman aynı cümle geliyor: “Sıcak basmalarım için mi, kemiklerim için mi, yoksa genel
-olarak daha iyi hissetmek için mi?” Bu ayrım küçük görünür ama kararın yönünü değiştirir. HRT bir “her şeyi
-toparlama” paketi değil; bazı başlıklarda güçlü, bazı başlıklarda seçici kullanılan tıbbi bir araçtır.
+Sıcak basması ve gece terlemesinin sıklığını, şiddetini azaltmak HRT'nin en güçlü
+kanıtla desteklenen yararları arasındadır (güçlü kanıt).<sup>[[1]](#kaynak-1)</sup>
 
-## En net avantaj hâlâ belirti rahatlaması
+Tıbbi metinlerde *vazomotor belirtiler* olarak adlandırılan bu tablo, sizin için
+toplantının ortasında aniden yüzünüze hücum eden bir sıcaklık ya da gece kıyafet
+değiştirecek kadar terlemek olabilir. Tedavinin hedefi bu yakınmaların gününüzü ve
+gecenizi daha az bölmesidir; yanıtın derecesi ise kişiden kişiye değişir.
 
-En net kazanç çoğu zaman kadının gününü bölen, uykusunu kesen ve kendini toplum içinde kontrolsüz hissettiren
-belirtilerde görülür.
+## Gece belirtileri azaldığında uyku da rahatlayabilir
 
-Özellikle **sıcak basması** ve **gece terlemesi** için sistemik hormon tedavisi,
-etkisi güçlü biçimde belgelenmiş seçeneklerden biri olmaya devam ediyor (güçlü kanıt). Belirti sıklığını ve
-şiddetini azaltma konusunda etkisi, pek çok diğer destek seçeneğinden daha belirgin. Bu başlıkta “belki”
-ile değil, çoğu kadın için gerçekten fark edilir bir rahatlama ile konuşuyoruz.
+Uykunuz özellikle sıcak basmalarıyla bölünüyorsa, bu belirtilerin azalması daha rahat
+uyumanıza yardım edebilir (orta kanıt).<sup>[[3]](#kaynak-3)</sup>
 
-Bu fark yalnızca sıcak hissinin azalması demek değil. Toplantı ortasında yüzünüzün alev alması da bunun
-bir parçası. Gecenin bir yarısı çarşaf değiştirir gibi uyanmak, sabah aynaya bakınca “ben dün gece hiç
-dinlenmedim” demek de öyle. Küçük görünen ama hayatı bölen parçalar bu faydanın içindedir. Menopozu yaşayan
-birçok kadın için asıl avantaj tam burada başlar: gün içindeki ani alarm hali biraz yatışır.
+Çalışmaları birlikte değerlendiren bir derlemede uyku yararı, başlangıçta sıcak basması
+veya gece terlemesi olan kadınlarda daha belirgindi; bu belirtileri olmayan grupta ise
+aynı sonuç gösterilmedi. Bu yüzden HRT'yi her tür uykusuzluğa yanıt veren bir uyku ilacı
+gibi düşünmemek gerekir.<sup>[[3]](#kaynak-3)</sup>
 
-## Uyku ve yaşam kalitesindeki düzelme neden ayrı bir başlık?
+Daha az bölünen bir gecenin ertesi gün dikkatinize, enerjinize ve ruh halinize olumlu
+katkısı olabilir; ancak süregelen depresif belirtiler, kaygı veya uykusuzluğun kendi
+değerlendirmesi vardır. HRT klinik depresyonun rutin tedavisi olarak önerilmez ve bu
+yakınmaların tamamını menopoza bağlamak başka nedenleri gözden kaçırabilir.<sup>[[5]](#kaynak-5)</sup>
 
-Uyku tarafındaki iyileşme çoğu zaman doğrudan bir uyutma etkisi değil; geceyi bölen belirtilerin geri
-çekilmesidir.
+## Vajinal kuruluk ve ilişkide ağrı için lokal tedavi
 
-Sıcak basmaları ve gece terlemeleri azaldığında, gece bölünmelerinin de çoğu kadında gerilediğini
-görüyoruz (iyi–güçlü kanıt). Bunun sonucu daha uzun uyku, sabah biraz daha toparlanmış uyanma
-ve gün içinde daha az tükenmiş hissetme olabilir. Bu nedenle HRT’nin yaşam kalitesi faydası çoğu zaman
-“tek bir belirti düzeldi” cümlesinden daha büyüktür.
+Kuruluk, yanma ve ilişkide ağrı günlük hayatınızı etkiliyorsa, düşük doz vajinal östrojen
+bu yakınmaları azaltabilen seçeneklerdendir (iyi kanıt).<sup>[[2]](#kaynak-2)</sup>
 
-Ruh hali tarafında veri biraz daha heterojendir. Bazı kadınlarda uyku düzelmesi, vazomotor belirtilerin
-hafiflemesi ve bedenle kurulan gergin ilişkinin yumuşaması nedeniyle genel iyilik hissi artabilir
-(orta kanıt). Ama bu başlık depresyon ya da kaygı tedavisinin yerine geçen net bir cümleye
-çevrilmemelidir. Fayda varsa çoğu zaman dolaylı yoldan gelir: daha iyi uyku, daha az gece bölünmesi,
-daha az sürekli tetikte olma hali.
+Östrojen azalması vajina ve alt idrar yolu dokusunda incelme ve kuruluğa yol açabilir;
+*menopozun genitoüriner sendromu* adıyla da anılan bu değişiklikleri pek çok kadın
+mahcubiyetten dile getirmekte zorlanır. Yalnızca bu yakınmalarınız varsa tüm vücudu
+etkileyen sistemik tedaviye ihtiyaç olmayabilir; ancak lokal tedavinin sıcak basmasını
+gidermeyeceğini ve kemik koruması sağlamayacağını da bilmek gerekir.<sup>[[1]](#kaynak-1)</sup><sup>[[2]](#kaynak-2)</sup>
 
-Hastalarımdan sık duyduğum cümlelerden biri şu: “Aslında mesele sadece sıcak
-basması değilmiş; ben daha az dağılmış hissetmeye başladım.” Bu cümleyi önemserim. Ama her kadının yolu aynı değil.
-HRT’nin yaşam kalitesine katkısı gerçektir; yine de bunun herkeste aynı tonda yaşanacağını varsaymamak
-gerekir.
+Menopoz sonrası tekrarlayan idrar yolu enfeksiyonlarında da vajinal östrojenin yeri olabilir;
+fakat yeni başlayan yanma veya ağrının nedeni önce değerlendirilir. Meme kanseri öyküsünde
+hormon dışı seçenekler ve gerekirse lokal tedavi, ilgili hekimlerle birlikte ele alınır.<sup>[[2]](#kaynak-2)</sup>
 
-## Vajinal doku ve ürogenital konfor tarafındaki avantajlar neden önemli?
+## Kemik koruması tedavi sürdükçe devam eder
 
-Menopoz konuşulurken çoğu zaman sıcak basması başrole çıkar; oysa vajinal kuruluk, doku hassasiyeti ve
-idrar yolu çevresindeki yakınmalar kadının kendini iyi hissetme alanını sessizce daraltabilir.
+Sistemik HRT kullanıldığı dönemde kemik kaybını yavaşlatır ve kırık riskini azaltır
+(güçlü kanıt).<sup>[[2]](#kaynak-2)</sup>
 
-Östrojen azalmasıyla birlikte vajinal dokuda incelme, esneklik kaybı, kuruluk ve pH değişimi gelişebilir.
-Bu tablo ilişki sırasında rahatsızlık, günlük yanma hissi ve bazı kadınlarda tekrarlayan idrar yolu
-yakınmalarına zemin hazırlayabilir. Bu alanda östrojenin, özellikle de **lokal vajinal
-tedavilerin**, belirgin bir avantajı vardır (güçlü kanıt).
+Bu yararı günlük hayatınızda hissetmezsiniz. Östrojen azalmasıyla hızlanan kemik
+yıkımı yıllar içinde sessizce ilerleyerek kemik yoğunluğunu düşürebilir; tedavi
+bırakıldıktan sonra ise koruyucu etki azaldığı için kemik sağlığı planı o noktada
+yeniden değerlendirilir.<sup>[[2]](#kaynak-2)</sup>
 
-Burada önemli bir ayrım var: Sistemik HRT tüm beden belirtileri için düşünülürken, lokal vajinal östrojen
-çok daha hedefli bir rahatlama sağlayabilir. Yani “HRT avantajları” dediğimiz haritanın içinde yalnızca
-deri bandı ya da tablet değil, vajinal doku için kullanılan yerel seçenekler de bulunur. Bu başlıkta veri hem
-klinik olarak anlamlı hem de günlük konfor açısından güçlüdür (iyi–güçlü kanıt).
+Özellikle menopoz belirtilerinizle birlikte kemik kaybı riskiniz varsa bu yarar kararda
+önem kazanır. HRT kemik sağlığı için tek seçenek olmasa da, osteoporozu (kemik erimesi)
+olan bir kadında geçirilmiş kırıklar, kemik yoğunluğu, yaş ve diğer tedavilerle birlikte
+değerlendirilir.<sup>[[5]](#kaynak-5)</sup>
 
-## Kemik sağlığındaki yarar neden bu kadar ciddiye alınıyor?
+## Erken menopozda hormon tedavisinin amacı değişir
 
-Belirti rahatlaması hızlı fark edilir; kemik tarafındaki fayda ise sessiz çalışır ve değerini çoğu zaman
-yıllar içinde gösterir.
+Hormon eksikliği beklenenden erken başladığında, belirtilerin ötesinde uzun dönem sağlık
+da tedavi planının parçası olur.<sup>[[4]](#kaynak-4)</sup>
 
-Menopozla birlikte östrojenin düşmesi, kemik yıkımını hızlandıran temel etkenlerden biridir. HRT bu süreci
-yavaşlatabilir, kemik mineral yoğunluğunu korumaya yardımcı olabilir ve kırık riskini azaltma yönünde güçlü
-veri taşır (güçlü kanıt). Bu nedenle yalnızca “kendimi daha iyi hisseder miyim?” sorusu değil,
-“önümüzdeki yıllarda kemik sağlığımı nasıl korurum?” sorusu da aynı masadadır.
+Kırk yaşından önce gelişen erken yumurtalık yetmezliği (POI) ile 40–44 yaşındaki erken
+menopoz aynı tanım değildir. Özellikle POI'de, kullanımına engel yoksa, sıcak basması
+bulunması şart olmadan hormon tedavisinin olağan menopoz yaşına kadar sürdürülmesi
+önerilir ve sonrasında ihtiyaç ile riskler yeniden ele alınır.<sup>[[4]](#kaynak-4)</sup><sup>[[5]](#kaynak-5)</sup>
 
-Burada küçük ama önemli bir nüans var: HRT, kemik için yararlı diye herkese otomatik olarak sırf bu amaçla
-başlanacak tek seçenek değildir. Ama belirgin menopoz belirtileri olan ve aynı zamanda kemik kaybı açısından
-daha dikkatli izlenmesi gereken bir kadın için, çift yönlü fayda sağlayan anlamlı bir seçenek olabilir.
-Özellikle erken menopoz ya da düşük kemik yoğunluğu riski olan tabloda bu avantaj daha görünür hale gelir.
+Uzun dönem hastalık ve ölüm riskini azaltmaya yönelik öneri güçlüdür; ancak bu sonuçlar
+için POI'ye özgü kanıtın kesinliği düşüktür (sınırlı kanıt).
+Sizin için temel amaç, erken başlayan hormon eksikliğinin vücuttaki etkilerini azaltmaktır.<sup>[[4]](#kaynak-4)</sup>
 
-## Erken menopozda ya da yumurtalık yetmezliğinde avantaj hattı neden genişliyor?
+## Kalp ve metabolizma için beklentinin sınırları
 
-Menopoz yaşı olağan aralıktan daha erken olduğunda, HRT yalnızca konfor değil; eksik kalan hormon yıllarını
-yerine koyma mantığıyla da değerlendirilir.
+HRT, kalp-damar hastalığını önlemek amacıyla başlanmaz; ancak menopoz belirtilerinizi
+gidermek için kullanıldığında tedaviye başlama zamanınız ve damar sağlığınız yarar-risk
+dengesini etkiler.<sup>[[5]](#kaynak-5)</sup>
 
-Kırklı yaşların başında ya da daha erken gelişen menopoz tablosunda östrojen eksikliği yılları uzar. Bu
-durumda kemik, damar sistemi ve genel sağlık dengesi açısından hormon eksikliğinin etkisi daha uzun süreye
-yayılabilir. Bu nedenle erken menopoz ya da primer over yetmezliğinde HRT’nin yarar dengesi çoğu zaman daha
-geniş yorumlanır (güçlü kanıt).
+Genel olarak 60 yaşın altındaysanız veya menopoz başlangıcından itibaren ilk 10 yıl
+içindeyseniz, kullanımına engel bulunmayan durumlarda denge daha elverişlidir. Yine de bu
+zaman aralığı risksizlik garantisi vermez; daha geç başlamakla, daha önce başlanmış
+tedaviyi sürdürmek de birbirinden farklı kararlardır.<sup>[[5]](#kaynak-5)</sup>
 
-Burada konuştuğumuz şey “gençlik uzatma” değil; bedenin beklenenden erken kaybettiği hormonal desteğin daha
-fizyolojik bir yaş aralığına kadar telafi edilmesidir. Bu, özellikle kemik sağlığı ve genel uzun dönem
-kırılganlık açısından klinik olarak önemli bir başlıktır. Yani fayda cümlesi herkes için aynı genişlikte
-kurulmaz; erken menopozdaki kadın için daha belirginleşebilir.
+Tansiyonunuz, sigara kullanımınız, kan yağlarınız ve geçirilmiş damar hastalıklarınız
+görüşmede birlikte ele alınır; kan şekeri veya yağ dağılımında görülebilen değişimler de
+kendi başına kalp krizi riskinin azaldığını kanıtlamaz.<sup>[[5]](#kaynak-5)</sup>
 
-## Kalp ve metabolizma başlığında neden daha temkinli konuşuyoruz?
+## Kilo ve yağ dağılımındaki etki sınırlıdır
 
-Kalp ve metabolizma başlığı çok ilgi çekici; ama tam da bu yüzden dili yavaşlatmak gerekir.
+HRT kilo verme tedavisi değildir; karın çevresindeki yağ birikimi üzerinde bildirilen
+etki küçüktür (orta kanıt).<sup>[[1]](#kaynak-1)</sup>
 
-Menopozun erken döneminde, özellikle 60 yaş altı ve son adetten çok uzun zaman geçmeden başlanan tedavilerde,
-genel fayda-risk dengesinin daha elverişli olabileceğine dair güçlü bir veri hattı var (güçlü kanıt).
-Bazı veriler bu zamanlama penceresinde damar sistemi ve metabolik profil açısından daha nötr hatta seçilmiş
-gruplarda daha olumlu etkiler düşündürüyor (orta kanıt).
+Kıyafetlerinizin bel kısmı sıkmaya başladığında tartıdaki sayı kadar yağın dağılımı da
+dikkatinizi çekebilir. Menopoz geçişinde karın çevresinde yağlanma artabilir; hormon
+tedavisinin bunu bir ölçüde sınırlayabildiğini düşündüren bulgular ise belirgin bir kilo
+kaybı beklentisini desteklemez.<sup>[[1]](#kaynak-1)</sup>
 
-Ama bu cümle “HRT kalbi korur” gibi geniş ve rahat bir slogana çevrilmemelidir. Çünkü sonuçlar; başlama yaşı,
-süre, uygulama yolu, eşlik eden riskler ve başlangıçtaki damar sağlığına göre değişiyor. Geç başlanmış
-tedavilerde aynı cümleyi kurmuyoruz. Özellikle pıhtılaşma riski, migren öyküsü, hipertansiyon, sigara ve
-metabolik tablo birlikte okunmadan bu başlıkta avantaj vurgusu yapmak eksik kalır.
+## Cilt ve saç için hangi yararlar gösterilmiş?
 
-Kısacası burada en dürüst cümle şu: *zamanlama önemli*. Erken dönemde, doğru kişide ve doğru formda
-başlanan tedavi ile daha geç dönemde, farklı riskleri olan bir kadındaki tablo aynı değildir.
+Ciltteki bazı biyofiziksel ölçümlerde olumlu bulgular bildirilse de, saç dökülmesini
+ayrı bir başlık olarak ele almak gerekir.<sup>[[1]](#kaynak-1)</sup><sup>[[6]](#kaynak-6)</sup>
 
-## Kilo ve vücut kompozisyonu tarafında HRT ne kadar fark yaratabilir?
+Çalışmalarda incelenen cilt kalınlığı, elastikiyet ve kolajen değişimleri, aynada
+belirgin bir gençleşme göreceğiniz veya kuruluğun tek başına kaybolacağı beklentisini
+desteklemez; çalışmaların yöntem ve tedavi farklılıkları da yorumu sınırlar (sınırlı kanıt).<sup>[[6]](#kaynak-6)</sup>
+Bu nedenle yalnızca cildi gençleştirmek amacıyla sistemik HRT başlanması önerilmez.<sup>[[5]](#kaynak-5)</sup>
 
-Bu, birçok kadının aklındaki en pratik soru; çünkü çoğu zaman mesele tartıdan önce bel çevresi, kıyafet ve
-aynadaki yabancılaşma hissidir.
+Saçınızın seyrelmesi ise farklı nedenlerle ayrıca değerlendirilmelidir; çünkü HRT'nin saç
+kalitesini artıracağını söylemek için yeterli kanıt yoktur.<sup>[[1]](#kaynak-1)</sup>
 
-HRT’yi “zayıflatan” bir tedavi gibi anlatmak doğru olmaz. Doğrudan kilo verdiren, tartıyı aşağı çeken ya da
-diyetin yerini alan bir etkiden söz etmiyoruz. Ama menopozla birlikte görülen **yağın bel çevresine
-kayması**, visseral yağ artışı ve vücut kompozisyonundaki sessiz değişimler açısından bazı kadınlarda
-daha nötr bir tablo sağlayabileceğini düşündüren veriler var (orta kanıt).
+## Belirtilerin azalması yaşlanmayı durdurmaz
 
-Bu fark çoğu zaman tartıda büyük bir sayı olarak değil, yağın nereye yerleştiği ve bedenin kendini nasıl
-taşıdığı üzerinden konuşulur. Menopoz döneminde östrojen düşüşüyle birlikte yağ dağılımı alt bedenden karın
-çevresine kayma eğilimindedir. HRT bu kaymayı bazı kadınlarda kısmen yumuşatabilir gibi görünür; ancak etkisi
-yaşam tarzı, kas kütlesi, uyku, stres ve başlangıçtaki metabolik tabloyla birlikte düşünülmelidir.
+Daha rahat uyumak ve gününüzün daha az bölünmesi yaşam kalitenizi artırabilir;
+bu yarar, yaşlanmayı durdurma veya yaşamı uzatma iddiasından ayrıdır.<sup>[[2]](#kaynak-2)</sup>
 
-Daha dürüst cümle şu olur: HRT, kilo yönetiminin ana aracı değildir; ama doğru kişide menopozun vücut
-kompozisyonu üzerindeki bazı zorlayıcı etkilerini hafifletmeye katkı sağlayabilir. Eğer kadın daha iyi
-uyuyorsa, daha az vazomotor yük yaşıyorsa, gün içi hareketini geri kazanıyorsa ve bedenini daha az yorgun
-hissediyorsa, bunun kilo ve bel çevresi yönetimine dolaylı bir katkısı da olabilir (orta kanıt).
+HRT genel bir yaşlanma karşıtı tedavi olarak önerilmediği gibi, belleği korumak ya da
+demansı önlemek ve tedavi etmek için de kullanılmaz. Özellikle zihinsel bulanıklık
+hissini, ileride demans gelişme riskiyle aynı sonuç gibi değerlendirmemek gerekir.<sup>[[5]](#kaynak-5)</sup>
 
-Yani burada asıl başlık “kaç kilo verdirdi?” değil, “menopozun metabolik sürtünmesini biraz azalttı mı?”
-olmalıdır. Bu fark küçük görünebilir; ama birçok kadın için daha sürdürülebilir olan tam da bu daha sakin
-metabolik zemindir.
+## Sağlık geçmişi tedavi seçimini belirler
 
-## Cilt ve saç sağlığı tarafında gerçekten bir avantaj var mı?
+Sizin için beklenen yarar kadar, hangi hormonun hangi yoldan ve hangi sağlık geçmişiyle
+kullanılacağı da önemlidir.
 
-Bu başlık çok ilgi görüyor; ama ne yazık ki en kolay reklam diline kayan alanlardan biri de yine burası.
+Rahim varsa sistemik östrojene, rahim iç tabakasını koruyan bir progestojen eklenmesi
+gerekir (güçlü kanıt). Düşük doz lokal vajinal östrojen bu açıdan ayrı
+değerlendirilir; genellikle progestojen gerektirmez.<sup>[[1]](#kaynak-1)</sup><sup>[[2]](#kaynak-2)</sup>
 
-Östrojen, cilt kalınlığı, nem dengesi, kolajen düzeni ve saç folikül çevresindeki biyolojiyle ilişkilidir.
-Bu nedenle bazı kadınlarda menopozla birlikte belirginleşen **cilt kuruluğu**, daha ince doku
-hissi, elastikiyet kaybı ya da saç telinde cansızlaşma HRT ile bir miktar yumuşayabilir (sınırlı kanıt).
+Açıklanamayan vajinal kanama tedavi öncesinde mutlaka araştırılır. 2022 tarihli
+uluslararası menopoz kılavuzu; meme kanseri gibi östrojene duyarlı kanser öyküsünü,
+geçirilmiş koroner kalp hastalığını, kalp krizini, inmeyi, toplardamar pıhtısını ve
+karaciğer hastalığını ağızdan ya da ciltten sistemik HRT kullanımına engel durumlar
+arasında sayar; bu hastalık öyküleri yalnızca doz veya uygulama yolu seçilerek
+aşılabilecek sıradan risk faktörleri değildir.<sup>[[1]](#kaynak-1)</sup>
 
-Özellikle ciltte su tutma, bariyer hissi ve genel konfor tarafında bazı olumlu değişimler bildiren veriler
-var; ancak bu veriler kemik ve vazomotor belirti kadar güçlü değil.
+Geçirilmiş toplardamar pıhtısında ise kılavuzlar arasında bir yaklaşım farkı vardır:
+2025 tarihli güncel endokrinoloji kılavuzu, bireysel yarar-risk değerlendirmesinden
+sonra seçilmiş kadınlarda düşük doz ciltten östrojeni bir seçenek olarak ele alır. Ancak
+bu karar uzman değerlendirmesi gerektirir; bant ya da jel kullanmak pıhtı öyküsünü
+önemsiz kılmaz.<sup>[[5]](#kaynak-5)</sup>
 
-Saç tarafında da tablo benzer. Menopoz döneminde saç teli incelmesi, hacim kaybı ve dökülme artışı çoğu zaman
-yalnızca hormona bağlanmaz; demir depoları, tiroid, stres yükü, genetik eğilim ve beslenme de aynı resimdedir.
-Bu yüzden HRT bazı kadınlarda saç kalitesine dolaylı destek sağlayabilir gibi görünse de bunu güvenilir bir
-“saç dökülmesini çözer” cümlesine çevirmek doğru olmaz (sınırlı kanıt).
+Kombine sistemik tedavide meme kanseri riski kullanım süresiyle artabilir; yalnız
+östrojenin risk profili farklıdır. Ağızdan östrojen ile ciltten uygulamanın pıhtı riski
+de aynı olmadığı için, ayrıntıları [HRT ve meme kanseri](/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/)
+yazısında ayrıca okuyabilirsiniz.<sup>[[2]](#kaynak-2)</sup>
 
-Daha dürüst okuma şu olabilir: HRT, cilt ve saçta menopozla ilişkili bazı değişimleri *bazı kadınlarda*
-daha yumuşak hale getirebilir; ama bu etki ikincil bir kazançtır. Birincil karar gerekçesi hâlâ sıcak basması,
-uyku bölünmesi, vajinal yakınmalar, kemik sağlığı ve erken menopoz gibi daha net alanlardır.
+Migren, auralı olsa bile, tek başına HRT'yi dışlayan bir durum değildir; uygulama yolu
+ve doz seçimini etkiler. Görme belirtileriyle seyreden auralı migrende ciltten östrojen
+tercih edilebilir; kontrolsüz hipertansiyonda ise tedaviye başlanmaması önerilir.<sup>[[5]](#kaynak-5)</sup><sup>[[7]](#kaynak-7)</sup>
 
-## Genel yaşlanma karşıtı söylem ve iyi oluş etkisi nasıl değerlendirilmeli?
+## Hekim görüşmesine hazırlanırken
 
-“Yaşlanma karşıtı” ifadesi kulağa güçlü geliyor; ama tıbbi kararları çoğu zaman gereğinden parlak bir dile
-itiyor.
+Görüşmeye, sizi en çok zorlayan yakınmayı ve tedaviden ne beklediğinizi yazarak
+gelebilirsiniz; kullandığınız ilaçların ve sağlık geçmişinizin listesi de yanınızda olsun.
 
-HRT bir gençlik serumu ya da biyolojik saati geri saran bir yaklaşım değildir. Daha doğru cümle şudur:
-doğru kişide kullanıldığında, menopozun bazı yıpratıcı sonuçlarını azaltarak kadının **daha iyi olma
-hissine** katkıda bulunabilir. Bu katkı çoğu zaman daha iyi uyku, daha az vazomotor yük, cinsellikte
-daha fazla konfor, bedenle daha az sürtüşme ve günlük ritimde biraz daha az kırılganlık olarak hissedilir
-(orta kanıt).
+- Hangi yakınmayı hedefliyoruz; bu yakınma için hormon dışı seçenekler neler?
+- Lokal tedavi yeterli mi, sistemik tedavinin ek yararı ne olacak?
+- Benim öykümde hangi riskler önemli; uygulama yolu bunları nasıl etkiliyor?
+- Yanıtı ne zaman değerlendireceğiz; hangi yan etkileri bildirmeliyim?
 
-Yani iyi oluş etkisi varsa, çoğu zaman doğrudan değil dolaylıdır. Kadın daha az terleyip daha iyi uyuduğunda,
-eklemekte zorlandığı sosyal ritme biraz daha kolay döndüğünde, bedenine yabancılaşması azaldığında bu genel iyi
-oluş hissi büyür. Ama bunu herkeste aynı tonda, aynı hızda ve aynı genişlikte beklemek doğru olmaz.
+Tedaviye başladıktan sonra ilk değerlendirme genellikle üç ayda, ardından en az yılda bir
+yapılır; sorun olduğunda daha erken görüşülür. Hedef yararı ve yan etkileri birlikte
+izlemek olduğu için, dozu kendi başınıza değiştirmeden önce hekiminizle konuşmanız
+önemlidir.<sup>[[2]](#kaynak-2)</sup>
 
-Yaşlanma karşıtı söylemde en çok kaçırılan nokta da bu: HRT bazı sistemlerde destek sağlayabilir, ama onu yaşlanmayı
-durduran bir proje gibi sunmak hem bilimsel olarak zayıf hem de Estranova çizgisine göre fazla iddialı olur.
-Daha sakin ve doğru olan, bu tedavinin bazı kadınlarda daha iyi yaş alma deneyimine katkı verebileceğini; ama
-bunun hedefi “genç görünmek” değil, daha az zorlanmak olduğunu söylemektir.
+## Tedaviden ne beklediğinizi netleştirin
 
-## Bu avantajlar neden herkes için aynı anlama gelmiyor?
+Tedaviden ne beklediğinizi bilmek, fayda listesini uzatmaktan daha çok işe yarar.
 
-HRT’nin avantajları güçlü olabilir; ama “avantaj var” demek “herkes için uygun” demek değildir. Bu cümleyi
-bilerek tekrarlamak gerekir.
+Görüşmeden çıktığınızda hedeflenen yakınmayı, sizin için önemli riski ve sonraki
+kontrolün zamanını açıklayabiliyorsanız kararın temelini kurmuşsunuz demektir.
+Kararınızı hemen vermek zorunda değilsiniz; anlaşılmayan noktaları yeniden sorabilirsiniz.
 
-Rahmi olan ve olmayan kadınlarda kullanılan rejimler farklıdır. Kişisel meme kanseri öyküsü, açıklanamayan
-vajinal kanama, aktif karaciğer hastalığı, pıhtı öyküsü, belirli migren tipleri ya da ciddi kardiyovasküler
-riskler gibi başlıklar kararın tonunu değiştirir (güçlü kanıt). Bu yüzden aynı fayda listesi her
-kadına aynı serbestlikle sunulmaz.
+## Kaynaklar ve ileri okuma
 
-Ayrıca hangi faydayı hedeflediğimiz de önemlidir. Yalnızca vajinal kuruluk için konuşuyorsak, lokal seçenekler
-daha anlamlı olabilir. Şiddetli sıcak basmaları ve gece terlemeleri ön plandaysa sistemik tedavinin yeri daha
-belirginleşebilir. Kemik sağlığı başroldeyse yaş, menopoz zamanı ve diğer koruyucu stratejiler de denkleme
-girer. Avantajlar gerçek; ama bu denge her kadında aynı değil.
+Yararlar ve güvenlik sınırları için kullanılan seçilmiş kaynaklar aşağıdadır.
 
-## Hekim görüşmesinde hangi sorular en çok iş görür?
-
-İyi bir görüşme çoğu zaman çok soru sormaktan değil, doğru soruları aynı masaya koymaktan güç alır. Bir not
-kâğıdıyla gelmek burada fazlasıyla işe yarar.
-
-İlk soru şu olabilir: *“Biz hangi ana hedef için konuşuyoruz?”* Sıcak basması mı, uyku mu, vajinal
-yakınmalar mı, kemik koruması mı? Hedef netleşince fayda cümlesi de berraklaşır.
-
-İkinci soru: *“Benim kişisel risk tablom bu faydaları nasıl değiştiriyor?”* Çünkü HRT kararı yalnızca
-ortalama kadın verisine göre değil, sizin kendi öykünüze göre verilir.
-
-Üçüncü soru: *“Sistemik tedavi mi, lokal tedavi mi, hangi form ve neden?”* Aynı “hormon tedavisi”
-kelimesi çok farklı klinik yolları anlatabilir.
-
-Dördüncü soru da çoğu zaman en sakinleştirici olanıdır: *“Bu tedaviyi hangi süre mantığıyla izleyip
-yeniden değerlendireceğiz?”* Çünkü HRT tek seferlik bir karar değil; belli aralıklarla yeniden okunan
-bir dengedir.
-
-## Kapanış
-
-HRT’nin avantajları var; ama hepsi aynı cümleyle anlatılamaz. Bence bu yazının en önemli cümlesi de bu.
-
-En net fayda alanı vazomotor belirtiler, uykuya dolaylı katkı, vajinal doku konforu ve kemik korumasıdır.
-Erken menopozda ya da hormon eksikliğinin yıllara yayılacağı tabloda bu bakış daha da anlam kazanabilir.
-Buna karşılık ruh hali, kalp-damar sistemi ya da genel “gençleşme” gibi daha geniş iddialarda dili bilinçli
-biçimde yavaşlatmak gerekir.
-
-Bazen iyi bir karar, faydaları abartmadan ama küçümsemeden konuşabildiğimizde mümkün olur. Muayene odasında
-en çok rahatlama getiren şey de çoğu zaman budur: siyah-beyaz bir yargı değil, sizin hayatınıza ve risk
-tablonuza göre ayrılmış daha dürüst bir rehberlik.
+- The North American Menopause Society. 2022 hormon tedavisi konum bildirisi. [Sistemik ve lokal tedavi, kilo ve saç için kanıtın sınırları](https://menopause.org/wp-content/uploads/professional/nams-2022-hormone-therapy-position-statement.pdf).
+- NICE. NG23, Menopause: identification and management, güncel öneriler. [Belirtiler, kemik sağlığı, tedavi riskleri ve izlem](https://www.nice.org.uk/guidance/ng23/chapter/Recommendations).
+- Cintron D ve ark. Efficacy of menopausal hormone therapy on sleep quality: systematic review and meta-analysis. Endocrine. 2017;55:702–711. [Başlangıçtaki sıcak basması ve gece terlemesine göre uyku yararı](https://pubmed.ncbi.nlm.nih.gov/27515805/).
+- ESHRE, ASRM, CRE-WHiRL ve IMS. Evidence-based guideline: Premature Ovarian Insufficiency, 2024 kılavuzu / 2025 dergi yayını. [Erken yumurtalık yetmezliğinde hormon tedavisi önerileri ve kanıt kesinliği](https://www.asrm.org/practice-guidance/practice-committee-documents/evidence-based-guideline-premature-ovarian-insufficiency--2024/).
+- European Society of Endocrinology. Clinical practice guideline for evaluation and management of menopause and the perimenopause. Eur J Endocrinol. 2025;193:G49–G81. [Zamanlama, kemik, kalp-damar hastalığı, ruh hali, demans ve özel durumlar](https://doi.org/10.1093/ejendo/lvaf206).
+- Skin Rejuvenation in Women using Menopausal Hormone Therapy: A Systematic Review and Meta-Analysis. J Menopausal Med. 2023;29:97–111. [Cilt ölçümlerindeki değişimler ve çalışmaların sınırlılıkları](https://e-jmm.org/DOIx.php?id=10.6118/jmm.22042).
+- British Menopause Society. Migraine and HRT. 2022. [Auralı migrende hormon tedavisinin değerlendirilmesi](https://thebms.org.uk/wp-content/uploads/2022/12/06-BMS-TfC-Migraine-and-HRT-NOV2022-A.pdf).
 
 Pratik Sorular
 
-## Sıkça Sorulan Sorular
+## Dr. Aksoy'a sorular
 
-Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.
+Doç. Dr. Senai Aksoy, HRT'nin yararlarını, kullanım amaçlarını ve beklentilerin sınırlarını kendi klinik yaklaşımıyla yanıtlıyor.
 
-### HRT'nin en belirgin faydası hangisidir?
+### HRT'nin en belirgin faydasını hastanıza nasıl anlatıyorsunuz?
 
-En net ve en güçlü veri, sıcak basması ve gece terlemesi gibi vazomotor belirtilerin azalması tarafındadır. Buna bağlı olarak uyku bölünmeleri ve günlük yaşam kalitesi de birçok kadında iyileşebilir; yani fayda yalnızca tek bir belirtiyi azaltmakla kalmayıp bütün gün ritmini de etkileyebilir.
+Hastalarıma hormon tedavisinin en belirgin faydasının menopoz belirtilerini azaltarak yaşam kalitesini iyileştirmek olduğunu söylüyorum. Özellikle sıcak basmaları ve gece terlemeleri söz konusu olduğunda elimizdeki en etkili tedavi HRT.
 
-### HRT yalnızca sıcak basması için mi düşünülür?
+Gece defalarca uyanan, ertesi gün yorgun ve huzursuz hisseden bir kadın için bunun ne kadar önemli olduğunu tahmin edebilirsiniz. Tedaviyle birlikte uykusu düzelen, gün içinde kendisini daha iyi hisseden çok sayıda hastamız oluyor.
 
-Hayır. Vajinal kuruluk, doku hassasiyeti, ilişki sırasında rahatsızlık ve bazı ürogenital yakınmalar için de anlamlı bir yeri vardır; burada özellikle lokal östrojen seçenekleri güçlü bir fayda alanı taşır. Ayrıca kemik kaybını yavaşlatma ve erken menopozda daha geniş bir koruyucu hat sağlama açısından da önemli olabilir.
+Ama HRT'nin yararı yalnızca sıcak basmalarından ibaret değil. Vajinal kuruluk ve cinsel ilişkide ağrı gibi sorunlarda da etkili olabiliyor. Ayrıca kemik kaybını yavaşlatması ve kırık riskini azaltması önemli bir başka avantaj.
 
-### Kalp ve metabolizma için koruyucu etkisi kesin midir?
+Yine de hastalarıma HRT'yi bir gençleşme tedavisi olarak anlatmıyorum. Amacımız menopozu ortadan kaldırmak değil, bu dönemin yaşam kalitesi ve sağlık üzerindeki olumsuz etkilerini mümkün olduğunca azaltmak.
 
-Bu başlıkta daha temkinli konuşmak gerekir. Menopozun erken döneminde, uygun kişide ve doğru zamanlamayla başlanan tedavilerde genel denge daha elverişli olabilir; ancak bunu herkese genellenen güçlü bir “kalbi korur” cümlesine çevirmek doğru değildir. Yaş, başlangıç zamanı ve kişisel damar riski sonucu belirgin biçimde değiştirir.
+### Sıcak basması olmayan bir kadında HRT'yi hangi amaçlarla değerlendiriyorsunuz?
 
-### Kemik sağlığı için faydası neden bu kadar vurgulanıyor?
+Sıcak basması yok diye bir kadının hormon tedavisinden yarar görmeyeceğini düşünmüyorum. Önce başka şikâyetleri olup olmadığına bakıyorum. Örneğin vajinal kuruluk, cinsel ilişkide ağrı veya tekrarlayan idrar yolu enfeksiyonları olabilir. Böyle durumlarda çoğu zaman tüm vücudu etkileyen hormon tedavisi yerine lokal vajinal östrojen yeterli oluyor.
 
-Çünkü östrojen düşüşü menopoz sonrası kemik kaybının temel hızlandırıcılarından biridir ve HRT bu kaybı yavaşlatabilir. Özellikle erken menopoz yaşayan ya da kırık riski açısından daha dikkatli izlenen kadınlarda bu fayda daha stratejik bir anlam taşır; ama yine de karar tek başına kemik başlığına bakılarak değil, bütün tabloyla verilir.
+Kemik sağlığı da değerlendirdiğim önemli konulardan biri. Özellikle kemik kaybı veya kırık riski yüksek olan, menopozun üzerinden çok uzun zaman geçmemiş kadınlarda sistemik HRT bir seçenek olabilir.
 
-### HRT kilo, cilt, saç ve yaşlanma karşıtı beklentiler için karar nedeni olmalı mı?
+Bir de erken menopoza giren kadınlar var. Özellikle 40 yaşından önce yumurtalık fonksiyonları kaybolmuş bir kadında, sıcak basması olmasa bile hormon tedavisini çok daha güçlü şekilde öneriyorum. Çünkü burada yalnızca belirtileri gidermekten değil, normal menopoz yaşına kadar sürmesi beklenen hormonların erken kaybının uzun vadeli etkilerini azaltmaktan söz ediyoruz.
 
-HRT’yi kilo verdiren, saçı geri getiren ya da yaşlanmayı durduran bir tedavi gibi düşünmek doğru değildir. Bazı kadınlarda bel çevresi, cilt kuruluğu, doku konforu veya saç kalitesi tarafında ikincil bir yumuşama görülebilir; ancak bu alanlardaki kanıt, sıcak basması, vajinal doku konforu veya kemik sağlığı kadar güçlü değildir. Bu yüzden karar önce daha net ve kanıtı güçlü menopoz hedefleri üzerinden verilmelidir.
+Buna karşılık 52 yaşında, hiçbir şikâyeti olmayan, kemik sağlığı iyi ve önemli bir risk faktörü bulunmayan kadına sırf menopoza girdi diye hormon tedavisi başlamam. Her kadının HRT kullanması gerektiğini düşünmüyorum.
+
+### Kalp ve metabolizma için HRT'den ne beklenebileceğini nasıl açıklıyorsunuz?
+
+Bu konuda hastalarıma özellikle dikkatli açıklama yapıyorum. Çünkü hormon tedavisinin kalbi koruduğu, kilo almayı önlediği veya yaşlanmayı yavaşlattığı yönünde çok fazla iddia var.
+
+Östrojenin kolesterol, insülin duyarlılığı ve glukoz metabolizması üzerinde bazı olumlu etkileri olabileceğini biliyoruz. Ancak bu, hormon tedavisi kullanan her kadının kalp krizi veya felç riskinin azalacağı anlamına gelmiyor. Günümüzde HRT'yi yalnızca kalp hastalıklarını veya diyabeti önlemek amacıyla başlatmıyoruz.
+
+Tedaviye hangi yaşta başlandığı da önemli. Menopozun ilk yıllarında, özellikle 60 yaşından küçük ve başka önemli risk faktörü olmayan kadınlarda yarar-risk dengesi genellikle daha uygun. Buna karşılık menopozdan 15 yıl sonra ilk kez hormon tedavisine başlamayı aynı şekilde değerlendiremeyiz.
+
+Bir de ilacın nasıl kullanıldığı önemli. Özellikle pıhtılaşma riski yüksek kadınlarda ağızdan alınan östrojen yerine cilt yoluyla uygulanan tedavileri tercih edebiliyoruz.
+
+Benim yaklaşımım önce hastanın tansiyonuna, kilosuna, kan şekeri ve kolesterol değerlerine, sigara kullanımına ve kişisel risklerine bakmak. HRT gerekiyorsa bunları dikkate alarak tedaviyi seçiyorum.
+
+Ama kalp ve metabolizma sağlığını korumanın temelinde hâlâ düzenli hareket, sağlıklı beslenme, sigaradan uzak durmak ve mevcut risk faktörlerini kontrol etmek var. Hormon tedavisini bunların yerine koyamayız.
+
+### Kemik sağlığı için HRT'nin yararını ve tedavi bırakılınca ne olacağını nasıl anlatıyorsunuz?
+
+Hastalarıma menopozdan sonra östrojenin azalmasıyla birlikte kemik kaybının hızlandığını anlatıyorum. Özellikle menopozun ilk yıllarında bu kayıp daha belirgin olabiliyor. Hormon tedavisinin önemli yararlarından biri de bu süreci yavaşlatması. Kemik yoğunluğunu korumaya yardımcı oluyor ve kırık riskini azaltıyor. Üstelik bu, yalnızca kemik yoğunluğu ölçümünde gördüğümüz bir değişiklik değil; kırıkların azaldığını gösteren klinik çalışmalarımız da var.
+
+Ancak hastalarımın bilmesini istediğim bir nokta var: HRT'nin kemikler üzerindeki koruyucu etkisi büyük ölçüde tedavinin devam ettiği süreyle ilişkili. İlacı bıraktığımızda östrojenin sağladığı koruma azalıyor ve kemik kaybı yeniden hızlanabiliyor. Yani birkaç yıl hormon kullanıp kemiklerimizi kalıcı olarak koruma altına almış olmuyoruz. Tabii bu, tedaviyi bırakan her kadının hızla osteoporoz geliştireceği anlamına da gelmiyor.
+
+Bu nedenle HRT'yi bırakmayı düşündüğümüzde yalnızca sıcak basmalarının geri gelip gelmeyeceğini değil, kemik sağlığını da değerlendiriyorum. Özellikle kemik yoğunluğu düşükse, daha önce kırık geçirilmişse veya başka risk faktörleri varsa kemik yoğunluğu ölçümü ve kırık riski değerlendirmesiyle sonraki adımı planlıyoruz. Gerektiğinde osteoporoza yönelik başka ilaçlara geçmek mümkün.
+
+Bir de şunu vurguluyorum: Hormon tedavisi kullanmak kemik sağlığı için yapmamız gereken diğer şeylerin yerine geçmiyor. Düzenli direnç ve ağırlık taşıma egzersizleri, yeterli protein ve kalsiyum alımı, gerektiğinde D vitamini eksikliğinin düzeltilmesi hâlâ çok önemli. Ben HRT'yi kemik sağlığını korumak için elimizdeki etkili seçeneklerden biri olarak görüyorum ama tek seçenek olarak değil.
+
+### HRT'yi kilo, cilt, saç veya gençleşme beklentisiyle isteyen bir kadına ne söylüyorsunuz?
+
+Bu soruyla son yıllarda çok daha sık karşılaşıyorum. Özellikle sosyal medyada hormon tedavisi bazen sanki kilo verdiren, cildi gençleştiren, saçları güçlendiren ve yaşlanmayı durduran bir tedaviymiş gibi anlatılıyor. Ben hastalarıma önce şunu söylüyorum: Östrojenin azalması vücudumuzda gerçekten bazı değişikliklere neden oluyor ama bu değişikliklerin hepsini hormon vererek geri çeviremiyoruz.
+
+Örneğin menopoz döneminde karın çevresinde yağlanma artabiliyor. Hormon tedavisinin vücut yağının dağılımı üzerinde bazı olumlu etkileri olabilir, ancak HRT bir zayıflama tedavisi değil. Tek başına anlamlı bir kilo kaybı sağlamasını beklemiyoruz. Aynı şekilde hormon tedavisinin mutlaka kilo aldırdığı düşüncesi de doğru değil.
+
+Cilt konusunda biraz daha farklı bir durum var. Östrojenin cildin kolajen yapısı, kalınlığı ve elastikiyeti üzerinde etkili olduğunu biliyoruz. Hormon tedavisiyle bu özelliklerin bir kısmında iyileşme görülebiliyor. Ancak bunun gözle görülür bir gençleşme sağlayacağını veya kırışıklıkları ortadan kaldıracağını söylemek doğru olmaz. Üstelik yalnızca cildi güzelleştirmek amacıyla sistemik hormon tedavisi başlamayı önermiyorum.
+
+Saç dökülmesinde ise daha da dikkatli olmak gerekiyor. Menopozla birlikte saçlarda incelme görülebiliyor ama her saç dökülmesinin nedeni östrojen eksikliği değil. Genetik yatkınlık, tiroit hastalıkları, demir eksikliği ve başka nedenler de söz konusu olabilir. Dolayısıyla hormon tedavisini saç çıkaran bir tedavi gibi sunmak doğru değil.
+
+Benim için asıl önemli olan hastanın neyi düzeltmek istediği. Eğer sıcak basmaları, uyku bozukluğu, vajinal yakınmaları veya hormon tedavisinin yararlı olabileceği başka bir tıbbi durum varsa HRT'yi değerlendiriyorum. Tedavinin cilt veya vücut kompozisyonu üzerinde bazı ek yararları da olabilir. Ama yalnızca daha genç görünmek için hormon kullanmak isteyen, başka bir tedavi gereksinimi olmayan bir kadına HRT başlamam.
+
+Hastalarıma söylediğim gibi, hormon tedavisi menopozun bazı olumsuz etkilerini azaltabilir ama yaşlanmayı durdurmaz. Sağlıklı yaş almak istiyorsak kaslarımızı, kemiklerimizi, metabolik sağlığımızı ve günlük yaşam alışkanlıklarımızı da korumamız gerekiyor. HRT, doğru hastada bunun bir parçası olabilir; tamamı değil.
 
 Bilimsel Editör Notu
 
