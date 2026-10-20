@@ -24,7 +24,7 @@ Onaylı taban `ff4767c3` üzerine hedefin tamamı yeniden okundu. Teknik terimle
 
 ## 19 Ekim 2026 — Perimenopozda kaygı artışı revizyonu
 
-Kullanıcının geniş audit sonrası `düzelt` talimatıyla ayrı çalışma kopyasında hazırlandı. Kurumsal byline ve `editorial-guide` korundu. Göğüs/çarpıntı ve kendine zarar verme için güvenlik ayrımı; hormonal nedensellik sınırı; psikolojik destek; kaynak izi; gövde/SSS dili; kart kırpımı, alt metin ve metadata düzeltildi. Bilimsel Editör Notu ve önceki onay kaydı korundu. Mizah H0; gerçek okur sözü gibi duran kayıtsız cümle çıkarıldı, yeni deneyim/alıntı üretilmedi. **Durum: yeni editör ve tıbbi onay bekleniyor; yayın/commit/push/deploy yok.** [Kaynak ve düzeltme kaydı](../../../docs/editorial/perimenopozda-kaygi-artisi-fix-2026-10-19.md).
+Kullanıcının geniş audit sonrası `düzelt` talimatıyla ayrı çalışma kopyasında hazırlandı. Kurumsal byline ve `editorial-guide` korundu. Göğüs/çarpıntı ve kendine zarar verme için güvenlik ayrımı; hormonal nedensellik sınırı; psikolojik destek; kaynak izi; gövde/SSS dili; kart kırpımı, alt metin ve metadata düzeltildi. Bilimsel Editör Notu ve önceki onay kaydı korundu. Mizah H0; gerçek okur sözü gibi duran kayıtsız cümle çıkarıldı, yeni deneyim/alıntı üretilmedi. **Durum: 20 Ekim 2026'da KC editör onayı ve Doç. Dr. Senai Aksoy tıbbi onayı sohbette sözlü alındı (`article-approvals.ts` kaydı işlendi); merge/push/deploy henüz yapılmadı.** [Kaynak ve düzeltme kaydı](../../../docs/editorial/perimenopozda-kaygi-artisi-fix-2026-10-19.md).
 
 19 Ekim 2026 tekrar kontrolde bildirilen üç açık nokta kaynak/düzeltme kaydında tutuldu. Kullanıcının sonraki `commit` talimatı yalnız yerel Git kaydı içindir; yeni metin için editör/tıbbi onay veya push/deploy yetkisi olarak kaydedilmedi.
 

@@ -189,7 +189,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/',
     writerSlug: 'estranova-editorial',
     approvedAt: '2026-05-06',
-    note: 'KC editor direct approval: Duygusal Denge bolumundeki semptom boslugunu kapatmak icin Estranova Editorial Stil Rehberi / Yasit Editor tonu ile hazirlandi; editorial desk imzasiyla canli envantere alindi.',
+    note: 'KC editor direct approval: Duygusal Denge bolumundeki semptom boslugunu kapatmak icin Estranova Editorial Stil Rehberi / Yasit Editor tonu ile hazirlandi; editorial desk imzasiyla canli envantere alindi. 20 Ekim 2026 revizyonu: KC editör onayı ve Doç. Dr. Senai Aksoy tıbbi onayı KC bildirimiyle sohbette sözlü verildi (form veya onay paketi yok). Kapsam: göğüs ağrısı/baskı, çarpıntı ve kendine zarar verme düşüncesi için güvenlik ayrımı; hormonal nedensellik sınırı; psikolojik destek; Kısa Özet, SSS başlığı ve gövde dili düzeltmeleri; kaynak izi docs/editorial kaydında. Bilimsel Editör Notu ve tıbbi sorumluluk uyarısı değişmedi. Önceki 6 Mayıs 2026 onayı bu revizyonu kapsamaz.',
   },
   {
     pathname: '/zamansiz-yasam/kilo-artisi-menopoz/',
