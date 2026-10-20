@@ -38,3 +38,5 @@ Sonraki `fix`, `tekrar detaylı audit humanize fix` ve `tekrar detaylı audit fi
 - Açılış kuru tanım yerine zarif bir sahneyle başlayabilir: beden, zaman, şehir, gardırop, uyku, ayna, takvim veya mevsim.
 - Tıbbi içerikte Evidence, kırmızı bayraklar, Bilimsel Editör Notu ve tıbbi sorumluluk uyarısı korunur.
 - Yayın için KC doğrudan editör onayı `article-approvals.ts` içinde kaydedilir.
+
+20 Ekim 2026 geniş audit + humanize turu `perimenopozda-kaygi-artisi` üzerinde yapıldı (kayıt: `docs/editorial/perimenopozda-kaygi-artisi-fix-2026-10-20.md`). Sözcük/ritim düzeltmeleri, tek duygu adlandırması (mahcubiyet), bozuk bir hazırlık cümlesi ve SSS 4 sorusu sadeleştirildi; tıbbi içerik değişmedi. Göğüs ağrısı eşiği özet–gövde farkı Dr. Aksoy'a açık nokta olarak bırakıldı. **Durum: bu tur metni için yeni sözlü editör ve tıbbi onay bekleniyor; merge/push/deploy yok.**

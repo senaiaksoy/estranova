@@ -340,7 +340,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
         'Uyku kaybı ertesi gün kaygıyı artırabilir; kaygı da yeniden uykuya dalmayı zorlaştırabilir. Gece terlemesi ve sıcak basması da uykuyu bölebilir.',
     },
     {
-      question: 'Ne zaman bunu yalnızca yoğunluk diye geçmemek gerekir?',
+      question: 'Hangi durumda kaygıyı yoğunluğa bağlayıp geçiştirmemek gerekir?',
       answer:
         'Kaygı işinizi, uykunuzu veya ilişkilerinizi etkiliyorsa; tekrarlayan panik benzeri ataklar ya da çöküntü hali varsa profesyonel değerlendirme isteyin. Kendinize zarar verme düşüncesi için gecikmeden yardım alın. Bir planınız varsa, kendinizi güvende tutamıyorsanız veya kendinize zarar verdiyseniz yalnız kalmayın; güvendiğiniz birini yanınıza çağırın ve acil sağlık yardımı alın.',
     },
