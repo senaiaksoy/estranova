@@ -1,5 +1,5 @@
 {
-  "exclude": ["node_modules", "dist", "icerik"],
+  "exclude": ["node_modules", "dist", "icerik", "article-drafts"],
   "compilerOptions": {
     "target": "ES2022",
     "experimentalDecorators": true,

@@ -147,7 +147,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
     title: 'Menopoz Sonrası Karın Germe: Aynadaki Görüntü ile Beden Hissi Aynı Şeyi Söylemiyorsa',
     description:
-      'Menopoz sonrası karında değişen şey her zaman kilo ya da şişkinlik değildir. Yağ dağılımı, cilt elastikiyeti, bağ dokusu ve karın duvarı değişimlerini; karın germe kararına acele etmeden anlatan Çağrı Sade imzalı rehber.',
+      'Menopoz sonrası karın germe: cilt fazlası, karın duvarı gevşekliği, ameliyatın sınırları, riskleri ve iyileşme süreci. Op. Dr. Çağrı Sade anlatıyor.',
     publishedDate: '29 Haziran 2026',
     writerSlug: 'cagri-sade',
     section: 'Beden & Yakınlık',
