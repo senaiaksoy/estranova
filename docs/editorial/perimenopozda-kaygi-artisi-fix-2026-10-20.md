@@ -14,7 +14,7 @@
 
 ## Bilerek dokunulmayanlar ve açık nokta
 
-- Özet "yeni başlayan veya geçmeyen" göğüs ağrısı/baskı derken `bedensel-alarm` gövdesi "aniden başlayan ve geçmeyen" için acil yardım ister. İki ifade çelişmiyor (özet: bekletmeden değerlendirme; gövde: acil), ama eşik farkı var. Güvenlik metni olduğu için tek taraflı değiştirilmedi; karar Dr. Aksoy'da.
+- Göğüs ağrısı/baskı eşiği: gövde ("aniden başlayan ve geçmeyen") özetteki "yeni başlayan veya geçmeyen" ifadesiyle hizalandı (KC talimatı, 20 Ekim 2026). Güvenlik eşiği genişlediği için tıbbi onayda ayrıca belirtilmeli.
 - Hekim notu, sorumluluk reddi, Evidence düzeyleri ve kaynak izi değişmedi.
 
 ## Doğrulama
