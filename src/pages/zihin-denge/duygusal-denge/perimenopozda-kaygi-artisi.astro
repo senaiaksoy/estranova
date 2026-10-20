@@ -41,7 +41,7 @@ const tocEntries = [
   { id: 'ne-zaman-destek', label: 'Destek alma zamanı' },
   { id: 'gunluk-duzenler', label: 'Günü kolaylaştıran küçük düzenler' },
   { id: 'kisa-hatirlatma', label: 'Görüşmeye hazırlanırken' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar' },
+  { id: 'sik-sorulanlar', label: 'Perimenopozda kaygı hakkında sorular' },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -107,9 +107,10 @@ const articleSchemas = buildArticleSchemas({
       <ArticleSummary title="Kısa Özet">
         <p>
           Kaygı, perimenopozda bazı kadınlarda belirginleşebilir; hormon değişimleri, uyku ve yaşam yükü
-          birlikte rol oynayabilir. Günlük hayatınızı etkileyen kaygı için destek alabilirsiniz.
-          Yeni göğüs belirtileri veya kendinize zarar verme düşüncesi ise aşağıdaki güvenlik uyarılarıyla
-          birlikte, ayrıca değerlendirilmelidir.
+          birlikte rol oynayabilir. Günlük hayatınızı, uykunuzu veya ilişkilerinizi etkileyen kaygı için
+          bir hekimle ya da ruh sağlığı uzmanıyla görüşebilirsiniz. Yeni başlayan veya geçmeyen göğüs ağrısı
+          ya da baskı hissi, devam edip geçmeyen çarpıntı ve kendinize zarar verme düşüncesi ise bekletilmeden
+          ayrıca değerlendirilmelidir.
         </p>
       </ArticleSummary>
 
@@ -120,45 +121,44 @@ const articleSchemas = buildArticleSchemas({
           olduğunuzu fark edebilirsiniz.
         </p>
         <p>
-          Perimenopoz, menopoza geçiş dönemidir; östrojen ve progesteron düzeyleri bu sırada dalgalanır.
-          Bazı kadınlarda kaygı belirtileri de artabilir <Evidence level={3} />. Bu ilişki, yaşadığınız
-          kaygının doğrudan ve yalnızca hormonlardan kaynaklandığını göstermez. Önceki kaygı öykünüz,
-          uykunuz ve o sırada taşıdığınız sorumluluklar da önemlidir.
+          Perimenopoz, menopoza geçiş dönemidir; östrojen ve progesteron düzeyleri bu sırada dalgalanır ve
+          bazı kadınlarda kaygı belirtileri artabilir <Evidence level={3} />. Ancak yaşadığınız kaygı
+          doğrudan ve yalnızca hormonlarla açıklanmaz; önceki kaygı öykünüz, uykunuz ve o sırada taşıdığınız
+          sorumluluklar da bu seyirde yer tutar.
         </p>
         <p>
-          Daha çabuk bunaldığınız için kendinizi suçlamayın. Kaygı bir karakter kusuru değildir.
-          Ne zamandır böyle hissettiğinizi fark etmek, size neyin yardımcı olacağını konuşmayı kolaylaştırır.
+          İçiniz rahat olsun diye şunu başta söyleyelim: Daha çabuk bunalmanız veya sebebini hemen adlandıramadığınız
+          bir huzursuzluk hissetmeniz bir karakter kusuru değildir.
         </p>
 
         <h2 id="kaygi-stres">Kaygı ve stres arasındaki fark</h2>
         <p>
-          Yetişmesi gereken bir iş için gerilmekle, iş bittikten sonra da kötü bir şey olacakmış gibi
-          hissetmek birbirinden farklı olabilir. Gündelik hayatta bu iki his sık sık iç içe geçer.
+          Teslim tarihi geçtiğinde rahatlıyor musunuz, yoksa zihniniz hemen başka bir endişeye mi geçiyor?
+          Gündelik hayatta stres ve kaygı sık sık iç içe geçer.
         </p>
         <p>
-          Stres genellikle bir talep veya baskıya verilen yanıttır. Kaygı ise olabileceklerle ilgili
-          endişe ve tetikte olma halidir; belirgin bir tehdit yokken de sürebilir. Sizde hangisinin
-          ağır bastığını anlamak için gün içinde neye takıldığınıza ve bu hissin ne zaman hafiflediğine bakabilirsiniz.
-        </p>
-        <p>
-          Örneğin teslim tarihi geçtiğinde rahatlıyor musunuz, yoksa zihniniz hemen başka bir endişeye mi geçiyor?
-          Bu sorunun yanıtı tek başına tanı koymaz; görüşmede anlatabileceğiniz somut bir ayrıntı verir.
+          Stres genellikle görünür bir talep veya baskıya verilen yanıttır; iş bittiğinde ya da yük azaldığında
+          gevşeyebilir. Kaygı ise olabileceklerle ilgili endişe ve tetikte olma halidir; belirgin bir tehdit
+          yokken de sürebilir. Gün içinde neye takıldığınıza ve bu hissin yük azaldığında hafifleyip
+          hafiflemediğine bakmak aradaki farkı görmenize yardım eder.
         </p>
 
         <h2 id="bedensel-alarm">Kaygının bedensel belirtileri</h2>
         <p>
           Omuzlarınızı sıktığınızı veya midenizin düğümlendiğini, neye endişelendiğinizi fark etmeden önce
-          hissedebilirsiniz. Kaygının fiziksel tarafı da yorucu olabilir.
+          hissedebilirsiniz. Kaygının bu bedensel yansıması gün içinde başlı başına yorucu olabilir.
         </p>
         <p>
           Çarpıntı, kas gerginliği, mide rahatsızlığı, terleme veya nefesin hızlanması kaygıya eşlik edebilir.
           Sıcak basması da terleme ve çarpıntı hissi yaratabildiğinden, yalnızca nasıl hissettirdiğine bakarak
-          nedenini ayırt etmek zor olabilir. Yeni başlayan, sıklaşan veya uzayan çarpıntıyı hekiminize anlatın.
+          nedenini ayırt etmek zor olabilir. Çarpıntınız geçmiş ve kendinizi iyi hissediyor olsanız bile,
+          yeni başlayan, tekrarlayan, sıklaşan veya birkaç dakikadan uzun süren ataklar için hekiminizle görüşün.
         </p>
         <p>
-          <strong>Aniden başlayan ve geçmeyen göğüs ağrısı ya da baskıyı kaygı veya sıcak basması diye beklemeyin.</strong>
-          Çarpıntıyla birlikte göğüs ağrısı, nefes darlığı, bayılacak gibi olma ya da bayılma varsa acil sağlık
-          yardımı alın. Bu belirtilerin kaynağı burada anlatılanlardan farklı olabilir.
+          <strong>Aniden başlayan ve geçmeyen göğüs ağrısını veya göğüste baskı hissini kaygı ya da sıcak basması
+          diye yorumlayıp beklemeyin; acil sağlık yardımı alın.</strong> O anda devam eden ve geçmeyen çarpıntı
+          için de acil yardım alın. Çarpıntıya göğüs ağrısı, nefes darlığı, bayılacak gibi olma veya bayılma
+          eşlik ediyorsa bu da acildir; bu belirtiler durmuş olsa bile gecikmeden tıbbi değerlendirme isteyin.
         </p>
 
         <h2 id="uyku-sicak-basma">Bölünen uyku ve sıcak basmaları</h2>
@@ -167,34 +167,27 @@ const articleSchemas = buildArticleSchemas({
           Kaygınızın arttığı günlerde önceki gecenin nasıl geçtiğine de bakın.
         </p>
         <p>
-          Uyku kaybının ertesi gün kaygıyı artırabildiği araştırmalarda da görülüyor <Evidence level={3} />.
-          Ancak bu çalışmaların hepsi perimenopozdaki kadınlarla yapılmış değil. Gece terlemesi, sıcak basması
-          veya endişeli düşünceler uykunuzu bölebilir; kaygı da yeniden uykuya dalmayı zorlaştırabilir.
-        </p>
-        <p>
-          Yatma saatinizi, gece uyanmalarını ve ertesi gün nasıl hissettiğinizi kısa notlarla kaydedebilirsiniz.
-          Uyanırken terleme olup olmadığını da ekleyin. Bu kayıt, görüşmede uyku sorununu ayrıca ele almayı kolaylaştırır.
+          Araştırmalar uyku kaybının ertesi gün kaygıyı artırabildiğini gösteriyor <Evidence level={3} />;
+          ancak bu çalışmaların tamamı perimenopozdaki kadınlarla yapılmış değil. Gece terlemesi, sıcak basması
+          veya endişeli düşünceler uykunuzu bölebilir; artan kaygı da yeniden uykuya dalmayı zorlaştırabilir.
         </p>
 
         <h2 id="olagan-dalga">Belirtilerin süresi ve günlük hayata etkisi</h2>
         <p>
           Bir sabah huzursuz uyanmakla, haftalardır dışarı çıkmaktan kaçınmak aynı deneyim değildir.
-          Sizin gününüzde nelerin değiştiği, belirtinin adından daha açıklayıcı olabilir.
+          Bu hissin gününüzde ne kadar yer kapladığı, tek bir gergin sabahtan daha yol göstericidir.
         </p>
         <p>
-          Görüşmede ne zamandır kaygılandığınız, bunun ne sıklıkta olduğu ve günün ne kadarını kapladığı sorulabilir.
-          İşlerinizi ertelemek, görüşmelerden kaçınmak veya sürekli güvence aramak gibi değişiklikleri de anlatın.
-          Adet günleriyle birlikte artıp azalıyorsa bunu not etmek yararlı olabilir.
-        </p>
-        <p>
-          Belirtileriniz için kusursuz bir açıklama bulmanız gerekmiyor. Ne yaşadığınızı kendi sözcüklerinizle
-          anlatmanız yeterli; değerlendirmede süre, şiddet ve sağlık öyküsü birlikte ele alınır.
+          Değerlendirmede yalnızca zor geçen tek bir güne bakılmaz; kaygının süresi, şiddeti, ne sıklıkta olduğu
+          ve günün ne kadarını kapladığı sağlık öykünüzle birlikte ele alınır. İşleri ertelemek, sosyal buluşmalardan
+          kaçınmak veya yakınlarınızdan sürekli güvence istemek günlük hayattaki etkilerine örnektir;
+          kaygı bazı günlerde hafiflese bile bu alışkanlıklar sürebilir.
         </p>
 
         <h2 id="ne-zaman-destek">Destek alma zamanı</h2>
         <p>
-          Kaygı yüzünden yapabildikleriniz azalıyorsa bunu bir görüşmede dile getirin.
           Yardım istemek için bütün işlerin aksamasını beklemeniz gerekmez.
+          Kaygı yüzünden yapabildikleriniz azalıyorsa bunu bir görüşmede dile getirin.
         </p>
         <p>
           İşiniz, uykunuz veya ilişkileriniz etkileniyorsa; tekrarlayan panik benzeri ataklar, çöküntü hali,
@@ -202,14 +195,14 @@ const articleSchemas = buildArticleSchemas({
           Kaygıyla baş etmek için alkol veya kendi kararınızla ilaç kullanmaya başladıysanız bunu da söyleyin.
         </p>
         <p>
-          Hekiminiz, örneğin tiroid sorunları, kansızlık veya kullandığınız ilaçların etkisini de değerlendirebilir.
-          B12 eksikliği gibi başka durumlar öykü ve muayeneye göre araştırılabilir; bu liste herkese aynı testlerin
-          yapılması gerektiği anlamına gelmez. Yas ve uzun süren bakım sorumluluğu da görüşmede yer bulmalıdır.
+          Hekiminiz tiroid sorunları, kansızlık veya kullandığınız ilaçların etkisini de gözden geçirebilir.
+          B12 eksikliği gibi başka durumlar ise herkese standart bir liste olarak değil, öykü ve muayeneye göre araştırılır.
+          Yas ve uzun süren bakım sorumluluğu gibi yaşam koşulları da bu görüşmede dikkate alınır.
         </p>
         <p>
           Değerlendirme sonrasında psikolojik destek, düşünce ve davranışların kaygıyla ilişkisini ele alan
           bilişsel davranışçı terapi veya gerektiğinde ilaç tedavisi konuşulabilir <Evidence level={4} />.
-          Hangi desteğin uygun olduğu belirtilerinize ve tercihlerinize göre belirlenir.
+          Hangi desteğin uygun olduğu belirtilerinizin şiddetine, eşlik eden durumlara ve tercihlerinize göre belirlenir.
         </p>
         <h3>Kendinize zarar verme düşüncesi varsa</h3>
         <p>
@@ -221,11 +214,11 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="gunluk-duzenler">Günü kolaylaştıran küçük düzenler</h2>
         <p>
           Zor bir günde bütün alışkanlıklarınızı değiştirmeniz gerekmiyor.
-          Size uygun, sürdürebileceğiniz bir adımla başlayabilirsiniz.
+          Size uygun, sürdürebileceğiniz tek bir adımla başlayabilirsiniz.
         </p>
         <p>
           Düzenli hareket, yeterli uyku ve fazla kafeini azaltmak kaygıyla baş etmeye yardımcı olabilir
-          <Evidence level={3} />. Bunlar genel destek adımlarıdır; belirgin kaygının değerlendirilmesi
+          <Evidence level={3} />. Bu adımlar genel destek sağlar; belirgin kaygının tıbbi değerlendirilmesi
           veya tedavisinin yerini tutmaz.
         </p>
         <ul>
@@ -236,8 +229,8 @@ const articleSchemas = buildArticleSchemas({
           <li>Kaygıyı hafifletmek için alkole veya kendi kararınızla ilaç kullanmaya yönelmeyin.</li>
         </ul>
         <p>
-          Bir öneri size iyi gelmiyorsa kendinizi zorlamayın. Hangi adımın uygulanabilir olduğunu görmek,
-          uzun bir yapılacaklar listesini eksiksiz tamamlamaktan daha yararlıdır.
+          Bir öneri size iyi gelmiyorsa kendinizi zorlamayın. Uzun bir yapılacaklar listesini eksiksiz tamamlamaya
+          çalışmak yerine, gününüze gerçekten uyan adımı seçmek daha gerçekçidir.
         </p>
 
         <h2 id="kisa-hatirlatma">Görüşmeye hazırlanırken</h2>
@@ -246,14 +239,22 @@ const articleSchemas = buildArticleSchemas({
           birkaç satır yazmanız yeterli olabilir.
         </p>
         <p>
-          Kaygının ne zaman başladığını, uyku ve adet düzeninizdeki değişiklikleri, kullandığınız ilaç ve
-          takviyeleri not edin. Daha önce benzer bir dönem yaşadıysanız neyin yardımcı olduğunu da ekleyin.
-          Görüşmenin sonunda anlamadığınız bir noktayı yeniden sorabilir, önerilen desteğin ne amaçla
-          sunulduğunu öğrenebilirsiniz.
+          Kaygının ne zaman başladığını ve günlük hayatınızda neleri değiştirdiğini not edin.
+          Uyku saatlerinizi, gece uyanmalarına terleme veya sıcak basmasının eşlik edip etmediğini ve
+          ertesi gün nasıl hissettiğinizi ekleyebilirsiniz. Adet düzenindeki değişiklikleri ve kaygının
+          adet günleriyle birlikte artıp azalmadığını da yazın. Listenize kullandığınız ilaç ve takviyelerle
+          daha önce benzer bir dönemde neyin yardımcı olduğunu ekleyin. Görüşmenin sonunda anlamadığınız
+          bir noktayı ya da önerilen desteğin amacını sormaktan çekinmeyin.
         </p>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ
+        id="sik-sorulanlar"
+        title="Perimenopozda kaygı hakkında sorular"
+        intro="Belirtilerin ne anlama geldiğini, uykuyla ilişkisini ve ne zaman destek isteneceğini özetleyen dört soru."
+        items={faqItems}
+        class="mt-10"
+      />
 
       <RelatedReadings
         class="mt-14"

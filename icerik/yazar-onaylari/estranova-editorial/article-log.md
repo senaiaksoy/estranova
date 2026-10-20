@@ -28,6 +28,8 @@ Kullanıcının geniş audit sonrası `düzelt` talimatıyla ayrı çalışma ko
 
 19 Ekim 2026 tekrar kontrolde bildirilen üç açık nokta kaynak/düzeltme kaydında tutuldu. Kullanıcının sonraki `commit` talimatı yalnız yerel Git kaydı içindir; yeni metin için editör/tıbbi onay veya push/deploy yetkisi olarak kaydedilmedi.
 
+Sonraki `fix`, `tekrar detaylı audit humanize fix` ve `tekrar detaylı audit fix` talimatlarıyla, `b35cfd44` üzerine geçmeyen çarpıntının bağımsız acil yardım koşulu netleştirildi; Kısa Özet çevre metin olmadan okunduğunda da yeni başlayan veya geçmeyen göğüs ağrısı/baskı, devam edip geçmeyen çarpıntı ve kendine zarar verme sınırlarını açıkça gösterecek biçimde somutlaştırıldı; göğüs uyarısının Türkçesi düzeltildi; görüşmeye hazırlık tekrarları son bölümde toplandı ve 29–30 sözcüklü birleşik cümleler 10–17 sözcüklü net cümlelere ayrıldı; beşinci bölümde güvence arama davranışını yalnız kaçınma olarak etiketlememek için “bu alışkanlıklar” kullanıldı; altıncı bölümde ardışık “değerlendirme” tekrarları ve ikinci SSS'deki “değişiklik” tekrarı giderildi; üçüncü SSS kısaltıldı ve `ArticleFAQ` jenerik şablon açıklaması konuya özgü başlık/açıklamayla değiştirildi. Lede çeşitliliği, doğrudan teselli cümlesi ve cümle ritmi (75 cümle, ortalama 14,0 sözcük, sd 5,2, >25 sözcük 0) dengelendi; `family-*` yapı uyarısı 0'da kaldı. Hekim notu/disclaimer ve eski onay değişmedi. CI, SEO ve yerel sayfa kontrolü geçti. **Ek düzeltmeler commit edilmedi; yeni editör/tıbbi onay bekleniyor.** Ayrıntılar aynı kaynak/düzeltme kaydında.
+
 ## Stil Kuralları
 
 - Kişisel anekdot veya birinci tekil deneyim iddiası yok.

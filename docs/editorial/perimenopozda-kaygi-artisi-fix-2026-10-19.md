@@ -1,7 +1,7 @@
 # Perimenopozda Kaygı Artışı — düzeltme ve kaynak kaydı
 
 - Tarih: 19 Ekim 2026.
-- Durum: taslak revizyon; yeni editör ve tıbbi onay alınmadı. Kullanıcı 19 Ekim 2026 tarihinde yalnız yerel commit istedi; push/deploy yetkisi verilmedi.
+- Durum: taslak revizyon; yeni editör ve tıbbi onay alınmadı. İlk revizyon kullanıcı talimatıyla `b35cfd44` olarak yerel commit edildi. Sonraki `fix` talimatıyla aşağıdaki üç açık nokta düzeltildi; bu ek düzeltmeler henüz commit edilmedi. Push/deploy yetkisi verilmedi.
 - Rota: `/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/`.
 - Byline/tür: Estranova Editörleri / `editorial-guide`.
 - Başlangıç: `4590cffb85421c1181c63223abfed019ee070626`; temiz ana çalışma dizininin ayrı çalışma kopyası.
@@ -33,7 +33,7 @@ Kontrol tarihi 19 Ekim 2026. Aşağıdaki kaynaklar gövdeye taşınmaz; kurumsa
 | Hormon geçişi ve bazı kadınlarda kaygı artışı; `neden-simdi`, özet | [Bromberger ve ark., SWAN, Menopause 2013, PMID 23615639](https://pubmed.ncbi.nlm.nih.gov/23615639/); [NICE NG23](https://www.nice.org.uk/guidance/ng23/chapter/Recommendations) | SWAN: başlangıçta 42–52 yaş, 2.956 kadın, 10 yıllık gözlem; başlangıç kaygısına göre farklı sonuç. Kaygı belirtisi kümesi ölçülüyor; tanılı bozukluk veya doğrudan östrojen/progesteron nedenselliği değil. Gövdeye oran eklenmedi. |
 | Stres ve kaygı ayrımı; `kaygi-stres` | [NIMH: I'm So Stressed Out](https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet) | Genel açıklama; okurun kendi kendine tanı koyacağı bir test değil. |
 | Fiziksel belirtiler; `bedensel-alarm` | [NHS GAD](https://www.nhs.uk/mental-health/conditions/generalised-anxiety-disorder-gad/); [NHS anxiety/fear/panic](https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anxiety-fear-panic/) | Belirtiler özgül değil; fiziksel hastalık dışlanmadan kaygı tanısı üretilmez. |
-| Göğüs/çarpıntı uyarısı | [NHS chest pain](https://www.nhs.uk/symptoms/chest-pain/); [NHS heart palpitations](https://www.nhs.uk/symptoms/heart-palpitations/) | Geçmeyen ani göğüs ağrısı/baskı veya çarpıntıya eşlik eden ağrı, nefes darlığı, baygınlık/bayılma. Yabancı ülke telefon numaraları aktarılmadı. |
+| Göğüs/çarpıntı uyarısı | [NHS chest pain](https://www.nhs.uk/symptoms/chest-pain/); [NHS heart palpitations](https://www.nhs.uk/symptoms/heart-palpitations/) | Geçmeyen ani göğüs ağrısı/baskı; o anda devam edip geçmeyen çarpıntı; çarpıntıya eşlik eden ağrı, nefes darlığı, baygınlık/bayılma acil yardım koşullarıdır. Acil belirtiler durmuşsa da gecikmeden değerlendirme gerekir. Atak geçmiş ve kişi iyiyken tekrarlama/sıklaşma veya birkaç dakikayı aşma hekim görüşmesi gerektirir. Yabancı ülke telefon numaraları aktarılmadı. |
 | Uyku kaybı ve kaygı; `uyku-sicak-basma`, SSS 3 | [Ben Simon ve ark., Overanxious and underslept, Nature Human Behaviour 4, 100–110 (2020)](https://www.nature.com/articles/s41562-019-0754-8); [2020 yazar düzeltmesi](https://www.nature.com/articles/s41562-020-01016-1.pdf); [NICE NG23, uyku](https://www.nice.org.uk/guidance/ng23/chapter/Recommendations) | Deneysel uyku kaybı ve gözlemsel gece-gündüz ilişkileri; perimenopoza özgü etki büyüklüğü değil. Yazar düzeltmesi sayısal değerleri düzeltiyor, ana sonuçları değiştirmiyor. Makalede sayısal etki kullanılmadı. |
 | Süre, işlev, kaçınma, destek seçenekleri; `olagan-dalga`, `ne-zaman-destek`, SSS 1/4 | [NICE CG113](https://www.nice.org.uk/guidance/cg113/chapter/Recommendations), özellikle 1.2.4–1.2.7 ve 1.2.17–1.2.23; [NHS GAD](https://www.nhs.uk/mental-health/conditions/generalised-anxiety-disorder-gad/) | Tanı/tedavi değerlendirmeye bağlı. BDT, gevşeme veya ilaç genel seçenekler; herkese ilaç veya hormon tedavisi önerilmiyor. |
 | Başka nedenler: tiroid, kansızlık, ilaç etkileri | [NHS heart palpitations](https://www.nhs.uk/symptoms/heart-palpitations/); [NICE CG113, değerlendirme](https://www.nice.org.uk/guidance/cg113/chapter/Recommendations) | Özellikle çarpıntının başka nedenlerini kapsar; her kaygıya bu tanıları koymaz ve herkese tetkik önermez. |
@@ -95,3 +95,39 @@ Bu noktalar kullanıcıya bildirildi; sonraki `commit` talimatı bir düzeltme v
 - P2: Görüşmede anlatma/not alma yönlendirmesi farklı bölüm kapanışlarında tekrar ediyor. Beşinci bölüm ve görüşmeye hazırlık bölümü tekrar açısından yeniden ele alınabilir.
 - P3: Göğüs uyarısındaki “göğüs ağrısı ya da baskıyı … diye beklemeyin” ifadesi daha doğal Türkçeyle netleştirilebilir.
 - Tekrar kontrolde kaynak–derlenmiş sayfa 45/45 blok; SSS/şema 4/4; dokuz anchor sağlam. 320/390/768/1280 px ekranlarda H1 kesilmesi veya gövde taşması yok. Canlı sayfa hâlâ eski sürüm (`dateModified: 2026-05-06`); yerel sürüm `2026-10-19`.
+
+## Sonraki `fix`, `tekrar detaylı audit humanize fix` ve `tekrar detaylı audit fix` turları (`b35cfd44` üzerine)
+
+- **P2 çarpıntı (güvenlik sınırı):** Geçip bitmiş atak ile o anda sürüp geçmeyen çarpıntı ayrıldı. Geçmeyen çarpıntı için eşlik eden başka belirti şartı olmadan acil yardım yazıldı. Ağrı/nefes darlığı/bayılma eşliği ve bu acil belirtiler durduktan sonra da gecikmeden değerlendirme sınırı korundu. NHS heart palpitations sayfası yeniden okundu; inceleme tarihi 17 Mart 2026.
+- **P2 bağımsız okunan Kısa Özet:** Özetin son cümlesindeki soyut “yeni göğüs belirtileri … aşağıdaki güvenlik uyarılarıyla birlikte” ifadesi somutlaştırıldı: çevre metin olmadan okunduğunda da yeni başlayan veya geçmeyen göğüs ağrısı ya da baskı hissi, devam edip geçmeyen çarpıntı ve kendine zarar verme düşüncesinin bekletilmeden ayrıca değerlendirilmesi gerektiği anlaşılıyor.
+- **P2 tekrarların birleştirilmesi, klinik kavram ayrımı ve inkâr kalıbı:**
+  - Görüşmeye hazırlık son bölümde toplandı (uyku saati, gece terlemesi, ertesi gün etkisi, adet günleriyle ilişki, ilaç/takviye, geçmişte yardımcı olan destek ve görüşme sonu sorusu); iki 29–30 sözcüklü birleşik cümle 10–17 sözcüklü net cümlelere ayrıldı.
+  - Beşinci bölüm süre, şiddet, sıklık ve günlük işlevi açıklıyor; sürekli güvence arama davranışını yalnız “kaçınma alışkanlığı” başlığı altında toplamamak için “bu alışkanlıklar” ifadesiyle hem kaçınma hem güvence arama davranışları kapsandı (NICE CG113).
+  - Üçüncü SSS uyku ilişkisini tekrarlanan görüşme yönlendirmesi olmadan veriyor; ikinci SSS'deki “değişikliklerini … değişiklik” sözcük tekrarı giderildi.
+  - Altıncı bölümdeki “bu liste herkese aynı testlerin yapılması gerektiği anlamına gelmez” inkâr kalıbı doğrudan “herkese standart bir liste olarak değil, öykü ve muayeneye göre araştırılır” biçimine çevrildi (`family-negative-frame` eşik altına indi) ve ardışık üç cümledeki “değerlendirebilir / değerlendirmenin / Değerlendirme” tekrarı giderildi.
+- **P2/P3 sıcaklık, lede çeşitliliği ve ritim dengesi:**
+  - Birinci bölümde doğrudan teselli ve utanç/suçluluk yükünü alan cümle güçlendirildi (“İçiniz rahat olsun diye şunu başta söyleyelim: Daha çabuk bunalmanız veya sebebini hemen adlandıramadığınız bir huzursuzluk hissetmeniz bir karakter kusuru değildir.”).
+  - İkinci bölümün (`#kaygi-stres`) lede'si doğrudan okura sorulan somut soruyla açıldı (“Teslim tarihi geçtiğinde rahatlıyor musunuz, yoksa zihniniz hemen başka bir endişeye mi geçiyor?”); sondaki tek cümlelik kopuk paragraf birleştirildi.
+  - Üçüncü bölümün (`#bedensel-alarm`) lede kapanışı somutlaştırıldı; dördüncü bölümde virgülle bağlanan sıralı cümle noktalı virgülle ayrıldı; beşinci bölümün lede'sindeki soyut “belirtinin adından daha açıklayıcı” ifadesi “Bu hissin gününüzde ne kadar yer kapladığı, tek bir gergin sabahtan daha yol göstericidir” ile değiştirildi.
+  - Altıncı bölümün (`#ne-zaman-destek`) lede'sinde kısa güvence cümlesi öne alındı; destek seçeneklerinin seçim ölçütüne şiddet, eşlik eden durumlar ve tercihler eklendi.
+  - Yedinci ve sekizinci bölümlerin kapanışları soyut karşılaştırma yerine somut, uygulanabilir cümlelerle tamamlandı.
+  - `ArticleFAQ` bileşeninin şablon varsayılanı olan jenerik başlık ve meta açıklama (`Bu bölüm, makalenin sonunda en çok geri dönülen soruları...`), konuya özgü başlık (`Perimenopozda kaygı hakkında sorular`) ve açıklama ile değiştirildi; TOC etiketi eşitlendi.
+- **P3 dil:** “göğüs ağrısı ya da baskıyı … diye beklemeyin” yerine “göğüs ağrısını veya göğüste baskı hissini … diye yorumlayıp beklemeyin; acil sağlık yardımı alın” kullanıldı.
+
+Bu turun bölüm/yüzey sayımı (`b35cfd44` → güncel çalışma kopyası):
+
+| Sonuç / yapı | Önce (`4590cffb`) | `b35cfd44` | Sonra | Kalan tekrarın işlevi |
+|---|---:|---:|---:|---|
+| Kaygının çok etkenli oluşu | 6 | 3 | 3 | Özet, 1. bölüm mekanizma sınırı, korunmuş hekim notu |
+| Uyku kaybı–kaygı ilişkisi | 7 | 4 | 4 | Özet bağlamı, 4. bölüm mekanizma, bağımsız 3. SSS, korunmuş hekim notu |
+| İşlev kaybı ve değerlendirme ölçütü | 7 | 6 | 6 | Özet, 5. bölüm işlev, 6. bölüm başvuru eşiği, bağımsız 1. ve 4. SSS, korunmuş hekim notu |
+| Kaygının karakter kusuru olmayışı | 3 | 1 | 1 | 1. bölümde doğrudan teselli |
+| Görüşmede anlatma / hazırlık yönlendirmesi | 4 | 7 | 1 | Hazırlık yalnız 8. bölümde; destek alma ve acil yardım eşikleri ayrı |
+
+Kontroller:
+
+- Gramer/sentaks, doğal Türkçe ve bölüm işlevi/ritim için üç ayrı okuma yapıldı. Ritim (`after-round3.md`, 50 blok): 75 cümle, ortalama **14,0** sözcük, standart sapma **5,2**, ≤8 sözcüklü cümle oranı **%16**, 25 sözcüğü aşan cümle **0**.
+- `check-fidelity` (`4590cffb` onaylı tabana karşı): tek fark ilk turda kaynaksız `30` dakika talimatının çıkarılması; sayı, birim, zaman ve güvenlik sınırları korundu.
+- `editorial-check`: 1 aday (SSS 1 ve SSS 2'deki “tek başına … tanısı koydurmaz” sınırları; biri anksiyete bozukluğu, diğeri perimenopoz tanısı için olduğundan korundu).
+- `structure-check`: `family-*` kapanış veya inkâr ailesi uyarısı **0**. Dört `short-closer` (acil güvenlik, tek adım, zorunlu disclaimer, SSS uyku cümlesi) tek tek okundu ve işlevsel olduğu için korundu.
+- `npm run build:ci`, SEO ve `rendered-check` sonuçları aşağıda güncellendi. Bilimsel Editör Notu ve disclaimer `4590cffb` ile birebir aynı. Yeni editör/tıbbi onay bekleniyor.

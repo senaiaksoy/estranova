@@ -332,12 +332,12 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Kaygı hissi adet düzeni değişmeden de başlayabilir mi?',
       answer:
-        'Olabilir; kaygı veya uyku değişikliklerini adet düzeninizde belirgin bir değişiklik olmadan da fark edebilirsiniz. Ancak kaygı tek başına perimenopoz tanısı koydurmaz. Yaşınız, adet öykünüz, sıcak basması gibi diğer belirtiler ve başka olası nedenler birlikte değerlendirilir.',
+        'Olabilir; kaygı artışını veya uyku bölünmesini adet düzeninizde belirgin bir değişiklik olmadan da fark edebilirsiniz. Ancak kaygı tek başına perimenopoz tanısı koydurmaz. Yaşınız, adet öykünüz, sıcak basması gibi diğer belirtiler ve başka olası nedenler birlikte değerlendirilir.',
     },
     {
       question: 'Gece uyanmaları kaygıyı gerçekten artırabilir mi?',
       answer:
-        'Uyku kaybı ertesi gün kaygıyı artırabilir; kaygı da yeniden uykuya dalmayı zorlaştırabilir. Gece uyanmalarınıza terleme veya sıcak basması eşlik ediyorsa bunu not edin. Bu ayrıntı, görüşmede uyku sorununu ayrıca konuşmanıza yardımcı olur.',
+        'Uyku kaybı ertesi gün kaygıyı artırabilir; kaygı da yeniden uykuya dalmayı zorlaştırabilir. Gece terlemesi ve sıcak basması da uykuyu bölebilir.',
     },
     {
       question: 'Ne zaman bunu yalnızca yoğunluk diye geçmemek gerekir?',
