@@ -77,3 +77,7 @@ Berna Aksoy'a atanmış yayınlanmış makaleler (writerSlug: 'berna-aksoy' ile 
 ## 2 Ekim 2026 — Mayıs ve Haziran 2026 Sıcacık Köşe: onay kaydı tamamlandı
 
 `/editorun-kosesi/mayis-2026/` (1 Mayıs 2026) ve `/editorun-kosesi/haziran-2026/` (1 Haziran 2026) canlıda ve sayı sayfalarına bağlıydı, ancak `article-approvals.ts` ve `static-articles.ts` kayıtları eksikti. KC 2 Ekim 2026'da iki yazının da doğrudan editör onayıyla yayımlandığını teyit etti; onay kaydı ve manifest girdisi geriye dönük eklendi. Metinler değişmedi. Temmuz köşesi en yeni olduğu için anasayfa "Son yazısı" kartı etkilenmez.
+
+## 21 Ekim 2026 — Beslenme ve yaşlanma: audit + humanize düzeltmesi
+
+`zamansiz-yasam/beslenme-yaslanma.astro` denetlendi (yaşıt persona, editorial-guide). Düzeltmeler: iki "hekimimle kontrol/görüşme" sahnesi (Çift Rol sınırı: klinik takip sahnesi) ev sohbeti çerçevesine alındı; üç H2 lede'i çeşitlendirildi (doğrudan soru, kısa teselli/yönlendirme); bozuk bir cümle (sürdürülebilirlik) onarıldı; genel "dikkatli yapmamız gerekiyor" cümlesi somutlaştırıldı. Tıbbi iddia, Evidence düzeyleri, SSS ve Bilimsel Editör Notu değişmedi. `modifiedDate`/`lastUpdated` 21 Ekim 2026. Yayın onayı değişmedi (sözlü onay kayıtları geçerli).
