@@ -42,7 +42,7 @@ export default defineConfig({
     '/bilimsel-pencere/arastirma/': '/bilimsel-pencere/yeni-arastirmalar/',
     '/zamansiz-yasam/non-invaziv/cilt-cihazlari-rehberi/':
       '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
-    '/beden-yakinlik/menopozda-cilt-degisimleri/': '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
+    '/beden-yakinlik/menopozda-cilt-degisimleri/': '/beden-yakinlik/cilt-gorunum/',
     '/beden-yakinlik/vajinal-saglik-menopoz/': '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
     '/beden-yakinlik/yakinlik-agrisi-menopoz/': '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
     '/beden-yakinlik/intim-saglik/': '/beden-yakinlik/cinsel-saglik/',
