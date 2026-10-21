@@ -21,18 +21,7 @@ const hero = submenuHeroByRoute[pathname] ?? submenuHeroByRoute['/zamansiz-yasam
 const articleTitle = 'Duruş Bozulduğunda Değil, Beden Sessizce Sıkıştığında: Gerginliği Fark Etmenin İnce Yolu';
 const seoTitle = 'Duruş ve Sessiz Beden Sıkışması';
 const articleDescription =
-  'Boyun, omuz veya kalçada biriken gerginlik her zaman kötü duruşla başlamaz; beden bazen fazla şeyi sessizce taşır. Işık Selin Günçe bu sıkışmayı anlatıyor.';
-
-const tocEntries = [
-  { id: 'beden-her-zaman-agriyla-konusmaz', label: 'Beden Her Zaman Ağrıyla Konuşmaz' },
-  { id: 'kotu-durus-fikri', label: 'Kötü Duruş Fikri' },
-  { id: 'omuz-cene-nefes', label: 'Omuz, Çene, Nefes' },
-  { id: 'sahne-disiplini', label: 'Sahne Disiplini' },
-  { id: 'kucuk-isaretler', label: 'Küçük İşaretler' },
-  { id: 'sert-duzeltmeler-yerine', label: 'Sert Düzeltmeler Yerine' },
-  { id: 'ne-zaman-gecilmemeli', label: 'Ne Zaman Geçilmemeli?' },
-  { id: 'kapanis', label: 'Kapanış' },
-];
+  'Boyun, omuz veya kalçada biriken gerginlik her zaman kötü duruşla başlamaz. Işık Selin Günçe, gün içinde sessizce biriken sıkışmayı nasıl fark ettiğini anlatıyor.';
 
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleSchemas = buildArticleSchemas({
@@ -41,6 +30,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'isik-selin-gunce',
   articleType: 'experience-essay',
   publishedDate: '7 Mayıs 2026',
+  modifiedDate: '21 Ekim 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
@@ -87,122 +77,119 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Bu yazıya başlarken">
         <p>
-          Boyun, omuz, çene, kaburga hattı ya da kalçada biriken gerginlik her zaman kötü duruşla başlamaz. Bazen beden
-          yalnızca fazla şeyi sessizce taşımaya başlar; biz de bunu ancak günün sonunda, yorgunlukla karışmış bir
-          sıkışma hissi olarak fark ederiz <Evidence from={3} to={4} />. Bu yazı, bedeni düzeltilecek bir proje gibi
-          değil, dinlenmesi gereken bir eşlikçi gibi okumayı önerir.
+          Boyun, omuz, çene, kaburga hattı ya da kalçada biriken gerginlik her zaman kötü duruşla başlamaz. Bazen gün,
+          fazla şeyi sessizce biriktirir; biz de bunu ancak akşam, yorgunlukla karışmış bir sıkışma olarak fark ederiz. Bu
+          yazı o birikmeyi biraz daha erken fark etmeyi önerir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel mode="experience">
-        <h2 id="beden-her-zaman-agriyla-konusmaz">Beden Her Zaman Ağrıyla Konuşmaz</h2>
-        <p>Beden bazen canınızı yakmadan da size bir şey anlatır; mesele, o daha kısık sesi duyup duymadığınızdır.</p>
+        <h2 id="beden-her-zaman-agriyla-konusmaz">Ağrı Yokken de Omuzlar Yukarı Çıkar</h2>
+        <p>Ağrım yoktu. Rahatsızdım.</p>
         <p>
           Geçenlerde bir prova arasında, aynanın karşısında makyaj silerken omuzlarımın kulaklarıma ne kadar yaklaştığını
-          fark ettim. Ağrım yoktu. Ama rahat da değildim. Boynum biraz sertti, çenem fark etmeden sıkılıyordu, nefesim de
-          sanki göğsümün üst tarafında dolaşıp duruyordu. O an şunu düşündüm: Beden bazen dramatik bir şikayet yaratmadan
-          da yavaşça sıkışmaya başlıyor.
+          fark ettim. Aynadaki kadına duruş dersi verecek oldum. Sonra durdum: ders verecek hâlim yoktu, günün yükü vardı.
+          Boynum biraz sertti, çenem fark etmeden sıkılıyordu, nefesim de göğsümün üst tarafında dolaşıp duruyordu.
         </p>
         <p>
-          Pek çok kadın beden gerginliğini ancak baş ağrısı, omuz tutulması ya da gece diş sıkma gibi daha görünür bir
-          eşikten sonra fark ediyor. Oysa öncesinde daha küçük işaretler olabiliyor <Evidence level={3} />. Koltuğa oturur
-          oturmaz bacakları toplamak, telefonu konuşurken omzu hafifçe yukarı çekmek, nefesi tam bırakamamak ya da akşam
-          eve dönünce omurgayı sanki gün boyu ödünç taşımış gibi hissetmek bunlardan bazıları.
-        </p>
-
-        <h2 id="kotu-durus-fikri">Kötü Duruş Fikri Neden Bazen Fazla Yüzeyde Kalır?</h2>
-        <p>Çünkü beden yalnızca nasıl durduğunuzla değil, gün boyunca neleri taşıdığınızla da şekillenir.</p>
-        <p>
-          Kötü duruş sözü uzun zamandır o kadar kolay kullanılıyor ki, bazen meselenin tamamını açıklıyormuş gibi
-          davranıyoruz. Oysa beden bir fotoğraf karesi değil. Sabah haberlerini hangi duyguyla okuduğunuz, gün içinde kaç
-          kez beklediğiniz, ne kadar acele ettiğiniz, ekran karşısında kaç saat kaldığınız ve uykudan nasıl uyandığınız da
-          o görünüşe dahil.
-        </p>
-        <p>
-          Bu yüzden bazı kadınlar omuzlarını yalnızca masa başında değil, telefonda sessizce bir haber beklerken de
-          yükseltiyor. Çeneyi yalnızca stresli toplantılarda değil, gün boyunca düşünceyi tutmaya çalışırken de sıkıyor.
-          Bedeni tek bir doğru hizaya çağırmak bazen hiç de çözüm değil; çünkü beden zaten fazla şeyi ayakta tutmaya
-          çalışıyordur.
+          Belki siz de tanıyorsunuz bu hâli: canınız yanmadan önce gelen o sessiz sıkışma. Pek çoğumuz gerginliği ancak baş
+          ağrısı, omuz tutulması ya da gece diş sıkma gibi daha görünür bir eşikten sonra fark ediyoruz; oysa öncesinde daha
+          küçük işaretler olabiliyor. Koltuğa oturur oturmaz bacakları toplamak, telefonla konuşurken omzu hafifçe yukarı
+          çekmek, nefesi tam bırakamamak ya da akşam eve dönünce omurgayı gün boyu ödünç taşımış gibi hissetmek bunlardan
+          bazıları.
         </p>
 
-        <h2 id="omuz-cene-nefes">Omuz, Çene ve Nefes Hattında Sessiz Birikme Nasıl Olur?</h2>
-        <p>Beden bazen tek bir yerden değil, bir hat boyunca sıkışır; omuzdan çeneye, çeneden nefese, nefesten kaburgaya.</p>
+        <h2 id="kotu-durus-fikri">Kötü Duruş Fikri Bazen Fazla Yüzeyde Kalır</h2>
+        <p>Belki sizin de omuzlarınız masada değil, bir haber beklerken yükseliyor.</p>
         <p>
-          Omuzların hafifçe yukarı çıkması, çenenin gün içinde defalarca kapanıp sertleşmesi ve nefesin göğsün üst
-          kısmında kalması birbirinden ayrı meseleler gibi görünse de çoğu zaman aynı hikayenin parçalarıdır
-          <Evidence level={3} />. Özellikle tempo yükseldiğinde ya da zihinde bitmemiş bir cümle dolaşırken bu hat daha da
-          belirginleşebilir.
+          Kötü duruş sözü uzun zamandır o kadar kolay kullanılıyor ki, bazen günün tamamını açıklıyormuş gibi davranıyoruz.
+          Duruş tek bir kareye sığmaz. Sabah haberlerini hangi duyguyla okuduğunuz, gün içinde kaç kez beklediğiniz, ne
+          kadar acele ettiğiniz, ekran karşısında kaç saat kaldığınız ve uykudan nasıl uyandığınız da o görünüme girer.
+        </p>
+        <p>
+          Çene bazen stresli bir toplantıda sıkılır, bazen de gün boyunca bir düşünceyi tutmaya çalışırken. Tek bir doğru
+          hizaya çağrılmak bazen yetmez; çünkü gün zaten fazla şeyi omuzlarınıza yüklemiş olabilir.
+        </p>
+
+        <h2 id="omuz-cene-nefes">Omuz, Çene ve Nefes Aynı Hatta Birikir</h2>
+        <p>Sıkışma bir hat boyunca ilerler.</p>
+        <p>
+          Omuzların hafifçe yukarı çıkması, çenenin gün içinde defalarca kapanıp sertleşmesi ve nefesin göğsün üst kısmında
+          kalması birbirinden ayrı meseleler gibi görünür. Çoğu zaman aynı günün parçalarıdır. Tempo yükseldiğinde ya da
+          zihinde bitmemiş bir cümle dolaşırken bu hat daha da belirginleşebilir.
         </p>
         <p>
           Bunu bir oyuncu arkadaşımın yüzünde de görmüştüm. Perde açılmadan birkaç dakika önce çenesini hafifçe sağa sola
-          oynatıyor, sonra omuzlarını aşağı çekmeye çalışıyordu. "Ağrım yok ama sanki bedenim erkenden sahneye çıkmış
-          gibi," demişti. O cümle bence çok doğruydu. Beden bazen sizden önce odaya giriyor.
+          oynatıyor, sonra omuzlarını aşağı çekmeye çalışıyordu. "Ağrım yok ama sanki bedenim erkenden sahneye çıkmış gibi,"
+          demişti. Onun yolu sahne, sizinki başka bir oda olabilir. Yine de cümle tanıdık geldi: sıkışma bazen bizden önce
+          odaya giriyor.
         </p>
 
-        <h2 id="sahne-disiplini">Sahne Disiplini Bedeni Dinlemeyi Nasıl Öğretir?</h2>
-        <p>Sahne, bedeni kusursuz kullanmayı değil, bedenden gelen küçük sapmaları erken fark etmeyi öğretir.</p>
+        <h2 id="sahne-disiplini">Sahnede Küçük Sapmayı Erken Fark Etmek</h2>
+        <p>Replikten hemen önce nefesimin nereye takıldığını hâlâ izliyorum.</p>
         <p>
-          Yıllar içinde benim için en kıymetli şeylerden biri bu oldu. Repliğin tam öncesinde nefesin nereye takıldığını,
-          omzun ne zaman erken gerildiğini, boynun hangi cümlede kendi ağırlığını taşımayı bıraktığını sahnede daha çabuk
-          anlarsınız. Çünkü orada bedenin en küçük değişikliği bile sese, ritme ve bakışa yansır.
+          Yıllar içinde benim için en kıymetli şeylerden biri bu oldu. Omzun ne zaman erken gerildiğini, boynun hangi
+          cümlede ağırlaştığını sahnede daha çabuk görüyorum. Çünkü orada en küçük değişiklik bile sese, ritme ve bakışa
+          yansır.
         </p>
         <p>
-          Günlük hayatta ise çoğumuz bunu çok daha geç fark ediyoruz. Prova ışığı yok, aynaya bakma disiplini yok, kimse
-          "şimdi omzunu bıraktın" demiyor. Belki de bu yüzden yetişkin hayatın gerginliği daha sessiz. Kötü değildir; ama
-          görünmeden büyüyebilir. Sahnenin bana bıraktığı küçük hediye şu oldu: Bedeni düzeltmeye çalışmadan önce onu
-          duymaya çalışmak.
-        </p>
-
-        <h2 id="kucuk-isaretler">Gün İçinde Hangi Küçük İşaretler Fark Edilmeyi Bekler?</h2>
-        <p>Beden büyük alarm vermeden önce çoğu zaman çok zarif işaretler bırakır.</p>
-        <p>
-          Günün sonunda dişlerin birbirine bastığını fark etmek, telefona uzanırken omuzun da sizinle birlikte yukarı
-          çıkması, nefes verirken göğüs kafesinin hemen kapanması, otururken kalçanın yalnızca bir tarafa daha çok ağırlık
-          vermesi ya da akşam yürürken kolları serbest bırakmakta zorlanmak bunlardan bazılarıdır. Bunlar dramatik işaretler
-          değildir; ama bedenin yük dağılımı hakkında sessiz bilgi verirler.
-        </p>
-        <p>
-          Ben bazen bunu akşamüstü fark ediyorum. Gün boyu biriken cümleler, cevaplanmamış mesajlar, küçük sabırsızlıklar
-          ve yetişmeyen işler omuzlarıma görünmez bir şal gibi oturmuş oluyor. Onu o anda atamıyorum belki; ama adını
-          koyunca beden biraz daha anlaşılır oluyor.
+          Günlük hayatta ise çoğumuz bunu çok daha geç fark ediyoruz. Prova ışığı yok, ayna disiplini yok; kimse "şimdi
+          omzunu bıraktın" demiyor. Belki de bu yüzden yetişkin hayatın gerginliği daha sessiz. Kötü değildir ama
+          görünmeden büyüyebilir. Sahnenin bana bıraktığı küçük hediye şu oldu: düzeltmeye çalışmadan önce fark etmek.
         </p>
 
-        <h2 id="sert-duzeltmeler-yerine">Sert Düzeltmeler Yerine Hangi Küçük Farkındalıklar İşe Yarar?</h2>
-        <p>Bazen bedenin ihtiyacı disiplin değil, biraz nezakettir.</p>
+        <h2 id="kucuk-isaretler">Akşamüstü Omuzlarımdaki Görünmez Şal</h2>
+        <p>Ben bunu çoğu zaman akşamüstü fark ediyorum.</p>
         <p>
-          Kendinizi sürekli kontrol etmek, her oturuşu düzeltmeye çalışmak ya da "yine kötü duruyorum" diye içten içe
-          kızmak bazı kadınlarda gerginliği daha da görünür hale getirebilir. Oysa daha küçük farkındalıklar çoğu zaman
-          daha işe yarar bir başlangıç sunar <Evidence level={3} />. Örneğin omuzları zorla aşağı çekmek yerine, nefesi bir
-          cümle boyunca biraz daha tam bırakmak. Çene hattını zorla yumuşatmaya çalışmak yerine dilin damaktaki yerini
-          fark etmek. Oturuşu düzeltmek yerine kalçanın sandalyeye nasıl yerleştiğini bir kez dikkatle hissetmek.
+          Gün boyu biriken cümleler, cevaplanmamış mesajlar, küçük sabırsızlıklar ve yetişmeyen işler omuzlarıma görünmez
+          bir şal gibi oturmuş oluyor. Onu o anda atamıyorum belki, ama adını koyunca sıkışma biraz daha anlaşılır oluyor.
         </p>
         <p>
-          Bu küçük hareketler çözüm vaadi taşımaz; ama bedenle araya giren sertliği azaltır. Sanırım benim için önemli olan
-          da bu: bedenle mücadele etmeyi bırakıp onunla yeniden aynı tarafta durabilmek.
+          Sizde de benzer bir saat olabilir. Dişlerin birbirine bastığı an, telefona uzanırken omuzun da yukarı çıktığı an,
+          nefes verirken göğsün hemen kapandığı an. Otururken kalçamın bir tarafa daha çok ağırlık verdiğini, akşam
+          yürürken kollarımı serbest bırakmakta zorlandığımı da aynı saatte fark ettiğim oluyor. Dramatik değiller; yine de
+          günün yükünün nereye oturduğunu gösterirler.
+        </p>
+
+        <h2 id="sert-duzeltmeler-yerine">Sert Düzeltmek Yerine Bir An Durmak</h2>
+        <p>İçiniz rahat olsun diye yazıyorum: her oturuşu düzeltmek zorunda değilsiniz.</p>
+        <p>
+          Kendinizi sürekli kontrol etmek, her oturuşu düzeltmeye çalışmak ya da "yine kötü duruyorum" diye içinizden
+          kızmak bazı kadınlarda gerginliği daha da görünür hale getirebilir. Bende de öyle oluyor. Omuzları zorla aşağı
+          çekmek yerine nefesi bir cümle boyunca biraz daha tam bırakmak bana daha yumuşak geliyor. Çene hattını zorla
+          yumuşatmaya çalışmak yerine dilin damaktaki yerini fark etmek. Oturuşu düzeltmek yerine kalçanın sandalyeye nasıl
+          yerleştiğini bir kez dikkatle hissetmek.
+        </p>
+        <p>
+          Bu küçük hareketler çözüm vaadi taşımaz. Araya giren sertliği azaltır, o kadar. Sanırım benim için önemli olan da
+          bu: mücadele etmeyi bırakıp aynı tarafta durabilmek. Sizinki başka bir yol olabilir.
         </p>
 
         <h2 id="ne-zaman-gecilmemeli">Ne Zaman Bu Tablo Yalnızca Gerginlik Diye Geçilmemeli?</h2>
-        <p>Her sıkışma büyük bir sorun demek değildir; ama bazı eşikler vardır, orada yalnızca "biraz gerginim" deyip geçmemek gerekir.</p>
+        <p>
+          Her sıkışma büyük bir sorun demek değildir. Bazı eşikler vardır; orada yalnızca "biraz gerginim" deyip geçmemek
+          gerekir.
+        </p>
         <p>
           Yoğun ve kalıcı ağrı, kola ya da bacağa yayılan uyuşma, çene kilitlenmesi, belirgin baş dönmesi, güç kaybı ya da
-          günlük işlevi bozan bir tablo varsa profesyonel değerlendirme düşünmek gerekir <Evidence level={4} />. Bu yazı,
-          beden farkındalığına daha nazik bir kapı açmak için var; tanı ya da tedavi yerine geçmek için değil.
+          günlük işlevi bozan bir tablo varsa profesyonel değerlendirme düşünmek gerekir. Bu yazı, farkındalığa daha nazik
+          bir kapı açmak için var; tanı ya da tedavi yerine geçmek için değil.
         </p>
         <p>
           Bazen en doğru cümle "biraz daha dikkat edeyim" olur. Bazen de "buna tek başıma anlam vermek zorunda değilim."
-          İkisi de olgun bir beden ilişkisinin parçası olabilir.
+          İkincisini kurabildiğimde içimde bir rahatlama oluyor. Belki siz de o cümleye ihtiyaç duyarsınız.
         </p>
 
-        <h2 id="kapanis">Kapanış</h2>
-        <p>Duruş bazen bir sonuçtur; hikaye ondan daha önce başlar.</p>
+        <h2 id="kapanis">Perde Kapandıktan Sonra Kalan Hiss</h2>
+        <p>Duruş bazen bir sonuçtur; hikâye ondan önce başlar.</p>
         <p>
           Omuzlarınız, çeneniz, nefesiniz ya da kalçanız gün içinde sessizce bir şeyler taşıyor olabilir. Bunu fark etmek,
           kendinize hemen bir düzeltme listesi çıkarmak zorunda olduğunuz anlamına gelmez. Belki yalnızca biraz daha erken,
-          biraz daha yumuşak bakmanız gerektiğini söyler.
+          biraz daha yumuşak bakmanız gerekir.
         </p>
         <p>
-          Sahne bana yıllar içinde şunu öğretti: Beden bazen en doğru cümleyi, herkes sustuktan sonra kurar. Mesele onu
-          susturmak değil; biraz daha dikkatle dinlemek.
+          Sahne bana yıllar içinde şunu öğretti: en net işaret bazen herkes sustuktan sonra gelir. Mesele biraz daha
+          dikkatle bakmak. Ben böyle bakıyorum; sizinki başka türlü kurulabilir…
         </p>
       </ArticleProsePanel>
 
@@ -218,13 +205,13 @@ const articleSchemas = buildArticleSchemas({
       <MedicalContextNote class="mt-10">
         <p>
           Beden gerginliği çoğu zaman yaşam temposu, nefes alışkanlığı, kas yükü ve duygusal baskıların birlikte yarattığı
-          bir tablo olarak ortaya çıkar. Bu nedenle her sıkışma hissini yalnızca "postür sorunu" diye okumak eksik
-          kalabilir.
+          bir tablo olarak ortaya çıkar <Evidence from={3} to={4} />. Bu nedenle her sıkışma hissini yalnızca "duruş
+          sorunu" diye okumak eksik kalabilir.
         </p>
         <p>
           Bununla birlikte yoğun ağrı, uyuşma, güç kaybı, çene kilitlenmesi ya da günlük işlevi belirgin bozan belirtiler
-          daha dikkatli değerlendirme gerektirir. Farkındalık yazıları destekleyici olabilir; ama klinik değerlendirmenin
-          yerini almaz.
+          daha dikkatli değerlendirme gerektirir <Evidence level={4} />. Farkındalık yazıları yardımcı olabilir; ama klinik
+          değerlendirmenin yerini almaz.
         </p>
       </MedicalContextNote>
 

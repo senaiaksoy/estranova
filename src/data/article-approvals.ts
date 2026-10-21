@@ -158,8 +158,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/',
     writerSlug: 'isik-selin-gunce',
-    approvedAt: '2026-05-07',
-    note: 'Işık Selin Günce author approval received from icerik/yazar-onaylari/isik-selin-gunce/onaylanan/2026-05-07_durus-bozuldugunda-degil-beden-sessizce-sikistiginda paketi. Onaylanan taslak Türkçe karakter, makale şablonu ve Selin yazı tonu yönünden son kez temizlenip canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı.',
+    approvedAt: '2026-10-21',
+    note: '21 Ekim 2026: KC bu sohbette Işık Selin Günçe dil/ses onayını ve Doç. Dr. Senai Aksoy tıbbi onayını sözlü bildirdi (“ışık dil/ses onayı tamam tıbbi onay tamam”) ve commit/push/deploy talimatı verdi. Kapsam: 21 Ekim 2026 audit/humanize revizyonu — soru-H2 yığını cümleli başlığa çekildi, beden-konuşuyor kişileştirmesi seyreltildi, gövde Evidence deneyim yazısından MedicalContextNote’a alındı, H2-5 işaret listesi akşam şalı sahnesine indirgendi. Yeni tıbbi iddia yok; kırmızı eşik listesi korundu. Önceki 7 Mayıs 2026 yazar onayı bu revizyonu kapsamaz. İlk kayıt: icerik/yazar-onaylari/isik-selin-gunce/onaylanan/2026-05-07_durus-bozuldugunda-degil-beden-sessizce-sikistiginda paketi.',
   },
   {
     pathname: '/zamansiz-yasam/yapay-zeka-hekim-cihaz-dengesi/',
