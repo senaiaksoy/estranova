@@ -370,8 +370,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Ağaçlı bir parkta sabah yürüyüşü yapan, yeşil bluz ve krem eşarplı orta yaşlı bir kadın; 40 sonrası kas-iskelet ağrıları yazısı için kart görseli',
   },
   '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/': {
-    src: '/images/library/editorial/anil-yalmaz-harekete-yeniden-baslamak-byline.webp',
-    alt: 'Deniz manzaralı oturma odasında bir ayağını step basamağına koymuş, egzersize hazırlanan bir kadın.',
+    src: '/images/library/editorial/anil-yalmaz-harekete-yeniden-baslamak-kart.webp',
+    alt: 'Boğaz manzaralı bir oturma odasında bir dizini kaldırmış, pencereden dışarı bakan bir kadın; 40 sonrası harekete yeniden başlamak yazısı için kart görseli',
   },
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': {
     src: '/images/library/editorial/casual-cream-sweater-pampas.webp',

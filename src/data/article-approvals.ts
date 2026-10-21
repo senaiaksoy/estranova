@@ -134,8 +134,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/',
     writerSlug: 'anil-yalmaz',
-    approvedAt: '2026-05-26',
-    note: 'Anil Yalmaz author approval received in Codex thread on 2026-05-26. Warm first-person editorial draft published with supplied movement image as article byline/card visual; static manifest, FAQ schema and production archive were aligned.',
+    approvedAt: '2026-10-21',
+    note: 'YENİDEN ONAY 21 Ekim 2026: KC (Doç. Dr. Senai Aksoy) geniş audit + humanize revizyonuna yazar onayını ve tıbbi onayı sohbette sözlü verdi; form, JSON yanıtı veya onay paketi yok. Kapsam: soru başlıklı H2 altıdan 1e indirildi, antitez ve ben kalıpları seyreltildi, beden kişileştirmeleri çıkarıldı, her bölüme somut sahne ve siz bağı eklendi, ledeler 2 cümleye indirildi, ağrı bölümü genişletildi, Evidence etiketleri iddia gücüne göre düzeltildi (orta, orta–iyi, güçlü, iyi), rutin bölümüne haftada yaklaşık 150 dakika orta tempolu hareket ve haftada iki gün kas güçlendirme genel önerisi sayısal çapa olarak eklendi (güçlü kanıt), Kısa Özet yeniden yazıldı; modifiedDate ve lastUpdated 21 Ekim 2026. Görsel kırpmaları (byline 1200x1500, kart 2400x1000; özgün kaynak yedekli, IPTC etiketli) KC tarafından sohbette sözlü uygun bulundu (21 Ekim 2026). Canlı yayın için commit/push/deploy ayrıca yetki gerektirir. Önceki kayıt: Anil Yalmaz author approval received in Codex thread on 2026-05-26. Warm first-person editorial draft published with supplied movement image as article byline/card visual; static manifest, FAQ schema and production archive were aligned.',
   },
   {
     pathname: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
