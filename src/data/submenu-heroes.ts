@@ -245,10 +245,6 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/basak-olcu-panigi-beden-algisi.webp',
     alt: 'Ayna önünde kıyafet oturuşuna bakan 40+ kadın; ölçü paniği ve beden algısı yazısı için editoryal kart görseli',
   },
-  '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/': {
-    src: '/images/library/editorial/glp1-istah-metabolizma-menopoz.webp',
-    alt: 'Mutfak masasında ızgara balık, nohut, yeşillik ve salatalıklı tabağına bakan gülümseyen bir kadın; yanında kiraz.',
-  },
   '/beden-yakinlik/menopoz-sonrasi-karin-germe/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-karin-germe.webp',
     alt: 'Boy aynasının yanında, eli belinde pencereye bakan pembe kazaklı bir kadın.',
@@ -273,10 +269,6 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/alara-yaz-baslamadan-bedeni-uyandirmak.webp',
     alt: 'Deniz kenarında omzunda bir matla yürüyüp uzağa bakan bir kadın.',
   },
-  '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/': {
-    src: '/images/library/editorial/metin-yorgunluk-kas-tiroid-metabolizma.webp',
-    alt: 'Gardırobun yanında ceketini giyerken bir an durup kendini dinleyen bir kadın.',
-  },
   '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/': {
     src: '/images/library/editorial/ersin-denge-ayak-kalca-govde.webp',
     alt: 'Ev koridorunda eliyle duvara dokunarak dengesini yoklayan bir kadın.',
@@ -285,17 +277,9 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/bulent-kemik-gucu-kirik-beklemeden.webp',
     alt: 'Deniz manzaralı bir pencerenin yanında elinde havluyla duran bordo bluzlu bir kadın.',
   },
-  '/hormonal-gecis/40-sonrasi/menopozdan-sonra-kalp-sagligina-neden-daha-dikkatli-bakiyorum/': {
-    src: '/images/library/editorial/alp-aslan-eryilmaz-menopoz-kalp-byline.png',
-    alt: 'Apartman girişinde trençkotuyla, eli göğsünde kısa bir an duraklayan bir kadın.',
-  },
   '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/': {
     src: '/images/library/editorial/zy-diz-agrisi-ortopedik-takip.png',
     alt: 'Boğaz manzaralı pencerenin önünde koltukta oturup dışarı bakan bir kadın; masada bir bardak çay.',
-  },
-  '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/': {
-    src: '/images/library/editorial/metin-alis-tiroid-menopoz-yorgunluk-uyku-byline.jpg',
-    alt: 'Boğaz manzaralı bir odada, açık defterine not alırken pencereden dışarı bakan kadın',
   },
   '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/': {
     src: '/images/library/editorial/duygu-karaosmanoglu-yuze-yakisan-card.webp',
@@ -340,10 +324,6 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/': {
     src: '/images/library/editorial/senai-hrt-meme-kanseri-author-block-v2.png',
     alt: 'Krem tonlu aydınlık bir odada düşünen olgun kadın portresi; HRT ve meme kanseri riski yazısı için sakin editoryal kart görseli',
-  },
-  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': {
-    src: '/images/library/editorial/menopozda-cilt-degisimleri-card.webp',
-    alt: 'Akşamüstü ışığında taş binalı bir sokakta, krem trençkot ve bordo fularla duran olgun bir kadın; solda vitrin camında yansıması görünüyor',
   },
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': {
     src: '/images/library/editorial/perimenopozda-kaygi-artisi.webp',

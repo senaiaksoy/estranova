@@ -61,10 +61,10 @@ export const dossiers: MonthlyDossier[] = [
     title: 'Tartı Susunca',
     subtitle: 'Ölçünün ötesinde beden, iştah ve metabolizma',
     lede:
-      'Tartının sesi kısıldığında vücut kompozisyonu, iştah, metabolizma ve beden algısı daha görünür hâle geliyor. Bu ay dört yazı, kilo konusunu diyet kültürünün yargısından uzak ve utandırmadan konuşuyor.',
+      'Tartının sesi kısıldığında vücut kompozisyonu, iştah, metabolizma ve beden algısı daha görünür hâle geliyor. Bu ay üç yazı, kilo konusunu diyet kültürünün yargısından uzak ve utandırmadan konuşuyor.',
     curatorSlug: 'berna-aksoy',
     editorNote:
-      'Yaz aylarında beden daha görünür olduğunda tartının sesi de yükselebiliyor. Oysa rakam aynı kalsa bile kas-yağ dengesi, kıyafetin oturuşu, iştah sinyalleri ve insanın aynaya bakarken kurduğu cümle değişebiliyor. Bu dosya, ölçüyü tek otorite yapmadan rakamın cevaplamadığı soruları konuşuyor.\n\nDört yazı aynı konuya farklı yerlerden bakıyor: Estranova Editörleri vücut kompozisyonundaki sessiz değişimi ve menopozda kilo artışını iki ayrı yaklaşımla ele alıyor; Dr. Metin Alış GLP-1 eksenini iştah ve metabolizma üzerinden açıklıyor; Başak Pelister ise ölçü paniğinin beden algısındaki karşılığını yaşıt sesiyle açıyor.',
+      'Yaz aylarında beden daha görünür olduğunda tartının sesi de yükselebiliyor. Oysa rakam aynı kalsa bile kas-yağ dengesi, kıyafetin oturuşu, iştah sinyalleri ve insanın aynaya bakarken kurduğu cümle değişebiliyor. Bu dosya, ölçüyü tek otorite yapmadan rakamın cevaplamadığı soruları konuşuyor.\n\nÜç yazı aynı konuya farklı yerlerden bakıyor: Estranova Editörleri vücut kompozisyonundaki sessiz değişimi ve menopozda kilo artışını iki ayrı yaklaşımla ele alıyor; Başak Pelister ise ölçü paniğinin beden algısındaki karşılığını yaşıt sesiyle açıyor.',
     heroImage: {
       src: '/images/library/editorial/pair-window-cafe-reflection.webp',
       alt: 'Pencere kenarında oturmuş, sakin bir sohbeti paylaşan iki yaşıt kadın',
@@ -87,15 +87,6 @@ export const dossiers: MonthlyDossier[] = [
         status: 'published',
         href: '/zamansiz-yasam/kilo-artisi-menopoz/',
         readingMinutes: 8,
-      },
-      {
-        title: "GLP-1, İştah ve Metabolizma: Menopoz Yıllarında Neyi Değiştiriyor?",
-        excerpt:
-          'GLP-1 eksenini bir kilo sloganına indirmeden, iştah sinyalleri, metabolik sağlık ve kuşak farkları üzerinden açıklayan klinik yaklaşım.',
-        writerSlug: 'metin-alis',
-        status: 'published',
-        href: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
-        readingMinutes: 9,
       },
       {
         title: 'Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?',
@@ -163,10 +154,10 @@ export const dossiers: MonthlyDossier[] = [
     title: 'Güç Eşiği',
     subtitle: "40'tan sonra bedeni yeniden zorlamadan kurmak",
     lede:
-      "40'tan sonra güç, daha fazla zorlanmak değil; kası, kemiği, dengeyi, uykuyu ve enerjiyi aynı hayatın içinde yeniden duymak. Bu ay altı yazı, bedeni performans baskısı kurmadan okumaya çağırıyor.",
+      "40'tan sonra güç, daha fazla zorlanmak değil; kası, kemiği, dengeyi, uykuyu ve enerjiyi aynı hayatın içinde yeniden duymak. Bu ay beş yazı, bedeni performans baskısı kurmadan okumaya çağırıyor.",
     curatorSlug: 'anil-yalmaz',
     editorNote:
-      "Güç kelimesi bazen sert gelir: daha çok çalışmak, daha çok sıkmak, daha çok dayanmak. Oysa 40'tan sonra iyi soru çoğu zaman bu değil. İyi soru şu: hangi kas günlük hayatı daha rahat taşır, hangi eklem sessizce yardım ister, hangi kemik kaybı henüz görünmeden konuşulmalı, hangi yorgunluk yalnızca tembellik sanılmamalı?\n\nBu dosyada gücü tek bir egzersiz başlığına sıkıştırmıyoruz. Anıl Yalmaz hareketin başlangıç haritasını kuruyor; Prof. Dr. Bülent Aksoy kemiği ve kırık riskini daha erken konuşmaya çağırıyor; Fzt. Ersin Saraç dengeyi ayak-kalça-gövde hattında okuyor; Dr. Metin Alış yorgunluğu tiroid, metabolizma ve kas ekseninde ayırıyor; Alara Baykent yaz başlarken bedeni uyandırmayı performans değil devamlılık olarak ele alıyor; Başak Pelister ise gücü çanta, merdiven, anne-kız sohbeti ve kendi küçük itiraflarıyla daha kişisel bir yerden okuyor.",
+      "Güç kelimesi bazen sert gelir: daha çok çalışmak, daha çok sıkmak, daha çok dayanmak. Oysa 40'tan sonra iyi soru çoğu zaman bu değil. İyi soru şu: hangi kas günlük hayatı daha rahat taşır, hangi eklem sessizce yardım ister, hangi kemik kaybı henüz görünmeden konuşulmalı, hangi yorgunluk yalnızca tembellik sanılmamalı?\n\nBu dosyada gücü tek bir egzersiz başlığına sıkıştırmıyoruz. Anıl Yalmaz hareketin başlangıç haritasını kuruyor; Prof. Dr. Bülent Aksoy kemiği ve kırık riskini daha erken konuşmaya çağırıyor; Fzt. Ersin Saraç dengeyi ayak-kalça-gövde hattında okuyor; Alara Baykent yaz başlarken bedeni uyandırmayı performans değil devamlılık olarak ele alıyor; Başak Pelister ise gücü çanta, merdiven, anne-kız sohbeti ve kendi küçük itiraflarıyla daha kişisel bir yerden okuyor.",
     heroImage: {
       src: '/images/library/editorial/zy-hareket-saglik.webp',
       alt: "Ağaçlıklı bir parkta, yürüyüş yolunun kenarında hafifçe gülümseyerek yere bakan bej kazaklı bir kadın",
@@ -198,15 +189,6 @@ export const dossiers: MonthlyDossier[] = [
         status: 'published',
         href: '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
         readingMinutes: 7,
-      },
-      {
-        title: 'Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?',
-        excerpt:
-          'Sabah ağır gelen beden her zaman tek bir nedene bağlanmaz. Tiroid, kas kütlesi, uyku ve metabolik değişim yan yana okunur.',
-        writerSlug: 'metin-alis',
-        status: 'published',
-        href: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
-        readingMinutes: 9,
       },
       {
         title: 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık',

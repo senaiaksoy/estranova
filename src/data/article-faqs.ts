@@ -154,38 +154,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       sourceRef: 5,
     },
   ],
-  '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/': [
-    {
-      question: 'TSH normal ama yorgunum, başka ne bakılmalı?',
-      answer:
-        'Normal TSH, hipofiz hastalığı şüphesi olmayan bir yetişkinde tiroid işlevi açısından çoğunlukla güven vericidir. Yorgunluk sürüyorsa uyku, adet kanaması, kullanılan ilaçlar ve diğer belirtiler değerlendirilir; fT4, kan sayımı, ferritin veya glikoz gibi testler bu bulgulara göre seçilir. Anti-TPO, fT3, vitaminler ve açlık insülini herkese gereken bir yorgunluk paneli değildir. 45 yaş ve üzerinde tipik perimenopoz belirtilerini açıklamak için rutin FSH ve östradiol ölçümü gerekmez.',
-      sourceRef: 7,
-    },
-    {
-      question: "Anti-TPO pozitif çıktı ama tiroid hormonum normal — Hashimoto'm var mı?",
-      answer:
-        'Anti-TPO pozitifliği tiroid bezine karşı gelişen otoantikorları gösterir ve Hashimoto tiroiditiyle uyumlu olabilir. TSH ve fT4 normal olduğunda sırf antikor pozitif diye tiroid hormonu tedavisi başlanmaz. İzlemde asıl bakılan tiroidin çalışmasıdır; antikor düzeyini tekrar tekrar ölçmek genellikle gerekmez. TSH kontrolünün aralığı önceki sonuçlara ve belirtilere göre belirlenir.',
-      sourceRef: 1,
-    },
-    {
-      question: 'Hormon replasman tedavisi (HRT) tiroid takibimi değiştirir mi?',
-      answer:
-        'Özellikle ağızdan alınan östrojen, tiroid hormonunu taşıyan TBG proteinini artırır. Levotiroksin kullanan bazı kadınlarda fT4 azalabilir, TSH yükselebilir ve dozun yeniden değerlendirilmesi gerekebilir. Deriden uygulanan östrojende bu etki daha sınırlıdır. Tiroid ilacı kullanıyorsanız hormon tedavisine başlarken veya uygulama yolu değişirken kontrol zamanını hekiminizle belirleyin; dozu kendiniz değiştirmeyin.',
-      sourceRef: 6,
-    },
-    {
-      question: 'Perimenopozda TSH neden değişken çıkıyor?',
-      answer:
-        'TSH günün saati, laboratuvar ölçümü, eşlik eden hastalıklar ve ilaçlardan etkilenebilir. Değişen bir sonucu doğrudan perimenopoza bağlamak yerine önce bu koşullar ve tiroid işlevi değerlendirilir. Biyotin içeren takviyeleri de hekiminize bildirin; bazı ölçümleri yanıltabilirler. Testin tekrarı gerekiyorsa zamanı bulguya göre seçilir; her değişken sonuç aynı kontrol takvimini gerektirmez.',
-      sourceRef: 7,
-    },
-    {
-      question: 'Tiroid ilacı ile menopoz ilaçları aynı anda alınabilir mi?',
-      answer:
-        'Aynı tedavi döneminde kullanılabilirler; ancak bu, bütün ilaçların aynı saatte alınacağı anlamına gelmez. Levotiroksin için yaygın kullanım aç karnına, kahvaltıdan 30–60 dakika öncedir. Kalsiyum ve demir içeren ürünlerle en az 4 saat ara gerekir; bunlar ilacın emilimini azaltabilir. Kullandığınız ürünün talimatına uyun ve diğer ilaçların saatlerini hekim veya eczacınızla planlayın.',
-      sourceRef: 9,
-    },
-  ],
   '/zamansiz-yasam/40-sonrasi-diz-agrisi-izlem-mudahale/': [
     {
       question: 'Dizimde ağrı varken yürüyüş yapabilir miyim?',
@@ -304,23 +272,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       question: "HRT'yi kilo, cilt, saç veya gençleşme beklentisiyle isteyen bir kadına ne söylüyorsunuz?",
       answer:
         "Bu soruyla son yıllarda çok daha sık karşılaşıyorum. Özellikle sosyal medyada hormon tedavisi bazen sanki kilo verdiren, cildi gençleştiren, saçları güçlendiren ve yaşlanmayı durduran bir tedaviymiş gibi anlatılıyor. Ben hastalarıma önce şunu söylüyorum: Östrojenin azalması vücudumuzda gerçekten bazı değişikliklere neden oluyor ama bu değişikliklerin hepsini hormon vererek geri çeviremiyoruz.\n\nÖrneğin menopoz döneminde karın çevresinde yağlanma artabiliyor. Hormon tedavisinin vücut yağının dağılımı üzerinde bazı olumlu etkileri olabilir, ancak HRT bir zayıflama tedavisi değil. Tek başına anlamlı bir kilo kaybı sağlamasını beklemiyoruz. Aynı şekilde hormon tedavisinin mutlaka kilo aldırdığı düşüncesi de doğru değil.\n\nCilt konusunda biraz daha farklı bir durum var. Östrojenin cildin kolajen yapısı, kalınlığı ve elastikiyeti üzerinde etkili olduğunu biliyoruz. Hormon tedavisiyle bu özelliklerin bir kısmında iyileşme görülebiliyor. Ancak bunun gözle görülür bir gençleşme sağlayacağını veya kırışıklıkları ortadan kaldıracağını söylemek doğru olmaz. Üstelik yalnızca cildi güzelleştirmek amacıyla sistemik hormon tedavisi başlamayı önermiyorum.\n\nSaç dökülmesinde ise daha da dikkatli olmak gerekiyor. Menopozla birlikte saçlarda incelme görülebiliyor ama her saç dökülmesinin nedeni östrojen eksikliği değil. Genetik yatkınlık, tiroit hastalıkları, demir eksikliği ve başka nedenler de söz konusu olabilir. Dolayısıyla hormon tedavisini saç çıkaran bir tedavi gibi sunmak doğru değil.\n\nBenim için asıl önemli olan hastanın neyi düzeltmek istediği. Eğer sıcak basmaları, uyku bozukluğu, vajinal yakınmaları veya hormon tedavisinin yararlı olabileceği başka bir tıbbi durum varsa HRT'yi değerlendiriyorum. Tedavinin cilt veya vücut kompozisyonu üzerinde bazı ek yararları da olabilir. Ama yalnızca daha genç görünmek için hormon kullanmak isteyen, başka bir tedavi gereksinimi olmayan bir kadına HRT başlamam.\n\nHastalarıma söylediğim gibi, hormon tedavisi menopozun bazı olumsuz etkilerini azaltabilir ama yaşlanmayı durdurmaz. Sağlıklı yaş almak istiyorsak kaslarımızı, kemiklerimizi, metabolik sağlığımızı ve günlük yaşam alışkanlıklarımızı da korumamız gerekiyor. HRT, doğru hastada bunun bir parçası olabilir; tamamı değil.",
-    },
-  ],
-  '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/': [
-    {
-      question: 'Menopozda cilt kuruluğu ve hassasiyet artabilir mi?',
-      answer:
-        'Evet, özellikle kuruluk belirginleşebilir; cilt daha kolay tahriş olabilir ve kızarıklık ya da döküntü eğilimi artabilir. Nemlendiriciyi banyodan sonra ve gün içinde cildiniz kurudukça kullanmak, parfümsüz ürünler seçmek yardımcı olabilir. Buna rağmen süren kuruluk veya tahrişte nedenin değerlendirilmesi gerekir.',
-    },
-    {
-      question: 'Güneş koruyucuyu kışın da kullanmak gerekir mi?',
-      answer:
-        'Evet, güneş koruması yalnızca yaz tatiline ait bir alışkanlık değildir. Kışın da dışarı çıkmadan önce giysinin örtmediği yüz, boyun ve el üstü gibi alanları korumak gerekir.',
-    },
-    {
-      question: 'Kolajen takviyesi herkes için gerekli midir?',
-      answer:
-        'Hayır, rutin kullanımını önermek için yeterli kanıt yoktur. Önerilen bir takviyeyi değerlendirirken ürünün hangi sonuç için incelendiğini ve araştırmanın ne kadar güvenilir olduğunu sorabilirsiniz; bu ayrımı yazının kolajen bölümünde açıklıyorum.',
     },
   ],
   '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/': [
@@ -825,28 +776,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       answer: "Belirti günlüğü için uzun uzun not tutmak gerekmez; günde 1–2 dakika, özellikle birkaç hafta düzenli kayıt çoğu zaman yeterlidir. Adet tarihleri ve kanama miktarı, sıcak basması/gece terlemesi, uyku kalitesi, çarpıntı, baş ağrısı, ruh hali, vajinal kuruluk, idrar yakınmaları, cinsel istek, kullanılan ilaçlar ve belirtileri artırdığını düşündüğünüz alkol, kafein, stres veya sıcak ortam gibi tetikleyiciler kaydedilebilir. Amaç her belirtinin peşine düşmek değil; zaman içindeki seyri görmek, hangi şikâyetin gerçekten sıklaştığını ve günlük yaşamı ne kadar etkilediğini anlamaktır.",
     },
   ],
-  '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/': [
-    {
-      question: 'İkinci kuşak mı, üçüncü kuşak mı “daha iyi”?',
-      answer:
-        'Tek başına doğru soru bu değildir. Üçüncü kuşakta etki büyüyebilir; buna karşılık tolerans, erişim ve uzun dönem izlem de değişir. Doğru soru, sizin bedeninizde hangi sinyalin bozulduğu ve hangi basamağın buna cevap verdiğidir.',
-    },
-    {
-      question: 'GLP-1 yalnızca kilo vermek için midir?',
-      answer:
-        'Hayır. Sınıfın klinik zemini iştah, glikoz düzeni ve metabolik riskle iç içedir. “Biraz incelmek” motivasyonu tek başına klinik gerekçe sayılmaz; hekim endikasyonu, risk ve takip planıyla birlikte değerlendirir.',
-    },
-    {
-      question: 'Menopozdaysam otomatik aday mıyım?',
-      answer:
-        'Hayır. Menopoz iştah ve yağ dağılımını etkileyebilir; bu, herkesin aynı kuşağa gireceği anlamına gelmez. Önce tabloyu ayırmak gerekir.',
-    },
-    {
-      question: 'Kas kaybı kaçınılmaz mı?',
-      answer:
-        'Hayır. Ama tartıya körü körüne bakmak — özellikle etki büyüdükçe — risklidir. Protein, direnç çalışması ve izlem konuşulmadan hızlı düşüş kutlanmamalıdır.',
-    },
-  ],
   '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/': [
     {
       question: 'Semaglutid, liraglutid ve tirzepatid arasında kilo kontrolü açısından nasıl bir fark var; ilaç seçimini ne belirler?',
@@ -967,33 +896,6 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
       question: 'Ne zaman fizyoterapi veya tıbbi değerlendirme düşünülmeli?',
       answer:
         'Sık düşme, yeni başlayan belirgin dengesizlik, travma sonrası ağrı, uyuşma, güç kaybı veya günlük hareketi kısıtlayan güvensizlik varsa beklememek gerekir. Baş dönmesi eşlik ediyorsa tablo ayrıca tıbbi açıdan da okunmalıdır.',
-    },
-  ],
-  '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/': [
-    {
-      question: 'Yorgunluk varsa önce tiroid testi mi yapılmalı?',
-      answer:
-        'Üşüme, kabızlık ya da çarpıntı gibi belirtiler veya öykünüz tiroidi düşündürüyorsa test gündeme gelebilir. İlk adım ise yakınmanın süresini, eşlik eden belirtileri, uykuyu, kullandığınız ilaçları ve muayeneyi değerlendirmektir. Tiroid düşünülüyorsa ve hipofiz sorunu şüphesi yoksa değerlendirme genellikle TSH ölçümüyle başlar.',
-    },
-    {
-      question: 'TSH normal çıkarsa tiroid tamamen dışlanır mı?',
-      answer:
-        'Normal TSH çoğu kişide tiroidin düzgün çalıştığını düşündürür. Hipofiz hastalığı şüphesi gibi özel durumlarda TSH, fT4 ile birlikte değerlendirilir. Antikor testi ise tiroid hastalığının nedenini araştırmak içindir; hormon değerleri normalse yorgunluğun açıklaması başka yerde aranır.',
-    },
-    {
-      question: 'Yemekten sonra gelen uyku hali metabolik bir işaret olabilir mi?',
-      answer:
-        'Bu his tek başına insülin direnci ya da prediyabet göstergesi sayılmaz; iki durum da çoğunlukla sessiz seyreder. Ailede diyabet öyküsü veya bel çevresinde artış gibi riskler varsa açlık kan şekeri ya da HbA1c istenebilir. Yemek sonrası uyku hâlinin ne zaman başladığını ve ne kadar sürdüğünü anlatmanız da yararlıdır.',
-    },
-    {
-      question: 'Kas kütlesi azalması gerçekten yorgunluk yapar mı?',
-      answer:
-        'Kas gücündeki azalma merdiven çıkmak, sandalyeden kalkmak gibi günlük işleri zorlaştırabilir. Kas kütlesi, kas gücü ve genel yorgunluk ise ayrı ayrı ölçülür; aradaki bağı hekiminiz muayene ve gerektiğinde güç testleriyle değerlendirir. Hangi işin zorlaştığını somut anlatmanız bu değerlendirmeyi kolaylaştırır.',
-    },
-    {
-      question: 'D vitamini düşüklüğü bütün yorgunluğu açıklar mı?',
-      answer:
-        'Düşük bir sonuç, yorgunluğun tek açıklaması olarak okunmaz. Sonuç yakınmalarınız ve muayene bulgularınızla birlikte yorumlanır. Uyku sorunları, kansızlık, tiroid bozukluğu ya da ilaç etkisi gibi başka nedenler de aynı görüşmede gözden geçirilir.',
     },
   ],
   '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': [

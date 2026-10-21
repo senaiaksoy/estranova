@@ -1,6 +1,6 @@
 # Estranova Yayınlanmış Makale Arşivi
 
-Toplam makale: **67**
+Toplam makale: **63**
 Son export: 2026-10-15
 
 Bu klasör `scripts/export-published-articles.mjs` script'i tarafından otomatik üretilir. `src/pages/` altındaki Astro source'tan metadata, `dist/` altındaki build HTML'den gövde markdown'ına dönüştürülür. Aynı içerik aynı anda obsidian vault'a (`<VAULT>/articles/`) da yazılır.
@@ -50,7 +50,6 @@ npm run articles:export # markdown'a dök
 |---|---|---|---|
 | 2026-07-29 | cagri-sade | [Menopoz Sonrası Göğüslerdeki Değişim: Doğal Süreçler ve Cerrahi Karar Dengesi](2026-07/2026-07-29__menopoz-sonrasi-goguslerdeki-degisim.md) | Beden & Yakınlık |
 | 2026-07-16 | berna-aksoy | [Sıcacık Köşe — Temmuz 2026: Tartı Susunca](2026-07/2026-07-16__temmuz-2026.md) | Editörün Köşesi |
-| 2026-07-16 | metin-alis | [Kilo Değil, İştah ve Metabolizma: GLP-1](2026-07/2026-07-16__glp1-istah-metabolizma-menopoz.md) | Zamansız Yaşam |
 | 2026-07-16 | basak-pelister | [Tartı Susunca Kalan: Ölçü Paniği mi, Beden Algısı mı?](2026-07/2026-07-16__olcu-panigi-beden-algisi-menopoz.md) | Zihin & Denge |
 | 2026-07-15 | estranova-editorial | [Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması](2026-07/2026-07-15__tarti-yatisinca-vucut-kompozisyonu.md) | Hormonal Geçiş |
 | 2026-07-15 | estranova-editorial | [Menopozda Kilo Artışı: Tartının Söylemediği Kısım](2026-07/2026-07-15__kilo-artisi-menopoz.md) | Zamansız Yaşam |
@@ -65,7 +64,6 @@ npm run articles:export # markdown'a dök
 | 2026-06-05 | senai-aksoy | [GHK-Cu ve Menopoz: Bakır Peptid, Cilt Yaşlanması ve Kanıt Sınırı](2026-06/2026-06-05__ghk-cu-menopoz-cilt.md) | Bilimsel Pencere |
 | 2026-06-05 | senai-aksoy | [NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe](2026-06/2026-06-05__nad-plus-hucresel-yaslanma.md) | Bilimsel Pencere |
 | 2026-06-01 | berna-aksoy | [Sıcacık Köşe — Haziran 2026: Güç Eşiği](2026-06/2026-06-01__haziran-2026.md) | Editörün Köşesi |
-| 2026-06-01 | metin-alis | [Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?](2026-06/2026-06-01__yorgunluk-kas-tiroid-metabolizma.md) | Hormonal Geçiş |
 | 2026-06-01 | basak-pelister | [Güç Dediğiniz Şey Bazen Çantayı Daha Hafif Hazırlamaktır](2026-06/2026-06-01__guc-cantayi-daha-hafif-hazirlamak.md) | Hormonal Geçiş · Menopoz |
 | 2026-06-01 | ersin-sarac | [Denge ve Ayak: Kalça ile Gövde Hattını Yeniden Duymak](2026-06/2026-06-01__denge-kaybolmadan-ayak-kalca-govde.md) | Zamansız Yaşam |
 | 2026-06-01 | bulent-aksoy | [Kemik Gücü: Kırığı Beklemeden Sorulacak Sorular](2026-06/2026-06-01__kemik-gucu-kirigi-beklemeden-sorulacak-sorular.md) | Zamansız Yaşam |
@@ -77,12 +75,10 @@ npm run articles:export # markdown'a dök
 |---|---|---|---|
 | 2026-05-30 | cagri-sade | [Menopoz Sonrası Meme Küçültme: Ne Zaman Konfor Meselesi?](2026-05/2026-05-30__meme-kucultme-menopoz-sonrasi-beden-konforu.md) | Beden & Yakınlık |
 | 2026-05-26 | anil-yalmaz | [40](2026-05/2026-05-26__40-sonrasi-harekete-yeniden-baslamak.md) | Zamansız Yaşam |
-| 2026-05-18 | gonca-gokdemir | [Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak](2026-05/2026-05-18__menopozda-cilt-degisimleri.md) | Beden & Yakınlık |
 | 2026-05-11 | duygu-karaosmanoglu | [Yüzümüzle uyumlu gülüşün kararı](2026-05/2026-05-11__yuze-yakisan-estetik-dis-karari.md) | Hormonal Geçiş |
 | 2026-05-11 | estranova-editorial | [Menopoz Nedir? — Temel Rehber](2026-05/2026-05-11__menopoz-nedir.md) | Hormonal Geçiş |
 | 2026-05-10 | cagri-sade | [Hangi Yüz Müdahalesi Sizin İçin? — 40 Sonrası ](2026-05/2026-05-10__yuz-mudahalesi-olcu-sorusu.md) | Zamansız Yaşam |
 | 2026-05-08 | senai-aksoy | [Epitalon ve Telomer Biyolojisi — Yaşlanma Karşıtı Vaat ve Klinik Sınırlar](2026-05/2026-05-08__epitalon-telomer-yaslanma.md) | Bilimsel Pencere |
-| 2026-05-08 | metin-alis | [Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni](2026-05/2026-05-08__tiroid-menopoz-yorgunluk-uyku.md) | Hormonal Geçiş |
 | 2026-05-08 | bulent-aksoy | [40 Sonrası Diz Ağrısı: Ne Zaman İzlem, Ne Zaman Müdahale?](2026-05/2026-05-08__40-sonrasi-diz-agrisi-izlem-mudahale.md) | Zamansız Yaşam |
 | 2026-05-07 | basak-pelister | [Yıllarca Beklediğim Cevabı Duyduğumda — Dokuz Yıllık Menopozun Sonunda HRT Kararı](2026-05/2026-05-07__dokuz-yillik-menopoz-sonunda-hrt-karari.md) | Hormonal Geçiş |
 | 2026-05-07 | ersin-sarac | [Belden Gelen Ağrı Her Zaman Belde Kalmaz: Kasık ve Genital Bölgeye Vuran Ağrıyı Nasıl Okumalı?](2026-05/2026-05-07__belden-gelen-agri-kasik-genital-bolge.md) | Zamansız Yaşam |

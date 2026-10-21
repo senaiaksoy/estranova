@@ -120,30 +120,6 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
-    path: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
-    title: "Kilo Değil, İştah ve Metabolizma: GLP-1'i Menopozda Abartmadan Okumak",
-    description:
-      "GLP-1 çoğu zaman 'kilo iğnesi' diye anılır. Dr. Metin Alış iştah sinyalini, menopozda değişen metabolik zemini ve birinci–ikinci–üçüncü kuşak seçenekleri abartmadan ayırıyor; reçete değil, hekimle sorulacak doğru soruları netleştiriyor.",
-    publishedDate: '16 Temmuz 2026',
-    writerSlug: 'metin-alis',
-    section: 'Zamansız Yaşam',
-    sectionPath: '/zamansiz-yasam/',
-    keywords: [
-      'GLP-1',
-      'iştah',
-      'metabolizma',
-      'menopoz',
-      'semaglutid',
-      'tirzepatid',
-      'inkretin',
-      'vücut kompozisyonu',
-      'sarkopeni',
-      'bel çevresi',
-      'insülin',
-      '40+ kadın',
-    ],
-  },
-  {
     path: '/beden-yakinlik/menopoz-sonrasi-karin-germe/',
     title: 'Menopoz Sonrası Karın Germe: Aynadaki Görüntü ile Beden Hissi Aynı Şeyi Söylemiyorsa',
     description:
@@ -249,26 +225,6 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
-    path: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
-    title: 'Yorgunluk Kas mı, Tiroid mi, Metabolizma mı?',
-    description:
-      '40 sonrası yorgunlukta tiroid, kas gücü ve kan şekeri nasıl değerlendirilir? Hangi testin neden istendiği ve beklenmemesi gereken belirtiler.',
-    publishedDate: '1 Haziran 2026',
-    writerSlug: 'metin-alis',
-    section: 'Hormonal Geçiş · 40 Sonrası',
-    sectionPath: '/hormonal-gecis/40-sonrasi/',
-    keywords: [
-      'yorgunluk',
-      'tiroid',
-      'metabolizma',
-      '40 sonrası',
-      'menopoz',
-      'kas kütlesi',
-      'insülin direnci',
-      'laboratuvar okuma',
-    ],
-  },
-  {
     path: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
     title: 'Yaz Başlamadan Bedeni Uyandırmak: Performans Değil Devamlılık',
     description:
@@ -370,29 +326,6 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
-    path: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
-    title: 'Menopozda Cilt Değişimleri: Cildi Trendlerle Değil Biyolojisiyle Okumak',
-    description:
-      'Prof. Dr. Gonca Gökdemir, menopozda ciltte kuruluk, hassasiyet, leke eğilimi ve kolajen değişimini hormon, UV ve bariyer biyolojisi üzerinden anlatıyor.',
-    publishedDate: '18 Mayıs 2026',
-    writerSlug: 'gonca-gokdemir',
-    section: 'Beden & Yakınlık',
-    sectionPath: '/beden-yakinlik/',
-    keywords: [
-      'menopoz',
-      'cilt değişimleri',
-      'cilt kuruluğu',
-      'kolajen',
-      'elastikiyet',
-      'cilt bariyeri',
-      'melanin',
-      'leke',
-      'güneş koruması',
-      '40 sonrası cilt',
-      'dermatoloji',
-    ],
-  },
-  {
     path: '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
     title: 'Yüzümüzle uyumlu gülüşün kararı',
     description:
@@ -470,28 +403,6 @@ export const staticArticles: StaticArticleEntry[] = [
       'konservatif tedavi',
       'ortopedik takip',
       'diz ağrısı kırmızı bayrak',
-    ],
-  },
-  {
-    path: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
-    title: 'Tiroid mi Menopoz mu? — Yorgunluk, Kilo ve Uyku Bozukluğunun Üç Ekseni',
-    description:
-      'Yorgunluk, kilo artışı ve uyku bozukluğu tiroid ve hormonal geçişle birlikte nasıl okunur? Hashimoto ile perimenopoz nasıl ayrılır, TSH neyi söyler?',
-    publishedDate: '8 Mayıs 2026',
-    writerSlug: 'metin-alis',
-    section: 'Hormonal Geçiş · 40 Sonrası',
-    sectionPath: '/hormonal-gecis/40-sonrasi/',
-    keywords: [
-      'tiroid menopoz',
-      'Hashimoto perimenopoz',
-      'TSH yorumlama',
-      'hipotiroidizm yorgunluk',
-      'menopoz kilo artışı',
-      'perimenopoz uyku',
-      'fT4 fT3',
-      'anti-TPO',
-      'tiroid laboratuvar okuma',
-      '40 sonrası endokrin',
     ],
   },
   {

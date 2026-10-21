@@ -49,9 +49,7 @@ export const subHubs: SubHubConfig[] = [
     heroLede:
       'Kırktan sonra sağlığa yalnızca belirti çıktığında bakmak yetmez. Kemik, metabolizma ve ağız sağlığı, hiçbir şikâyet yokken de izlenmeye değer.',
     articlePaths: [
-      '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
       '/hormonal-gecis/40-sonrasi/yuze-yakisan-estetik-dis-karari/',
-      '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
       '/hormonal-gecis/40-sonrasi/tarama-testleri/',
       '/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/',
       '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',

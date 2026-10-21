@@ -238,11 +238,9 @@ export const painPoints: PainPoint[] = [
       'Ciltteki kuruluk, hassasiyet ve görünüm değişimlerini tek bir nedene bağlamadan ele almak için bir başlangıç rotası sunar.',
     relatedSymptoms: ['cilt'],
     articleRoutes: [
-      '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
       '/beden-yakinlik/cilt-gorunum/',
     ],
     articleTitles: [
-      'Menopozda cilt değişimleri',
       'Cilt ve görünüm rehberi',
     ],
     neutralNextSteps: [

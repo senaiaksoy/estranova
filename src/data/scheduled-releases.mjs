@@ -27,10 +27,6 @@ export const scheduledReleasePaths = [
     releaseDate: '2026-06-01',
   },
   {
-    path: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
-    releaseDate: '2026-06-01',
-  },
-  {
     path: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
     releaseDate: '2026-06-01',
   },

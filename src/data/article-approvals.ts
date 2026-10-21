@@ -114,12 +114,6 @@ export const approvedArticles: ArticleApproval[] = [
     note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; static manifest ve production route uyumu dogrulandi.',
   },
   {
-    pathname: '/hormonal-gecis/40-sonrasi/yorgunluk-kas-tiroid-metabolizma/',
-    writerSlug: 'metin-alis',
-    approvedAt: '2026-10-12',
-    note: 'Prelaunch inventory reconciliation: 1 Haziran 2026 tarihli canli route RSS manifestinde oldugu icin approval envanterine eklendi; 40 sonrasi alt hub arsiv baglantisi, static manifest ve production route uyumu dogrulandi. 12 Ekim 2026 revizyonu (Codex audit/humanize + ikinci geçiş: inkâr çerçevesinin azaltılması, editör notu imzası, kırmızı bayrak atıfları, NG23 menopoz–uyku bağlantısı; Dr. Metin Alış’ın üç soruya yanıtlarının gövdeye işlenmesi; kansızlıksız demir eksikliği için Vaucher 2012 ve Houston 2018 kaynakları; toplam 14 kaynak, 5 SSS): kullanıcı (Dr. Senai Aksoy) bu sohbette “Metin Bey’in ve bilimsel editör onayları tamam.” diyerek Dr. Metin Alış yazar onayını ve bilimsel editör onayını teyit etti. Paket icerik/yazar-onaylari/metin-alis/onaylanan/2026-10-12_yorgunluk-kas-tiroid-metabolizma altına taşındı.',
-  },
-  {
     pathname: '/zamansiz-yasam/yaz-baslamadan-bedeni-uyandirmak/',
     writerSlug: 'alara-baykent',
     approvedAt: '2026-10-15',
@@ -150,12 +144,6 @@ export const approvedArticles: ArticleApproval[] = [
     note: 'Prof. Dr. Bülent Aksoy author approval received for icerik/yazar-onaylari/bulent-aksoy/onay-bekleyen/2026-05-05_40-sonrasi-diz-agrisi-izlem-mudahale. Approval package was corrected for Turkish PDF headers, conservative follow-up wording, personalized 8-12 week framing, injection expectation language, DVT red-flag coverage and surgery wording; live route/static manifest restored and package moved to onaylanan. 14 Ekim 2026 revizyonu (revizyon 7, kaynak SHA-256 c9642e12…): yazar onayı kullanıcı bildirimiyle kaydedildi; bilimsel inceleme Doç. Dr. Senai Aksoy tarafından 14 Ekim 2026 tarihinde tamamlandı (düzeltme istenmedi). Kaynak doğrulaması NICE NG226, BMJ 2017, Cochrane 2024, AAOS 2024, NHS ve Maturitas (Critchlow 2023) üzerinden yapıldı. Kayıt: icerik/yazar-onaylari/bulent-aksoy/onaylanan/2026-10-14_40-sonrasi-diz-agrisi-izlem-mudahale/.',
   },
   {
-    pathname: '/hormonal-gecis/40-sonrasi/tiroid-menopoz-yorgunluk-uyku/',
-    writerSlug: 'metin-alis',
-    approvedAt: '2026-10-12',
-    note: 'Dr. Metin Alış author approval received after v2/v3 medical-editorial cleanup. 12 Ekim 2026 revizyonu (humanize, SSS şeması ile görünür SSS eşitlemesi, levotiroksin ve kalsiyum/demir aralığı düzeltmesi, kaynaksız sayıların kaldırılması): yazar onayı ve kullanıcı (Dr. Senai Aksoy) onayı teyit edildi. Pending package icerik/yazar-onaylari/metin-alis/onay-bekleyen/2026-05-04_tiroid-menopoz-yorgunluk-uyku was updated for FSH/estradiol testing scope, fT3 routine-panel language, oral/transdermal estrogen distinction, TSH variability wording and red-flag alignment; approved package then moved to onaylanan and live route/static manifest restored. 12 Ekim 2026 ikinci kapsamlı audit/humanize/fix revizyonu: kullanıcı bu sohbette “Metin alış ve bilimsel editör inceleme onayları tamam.” diyerek Dr. Metin Alış ve bilimsel editör onaylarının tamamlandığını teyit etti. Kapsam: normal TSH/subklinik ayrımı, koşullu test seçimi, oral östrojen–levotiroksin etkileşimi, kalsiyum/demir ile en az 4 saat ara, FSH/östradiol sınırı, kaynaklar, SSS, BEN ve görsel alt metinleri. Commit/push/deploy bu onayla yapılmadı.',
-  },
-  {
     pathname: '/zamansiz-yasam/durus-bozuldugunda-degil-beden-sessizce-sikistiginda/',
     writerSlug: 'isik-selin-gunce',
     approvedAt: '2026-10-21',
@@ -178,12 +166,6 @@ export const approvedArticles: ArticleApproval[] = [
     writerSlug: 'basak-pelister',
     approvedAt: '2026-10-13',
     note: 'Başak Pelister author approval received from icerik/yazar-onaylari/basak-pelister/onaylanan/basak-test-makale (1).pdf. Approved editorial test draft publication kurallarina hizalanarak site rotasi, FAQ schema ve static manifest ile canli envantere alindi. 2026-10-13: geniş audit revizyonu (dil düzeltmeleri, tekrar azaltma, “X değil, Y” ~8→3, menopozdan geçen süre bilgisi ve tıbbi nota pıhtılaşma/inme, Başak imzası için soru/üç nokta/itiraf) için yazar onayı KC bildirimiyle alındı (sohbet; form JSON yanıtı yok). Tıbbi bilgi kontrolü Dr. Alper Mumcu (incelendi, onaylandı; yazarın hekimi Senai Aksoy olduğu için varsayılan inceleyici değiştirildi). Paket: onaylanan/2026-10-13_dokuz-yillik-menopoz-sonunda-hrt-karari. 2026-10-13 ikinci revizyon (medeni durum ifadesi çıkarıldı, genel tıbbi bilgi ve Evidence ayrı tıbbi nota taşındı, geçmiş karar gerekçesi tahmini kaldırıldı): yazar onayı ve Dr. Alper Mumcu tıbbi not onayı KC bildirimiyle alındı (sohbet; form JSON yanıtı yok). Paket: onaylanan/2026-10-13_dokuz-yillik-menopoz-sonunda-hrt-karari-rev2.',
-  },
-  {
-    pathname: '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
-    writerSlug: 'gonca-gokdemir',
-    approvedAt: '2026-10-14',
-    note: 'Prof. Dr. Gonca Gökdemir yazar onayı ve Doç. Dr. Senai Aksoy tıbbi onayı KC bildirimiyle sözlü alındı (14 Ekim 2026; form, JSON yanıtı veya onay paketi yok). Onaylanan kapsam: 14 Ekim 2026 revizyonu — melanin/melanosit ayrımı, kolajen takviyesi netleştirmesi, retinoid tanımı ve gebelik uyarısı, güneş koruması (UVA/UVB, SPF 30), sigara/kaş-kirpik/tırnak kaynak ayrımı, işlem sonrası uyarılar, SSS 3 soruya indirildi, 11 girdilik Kaynaklar bölümü, OG kart görseli bağlantısı. Bilimsel Editör Notu korundu. Önceki 2 Ekim 2026 onayı bu revizyonu kapsamaz. Kaynak 8 ve 11 iki bağlantı içerir. 14 Ekim 2026 ikinci tur (geniş audit + humanize): yazar onayı ve tıbbi onay KC tarafından sohbette sözlü verildi (form, JSON yanıtı veya onay paketi yok). Kapsam: 7 soru-H2’den 6’sı düz başlığa çevrildi; Kısa Özet 63→53 kelime; 1. bölüme Gonca Gökdemir ağzından genelleştirilmiş poliklinik gözlemi (tek hasta, alıntı yok), adlandırılmış duygu (mahcubiyet) ve teselli cümlesi; kolajen ve değerlendirme bölümlerine somut ayrıntı; 7. bölümde RedFlagBox ile birebir tekrarlanan H3 listesi kaldırıldı; parfüm/peeling cümlesine kaynak 1, 7, 11; SSS 1 yanıtına hassasiyet ve parfümsüz ürün (kaynak 1); manifest açıklaması sayfa açıklamasıyla eşitlendi; kart alt metni görsele göre yeniden yazıldı; kart crop’u AI olarak IPTC etiketlendi; makale yolundaki eski submenuHeroByRoute girdisi kaldırıldı (hero görseli değişmedi). Yeni tıbbi iddia eklenmedi; Evidence düzeyleri, RedFlagBox ve Bilimsel Editör Notu korundu.',
   },
   {
     pathname: '/zihin-denge/duygusal-denge/perimenopozda-kaygi-artisi/',
@@ -250,12 +232,6 @@ export const approvedArticles: ArticleApproval[] = [
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-09-29',
     note: 'KC editör kararıyla makale Dr. Senai Aksoy imzasına taşındı ve gövde metni Senai klinik yazı sesiyle yeniden yazıldı. Production article metadata, approval kaydı ve RSS manifesti Senai imzasına hizalandı; URL korundu (2026-05-02). 2026-09-29: KC editör (Dr. Senai Aksoy) bu revizyon için doğrudan onay verdi (bu sohbetteki bildirim). Revizyon: humanize, kaynak düzeltmeleri, T/Z-skoru tablosu, Dr. Aksoy\'un gerçek SSS yanıtları (3/3, kullanım onaylı) ve Dr. Alper Mumcu\'nun bağımsız tıbbi incelemesi (2026-09-29, tüm metin) ile Bilimsel Editör Notu katkısı. Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-29_kemik-sagligi-40-sonrasi.json. Makale görseli (byline + kart): yapay zekâ üretimi (Dr. Aksoy bildirimi, 2026-09-29; araç/model bildirilmedi). 2026-09-29: Türkiye bağlamı bölümü eklendi (PubMed kaynaklı, ref 10-13); KC editör (Dr. Senai Aksoy) bu bölüm için de doğrudan onay verdi (bu sohbetteki bildirim). Dr. Alper Mumcu bu bölümün bağımsız tıbbi incelemesini onayladı (2026-09-29, kullanıcının bu sohbetteki bildirimi; inceleme tarihi bildirim gününe göre kaydedildi).',
-  },
-  {
-    pathname: '/zamansiz-yasam/glp1-istah-metabolizma-menopoz/',
-    writerSlug: 'metin-alis',
-    approvedAt: '2026-07-16',
-    note: 'KC editör doğrudan onayı: Eşik Sayı 03 · Tartı Susunca kapak yazısı. Metin Alış endokrin sesi — iştah/metabolizma/kuşak haritası; Senai\'nin mevcut GLP-1 klinik karar yazısından ayrışık eksen. Humanize turu sonrası canlıya alındı. Açılış A6, manifesto M5 (kılavuz-hasta-yol paraframe), direk D1+D3. Marka/doz/protokol yok. Özel makale görseli henüz yok — hub hero + yazar portresi.',
   },
   {
     pathname: '/zihin-denge/duygusal-denge/stres-yonetimi-menopoz/',

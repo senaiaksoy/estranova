@@ -253,6 +253,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/gonca-gokdemir.webp',
     focusAreas: ['Cilt & Menopoz', 'Lekeler & Hormon-Cilt', 'Önleyici Dermatoloji'],
     isEditor: false,
+    status: 'inactive',
     category: 'scientific',
     writingStyle: {
       voice: 'Anlaşılır + okuru rahatlatan + akademik birikim arka planda; "trendin değil cildin tarafında" anti-trend duruşu.',
@@ -356,6 +357,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/alp-aslan-eryilmaz.webp',
     focusAreas: ['Önleyici Kardiyoloji', 'Menopoz Sonrası Kalp', 'Lipid & Hipertansiyon'],
     isEditor: false,
+    status: 'inactive',
     category: 'scientific',
     writingStyle: {
       voice: 'Klinik disiplin + sade Türkçe + sayısal kanıt destekli; "erken tarama hayat kurtarır" tonu, risk anchored ama panik dili yok.',
@@ -402,6 +404,7 @@ export const writers: Writer[] = [
     portrait: '/images/writers/metin-alis.webp',
     focusAreas: ['Tiroid & Menopoz Kavşağı', 'Postmenopozal Kemik', 'Metabolik Sendrom 40+'],
     isEditor: false,
+    status: 'inactive',
     category: 'scientific',
     writingStyle: {
       voice: 'Klinik disiplin + sade Türkçe; "yanlış anlaşılan tabloyu açan" sıcak akademisyen.',
