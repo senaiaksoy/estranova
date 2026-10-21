@@ -54,9 +54,9 @@ test('shows a deterministic skin reading route after all answers are selected', 
   await page.getByRole('button', { name: 'Okuma rotasını göster' }).click();
 
   await expect(page.getByRole('heading', { name: 'Cilt değişimlerini anlamak' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Menopozda cilt değişimleri' })).toHaveAttribute(
+  await expect(page.getByRole('link', { name: 'Cilt ve görünüm rehberi' })).toHaveAttribute(
     'href',
-    '/beden-yakinlik/cilt-gorunum/menopozda-cilt-degisimleri/',
+    '/beden-yakinlik/cilt-gorunum/',
   );
   await expect(page.getByText('Ne zaman destek düşünmeli?')).toBeVisible();
 });
