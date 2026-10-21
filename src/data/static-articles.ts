@@ -839,7 +839,7 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
     title: 'Tartı yatışınca geriye kalan: vücut kompozisyonunun sessiz kayması',
-    description: 'Tartı sayısı uzun zamandır pek değişmese de beden değişmeye devam edebilir. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin ve bilgilendirici bir bakış.',
+    description: 'Tartı sayısı uzun süre değişmese de beden değişmeye devam edebilir. Menopozun ölçüye gelmeyen tarafına — kas-yağ oranındaki sessiz kaymaya — sakin bir bakış.',
     publishedDate: '15 Temmuz 2026',
     writerSlug: 'estranova-editorial',
     section: 'Hormonal Geçiş',

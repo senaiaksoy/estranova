@@ -784,27 +784,27 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Tartı pek değişmiyor ama beden değişti — bu menopoza özgü mü?',
       answer:
-        'Tek başına menopoza özgü değildir; ama menopoz bu süreci hızlandırabilir. Kompozisyon değişimi yaş almanın bir parçasıdır — kas yavaşça azalır, yağ farklı bölgelere yerleşebilir. Östrojen düşüşü bu kayışın eğimini biraz daha dikleştirebilir. Sayının yatışıp bedenin değişmeye devam etmesi yaygın bir gözlemdir; bu bir hata değil, ölçü aletini değiştirme zamanının gelmiş olabileceğinin işaretidir.',
+        'Tek başına menopoza özgü değildir. Kasın yavaşça azalması ve yağın başka bölgelere yerleşmesi yaş almanın da parçasıdır. Östrojen düşüşü bu kayışın eğimini dikleştirebilir; bu yüzden menopoz, yaş almanın içinde ayrı bir katman olarak okunur. Sayının yatışıp bedenin değişmeyi sürdürmesi yaygın bir gözlemdir.',
     },
     {
       question: 'BMI normal aralıkta ama yağ oranı yüksek; ne yapmalı?',
       answer:
-        'Önce hekimle birlikte değerlendirmek gerekir — özellikle yağın nereye yerleştiği metabolik açıdan farklı anlamlar taşıyabilir. Bu bir panik göstergesi olmak zorunda değildir; bir yön göstergesi olabilir. Direnç antrenmanı, yeterli protein ve uyku düzeni, kompozisyon tablosunu zaman içinde değiştirebilen üç ana sütundur. Ölçüm alarm için değil, görmek içindir.',
+        'Önce hekimle birlikte bakmak gerekir — sizin tablonuzda yağın karın çevresinde mi yoksa başka yerlerde mi toplandığı, metabolik açıdan farklı anlamlar taşıyabilir. Bu tek başına bir alarm olmak zorunda değildir. Direnç antrenmanı, yeterli protein ve uyku düzeni, kompozisyon tablosunu zaman içinde değiştirebilen üç dayanak olarak birlikte değerlendirilir.',
     },
     {
       question: 'Kompozisyon takibi için tek bir doğru yöntem var mı?',
       answer:
-        '"Tek doğru yöntem" fazla iddialı olur; "yararlı bulunan yöntem" daha dürüst bir yaklaşımdır. Ev tartısının da bir yeri vardır; yanına bedeni gözlemleme alışkanlığı ve hekimle karar verilen aralıklı bir kompozisyon ölçümü tablonun gövdesini görmeye yardım edebilir. İzlemek de bir doza sahiptir.',
+        'Tek bir doğru yöntem iddiası fazla kesin olur. Ev tartısının da bir yeri vardır; yanına bedeni gözlemleme alışkanlığı ve hekimle karar verilen aralıklı bir kompozisyon ölçümü, tablonun içini görmeye yardım edebilir. Sıklık da o karara dahildir.',
     },
     {
       question: 'Direnç antrenmanı menopozda gerçekten kritik mi?',
       answer:
-        '"Kritik" biraz büyük bir kelimedir; "değerli" daha doğru durur. Düzenli direnç antrenmanının kas kütlesini korumaya yardımcı olabileceği araştırmalarda sık konuşuluyor; menopoz döneminde bu eğilim özellikle önemlidir. Zorunluluk diline çevirmemek de önemli — başlama eşiği kişiden kişiye değişir. Küçük başlangıçlar zamanla fark yaratabilir.',
+        'Düzenli direnç antrenmanının kas kütlesini korumaya yardımcı olabileceği araştırmalarda sık konuşuluyor; menopoz döneminde bu eğilim ayrıca değerli bulunur. Zorunluluk diline çevirmemek de önemlidir: başlama eşiği kişiden kişiye değişir. Küçük, haftaya yerleşmiş başlangıçlar zamanla fark bırakabilir.',
     },
     {
       question: 'Protein için bir kural var mı?',
       answer:
-        'Sayısal hedefi hekim belirler. Genel prensip olarak ana öğünlerde proteinin tabakta görünür yer alması, öğünleri kompozisyon açısından daha bilinçli kurgulamaya yardımcı olabilir. Bu, sürekli tartmaktan çok bir alışkanlık konusudur; yerleştiğinde hesap yapmadan da işler.',
+        'Sayısal hedefi hekim belirler. Genel olarak ana öğünlerde proteinin tabakta görünür yer alması, öğünleri kompozisyon açısından daha bilinçli kurmaya yardımcı olabilir. Yerleştiğinde sürekli tartmaya gerek kalmaz.',
     },
   ],
   '/hormonal-gecis/menopoza-hazirlik/koruyucu-saglik-kayitlari/': [
