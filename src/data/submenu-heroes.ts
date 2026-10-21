@@ -394,8 +394,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Sade bir iyi oluş ritüeli atmosferinde sıcak-soğuk dengesi; sauna ve soğuk duş yazısı için kart görseli',
   },
   '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/': {
-    src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Yoga matında bağdaş kurmuş iki kadın; biri gözleri kapalı, elleri karnında nefes çalışması yapıyor, diğeri gülümseyerek ona bakıyor. Yapay zekâ ile üretilmiş temsili görsel.',
+    src: '/images/library/editorial/by-idrar-kacirma-yuruyus.webp',
+    alt: 'Boğaz kıyısındaki yürüyüş yolunda yan yana yürüyen iki kadın; biri ipek başörtülü, ikisi de gülümseyerek birbirine bakıyor. Yapay zekâ ile üretilmiş temsili görsel.',
   },
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/': {
     src: '/images/library/editorial/pair-window-cafe-reflection.webp',

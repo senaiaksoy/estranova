@@ -25,8 +25,8 @@ faqItems:
 writerSlug: "senai-aksoy"
 articleType: "clinical-guide"
 canonicalPath: "/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/"
-imageSrc: "/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp"
-imageAlt: "Yoga matında bağdaş kurmuş iki kadın; biri gözleri kapalı, elleri karnında nefes çalışması yapıyor, diğeri gülümseyerek ona bakıyor. Yapay zekâ ile üretilmiş temsili görsel."
+imageSrc: "/images/library/editorial/by-idrar-kacirma-yuruyus-byline.webp"
+imageAlt: "Boğaz kıyısındaki yürüyüş yolunda yan yana yürüyen iki kadın; biri ipek başörtülü, ikisi de gülümseyerek birbirine bakıyor. Yapay zekâ ile üretilmiş temsili görsel."
 ---
 
 ## Tanıdık Ama Sessiz Kalan Bir Durum
