@@ -51,3 +51,5 @@ Sonraki `fix`, `tekrar detaylı audit humanize fix` ve `tekrar detaylı audit fi
 - Yayın için KC doğrudan editör onayı `article-approvals.ts` içinde kaydedilir.
 
 20 Ekim 2026 geniş audit + humanize turu `perimenopozda-kaygi-artisi` üzerinde yapıldı (kayıt: `docs/editorial/perimenopozda-kaygi-artisi-fix-2026-10-20.md`). Sözcük/ritim düzeltmeleri, tek duygu adlandırması (mahcubiyet), bozuk bir hazırlık cümlesi ve SSS 4 sorusu sadeleştirildi; tıbbi içerik değişmedi. Göğüs ağrısı eşiği gövdede özetle hizalandı ("yeni başlayan veya geçmeyen"); güvenlik eşiği genişlediği için tıbbi onayda ayrıca belirtilecek. **Durum: bu tur metni için 20 Ekim 2026'da KC editör onayı ve Doç. Dr. Senai Aksoy tıbbi onayı sözlü alındı (`article-approvals.ts` kaydı işlendi); merge ve push KC talimatıyla yapıldı.**
+
+21 Ekim 2026 ikinci ince tur (`perimenopozda-zihinsel-bulaniklik`): humanize/fix; “çoğu zaman” 9→2, tekrar eden sahne/ifade ve aforistik kapanışlar giderildi, son bölüme güvenli yönlendirme eklendi, TOC ve meta açıklama düzeltildi. Evidence, BEN ve SSS korundu. KC sohbette “onay” verdi; `article-approvals.ts` notu güncellendi.
