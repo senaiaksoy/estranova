@@ -124,7 +124,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   },
   '/beden-yakinlik/pelvik-taban/': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Yoga matında bağdaş kurmuş, elleri karnında nefes çalışması yapan bir kadın ve yanında oturan bir kadın.',
+    alt: 'Yoga matında bağdaş kurmuş iki kadın; biri gözleri kapalı, elleri karnında nefes çalışması yapıyor, diğeri gülümseyerek ona bakıyor. Yapay zekâ ile üretilmiş temsili görsel.',
   },
   '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/': {
     src: '/images/library/editorial/by-vajinal-saglik.webp',
@@ -133,10 +133,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
   '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/': {
     src: '/images/library/editorial/introspective-burgundy-accent.webp',
     alt: 'Loş ışıklı bir okuma köşesinde yastık ve bordo şal; yan sehpada açık defter, çay bardağı ve şakayıklar.',
-  },
-  '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/': {
-    src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Yoga matında bağdaş kurmuş, elleri karnında nefes çalışması yapan bir kadın ve yanında oturan bir kadın.',
   },
   '/zihin-denge/': {
     src: '/images/heroes/zihin-denge.webp',
@@ -399,7 +395,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/': {
     src: '/images/library/editorial/by-idrar-kacirma-pelvik-taban.webp',
-    alt: 'Evde sakin hareket ve beden farkındalığı atmosferi; idrar kaçırma ve pelvik taban sağlığı yazısı için kart görseli',
+    alt: 'Yoga matında bağdaş kurmuş iki kadın; biri gözleri kapalı, elleri karnında nefes çalışması yapıyor, diğeri gülümseyerek ona bakıyor. Yapay zekâ ile üretilmiş temsili görsel.',
   },
   '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/': {
     src: '/images/library/editorial/pair-window-cafe-reflection.webp',

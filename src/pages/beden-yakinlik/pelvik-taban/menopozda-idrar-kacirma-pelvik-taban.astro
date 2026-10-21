@@ -27,7 +27,7 @@ const pathname = '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-ta
 const post = await getEntry('blog', '2026-04-18-menopozda-idrar-kacirma-ve-pelvik-taban-sagligi');
 if (!post) throw new Error('Menopozda idrar kaçırma içeriği bulunamadı.');
 const { Content, headings } = await render(post);
-const hero = submenuHeroByRoute[pathname]!;
+const hero = submenuHeroByRoute['/beden-yakinlik/pelvik-taban/']!;
 const faqItems = post.data.faqItems ?? [];
 
 const evidenceMarker = /<span data-article-evidence="([1-5])"><\/span>/g;

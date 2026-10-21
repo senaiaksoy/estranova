@@ -321,7 +321,7 @@ export const approvedArticles: ArticleApproval[] = [
     pathname: '/beden-yakinlik/pelvik-taban/menopozda-idrar-kacirma-pelvik-taban/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-05-04',
-    note: 'Prelaunch inventory reconciliation: canli route static manifest ve schema metadata ile birlikte editorial launch setine dahil edildi.',
+    note: 'Prelaunch inventory reconciliation: canli route static manifest ve schema metadata ile birlikte editorial launch setine dahil edildi. 2026-10-21: audit + humanize revizyonu (lede çeşitliliği, Bilimsel Editör Notu yeniden yazımı, alt metin hizası, hero kaydı parent hub’a bağlandı) için Dr. Alper Mumcu tıbbi onayı verdi (KC bildirimi, 2026-10-21; yazılı not repoda değil). Bu kayıt commit/push/deploy yetkisi değildir.',
   },
   {
     pathname: '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
