@@ -260,8 +260,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-08-03',
-    note: 'KC editor approval for yazar degisikligi: Berna Aksoy → Doç. Dr. Senai Aksoy. Makale Senai klinisyen sesiyle ve clinical-guide tipine göre yeniden yazıldı; STRAW+10 ve NICE NG23 kaynakları bağlandı. Onceki Berna onayi 2026-05-04 tarihlidir; bu kayit onun yerine gecmektedir.',
+    approvedAt: '2026-10-21',
+    note: 'KC sözlü onayı — 21 Ekim 2026 — editör onayı. Kapsam: 21 Ekim 2026 audit/humanize revizyonu (atıf düzeltmesi [1] Harlow/STRAW+10, [2] NICE NG23 son güncelleme 15 Nisan 2026; gövde, Kısa Klinik Yanıt, BEN 3 katman, 5 gerçek SSS, acil nörolojik uyarı). Dr. Alper Mumcu tıbbi incelemesi bu kayıtta yok. 2026-08-03 yazar değişikliği onayı (Berna → Senai; STRAW+10 ve NICE NG23 bağlandı; önceki Berna onayı 2026-05-04) bu revizyonun yerine geçmez. Commit/push/deploy bu kayıtla yetkilendirilmiş değildir.',
   },
   {
     pathname: '/hormonal-gecis/menopoza-hazirlik/menopoza-hazirlik-ilk-kontrol-dosyasi/',

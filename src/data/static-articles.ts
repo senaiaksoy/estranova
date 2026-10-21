@@ -639,7 +639,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/',
     title: 'Perimenopoz Belirtileri ve İlk İşaretler: “Bende Bir Şey Değişiyor” Dedirten Dönem',
     description:
-      'Perimenopoz çoğu zaman tek bir büyük alarmla değil; adet düzeni, uyku, sıcak basması, ruh hali ve odaklanma gibi küçük işaretlerle fark edilir. Belirtileri panik yaratmadan okumak için sakin bir rehber.',
+      'Perimenopoz belirtileri nelerdir, kaç yaşında başlar? Adet, uyku ve sıcak basması kaymaları; 45 yaş üzerinde çoğu zaman tek kan testi olmadan tanınır.',
     publishedDate: '4 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Hormonal Geçiş · Perimenopoz',
