@@ -272,8 +272,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
     writerSlug: 'estranova-editorial',
-    approvedAt: '2026-05-04',
-    note: 'Prelaunch editoryal reconciliation: site route, RSS manifest ve production build icin editorial desk onayi ile canli envantere alindi.',
+    approvedAt: '2026-10-21',
+    note: 'Prelaunch editoryal reconciliation: site route, RSS manifest ve production build icin editorial desk onayi ile canli envantere alindi (2026-05-04). 21 Ekim 2026: KC bu sohbette editör onayını ve Doç. Dr. Senai Aksoy tıbbi onayını sözlü bildirdi (“KC editör onayı ve Doç. Dr. Senai Aksoy tıbbi onayı tamam”). Kapsam: audit/humanize/fix — soru-H2 6→1; “X değil Y”/tabela/kapanış ailesi seyreltildi; “Zihin anlatır” kişileştirmesi ve “sen” sızıntısı (Kendine) düzeltildi; Kısa Özet çevre metin olmadan güvenlik eşiği taşıyor; SSS 3 gövde H2 örtüşmesi giderildi (ayırıcı neden sorusu); FAQ’daki kırmızı bayraklar gövdeye alındı; görünür Kaynaklar dergi rejimine çekildi (iz article-log’da); Evidence 3/4/5 ve Bilimsel Editör Notu korundu; yeni tıbbi iddia yok; üst hero parent hub. Önceki 4 Mayıs 2026 onayı bu revizyonu kapsamaz. 21 Ekim 2026: KC sohbette commit/push talimatı verdi; Pages deploy bu kayıtla yetkilendirilmedi.',
   },
   {
     pathname: '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/',

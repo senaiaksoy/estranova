@@ -317,17 +317,17 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Perimenopozdaki zihinsel bulanıklık kalıcı bir hafıza kaybı mıdır?',
       answer:
-        'Çoğu zaman hayır. Bu dönem daha çok dikkat, kelime bulma ve zihinsel hız dalgalanması şeklinde yaşanır; uyku, stres ve hormonal değişim birlikte rol oynar. Ama belirgin ilerleme, günlük işlev kaybı veya nörolojik ek belirti varsa konu yeniden ele alınmalıdır.',
+        'Çoğu zaman hayır. Bu dönemde anlatılan şey daha çok dikkat, kelime bulma ve zihinsel hızın dalgalanmasıdır; uyku, stres ve hormonal geçiş birlikte rol oynayabilir. Belirgin ilerleme, günlük işleri yapamama veya ani yönelim kaybı, tek taraflı güçsüzlük, şiddetli baş ağrısı gibi ek belirtiler varsa konu yeniden ele alınmalıdır.',
     },
     {
-      question: 'Beyin sisi ile uykusuzluk arasında gerçekten güçlü bir bağ var mı?',
+      question: 'Beyin sisi ile uykusuzluk arasında bir bağ var mı?',
       answer:
-        'Evet, çoğu kadında en görünür bağlantılardan biri budur. Gece bölünmeleri arttıkça ertesi gün kelime bulma, odak sürdürme ve zihinsel dayanıklılık daha kırılgan hissedilebilir.',
+        'Sık birlikte görülür. Gece terlemesi, sık uyanma ve yüzeysel uyku ertesi gün kelime bulmayı ve odağı sürdürmeyi daha kırılgan hale getirebilir. Sis yalnızca uykudan gelmez; stres ve hormon dalgalanması da aynı tabloya katılabilir.',
     },
     {
-      question: 'Bu dönemde ne zaman daha ayrıntılı değerlendirme istemek gerekir?',
+      question: 'Bu sis her zaman hormon geçişinden midir?',
       answer:
-        'Yakınma kısa süreli dalgalanmanın ötesine geçip iş, güvenlik ya da günlük yaşamı etkiliyorsa daha dikkatli değerlendirme gerekir. Özellikle tek taraflı güçsüzlük, ani yönelim bozukluğu, şiddetli baş ağrısı veya hızla ilerleyen unutkanlık bekletilmemelidir.',
+        'Hayır. Anemi, tiroid düzensizlikleri, B12 eksikliği, depresif dönemler ve bazı ilaç etkileri benzer bir sis yaratabilir. Bu yüzden her bulanıklığı yalnızca hormonal geçişle açıklamak zorunda değilsiniz; belirtiler günlük işleri bozuyorsa değerlendirme daha geniş tutulur.',
     },
   ],
   '/hormonal-gecis/perimenopoz/perimenopoz-ilk-isaretler/': [

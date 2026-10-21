@@ -618,7 +618,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
     title: 'Perimenopozda Zihinsel Bulanıklık: Unutkanlık Hissi Günlük Hayatta Nasıl Okunur?',
     description:
-      'Perimenopoz döneminde kelime bulmakta zorlanma, unutkanlık hissi, odak dalgalanması ve zihinsel yorgunluk neden olur? Bu rehber, gündelik hayatta fark edilen bilişsel değişimleri panik yaratmadan anlamaya ve ne zaman daha dikkatli değerlendirme gerektiğini ayırt etmeye yardımcı olur.',
+      'Perimenopozda beyin sisi ve unutkanlık hissi; uyku, stres ve sıcak basmalarıyla birlikte. Çoğu zaman kalıcı bellek kaybı değildir; günlük işlev bozulursa değerlendirme gerekir.',
     publishedDate: '4 Mayıs 2026',
     writerSlug: 'estranova-editorial',
     section: 'Zihin & Denge',
