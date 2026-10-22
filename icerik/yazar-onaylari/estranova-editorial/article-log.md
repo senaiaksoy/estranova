@@ -24,6 +24,8 @@
 
 22 Ekim 2026 ikinci ince tur (`menopoz-nedir`): kurumsal byline'da birinci tekil sızıntı giderildi; bozuk "belirtiler" lede'i yeniden kuruldu; "tanınan" ve "Vücut ... alışırken" ifadeleri sadeleştirildi; tekrarlayan "hekimle birlikte" bölüm kapanışları 5→2; son paragraf "yönetimi/planlı başlangıç" kapanışından arındırıldı; TOC etiketi H2 ile hizalandı. Yeni tıbbi iddia yok; Evidence ve SSS korundu. KC sözlü onayı 22 Ekim 2026 alındı.
 
+22 Ekim 2026 geniş audit sonrası üçüncü tur (`menopoz-nedir`): perimenopoz tanımı menopoz eşiğiyle hizalandı ("son adetten sonraki bir yıl dolana kadar"); Kısa Özet ve Uzun Vadeli Sağlık bölümüne kırmızı bayrak eklendi (12 ay sonrası yeniden kanama, 40 yaş öncesi adet kesilmesi, çok sık/yoğun kanama; gebelik ve tiroid ayırımı); kemik/kalp tekrarı ve "hekimle"/"bireysel" kapanışları budandı, "gündem" ailesi 4→0, ilk yıl ritmi son bölüme taşındı. Tıbbi ek içerik: kırmızı bayrak ve tanım düzeltmesi — KC sözlü onayı 22 Ekim 2026 alındı.
+
 ## 22 Ekim 2026 — Menopoz nedir kaynak izi (arka plan)
 
 Gövdeden kaldırılan görünür Kaynaklar bölümü (kurumsal byline / dergi rejimi). İddia izi:
