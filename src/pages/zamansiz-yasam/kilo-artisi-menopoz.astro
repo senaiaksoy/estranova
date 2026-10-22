@@ -21,7 +21,7 @@ const pathname = '/zamansiz-yasam/kilo-artisi-menopoz/';
 const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
 
 const tocEntries = [
-  { id: 'neden-simdi', label: 'Tartı Neden Aynı Yaşamda Değişir?' },
+  { id: 'neden-simdi', label: 'Yaşam Aynı Kalırken Tartı Neden Değişir?' },
   { id: 'yag-cografyasi', label: 'Östrojen ve Yağın Yeni Coğrafyası' },
   { id: 'az-yemek-yetmez', label: 'Porsiyonu Küçültmenin Bu Dönemdeki Sınırı' },
   { id: 'kas-motoru', label: 'Kas Kütlesi: Görünmeyen Metabolizma Motoru' },
@@ -36,7 +36,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Menopozda Kilo Artışı: Tartının Söylemediği Kısım';
 const seoTitle = 'Menopozda Kilo Artışı';
 const articleDescription =
-  'Menopoz geçişinde kilo değişiminin arkasındaki östrojen-yağ dağılımı ilişkisini ve kas kütlesinin neden tartıdan daha belirleyici olduğunu anlatan bir rehber.';
+  'Menopoz geçişinde kilo değişimini östrojen, yağın yerleşimi, kas kütlesi, uyku ve stres açısından anlatır; hekime ne zaman danışılacağını belirtir.';
 const faqItems = articleFaqs[pathname] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -93,7 +93,7 @@ const articleSchemas = buildArticleSchemas({
           lastUpdated="22 Ekim 2026"
           readingMinutes={9}
           imageSrc="/images/library/editorial/casual-cream-sweater-pampas.webp"
-          imageAlt="Balkonda taze otlarla ilgilenen 40+ kadın; menopozda kilo artışı yazısı için editoryal görsel"
+          imageAlt="Balkonda otlarla ilgilenen, elinde sebze tabağı tutan 40 yaş üstü bir kadın"
         />
 
         <ArticleSummary title="Kısa Özet">
@@ -106,7 +106,7 @@ const articleSchemas = buildArticleSchemas({
         </ArticleSummary>
 
         <ArticleProsePanel>
-          <h2 id="neden-simdi">Tartı Neden Aynı Yaşamda Değişir?</h2>
+          <h2 id="neden-simdi">Yaşam Aynı Kalırken Tartı Neden Değişir?</h2>
           <p>
             Aynı dolap. Aynı pantolon. Numara artık eskisi gibi durmuyor.
           </p>
@@ -126,7 +126,7 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="yag-cografyasi">Östrojen ve Yağın Yeni Coğrafyası</h2>
           <p>
-            Östrojen yıllarca yağı kalça ve uyluk çevresine yönlendirirdi. Bel bölgesini büyük ölçüde korurdu.
+            Östrojen yıllarca yağı kalça ve uyluk çevresine yönlendirir, bel bölgesini ise büyük ölçüde korurdu.
           </p>
           <p>
             Geçişle birlikte bu düzen değişiyor. Östrojen düşünce yağ, cilt altından iç organ çevresine —
@@ -134,20 +134,20 @@ const articleSchemas = buildArticleSchemas({
             olarak etkin, hafif bir iltihap zemini oluşturan bir doku.
           </p>
           <p>
-            Bel çevresindeki artış bu yüzden yalnızca görünüm meselesi gibi okunmamalı. İnsülin direnci
-            (hücrelerin şekere verdiği yanıtın zorlaşması) ve kalp-damar sağlığıyla ilişkili bir sinyal olarak
-            değerlendiriliyor <Evidence level={5} />.
+            Bel çevresindeki artış bu yüzden görünümün ötesinde, insülin direnci (hücrelerin şekere verdiği
+            yanıtın zorlaşması) ve kalp-damar sağlığıyla ilişkili bir sinyal olarak değerlendiriliyor
+            <Evidence level={5} />.
           </p>
           <p>
             Kadınlarda 88 santimetre üzerindeki bel çevresi, kilo değerinden bağımsız olarak metabolik risk
             işareti kabul ediliyor <Evidence level={4} />. Tartı bu eşiği göstermez; bel ölçüsü gösterir.
-            Pantolonunuzun belinin başka oturması, bazen tam da bu kayışın gündelik karşılığıdır.
+            Pantolonun belde farklı oturması, bazen bu kaymanın gündelik karşılığıdır.
           </p>
 
           <h2 id="az-yemek-yetmez">Porsiyonu Küçültmenin Bu Dönemdeki Sınırı</h2>
           <p>
             Pantolonun belini bir delik içeri almak. Öğle yemeğini yarıda bırakmak. Tartı yukarı kayınca ilk
-            refleks çoğu zaman budur.
+            refleks bu olur.
           </p>
           <p>
             Bu dönemde aynı denklem her zaman işlemiyor. Belirgin kalori kısıtlaması metabolizmayı önce
@@ -157,8 +157,8 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             Sizin için mesele kalori miktarından çok kasın korunması olabilir. Kası koruyan, kan şekerini
-            dengeleyen ve uykuyu onaran küçük adımlar, hızlı sonuç vaat eden kısıtlama yöntemlerinden daha
-            sürdürülebilir duruyor. Utanç burada yön göstermez.
+            dengeleyen ve uykuyu onaran küçük adımlar, hızlı sonuç vaat eden kısıtlama yöntemlerine göre uzun
+            vadede daha sürdürülebilir görünüyor. Utanç burada yön göstermez.
           </p>
 
           <h2 id="kas-motoru">Kas Kütlesi: Görünmeyen Metabolizma Motoru</h2>
@@ -172,8 +172,8 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             Kas dinlenirken bile enerji harcar. Kaybedilen her kilogram kas, günlük metabolizmada küçük ama
-            sürekli bir düşüşe karşılık gelebiliyor. Bu yüzden gün içindeki enerji düzeyiniz, tartıdaki
-            sayıdan ayrı bir bilgi taşır.
+            sürekli bir düşüşe karşılık gelebiliyor. Bu yüzden tartı aynı sayıyı gösterirken bile kasınızın
+            durumu ayrı bir bilgi taşır.
           </p>
 
           <h2 id="uyku-stres-seker">Uyku, Stres ve Kan Şekeri</h2>
@@ -207,10 +207,13 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Lifli sebzeler tabağın büyük kısmını oluşturduğunda kan şekeri eğrisi yumuşuyor; tam tahıl,
             baklagil ve sebzelerden gelen lif bağırsak sağlığına destek olabiliyor <Evidence level={4} />.
-            Zeytinyağı, ceviz ve balık kaynaklı sağlıklı yağlar tokluğu uzatıyor. Akdeniz tarzı bir düzen —
-            sebze, tam tahıl, balık, zeytinyağı, baklagiller — bu dönem için tutarlı okunan yaklaşımlardan biri
-            olarak görülüyor <Evidence level={5} />. Katı kısıtlama genellikle uzun vadede tersine döner; sizin
-            tabağınızda protein, lif ve sağlıklı yağın yan yana durması çoğu zaman daha sürdürülebilir durur.
+            Zeytinyağı, ceviz ve balık kaynaklı sağlıklı yağlar tokluğu uzatıyor.
+          </p>
+          <p>
+            Akdeniz tarzı bir düzen — sebze, tam tahıl, balık, zeytinyağı, baklagiller — bu dönem için sık
+            başvurulan yaklaşımlardan biri olarak görülüyor <Evidence level={5} />. Katı kısıtlama genellikle
+            uzun vadede tersine döner; sizin tabağınızda protein, lif ve sağlıklı yağın yan yana durması daha
+            sürdürülebilir bir yol olabilir.
           </p>
 
           <h2 id="hareket-yolu">Hareket Yolu: Direnç Çalışması</h2>
@@ -220,7 +223,7 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Düşük etkili aerobik hareket kalp-damar sağlığı için önemini koruyor. Kilo yerleşimi ve metabolik
             denge açısından bu dönemde öne çıkan ise direnç çalışmasıdır. Haftada birkaç gün, ana kas
-            gruplarını kapsayan kısa seanslar, kas korunması ve insülin duyarlılığı için tutarlı okunan bir
+            gruplarını kapsayan kısa seanslar, kas korunması ve insülin duyarlılığı için yararlı bulunan bir
             müdahale olarak değerlendiriliyor <Evidence level={5} />.
           </p>
           <p>
@@ -235,9 +238,10 @@ const articleSchemas = buildArticleSchemas({
             Kilo değişimlerinin çoğu menopoz başlığına sığar. Bazı tablolar ise gecikmeden değerlendirilmeli.
           </p>
           <p>
-            Kısa sürede beklenmedik biçimde alınan ya da kaybedilen kilo; sürekli halsizlik; saç dökülmesi,
-            cilt kuruluğu ya da soğuğa tahammülsüzlüğün eklendiği tablo; çarpıntı ve iştah artışıyla birlikte
-            gelen kilo kaybı hekimle konuşma zamanı olabilir <Evidence level={5} />. Bu işaretler tiroid işlev
+            Kısa sürede, beklenmedik biçimde alınan ya da kaybedilen kilo hekimle konuşma zamanı olabilir.
+            Sürekli halsizlik ya da kilo artışına saç dökülmesi, cilt kuruluğu ve soğuğa tahammülsüzlüğün
+            eklenmesi için de aynısı geçerli. Çarpıntı ve iştah artışıyla birlikte gelen kilo kaybı da bu gruba girer
+            <Evidence level={5} />. Bu işaretler tiroid işlev
             değişiklikleri, insülin direnci ya da başka metabolik tablolarla ilişkili olabilir.
           </p>
           <p>
@@ -256,13 +260,13 @@ const articleSchemas = buildArticleSchemas({
           <h3>Tartı aynı kalırken bedende değişim olması mümkün mü?</h3>
           <p>
             Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ başka bir bölgeye kayabiliyor.
-            Sayı sabit kalsa bile pantolonun belinin oturuşu ve genel his değişebilir.
+            Sayı sabit kalsa bile kıyafetlerin üzerinizdeki duruşu ve genel his değişebilir.
           </p>
           <h3>Hızlı kilo verme yöntemleri bu dönemde işe yarar mı?</h3>
           <p>
             Çoğunlukla kalıcı bir sonuç sunmuyor. Belirgin kısıtlama kısa vadede tartıyı hareket ettirse de
             kas kaybını hızlandırabiliyor ve kilo genellikle geri geliyor <Evidence level={4} />. Yavaş ama
-            sürdürülebilir bir denge daha tutarlı sonuç veriyor.
+            sürdürülebilir bir denge daha kalıcı olabiliyor.
           </p>
           <h3>Protein miktarı nasıl belirlenmeli?</h3>
           <p>
@@ -291,8 +295,8 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Menopozla ilişkili kilo değişimi tek bir mekanizmaya bağlanamaz; yağın visseral alana kayması,
             kas kütlesindeki azalma ve uyku-stres ekseni birlikte değerlendirilir. Belirgin kalori kısıtlaması
-            yerine protein temelli tabak yapısı, düzenli direnç çalışması ve uyku korunumu daha tutarlı bir
-            destek hattı sunar. Hızlı ve açıklanamayan kilo değişimleri ya da eşlik eden sistemik belirtiler
+            yerine protein temelli tabak yapısı, düzenli direnç çalışması ve uykunun korunması daha
+            sürdürülebilir bir yol sunar. Hızlı ve açıklanamayan kilo değişimleri ya da eşlik eden sistemik belirtiler
             varsa plan hekim değerlendirmesiyle şekillendirilmelidir.
           </p>
         </ArticleEditorNote>

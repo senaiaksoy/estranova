@@ -642,12 +642,12 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Tartı aynı kalırken bedende değişim olması mümkün mü?',
       answer:
-        'Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ başka bir bölgeye kayabiliyor. Sayı sabit kalsa bile pantolonun belinin oturuşu ve genel his değişebilir.',
+        'Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ başka bir bölgeye kayabiliyor. Sayı sabit kalsa bile kıyafetlerin üzerinizdeki duruşu ve genel his değişebilir.',
     },
     {
       question: 'Hızlı kilo verme yöntemleri bu dönemde işe yarar mı?',
       answer:
-        'Çoğunlukla kalıcı bir sonuç sunmuyor. Belirgin kısıtlama kısa vadede tartıyı hareket ettirse de kas kaybını hızlandırabiliyor ve kilo genellikle geri geliyor. Yavaş ama sürdürülebilir bir denge daha tutarlı sonuç veriyor.',
+        'Çoğunlukla kalıcı bir sonuç sunmuyor. Belirgin kısıtlama kısa vadede tartıyı hareket ettirse de kas kaybını hızlandırabiliyor ve kilo genellikle geri geliyor. Yavaş ama sürdürülebilir bir denge daha kalıcı olabiliyor.',
     },
     {
       question: 'Protein miktarı nasıl belirlenmeli?',
