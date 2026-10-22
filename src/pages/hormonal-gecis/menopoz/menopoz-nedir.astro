@@ -25,7 +25,7 @@ const tocEntries = [
   { id: 'belirtiler', label: 'Belirtiler ve postmenopoz dönemi' },
   { id: 'saglik-gundemi', label: 'Uzun vadeli sağlık ve izlem' },
   { id: 'iyi-olus', label: 'İyi oluşu destekleyen alışkanlıklar' },
-  { id: 'sik-sorulanlar', label: 'Sıkça Sorulanlar', numbered: false },
+  { id: 'sik-sorulanlar', label: 'Tanım hakkında sorular', numbered: false },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -35,6 +35,7 @@ const articleDescription =
   'Menopoz nedir, kaç yaşında başlar, belirtileri nelerdir? Perimenopoz, menopoz ve postmenopoz evreleri, östrojen değişimi ve 40+ başlangıç rehberi.';
 const pathname = '/hormonal-gecis/menopoz/menopoz-nedir/';
 const publishedDate = '11 Mayıs 2026';
+const modifiedDate = '22 Ekim 2026';
 const readingMinutes = 7;
 const hero = submenuHeroByRoute['/hormonal-gecis/menopoz/']!;
 const faqItems = articleFaqs[pathname] ?? [];
@@ -44,7 +45,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'estranova-editorial',
   articleType: 'editorial-guide',
   publishedDate,
-  modifiedDate: '3 Ağustos 2026',
+  modifiedDate,
   pathname,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
@@ -53,7 +54,6 @@ const articleSchemas = buildArticleSchemas({
   siteUrl,
 });
 ---
-
 
 <SiteLayout
   title={`${seoTitle} - Estranova`}
@@ -78,63 +78,64 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="estranova-editorial"
         articleType="editorial-guide"
         publishedDate={publishedDate}
-        lastUpdated="3 Ağustos 2026"
+        lastUpdated={modifiedDate}
         readingMinutes={readingMinutes}
         imageSrc="/images/library/editorial/portrait-cream-turtleneck-smile.webp"
-        imageAlt="Doğal ışıkta yumuşak gülümseyen 50'li yaşlardaki bir kadının krem kazak ve altın yuvarlak küpeyle çekilmiş yakın editöryal portresi; menopozun nötr ve yargısız tanımıyla olgunlukta iyi hissetme temasını sıcak biçimde taşıyan dosya görseli"
+        imageAlt="Doğal ışıkta gülümseyen, krem kazak ve altın yuvarlak küpe takmış 50'li yaşlardaki bir kadının yakın editöryal portresi"
       />
 
       <ArticleSummary title="Kısa Özet">
         <p>
-          Menopoz, ardışık 12 ay adet görmeyince geriye dönük teyit edilen doğal bir eşiktir; ortalama
-          yaşı 51–52 olarak bildiriliyor, ancak bu zaman çizgisi kişiden kişiye önemli ölçüde farklılaşıyor.
-          Perimenopoz, menopoz ve postmenopoz her biri farklı bir gündem taşıyor; belirtiler değişirken
-          uzun vadeli odak kemik ve kalp-metabolizma dengesine kayıyor.
+          Menopoz, son adetten sonra ardışık on iki ay adet görmeyince geriye dönük teyit edilen doğal bir eşiktir.
+          Ortalama yaş 51–52 olarak bildiriliyor; dağılım 45–55 bandında yoğunlaşıyor, kişisel zaman çizgisi ise
+          farklılaşıyor. Perimenopoz, menopoz ve postmenopoz ayrı gündemler taşır: belirtiler değişirken uzun vadeli
+          odak kemik ve kalp-metabolizma dengesine kayar.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="esik">Geriye Dönük Netleşen Bir Eşik</h2>
         <p>
-          Çoğumuz o dönemi fark ettiğimizde zaten içindeyizdir. Adetler seyrekleşmiş, takvimde aylar sayılmış,
-          ama henüz bir isim konulmamıştır — ne tam perimenopoz, ne tam menopoz.
+          Takvimde bir işaret, sonra iki ay boşluk, sonra yine bir leke. İsim henüz yok.
         </p>
         <p>
-          Menopoz tıbbi olarak basit bir tanımla gelir: son adet kanamasının üzerinden on iki ay geçmesi.
-          Ama bu eşik geriye dönük netleşir — o an değil, bir yıl sonra anlaşılır. Perimenopoz bu eşiğe
-          uzanan geçiş sürecidir; postmenopoz ise sonraki yılların tamamını kapsar.
+          Belirsizlik yorar. Adı konmayınca kendinizi savruk hissedebilirsiniz; oysa takvim düzgün durmak ister,
+          adet o kadar uysal olmayabilir.
         </p>
         <p>
-          Günlük kullanımda "menopoz" bazen tüm süreci anlatmak için kullanılır. Bilimsel olarak ise
-          perimenopoz ve menopoz ayrı başlıklardır — ve bu ayrım önemlidir, çünkü her evrenin sağlık
-          gündemi farklı sorular sorar.
+          Önce şunu söyleyeyim: bu eşiği kaçırmış değilsiniz. Tanım zaten geriye bakar — o gün değil, bir yıl sonra
+          anlaşılır.
         </p>
         <p>
-          Ortalama menopoz yaşı büyük ölçekli çalışmalarda 51–52 olarak bildiriliyor; genel dağılım
-          ise 45–55 bandında yoğunlaşıyor.<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>
-          Genetik yapı, sigara kullanımı, bazı tedaviler bu zamanlamayı öne ya da arkaya çekebilir.
-          Yani "doğru" bir yaş yok; kişisel bir zaman çizgisi var.
+          Menopoz tıbbi olarak sadedir: son adet kanamasının üzerinden on iki ay geçmesi. Perimenopoz bu eşiğe uzanan
+          geçiştir; postmenopoz sonraki yılların tamamını kapsar.
         </p>
         <p>
-          Bu rehber o zaman çizgisini klinik jargon olmadan okumak için hazırlandı.
+          Günlük dilde “menopoz” bazen bütün süreci anlatır. Evreler ayrı durur, çünkü her birinin sağlık sorusu
+          farklıdır: dalgalanma başka, kemik ve kalp izlemi başkadır.
+        </p>
+        <p>
+          Büyük çalışmalarda ortalama menopoz yaşı 51–52 olarak bildiriliyor; genel dağılım 45–55 bandında
+          yoğunlaşıyor. Genetik yapı, sigara kullanımı ve bazı tedaviler bu zamanlamayı öne ya da arkaya çekebilir.
+          Tek doğru yaş yoktur; kişisel bir zaman çizgisi vardır.
         </p>
 
         <h2 id="evreler">Üç Evre: Perimenopoz, Menopoz, Postmenopoz</h2>
         <p>
-          Süreci üç ayrı başlıkta düşünmek, tek bir kelimeye sıkışan deneyimi çok daha anlaşılır kılar.
+          Tek kelimeye sığmayan bir dönemi üç başlıkta düşünmek, sizin takviminizi okumayı kolaylaştırır.
         </p>
         <p>
-          <strong>Perimenopoz</strong> hormon dalgalanmalarının belirginleştiği geçiş dönemidir. İlk
-          adet düzensizliğiyle başlar, son adet gününe kadar sürer. Gözlemsel veriler ortalama süreyi
-          4–8 yıl olarak gösteriyor<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup> — ama bu da kişiden kişiye önemli ölçüde farklılaşıyor.
+          <strong>Perimenopoz</strong> hormon dalgalanmalarının belirginleştiği geçiş dönemidir. İlk adet
+          düzensizliğiyle başlar, son adet gününe kadar sürer. Gözlemsel veriler ortalama süreyi 4–8 yıl olarak
+          gösteriyor; bu da kişiden kişiye önemli ölçüde farklılaşıyor.
         </p>
         <p>
-          <strong>Menopoz</strong>, son adetten sonra on iki ay tamamlandığında geriye dönük teyit
-          edilen eşiktir. Tek bir gün değil, bir gerçekleşme.
+          <strong>Menopoz</strong>, perimenopozun bittiği yerde geriye dönük teyit edilen eşiktir. Bir gerçekleşmedir;
+          takvim yaprağı gibi tek bir güne indirgenmez.
         </p>
         <p>
-          <strong>Postmenopoz</strong> ise bu eşiğin ardından yaşamın geri kalanını kapsar. Belirtiler
-          değişebilir, ama sağlık gündeminin ağırlık merkezi de kayar.
+          <strong>Postmenopoz</strong> bu eşiğin ardından yaşamın geri kalanını kapsar. Belirtiler değişebilir; sağlık
+          gündeminin ağırlık merkezi de kayar.
         </p>
 
         <div class="my-8 overflow-x-auto">
@@ -142,175 +143,127 @@ const articleSchemas = buildArticleSchemas({
             <thead>
               <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
                 <th class="p-3 font-semibold">Evre</th>
-                <th class="p-3 font-semibold">Tanı &amp; Zamanlama Eşiği</th>
-                <th class="p-3 font-semibold">Hormonal Tablo</th>
-                <th class="p-3 font-semibold">Öne Çıkan Odak</th>
+                <th class="p-3 font-semibold">Ne zaman?</th>
+                <th class="p-3 font-semibold">Hormonlar</th>
+                <th class="p-3 font-semibold">Bu evrede öne çıkan</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-primary/10">
               <tr>
                 <td class="p-3 font-medium">Perimenopoz</td>
                 <td class="p-3">İlk adet düzensizliğiyle başlar, son adet gününe kadar sürer (ortalama 4–8 yıl).</td>
-                <td class="p-3">Östrojen şiddetle dalgalanır, progesteron azalır.</td>
-                <td class="p-3">Sıcak basması, uykusuzluk, adet düzensizliği yönetimi.</td>
+                <td class="p-3">Östrojen dalgalanır, progesteron azalır.</td>
+                <td class="p-3">Sıcak basması, uykusuzluk, adet düzensizliği.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Menopoz</td>
                 <td class="p-3">Ardışık 12 ay hiç adet görmeyince geriye dönük teyit edilir.</td>
                 <td class="p-3">Yumurtalık östrojen üretimi kalıcı olarak düşmüştür.</td>
-                <td class="p-3">Hormonal eşiğin netleşmesi, yaşam tarzı ve medikal değerlendirme.</td>
+                <td class="p-3">Eşiğin netleşmesi, yaşam tarzı ve hekimle değerlendirme.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Postmenopoz</td>
                 <td class="p-3">12 aylık menopoz eşiğinden sonraki yaşamın tamamını kapsar.</td>
-                <td class="p-3">Östrojen düşük seviyede sabittir, FSH yüksek seyreder.</td>
-                <td class="p-3">Kemik yoğunluğu, kardiyovasküler sağlık, genital-üriner sistem korunması.</td>
+                <td class="p-3">Östrojen düşük seviyede durulur, FSH yüksek seyreder.</td>
+                <td class="p-3">Kemik yoğunluğu, kalp-metabolizma, vajinal ve idrar yolu konforu.</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p>
-          Her evrede öncelikler farklı. Perimenopozda düzensiz adet ve sıcak basması öne çıkarken;
-          postmenopozda kemik yoğunluğu ve kalp-metabolizma dengesi daha düzenli bir takibi hak ediyor.
-          Bu farkı bilmek, sağlık planını dönemlere göre kurabilmeyi kolaylaştırıyor.
+          Perimenopozda düzensiz adet ve sıcak basması öne çıkarken; postmenopozda kemik yoğunluğu ile kalp-metabolizma
+          dengesi daha düzenli bir takibi hak eder. Bu fark, sizin sağlık planınızı döneme göre kurmanıza yardım eder.
         </p>
 
         <h2 id="hormon-degisim">Hormon Değişimleri Bu Evrede</h2>
         <p>
-          "Östrojen düştü" diye özetlenir bu dönem — ama tablo biraz daha karmaşık. Ve bu karmaşıklığı
-          anlamak, tek bir test sonucuna çok anlam yüklememek açısından önemli.
+          “Östrojen düştü” diye özetlenir bu dönem. Tablo biraz daha kalabalık.
         </p>
         <p>
-          Menopoz döneminde FSH ve LH düzeyleri yükselir; bu, yumurtalık yanıtının azalmasına bağlı
-          tanınan bir biyolojik bulgudur <Evidence level={4} /><sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>. Östrojen ve progesteron düzeylerinde
-          kalıcı bir düşüş gözlenir <Evidence level={4} /><sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>. Postmenopozda bu yeni denge daha stabil
-          hale gelir — dalgalanma hafifler, ama tüm belirtilerin birden bittiği anlamına gelmez.
+          Folikül uyarıcı hormon (FSH) ve yumurtlamayı uyaran hormon (LH) yükselir; bu, yumurtalık yanıtının
+          azalmasına bağlı tanınan bir biyolojik bulgudur <Evidence level={4} />. Östrojen ve progesteron düzeylerinde kalıcı bir
+          düşüş gözlenir <Evidence level={4} />. Postmenopozda bu yeni denge daha durulur, dalgalanma hafifler; tüm
+          belirtilerin birden bittiği anlamına gelmez.
         </p>
         <p>
-          Hormon ölçümleri bu dönemde tek başına karar aracı değil. Klinik belirtiler, yaş, adet
-          öyküsü ve diğer sağlık verileriyle birlikte değerlendirildiğinde anlam kazanır. Özellikle
-          düzensiz geçiş döneminde tek bir test sonucuna çok anlam yüklemek yanıltıcı olabilir —
-          bunu duyan pek çok kadın rahat bir nefes aldığını söylüyor.
+          Hormon ölçümleri bu dönemde tek başına karar aracı değildir. Belirtiler, yaş, adet öyküsü ve diğer sağlık
+          verileriyle birlikte anlam kazanır. Düzensiz geçişte tek bir kan sonucu sizi yanıltabilir; o sayı bütün
+          hikâyeyi taşımak zorunda değildir.
         </p>
 
         <h2 id="belirtiler">Belirtiler ve Postmenopoz Dönemi</h2>
         <p>
-          Menopoz eşiğinde bazı sesler kısılır, bazıları ise daha görünür hale gelir. "Bitti mi, devam
-          ediyor mu?" diye ikiye ayırmak yerine bedenin yeni önceliklerini okumak çok daha gerçekçi.
+          Sıcak basması gece terlemesine, uyku bölünmesine bakıyor olabilirsiniz. “Bitti mi?” sorusu tek başına yetmez.
         </p>
         <p>
-          En sık yaşanan değişim, sıcak basması ve gece terlemesinin zamanla hafiflemesidir. Bu eğilim
-          genel nüfus çalışmalarında gözlemleniyor — ama bireysel dağılım geniş <Evidence level={3} /><sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
-          Kiminde yıllarca sürebilir, kiminde beklenenden erken geçer. Uyku kalitesindeki bozulma, cilt
-          ve mukozalarda kuruluk, libido değişimi ya da odaklanma güçlüğü bazı kadınlarda bir süre
-          daha eşlik edebilir.
+          En sık yaşanan değişim, sıcak basması ve gece terlemesinin zamanla hafiflemesidir. Bu eğilim genel nüfus
+          çalışmalarında gözlemleniyor — bireysel dağılım ise geniş <Evidence level={3} />. Kiminde yıllarca sürebilir,
+          kiminde beklenenden erken geçer. Uyku kalitesindeki bozulma, cilt ve mukozalarda kuruluk, libido değişimi ya
+          da odaklanma güçlüğü bazı kadınlarda bir süre daha eşlik edebilir.
         </p>
         <p>
-          Bu dönemde yeni başlıklar da gündeme girer: metabolik hızdaki değişim, yağ dağılımının karın
-          çevresine kayması, kardiyovasküler risk profilindeki bireysel farklılaşmalar. Bunlar belirti
-          yönetiminin yanında sağlık gündeminin yeni katmanlarını oluşturur<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+          Bu dönemde yeni başlıklar da gündeme girer: metabolik hızdaki değişim, yağ dağılımının karın çevresine
+          kayması, kalp-damar risk profilindeki bireysel farklılaşmalar. Bunlar belirti yönetiminin yanında sağlık
+          gündeminin yeni katmanlarını oluşturur.
         </p>
         <p>
-          Postmenopozun ilk yılları "artık bitti" değil; sağlık takvimini yeniden kurmak için iyi bir
-          başlangıç noktası. Vücut yeni dengeye alışırken kemik kaybı görece hızlanabiliyor — bu
-          gözlemsel verilerle destekleniyor <Evidence level={4} /><sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>. Düzenli hareket, yeterli protein,
-          kalsiyum ve D vitamini dengesi önem taşıyor. Kemik mineral yoğunluğu değerlendirmesinin
-          zamanlaması ise kişisel öyküye ve hekimle yapılan plana göre şekilleniyor.
+          Postmenopozun ilk yılları sağlık takvimini yeniden kurmak için iyi bir başlangıç noktasıdır. Vücut yeni
+          dengeye alışırken kemik kaybı görece hızlanabiliyor — bu gözlemsel verilerle destekleniyor
+          <Evidence level={4} />. Düzenli hareket,
+          yeterli protein, kalsiyum ve D vitamini dengesi önem taşır. Kemik mineral yoğunluğu değerlendirmesinin
+          zamanlaması kişisel öykünüze ve hekimle yapılan plana göre şekillenir.
         </p>
         <p>
-          Kan basıncı, lipid profili, glukoz ve bel çevresi gibi verilerin izlenmesi de erken dönemde
-          düzenleme fırsatı sağlıyor. Bunların hangi sıklıkla takip edileceği herkese aynı ölçekte
-          geçerli değil — bireysel risk öyküsü belirleyici.
+          Kan basıncı, lipid profili, glukoz ve bel çevresi gibi verilerin izlenmesi de erken dönemde düzenleme fırsatı
+          sağlar. Hangisinin ne sıklıkla takip edileceği herkese aynı ölçekte geçerli değildir; bireysel risk öyküsü
+          belirleyicidir.
         </p>
 
         <h2 id="saglik-gundemi">Uzun Vadeli Sağlık ve İzlem</h2>
         <p>
-          Menopozdan sonra sağlık gündemi büyük görünebilir. Ama asıl beceri hepsini aynı anda
-          çözmeye çalışmak değil; doğru sırayı kurmak.
+          Liste uzun görünebilir. Sırayı kurmak yeter.
         </p>
         <p>
-          Çoğu kadında üç ana eksen ortaklaşıyor: kemik sağlığı, kalp-metabolizma dengesi ve zihinsel
-          iyi oluş. Tarama testlerini kişisel öyküye göre planlamak, yaşam alışkanlıklarını
-          sürdürülebilir şekilde kurmak ve gerektiğinde tıbbi destek almak bu yolun temelini
-          oluşturuyor. HRT ve diğer seçenekler herkes için aynı değil; kişisel risk-fayda dengesiyle,
-          hekimle birlikte değerlendirilen kararlardır.
+          Çoğu kadında üç ana eksen ortaklaşır: kemik sağlığı, kalp-metabolizma dengesi ve zihinsel iyi oluş. Tarama
+          testlerini kişisel öyküye göre planlamak, yaşam alışkanlıklarını sürdürülebilir şekilde kurmak ve gerektiğinde
+          tıbbi destek almak bu yolun temelini oluşturur. Hormon tedavisi (HRT) ve diğer seçenekler herkes için aynı
+          değildir; kişisel risk-fayda dengesiyle, hekimle birlikte değerlendirilen kararlardır.
         </p>
         <p>
-          Menopoz eşiği netleştikten sonraki ilk yıl, bütün cevapları bulmak için değil; izlenebilir
-          bir ritim kurmak için değerli. Haftalık hareket planı, öğünlerde protein ve lif dengesi,
-          sabit uyku saatleri — bunlar büyük hamleler değil ama kısa sürede fark yaratıyorlar.
-          Hangi göstergenin ne sıklıkta takip edileceği ise hekimle yapılan değerlendirmeye göre
-          kişiselleşiyor.
+          Eşik netleştikten sonraki ilk yıl, izlenebilir bir ritim kurmak için değerlidir. Haftalık hareket planı,
+          öğünlerde protein ve lif dengesi, sabit uyku saatleri günü tutmaya yardım eder. Hangi göstergenin ne sıklıkta
+          izleneceği sizin planınızda, hekimle yapılan değerlendirmeye göre kişiselleşir.
         </p>
 
         <h2 id="iyi-olus">İyi Oluşu Destekleyen Alışkanlıklar</h2>
         <p>
-          Bu dönemde iyi oluş büyük bir dönüşüm projesi olmak zorunda değil. Çoğu zaman birkaç
-          alışkanlığın biraz daha bilinçli kurulmasıyla başlıyor.
+          Büyük bir dönüşüm projesi kurmak zorunda değilsiniz.
         </p>
         <p>
-          Düzenli hareket — özellikle kas kütlesini koruyan egzersizler — menopoz sonrası dönemde en
-          değerli yatırımlardan biri. Direnç egzersizi ile tempolu yürüyüşü birlikte planlamak, kemik
-          ve metabolik dengeye eş zamanlı katkı sağlayabiliyor. Beslenmede ise yeterli protein, renkli
-          sebze-meyve ve kaliteli yağ kaynakları temel yolu oluşturuyor. Hangi düzeyin kime uyduğu
-          bireysel bir soru — genel öneriler başlangıç noktası, kişisel plan hekim değerlendirmesiyle
-          şekilleniyor.
+          Düzenli hareket — özellikle kas kütlesini koruyan egzersizler — menopoz sonrası dönemde sık öne çıkan
+          alışkanlıklardan biridir. Direnç egzersizi ile tempolu yürüyüşü birlikte planlamak, kemik ve metabolik dengeye
+          eş zamanlı yardımcı olabilir. Beslenmede yeterli protein, renkli sebze-meyve ve kaliteli yağ kaynakları temel
+          yolu oluşturur. Hangi düzeyin size uyduğu bireysel bir sorudur; genel öneriler başlangıç noktasıdır, kişisel
+          plan hekim değerlendirmesiyle şekillenir.
         </p>
         <p>
-          Duygusal iyi oluş tarafında sosyal bağları korumak ve stres düzenleyici küçük rutinler
-          kurmak önemli. Kısa nefes egzersizleri, gün ışığında yürüyüş, ekran süresini yönetmek —
-          bunlar yalnızca ruh hali için değil, uyku kalitesi için de destekleyici olabiliyor.
+          Duygusal iyi oluş tarafında sosyal bağları korumak ve stresi düzenleyen küçük rutinler kurmak önemlidir. Kısa
+          nefes egzersizleri, gün ışığında yürüyüş, ekran süresini yönetmek ruh hali ve uyku kalitesi için destekleyici
+          olabilir.
         </p>
         <p>
-          Adet belirsizliğinin sona ermesi, bazı kadınlar için zaman ve enerji yönetimini
-          sadeleştiriyor. Bedenle yeniden anlaşmak — kemik, kalp, beslenme, uyku üzerinden —
-          bu eşiği bir kapanış yerine planlı bir başlangıca dönüştürebilir. Tek bir doğru yol yok;
-          sürdürülebilir bir yol var.
+          Adet belirsizliğinin sona ermesi, bazı kadınlar için zaman ve enerji yönetimini sadeleştirir. Kemik, kalp,
+          beslenme ve uyku üzerinden kurulmuş küçük bir ritim, sizin için bu eşiği planlı bir başlangıca çevirebilir.
         </p>
       </ArticleProsePanel>
 
-      <ArticleProsePanel class="mt-10 prose-estranova-references">
-        <h2 id="kaynaklar">Kaynaklar</h2>
-        <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
-          <li id="kaynak-1">
-            Harlow SD et al. "Executive summary of the Stages of Reproductive Aging Workshop + 10: addressing the unfinished agenda of staging reproductive aging."
-            <em>Menopause</em>. 2012;19(4):387–395.
-            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/22343510/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">22343510</a> ·
-            DOI: <a href="https://doi.org/10.1097/gme.0b013e31824d8f40" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">10.1097/gme.0b013e31824d8f40</a>
-            <span class="block mt-0.5 text-ink/50">(STRAW+10 — menopoz evrelerinin uluslararası sınıflandırma referansı; ortalama yaş ve perimenopoz süresi.)</span>
-          </li>
-          <li id="kaynak-2">
-            The NAMS 2022 Hormone Therapy Position Statement Advisory Panel. "The 2022 hormone therapy position statement of The Menopause Society."
-            <em>Menopause</em>. 2022;29(7):767–794.
-            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">35797481</a> ·
-            DOI: <a href="https://doi.org/10.1097/GME.0000000000002028" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">10.1097/GME.0000000000002028</a>
-            <span class="block mt-0.5 text-ink/50">(HRT karar rehberi, vazomotor belirti verileri, bireysel risk-fayda dengesi.)</span>
-          </li>
-          <li id="kaynak-3">
-            Randolph JF Jr et al. "Change in follicle-stimulating hormone and estradiol across the menopausal transition."
-            <em>J Clin Endocrinol Metab</em>. 2011;96(3):746–754.
-            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/21159842/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">21159842</a> ·
-            DOI: <a href="https://doi.org/10.1210/jc.2010-1746" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">10.1210/jc.2010-1746</a>
-            <span class="block mt-0.5 text-ink/50">(FSH yükselişi ve östrojen düşüşünün longitudinal verileri.)</span>
-          </li>
-          <li id="kaynak-4">
-            Greendale GA et al. "Changes in body composition and weight during the menopause transition."
-            <em>JCI Insight</em>. 2019;4(5):e124865.
-            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/30843880/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">30843880</a> ·
-            DOI: <a href="https://doi.org/10.1172/jci.insight.124865" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">10.1172/jci.insight.124865</a>
-            <span class="block mt-0.5 text-ink/50">(Perimenopoz–postmenopoz geçişinde metabolik ve vücut kompozisyonu değişimleri; SWAN kohort.)</span>
-          </li>
-          <li id="kaynak-5">
-            Cauley JA. "Estrogen and bone health in men and women."
-            <em>Steroids</em>. 2015;99(Pt A):11–15.
-            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/25555470/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">25555470</a> ·
-            DOI: <a href="https://doi.org/10.1016/j.steroids.2014.12.010" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">10.1016/j.steroids.2014.12.010</a>
-            <span class="block mt-0.5 text-ink/50">(Östrojen düşüşü ve postmenopozal kemik kaybı mekanizması.)</span>
-          </li>
-        </ol>
-      </ArticleProsePanel>
-
-      <ArticleFAQ id="sik-sorulanlar" items={faqItems} class="mt-10" />
+      <ArticleFAQ
+        id="sik-sorulanlar"
+        title="Menopoz tanımı hakkında sorular"
+        intro="Eşiğin nasıl kurulduğu, belirtilerin ne zaman değiştiği ve sonrasında hangi sağlık başlıklarının öne çıktığı üzerine üç kısa soru."
+        items={faqItems}
+        class="mt-10"
+      />
 
       <RelatedReadings
         class="mt-14"
@@ -323,16 +276,14 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleEditorNote>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Menopoz bir hastalık değil, yaşamın doğal evrelerinden biridir. Klinik tanım son adetin üzerinden
-          on iki ay geçmesiyle geriye dönük olarak konulur; perimenopoz, menopoz ve postmenopoz aşamaları
-          farklı hormonal dinamikler ve sağlık öncelikleri taşır. Ortalama görülme yaşı 51–52 olarak
-          bildirilmekle birlikte bireysel zaman çizgisi kişiden kişiye önemli ölçüde farklılaşır.
+          Menopoz bir hastalık değil, yaşamın doğal evrelerinden biridir. Klinik tanım son adetin üzerinden on iki ay
+          geçmesiyle geriye dönük olarak konulur. Perimenopoz, menopoz ve postmenopoz farklı hormonal dinamikler ve
+          sağlık öncelikleri taşır; evreler karışınca sorulan sağlık sorusu da kayar.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
-          Hormonal değişim profili (FSH yükselişi, östrojen ve progesteron düşüşü) bu evrede sistematik
-          olarak izlenir; ancak tek bir hormon ölçümü tanı için yeterli değildir ve klinik bulgu, yaş ile
-          adet öyküsüyle birlikte bütünleşik biçimde değerlendirilir. Uzun vadeli sağlık izlemi ve yaşam
-          tarzı planlamasının kapsamı kişisel risk öyküsüne göre şekillenir.
+          Folikül uyarıcı hormon (FSH) yükselişi ile östrojen ve progesteron düşüşü bu evrenin beklenen biyolojik
+          tablosudur. Tek bir hormon ölçümü tanı için yeterli değildir; klinik bulgu, yaş ve adet öyküsüyle birlikte
+          okunur. Uzun vadeli izlemin kapsamı kişisel risk öyküsüne göre şekillenir.
         </p>
         <p class="text-sm italic text-primary">
           — Doç. Dr. Senai Aksoy, Estranova Bilimsel Editörü
@@ -350,4 +301,3 @@ const articleSchemas = buildArticleSchemas({
 
   <SiteFooter />
 </SiteLayout>
-

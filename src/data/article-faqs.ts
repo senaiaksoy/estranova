@@ -691,17 +691,17 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Menopoz bir gün mü, bir süreç mi?',
       answer:
-        'Tıbbi tanım olarak tek bir eşik vardır ama yaşantı olarak bir süreçtir. Son adetten 12 ay sonra geriye dönük olarak netleşir; öncesindeki yıllar ise perimenopoz geçişidir.',
+        'Tıbbi tanım tek bir eşiği işaretler: son adetten sonra on iki ay. Bu eşik o anda değil, bir yıl sonra geriye dönük netleşir. Öncesindeki yıllar perimenopoz geçişidir; yaşantı olarak süreç, tanım olarak eşik yan yana durur.',
     },
     {
       question: 'Menopoz belirtileri son adetle birlikte hemen biter mi?',
       answer:
-        'Hayır. Bazı kadınlarda belirtiler bu eşiğin ardından da bir süre devam edebilir. Yakınmanın seyri kişiye göre değişir ve yalnızca takvime bakarak anlaşılmaz.',
+        'Hayır. Sıcak basması ve gece terlemesi birçok kadında zamanla hafifler; kiminde yıllarca sürebilir. Uyku, cilt kuruluğu, libido veya odaklanma bazı kadınlarda eşiğin ardından da devam edebilir. Seyir kişiye göredir; yalnızca takvime bakarak anlaşılmaz.',
     },
     {
       question: 'Menopoz sonrası dönemde en çok hangi sağlık başlıkları öne çıkar?',
       answer:
-        'Kemik sağlığı, kardiyometabolik denge, uyku, beden kompozisyonu ve ürogenital konfor daha görünür hale gelir. Bu yüzden dönem yalnızca “adet bitti” diye değil, yeni bir sağlık ajandası olarak okunmalıdır.',
+        'Kemik sağlığı, kalp-metabolizma dengesi, uyku ve bel çevresindeki değişim daha görünür hale gelir. Vajinal kuruluk ve idrar yolu konforu da bu dönemin parçası olabilir. Bu yüzden dönem yalnızca adetin durması olarak değil, yeni bir sağlık takvimi olarak okunur.',
     },
   ],
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/': [

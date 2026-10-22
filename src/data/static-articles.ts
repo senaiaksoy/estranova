@@ -1039,7 +1039,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/hormonal-gecis/menopoz/menopoz-nedir/',
     title: 'Menopoz Nedir? — Temel Rehber',
     description:
-      'Menopozun tanımını, evrelerini, hormon değişimini ve uzun vadeli sağlık gündemini Estranova editöryal disipliniyle ele alan sakin başlangıç rehberi.',
+      'Menopoz nedir, kaç yaşında başlar, belirtileri nelerdir? Perimenopoz, menopoz ve postmenopoz evreleri, östrojen değişimi ve 40+ başlangıç rehberi.',
     publishedDate: '11 Mayıs 2026',
     writerSlug: 'estranova-editorial',
     section: 'Hormonal Geçiş',
