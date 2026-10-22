@@ -637,12 +637,12 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Kilo artışı yalnızca daha az hareket etmekten mi olur?',
       answer:
-        'Hayır. Yaş, uyku, stres, kas kütlesi, yağ dağılımı ve hormonal değişim birlikte etkili oluyor. Bu yüzden tabloyu yalnızca hareketsizliğe bağlamak eksik bir okuma olur.',
+        'Hayır. Yaş, uyku, stres, kas kütlesi, yağın nereye yerleştiği ve hormonal değişim birlikte etkili oluyor. Düzenli hareket eden kadınlarda da aynı tablo görülebilir. Bu yüzden tabloyu yalnızca hareketsizliğe bağlamak eksik bir okuma olur.',
     },
     {
       question: 'Tartı aynı kalırken bedende değişim olması mümkün mü?',
       answer:
-        'Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ dağılımı değişebiliyor; bu da sayı sabit kalsa bile kıyafetin oturuşunu ve genel hissi değiştirebiliyor.',
+        'Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ başka bir bölgeye kayabiliyor. Sayı sabit kalsa bile pantolonun belinin oturuşu ve genel his değişebilir.',
     },
     {
       question: 'Hızlı kilo verme yöntemleri bu dönemde işe yarar mı?',
@@ -652,12 +652,12 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     {
       question: 'Protein miktarı nasıl belirlenmeli?',
       answer:
-        'Genel bir formül herkese uymuyor. Araştırmalarda sık geçen yaklaşım protein alımını artırmayı işaret ediyor; kesin miktar yaş, aktivite düzeyi ve genel sağlık durumuna göre hekim veya diyetisyenle birlikte değerlendirilmesi gereken bir aralık.',
+        'Genel bir formül herkese uymuyor. Araştırmalarda sık geçen yaklaşım protein alımını artırmayı işaret ediyor; kesin miktar yaş, aktivite düzeyi ve genel sağlık durumuna göre hekim veya diyetisyenle birlikte değerlendirilmesi gereken bir aralıktır.',
     },
     {
       question: 'Bel çevresi ölçümü neden tartıdan daha bilgilendirici kabul ediliyor?',
       answer:
-        'Çünkü tartı toplam kütleyi gösterir, dağılımı göstermez. Bel çevresi, visseral yağ artışına dair daha doğrudan bir sinyal taşıdığı için kilo değerinden bağımsız bir risk göstergesi olarak değerlendiriliyor.',
+        'Tartı toplam kütleyi gösterir, yerleşimi göstermez. Bel çevresi, visseral yağ artışına dair daha doğrudan bir sinyal taşıdığı için kilo değerinden bağımsız bir risk göstergesi olarak değerlendiriliyor.',
     },
   ],
   '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/': [

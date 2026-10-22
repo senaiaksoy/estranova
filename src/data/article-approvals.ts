@@ -176,8 +176,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/kilo-artisi-menopoz/',
     writerSlug: 'estranova-editorial',
-    approvedAt: '2026-07-15',
-    note: 'KC editör (Dr. Senai Aksoy) doğrudan talimatıyla: Berna Aksoy kendi adıyla yayınlanmasını istemediği için makale Estranova Editörleri kurumsal imzasına taşındı. Gövde metninde tek kişisel anekdot ("Bir arkadaşımın geçen ay anlattığı sahne kafamda kaldı") anonim/genel çerçeveye çevrildi ("Sık karşılaşılan bir sahne şöyle özetlenebilir..."); makalenin geri kalanı zaten yaşıt-kişisel ses taşımıyordu, minimum müdahaleyle Estranova Editorial Gloss\'a hizalandı. publishedDate bugüne çekildi. URL korundu; Berna\'nın önceki onayı geçersiz kalır.',
+    approvedAt: '2026-10-22',
+    note: 'YENİDEN ONAY 22 Ekim 2026: KC bu sohbette editör onayını ve Doç. Dr. Senai Aksoy tıbbi onayını sözlü bildirdi (“KC editör onayı ve Doç. Dr. Senai Aksoy tıbbi onayı tamam”) ve commit/push/deploy talimatı verdi. Kurumsal Estranova Editörleri imzası; ayrı yazar formu yok. Kapsam: 22 Ekim 2026 audit/humanize — 2 soru-H2 → 1; aforistik kapanış ve “X değil Y” seyreltildi; 3/6/8. bölüme siz bağı; protein cümlesi yüklem eksiği düzeltildi; insülin direnci ilk kullanımda açıklandı; Kısa Özet çevre metin olmadan kırmızı bayrak taşıyor; SSS gövdeyle senkron. Yeni tıbbi iddia yok; Evidence konumları ve Bilimsel Editör Notu korundu; üst hero parent hub. Önceki 15 Temmuz 2026 onayı bu revizyonu kapsamaz.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',

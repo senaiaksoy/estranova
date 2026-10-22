@@ -23,7 +23,7 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
 const tocEntries = [
   { id: 'neden-simdi', label: 'Tartı Neden Aynı Yaşamda Değişir?' },
   { id: 'yag-cografyasi', label: 'Östrojen ve Yağın Yeni Coğrafyası' },
-  { id: 'az-yemek-yetmez', label: 'Az Yemek Neden Yetmiyor?' },
+  { id: 'az-yemek-yetmez', label: 'Porsiyonu Küçültmenin Bu Dönemdeki Sınırı' },
   { id: 'kas-motoru', label: 'Kas Kütlesi: Görünmeyen Metabolizma Motoru' },
   { id: 'uyku-stres-seker', label: 'Uyku, Stres ve Kan Şekeri' },
   { id: 'tabakta-denge', label: 'Tabakta Denge: Protein, Lif, Sağlıklı Yağ' },
@@ -44,7 +44,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'estranova-editorial',
   articleType: 'editorial-guide',
   publishedDate: '15 Temmuz 2026',
-  modifiedDate: '16 Temmuz 2026',
+  modifiedDate: '22 Ekim 2026',
   pathname,
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
@@ -90,92 +90,90 @@ const articleSchemas = buildArticleSchemas({
           authorSlug="estranova-editorial"
         articleType="editorial-guide"
           publishedDate="15 Temmuz 2026"
-          lastUpdated="16 Temmuz 2026"
+          lastUpdated="22 Ekim 2026"
           readingMinutes={9}
           imageSrc="/images/library/editorial/casual-cream-sweater-pampas.webp"
           imageAlt="Balkonda taze otlarla ilgilenen 40+ kadın; menopozda kilo artışı yazısı için editoryal görsel"
         />
 
-         <ArticleSummary title="Kısa Özet">
-<p>
-            Menopoz geçişinde kilo değişimi tek bir nedene bağlanamaz. Östrojen düşüşüyle yağın bel çevresine
-            kayması, kas kütlesindeki sessiz azalma, uyku ve stres aynı dönemde bir araya gelir. Bu rehber,
-            kalori saymanın neden yetmediğini ve hekimle birlikte değerlendirilebilecek sade dengeleri ele
-            alır. Tartı bir sayı verir. Kompozisyon hakkında az şey söyler.
+        <ArticleSummary title="Kısa Özet">
+          <p>
+            Menopoz geçişinde kilo değişimi tek bir nedene bağlanamaz. Östrojen düşünce yağ bel çevresine
+            kayabilir; aynı yıllarda kas kütlesi sessizce azalır, uyku ve stres de tabloya katılır. Kalori
+            saymak bu yüzden çoğu zaman yetmez. Kısa sürede, beklenmedik biçimde gelen kilo değişiminde hekim
+            değerlendirmesi gerekir.
           </p>
-      </ArticleSummary>
+        </ArticleSummary>
 
         <ArticleProsePanel>
           <h2 id="neden-simdi">Tartı Neden Aynı Yaşamda Değişir?</h2>
           <p>
-            Aynı dolap. Aynı pantolon. Ama numara artık eskisi gibi durmuyor.
+            Aynı dolap. Aynı pantolon. Numara artık eskisi gibi durmuyor.
           </p>
           <p>
-            Bazen değişim tartıda değil, kıyafetin bedene oturuşunda fark edilir. Bel bandındaki o ince
-            sıkılık, sabah aynadaki kısa bir duraksama — sayıdan önce gelen sinyaller çoğu zaman bunlardır.
+            Bazen değişim tartıda değil, kıyafetin bedene oturuşunda fark edilir. Bel bandındaki ince sıkılık,
+            sabah aynadaki kısa duraksama — sayıdan önce gelen sinyaller çoğu zaman bunlardır.
           </p>
           <p>
-            Menopoz geçişi yıllarında kilo artışı genellikle iki ile beş kilogram aralığında seyrediyor; ama
-            daha çarpıcı olan kilonun kendisi değil, dağılımı <Evidence level={5} />. Aynı sayı, farklı bir
-            coğrafyada duruyor. Bu birkaç yıllık pencerede hormonal geçiş, yaşa bağlı kas kaybı, metabolizmanın
-            kademeli yavaşlaması ve uyku dalgalanması aynı anda etkili oluyor. Tek bir neden aramak yerine birkaç
-            katmanı birlikte görmek, tabloyu daha sakin okumayı sağlar.
+            Menopoz geçişi yıllarında kilo artışı genellikle iki ile beş kilogram aralığında seyrediyor. Daha
+            belirgin olan çoğu zaman kilonun nereye yerleştiğidir <Evidence level={5} />. Bu birkaç yıllık
+            pencerede hormonal geçiş, yaşa bağlı kas kaybı, metabolizmanın kademeli yavaşlaması ve uyku
+            dalgalanması aynı anda etkili oluyor.
           </p>
           <p>
-            Merak etmeyin diye yazıyoruz: bu tablo sizin iradenizin "yetmediği" anlamına gelmez. Dönemin
-            kendi aritmetiğidir.
+            Merak etmeyin diye ekleyelim: bu tablo sizin iradenizin yetmediği anlamına gelmez.
           </p>
 
           <h2 id="yag-cografyasi">Östrojen ve Yağın Yeni Coğrafyası</h2>
           <p>
-            Östrojen yıllarca yağı kalça ve uyluk çevresine yönlendirirdi. Bel bölgesini büyük ölçüde
-            korurdu. Geçişle birlikte bu düzen değişiyor.
+            Östrojen yıllarca yağı kalça ve uyluk çevresine yönlendirirdi. Bel bölgesini büyük ölçüde korurdu.
           </p>
           <p>
-            Östrojen düşüşüyle yağ dokusunun yerleşimi cilt altından iç organ çevresine, yani visseral alana
-            kayıyor <Evidence level={5} />. Visseral yağ pasif bir depo değil; metabolik olarak etkin, hafif
-            bir iltihap zemini oluşturan bir doku. Bel çevresindeki artış bu yüzden yalnızca estetik bir
-            ayrıntı gibi okunmamalı; insülin direnci ve kalp-damar sağlığıyla ilişkili bir sinyal olarak
+            Geçişle birlikte bu düzen değişiyor. Östrojen düşünce yağ, cilt altından iç organ çevresine —
+            visseral alana — kayabiliyor <Evidence level={5} />. Visseral yağ pasif bir depo değil; metabolik
+            olarak etkin, hafif bir iltihap zemini oluşturan bir doku.
+          </p>
+          <p>
+            Bel çevresindeki artış bu yüzden yalnızca görünüm meselesi gibi okunmamalı. İnsülin direnci
+            (hücrelerin şekere verdiği yanıtın zorlaşması) ve kalp-damar sağlığıyla ilişkili bir sinyal olarak
             değerlendiriliyor <Evidence level={5} />.
           </p>
           <p>
             Kadınlarda 88 santimetre üzerindeki bel çevresi, kilo değerinden bağımsız olarak metabolik risk
-            işareti kabul ediliyor <Evidence level={4} />. Tartı bu farkı göstermez. Bel çevresi gösterir. Sizin
-            pantolonunuzun belden başka oturması, bazen tam da bu kayışın gündelik karşılığıdır.
+            işareti kabul ediliyor <Evidence level={4} />. Tartı bu eşiği göstermez; bel ölçüsü gösterir.
+            Pantolonunuzun belinin başka oturması, bazen tam da bu kayışın gündelik karşılığıdır.
           </p>
 
-          <h2 id="az-yemek-yetmez">Az Yemek Neden Yetmiyor?</h2>
+          <h2 id="az-yemek-yetmez">Porsiyonu Küçültmenin Bu Dönemdeki Sınırı</h2>
           <p>
-            Tartı yukarı kaydığında ilk refleks çoğu zaman porsiyonu küçültmektir. Tanıdık. Ama bu dönemde
-            aynı şekilde çalışmıyor.
+            Pantolonun belini bir delik içeri almak. Öğle yemeğini yarıda bırakmak. Tartı yukarı kayınca ilk
+            refleks çoğu zaman budur.
           </p>
           <p>
-            Belirgin kalori kısıtlaması metabolizmayı önce yavaşlatıyor, kas kaybını hızlandırıyor, ardından
-            küçük bir gevşemede kiloyu geri çağırıyor <Evidence level={4} />. Bu tekrar her seferinde kas
-            kütlesini biraz daha azaltabiliyor. Tartı benzer bir sayı gösterse de kompozisyon değişmiş
-            oluyor.
+            Bu dönemde aynı denklem her zaman işlemiyor. Belirgin kalori kısıtlaması metabolizmayı önce
+            yavaşlatıyor, kas kaybını hızlandırıyor, ardından küçük bir gevşemede kiloyu geri çağırıyor
+            <Evidence level={4} />. Bu tekrar her seferinde kas kütlesini biraz daha azaltabiliyor. Tartı
+            benzer bir sayı gösterse de kompozisyon değişmiş oluyor.
           </p>
           <p>
-            Burada mesele kalori miktarından çok kompozisyonun korunması. Kası koruyan, kan şekerini
+            Sizin için mesele kalori miktarından çok kasın korunması olabilir. Kası koruyan, kan şekerini
             dengeleyen ve uykuyu onaran küçük adımlar, hızlı sonuç vaat eden kısıtlama yöntemlerinden daha
-            sürdürülebilir bir yol açıyor. Utanç burada işe yaramaz. Yön duygusu işe yarar.
+            sürdürülebilir duruyor. Utanç burada yön göstermez.
           </p>
 
           <h2 id="kas-motoru">Kas Kütlesi: Görünmeyen Metabolizma Motoru</h2>
           <p>
-            Kilo konuşmasının en az bilinen parçası kas dokusu. Tartıda görünmez. Ama günlük enerji dengesini
-            sessizce yönetir.
+            Kilo konuşmasının en az görünen parçası kas dokusu. Günlük enerji dengesini sessizce yönetir.
           </p>
           <p>
             Otuz yaşından sonra her on yılda kas kütlesinin yüzde üç ile sekiz arasında azalması yaygın bir
             bulgu; bu süreç sarkopeni olarak tanımlanıyor <Evidence level={5} />. Menopozla birlikte
-            östrojenin kasın yapımını destekleyen sinyallere etkisi azaldığından bu eğri biraz daha
-            dikleşiyor.
+            östrojenin kas yapımını destekleyen sinyallere etkisi azaldığından bu eğri biraz daha dikleşiyor.
           </p>
           <p>
             Kas dinlenirken bile enerji harcar. Kaybedilen her kilogram kas, günlük metabolizmada küçük ama
-            sürekli bir düşüşe karşılık gelebiliyor. Bu yüzden bel çevresi, kıyafetin oturuşu ve gün içindeki
-            enerji düzeyiniz, tartıdan daha bilgilendirici sinyaller taşıyabilir.
+            sürekli bir düşüşe karşılık gelebiliyor. Bu yüzden gün içindeki enerji düzeyiniz, tartıdaki
+            sayıdan ayrı bir bilgi taşır.
           </p>
 
           <h2 id="uyku-stres-seker">Uyku, Stres ve Kan Şekeri</h2>
@@ -197,47 +195,44 @@ const articleSchemas = buildArticleSchemas({
 
           <h2 id="tabakta-denge">Tabakta Denge: Protein, Lif, Sağlıklı Yağ</h2>
           <p>
-            Kalori sayımı uzun yıllar standart yöntem oldu. Bu dönemde tabağın "ne kadar" olduğundan çok
-            "nasıl kurulduğu" daha belirleyici hâle geliyor.
+            Öğle tabağına bakınca ilk soru hâlâ "ne kadar" olabiliyor. Bu dönemde tabağın nasıl kurulduğu daha
+            çok şey söyler.
           </p>
           <p>
             Protein ilk dayanak noktası. Araştırmalarda sık geçen yaklaşım, vücut ağırlığına göre günlük
-            protein alımını artırmayı işaret ediyor; kesin miktar hekim veya diyetisyenle birlikte
-            belirlenmesi gereken bireysel bir aralık <Evidence level={5} />. Üç ana öğüne dağıtılmış protein,
+            protein alımını artırmayı işaret ediyor <Evidence level={5} />. Kesin miktar, hekim veya
+            diyetisyenle birlikte belirlenmesi gereken bireysel bir aralıktır. Üç ana öğüne dağıtılmış protein,
             kas korunmasına katkı sağlayabiliyor ve tokluk hissini uzatabiliyor.
           </p>
           <p>
             Lifli sebzeler tabağın büyük kısmını oluşturduğunda kan şekeri eğrisi yumuşuyor; tam tahıl,
             baklagil ve sebzelerden gelen lif bağırsak sağlığına destek olabiliyor <Evidence level={4} />.
             Zeytinyağı, ceviz ve balık kaynaklı sağlıklı yağlar tokluğu uzatıyor. Akdeniz tarzı bir düzen —
-            sebze, tam tahıl, balık, zeytinyağı, baklagiller — bu dönem için tutarlı okuyan kalıplardan biri
-            olarak görülüyor <Evidence level={5} />.
-          </p>
-          <p>
-            Yasak listesi yerine denge dili. Katı kısıtlama genellikle uzun vadede tersine döner.
+            sebze, tam tahıl, balık, zeytinyağı, baklagiller — bu dönem için tutarlı okunan yaklaşımlardan biri
+            olarak görülüyor <Evidence level={5} />. Katı kısıtlama genellikle uzun vadede tersine döner; sizin
+            tabağınızda protein, lif ve sağlıklı yağın yan yana durması çoğu zaman daha sürdürülebilir durur.
           </p>
 
           <h2 id="hareket-yolu">Hareket Yolu: Direnç Çalışması</h2>
           <p>
-            "Daha çok kardiyo" cümlesi uzun yıllar standart öğüt oldu. Bu dönemde denge biraz farklı
-            kuruluyor.
+            Düzenli yürüyüş, bel bandını tek başına eski haline getirmeyebilir.
           </p>
           <p>
-            Düşük etkili aerobik hareket kalp-damar sağlığı için önemini koruyor; ama kilo dağılımı ve
-            metabolik denge açısından bu dönemde öne çıkan direnç çalışmasıdır. Haftada birkaç gün, ana kas
-            gruplarını kapsayan kısa seanslar, kas korunması ve insülin duyarlılığı için güçlü kanıt taşıyan
-            bir müdahale olarak değerlendiriliyor <Evidence level={5} />.
+            Düşük etkili aerobik hareket kalp-damar sağlığı için önemini koruyor. Kilo yerleşimi ve metabolik
+            denge açısından bu dönemde öne çıkan ise direnç çalışmasıdır. Haftada birkaç gün, ana kas
+            gruplarını kapsayan kısa seanslar, kas korunması ve insülin duyarlılığı için tutarlı okunan bir
+            müdahale olarak değerlendiriliyor <Evidence level={5} />.
           </p>
           <p>
-            Yürüyüş devre dışı değil. Düzenli orta tempolu yürüyüş, direnç çalışmasının yanına sağlam bir
-            katman ekliyor <Evidence level={4} />. Ama yalnızca yürüyerek kilo kaybı beklemek bu dönemde
+            Yürüyüşü kenara koymak gerekmez. Düzenli orta tempolu yürüyüş, direnç çalışmasının yanına sağlam
+            bir katman ekliyor <Evidence level={4} />. Yalnızca yürüyerek kilo kaybı beklemek bu dönemde
             genellikle karşılığını vermiyor; çünkü yürüyüş yağ yakabilir ama kas kütlesini aynı ölçüde
             korumaz. Küçük ağırlıklarla başlamak, sizin için daha gerçekçi bir kapı olabilir.
           </p>
 
           <h2 id="hekime-gitme">Hekime Danışma Zamanı</h2>
           <p>
-            Kilo değişimlerinin çoğu menopoz başlığına sığar. Ama bazı tablolar gecikmeden değerlendirilmeli.
+            Kilo değişimlerinin çoğu menopoz başlığına sığar. Bazı tablolar ise gecikmeden değerlendirilmeli.
           </p>
           <p>
             Kısa sürede beklenmedik biçimde alınan ya da kaybedilen kilo; sürekli halsizlik; saç dökülmesi,
@@ -246,22 +241,22 @@ const articleSchemas = buildArticleSchemas({
             değişiklikleri, insülin direnci ya da başka metabolik tablolarla ilişkili olabilir.
           </p>
           <p>
-            Ailede tip 2 diyabet, tiroid hastalığı ya da metabolik sendrom öyküsü varsa erken bir hekim
-            değerlendirmesi anlamlı olabilir. Açlık kan şekeri, tiroid fonksiyonları, lipid profili ve D
-            vitamini gibi temel tahliller tabloyu netleştirmede yardımcı olur. Plan kişiye özel şekillendiğinde
-            sürdürmek de daha kolay hâle gelir.
+            Ailede tip 2 diyabet, tiroid hastalığı ya da metabolik sendrom öyküsü varsa, sizin için erken bir
+            hekim değerlendirmesi anlamlı olabilir. Açlık kan şekeri, tiroid fonksiyonları, lipid profili ve D
+            vitamini gibi temel tahliller tabloyu netleştirmede yardımcı olur.
           </p>
 
           <h2 id="sik-sorulanlar">Sıkça Sorulanlar</h2>
           <h3>Kilo artışı yalnızca daha az hareket etmekten mi olur?</h3>
           <p>
-            Hayır. Yaş, uyku, stres, kas kütlesi, yağ dağılımı ve hormonal değişim birlikte etkili oluyor. Bu
-            yüzden tabloyu yalnızca hareketsizliğe bağlamak eksik bir okuma olur.
+            Hayır. Yaş, uyku, stres, kas kütlesi, yağın nereye yerleştiği ve hormonal değişim birlikte etkili
+            oluyor. Düzenli hareket eden kadınlarda da aynı tablo görülebilir. Bu yüzden tabloyu yalnızca
+            hareketsizliğe bağlamak eksik bir okuma olur.
           </p>
           <h3>Tartı aynı kalırken bedende değişim olması mümkün mü?</h3>
           <p>
-            Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ dağılımı değişebiliyor; bu da
-            sayı sabit kalsa bile kıyafetin oturuşunu ve genel hissi değiştirebiliyor.
+            Evet, bu dönem için tanıdık bir durum. Kas kütlesi azalırken yağ başka bir bölgeye kayabiliyor.
+            Sayı sabit kalsa bile pantolonun belinin oturuşu ve genel his değişebilir.
           </p>
           <h3>Hızlı kilo verme yöntemleri bu dönemde işe yarar mı?</h3>
           <p>
@@ -273,12 +268,12 @@ const articleSchemas = buildArticleSchemas({
           <p>
             Genel bir formül herkese uymuyor. Araştırmalarda sık geçen yaklaşım protein alımını artırmayı
             işaret ediyor; kesin miktar yaş, aktivite düzeyi ve genel sağlık durumuna göre hekim veya
-            diyetisyenle birlikte değerlendirilmesi gereken bir aralık <Evidence level={4} />.
+            diyetisyenle birlikte değerlendirilmesi gereken bir aralıktır <Evidence level={4} />.
           </p>
           <h3>Bel çevresi ölçümü neden tartıdan daha bilgilendirici kabul ediliyor?</h3>
           <p>
-            Çünkü tartı toplam kütleyi gösterir, dağılımı göstermez. Bel çevresi, visseral yağ artışına dair
-            daha doğrudan bir sinyal taşıdığı için kilo değerinden bağımsız bir risk göstergesi olarak
+            Tartı toplam kütleyi gösterir, yerleşimi göstermez. Bel çevresi, visseral yağ artışına dair daha
+            doğrudan bir sinyal taşıdığı için kilo değerinden bağımsız bir risk göstergesi olarak
             değerlendiriliyor <Evidence level={4} />.
           </p>
         </ArticleProsePanel>
@@ -293,14 +288,14 @@ const articleSchemas = buildArticleSchemas({
         />
 
         <ArticleEditorNote>
-<p>
-            Menopozla ilişkili kilo değişimi tek bir mekanizmaya bağlanamaz; yağ dağılımının visseral alana
-            kayması, kas kütlesindeki azalma ve uyku-stres ekseni birlikte değerlendirilir. Belirgin kalori
-            kısıtlaması yerine protein temelli tabak yapısı, düzenli direnç çalışması ve uyku korunumu daha
-            tutarlı bir destek hattı sunar. Hızlı ve açıklanamayan kilo değişimleri ya da eşlik eden
-            sistemik belirtiler varsa plan hekim değerlendirmesiyle şekillendirilmelidir.
+          <p>
+            Menopozla ilişkili kilo değişimi tek bir mekanizmaya bağlanamaz; yağın visseral alana kayması,
+            kas kütlesindeki azalma ve uyku-stres ekseni birlikte değerlendirilir. Belirgin kalori kısıtlaması
+            yerine protein temelli tabak yapısı, düzenli direnç çalışması ve uyku korunumu daha tutarlı bir
+            destek hattı sunar. Hızlı ve açıklanamayan kilo değişimleri ya da eşlik eden sistemik belirtiler
+            varsa plan hekim değerlendirmesiyle şekillendirilmelidir.
           </p>
-      </ArticleEditorNote>
+        </ArticleEditorNote>
 
          <ArticleDisclaimer>
 <p>

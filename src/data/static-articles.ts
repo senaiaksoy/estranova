@@ -789,7 +789,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/kilo-artisi-menopoz/',
     title: 'Menopozda Kilo Artışı: Tartının Söylemediği Kısım',
     description:
-      'Menopoz geçişinde kilo değişiminin arkasındaki östrojen-yağ dağılımı ilişkisini, kas kütlesinin neden tartıdan daha belirleyici olduğunu ve hekimle birlikte değerlendirilebilecek dengeleri ele alan editoryal bir rehber.',
+      'Menopoz geçişinde kilo değişiminin arkasındaki östrojen-yağ dağılımı ilişkisini ve kas kütlesinin neden tartıdan daha belirleyici olduğunu anlatan bir rehber.',
     publishedDate: '15 Temmuz 2026',
     writerSlug: 'estranova-editorial',
     section: 'Zamansız Yaşam',
