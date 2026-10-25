@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/']!;
+const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/']!;
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'Ağrıyı Konuşmak ve Adlandırmak' },
@@ -30,8 +30,8 @@ const tocEntries = [
   { id: 'degerlendirme', label: 'Muayenede Adım Adım Değerlendirme' },
   { id: 'tedavi-haritasi', label: 'Nedene Göre Tedavi Seçenekleri' },
   { id: 'iletisim-sureci', label: 'Tedavi Sürecinde Partner ve Hekimle İletişim' },
-  { id: 'kaynaklar', label: 'Kaynaklar' },
-  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular" },
+  { id: 'kaynaklar', label: 'Kaynaklar', numbered: false },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular", numbered: false },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -46,7 +46,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '2 Mayıs 2026',
-  modifiedDate: '29 Eylül 2026',
+  modifiedDate: '25 Ekim 2026',
   pathname: '/beden-yakinlik/cinsel-saglik/cinsellikte-agri-menopoz/',
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik/',
@@ -78,8 +78,9 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="2 Mayıs 2026"
-        lastUpdated="29 Eylül 2026"
+        lastUpdated="25 Ekim 2026"
         readingMinutes={5}
+        medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/by-vajinal-saglik.webp"
         imageAlt="Keten örtü üzerinde çiçek, su bardağı ve pamuklu dokular; menopozda cinsellikte ağrı yazısı için editoryal görsel"
       />
@@ -94,9 +95,10 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Menopozda cinsel ilişkide ağrı (tıbbi adıyla disparoni) sık görülebilir; ama bunu yaşlanmanın kaçınılmaz bir sonucu olarak kabul etmeniz gerekmez.
+          Menopozda cinsel ilişkide ağrı (tıbbi adıyla disparoni) sık görülebilir; katlanmanız gereken bir durum değildir.
           Ağrının vajina girişinde mi yoksa daha derinde mi olduğu, nedenini anlamaya yardım eden önemli bir işarettir.
           Kuruluk ve doku incelmesi, pelvik taban kaslarındaki gerilim veya başka jinekolojik nedenler ayrı ayrı değerlendirilir; tedavi de buna göre değişir.
+          Menopoz sonrası herhangi bir kanama, ilişki sonrası lekelenme veya vulvada yeni bir yara gecikmeden değerlendirilir.
         </p>
       </ArticleSummary>
 
@@ -111,9 +113,9 @@ const articleSchemas = buildArticleSchemas({
           jinekoloji muayenesinde konuşulan yakınmalardan biridir. Ağrının nerede ve ne zaman başladığını anlatmanız iyi bir başlangıçtır.
         </p>
         <p>
-          Bu ağrının tıbbi adı <strong>disparoni</strong>. Her ağrılı ilişki aynı nedenden kaynaklanmaz.
-          Vajinal kuruluk, doku hassasiyeti ve pelvik taban kaslarındaki gerilim ayrı ayrı değerlendirilir.
-          Nedeni ayırt etmek, size uygun seçenekleri konuşmanın ilk adımıdır.
+          Bu ağrının tıbbi adı <strong>disparoni</strong>. Girişteki ağrı ile derindeki ağrı aynı kapıdan
+          girmez. Vajinal kuruluk, doku hassasiyeti ve pelvik taban kaslarındaki gerilim ayrı ayrı
+          değerlendirilir. Nedeni ayırt etmek, size uygun seçenekleri konuşmanın ilk adımıdır.
         </p>
 
         <h2 id="alt-tipler">Girişte Hissedilen Ağrı</h2>
@@ -217,6 +219,19 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
+      <RedFlagBox
+        markers={[
+          'Cinsel ilişki sonrası lekelenme veya tekrarlayan kanamalar',
+          'Postmenopozal vajinal kanama (miktarı az olsa bile, nedeninin değerlendirilmesi için jinekolojik inceleme yapılmalıdır)',
+          'Yan ağrısı veya ateşle birlikte görülen ağrılı ilişki şikâyeti',
+          'Derin pelvik ağrı, adet sancısı ve kronik bağırsak/idrar yakınmalarının eşlik etmesi',
+          'Vulva bölgesinde yeni ortaya çıkan lezyonlar, beyaz lekeler veya doku kalınlaşması',
+          'Kötü kokulu akıntı veya dış genital bölgede yeni bir yara',
+          'Lokal tedaviye rağmen belirtilerin devam etmesi veya kötüleşmesi (ayırıcı tanı tekrar değerlendirilmelidir)',
+        ]}
+        footnote="Bu liste teşhis amaçlı olmayıp, bir hekimle vakit kaybetmeden görüşülmesi gereken durumları hatırlatmak amacıyla hazırlanmıştır."
+      />
+
       <ArticleProsePanel mode="editorial" class="mt-10">
         <h2 id="kaynaklar">Kaynaklar</h2>
         <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
@@ -252,19 +267,6 @@ const articleSchemas = buildArticleSchemas({
           </li>
         </ol>
       </ArticleProsePanel>
-
-      <RedFlagBox
-        markers={[
-          'Cinsel ilişki sonrası lekelenme veya tekrarlayan kanamalar',
-          'Postmenopozal vajinal kanama (miktarı az olsa bile, nedeninin değerlendirilmesi için jinekolojik inceleme yapılmalıdır)',
-          'Yan ağrısı veya ateşle birlikte görülen ağrılı ilişki şikâyeti',
-          'Derin pelvik ağrı, adet sancısı ve kronik bağırsak/idrar yakınmalarının eşlik etmesi',
-          'Vulva bölgesinde yeni ortaya çıkan lezyonlar, beyaz lekeler veya doku kalınlaşması',
-          'Kötü kokulu akıntı veya dış genital bölgede yeni bir yara',
-          'Lokal tedaviye rağmen belirtilerin devam etmesi veya kötüleşmesi (ayırıcı tanı tekrar değerlendirilmelidir)',
-        ]}
-        footnote="Bu liste teşhis amaçlı olmayıp, bir hekimle vakit kaybetmeden görüşülmesi gereken durumları hatırlatmak amacıyla hazırlanmıştır."
-      />
 
       <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a sorular" intro="Dr. Senai Aksoy, cinsel ilişkide ağrı hakkında üç soruyu yanıtlıyor." items={faqItems} class="mt-10" />
 

@@ -700,7 +700,8 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
     title: 'Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?',
-    description: 'CoQ10 (ubiquinone) takviyesi anti-aging reklamlarının başrol oyuncularından biri; oysa kanıt tek bir hikaye değil. Statin yan etkisi, migren önleme ve kalp yetmezliği desteğinde gerçek klinik kanıt var; anti-aging ve menopozal "enerji" iddialarında kanıt çok daha sınırlı. Üç farklı yüzü ayrı ayrı, pazarlama dili yerine kanıt düzeyiyle.',
+    description:
+      'CoQ10 takviyesi statin kaynaklı kas ağrısında ve migren önlemesinde denenebilir; kalp yetmezliğinde ise kardiyoloji takibinde ek seçenektir. Anti-aging ve menopozal enerji iddialarında kanıt sınırlıdır.',
     publishedDate: '3 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
@@ -1001,7 +1002,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
     title: 'Menopozda Uykusuzluk ve Uyku Bozukluğu — Dinlenme Rehberi',
     description:
-      'Menopozda uykusuzluk neden artar, gece uyanmaları nasıl okunur, hangi sade adımlar denenebilir? Hormonal geçişte uyku bozukluğuna sakin bir rehber.',
+      'Menopozda uykusuzluk, gece uyanmaları ve sıcak basmaları arasındaki ilişkiyi; uyku düzenini, CBT-I seçeneğini ve ne zaman değerlendirme gerektiğini anlatan kaynaklı rehber.',
     publishedDate: '12 Mart 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zihin & Denge',

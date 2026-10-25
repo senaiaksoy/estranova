@@ -21,7 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/']!;
+const hero = submenuHeroByRoute['/zihin-denge/uyku-dinlenme/']!;
 
 const tocEntries = [
   { id: 'uyku-mimarisi', label: 'Uyku Gece Boyunca Evre Evre İlerler' },
@@ -49,7 +49,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '12 Mart 2026',
-  modifiedDate: '29 Eylül 2026',
+  modifiedDate: '25 Ekim 2026',
   medicalReviewer: 'Dr. Alper Mumcu',
   medicalReviewerTitle: 'Kadın Hastalıkları ve Doğum Uzmanı',
   pathname: '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
@@ -93,7 +93,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="12 Mart 2026"
-        lastUpdated="29 Eylül 2026"
+        lastUpdated="25 Ekim 2026"
         readingMinutes={6}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/zd-uyku-bozuklugu-byline.webp"
@@ -108,12 +108,12 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
-<p>
-          Sabah gözünüzü açtığınızda gece hiç dinlenmemiş gibi hissediyorsanız, geceyi bölen şey bazen sıcak basması,
-          bazen hormon dalgalanması, bazen ruh hâlidir; çoğu kez de bunlardan birkaçı birlikte çalışır. Bu rehber,
-          önce geceyi neyin böldüğünü ayırmayı, sonra sade alışkanlıkları ve ne zaman hekimle konuşmak gerektiğini
-          anlatıyor.
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Sabah gözünüzü açtığınızda gece hiç dinlenmemiş gibi hissediyorsanız, geceyi bölen şey bazen sıcak
+          basması, bazen hormon dalgalanması, bazen ruh hâlidir; çoğu kez de bunlardan birkaçı birlikte
+          çalışır. Önce geceyi neyin böldüğünü ayırmak gerekir. Horlama, nefes durması, gündüz uyuklama veya
+          üç aydan uzun ve günlük yaşamı belirgin etkileyen uykusuzluk "menopoz uykusu" deyip beklenmez.
         </p>
       </ArticleSummary>
 
@@ -123,7 +123,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Hastalarımdan en sık duyduğum şaşkınlıklardan biri şu: aynı saatte yatılıyor, ama bazı sabahlar iyi
           kalkılıyor, bazı sabahlar tükenmiş. Uykunun düz bir çizgi olmadığını hatırlamak bu soruyu anlamayı
-          kolaylaştırıyor. Uyku gece boyunca birkaç evreden geçer; bu nedenle saate bakmak tek başına yeterli değil.
+          kolaylaştırıyor. Yatakta geçirilen saat, evrelerin nasıl aktığını tek başına göstermez.
         </p>
         <p>
           Uyku, NREM ve REM evrelerinin art arda döndüğü bir süreçtir. NREM evrelerinde fiziksel onarım öne çıkar.
@@ -310,7 +310,7 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleProsePanel class="mt-10 prose-estranova-references">
         <h2 id="kaynaklar">Kaynaklar</h2>
-        <p>Bu rehberdeki klinik çerçeveyi oluşturan başlıca kaynaklar; metindeki numaralar bu listeye bağlanır:</p>
+        <p>Bu rehberdeki klinik dayanaklar; metindeki numaralar bu listeye bağlanır:</p>
         <ol>
           <li id="kaynak-1">Türkiye Endokrinoloji ve Metabolizma Derneği. <a href="https://temd.org.tr/halk/hastaliklar/menopoz" target="_blank" rel="noopener noreferrer">Menopoz hakkında bilgilendirme notu</a>.</li>
           <li id="kaynak-2">Edinger JD ve ark. Yetişkinlerde kronik uykusuzluğun davranışsal ve psikolojik tedavisi: Amerikan Uyku Tıbbı Akademisi klinik uygulama kılavuzu. J Clin Sleep Med. 2021;17(2):255-262. <a href="https://pubmed.ncbi.nlm.nih.gov/33164742/" target="_blank" rel="noopener noreferrer">PMID: 33164742</a>.</li>

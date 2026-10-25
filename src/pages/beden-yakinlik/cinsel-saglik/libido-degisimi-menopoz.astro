@@ -10,6 +10,8 @@ import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro'
 import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
 import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
 import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
@@ -18,21 +20,18 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
 const route = '/beden-yakinlik/cinsel-saglik/libido-degisimi-menopoz/';
-const hero = submenuHeroByRoute[route] ?? {
-  src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1800&h=1000',
-  alt: 'Menopoz döneminde beden ve yakınlık üzerine sakin bir editoryal yaşam sahnesi',
-};
+const hero = submenuHeroByRoute['/beden-yakinlik/cinsel-saglik/']!;
 
 const tocEntries = [
   { id: 'acilis', label: 'Libido Azalması Ne Zaman Sorundur?' },
-  { id: 'uc-ayri-soru', label: 'İstek, Uyarılma ve Ağrı Aynı Şey Değil' },
+  { id: 'uc-ayri-soru', label: 'İstek, Uyarılma ve Ağrı Ayrı Okunur' },
   { id: 'nedenler', label: 'Hormonlar, Uyku, İlaçlar ve İlişkiniz' },
   { id: 'degerlendirme', label: 'Görüşmede Anlatabilecekleriniz' },
   { id: 'secenekler', label: 'Sizi Zorlayan Belirtiye Göre Destek' },
   { id: 'testosteron', label: 'Testosteron Hakkında Net Sınırlar' },
   { id: 'ne-zaman-hekime', label: 'Değerlendirme Gerektiren Belirtiler' },
-  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular" },
-  { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular", numbered: false },
+  { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma', numbered: false },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -47,7 +46,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '27 Nisan 2026',
-  modifiedDate: '29 Eylül 2026',
+  modifiedDate: '25 Ekim 2026',
   pathname: route,
   articleSection: 'Beden & Yakınlık',
   sectionPath: '/beden-yakinlik/',
@@ -80,19 +79,25 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="27 Nisan 2026"
-        lastUpdated="29 Eylül 2026"
+        lastUpdated="25 Ekim 2026"
         readingMinutes={10}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/libido-degisimi-menopoz-byline.webp"
         imageAlt="Bahçe terasında not defteriyle oturan olgun kadın; menopozda libido değişimi yazısı"
       />
 
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={route} title={articleTitle} />
+      </div>
+
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           Menopozda cinsel istek, yani libido, azalabilir; bu her kadında olmaz ve tek başına bir hastalık
           sayılmaz. Değişim sizi rahatsız ediyorsa ağrı, uyarılma güçlüğü, uyku, ruh hâli, ilaçlar ve
-          ilişkinizde yaşadıklarınız hormonlarla birlikte ele alınır. Sizi neyin zorladığı anlaşıldığında,
-          destek seçeneklerini konuşmak da kolaylaşır.
+          ilişkinizde yaşadıklarınız hormonlarla birlikte ele alınır. Sizi neyin zorladığı anlaşıldığında
+          destek seçeneklerini konuşmak da kolaylaşır. Menopoz sonrası herhangi bir vajinal kanama, ısrarlı
+          ilişki ağrısı veya tekrarlayan idrar yolu enfeksiyonu gecikmeden değerlendirilir.
         </p>
       </ArticleSummary>
 
@@ -111,7 +116,7 @@ const articleSchemas = buildArticleSchemas({
           yaşamınızdaki etkisine bakarız <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
 
-        <h2 id="uc-ayri-soru">İstek, Uyarılma ve Ağrı Aynı Şey Değil</h2>
+        <h2 id="uc-ayri-soru">İstek, Uyarılma ve Ağrı Ayrı Okunur</h2>
         <p>“Libidom azaldı” cümlesiyle farklı şeyler anlatıyor olabilirsiniz. Hangisini yaşadığınızı ayırmak, görüşmenin yönünü değiştirir.</p>
         <ul>
           <li><strong>İstek:</strong> Cinselliği eskisi kadar düşünmüyor, cinsel yakınlığa daha az istek duyuyorsunuz.</li>
@@ -245,7 +250,7 @@ const articleSchemas = buildArticleSchemas({
           ayıramıyorum,” diyebilirsiniz. Bu kadarıyla başlayabiliriz.
         </p>
 
-        <h2 id="sik-sorulanlar">Dr. Aksoy'a Sorular</h2>
+        <h2 id="sik-sorulanlar">Dr. Aksoy'a sorular</h2>
         <p>Görüşmenin dışında, ilacınızla veya partnerinizle ilgili bir soruyu nereden başlayarak ele alacağınızı da merak edebilirsiniz.</p>
 
         {faqItems.map((item) => (
@@ -260,7 +265,6 @@ const articleSchemas = buildArticleSchemas({
           Klinik ayrımlar, tedavi seçenekleri ve güvenlik sınırları aşağıdaki kılavuzlar ve temel çalışma
           üzerinden gözden geçirildi. Kaynak taraması: 2 Ağustos 2026.
         </p>
-        <p>28 Eylül 2026: Değerlendirme bölümüne Dr. Senai Aksoy'un gerçek klinik yanıtı eklendi. 29 Eylül 2026: İddia ve kaynak eşleşmeleri yeniden kontrol edildi; pelvik taban fizyoterapisi için kaynak ve çalışmanın kapsamı belirtildi, testosteron takip açıklaması netleştirildi ve dil düzenlendi. Bu kontrol, 2 Ağustos 2026 tarihli genel kaynak taramasından ayrı bir güncellemedir.</p>
         <ol>
           <li id="kaynak-1">
             West SL ve arkadaşları. <a href="https://pubmed.ncbi.nlm.nih.gov/18625925/" rel="noopener noreferrer">Menopoz durumu ve düşük cinsel istek üzerine toplum temelli çalışma</a>. 2008.
