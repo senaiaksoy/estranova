@@ -38,7 +38,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?';
 const seoTitle = 'Coenzyme Q10: Kanıt mı Reklam mı?';
 const articleDescription =
-  'CoQ10 takviyesi statin kaynaklı kas ağrısında ve migren önlemesinde denenebilir; kalp yetmezliğinde ise kardiyoloji takibinde ek seçenektir. Anti-aging ve menopozal enerji iddialarında kanıt sınırlıdır.';
+  'CoQ10, statin kaynaklı kas ağrısında ve migren önlemesinde hekimle denenebilir (statin kullanan herkese rutin önerilmez); kalp yetmezliğinde yalnızca ek seçenektir. Anti-aging ve menopozal enerji iddialarında kanıt sınırlıdır.';
 const faqItems = articleFaqs['/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -108,7 +108,7 @@ const articleSchemas = buildArticleSchemas({
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           CoQ10 takviyesi, statin kaynaklı kas ağrısında ve migren önlemesinde deneme için yeterli sayılabilecek
-          kanıta sahiptir. Kalp yetmezliğinde bazı çalışmalarda ölüm veya yeniden yatışta azalma sinyali
+          kanıta sahiptir; yine de statin kullanan herkese rutin önerilmez. Kalp yetmezliğinde bazı çalışmalarda ölüm veya yeniden yatışta azalma sinyali
           bildirilmiştir; bu, standart tedavi önerisi değildir. CoQ10 ancak kardiyoloji takibinde, mevcut
           tedaviye ek seçenek olarak değerlendirilebilir. Anti-aging, menopozal enerji ve yaşam süresi
           iddialarında kontrollü insan çalışması yok denecek kadar azdır. Warfarin, aktif kemoterapi, bilinen
@@ -134,12 +134,11 @@ const articleSchemas = buildArticleSchemas({
           Molekülün iki kimyasal formu vardır: ubiquinone (oksitlenmiş) ve ubiquinol (indirgenmiş). Vücut bu
           iki form arasında sürekli geçiş yapar; takviye olarak da her iki form satılır. Et, yağlı balık,
           tahıl ve fındıkla da alınır, kendi sentezimizle de üretilir. Yaşla birlikte hücre içi düzeylerin
-          düşmesi, yaşlanmanın nedeni demek için yeterli kanıt değildir.
+          düşmesi, yaşlanmanın nedeninin bu olduğunu söylemek için yeterli kanıt değildir.
         </p>
         <p>
-          Bu ayrım bütün tartışmanın zeminini kuruyor. Hücre biyolojisi sağlamdır. Takviye olarak alındığında
-          her durumda yarar görülüp görülmediği ise başka bir sorudur. Cevap, hangi şikâyet için
-          konuşulduğuna göre değişir.
+          Hücre biyolojisi sağlamdır. Takviye olarak alındığında her durumda yarar görülüp görülmediği ise ayrı
+          bir sorudur ve yanıtı hangi şikâyet için konuşulduğuna göre değişir.
         </p>
 
         <h2 id="klinik-endikasyon">CoQ10 İçin Üç Farklı Klinik Kullanım Alanı</h2>
@@ -157,8 +156,9 @@ const articleSchemas = buildArticleSchemas({
           sürülen açıklamalarından biridir. Çalışmaların bir kısmı takviyenin statin ilişkili kas
           yakınmalarını azaltabildiğini bildirir; bir kısmı belirgin fark göstermemiştir
           <Evidence level={3} /> <sup><a href="#kaynak-1">[1]</a></sup>.
-          Statin nedeniyle kas yakınması olan kişide bir deneme yapılabilir. Statin alan herkesin rutin
-          takviyesi değildir.
+          Statin nedeniyle kas yakınması olan kişide, yakınmanın gerçekten statinle ilişkili olup olmadığı
+          değerlendirildikten sonra bir deneme düşünülebilir. Güncel kardiyoloji kılavuzları statin kullanan
+          herkese ya da statine bağlı kas yakınması olanlara rutin CoQ10 önermez.
         </p>
 
         <h3>2. Migren önleme</h3>
@@ -167,8 +167,8 @@ const articleSchemas = buildArticleSchemas({
           Migren ataklarınız varsa, CoQ10 takviyesinin atak sıklığını ve süresini azaltabildiğini gösteren
           çalışmalar vardır
           <Evidence level={3} /> <sup><a href="#kaynak-2">[2]</a></sup>.
-          Bazı uzman dernekleri CoQ10'u migren önleme seçenekleri arasında makul kanıtlı bir alternatif olarak
-          listeler. Etki abartılı beklentileri karşılamaz: ortalama atak sıklığında ölçülebilir bir azalma.
+          Uzman derneklerinden en az birinin kılavuzu CoQ10'u migren önleme seçenekleri arasında sayar<sup><a href="#kaynak-6">[6]</a></sup>.
+          Etki abartılı beklentileri karşılamaz; bildirilen, ortalama atak sıklığında ölçülebilir bir azalmadır.
           Klasik önleyici tedavilerin yerine değil, yanına düşünülen bir seçenektir.
         </p>
 
@@ -176,21 +176,29 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Kalp yetmezliğinde kalp kasının enerji üretiminde mitokondri işlev bozukluğu önemli bir bileşendir.
           Bu zeminde CoQ10 yıllardır araştırılıyor. Sizin veya yakınınızın kalp yetmezliği tanısı varsa, bu
-          alandaki rastgele (randomize) çalışmaları bir arada değerlendiren bir sistematik derleme yayımlanmıştır
+          alandaki rastgele (randomize) çalışmaları bir arada değerlendiren bir Cochrane derlemesi yayımlanmıştır.
+          Derleme, CoQ10'un tüm nedenlere bağlı ölümü ve kalp yetmezliği nedeniyle yatışı olasılıkla azalttığını
+          bildirir; ancak çalışmaların çoğu küçüktür, yanlılık riski taşır ve bu iki sonuç yalnızca bir iki
+          çalışmaya dayanır. Derleme bu nedenle kullanımı destekleyen ya da çürüten ikna edici bir kanıt
+          bulunmadığı sonucuna varır
           <Evidence level={2} /> <sup><a href="#kaynak-3">[3]</a></sup>.
-          Bazı çalışmalarda ölüm veya yeniden yatış açısından azalma sinyali bildirilmiştir; bu, mevcut tedavinin
-          yerini alan bir öneri değildir
+          Daha yeni ve daha kapsamlı bir meta-analiz de ölüm ve yatışta benzer yönde azalma bildirmiştir; bu
+          sonuç, mevcut tedavinin yerini alan bir öneri değildir
           <Evidence level={2} /> <sup><a href="#kaynak-5">[5]</a></sup>.
           CoQ10 ancak kardiyoloji takibinde, mevcut tedaviye ek seçenek olarak değerlendirilebilir. Kendi başına
           başlama alanı değildir.
         </p>
         <p>
-          Bu üç alanın ortak yanı somut bir mekanizma, ölçülebilir bir klinik sonuç ve standart tedavinin
-          parçası ya da yanı olmasıdır. Pazarlama vaadi değil, klinik karar. Aynı kutunun üzerindeki isim her
-          yerde aynıdır. O kutuyu kimin, hangi şikâyet için, hangi beklentiyle alacağı ise bambaşkadır.
-          Klinik pratiğimde bir hastanın "bir arkadaşım CoQ10 kullanıyor, ben de alayım mı" diye sorduğunu sık
-          duyarım. Cevabım neredeyse her zaman önce soruyu netleştirmek olur: o arkadaşın şikâyetiyle sizinki
-          aynı mı? Kararı ortak bir cümleye değil, o kişinin tıbbi durumuna göre değerlendiririm.
+          Bu üç alanın ortak yanı somut bir mekanizma ve ölçülebilir bir klinik sonuç sorusu olmasıdır;
+          hiçbirinde CoQ10 standart tedavinin yerine geçmez. Pazarlama vaadi değil, klinik karar. Kutunun
+          üzerindeki isim her yerde aynıdır; onu kimin, hangi şikâyet için, hangi beklentiyle alacağı ise
+          bambaşkadır.
+        </p>
+        <p>
+          Klinik pratiğimde hastaların arkadaşlarının CoQ10 kullandığını söyleyip kendilerinin de alıp almaması
+          gerektiğini sorduğunu sık duyarım. Cevabım neredeyse her zaman önce soruyu netleştirmek olur: o
+          arkadaşın şikâyetiyle sizinki aynı mı? Kararı ortak bir cümleye değil, o kişinin tıbbi durumuna göre
+          değerlendiririm.
         </p>
 
         <h2 id="anti-aging">Anti-Aging, Menopoz, "Enerji" İddiaları — Kanıt Nerede Biter?</h2>
@@ -199,7 +207,7 @@ const articleSchemas = buildArticleSchemas({
           altındaki insan kanıtı ise düşündüğünüzden çok daha sınırlıdır.
         </p>
         <p>
-          <strong>Genel anti-aging:</strong> CoQ10'un hücre biyolojisi ilgi çekici olabilir. Bu, takviyenin
+          <strong>Genel anti-aging:</strong> CoQ10'un hücre biyolojisi ilgi çekicidir. Bu, takviyenin
           yaşam süresini uzattığını ya da yaşlanma belirtilerini geri çevirdiğini göstermez. Bu yazıda
           incelenen klinik kaynaklar böyle genel bir anti-aging sonucunu desteklemiyor. Pazarlama çoğu zaman
           hücre kültürü veya hayvan modellerini insan iddiasına dönüştürür; aradaki köprü bilimsel olarak
@@ -209,23 +217,21 @@ const articleSchemas = buildArticleSchemas({
           <strong>Menopozal belirtiler:</strong> Sıcak basması, gece terlemesi, uyku bozulması veya genel
           yorgunluk yaşıyorsanız, bu yazıda incelenen kaynaklar CoQ10'u bu belirtiler için kanıtlı bir seçenek
           haline getirmiyor. Bu yakınmalar kişisel öyküye ve uygun kanıt temelli seçeneklere göre
-          değerlendirilir. CoQ10 bu seçeneklerin yerine değil, en fazla bireyselleştirilmiş bir ek deneme
-          olarak konumlanır.
+          değerlendirilir. CoQ10 bu seçeneklerin yerine geçmez; en fazla hekimle konuşulmuş bireysel bir
+          ek deneme olabilir.
         </p>
         <p>
           <strong>"Enerji" ve genel yorgunluk:</strong> Bu en zor okunan iddiadır. Yorgunluğunuz tek bir
-          açıklamaya indirgenemez. CoQ10 düşünmeden önce tiroid, demir ve B12 düzeyi, uyku apnesi, depresyon
-          ve eşlik eden tıbbi tablolar ayırt edilmelidir. Konunun tek bir takviyeyle çözülmediği, belki en
-          dürüst söylenebilecek cümledir.
+          açıklamaya indirgenemez. CoQ10'u düşünmeden önce tiroid, demir ve B12 düzeyine, uyku apnesine,
+          depresyona ve eşlik eden diğer tıbbi tablolara bakmak gerekir. Yorgunluğun tek bir takviyeyle
+          çözülmediğini söylemek en dürüst yanıttır.
         </p>
         <p>
-          Bu yazıyla aynı sayıdaki
           <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">
-            deneysel tedaviyi okuma kılavuzu
+            Deneysel tedaviyi okuma kılavuzunda
           </a>
-          burada da geçerlidir: aynı molekül farklı kullanım alanında farklı kanıt seviyesindedir. CoQ10 statin
-          kaynaklı kas yakınması için denenebilir; anti-aging için henüz değil. Aynı molekül, aynı isim —
-          farklı karar.
+          anlatılan ilke burada da geçerlidir: aynı molekül farklı kullanım alanında farklı kanıt
+          seviyesindedir.
         </p>
 
         <h2 id="pratik-notlar">Pratik Notlar: Ubiquinone, Ubiquinol, Doz, Etkileşim</h2>
@@ -236,23 +242,25 @@ const articleSchemas = buildArticleSchemas({
           <strong>Ubiquinone ve ubiquinol:</strong> 60 yaşın üstündeyseniz veya emilim sorunu yaşıyorsanız,
           indirgenmiş form olan ubiquinolün biraz daha kolay emildiği bildirilmiştir
           <Evidence level={2} /> <sup><a href="#kaynak-4">[4]</a></sup>.
-          Bu fark klinik olarak anlamlı olabilir. Pratikte sağlıklı kişilerin çoğunda emilim avantajı belirgin
-          değildir; pazarlama çoğu zaman aradaki farkı abartır. Formu hekim önerisi ve bireysel durum
-          şekillendirir.
+          Dayanak olan randomize çalışma yaşlı erkeklerde yapılmıştır. Bu fark klinik olarak anlamlı olabilir;
+          sağlıklı kişilerin çoğunda emilim avantajı belirgin değildir ve pazarlama aradaki farkı çoğu zaman
+          abartır. Formu hekim önerisi ve bireysel durum şekillendirir.
         </p>
         <p>
           <strong>Doz:</strong> Çalışmalardaki dozlar ve değerlendirme süreleri kullanım alanına göre değişir.
-          Bireysel doz veya kullanım takvimi bu yazıdan çıkarılmamalıdır. Hekimle, hangi sonucun ne zaman
+          Bu yazıdan bireysel doz ya da kullanım takvimi çıkarmayın. Hekimle, hangi sonucun ne zaman
           değerlendirileceği baştan konuşulmalıdır. Yağda çözünen bir molekül olduğu için emilimle ilgili ürün
           ve kullanım ayrıntıları da kişisel duruma göre ele alınır. "Daha fazla daha iyi" kanıtlanmış bir
           kural değildir.
         </p>
         <p>
-          <strong>Etkileşim:</strong> Warfarin gibi K vitamini bağımlı kan sulandırıcılar, aktif kemoterapi ve
-          tansiyon ilaçları söz konusu olduğunda etkileşim ve izlem soruları kişiye göre değişebilir. Bu
-          alanlarda veri ve klinik önem aynı düzeyde değildir. İlaç kullananlar CoQ10'a hekim kontrolü olmadan
-          başlamamalıdır. Aktif kemoterapi sırasında onkoloğun görüşü, kan sulandırıcı kullanımında ise
-          reçeteleyen hekimin değerlendirmesi gerekir.
+          <strong>Etkileşim:</strong> Warfarin kullananlarda veriler aynı yönü göstermiyor. 24 kişilik küçük bir
+          randomize çalışmada CoQ10 warfarin dozunu değiştirmemiştir<sup><a href="#kaynak-7">[7]</a></sup>; gözlemsel bir
+          çalışmada ise CoQ10 kullanan warfarin hastalarında kendi bildirdikleri kanama daha sık
+          görülmüştür<sup><a href="#kaynak-8">[8]</a></sup>. Bu yüzden warfarin gibi kan sulandırıcı kullananlar CoQ10'a
+          reçeteleyen hekimin değerlendirmesi olmadan başlamamalıdır. Aktif kemoterapi sırasında da onkoloğun
+          görüşü gerekir. Tansiyon ilaçlarında ise kaygılanacak bir etkileşim gösterilmemiştir: Cochrane
+          derlemesi CoQ10'un kan basıncını klinik olarak anlamlı düşürmediğini bildirmiştir<sup><a href="#kaynak-9">[9]</a></sup>.
         </p>
         <p>
           <strong>Gebelik ve emzirme:</strong> Bu dönemlerde yeterli güvenlik verisi yoktur; standart önerilen
@@ -260,9 +268,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           <strong>Yan etki:</strong> Genelde iyi tolere edilir. Bildirilen yan etkiler hafiftir: bulantı, hafif
-          ishal, hafif baş ağrısı, kanın hafif sulanma hissi ve akşam alındığında uyku bölünmesi (bazı
-          kişilerde uyarıcı etki bildirilmiştir). Yüksek dozlarda yan etki olasılığının artabileceği akılda
-          tutulmalıdır.
+          ishal, hafif baş ağrısı ve akşam alındığında uyku bölünmesi (bazı
+          kişilerde uyarıcı etki bildirilmiştir). Yüksek dozlarda yan etki olasılığı artabilir.
         </p>
 
         <RedFlagBox
@@ -271,9 +278,8 @@ const articleSchemas = buildArticleSchemas({
             'Aktif kemoterapi veya kanser tedavisi sürerken — antioksidan etkileşimi belirsiz, onkolog onayı şart',
             'Bilinen kalp yetmezliği — kardiyoloji takibi olmadan kendi başına başlama alanı değil',
             'Hamilelik veya emzirme — yeterli güvenlik verisi yok',
-            'Hipertansiyon ilaçları — kan basıncını ek olarak düşürebilir, düzenli takip',
             '"Yaşlanmayı geri çevirir / hücresel gençleşme sağlar" tarzı pazarlama mesajları — bilimsel temeli yok',
-            'Migren için pratikte sık önerilen 8-12 haftalık deneme sonrası belirgin fayda yoksa — devam etmenin makul gerekçesi azalır',
+            'Migren atak günlüğünde belirgin düzelme yoksa — devam etmenin makul gerekçesi azalır',
             'Yorgunluk şikâyeti varsa — önce tiroid, B12, demir, uyku apnesi, depresyon ayırt edilmeli; tek başına CoQ10 ile geçiştirme uygun değil',
           ]}
           footnote="Bu liste teşhis amaçlı değil; CoQ10 değerlendirilirken bir hekimle konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
@@ -294,13 +300,13 @@ const articleSchemas = buildArticleSchemas({
           <strong>İkincisi:</strong>
           "Faydayı neyle ölçeceğiz, ne kadar sürede değerlendireceğiz, ne olursa devam etmek anlamsız?" Bir
           takvim, bir ölçüt ve bir durdurma ölçütü olduğunda uygulama hem değerlendirilebilir hem disiplinli
-          olur. Pratikte sık kullanılan değerlendirme şöyle olabilir: statin kaynaklı kas yakınması için 8–12
-          hafta ve kas belirtisi ölçeği; migren için 2–3 ay ve atak günlüğü; "anti-aging hissi" için öznel
-          ölçütlerin sınırını başta kabul edip etmemek.
+          olur. Değerlendirme şöyle olabilir: statin kaynaklı kas yakınması için kas belirtisi ölçeği (statin
+          çalışmaları 30 gün ile 3 ay arasında izlem yapmıştır<sup><a href="#kaynak-1">[1]</a></sup>); migren için atak
+          günlüğü; "anti-aging hissi" için ise öznel ölçütlerin sınırını baştan kabul etmek.
         </p>
         <p>
           <strong>Üçüncüsü:</strong>
-          "Kullandığım ilaçlar — özellikle warfarin, kemoterapi, hipertansiyon ilacı, tiroid ilacı — CoQ10 ile
+          "Kullandığım ilaçlar — özellikle warfarin ve kemoterapi — CoQ10 ile
           etkileşime girer mi? Hangi sırayla almam, neye dikkat etmem gerekir?" Bu soru hem güvenliği artırır
           hem kararı kişiye bağlar. Hekim cevap bilmiyor olabilir. Bilen bir hekim "bu konuda bakıp dönelim"
           demekten çekinmez. Bu açıklık, güven ilişkisinin başlangıcıdır.
@@ -346,9 +352,33 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li id="kaynak-5">
             Jiayi Xu, Luwei Xiang, Xuwen Yin et al. "Efficacy and safety of coenzyme Q10 in heart failure: a meta-analysis of randomized controlled trials."
-            <em>BMC Cardiovasc Disord</em>. 2024;24(1):143.
+            <em>BMC Cardiovasc Disord</em>. 2024;24(1):592.
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39462324/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39462324</a>
             <span class="block mt-0.5 text-ink/50">(Kalp yetmezliğinde CoQ10 etkinliği ve güvenliği üzerine güncel meta-analiz.)</span>
+          </li>
+          <li id="kaynak-6">
+            Pringsheim T, Davenport WJ, Mackie G et al. "Canadian Headache Society guideline for migraine prophylaxis."
+            <em>Can J Neurol Sci</em>. 2012;39(2 Suppl 2):S1–59.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/22683887/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">22683887</a>
+            <span class="block mt-0.5 text-ink/50">(Episodik migren önlemede ilaç dışı ve ilaç seçeneklerini sıralayan kılavuz; CoQ10 seçenekler arasında yer alır.)</span>
+          </li>
+          <li id="kaynak-7">
+            Engelsen J, Nielsen JD, Winther K. "Effect of coenzyme Q10 and Ginkgo biloba on warfarin dosage in stable, long-term warfarin treated outpatients. A randomised, double blind, placebo-crossover trial."
+            <em>Thromb Haemost</em>. 2002;87(6):1075–1076.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/12083489/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">12083489</a>
+            <span class="block mt-0.5 text-ink/50">(24 kişilik çapraz geçişli çalışma; CoQ10 warfarin dozunu değiştirmemiştir.)</span>
+          </li>
+          <li id="kaynak-8">
+            Shalansky S, Lynd L, Richardson K et al. "Risk of warfarin-related bleeding events and supratherapeutic international normalized ratios associated with complementary and alternative medicine: a longitudinal analysis."
+            <em>Pharmacotherapy</em>. 2007;27(9):1237–1247.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/17723077/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">17723077</a>
+            <span class="block mt-0.5 text-ink/50">(171 warfarin hastasında gözlemsel çalışma; CoQ10 kullanımı kendi bildirilen kanamada artışla ilişkili bulunmuştur.)</span>
+          </li>
+          <li id="kaynak-9">
+            Ho MJ, Li ECK, Wright JM. "Blood pressure lowering efficacy of coenzyme Q10 for primary hypertension."
+            <em>Cochrane Database Syst Rev</em>. 2016;3:CD007435.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/26935713/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">26935713</a>
+            <span class="block mt-0.5 text-ink/50">(Primer hipertansiyonda CoQ10; kan basıncında klinik olarak anlamlı bir değişiklik saptanmamıştır, çalışma sayısı azdır.)</span>
           </li>
         </ol>
       </ArticleProsePanel>

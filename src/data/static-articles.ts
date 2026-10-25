@@ -701,7 +701,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
     title: 'Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?',
     description:
-      'CoQ10 takviyesi statin kaynaklı kas ağrısında ve migren önlemesinde denenebilir; kalp yetmezliğinde ise kardiyoloji takibinde ek seçenektir. Anti-aging ve menopozal enerji iddialarında kanıt sınırlıdır.',
+      'CoQ10, statin kaynaklı kas ağrısında ve migren önlemesinde hekimle denenebilir (statin kullanan herkese rutin önerilmez); kalp yetmezliğinde yalnızca ek seçenektir. Anti-aging ve menopozal enerji iddialarında kanıt sınırlıdır.',
     publishedDate: '3 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
