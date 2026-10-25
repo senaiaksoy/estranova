@@ -20,7 +20,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/']!;
+const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/']!;
 
 const tocEntries = [
   { id: 'once-soru', label: 'NAD+ — Hücrenin Enerji ve Onarım Koenzimi' },
@@ -33,7 +33,7 @@ const tocEntries = [
   { id: 'karar', label: 'Denemeyi Düşünüyorsanız Nereden Başlamalı?' },
   { id: 'kapanis', label: 'Kapanış — Hücrede Önemli, Klinikte Açık Soru' },
   { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
-  { id: 'sss', label: 'Sıkça Sorulanlar' },
+  { id: 'sss', label: "Dr. Aksoy'a sorular", numbered: false },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -48,7 +48,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '5 Haziran 2026',
-  modifiedDate: '28 Eylül 2026',
+  modifiedDate: '25 Ekim 2026',
   pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -81,7 +81,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="5 Haziran 2026"
-        lastUpdated="28 Eylül 2026"
+        lastUpdated="25 Ekim 2026"
         medicalReviewer="Dr. Alper Mumcu"
         readingMinutes={10}
         imageSrc="/images/library/editorial/bp-nad-plus.webp"
@@ -96,49 +96,39 @@ const articleSchemas = buildArticleSchemas({
         />
       </div>
 
-      <ArticleSummary title="Kısa Özet">
+      <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           NMN ve NR gibi NAD+ öncülleri (vücudun NAD+ üretirken kullandığı maddeler), insanda
-          kandaki NAD+ düzeyini yükseltebilir. Bugün
-          en sağlam bildiğimiz şey bu. Bu yükselmenin kas gücüne, metabolizmaya, düşünme ve
-          hafızaya, uzun yaşama veya yumurta kalitesine tutarlı biçimde yansıdığını ise henüz
-          bilmiyoruz. Bu yazıda mekanizmanın heyecanını küçümsemeden, pazarlama dilinin atladığı
-          boşluğu açıyorum: Kandaki bir değerin yükselmesi ile sağlığınızın gerçekten kazanması
-          iki ayrı soru.
+          kandaki NAD+ düzeyini yükseltebilir. Bu yükselmenin kas gücüne, metabolizmaya, düşünme
+          ve hafızaya, uzun yaşama veya yumurta kalitesine tutarlı biçimde yansıdığı ise henüz
+          gösterilmedi. Kanser öyküsü, bağışıklığı baskılayan tedavi, gebelik, emzirme veya gebelik
+          arayışı varsa bu takviyeler kendi başına denenecek bir alan değildir.
         </p>
       </ArticleSummary>
 
       <ArticleProsePanel>
         <h2 id="once-soru">NAD+ — Hücrenin Enerji ve Onarım Koenzimi</h2>
         <p>
-          NAD+ konusunu açan herkesin sorusu er geç aynı yere gelir: "Peki bu benim hayatımda
-          ne değiştirir?" Haklı bir soru. Cevabına geçmeden önce molekülün ne iş yaptığını
-          konuşmamız gerekiyor.
-        </p>
-        <p>
-          Belki siz de görmüşsünüzdür: Bir reklamda molekül anlatılır, birkaç satır sonra aynı
-          molekül gençlik vaadine dönüşür. Bu alanda iddialar çok hızlı büyür.
+          Eczane rafında kapağın üzerinde üç vaat yan yana durabiliyor: enerji, onarım, gençlik.
+          Muayene odasında ise aynı kapağın üç ayrı soru olduğunu söylerim.
         </p>
         <p>
           NAD+ (nikotinamid adenin dinükleotid), hücrenin enerji üretiminde ve onarım yollarında
           merkezi rol oynayan bir koenzimdir; enzimlerin çalışması için gereken yardımcı bir
           moleküldür <Evidence level={5} />.<sup><a href="#kaynak-1">[1]</a></sup> Hücrenin enerji santrali olan mitokondride elektron
           taşıma zincirine katılır. DNA hasarına yanıt veren bazı enzimlere hammadde (substrat)
-          olur. Sirtuin denen enzim ailesinin çalışması için de gereklidir. Yaşlanma biyolojisiyle
-          uğraşan laboratuvarların NAD+ ile bu kadar ilgilenmesi şaşırtıcı değil.
+          olur. Sirtuin denen enzim ailesinin çalışması için de gereklidir.
         </p>
         <p>
-          Bu başlıkta okuyana ilk söylediğim şey şudur: Heyecanı küçümsemeyelim, ama kanıtın
-          sınırını da büyütmeyelim. Sorun molekülün önemsiz olması değil — önemli bir molekülden
-          fazla hızlı klinik sonuç çıkarmamız. Hücre için önemli olan bir şey, sizin için
-          kendiliğinden doğru seçenek olmayabilir.
+          Bu başlıkta okuyana ilk söylediğim şey şudur: Heyecanı küçümsemeyelim, kanıtın sınırını
+          da büyütmeyelim. Hücre için önemli olan bir şey, sizin için kendiliğinden doğru seçenek
+          olmayabilir.
         </p>
 
         <h2 id="biyoloji">Biyoloji Sağlam — Klinik Sonuç Henüz Belirsiz</h2>
         <p>
-          Hücre biyolojisi tarafında tablo güçlü: NAD+; redoks dengesi, mitokondriyal enerji, DNA
-          onarımı ve enflamasyonla ilişkili pek çok yolda yer alır. Klinikte sorduğumuz soru ise
-          daha sade ve daha zor: Bu molekül sizin sağlığınıza ölçülebilir bir katkı yapıyor mu?
+          Hücre biyolojisinde tablo güçlü. Klinikte sorduğum soru daha sade: Bu molekül sizin
+          sağlığınıza ölçülebilir bir katkı yapıyor mu?
         </p>
         <p>
           Tartışmanın üç ana kapısı var: sirtuinler, PARP enzimleri ve CD38 <Evidence level={4} />.<sup><a href="#kaynak-1">[1]</a></sup>
@@ -150,19 +140,15 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Bu mekanizma hattı hayvan çalışmalarında etkileyici sonuçlar verdi <Evidence level={4} />.<sup><a href="#kaynak-1">[1]</a></sup>
           Yaşlı farelerde NAD+ öncülleriyle mitokondri, kas, metabolizma ve üreme hücresi
-          kalitesinde olumlu sinyaller görüldü. Fareden insana geçerken ise yol kısalmıyor; daha
-          dikkatli yürümemiz gerekiyor.
-        </p>
-        <p>
-          Klinik faydayı insan çalışmalarındaki somut sonuçlardan anlarız: daha az hastalık, daha
-          iyi işlev, uzun süreli kullanımda güvenlik ve daha iyi yaşam kalitesi. NAD+ alanında bu
-          sonuçların çoğu hâlâ erken aşamada.
+          kalitesinde olumlu sinyaller görüldü. Klinik faydayı ise insan çalışmalarındaki somut
+          sonuçlardan anlarız: daha az hastalık, daha iyi işlev, uzun süreli kullanımda güvenlik
+          ve daha iyi yaşam kalitesi. NAD+ alanında bu sonuçların çoğu hâlâ erken aşamada.
         </p>
 
         <h2 id="yasla-dusus">Yaşla Düşüş — Farede Net, İnsanda Karışık</h2>
         <p>
-          NAD+ reklamlarının en sık kurduğu akıl yürütme şu: Yaşla NAD+ düşer, o hâlde yükseltmek
-          gerekir. Kulağa düzgün geliyor; insan verisi ise bu kadar düz ilerlemiyor.
+          Reklamın sık kurduğu cümle şudur: Yaşla NAD+ düşer, o hâlde yükseltmek gerekir. İnsan
+          verisi bu kadar düz ilerlemiyor.
         </p>
         <p>
           Kemirgen (fare ve sıçan) çalışmalarında yaşla birlikte dokulardaki NAD+ düzeyinin
@@ -174,22 +160,15 @@ const articleSchemas = buildArticleSchemas({
           2026'da yayımlanan geniş bir insan kohortunun (belirli bir grubu zaman içinde izleyen
           çalışma) analizinde, tam kandaki NAD+ düzeyi yaş ilerledikçe ve bazı yaşam tarzı
           müdahalelerinden sonra beklenenden daha sabit kalabildi <Evidence level={3} />.<sup><a href="#kaynak-2">[2]</a></sup> Aynı
-          çalışma, NR verildiğinde kandaki NAD+'ın arttığını da doğruladı. İki bulguyu birlikte
-          okuyoruz: Kan NAD+'ı her zaman iyi bir yaşlanma saati olmayabilir, ama takviyeye yanıt
-          olarak yükselebilir.
-        </p>
-        <p>
-          Doku NAD+'ı ile kan NAD+'ı aynı şey değil. Hangi dokuya, hangi yaşta, hangi sağlık
-          durumunda ve hangi yöntemle baktığımız sonucu değiştiriyor. Tek bir kan değerinden
-          "hücresel yaşınızı" kesin okumak bugün için fazla iddialı olur. Size böyle bir sayı
-          verildiğinde, o sayının neyi temsil ettiğini sormanız yerinde olur.
+          çalışma, NR verildiğinde kandaki NAD+'ın arttığını da doğruladı. Kan değeri her zaman iyi
+          bir yaşlanma saati olmayabilir; takviyeye yanıt olarak yine de yükselebilir. Size böyle
+          bir sayı verildiğinde, o sayının hangi dokuyu temsil ettiğini sorun.
         </p>
 
         <h2 id="nmn-nr">NMN ve NR — Kandaki Sayı Başka, Sağlık Kazancı Başka</h2>
         <p>
-          İnsan çalışmalarında en net görülen sonuç şu: Bu öncüller kandaki NAD+ metabolitlerini
-          artırabiliyor. Bunun günlük hayatınıza dokunan bir faydaya dönüşüp dönüşmediği ise ayrı
-          bir soru.
+          İnsan çalışmalarında en net görülen sonuç, bu öncüllerin kandaki NAD+ metabolitlerini
+          artırabilmesidir. Günlük hayata dokunan fayda ayrı bir sorudur.
         </p>
         <p>
           NMN ile 250-2000 mg/gün aralığında dozlarla kısa süreli denemeler yapıldı. Genel tabloda
@@ -201,15 +180,15 @@ const articleSchemas = buildArticleSchemas({
           NR için de benzer bir ayrım var. Kısa vadeli insan çalışmalarında NAD+ metabolomunda
           (NAD+ ile ilişkili moleküllerin bütünü) artış görülüyor ve NR genel olarak iyi tolere
           ediliyor <Evidence level={3} />.<sup><a href="#kaynak-7">[7]</a></sup> Kan basıncı, enflamasyon, kas dokusu ve sinir sistemiyle
-          ilgili alanlarda bazı sinyaller de var. Ama bunlar henüz herkese önerilecek bir klinik
-          uygulamaya dönüşecek büyüklükte değil.
+          ilgili alanlarda bazı sinyaller de var. Bunlar henüz herkese önerilecek bir klinik
+          uygulamaya dönüşecek büyüklükte değil. Menopoz döneminde birini diğerine tercih etmemi
+          gerektirecek güçlü bir klinik neden bugün yok.
         </p>
         <p>
-          Tahlilde bir sayı yükseldiğinde insanın içinden "tamam, işe yarıyor" demek geçer. Oysa o
-          sayı, merdiveni nasıl çıktığınızı henüz ölçmüyor. Muayenede bu yüzden aynı ayrımı tekrar
-          ederim: NAD+'ı yükseltmek kanıtlı olabilir; bunun sizi daha genç, daha dayanıklı ya da
-          daha uzun ömürlü yaptığı kanıtlı değil. Bu ayrımı bilmek, "denemek istiyorum" diyen
-          kişiyi de daha sakin bir yere getirir.
+          Tahlilde bir sayı yükselince "tamam, işe yarıyor" demek kolay. O sayı merdiveni nasıl
+          çıktığınızı henüz ölçmüyor. Muayenede bu yüzden aynı ayrımı tekrar ederim: NAD+'ı
+          yükseltmek kanıtlı olabilir; sizi daha genç, daha dayanıklı ya da daha uzun ömürlü
+          yaptığı kanıtlı değil.
         </p>
         <p>
           Bu takviyeyi soran hastalarımdan en sık duyduğum yanılgı şu: "NAD+'ı artırırsam
@@ -222,32 +201,23 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="fertilite">Fertilite İddiaları — Fareden Kadına Geçmeyen Basamak</h2>
         <p>
           Üreme tıbbında NAD+ başlığı özellikle hassastır. "Yumurta kalitesi" gibi duygusal yükü
-          yüksek bir konuda, laboratuvar ve hayvan çalışmalarından gelen umut çok kolay klinik
-          vaade dönüşebilir.
-        </p>
-        <p>
-          Bu yüzden kelimeleri burada daha yavaş seçiyorum. Gebelik isteyen bir kadının duyduğu
-          her cümle yalnızca bilgi taşımaz, beklenti de taşır.
+          yüksek bir konuda, laboratuvar umudu çok kolay klinik vaade dönüşebilir. Bu yüzden
+          kelimeleri burada daha yavaş seçiyorum.
         </p>
         <p>
           Fare çalışmalarında NMN ile yaşa bağlı yumurta kalitesi ve üreme kapasitesi üzerine
-          olumlu sonuçlar bildirildi <Evidence level={4} />.<sup><a href="#kaynak-8">[8]</a></sup> Bilimsel olarak önemli bir veri. Fakat
-          fare yumurtalığı ile insan doğurganlığı aynı klinik düzlemde durmuyor; konu gebelik ve
-          canlı doğum olduğunda aradaki basamak çok büyük.
-        </p>
-        <p>
-          İnsan tarafında elimizdeki veri büyük ölçüde laboratuvar düzeyinde. Örneğin insandan
-          alınmış olgunlaşmamış yumurta hücrelerinin kültür ortamında NMN ile incelendiği
-          çalışmalar var <Evidence level={2} />.<sup><a href="#kaynak-9">[9]</a></sup> Bu çalışmalar biyolojik bir olasılığı gösteriyor.
-          Bir kadına ağızdan NMN verildiğinde gebelik veya canlı doğum şansının arttığını ise
-          göstermiyor.
+          olumlu sonuçlar bildirildi <Evidence level={4} />.<sup><a href="#kaynak-8">[8]</a></sup> Fare yumurtalığı ile insan
+          doğurganlığı aynı klinik düzlemde durmuyor. İnsan tarafında elimizdeki veri büyük ölçüde
+          laboratuvar düzeyinde: insandan alınmış olgunlaşmamış yumurta hücrelerinin kültür
+          ortamında NMN ile incelendiği çalışmalar var <Evidence level={2} />.<sup><a href="#kaynak-9">[9]</a></sup> Bunlar biyolojik bir
+          olasılığı gösterir; ağızdan NMN alan bir kadında gebelik veya canlı doğum şansının
+          arttığını göstermez.
         </p>
         <p>
           Haziran 2026 itibarıyla, kadınlara NMN veya NR verilerek gebelik ya da canlı doğum
           sonucunda belirgin artış gösteren tamamlanmış, hakemli ve randomize bir insan çalışması
-          yok <Evidence level={2} />. Umudu küçümsemiyorum. Ama umutla kanıtı karıştırmak, iyi
-          niyetle bile olsa, karara gereğinden ağır bir yük bindirir. Gebelik planlıyorsanız bu
-          konuyu takviyeye başlamadan önce kadın hastalıkları ve doğum uzmanınızla konuşun.
+          yok <Evidence level={2} />. Gebelik planlıyorsanız bu konuyu takviyeye başlamadan önce
+          kadın hastalıkları ve doğum uzmanınızla konuşun.
         </p>
 
         <h2 id="guvenlik">Güvenlik ve Düzenleme — Kısa Vade Rahat, Uzun Vade Belirsiz</h2>
@@ -259,10 +229,12 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Mevcut çalışmalarda ciddi yan etki sinyali az <Evidence level={3} />.<sup><a href="#kaynak-6">[6]</a></sup> Uzun dönem veri ise
           sınırlı. "Ben kullandım, bir şey olmadı" deneyimi, toplum düzeyindeki güvenlik verisinin
-          yerini tutmaz. Kanser öyküsü, aktif kanser, bağışıklığı baskılayan (immünsüpresif)
-          tedavi, gebelik, emzirme ve gebelik arayışı gibi durumlarda "muhtemelen zararsızdır"
-          demek yetmez. Bunlardan biri sizde varsa, karar hekiminizle birlikte ve size özel
-          olarak verilmeli.
+          yerini tutmaz. Kanser öyküsü varsa konuyu kapatmam; önermek konusunda ise temkinliyim.
+          Özellikle hormon duyarlı kanser, yakın zamanda tamamlanmış tedavi veya yüksek nüks riski
+          varsa NAD+ takviyesini önermem; önce takip eden onkoloğunuzu dinlemenizi isterim. Aktif
+          kanser, bağışıklığı baskılayan (immünsüpresif) tedavi, gebelik, emzirme ve gebelik
+          arayışında da "muhtemelen zararsızdır" demek yetmez. Bunlardan biri sizde varsa karar
+          size özel verilir.
         </p>
         <p>
           Yasal durum da sabit değil. ABD'de NMN'nin takviye tanımı içindeki yeri 2022'de
@@ -297,28 +269,22 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="karar">Denemeyi Düşünüyorsanız Nereden Başlamalı?</h2>
         <p>
-          Peki biz ne yapıyoruz? Önce beklentiyi netleştiriyoruz; "hücresel yaşlanmayı geri
-          çevirmek" gibi büyük bir hedefi küçük sorulara bölüyoruz.
-        </p>
-        <p>
           Menopoz öncesinde ya da menopozda bu takviyeyi soran hastama ilk sorum şudur: "Bu
-          takviyeden hangi değişikliği bekliyorsunuz?" Ardından diğerleri gelir: Ne kadar süre?
-          Hangi risk? Hangi alternatif? Büyük vaadi küçük ve ölçülebilir sorulara indirdiğinizde
-          karar birden daha insani hâle gelir.
+          takviyeden hangi değişikliği bekliyorsunuz?" Ardından süre, risk ve alternatif gelir.
+          Büyük vaadi küçük ve ölçülebilir sorulara indirdiğinizde karar daha insani durur.
         </p>
         <p>
-          İkinci adım temeli kontrol etmek. İçiniz rahat olsun diye söyleyeyim: Bu takviyeleri
-          kullanmıyorsanız, kanıtlanmış bir faydadan geri kaldığınızı gösteren bir veri bugün yok.
-          Uyku, direnç egzersizi, düzenli hareket, yeterli protein, alkolde ölçülü olmak,
-          metabolik hastalıkların takibi ve eksikliklerin hedefli düzeltilmesi, uzun vadeli sağlık
-          için çok daha sağlam bir zemine sahip <Evidence level={4} />. NAD+ öncülleri bu zeminin
-          yerine geçmez.
+          İçiniz rahat olsun diye söyleyeyim: Bu takviyeleri kullanmıyorsanız, kanıtlanmış bir
+          faydadan geri kaldığınızı gösteren bir veri bugün yok. Uyku, direnç egzersizi, düzenli
+          hareket, yeterli protein, alkolde ölçülü olmak, metabolik hastalıkların takibi ve
+          eksikliklerin hedefli düzeltilmesi, uzun vadeli sağlık için çok daha sağlam bir zemine
+          sahip <Evidence level={4} />. NAD+ öncülleri bu zeminin yerine geçmez.
         </p>
         <p>
-          Üçüncü adım: Hâlâ düşünüyorsanız, bunu açık bir hedefi olan kısa süreli bir deneme
-          olarak hekiminizle konuşmak. "Kendimi gençleştirmek istiyorum" ölçülebilir bir hedef
-          sayılmaz. "Uyku, kas gücü, metabolik belirteçler ve yan etkiler açısından neyi takip
-          edeceğiz?" daha doğru bir soru.
+          Hâlâ düşünüyorsanız, bunu açık bir hedefi olan kısa süreli bir deneme olarak hekiminizle
+          konuşun. "Kendimi gençleştirmek istiyorum" ölçülebilir bir hedef sayılmaz. "Uyku, kas
+          gücü, metabolik belirteçler ve yan etkiler açısından neyi takip edeceğiz?" daha doğru bir
+          soru.
         </p>
         <p>
           Klinik pratiğimde bu denemeyi şöyle kurarım: Hasta örneğin enerji veya günlük
@@ -327,28 +293,23 @@ const articleSchemas = buildArticleSchemas({
           denemeyi bitiririm; yan etki olursa daha erken bırakırız. Kandaki NAD+ artışını tek başına
           devam gerekçesi saymam, çünkü insan çalışmalarında bu artışın hissedilir bir sağlık
           yararına dönüştüğü tutarlı biçimde gösterilmedi. Ateş basması veya uyku sorunu
-          belirginse, bunları ayrıca değerlendiririm.
+          belirginse bunları ayrıca değerlendiririm; NAD+ takviyesi bu sıranın sonuna gelir.
         </p>
         <p>
-          Bu konuşmada belirleyici olan sizin öykünüz. Kanser öyküsü, kullandığınız ilaçlar,
-          karaciğer ve böbrek durumunuz, gebelik planınız ve beklentiniz farklıysa karar da farklı
-          olur. Molekül aynı olabilir; risk-fayda dengesi herkes için aynı olmayabilir.
+          Kanser öyküsü, kullandığınız ilaçlar, karaciğer ve böbrek durumunuz, gebelik planınız ve
+          beklentiniz farklıysa karar da farklı olur. Molekül aynı olabilir; risk-fayda dengesi
+          herkes için aynı olmayabilir.
         </p>
 
         <h2 id="kapanis">Kapanış — Hücrede Önemli, Klinikte Açık Soru</h2>
         <p>
-          NAD+ bilimsel olarak canlı bir alan; klinikte ise ölçülü okunmayı hak ediyor. Mekanizma
-          gerçek, insan kanıtı sınırlı ve pazarlama dili çoğu zaman aradaki mesafeyi saklıyor.
+          NAD+ bilimsel olarak canlı bir alan; klinikte ölçülü okunmayı hak ediyor. Mekanizma
+          gerçek. İnsan kanıtı sınırlı. Kapağın üzerindeki üç vaat hâlâ üç ayrı soru.
         </p>
         <p>
-          Bu yazıda o mesafeyi görünür kılmaya çalıştım. Konuyu doktorunuzla açacaksanız üç
-          soruyla başlayabilirsiniz: Sağlık öykümde sakınca yaratabilecek bir durum var mı? Hangi
-          hedefi takip edeceğiz? Bu deneme, kanıtlı alışkanlıkların yerine mi geçiyor, yanına mı
-          ekleniyor?
-        </p>
-        <p>
-          Bu alanda acele etmek için bir neden yok. Kanıt birikmeye devam ediyor; sorularınız da
-          onunla birlikte netleşebilir.
+          Konuyu doktorunuzla açacaksanız üç soruyla başlayabilirsiniz: Sağlık öykümde sakınca
+          yaratabilecek bir durum var mı? Hangi hedefi takip edeceğiz? Bu deneme, kanıtlı
+          alışkanlıkların yerine mi geçiyor, yanına mı ekleniyor?
         </p>
         <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
         <p>
@@ -397,7 +358,13 @@ const articleSchemas = buildArticleSchemas({
         </ol>
       </ArticleProsePanel>
 
-      <ArticleFAQ id="sss" items={faqItems} class="mt-10" />
+      <ArticleFAQ
+        id="sss"
+        items={faqItems}
+        class="mt-10"
+        title="Dr. Aksoy'a sorular"
+        intro="NMN ile NR ayrımı, ateş basması veya uyku için sıra ve kanser öyküsünde kısa deneme hakkında kendi yanıtlarım."
+      />
 
       <RelatedReadings
         class="mt-14"

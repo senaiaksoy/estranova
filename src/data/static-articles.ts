@@ -939,7 +939,8 @@ export const staticArticles: StaticArticleEntry[] = [
   {
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
     title: 'NAD+ ve Hücresel Yaşlanma — Biyobelirteç ile Klinik Fayda Arasındaki Mesafe',
-    description: 'NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, metabolizma, biliş, uzun yaşam ve fertilite faydası için insan kanıtı hâlâ sınırlı.',
+    description:
+      'NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, metabolizma ve uzun yaşam faydası için insan kanıtı sınırlı. Mesafe sakin bir dille açıklanıyor.',
     publishedDate: '5 Haziran 2026',
     writerSlug: 'senai-aksoy',
     section: 'Bilimsel Pencere',

@@ -308,8 +308,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-09-28',
-    note: 'KC editör bu sohbet içinde humanize revizyonunun tıbbi onayını verdi; tıbbi denetleyici Dr. Alper Mumcu olarak belirlendi; kaynak bölümü eklendi; commit, push ve deploy yetkisi verildi. Konuya özgü iki yazar yanıtı ve doğrudan onay icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-09-28_nad-plus-hucresel-yaslanma.json dosyasında kayıtlıdır.',
+    approvedAt: '2026-10-25',
+    note: 'YENİDEN ONAY 25 Ekim 2026: KC (Doç. Dr. Senai Aksoy) bu sohbette tıbbi onayı sözlü bildirdi (“tıbbi onay tamam”) ve commit/push talimatı verdi; deploy istenmedi. Yazar Senai Aksoy; bağımsız tıbbi denetleyici Dr. Alper Mumcu (KC bildirimi, yazılı not yok). Kapsam: 25 Ekim 2026 audit/humanize — üst hero parent hub; Kısa Klinik Yanıt güvenlik sınırı; SSS 3 soru gerçek Dr. Aksoy yanıtları, başlık “Dr. Aksoy’a sorular”; SSS 3 kapanış “uygun”. 14 günlük 2026 NR–NMN karşılaştırması SSS 1’de hekim yanıtı, Kaynaklar’a künye eklenmedi. Evidence, dipnotlar ve Mumcu notu korundu. Kayıt: icerik/yazar-onaylari/senai-aksoy/klinik-katkilar/2026-10-25_nad-plus-hucresel-yaslanma-sss.json. Önceki 28 Eylül 2026 kaydı bu revizyonu kapsamaz: KC editör humanize tıbbi onayı; denetleyici Dr. Alper Mumcu; kaynak bölümü; commit/push/deploy; iki yazar yanıtı klinik-katkilar/2026-09-28_nad-plus-hucresel-yaslanma.json.',
   },
   {
     pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',

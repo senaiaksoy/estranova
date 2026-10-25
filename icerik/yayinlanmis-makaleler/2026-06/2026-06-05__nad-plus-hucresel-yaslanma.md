@@ -4,7 +4,7 @@ description: "NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, m
 writer: senai-aksoy
 publishedDate: "5 Haziran 2026"
 publishedDateIso: 2026-06-05
-modifiedDate: "28 Eylül 2026"
+modifiedDate: "25 Ekim 2026"
 exportScope: local-build
 url: /bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/
 section: "Bilimsel Pencere"
@@ -17,24 +17,18 @@ exportedAt: 2026-10-15
 
 Okumaya Başlamadan
 
-## Kısa Özet
+## Kısa Klinik Yanıt
 
 NMN ve NR gibi NAD+ öncülleri (vücudun NAD+ üretirken kullandığı maddeler), insanda
-kandaki NAD+ düzeyini yükseltebilir. Bugün
-en sağlam bildiğimiz şey bu. Bu yükselmenin kas gücüne, metabolizmaya, düşünme ve
-hafızaya, uzun yaşama veya yumurta kalitesine tutarlı biçimde yansıdığını ise henüz
-bilmiyoruz. Bu yazıda mekanizmanın heyecanını küçümsemeden, pazarlama dilinin atladığı
-boşluğu açıyorum: Kandaki bir değerin yükselmesi ile sağlığınızın gerçekten kazanması
-iki ayrı soru.
+kandaki NAD+ düzeyini yükseltebilir. Bu yükselmenin kas gücüne, metabolizmaya, düşünme
+ve hafızaya, uzun yaşama veya yumurta kalitesine tutarlı biçimde yansıdığı ise henüz
+gösterilmedi. Kanser öyküsü, bağışıklığı baskılayan tedavi, gebelik, emzirme veya gebelik
+arayışı varsa bu takviyeler kendi başına denenecek bir alan değildir.
 
 ## NAD+ — Hücrenin Enerji ve Onarım Koenzimi
 
-NAD+ konusunu açan herkesin sorusu er geç aynı yere gelir: "Peki bu benim hayatımda
-ne değiştirir?" Haklı bir soru. Cevabına geçmeden önce molekülün ne iş yaptığını
-konuşmamız gerekiyor.
-
-Belki siz de görmüşsünüzdür: Bir reklamda molekül anlatılır, birkaç satır sonra aynı
-molekül gençlik vaadine dönüşür. Bu alanda iddialar çok hızlı büyür.
+Eczane rafında kapağın üzerinde üç vaat yan yana durabiliyor: enerji, onarım, gençlik.
+Muayene odasında ise aynı kapağın üç ayrı soru olduğunu söylerim.
 
 NAD+ (nikotinamid adenin dinükleotid), hücrenin enerji üretiminde ve onarım yollarında
 merkezi rol oynayan bir koenzimdir; enzimlerin çalışması için gereken yardımcı bir
@@ -106,7 +100,8 @@ NR için de benzer bir ayrım var. Kısa vadeli insan çalışmalarında NAD+ me
 (NAD+ ile ilişkili moleküllerin bütünü) artış görülüyor ve NR genel olarak iyi tolere
 ediliyor (orta kanıt).<sup>[[7]](#kaynak-7)</sup> Kan basıncı, enflamasyon, kas dokusu ve sinir sistemiyle
 ilgili alanlarda bazı sinyaller de var. Ama bunlar henüz herkese önerilecek bir klinik
-uygulamaya dönüşecek büyüklükte değil.
+uygulamaya dönüşecek büyüklükte değil. Menopoz döneminde birini diğerine tercih etmemi
+gerektirecek güçlü bir klinik neden bugün yok.
 
 Tahlilde bir sayı yükseldiğinde insanın içinden "tamam, işe yarıyor" demek geçer. Oysa o
 sayı, merdiveni nasıl çıktığınızı henüz ölçmüyor. Muayenede bu yüzden aynı ayrımı tekrar
@@ -154,10 +149,12 @@ vermez.
 
 Mevcut çalışmalarda ciddi yan etki sinyali az (orta kanıt).<sup>[[6]](#kaynak-6)</sup> Uzun dönem veri ise
 sınırlı. "Ben kullandım, bir şey olmadı" deneyimi, toplum düzeyindeki güvenlik verisinin
-yerini tutmaz. Kanser öyküsü, aktif kanser, bağışıklığı baskılayan (immünsüpresif)
-tedavi, gebelik, emzirme ve gebelik arayışı gibi durumlarda "muhtemelen zararsızdır"
-demek yetmez. Bunlardan biri sizde varsa, karar hekiminizle birlikte ve size özel
-olarak verilmeli.
+yerini tutmaz. Kanser öyküsü varsa konuyu kapatmam; önermek konusunda ise temkinliyim.
+Özellikle hormon duyarlı kanser, yakın zamanda tamamlanmış tedavi veya yüksek nüks riski
+varsa NAD+ takviyesini önermem; önce takip eden onkoloğunuzu dinlemenizi isterim. Aktif
+kanser, bağışıklığı baskılayan (immünsüpresif) tedavi, gebelik, emzirme ve gebelik
+arayışında da "muhtemelen zararsızdır" demek yetmez. Bunlardan biri sizde varsa karar
+size özel verilir.
 
 Yasal durum da sabit değil. ABD'de NMN'nin takviye tanımı içindeki yeri 2022'de
 tartışmalı hâle geldi; 29 Eylül 2025 tarihli yeni bir kararla yeniden takviye çerçevesinde
@@ -212,7 +209,7 @@ işlevsellik için kısa bir deneme düşünüyorsa, başlangıçtaki durumunu b
 denemeyi bitiririm; yan etki olursa daha erken bırakırız. Kandaki NAD+ artışını tek başına
 devam gerekçesi saymam, çünkü insan çalışmalarında bu artışın hissedilir bir sağlık
 yararına dönüştüğü tutarlı biçimde gösterilmedi. Ateş basması veya uyku sorunu
-belirginse, bunları ayrıca değerlendiririm.
+belirginse bunları ayrıca değerlendiririm; NAD+ takviyesi bu sıranın sonuna gelir.
 
 Bu konuşmada belirleyici olan sizin öykünüz. Kanser öyküsü, kullandığınız ilaçlar,
 karaciğer ve böbrek durumunuz, gebelik planınız ve beklentiniz farklıysa karar da farklı
@@ -275,27 +272,41 @@ ABD Gıda ve İlaç Dairesi (FDA). [NMN'nin takviye tanımı içindeki durumuna 
 -
 Sandalova E ve arkadaşları. [NMN ve ürolitin A ürünlerinde etkin madde miktarının etiketle karşılaştırılması](https://doi.org/10.1007/s11357-024-01257-2). GeroScience, 2024.
 
-Pratik Sorular
+## Dr. Aksoy'a sorular
 
-## Sıkça Sorulan Sorular
+NMN ile NR ayrımı, ateş basması veya uyku için sıra ve kanser öyküsünde kısa deneme hakkında kendi yanıtlarım.
 
-Bu bölüm, makalenin sonunda en çok geri dönülen soruları kısa ve net biçimde toplar.
+### Menopoz döneminde NMN ile NR arasında pratikte bir tercih farkı var mı?
 
-### NMN veya NR kullanmak kandaki NAD+ düzeyini gerçekten yükseltir mi?
+Bugünkü bilgilerimizle, menopoz dönemindeki bir kadına NMN yerine NR’yi veya NR yerine NMN’yi özellikle tercih etmemi gerektirecek güçlü bir klinik neden yok.
 
-Kısa süreli insan çalışmalarında NMN ve NR gibi öncüllerin kandaki NAD+ göstergelerini artırabildiği görülüyor. Bu artışın kas gücü, düşünme ve hafıza, metabolizma veya uzun yaşam gibi sonuçlara da yansıdığı ise henüz gösterilmedi. Kandaki sayı yükselebilir; bunun sağlığınızda neyi değiştirdiği hâlâ açık bir soru.
+İkisi de vücudun NAD+ üretiminde kullandığı maddeler. İnsanlarda yapılan çalışmalarda her ikisinin de kandaki NAD+ düzeylerini artırabildiğini görüyoruz. NR biraz daha uzun süredir araştırılıyor ve hakkında daha fazla klinik güvenlilik verisi bulunuyor. Ancak bu, menopoz belirtilerinde daha etkili olduğu anlamına gelmiyor.
 
-### NAD+ yükselirse yaşlanma yavaşlar mı?
+2026’da yayımlanan, iki maddeyi doğrudan karşılaştıran bir çalışmada NR ve NMN’nin kandaki NAD+ düzeylerini benzer ölçüde artırdığı gösterildi. Çalışma yalnızca 14 gün sürdü ve menopoz belirtilerindeki iyileşmeyi değerlendirmedi.
 
-Bugün için bunu söylemek fazla iddialı olur. NAD+ hücresel enerji ve onarım yollarında önemli bir molekül ve bilimsel merakı hak ediyor. Fakat insanda yaşlanmayı yavaşlattığını veya ömrü uzattığını gösteren güçlü, uzun dönem klinik veri henüz yok.
+Hastalarıma hep aynı ayrımı hatırlatıyorum: Bir takviyenin kan testinde bir değeri yükseltmesi, kendimizi daha iyi hissettireceğini veya bir hastalığı önleyeceğini kanıtlamaz. Dolayısıyla benim için soru NMN mi, NR mi olduğundan önce, bu takviyeyi neden kullanmak istediğiniz. Ateş basmasını azaltmak, uykuyu düzeltmek veya yorgunluğu gidermek için düşünüyorsanız, bugün elimizde bu amaçlarla kullanabileceğimiz çok daha iyi araştırılmış seçenekler var.
 
-### NAD+ öncülleri yumurta kalitesini veya gebelik şansını artırır mı?
+### Ateş basması veya uyku için NAD+ düşünüyorsam, bu takviyeyi konuşmadan önce hangi kanıtlı seçenekler açılmalı?
 
-Fare çalışmalarında ve insandan alınmış yumurta hücreleriyle yapılan laboratuvar çalışmalarında ilgi çekici sinyaller var. Ancak bunlar, takviyeyi ağızdan alan bir kadında gebelik şansının arttığını göstermiyor. Haziran 2026 itibarıyla, kadına NMN veya NR verildiğinde gebelik ya da canlı doğum şansını artırdığını gösteren tamamlanmış ve güçlü bir insan çalışması yok. Gebelik planlıyorsanız bu konuyu kadın hastalıkları ve doğum uzmanınızla konuşmanız iyi olur.
+Önce asıl sorunun ne olduğunu anlamaya çalışıyorum. Gece sıcak basması nedeniyle mi uyanıyorsunuz, yoksa sıcak basması olmadan da uykuya dalmakta mı zorlanıyorsunuz? Bunların tedavisi aynı değil.
 
-### Aldığım ürünün etikette yazan içeriği gerçekten taşıdığını nasıl anlarım?
+Temel sorun sıcak basmaları ve gece terlemeleriyse, öncelikle menopoz hormon tedavisinin uygun olup olmadığına bakıyorum. Her kadına hormon tedavisi vermiyoruz. Yaş, menopozun üzerinden geçen süre, kişisel riskler ve tıbbi öykü birlikte değerlendirilir. Uygun hastalarda hormon tedavisi, sıcak basmalarını azaltmak için hâlâ en etkili seçenek.
 
-Çevrimiçi satılan bazı NMN ve NAD+ ürünlerinde etiket iddiası ile gerçek içerik arasında ciddi uyumsuzluklar bildirildi; bazılarında iddia edilen miktarın çok azı bulundu, bazılarında hedef bileşik hiç saptanmadı. Lot numarası, analiz sertifikası, üçüncü taraf testi ve üreticinin şeffaflığı bu konuda önemli ipuçları verir. Türkiye’de ürünün takviye edici gıda statüsü ve resmî bildirimi de ayrıca doğrulanmalı.
+Hormon kullanamayan veya kullanmak istemeyen kadınlarda da seçeneklerimiz var. Menopoza yönelik bilişsel davranışçı terapi, bazı antidepresanlar, gabapentin ve nörokinin reseptörlerini hedefleyen yeni ilaçlar bunlardan bazıları. Hangisini seçeceğimiz belirtilere ve diğer sağlık sorunlarına bağlı.
+
+Uyku sorunu ön plandaysa yaklaşımım biraz değişiyor. Önce gece terlemeleri dışında uykuyu bozan nedenlere bakıyorum: uyku apnesi, huzursuz bacak sendromu, tiroid sorunları, kullanılan ilaçlar veya kaygı. Özellikle kronik uykusuzlukta, uykusuzluğa yönelik bilişsel davranışçı terapiyi (CBT-I) ilk seçenekler arasında değerlendiriyorum. Düzenli hareket, kafein ve alkol kullanımının gözden geçirilmesi, uyku saatlerinin düzenlenmesi gibi alışkanlıklar da bu tedaviyi destekleyebilir.
+
+NAD+ takviyelerine ancak bunları konuştuktan sonra gelirim. Menopoz belirtileri için yararlı olabileceklerini düşündüren bazı ön araştırmalar bulunsa da, henüz standart tedavilerin yerine koyabileceğimiz kadar güçlü kanıtımız yok. Yeni bir takviyeyi yasaklamak için değil, işe yarama ihtimali daha yüksek olan seçenekleri kaçırmamanız için bu sırayı izliyorum.
+
+### Kanser öyküm var, şu an tedavi almıyorum. Kısa bir NAD+ denemesini nasıl konuşursunuz?
+
+Böyle bir durumda NAD+ takviyesini konuşmayı reddetmem, ancak önermek konusunda oldukça temkinli davranırım. Önce hangi kanser türünü geçirdiğinizi, tanının ne zaman konduğunu, tedavisinin nasıl tamamlandığını ve bugün hastalığın durumu hakkında neler bildiğimizi öğrenmek isterim. Uzun yıllardır hastalıksız izlenen bir kadınla tedavisini birkaç ay önce tamamlamış, nüks riski yüksek bir hastayı aynı şekilde değerlendirmem.
+
+Temkinli olmamın nedeni, NAD+’nin yalnızca sağlıklı hücrelerin değil, kanser hücrelerinin de enerji metabolizmasında ve DNA onarımında rol oynaması. Bazı laboratuvar ve hayvan çalışmalarında NAD+ düzeylerini artıran maddelerin belirli tümörlerde istenmeyen etkileri olabileceğine ilişkin bulgular var. Bunun tersine sonuç veren deneysel araştırmalar da mevcut. Dolayısıyla bu takviyelerin insanlarda kanser nüksüne neden olduğunu söyleyemeyiz. Aynı şekilde kanser öyküsü olan kadınlarda güvenli olduklarını da henüz söyleyemiyoruz.
+
+Takviyenin yalnızca birkaç hafta kullanılması, kanser açısından güvenli olduğu anlamına gelmiyor. Bu konuda güvenilir bir doz veya güvenli kullanım süresi belirlenmiş değil. Bu nedenle özellikle hormon duyarlı kanser öyküsü olan, yakın zamanda tedavi tamamlamış veya nüks riski yüksek bir hastada NAD+ takviyesini önermem. İstek devam ediyorsa önce takip eden onkoloğuyla görüşmesini isterim.
+
+Uzun süredir hastalıksız izlenen, onkoloğunun da sakınca görmediği bir hastada ise konuyu tamamen kapatmam. Beklenen yararın henüz kanıtlanmadığını, uzun dönem güvenlilik verilerinin bulunmadığını ve daha iyi araştırılmış seçeneklerimiz olduğunu açıkça anlatırım. Buna rağmen denemeyi düşünüyorsa, bunu otomatik olarak güvenli kabul etmek yerine mevcut ilaçları, olası etkileşimleri ve bireysel riskleri birlikte değerlendiririz. Benim yaklaşımım ne her NAD+ takviyesini tehlikeli ilan etmek ne de kanser tedavisi bitince bunları otomatik olarak güvenli saymaktır.
 
 Bilimsel Editör Notu
 
