@@ -25,9 +25,15 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'Reklam Vaadi ile Bilim Arası — Önce İsim Koymak' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveninde NAD+ Öncülleri' },
   { id: 'mekanizma-dusus', label: 'NAD+ Hücre Mekanizması ve Yaşla Düşüş' },
   { id: 'kanit-durumu', label: 'İnsan Çalışmalarının Bugünkü Durumu' },
-  { id: 'fayda-guvenlik', label: 'Olası Klinik Faydalar ve Güvenlik Sınırları' },
+  { id: 'bes-soru', label: 'Beş Soruda NAD+ Öncülleri' },
+  { id: 'iddialar', label: 'İnternette Dolaşan İddialar' },
+  { id: 'urun-serum', label: 'Ürün, Doz Sınırı ve Damardan Uygulama' },
+  { id: 'fayda-guvenlik', label: 'Güvenlik Sınırları ve Sık Bildirilen Şikâyetler' },
+  { id: 'menopoz', label: 'Menopoz ve 40 Sonrası İçin Ne Biliyoruz?' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
   { id: 'iletisim-sureci', label: 'Takviyeyi Düşünürken Hekimle Konuşmak' },
   { id: 'kaynaklar', label: 'Kaynaklar', numbered: false },
   { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular", numbered: false },
@@ -36,7 +42,7 @@ const tocEntries = [
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'NAD+ Takviyesi — Umut Etiketi ve Kanıt Sınırı';
 const articleDescription =
-  'NAD+ öncülleri NMN ve NR için insan çalışmaları ne gösteriyor? Menopozda beklenen yararı, güvenlik sınırlarını ve hekimle konuşulacak soruları inceliyoruz.';
+  'NMN ve NR kandaki NAD+ düzeyini yükseltiyor; peki sağlığa yansıyor mu? Kanıtın nerede durduğu, internetteki iddialar, damardan NAD+ ve Türkiye’deki doz sınırları.';
 const faqItems = articleFaqs['/zamansiz-yasam/deneysel/nad-plus-takviyesi/'] ?? [];
 const articleImage = '/images/library/editorial/nad-plus-takviyesi.webp';
 const articleSchemas = buildArticleSchemas({
@@ -45,12 +51,12 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '2 Mayıs 2026',
-  modifiedDate: '13 Ekim 2026',
+  modifiedDate: '26 Ekim 2026',
   image: articleImage,
   pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
-  keywords: ['NAD+', 'NAD Plus', 'NMN', 'NR', 'nikotinamid mononükleotid', 'nikotinamid ribozid', 'yaşlanma karşıtı', 'takviye', 'kanıt seviyesi', 'menopoz'],
+  keywords: ['NAD+', 'NAD Plus', 'NMN', 'NR', 'nikotinamid mononükleotid', 'nikotinamid ribozid', 'NAD serum', 'damardan NAD', 'yaşlanma karşıtı', 'takviye', 'kanıt seviyesi', 'menopoz'],
   faqItems,
   siteUrl,
 });
@@ -79,8 +85,8 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="2 Mayıs 2026"
-        lastUpdated="13 Ekim 2026"
-        readingMinutes={8}
+        lastUpdated="26 Ekim 2026"
+        readingMinutes={12}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/nad-plus-takviyesi-byline.webp"
         imageAlt="Pencere yanında oturup açık defterini inceleyen olgun kadın"
@@ -97,7 +103,13 @@ const articleSchemas = buildArticleSchemas({
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           NAD+, hücrenin enerji üretiminde görev alan bir koenzim; NMN ve NR ise vücudun NAD+ üretmek için kullandığı öncüllerdir.
-          Bu öncüllerin takviye olarak alınması, menopozda enerji artışı veya gençleşme için güvenilir biçimde kanıtlanmış bir çözüm değildir.
+          Ağızdan alınan NMN ve NR, kandaki NAD+ düzeyini güvenilir biçimde yükseltiyor. Bu artışın kas gücüne, bilişsel işleve veya
+          yaşam süresine yansıdığı gösterilemedi; şeker metabolizmasında ve tansiyonda yalnızca zayıf sinyaller var.
+        </p>
+        <p>
+          Bir yıl süren ve 410 kişinin katıldığı bir NR çalışmasında, Parkinson hastalarında yarar görülmedi. Kısa dönemde iyi tolere
+          ediliyorlar; yıllarca kullanımın sonuçlarını bilmiyoruz. Gebelik, emzirme, kanser tedavisi veya düzenli ilaç kullanımı varsa
+          başlamadan önce hekimle konuşmak gerekir.
         </p>
       </ArticleSummary>
 
@@ -110,7 +122,27 @@ const articleSchemas = buildArticleSchemas({
         <p>
           NMN, nikotinamid mononükleotid; NR ise nikotinamid ribozid adının kısaltması. İkisi de vücudun NAD+ üretirken
           kullandığı yapı taşları. Takviyeden beklediğiniz yararı anlamak içinse hücredeki görevlerinden çok, insan
-          çalışmalarında ölçülen sonuçlara bakmak gerekiyor. Güçlü bir vaat ile eksik kanıt arasında kalmak kafa karıştırabilir.
+          çalışmalarında ölçülen sonuçlara bakmak gerekiyor.
+        </p>
+
+        <h2 id="kanit-merdiveni">Kanıt Merdiveninde NAD+ Öncülleri Nerede Duruyor?</h2>
+        <p>
+          NAD+ öncülleri merdivenin üçüncü basamağında güçlü kanıta sahip; dördüncü basamakta ise olumlu bulgu az, sonuçların çoğu
+          nötr. Yani kandaki düzeyi yükseltiyorlar, ama bunun sağlığa yansıdığı henüz gösterilemedi.
+        </p>
+        <p>
+          Bir takviyenin "işe yarayıp yaramadığı" tek bir soru değil. Kanıt, basamak basamak ilerleyen bir merdivene benziyor:
+        </p>
+        <ol>
+          <li><strong>Hücrede mekanizma:</strong> NAD+ hücrenin enerji üretiminde ve onarımında görev alıyor. Bu iyi biliniyor<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.</li>
+          <li><strong>Hayvanda ömür:</strong> Farelerde ilaçları standart koşullarda test eden büyük bir programda NR, iki cinsiyette de yaşam süresini uzatmadı<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.</li>
+          <li><strong>İnsanda kan değeri:</strong> NMN ve NR, kandaki NAD+ düzeyini tutarlı biçimde yükseltiyor; ikisini doğrudan karşılaştıran bir çalışmada artış benzer bulundu <Evidence level={4} /><sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a>, <a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup>.</li>
+          <li><strong>İnsanda işlev:</strong> Kas gücü, şeker ve yağ metabolizması, bilişsel işlev gibi ölçülebilir sonuçlarda bulgular çoğunlukla nötr<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.</li>
+          <li><strong>İnsanda güvenlik:</strong> Haftalar ile bir yıl arasında süren çalışmalarda ciddi yan etkiler plaseboya göre artmadı<sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>; ancak Parkinson hastalarında bir yıllık NR kullanımı plasebodan daha kötü klinik sonuçlarla ilişkili bulundu. Yıllarca kullanımın sonuçları bilinmiyor.</li>
+          <li><strong>Ömür ve hastalık:</strong> İnsanda yaşam süresi, kalp krizi, inme veya demans üzerine veri yok.</li>
+        </ol>
+        <p>
+          İnsan çalışması var; çoğu, kan değerinin ötesinde bir yarar bulamadı.
         </p>
 
         <h2 id="mekanizma-dusus">NAD+ Hücre Mekanizması ve Yaşla Düşüş</h2>
@@ -126,51 +158,242 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Hayvan ve insan dokusu çalışmaları, çeşitli dokulardaki NAD+ düzeylerinin yaşla birlikte azaldığına işaret ediyor<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.
           Hücresel stres ve iltihabi süreçlerle NAD+ tüketen enzimlerin aktivitesinin artması, bu azalmaya katkıda bulunabilecek mekanizmalar arasında.
-          Yaşlanmada NAD+ düşüşünün neden mi yoksa sonuç mu olduğu hâlâ açık bir soru. Bu yüzden "eksikliği yerine koyma" mantığı,
-          yaşlanmayı durdurma vaadi gibi okunmamalı. Mekanizma makul; klinik yarar henüz net değil.
+          Yaşlanmada NAD+ düşüşünün neden mi yoksa sonuç mu olduğu hâlâ açık bir soru. Bu yüzden "eksikliği yerine koyma" fikri mantıklı
+          görünse de yaşlanmayı durdurma vaadi sayılamaz. Mekanizma makul; klinik yarar henüz net değil.
         </p>
 
         <h2 id="kanit-durumu">İnsan Çalışmalarının Bugünkü Durumu</h2>
         <p>
-          NMN ve NR takviyeleri bazı çalışmalarda kandaki NAD+ gibi ölçülebilir biyolojik göstergeleri artırıyor<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a>, <a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
-          Ancak uzun vadeli sağlık yararı ve menopoz belirtileri için mevcut veriler, genel popülasyona
-          standart bir takviye önerisi kurmaya yetmiyor.
+          Çalışmaların ortak tablosu şu: kandaki NAD+ artıyor, ama ölçülen sağlık sonuçlarının çoğu değişmiyor.
         </p>
         <p>
-          Bu yazıdaki iki plasebo kontrollü çalışmadan biri NMN'nin metabolizmaya etkisini, diğeri NR'nin güvenliğini inceledi.
-          NMN çalışmasını menopoz sonrası dönemdeki, prediyabeti (diyabet öncesi evre) olan ve fazla kilolu ya da obez 25 kadın tamamladı;
-          uygulama 10 hafta sürdü<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
-          NR çalışmasına 140 yetişkin alındı; takviye 8 hafta boyunca kullanıldı<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
-          Bu iki çalışmanın süresi haftalarla ölçülüyor; yıllarca kullanımın sonuçlarını henüz yeterince bilmiyoruz.
-        </p>
-        <p>
-          NMN çalışmasında kasın insüline yanıtı arttı <Evidence level={3} /><sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.
+          Menopoz sonrası dönemdeki, prediyabeti (diyabet öncesi evre) olan ve fazla kilolu ya da obez 25 kadının tamamladığı
+          10 haftalık bir çalışmada NMN, kasın insüline yanıtını artırdı <Evidence level={3} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
           Ancak kas gücünde ve kasın ne kadar çabuk yorulduğunda iyileşme görülmedi. Yani yarar, ölçülen her sonuca yayılmadı.
-          Öte yandan yaşam süresi, kalp krizi ve inme gibi kalp-damar olaylarının önlenmesi ya da demans gibi uzun vadeli klinik sonuçlara dair
-          kontrollü ve geniş kapsamlı insan verisi henüz yok.
+        </p>
+        <p>
+          Sonraki yıllarda çalışmalar çoğaldı ve birleştirilerek incelendi. 60 yaş üzerindeki yetişkinlerde NMN ve NR, kas kütlesini
+          ve kas işlevini korumada yarar göstermedi <Evidence level={3} /><sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup>.
+          Dokuz çalışmayı birleştiren başka bir analiz ise yürüme hızında küçük bir yarar ve insülin direnci göstergesinde (HOMA-IR)
+          düşüş bildirdi<sup><a href="#kaynak-20" class="text-primary hover:underline">[20]</a></sup>; analizlerin sonuçları birbiriyle tutarlı değil.
+          Sekiz randomize çalışmayı birleştiren bir analizde NMN; açlık şekeri, insülin, HbA1c ve kan yağları üzerinde anlamlı bir
+          değişiklik yaratmadı <Evidence level={3} /><sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>.
+          Bir başka analiz, 12 çalışmanın beşinde yanlılık riskinin yüksek olduğunu ve alandaki yararların abartılmış olabileceğini
+          bildirdi<sup><a href="#kaynak-21" class="text-primary hover:underline">[21]</a></sup>.
+          Hafif bilişsel bozukluğu olan yaşlılarda 12 haftalık NR, kandaki NAD+ düzeyini iki katına çıkardı; bilişsel işlevde ise
+          iyileşme görülmedi <Evidence level={2} /><sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup>.
+        </p>
+        <p>
+          Bir yıl süren bir çalışma da var. Erken evre Parkinson hastası 410 kişi, 52 hafta boyunca günde
+          1000 mg NR ya da plasebo aldı. NR grubunda hastalık skoru plasebo grubuna göre 2,7 puan daha fazla kötüleşti; motor dışı
+          belirtiler de NR ile daha fazla arttı <Evidence level={4} /><sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
+          Yazarlar, NR'nin klinik sonuçları iyileştirmediğini ve plasebodan daha kötü sonuçlarla ilişkili olduğunu bildirdi. Aradaki
+          fark (2,7 puan), çalışmanın klinik olarak önemli kabul ettiği kötüleşme eşiğinin (5,2 puan) altında kaldı; yani NR'nin
+          hastalığı belirgin biçimde kötüleştirdiği söylenemez, ama yarar da sağlamadı. "Beyni korur" iddiası, büyük bir insan
+          çalışmasında desteklenmedi.
+        </p>
+        <p>
+          Bu sonucu zaten NR ya da NMN kullanan bir hastama şöyle anlatırım: Parkinson hastalarındaki sonuç, menopozdaki sağlıklı
+          kadınlara doğrudan uygulanamaz; ama bir maddenin düzeyini artırmanın sağlık yararı getireceği anlamına gelmediğini
+          hatırlatıyor. Hastayı korkutmak istemem, ancak yeni ve güçlü bir araştırma beklentilerimizi desteklemiyorsa bunu görmezden
+          de gelmem. Yalnızca yaşlanmayı geciktirmek için kullanan birine, devam etmesini gerektiren güçlü bir kanıt bulunmadığını
+          açıkça söylerim.
         </p>
         <p>
           Mayıs 2026'da yayımlanan bir pilot araştırmada 40 kadın, NR ile pterostilben adlı bir maddenin birleşimini yedi gün kullandı.
-          Belirti bildiren 32 kadında sıcak basması, uyku ve şişkinlik açısından iyileşmeler bildirildi <Evidence level={1} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+          Belirti bildiren 32 kadında sıcak basması, uyku ve şişkinlik açısından iyileşmeler bildirildi <Evidence level={1} /><sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a></sup>.
           Ancak plasebo grubu yoktu ve katılımcılar ne kullandıklarını biliyordu. Çalışma üretici şirket tarafından finanse edildi;
           bazı yazarlar şirket çalışanıydı. Sonuçlar NR ile pterostilbenin birlikte etkisini yansıtıyor; uzun dönem yarar ve güvenlik ise bu kısa çalışmanın kapsamı dışında.
         </p>
 
-        <h2 id="fayda-guvenlik">Olası Klinik Faydalar ve Güvenlik Sınırları</h2>
+        <h2 id="bes-soru">Beş Soruda NAD+ Öncülleri</h2>
         <p>
-          Kısa süreli denemelerde NMN ve NR genellikle iyi tolere edildi; yani kullananlarda belirgin bir yan etki sorunu görülmedi<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a>, <a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
-          Ancak bu sonuçlar 8–10 haftalık kullanımı kapsıyor; yıllarca kullanım ya da kanser tedavisi gibi özel durumlarda kullanım bu çalışmaların kapsamı dışında kaldı.
+          Tek bir kanıt notu bu takviyeleri anlatmaya yetmiyor. Aşağıdaki beş soru, kararı etkileyen farklı yanları ayrı ayrı gösteriyor.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Soru</th>
+                <th class="p-3 font-semibold">Bugünkü yanıt</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Sağlığa yararı gösterildi mi?</td>
+                <td class="p-3">Sınırlı. Kan değeri yükseliyor; kas, metabolizma ve bilişsel sonuçlar çoğunlukla değişmiyor<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a>, <a href="#kaynak-6" class="text-primary hover:underline">[6]</a>, <a href="#kaynak-7" class="text-primary hover:underline">[7]</a>, <a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Güvenliği ne kadar biliniyor?</td>
+                <td class="p-3">Bir yıla kadar orta düzeyde. Daha uzun kullanım, gebelik ve emzirme için veri yok<sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Biyolojik olarak mantıklı mı?</td>
+                <td class="p-3">Orta. NAD+ yaşla azalıyor; ama bu düşüş yaşlanmanın nedeni mi sonucu mu, bilinmiyor<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Türkiye'de ne kadarı yasal?</td>
+                <td class="p-3">Takviyede yasal üst sınır var (NMN günde 50 mg, NR günde 300 mg); NMN çalışmalarında kullanılan miktarın çok altında. Damardan uygulanan NAD+ için ruhsatlı ilaç yok<sup><a href="#kaynak-14" class="text-primary hover:underline">[14]</a>, <a href="#kaynak-15" class="text-primary hover:underline">[15]</a>, <a href="#kaynak-16" class="text-primary hover:underline">[16]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Bırakınca ne olur?</td>
+                <td class="p-3">Bilmiyoruz. Bırakma sonrasını inceleyen bir çalışmaya rastlamadık.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="iddialar">İnternette Dolaşan İddialar Neyle Karşılaşıyor?</h2>
+        <p>
+          İddiaların bir kısmı test edilip desteklenmedi, bir kısmı sınırlı olarak test edildi, bir kısmı için kontrollü çalışmaya
+          rastlamadık, bir kısmı da bu haliyle test edilemiyor. Bu ayrımı bilmek, reklam metnini okumayı kolaylaştırıyor.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Ne biliyoruz?</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Kasları güçlendirir</td>
+                <td class="p-3">Test edildi, desteklenmedi<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Beyni korur, hafızayı güçlendirir</td>
+                <td class="p-3">Test edildi, desteklenmedi<sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Şeker metabolizmasını düzeltir</td>
+                <td class="p-3">Tek çalışmada kasın insüline yanıtı arttı; birleştirilmiş analizlerin çoğunda kan şekeri değişmedi, bir analiz ise insülin direnci göstergesinde düşüş bildirdi<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a>, <a href="#kaynak-7" class="text-primary hover:underline">[7]</a>, <a href="#kaynak-20" class="text-primary hover:underline">[20]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Tansiyonu düşürür</td>
+                <td class="p-3">Küçük bir düşüş sinyali var; yazarlar bunu ön bulgu sayıyor <Evidence level={2} /><sup><a href="#kaynak-17" class="text-primary hover:underline">[17]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Sıcak basmasını ve uykuyu iyileştirir</td>
+                <td class="p-3">Menopozda yalnızca plasebosuz, yedi günlük bir pilot çalışma var<sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a></sup>. Yaşlılarda 12 haftalık bir NMN çalışmasında öğleden sonra alanlarda uykululuk ve kalkıp oturma testi düzeldi; plasebo gruplarında da düzelme görüldü<sup><a href="#kaynak-19" class="text-primary hover:underline">[19]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Yumurta kalitesini artırır</td>
+                <td class="p-3">Yalnızca hayvan ve laboratuvar verisi<sup><a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup>; insanda randomize bir çalışma kayıtlı, sonucu henüz yayımlanmadı<sup><a href="#kaynak-22" class="text-primary hover:underline">[22]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Enerji verir, yorgunluğu azaltır, cildi gençleştirir</td>
+                <td class="p-3">Yorgunluk için yaşlılarda 12 haftalık tek bir kontrollü çalışma var; sonuçlar plasebo gruplarındaki düzelmeyle karışıyor<sup><a href="#kaynak-19" class="text-primary hover:underline">[19]</a></sup>. Cilt için ağızdan alınan NMN veya NR ile kontrollü bir çalışmaya rastlamadık.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Hücreleri gençleştirir, ömrü uzatır</td>
+                <td class="p-3">Bu haliyle insanda test edilemiyor; farede NR yaşam süresini uzatmadı<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Bir hasta "enerjim arttı" dediğinde bunu ciddiye alırım; kendini daha enerjik hissetmesi onun için gerçek bir deneyimdir.
+          Ama aynı dönemde daha iyi uyumaya başlamış, yürüyüşlerini artırmış ya da beslenmesini değiştirmiş olabilir; plasebo etkisi de
+          işin içinde. Bu yüzden somut sorarım: Öğleden sonra dinlenme zorunluluğu azaldı mı? Eskiden yapamadığı yürüyüşleri yapabiliyor
+          mu? Değişim birkaç günden uzun sürdü mü? Hissedilen iyileşmeyi küçümsemem, ama onu takviyenin kanıtlanmış etkisiyle de
+          karıştırmam.
+        </p>
+
+        <h2 id="urun-serum">Ürün, Doz Sınırı ve Damardan Uygulama</h2>
+        <p>
+          Türkiye'deki yasal üst sınırlar, NMN çalışmalarında kullanılan miktarların çok altında; NR için fark daha küçük. Bu yüzden
+          çalışma sonuçları raftaki ürünlere doğrudan aktarılamaz.
         </p>
         <p>
-          Sekiz haftalık NR çalışmasında, araştırılan dozlarda yan etkiler plasebo grubundan anlamlı biçimde farklı değildi <Evidence level={3} /><sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
-          Makalenin üç yazarından ikisi takviyenin üreticisi olan şirketle bağlantılıydı.
-          Bu bulgular incelenen NR ürününe ait; NMN ve diğer ticari NAD+ formülleri için ayrı veri gerekir. Çalışmaya alınanlar fazla kilolu fakat
-          genel olarak sağlıklı yetişkinlerdi; gebe ve emziren kadınlar araştırmaya alınmadı<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.
+          Bakanlığın 21 Ekim 2026 tarihli listesine göre Türkiye'de NMN takviye edici gıdalarda günde en fazla 50 mg, NR ise günde en fazla 300 mg ile kullanılabiliyor<sup><a href="#kaynak-14" class="text-primary hover:underline">[14]</a>, <a href="#kaynak-15" class="text-primary hover:underline">[15]</a></sup>.
+          NR için hamile ve emziren kadınlarda yasal üst sınır daha düşük, günde 230 mg<sup><a href="#kaynak-15" class="text-primary hover:underline">[15]</a></sup>;
+          bu bir güvenlik kanıtı değil, bir kullanım sınırı.
+          Oysa NMN çalışmalarında günde 250 ile 2000 mg arasında miktarlar kullanıldı<sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup>;
+          NR için sekiz haftalık bir çalışmada 100, 300 ve 1000 mg denendi; kandaki NAD+ artışı dozla yükseldi<sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
+          Parkinson çalışmasında NR günde 1000 mg verildi<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
+          Bu bilgi bir doz önerisi değil; kanıtın hangi koşulda elde edildiğini gösteriyor.
+        </p>
+        <p>
+          Bakanlık, onay verdiği takviye edici gıdaların listesini yayımlıyor<sup><a href="#kaynak-26" class="text-primary hover:underline">[26]</a></sup>. Kullandığınız ya da kullanmayı düşündüğünüz ürünün
+          bu listede olup olmadığına bakmak, içerik ve üretim denetimi hakkında fikir verir.
+        </p>
+        <p>
+          Damardan uygulanan NAD+ serumları ise ayrı bir konu. Ekim 2025'e kadar yayımlanan çalışmaları tarayan bir derleme, bu uygulamanın
+          yaşlanma veya iyi oluş amacıyla test edildiği bir sonuç çalışması bulamadı<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>. Ticari bir merkezin
+          kayıtlarına dayanan geriye dönük bir çalışmada, damardan NAD+ alanlarda orta ile şiddetli mide-bağırsak şikâyetleri,
+          kalp hızında artış ve göğüste baskı bildirildi. Şikâyetler infüzyon bitince geçti; infüzyon ortalama 97 dakika
+          sürdü<sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup>. Türkiye'de NAD+ içeren ruhsatlı bir
+          ilaç bulunmuyor<sup><a href="#kaynak-16" class="text-primary hover:underline">[16]</a></sup>.
+        </p>
+
+        <h2 id="fayda-guvenlik">Güvenlik Sınırları ve Sık Bildirilen Şikâyetler</h2>
+        <p>
+          Kısa ve orta vadeli çalışmalarda NMN ve NR genellikle iyi tolere edildi. Yıllarca kullanım ve özel durumlar ise bu
+          çalışmaların kapsamı dışında kaldı.
+        </p>
+        <p>
+          On beş randomize çalışmayı birleştiren bir analizde (güvenlik sonuçlarına on çalışma katkı verdi), 14 gün ile 24 hafta
+          arasında kullanılan NMN genel ya da ciddi yan etkileri ve karaciğer enzimlerini artırmadı <Evidence level={3} /><sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup>.
+          Sekiz haftalık bir NR çalışmasında da yan etkiler plasebo grubundan anlamlı biçimde farklı değildi <Evidence level={3} /><sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>;
+          bu çalışmanın üç yazarından ikisi takviyenin üreticisi olan şirketle bağlantılıydı. Parkinson çalışmasında ciddi yan etkiler
+          NR grubunda plasebo grubundan daha seyrek görüldü<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
+        </p>
+        <p>
+          Satış ve klinik tanıtım sayfalarında baş ağrısı, yüz kızarması, uyku bozukluğu ve mide şikâyetleri sık anılıyor; bunlar
+          kontrollü veri değil, tanıtım metinleri. Kontrollü çalışmalarda toplam yan etkiler plasebodan farklı çıkmadı; bir NR
+          çalışmasında kızarma hiç bildirilmedi<sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>. Yine de takviyeye
+          başladıktan sonra yeni bir şikâyet gelişirse hekimle konuşmak gerekir.
         </p>
         <p>
           Aktif kanser tedavisi, kanser nedeniyle takip veya bağışıklığı baskılayan tedavi varsa, kullanımı ilgili hekimle değerlendirmek gerekir.
           Bu, söz konusu gruplarda kanıtlanmış bir ilaç etkileşimi veya insanlarda gösterilmiş bir kanser riski iddiası değil;
           uzun dönem güvenlik belirsizliği karşısında klinik ihtiyattır.
+        </p>
+
+        <RedFlagBox
+          intro="Aşağıdaki durumlar, takviye kullanımı öncesinde veya kullanım sırasında hekiminizle konuşmanız gereken noktaları hatırlatır."
+          markers={[
+            'Aktif kanser tedavisi, kanser nedeniyle takip veya bağışıklığı baskılayan bir tedavi (NMN/NR kullanımına başlamadan önce ilgili hekimlerle değerlendirilmelidir; uzun dönem güvenlik verileri sınırlıdır)',
+            'Düzenli reçeteli ilaç kullanımı (ilaç-takviye etkileşimlerine dair veri sınırlıdır)',
+            'Gebelik veya emzirme dönemleri (bu yazıda ele alınan çalışmalar bu dönemlerdeki güvenliği göstermiyor)',
+            'Araştırmalarda kullanılan miktarları aşan, kontrolsüz kullanım (daha yüksek dozun ek yarar sağladığı gösterilmedi)',
+            'Damardan NAD+ uygulaması sırasında göğüste baskı, çarpıntı, nefes darlığı veya baygınlık hissi',
+            'Takviye kullanımına başladıktan sonra yeni gelişen bulantı, baş ağrısı veya döküntü gibi şikâyetlerin varlığı',
+          ]}
+          footnote="Bu liste klinik ihtiyat içindir. Kısa dönem araştırmaların kapsamı ve dışlanan gruplar güvenlik bölümünde kaynaklarıyla açıklanmıştır."
+        />
+
+        <h2 id="menopoz">Menopoz ve 40 Sonrası İçin Ne Biliyoruz?</h2>
+        <p>
+          Menopoza özel veri çok az: kadınlarla yapılmış iki küçük çalışma var.
+        </p>
+        <p>
+          İnsülin yanıtını inceleyen NMN çalışmasının katılımcıları menopoz sonrası kadınlardı<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+          Sıcak basması ve uykuya bakan NR ile pterostilben çalışması da kadınlarda yapıldı, ama plasebosuzdu<sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a></sup>.
+          Şeker metabolizması analizinde katılımcıların yaklaşık yarısı<sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>,
+          Parkinson çalışmasında ise üçte biri kadındı<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
+          Hormon tedavisi kullanan kadınlarda NMN ya da NR'nin etkisini veya güvenliğini inceleyen bir çalışmaya rastlamadık.
+        </p>
+        <p>
+          Perimenopozda sık duyulan "yumurta kalitesini artırır" iddiası bugün yalnızca hayvan ve laboratuvar verisine
+          dayanıyor<sup><a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup>.
+        </p>
+
+        <h2 id="bilinmeyenler">Henüz Bilmediklerimiz ve Yakında Öğreneceklerimiz</h2>
+        <p>
+          En önemli açık soru, sağlıklı insanlarda yıllarca kullanımın ne getirdiği. Bunu yanıtlayacak bir çalışma henüz yok.
+        </p>
+        <p>
+          Kandaki NAD+ düzeyinin ölçümü de laboratuvarlar arasında henüz standart değil; bir çalışmadaki "iki kat artış" ile
+          diğerindeki aynı şeyi anlatmayabilir. Bu ölçümü standartlaştırmayı hedefleyen bir çalışma sürüyor<sup><a href="#kaynak-25" class="text-primary hover:underline">[25]</a></sup>.
+        </p>
+        <p>
+          Önümüzdeki yıllarda sonuçlanması beklenen çalışmalar arasında, menopoz sonrası kadınlarda NR ile egzersizin tansiyona
+          etkisini inceleyen bir çalışma<sup><a href="#kaynak-23" class="text-primary hover:underline">[23]</a></sup>,
+          düşük yumurtalık rezervinde NMN'nin tüp bebek sonuçlarına etkisine bakan randomize bir çalışma<sup><a href="#kaynak-22" class="text-primary hover:underline">[22]</a></sup>
+          ve Alzheimer hastalığında iki yıllık NR kullanımını test eden daha büyük bir çalışma<sup><a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup>
+          var. Bu sonuçlar yayımlandıkça yazıyı güncelleyeceğiz.
         </p>
 
         <h2 id="iletisim-sureci">Takviyeyi Düşünürken Hekimle Konuşmak</h2>
@@ -186,6 +409,14 @@ const articleSchemas = buildArticleSchemas({
           NAD+ öncüllerini denemeyi planlıyorsanız, jinekoloğunuz ya da iç hastalıkları uzmanınızla görüşürken şu soruları yanınıza
           almanız işinize yarar: Mevcut sağlık geçmişim ve kullandığım ilaçlar açısından bu takviyenin güvenliği nasıl değerlendirilmelidir?
           Olası etkileri hangi sürede ve hangi ölçümlerle izleyeceğiz?
+        </p>
+        <p>
+          Denemek isteyen ve belirgin bir risk faktörü bulunmayan bir hastada, başlamadan önce neyi iyileştirmeyi beklediğimizi
+          belirlerim: yorgunluğu günlük yaşamda nasıl ölçeceğimizi, uyku için kaç kez uyandığını, sabah ne kadar dinlenmiş
+          kalktığını ya da gündüz uykululuğunu. Dört ila sekiz haftalık bir değerlendirme aralığı pratik olabilir; ama bu süre
+          NAD+ takviyeleri için doğrulanmış bir deneme protokolü değildir. O sürenin sonunda belirgin bir yarar yoksa devam etmesini
+          önermem; yan etki gelişirse değerlendirme tarihini beklemeyiz. Devam kararını kandaki NAD+ düzeyine göre vermeyi de doğru
+          bulmuyorum, çünkü bu değerin yükselmesiyle daha sağlıklı yaşamak arasında henüz doğrulanmış bir klinik ilişki yok.
         </p>
         <p>
           Yaşlanma karşıtı bir takviyeyi düşünürken uyku, dengeli beslenme ve düzenli egzersiz gibi temel alışkanlıkları geri plana atmamak gerekir.
@@ -204,37 +435,145 @@ const articleSchemas = buildArticleSchemas({
             <span class="block mt-0.5 text-ink/50">(NAD+ metabolizmasının hücresel onarım, mitokondriyal fonksiyon ve yaşlanma süreçlerindeki rollerine dair derleme.)</span>
           </li>
           <li id="kaynak-2">
+            Harrison DE et al. "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex."
+            <em>Aging Cell</em>. 2021;20(5):e13328.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33788371/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">33788371</a>
+            <span class="block mt-0.5 text-ink/50">(Farelerde ilaçları üç merkezde standart protokolle test eden programın NR sonucu: iki cinsiyette de yaşam süresi uzamadı.)</span>
+          </li>
+          <li id="kaynak-3">
+            Gallagher C et al. "NAD⁺ supplementation for anti-aging and wellness: A PRISMA-guided systematic review of preclinical and clinical evidence."
+            <em>Ageing Res Rev</em>. 2026;116:103057.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41655607/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41655607</a>
+            <span class="block mt-0.5 text-ink/50">(33 insan ve 80 kemirgen çalışmasını tarayan sistematik derleme; damardan NAD+ için uygun sonuç çalışması bulunamadığını bildiriyor.)</span>
+          </li>
+          <li id="kaynak-4">
             Yoshino M et al. "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women."
             <em>Science</em>. 2021;372(6547):1224–1229.
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33888596/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">33888596</a>
             <span class="block mt-0.5 text-ink/50">(Menopoz sonrası dönemde, prediyabeti olan kadınlarda NMN takviyesinin kasın insüline duyarlılığı üzerindeki etkilerini inceleyen klinik çalışma.)</span>
           </li>
-          <li id="kaynak-3">
+          <li id="kaynak-5">
             Conze D et al. "Safety and Metabolism of Long-term Administration of NIAGEN (Nicotinamide Riboside Chloride) in a Randomized, Double-Blind, Placebo-controlled Clinical Trial of Healthy Overweight Adults."
             <em>Sci Rep</em>. 2019;9(1):9772.
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31278280/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">31278280</a>
             <span class="block mt-0.5 text-ink/50">(NR takviyesinin güvenliğini, yan etkilerini ve dozla artan NAD+ düzeylerini değerlendiren sekiz haftalık insan çalışması; üç yazardan ikisinin üretici şirketle bağlantısı bildiriliyor.)</span>
           </li>
-          <li id="kaynak-4">
+          <li id="kaynak-6">
+            Prokopidis K et al. "The Effect of Nicotinamide Mononucleotide and Riboside on Skeletal Muscle Mass and Function: A Systematic Review and Meta-Analysis."
+            <em>J Cachexia Sarcopenia Muscle</em>. 2025;16(3):e13799.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/40275690/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">40275690</a>
+            <span class="block mt-0.5 text-ink/50">(Ortalama yaşı 60'ın üzerindeki yetişkinlerde NMN ve NR'nin kas kütlesi ve işlevine etkisini birleştiren meta-analiz.)</span>
+          </li>
+          <li id="kaynak-7">
+            Chen F et al. "Effects of Nicotinamide Mononucleotide on Glucose and Lipid Metabolism in Adults: A Systematic Review and Meta-analysis of Randomised Controlled Trials."
+            <em>Curr Diab Rep</em>. 2024;25(1):4.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39531138/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39531138</a>
+            <span class="block mt-0.5 text-ink/50">(342 orta yaşlı ve yaşlı yetişkini kapsayan sekiz randomize çalışmanın birleşik analizi; katılımcıların %49'u kadın.)</span>
+          </li>
+          <li id="kaynak-8">
+            Martens CR et al. "A phase-II randomized controlled pilot study of nicotinamide riboside supplementation in older adults with amnestic mild cognitive impairment."
+            <em>Alzheimers Dement</em>. 2026;22(7):e71605.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42478598/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42478598</a>
+            <span class="block mt-0.5 text-ink/50">(Hafif bilişsel bozukluğu olan 42 yaşlıda 12 haftalık NR'nin bilişsel işlev ve beyin kan akımına etkisini inceleyen pilot randomize çalışma.)</span>
+          </li>
+          <li id="kaynak-9">
+            Brakedal B et al. "Nicotinamide Riboside for Patients With Early-Stage Parkinson Disease: The NOPARK Randomized Clinical Trial."
+            <em>JAMA</em>. Published online October 8, 2026.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42848371/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42848371</a>
+            <span class="block mt-0.5 text-ink/50">(Erken evre Parkinson hastası 410 kişide 52 haftalık NR ile plaseboyu karşılaştıran faz 3 çalışma.)</span>
+          </li>
+          <li id="kaynak-10">
+            Yang W et al. "Safety and Metabolism-Related Outcomes of Oral Nicotinamide Mononucleotide Supplementation in Adults: A Systematic Review and Meta-Analysis."
+            <em>Nutrients</em>. 2026;18(14):2251.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42514320/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42514320</a>
+            <span class="block mt-0.5 text-ink/50">(Günde 250–2000 mg NMN'nin 14 gün ile 24 hafta arası kullanıldığı 15 randomize çalışmanın güvenlik ve metabolizma analizi.)</span>
+          </li>
+          <li id="kaynak-11">
             Holmes HE et al. "Nicotinamide riboside and pterostilbene reduces frequency and severity of undesirable symptoms of the menopause transition: an open-label, pilot clinical trial."
             <em>Front Aging</em>. 2026;7:1773667.
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42211736/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42211736</a>
             <span class="block mt-0.5 text-ink/50">(NR ve pterostilben kombinasyonunun menopoz belirtileri üzerine yedi günlük, plasebosuz pilot araştırması; üretici finansmanı ve yazarların şirket bağlantıları bildiriliyor.)</span>
           </li>
+          <li id="kaynak-12">
+            Reyna K et al. "Intravenous infusion of nicotinamide adenine dinucleotide (NAD) versus nicotinamide riboside (NR): a retrospective tolerability pilot study in a real-world setting."
+            <em>Front Aging</em>. 2026;7:1652582.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41704678/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41704678</a>
+            <span class="block mt-0.5 text-ink/50">(Ticari bir merkezde damardan NAD+ ve NR uygulananların kayıtlarına dayanan geriye dönük tolerans çalışması.)</span>
+          </li>
+          <li id="kaynak-13">
+            Noh H et al. "NMN supplementation as a strategy to improve oocyte quality: a systematic review and transcriptomic analysis."
+            <em>J Assist Reprod Genet</em>. 2025;43(1):51–65.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41160202/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41160202</a>
+            <span class="block mt-0.5 text-ink/50">(NMN'nin yumurta kalitesine etkisine dair hayvan ve laboratuvar çalışmalarının sistematik derlemesi; insan klinik çalışması gerektiğini vurguluyor.)</span>
+          </li>
+          <li id="kaynak-14">
+            T.C. Tarım ve Orman Bakanlığı. "Takviye Edici Gıdalar Kısıtlı Maddeler Listesi." Son güncelleme: 21 Ekim 2026.
+            <a href="https://www.tarimorman.gov.tr/Konu/1116/takviye-edici-gida-kisitli-maddeler-listesi" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Bakanlık sayfası</a>
+            <span class="block mt-0.5 text-ink/50">(Beta-nikotinamid mononükleotid için günde en fazla 50 mg, nikotinamid ribozid için günde en fazla 300 mg.)</span>
+          </li>
+          <li id="kaynak-15">
+            Türk Gıda Kodeksi Yeni Gıdalar Yönetmeliği ve Ek-1 Yeni Gıdalar Listesi. Resmî Gazete, 20 Mayıs 2026, sayı 33259.
+            <a href="https://www.resmigazete.gov.tr/eskiler/2026/05/20260520-1.htm" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Resmî Gazete</a>
+            <span class="block mt-0.5 text-ink/50">(Nikotinamid ribozid klorür: takviye edici gıdalarda günde en fazla 300 mg; hamile ve emziren kadınlar için 230 mg.)</span>
+          </li>
+          <li id="kaynak-16">
+            T.C. Sağlık Bakanlığı Türkiye İlaç ve Tıbbi Cihaz Kurumu. "Ruhsatlı Beşeri Tıbbi Ürünler Listesi." 23 Ekim 2026.
+            <a href="https://www.titck.gov.tr/dinamikmodul/85" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">TİTCK sayfası</a>
+            <span class="block mt-0.5 text-ink/50">(Listede NAD+, NADH, NMN veya NR etkin maddeli ruhsatlı ürün bulunmuyor.)</span>
+          </li>
+          <li id="kaynak-17">
+            Zhang M et al. "Effects of Nicotinamide Mononucleotide Supplementation on Blood Pressure: A Systematic Review and Meta-Analysis of Randomized Controlled Trials."
+            <em>Nutrients</em>. 2026;18(6):890.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41901064/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41901064</a>
+            <span class="block mt-0.5 text-ink/50">(NMN'nin tansiyona etkisini birleştiren meta-analiz; diyastolik tansiyonda küçük düşüşü yazarlar ön bulgu olarak değerlendiriyor.)</span>
+          </li>
+          <li id="kaynak-18">
+            Christen S et al. "The differential impact of three different NAD+ boosters on circulatory NAD and microbial metabolism in humans."
+            <em>Nat Metab</em>. 2026;8(1):62–73.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41540253/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41540253</a>
+            <span class="block mt-0.5 text-ink/50">(65 sağlıklı yetişkinde 14 günlük NR, NMN ve nikotinamidi karşılaştıran randomize çalışma; NR ve NMN kandaki NAD+'yı benzer ölçüde artırdı.)</span>
+          </li>
+          <li id="kaynak-19">
+            Kim M et al. "Effect of 12-Week Intake of Nicotinamide Mononucleotide on Sleep Quality, Fatigue, and Physical Performance in Older Japanese Adults: A Randomized, Double-Blind Placebo-Controlled Study."
+            <em>Nutrients</em>. 2022;14(4):755.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35215405/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">35215405</a>
+            <span class="block mt-0.5 text-ink/50">(108 yaşlıda günde 250 mg NMN'nin 12 hafta boyunca uyku, yorgunluk ve fiziksel performansa etkisini inceleyen randomize çalışma.)</span>
+          </li>
+          <li id="kaynak-20">
+            Wang JP et al. "Effects of Nicotinamide Mononucleotide Supplementation on Muscle and Liver Functions Among the Middle-aged and Elderly: A Systematic Review and Meta-analysis of Randomized Controlled Trials."
+            <em>Curr Pharm Biotechnol</em>. 2025;26(13):2141–2152.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39185644/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39185644</a>
+            <span class="block mt-0.5 text-ink/50">(Dokuz çalışmadan 412 katılımcıyı birleştiren meta-analiz; yürüme hızı ve karaciğer enzimlerinde yarar, düşük dozda insülin direncinde düşüş bildiriyor.)</span>
+          </li>
+          <li id="kaynak-21">
+            Zhang J et al. "Efficacy of oral nicotinamide mononucleotide supplementation on glucose and lipid metabolism for adults: a systematic review with meta-analysis on randomized controlled trials."
+            <em>Crit Rev Food Sci Nutr</em>. 2024 (çevrimiçi); 65(22):4382–4400.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39116016/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39116016</a>
+            <span class="block mt-0.5 text-ink/50">(12 çalışmadan 513 katılımcıyı kapsayan analiz; çalışmaların beşinde yüksek yanlılık riski ve yararların abartılmış olabileceği uyarısı.)</span>
+          </li>
+          <li id="kaynak-22">
+            ClinicalTrials.gov, NCT06426355. Düşük yumurtalık rezervi olan kadınlarda tüp bebek sonuçları için NMN, randomize çift kör plasebo kontrollü çalışma (Peking University Third Hospital, 200 kişi). Kayıt durumu: katılım sürüyor, 26 Ekim 2026.
+            <a href="https://clinicaltrials.gov/study/NCT06426355" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT06426355 kaydı</a>
+          </li>
+          <li id="kaynak-23">
+            ClinicalTrials.gov, NCT07475208. Postmenopozal kadınlarda hafif-evre 1 hipertansiyonda 10 haftalık NR ve aerobik egzersizin tansiyona etkisi (112 kişi). Kayıt durumu: henüz katılım almıyor, 26 Ekim 2026.
+            <a href="https://clinicaltrials.gov/study/NCT07475208" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07475208 kaydı</a>
+          </li>
+          <li id="kaynak-24">
+            ClinicalTrials.gov, NCT07741071. Alzheimer hastalığında iki yıllık oral NR, faz 2 plasebo kontrollü çalışma (Haukeland University Hospital, 270 kişi). Kayıt durumu: katılım sürüyor, 26 Ekim 2026.
+            <a href="https://clinicaltrials.gov/study/NCT07741071" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07741071 kaydı</a>
+          </li>
+          <li id="kaynak-25">
+            ClinicalTrials.gov, NCT07416786. İnsan çalışmaları için NAD+ ölçümlerinin laboratuvarlar arası standardizasyonu (University of Pennsylvania, 48 kişi). Kayıt durumu: katılım sürüyor, 26 Ekim 2026.
+            <a href="https://clinicaltrials.gov/study/NCT07416786" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07416786 kaydı</a>
+          </li>
+          <li id="kaynak-26">
+            T.C. Tarım ve Orman Bakanlığı. "Onaylı Takviye Edici Gıdalar Listesi."
+            <a href="https://www.tarimorman.gov.tr/Konu/1986/Onayli-Takviye-Edici_Gidalar-Listesi" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Onaylı ürün listesi</a>
+            <span class="block mt-0.5 text-ink/50">(Bakanlığın onay verdiği takviye edici gıdaların listesi.)</span>
+          </li>
         </ol>
       </ArticleProsePanel>
-
-      <RedFlagBox
-        intro="Aşağıdaki durumlar, takviye kullanımı öncesinde veya kullanım sırasında hekiminizle konuşmanız gereken noktaları hatırlatır."
-        markers={[
-          'Aktif kanser tedavisi, kanser nedeniyle takip veya bağışıklığı baskılayan bir tedavi (NMN/NR kullanımına başlamadan önce ilgili hekimlerle değerlendirilmelidir; uzun dönem güvenlik verileri sınırlıdır)',
-          'Düzenli reçeteli ilaç kullanımı (ilaç-takviye etkileşimlerine dair veri sınırlıdır)',
-          'Gebelik veya emzirme dönemleri (bu yazıda ele alınan çalışmalar bu dönemlerdeki güvenliği göstermiyor)',
-          'Araştırmalarda kullanılan miktarları aşan, kontrolsüz kullanım (daha yüksek dozun ek yarar sağladığı gösterilmedi)',
-          'Takviye kullanımına başladıktan sonra yeni gelişen bulantı, baş ağrısı veya döküntü gibi şikâyetlerin varlığı',
-        ]}
-        footnote="Bu liste klinik ihtiyat içindir. Kısa dönem araştırmaların kapsamı ve dışlanan gruplar güvenlik bölümünde kaynaklarıyla açıklanmıştır."
-      />
 
       <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a Sorular" intro="NAD+ öncüllerini değerlendirirken yarar ve güvenlik hakkında sorularınız." items={faqItems} class="mt-10" />
 
@@ -258,7 +597,7 @@ const articleSchemas = buildArticleSchemas({
           </p>
           <p>
             NR ve pterostilben kombinasyonuyla menopoz belirtilerini ele alan kısa bir pilot çalışma vardır; plasebosuz tasarımı
-            ve yedi günlük süresi nedeniyle etkinlik ve güvenlik hakkında kesin sonuç vermez<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.
+            ve yedi günlük süresi nedeniyle etkinlik ve güvenlik hakkında kesin sonuç vermez<sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a></sup>.
             Bu bulgu, NMN veya NR'nin menopoz tedavisinde rutin kullanımını ya da standart tedavilere alternatif olmasını desteklemez.
           </p>
           <p>
@@ -266,7 +605,7 @@ const articleSchemas = buildArticleSchemas({
             kişilerde uzun dönem güvenlik hakkında bilgi vermez; bu durumlarda kullanım ilgili hekimle birlikte değerlendirilmelidir.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-xs italic text-primary">
-            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 13 Ekim 2026
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 26 Ekim 2026
           </p>
         </div>
       </ArticleEditorNote>
