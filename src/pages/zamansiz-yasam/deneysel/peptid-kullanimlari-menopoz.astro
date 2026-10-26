@@ -21,21 +21,24 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 import { articleFaqs } from '../../../data/article-faqs';
 
-const hero =
-  submenuHeroByRoute['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/']
-  ?? submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 
 const tocEntries = [
   { id: 'peptid-nedir', label: 'Peptid Nedir?' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveni' },
   { id: 'glp1-ayri', label: 'GLP-1 Neden Ayrı?' },
   { id: 'doku-kas', label: 'Doku ve Kas İddiaları' },
   { id: 'kilo-kompozisyon', label: 'Kilo ve Kompozisyon' },
   { id: 'enerji-uyku-longevity', label: 'Enerji, Uyku ve Uzun Yaşam' },
-  { id: 'guvenlik-standardizasyon', label: 'Güvenlik ve Standardizasyon' },
+  { id: 'bes-eksen', label: 'Beş Eksende Değerlendirme' },
+  { id: 'iddialar', label: 'Dolaşan İddialar' },
+  { id: 'guvenlik-standardizasyon', label: 'Güvenlik, Ruhsat ve Düzenleme' },
+  { id: 'menopoz', label: 'Menopoz ve 40 Sonrası' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
   { id: 'uc-soru', label: 'Doktora Üç Soru' },
   { id: 'kapanis', label: 'Kapanış' },
-  { id: 'kaynaklar', label: 'Kaynaklar' },
-  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+  { id: 'kaynaklar', label: 'Kaynaklar', numbered: false },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular", numbered: false },
 ];
 
 const faqItems = articleFaqs['/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/'] ?? [];
@@ -43,14 +46,14 @@ const faqItems = articleFaqs['/zamansiz-yasam/deneysel/peptid-kullanimlari-menop
 const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Peptidler Menopozda Gerçekten Ne Vaat Ediyor?';
 const articleDescription =
-  'Peptid başlığı altında dolaşan kilo kaybı ve kas toparlanması iddiaları aynı kanıt gücüne sahip değil. Kanıt ve güvenlik açısından değerlendiriyoruz.';
+  'Peptid iddiaları aynı kanıt gücünde değil. BPC-157, CJC-1295, GHK-Cu ve diğerleri için kanıt basamakları, güvenlik ve ABD ile Türkiye’deki durum.';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '6 Mayıs 2026',
-  modifiedDate: '12 Ekim 2026',
+  modifiedDate: '26 Ekim 2026',
   pathname: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
   articleSection: 'Zamansız Yaşam · Deneysel',
   sectionPath: '/zamansiz-yasam/',
@@ -88,7 +91,7 @@ const articleSchemas = buildArticleSchemas({
       eyebrow="Zamansız Yaşam · Deneysel Yaklaşımlar"
       title="Peptidler Menopozda Gerçekten Ne Vaat Ediyor?"
       imageSrc={hero.src}
-      imageAlt="Seramik atölyesinde çömlek şekillendiren kadın"
+      imageAlt={hero.alt}
       compact
     />
     <SubmenuArticleBody>
@@ -97,8 +100,9 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="6 Mayıs 2026"
-        lastUpdated="12 Ekim 2026"
-        readingMinutes={10}
+        lastUpdated="26 Ekim 2026"
+        readingMinutes={15}
+        medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/zy-peptid-kullanimlari-menopoz-window-card.png"
         imageAlt="Açık renkli bir iç mekanda pencere yanında duran, bordo hırkalı düşünceli kadın portresi"
         imagePosition="74% center"
@@ -114,14 +118,13 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Menopozda kas korunması, doku onarımı, uyku veya gençleşme için pazarlanan deneysel
-          peptidlerin klinik faydasını ve uzun dönem güvenliğini gösteren yeterli insan verisi yok.
-          Obezite tedavisinde kullanılan peptid yapılı ilaçların kanıtı ayrı değerlendirilir;
-          menopoz, kendi başına bu ilaçları kullanma nedeni değildir. Bu yazıda BPC-157,
-          timosin beta-4 ve TB-500, GHK-Cu, CJC-1295, ipamorelin, AOD-9604, MOTS-c ve epitalon
-          için hangi sonuçların araştırıldığını ayırıyoruz. Cilde sürülen bir ürünün verisi
-          enjeksiyona, kandaki hormon değişimi kas gücüne aktarılmaz. Ürünün içeriği, uygulama
-          yolu ve sizin sağlık durumunuz da güvenlik değerlendirmesinin parçasıdır.
+          Menopozda kas korunması, doku onarımı, uyku veya gençleşme için pazarlanan deneysel peptidlerin
+          hiçbirinde bu amaçlarla gösterilmiş bir insan yararı yok. En ileri basamak büyüme hormonu aksındaki
+          maddelerde: kandaki hormon düzeyi artıyor, kas gücü ve işlev sonuçları ise gösterilmedi. BPC-157'nin
+          insan verisi toplam 30 kişilik küçük, kontrolsüz serilerden oluşuyor. Bu maddelerin hiçbirinin
+          Türkiye'de ruhsatlı ürünü yok; ABD'deki düzenleme süreci sürüyor. Obezitede kullanılan peptid yapılı
+          ilaçlar (semaglutid, tirzepatid) ayrı bir dosya. Ürün içeriğinin doğrulanamaması ve uzun dönem güvenlik
+          verisinin yokluğu, karar verirken en çok tartıyı çeken iki konu.
         </p>
       </ArticleSummary>
 
@@ -143,6 +146,80 @@ const articleSchemas = buildArticleSchemas({
           Bu soruların her biri ayrı bir değerlendirme gerektirir. Yazının odağı, deneysel
           peptidlerin bu ihtiyaçlar için hangi kanıtla sunulduğudur.
         </p>
+        <p>
+          Bakacağımız maddeler: BPC-157, timosin beta-4 ve TB-500, CJC-1295, ipamorelin, GHK-Cu,
+          epitalon, MOTS-c ve AOD-9604. Hepsi için aynı sorular geçerli: hayvanda mı denendi, insanda mı,
+          hangi sonucu ölçtüler, güvenlik ne kadar biliniyor ve elinize geçen ürün ne?
+        </p>
+
+        <h2 id="kanit-merdiveni">Kanıt Merdiveninde Bu Peptidler Nerede Duruyor?</h2>
+        <p>
+          Bir peptidin “işe yaradığı” tek bir cümle değil; kanıt basamak basamak yükselir.
+        </p>
+        <p>
+          Hücrede mekanizma ve hayvan deneyleri en alttaki basamaklar. Sonra insanda kan değerinin değişmesi, onun
+          üstünde kas gücü, ağrı ya da günlük işlev gibi ölçülebilir sonuçlar gelir. Güvenlik ayrı bir basamak;
+          en üstte ise ömür ve hastalık sonuçları var. Aşağıdaki tablo her maddenin hangi basamağa kadar
+          çıkabildiğini özetliyor.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Madde</th>
+                <th class="p-3 font-semibold">İnsanda ulaştığı en ileri basamak</th>
+                <th class="p-3 font-semibold">İnsanda güvenlik</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">BPC-157</td>
+                <td class="p-3">Küçük, kontrolsüz serilerde belirti düzelmesi bildirildi; toplam 30 kişi, kanıt kesinliği çok düşük <sup><a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup></td>
+                <td class="p-3">Bilinmiyor; yayımlanmış veri çok az <sup><a href="#kaynak-18" class="text-primary hover:underline">[18]</a>, <a href="#kaynak-20" class="text-primary hover:underline">[20]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Timosin beta-4 ve TB-500</td>
+                <td class="p-3">Tam molekül kuru göz, ven ülseri ve kalp krizi gibi hastalıklarda denendi (yerel uygulama ve enjeksiyon). TB-500 parçası için etkinlik çalışması bulamadık <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a>, <a href="#kaynak-6" class="text-primary hover:underline">[6]</a>, <a href="#kaynak-14" class="text-primary hover:underline">[14]</a>, <a href="#kaynak-34" class="text-primary hover:underline">[34]</a></sup></td>
+                <td class="p-3">Parça için insan maruziyeti verisi belirlenemedi <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">CJC-1295</td>
+                <td class="p-3">Sağlıklı yetişkinlerde büyüme hormonu ve IGF-1 düzeyi arttı; kas veya işlev ölçülmedi <sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup></td>
+                <td class="p-3">Kısa çalışmada ciddi yan etki bildirilmedi <sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>; FDA kalp hızı artışı ve damar genişlemesi tepkisi bildiriyor <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">İpamorelin</td>
+                <td class="p-3">Ameliyat sonrası bağırsak çalışmasında ana sonuçta plaseboya üstünlük yok <sup><a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup></td>
+                <td class="p-3">FDA: damardan verildiğinde ölüm dahil ciddi olay bildiren bir çalışma var <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">GHK-Cu</td>
+                <td class="p-3">Cilde sürülen formda nesnel fark yok, memnuniyet yüksek; enjeksiyon için insan etkinlik çalışması yok <sup><a href="#kaynak-16" class="text-primary hover:underline">[16]</a>, <a href="#kaynak-33" class="text-primary hover:underline">[33]</a></sup></td>
+                <td class="p-3">Enjeksiyon için insan verisi sınırlı <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Epitalon</td>
+                <td class="p-3">Küçük biyobelirteç çalışmaları; yeterli güçte randomize çalışma yok <sup><a href="#kaynak-22" class="text-primary hover:underline">[22]</a></sup></td>
+                <td class="p-3">Doz ve uzun dönem güvenlik verisi yetersiz <sup><a href="#kaynak-22" class="text-primary hover:underline">[22]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c</td>
+                <td class="p-3">Dışarıdan verilen için yayımlanmış etkinlik çalışması bulamadık; faz 2a çalışması sürüyor <sup><a href="#kaynak-31" class="text-primary hover:underline">[31]</a></sup></td>
+                <td class="p-3">Bilinmiyor <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">AOD-9604</td>
+                <td class="p-3">Obezite çalışmalarında plaseboya göre anlamlı fark yok <sup><a href="#kaynak-15" class="text-primary hover:underline">[15]</a></sup></td>
+                <td class="p-3">FDA ciddi yan etki bildirimlerini anıyor; nedensellik belirsiz <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Hayvanda ömür basamağı için bu maddelerde yayımlanmış bir sonuç bulamadık. Bu basamağı şimdilik
+          bilinmiyor diye okuyun. İnsanda ömür, kalp krizi ya da kırık gibi sert sonuçlarla yapılmış bir
+          çalışma ise hiçbirinde yok.
+        </p>
 
         <h2 id="glp1-ayri">GLP-1 Hattını Neden Ayrı Bir Dosya Gibi Düşünmeliyiz?</h2>
         <p>
@@ -155,7 +232,9 @@ const articleSchemas = buildArticleSchemas({
           gösterildi <sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-2">[2]</a></sup>
           <Evidence level={5} />. Bu çalışmalar menopoz belirtilerinin tedavisini veya kas
           korunmasını kanıtlamak için tasarlanmadı. Menopoz, kendi başına ilaç kullanma nedeni
-          değildir; kilo ve eşlik eden sağlık sorunları birlikte değerlendirilir.
+          değildir; kilo ve eşlik eden sağlık sorunları birlikte değerlendirilir. Türkiye'de
+          TİTCK'nin 16 Ekim 2026 tarihli ruhsatlı ürünler listesinde semaglutid, tirzepatid ve liraglutid
+          etkin maddeli ürünler yer alıyor <sup><a href="#kaynak-28" class="text-primary hover:underline">[28]</a></sup>.
         </p>
         <p>
           BPC-157 ya da AOD-9604 içeren bir ürünün de peptid olması, bu çalışmaların sonuçlarını
@@ -178,12 +257,25 @@ const articleSchemas = buildArticleSchemas({
           <sup><a href="#kaynak-12">[12]</a></sup>.
         </p>
         <p>
-          Küçük insan kayıtları da var: diz ağrısı için enjeksiyon yapılmış kişilerin
-          dosyalarının geriye dönük incelendiği bir çalışmada 16 kişiye telefonla ulaşıldı;
-          bunların 4'ü BPC-157 ile birlikte timosin beta-4 de almıştı.
-          Tedavi almayan bir karşılaştırma grubu ve standart işlev ölçümleri yoktu
-          <sup><a href="#kaynak-17">[17]</a></sup>. Bu tasarım, bildirilen ağrı değişimini
-          tedavinin etkisine bağlamaya veya menopozda kas korunmasına genellemeye yetmez.
+          İnsan verisi ise çok az. Haziran 2026'ya kadar tarayan bir sistematik derleme, insanlarda
+          BPC-157 kullanımını anlatan yalnızca üç çalışma buldu; toplam 30 kişi: diz içi enjeksiyon
+          (16 kişi), mesane içi uygulama (12 kişi) ve damardan güvenlik pilotu (2 kişi). Çoğu katılımcı
+          belirtilerinin düzeldiğini bildirdi ve tedaviye bağlı yan etki bildirilmedi; ama üçünde de
+          karşılaştırma grubu yoktu. Derleme kanıt kesinliğini “çok düşük” buldu ve düzenlenmiş çalışmalar
+          dışında klinik kullanımı önermiyor <sup><a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup> <Evidence level={1} />.
+        </p>
+        <p>
+          Diz çalışmasının kendisi geriye dönük bir dosya incelemesiydi: 16 kişiye telefonla ulaşıldı,
+          bunların 4'ü BPC-157 ile birlikte timosin beta-4 de almıştı. Tedavi almayan bir karşılaştırma
+          grubu ve standart işlev ölçümleri yoktu <sup><a href="#kaynak-17" class="text-primary hover:underline">[17]</a></sup>. Bu tasarım, bildirilen ağrı değişimini
+          tedavinin etkisine bağlamaya veya menopozda kas korunmasına genellemeye yetmez. Spor hekimliği
+          derlemesi de aynı yere varıyor: hayvan çalışmalarındaki umut verici bulgular insanda
+          doğrulanmadı ve bu maddeler standart ortopedik bakımın yerine ya da yanına önerilmiyor <sup><a href="#kaynak-19" class="text-primary hover:underline">[19]</a></sup>.
+        </p>
+        <p>
+          Randomize çalışmalar yeni başlıyor. Hamstring yırtığı için 120 kişilik bir faz 2 çalışması
+          (18–45 yaş) ve rotator manşet ameliyatı sonrası küçük bir pilot çalışma kayıtlı; tahmini
+          bitiş 2027 <sup><a href="#kaynak-30" class="text-primary hover:underline">[30]</a></sup>. İkisi de menopoza özgü değil; ikincisi hormon tedavisi kullanan kadınları dışlıyor.
         </p>
         <h3>TB-500 ve timosin beta-4 aynı mı?</h3>
         <p>
@@ -191,8 +283,11 @@ const articleSchemas = buildArticleSchemas({
           <sup><a href="#kaynak-12">[12]</a></sup>. Timosin beta-4 için kuru gözde göz damlası
           ve toplardamar hastalığına bağlı cilt yaralarında yerel uygulama araştırmaları var
           <sup><a href="#kaynak-5">[5]</a></sup><sup><a href="#kaynak-6">[6]</a></sup><sup><a href="#kaynak-14">[14]</a></sup>.
-          Erken klinik verinin kapsamı bu kullanım alanlarıdır <Evidence level={2} />.
+          Çin'de enjeksiyonla yapılan akut kalp krizi çalışmaları (faz 2) da kayıtlı <sup><a href="#kaynak-34" class="text-primary hover:underline">[34]</a></sup>.
+          Erken klinik verinin kapsamı bu hastalık alanlarıdır <Evidence level={2} />.
           Bu sonuçlardan TB-500 enjeksiyonunun menopozda kas toparlanmasına faydalı olduğu sonucunu çıkaramayız.
+          TB-500 parçası için ClinicalTrials.gov'da kayıtlı tek çalışma, damar hastalığı olan 80 kişide
+          güvenlik ve ilk dozlama sorularına bakan bir faz 1/2 çalışması; sonuç henüz yok <sup><a href="#kaynak-31" class="text-primary hover:underline">[31]</a></sup>.
         </p>
         <h3>GHK-Cu: cilde uygulama ile enjeksiyon ayrımı</h3>
         <p>
@@ -203,7 +298,9 @@ const articleSchemas = buildArticleSchemas({
           <sup><a href="#kaynak-16">[16]</a></sup> <Evidence level={2} />.
           Bu bulgu, menopoz cildinde veya enjeksiyonla bütün vücudu gençleştirmede fayda kanıtı değildir.
           Enjeksiyonun güvenliği için insan verisi sınırlıdır
-          <sup><a href="#kaynak-12">[12]</a></sup>.
+          <sup><a href="#kaynak-12">[12]</a></sup>. 2026 tarihli bir sistematik derleme de insan
+          çalışmalarının çoğunun küçük ve yüz kremleri üzerine olduğunu belirtiyor <sup><a href="#kaynak-33" class="text-primary hover:underline">[33]</a></sup>.
+          Bu madde için ayrıca cilt odaklı bir yazımız var.
         </p>
         <h3>Büyüme hormonu salgısını uyaran peptidler: CJC-1295 ve ipamorelin</h3>
         <p>
@@ -221,6 +318,15 @@ const articleSchemas = buildArticleSchemas({
           dönemindeki kadınlarda kas korunmasıyla ilgili soruyu yanıtlamaz <Evidence level={1} />.
           Resmî güvenlik değerlendirmesi, ipamorelin damardan verildiğinde ölüm dahil ciddi yan etkiler
           bildirildiğini; diğer enjeksiyon yolları için de yeterli güvenlik bilgisi olmadığını belirtiyor <sup><a href="#kaynak-12">[12]</a></sup>.
+        </p>
+        <p>
+          “Büyüme hormonu artarsa kas da artar” varsayımının neden ayrıca sınanması gerektiğini, büyüme
+          hormonunun kendisiyle yapılan çalışmalar gösteriyor. Sağlıklı yaşlılarda 31 makalelik birleştirilmiş
+          incelemede (ortalama yaş 69) yağsız kütle yaklaşık 2 kg arttı, yağ kütlesi benzer ölçüde azaldı
+          ve kilo değişmedi; buna karşılık ödem, eklem ağrısı, karpal tünel sendromu ve bozulmuş açlık kan
+          şekeri daha sık görüldü. Yazarlar yaşlanma karşıtı tedavi olarak önermedi <sup><a href="#kaynak-21" class="text-primary hover:underline">[21]</a></sup> <Evidence level={3} />.
+          Bu bulgu büyüme hormonunun kendisi içindir; salgısını uyaran maddelere birebir aktarılamaz, ama
+          beklenebilecek yan etki türleri için ipucu verir.
         </p>
         <p>
           Kasla ilgili bir iddiada araştırmanın kuvveti ve günlük işlevi ölçüp ölçmediğine bakın.
@@ -276,6 +382,13 @@ const articleSchemas = buildArticleSchemas({
           her bulguyu tek bir moleküle ve belirli bir menopoz grubuna bağlamak da mümkün değil.
         </p>
         <p>
+          Ekim 2026'da yayımlanan bir derleme tabloyu şöyle özetliyor: epitalon biyolojik olarak etkin,
+          klinik olarak kanıtlanmamış. İnsan verisi küçük biyobelirteç çalışmaları ve retinitis
+          pigmentoza üzerine eski bir kontrollü çalışmadan oluşuyor; yeterli güçte bir randomize çalışma yok.
+          Doz, farmakokinetik ve uzun dönem güvenlik verisi eksik. Telomerle ilgili iddialar ise hücre ve
+          hayvan çalışmalarına dayanıyor <sup><a href="#kaynak-22" class="text-primary hover:underline">[22]</a></sup>.
+        </p>
+        <p>
           Yorgunluk ve bölünmüş uyku yalnızca menopozla açıklanmayabilir. Uyku apnesi, demir
           veya B12 eksikliği, tiroid bozukluğu ve depresif belirtiler de değerlendirmede
           dikkate alınır. Gece uyanmaları, alkol kullanımı ve yoğun stres yakınmaları etkileyebilir. Süren veya
@@ -283,7 +396,169 @@ const articleSchemas = buildArticleSchemas({
           bu yakınmaları hekiminizle konuşmanız daha yararlı bir başlangıç olabilir.
         </p>
 
-        <h2 id="guvenlik-standardizasyon">Güvenlik, Ürün Standardizasyonu ve Reklam Dili Neden Bu Kadar Merkezde?</h2>
+        <h2 id="bes-eksen">Tek Not Yerine Beş Eksen: Hangi Madde Neresinde Duruyor?</h2>
+        <p>
+          Bir peptid için “kanıtlı” ya da “kanıtsız” demek işi fazla basitleştirir. Aynı maddenin etkinlik
+          kanıtı zayıf, mekanizması makul, güvenliği bilinmiyor olabilir. Bu tabloyu, size bir ürün önerildiğinde
+          sorulacak soruların haritası gibi kullanabilirsiniz.
+        </p>
+        <p>
+          Aşağıdaki tabloda her madde beş soruyla değerlendirildi. Hücrelerin dayanağı yukarıdaki bölümlerde
+          ve kaynak listesinde. “Bilinmiyor”, çalışmanın yapılmadığı ya da yayımlanmadığı anlamına geliyor.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Madde</th>
+                <th class="p-3 font-semibold">Etkinlik kanıtı</th>
+                <th class="p-3 font-semibold">Güvenlik kanıtı</th>
+                <th class="p-3 font-semibold">Mekanizma</th>
+                <th class="p-3 font-semibold">Ürün ve düzenleme</th>
+                <th class="p-3 font-semibold">Bırakınca</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">BPC-157</td>
+                <td class="p-3">Zayıf</td>
+                <td class="p-3">Bilinmiyor</td>
+                <td class="p-3">Orta; hayvanda tutarlı, insandaki etki süresi açıklanmış değil <sup><a href="#kaynak-20" class="text-primary hover:underline">[20]</a></sup></td>
+                <td class="p-3">Ruhsatsız; ABD'de süreç sürüyor; sporda yasaklı</td>
+                <td class="p-3">Bilinmiyor</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Timosin beta-4 ve TB-500</td>
+                <td class="p-3">Tam molekül için hastalık odaklı çalışmalarda sınırlı; TB-500 için bilinmiyor</td>
+                <td class="p-3">Bilinmiyor</td>
+                <td class="p-3">Orta-zayıf</td>
+                <td class="p-3">Ruhsatsız; ABD'de süreç sürüyor; sporda yasaklı</td>
+                <td class="p-3">Bilinmiyor</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">CJC-1295 ve ipamorelin</td>
+                <td class="p-3">Kan değerinde güçlü, işlevde yok</td>
+                <td class="p-3">Sınırlı, kısa süreli; FDA uyarıları var</td>
+                <td class="p-3">Güçlü (fizyolojik eksen); “daha çok hormon daha iyi” sınanmadı</td>
+                <td class="p-3">Ruhsatsız; ipamorelin ABD'de ayrı güvenlik listesinde; sporda yasaklı</td>
+                <td class="p-3">Muhtemelen yüksek; doğrudan veri yok</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">GHK-Cu (cilde sürülen)</td>
+                <td class="p-3">Sınırlı</td>
+                <td class="p-3">Orta, sınırlı</td>
+                <td class="p-3">Orta</td>
+                <td class="p-3">Kozmetik ürünlerde var; içerik ürüne göre değişir</td>
+                <td class="p-3">Muhtemelen yüksek</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">GHK-Cu (enjeksiyon)</td>
+                <td class="p-3">Bilinmiyor</td>
+                <td class="p-3">Zayıf; FDA veri sınırlı diyor <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+                <td class="p-3">Orta</td>
+                <td class="p-3">Ruhsatsız; FDA kurulu henüz görüşmedi</td>
+                <td class="p-3">Bilinmiyor</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Epitalon</td>
+                <td class="p-3">Zayıf</td>
+                <td class="p-3">Zayıf</td>
+                <td class="p-3">Orta-zayıf</td>
+                <td class="p-3">Ruhsatsız; ABD'de süreç sürüyor</td>
+                <td class="p-3">Bilinmiyor</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c</td>
+                <td class="p-3">Bilinmiyor</td>
+                <td class="p-3">Bilinmiyor</td>
+                <td class="p-3">Orta</td>
+                <td class="p-3">Ruhsatsız; ABD'de süreç sürüyor</td>
+                <td class="p-3">Bilinmiyor</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">AOD-9604</td>
+                <td class="p-3">Zayıf; birincil sonuçta fark yok</td>
+                <td class="p-3">Sınırlı</td>
+                <td class="p-3">Zayıf</td>
+                <td class="p-3">Ruhsatsız</td>
+                <td class="p-3">Bilinmiyor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="iddialar">İnternette Dolaşan İddialar Neyle Karşılaşıyor?</h2>
+        <p>
+          Menopoz ve 40 sonrası kadınlara seslenen klinik ve sağlık sitelerinde aynı iddialar tekrar tekrar karşınıza çıkıyor. Merak etmeniz anlaşılır; bu bölüm, iddiayı satın almadan
+          önce tartmanıza yardım etmek için var.
+        </p>
+        <p>
+          Bu iddialar tanıtım metinlerinde geçiyor; kanıt sayılmazlar. Aşağıda her birinin bilimsel karşılığını
+          topladık. Sıra kanıt gücüne göre: önce testten geçenler, sonra henüz sınanmamış olanlar, en sonda bu
+          haliyle sınanamayanlar.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Ne biliyoruz?</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Menopozda kilo yönetimi (GLP-1 ilaçlarıyla)</td>
+                <td class="p-3">Test edildi, desteklendi; obezite ve eşlik eden sağlık sorunları için onaylı ilaçlar. Menopoz tek başına endikasyon değil <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a>, <a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">AOD-9604 ile yağ kaybı</td>
+                <td class="p-3">Test edildi, desteklenmedi <sup><a href="#kaynak-15" class="text-primary hover:underline">[15]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Büyüme hormonu artarsa yaşlanma geriler</td>
+                <td class="p-3">Büyüme hormonunun kendisi için test edildi: küçük kütle değişimi, daha çok yan etki <sup><a href="#kaynak-21" class="text-primary hover:underline">[21]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">İpamorelin ve CJC-1295 ile kas kazanımı</td>
+                <td class="p-3">Hormon düzeyi için test edildi; kas gücü ve işlev için sınanmadı <sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a>, <a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">GHK-Cu'yu cilde sürmek kırışıklığı azaltır</td>
+                <td class="p-3">Küçük çalışmada nesnel fark yok, memnuniyet yüksek <sup><a href="#kaynak-16" class="text-primary hover:underline">[16]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">BPC-157 tendon, eklem ve kası onarır</td>
+                <td class="p-3">Henüz yeterince test edilmedi; randomize çalışmalar 2027'de sonuçlanacak <sup><a href="#kaynak-18" class="text-primary hover:underline">[18]</a>, <a href="#kaynak-30" class="text-primary hover:underline">[30]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">TB-500 dokuyu onarır</td>
+                <td class="p-3">Parça için insan etkinlik çalışması yok; tam molekül yalnızca hastalık odaklı çalışmalarda (kuru göz, ülser, kalp krizi) denendi <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a>, <a href="#kaynak-14" class="text-primary hover:underline">[14]</a>, <a href="#kaynak-31" class="text-primary hover:underline">[31]</a>, <a href="#kaynak-34" class="text-primary hover:underline">[34]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c kiloyu ve metabolizmayı düzeltir</td>
+                <td class="p-3">Henüz test edilmedi; faz 2a çalışması sürüyor <sup><a href="#kaynak-31" class="text-primary hover:underline">[31]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Epitalon uykuyu düzeltir, telomeri uzatır</td>
+                <td class="p-3">Uyku ve uzun yaşam için yeterli insan çalışması yok; telomer iddiası hücre ve hayvan bulgularına dayanıyor <sup><a href="#kaynak-22" class="text-primary hover:underline">[22]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">“Kadınlara özel” peptid protokolleri</td>
+                <td class="p-3">Menopoza özgü bir çalışma bulamadık. Kadınlarda daha etkili ya da daha güvenli olduğunu gösteren bir kaynak yok</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">“Vücutta zaten var, o yüzden güvenli”</td>
+                <td class="p-3">Bu haliyle sınanamaz: dışarıdan verilen miktar, yol ve saflık farklı etki yaratabilir <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Hücreleri gençleştirir, ömrü uzatır</td>
+                <td class="p-3">Bu haliyle sınanamıyor; hiçbir madde için insanda ömür sonuçlu bir çalışma yok</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+<h2 id="guvenlik-standardizasyon">Güvenlik, Ürün Kalitesi ve Düzenleme Durumu Neden Bu Kadar Önemli?</h2>
         <p>
           Güvenlik değerlendirmesi hem molekülü hem de kullanılan ürünü kapsar.
           Etiketteki isim, içerik ve saflığın doğrulandığını göstermeye yetmez.
@@ -305,6 +580,50 @@ const articleSchemas = buildArticleSchemas({
           <sup><a href="#kaynak-8">[8]</a></sup><sup><a href="#kaynak-12">[12]</a></sup>.
           Belirli bir kullanım yolunun verisini başka bir enjeksiyon yoluna taşımak güvenliği kanıtlamaz.
         </p>
+        <p>
+          Satış ve klinik tanıtım sayfalarında enjeksiyon yerinde kızarıklık, baş dönmesi, bulantı ve geçici
+          yorgunluk sık anılıyor. Bunlar kontrollü veri değil, tanıtım metinleri; aynı sayfalar hangisinin
+          daha sık olduğu konusunda birbiriyle çelişiyor. Birleştirilmiş inceleme ve derlemelerde ise büyüme hormonu aksındaki
+          maddeler için prolaktin ve kortizol artışı, kan şekeri bozulması, ödem, kas ve eklem ağrısı gibi
+          sorunlar anılıyor <sup><a href="#kaynak-21" class="text-primary hover:underline">[21]</a>, <a href="#kaynak-32" class="text-primary hover:underline">[32]</a></sup>. Kullanıcı bildirimleri etkinliği göstermez; çünkü plasebo etkisi,
+          aynı anda değişen alışkanlıklar ve ortalamaya dönüş hepsini etkiler. Tekrarlayan yan etki
+          bildirimleri ise ciddiye alınması gereken bir güvenlik işaretidir.
+        </p>
+
+        <h3>ABD'de düzenleme süreci nerede?</h3>
+        <p>
+          Bu bölüm hızlı değişiyor; bilgiler 26 Ekim 2026 itibarıyla. FDA, 15 Nisan 2026'da BPC-157,
+          TB-500, CJC-1295, GHK-Cu, epitalon, AOD-9604 ve MOTS-c dahil 12 peptidi “ciddi güvenlik endişesi”
+          listesinden (kategori 2) çıkardı <sup><a href="#kaynak-35" class="text-primary hover:underline">[35]</a></sup>. Gerekçe, adaylıkları ileri süren tarafların başvurularını geri
+          çekmesiydi. Listeden çıkmak, bu maddeleri eczanelerde hazırlanabilir kılmıyor <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a>, <a href="#kaynak-35" class="text-primary hover:underline">[35]</a></sup>.
+        </p>
+        <p>
+          23–24 Temmuz 2026'da FDA'nın eczane hazırlama danışma kurulu bu maddelerden yedisini görüştü.
+          FDA personeli hiçbirinin listeye alınmamasını önerdi <sup><a href="#kaynak-23" class="text-primary hover:underline">[23]</a></sup>; BPC-157 için etkililik kanıtı
+          bulunmadığını ve kalite standartlarının kurulamadığını belirtti <sup><a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup>. Kurul ise çoğunluk oyuyla BPC-157, TB-500,
+          MOTS-c, epitalon ve iki başka maddeyi listeye almayı önerdi <sup><a href="#kaynak-24" class="text-primary hover:underline">[24]</a>, <a href="#kaynak-25" class="text-primary hover:underline">[25]</a></sup>. Oy verenlerin bir bölümü
+          randomize çalışma eksikliğini gerekçe gösterdi, bir bölümü kararın hekim ve eczacıya bırakılmasını
+          savundu <sup><a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup>.
+        </p>
+        <p>
+          Kurulun oyu bağlayıcı değil ve 26 Ekim 2026 itibarıyla nihai bir FDA kararı bulamadık.
+          Görüşülen kullanımlar ülseratif kolit, yara iyileşmesi, obezite, osteoporoz ve uykusuzluk
+          gibi başlıklardı; menopozda kas, uyku ya da yaşlanma karşıtı kullanım bunların arasında yoktu.
+          İpamorelin ise hâlâ güvenlik listesinde duruyor ve GHK-Cu enjeksiyonu için kurul görüşmesi bekleniyor <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a>, <a href="#kaynak-35" class="text-primary hover:underline">[35]</a></sup>.
+        </p>
+
+        <h3>Türkiye'de ve sporda durum</h3>
+        <p>
+          TİTCK'nin 16 Ekim 2026 tarihli ruhsatlı ürünler listesinde bu maddelerden herhangi birini etkin
+          madde olarak içeren ruhsatlı ürün yok <sup><a href="#kaynak-28" class="text-primary hover:underline">[28]</a></sup>. Tarım ve Orman Bakanlığı'nın 21 Ekim 2026 tarihli
+          takviye edici gıda kısıtlı maddeler listesinde de adları geçmiyor <sup><a href="#kaynak-29" class="text-primary hover:underline">[29]</a></sup>; listede olmamaları takviye
+          olarak serbest oldukları anlamına gelmez. Elinizdeki ya da önünüze konan bir ürünün ruhsat durumunu
+          merak ediyorsanız etkin maddeyi TİTCK'nin ruhsatlı ürünler listesinde aratabilirsiniz; bu yazıdaki
+          uluslararası kaynaklar Türkiye'deki ruhsat durumunun doğrulaması değildir.
+        </p>
+        <p>
+          Yarışmalı spor yapıyorsanız BPC-157, TB-500 ve ipamorelin Dünya Anti-Doping Ajansı listesinde yasaklı <sup><a href="#kaynak-26" class="text-primary hover:underline">[26]</a>, <a href="#kaynak-27" class="text-primary hover:underline">[27]</a></sup>.
+        </p>
         <RedFlagBox
           title="Ürün ve sağlık öyküsünde değerlendirilmesi gereken noktalar"
           intro="Ürünün niteliği, kullanım amacı ve sağlık öykünüz değerlendirmede birlikte ele alınır. Aşağıdaki noktaları görüşmede açıkça konuşabilirsiniz."
@@ -318,11 +637,39 @@ const articleSchemas = buildArticleSchemas({
           ]}
           footnote="Bu durumlar değerlendirmede açıkça konuşulmalıdır. Saflık belgesi bulunması, ürünün etkili veya güvenli bir tedavi olduğunu kanıtlamaz."
         />
+
+        <h2 id="menopoz">Menopoz ve 40 Sonrası İçin Ne Biliyoruz?</h2>
         <p>
-          Vücutta doğal olarak bulunan bir molekül de dışarıdan verildiğinde farklı etkiler
-          yaratabilir. Kullanım amacı, uygulama yolu, eşlik eden hastalıklar ve kullandığınız
-          ilaçlar birlikte ele alınır. Buradaki uluslararası güvenlik kaynakları Türkiye'deki
-          ruhsat durumunun doğrulaması değildir; belirli bir ürün için güncel ruhsat bilgisi ayrıca kontrol edilmelidir.
+          Kısa yanıt: bu maddeler için menopoza özgü bir çalışma bulamadık.
+        </p>
+        <p>
+          ClinicalTrials.gov'da menopoz ya da menopoz sonrası koşuluyla bu maddelerden birini araştıran
+          bir kayıt göremedik <sup><a href="#kaynak-30" class="text-primary hover:underline">[30]</a>, <a href="#kaynak-31" class="text-primary hover:underline">[31]</a></sup>. Kayıtlı BPC-157 çalışmalarından biri 18–45 yaş arasını kapsıyor,
+          diğeri hormon tedavisi kullananları dışlıyor <sup><a href="#kaynak-30" class="text-primary hover:underline">[30]</a></sup>. CJC-1295 çalışması 21–61 yaş arasındaki sağlıklı
+          yetişkinlerle yapıldı <sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>; yaşlılarda büyüme hormonu verilen çalışmaların ortalama yaşı 69 <sup><a href="#kaynak-21" class="text-primary hover:underline">[21]</a></sup>.
+          Hormon tedavisi kullanan kadınlarda bu maddelerin etkisini ya da güvenliğini inceleyen bir çalışmaya
+          rastlamadık.
+        </p>
+        <p>
+          Bu, “menopozda işe yaramaz” demek değil; “bilmiyoruz” demek.
+        </p>
+        <p>
+          Kas kaybı, bölünen uyku ve kilo artışı gerçek yakınmalar; bunları ciddiye almak için bir peptide ihtiyacınız yok.
+          Her birinin, peptidlerden çok daha iyi araştırılmış yanıtları var: yeterli protein ve direnç egzersizi,
+          uykuyu bozan nedenlerin (uyku apnesi, demir ve B12 eksikliği, tiroid) elenmesi, kilo için de hekimle
+          yapılan metabolik bir değerlendirme.
+        </p>
+
+        <h2 id="bilinmeyenler">Henüz Bilmediklerimiz ve Yakında Öğreneceklerimiz</h2>
+        <p>
+          En büyük açık soru, bu maddelerin hangisinin insanda hangi sonucu değiştirdiği.
+        </p>
+        <p>
+          Önümüzdeki aylarda netleşecek birkaç başlık var; netleştikçe yazıyı güncelleyeceğiz. BPC-157 için iki randomize çalışma 2027'de
+          sonuçlanacak <sup><a href="#kaynak-30" class="text-primary hover:underline">[30]</a></sup>. TB-500 parçası, MOTS-c ve GHK-Cu jeli için kayıtlı çalışmaların tahmini bitişi
+          de 2027'nin ilk aylarında <sup><a href="#kaynak-31" class="text-primary hover:underline">[31]</a></sup>. FDA'nın kurul önerilerine nasıl karşılık vereceği ve GHK-Cu
+          enjeksiyonu için yapılacak kurul görüşmesi de bu dönemde belli olacak <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a>, <a href="#kaynak-35" class="text-primary hover:underline">[35]</a></sup>. Dünya Anti-Doping
+          Ajansı'nın 2027 listesi 1 Ocak 2027'de yürürlüğe girecek <sup><a href="#kaynak-27" class="text-primary hover:underline">[27]</a></sup>.
         </p>
 
         <h2 id="uc-soru">Doktorunuza Sorabileceğiniz Üç Soru</h2>
@@ -355,12 +702,30 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-9">Zheng Y, Wei Z, Wang T. <em>MOTS-c: A promising mitochondrial-derived peptide for therapeutic exploitation.</em> Front Endocrinol. 2023;14:1120533. <a href="https://doi.org/10.3389/fendo.2023.1120533" rel="noopener noreferrer">DOI</a>.</li>
           <li id="kaynak-10">Korkushko OV ve ark. <em>[Normalizing effect of the pineal gland peptides on the daily melatonin rhythm in old monkeys and elderly people].</em> Adv Gerontol. 2007;20(1):74-85. Rusça. <a href="https://pubmed.ncbi.nlm.nih.gov/17969590/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-11">Khavinson VK, Golubev AG. <em>[Aging of the pineal gland].</em> Adv Gerontol. 2002;9:67-72. Rusça. <a href="https://pubmed.ncbi.nlm.nih.gov/12096440/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
-          <li id="kaynak-12">FDA. <em>Certain Bulk Drug Substances for Use in Compounding that May Present Significant Safety Risks.</em> Uygulama yoluna özgü güvenlik değerlendirmesi; Türkiye ruhsat kaydı değildir. Sayfa içeriği: 22 Nisan 2026; erişim: 12 Ekim 2026. <a href="https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks" rel="noopener noreferrer">Resmî güvenlik değerlendirmesi</a>.</li>
+          <li id="kaynak-12">FDA. <em>Certain Bulk Drug Substances for Use in Compounding that May Present Significant Safety Risks.</em> Uygulama yoluna özgü güvenlik değerlendirmesi; Türkiye ruhsat kaydı değildir. Sayfa içeriği: 22 Nisan 2026; erişim: 26 Ekim 2026. <a href="https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks" rel="noopener noreferrer">Resmî güvenlik değerlendirmesi</a>.</li>
           <li id="kaynak-13">Beck DE ve ark. <em>Prospective, randomized, controlled, proof-of-concept study of the Ghrelin mimetic ipamorelin for the management of postoperative ileus in bowel resection patients.</em> Int J Colorectal Dis. 2014;29(12):1527-1534. <a href="https://pubmed.ncbi.nlm.nih.gov/25331030/" rel="noopener noreferrer">İpamorelin insan çalışması</a>.</li>
           <li id="kaynak-14">Guarnera G, DeRosa A, Camerini R. <em>The effect of thymosin treatment of venous ulcers.</em> Ann N Y Acad Sci. 2010;1194:207-212. <a href="https://pubmed.ncbi.nlm.nih.gov/20536470/" rel="noopener noreferrer">Timosin beta-4 yara çalışması</a>.</li>
           <li id="kaynak-15">FDA. <em>Pharmacy Compounding Advisory Committee: AOD-9604 briefing document.</em> 4 Aralık 2024 toplantı dosyası, s. 20–23. <a href="https://www.fda.gov/media/183584/download" rel="noopener noreferrer">AOD-9604 etkinlik değerlendirmesi</a>.</li>
           <li id="kaynak-16">Miller TR ve ark. <em>Effects of topical copper tripeptide complex on CO2 laser-resurfaced skin.</em> Arch Facial Plast Surg. 2006;8(4):252-259. <a href="https://pubmed.ncbi.nlm.nih.gov/16847171/" rel="noopener noreferrer">Cilde uygulanan GHK-Cu çalışması</a>.</li>
           <li id="kaynak-17">Lee E, Padgett B. <em>Intra-Articular Injection of BPC 157 for Multiple Types of Knee Pain.</em> Altern Ther Health Med. 2021;27(4):8-13. <a href="https://pubmed.ncbi.nlm.nih.gov/34324435/" rel="noopener noreferrer">BPC-157 diz ağrısı dosya incelemesi</a>.</li>
+          <li id="kaynak-18"><em>Human evidence for BPC-157 in orthopaedic and regenerative medicine: a systematic review of efficacy and safety.</em> Acta Orthop Belg. 2026;92(3). <a href="https://doi.org/10.52628/92.3.15837" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-19"><em>Peptide Supplements and Their Therapeutic Applications in Sports Medicine.</em> Am J Sports Med. 11 Ağustos 2026. <a href="https://doi.org/10.1177/03635465261464420" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-20"><em>BPC-157 as an Investigational Peptide Therapeutic: Biopharmaceutical Challenges, Formulation Strategies, and Translational Development Barriers.</em> Pharmaceutics. 2026;18(5):625. <a href="https://doi.org/10.3390/pharmaceutics18050625" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-21">Liu H ve ark. <em>Systematic review: the safety and efficacy of growth hormone in the healthy elderly.</em> Ann Intern Med. 2007;146(2):104-115. <a href="https://doi.org/10.7326/0003-4819-146-2-200701160-00005" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-22"><em>Epitalon and Epithalamin: A Narrative Review of Mechanistic, Preclinical, and Clinical Evidence.</em> Int J Mol Sci. 2026;27(19):8922. <a href="https://doi.org/10.3390/ijms27198922" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-23">FDA. <em>Briefing Document, Pharmacy Compounding Advisory Committee Meeting, 23–24 Temmuz 2026.</em> FDA personelinin her madde için önerisi, s. 6–8. <a href="https://www.fda.gov/media/193342/download" rel="noopener noreferrer">FDA bilgilendirme belgesi</a>.</li>
+          <li id="kaynak-24">Regulatory Focus (RAPS). <em>FDA advisory committee backs two controversial peptides.</em> 23 Temmuz 2026. Haber kaynağı; FDA tutanağı değildir. <a href="https://www.raps.org/resource/fda-advisory-committee-backs-two-controversial-peptides.html" rel="noopener noreferrer">Haber</a>.</li>
+          <li id="kaynak-25">Regulatory Focus (RAPS). <em>FDA advisory committee backs two more peptides, rejects one for compounding list.</em> 24 Temmuz 2026. Haber kaynağı; FDA tutanağı değildir. <a href="https://www.raps.org/resource/fda-advisory-committee-backs-two-more-peptides-rejects-one-for-compounding-list.html" rel="noopener noreferrer">Haber</a>.</li>
+          <li id="kaynak-26">USADA. <em>BPC-157: Experimental Peptide Creates Risk for Athletes.</em> Erişim: 26 Ekim 2026. <a href="https://www.usada.org/spirit-of-sport/bpc-157-peptide-prohibited/" rel="noopener noreferrer">USADA sayfası</a>.</li>
+          <li id="kaynak-27">USADA. <em>Athlete Advisory: What’s New on the 2027 WADA Prohibited List?</em> Liste 1 Ocak 2027’de yürürlüğe girecek; TB-500 ve ipamorelin için bildirilen sınıflama bu bildirimdeki listeye göredir, 2026 listesinin resmî metni bu yazı için okunmadı. Erişim: 26 Ekim 2026. <a href="https://www.usada.org/spirit-of-sport/athlete-advisory-2027-prohibited-list/" rel="noopener noreferrer">USADA bilgilendirmesi</a>.</li>
+          <li id="kaynak-28">T.C. Sağlık Bakanlığı Türkiye İlaç ve Tıbbi Cihaz Kurumu. <em>Ruhsatlı Beşeri Tıbbi Ürünler Listesi, 16 Ekim 2026</em> (23.120 satır, etkin madde sütununda tarandı). <a href="https://www.titck.gov.tr/dinamikmodul/85" rel="noopener noreferrer">TİTCK sayfası</a>.</li>
+          <li id="kaynak-29">T.C. Tarım ve Orman Bakanlığı. <em>Takviye Edici Gıdalar Kısıtlı Maddeler Listesi.</em> Son güncelleme: 21 Ekim 2026. <a href="https://www.tarimorman.gov.tr/Konu/1116/takviye-edici-gida-kisitli-maddeler-listesi" rel="noopener noreferrer">Bakanlık sayfası</a>.</li>
+          <li id="kaynak-30">ClinicalTrials.gov. BPC-157 randomize çalışmaları, durum 26 Ekim 2026: <a href="https://clinicaltrials.gov/study/NCT07437547" rel="noopener noreferrer">NCT07437547</a> (hamstring yırtığı, faz 2, 120 kişi) ve <a href="https://clinicaltrials.gov/study/NCT07803250" rel="noopener noreferrer">NCT07803250</a> (rotator manşet onarımı sonrası, pilot çalışma).</li>
+          <li id="kaynak-31">ClinicalTrials.gov, durum 26 Ekim 2026: <a href="https://clinicaltrials.gov/study/NCT07487363" rel="noopener noreferrer">NCT07487363</a> (TB-500, damar hastalığı, faz 1/2), <a href="https://clinicaltrials.gov/study/NCT07505745" rel="noopener noreferrer">NCT07505745</a> (MOTS-c, prediyabet ve obezite, faz 2a) ve <a href="https://clinicaltrials.gov/study/NCT07437586" rel="noopener noreferrer">NCT07437586</a> (GHK-Cu jel, standart deri yarası, faz 2).</li>
+          <li id="kaynak-32"><em>The emerging landscape of performance-enhancing peptides modulating GH-IGF1 axis: bridging the gap between clinical evidence and patient self-administration.</em> Front Endocrinol. 2026. <a href="https://doi.org/10.3389/fendo.2026.1822475" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-33"><em>A Systematic Review of the Mechanisms and Therapeutic Applications of GHK-Cu in Topical Microneedle Delivery.</em> Arch Intern Med Res. 2026. <a href="https://doi.org/10.26502/aimr.0255" rel="noopener noreferrer">DOI</a>.</li>
+          <li id="kaynak-34">ClinicalTrials.gov, durum 26 Ekim 2026: rekombinant timosin beta-4 enjeksiyonu, akut miyokard enfarktüsü, faz 2 çalışmaları <a href="https://clinicaltrials.gov/study/NCT05485818" rel="noopener noreferrer">NCT05485818</a> ve <a href="https://clinicaltrials.gov/study/NCT05984134" rel="noopener noreferrer">NCT05984134</a> (kayıtta tamamlandı; sonuçlar bu yazı için incelenmedi).</li>
+          <li id="kaynak-35">Goodwin. <em>FDA Signals Potentially Evolving Stance Toward Compounding of Certain Peptides.</em> Mayıs 2026. FDA'nın 15 Nisan 2026 duyurusunu ve sonraki kurul takvimini özetleyen hukuk bürosu yazısı; FDA belgesi değildir. <a href="https://www.goodwinlaw.com/en/insights/blogs/2026/05/fda-signals-potentially-evolving-stance-toward-compounding-of-certain-peptides" rel="noopener noreferrer">Yazı</a>.</li>
         </ol>
       </ArticleProsePanel>
 
@@ -372,6 +737,7 @@ const articleSchemas = buildArticleSchemas({
           '/bilimsel-pencere/yeni-arastirmalar/glp1-analoglari-menopozal-kilo/',
           '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
           '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
+          '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/',
         ]}
       />
 
