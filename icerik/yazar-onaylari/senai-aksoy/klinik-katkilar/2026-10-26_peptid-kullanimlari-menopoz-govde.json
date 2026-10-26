@@ -1,0 +1,40 @@
+{
+  "writerSlug": "senai-aksoy",
+  "pathname": "/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/",
+  "answeredAt": "2026-10-26",
+  "source": "Bu sohbet içinde kullanıcının doğrudan gerçek hekim yanıtları (geniş audit ve humanize sonrası, yazar soruları)",
+  "kind": "gövde katkısı (SSS değil)",
+  "contributions": [
+    {
+      "question": "Peptid sorusu muayeneye genelde nasıl geliyor? Birleşik bir gözlem olarak anlatabileceğiniz bir sahne var mı?",
+      "originalAnswer": "spor salonundaki arkadaşım kullanıyor",
+      "targetSection": "bes-eksen > iddialar (h3 giriş paragrafının ilk cümlesi)",
+      "bodyText": "Muayene odasında peptid sorusu bana en sık tek bir cümleyle geliyor: “Spor salonundaki arkadaşım kullanıyor.”",
+      "mappingNote": "Birleşik gözlem olarak klinik çerçevede verildi; hasta adı, yaş veya ayırt edici ayrıntı yok."
+    },
+    {
+      "question": "Peptid kullanmaya zaten başlamış bir kadın geldiğinde ilk ne yaparsınız?",
+      "originalAnswer": "son yaptırdığı testleri görmek isterim. yakın testler yoksa karaciğer  böbrek pankreas testleri şeker kolesterol d vit b12 sonuçları isterim",
+      "targetSection": "uc-soru (üç sorunun hemen ardından)",
+      "bodyText": "Peptid kullanmaya zaten başlamış olarak gelirseniz, ben önce son yaptırdığınız testleri görmek isterim. Yakın tarihli test yoksa karaciğer, böbrek ve pankreas testleri ile kan şekeri, kolesterol, D vitamini ve B12 sonuçlarını isterim.",
+      "mappingNote": "Yanıt birebir aktarıldı; yalnızca imla ve cümle düzeni düzeltildi. Test listesine ekleme yapılmadı."
+    },
+    {
+      "question": "Şu mizah cümlesi olur mu: “Bu ürünlerin etiketi bir vitamin kutusu kadar sakin, vaadi bir spor salonu afişi kadar iddialı.”",
+      "originalAnswer": "evet kullan",
+      "targetSection": "bes-eksen > iddialar (ikinci paragrafın ilk cümlesi)",
+      "bodyText": "Bu ürünlerin etiketi bir vitamin kutusu kadar sakin, vaadi bir spor salonu afişi kadar iddialı.",
+      "mappingNote": "Model önerisi; Dr. Aksoy onayıyla kullanıldı. Mizah düzeyi H1, makaledeki tek dokunuş; ardından kanıt cümlesi geliyor."
+    }
+  ],
+  "auditChanges": [
+    "Görsel: 4:5 byline (zy-peptid-kullanimlari-menopoz-byline.webp, 1200×1500) ve 2.4:1 kart/og (zy-peptid-kullanimlari-menopoz.webp, 2400×1000) crop'ları üretildi, IPTC trainedAlgorithmicMedia etiketlendi; 25 MB PNG artık referans almıyor. Üst hero değişmedi.",
+    "H2 sayısı 13 → 9, soru başlıklı H2 10 → 1; GLP-1 ve kilo bölümleri birleşti; iddialar ve bilinmeyenler H3 oldu; kapanış üç sorunun ardına taşındı; TOC güncellendi.",
+    "Kısa Klinik Yanıt 95 → 49 kelime; timosin beta-4 ile çelişen 'en ileri basamak' cümlesi çıkarıldı.",
+    "Uzun cümleler bölündü (25+ kelime 11 → 1), antitez 4 → 2, 'Hücrelerin dayanağı' düzeltildi, H2 lede'leri çeşitlendi, duygu ve teselli cümlesi eklendi, SSS göndermeleri 3 → 1.",
+    "Künyeler: [18] Poolton, [19] Tewari, [20] Mateescu, [22] Jain, [32] Dominikowski, [33] Najafi yazar adları; [32] ve [33] cilt/sayfa. PubMed metadata ile doğrulandı."
+  ],
+  "status": "Gerçek yanıtlar 2026-10-26’da alındı ve gövdeye işlendi. KC (Doç. Dr. Senai Aksoy) 2026-10-26’da yazar onayını verdi: “Yazar onayı ve Mumcu tıbbi onayı tamam.”",
+  "medicalReviewStatus": "Dr. Alper Mumcu tıbbi onayı KC beyanıyla 2026-10-26’da tamamlandı (yazılı Mumcu notu yok). Bilimsel Editör Notu metni değişmedi.",
+  "publicationStatus": "Commit talimatı verildi; push ve deploy talimatı yok."
+}
