@@ -26,8 +26,10 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 const tocEntries = [
   { id: 'nedir', label: 'CoQ10 Nedir?' },
   { id: 'klinik-endikasyon', label: 'Üç Klinik Kullanım Alanı' },
-  { id: 'anti-aging', label: 'Anti-Aging ve Menopoz İddiaları' },
+  { id: 'anti-aging', label: 'Anti-Aging ve Enerji İddiaları' },
+  { id: 'menopoz-ve-40', label: 'Menopozda ve 40 Sonrasında Veri' },
   { id: 'pratik-notlar', label: 'Ubiquinone, Ubiquinol, Doz' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilinmeyenler' },
   { id: 'uc-soru', label: 'Doktora Üç Soru' },
   { id: 'kapanis', label: 'Kapanış' },
   { id: 'kaynaklar', label: 'Kaynaklar', numbered: false },
@@ -38,7 +40,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?';
 const seoTitle = 'Coenzyme Q10: Kanıt mı Reklam mı?';
 const articleDescription =
-  'CoQ10, statin kaynaklı kas ağrısında ve migren önlemesinde hekimle denenebilir (statin kullanan herkese rutin önerilmez); kalp yetmezliğinde yalnızca ek seçenektir. Anti-aging ve menopozal enerji iddialarında kanıt sınırlıdır.';
+  'CoQ10, statin kaynaklı kas ağrısında ve migren önlemesinde hekimle denenebilir (statin kullanan herkese rutin önerilmez); kalp yetmezliğinde yalnızca ek seçenektir. Yorgunlukta etkisi küçük ve tutarsız, ömrü uzattığı gösterilmedi, menopoz belirtileri için insan çalışması bulunamadı.';
 const faqItems = articleFaqs['/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -46,7 +48,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '3 Mayıs 2026',
-  modifiedDate: '25 Ekim 2026',
+  modifiedDate: '26 Ekim 2026',
   pathname: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
   articleSection: 'Zamansız Yaşam',
   sectionPath: '/zamansiz-yasam/',
@@ -90,8 +92,8 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="3 Mayıs 2026"
-        lastUpdated="25 Ekim 2026"
-        readingMinutes={9}
+        lastUpdated="26 Ekim 2026"
+        readingMinutes={13}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/zy-coq10-kanit-notlari.webp"
         imageAlt="Aydınlık masa üzerinde notlar ve sakin araştırma atmosferi; CoQ10 takviyesi yazısı için editoryal görsel"
@@ -108,11 +110,13 @@ const articleSchemas = buildArticleSchemas({
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           CoQ10 takviyesi, statin kaynaklı kas ağrısında ve migren önlemesinde deneme için yeterli sayılabilecek
-          kanıta sahiptir; yine de statin kullanan herkese rutin önerilmez. Kalp yetmezliğinde bazı çalışmalarda ölüm veya yeniden yatışta azalma sinyali
-          bildirilmiştir; bu, standart tedavi önerisi değildir. CoQ10 ancak kardiyoloji takibinde, mevcut
-          tedaviye ek seçenek olarak değerlendirilebilir. Anti-aging, menopozal enerji ve yaşam süresi
-          iddialarında kontrollü insan çalışması yok denecek kadar azdır. Warfarin, aktif kemoterapi, bilinen
-          kalp yetmezliği, gebelik veya emzirme varsa hekim kontrolü olmadan başlanmaz.
+          kanıta sahiptir; yine de statin kullanan herkese rutin önerilmez. Kalp yetmezliğinde karar kardiyoloji
+          takibindedir; CoQ10 yalnızca ek seçenek olabilir. Anti-aging ve enerji iddialarında tablo daha
+          belirsizdir: kan düzeyi takviyeyle yükselir, yorgunlukta etki küçük ve tutarsızdır. Ömrü uzattığı
+          gösterilmemiştir; selenyumla birlikte verilen, bulabildiğimiz tek randomize çalışmada yaşlılarda
+          kalp-damar ölümü azalmış, bu sonuç doğrulanmayı beklemektedir. Menopoz belirtileri için insan çalışması
+          bulamadık. Warfarin, aktif kemoterapi, bilinen kalp yetmezliği, gebelik veya emzirme varsa hekim
+          kontrolü olmadan başlanmaz.
         </p>
       </ArticleSummary>
 
@@ -203,35 +207,255 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="anti-aging">Anti-Aging, Menopoz, "Enerji" İddiaları — Kanıt Nerede Biter?</h2>
         <p>
-          Pazarlama dilinde CoQ10 hücresel gençleşme anlatısının baş aktörlerinden biridir. Bu anlatının
-          altındaki insan kanıtı ise düşündüğünüzden çok daha sınırlıdır.
+          Pazarlama dilinde CoQ10 hücresel gençleşme anlatısının baş aktörlerinden biridir. Altındaki insan
+          kanıtı ise tek cümleye sığmaz; çünkü her vaat ayrı bir soru.
         </p>
         <p>
-          <strong>Genel anti-aging:</strong> CoQ10'un hücre biyolojisi ilgi çekicidir. Bu, takviyenin
-          yaşam süresini uzattığını ya da yaşlanma belirtilerini geri çevirdiğini göstermez. Bu yazıda
-          incelenen klinik kaynaklar böyle genel bir anti-aging sonucunu desteklemiyor. Pazarlama çoğu zaman
-          hücre kültürü veya hayvan modellerini insan iddiasına dönüştürür; aradaki köprü bilimsel olarak
-          gevşektir. "Yaşı geri çevirir" bambaşka düzeyde kanıt ister.
+          “Çalışıyor mu?” diye tek parça sormak sizi yanıltır. Kan düzeyini yükseltmek bir şeydir, yorgunluğu
+          azaltmak başka, ömrü uzatmak bambaşka. Aşağıda CoQ10’a önce kanıt basamaklarında, sonra beş ayrı
+          eksende, sonra da dolaşan iddialar üzerinden tek tek bakıyoruz.
+        </p>
+
+        <h3>Kanıt merdiveninde CoQ10</h3>
+        <p>
+          Basamaklar aşağıdan yukarıya doğru gidiyor.
+        </p>
+        <ol>
+          <li>
+            <strong>Mekanizma.</strong> Mitokondrideki rolü sağlam. Takviye kan düzeyini tutarlı biçimde
+            yükseltir; 24 çalışmayı birleştiren bir derleme bunu doğruladı
+            <Evidence level={4} /> <sup><a href="#kaynak-10">[10]</a></sup>. Kandaki artışın hedef dokuda işlevi
+            değiştirip değiştirmediği ise ayrı bir sorudur.
+          </li>
+          <li>
+            <strong>Hayvanda ömür.</strong> Dişi farelere yaşam boyu ubiquinol verildiğinde medyan ve en uzun ömür
+            değişmedi; yaşlanma puanında yalnızca orta yaş döneminde geçici bir düzelme görüldü
+            <sup><a href="#kaynak-15">[15]</a></sup>. Yazarlardan biri ubiquinol üreticisinin çalışanı olarak
+            belirtilmiş. Ulusal bir yaşlanma enstitüsünün ilaç-test programında CoQ10’un mitokondriye yönelik
+            türevi (MitoQ) de ömrü uzatmadı <sup><a href="#kaynak-16">[16]</a></sup>. Düz CoQ10 için bu
+            programda ayrı bir sonuç bulamadık.
+          </li>
+          <li>
+            <strong>İnsanda biyobelirteç.</strong> Kan düzeyi artıyor (yukarıda). Selenyumla birlikte verilen
+            tek çalışmada kalp yükünü gösteren NT-proBNP ve bazı iltihap göstergeleri lehe değişti
+            <sup><a href="#kaynak-13">[13]</a>, <a href="#kaynak-14">[14]</a></sup>. Bunlar aynı araştırma
+            ekibinin aynı çalışmasından çıkan sonuçlar; bağımsız bir doğrulama sayılmaz.
+          </li>
+          <li>
+            <strong>İnsanda işlev.</strong> Yorgunlukta etki küçük ve tutarsız (aşağıda). Egzersizde güç ve
+            kısa süreli kuvvet değişmedi, dayanıklılıkta küçük ve dengesiz bir fark çıktı; derleme güven
+            düzeyini çok düşük ile düşük arasında değerlendiriyor <sup><a href="#kaynak-10">[10]</a></sup>.
+            Menopozdaki kadında uyku, ruh hali veya sıcak basması için kontrollü bir çalışma bulamadık.
+          </li>
+          <li>
+            <strong>İnsanda güvenlik.</strong> Çalışmalarda genel olarak iyi tolere edildi; bildirilen yan
+            etkiler çoğunlukla sindirim yakınmaları. Yine de güvenli bir üst sınır belirlenmemiş; gebelik,
+            emzirme ve 18 yaş altında yeterli veri yok <sup><a href="#kaynak-19">[19]</a></sup>.
+          </li>
+          <li>
+            <strong>Ömür ve hastalık sonuçları.</strong> Kalp yetmezliği çalışmaları dışında, yaşlı bir topluluk
+            örnekleminde ölümü ölçen tek bir randomize çalışma bulabildik (aşağıda). Bu sonucu
+            bağımsız bir ekibin tekrarladığı bir randomize çalışmaya rastlamadık. Mikrobesinleri birlikte tarayan
+            geniş bir derleme CoQ10 için toplam ölüm olaylarında azalma bildirdi (göreli risk 0,68; %95 güven
+            aralığı 0,49–0,94) <sup><a href="#kaynak-20">[20]</a></sup>. Bu derleme kalp-damar sağlığı
+            sonuçlarına odaklanıyor; sonucu sağlıklı kişilerde ömrün uzaması diye okumak doğru olmaz.
+          </li>
+        </ol>
+
+        <h3>Beş eksende CoQ10</h3>
+        <p>
+          Tek bir not vermek yerine beş soruya ayrı yanıt veriyoruz. Aşağıdaki değerlendirme anti-aging, enerji
+          ve menopoz iddialarını kapsıyor; statin, migren ve kalp yetmezliği ayrı okunmalı.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Eksen</th>
+                <th class="p-3 font-semibold">Değerlendirme</th>
+                <th class="p-3 font-semibold">Gerekçe</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Etkinlik kanıtı</td>
+                <td class="p-3">Zayıf–sınırlı</td>
+                <td class="p-3">Menopoz belirtileri için kontrollü çalışma yok; yorgunlukta küçük ve düşük güvenli sinyal <sup><a href="#kaynak-10">[10]</a>, <a href="#kaynak-11">[11]</a></sup>; ömür için selenyumla birleşik tek çalışma <sup><a href="#kaynak-13">[13]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Güvenlik kanıtı</td>
+                <td class="p-3">Orta</td>
+                <td class="p-3">Çok sayıda çalışmada iyi tolere edildi <sup><a href="#kaynak-11">[11]</a>, <a href="#kaynak-19">[19]</a></sup>; üst sınır, uzun dönem, gebelik ve çocuk verisi eksik <sup><a href="#kaynak-19">[19]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Mekanizma inandırıcılığı</td>
+                <td class="p-3">Güçlü</td>
+                <td class="p-3">Mitokondri ve zar antioksidanı olarak rolü tanımlı; kan düzeyi yükseliyor, doku etkisi gösterilmemiş <sup><a href="#kaynak-10">[10]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Ürün ve düzenleyici durum</td>
+                <td class="p-3">Orta</td>
+                <td class="p-3">İlaç değil, takviye; 16.10.2026 tarihli ruhsatlı ürün listesinde CoQ10 etkin maddeli ilaç yok <sup><a href="#kaynak-21">[21]</a></sup>; takviyeler Bakanlık onayına ve kısıtlı maddeler listesine tabi <sup><a href="#kaynak-22">[22]</a></sup>; ürün saflığı güvencesi tek tek ürüne bağlı</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Geri dönüşebilirlik</td>
+                <td class="p-3">Güçlü</td>
+                <td class="p-3">Yan etkiler çoğunlukla hafif ve geçici bildirildi <sup><a href="#kaynak-19">[19]</a></sup>; bırakılınca sürecek bir zarar sinyali kaynaklarımızda yok. İlaç etkileşimi ve kanser tedavisi sırasındaki belirsizlik ayrı değerlendirilir <sup><a href="#kaynak-18">[18]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Dolaşan iddialar kanıtla karşılaşınca</h3>
+        <p>
+          Aşağıdaki iddialar ürün sayfalarında, sağlık sitelerinde ve sektör haberlerinde tekrar tekrar karşımıza
+          çıkıyor. Onları kanıt sırasına göre dizdik; hiçbirini onaylanmış saymıyoruz.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Durum</th>
+                <th class="p-3 font-semibold">Dayanak</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Kandaki CoQ10 düzeyini yükseltir</td>
+                <td class="p-3">Test edildi, desteklendi</td>
+                <td class="p-3">24 çalışmanın birleştirildiği derleme <sup><a href="#kaynak-10">[10]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Yorgunluğu azaltır</td>
+                <td class="p-3">Test edildi, kısmen desteklendi; sonuçlar tutarsız</td>
+                <td class="p-3">Bir derlemede küçük azalma <sup><a href="#kaynak-11">[11]</a></sup>; bir başkasında kararsız ve düşük güvenli <sup><a href="#kaynak-10">[10]</a></sup>; depresyonlu hastalarda anlamlı fark yok <sup><a href="#kaynak-12">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Egzersiz performansını artırır</td>
+                <td class="p-3">Test edildi, büyük ölçüde desteklenmedi</td>
+                <td class="p-3">Güç ve kısa süreli kuvvette değişiklik yok; dayanıklılıkta küçük, dengesiz fark <sup><a href="#kaynak-10">[10]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Yaşlıda kalp-damar ölümünü azaltır</td>
+                <td class="p-3">Test edildi, bulduğumuz tek çalışmada desteklendi (selenyumla birlikte)</td>
+                <td class="p-3">443 kişilik randomize çalışma <sup><a href="#kaynak-13">[13]</a></sup>; tekrarı bekleniyor</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Ömrü uzatır</td>
+                <td class="p-3">Farede test edildi, desteklenmedi; insanda ömür uzunluğu ölçülmedi</td>
+                <td class="p-3">Yaşam boyu ubiquinol çalışması ve ulusal fare programı <sup><a href="#kaynak-15">[15]</a>, <a href="#kaynak-16">[16]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Sıcak basması, uyku ve ruh hali gibi menopoz belirtilerini azaltır</td>
+                <td class="p-3">Henüz test edilmedi</td>
+                <td class="p-3">Kontrollü çalışma yok; olumlu sonuç plasebosuz bir ankete dayanıyor <sup><a href="#kaynak-28">[28]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Menopozda kilo ve yağ dokusunu korur</td>
+                <td class="p-3">Yalnızca hayvanda</td>
+                <td class="p-3">Yumurtalıkları alınmış sıçanlarda çalışma; insanda test edilmedi <sup><a href="#kaynak-27">[27]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Hücreleri ve cildi gençleştirir</td>
+                <td class="p-3">Bu haliyle test edilemez</td>
+                <td class="p-3">“Gençleşme” ölçülebilir bir sonuç değil; planlanan bir çalışma cilt nemini ve esnekliğini ayrı ayrı ölçecek <sup><a href="#kaynak-23">[23]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Yorgunluk ve “enerji”: küçük bir sinyal, sağlam bir sonuç değil</h3>
+        <p>
+          Yorgunluk, CoQ10 için en çok tartışılan alan. Burada “kanıt yok” demek de yanlış olur, “kanıt sağlam”
+          demek de.
         </p>
         <p>
-          <strong>Menopozal belirtiler:</strong> Sıcak basması, gece terlemesi, uyku bozulması veya genel
-          yorgunluk yaşıyorsanız, bu yazıda incelenen kaynaklar CoQ10'u bu belirtiler için kanıtlı bir seçenek
-          haline getirmiyor. Bu yakınmalar kişisel öyküye ve uygun kanıt temelli seçeneklere göre
-          değerlendirilir. CoQ10 bu seçeneklerin yerine geçmez; en fazla hekimle konuşulmuş bireysel bir
-          ek deneme olabilir.
+          On üç randomize çalışmayı (1.126 kişi) birleştiren bir derleme, CoQ10 alanlarda yorgunluk puanında
+          plaseboya göre anlamlı ama küçük bir azalma buldu
+          <Evidence level={2} /> <sup><a href="#kaynak-11">[11]</a></sup>. Yazarlar yüksek doz ve uzun süreyle daha
+          belirgin düzelme görmüş; bu ilişki çalışmaların kendi içinden çıkarılmış bir hesap, “daha fazla daha
+          iyi” diye okunmamalı. Sağlıklı yetişkinlerde 24 çalışmayı inceleyen daha yeni bir derleme öznel
+          yorgunlukta azalmaya işaret eden bir sinyal buldu, ama güven düzeyini çok düşük ile düşük arasında
+          değerlendirdi <sup><a href="#kaynak-10">[10]</a></sup>. Depresyon tanılı hastalarda ruh hali düzeldi,
+          yorgunlukta anlamlı fark çıkmadı; bu sonuç yalnızca iki çalışmaya dayanıyor
+          <sup><a href="#kaynak-12">[12]</a></sup>.
         </p>
         <p>
-          <strong>"Enerji" ve genel yorgunluk:</strong> Bu en zor okunan iddiadır. Yorgunluğunuz tek bir
-          açıklamaya indirgenemez. CoQ10'u düşünmeden önce tiroid, demir ve B12 düzeyine, uyku apnesine,
-          depresyona ve eşlik eden diğer tıbbi tablolara bakmak gerekir. Yorgunluğun tek bir takviyeyle
-          çözülmediğini söylemek en dürüst yanıttır.
+          Bu belirsizlik sizi kaygılandırmasın. CoQ10 kullanıyorsanız ve kendinizi iyi hissediyorsanız, bu yazı sizi
+          vazgeçirmek için yazılmadı. Yorgunluğunuz sürüyorsa, önce tiroid, demir, B12, uyku apnesi ve depresyon
+          ayrılmalı. Bunlar sorun değilse ve hekiminizle konuşup denemeye karar verirseniz beklentiyi küçük
+          tutun.
         </p>
+
+        <h3>Yaşlılarda bulduğumuz tek randomize çalışma: kalp-damar ölümü azaldı, ömür uzadı denemez</h3>
+        <p>
+          İsveç’te 70–88 yaşındaki 443 kişi, selenyum ve CoQ10’u birlikte ya da plasebo aldı. Beş yılı aşan
+          izlemde kalp-damar kaynaklı ölüm etkin grupta %5,9, plasebo grubunda %12,6 bulundu; kalp işlevini
+          yansıtan NT-proBNP düzeyi de etkin grupta daha düşüktü
+          <Evidence level={2} /> <sup><a href="#kaynak-13">[13]</a></sup>. On yıllık izlemde fark kadınlarda daha
+          belirgin bulundu; ama bu bir alt grup analizi ve aynı ekipten çıktı
+          <sup><a href="#kaynak-14">[14]</a></sup>.
+        </p>
+        <p>
+          Güçlü bir sinyal. Ama tek bir sinyal. Sonucu okurken beş şeyi akılda tutun. İki madde birlikte
+          verildi; çalışma hangisinin işe yaradığını ayıramıyor. Katılımcılar selenyum düzeyi düşük bir bölgede
+          yaşıyordu; selenyumu yeterli olanlarda aynı sonucun alınıp alınmayacağı belli değil. Ortalama yaş
+          yetmişin üzerindeydi, yani katılımcıların çoğu menopozun çok ötesindeydi. Sonucu bağımsız bir ekibin
+          tekrarladığına rastlamadık. Ve ölçülen şey “daha uzun yaşam” değil, kalp-damar nedeniyle ölümdeki fark.
+        </p>
+        <p>
+          Aynı soru şimdi kalp yetmezliğinde iki büyük çalışmayla yeniden soruluyor; ayrıntılar
+          “Henüz bilinmeyenler” bölümünde.
+        </p>
+
         <p>
           <a href="/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">
             Deneysel tedaviyi okuma kılavuzunda
           </a>
           anlatılan ilke burada da geçerlidir: aynı molekül farklı kullanım alanında farklı kanıt
           seviyesindedir.
+        </p>
+
+        <h2 id="menopoz-ve-40">Menopozda ve 40 Sonrasında Elimizdeki Veri</h2>
+        <p>
+          Bu yazıyı okuyanların çoğu aslında tek bir şeyi merak ediyor: CoQ10 menopoz dönemimde bana ne yapar?
+          Dürüst yanıt kısa. Bunu doğrudan ölçen kontrollü bir insan çalışması bulamadık.
+        </p>
+        <p>
+          Sıcak basması, gece terlemesi, uyku bozulması, ruh hali değişimi ve yorgunluk için CoQ10’u plaseboyla
+          karşılaştıran randomize bir çalışma yok. Menopozla ilgili laboratuvar verisi daha çok yumurtalıkları
+          alınmış sıçan ve farelerden geliyor; sıçanlarda CoQ10 kilo artışını ve yağ dokusundaki iltihabı
+          azaltmış <sup><a href="#kaynak-27">[27]</a></sup>. Sıçan sonucu, kadın için sonuç sayılmaz.
+        </p>
+        <p>
+          Dolaşan olumlu menopoz anlatısı ise başka bir yerden besleniyor: ubiquinol üreticisinin tanıttığı,
+          45–55 yaş arasında 200 kadınla yapılan, plasebo grubu olmayan, öz-bildirime dayalı bir anket. Katılımcılar
+          sosyal medyadaki bir canlı yayından sonra toplanmış ve iki ay boyunca ürünü kullanmış; ölçülen
+          sonuçlar arasında sıcak basması yok <sup><a href="#kaynak-28">[28]</a></sup>. Böyle bir tasarım plasebo
+          etkisini ve kendiliğinden geçen belirtileri ayıramaz. Bu yüzden iddia tablosunda “henüz test
+          edilmedi” sınıfında duruyor.
+        </p>
+        <p>
+          Bir sürpriz de var. Menopoz sonrası 33 kadında serum CoQ10 düzeyi, menopoz öncesi 50 kadından daha
+          yüksek bulunmuş; hormon tedavisi kullanan 15 kadında ise düşüktü
+          <sup><a href="#kaynak-17">[17]</a></sup>. Bu küçük, eski ve tek zamanlı bir ölçüm; serum düzeyi doku
+          düzeyi de değil. Yine de “menopozda CoQ10 düşer, o yüzden takviye gerekir” zincirinin ilk halkasını
+          desteklemiyor. Hormon tedavisiyle birlikte CoQ10 kullanımının ne anlama geldiğini araştırmalarımızda
+          yanıtlayan bir veri bulamadık.
+        </p>
+        <p>
+          Kadınların da yer aldığı çalışmalar var, ama başka yaşta. Selenyumla birlikte verilen çalışmada
+          katılımcıların yaklaşık yarısı kadındı ve ortalama yaş yetmişin üzerindeydi
+          <sup><a href="#kaynak-13">[13]</a></sup>. Perimenopozdaki ya da menopozun ilk yıllarındaki kadınlar için
+          ayrı bir veri görmedik. Madrid’de menopoz sonrası 40 kadında CoQ10 alanlarla almayanları yaşam kalitesi
+          açısından karşılaştıran gözlemsel bir çalışma kayıtlı; sonucunu yayımlanmış bulamadık
+          <sup><a href="#kaynak-26">[26]</a></sup>.
+        </p>
+        <p>
+          İçiniz rahat olsun: bu “CoQ10 zararlıdır” demek değil. “Bu belirtiler için yararı gösterilmedi” demek.
+          Uykusuzlukla, yorgunlukla ya da sıcak basmasıyla uğraşırken eczane rafındaki bir kavanozun cazibesi
+          anlaşılır bir şey. Ama kanıtı olan seçeneklerin yerine geçmesi için bir neden yok.
         </p>
 
         <h2 id="pratik-notlar">Pratik Notlar: Ubiquinone, Ubiquinol, Doz, Etkileşim</h2>
@@ -259,7 +483,10 @@ const articleSchemas = buildArticleSchemas({
           çalışmada ise CoQ10 kullanan warfarin hastalarında kendi bildirdikleri kanama daha sık
           görülmüştür<sup><a href="#kaynak-8">[8]</a></sup>. Bu yüzden warfarin gibi kan sulandırıcı kullananlar CoQ10'a
           reçeteleyen hekimin değerlendirmesi olmadan başlamamalıdır. Aktif kemoterapi sırasında da onkoloğun
-          görüşü gerekir. Tansiyon ilaçlarında ise kaygılanacak bir etkileşim gösterilmemiştir: Cochrane
+          görüşü gerekir: meme kanseri tedavisi gören 1.134 kadında yapılan gözlemsel bir çalışmada, tedavi
+          öncesi ve sırasında antioksidan takviye (CoQ10 dahil) kullananlarda nüks ve ölüm riski daha yüksek
+          eğilimdeydi. Fark istatistiksel olarak kesinleşmedi ve CoQ10 tek başına ayrı çözümlenmedi
+          <sup><a href="#kaynak-18">[18]</a></sup>. Tansiyon ilaçlarında ise kaygılanacak bir etkileşim gösterilmemiştir: Cochrane
           derlemesi CoQ10'un kan basıncını klinik olarak anlamlı düşürmediğini bildirmiştir<sup><a href="#kaynak-9">[9]</a></sup>.
         </p>
         <p>
@@ -270,21 +497,58 @@ const articleSchemas = buildArticleSchemas({
           <strong>Yan etki:</strong> Kalp yetmezliği çalışmalarını birleştiren Cochrane derlemesi, yan etki riskinin
           artıp artmadığı konusunda düşük kaliteli ve kesin olmayan kanıt bulmuştur<sup><a href="#kaynak-3">[3]</a></sup>.
           Kan basıncı derlemesinde de tolerabilite yalnızca birkaç çalışmada bildirilmiştir<sup><a href="#kaynak-9">[9]</a></sup>.
+          Çalışmalarda en sık bildirilen yakınmalar sindirimle ilgilidir: bulantı, mide yanması, karnın üst
+          kısmında rahatsızlık ve ishal; tek tük deri döküntüsü de bildirilmiştir<sup><a href="#kaynak-19">[19]</a></sup>.
           Başladıktan sonra yeni bir yakınma çıkarsa hekiminize haber verin.
+        </p>
+        <p>
+          Ürün yorumlarındaki ve forumlardaki “çok iyi hissettim” bildirimlerini ayrı tartın. Bunlar plasebo
+          etkisinden, kendiliğinden geçen yakınmalardan ve aynı dönemde değişen alışkanlıklardan etkilenir;
+          fayda kanıtı sayılmaz. Tekrar eden yan etki bildirimleri ise tersine ciddiye alınması gereken bir
+          sinyaldir.
         </p>
 
         <RedFlagBox
           markers={[
             'Warfarin veya benzer K vitamini bağımlı antikoagülan kullanımı — hekim kontrolü olmadan başlanmaz',
-            'Aktif kemoterapi veya kanser tedavisi sürerken — onkoloğa danışmadan başlanmaz',
+            'Aktif kemoterapi veya kanser tedavisi sürerken — onkoloğa danışmadan başlanmaz; tedavi sırasında antioksidan takviyelerle ilgili gözlemsel veride olumsuz eğilim bildirildi',
             'Bilinen kalp yetmezliği — kardiyoloji takibi olmadan kendi başına başlama alanı değil',
             'Hamilelik veya emzirme — bu yazıdaki çalışmalar bu dönemi incelemiyor, hekime danışmadan başlanmaz',
-            '"Yaşlanmayı geri çevirir / hücresel gençleşme sağlar" tarzı pazarlama mesajları — bilimsel temeli yok',
+            '"Yaşlanmayı geri çevirir / hücresel gençleşme sağlar" tarzı pazarlama mesajları — bu iddiayı destekleyen insan kanıtı yok',
             'Migren atak günlüğünde belirgin düzelme yoksa — devam etmenin makul gerekçesi azalır',
             'Yorgunluk şikâyeti varsa — önce tiroid, B12, demir, uyku apnesi, depresyon ayırt edilmeli; tek başına CoQ10 ile geçiştirme uygun değil',
           ]}
           footnote="Bu liste teşhis amaçlı değil; CoQ10 değerlendirilirken bir hekimle konuşmaya değer kabul edilen durumların hatırlatıcısıdır."
         />
+
+        <h2 id="bilinmeyenler">Henüz Bilinmeyenler ve Yakında Öğreneceklerimiz</h2>
+        <p>
+          Bu yazının bazı cümleleri önümüzdeki iki üç yıl içinde değişebilir. Yanıtı bekleyen sorular ve onları
+          yanıtlayacak çalışmalar var.
+        </p>
+        <p>
+          <strong>Kalp yetmezliğinde selenyum ve CoQ10.</strong> Hollanda’da 1.100 kişilik bir çalışma selenyum ve
+          CoQ10’u birlikte test ediyor (Mayıs 2026’da başladı, tahmini birincil bitiş Aralık 2030)
+          <sup><a href="#kaynak-24">[24]</a></sup>. Danimarka’da 4.044 kişilik bir çalışma CoQ10’u ve selenyumu
+          ayrı ayrı sınıyor (Eylül 2025’te başladı, tahmini bitiş Aralık 2028)
+          <sup><a href="#kaynak-25">[25]</a></sup>. Yanıtlayacakları soru, İsveç’teki kalp-damar ölümü sinyalinin
+          tekrarlanıp tekrarlanmadığı ve hangi maddeden kaynaklandığı.
+        </p>
+        <p>
+          <strong>Yaşlıda işlev.</strong> Ljubljana’da 65 yaş üstü, kırılganlığın eşiğindeki 100 kişide 10 hafta
+          süren, plasebo kontrollü bir çalışma planlanıyor. Birincil sonlanım hücresel stresi yansıtan GDF-15
+          düzeyi; ikincil sonlanımlar arasında yürüme hızı, kavrama gücü, bilişsel testler, cilt nemi ve
+          esnekliği var. Kayıt tarihine göre alım henüz başlamamıştı
+          <sup><a href="#kaynak-23">[23]</a></sup>.
+        </p>
+        <p>
+          <strong>Menopoz belirtileri.</strong> CoQ10’u plaseboyla karşılaştıran kayıtlı bir randomize çalışma
+          bulamadık ve yakın zamanda yanıt vermesi beklenen bir çalışma görünmüyor.
+        </p>
+        <p>
+          <strong>Hayvanda ömür.</strong> Düz CoQ10’un ulusal fare programındaki sonucunu bulamadık; “bulamadık”,
+          böyle bir sonucun olmadığı anlamına gelmez. Çalışmalar sonuçlandıkça bu yazıyı güncelleyeceğiz.
+        </p>
 
         <h2 id="uc-soru">Doktora Sorabileceğiniz Üç Soru</h2>
         <p>
@@ -381,6 +645,111 @@ const articleSchemas = buildArticleSchemas({
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/26935713/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">26935713</a>
             <span class="block mt-0.5 text-ink/50">(Primer hipertansiyonda CoQ10; kan basıncında klinik olarak anlamlı bir değişiklik saptanmamıştır, çalışma sayısı azdır.)</span>
           </li>
+          <li id="kaynak-10">
+            Deng H, Song T, Yin M et al. "Coenzyme Q10 supplementation increases blood concentrations but shows limited and inconsistent effects on exercise performance: a systematic review and meta-analysis."
+            <em>Br J Nutr</em>. 2025 (çevrimiçi 29 Aralık 2025).
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41457257/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41457257</a>
+            <span class="block mt-0.5 text-ink/50">(24 çalışma; kan düzeyi tutarlı biçimde yükseliyor, performans etkisi küçük ve tutarsız, güven düzeyi çok düşük–düşük.)</span>
+          </li>
+          <li id="kaynak-11">
+            Tsai IC, Hsu CW, Chang CH et al. "Effectiveness of Coenzyme Q10 Supplementation for Reducing Fatigue: A Systematic Review and Meta-Analysis of Randomized Controlled Trials."
+            <em>Front Pharmacol</em>. 2022;13:883251.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/36091835/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">36091835</a>
+            <span class="block mt-0.5 text-ink/50">(13 randomize çalışma, 1.126 kişi; yorgunluk puanında küçük ama anlamlı azalma.)</span>
+          </li>
+          <li id="kaynak-12">
+            Magalhães PLM, da Silva AMP, Maximiano MLB et al. "Effects of Coenzyme Q10 Supplementation on Depressive Symptoms and Fatigue: A Systematic Review and Meta-Analysis of Randomized Controlled Trials."
+            <em>J Clin Psychopharmacol</em>. 2025 (çevrimiçi 26 Kasım 2025);46(1):93–100.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41294251/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41294251</a>
+            <span class="block mt-0.5 text-ink/50">(Beş çalışma, 474 depresyon tanılı katılımcı; depresif belirtilerde azalma, yorgunlukta anlamlı fark yok.)</span>
+          </li>
+          <li id="kaynak-13">
+            Alehagen U, Johansson P, Björnstedt M et al. "Cardiovascular mortality and N-terminal-proBNP reduced after combined selenium and coenzyme Q10 supplementation: a 5-year prospective randomized double-blind placebo-controlled trial among elderly Swedish citizens."
+            <em>Int J Cardiol</em>. 2013;167(5):1860–1866.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/22626835/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">22626835</a>
+            <span class="block mt-0.5 text-ink/50">(KiSel-10; 443 kişi, 70–88 yaş, selenyum ve CoQ10 birlikte; kalp-damar ölümü %5,9’a karşı %12,6.)</span>
+          </li>
+          <li id="kaynak-14">
+            Alehagen U, Aaseth JO, Schomburg L et al. "Selenium and Coenzyme Q10 Supplementation and Sex Differences in Cardiovascular Mortality: Results from a Prospective Randomized Double-Blind Placebo-Controlled Trial in Elderly People Low in Selenium."
+            <em>Antioxidants (Basel)</em>. 2025;14(6).
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/40563319/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">40563319</a>
+            <span class="block mt-0.5 text-ink/50">(KiSel-10’un 10 yıllık izleminde cinsiyete göre alt grup analizi; aynı araştırma ekibi.)</span>
+          </li>
+          <li id="kaynak-15">
+            Igarashi Y, Hamada S, Dai J et al. "Effects of lifetime supplementation with ubiquinol 10 on the lifespan and progression of aging in female C57BL/6 mice."
+            <em>Exp Gerontol</em>. 2025;211:112924.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41083029/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41083029</a>
+            <span class="block mt-0.5 text-ink/50">(Yaşam boyu ubiquinol; medyan ve en uzun ömürde fark yok. Yazarlardan biri ubiquinol üreticisinin çalışanı.)</span>
+          </li>
+          <li id="kaynak-16">
+            NIA Interventions Testing Program. "ITP survival analysis: MitoQ (kohort C2015)."
+            <a href="https://phenome-prod.jax.org/itp/surv/MitoQ/C2015" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">phenome-prod.jax.org/itp/surv/MitoQ/C2015</a>
+            <span class="block mt-0.5 text-ink/50">(Sayfada “Coenzyme Q10” takma adıyla anılan MitoQ, CoQ10’un mitokondriye yönelik türevidir; dişi ve erkek farelerde ömür farkı yok. Düz CoQ10’un sonucu değildir. Erişim: 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-17">
+            Palan PR, Connell K, Ramirez E et al. "Effects of menopause and hormone replacement therapy on serum levels of coenzyme Q10 and other lipid-soluble antioxidants."
+            <em>Biofactors</em>. 2005;25(1–4):61–66.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/16873930/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">16873930</a>
+            <span class="block mt-0.5 text-ink/50">(98 kadında kesitsel serum ölçümü; menopoz sonrası düzey daha yüksek, hormon tedavisi kullananlarda düşük.)</span>
+          </li>
+          <li id="kaynak-18">
+            Ambrosone CB, Zirpoli GR, Hutson AD et al. "Dietary Supplement Use During Chemotherapy and Survival Outcomes of Patients With Breast Cancer Enrolled in a Cooperative Group Clinical Trial (SWOG S0221)."
+            <em>J Clin Oncol</em>. 2020;38(8):804–814.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31855498/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">31855498</a>
+            <span class="block mt-0.5 text-ink/50">(1.134 kadında gözlemsel çözümleme; antioksidan takviye kullanımı nükste artış eğilimiyle ilişkili, fark kesinleşmedi.)</span>
+          </li>
+          <li id="kaynak-19">
+            Bundesinstitut für Risikobewertung (BfR). "Coenzyme Q10: what is known about the health risks – and what isn’t?" (SSS, 10 Kasım 2023).
+            <a href="https://www.bfr.bund.de/en/service/frequently-asked-questions/topic/coenzyme-q10-what-is-known-about-the-health-risks-and-what-isnt/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">bfr.bund.de</a>
+            <span class="block mt-0.5 text-ink/50">(Ek alım yan etkileri, üst sınırın belirlenmemiş olması, gebelik, emzirme ve 18 yaş altı için veri eksikliği. Erişim: 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-20">
+            An P, Wan S, Luo Y et al. "Micronutrient Supplementation to Reduce Cardiovascular Risk."
+            <em>J Am Coll Cardiol</em>. 2022;80(24):2269–2285.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/36480969/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">36480969</a>
+            <span class="block mt-0.5 text-ink/50">(884 randomize çalışmanın taranması; CoQ10 için toplam ölüm olaylarında azalma, RR 0,68, %95 GA 0,49–0,94.)</span>
+          </li>
+          <li id="kaynak-21">
+            Türkiye İlaç ve Tıbbi Cihaz Kurumu (TİTCK). "Ruhsatlı Beşeri Tıbbi Ürünler Listesi", 16.10.2026.
+            <a href="https://www.titck.gov.tr/dinamikmodul/85" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">titck.gov.tr/dinamikmodul/85</a>
+            <span class="block mt-0.5 text-ink/50">(Etkin madde sütununda ubidekarenon ve benzer yazımlarla tarandı; CoQ10 etkin maddeli ruhsatlı ürün bulunmadı. Erişim: 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-22">
+            T.C. Tarım ve Orman Bakanlığı. "Takviye Edici Gıdalar Kısıtlı Maddeler Listesi", son güncelleme 21.10.2026.
+            <a href="https://www.tarimorman.gov.tr/Konu/1116/takviye-edici-gida-kisitli-maddeler-listesi" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">tarimorman.gov.tr</a>
+            <span class="block mt-0.5 text-ink/50">(Koenzim Q10 listede yer alıyor. Erişim: 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-23">
+            ClinicalTrials.gov. NCT07772336, "Mitochondrial Intervention for Resilience in Older Adults With Coenzyme Q10 (MIRO-Q)".
+            <a href="https://clinicaltrials.gov/study/NCT07772336" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07772336</a>
+            <span class="block mt-0.5 text-ink/50">(Henüz alım başlamadı; kayıt durumu 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-24">
+            ClinicalTrials.gov. NCT07234422, "H4D-SELEQT-HF: Selenium and CoQ10 Nutrition for Heart Failure".
+            <a href="https://clinicaltrials.gov/study/NCT07234422" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07234422</a>
+            <span class="block mt-0.5 text-ink/50">(Alım sürüyor; kayıt durumu 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-25">
+            ClinicalTrials.gov. NCT06694727, "DANUTRIO-HF: Q10, Selenium".
+            <a href="https://clinicaltrials.gov/study/NCT06694727" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT06694727</a>
+            <span class="block mt-0.5 text-ink/50">(Alım sürüyor; kayıt durumu 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-26">
+            ClinicalTrials.gov. NCT03429231, "Observational Study to Evaluate the Quality of Life of Healthy Postmenopausal Women Who Take Coenzyme Q-Ubiquinol".
+            <a href="https://clinicaltrials.gov/study/NCT03429231" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT03429231</a>
+            <span class="block mt-0.5 text-ink/50">(Tamamlandı, kayıtta sonuç yok; kayıt durumu 26 Ekim 2026.)</span>
+          </li>
+          <li id="kaynak-27">
+            Pan T, Chen SY, Kung CW et al. "Coenzyme Q10 ameliorates obesity by promoting white adipose tissue browning and preserving mitochondrial dynamics in ovariectomized rats fed a high-fat diet."
+            <em>J Nutr Biochem</em>. 2025 (çevrimiçi 22 Kasım 2025);149:110187.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41275978/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41275978</a>
+            <span class="block mt-0.5 text-ink/50">(Yumurtalıkları alınmış sıçan modeli; insan verisi değildir.)</span>
+          </li>
+          <li id="kaynak-28">
+            NutraIngredients. "‘It’s a new market for ubiquinol’: Study highlights CoQ10 form’s menopause benefits." 22 Mayıs 2024.
+            <a href="https://www.nutraingredients.com/Article/2024/05/22/Study-highlights-ubiquinol-s-menopause-benefits/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">nutraingredients.com</a>
+            <span class="block mt-0.5 text-ink/50">(Sektör haberi; hakemli yayın değil. Plasebo grubu olmayan, 200 kadınlık öz-bildirim anketi, ürün üreticisinin tanıtımı olarak sunuluyor.)</span>
+          </li>
         </ol>
       </ArticleProsePanel>
 
@@ -407,8 +776,11 @@ const articleSchemas = buildArticleSchemas({
           CoQ10 hem klinik kanıtı olan kullanım alanları hem yoğun reklam vaadi olan bir moleküldür. Statin
           kaynaklı kas yakınması ve migren önlemesinde deneme için orta düzeyde kanıt vardır. Kalp
           yetmezliğinde bazı çalışmalarda ölüm veya yeniden yatış sinyali bildirilmiştir; bu, standart tedavi
-          önerisi oluşturmaz ve karar kardiyoloji takibinde, mevcut tedaviye ek olarak verilir. Anti-aging,
-          menopozal enerji ve genel yorgunluk iddialarında kontrollü insan kanıtı sınırlıdır.
+          önerisi oluşturmaz ve karar kardiyoloji takibinde, mevcut tedaviye ek olarak verilir. Anti-aging
+          iddiasında kan düzeyinin yükselmesi dışında sağlam insan kanıtı yoktur. Yorgunlukta etki küçük ve
+          tutarsızdır. Yaşlılarda selenyumla birlikte verilen, bulabildiğimiz tek randomize çalışma
+          kalp-damar ölümünde azalma bildirmiştir; bu sonuç doğrulanmayı beklemektedir ve ömür uzaması anlamına gelmez. Menopoz
+          belirtileri için kontrollü insan çalışması bulunamamıştır.
         </p>
         <p class="mb-3 leading-relaxed text-ink/80">
           Warfarin veya benzer kan sulandırıcı, aktif kemoterapi, bilinen kalp yetmezliği, gebelik ve emzirme
