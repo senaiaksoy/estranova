@@ -509,7 +509,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
     title: 'Peptidler Menopozda Gerçekten Ne Vaat Ediyor?',
     description:
-      'Peptid başlığı altında dolaşan kilo kaybı ve kas toparlanması iddiaları aynı kanıt gücüne sahip değil. Kanıt ve güvenlik açısından değerlendiriyoruz.',
+      'Peptid iddiaları aynı kanıt gücünde değil. BPC-157, CJC-1295, GHK-Cu ve diğerleri için kanıt basamakları, güvenlik ve ABD ile Türkiye’deki durum.',
     publishedDate: '6 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
