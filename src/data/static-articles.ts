@@ -42,7 +42,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
     title: 'Kreatin Menopozda Ne İşe Yarar? Kas, Kemik ve Beyin İçin Kanıt Ne Diyor?',
     description:
-      'Kreatin menopozda kas gücü, kemik, beyin sisi ve duygu durumu için ne kadar etkili? Çalışmaların gösterdiklerini ve sınırlarını Dr. Senai Aksoy açıklıyor.',
+      'Kreatin menopozda kas gücü, kemik, beyin sisi, duygu durumu ve uzun yaşam için ne kadar etkili? Kanıtın güçlü ve zayıf kaldığı yerleri Dr. Senai Aksoy açıklıyor.',
     publishedDate: '8 Ağustos 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Vitaminler',
