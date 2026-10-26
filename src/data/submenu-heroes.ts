@@ -314,7 +314,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Aydınlık bir iç mekânda elinde su şişesi, omzunda çanta ve paltoyla duran bir kadın.',
   },
   '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/': {
-    src: '/images/library/editorial/zy-peptid-kullanimlari-menopoz-window-card.png',
+    src: '/images/library/editorial/zy-peptid-kullanimlari-menopoz.webp',
     alt: 'Şehir manzaralı geniş pencerenin önünde eli çenesinde düşünen bordo hırkalı bir kadın.',
   },
   '/hormonal-gecis/40-sonrasi/tarama-testleri/': {
