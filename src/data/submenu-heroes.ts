@@ -358,8 +358,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Ev balkonunda taze otlarla ilgilenen krem tonlarda giyinmiş kadın; menopozal kilo ve metabolik sağlık yazısı için kart görseli',
   },
   '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/': {
-    src: '/images/library/editorial/zy-coq10-kanit-notlari.webp',
-    alt: 'Aydınlık masa üzerinde notlar ve sakin araştırma atmosferi; CoQ10 takviyesi ve kanıt okuması yazısı için kart görseli',
+    src: '/images/library/editorial/zy-coq10-kanit-notlari-kart.webp',
+    alt: 'Sıcak ışıklı çalışma masasında açık defter, dolma kalem, ince belli bardakta çay, ceviz kâsesi ve kahverengi cam şişe; CoQ10 takviyesi ve kanıt okuması yazısı için kart görseli',
   },
   '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/': {
     src: '/images/library/editorial/zy-deneysel-tedavi-kanit-masasi.webp',
