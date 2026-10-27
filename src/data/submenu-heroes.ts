@@ -206,7 +206,7 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/bp-nad-plus.webp',
     alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
   },
-  '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
+  '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/': {
     src: '/images/library/editorial/ghk-cu-menopoz-cilt-hero.jpg',
     alt: 'Aydınlık bir atölyede pencere önündeki ince kumaşı eliyle inceleyen kıvırcık saçlı bir kadın.',
   },
@@ -437,7 +437,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/epitalon-telomer-yaslanma.webp',
     alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
   },
-  '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': {
+  '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/': {
     src: '/images/library/editorial/ghk-cu-menopoz-cilt-card.webp',
     alt: 'Aydınlık tekstil atölyesinde transparan kumaş ve bakır iplikleri inceleyen olgun kadın; GHK-Cu ve menopoz cildi yazısı için kart görseli',
   },

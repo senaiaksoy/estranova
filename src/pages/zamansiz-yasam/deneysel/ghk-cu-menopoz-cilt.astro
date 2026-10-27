@@ -21,8 +21,8 @@ import { articleFaqs } from '../../../data/article-faqs';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const pathname = '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/';
-const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/']!;
+const pathname = '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 const articleTitle = 'GHK-Cu ve Menopoz: Bakır Peptid, Cilt Yaşlanması ve Kanıt Sınırı';
 const seoTitle = 'GHK-Cu ve Menopoz: Kanıt Sınırı';
 const articleDescription =
@@ -60,8 +60,8 @@ const articleSchemas = buildArticleSchemas({
   publishedDate,
   modifiedDate,
   pathname,
-  articleSection: 'Bilimsel Pencere',
-  sectionPath: '/bilimsel-pencere/',
+  articleSection: 'Zamansız Yaşam · Deneysel',
+  sectionPath: '/zamansiz-yasam/',
   image: hero.src.startsWith('http') ? hero.src : `${siteUrl.replace(/\/$/, '')}${hero.src}`,
   keywords: [
     'GHK-Cu',
@@ -87,11 +87,11 @@ const articleSchemas = buildArticleSchemas({
   ogType="article"
   jsonLd={articleSchemas}
 >
-  <SiteNavbar currentPath="/bilimsel-pencere/" />
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
 
   <main id="main-content" class="text-ink">
     <SubmenuHero
-      eyebrow="Bilimsel Pencere · Hücreler ve Yaşlanma"
+      eyebrow="Zamansız Yaşam · Deneysel"
       title={articleTitle}
       imageSrc={hero.src}
       imageAlt={hero.alt}
@@ -146,7 +146,7 @@ const articleSchemas = buildArticleSchemas({
           mütevazı kalması ise hikâyenin ikinci yarısıdır.
         </p>
         <p>
-          Bilimsel pencere yazılarında bana en sık gelen soru şudur: "Peki bunu denemeye değer mi?" Bu soruyu
+          Bu konuyu konuşurken bana en sık gelen soru şudur: "Peki bunu denemeye değer mi?" Bu soruyu
           küçümsemem; merak iyi bir başlangıçtır. Ama merakın yanına bir ikinci cümle daha koymak gerekir: Bu molekül
           nerede gösterildi, hangi yolla kullanıldı, hangi insanda ve ne kadar süre izlendi? GHK-Cu için doğru okuma tam
           bu sakin ayrımla başlar.

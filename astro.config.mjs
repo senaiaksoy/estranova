@@ -57,6 +57,8 @@ export default defineConfig({
     '/zihin-denge/bellek-odaklanma-menopoz/': '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
     '/bilimsel-pencere/estrogen-biyolojisi-saglik/': '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
     '/bilimsel-pencere/nad-plus-hucresel-yaslanma/': '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
+    // GHK-Cu yazısı karar sorusuna göre Deneysel altına taşındı (2026-10-27, CLAUDE.md §6 Bölüm yerleşimi).
+    '/bilimsel-pencere/hucreler-ve-yaslanma/ghk-cu-menopoz-cilt/': '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/',
     // D Vitamini DUPLICATE temizliği — vitaminler/ altındaki sığ versiyon
     // top-level otorite makaleye yönlendirildi (2026-04-27, audit kararı).
     '/zamansiz-yasam/vitaminler/d-vitamini-rehberi/': '/zamansiz-yasam/d-vitamini-rehberi/',
