@@ -55,7 +55,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '8 Ağustos 2026',
-  modifiedDate: '26 Ekim 2026',
+  modifiedDate: '27 Ekim 2026',
   pathname,
   articleSection: 'Zamansız Yaşam · Vitaminler',
   sectionPath: '/zamansiz-yasam/',
@@ -105,7 +105,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="8 Ağustos 2026"
-        lastUpdated="26 Ekim 2026"
+        lastUpdated="27 Ekim 2026"
         readingMinutes={20}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/zy-kreatin-menopoz-byline.webp"
@@ -151,8 +151,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Kas dokusu başlıca depodur, ancak sistem yalnızca kaslarda çalışmaz
-          <sup><a href="#kaynak-8">[8]</a>, <a href="#kaynak-9">[9]</a></sup>
-          <Evidence level={3} />. Menopoz geçişiyle birlikte hormon düzeyleri, uyku, fiziksel aktivite,
+          <sup><a href="#kaynak-8">[8]</a>, <a href="#kaynak-9">[9]</a></sup>. Menopoz geçişiyle birlikte hormon düzeyleri, uyku, fiziksel aktivite,
           beslenme, kas kütlesi ve toparlanma kapasitesi aynı anda değişebilir. Kreatin araştırmalarının
           bu döneme yönelmesi biyolojik açıdan makul. Ancak hücredeki
           görevi, takviye olarak hangi yakınmaya yarayacağını tek başına göstermez.
@@ -166,8 +165,8 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Kreatin östrojen değildir. Menopoz hormon tedavisinin yerine geçmez. Sıcak basmasını ya da gece
           terlemesini tedavi ettiği de gösterilmiş değildir
-          <sup><a href="#kaynak-8">[8]</a>, <a href="#kaynak-9">[9]</a></sup>
-          <Evidence level={3} />. Kas ve egzersiz bulgularını menopoz belirtilerinin tedavisinden ayrı değerlendirmek gerekir.
+          <sup><a href="#kaynak-8">[8]</a>, <a href="#kaynak-9">[9]</a>, <a href="#kaynak-16">[16]</a></sup>
+          <Evidence level={2} />. Kas ve egzersiz bulgularını menopoz belirtilerinin tedavisinden ayrı değerlendirmek gerekir.
         </p>
 
         <h2 id="kanit-haritasi">Kanıt Tek Bakışta: Hangi İddia Nerede Duruyor?</h2>
@@ -193,7 +192,7 @@ const articleSchemas = buildArticleSchemas({
               <tr>
                 <td class="p-3 font-medium">Kas ve güç (egzersizle birlikte)</td>
                 <td class="p-3">İnsanda işlev: menopoz sonrası randomize çalışmalar ve meta-analiz</td>
-                <td class="p-3">Küçük ama tutarlı kazanç <sup><a href="#kaynak-1">[1]</a></sup></td>
+                <td class="p-3">Küçük kazanç; ölçüme ve çalışmaya göre değişiyor <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-2">[2]</a>, <a href="#kaynak-3">[3]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Kemik yoğunluğu</td>
@@ -224,7 +223,8 @@ const articleSchemas = buildArticleSchemas({
           </table>
         </div>
         <p>
-          Kadınlara ve 40 yaş sonrasına özgü veri en çok kas ve kemik için var. Perimenopozda beyin ve uyku
+          Kadınlarda veri en çok kas ve kemik için var; ancak bu çalışmaların çoğu menopoz sonrasındaki,
+          ortalama yaşı 60 dolayında kadınlarda yapıldı. Perimenopozda kas, beyin ve uyku
           üzerine yalnızca birkaç küçük çalışma bulunuyor. Menopoz hormon tedavisi kullanan kadınlarda kreatinin
           ayrı bir etkisini inceleyen bir çalışmaya ulaşamadık.
         </p>
@@ -235,13 +235,13 @@ const articleSchemas = buildArticleSchemas({
           egzersize eklenen ölçülü bir kazanım.
         </p>
         <p>
-          2026 tarihli sistematik derleme ve meta-analiz, menopoz sonrasında kreatin monohidratı inceleyen
-          yedi randomize kontrollü çalışmayı ve toplam 608 katılımcıyı değerlendirdi. Çalışmalar 12 ile
+          2026 tarihli sistematik derleme ve meta-analiz, menopoz sonrasında (ortalama yaş yaklaşık 62) kreatin
+          monohidratı inceleyen yedi randomize kontrollü çalışmayı ve toplam 608 katılımcıyı değerlendirdi. Çalışmalar 12 ile
           104 hafta sürdü. Yağsız vücut kütlesi analizi beş çalışma ve 338 kadına dayanıyordu; kreatin
           grubundaki ortalama fark <strong>0,37 kilogramdı</strong> ve yüzde 95 güven aralığı 0,05–0,69
           kilogramdı. Bacak presi (oturarak ağırlığı bacaklarla itme) testindeki güç sonucu ise üç çalışma ve 111 kadına dayanıyordu;
           ortalama fark <strong>7,5 kilogramdı</strong> ve güven aralığı 2,2–12,8 kilogramdı
-          <sup><a href="#kaynak-1">[1]</a></sup> <Evidence from={3} to={4} />.
+          <sup><a href="#kaynak-1">[1]</a></sup> <Evidence level={3} />.
         </p>
         <p>
           Yağsız kütledeki ortalama fark küçük; bu ölçüm yalnızca kas dokusunu ifade etmiyor.
@@ -249,12 +249,14 @@ const articleSchemas = buildArticleSchemas({
           taşımak her zaman aynı şeyi ölçmez. Yarar,
           özellikle günlük en az 5 gram kreatinin direnç egzersiziyle birlikte kullanıldığı çalışmalarda
           daha görünürdü. Günlük 3 gram ya da daha düşük dozları egzersiz olmadan inceleyen çalışmalarda
-          ölçülebilir bir yarar görülmedi <sup><a href="#kaynak-1">[1]</a></sup>.
+          ölçülebilir bir yarar görülmedi <sup><a href="#kaynak-1">[1]</a></sup>. Bunlar çalışmalarda denenen
+          miktarlardır; kullanım önerisi değildir. Türkiye’de takviye için ayrı bir üst sınır da var; ayrıntısı
+          aşağıda, “Form, Etiket ve Ürün Kalitesi” bölümünde.
         </p>
         <p>
           2021 tarihli, yaşlı kadınlara odaklanan başka bir meta-analiz de üst vücut gücünde artış buldu.
-          Toplam kas kütlesi ve alt vücut gücü için genel sonuç aynı ölçüde güçlü değildi. En az 24 hafta
-          süren direnç egzersizi programlarında güç kazanımı daha belirgin görünüyordu
+          Toplam kas kütlesinde ve alt vücut gücünde genel olarak etki bulunamadı. Yalnızca en az 24 hafta
+          süren direnç egzersizi programlarında hem üst hem alt vücut gücünde artış görüldü
           <sup><a href="#kaynak-2">[2]</a></sup> <Evidence level={3} />.
         </p>
         <p>
@@ -302,7 +304,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Çalışmada femur boynunun bazı geometrik özellikleri korundu ve 80 metre yürüme süresinde küçük
-          bir iyileşme görüldü. Yağsız kütle artışı ise çalışmayı geçerli biçimde tamamlayan katılımcıların
+          bir iyileşme görüldü. Buna karşılık göğüs presi ve bacak çalışması (hack squat) gibi kuvvet
+          testlerinde plaseboyla fark çıkmadı. Yağsız kütle artışı ise çalışmayı geçerli biçimde tamamlayan katılımcıların
           alt analizinde saptandı. Bunlar araştırmaya değer sinyallerdir; fakat “kreatin osteoporozu önler”
           ya da “kırık riskini azaltır” sonucunu taşımaz <sup><a href="#kaynak-3">[3]</a></sup>.
         </p>
@@ -330,7 +333,8 @@ const articleSchemas = buildArticleSchemas({
           Genel erişkin çalışmalarını birleştiren bir derlemede bellekte küçük bir yarar bildirildi; genel
           biliş ve planlama gibi yürütücü işlevlerde fark yoktu. Başka bir sistematik değerlendirme sonuçların
           tutarsız olduğunu vurguluyor. 55 yaş üstünü inceleyen 2026 tarihli bir derlemede ise altı çalışmanın
-          yalnızca ikisi kontrollü takviye çalışmasıydı; çoğunun kalitesi zayıf bulundu. Bu araştırmalar
+          yalnızca ikisi kontrollü takviye çalışmasıydı, dördü kesitsel diyet anketiydi. Altı çalışmadan beşi olumlu bir
+          ilişki bildirdi; ancak yarısının kalitesi zayıf bulundu. Bu araştırmalar
           menopozdaki beyin sisine özgü bir tedavi kanıtı sağlamıyor
           <sup><a href="#kaynak-12">[12]</a>, <a href="#kaynak-13">[13]</a>, <a href="#kaynak-19">[19]</a></sup>.
         </p>
@@ -355,6 +359,11 @@ const articleSchemas = buildArticleSchemas({
           bölgesindeki beyin oksijenlenmesi ve uyku düzenliliği daha iyi göründü; ancak araştırmacılar bu
           sonuçları keşif amaçlı bulgu olarak tanımlıyor
           <sup><a href="#kaynak-16">[16]</a></sup> <Evidence level={2} />.
+        </p>
+        <p>
+          Aynı çalışmada kreatin grubunda kadınların bildirdiği “sıcaklık hassasiyeti” günleri de daha azdı;
+          bu da keşif düzeyinde bir bulgu. Uyku verisini giyilebilir bir bileklik topladı ve yazarlardan
+          biri bu cihazın şirketinde çalışıyor <sup><a href="#kaynak-16">[16]</a></sup>.
         </p>
         <p>
           Katılımcı sayıları küçük, izlem kısa. Olumlu sinyal veren çalışmada kullanılan
@@ -385,13 +394,14 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Yeni başlayan, kalıcı, ağırlaşan veya günlük yaşamı bozan belirtilerde değerlendirmeyi
-          geciktirmeyin. Umutsuzluk ya da kendine zarar verme düşüncesi varsa yardım almak için beklemeyin.
+          geciktirmeyin. Umutsuzluk ya da kendine zarar verme düşüncesi varsa yardım almak için beklemeyin:
+          112’yi arayın ya da en yakın acil servise başvurun.
         </p>
         <p>
           Bu çalışmalar menopoz dönemine özel değildi. Kreatini tek başına depresyon tedavisi olarak incelemedi.
           Bir antidepresana araştırma koşullarında eklenen ürünle ilgili sonucu, “kreatin depresyona iyi
-          gelir” cümlesine çeviremeyiz. Antidepresan kullanıyorsanız tedavinize kendi kendinize kreatin veya
-          başka bir takviye eklememeniz gerekir.
+          gelir” cümlesine çeviremeyiz. Antidepresan kullanıyorsanız kreatini ya da başka bir takviyeyi
+          tedavinize eklemeden önce tedavinizi yürüten hekimle konuşun.
         </p>
 
         <h2 id="adet-duzeni">Adet Düzeni ve Üreme Sağlığı: İlişki, Neden Değildir</h2>
@@ -404,7 +414,7 @@ const articleSchemas = buildArticleSchemas({
           üzeri 4.522 kadının besinlerden aldığı kreatin hesaplandı. Takviyeler hesaba katılmadı. Günlük
           kilogram başına en az 13 miligram besinsel kreatin alanlarda düzensiz adet bildirme olasılığı
           daha düşük bulundu: olasılık oranı 0,75; yüzde 95 güven aralığı 0,66–0,86 idi
-          <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={2} />.
+          <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={1} />.
         </p>
         <p>
           Buradaki 13 miligramlık eşik, kabul edilmiş bir günlük gereksinim değildir. Araştırmacılar,
@@ -464,7 +474,7 @@ const articleSchemas = buildArticleSchemas({
             yok. 1999–2000 ABD beslenme verilerini 20 yıl izleyen bir analizde, besinlerden günde en az 1 gram
             kreatin alanlarda ölüm riski biraz düşük bulundu. Ama ilişki demografik özellikler ve yaşam biçimi hesaba
             katılınca zayıfladı; ölçüm tek bir günlük beslenme anketine dayanıyordu ve takviye kullanımı
-            incelenmedi <sup><a href="#kaynak-22">[22]</a></sup> <Evidence level={1} />.
+            incelenmedi <sup><a href="#kaynak-22">[22]</a></sup> <Evidence level={2} />.
           </li>
         </ol>
         <p>
@@ -521,8 +531,8 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr>
                 <td class="p-3 font-medium">Demansı önler ya da yavaşlatır</td>
-                <td class="p-3">Henüz test edilmedi; test edilebilir</td>
-                <td class="p-3">Kontrollü çalışma yok; randomize çalışma sürüyor <sup><a href="#kaynak-20">[20]</a>, <a href="#kaynak-26">[26]</a></sup></td>
+                <td class="p-3">Demans için henüz test edilmedi; test edilebilir</td>
+                <td class="p-3">Demansta kontrollü çalışma yok; tek insan verisi kontrol grubu olmayan küçük bir pilot. Hafif bilişsel bozuklukta randomize çalışma sürüyor <sup><a href="#kaynak-20">[20]</a>, <a href="#kaynak-26">[26]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Ömrü uzatır, yaşlanmayı yavaşlatır</td>
@@ -551,12 +561,12 @@ const articleSchemas = buildArticleSchemas({
               <tr>
                 <td class="p-3 font-medium">Etkinlik kanıtı</td>
                 <td class="p-3">Kas ve güç için orta; beyin, ruh hali, uyku ve uzun yaşam için zayıf–sınırlı</td>
-                <td class="p-3">Menopoz sonrası randomize çalışmalarda küçük ama tutarlı kas ve güç kazancı <sup><a href="#kaynak-1">[1]</a></sup>; diğer alanlarda küçük, kısa ve tutarsız çalışmalar <sup><a href="#kaynak-16">[16]</a>, <a href="#kaynak-17">[17]</a></sup>; ömür için yalnızca fare ve gözlem verisi <sup><a href="#kaynak-21">[21]</a>, <a href="#kaynak-22">[22]</a></sup></td>
+                <td class="p-3">Menopoz sonrası randomize çalışmalarda küçük kas ve güç kazancı; sonuçlar ölçüme ve çalışmaya göre değişiyor <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-2">[2]</a>, <a href="#kaynak-3">[3]</a></sup>; diğer alanlarda küçük, kısa ve tutarsız çalışmalar <sup><a href="#kaynak-16">[16]</a>, <a href="#kaynak-17">[17]</a></sup>; ömür için yalnızca fare ve gözlem verisi <sup><a href="#kaynak-21">[21]</a>, <a href="#kaynak-22">[22]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Güvenlik kanıtı</td>
                 <td class="p-3">Güçlü–orta</td>
-                <td class="p-3">Sağlıklı kadınlarda yan etkiler plaseboya benzer <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-11">[11]</a></sup>; kreatinin değeri yükseliyor ama süzme hızı değişmiyor, bir yıldan uzun veri sınırlı <sup><a href="#kaynak-10">[10]</a></sup>; bipolar bozuklukta küçük bir mani sinyali <sup><a href="#kaynak-18">[18]</a></sup></td>
+                <td class="p-3">Sağlıklı kadınlarda yan etkiler plaseboya benzer <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-11">[11]</a></sup>; kreatinin değeri yükseliyor; tahmini süzme hızında anlamlı fark yok ama güven aralığı geniş, bir yıldan uzun veri sınırlı <sup><a href="#kaynak-10">[10]</a></sup>; bipolar bozuklukta küçük bir mani sinyali <sup><a href="#kaynak-18">[18]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Mekanizma inandırıcılığı</td>
@@ -584,7 +594,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Monohidratla ilgili birikim kadın sağlığını ele alan derlemelerde ve bilimsel görüş belgelerinde de yer alıyor
-          <sup><a href="#kaynak-8">[8]</a>, <a href="#kaynak-9">[9]</a>, <a href="#kaynak-14">[14]</a></sup> <Evidence level={3} />. “Daha yeni”, “daha hızlı emilen” veya “kadınlara
+          <sup><a href="#kaynak-8">[8]</a>, <a href="#kaynak-9">[9]</a>, <a href="#kaynak-14">[14]</a></sup>. “Daha yeni”, “daha hızlı emilen” veya “kadınlara
           özel” gibi ifadeler, karşılaştırmalı klinik kanıtın yerini tutmaz. Etiket bir ürünün ne vaat
           ettiğini söyler; çalışma ise neyi gösterebildiğini. Karar verirken ikisini ayırmak gerekir.
         </p>
@@ -593,7 +603,7 @@ const articleSchemas = buildArticleSchemas({
           kas ve güç yararı, günlük en az 5 gram kreatin ile direnç egzersizini birleştiren çalışmalarda daha
           belirgindi. İki yıllık kemik çalışmasında ise günlük kilogram başına 0,14 gram kullanıldı ve kemik
           mineral yoğunluğu artmadı <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-3">[3]</a></sup>
-          <Evidence from={3} to={4} />. Bu sayılar birer araştırma protokolüdür; kişisel kullanım talimatı değildir.
+          Bu sayılar birer araştırma protokolüdür; kişisel kullanım talimatı değildir.
         </p>
         <p>
           Türkiye’de durum biraz farklı. Tarım ve Orman Bakanlığı’nın 21 Ekim 2026 tarihli kısıtlı maddeler
@@ -623,7 +633,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Sağlıklı postmenopozal kadınların yer aldığı güncel meta-analizde yan etkiler çoğunlukla hafifti
           ve plaseboya benzerdi. Böbrek işlevi ölçümlerinde belirgin bir bozulma sinyali görülmedi
-          <sup><a href="#kaynak-1">[1]</a></sup> <Evidence from={3} to={4} />. Yine de bu bulgu, kreatinin
+          <sup><a href="#kaynak-1">[1]</a></sup> <Evidence level={3} />. Yine de bu bulgu, kreatinin
           herkes ve her koşul için risksiz olduğu anlamına gelmez.
         </p>
         <p>
@@ -727,7 +737,7 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="sonuc">Sonuç: Kreatini Doğru Hedefe Yerleştirelim</h2>
         <p>
           Bugünkü kanıtta kreatinin en sağlam durduğu yer, menopoz sonrasında direnç egzersizine eşlik eden
-          sınırlı ama tutarlı kas ve güç kazanımları. Kemik mineral yoğunluğu için ise yarar gösterilmiş değil.
+          küçük ve ölçüme göre değişen kas ve güç kazanımları. Kemik mineral yoğunluğu için ise yarar gösterilmiş değil.
         </p>
         <p>
           Beyin, ruh hali, uyku ve uzun yaşam vaatleri daha alt basamaklarda duruyor. Bu vaatler yanlış
@@ -756,12 +766,12 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-1">Naddafha S ve ark. <em>Creatine monohydrate for lean mass, strength, and bone density in postmenopausal women: a systematic review and meta-analysis.</em> 2026. <a href="https://pubmed.ncbi.nlm.nih.gov/42141930/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-2">Dos Santos EEP ve ark. <em>Efficacy of Creatine Supplementation Combined with Resistance Training on Muscle Strength and Muscle Mass in Older Females.</em> 2021. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8619193/" rel="noopener noreferrer">Tam metin</a>.</li>
           <li id="kaynak-3">Chilibeck PD ve ark. <em>A 2-yr Randomized Controlled Trial on Creatine Supplementation during Exercise for Postmenopausal Bone Health.</em> 2023. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" rel="noopener noreferrer">Tam metin</a>.</li>
-          <li id="kaynak-4">Ostojic SM, Ostojic J. <em>Brain creatine, estradiol and neurocognitive complaints in perimenopausal women.</em> 2026. <a href="https://pubmed.ncbi.nlm.nih.gov/42061673/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-4">Ostojic SM, Ostojic J. <em>Brain creatine, estradiol and neurocognitive complaints in perimenopausal women: an exploratory cross-sectional study.</em> 2026. <a href="https://pubmed.ncbi.nlm.nih.gov/42061673/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-5">Korovljev D ve ark. <em>The Effects of 8-Week Creatine Hydrochloride and Creatine Ethyl Ester Supplementation on Cognition, Clinical Outcomes, and Brain Creatine Levels in Perimenopausal and Menopausal Women (CONCRET-MENOPA): A Randomized Controlled Trial.</em> 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/40854087/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-6">Lyoo IK ve ark. <em>A randomized, double-blind placebo-controlled trial of oral creatine monohydrate augmentation for enhanced response to a selective serotonin reuptake inhibitor in women with major depressive disorder.</em> 2012. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4624319/" rel="noopener noreferrer">Tam metin</a>.</li>
-          <li id="kaynak-7">Ostojic SM ve ark. <em>Association between dietary intake of creatine and female reproductive health.</em> 2024. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11266896/" rel="noopener noreferrer">Tam metin</a>.</li>
+          <li id="kaynak-7">Ostojic SM ve ark. <em>Association between dietary intake of creatine and female reproductive health: Evidence from NHANES 2017-2020.</em> 2024. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11266896/" rel="noopener noreferrer">Tam metin</a>.</li>
           <li id="kaynak-8">Smith-Ryan AE ve ark. <em>Creatine Supplementation in Women's Health: A Lifespan Perspective.</em> 2021. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7998865/" rel="noopener noreferrer">Tam metin</a>.</li>
-          <li id="kaynak-9">Ellery SJ ve ark. <em>Creatine in women's health: bridging the gap from menstruation through pregnancy to menopause.</em> 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12086928/" rel="noopener noreferrer">Tam metin</a>.</li>
+          <li id="kaynak-9">Smith-Ryan AE ve ark. <em>Creatine in women's health: bridging the gap from menstruation through pregnancy to menopause.</em> 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12086928/" rel="noopener noreferrer">Tam metin</a>.</li>
           <li id="kaynak-10">Tsiaras A ve ark. <em>The effect of creatine supplementation on kidney function: a systematic review and meta-analysis of randomized controlled trials.</em> 2026. <a href="https://pubmed.ncbi.nlm.nih.gov/42035842/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-11">de Guingand DL ve ark. <em>Risk of Adverse Outcomes in Females Taking Oral Creatine Monohydrate.</em> 2020. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7353222/" rel="noopener noreferrer">Tam metin</a>.</li>
           <li id="kaynak-12">Xu C ve ark. <em>The effects of creatine supplementation on cognitive function in adults: a systematic review and meta-analysis.</em> 2024. <a href="https://doi.org/10.3389/fnut.2024.1424972" rel="noopener noreferrer">Tam metin</a>.</li>
