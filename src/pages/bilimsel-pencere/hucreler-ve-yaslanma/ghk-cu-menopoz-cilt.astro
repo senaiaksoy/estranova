@@ -28,11 +28,12 @@ const seoTitle = 'GHK-Cu ve Menopoz: Kanıt Sınırı';
 const articleDescription =
   'GHK-Cu, kolajen ve onarım biyolojisi açısından ilgi çekici bir bakır peptid; ancak menopoz cildi ve uzun ömür iddiaları için insan kanıtı hâlâ sınırlı.';
 const publishedDate = '5 Haziran 2026';
-const modifiedDate = '12 Ekim 2026';
-const readingMinutes = 17;
+const modifiedDate = '27 Ekim 2026';
+const readingMinutes = 18;
 
 const tocEntries = [
   { id: 'ghk-cu-nedir', label: 'GHK-Cu, Küçük Bir Peptid' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveni' },
   { id: 'yasla-azalma-iddiasi', label: 'Yaşla Azalma İddiası' },
   { id: 'onarim-biyolojisi', label: 'Onarım Biyolojisi' },
   { id: 'menopoz-cildi', label: 'Menopoz Cildiyle Bağlantı' },
@@ -43,6 +44,7 @@ const tocEntries = [
   { id: 'regulasyon', label: 'Regülasyon' },
   { id: 'pazarlama', label: 'Pazarlama Dili' },
   { id: 'pratik-okuma', label: 'Pratik Okuma' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
   { id: 'kapanis', label: 'Kapanış' },
   { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
   { id: 'kaynak-listesi', label: 'Kaynaklar' },
@@ -70,7 +72,7 @@ const articleSchemas = buildArticleSchemas({
     'cilt yaşlanması',
     'topikal peptid',
     'enjeksiyon peptid',
-    'longevity',
+    'uzun yaşam',
     'kanıt düzeyi',
   ],
   faqItems,
@@ -150,6 +152,24 @@ const articleSchemas = buildArticleSchemas({
           bu sakin ayrımla başlar.
         </p>
 
+        <h2 id="kanit-merdiveni">Kanıt merdiveni: hücreden menopoz cildine</h2>
+        <p>
+          GHK-Cu'da kanıt alt basamaklarda kalabalık. Yukarı çıktıkça seyreliyor.
+        </p>
+        <ol>
+          <li><strong>Hücre:</strong> Kolajen, matriks ve gen ifadesine dair sinyaller hücre kültüründe gösterildi <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>.</li>
+          <li><strong>Hayvan:</strong> Yara iyileşmesi ve onarımda olumlu işaretler var <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Ömür için memelide yayımlanmış bir çalışma bulamadık; tek veri bir solucan türünden <sup><a href="#kaynak-14" aria-label="Kaynak 14">[14]</a></sup>. Farelerde standart koşullarla ömür sınayan bağımsız program NIA Müdahale Test Programı'nın 13 Nisan 2026 tarihli listesinde de GHK-Cu yok <sup><a href="#kaynak-19" aria-label="Kaynak 19">[19]</a></sup>.</li>
+          <li><strong>İnsan cildinden geçiş:</strong> Laboratuvarda sağlam insan cildi GHK-Cu'yu çok az geçirdi; mikroiğne ön uygulaması geçişi artırdı <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>.</li>
+          <li><strong>İnsanda görünüm:</strong> Küçük kozmetik çalışmalar var; lazer sonrası 13 kişide nesnel fark çıkmadı, memnuniyet daha yüksekti <Evidence level={2} /> <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-15" aria-label="Kaynak 15">[15]</a></sup>.</li>
+          <li><strong>İnsanda güvenlik:</strong> Kozmetik kullanım, incelenen konsantrasyonlarda güvenli kabul edildi <sup><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>; enjeksiyon için insan verisi sınırlı <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>.</li>
+          <li><strong>Menopoz cildinde uzun vadeli sonuç:</strong> Doğrudan test edilmedi.</li>
+        </ol>
+        <p>
+          Bu yazı merdivenin alt basamaklarında ve menopoz cildi sorusunda duruyor. Dolaşan iddiaların tek tek
+          karşılığını <a href="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/#iddialar" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">Peptidler Menopozda Gerçekten Ne Vaat Ediyor?</a>
+          yazısındaki tabloda bulabilirsiniz.
+        </p>
+
         <h2 id="yasla-azalma-iddiasi">Yaşla azalma iddiasının sağlamlığı</h2>
         <p>
           GHK-Cu pazarlamasında sık duyulan bir cümle var: genç yaşta yüksek, ileri yaşta belirgin düşük düzeyler. Bu cümle
@@ -220,7 +240,9 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Şu anda GHK-Cu'nun östrojen eksikliği olan postmenopozal ciltte, bağımsız ve güçlü klinik çalışmalarla denenmiş
-          bir müdahale olduğunu söyleyemeyiz <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. Dolayısıyla GHK-Cu'yu menopoz cildini hedefleyen bir
+          bir müdahale olduğunu söyleyemeyiz <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>.
+          26 Ekim 2026 itibarıyla menopoz ya da menopoz sonrası koşuluyla kayıtlı bir GHK-Cu çalışması da yok
+          <sup><a href="#kaynak-18" aria-label="Kaynak 18">[18]</a></sup>. Dolayısıyla GHK-Cu'yu menopoz cildini hedefleyen bir
           "tedavi" olarak değil; cilt bakımında biyolojik zemini olan ama klinik etkisi sınırlı ve dolaylı okunan bir kozmetik
           içerik olarak görmek daha doğrudur.
         </p>
@@ -241,6 +263,8 @@ const articleSchemas = buildArticleSchemas({
           bir çalışmada GHK-Cu içeren bakım rutini ile kontrol grubu karşılaştırıldı; değerlendirme 12. haftada yapıldı.
           Kırışıklık ve genel cilt kalitesi gibi objektif değerlendirmelerde gruplar arasında anlamlı fark bulunmadı; yalnızca
           hastaların memnuniyeti GHK-Cu grubunda anlamlı biçimde yüksekti <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>.
+          2026 tarihli sistematik bir derleme de tabloyu değiştirmiyor: insan çalışmaları küçük ve çoğu yüz kremi
+          üzerine; mikroiğne gibi yeni uygulama yolları için klinik çalışma yok <sup><a href="#kaynak-15" aria-label="Kaynak 15">[15]</a></sup>.
         </p>
         <p>
           Pazarlama metinlerinde kolayca kaybolan ayrım şudur: "peptid içeren bir serum çalışması" ile "GHK-Cu'nun bağımsız,
@@ -297,10 +321,12 @@ const articleSchemas = buildArticleSchemas({
           sorulardır.
         </p>
         <p>
-          FDA, enjeksiyon yoluyla GHK-Cu içeren hazırlanmış ilaçlarda peptidlerin kümelenmesi ve peptidle ilişkili
-          safsızlıklar nedeniyle istenmeyen bağışıklık yanıtı riski olabileceğini bildiriyor. İnsan güvenlik verisinin
-          sınırlı olduğunu da vurguluyor <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>. Bu uyarı
-          her enjeksiyonun ciddi zarar verdiğini göstermez; güvenli olduğunu söylemeye yetecek verinin olmadığını gösterir.
+          FDA'nın değerlendirmesi, enjeksiyon yoluyla GHK-Cu içeren hazırlanmış ilaçlarda peptidlerin kümelenmesi ve
+          peptidle ilişkili safsızlıklar nedeniyle istenmeyen bağışıklık yanıtı riski olabileceğini ve insan güvenlik
+          verisinin sınırlı olduğunu belirtiyordu <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>. Madde 15 Nisan
+          2026'da, başvuru sahibi adaylığını geri çektiği için bu güvenlik listesinden çıkarıldı; bu adım onu eczanede
+          hazırlanabilir hâle getirmedi ve yeni bir güvenlik verisine dayanmıyor <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>.
+          Uyarı her enjeksiyonun ciddi zarar verdiğini göstermez; güvenli olduğunu söylemeye yetecek verinin olmadığını gösterir.
         </p>
         <p>
           Hekim odasında bu tür başlıklarda sorduğum ilk soru genellikle "bedenin geri kalanında neler oluyor?" sorusudur.
@@ -363,7 +389,17 @@ const articleSchemas = buildArticleSchemas({
           FDA'nın 503A madde listesinin 14 Mayıs 2026 tarihli güncellemesine göre GHK-Cu, enjeksiyon dışı kullanım için
           değerlendirme altındaki listede yer alıyor; enjeksiyon yoluyla kullanım ise bu listeden ayrı tutulmuş durumda
           <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>. FDA, GHK-Cu'nun listeye alınıp alınmayacağını danışma komitesinde 2027 Şubat sonundan önce
-          görüşmeyi planladığını açıkladı. Kalıcı karar bu nedenle hâlâ bekleniyor.
+          görüşmeyi planladığını açıkladı. FDA'nın danışma kurulu Temmuz 2026'da başka peptidleri görüştü; GHK-Cu
+          enjeksiyonu bu toplantıda yoktu. Kalıcı karar bu nedenle hâlâ bekleniyor. Peptidlerin ABD'deki genel
+          sürecini <a href="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/#guvenlik-standardizasyon" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">peptid yazısında</a>
+          ayrıntılı anlattık.
+        </p>
+        <p>
+          Türkiye'de durum daha kısa anlatılabilir. TİTCK'nin 16 Ekim 2026 tarihli listesinde GHK ya da bakır tripeptid
+          etkin maddeli ruhsatlı bir ürün yok <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Tarım ve Orman
+          Bakanlığı'nın 21 Ekim 2026 tarihli takviye kısıtlı maddeler listesinde de GHK geçmiyor
+          <sup><a href="#kaynak-17" aria-label="Kaynak 17">[17]</a></sup>; listede olmaması, takviye olarak kullanımına izin
+          verildiği anlamına gelmiyor.
         </p>
         <p>
           Bu bilgi pratikte şöyle okunur: GHK-Cu topikal kozmetik içerik olarak konuşulabilir. Enjeksiyon veya sistemik
@@ -424,6 +460,20 @@ const articleSchemas = buildArticleSchemas({
           yüklemek gerçekçi değildir. Yardımcı içerikler, temel adımların üstüne ölçülü eklendiğinde anlam kazanır.
         </p>
 
+        <h2 id="bilinmeyenler">Henüz bilmediklerimiz</h2>
+        <p>
+          En büyük boşluk menopoz cildinin kendisinde. Dermal yoğunluk, elastikiyet ya da biyopsiyle ölçülen bir sonuçla
+          GHK-Cu'yu postmenopozal kadınlarda deneyen bir çalışma yok.
+        </p>
+        <p>
+          Yakında biraz netleşecek bir soru var: Topikal GHK-Cu jelinin küçük deri yaralarının kapanmasını hızlandırıp
+          hızlandırmadığını plaseboyla karşılaştıran bir faz 2 çalışmanın birincil sonuçları Şubat 2027'de bekleniyor
+          <sup><a href="#kaynak-18" aria-label="Kaynak 18">[18]</a></sup>. Katılımcılar 18–55 yaş arasında; menopoz cildine
+          doğrudan yanıt vermeyecek, ama onarım iddiasının insanda kontrollü biçimde sınanması açısından değerli. FDA'nın
+          enjeksiyon için yapacağı kurul görüşmesi de bu dönemde bekleniyor <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>.
+          Sonuçlar geldikçe bu yazıyı güncelleyeceğiz.
+        </p>
+
         <h2 id="kapanis">Kapanış</h2>
         <p>
           GHK-Cu'nun iyi tarafı şu: biyolojik zemini gerçek, kozmetik kullanımda güvenlik alanı görece sakin ve cilt
@@ -475,7 +525,7 @@ const articleSchemas = buildArticleSchemas({
           Yazarın klinik değerlendirmesi: Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı
         </p>
         <p class="text-sm text-ink/80">
-          Bağımsız tıbbi inceleme: Dr. Alper Mumcu — 12 Ekim 2026.
+          Bağımsız tıbbi inceleme: Dr. Alper Mumcu — 27 Ekim 2026.
         </p>
       </ArticleEditorNote>
 
@@ -535,7 +585,8 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li id="kaynak-11">
             U.S. Food and Drug Administration. Certain Bulk Drug Substances for Use in Compounding that May Present
-            Significant Safety Risks. GHK-Cu: enjeksiyon yoluyla kullanım (erişim: 12 Ekim 2026).
+            Significant Safety Risks. GHK-Cu: enjeksiyon yoluyla kullanım; 15 Nisan 2026'da listeden çıkarılma
+            (sayfa içeriği: 22 Nisan 2026; erişim: 26 Ekim 2026).
             <a href="https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks">FDA güvenlik değerlendirmesi</a>
           </li>
           <li id="kaynak-12">
@@ -549,9 +600,40 @@ const articleSchemas = buildArticleSchemas({
             Girişteki tarihsel plazma değerlerinin aktarımı; menopoz cildi etkinlik çalışması değildir.
             <a href="https://doi.org/10.21926/obm.genet.2102128">doi:10.21926/obm.genet.2102128</a>
           </li>
+          <li id="kaynak-14">
+            Wen H, Zhao K, Luo X, ve ark. The GHK-Cu delays aging in <em>Caenorhabditis elegans</em> via coordinated
+            regulation of mitochondrial function and activation of DAF-16/SKN-1 pathways. <em>Biogerontology.</em>
+            2026;27(3). Solucanda ömür çalışması; memeli veya insan verisi değildir.
+            <a href="https://doi.org/10.1007/s10522-026-10444-x">doi:10.1007/s10522-026-10444-x</a>
+          </li>
+          <li id="kaynak-15">
+            Najafi N, ve ark. A Systematic Review of the Mechanisms and Therapeutic Applications of GHK-Cu in Topical
+            Microneedle Delivery. <em>Arch Intern Med Res.</em> 2026;9(3):269-293.
+            <a href="https://doi.org/10.26502/aimr.0255">doi:10.26502/aimr.0255</a>
+          </li>
+          <li id="kaynak-16">
+            T.C. Sağlık Bakanlığı Türkiye İlaç ve Tıbbi Cihaz Kurumu. Ruhsatlı Beşeri Tıbbi Ürünler Listesi, 16 Ekim 2026
+            (etkin madde sütununda tarandı).
+            <a href="https://www.titck.gov.tr/dinamikmodul/85">TİTCK sayfası</a>
+          </li>
+          <li id="kaynak-17">
+            T.C. Tarım ve Orman Bakanlığı. Takviye Edici Gıdalar Kısıtlı Maddeler Listesi (son güncelleme: 21 Ekim 2026).
+            <a href="https://www.tarimorman.gov.tr/Konu/1116/takviye-edici-gida-kisitli-maddeler-listesi">Bakanlık sayfası</a>
+          </li>
+          <li id="kaynak-18">
+            ClinicalTrials.gov, durum 26 Ekim 2026: menopoz ve menopoz sonrası koşuluyla GHK-Cu araması (kayıt yok) ve
+            topikal GHK-Cu jelinin akut deri yarasında araç jelle karşılaştırıldığı faz 2 çalışma (60 kişi, birincil bitiş
+            Şubat 2027).
+            <a href="https://clinicaltrials.gov/study/NCT07437586">NCT07437586 kaydı</a>
+          </li>
+          <li id="kaynak-19">
+            NIA (ABD Ulusal Yaşlanma Enstitüsü). Interventions Testing Program: Supported Interventions. Son güncelleme: 13 Nisan 2026; erişim: 27 Ekim 2026
+            (listedeki tüm madde adları taranarak GHK-Cu aranmış, bulunamamıştır).
+            <a href="https://www.nia.nih.gov/research/dab/interventions-testing-program-itp/supported-interventions">ITP listesi</a>
+          </li>
         </ol>
         <p class="mt-4 text-xs text-ink/60">
-          Kaynak ve güvenlik bilgileri 12 Ekim 2026'da gözden geçirildi. Kozmetik güvenlik değerlendirmesinin sonucu,
+          Kaynak ve güvenlik bilgileri 26 Ekim 2026'da gözden geçirildi. Kozmetik güvenlik değerlendirmesinin sonucu,
           raporda incelenen kullanım biçimleri ve konsantrasyonlarla sınırlıdır.
         </p>
       </section>

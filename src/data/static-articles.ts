@@ -42,7 +42,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
     title: 'Kreatin Menopozda Ne İşe Yarar? Kas, Kemik ve Beyin İçin Kanıt Ne Diyor?',
     description:
-      'Kreatin menopozda kas gücü, kemik, beyin sisi ve duygu durumu için ne kadar etkili? Çalışmaların gösterdiklerini ve sınırlarını Dr. Senai Aksoy açıklıyor.',
+      'Kreatin menopozda kas gücü, kemik, beyin sisi, duygu durumu ve uzun yaşam için ne kadar etkili? Kanıtın güçlü ve zayıf kaldığı yerleri Dr. Senai Aksoy açıklıyor.',
     publishedDate: '8 Ağustos 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Vitaminler',
@@ -722,7 +722,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/coenzyme-q10-takviyesi/',
     title: 'Coenzyme Q10 Hangi Durumda Klinik Kanıtlı, Hangi Durumda Reklam?',
     description:
-      'CoQ10, statin kaynaklı kas ağrısında ve migren önlemesinde hekimle denenebilir (statin kullanan herkese rutin önerilmez); kalp yetmezliğinde yalnızca ek seçenektir. Yorgunlukta etkisi küçük ve tutarsız, ömrü uzattığı gösterilmedi, menopoz belirtileri için insan çalışması bulunamadı.',
+      'CoQ10, statin kaynaklı kas ağrısında ve migren önlemesinde hekimle denenebilir (statin kullanan herkese rutin önerilmez); kalp yetmezliğinde yalnızca ek seçenektir. Yorgunlukta etkisi küçük ve tutarsız, ömrü uzattığı gösterilmedi, menopoz belirtileri için kontrollü çalışma bulunamadı.',
     publishedDate: '3 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
@@ -929,7 +929,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
     title: 'NAD+ Takviyesi — Umut Etiketi ve Kanıt Sınırı',
     description:
-      'NAD+ öncülleri NMN ve NR için insan çalışmaları ne gösteriyor? Menopozda beklenen yararı, güvenlik sınırlarını ve hekimle konuşulacak soruları inceliyoruz.',
+      'NMN ve NR kandaki NAD+ düzeyini yükseltiyor; peki sağlığa yansıyor mu? Kanıtın nerede durduğu, internetteki iddialar, damardan NAD+ ve Türkiye’deki doz sınırları.',
     publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',

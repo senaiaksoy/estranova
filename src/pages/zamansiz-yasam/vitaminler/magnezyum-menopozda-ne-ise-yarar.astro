@@ -21,9 +21,7 @@ import { buildArticleSchemas } from '../../../utils/article-schema';
 import { articleFaqs } from '../../../data/article-faqs';
 import { resolveSiteUrl } from '../../../utils/seo';
 
-const hero =
-  submenuHeroByRoute['/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/']
-  ?? submenuHeroByRoute['/zamansiz-yasam/vitaminler/']!;
+const hero = submenuHeroByRoute['/zamansiz-yasam/vitaminler/']!;
 
 const tocEntries = [
   { id: 'neden-bu-kadar-konusuluyor', label: 'Neden Bu Kadar Konuşuluyor?' },
@@ -32,6 +30,7 @@ const tocEntries = [
   { id: 'kabizlik', label: 'Kabızlık' },
   { id: 'stres-kaygi-carpinti', label: 'Stres, Kaygı, Çarpıntı' },
   { id: 'formlar', label: 'Form Seçimi' },
+  { id: 'beyin-uzun-yasam', label: 'Beyin ve Uzun Yaşam Vaatleri' },
   { id: 'kimler-dikkatli-olmali', label: 'Kimler Dikkatli Olmalı' },
   { id: 'doktora-uc-soru', label: 'Görüşmeye Üç Soru' },
   { id: 'kapanis', label: 'Kapanış' },
@@ -43,7 +42,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Magnezyum Menopozda Gerçekten Ne İşe Yarar?';
 const articleImage = '/images/library/editorial/zy-magnezyum-menopoz.webp';
 const articleDescription =
-  'Uyku, kas krampları, kabızlık ve stres gibi yakınmalarda magnezyum sık öneriliyor; ama etkiler aynı kanıt gücünde değil. Ne zaman anlamlı olabilir, ayırıyoruz.';
+  'Magnezyum uyku, kramp, kabızlık, beyin ve uzun yaşam için öneriliyor; ama kanıt gücü aynı değil. Hangi iddia nereye kadar destekleniyor, ayırıyoruz.';
 const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -51,7 +50,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '7 Mayıs 2026',
-  modifiedDate: '12 Ekim 2026',
+  modifiedDate: '26 Ekim 2026',
   image: articleImage,
   medicalReviewer: 'Dr. Alper Mumcu',
   pathname: '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
@@ -68,6 +67,7 @@ const articleSchemas = buildArticleSchemas({
     'çarpıntı',
     'stres',
     'takviye güvenliği',
+    'magnezyum L-treonat',
   ],
   faqItems,
   siteUrl,
@@ -98,8 +98,8 @@ const articleSchemas = buildArticleSchemas({
         articleType="clinical-guide"
         medicalReviewer="Dr. Alper Mumcu"
         publishedDate="7 Mayıs 2026"
-        lastUpdated="12 Ekim 2026"
-        readingMinutes={9}
+        lastUpdated="26 Ekim 2026"
+        readingMinutes={12}
         imageSrc="/images/library/editorial/zy-magnezyum-menopoz-byline.webp"
         imageAlt="Aydınlık bir iç mekânda, elinde metal su matarası tutan ve krem renkli palto giyen kadın"
         imagePosition="78% center"
@@ -118,6 +118,7 @@ const articleSchemas = buildArticleSchemas({
           Erişkinlerde uzun süren kabızlıkta magnezyum oksit, kılavuzda koşullu olarak önerilen seçeneklerden biridir;
           dayandığı kanıtın kesinliği çok düşüktür <sup><a href="#kaynak-6">[6]</a></sup>. Uykuda bazı çalışmalar küçük bir iyileşme bildiriyor <sup><a href="#kaynak-2">[2]</a></sup> <sup><a href="#kaynak-10">[10]</a></sup>;
           kaygıda yararın büyüklüğü belirsiz <sup><a href="#kaynak-8">[8]</a></sup>. Yaşlı erişkinlerin gece kramplarında yarar gösterilemedi <sup><a href="#kaynak-4">[4]</a></sup>.
+          Beyin, hafıza ve uzun yaşam vaatlerinde insan kanıtı zayıf ya da hiç yok <sup><a href="#kaynak-23">[23]</a></sup> <sup><a href="#kaynak-28">[28]</a></sup>.
           Böbrek hastalığınız varsa ya da düzenli ilaç kullanıyorsanız kendi başınıza başlamayın <sup><a href="#kaynak-12">[12]</a></sup>.
         </p>
       </ArticleSummary>
@@ -246,6 +247,150 @@ const articleSchemas = buildArticleSchemas({
           elementel magnezyum miktarıdır: bileşiğin içerdiği magnezyum miktarı. Doz ve kullanım saati de seçimde önemlidir.
         </p>
 
+        <h2 id="beyin-uzun-yasam">Beyin, Uzun Yaşam ve “Hepimiz Eksiğiz” Vaatleri</h2>
+        <p>
+          Raflardaki magnezyum artık yalnızca kramp ve uyku için satılmıyor. Kutularda “beyin magnezyumu”,
+          “beyin yaşını geriletir” ve “uzun yaşam” gibi ifadeler de var.
+        </p>
+        <p>
+          Bu vaatler aynı kanıt düzeyinde değil. Bazıları insanda denendi ve küçük bir sinyal verdi. Bazıları
+          denendi ve tutmadı. Bazılarını ise bu haliyle ölçmek mümkün değil. Etiketin sesi yüksek. Kanıtın sesi
+          çoğu zaman daha kısık.
+        </p>
+
+        <h3>Basamak basamak: magnezyum bu vaatlerde nereye kadar çıkıyor?</h3>
+        <ol>
+          <li>
+            <strong>Hücrede:</strong> Magnezyum yüzlerce enzim tepkimesinde görev alır <sup><a href="#kaynak-12">[12]</a></sup>.
+            Bu kısım tartışmasızdır; vaatler bundan sonraki basamaklarda ayrışır.
+          </li>
+          <li>
+            <strong>Laboratuvar ve hayvan:</strong> “L-treonat beyne daha çok magnezyum taşır” fikri sıçan ve hücre kültürü
+            çalışmalarından geliyor <sup><a href="#kaynak-21">[21]</a></sup>. İnsan beynindeki magnezyum düzeyi bu ürünle
+            ölçülmüş değil. Ömür verisi ise yön bile göstermiyor: erken yaşlanan bir fare modelinde diyete eklenen
+            magnezyum ömrü uzattı <sup><a href="#kaynak-25">[25]</a></sup>; mayada ise ömrü uzatan, magnezyumun
+            azaltılmasıydı <sup><a href="#kaynak-26">[26]</a></sup>.
+          </li>
+          <li>
+            <strong>Kandaki yaşlanma belirteçleri:</strong> Telomer ya da “biyolojik saat” gibi belirteçleri sonuç olarak
+            alan randomize bir magnezyum çalışması bulamadık. Genetik yöntemle yapılan bir analizde kandaki magnezyum
+            düzeyi ile telomer uzunluğu arasında ilişki çıkmadı <sup><a href="#kaynak-27">[27]</a></sup> <Evidence level={2} />.
+          </li>
+          <li>
+            <strong>Hafıza ve dikkat:</strong> 18–45 yaş arası, uykusundan memnun olmayan 100 erişkinde altı haftalık
+            L-treonat, genel biliş puanında plaseboya göre küçük bir fark gösterdi. Bir akıl yürütme testinde ve
+            uyku takip yüzüğüyle ölçülen uykuda fark yoktu <sup><a href="#kaynak-23">[23]</a></sup> <Evidence level={2} />.
+            “Beyin yaşını 7,5 yıl geriletti” cümlesi bu çalışmanın tahmini bir hesabından geliyor; çalışmayı ürünün
+            üreticisi destekledi. 50–70 yaş arası 44 kişilik bir başka çalışma da olumlu sonuç bildirdi; yazarlarının
+            bir kısmı ürünü geliştiren şirkette çalışıyordu <sup><a href="#kaynak-22">[22]</a></sup>. Meme kanseri
+            ameliyatı geçirmiş 109 kadında ise 12 haftalık kullanım bilişi, ruh halini ve uykuyu plasebodan farklı
+            etkilemedi <sup><a href="#kaynak-24">[24]</a></sup> <Evidence level={2} />.
+          </li>
+          <li>
+            <strong>Güvenlik:</strong> Kısa süreli kullanımda en sık sorun bağırsak yakınmalarıdır; takviye üst sınırları da
+            ishal riskine dayanır <sup><a href="#kaynak-12">[12]</a></sup>. Yıllarca süren
+            kullanım için randomize güvenlik verisi bulamadık; böbrek ve ilaçlarla ilgili riskler bir sonraki bölümde
+            ele alınıyor.
+          </li>
+          <li>
+            <strong>Ömür ve hastalık:</strong> Ömrü ya da hastalık sıklığını sonuç olarak alan bir magnezyum takviyesi
+            çalışması yok. Gözlemsel çalışmalar neden-sonuç ilişkisini göstermez; yine de bu çalışmalarda besinlerden
+            alınan magnezyum daha düşük ölüm riskiyle ilişkili bulundu, takviye olarak alınan magnezyumda ise bu ilişki
+            görülmedi <sup><a href="#kaynak-28">[28]</a></sup> <Evidence level={3} />.
+          </li>
+        </ol>
+
+        <h3>Vaat ve kanıt yan yana</h3>
+        <p>
+          Aşağıdaki tablo, magnezyumla ilgili sık duyulan iddiaları kanıt gücüne göre sıralıyor. “Test edilmedi”,
+          “işe yaramıyor” demek değildir; henüz bilmediğimiz anlamına gelir.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Durum</th>
+                <th class="p-3 font-semibold">Dayanak</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Tansiyonu düşürür</td>
+                <td class="p-3">Test edildi, desteklendi; etki küçük</td>
+                <td class="p-3">38 çalışmanın birleşik analizinde büyük tansiyon ortalama 2,8 mmHg düştü; yüksek tansiyonu olanlarda ve kan magnezyumu düşük olanlarda daha belirgin, normal tansiyonda anlamlı değil <sup><a href="#kaynak-30">[30]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Migren ataklarını önlemeye yardım eder</td>
+                <td class="p-3">Test edildi, desteklendi; orta düzey</td>
+                <td class="p-3">Klinik kılavuzda “muhtemelen etkili” olarak değerlendirildi <sup><a href="#kaynak-31">[31]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kan şekerini ve insülin duyarlılığını iyileştirir</td>
+                <td class="p-3">Test edildi, kısmen desteklendi</td>
+                <td class="p-3">Diyabeti olan veya diyabet riski taşıyanlarda açlık şekeri ve insülin duyarlılığı göstergelerinde düzelme <sup><a href="#kaynak-32">[32]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Hafızayı güçlendirir, “beyin yaşını geriletir”</td>
+                <td class="p-3">Test edildi; sonuçlar zayıf ve çelişkili</td>
+                <td class="p-3">Küçük, çoğu üretici destekli çalışmalar; meme kanseri ameliyatı geçirmiş kadınlarda yapılan çalışmada fark yok <sup><a href="#kaynak-22">[22]</a>, <a href="#kaynak-23">[23]</a>, <a href="#kaynak-24">[24]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Sıcak basmasını azaltır</td>
+                <td class="p-3">Test edildi, desteklenmedi</td>
+                <td class="p-3">Meme kanseri öyküsü olan menopoz sonrası kadınlarda plasebodan farkı yok <sup><a href="#kaynak-18">[18]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kemiği korur, kırığı önler</td>
+                <td class="p-3">Kırık için test edilmedi</td>
+                <td class="p-3">Menopoz sonrası 73.684 kadında yüksek magnezyum alımı biraz daha yüksek kemik yoğunluğuyla ilişkili, kırık riskinde fark yok; gözlemsel <sup><a href="#kaynak-33">[33]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Perimenopoz belirtilerini, hafızayı ve uykuyu düzeltir</td>
+                <td class="p-3">Test ediliyor; sonuç yok</td>
+                <td class="p-3">Plasebo kontrollü bir çalışma sürüyor <sup><a href="#kaynak-34">[34]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">“Çoğumuz magnezyum eksiğiyiz”</td>
+                <td class="p-3">Alım için kısmen doğru; eksiklik için genellenemez</td>
+                <td class="p-3">ABD’de 60 yaş üstü erişkinlerin yaklaşık %60’ı besinlerle tahmini ortalama gereksinimin altında alıyor <sup><a href="#kaynak-29">[29]</a></sup>; bu bir alım verisidir, kan düzeyi ölçümü değil</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Ömrü uzatır, yaşlanmayı yavaşlatır</td>
+                <td class="p-3">Bu haliyle test edilemez</td>
+                <td class="p-3">İnsanda ömür çalışması yok; telomerle genetik ilişki yok, takviye ölümle ilişkili değil <sup><a href="#kaynak-27">[27]</a>, <a href="#kaynak-28">[28]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Tablonun ilk üç satırı kanıt taşıyor, ama bu yazının konusu olan menopoz belirtilerinin dışında kalıyor. Tansiyon,
+          migren ya da kan şekeri için magnezyum düşünülüyorsa bu, o durumu izleyen hekimle birlikte, kullanılan
+          ilaçlar hesaba katılarak konuşulur.
+        </p>
+
+        <h3>Eksiklik kimde gerçekten olası?</h3>
+        <p>
+          “Herkes eksik” cümlesi ile gerçek eksiklik aynı şey değil. Besinlerle alımın önerilenin altında kalması,
+          kandaki düzeyin düşük olduğunu göstermez. Üstelik elimizdeki veri ABD’ye ait ve Türkiye’ye doğrudan
+          genellenemez <sup><a href="#kaynak-29">[29]</a></sup>.
+        </p>
+        <p>
+          Eksiklik riskini artıran durumlar daha belirgindir. Uzun süre mide koruyucu ilaç (proton pompası inhibitörü)
+          kullanmak bunlardan biri: gözlemsel çalışmaları birleştiren bir analizde bu ilaçları kullananlarda kan
+          magnezyumu düşüklüğü riski yaklaşık 1,4 kat bulundu <sup><a href="#kaynak-35">[35]</a></sup> <Evidence level={3} />.
+          Bu ilaçları uzun süredir kullanıyorsanız, magnezyumu kendi başınıza eklemek yerine kan düzeyini hekiminizle
+          konuşmanız daha doğru olur.
+        </p>
+
+        <h3>Henüz bilmediklerimiz</h3>
+        <p>
+          Perimenopozdaki kadınlarda magnezyumun belirtilere, hafızaya ve uykuya etkisini plaseboyla karşılaştıran
+          58 kişilik bir çalışmanın birincil sonuçlarının Ekim 2026’da tamamlanması planlanıyordu; sonuçlar henüz
+          yayımlanmadı <sup><a href="#kaynak-34">[34]</a></sup>. L-treonat menopozdaki kadınlarda denenmiş değil.
+          Yıllarca süren kullanımın güvenliği de bilinmiyor. Sonuçlar yayımlandığında bu bölüm güncellenecek.
+        </p>
+
         <h2 id="kimler-dikkatli-olmali">Böbrek Hastalığı ve İlaçlar Varsa Kendi Başınıza Başlamayın</h2>
         <p>
           Magnezyum çoğu zaman zararsız bir takviye gibi anlatılır. Böbrek işlevi ve kullanılan ilaçlar bu tabloyu değiştirir.
@@ -253,6 +398,9 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Böbrek işlevi bozuk olanlar, çok sayıda ilaç kullananlar, bazı antibiyotikleri kullananlar
           ve yüksek dozları uzun süre düşünenler daha dikkatli olmalıdır <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={4} />.
+          Böbrek işlevi belirgin azalmış ve günde 900 mg ya da daha fazla magnezyum oksit kullanan yaşlı hastaların
+          yaklaşık yarısında kan magnezyumu yükseldi <sup><a href="#kaynak-36">[36]</a></sup> <Evidence level={2} />.
+          Bu miktar bileşiğe aittir; bir kullanım önerisi değildir.
         </p>
         <p>
           Ağızdan alınan bisfosfonatlarda (osteoporoz ilaçlarının bir grubu), çok değerlikli katyon içeren ürünlerin emilimi azalttığı ve alendronattan sonra diğer ağızdan ilaçlar için en az yarım saat beklenmesi gerektiği etikette yazılıdır <sup><a href="#kaynak-20">[20]</a></sup>.
@@ -267,7 +415,8 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Takviye olarak alınan magnezyum için günlük üst sınır Avrupa’da 250 mg <sup><a href="#kaynak-12">[12]</a></sup>, ABD’de 350 mg’dır <sup><a href="#kaynak-11">[11]</a></sup>
-          <Evidence level={4} />. Avrupa’daki sınır takviyelerde, suda ve gıdalara eklenen kolay çözünen magnezyum
+          <Evidence level={4} />. Türkiye’de de takviye edici gıdalarda 11 yaş ve üzeri için bir günlük kullanımda
+          izin verilen en yüksek miktar 250 mg magnezyumdur <sup><a href="#kaynak-37">[37]</a></sup>. Avrupa’daki sınır takviyelerde, suda ve gıdalara eklenen kolay çözünen magnezyum
           tuzlarını ve magnezyum oksit gibi bileşikleri kapsar. İki sınır da elementel magnezyum içindir ve normal
           besinlerle alınan magnezyumu kapsamaz. Üst sınırlar ishal riskine dayanır; herkeste aynı dozda yan etki beklenmez.
         </p>
@@ -334,14 +483,31 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-10">Schuster J et al. <em>Magnesium Bisglycinate Supplementation in Healthy Adults Reporting Poor Sleep: A Randomized, Placebo-Controlled Trial.</em> Nat Sci Sleep. 2025;17:2027-2040. <a href="https://pubmed.ncbi.nlm.nih.gov/40918053/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-11">Institute of Medicine (US) Standing Committee on the Scientific Evaluation of Dietary Reference Intakes. <em>Dietary Reference Intakes for Calcium, Phosphorus, Magnesium, Vitamin D, and Fluoride.</em> Washington (DC): National Academies Press; 1997. Bölüm 6: Magnesium. <a href="https://www.nationalacademies.org/read/5776/chapter/8" rel="noopener noreferrer">National Academies kaydı</a>.</li>
           <li id="kaynak-12">European Commission, Scientific Committee on Food. <em>Opinion of the Scientific Committee on Food on the Tolerable Upper Intake Level of Magnesium.</em> SCF/CS/NUT/UPPLEV/54 Final. 2001. <a href="https://ec.europa.eu/food/fs/sc/scf/out105_en.pdf" rel="noopener noreferrer">Komite görüşü (PDF)</a>.</li>
-          <li id="kaynak-13">U.S. National Library of Medicine, DailyMed. <em>Levothyroxine sodium tablet — Prescribing Information</em> (Bölüm 2.1, 7.1 ve 17). Revizyon Ocak 2025. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=702016f6-8507-471f-b833-3a582aef5d2e" rel="noopener noreferrer">DailyMed kaydı</a>.</li>
+          <li id="kaynak-13">U.S. National Library of Medicine, DailyMed. <em>Levothyroxine sodium tablet — Prescribing Information</em> (Bölüm 2.1, 7.1 ve 17). Revizyon Ocak 2025. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=702016f6-8507-471f-b833-3a582aef5d2e" rel="noopener noreferrer">DailyMed levotiroksin kaydı</a>.</li>
           <li id="kaynak-14">Firoz M, Graber M. <em>Bioavailability of US commercial magnesium preparations.</em> Magnes Res. 2001;14(4):257-262. <a href="https://pubmed.ncbi.nlm.nih.gov/11794633/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-15">NHS. <em>Heart palpitations.</em> Erişim: 11 Ekim 2026. <a href="https://www.nhs.uk/symptoms/heart-palpitations/" rel="noopener noreferrer">NHS sayfası</a>.</li>
           <li id="kaynak-16">Walker AF, Marakis G, Christie S, Byng M. <em>Mg citrate found more bioavailable than other Mg preparations in a randomised, double-blind study.</em> Magnes Res. 2003;16(3):183-191. <a href="https://pubmed.ncbi.nlm.nih.gov/14596323/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-17">Ivanovic ND, Radosavljevic B, Zekovic M ve ark. <em>Effects of short-term magnesium supplementation on ionized, total magnesium and other relevant electrolytes levels.</em> Biometals. 2022;35(2):267-283. <a href="https://pubmed.ncbi.nlm.nih.gov/35041150/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-18">Park H, Qin R, Smith TJ ve ark. <em>North Central Cancer Treatment Group N10C2 (Alliance): a double-blind placebo-controlled study of magnesium supplements to reduce menopausal hot flashes.</em> Menopause. 2015;22(6):627-632. <a href="https://pubmed.ncbi.nlm.nih.gov/25423327/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-19">Gugler R, Allgayer H. <em>Effects of antacids on the clinical pharmacokinetics of drugs. An update.</em> Clin Pharmacokinet. 1990;18(3):210-219. <a href="https://pubmed.ncbi.nlm.nih.gov/1969784/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
-          <li id="kaynak-20">U.S. National Library of Medicine, DailyMed. <em>Alendronate sodium tablet — Prescribing Information</em> (Bölüm 2.6 ve 7.1). Erişim: 12 Ekim 2026. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b63421af-ec03-1de7-e053-2a95a90abec6" rel="noopener noreferrer">DailyMed kaydı</a>.</li>
+          <li id="kaynak-20">U.S. National Library of Medicine, DailyMed. <em>Alendronate sodium tablet — Prescribing Information</em> (Bölüm 2.6 ve 7.1). Erişim: 12 Ekim 2026. <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b63421af-ec03-1de7-e053-2a95a90abec6" rel="noopener noreferrer">DailyMed alendronat kaydı</a>.</li>
+          <li id="kaynak-21">Sun Q, Weinger JG, Mao F, Liu G. <em>Regulation of structural and functional synapse density by L-threonate through modulation of intraneuronal magnesium concentration.</em> Neuropharmacology. 2016;108:426-439. <a href="https://pubmed.ncbi.nlm.nih.gov/27178134/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-22">Liu G, Weinger JG, Lu ZL, Xue F, Sadeghpour S. <em>Efficacy and Safety of MMFS-01, a Synapse Density Enhancer, for Treating Cognitive Impairment in Older Adults: A Randomized, Double-Blind, Placebo-Controlled Trial.</em> J Alzheimers Dis. 2016;49(4):971-990. <a href="https://pubmed.ncbi.nlm.nih.gov/26519439/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-23">Lopresti AL, Smith SJ. <em>The effects of magnesium L-threonate (Magtein) on cognitive performance and sleep quality in adults: a randomised, double-blind, placebo-controlled trial.</em> Front Nutr. 2026;12:1729164. <a href="https://pubmed.ncbi.nlm.nih.gov/41601871/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-24">Ni Y, Deng F, Yu S ve ark. <em>A Randomized, Double-Blind, Placebo-Controlled Trial to Evaluate the Therapeutic Effect of Magnesium-L-Threonate Supplementation for Persistent Pain After Breast Cancer Surgery.</em> Breast Cancer (Dove Med Press). 2023;15:495-504. <a href="https://pubmed.ncbi.nlm.nih.gov/37520407/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-25">Villa-Bellosta R. <em>Dietary magnesium supplementation improves lifespan in a mouse model of progeria.</em> EMBO Mol Med. 2020;12(10):e12423. <a href="https://pubmed.ncbi.nlm.nih.gov/32875720/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-26">Ohtsuka H, Kobayashi M, Shimasaki T ve ark. <em>Magnesium depletion extends fission yeast lifespan via general amino acid control activation.</em> MicrobiologyOpen. 2021;10(2):e1176. <a href="https://pubmed.ncbi.nlm.nih.gov/33970532/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-27">Zhu H, Chen M, Wang Y ve ark. <em>The effect of micronutrient levels on leukocyte telomere length: A Mendelian randomization study.</em> Medicine (Baltimore). 2026;105(27):e49408. <a href="https://pubmed.ncbi.nlm.nih.gov/42410770/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-28">Bagheri A, Naghshi S, Sadeghi O, Larijani B, Esmaillzadeh A. <em>Total, Dietary, and Supplemental Magnesium Intakes and Risk of All-Cause, Cardiovascular, and Cancer Mortality: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies.</em> Adv Nutr. 2021;12(4):1196-1210. <a href="https://pubmed.ncbi.nlm.nih.gov/33684200/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-29">Agarwal S, Fulgoni VL. <em>Beef Consumption Is Associated with Higher Intakes and Adequacy of Key Nutrients in Older Adults Age 60+ Years: National Health and Nutrition Examination Survey 2011-2018 Analysis.</em> Nutrients. 2024;16(11):1779. <a href="https://pubmed.ncbi.nlm.nih.gov/38892711/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-30">Argeros Z, Xu X, Bhandari B, Harris K, Touyz RM, Schutte AE. <em>Magnesium Supplementation and Blood Pressure: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.</em> Hypertension. 2025;82(11):1844-1856. <a href="https://pubmed.ncbi.nlm.nih.gov/41000008/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-31">Holland S, Silberstein SD, Freitag F ve ark. <em>Evidence-based guideline update: NSAIDs and other complementary treatments for episodic migraine prevention in adults: report of the Quality Standards Subcommittee of the American Academy of Neurology and the American Headache Society.</em> Neurology. 2012;78(17):1346-1353. <a href="https://pubmed.ncbi.nlm.nih.gov/22529203/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-32">Veronese N, Dominguez LJ, Pizzol D, Demurtas J, Smith L, Barbagallo M. <em>Oral Magnesium Supplementation for Treating Glucose Metabolism Parameters in People with or at Risk of Diabetes: A Systematic Review and Meta-Analysis of Double-Blind Randomized Controlled Trials.</em> Nutrients. 2021;13(11):4074. <a href="https://pubmed.ncbi.nlm.nih.gov/34836329/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-33">Orchard TS, Larson JC, Alghothani N ve ark. <em>Magnesium intake, bone mineral density, and fractures: results from the Women’s Health Initiative Observational Study.</em> Am J Clin Nutr. 2014;99(4):926-933. <a href="https://pubmed.ncbi.nlm.nih.gov/24500155/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-34">ClinicalTrials.gov. <em>12-week Magnesium Supplementation on Peri-menopause Symptoms, Cognition, Sleep, and Psychological Well-being</em> (NCT07235878). Northumbria University. Erişim: 26 Ekim 2026. <a href="https://clinicaltrials.gov/study/NCT07235878" rel="noopener noreferrer">ClinicalTrials.gov kaydı</a>.</li>
+          <li id="kaynak-35">Cheungpasitporn W, Thongprayoon C, Kittanamongkolchai W ve ark. <em>Proton pump inhibitors linked to hypomagnesemia: a systematic review and meta-analysis of observational studies.</em> Ren Fail. 2015;37(7):1237-1241. <a href="https://pubmed.ncbi.nlm.nih.gov/26108134/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-36">Ishii H, Sawada R, Shiomi M, Shibuya K. <em>A case-control study showing low creatinine clearance and high magnesium intake as risk factors for hypermagnesemia in older individuals.</em> Magnes Res. 2023;36(2):23-30. <a href="https://pubmed.ncbi.nlm.nih.gov/37897255/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-37">Türk Gıda Kodeksi Takviye Edici Gıdalar Tebliği (Tebliğ No: 2013/49), Ek-3. Resmî Gazete, 16 Ağustos 2013, sayı 28737; 2015 ve 2017 değişiklikleri Ek-3’ü değiştirmedi. Erişim: 26 Ekim 2026. <a href="https://www.resmigazete.gov.tr/eskiler/2013/08/20130816-16.htm" rel="noopener noreferrer">Resmî Gazete</a>.</li>
         </ol>
       </ArticleProsePanel>
 
@@ -349,7 +515,7 @@ const articleSchemas = buildArticleSchemas({
         id="sik-sorulanlar"
         items={faqItems}
         title="Dr. Aksoy'a sorular"
-        intro="Doç. Dr. Senai Aksoy, magnezyum takviyesinin kimde anlamlı olduğu, uyku, form seçimi ve güvenlik hakkındaki soruları yanıtlıyor."
+        intro="Doç. Dr. Senai Aksoy, magnezyumla uyku, form seçimi, güvenlik, “beyin magnezyumu” ve ilaç kullananlarda eksiklik hakkındaki soruları yanıtlıyor."
         class="mt-10"
       />
 
@@ -387,12 +553,18 @@ const articleSchemas = buildArticleSchemas({
             olduğu anlamına gelmez.
           </p>
           <p>
+            <strong class="text-primary">Kanıt notu:</strong> Beyin, hafıza ve uzun yaşam vaatlerinde insanlarda yapılmış
+            çalışmalar küçük, kısa süreli ve çoğu üretici destekli; ömür ve yaşlanma belirteçleri için takviye çalışması
+            yok. Bu yüzden bu bölüm bir öneri değil, vaatlerin kanıt düzeyini ayıran bir haritadır. Takviye üst sınırı ve
+            böbrek-ilaç uyarıları aynı bölümde geçerlidir.
+          </p>
+          <p>
             <strong class="text-primary">Pratik not:</strong> Menopozda iyi hissetmeyi tek bir takviyeye
             bağlamak çoğu zaman hayal kırıklığı yaratır. Magnezyum ancak belirtinin bağlamı, kullanım amacı
             ve olası diğer nedenler birlikte değerlendirildiğinde anlam kazanır.
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 11 Ekim 2026
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 27 Ekim 2026
           </p>
         </div>
       </ArticleEditorNote>
