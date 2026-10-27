@@ -506,6 +506,27 @@ export const staticArticles: StaticArticleEntry[] = [
     ],
   },
   {
+    path: '/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/',
+    title: 'Fitoestrojenler Menopozda Ne İşe Yarar?',
+    description:
+      'Soya, kırmızı yonca ve keten tohumu sıcak basmasında ne kadar işe yarıyor? Etki küçük ve tutarsız; meme, rahim ve tiroid soruları ayrı bir güvenlik başlığı.',
+    publishedDate: '27 Ekim 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Zamansız Yaşam · Vitaminler',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'fitoestrojen',
+      'menopoz',
+      'soya',
+      'izoflavon',
+      'kırmızı yonca',
+      'keten tohumu',
+      'sıcak basması',
+      'bitkisel östrojen',
+      'takviye güvenliği',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
     title: 'Peptidler Menopozda Gerçekten Ne Vaat Ediyor?',
     description:

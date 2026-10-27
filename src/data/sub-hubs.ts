@@ -68,6 +68,7 @@ export const subHubs: SubHubConfig[] = [
       '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/',
       '/zamansiz-yasam/vitaminler/magnezyum-menopozda-ne-ise-yarar/',
       '/zamansiz-yasam/d-vitamini-rehberi/',
+      '/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/',
     ],
   },
   {

@@ -1,0 +1,426 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/zamansiz-yasam/vitaminler/']!;
+
+const tocEntries = [
+  { id: 'mutfak-rafi', label: 'Mutfak Rafındaki Etiket' },
+  { id: 'fitoestrojen-nedir', label: 'Fitoestrojen Nedir' },
+  { id: 'sicak-basmasi', label: 'Sıcak Basması' },
+  { id: 'soya-yonca-keten', label: 'Soya, Kırmızı Yonca, Keten' },
+  { id: 'diger-vaatler', label: 'Kemik, Cinsel Yaşam, Ruh Hali' },
+  { id: 'guvenlik', label: 'Meme, Rahim, Tiroid' },
+  { id: 'besin-ve-ekstrakt', label: 'Besin ve Ekstrakt' },
+  { id: 'karar-olcutleri', label: 'Karar Ölçütleri' },
+  { id: 'doktora-uc-soru', label: 'Görüşmeye Üç Soru' },
+  { id: 'kapanis', label: 'Kapanış' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Fitoestrojenler Menopozda Ne İşe Yarar?';
+const articleImage = '/images/library/editorial/zy-fitoestrojenler-menopoz.webp';
+const articleDescription =
+  'Soya, kırmızı yonca ve keten tohumu sıcak basmasında ne kadar işe yarıyor? Etki küçük ve tutarsız; meme, rahim ve tiroid soruları ayrı bir güvenlik başlığı.';
+const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/'] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
+  publishedDate: '27 Ekim 2026',
+  image: articleImage,
+  medicalReviewer: 'Dr. Alper Mumcu',
+  pathname: '/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/',
+  articleSection: 'Zamansız Yaşam · Vitaminler',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'fitoestrojen',
+    'menopoz',
+    'soya',
+    'izoflavon',
+    'kırmızı yonca',
+    'keten tohumu',
+    'sıcak basması',
+    'bitkisel östrojen',
+    'takviye güvenliği',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Vitaminler"
+      title="Fitoestrojenler Menopozda Ne İşe Yarar?"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        articleType="clinical-guide"
+        medicalReviewer="Dr. Alper Mumcu"
+        publishedDate="27 Ekim 2026"
+        readingMinutes={11}
+        imageSrc="/images/library/editorial/zy-fitoestrojenler-menopoz-byline.webp"
+        imageAlt="Güneşli bir mutfak tezgâhında, yoğurt kasesine keten tohumu serpen, keten gömlekli ve gülümseyen kadın; yapay zekâ ile üretilmiş temsili görsel"
+        imagePosition="60% center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton
+          slug="/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/"
+          title={articleTitle}
+        />
+      </div>
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Fitoestrojenler sıcak basmasında ortalama küçük bir azalma sağlayabiliyor; ancak çalışmalar tutarsız, kalitesi
+          düşük ve plasebo grubunda da belirgin bir azalma görülüyor <sup><a href="#kaynak-1">[1]</a></sup>
+          <sup><a href="#kaynak-2">[2]</a></sup>. Keten tohumunda ve iki yıllık soya tableti çalışmasında anlamlı yarar
+          çıkmadı <sup><a href="#kaynak-5">[5]</a></sup> <sup><a href="#kaynak-6">[6]</a></sup>. Hormon tedavisinin yerini
+          tutmuyorlar; 2023 tarihli bir uzlaşı bildirisi sıcak basması için soya ürünlerini önermiyor
+          <sup><a href="#kaynak-12">[12]</a></sup>. Besin olarak soya, meme kanseri öyküsü olanlarda nüks artışı
+          göstermedi <sup><a href="#kaynak-9">[9]</a></sup>; ekstrakt ve tabletler için aynı güvence yok. Meme veya rahim
+          öykünüz ya da tiroid ilacınız varsa ekstrakt başlamadan hekiminize danışın.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="mutfak-rafi">Mutfak Rafındaki Etiket</h2>
+        <p>
+          Çoğu mutfakta üst rafta bir keten tohumu poşeti durur. Ağzı mandalla kapatılmış, “bir gün düzenli
+          kullanacağım” niyetiyle alınmış, yanında yarım kalmış bir çay kutusu vardır.
+        </p>
+        <p>
+          Sıcak basması gece üçte sizi uyandırdığında o rafa bakmak yorgunluğun dürüst bir tepkisidir. Hormon tedavisi
+          istemeyen, alamayan ya da henüz karar vermemiş biri için “doğal bir şey deneyeyim” demek çok anlaşılır.
+          Bunu çaresizlik saymıyorum; bu, çözüm aramaktır.
+        </p>
+        <p>
+          Etiketler “doğal” der. Bu sözcük, ürünün işe yaradığı ya da herkes için uygun olduğu anlamına gelmez. Ürünün
+          bitkiden geldiğini söyler, o kadar. Bu yazı etikette yazanla araştırmanın söylediği arasındaki mesafeyi
+          ölçüyor.
+        </p>
+        <p>
+          Önce şunu söyleyeyim: Soyalı bir yemek yemek ya da çorbaya keten tohumu eklemek korkulacak bir şey değil.
+          Tartışma, kapsül ve ekstraktlarda, bir de “hormon tedavisinin yerini tutar mı” sorusunda yoğunlaşıyor.
+        </p>
+
+        <h2 id="fitoestrojen-nedir">Bitkinin İçinde Östrojene Benzeyen Maddeler</h2>
+        <p>
+          Adı östrojene benzer; yaptığı iş aynı değildir.
+        </p>
+        <p>
+          Fitoestrojen, bitkide bulunan ve östrojen benzeri etki gösterebilen kimyasalların ortak adıdır
+          <sup><a href="#kaynak-2">[2]</a></sup>. Üç ana gruptan söz edilir: soya ve kırmızı yoncadaki izoflavonlar,
+          keten tohumundaki lignanlar ve daha az bilinen kumestanlar.
+        </p>
+        <p>
+          Aynı bitkiden çıkan her şey aynı soru değildir. Tabaktaki tofu, marketteki izoflavon kapsülü ve “standardize
+          ekstrakt” yazan şişe üç ayrı konudur. Kanıt, güvenlik ve etki bu üç yolda farklı yürür.
+        </p>
+        <p>
+          Bir ayrıntı daha: Fitoestrojenin östrojene benzemesi, östrojenin yerini alabildiği anlamına gelmez. Ölçülen
+          sonuç, sıcak basması sayısı gibi gerçek yakınmalardır; kimyasal benzerlik tek başına sonuç sayılmaz.
+        </p>
+
+        <h2 id="sicak-basmasi">Sıcak Basmasında Küçük ve Tutarsız Bir Etki</h2>
+        <p>
+          Kısaca: Fark ölçülebiliyor ama küçük; çalışmalar birbirini tutmuyor ve plasebo etkisi güçlü.
+        </p>
+        <p>
+          62 çalışmayı ve 6.653 kadını kapsayan bir meta-analizde fitoestrojenler günlük sıcak basması sayısını ortalama
+          1,3 azalttı. Soya izoflavonlarında bu fark günde yaklaşık 0,8’di. Gece terlemesinde anlamlı azalma
+          görülmedi. Çalışmaların yüzde 74’ünde üç ya da daha fazla alanda yüksek yanlılık riski vardı
+          <sup><a href="#kaynak-1">[1]</a></sup> <Evidence level={3} />.
+        </p>
+        <p>
+          Başka bir meta-analiz benzer büyüklükte bir fark buldu: günde yaklaşık 0,9 sıcak basması, yan etki
+          bildiriminde fark olmadan <sup><a href="#kaynak-3">[3]</a></sup>. Soya izoflavonu ekstraktlarına bakan bir derlemede
+          sıklık yüzde 20,6, şiddet yüzde 26,2 azaldı. Bu çalışmalarda ortanca izoflavon miktarı günde 54 mg, süre altı
+          haftadan bir yıla kadardı <sup><a href="#kaynak-4">[4]</a></sup>. Çalışmalar arasındaki farklılık belirgindi
+          <sup><a href="#kaynak-1">[1]</a></sup> <sup><a href="#kaynak-4">[4]</a></sup>.
+        </p>
+        <p>
+          Cochrane tarafı daha temkinli. 43 randomize çalışmayı (4.364 katılımcı) toplayan derleme, fitoestrojen
+          takviyelerinin sıcak basmasını ve gece terlemesini etkili biçimde azalttığına dair kesin kanıt bulamadı.
+          Çoğu çalışmada plasebo alan gruplarda bile sıklık yüzde 1 ile 59 arasında azalmıştı <sup><a href="#kaynak-2">[2]</a></sup>
+          <Evidence level={3} />.
+        </p>
+        <p>
+          2024’te yalnızca beş çalışmayı (425 kadın) toplayan bir meta-analiz soya izoflavonlarının genel menopoz
+          belirtilerinde anlamlı fark yaratmadığını, depresyon düzeyinde ise azalma gösterdiğini bildirdi. Dahil edilen
+          çalışmalarda çıkar çatışması riski yüksekti <sup><a href="#kaynak-8">[8]</a></sup>
+          <Evidence level={2} />.
+        </p>
+        <p>
+          Etki küçük, belirsizlik büyük. Bu tabloyu şöyle özetliyorum: Bazı kadınlarda fark yaratıyor olabilir, çoğunda yaratmıyor ve kimde işe
+          yarayacağını önceden bilemiyoruz. 2023 tarihli uzlaşı bildirisi de hormon tedavisini sıcak basmasında en
+          etkili seçenek olarak görüyor. Soya ürünleri ve soyanın bağırsak ürünü equol ise önerilmiyor
+          <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={3} />.
+        </p>
+
+        <h2 id="soya-yonca-keten">Soya, Kırmızı Yonca ve Keten Tohumu: Her Biri Ayrı Dosya</h2>
+        <p>
+          Aynı bitki ailesi, üç ayrı sonuç. Reklamın tek sepete koyduğunu klinik olarak ayırmak gerekiyor.
+        </p>
+        <p>
+          <strong>Soya.</strong> En çok incelenen bitki bu. Meta-analizlerde küçük bir fark çıkıyor
+          <sup><a href="#kaynak-1">[1]</a></sup> <sup><a href="#kaynak-4">[4]</a></sup>. Buna karşılık günde 200 mg izoflavon tableti,
+          menopozdan sonraki ilk beş yıldaki 248 kadında iki yılda ne kemik kaybını ne de menopoz
+          yakınmalarını azalttı. Soya grubunda sıcak basması ve kabızlık yakınması daha sık bildirildi
+          <sup><a href="#kaynak-6">[6]</a></sup> <Evidence level={3} />.
+        </p>
+        <p>
+          <strong>Kırmızı yonca.</strong> Cochrane derlemesinde bir yonca ekstraktı (Promensil) için beş çalışma
+          birleştirildi. Plaseboya göre fark istatistiksel olarak anlamlı değildi (ortalama fark −0,93; güven aralığı
+          −1,95 ile 0,10) <sup><a href="#kaynak-2">[2]</a></sup>. Kanıt sınırlı <Evidence level={2} />.
+        </p>
+        <p>
+          <strong>Keten tohumu.</strong> En bilinen randomize çalışmada postmenopozal 188 kadın (bir kısmının meme kanseri öyküsü vardı) altı hafta boyunca
+          günde bir keten barı (410 mg lignan) ya da plasebo barı yedi. Sıcak basması skoru keten grubunda 4,9,
+          plasebo grubunda 3,5 azaldı; fark anlamlı değildi (p = 0,29). Her iki grupta kadınların üçte birinden
+          fazlası yüzde 50 azalma bildirdi <sup><a href="#kaynak-5">[5]</a></sup> <Evidence level={2} />. Bu çalışma
+          tek ve kısa; keten tohumunun lif olarak bağırsağa katkısı ayrı bir konu.
+        </p>
+        <p>
+          Daha yüksek izoflavon miktarının daha iyi sonuç verdiğine dair güçlü kanıt yok. Cochrane derlemesi,
+          çalışmalar arasındaki sonuç farkının izoflavon miktarıyla açıklanamadığını belirtiyor
+          <sup><a href="#kaynak-2">[2]</a></sup>. Aynı derlemede günde 30 mg’ın üzerinde genistein (bir izoflavon)
+          içeren ekstraktlarla yapılan dört çalışmada azalma tutarlıydı. Ancak bu çalışmalar birleştirilmedi ve
+          yazarlar konunun daha fazla araştırılması gerektiğini söylüyor <sup><a href="#kaynak-2">[2]</a></sup>.
+          Bu işaret, yoğun bir kapsülün daha iyi sonuç vereceği anlamına gelmez; doz önerisi de değildir.
+        </p>
+
+        <h2 id="diger-vaatler">Kemik, Cinsel Yaşam ve Ruh Hali: Vaat ile Kanıt</h2>
+        <p>
+          Sıcak basması dışında fitoestrojenlere yüklenen anlamlar çoğaldıkça kanıt inceliyor.
+        </p>
+        <p>
+          <strong>Kemik.</strong> Yukarıdaki iki yıllık çalışmada soya izoflavon tableti kemik yoğunluğu kaybını
+          önlemedi. Omurgada kayıp yüzde 2,0’a karşı 2,3, kalçada yüzde 1,2’ye karşı 1,4’tü
+          <sup><a href="#kaynak-6">[6]</a></sup> <Evidence level={3} />. Kemik sağlığı için tek bir bitki yerine
+          protein, kalsiyum, D vitamini ve hareket birlikte düşünülür.
+        </p>
+        <p>
+          <strong>Cinsel yaşam ve vajinal kuruluk.</strong> Meta-analizde fitoestrojenler vajinal kuruluk skorunda
+          küçük bir düzelme sağladı <sup><a href="#kaynak-1">[1]</a></sup>. Cinsel işlev açısından bakan başka bir
+          derlemede soya, kırmızı yonca ve keten tohumu belirgin yarar göstermedi
+          <sup><a href="#kaynak-7">[7]</a></sup> <Evidence level={2} />. Rahatsız edici bir kuruluk ya da ağrı varsa
+          bunun ayrı ve bilinen çözümleri var; bu konuyu ertelemeyin.
+        </p>
+        <p>
+          <strong>Ruh hali.</strong> 2024’teki küçük meta-analizde depresyon düzeyinde azalma bildirildi
+          <sup><a href="#kaynak-8">[8]</a></sup>; beş çalışma, yüksek çıkar çatışması riski. Haftalarca süren isteksizlik ve mutsuzluk
+          bir takviyeyle beklenecek bir durum değildir, değerlendirme ister.
+        </p>
+
+        <h2 id="guvenlik">Meme, Rahim ve Tiroid: Güvenlik Soruları</h2>
+        <p>
+          Bu soruların çoğu meme kanseri korkusundan geliyor ve bunu anlıyorum. Önce şunu söyleyeyim: Besin ile ekstrakt için yanıt ayrı.
+        </p>
+        <p>
+          <strong>Meme.</strong> Meme kanseri tanısı almış 9.514 kadın (ABD ve Çin kohortları) izlendi.
+          Günde 10 mg ve üzeri izoflavon alanlarda nüks riski yüzde 25 daha düşüktü (risk oranı 0,75). Ölüm riskinde azalma
+          istatistiksel olarak anlamlı değildi. Bu bir gözlemsel çalışma: soyanın nüksü azalttığını kanıtlamaz, ama
+          besin olarak soyanın nüksü artırmadığını gösteren rahatlatıcı bir sinyaldir
+          <sup><a href="#kaynak-9">[9]</a></sup> <Evidence level={3} />. Aynı güvence kapsül ve ekstrakt için
+          verilemez; bu analiz onları değerlendirmedi.
+        </p>
+        <p>
+          <strong>Rahim içi zarı.</strong> Cochrane derlemesi iki yıla kadar kullanımda endometriyum ya da vajinada
+          östrojen uyarımı göstermedi <sup><a href="#kaynak-2">[2]</a></sup>. Daha uzun bir çalışmada, rahmi olan 376
+          kadında beş yıl boyunca günde 150 mg soya izoflavonu verildi. Kanser saptanmadı. Ancak endometriyum
+          hiperplazisi (rahim iç zarında kalınlaşma) soya grubunda yüzde 3,37, plasebo grubunda yüzde 0 görüldü;
+          yazarlar uzun vadeli güvenliği sorguladı <sup><a href="#kaynak-10">[10]</a></sup>
+          <Evidence level={3} />. Uzun süreli ekstrakt düşünüyorsanız rahim iç zarının izlenmesini hekiminizle konuşun.
+        </p>
+        <p>
+          <strong>Tiroid.</strong> 14 çalışmayı değerlendiren derleme, tiroid hastalığı olmayan ve yeterli iyot alan
+          kişilerde soyanın tiroid işlevini bozduğuna dair az kanıt buldu. Hipotiroidi (tiroid yetersizliği) tedavisi
+          görenlerde ise soya, hormon ilacının emilimini azaltabilir ve gereken dozu artırabilir. Bu hastaların
+          soyadan tamamen kaçınması gerekmiyor; iyot alımının yeterli olması önemli <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={3} />.
+          İlacınızı soyalı öğünlerle nasıl zamanlayacağınızı hekiminize ya da eczacınıza sorun.
+        </p>
+        <RedFlagBox
+          title="Fitoestrojen Ekstraktı Başlamadan Önce Hekiminizle Konuşun"
+          intro="Besin olarak soya ile kapsül ya da ekstrakt aynı güvenlik sorusu değildir. Aşağıdakilerden biri varsa kararı tek başınıza vermeyin."
+          markers={[
+            'Meme kanseri, rahim kanseri veya östrojene duyarlı başka bir hastalık öykünüz varsa',
+            'Rahminiz yerindeyse ve ekstraktı uzun süre kullanmayı düşünüyorsanız',
+            'Tiroid ilacı kullanıyorsanız',
+            'Tamoksifen veya aromataz inhibitörü gibi bir meme kanseri ilacı kullanıyorsanız',
+            'Hormon tedavisi veya başka düzenli ilaçlar kullanıyorsanız',
+            'Menopoz sonrası kanama, tanı konmamış kasık ağrısı veya açıklanamayan yeni yakınmanız varsa',
+          ]}
+          footnote="Görüşmeye kullandığınız ilaç, takviye ve baharat ürünlerinin listesini götürün."
+        />
+
+        <h2 id="besin-ve-ekstrakt">Besin ile Ekstrakt Ayrı Karardır</h2>
+        <p>
+          Besin olarak soya ile kapsül arasındaki fark yalnızca miligram değildir.
+        </p>
+        <p>
+          Soyalı yiyecek bir bütündür: protein, lif ve izoflavon birlikte gelir. Menopoz dışında da beslenme düzenine
+          uyar. Güvenlik verisi de bu yönde daha rahatlatıcı (meme kanseri öyküsü olan kadınlarda bile)
+          <sup><a href="#kaynak-9">[9]</a></sup>. Ekstrakt ve tabletlerde izoflavon miktarı besinlerden yüksek olabilir;
+          uzun vadeli veri sınırlıdır <sup><a href="#kaynak-10">[10]</a></sup>.
+        </p>
+        <p>
+          Etikette ürünün ne kadar izoflavon içerdiğini aramak makul. Ürünün “işe yarayacağına” söz veren hiçbir
+          etiket olmadığını bilmek de makul. Keten tohumu için de benzer bir cümle kurabilirim: sofranızda lif ve
+          alışkanlık olarak yeri var; sıcak basması tedavisi olarak yeri kanıtlanmadı.
+        </p>
+
+        <h2 id="karar-olcutleri">Kararı Değiştiren Ölçütler</h2>
+        <p>
+          Bu soruyu duyduğumda önce şunu sorarım: Sıcak basması günlük yaşamınızı ne kadar bozuyor?
+        </p>
+        <p>
+          Yanıt “ara sıra rahatsız ediyor” ise soyalı bir beslenme düzenini denemek makul bir adım; bir ay boyunca
+          sıcak basması sayınızı not edin. Fark yoksa devam etmenin gerekçesi kalmaz. Plasebo etkisi güçlü olduğu için
+          bu notu tutmak, hissettiğiniz ile ölçtüğünüz arasındaki mesafeyi görmenize yardım eder.
+        </p>
+        <p>
+          Yanıt “uykumu bölüyor, işime yansıyor” ise fitoestrojen için beklemeyin. Bu noktada hormon tedavisi ve hormon
+          dışı seçenekler konuşulmalı. Hormon tedavisi, 2023 tarihli uzlaşı bildirisinde sıcak basmasının en etkili
+          tedavisi olmayı sürdürüyor <sup><a href="#kaynak-12">[12]</a></sup>. Bunu tek başıma bir karar gibi sunmuyorum;
+          kimin için uygun olduğuna yaşınız, menopozdan geçen süre ve öykünüz birlikte karar verir.
+        </p>
+        <p>
+          Meme kanseri öykünüz varsa sorunun yönü değişir: Besin olarak soya için sinyal rahatlatıcı; ekstrakt için
+          böyle bir veri yok. Bu durumda onkoloğunuzla konuşmadan ekstrakt başlamamanızı isterim.
+        </p>
+        <p>
+          Muayene odasında sık duyduğum bir cümle var: “Doğal olduğu için zararı olmaz, değil mi?” Doğal bir ürünün
+          zararı olabilir; zararsız olduğunu da etikete bakarak anlayamayız.
+        </p>
+
+        <h2 id="doktora-uc-soru">Görüşmeye Götürülecek Üç Soru</h2>
+        <p>
+          Randevuya sıcak basması günlüğünüzü ve kullandığınız ürünlerin listesini götürün. Üç soru yeter:
+        </p>
+        <ol>
+          <li>Benim öykümle ve ilaçlarımla fitoestrojen ekstraktı kullanmak uygun mu, yoksa yalnızca besin olarak mı kalsın?</li>
+          <li>Sıcak basmam için hormon tedavisi ve hormon dışı seçenekler arasında hangisi benim için daha uygun?</li>
+          <li>Ekstrakt kullanırsam hangi izlemeyi (örneğin rahim iç zarı için) ne sıklıkta yaptırmam gerekir?</li>
+        </ol>
+
+        <h2 id="kapanis">Rafa Dönerken</h2>
+        <p>
+          Mutfaktaki keten tohumu poşeti çorbaya, yoğurda ya da ekmeğe girebilir; lifli bir beslenme düzeninin güzel bir
+          parçasıdır. Ancak gece uyandıran bir sıcak basmasını tek başına gidereceğini düşünmeyin.
+        </p>
+        <p>
+          Fitoestrojenler küçük bir fark yaratabilir, çoğu kadında yaratmayabilir ve kime yarayacağını önceden
+          bilmiyoruz. Güvenlik tarafında besin olarak soya rahatlatıcı; ekstrakt ve kapsülde ise veri az, uzun vade
+          belirsiz. Karar günlüğünüzle, öykünüzle ve ilaçlarınızla birlikte verilir.
+        </p>
+
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol>
+          <li id="kaynak-1">Franco OH, Chowdhury R, Troup J ve ark. <em>Use of plant-based therapies and menopausal symptoms: a systematic review and meta-analysis.</em> JAMA. 2016;315(23):2554-2563. doi:10.1001/jama.2016.8012. <a href="https://pubmed.ncbi.nlm.nih.gov/27327802/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-2">Lethaby A, Marjoribanks J, Kronenberg F, Roberts H, Eden J, Brown J. <em>Phytoestrogens for menopausal vasomotor symptoms.</em> Cochrane Database Syst Rev. 2013;(12):CD001395. doi:10.1002/14651858.CD001395.pub4. <a href="https://pubmed.ncbi.nlm.nih.gov/24323914/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-3">Chen MN, Lin CC, Liu CF. <em>Efficacy of phytoestrogens for menopausal symptoms: a meta-analysis and systematic review.</em> Climacteric. 2015;18(2):260-269. doi:10.3109/13697137.2014.966241. <a href="https://pubmed.ncbi.nlm.nih.gov/25263312/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-4">Taku K, Melby MK, Kronenberg F, Kurzer MS, Messina M. <em>Extracted or synthesized soybean isoflavones reduce menopausal hot flash frequency and severity: systematic review and meta-analysis of randomized controlled trials.</em> Menopause. 2012;19(7):776-790. doi:10.1097/gme.0b013e3182410159. <a href="https://pubmed.ncbi.nlm.nih.gov/22433977/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-5">Pruthi S, Qin R, Terstreip SA ve ark. <em>A phase III, randomized, placebo-controlled, double-blind trial of flaxseed for the treatment of hot flashes: North Central Cancer Treatment Group N08C7.</em> Menopause. 2012;19(1):48-53. doi:10.1097/gme.0b013e318223b021. <a href="https://pubmed.ncbi.nlm.nih.gov/21900849/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-6">Levis S, Strickman-Stein N, Ganjei-Azar P, Xu P, Doerge DR, Krischer J. <em>Soy isoflavones in the prevention of menopausal bone loss and menopausal symptoms: a randomized, double-blind trial.</em> Arch Intern Med. 2011;171(15):1363-1369. doi:10.1001/archinternmed.2011.330. <a href="https://pubmed.ncbi.nlm.nih.gov/21824950/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-7">Najaf Najafi M, Ghazanfarpour M. <em>Effect of phytoestrogens on sexual function in menopausal women: a systematic review and meta-analysis.</em> Climacteric. 2018;21(5):437-445. doi:10.1080/13697137.2018.1472566. <a href="https://pubmed.ncbi.nlm.nih.gov/30156931/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-8">Gençtürk N, Bilgiç FŞ, Kaban HU. <em>The effect of soy isoflavones given to women in the climacteric period on menopausal symptoms and quality of life: systematic review and meta-analysis of randomized controlled trials.</em> Explore (NY). 2024;20(6):103012. doi:10.1016/j.explore.2024.05.010. <a href="https://pubmed.ncbi.nlm.nih.gov/38825560/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-9">Nechuta SJ, Caan BJ, Chen WY ve ark. <em>Soy food intake after diagnosis of breast cancer and survival: an in-depth analysis of combined evidence from cohort studies of US and Chinese women.</em> Am J Clin Nutr. 2012;96(1):123-132. doi:10.3945/ajcn.112.035972. <a href="https://pubmed.ncbi.nlm.nih.gov/22648714/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-10">Unfer V, Casini ML, Costabile L, Mignosa M, Gerli S, Di Renzo GC. <em>Endometrial effects of long-term treatment with phytoestrogens: a randomized, double-blind, placebo-controlled study.</em> Fertil Steril. 2004;82(1):145-148. doi:10.1016/j.fertnstert.2003.11.041. <a href="https://pubmed.ncbi.nlm.nih.gov/15237003/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-11">Messina M, Redmond G. <em>Effects of soy protein and soybean isoflavones on thyroid function in healthy adults and hypothyroid patients: a review of the relevant literature.</em> Thyroid. 2006;16(3):249-258. doi:10.1089/thy.2006.16.249. <a href="https://pubmed.ncbi.nlm.nih.gov/16571087/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-12">The 2023 nonhormone therapy position statement of The North American Menopause Society. Menopause. 2023;30(6):573-590. doi:10.1097/GME.0000000000002200. <a href="https://pubmed.ncbi.nlm.nih.gov/37252752/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sik-sorulanlar"
+        items={faqItems}
+        title="Dr. Aksoy'a sorular"
+        intro="Doç. Dr. Senai Aksoy, soya kapsülü, meme kanseri öyküsü, keten tohumu ile kırmızı yonca, equol ve hormon tedavisiyle birlikte kullanım sorularını yanıtlıyor."
+        class="mt-10"
+      />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/bilimsel-pencere/hormonlarin-bilimi/estrogen-biyolojisi-saglik/',
+          '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
+          '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
+        ]}
+      />
+
+      <ArticleEditorNote title="Bağımsız Tıbbi İnceleme">
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Fitoestrojenle ilgili temel sorun, bitkisel kökenin güvenlik ya da etkinlik ölçüsü gibi sunulmasıdır. Bu
+            yazı besin, ekstrakt ve kapsülü ayrı sorular olarak ele alıyor.
+          </p>
+          <p>
+            <strong class="text-primary">Klinik not:</strong> Sıcak basmasında etki ortalamada küçüktür ve çalışmalar
+            arasında tutarsızdır. Hormon tedavisinin yerine geçecek bir seçenek olarak sunulmamıştır.
+          </p>
+          <p>
+            <strong class="text-primary">Güvenlik notu:</strong> Besin olarak soya için meme kanseri öyküsü olan
+            kadınlarda gözlemsel veri rahatlatıcıdır. Ekstrakt ve tabletler için aynı güvence yoktur; rahmi olan
+            kadınlarda beş yıllık bir çalışmada endometriyum hiperplazisi sıklığı artmıştır.
+          </p>
+          <p>
+            <strong class="text-primary">Pratik not:</strong> Belirti günlüğü, plasebo etkisinin güçlü olduğu bir
+            alanda hissedilen ile ölçülen arasındaki farkı görmeye yardım eder.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 27 Ekim 2026
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için
+          sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
