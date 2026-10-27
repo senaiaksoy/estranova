@@ -22,12 +22,14 @@ const hero = submenuHeroByRoute['/bilimsel-pencere/hucreler-ve-yaslanma/']!;
 
 const tocEntries = [
   { id: 'telomer-temel', label: 'Telomerler ve Hücresel Yaşlanma — Kromozom Uçlarındaki Sayaç' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveni — Hücreden Kliniğe Altı Basamak' },
   { id: 'epitalon-nedir', label: 'Epitalon Nedir, Pineal Bez Bağlantısı Nereden Geliyor?' },
   { id: 'iki-mekanizma', label: 'Yeni Veriler — Normal Hücre ve Kanser Hücresi Ayrımı' },
   { id: 'guvenlik-profili', label: 'ALT ve Güvenlik Sorusu' },
   { id: 'kanit-duzeyi', label: 'Mevcut Kanıt Düzeyi — Laboratuvardan İnsana Uzun Yol' },
   { id: 'pratik-sinirlar', label: 'Enjeksiyon Ürünleri ve Ruhsat Sınırları' },
   { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
   { id: 'kapanis', label: 'Kapanış' },
   { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
 ];
@@ -43,7 +45,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '8 Mayıs 2026',
-  modifiedDate: '12 Ekim 2026',
+  modifiedDate: '27 Ekim 2026',
   image: '/images/library/editorial/bp-nad-plus.webp',
   pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/epitalon-telomer-yaslanma/',
   articleSection: 'Bilimsel Pencere',
@@ -76,8 +78,8 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="8 Mayıs 2026"
-        lastUpdated="12 Ekim 2026"
-        readingMinutes={10}
+        lastUpdated="27 Ekim 2026"
+        readingMinutes={12}
         imageSrc="/images/library/editorial/epitalon-telomer-yaslanma-byline.webp"
         imageAlt="Kış bahçesinde hasır koltukta çay bardağıyla gülümseyen kadın"
       />
@@ -132,6 +134,24 @@ const articleSchemas = buildArticleSchemas({
           <Evidence level={2} /> <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>
         </p>
 
+        <h2 id="kanit-merdiveni">Kanıt Merdiveni — Hücreden Kliniğe Altı Basamak</h2>
+        <p>
+          Epitalonda kanıt en altta kalabalık; yukarı çıktıkça tek tek sayılabilecek kadar azalıyor.
+        </p>
+        <ol>
+          <li><strong>Hücre:</strong> Telomer ve telomeraz biyolojisi iyi biliniyor <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Epitalonun insan hücre hatlarında telomerleri uzattığı bildirildi <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>.</li>
+          <li><strong>Hayvan:</strong> Yaşam süresi ve biyolojik ritim üzerine çalışmalar var <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>. Standart koşullarda ilaçları sınayan büyük bir ömür programında epitalon için kayıt bulamadık; bu basamak bilinmiyor.</li>
+          <li><strong>İnsanda biyobelirteç:</strong> FDA'nın dosyası, 40–50 yaşındaki 75 kadında 20 gün dil altı uygulanan bir peptidin idrardaki melatonin metabolitini 1,7 kat artırdığı randomize bir çalışmayı özetliyor. Uyku ve güvenlik ölçülmedi <Evidence level={2} /> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>.</li>
+          <li><strong>İnsanda işlev:</strong> Uyku, yaşlanma belirtileri ya da menopoz için yeterli güçte randomize çalışma yok <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>.</li>
+          <li><strong>İnsanda güvenlik:</strong> FDA, insanda güvenliği inceleyen bir klinik çalışma bulamadı. Yan etki bildirimi olmaması bir güvence sayılmaz <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>.</li>
+          <li><strong>Ömür ve hastalık:</strong> İnsanda veri yok.</li>
+        </ol>
+        <p>
+          Bu yazı alttaki basamaklarda, yani telomer biyolojisinde ve hücre verisinde duruyor. Dolaşan iddiaların tek
+          tek karşılığını <a href="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/#iddialar" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">Peptidler Menopozda Gerçekten Ne Vaat Ediyor?</a>
+          yazısındaki tabloda bulabilirsiniz.
+        </p>
+
         <h2 id="epitalon-nedir">Epitalon Nedir, Pineal Bez Bağlantısı Nereden Geliyor?</h2>
         <p>
           Adının pineal bezle birlikte anılması, Epitalon'un vücuttan elde edilen doğal bir hormon
@@ -149,7 +169,7 @@ const articleSchemas = buildArticleSchemas({
           Hayvan deneylerinde yaşam süresi ve biyolojik ritimlerle ilgili etkiler araştırıldı;
           bulgular kullanılan maddeye ve deney modeline göre değişiyor. Bir hayvan deneyindeki
           sonuçtan sizin yaşam sürenize ya da menopoz yaşınıza dair bir hesap çıkmaz.
-          <Evidence level={1} /> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
+          <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>
         </p>
 
         <h2 id="iki-mekanizma">Yeni Veriler — Normal Hücre ve Kanser Hücresi Ayrımı</h2>
@@ -162,14 +182,14 @@ const articleSchemas = buildArticleSchemas({
           Normal hücre modeli olarak bağ dokusu hücreleri (IBR.3) ve meme epitel hücreleri (HMEC)
           kullanıldı. Üç haftalık uygulamadan sonra bu hücrelerde telomerler uzadı, telomeraz
           aktivitesi arttı; telomerazın katalitik alt birimini kodlayan <em>hTERT</em> geninin
-          ifadesi de yükseldi. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
+          ifadesi de yükseldi. <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
           21NT ve BT474 meme kanseri hücre hatlarında ise dört günlük uygulama sonrasında
           telomerler uzadı. Bu hücrelerde <em>hTERT</em> ifadesi artsa da telomeraz aktivitesi anlamlı
           biçimde artmadı; bunun yerine telomerazdan bağımsız <strong>alternatif telomer uzaması (ALT)</strong> yoluna ait
           işaretler (C-halkaları ve PML cisimcikleri) arttı. Tedavi edilmemiş kanser hücrelerinde de PML
-          cisimcikleri vardı; yani Epitalon ALT'yi başlatmadı, var olanı artırdı. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
+          cisimcikleri vardı; yani Epitalon ALT'yi başlatmadı, var olanı artırdı. <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
           Bu deneyde kimseye tedavi verilmedi; ölçülen şey, hücrelerin telomerlerini nasıl
@@ -185,7 +205,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Çalışmada C-halkası testiyle ölçülen ALT işareti 21NT hücrelerinde yaklaşık on kat, BT474
           hücrelerinde yaklaşık üç kat arttı; yazarlar bu testin artışı olduğundan büyük
-          gösterebileceğini de not ediyor. Normal hücre modellerinde anlamlı bir ALT artışı saptanmadı. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
+          gösterebileceğini de not ediyor. Normal hücre modellerinde anlamlı bir ALT artışı saptanmadı. <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
           Bir hücre deneyi, Epitalon'un insanlarda kanser riskini artırdığını gösteremez, bu riski dışlayamaz
@@ -202,7 +222,7 @@ const articleSchemas = buildArticleSchemas({
           Buradaki deneyler düz kültür kaplarında, yani iki boyutlu hücre kültürlerinde yapıldı.
           Kaptaki hücre maddeyle doğrudan karşılaşır; vücutta ise madde önce emilir, dağılır ve
           parçalanır. Üç haftalık bir hücre deneyinden insanlar için bir kullanım süresi de
-          çıkarılamaz. <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
+          çıkarılamaz. <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>
         </p>
         <p>
           Bir ilaç düzenleme kurumunun Temmuz 2026'daki danışma kurulu toplantısı için hazırladığı
@@ -231,9 +251,24 @@ const articleSchemas = buildArticleSchemas({
           <Evidence level={2} /> <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup> <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>
         </p>
         <p>
-          Türkiye'de satılan bir ürünün güncel ruhsat durumunu bu yazıdan çıkarmayın; ürün tanıtımı ile
-          resmî ruhsat kaydı ayrı şeyler. “Araştırma amaçlıdır” etiketi de yalnızca araştırma
-          kullanımını tanımlar, insanda tedavi amaçlı kullanım izni vermez.
+          FDA, 15 Nisan 2026'da epitalonu başka peptidlerle birlikte “ciddi güvenlik endişesi” listesinden
+          çıkardı. Gerekçe, başvuruyu yapanların adaylıklarını geri çekmesiydi; yeni bir güvenlik verisi
+          değildi. Bu adım epitalonu eczanede hazırlanabilir kılmadı <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>.
+          23–24 Temmuz 2026'daki danışma kurulu toplantısında FDA personeli, görüşülen yedi maddenin hiçbirinin
+          listeye alınmamasını önerdi <sup><a href="#kaynak-15" aria-label="Kaynak 15">[15]</a></sup>. Kurul ise epitalon dahil bazı
+          maddeler için çoğunlukla, bağlayıcı olmayan bir oyla listeye alınmasını önerdi; görüşülen kullanım uykusuzluktu
+          <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a><a href="#kaynak-17" aria-label="Kaynak 17">[17]</a></sup>.
+          26 Ekim 2026 itibarıyla nihai bir FDA kararı bulamadık. Peptidlerin ABD'deki genel sürecini
+          <a href="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/#guvenlik-standardizasyon" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">peptid yazısında</a>
+          ayrıntılı anlattık.
+        </p>
+        <p>
+          Türkiye'de TİTCK'nin 16 Ekim 2026 tarihli listesinde epitalon etkin maddeli ruhsatlı bir ürün yok
+          <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Tarım ve Orman Bakanlığı'nın 21 Ekim 2026 tarihli takviye
+          kısıtlı maddeler listesinde de epitalon geçmiyor <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>; listede
+          olmaması, takviye olarak kullanımına izin verildiği anlamına gelmiyor. Ürün tanıtımı ile resmî ruhsat kaydı ayrı
+          şeyler. “Araştırma amaçlıdır” etiketi de yalnızca araştırma kullanımını tanımlar, insanda tedavi amaçlı
+          kullanım izni vermez.
         </p>
         <p>
           Deneysel bir ürün kullanıyorsanız ya da kullanmayı düşünüyorsanız, adını diğer ilaç ve
@@ -416,6 +451,20 @@ const articleSchemas = buildArticleSchemas({
           gelişen bir alanda önemli.</strong>
         </p>
 
+        <h2 id="bilinmeyenler">Henüz bilmediklerimiz</h2>
+        <p>
+          En büyük boşluk, epitalonun insanda uzun süre kullanıldığında ne yaptığı. Bunu yanıtlayacak bir çalışma da
+          görünürde yok.
+        </p>
+        <p>
+          ClinicalTrials.gov'da epitalonu inceleyen kayıtlı bir çalışma bulamadık; menopoz ya da menopoz sonrası koşuluyla da
+          kayıt yok (27 Ekim 2026) <sup><a href="#kaynak-14" aria-label="Kaynak 14">[14]</a></sup>. 2026 tarihli bir derleme tabloyu
+          şöyle özetliyor: epitalon biyolojik olarak etkin, klinik olarak kanıtlanmamış; farmakokinetik, doz ve uzun dönem
+          güvenlik verisi yetersiz <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>. ALT sorusunun, yani epitalonun kanser
+          hücrelerinde telomer koruma yolunu uyarmasının insanda bir anlam taşıyıp taşımadığı da açık. FDA'nın nihai kararı ise
+          bu alanın en yakın gelişmesi. Yeni veri geldiğinde yazıyı güncelleyeceğiz.
+        </p>
+
         <h2 id="kapanis">Kapanış</h2>
         <p>
           Epitalon'un hikâyesi bugün bir laboratuvar hikâyesi: hücrelerde ölçülebilir ve ilginç
@@ -431,9 +480,10 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
         <p>
           Gövdedeki numaralı atıflar aşağıdaki kaynaklara bağlanıyor. Kanıt taraması 12 Ekim 2026'da
-          yapıldı; temel hücre çalışmasının 15 Kasım 2025 tarihli düzeltmesi de okundu (yalnızca
-          şekiller değişti, sonuçlar aynı kaldı).
+          yapıldı, 26–27 Ekim 2026'da güncellendi; temel hücre çalışmasının 15 Kasım 2025 tarihli düzeltmesi de okundu (düzeltme,
+          Şekil 1–3'ün yanlış sürümlerinin değiştirildiğini bildiriyor).
         </p>
+        <p>27 Ekim 2026: Kanıt merdiveni ve "Henüz bilmediklerimiz" bölümü eklendi; FDA süreci, Türkiye'deki ruhsat durumu ve kayıtlı çalışmalar güncellendi; hücre ve hayvan verisine dayanan kanıt etiketleri kaldırıldı.</p>
         <ol>
           <li id="kaynak-1">National Human Genome Research Institute.
             <a href="https://www.genome.gov/genetics-glossary/Telomere" target="_blank" rel="noopener noreferrer">Telomerlerin yapısı ve görevi</a>.
@@ -451,6 +501,7 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li id="kaynak-5">FDA.
             <a href="https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks" target="_blank" rel="noopener noreferrer">Bileşik hazırlamada güvenlik riski taşıyabilecek maddeler; Epitalon girdisi</a>.
+            Sayfa içeriği 22 Nisan 2026; erişim 26 Ekim 2026. Listeden çıkarma bir güvenlik değerlendirmesi değil, başvuruların geri çekilmesine dayanıyor.
           </li>
           <li id="kaynak-6">Lai TP, Wright WE, Shay JW. Philosophical Transactions of the Royal Society B. 2018;373:20160451.
             <a href="https://doi.org/10.1098/rstb.2016.0451" target="_blank" rel="noopener noreferrer">Telomer uzunluğu ölçüm yöntemlerinin karşılaştırılması</a>.
@@ -467,6 +518,27 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-10">The Menopause Society.
             <a href="https://menopause.org/patient-education/menopause-glossary" target="_blank" rel="noopener noreferrer">Menopoz sözlüğü: menopozun tanımı ve yumurtalık işlevi</a>.
           </li>
+          <li id="kaynak-11">Jain A ve ark. International Journal of Molecular Sciences. 2026;27(19):8922. PMID 42884164.
+            <a href="https://doi.org/10.3390/ijms27198922" target="_blank" rel="noopener noreferrer">Epitalon ve epithalamin: mekanizma, klinik öncesi ve klinik kanıtın anlatı derlemesi</a>.
+          </li>
+          <li id="kaynak-12">T.C. Sağlık Bakanlığı Türkiye İlaç ve Tıbbi Cihaz Kurumu. Ruhsatlı Beşeri Tıbbi Ürünler Listesi, 16 Ekim 2026 (etkin madde sütununda tarandı).
+            <a href="https://www.titck.gov.tr/dinamikmodul/85" target="_blank" rel="noopener noreferrer">TİTCK sayfası</a>.
+          </li>
+          <li id="kaynak-13">T.C. Tarım ve Orman Bakanlığı. Takviye Edici Gıdalar Kısıtlı Maddeler Listesi (son güncelleme: 21 Ekim 2026).
+            <a href="https://www.tarimorman.gov.tr/Konu/1116/takviye-edici-gida-kisitli-maddeler-listesi" target="_blank" rel="noopener noreferrer">Bakanlık sayfası</a>.
+          </li>
+          <li id="kaynak-14">ClinicalTrials.gov. Epitalon, epithalon, epithalamin ve Ala-Glu-Asp-Gly için müdahale araması, 27 Ekim 2026 (epitalonu inceleyen kayıt bulunamadı).
+            <a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.
+          </li>
+          <li id="kaynak-15">FDA. 23–24 Temmuz 2026 eczane hazırlama danışma kurulu bilgilendirme dosyası (yedi madde).
+            <a href="https://www.fda.gov/media/193342/download" target="_blank" rel="noopener noreferrer">FDA bilgilendirme belgesi</a>.
+          </li>
+          <li id="kaynak-16">Regulatory Focus (RAPS). FDA advisory committee backs two controversial peptides. 23 Temmuz 2026. Haber kaynağı; FDA tutanağı değildir.
+            <a href="https://www.raps.org/resource/fda-advisory-committee-backs-two-controversial-peptides.html" target="_blank" rel="noopener noreferrer">Haber</a>.
+          </li>
+          <li id="kaynak-17">Regulatory Focus (RAPS). FDA advisory committee backs two more peptides, rejects one for compounding list. 24 Temmuz 2026. Haber kaynağı; FDA tutanağı değildir.
+            <a href="https://www.raps.org/resource/fda-advisory-committee-backs-two-more-peptides-rejects-one-for-compounding-list.html" target="_blank" rel="noopener noreferrer">Haber</a>.
+          </li>
         </ol>
       </ArticleProsePanel>
 
@@ -474,6 +546,7 @@ const articleSchemas = buildArticleSchemas({
           class="mt-14"
           paths={[
             '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
+            '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
             '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
             '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
             '/zamansiz-yasam/d-vitamini-rehberi/',
