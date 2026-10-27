@@ -75,11 +75,11 @@ export const subHubs: SubHubConfig[] = [
     path: '/zamansiz-yasam/deneysel/',
     siteTitle: 'Deneysel Yaklaşımlar - Estranova',
     description:
-      'Henüz araştırma aşamasındaki yaklaşımlar: insanlarda ne kadar denendikleri ve kanıtın hangi düzeyde olduğu.',
+      'Bir takviye, peptid ya da yeni yaklaşım için “almalı mıyım?” sorusu: kanıt düzeyi, güvenlik ve hekime sorulacaklar. Mekanizma yazıları Bilimsel Pencere’de.',
     heroEyebrow: 'Zamansız Yaşam · Deneysel',
     heroTitle: 'Deneysel Yaklaşımlar',
     heroLede:
-      '“Deneysel” etiketi, bir yaklaşımın henüz herkes için standart öneri olmadığını hatırlatır. Umut verici bir laboratuvar bulgusuyla insanda gösterilmiş bir yarar arasındaki mesafe çoğu zaman sanıldığından uzundur.',
+      '“Deneysel” etiketi, bir yaklaşımın henüz herkes için standart öneri olmadığını hatırlatır. Bu bölümdeki yazılar tek bir soruya bakar: bunu kullanmak sizin için mantıklı mı? Kanıtı, riski ve hekime götürülecek soruları ayırıyoruz. Arkasındaki biyoloji için Bilimsel Pencere’ye geçebilirsiniz.',
   },
   {
     path: '/zamansiz-yasam/non-invaziv/',
@@ -165,11 +165,11 @@ export const subHubs: SubHubConfig[] = [
     path: '/bilimsel-pencere/hucreler-ve-yaslanma/',
     siteTitle: 'Hücreler ve Yaşlanma - Bilimsel Pencere - Estranova',
     description:
-      'NAD+, mitokondri, senesans ve telomer: hücresel yaşlanma biyolojisi üzerine derlemeler ve erken evre insan araştırmalarında kanıtın düzeyi.',
+      'NAD+, mitokondri, senesans ve telomer: hücresel yaşlanma biyolojisi ve erken evre araştırmaların nasıl okunacağı. Ürün kararı için Deneysel Yaklaşımlar’a bakın.',
     heroEyebrow: 'Onarımın yavaşladığı yer',
     heroTitle: 'Hücreler ve Yaşlanma',
     heroLede:
-      'Hücresel yaşlanma, son 20 yılda biyolojinin en hızlı büyüyen alanlarından biri oldu. Hangi bulgu hâlâ erken evrede, hangi iddia henüz vaat düzeyinde, hangisi gerçekten kanıta dayanıyor?',
+      'Hücresel yaşlanma, son 20 yılda biyolojinin en hızlı büyüyen alanlarından biri oldu. Bu bölüm bir bulgunun hücrede ne anlama geldiğini ve laboratuvardan insana ne kadar yol kaldığını anlatır; ürün kararı vermez.',
   },
   {
     path: '/bilimsel-pencere/yeni-arastirmalar/',

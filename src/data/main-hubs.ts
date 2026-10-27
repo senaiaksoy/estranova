@@ -52,7 +52,7 @@ export const mainHubs: MainHubConfig[] = [
     path: '/bilimsel-pencere/',
     siteTitle: 'Bilimsel Pencere - Estranova',
     description:
-      'Uzman görüşleri, güncel araştırma özetleri ve mitlerin bilimle karşılaştırılması. Tıbbi veriyi erişilebilir bir dille sunarız.',
+      'Hormonların biyolojisi, hücresel yaşlanma ve yeni araştırmalar: bir bulgunun nasıl çalıştığı ve çalışmaların nasıl okunacağı. Ürün ve takviye kararları Zamansız Yaşam’da.',
     heroEyebrow: 'Kategori',
     heroTitle: 'Bilimsel Pencere',
     heroLede:
