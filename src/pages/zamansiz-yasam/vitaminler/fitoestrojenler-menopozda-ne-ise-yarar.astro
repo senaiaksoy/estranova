@@ -16,6 +16,8 @@ import ArticleSummary from '../../../components/site/ArticleSummary.astro';
 import { submenuHeroByRoute } from '../../../data/submenu-heroes';
 import Evidence from '../../../components/site/Evidence.astro';
 import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { articleFaqs } from '../../../data/article-faqs';
 import { buildArticleSchemas } from '../../../utils/article-schema';
 import { resolveSiteUrl } from '../../../utils/seo';
 
@@ -33,6 +35,7 @@ const tocEntries = [
   { id: 'doktora-uc-soru', label: 'Görüşmeye Üç Soru' },
   { id: 'kapanis', label: 'Kapanış' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
 ];
 
 const siteUrl = resolveSiteUrl(Astro.site);
@@ -40,6 +43,7 @@ const articleTitle = 'Fitoestrojenler Menopozda Ne İşe Yarar?';
 const articleImage = '/images/library/editorial/zy-fitoestrojenler-menopoz.webp';
 const articleDescription =
   'Soya, kırmızı yonca ve keten tohumu sıcak basmasında ne kadar işe yarıyor? Etki küçük ve tutarsız; meme, rahim ve tiroid soruları ayrı bir güvenlik başlığı.';
+const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -62,7 +66,7 @@ const articleSchemas = buildArticleSchemas({
     'bitkisel östrojen',
     'takviye güvenliği',
   ],
-  faqItems: [],
+  faqItems,
   siteUrl,
 });
 ---
@@ -360,6 +364,14 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-12">The 2023 nonhormone therapy position statement of The North American Menopause Society. Menopause. 2023;30(6):573-590. doi:10.1097/GME.0000000000002200. <a href="https://pubmed.ncbi.nlm.nih.gov/37252752/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
         </ol>
       </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sik-sorulanlar"
+        items={faqItems}
+        title="Dr. Aksoy'a sorular"
+        intro="Doç. Dr. Senai Aksoy, soya kapsülü, meme kanseri öyküsü, keten tohumu ile kırmızı yonca, equol ve hormon tedavisiyle birlikte kullanım sorularını yanıtlıyor."
+        class="mt-10"
+      />
 
       <RelatedReadings
         class="mt-14"
