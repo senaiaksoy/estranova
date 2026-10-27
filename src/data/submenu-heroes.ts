@@ -437,6 +437,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/epitalon-telomer-yaslanma.webp',
     alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
   },
+  '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/': {
+    src: '/images/library/editorial/metformin-uzun-yasam-etiket-disi.webp',
+    alt: 'Pencere ışığında masada defter, kalem ve su bardağının yanında uzaklara bakan 50 yaş civarı bir kadın; metformin ve uzun yaşam yazısı için kart görseli, yapay zekâ ile üretilmiş temsili görsel',
+  },
   '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/': {
     src: '/images/library/editorial/ghk-cu-menopoz-cilt-card.webp',
     alt: 'Aydınlık tekstil atölyesinde transparan kumaş ve bakır iplikleri inceleyen olgun kadın; GHK-Cu ve menopoz cildi yazısı için kart görseli',

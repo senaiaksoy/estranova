@@ -1,0 +1,561 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
+const articleTitle = 'Metformin Uzun Yaşam İçin Kullanılır mı? Diyabeti Olmayanlarda Etiket Dışı Kullanım';
+const seoTitle = 'Metformin Uzun Yaşam İçin Kullanılır mı?';
+const articleDescription =
+  'Metformin tip 2 diyabet ilacıdır; uzun yaşam için kullanımı etiket dışıdır. Diyabeti olmayanlarda ömür verisi yok, egzersizle kas kazanımı azalabiliyor, B12 ve böbrek izlenmeli.';
+const publishedDate = '27 Ekim 2026';
+const readingMinutes = 14;
+
+const tocEntries = [
+  { id: 'ayni-kutu', label: 'Aynı Kutu, İki Soru' },
+  { id: 'neden-konusuluyor', label: 'Neden Konuşuluyor' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveni' },
+  { id: 'egzersiz', label: 'Egzersiz Yapanlar İçin' },
+  { id: 'degerlendirme', label: 'Beş Eksende Değerlendirme' },
+  { id: 'iddialar', label: 'Dolaşan İddialar' },
+  { id: 'riskler', label: 'Etiket Dışı Kullanımın Riskleri' },
+  { id: 'devam-eden', label: 'Devam Eden Çalışmalar' },
+  { id: 'menopoz', label: 'Menopoz ve 40 Sonrası' },
+  { id: 'hekimle', label: 'Hekimle Konuşulacaklar' },
+  { id: 'guclu-yollar', label: 'Kanıtı Daha Güçlü Yollar' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
+  publishedDate,
+  pathname,
+  articleSection: 'Zamansız Yaşam · Deneysel',
+  sectionPath: '/zamansiz-yasam/',
+  image: hero.src.startsWith('http') ? hero.src : `${siteUrl.replace(/\/$/, '')}${hero.src}`,
+  keywords: [
+    'metformin',
+    'uzun yaşam',
+    'etiket dışı kullanım',
+    'yaşlanma',
+    'menopoz',
+    'kanıt düzeyi',
+    'B12 eksikliği',
+    'direnç egzersizi',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image={hero.src}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Deneysel"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        articleType="clinical-guide"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc="/images/library/editorial/metformin-uzun-yasam-etiket-disi-byline.webp"
+        imageAlt="Sabah ışığında çalışma masasında not defteri ve su bardağıyla düşünceli duran 50 yaş civarı bir kadın; yapay zekâ ile üretilmiş temsili görsel"
+        imagePosition="center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Metformin, tip 2 diyabet için onlarca yıldır kullanılan ve güvenlik kaydı geniş bir ilaçtır. Diyabeti olmayan
+          birinde uzun yaşam için kullanılması etiket dışıdır: bu amaçla ruhsatı yoktur ve ömür ya da hastalık
+          sonlanımlı bir insan çalışması sonuçlanmış değildir. Diyabetlilerde gözlenen sağkalım avantajı umut vericidir
+          ama gözlemseldir <Evidence level={2} />. Direnç egzersizi yapan sağlıklı yaşlılarda tek randomize çalışma,
+          metforminin kas kazanımını azalttığını gösterdi <Evidence level={3} />. Uzun süre kullananlarda B12 eksikliği
+          ve böbrek işlevi izlenmelidir. Karar, muayene ve tahlille birlikte hekimle verilir.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="ayni-kutu">Aynı kutu, iki ayrı soru</h2>
+        <p>
+          Eczanede aynı kutuyu iki kişi alabilir. Biri şekerini düşürmek için, öteki yaşlanmayı yavaşlatmak için. Kutu
+          aynı. Soru aynı değil.
+        </p>
+        <p>
+          Muayene odasında bu soruyu, ayrıntıları değişse de, sık duyuyorum: "Diyabetim yok ama metformin kullanmak
+          istiyorum. Uzun yaşam için." İnternette okunan bir yazı, bir podcast bölümü ya da bir arkadaşın anlattığı şey
+          çoğu zaman bu sorunun arkasındadır. Merak etmenizde yanlış bir şey yok. Hatta iyi bir işaret: sağlığınızla
+          ilgileniyorsunuz.
+        </p>
+        <p>
+          İlacın adı ve etiketi bu soruda iki ayrı şeyi karıştırıyor. Birincisi, ilacın tanımlı bir hastalıkta
+          çalıştığının gösterilmiş olması. İkincisi, o ilacın hastalığı olmayan birinde ömrü ya da sağlıklı yılları
+          uzattığının gösterilmesi. Metformin için birincisi var. İkincisi henüz yok.
+        </p>
+        <p>
+          Önce şunu söyleyeyim: bu yazıda sizi korkutmak ya da ilacı küçümsemek gibi bir niyetim yok. Amacım, "alsam
+          mı?" sorusunun hangi sorulara bölündüğünü göstermek.
+        </p>
+        <p>
+          Etiket dışı kullanım ne demek? Bir ilacın ruhsatında yazılmayan bir amaçla, bir hekimin sorumluluğuyla
+          yazılması. Hekimler bunu kimi zaman yapar, çünkü kanıt biriktikçe ruhsat metinleri geride kalabilir. Ama
+          "yapılabiliyor" ile "kanıtlandı" aynı cümle değildir.
+        </p>
+
+        <h2 id="neden-konusuluyor">Metformin neden bu kadar konuşuluyor</h2>
+        <p>
+          Yaşlanma araştırmacılarının metformine bakmasının sebebi ilacın reklamı değil, dosyasının kalınlığı.
+        </p>
+        <p>
+          Metformin tip 2 diyabette ilk seçenek ilaçlardan biri. Bir derlemeye göre dünyada her gün yaklaşık 150 milyon
+          kişi kullanıyor <Evidence level={3} /> <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>. Bu kadar geniş kullanım, yan etkilerin iyi tanınması demek. Başka
+          bir deyişle bu ilacın karanlık köşeleri çoğu yeni molekülden daha az.
+        </p>
+        <p>
+          Gündeme gelişi de buradan: diyabetli kullanıcılarda kanser, kalp-damar hastalığı ve bilişsel gerileme gibi
+          yaşa bağlı sorunlarda daha az olay gözlendiğine dair çalışmalar yayımlandı <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>. Bunlardan biri, Birleşik
+          Krallık kayıtlarından 78 binden fazla metformin kullanıcısını ve 90 binden fazla eşleştirilmiş diyabeti
+          olmayan kişiyi karşılaştırdı. Metformin ile başlanan diyabetlilerin sağkalımı, eşleştirilmiş diyabetsizlerden
+          daha uzundu <Evidence level={2} /> <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>.
+        </p>
+        <p>
+          Bu bulgu insanın gözünü açıyor. Ama yazarlar dahil kimse "kanıtlandı" demiyor. Çünkü ilaç kullananları
+          kullanmayanlarla gözlemle karşılaştırdığınızda, ilaç dışındaki farklar (kime hangi ilacın yazıldığı, kimin
+          daha düzenli takip edildiği) sonucu etkileyebilir. Bunu gözlemsel verinin doğal sınırı olarak düşünün.
+        </p>
+
+        <h2 id="kanit-merdiveni">Kanıt merdiveni: hücreden sağlıklı yetişkine</h2>
+        <p>
+          Metformin merdivenin ortasına kadar çıkmış. Yukarıdaki basamaklar boş değil, ama bazılarına henüz kimse
+          ayak basmadı.
+        </p>
+        <ol>
+          <li><strong>Mekanizma:</strong> Metformin, hücrede enerji sensörü olan AMPK'yı harekete geçirir ve mTOR denen büyüme yolağını yavaşlatır <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>. Biyolojik olarak mantıklı; ama klinik faydanın büyük kısmı insülin duyarlılığı ve kan şekeri etkisinden gelebilir <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>. Derlemeler, metforminin yaşlanmadaki etki mekanizmalarının büyük ölçüde bilinmediğini ve ilacı kullanan herkesin aynı yararı görmediğini de vurgular <sup><a href="#kaynak-19" aria-label="Kaynak 19">[19]</a></sup>.</li>
+          <li><strong>Hayvanda ömür:</strong> Fare ömrünü bağımsız merkezlerde sınayan ulusal programda metformin tek başına ömrü anlamlı uzatmadı <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>. Sonraki bir yeniden analiz, erken ölümlere duyarlı bir testle, metforminin yalnızca erkek farelerde sağkalımı artırdığını bildirdi <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>. Solucan türlerinde sonuç genetik zemine göre değişti: bazı türde ömür uzadı, bazısında etkisiz kaldı, bazısında kısaldı <sup><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>. Erkek maymunlarla yapılan 40 aylık bir çalışmada ise metformin, ölçülen yaşlanma göstergelerini ve beyin yaşı göstergelerini yavaşlattı; bu bir ömür sonucu değil, tek cinsiyette bir hayvan çalışmasıdır <sup><a href="#kaynak-18" aria-label="Kaynak 18">[18]</a></sup>.</li>
+          <li><strong>İnsanda biyobelirteç:</strong> Yaklaşık 70 yaşındaki 14 kişiyle yapılan çapraz tasarımlı bir çalışmada, 6 hafta metformin ve 6 hafta plasebo sonrası kas ve yağ dokusunda yüzlerce genin ifadesi değişti; bunlar arasında DNA onarımı ve mTORC1 gibi yaşlanmayla ilişkili yolaklar da vardı <Evidence level={2} /> <sup><a href="#kaynak-15" aria-label="Kaynak 15">[15]</a></sup>. Bunlar yerine geçen göstergedir, ömür değil; çalışma küçük ve kısa.</li>
+          <li><strong>İnsanda işlev:</strong> Sağlıklı 65 yaş üstünde direnç egzersizine eklenen metformin kas büyümesini azalttı <Evidence level={3} /> <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Ayrıntısı bir sonraki bölümde.</li>
+          <li><strong>İnsanda güvenlik:</strong> Diyabetlilerde geniş ve uzun. Diyabeti olmayan sağlıklıda uzun süreli veri çok daha dar. Bu fark yazının en önemli cümlelerinden biri.</li>
+          <li><strong>Sert sonlanım (ömür, hastalık):</strong> Diyabeti olmayanlarda sonuçlanmış bir çalışma yok. TAME adlı büyük çalışma 65-79 yaş arası 3.000'den fazla kişiyi altı yıl izleyecek şekilde tasarlandı <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a><a href="#kaynak-17" aria-label="Kaynak 17">[17]</a></sup>. Bu yazıyı hazırlarken çalışmanın başladığına ya da finansmanın tamamlandığına dair güncel bir duyuru doğrulayamadık; sonuç beklemek için erken.</li>
+        </ol>
+
+        <h2 id="egzersiz">Egzersiz yapanlar için beklenmedik bir bulgu</h2>
+        <p>
+          Kası korumak istiyorsanız, bu bölümü bir kez daha okuyun.
+        </p>
+        <p>
+          Kas kaybı, 40 sonrasında çoğumuzun sessizce yaşadığı bir konu. Direnç egzersizi bu kaybı yavaşlatan kanıtı en sağlam olan yol. Araştırmacılar şunu denedi: metformin, kaslardaki iltihabı azaltarak egzersizin etkisini
+          artırabilir mi?
+        </p>
+        <p>
+          MASTERS adlı çalışmada 65 yaş üstü 94 sağlıklı kişi, 14 hafta süren denetimli direnç egzersizi programına
+          katıldı. Yarısı günde 1.700 mg metformin, yarısı plasebo aldı. Sonuç beklenenin tersiydi: plasebo grubu daha
+          fazla yağsız kütle ve uyluk kası kazandı. Kuvvet kazanımında da metformin lehine değil, aleyhine bir eğilim
+          vardı; bu fark istatistiksel olarak anlamlı değildi <Evidence level={3} /> <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>.
+        </p>
+        <p>
+          Bir ayrıntı: katılımcıların yaklaşık üçte biri statin kullanıyordu. Sonradan yapılan ikincil bir analizde,
+          metformin ve statin birlikte alanlarda bu körelme görülmedi <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>. Bu bir hipotez; kanıt değil. İki ilacı
+          birleştirmek için bir gerekçe olarak okunmamalı.
+        </p>
+        <p>
+          Bu çalışma, "sağlıklı biri için metformin zararsız bir olasılık" fikrine tatlı bir uyarı. İlaç bir hedef için
+          çalışırken başka bir hedefe ters gelebilir.
+        </p>
+
+        <h2 id="degerlendirme">Beş eksende değerlendirme</h2>
+        <p>
+          Tek bir not vermiyorum. Beş soru soruyorum.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Eksen</th>
+                <th class="p-3 font-semibold">Değerlendirme</th>
+                <th class="p-3 font-semibold">Gerekçe</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Etkinlik kanıtı (uzun yaşam)</td>
+                <td class="p-3">Sınırlı</td>
+                <td class="p-3">Diyabetlide gözlemsel sağkalım avantajı <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>; sağlıklıda sert sonlanımlı çalışma yok; fare verisi karışık <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Güvenlik kanıtı</td>
+                <td class="p-3">Diyabetlide güçlü, sağlıklıda sınırlı</td>
+                <td class="p-3">Geniş kullanım <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>; ama uzun süreli, diyabetsiz kullanıcı verisi dar.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Mekanizma inandırıcılığı</td>
+                <td class="p-3">Orta</td>
+                <td class="p-3">AMPK ve mTOR yolağı makul <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>; faydanın bir kısmı glukoz etkisiyle açıklanabilir <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Ürün ve düzenleyici durum</td>
+                <td class="p-3">Reçeteli ilaç; yaşlanma için endikasyon yok</td>
+                <td class="p-3">ABD etiketindeki endikasyon yetişkinlerde tip 2 diyabette glisemik kontroldür <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Türkiye'deki ruhsat metni için hekiminize ve ürünün kısa ürün bilgisine bakın.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Geri dönüşebilirlik</td>
+                <td class="p-3">Çoğu etki bırakınca geçer</td>
+                <td class="p-3">B12 eksikliği izlenmezse sinir hasarına ilerleyebilir <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="iddialar">Dolaşan iddialar ve kanıtın durumu</h2>
+        <p>
+          Her iddia aynı güçte değil. Onları kanıt sırasına dizelim.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Durum</th>
+                <th class="p-3 font-semibold">Not</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Metformin kullanan diyabetlilerin sağkalımı, eşleştirilmiş diyabetsizlerden uzundur</td>
+                <td class="p-3">Test edildi, desteklendi (gözlemsel)</td>
+                <td class="p-3"><sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>; karıştırıcılar var, ilacın nedeni olduğu gösterilmedi.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Metformin diyabeti olmayanda ömrü uzatır</td>
+                <td class="p-3">Henüz test edilmedi ama test edilebilir</td>
+                <td class="p-3">TAME tasarımı <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>; sonuç yok.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Metformin yaşlılarda kas yapımına yardımcı olur</td>
+                <td class="p-3">Test edildi, desteklenmedi</td>
+                <td class="p-3">MASTERS <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Metformin sağlıklıda "yaşlanmayı yavaşlatır"</td>
+                <td class="p-3">Bu haliyle test edilemez</td>
+                <td class="p-3">"Yaşlanma" tek bir sonlanım değil; yerine geçen göstergeler ömrün yerine geçmez <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Metformin kanseri önler</td>
+                <td class="p-3">Henüz test edilmedi ama test edilebilir</td>
+                <td class="p-3">Gözlemsel ilişkiler bildirildi <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>; sağlıklı kişilerde önleme çalışması bu yazıda doğrulanmadı.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="riskler">Etiket dışı kullanımın riskleri</h2>
+        <p>
+          Bu bölümde espri payı yok; sade ve açık yazıyorum.
+        </p>
+        <p>
+          <strong>Vitamin B12 eksikliği.</strong> Metformin 4 aydan uzun kullanıldığında B12 eksikliği için bir risk
+          faktörü sayılır <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Emilimin bozulması bunun bilinen bir mekanizması <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>. Eksiklik kansızlık ve sinir hasarı
+          gibi sonuçlar doğurabilir. Bu yüzden uzun süre kullanan kişide B12 düzeyi izlenir <Evidence level={3} /> <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>.
+          ABD etiketi kansızlık değerlerinin yılda bir, B12'nin 2-3 yılda bir ölçülmesini öneriyor <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Bu aralıklar
+          diyabetli kullanıcılar için yazılmış bir izlem takvimidir; yaşlanma amacıyla kullanan biri için ayrı bir
+          takvim yoktur.
+        </p>
+        <p>
+          <strong>Böbrek işlevi ve laktik asidoz.</strong> Metformin böbrekten atılır. Laktik asidoz, kanda laktat adlı
+          asidin birikmesidir; nadirdir ama ağırdır. ABD etiketinin çerçeveli uyarısı bu durumu anar ve risk faktörleri
+          arasında böbrek işlevinde bozulma, belirli ilaçlarla birlikte kullanım, 65 yaş ve üzeri, kontrastlı radyolojik
+          tetkik, ameliyat, düşük oksijenli durumlar, aşırı alkol ve karaciğer yetmezliğini sayar <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Etikete göre
+          tahmini glomerüler süzme hızı (eGFR) 30'un altında ilaç kullanılmaz; asidoz da kontrendikasyon sebebidir <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>.
+          Böbrek hastalığı olan diyabetlilerdeki gözlemsel çalışmaların birleşik analizinde evre 4'te laktik asidoz
+          eğilimi vardı ama anlamlı değildi ve kanıt kesinliği çok düşüktü <Evidence level={1} /> <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>. Yani risk
+          gösterilmedi ama dışlanmadı da. Böbrek işlevi ölçülmeden ilaç başlanmaz.
+        </p>
+        <p>
+          <strong>Mide-bağırsak yakınmaları.</strong> ABD etiketinde (uzun salınımlı form) plaseboya göre ishal %10'a
+          karşı %3, bulantı ya da kusma %7'ye karşı %2 olarak bildirilmiş <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Bunlar diyabetli katılımcıların
+          verisidir.
+        </p>
+        <p>
+          <strong>Kimler özellikle dikkatli olmalı.</strong> Böbrek ya da karaciğer yetmezliği olanlar, aşırı alkol
+          kullananlar, kontrastlı görüntüleme ya da ameliyat öncesindeki kişiler, hipoksik hastalıkta olanlar.
+          Gebelikte metformin için etiket "yeterli veri yok" der; emzirmede süte geçtiğini bildirir <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Gebelik planı
+          olan ya da emziren biri uzun yaşam amacıyla başlamadan önce hekimiyle özel olarak konuşmalıdır. Not: etiket,
+          yaşlanma amacıyla kullanan sağlıklı kişiler için yazılmamıştır.
+        </p>
+        <p>
+          Kullanıcıların kendi bildirimleri etkinlik için zayıf, güvenlik sinyali olarak değerlidir. "İyi hissediyorum"
+          demek plasebo ya da ortalamaya dönüşten etkilenir; tekrarlayan bir yan etki bildirimi ise ciddiye alınır.
+        </p>
+
+        <h2 id="devam-eden">Devam eden çalışmalar: cevap ne zaman gelir?</h2>
+        <p>
+          Bu bölüm, yazıyı güncelleme gerekçemiz.
+        </p>
+        <p>
+          ClinicalTrials.gov kayıtlarında (27 Ekim 2026 itibarıyla) metforminin yaşlanma bağlamında sınandığı birkaç
+          çalışma görünüyor <sup><a href="#kaynak-14" aria-label="Kaynak 14">[14]</a></sup>. İnsülin duyarlılığının metforminin yaşlanmayı yavaşlatma potansiyelini etkileyip
+          etkilemediğine bakan 166 katılımcılı bir çalışma tamamlanmış (NCT04264897). Obezitesi olan yaşlı gazilerde
+          yaşam tarzı müdahalesine eklenen metforminin kırılganlığa etkisini sınayan 114 katılımcılı bir çalışma da
+          tamamlanmış (NCT04221750). Yatak istirahatinde kas sağlığına bakan 64 kişilik bir çalışmanın birincil
+          tamamlanma tarihi Kasım 2026 (NCT03107884). Bu yazıyı hazırlarken bu çalışmaların sonuç makalelerini
+          doğrulayamadık; yayımlandıkça yazıyı güncelleyeceğiz. Üçü de kısa süreli ve yerine geçen göstergelerle
+          ilgili; ömür ya da hastalık sonlanımı değil.
+        </p>
+        <p>
+          Sonuç ne zaman gelir? Bilmiyoruz. Sonuçlanmamış bir çalışmanın ne diyeceğini tahmin etmeyeceğim.
+        </p>
+
+        <h2 id="menopoz">Menopoz ve 40 sonrası: bildiklerimiz ve bilmediklerimiz</h2>
+        <p>
+          Kısa söyleyeyim: bu soruya doğrudan cevap veren bir çalışma bulamadık.
+        </p>
+        <p>
+          Tarayabildiğimiz literatürde, menopoz geçişindeki kadınlarda metforminin yaşlanma ya da uzun yaşam
+          sonlanımlarını sınayan randomize bir çalışma görmedik <Evidence level={1} />. Fare verisinde etki bazı
+          analizlerde erkeklerde görüldü <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>; bu, kadınlar için doğrudan sonuç anlamına gelmez. MASTERS'a kadınlar da
+          katıldı <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>; ama menopoz durumuna göre ayrı bir sonuç raporu görmedik.
+        </p>
+        <p>
+          Menopozdaki bir kadın olarak metformin düşünüyorsanız, aslında iki ayrı soru var. Birincisi, tip 2 diyabet,
+          prediyabet, gebelik diyabeti öyküsü, polikistik over sendromu ya da belirgin metabolik risk gibi, hekimin bir
+          tanıya ya da risk faktörüne dayanarak metformin düşündüğü bir durum var mı? Bunların bir kısmı etiket
+          dışıdır; ABD etiketindeki tek endikasyon tip 2 diyabettir <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Ama hekimin nedenini açıkça söyleyebildiği,
+          hasta grubuna göre klinik kanıtı olan kullanımlardır. İkincisi, bunların hiçbiri yoksa ve yalnızca "uzun
+          yaşam" için düşünülüyorsa, yukarıdaki tablolar geçerli. Birinci soru bir hekimle konuşulacak, tanıya dayalı bir
+          konu; ikincisi bu yazının konusu.
+        </p>
+
+        <h2 id="hekimle">Hekiminizle konuşulacaklar</h2>
+        <p>
+          Doz vermiyorum, protokol de. Bunlar sorular.
+        </p>
+        <ul>
+          <li><strong>Hedefiniz ne?</strong> "Uzun yaşam" bir hedef değil; kan şekeri, kilo, kas, kalp ya da bellek gibi ölçülebilir bir şeye bağlanabilir mi?</li>
+          <li><strong>Başlamadan önce hangi bazal ölçümler?</strong> Kan şekeri (açlık glukozu, HbA1c) ve böbrek işlevi (kreatinin, eGFR) bu konuşmanın değişmez parçasıdır; duruma göre kan sayımı, karaciğer enzimleri ve B12 eklenir. Herkese aynı geniş tetkik listesi istenmez.</li>
+          <li><strong>Aynı anda tek değişiklik.</strong> Birden çok yeni şeyi birlikte başlatırsanız hangisinin işe yarayıp yaramadığını anlayamazsınız.</li>
+          <li><strong>Hangi belirtide bırakılacak?</strong> Önceden konuşulmuş bir ölçüt olsun.</li>
+          <li><strong>İlaç kaynağı.</strong> Reçeteyle, eczaneden alınan ilaç dışında bir kaynağı kullanmak yanlış üründen zarar riskini artırır.</li>
+        </ul>
+
+        <h2 id="guclu-yollar">Aynı hedef için kanıtı daha güçlü yollar</h2>
+        <p>
+          Vaaz vermeyeceğim; yalnızca karşılaştırma.
+        </p>
+        <p>
+          Hedefiniz kas ve işlevse, düzenli direnç egzersizi bu yazıdaki en sağlam dayanaklardan biri: MASTERS
+          çalışmasında plasebo grubu 14 haftada anlamlı kas kazandı <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Metformin bu listede onun yerine geçmedi;
+          tersine, kazanımı azalttı. Kan basıncı, kan yağları, uyku ve sigara gibi konularda ise yerleşik rehberler var;
+          onları bu yazının dışında, hekiminizle konuşmak daha doğru.
+        </p>
+
+        <h2 id="bilinmeyenler">Henüz bilmediklerimiz</h2>
+        <p>
+          Açık kalan sorular, bu yazının güncellenmesi gereken yerler.
+        </p>
+        <ul>
+          <li>Diyabeti olmayanlarda ömür ya da hastalık sonlanımı.</li>
+          <li>Kadınlarda ve menopoz geçişinde etki.</li>
+          <li>Direnç egzersiziyle çakışmanın uzun süreli sonucu.</li>
+          <li>Diyabetsizde uzun süreli kullanımın güvenlik profili.</li>
+        </ul>
+        <p>
+          Bir ilacın dosyasının kalın olması, her soruya cevap verdiği anlamına gelmiyor. Eczanedeki aynı kutu, sormanız
+          gereken sorulara göre başka bir kutu gibi davranıyor. Önce soruyu netleştirin; kutunun adı ondan sonra gelir.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a sorular" intro="Bu bölümde metforminin uzun yaşam amacıyla kullanımı ve güvenliğiyle ilgili sorulara kendi yanıtlarımı veriyorum." items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
+          '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
+        <p class="italic text-ink/80">
+          Yazının gövdesinde kanıtı bölüm bölüm tarttım. Bu notta, o kanıtı klinik değerlendirmede nasıl sıraladığımı
+          kısaca toparlıyorum.
+        </p>
+        <p>
+          Metforminin diyabetlilerdeki güvenlik kaydı geniştir; bu yazı o kullanımı değil, diyabeti olmayanlarda uzun
+          yaşam amacıyla etiket dışı kullanımı ele alır. Bu amaçla ömür ya da hastalık sonlanımlı sonuçlanmış bir insan
+          çalışması yoktur. Diyabetlilerdeki sağkalım avantajı gözlemseldir ve ilacın nedeni olduğunu göstermez.
+        </p>
+        <p>
+          Sağlıklı yaşlılarda yapılan tek randomize çalışma (MASTERS), direnç egzersizine eklenen metforminin kas
+          kazanımını azalttığını gösterdi; bu bulgu tek bir çalışmaya dayanır ve ikincil statin analizi hipotez
+          düzeyindedir. Uzun süre kullanımda B12 düzeyinin ve böbrek işlevinin izlenmesi, ilaçla ilgili en sağlam
+          güvenlik başlıklarıdır.
+        </p>
+        <p>
+          Klinik değerlendirmede sıram şöyledir: önce ilacın neden düşünüldüğünün açıkça söylenebilmesi, sonra kan
+          şekeri ve böbrek işlevinin ölçülmesi, ardından hekim gözetiminde izlem. Tanıya ya da risk faktörüne dayanan
+          kullanım ile "yaşlanmayı yavaşlatma" amacı bu yüzden birbirinden ayrı tutulmalıdır.
+        </p>
+        <p class="text-sm italic text-primary">
+          Yazarın klinik değerlendirmesi: Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı
+        </p>
+        <p class="text-sm text-ink/80">
+          Bağımsız tıbbi inceleme: Dr. Alper Mumcu — 27 Ekim 2026.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleProsePanel class="mt-10 prose-estranova-references">
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
+          <li id="kaynak-1">
+            Walton RG et al. "Metformin blunts muscle hypertrophy in response to progressive resistance exercise training in older adults: A randomized, double-blind, placebo-controlled, multicenter trial: The MASTERS trial."
+            <em>Aging Cell</em>. 2019;18(6):e13039.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31557380/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">31557380</a>
+          </li>
+          <li id="kaynak-2">
+            Long DE et al. "Potential Benefits of Combined Statin and Metformin Therapy on Resistance Training Response in Older Individuals."
+            <em>Front Physiol</em>. 2022;13:872745.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35492586/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">35492586</a>
+          </li>
+          <li id="kaynak-3">
+            Bannister CA et al. "Can people with type 2 diabetes live longer than those without? A comparison of mortality in people initiated with metformin or sulphonylurea monotherapy and matched, non-diabetic controls."
+            <em>Diabetes Obes Metab</em>. 2014;16(11):1165–1173.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/25041462/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">25041462</a>
+          </li>
+          <li id="kaynak-4">
+            Strong R et al. "Longer lifespan in male mice treated with a weakly estrogenic agonist, an antioxidant, an α-glucosidase inhibitor or a Nrf2-inducer."
+            <em>Aging Cell</em>. 2016;15(5):872–884.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/27312235/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">27312235</a>
+          </li>
+          <li id="kaynak-5">
+            Jiang N et al. "The Gehan test identifies life-extending compounds overlooked by the log-rank test in the NIA Interventions Testing Program: Metformin, Enalapril, caffeic acid phenethyl ester, green tea extract, and 17-DMAG."
+            <em>GeroScience</em>. 2024;46(5):4533–4541.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38630424/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">38630424</a>
+          </li>
+          <li id="kaynak-6">
+            Onken B et al. "Metformin treatment of diverse Caenorhabditis species reveals the importance of genetic background in longevity and healthspan extension outcomes."
+            <em>Aging Cell</em>. 2022;21(1):e13488.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/34837316/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">34837316</a>
+          </li>
+          <li id="kaynak-7">
+            Mohammed I et al. "A Critical Review of the Evidence That Metformin Is a Putative Anti-Aging Drug That Enhances Healthspan and Extends Lifespan."
+            <em>Front Endocrinol</em>. 2021;12:718942.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/34421827/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">34421827</a>
+          </li>
+          <li id="kaynak-8">
+            Triggle CR et al. "Metformin: Is it a drug for all reasons and diseases?"
+            <em>Metabolism</em>. 2022;133:155223.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35640743/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">35640743</a>
+          </li>
+          <li id="kaynak-9">
+            Konopka AR, Miller BF. "Taming expectations of metformin as a treatment to extend healthspan."
+            <em>GeroScience</em>. 2019;41(2):101–108.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/30746605/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">30746605</a>
+          </li>
+          <li id="kaynak-10">
+            Justice JN et al. "Development of Clinical Trials to Extend Healthy Lifespan."
+            <em>Cardiovasc Endocrinol Metab</em>. 2018;7(4):80–83.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/30906924/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">30906924</a>
+          </li>
+          <li id="kaynak-11">
+            Patiño-Cardona S et al. "Safety of metformin in chronic kidney disease and type 2 diabetes mellitus: a systematic review and meta-analysis."
+            <em>Eur J Pharmacol</em>. 2026;1015:178560.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41548682/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41548682</a>
+          </li>
+          <li id="kaynak-12">
+            Langan RC, Goodbred AJ. "Vitamin B12 Deficiency: Recognition and Management."
+            <em>Am Fam Physician</em>. 2017;96(6):384–389.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/28925645/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">28925645</a>
+          </li>
+          <li id="kaynak-13">
+            Sayedali E et al. "Association between metformin and vitamin B12 deficiency in patients with type 2 diabetes."
+            <em>World J Diabetes</em>. 2023;14(5):585–593.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/37273250/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">37273250</a>
+          </li>
+          <li id="kaynak-14">
+            ClinicalTrials.gov kayıtları: NCT04264897, NCT04221750, NCT03107884. Erişim: 27 Ekim 2026.
+            <a href="https://clinicaltrials.gov/study/NCT04264897" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">clinicaltrials.gov</a>
+          </li>
+          <li id="kaynak-15">
+            Kulkarni AS et al. "Metformin regulates metabolic and nonmetabolic pathways in skeletal muscle and subcutaneous adipose tissues of older adults."
+            <em>Aging Cell</em>. 2018;17(2).
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29383869/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">29383869</a>
+          </li>
+          <li id="kaynak-16">
+            ABD ilaç etiketi (FDA kayıtlı SPL): Metformin Hydrochloride Extended-Release Tablets, USP (AvPAK), sürüm 4, yürürlük 19 Eylül 2024; endikasyon, çerçeveli uyarı, bölüm 4, 5.1, 5.2, 6.1, 8.1 ve 8.2. Erişim: 27 Ekim 2026.
+            <a href="https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/d9bac244-1725-5bf3-e053-2a95a90ac823/spl-doc" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">FDALabel</a>
+          </li>
+          <li id="kaynak-17">
+            American Federation for Aging Research. TAME (Targeting Aging with Metformin) tanıtım sayfaları: 14 merkez, 65–79 yaş, 3.000'den fazla katılımcı, altı yıl. Erişim: 27 Ekim 2026.
+            <a href="https://www.afar.org/news/afar-initiative-in-the-news-npr-spotlights-tame-trial-and-afar-scientific-leadership" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">afar.org</a>
+          </li>
+          <li id="kaynak-18">
+            Yang Y et al. "Metformin decelerates aging clock in male monkeys."
+            <em>Cell</em>. 2024;187(22):6358–6378.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39270656/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39270656</a>
+          </li>
+          <li id="kaynak-19">
+            Soukas AA, Hao H, Wu L. "Metformin as Anti-Aging Therapy: Is It for Everyone?"
+            <em>Trends Endocrinol Metab</em>. 2019;30(10):745–755.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31405774/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">31405774</a>
+          </li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgi amaçlıdır; tanı, tedavi veya ilaç başlama ya da bırakma önerisi değildir. Metformin
+          reçeteli bir ilaçtır; kullanımına karar vermek için muayene, tahlil ve kendi hekiminizle görüşme gerekir.
+          Mevcut bir ilacınızı hekiminize danışmadan bırakmayın.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

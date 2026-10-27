@@ -957,6 +957,26 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['NMN', 'NR', 'NAD+', 'NAD Plus', 'nad plus', 'takviye', 'menopoz', 'güvenlik'],
   },
   {
+    path: '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/',
+    title: 'Metformin Uzun Yaşam İçin Kullanılır mı?',
+    description:
+      'Metformin tip 2 diyabet ilacıdır; uzun yaşam için kullanımı etiket dışıdır. Diyabeti olmayanlarda ömür verisi yok, egzersizle kas kazanımı azalabiliyor, B12 ve böbrek izlenmeli.',
+    publishedDate: '27 Ekim 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Zamansız Yaşam · Deneysel',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'metformin',
+      'uzun yaşam',
+      'etiket dışı kullanım',
+      'yaşlanma',
+      'menopoz',
+      'B12 eksikliği',
+      'direnç egzersizi',
+      'kanıt düzeyi',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/',
     title: 'GHK-Cu ve Menopoz: Bakır Peptid, Cilt Yaşlanması ve Kanıt Sınırı',
     description:
