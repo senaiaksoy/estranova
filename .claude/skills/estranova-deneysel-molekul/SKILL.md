@@ -68,6 +68,8 @@ cümleleri tekrarlamaz ve birbirine bağlantı verir. Konu yalnızca Bilimsel
 Pencere yazısında varsa (ör. ürün analizi bulguları) taşıma kararı
 kullanıcıya bırakılır.
 
+**Yerleşim kapısı (CLAUDE.md §6 "Bölüm yerleşimi"):** Skill'i uygulamadan önce yazının nereye gideceğini şu soruyla seç: okur sonunda *kullanıp kullanmamaya* mı karar verecek (Deneysel/Vitaminler), yoksa *mekanizmayı veya çalışmayı* mı anlayacak (Bilimsel Pencere)? Aynı molekülün iki yazısı varsa ortak konular Deneysel yazıda kalır; yeni ikinci yazı ancak ayrı bir okuma niyeti varsa açılır.
+
 **Kapsam dışı** (skill kullanılmaz):
 
 - Onaylı endikasyonu için yazılan klinik rehberler: MHT/HRT, D vitamini

@@ -28,6 +28,7 @@ Doktor olmayan alan uzmanları kurulda bilimsel uzman grubunda listelense bile m
 - CLAUDE.md HARD CONSTRAINTS §1-§2 ile uyumlu mu? (kadın sağlığı, hormonal geçiş, 40+ yaşam tarzı; klinik tedavi pazarlaması DEĞİL)
 - Estranova kapsamı dışı konu (siyasi yorum, lüks dekor, satış, başhekim reklamı) → REDDET
 - Tema dağılması var mı? Tek tema, tek eksen (CLAUDE.md §4 + writer §4a kuralı 10)
+- Bölüm yerleşimi: Okur yazıyı bitirince ürün/takviye kararı mı verecek (Deneysel/Vitaminler), mekanizma veya çalışma mı anlayacak (Bilimsel Pencere)? Molekül için tek ana yazı; ikinci yazı yalnızca ayrı okuma niyetiyle. Yer gerekçesi brief'e yazılır (CLAUDE.md §6 "Bölüm yerleşimi").
 
 ### 1.2 Yazar atama
 
