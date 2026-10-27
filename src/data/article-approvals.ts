@@ -42,6 +42,12 @@ export interface ArticleApproval {
  */
 export const approvedArticles: ArticleApproval[] = [
   {
+    pathname: '/zamansiz-yasam/sarkopeni-40-sonrasi-sessiz-kas-kaybi/',
+    writerSlug: 'anil-yalmaz',
+    approvedAt: '2026-10-27',
+    note: 'KC sözlü onayı — 27 Ekim 2026 — Anıl Yalmaz sarkopeni makalesi için yazar ve tıbbi onay verildi. Tür: editorial-guide. Byline (4:5) ve kart (2.4:1) görselleri editörden bekleniyor; yayın görselsiz byline ile açıldı.',
+  },
+  {
     pathname: '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/',
     writerSlug: 'cagri-sade',
     approvedAt: '2026-10-13',

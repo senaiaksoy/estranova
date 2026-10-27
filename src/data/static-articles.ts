@@ -18,6 +18,26 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/zamansiz-yasam/sarkopeni-40-sonrasi-sessiz-kas-kaybi/',
+    title: 'Sarkopeni: 40 Sonrası Sessiz Kas Kaybı',
+    description:
+      'Sarkopeni nedir, 40 sonrası kas gücü neden ağrısız biçimde azalabilir ve direnç çalışması ne kadar yardımcı olur? Günlük işaretler, menopoz ile kas ilişkisi ve güvenlik sınırları.',
+    publishedDate: '27 Ekim 2026',
+    writerSlug: 'anil-yalmaz',
+    section: 'Zamansız Yaşam',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'sarkopeni',
+      'kas kaybı',
+      '40 sonrası kas kaybı',
+      'menopozda kas gücü',
+      'direnç çalışması',
+      'kas erimesi',
+      'kas gücü',
+      'güçlenme',
+    ],
+  },
+  {
     path: '/beden-yakinlik/menopoz-sonrasi-kilo-vucut-sekillendirme/',
     title: 'Menopoz Sonrası Vücut Şekillendirme: Liposuction Size Uygun mu?',
     description:

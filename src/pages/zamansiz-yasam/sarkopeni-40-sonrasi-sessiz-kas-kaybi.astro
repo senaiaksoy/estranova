@@ -1,0 +1,303 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../components/site/ArticleSummary.astro';
+import Evidence from '../../components/site/Evidence.astro';
+import RelatedReadings from '../../components/site/RelatedReadings.astro';
+import { submenuHeroByRoute } from '../../data/submenu-heroes';
+import { buildArticleSchemas } from '../../utils/article-schema';
+import { resolveSiteUrl } from '../../utils/seo';
+
+const pathname = '/zamansiz-yasam/sarkopeni-40-sonrasi-sessiz-kas-kaybi/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/']!;
+
+const tocEntries = [
+  { id: 'gunluk-isaretler', label: 'Sandalyeden Kalkarken' },
+  { id: 'sarkopeni-nedir', label: 'Sarkopeni Ne Demek?' },
+  { id: 'menopoz-ve-kas', label: 'Menopoz ve Kas: Ölçümler Ne Gösteriyor' },
+  { id: 'direnc-calismasi', label: 'Kas Gücü İçin Sağlam Bir Yöntem' },
+  { id: 'kucuk-baslangic', label: 'Küçük Başlamak, Yükü Yavaş Artırmak' },
+  { id: 'once-degerlendirme', label: 'Önce Değerlendirme Gereken Durumlar' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Sarkopeni: 40 Sonrası Sessiz Kas Kaybı';
+const seoTitle = 'Sarkopeni ve 40 Sonrası Kas Kaybı';
+const articleDescription =
+  'Sarkopeni nedir, 40 sonrası kas gücü neden ağrısız biçimde azalabilir ve direnç çalışması ne kadar yardımcı olur? Günlük işaretler, menopoz ile kas ilişkisi ve güvenlik sınırları.';
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'anil-yalmaz',
+  articleType: 'editorial-guide',
+  publishedDate: '27 Ekim 2026',
+  pathname: pathname,
+  articleSection: 'Zamansız Yaşam',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'sarkopeni',
+    'kas kaybı',
+    '40 sonrası kas kaybı',
+    'menopozda kas gücü',
+    'direnç çalışması',
+    'kas erimesi',
+    'kas gücü',
+    'güçlenme',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Güçlenme"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="anil-yalmaz"
+        articleType="editorial-guide"
+        publishedDate="27 Ekim 2026"
+        readingMinutes={8}
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Özet">
+        <p>
+          Sarkopeni, kas gücünün ve kas miktarının azalmasıyla tanımlanan bir kas hastalığıdır;
+          tanısı ölçümle ve hekimle konur. Kas gücü çoğu zaman ağrı yapmadan azaldığı için fark
+          edilmesi zor olabilir. Menopoz tek başına kasları eritmiyor; yaş, hareketin azalması ve
+          ağrı aynı dönemde birlikte işliyor. Direnç çalışması, kadınlarda kas gücünü artırdığı
+          en sağlam gösterilmiş yöntemlerden biri. Küçük başlayın, ertesi günkü toparlanmayı izleyin.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="gunluk-isaretler">Sandalyeden Kalkarken</h2>
+        <p>
+          Hareket derslerinde sık gördüğüm küçük bir an var: sandalyeden kalkarken ellerin kendiliğinden
+          dizlere gitmesi. Kimse bunu fark ettiğini söylemez. Çoğu zaman kendisi de fark etmez.
+        </p>
+        <p>
+          Bir de kavanoz kapağı var. Turşu kavanozunun kapağı fazla sıkı kapatılmış olabilir, kabul.
+          Ama üç ay önce rahat açılan kapak bugün direniyorsa, bunu not etmeye değer. Çünkü kas gücü
+          çoğu zaman ağrı yapmadan azalır; ağrı olmayınca da bir alarm çalmaz.
+        </p>
+        <p>
+          Belki siz de sandalyeden kalkarken ya da market poşetini tek elde taşırken bir şeyin eskisi
+          gibi olmadığını fark etmişsinizdir. Birçoğumuz bunu yaşa yazıp geçiyoruz. Haksız da sayılmayız.
+          Yine de yoklamaya değer.
+        </p>
+        <p>
+          Önce şunu söyleyeyim: bu işaretlerden birini tanımanız bir hastalığınız olduğu anlamına
+          gelmiyor. Ben bunlara ölçüm gibi değil, ipucu gibi bakıyorum. Tartı da bu hikâyeyi anlatmaz.
+          Kas azalıp yağ artarsa kilonuz aynı kalabilir; teraziden de aynadan da fark okunmaz.
+        </p>
+
+        <h2 id="sarkopeni-nedir">Sarkopeni Ne Demek?</h2>
+        <p>
+          Sarkopeni, kas erimesi anlamına gelen tıbbi bir terim. Uzmanlar bugün onu bir kas hastalığı
+          olarak tanımlıyor ve ölçütün merkezine kas gücünü koyuyor.
+        </p>
+        <p>
+          2018'de güncellenen Avrupa uzlaşı tanımında düşük kas gücü ana bulgu sayılıyor. Düşük kas
+          miktarı ya da kalitesi tanıyı doğruluyor; yürüme hızı gibi performans ölçümleri ise tablonun
+          ağırlığını gösteriyor. Çoğunlukla ileri yaşla anılsa da sarkopeni daha erken yaşlarda da
+          görülebiliyor.
+        </p>
+        <p>
+          65 yaş üstü yetişkinlerde yapılan çalışmalarda sıklık, hangi tanım ve hangi ölçümün
+          kullanıldığına göre yaklaşık yüzde 2 ile yüzde 37 arasında değişiyor <Evidence level={3} />.
+          Bu aralığın genişliği bile bir şey söylüyor: sarkopeni tek bir sayıya bakılarak konan bir tanı
+          değil.
+        </p>
+        <p>
+          Kimde sarkopeni olduğuna hekim karar verir. Değerlendirmede el kavrama gücü, sandalyeden beş
+          kez kalkma süresi ve yürüme hızı gibi ölçümler kullanılıyor; gerekirse kas miktarını gösteren
+          bir görüntüleme de eklenebiliyor. Bu testleri evde kendi kendinize yorumlamanız gerekmiyor.
+          Ben bir hareket uzmanıyım; tanı koymak benim işim değil. Benim alanım, kasın çalışmaya nasıl
+          yanıt verdiğini anlatmak.
+        </p>
+
+        <h2 id="menopoz-ve-kas">Menopoz ve Kas: Ölçümler Ne Gösteriyor</h2>
+        <p>
+          Sık duyduğunuz cümle şöyle: menopoz kasları eritiyor. Ölçümlere bakınca hikâye bu kadar keskin
+          görünmüyor.
+        </p>
+        <p>
+          Menopoz öncesi, perimenopoz ve menopoz sonrası kadınları karşılaştıran çalışmaları bir araya
+          getiren bir derlemeye göre yağsız kütle farkı birkaç yüzde civarında kalıyor: perimenopozda
+          yaklaşık yüzde 2,5, menopoz sonrasında yaklaşık yüzde 5,7 daha az <Evidence level={2} />.
+          Bu karşılaştırmaların çoğunda gruplar arasında on yıl kadar yaş farkı da var. Yaşın kendi
+          payını ayırmak kolay değil. Üstelik bu ölçümler çoğunlukla kasın kendisini değil, su ve iç
+          organları da kapsayan yağsız kütleyi gösteriyor.
+        </p>
+        <p>
+          Hormonların rolü yok demek değil. Yaşları 18 ile 80 arasında değişen 96 kadınla yapılan bir
+          çalışmada, yaştan bağımsız olarak östradiol (bir östrojen türü) ve progesteron düzeyi daha
+          yüksek yağsız kütleyle ilişkili çıktı <Evidence level={2} />. Çalışma tek bir zaman noktasına
+          baktığı için neden-sonuç kuramıyor.
+        </p>
+        <p>
+          Hareket uzmanı olarak beni asıl ilgilendiren başka bir bulgu var: ağrı. Bir derlemede kas ya
+          da eklem ağrısı bildirme oranı menopoz öncesinde yüzde 40, perimenopozda yüzde 57, menopoz
+          sonrasında yüzde 59 bulunmuş <Evidence level={3} />. Ağrı hareketi azaltabilir; hareket
+          azaldıkça kasın çalışma fırsatı da azalır. Bu zincir her kadında aynı işlemez, ama
+          kırılabilecek bir halka olduğu için üzerinde duruyorum.
+        </p>
+
+        <h2 id="direnc-calismasi">Kas Gücü İçin Sağlam Bir Yöntem</h2>
+        <p>
+          Direnç çalışması, yani kasları bir yüke karşı çalıştırmak, kadınlarda kas gücü için kanıtı en
+          sağlam yöntemlerden biri.
+        </p>
+        <p>
+          126 çalışmayı ve 4 binden fazla kadını bir araya getiren yakın tarihli bir derleme, direnç
+          çalışmasının kas gücünü hem menopoz öncesi hem menopoz sonrası kadınlarda benzer ölçüde
+          artırdığını bildiriyor <Evidence level={4} />. Yağsız kütledeki artış daha küçük kaldı, ama
+          yine de görüldü. Yaşları 50 ile 80 arasında değişen kadınlarla yapılan başka bir birleştirilmiş
+          analizde de yağsız kütlede küçük-orta düzeyde artış bildirildi <Evidence level={3} />.
+        </p>
+        <p>
+          Büyük derlemede yaşın, program süresinin ya da haftalık gün sayısının sonucu belirgin biçimde
+          değiştirdiği gösterilemedi. Başlamak için "doğru yaşı" ya da "mükemmel programı" beklemeye gerek
+          yok.
+        </p>
+        <p>
+          Sınırlarını da söyleyeyim. Bu çalışmaların çoğu sağlıklı kadınlarda ve denetimli programlarla
+          yapıldı. Kemik yoğunluğuna etkisi ise daha tartışmalı <Evidence level={2} />. Yürüyüş kalp ve
+          dayanıklılık için değerli; ama çoğu kişide kası yeterince yüklemek için tek başına yetmiyor.
+        </p>
+        <p>
+          Genel halk sağlığı önerileri yetişkinler için haftada en az iki gün kas güçlendirme çalışması
+          içeriyor. Bacak, kalça, sırt, göğüs ve kolları kapsayan hareketler bunun içine giriyor; vücut
+          ağırlığıyla, bantla ya da hafif ağırlıkla yapılabilir. Bu bir program değil, genel bir yön. Size
+          uygun yük ve hareket biçimi sağlık durumunuza göre değişir.
+        </p>
+
+        <h2 id="kucuk-baslangic">Küçük Başlamak, Yükü Yavaş Artırmak</h2>
+        <p>
+          Gücünüzün eskisi gibi olmadığını fark etmek bir parça ürkütücü olabilir. Bunu yaşamak olağan;
+          çözüm de büyük bir karar değil, küçük bir ritim.
+        </p>
+        <p>
+          Evde başlamak için salona gerek yok. Sandalyeden destek almadan kalkmak, duvara yaslanarak
+          çömelmek ya da hafif bir su şişesiyle omuz hareketi yapmak da kasa iş verir. Önemli olan işin
+          rahatça yapılabilecek kadar küçük, bir süre sonra da yük eklenebilecek kadar net olması.
+          Yeni başlıyorsanız hareketin biçimini bir eğitmene gösterin.
+        </p>
+        <p>
+          Sonra ertesi güne bakın. Hafif kas hassasiyeti olağan. Merdiven çıkamayacak kadar ağrı ya da
+          gün boyu süren bitkinlik, yükün fazla olduğunu düşündürür; o gün çalışmayı hafifletin. Zor bir
+          gün ilerlemenizi silmez.
+        </p>
+        <p>
+          Kasın toparlanması hareketle bitmiyor. Beslenme ve uyku da işin parçası. Kendi ihtiyacınızı
+          hekiminizle ya da diyetisyeninizle konuşun; ben bu konuda kişisel bir miktar önermiyorum.
+        </p>
+
+        <h2 id="once-degerlendirme">Önce Değerlendirme Gereken Durumlar</h2>
+        <p>
+          Bazı durumlarda doğru adım hareketi artırmak değil, önce bir hekime görünmek.
+        </p>
+        <p>
+          Haftalar ya da aylar içinde hızlı ilerleyen zayıflık, tek taraflı güç kaybı, düşme,
+          açıklanamayan kilo kaybı ya da yeni başlayan uyuşma kas erimesinden başka nedenlere işaret
+          edebilir. Bunlar egzersizle çözülecek şeyler değil; değerlendirme isteyen belirtiler.
+        </p>
+
+        <RedFlagBox
+          title="Önce sağlık değerlendirmesi gerektiren belirtiler"
+          intro="Bu belirtilerden biri varsa kas çalışmasını bir kenara bırakıp hekiminizle görüşün."
+          markers={[
+            'Kolda ya da bacakta ani, tek taraflı güç kaybı veya yüz kaymasıyla birlikte konuşma bozukluğu varsa 112’yi arayın.',
+            'Haftalar içinde hızla artan genel zayıflık ya da merdiveni tek başına çıkamama.',
+            'Düşme sonrası üzerine basamama, belirgin şekil bozukluğu ya da şiddetli ağrı.',
+            'Açıklanamayan kilo kaybı, yeni başlayan uyuşma veya göğüs ağrısı ile nefes darlığı.',
+          ]}
+          footnote="Bu liste tanı koymaz. Acil belirtilerde hareketi başka bir egzersizle değiştirmeye çalışmayın."
+        />
+
+        <p>
+          Kemik erimesi tanınız, kontrolsüz tansiyonunuz, kalp-damar hastalığınız ya da sürekli
+          kullandığınız ilaçlar varsa yeni bir kas çalışmasına başlamadan hekiminizle konuşun. Bu,
+          hareketi bırakmak demek değil; yükün size göre ayarlanması demek.
+        </p>
+        <p>
+          Güç yalnız spor salonunda değil, merdivende ve market poşetinde de görünür. Güvenli bir
+          sandalyede, tutunacak bir yer yakınınızdayken ellerinizi kullanmadan bir kez kalkıp nasıl
+          hissettiğinize bakmak bile iyi bir başlangıç olabilir. Kasınıza her gün küçük bir iş verin;
+          yarının merdiveni daha rahat çıkılır.
+        </p>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/tarti-yatisinca-vucut-kompozisyonu/',
+          '/zamansiz-yasam/menopozda-hangi-hareket/',
+          '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
+          '/zamansiz-yasam/denge-kaybolmadan-ayak-kalca-govde/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-14" reviewerForWriter="anil-yalmaz">
+        <p>
+          <strong>Tanı ve ölçüm:</strong> Sarkopeni tanısı yalnızca belirtiye ya da tek bir testin
+          sonucuna dayanmaz; kas gücü, kas miktarı ve fiziksel performans birlikte değerlendirilir.
+          Sıklık oranları kullanılan tanım ve ölçüm yöntemine göre belirgin biçimde değişir.
+        </p>
+        <p>
+          <strong>Menopoz ile yaşın ayrımı:</strong> Menopoz öncesi ve sonrası grupları karşılaştıran
+          çalışmalarda yaş farkı sonucu etkileyebilir; yağsız kütle ölçümleri kasın kendisini doğrudan
+          göstermez. Hormon düzeyi ile kas arasındaki ilişkiler gözleme dayalıdır ve nedensellik
+          göstermez.
+        </p>
+        <p>
+          <strong>Egzersiz çalışmalarının sınırı:</strong> Direnç çalışması verilerinin büyük bölümü
+          sağlıklı ve denetim altında egzersiz yapan kadınlardan gelir. Sonuçlar bireysel yanıta, mevcut
+          hastalığa ve uygulanan yüke göre farklılaşabilir.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgilendirme amaçlıdır. Tanı, tedavi, rehabilitasyon veya kişisel egzersiz
+          programı yerine geçmez. Mevcut hastalığınız, ağrınız, yaralanmanız, hamilelik/lohusalık
+          durumunuz veya düzenli ilaç kullanımınız varsa hareket planınızı sağlık profesyoneliyle
+          birlikte değerlendiriniz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
