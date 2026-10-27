@@ -908,7 +908,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
     title: 'NAD+ Takviyesi — Umut Etiketi ve Kanıt Sınırı',
     description:
-      'NAD+ öncülleri NMN ve NR için insan çalışmaları ne gösteriyor? Menopozda beklenen yararı, güvenlik sınırlarını ve hekimle konuşulacak soruları inceliyoruz.',
+      'NMN ve NR kandaki NAD+ düzeyini yükseltiyor; peki sağlığa yansıyor mu? Kanıtın nerede durduğu, internetteki iddialar, damardan NAD+ ve Türkiye’deki doz sınırları.',
     publishedDate: '2 Mayıs 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
