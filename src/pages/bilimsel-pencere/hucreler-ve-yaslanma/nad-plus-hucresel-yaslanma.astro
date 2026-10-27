@@ -44,6 +44,7 @@ const seoTitle = 'NAD+ ve Hücresel Yaşlanma';
 const articleDescription =
   'NAD+ öncülleri kandaki NAD+ düzeyini yükseltebilir; ama kas, metabolizma ve uzun yaşam faydası için insan kanıtı sınırlı. Mesafe sakin bir dille açıklanıyor.';
 const faqItems = articleFaqs['/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/'] ?? [];
+const articleImage = '/images/library/editorial/bp-nad-plus.webp';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
@@ -51,6 +52,7 @@ const articleSchemas = buildArticleSchemas({
   articleType: 'clinical-guide',
   publishedDate: '5 Haziran 2026',
   modifiedDate: '27 Ekim 2026',
+  image: articleImage,
   pathname: '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/',
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -65,6 +67,7 @@ const articleSchemas = buildArticleSchemas({
   title={`${seoTitle} - Estranova`}
   description={articleDescription}
   ogType="article"
+  image={articleImage}
   jsonLd={articleSchemas}
 >
   <SiteNavbar currentPath="/bilimsel-pencere/" />
@@ -326,7 +329,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Klinik pratiğimde bu denemeyi şöyle kurarım: Hasta örneğin enerji veya günlük
           işlevsellik için kısa bir deneme düşünüyorsa, başlangıçtaki durumunu birlikte kaydederiz.
-          Önceden kararlaştırdığımız birkaç haftanın sonunda kendisi için belirgin bir fark yoksa
+          Önceden kararlaştırdığımız dört ila sekiz haftanın sonunda kendisi için belirgin bir fark yoksa
           denemeyi bitiririm; yan etki olursa daha erken bırakırız. Kandaki NAD+ artışını tek başına
           devam gerekçesi saymam, çünkü insan çalışmalarında bu artışın hissedilir bir sağlık
           yararına dönüştüğü tutarlı biçimde gösterilmedi. Ateş basması veya uyku sorunu
@@ -372,7 +375,7 @@ const articleSchemas = buildArticleSchemas({
           iddialar aşağıdaki derleme, çalışma ve resmî değerlendirmeler üzerinden gözden geçirildi. Kaynak
           taraması: 26 Ekim 2026.
         </p>
-        <p>27 Ekim 2026: Kanıt merdiveni ile menopoz ve bilinmeyenler bölümü eklendi; Parkinson çalışması, Türkiye'deki yasal sınırlar ve doğurganlık çalışmalarının durumu güncellendi; hayvan ve laboratuvar verisine dayanan kanıt etiketleri kaldırıldı; bir geçiş cümlesindeki yazım hatası ve Parkinson çalışmasının sonucunu aktaran bir cümle düzeltildi.</p>
+        <p>27 Ekim 2026: Kanıt merdiveni ile menopoz ve bilinmeyenler bölümü eklendi; Parkinson çalışması, Türkiye'deki yasal sınırlar ve doğurganlık çalışmalarının durumu güncellendi; hayvan ve laboratuvar verisine dayanan kanıt etiketleri kaldırıldı; bir geçiş cümlesindeki yazım hatası ve Parkinson çalışmasının sonucunu aktaran bir cümle düzeltildi; deneme süresi ve iki kaynak künyesi NAD+ takviyesi yazısıyla aynı hâle getirildi.</p>
         <p>28 Eylül 2026: Anlatım düzenlendi; yazarın konuya özgü iki yanıtı eklendi; kaynak bölümü eklendi.</p>
         <ol>
           <li id="kaynak-1">
@@ -382,10 +385,10 @@ const articleSchemas = buildArticleSchemas({
             Trętowicz MM ve arkadaşları. <a href="https://doi.org/10.1038/s42255-026-01537-5" rel="noopener noreferrer">İnsanda tam kan NAD+ düzeyi yaşla ve yaşam tarzı müdahaleleriyle değişmiyor</a>. Nat Metab, 2026.
           </li>
           <li id="kaynak-3">
-            Zhang J, Poon ET, Wong SH. <a href="https://doi.org/10.1080/10408398.2024.2387324" rel="noopener noreferrer">Ağızdan NMN takviyesinin glukoz ve lipid metabolizmasına etkisi: randomize çalışmaların meta-analizi</a>. Crit Rev Food Sci Nutr, 2025.
+            Zhang J, Poon ET, Wong SH. <a href="https://doi.org/10.1080/10408398.2024.2387324" rel="noopener noreferrer">Ağızdan NMN takviyesinin glukoz ve lipid metabolizmasına etkisi: randomize çalışmaların meta-analizi</a>. Crit Rev Food Sci Nutr, 2024 (çevrimiçi); 65(22).
           </li>
           <li id="kaynak-4">
-            Chen F ve arkadaşları. <a href="https://doi.org/10.1007/s11892-024-01557-z" rel="noopener noreferrer">NMN'nin yetişkinlerde glukoz ve lipid metabolizmasına etkisi: sistematik derleme ve meta-analiz</a>. Curr Diab Rep, 2025.
+            Chen F ve arkadaşları. <a href="https://doi.org/10.1007/s11892-024-01557-z" rel="noopener noreferrer">NMN'nin yetişkinlerde glukoz ve lipid metabolizmasına etkisi: sistematik derleme ve meta-analiz</a>. Curr Diab Rep, 2024 (çevrimiçi); 25(1):4.
           </li>
           <li id="kaynak-5">
             Prokopidis K ve arkadaşları. <a href="https://doi.org/10.1002/jcsm.13799" rel="noopener noreferrer">NMN ve NR'nin iskelet kası kütlesi ve işlevine etkisi: sistematik derleme ve meta-analiz</a>. J Cachexia Sarcopenia Muscle, 2025.

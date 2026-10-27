@@ -25,15 +25,15 @@ const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
 
 const tocEntries = [
   { id: 'isim-koymak', label: 'Reklam Vaadi ile Bilim Arası — Önce İsim Koymak' },
-  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveninde NAD+ Öncülleri' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveninde NAD+ Öncüllerinin Yeri' },
   { id: 'mekanizma-dusus', label: 'NAD+ Hücre Mekanizması ve Yaşla Düşüş' },
   { id: 'kanit-durumu', label: 'İnsan Çalışmalarının Bugünkü Durumu' },
   { id: 'bes-soru', label: 'Beş Soruda NAD+ Öncülleri' },
-  { id: 'iddialar', label: 'İnternette Dolaşan İddialar' },
+  { id: 'iddialar', label: 'İnternette Dolaşan İddialar ve Karşılıkları' },
   { id: 'urun-serum', label: 'Ürün, Doz Sınırı ve Damardan Uygulama' },
   { id: 'fayda-guvenlik', label: 'Güvenlik Sınırları ve Sık Bildirilen Şikâyetler' },
   { id: 'menopoz', label: 'Menopoz ve 40 Sonrası İçin Ne Biliyoruz?' },
-  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz ve Yakında Öğreneceklerimiz' },
   { id: 'iletisim-sureci', label: 'Takviyeyi Düşünürken Hekimle Konuşmak' },
   { id: 'kaynaklar', label: 'Kaynaklar', numbered: false },
   { id: 'sik-sorulanlar', label: "Dr. Aksoy'a Sorular", numbered: false },
@@ -51,7 +51,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '2 Mayıs 2026',
-  modifiedDate: '26 Ekim 2026',
+  modifiedDate: '27 Ekim 2026',
   image: articleImage,
   pathname: '/zamansiz-yasam/deneysel/nad-plus-takviyesi/',
   articleSection: 'Zamansız Yaşam',
@@ -85,7 +85,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="2 Mayıs 2026"
-        lastUpdated="26 Ekim 2026"
+        lastUpdated="27 Ekim 2026"
         readingMinutes={12}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/nad-plus-takviyesi-byline.webp"
@@ -137,8 +137,8 @@ const articleSchemas = buildArticleSchemas({
           <li><strong>Hücrede mekanizma:</strong> NAD+ hücrenin enerji üretiminde ve onarımında görev alıyor. Bu iyi biliniyor<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>.</li>
           <li><strong>Hayvanda ömür:</strong> Farelerde ilaçları standart koşullarda test eden büyük bir programda NR, iki cinsiyette de yaşam süresini uzatmadı<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.</li>
           <li><strong>İnsanda kan değeri:</strong> NMN ve NR, kandaki NAD+ düzeyini tutarlı biçimde yükseltiyor; ikisini doğrudan karşılaştıran bir çalışmada artış benzer bulundu <Evidence level={4} /><sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a>, <a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup>.</li>
-          <li><strong>İnsanda işlev:</strong> Kas gücü, şeker ve yağ metabolizması, bilişsel işlev gibi ölçülebilir sonuçlarda bulgular çoğunlukla nötr<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.</li>
-          <li><strong>İnsanda güvenlik:</strong> Haftalar ile bir yıl arasında süren çalışmalarda ciddi yan etkiler plaseboya göre artmadı<sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>; ancak Parkinson hastalarında bir yıllık NR kullanımı plasebodan daha kötü klinik sonuçlarla ilişkili bulundu. Yıllarca kullanımın sonuçları bilinmiyor.</li>
+          <li><strong>İnsanda işlev:</strong> Kas gücü, şeker ve yağ metabolizması, bilişsel işlev gibi ölçülebilir sonuçlarda bulgular çoğunlukla nötr<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>. Parkinson hastalarında bir yıllık NR, hastalığın seyrinde yarar sağlamadı<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.</li>
+          <li><strong>İnsanda güvenlik:</strong> Haftalar ile bir yıl arasında süren çalışmalarda ciddi yan etkiler plaseboya göre artmadı<sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>. Yıllarca kullanımın sonuçları bilinmiyor.</li>
           <li><strong>Ömür ve hastalık:</strong> İnsanda yaşam süresi, kalp krizi, inme veya demans üzerine veri yok.</li>
         </ol>
         <p>
@@ -348,7 +348,8 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Aktif kanser tedavisi, kanser nedeniyle takip veya bağışıklığı baskılayan tedavi varsa, kullanımı ilgili hekimle değerlendirmek gerekir.
           Bu, söz konusu gruplarda kanıtlanmış bir ilaç etkileşimi veya insanlarda gösterilmiş bir kanser riski iddiası değil;
-          uzun dönem güvenlik belirsizliği karşısında klinik ihtiyattır.
+          uzun dönem güvenlik belirsizliği karşısında klinik ihtiyattır. Özellikle hormon duyarlı kanser, yakın zamanda
+          tamamlanmış tedavi veya yüksek nüks riski varsa NAD+ takviyesini önermem; önce takip eden onkoloğunuzu dinlemenizi isterim.
         </p>
 
         <RedFlagBox
@@ -466,7 +467,7 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li id="kaynak-7">
             Chen F et al. "Effects of Nicotinamide Mononucleotide on Glucose and Lipid Metabolism in Adults: A Systematic Review and Meta-analysis of Randomised Controlled Trials."
-            <em>Curr Diab Rep</em>. 2024;25(1):4.
+            <em>Curr Diab Rep</em>. 2024 (çevrimiçi); 25(1):4.
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39531138/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39531138</a>
             <span class="block mt-0.5 text-ink/50">(342 orta yaşlı ve yaşlı yetişkini kapsayan sekiz randomize çalışmanın birleşik analizi; katılımcıların %49'u kadın.)</span>
           </li>
