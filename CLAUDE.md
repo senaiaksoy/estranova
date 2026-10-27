@@ -89,7 +89,7 @@ Humanize, AGENTS.md’de tanımlandığı gibi metnin tamamını kelime, paragra
 6. **Lede formülünü kır:** Her H2 aynı "nazik tez cümlesi" lede'siyle açılmaz; lede bazen kısa sahne, doğrudan soru, doğrudan address veya teselli olur (italic lede tipografi kuralı korunur, **içi çeşitlenir**).
 7. **Bir gerçek duygu beat'i:** Utanç / korku / rahatlama en az bir kez **sade, dürüst bir kelimeyle** adlandırılır; klişe ("zorlu bir yolculuk") ile değil.
 
-**Anti-tell yasakları (mekaniklik sinyalleri):** "X değil, Y" antitez kalıbı makale gövdesinde **en fazla 2–3 kez**; "beden konuşuyor / bedenin dili / bedenin ritmi" kişileştirme ailesi **yasak** (AI artığı — [[feedback_ai_pattern_beden_cumle_2026_05_11]]); soru-başlıklı H2 makale başına **en fazla 1**; her bölümü aforistik düzgün bir cümleyle kapatma kalıbı kırılır. §4 (başhekim vitrini, satış dili) ve "siz" hitabı bu katmanın üstündedir — sıcaklık asla övünme veya "sen"e kaymaz.
+**Anti-tell yasakları (mekaniklik sinyalleri):** "X değil, Y" antitez kalıbı makale gövdesinde **en fazla 2–3 kez**; "beden konuşuyor / bedenin dili / bedenin ritmi" kişileştirme ailesi **yasak** (AI artığı — [[feedback_ai_pattern_beden_cumle_2026_05_11]]); soru-başlıklı H2 makale başına **en fazla 1** (istisna: yazar profilinde soru başlıklı H2 kayıtlı imza olarak tanımlıysa profil geçerlidir; şu an yalnızca Başak Pelister, `profile.yaml` “en az 2”); her bölümü aforistik düzgün bir cümleyle kapatma kalıbı kırılır. §4 (başhekim vitrini, satış dili) ve "siz" hitabı bu katmanın üstündedir — sıcaklık asla övünme veya "sen"e kaymaz.
 
 #### FAQ disiplini (HARD CONSTRAINT)
 
