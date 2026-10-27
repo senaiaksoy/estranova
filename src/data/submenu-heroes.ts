@@ -213,6 +213,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/zamansiz-yasam/sarkopeni-40-sonrasi-sessiz-kas-kaybi/': {
+    src: '/images/library/editorial/anil-yalmaz-sarkopeni-kart.webp',
+    alt: 'Güneşli bir İstanbul sokağında, Boğaz manzarası önünde taş merdivenden hasır sepetle çıkan kadın; sarkopeni ve 40 sonrası kas gücü yazısı için kart görseli',
+  },
   '/zamansiz-yasam/menopozda-hangi-hareket/': {
     src: '/images/library/editorial/menopozda-hangi-hareket.webp',
     alt: 'Gün ışığı alan bir odada, kollarını iki yana açarak yoga duruşu yapan kadın',
