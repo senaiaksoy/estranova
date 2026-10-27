@@ -6,7 +6,9 @@ description: >-
   gençlik, enerji veya iyi oluş vaadiyle kullanılan ve bu vaatler için insanda
   sert sonlanım kanıtı olmayan bir molekül, peptid, takviye ya da etiket dışı
   ilaç hakkında yeni makale yazarken, mevcut makaleyi yeniden yapılandırırken
-  veya böyle bir makalenin planını çıkarırken kullan. Örnekler: BPC-157, TB-500,
+  veya böyle bir makalenin planını çıkarırken kullan. /bilimsel-pencere/ altındaki
+  bir molekül yazısı "almalı mıyım" sorusuna giren bölümler taşıyorsa o
+  bölümler için de kullan (karışık durum). Örnekler: BPC-157, TB-500,
   GHK-Cu, epitalon, MOTS-c, NMN, NR, NAD+, CoQ10, resveratrol, spermidin,
   ürolitin A, fisetin, kuersetin, taurin, glisin, alfa-ketoglutarat, metilen
   mavisi, uzun yaşam amaçlı rapamisin veya metformin. Onaylı endikasyonu için
@@ -37,7 +39,8 @@ Yazmaya başlamadan önce üç soruyu yanıtla:
 
 1. **Site ve bölüm:** Hedef Estranova'da, Zamansız Yaşam altında mı
    (`/zamansiz-yasam/deneysel/`, `/zamansiz-yasam/vitaminler/` veya bu konuda
-   açılacak yeni bir alt bölüm)?
+   açılacak yeni bir alt bölüm)? `/bilimsel-pencere/` altındaki molekül
+   yazıları için aşağıdaki karışık durum kuralına bakın.
 2. **Konu:** Makalenin ana konusu tek bir molekül, peptid, takviye ya da etiket
    dışı ilaç (veya yakın bir molekül grubu) mu?
 3. **Kanıt boşluğu:** Makalenin ana vaadi (uzun yaşam, yaşlanmayı yavaşlatma,
@@ -53,6 +56,18 @@ kanıtsız uzun yaşam vaadi varsa (kreatin ve kas, magnezyum ve uyku, GLP-1 ve
 düzeniyle yazılır. Bu skill yalnızca kanıtsız vaatleri ele alan bölümlere
 uygulanır: kanıt merdiveni, iddia haritası, bilinmeyenler.
 
+**Bilimsel Pencere'deki molekül yazıları da karışık durumdur**, eğer
+güvenlik, ürün, düzenleyici durum veya "denemeli miyim" gibi okurun kararına
+giren bölümler taşıyorsa. Böyle bir yazı biyolojiye ve kanıta odaklı kalır.
+Skill'in kanıt merdiveni, menopoz ve bilinmeyenler modülleri yazıya kısa
+biçimde eklenir. Hayvan verisine Evidence etiketi konmaz (§4). Aynı molekülün
+Deneysel yazısı varsa ortak konular, yani Türkiye'deki yasal durum, damardan
+uygulama ve iddia haritasının tamamı orada anlatılır. Bilimsel Pencere'de bu
+konuların kısa bir özeti ve Deneysel yazıya bağlantı kalır. İki yazı aynı
+cümleleri tekrarlamaz ve birbirine bağlantı verir. Konu yalnızca Bilimsel
+Pencere yazısında varsa (ör. ürün analizi bulguları) taşıma kararı
+kullanıcıya bırakılır.
+
 **Kapsam dışı** (skill kullanılmaz):
 
 - Onaylı endikasyonu için yazılan klinik rehberler: MHT/HRT, D vitamini
@@ -60,8 +75,9 @@ uygulanır: kanıt merdiveni, iddia haritası, bilinmeyenler.
 - Cihaz, estetik ve ameliyatsız uygulamalar (`/zamansiz-yasam/non-invaziv/`).
   Onlar için `deneysel-tedaviyi-okuma-kilavuzu` mantığı geçerlidir.
 - Beslenme düzeni, egzersiz, uyku gibi molekül olmayan yaşam tarzı konuları.
-- `/bilimsel-pencere/` altındaki mekanizma yazıları. Bu yazılar "almalı mıyım"
-  sorusuna girerse ilgili Deneysel yazısına bağlantı verir.
+- `/bilimsel-pencere/` altındaki salt mekanizma yazıları, yani biyolojiyi
+  anlatıp okurun "almalı mıyım" sorusuna girmeyen yazılar. Bu soruya giren
+  molekül yazıları yukarıdaki karışık durum kuralına göre ele alınır.
 - Yalnızca `humanize`, dil, gramer veya dar düzenleme istekleri. Bunlarda
   `senai-humanize` geçerlidir. Bu skill bölüm yapısını yalnızca kullanıcı
   yeniden yapılandırma isterse değiştirir.
