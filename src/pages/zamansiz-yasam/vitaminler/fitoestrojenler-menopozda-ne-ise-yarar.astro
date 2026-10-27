@@ -30,7 +30,7 @@ const tocEntries = [
   { id: 'soya-yonca-keten', label: 'Soya, Kırmızı Yonca, Keten' },
   { id: 'diger-vaatler', label: 'Kemik, Cinsel Yaşam, Ruh Hali' },
   { id: 'guvenlik', label: 'Meme, Rahim, Tiroid' },
-  { id: 'besin-ve-ekstrakt', label: 'Besin mi, Ekstrakt mı' },
+  { id: 'besin-ve-ekstrakt', label: 'Besin ve Ekstrakt' },
   { id: 'karar-olcutleri', label: 'Karar Ölçütleri' },
   { id: 'doktora-uc-soru', label: 'Görüşmeye Üç Soru' },
   { id: 'kapanis', label: 'Kapanış' },
@@ -95,9 +95,9 @@ const articleSchemas = buildArticleSchemas({
         articleType="clinical-guide"
         medicalReviewer="Dr. Alper Mumcu"
         publishedDate="27 Ekim 2026"
-        readingMinutes={9}
+        readingMinutes={11}
         imageSrc="/images/library/editorial/zy-fitoestrojenler-menopoz-byline.webp"
-        imageAlt="Güneşli bir mutfak tezgâhında, yoğurt kasesine keten tohumu serpen, keten gömlekli ve gülümseyen kadın"
+        imageAlt="Güneşli bir mutfak tezgâhında, yoğurt kasesine keten tohumu serpen, keten gömlekli ve gülümseyen kadın; yapay zekâ ile üretilmiş temsili görsel"
         imagePosition="60% center"
       />
 
@@ -112,10 +112,10 @@ const articleSchemas = buildArticleSchemas({
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           Fitoestrojenler sıcak basmasında ortalama küçük bir azalma sağlayabiliyor; ancak çalışmalar tutarsız, kalitesi
-          düşük ve yanıtın büyük kısmı plasebo grubunda da görülüyor <sup><a href="#kaynak-1">[1]</a></sup>
+          düşük ve plasebo grubunda da belirgin bir azalma görülüyor <sup><a href="#kaynak-1">[1]</a></sup>
           <sup><a href="#kaynak-2">[2]</a></sup>. Keten tohumunda ve iki yıllık soya tableti çalışmasında anlamlı yarar
           çıkmadı <sup><a href="#kaynak-5">[5]</a></sup> <sup><a href="#kaynak-6">[6]</a></sup>. Hormon tedavisinin yerini
-          tutmuyorlar; 2023 tarihli bir uzlaşı bildirisi soya ürünlerini hormon dışı seçenekler arasında önermiyor
+          tutmuyorlar; 2023 tarihli bir uzlaşı bildirisi sıcak basması için soya ürünlerini önermiyor
           <sup><a href="#kaynak-12">[12]</a></sup>. Besin olarak soya, meme kanseri öyküsü olanlarda nüks artışı
           göstermedi <sup><a href="#kaynak-9">[9]</a></sup>; ekstrakt ve tabletler için aynı güvence yok. Meme veya rahim
           öykünüz ya da tiroid ilacınız varsa ekstrakt başlamadan hekiminize danışın.
@@ -145,6 +145,9 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="fitoestrojen-nedir">Bitkinin İçinde Östrojene Benzeyen Maddeler</h2>
         <p>
+          Adı östrojene benzer; yaptığı iş aynı değildir.
+        </p>
+        <p>
           Fitoestrojen, bitkide bulunan ve östrojen benzeri etki gösterebilen kimyasalların ortak adıdır
           <sup><a href="#kaynak-2">[2]</a></sup>. Üç ana gruptan söz edilir: soya ve kırmızı yoncadaki izoflavonlar,
           keten tohumundaki lignanlar ve daha az bilinen kumestanlar.
@@ -171,14 +174,14 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Başka bir meta-analiz benzer büyüklükte bir fark buldu: günde yaklaşık 0,9 sıcak basması, yan etki
           bildiriminde fark olmadan <sup><a href="#kaynak-3">[3]</a></sup>. Soya izoflavonu ekstraktlarına bakan bir derlemede
-          sıklık yüzde 20,6, şiddet yüzde 26,2 azaldı; bu çalışmaların ortanca izoflavon miktarı günde 54 mg ve süreleri
-          altı haftadan bir yıla kadardı <sup><a href="#kaynak-4">[4]</a></sup>. Üçünde de çalışmalar arasında büyük
-          farklılık vardı.
+          sıklık yüzde 20,6, şiddet yüzde 26,2 azaldı. Bu çalışmalarda ortanca izoflavon miktarı günde 54 mg, süre altı
+          haftadan bir yıla kadardı <sup><a href="#kaynak-4">[4]</a></sup>. Çalışmalar arasındaki farklılık belirgindi
+          <sup><a href="#kaynak-1">[1]</a></sup> <sup><a href="#kaynak-4">[4]</a></sup>.
         </p>
         <p>
           Cochrane tarafı daha temkinli. 43 randomize çalışmayı (4.364 katılımcı) toplayan derleme, fitoestrojen
           takviyelerinin sıcak basmasını ve gece terlemesini etkili biçimde azalttığına dair kesin kanıt bulamadı.
-          Plasebo alan gruplarda bile sıklık yüzde 1 ile 59 arasında azalmıştı <sup><a href="#kaynak-2">[2]</a></sup>
+          Çoğu çalışmada plasebo alan gruplarda bile sıklık yüzde 1 ile 59 arasında azalmıştı <sup><a href="#kaynak-2">[2]</a></sup>
           <Evidence level={3} />.
         </p>
         <p>
@@ -188,10 +191,10 @@ const articleSchemas = buildArticleSchemas({
           <Evidence level={2} />.
         </p>
         <p>
-          Bu tabloyu şöyle özetliyorum: Bazı kadınlarda fark yaratıyor olabilir, çoğunda yaratmıyor ve kimde işe
-          yarayacağını önceden bilemiyoruz. 2023 tarihli uzlaşı bildirisi de hormon tedavisinin sıcak basmasında en
-          etkili seçenek olmayı sürdürdüğünü, soya ürünleri ve soyanın bağırsak ürünü equolün ise önerilmediğini
-          yazıyor <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={4} />.
+          Etki küçük, belirsizlik büyük. Bu tabloyu şöyle özetliyorum: Bazı kadınlarda fark yaratıyor olabilir, çoğunda yaratmıyor ve kimde işe
+          yarayacağını önceden bilemiyoruz. 2023 tarihli uzlaşı bildirisi de hormon tedavisini sıcak basmasında en
+          etkili seçenek olarak görüyor. Soya ürünleri ve soyanın bağırsak ürünü equol ise önerilmiyor
+          <sup><a href="#kaynak-12">[12]</a></sup> <Evidence level={3} />.
         </p>
 
         <h2 id="soya-yonca-keten">Soya, Kırmızı Yonca ve Keten Tohumu: Her Biri Ayrı Dosya</h2>
@@ -200,9 +203,9 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           <strong>Soya.</strong> En çok incelenen bitki bu. Meta-analizlerde küçük bir fark çıkıyor
-          <sup><a href="#kaynak-1">[1]</a></sup> <sup><a href="#kaynak-4">[4]</a></sup>. Buna karşılık menopozdan sonraki
-          ilk beş yıldaki 248 kadında günde 200 mg izoflavon tabletinin iki yılda ne kemik kaybını ne de menopoz
-          yakınmalarını azalttığı görüldü. Soya grubunda sıcak basması ve kabızlık yakınması daha sık bildirildi
+          <sup><a href="#kaynak-1">[1]</a></sup> <sup><a href="#kaynak-4">[4]</a></sup>. Buna karşılık günde 200 mg izoflavon tableti,
+          menopozdan sonraki ilk beş yıldaki 248 kadında iki yılda ne kemik kaybını ne de menopoz
+          yakınmalarını azalttı. Soya grubunda sıcak basması ve kabızlık yakınması daha sık bildirildi
           <sup><a href="#kaynak-6">[6]</a></sup> <Evidence level={3} />.
         </p>
         <p>
@@ -211,7 +214,7 @@ const articleSchemas = buildArticleSchemas({
           −1,95 ile 0,10) <sup><a href="#kaynak-2">[2]</a></sup>. Kanıt sınırlı <Evidence level={2} />.
         </p>
         <p>
-          <strong>Keten tohumu.</strong> En bilinen randomize çalışmada postmenopozal 188 kadın altı hafta boyunca
+          <strong>Keten tohumu.</strong> En bilinen randomize çalışmada postmenopozal 188 kadın (bir kısmının meme kanseri öyküsü vardı) altı hafta boyunca
           günde bir keten barı (410 mg lignan) ya da plasebo barı yedi. Sıcak basması skoru keten grubunda 4,9,
           plasebo grubunda 3,5 azaldı; fark anlamlı değildi (p = 0,29). Her iki grupta kadınların üçte birinden
           fazlası yüzde 50 azalma bildirdi <sup><a href="#kaynak-5">[5]</a></sup> <Evidence level={2} />. Bu çalışma
@@ -221,12 +224,12 @@ const articleSchemas = buildArticleSchemas({
           Daha yüksek izoflavon miktarının daha iyi sonuç verdiğine dair güçlü kanıt yok. Cochrane derlemesi,
           çalışmalar arasındaki sonuç farkının izoflavon miktarıyla açıklanamadığını belirtiyor
           <sup><a href="#kaynak-2">[2]</a></sup>. Aynı derlemede günde 30 mg’ın üzerinde genistein (bir izoflavon)
-          içeren ekstraktlarla yapılan dört çalışmada azalma tutarlıydı; ancak bu çalışmalar birleştirilmedi ve
+          içeren ekstraktlarla yapılan dört çalışmada azalma tutarlıydı. Ancak bu çalışmalar birleştirilmedi ve
           yazarlar konunun daha fazla araştırılması gerektiğini söylüyor <sup><a href="#kaynak-2">[2]</a></sup>.
           Bu işaret, yoğun bir kapsülün daha iyi sonuç vereceği anlamına gelmez; doz önerisi de değildir.
         </p>
 
-        <h2 id="diger-vaatler">Kemik, Cinsel Yaşam ve Ruh Hali: Vaat Ne, Kanıt Ne?</h2>
+        <h2 id="diger-vaatler">Kemik, Cinsel Yaşam ve Ruh Hali: Vaat ile Kanıt</h2>
         <p>
           Sıcak basması dışında fitoestrojenlere yüklenen anlamlar çoğaldıkça kanıt inceliyor.
         </p>
@@ -251,29 +254,29 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="guvenlik">Meme, Rahim ve Tiroid: Güvenlik Soruları</h2>
         <p>
-          Bu bölümde mizah yok. Soruların çoğu doğrudan meme kanseri korkusundan geliyor ve cevabı ikiye bölmek gerekiyor.
+          Bu soruların çoğu meme kanseri korkusundan geliyor ve bunu anlıyorum. Önce şunu söyleyeyim: Besin ile ekstrakt için yanıt ayrı.
         </p>
         <p>
-          <strong>Meme.</strong> Meme kanseri tanısı almış 9.514 kadını (ABD ve Çin kohortları) izleyen bir analizde
-          günde 10 mg ve üzeri izoflavon alanlarda nüks riski yüzde 25 daha düşüktü (HR 0,75). Ölüm riskinde azalma
+          <strong>Meme.</strong> Meme kanseri tanısı almış 9.514 kadın (ABD ve Çin kohortları) izlendi.
+          Günde 10 mg ve üzeri izoflavon alanlarda nüks riski yüzde 25 daha düşüktü (risk oranı 0,75). Ölüm riskinde azalma
           istatistiksel olarak anlamlı değildi. Bu bir gözlemsel çalışma: soyanın nüksü azalttığını kanıtlamaz, ama
-          besin olarak soyanın nüksü artırmadığını gösteren güçlü bir sinyaldir
+          besin olarak soyanın nüksü artırmadığını gösteren rahatlatıcı bir sinyaldir
           <sup><a href="#kaynak-9">[9]</a></sup> <Evidence level={3} />. Aynı güvence kapsül ve ekstrakt için
-          verilemez; onlar için çalışma yok denecek kadar az.
+          verilemez; bu analiz onları değerlendirmedi.
         </p>
         <p>
           <strong>Rahim içi zarı.</strong> Cochrane derlemesi iki yıla kadar kullanımda endometriyum ya da vajinada
           östrojen uyarımı göstermedi <sup><a href="#kaynak-2">[2]</a></sup>. Daha uzun bir çalışmada, rahmi olan 376
-          kadında beş yıl boyunca günde 150 mg soya izoflavonu verildi. Kanser saptanmadı; ancak endometriyum
-          hiperplazisi (rahim iç zarında kalınlaşma) soya grubunda yüzde 3,37, plasebo grubunda yüzde 0 görüldü ve
+          kadında beş yıl boyunca günde 150 mg soya izoflavonu verildi. Kanser saptanmadı. Ancak endometriyum
+          hiperplazisi (rahim iç zarında kalınlaşma) soya grubunda yüzde 3,37, plasebo grubunda yüzde 0 görüldü;
           yazarlar uzun vadeli güvenliği sorguladı <sup><a href="#kaynak-10">[10]</a></sup>
-          <Evidence level={3} />. Uzun süreli ekstrakt kullanımında rahim iç zarının izlenmesi gerekebilir.
+          <Evidence level={3} />. Uzun süreli ekstrakt düşünüyorsanız rahim iç zarının izlenmesini hekiminizle konuşun.
         </p>
         <p>
           <strong>Tiroid.</strong> 14 çalışmayı değerlendiren derleme, tiroid hastalığı olmayan ve yeterli iyot alan
           kişilerde soyanın tiroid işlevini bozduğuna dair az kanıt buldu. Hipotiroidi (tiroid yetersizliği) tedavisi
-          görenlerde ise soya, hormon ilacının emilimini azaltabilir ve gereken dozu artırabilir. Yine de bu hastaların
-          soyadan tamamen kaçınması gerekmiyor <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={3} />.
+          görenlerde ise soya, hormon ilacının emilimini azaltabilir ve gereken dozu artırabilir. Bu hastaların
+          soyadan tamamen kaçınması gerekmiyor; iyot alımının yeterli olması önemli <sup><a href="#kaynak-11">[11]</a></sup> <Evidence level={3} />.
           İlacınızı soyalı öğünlerle nasıl zamanlayacağınızı hekiminize ya da eczacınıza sorun.
         </p>
         <RedFlagBox
@@ -283,21 +286,22 @@ const articleSchemas = buildArticleSchemas({
             'Meme kanseri, rahim kanseri veya östrojene duyarlı başka bir hastalık öykünüz varsa',
             'Rahminiz yerindeyse ve ekstraktı uzun süre kullanmayı düşünüyorsanız',
             'Tiroid ilacı kullanıyorsanız',
-            'Hormon tedavisi, kan sulandırıcı veya başka düzenli ilaçlar kullanıyorsanız',
+            'Tamoksifen veya aromataz inhibitörü gibi bir meme kanseri ilacı kullanıyorsanız',
+            'Hormon tedavisi veya başka düzenli ilaçlar kullanıyorsanız',
             'Menopoz sonrası kanama, tanı konmamış kasık ağrısı veya açıklanamayan yeni yakınmanız varsa',
           ]}
           footnote="Görüşmeye kullandığınız ilaç, takviye ve baharat ürünlerinin listesini götürün."
         />
 
-        <h2 id="besin-ve-ekstrakt">Besin mi, Ekstrakt mı?</h2>
+        <h2 id="besin-ve-ekstrakt">Besin ile Ekstrakt Ayrı Karardır</h2>
         <p>
           Besin olarak soya ile kapsül arasındaki fark yalnızca miligram değildir.
         </p>
         <p>
           Soyalı yiyecek bir bütündür: protein, lif ve izoflavon birlikte gelir. Menopoz dışında da beslenme düzenine
           uyar. Güvenlik verisi de bu yönde daha rahatlatıcı (meme kanseri öyküsü olan kadınlarda bile)
-          <sup><a href="#kaynak-9">[9]</a></sup>. Ekstrakt ve tabletlerde miktar yükselir, içerik ürüne göre değişir
-          ve uzun vadeli veri sınırlıdır <sup><a href="#kaynak-10">[10]</a></sup>.
+          <sup><a href="#kaynak-9">[9]</a></sup>. Ekstrakt ve tabletlerde izoflavon miktarı besinlerden yüksek olabilir;
+          uzun vadeli veri sınırlıdır <sup><a href="#kaynak-10">[10]</a></sup>.
         </p>
         <p>
           Etikette ürünün ne kadar izoflavon içerdiğini aramak makul. Ürünün “işe yarayacağına” söz veren hiçbir
@@ -310,7 +314,7 @@ const articleSchemas = buildArticleSchemas({
           Bu soruyu duyduğumda önce şunu sorarım: Sıcak basması günlük yaşamınızı ne kadar bozuyor?
         </p>
         <p>
-          Yanıt “ara sıra rahatsız ediyor” ise soyalı bir beslenme düzenini denemek zarar vermez; bir ay boyunca
+          Yanıt “ara sıra rahatsız ediyor” ise soyalı bir beslenme düzenini denemek makul bir adım; bir ay boyunca
           sıcak basması sayınızı not edin. Fark yoksa devam etmenin gerekçesi kalmaz. Plasebo etkisi güçlü olduğu için
           bu notu tutmak, hissettiğiniz ile ölçtüğünüz arasındaki mesafeyi görmenize yardım eder.
         </p>
@@ -321,8 +325,8 @@ const articleSchemas = buildArticleSchemas({
           kimin için uygun olduğuna yaşınız, menopozdan geçen süre ve öykünüz birlikte karar verir.
         </p>
         <p>
-          Meme kanseri öykünüz varsa sorunun yönü değişir: Besin olarak soya için sinyal rahatlatıcı, ekstrakt için
-          sinyal yok. Bu durumda onkoloğunuzla konuşmadan ekstrakt başlamamanızı isterim.
+          Meme kanseri öykünüz varsa sorunun yönü değişir: Besin olarak soya için sinyal rahatlatıcı; ekstrakt için
+          böyle bir veri yok. Bu durumda onkoloğunuzla konuşmadan ekstrakt başlamamanızı isterim.
         </p>
         <p>
           Muayene odasında sık duyduğum bir cümle var: “Doğal olduğu için zararı olmaz, değil mi?” Doğal bir ürünün
@@ -342,7 +346,7 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="kapanis">Rafa Dönerken</h2>
         <p>
           Mutfaktaki keten tohumu poşeti çorbaya, yoğurda ya da ekmeğe girebilir; lifli bir beslenme düzeninin güzel bir
-          parçasıdır. Ancak gece uyandıran bir sıcak basmasını tek başına çözeceğini düşünmeyin.
+          parçasıdır. Ancak gece uyandıran bir sıcak basmasını tek başına gidereceğini düşünmeyin.
         </p>
         <p>
           Fitoestrojenler küçük bir fark yaratabilir, çoğu kadında yaratmayabilir ve kime yarayacağını önceden

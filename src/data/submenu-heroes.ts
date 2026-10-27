@@ -315,7 +315,7 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   },
   '/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/': {
     src: '/images/library/editorial/zy-fitoestrojenler-menopoz.webp',
-    alt: 'Güneşli bir mutfak tezgâhında yoğurt kasesine keten tohumu serpen, keten gömlekli ve gülümseyen kadın; yanında soya, nohut ve otlar.',
+    alt: 'Güneşli bir mutfak tezgâhında yoğurt kasesine keten tohumu serpen, keten gömlekli ve gülümseyen kadın; yanında soya, nohut ve otlar; yapay zekâ ile üretilmiş temsili görsel.',
   },
   '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/': {
     src: '/images/library/editorial/zy-peptid-kullanimlari-menopoz.webp',
