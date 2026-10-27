@@ -158,8 +158,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/',
     writerSlug: 'ersin-sarac',
-    approvedAt: '2026-05-07',
-    note: 'Ersin Saraç author approval received from icerik/yazar-onaylari/ersin-sarac/onaylanan/2026-05-07_belden-gelen-agri-kasik-genital-bolge paketi. Onaylanan taslak temiz UTF-8 yayın kopyasına çevrilip canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı. 2026-10-14 revizyon 9 (commit e94acaf9, audit ve humanizasyon): yazar onayı KC bildirimiyle alındı (sohbet; form JSON yanıtı yok). Tıbbi onay Doç. Dr. Senai Aksoy tarafından 2026-10-14 tarihinde verildi. Yayın için dal birleştirme ayrıca beklemededir.',
+    approvedAt: '2026-10-27',
+    note: 'BAŞLIK TURU 27 Ekim 2026: CLAUDE.md sıcaklık katmanı (soru başlıklı H2 en fazla 1) gereği KC (Doç. Dr. Senai Aksoy) bu sohbette fazla soru başlıklarının bildirimsel yapılmasını talimatla istedi (“yap”). Kapsam yalnızca H2 ve içindekiler etiketi: “Kasıkta Nasıl Konuşur?”, “Neden Bu Kadar Kolay Karışır?”, “Hangi İşaretler…Düşündürür?”, “Hangi Sorular Öne Çıkar?”, “Evde Neyi Zorlamamak…?” başlıkları bildirimsel yapıldı (6 soru başlıktan 1’e iner; tutulan: “Hangi Durumlarda Beklememek Gerekir?”). Anchor kimlikleri, gövde, klinik cümleler, SSS, Evidence ve kaynaklar değişmedi. KC, Ersin Saraç yazar onayını ve tıbbi onayı bu sohbette sözlü bildirdi (“başlık değişiklikleri yazar ve tıbbi onaylı”, 27 Ekim 2026; yazılı not yok) ve kayıt/push talimatı verdi. ÖNCEKİ KAYITLAR: Ersin Saraç author approval received from icerik/yazar-onaylari/ersin-sarac/onaylanan/2026-05-07_belden-gelen-agri-kasik-genital-bolge paketi. Onaylanan taslak temiz UTF-8 yayın kopyasına çevrilip canlı rota, FAQ schema ve static manifest ile üretim envanterine alındı. 2026-10-14 revizyon 9 (commit e94acaf9, audit ve humanizasyon): yazar onayı KC bildirimiyle alındı (sohbet; form JSON yanıtı yok). Tıbbi onay Doç. Dr. Senai Aksoy tarafından 2026-10-14 tarihinde verildi. Yayın için dal birleştirme ayrıca beklemededir.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/dokuz-yillik-menopoz-sonunda-hrt-karari/',

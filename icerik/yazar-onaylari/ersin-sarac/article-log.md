@@ -59,3 +59,5 @@
 - Ersin'in iki katkısı (`yazar-katkisi.json`, `yazar-katkisi-2.json`) makalede birinci tekil kullanıldı ve onay kapsamında. Ayrı `katkiAktarimi` yanıtı alınmadı.
 - Stil sinyali (profil değişikliği önerisi, editör onayı bekler): klinisyen birinci tekil sesi bu makalede onaylandı. Gerçek görüşme sorusu olarak "Pantolonunuzu ayakta, bir yere tutunmadan giyebiliyor musunuz?" Ersin'e ait bir sahne; ileride `experience_seeds` için aday, aynı makale dışında tekrar kullanılmamalı.
 - Tıbbi inceleme bekleniyor. Canlı rota, `article-approvals.ts`, ortak FAQ ve manifest değiştirilmedi; paket henüz `onaylanan/` altına taşınmadı.
+
+- Soru başlıklı H2 sadeleştirme — belden gelen ağrı, kasık, genital bölge (2026-10-27): main’de sayımda 6 soru başlıklı H2 vardı (CLAUDE.md sınırı: en fazla 1). KC talimatıyla (“yap”) beşi bildirimsel yapıldı; ‘Hangi Durumlarda Beklememek Gerekir?’ okurun gerçek sorusu olduğu için tutuldu. Anchor’lar korundu, gövde ve klinik cümleler değişmedi. KC sözlü bildirim 2026-10-27: Ersin Saraç yazar onayı ve tıbbi onay tamam (“başlık değişiklikleri yazar ve tıbbi onaylı”; yazılı not yok). Commit/push talimatı verildi; merge KC’de.
