@@ -313,6 +313,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/zy-magnezyum-menopoz.webp',
     alt: 'Aydınlık bir iç mekânda elinde su şişesi, omzunda çanta ve paltoyla duran bir kadın.',
   },
+  '/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/': {
+    src: '/images/library/editorial/zy-fitoestrojenler-menopoz.webp',
+    alt: 'Güneşli bir mutfak tezgâhında yoğurt kasesine keten tohumu serpen, keten gömlekli ve gülümseyen kadın; yanında soya, nohut ve otlar.',
+  },
   '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/': {
     src: '/images/library/editorial/zy-peptid-kullanimlari-menopoz.webp',
     alt: 'Şehir manzaralı geniş pencerenin önünde eli çenesinde düşünen bordo hırkalı bir kadın.',
