@@ -34,7 +34,7 @@ const tocEntries = [
   { id: 'karar', label: 'Denemeyi Düşünüyorsanız Nereden Başlamalı?' },
   { id: 'acik-sorular', label: 'Menopoz ve Bilinmeyenler — Açık Kalan Biyoloji Soruları' },
   { id: 'kapanis', label: 'Kapanış — Hücrede Önemli, Klinikte Açık Soru' },
-  { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
+  { id: 'kaynaklar', label: 'Kaynaklar', numbered: false },
   { id: 'sss', label: "Dr. Aksoy'a sorular", numbered: false },
 ];
 
@@ -90,7 +90,7 @@ const articleSchemas = buildArticleSchemas({
         medicalReviewer="Dr. Alper Mumcu"
         readingMinutes={12}
         imageSrc="/images/library/editorial/nad-plus-hucresel-yaslanma-byline.webp"
-        imageAlt="Cam tavanlı kış bahçesinde beyaz hasır koltukta oturup gülümseyerek çay içen olgun kadın"
+        imageAlt="Cam tavanlı kış bahçesinde beyaz hasır koltukta oturan, elinde çay bardağıyla sakin bir ifadeyle uzağa bakan olgun kadın"
       />
 
       <div class="flex flex-wrap items-center justify-end gap-3">
@@ -120,7 +120,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           NAD+ (nikotinamid adenin dinükleotid), hücrenin enerji üretiminde ve onarım yollarında
           merkezi rol oynayan bir koenzimdir; enzimlerin çalışması için gereken yardımcı bir
-          moleküldür <Evidence level={5} />.<sup><a href="#kaynak-1">[1]</a></sup> Hücrenin enerji santrali olan mitokondride elektron
+          moleküldür <Evidence level={5} />.<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup> Hücrenin enerji santrali olan mitokondride elektron
           taşıma zincirine katılır. DNA hasarına yanıt veren bazı enzimlere hammadde (substrat)
           olur. Sirtuin denen enzim ailesinin çalışması için de gereklidir.
         </p>
@@ -135,11 +135,11 @@ const articleSchemas = buildArticleSchemas({
           NAD+ hikâyesi alt basamaklarda sağlam. Yukarı çıktıkça inceliyor.
         </p>
         <ol>
-          <li><strong>Hücre:</strong> NAD+'ın enerji üretimindeki ve onarımdaki rolü iyi biliniyor.<sup><a href="#kaynak-1">[1]</a></sup></li>
-          <li><strong>Hayvan:</strong> Yaşlı farelerde öncüllerle olumlu sinyaller var; ömür ise uzamadı.<sup><a href="#kaynak-13">[13]</a></sup></li>
-          <li><strong>İnsanda kan değeri:</strong> NMN ve NR kandaki NAD+'ı yükseltiyor <Evidence level={4} />. Kandaki değerin her dokuyu temsil ettiği ise belli değil.<sup><a href="#kaynak-2">[2]</a></sup></li>
-          <li><strong>İnsanda işlev:</strong> Kas, metabolizma ve düşünme testlerinde sonuçlar çoğunlukla değişmiyor.<sup><a href="#kaynak-3">[3]</a> <a href="#kaynak-5">[5]</a> <a href="#kaynak-14">[14]</a></sup></li>
-          <li><strong>İnsanda güvenlik:</strong> Bir yıla kadar veri var. Yıllar süren kullanımı bilmiyoruz.<sup><a href="#kaynak-6">[6]</a> <a href="#kaynak-14">[14]</a></sup></li>
+          <li><strong>Hücre:</strong> NAD+'ın enerji üretimindeki ve onarımdaki rolü iyi biliniyor.<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup></li>
+          <li><strong>Hayvan:</strong> Yaşlı farelerde öncüllerle olumlu sinyaller var; ömür ise uzamadı.<sup><a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup></li>
+          <li><strong>İnsanda kan değeri:</strong> NMN ve NR kandaki NAD+'ı yükseltiyor <Evidence level={4} />. Kandaki değerin her dokuyu temsil ettiği ise belli değil.<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup></li>
+          <li><strong>İnsanda işlev:</strong> Kas, metabolizma ve düşünme testlerinde sonuçlar çoğunlukla değişmiyor.<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a> <a href="#kaynak-5" class="text-primary hover:underline">[5]</a> <a href="#kaynak-14" class="text-primary hover:underline">[14]</a></sup></li>
+          <li><strong>İnsanda güvenlik:</strong> Bir yıla kadar veri var. Yıllar süren kullanımı bilmiyoruz.<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a> <a href="#kaynak-14" class="text-primary hover:underline">[14]</a></sup></li>
           <li><strong>Ömür ve hastalık:</strong> İnsanda veri yok.</li>
         </ol>
         <p>
@@ -154,17 +154,17 @@ const articleSchemas = buildArticleSchemas({
           sağlığınıza ölçülebilir bir katkı yapıyor mu?
         </p>
         <p>
-          Tartışmanın üç ana kapısı var: sirtuinler, PARP enzimleri ve CD38 <Evidence level={4} />.<sup><a href="#kaynak-1">[1]</a></sup>
+          Tartışmanın üç ana kapısı var: sirtuinler, PARP enzimleri ve CD38 <Evidence level={4} />.<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>
           Sirtuinler metabolizmayla ve genlerin açılıp kapanmasını düzenleyen epigenetik
           mekanizmalarla ilişkilidir. PARP enzimleri DNA hasarına yanıt verirken NAD+ kullanır.
           CD38 ise NAD+ tüketen bir enzimdir; yaşlanma ve düşük düzeyli enflamasyon
           tartışmalarında sık anılır.
         </p>
         <p>
-          Bu mekanizma hattı hayvan çalışmalarında etkileyici sonuçlar verdi.<sup><a href="#kaynak-1">[1]</a></sup>
+          Bu mekanizma hattı hayvan çalışmalarında etkileyici sonuçlar verdi.<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>
           Yaşlı farelerde NAD+ öncülleriyle mitokondri, kas, metabolizma ve üreme hücresi
           kalitesinde olumlu sinyaller görüldü. Yine de ömür sorusu farelerde standart koşullarda
-          sınandığında NR, iki cinsiyette de yaşam süresini uzatmadı.<sup><a href="#kaynak-13">[13]</a></sup> Klinik faydayı ise insan çalışmalarındaki somut
+          sınandığında NR, iki cinsiyette de yaşam süresini uzatmadı.<sup><a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup> Klinik faydayı ise insan çalışmalarındaki somut
           sonuçlardan anlarız: daha az hastalık, daha iyi işlev, uzun süreli kullanımda güvenlik
           ve daha iyi yaşam kalitesi. NAD+ alanında bu sonuçların çoğu hâlâ erken aşamada.
         </p>
@@ -176,14 +176,14 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Kemirgen (fare ve sıçan) çalışmalarında yaşla birlikte dokulardaki NAD+ düzeyinin
-          azaldığını gösteren veri güçlü.<sup><a href="#kaynak-1">[1]</a></sup> İnsanda da cilt, kas ve bazı
+          azaldığını gösteren veri güçlü.<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup> İnsanda da cilt, kas ve bazı
           dokularda düşüş sinyali görülebiliyor. Kandaki NAD+ ise, özellikle ölçüm yöntemi iyi
-          standardize edildiğinde, yaşla her zaman belirgin biçimde düşmeyebilir <Evidence level={3} />.<sup><a href="#kaynak-2">[2]</a></sup>
+          standardize edildiğinde, yaşla her zaman belirgin biçimde düşmeyebilir <Evidence level={3} />.<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>
         </p>
         <p>
           2026'da yayımlanan geniş bir insan çalışmasında aynı kişiler zaman içinde izlendi. Tam
           kandaki NAD+ düzeyi, yaş ilerlese de ve bazı yaşam tarzı değişikliklerinden sonra da
-          beklenenden daha sabit kalabildi <Evidence level={3} />.<sup><a href="#kaynak-2">[2]</a></sup> Aynı
+          beklenenden daha sabit kalabildi <Evidence level={3} />.<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup> Aynı
           çalışma, NR verildiğinde kandaki NAD+'ın arttığını da doğruladı. Kan değeri her zaman iyi
           bir yaşlanma saati olmayabilir; takviyeye yanıt olarak yine de yükselebilir. Size böyle
           bir sayı verildiğinde, o sayının hangi dokuyu temsil ettiğini sorun.
@@ -198,12 +198,12 @@ const articleSchemas = buildArticleSchemas({
           NMN ile 250-2000 mg/gün aralığında dozlarla kısa süreli denemeler yapıldı. Genel tabloda
           kandaki NAD+ artışı gösterilebiliyor. Kan şekeri (glukoz), insülin, kan yağları
           (lipitler), vücut kompozisyonu ve kas işlevi gibi alanlarda ise sonuçlar küçük,
-          çalışmadan çalışmaya değişen ve tutarsız <Evidence from={2} to={3} />.<sup><a href="#kaynak-3">[3]</a></sup> <sup><a href="#kaynak-4">[4]</a></sup> <sup><a href="#kaynak-5">[5]</a></sup>
+          çalışmadan çalışmaya değişen ve tutarsız <Evidence from={2} to={3} />.<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup> <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup> <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>
         </p>
         <p>
           NR için de benzer bir ayrım var. Kısa vadeli insan çalışmalarında NAD+ metabolomunda
           (NAD+ ile ilişkili moleküllerin bütünü) artış görülüyor ve NR genel olarak iyi tolere
-          ediliyor <Evidence level={3} />.<sup><a href="#kaynak-7">[7]</a></sup> Kan basıncı, enflamasyon, kas dokusu ve sinir sistemiyle
+          ediliyor <Evidence level={3} />.<sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup> Kan basıncı, enflamasyon, kas dokusu ve sinir sistemiyle
           ilgili alanlarda bazı sinyaller de var. Bunlar henüz herkese önerilecek bir klinik
           uygulamaya dönüşecek büyüklükte değil. Menopoz döneminde birini diğerine tercih etmemi
           gerektirecek güçlü bir klinik neden bugün yok.
@@ -211,7 +211,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Makul görünen bir mekanizma ile sağlık kazancı arasındaki mesafe en net 2026'da göründü. Erken evre
           Parkinson hastalığı olan 410 kişi bir yıl boyunca NR ya da plasebo aldı. NR yarar
-          sağlamadı; hastalık skoru plasebo grubuna göre biraz daha fazla kötüleşti <Evidence level={4} />.<sup><a href="#kaynak-14">[14]</a></sup>
+          sağlamadı; hastalık skoru plasebo grubuna göre biraz daha fazla kötüleşti <Evidence level={4} />.<sup><a href="#kaynak-14" class="text-primary hover:underline">[14]</a></sup>
           Fark, çalışmanın klinik olarak önemli saydığı eşiğin altında kaldı. Sonuç sağlıklı
           kadınlara doğrudan taşınamaz; yine de makul görünen bir mekanizmanın hastalarda klinik yarara
           dönüşmediğini büyük bir çalışmada gösteriyor. Çalışmanın ayrıntılarını ve diğer insan çalışmalarını
@@ -240,10 +240,10 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Fare çalışmalarında NMN ile yaşa bağlı yumurta kalitesi ve üreme kapasitesi üzerine
-          olumlu sonuçlar bildirildi.<sup><a href="#kaynak-8">[8]</a></sup> Fare yumurtalığı ile insan
+          olumlu sonuçlar bildirildi.<sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup> Fare yumurtalığı ile insan
           doğurganlığı aynı klinik düzlemde durmuyor. İnsan tarafında elimizdeki veri büyük ölçüde
           laboratuvar düzeyinde: insandan alınmış olgunlaşmamış yumurta hücrelerinin kültür
-          ortamında NMN ile incelendiği çalışmalar var.<sup><a href="#kaynak-9">[9]</a></sup> Bunlar biyolojik bir
+          ortamında NMN ile incelendiği çalışmalar var.<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup> Bunlar biyolojik bir
           olasılığı gösterir; ağızdan NMN alan bir kadında gebelik veya canlı doğum şansının
           arttığını göstermez.
         </p>
@@ -251,9 +251,9 @@ const articleSchemas = buildArticleSchemas({
           Ekim 2026 itibarıyla, kadınlara NMN veya NR verilerek gebelik ya da canlı doğum
           sonucunda belirgin artış gösteren tamamlanmış, hakemli ve randomize bir insan çalışması
           yok <Evidence level={2} />. 2025 tarihli sistematik bir derleme de yumurta kalitesi verisinin
-          hayvan ve laboratuvar düzeyinde kaldığını bildirdi.<sup><a href="#kaynak-15">[15]</a></sup> Düşük
+          hayvan ve laboratuvar düzeyinde kaldığını bildirdi.<sup><a href="#kaynak-15" class="text-primary hover:underline">[15]</a></sup> Düşük
           yumurtalık rezervi olan kadınlarda NMN'yi plaseboyla karşılaştıran bir çalışma kayıtlı; sonucu
-          henüz yayımlanmadı.<sup><a href="#kaynak-16">[16]</a></sup> Gebelik planlıyorsanız bu konuyu takviyeye başlamadan önce
+          henüz yayımlanmadı.<sup><a href="#kaynak-16" class="text-primary hover:underline">[16]</a></sup> Gebelik planlıyorsanız bu konuyu takviyeye başlamadan önce
           kadın hastalıkları ve doğum uzmanınızla konuşun.
         </p>
 
@@ -264,8 +264,8 @@ const articleSchemas = buildArticleSchemas({
           vermez.
         </p>
         <p>
-          Mevcut çalışmalarda ciddi yan etki sinyali az <Evidence level={3} />.<sup><a href="#kaynak-6">[6]</a></sup> Uzun dönem veri ise
-          sınırlı: en uzun kontrollü çalışma bir yıl sürdü ve Parkinson hastalarında yapıldı.<sup><a href="#kaynak-14">[14]</a></sup> "Ben kullandım, bir şey olmadı" deneyimi, toplum düzeyindeki güvenlik verisinin
+          Mevcut çalışmalarda ciddi yan etki sinyali az <Evidence level={3} />.<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup> Uzun dönem veri ise
+          sınırlı: en uzun kontrollü çalışma bir yıl sürdü ve Parkinson hastalarında yapıldı.<sup><a href="#kaynak-14" class="text-primary hover:underline">[14]</a></sup> "Ben kullandım, bir şey olmadı" deneyimi, toplum düzeyindeki güvenlik verisinin
           yerini tutmaz. Kanser öyküsü varsa konuyu kapatmam; önermek konusunda ise temkinliyim.
           Özellikle hormon duyarlı kanser, yakın zamanda tamamlanmış tedavi veya yüksek nüks riski
           varsa NAD+ takviyesini önermem; önce takip eden onkoloğunuzu dinlemenizi isterim. Aktif
@@ -276,15 +276,15 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Yasal durum da sabit değil. ABD'de NMN'nin takviye tanımı içindeki yeri 2022'de
           tartışmalı hâle geldi; 29 Eylül 2025 tarihli yeni bir kararla yeniden takviye çerçevesinde
-          değerlendirilebilir oldu.<sup><a href="#kaynak-11">[11]</a></sup> Avrupa'da ise Mayıs 2026'da, gebe ve emziren kadınlar dışındaki
-          yetişkinler için belirli bir günlük üst sınırla olumlu bir güvenlik görüşü verildi.<sup><a href="#kaynak-10">[10]</a></sup> Bu bir güvenlik değerlendirmesidir;
+          değerlendirilebilir oldu.<sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a></sup> Avrupa'da ise Mayıs 2026'da, gebe ve emziren kadınlar dışındaki
+          yetişkinler için belirli bir günlük üst sınırla olumlu bir güvenlik görüşü verildi.<sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup> Bu bir güvenlik değerlendirmesidir;
           nihai ve genel bir pazar onayı ayrı bir aşamadır.
         </p>
         <p>
           Türkiye'de yasal sınır, çalışmalarda kullanılan miktarların altında. Bakanlığın 21 Ekim
           2026 tarihli listesine göre takviye edici gıdalarda NMN günde en fazla 50 mg, NR günde en
-          fazla 300 mg kullanılabiliyor.<sup><a href="#kaynak-17">[17]</a></sup> TİTCK'nin 23 Ekim 2026
-          tarihli listesine göre NAD+ içeren ruhsatlı bir ilaç da yok.<sup><a href="#kaynak-18">[18]</a></sup>
+          fazla 300 mg kullanılabiliyor.<sup><a href="#kaynak-17" class="text-primary hover:underline">[17]</a></sup> TİTCK'nin 23 Ekim 2026
+          tarihli listesine göre NAD+ içeren ruhsatlı bir ilaç da yok.<sup><a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup>
           Bu sınırları ve damardan uygulanan NAD+ serumlarını <a href="/zamansiz-yasam/deneysel/nad-plus-takviyesi/#urun-serum" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">NAD+ takviyesi yazısında</a>
           ayrıntılı anlattık.
         </p>
@@ -296,7 +296,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Bağımsız ve sektör kaynaklı analizlerde, çevrimiçi satılan bazı NMN ve NAD+ ürünlerinin
-          etiketindeki iddia ile içeriği arasında ciddi uyumsuzluklar bildirildi <Evidence level={3} />.<sup><a href="#kaynak-12">[12]</a></sup>
+          etiketindeki iddia ile içeriği arasında ciddi uyumsuzluklar bildirildi <Evidence level={3} />.<sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup>
           Bazı ürünlerde iddia edilen miktarın çok azı bulundu, bazılarında hedef bileşik hiç
           saptanmadı. Bu yüzden "hangi molekül?" sorusunun önüne "hangi kalite?" sorusu geçiyor.
         </p>
@@ -338,11 +338,11 @@ const articleSchemas = buildArticleSchemas({
           Biyolojinin en ilginç soruları hâlâ açık; menopoz için ise elimizdeki insan verisi çok az.
         </p>
         <p>
-          İlk soru şu: Yaşla görülen NAD+ düşüşü yaşlanmanın nedeni mi, sonucu mu?<sup><a href="#kaynak-1">[1]</a></sup>
+          İlk soru şu: Yaşla görülen NAD+ düşüşü yaşlanmanın nedeni mi, sonucu mu?<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup>
           Düşüş yaşlanmanın nedeniyse, eksileni yerine koymak anlamlı olabilir. Sonucuysa, düzeyi
           yükseltmek alttaki süreci değiştirmeyebilir. İkinci soru, kandaki değerin kasta, yumurtalıkta ya da beyinde olanı ne
-          kadar yansıttığı.<sup><a href="#kaynak-2">[2]</a></sup> Ölçüm yöntemi de laboratuvardan
-          laboratuvara değişiyor; bunu standart hâle getirmeyi amaçlayan bir çalışma sürüyor.<sup><a href="#kaynak-19">[19]</a></sup>
+          kadar yansıttığı.<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup> Ölçüm yöntemi de laboratuvardan
+          laboratuvara değişiyor; bunu standart hâle getirmeyi amaçlayan bir çalışma sürüyor.<sup><a href="#kaynak-19" class="text-primary hover:underline">[19]</a></sup>
         </p>
         <p>
           Menopoza özel veri küçük çalışmalardan oluşuyor. Hormon tedavisiyle birlikte
@@ -361,71 +361,122 @@ const articleSchemas = buildArticleSchemas({
           yaratabilecek bir durum var mı? Hangi hedefi takip edeceğiz? Bu deneme, kanıtlı
           alışkanlıkların yerine mi geçiyor, yanına mı ekleniyor?
         </p>
-        <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
-        <p>
+      </ArticleProsePanel>
+
+      <ArticleProsePanel class="mt-10 prose-estranova-references">
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <p class="text-sm text-ink/70">
           NAD+ biyolojisi, insan çalışmaları, doğurganlık verisi, güvenlik ve düzenleyici durumla ilgili
           iddialar aşağıdaki derleme, çalışma ve resmî değerlendirmeler üzerinden gözden geçirildi. Kaynak
           taraması: 26 Ekim 2026.
         </p>
-        <p>27 Ekim 2026: Kanıt merdiveni ile menopoz ve bilinmeyenler bölümü eklendi; Parkinson çalışması, Türkiye'deki yasal sınırlar ve doğurganlık çalışmalarının durumu güncellendi; hayvan ve laboratuvar verisine dayanan kanıt etiketleri kaldırıldı; bir geçiş cümlesindeki yazım hatası ve Parkinson çalışmasının sonucunu aktaran bir cümle düzeltildi; deneme süresi ve iki kaynak künyesi NAD+ takviyesi yazısıyla aynı hâle getirildi. "Denemeyi Düşünüyorsanız Nereden Başlamalı?" bölümü kısaltıldı: deneme planı, bırakma ölçütü ve ateş basması ile uyku sırası NAD+ takviyesi yazısına ve "Dr. Aksoy'a sorular" yanıtlarına bırakıldı.</p>
-        <p>28 Eylül 2026: Anlatım düzenlendi; yazarın konuya özgü iki yanıtı eklendi; kaynak bölümü eklendi.</p>
-        <ol>
+        <p class="text-sm text-ink/70">27 Ekim 2026: Kanıt merdiveni ile menopoz ve bilinmeyenler bölümü eklendi; Parkinson çalışması, Türkiye'deki yasal sınırlar ve doğurganlık çalışmalarının durumu güncellendi; hayvan ve laboratuvar verisine dayanan kanıt etiketleri kaldırıldı; bir geçiş cümlesindeki yazım hatası ve Parkinson çalışmasının sonucunu aktaran bir cümle düzeltildi; deneme süresi ve iki kaynak künyesi NAD+ takviyesi yazısıyla aynı hâle getirildi. "Denemeyi Düşünüyorsanız Nereden Başlamalı?" bölümü kısaltıldı: deneme planı, bırakma ölçütü ve ateş basması ile uyku sırası NAD+ takviyesi yazısına ve "Dr. Aksoy'a sorular" yanıtlarına bırakıldı.</p>
+        <p class="text-sm text-ink/70">28 Eylül 2026: Anlatım düzenlendi; yazarın konuya özgü iki yanıtı eklendi; kaynak bölümü eklendi.</p>
+        <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
           <li id="kaynak-1">
-            Covarrubias AJ ve arkadaşları. <a href="https://doi.org/10.1038/s41580-020-00313-x" rel="noopener noreferrer">NAD+ metabolizması ve yaşlanmada hücresel süreçlerdeki rolü (derleme)</a>. Nat Rev Mol Cell Biol, 2021.
+            Covarrubias AJ et al. "NAD+ metabolism and its roles in cellular processes during ageing."
+            <em>Nat Rev Mol Cell Biol</em>. 2021;22(2):119–141.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33353981/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">33353981</a>
+            <span class="block mt-0.5 text-ink/50">(NAD+ metabolizmasının hücresel onarım, mitokondriyal fonksiyon ve yaşlanma süreçlerindeki rollerine dair derleme.)</span>
           </li>
           <li id="kaynak-2">
-            Trętowicz MM ve arkadaşları. <a href="https://doi.org/10.1038/s42255-026-01537-5" rel="noopener noreferrer">İnsanda tam kan NAD+ düzeyi yaşla ve yaşam tarzı müdahaleleriyle değişmiyor</a>. Nat Metab, 2026.
+            Trętowicz MM et al. "Human whole-blood NAD+ levels do not vary with age or lifestyle interventions."
+            <em>Nat Metab</em>. 2026;8(6):1282–1290.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42135539/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42135539</a>
+            <span class="block mt-0.5 text-ink/50">(Yedi bağımsız insan grubunda tam kan NAD+ düzeyinin yaşla ve yaşam tarzı müdahaleleriyle değişmediğini, nikotinamid ribozid takviyesine ise yanıt verdiğini bildiren çalışma.)</span>
           </li>
           <li id="kaynak-3">
-            Zhang J, Poon ET, Wong SH. <a href="https://doi.org/10.1080/10408398.2024.2387324" rel="noopener noreferrer">Ağızdan NMN takviyesinin glukoz ve lipid metabolizmasına etkisi: randomize çalışmaların meta-analizi</a>. Crit Rev Food Sci Nutr, 2024 (çevrimiçi); 65(22).
+            Zhang J et al. "Efficacy of oral nicotinamide mononucleotide supplementation on glucose and lipid metabolism for adults: a systematic review with meta-analysis on randomized controlled trials."
+            <em>Crit Rev Food Sci Nutr</em>. 2024 (çevrimiçi); 65(22):4382–4400.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39116016/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39116016</a>
+            <span class="block mt-0.5 text-ink/50">(12 çalışmadan 513 katılımcıyı kapsayan analiz; çalışmaların beşinde yüksek yanlılık riski ve yararların abartılmış olabileceği uyarısı.)</span>
           </li>
           <li id="kaynak-4">
-            Chen F ve arkadaşları. <a href="https://doi.org/10.1007/s11892-024-01557-z" rel="noopener noreferrer">NMN'nin yetişkinlerde glukoz ve lipid metabolizmasına etkisi: sistematik derleme ve meta-analiz</a>. Curr Diab Rep, 2024 (çevrimiçi); 25(1):4.
+            Chen F et al. "Effects of Nicotinamide Mononucleotide on Glucose and Lipid Metabolism in Adults: A Systematic Review and Meta-analysis of Randomised Controlled Trials."
+            <em>Curr Diab Rep</em>. 2024 (çevrimiçi); 25(1):4.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39531138/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39531138</a>
+            <span class="block mt-0.5 text-ink/50">(342 orta yaşlı ve yaşlı yetişkini kapsayan sekiz randomize çalışmanın birleşik analizi; katılımcıların %49'u kadın.)</span>
           </li>
           <li id="kaynak-5">
-            Prokopidis K ve arkadaşları. <a href="https://doi.org/10.1002/jcsm.13799" rel="noopener noreferrer">NMN ve NR'nin iskelet kası kütlesi ve işlevine etkisi: sistematik derleme ve meta-analiz</a>. J Cachexia Sarcopenia Muscle, 2025.
+            Prokopidis K et al. "The Effect of Nicotinamide Mononucleotide and Riboside on Skeletal Muscle Mass and Function: A Systematic Review and Meta-Analysis."
+            <em>J Cachexia Sarcopenia Muscle</em>. 2025;16(3):e13799.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/40275690/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">40275690</a>
+            <span class="block mt-0.5 text-ink/50">(Ortalama yaşı 60'ın üzerindeki yetişkinlerde NMN ve NR'nin kas kütlesi ve işlevine etkisini birleştiren meta-analiz.)</span>
           </li>
           <li id="kaynak-6">
-            Yang W ve arkadaşları. <a href="https://doi.org/10.3390/nu18142251" rel="noopener noreferrer">Yetişkinlerde ağızdan NMN takviyesinin güvenliği ve metabolik sonuçları: sistematik derleme ve meta-analiz</a>. Nutrients, 2026.
+            Yang W et al. "Safety and Metabolism-Related Outcomes of Oral Nicotinamide Mononucleotide Supplementation in Adults: A Systematic Review and Meta-Analysis."
+            <em>Nutrients</em>. 2026;18(14):2251.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42514320/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42514320</a>
+            <span class="block mt-0.5 text-ink/50">(Günde 250–2000 mg NMN'nin 14 gün ile 24 hafta arası kullanıldığı 15 randomize çalışmanın güvenlik ve metabolizma analizi.)</span>
           </li>
           <li id="kaynak-7">
-            Martens CR ve arkadaşları. <a href="https://doi.org/10.1038/s41467-018-03421-7" rel="noopener noreferrer">Orta yaşlı ve yaşlı sağlıklı yetişkinlerde uzun süreli NR takviyesi: randomize kontrollü çalışma</a>. Nat Commun, 2018.
+            Martens CR et al. "Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD+ in healthy middle-aged and older adults."
+            <em>Nat Commun</em>. 2018;9(1):1286.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29599478/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">29599478</a>
+            <span class="block mt-0.5 text-ink/50">(Orta yaşlı ve yaşlı sağlıklı yetişkinlerde iki altı haftalık dönemli, çapraz geçişli randomize çalışma; NR iyi tolere edildi ve NAD+ metabolizmasını artırdı.)</span>
           </li>
           <li id="kaynak-8">
-            Bertoldo MJ ve arkadaşları. <a href="https://doi.org/10.1016/j.celrep.2020.01.058" rel="noopener noreferrer">Üreme yaşlanmasında NAD+ takviyesi ve dişi farelerde doğurganlık</a>. Cell Rep, 2020.
+            Bertoldo MJ et al. "NAD+ Repletion Rescues Female Fertility during Reproductive Aging."
+            <em>Cell Rep</em>. 2020;30(6):1670–1681.e7.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32049001/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">32049001</a>
+            <span class="block mt-0.5 text-ink/50">(Yaşlı dişi farelerde NMN ile yumurta kalitesinin ve doğurganlığın geri kazanıldığını bildiren hayvan çalışması.)</span>
           </li>
           <li id="kaynak-9">
-            Ramírez-Martín N ve arkadaşları. <a href="https://doi.org/10.1016/j.ajog.2025.02.006" rel="noopener noreferrer">NMN'nin fare ve insan yumurta hücrelerinde gelişim yeterliliğine etkisi (laboratuvar çalışması)</a>. Am J Obstet Gynecol, 2025.
+            Ramírez-Martín N et al. "Nicotinamide mononucleotide supplementation improves oocyte developmental competence in different ovarian damage conditions."
+            <em>Am J Obstet Gynecol</em>. 2025;233(2):112.e1–112.e20.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39923879/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">39923879</a>
+            <span class="block mt-0.5 text-ink/50">(Kemoterapiyle yumurtalık hasarı oluşturulan farelerde ve ileri anne yaşındaki kadınlardan alınan olgunlaşmamış yumurta hücrelerinde, laboratuvar ortamında NMN etkisi.)</span>
           </li>
           <li id="kaynak-10">
-            EFSA Beslenme, Yeni Gıdalar ve Gıda Alerjenleri Paneli. <a href="https://doi.org/10.2903/j.efsa.2026.10007" rel="noopener noreferrer">Yeni gıda olarak beta-NMN'nin güvenliği</a>. EFSA Journal, Mayıs 2026.
+            EFSA Beslenme, Yeni Gıdalar ve Gıda Alerjenleri Paneli. "Yeni gıda olarak beta-NMN'nin güvenliği." <em>EFSA Journal</em>. Mayıs 2026.
+            <a href="https://doi.org/10.2903/j.efsa.2026.10007" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">DOI bağlantısı</a>
+            <span class="block mt-0.5 text-ink/50">(Avrupa Gıda Güvenliği Otoritesi'nin beta-NMN için gebe ve emziren kadınlar dışındaki yetişkinlerde belirli bir günlük üst sınırla olumlu güvenlik görüşü.)</span>
           </li>
           <li id="kaynak-11">
-            ABD Gıda ve İlaç Dairesi (FDA). <a href="https://www.regulations.gov/docket/FDA-2023-P-0872" rel="noopener noreferrer">NMN'nin takviye tanımı içindeki durumuna ilişkin vatandaş dilekçesi dosyası (FDA-2023-P-0872)</a>. 29 Eylül 2025 tarihli yanıt.
+            ABD Gıda ve İlaç Dairesi (FDA). "NMN'nin takviye tanımı içindeki durumuna ilişkin vatandaş dilekçesi (Docket FDA-2023-P-0872)." 29 Eylül 2025 tarihli yanıt.
+            <a href="https://www.regulations.gov/docket/FDA-2023-P-0872" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">regulations.gov kaydı</a>
           </li>
           <li id="kaynak-12">
-            Sandalova E ve arkadaşları. <a href="https://doi.org/10.1007/s11357-024-01257-2" rel="noopener noreferrer">NMN ve ürolitin A ürünlerinde etkin madde miktarının etiketle karşılaştırılması</a>. GeroScience, 2024.
+            Sandalova E et al. "Testing the amount of nicotinamide mononucleotide and urolithin A as compared to the label claim."
+            <em>GeroScience</em>. 2024;46(5):5075–5083.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38935229/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">38935229</a>
+            <span class="block mt-0.5 text-ink/50">(Çevrimiçi ve eczanelerden alınan NMN ve ürolitin A ürünlerinde etkin madde miktarı, etiket iddiasından +%28,6 ile −%100 arasında saptı.)</span>
           </li>
           <li id="kaynak-13">
-            Harrison DE ve arkadaşları. <a href="https://doi.org/10.1111/acel.13328" rel="noopener noreferrer">Farelerde ilaçları standart koşullarda test eden programda NR ve diğer maddelerin yaşam süresine etkisi</a>. Aging Cell, 2021.
+            Harrison DE et al. "17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex."
+            <em>Aging Cell</em>. 2021;20(5):e13328.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33788371/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">33788371</a>
+            <span class="block mt-0.5 text-ink/50">(Farelerde ilaçları üç merkezde standart protokolle test eden programın NR sonucu: iki cinsiyette de yaşam süresi uzamadı.)</span>
           </li>
           <li id="kaynak-14">
-            Brakedal B ve arkadaşları. <a href="https://doi.org/10.1001/jama.2026.18828" rel="noopener noreferrer">Erken evre Parkinson hastalığında NR: NOPARK randomize klinik çalışması</a>. JAMA, Ekim 2026.
+            Brakedal B et al. "Nicotinamide Riboside for Patients With Early-Stage Parkinson Disease: The NOPARK Randomized Clinical Trial."
+            <em>JAMA</em>. Published online October 8, 2026.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42848371/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42848371</a>
+            <span class="block mt-0.5 text-ink/50">(Erken evre Parkinson hastası 410 kişide 52 haftalık NR ile plaseboyu karşılaştıran faz 3 çalışma.)</span>
           </li>
           <li id="kaynak-15">
-            Noh H ve arkadaşları. <a href="https://doi.org/10.1007/s10815-025-03720-1" rel="noopener noreferrer">Yumurta kalitesini iyileştirme stratejisi olarak NMN: sistematik derleme ve transkriptom analizi</a>. J Assist Reprod Genet, 2025.
+            Noh H et al. "NMN supplementation as a strategy to improve oocyte quality: a systematic review and transcriptomic analysis."
+            <em>J Assist Reprod Genet</em>. 2025;43(1):51–65.
+            PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41160202/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41160202</a>
+            <span class="block mt-0.5 text-ink/50">(NMN'nin yumurta kalitesine etkisine dair hayvan ve laboratuvar çalışmalarının sistematik derlemesi; insan klinik çalışması gerektiğini vurguluyor.)</span>
           </li>
           <li id="kaynak-16">
-            ClinicalTrials.gov. <a href="https://clinicaltrials.gov/study/NCT06426355" rel="noopener noreferrer">NCT06426355: Düşük yumurtalık rezervinde NMN ve tüp bebek sonuçları, randomize plasebo kontrollü çalışma</a>. Kayıt durumu 26 Ekim 2026'da kontrol edildi.
+            ClinicalTrials.gov, NCT06426355. Düşük yumurtalık rezervi olan kadınlarda tüp bebek sonuçları için NMN, randomize çift kör plasebo kontrollü çalışma (Peking University Third Hospital, 200 kişi). Kayıt durumu: katılım sürüyor, 26 Ekim 2026.
+            <a href="https://clinicaltrials.gov/study/NCT06426355" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT06426355 kaydı</a>
           </li>
           <li id="kaynak-17">
-            T.C. Tarım ve Orman Bakanlığı. <a href="https://www.tarimorman.gov.tr/Konu/1116/takviye-edici-gida-kisitli-maddeler-listesi" rel="noopener noreferrer">Takviye Edici Gıdalar Kısıtlı Maddeler Listesi</a>. Son güncelleme 21 Ekim 2026.
+            T.C. Tarım ve Orman Bakanlığı. "Takviye Edici Gıdalar Kısıtlı Maddeler Listesi." Son güncelleme: 21 Ekim 2026.
+            <a href="https://www.tarimorman.gov.tr/Konu/1116/takviye-edici-gida-kisitli-maddeler-listesi" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Bakanlık sayfası</a>
+            <span class="block mt-0.5 text-ink/50">(Beta-nikotinamid mononükleotid için günde en fazla 50 mg, nikotinamid ribozid için günde en fazla 300 mg.)</span>
           </li>
           <li id="kaynak-18">
-            Türkiye İlaç ve Tıbbi Cihaz Kurumu (TİTCK). <a href="https://www.titck.gov.tr/dinamikmodul/85" rel="noopener noreferrer">Ruhsatlı Beşeri Tıbbi Ürünler Listesi</a>. 23 Ekim 2026.
+            T.C. Sağlık Bakanlığı Türkiye İlaç ve Tıbbi Cihaz Kurumu. "Ruhsatlı Beşeri Tıbbi Ürünler Listesi." 23 Ekim 2026.
+            <a href="https://www.titck.gov.tr/dinamikmodul/85" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">TİTCK sayfası</a>
+            <span class="block mt-0.5 text-ink/50">(Listede NAD+, NADH, NMN veya NR etkin maddeli ruhsatlı ürün bulunmuyor.)</span>
           </li>
           <li id="kaynak-19">
-            ClinicalTrials.gov. <a href="https://clinicaltrials.gov/study/NCT07416786" rel="noopener noreferrer">NCT07416786: NAD+ ölçümlerinin laboratuvarlar arası standardizasyonu</a>. Kayıt durumu 26 Ekim 2026'da kontrol edildi.
+            ClinicalTrials.gov, NCT07416786. İnsan çalışmaları için NAD+ ölçümlerinin laboratuvarlar arası standardizasyonu (University of Pennsylvania, 48 kişi). Kayıt durumu: katılım sürüyor, 26 Ekim 2026.
+            <a href="https://clinicaltrials.gov/study/NCT07416786" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07416786 kaydı</a>
           </li>
         </ol>
       </ArticleProsePanel>
