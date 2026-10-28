@@ -960,7 +960,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/',
     title: 'Metformin Uzun Yaşam İçin Kullanılır mı?',
     description:
-      'Metformin tip 2 diyabet ilacıdır; uzun yaşam için kullanımı etiket dışıdır. Diyabeti olmayanlarda ömür verisi yok, egzersizle kas kazanımı azalabiliyor, B12 ve böbrek izlenmeli.',
+      'Metformin diyabeti olmayanlarda ömrü uzatır mı? İnsan çalışmalarının sınırları, egzersizle etkileşimi, B12 ve böbrek güvenliği üzerine kanıta dayalı bir rehber.',
     publishedDate: '27 Ekim 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
