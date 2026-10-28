@@ -957,6 +957,17 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['NMN', 'NR', 'NAD+', 'NAD Plus', 'nad plus', 'takviye', 'menopoz', 'güvenlik'],
   },
   {
+    path: '/zamansiz-yasam/deneysel/bpc-157-tb-500-menopoz/',
+    title: 'BPC-157 ve TB-500 İşe Yarar mı?',
+    description:
+      'BPC-157 ve TB-500 tendon, eklem ve kas onarımı için birlikte satılıyor. İnsanda kanıt çok az ya da hiç yok; FDA dosyalarındaki güvenlik bulguları ve menopozda bilinmeyenler.',
+    publishedDate: '28 Ekim 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Zamansız Yaşam · Deneysel',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: ['BPC-157', 'TB-500', 'timosin beta-4', 'peptid', 'tendon', 'donuk omuz', 'eklem ağrısı', 'menopoz'],
+  },
+  {
     path: '/zamansiz-yasam/deneysel/rapamisin-yaslanma-ilaci-kanit-ve-risk/',
     title: 'Rapamisin ve Yaşlanma: Kanıt ve Risk',
     description:
