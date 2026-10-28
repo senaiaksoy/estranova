@@ -1,0 +1,524 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/zamansiz-yasam/deneysel/rapamisin-yaslanma-ilaci-kanit-ve-risk/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
+const articleTitle = 'Rapamisin "Yaşlanma İlacı" mı? Düşük Doz Kullanımının Kanıtı ve Riski';
+const seoTitle = 'Rapamisin Yaşlanma İlacı mı?';
+const articleDescription =
+  'Rapamisin farelerde ömrü uzattı; insanda yaşlanma sonlanımı için sonuçlanmış çalışma yok. Bağışıklık, gebelik ve ilaç etkileşimi riskleri ile kadınlarda kayıtlı çalışmanın durumu.';
+const publishedDate = '28 Ekim 2026';
+const readingMinutes = 14;
+
+const tocEntries = [
+  { id: 'fareden-muayene-odasina', label: 'Fareden Muayene Odasına' },
+  { id: 'rapamisin-nedir', label: 'Rapamisin Nedir' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveni' },
+  { id: 'fare-verisi', label: 'Fare Verisi' },
+  { id: 'insan-verisi', label: 'İnsan Verisi' },
+  { id: 'degerlendirme', label: 'Beş Eksende Değerlendirme' },
+  { id: 'iddialar', label: 'Dolaşan İddialar' },
+  { id: 'riskler', label: 'Etiket Dışı Kullanımın Riskleri' },
+  { id: 'menopoz', label: 'Menopoz ve 40 Sonrası' },
+  { id: 'devam-eden', label: 'Devam Eden Çalışmalar' },
+  { id: 'hekimle', label: 'Hekimle Konuşulacaklar' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
+  publishedDate,
+  pathname,
+  articleSection: 'Zamansız Yaşam · Deneysel',
+  sectionPath: '/zamansiz-yasam/',
+  image: hero.src.startsWith('http') ? hero.src : `${siteUrl.replace(/\/$/, '')}${hero.src}`,
+  keywords: [
+    'rapamisin',
+    'sirolimus',
+    'mTOR',
+    'yaşlanma',
+    'uzun yaşam',
+    'etiket dışı kullanım',
+    'menopoz',
+    'kanıt düzeyi',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image={hero.src}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Deneysel"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        articleType="clinical-guide"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc="/images/library/editorial/rapamisin-yaslanma-ilaci-kanit-ve-risk-byline.webp"
+        imageAlt="Cam bir seranın içinde ahşap bir bankta kitap okuyan, kısa ve gümüş çizgili saçlı 50 yaş civarı bir kadın; yapay zekâ ile üretilmiş temsili görsel"
+        imagePosition="center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Rapamisin (sirolimus), bağışıklığı baskılayan bir ilaçtır; organ nakli ve bazı nadir hastalıklar için
+          ruhsatlıdır. Farelerde, bağımsız merkezlerde ömrü uzatmıştır. İnsanda yaşlanma ya da hastalık sonlanımı için
+          sonuçlanmış bir çalışma yoktur. Sağlıklı yetişkinlerdeki çalışmalar küçük ve kısadır <Evidence level={2} />;
+          bağışıklık için umut veren ilk sonuç sonraki büyük çalışmada doğrulanmadı <Evidence level={3} />. Menopoz
+          geçişindeki kadınlarda yumurtalık yaşlanması için yürüyen küçük bir çalışma var, sonucu yok. Nakil
+          hastalarında bilinen yan etkiler (enfeksiyon, ağız yaraları, kan yağı yüksekliği, yara iyileşmesinde bozulma)
+          bu amaçla kullanımda da gündeme gelir. Gebelik olasılığı, kullandığınız ilaçlar ve bağışıklık durumunuz
+          hekimle konuşulacak ilk başlıklardır.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="fareden-muayene-odasina">Fareden muayene odasına</h2>
+
+        <p>
+          Laboratuvar farelerinin hepsi aynı saatte beslenir, aynı ısıda yaşar ve hiçbirinin yoğun bir haftası olmaz. Bilimin güçlü yanı bu: tek değişkeni ayırabilirsiniz. Zayıf yanı da aynı: insan kafesten çıkmış durumda.
+        </p>
+
+        <p>
+          Muayene odasında "yaşlanma ilacı" diye rapamisini soranlar, çoğu zaman bir fare grafiğini görmüş olarak gelir. Grafik gerçek. Fareler gerçekten daha uzun yaşadı. Merak etmeniz de yerinde.
+        </p>
+
+        <p>
+          Önce şunu söyleyeyim: bu yazıda amacım ilacı itibarsızlaştırmak değil. Grafikten soruya giden yolun hangi basamaklardan geçtiğini göstermek istiyorum. Etiket dışı kullanımın ne demek olduğunu, hekimin neden dikkat ettiğini ve hangi ölçütlerle konuşulabileceğini <a href="/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/#ayni-kutu" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">metformin yazısında anlattım</a>; burada yalnızca rapamisine özgü yanları ele alacağım.
+        </p>
+
+        <h2 id="rapamisin-nedir">Rapamisin nedir, neden yaşlanmayla anılıyor?</h2>
+
+        <p>
+          Rapamisin hücrenin büyüme düğmesine, yani mTOR adlı yolağa basan bir ilaç.
+        </p>
+
+        <p>
+          Rapamisin (sirolimus), mTOR denen hücre içi büyüme ve besin algılama yolağını yavaşlatır. ABD etiketinde endikasyonları 13 yaş ve üzerinde böbrek nakli sonrası reddin önlenmesi ve lenfanjiyoleiomiyomatozis adlı nadir bir akciğer hastalığıdır <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Çerçeveli uyarısı bağışıklık baskılanmasıdır: enfeksiyona yatkınlık ve lenfoma ile diğer kötü huylu hastalıkların gelişme olasılığı <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Yani başlangıçta gençlik ilacı olarak değil, nakil sonrası bağışıklığı bilerek kısan bir ilaç olarak tasarlandı.
+        </p>
+
+        <p>
+          Yaşlanma araştırmacılarının ilgisi mTOR yolağının hayvanlarda ömürle ilişkili çıkmasından geliyor <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>. İlgi mantıklı. Ama mantıklı bir hipotez ile kanıtlanmış bir yarar aynı basamakta durmuyor.
+        </p>
+
+        <h2 id="kanit-merdiveni">Kanıt merdiveni: kafesten sağlıklı yetişkine</h2>
+
+        <p>
+          Rapamisinde alt basamaklar kalabalık. Yukarı çıktıkça seyreliyor.
+        </p>
+
+        <ol>
+          <li><strong>Mekanizma:</strong> Güçlü. mTOR yolağı hücre büyümesi, protein sentezi ve otofaji ile ilişkili <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>.</li>
+          <li><strong>Hayvanda ömür:</strong> Güçlü ve tekrarlanmış. Bağımsız üç merkezde genetik çeşitli farelerde ömür uzadı <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>. Aşağıda ayrıntısı var.</li>
+          <li><strong>İnsanda biyobelirteç:</strong> Sınırlı. Küçük çalışmalarda bağışıklık ve kan ölçütleri incelendi <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>; sonuçlar tutarlı değil.</li>
+          <li><strong>İnsanda işlev:</strong> Sınırlı. Sağlıklı yetişkinlerde 48 haftalık bir çalışmada birincil sonlanım olan karın içi yağ değişmedi <Evidence level={2} /> <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>.</li>
+          <li><strong>İnsanda güvenlik:</strong> Nakil hastalarında geniş, sağlıklı yetişkinde dar ve kısa <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Sert sonlanım (ömür, hastalık):</strong> Sonuçlanmış çalışma yok.</li>
+        </ol>
+
+        <h2 id="fare-verisi">Fare verisi neyi gösterdi</h2>
+
+        <p>
+          Fare verisi güçlü; ama kimden kime, hangi dozla ve hangi yaşta olduğu önemli.
+        </p>
+
+        <p>
+          Ulusal bir programda (NIA Müdahale Test Programı) genetik çeşitli farelere 600. günden, yani yaklaşık orta yaştan sonra başlanan rapamisin ömrü üç bağımsız merkezde uzattı. Ölümlerin %90'ına ulaşılan yaşa göre uzama dişilerde %14, erkeklerde %9'du <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Sonraki çalışmada doz artırılınca ortanca ömür erkeklerde %23, dişilerde %26 uzadı; ilaç her dozda dişilerde daha çok işe yaradı. Yazarlar bunu ilacın kan düzeyindeki cinsiyet farkına bağlamayı düşündü <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>.
+        </p>
+
+        <p>
+          Başka bir fare soyunda, geç yaşta başlanan rapamisin hem sağkalımı hem bazı sağlık ölçütlerini iyileştirdi <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. Rapamisin ile akarboz birlikte verildiğinde erkeklerde tek başına rapamisinden daha uzun ömür görüldü; dişilerde fark yoktu <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>.
+        </p>
+
+        <p>
+          Bu veri, kadın okur için ilginç bir ayrıntı taşıyor: dişi farelerde etki daha belirgin. Ama bu, kadınlarda aynı olacağı anlamına gelmez. Fare ile insan arasında doz, kan düzeyi, ömür ölçeği ve hastalık türü farklı. Ayrıca fare çalışmalarında rapamisinin glukoz toleransını bozabildiği gösterildi; metformin eklenince bu bozulma dişilerde azaldı <sup><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>. İlacın metabolik bedeli hayvanda da var. Rapamisinin protein sentezi üzerindeki etkisi de cinsiyete ve dokuya göre değişti; metformin eklenince daha tekdüze oldu <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>.
+        </p>
+
+        <h2 id="insan-verisi">İnsanda bugüne kadar bilinenler</h2>
+
+        <p>
+          İnsan verisi kısa, küçük ve çoğu zaman yan sonlanımlara dayanıyor.
+        </p>
+
+        <p>
+          Yaşlı yetişkinlerde yapılan bir pilot çalışma küçüktü: 70-95 yaş arasındaki, genel olarak sağlıklı 25 kişiye rapamisin ya da plasebo en az 8 hafta verildi. İlaç grubunda yüzde döküntü, ağız yarası ve mide-bağırsak yakınmaları bildirildi. Hemoglobin gibi kırmızı kan hücresi ölçütlerinde istatistiksel olarak anlamlı düşüşler de görüldü; bunlar süre kısa olduğu için klinik soruna dönüşmedi. Kan şekeri ve insülin duyarlılığı değişmedi <Evidence level={2} /> <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>.
+        </p>
+
+        <p>
+          PEARL adlı 48 haftalık çalışma çift kör ve plasebo kontrollüydü. Sağlıklı yetişkinlerde birincil sonlanım olan karın içi yağ değişmedi, yan etkiler gruplar arasında benzerdi. Kadınlarda yüksek dozda yağsız kütle ve ağrı skorunda iyileşme bildirildi; bu ikincil bir sonlanımdı <Evidence level={1} /> <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>. Bulguyu temkinli okumak gerekir: çok sayıda karşılaştırmadan biri ve yazarlar bir şirketin (AgelessRx) araştırma biriminde çalışıyor. Çalışma "normatif yaşlanma" gösteren sağlıklı yetişkinlerde yapılmış; özette menopoz durumuna göre ayrı bir sonuç bildirilmiyor.
+        </p>
+
+        <p>
+          Bağışıklık alanında ilk sonuç umut vericiydi, sonra doğrulanmadı. Faz 2a çalışmasında 264 yaşlı kişiye 6 hafta rapamisinin kendisi değil, everolimus ile başka bir molekülü içeren bir mTOR inhibitörü kombinasyonu verildi; enfeksiyon oranı düştü ve grip aşısı yanıtı arttı <Evidence level={2} /> <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>. Ardından 1.024 katılımcılı faz 3 çalışmasında, bu kez tek bir molekülle, belirtili solunum yolu hastalığı ilaç grubunda %26, plasebo grubunda %25 çıktı; fark yoktu <Evidence level={3} /> <sup><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>. Bu yüzden "rapamisin yaşlıda enfeksiyonu azaltıyor" cümlesi şu an doğrulanmış değil.
+        </p>
+
+        <h2 id="degerlendirme">Beş eksende değerlendirme</h2>
+
+        <p>
+          Aynı ilaç beş soruda beş ayrı not alıyor; tek bir hüküm vermek yanıltıcı olur.
+        </p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Eksen</th>
+                <th class="p-3 font-semibold">Değerlendirme</th>
+                <th class="p-3 font-semibold">Gerekçe</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Etkinlik kanıtı (uzun yaşam)</td>
+                <td class="p-3">Hayvanda güçlü, insanda yok</td>
+                <td class="p-3">Fare ömrü tekrarlanmış <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>; insanda sert sonlanımlı çalışma yok; birincil sonlanımlar değişmedi <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup> ya da doğrulanmadı <sup><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Güvenlik kanıtı</td>
+                <td class="p-3">Nakilde geniş, sağlıklıda dar</td>
+                <td class="p-3">Nakil verisi <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>; sağlıklı yetişkinde 48 hafta ve kısa pilotlar <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Mekanizma inandırıcılığı</td>
+                <td class="p-3">Güçlü</td>
+                <td class="p-3">mTOR yolağı <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Ürün ve düzenleyici durum</td>
+                <td class="p-3">Reçeteli ilaç; yaşlanma için endikasyon yok</td>
+                <td class="p-3">ABD etiketi: böbrek nakli ve LAM <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Türkiye'deki ruhsat metni için hekiminize ve ürünün kısa ürün bilgisine bakın.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Geri dönüşebilirlik</td>
+                <td class="p-3">Etkiye göre değişir</td>
+                <td class="p-3">Çoğu nakil yan etkisi doz ve ilaç ayarıyla yönetilir; ama enfeksiyon, kan yağı ve metabolik değişiklikler bireyseldir ve izlem gerektirir <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="iddialar">Dolaşan iddialar ve kanıtın durumu</h2>
+
+        <p>
+          Aşağıdaki tabloda yalnızca fare ömrü iddiası desteklenmiş durumda; insana ait iddiaların çoğu ya henüz test edilmedi ya da desteklenmedi.
+        </p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Durum</th>
+                <th class="p-3 font-semibold">Not</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Rapamisin farelerde ömrü uzatır</td>
+                <td class="p-3">Test edildi, desteklendi (hayvan)</td>
+                <td class="p-3"><sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Rapamisin sağlıklı yetişkinde ömrü uzatır</td>
+                <td class="p-3">Henüz test edilmedi ama test edilebilir</td>
+                <td class="p-3">Sonuçlanmış çalışma yok</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Rapamisin yaşlıda enfeksiyonu azaltır</td>
+                <td class="p-3">Test edildi, desteklenmedi (birincil sonlanım)</td>
+                <td class="p-3">İlk faz 2a olumlu <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>; faz 3'te fark yok <sup><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Düşük doz rapamisin güvenlidir</td>
+                <td class="p-3">Kısmen test edildi</td>
+                <td class="p-3">Kısa süreli küçük çalışmalarda ciddi bir fark yok <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>; uzun süre ve geniş grup verisi yok</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Rapamisin kadında menopozu geciktirir</td>
+                <td class="p-3">Henüz test edilmedi ama test edilebilir</td>
+                <td class="p-3">Faz 2 çalışma yürüyor, sonuç yayımlanmadı <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Rapamisin "biyolojik yaşı geri çevirir"</td>
+                <td class="p-3">Bu haliyle test edilemez</td>
+                <td class="p-3">Biyolojik yaş göstergeleri ömür ya da hastalık yerine geçmez</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="riskler">Etiket dışı kullanımın riskleri</h2>
+
+        <p>
+          Aşağıdaki başlıkların hepsi nakil hastalarındaki kullanımdan ve ilaç bilgisinden geliyor; yaşlanma amacıyla düşük doz için sınanmış değerler değil.
+        </p>
+
+        <p>
+          Bilinen yan etki oranları nakil hastalarından geliyor: başka bağışıklık ilaçlarıyla birlikte ve yaşlanma çalışmalarından farklı dozlarda ölçüldüler. Sağlıklı bir kişide yaşlanma amacıyla kullanılan düşük doz için bunlar sizin için geçerli oranlar değil; ama risk başlıklarının neler olduğunu gösteriyor.
+        </p>
+
+        <ul>
+          <li><strong>Enfeksiyon ve kötü huylu hastalık:</strong> Etiketin çerçeveli uyarısı enfeksiyona yatkınlığı ve lenfoma ile diğer kötü huylu hastalıkların gelişme olasılığını sayar. Cilt kanseri de ayrı bir uyarı başlığıdır <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Aşılar:</strong> Etiket canlı aşılardan kaçınmayı söyler ve bazı aşıların ilaç sırasında daha az etkili olabileceğini belirtir <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Kan yağları:</strong> Nakil çalışmasında yüksek kolesterol %43-46, yüksek trigliserit %45-57 oranında bildirildi <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Ağız yaraları, yara iyileşmesi, ishal ve kansızlık:</strong> Etikette ağız iltihabı (stomatit) ve yara iyileşmesinde bozulma yan etkiler arasında; ishal %25-35, kansızlık %23-33 <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Yaşlı yetişkinlerde 8 haftalık çalışmada da ağız yarası ve kırmızı kan hücresi ölçütlerinde düşme bildirildi <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>. Yaşlanma amacıyla yapılan bir çalışmanın kayıt sayfasında ağız yarası öyküsü olanlar ve kan şekerini düşüren ilaç kullananlar çalışmaya alınmamış <sup><a href="#kaynak-14" aria-label="Kaynak 14">[14]</a></sup>; araştırmacıların hangi riskleri öne çıkardığının bir işareti.</li>
+          <li><strong>İlaç ve besin etkileşimleri:</strong> Etiket, rapamisinin kandaki düzeyini artırabilen ilaçlar olarak klaritromisin ve vorikonazol gibi bazı antibiyotik ve mantar ilaçlarını, verapamil ve diltiazem gibi kalp ilaçlarını sayar; karbamazepin, fenitoin ve fenobarbital gibi epilepsi ilaçları ile sarı kantaron düzeyi düşürebilir. Greyfurt suyu ilaçla birlikte alınmamalıdır <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Gebelik ve doğurganlık:</strong> Etiket doğurganlık çağındaki kadınlara gebelikten kaçınmayı ve son dozdan 12 hafta sonrasına kadar etkili korunmayı önerir. Yumurtalık kistleri ve adet düzensizlikleri (adetsizlik ve aşırı kanama dahil) bildirilmiş; kadın ve erkek doğurganlığı bu tedaviyle etkilenebilir <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Menopoza geçiş yapan ama gebelik olasılığı süren kadınlar için bu doğrudan önemlidir.</li>
+        </ul>
+
+        <h2 id="menopoz">Menopoz ve 40 sonrası</h2>
+
+        <p>
+          Burada ilginç bir ayrıntı var: yumurtalık yaşlanması için kadınlarda bir çalışma kayıtlı.
+        </p>
+
+        <p>
+          New York'taki bir üniversite merkezinde yürüyen faz 2 çalışmada, 35-45 yaşları arasında, menopoza geçiş döneminde ve yumurtalık rezervi azalmış 50 kadına rapamisin ya da plasebo veriliyor. Birincil sonlanım AMH düzeyi, yani yumurtalık rezervinin bir ölçütü; çalışmanın tamamlanması 2026 Eylül'ünde planlanmış ve henüz sonuç kaydı yok <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>. Bu çalışma menopozu geciktirdiğini göstermez; yalnızca sorunun insanda sorulmaya başlandığını gösterir.
+        </p>
+
+        <p>
+          Yumurtalık yaşlanması için rapamisin ve benzer ilaçları değerlendiren 2026 tarihli bir derleme, bu müdahalelerin "büyük ölçüde mekanizma ve ön-klinik aşamada" olduğunu bildiriyor <sup><a href="#kaynak-15" aria-label="Kaynak 15">[15]</a></sup>. PEARL'de kadınlardaki yağsız kütle bulgusu ikincil ve şirket kaynaklı <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>.
+        </p>
+
+        <p>
+          Menopoz geçişinde olan biri için üç pratik cümle: gebelik olasılığı sürüyorsa rapamisin ciddi bir ek sorudur <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>; hormon tedavisi ya da başka ilaç alıyorsanız etkileşimi hekime sorun; ve yumurtalık yaşlanması için rapamisin şu an yalnızca araştırma aşamasındadır <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a><a href="#kaynak-15" aria-label="Kaynak 15">[15]</a></sup>.
+        </p>
+
+        <h2 id="devam-eden">Devam eden çalışmalar: cevap ne zaman gelir?</h2>
+
+        <p>
+          Bu bölüm yazıyı güncelleme gerekçemiz.
+        </p>
+
+        <p>
+          ClinicalTrials.gov kayıtlarında (27 Ekim 2026 itibarıyla), rapamisin ya da rapamisin analoglarının yaşlanma bağlamında sınandığı birkaç çalışma var <sup><a href="#kaynak-14" aria-label="Kaynak 14">[14]</a></sup>:
+        </p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Kayıt</th>
+                <th class="p-3 font-semibold">İlaç</th>
+                <th class="p-3 font-semibold">Katılımcı</th>
+                <th class="p-3 font-semibold">Durum</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">NCT05835999 (Wisconsin, EVERLAST)</td>
+                <td class="p-3">everolimus</td>
+                <td class="p-3">106 kişi, 55-80 yaş, insülin direnci/prediyabet</td>
+                <td class="p-3">Tamamlandı (temmuz 2026); sonuç kaydı yok</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">NCT05949658 (Wisconsin)</td>
+                <td class="p-3">sirolimus, everolimus</td>
+                <td class="p-3">72</td>
+                <td class="p-3">Alım sürüyor, bitiş 2027-03</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">NCT06658093 (UT Health San Antonio, RESTOR)</td>
+                <td class="p-3">rapamisin, everolimus</td>
+                <td class="p-3">194</td>
+                <td class="p-3">Alım sürüyor, bitiş 2028-07</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">NCT05836025 (Columbia)</td>
+                <td class="p-3">rapamisin</td>
+                <td class="p-3">50 kadın, 35-45 yaş</td>
+                <td class="p-3">Aktif, alım bitti; sonuç kaydı yok</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Bu çalışmaların çoğu kısa ve güvenlik/biyobelirteç odaklı; ömür ya da hastalık sonlanımı değil. Bu yazıyı hazırlarken sonuç makalelerini doğrulayamadık; yayımlandıkça yazıyı güncelleyeceğiz. Sonuçlanmamış bir çalışmanın ne diyeceğini tahmin etmeyeceğim.
+        </p>
+
+        <h2 id="hekimle">Hekiminizle konuşulacaklar</h2>
+
+        <p>
+          Genel çerçeve metformin yazısında; rapamisine özgü sorular şunlar.
+        </p>
+
+        <ul>
+          <li><strong>Hedefiniz ne?</strong> "Uzun yaşam" bir hedef değil; kan basıncı, kan yağı, kan şekeri ya da kas gibi ölçülebilir bir şey olmalı. Etiket dışı kullanımın genel çerçevesi için <a href="/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/#hekimle" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">metformin yazısındaki konuşma başlıklarına</a> bakın.</li>
+          <li><strong>Bağışıklık sistemim bu ilacı kaldırır mı?</strong> Sık enfeksiyon, kanser öyküsü, aşı durumu ve kullandığınız diğer ilaçlar bu konuşmanın parçası.</li>
+          <li><strong>Başlamadan önce hangi ölçümler?</strong> Kan sayımı, kan yağları, kan şekeri, böbrek ve karaciğer işlevi gibi başlangıç değerleri ve izlem aralıkları (duruma göre).</li>
+          <li><strong>Gebelik olasılığım var mı?</strong> Varsa bu konuşma ilk sıraya gelir <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Aynı anda tek değişiklik.</strong> Birkaç şeyi birlikte başlatırsanız hangisinin etki ya da yan etki yaptığını ayıramazsınız.</li>
+          <li><strong>Kaynak.</strong> Reçeteyle, eczaneden alınan ilaç dışında bir kaynak yanlış ürünle zarar riskini artırır.</li>
+        </ul>
+
+        <h2 id="bilinmeyenler">Henüz bilmediklerimiz</h2>
+
+        <p>
+          Açık kalan sorular, bu yazının güncellenmesi gereken yerler.
+        </p>
+
+        <ul>
+          <li>Sağlıklı yetişkinde ömür ya da hastalık sonlanımı.</li>
+          <li>Kadınlarda ve menopoz geçişinde yumurtalık ve genel sağlık etkisi.</li>
+          <li>Uzun süreli düşük doz kullanımın güvenlik profili (enfeksiyon, kanser, metabolik etki).</li>
+          <li>Bağışıklığın yaşlıda yararlı mı zararlı mı kaydığı.</li>
+        </ul>
+
+        <p>
+          Fareyi kafesten çıkardığınızda ölçeği de çıkarmış olursunuz. Rapamisin için kafesin dışındaki soruların çoğu şimdilik açık; yukarıdaki dört kayıtlı çalışma bu boşluğu doldurmaya çalışıyor.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a sorular" intro="Bu bölümde rapamisinin yaşlanma amacıyla kullanımı, riskleri ve menopoz geçişindeki durumuyla ilgili sorulara kendi yanıtlarımı veriyorum." items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={3} /></p>
+        <p class="italic text-ink/80">
+          Yazının gövdesinde kanıtı bölüm bölüm tarttım. Bu notta, o kanıtı klinik değerlendirmede nasıl sıraladığımı
+          kısaca toparlıyorum.
+        </p>
+        <p>
+          Rapamisin nakil hastalarında geniş bir güvenlik kaydı olan, bağışıklığı baskılayan bir ilaçtır; bu yazı o
+          kullanımı değil, sağlıklı yetişkinde yaşlanma amacıyla etiket dışı kullanımı ele alır. Bu amaçla ömür ya da
+          hastalık sonlanımlı sonuçlanmış bir insan çalışması yoktur. Fare verisi güçlüdür ama insana doğrudan
+          taşınamaz.
+        </p>
+        <p>
+          Sağlıklı yetişkinlerdeki kısa süreli çalışmalar küçüktür ve birincil sonlanımları değiştirmemiştir.
+          Bağışıklık alanında faz 2a'daki umut veren sonuç, aynı grubun faz 3 çalışmasında doğrulanmadı. Menopoz geçişi
+          ve yumurtalık yaşlanması için rapamisinin kadınlarda sınandığı çalışma sürüyor; sonucu yok.
+        </p>
+        <p>
+          Klinik değerlendirmede sıram şöyledir: önce ilacın neden düşünüldüğünün açıkça söylenebilmesi, sonra gebelik
+          olasılığı, kullanılan ilaçlar ve bağışıklık durumunun değerlendirilmesi, ardından hekim gözetiminde izlem.
+        </p>
+        <p class="text-sm italic text-primary">
+          Yazarın klinik değerlendirmesi: Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı
+        </p>
+        <p class="text-sm text-ink/80">
+          Bağımsız tıbbi inceleme: Dr. Alper Mumcu — 28 Ekim 2026.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleProsePanel class="mt-10 prose-estranova-references">
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
+          <li id="kaynak-1">
+            Harrison DE ve ark. Rapamycin fed late in life extends lifespan in genetically heterogeneous mice. Nature. 2009;460(7253):392-5. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/19587680/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">19587680</a>
+          </li>
+          <li id="kaynak-2">
+            Miller RA ve ark. Rapamycin-mediated lifespan increase in mice is dose and sex dependent and metabolically distinct from dietary restriction. Aging Cell. 2014;13(3):468-77. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24341993/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">24341993</a>
+          </li>
+          <li id="kaynak-3">
+            Zhang Y ve ark. Rapamycin extends life and health in C57BL/6 mice. J Gerontol A Biol Sci Med Sci. 2014;69(2):119-30. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/23682161/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">23682161</a>
+          </li>
+          <li id="kaynak-4">
+            Strong R ve ark. Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice. Aging Cell. 2022;21(12):e13724. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/36179270/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">36179270</a>
+          </li>
+          <li id="kaynak-5">
+            Wolff R ve ark. Sex differences in changes of protein synthesis with rapamycin treatment are minimized when metformin is added to rapamycin. GeroScience. 2021;43(2):809-28. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32761290/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">32761290</a>
+          </li>
+          <li id="kaynak-6">
+            Weiss R ve ark. Metformin reduces glucose intolerance caused by rapamycin treatment in genetically heterogeneous female mice. Aging (Albany NY). 2018;10(3):386-401. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29579736/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">29579736</a>
+          </li>
+          <li id="kaynak-7">
+            Mannick JB, Lamming DW. Targeting the biology of aging with mTOR inhibitors. Nat Aging. 2023;3(6):642-60. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/37142830/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">37142830</a>
+          </li>
+          <li id="kaynak-8">
+            Mannick JB ve ark. TORC1 inhibition enhances immune function and reduces infections in the elderly. Sci Transl Med. 2018;10(449). PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29997249/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">29997249</a>
+          </li>
+          <li id="kaynak-9">
+            Mannick JB ve ark. Targeting the biology of ageing with mTOR inhibitors to improve immune function in older adults: phase 2b and phase 3 randomised trials. Lancet Healthy Longev. 2021;2(5):e250-e262. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33977284/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">33977284</a>
+          </li>
+          <li id="kaynak-10">
+            Kraig E ve ark. A randomized control trial to establish the feasibility and safety of rapamycin treatment in an older human cohort. Exp Gerontol. 2018;105:53-69. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29408453/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">29408453</a>
+          </li>
+          <li id="kaynak-11">
+            Moel M ve ark. Influence of rapamycin on safety and healthspan metrics after one year: PEARL trial results. Aging (Albany NY). 2025;17(4):908-36. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/40188830/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">40188830</a>
+          </li>
+          <li id="kaynak-12">
+            ABD ilaç etiketi: RAPAMUNE (sirolimus), Pfizer, revizyon 10/2024. Bölümler: 1 (endikasyon), çerçeveli uyarı, 5 (uyarılar), 6 (yan etkiler), 7 (etkileşimler), 8 (gebelik). Erişim 28 Ekim 2026.
+          </li>
+          <li id="kaynak-13">
+            ClinicalTrials.gov NCT05836025, Effect of Rapamycin in Ovarian Aging (Columbia University). Erişim 28 Ekim 2026. <a href="https://clinicaltrials.gov/study/NCT05836025" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT05836025</a>
+          </li>
+          <li id="kaynak-14">
+            ClinicalTrials.gov kayıtları: NCT05835999, NCT05949658, NCT06658093. Erişim 27-28 Ekim 2026.
+          </li>
+          <li id="kaynak-15">
+            Alsirhani AM ve ark. Senotherapeutic strategies for ovarian aging: mechanistic insights and translational perspectives. Curr Opin Pharmacol. 2026;89:102646. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42378907/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">42378907</a>
+          </li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgi amaçlıdır; tanı, tedavi veya ilaç başlama ya da bırakma önerisi değildir. Rapamisin
+          reçeteli bir ilaçtır; kullanımına karar vermek için muayene, tahlil ve kendi hekiminizle görüşme gerekir.
+          Mevcut bir ilacınızı hekiminize danışmadan bırakmayın.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>

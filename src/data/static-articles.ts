@@ -957,6 +957,26 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['NMN', 'NR', 'NAD+', 'NAD Plus', 'nad plus', 'takviye', 'menopoz', 'güvenlik'],
   },
   {
+    path: '/zamansiz-yasam/deneysel/rapamisin-yaslanma-ilaci-kanit-ve-risk/',
+    title: 'Rapamisin Yaşlanma İlacı mı?',
+    description:
+      'Rapamisin farelerde ömrü uzattı; insanda yaşlanma sonlanımı için sonuçlanmış çalışma yok. Bağışıklık, gebelik ve ilaç etkileşimi riskleri ile kadınlarda kayıtlı çalışmanın durumu.',
+    publishedDate: '28 Ekim 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Zamansız Yaşam · Deneysel',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: [
+      'rapamisin',
+      'sirolimus',
+      'mTOR',
+      'yaşlanma',
+      'uzun yaşam',
+      'etiket dışı kullanım',
+      'menopoz',
+      'kanıt düzeyi',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/',
     title: 'Metformin Uzun Yaşam İçin Kullanılır mı?',
     description:

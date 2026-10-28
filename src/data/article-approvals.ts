@@ -102,6 +102,12 @@ export const approvedArticles: ArticleApproval[] = [
     note: 'Anıl Yalmaz author approval and medical/control approval received 14 Ekim 2026 (sözlü, KC) for the revised text. Revision covers the full audit and humanize pass: pilates and HIIT claims narrowed to evidence-specific outcomes, emergency neurological red flags clarified, recovery-over-following-days guidance added, Markdown and template residue removed, and no FAQ section (no SSS data or schema). Byline and card visuals bound to ArticleAuthorBlock and articleCardImageByRoute; hero stays with the Zamansız Yaşam parent. Original 18 Haziran 2026 approval covered the earlier version only.',
   },
   {
+    pathname: '/zamansiz-yasam/deneysel/rapamisin-yaslanma-ilaci-kanit-ve-risk/',
+    writerSlug: 'senai-aksoy',
+    approvedAt: '2026-10-28',
+    note: 'Rapamisin yaşlanma (Yazı B) — yazar onayı ve tıbbi onay 28 Ekim 2026: KC (Doç. Dr. Senai Aksoy) bu sohbette taslağı sözlü onayladı (“Yazı B taslağını onaylıyorum”) ve sayfa, hub, manifest, onay kaydı ve görsel kablolaması ile tsc ve build:ci talimatı verdi. Bağımsız tıbbi denetleyici Dr. Alper Mumcu: onay KC bildirimiyle kaydedildi (28 Ekim 2026; yazılı not yok). Kapsam: beş SSS yanıtı Dr. Aksoy’dan birebir alındı; tek düzeltme yazarın kendi onayıyla (28 Ekim 2026) Yanıt 3’te VIBRANT adının çıkarılmasıydı. Kaynaklar PubMed, ClinicalTrials.gov kayıtları ve Pfizer Rapamune etiketinden (10/2024) okundu, tam metin açılmadı; TİTCK kısa ürün bilgisi ulaşılamadığı için kullanılmadı. Kanıt etiketleri yalnızca insan verisinde. Hero parent hub’dan; makale görseli yalnızca byline ve kart.',
+  },
+  {
     pathname: '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/',
     writerSlug: 'senai-aksoy',
     approvedAt: '2026-10-28',
