@@ -958,7 +958,7 @@ export const staticArticles: StaticArticleEntry[] = [
   },
   {
     path: '/zamansiz-yasam/deneysel/rapamisin-yaslanma-ilaci-kanit-ve-risk/',
-    title: 'Rapamisin Yaşlanma İlacı mı?',
+    title: 'Rapamisin ve Yaşlanma: Kanıt ve Risk',
     description:
       'Rapamisin farelerde ömrü uzattı; insanda yaşlanma sonlanımı için sonuçlanmış çalışma yok. Bağışıklık, gebelik ve ilaç etkileşimi riskleri ile kadınlarda kayıtlı çalışmanın durumu.',
     publishedDate: '28 Ekim 2026',
