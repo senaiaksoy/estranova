@@ -88,3 +88,24 @@ Elle anlam sayımı; özet, ilgili gövde bölümü, tablolar, Editör Notu ve h
 ## Son sürüm onayı — 28 Ekim 2026
 
 KC bu sohbette “yazar tıbbi onay tamam” diyerek yukarıdaki audit/humanize fix son sürümünün yazar ve tıbbi onayını bildirdi. Önceki bölümlerdeki onay bekleniyor ifadeleri audit anındaki durumu anlatır; bu kayıtla kapanmıştır. Onay `article-approvals.ts` ve yazar `article-log.md` kaydına işlendi. Beş özgün SSS yanıtı değişmedi. Bağımsız inceleyici Dr. Alper Mumcu olarak kayıtlıdır; onay KC bildirimiyle kaydedildi, doğrudan yazılı inceleme notu alınmadı. Commit, push ve deploy yapılmadı.
+
+## İkinci humanize turu — 28 Ekim 2026 (onaylandı)
+
+Kapsam: 28 Ekim onaylı sürüm üzerinde yalnızca anlatım düzeltmesi. Yeni tıbbi iddia, kaynak, kanıt etiketi veya sayı eklenmedi; SSS verisi, Bilimsel Editör Notu, kaynak listesi ve JSON-LD alanlarına dokunulmadı. `modifiedDate` 28 Ekim 2026'ya çekildi. Ayrı worktree/dalda yapıldı (`content/metformin-humanize-2026-10-28`); commit/push/deploy yok.
+
+| Bulgu | Düzeltme |
+|---|---|
+| Gövdede Dr. Aksoy kendinden üçüncü şahısla söz ediyordu (“Dr. Aksoy'un aşağıdaki yanıtlarında”); SSS girişi birinci tekildi. | `hekimle` lede'si klinisyen birinci tekiline çevrildi; profil `experience_seeds` “standart ile sizin için doğru” ayrımı ve SSS 1'deki “önce neden istediğini sorarım” yanıtına dayanır. |
+| Doğrudan teselli anı yoktu (Sıcaklık kuralı 4). | Egzersiz bölümüne diyabet için metformin kullanan ve spor yapan okura “içiniz rahat olsun” cümlesi; kapanıştaki üçüncü “ilacı bırakmayın” tekrarı sakin bir yönlendirmeye çevrildi. |
+| Duygu beat'i adlandırılmıyordu (kural 7). | Açılışta “umut” sade biçimde adlandırıldı. |
+| “… anlamına gelmez” inkâr çerçevesi 4 kez. | 1'e indi (B12 dört ay açıklaması korundu). |
+| `guclu-yollar` lede'si ile sonraki paragraf aynı koşulla açılıyordu (“Hedefiniz kas…”). | Lede soruya çevrildi, tekrar kaldırıldı; “garanti” kelimesi çıkarıldı. |
+| Lede formülü: 4 H2 “X ayrı aşamadır / X değil” tez cümlesiyle açılıyordu. | `devam-eden` doğrudan okur sahnesi, `bilinmeyenler` dürüst kesin cümle, `guclu-yollar` soru, `kanit-merdiveni` kısa vurgu cümlesi. |
+| Kesik isim zincirleri ve jargon: “sağlıklıda”, “diyabetsizde”, “glukoz”, “hipoksik hastalıkta olanlar”, “Not: etiket…”. | Açık Türkçe karşılıklar. |
+| Mide-bağırsak oranı cümlesi “plaseboya göre %10'a karşı %3” biçiminde dolambaçlıydı. | Grup adlarıyla yeniden kuruldu; sayılar aynı. |
+
+Tell sayımı (gövde): `değil[,;]` 4→3 · “anlamına gelmez” 4→1 · soru-başlıklı H2 1→1 · beden kişileştirmesi 0 · persona/anekdot uyumsuzluğu 0.
+
+Açık nokta: Bilimsel Editör Notu'ndaki “MASTERS randomize çalışması … bu özel bulgu MASTERS çalışmasına dayanır” cümlesi aynı çalışmayı iki kez anıyor; not korunan alan olduğu için değiştirilmedi, yazara bildirildi. Görünür “Bağımsız tıbbi inceleme … 27 Ekim 2026” tarihi, bu tur onaylanırsa yeni onay tarihine çekilmelidir.
+
+Onay: KC 28 Ekim 2026’da bu sohbette “Yeni sürüm için yazar ve tıbbi onay tamam” dedi. Onay `article-approvals.ts` ve article-log’a işlendi; Editör Notu inceleme tarihi 28 Ekim 2026’ya çekildi. Push/deploy talimatı yok.
