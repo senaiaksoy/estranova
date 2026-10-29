@@ -1,0 +1,565 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import Evidence from '../../../components/site/Evidence.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const pathname = '/zamansiz-yasam/deneysel/mots-c-peptidi-kanit-ve-risk/';
+const hero = submenuHeroByRoute['/zamansiz-yasam/deneysel/']!;
+const articleTitle = 'MOTS-c Peptidi Ne İşe Yarar? "Egzersiz Taklidi" Vaadi ve Kanıtın Durumu';
+const seoTitle = 'MOTS-c Peptidi Ne İşe Yarar?';
+const articleDescription =
+  'MOTS-c farelerde kilo alımını, insülin direncini ve menopoz modelinde kemik kaybını sınırladı; dışarıdan verilen MOTS-c ile insanda yayımlanmış çalışma yok. Kanıt merdiveni, güvenlik ve menopoz açısından bilinenler.';
+const publishedDate = '28 Ekim 2026';
+const readingMinutes = 15;
+const linkClass = 'text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary';
+
+const tocEntries = [
+  { id: 'spor-ayakkabisi', label: 'Kapının Yanındaki Spor Ayakkabısı' },
+  { id: 'mots-c-nedir', label: 'Mitokondriden Gelen Bir Sinyal' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveni' },
+  { id: 'fare-verisi', label: 'Farelerde Ne Gördük' },
+  { id: 'insan-verisi', label: 'İnsan Verisi' },
+  { id: 'degerlendirme', label: 'Beş Eksende Değerlendirme' },
+  { id: 'iddialar', label: 'Dolaşan İddialar' },
+  { id: 'kullanici-bildirimleri', label: 'Kullanıcı Bildirimleri' },
+  { id: 'kimler', label: 'Kimler Kullanmamalı' },
+  { id: 'menopoz', label: 'Menopoz ve 40 Sonrası' },
+  { id: 'guclu-yollar', label: 'Kanıtı Daha Güçlü Yollar' },
+  { id: 'devam-eden', label: 'Devam Eden Çalışmalar' },
+  { id: 'bilinmeyenler', label: 'Henüz Bilmediklerimiz' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+];
+
+const faqItems = articleFaqs[pathname] ?? [];
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
+  publishedDate,
+  pathname,
+  articleSection: 'Zamansız Yaşam · Deneysel',
+  sectionPath: '/zamansiz-yasam/',
+  image: hero.src.startsWith('http') ? hero.src : `${siteUrl.replace(/\/$/, '')}${hero.src}`,
+  keywords: [
+    'MOTS-c',
+    'mitokondri peptidi',
+    'egzersiz taklidi',
+    'insülin direnci',
+    'menopoz',
+    'peptid',
+    'kanıt düzeyi',
+  ],
+  faqItems,
+  siteUrl,
+});
+
+const sources = [
+  { n: 1, text: 'Lee C ve ark. The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. Cell Metab. 2015;21(3):443-54.', pmid: '25738459' },
+  { n: 2, text: 'Kim KH ve ark. The mitochondrial-encoded peptide MOTS-c translocates to the nucleus to regulate nuclear gene expression in response to metabolic stress. Cell Metab. 2018.', pmid: '29983246' },
+  { n: 3, text: 'Reynolds JC ve ark. MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis. Nat Commun. 2021;12:470. Fare deneyleri yalnızca erkek farelerde; insan bölümü 10 genç erkekte tek egzersiz seansı.', pmid: '33473109' },
+  { n: 4, text: 'Kumagai H ve ark. MOTS-c modulates skeletal muscle function by directly binding and activating CK2. iScience. 2024.', pmid: '39559755' },
+  { n: 5, text: 'Lu H ve ark. MOTS-c peptide regulates adipose homeostasis to prevent ovariectomy-induced metabolic dysfunction. J Mol Med (Berl). 2019.', pmid: '30725119' },
+  { n: 6, text: 'Ming W ve ark. Mitochondria related peptide MOTS-c suppresses ovariectomy-induced bone loss via AMPK activation. Biochem Biophys Res Commun. 2016.', pmid: '27237975' },
+  { n: 7, text: 'Fuku N ve ark. The mitochondrial-derived peptide MOTS-c: a player in exceptional longevity? Aging Cell. 2015.', pmid: '26289118' },
+  { n: 8, text: 'Zempo H ve ark. A pro-diabetogenic mtDNA polymorphism in the mitochondrial-derived peptide, MOTS-c. Aging (Albany NY). 2021.', pmid: '33468709' },
+  { n: 9, text: 'Woodhead JST, Merry TL. Mitochondrial-derived peptides and exercise. Biochim Biophys Acta Gen Subj. 2021.', pmid: '34520826' },
+  { n: 10, text: 'Özkaya ve ark. MOTS-c levels in individuals with and without obesity and its association with inflammation, insulin resistance and endothelial dysfunction. Arch Endocrinol Metab. 2025.', pmid: '41004666' },
+  { n: 11, text: 'Zhang ve ark. Associations of serum MOTS-c with exercise capacity and antioxidant markers in young males: a cross-sectional study. Antioxidants (Basel). 2026.', pmid: '42939841' },
+  { n: 12, text: 'CB4211 faz 1a/1b çalışması: geliştirici şirketin ön sonuç açıklaması ve yatırımcı sunumu (10 Ağustos 2021). Şirket kaynağı; hakemli yayın değildir. ClinicalTrials.gov NCT03998514: tamamlandı (19 Nisan 2021), sonuç kaydı yok; birincil sonlanım güvenlik. Erişim 28 Ekim 2026.', url: 'https://clinicaltrials.gov/study/NCT03998514', urlLabel: 'NCT03998514' },
+  { n: 13, text: 'ClinicalTrials.gov NCT07505745 (faz 2a, prediyabet ve fazla kilo). Erişim 28 Ekim 2026. Menopoz koşuluyla MOTS-c kaydı araması: sonuç yok (26 Ekim 2026).', url: 'https://clinicaltrials.gov/study/NCT07505745', urlLabel: 'NCT07505745' },
+  { n: 14, text: 'Mohtashami Z ve ark. MOTS-c, the most recent mitochondrial derived peptide in human aging and age-related diseases. Int J Mol Sci. 2022. Ayrıca: Zheng Y ve ark. Front Endocrinol. 2023 (PMID 36761202).', pmid: '36233287' },
+  { n: 15, text: 'Kavak ve ark. Impact of radiation therapy on serum humanin and MOTS-c levels in patients with lung or breast cancer. Curr Radiopharm. 2024.', pmid: '38314601' },
+  { n: 16, text: 'FDA. Certain Bulk Drug Substances for Use in Compounding that May Present Significant Safety Risks. Sayfa içeriği 22 Nisan 2026; erişim 28 Ekim 2026. MOTS-c için bazı uygulama yollarında bağışıklık tepkisi riski ve insan maruziyet verisi bulunmadığı notu. Temmuz 2026 danışma kurulu süreci için ayrıca peptid yazısının kaynakları.', url: 'https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks', urlLabel: 'fda.gov' },
+  { n: 17, text: 'World Anti-Doping Agency (WADA). Prohibited List 2026, S4.4.1. Erişim 27 Ekim 2026.', url: 'https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf', urlLabel: 'Resmî liste (PDF)' },
+  { n: 18, text: 'T.C. Sağlık Bakanlığı TİTCK. Ruhsatlı Beşeri Tıbbi Ürünler Listesi, 16 Ekim 2026 (MOTS-c etkin maddeli ruhsatlı ürün yok).', url: 'https://www.titck.gov.tr/dinamikmodul/85', urlLabel: 'TİTCK sayfası' },
+  { n: 19, text: 'NIA Interventions Testing Program: Supported Interventions. Son güncelleme 13 Nisan 2026; erişim 27 Ekim 2026 (MOTS-c listede yok).', url: 'https://www.nia.nih.gov/research/dab/interventions-testing-program-itp/supported-interventions', urlLabel: 'ITP listesi' },
+  { n: 20, text: 'Kong ve ark. Mitochondrial-encoded peptide MOTS-c prevents pancreatic islet cell senescence to delay diabetes. Exp Mol Med. 2025.', pmid: '40855115' },
+  { n: 21, text: 'Federal Register 2026-07361 (16 Nisan 2026): danışma kurulu toplantı duyurusu; MOTS-c için değerlendirilen kullanım obezite ve osteoporoz. 28 Ekim 2026 aramasında nihai karar veya kural taslağı bulunmadı.', url: 'https://www.federalregister.gov/documents/2026/04/16/2026-07361/pharmacy-compounding-advisory-committee-notice-of-meeting-establishment-of-a-public-docket-request', urlLabel: 'federalregister.gov' },
+  { n: 22, text: 'Tsui KH ve ark. The mitochondrial-derived peptide MOTS-c improves bioenergetics in aging-associated granulosa cells and oocytes. Reprod Fertil. 2026;7(4). Laboratuvar ve hayvan çalışması; döllenme, embriyo ve canlı doğum ölçülmedi.', pmid: '42895211' },
+  { n: 23, text: 'Yin Y ve ark. The mitochondrial-derived peptide MOTS-c relieves hyperglycemia and insulin resistance in gestational diabetes mellitus. Pharmacol Res. 2021.', pmid: '34798268' },
+  { n: 24, text: 'Shen ve ark. MOTS-c relieves hepatocellular carcinoma resistance to TRAIL-induced apoptosis under hypoxic conditions by activating MEF2A. Exp Cell Res. 2024.', pmid: '39581216' },
+  { n: 25, text: 'Dent E ve ark. International Clinical Practice Guidelines for Sarcopenia (ICFSR): screening, diagnosis and management. J Nutr Health Aging. 2018;22(10):1148-61.', pmid: '30498820' },
+  { n: 26, text: 'Knowler WC ve ark. (Diabetes Prevention Program Research Group). Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. N Engl J Med. 2002;346(6):393-403.', pmid: '11832527' },
+  { n: 27, text: 'The North American Menopause Society. Management of osteoporosis in postmenopausal women: the 2021 position statement. Menopause. 2021;28(9):973-97.', pmid: '34448749' },
+  { n: 28, text: 'Stadje R ve ark. The differential diagnosis of tiredness: a systematic review. BMC Fam Pract. 2016;17(1):147.', pmid: '27765009' },
+];
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  image={hero.src}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Deneysel"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        articleType="clinical-guide"
+        publishedDate={publishedDate}
+        readingMinutes={readingMinutes}
+        imageSrc="/images/library/editorial/mots-c-peptidi-kanit-ve-risk-byline.webp"
+        imageAlt="Kapının yanındaki bankta beyaz spor ayakkabısını bağlarken gülümseyen 50 yaş civarı bir kadın, açık kapıdan el sallayan arkadaşı; yapay zekâ ile üretilmiş temsili görsel"
+        imagePosition="center"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton slug={pathname} title={articleTitle} />
+      </div>
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          MOTS-c, mitokondri DNA'sında şifrelenen küçük bir peptiddir; vücut onu kendisi üretir. Farelerde kilo alımını,
+          insülin direncini ve yaşla gelen fiziksel gerilemeyi azalttı; yumurtalıkları alınmış farelerde, yani menopoz
+          modelinde, yağlanmayı ve kemik kaybını sınırladı. İnsanda bugüne kadar bilinen şey, egzersizin vücudun kendi
+          MOTS-c düzeyini artırdığı. Dışarıdan enjekte edilen MOTS-c'nin insanda ne yaptığını gösteren yayımlanmış bir
+          çalışma yok; ilk kontrollü çalışma 2027'de bitecek. Benzer bir molekülün dört haftalık küçük denemesinde
+          karaciğer yağı plasebodan farklı çıkmadı. Uzun süreli güvenlik bilinmiyor. Türkiye'de ruhsatlı ürün yok, sporda
+          yasaklı. Gebelik planı, kanser öyküsü ya da şeker ilacı kullanımı varsa bu soruyu hekiminizle konuşun.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="spor-ayakkabisi">Kapının yanındaki spor ayakkabısı</h2>
+
+        <p>
+          Birçoğumuzun evinde kapının yanında bir çift spor ayakkabısı durur. Bazı haftalar yürüyüşe çıkar, bazı haftalar yalnızca bizi izler.
+        </p>
+
+        <p>
+          "Şişedeki egzersiz" lakabı bu yüzden çekici. Ayakkabıyı bağlamadan egzersizin metabolik kazancını alabilmek kimin hoşuna gitmez? MOTS-c bu lakapla dolaşan bir peptid. Satış sayfalarında yağ yakımı, enerji, dayanıklılık ve yaşlanmayı yavaşlatma aynı kutuya konmuş.
+        </p>
+
+        <p>
+          Bu soruyu soran kadınların çoğu tembellikten değil yorgunluktan soruyor. Menopoza geçişte kilo değişiyor, uyku bölünüyor, iş ve aile yükü azalmıyor. Bir de egzersiz yapamadığı için kendine kızan bir iç ses var. O sesi tanıyorum. Önce şunu söyleyeyim: merak etmeniz ve çıkış yolu aramanız çok anlaşılır.
+        </p>
+
+        <p>
+          Bu yazıda MOTS-c'yi küçümsemeyeceğim. Biyolojisi gerçekten ilginç. Ama farede gördüğümüz ile sizin için bilinen arasındaki mesafeyi basamak basamak göstereceğim. Peptidlerin genel düzenleyici durumu ve diğer peptidlerle karşılaştırması <a href="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/" class={linkClass}>peptid yazısında</a> var; burada yalnızca MOTS-c'yi ele alıyorum.
+        </p>
+
+        <h2 id="mots-c-nedir">Mitokondriden gelen bir sinyal</h2>
+
+        <p>
+          Kısa cevap: mitokondrinin kendi genetik kodundan çıkan, 16 aminoasitlik bir sinyal molekülü.
+        </p>
+
+        <p>
+          Mitokondriler hücrenin enerji üreten yapılarıdır ve kendilerine ait küçük bir DNA taşırlar. 2015'te bu DNA'nın içinde, daha önce bilinmeyen kısa bir kod bulundu. Bu kodun ürettiği peptide MOTS-c adı verildi <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Hücre deneylerinde MOTS-c, enerji durumunu algılayan AMPK adlı düğmeyi açıyor. Egzersizin de açtığı düğmelerden biri bu; "egzersiz taklidi" benzetmesi buradan geliyor <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>.
+        </p>
+
+        <p>
+          Sonraki çalışmalar iki ilginç ayrıntı ekledi. Metabolik stres altında MOTS-c hücre çekirdeğine geçip çekirdekteki bazı genlerin çalışmasını etkileyebiliyor <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>. Kas hücresinde de CK2 adlı bir enzime doğrudan bağlanıyor; farelerde kas erimesini önleyen etkinin bu enzime bağlı olduğu gösterildi <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>. Kısacası mekanizma inandırıcı. Ama mekanizmanın inandırıcı olması, dışarıdan verilen peptidin insanda aynı şeyi yaptığını göstermez.
+        </p>
+
+        <h2 id="kanit-merdiveni">Kanıt merdiveni: altı basamakta MOTS-c</h2>
+
+        <p>
+          Alt basamaklar dolu. Dördüncü basamaktan sonrası boş.
+        </p>
+
+        <ol>
+          <li><strong>Mekanizma:</strong> Güçlü. AMPK düğmesi, çekirdek genlerine etki ve kas içindeki CK2 bağlantısı ayrı ayrı gösterildi <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>.</li>
+          <li><strong>Hayvanda ömür:</strong> Sınırlı. Tek bir çalışmada, yalnızca erkek farelerde, ileri yaşta başlanan MOTS-c ortanca ömürde %6,4, en uzun ömürde %7,0 uzama yönünde bir eğilim gösterdi. Fark sınırda kaldı ve yalnızca belli bir yaşa kadar izlendi; yazarlar bunu doğrulamak için daha büyük gruplar gerektiğini yazıyor <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. Ulusal yaşlanma enstitüsünün bağımsız ömür testi programında MOTS-c hiç test edilmedi <sup><a href="#kaynak-19" aria-label="Kaynak 19">[19]</a></sup>.</li>
+          <li><strong>İnsanda biyobelirteç:</strong> Sınırlı. Egzersiz kasta ve kanda MOTS-c düzeyini kısa süreli artırıyor <Evidence level={2} /> <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>. Ama dışarıdan verilen MOTS-c'nin insanda kan şekerini veya insülin duyarlılığını değiştirdiğini gösteren yayımlanmış çalışma yok.</li>
+          <li><strong>İnsanda işlev:</strong> Bilinmiyor. Kas gücü, yürüme, enerji ya da kilo için dışarıdan MOTS-c verilen sonuçlanmış bir insan çalışması yok. İlk kontrollü çalışma sürüyor <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>.</li>
+          <li><strong>İnsanda güvenlik:</strong> Bilinmiyor. MOTS-c'nin kendisi için yayımlanmış insan güvenlik verisi bulamadık. ABD İlaç Dairesi (FDA) de Nisan 2026 itibarıyla MOTS-c içeren ürünlerle ilgili hiçbir insan maruziyet verisi bulmadığını yazıyor <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Benzeri bir molekül (CB4211) dört haftalık küçük bir denemede ciddi yan etki bildirmedi; bu bilgi şirket açıklamasından geliyor ve yalnızca dört haftayı kapsıyor <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Sert sonlanım (ömür, diyabet, kırık):</strong> Yok.</li>
+        </ol>
+
+        <h2 id="fare-verisi">Farelerde ne gördük</h2>
+
+        <p>
+          Fare verisi bu molekülün en güçlü kartı. Kadın okur için de en ilginç kısmı burada.
+        </p>
+
+        <p>
+          İlk çalışmada yağlı beslenen farelerde MOTS-c kilo alımını ve insülin direncini önledi; yaşa bağlı insülin direnci de azaldı <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. Daha sonra yaşlı farelerde, geç yaşta ve aralıklı başlanan MOTS-c kavrama gücünü, adım uzunluğunu ve yürüme testini iyileştirdi. Ömürde ise yalnızca sınırda bir eğilim görüldü <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. Bu çalışmadaki farelerin hepsi erkekti.
+        </p>
+
+        <p>
+          Menopoz açısından iki çalışma doğrudan ilgi çekici. Yumurtalıkları alınan farelerde östrojen düşüyor ve fare, menopozdaki metabolik değişime benzer biçimde yağ topluyor. Bu farelerde MOTS-c kilo alımını ve insülin direncini önledi, kahverengi yağ dokusunun çalışmasını korudu <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>. Aynı modelde başka bir çalışmada kemik kaybı azaldı; etki, kemiği yıkan hücrelerin oluşumunun yavaşlamasıyla ilişkili bulundu <sup><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>.
+        </p>
+
+        <p>
+          Bunlar kulağa çok iyi geliyor. Gerçekten de güzel deneyler. Ama yumurtalığı alınmış genç bir fare, menopoza yavaş yavaş giren 50 yaşında bir kadın değil. Fare çalışmalarında kullanılan dozlar, uygulama yolu ve süre de insana doğrudan taşınamıyor. Bu yüzden bu bulgulara kanıt düzeyi etiketi koymuyorum: bunlar hayvan verisi.
+        </p>
+
+        <h2 id="insan-verisi">İnsanda bugüne kadar bilinenler</h2>
+
+        <p>
+          İnsan verisi iki türlü: vücudun kendi MOTS-c'sini ölçen çalışmalar ve neredeyse hiç olmayan tedavi çalışmaları.
+        </p>
+
+        <p>
+          <strong>Vücudun kendi MOTS-c'si.</strong> Yoğun egzersizden sonra kasta ve kanda MOTS-c yükseliyor <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>. Bu bulgunun ilk kaynağı küçük bir çalışma: hareketsiz yaşayan 10 genç erkek. Kandaki artış dört saatlik dinlenmeden sonra başlangıç düzeyine döndü <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. Düzenli antrenmanın düzeyi kalıcı olarak değiştirip değiştirmediği ise tutarsız; antrenmanın türüne, süresine ve kişiye göre değişiyor <sup><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>. Yaşla kan düzeyinin düştüğünü bildiren derlemeler var <sup><a href="#kaynak-14" aria-label="Kaynak 14">[14]</a></sup>. Tip 2 diyabetli hastalarda kan düzeyi sağlıklı kişilerden düşük bulundu <sup><a href="#kaynak-20" aria-label="Kaynak 20">[20]</a></sup>; obeziteyle normal kiloyu karşılaştıran bir çalışmada ise fark çıkmadı <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>.
+        </p>
+
+        <p>
+          Burada küçük ama önemli bir sorun var. Bir çalışmada ortalama kan düzeyi mililitrede 14 pikogram civarında <sup><a href="#kaynak-10" aria-label="Kaynak 10">[10]</a></sup>, başka bir çalışmada 300-500 pikogram arasında <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>. Otuz kattan büyük bir fark. Bu, ölçüm yöntemlerinin henüz birbiriyle uyuşmadığını düşündürüyor. Kanda MOTS-c ölçtüren bir test, bugün size karar verdirecek bir sayı üretmez.
+        </p>
+
+        <p>
+          <strong>Doğal bir gen farkı.</strong> Japonya'da ve Kuzeydoğu Asya'da görülen bir mitokondri DNA'sı farkı, MOTS-c'nin tek bir aminoasidini değiştiriyor. Bu farkın Japonların uzun ömrüyle ilişkili olabileceği 2015'te bir yorum yazısında öne sürüldü <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>; bu bir hipotezdi. Sonra 27.527 kişilik üç grubun birleşik analizinde bu farkı taşıyan erkeklerde tip 2 diyabet daha sıktı; kadınlarda böyle bir ilişki görülmedi <Evidence level={2} /> <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>. Başka bir çalışmada farkı taşıyan erkeklerde kas kaybı ve diyabet riski yüksekti; kadınlarda ise belli yaşlarda diyabet riski daha düşüktü <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup>. Bu gözlemsel ilişki MOTS-c'nin insanda bir rolü olduğunu destekliyor. Ama dışarıdan verilen peptidin bu riski değiştireceğini göstermiyor.
+        </p>
+
+        <p>
+          <strong>Tedavi denemesi.</strong> Dışarıdan verilen MOTS-c'nin kendisiyle yayımlanmış bir insan çalışması bulamadık. MOTS-c'den türetilmiş CB4211 adlı molekül, yağlı karaciğeri olan obez 20 kişide dört hafta plaseboyla karşılaştırıldı. Çalışmanın birincil amacı güvenlikti. Karaciğer enzimleri ve kan şekeri biraz düştü <Evidence level={1} />. Keşif amaçlı ölçülen karaciğer yağı ise ilaç ve plasebo gruplarında benzer oranda azaldı; kilo için yalnızca bir eğilim bildirildi <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Çalışmaya kadınlardan yalnızca menopoza girmiş ya da gebe kalamayacak olanlar alınmıştı; kadın sonuçları ayrıca açıklanmadı.
+        </p>
+
+        <p>
+          Bu sonuçların tek kaynağı şirketin 2021 açıklaması. 28 Ekim 2026 itibarıyla PubMed'de hakemli bir yayın, ClinicalTrials.gov'da da sonuç kaydı yok <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>. Ayrıca CB4211, MOTS-c'nin kendisi değil.
+        </p>
+
+        <h2 id="degerlendirme">Beş eksende değerlendirme</h2>
+
+        <p>
+          Tek bir not vermek kolay olurdu. Ama aynı molekül beş soruda beş farklı yerde duruyor.
+        </p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Eksen</th>
+                <th class="p-3 font-semibold">Değerlendirme</th>
+                <th class="p-3 font-semibold">Gerekçe</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Etkinlik kanıtı</td>
+                <td class="p-3">Hayvanda orta, insanda yok</td>
+                <td class="p-3">Fare verisi birkaç bağımsız grupta tutarlı <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>; ömürde yalnızca sınırda bir eğilim <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>; insanda dışarıdan verilen MOTS-c ile sonuçlanmış çalışma yok <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Güvenlik kanıtı</td>
+                <td class="p-3">Bilinmiyor</td>
+                <td class="p-3">FDA insan maruziyet verisi bulamadığını belirtiyor <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>; benzeri molekülde yalnızca dört haftalık küçük deneme <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Mekanizma inandırıcılığı</td>
+                <td class="p-3">Güçlü</td>
+                <td class="p-3">AMPK, çekirdek ve CK2 bağlantıları; egzersizle artış insanda da gösterildi <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Ürün ve düzenleyici durum</td>
+                <td class="p-3">Zayıf</td>
+                <td class="p-3">Ruhsatlı ilaç değil; araştırma kimyasalı olarak satılıyor; Türkiye'de ruhsatlı ürün yok; sporda yasaklı <sup><a href="#kaynak-17" aria-label="Kaynak 17">[17]</a><a href="#kaynak-18" aria-label="Kaynak 18">[18]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Geri dönüşebilirlik</td>
+                <td class="p-3">Bilinmiyor</td>
+                <td class="p-3">Bırakınca etkinin ya da olası zararın geçip geçmediğine dair insan verisi yok</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Neden "ürün" ekseni zayıf? Çünkü ruhsatsız peptidlerde şişedeki maddenin gerçekten MOTS-c olup olmadığı, ne kadar saf olduğu ve steril üretilip üretilmediği denetlenmiyor. FDA ayrıca eczanede hazırlanan MOTS-c ürünlerinin bazı uygulama yollarında bağışıklık tepkisi oluşturma riski taşıyabileceğini yazıyor <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. ABD'de eczanelerin bu maddeyi hazırlayıp hazırlayamayacağı da henüz karara bağlanmadı (aşağıda).
+        </p>
+
+        <h2 id="iddialar">Dolaşan iddialar ve kanıtın durumu</h2>
+
+        <p>
+          Bu tabloda insana dair desteklenmiş tek iddia var: egzersizin MOTS-c'yi artırdığı. Satış sayfalarındaki iddiaların hiçbiri bu değil.
+        </p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Durum</th>
+                <th class="p-3 font-semibold">Not</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Egzersiz vücudun kendi MOTS-c düzeyini artırır</td>
+                <td class="p-3">Test edildi, desteklendi (kısa süreli)</td>
+                <td class="p-3"><sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>; düzenli antrenmanın kalıcı etkisi tutarsız</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c "şişedeki egzersiz"dir</td>
+                <td class="p-3">Bu haliyle test edilemez</td>
+                <td class="p-3">Egzersizin kalp, damar, kemik, denge ve ruh hali etkileri tek bir sinyale indirgenemez</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c yağ yakar, kilo verdirir</td>
+                <td class="p-3">Henüz test edilmedi ama test edilebilir</td>
+                <td class="p-3">Farelerde gösterildi <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>; benzeri molekülde dört haftada yalnızca eğilim <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>; insan çalışması sürüyor <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c insülin duyarlılığını artırır</td>
+                <td class="p-3">Henüz test edilmedi ama test edilebilir</td>
+                <td class="p-3">Faz 2a çalışmasının birincil sonucu tam olarak bu; bitiş 2027 <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c enerji ve dayanıklılık verir</td>
+                <td class="p-3">Henüz test edilmedi ama test edilebilir</td>
+                <td class="p-3">Yalnızca farelerde <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>; insanda çalışma yok</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MOTS-c yaşlanmayı yavaşlatır, ömrü uzatır</td>
+                <td class="p-3">Bu haliyle test edilemez</td>
+                <td class="p-3">Hayvanda tek çalışmada, yalnızca erkek farelerde sınırda bir eğilim var; bağımsız ömür testi yapılmadı <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-19" aria-label="Kaynak 19">[19]</a></sup>. "Yaşlanmayı yavaşlatmak" ölçülebilir bir sonuca çevrilmeden test edilemez</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Tabloya, 28 Ekim 2026 taramamızda birden fazla bağımsız tüketici sayfasında dolaştığını gördüğümüz iddialar alındı; kullanıcı hikâyeleri, satıcı ve forum bağlantıları kullanılmadı.
+        </p>
+
+        <h2 id="kullanici-bildirimleri">Kullanıcı bildirimlerinin sınırı</h2>
+
+        <p>
+          Kendini daha enerjik hisseden biri yanılıyor olmayabilir. Ama bu his MOTS-c'nin etkisini göstermez.
+        </p>
+
+        <p>
+          Bir peptide başlayan kişi çoğu zaman aynı anda başka şeyleri de değiştirir: daha erken yatar, daha çok yürür, şekeri azaltır. Kendini en kötü hissettiği haftada başlar ve iyi haftalar zaten bir gün gelir. Plasebo etkisi de gerçektir. Bu yüzden "bende işe yaradı" anlatıları etkinlik için zayıf kanıttır.
+        </p>
+
+        <p>
+          Yan etki bildirimleri farklıdır. Aynı yakınma farklı kişilerden tekrar tekrar geliyorsa, bu ciddiye alınması gereken bir güvenlik işaretidir. MOTS-c için bağımsız kaynaklarda tutarlı biçimde tekrarlanan bir yan etki listesi bulamadık. Bunu "yan etkisi yok" diye okumayın. Doğru okuma şu: kimse sistemli olarak kaydetmiyor.
+        </p>
+
+        <h2 id="kimler">Kimler kullanmamalı ve hekimle konuşulacaklar</h2>
+
+        <p>
+          Aşağıdaki durumlarda bilinmeyenler daha da büyür.
+        </p>
+
+        <ul>
+          <li><strong>Gebelik ya da gebelik planı:</strong> Menopoza geçişte gebelik olasılığı sürebilir. Gebelikte yalnızca hayvan deneyleri var; gebelik diyabeti modelindeki farelerde çalışıldı <sup><a href="#kaynak-23" aria-label="Kaynak 23">[23]</a></sup>. İnsanda gebelik güvenlik verisi yok. Kayıtlı faz 2a çalışması da gebe ve emziren kadınları almıyor, çocuk sahibi olabilecek katılımcılardan etkili korunma istiyor <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>.</li>
+          <li><strong>Kanser öyküsü ya da aktif kanser:</strong> MOTS-c ile kanser arasındaki ilişki yalnızca hücre deneylerinden ve küçük gözlemsel çalışmalardan biliniyor; bazı kanser hastalarında kan düzeyi yüksek bulundu <sup><a href="#kaynak-15" aria-label="Kaynak 15">[15]</a></sup>, karaciğer kanseri hücreleriyle yapılan bir laboratuvar çalışmasında da etkisi incelendi <sup><a href="#kaynak-24" aria-label="Kaynak 24">[24]</a></sup>. Yönü belli değil. Hücre çoğalmasını ve enerji kullanımını etkileyen bir molekülde bu belirsizlik küçük bir ayrıntı değil.</li>
+          <li><strong>Diyabet ya da şeker düşürücü ilaç kullanımı:</strong> Fare çalışmalarında kan şekerini düşürüyor <sup><a href="#kaynak-1" aria-label="Kaynak 1">[1]</a></sup>. İnsanda şeker ilaçlarıyla birlikte ne olduğu bilinmiyor. Faz 2a çalışması metformin ve benzeri ilaçları kullananları çalışmaya almıyor <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>.</li>
+          <li><strong>Böbrek ya da karaciğer hastalığı:</strong> Aynı çalışma böbrek işlevi düşük olanları ve ciddi karaciğer hastalığı olanları dışarıda bırakıyor <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>. Bu gruplarda veri olmayacak.</li>
+          <li><strong>Yarışmalı spor:</strong> MOTS-c Dünya Anti-Doping Ajansı'nın 2026 listesinde hormon ve metabolizma düzenleyicileri arasında, adıyla ve her zaman yasaklı <sup><a href="#kaynak-17" aria-label="Kaynak 17">[17]</a></sup>.</li>
+        </ul>
+
+        <p>
+          Yine de kullanmayı düşünüyorsanız hekiminizle şu soruları konuşabilirsiniz:
+        </p>
+
+        <ul>
+          <li><strong>Hedef ne?</strong> "Metabolizmam hızlansın" ölçülebilir değil. Kan şekeri, bel çevresi, kas gücü ya da kemik yoğunluğu ölçülebilir. Bunların her biri için kanıtı daha güçlü yollar var (aşağıda).</li>
+          <li><strong>Başlangıç ölçümleri:</strong> Açlık kan şekeri, HbA1c, kan yağları, böbrek ve karaciğer işlevi gibi değerler; hangisinin gerektiğine hekiminiz karar verir.</li>
+          <li><strong>Aynı anda tek değişiklik:</strong> Peptidle birlikte yeni bir diyet ve spor programına başlarsanız neyin işe yaradığını ayıramazsınız.</li>
+          <li><strong>Bırakma ölçütü:</strong> Hangi belirtide bırakacağınızı ve ne kadar süre sonra sonucu değerlendireceğinizi baştan konuşun.</li>
+          <li><strong>Ürün:</strong> Ruhsatsız bir peptidin içeriğini ve sterilliğini doğrulayan bir sistem yok. Saflık belgesi gösterilmesi, ürünün etkili ya da güvenli olduğunu kanıtlamaz.</li>
+        </ul>
+
+        <h2 id="menopoz">Menopoz ve 40 sonrası</h2>
+
+        <p>
+          Menopoz için en ilginç veri farelerden. Kadınlarda neredeyse hiç veri yok.
+        </p>
+
+        <p>
+          Yumurtalıkları alınmış farelerde MOTS-c'nin kilo alımını, insülin direncini ve kemik kaybını sınırlaması menopoz açısından dikkat çekici <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>. Yumurtalık yaşlanmasına dair ilk laboratuvar verisi de 2026'da geldi: yaşlanmayla ilişkili insan granüloza hücrelerinde (yumurtayı besleyen destek hücreleri) ve yaşlı farelerden alınan yumurtalarda MOTS-c enerji üretimini artırdı. Yumurtaların olgunlaşması iyileşti ama genç fare düzeyine ulaşmadı. Döllenme, embriyo ya da canlı doğum ise ölçülmedi <sup><a href="#kaynak-22" aria-label="Kaynak 22">[22]</a></sup>. Ama bu deneylerin hiçbirinin kadınlarda karşılığı yok. Menopozdaki kadınlarda, hormon tedavisi alan kadınlarda ya da perimenopozda dışarıdan MOTS-c verilen kayıtlı bir çalışma bulamadık. ClinicalTrials.gov'da menopoz koşuluyla MOTS-c araştıran kayıt yok <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>.
+        </p>
+
+        <p>
+          Gen farkı çalışmaları da kadınlar için ilginç bir soru bırakıyor: aynı gen farkı erkeklerde diyabetle ilişkiliyken kadınlarda ilişkisiz ya da belli yaşlarda ters yönde çıktı <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>. Fare çalışmalarında da dişilerde farklı sonuçlar görüldü <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>. MOTS-c'nin kadın ve erkek bedeninde aynı işi yapıp yapmadığını bilmiyoruz. Östrojenin bu tabloya nasıl katıldığı da bilinmiyor.
+        </p>
+
+        <p>
+          Hormon tedavisi kullanıyorsanız MOTS-c ile etkileşimine dair bilgi yok. Bu da hekiminize söylemeniz gereken bir ayrıntı.
+        </p>
+
+        <h2 id="guclu-yollar">Aynı hedef için kanıtı daha güçlü yollar</h2>
+
+        <p>
+          MOTS-c'nin vaat ettiği her şeyin bir de kanıtlı karşılığı var. Pek parlak değiller ama işe yarıyorlar.
+        </p>
+
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">Hedef</th>
+                <th class="p-3 font-semibold">Kanıtı daha güçlü yol</th>
+                <th class="p-3 font-semibold">İlgili okuma</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Kas gücü ve kas kaybını yavaşlatmak</td>
+                <td class="p-3">Direnç egzersizi ilk sırada önerilir; proteinden zengin beslenme ya da protein desteği daha zayıf bir öneriyle eklenir <sup><a href="#kaynak-25" aria-label="Kaynak 25">[25]</a></sup></td>
+                <td class="p-3"><a href="/zamansiz-yasam/sarkopeni-40-sonrasi-sessiz-kas-kaybi/" class={linkClass}>Sessiz kas kaybı</a>, <a href="/zamansiz-yasam/40-sonrasi-harekete-yeniden-baslamak/" class={linkClass}>Harekete yeniden başlamak</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kan şekeri ve insülin direnci</td>
+                <td class="p-3">Prediyabeti olan, %68'i kadın 3.234 kişilik bir çalışmada kilo kaybı ve haftada en az 150 dakika hareket içeren yaşam tarzı programı, yaklaşık üç yılda diyabete geçişi %58 azalttı; metformin %31 azalttı <Evidence level={5} /> <sup><a href="#kaynak-26" aria-label="Kaynak 26">[26]</a></sup></td>
+                <td class="p-3"><a href="/zamansiz-yasam/kilo-artisi-menopoz/" class={linkClass}>Menopozda kilo artışı</a>, <a href="/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/" class={linkClass}>Metformin ve uzun yaşam</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Kemik</td>
+                <td class="p-3">Yeterli protein, kalsiyum ve D vitamini, düzenli fiziksel aktivite, sigara ve fazla alkolden uzak durmak; risk varsa kemik yoğunluğu ölçümü ve gerekiyorsa ilaç <sup><a href="#kaynak-27" aria-label="Kaynak 27">[27]</a></sup></td>
+                <td class="p-3"><a href="/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/" class={linkClass}>Kemik gücü</a>, <a href="/zamansiz-yasam/d-vitamini-rehberi/" class={linkClass}>D vitamini rehberi</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Enerji ve yorgunluk</td>
+                <td class="p-3">Yorgunluğun nedenini hekimle aramak. Birinci basamakta yorgunlukla gelenlerde ciddi bir bedensel hastalık seyrek (%4,3), kansızlık %2,8, depresyon ise %18,5 oranında bulundu; tetkiki öykü ve muayene yönlendirir <sup><a href="#kaynak-28" aria-label="Kaynak 28">[28]</a></sup></td>
+                <td class="p-3"><a href="/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/" class={linkClass}>Menopozda uyku</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Tablodaki öneriler MOTS-c'nin vaat ettiği hedeflerin karşılığıdır. Size hangisinin uyduğu sağlık durumunuza göre değişir.
+        </p>
+
+        <p>
+          İşin ilginç yanı şu: MOTS-c'nin insanda gösterilmiş tek artışı egzersizle geliyor <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a><a href="#kaynak-9" aria-label="Kaynak 9">[9]</a></sup>. Yani bugün vücudunuzun kendi MOTS-c'sini yükseltmenin bilinen tek yolu, kapının yanındaki ayakkabı.
+        </p>
+
+        <h2 id="devam-eden">Devam eden çalışmalar: cevap ne zaman gelir?</h2>
+
+        <p>
+          Bu bölüm yazıyı güncelleme gerekçemiz.
+        </p>
+
+        <p>
+          ClinicalTrials.gov'da (28 Ekim 2026 itibarıyla) dışarıdan MOTS-c verilen tek kontrollü çalışma kayıtlı. Prediyabeti ve fazla kilosu olan 18-65 yaş arası 120 yetişkine 12 hafta deri altı MOTS-c ya da plasebo veriliyor. Birincil sonuç insülin duyarlılığı ve yan etkiler; ikincil sonuçlar HbA1c ve kan şekeri. Çalışma Çin'de tek merkezde yürüyor, katılımcı alımı sürüyor; birincil sonuçların toplanmasının Şubat 2027'de bitmesi planlanıyor <sup><a href="#kaynak-13" aria-label="Kaynak 13">[13]</a></sup>. Çalışma menopozu ya da yaşlanmayı ölçmüyor; kadın alt grubu ayrıca tanımlanmamış.
+        </p>
+
+        <p>
+          CB4211 çalışması 2021'de tamamlandı. Beş yıl sonra hâlâ hakemli bir yayını ve kayıtlı sonucu yok <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.
+        </p>
+
+        <p>
+          ABD'de düzenleyici süreç de sürüyor. FDA, 15 Nisan 2026'da MOTS-c'yi de içeren 12 peptidi "ciddi güvenlik endişesi" listesinden çıkardı. Gerekçe, bu maddeleri önerenlerin başvurularını geri çekmesiydi; listeden çıkmak maddeyi eczanede hazırlanabilir kılmadı <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Temmuz 2026'da danışma kurulu MOTS-c'yi obezite ve osteoporoz için görüştü <sup><a href="#kaynak-21" aria-label="Kaynak 21">[21]</a></sup>. FDA personeli listeye alınmamasını önerdi, kurul çoğunluğu ise lehte oy verdi <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Kurul oyu bağlayıcı değil. Maddenin listeye girmesi için FDA'nın ayrıca kural yazması gerekiyor. 28 Ekim 2026 itibarıyla ne nihai bir karar ne de yayımlanmış bir kural taslağı bulduk <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a><a href="#kaynak-21" aria-label="Kaynak 21">[21]</a></sup>. Ayrıntısı <a href="/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/#guvenlik-standardizasyon" class={linkClass}>peptid yazısında</a>.
+        </p>
+
+        <p>
+          Sonuçlanmamış bir çalışmanın ne diyeceğini tahmin etmeyeceğim. Sonuç geldiğinde bu yazıyı güncelleyeceğiz.
+        </p>
+
+        <h2 id="bilinmeyenler">Henüz bilmediklerimiz</h2>
+
+        <p>
+          Açık sorular uzun bir liste. Ama hepsi sorulabilir sorular.
+        </p>
+
+        <ul>
+          <li>Dışarıdan verilen MOTS-c insanda insülin duyarlılığını, kiloyu ya da kas gücünü değiştiriyor mu?</li>
+          <li>Haftalar ve aylar boyunca kullanıldığında güvenli mi?</li>
+          <li>Kadınlarda, menopozda ve hormon tedavisiyle birlikte nasıl davranıyor?</li>
+          <li>Kanser riski açısından nötr mü?</li>
+          <li>Kandaki düzeyi güvenilir biçimde ölçmek mümkün mü?</li>
+        </ul>
+
+        <p>
+          Kapının yanındaki ayakkabının bir avantajı var: onun yan etkilerini ve faydalarını onlarca yıldır biliyoruz. MOTS-c için bu bilgi henüz birikmedi.
+        </p>
+      </ArticleProsePanel>
+
+      <ArticleFAQ id="sik-sorulanlar" title="Dr. Aksoy'a sorular" intro="Bu bölümde MOTS-c'nin egzersiz, kilo, güvenlik ve kan testleriyle ilgili sık sorulan yanlarına kendi yanıtlarımı veriyorum." items={faqItems} class="mt-10" />
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/zamansiz-yasam/deneysel/peptid-kullanimlari-menopoz/',
+          '/zamansiz-yasam/deneysel/deneysel-tedaviyi-okuma-kilavuzu/',
+          '/zamansiz-yasam/deneysel/metformin-uzun-yasam-etiket-disi/',
+        ]}
+      />
+
+      <ArticleEditorNote>
+        <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={2} /></p>
+        <p class="italic text-ink/80">
+          Yazının gövdesinde kanıtı basamak basamak tarttım. Bu notta, o kanıtı klinik değerlendirmede nasıl sıraladığımı
+          kısaca toparlıyorum.
+        </p>
+        <p>
+          MOTS-c'nin mekanizması inandırıcı, hayvan verisi birkaç bağımsız grupta tutarlı. İnsanda gösterilen tek şey,
+          egzersizin vücudun kendi MOTS-c düzeyini artırması. Dışarıdan verilen MOTS-c ile sonuçlanmış bir insan çalışması
+          yok; MOTS-c'den türetilmiş bir molekülün dört haftalık küçük denemesi de hakemli bir yayına dönüşmedi.
+        </p>
+        <p>
+          Güvenlik bilinmiyor. Gebelik olasılığı, kanser öyküsü ve şeker düşürücü ilaç kullanımı bu bilinmezliği büyütüyor.
+          Ruhsatsız ürünlerde içerik ve sterillik ayrı bir sorun.
+        </p>
+        <p>
+          Klinik değerlendirmede sıram şöyledir: önce MOTS-c'nin hangi ölçülebilir hedef için düşünüldüğü, sonra o hedef
+          için kanıtı daha güçlü yolların neden yetmediği, ardından gebelik olasılığı, ilaçlar ve sağlık öyküsü.
+        </p>
+        <p class="text-sm italic text-primary">
+          Yazarın klinik değerlendirmesi: Doç. Dr. Senai Aksoy, Kadın Hastalıkları ve Doğum Uzmanı
+        </p>
+        <p class="text-sm text-ink/80">
+          Bağımsız tıbbi inceleme: Dr. Alper Mumcu — 28 Ekim 2026.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleProsePanel class="mt-10 prose-estranova-references">
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol class="mt-4 space-y-3 text-sm text-ink/70 leading-relaxed list-decimal list-outside pl-5">
+          {sources.map((s) => (
+            <li id={`kaynak-${s.n}`}>
+              {s.text}{' '}
+              {s.pmid && (
+                <>
+                  PMID: <a href={`https://pubmed.ncbi.nlm.nih.gov/${s.pmid}/`} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">{s.pmid}</a>
+                </>
+              )}
+              {s.url && (
+                <a href={s.url} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">{s.urlLabel}</a>
+              )}
+            </li>
+          ))}
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>
+          Bu içerik genel bilgi amaçlıdır; tanı, tedavi veya ilaç ya da takviye başlama önerisi değildir. MOTS-c ruhsatlı
+          bir ilaç değildir ve insanda güvenliği bilinmemektedir. Kullanmayı düşünüyorsanız önce kendi hekiminizle görüşün;
+          kullandığınız bir ilacı hekiminize danışmadan bırakmayın.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
