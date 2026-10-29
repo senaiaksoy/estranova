@@ -199,3 +199,22 @@ Bu tur, başka bir oturumun `add65527` commit'i (Wu 2025 yayın örtüşmesi, ka
 Doğrulama: `lexicon:check` hard_ban 0; `build:ci` geçti (compliance, strict audit, SEO 161 sayfa); dev önizlemede h3 ve bölüm numaraları kontrol edildi.
 
 **Onay durumu:** KC 29 Ekim 2026'da bu sohbette "Onaylar tamam" dedi; Tur 3 için KC yazar onayı ve Dr. Alper Mumcu tıbbi onayı (KC beyanıyla, ayrı yazılı not yok) kaydedildi. Push/deploy yetkisi değildir.
+
+## Tur 4 — kaynak eşleşmesi düzeltmeleri (29 Ekim 2026, aynı dal)
+
+Tur 3 sonrası geniş denetimde PubMed (PMID 40771919, 41987155, 41037125, 26491826, 40158656, 39137167, 42221785, 32564438) ve ClinicalTrials.gov (NCT07865377, NCT06585865) kayıtları açılıp metinle karşılaştırıldı. KC "Evet, düzelt" dedi.
+
+1. **Karim 2025:** 137 hasta, tek merkezli, kaydı sonradan yapılmış; ARTHROL 142 kişi, üç merkezli. "Bazı küçük çalışmalar" → "tek merkezli, kaydı sonradan yapılmış bir çalışma" (sirtuin paragrafı ve iddia tablosu).
+2. **Tansiyon satırı:** Wu 2025 katılımcıları sağlıklı kadınlarla sınırlı değil; "sağlıklı" çıkarıldı. Şemsiye derlemedeki tip 2 diyabet sistolik düşüşü (MD −7,97 mmHg) "ortalama 8 mmHg kadar" olarak eklendi.
+3. **Kilo/kan şekeri satırı:** Şemsiye derlemenin orta kesinlikteki kan şekeri metabolizması bulgusu, farklı yetişkin gruplarından geldiği belirtilerek eklendi.
+4. **Egzersiz satırı:** NCT06585865 36 kişi, Alway 2017 30 kişi; "Daha geniş" → "Benzer bir çalışma sürüyor".
+5. **İddia tablosu girişi:** Satırlar kanıt sırasına göre dizili olmadığı için "kanıt sırasıyla" çıkarıldı.
+6. **Menopoz bölümü açılışı:** Tur 3'te eklenen ve birinci tekil cümleyi tekrarlayan "Yani bu kez veri doğrudan…" cümlesi silindi; birinci tekil cümle korundu.
+
+Doğru bulunanlar: Wu 2025 (10 RCT, 928 katılımcı; ağrı ve CTX), Mansouri 2025 SIRT1 alt grup bulgusu, Leo 2015 (sıcak basması azalan oran %57,1'e karşı %9,1), Wong 2020 kemik ve D vitamini/kalsiyum alt grubu, Gonçalinho 2026 EPC azalması, NCT07865377 (80 kişi, 2029) ve NCT06585865 (36 kişi, 2027).
+
+7. **Okunabilirlik:** Ekler compliance uzun cümle uyarısını tetikledi (7); iddia tablosu hücrelerinin sonuna nokta kondu ve sıcak basması cümlesi ikiye bölündü (2 uzun cümle, uyarı yok).
+
+Hekim SSS yanıtı 3'te ARTHROL için geçen "daha büyük bir çalışma" ifadesi (142'ye karşı 137 kişi) KC'ye bildirildi; kural gereği değiştirilmedi.
+
+**Onay durumu:** KC 29 Ekim 2026'da bu sohbette "Onaylar tamam" dedi; Tur 4 için KC yazar onayı ve Dr. Alper Mumcu tıbbi onayı (KC beyanıyla, ayrı yazılı not yok) kaydedildi. Push/deploy yetkisi değildir.
