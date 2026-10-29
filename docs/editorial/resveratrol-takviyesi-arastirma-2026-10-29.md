@@ -163,3 +163,22 @@ Ana metin ve özet çıkarımında, kaynakça ve değişmeyen SSS hariç sözcü
 | omur | 10 | 10 |
 
 Kemik sonucundaki azaltım yinelenen hükümlerin birleştirilmesidir. SIRT1 açıklaması mekanizma bölümünde kaldı. 150 mg ek tekrarı yasal kaynak/form sınırını, ömür ifadeleri ise hayvan/insan ayrımını korur.
+
+## Geniş audit, tur 2 — 29 Ekim 2026
+
+Bu tur, başka bir oturumun `add65527` commit'i (Wu 2025 yayın örtüşmesi, kaynak 25, mevzuat kapsamı) üzerine yapıldı. O düzeltmeler tekrar edilmedi; Wu 2025 tam metni (PMC12325339) ile örtüşme ayrıca kontrol edildi: dahil edilen 10 yayından beşi aynı Newcastle ekibinin (Thaung Zaw 2020a, 2020b, 2021; Wong 2020; Prickett 2023) yayını, üç raporda aynı 125 kişilik örneklem var. Tam metin "RESHAW" adını anmıyor; örtüşme yazar ve örneklem eşleşmesinden çıkarım. Ağrı analizi iki yayına (Thaung Zaw 2020a ve Wong 2017, toplam 197 katılımcı) dayanıyor. Tam metnin son %17'si okunmadı.
+
+**Yeni bulgular ve düzeltmeler**
+
+1. **Sıcak basması (eksik literatür):** "Sıcak basmasını tek başına inceleyen bir analiz bulamadık" cümlesi yanıltıcıydı: Leo 2015 (Minerva Ginecol 67(5):475–83, PMID 26491826) yeni bir resveratrol formülüyle yaklaşık 50 kadında çift kör çapraz pilot çalışma; sıcak basması azalan kadın oranı resveratrol kolunda yüksek. İtalyanca, küçük, ürüne özgü; Evidence 2. Satır ve kaynak 26 eklendi. Equol ile birleşik ürünlerle yapılan çalışmalar (Davinelli 2017, PMID 28041599; Corbi 2023, PMID 37569440) resveratrolü tek başına test etmediği için alınmadı.
+2. **Egzersiz:** "Egzersizle birlikte kası güçlendirir" iddia satırı eklendi (Alway 2017, J Gerontol A 72(12):1595–1606, PMID 28505227; 30 kişi, 65–80 yaş, 12 hafta, 500 mg/gün; bazı kas ölçümleri düzeldi, kalp-damar riskinde ek yarar yok; kaynak 27, Evidence 2). Sürmekte olan NCT06585865'e bağlandı.
+3. **SRT501 miyelom çalışması:** PubMed'de özet yok. İkincil kaynaklar (sektör haberleri, firma açıklaması; yayıncı sitesine erişilemedi, tam metin okunmadı) çalışmanın 2010'da durdurulduğunu, beş hastada akut böbrek yetmezliği bildirildiğini, firmanın nedeni olarak hastalığı ve ishal/kusmaya bağlı sıvı kaybını öne sürdüğünü, dozun günde 5 g olduğunu ve bazı hastaların SRT501'i tek başına aldığını söylüyor. Gövde nedensellikten geri çekildi: "resveratrole mı, hastalığa ya da sıvı kaybına mı bağlı olduğu net değil"; "doğal bir madde yüksek dozda ilaç gibi davranır" çıkarımı ve "bir kemoterapi ilacıyla birlikte" ifadesi kaldırıldı. Kaynak açıklamasına "nedensellik iddia edilmiyor" eklendi.
+4. **Gebelik:** Kırmızı bayrakta "güvenlik verisi yok" → "çok sınırlı". BJOG 2025 meta-analizinde (PMID 40025969) preeklampside nifedipine eklenen resveratrol için tek çalışma (349 kadın, düşük kesinlik) var.
+5. **Açık soru:** RESHAW'da ağrı düzelmesi 12 ay boyunca sürdü; "kaç ay sürüyor?" sorusu "Bıraktıktan sonra ağrıdaki düzelme sürüyor mu?" olarak düzeltildi.
+6. **Diz kireçlenmesi:** "bazı sonraki çalışmalar olumlu sonuç bildirdi" → "küçük, tek merkezli". Karim ve arkadaşlarının üç yayını aynı gruptan (PMID 41037125, 40990472, 41679011).
+
+**Açık kalanlar**
+
+- SRT501 ayrıntıları (5 g, tek başına kol, beş vaka) tam metinle doğrulanmadı; gövde bu ayrıntıları kullanmıyor.
+- Wu 2025'te Şekil 7 başlığı "Thaung 2020b", metin ve Tablo 1 "2020a" diyor; muhtemelen yazar hatası, gövde bu ayrıntıya dayanmıyor.
+- Tur 2 onayı: KC "tıbbi ve mumcu onayları tamam" dedi (29 Ekim 2026); Mumcu onayı KC beyanıyla, ayrı yazılı not yok.
