@@ -218,8 +218,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
     writerSlug: 'alper-mumcu',
-    approvedAt: '2026-09-30',
-    note: 'Kullanıcı bu sohbette yazar ve tıbbi inceleme onaylarının tamamlandığını bildirdi. Kapsam: Dr. Alper Mumcu yazarlı 30 Eylül 2026 audit/humanize revizyonu, Dr. Senai Aksoy tıbbi incelemesi, kaynaklı izlem/kanama/tarama düzeltmeleri ve beş gerçek Dr. Aksoy yanıtı. Önceki 4 Mayıs 2026 Senai imzasına geçiş kaydı pakette korundu. Aynı gün revizyon 2 (8 H2, sıcaklık katmanı, üç birinci tekil Mumcu yaklaşım cümlesi) için yazar ve tıbbi inceleme onayı da kullanıcı tarafından bildirildi; paket onaylanan/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/. Bu kayıt commit/push/deploy yetkisi değildir.',
+    approvedAt: '2026-10-29',
+    note: 'Kullanıcı bu sohbette yazar ve tıbbi inceleme onaylarının tamamlandığını bildirdi. Kapsam: Dr. Alper Mumcu yazarlı 30 Eylül 2026 audit/humanize revizyonu, Dr. Senai Aksoy tıbbi incelemesi, kaynaklı izlem/kanama/tarama düzeltmeleri ve beş gerçek Dr. Aksoy yanıtı. Önceki 4 Mayıs 2026 Senai imzasına geçiş kaydı pakette korundu. Aynı gün revizyon 2 (8 H2, sıcaklık katmanı, üç birinci tekil Mumcu yaklaşım cümlesi) için yazar ve tıbbi inceleme onayı da kullanıcı tarafından bildirildi; paket onaylanan/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/. Bu önceki kayıt kendi başına commit/push/deploy yetkisi değildi. YENİDEN ONAY — KC sözlü onayı — 29 Ekim 2026: kullanıcı bu sohbette “yazar ve tıbbi onay tamam. commit, push ve deploy” dedi. Kapsam: Dr. Alper Mumcu yazarlı 29 Ekim geniş audit/fix revizyonu; Dr. Senai Aksoy tıbbi onayı; sistemik/lokal HRT ayrımı, kanama ve acil yardım sınırları, rutin hormon testleri, kaynak eşleştirmeleri ve görsel alt metni. Mumcu imzalı yeni sürümde Dr. Aksoy adına SSS ve FAQPage kaldırıldı; beş özgün yanıt ve önceki onay arşivleri değişmeden korundu. Aynı talimat bu revizyonun dar kapsamlı commit, push ve deploy işlemlerini açıkça yetkilendirir.',
   },
   {
     pathname: '/zamansiz-yasam/beslenme-yaslanma/',

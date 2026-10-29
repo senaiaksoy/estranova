@@ -51,3 +51,12 @@ H0; motif kısa belirti kaydı, kapanış kontrol görüşmesi soruları; üreti
 Kullanıcı denetimden sonra düzeltme 1–3'ü istedi. Onaylı sürüme yalnız İçindekiler etiket eşitlemesi uygulandı (metin değişmedi). Sıcaklık katmanı ve 8 H2 yapısı `onay-bekleyen/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/` paketinde; Dr. Mumcu yazar onayı + Dr. Aksoy tıbbi incelemesi bekleniyor. Kalıp seçimi: açılış = gündelik sahne + "bu normal mi?" sorusu; hekim çerçevesi = mütevazı yaklaşım beyanı ("üç şeye bakarım", "ilk sorum"), klinik anekdot yok; teselli = "Önce şunu söyleyeyim"; kapanış = güvenlik listesi + sakin iki parçalı kapanış; imza kapanış cümlesi yok; mizah H0.
 
 30 Eylül 2026 kullanıcı mesajı: “yazar ve tıbbi inceleme onayları tamam”. Revizyon 2 site kaynağına aktarıldı; paket onaylanan/2026-09-30_hrt-yan-etkileri-ve-izleme-revizyon-2/ altına taşındı. Stil sinyali: mütevazı birinci tekil yaklaşım cümleleri (üç şeye bakarım / ilk sorum) yazar tarafından kabul edildi; anekdotsuz hekim sesi bu yazar için kullanılabilir bir varyant. Commit/push/deploy yok.
+
+
+## 29 Ekim 2026 — HRT yan etkileri ve izleme, geniş audit/fix (onaylandı)
+
+KC sözlü onayı — 29 Ekim 2026. Kullanıcı bu sohbette “yazar ve tıbbi onay tamam. commit, push ve deploy” dedi. Yazar Dr. Alper Mumcu ve tıbbi inceleyen Dr. Senai Aksoy için onay tamamlandı. Onaylanan taslak SHA-256: 35c0e6cf529dc402e10d6d627ad97e8463f15483ebdb8bf1759afdc6ce0eff01.
+
+Kapsam: sistemik/lokal HRT ayrımı, kanama zamanlaması ve histerektomi sonrası kanama, acil belirtilerde yardım çağrısı, rutin hormon testi açıklaması, kaynak bağlantıları ve görsel alt metni. Güncel yazar sınırı uyarınca Dr. Aksoy adına SSS yeni Mumcu sürümünden çıkarıldı; özgün beş hekim yanıtı ve 30 Eylül onay kayıtları değiştirilmedi. Bilimsel Editör Notu ve üst hero korundu. H0; yeni klinik anekdot/deneyim veya yazar sesi üretilmedi. Eski açılış ve hekim çerçevesi aynı makalenin onaylı devamıdır; yeni makale/cooldown seçimi değildir.
+
+Denetim: docs/editorial/hrt-yan-etkileri-ve-izleme-audit-2026-10-29.md. Bu talimat yalnız bu revizyon için commit/push/deploy yetkisi içerir.
