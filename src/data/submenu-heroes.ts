@@ -202,10 +202,6 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
     alt: 'Mermer masada elle çizilmiş bir şema bulunan açık defter, dolma kalem, çay bardağı ve vazoda şakayık.',
   },
-  '/zamansiz-yasam/deneysel/resveratrol-takviyesi/': {
-    src: '/images/library/editorial/resveratrol-takviyesi.webp',
-    alt: 'Ege’de bir bağda masadaki üzüm sepetinin başında gülüşen iki kadın; resveratrol yazısı için kart görseli, yapay zekâ ile üretilmiş temsili görsel',
-  },
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
     alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
@@ -217,6 +213,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/zamansiz-yasam/deneysel/resveratrol-takviyesi/': {
+    src: '/images/library/editorial/resveratrol-takviyesi.webp',
+    alt: 'Ege’de bir bağda masadaki üzüm sepetinin başında gülüşen iki kadın; resveratrol yazısı için kart görseli, yapay zekâ ile üretilmiş temsili görsel',
+  },
   '/zamansiz-yasam/sarkopeni-40-sonrasi-sessiz-kas-kaybi/': {
     src: '/images/library/editorial/anil-yalmaz-sarkopeni-kart.webp',
     alt: 'Güneşli bir İstanbul sokağında, Boğaz manzarası önünde taş merdivenden hasır sepetle çıkan kadın; sarkopeni ve 40 sonrası kas gücü yazısı için kart görseli',
