@@ -90,8 +90,8 @@ Kaynaklar ürün sayfaları, takviye blogları ve podcast özetleri; adlar yazı
    - "Denemek isteyen bir hastayla önce hedefi konuşurum…" paragrafı.
 2. **"Dr. Aksoy'a Sorular" SSS:** Üç sorunun yanıtı KC'den 29 Ekim 2026'da yazılı geldi ve taslağa birebir eklendi. Yalnızca kalın biçim kaldırıldı (bileşen düz metin gösteriyor) ve "resverrolden" yazımı "resveratrolden" olarak düzeltildi. Yanıtlardaki olgu iddialarının kaynağı:
    - Hormon tedavisi sorusu: östrojen reseptörüyle laboratuvar etkileşimi → Gehm 1997 (kaynak 16).
-   - Kan sulandırıcı sorusu: trombosit kümelenmesinin laboratuvarda azalması → Olas B, Wachowicz B. *Platelets*. 2005;16(5):251–60. PMID 16011975. [DOI](https://doi.org/10.1080/09537100400020591) (kaynak 23). Karaciğer enzimleri → Chow 2010 (kaynak 14).
-   - Eklem ağrısı sorusu: "diz kireçlenmesinde daha büyük çalışmada plasebodan farksız" → ARTHROL, faz 3, 142 kişi (%71 kadın), 6 ay düşük doz (2×20 mg); 3. ayda ağrı farkı yok; yazarlar gücün yetersiz olabileceğini belirtiyor. Nguyen C ve ark. *PLoS Med*. 2024;21(8):e1004440. PMID 39137167. [DOI](https://doi.org/10.1371/journal.pmed.1004440) (kaynak 24). "Sonraki olumlu çalışmalar" → Karim A ve ark. *Inflammopharmacology*. 2025;33(11):6877–86. PMID 41037125. [DOI](https://doi.org/10.1007/s10787-025-01967-9) (kaynak 25; 137 kişi, 500 mg/gün, tek merkez, kayıt sonradan). Aynı grubun 2025 ve 2026 tarihli iki benzer çalışması daha var (PMID 40990472, 41679011).
+   - Kan sulandırıcı sorusu: trombosit kümelenmesinin laboratuvarda azalması → Olas B, Wachowicz B. *Platelets*. 2005;16(5):251–60. PMID 16011975. [DOI](https://doi.org/10.1080/09537100400020591) (kaynak 22). Karaciğer enzimleri → Chow 2010 (kaynak 14).
+   - Eklem ağrısı sorusu: "diz kireçlenmesinde daha büyük çalışmada plasebodan farksız" → ARTHROL, faz 3, 142 kişi (%71 kadın), 6 ay düşük doz (2×20 mg); 3. ayda ağrı farkı yok; yazarlar gücün yetersiz olabileceğini belirtiyor. Nguyen C ve ark. *PLoS Med*. 2024;21(8):e1004440. PMID 39137167. [DOI](https://doi.org/10.1371/journal.pmed.1004440) (kaynak 23). "Sonraki olumlu çalışmalar" → Karim A ve ark. *Inflammopharmacology*. 2025;33(11):6877–86. PMID 41037125. [DOI](https://doi.org/10.1007/s10787-025-01967-9) (kaynak 24; 137 kişi, 500 mg/gün, tek merkez, kayıt sonradan). Aynı grubun 2025 ve 2026 tarihli iki benzer çalışması daha var (PMID 40990472, 41679011).
    - Bu bulgu üzerine iddia tablosundaki "ağrı" satırına ARTHROL ve Karim eklendi.
    - Not: ARTHROL'un küçük olmasına rağmen faz 3 olması ve diğer çalışmalarla benzer büyüklükte olması nedeniyle "daha büyük" ifadesi, menopoz çalışmalarına (RESHAW 125) göre doğru; diz kireçlenmesi çalışmalarının hepsine göre değil. Yanıt değiştirilmedi.
 3. **Görsel:** Byline (4:5) ve kart (2.4:1) için makale görseli.
@@ -99,3 +99,29 @@ Kaynaklar ürün sayfaları, takviye blogları ve podcast özetleri; adlar yazı
 ## Şablon kırma notu
 
 NAD+ yazısının kalıplarından ayrıştırıldı: açılış "isim koymak" yerine kısa şarap sahnesi; çok eksenli tablo "beş soru" yerine "beş eksen" başlığıyla; kapanışta ayrı bir "temel alışkanlıklar" paragrafı yok, kadeh motifinin tek geri çağırması var. İmza kapanış cümlesi kullanılmadı.
+
+## Geniş audit — 29 Ekim 2026 (yayın sonrası, dal: audit/resveratrol-2026-10-29)
+
+Yöntem: yayındaki sayfa, kaynak özetleriyle (PubMed, ClinicalTrials.gov, Bakanlık PDF'i) iddia iddia karşılaştırıldı. Hekim yanıtlarına (SSS) ve birinci tekil cümlelere dokunulmadı.
+
+**Düzeltilen bulgular**
+
+1. **RESHAW süresi:** "iki yıla kadar kullanılan" ifadeleri yanlıştı. Çalışma 24 ay sürdü ama her kadın resveratrolü 12 ay aldı (çapraz tasarım). Özet, merdiven ve güvenlik tablosu "bir yıl" olarak düzeltildi.
+2. **Kırmızı bayrak kutusu:** "kan sulandırıcı… ilaç-takviye etkileşimi araştırmalarda gösterildi" abartıydı. Gösterilen, karaciğer enzimleri (Chow 2010). Trombosit etkisi yalnızca laboratuvarda bildirildi; insanda kanama riski çalışması bulunamadı. Kutu ve güvenlik bölümü buna göre yazıldı; Olas 2005 derlemesi artık gövdede de atıflı.
+3. **Sirtuin ifadesi:** "insanda sirtuin düzeyini değiştirmedi" fazla keskindi. Mansouri 2025'te genel etki yok, ama 12 haftadan kısa çalışmalarda kan gen ifadesi arttı; Karim 2025 (diz kireçlenmesi) kan SIRT1 artışı bildirdi. Dört yerde "birleşik analizde" nitelemesi eklendi, alt grup ve Karim cümlesi girdi.
+4. **Alzheimer çalışması:** "klinik yarar gösterilemedi" doğru çerçeve değildi (Turner 2015'te birincil sonuçlar belirteçti). Satır yeniden yazıldı; beyin hacmi kaybının resveratrolde daha fazla olduğu bulgusu (özette var, gövdede yoktu) güvenlik bölümüne ve kaynak açıklamasına eklendi.
+5. **Sıcak basması satırı:** Wu 2025 "menopoz belirtileri"ne bakıyor, sıcak basmasına özgü sonuç vermiyor. Satır RESHAW (bedensel belirtiler düzeldi) ve Wu (etki yok) ayrımıyla yeniden yazıldı.
+6. **Ağrı satırı:** Wu 2025'te ağrı farkı sınırda anlamlı (p=0,046; %95 GA üst sınırı −0,05). "Sınırda anlamlı" notu eklendi.
+7. **Kullanıcı şikâyeti cümlesi:** "Kullanıcıların sık bildirdiği şikâyetler kontrollü çalışmalarla örtüşüyor" bir kaynağa dayanmıyordu (forum taraması yapılmadı). Çıkarıldı; yerine öznel bildirimlerin kanıt yerine geçmediğini söyleyen genel cümle kondu.
+8. **Evidence etiketleri:** Chow 2010 (42 gönüllü, kontrolsüz, ön-son karşılaştırma) 3'ten 2'ye; Walle biyoyararlanım (altı gönüllü + derleme) 4'ten 3'e indirildi.
+9. **Üçüncü süren çalışma:** NCT07245979'un kaydında etken madde "sirtuin activators" diye geçiyor, resveratrol adı yok; "pazarlanan takviye" ifadesi de kanıtsızdı. NCT07395921 (RESINCA) alternatif olarak incelendi: dozlar toplam polifenol içeriği (resveratrol değil), ürün bir şarap şirketinin üzüm posası barı. İkisi de yazıdan çıkarıldı; kaynak 22 silindi, 23–25 → 22–24 olarak yeniden numaralandı (SSS `sourceRef` değerleri dahil).
+10. **Küçük sertleştirmeler:** "nadir", "az sayıdaki", "En önemli açık soru" gibi doğrulanamayan üstünlük ifadeleri yumuşatıldı; "bir çalışma yok" → "rastlamadık"; bel çevresi −0,80 cm "yaklaşık 1 cm" yazılmıştı, "0,8 cm" yapıldı; RESHAW kemik alt grubu "alt grup analizinde" diye işaretlendi.
+
+**Kontrol edilip değişmeyenler:** Walle 2004 (≥%70 emilim, iz düzeyi <5 ng/ml), ITP (300 ve 1200 ppm, etki yok), Yoshino 2012, Wong 2020 (kemik: +0,016 ve +0,005 g/cm², CTX −%7,24), Gehm 1997, Semba 2014, Chow 2010 (CYP sonuçları), ARTHROL (142 kişi, %71 kadın, 3. ayda fark yok), Bakanlık 150 mg satırı ve etiket uyarısı (PDF s. 56; "***" dipnotu 30/6/2027'ye kadar geçiş hükmü, 150 mg sınırını değiştirmiyor), NCT07865377 ve NCT06585865 tarihleri, tüm künyeler (cilt, sayfa, yıl).
+
+**Açık kalanlar**
+
+- SRT501 miyelom çalışmasının tam metinden teyidi KC tarafından bildirildi; PubMed'de özet olmadığı için bu oturumda bağımsız olarak doğrulanmadı.
+- Bakanlık PDF'inde "Diğer kaynaklar … 5 g/gün" değeri hâlâ yazıya alınmadı.
+- Bilimsel Editör Notu metni yazar tarafından değil taslak olarak hazırlandı; Mumcu imzalı (tıbbi onay KC beyanı). Audit'te metni değişmedi.
+- Bu düzeltmeler gövde metnini değiştirdiği için KC ve Dr. Mumcu'nun yeniden onayı gerekir.
