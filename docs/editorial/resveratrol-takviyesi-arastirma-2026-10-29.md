@@ -182,3 +182,20 @@ Bu tur, başka bir oturumun `add65527` commit'i (Wu 2025 yayın örtüşmesi, ka
 - SRT501 ayrıntıları (5 g, tek başına kol, beş vaka) tam metinle doğrulanmadı; gövde bu ayrıntıları kullanmıyor.
 - Wu 2025'te Şekil 7 başlığı "Thaung 2020b", metin ve Tablo 1 "2020a" diyor; muhtemelen yazar hatası, gövde bu ayrıntıya dayanmıyor.
 - Tur 2 onayı: KC "tıbbi ve mumcu onayları tamam" dedi (29 Ekim 2026); Mumcu onayı KC beyanıyla, ayrı yazılı not yok.
+
+## Tur 3 — yapı ve sıcaklık düzeltmeleri (29 Ekim 2026, dal audit/resveratrol-tur3-2026-10-29)
+
+`/makale-denetle` raporundaki öncelik listesine göre KC'nin "Evet, düzelt" talimatıyla uygulandı. Yeni tıbbi iddia eklenmedi; hekim SSS yanıtları, mevcut birinci tekil cümleler, `RedFlagBox` ve Bilimsel Değerlendirme notu değişmedi.
+
+1. **Evidence 12 → 5:** Tablo hücrelerindeki yedi etiket ile biyoyararlanım etiketi kaldırıldı; metin değişmedi. Kalanlar: bilişsel (3), ağrı/CTX (2), birleşik analizde etki yok (2), Yoshino (3), CYP enzimleri (2).
+2. **Gövde H2 10 → 8:** "Yutulan Resveratrolün Yolculuğu" ve "Raftaki Vaatler, Çalışmadaki Sonuçlar" h3 oldu (anchor id'leri korundu); içindekiler listesinden çıkarıldı.
+3. **Kart görseli:** `submenuHeroByRoute` içindeki makale yolu girişi `articleCardImageByRoute`'a taşındı (CLAUDE.md görsel kapısı).
+4. **Geri bağlantı:** fitoöstrojen yazısının `RelatedReadings` listesine resveratrol eklendi (3 → 4); NAD+ takviyesi yazısında `menopoz-nedir` yerine resveratrol kondu (5 korunur).
+5. **Tekrar:** "rastlamadık" 5 → 2 (biri RedFlagBox içinde, dokunulmadı); tablodaki 150 mg tekrarı Türkiye bölümüne yönlendirildi; "anlamına gelmez" 1 → 0; "yalnızca bilimsel bir ayrıntı değil" antitezi kaldırıldı; iki meta cümle ("Bu yazı… arıyor", "Bu yazının en değerli verisi") ve ikinci "ilginç" değiştirildi.
+6. **Okunabilirlik:** Kısa Klinik Yanıt ~82 → ~50 kelime (anlam korundu: olumlu sonuçların çoğunun RESHAW'dan geldiği açıkça yazıldı). SIRT1 ve RESHAW cümleleri bölündü. Açıklama eklenen terimler: polifenol, sinyal yolu/enerji üretim yolu (yolak yerine), trombosit (kan pulcukları), faz 3, çapraz tasarım, şemsiye derleme.
+7. **Sıcaklık:** "siz" bağı yolculuk (kapsül sahnesi), menopoz ("başladıysanız"), Türkiye (kutunun arkası, eczane rafı, "sizin için doğru doz"), açık sorular ("Hormon tedavisi kullanıyorsanız") bölümlerine eklendi; güvenlik ledi teselli cümlesiyle açıldı ("İçiniz rahat olsun diye baştan yazayım").
+8. **Küçük düzeltmeler:** "dut türü meyveler" → "yaban mersini gibi meyveler"; "Japon poligonumu" → "Japon düğümotu"; kaynak 17 açıklamasına endotel öncü hücrelerindeki azalma ve yazarların dikkat notu eklendi (PubMed özetiyle teyit, PMID 42221785); SSS başlığında düz kesme işareti eğik kesme işaretine çevrildi.
+
+Doğrulama: `lexicon:check` hard_ban 0; `build:ci` geçti (compliance, strict audit, SEO 161 sayfa); dev önizlemede h3 ve bölüm numaraları kontrol edildi.
+
+**Onay durumu:** KC 29 Ekim 2026'da bu sohbette "Onaylar tamam" dedi; Tur 3 için KC yazar onayı ve Dr. Alper Mumcu tıbbi onayı (KC beyanıyla, ayrı yazılı not yok) kaydedildi. Push/deploy yetkisi değildir.
