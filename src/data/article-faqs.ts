@@ -3,27 +3,31 @@ export interface ArticleFaqItem {
   answer: string;
   /** Sayfadaki kaynak listesinde bu yanıtı destekleyen numara (isteğe bağlı). */
   sourceRef?: number;
+  /** Yayında gösterilmez; metin kayıtta kalır (hekim yanıtı, silinmedi). */
+  gizli?: boolean;
 }
 
 export const articleFaqs: Record<string, ArticleFaqItem[]> = {
   '/zamansiz-yasam/vitaminler/kreatin-menopozda-ne-ise-yarar/': [
     {
       question: 'Kreatin menopoz belirtilerini azaltır mı?',
+      gizli: true,
       answer:
         'Sıcak basması, gece terlemesi gibi klasik menopoz belirtilerini azalttığını gösteren yeterli kanıt yok. Buna karşılık kreatinin özellikle direnç egzersiziyle birlikte kas gücü ve yağsız vücut kütlesine küçük katkıları olabilir; perimenopoz/menopoz dönemine özgü çalışmalar ise hâlâ sınırlı.',
     },
     {
       question: 'Kreatin kemik erimesini önler mi?',
       answer:
-        'Bugünkü verilere göre kreatini osteoporozu önleyen bir tedavi olarak görmemek gerekir. İki yıllık randomize çalışmalarda kemik mineral yoğunluğunda belirgin yarar gösterilmedi; bazı çalışmalar direnç egzersiziyle birlikte kemik geometrisi ve mekanik dayanıklılık göstergelerinde olumlu değişiklikler bildirmiş olsa da, toplam kanıt kemik yoğunluğunu koruduğunu kesin olarak göstermiyor.',
+        'Bugünkü verilere göre kreatini osteoporozu önleyen bir tedavi olarak görmemek gerekir. İki yıllık randomize bir çalışmada kemik mineral yoğunluğunda belirgin yarar gösterilmedi; bazı çalışmalar direnç egzersiziyle birlikte kemik geometrisi ve mekanik dayanıklılık göstergelerinde olumlu değişiklikler bildirmiş olsa da, toplam kanıt kemik yoğunluğunu koruduğunu kesin olarak göstermiyor.',
     },
     {
       question: 'Kreatin beyin sisi için kullanılabilir mi?',
       answer:
-        'İlginç ama henüz kesin olmayan veriler var. Genel erişkin çalışmalarında hafıza ve bazı bilişsel alanlarda küçük yararlar bildirilse de sonuçlar tutarsız. Menopoz dönemindeki yalnızca 36 kadını içeren bir çalışmada kreatin hidroklorürle reaksiyon zamanında iyileşme görüldü; bunu beyin sisinin kanıtlanmış tedavisi saymak için henüz erken.',
+        'İlginç ama henüz kesin olmayan veriler var. Genel erişkin çalışmalarında hafıza ve bazı bilişsel alanlarda küçük yararlar bildirilse de sonuçlar tutarsız. Menopoz dönemindeki yalnızca 36 kadını içeren bir çalışmada kreatin hidroklorürle reaksiyon zamanında iyileşme görüldü. Ancak 51 perimenopozal kadınla yapılan daha yeni bir kreatin monohidrat çalışmasında dikkat ve tepki süresi testinde fark çıkmadı. Bu sonuçlarla kreatini beyin sisinin kanıtlanmış tedavisi saymak için henüz erken.',
     },
     {
       question: 'Kreatin kullanırken direnç egzersizi şart mı?',
+      gizli: true,
       answer:
         'Kreatin kullanırken direnç egzersizi şart değildir, ancak özellikle kas gücü ve kas kütlesi açısından en belirgin yarar genellikle kreatin + direnç egzersizi birlikte olduğunda görülür. Egzersiz yapmadan da kas kreatin depoları artar; fakat menopoz döneminde asıl hedef kas kaybını önlemekse kreatini egzersizin yerine değil, egzersize destek olarak görmek daha doğru olur.',
     },
@@ -34,6 +38,7 @@ export const articleFaqs: Record<string, ArticleFaqItem[]> = {
     },
     {
       question: "Kreatin uzun yaşam ya da yaşlanmayı yavaşlatma amacıyla kullanılabilir mi?",
+      gizli: true,
       answer: "Kreatin son yıllarda yalnızca sporcuların değil, sağlıklı yaşlanmak isteyen insanların da ilgisini çekiyor. Bunun anlaşılır bir nedeni var. Yaş ilerledikçe kas gücümüzü kaybediyoruz ve bu kayıp günlük hareketlerimizi, dengemizi ve bağımsız yaşayabilme becerimizi etkileyebiliyor.\n\nKreatinin özellikle direnç egzersizleriyle birlikte kullanıldığında kas gücünü bir miktar artırabildiğini gösteren çalışmalar var. Menopoz sonrasındaki kadınlarda da bu konuda olumlu sonuçlar elde edilmiş. Ancak her çalışmada aynı etki görülmüyor ve özellikle fiziksel işlevler üzerindeki uzun dönem yararlar henüz yeterince net değil.\n\nPeki, kreatin yaşlanmayı yavaşlatıyor mu? İşte burada daha dikkatli konuşmamız gerekiyor. Kas gücünü desteklemekle hücresel yaşlanmayı yavaşlatmak veya insan ömrünü uzatmak aynı şey değil. Bugün kreatin kullanan insanların daha uzun yaşadığını gösteren güvenilir klinik kanıtlarımız bulunmuyor. Beyin sağlığı ve hafıza üzerindeki olası etkileri de araştırılıyor, ancak bunlar için de kesin sonuçlara ulaşmış değiliz.\n\nBen özellikle menopoz dönemindeki kadınlarda kas gücünün korunmasını çok önemsiyorum. Fakat bunun için ilk önerim kreatin değil, düzenli direnç egzersizi, yeterli protein alımı ve sürdürülebilir bir hareket programı oluyor. Kreatin, uygun kişilerde bu programı destekleyebilecek bir seçenek olabilir.\n\nKısacası, kreatini bir gençlik iksiri olarak görmüyorum. Ama doğru koşullarda kas gücünü korumaya yardımcı olabilecek bir takviye olarak değerlendirebilirim.",
     },
     {
