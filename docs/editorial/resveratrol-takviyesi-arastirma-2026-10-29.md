@@ -125,3 +125,41 @@ Yöntem: yayındaki sayfa, kaynak özetleriyle (PubMed, ClinicalTrials.gov, Baka
 - Bakanlık PDF'inde "Diğer kaynaklar … 5 g/gün" değeri hâlâ yazıya alınmadı.
 - Bilimsel Editör Notu metni yazar tarafından değil taslak olarak hazırlandı; Mumcu imzalı (tıbbi onay KC beyanı). Audit'te metni değişmedi.
 - Bu düzeltmeler gövde metnini değiştirdiği için KC ve Dr. Mumcu'nun yeniden onayı gerekir.
+
+
+## Ayrıntılı audit düzeltmeleri ve onay — 29 Ekim 2026
+
+KC: “düzelt. benim ve mumcu onayyları tamam”. Bu doğrudan talep önceki audit düzeltmelerini ve bu sohbette raporlanan ayrıntılı audit bulgularının düzeltilmesini kapsar. Yazar onayı ve Dr. Alper Mumcu tıbbi onayı KC beyanıyla kaydedildi; bağımsız yazılı Mumcu notu yok. Üstteki tarihsel “bekleniyor” kayıtları bu kapsam için kapanmıştır. Commit, push ve deploy talimatı verilmedi.
+
+- RESHAW'ın ara ve son bilişsel yayınları aynı araştırmadan; Prickett 2023 de saklanan RESHAW örneklerinin analizi (DOI 10.1002/jbm4.10732). Wu 2025 toplamı, 928 bağımsız kadın veya on bağımsız doğrulama olarak sunulmuyor. Sonuçlar yeniden hesaplanmadı; yöntem sınırlaması görünür eklendi. Ağrı sonucu iki yayına dayanıyor; CTX, kırık sonucu yerine kullanılmıyor.
+- Kaynak 6'nın yayıncı metni, 146 kişinin ara analizini ve 125 tamamlayıcının son analizini aynı RESHAW araştırması olarak açıklıyor: https://www.sciencedirect.com/science/article/pii/S0261561420304416 . Kaynak 25 bu yayın örtüşmesini görünür kaynaklandırmak için eklendi. Önceki 24 kaynak numarası korundu; SSS verisi değişmedi.
+- Bırakma sonrası yan etki/etkileşimin kendiliğinden geçeceği güvencesi kaldırıldı. Güvenlik tablosuna daha uzun kullanım ve seyrek zarar sınırı eklendi; uydurma genel güvenlik derecesi çıkarıldı.
+- Özette kategorik fare hükmü kaldırıldı; tabloda sonuç üç merkezli programa bağlandı. İnsanda “test edilemiyor” yerine “uzattığı gösterilmedi” deniyor. Yeni bir insan ömür sonucu veya doz önerisi eklenmedi.
+- 150 mg/gün karşılaştırmaları ve meta/RSS açıklaması sentetik trans-resveratrol kapsamına alındı. Mevzuat sınırı kişisel güvenli doz olarak sunulmuyor.
+- Bel çevresi −0,8 cm, farklı yetişkin gruplarına ait bir sonuç olarak açıklandı; kilo kaybı ve kan şekeriyle özdeşleştirilmedi. Sağlıklı menopoz sonrası kadınlarda metabolik etkisizlik sınırı korundu.
+- Ağrı/etkinlik etiketleri sınırlı kanıt (2/5) ile tutarlı hale getirildi; kemik birleşik analizinin popülasyonu açıklandı. RESHAW bilişsel küçük etki bulgusu korunuyor.
+- Özet, kanıt merdiveni ve karar tablosundaki yinelenen sonuç listeleri azaltıldı; ayrıntılı çalışma karşılaştırması menopoz bölümünde. İddia tablosu bağımsız tarama, SSS gerçek hekim yanıtı, inceleme notu bağımsız değerlendirme işlevi nedeniyle korundu. Plasebo ve gen etkinliği açıklandı.
+- Anlam kontrolü: 75 mg × 2, bir yıl aktif/bir yıl plasebo, CTX yaklaşık %7, düşük doz/yüksek doz ayrımı, olası kanama etkileşiminin belirsizliği ve kanser/böbrek/gebelik uyarıları korundu. Birinci tekil görüşler ve üç gerçek SSS yanıtı değiştirilmedi. Yeni klinik deneyim veya hasta sözü üretilmedi.
+
+
+### Yerel doğrulama
+
+- `npm run build:ci`: başarılı; TypeScript, compliance, yayın bütünlüğü, şablon, encoding, renk, editoryal sözlük, tarih, Astro build ve SEO kontrolleri geçti. 139 rota / 161 SEO HTML. Diğer makalelerden gelen soft uyarılar var; tam kaynak strict kapısındaki önceki diz ağrısı bulgusu bu çalışma kapsamında değiştirilmedi.
+- Derlenmiş hedef HTML: tek H1, 25 kaynak, eksik sayfa içi anchor yok; üç görünür SSS/FAQPage yanıtı birebir. FAQ veri dosyası değişmedi. Dört birinci tekil hekim paragrafı boşluk normalizasyonuyla önceki sürümle eşit. dateModified ve görünür son güncelleme 29 Ekim 2026.
+- `editorial-check`: 0 aday. `structure-check`: üç aday gerekçesiyle korundu: (1) farklı sonuçlara ait beş belirsizlik ifadesi (ömür, biliş/metabolizma, bırakma, tansiyon) ayrı sınırlar taşıyor; (2) kısa kapanışlar bölümün özgül bilgisi/gerçek hekim görüşü olduğu için bırakıldı; (3) “sentetik trans-resveratrol için” tekrarı yasal kapsamı her bağımsız yüzeyde koruyor.
+- `rendered-check`: üç sezgisel aday elle doğrulandı: genel disclaimer tek; öznel bildirimlerin kanıt olmaması ve hekimle konuşulacak durumlar ayrı işlevde. İnceleyen adı aynı imza satırında Dr. Alper Mumcu olarak mevcut. Kaynaklar yazar adıyla anlatıya yığılmıyor, numaralı dipnotlarla bağlı; 25 kaynak hedefi kontrol edildi. Bu adaylar biçim/algılayıcı sınırlaması, gizlemek için metin değiştirilmedi.
+- `check-fidelity`: sayısal farklar elle değerlendirildi. Eklenen 2021 kaynak yılı, [25] atfı, 12 aylık aktif dönem ve 150 mg mevzuat kapsamı açıklamadır; 928 ikinci kullanım bağımsız kişi sayısı olmadığını açıklar. Klinik doz/sonuç değişikliği yok; güvenlik kesinliği daraltıldı.
+- Audit’in onay kapısı bulgusu hedef makale için yeni doğrudan onay kaydıyla kapandı. Ortak onay denetleyicisini değiştiren site-geneli bir altyapı düzenlemesi yapılmadı. Görsel tarayıcı QA yapılmadı; üst hero, byline ve kart görselleri değişmedi. Commit/push/deploy yapılmadı.
+
+### İddia izleme sayımı
+
+Ana metin ve özet çıkarımında, kaynakça ve değişmeyen SSS hariç sözcük eşleşmesi; anlamsal değerlendirme yukarıdaki notlarla birlikte okunur. Sayılar kalite hedefi değildir.
+
+| İddia konusu | Önce | Sonra |
+|---|---:|---:|
+| kemik-yikimi | 7 | 3 |
+| sirtuin | 10 | 10 |
+| guvenlik-150mg | 3 | 4 |
+| omur | 10 | 10 |
+
+Kemik sonucundaki azaltım yinelenen hükümlerin birleştirilmesidir. SIRT1 açıklaması mekanizma bölümünde kaldı. 150 mg ek tekrarı yasal kaynak/form sınırını, ömür ifadeleri ise hayvan/insan ayrımını korur.

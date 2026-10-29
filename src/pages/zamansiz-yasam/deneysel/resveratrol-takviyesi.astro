@@ -44,7 +44,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Resveratrol — Şarap Kadehinden Takviye Kutusuna Ne Kaldı?';
 const seoTitle = 'Resveratrol Takviyesi İşe Yarar mı?';
 const articleDescription =
-  'Resveratrol menopoz sonrası kadınlarda denendi: bazı bulgular umut verdi, birleşik analizler çoğunu doğrulamadı. Kanıtın yeri, iddialar, ilaç etkileşimi ve Türkiye’deki 150 mg sınırı.';
+  'Resveratrol takviyesinin menopozdaki sınırlı kanıtları, ilaç etkileşimleri ve sentetik trans-resveratrol için Türkiye’deki 150 mg/gün sınırı.';
 const articleImage = '/images/library/editorial/resveratrol-takviyesi.webp';
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -52,6 +52,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '29 Ekim 2026',
+  modifiedDate: '29 Ekim 2026',
   image: articleImage,
   pathname: '/zamansiz-yasam/deneysel/resveratrol-takviyesi/',
   articleSection: 'Zamansız Yaşam',
@@ -85,6 +86,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="29 Ekim 2026"
+        lastUpdated="29 Ekim 2026"
         readingMinutes={11}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/resveratrol-takviyesi-byline.webp"
@@ -101,10 +103,10 @@ const articleSchemas = buildArticleSchemas({
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Resveratrol, üzüm kabuğunda ve bazı bitkilerde bulunan bir polifenol. Bağırsaktan iyi emiliyor, ama karaciğer ve bağırsak
-          onu hızla dönüştürdüğü için kana değişmeden çok azı geçiyor. Farelerde yaşam süresini uzatmadı. Menopoz sonrası kadınlarda
-          yapılan, her kadının bir yıl resveratrol bir yıl plasebo aldığı iki yıllık bir çalışmada ağrı, kemik yoğunluğu ve bilişsel testlerde küçük iyileşmeler görüldü; on çalışmanın
-          birleşik analizinde ise yalnızca ağrı ve bir kemik yıkım belirteci düzeldi.
+          Resveratrol, üzüm kabuğunda ve bazı bitkilerde bulunan bir polifenol. Menopoz sonrası kadınlarda ağrı ve kemik
+          ölçümlerinde bazı olumlu sonuçlar var; ancak bunlar rutin kullanımını destekleyecek kadar sağlam değil. Birleşik
+          analizlerde aynı araştırma grubunun farklı yayınları da yer aldığı için kanıtın genişliği dikkatle yorumlanmalı.
+          İnsanda yaşam süresini uzattığı gösterilmedi.
         </p>
         <p>
           Asıl dikkat noktası ilaçlar: yüksek dozda bazı ilaçların karaciğerde parçalanmasını değiştirebiliyor. Düzenli ilaç,
@@ -137,8 +139,8 @@ const articleSchemas = buildArticleSchemas({
         <ol>
           <li><strong>Hücrede mekanizma:</strong> Laboratuvarda pek çok yolağı etkiliyor; östrojen reseptörüne de bağlanıyor<sup><a href="#kaynak-16" class="text-primary hover:underline">[16]</a></sup>. Ağızdan alınınca ise kana değişmeden çok az geçiyor<sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a>, <a href="#kaynak-2" class="text-primary hover:underline">[2]</a></sup>.</li>
           <li><strong>Hayvanda ömür:</strong> Farelerde ilaçları üç merkezde standart koşullarda test eden büyük bir programda, iki farklı dozda verilen resveratrol iki cinsiyette de yaşam süresini uzatmadı<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>.</li>
-          <li><strong>İnsanda biyobelirteç:</strong> Takviye kandaki resveratrol düzeyini yükseltiyor; birleşik analizde sirtuin düzeyini anlamlı değiştirmedi; bazı küçük çalışmalarda ise kan düzeyi arttı <Evidence level={3} /><sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a>, <a href="#kaynak-5" class="text-primary hover:underline">[5]</a>, <a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup>.</li>
-          <li><strong>İnsanda işlev:</strong> Menopoz sonrası kadınlarda ağrı ve bir kemik yıkım belirtecinde düzelme var; bilişsel işlev, metabolizma ve menopoz belirtilerinde birleşik analizler etki bulmadı<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.</li>
+          <li><strong>İnsanda biyobelirteç:</strong> Kan ve doku ölçümleri, maddenin vücutta ne yaptığını araştırıyor. Bu ara göstergeler klinik yararla aynı şey değil<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a>, <a href="#kaynak-5" class="text-primary hover:underline">[5]</a>, <a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup>.</li>
+          <li><strong>İnsanda işlev:</strong> Ağrı, bilişsel testler ve menopoz belirtileri ölçüldü. Çalışmaların sonuçlarını ve birbirinden ne kadar bağımsız olduklarını aşağıda birlikte değerlendiriyoruz<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.</li>
           <li><strong>İnsanda güvenlik:</strong> Günde 150 mg civarında bir yıl boyunca kullanılan çalışmalar var<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup>. Gram düzeyindeki dozlarda mide-bağırsak şikâyetleri ve ilaç etkileşimi soruları öne çıkıyor<sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a>, <a href="#kaynak-14" class="text-primary hover:underline">[14]</a></sup>.</li>
           <li><strong>Ömür ve hastalık:</strong> Takviye olarak alınan resveratrolün ömre, kalp krizine ya da kansere etkisini ölçen bir çalışmaya rastlamadık. Besinle alınan resveratrolün izlendiği dokuz yıllık bir çalışmada ölümle ilişki bulunmadı<sup><a href="#kaynak-13" class="text-primary hover:underline">[13]</a></sup>.</li>
         </ol>
@@ -159,8 +161,8 @@ const articleSchemas = buildArticleSchemas({
           Dönüşen bileşiklerin bir kısmının da etkili olabileceği düşünülüyor; bu hâlâ araştırılan bir konu.
         </p>
         <p>
-          Sirtuin hikâyesi de insanda henüz net bir yere varmadı. On bir randomize çalışmayı birleştiren bir analizde resveratrol, kandaki
-          ve dokudaki SIRT1 düzeyini genel olarak anlamlı biçimde değiştirmedi; yalnızca 12 haftadan kısa süren çalışmalarda kandaki gen ifadesi arttı<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>. Diz kireçlenmesi olan yaşlılarda yapılan bazı küçük çalışmalar kan SIRT1 düzeyinde artış bildirdi<sup><a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup>.
+          Sirtuin hikâyesi de insanda henüz net bir yere varmadı. Katılımcıların gruplara rastgele ayrıldığı on bir çalışmayı birleştiren bir analizde resveratrol, kandaki
+          ve dokudaki SIRT1 düzeyini genel olarak anlamlı biçimde değiştirmedi; yalnızca 12 haftadan kısa süren çalışmalarda kanda SIRT1 üretimine ilişkin gen etkinliği arttı<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>. Diz kireçlenmesi olan yaşlılarda yapılan bazı küçük çalışmalar kan SIRT1 düzeyinde artış bildirdi<sup><a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup>.
           Menopoz sonrası kadınlarda kas ve yağ dokusu örneklerine bakılan bir çalışmada da sirtuin ve ilişkili enerji yolaklarında
           değişiklik görülmedi<sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
         </p>
@@ -172,7 +174,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Avustralya'da yapılan iki yıllık bir çalışmada, 45 ile 85 yaş arasındaki 125 kadın bir yıl günde iki kez 75 mg resveratrol,
-          bir yıl da plasebo aldı. Genel bilişsel performans resveratrol döneminde daha iyiydi; ancak etki büyüklüğü küçüktü
+          bir yıl da etkin madde içermeyen karşılaştırma ürünü olan plaseboyu aldı. Genel bilişsel performans resveratrol döneminde daha iyiydi; ancak iki dönem arasındaki fark küçüktü
           <Evidence level={3} /><sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup>. Aynı çalışmada ağrı
           skorları azaldı; menopozun bedensel belirtileri ve genel iyi oluş da düzeldi<sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup>.
           Kemik ölçümlerinde bel omurgasında ve uyluk kemiği boynunda kemik yoğunluğu plaseboya göre biraz arttı, kemik yıkımını
@@ -180,14 +182,20 @@ const articleSchemas = buildArticleSchemas({
           Alt grup analizinde kemikteki yarar, D vitamini ve kalsiyum kullanan kadınlarda daha belirgindi.
         </p>
         <p>
-          Tablo burada parlak görünüyor. Sonra birleşik analizler geldi.
+          Bu sonuçları değerlendirirken yayın sayısı ile bağımsız araştırma sayısını ayırmak gerekiyor.
         </p>
         <p>
-          Menopoz sonrası 928 kadının yer aldığı on randomize çalışmayı birleştiren 2025 tarihli bir analizde resveratrol ağrı
-          skorlarını ve aynı kemik yıkım belirtecini azalttı <Evidence level={3} /><sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
-          Bilişsel işlev, ruh hali, kan şekeri, kan yağları, tansiyon, uyku, menopoz belirtileri ve yaşam kalitesinde ise anlamlı
-          bir fark bulunmadı. Kemik yoğunluğuna bakan on çalışmanın birleşik analizi de kemik yoğunluğunda değişiklik
-          göstermedi <Evidence level={3} /><sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup>.
+          2025 tarihli bir derleme, on yayında toplam 928 katılımcı bildiriyor. Ancak aynı araştırmanın ara sonuçları,
+          son sonuçları ve farklı ölçümleri ayrı yayınlar olarak yer alıyor. Bu nedenle toplamı 928 ayrı kadın ya da on
+          bağımsız doğrulama gibi okuyamayız. Ağrı sonucu iki yayına dayanıyor; ağrı skorlarından birindeki fark istatistiksel
+          anlamlılık sınırına yakın. Kemik yıkımını gösteren CTX adlı kan belirtecinde de düşüş bildirilmiş, fakat bu sonuç
+          kırıkların azaldığını göstermiyor <Evidence level={2} /><sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a>, <a href="#kaynak-25" class="text-primary hover:underline">[25]</a></sup>.
+        </p>
+        <p>
+          Aynı derlemede bilişsel işlev, ruh hali, kan şekeri, kan yağları, tansiyon, uyku, menopoz belirtileri ve yaşam
+          kalitesinde anlamlı fark bulunmadı. Örtüşen katılımcı verileri bu sonuçların kesinliğini de sınırlar.
+          Farklı yetişkin gruplarını kapsayan 2021 tarihli kemik derlemesinde ise kemik yoğunluğu ve kemik belirteçlerinde
+          anlamlı değişiklik görülmedi <Evidence level={2} /><sup><a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup>.
         </p>
         <p>
           Sağlıklı, kilosu normal ve şeker değerleri yerinde olan menopoz sonrası kadınlarla yapılan 12 haftalık bir çalışma da
@@ -195,9 +203,9 @@ const articleSchemas = buildArticleSchemas({
           iltihap belirteçleri ve insülin duyarlılığı değişmedi <Evidence level={3} /><sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup>.
         </p>
         <p>
-          Umutla takviyeye başlamış biri için bu tablo bir hayal kırıklığı olabilir. Ama okuması zor değil: tek bir iyi tasarlanmış
-          çalışmanın umut verici sonucu, başka çalışmalarla birleştirildiğinde çoğu zaman küçülür. Resveratrolde ağrı ve kemik yıkım belirteci bu süzgeçten geçti. Bilişsel işlev ve menopoz belirtileri
-          henüz geçemedi.
+          Umutla takviyeye başlamış biri için bu tablo hayal kırıklığı yaratabilir. Bugünkü araştırmaların asıl sınırı,
+          küçük yarar sinyallerinin bağımsız gruplarda yeterince doğrulanmamış olması. Ağrıdaki farkın günlük yaşamda ne
+          kadar hissedildiği ve kemik belirtecindeki değişimin kırıkları önleyip önlemediği açık kalıyor.
         </p>
 
         <h2 id="bes-eksen">Beş Eksende Resveratrol</h2>
@@ -216,15 +224,15 @@ const articleSchemas = buildArticleSchemas({
             <tbody class="divide-y divide-primary/10">
               <tr>
                 <td class="p-3 font-medium">Etkinlik kanıtı</td>
-                <td class="p-3">Sınırlı. Menopoz sonrası kadınlarda ağrı ve bir kemik yıkım belirteci düzeldi; bilişsel işlev, metabolizma ve menopoz belirtilerinde birleşik analizler etki bulmadı<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.</td>
+                <td class="p-3">Rutin kullanım için yeterli değil. Ayrıntılı sonuçlar yukarıda; yayınların aynı katılımcılardan gelip gelmediği de değerlendirmeyi etkiliyor <Evidence level={2} /><sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Güvenlik kanıtı</td>
-                <td class="p-3">Düşük dozda bir yıla kadar orta. Gram düzeyindeki dozlarda mide-bağırsak şikâyetleri ve ilaç etkileşimi var<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a>, <a href="#kaynak-12" class="text-primary hover:underline">[12]</a>, <a href="#kaynak-14" class="text-primary hover:underline">[14]</a></sup>.</td>
+                <td class="p-3">Bir yıllık düşük doz kullanım verisi var; daha uzun kullanımın ve seyrek zararların güvenliği kesinleşmiş değil. Yüksek dozda yan etkiler ve ilaç parçalayan enzimlerde değişiklik bildirildi<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a>, <a href="#kaynak-12" class="text-primary hover:underline">[12]</a>, <a href="#kaynak-14" class="text-primary hover:underline">[14]</a></sup>.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Biyolojik olarak mantıklı mı?</td>
-                <td class="p-3">Zayıf ile orta arası. Laboratuvarda etkili; ama kana değişmeden çok az geçiyor ve insanda sirtuin düzeyi birleşik analizde değişmedi<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a>, <a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.</td>
+                <td class="p-3">Emilim, vücutta dönüşüm ve SIRT1 ölçümleri birlikte değerlendirilmeli. Laboratuvar mekanizması, kapsülün insanda aynı sonucu vereceğini göstermiyor<sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a>, <a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>.</td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Ürün ve yasal durum</td>
@@ -232,7 +240,7 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr>
                 <td class="p-3 font-medium">Bırakınca ne olur?</td>
-                <td class="p-3">Yan etkiler ve ilaç etkileşimi, maddenin vücuttan atılmasıyla geçmesi beklenen türden. Kemik veya ağrıdaki küçük yararın bırakınca sürüp sürmediği bilinmiyor.</td>
+                <td class="p-3">Bırakma sonrasında olası yararın sürüp sürmediği ve yan etkilerin nasıl seyrettiği yeterince bilinmiyor. Maddenin vücuttan atılması, oluşmuş bir sorunun kendiliğinden düzeleceği güvencesini vermez.</td>
               </tr>
             </tbody>
           </table>
@@ -254,7 +262,7 @@ const articleSchemas = buildArticleSchemas({
             <tbody class="divide-y divide-primary/10">
               <tr>
                 <td class="p-3 font-medium">Eklem ve kas ağrısını azaltır</td>
-                <td class="p-3">Menopoz sonrası kadınlarda test edildi, sınırlı biçimde desteklendi <Evidence level={3} />; birleşik analizdeki fark sınırda anlamlıydı. Diz kireçlenmesinde düşük dozla yapılan faz 3 çalışmada plasebodan farksızdı; bazı sonraki çalışmalar olumlu sonuç bildirdi<sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a>, <a href="#kaynak-23" class="text-primary hover:underline">[23]</a>, <a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup></td>
+                <td class="p-3">Menopoz sonrası kadınlarda test edildi, sınırlı biçimde desteklendi <Evidence level={2} />; iki yayının birleşik analizinde ağrı skorlarından birindeki fark sınırda anlamlıydı. Diz kireçlenmesinde düşük dozla yapılan faz 3 çalışmada plasebodan farksızdı; bazı sonraki çalışmalar olumlu sonuç bildirdi<sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a>, <a href="#kaynak-9" class="text-primary hover:underline">[9]</a>, <a href="#kaynak-23" class="text-primary hover:underline">[23]</a>, <a href="#kaynak-24" class="text-primary hover:underline">[24]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Tansiyonu düşürür</td>
@@ -262,7 +270,7 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr>
                 <td class="p-3 font-medium">Kemikleri güçlendirir</td>
-                <td class="p-3">Test edildi; iki yıllık çalışmada kemik yoğunluğu arttı, birleşik analizde artış görülmedi <Evidence level={2} /><sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a>, <a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup></td>
+                <td class="p-3">Test edildi; iki yıllık araştırmanın 12 aylık resveratrol döneminde kemik yoğunluğu arttı. Farklı yetişkin gruplarını birleştiren analizde artış görülmedi <Evidence level={2} /><sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a>, <a href="#kaynak-10" class="text-primary hover:underline">[10]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">Hafızayı korur, beyni gençleştirir</td>
@@ -274,7 +282,7 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr>
                 <td class="p-3 font-medium">Kilo verdirir, kan şekerini düzenler</td>
-                <td class="p-3">Bel çevresinde yaklaşık 0,8 cm'lik bir azalma var; sağlıklı kadınlarda metabolizma değişmedi<sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a>, <a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup></td>
+                <td class="p-3">Farklı yetişkin gruplarını kapsayan şemsiye derlemede bel çevresinde ortalama 0,8 cm azalma bildirildi; bu, menopozdaki kadınlara özgü bir kilo kaybı sonucu değil. Sağlıklı menopoz sonrası kadınlarda insülin duyarlılığı ve metabolizma değişmedi<sup><a href="#kaynak-11" class="text-primary hover:underline">[11]</a>, <a href="#kaynak-5" class="text-primary hover:underline">[5]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">NMN ile birlikte alınınca etkisi artar</td>
@@ -282,7 +290,7 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr>
                 <td class="p-3 font-medium">Sirtuinleri çalıştırır, ömrü uzatır</td>
-                <td class="p-3">İnsanda sirtuin düzeyi birleşik analizde değişmedi<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>; farede ömür uzamadı<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>. Ömür iddiası bu haliyle insanda test edilemiyor</td>
+                <td class="p-3">İnsanda sirtuin düzeyi birleşik analizde değişmedi<sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup>; üç merkezli fare programında ömür uzamadı<sup><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup>. İnsanda yaşam süresini uzattığı gösterilmedi</td>
               </tr>
             </tbody>
           </table>
@@ -303,7 +311,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Alzheimer hastalarında yapılan bir yıllık çalışmada doz kademeli olarak günde 2 grama kadar çıkarıldı. En sık yan
           etkiler bulantı, ishal ve kilo kaybıydı<sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a></sup>. Beyin hacmi kaybı resveratrol grubunda plasebodan fazlaydı; yazarlar bu belirteç değişikliklerinin yorumlanması için ek çalışma gerektiğini bildirdi.
-          Bu dozun, Türkiye'de takviye için izin verilen üst sınırın on katından fazla olduğunu hatırlatayım.
+          Bu dozun, Türkiye'de sentetik trans-resveratrol için izin verilen günlük 150 mg sınırının on katından fazla olduğunu hatırlatayım.
         </p>
         <p>
           İlaç etkileşimi daha önemli konu. Sağlıklı gönüllülerde dört hafta günde 1 gram resveratrol, karaciğerde ilaçları
@@ -364,9 +372,9 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           İlginç bir rastlantı da var. Menopoz sonrası kadınlarda yapılan iki yıllık çalışmada kullanılan toplam günlük miktar,
-          yani iki kez 75 mg, Türkiye'deki üst sınıra denk geliyor<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a>, <a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup>.
+          yani iki kez 75 mg, Türkiye'de sentetik trans-resveratrol için belirlenen üst sınıra denk geliyor<sup><a href="#kaynak-6" class="text-primary hover:underline">[6]</a>, <a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup>.
           Alzheimer ve ilaç etkileşimi çalışmalarındaki gram düzeyindeki dozlar ise bu sınırın çok üstünde. Bu bir doz önerisi
-          değil; kanıtın hangi koşulda elde edildiğini gösteriyor.
+          değil; kanıtın hangi koşulda elde edildiğini gösteriyor. Yasal üst sınır, herkes için güvenli ya da etkili doz anlamına gelmez.
         </p>
         <p>
           Bakanlık, onay verdiği takviye edici gıdaların listesini de yayımlıyor<sup><a href="#kaynak-19" class="text-primary hover:underline">[19]</a></sup>.
@@ -466,7 +474,7 @@ const articleSchemas = buildArticleSchemas({
             Wu W et al. "Effects of resveratrol on postmenopausal women: a systematic review and meta-analysis."
             <em>Front Pharmacol</em>. 2025;16:1588284.
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/40771919/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">40771919</a>
-            <span class="block mt-0.5 text-ink/50">(Menopoz sonrası 928 kadını kapsayan on randomize çalışmanın birleşik analizi; ağrı ve CTX düştü, diğer sonuçlarda anlamlı etki yok.)</span>
+            <span class="block mt-0.5 text-ink/50">(Derleme on yayında toplam 928 katılımcı bildiriyor; aynı araştırmanın farklı yayınları bulunduğundan bu toplam bağımsız katılımcı sayısı olarak yorumlanmamalı. Ağrı analizi iki yayına dayanıyor. CTX düşüşü bildirildi; diğer incelenen sonuçlarda anlamlı etki yok.)</span>
           </li>
           <li id="kaynak-10">
             Li Q et al. "Effects of resveratrol supplementation on bone quality: a systematic review and meta-analysis of randomized controlled trials."
@@ -552,6 +560,12 @@ const articleSchemas = buildArticleSchemas({
             PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/41037125/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">41037125</a>
             <span class="block mt-0.5 text-ink/50">(Diz kireçlenmesi olan 137 yaşlıda 12 hafta günde 500 mg; ağrı ve işlev skorlarında düzelme. Tek merkezli, kaydı sonradan yapılmış çalışma.)</span>
           </li>
+          <li id="kaynak-25">
+            Prickett TCR, Howe PRC, Espiner EA. "Resveratrol-Induced Suppression of C-type Natriuretic Peptide Associates With Increased Vertebral Bone Density in Postmenopausal Women."
+            <em>JBMR Plus</em>. 2023;7:e10732.
+            <a href="https://doi.org/10.1002/jbm4.10732" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">DOI: 10.1002/jbm4.10732</a>
+            <span class="block mt-0.5 text-ink/50">(Yeni bağımsız bir deney değil; RESHAW çalışmasının saklanan kan örneklerinin analizi. Kaynak 6 ara ve son bilişsel analizlerin de aynı araştırmadan geldiğini açıklıyor.)</span>
+          </li>
         </ol>
       </ArticleProsePanel>
 
@@ -571,9 +585,9 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-4 text-lg font-semibold text-ink">Bilimsel Değerlendirme ve İnceleme</p>
         <div class="space-y-3 leading-relaxed text-ink/80 text-sm">
           <p>
-            Resveratrol, menopoz sonrası kadınlarda randomize çalışmalarla incelenmiş bir polifenoldür. Ağrı ve bir kemik yıkım
-            belirtecindeki düzelme birleşik analizde görülmüştür; bilişsel işlev ve menopoz belirtileri için aynı sonuç
-            doğrulanmamıştır<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
+            Resveratrol, menopoz sonrası kadınlarda kontrollü çalışmalarla incelenmiş bir polifenoldür. Ağrı ve bir kemik yıkım
+            belirtecinde olumlu sonuçlar bildirilmiştir; ancak az sayıdaki çalışma ve aynı katılımcılardan üretilen farklı yayınlar
+            kanıtın kesinliğini sınırlar<sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup>.
           </p>
           <p>
             Bu bulgular resveratrolün menopoz tedavisinin ya da kemik koruyucu tedavilerin yerine kullanılmasını desteklemez.

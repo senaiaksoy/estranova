@@ -960,7 +960,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/resveratrol-takviyesi/',
     title: 'Resveratrol — Şarap Kadehinden Takviye Kutusuna Ne Kaldı?',
     description:
-      'Resveratrol menopoz sonrası kadınlarda denendi: bazı bulgular umut verdi, birleşik analizler çoğunu doğrulamadı. Kanıtın yeri, iddialar, ilaç etkileşimi ve Türkiye’deki 150 mg sınırı.',
+      'Resveratrol takviyesinin menopozdaki sınırlı kanıtları, ilaç etkileşimleri ve sentetik trans-resveratrol için Türkiye’deki 150 mg/gün sınırı.',
     publishedDate: '29 Ekim 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
