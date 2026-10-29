@@ -991,7 +991,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/deneysel/mots-c-peptidi-kanit-ve-risk/',
     title: 'MOTS-c Peptidi Ne İşe Yarar?',
     description:
-      'MOTS-c farelerde kilo alımını, insülin direncini ve menopoz modelinde kemik kaybını sınırladı; dışarıdan verilen MOTS-c ile insanda yayımlanmış çalışma yok. Kanıt merdiveni, güvenlik ve menopoz açısından bilinenler.',
+      'MOTS-c egzersizin yerini tutar mı? İnsan ve fare verileri, menopozda kullanım iddiaları, enjeksiyon güvenliği ve süren araştırmaların sınırları.',
     publishedDate: '28 Ekim 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Deneysel',
