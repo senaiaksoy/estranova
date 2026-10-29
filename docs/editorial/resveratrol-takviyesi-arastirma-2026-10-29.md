@@ -181,4 +181,4 @@ Bu tur, başka bir oturumun `add65527` commit'i (Wu 2025 yayın örtüşmesi, ka
 
 - SRT501 ayrıntıları (5 g, tek başına kol, beş vaka) tam metinle doğrulanmadı; gövde bu ayrıntıları kullanmıyor.
 - Wu 2025'te Şekil 7 başlığı "Thaung 2020b", metin ve Tablo 1 "2020a" diyor; muhtemelen yazar hatası, gövde bu ayrıntıya dayanmıyor.
-- Tur 2 değişiklikleri için KC yazar onayı ve Dr. Mumcu tıbbi onayı bu oturumda henüz alınmadı.
+- Tur 2 onayı: KC "tıbbi ve mumcu onayları tamam" dedi (29 Ekim 2026); Mumcu onayı KC beyanıyla, ayrı yazılı not yok.
