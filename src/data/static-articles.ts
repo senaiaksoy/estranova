@@ -957,6 +957,17 @@ export const staticArticles: StaticArticleEntry[] = [
     keywords: ['NMN', 'NR', 'NAD+', 'NAD Plus', 'nad plus', 'takviye', 'menopoz', 'güvenlik'],
   },
   {
+    path: '/zamansiz-yasam/deneysel/resveratrol-takviyesi/',
+    title: 'Resveratrol — Şarap Kadehinden Takviye Kutusuna Ne Kaldı?',
+    description:
+      'Resveratrol menopoz sonrası kadınlarda denendi: bazı bulgular umut verdi, birleşik analizler çoğunu doğrulamadı. Kanıtın yeri, iddialar, ilaç etkileşimi ve Türkiye’deki 150 mg sınırı.',
+    publishedDate: '29 Ekim 2026',
+    writerSlug: 'senai-aksoy',
+    section: 'Zamansız Yaşam · Deneysel',
+    sectionPath: '/zamansiz-yasam/',
+    keywords: ['resveratrol', 'trans-resveratrol', 'kırmızı şarap', 'sirtuin', 'takviye', 'menopoz', 'ilaç etkileşimi', 'güvenlik'],
+  },
+  {
     path: '/zamansiz-yasam/deneysel/bpc-157-tb-500-menopoz/',
     title: 'BPC-157 ve TB-500 İşe Yarar mı?',
     description:

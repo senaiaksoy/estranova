@@ -202,6 +202,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
     src: '/images/library/editorial/bp-estrogen-biyolojisi.webp',
     alt: 'Mermer masada elle çizilmiş bir şema bulunan açık defter, dolma kalem, çay bardağı ve vazoda şakayık.',
   },
+  '/zamansiz-yasam/deneysel/resveratrol-takviyesi/': {
+    src: '/images/library/editorial/resveratrol-takviyesi.webp',
+    alt: 'Ege’de bir bağda masadaki üzüm sepetinin başında gülüşen iki kadın; resveratrol yazısı için kart görseli, yapay zekâ ile üretilmiş temsili görsel',
+  },
   '/bilimsel-pencere/hucreler-ve-yaslanma/nad-plus-hucresel-yaslanma/': {
     src: '/images/library/editorial/bp-nad-plus.webp',
     alt: 'Cam tavanlı kış bahçesinde sohbet eden üç kadın; biri orkideyle ilgileniyor, biri çay içiyor, biri bir kitabı gösteriyor',
