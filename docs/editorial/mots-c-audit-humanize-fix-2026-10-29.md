@@ -1,5 +1,8 @@
 # MOTS-c — geniş audit, humanize ve yerel düzeltme
 
+> **Güncelleme (29 Ekim 2026, güncel main üzerine taşıma):** Bu rapor PR 97 öncesi tabandan yazıldı. Rapordaki NCT07505745 satırları (tarihler, 120 kişi, 16 hafta, dışlama ölçütleri) geçersizdir: kaydı sunan kuruluşun kayıtlarından biri kendi özetinde çalışmasını kurgusal örnek olarak tanımlıyor ve kuruluş bağımsız doğrulanamıyor; PR 97 bu kaydı yazılardan çıkardı. Taşımada o kayda dayanan cümleler PR 97 sürümüne çevrildi. CB4211 sayıları (23 randomize, 20 değerlendirme, 11/9), FAERS cümlesi, kanser ve ölçüm farkı düzeltmeleri, mobil tablolar ve dateModified korundu. Rapordaki p = 0,23 değeri tam metinde doğrulanamadı (yalnızca 31,8 aya kadar p = 0,05 görüldü); görsel kaynağı kontrol edilmeli.
+
+
 Tarih: 29 Ekim 2026. Hedef: `/zamansiz-yasam/deneysel/mots-c-peptidi-kanit-ve-risk/`.
 Durum: bağımsız düzeltmeler uygulandı ve yerel QA geçti. Korunan hekim notunda bir ifade açık; yeni sürümün yazar ve bağımsız tıbbi onayı alınmadı. Kullanıcı bu çalışmanın ardından “commit push” talimatı verdi; bu talimat klinik onay veya üretime yayın onayı olarak kaydedilmedi. Değişiklikler ayrı çalışma dalında commit/push için hazırlandı; deploy yapılmadı.
 
