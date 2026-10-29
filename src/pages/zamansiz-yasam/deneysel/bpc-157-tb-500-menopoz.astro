@@ -55,6 +55,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate,
+  modifiedDate: '29 Ekim 2026',
   pathname,
   articleSection: 'Zamansız Yaşam · Deneysel',
   sectionPath: '/zamansiz-yasam/',
@@ -99,6 +100,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate={publishedDate}
+        lastUpdated="29 Ekim 2026"
         readingMinutes={readingMinutes}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/bpc-157-tb-500-menopoz-byline.webp"
@@ -114,8 +116,9 @@ const articleSchemas = buildArticleSchemas({
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
           BPC-157 ve TB-500, tendon, eklem ve kas iyileşmesini hızlandırdığı söylenerek çoğu zaman birlikte satılıyor.
-          Bu iddianın dayanağı büyük ölçüde sıçan deneyleri. BPC-157 için insanda yalnızca üç küçük, kontrolsüz çalışma
-          var; toplam 30 kişi <Evidence level={1} />. TB-500 için insanda yapılmış tek bir etkinlik ya da güvenlik
+          Bu iddianın dayanağı büyük ölçüde sıçan deneyleri. BPC-157 üzerine bir sistematik derlemeye üç küçük,
+          kontrolsüz çalışma alınmış; bunlardan yalnızca biri diz ağrısını inceliyor <Evidence level={1} />.
+          TB-500 için yayımlanmış bir insan etkinlik ya da güvenlik
           çalışması yok; hayvanda bile toksikoloji çalışması bulunmuyor. Menopozdaki kadınlarda ikisi de hiç
           incelenmedi. Türkiye'de ruhsatlı ürünleri yok; internetteki ürünün içeriği doğrulanamıyor. Kanser öyküsü,
           gebelik olasılığı ya da kan sulandırıcı kullanımı varsa hekiminizle ilk konuşulacak başlık bunlar.
@@ -181,7 +184,7 @@ const articleSchemas = buildArticleSchemas({
           <li><strong>Mekanizma:</strong> Hayvan ve hücre çalışmalarında tutarlı biyolojik etkiler bildirildi; insanda hangi yolakla çalıştığı bilinmiyor <sup><a href="#kaynak-6" aria-label="Kaynak 6">[6]</a></sup>.</li>
           <li><strong>Hayvanda ömür:</strong> Test edilmedi. NIA'nın bağımsız ömür programının 13 Nisan 2026 tarihli listesinde yok <sup><a href="#kaynak-16" aria-label="Kaynak 16">[16]</a></sup>. Hayvanda doku iyileşmesi çalışmaları ise çok sayıda; çoğu sıçanda <sup><a href="#kaynak-5" aria-label="Kaynak 5">[5]</a></sup>.</li>
           <li><strong>İnsanda biyobelirteç:</strong> Bilinmiyor. Ölçülmüş bir insan biyobelirteci yok.</li>
-          <li><strong>İnsanda işlev:</strong> Üç kontrolsüz çalışma, toplam 30 kişi: dize enjeksiyon (16 kişi), mesaneye uygulama (12 kişi) ve damardan güvenlik denemesi (2 kişi). Katılımcıların çoğu belirtilerinin azaldığını söyledi; ama karşılaştırma grubu yok ve kanıtın kesinliği “çok düşük” <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>. Dize enjeksiyon çalışmasında 16 kişiden 4'ü aynı anda timosin beta-4 de almıştı; ağrı telefonla sorulmuş, işlev ölçülmemişti <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>.</li>
+          <li><strong>İnsanda işlev:</strong> Sistematik derlemeye alınan üç kontrolsüz çalışmada toplam 30 kişi vardı: dize enjeksiyon (16 kişi), mesaneye uygulama (12 kişi) ve iki sağlıklı gönüllüde damardan güvenlik denemesi. Bu toplam, tendon veya kas iyileşmesi araştırılmış 30 kişi demek değil. Diz ve mesane çalışmalarında yakınmalarda azalma bildirilmiş olsa da karşılaştırma grubu yok; derlemenin kanıt kesinliği “çok düşük” <Evidence level={1} /> <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>. Dize enjeksiyon çalışmasında 16 kişiden 4'ü aynı anda timosin beta-4 de almıştı; ağrı telefonla sorulmuş, işlev ölçülmemişti <sup><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>.</li>
           <li><strong>İnsanda güvenlik:</strong> Yayımlanmış beş çalışmada toplam yaklaşık 80 kişiye BPC-157 verilmiş; en uzun kullanım iki hafta. Ciddi yan etki bildirilmedi, ama çalışmaların çoğunda güvenliğin nasıl izlendiği belirsiz <sup><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>.</li>
           <li><strong>Sert sonlanım (iyileşen tendon, önlenen ameliyat):</strong> Yok. Hamstring yırtığında kayıtlı, plasebo kontrollü bir çalışma sürüyor; tahmini bitişi Şubat 2027 <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup>.</li>
         </ol>
@@ -192,7 +195,7 @@ const articleSchemas = buildArticleSchemas({
           <li><strong>İnsanda biyobelirteç:</strong> Bilinmiyor.</li>
           <li><strong>İnsanda işlev:</strong> Bilinmiyor. FDA, TB-500'ün insanda kullanıldığı hiçbir klinik çalışma bulamadı <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>.</li>
           <li><strong>İnsanda güvenlik:</strong> Bilinmiyor. İnsan maruziyeti verisi de, hayvanda temel toksikoloji çalışması da yok <sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup>.</li>
-          <li><strong>Sert sonlanım:</strong> Yok. Damar hastalığında ilk faz 1/2 çalışma sürüyor; kas-iskelet sistemi konusu değil <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
+          <li><strong>Sert sonlanım:</strong> Gösterilmiş bir klinik yarar yok. Damar hastalığı için listelenen NCT07487363, kendi açıklamasında kurgusal bir örnek olarak tanımlanıyor; gerçek bir insan araştırması olarak değerlendirilemez <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup>.</li>
         </ol>
         <p>
           İkisinin birlikte kullanımını tek tek kullanımla karşılaştıran bir insan çalışması da yok; “birlikte daha
@@ -242,8 +245,8 @@ const articleSchemas = buildArticleSchemas({
           </table>
         </div>
         <p>
-          <strong>Etkinlik:</strong> BPC-157'de “zayıf” denmesinin nedeni, yalnızca kontrolsüz 30 kişilik verinin
-          olması <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a></sup>. TB-500'de veri hiç olmadığı için
+          <strong>Etkinlik:</strong> BPC-157'de “zayıf” denmesinin nedeni, diz ağrısına ilişkin küçük çalışmada
+          karşılaştırma grubu ve nesnel iyileşme ölçümü bulunmaması <sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-3" aria-label="Kaynak 3">[3]</a></sup>. TB-500'de yayımlanmış klinik sonuç verisi olmadığı için
           “bilinmiyor” yazıyoruz; bu, “etkisiz” demek değil.
         </p>
         <p>
@@ -336,7 +339,7 @@ const articleSchemas = buildArticleSchemas({
             <tbody class="divide-y divide-primary/10">
               <tr>
                 <td class="p-3 font-medium">“Tendonu, bağı ve kası onarır, iyileşmeyi hızlandırır”</td>
-                <td class="p-3">Henüz test edilmedi. İnsanda tek veri kontrolsüz 30 kişi; kayıtlı randomize çalışma sürüyor</td>
+                <td class="p-3">İnsanda iyileşmeyi hızlandırdığı gösterilmedi; hamstring yırtığı için randomize çalışma kaydı var, sonuç yayımlanmamış</td>
                 <td class="p-3"><sup><a href="#kaynak-2" aria-label="Kaynak 2">[2]</a><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup></td>
               </tr>
               <tr>
@@ -361,12 +364,12 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr>
                 <td class="p-3 font-medium">“Ameliyattan kurtarır”</td>
-                <td class="p-3">Bu haliyle test edilemez; omuz ameliyatı sonrası küçük bir çalışma 2027'de başlayacak</td>
+                <td class="p-3">Ameliyat gereksinimini azalttığı gösterilmedi; planlanan omuz çalışması ameliyatı önlemeyi değil, ameliyat sonrası toparlanmayı inceliyor</td>
                 <td class="p-3"><sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">“Vücutta zaten var, doğal, yan etkisi yok”</td>
-                <td class="p-3">Bu haliyle test edilemez. Sentetik parça vücuttaki proteinle aynı değil; güvenlik verisi yok</td>
+                <td class="p-3">Doğal bir proteinle ilişkili olması güvenli olduğunu göstermez; sentetik parçanın güvenliği ayrıca araştırılmalı</td>
                 <td class="p-3"><sup><a href="#kaynak-8" aria-label="Kaynak 8">[8]</a></sup></td>
               </tr>
             </tbody>
@@ -376,7 +379,7 @@ const articleSchemas = buildArticleSchemas({
           İddiaların hiçbiri “test edildi, desteklendi” kutusuna girmiyor.
         </p>
 
-        <h2 id="yan-etkiler">Sık bildirilen istenmeyen etkiler</h2>
+        <h2 id="yan-etkiler">Bildirilen istenmeyen etkiler</h2>
         <p>
           Kullanıcı bildirimleri etkinlik için zayıf bir kanıttır. Güvenlik için ise ciddiye alınması gereken bir
           sinyaldir.
@@ -400,15 +403,16 @@ const articleSchemas = buildArticleSchemas({
           son bildirim, bu ikiliyi birlikte kullanan ve bu yazının okurlarına yaş olarak çok yakın bir kadına ait.
         </p>
         <p>
-          Ürün ve forum sayfalarında enjeksiyon yerinde kızarıklık, baş dönmesi, bulantı ve yüzde kızarma da sıkça
-          anılıyor. Bu bildirimler doğrulanmış değil; kendi aralarında da çelişiyor. Ürünün içinde gerçekte ne olduğu
+          Ürün ve forum sayfalarında enjeksiyon yerinde kızarıklık, baş dönmesi, bulantı ve yüzde kızarma da
+          anılıyor. Bu bildirimler doğrulanmış değil; kendi aralarında da çelişiyor. Kaç kişinin kullandığı bilinmediğinden
+          bu anlatılardan veya spontan bildirimlerden yan etki sıklığı hesaplanamaz. Ürünün içinde gerçekte ne olduğu
           bilinmediğinde, hangi tepkinin peptidden, hangisinin safsızlıktan geldiğini ayırmak da mümkün olmuyor
           <sup><a href="#kaynak-4" aria-label="Kaynak 4">[4]</a><a href="#kaynak-7" aria-label="Kaynak 7">[7]</a></sup>.
         </p>
 
         <h2 id="menopoz">Menopoz ve 40 sonrası açısından</h2>
         <p>
-          Bu bölüm kısa olmak zorunda. Çünkü menopozdaki kadınlarda bu iki molekül hiç incelenmedi.
+          Menopozdaki kadınların kas-iskelet yakınmalarında bu iki molekülün etkisini doğrudan değerlendiren veri yok.
         </p>
         <p>
           Şunu biliyoruz: menopoz geçişinde kas ve eklem ağrısı daha sık. 93 binden fazla kadını kapsayan bir derlemede
@@ -462,15 +466,14 @@ const articleSchemas = buildArticleSchemas({
           </table>
         </div>
         <p>
-          Bu liste vaaz değil. Tendon iyileşmesi yavaştır ve sabır ister; BPC-157 ve TB-500'ün bu süreyi kısalttığı ise
-          insanda gösterilmedi. Kas-iskelet sorunlarına ayrıntılı bakış için
+          Tedavinin seçimi ağrının nedenine ve hareket kısıtlılığına bağlı. Kas-iskelet sorunlarına ayrıntılı bakış için
           <a href="/zamansiz-yasam/40-sonrasi-kas-iskelet-agrilari/" class="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">40 sonrası kas-iskelet ağrıları yazısına</a>
           göz atabilirsiniz.
         </p>
 
         <h2 id="hekimle">Kimler kullanmamalı, hekiminizle ne konuşmalısınız?</h2>
         <p>
-          Bu bölüm bir kullanım rehberi değil. Kararı daha güvenli bir görüşmeye taşımak için yazıldı.
+          Hekiminizle görüşürken ağrının tanısını, kullandığınız ilaçları ve ürünün belirsizliklerini birlikte ele alın.
         </p>
         <p>Şu durumlarda bu ikiliyi denemek, bilinmeyenleri çoğaltır:</p>
         <ul>
@@ -487,8 +490,9 @@ const articleSchemas = buildArticleSchemas({
           <li><strong>Ürünün içinde ne olduğunu nasıl bileceğiz?</strong> “Yalnızca araştırma amaçlıdır” etiketi, ürünün insan kullanımı için üretilmediğini söyler.</li>
           <li><strong>Kullandığım ilaçlar ve sağlık durumum açısından nelere dikkat etmeliyiz?</strong> Bu iki madde için doğrulanmış bir izlem protokolü yok. Kan tahlilleri var olan bir sorunu araştırmaya yardım eder; sonuçların normal çıkması ise ürünün güvenli olduğunu göstermez.</li>
           <li><strong>Aynı anda tek değişiklik mi yapıyoruz?</strong> Peptid, yeni egzersiz ve ağrı kesici aynı hafta başlarsa neyin işe yaradığını bilemezsiniz.</li>
-          <li><strong>Hangi belirtide bırakacağız?</strong> Deride renk değişikliği, nefes darlığı, enjeksiyon yerinde geçmeyen şişlik ya da yeni bir yakınma.</li>
+          <li><strong>Hangi belirtilerde değerlendirme gerekir?</strong> Enjeksiyon yerinde giderek artan kızarıklık veya şişlik, ateş ya da yeni bir yakınma gelişirse kullanımı durdurup değerlendirme yapılması gerekir.</li>
         </ol>
+        <p><strong>Nefes darlığı, yüz veya boğazda şişme gibi ciddi alerjik reaksiyon belirtilerinde acil müdahale gerekir.</strong> Bu belirtilerde rutin görüşmeyi beklemeyin. Bu ayrım, aşağıdaki hekim yanıtında da açıklanıyor.</p>
 
         <h2 id="bilinmeyenler">Henüz bilmediklerimiz</h2>
         <p>
@@ -507,17 +511,17 @@ const articleSchemas = buildArticleSchemas({
               <tr>
                 <td class="p-3 font-medium">BPC-157 kas yırtığında iyileşmeyi hızlandırıyor mu?</td>
                 <td class="p-3">Hamstring yırtığı, randomize, plasebo kontrollü, 120 kişi, 18–45 yaş</td>
-                <td class="p-3">Alım sürüyor; tahmini birincil bitiş 14 Şubat 2027 <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup></td>
+                <td class="p-3">Kayıtta katılımcı alıyor görünüyor; tahmini birincil bitiş 14 Şubat 2027. Sonuç yok <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">BPC-157 omuz ameliyatı sonrası toparlanmayı etkiliyor mu?</td>
-                <td class="p-3">Rotator manşet onarımı sonrası, 30 kişilik pilot</td>
-                <td class="p-3">Başlamadı; Ocak 2027 <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup></td>
+                <td class="p-3">Rotator manşet onarımı sonrası pilot; yapılandırılmış kayıtta 30, özetinde 20 kişi planlanıyor</td>
+                <td class="p-3">Kayıtta henüz katılımcı almıyor; tahmini başlangıç Ocak 2027. Örneklem bilgisi tutarsız <sup><a href="#kaynak-11" aria-label="Kaynak 11">[11]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">TB-500 parçası insanda güvenli mi?</td>
-                <td class="p-3">Damar hastalığı olan yetişkinlerde faz 1/2, 80 kişi</td>
-                <td class="p-3">Alım sürüyor; tahmini bitiş 14 Şubat 2027 <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup></td>
+                <td class="p-3">Gerçek katılımcılarda yapılmış, doğrulanabilir bir güvenlik araştırması gerekir</td>
+                <td class="p-3">NCT07487363 açıklamasında kurgusal örnek olarak tanımlanıyor; süren araştırma sayılmaz <sup><a href="#kaynak-12" aria-label="Kaynak 12">[12]</a></sup></td>
               </tr>
               <tr>
                 <td class="p-3 font-medium">FDA bu maddelerin eczanede hazırlanmasına izin verecek mi?</td>
@@ -533,8 +537,10 @@ const articleSchemas = buildArticleSchemas({
           </table>
         </div>
         <p>
-          Bu çalışmalar sonuçlansa bile cevaplar genç ve çoğunlukla sporcu katılımcılardan gelecek; menopozdaki bir
-          kadın için ayrıca çalışma gerekecek.
+          Hamstring kaydı 18–45 yaşlarında fiziksel olarak aktif kişileri kapsıyor. Omuz kaydı ise 18 yaş ve üzerini
+          alıyor, üst yaş sınırı koymuyor; son 12 ayda hormon replasman tedavisi görenleri dışlıyor.
+          Kayıtlı bir çalışma planı, katılımcı alımının bağımsız doğrulaması veya etkinlik kanıtı değildir.
+          Sonuçların menopozdaki ve hormon tedavisi kullanan kadınlara ne ölçüde uygulanabileceği ayrıca değerlendirilmelidir.
         </p>
         <p>
           Kahraman yarasını saniyede kapatıyor; gerçek tendon kendi takvimiyle iyileşiyor. İçiniz rahat olsun diye
@@ -558,7 +564,9 @@ const articleSchemas = buildArticleSchemas({
         <p class="mb-4 text-lg font-semibold text-ink">Kanıt Düzeyi: <Evidence from={1} to={2} /></p>
         <p>
           BPC-157 ve TB-500, kas-iskelet yakınmaları için insanda sınanmış tedaviler değildir. BPC-157 için insan
-          verisi üç küçük, kontrolsüz çalışmadan ibarettir; TB-500 için insanda ne etkinlik ne güvenlik verisi vardır.
+          çalışmalarını değerlendiren sistematik derlemedeki üç küçük, kontrolsüz çalışma klinik yararı kanıtlamıyor;
+          FDA'nın daha geniş insan maruziyeti özeti de uzun dönem güvenliği değerlendirmeye yetmiyor.
+          TB-500 için yayımlanmış insan etkinlik ve güvenlik sonuçları bulunmuyor.
           Tam timosin beta-4 ile yapılan göz, yara ve kalp çalışmaları TB-500'e aktarılamaz.
         </p>
         <p>
@@ -572,7 +580,8 @@ const articleSchemas = buildArticleSchemas({
           kanıtı daha güçlü tedavilerin değerlendirilmesi gerekir.
         </p>
         <p class="text-sm text-ink/80">
-          Bağımsız tıbbi inceleme: Dr. Alper Mumcu — 28 Ekim 2026.
+          Önceki sürümün bağımsız tıbbi incelemesi: Dr. Alper Mumcu — 28 Ekim 2026.
+          29 Ekim 2026 tarihli kaynak ve güvenlik anlatımı düzeltmeleri için yeniden tıbbi inceleme bekleniyor.
         </p>
       </ArticleEditorNote>
 
@@ -590,7 +599,7 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-9">FDA. Certain Bulk Drug Substances for Use in Compounding that May Present Significant Safety Risks (sayfa içeriği 22 Nisan 2026) ve PCAC 23–24 Temmuz 2026 toplantı sayfası; nihai karar için arama 28 Ekim 2026. <a href="https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">FDA güvenlik listesi</a> · <a href="https://www.fda.gov/advisory-committees/advisory-committee-calendar/july-23-24-2026-meeting-pharmacy-compounding-advisory-committee-07232026" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">PCAC toplantı sayfası</a></li>
           <li id="kaynak-10">WADA. Prohibited List 2026 (s. 4 ve 8). <a href="https://www.wada-ama.org/sites/default/files/2025-09/2026list_en_final_clean_september_2025.pdf" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">WADA 2026 listesi</a></li>
           <li id="kaynak-11">ClinicalTrials.gov, durum 28 Ekim 2026: <a href="https://clinicaltrials.gov/study/NCT07437547" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07437547</a> (hamstring yırtığı, faz 2) ve <a href="https://clinicaltrials.gov/study/NCT07803250" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07803250</a> (rotator manşet onarımı sonrası, faz 1).</li>
-          <li id="kaynak-12">ClinicalTrials.gov, durum 28 Ekim 2026: <a href="https://clinicaltrials.gov/study/NCT07487363" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07487363</a> (TB-500, damar hastalığı, faz 1/2).</li>
+          <li id="kaynak-12">ClinicalTrials.gov: <a href="https://clinicaltrials.gov/study/NCT07487363" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT07487363</a>. Açıklaması kaydı kurgusal bir örnek olarak tanımlar; gerçek bir klinik araştırma veya insan güvenliği kanıtı olarak kullanılmamıştır. Kontrol: 29 Ekim 2026.</li>
           <li id="kaynak-13">Tam timosin beta-4 insan çalışmaları: Guarnera G ve ark. The effect of thymosin treatment of venous ulcers. Ann N Y Acad Sci. 2010;1194:207-212, PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/20536470/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">20536470</a>; kuru göz faz 3 çalışmaları <a href="https://clinicaltrials.gov/study/NCT02974907" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT02974907</a> ve <a href="https://clinicaltrials.gov/study/NCT03937882" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">NCT03937882</a>.</li>
           <li id="kaynak-14">Sribenja S ve ark. Roles and mechanisms of β-thymosins in cell migration and cancer metastasis: an update. Cancer Invest. 2013;31(2):103-110, <a href="https://doi.org/10.3109/07357907.2012.756111" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">DOI</a>; Xiao Y ve ark. Thymosin β4: a potential molecular target for tumor therapy. Crit Rev Eukaryot Gene Expr. 2012;22(2):109-116, <a href="https://doi.org/10.1615/critreveukargeneexpr.v22.i2.30" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">DOI</a>.</li>
           <li id="kaynak-15">Achilova F, Daher M, Nassar JE ve ark. Frozen shoulder: Diagnosis and treatment of adhesive capsulitis. Am J Med. 2026;139(5):598-605. <a href="https://doi.org/10.1016/j.amjmed.2026.01.021" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">DOI</a></li>
