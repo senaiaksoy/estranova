@@ -35,9 +35,9 @@
   "publishedUse": "Dört yanıt SSS'ye birebir girer. Taslak gövdedeki iki onaysız birinci tekil cümle (⟦H⟧) bu yanıtlarla örtüştüğü için çıkarıldı; gövdede yeni hekim cümlesi yok.",
   "independentReview": {
     "reviewer": "Dr. Alper Mumcu",
-    "status": "28 Ekim 2026 tarihli sürüm için KC beyanıyla alındı. Dayanak: src/data/article-approvals.ts; KC yazar ve Dr. Alper Mumcu tıbbi onayının tamamlandığını bildirdi. Yazılı Mumcu notu yok. 29 Ekim 2026 gövde revizyonunu kapsamaz."
+    "status": "28 Ekim 2026 tarihli sürüm için KC beyanıyla alındı. Dayanak: src/data/article-approvals.ts; KC yazar ve Dr. Alper Mumcu tıbbi onayının tamamlandığını bildirdi. Yazılı Mumcu notu yok. 29 Ekim 2026 gövde revizyonu için ayrıca KC beyanıyla alındı (“yazar onayı ve mumcu onayı tamam”, 29 Ekim 2026); yazılı Mumcu notu yok."
   },
-  "status": "Dört özgün SSS yanıtı 28 Ekim 2026 sürümünde onaylı kullanımda; yanıtlar değiştirilmedi. 29 Ekim 2026 kaynak ve güvenlik anlatımı revizyonu yereldir; yeni yazar ve bağımsız tıbbi onay bekleniyor. Bu turda yayın yapılmadı.",
+  "status": "Dört özgün SSS yanıtı 28 Ekim 2026 sürümünde onaylı kullanımda; yanıtlar değiştirilmedi. 29 Ekim 2026 kaynak ve güvenlik anlatımı revizyonu için yazar onayı ve Mumcu tıbbi onayı KC'den sözlü alındı. Yayın PR merge'üne bağlı.",
   "languageEdits": [
     "Yanıt 1: 'peptit' → 'peptid' (KC kararı, 2026-10-28; site yazımıyla tutarlılık, anlam değişmedi)."
   ]
